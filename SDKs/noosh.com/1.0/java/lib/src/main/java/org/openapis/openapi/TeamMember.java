@@ -51,7 +51,7 @@ public class TeamMember {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTeamMemberOfProjectResponse res = new org.openapis.openapi.models.operations.DeleteTeamMemberOfProjectResponse() {{
+        org.openapis.openapi.models.operations.DeleteTeamMemberOfProjectResponse res = new org.openapis.openapi.models.operations.DeleteTeamMemberOfProjectResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -69,8 +69,6 @@ public class TeamMember {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -170,7 +168,7 @@ public class TeamMember {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeamMemberListOfClientProjectResponse res = new org.openapis.openapi.models.operations.GetTeamMemberListOfClientProjectResponse() {{
+        org.openapis.openapi.models.operations.GetTeamMemberListOfClientProjectResponse res = new org.openapis.openapi.models.operations.GetTeamMemberListOfClientProjectResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -188,8 +186,6 @@ public class TeamMember {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,7 +285,7 @@ public class TeamMember {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeamMemberListOfProjectResponse res = new org.openapis.openapi.models.operations.GetTeamMemberListOfProjectResponse() {{
+        org.openapis.openapi.models.operations.GetTeamMemberListOfProjectResponse res = new org.openapis.openapi.models.operations.GetTeamMemberListOfProjectResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -307,8 +303,6 @@ public class TeamMember {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -410,7 +404,7 @@ public class TeamMember {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTeamMemberOfProjectJsonResponse res = new org.openapis.openapi.models.operations.PostTeamMemberOfProjectJsonResponse() {{
+        org.openapis.openapi.models.operations.PostTeamMemberOfProjectJsonResponse res = new org.openapis.openapi.models.operations.PostTeamMemberOfProjectJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -428,8 +422,6 @@ public class TeamMember {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -531,7 +523,7 @@ public class TeamMember {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTeamMemberOfProjectRawResponse res = new org.openapis.openapi.models.operations.PostTeamMemberOfProjectRawResponse() {{
+        org.openapis.openapi.models.operations.PostTeamMemberOfProjectRawResponse res = new org.openapis.openapi.models.operations.PostTeamMemberOfProjectRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -549,8 +541,6 @@ public class TeamMember {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -652,7 +642,7 @@ public class TeamMember {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonResponse res = new org.openapis.openapi.models.operations.PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonResponse res = new org.openapis.openapi.models.operations.PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -670,8 +660,6 @@ public class TeamMember {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -773,7 +761,7 @@ public class TeamMember {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersRawResponse res = new org.openapis.openapi.models.operations.PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersRawResponse() {{
+        org.openapis.openapi.models.operations.PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersRawResponse res = new org.openapis.openapi.models.operations.PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -791,8 +779,6 @@ public class TeamMember {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamesDecisionsRecentRequest {
@@ -12,6 +13,7 @@ public class GetNamesDecisionsRecentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=days")
     public Long days;
+
     public GetNamesDecisionsRecentRequest withDays(Long days) {
         this.days = days;
         return this;
@@ -22,6 +24,7 @@ public class GetNamesDecisionsRecentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
     public GetNamesDecisionsRecentEmbedEnum embed;
+
     public GetNamesDecisionsRecentRequest withEmbed(GetNamesDecisionsRecentEmbedEnum embed) {
         this.embed = embed;
         return this;
@@ -32,6 +35,7 @@ public class GetNamesDecisionsRecentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureCategory")
     public String featureCategory;
+
     public GetNamesDecisionsRecentRequest withFeatureCategory(String featureCategory) {
         this.featureCategory = featureCategory;
         return this;
@@ -42,6 +46,7 @@ public class GetNamesDecisionsRecentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureClass")
     public String featureClass;
+
     public GetNamesDecisionsRecentRequest withFeatureClass(String featureClass) {
         this.featureClass = featureClass;
         return this;
@@ -52,6 +57,7 @@ public class GetNamesDecisionsRecentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureType")
     public String featureType;
+
     public GetNamesDecisionsRecentRequest withFeatureType(String featureType) {
         this.featureType = featureType;
         return this;
@@ -62,6 +68,7 @@ public class GetNamesDecisionsRecentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=itemsPerPage")
     public Long itemsPerPage;
+
     public GetNamesDecisionsRecentRequest withItemsPerPage(Long itemsPerPage) {
         this.itemsPerPage = itemsPerPage;
         return this;
@@ -72,6 +79,7 @@ public class GetNamesDecisionsRecentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputFormat")
     public GetNamesDecisionsRecentOutputFormatEnum outputFormat;
+
     public GetNamesDecisionsRecentRequest withOutputFormat(GetNamesDecisionsRecentOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -82,6 +90,7 @@ public class GetNamesDecisionsRecentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
     public GetNamesDecisionsRecentOutputSrsEnum outputSRS;
+
     public GetNamesDecisionsRecentRequest withOutputSRS(GetNamesDecisionsRecentOutputSrsEnum outputSRS) {
         this.outputSRS = outputSRS;
         return this;
@@ -92,6 +101,7 @@ public class GetNamesDecisionsRecentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputStyle")
     public GetNamesDecisionsRecentOutputStyleEnum outputStyle;
+
     public GetNamesDecisionsRecentRequest withOutputStyle(GetNamesDecisionsRecentOutputStyleEnum outputStyle) {
         this.outputStyle = outputStyle;
         return this;
@@ -102,6 +112,7 @@ public class GetNamesDecisionsRecentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
     public GetNamesDecisionsRecentSortByEnum sortBy;
+
     public GetNamesDecisionsRecentRequest withSortBy(GetNamesDecisionsRecentSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -112,9 +123,14 @@ public class GetNamesDecisionsRecentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
     public Long startIndex;
+
     public GetNamesDecisionsRecentRequest withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
     }
     
+    public GetNamesDecisionsRecentRequest(@JsonProperty("days") Long days, @JsonProperty("outputFormat") GetNamesDecisionsRecentOutputFormatEnum outputFormat) {
+        this.days = days;
+        this.outputFormat = outputFormat;
+  }
 }

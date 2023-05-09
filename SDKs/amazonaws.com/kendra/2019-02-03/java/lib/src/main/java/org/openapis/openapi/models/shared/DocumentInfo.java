@@ -15,6 +15,7 @@ public class DocumentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public DocumentAttribute[] attributes;
+
     public DocumentInfo withAttributes(DocumentAttribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -22,9 +23,13 @@ public class DocumentInfo {
     
     @JsonProperty("DocumentId")
     public String documentId;
+
     public DocumentInfo withDocumentId(String documentId) {
         this.documentId = documentId;
         return this;
     }
     
+    public DocumentInfo(@JsonProperty("DocumentId") String documentId) {
+        this.documentId = documentId;
+  }
 }

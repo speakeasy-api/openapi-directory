@@ -15,6 +15,7 @@ public class CreateFunctionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public CreateFunctionRequestBody withCode(String code) {
         this.code = code;
         return this;
@@ -25,6 +26,7 @@ public class CreateFunctionRequestBody {
      */
     @JsonProperty("dataSourceName")
     public String dataSourceName;
+
     public CreateFunctionRequestBody withDataSourceName(String dataSourceName) {
         this.dataSourceName = dataSourceName;
         return this;
@@ -36,6 +38,7 @@ public class CreateFunctionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateFunctionRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +50,7 @@ public class CreateFunctionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functionVersion")
     public String functionVersion;
+
     public CreateFunctionRequestBody withFunctionVersion(String functionVersion) {
         this.functionVersion = functionVersion;
         return this;
@@ -58,6 +62,7 @@ public class CreateFunctionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxBatchSize")
     public Long maxBatchSize;
+
     public CreateFunctionRequestBody withMaxBatchSize(Long maxBatchSize) {
         this.maxBatchSize = maxBatchSize;
         return this;
@@ -68,6 +73,7 @@ public class CreateFunctionRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateFunctionRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -79,6 +85,7 @@ public class CreateFunctionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestMappingTemplate")
     public String requestMappingTemplate;
+
     public CreateFunctionRequestBody withRequestMappingTemplate(String requestMappingTemplate) {
         this.requestMappingTemplate = requestMappingTemplate;
         return this;
@@ -90,6 +97,7 @@ public class CreateFunctionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseMappingTemplate")
     public String responseMappingTemplate;
+
     public CreateFunctionRequestBody withResponseMappingTemplate(String responseMappingTemplate) {
         this.responseMappingTemplate = responseMappingTemplate;
         return this;
@@ -101,6 +109,7 @@ public class CreateFunctionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtime")
     public CreateFunctionRequestBodyRuntime runtime;
+
     public CreateFunctionRequestBody withRuntime(CreateFunctionRequestBodyRuntime runtime) {
         this.runtime = runtime;
         return this;
@@ -112,9 +121,14 @@ public class CreateFunctionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncConfig")
     public CreateFunctionRequestBodySyncConfig syncConfig;
+
     public CreateFunctionRequestBody withSyncConfig(CreateFunctionRequestBodySyncConfig syncConfig) {
         this.syncConfig = syncConfig;
         return this;
     }
     
+    public CreateFunctionRequestBody(@JsonProperty("dataSourceName") String dataSourceName, @JsonProperty("name") String name) {
+        this.dataSourceName = dataSourceName;
+        this.name = name;
+  }
 }

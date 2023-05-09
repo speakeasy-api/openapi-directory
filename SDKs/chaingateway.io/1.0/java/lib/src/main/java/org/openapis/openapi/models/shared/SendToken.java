@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SendToken {
     @JsonProperty("amount")
     public Integer amount;
+
     public SendToken withAmount(Integer amount) {
         this.amount = amount;
         return this;
@@ -16,6 +17,7 @@ public class SendToken {
     
     @JsonProperty("contractaddress")
     public String contractaddress;
+
     public SendToken withContractaddress(String contractaddress) {
         this.contractaddress = contractaddress;
         return this;
@@ -23,6 +25,7 @@ public class SendToken {
     
     @JsonProperty("from")
     public String from;
+
     public SendToken withFrom(String from) {
         this.from = from;
         return this;
@@ -30,6 +33,7 @@ public class SendToken {
     
     @JsonProperty("identifier")
     public String identifier;
+
     public SendToken withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -37,6 +41,7 @@ public class SendToken {
     
     @JsonProperty("ok")
     public Boolean ok;
+
     public SendToken withOk(Boolean ok) {
         this.ok = ok;
         return this;
@@ -44,6 +49,7 @@ public class SendToken {
     
     @JsonProperty("to")
     public String to;
+
     public SendToken withTo(String to) {
         this.to = to;
         return this;
@@ -51,9 +57,19 @@ public class SendToken {
     
     @JsonProperty("txid")
     public String txid;
+
     public SendToken withTxid(String txid) {
         this.txid = txid;
         return this;
     }
     
+    public SendToken(@JsonProperty("amount") Integer amount, @JsonProperty("contractaddress") String contractaddress, @JsonProperty("from") String from, @JsonProperty("identifier") String identifier, @JsonProperty("ok") Boolean ok, @JsonProperty("to") String to, @JsonProperty("txid") String txid) {
+        this.amount = amount;
+        this.contractaddress = contractaddress;
+        this.from = from;
+        this.identifier = identifier;
+        this.ok = ok;
+        this.to = to;
+        this.txid = txid;
+  }
 }

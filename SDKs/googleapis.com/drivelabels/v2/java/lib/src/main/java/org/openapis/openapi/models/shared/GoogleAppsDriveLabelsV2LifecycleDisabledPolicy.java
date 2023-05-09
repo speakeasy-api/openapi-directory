@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2LifecycleDisabledPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hideInSearch")
     public Boolean hideInSearch;
+
     public GoogleAppsDriveLabelsV2LifecycleDisabledPolicy withHideInSearch(Boolean hideInSearch) {
         this.hideInSearch = hideInSearch;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsDriveLabelsV2LifecycleDisabledPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showInApply")
     public Boolean showInApply;
+
     public GoogleAppsDriveLabelsV2LifecycleDisabledPolicy withShowInApply(Boolean showInApply) {
         this.showInApply = showInApply;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2LifecycleDisabledPolicy(){}
 }

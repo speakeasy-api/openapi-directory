@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AcknowledgeThirdPartyJobResponse {
@@ -12,6 +13,7 @@ public class AcknowledgeThirdPartyJobResponse {
      */
     
     public org.openapis.openapi.models.shared.AcknowledgeThirdPartyJobOutput acknowledgeThirdPartyJobOutput;
+
     public AcknowledgeThirdPartyJobResponse withAcknowledgeThirdPartyJobOutput(org.openapis.openapi.models.shared.AcknowledgeThirdPartyJobOutput acknowledgeThirdPartyJobOutput) {
         this.acknowledgeThirdPartyJobOutput = acknowledgeThirdPartyJobOutput;
         return this;
@@ -19,6 +21,7 @@ public class AcknowledgeThirdPartyJobResponse {
     
     
     public String contentType;
+
     public AcknowledgeThirdPartyJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AcknowledgeThirdPartyJobResponse {
      */
     
     public Object invalidClientTokenException;
+
     public AcknowledgeThirdPartyJobResponse withInvalidClientTokenException(Object invalidClientTokenException) {
         this.invalidClientTokenException = invalidClientTokenException;
         return this;
@@ -39,6 +43,7 @@ public class AcknowledgeThirdPartyJobResponse {
      */
     
     public Object invalidNonceException;
+
     public AcknowledgeThirdPartyJobResponse withInvalidNonceException(Object invalidNonceException) {
         this.invalidNonceException = invalidNonceException;
         return this;
@@ -49,6 +54,7 @@ public class AcknowledgeThirdPartyJobResponse {
      */
     
     public Object jobNotFoundException;
+
     public AcknowledgeThirdPartyJobResponse withJobNotFoundException(Object jobNotFoundException) {
         this.jobNotFoundException = jobNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class AcknowledgeThirdPartyJobResponse {
     
     
     public Integer statusCode;
+
     public AcknowledgeThirdPartyJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AcknowledgeThirdPartyJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AcknowledgeThirdPartyJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class AcknowledgeThirdPartyJobResponse {
      */
     
     public Object validationException;
+
     public AcknowledgeThirdPartyJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AcknowledgeThirdPartyJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

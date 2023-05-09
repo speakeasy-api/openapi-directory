@@ -12,9 +12,11 @@ public class CreateAForkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateAForkRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateAForkRequestBody(){}
 }

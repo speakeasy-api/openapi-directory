@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFilesPathRequest {
@@ -12,6 +13,7 @@ public class DeleteFilesPathRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public DeleteFilesPathRequest withPath(String path) {
         this.path = path;
         return this;
@@ -22,9 +24,13 @@ public class DeleteFilesPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recursive")
     public Boolean recursive;
+
     public DeleteFilesPathRequest withRecursive(Boolean recursive) {
         this.recursive = recursive;
         return this;
     }
     
+    public DeleteFilesPathRequest(@JsonProperty("path") String path) {
+        this.path = path;
+  }
 }

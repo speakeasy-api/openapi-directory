@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetIntegrationResponsesResponse {
@@ -12,6 +13,7 @@ public class GetIntegrationResponsesResponse {
      */
     
     public Object badRequestException;
+
     public GetIntegrationResponsesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetIntegrationResponsesResponse {
     
     
     public String contentType;
+
     public GetIntegrationResponsesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetIntegrationResponsesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetIntegrationResponsesResponse getIntegrationResponsesResponse;
+
     public GetIntegrationResponsesResponse withGetIntegrationResponsesResponse(org.openapis.openapi.models.shared.GetIntegrationResponsesResponse getIntegrationResponsesResponse) {
         this.getIntegrationResponsesResponse = getIntegrationResponsesResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetIntegrationResponsesResponse {
      */
     
     public Object notFoundException;
+
     public GetIntegrationResponsesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetIntegrationResponsesResponse {
     
     
     public Integer statusCode;
+
     public GetIntegrationResponsesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetIntegrationResponsesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetIntegrationResponsesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetIntegrationResponsesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetIntegrationResponsesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetIntegrationResponsesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

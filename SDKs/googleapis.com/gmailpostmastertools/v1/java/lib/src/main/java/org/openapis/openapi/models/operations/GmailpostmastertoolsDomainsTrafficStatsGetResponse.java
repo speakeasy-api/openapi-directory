@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GmailpostmastertoolsDomainsTrafficStatsGetResponse {
     
     public String contentType;
+
     public GmailpostmastertoolsDomainsTrafficStatsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GmailpostmastertoolsDomainsTrafficStatsGetResponse {
     
     
     public Integer statusCode;
+
     public GmailpostmastertoolsDomainsTrafficStatsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GmailpostmastertoolsDomainsTrafficStatsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GmailpostmastertoolsDomainsTrafficStatsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GmailpostmastertoolsDomainsTrafficStatsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.TrafficStats trafficStats;
+
     public GmailpostmastertoolsDomainsTrafficStatsGetResponse withTrafficStats(org.openapis.openapi.models.shared.TrafficStats trafficStats) {
         this.trafficStats = trafficStats;
         return this;
     }
     
+    public GmailpostmastertoolsDomainsTrafficStatsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

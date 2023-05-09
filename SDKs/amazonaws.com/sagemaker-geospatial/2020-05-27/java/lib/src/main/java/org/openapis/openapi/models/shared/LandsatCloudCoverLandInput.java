@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * LandsatCloudCoverLandInput - &lt;p/&gt;
+ * LandsatCloudCoverLandInput - The structure representing Land Cloud Cover property for Landsat data collection.
  */
 public class LandsatCloudCoverLandInput {
     @JsonProperty("LowerBound")
     public Float lowerBound;
+
     public LandsatCloudCoverLandInput withLowerBound(Float lowerBound) {
         this.lowerBound = lowerBound;
         return this;
@@ -19,9 +20,14 @@ public class LandsatCloudCoverLandInput {
     
     @JsonProperty("UpperBound")
     public Float upperBound;
+
     public LandsatCloudCoverLandInput withUpperBound(Float upperBound) {
         this.upperBound = upperBound;
         return this;
     }
     
+    public LandsatCloudCoverLandInput(@JsonProperty("LowerBound") Float lowerBound, @JsonProperty("UpperBound") Float upperBound) {
+        this.lowerBound = lowerBound;
+        this.upperBound = upperBound;
+  }
 }

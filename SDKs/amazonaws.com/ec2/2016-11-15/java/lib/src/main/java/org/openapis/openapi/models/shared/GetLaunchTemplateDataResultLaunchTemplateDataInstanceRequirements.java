@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsAcceleratorCount acceleratorCount;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withAcceleratorCount(GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsAcceleratorCount acceleratorCount) {
         this.acceleratorCount = acceleratorCount;
         return this;
@@ -19,6 +20,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsAcceleratorManufacturersEnum[] acceleratorManufacturers;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withAcceleratorManufacturers(GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsAcceleratorManufacturersEnum[] acceleratorManufacturers) {
         this.acceleratorManufacturers = acceleratorManufacturers;
         return this;
@@ -26,6 +28,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsAcceleratorNamesEnum[] acceleratorNames;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withAcceleratorNames(GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsAcceleratorNamesEnum[] acceleratorNames) {
         this.acceleratorNames = acceleratorNames;
         return this;
@@ -33,6 +36,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsAcceleratorTotalMemoryMiB acceleratorTotalMemoryMiB;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withAcceleratorTotalMemoryMiB(GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsAcceleratorTotalMemoryMiB acceleratorTotalMemoryMiB) {
         this.acceleratorTotalMemoryMiB = acceleratorTotalMemoryMiB;
         return this;
@@ -40,6 +44,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsAcceleratorTypesEnum[] acceleratorTypes;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withAcceleratorTypes(GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsAcceleratorTypesEnum[] acceleratorTypes) {
         this.acceleratorTypes = acceleratorTypes;
         return this;
@@ -47,6 +52,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public String[] allowedInstanceTypes;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withAllowedInstanceTypes(String[] allowedInstanceTypes) {
         this.allowedInstanceTypes = allowedInstanceTypes;
         return this;
@@ -54,6 +60,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsBareMetalEnum bareMetal;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withBareMetal(GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsBareMetalEnum bareMetal) {
         this.bareMetal = bareMetal;
         return this;
@@ -61,6 +68,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbps baselineEbsBandwidthMbps;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withBaselineEbsBandwidthMbps(GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbps baselineEbsBandwidthMbps) {
         this.baselineEbsBandwidthMbps = baselineEbsBandwidthMbps;
         return this;
@@ -68,6 +76,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsBurstablePerformanceEnum burstablePerformance;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withBurstablePerformance(GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsBurstablePerformanceEnum burstablePerformance) {
         this.burstablePerformance = burstablePerformance;
         return this;
@@ -75,6 +84,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsCpuManufacturersEnum[] cpuManufacturers;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withCpuManufacturers(GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsCpuManufacturersEnum[] cpuManufacturers) {
         this.cpuManufacturers = cpuManufacturers;
         return this;
@@ -82,6 +92,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public String[] excludedInstanceTypes;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withExcludedInstanceTypes(String[] excludedInstanceTypes) {
         this.excludedInstanceTypes = excludedInstanceTypes;
         return this;
@@ -89,6 +100,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsInstanceGenerationsEnum[] instanceGenerations;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withInstanceGenerations(GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsInstanceGenerationsEnum[] instanceGenerations) {
         this.instanceGenerations = instanceGenerations;
         return this;
@@ -96,6 +108,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsLocalStorageEnum localStorage;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withLocalStorage(GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsLocalStorageEnum localStorage) {
         this.localStorage = localStorage;
         return this;
@@ -103,6 +116,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsLocalStorageTypesEnum[] localStorageTypes;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withLocalStorageTypes(GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsLocalStorageTypesEnum[] localStorageTypes) {
         this.localStorageTypes = localStorageTypes;
         return this;
@@ -110,6 +124,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpu memoryGiBPerVCpu;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withMemoryGiBPerVCpu(GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpu memoryGiBPerVCpu) {
         this.memoryGiBPerVCpu = memoryGiBPerVCpu;
         return this;
@@ -117,6 +132,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsMemoryMiB memoryMiB;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withMemoryMiB(GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsMemoryMiB memoryMiB) {
         this.memoryMiB = memoryMiB;
         return this;
@@ -124,6 +140,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsNetworkBandwidthGbps networkBandwidthGbps;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withNetworkBandwidthGbps(GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsNetworkBandwidthGbps networkBandwidthGbps) {
         this.networkBandwidthGbps = networkBandwidthGbps;
         return this;
@@ -131,6 +148,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsNetworkInterfaceCount networkInterfaceCount;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withNetworkInterfaceCount(GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsNetworkInterfaceCount networkInterfaceCount) {
         this.networkInterfaceCount = networkInterfaceCount;
         return this;
@@ -138,6 +156,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public Long onDemandMaxPricePercentageOverLowestPrice;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withOnDemandMaxPricePercentageOverLowestPrice(Long onDemandMaxPricePercentageOverLowestPrice) {
         this.onDemandMaxPricePercentageOverLowestPrice = onDemandMaxPricePercentageOverLowestPrice;
         return this;
@@ -145,6 +164,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public Boolean requireHibernateSupport;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withRequireHibernateSupport(Boolean requireHibernateSupport) {
         this.requireHibernateSupport = requireHibernateSupport;
         return this;
@@ -152,6 +172,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public Long spotMaxPricePercentageOverLowestPrice;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withSpotMaxPricePercentageOverLowestPrice(Long spotMaxPricePercentageOverLowestPrice) {
         this.spotMaxPricePercentageOverLowestPrice = spotMaxPricePercentageOverLowestPrice;
         return this;
@@ -159,6 +180,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsTotalLocalStorageGB totalLocalStorageGB;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withTotalLocalStorageGB(GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsTotalLocalStorageGB totalLocalStorageGB) {
         this.totalLocalStorageGB = totalLocalStorageGB;
         return this;
@@ -166,9 +188,11 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsVCpuCount vCpuCount;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements withVCpuCount(GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsVCpuCount vCpuCount) {
         this.vCpuCount = vCpuCount;
         return this;
     }
     
+    public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirements(){}
 }

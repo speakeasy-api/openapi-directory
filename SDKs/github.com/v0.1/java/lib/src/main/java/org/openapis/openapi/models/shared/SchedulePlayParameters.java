@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class SchedulePlayParameters {
      */
     @SpeakeasyMetadata("form:name=CallUUID")
     public String callUUID;
+
     public SchedulePlayParameters withCallUUID(String callUUID) {
         this.callUUID = callUUID;
         return this;
@@ -25,6 +27,7 @@ public class SchedulePlayParameters {
      */
     @SpeakeasyMetadata("form:name=Legs")
     public SchedulePlayParametersLegsEnum legs;
+
     public SchedulePlayParameters withLegs(SchedulePlayParametersLegsEnum legs) {
         this.legs = legs;
         return this;
@@ -35,6 +38,7 @@ public class SchedulePlayParameters {
      */
     @SpeakeasyMetadata("form:name=Length")
     public Long length;
+
     public SchedulePlayParameters withLength(Long length) {
         this.length = length;
         return this;
@@ -45,6 +49,7 @@ public class SchedulePlayParameters {
      */
     @SpeakeasyMetadata("form:name=Loop")
     public Boolean loop;
+
     public SchedulePlayParameters withLoop(Boolean loop) {
         this.loop = loop;
         return this;
@@ -55,6 +60,7 @@ public class SchedulePlayParameters {
      */
     @SpeakeasyMetadata("form:name=Mix")
     public Boolean mix;
+
     public SchedulePlayParameters withMix(Boolean mix) {
         this.mix = mix;
         return this;
@@ -65,6 +71,7 @@ public class SchedulePlayParameters {
      */
     @SpeakeasyMetadata("form:name=Sounds")
     public String sounds;
+
     public SchedulePlayParameters withSounds(String sounds) {
         this.sounds = sounds;
         return this;
@@ -75,9 +82,15 @@ public class SchedulePlayParameters {
      */
     @SpeakeasyMetadata("form:name=Time")
     public Long time;
+
     public SchedulePlayParameters withTime(Long time) {
         this.time = time;
         return this;
     }
     
+    public SchedulePlayParameters(@JsonProperty("CallUUID") String callUUID, @JsonProperty("Sounds") String sounds, @JsonProperty("Time") Long time) {
+        this.callUUID = callUUID;
+        this.sounds = sounds;
+        this.time = time;
+  }
 }

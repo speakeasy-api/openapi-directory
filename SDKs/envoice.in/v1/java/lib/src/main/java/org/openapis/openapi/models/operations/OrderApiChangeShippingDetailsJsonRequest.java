@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiChangeShippingDetailsJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.OrderShippingDetailsApiModel orderShippingDetailsApiModel;
+
     public OrderApiChangeShippingDetailsJsonRequest withOrderShippingDetailsApiModel(org.openapis.openapi.models.shared.OrderShippingDetailsApiModel orderShippingDetailsApiModel) {
         this.orderShippingDetailsApiModel = orderShippingDetailsApiModel;
         return this;
@@ -16,6 +18,7 @@ public class OrderApiChangeShippingDetailsJsonRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderId")
     public Integer orderId;
+
     public OrderApiChangeShippingDetailsJsonRequest withOrderId(Integer orderId) {
         this.orderId = orderId;
         return this;
@@ -23,6 +26,7 @@ public class OrderApiChangeShippingDetailsJsonRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
     public String xAuthKey;
+
     public OrderApiChangeShippingDetailsJsonRequest withXAuthKey(String xAuthKey) {
         this.xAuthKey = xAuthKey;
         return this;
@@ -30,9 +34,16 @@ public class OrderApiChangeShippingDetailsJsonRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
     public String xAuthSecret;
+
     public OrderApiChangeShippingDetailsJsonRequest withXAuthSecret(String xAuthSecret) {
         this.xAuthSecret = xAuthSecret;
         return this;
     }
     
+    public OrderApiChangeShippingDetailsJsonRequest(@JsonProperty("OrderShippingDetailsApiModel") org.openapis.openapi.models.shared.OrderShippingDetailsApiModel orderShippingDetailsApiModel, @JsonProperty("orderId") Integer orderId, @JsonProperty("x-auth-key") String xAuthKey, @JsonProperty("x-auth-secret") String xAuthSecret) {
+        this.orderShippingDetailsApiModel = orderShippingDetailsApiModel;
+        this.orderId = orderId;
+        this.xAuthKey = xAuthKey;
+        this.xAuthSecret = xAuthSecret;
+  }
 }

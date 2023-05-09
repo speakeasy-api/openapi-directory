@@ -15,6 +15,7 @@ public class Trait {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public AttributeNameEnum name;
+
     public Trait withName(AttributeNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class Trait {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public Trait withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public Trait(){}
 }

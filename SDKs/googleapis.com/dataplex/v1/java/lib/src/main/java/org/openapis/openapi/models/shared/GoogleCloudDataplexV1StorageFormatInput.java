@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1StorageFormatInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compressionFormat")
     public GoogleCloudDataplexV1StorageFormatCompressionFormatEnum compressionFormat;
+
     public GoogleCloudDataplexV1StorageFormatInput withCompressionFormat(GoogleCloudDataplexV1StorageFormatCompressionFormatEnum compressionFormat) {
         this.compressionFormat = compressionFormat;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1StorageFormatInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("csv")
     public GoogleCloudDataplexV1StorageFormatCsvOptions csv;
+
     public GoogleCloudDataplexV1StorageFormatInput withCsv(GoogleCloudDataplexV1StorageFormatCsvOptions csv) {
         this.csv = csv;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1StorageFormatInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iceberg")
     public GoogleCloudDataplexV1StorageFormatIcebergOptions iceberg;
+
     public GoogleCloudDataplexV1StorageFormatInput withIceberg(GoogleCloudDataplexV1StorageFormatIcebergOptions iceberg) {
         this.iceberg = iceberg;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1StorageFormatInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("json")
     public GoogleCloudDataplexV1StorageFormatJsonOptions json;
+
     public GoogleCloudDataplexV1StorageFormatInput withJson(GoogleCloudDataplexV1StorageFormatJsonOptions json) {
         this.json = json;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDataplexV1StorageFormatInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public GoogleCloudDataplexV1StorageFormatInput withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
     
+    public GoogleCloudDataplexV1StorageFormatInput(){}
 }

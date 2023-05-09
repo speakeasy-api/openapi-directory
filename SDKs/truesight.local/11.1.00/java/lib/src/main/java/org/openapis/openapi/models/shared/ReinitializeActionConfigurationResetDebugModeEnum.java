@@ -10,13 +10,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * ReinitializeActionConfigurationResetDebugModeEnum - When set to &lt;em&gt;1&lt;/em&gt;, deactivates the debug mode when it was manually enabled.
  */
 public enum ReinitializeActionConfigurationResetDebugModeEnum {
-    ZERO("0"),
-    ONE("1");
+    ZERO(0),
+    ONE(1);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private ReinitializeActionConfigurationResetDebugModeEnum(String value) {
+    private ReinitializeActionConfigurationResetDebugModeEnum(Integer value) {
         this.value = value;
     }
 }

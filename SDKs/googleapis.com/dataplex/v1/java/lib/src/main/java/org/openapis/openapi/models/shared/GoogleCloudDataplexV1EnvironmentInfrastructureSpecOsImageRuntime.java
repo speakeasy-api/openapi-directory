@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRuntime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageVersion")
     public String imageVersion;
+
     public GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRuntime withImageVersion(String imageVersion) {
         this.imageVersion = imageVersion;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRuntime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("javaLibraries")
     public String[] javaLibraries;
+
     public GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRuntime withJavaLibraries(String[] javaLibraries) {
         this.javaLibraries = javaLibraries;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRuntime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRuntime withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRuntime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pythonPackages")
     public String[] pythonPackages;
+
     public GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRuntime withPythonPackages(String[] pythonPackages) {
         this.pythonPackages = pythonPackages;
         return this;
     }
     
+    public GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRuntime(){}
 }

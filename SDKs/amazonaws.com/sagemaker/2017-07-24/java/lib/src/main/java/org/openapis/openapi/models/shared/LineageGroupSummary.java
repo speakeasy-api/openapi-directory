@@ -22,6 +22,7 @@ public class LineageGroupSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public LineageGroupSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class LineageGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public LineageGroupSummary withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class LineageGroupSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public LineageGroupSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -48,6 +51,7 @@ public class LineageGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineageGroupArn")
     public String lineageGroupArn;
+
     public LineageGroupSummary withLineageGroupArn(String lineageGroupArn) {
         this.lineageGroupArn = lineageGroupArn;
         return this;
@@ -56,9 +60,11 @@ public class LineageGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineageGroupName")
     public String lineageGroupName;
+
     public LineageGroupSummary withLineageGroupName(String lineageGroupName) {
         this.lineageGroupName = lineageGroupName;
         return this;
     }
     
+    public LineageGroupSummary(){}
 }

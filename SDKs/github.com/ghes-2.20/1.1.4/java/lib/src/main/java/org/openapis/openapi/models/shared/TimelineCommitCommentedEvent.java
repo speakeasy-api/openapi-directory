@@ -15,6 +15,7 @@ public class TimelineCommitCommentedEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public CommitComment[] comments;
+
     public TimelineCommitCommentedEvent withComments(CommitComment[] comments) {
         this.comments = comments;
         return this;
@@ -23,6 +24,7 @@ public class TimelineCommitCommentedEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commit_id")
     public String commitId;
+
     public TimelineCommitCommentedEvent withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -31,6 +33,7 @@ public class TimelineCommitCommentedEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public String event;
+
     public TimelineCommitCommentedEvent withEvent(String event) {
         this.event = event;
         return this;
@@ -39,9 +42,11 @@ public class TimelineCommitCommentedEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node_id")
     public String nodeId;
+
     public TimelineCommitCommentedEvent withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
     }
     
+    public TimelineCommitCommentedEvent(){}
 }

@@ -18,6 +18,7 @@ public class DynamicSourceSplit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
     public DerivedSource primary;
+
     public DynamicSourceSplit withPrimary(DerivedSource primary) {
         this.primary = primary;
         return this;
@@ -29,9 +30,11 @@ public class DynamicSourceSplit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("residual")
     public DerivedSource residual;
+
     public DynamicSourceSplit withResidual(DerivedSource residual) {
         this.residual = residual;
         return this;
     }
     
+    public DynamicSourceSplit(){}
 }

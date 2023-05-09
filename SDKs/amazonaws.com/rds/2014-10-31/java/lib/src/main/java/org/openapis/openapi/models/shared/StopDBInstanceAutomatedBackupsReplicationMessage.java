@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StopDBInstanceAutomatedBackupsReplicationMessage {
     
     public String sourceDBInstanceArn;
+
     public StopDBInstanceAutomatedBackupsReplicationMessage withSourceDBInstanceArn(String sourceDBInstanceArn) {
         this.sourceDBInstanceArn = sourceDBInstanceArn;
         return this;
     }
     
+    public StopDBInstanceAutomatedBackupsReplicationMessage(@JsonProperty("SourceDBInstanceArn") String sourceDBInstanceArn) {
+        this.sourceDBInstanceArn = sourceDBInstanceArn;
+  }
 }

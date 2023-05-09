@@ -18,6 +18,7 @@ public class SecurityKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateKey")
     public String privateKey;
+
     public SecurityKey withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -29,6 +30,7 @@ public class SecurityKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicKey")
     public String publicKey;
+
     public SecurityKey withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
@@ -40,6 +42,7 @@ public class SecurityKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("universalTwoFactor")
     public UniversalTwoFactor universalTwoFactor;
+
     public SecurityKey withUniversalTwoFactor(UniversalTwoFactor universalTwoFactor) {
         this.universalTwoFactor = universalTwoFactor;
         return this;
@@ -51,9 +54,11 @@ public class SecurityKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webAuthn")
     public WebAuthn webAuthn;
+
     public SecurityKey withWebAuthn(WebAuthn webAuthn) {
         this.webAuthn = webAuthn;
         return this;
     }
     
+    public SecurityKey(){}
 }

@@ -15,6 +15,7 @@ public class TrialMinutes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remaining")
     public Double remaining;
+
     public TrialMinutes withRemaining(Double remaining) {
         this.remaining = remaining;
         return this;
@@ -23,9 +24,11 @@ public class TrialMinutes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public TrialMinutes withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public TrialMinutes(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisableProactiveEngagementResponse {
     
     public String contentType;
+
     public DisableProactiveEngagementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisableProactiveEngagementResponse {
      */
     
     public java.util.Map<String, Object> disableProactiveEngagementResponse;
+
     public DisableProactiveEngagementResponse withDisableProactiveEngagementResponse(java.util.Map<String, Object> disableProactiveEngagementResponse) {
         this.disableProactiveEngagementResponse = disableProactiveEngagementResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisableProactiveEngagementResponse {
      */
     
     public Object internalErrorException;
+
     public DisableProactiveEngagementResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DisableProactiveEngagementResponse {
      */
     
     public Object invalidOperationException;
+
     public DisableProactiveEngagementResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -49,6 +54,7 @@ public class DisableProactiveEngagementResponse {
      */
     
     public Object invalidParameterException;
+
     public DisableProactiveEngagementResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DisableProactiveEngagementResponse {
      */
     
     public Object optimisticLockException;
+
     public DisableProactiveEngagementResponse withOptimisticLockException(Object optimisticLockException) {
         this.optimisticLockException = optimisticLockException;
         return this;
@@ -69,6 +76,7 @@ public class DisableProactiveEngagementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisableProactiveEngagementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DisableProactiveEngagementResponse {
     
     
     public Integer statusCode;
+
     public DisableProactiveEngagementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DisableProactiveEngagementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisableProactiveEngagementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisableProactiveEngagementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

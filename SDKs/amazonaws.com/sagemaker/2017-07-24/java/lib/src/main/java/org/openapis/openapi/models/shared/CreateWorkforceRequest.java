@@ -12,6 +12,7 @@ public class CreateWorkforceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CognitoConfig")
     public CognitoConfig cognitoConfig;
+
     public CreateWorkforceRequest withCognitoConfig(CognitoConfig cognitoConfig) {
         this.cognitoConfig = cognitoConfig;
         return this;
@@ -20,6 +21,7 @@ public class CreateWorkforceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OidcConfig")
     public OidcConfig oidcConfig;
+
     public CreateWorkforceRequest withOidcConfig(OidcConfig oidcConfig) {
         this.oidcConfig = oidcConfig;
         return this;
@@ -31,6 +33,7 @@ public class CreateWorkforceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceIpConfig")
     public SourceIpConfig sourceIpConfig;
+
     public CreateWorkforceRequest withSourceIpConfig(SourceIpConfig sourceIpConfig) {
         this.sourceIpConfig = sourceIpConfig;
         return this;
@@ -39,6 +42,7 @@ public class CreateWorkforceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateWorkforceRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -46,6 +50,7 @@ public class CreateWorkforceRequest {
     
     @JsonProperty("WorkforceName")
     public String workforceName;
+
     public CreateWorkforceRequest withWorkforceName(String workforceName) {
         this.workforceName = workforceName;
         return this;
@@ -54,9 +59,13 @@ public class CreateWorkforceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkforceVpcConfig")
     public WorkforceVpcConfigRequest workforceVpcConfig;
+
     public CreateWorkforceRequest withWorkforceVpcConfig(WorkforceVpcConfigRequest workforceVpcConfig) {
         this.workforceVpcConfig = workforceVpcConfig;
         return this;
     }
     
+    public CreateWorkforceRequest(@JsonProperty("WorkforceName") String workforceName) {
+        this.workforceName = workforceName;
+  }
 }

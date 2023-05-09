@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeCustomKeyStoresResponse {
     
     public String contentType;
+
     public DescribeCustomKeyStoresResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeCustomKeyStoresResponse {
      */
     
     public Object customKeyStoreNotFoundException;
+
     public DescribeCustomKeyStoresResponse withCustomKeyStoreNotFoundException(Object customKeyStoreNotFoundException) {
         this.customKeyStoreNotFoundException = customKeyStoreNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeCustomKeyStoresResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeCustomKeyStoresResponse describeCustomKeyStoresResponse;
+
     public DescribeCustomKeyStoresResponse withDescribeCustomKeyStoresResponse(org.openapis.openapi.models.shared.DescribeCustomKeyStoresResponse describeCustomKeyStoresResponse) {
         this.describeCustomKeyStoresResponse = describeCustomKeyStoresResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeCustomKeyStoresResponse {
      */
     
     public Object invalidMarkerException;
+
     public DescribeCustomKeyStoresResponse withInvalidMarkerException(Object invalidMarkerException) {
         this.invalidMarkerException = invalidMarkerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeCustomKeyStoresResponse {
      */
     
     public Object kmsInternalException;
+
     public DescribeCustomKeyStoresResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeCustomKeyStoresResponse {
     
     
     public Integer statusCode;
+
     public DescribeCustomKeyStoresResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeCustomKeyStoresResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeCustomKeyStoresResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeCustomKeyStoresResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

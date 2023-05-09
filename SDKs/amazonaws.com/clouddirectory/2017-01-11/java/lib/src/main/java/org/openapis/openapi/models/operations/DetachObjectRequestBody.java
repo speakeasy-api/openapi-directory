@@ -12,6 +12,7 @@ public class DetachObjectRequestBody {
      */
     @JsonProperty("LinkName")
     public String linkName;
+
     public DetachObjectRequestBody withLinkName(String linkName) {
         this.linkName = linkName;
         return this;
@@ -22,9 +23,14 @@ public class DetachObjectRequestBody {
      */
     @JsonProperty("ParentReference")
     public DetachObjectRequestBodyParentReference parentReference;
+
     public DetachObjectRequestBody withParentReference(DetachObjectRequestBodyParentReference parentReference) {
         this.parentReference = parentReference;
         return this;
     }
     
+    public DetachObjectRequestBody(@JsonProperty("LinkName") String linkName, @JsonProperty("ParentReference") DetachObjectRequestBodyParentReference parentReference) {
+        this.linkName = linkName;
+        this.parentReference = parentReference;
+  }
 }

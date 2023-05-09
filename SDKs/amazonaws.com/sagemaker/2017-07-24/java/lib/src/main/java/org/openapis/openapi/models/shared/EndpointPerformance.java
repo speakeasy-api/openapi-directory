@@ -15,6 +15,7 @@ public class EndpointPerformance {
      */
     @JsonProperty("EndpointInfo")
     public EndpointInfo endpointInfo;
+
     public EndpointPerformance withEndpointInfo(EndpointInfo endpointInfo) {
         this.endpointInfo = endpointInfo;
         return this;
@@ -22,9 +23,14 @@ public class EndpointPerformance {
     
     @JsonProperty("Metrics")
     public InferenceMetrics metrics;
+
     public EndpointPerformance withMetrics(InferenceMetrics metrics) {
         this.metrics = metrics;
         return this;
     }
     
+    public EndpointPerformance(@JsonProperty("EndpointInfo") EndpointInfo endpointInfo, @JsonProperty("Metrics") InferenceMetrics metrics) {
+        this.endpointInfo = endpointInfo;
+        this.metrics = metrics;
+  }
 }

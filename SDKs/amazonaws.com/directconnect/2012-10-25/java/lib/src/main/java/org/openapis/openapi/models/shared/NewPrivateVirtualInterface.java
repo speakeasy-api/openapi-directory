@@ -15,6 +15,7 @@ public class NewPrivateVirtualInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressFamily")
     public AddressFamilyEnum addressFamily;
+
     public NewPrivateVirtualInterface withAddressFamily(AddressFamilyEnum addressFamily) {
         this.addressFamily = addressFamily;
         return this;
@@ -23,6 +24,7 @@ public class NewPrivateVirtualInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amazonAddress")
     public String amazonAddress;
+
     public NewPrivateVirtualInterface withAmazonAddress(String amazonAddress) {
         this.amazonAddress = amazonAddress;
         return this;
@@ -30,6 +32,7 @@ public class NewPrivateVirtualInterface {
     
     @JsonProperty("asn")
     public Long asn;
+
     public NewPrivateVirtualInterface withAsn(Long asn) {
         this.asn = asn;
         return this;
@@ -38,6 +41,7 @@ public class NewPrivateVirtualInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authKey")
     public String authKey;
+
     public NewPrivateVirtualInterface withAuthKey(String authKey) {
         this.authKey = authKey;
         return this;
@@ -46,6 +50,7 @@ public class NewPrivateVirtualInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerAddress")
     public String customerAddress;
+
     public NewPrivateVirtualInterface withCustomerAddress(String customerAddress) {
         this.customerAddress = customerAddress;
         return this;
@@ -54,6 +59,7 @@ public class NewPrivateVirtualInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directConnectGatewayId")
     public String directConnectGatewayId;
+
     public NewPrivateVirtualInterface withDirectConnectGatewayId(String directConnectGatewayId) {
         this.directConnectGatewayId = directConnectGatewayId;
         return this;
@@ -62,6 +68,7 @@ public class NewPrivateVirtualInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableSiteLink")
     public Boolean enableSiteLink;
+
     public NewPrivateVirtualInterface withEnableSiteLink(Boolean enableSiteLink) {
         this.enableSiteLink = enableSiteLink;
         return this;
@@ -70,6 +77,7 @@ public class NewPrivateVirtualInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mtu")
     public Long mtu;
+
     public NewPrivateVirtualInterface withMtu(Long mtu) {
         this.mtu = mtu;
         return this;
@@ -78,6 +86,7 @@ public class NewPrivateVirtualInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public NewPrivateVirtualInterface withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -86,6 +95,7 @@ public class NewPrivateVirtualInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualGatewayId")
     public String virtualGatewayId;
+
     public NewPrivateVirtualInterface withVirtualGatewayId(String virtualGatewayId) {
         this.virtualGatewayId = virtualGatewayId;
         return this;
@@ -93,6 +103,7 @@ public class NewPrivateVirtualInterface {
     
     @JsonProperty("virtualInterfaceName")
     public String virtualInterfaceName;
+
     public NewPrivateVirtualInterface withVirtualInterfaceName(String virtualInterfaceName) {
         this.virtualInterfaceName = virtualInterfaceName;
         return this;
@@ -100,9 +111,15 @@ public class NewPrivateVirtualInterface {
     
     @JsonProperty("vlan")
     public Long vlan;
+
     public NewPrivateVirtualInterface withVlan(Long vlan) {
         this.vlan = vlan;
         return this;
     }
     
+    public NewPrivateVirtualInterface(@JsonProperty("asn") Long asn, @JsonProperty("virtualInterfaceName") String virtualInterfaceName, @JsonProperty("vlan") Long vlan) {
+        this.asn = asn;
+        this.virtualInterfaceName = virtualInterfaceName;
+        this.vlan = vlan;
+  }
 }

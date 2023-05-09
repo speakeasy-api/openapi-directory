@@ -15,9 +15,11 @@ public class DescribeDetectorModelAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AnalysisStatusEnum status;
+
     public DescribeDetectorModelAnalysisResponse withStatus(AnalysisStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DescribeDetectorModelAnalysisResponse(){}
 }

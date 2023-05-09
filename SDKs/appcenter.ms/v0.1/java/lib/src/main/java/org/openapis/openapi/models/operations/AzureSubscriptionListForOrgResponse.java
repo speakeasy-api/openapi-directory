@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AzureSubscriptionListForOrgResponse {
     
     public String contentType;
+
     public AzureSubscriptionListForOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AzureSubscriptionListForOrgResponse {
     
     
     public Integer statusCode;
+
     public AzureSubscriptionListForOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AzureSubscriptionListForOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AzureSubscriptionListForOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AzureSubscriptionListForOrgResponse {
      */
     
     public AzureSubscriptionListForOrg200ApplicationJSON[] azureSubscriptionListForOrg200ApplicationJSONObjects;
+
     public AzureSubscriptionListForOrgResponse withAzureSubscriptionListForOrg200ApplicationJSONObjects(AzureSubscriptionListForOrg200ApplicationJSON[] azureSubscriptionListForOrg200ApplicationJSONObjects) {
         this.azureSubscriptionListForOrg200ApplicationJSONObjects = azureSubscriptionListForOrg200ApplicationJSONObjects;
         return this;
@@ -43,9 +48,14 @@ public class AzureSubscriptionListForOrgResponse {
      */
     
     public AzureSubscriptionListForOrgDefaultApplicationJSON azureSubscriptionListForOrgDefaultApplicationJSONObject;
+
     public AzureSubscriptionListForOrgResponse withAzureSubscriptionListForOrgDefaultApplicationJSONObject(AzureSubscriptionListForOrgDefaultApplicationJSON azureSubscriptionListForOrgDefaultApplicationJSONObject) {
         this.azureSubscriptionListForOrgDefaultApplicationJSONObject = azureSubscriptionListForOrgDefaultApplicationJSONObject;
         return this;
     }
     
+    public AzureSubscriptionListForOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

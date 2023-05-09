@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDiscoveredResourcesResponse {
@@ -12,6 +13,7 @@ public class ListDiscoveredResourcesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListDiscoveredResourcesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListDiscoveredResourcesResponse {
     
     
     public String contentType;
+
     public ListDiscoveredResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListDiscoveredResourcesResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public ListDiscoveredResourcesResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -39,6 +43,7 @@ public class ListDiscoveredResourcesResponse {
      */
     
     public Object internalServerError;
+
     public ListDiscoveredResourcesResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class ListDiscoveredResourcesResponse {
      */
     
     public Object invalidInputException;
+
     public ListDiscoveredResourcesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class ListDiscoveredResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDiscoveredResourcesResult listDiscoveredResourcesResult;
+
     public ListDiscoveredResourcesResponse withListDiscoveredResourcesResult(org.openapis.openapi.models.shared.ListDiscoveredResourcesResult listDiscoveredResourcesResult) {
         this.listDiscoveredResourcesResult = listDiscoveredResourcesResult;
         return this;
@@ -66,6 +73,7 @@ public class ListDiscoveredResourcesResponse {
     
     
     public Integer statusCode;
+
     public ListDiscoveredResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListDiscoveredResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDiscoveredResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListDiscoveredResourcesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListDiscoveredResourcesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class ListDiscoveredResourcesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListDiscoveredResourcesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,9 +114,14 @@ public class ListDiscoveredResourcesResponse {
      */
     
     public Object throttlingException;
+
     public ListDiscoveredResourcesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListDiscoveredResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

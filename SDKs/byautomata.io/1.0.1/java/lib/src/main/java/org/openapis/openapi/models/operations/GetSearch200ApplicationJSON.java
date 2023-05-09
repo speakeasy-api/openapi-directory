@@ -15,6 +15,7 @@ public class GetSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calls_per_month")
     public String callsPerMonth;
+
     public GetSearch200ApplicationJSON withCallsPerMonth(String callsPerMonth) {
         this.callsPerMonth = callsPerMonth;
         return this;
@@ -23,6 +24,7 @@ public class GetSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companies")
     public org.openapis.openapi.models.shared.SimilarCompanySearch[] companies;
+
     public GetSearch200ApplicationJSON withCompanies(org.openapis.openapi.models.shared.SimilarCompanySearch[] companies) {
         this.companies = companies;
         return this;
@@ -31,6 +33,7 @@ public class GetSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count_remaining")
     public String countRemaining;
+
     public GetSearch200ApplicationJSON withCountRemaining(String countRemaining) {
         this.countRemaining = countRemaining;
         return this;
@@ -39,9 +42,11 @@ public class GetSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renewal_date")
     public String renewalDate;
+
     public GetSearch200ApplicationJSON withRenewalDate(String renewalDate) {
         this.renewalDate = renewalDate;
         return this;
     }
     
+    public GetSearch200ApplicationJSON(){}
 }

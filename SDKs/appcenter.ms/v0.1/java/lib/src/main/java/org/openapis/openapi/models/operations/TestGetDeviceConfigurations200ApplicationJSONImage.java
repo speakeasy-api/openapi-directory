@@ -12,6 +12,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("full")
     public String full;
+
     public TestGetDeviceConfigurations200ApplicationJSONImage withFull(String full) {
         this.full = full;
         return this;
@@ -20,9 +21,11 @@ public class TestGetDeviceConfigurations200ApplicationJSONImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumb")
     public String thumb;
+
     public TestGetDeviceConfigurations200ApplicationJSONImage withThumb(String thumb) {
         this.thumb = thumb;
         return this;
     }
     
+    public TestGetDeviceConfigurations200ApplicationJSONImage(){}
 }

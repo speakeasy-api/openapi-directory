@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AuthorizeClientVpnIngressRequest {
     
     public String accessGroupId;
+
     public AuthorizeClientVpnIngressRequest withAccessGroupId(String accessGroupId) {
         this.accessGroupId = accessGroupId;
         return this;
@@ -16,6 +17,7 @@ public class AuthorizeClientVpnIngressRequest {
     
     
     public Boolean authorizeAllGroups;
+
     public AuthorizeClientVpnIngressRequest withAuthorizeAllGroups(Boolean authorizeAllGroups) {
         this.authorizeAllGroups = authorizeAllGroups;
         return this;
@@ -23,6 +25,7 @@ public class AuthorizeClientVpnIngressRequest {
     
     
     public String clientToken;
+
     public AuthorizeClientVpnIngressRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -30,6 +33,7 @@ public class AuthorizeClientVpnIngressRequest {
     
     
     public String clientVpnEndpointId;
+
     public AuthorizeClientVpnIngressRequest withClientVpnEndpointId(String clientVpnEndpointId) {
         this.clientVpnEndpointId = clientVpnEndpointId;
         return this;
@@ -37,6 +41,7 @@ public class AuthorizeClientVpnIngressRequest {
     
     
     public String description;
+
     public AuthorizeClientVpnIngressRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +49,7 @@ public class AuthorizeClientVpnIngressRequest {
     
     
     public Boolean dryRun;
+
     public AuthorizeClientVpnIngressRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -51,9 +57,14 @@ public class AuthorizeClientVpnIngressRequest {
     
     
     public String targetNetworkCidr;
+
     public AuthorizeClientVpnIngressRequest withTargetNetworkCidr(String targetNetworkCidr) {
         this.targetNetworkCidr = targetNetworkCidr;
         return this;
     }
     
+    public AuthorizeClientVpnIngressRequest(@JsonProperty("ClientVpnEndpointId") String clientVpnEndpointId, @JsonProperty("TargetNetworkCidr") String targetNetworkCidr) {
+        this.clientVpnEndpointId = clientVpnEndpointId;
+        this.targetNetworkCidr = targetNetworkCidr;
+  }
 }

@@ -12,6 +12,7 @@ public class DeleteRelationalDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalRelationalDatabaseSnapshotName")
     public String finalRelationalDatabaseSnapshotName;
+
     public DeleteRelationalDatabaseRequest withFinalRelationalDatabaseSnapshotName(String finalRelationalDatabaseSnapshotName) {
         this.finalRelationalDatabaseSnapshotName = finalRelationalDatabaseSnapshotName;
         return this;
@@ -19,6 +20,7 @@ public class DeleteRelationalDatabaseRequest {
     
     @JsonProperty("relationalDatabaseName")
     public String relationalDatabaseName;
+
     public DeleteRelationalDatabaseRequest withRelationalDatabaseName(String relationalDatabaseName) {
         this.relationalDatabaseName = relationalDatabaseName;
         return this;
@@ -27,9 +29,13 @@ public class DeleteRelationalDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipFinalSnapshot")
     public Boolean skipFinalSnapshot;
+
     public DeleteRelationalDatabaseRequest withSkipFinalSnapshot(Boolean skipFinalSnapshot) {
         this.skipFinalSnapshot = skipFinalSnapshot;
         return this;
     }
     
+    public DeleteRelationalDatabaseRequest(@JsonProperty("relationalDatabaseName") String relationalDatabaseName) {
+        this.relationalDatabaseName = relationalDatabaseName;
+  }
 }

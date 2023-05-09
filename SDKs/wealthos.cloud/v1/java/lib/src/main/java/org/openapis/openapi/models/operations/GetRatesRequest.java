@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRatesRequest {
@@ -12,6 +13,7 @@ public class GetRatesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rate_type")
     public GetRatesRateTypeEnum rateType;
+
     public GetRatesRequest withRateType(GetRatesRateTypeEnum rateType) {
         this.rateType = rateType;
         return this;
@@ -22,9 +24,14 @@ public class GetRatesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public GetRatesRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public GetRatesRequest(@JsonProperty("rate_type") GetRatesRateTypeEnum rateType, @JsonProperty("x-api-key") String xApiKey) {
+        this.rateType = rateType;
+        this.xApiKey = xApiKey;
+  }
 }

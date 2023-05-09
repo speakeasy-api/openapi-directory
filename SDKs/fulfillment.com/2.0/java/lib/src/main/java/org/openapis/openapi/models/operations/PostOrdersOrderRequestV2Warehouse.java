@@ -15,9 +15,11 @@ public class PostOrdersOrderRequestV2Warehouse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PostOrdersOrderRequestV2Warehouse withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public PostOrdersOrderRequestV2Warehouse(){}
 }

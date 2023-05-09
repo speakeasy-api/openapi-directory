@@ -12,6 +12,7 @@ public class GamePlatformMetacritic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metascore")
     public Long metascore;
+
     public GamePlatformMetacritic withMetascore(Long metascore) {
         this.metascore = metascore;
         return this;
@@ -20,9 +21,11 @@ public class GamePlatformMetacritic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GamePlatformMetacritic withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GamePlatformMetacritic(){}
 }

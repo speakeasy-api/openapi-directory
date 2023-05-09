@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetPirateGenerateInsultSecurity;
 import org.openapis.openapi.models.operations.GetPirateGenerateInsultRequest;
 import org.openapis.openapi.models.operations.GetPirateGenerateInsultResponse;
+import org.openapis.openapi.models.operations.GetPirateGenerateInsultSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -28,10 +27,10 @@ public class Application {
                 .build();
 
             GetPirateGenerateInsultRequest req = new GetPirateGenerateInsultRequest() {{
-                limit = 548814;
-            }}            
+                limit = 548814L;
+            }};            
 
-            GetPirateGenerateInsultResponse res = sdk.generation.getPirateGenerateInsult(req, new GetPirateGenerateInsultSecurity() {{
+            GetPirateGenerateInsultResponse res = sdk.generation.getPirateGenerateInsult(req, new GetPirateGenerateInsultSecurity("provident") {{
                 xFungeneratorsApiSecret = "YOUR_API_KEY_HERE";
             }});
 
@@ -41,6 +40,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -48,15 +49,15 @@ public class Application {
 ## Available Resources and Operations
 
 
-### generation
+### [generation](docs/generation/README.md)
 
-* `getPirateGenerateInsult` - Generate random pirate insults.
-* `getPirateGenerateLoremIpsum` - Generate pirate lorem ipsum.
-* `getPirateGenerateName` - Generate random pirate names.
+* [getPirateGenerateInsult](docs/generation/README.md#getpirategenerateinsult) - Generate random pirate insults.
+* [getPirateGenerateLoremIpsum](docs/generation/README.md#getpirategenerateloremipsum) - Generate pirate lorem ipsum.
+* [getPirateGenerateName](docs/generation/README.md#getpirategeneratename) - Generate random pirate names.
 
-### translation
+### [translation](docs/translation/README.md)
 
-* `getPirateTranslate` - Translate from English to pirate.
+* [getPirateTranslate](docs/translation/README.md#getpiratetranslate) - Translate from English to pirate.
 <!-- End SDK Available Operations -->
 
 ### Maturity

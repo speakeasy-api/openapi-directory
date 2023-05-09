@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=duration")
     public Integer duration;
+
     public GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest withDuration(Integer duration) {
         this.duration = duration;
         return this;
@@ -23,6 +25,7 @@ public class GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableReques
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=endDate")
     public OffsetDateTime endDate;
+
     public GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -33,6 +36,7 @@ public class GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
     public String locationId;
+
     public GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -43,6 +47,7 @@ public class GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceId")
     public String resourceId;
+
     public GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -53,6 +58,7 @@ public class GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableReques
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceId")
     public String serviceId;
+
     public GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -63,6 +69,7 @@ public class GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skipTimePastUnavailability")
     public Boolean skipTimePastUnavailability;
+
     public GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest withSkipTimePastUnavailability(Boolean skipTimePastUnavailability) {
         this.skipTimePastUnavailability = skipTimePastUnavailability;
         return this;
@@ -73,6 +80,7 @@ public class GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableReques
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=startDate")
     public OffsetDateTime startDate;
+
     public GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -83,9 +91,15 @@ public class GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tzOffset")
     public Integer tzOffset;
+
     public GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest withTzOffset(Integer tzOffset) {
         this.tzOffset = tzOffset;
         return this;
     }
     
+    public GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest(@JsonProperty("endDate") OffsetDateTime endDate, @JsonProperty("serviceId") String serviceId, @JsonProperty("startDate") OffsetDateTime startDate) {
+        this.endDate = endDate;
+        this.serviceId = serviceId;
+        this.startDate = startDate;
+  }
 }

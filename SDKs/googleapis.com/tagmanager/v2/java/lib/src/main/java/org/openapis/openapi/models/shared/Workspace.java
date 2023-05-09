@@ -18,6 +18,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Workspace withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerId")
     public String containerId;
+
     public Workspace withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -40,6 +42,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Workspace withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public Workspace withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -62,6 +66,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Workspace withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public Workspace withPath(String path) {
         this.path = path;
         return this;
@@ -84,6 +90,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagManagerUrl")
     public String tagManagerUrl;
+
     public Workspace withTagManagerUrl(String tagManagerUrl) {
         this.tagManagerUrl = tagManagerUrl;
         return this;
@@ -95,9 +102,11 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public Workspace withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public Workspace(){}
 }

@@ -17,6 +17,7 @@ public class ValidationResult {
      */
     @JsonProperty("code")
     public String code;
+
     public ValidationResult withCode(String code) {
         this.code = code;
         return this;
@@ -28,6 +29,7 @@ public class ValidationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public ValidationResult withField(String field) {
         this.field = field;
         return this;
@@ -38,9 +40,14 @@ public class ValidationResult {
      */
     @JsonProperty("message")
     public String message;
+
     public ValidationResult withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ValidationResult(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

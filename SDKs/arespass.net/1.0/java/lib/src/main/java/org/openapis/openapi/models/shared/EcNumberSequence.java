@@ -15,6 +15,7 @@ public class EcNumberSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("char")
     public String char_;
+
     public EcNumberSequence withChar(String char_) {
         this.char_ = char_;
         return this;
@@ -26,6 +27,7 @@ public class EcNumberSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("l33tchar")
     public String l33tchar;
+
     public EcNumberSequence withL33tchar(String l33tchar) {
         this.l33tchar = l33tchar;
         return this;
@@ -40,9 +42,11 @@ public class EcNumberSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("penalty")
     public Double penalty;
+
     public EcNumberSequence withPenalty(Double penalty) {
         this.penalty = penalty;
         return this;
     }
     
+    public EcNumberSequence(){}
 }

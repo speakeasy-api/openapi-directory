@@ -15,6 +15,7 @@ public class UpdatableAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public UpdatableAddress withCity(String city) {
         this.city = city;
         return this;
@@ -26,6 +27,7 @@ public class UpdatableAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line1")
     public String line1;
+
     public UpdatableAddress withLine1(String line1) {
         this.line1 = line1;
         return this;
@@ -37,6 +39,7 @@ public class UpdatableAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line2")
     public String line2;
+
     public UpdatableAddress withLine2(String line2) {
         this.line2 = line2;
         return this;
@@ -48,6 +51,7 @@ public class UpdatableAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line3")
     public String line3;
+
     public UpdatableAddress withLine3(String line3) {
         this.line3 = line3;
         return this;
@@ -59,6 +63,7 @@ public class UpdatableAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public UpdatableAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -79,9 +84,11 @@ public class UpdatableAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateOrProvince")
     public String stateOrProvince;
+
     public UpdatableAddress withStateOrProvince(String stateOrProvince) {
         this.stateOrProvince = stateOrProvince;
         return this;
     }
     
+    public UpdatableAddress(){}
 }

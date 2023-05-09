@@ -15,6 +15,7 @@ public class ListVirtualMachinesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListVirtualMachinesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListVirtualMachinesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VirtualMachines")
     public VirtualMachine[] virtualMachines;
+
     public ListVirtualMachinesOutput withVirtualMachines(VirtualMachine[] virtualMachines) {
         this.virtualMachines = virtualMachines;
         return this;
     }
     
+    public ListVirtualMachinesOutput(){}
 }

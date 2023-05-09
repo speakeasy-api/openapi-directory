@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutJobFailureResultResponse {
     
     public String contentType;
+
     public PutJobFailureResultResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutJobFailureResultResponse {
      */
     
     public Object invalidJobStateException;
+
     public PutJobFailureResultResponse withInvalidJobStateException(Object invalidJobStateException) {
         this.invalidJobStateException = invalidJobStateException;
         return this;
@@ -29,6 +32,7 @@ public class PutJobFailureResultResponse {
      */
     
     public Object jobNotFoundException;
+
     public PutJobFailureResultResponse withJobNotFoundException(Object jobNotFoundException) {
         this.jobNotFoundException = jobNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class PutJobFailureResultResponse {
     
     
     public Integer statusCode;
+
     public PutJobFailureResultResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class PutJobFailureResultResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutJobFailureResultResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class PutJobFailureResultResponse {
      */
     
     public Object validationException;
+
     public PutJobFailureResultResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutJobFailureResultResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

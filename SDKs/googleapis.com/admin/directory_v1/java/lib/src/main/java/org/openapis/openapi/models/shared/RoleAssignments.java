@@ -18,6 +18,7 @@ public class RoleAssignments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public RoleAssignments withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class RoleAssignments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public RoleAssignment[] items;
+
     public RoleAssignments withItems(RoleAssignment[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class RoleAssignments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RoleAssignments withKind(String kind) {
         this.kind = kind;
         return this;
@@ -48,9 +51,11 @@ public class RoleAssignments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public RoleAssignments withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public RoleAssignments(){}
 }

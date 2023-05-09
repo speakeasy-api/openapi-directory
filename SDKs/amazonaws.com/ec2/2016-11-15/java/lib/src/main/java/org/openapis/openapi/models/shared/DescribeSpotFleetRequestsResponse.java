@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotFleetRequestsResponse {
     
     public String nextToken;
+
     public DescribeSpotFleetRequestsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSpotFleetRequestsResponse {
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigs[] spotFleetRequestConfigs;
+
     public DescribeSpotFleetRequestsResponse withSpotFleetRequestConfigs(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigs[] spotFleetRequestConfigs) {
         this.spotFleetRequestConfigs = spotFleetRequestConfigs;
         return this;
     }
     
+    public DescribeSpotFleetRequestsResponse(){}
 }

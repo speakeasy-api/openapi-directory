@@ -14,6 +14,7 @@ public class CreateFunctionUrlConfigRequestBody {
      */
     @JsonProperty("AuthType")
     public CreateFunctionUrlConfigRequestBodyAuthTypeEnum authType;
+
     public CreateFunctionUrlConfigRequestBody withAuthType(CreateFunctionUrlConfigRequestBodyAuthTypeEnum authType) {
         this.authType = authType;
         return this;
@@ -25,9 +26,25 @@ public class CreateFunctionUrlConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cors")
     public CreateFunctionUrlConfigRequestBodyCors cors;
+
     public CreateFunctionUrlConfigRequestBody withCors(CreateFunctionUrlConfigRequestBodyCors cors) {
         this.cors = cors;
         return this;
     }
     
+    /**
+     * &lt;p&gt;Use one of the following options:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;BUFFERED&lt;/code&gt; \u2013 This is the default option. Lambda invokes your function using the &lt;code&gt;Invoke&lt;/code&gt; API operation. Invocation results are available when the payload is complete. The maximum payload size is 6 MB.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;RESPONSE_STREAM&lt;/code&gt; \u2013 Your function streams payload results as they become available. Lambda invokes your function using the &lt;code&gt;InvokeWithResponseStream&lt;/code&gt; API operation. The maximum response payload size is 20 MB, however, you can &lt;a href="https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html"&gt;request a quota increase&lt;/a&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InvokeMode")
+    public CreateFunctionUrlConfigRequestBodyInvokeModeEnum invokeMode;
+
+    public CreateFunctionUrlConfigRequestBody withInvokeMode(CreateFunctionUrlConfigRequestBodyInvokeModeEnum invokeMode) {
+        this.invokeMode = invokeMode;
+        return this;
+    }
+    
+    public CreateFunctionUrlConfigRequestBody(@JsonProperty("AuthType") CreateFunctionUrlConfigRequestBodyAuthTypeEnum authType) {
+        this.authType = authType;
+  }
 }

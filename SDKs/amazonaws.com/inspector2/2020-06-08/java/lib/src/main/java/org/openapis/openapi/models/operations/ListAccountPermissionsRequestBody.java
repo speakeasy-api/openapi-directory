@@ -15,6 +15,7 @@ public class ListAccountPermissionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListAccountPermissionsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class ListAccountPermissionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAccountPermissionsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +39,11 @@ public class ListAccountPermissionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public ListAccountPermissionsRequestBodyServiceEnum service;
+
     public ListAccountPermissionsRequestBody withService(ListAccountPermissionsRequestBodyServiceEnum service) {
         this.service = service;
         return this;
     }
     
+    public ListAccountPermissionsRequestBody(){}
 }

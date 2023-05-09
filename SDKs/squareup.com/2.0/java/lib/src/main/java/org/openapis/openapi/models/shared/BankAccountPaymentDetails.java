@@ -19,6 +19,7 @@ public class BankAccountPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_ownership_type")
     public String accountOwnershipType;
+
     public BankAccountPaymentDetails withAccountOwnershipType(String accountOwnershipType) {
         this.accountOwnershipType = accountOwnershipType;
         return this;
@@ -30,6 +31,7 @@ public class BankAccountPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ach_details")
     public ACHDetails achDetails;
+
     public BankAccountPaymentDetails withAchDetails(ACHDetails achDetails) {
         this.achDetails = achDetails;
         return this;
@@ -41,6 +43,7 @@ public class BankAccountPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank_name")
     public String bankName;
+
     public BankAccountPaymentDetails withBankName(String bankName) {
         this.bankName = bankName;
         return this;
@@ -52,6 +55,7 @@ public class BankAccountPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public BankAccountPaymentDetails withCountry(String country) {
         this.country = country;
         return this;
@@ -63,6 +67,7 @@ public class BankAccountPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public BankAccountPaymentDetails withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -75,6 +80,7 @@ public class BankAccountPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public BankAccountPaymentDetails withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -86,6 +92,7 @@ public class BankAccountPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statement_description")
     public String statementDescription;
+
     public BankAccountPaymentDetails withStatementDescription(String statementDescription) {
         this.statementDescription = statementDescription;
         return this;
@@ -97,9 +104,11 @@ public class BankAccountPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfer_type")
     public String transferType;
+
     public BankAccountPaymentDetails withTransferType(String transferType) {
         this.transferType = transferType;
         return this;
     }
     
+    public BankAccountPaymentDetails(){}
 }

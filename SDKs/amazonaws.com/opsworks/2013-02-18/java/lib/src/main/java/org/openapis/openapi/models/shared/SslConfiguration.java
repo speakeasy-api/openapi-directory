@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SslConfiguration {
     @JsonProperty("Certificate")
     public String certificate;
+
     public SslConfiguration withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -22,6 +23,7 @@ public class SslConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Chain")
     public String chain;
+
     public SslConfiguration withChain(String chain) {
         this.chain = chain;
         return this;
@@ -29,9 +31,14 @@ public class SslConfiguration {
     
     @JsonProperty("PrivateKey")
     public String privateKey;
+
     public SslConfiguration withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
     }
     
+    public SslConfiguration(@JsonProperty("Certificate") String certificate, @JsonProperty("PrivateKey") String privateKey) {
+        this.certificate = certificate;
+        this.privateKey = privateKey;
+  }
 }

@@ -4,21 +4,24 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteCustomDBEngineVersionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteCustomDBEngineVersionActionEnum action;
+
     public GETDeleteCustomDBEngineVersionRequest withAction(GETDeleteCustomDBEngineVersionActionEnum action) {
         this.action = action;
         return this;
     }
     
     /**
-     * The database engine. The only supported engine is &lt;code&gt;custom-oracle-ee&lt;/code&gt;.
+     * The database engine. The only supported engines are &lt;code&gt;custom-oracle-ee&lt;/code&gt; and &lt;code&gt;custom-oracle-ee-cdb&lt;/code&gt;.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Engine")
     public String engine;
+
     public GETDeleteCustomDBEngineVersionRequest withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteCustomDBEngineVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EngineVersion")
     public String engineVersion;
+
     public GETDeleteCustomDBEngineVersionRequest withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -36,6 +40,7 @@ public class GETDeleteCustomDBEngineVersionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteCustomDBEngineVersionVersionEnum version;
+
     public GETDeleteCustomDBEngineVersionRequest withVersion(GETDeleteCustomDBEngineVersionVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDeleteCustomDBEngineVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteCustomDBEngineVersionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDeleteCustomDBEngineVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteCustomDBEngineVersionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDeleteCustomDBEngineVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteCustomDBEngineVersionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDeleteCustomDBEngineVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteCustomDBEngineVersionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDeleteCustomDBEngineVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteCustomDBEngineVersionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDeleteCustomDBEngineVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteCustomDBEngineVersionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETDeleteCustomDBEngineVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteCustomDBEngineVersionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteCustomDBEngineVersionRequest(@JsonProperty("Action") GETDeleteCustomDBEngineVersionActionEnum action, @JsonProperty("Engine") String engine, @JsonProperty("EngineVersion") String engineVersion, @JsonProperty("Version") GETDeleteCustomDBEngineVersionVersionEnum version) {
+        this.action = action;
+        this.engine = engine;
+        this.engineVersion = engineVersion;
+        this.version = version;
+  }
 }

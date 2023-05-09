@@ -18,6 +18,7 @@ public class ChannelCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificates")
     public TlsCertificatePaths certificates;
+
     public ChannelCredentials withCertificates(TlsCertificatePaths certificates) {
         this.certificates = certificates;
         return this;
@@ -29,9 +30,11 @@ public class ChannelCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelCredentialType")
     public ChannelCredentialsChannelCredentialTypeEnum channelCredentialType;
+
     public ChannelCredentials withChannelCredentialType(ChannelCredentialsChannelCredentialTypeEnum channelCredentialType) {
         this.channelCredentialType = channelCredentialType;
         return this;
     }
     
+    public ChannelCredentials(){}
 }

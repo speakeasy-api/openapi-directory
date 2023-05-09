@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRanges {
     
     public Long endHour;
+
     public DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRanges withEndHour(Long endHour) {
         this.endHour = endHour;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRanges {
     
     
     public DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesEndWeekDayEnum endWeekDay;
+
     public DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRanges withEndWeekDay(DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesEndWeekDayEnum endWeekDay) {
         this.endWeekDay = endWeekDay;
         return this;
@@ -26,6 +28,7 @@ public class DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRanges {
     
     
     public Long startHour;
+
     public DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRanges withStartHour(Long startHour) {
         this.startHour = startHour;
         return this;
@@ -33,9 +36,11 @@ public class DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRanges {
     
     
     public DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesStartWeekDayEnum startWeekDay;
+
     public DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRanges withStartWeekDay(DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesStartWeekDayEnum startWeekDay) {
         this.startWeekDay = startWeekDay;
         return this;
     }
     
+    public DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRanges(){}
 }

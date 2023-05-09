@@ -22,6 +22,7 @@ public class Flag {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public Flag withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -30,6 +31,7 @@ public class Flag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Flag withEmail(String email) {
         this.email = email;
         return this;
@@ -38,6 +40,7 @@ public class Flag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Flag withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class Flag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public Flag withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -54,9 +58,11 @@ public class Flag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Flag withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Flag(){}
 }

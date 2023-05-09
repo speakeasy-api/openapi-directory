@@ -12,9 +12,11 @@ public class ListLunaClientsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLunaClientsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLunaClientsRequest(){}
 }

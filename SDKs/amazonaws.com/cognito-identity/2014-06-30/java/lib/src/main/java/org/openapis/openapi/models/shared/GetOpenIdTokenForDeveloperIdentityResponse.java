@@ -15,6 +15,7 @@ public class GetOpenIdTokenForDeveloperIdentityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityId")
     public String identityId;
+
     public GetOpenIdTokenForDeveloperIdentityResponse withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
@@ -23,9 +24,11 @@ public class GetOpenIdTokenForDeveloperIdentityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Token")
     public String token;
+
     public GetOpenIdTokenForDeveloperIdentityResponse withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public GetOpenIdTokenForDeveloperIdentityResponse(){}
 }

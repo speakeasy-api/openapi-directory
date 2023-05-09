@@ -18,9 +18,11 @@ public class EmployeeIdResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employeeId")
     public String employeeId;
+
     public EmployeeIdResponse withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
     }
     
+    public EmployeeIdResponse(){}
 }

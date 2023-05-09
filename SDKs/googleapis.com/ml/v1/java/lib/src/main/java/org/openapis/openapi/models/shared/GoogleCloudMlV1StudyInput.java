@@ -18,9 +18,11 @@ public class GoogleCloudMlV1StudyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("studyConfig")
     public GoogleCloudMlV1StudyConfig studyConfig;
+
     public GoogleCloudMlV1StudyInput withStudyConfig(GoogleCloudMlV1StudyConfig studyConfig) {
         this.studyConfig = studyConfig;
         return this;
     }
     
+    public GoogleCloudMlV1StudyInput(){}
 }

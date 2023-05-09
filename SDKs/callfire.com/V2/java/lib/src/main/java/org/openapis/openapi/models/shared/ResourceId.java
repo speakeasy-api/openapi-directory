@@ -18,9 +18,11 @@ public class ResourceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ResourceId withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public ResourceId(){}
 }

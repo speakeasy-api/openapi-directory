@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouse
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItem withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouse
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footer")
     public String footer;
+
     public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItem withFooter(String footer) {
         this.footer = footer;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouse
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public GoogleCloudDialogflowV2IntentMessageImage image;
+
     public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItem withImage(GoogleCloudDialogflowV2IntentMessageImage image) {
         this.image = image;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouse
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openUriAction")
     public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlAction openUriAction;
+
     public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItem withOpenUriAction(GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlAction openUriAction) {
         this.openUriAction = openUriAction;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouse
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItem withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItem(){}
 }

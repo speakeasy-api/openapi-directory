@@ -17,6 +17,7 @@ public class SymbolsIgnore200ApplicationJSON {
      */
     @JsonProperty("alternate_symbol_ids")
     public String[] alternateSymbolIds;
+
     public SymbolsIgnore200ApplicationJSON withAlternateSymbolIds(String[] alternateSymbolIds) {
         this.alternateSymbolIds = alternateSymbolIds;
         return this;
@@ -27,6 +28,7 @@ public class SymbolsIgnore200ApplicationJSON {
      */
     @JsonProperty("app_id")
     public String appId;
+
     public SymbolsIgnore200ApplicationJSON withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -38,6 +40,7 @@ public class SymbolsIgnore200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build")
     public String build;
+
     public SymbolsIgnore200ApplicationJSON withBuild(String build) {
         this.build = build;
         return this;
@@ -48,6 +51,7 @@ public class SymbolsIgnore200ApplicationJSON {
      */
     @JsonProperty("origin")
     public SymbolsIgnore200ApplicationJSONOriginEnum origin;
+
     public SymbolsIgnore200ApplicationJSON withOrigin(SymbolsIgnore200ApplicationJSONOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -58,6 +62,7 @@ public class SymbolsIgnore200ApplicationJSON {
      */
     @JsonProperty("platform")
     public String platform;
+
     public SymbolsIgnore200ApplicationJSON withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -68,6 +73,7 @@ public class SymbolsIgnore200ApplicationJSON {
      */
     @JsonProperty("status")
     public SymbolsIgnore200ApplicationJSONStatusEnum status;
+
     public SymbolsIgnore200ApplicationJSON withStatus(SymbolsIgnore200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
@@ -78,6 +84,7 @@ public class SymbolsIgnore200ApplicationJSON {
      */
     @JsonProperty("symbol_id")
     public String symbolId;
+
     public SymbolsIgnore200ApplicationJSON withSymbolId(String symbolId) {
         this.symbolId = symbolId;
         return this;
@@ -88,6 +95,7 @@ public class SymbolsIgnore200ApplicationJSON {
      */
     @JsonProperty("symbol_upload_id")
     public String symbolUploadId;
+
     public SymbolsIgnore200ApplicationJSON withSymbolUploadId(String symbolUploadId) {
         this.symbolUploadId = symbolUploadId;
         return this;
@@ -98,6 +106,7 @@ public class SymbolsIgnore200ApplicationJSON {
      */
     @JsonProperty("type")
     public SymbolsIgnore200ApplicationJSONTypeEnum type;
+
     public SymbolsIgnore200ApplicationJSON withType(SymbolsIgnore200ApplicationJSONTypeEnum type) {
         this.type = type;
         return this;
@@ -108,6 +117,7 @@ public class SymbolsIgnore200ApplicationJSON {
      */
     @JsonProperty("url")
     public String url;
+
     public SymbolsIgnore200ApplicationJSON withUrl(String url) {
         this.url = url;
         return this;
@@ -119,9 +129,21 @@ public class SymbolsIgnore200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public SymbolsIgnore200ApplicationJSON withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public SymbolsIgnore200ApplicationJSON(@JsonProperty("alternate_symbol_ids") String[] alternateSymbolIds, @JsonProperty("app_id") String appId, @JsonProperty("origin") SymbolsIgnore200ApplicationJSONOriginEnum origin, @JsonProperty("platform") String platform, @JsonProperty("status") SymbolsIgnore200ApplicationJSONStatusEnum status, @JsonProperty("symbol_id") String symbolId, @JsonProperty("symbol_upload_id") String symbolUploadId, @JsonProperty("type") SymbolsIgnore200ApplicationJSONTypeEnum type, @JsonProperty("url") String url) {
+        this.alternateSymbolIds = alternateSymbolIds;
+        this.appId = appId;
+        this.origin = origin;
+        this.platform = platform;
+        this.status = status;
+        this.symbolId = symbolId;
+        this.symbolUploadId = symbolUploadId;
+        this.type = type;
+        this.url = url;
+  }
 }

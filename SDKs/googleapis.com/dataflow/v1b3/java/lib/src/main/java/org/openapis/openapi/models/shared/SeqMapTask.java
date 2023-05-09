@@ -18,6 +18,7 @@ public class SeqMapTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputs")
     public SideInputInfo[] inputs;
+
     public SeqMapTask withInputs(SideInputInfo[] inputs) {
         this.inputs = inputs;
         return this;
@@ -29,6 +30,7 @@ public class SeqMapTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SeqMapTask withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class SeqMapTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputInfos")
     public SeqMapTaskOutputInfo[] outputInfos;
+
     public SeqMapTask withOutputInfos(SeqMapTaskOutputInfo[] outputInfos) {
         this.outputInfos = outputInfos;
         return this;
@@ -51,6 +54,7 @@ public class SeqMapTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stageName")
     public String stageName;
+
     public SeqMapTask withStageName(String stageName) {
         this.stageName = stageName;
         return this;
@@ -62,6 +66,7 @@ public class SeqMapTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemName")
     public String systemName;
+
     public SeqMapTask withSystemName(String systemName) {
         this.systemName = systemName;
         return this;
@@ -73,9 +78,11 @@ public class SeqMapTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userFn")
     public java.util.Map<String, Object> userFn;
+
     public SeqMapTask withUserFn(java.util.Map<String, Object> userFn) {
         this.userFn = userFn;
         return this;
     }
     
+    public SeqMapTask(){}
 }

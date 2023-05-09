@@ -12,9 +12,13 @@ public class AddNotificationChannelRequestBody {
      */
     @JsonProperty("Config")
     public AddNotificationChannelRequestBodyConfig config;
+
     public AddNotificationChannelRequestBody withConfig(AddNotificationChannelRequestBodyConfig config) {
         this.config = config;
         return this;
     }
     
+    public AddNotificationChannelRequestBody(@JsonProperty("Config") AddNotificationChannelRequestBodyConfig config) {
+        this.config = config;
+  }
 }

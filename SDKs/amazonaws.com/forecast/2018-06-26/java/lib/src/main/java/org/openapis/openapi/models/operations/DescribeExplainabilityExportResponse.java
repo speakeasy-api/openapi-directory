@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeExplainabilityExportResponse {
     
     public String contentType;
+
     public DescribeExplainabilityExportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeExplainabilityExportResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeExplainabilityExportResponse describeExplainabilityExportResponse;
+
     public DescribeExplainabilityExportResponse withDescribeExplainabilityExportResponse(org.openapis.openapi.models.shared.DescribeExplainabilityExportResponse describeExplainabilityExportResponse) {
         this.describeExplainabilityExportResponse = describeExplainabilityExportResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeExplainabilityExportResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeExplainabilityExportResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeExplainabilityExportResponse {
     
     
     public Integer statusCode;
+
     public DescribeExplainabilityExportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeExplainabilityExportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeExplainabilityExportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeExplainabilityExportResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeExplainabilityExportResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeExplainabilityExportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

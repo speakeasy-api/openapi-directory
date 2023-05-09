@@ -18,6 +18,7 @@ public class ComputeVmWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableConfidentialCompute")
     public Boolean enableConfidentialCompute;
+
     public ComputeVmWorkload withEnableConfidentialCompute(Boolean enableConfidentialCompute) {
         this.enableConfidentialCompute = enableConfidentialCompute;
         return this;
@@ -29,6 +30,7 @@ public class ComputeVmWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestAccelerator")
     public GuestAccelerator guestAccelerator;
+
     public ComputeVmWorkload withGuestAccelerator(GuestAccelerator guestAccelerator) {
         this.guestAccelerator = guestAccelerator;
         return this;
@@ -40,6 +42,7 @@ public class ComputeVmWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instancesRunning")
     public Usage instancesRunning;
+
     public ComputeVmWorkload withInstancesRunning(Usage instancesRunning) {
         this.instancesRunning = instancesRunning;
         return this;
@@ -51,6 +54,7 @@ public class ComputeVmWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenses")
     public String[] licenses;
+
     public ComputeVmWorkload withLicenses(String[] licenses) {
         this.licenses = licenses;
         return this;
@@ -62,6 +66,7 @@ public class ComputeVmWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public MachineType machineType;
+
     public ComputeVmWorkload withMachineType(MachineType machineType) {
         this.machineType = machineType;
         return this;
@@ -73,6 +78,7 @@ public class ComputeVmWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persistentDisks")
     public PersistentDisk[] persistentDisks;
+
     public ComputeVmWorkload withPersistentDisks(PersistentDisk[] persistentDisks) {
         this.persistentDisks = persistentDisks;
         return this;
@@ -84,6 +90,7 @@ public class ComputeVmWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preemptible")
     public Boolean preemptible;
+
     public ComputeVmWorkload withPreemptible(Boolean preemptible) {
         this.preemptible = preemptible;
         return this;
@@ -95,9 +102,11 @@ public class ComputeVmWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public ComputeVmWorkload withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public ComputeVmWorkload(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPromoteReadReplicaRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETPromoteReadReplicaActionEnum action;
+
     public GETPromoteReadReplicaRequest withAction(GETPromoteReadReplicaActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETPromoteReadReplicaRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BackupRetentionPeriod")
     public Long backupRetentionPeriod;
+
     public GETPromoteReadReplicaRequest withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -29,6 +32,7 @@ public class GETPromoteReadReplicaRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceIdentifier")
     public String dbInstanceIdentifier;
+
     public GETPromoteReadReplicaRequest withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -39,6 +43,7 @@ public class GETPromoteReadReplicaRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PreferredBackupWindow")
     public String preferredBackupWindow;
+
     public GETPromoteReadReplicaRequest withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
@@ -46,6 +51,7 @@ public class GETPromoteReadReplicaRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETPromoteReadReplicaVersionEnum version;
+
     public GETPromoteReadReplicaRequest withVersion(GETPromoteReadReplicaVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETPromoteReadReplicaRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETPromoteReadReplicaRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETPromoteReadReplicaRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETPromoteReadReplicaRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETPromoteReadReplicaRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETPromoteReadReplicaRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETPromoteReadReplicaRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETPromoteReadReplicaRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETPromoteReadReplicaRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETPromoteReadReplicaRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETPromoteReadReplicaRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETPromoteReadReplicaRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETPromoteReadReplicaRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETPromoteReadReplicaRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETPromoteReadReplicaRequest(@JsonProperty("Action") GETPromoteReadReplicaActionEnum action, @JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier, @JsonProperty("Version") GETPromoteReadReplicaVersionEnum version) {
+        this.action = action;
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+        this.version = version;
+  }
 }

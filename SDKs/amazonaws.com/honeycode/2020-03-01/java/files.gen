@@ -116,4 +116,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListTagsForResourceResult.j
 lib/src/main/java/org/openapis/openapi/models/shared/QueryTableRowsResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/StartTableDataImportJobResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

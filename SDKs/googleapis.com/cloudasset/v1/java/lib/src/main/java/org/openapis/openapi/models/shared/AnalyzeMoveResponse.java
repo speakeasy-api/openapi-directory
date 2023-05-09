@@ -18,9 +18,11 @@ public class AnalyzeMoveResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moveAnalysis")
     public MoveAnalysis[] moveAnalysis;
+
     public AnalyzeMoveResponse withMoveAnalysis(MoveAnalysis[] moveAnalysis) {
         this.moveAnalysis = moveAnalysis;
         return this;
     }
     
+    public AnalyzeMoveResponse(){}
 }

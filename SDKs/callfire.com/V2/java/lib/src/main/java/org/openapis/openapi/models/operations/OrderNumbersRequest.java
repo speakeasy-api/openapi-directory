@@ -12,6 +12,7 @@ public class OrderNumbersRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.NumberPurchaseRequest numberPurchaseRequest;
+
     public OrderNumbersRequest withNumberPurchaseRequest(org.openapis.openapi.models.shared.NumberPurchaseRequest numberPurchaseRequest) {
         this.numberPurchaseRequest = numberPurchaseRequest;
         return this;
@@ -22,9 +23,11 @@ public class OrderNumbersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public OrderNumbersRequest withFields(String fields) {
         this.fields = fields;
         return this;
     }
     
+    public OrderNumbersRequest(){}
 }

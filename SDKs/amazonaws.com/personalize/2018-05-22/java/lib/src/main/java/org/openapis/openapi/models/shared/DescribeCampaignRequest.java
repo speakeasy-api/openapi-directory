@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeCampaignRequest {
     @JsonProperty("campaignArn")
     public String campaignArn;
+
     public DescribeCampaignRequest withCampaignArn(String campaignArn) {
         this.campaignArn = campaignArn;
         return this;
     }
     
+    public DescribeCampaignRequest(@JsonProperty("campaignArn") String campaignArn) {
+        this.campaignArn = campaignArn;
+  }
 }

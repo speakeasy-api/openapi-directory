@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterFromWorkMailResponse {
     
     public String contentType;
+
     public DeregisterFromWorkMailResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeregisterFromWorkMailResponse {
      */
     
     public java.util.Map<String, Object> deregisterFromWorkMailResponse;
+
     public DeregisterFromWorkMailResponse withDeregisterFromWorkMailResponse(java.util.Map<String, Object> deregisterFromWorkMailResponse) {
         this.deregisterFromWorkMailResponse = deregisterFromWorkMailResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeregisterFromWorkMailResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeregisterFromWorkMailResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DeregisterFromWorkMailResponse {
      */
     
     public Object entityStateException;
+
     public DeregisterFromWorkMailResponse withEntityStateException(Object entityStateException) {
         this.entityStateException = entityStateException;
         return this;
@@ -49,6 +54,7 @@ public class DeregisterFromWorkMailResponse {
      */
     
     public Object invalidParameterException;
+
     public DeregisterFromWorkMailResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeregisterFromWorkMailResponse {
      */
     
     public Object organizationNotFoundException;
+
     public DeregisterFromWorkMailResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeregisterFromWorkMailResponse {
      */
     
     public Object organizationStateException;
+
     public DeregisterFromWorkMailResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -76,6 +84,7 @@ public class DeregisterFromWorkMailResponse {
     
     
     public Integer statusCode;
+
     public DeregisterFromWorkMailResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeregisterFromWorkMailResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterFromWorkMailResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeregisterFromWorkMailResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

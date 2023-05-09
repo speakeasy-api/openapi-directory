@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCostAllocationTagsResponse {
     
     public String contentType;
+
     public ListCostAllocationTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListCostAllocationTagsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListCostAllocationTagsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListCostAllocationTagsResponse {
      */
     
     public Object limitExceededException;
+
     public ListCostAllocationTagsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class ListCostAllocationTagsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCostAllocationTagsResponse listCostAllocationTagsResponse;
+
     public ListCostAllocationTagsResponse withListCostAllocationTagsResponse(org.openapis.openapi.models.shared.ListCostAllocationTagsResponse listCostAllocationTagsResponse) {
         this.listCostAllocationTagsResponse = listCostAllocationTagsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListCostAllocationTagsResponse {
     
     
     public Integer statusCode;
+
     public ListCostAllocationTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListCostAllocationTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCostAllocationTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListCostAllocationTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class UpdateChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public Channel channel;
+
     public UpdateChannelResponse withChannel(Channel channel) {
         this.channel = channel;
         return this;
     }
     
+    public UpdateChannelResponse(){}
 }

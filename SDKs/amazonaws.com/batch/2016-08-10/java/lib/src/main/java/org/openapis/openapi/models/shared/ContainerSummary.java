@@ -15,6 +15,7 @@ public class ContainerSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exitCode")
     public Long exitCode;
+
     public ContainerSummary withExitCode(Long exitCode) {
         this.exitCode = exitCode;
         return this;
@@ -23,9 +24,11 @@ public class ContainerSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ContainerSummary withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public ContainerSummary(){}
 }

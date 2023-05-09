@@ -60,12 +60,10 @@ public class Credit {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCreditsResponse res = new org.openapis.openapi.models.operations.GetCreditsResponse() {{
+        org.openapis.openapi.models.operations.GetCreditsResponse res = new org.openapis.openapi.models.operations.GetCreditsResponse(contentType, httpRes.statusCode()) {{
             getCredits200ApplicationVndApiPlusJsonObject = null;
             getCredits400ApplicationVndApiPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -114,11 +112,9 @@ public class Credit {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCreditsIdResponse res = new org.openapis.openapi.models.operations.GetCreditsIdResponse() {{
+        org.openapis.openapi.models.operations.GetCreditsIdResponse res = new org.openapis.openapi.models.operations.GetCreditsIdResponse(contentType, httpRes.statusCode()) {{
             getCreditsId200ApplicationVndApiPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

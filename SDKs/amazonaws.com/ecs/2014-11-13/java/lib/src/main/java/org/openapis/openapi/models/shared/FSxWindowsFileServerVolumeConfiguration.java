@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FSxWindowsFileServerVolumeConfiguration {
     @JsonProperty("authorizationConfig")
     public FSxWindowsFileServerAuthorizationConfig authorizationConfig;
+
     public FSxWindowsFileServerVolumeConfiguration withAuthorizationConfig(FSxWindowsFileServerAuthorizationConfig authorizationConfig) {
         this.authorizationConfig = authorizationConfig;
         return this;
@@ -19,6 +20,7 @@ public class FSxWindowsFileServerVolumeConfiguration {
     
     @JsonProperty("fileSystemId")
     public String fileSystemId;
+
     public FSxWindowsFileServerVolumeConfiguration withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -26,9 +28,15 @@ public class FSxWindowsFileServerVolumeConfiguration {
     
     @JsonProperty("rootDirectory")
     public String rootDirectory;
+
     public FSxWindowsFileServerVolumeConfiguration withRootDirectory(String rootDirectory) {
         this.rootDirectory = rootDirectory;
         return this;
     }
     
+    public FSxWindowsFileServerVolumeConfiguration(@JsonProperty("authorizationConfig") FSxWindowsFileServerAuthorizationConfig authorizationConfig, @JsonProperty("fileSystemId") String fileSystemId, @JsonProperty("rootDirectory") String rootDirectory) {
+        this.authorizationConfig = authorizationConfig;
+        this.fileSystemId = fileSystemId;
+        this.rootDirectory = rootDirectory;
+  }
 }

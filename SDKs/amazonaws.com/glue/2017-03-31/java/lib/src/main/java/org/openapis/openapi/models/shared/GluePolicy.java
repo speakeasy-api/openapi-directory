@@ -22,6 +22,7 @@ public class GluePolicy {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public GluePolicy withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -30,6 +31,7 @@ public class GluePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyHash")
     public String policyHash;
+
     public GluePolicy withPolicyHash(String policyHash) {
         this.policyHash = policyHash;
         return this;
@@ -38,6 +40,7 @@ public class GluePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyInJson")
     public String policyInJson;
+
     public GluePolicy withPolicyInJson(String policyInJson) {
         this.policyInJson = policyInJson;
         return this;
@@ -48,9 +51,11 @@ public class GluePolicy {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public GluePolicy withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GluePolicy(){}
 }

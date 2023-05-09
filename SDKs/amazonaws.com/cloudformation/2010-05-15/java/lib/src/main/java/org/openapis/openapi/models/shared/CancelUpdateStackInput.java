@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CancelUpdateStackInput - The input for the &lt;a&gt;CancelUpdateStack&lt;/a&gt; action.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CancelUpdateStackInput {
     
     public String clientRequestToken;
+
     public CancelUpdateStackInput withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,9 +20,13 @@ public class CancelUpdateStackInput {
     
     
     public String stackName;
+
     public CancelUpdateStackInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public CancelUpdateStackInput(@JsonProperty("StackName") String stackName) {
+        this.stackName = stackName;
+  }
 }

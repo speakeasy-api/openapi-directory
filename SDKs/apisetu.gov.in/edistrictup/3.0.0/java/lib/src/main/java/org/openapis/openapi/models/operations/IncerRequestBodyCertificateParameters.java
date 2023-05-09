@@ -12,6 +12,7 @@ public class IncerRequestBodyCertificateParameters {
      */
     @JsonProperty("ApplicationNo")
     public String applicationNo;
+
     public IncerRequestBodyCertificateParameters withApplicationNo(String applicationNo) {
         this.applicationNo = applicationNo;
         return this;
@@ -22,9 +23,14 @@ public class IncerRequestBodyCertificateParameters {
      */
     @JsonProperty("CertificateID")
     public String certificateID;
+
     public IncerRequestBodyCertificateParameters withCertificateID(String certificateID) {
         this.certificateID = certificateID;
         return this;
     }
     
+    public IncerRequestBodyCertificateParameters(@JsonProperty("ApplicationNo") String applicationNo, @JsonProperty("CertificateID") String certificateID) {
+        this.applicationNo = applicationNo;
+        this.certificateID = certificateID;
+  }
 }

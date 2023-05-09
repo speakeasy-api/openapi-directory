@@ -18,9 +18,11 @@ public class PartnerDataAccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdfConfig")
     public SdfConfig sdfConfig;
+
     public PartnerDataAccessConfig withSdfConfig(SdfConfig sdfConfig) {
         this.sdfConfig = sdfConfig;
         return this;
     }
     
+    public PartnerDataAccessConfig(){}
 }

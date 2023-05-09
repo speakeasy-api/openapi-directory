@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListOfValueItem {
     @JsonProperty("codeIdentifier")
     public String codeIdentifier;
+
     public ListOfValueItem withCodeIdentifier(String codeIdentifier) {
         this.codeIdentifier = codeIdentifier;
         return this;
@@ -21,6 +22,7 @@ public class ListOfValueItem {
     
     @JsonProperty("intIdentifier")
     public Integer intIdentifier;
+
     public ListOfValueItem withIntIdentifier(Integer intIdentifier) {
         this.intIdentifier = intIdentifier;
         return this;
@@ -29,6 +31,7 @@ public class ListOfValueItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Integer position;
+
     public ListOfValueItem withPosition(Integer position) {
         this.position = position;
         return this;
@@ -37,9 +40,14 @@ public class ListOfValueItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translationText")
     public String translationText;
+
     public ListOfValueItem withTranslationText(String translationText) {
         this.translationText = translationText;
         return this;
     }
     
+    public ListOfValueItem(@JsonProperty("codeIdentifier") String codeIdentifier, @JsonProperty("intIdentifier") Integer intIdentifier) {
+        this.codeIdentifier = codeIdentifier;
+        this.intIdentifier = intIdentifier;
+  }
 }

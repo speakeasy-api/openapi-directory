@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PagespeedonlinePagespeedapiRunpagespeedRequest {
@@ -12,6 +13,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=captchaToken")
     public String captchaToken;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withCaptchaToken(String captchaToken) {
         this.captchaToken = captchaToken;
         return this;
@@ -62,6 +68,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
     public PagespeedonlinePagespeedapiRunpagespeedCategoryEnum[] category;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withCategory(PagespeedonlinePagespeedapiRunpagespeedCategoryEnum[] category) {
         this.category = category;
         return this;
@@ -72,6 +79,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -102,6 +112,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=strategy")
     public PagespeedonlinePagespeedapiRunpagespeedStrategyEnum strategy;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withStrategy(PagespeedonlinePagespeedapiRunpagespeedStrategyEnum strategy) {
         this.strategy = strategy;
         return this;
@@ -142,6 +156,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,6 +167,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -162,6 +178,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
     public String url;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withUrl(String url) {
         this.url = url;
         return this;
@@ -172,6 +189,7 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=utm_campaign")
     public String utmCampaign;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withUtmCampaign(String utmCampaign) {
         this.utmCampaign = utmCampaign;
         return this;
@@ -182,9 +200,13 @@ public class PagespeedonlinePagespeedapiRunpagespeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=utm_source")
     public String utmSource;
+
     public PagespeedonlinePagespeedapiRunpagespeedRequest withUtmSource(String utmSource) {
         this.utmSource = utmSource;
         return this;
     }
     
+    public PagespeedonlinePagespeedapiRunpagespeedRequest(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

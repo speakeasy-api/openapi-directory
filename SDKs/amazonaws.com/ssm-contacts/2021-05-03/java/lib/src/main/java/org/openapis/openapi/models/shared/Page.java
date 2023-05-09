@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Page {
     @JsonProperty("ContactArn")
     public String contactArn;
+
     public Page withContactArn(String contactArn) {
         this.contactArn = contactArn;
         return this;
@@ -29,6 +30,7 @@ public class Page {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeliveryTime")
     public OffsetDateTime deliveryTime;
+
     public Page withDeliveryTime(OffsetDateTime deliveryTime) {
         this.deliveryTime = deliveryTime;
         return this;
@@ -36,6 +38,7 @@ public class Page {
     
     @JsonProperty("EngagementArn")
     public String engagementArn;
+
     public Page withEngagementArn(String engagementArn) {
         this.engagementArn = engagementArn;
         return this;
@@ -44,6 +47,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncidentId")
     public String incidentId;
+
     public Page withIncidentId(String incidentId) {
         this.incidentId = incidentId;
         return this;
@@ -51,6 +55,7 @@ public class Page {
     
     @JsonProperty("PageArn")
     public String pageArn;
+
     public Page withPageArn(String pageArn) {
         this.pageArn = pageArn;
         return this;
@@ -61,6 +66,7 @@ public class Page {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReadTime")
     public OffsetDateTime readTime;
+
     public Page withReadTime(OffsetDateTime readTime) {
         this.readTime = readTime;
         return this;
@@ -68,6 +74,7 @@ public class Page {
     
     @JsonProperty("Sender")
     public String sender;
+
     public Page withSender(String sender) {
         this.sender = sender;
         return this;
@@ -78,9 +85,16 @@ public class Page {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SentTime")
     public OffsetDateTime sentTime;
+
     public Page withSentTime(OffsetDateTime sentTime) {
         this.sentTime = sentTime;
         return this;
     }
     
+    public Page(@JsonProperty("ContactArn") String contactArn, @JsonProperty("EngagementArn") String engagementArn, @JsonProperty("PageArn") String pageArn, @JsonProperty("Sender") String sender) {
+        this.contactArn = contactArn;
+        this.engagementArn = engagementArn;
+        this.pageArn = pageArn;
+        this.sender = sender;
+  }
 }

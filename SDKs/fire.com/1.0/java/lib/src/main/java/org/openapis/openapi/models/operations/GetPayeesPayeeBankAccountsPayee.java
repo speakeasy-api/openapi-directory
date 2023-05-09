@@ -20,6 +20,7 @@ public class GetPayeesPayeeBankAccountsPayee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderName")
     public String accountHolderName;
+
     public GetPayeesPayeeBankAccountsPayee withAccountHolderName(String accountHolderName) {
         this.accountHolderName = accountHolderName;
         return this;
@@ -31,6 +32,7 @@ public class GetPayeesPayeeBankAccountsPayee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountName")
     public String accountName;
+
     public GetPayeesPayeeBankAccountsPayee withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -42,6 +44,7 @@ public class GetPayeesPayeeBankAccountsPayee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public GetPayeesPayeeBankAccountsPayee withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -53,6 +56,7 @@ public class GetPayeesPayeeBankAccountsPayee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bic")
     public String bic;
+
     public GetPayeesPayeeBankAccountsPayee withBic(String bic) {
         this.bic = bic;
         return this;
@@ -64,6 +68,7 @@ public class GetPayeesPayeeBankAccountsPayee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdBy")
     public GetPayeesPayeeBankAccountsPayeeCreatedByEnum createdBy;
+
     public GetPayeesPayeeBankAccountsPayee withCreatedBy(GetPayeesPayeeBankAccountsPayeeCreatedByEnum createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -75,6 +80,7 @@ public class GetPayeesPayeeBankAccountsPayee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public GetPayeesPayeeBankAccountsPayeeCurrency currency;
+
     public GetPayeesPayeeBankAccountsPayee withCurrency(GetPayeesPayeeBankAccountsPayeeCurrency currency) {
         this.currency = currency;
         return this;
@@ -88,6 +94,7 @@ public class GetPayeesPayeeBankAccountsPayee {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dateCreated")
     public OffsetDateTime dateCreated;
+
     public GetPayeesPayeeBankAccountsPayee withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -99,6 +106,7 @@ public class GetPayeesPayeeBankAccountsPayee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iban")
     public String iban;
+
     public GetPayeesPayeeBankAccountsPayee withIban(String iban) {
         this.iban = iban;
         return this;
@@ -110,6 +118,7 @@ public class GetPayeesPayeeBankAccountsPayee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GetPayeesPayeeBankAccountsPayee withId(Long id) {
         this.id = id;
         return this;
@@ -121,6 +130,7 @@ public class GetPayeesPayeeBankAccountsPayee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nsc")
     public String nsc;
+
     public GetPayeesPayeeBankAccountsPayee withNsc(String nsc) {
         this.nsc = nsc;
         return this;
@@ -137,9 +147,11 @@ public class GetPayeesPayeeBankAccountsPayee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GetPayeesPayeeBankAccountsPayeeStatusEnum status;
+
     public GetPayeesPayeeBankAccountsPayee withStatus(GetPayeesPayeeBankAccountsPayeeStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetPayeesPayeeBankAccountsPayee(){}
 }

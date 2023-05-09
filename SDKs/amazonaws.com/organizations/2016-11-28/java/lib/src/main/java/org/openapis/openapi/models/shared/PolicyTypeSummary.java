@@ -15,6 +15,7 @@ public class PolicyTypeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public PolicyTypeStatusEnum status;
+
     public PolicyTypeSummary withStatus(PolicyTypeStatusEnum status) {
         this.status = status;
         return this;
@@ -23,9 +24,11 @@ public class PolicyTypeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public PolicyTypeEnum type;
+
     public PolicyTypeSummary withType(PolicyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PolicyTypeSummary(){}
 }

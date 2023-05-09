@@ -18,6 +18,7 @@ public class AnalyzeEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public Document document;
+
     public AnalyzeEntitiesRequest withDocument(Document document) {
         this.document = document;
         return this;
@@ -29,9 +30,11 @@ public class AnalyzeEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encodingType")
     public AnalyzeEntitiesRequestEncodingTypeEnum encodingType;
+
     public AnalyzeEntitiesRequest withEncodingType(AnalyzeEntitiesRequestEncodingTypeEnum encodingType) {
         this.encodingType = encodingType;
         return this;
     }
     
+    public AnalyzeEntitiesRequest(){}
 }

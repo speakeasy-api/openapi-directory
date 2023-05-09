@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PhotoControllerGetPhotoDownloadRequest {
@@ -12,6 +13,7 @@ public class PhotoControllerGetPhotoDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height")
     public Integer height;
+
     public PhotoControllerGetPhotoDownloadRequest withHeight(Integer height) {
         this.height = height;
         return this;
@@ -22,6 +24,7 @@ public class PhotoControllerGetPhotoDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=photoID")
     public String photoID;
+
     public PhotoControllerGetPhotoDownloadRequest withPhotoID(String photoID) {
         this.photoID = photoID;
         return this;
@@ -32,6 +35,7 @@ public class PhotoControllerGetPhotoDownloadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public PhotoControllerGetPhotoDownloadRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -42,6 +46,7 @@ public class PhotoControllerGetPhotoDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public PhotoControllerGetPhotoDownloadRequest withToken(String token) {
         this.token = token;
         return this;
@@ -52,9 +57,15 @@ public class PhotoControllerGetPhotoDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
     public Integer width;
+
     public PhotoControllerGetPhotoDownloadRequest withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public PhotoControllerGetPhotoDownloadRequest(@JsonProperty("photoID") String photoID, @JsonProperty("shortName") String shortName, @JsonProperty("token") String token) {
+        this.photoID = photoID;
+        this.shortName = shortName;
+        this.token = token;
+  }
 }

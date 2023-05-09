@@ -18,9 +18,11 @@ public class NetworkingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionType")
     public NetworkingConfigConnectionTypeEnum connectionType;
+
     public NetworkingConfig withConnectionType(NetworkingConfigConnectionTypeEnum connectionType) {
         this.connectionType = connectionType;
         return this;
     }
     
+    public NetworkingConfig(){}
 }

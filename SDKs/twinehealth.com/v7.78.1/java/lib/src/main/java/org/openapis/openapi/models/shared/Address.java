@@ -12,6 +12,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public Address withCity(String city) {
         this.city = city;
         return this;
@@ -20,6 +21,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public Address withCountry(String country) {
         this.country = country;
         return this;
@@ -28,6 +30,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("district")
     public String district;
+
     public Address withDistrict(String district) {
         this.district = district;
         return this;
@@ -36,6 +39,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lines")
     public String[] lines;
+
     public Address withLines(String[] lines) {
         this.lines = lines;
         return this;
@@ -44,6 +48,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal_code")
     public String postalCode;
+
     public Address withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -52,6 +57,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public Address withState(String state) {
         this.state = state;
         return this;
@@ -60,6 +66,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public Address withText(String text) {
         this.text = text;
         return this;
@@ -68,6 +75,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Address withType(String type) {
         this.type = type;
         return this;
@@ -76,9 +84,11 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("use")
     public String use;
+
     public Address withUse(String use) {
         this.use = use;
         return this;
     }
     
+    public Address(){}
 }

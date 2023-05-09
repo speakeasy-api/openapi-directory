@@ -19,6 +19,7 @@ public class CreditAttributes {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public CreditAttributes withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class CreditAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Long position;
+
     public CreditAttributes withPosition(Long position) {
         this.position = position;
         return this;
@@ -41,6 +43,7 @@ public class CreditAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CreditAttributesTypeEnum type;
+
     public CreditAttributes withType(CreditAttributesTypeEnum type) {
         this.type = type;
         return this;
@@ -51,9 +54,11 @@ public class CreditAttributes {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public CreditAttributes withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public CreditAttributes(){}
 }

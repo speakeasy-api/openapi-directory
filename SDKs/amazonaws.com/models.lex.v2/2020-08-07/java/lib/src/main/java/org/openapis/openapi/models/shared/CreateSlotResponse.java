@@ -20,6 +20,7 @@ public class CreateSlotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public CreateSlotResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -28,6 +29,7 @@ public class CreateSlotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public CreateSlotResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -38,6 +40,7 @@ public class CreateSlotResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public CreateSlotResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -46,6 +49,7 @@ public class CreateSlotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateSlotResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class CreateSlotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentId")
     public String intentId;
+
     public CreateSlotResponse withIntentId(String intentId) {
         this.intentId = intentId;
         return this;
@@ -62,6 +67,7 @@ public class CreateSlotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public CreateSlotResponse withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -70,6 +76,7 @@ public class CreateSlotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multipleValuesSetting")
     public MultipleValuesSetting multipleValuesSetting;
+
     public CreateSlotResponse withMultipleValuesSetting(MultipleValuesSetting multipleValuesSetting) {
         this.multipleValuesSetting = multipleValuesSetting;
         return this;
@@ -78,6 +85,7 @@ public class CreateSlotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("obfuscationSetting")
     public ObfuscationSetting obfuscationSetting;
+
     public CreateSlotResponse withObfuscationSetting(ObfuscationSetting obfuscationSetting) {
         this.obfuscationSetting = obfuscationSetting;
         return this;
@@ -86,6 +94,7 @@ public class CreateSlotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotId")
     public String slotId;
+
     public CreateSlotResponse withSlotId(String slotId) {
         this.slotId = slotId;
         return this;
@@ -94,6 +103,7 @@ public class CreateSlotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotName")
     public String slotName;
+
     public CreateSlotResponse withSlotName(String slotName) {
         this.slotName = slotName;
         return this;
@@ -102,6 +112,7 @@ public class CreateSlotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotTypeId")
     public String slotTypeId;
+
     public CreateSlotResponse withSlotTypeId(String slotTypeId) {
         this.slotTypeId = slotTypeId;
         return this;
@@ -110,6 +121,7 @@ public class CreateSlotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subSlotSetting")
     public SubSlotSetting subSlotSetting;
+
     public CreateSlotResponse withSubSlotSetting(SubSlotSetting subSlotSetting) {
         this.subSlotSetting = subSlotSetting;
         return this;
@@ -118,9 +130,11 @@ public class CreateSlotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueElicitationSetting")
     public SlotValueElicitationSetting valueElicitationSetting;
+
     public CreateSlotResponse withValueElicitationSetting(SlotValueElicitationSetting valueElicitationSetting) {
         this.valueElicitationSetting = valueElicitationSetting;
         return this;
     }
     
+    public CreateSlotResponse(){}
 }

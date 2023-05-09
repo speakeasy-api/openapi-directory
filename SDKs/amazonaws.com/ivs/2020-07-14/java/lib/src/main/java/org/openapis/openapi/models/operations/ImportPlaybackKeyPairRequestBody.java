@@ -15,6 +15,7 @@ public class ImportPlaybackKeyPairRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ImportPlaybackKeyPairRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -25,6 +26,7 @@ public class ImportPlaybackKeyPairRequestBody {
      */
     @JsonProperty("publicKeyMaterial")
     public String publicKeyMaterial;
+
     public ImportPlaybackKeyPairRequestBody withPublicKeyMaterial(String publicKeyMaterial) {
         this.publicKeyMaterial = publicKeyMaterial;
         return this;
@@ -36,9 +38,13 @@ public class ImportPlaybackKeyPairRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ImportPlaybackKeyPairRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public ImportPlaybackKeyPairRequestBody(@JsonProperty("publicKeyMaterial") String publicKeyMaterial) {
+        this.publicKeyMaterial = publicKeyMaterial;
+  }
 }

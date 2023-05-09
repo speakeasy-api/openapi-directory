@@ -18,6 +18,7 @@ public class SearchJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("broadenedQueryJobsCount")
     public Integer broadenedQueryJobsCount;
+
     public SearchJobsResponse withBroadenedQueryJobsCount(Integer broadenedQueryJobsCount) {
         this.broadenedQueryJobsCount = broadenedQueryJobsCount;
         return this;
@@ -29,6 +30,7 @@ public class SearchJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedTotalSize")
     public Integer estimatedTotalSize;
+
     public SearchJobsResponse withEstimatedTotalSize(Integer estimatedTotalSize) {
         this.estimatedTotalSize = estimatedTotalSize;
         return this;
@@ -40,6 +42,7 @@ public class SearchJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("histogramResults")
     public HistogramResults histogramResults;
+
     public SearchJobsResponse withHistogramResults(HistogramResults histogramResults) {
         this.histogramResults = histogramResults;
         return this;
@@ -51,6 +54,7 @@ public class SearchJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationFilters")
     public Location[] locationFilters;
+
     public SearchJobsResponse withLocationFilters(Location[] locationFilters) {
         this.locationFilters = locationFilters;
         return this;
@@ -62,6 +66,7 @@ public class SearchJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchingJobs")
     public MatchingJob[] matchingJobs;
+
     public SearchJobsResponse withMatchingJobs(MatchingJob[] matchingJobs) {
         this.matchingJobs = matchingJobs;
         return this;
@@ -73,6 +78,7 @@ public class SearchJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ResponseMetadata metadata;
+
     public SearchJobsResponse withMetadata(ResponseMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -84,6 +90,7 @@ public class SearchJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SearchJobsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -95,6 +102,7 @@ public class SearchJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spellCorrection")
     public SpellingCorrection spellCorrection;
+
     public SearchJobsResponse withSpellCorrection(SpellingCorrection spellCorrection) {
         this.spellCorrection = spellCorrection;
         return this;
@@ -106,9 +114,11 @@ public class SearchJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public SearchJobsResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public SearchJobsResponse(){}
 }

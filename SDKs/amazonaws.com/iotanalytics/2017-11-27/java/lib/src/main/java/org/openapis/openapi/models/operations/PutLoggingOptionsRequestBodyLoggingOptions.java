@@ -15,6 +15,7 @@ public class PutLoggingOptionsRequestBodyLoggingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public PutLoggingOptionsRequestBodyLoggingOptions withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,6 +24,7 @@ public class PutLoggingOptionsRequestBodyLoggingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public org.openapis.openapi.models.shared.LoggingLevelEnum level;
+
     public PutLoggingOptionsRequestBodyLoggingOptions withLevel(org.openapis.openapi.models.shared.LoggingLevelEnum level) {
         this.level = level;
         return this;
@@ -31,9 +33,11 @@ public class PutLoggingOptionsRequestBodyLoggingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public PutLoggingOptionsRequestBodyLoggingOptions withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public PutLoggingOptionsRequestBodyLoggingOptions(){}
 }

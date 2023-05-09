@@ -18,9 +18,11 @@ public class GroupsExportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportFormat")
     public GroupsExportOptionsExportFormatEnum exportFormat;
+
     public GroupsExportOptions withExportFormat(GroupsExportOptionsExportFormatEnum exportFormat) {
         this.exportFormat = exportFormat;
         return this;
     }
     
+    public GroupsExportOptions(){}
 }

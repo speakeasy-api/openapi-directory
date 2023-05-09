@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTypedLinkFacetInformationResponse {
@@ -12,6 +13,7 @@ public class GetTypedLinkFacetInformationResponse {
      */
     
     public Object accessDeniedException;
+
     public GetTypedLinkFacetInformationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetTypedLinkFacetInformationResponse {
     
     
     public String contentType;
+
     public GetTypedLinkFacetInformationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetTypedLinkFacetInformationResponse {
      */
     
     public Object facetNotFoundException;
+
     public GetTypedLinkFacetInformationResponse withFacetNotFoundException(Object facetNotFoundException) {
         this.facetNotFoundException = facetNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GetTypedLinkFacetInformationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTypedLinkFacetInformationResponse getTypedLinkFacetInformationResponse;
+
     public GetTypedLinkFacetInformationResponse withGetTypedLinkFacetInformationResponse(org.openapis.openapi.models.shared.GetTypedLinkFacetInformationResponse getTypedLinkFacetInformationResponse) {
         this.getTypedLinkFacetInformationResponse = getTypedLinkFacetInformationResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetTypedLinkFacetInformationResponse {
      */
     
     public Object internalServiceException;
+
     public GetTypedLinkFacetInformationResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class GetTypedLinkFacetInformationResponse {
      */
     
     public Object invalidArnException;
+
     public GetTypedLinkFacetInformationResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class GetTypedLinkFacetInformationResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetTypedLinkFacetInformationResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -79,6 +87,7 @@ public class GetTypedLinkFacetInformationResponse {
      */
     
     public Object limitExceededException;
+
     public GetTypedLinkFacetInformationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -86,6 +95,7 @@ public class GetTypedLinkFacetInformationResponse {
     
     
     public Integer statusCode;
+
     public GetTypedLinkFacetInformationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetTypedLinkFacetInformationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTypedLinkFacetInformationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class GetTypedLinkFacetInformationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetTypedLinkFacetInformationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class GetTypedLinkFacetInformationResponse {
      */
     
     public Object retryableConflictException;
+
     public GetTypedLinkFacetInformationResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -123,9 +136,14 @@ public class GetTypedLinkFacetInformationResponse {
      */
     
     public Object validationException;
+
     public GetTypedLinkFacetInformationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetTypedLinkFacetInformationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

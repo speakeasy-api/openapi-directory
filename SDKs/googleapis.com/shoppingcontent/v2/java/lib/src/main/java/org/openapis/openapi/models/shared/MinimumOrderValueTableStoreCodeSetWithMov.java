@@ -18,6 +18,7 @@ public class MinimumOrderValueTableStoreCodeSetWithMov {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeCodes")
     public String[] storeCodes;
+
     public MinimumOrderValueTableStoreCodeSetWithMov withStoreCodes(String[] storeCodes) {
         this.storeCodes = storeCodes;
         return this;
@@ -26,9 +27,11 @@ public class MinimumOrderValueTableStoreCodeSetWithMov {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Price value;
+
     public MinimumOrderValueTableStoreCodeSetWithMov withValue(Price value) {
         this.value = value;
         return this;
     }
     
+    public MinimumOrderValueTableStoreCodeSetWithMov(){}
 }

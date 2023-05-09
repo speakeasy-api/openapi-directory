@@ -15,6 +15,7 @@ public class UpdateSMSTemplateRequestBodySMSTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Body")
     public String body;
+
     public UpdateSMSTemplateRequestBodySMSTemplateRequest withBody(String body) {
         this.body = body;
         return this;
@@ -23,6 +24,7 @@ public class UpdateSMSTemplateRequestBodySMSTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSubstitutions")
     public String defaultSubstitutions;
+
     public UpdateSMSTemplateRequestBodySMSTemplateRequest withDefaultSubstitutions(String defaultSubstitutions) {
         this.defaultSubstitutions = defaultSubstitutions;
         return this;
@@ -31,6 +33,7 @@ public class UpdateSMSTemplateRequestBodySMSTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommenderId")
     public String recommenderId;
+
     public UpdateSMSTemplateRequestBodySMSTemplateRequest withRecommenderId(String recommenderId) {
         this.recommenderId = recommenderId;
         return this;
@@ -39,6 +42,7 @@ public class UpdateSMSTemplateRequestBodySMSTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateDescription")
     public String templateDescription;
+
     public UpdateSMSTemplateRequestBodySMSTemplateRequest withTemplateDescription(String templateDescription) {
         this.templateDescription = templateDescription;
         return this;
@@ -47,9 +51,11 @@ public class UpdateSMSTemplateRequestBodySMSTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public UpdateSMSTemplateRequestBodySMSTemplateRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public UpdateSMSTemplateRequestBodySMSTemplateRequest(){}
 }

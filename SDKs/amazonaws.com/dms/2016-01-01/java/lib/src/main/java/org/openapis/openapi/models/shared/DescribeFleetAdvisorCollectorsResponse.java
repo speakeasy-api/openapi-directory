@@ -15,6 +15,7 @@ public class DescribeFleetAdvisorCollectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Collectors")
     public CollectorResponse[] collectors;
+
     public DescribeFleetAdvisorCollectorsResponse withCollectors(CollectorResponse[] collectors) {
         this.collectors = collectors;
         return this;
@@ -23,9 +24,11 @@ public class DescribeFleetAdvisorCollectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeFleetAdvisorCollectorsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFleetAdvisorCollectorsResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyDBProxyTargetGroupRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyDBProxyTargetGroupActionEnum action;
+
     public GETModifyDBProxyTargetGroupRequest withAction(GETModifyDBProxyTargetGroupActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyDBProxyTargetGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConnectionPoolConfig")
     public GETModifyDBProxyTargetGroupConnectionPoolConfig connectionPoolConfig;
+
     public GETModifyDBProxyTargetGroupRequest withConnectionPoolConfig(GETModifyDBProxyTargetGroupConnectionPoolConfig connectionPoolConfig) {
         this.connectionPoolConfig = connectionPoolConfig;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyDBProxyTargetGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBProxyName")
     public String dbProxyName;
+
     public GETModifyDBProxyTargetGroupRequest withDBProxyName(String dbProxyName) {
         this.dbProxyName = dbProxyName;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyDBProxyTargetGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NewName")
     public String newName;
+
     public GETModifyDBProxyTargetGroupRequest withNewName(String newName) {
         this.newName = newName;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyDBProxyTargetGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetGroupName")
     public String targetGroupName;
+
     public GETModifyDBProxyTargetGroupRequest withTargetGroupName(String targetGroupName) {
         this.targetGroupName = targetGroupName;
         return this;
@@ -56,6 +62,7 @@ public class GETModifyDBProxyTargetGroupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyDBProxyTargetGroupVersionEnum version;
+
     public GETModifyDBProxyTargetGroupRequest withVersion(GETModifyDBProxyTargetGroupVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETModifyDBProxyTargetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyDBProxyTargetGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETModifyDBProxyTargetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyDBProxyTargetGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETModifyDBProxyTargetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyDBProxyTargetGroupRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETModifyDBProxyTargetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyDBProxyTargetGroupRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETModifyDBProxyTargetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyDBProxyTargetGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETModifyDBProxyTargetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyDBProxyTargetGroupRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,16 @@ public class GETModifyDBProxyTargetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyDBProxyTargetGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyDBProxyTargetGroupRequest(@JsonProperty("Action") GETModifyDBProxyTargetGroupActionEnum action, @JsonProperty("DBProxyName") String dbProxyName, @JsonProperty("TargetGroupName") String targetGroupName, @JsonProperty("Version") GETModifyDBProxyTargetGroupVersionEnum version) {
+        this.action = action;
+        this.dbProxyName = dbProxyName;
+        this.targetGroupName = targetGroupName;
+        this.version = version;
+  }
 }

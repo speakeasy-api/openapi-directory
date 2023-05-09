@@ -56,11 +56,9 @@ public class Continuous {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContinuousCheckResponse res = new org.openapis.openapi.models.operations.GetContinuousCheckResponse() {{
+        org.openapis.openapi.models.operations.GetContinuousCheckResponse res = new org.openapis.openapi.models.operations.GetContinuousCheckResponse(contentType, httpRes.statusCode()) {{
             continuousCheck = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,11 +92,9 @@ public class Continuous {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListContinuousChecksResponse res = new org.openapis.openapi.models.operations.ListContinuousChecksResponse() {{
+        org.openapis.openapi.models.operations.ListContinuousChecksResponse res = new org.openapis.openapi.models.operations.ListContinuousChecksResponse(contentType, httpRes.statusCode()) {{
             listContinuousChecksOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class Continuous {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateContinuousCheckResponse res = new org.openapis.openapi.models.operations.UpdateContinuousCheckResponse() {{
+        org.openapis.openapi.models.operations.UpdateContinuousCheckResponse res = new org.openapis.openapi.models.operations.UpdateContinuousCheckResponse(contentType, httpRes.statusCode()) {{
             continuousCheck = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -184,12 +178,10 @@ public class Continuous {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateContinuousCheckResponse res = new org.openapis.openapi.models.operations.CreateContinuousCheckResponse() {{
+        org.openapis.openapi.models.operations.CreateContinuousCheckResponse res = new org.openapis.openapi.models.operations.CreateContinuousCheckResponse(contentType, httpRes.statusCode()) {{
             continuousCheck = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -232,11 +224,9 @@ public class Continuous {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV1ContinuousChecksContinuousCheckIdHistoryResponse res = new org.openapis.openapi.models.operations.GetV1ContinuousChecksContinuousCheckIdHistoryResponse() {{
+        org.openapis.openapi.models.operations.GetV1ContinuousChecksContinuousCheckIdHistoryResponse res = new org.openapis.openapi.models.operations.GetV1ContinuousChecksContinuousCheckIdHistoryResponse(contentType, httpRes.statusCode()) {{
             getContiuousCheckHistoryOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class HTTPHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public HTTPHealthCheck withHost(String host) {
         this.host = host;
         return this;
@@ -26,6 +27,7 @@ public class HTTPHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public HTTPHealthCheck withPort(Integer port) {
         this.port = port;
         return this;
@@ -37,6 +39,7 @@ public class HTTPHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portName")
     public String portName;
+
     public HTTPHealthCheck withPortName(String portName) {
         this.portName = portName;
         return this;
@@ -48,6 +51,7 @@ public class HTTPHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portSpecification")
     public HTTPHealthCheckPortSpecificationEnum portSpecification;
+
     public HTTPHealthCheck withPortSpecification(HTTPHealthCheckPortSpecificationEnum portSpecification) {
         this.portSpecification = portSpecification;
         return this;
@@ -59,6 +63,7 @@ public class HTTPHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proxyHeader")
     public HTTPHealthCheckProxyHeaderEnum proxyHeader;
+
     public HTTPHealthCheck withProxyHeader(HTTPHealthCheckProxyHeaderEnum proxyHeader) {
         this.proxyHeader = proxyHeader;
         return this;
@@ -70,6 +75,7 @@ public class HTTPHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestPath")
     public String requestPath;
+
     public HTTPHealthCheck withRequestPath(String requestPath) {
         this.requestPath = requestPath;
         return this;
@@ -81,6 +87,7 @@ public class HTTPHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public String response;
+
     public HTTPHealthCheck withResponse(String response) {
         this.response = response;
         return this;
@@ -92,9 +99,11 @@ public class HTTPHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weightReportMode")
     public HTTPHealthCheckWeightReportModeEnum weightReportMode;
+
     public HTTPHealthCheck withWeightReportMode(HTTPHealthCheckWeightReportModeEnum weightReportMode) {
         this.weightReportMode = weightReportMode;
         return this;
     }
     
+    public HTTPHealthCheck(){}
 }

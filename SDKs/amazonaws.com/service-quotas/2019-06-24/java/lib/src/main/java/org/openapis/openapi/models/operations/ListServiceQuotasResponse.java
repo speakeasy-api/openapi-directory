@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListServiceQuotasResponse {
@@ -12,6 +13,7 @@ public class ListServiceQuotasResponse {
      */
     
     public Object accessDeniedException;
+
     public ListServiceQuotasResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListServiceQuotasResponse {
     
     
     public String contentType;
+
     public ListServiceQuotasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListServiceQuotasResponse {
      */
     
     public Object illegalArgumentException;
+
     public ListServiceQuotasResponse withIllegalArgumentException(Object illegalArgumentException) {
         this.illegalArgumentException = illegalArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class ListServiceQuotasResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public ListServiceQuotasResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -49,6 +54,7 @@ public class ListServiceQuotasResponse {
      */
     
     public org.openapis.openapi.models.shared.ListServiceQuotasResponse listServiceQuotasResponse;
+
     public ListServiceQuotasResponse withListServiceQuotasResponse(org.openapis.openapi.models.shared.ListServiceQuotasResponse listServiceQuotasResponse) {
         this.listServiceQuotasResponse = listServiceQuotasResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListServiceQuotasResponse {
      */
     
     public Object noSuchResourceException;
+
     public ListServiceQuotasResponse withNoSuchResourceException(Object noSuchResourceException) {
         this.noSuchResourceException = noSuchResourceException;
         return this;
@@ -69,6 +76,7 @@ public class ListServiceQuotasResponse {
      */
     
     public Object serviceException;
+
     public ListServiceQuotasResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class ListServiceQuotasResponse {
     
     
     public Integer statusCode;
+
     public ListServiceQuotasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListServiceQuotasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListServiceQuotasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ListServiceQuotasResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListServiceQuotasResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListServiceQuotasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

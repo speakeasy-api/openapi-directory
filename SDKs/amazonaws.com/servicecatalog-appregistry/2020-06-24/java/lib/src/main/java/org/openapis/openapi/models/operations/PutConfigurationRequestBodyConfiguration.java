@@ -15,9 +15,11 @@ public class PutConfigurationRequestBodyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagQueryConfiguration")
     public org.openapis.openapi.models.shared.TagQueryConfiguration tagQueryConfiguration;
+
     public PutConfigurationRequestBodyConfiguration withTagQueryConfiguration(org.openapis.openapi.models.shared.TagQueryConfiguration tagQueryConfiguration) {
         this.tagQueryConfiguration = tagQueryConfiguration;
         return this;
     }
     
+    public PutConfigurationRequestBodyConfiguration(){}
 }

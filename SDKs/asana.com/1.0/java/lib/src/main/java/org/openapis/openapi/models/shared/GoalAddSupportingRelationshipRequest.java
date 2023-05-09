@@ -15,6 +15,7 @@ public class GoalAddSupportingRelationshipRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contribution_weight")
     public Double contributionWeight;
+
     public GoalAddSupportingRelationshipRequest withContributionWeight(Double contributionWeight) {
         this.contributionWeight = contributionWeight;
         return this;
@@ -26,6 +27,7 @@ public class GoalAddSupportingRelationshipRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insert_after")
     public String insertAfter;
+
     public GoalAddSupportingRelationshipRequest withInsertAfter(String insertAfter) {
         this.insertAfter = insertAfter;
         return this;
@@ -37,6 +39,7 @@ public class GoalAddSupportingRelationshipRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insert_before")
     public String insertBefore;
+
     public GoalAddSupportingRelationshipRequest withInsertBefore(String insertBefore) {
         this.insertBefore = insertBefore;
         return this;
@@ -47,9 +50,13 @@ public class GoalAddSupportingRelationshipRequest {
      */
     @JsonProperty("supporting_resource")
     public String supportingResource;
+
     public GoalAddSupportingRelationshipRequest withSupportingResource(String supportingResource) {
         this.supportingResource = supportingResource;
         return this;
     }
     
+    public GoalAddSupportingRelationshipRequest(@JsonProperty("supporting_resource") String supportingResource) {
+        this.supportingResource = supportingResource;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 public class ModifyInstanceEventStartTimeRequest {
     
     public Boolean dryRun;
+
     public ModifyInstanceEventStartTimeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +18,7 @@ public class ModifyInstanceEventStartTimeRequest {
     
     
     public String instanceEventId;
+
     public ModifyInstanceEventStartTimeRequest withInstanceEventId(String instanceEventId) {
         this.instanceEventId = instanceEventId;
         return this;
@@ -23,6 +26,7 @@ public class ModifyInstanceEventStartTimeRequest {
     
     
     public String instanceId;
+
     public ModifyInstanceEventStartTimeRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -30,9 +34,15 @@ public class ModifyInstanceEventStartTimeRequest {
     
     
     public OffsetDateTime notBefore;
+
     public ModifyInstanceEventStartTimeRequest withNotBefore(OffsetDateTime notBefore) {
         this.notBefore = notBefore;
         return this;
     }
     
+    public ModifyInstanceEventStartTimeRequest(@JsonProperty("InstanceEventId") String instanceEventId, @JsonProperty("InstanceId") String instanceId, @JsonProperty("NotBefore") OffsetDateTime notBefore) {
+        this.instanceEventId = instanceEventId;
+        this.instanceId = instanceId;
+        this.notBefore = notBefore;
+  }
 }

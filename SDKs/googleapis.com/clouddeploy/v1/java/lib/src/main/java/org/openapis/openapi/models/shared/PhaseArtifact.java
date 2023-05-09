@@ -13,11 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class PhaseArtifact {
     /**
+     * Output only. File path of the directory of rendered job manifests relative to the URI. This is only set if it is applicable.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("jobManifestsPath")
+    public String jobManifestsPath;
+
+    public PhaseArtifact withJobManifestsPath(String jobManifestsPath) {
+        this.jobManifestsPath = jobManifestsPath;
+        return this;
+    }
+    
+    /**
      * Output only. File path of the rendered manifest relative to the URI.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manifestPath")
     public String manifestPath;
+
     public PhaseArtifact withManifestPath(String manifestPath) {
         this.manifestPath = manifestPath;
         return this;
@@ -29,9 +42,11 @@ public class PhaseArtifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skaffoldConfigPath")
     public String skaffoldConfigPath;
+
     public PhaseArtifact withSkaffoldConfigPath(String skaffoldConfigPath) {
         this.skaffoldConfigPath = skaffoldConfigPath;
         return this;
     }
     
+    public PhaseArtifact(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMatchmakingRuleSetResponse {
     
     public String contentType;
+
     public DeleteMatchmakingRuleSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteMatchmakingRuleSetResponse {
      */
     
     public java.util.Map<String, Object> deleteMatchmakingRuleSetOutput;
+
     public DeleteMatchmakingRuleSetResponse withDeleteMatchmakingRuleSetOutput(java.util.Map<String, Object> deleteMatchmakingRuleSetOutput) {
         this.deleteMatchmakingRuleSetOutput = deleteMatchmakingRuleSetOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteMatchmakingRuleSetResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteMatchmakingRuleSetResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteMatchmakingRuleSetResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteMatchmakingRuleSetResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteMatchmakingRuleSetResponse {
      */
     
     public Object notFoundException;
+
     public DeleteMatchmakingRuleSetResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteMatchmakingRuleSetResponse {
     
     
     public Integer statusCode;
+
     public DeleteMatchmakingRuleSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteMatchmakingRuleSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMatchmakingRuleSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteMatchmakingRuleSetResponse {
      */
     
     public Object taggingFailedException;
+
     public DeleteMatchmakingRuleSetResponse withTaggingFailedException(Object taggingFailedException) {
         this.taggingFailedException = taggingFailedException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteMatchmakingRuleSetResponse {
      */
     
     public Object unsupportedRegionException;
+
     public DeleteMatchmakingRuleSetResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public DeleteMatchmakingRuleSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

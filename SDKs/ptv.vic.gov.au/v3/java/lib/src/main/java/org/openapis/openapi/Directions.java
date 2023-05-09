@@ -56,7 +56,7 @@ public class Directions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectionsForDirectionResponse res = new org.openapis.openapi.models.operations.DirectionsForDirectionResponse() {{
+        org.openapis.openapi.models.operations.DirectionsForDirectionResponse res = new org.openapis.openapi.models.operations.DirectionsForDirectionResponse(contentType, httpRes.statusCode()) {{
             v3DirectionsResponse = null;
             v3DirectionsResponse = null;
             body = null;
@@ -64,8 +64,6 @@ public class Directions {
             v3ErrorResponse = null;
             v3ErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -130,7 +128,7 @@ public class Directions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectionsForDirectionAndTypeResponse res = new org.openapis.openapi.models.operations.DirectionsForDirectionAndTypeResponse() {{
+        org.openapis.openapi.models.operations.DirectionsForDirectionAndTypeResponse res = new org.openapis.openapi.models.operations.DirectionsForDirectionAndTypeResponse(contentType, httpRes.statusCode()) {{
             v3DirectionsResponse = null;
             v3DirectionsResponse = null;
             body = null;
@@ -138,8 +136,6 @@ public class Directions {
             v3ErrorResponse = null;
             v3ErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,7 +200,7 @@ public class Directions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectionsForRouteResponse res = new org.openapis.openapi.models.operations.DirectionsForRouteResponse() {{
+        org.openapis.openapi.models.operations.DirectionsForRouteResponse res = new org.openapis.openapi.models.operations.DirectionsForRouteResponse(contentType, httpRes.statusCode()) {{
             v3DirectionsResponse = null;
             v3DirectionsResponse = null;
             body = null;
@@ -212,8 +208,6 @@ public class Directions {
             v3ErrorResponse = null;
             v3ErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

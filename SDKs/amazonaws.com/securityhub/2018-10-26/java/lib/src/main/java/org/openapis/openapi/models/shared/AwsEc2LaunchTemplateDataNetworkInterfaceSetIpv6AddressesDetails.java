@@ -15,9 +15,11 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetIpv6AddressesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ipv6Address")
     public String ipv6Address;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetIpv6AddressesDetails withIpv6Address(String ipv6Address) {
         this.ipv6Address = ipv6Address;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataNetworkInterfaceSetIpv6AddressesDetails(){}
 }

@@ -15,6 +15,7 @@ public class ComplianceByResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Compliance")
     public Compliance compliance;
+
     public ComplianceByResource withCompliance(Compliance compliance) {
         this.compliance = compliance;
         return this;
@@ -23,6 +24,7 @@ public class ComplianceByResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ComplianceByResource withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -31,9 +33,11 @@ public class ComplianceByResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public ComplianceByResource withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ComplianceByResource(){}
 }

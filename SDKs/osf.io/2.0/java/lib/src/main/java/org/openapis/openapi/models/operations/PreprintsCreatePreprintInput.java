@@ -15,6 +15,7 @@ public class PreprintsCreatePreprintInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public PreprintsCreatePreprintAttributesInput attributes;
+
     public PreprintsCreatePreprintInput withAttributes(PreprintsCreatePreprintAttributesInput attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class PreprintsCreatePreprintInput {
      */
     @JsonProperty("relationships")
     public PreprintsCreatePreprintRelationshipsInput relationships;
+
     public PreprintsCreatePreprintInput withRelationships(PreprintsCreatePreprintRelationshipsInput relationships) {
         this.relationships = relationships;
         return this;
@@ -35,9 +37,14 @@ public class PreprintsCreatePreprintInput {
      */
     @JsonProperty("type")
     public String type;
+
     public PreprintsCreatePreprintInput withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PreprintsCreatePreprintInput(@JsonProperty("relationships") PreprintsCreatePreprintRelationshipsInput relationships, @JsonProperty("type") String type) {
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

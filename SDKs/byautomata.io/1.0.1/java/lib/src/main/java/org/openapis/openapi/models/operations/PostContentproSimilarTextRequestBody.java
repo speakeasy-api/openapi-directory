@@ -15,9 +15,13 @@ public class PostContentproSimilarTextRequestBody {
      */
     @JsonProperty("text")
     public String text;
+
     public PostContentproSimilarTextRequestBody withText(String text) {
         this.text = text;
         return this;
     }
     
+    public PostContentproSimilarTextRequestBody(@JsonProperty("text") String text) {
+        this.text = text;
+  }
 }

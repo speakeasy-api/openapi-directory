@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMessagesIdRelatedReceivedMessagesResponse {
     
     public String contentType;
+
     public GetMessagesIdRelatedReceivedMessagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetMessagesIdRelatedReceivedMessagesResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetMessagesIdRelatedReceivedMessagesResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class GetMessagesIdRelatedReceivedMessagesResponse {
      */
     
     public org.openapis.openapi.models.shared.Message[] messages;
+
     public GetMessagesIdRelatedReceivedMessagesResponse withMessages(org.openapis.openapi.models.shared.Message[] messages) {
         this.messages = messages;
         return this;
@@ -36,6 +40,7 @@ public class GetMessagesIdRelatedReceivedMessagesResponse {
     
     
     public Integer statusCode;
+
     public GetMessagesIdRelatedReceivedMessagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetMessagesIdRelatedReceivedMessagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMessagesIdRelatedReceivedMessagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMessagesIdRelatedReceivedMessagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

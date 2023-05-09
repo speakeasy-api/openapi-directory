@@ -22,7 +22,8 @@ public enum GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelTypeEnum {
     SMART("SMART"),
     PERFORMANCE_MAX("PERFORMANCE_MAX"),
     LOCAL_SERVICES("LOCAL_SERVICES"),
-    DISCOVERY("DISCOVERY");
+    DISCOVERY("DISCOVERY"),
+    TRAVEL("TRAVEL");
 
     @JsonValue
     public final String value;

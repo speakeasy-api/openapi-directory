@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostPortfolioOptimizationMeanVarianceEfficientDiversifiedResponse {
     
     public String contentType;
+
     public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientDiversifiedResponse {
     
     
     public Integer statusCode;
+
     public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientDiversifiedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostPortfolioOptimizationMeanVarianceEfficientDiversifiedResponse {
      */
     
     public PostPortfolioOptimizationMeanVarianceEfficientDiversified200ApplicationJSON postPortfolioOptimizationMeanVarianceEfficientDiversified200ApplicationJSONObject;
+
     public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedResponse withPostPortfolioOptimizationMeanVarianceEfficientDiversified200ApplicationJSONObject(PostPortfolioOptimizationMeanVarianceEfficientDiversified200ApplicationJSON postPortfolioOptimizationMeanVarianceEfficientDiversified200ApplicationJSONObject) {
         this.postPortfolioOptimizationMeanVarianceEfficientDiversified200ApplicationJSONObject = postPortfolioOptimizationMeanVarianceEfficientDiversified200ApplicationJSONObject;
         return this;
     }
     
+    public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

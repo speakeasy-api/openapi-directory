@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQuer
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidenceThreshold")
     public Float confidenceThreshold;
+
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfig withConfidenceThreshold(Float confidenceThreshold) {
         this.confidenceThreshold = confidenceThreshold;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQuer
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contextFilterSettings")
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettings contextFilterSettings;
+
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfig withContextFilterSettings(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettings contextFilterSettings) {
         this.contextFilterSettings = contextFilterSettings;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQuer
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialogflowQuerySource")
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySource dialogflowQuerySource;
+
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfig withDialogflowQuerySource(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySource dialogflowQuerySource) {
         this.dialogflowQuerySource = dialogflowQuerySource;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQuer
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentQuerySource")
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySource documentQuerySource;
+
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfig withDocumentQuerySource(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySource documentQuerySource) {
         this.documentQuerySource = documentQuerySource;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQuer
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("knowledgeBaseQuerySource")
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySource knowledgeBaseQuerySource;
+
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfig withKnowledgeBaseQuerySource(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySource knowledgeBaseQuerySource) {
         this.knowledgeBaseQuerySource = knowledgeBaseQuerySource;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQuer
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Integer maxResults;
+
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfig withMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfig(){}
 }

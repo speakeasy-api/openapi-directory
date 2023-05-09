@@ -15,6 +15,7 @@ public class PhoneNumber2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public PhoneNumber2 withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -25,6 +26,7 @@ public class PhoneNumber2 {
      */
     @JsonProperty("number")
     public String number;
+
     public PhoneNumber2 withNumber(String number) {
         this.number = number;
         return this;
@@ -36,9 +38,14 @@ public class PhoneNumber2 {
      */
     @JsonProperty("type")
     public String type;
+
     public PhoneNumber2 withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PhoneNumber2(@JsonProperty("number") String number, @JsonProperty("type") String type) {
+        this.number = number;
+        this.type = type;
+  }
 }

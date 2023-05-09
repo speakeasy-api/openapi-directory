@@ -32,10 +32,11 @@ public class Health {
     /**
      * Get HTTP
      * Check the Appwrite HTTP server is up and responsive.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.HealthGetResponse healthGet() throws Exception {
+    public org.openapis.openapi.models.operations.HealthGetResponse healthGet(org.openapis.openapi.models.operations.HealthGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/health");
         
@@ -44,15 +45,14 @@ public class Health {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HealthGetResponse res = new org.openapis.openapi.models.operations.HealthGetResponse() {{
+        org.openapis.openapi.models.operations.HealthGetResponse res = new org.openapis.openapi.models.operations.HealthGetResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 500) {
@@ -64,10 +64,11 @@ public class Health {
     /**
      * Get Anti virus
      * Check the Appwrite Anti Virus server is up and connection is successful.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.HealthGetAntiVirusResponse healthGetAntiVirus() throws Exception {
+    public org.openapis.openapi.models.operations.HealthGetAntiVirusResponse healthGetAntiVirus(org.openapis.openapi.models.operations.HealthGetAntiVirusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/health/anti-virus");
         
@@ -76,15 +77,14 @@ public class Health {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HealthGetAntiVirusResponse res = new org.openapis.openapi.models.operations.HealthGetAntiVirusResponse() {{
+        org.openapis.openapi.models.operations.HealthGetAntiVirusResponse res = new org.openapis.openapi.models.operations.HealthGetAntiVirusResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 500) {
@@ -96,10 +96,11 @@ public class Health {
     /**
      * Get Cache
      * Check the Appwrite in-memory cache server is up and connection is successful.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.HealthGetCacheResponse healthGetCache() throws Exception {
+    public org.openapis.openapi.models.operations.HealthGetCacheResponse healthGetCache(org.openapis.openapi.models.operations.HealthGetCacheSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/health/cache");
         
@@ -108,15 +109,14 @@ public class Health {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HealthGetCacheResponse res = new org.openapis.openapi.models.operations.HealthGetCacheResponse() {{
+        org.openapis.openapi.models.operations.HealthGetCacheResponse res = new org.openapis.openapi.models.operations.HealthGetCacheResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 500) {
@@ -128,10 +128,11 @@ public class Health {
     /**
      * Get DB
      * Check the Appwrite database server is up and connection is successful.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.HealthGetDBResponse healthGetDB() throws Exception {
+    public org.openapis.openapi.models.operations.HealthGetDBResponse healthGetDB(org.openapis.openapi.models.operations.HealthGetDBSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/health/db");
         
@@ -140,15 +141,14 @@ public class Health {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HealthGetDBResponse res = new org.openapis.openapi.models.operations.HealthGetDBResponse() {{
+        org.openapis.openapi.models.operations.HealthGetDBResponse res = new org.openapis.openapi.models.operations.HealthGetDBResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 500) {
@@ -160,10 +160,11 @@ public class Health {
     /**
      * Get Certificate Queue
      * Get the number of certificates that are waiting to be issued against [Letsencrypt](https://letsencrypt.org/) in the Appwrite internal queue server.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.HealthGetQueueCertificatesResponse healthGetQueueCertificates() throws Exception {
+    public org.openapis.openapi.models.operations.HealthGetQueueCertificatesResponse healthGetQueueCertificates(org.openapis.openapi.models.operations.HealthGetQueueCertificatesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/health/queue/certificates");
         
@@ -172,15 +173,14 @@ public class Health {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HealthGetQueueCertificatesResponse res = new org.openapis.openapi.models.operations.HealthGetQueueCertificatesResponse() {{
+        org.openapis.openapi.models.operations.HealthGetQueueCertificatesResponse res = new org.openapis.openapi.models.operations.HealthGetQueueCertificatesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 500) {
@@ -191,10 +191,11 @@ public class Health {
 
     /**
      * Get Functions Queue
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.HealthGetQueueFunctionsResponse healthGetQueueFunctions() throws Exception {
+    public org.openapis.openapi.models.operations.HealthGetQueueFunctionsResponse healthGetQueueFunctions(org.openapis.openapi.models.operations.HealthGetQueueFunctionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/health/queue/functions");
         
@@ -203,15 +204,14 @@ public class Health {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HealthGetQueueFunctionsResponse res = new org.openapis.openapi.models.operations.HealthGetQueueFunctionsResponse() {{
+        org.openapis.openapi.models.operations.HealthGetQueueFunctionsResponse res = new org.openapis.openapi.models.operations.HealthGetQueueFunctionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 500) {
@@ -223,10 +223,11 @@ public class Health {
     /**
      * Get Logs Queue
      * Get the number of logs that are waiting to be processed in the Appwrite internal queue server.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.HealthGetQueueLogsResponse healthGetQueueLogs() throws Exception {
+    public org.openapis.openapi.models.operations.HealthGetQueueLogsResponse healthGetQueueLogs(org.openapis.openapi.models.operations.HealthGetQueueLogsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/health/queue/logs");
         
@@ -235,15 +236,14 @@ public class Health {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HealthGetQueueLogsResponse res = new org.openapis.openapi.models.operations.HealthGetQueueLogsResponse() {{
+        org.openapis.openapi.models.operations.HealthGetQueueLogsResponse res = new org.openapis.openapi.models.operations.HealthGetQueueLogsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 500) {
@@ -255,10 +255,11 @@ public class Health {
     /**
      * Get Tasks Queue
      * Get the number of tasks that are waiting to be processed in the Appwrite internal queue server.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.HealthGetQueueTasksResponse healthGetQueueTasks() throws Exception {
+    public org.openapis.openapi.models.operations.HealthGetQueueTasksResponse healthGetQueueTasks(org.openapis.openapi.models.operations.HealthGetQueueTasksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/health/queue/tasks");
         
@@ -267,15 +268,14 @@ public class Health {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HealthGetQueueTasksResponse res = new org.openapis.openapi.models.operations.HealthGetQueueTasksResponse() {{
+        org.openapis.openapi.models.operations.HealthGetQueueTasksResponse res = new org.openapis.openapi.models.operations.HealthGetQueueTasksResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 500) {
@@ -287,10 +287,11 @@ public class Health {
     /**
      * Get Usage Queue
      * Get the number of usage stats that are waiting to be processed in the Appwrite internal queue server.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.HealthGetQueueUsageResponse healthGetQueueUsage() throws Exception {
+    public org.openapis.openapi.models.operations.HealthGetQueueUsageResponse healthGetQueueUsage(org.openapis.openapi.models.operations.HealthGetQueueUsageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/health/queue/usage");
         
@@ -299,15 +300,14 @@ public class Health {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HealthGetQueueUsageResponse res = new org.openapis.openapi.models.operations.HealthGetQueueUsageResponse() {{
+        org.openapis.openapi.models.operations.HealthGetQueueUsageResponse res = new org.openapis.openapi.models.operations.HealthGetQueueUsageResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 500) {
@@ -319,10 +319,11 @@ public class Health {
     /**
      * Get Webhooks Queue
      * Get the number of webhooks that are waiting to be processed in the Appwrite internal queue server.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.HealthGetQueueWebhooksResponse healthGetQueueWebhooks() throws Exception {
+    public org.openapis.openapi.models.operations.HealthGetQueueWebhooksResponse healthGetQueueWebhooks(org.openapis.openapi.models.operations.HealthGetQueueWebhooksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/health/queue/webhooks");
         
@@ -331,15 +332,14 @@ public class Health {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HealthGetQueueWebhooksResponse res = new org.openapis.openapi.models.operations.HealthGetQueueWebhooksResponse() {{
+        org.openapis.openapi.models.operations.HealthGetQueueWebhooksResponse res = new org.openapis.openapi.models.operations.HealthGetQueueWebhooksResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 500) {
@@ -351,10 +351,11 @@ public class Health {
     /**
      * Get Local Storage
      * Check the Appwrite local storage device is up and connection is successful.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.HealthGetStorageLocalResponse healthGetStorageLocal() throws Exception {
+    public org.openapis.openapi.models.operations.HealthGetStorageLocalResponse healthGetStorageLocal(org.openapis.openapi.models.operations.HealthGetStorageLocalSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/health/storage/local");
         
@@ -363,15 +364,14 @@ public class Health {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HealthGetStorageLocalResponse res = new org.openapis.openapi.models.operations.HealthGetStorageLocalResponse() {{
+        org.openapis.openapi.models.operations.HealthGetStorageLocalResponse res = new org.openapis.openapi.models.operations.HealthGetStorageLocalResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 500) {
@@ -383,10 +383,11 @@ public class Health {
     /**
      * Get Time
      * Check the Appwrite server time is synced with Google remote NTP server. We use this technology to smoothly handle leap seconds with no disruptive events. The [Network Time Protocol](https://en.wikipedia.org/wiki/Network_Time_Protocol) (NTP) is used by hundreds of millions of computers and devices to synchronize their clocks over the Internet. If your computer sets its own clock, it likely uses NTP.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.HealthGetTimeResponse healthGetTime() throws Exception {
+    public org.openapis.openapi.models.operations.HealthGetTimeResponse healthGetTime(org.openapis.openapi.models.operations.HealthGetTimeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/health/time");
         
@@ -395,15 +396,14 @@ public class Health {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HealthGetTimeResponse res = new org.openapis.openapi.models.operations.HealthGetTimeResponse() {{
+        org.openapis.openapi.models.operations.HealthGetTimeResponse res = new org.openapis.openapi.models.operations.HealthGetTimeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 500) {

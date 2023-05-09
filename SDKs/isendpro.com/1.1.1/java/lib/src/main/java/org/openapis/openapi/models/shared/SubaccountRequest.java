@@ -17,6 +17,7 @@ public class SubaccountRequest {
      */
     @JsonProperty("keyid")
     public String keyid;
+
     public SubaccountRequest withKeyid(String keyid) {
         this.keyid = keyid;
         return this;
@@ -28,6 +29,7 @@ public class SubaccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subAccountAddCredit")
     public String subAccountAddCredit;
+
     public SubaccountRequest withSubAccountAddCredit(String subAccountAddCredit) {
         this.subAccountAddCredit = subAccountAddCredit;
         return this;
@@ -36,6 +38,7 @@ public class SubaccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subAccountCountryCode")
     public String subAccountCountryCode;
+
     public SubaccountRequest withSubAccountCountryCode(String subAccountCountryCode) {
         this.subAccountCountryCode = subAccountCountryCode;
         return this;
@@ -46,6 +49,7 @@ public class SubaccountRequest {
      */
     @JsonProperty("subAccountEdit")
     public SubaccountRequestSubAccountEditEnum subAccountEdit;
+
     public SubaccountRequest withSubAccountEdit(SubaccountRequestSubAccountEditEnum subAccountEdit) {
         this.subAccountEdit = subAccountEdit;
         return this;
@@ -57,6 +61,7 @@ public class SubaccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subAccountKeyId")
     public String subAccountKeyId;
+
     public SubaccountRequest withSubAccountKeyId(String subAccountKeyId) {
         this.subAccountKeyId = subAccountKeyId;
         return this;
@@ -65,6 +70,7 @@ public class SubaccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subAccountPrice")
     public String subAccountPrice;
+
     public SubaccountRequest withSubAccountPrice(String subAccountPrice) {
         this.subAccountPrice = subAccountPrice;
         return this;
@@ -73,6 +79,7 @@ public class SubaccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subAccountRestrictionStop")
     public SubaccountRequestSubAccountRestrictionStopEnum subAccountRestrictionStop;
+
     public SubaccountRequest withSubAccountRestrictionStop(SubaccountRequestSubAccountRestrictionStopEnum subAccountRestrictionStop) {
         this.subAccountRestrictionStop = subAccountRestrictionStop;
         return this;
@@ -81,9 +88,14 @@ public class SubaccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subAccountRestrictionTime")
     public SubaccountRequestSubAccountRestrictionTimeEnum subAccountRestrictionTime;
+
     public SubaccountRequest withSubAccountRestrictionTime(SubaccountRequestSubAccountRestrictionTimeEnum subAccountRestrictionTime) {
         this.subAccountRestrictionTime = subAccountRestrictionTime;
         return this;
     }
     
+    public SubaccountRequest(@JsonProperty("keyid") String keyid, @JsonProperty("subAccountEdit") SubaccountRequestSubAccountEditEnum subAccountEdit) {
+        this.keyid = keyid;
+        this.subAccountEdit = subAccountEdit;
+  }
 }

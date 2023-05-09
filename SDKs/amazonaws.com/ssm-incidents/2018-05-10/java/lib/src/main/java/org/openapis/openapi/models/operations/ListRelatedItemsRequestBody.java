@@ -14,6 +14,7 @@ public class ListRelatedItemsRequestBody {
      */
     @JsonProperty("incidentRecordArn")
     public String incidentRecordArn;
+
     public ListRelatedItemsRequestBody withIncidentRecordArn(String incidentRecordArn) {
         this.incidentRecordArn = incidentRecordArn;
         return this;
@@ -25,6 +26,7 @@ public class ListRelatedItemsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListRelatedItemsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class ListRelatedItemsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRelatedItemsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListRelatedItemsRequestBody(@JsonProperty("incidentRecordArn") String incidentRecordArn) {
+        this.incidentRecordArn = incidentRecordArn;
+  }
 }

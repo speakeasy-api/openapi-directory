@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetGroupsForCapacityReservationRequest {
     
     public String capacityReservationId;
+
     public GetGroupsForCapacityReservationRequest withCapacityReservationId(String capacityReservationId) {
         this.capacityReservationId = capacityReservationId;
         return this;
@@ -16,6 +17,7 @@ public class GetGroupsForCapacityReservationRequest {
     
     
     public Boolean dryRun;
+
     public GetGroupsForCapacityReservationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class GetGroupsForCapacityReservationRequest {
     
     
     public Long maxResults;
+
     public GetGroupsForCapacityReservationRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,9 +33,13 @@ public class GetGroupsForCapacityReservationRequest {
     
     
     public String nextToken;
+
     public GetGroupsForCapacityReservationRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetGroupsForCapacityReservationRequest(@JsonProperty("CapacityReservationId") String capacityReservationId) {
+        this.capacityReservationId = capacityReservationId;
+  }
 }

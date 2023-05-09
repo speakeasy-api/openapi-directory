@@ -64,11 +64,9 @@ public class AssetsVolatility {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssetsVolatilityResponse res = new org.openapis.openapi.models.operations.PostAssetsVolatilityResponse() {{
+        org.openapis.openapi.models.operations.PostAssetsVolatilityResponse res = new org.openapis.openapi.models.operations.PostAssetsVolatilityResponse(contentType, httpRes.statusCode()) {{
             postAssetsVolatility200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

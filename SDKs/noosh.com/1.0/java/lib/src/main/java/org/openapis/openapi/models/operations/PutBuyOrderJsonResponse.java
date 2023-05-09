@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutBuyOrderJsonResponse {
     
     public byte[] body;
+
     public PutBuyOrderJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PutBuyOrderJsonResponse {
     
     
     public String contentType;
+
     public PutBuyOrderJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PutBuyOrderJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public PutBuyOrderJsonResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -36,6 +40,7 @@ public class PutBuyOrderJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.OrderVO orderVO;
+
     public PutBuyOrderJsonResponse withOrderVO(org.openapis.openapi.models.shared.OrderVO orderVO) {
         this.orderVO = orderVO;
         return this;
@@ -43,6 +48,7 @@ public class PutBuyOrderJsonResponse {
     
     
     public Integer statusCode;
+
     public PutBuyOrderJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class PutBuyOrderJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutBuyOrderJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutBuyOrderJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

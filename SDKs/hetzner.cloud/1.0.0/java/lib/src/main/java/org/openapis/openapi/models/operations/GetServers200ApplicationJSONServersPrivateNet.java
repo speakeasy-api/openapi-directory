@@ -12,6 +12,7 @@ public class GetServers200ApplicationJSONServersPrivateNet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias_ips")
     public String[] aliasIps;
+
     public GetServers200ApplicationJSONServersPrivateNet withAliasIps(String[] aliasIps) {
         this.aliasIps = aliasIps;
         return this;
@@ -20,6 +21,7 @@ public class GetServers200ApplicationJSONServersPrivateNet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip")
     public String ip;
+
     public GetServers200ApplicationJSONServersPrivateNet withIp(String ip) {
         this.ip = ip;
         return this;
@@ -28,6 +30,7 @@ public class GetServers200ApplicationJSONServersPrivateNet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mac_address")
     public String macAddress;
+
     public GetServers200ApplicationJSONServersPrivateNet withMacAddress(String macAddress) {
         this.macAddress = macAddress;
         return this;
@@ -36,9 +39,11 @@ public class GetServers200ApplicationJSONServersPrivateNet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public Long network;
+
     public GetServers200ApplicationJSONServersPrivateNet withNetwork(Long network) {
         this.network = network;
         return this;
     }
     
+    public GetServers200ApplicationJSONServersPrivateNet(){}
 }

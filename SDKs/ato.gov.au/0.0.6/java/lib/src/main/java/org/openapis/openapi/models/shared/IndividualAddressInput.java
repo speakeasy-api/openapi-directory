@@ -18,6 +18,7 @@ public class IndividualAddressInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressType")
     public IndividualAddressAddressTypeEnum addressType;
+
     public IndividualAddressInput withAddressType(IndividualAddressAddressTypeEnum addressType) {
         this.addressType = addressType;
         return this;
@@ -29,6 +30,7 @@ public class IndividualAddressInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public IndividualAddressInput withCity(String city) {
         this.city = city;
         return this;
@@ -40,6 +42,7 @@ public class IndividualAddressInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public IndividualAddressInput withCountry(String country) {
         this.country = country;
         return this;
@@ -51,6 +54,7 @@ public class IndividualAddressInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line1")
     public String line1;
+
     public IndividualAddressInput withLine1(String line1) {
         this.line1 = line1;
         return this;
@@ -62,6 +66,7 @@ public class IndividualAddressInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line2")
     public String line2;
+
     public IndividualAddressInput withLine2(String line2) {
         this.line2 = line2;
         return this;
@@ -73,6 +78,7 @@ public class IndividualAddressInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line3")
     public String line3;
+
     public IndividualAddressInput withLine3(String line3) {
         this.line3 = line3;
         return this;
@@ -84,6 +90,7 @@ public class IndividualAddressInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public IndividualAddressInput withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class IndividualAddressInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public IndividualAddressInput withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -106,9 +114,11 @@ public class IndividualAddressInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suburb")
     public String suburb;
+
     public IndividualAddressInput withSuburb(String suburb) {
         this.suburb = suburb;
         return this;
     }
     
+    public IndividualAddressInput(){}
 }

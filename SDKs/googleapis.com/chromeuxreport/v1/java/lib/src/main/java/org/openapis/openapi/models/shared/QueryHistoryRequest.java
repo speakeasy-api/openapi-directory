@@ -18,6 +18,7 @@ public class QueryHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formFactor")
     public QueryHistoryRequestFormFactorEnum formFactor;
+
     public QueryHistoryRequest withFormFactor(QueryHistoryRequestFormFactorEnum formFactor) {
         this.formFactor = formFactor;
         return this;
@@ -29,6 +30,7 @@ public class QueryHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public String[] metrics;
+
     public QueryHistoryRequest withMetrics(String[] metrics) {
         this.metrics = metrics;
         return this;
@@ -40,6 +42,7 @@ public class QueryHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public String origin;
+
     public QueryHistoryRequest withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -51,9 +54,11 @@ public class QueryHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public QueryHistoryRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public QueryHistoryRequest(){}
 }

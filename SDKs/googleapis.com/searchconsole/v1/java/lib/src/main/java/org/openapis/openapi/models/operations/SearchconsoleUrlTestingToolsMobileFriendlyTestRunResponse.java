@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchconsoleUrlTestingToolsMobileFriendlyTestRunResponse {
     
     public String contentType;
+
     public SearchconsoleUrlTestingToolsMobileFriendlyTestRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SearchconsoleUrlTestingToolsMobileFriendlyTestRunResponse {
      */
     
     public org.openapis.openapi.models.shared.RunMobileFriendlyTestResponse runMobileFriendlyTestResponse;
+
     public SearchconsoleUrlTestingToolsMobileFriendlyTestRunResponse withRunMobileFriendlyTestResponse(org.openapis.openapi.models.shared.RunMobileFriendlyTestResponse runMobileFriendlyTestResponse) {
         this.runMobileFriendlyTestResponse = runMobileFriendlyTestResponse;
         return this;
@@ -26,6 +29,7 @@ public class SearchconsoleUrlTestingToolsMobileFriendlyTestRunResponse {
     
     
     public Integer statusCode;
+
     public SearchconsoleUrlTestingToolsMobileFriendlyTestRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SearchconsoleUrlTestingToolsMobileFriendlyTestRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchconsoleUrlTestingToolsMobileFriendlyTestRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SearchconsoleUrlTestingToolsMobileFriendlyTestRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

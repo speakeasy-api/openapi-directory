@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeMonitorRequest {
     @JsonProperty("MonitorArn")
     public String monitorArn;
+
     public DescribeMonitorRequest withMonitorArn(String monitorArn) {
         this.monitorArn = monitorArn;
         return this;
     }
     
+    public DescribeMonitorRequest(@JsonProperty("MonitorArn") String monitorArn) {
+        this.monitorArn = monitorArn;
+  }
 }

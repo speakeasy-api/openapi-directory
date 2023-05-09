@@ -12,6 +12,7 @@ public class UnlockconnectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargestation")
     public String chargestation;
+
     public UnlockconnectorRequestBody withChargestation(String chargestation) {
         this.chargestation = chargestation;
         return this;
@@ -20,9 +21,11 @@ public class UnlockconnectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connector")
     public String connector;
+
     public UnlockconnectorRequestBody withConnector(String connector) {
         this.connector = connector;
         return this;
     }
     
+    public UnlockconnectorRequestBody(){}
 }

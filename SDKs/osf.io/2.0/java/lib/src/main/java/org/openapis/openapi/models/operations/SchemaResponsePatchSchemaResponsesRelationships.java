@@ -18,6 +18,7 @@ public class SchemaResponsePatchSchemaResponsesRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public String actions;
+
     public SchemaResponsePatchSchemaResponsesRelationships withActions(String actions) {
         this.actions = actions;
         return this;
@@ -29,6 +30,7 @@ public class SchemaResponsePatchSchemaResponsesRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initiated_by")
     public String initiatedBy;
+
     public SchemaResponsePatchSchemaResponsesRelationships withInitiatedBy(String initiatedBy) {
         this.initiatedBy = initiatedBy;
         return this;
@@ -40,6 +42,7 @@ public class SchemaResponsePatchSchemaResponsesRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registration")
     public String registration;
+
     public SchemaResponsePatchSchemaResponsesRelationships withRegistration(String registration) {
         this.registration = registration;
         return this;
@@ -51,9 +54,11 @@ public class SchemaResponsePatchSchemaResponsesRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registration_schema")
     public String registrationSchema;
+
     public SchemaResponsePatchSchemaResponsesRelationships withRegistrationSchema(String registrationSchema) {
         this.registrationSchema = registrationSchema;
         return this;
     }
     
+    public SchemaResponsePatchSchemaResponsesRelationships(){}
 }

@@ -15,6 +15,7 @@ public class ActivityTaskCompletedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public String result;
+
     public ActivityTaskCompletedEventAttributes withResult(String result) {
         this.result = result;
         return this;
@@ -22,6 +23,7 @@ public class ActivityTaskCompletedEventAttributes {
     
     @JsonProperty("scheduledEventId")
     public Long scheduledEventId;
+
     public ActivityTaskCompletedEventAttributes withScheduledEventId(Long scheduledEventId) {
         this.scheduledEventId = scheduledEventId;
         return this;
@@ -29,9 +31,14 @@ public class ActivityTaskCompletedEventAttributes {
     
     @JsonProperty("startedEventId")
     public Long startedEventId;
+
     public ActivityTaskCompletedEventAttributes withStartedEventId(Long startedEventId) {
         this.startedEventId = startedEventId;
         return this;
     }
     
+    public ActivityTaskCompletedEventAttributes(@JsonProperty("scheduledEventId") Long scheduledEventId, @JsonProperty("startedEventId") Long startedEventId) {
+        this.scheduledEventId = scheduledEventId;
+        this.startedEventId = startedEventId;
+  }
 }

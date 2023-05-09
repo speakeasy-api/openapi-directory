@@ -15,9 +15,11 @@ public class CreateDataSourceFromRDSOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceId")
     public String dataSourceId;
+
     public CreateDataSourceFromRDSOutput withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
     }
     
+    public CreateDataSourceFromRDSOutput(){}
 }

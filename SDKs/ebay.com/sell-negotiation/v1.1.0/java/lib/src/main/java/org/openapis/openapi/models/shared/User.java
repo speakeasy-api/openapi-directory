@@ -18,9 +18,11 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maskedUsername")
     public String maskedUsername;
+
     public User withMaskedUsername(String maskedUsername) {
         this.maskedUsername = maskedUsername;
         return this;
     }
     
+    public User(){}
 }

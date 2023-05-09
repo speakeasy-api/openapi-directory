@@ -15,6 +15,7 @@ public class PodcastLookingForField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cohosts")
     public Boolean cohosts;
+
     public PodcastLookingForField withCohosts(Boolean cohosts) {
         this.cohosts = cohosts;
         return this;
@@ -26,6 +27,7 @@ public class PodcastLookingForField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cross_promotion")
     public Boolean crossPromotion;
+
     public PodcastLookingForField withCrossPromotion(Boolean crossPromotion) {
         this.crossPromotion = crossPromotion;
         return this;
@@ -37,6 +39,7 @@ public class PodcastLookingForField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guests")
     public Boolean guests;
+
     public PodcastLookingForField withGuests(Boolean guests) {
         this.guests = guests;
         return this;
@@ -48,9 +51,11 @@ public class PodcastLookingForField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sponsors")
     public Boolean sponsors;
+
     public PodcastLookingForField withSponsors(Boolean sponsors) {
         this.sponsors = sponsors;
         return this;
     }
     
+    public PodcastLookingForField(){}
 }

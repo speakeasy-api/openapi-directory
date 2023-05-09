@@ -58,11 +58,9 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BloggerCommentsGetResponse res = new org.openapis.openapi.models.operations.BloggerCommentsGetResponse() {{
+        org.openapis.openapi.models.operations.BloggerCommentsGetResponse res = new org.openapis.openapi.models.operations.BloggerCommentsGetResponse(contentType, httpRes.statusCode()) {{
             comment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BloggerCommentsListResponse res = new org.openapis.openapi.models.operations.BloggerCommentsListResponse() {{
+        org.openapis.openapi.models.operations.BloggerCommentsListResponse res = new org.openapis.openapi.models.operations.BloggerCommentsListResponse(contentType, httpRes.statusCode()) {{
             commentList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

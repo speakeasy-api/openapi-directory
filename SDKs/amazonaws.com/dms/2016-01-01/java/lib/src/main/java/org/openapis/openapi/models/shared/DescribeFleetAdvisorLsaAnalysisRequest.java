@@ -12,6 +12,7 @@ public class DescribeFleetAdvisorLsaAnalysisRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRecords")
     public Long maxRecords;
+
     public DescribeFleetAdvisorLsaAnalysisRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -20,9 +21,11 @@ public class DescribeFleetAdvisorLsaAnalysisRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeFleetAdvisorLsaAnalysisRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFleetAdvisorLsaAnalysisRequest(){}
 }

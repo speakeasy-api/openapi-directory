@@ -22,6 +22,7 @@ public class ErrorsListSessionLogs200ApplicationJSONLogs {
      */
     @JsonProperty("device")
     public ErrorsListSessionLogs200ApplicationJSONLogsDevice device;
+
     public ErrorsListSessionLogs200ApplicationJSONLogs withDevice(ErrorsListSessionLogs200ApplicationJSONLogsDevice device) {
         this.device = device;
         return this;
@@ -34,6 +35,7 @@ public class ErrorsListSessionLogs200ApplicationJSONLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_id")
     public String eventId;
+
     public ErrorsListSessionLogs200ApplicationJSONLogs withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -46,6 +48,7 @@ public class ErrorsListSessionLogs200ApplicationJSONLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_name")
     public String eventName;
+
     public ErrorsListSessionLogs200ApplicationJSONLogs withEventName(String eventName) {
         this.eventName = eventName;
         return this;
@@ -57,6 +60,7 @@ public class ErrorsListSessionLogs200ApplicationJSONLogs {
      */
     @JsonProperty("install_id")
     public String installId;
+
     public ErrorsListSessionLogs200ApplicationJSONLogs withInstallId(String installId) {
         this.installId = installId;
         return this;
@@ -69,6 +73,7 @@ public class ErrorsListSessionLogs200ApplicationJSONLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message_id")
     public String messageId;
+
     public ErrorsListSessionLogs200ApplicationJSONLogs withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -81,6 +86,7 @@ public class ErrorsListSessionLogs200ApplicationJSONLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public ErrorsListSessionLogs200ApplicationJSONLogs withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -93,6 +99,7 @@ public class ErrorsListSessionLogs200ApplicationJSONLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("session_id")
     public String sessionId;
+
     public ErrorsListSessionLogs200ApplicationJSONLogs withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -106,6 +113,7 @@ public class ErrorsListSessionLogs200ApplicationJSONLogs {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public ErrorsListSessionLogs200ApplicationJSONLogs withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -117,9 +125,16 @@ public class ErrorsListSessionLogs200ApplicationJSONLogs {
      */
     @JsonProperty("type")
     public ErrorsListSessionLogs200ApplicationJSONLogsTypeEnum type;
+
     public ErrorsListSessionLogs200ApplicationJSONLogs withType(ErrorsListSessionLogs200ApplicationJSONLogsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ErrorsListSessionLogs200ApplicationJSONLogs(@JsonProperty("device") ErrorsListSessionLogs200ApplicationJSONLogsDevice device, @JsonProperty("install_id") String installId, @JsonProperty("timestamp") OffsetDateTime timestamp, @JsonProperty("type") ErrorsListSessionLogs200ApplicationJSONLogsTypeEnum type) {
+        this.device = device;
+        this.installId = installId;
+        this.timestamp = timestamp;
+        this.type = type;
+  }
 }

@@ -82,4 +82,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/OcrWord.java
 lib/src/main/java/org/openapis/openapi/models/shared/OcrLanguageEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/TagResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

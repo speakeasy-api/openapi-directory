@@ -18,6 +18,7 @@ public class ManagedConfigurationsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdatedTimestampMillis")
     public String lastUpdatedTimestampMillis;
+
     public ManagedConfigurationsSettings withLastUpdatedTimestampMillis(String lastUpdatedTimestampMillis) {
         this.lastUpdatedTimestampMillis = lastUpdatedTimestampMillis;
         return this;
@@ -29,6 +30,7 @@ public class ManagedConfigurationsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mcmId")
     public String mcmId;
+
     public ManagedConfigurationsSettings withMcmId(String mcmId) {
         this.mcmId = mcmId;
         return this;
@@ -40,9 +42,11 @@ public class ManagedConfigurationsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ManagedConfigurationsSettings withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ManagedConfigurationsSettings(){}
 }

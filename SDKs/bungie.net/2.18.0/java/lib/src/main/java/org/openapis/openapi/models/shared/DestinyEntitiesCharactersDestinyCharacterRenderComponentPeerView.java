@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DestinyEntitiesCharactersDestinyCharacterRenderComponentPeerView {
     
     public DestinyCharacterDestinyItemPeerView[] equipment;
+
     public DestinyEntitiesCharactersDestinyCharacterRenderComponentPeerView withEquipment(DestinyCharacterDestinyItemPeerView[] equipment) {
         this.equipment = equipment;
         return this;
     }
     
+    public DestinyEntitiesCharactersDestinyCharacterRenderComponentPeerView(){}
 }

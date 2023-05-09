@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetWebhooksAuth200ApplicationJSON {
     @JsonProperty("authproviders")
     public org.openapis.openapi.models.shared.AuthProvider[] authproviders;
+
     public GetWebhooksAuth200ApplicationJSON withAuthproviders(org.openapis.openapi.models.shared.AuthProvider[] authproviders) {
         this.authproviders = authproviders;
         return this;
@@ -25,9 +26,13 @@ public class GetWebhooksAuth200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public GetWebhooksAuth200ApplicationJSON withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public GetWebhooksAuth200ApplicationJSON(@JsonProperty("authproviders") org.openapis.openapi.models.shared.AuthProvider[] authproviders) {
+        this.authproviders = authproviders;
+  }
 }

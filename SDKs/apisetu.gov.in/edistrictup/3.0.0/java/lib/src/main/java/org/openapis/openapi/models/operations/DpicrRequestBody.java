@@ -15,6 +15,7 @@ public class DpicrRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public DpicrRequestBodyCertificateParameters certificateParameters;
+
     public DpicrRequestBody withCertificateParameters(DpicrRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class DpicrRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public DpicrRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class DpicrRequestBody {
      */
     @JsonProperty("format")
     public DpicrRequestBodyFormatEnum format;
+
     public DpicrRequestBody withFormat(DpicrRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class DpicrRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public DpicrRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public DpicrRequestBody(@JsonProperty("format") DpicrRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

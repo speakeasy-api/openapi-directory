@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartCrawlerResponse {
     
     public String contentType;
+
     public StartCrawlerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartCrawlerResponse {
      */
     
     public Object crawlerRunningException;
+
     public StartCrawlerResponse withCrawlerRunningException(Object crawlerRunningException) {
         this.crawlerRunningException = crawlerRunningException;
         return this;
@@ -29,6 +32,7 @@ public class StartCrawlerResponse {
      */
     
     public Object entityNotFoundException;
+
     public StartCrawlerResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class StartCrawlerResponse {
      */
     
     public Object operationTimeoutException;
+
     public StartCrawlerResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -49,6 +54,7 @@ public class StartCrawlerResponse {
      */
     
     public java.util.Map<String, Object> startCrawlerResponse;
+
     public StartCrawlerResponse withStartCrawlerResponse(java.util.Map<String, Object> startCrawlerResponse) {
         this.startCrawlerResponse = startCrawlerResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartCrawlerResponse {
     
     
     public Integer statusCode;
+
     public StartCrawlerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class StartCrawlerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartCrawlerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartCrawlerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

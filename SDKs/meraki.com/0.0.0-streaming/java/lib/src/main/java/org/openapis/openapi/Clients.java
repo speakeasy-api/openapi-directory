@@ -62,11 +62,9 @@ public class Clients {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeviceClientsResponse res = new org.openapis.openapi.models.operations.GetDeviceClientsResponse() {{
+        org.openapis.openapi.models.operations.GetDeviceClientsResponse res = new org.openapis.openapi.models.operations.GetDeviceClientsResponse(contentType, httpRes.statusCode()) {{
             getDeviceClients200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,11 +100,9 @@ public class Clients {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkClientResponse res = new org.openapis.openapi.models.operations.GetNetworkClientResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkClientResponse res = new org.openapis.openapi.models.operations.GetNetworkClientResponse(contentType, httpRes.statusCode()) {{
             getNetworkClient200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class Clients {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkClientEventsResponse res = new org.openapis.openapi.models.operations.GetNetworkClientEventsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkClientEventsResponse res = new org.openapis.openapi.models.operations.GetNetworkClientEventsResponse(contentType, httpRes.statusCode()) {{
             getNetworkClientEvents200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,11 +190,9 @@ public class Clients {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkClientLatencyHistoryResponse res = new org.openapis.openapi.models.operations.GetNetworkClientLatencyHistoryResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkClientLatencyHistoryResponse res = new org.openapis.openapi.models.operations.GetNetworkClientLatencyHistoryResponse(contentType, httpRes.statusCode()) {{
             getNetworkClientLatencyHistory200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -236,11 +228,9 @@ public class Clients {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkClientPolicyResponse res = new org.openapis.openapi.models.operations.GetNetworkClientPolicyResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkClientPolicyResponse res = new org.openapis.openapi.models.operations.GetNetworkClientPolicyResponse(contentType, httpRes.statusCode()) {{
             getNetworkClientPolicy200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -276,11 +266,9 @@ public class Clients {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkClientSplashAuthorizationStatusResponse res = new org.openapis.openapi.models.operations.GetNetworkClientSplashAuthorizationStatusResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkClientSplashAuthorizationStatusResponse res = new org.openapis.openapi.models.operations.GetNetworkClientSplashAuthorizationStatusResponse(contentType, httpRes.statusCode()) {{
             getNetworkClientSplashAuthorizationStatus200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -316,11 +304,9 @@ public class Clients {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkClientUsageHistoryResponse res = new org.openapis.openapi.models.operations.GetNetworkClientUsageHistoryResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkClientUsageHistoryResponse res = new org.openapis.openapi.models.operations.GetNetworkClientUsageHistoryResponse(contentType, httpRes.statusCode()) {{
             getNetworkClientUsageHistory200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -362,11 +348,9 @@ public class Clients {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkClientsResponse res = new org.openapis.openapi.models.operations.GetNetworkClientsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkClientsResponse res = new org.openapis.openapi.models.operations.GetNetworkClientsResponse(contentType, httpRes.statusCode()) {{
             getNetworkClients200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -409,11 +393,9 @@ public class Clients {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProvisionNetworkClientsResponse res = new org.openapis.openapi.models.operations.ProvisionNetworkClientsResponse() {{
+        org.openapis.openapi.models.operations.ProvisionNetworkClientsResponse res = new org.openapis.openapi.models.operations.ProvisionNetworkClientsResponse(contentType, httpRes.statusCode()) {{
             provisionNetworkClients201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -454,11 +436,9 @@ public class Clients {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkClientPolicyResponse res = new org.openapis.openapi.models.operations.UpdateNetworkClientPolicyResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkClientPolicyResponse res = new org.openapis.openapi.models.operations.UpdateNetworkClientPolicyResponse(contentType, httpRes.statusCode()) {{
             updateNetworkClientPolicy200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -499,11 +479,9 @@ public class Clients {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkClientSplashAuthorizationStatusResponse res = new org.openapis.openapi.models.operations.UpdateNetworkClientSplashAuthorizationStatusResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkClientSplashAuthorizationStatusResponse res = new org.openapis.openapi.models.operations.UpdateNetworkClientSplashAuthorizationStatusResponse(contentType, httpRes.statusCode()) {{
             updateNetworkClientSplashAuthorizationStatus200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

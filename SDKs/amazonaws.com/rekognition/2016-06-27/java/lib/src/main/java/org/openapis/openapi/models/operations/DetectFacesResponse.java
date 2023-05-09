@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetectFacesResponse {
@@ -12,6 +13,7 @@ public class DetectFacesResponse {
      */
     
     public Object accessDeniedException;
+
     public DetectFacesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DetectFacesResponse {
     
     
     public String contentType;
+
     public DetectFacesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DetectFacesResponse {
      */
     
     public org.openapis.openapi.models.shared.DetectFacesResponse detectFacesResponse;
+
     public DetectFacesResponse withDetectFacesResponse(org.openapis.openapi.models.shared.DetectFacesResponse detectFacesResponse) {
         this.detectFacesResponse = detectFacesResponse;
         return this;
@@ -39,6 +43,7 @@ public class DetectFacesResponse {
      */
     
     public Object imageTooLargeException;
+
     public DetectFacesResponse withImageTooLargeException(Object imageTooLargeException) {
         this.imageTooLargeException = imageTooLargeException;
         return this;
@@ -49,6 +54,7 @@ public class DetectFacesResponse {
      */
     
     public Object internalServerError;
+
     public DetectFacesResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class DetectFacesResponse {
      */
     
     public Object invalidImageFormatException;
+
     public DetectFacesResponse withInvalidImageFormatException(Object invalidImageFormatException) {
         this.invalidImageFormatException = invalidImageFormatException;
         return this;
@@ -69,6 +76,7 @@ public class DetectFacesResponse {
      */
     
     public Object invalidParameterException;
+
     public DetectFacesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class DetectFacesResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public DetectFacesResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -89,6 +98,7 @@ public class DetectFacesResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public DetectFacesResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -96,6 +106,7 @@ public class DetectFacesResponse {
     
     
     public Integer statusCode;
+
     public DetectFacesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class DetectFacesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetectFacesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class DetectFacesResponse {
      */
     
     public Object throttlingException;
+
     public DetectFacesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DetectFacesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

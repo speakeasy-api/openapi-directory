@@ -18,6 +18,7 @@ public class UpdateEmbeddedObjectBorderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("border")
     public EmbeddedObjectBorder border;
+
     public UpdateEmbeddedObjectBorderRequest withBorder(EmbeddedObjectBorder border) {
         this.border = border;
         return this;
@@ -29,6 +30,7 @@ public class UpdateEmbeddedObjectBorderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateEmbeddedObjectBorderRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -40,9 +42,11 @@ public class UpdateEmbeddedObjectBorderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public Integer objectId;
+
     public UpdateEmbeddedObjectBorderRequest withObjectId(Integer objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public UpdateEmbeddedObjectBorderRequest(){}
 }

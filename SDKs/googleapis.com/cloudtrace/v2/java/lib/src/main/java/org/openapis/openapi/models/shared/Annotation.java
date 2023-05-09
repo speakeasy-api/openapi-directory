@@ -18,6 +18,7 @@ public class Annotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public Attributes attributes;
+
     public Annotation withAttributes(Attributes attributes) {
         this.attributes = attributes;
         return this;
@@ -29,9 +30,11 @@ public class Annotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public TruncatableString description;
+
     public Annotation withDescription(TruncatableString description) {
         this.description = description;
         return this;
     }
     
+    public Annotation(){}
 }

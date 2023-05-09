@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CertificateActionRetrieveResponse {
@@ -12,6 +13,7 @@ public class CertificateActionRetrieveResponse {
      */
     
     public org.openapis.openapi.models.shared.CertificateAction[] arrayOfCertificateAction;
+
     public CertificateActionRetrieveResponse withArrayOfCertificateAction(org.openapis.openapi.models.shared.CertificateAction[] arrayOfCertificateAction) {
         this.arrayOfCertificateAction = arrayOfCertificateAction;
         return this;
@@ -19,6 +21,7 @@ public class CertificateActionRetrieveResponse {
     
     
     public String contentType;
+
     public CertificateActionRetrieveResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CertificateActionRetrieveResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public CertificateActionRetrieveResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class CertificateActionRetrieveResponse {
     
     
     public Integer statusCode;
+
     public CertificateActionRetrieveResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CertificateActionRetrieveResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CertificateActionRetrieveResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CertificateActionRetrieveResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ public class ListAlarmRecommendationsRequestBody {
      */
     @JsonProperty("assessmentArn")
     public String assessmentArn;
+
     public ListAlarmRecommendationsRequestBody withAssessmentArn(String assessmentArn) {
         this.assessmentArn = assessmentArn;
         return this;
@@ -25,6 +26,7 @@ public class ListAlarmRecommendationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListAlarmRecommendationsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class ListAlarmRecommendationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAlarmRecommendationsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAlarmRecommendationsRequestBody(@JsonProperty("assessmentArn") String assessmentArn) {
+        this.assessmentArn = assessmentArn;
+  }
 }

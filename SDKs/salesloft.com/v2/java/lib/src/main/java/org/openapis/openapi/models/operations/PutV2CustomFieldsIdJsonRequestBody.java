@@ -12,6 +12,7 @@ public class PutV2CustomFieldsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=field_type")
     public String fieldType;
+
     public PutV2CustomFieldsIdJsonRequestBody withFieldType(String fieldType) {
         this.fieldType = fieldType;
         return this;
@@ -22,9 +23,11 @@ public class PutV2CustomFieldsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public PutV2CustomFieldsIdJsonRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PutV2CustomFieldsIdJsonRequestBody(){}
 }

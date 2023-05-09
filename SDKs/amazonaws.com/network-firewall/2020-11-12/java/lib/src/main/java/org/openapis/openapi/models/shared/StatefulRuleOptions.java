@@ -15,9 +15,11 @@ public class StatefulRuleOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleOrder")
     public RuleOrderEnum ruleOrder;
+
     public StatefulRuleOptions withRuleOrder(RuleOrderEnum ruleOrder) {
         this.ruleOrder = ruleOrder;
         return this;
     }
     
+    public StatefulRuleOptions(){}
 }

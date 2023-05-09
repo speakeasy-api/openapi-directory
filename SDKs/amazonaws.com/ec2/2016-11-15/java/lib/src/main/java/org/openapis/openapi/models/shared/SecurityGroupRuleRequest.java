@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SecurityGroupRuleRequest {
     
     public String cidrIpv4;
+
     public SecurityGroupRuleRequest withCidrIpv4(String cidrIpv4) {
         this.cidrIpv4 = cidrIpv4;
         return this;
@@ -19,6 +20,7 @@ public class SecurityGroupRuleRequest {
     
     
     public String cidrIpv6;
+
     public SecurityGroupRuleRequest withCidrIpv6(String cidrIpv6) {
         this.cidrIpv6 = cidrIpv6;
         return this;
@@ -26,6 +28,7 @@ public class SecurityGroupRuleRequest {
     
     
     public String description;
+
     public SecurityGroupRuleRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class SecurityGroupRuleRequest {
     
     
     public Long fromPort;
+
     public SecurityGroupRuleRequest withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -40,6 +44,7 @@ public class SecurityGroupRuleRequest {
     
     
     public String ipProtocol;
+
     public SecurityGroupRuleRequest withIpProtocol(String ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
@@ -47,6 +52,7 @@ public class SecurityGroupRuleRequest {
     
     
     public String prefixListId;
+
     public SecurityGroupRuleRequest withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -54,6 +60,7 @@ public class SecurityGroupRuleRequest {
     
     
     public String referencedGroupId;
+
     public SecurityGroupRuleRequest withReferencedGroupId(String referencedGroupId) {
         this.referencedGroupId = referencedGroupId;
         return this;
@@ -61,9 +68,11 @@ public class SecurityGroupRuleRequest {
     
     
     public Long toPort;
+
     public SecurityGroupRuleRequest withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
     }
     
+    public SecurityGroupRuleRequest(){}
 }

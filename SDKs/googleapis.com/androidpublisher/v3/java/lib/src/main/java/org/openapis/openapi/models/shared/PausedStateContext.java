@@ -18,9 +18,11 @@ public class PausedStateContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoResumeTime")
     public String autoResumeTime;
+
     public PausedStateContext withAutoResumeTime(String autoResumeTime) {
         this.autoResumeTime = autoResumeTime;
         return this;
     }
     
+    public PausedStateContext(){}
 }

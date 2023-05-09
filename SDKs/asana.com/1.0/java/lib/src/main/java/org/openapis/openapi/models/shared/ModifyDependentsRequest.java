@@ -18,9 +18,11 @@ public class ModifyDependentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dependents")
     public String[] dependents;
+
     public ModifyDependentsRequest withDependents(String[] dependents) {
         this.dependents = dependents;
         return this;
     }
     
+    public ModifyDependentsRequest(){}
 }

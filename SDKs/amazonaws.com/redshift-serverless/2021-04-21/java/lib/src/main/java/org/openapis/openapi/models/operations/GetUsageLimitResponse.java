@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUsageLimitResponse {
@@ -12,6 +13,7 @@ public class GetUsageLimitResponse {
      */
     
     public Object conflictException;
+
     public GetUsageLimitResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class GetUsageLimitResponse {
     
     
     public String contentType;
+
     public GetUsageLimitResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetUsageLimitResponse {
      */
     
     public org.openapis.openapi.models.shared.GetUsageLimitResponse getUsageLimitResponse;
+
     public GetUsageLimitResponse withGetUsageLimitResponse(org.openapis.openapi.models.shared.GetUsageLimitResponse getUsageLimitResponse) {
         this.getUsageLimitResponse = getUsageLimitResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetUsageLimitResponse {
      */
     
     public Object internalServerException;
+
     public GetUsageLimitResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetUsageLimitResponse {
     
     
     public Integer statusCode;
+
     public GetUsageLimitResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetUsageLimitResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUsageLimitResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetUsageLimitResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetUsageLimitResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class GetUsageLimitResponse {
      */
     
     public Object validationException;
+
     public GetUsageLimitResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetUsageLimitResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

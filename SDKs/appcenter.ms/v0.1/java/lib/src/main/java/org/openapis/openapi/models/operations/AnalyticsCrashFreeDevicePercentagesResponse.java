@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsCrashFreeDevicePercentagesResponse {
@@ -12,6 +13,7 @@ public class AnalyticsCrashFreeDevicePercentagesResponse {
      */
     
     public AnalyticsCrashFreeDevicePercentages200ApplicationJSON analyticsCrashFreeDevicePercentages200ApplicationJSONObject;
+
     public AnalyticsCrashFreeDevicePercentagesResponse withAnalyticsCrashFreeDevicePercentages200ApplicationJSONObject(AnalyticsCrashFreeDevicePercentages200ApplicationJSON analyticsCrashFreeDevicePercentages200ApplicationJSONObject) {
         this.analyticsCrashFreeDevicePercentages200ApplicationJSONObject = analyticsCrashFreeDevicePercentages200ApplicationJSONObject;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsCrashFreeDevicePercentagesResponse {
      */
     
     public AnalyticsCrashFreeDevicePercentagesDefaultApplicationJSON analyticsCrashFreeDevicePercentagesDefaultApplicationJSONObject;
+
     public AnalyticsCrashFreeDevicePercentagesResponse withAnalyticsCrashFreeDevicePercentagesDefaultApplicationJSONObject(AnalyticsCrashFreeDevicePercentagesDefaultApplicationJSON analyticsCrashFreeDevicePercentagesDefaultApplicationJSONObject) {
         this.analyticsCrashFreeDevicePercentagesDefaultApplicationJSONObject = analyticsCrashFreeDevicePercentagesDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsCrashFreeDevicePercentagesResponse {
     
     
     public String contentType;
+
     public AnalyticsCrashFreeDevicePercentagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class AnalyticsCrashFreeDevicePercentagesResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsCrashFreeDevicePercentagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AnalyticsCrashFreeDevicePercentagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsCrashFreeDevicePercentagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsCrashFreeDevicePercentagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

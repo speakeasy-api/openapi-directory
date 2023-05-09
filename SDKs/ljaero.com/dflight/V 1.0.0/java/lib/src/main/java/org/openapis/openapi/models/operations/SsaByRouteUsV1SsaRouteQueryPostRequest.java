@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SsaByRouteUsV1SsaRouteQueryPostRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SSAByRoute ssaByRoute;
+
     public SsaByRouteUsV1SsaRouteQueryPostRequest withSSAByRoute(org.openapis.openapi.models.shared.SSAByRoute ssaByRoute) {
         this.ssaByRoute = ssaByRoute;
         return this;
@@ -16,9 +18,13 @@ public class SsaByRouteUsV1SsaRouteQueryPostRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public SsaByRouteUsV1SsaRouteQueryPostRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public SsaByRouteUsV1SsaRouteQueryPostRequest(@JsonProperty("SSAByRoute") org.openapis.openapi.models.shared.SSAByRoute ssaByRoute) {
+        this.ssaByRoute = ssaByRoute;
+  }
 }

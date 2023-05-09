@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateTokenRequest {
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateTokenRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class CreateTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpirationInDays")
     public Long expirationInDays;
+
     public CreateTokenRequest withExpirationInDays(Long expirationInDays) {
         this.expirationInDays = expirationInDays;
         return this;
@@ -26,6 +28,7 @@ public class CreateTokenRequest {
     
     @JsonProperty("LicenseArn")
     public String licenseArn;
+
     public CreateTokenRequest withLicenseArn(String licenseArn) {
         this.licenseArn = licenseArn;
         return this;
@@ -34,6 +37,7 @@ public class CreateTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArns")
     public String[] roleArns;
+
     public CreateTokenRequest withRoleArns(String[] roleArns) {
         this.roleArns = roleArns;
         return this;
@@ -42,9 +46,14 @@ public class CreateTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TokenProperties")
     public String[] tokenProperties;
+
     public CreateTokenRequest withTokenProperties(String[] tokenProperties) {
         this.tokenProperties = tokenProperties;
         return this;
     }
     
+    public CreateTokenRequest(@JsonProperty("ClientToken") String clientToken, @JsonProperty("LicenseArn") String licenseArn) {
+        this.clientToken = clientToken;
+        this.licenseArn = licenseArn;
+  }
 }

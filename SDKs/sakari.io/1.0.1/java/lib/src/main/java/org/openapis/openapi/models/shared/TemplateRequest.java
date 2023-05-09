@@ -12,6 +12,7 @@ public class TemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TemplateRequest withName(String name) {
         this.name = name;
         return this;
@@ -20,6 +21,7 @@ public class TemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public String template;
+
     public TemplateRequest withTemplate(String template) {
         this.template = template;
         return this;
@@ -28,9 +30,11 @@ public class TemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TemplateRequestTypeEnum type;
+
     public TemplateRequest withType(TemplateRequestTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TemplateRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPendingJobExecutionsResponse {
@@ -12,6 +13,7 @@ public class GetPendingJobExecutionsResponse {
      */
     
     public Object certificateValidationException;
+
     public GetPendingJobExecutionsResponse withCertificateValidationException(Object certificateValidationException) {
         this.certificateValidationException = certificateValidationException;
         return this;
@@ -19,6 +21,7 @@ public class GetPendingJobExecutionsResponse {
     
     
     public String contentType;
+
     public GetPendingJobExecutionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetPendingJobExecutionsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPendingJobExecutionsResponse getPendingJobExecutionsResponse;
+
     public GetPendingJobExecutionsResponse withGetPendingJobExecutionsResponse(org.openapis.openapi.models.shared.GetPendingJobExecutionsResponse getPendingJobExecutionsResponse) {
         this.getPendingJobExecutionsResponse = getPendingJobExecutionsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetPendingJobExecutionsResponse {
      */
     
     public Object invalidRequestException;
+
     public GetPendingJobExecutionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class GetPendingJobExecutionsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetPendingJobExecutionsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class GetPendingJobExecutionsResponse {
     
     
     public Integer statusCode;
+
     public GetPendingJobExecutionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetPendingJobExecutionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPendingJobExecutionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetPendingJobExecutionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetPendingJobExecutionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class GetPendingJobExecutionsResponse {
      */
     
     public Object throttlingException;
+
     public GetPendingJobExecutionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetPendingJobExecutionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -53,12 +53,10 @@ public class Sandbox {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSandboxSandboxIdResponse res = new org.openapis.openapi.models.operations.DeleteSandboxSandboxIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteSandboxSandboxIdResponse res = new org.openapis.openapi.models.operations.DeleteSandboxSandboxIdResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 406) {
@@ -102,14 +100,12 @@ public class Sandbox {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSandboxSandboxIdResponse res = new org.openapis.openapi.models.operations.GetSandboxSandboxIdResponse() {{
+        org.openapis.openapi.models.operations.GetSandboxSandboxIdResponse res = new org.openapis.openapi.models.operations.GetSandboxSandboxIdResponse(contentType, httpRes.statusCode()) {{
             sandbox = null;
             sandbox = null;
             errorResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -167,14 +163,12 @@ public class Sandbox {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSandboxResponse res = new org.openapis.openapi.models.operations.PostSandboxResponse() {{
+        org.openapis.openapi.models.operations.PostSandboxResponse res = new org.openapis.openapi.models.operations.PostSandboxResponse(contentType, httpRes.statusCode()) {{
             sandbox = null;
             sandbox = null;
             errorResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -232,12 +226,10 @@ public class Sandbox {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSandboxResponse res = new org.openapis.openapi.models.operations.PutSandboxResponse() {{
+        org.openapis.openapi.models.operations.PutSandboxResponse res = new org.openapis.openapi.models.operations.PutSandboxResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 406 || httpRes.statusCode() == 415) {

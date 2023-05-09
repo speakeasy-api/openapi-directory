@@ -18,6 +18,7 @@ public class TagData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adId")
     public String adId;
+
     public TagData withAdId(String adId) {
         this.adId = adId;
         return this;
@@ -29,6 +30,7 @@ public class TagData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickTag")
     public String clickTag;
+
     public TagData withClickTag(String clickTag) {
         this.clickTag = clickTag;
         return this;
@@ -40,6 +42,7 @@ public class TagData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeId")
     public String creativeId;
+
     public TagData withCreativeId(String creativeId) {
         this.creativeId = creativeId;
         return this;
@@ -51,6 +54,7 @@ public class TagData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public TagDataFormatEnum format;
+
     public TagData withFormat(TagDataFormatEnum format) {
         this.format = format;
         return this;
@@ -62,9 +66,11 @@ public class TagData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impressionTag")
     public String impressionTag;
+
     public TagData withImpressionTag(String impressionTag) {
         this.impressionTag = impressionTag;
         return this;
     }
     
+    public TagData(){}
 }

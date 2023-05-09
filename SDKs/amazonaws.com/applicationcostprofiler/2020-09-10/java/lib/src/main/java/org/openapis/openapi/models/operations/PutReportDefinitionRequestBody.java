@@ -12,6 +12,7 @@ public class PutReportDefinitionRequestBody {
      */
     @JsonProperty("destinationS3Location")
     public PutReportDefinitionRequestBodyDestinationS3Location destinationS3Location;
+
     public PutReportDefinitionRequestBody withDestinationS3Location(PutReportDefinitionRequestBodyDestinationS3Location destinationS3Location) {
         this.destinationS3Location = destinationS3Location;
         return this;
@@ -22,6 +23,7 @@ public class PutReportDefinitionRequestBody {
      */
     @JsonProperty("format")
     public PutReportDefinitionRequestBodyFormatEnum format;
+
     public PutReportDefinitionRequestBody withFormat(PutReportDefinitionRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -32,6 +34,7 @@ public class PutReportDefinitionRequestBody {
      */
     @JsonProperty("reportDescription")
     public String reportDescription;
+
     public PutReportDefinitionRequestBody withReportDescription(String reportDescription) {
         this.reportDescription = reportDescription;
         return this;
@@ -42,6 +45,7 @@ public class PutReportDefinitionRequestBody {
      */
     @JsonProperty("reportFrequency")
     public PutReportDefinitionRequestBodyReportFrequencyEnum reportFrequency;
+
     public PutReportDefinitionRequestBody withReportFrequency(PutReportDefinitionRequestBodyReportFrequencyEnum reportFrequency) {
         this.reportFrequency = reportFrequency;
         return this;
@@ -52,9 +56,17 @@ public class PutReportDefinitionRequestBody {
      */
     @JsonProperty("reportId")
     public String reportId;
+
     public PutReportDefinitionRequestBody withReportId(String reportId) {
         this.reportId = reportId;
         return this;
     }
     
+    public PutReportDefinitionRequestBody(@JsonProperty("destinationS3Location") PutReportDefinitionRequestBodyDestinationS3Location destinationS3Location, @JsonProperty("format") PutReportDefinitionRequestBodyFormatEnum format, @JsonProperty("reportDescription") String reportDescription, @JsonProperty("reportFrequency") PutReportDefinitionRequestBodyReportFrequencyEnum reportFrequency, @JsonProperty("reportId") String reportId) {
+        this.destinationS3Location = destinationS3Location;
+        this.format = format;
+        this.reportDescription = reportDescription;
+        this.reportFrequency = reportFrequency;
+        this.reportId = reportId;
+  }
 }

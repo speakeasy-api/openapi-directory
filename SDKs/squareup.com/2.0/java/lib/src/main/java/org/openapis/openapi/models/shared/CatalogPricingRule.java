@@ -27,6 +27,7 @@ public class CatalogPricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apply_products_id")
     public String applyProductsId;
+
     public CatalogPricingRule withApplyProductsId(String applyProductsId) {
         this.applyProductsId = applyProductsId;
         return this;
@@ -42,6 +43,7 @@ public class CatalogPricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_group_ids_any")
     public String[] customerGroupIdsAny;
+
     public CatalogPricingRule withCustomerGroupIdsAny(String[] customerGroupIdsAny) {
         this.customerGroupIdsAny = customerGroupIdsAny;
         return this;
@@ -54,6 +56,7 @@ public class CatalogPricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount_id")
     public String discountId;
+
     public CatalogPricingRule withDiscountId(String discountId) {
         this.discountId = discountId;
         return this;
@@ -69,6 +72,7 @@ public class CatalogPricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclude_products_id")
     public String excludeProductsId;
+
     public CatalogPricingRule withExcludeProductsId(String excludeProductsId) {
         this.excludeProductsId = excludeProductsId;
         return this;
@@ -83,6 +87,7 @@ public class CatalogPricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclude_strategy")
     public String excludeStrategy;
+
     public CatalogPricingRule withExcludeStrategy(String excludeStrategy) {
         this.excludeStrategy = excludeStrategy;
         return this;
@@ -95,6 +100,7 @@ public class CatalogPricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("match_products_id")
     public String matchProductsId;
+
     public CatalogPricingRule withMatchProductsId(String matchProductsId) {
         this.matchProductsId = matchProductsId;
         return this;
@@ -107,6 +113,7 @@ public class CatalogPricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CatalogPricingRule withName(String name) {
         this.name = name;
         return this;
@@ -120,6 +127,7 @@ public class CatalogPricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_period_ids")
     public String[] timePeriodIds;
+
     public CatalogPricingRule withTimePeriodIds(String[] timePeriodIds) {
         this.timePeriodIds = timePeriodIds;
         return this;
@@ -131,6 +139,7 @@ public class CatalogPricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valid_from_date")
     public String validFromDate;
+
     public CatalogPricingRule withValidFromDate(String validFromDate) {
         this.validFromDate = validFromDate;
         return this;
@@ -143,6 +152,7 @@ public class CatalogPricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valid_from_local_time")
     public String validFromLocalTime;
+
     public CatalogPricingRule withValidFromLocalTime(String validFromLocalTime) {
         this.validFromLocalTime = validFromLocalTime;
         return this;
@@ -154,6 +164,7 @@ public class CatalogPricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valid_until_date")
     public String validUntilDate;
+
     public CatalogPricingRule withValidUntilDate(String validUntilDate) {
         this.validUntilDate = validUntilDate;
         return this;
@@ -166,9 +177,11 @@ public class CatalogPricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valid_until_local_time")
     public String validUntilLocalTime;
+
     public CatalogPricingRule withValidUntilLocalTime(String validUntilLocalTime) {
         this.validUntilLocalTime = validUntilLocalTime;
         return this;
     }
     
+    public CatalogPricingRule(){}
 }

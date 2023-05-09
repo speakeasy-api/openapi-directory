@@ -18,9 +18,11 @@ public class ListVoicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voices")
     public Voice[] voices;
+
     public ListVoicesResponse withVoices(Voice[] voices) {
         this.voices = voices;
         return this;
     }
     
+    public ListVoicesResponse(){}
 }

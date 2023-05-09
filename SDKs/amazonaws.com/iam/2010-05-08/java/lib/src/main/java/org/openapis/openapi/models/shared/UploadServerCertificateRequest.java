@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UploadServerCertificateRequest {
     
     public String certificateBody;
+
     public UploadServerCertificateRequest withCertificateBody(String certificateBody) {
         this.certificateBody = certificateBody;
         return this;
@@ -16,6 +17,7 @@ public class UploadServerCertificateRequest {
     
     
     public String certificateChain;
+
     public UploadServerCertificateRequest withCertificateChain(String certificateChain) {
         this.certificateChain = certificateChain;
         return this;
@@ -23,6 +25,7 @@ public class UploadServerCertificateRequest {
     
     
     public String path;
+
     public UploadServerCertificateRequest withPath(String path) {
         this.path = path;
         return this;
@@ -30,6 +33,7 @@ public class UploadServerCertificateRequest {
     
     
     public String privateKey;
+
     public UploadServerCertificateRequest withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -37,6 +41,7 @@ public class UploadServerCertificateRequest {
     
     
     public String serverCertificateName;
+
     public UploadServerCertificateRequest withServerCertificateName(String serverCertificateName) {
         this.serverCertificateName = serverCertificateName;
         return this;
@@ -44,9 +49,15 @@ public class UploadServerCertificateRequest {
     
     
     public Tag[] tags;
+
     public UploadServerCertificateRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public UploadServerCertificateRequest(@JsonProperty("CertificateBody") String certificateBody, @JsonProperty("PrivateKey") String privateKey, @JsonProperty("ServerCertificateName") String serverCertificateName) {
+        this.certificateBody = certificateBody;
+        this.privateKey = privateKey;
+        this.serverCertificateName = serverCertificateName;
+  }
 }

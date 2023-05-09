@@ -18,6 +18,7 @@ public class ReconciliationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contents")
     public String contents;
+
     public ReconciliationReport withContents(String contents) {
         this.contents = contents;
         return this;
@@ -29,6 +30,7 @@ public class ReconciliationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public ReconciliationReport withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -40,9 +42,11 @@ public class ReconciliationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReconciliationReport withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ReconciliationReport(){}
 }

@@ -17,6 +17,7 @@ public class ErrorsErrorAttachments200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public ErrorsErrorAttachments200ApplicationJSON withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -25,6 +26,7 @@ public class ErrorsErrorAttachments200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachmentId")
     public String attachmentId;
+
     public ErrorsErrorAttachments200ApplicationJSON withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -33,6 +35,7 @@ public class ErrorsErrorAttachments200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blobLocation")
     public String blobLocation;
+
     public ErrorsErrorAttachments200ApplicationJSON withBlobLocation(String blobLocation) {
         this.blobLocation = blobLocation;
         return this;
@@ -41,6 +44,7 @@ public class ErrorsErrorAttachments200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public ErrorsErrorAttachments200ApplicationJSON withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +53,7 @@ public class ErrorsErrorAttachments200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crashId")
     public String crashId;
+
     public ErrorsErrorAttachments200ApplicationJSON withCrashId(String crashId) {
         this.crashId = crashId;
         return this;
@@ -59,6 +64,7 @@ public class ErrorsErrorAttachments200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdTime")
     public OffsetDateTime createdTime;
+
     public ErrorsErrorAttachments200ApplicationJSON withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -67,6 +73,7 @@ public class ErrorsErrorAttachments200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public ErrorsErrorAttachments200ApplicationJSON withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -75,9 +82,11 @@ public class ErrorsErrorAttachments200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public ErrorsErrorAttachments200ApplicationJSON withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public ErrorsErrorAttachments200ApplicationJSON(){}
 }

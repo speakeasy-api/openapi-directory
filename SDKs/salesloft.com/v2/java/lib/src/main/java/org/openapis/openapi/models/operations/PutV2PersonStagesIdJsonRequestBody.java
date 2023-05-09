@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutV2PersonStagesIdJsonRequestBody {
@@ -12,9 +13,13 @@ public class PutV2PersonStagesIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public PutV2PersonStagesIdJsonRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PutV2PersonStagesIdJsonRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ManagedidentitiesProjectsLocationsGlobalDomainsCheckMigrationPermissionResponse {
@@ -12,6 +13,7 @@ public class ManagedidentitiesProjectsLocationsGlobalDomainsCheckMigrationPermis
      */
     
     public org.openapis.openapi.models.shared.CheckMigrationPermissionResponse checkMigrationPermissionResponse;
+
     public ManagedidentitiesProjectsLocationsGlobalDomainsCheckMigrationPermissionResponse withCheckMigrationPermissionResponse(org.openapis.openapi.models.shared.CheckMigrationPermissionResponse checkMigrationPermissionResponse) {
         this.checkMigrationPermissionResponse = checkMigrationPermissionResponse;
         return this;
@@ -19,6 +21,7 @@ public class ManagedidentitiesProjectsLocationsGlobalDomainsCheckMigrationPermis
     
     
     public String contentType;
+
     public ManagedidentitiesProjectsLocationsGlobalDomainsCheckMigrationPermissionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ManagedidentitiesProjectsLocationsGlobalDomainsCheckMigrationPermis
     
     
     public Integer statusCode;
+
     public ManagedidentitiesProjectsLocationsGlobalDomainsCheckMigrationPermissionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ManagedidentitiesProjectsLocationsGlobalDomainsCheckMigrationPermis
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ManagedidentitiesProjectsLocationsGlobalDomainsCheckMigrationPermissionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ManagedidentitiesProjectsLocationsGlobalDomainsCheckMigrationPermissionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

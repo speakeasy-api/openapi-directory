@@ -15,9 +15,11 @@ public class CreateUser400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public CreateUser400ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CreateUser400ApplicationJSON(){}
 }

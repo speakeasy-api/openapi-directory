@@ -20,6 +20,7 @@ public class ReportTrips {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageSpeed")
     public Double averageSpeed;
+
     public ReportTrips withAverageSpeed(Double averageSpeed) {
         this.averageSpeed = averageSpeed;
         return this;
@@ -28,6 +29,7 @@ public class ReportTrips {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceId")
     public Long deviceId;
+
     public ReportTrips withDeviceId(Long deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -36,6 +38,7 @@ public class ReportTrips {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceName")
     public String deviceName;
+
     public ReportTrips withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -47,6 +50,7 @@ public class ReportTrips {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distance")
     public Double distance;
+
     public ReportTrips withDistance(Double distance) {
         this.distance = distance;
         return this;
@@ -55,6 +59,7 @@ public class ReportTrips {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driverName")
     public String driverName;
+
     public ReportTrips withDriverName(String driverName) {
         this.driverName = driverName;
         return this;
@@ -63,6 +68,7 @@ public class ReportTrips {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driverUniqueId")
     public Long driverUniqueId;
+
     public ReportTrips withDriverUniqueId(Long driverUniqueId) {
         this.driverUniqueId = driverUniqueId;
         return this;
@@ -71,6 +77,7 @@ public class ReportTrips {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Long duration;
+
     public ReportTrips withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -79,6 +86,7 @@ public class ReportTrips {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endAddress")
     public String endAddress;
+
     public ReportTrips withEndAddress(String endAddress) {
         this.endAddress = endAddress;
         return this;
@@ -87,6 +95,7 @@ public class ReportTrips {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endLat")
     public Double endLat;
+
     public ReportTrips withEndLat(Double endLat) {
         this.endLat = endLat;
         return this;
@@ -95,6 +104,7 @@ public class ReportTrips {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endLon")
     public Double endLon;
+
     public ReportTrips withEndLon(Double endLon) {
         this.endLon = endLon;
         return this;
@@ -108,6 +118,7 @@ public class ReportTrips {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public ReportTrips withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -119,6 +130,7 @@ public class ReportTrips {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxSpeed")
     public Double maxSpeed;
+
     public ReportTrips withMaxSpeed(Double maxSpeed) {
         this.maxSpeed = maxSpeed;
         return this;
@@ -130,6 +142,7 @@ public class ReportTrips {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spentFuel")
     public Double spentFuel;
+
     public ReportTrips withSpentFuel(Double spentFuel) {
         this.spentFuel = spentFuel;
         return this;
@@ -138,6 +151,7 @@ public class ReportTrips {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startAddress")
     public String startAddress;
+
     public ReportTrips withStartAddress(String startAddress) {
         this.startAddress = startAddress;
         return this;
@@ -146,6 +160,7 @@ public class ReportTrips {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startLat")
     public Double startLat;
+
     public ReportTrips withStartLat(Double startLat) {
         this.startLat = startLat;
         return this;
@@ -154,6 +169,7 @@ public class ReportTrips {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startLon")
     public Double startLon;
+
     public ReportTrips withStartLon(Double startLon) {
         this.startLon = startLon;
         return this;
@@ -167,9 +183,11 @@ public class ReportTrips {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public ReportTrips withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ReportTrips(){}
 }

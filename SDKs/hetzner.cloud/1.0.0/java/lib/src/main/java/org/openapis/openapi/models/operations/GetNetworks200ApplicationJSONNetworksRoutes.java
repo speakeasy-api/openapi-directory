@@ -12,6 +12,7 @@ public class GetNetworks200ApplicationJSONNetworksRoutes {
      */
     @JsonProperty("destination")
     public String destination;
+
     public GetNetworks200ApplicationJSONNetworksRoutes withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -22,9 +23,14 @@ public class GetNetworks200ApplicationJSONNetworksRoutes {
      */
     @JsonProperty("gateway")
     public String gateway;
+
     public GetNetworks200ApplicationJSONNetworksRoutes withGateway(String gateway) {
         this.gateway = gateway;
         return this;
     }
     
+    public GetNetworks200ApplicationJSONNetworksRoutes(@JsonProperty("destination") String destination, @JsonProperty("gateway") String gateway) {
+        this.destination = destination;
+        this.gateway = gateway;
+  }
 }

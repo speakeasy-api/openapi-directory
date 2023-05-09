@@ -15,6 +15,7 @@ public class ArtifactSearchResults {
      */
     @JsonProperty("artifacts")
     public SearchedArtifact[] artifacts;
+
     public ArtifactSearchResults withArtifacts(SearchedArtifact[] artifacts) {
         this.artifacts = artifacts;
         return this;
@@ -25,9 +26,14 @@ public class ArtifactSearchResults {
      */
     @JsonProperty("count")
     public Long count;
+
     public ArtifactSearchResults withCount(Long count) {
         this.count = count;
         return this;
     }
     
+    public ArtifactSearchResults(@JsonProperty("artifacts") SearchedArtifact[] artifacts, @JsonProperty("count") Long count) {
+        this.artifacts = artifacts;
+        this.count = count;
+  }
 }

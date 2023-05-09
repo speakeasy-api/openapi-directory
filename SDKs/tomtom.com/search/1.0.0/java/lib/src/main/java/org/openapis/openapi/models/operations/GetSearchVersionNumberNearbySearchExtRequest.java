@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchVersionNumberNearbySearchExtRequest {
     /**
      * Bottom right position of the bounding box. This is specified as a comma separated string composed of lat., lon.
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=btmRight")
+    @Deprecated
     public String btmRight;
+
+    @Deprecated
     public GetSearchVersionNumberNearbySearchExtRequest withBtmRight(String btmRight) {
         this.btmRight = btmRight;
         return this;
@@ -22,6 +27,7 @@ public class GetSearchVersionNumberNearbySearchExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=countrySet")
     public String countrySet;
+
     public GetSearchVersionNumberNearbySearchExtRequest withCountrySet(String countrySet) {
         this.countrySet = countrySet;
         return this;
@@ -32,6 +38,7 @@ public class GetSearchVersionNumberNearbySearchExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
     public org.openapis.openapi.models.shared.ExtEnum ext;
+
     public GetSearchVersionNumberNearbySearchExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
         this.ext = ext;
         return this;
@@ -48,6 +55,7 @@ public class GetSearchVersionNumberNearbySearchExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=extendedPostalCodesFor")
     public String extendedPostalCodesFor;
+
     public GetSearchVersionNumberNearbySearchExtRequest withExtendedPostalCodesFor(String extendedPostalCodesFor) {
         this.extendedPostalCodesFor = extendedPostalCodesFor;
         return this;
@@ -64,6 +72,7 @@ public class GetSearchVersionNumberNearbySearchExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idxSet")
     public String idxSet;
+
     public GetSearchVersionNumberNearbySearchExtRequest withIdxSet(String idxSet) {
         this.idxSet = idxSet;
         return this;
@@ -74,6 +83,7 @@ public class GetSearchVersionNumberNearbySearchExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
+
     public GetSearchVersionNumberNearbySearchExtRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -85,6 +95,7 @@ public class GetSearchVersionNumberNearbySearchExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
     public Float lat;
+
     public GetSearchVersionNumberNearbySearchExtRequest withLat(Float lat) {
         this.lat = lat;
         return this;
@@ -95,6 +106,7 @@ public class GetSearchVersionNumberNearbySearchExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetSearchVersionNumberNearbySearchExtRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -106,6 +118,7 @@ public class GetSearchVersionNumberNearbySearchExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lon")
     public Float lon;
+
     public GetSearchVersionNumberNearbySearchExtRequest withLon(Float lon) {
         this.lon = lon;
         return this;
@@ -116,6 +129,7 @@ public class GetSearchVersionNumberNearbySearchExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxFuzzyLevel")
     public Long maxFuzzyLevel;
+
     public GetSearchVersionNumberNearbySearchExtRequest withMaxFuzzyLevel(Long maxFuzzyLevel) {
         this.maxFuzzyLevel = maxFuzzyLevel;
         return this;
@@ -126,6 +140,7 @@ public class GetSearchVersionNumberNearbySearchExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minFuzzyLevel")
     public Long minFuzzyLevel;
+
     public GetSearchVersionNumberNearbySearchExtRequest withMinFuzzyLevel(Long minFuzzyLevel) {
         this.minFuzzyLevel = minFuzzyLevel;
         return this;
@@ -136,6 +151,7 @@ public class GetSearchVersionNumberNearbySearchExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ofs")
     public Long ofs;
+
     public GetSearchVersionNumberNearbySearchExtRequest withOfs(Long ofs) {
         this.ofs = ofs;
         return this;
@@ -146,6 +162,7 @@ public class GetSearchVersionNumberNearbySearchExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
     public Long radius;
+
     public GetSearchVersionNumberNearbySearchExtRequest withRadius(Long radius) {
         this.radius = radius;
         return this;
@@ -153,9 +170,13 @@ public class GetSearchVersionNumberNearbySearchExtRequest {
     
     /**
      * Top left position of the bounding box. This is specified as a comma separated string composed of lat., lon.
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=topLeft")
+    @Deprecated
     public String topLeft;
+
+    @Deprecated
     public GetSearchVersionNumberNearbySearchExtRequest withTopLeft(String topLeft) {
         this.topLeft = topLeft;
         return this;
@@ -166,6 +187,7 @@ public class GetSearchVersionNumberNearbySearchExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+
     public GetSearchVersionNumberNearbySearchExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
@@ -176,9 +198,16 @@ public class GetSearchVersionNumberNearbySearchExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public org.openapis.openapi.models.shared.ViewEnum view;
+
     public GetSearchVersionNumberNearbySearchExtRequest withView(org.openapis.openapi.models.shared.ViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public GetSearchVersionNumberNearbySearchExtRequest(@JsonProperty("ext") org.openapis.openapi.models.shared.ExtEnum ext, @JsonProperty("lat") Float lat, @JsonProperty("lon") Float lon, @JsonProperty("versionNumber") org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.ext = ext;
+        this.lat = lat;
+        this.lon = lon;
+        this.versionNumber = versionNumber;
+  }
 }

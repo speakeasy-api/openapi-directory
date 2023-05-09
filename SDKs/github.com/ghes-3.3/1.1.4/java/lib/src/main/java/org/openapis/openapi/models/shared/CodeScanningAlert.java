@@ -22,6 +22,7 @@ public class CodeScanningAlert {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public CodeScanningAlert withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -34,6 +35,7 @@ public class CodeScanningAlert {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dismissed_at")
     public OffsetDateTime dismissedAt;
+
     public CodeScanningAlert withDismissedAt(OffsetDateTime dismissedAt) {
         this.dismissedAt = dismissedAt;
         return this;
@@ -44,6 +46,7 @@ public class CodeScanningAlert {
      */
     @JsonProperty("dismissed_by")
     public NullableSimpleUser dismissedBy;
+
     public CodeScanningAlert withDismissedBy(NullableSimpleUser dismissedBy) {
         this.dismissedBy = dismissedBy;
         return this;
@@ -54,6 +57,7 @@ public class CodeScanningAlert {
      */
     @JsonProperty("dismissed_reason")
     public CodeScanningAlertDismissedReasonEnum dismissedReason;
+
     public CodeScanningAlert withDismissedReason(CodeScanningAlertDismissedReasonEnum dismissedReason) {
         this.dismissedReason = dismissedReason;
         return this;
@@ -64,6 +68,7 @@ public class CodeScanningAlert {
      */
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public CodeScanningAlert withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -74,6 +79,7 @@ public class CodeScanningAlert {
      */
     @JsonProperty("instances_url")
     public String instancesUrl;
+
     public CodeScanningAlert withInstancesUrl(String instancesUrl) {
         this.instancesUrl = instancesUrl;
         return this;
@@ -81,6 +87,7 @@ public class CodeScanningAlert {
     
     @JsonProperty("most_recent_instance")
     public CodeScanningAlertInstance mostRecentInstance;
+
     public CodeScanningAlert withMostRecentInstance(CodeScanningAlertInstance mostRecentInstance) {
         this.mostRecentInstance = mostRecentInstance;
         return this;
@@ -91,6 +98,7 @@ public class CodeScanningAlert {
      */
     @JsonProperty("number")
     public Long number;
+
     public CodeScanningAlert withNumber(Long number) {
         this.number = number;
         return this;
@@ -98,6 +106,7 @@ public class CodeScanningAlert {
     
     @JsonProperty("rule")
     public CodeScanningAlertRule rule;
+
     public CodeScanningAlert withRule(CodeScanningAlertRule rule) {
         this.rule = rule;
         return this;
@@ -108,6 +117,7 @@ public class CodeScanningAlert {
      */
     @JsonProperty("state")
     public CodeScanningAlertStateEnum state;
+
     public CodeScanningAlert withState(CodeScanningAlertStateEnum state) {
         this.state = state;
         return this;
@@ -115,6 +125,7 @@ public class CodeScanningAlert {
     
     @JsonProperty("tool")
     public CodeScanningAnalysisTool tool;
+
     public CodeScanningAlert withTool(CodeScanningAnalysisTool tool) {
         this.tool = tool;
         return this;
@@ -125,9 +136,24 @@ public class CodeScanningAlert {
      */
     @JsonProperty("url")
     public String url;
+
     public CodeScanningAlert withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CodeScanningAlert(@JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("dismissed_at") OffsetDateTime dismissedAt, @JsonProperty("dismissed_by") NullableSimpleUser dismissedBy, @JsonProperty("dismissed_reason") CodeScanningAlertDismissedReasonEnum dismissedReason, @JsonProperty("html_url") String htmlUrl, @JsonProperty("instances_url") String instancesUrl, @JsonProperty("most_recent_instance") CodeScanningAlertInstance mostRecentInstance, @JsonProperty("number") Long number, @JsonProperty("rule") CodeScanningAlertRule rule, @JsonProperty("state") CodeScanningAlertStateEnum state, @JsonProperty("tool") CodeScanningAnalysisTool tool, @JsonProperty("url") String url) {
+        this.createdAt = createdAt;
+        this.dismissedAt = dismissedAt;
+        this.dismissedBy = dismissedBy;
+        this.dismissedReason = dismissedReason;
+        this.htmlUrl = htmlUrl;
+        this.instancesUrl = instancesUrl;
+        this.mostRecentInstance = mostRecentInstance;
+        this.number = number;
+        this.rule = rule;
+        this.state = state;
+        this.tool = tool;
+        this.url = url;
+  }
 }

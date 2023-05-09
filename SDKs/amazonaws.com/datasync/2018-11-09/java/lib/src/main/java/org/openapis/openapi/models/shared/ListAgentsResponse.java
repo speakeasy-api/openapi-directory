@@ -15,6 +15,7 @@ public class ListAgentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Agents")
     public AgentListEntry[] agents;
+
     public ListAgentsResponse withAgents(AgentListEntry[] agents) {
         this.agents = agents;
         return this;
@@ -23,9 +24,11 @@ public class ListAgentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAgentsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAgentsResponse(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NullableAuthorizationApp {
     @JsonProperty("client_id")
     public String clientId;
+
     public NullableAuthorizationApp withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -16,6 +17,7 @@ public class NullableAuthorizationApp {
     
     @JsonProperty("name")
     public String name;
+
     public NullableAuthorizationApp withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +25,15 @@ public class NullableAuthorizationApp {
     
     @JsonProperty("url")
     public String url;
+
     public NullableAuthorizationApp withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public NullableAuthorizationApp(@JsonProperty("client_id") String clientId, @JsonProperty("name") String name, @JsonProperty("url") String url) {
+        this.clientId = clientId;
+        this.name = name;
+        this.url = url;
+  }
 }

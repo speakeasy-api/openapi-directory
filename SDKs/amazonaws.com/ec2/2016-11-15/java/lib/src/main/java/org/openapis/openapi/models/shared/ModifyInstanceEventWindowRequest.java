@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyInstanceEventWindowRequest {
     
     public String cronExpression;
+
     public ModifyInstanceEventWindowRequest withCronExpression(String cronExpression) {
         this.cronExpression = cronExpression;
         return this;
@@ -16,6 +17,7 @@ public class ModifyInstanceEventWindowRequest {
     
     
     public Boolean dryRun;
+
     public ModifyInstanceEventWindowRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class ModifyInstanceEventWindowRequest {
     
     
     public String instanceEventWindowId;
+
     public ModifyInstanceEventWindowRequest withInstanceEventWindowId(String instanceEventWindowId) {
         this.instanceEventWindowId = instanceEventWindowId;
         return this;
@@ -30,6 +33,7 @@ public class ModifyInstanceEventWindowRequest {
     
     
     public String name;
+
     public ModifyInstanceEventWindowRequest withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +41,13 @@ public class ModifyInstanceEventWindowRequest {
     
     
     public InstanceEventWindowTimeRangeRequest[] timeRanges;
+
     public ModifyInstanceEventWindowRequest withTimeRanges(InstanceEventWindowTimeRangeRequest[] timeRanges) {
         this.timeRanges = timeRanges;
         return this;
     }
     
+    public ModifyInstanceEventWindowRequest(@JsonProperty("InstanceEventWindowId") String instanceEventWindowId) {
+        this.instanceEventWindowId = instanceEventWindowId;
+  }
 }

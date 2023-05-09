@@ -13,6 +13,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchConstructionPermitsRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchConstructionPermitsRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchConstructionPermitsRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchConstructionPermitsRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchConstructionPermitsRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchConstructionPermitsRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchConstructionPermitsRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchConstructionPermitsRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchConstructionPermitsRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchConstructionPermitsRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchConstructionPermitsRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchConstructionPermitsRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchConstructionPermitsRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchConstructionPermitsRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.address")
     public String searchDbConstructionPermitsAddress;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsAddress(String searchDbConstructionPermitsAddress) {
         this.searchDbConstructionPermitsAddress = searchDbConstructionPermitsAddress;
         return this;
@@ -163,6 +178,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.affordable_hsg_unit")
     public Long searchDbConstructionPermitsAffordableHsgUnit;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsAffordableHsgUnit(Long searchDbConstructionPermitsAffordableHsgUnit) {
         this.searchDbConstructionPermitsAffordableHsgUnit = searchDbConstructionPermitsAffordableHsgUnit;
         return this;
@@ -173,6 +189,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.applied")
     public String searchDbConstructionPermitsApplied;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsApplied(String searchDbConstructionPermitsApplied) {
         this.searchDbConstructionPermitsApplied = searchDbConstructionPermitsApplied;
         return this;
@@ -183,6 +200,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.approved")
     public String searchDbConstructionPermitsApproved;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsApproved(String searchDbConstructionPermitsApproved) {
         this.searchDbConstructionPermitsApproved = searchDbConstructionPermitsApproved;
         return this;
@@ -193,6 +211,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.building_uses_and_work_scopes")
     public String searchDbConstructionPermitsBuildingUsesAndWorkScopes;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsBuildingUsesAndWorkScopes(String searchDbConstructionPermitsBuildingUsesAndWorkScopes) {
         this.searchDbConstructionPermitsBuildingUsesAndWorkScopes = searchDbConstructionPermitsBuildingUsesAndWorkScopes;
         return this;
@@ -203,6 +222,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.case_status")
     public String searchDbConstructionPermitsCaseStatus;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsCaseStatus(String searchDbConstructionPermitsCaseStatus) {
         this.searchDbConstructionPermitsCaseStatus = searchDbConstructionPermitsCaseStatus;
         return this;
@@ -213,6 +233,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.category")
     public String searchDbConstructionPermitsCategory;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsCategory(String searchDbConstructionPermitsCategory) {
         this.searchDbConstructionPermitsCategory = searchDbConstructionPermitsCategory;
         return this;
@@ -223,6 +244,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.co_date")
     public String searchDbConstructionPermitsCoDate;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsCoDate(String searchDbConstructionPermitsCoDate) {
         this.searchDbConstructionPermitsCoDate = searchDbConstructionPermitsCoDate;
         return this;
@@ -233,6 +255,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.completion_date")
     public String searchDbConstructionPermitsCompletionDate;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsCompletionDate(String searchDbConstructionPermitsCompletionDate) {
         this.searchDbConstructionPermitsCompletionDate = searchDbConstructionPermitsCompletionDate;
         return this;
@@ -243,6 +266,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.contractor_company")
     public String searchDbConstructionPermitsContractorCompany;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsContractorCompany(String searchDbConstructionPermitsContractorCompany) {
         this.searchDbConstructionPermitsContractorCompany = searchDbConstructionPermitsContractorCompany;
         return this;
@@ -253,6 +277,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.contractor_first_name")
     public String searchDbConstructionPermitsContractorFirstName;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsContractorFirstName(String searchDbConstructionPermitsContractorFirstName) {
         this.searchDbConstructionPermitsContractorFirstName = searchDbConstructionPermitsContractorFirstName;
         return this;
@@ -263,6 +288,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.contractor_last_name")
     public String searchDbConstructionPermitsContractorLastName;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsContractorLastName(String searchDbConstructionPermitsContractorLastName) {
         this.searchDbConstructionPermitsContractorLastName = searchDbConstructionPermitsContractorLastName;
         return this;
@@ -273,6 +299,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.existing_res_unit")
     public Long searchDbConstructionPermitsExistingResUnit;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsExistingResUnit(Long searchDbConstructionPermitsExistingResUnit) {
         this.searchDbConstructionPermitsExistingResUnit = searchDbConstructionPermitsExistingResUnit;
         return this;
@@ -283,6 +310,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.issued")
     public String searchDbConstructionPermitsIssued;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsIssued(String searchDbConstructionPermitsIssued) {
         this.searchDbConstructionPermitsIssued = searchDbConstructionPermitsIssued;
         return this;
@@ -293,6 +321,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.narrative_description")
     public String searchDbConstructionPermitsNarrativeDescription;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsNarrativeDescription(String searchDbConstructionPermitsNarrativeDescription) {
         this.searchDbConstructionPermitsNarrativeDescription = searchDbConstructionPermitsNarrativeDescription;
         return this;
@@ -303,6 +332,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.new_res_unit")
     public Long searchDbConstructionPermitsNewResUnit;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsNewResUnit(Long searchDbConstructionPermitsNewResUnit) {
         this.searchDbConstructionPermitsNewResUnit = searchDbConstructionPermitsNewResUnit;
         return this;
@@ -313,6 +343,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.new_sf")
     public Long searchDbConstructionPermitsNewSf;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsNewSf(Long searchDbConstructionPermitsNewSf) {
         this.searchDbConstructionPermitsNewSf = searchDbConstructionPermitsNewSf;
         return this;
@@ -323,6 +354,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.owner1_company")
     public String searchDbConstructionPermitsOwner1Company;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsOwner1Company(String searchDbConstructionPermitsOwner1Company) {
         this.searchDbConstructionPermitsOwner1Company = searchDbConstructionPermitsOwner1Company;
         return this;
@@ -333,6 +365,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.owner1_first_name")
     public String searchDbConstructionPermitsOwner1FirstName;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsOwner1FirstName(String searchDbConstructionPermitsOwner1FirstName) {
         this.searchDbConstructionPermitsOwner1FirstName = searchDbConstructionPermitsOwner1FirstName;
         return this;
@@ -343,6 +376,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.owner1_last_name")
     public String searchDbConstructionPermitsOwner1LastName;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsOwner1LastName(String searchDbConstructionPermitsOwner1LastName) {
         this.searchDbConstructionPermitsOwner1LastName = searchDbConstructionPermitsOwner1LastName;
         return this;
@@ -353,6 +387,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.owner2_company")
     public String searchDbConstructionPermitsOwner2Company;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsOwner2Company(String searchDbConstructionPermitsOwner2Company) {
         this.searchDbConstructionPermitsOwner2Company = searchDbConstructionPermitsOwner2Company;
         return this;
@@ -363,6 +398,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.owner2_first_name")
     public String searchDbConstructionPermitsOwner2FirstName;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsOwner2FirstName(String searchDbConstructionPermitsOwner2FirstName) {
         this.searchDbConstructionPermitsOwner2FirstName = searchDbConstructionPermitsOwner2FirstName;
         return this;
@@ -373,6 +409,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.owner2_last_name")
     public String searchDbConstructionPermitsOwner2LastName;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsOwner2LastName(String searchDbConstructionPermitsOwner2LastName) {
         this.searchDbConstructionPermitsOwner2LastName = searchDbConstructionPermitsOwner2LastName;
         return this;
@@ -383,6 +420,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.permit_types")
     public String searchDbConstructionPermitsPermitTypes;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsPermitTypes(String searchDbConstructionPermitsPermitTypes) {
         this.searchDbConstructionPermitsPermitTypes = searchDbConstructionPermitsPermitTypes;
         return this;
@@ -393,6 +431,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.primary_company")
     public String searchDbConstructionPermitsPrimaryCompany;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsPrimaryCompany(String searchDbConstructionPermitsPrimaryCompany) {
         this.searchDbConstructionPermitsPrimaryCompany = searchDbConstructionPermitsPrimaryCompany;
         return this;
@@ -403,6 +442,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.primary_first_name")
     public String searchDbConstructionPermitsPrimaryFirstName;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsPrimaryFirstName(String searchDbConstructionPermitsPrimaryFirstName) {
         this.searchDbConstructionPermitsPrimaryFirstName = searchDbConstructionPermitsPrimaryFirstName;
         return this;
@@ -413,6 +453,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.primary_last_name")
     public String searchDbConstructionPermitsPrimaryLastName;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsPrimaryLastName(String searchDbConstructionPermitsPrimaryLastName) {
         this.searchDbConstructionPermitsPrimaryLastName = searchDbConstructionPermitsPrimaryLastName;
         return this;
@@ -423,6 +464,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.remodel_sf")
     public Long searchDbConstructionPermitsRemodelSf;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsRemodelSf(Long searchDbConstructionPermitsRemodelSf) {
         this.searchDbConstructionPermitsRemodelSf = searchDbConstructionPermitsRemodelSf;
         return this;
@@ -433,6 +475,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.total_project_value")
     public Double searchDbConstructionPermitsTotalProjectValue;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsTotalProjectValue(Double searchDbConstructionPermitsTotalProjectValue) {
         this.searchDbConstructionPermitsTotalProjectValue = searchDbConstructionPermitsTotalProjectValue;
         return this;
@@ -443,6 +486,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_construction_permits.total_subpermit_value")
     public Double searchDbConstructionPermitsTotalSubpermitValue;
+
     public SearchConstructionPermitsRequest withSearchDbConstructionPermitsTotalSubpermitValue(Double searchDbConstructionPermitsTotalSubpermitValue) {
         this.searchDbConstructionPermitsTotalSubpermitValue = searchDbConstructionPermitsTotalSubpermitValue;
         return this;
@@ -453,6 +497,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchConstructionPermitsRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -463,6 +508,7 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchConstructionPermitsRequest withText(String text) {
         this.text = text;
         return this;
@@ -473,9 +519,11 @@ public class SearchConstructionPermitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchConstructionPermitsRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchConstructionPermitsRequest(){}
 }

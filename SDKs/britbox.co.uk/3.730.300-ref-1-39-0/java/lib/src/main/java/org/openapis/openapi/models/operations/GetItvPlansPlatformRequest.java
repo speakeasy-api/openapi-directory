@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItvPlansPlatformRequest {
@@ -22,6 +23,7 @@ public class GetItvPlansPlatformRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetItvPlansPlatformRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -32,9 +34,13 @@ public class GetItvPlansPlatformRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platform")
     public String platform;
+
     public GetItvPlansPlatformRequest withPlatform(String platform) {
         this.platform = platform;
         return this;
     }
     
+    public GetItvPlansPlatformRequest(@JsonProperty("platform") String platform) {
+        this.platform = platform;
+  }
 }

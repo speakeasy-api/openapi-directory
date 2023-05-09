@@ -17,6 +17,7 @@ public class TestCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantIds")
     public String[] merchantIds;
+
     public TestCompanyWebhookRequest withMerchantIds(String[] merchantIds) {
         this.merchantIds = merchantIds;
         return this;
@@ -25,6 +26,7 @@ public class TestCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notification")
     public CustomNotification notification;
+
     public TestCompanyWebhookRequest withNotification(CustomNotification notification) {
         this.notification = notification;
         return this;
@@ -66,9 +68,11 @@ public class TestCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("types")
     public String[] types;
+
     public TestCompanyWebhookRequest withTypes(String[] types) {
         this.types = types;
         return this;
     }
     
+    public TestCompanyWebhookRequest(){}
 }

@@ -15,6 +15,7 @@ public class VerificationErrorRecursive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public VerificationErrorRecursiveCapabilitiesEnum[] capabilities;
+
     public VerificationErrorRecursive withCapabilities(VerificationErrorRecursiveCapabilitiesEnum[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -26,6 +27,7 @@ public class VerificationErrorRecursive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public VerificationErrorRecursive withCode(String code) {
         this.code = code;
         return this;
@@ -37,6 +39,7 @@ public class VerificationErrorRecursive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public VerificationErrorRecursive withMessage(String message) {
         this.message = message;
         return this;
@@ -48,6 +51,7 @@ public class VerificationErrorRecursive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remediatingActions")
     public RemediatingAction[] remediatingActions;
+
     public VerificationErrorRecursive withRemediatingActions(RemediatingAction[] remediatingActions) {
         this.remediatingActions = remediatingActions;
         return this;
@@ -59,9 +63,11 @@ public class VerificationErrorRecursive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public VerificationErrorRecursiveTypeEnum type;
+
     public VerificationErrorRecursive withType(VerificationErrorRecursiveTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public VerificationErrorRecursive(){}
 }

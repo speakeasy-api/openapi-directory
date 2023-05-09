@@ -19,6 +19,7 @@ public class BatchRetrieveOrdersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public BatchRetrieveOrdersResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -30,9 +31,11 @@ public class BatchRetrieveOrdersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orders")
     public Order[] orders;
+
     public BatchRetrieveOrdersResponse withOrders(Order[] orders) {
         this.orders = orders;
         return this;
     }
     
+    public BatchRetrieveOrdersResponse(){}
 }

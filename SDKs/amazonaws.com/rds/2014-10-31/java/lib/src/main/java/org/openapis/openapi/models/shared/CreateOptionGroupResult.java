@@ -15,9 +15,11 @@ public class CreateOptionGroupResult {
      */
     
     public OptionGroup optionGroup;
+
     public CreateOptionGroupResult withOptionGroup(OptionGroup optionGroup) {
         this.optionGroup = optionGroup;
         return this;
     }
     
+    public CreateOptionGroupResult(){}
 }

@@ -15,6 +15,7 @@ public class Approval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvalState")
     public ApprovalStateEnum approvalState;
+
     public Approval withApprovalState(ApprovalStateEnum approvalState) {
         this.approvalState = approvalState;
         return this;
@@ -23,9 +24,11 @@ public class Approval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userArn")
     public String userArn;
+
     public Approval withUserArn(String userArn) {
         this.userArn = userArn;
         return this;
     }
     
+    public Approval(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CancelImageLaunchPermissionRequest {
     
     public Boolean dryRun;
+
     public CancelImageLaunchPermissionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class CancelImageLaunchPermissionRequest {
     
     
     public String imageId;
+
     public CancelImageLaunchPermissionRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
     
+    public CancelImageLaunchPermissionRequest(@JsonProperty("ImageId") String imageId) {
+        this.imageId = imageId;
+  }
 }

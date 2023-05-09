@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteControlPanelResponse {
@@ -12,6 +13,7 @@ public class DeleteControlPanelResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteControlPanelResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteControlPanelResponse {
      */
     
     public Object conflictException;
+
     public DeleteControlPanelResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteControlPanelResponse {
     
     
     public String contentType;
+
     public DeleteControlPanelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteControlPanelResponse {
      */
     
     public java.util.Map<String, Object> deleteControlPanelResponse;
+
     public DeleteControlPanelResponse withDeleteControlPanelResponse(java.util.Map<String, Object> deleteControlPanelResponse) {
         this.deleteControlPanelResponse = deleteControlPanelResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteControlPanelResponse {
      */
     
     public Object internalServerException;
+
     public DeleteControlPanelResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteControlPanelResponse {
     
     
     public Integer statusCode;
+
     public DeleteControlPanelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteControlPanelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteControlPanelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteControlPanelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteControlPanelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteControlPanelResponse {
      */
     
     public Object throttlingException;
+
     public DeleteControlPanelResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteControlPanelResponse {
      */
     
     public Object validationException;
+
     public DeleteControlPanelResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteControlPanelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

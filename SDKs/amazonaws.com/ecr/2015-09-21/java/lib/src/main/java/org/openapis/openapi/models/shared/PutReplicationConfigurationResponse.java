@@ -15,9 +15,11 @@ public class PutReplicationConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationConfiguration")
     public ReplicationConfiguration replicationConfiguration;
+
     public PutReplicationConfigurationResponse withReplicationConfiguration(ReplicationConfiguration replicationConfiguration) {
         this.replicationConfiguration = replicationConfiguration;
         return this;
     }
     
+    public PutReplicationConfigurationResponse(){}
 }

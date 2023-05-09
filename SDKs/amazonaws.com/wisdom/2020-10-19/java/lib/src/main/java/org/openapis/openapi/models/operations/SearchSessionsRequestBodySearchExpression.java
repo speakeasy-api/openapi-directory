@@ -15,9 +15,11 @@ public class SearchSessionsRequestBodySearchExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.Filter[] filters;
+
     public SearchSessionsRequestBodySearchExpression withFilters(org.openapis.openapi.models.shared.Filter[] filters) {
         this.filters = filters;
         return this;
     }
     
+    public SearchSessionsRequestBodySearchExpression(){}
 }

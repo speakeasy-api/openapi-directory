@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesTagsIdFormatRequest {
@@ -12,6 +13,7 @@ public class GetResourcesTagsIdFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public String format;
+
     public GetResourcesTagsIdFormatRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -22,9 +24,14 @@ public class GetResourcesTagsIdFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetResourcesTagsIdFormatRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public GetResourcesTagsIdFormatRequest(@JsonProperty("format") String format, @JsonProperty("id") Long id) {
+        this.format = format;
+        this.id = id;
+  }
 }

@@ -15,6 +15,7 @@ public class EnterpriseAdminSetGithubActionsPermissionsEnterpriseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed_actions")
     public org.openapis.openapi.models.shared.AllowedActionsEnum allowedActions;
+
     public EnterpriseAdminSetGithubActionsPermissionsEnterpriseRequestBody withAllowedActions(org.openapis.openapi.models.shared.AllowedActionsEnum allowedActions) {
         this.allowedActions = allowedActions;
         return this;
@@ -25,9 +26,13 @@ public class EnterpriseAdminSetGithubActionsPermissionsEnterpriseRequestBody {
      */
     @JsonProperty("enabled_organizations")
     public org.openapis.openapi.models.shared.EnabledOrganizationsEnum enabledOrganizations;
+
     public EnterpriseAdminSetGithubActionsPermissionsEnterpriseRequestBody withEnabledOrganizations(org.openapis.openapi.models.shared.EnabledOrganizationsEnum enabledOrganizations) {
         this.enabledOrganizations = enabledOrganizations;
         return this;
     }
     
+    public EnterpriseAdminSetGithubActionsPermissionsEnterpriseRequestBody(@JsonProperty("enabled_organizations") org.openapis.openapi.models.shared.EnabledOrganizationsEnum enabledOrganizations) {
+        this.enabledOrganizations = enabledOrganizations;
+  }
 }

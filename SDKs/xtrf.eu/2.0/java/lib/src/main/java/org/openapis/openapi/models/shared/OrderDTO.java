@@ -15,6 +15,7 @@ public class OrderDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("column")
     public String column;
+
     public OrderDTO withColumn(String column) {
         this.column = column;
         return this;
@@ -23,9 +24,11 @@ public class OrderDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public OrderDTO withType(String type) {
         this.type = type;
         return this;
     }
     
+    public OrderDTO(){}
 }

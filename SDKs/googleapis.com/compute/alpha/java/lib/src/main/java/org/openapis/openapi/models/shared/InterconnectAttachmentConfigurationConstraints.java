@@ -15,6 +15,7 @@ public class InterconnectAttachmentConfigurationConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bgpMd5")
     public InterconnectAttachmentConfigurationConstraintsBgpMd5Enum bgpMd5;
+
     public InterconnectAttachmentConfigurationConstraints withBgpMd5(InterconnectAttachmentConfigurationConstraintsBgpMd5Enum bgpMd5) {
         this.bgpMd5 = bgpMd5;
         return this;
@@ -26,9 +27,11 @@ public class InterconnectAttachmentConfigurationConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bgpPeerAsnRanges")
     public InterconnectAttachmentConfigurationConstraintsBgpPeerASNRange[] bgpPeerAsnRanges;
+
     public InterconnectAttachmentConfigurationConstraints withBgpPeerAsnRanges(InterconnectAttachmentConfigurationConstraintsBgpPeerASNRange[] bgpPeerAsnRanges) {
         this.bgpPeerAsnRanges = bgpPeerAsnRanges;
         return this;
     }
     
+    public InterconnectAttachmentConfigurationConstraints(){}
 }

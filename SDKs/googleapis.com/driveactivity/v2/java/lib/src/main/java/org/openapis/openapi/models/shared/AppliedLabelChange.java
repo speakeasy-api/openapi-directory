@@ -18,9 +18,11 @@ public class AppliedLabelChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changes")
     public AppliedLabelChangeDetail[] changes;
+
     public AppliedLabelChange withChanges(AppliedLabelChangeDetail[] changes) {
         this.changes = changes;
         return this;
     }
     
+    public AppliedLabelChange(){}
 }

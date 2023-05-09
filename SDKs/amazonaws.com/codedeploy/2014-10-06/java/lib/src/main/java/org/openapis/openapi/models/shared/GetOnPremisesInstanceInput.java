@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetOnPremisesInstanceInput {
     @JsonProperty("instanceName")
     public String instanceName;
+
     public GetOnPremisesInstanceInput withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
     
+    public GetOnPremisesInstanceInput(@JsonProperty("instanceName") String instanceName) {
+        this.instanceName = instanceName;
+  }
 }

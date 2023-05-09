@@ -12,6 +12,7 @@ public class Conversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed")
     public Boolean closed;
+
     public Conversation withClosed(Boolean closed) {
         this.closed = closed;
         return this;
@@ -20,6 +21,7 @@ public class Conversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact")
     public ContactIdentifiers contact;
+
     public Conversation withContact(ContactIdentifiers contact) {
         this.contact = contact;
         return this;
@@ -28,6 +30,7 @@ public class Conversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public Updated created;
+
     public Conversation withCreated(Updated created) {
         this.created = created;
         return this;
@@ -36,6 +39,7 @@ public class Conversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Conversation withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +48,7 @@ public class Conversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastMessage")
     public Message lastMessage;
+
     public Conversation withLastMessage(Message lastMessage) {
         this.lastMessage = lastMessage;
         return this;
@@ -52,6 +57,7 @@ public class Conversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public PhoneNumber phoneNumber;
+
     public Conversation withPhoneNumber(PhoneNumber phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -60,6 +66,7 @@ public class Conversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unread")
     public String[] unread;
+
     public Conversation withUnread(String[] unread) {
         this.unread = unread;
         return this;
@@ -68,9 +75,11 @@ public class Conversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated")
     public Updated updated;
+
     public Conversation withUpdated(Updated updated) {
         this.updated = updated;
         return this;
     }
     
+    public Conversation(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AcceptReservedNodeExchangeInputMessage {
     
     public String reservedNodeId;
+
     public AcceptReservedNodeExchangeInputMessage withReservedNodeId(String reservedNodeId) {
         this.reservedNodeId = reservedNodeId;
         return this;
@@ -16,9 +17,14 @@ public class AcceptReservedNodeExchangeInputMessage {
     
     
     public String targetReservedNodeOfferingId;
+
     public AcceptReservedNodeExchangeInputMessage withTargetReservedNodeOfferingId(String targetReservedNodeOfferingId) {
         this.targetReservedNodeOfferingId = targetReservedNodeOfferingId;
         return this;
     }
     
+    public AcceptReservedNodeExchangeInputMessage(@JsonProperty("ReservedNodeId") String reservedNodeId, @JsonProperty("TargetReservedNodeOfferingId") String targetReservedNodeOfferingId) {
+        this.reservedNodeId = reservedNodeId;
+        this.targetReservedNodeOfferingId = targetReservedNodeOfferingId;
+  }
 }

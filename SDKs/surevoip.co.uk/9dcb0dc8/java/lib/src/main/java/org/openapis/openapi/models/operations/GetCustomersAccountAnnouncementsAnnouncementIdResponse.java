@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCustomersAccountAnnouncementsAnnouncementIdResponse {
     
     public String contentType;
+
     public GetCustomersAccountAnnouncementsAnnouncementIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetCustomersAccountAnnouncementsAnnouncementIdResponse {
     
     
     public Integer statusCode;
+
     public GetCustomersAccountAnnouncementsAnnouncementIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetCustomersAccountAnnouncementsAnnouncementIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCustomersAccountAnnouncementsAnnouncementIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetCustomersAccountAnnouncementsAnnouncementIdResponse {
      */
     
     public GetCustomersAccountAnnouncementsAnnouncementId404ApplicationJSON getCustomersAccountAnnouncementsAnnouncementId404ApplicationJSONObject;
+
     public GetCustomersAccountAnnouncementsAnnouncementIdResponse withGetCustomersAccountAnnouncementsAnnouncementId404ApplicationJSONObject(GetCustomersAccountAnnouncementsAnnouncementId404ApplicationJSON getCustomersAccountAnnouncementsAnnouncementId404ApplicationJSONObject) {
         this.getCustomersAccountAnnouncementsAnnouncementId404ApplicationJSONObject = getCustomersAccountAnnouncementsAnnouncementId404ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class GetCustomersAccountAnnouncementsAnnouncementIdResponse {
      */
     
     public org.openapis.openapi.models.shared.OneannouncementsPostResponses201ContentApplication1jsonSchema oneannouncementsPostResponses201ContentApplication1jsonSchema;
+
     public GetCustomersAccountAnnouncementsAnnouncementIdResponse withOneannouncementsPostResponses201ContentApplication1jsonSchema(org.openapis.openapi.models.shared.OneannouncementsPostResponses201ContentApplication1jsonSchema oneannouncementsPostResponses201ContentApplication1jsonSchema) {
         this.oneannouncementsPostResponses201ContentApplication1jsonSchema = oneannouncementsPostResponses201ContentApplication1jsonSchema;
         return this;
     }
     
+    public GetCustomersAccountAnnouncementsAnnouncementIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

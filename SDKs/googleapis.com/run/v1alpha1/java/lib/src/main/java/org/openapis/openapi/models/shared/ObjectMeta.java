@@ -18,6 +18,7 @@ public class ObjectMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public ObjectMeta withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class ObjectMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterName")
     public String clusterName;
+
     public ObjectMeta withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -40,6 +42,7 @@ public class ObjectMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public ObjectMeta withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -51,6 +54,7 @@ public class ObjectMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletionGracePeriodSeconds")
     public Integer deletionGracePeriodSeconds;
+
     public ObjectMeta withDeletionGracePeriodSeconds(Integer deletionGracePeriodSeconds) {
         this.deletionGracePeriodSeconds = deletionGracePeriodSeconds;
         return this;
@@ -62,6 +66,7 @@ public class ObjectMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletionTimestamp")
     public String deletionTimestamp;
+
     public ObjectMeta withDeletionTimestamp(String deletionTimestamp) {
         this.deletionTimestamp = deletionTimestamp;
         return this;
@@ -73,6 +78,7 @@ public class ObjectMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalizers")
     public String[] finalizers;
+
     public ObjectMeta withFinalizers(String[] finalizers) {
         this.finalizers = finalizers;
         return this;
@@ -84,6 +90,7 @@ public class ObjectMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generateName")
     public String generateName;
+
     public ObjectMeta withGenerateName(String generateName) {
         this.generateName = generateName;
         return this;
@@ -95,6 +102,7 @@ public class ObjectMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generation")
     public Integer generation;
+
     public ObjectMeta withGeneration(Integer generation) {
         this.generation = generation;
         return this;
@@ -106,6 +114,7 @@ public class ObjectMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ObjectMeta withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -117,6 +126,7 @@ public class ObjectMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ObjectMeta withName(String name) {
         this.name = name;
         return this;
@@ -128,6 +138,7 @@ public class ObjectMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     public String namespace;
+
     public ObjectMeta withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -139,6 +150,7 @@ public class ObjectMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerReferences")
     public OwnerReference[] ownerReferences;
+
     public ObjectMeta withOwnerReferences(OwnerReference[] ownerReferences) {
         this.ownerReferences = ownerReferences;
         return this;
@@ -150,6 +162,7 @@ public class ObjectMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceVersion")
     public String resourceVersion;
+
     public ObjectMeta withResourceVersion(String resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
@@ -161,6 +174,7 @@ public class ObjectMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public ObjectMeta withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -172,9 +186,11 @@ public class ObjectMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public ObjectMeta withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public ObjectMeta(){}
 }

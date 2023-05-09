@@ -22,6 +22,7 @@ public class EventTopic {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDateTime")
     public OffsetDateTime createdDateTime;
+
     public EventTopic withCreatedDateTime(OffsetDateTime createdDateTime) {
         this.createdDateTime = createdDateTime;
         return this;
@@ -30,6 +31,7 @@ public class EventTopic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public EventTopic withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -38,6 +40,7 @@ public class EventTopic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public TopicStatusEnum status;
+
     public EventTopic withStatus(TopicStatusEnum status) {
         this.status = status;
         return this;
@@ -46,6 +49,7 @@ public class EventTopic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TopicArn")
     public String topicArn;
+
     public EventTopic withTopicArn(String topicArn) {
         this.topicArn = topicArn;
         return this;
@@ -54,9 +58,11 @@ public class EventTopic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TopicName")
     public String topicName;
+
     public EventTopic withTopicName(String topicName) {
         this.topicName = topicName;
         return this;
     }
     
+    public EventTopic(){}
 }

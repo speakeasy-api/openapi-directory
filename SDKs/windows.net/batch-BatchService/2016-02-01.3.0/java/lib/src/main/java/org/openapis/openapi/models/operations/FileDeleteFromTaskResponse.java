@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FileDeleteFromTaskResponse {
@@ -12,6 +13,7 @@ public class FileDeleteFromTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public FileDeleteFromTaskResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -19,6 +21,7 @@ public class FileDeleteFromTaskResponse {
     
     
     public String contentType;
+
     public FileDeleteFromTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class FileDeleteFromTaskResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public FileDeleteFromTaskResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class FileDeleteFromTaskResponse {
     
     
     public Integer statusCode;
+
     public FileDeleteFromTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class FileDeleteFromTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FileDeleteFromTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FileDeleteFromTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

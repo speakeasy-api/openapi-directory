@@ -18,9 +18,11 @@ public class RemoveHeldAccountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statuses")
     public Status[] statuses;
+
     public RemoveHeldAccountsResponse withStatuses(Status[] statuses) {
         this.statuses = statuses;
         return this;
     }
     
+    public RemoveHeldAccountsResponse(){}
 }

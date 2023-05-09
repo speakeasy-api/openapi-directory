@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFlowResponse {
     
     public String contentType;
+
     public DescribeFlowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFlowResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFlowResponse describeFlowResponse;
+
     public DescribeFlowResponse withDescribeFlowResponse(org.openapis.openapi.models.shared.DescribeFlowResponse describeFlowResponse) {
         this.describeFlowResponse = describeFlowResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFlowResponse {
      */
     
     public Object internalServerException;
+
     public DescribeFlowResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeFlowResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeFlowResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeFlowResponse {
     
     
     public Integer statusCode;
+
     public DescribeFlowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeFlowResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFlowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeFlowResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

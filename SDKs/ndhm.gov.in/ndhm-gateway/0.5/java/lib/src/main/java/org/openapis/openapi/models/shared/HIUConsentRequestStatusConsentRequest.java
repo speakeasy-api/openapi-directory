@@ -12,6 +12,7 @@ public class HIUConsentRequestStatusConsentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtefacts")
     public ConsentArtefactReference[] consentArtefacts;
+
     public HIUConsentRequestStatusConsentRequest withConsentArtefacts(ConsentArtefactReference[] consentArtefacts) {
         this.consentArtefacts = consentArtefacts;
         return this;
@@ -19,6 +20,7 @@ public class HIUConsentRequestStatusConsentRequest {
     
     @JsonProperty("id")
     public String id;
+
     public HIUConsentRequestStatusConsentRequest withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +28,14 @@ public class HIUConsentRequestStatusConsentRequest {
     
     @JsonProperty("status")
     public ConsentStatusEnum status;
+
     public HIUConsentRequestStatusConsentRequest withStatus(ConsentStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public HIUConsentRequestStatusConsentRequest(@JsonProperty("id") String id, @JsonProperty("status") ConsentStatusEnum status) {
+        this.id = id;
+        this.status = status;
+  }
 }

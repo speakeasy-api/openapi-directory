@@ -15,6 +15,7 @@ public class ExtractedCharactersListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public ExtractedCharactersListItem withCount(Long count) {
         this.count = count;
         return this;
@@ -23,9 +24,11 @@ public class ExtractedCharactersListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Page")
     public Long page;
+
     public ExtractedCharactersListItem withPage(Long page) {
         this.page = page;
         return this;
     }
     
+    public ExtractedCharactersListItem(){}
 }

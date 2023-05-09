@@ -15,6 +15,7 @@ public class LanguageCodeItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DurationInSeconds")
     public Float durationInSeconds;
+
     public LanguageCodeItem withDurationInSeconds(Float durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
         return this;
@@ -23,9 +24,11 @@ public class LanguageCodeItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public LanguageCodeItem withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
     }
     
+    public LanguageCodeItem(){}
 }

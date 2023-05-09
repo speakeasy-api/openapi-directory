@@ -15,6 +15,7 @@ public class ListOrganizationalUnitsForParentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListOrganizationalUnitsForParentResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListOrganizationalUnitsForParentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationalUnits")
     public OrganizationalUnit[] organizationalUnits;
+
     public ListOrganizationalUnitsForParentResponse withOrganizationalUnits(OrganizationalUnit[] organizationalUnits) {
         this.organizationalUnits = organizationalUnits;
         return this;
     }
     
+    public ListOrganizationalUnitsForParentResponse(){}
 }

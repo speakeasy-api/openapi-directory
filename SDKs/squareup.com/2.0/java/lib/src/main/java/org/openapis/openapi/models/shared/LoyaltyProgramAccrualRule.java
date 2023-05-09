@@ -17,6 +17,7 @@ public class LoyaltyProgramAccrualRule {
      */
     @JsonProperty("accrual_type")
     public String accrualType;
+
     public LoyaltyProgramAccrualRule withAccrualType(String accrualType) {
         this.accrualType = accrualType;
         return this;
@@ -31,6 +32,7 @@ public class LoyaltyProgramAccrualRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_object_id")
     public String catalogObjectId;
+
     public LoyaltyProgramAccrualRule withCatalogObjectId(String catalogObjectId) {
         this.catalogObjectId = catalogObjectId;
         return this;
@@ -46,6 +48,7 @@ public class LoyaltyProgramAccrualRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excluded_category_ids")
     public String[] excludedCategoryIds;
+
     public LoyaltyProgramAccrualRule withExcludedCategoryIds(String[] excludedCategoryIds) {
         this.excludedCategoryIds = excludedCategoryIds;
         return this;
@@ -61,6 +64,7 @@ public class LoyaltyProgramAccrualRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excluded_item_variation_ids")
     public String[] excludedItemVariationIds;
+
     public LoyaltyProgramAccrualRule withExcludedItemVariationIds(String[] excludedItemVariationIds) {
         this.excludedItemVariationIds = excludedItemVariationIds;
         return this;
@@ -73,6 +77,7 @@ public class LoyaltyProgramAccrualRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("points")
     public Long points;
+
     public LoyaltyProgramAccrualRule withPoints(Long points) {
         this.points = points;
         return this;
@@ -89,6 +94,7 @@ public class LoyaltyProgramAccrualRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spend_amount_money")
     public Money spendAmountMoney;
+
     public LoyaltyProgramAccrualRule withSpendAmountMoney(Money spendAmountMoney) {
         this.spendAmountMoney = spendAmountMoney;
         return this;
@@ -105,9 +111,13 @@ public class LoyaltyProgramAccrualRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visit_minimum_amount_money")
     public Money visitMinimumAmountMoney;
+
     public LoyaltyProgramAccrualRule withVisitMinimumAmountMoney(Money visitMinimumAmountMoney) {
         this.visitMinimumAmountMoney = visitMinimumAmountMoney;
         return this;
     }
     
+    public LoyaltyProgramAccrualRule(@JsonProperty("accrual_type") String accrualType) {
+        this.accrualType = accrualType;
+  }
 }

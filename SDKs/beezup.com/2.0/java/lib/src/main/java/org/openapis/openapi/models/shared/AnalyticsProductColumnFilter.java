@@ -14,6 +14,7 @@ public class AnalyticsProductColumnFilter {
      */
     @JsonProperty("operatorName")
     public String operatorName;
+
     public AnalyticsProductColumnFilter withOperatorName(String operatorName) {
         this.operatorName = operatorName;
         return this;
@@ -27,9 +28,13 @@ public class AnalyticsProductColumnFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public AnalyticsProductColumnFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public AnalyticsProductColumnFilter(@JsonProperty("operatorName") String operatorName) {
+        this.operatorName = operatorName;
+  }
 }

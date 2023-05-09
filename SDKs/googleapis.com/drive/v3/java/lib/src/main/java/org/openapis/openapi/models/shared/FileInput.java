@@ -18,23 +18,25 @@ import org.openapis.openapi.utils.DateTimeSerializer;
  */
 public class FileInput {
     /**
-     * A collection of arbitrary key-value pairs which are private to the requesting app.
-     * Entries with null values are cleared in update and copy requests. These properties can only be retrieved using an authenticated request. An authenticated request uses an access token obtained with a OAuth 2 client ID. You cannot use an API key to retrieve private properties.
+     * A collection of arbitrary key-value pairs that are private to the requesting app.
+     * Entries with null values are cleared in update and copy requests. These properties can only be retrieved using an authenticated request. An authenticated request uses an access token obtained with an OAuth 2 client ID. You cannot use an API key to retrieve private properties.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appProperties")
     public java.util.Map<String, String> appProperties;
+
     public FileInput withAppProperties(java.util.Map<String, String> appProperties) {
         this.appProperties = appProperties;
         return this;
     }
     
     /**
-     * Capabilities the current user has on this file. Each capability corresponds to a fine-grained action that a user may take.
+     * Capabilities the current user has on this file. Each capability corresponds to a fine-grained action that a user can take.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public FileCapabilities capabilities;
+
     public FileInput withCapabilities(FileCapabilities capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -46,6 +48,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentHints")
     public FileContentHints contentHints;
+
     public FileInput withContentHints(FileContentHints contentHints) {
         this.contentHints = contentHints;
         return this;
@@ -57,6 +60,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentRestrictions")
     public ContentRestriction[] contentRestrictions;
+
     public FileInput withContentRestrictions(ContentRestriction[] contentRestrictions) {
         this.contentRestrictions = contentRestrictions;
         return this;
@@ -68,6 +72,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyRequiresWriterPermission")
     public Boolean copyRequiresWriterPermission;
+
     public FileInput withCopyRequiresWriterPermission(Boolean copyRequiresWriterPermission) {
         this.copyRequiresWriterPermission = copyRequiresWriterPermission;
         return this;
@@ -81,6 +86,7 @@ public class FileInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdTime")
     public OffsetDateTime createdTime;
+
     public FileInput withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -92,6 +98,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public FileInput withDescription(String description) {
         this.description = description;
         return this;
@@ -103,6 +110,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driveId")
     public String driveId;
+
     public FileInput withDriveId(String driveId) {
         this.driveId = driveId;
         return this;
@@ -114,6 +122,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explicitlyTrashed")
     public Boolean explicitlyTrashed;
+
     public FileInput withExplicitlyTrashed(Boolean explicitlyTrashed) {
         this.explicitlyTrashed = explicitlyTrashed;
         return this;
@@ -125,6 +134,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileExtension")
     public String fileExtension;
+
     public FileInput withFileExtension(String fileExtension) {
         this.fileExtension = fileExtension;
         return this;
@@ -137,18 +147,20 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("folderColorRgb")
     public String folderColorRgb;
+
     public FileInput withFolderColorRgb(String folderColorRgb) {
         this.folderColorRgb = folderColorRgb;
         return this;
     }
     
     /**
-     * The full file extension extracted from the name field. May contain multiple concatenated extensions, such as "tar.gz". This is only available for files with binary content in Google Drive.
-     * This is automatically updated when the name field changes, however it isn't cleared if the new name does not contain a valid extension.
+     * The full file extension extracted from the name field. Can contain multiple concatenated extensions, such as "tar.gz". This is only available for files with binary content in Google Drive.
+     * This is automatically updated when the name field changes, however it's not cleared if the new name does not contain a valid extension.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullFileExtension")
     public String fullFileExtension;
+
     public FileInput withFullFileExtension(String fullFileExtension) {
         this.fullFileExtension = fullFileExtension;
         return this;
@@ -160,6 +172,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasAugmentedPermissions")
     public Boolean hasAugmentedPermissions;
+
     public FileInput withHasAugmentedPermissions(Boolean hasAugmentedPermissions) {
         this.hasAugmentedPermissions = hasAugmentedPermissions;
         return this;
@@ -171,17 +184,19 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasThumbnail")
     public Boolean hasThumbnail;
+
     public FileInput withHasThumbnail(Boolean hasThumbnail) {
         this.hasThumbnail = hasThumbnail;
         return this;
     }
     
     /**
-     * The ID of the file's head revision. This is currently only available for files with binary content in Google Drive.
+     * The ID of the file's head revision. This is only available for files with binary content in Google Drive.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headRevisionId")
     public String headRevisionId;
+
     public FileInput withHeadRevisionId(String headRevisionId) {
         this.headRevisionId = headRevisionId;
         return this;
@@ -193,6 +208,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iconLink")
     public String iconLink;
+
     public FileInput withIconLink(String iconLink) {
         this.iconLink = iconLink;
         return this;
@@ -204,6 +220,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FileInput withId(String id) {
         this.id = id;
         return this;
@@ -215,17 +232,19 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageMediaMetadata")
     public FileImageMediaMetadata imageMediaMetadata;
+
     public FileInput withImageMediaMetadata(FileImageMediaMetadata imageMediaMetadata) {
         this.imageMediaMetadata = imageMediaMetadata;
         return this;
     }
     
     /**
-     * Whether the file was created or opened by the requesting app.
+     * Whether the requesting app created or opened the file.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAppAuthorized")
     public Boolean isAppAuthorized;
+
     public FileInput withIsAppAuthorized(Boolean isAppAuthorized) {
         this.isAppAuthorized = isAppAuthorized;
         return this;
@@ -237,6 +256,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public FileInput withKind(String kind) {
         this.kind = kind;
         return this;
@@ -248,6 +268,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelInfo")
     public FileLabelInfo labelInfo;
+
     public FileInput withLabelInfo(FileLabelInfo labelInfo) {
         this.labelInfo = labelInfo;
         return this;
@@ -259,6 +280,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifyingUser")
     public User lastModifyingUser;
+
     public FileInput withLastModifyingUser(User lastModifyingUser) {
         this.lastModifyingUser = lastModifyingUser;
         return this;
@@ -270,6 +292,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkShareMetadata")
     public FileLinkShareMetadata linkShareMetadata;
+
     public FileInput withLinkShareMetadata(FileLinkShareMetadata linkShareMetadata) {
         this.linkShareMetadata = linkShareMetadata;
         return this;
@@ -281,6 +304,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("md5Checksum")
     public String md5Checksum;
+
     public FileInput withMd5Checksum(String md5Checksum) {
         this.md5Checksum = md5Checksum;
         return this;
@@ -294,37 +318,40 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public FileInput withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
     
     /**
-     * Whether the file has been modified by this user.
+     * Whether this user has modified the file.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifiedByMe")
     public Boolean modifiedByMe;
+
     public FileInput withModifiedByMe(Boolean modifiedByMe) {
         this.modifiedByMe = modifiedByMe;
         return this;
     }
     
     /**
-     * The last time the file was modified by the user (RFC 3339 date-time).
+     * The last time the user modified the file (RFC 3339 date-time).
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedByMeTime")
     public OffsetDateTime modifiedByMeTime;
+
     public FileInput withModifiedByMeTime(OffsetDateTime modifiedByMeTime) {
         this.modifiedByMeTime = modifiedByMeTime;
         return this;
     }
     
     /**
-     * The last time the file was modified by anyone (RFC 3339 date-time).
+     * The last time anyone modified the file (RFC 3339 date-time).
      * Note that setting modifiedTime will also update modifiedByMeTime for the user.
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -332,17 +359,19 @@ public class FileInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedTime")
     public OffsetDateTime modifiedTime;
+
     public FileInput withModifiedTime(OffsetDateTime modifiedTime) {
         this.modifiedTime = modifiedTime;
         return this;
     }
     
     /**
-     * The name of the file. This is not necessarily unique within a folder. Note that for immutable items such as the top level folders of shared drives, My Drive root folder, and Application Data folder the name is constant.
+     * The name of the file. This isn't necessarily unique within a folder. Note that for immutable items such as the top-level folders of shared drives, My Drive root folder, and Application Data folder the name is constant.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FileInput withName(String name) {
         this.name = name;
         return this;
@@ -354,6 +383,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalFilename")
     public String originalFilename;
+
     public FileInput withOriginalFilename(String originalFilename) {
         this.originalFilename = originalFilename;
         return this;
@@ -365,29 +395,32 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownedByMe")
     public Boolean ownedByMe;
+
     public FileInput withOwnedByMe(Boolean ownedByMe) {
         this.ownedByMe = ownedByMe;
         return this;
     }
     
     /**
-     * The owner of this file. Only certain legacy files may have more than one owner. This field isn't populated for items in shared drives.
+     * The owner of this file. Only certain legacy files might have more than one owner. This field isn't populated for items in shared drives.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owners")
     public User[] owners;
+
     public FileInput withOwners(User[] owners) {
         this.owners = owners;
         return this;
     }
     
     /**
-     * The IDs of the parent folders which contain the file.
+     * The IDs of the parent folders that contain the file.
      * If not specified as part of a create request, the file will be placed directly in the user's My Drive folder. If not specified as part of a copy request, the file will inherit any discoverable parents of the source file. Update requests must use the addParents and removeParents parameters to modify the parents list.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parents")
     public String[] parents;
+
     public FileInput withParents(String[] parents) {
         this.parents = parents;
         return this;
@@ -399,6 +432,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissionIds")
     public String[] permissionIds;
+
     public FileInput withPermissionIds(String[] permissionIds) {
         this.permissionIds = permissionIds;
         return this;
@@ -410,18 +444,20 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public PermissionInput[] permissions;
+
     public FileInput withPermissions(PermissionInput[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
     /**
-     * A collection of arbitrary key-value pairs which are visible to all apps.
+     * A collection of arbitrary key-value pairs that are visible to all apps.
      * Entries with null values are cleared in update and copy requests.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public FileInput withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -433,6 +469,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quotaBytesUsed")
     public String quotaBytesUsed;
+
     public FileInput withQuotaBytesUsed(String quotaBytesUsed) {
         this.quotaBytesUsed = quotaBytesUsed;
         return this;
@@ -444,28 +481,31 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceKey")
     public String resourceKey;
+
     public FileInput withResourceKey(String resourceKey) {
         this.resourceKey = resourceKey;
         return this;
     }
     
     /**
-     * The SHA1 checksum associated with this file, if available. This field is only populated for files with content stored in Google Drive; it isn't populated for Docs Editors or shortcut files.
+     * The SHA1 checksum associated with this file, if available. This field is only populated for files with content stored in Google Drive; it's not populated for Docs Editors or shortcut files.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha1Checksum")
     public String sha1Checksum;
+
     public FileInput withSha1Checksum(String sha1Checksum) {
         this.sha1Checksum = sha1Checksum;
         return this;
     }
     
     /**
-     * The SHA256 checksum associated with this file, if available. This field is only populated for files with content stored in Google Drive; it isn't populated for Docs Editors or shortcut files.
+     * The SHA256 checksum associated with this file, if available. This field is only populated for files with content stored in Google Drive; it's not populated for Docs Editors or shortcut files.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha256Checksum")
     public String sha256Checksum;
+
     public FileInput withSha256Checksum(String sha256Checksum) {
         this.sha256Checksum = sha256Checksum;
         return this;
@@ -477,6 +517,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shared")
     public Boolean shared;
+
     public FileInput withShared(Boolean shared) {
         this.shared = shared;
         return this;
@@ -490,6 +531,7 @@ public class FileInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("sharedWithMeTime")
     public OffsetDateTime sharedWithMeTime;
+
     public FileInput withSharedWithMeTime(OffsetDateTime sharedWithMeTime) {
         this.sharedWithMeTime = sharedWithMeTime;
         return this;
@@ -501,6 +543,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharingUser")
     public User sharingUser;
+
     public FileInput withSharingUser(User sharingUser) {
         this.sharingUser = sharingUser;
         return this;
@@ -512,28 +555,31 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortcutDetails")
     public FileShortcutDetails shortcutDetails;
+
     public FileInput withShortcutDetails(FileShortcutDetails shortcutDetails) {
         this.shortcutDetails = shortcutDetails;
         return this;
     }
     
     /**
-     * The size of the file's content in bytes. This field is populated for files with binary content stored in Google Drive and for Docs Editors files; it is not populated for shortcuts or folders.
+     * The size of the file's content in bytes. This field is populated for files with binary content stored in Google Drive and for Docs Editors files; it's not populated for shortcuts or folders.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public String size;
+
     public FileInput withSize(String size) {
         this.size = size;
         return this;
     }
     
     /**
-     * The list of spaces which contain the file. The currently supported values are 'drive', 'appDataFolder' and 'photos'.
+     * The list of spaces that contain the file. The currently supported values are 'drive', 'appDataFolder' and 'photos'.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spaces")
     public String[] spaces;
+
     public FileInput withSpaces(String[] spaces) {
         this.spaces = spaces;
         return this;
@@ -545,6 +591,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("starred")
     public Boolean starred;
+
     public FileInput withStarred(Boolean starred) {
         this.starred = starred;
         return this;
@@ -556,6 +603,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teamDriveId")
     public String teamDriveId;
+
     public FileInput withTeamDriveId(String teamDriveId) {
         this.teamDriveId = teamDriveId;
         return this;
@@ -567,6 +615,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailLink")
     public String thumbnailLink;
+
     public FileInput withThumbnailLink(String thumbnailLink) {
         this.thumbnailLink = thumbnailLink;
         return this;
@@ -578,17 +627,19 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailVersion")
     public String thumbnailVersion;
+
     public FileInput withThumbnailVersion(String thumbnailVersion) {
         this.thumbnailVersion = thumbnailVersion;
         return this;
     }
     
     /**
-     * Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the owner may trash a file. The trashed item is excluded from all files.list responses returned for any user who does not own the file. However, all users with access to the file can see the trashed item metadata in an API response. All users with access can copy, download, export, and share the file.
+     * Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the owner can trash a file. The trashed item is excluded from all files.list responses returned for any user who does not own the file. However, all users with access to the file can see the trashed item metadata in an API response. All users with access can copy, download, export, and share the file.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trashed")
     public Boolean trashed;
+
     public FileInput withTrashed(Boolean trashed) {
         this.trashed = trashed;
         return this;
@@ -602,6 +653,7 @@ public class FileInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("trashedTime")
     public OffsetDateTime trashedTime;
+
     public FileInput withTrashedTime(OffsetDateTime trashedTime) {
         this.trashedTime = trashedTime;
         return this;
@@ -613,6 +665,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trashingUser")
     public User trashingUser;
+
     public FileInput withTrashingUser(User trashingUser) {
         this.trashingUser = trashingUser;
         return this;
@@ -624,41 +677,45 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public FileInput withVersion(String version) {
         this.version = version;
         return this;
     }
     
     /**
-     * Additional metadata about video media. This may not be available immediately upon upload.
+     * Additional metadata about video media. This might not be available immediately upon upload.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoMediaMetadata")
     public FileVideoMediaMetadata videoMediaMetadata;
+
     public FileInput withVideoMediaMetadata(FileVideoMediaMetadata videoMediaMetadata) {
         this.videoMediaMetadata = videoMediaMetadata;
         return this;
     }
     
     /**
-     * Whether the file has been viewed by this user.
+     * Whether this user has viewed the file.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewedByMe")
     public Boolean viewedByMe;
+
     public FileInput withViewedByMe(Boolean viewedByMe) {
         this.viewedByMe = viewedByMe;
         return this;
     }
     
     /**
-     * The last time the file was viewed by the user (RFC 3339 date-time).
+     * The last time the user viewed the file (RFC 3339 date-time).
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("viewedByMeTime")
     public OffsetDateTime viewedByMeTime;
+
     public FileInput withViewedByMeTime(OffsetDateTime viewedByMeTime) {
         this.viewedByMeTime = viewedByMeTime;
         return this;
@@ -670,6 +727,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewersCanCopyContent")
     public Boolean viewersCanCopyContent;
+
     public FileInput withViewersCanCopyContent(Boolean viewersCanCopyContent) {
         this.viewersCanCopyContent = viewersCanCopyContent;
         return this;
@@ -681,6 +739,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webContentLink")
     public String webContentLink;
+
     public FileInput withWebContentLink(String webContentLink) {
         this.webContentLink = webContentLink;
         return this;
@@ -692,6 +751,7 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webViewLink")
     public String webViewLink;
+
     public FileInput withWebViewLink(String webViewLink) {
         this.webViewLink = webViewLink;
         return this;
@@ -703,9 +763,11 @@ public class FileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writersCanShare")
     public Boolean writersCanShare;
+
     public FileInput withWritersCanShare(Boolean writersCanShare) {
         this.writersCanShare = writersCanShare;
         return this;
     }
     
+    public FileInput(){}
 }

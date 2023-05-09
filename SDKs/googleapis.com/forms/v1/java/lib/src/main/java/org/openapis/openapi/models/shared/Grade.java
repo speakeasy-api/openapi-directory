@@ -18,6 +18,7 @@ public class Grade {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("correct")
     public Boolean correct;
+
     public Grade withCorrect(Boolean correct) {
         this.correct = correct;
         return this;
@@ -29,6 +30,7 @@ public class Grade {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedback")
     public Feedback feedback;
+
     public Grade withFeedback(Feedback feedback) {
         this.feedback = feedback;
         return this;
@@ -40,9 +42,11 @@ public class Grade {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Double score;
+
     public Grade withScore(Double score) {
         this.score = score;
         return this;
     }
     
+    public Grade(){}
 }

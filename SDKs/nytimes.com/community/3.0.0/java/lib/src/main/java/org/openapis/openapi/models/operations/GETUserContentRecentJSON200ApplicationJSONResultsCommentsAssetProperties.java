@@ -12,6 +12,7 @@ public class GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetPrope
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automoderation-on")
     public GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetPropertiesAutomoderationOn automoderationOn;
+
     public GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetProperties withAutomoderationOn(GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetPropertiesAutomoderationOn automoderationOn) {
         this.automoderationOn = automoderationOn;
         return this;
@@ -20,6 +21,7 @@ public class GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetPrope
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment-list-sort-editors")
     public GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetPropertiesCommentListSortEditors commentListSortEditors;
+
     public GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetProperties withCommentListSortEditors(GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetPropertiesCommentListSortEditors commentListSortEditors) {
         this.commentListSortEditors = commentListSortEditors;
         return this;
@@ -28,9 +30,11 @@ public class GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetPrope
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reached-max-com-off")
     public GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetPropertiesReachedMaxComOff reachedMaxComOff;
+
     public GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetProperties withReachedMaxComOff(GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetPropertiesReachedMaxComOff reachedMaxComOff) {
         this.reachedMaxComOff = reachedMaxComOff;
         return this;
     }
     
+    public GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetProperties(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMappingValuesKeyResponse {
     
     public String contentType;
+
     public GetMappingValuesKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetMappingValuesKeyResponse {
     
     
     public Integer statusCode;
+
     public GetMappingValuesKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetMappingValuesKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMappingValuesKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetMappingValuesKeyResponse {
      */
     
     public GetMappingValuesKey200ApplicationJSON getMappingValuesKey200ApplicationJSONObject;
+
     public GetMappingValuesKeyResponse withGetMappingValuesKey200ApplicationJSONObject(GetMappingValuesKey200ApplicationJSON getMappingValuesKey200ApplicationJSONObject) {
         this.getMappingValuesKey200ApplicationJSONObject = getMappingValuesKey200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetMappingValuesKeyResponse {
      */
     
     public String getMappingValuesKey400WildcardString;
+
     public GetMappingValuesKeyResponse withGetMappingValuesKey400WildcardString(String getMappingValuesKey400WildcardString) {
         this.getMappingValuesKey400WildcardString = getMappingValuesKey400WildcardString;
         return this;
@@ -53,9 +59,14 @@ public class GetMappingValuesKeyResponse {
      */
     
     public String getMappingValuesKey500WildcardString;
+
     public GetMappingValuesKeyResponse withGetMappingValuesKey500WildcardString(String getMappingValuesKey500WildcardString) {
         this.getMappingValuesKey500WildcardString = getMappingValuesKey500WildcardString;
         return this;
     }
     
+    public GetMappingValuesKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

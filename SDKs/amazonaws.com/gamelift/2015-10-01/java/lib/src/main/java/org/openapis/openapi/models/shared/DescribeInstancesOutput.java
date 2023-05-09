@@ -15,6 +15,7 @@ public class DescribeInstancesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Instances")
     public Instance[] instances;
+
     public DescribeInstancesOutput withInstances(Instance[] instances) {
         this.instances = instances;
         return this;
@@ -23,9 +24,11 @@ public class DescribeInstancesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeInstancesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInstancesOutput(){}
 }

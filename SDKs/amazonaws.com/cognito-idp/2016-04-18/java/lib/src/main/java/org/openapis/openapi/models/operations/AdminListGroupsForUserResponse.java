@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminListGroupsForUserResponse {
@@ -12,6 +13,7 @@ public class AdminListGroupsForUserResponse {
      */
     
     public org.openapis.openapi.models.shared.AdminListGroupsForUserResponse adminListGroupsForUserResponse;
+
     public AdminListGroupsForUserResponse withAdminListGroupsForUserResponse(org.openapis.openapi.models.shared.AdminListGroupsForUserResponse adminListGroupsForUserResponse) {
         this.adminListGroupsForUserResponse = adminListGroupsForUserResponse;
         return this;
@@ -19,6 +21,7 @@ public class AdminListGroupsForUserResponse {
     
     
     public String contentType;
+
     public AdminListGroupsForUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AdminListGroupsForUserResponse {
      */
     
     public Object internalErrorException;
+
     public AdminListGroupsForUserResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class AdminListGroupsForUserResponse {
      */
     
     public Object invalidParameterException;
+
     public AdminListGroupsForUserResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class AdminListGroupsForUserResponse {
      */
     
     public Object notAuthorizedException;
+
     public AdminListGroupsForUserResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class AdminListGroupsForUserResponse {
     
     
     public Integer statusCode;
+
     public AdminListGroupsForUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AdminListGroupsForUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminListGroupsForUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AdminListGroupsForUserResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AdminListGroupsForUserResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class AdminListGroupsForUserResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AdminListGroupsForUserResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,9 +103,14 @@ public class AdminListGroupsForUserResponse {
      */
     
     public Object userNotFoundException;
+
     public AdminListGroupsForUserResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public AdminListGroupsForUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -56,11 +56,9 @@ public class Ideas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdeahubIdeasListResponse res = new org.openapis.openapi.models.operations.IdeahubIdeasListResponse() {{
+        org.openapis.openapi.models.operations.IdeahubIdeasListResponse res = new org.openapis.openapi.models.operations.IdeahubIdeasListResponse(contentType, httpRes.statusCode()) {{
             googleSearchIdeahubV1alphaListIdeasResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

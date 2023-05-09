@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Option {
     @JsonProperty("description")
     public String description;
+
     public Option withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class Option {
     
     @JsonProperty("displayOrder")
     public Integer displayOrder;
+
     public Option withDisplayOrder(Integer displayOrder) {
         this.displayOrder = displayOrder;
         return this;
@@ -26,6 +28,7 @@ public class Option {
     
     @JsonProperty("doubleData")
     public Double doubleData;
+
     public Option withDoubleData(Double doubleData) {
         this.doubleData = doubleData;
         return this;
@@ -33,6 +36,7 @@ public class Option {
     
     @JsonProperty("hidden")
     public Boolean hidden;
+
     public Option withHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
@@ -43,6 +47,7 @@ public class Option {
      */
     @JsonProperty("label")
     public String label;
+
     public Option withLabel(String label) {
         this.label = label;
         return this;
@@ -50,6 +55,7 @@ public class Option {
     
     @JsonProperty("readOnly")
     public Boolean readOnly;
+
     public Option withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -60,9 +66,19 @@ public class Option {
      */
     @JsonProperty("value")
     public String value;
+
     public Option withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Option(@JsonProperty("description") String description, @JsonProperty("displayOrder") Integer displayOrder, @JsonProperty("doubleData") Double doubleData, @JsonProperty("hidden") Boolean hidden, @JsonProperty("label") String label, @JsonProperty("readOnly") Boolean readOnly, @JsonProperty("value") String value) {
+        this.description = description;
+        this.displayOrder = displayOrder;
+        this.doubleData = doubleData;
+        this.hidden = hidden;
+        this.label = label;
+        this.readOnly = readOnly;
+        this.value = value;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PullsListCommitsResponse {
     
     public String contentType;
+
     public PullsListCommitsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PullsListCommitsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PullsListCommitsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class PullsListCommitsResponse {
     
     
     public Integer statusCode;
+
     public PullsListCommitsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PullsListCommitsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PullsListCommitsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class PullsListCommitsResponse {
      */
     
     public org.openapis.openapi.models.shared.Commit[] commits;
+
     public PullsListCommitsResponse withCommits(org.openapis.openapi.models.shared.Commit[] commits) {
         this.commits = commits;
         return this;
     }
     
+    public PullsListCommitsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

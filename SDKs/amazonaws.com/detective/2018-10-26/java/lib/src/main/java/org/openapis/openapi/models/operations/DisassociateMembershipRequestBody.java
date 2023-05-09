@@ -12,9 +12,13 @@ public class DisassociateMembershipRequestBody {
      */
     @JsonProperty("GraphArn")
     public String graphArn;
+
     public DisassociateMembershipRequestBody withGraphArn(String graphArn) {
         this.graphArn = graphArn;
         return this;
     }
     
+    public DisassociateMembershipRequestBody(@JsonProperty("GraphArn") String graphArn) {
+        this.graphArn = graphArn;
+  }
 }

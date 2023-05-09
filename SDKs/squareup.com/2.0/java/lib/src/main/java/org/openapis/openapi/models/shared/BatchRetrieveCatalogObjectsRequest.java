@@ -22,6 +22,7 @@ public class BatchRetrieveCatalogObjectsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_version")
     public Long catalogVersion;
+
     public BatchRetrieveCatalogObjectsRequest withCatalogVersion(Long catalogVersion) {
         this.catalogVersion = catalogVersion;
         return this;
@@ -41,6 +42,7 @@ public class BatchRetrieveCatalogObjectsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("include_related_objects")
     public Boolean includeRelatedObjects;
+
     public BatchRetrieveCatalogObjectsRequest withIncludeRelatedObjects(Boolean includeRelatedObjects) {
         this.includeRelatedObjects = includeRelatedObjects;
         return this;
@@ -51,9 +53,13 @@ public class BatchRetrieveCatalogObjectsRequest {
      */
     @JsonProperty("object_ids")
     public String[] objectIds;
+
     public BatchRetrieveCatalogObjectsRequest withObjectIds(String[] objectIds) {
         this.objectIds = objectIds;
         return this;
     }
     
+    public BatchRetrieveCatalogObjectsRequest(@JsonProperty("object_ids") String[] objectIds) {
+        this.objectIds = objectIds;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteProductsIdOptionsOptionIdValuesValueIdJsonRequest {
@@ -12,6 +13,7 @@ public class DeleteProductsIdOptionsOptionIdValuesValueIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public DeleteProductsIdOptionsOptionIdValuesValueIdJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -22,6 +24,7 @@ public class DeleteProductsIdOptionsOptionIdValuesValueIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public DeleteProductsIdOptionsOptionIdValuesValueIdJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -32,6 +35,7 @@ public class DeleteProductsIdOptionsOptionIdValuesValueIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public DeleteProductsIdOptionsOptionIdValuesValueIdJsonRequest withLogin(String login) {
         this.login = login;
         return this;
@@ -42,6 +46,7 @@ public class DeleteProductsIdOptionsOptionIdValuesValueIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=option_id")
     public Integer optionId;
+
     public DeleteProductsIdOptionsOptionIdValuesValueIdJsonRequest withOptionId(Integer optionId) {
         this.optionId = optionId;
         return this;
@@ -52,9 +57,17 @@ public class DeleteProductsIdOptionsOptionIdValuesValueIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=value_id")
     public Integer valueId;
+
     public DeleteProductsIdOptionsOptionIdValuesValueIdJsonRequest withValueId(Integer valueId) {
         this.valueId = valueId;
         return this;
     }
     
+    public DeleteProductsIdOptionsOptionIdValuesValueIdJsonRequest(@JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("login") String login, @JsonProperty("option_id") Integer optionId, @JsonProperty("value_id") Integer valueId) {
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+        this.optionId = optionId;
+        this.valueId = valueId;
+  }
 }

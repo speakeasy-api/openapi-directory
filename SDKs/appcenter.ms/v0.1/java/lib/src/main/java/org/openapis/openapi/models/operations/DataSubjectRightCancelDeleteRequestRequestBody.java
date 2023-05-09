@@ -12,9 +12,13 @@ public class DataSubjectRightCancelDeleteRequestRequestBody {
      */
     @JsonProperty("email")
     public String email;
+
     public DataSubjectRightCancelDeleteRequestRequestBody withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public DataSubjectRightCancelDeleteRequestRequestBody(@JsonProperty("email") String email) {
+        this.email = email;
+  }
 }

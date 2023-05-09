@@ -15,9 +15,11 @@ public class EnvironmentParameterRanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CategoricalParameterRanges")
     public CategoricalParameter[] categoricalParameterRanges;
+
     public EnvironmentParameterRanges withCategoricalParameterRanges(CategoricalParameter[] categoricalParameterRanges) {
         this.categoricalParameterRanges = categoricalParameterRanges;
         return this;
     }
     
+    public EnvironmentParameterRanges(){}
 }

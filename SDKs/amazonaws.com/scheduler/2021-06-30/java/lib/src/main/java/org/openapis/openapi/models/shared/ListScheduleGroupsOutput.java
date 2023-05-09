@@ -15,6 +15,7 @@ public class ListScheduleGroupsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListScheduleGroupsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListScheduleGroupsOutput {
     
     @JsonProperty("ScheduleGroups")
     public ScheduleGroupSummary[] scheduleGroups;
+
     public ListScheduleGroupsOutput withScheduleGroups(ScheduleGroupSummary[] scheduleGroups) {
         this.scheduleGroups = scheduleGroups;
         return this;
     }
     
+    public ListScheduleGroupsOutput(@JsonProperty("ScheduleGroups") ScheduleGroupSummary[] scheduleGroups) {
+        this.scheduleGroups = scheduleGroups;
+  }
 }

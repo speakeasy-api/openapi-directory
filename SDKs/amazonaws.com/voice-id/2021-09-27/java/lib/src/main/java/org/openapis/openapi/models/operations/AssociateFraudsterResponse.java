@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateFraudsterResponse {
@@ -12,6 +13,7 @@ public class AssociateFraudsterResponse {
      */
     
     public Object accessDeniedException;
+
     public AssociateFraudsterResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AssociateFraudsterResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateFraudsterResponse associateFraudsterResponse;
+
     public AssociateFraudsterResponse withAssociateFraudsterResponse(org.openapis.openapi.models.shared.AssociateFraudsterResponse associateFraudsterResponse) {
         this.associateFraudsterResponse = associateFraudsterResponse;
         return this;
@@ -32,6 +35,7 @@ public class AssociateFraudsterResponse {
      */
     
     public Object conflictException;
+
     public AssociateFraudsterResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateFraudsterResponse {
     
     
     public String contentType;
+
     public AssociateFraudsterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AssociateFraudsterResponse {
      */
     
     public Object internalServerException;
+
     public AssociateFraudsterResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateFraudsterResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateFraudsterResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateFraudsterResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public AssociateFraudsterResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class AssociateFraudsterResponse {
     
     
     public Integer statusCode;
+
     public AssociateFraudsterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class AssociateFraudsterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateFraudsterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class AssociateFraudsterResponse {
      */
     
     public Object throttlingException;
+
     public AssociateFraudsterResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class AssociateFraudsterResponse {
      */
     
     public Object validationException;
+
     public AssociateFraudsterResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AssociateFraudsterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

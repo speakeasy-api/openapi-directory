@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CloudWatchMonitoringConfiguration {
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public CloudWatchMonitoringConfiguration withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -22,9 +23,13 @@ public class CloudWatchMonitoringConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logStreamNamePrefix")
     public String logStreamNamePrefix;
+
     public CloudWatchMonitoringConfiguration withLogStreamNamePrefix(String logStreamNamePrefix) {
         this.logStreamNamePrefix = logStreamNamePrefix;
         return this;
     }
     
+    public CloudWatchMonitoringConfiguration(@JsonProperty("logGroupName") String logGroupName) {
+        this.logGroupName = logGroupName;
+  }
 }

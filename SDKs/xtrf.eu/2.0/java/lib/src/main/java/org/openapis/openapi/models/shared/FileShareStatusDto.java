@@ -12,6 +12,7 @@ public class FileShareStatusDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileId")
     public String fileId;
+
     public FileShareStatusDto withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -20,6 +21,7 @@ public class FileShareStatusDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public FileShareStatusDto withMessage(String message) {
         this.message = message;
         return this;
@@ -28,9 +30,11 @@ public class FileShareStatusDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successful")
     public Boolean successful;
+
     public FileShareStatusDto withSuccessful(Boolean successful) {
         this.successful = successful;
         return this;
     }
     
+    public FileShareStatusDto(){}
 }

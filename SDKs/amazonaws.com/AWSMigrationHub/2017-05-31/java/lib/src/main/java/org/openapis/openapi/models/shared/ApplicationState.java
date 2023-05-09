@@ -20,6 +20,7 @@ public class ApplicationState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public ApplicationState withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -28,6 +29,7 @@ public class ApplicationState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationStatus")
     public ApplicationStatusEnum applicationStatus;
+
     public ApplicationState withApplicationStatus(ApplicationStatusEnum applicationStatus) {
         this.applicationStatus = applicationStatus;
         return this;
@@ -38,9 +40,11 @@ public class ApplicationState {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public ApplicationState withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
     }
     
+    public ApplicationState(){}
 }

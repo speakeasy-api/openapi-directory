@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MarkScoreCommentUnresolvedRequest {
@@ -13,6 +14,7 @@ public class MarkScoreCommentUnresolvedRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment")
     public String comment;
+
     public MarkScoreCommentUnresolvedRequest withComment(String comment) {
         this.comment = comment;
         return this;
@@ -24,6 +26,7 @@ public class MarkScoreCommentUnresolvedRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
     public String score;
+
     public MarkScoreCommentUnresolvedRequest withScore(String score) {
         this.score = score;
         return this;
@@ -35,9 +38,14 @@ public class MarkScoreCommentUnresolvedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sharingKey")
     public String sharingKey;
+
     public MarkScoreCommentUnresolvedRequest withSharingKey(String sharingKey) {
         this.sharingKey = sharingKey;
         return this;
     }
     
+    public MarkScoreCommentUnresolvedRequest(@JsonProperty("comment") String comment, @JsonProperty("score") String score) {
+        this.comment = comment;
+        this.score = score;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnvironmentParameter {
     @JsonProperty("Key")
     public String key;
+
     public EnvironmentParameter withKey(String key) {
         this.key = key;
         return this;
@@ -19,6 +20,7 @@ public class EnvironmentParameter {
     
     @JsonProperty("Value")
     public String value;
+
     public EnvironmentParameter withValue(String value) {
         this.value = value;
         return this;
@@ -26,9 +28,15 @@ public class EnvironmentParameter {
     
     @JsonProperty("ValueType")
     public String valueType;
+
     public EnvironmentParameter withValueType(String valueType) {
         this.valueType = valueType;
         return this;
     }
     
+    public EnvironmentParameter(@JsonProperty("Key") String key, @JsonProperty("Value") String value, @JsonProperty("ValueType") String valueType) {
+        this.key = key;
+        this.value = value;
+        this.valueType = valueType;
+  }
 }

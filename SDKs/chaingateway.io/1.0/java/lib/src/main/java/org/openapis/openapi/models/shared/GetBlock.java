@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetBlock {
     @JsonProperty("block_number")
     public String blockNumber;
+
     public GetBlock withBlockNumber(String blockNumber) {
         this.blockNumber = blockNumber;
         return this;
@@ -16,6 +17,7 @@ public class GetBlock {
     
     @JsonProperty("difficulty")
     public String difficulty;
+
     public GetBlock withDifficulty(String difficulty) {
         this.difficulty = difficulty;
         return this;
@@ -23,6 +25,7 @@ public class GetBlock {
     
     @JsonProperty("gas_limit")
     public String gasLimit;
+
     public GetBlock withGasLimit(String gasLimit) {
         this.gasLimit = gasLimit;
         return this;
@@ -30,6 +33,7 @@ public class GetBlock {
     
     @JsonProperty("gas_used")
     public String gasUsed;
+
     public GetBlock withGasUsed(String gasUsed) {
         this.gasUsed = gasUsed;
         return this;
@@ -37,6 +41,7 @@ public class GetBlock {
     
     @JsonProperty("hash")
     public String hash;
+
     public GetBlock withHash(String hash) {
         this.hash = hash;
         return this;
@@ -44,6 +49,7 @@ public class GetBlock {
     
     @JsonProperty("miner")
     public String miner;
+
     public GetBlock withMiner(String miner) {
         this.miner = miner;
         return this;
@@ -51,6 +57,7 @@ public class GetBlock {
     
     @JsonProperty("ok")
     public Boolean ok;
+
     public GetBlock withOk(Boolean ok) {
         this.ok = ok;
         return this;
@@ -58,6 +65,7 @@ public class GetBlock {
     
     @JsonProperty("parent_hash")
     public String parentHash;
+
     public GetBlock withParentHash(String parentHash) {
         this.parentHash = parentHash;
         return this;
@@ -65,6 +73,7 @@ public class GetBlock {
     
     @JsonProperty("size_in_bytes")
     public String sizeInBytes;
+
     public GetBlock withSizeInBytes(String sizeInBytes) {
         this.sizeInBytes = sizeInBytes;
         return this;
@@ -72,6 +81,7 @@ public class GetBlock {
     
     @JsonProperty("time_stamp")
     public String timeStamp;
+
     public GetBlock withTimeStamp(String timeStamp) {
         this.timeStamp = timeStamp;
         return this;
@@ -79,9 +89,23 @@ public class GetBlock {
     
     @JsonProperty("transactions_count")
     public String transactionsCount;
+
     public GetBlock withTransactionsCount(String transactionsCount) {
         this.transactionsCount = transactionsCount;
         return this;
     }
     
+    public GetBlock(@JsonProperty("block_number") String blockNumber, @JsonProperty("difficulty") String difficulty, @JsonProperty("gas_limit") String gasLimit, @JsonProperty("gas_used") String gasUsed, @JsonProperty("hash") String hash, @JsonProperty("miner") String miner, @JsonProperty("ok") Boolean ok, @JsonProperty("parent_hash") String parentHash, @JsonProperty("size_in_bytes") String sizeInBytes, @JsonProperty("time_stamp") String timeStamp, @JsonProperty("transactions_count") String transactionsCount) {
+        this.blockNumber = blockNumber;
+        this.difficulty = difficulty;
+        this.gasLimit = gasLimit;
+        this.gasUsed = gasUsed;
+        this.hash = hash;
+        this.miner = miner;
+        this.ok = ok;
+        this.parentHash = parentHash;
+        this.sizeInBytes = sizeInBytes;
+        this.timeStamp = timeStamp;
+        this.transactionsCount = transactionsCount;
+  }
 }

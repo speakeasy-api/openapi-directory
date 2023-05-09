@@ -15,9 +15,11 @@ public class CreateTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public Type type;
+
     public CreateTypeResponse withType(Type type) {
         this.type = type;
         return this;
     }
     
+    public CreateTypeResponse(){}
 }

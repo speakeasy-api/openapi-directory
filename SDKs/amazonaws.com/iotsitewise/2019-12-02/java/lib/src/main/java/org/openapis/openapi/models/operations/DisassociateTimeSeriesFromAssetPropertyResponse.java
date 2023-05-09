@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateTimeSeriesFromAssetPropertyResponse {
@@ -12,6 +13,7 @@ public class DisassociateTimeSeriesFromAssetPropertyResponse {
      */
     
     public Object conflictingOperationException;
+
     public DisassociateTimeSeriesFromAssetPropertyResponse withConflictingOperationException(Object conflictingOperationException) {
         this.conflictingOperationException = conflictingOperationException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateTimeSeriesFromAssetPropertyResponse {
     
     
     public String contentType;
+
     public DisassociateTimeSeriesFromAssetPropertyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateTimeSeriesFromAssetPropertyResponse {
      */
     
     public Object internalFailureException;
+
     public DisassociateTimeSeriesFromAssetPropertyResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateTimeSeriesFromAssetPropertyResponse {
      */
     
     public Object invalidRequestException;
+
     public DisassociateTimeSeriesFromAssetPropertyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateTimeSeriesFromAssetPropertyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateTimeSeriesFromAssetPropertyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DisassociateTimeSeriesFromAssetPropertyResponse {
     
     
     public Integer statusCode;
+
     public DisassociateTimeSeriesFromAssetPropertyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateTimeSeriesFromAssetPropertyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateTimeSeriesFromAssetPropertyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DisassociateTimeSeriesFromAssetPropertyResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateTimeSeriesFromAssetPropertyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DisassociateTimeSeriesFromAssetPropertyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class TestStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public TestStatus withDetails(String details) {
         this.details = details;
         return this;
@@ -29,9 +30,11 @@ public class TestStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TestStatusStatusEnum status;
+
     public TestStatus withStatus(TestStatusStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public TestStatus(){}
 }

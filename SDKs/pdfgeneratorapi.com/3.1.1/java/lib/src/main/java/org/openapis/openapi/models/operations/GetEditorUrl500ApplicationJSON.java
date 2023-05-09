@@ -18,6 +18,7 @@ public class GetEditorUrl500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public GetEditorUrl500ApplicationJSON withError(String error) {
         this.error = error;
         return this;
@@ -29,9 +30,11 @@ public class GetEditorUrl500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public GetEditorUrl500ApplicationJSON withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public GetEditorUrl500ApplicationJSON(){}
 }

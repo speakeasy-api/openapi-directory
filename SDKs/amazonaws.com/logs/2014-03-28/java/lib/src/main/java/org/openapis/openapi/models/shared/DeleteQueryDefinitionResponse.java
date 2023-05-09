@@ -15,9 +15,11 @@ public class DeleteQueryDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public DeleteQueryDefinitionResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public DeleteQueryDefinitionResponse(){}
 }

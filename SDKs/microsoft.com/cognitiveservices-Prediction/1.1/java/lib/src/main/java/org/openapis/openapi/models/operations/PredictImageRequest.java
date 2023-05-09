@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PredictImageRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Prediction-Key")
     public String predictionKey;
+
     public PredictImageRequest withPredictionKey(String predictionKey) {
         this.predictionKey = predictionKey;
         return this;
@@ -16,6 +18,7 @@ public class PredictImageRequest {
     
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PredictImageRequestBody requestBody;
+
     public PredictImageRequest withRequestBody(PredictImageRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -26,6 +29,7 @@ public class PredictImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application")
     public String application;
+
     public PredictImageRequest withApplication(String application) {
         this.application = application;
         return this;
@@ -37,6 +41,7 @@ public class PredictImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
     public String iterationId;
+
     public PredictImageRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -47,9 +52,15 @@ public class PredictImageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public PredictImageRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public PredictImageRequest(@JsonProperty("Prediction-Key") String predictionKey, @JsonProperty("RequestBody") PredictImageRequestBody requestBody, @JsonProperty("projectId") String projectId) {
+        this.predictionKey = predictionKey;
+        this.requestBody = requestBody;
+        this.projectId = projectId;
+  }
 }

@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriSecurity;
 import org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriRequest;
 import org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriResponse;
+import org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.IdentitytoolkitRelyingpartyCreateAuthUriRequest;
 
@@ -52,27 +51,29 @@ public class Application {
                     sessionId = "placeat";
                     tenantId = "voluptatum";
                     tenantProjectNumber = "iusto";
-                }};
-                alt = "json";
+                }};;
+                alt = AltEnum.JSON;
                 fields = "excepturi";
                 key = "nisi";
                 oauthToken = "recusandae";
                 prettyPrint = false;
                 quotaUser = "temporibus";
                 userIp = "ab";
-            }}            
+            }};            
 
-            IdentitytoolkitRelyingpartyCreateAuthUriResponse res = sdk.relyingparty.identitytoolkitRelyingpartyCreateAuthUri(req, new IdentitytoolkitRelyingpartyCreateAuthUriSecurity() {{
+            IdentitytoolkitRelyingpartyCreateAuthUriResponse res = sdk.relyingparty.identitytoolkitRelyingpartyCreateAuthUri(req, new IdentitytoolkitRelyingpartyCreateAuthUriSecurity("quis", "veritatis") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.createAuthUriResponse.isPresent()) {
+            if (res.createAuthUriResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -80,28 +81,28 @@ public class Application {
 ## Available Resources and Operations
 
 
-### relyingparty
+### [relyingparty](docs/relyingparty/README.md)
 
-* `identitytoolkitRelyingpartyCreateAuthUri` - Creates the URI used by the IdP to authenticate the user.
-* `identitytoolkitRelyingpartyDeleteAccount` - Delete user account.
-* `identitytoolkitRelyingpartyDownloadAccount` - Batch download user accounts.
-* `identitytoolkitRelyingpartyEmailLinkSignin` - Reset password for a user.
-* `identitytoolkitRelyingpartyGetAccountInfo` - Returns the account info.
-* `identitytoolkitRelyingpartyGetOobConfirmationCode` - Get a code for user action confirmation.
-* `identitytoolkitRelyingpartyGetProjectConfig` - Get project configuration.
-* `identitytoolkitRelyingpartyGetPublicKeys` - Get token signing public key.
-* `identitytoolkitRelyingpartyGetRecaptchaParam` - Get recaptcha secure param.
-* `identitytoolkitRelyingpartyResetPassword` - Reset password for a user.
-* `identitytoolkitRelyingpartySendVerificationCode` - Send SMS verification code.
-* `identitytoolkitRelyingpartySetAccountInfo` - Set account info for a user.
-* `identitytoolkitRelyingpartySetProjectConfig` - Set project configuration.
-* `identitytoolkitRelyingpartySignOutUser` - Sign out user.
-* `identitytoolkitRelyingpartySignupNewUser` - Signup new user.
-* `identitytoolkitRelyingpartyUploadAccount` - Batch upload existing user accounts.
-* `identitytoolkitRelyingpartyVerifyAssertion` - Verifies the assertion returned by the IdP.
-* `identitytoolkitRelyingpartyVerifyCustomToken` - Verifies the developer asserted ID token.
-* `identitytoolkitRelyingpartyVerifyPassword` - Verifies the user entered password.
-* `identitytoolkitRelyingpartyVerifyPhoneNumber` - Verifies ownership of a phone number and creates/updates the user account accordingly.
+* [identitytoolkitRelyingpartyCreateAuthUri](docs/relyingparty/README.md#identitytoolkitrelyingpartycreateauthuri) - Creates the URI used by the IdP to authenticate the user.
+* [identitytoolkitRelyingpartyDeleteAccount](docs/relyingparty/README.md#identitytoolkitrelyingpartydeleteaccount) - Delete user account.
+* [identitytoolkitRelyingpartyDownloadAccount](docs/relyingparty/README.md#identitytoolkitrelyingpartydownloadaccount) - Batch download user accounts.
+* [identitytoolkitRelyingpartyEmailLinkSignin](docs/relyingparty/README.md#identitytoolkitrelyingpartyemaillinksignin) - Reset password for a user.
+* [identitytoolkitRelyingpartyGetAccountInfo](docs/relyingparty/README.md#identitytoolkitrelyingpartygetaccountinfo) - Returns the account info.
+* [identitytoolkitRelyingpartyGetOobConfirmationCode](docs/relyingparty/README.md#identitytoolkitrelyingpartygetoobconfirmationcode) - Get a code for user action confirmation.
+* [identitytoolkitRelyingpartyGetProjectConfig](docs/relyingparty/README.md#identitytoolkitrelyingpartygetprojectconfig) - Get project configuration.
+* [identitytoolkitRelyingpartyGetPublicKeys](docs/relyingparty/README.md#identitytoolkitrelyingpartygetpublickeys) - Get token signing public key.
+* [identitytoolkitRelyingpartyGetRecaptchaParam](docs/relyingparty/README.md#identitytoolkitrelyingpartygetrecaptchaparam) - Get recaptcha secure param.
+* [identitytoolkitRelyingpartyResetPassword](docs/relyingparty/README.md#identitytoolkitrelyingpartyresetpassword) - Reset password for a user.
+* [identitytoolkitRelyingpartySendVerificationCode](docs/relyingparty/README.md#identitytoolkitrelyingpartysendverificationcode) - Send SMS verification code.
+* [identitytoolkitRelyingpartySetAccountInfo](docs/relyingparty/README.md#identitytoolkitrelyingpartysetaccountinfo) - Set account info for a user.
+* [identitytoolkitRelyingpartySetProjectConfig](docs/relyingparty/README.md#identitytoolkitrelyingpartysetprojectconfig) - Set project configuration.
+* [identitytoolkitRelyingpartySignOutUser](docs/relyingparty/README.md#identitytoolkitrelyingpartysignoutuser) - Sign out user.
+* [identitytoolkitRelyingpartySignupNewUser](docs/relyingparty/README.md#identitytoolkitrelyingpartysignupnewuser) - Signup new user.
+* [identitytoolkitRelyingpartyUploadAccount](docs/relyingparty/README.md#identitytoolkitrelyingpartyuploadaccount) - Batch upload existing user accounts.
+* [identitytoolkitRelyingpartyVerifyAssertion](docs/relyingparty/README.md#identitytoolkitrelyingpartyverifyassertion) - Verifies the assertion returned by the IdP.
+* [identitytoolkitRelyingpartyVerifyCustomToken](docs/relyingparty/README.md#identitytoolkitrelyingpartyverifycustomtoken) - Verifies the developer asserted ID token.
+* [identitytoolkitRelyingpartyVerifyPassword](docs/relyingparty/README.md#identitytoolkitrelyingpartyverifypassword) - Verifies the user entered password.
+* [identitytoolkitRelyingpartyVerifyPhoneNumber](docs/relyingparty/README.md#identitytoolkitrelyingpartyverifyphonenumber) - Verifies ownership of a phone number and creates/updates the user account accordingly.
 <!-- End SDK Available Operations -->
 
 ### Maturity

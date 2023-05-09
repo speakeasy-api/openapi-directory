@@ -15,6 +15,7 @@ public class ListChannelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelSummaries")
     public ChannelSummary[] channelSummaries;
+
     public ListChannelsResponse withChannelSummaries(ChannelSummary[] channelSummaries) {
         this.channelSummaries = channelSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListChannelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListChannelsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListChannelsResponse(){}
 }

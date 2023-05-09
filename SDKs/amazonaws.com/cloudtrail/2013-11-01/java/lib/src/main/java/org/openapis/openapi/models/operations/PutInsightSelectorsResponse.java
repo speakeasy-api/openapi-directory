@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutInsightSelectorsResponse {
@@ -12,6 +13,7 @@ public class PutInsightSelectorsResponse {
      */
     
     public Object cloudTrailARNInvalidException;
+
     public PutInsightSelectorsResponse withCloudTrailARNInvalidException(Object cloudTrailARNInvalidException) {
         this.cloudTrailARNInvalidException = cloudTrailARNInvalidException;
         return this;
@@ -19,6 +21,7 @@ public class PutInsightSelectorsResponse {
     
     
     public String contentType;
+
     public PutInsightSelectorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutInsightSelectorsResponse {
      */
     
     public Object insufficientEncryptionPolicyException;
+
     public PutInsightSelectorsResponse withInsufficientEncryptionPolicyException(Object insufficientEncryptionPolicyException) {
         this.insufficientEncryptionPolicyException = insufficientEncryptionPolicyException;
         return this;
@@ -39,6 +43,7 @@ public class PutInsightSelectorsResponse {
      */
     
     public Object insufficientS3BucketPolicyException;
+
     public PutInsightSelectorsResponse withInsufficientS3BucketPolicyException(Object insufficientS3BucketPolicyException) {
         this.insufficientS3BucketPolicyException = insufficientS3BucketPolicyException;
         return this;
@@ -49,6 +54,7 @@ public class PutInsightSelectorsResponse {
      */
     
     public Object invalidHomeRegionException;
+
     public PutInsightSelectorsResponse withInvalidHomeRegionException(Object invalidHomeRegionException) {
         this.invalidHomeRegionException = invalidHomeRegionException;
         return this;
@@ -59,6 +65,7 @@ public class PutInsightSelectorsResponse {
      */
     
     public Object invalidInsightSelectorsException;
+
     public PutInsightSelectorsResponse withInvalidInsightSelectorsException(Object invalidInsightSelectorsException) {
         this.invalidInsightSelectorsException = invalidInsightSelectorsException;
         return this;
@@ -69,6 +76,7 @@ public class PutInsightSelectorsResponse {
      */
     
     public Object invalidTrailNameException;
+
     public PutInsightSelectorsResponse withInvalidTrailNameException(Object invalidTrailNameException) {
         this.invalidTrailNameException = invalidTrailNameException;
         return this;
@@ -79,6 +87,7 @@ public class PutInsightSelectorsResponse {
      */
     
     public Object kmsException;
+
     public PutInsightSelectorsResponse withKmsException(Object kmsException) {
         this.kmsException = kmsException;
         return this;
@@ -89,6 +98,7 @@ public class PutInsightSelectorsResponse {
      */
     
     public Object noManagementAccountSLRExistsException;
+
     public PutInsightSelectorsResponse withNoManagementAccountSLRExistsException(Object noManagementAccountSLRExistsException) {
         this.noManagementAccountSLRExistsException = noManagementAccountSLRExistsException;
         return this;
@@ -99,6 +109,7 @@ public class PutInsightSelectorsResponse {
      */
     
     public Object notOrganizationMasterAccountException;
+
     public PutInsightSelectorsResponse withNotOrganizationMasterAccountException(Object notOrganizationMasterAccountException) {
         this.notOrganizationMasterAccountException = notOrganizationMasterAccountException;
         return this;
@@ -109,6 +120,7 @@ public class PutInsightSelectorsResponse {
      */
     
     public Object operationNotPermittedException;
+
     public PutInsightSelectorsResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -119,6 +131,7 @@ public class PutInsightSelectorsResponse {
      */
     
     public org.openapis.openapi.models.shared.PutInsightSelectorsResponse putInsightSelectorsResponse;
+
     public PutInsightSelectorsResponse withPutInsightSelectorsResponse(org.openapis.openapi.models.shared.PutInsightSelectorsResponse putInsightSelectorsResponse) {
         this.putInsightSelectorsResponse = putInsightSelectorsResponse;
         return this;
@@ -129,6 +142,7 @@ public class PutInsightSelectorsResponse {
      */
     
     public Object s3BucketDoesNotExistException;
+
     public PutInsightSelectorsResponse withS3BucketDoesNotExistException(Object s3BucketDoesNotExistException) {
         this.s3BucketDoesNotExistException = s3BucketDoesNotExistException;
         return this;
@@ -136,6 +150,7 @@ public class PutInsightSelectorsResponse {
     
     
     public Integer statusCode;
+
     public PutInsightSelectorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -143,6 +158,7 @@ public class PutInsightSelectorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutInsightSelectorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -153,6 +169,7 @@ public class PutInsightSelectorsResponse {
      */
     
     public Object trailNotFoundException;
+
     public PutInsightSelectorsResponse withTrailNotFoundException(Object trailNotFoundException) {
         this.trailNotFoundException = trailNotFoundException;
         return this;
@@ -163,9 +180,14 @@ public class PutInsightSelectorsResponse {
      */
     
     public Object unsupportedOperationException;
+
     public PutInsightSelectorsResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public PutInsightSelectorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

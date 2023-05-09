@@ -20,6 +20,7 @@ public class EphemerisMetaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ephemerisId")
     public String ephemerisId;
+
     public EphemerisMetaData withEphemerisId(String ephemerisId) {
         this.ephemerisId = ephemerisId;
         return this;
@@ -30,6 +31,7 @@ public class EphemerisMetaData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("epoch")
     public OffsetDateTime epoch;
+
     public EphemerisMetaData withEpoch(OffsetDateTime epoch) {
         this.epoch = epoch;
         return this;
@@ -38,6 +40,7 @@ public class EphemerisMetaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EphemerisMetaData withName(String name) {
         this.name = name;
         return this;
@@ -45,9 +48,13 @@ public class EphemerisMetaData {
     
     @JsonProperty("source")
     public EphemerisSourceEnum source;
+
     public EphemerisMetaData withSource(EphemerisSourceEnum source) {
         this.source = source;
         return this;
     }
     
+    public EphemerisMetaData(@JsonProperty("source") EphemerisSourceEnum source) {
+        this.source = source;
+  }
 }

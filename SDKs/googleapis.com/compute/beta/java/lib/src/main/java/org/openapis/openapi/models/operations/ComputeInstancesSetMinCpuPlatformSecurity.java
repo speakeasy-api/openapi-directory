@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeInstancesSetMinCpuPlatformSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstancesSetMinCpuPlatformSecurityOption1 option1;
+
     public ComputeInstancesSetMinCpuPlatformSecurity withOption1(ComputeInstancesSetMinCpuPlatformSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeInstancesSetMinCpuPlatformSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstancesSetMinCpuPlatformSecurityOption2 option2;
+
     public ComputeInstancesSetMinCpuPlatformSecurity withOption2(ComputeInstancesSetMinCpuPlatformSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeInstancesSetMinCpuPlatformSecurity(){}
 }

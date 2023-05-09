@@ -18,6 +18,7 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiEndpoint")
     public ApiEndpointHandler apiEndpoint;
+
     public UrlMap withApiEndpoint(ApiEndpointHandler apiEndpoint) {
         this.apiEndpoint = apiEndpoint;
         return this;
@@ -29,6 +30,7 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authFailAction")
     public UrlMapAuthFailActionEnum authFailAction;
+
     public UrlMap withAuthFailAction(UrlMapAuthFailActionEnum authFailAction) {
         this.authFailAction = authFailAction;
         return this;
@@ -40,6 +42,7 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("login")
     public UrlMapLoginEnum login;
+
     public UrlMap withLogin(UrlMapLoginEnum login) {
         this.login = login;
         return this;
@@ -51,6 +54,7 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectHttpResponseCode")
     public UrlMapRedirectHttpResponseCodeEnum redirectHttpResponseCode;
+
     public UrlMap withRedirectHttpResponseCode(UrlMapRedirectHttpResponseCodeEnum redirectHttpResponseCode) {
         this.redirectHttpResponseCode = redirectHttpResponseCode;
         return this;
@@ -62,6 +66,7 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public ScriptHandler script;
+
     public UrlMap withScript(ScriptHandler script) {
         this.script = script;
         return this;
@@ -73,6 +78,7 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityLevel")
     public UrlMapSecurityLevelEnum securityLevel;
+
     public UrlMap withSecurityLevel(UrlMapSecurityLevelEnum securityLevel) {
         this.securityLevel = securityLevel;
         return this;
@@ -84,6 +90,7 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("staticFiles")
     public StaticFilesHandler staticFiles;
+
     public UrlMap withStaticFiles(StaticFilesHandler staticFiles) {
         this.staticFiles = staticFiles;
         return this;
@@ -95,9 +102,11 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlRegex")
     public String urlRegex;
+
     public UrlMap withUrlRegex(String urlRegex) {
         this.urlRegex = urlRegex;
         return this;
     }
     
+    public UrlMap(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSourceCredentialsResponse {
     
     public String contentType;
+
     public ListSourceCredentialsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSourceCredentialsResponse {
      */
     
     public Object invalidInputException;
+
     public ListSourceCredentialsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class ListSourceCredentialsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSourceCredentialsOutput listSourceCredentialsOutput;
+
     public ListSourceCredentialsResponse withListSourceCredentialsOutput(org.openapis.openapi.models.shared.ListSourceCredentialsOutput listSourceCredentialsOutput) {
         this.listSourceCredentialsOutput = listSourceCredentialsOutput;
         return this;
@@ -36,6 +40,7 @@ public class ListSourceCredentialsResponse {
     
     
     public Integer statusCode;
+
     public ListSourceCredentialsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListSourceCredentialsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSourceCredentialsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListSourceCredentialsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

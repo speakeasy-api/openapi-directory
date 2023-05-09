@@ -35,7 +35,7 @@ public class SKUBindings {
      * Activate SKU Binding
      * Changes the status of an SKU Binding to active, setting `isActive` to `true`.
      * 
-     *  &gt; \u2139 This path is an updated version of `/api/catalog_system/pvt/skuseller/activate/{sellerId}/{skuSellerId}`.
+     *  &gt; ℹ This path is an updated version of `/api/catalog_system/pvt/skuseller/activate/{sellerId}/{skuSellerId}`.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -63,10 +63,8 @@ public class SKUBindings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActivateSKUBindingResponse res = new org.openapis.openapi.models.operations.ActivateSKUBindingResponse() {{
+        org.openapis.openapi.models.operations.ActivateSKUBindingResponse res = new org.openapis.openapi.models.operations.ActivateSKUBindingResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -79,7 +77,7 @@ public class SKUBindings {
      * Bind a seller's SKU to another SKU
      * Associates a seller's SKU to another marketplace SKU.
      * 
-     *  &gt; \u2139 This path is an updated version of `/api/catalog_system/pvt/skuseller/{sellerId}/{sellerSkuId}`.
+     *  &gt; ℹ This path is an updated version of `/api/catalog_system/pvt/skuseller/{sellerId}/{sellerSkuId}`.
      * 
      * ## Request body example
      * 
@@ -117,10 +115,8 @@ public class SKUBindings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BindtoanotherskuResponse res = new org.openapis.openapi.models.operations.BindtoanotherskuResponse() {{
+        org.openapis.openapi.models.operations.BindtoanotherskuResponse res = new org.openapis.openapi.models.operations.BindtoanotherskuResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -137,7 +133,7 @@ public class SKUBindings {
      * 
      * The body of the request should be empty.
      * 
-     *  &gt; \u2139 This path is an updated version of `/api/catalog_system/pvt/skuseller/changenotification/{skuId}`.
+     *  &gt; ℹ This path is an updated version of `/api/catalog_system/pvt/skuseller/changenotification/{skuId}`.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -165,10 +161,8 @@ public class SKUBindings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeNotificationResponse res = new org.openapis.openapi.models.operations.ChangeNotificationResponse() {{
+        org.openapis.openapi.models.operations.ChangeNotificationResponse res = new org.openapis.openapi.models.operations.ChangeNotificationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
@@ -181,7 +175,7 @@ public class SKUBindings {
      * Deactivate SKU Binding
      * Changes the status of an SKU Binding to inactive, setting `isActive` to `false`.
      * 
-     *   &gt; \u2139 This path is an updated version of `/api/catalog_system/pvt/skuseller/inactivate/{sellerId}/{skuSellerId}`.
+     *   &gt; ℹ This path is an updated version of `/api/catalog_system/pvt/skuseller/inactivate/{sellerId}/{skuSellerId}`.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -209,10 +203,8 @@ public class SKUBindings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeactivateSKUBindingResponse res = new org.openapis.openapi.models.operations.DeactivateSKUBindingResponse() {{
+        org.openapis.openapi.models.operations.DeactivateSKUBindingResponse res = new org.openapis.openapi.models.operations.DeactivateSKUBindingResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -225,7 +217,7 @@ public class SKUBindings {
      * Remove a seller's SKU Binding
      * Remove a seller's SKU binding, given the Seller ID and the SKU ID in the seller's store.
      * 
-     *   &gt; \u2139 This path is an updated version of `/api/catalog_system/pvt/skuseller/remove/{sellerId}/{sellerSkuId}`.
+     *   &gt; ℹ This path is an updated version of `/api/catalog_system/pvt/skuseller/remove/{sellerId}/{sellerSkuId}`.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -253,10 +245,8 @@ public class SKUBindings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSKUsellerassociationResponse res = new org.openapis.openapi.models.operations.DeleteSKUsellerassociationResponse() {{
+        org.openapis.openapi.models.operations.DeleteSKUsellerassociationResponse res = new org.openapis.openapi.models.operations.DeleteSKUsellerassociationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -269,7 +259,7 @@ public class SKUBindings {
      * Get details of a seller's SKU
      * Retrieves the details of a seller's SKU given a seller ID and the SKU ID in the seller's store. 
      * 
-     *  &gt; \u2139 This path is an updated version of `/api/catalog_system/pvt/skuseller/{sellerId}/{sellerSkuId}`.
+     *  &gt; ℹ This path is an updated version of `/api/catalog_system/pvt/skuseller/{sellerId}/{sellerSkuId}`.
      * 
      * ## Response body example
      * 
@@ -313,11 +303,9 @@ public class SKUBindings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSKUsellerResponse res = new org.openapis.openapi.models.operations.GetSKUsellerResponse() {{
+        org.openapis.openapi.models.operations.GetSKUsellerResponse res = new org.openapis.openapi.models.operations.GetSKUsellerResponse(contentType, httpRes.statusCode()) {{
             getSKUseller200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -335,7 +323,7 @@ public class SKUBindings {
      * Get all SKU Bindings by Seller ID
      * Retrieves a list of SKU Bindings given a specific Seller ID. 
      * 
-     *  &gt; \u2139 This path is an updated version of `/api/catalog_system/pvt/skuseller/list/bysellerId/{sellerId}`.
+     *  &gt; ℹ This path is an updated version of `/api/catalog_system/pvt/skuseller/list/bysellerId/{sellerId}`.
      * 
      * ## Response body example
      * 
@@ -378,11 +366,9 @@ public class SKUBindings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetallbySellerIdResponse res = new org.openapis.openapi.models.operations.GetallbySellerIdResponse() {{
+        org.openapis.openapi.models.operations.GetallbySellerIdResponse res = new org.openapis.openapi.models.operations.GetallbySellerIdResponse(contentType, httpRes.statusCode()) {{
             getallbySellerId200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -442,11 +428,9 @@ public class SKUBindings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetbySkuIdResponse res = new org.openapis.openapi.models.operations.GetbySkuIdResponse() {{
+        org.openapis.openapi.models.operations.GetbySkuIdResponse res = new org.openapis.openapi.models.operations.GetbySkuIdResponse(contentType, httpRes.statusCode()) {{
             getbySkuId200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -464,7 +448,7 @@ public class SKUBindings {
      * Get SKU Bindings information
      * Retrieves SKU Bindings administrative information using optional query params `sellerId`, `skuId`, `sellerSkuId` and `IsActive` to filter results and `size` to restrict the amount of results. 
      * 
-     *  &gt; \u2139 This path is an updated version of `/api/catalog_system/pvt/skuseller/admin`.
+     *  &gt; ℹ This path is an updated version of `/api/catalog_system/pvt/skuseller/admin`.
      * 
      * ## Response body example
      * 
@@ -516,11 +500,9 @@ public class SKUBindings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetpagedadminResponse res = new org.openapis.openapi.models.operations.GetpagedadminResponse() {{
+        org.openapis.openapi.models.operations.GetpagedadminResponse res = new org.openapis.openapi.models.operations.GetpagedadminResponse(contentType, httpRes.statusCode()) {{
             getpagedadmin200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -538,7 +520,7 @@ public class SKUBindings {
      * Get paged SKU Bindings by Seller ID
      * Retrieves a paged list of SKU Bindings given a specific Seller ID. 
      * 
-     *  &gt; \u2139 This path is an updated version of `/api/catalog_system/pvt/skuseller/paged/sellerid/{sellerId}`.
+     *  &gt; ℹ This path is an updated version of `/api/catalog_system/pvt/skuseller/paged/sellerid/{sellerId}`.
      * 
      * ## Response body example
      * 
@@ -595,11 +577,9 @@ public class SKUBindings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetpagedbySellerIdResponse res = new org.openapis.openapi.models.operations.GetpagedbySellerIdResponse() {{
+        org.openapis.openapi.models.operations.GetpagedbySellerIdResponse res = new org.openapis.openapi.models.operations.GetpagedbySellerIdResponse(contentType, httpRes.statusCode()) {{
             getpagedbySellerId200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -617,7 +597,7 @@ public class SKUBindings {
      * Insert SKU Binding
      * Creates an SKU Binding, associating a seller's SKU with a marketplace's SKU.
      * 
-     *  &gt; \u2139 This path is an updated version of `/api/catalog_system/pvt/skuseller/insertion`.
+     *  &gt; ℹ This path is an updated version of `/api/catalog_system/pvt/skuseller/insertion`.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -650,10 +630,8 @@ public class SKUBindings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InsertSKUBindingResponse res = new org.openapis.openapi.models.operations.InsertSKUBindingResponse() {{
+        org.openapis.openapi.models.operations.InsertSKUBindingResponse res = new org.openapis.openapi.models.operations.InsertSKUBindingResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 409) {
@@ -671,7 +649,7 @@ public class SKUBindings {
      * There are two information expected by the marketplace in this request: the `sellerId`, which identifies the seller, and the `sellerSkuId`, which identifies the binding of the seller with the SKU.
      * 
      * Both information are passed through the request URL. The body of the request should be empty.
-     *  &gt; \u2139 This path is an updated version of `/api/catalog_system/pvt/skuseller/changenotification/{sellerId}/{sellerSkuId}`.
+     *  &gt; ℹ This path is an updated version of `/api/catalog_system/pvt/skuseller/changenotification/{sellerId}/{sellerSkuId}`.
      * 
      * ## Example
      * 
@@ -717,10 +695,8 @@ public class SKUBindings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSkuBindingPvtSkusellerChangenotificationSellerIdSellerSkuIdResponse res = new org.openapis.openapi.models.operations.PostSkuBindingPvtSkusellerChangenotificationSellerIdSellerSkuIdResponse() {{
+        org.openapis.openapi.models.operations.PostSkuBindingPvtSkusellerChangenotificationSellerIdSellerSkuIdResponse res = new org.openapis.openapi.models.operations.PostSkuBindingPvtSkusellerChangenotificationSellerIdSellerSkuIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {

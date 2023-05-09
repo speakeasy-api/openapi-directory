@@ -18,6 +18,7 @@ public class GoogleFirebaseAppdistroV1FeedbackReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleFirebaseAppdistroV1FeedbackReport withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleFirebaseAppdistroV1FeedbackReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firebaseConsoleUri")
     public String firebaseConsoleUri;
+
     public GoogleFirebaseAppdistroV1FeedbackReport withFirebaseConsoleUri(String firebaseConsoleUri) {
         this.firebaseConsoleUri = firebaseConsoleUri;
         return this;
@@ -40,6 +42,7 @@ public class GoogleFirebaseAppdistroV1FeedbackReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleFirebaseAppdistroV1FeedbackReport withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GoogleFirebaseAppdistroV1FeedbackReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenshotUri")
     public String screenshotUri;
+
     public GoogleFirebaseAppdistroV1FeedbackReport withScreenshotUri(String screenshotUri) {
         this.screenshotUri = screenshotUri;
         return this;
@@ -62,6 +66,7 @@ public class GoogleFirebaseAppdistroV1FeedbackReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tester")
     public String tester;
+
     public GoogleFirebaseAppdistroV1FeedbackReport withTester(String tester) {
         this.tester = tester;
         return this;
@@ -73,9 +78,11 @@ public class GoogleFirebaseAppdistroV1FeedbackReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleFirebaseAppdistroV1FeedbackReport withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GoogleFirebaseAppdistroV1FeedbackReport(){}
 }

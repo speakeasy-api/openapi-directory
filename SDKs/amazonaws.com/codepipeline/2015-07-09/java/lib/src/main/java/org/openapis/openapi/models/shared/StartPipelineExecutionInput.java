@@ -15,6 +15,7 @@ public class StartPipelineExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public StartPipelineExecutionInput withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -22,9 +23,13 @@ public class StartPipelineExecutionInput {
     
     @JsonProperty("name")
     public String name;
+
     public StartPipelineExecutionInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StartPipelineExecutionInput(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

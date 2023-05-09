@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QueryPredictionsFormRequest {
@@ -12,6 +13,7 @@ public class QueryPredictionsFormRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.PredictionQueryTokenInput predictionQueryTokenInput;
+
     public QueryPredictionsFormRequest withPredictionQueryTokenInput(org.openapis.openapi.models.shared.PredictionQueryTokenInput predictionQueryTokenInput) {
         this.predictionQueryTokenInput = predictionQueryTokenInput;
         return this;
@@ -22,6 +24,7 @@ public class QueryPredictionsFormRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
     public String trainingKey;
+
     public QueryPredictionsFormRequest withTrainingKey(String trainingKey) {
         this.trainingKey = trainingKey;
         return this;
@@ -32,9 +35,15 @@ public class QueryPredictionsFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public QueryPredictionsFormRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public QueryPredictionsFormRequest(@JsonProperty("PredictionQueryTokenInput") org.openapis.openapi.models.shared.PredictionQueryTokenInput predictionQueryTokenInput, @JsonProperty("Training-Key") String trainingKey, @JsonProperty("projectId") String projectId) {
+        this.predictionQueryTokenInput = predictionQueryTokenInput;
+        this.trainingKey = trainingKey;
+        this.projectId = projectId;
+  }
 }

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
     public String djangoRestToken;
+
     public Security withDjangoRestToken(String djangoRestToken) {
         this.djangoRestToken = djangoRestToken;
         return this;
     }
     
+    public Security(@JsonProperty("DjangoRestToken") String djangoRestToken) {
+        this.djangoRestToken = djangoRestToken;
+  }
 }

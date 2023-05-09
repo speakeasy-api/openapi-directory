@@ -12,6 +12,7 @@ public class PeopleContactGroupsBatchGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public PeopleContactGroupsBatchGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class PeopleContactGroupsBatchGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public PeopleContactGroupsBatchGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class PeopleContactGroupsBatchGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public PeopleContactGroupsBatchGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class PeopleContactGroupsBatchGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public PeopleContactGroupsBatchGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +56,7 @@ public class PeopleContactGroupsBatchGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public PeopleContactGroupsBatchGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +67,7 @@ public class PeopleContactGroupsBatchGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupFields")
     public String groupFields;
+
     public PeopleContactGroupsBatchGetRequest withGroupFields(String groupFields) {
         this.groupFields = groupFields;
         return this;
@@ -72,6 +78,7 @@ public class PeopleContactGroupsBatchGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public PeopleContactGroupsBatchGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +89,7 @@ public class PeopleContactGroupsBatchGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxMembers")
     public Long maxMembers;
+
     public PeopleContactGroupsBatchGetRequest withMaxMembers(Long maxMembers) {
         this.maxMembers = maxMembers;
         return this;
@@ -92,6 +100,7 @@ public class PeopleContactGroupsBatchGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public PeopleContactGroupsBatchGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +111,7 @@ public class PeopleContactGroupsBatchGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public PeopleContactGroupsBatchGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +122,7 @@ public class PeopleContactGroupsBatchGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public PeopleContactGroupsBatchGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +133,7 @@ public class PeopleContactGroupsBatchGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceNames")
     public String[] resourceNames;
+
     public PeopleContactGroupsBatchGetRequest withResourceNames(String[] resourceNames) {
         this.resourceNames = resourceNames;
         return this;
@@ -132,6 +144,7 @@ public class PeopleContactGroupsBatchGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public PeopleContactGroupsBatchGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +155,11 @@ public class PeopleContactGroupsBatchGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public PeopleContactGroupsBatchGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public PeopleContactGroupsBatchGetRequest(){}
 }

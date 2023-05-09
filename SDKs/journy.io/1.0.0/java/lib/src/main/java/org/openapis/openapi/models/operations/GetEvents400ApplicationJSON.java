@@ -15,6 +15,7 @@ public class GetEvents400ApplicationJSON {
      */
     @JsonProperty("errors")
     public GetEvents400ApplicationJSONErrors errors;
+
     public GetEvents400ApplicationJSON withErrors(GetEvents400ApplicationJSONErrors errors) {
         this.errors = errors;
         return this;
@@ -22,6 +23,7 @@ public class GetEvents400ApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public GetEvents400ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -29,9 +31,15 @@ public class GetEvents400ApplicationJSON {
     
     @JsonProperty("meta")
     public GetEvents400ApplicationJSONMeta meta;
+
     public GetEvents400ApplicationJSON withMeta(GetEvents400ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetEvents400ApplicationJSON(@JsonProperty("errors") GetEvents400ApplicationJSONErrors errors, @JsonProperty("message") String message, @JsonProperty("meta") GetEvents400ApplicationJSONMeta meta) {
+        this.errors = errors;
+        this.message = message;
+        this.meta = meta;
+  }
 }

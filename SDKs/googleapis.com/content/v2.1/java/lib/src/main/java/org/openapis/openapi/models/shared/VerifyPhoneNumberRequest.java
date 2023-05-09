@@ -18,6 +18,7 @@ public class VerifyPhoneNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneVerificationMethod")
     public VerifyPhoneNumberRequestPhoneVerificationMethodEnum phoneVerificationMethod;
+
     public VerifyPhoneNumberRequest withPhoneVerificationMethod(VerifyPhoneNumberRequestPhoneVerificationMethodEnum phoneVerificationMethod) {
         this.phoneVerificationMethod = phoneVerificationMethod;
         return this;
@@ -29,6 +30,7 @@ public class VerifyPhoneNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationCode")
     public String verificationCode;
+
     public VerifyPhoneNumberRequest withVerificationCode(String verificationCode) {
         this.verificationCode = verificationCode;
         return this;
@@ -40,9 +42,11 @@ public class VerifyPhoneNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationId")
     public String verificationId;
+
     public VerifyPhoneNumberRequest withVerificationId(String verificationId) {
         this.verificationId = verificationId;
         return this;
     }
     
+    public VerifyPhoneNumberRequest(){}
 }

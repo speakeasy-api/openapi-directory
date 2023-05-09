@@ -15,6 +15,7 @@ public class DescribeApplicableIndividualAssessmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndividualAssessmentNames")
     public String[] individualAssessmentNames;
+
     public DescribeApplicableIndividualAssessmentsResponse withIndividualAssessmentNames(String[] individualAssessmentNames) {
         this.individualAssessmentNames = individualAssessmentNames;
         return this;
@@ -23,9 +24,11 @@ public class DescribeApplicableIndividualAssessmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeApplicableIndividualAssessmentsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public DescribeApplicableIndividualAssessmentsResponse(){}
 }

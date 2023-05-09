@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaSearchResponseFacet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamicFacet")
     public Boolean dynamicFacet;
+
     public GoogleCloudRetailV2betaSearchResponseFacet withDynamicFacet(Boolean dynamicFacet) {
         this.dynamicFacet = dynamicFacet;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2betaSearchResponseFacet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GoogleCloudRetailV2betaSearchResponseFacet withKey(String key) {
         this.key = key;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRetailV2betaSearchResponseFacet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public GoogleCloudRetailV2betaSearchResponseFacetFacetValue[] values;
+
     public GoogleCloudRetailV2betaSearchResponseFacet withValues(GoogleCloudRetailV2betaSearchResponseFacetFacetValue[] values) {
         this.values = values;
         return this;
     }
     
+    public GoogleCloudRetailV2betaSearchResponseFacet(){}
 }

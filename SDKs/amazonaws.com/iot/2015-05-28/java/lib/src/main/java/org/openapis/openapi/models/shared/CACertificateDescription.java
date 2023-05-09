@@ -20,6 +20,7 @@ public class CACertificateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoRegistrationStatus")
     public AutoRegistrationStatusEnum autoRegistrationStatus;
+
     public CACertificateDescription withAutoRegistrationStatus(AutoRegistrationStatusEnum autoRegistrationStatus) {
         this.autoRegistrationStatus = autoRegistrationStatus;
         return this;
@@ -28,6 +29,7 @@ public class CACertificateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateArn")
     public String certificateArn;
+
     public CACertificateDescription withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -36,6 +38,7 @@ public class CACertificateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateId")
     public String certificateId;
+
     public CACertificateDescription withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -44,6 +47,7 @@ public class CACertificateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateMode")
     public CertificateModeEnum certificateMode;
+
     public CACertificateDescription withCertificateMode(CertificateModeEnum certificateMode) {
         this.certificateMode = certificateMode;
         return this;
@@ -52,6 +56,7 @@ public class CACertificateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificatePem")
     public String certificatePem;
+
     public CACertificateDescription withCertificatePem(String certificatePem) {
         this.certificatePem = certificatePem;
         return this;
@@ -62,6 +67,7 @@ public class CACertificateDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public CACertificateDescription withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -70,6 +76,7 @@ public class CACertificateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerVersion")
     public Long customerVersion;
+
     public CACertificateDescription withCustomerVersion(Long customerVersion) {
         this.customerVersion = customerVersion;
         return this;
@@ -78,6 +85,7 @@ public class CACertificateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generationId")
     public String generationId;
+
     public CACertificateDescription withGenerationId(String generationId) {
         this.generationId = generationId;
         return this;
@@ -88,6 +96,7 @@ public class CACertificateDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public CACertificateDescription withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -96,6 +105,7 @@ public class CACertificateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownedBy")
     public String ownedBy;
+
     public CACertificateDescription withOwnedBy(String ownedBy) {
         this.ownedBy = ownedBy;
         return this;
@@ -104,6 +114,7 @@ public class CACertificateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CACertificateStatusEnum status;
+
     public CACertificateDescription withStatus(CACertificateStatusEnum status) {
         this.status = status;
         return this;
@@ -112,9 +123,11 @@ public class CACertificateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validity")
     public CertificateValidity validity;
+
     public CACertificateDescription withValidity(CertificateValidity validity) {
         this.validity = validity;
         return this;
     }
     
+    public CACertificateDescription(){}
 }

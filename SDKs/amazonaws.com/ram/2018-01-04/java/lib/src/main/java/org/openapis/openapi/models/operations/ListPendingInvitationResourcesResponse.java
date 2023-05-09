@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPendingInvitationResourcesResponse {
     
     public String contentType;
+
     public ListPendingInvitationResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListPendingInvitationResourcesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListPendingInvitationResourcesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListPendingInvitationResourcesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListPendingInvitationResourcesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListPendingInvitationResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPendingInvitationResourcesResponse listPendingInvitationResourcesResponse;
+
     public ListPendingInvitationResourcesResponse withListPendingInvitationResourcesResponse(org.openapis.openapi.models.shared.ListPendingInvitationResourcesResponse listPendingInvitationResourcesResponse) {
         this.listPendingInvitationResourcesResponse = listPendingInvitationResourcesResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListPendingInvitationResourcesResponse {
      */
     
     public Object malformedArnException;
+
     public ListPendingInvitationResourcesResponse withMalformedArnException(Object malformedArnException) {
         this.malformedArnException = malformedArnException;
         return this;
@@ -59,6 +65,7 @@ public class ListPendingInvitationResourcesResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public ListPendingInvitationResourcesResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -69,6 +76,7 @@ public class ListPendingInvitationResourcesResponse {
      */
     
     public Object resourceShareInvitationAlreadyRejectedException;
+
     public ListPendingInvitationResourcesResponse withResourceShareInvitationAlreadyRejectedException(Object resourceShareInvitationAlreadyRejectedException) {
         this.resourceShareInvitationAlreadyRejectedException = resourceShareInvitationAlreadyRejectedException;
         return this;
@@ -79,6 +87,7 @@ public class ListPendingInvitationResourcesResponse {
      */
     
     public Object resourceShareInvitationArnNotFoundException;
+
     public ListPendingInvitationResourcesResponse withResourceShareInvitationArnNotFoundException(Object resourceShareInvitationArnNotFoundException) {
         this.resourceShareInvitationArnNotFoundException = resourceShareInvitationArnNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class ListPendingInvitationResourcesResponse {
      */
     
     public Object resourceShareInvitationExpiredException;
+
     public ListPendingInvitationResourcesResponse withResourceShareInvitationExpiredException(Object resourceShareInvitationExpiredException) {
         this.resourceShareInvitationExpiredException = resourceShareInvitationExpiredException;
         return this;
@@ -99,6 +109,7 @@ public class ListPendingInvitationResourcesResponse {
      */
     
     public Object serverInternalException;
+
     public ListPendingInvitationResourcesResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -109,6 +120,7 @@ public class ListPendingInvitationResourcesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListPendingInvitationResourcesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -116,6 +128,7 @@ public class ListPendingInvitationResourcesResponse {
     
     
     public Integer statusCode;
+
     public ListPendingInvitationResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,9 +136,14 @@ public class ListPendingInvitationResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPendingInvitationResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListPendingInvitationResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

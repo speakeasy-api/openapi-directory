@@ -19,6 +19,7 @@ public class GetSeasons400ApplicationVndApiPlusJsonErrorsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter")
     public String parameter;
+
     public GetSeasons400ApplicationVndApiPlusJsonErrorsSource withParameter(String parameter) {
         this.parameter = parameter;
         return this;
@@ -31,9 +32,11 @@ public class GetSeasons400ApplicationVndApiPlusJsonErrorsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointer")
     public String pointer;
+
     public GetSeasons400ApplicationVndApiPlusJsonErrorsSource withPointer(String pointer) {
         this.pointer = pointer;
         return this;
     }
     
+    public GetSeasons400ApplicationVndApiPlusJsonErrorsSource(){}
 }

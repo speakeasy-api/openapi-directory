@@ -15,6 +15,7 @@ public class GetUsers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public GetUsers200ApplicationJSONEmbedded embedded;
+
     public GetUsers200ApplicationJSON withEmbedded(GetUsers200ApplicationJSONEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -23,6 +24,7 @@ public class GetUsers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public GetUsers200ApplicationJSONLinks links;
+
     public GetUsers200ApplicationJSON withLinks(GetUsers200ApplicationJSONLinks links) {
         this.links = links;
         return this;
@@ -34,6 +36,7 @@ public class GetUsers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public GetUsers200ApplicationJSON withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -45,9 +48,11 @@ public class GetUsers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_size")
     public Long pageSize;
+
     public GetUsers200ApplicationJSON withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetUsers200ApplicationJSON(){}
 }

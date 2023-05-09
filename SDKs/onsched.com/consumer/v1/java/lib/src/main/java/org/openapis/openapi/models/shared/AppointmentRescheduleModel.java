@@ -19,6 +19,7 @@ public class AppointmentRescheduleModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDateTime")
     public OffsetDateTime endDateTime;
+
     public AppointmentRescheduleModel withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -27,6 +28,7 @@ public class AppointmentRescheduleModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public String resourceId;
+
     public AppointmentRescheduleModel withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -35,6 +37,7 @@ public class AppointmentRescheduleModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceIds")
     public String resourceIds;
+
     public AppointmentRescheduleModel withResourceIds(String resourceIds) {
         this.resourceIds = resourceIds;
         return this;
@@ -43,6 +46,7 @@ public class AppointmentRescheduleModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceId")
     public String serviceId;
+
     public AppointmentRescheduleModel withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -53,6 +57,7 @@ public class AppointmentRescheduleModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDateTime")
     public OffsetDateTime startDateTime;
+
     public AppointmentRescheduleModel withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -61,6 +66,7 @@ public class AppointmentRescheduleModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("travelAppointmentId")
     public String travelAppointmentId;
+
     public AppointmentRescheduleModel withTravelAppointmentId(String travelAppointmentId) {
         this.travelAppointmentId = travelAppointmentId;
         return this;
@@ -69,9 +75,11 @@ public class AppointmentRescheduleModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("travelTimeMins")
     public Integer travelTimeMins;
+
     public AppointmentRescheduleModel withTravelTimeMins(Integer travelTimeMins) {
         this.travelTimeMins = travelTimeMins;
         return this;
     }
     
+    public AppointmentRescheduleModel(){}
 }

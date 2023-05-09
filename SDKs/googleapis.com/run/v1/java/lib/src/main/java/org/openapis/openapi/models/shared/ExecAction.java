@@ -18,9 +18,11 @@ public class ExecAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("command")
     public String[] command;
+
     public ExecAction withCommand(String[] command) {
         this.command = command;
         return this;
     }
     
+    public ExecAction(){}
 }

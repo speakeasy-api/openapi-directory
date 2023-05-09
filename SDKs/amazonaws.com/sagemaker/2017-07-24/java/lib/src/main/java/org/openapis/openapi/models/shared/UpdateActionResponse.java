@@ -15,9 +15,11 @@ public class UpdateActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionArn")
     public String actionArn;
+
     public UpdateActionResponse withActionArn(String actionArn) {
         this.actionArn = actionArn;
         return this;
     }
     
+    public UpdateActionResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposCreateCommitCommentResponse {
     
     public String contentType;
+
     public ReposCreateCommitCommentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposCreateCommitCommentResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ReposCreateCommitCommentResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ReposCreateCommitCommentResponse {
     
     
     public Integer statusCode;
+
     public ReposCreateCommitCommentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ReposCreateCommitCommentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposCreateCommitCommentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ReposCreateCommitCommentResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposCreateCommitCommentResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,6 +56,7 @@ public class ReposCreateCommitCommentResponse {
      */
     
     public org.openapis.openapi.models.shared.CommitComment commitComment;
+
     public ReposCreateCommitCommentResponse withCommitComment(org.openapis.openapi.models.shared.CommitComment commitComment) {
         this.commitComment = commitComment;
         return this;
@@ -60,9 +67,14 @@ public class ReposCreateCommitCommentResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposCreateCommitCommentResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposCreateCommitCommentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

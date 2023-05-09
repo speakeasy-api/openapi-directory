@@ -12,6 +12,7 @@ public class StartSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentName")
     public String documentName;
+
     public StartSessionRequest withDocumentName(String documentName) {
         this.documentName = documentName;
         return this;
@@ -20,6 +21,7 @@ public class StartSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String[]> parameters;
+
     public StartSessionRequest withParameters(java.util.Map<String, String[]> parameters) {
         this.parameters = parameters;
         return this;
@@ -28,6 +30,7 @@ public class StartSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public String reason;
+
     public StartSessionRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -35,9 +38,13 @@ public class StartSessionRequest {
     
     @JsonProperty("Target")
     public String target;
+
     public StartSessionRequest withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public StartSessionRequest(@JsonProperty("Target") String target) {
+        this.target = target;
+  }
 }

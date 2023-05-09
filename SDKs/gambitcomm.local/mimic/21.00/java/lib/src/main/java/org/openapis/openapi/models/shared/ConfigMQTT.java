@@ -15,6 +15,7 @@ public class ConfigMQTT {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("broker")
     public String broker;
+
     public ConfigMQTT withBroker(String broker) {
         this.broker = broker;
         return this;
@@ -23,6 +24,7 @@ public class ConfigMQTT {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientid")
     public String clientid;
+
     public ConfigMQTT withClientid(String clientid) {
         this.clientid = clientid;
         return this;
@@ -31,6 +33,7 @@ public class ConfigMQTT {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public ConfigMQTT withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -39,6 +42,7 @@ public class ConfigMQTT {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_tls")
     public String isTls;
+
     public ConfigMQTT withIsTls(String isTls) {
         this.isTls = isTls;
         return this;
@@ -47,6 +51,7 @@ public class ConfigMQTT {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public ConfigMQTT withPassword(String password) {
         this.password = password;
         return this;
@@ -55,6 +60,7 @@ public class ConfigMQTT {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public ConfigMQTT withPort(Integer port) {
         this.port = port;
         return this;
@@ -63,6 +69,7 @@ public class ConfigMQTT {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tls_conf_filename")
     public String tlsConfFilename;
+
     public ConfigMQTT withTlsConfFilename(String tlsConfFilename) {
         this.tlsConfFilename = tlsConfFilename;
         return this;
@@ -71,6 +78,7 @@ public class ConfigMQTT {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public ConfigMQTT withUsername(String username) {
         this.username = username;
         return this;
@@ -79,9 +87,11 @@ public class ConfigMQTT {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public ConfigMQTT withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ConfigMQTT(){}
 }

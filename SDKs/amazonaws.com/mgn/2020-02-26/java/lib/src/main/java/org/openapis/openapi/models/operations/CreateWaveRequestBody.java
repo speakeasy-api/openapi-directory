@@ -15,6 +15,7 @@ public class CreateWaveRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateWaveRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class CreateWaveRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateWaveRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +38,13 @@ public class CreateWaveRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateWaveRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateWaveRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

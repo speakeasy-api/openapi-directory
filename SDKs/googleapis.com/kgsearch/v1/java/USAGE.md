@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.KgsearchEntitiesSearchRequest;
 import org.openapis.openapi.models.operations.KgsearchEntitiesSearchResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -16,9 +15,9 @@ public class Application {
                 .build();
 
             KgsearchEntitiesSearchRequest req = new KgsearchEntitiesSearchRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 accessToken = "provident";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "quibusdam";
                 fields = "unde";
                 ids = new String[]{{
@@ -33,7 +32,7 @@ public class Application {
                     add("iure"),
                     add("magnam"),
                 }};
-                limit = 891773;
+                limit = 891773L;
                 oauthToken = "ipsa";
                 prefix = false;
                 prettyPrint = false;
@@ -45,15 +44,17 @@ public class Application {
                 }};
                 uploadType = "placeat";
                 uploadProtocol = "voluptatum";
-            }}            
+            }};            
 
             KgsearchEntitiesSearchResponse res = sdk.entities.kgsearchEntitiesSearch(req);
 
-            if (res.searchResponse.isPresent()) {
+            if (res.searchResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

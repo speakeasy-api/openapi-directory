@@ -15,9 +15,11 @@ public class IntegrationsToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public IntegrationsToken withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public IntegrationsToken(){}
 }

@@ -15,6 +15,7 @@ public class CreateBrowserSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalEncryptionContext")
     public java.util.Map<String, String> additionalEncryptionContext;
+
     public CreateBrowserSettingsRequestBody withAdditionalEncryptionContext(java.util.Map<String, String> additionalEncryptionContext) {
         this.additionalEncryptionContext = additionalEncryptionContext;
         return this;
@@ -25,6 +26,7 @@ public class CreateBrowserSettingsRequestBody {
      */
     @JsonProperty("browserPolicy")
     public String browserPolicy;
+
     public CreateBrowserSettingsRequestBody withBrowserPolicy(String browserPolicy) {
         this.browserPolicy = browserPolicy;
         return this;
@@ -36,6 +38,7 @@ public class CreateBrowserSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateBrowserSettingsRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -47,6 +50,7 @@ public class CreateBrowserSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerManagedKey")
     public String customerManagedKey;
+
     public CreateBrowserSettingsRequestBody withCustomerManagedKey(String customerManagedKey) {
         this.customerManagedKey = customerManagedKey;
         return this;
@@ -58,9 +62,13 @@ public class CreateBrowserSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateBrowserSettingsRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateBrowserSettingsRequestBody(@JsonProperty("browserPolicy") String browserPolicy) {
+        this.browserPolicy = browserPolicy;
+  }
 }

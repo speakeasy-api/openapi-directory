@@ -59,10 +59,8 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryResourcesBuildingsDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesBuildingsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DirectoryResourcesBuildingsDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesBuildingsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryResourcesBuildingsGetResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesBuildingsGetResponse() {{
+        org.openapis.openapi.models.operations.DirectoryResourcesBuildingsGetResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesBuildingsGetResponse(contentType, httpRes.statusCode()) {{
             building = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryResourcesBuildingsInsertResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesBuildingsInsertResponse() {{
+        org.openapis.openapi.models.operations.DirectoryResourcesBuildingsInsertResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesBuildingsInsertResponse(contentType, httpRes.statusCode()) {{
             building = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryResourcesBuildingsListResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesBuildingsListResponse() {{
+        org.openapis.openapi.models.operations.DirectoryResourcesBuildingsListResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesBuildingsListResponse(contentType, httpRes.statusCode()) {{
             buildings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryResourcesBuildingsPatchResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesBuildingsPatchResponse() {{
+        org.openapis.openapi.models.operations.DirectoryResourcesBuildingsPatchResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesBuildingsPatchResponse(contentType, httpRes.statusCode()) {{
             building = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryResourcesBuildingsUpdateResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesBuildingsUpdateResponse() {{
+        org.openapis.openapi.models.operations.DirectoryResourcesBuildingsUpdateResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesBuildingsUpdateResponse(contentType, httpRes.statusCode()) {{
             building = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -335,10 +323,8 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryResourcesCalendarsDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesCalendarsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DirectoryResourcesCalendarsDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesCalendarsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -375,11 +361,9 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryResourcesCalendarsGetResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesCalendarsGetResponse() {{
+        org.openapis.openapi.models.operations.DirectoryResourcesCalendarsGetResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesCalendarsGetResponse(contentType, httpRes.statusCode()) {{
             calendarResource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -423,11 +407,9 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryResourcesCalendarsInsertResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesCalendarsInsertResponse() {{
+        org.openapis.openapi.models.operations.DirectoryResourcesCalendarsInsertResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesCalendarsInsertResponse(contentType, httpRes.statusCode()) {{
             calendarResource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -469,11 +451,9 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryResourcesCalendarsListResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesCalendarsListResponse() {{
+        org.openapis.openapi.models.operations.DirectoryResourcesCalendarsListResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesCalendarsListResponse(contentType, httpRes.statusCode()) {{
             calendarResources = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -517,11 +497,9 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryResourcesCalendarsPatchResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesCalendarsPatchResponse() {{
+        org.openapis.openapi.models.operations.DirectoryResourcesCalendarsPatchResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesCalendarsPatchResponse(contentType, httpRes.statusCode()) {{
             calendarResource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -565,11 +543,9 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryResourcesCalendarsUpdateResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesCalendarsUpdateResponse() {{
+        org.openapis.openapi.models.operations.DirectoryResourcesCalendarsUpdateResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesCalendarsUpdateResponse(contentType, httpRes.statusCode()) {{
             calendarResource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -611,10 +587,8 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryResourcesFeaturesDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesFeaturesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DirectoryResourcesFeaturesDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesFeaturesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -651,11 +625,9 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryResourcesFeaturesGetResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesFeaturesGetResponse() {{
+        org.openapis.openapi.models.operations.DirectoryResourcesFeaturesGetResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesFeaturesGetResponse(contentType, httpRes.statusCode()) {{
             feature = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -699,11 +671,9 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryResourcesFeaturesInsertResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesFeaturesInsertResponse() {{
+        org.openapis.openapi.models.operations.DirectoryResourcesFeaturesInsertResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesFeaturesInsertResponse(contentType, httpRes.statusCode()) {{
             feature = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -745,11 +715,9 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryResourcesFeaturesListResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesFeaturesListResponse() {{
+        org.openapis.openapi.models.operations.DirectoryResourcesFeaturesListResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesFeaturesListResponse(contentType, httpRes.statusCode()) {{
             features = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -793,11 +761,9 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryResourcesFeaturesPatchResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesFeaturesPatchResponse() {{
+        org.openapis.openapi.models.operations.DirectoryResourcesFeaturesPatchResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesFeaturesPatchResponse(contentType, httpRes.statusCode()) {{
             feature = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -841,10 +807,8 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryResourcesFeaturesRenameResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesFeaturesRenameResponse() {{
+        org.openapis.openapi.models.operations.DirectoryResourcesFeaturesRenameResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesFeaturesRenameResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -883,11 +847,9 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryResourcesFeaturesUpdateResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesFeaturesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DirectoryResourcesFeaturesUpdateResponse res = new org.openapis.openapi.models.operations.DirectoryResourcesFeaturesUpdateResponse(contentType, httpRes.statusCode()) {{
             feature = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

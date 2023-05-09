@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCMSpageResponse {
     
     public String contentType;
+
     public GetCMSpageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCMSpageResponse {
      */
     
     public GetCMSpage200ApplicationJSON getCMSpage200ApplicationJSONObject;
+
     public GetCMSpageResponse withGetCMSpage200ApplicationJSONObject(GetCMSpage200ApplicationJSON getCMSpage200ApplicationJSONObject) {
         this.getCMSpage200ApplicationJSONObject = getCMSpage200ApplicationJSONObject;
         return this;
@@ -26,6 +29,7 @@ public class GetCMSpageResponse {
     
     
     public Integer statusCode;
+
     public GetCMSpageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetCMSpageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCMSpageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCMSpageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

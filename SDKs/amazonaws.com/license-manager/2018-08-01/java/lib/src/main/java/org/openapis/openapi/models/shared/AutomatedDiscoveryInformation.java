@@ -22,9 +22,11 @@ public class AutomatedDiscoveryInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastRunTime")
     public OffsetDateTime lastRunTime;
+
     public AutomatedDiscoveryInformation withLastRunTime(OffsetDateTime lastRunTime) {
         this.lastRunTime = lastRunTime;
         return this;
     }
     
+    public AutomatedDiscoveryInformation(){}
 }

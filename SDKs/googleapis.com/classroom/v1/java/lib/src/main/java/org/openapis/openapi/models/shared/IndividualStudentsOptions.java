@@ -18,9 +18,11 @@ public class IndividualStudentsOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("studentIds")
     public String[] studentIds;
+
     public IndividualStudentsOptions withStudentIds(String[] studentIds) {
         this.studentIds = studentIds;
         return this;
     }
     
+    public IndividualStudentsOptions(){}
 }

@@ -18,9 +18,11 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public File[] files;
+
     public Source withFiles(File[] files) {
         this.files = files;
         return this;
     }
     
+    public Source(){}
 }

@@ -18,6 +18,7 @@ public class PoiAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public PoiAssignedTargetingOptionDetails withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class PoiAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public PoiAssignedTargetingOptionDetails withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -40,6 +42,7 @@ public class PoiAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public PoiAssignedTargetingOptionDetails withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -51,6 +54,7 @@ public class PoiAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proximityRadiusAmount")
     public Double proximityRadiusAmount;
+
     public PoiAssignedTargetingOptionDetails withProximityRadiusAmount(Double proximityRadiusAmount) {
         this.proximityRadiusAmount = proximityRadiusAmount;
         return this;
@@ -62,6 +66,7 @@ public class PoiAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proximityRadiusUnit")
     public PoiAssignedTargetingOptionDetailsProximityRadiusUnitEnum proximityRadiusUnit;
+
     public PoiAssignedTargetingOptionDetails withProximityRadiusUnit(PoiAssignedTargetingOptionDetailsProximityRadiusUnitEnum proximityRadiusUnit) {
         this.proximityRadiusUnit = proximityRadiusUnit;
         return this;
@@ -73,9 +78,11 @@ public class PoiAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public PoiAssignedTargetingOptionDetails withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public PoiAssignedTargetingOptionDetails(){}
 }

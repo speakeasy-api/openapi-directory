@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListFindingAggregationsResponse {
     @JsonProperty("aggregationType")
     public AggregationTypeEnum aggregationType;
+
     public ListFindingAggregationsResponse withAggregationType(AggregationTypeEnum aggregationType) {
         this.aggregationType = aggregationType;
         return this;
@@ -22,6 +23,7 @@ public class ListFindingAggregationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListFindingAggregationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,9 +32,13 @@ public class ListFindingAggregationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responses")
     public AggregationResponse[] responses;
+
     public ListFindingAggregationsResponse withResponses(AggregationResponse[] responses) {
         this.responses = responses;
         return this;
     }
     
+    public ListFindingAggregationsResponse(@JsonProperty("aggregationType") AggregationTypeEnum aggregationType) {
+        this.aggregationType = aggregationType;
+  }
 }

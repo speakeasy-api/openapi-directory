@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSlotRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateSlotRequestBody requestBody;
+
     public UpdateSlotRequest withRequestBody(UpdateSlotRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class UpdateSlotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateSlotRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class UpdateSlotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateSlotRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class UpdateSlotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateSlotRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class UpdateSlotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateSlotRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class UpdateSlotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateSlotRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class UpdateSlotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateSlotRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class UpdateSlotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateSlotRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class UpdateSlotRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botId")
     public String botId;
+
     public UpdateSlotRequest withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -78,6 +88,7 @@ public class UpdateSlotRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botVersion")
     public String botVersion;
+
     public UpdateSlotRequest withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -88,6 +99,7 @@ public class UpdateSlotRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=intentId")
     public String intentId;
+
     public UpdateSlotRequest withIntentId(String intentId) {
         this.intentId = intentId;
         return this;
@@ -98,6 +110,7 @@ public class UpdateSlotRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=localeId")
     public String localeId;
+
     public UpdateSlotRequest withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -108,9 +121,18 @@ public class UpdateSlotRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slotId")
     public String slotId;
+
     public UpdateSlotRequest withSlotId(String slotId) {
         this.slotId = slotId;
         return this;
     }
     
+    public UpdateSlotRequest(@JsonProperty("RequestBody") UpdateSlotRequestBody requestBody, @JsonProperty("botId") String botId, @JsonProperty("botVersion") String botVersion, @JsonProperty("intentId") String intentId, @JsonProperty("localeId") String localeId, @JsonProperty("slotId") String slotId) {
+        this.requestBody = requestBody;
+        this.botId = botId;
+        this.botVersion = botVersion;
+        this.intentId = intentId;
+        this.localeId = localeId;
+        this.slotId = slotId;
+  }
 }

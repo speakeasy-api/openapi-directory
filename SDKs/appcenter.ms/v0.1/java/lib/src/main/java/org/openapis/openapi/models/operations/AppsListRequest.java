@@ -12,9 +12,11 @@ public class AppsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$orderBy")
     public AppsListDollarOrderByEnum dollarOrderBy;
+
     public AppsListRequest withDollarOrderBy(AppsListDollarOrderByEnum dollarOrderBy) {
         this.dollarOrderBy = dollarOrderBy;
         return this;
     }
     
+    public AppsListRequest(){}
 }

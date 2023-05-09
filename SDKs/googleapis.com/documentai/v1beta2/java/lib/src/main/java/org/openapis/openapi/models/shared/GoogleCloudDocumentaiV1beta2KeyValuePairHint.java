@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta2KeyValuePairHint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GoogleCloudDocumentaiV1beta2KeyValuePairHint withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1beta2KeyValuePairHint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueTypes")
     public String[] valueTypes;
+
     public GoogleCloudDocumentaiV1beta2KeyValuePairHint withValueTypes(String[] valueTypes) {
         this.valueTypes = valueTypes;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2KeyValuePairHint(){}
 }

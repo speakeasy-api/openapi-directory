@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFolderResponse {
@@ -12,6 +13,7 @@ public class GetFolderResponse {
      */
     
     public Object commitDoesNotExistException;
+
     public GetFolderResponse withCommitDoesNotExistException(Object commitDoesNotExistException) {
         this.commitDoesNotExistException = commitDoesNotExistException;
         return this;
@@ -19,6 +21,7 @@ public class GetFolderResponse {
     
     
     public String contentType;
+
     public GetFolderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetFolderResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public GetFolderResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -39,6 +43,7 @@ public class GetFolderResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public GetFolderResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -49,6 +54,7 @@ public class GetFolderResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public GetFolderResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -59,6 +65,7 @@ public class GetFolderResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public GetFolderResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetFolderResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public GetFolderResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -79,6 +87,7 @@ public class GetFolderResponse {
      */
     
     public Object folderDoesNotExistException;
+
     public GetFolderResponse withFolderDoesNotExistException(Object folderDoesNotExistException) {
         this.folderDoesNotExistException = folderDoesNotExistException;
         return this;
@@ -89,6 +98,7 @@ public class GetFolderResponse {
      */
     
     public org.openapis.openapi.models.shared.GetFolderOutput getFolderOutput;
+
     public GetFolderResponse withGetFolderOutput(org.openapis.openapi.models.shared.GetFolderOutput getFolderOutput) {
         this.getFolderOutput = getFolderOutput;
         return this;
@@ -99,6 +109,7 @@ public class GetFolderResponse {
      */
     
     public Object invalidCommitException;
+
     public GetFolderResponse withInvalidCommitException(Object invalidCommitException) {
         this.invalidCommitException = invalidCommitException;
         return this;
@@ -109,6 +120,7 @@ public class GetFolderResponse {
      */
     
     public Object invalidPathException;
+
     public GetFolderResponse withInvalidPathException(Object invalidPathException) {
         this.invalidPathException = invalidPathException;
         return this;
@@ -119,6 +131,7 @@ public class GetFolderResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public GetFolderResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -129,6 +142,7 @@ public class GetFolderResponse {
      */
     
     public Object pathRequiredException;
+
     public GetFolderResponse withPathRequiredException(Object pathRequiredException) {
         this.pathRequiredException = pathRequiredException;
         return this;
@@ -139,6 +153,7 @@ public class GetFolderResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public GetFolderResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -149,6 +164,7 @@ public class GetFolderResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public GetFolderResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -156,6 +172,7 @@ public class GetFolderResponse {
     
     
     public Integer statusCode;
+
     public GetFolderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -163,9 +180,14 @@ public class GetFolderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFolderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetFolderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

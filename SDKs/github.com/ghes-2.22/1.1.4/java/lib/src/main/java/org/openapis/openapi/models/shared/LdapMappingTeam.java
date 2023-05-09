@@ -15,6 +15,7 @@ public class LdapMappingTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public LdapMappingTeam withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class LdapMappingTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public LdapMappingTeam withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -31,6 +33,7 @@ public class LdapMappingTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public LdapMappingTeam withId(Long id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class LdapMappingTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap_dn")
     public String ldapDn;
+
     public LdapMappingTeam withLdapDn(String ldapDn) {
         this.ldapDn = ldapDn;
         return this;
@@ -47,6 +51,7 @@ public class LdapMappingTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members_url")
     public String membersUrl;
+
     public LdapMappingTeam withMembersUrl(String membersUrl) {
         this.membersUrl = membersUrl;
         return this;
@@ -55,6 +60,7 @@ public class LdapMappingTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LdapMappingTeam withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +69,7 @@ public class LdapMappingTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node_id")
     public String nodeId;
+
     public LdapMappingTeam withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -71,6 +78,7 @@ public class LdapMappingTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public Object parent;
+
     public LdapMappingTeam withParent(Object parent) {
         this.parent = parent;
         return this;
@@ -79,6 +87,7 @@ public class LdapMappingTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public String permission;
+
     public LdapMappingTeam withPermission(String permission) {
         this.permission = permission;
         return this;
@@ -87,6 +96,7 @@ public class LdapMappingTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacy")
     public String privacy;
+
     public LdapMappingTeam withPrivacy(String privacy) {
         this.privacy = privacy;
         return this;
@@ -95,6 +105,7 @@ public class LdapMappingTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositories_url")
     public String repositoriesUrl;
+
     public LdapMappingTeam withRepositoriesUrl(String repositoriesUrl) {
         this.repositoriesUrl = repositoriesUrl;
         return this;
@@ -103,6 +114,7 @@ public class LdapMappingTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public LdapMappingTeam withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -111,9 +123,11 @@ public class LdapMappingTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public LdapMappingTeam withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public LdapMappingTeam(){}
 }

@@ -15,6 +15,7 @@ public class SMSReponseEtatEtat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public SMSReponseEtatEtat withCode(Long code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class SMSReponseEtatEtat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public SMSReponseEtatEtat withMessage(String message) {
         this.message = message;
         return this;
@@ -37,6 +39,7 @@ public class SMSReponseEtatEtat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smslong")
     public String smslong;
+
     public SMSReponseEtatEtat withSmslong(String smslong) {
         this.smslong = smslong;
         return this;
@@ -48,9 +51,11 @@ public class SMSReponseEtatEtat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tel")
     public String tel;
+
     public SMSReponseEtatEtat withTel(String tel) {
         this.tel = tel;
         return this;
     }
     
+    public SMSReponseEtatEtat(){}
 }

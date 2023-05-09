@@ -122,4 +122,13 @@ lib/src/main/java/org/openapis/openapi/models/shared/TagTypeMarshaller.java
 lib/src/main/java/org/openapis/openapi/models/shared/TagLanguageMarshaller.java
 lib/src/main/java/org/openapis/openapi/models/shared/TagLanguageMarshallerWrapped.java
 lib/src/main/java/org/openapis/openapi/models/shared/TagTypeMarshallerWrapped.java
+docs/sdk/README.md
+docs/campaigns/README.md
+docs/languages/README.md
+docs/media/README.md
+docs/mediatypes/README.md
+docs/resources/README.md
+docs/sources/README.md
+docs/tags/README.md
+docs/usermedialists/README.md
 USAGE.md

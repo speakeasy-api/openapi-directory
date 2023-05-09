@@ -15,6 +15,7 @@ public class OpsAggregator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AggregatorType")
     public String aggregatorType;
+
     public OpsAggregator withAggregatorType(String aggregatorType) {
         this.aggregatorType = aggregatorType;
         return this;
@@ -23,6 +24,7 @@ public class OpsAggregator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Aggregators")
     public OpsAggregator[] aggregators;
+
     public OpsAggregator withAggregators(OpsAggregator[] aggregators) {
         this.aggregators = aggregators;
         return this;
@@ -31,6 +33,7 @@ public class OpsAggregator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeName")
     public String attributeName;
+
     public OpsAggregator withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -39,6 +42,7 @@ public class OpsAggregator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public OpsFilter[] filters;
+
     public OpsAggregator withFilters(OpsFilter[] filters) {
         this.filters = filters;
         return this;
@@ -47,6 +51,7 @@ public class OpsAggregator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypeName")
     public String typeName;
+
     public OpsAggregator withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -55,9 +60,11 @@ public class OpsAggregator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public java.util.Map<String, String> values;
+
     public OpsAggregator withValues(java.util.Map<String, String> values) {
         this.values = values;
         return this;
     }
     
+    public OpsAggregator(){}
 }

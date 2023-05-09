@@ -581,4 +581,13 @@ lib/src/main/java/org/openapis/openapi/models/shared/OBWritePaymentDetailsRespon
 lib/src/main/java/org/openapis/openapi/models/shared/OBWritePaymentDetailsResponse1DataPaymentStatus.java
 lib/src/main/java/org/openapis/openapi/models/shared/OBWritePaymentDetailsResponse1Data.java
 lib/src/main/java/org/openapis/openapi/models/shared/OBWritePaymentDetailsResponse1.java
+docs/sdk/README.md
+docs/domesticpayments/README.md
+docs/domesticscheduledpayments/README.md
+docs/domesticstandingorders/README.md
+docs/filepayments/README.md
+docs/internationalpayments/README.md
+docs/internationalscheduledpayments/README.md
+docs/internationalstandingorders/README.md
+docs/paymentdetails/README.md
 USAGE.md

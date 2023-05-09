@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutOrdersIdShipSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String fdcAuth;
+
     public PutOrdersIdShipSecurity withFdcAuth(String fdcAuth) {
         this.fdcAuth = fdcAuth;
         return this;
     }
     
+    public PutOrdersIdShipSecurity(@JsonProperty("fdcAuth") String fdcAuth) {
+        this.fdcAuth = fdcAuth;
+  }
 }

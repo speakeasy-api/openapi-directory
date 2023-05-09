@@ -33,4 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetweatherzipcodeRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Getweatherzipcode200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetweatherzipcodeResponse.java
+docs/sdk/README.md
+docs/weatherbyzipcode/README.md
 USAGE.md

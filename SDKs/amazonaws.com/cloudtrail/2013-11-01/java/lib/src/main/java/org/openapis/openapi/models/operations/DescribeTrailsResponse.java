@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeTrailsResponse {
     
     public String contentType;
+
     public DescribeTrailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeTrailsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeTrailsResponse describeTrailsResponse;
+
     public DescribeTrailsResponse withDescribeTrailsResponse(org.openapis.openapi.models.shared.DescribeTrailsResponse describeTrailsResponse) {
         this.describeTrailsResponse = describeTrailsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeTrailsResponse {
      */
     
     public Object invalidTrailNameException;
+
     public DescribeTrailsResponse withInvalidTrailNameException(Object invalidTrailNameException) {
         this.invalidTrailNameException = invalidTrailNameException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeTrailsResponse {
      */
     
     public Object noManagementAccountSLRExistsException;
+
     public DescribeTrailsResponse withNoManagementAccountSLRExistsException(Object noManagementAccountSLRExistsException) {
         this.noManagementAccountSLRExistsException = noManagementAccountSLRExistsException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeTrailsResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DescribeTrailsResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeTrailsResponse {
     
     
     public Integer statusCode;
+
     public DescribeTrailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeTrailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeTrailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeTrailsResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DescribeTrailsResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DescribeTrailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

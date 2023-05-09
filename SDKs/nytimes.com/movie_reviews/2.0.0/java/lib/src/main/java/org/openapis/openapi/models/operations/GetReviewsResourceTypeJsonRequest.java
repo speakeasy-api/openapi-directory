@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReviewsResourceTypeJsonRequest {
@@ -12,6 +13,7 @@ public class GetReviewsResourceTypeJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetReviewsResourceTypeJsonRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -27,6 +29,7 @@ public class GetReviewsResourceTypeJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public GetReviewsResourceTypeJsonOrderEnum order;
+
     public GetReviewsResourceTypeJsonRequest withOrder(GetReviewsResourceTypeJsonOrderEnum order) {
         this.order = order;
         return this;
@@ -41,9 +44,13 @@ public class GetReviewsResourceTypeJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resource-type")
     public GetReviewsResourceTypeJsonResourceTypeEnum resourceType;
+
     public GetReviewsResourceTypeJsonRequest withResourceType(GetReviewsResourceTypeJsonResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public GetReviewsResourceTypeJsonRequest(@JsonProperty("resource-type") GetReviewsResourceTypeJsonResourceTypeEnum resourceType) {
+        this.resourceType = resourceType;
+  }
 }

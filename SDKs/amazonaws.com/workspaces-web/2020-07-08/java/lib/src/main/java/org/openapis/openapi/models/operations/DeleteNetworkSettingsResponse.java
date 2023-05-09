@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteNetworkSettingsResponse {
@@ -12,6 +13,7 @@ public class DeleteNetworkSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteNetworkSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteNetworkSettingsResponse {
      */
     
     public Object conflictException;
+
     public DeleteNetworkSettingsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteNetworkSettingsResponse {
     
     
     public String contentType;
+
     public DeleteNetworkSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteNetworkSettingsResponse {
      */
     
     public java.util.Map<String, Object> deleteNetworkSettingsResponse;
+
     public DeleteNetworkSettingsResponse withDeleteNetworkSettingsResponse(java.util.Map<String, Object> deleteNetworkSettingsResponse) {
         this.deleteNetworkSettingsResponse = deleteNetworkSettingsResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteNetworkSettingsResponse {
      */
     
     public Object internalServerException;
+
     public DeleteNetworkSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteNetworkSettingsResponse {
     
     
     public Integer statusCode;
+
     public DeleteNetworkSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteNetworkSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteNetworkSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteNetworkSettingsResponse {
      */
     
     public Object throttlingException;
+
     public DeleteNetworkSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteNetworkSettingsResponse {
      */
     
     public Object validationException;
+
     public DeleteNetworkSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteNetworkSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

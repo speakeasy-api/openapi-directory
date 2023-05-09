@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VirtualRouterStatus {
     @JsonProperty("status")
     public VirtualRouterStatusCodeEnum status;
+
     public VirtualRouterStatus withStatus(VirtualRouterStatusCodeEnum status) {
         this.status = status;
         return this;
     }
     
+    public VirtualRouterStatus(@JsonProperty("status") VirtualRouterStatusCodeEnum status) {
+        this.status = status;
+  }
 }

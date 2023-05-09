@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutItemResponse {
@@ -12,6 +13,7 @@ public class PutItemResponse {
      */
     
     public Object conditionalCheckFailedException;
+
     public PutItemResponse withConditionalCheckFailedException(Object conditionalCheckFailedException) {
         this.conditionalCheckFailedException = conditionalCheckFailedException;
         return this;
@@ -19,6 +21,7 @@ public class PutItemResponse {
     
     
     public String contentType;
+
     public PutItemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutItemResponse {
      */
     
     public Object internalServerError;
+
     public PutItemResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class PutItemResponse {
      */
     
     public Object itemCollectionSizeLimitExceededException;
+
     public PutItemResponse withItemCollectionSizeLimitExceededException(Object itemCollectionSizeLimitExceededException) {
         this.itemCollectionSizeLimitExceededException = itemCollectionSizeLimitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class PutItemResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public PutItemResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -59,6 +65,7 @@ public class PutItemResponse {
      */
     
     public org.openapis.openapi.models.shared.PutItemOutput putItemOutput;
+
     public PutItemResponse withPutItemOutput(org.openapis.openapi.models.shared.PutItemOutput putItemOutput) {
         this.putItemOutput = putItemOutput;
         return this;
@@ -66,6 +73,7 @@ public class PutItemResponse {
     
     
     public Integer statusCode;
+
     public PutItemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PutItemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutItemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class PutItemResponse {
      */
     
     public Object requestLimitExceeded;
+
     public PutItemResponse withRequestLimitExceeded(Object requestLimitExceeded) {
         this.requestLimitExceeded = requestLimitExceeded;
         return this;
@@ -93,6 +103,7 @@ public class PutItemResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutItemResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class PutItemResponse {
      */
     
     public Object transactionConflictException;
+
     public PutItemResponse withTransactionConflictException(Object transactionConflictException) {
         this.transactionConflictException = transactionConflictException;
         return this;
     }
     
+    public PutItemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

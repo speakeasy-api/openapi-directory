@@ -15,6 +15,7 @@ public class ListByoipCidrsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ByoipCidrs")
     public ByoipCidr[] byoipCidrs;
+
     public ListByoipCidrsResponse withByoipCidrs(ByoipCidr[] byoipCidrs) {
         this.byoipCidrs = byoipCidrs;
         return this;
@@ -23,9 +24,11 @@ public class ListByoipCidrsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListByoipCidrsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListByoipCidrsResponse(){}
 }

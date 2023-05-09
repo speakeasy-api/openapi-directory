@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InputFileConfig {
     @JsonProperty("channelName")
     public String channelName;
+
     public InputFileConfig withChannelName(String channelName) {
         this.channelName = channelName;
         return this;
@@ -22,6 +23,7 @@ public class InputFileConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public InputFileConfig withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +31,14 @@ public class InputFileConfig {
     
     @JsonProperty("dataSource")
     public DataSource dataSource;
+
     public InputFileConfig withDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         return this;
     }
     
+    public InputFileConfig(@JsonProperty("channelName") String channelName, @JsonProperty("dataSource") DataSource dataSource) {
+        this.channelName = channelName;
+        this.dataSource = dataSource;
+  }
 }

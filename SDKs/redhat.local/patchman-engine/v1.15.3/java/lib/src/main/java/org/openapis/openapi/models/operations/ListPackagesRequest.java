@@ -12,6 +12,7 @@ public class ListPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[name]")
     public String filterName;
+
     public ListPackagesRequest withFilterName(String filterName) {
         this.filterName = filterName;
         return this;
@@ -22,6 +23,7 @@ public class ListPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[summary]")
     public String filterSummary;
+
     public ListPackagesRequest withFilterSummary(String filterSummary) {
         this.filterSummary = filterSummary;
         return this;
@@ -32,6 +34,7 @@ public class ListPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_sids][in]")
     public String[] filterSystemProfileSapSidsIn;
+
     public ListPackagesRequest withFilterSystemProfileSapSidsIn(String[] filterSystemProfileSapSidsIn) {
         this.filterSystemProfileSapSidsIn = filterSystemProfileSapSidsIn;
         return this;
@@ -42,6 +45,7 @@ public class ListPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_system]")
     public String filterSystemProfileSapSystem;
+
     public ListPackagesRequest withFilterSystemProfileSapSystem(String filterSystemProfileSapSystem) {
         this.filterSystemProfileSapSystem = filterSystemProfileSapSystem;
         return this;
@@ -52,6 +56,7 @@ public class ListPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[systems_installed]")
     public String filterSystemsInstalled;
+
     public ListPackagesRequest withFilterSystemsInstalled(String filterSystemsInstalled) {
         this.filterSystemsInstalled = filterSystemsInstalled;
         return this;
@@ -62,6 +67,7 @@ public class ListPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[systems_updatable]")
     public String filterSystemsUpdatable;
+
     public ListPackagesRequest withFilterSystemsUpdatable(String filterSystemsUpdatable) {
         this.filterSystemsUpdatable = filterSystemsUpdatable;
         return this;
@@ -72,6 +78,7 @@ public class ListPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListPackagesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -82,6 +89,7 @@ public class ListPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public ListPackagesRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -92,6 +100,7 @@ public class ListPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public ListPackagesRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -102,6 +111,7 @@ public class ListPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public ListPackagesSortEnum sort;
+
     public ListPackagesRequest withSort(ListPackagesSortEnum sort) {
         this.sort = sort;
         return this;
@@ -112,9 +122,11 @@ public class ListPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String[] tags;
+
     public ListPackagesRequest withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ListPackagesRequest(){}
 }

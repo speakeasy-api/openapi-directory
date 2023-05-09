@@ -62,11 +62,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptionsResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptionsResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptionsResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptionsResponse(contentType, httpRes.statusCode()) {{
             bulkEditPartnerAssignedTargetingOptionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsCreateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsCreateResponse(contentType, httpRes.statusCode()) {{
             channel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsListResponse(contentType, httpRes.statusCode()) {{
             listChannelsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsPatchResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsPatchResponse(contentType, httpRes.statusCode()) {{
             channel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,11 +244,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsSitesBulkEditResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsSitesBulkEditResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsSitesBulkEditResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsSitesBulkEditResponse(contentType, httpRes.statusCode()) {{
             bulkEditSitesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,11 +288,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsSitesDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsSitesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsSitesDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsSitesDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsSitesListResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsSitesListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsSitesListResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsSitesListResponse(contentType, httpRes.statusCode()) {{
             listSitesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,11 +378,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsSitesReplaceResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsSitesReplaceResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsSitesReplaceResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersChannelsSitesReplaceResponse(contentType, httpRes.statusCode()) {{
             replaceSitesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,11 +422,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoPartnersGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoPartnersGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersGetResponse(contentType, httpRes.statusCode()) {{
             partner = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,11 +466,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoPartnersListResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoPartnersListResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersListResponse(contentType, httpRes.statusCode()) {{
             listPartnersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -532,11 +512,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCreateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCreateResponse(contentType, httpRes.statusCode()) {{
             assignedTargetingOption = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -578,11 +556,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -624,11 +600,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsGetResponse(contentType, httpRes.statusCode()) {{
             assignedTargetingOption = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -670,11 +644,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListResponse(contentType, httpRes.statusCode()) {{
             listPartnerAssignedTargetingOptionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

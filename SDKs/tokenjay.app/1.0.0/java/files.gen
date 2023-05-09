@@ -96,4 +96,14 @@ lib/src/main/java/org/openapis/openapi/models/shared/PaymentRequestStateResponse
 lib/src/main/java/org/openapis/openapi/models/shared/NodePeer.java
 lib/src/main/java/org/openapis/openapi/models/shared/CheckResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GenuineToken.java
+docs/sdk/README.md
+docs/ageusd/README.md
+docs/babelfeecontroller/README.md
+docs/babelfeenewoffercontroller/README.md
+docs/boxconsolidationcontroller/README.md
+docs/paymentportal/README.md
+docs/peerdetection/README.md
+docs/tokenburncontroller/README.md
+docs/tokenprices/README.md
+docs/tokenverification/README.md
 USAGE.md

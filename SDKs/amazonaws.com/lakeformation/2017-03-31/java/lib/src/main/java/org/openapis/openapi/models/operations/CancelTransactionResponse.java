@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelTransactionResponse {
@@ -12,6 +13,7 @@ public class CancelTransactionResponse {
      */
     
     public java.util.Map<String, Object> cancelTransactionResponse;
+
     public CancelTransactionResponse withCancelTransactionResponse(java.util.Map<String, Object> cancelTransactionResponse) {
         this.cancelTransactionResponse = cancelTransactionResponse;
         return this;
@@ -22,6 +24,7 @@ public class CancelTransactionResponse {
      */
     
     public Object concurrentModificationException;
+
     public CancelTransactionResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class CancelTransactionResponse {
     
     
     public String contentType;
+
     public CancelTransactionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CancelTransactionResponse {
      */
     
     public Object entityNotFoundException;
+
     public CancelTransactionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class CancelTransactionResponse {
      */
     
     public Object internalServiceException;
+
     public CancelTransactionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class CancelTransactionResponse {
      */
     
     public Object invalidInputException;
+
     public CancelTransactionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class CancelTransactionResponse {
      */
     
     public Object operationTimeoutException;
+
     public CancelTransactionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class CancelTransactionResponse {
     
     
     public Integer statusCode;
+
     public CancelTransactionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CancelTransactionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelTransactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CancelTransactionResponse {
      */
     
     public Object transactionCommitInProgressException;
+
     public CancelTransactionResponse withTransactionCommitInProgressException(Object transactionCommitInProgressException) {
         this.transactionCommitInProgressException = transactionCommitInProgressException;
         return this;
@@ -103,9 +114,14 @@ public class CancelTransactionResponse {
      */
     
     public Object transactionCommittedException;
+
     public CancelTransactionResponse withTransactionCommittedException(Object transactionCommittedException) {
         this.transactionCommittedException = transactionCommittedException;
         return this;
     }
     
+    public CancelTransactionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

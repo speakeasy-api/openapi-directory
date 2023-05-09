@@ -39,4 +39,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ScansIdResponse
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ScansIdFilesFileIdSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ScansIdFilesFileIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ScansIdFilesFileIdResponse.java
+docs/sdk/README.md
+docs/scans/README.md
 USAGE.md

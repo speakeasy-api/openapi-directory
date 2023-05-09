@@ -15,6 +15,7 @@ public class WindowsSite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bindings")
     public SiteBinding[] bindings;
+
     public WindowsSite withBindings(SiteBinding[] bindings) {
         this.bindings = bindings;
         return this;
@@ -26,6 +27,7 @@ public class WindowsSite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WindowsSite withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class WindowsSite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public WindowsSite withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public WindowsSite(){}
 }

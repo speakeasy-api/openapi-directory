@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GitignoreGetTemplateRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public GitignoreGetTemplateRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GitignoreGetTemplateRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

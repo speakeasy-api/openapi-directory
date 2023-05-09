@@ -15,9 +15,11 @@ public class UnpeerVpcResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public Operation operation;
+
     public UnpeerVpcResult withOperation(Operation operation) {
         this.operation = operation;
         return this;
     }
     
+    public UnpeerVpcResult(){}
 }

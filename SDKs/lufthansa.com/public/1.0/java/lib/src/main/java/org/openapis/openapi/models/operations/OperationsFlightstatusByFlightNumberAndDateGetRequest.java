@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OperationsFlightstatusByFlightNumberAndDateGetRequest {
@@ -12,6 +13,7 @@ public class OperationsFlightstatusByFlightNumberAndDateGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public OperationsFlightstatusByFlightNumberAndDateGetRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class OperationsFlightstatusByFlightNumberAndDateGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
     public String date;
+
     public OperationsFlightstatusByFlightNumberAndDateGetRequest withDate(String date) {
         this.date = date;
         return this;
@@ -32,6 +35,7 @@ public class OperationsFlightstatusByFlightNumberAndDateGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=flightNumber")
     public String flightNumber;
+
     public OperationsFlightstatusByFlightNumberAndDateGetRequest withFlightNumber(String flightNumber) {
         this.flightNumber = flightNumber;
         return this;
@@ -42,6 +46,7 @@ public class OperationsFlightstatusByFlightNumberAndDateGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public OperationsFlightstatusByFlightNumberAndDateGetRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -52,9 +57,15 @@ public class OperationsFlightstatusByFlightNumberAndDateGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public OperationsFlightstatusByFlightNumberAndDateGetRequest withOffset(String offset) {
         this.offset = offset;
         return this;
     }
     
+    public OperationsFlightstatusByFlightNumberAndDateGetRequest(@JsonProperty("Accept") String accept, @JsonProperty("date") String date, @JsonProperty("flightNumber") String flightNumber) {
+        this.accept = accept;
+        this.date = date;
+        this.flightNumber = flightNumber;
+  }
 }

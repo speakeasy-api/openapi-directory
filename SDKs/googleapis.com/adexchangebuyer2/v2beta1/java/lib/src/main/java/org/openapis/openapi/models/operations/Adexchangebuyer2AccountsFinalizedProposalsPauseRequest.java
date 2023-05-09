@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Adexchangebuyer2AccountsFinalizedProposalsPauseRequest {
@@ -12,6 +13,7 @@ public class Adexchangebuyer2AccountsFinalizedProposalsPauseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public Adexchangebuyer2AccountsFinalizedProposalsPauseRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class Adexchangebuyer2AccountsFinalizedProposalsPauseRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PauseProposalDealsRequest pauseProposalDealsRequest;
+
     public Adexchangebuyer2AccountsFinalizedProposalsPauseRequest withPauseProposalDealsRequest(org.openapis.openapi.models.shared.PauseProposalDealsRequest pauseProposalDealsRequest) {
         this.pauseProposalDealsRequest = pauseProposalDealsRequest;
         return this;
@@ -29,6 +32,7 @@ public class Adexchangebuyer2AccountsFinalizedProposalsPauseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public Adexchangebuyer2AccountsFinalizedProposalsPauseRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class Adexchangebuyer2AccountsFinalizedProposalsPauseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public Adexchangebuyer2AccountsFinalizedProposalsPauseRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -49,6 +54,7 @@ public class Adexchangebuyer2AccountsFinalizedProposalsPauseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public Adexchangebuyer2AccountsFinalizedProposalsPauseRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -59,6 +65,7 @@ public class Adexchangebuyer2AccountsFinalizedProposalsPauseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public Adexchangebuyer2AccountsFinalizedProposalsPauseRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +76,7 @@ public class Adexchangebuyer2AccountsFinalizedProposalsPauseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public Adexchangebuyer2AccountsFinalizedProposalsPauseRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class Adexchangebuyer2AccountsFinalizedProposalsPauseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public Adexchangebuyer2AccountsFinalizedProposalsPauseRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class Adexchangebuyer2AccountsFinalizedProposalsPauseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public Adexchangebuyer2AccountsFinalizedProposalsPauseRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class Adexchangebuyer2AccountsFinalizedProposalsPauseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public Adexchangebuyer2AccountsFinalizedProposalsPauseRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class Adexchangebuyer2AccountsFinalizedProposalsPauseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=proposalId")
     public String proposalId;
+
     public Adexchangebuyer2AccountsFinalizedProposalsPauseRequest withProposalId(String proposalId) {
         this.proposalId = proposalId;
         return this;
@@ -119,6 +131,7 @@ public class Adexchangebuyer2AccountsFinalizedProposalsPauseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public Adexchangebuyer2AccountsFinalizedProposalsPauseRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class Adexchangebuyer2AccountsFinalizedProposalsPauseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public Adexchangebuyer2AccountsFinalizedProposalsPauseRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,14 @@ public class Adexchangebuyer2AccountsFinalizedProposalsPauseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public Adexchangebuyer2AccountsFinalizedProposalsPauseRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public Adexchangebuyer2AccountsFinalizedProposalsPauseRequest(@JsonProperty("accountId") String accountId, @JsonProperty("proposalId") String proposalId) {
+        this.accountId = accountId;
+        this.proposalId = proposalId;
+  }
 }

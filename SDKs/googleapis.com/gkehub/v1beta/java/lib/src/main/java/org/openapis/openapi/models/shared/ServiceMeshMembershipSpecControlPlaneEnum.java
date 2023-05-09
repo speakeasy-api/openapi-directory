@@ -7,7 +7,7 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * ServiceMeshMembershipSpecControlPlaneEnum - Enables automatic control plane management.
+ * ServiceMeshMembershipSpecControlPlaneEnum - Deprecated: use `management` instead Enables automatic control plane management.
  */
 public enum ServiceMeshMembershipSpecControlPlaneEnum {
     CONTROL_PLANE_MANAGEMENT_UNSPECIFIED("CONTROL_PLANE_MANAGEMENT_UNSPECIFIED"),

@@ -12,6 +12,7 @@ public class Credential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scopes")
     public String[] scopes;
+
     public Credential withScopes(String[] scopes) {
         this.scopes = scopes;
         return this;
@@ -20,6 +21,7 @@ public class Credential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Credential withType(String type) {
         this.type = type;
         return this;
@@ -28,6 +30,7 @@ public class Credential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public Credential withUser(String user) {
         this.user = user;
         return this;
@@ -36,9 +39,11 @@ public class Credential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Credential withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Credential(){}
 }

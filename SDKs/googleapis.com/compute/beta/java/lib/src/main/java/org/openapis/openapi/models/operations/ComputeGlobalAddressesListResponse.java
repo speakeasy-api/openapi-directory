@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeGlobalAddressesListResponse {
@@ -12,6 +13,7 @@ public class ComputeGlobalAddressesListResponse {
      */
     
     public org.openapis.openapi.models.shared.AddressList addressList;
+
     public ComputeGlobalAddressesListResponse withAddressList(org.openapis.openapi.models.shared.AddressList addressList) {
         this.addressList = addressList;
         return this;
@@ -19,6 +21,7 @@ public class ComputeGlobalAddressesListResponse {
     
     
     public String contentType;
+
     public ComputeGlobalAddressesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ComputeGlobalAddressesListResponse {
     
     
     public Integer statusCode;
+
     public ComputeGlobalAddressesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeGlobalAddressesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeGlobalAddressesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeGlobalAddressesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DestinationOptionsRequest {
     
     public DestinationFileFormatEnum fileFormat;
+
     public DestinationOptionsRequest withFileFormat(DestinationFileFormatEnum fileFormat) {
         this.fileFormat = fileFormat;
         return this;
@@ -19,6 +20,7 @@ public class DestinationOptionsRequest {
     
     
     public Boolean hiveCompatiblePartitions;
+
     public DestinationOptionsRequest withHiveCompatiblePartitions(Boolean hiveCompatiblePartitions) {
         this.hiveCompatiblePartitions = hiveCompatiblePartitions;
         return this;
@@ -26,9 +28,11 @@ public class DestinationOptionsRequest {
     
     
     public Boolean perHourPartition;
+
     public DestinationOptionsRequest withPerHourPartition(Boolean perHourPartition) {
         this.perHourPartition = perHourPartition;
         return this;
     }
     
+    public DestinationOptionsRequest(){}
 }

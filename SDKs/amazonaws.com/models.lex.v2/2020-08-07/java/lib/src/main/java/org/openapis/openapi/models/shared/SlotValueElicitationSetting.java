@@ -15,6 +15,7 @@ public class SlotValueElicitationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValueSpecification")
     public SlotDefaultValueSpecification defaultValueSpecification;
+
     public SlotValueElicitationSetting withDefaultValueSpecification(SlotDefaultValueSpecification defaultValueSpecification) {
         this.defaultValueSpecification = defaultValueSpecification;
         return this;
@@ -23,6 +24,7 @@ public class SlotValueElicitationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promptSpecification")
     public PromptSpecification promptSpecification;
+
     public SlotValueElicitationSetting withPromptSpecification(PromptSpecification promptSpecification) {
         this.promptSpecification = promptSpecification;
         return this;
@@ -31,6 +33,7 @@ public class SlotValueElicitationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleUtterances")
     public SampleUtterance[] sampleUtterances;
+
     public SlotValueElicitationSetting withSampleUtterances(SampleUtterance[] sampleUtterances) {
         this.sampleUtterances = sampleUtterances;
         return this;
@@ -39,6 +42,7 @@ public class SlotValueElicitationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotCaptureSetting")
     public SlotCaptureSetting slotCaptureSetting;
+
     public SlotValueElicitationSetting withSlotCaptureSetting(SlotCaptureSetting slotCaptureSetting) {
         this.slotCaptureSetting = slotCaptureSetting;
         return this;
@@ -46,6 +50,7 @@ public class SlotValueElicitationSetting {
     
     @JsonProperty("slotConstraint")
     public SlotConstraintEnum slotConstraint;
+
     public SlotValueElicitationSetting withSlotConstraint(SlotConstraintEnum slotConstraint) {
         this.slotConstraint = slotConstraint;
         return this;
@@ -57,9 +62,13 @@ public class SlotValueElicitationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waitAndContinueSpecification")
     public WaitAndContinueSpecification waitAndContinueSpecification;
+
     public SlotValueElicitationSetting withWaitAndContinueSpecification(WaitAndContinueSpecification waitAndContinueSpecification) {
         this.waitAndContinueSpecification = waitAndContinueSpecification;
         return this;
     }
     
+    public SlotValueElicitationSetting(@JsonProperty("slotConstraint") SlotConstraintEnum slotConstraint) {
+        this.slotConstraint = slotConstraint;
+  }
 }

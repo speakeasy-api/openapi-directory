@@ -15,6 +15,7 @@ public class ListInstanceGroupsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceGroups")
     public InstanceGroup[] instanceGroups;
+
     public ListInstanceGroupsOutput withInstanceGroups(InstanceGroup[] instanceGroups) {
         this.instanceGroups = instanceGroups;
         return this;
@@ -23,9 +24,11 @@ public class ListInstanceGroupsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListInstanceGroupsOutput withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListInstanceGroupsOutput(){}
 }

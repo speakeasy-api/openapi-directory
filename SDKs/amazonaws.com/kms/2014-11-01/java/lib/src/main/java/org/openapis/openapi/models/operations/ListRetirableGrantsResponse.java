@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRetirableGrantsResponse {
     
     public String contentType;
+
     public ListRetirableGrantsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListRetirableGrantsResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public ListRetirableGrantsResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class ListRetirableGrantsResponse {
      */
     
     public Object invalidArnException;
+
     public ListRetirableGrantsResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -39,6 +43,7 @@ public class ListRetirableGrantsResponse {
      */
     
     public Object invalidMarkerException;
+
     public ListRetirableGrantsResponse withInvalidMarkerException(Object invalidMarkerException) {
         this.invalidMarkerException = invalidMarkerException;
         return this;
@@ -49,6 +54,7 @@ public class ListRetirableGrantsResponse {
      */
     
     public Object kmsInternalException;
+
     public ListRetirableGrantsResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -59,6 +65,7 @@ public class ListRetirableGrantsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListGrantsResponse listGrantsResponse;
+
     public ListRetirableGrantsResponse withListGrantsResponse(org.openapis.openapi.models.shared.ListGrantsResponse listGrantsResponse) {
         this.listGrantsResponse = listGrantsResponse;
         return this;
@@ -69,6 +76,7 @@ public class ListRetirableGrantsResponse {
      */
     
     public Object notFoundException;
+
     public ListRetirableGrantsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class ListRetirableGrantsResponse {
     
     
     public Integer statusCode;
+
     public ListRetirableGrantsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListRetirableGrantsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRetirableGrantsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListRetirableGrantsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

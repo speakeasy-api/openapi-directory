@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeLocationsResponse {
     
     public String contentType;
+
     public DescribeLocationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeLocationsResponse {
      */
     
     public Object directConnectClientException;
+
     public DescribeLocationsResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeLocationsResponse {
      */
     
     public Object directConnectServerException;
+
     public DescribeLocationsResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeLocationsResponse {
      */
     
     public org.openapis.openapi.models.shared.Locations locations;
+
     public DescribeLocationsResponse withLocations(org.openapis.openapi.models.shared.Locations locations) {
         this.locations = locations;
         return this;
@@ -46,6 +51,7 @@ public class DescribeLocationsResponse {
     
     
     public Integer statusCode;
+
     public DescribeLocationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeLocationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeLocationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeLocationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

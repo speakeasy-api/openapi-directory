@@ -16,42 +16,37 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetPersonalizedRankingRequestBody;
 import org.openapis.openapi.models.operations.GetPersonalizedRankingRequest;
+import org.openapis.openapi.models.operations.GetPersonalizedRankingRequestBody;
 import org.openapis.openapi.models.operations.GetPersonalizedRankingResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            GetPersonalizedRankingRequest req = new GetPersonalizedRankingRequest() {{
-                requestBody = new GetPersonalizedRankingRequestBody() {{
-                    campaignArn = "corrupti";
-                    context = new java.util.HashMap<String, String>() {{
-                        put("distinctio", "quibusdam");
-                        put("unde", "nulla");
-                        put("corrupti", "illum");
-                    }};
-                    filterArn = "vel";
-                    filterValues = new java.util.HashMap<String, String>() {{
-                        put("deserunt", "suscipit");
-                        put("iure", "magnam");
-                        put("debitis", "ipsa");
-                    }};
-                    inputList = new String[]{{
-                        add("tempora"),
-                        add("suscipit"),
-                        add("molestiae"),
-                        add("minus"),
-                    }};
-                    userId = "placeat";
-                }};
+            GetPersonalizedRankingRequest req = new GetPersonalizedRankingRequest(                new GetPersonalizedRankingRequestBody("provident",                 new String[]{{
+                                                add("quibusdam"),
+                                                add("unde"),
+                                                add("nulla"),
+                                            }}, "corrupti") {{
+                                context = new java.util.HashMap<String, String>() {{
+                                    put("vel", "error");
+                                    put("deserunt", "suscipit");
+                                    put("iure", "magnam");
+                                    put("debitis", "ipsa");
+                                }};
+                                filterArn = "delectus";
+                                filterValues = new java.util.HashMap<String, String>() {{
+                                    put("suscipit", "molestiae");
+                                    put("minus", "placeat");
+                                }};
+                            }};) {{
                 xAmzAlgorithm = "voluptatum";
                 xAmzContentSha256 = "iusto";
                 xAmzCredential = "excepturi";
@@ -59,26 +54,28 @@ public class Application {
                 xAmzSecurityToken = "recusandae";
                 xAmzSignature = "temporibus";
                 xAmzSignedHeaders = "ab";
-            }}            
+            }};            
 
             GetPersonalizedRankingResponse res = sdk.getPersonalizedRanking(req);
 
-            if (res.getPersonalizedRankingResponse.isPresent()) {
+            if (res.getPersonalizedRankingResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getPersonalizedRanking` - <p>Re-ranks a list of recommended items for the given user. The first item in the list is deemed the most likely item to be of interest to the user.</p> <note> <p>The solution backing the campaign must have been created using a recipe of type PERSONALIZED_RANKING.</p> </note>
-* `getRecommendations` - <p>Returns a list of recommended items. For campaigns, the campaign's Amazon Resource Name (ARN) is required and the required user and item input depends on the recipe type used to create the solution backing the campaign as follows:</p> <ul> <li> <p>USER_PERSONALIZATION - <code>userId</code> required, <code>itemId</code> not used</p> </li> <li> <p>RELATED_ITEMS - <code>itemId</code> required, <code>userId</code> not used</p> </li> </ul> <note> <p>Campaigns that are backed by a solution created using a recipe of type PERSONALIZED_RANKING use the API.</p> </note> <p> For recommenders, the recommender's ARN is required and the required item and user input depends on the use case (domain-based recipe) backing the recommender. For information on use case requirements see <a href="https://docs.aws.amazon.com/personalize/latest/dg/domain-use-cases.html">Choosing recommender use cases</a>. </p>
+* [getPersonalizedRanking](docs/sdk/README.md#getpersonalizedranking) - <p>Re-ranks a list of recommended items for the given user. The first item in the list is deemed the most likely item to be of interest to the user.</p> <note> <p>The solution backing the campaign must have been created using a recipe of type PERSONALIZED_RANKING.</p> </note>
+* [getRecommendations](docs/sdk/README.md#getrecommendations) - <p>Returns a list of recommended items. For campaigns, the campaign's Amazon Resource Name (ARN) is required and the required user and item input depends on the recipe type used to create the solution backing the campaign as follows:</p> <ul> <li> <p>USER_PERSONALIZATION - <code>userId</code> required, <code>itemId</code> not used</p> </li> <li> <p>RELATED_ITEMS - <code>itemId</code> required, <code>userId</code> not used</p> </li> </ul> <note> <p>Campaigns that are backed by a solution created using a recipe of type PERSONALIZED_RANKING use the API.</p> </note> <p> For recommenders, the recommender's ARN is required and the required item and user input depends on the use case (domain-based recipe) backing the recommender. For information on use case requirements see <a href="https://docs.aws.amazon.com/personalize/latest/dg/domain-use-cases.html">Choosing recommender use cases</a>. </p>
 <!-- End SDK Available Operations -->
 
 ### Maturity

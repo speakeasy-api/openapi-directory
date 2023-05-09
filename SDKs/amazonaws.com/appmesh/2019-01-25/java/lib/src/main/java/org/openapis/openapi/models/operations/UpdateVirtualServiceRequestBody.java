@@ -15,6 +15,7 @@ public class UpdateVirtualServiceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateVirtualServiceRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,9 +26,13 @@ public class UpdateVirtualServiceRequestBody {
      */
     @JsonProperty("spec")
     public UpdateVirtualServiceRequestBodySpec spec;
+
     public UpdateVirtualServiceRequestBody withSpec(UpdateVirtualServiceRequestBodySpec spec) {
         this.spec = spec;
         return this;
     }
     
+    public UpdateVirtualServiceRequestBody(@JsonProperty("spec") UpdateVirtualServiceRequestBodySpec spec) {
+        this.spec = spec;
+  }
 }

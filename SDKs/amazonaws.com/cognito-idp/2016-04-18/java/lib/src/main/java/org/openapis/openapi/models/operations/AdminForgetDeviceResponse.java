@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminForgetDeviceResponse {
     
     public String contentType;
+
     public AdminForgetDeviceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AdminForgetDeviceResponse {
      */
     
     public Object internalErrorException;
+
     public AdminForgetDeviceResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class AdminForgetDeviceResponse {
      */
     
     public Object invalidParameterException;
+
     public AdminForgetDeviceResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class AdminForgetDeviceResponse {
      */
     
     public Object invalidUserPoolConfigurationException;
+
     public AdminForgetDeviceResponse withInvalidUserPoolConfigurationException(Object invalidUserPoolConfigurationException) {
         this.invalidUserPoolConfigurationException = invalidUserPoolConfigurationException;
         return this;
@@ -49,6 +54,7 @@ public class AdminForgetDeviceResponse {
      */
     
     public Object notAuthorizedException;
+
     public AdminForgetDeviceResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class AdminForgetDeviceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AdminForgetDeviceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class AdminForgetDeviceResponse {
     
     
     public Integer statusCode;
+
     public AdminForgetDeviceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AdminForgetDeviceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminForgetDeviceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class AdminForgetDeviceResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AdminForgetDeviceResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,9 +103,14 @@ public class AdminForgetDeviceResponse {
      */
     
     public Object userNotFoundException;
+
     public AdminForgetDeviceResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public AdminForgetDeviceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class PutLoggingOptionsRequestBodyLoggingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public org.openapis.openapi.models.shared.LoggingLevelEnum level;
+
     public PutLoggingOptionsRequestBodyLoggingOptions withLevel(org.openapis.openapi.models.shared.LoggingLevelEnum level) {
         this.level = level;
         return this;
     }
     
+    public PutLoggingOptionsRequestBodyLoggingOptions(){}
 }

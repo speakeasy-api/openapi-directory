@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRequestsFoldersPathRequest {
@@ -12,6 +13,7 @@ public class GetRequestsFoldersPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetRequestsFoldersPathRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +24,7 @@ public class GetRequestsFoldersPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mine")
     public Boolean mine;
+
     public GetRequestsFoldersPathRequest withMine(Boolean mine) {
         this.mine = mine;
         return this;
@@ -32,6 +35,7 @@ public class GetRequestsFoldersPathRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public GetRequestsFoldersPathRequest withPath(String path) {
         this.path = path;
         return this;
@@ -42,6 +46,7 @@ public class GetRequestsFoldersPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetRequestsFoldersPathRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -52,9 +57,13 @@ public class GetRequestsFoldersPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public java.util.Map<String, Object> sortBy;
+
     public GetRequestsFoldersPathRequest withSortBy(java.util.Map<String, Object> sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public GetRequestsFoldersPathRequest(@JsonProperty("path") String path) {
+        this.path = path;
+  }
 }

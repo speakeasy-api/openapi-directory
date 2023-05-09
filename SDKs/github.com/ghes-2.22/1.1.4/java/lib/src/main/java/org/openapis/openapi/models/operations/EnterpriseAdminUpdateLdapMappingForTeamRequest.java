@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminUpdateLdapMappingForTeamRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public EnterpriseAdminUpdateLdapMappingForTeamRequestBody requestBody;
+
     public EnterpriseAdminUpdateLdapMappingForTeamRequest withRequestBody(EnterpriseAdminUpdateLdapMappingForTeamRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,14 @@ public class EnterpriseAdminUpdateLdapMappingForTeamRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
     public Long teamId;
+
     public EnterpriseAdminUpdateLdapMappingForTeamRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public EnterpriseAdminUpdateLdapMappingForTeamRequest(@JsonProperty("RequestBody") EnterpriseAdminUpdateLdapMappingForTeamRequestBody requestBody, @JsonProperty("team_id") Long teamId) {
+        this.requestBody = requestBody;
+        this.teamId = teamId;
+  }
 }

@@ -18,6 +18,7 @@ public class ImageClassificationModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseModelId")
     public String baseModelId;
+
     public ImageClassificationModelMetadata withBaseModelId(String baseModelId) {
         this.baseModelId = baseModelId;
         return this;
@@ -29,6 +30,7 @@ public class ImageClassificationModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelType")
     public String modelType;
+
     public ImageClassificationModelMetadata withModelType(String modelType) {
         this.modelType = modelType;
         return this;
@@ -40,6 +42,7 @@ public class ImageClassificationModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeCount")
     public String nodeCount;
+
     public ImageClassificationModelMetadata withNodeCount(String nodeCount) {
         this.nodeCount = nodeCount;
         return this;
@@ -51,6 +54,7 @@ public class ImageClassificationModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeQps")
     public Double nodeQps;
+
     public ImageClassificationModelMetadata withNodeQps(Double nodeQps) {
         this.nodeQps = nodeQps;
         return this;
@@ -62,6 +66,7 @@ public class ImageClassificationModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopReason")
     public String stopReason;
+
     public ImageClassificationModelMetadata withStopReason(String stopReason) {
         this.stopReason = stopReason;
         return this;
@@ -73,6 +78,7 @@ public class ImageClassificationModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainBudget")
     public String trainBudget;
+
     public ImageClassificationModelMetadata withTrainBudget(String trainBudget) {
         this.trainBudget = trainBudget;
         return this;
@@ -84,9 +90,11 @@ public class ImageClassificationModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainCost")
     public String trainCost;
+
     public ImageClassificationModelMetadata withTrainCost(String trainCost) {
         this.trainCost = trainCost;
         return this;
     }
     
+    public ImageClassificationModelMetadata(){}
 }

@@ -18,6 +18,7 @@ public class VoidedPurchasesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageInfo")
     public PageInfo pageInfo;
+
     public VoidedPurchasesListResponse withPageInfo(PageInfo pageInfo) {
         this.pageInfo = pageInfo;
         return this;
@@ -29,6 +30,7 @@ public class VoidedPurchasesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenPagination")
     public TokenPagination tokenPagination;
+
     public VoidedPurchasesListResponse withTokenPagination(TokenPagination tokenPagination) {
         this.tokenPagination = tokenPagination;
         return this;
@@ -37,9 +39,11 @@ public class VoidedPurchasesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voidedPurchases")
     public VoidedPurchase[] voidedPurchases;
+
     public VoidedPurchasesListResponse withVoidedPurchases(VoidedPurchase[] voidedPurchases) {
         this.voidedPurchases = voidedPurchases;
         return this;
     }
     
+    public VoidedPurchasesListResponse(){}
 }

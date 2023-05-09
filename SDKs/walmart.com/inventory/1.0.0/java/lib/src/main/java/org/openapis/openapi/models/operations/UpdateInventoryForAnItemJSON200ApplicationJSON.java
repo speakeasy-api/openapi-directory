@@ -15,6 +15,7 @@ public class UpdateInventoryForAnItemJSON200ApplicationJSON {
      */
     @JsonProperty("quantity")
     public UpdateInventoryForAnItemJSON200ApplicationJSONQuantity quantity;
+
     public UpdateInventoryForAnItemJSON200ApplicationJSON withQuantity(UpdateInventoryForAnItemJSON200ApplicationJSONQuantity quantity) {
         this.quantity = quantity;
         return this;
@@ -25,9 +26,14 @@ public class UpdateInventoryForAnItemJSON200ApplicationJSON {
      */
     @JsonProperty("sku")
     public String sku;
+
     public UpdateInventoryForAnItemJSON200ApplicationJSON withSku(String sku) {
         this.sku = sku;
         return this;
     }
     
+    public UpdateInventoryForAnItemJSON200ApplicationJSON(@JsonProperty("quantity") UpdateInventoryForAnItemJSON200ApplicationJSONQuantity quantity, @JsonProperty("sku") String sku) {
+        this.quantity = quantity;
+        this.sku = sku;
+  }
 }

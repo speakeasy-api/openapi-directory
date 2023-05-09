@@ -12,6 +12,7 @@ public class GetConsumerV1ServicegroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetConsumerV1ServicegroupsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -22,6 +23,7 @@ public class GetConsumerV1ServicegroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
     public String locationId;
+
     public GetConsumerV1ServicegroupsRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -32,9 +34,11 @@ public class GetConsumerV1ServicegroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetConsumerV1ServicegroupsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetConsumerV1ServicegroupsRequest(){}
 }

@@ -15,6 +15,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Command")
     public String command;
+
     public Container withCommand(String command) {
         this.command = command;
         return this;
@@ -26,6 +27,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerState")
     public String containerState;
+
     public Container withContainerState(String containerState) {
         this.containerState = containerState;
         return this;
@@ -37,6 +39,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Created")
     public Float created;
+
     public Container withCreated(Float created) {
         this.created = created;
         return this;
@@ -48,6 +51,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Env")
     public String[] env;
+
     public Container withEnv(String[] env) {
         this.env = env;
         return this;
@@ -56,6 +60,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Group")
     public Group group;
+
     public Container withGroup(Group group) {
         this.group = group;
         return this;
@@ -67,6 +72,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Container withId(String id) {
         this.id = id;
         return this;
@@ -78,6 +84,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Image")
     public String image;
+
     public Container withImage(String image) {
         this.image = image;
         return this;
@@ -89,6 +96,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageId")
     public String imageId;
+
     public Container withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -100,6 +108,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Labels")
     public java.util.Map<String, Object> labels;
+
     public Container withLabels(java.util.Map<String, Object> labels) {
         this.labels = labels;
         return this;
@@ -111,6 +120,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Memory")
     public Integer memory;
+
     public Container withMemory(Integer memory) {
         this.memory = memory;
         return this;
@@ -122,6 +132,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Container withName(String name) {
         this.name = name;
         return this;
@@ -133,6 +144,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Names")
     public String[] names;
+
     public Container withNames(String[] names) {
         this.names = names;
         return this;
@@ -141,6 +153,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkSettings")
     public NetworkSetting networkSettings;
+
     public Container withNetworkSettings(NetworkSetting networkSettings) {
         this.networkSettings = networkSettings;
         return this;
@@ -149,6 +162,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ports")
     public Port ports;
+
     public Container withPorts(Port ports) {
         this.ports = ports;
         return this;
@@ -160,6 +174,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeRootFs")
     public Long sizeRootFs;
+
     public Container withSizeRootFs(Long sizeRootFs) {
         this.sizeRootFs = sizeRootFs;
         return this;
@@ -171,6 +186,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeRw")
     public Long sizeRw;
+
     public Container withSizeRw(Long sizeRw) {
         this.sizeRw = sizeRw;
         return this;
@@ -182,6 +198,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Started")
     public Float started;
+
     public Container withStarted(Float started) {
         this.started = started;
         return this;
@@ -193,6 +210,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public Container withStatus(String status) {
         this.status = status;
         return this;
@@ -204,9 +222,11 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VCPU")
     public Long vcpu;
+
     public Container withVcpu(Long vcpu) {
         this.vcpu = vcpu;
         return this;
     }
     
+    public Container(){}
 }

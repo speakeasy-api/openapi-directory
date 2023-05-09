@@ -12,9 +12,11 @@ public class ManagedZoneReverseLookupConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ManagedZoneReverseLookupConfig withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public ManagedZoneReverseLookupConfig(){}
 }

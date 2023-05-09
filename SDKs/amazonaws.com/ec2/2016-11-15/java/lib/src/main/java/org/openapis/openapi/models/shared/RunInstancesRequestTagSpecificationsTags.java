@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RunInstancesRequestTagSpecificationsTags {
     
     public String key;
+
     public RunInstancesRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class RunInstancesRequestTagSpecificationsTags {
     
     
     public String value;
+
     public RunInstancesRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public RunInstancesRequestTagSpecificationsTags(){}
 }

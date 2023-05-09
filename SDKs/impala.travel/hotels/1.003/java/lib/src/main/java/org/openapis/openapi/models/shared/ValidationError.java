@@ -18,6 +18,7 @@ public class ValidationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public ValidationError withCode(String code) {
         this.code = code;
         return this;
@@ -28,6 +29,7 @@ public class ValidationError {
      */
     @JsonProperty("message")
     public String message;
+
     public ValidationError withMessage(String message) {
         this.message = message;
         return this;
@@ -36,9 +38,13 @@ public class ValidationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validations")
     public ValidationResult[] validations;
+
     public ValidationError withValidations(ValidationResult[] validations) {
         this.validations = validations;
         return this;
     }
     
+    public ValidationError(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

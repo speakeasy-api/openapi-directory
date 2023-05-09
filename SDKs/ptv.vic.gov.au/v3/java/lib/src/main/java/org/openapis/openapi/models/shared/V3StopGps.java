@@ -15,6 +15,7 @@ public class V3StopGps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Float latitude;
+
     public V3StopGps withLatitude(Float latitude) {
         this.latitude = latitude;
         return this;
@@ -26,9 +27,11 @@ public class V3StopGps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Float longitude;
+
     public V3StopGps withLongitude(Float longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public V3StopGps(){}
 }

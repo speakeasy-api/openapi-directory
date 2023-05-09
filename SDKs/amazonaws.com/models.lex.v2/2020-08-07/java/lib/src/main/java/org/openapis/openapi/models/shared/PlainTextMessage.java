@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PlainTextMessage {
     @JsonProperty("value")
     public String value;
+
     public PlainTextMessage withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PlainTextMessage(@JsonProperty("value") String value) {
+        this.value = value;
+  }
 }

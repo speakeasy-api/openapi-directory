@@ -18,6 +18,7 @@ public class OrderTrackingSignal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerShippingFee")
     public PriceAmount customerShippingFee;
+
     public OrderTrackingSignal withCustomerShippingFee(PriceAmount customerShippingFee) {
         this.customerShippingFee = customerShippingFee;
         return this;
@@ -29,6 +30,7 @@ public class OrderTrackingSignal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryPostalCode")
     public String deliveryPostalCode;
+
     public OrderTrackingSignal withDeliveryPostalCode(String deliveryPostalCode) {
         this.deliveryPostalCode = deliveryPostalCode;
         return this;
@@ -40,6 +42,7 @@ public class OrderTrackingSignal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryRegionCode")
     public String deliveryRegionCode;
+
     public OrderTrackingSignal withDeliveryRegionCode(String deliveryRegionCode) {
         this.deliveryRegionCode = deliveryRegionCode;
         return this;
@@ -51,6 +54,7 @@ public class OrderTrackingSignal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItems")
     public OrderTrackingSignalLineItemDetails[] lineItems;
+
     public OrderTrackingSignal withLineItems(OrderTrackingSignalLineItemDetails[] lineItems) {
         this.lineItems = lineItems;
         return this;
@@ -62,6 +66,7 @@ public class OrderTrackingSignal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantId")
     public String merchantId;
+
     public OrderTrackingSignal withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -73,6 +78,7 @@ public class OrderTrackingSignal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderCreatedTime")
     public DateTime orderCreatedTime;
+
     public OrderTrackingSignal withOrderCreatedTime(DateTime orderCreatedTime) {
         this.orderCreatedTime = orderCreatedTime;
         return this;
@@ -84,6 +90,7 @@ public class OrderTrackingSignal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderId")
     public String orderId;
+
     public OrderTrackingSignal withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -95,6 +102,7 @@ public class OrderTrackingSignal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderTrackingSignalId")
     public String orderTrackingSignalId;
+
     public OrderTrackingSignal withOrderTrackingSignalId(String orderTrackingSignalId) {
         this.orderTrackingSignalId = orderTrackingSignalId;
         return this;
@@ -106,6 +114,7 @@ public class OrderTrackingSignal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipmentLineItemMapping")
     public OrderTrackingSignalShipmentLineItemMapping[] shipmentLineItemMapping;
+
     public OrderTrackingSignal withShipmentLineItemMapping(OrderTrackingSignalShipmentLineItemMapping[] shipmentLineItemMapping) {
         this.shipmentLineItemMapping = shipmentLineItemMapping;
         return this;
@@ -117,9 +126,11 @@ public class OrderTrackingSignal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingInfo")
     public OrderTrackingSignalShippingInfo[] shippingInfo;
+
     public OrderTrackingSignal withShippingInfo(OrderTrackingSignalShippingInfo[] shippingInfo) {
         this.shippingInfo = shippingInfo;
         return this;
     }
     
+    public OrderTrackingSignal(){}
 }

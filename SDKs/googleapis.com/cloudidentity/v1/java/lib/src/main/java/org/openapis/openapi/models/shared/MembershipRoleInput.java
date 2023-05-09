@@ -18,6 +18,7 @@ public class MembershipRoleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiryDetail")
     public ExpiryDetail expiryDetail;
+
     public MembershipRoleInput withExpiryDetail(ExpiryDetail expiryDetail) {
         this.expiryDetail = expiryDetail;
         return this;
@@ -29,9 +30,11 @@ public class MembershipRoleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MembershipRoleInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public MembershipRoleInput(){}
 }

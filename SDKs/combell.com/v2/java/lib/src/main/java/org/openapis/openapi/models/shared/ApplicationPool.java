@@ -18,6 +18,7 @@ public class ApplicationPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installed_net_core_runtimes")
     public String[] installedNetCoreRuntimes;
+
     public ApplicationPool withInstalledNetCoreRuntimes(String[] installedNetCoreRuntimes) {
         this.installedNetCoreRuntimes = installedNetCoreRuntimes;
         return this;
@@ -29,6 +30,7 @@ public class ApplicationPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipeline_mode")
     public String pipelineMode;
+
     public ApplicationPool withPipelineMode(String pipelineMode) {
         this.pipelineMode = pipelineMode;
         return this;
@@ -40,9 +42,11 @@ public class ApplicationPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtime")
     public String runtime;
+
     public ApplicationPool withRuntime(String runtime) {
         this.runtime = runtime;
         return this;
     }
     
+    public ApplicationPool(){}
 }

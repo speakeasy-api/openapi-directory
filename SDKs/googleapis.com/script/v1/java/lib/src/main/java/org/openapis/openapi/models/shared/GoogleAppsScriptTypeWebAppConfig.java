@@ -18,6 +18,7 @@ public class GoogleAppsScriptTypeWebAppConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access")
     public GoogleAppsScriptTypeWebAppConfigAccessEnum access;
+
     public GoogleAppsScriptTypeWebAppConfig withAccess(GoogleAppsScriptTypeWebAppConfigAccessEnum access) {
         this.access = access;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsScriptTypeWebAppConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executeAs")
     public GoogleAppsScriptTypeWebAppConfigExecuteAsEnum executeAs;
+
     public GoogleAppsScriptTypeWebAppConfig withExecuteAs(GoogleAppsScriptTypeWebAppConfigExecuteAsEnum executeAs) {
         this.executeAs = executeAs;
         return this;
     }
     
+    public GoogleAppsScriptTypeWebAppConfig(){}
 }

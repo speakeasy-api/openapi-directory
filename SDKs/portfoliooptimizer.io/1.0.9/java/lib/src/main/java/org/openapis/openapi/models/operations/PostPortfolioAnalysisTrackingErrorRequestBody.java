@@ -12,6 +12,7 @@ public class PostPortfolioAnalysisTrackingErrorRequestBody {
      */
     @JsonProperty("benchmarkReturns")
     public Double[] benchmarkReturns;
+
     public PostPortfolioAnalysisTrackingErrorRequestBody withBenchmarkReturns(Double[] benchmarkReturns) {
         this.benchmarkReturns = benchmarkReturns;
         return this;
@@ -19,9 +20,14 @@ public class PostPortfolioAnalysisTrackingErrorRequestBody {
     
     @JsonProperty("portfolios")
     public PostPortfolioAnalysisTrackingErrorRequestBodyPortfolios[] portfolios;
+
     public PostPortfolioAnalysisTrackingErrorRequestBody withPortfolios(PostPortfolioAnalysisTrackingErrorRequestBodyPortfolios[] portfolios) {
         this.portfolios = portfolios;
         return this;
     }
     
+    public PostPortfolioAnalysisTrackingErrorRequestBody(@JsonProperty("benchmarkReturns") Double[] benchmarkReturns, @JsonProperty("portfolios") PostPortfolioAnalysisTrackingErrorRequestBodyPortfolios[] portfolios) {
+        this.benchmarkReturns = benchmarkReturns;
+        this.portfolios = portfolios;
+  }
 }

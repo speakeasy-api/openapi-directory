@@ -14,6 +14,7 @@ public class MarketingEventSubscriber {
      */
     @JsonProperty("interactionDateTime")
     public Long interactionDateTime;
+
     public MarketingEventSubscriber withInteractionDateTime(Long interactionDateTime) {
         this.interactionDateTime = interactionDateTime;
         return this;
@@ -22,6 +23,7 @@ public class MarketingEventSubscriber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public MarketingEventSubscriber withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -30,9 +32,13 @@ public class MarketingEventSubscriber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vid")
     public Integer vid;
+
     public MarketingEventSubscriber withVid(Integer vid) {
         this.vid = vid;
         return this;
     }
     
+    public MarketingEventSubscriber(@JsonProperty("interactionDateTime") Long interactionDateTime) {
+        this.interactionDateTime = interactionDateTime;
+  }
 }

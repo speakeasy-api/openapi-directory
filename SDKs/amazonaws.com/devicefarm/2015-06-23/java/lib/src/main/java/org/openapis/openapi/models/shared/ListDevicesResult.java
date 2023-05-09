@@ -15,6 +15,7 @@ public class ListDevicesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public Device[] devices;
+
     public ListDevicesResult withDevices(Device[] devices) {
         this.devices = devices;
         return this;
@@ -23,9 +24,11 @@ public class ListDevicesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDevicesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDevicesResult(){}
 }

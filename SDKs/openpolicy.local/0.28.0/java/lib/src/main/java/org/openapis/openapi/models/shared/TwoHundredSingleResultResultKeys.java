@@ -18,9 +18,11 @@ public class TwoHundredSingleResultResultKeys {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("global-key")
     public TwoHundredSingleResultResultKeysGlobalKey globalKey;
+
     public TwoHundredSingleResultResultKeys withGlobalKey(TwoHundredSingleResultResultKeysGlobalKey globalKey) {
         this.globalKey = globalKey;
         return this;
     }
     
+    public TwoHundredSingleResultResultKeys(){}
 }

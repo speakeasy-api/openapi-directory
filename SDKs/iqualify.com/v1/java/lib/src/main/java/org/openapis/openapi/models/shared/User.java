@@ -15,6 +15,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public User withEmail(String email) {
         this.email = email;
         return this;
@@ -23,6 +24,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public User withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -31,6 +33,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public User withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -39,6 +42,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public UserMetadata metadata;
+
     public User withMetadata(UserMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -47,6 +51,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personId")
     public String personId;
+
     public User withPersonId(String personId) {
         this.personId = personId;
         return this;
@@ -55,6 +60,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile")
     public UserProfileRequest profile;
+
     public User withProfile(UserProfileRequest profile) {
         this.profile = profile;
         return this;
@@ -63,9 +69,11 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sendInvite")
     public Boolean sendInvite;
+
     public User withSendInvite(Boolean sendInvite) {
         this.sendInvite = sendInvite;
         return this;
     }
     
+    public User(){}
 }

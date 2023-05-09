@@ -15,6 +15,7 @@ public class ControlSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controls")
     public Control[] controls;
+
     public ControlSet withControls(Control[] controls) {
         this.controls = controls;
         return this;
@@ -23,6 +24,7 @@ public class ControlSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ControlSet withId(String id) {
         this.id = id;
         return this;
@@ -31,9 +33,11 @@ public class ControlSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ControlSet withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ControlSet(){}
 }

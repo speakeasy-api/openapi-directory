@@ -20,6 +20,7 @@ public class LastSync {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastSuccessfulSyncProvisioningArtifactId")
     public String lastSuccessfulSyncProvisioningArtifactId;
+
     public LastSync withLastSuccessfulSyncProvisioningArtifactId(String lastSuccessfulSyncProvisioningArtifactId) {
         this.lastSuccessfulSyncProvisioningArtifactId = lastSuccessfulSyncProvisioningArtifactId;
         return this;
@@ -30,6 +31,7 @@ public class LastSync {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastSuccessfulSyncTime")
     public OffsetDateTime lastSuccessfulSyncTime;
+
     public LastSync withLastSuccessfulSyncTime(OffsetDateTime lastSuccessfulSyncTime) {
         this.lastSuccessfulSyncTime = lastSuccessfulSyncTime;
         return this;
@@ -38,6 +40,7 @@ public class LastSync {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastSyncStatus")
     public LastSyncStatusEnum lastSyncStatus;
+
     public LastSync withLastSyncStatus(LastSyncStatusEnum lastSyncStatus) {
         this.lastSyncStatus = lastSyncStatus;
         return this;
@@ -46,6 +49,7 @@ public class LastSync {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastSyncStatusMessage")
     public String lastSyncStatusMessage;
+
     public LastSync withLastSyncStatusMessage(String lastSyncStatusMessage) {
         this.lastSyncStatusMessage = lastSyncStatusMessage;
         return this;
@@ -56,9 +60,11 @@ public class LastSync {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastSyncTime")
     public OffsetDateTime lastSyncTime;
+
     public LastSync withLastSyncTime(OffsetDateTime lastSyncTime) {
         this.lastSyncTime = lastSyncTime;
         return this;
     }
     
+    public LastSync(){}
 }

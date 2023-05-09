@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateCalendarEventRequestData {
     @JsonProperty("attributes")
     public CreateCalendarEventRequestDataAttributes attributes;
+
     public CreateCalendarEventRequestData withAttributes(CreateCalendarEventRequestDataAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -16,6 +17,7 @@ public class CreateCalendarEventRequestData {
     
     @JsonProperty("relationships")
     public CreateCalendarEventRequestDataRelationships relationships;
+
     public CreateCalendarEventRequestData withRelationships(CreateCalendarEventRequestDataRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -23,9 +25,15 @@ public class CreateCalendarEventRequestData {
     
     @JsonProperty("type")
     public TypeEnum type;
+
     public CreateCalendarEventRequestData withType(TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateCalendarEventRequestData(@JsonProperty("attributes") CreateCalendarEventRequestDataAttributes attributes, @JsonProperty("relationships") CreateCalendarEventRequestDataRelationships relationships, @JsonProperty("type") TypeEnum type) {
+        this.attributes = attributes;
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

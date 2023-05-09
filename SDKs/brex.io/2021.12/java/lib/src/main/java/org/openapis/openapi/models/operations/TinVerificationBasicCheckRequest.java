@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TinVerificationBasicCheckRequest {
@@ -12,6 +13,7 @@ public class TinVerificationBasicCheckRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public TinVerificationBasicCheckRequest withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +24,14 @@ public class TinVerificationBasicCheckRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tin")
     public String tin;
+
     public TinVerificationBasicCheckRequest withTin(String tin) {
         this.tin = tin;
         return this;
     }
     
+    public TinVerificationBasicCheckRequest(@JsonProperty("name") String name, @JsonProperty("tin") String tin) {
+        this.name = name;
+        this.tin = tin;
+  }
 }

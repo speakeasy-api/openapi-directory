@@ -20,6 +20,7 @@ public class CreateIndexOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public CreateIndexOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class CreateIndexOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public CreateIndexOutput withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,9 +40,11 @@ public class CreateIndexOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public IndexStateEnum state;
+
     public CreateIndexOutput withState(IndexStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public CreateIndexOutput(){}
 }

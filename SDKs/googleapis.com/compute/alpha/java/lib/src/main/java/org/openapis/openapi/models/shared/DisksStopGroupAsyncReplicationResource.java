@@ -18,9 +18,11 @@ public class DisksStopGroupAsyncReplicationResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourcePolicy")
     public String resourcePolicy;
+
     public DisksStopGroupAsyncReplicationResource withResourcePolicy(String resourcePolicy) {
         this.resourcePolicy = resourcePolicy;
         return this;
     }
     
+    public DisksStopGroupAsyncReplicationResource(){}
 }

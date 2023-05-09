@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DirectorySchemasUpdateResponse {
     
     public String contentType;
+
     public DirectorySchemasUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DirectorySchemasUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.Schema schema;
+
     public DirectorySchemasUpdateResponse withSchema(org.openapis.openapi.models.shared.Schema schema) {
         this.schema = schema;
         return this;
@@ -26,6 +29,7 @@ public class DirectorySchemasUpdateResponse {
     
     
     public Integer statusCode;
+
     public DirectorySchemasUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DirectorySchemasUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DirectorySchemasUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DirectorySchemasUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

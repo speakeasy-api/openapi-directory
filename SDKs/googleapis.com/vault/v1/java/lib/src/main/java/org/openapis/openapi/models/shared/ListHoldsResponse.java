@@ -18,6 +18,7 @@ public class ListHoldsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("holds")
     public Hold[] holds;
+
     public ListHoldsResponse withHolds(Hold[] holds) {
         this.holds = holds;
         return this;
@@ -29,9 +30,11 @@ public class ListHoldsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListHoldsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListHoldsResponse(){}
 }

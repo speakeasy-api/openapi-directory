@@ -15,6 +15,7 @@ public class ListNotebookInstanceLifecycleConfigsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListNotebookInstanceLifecycleConfigsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListNotebookInstanceLifecycleConfigsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookInstanceLifecycleConfigs")
     public NotebookInstanceLifecycleConfigSummary[] notebookInstanceLifecycleConfigs;
+
     public ListNotebookInstanceLifecycleConfigsOutput withNotebookInstanceLifecycleConfigs(NotebookInstanceLifecycleConfigSummary[] notebookInstanceLifecycleConfigs) {
         this.notebookInstanceLifecycleConfigs = notebookInstanceLifecycleConfigs;
         return this;
     }
     
+    public ListNotebookInstanceLifecycleConfigsOutput(){}
 }

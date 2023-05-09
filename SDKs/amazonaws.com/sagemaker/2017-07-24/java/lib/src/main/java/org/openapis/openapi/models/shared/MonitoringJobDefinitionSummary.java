@@ -19,6 +19,7 @@ public class MonitoringJobDefinitionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public MonitoringJobDefinitionSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -26,6 +27,7 @@ public class MonitoringJobDefinitionSummary {
     
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public MonitoringJobDefinitionSummary withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -33,6 +35,7 @@ public class MonitoringJobDefinitionSummary {
     
     @JsonProperty("MonitoringJobDefinitionArn")
     public String monitoringJobDefinitionArn;
+
     public MonitoringJobDefinitionSummary withMonitoringJobDefinitionArn(String monitoringJobDefinitionArn) {
         this.monitoringJobDefinitionArn = monitoringJobDefinitionArn;
         return this;
@@ -40,9 +43,16 @@ public class MonitoringJobDefinitionSummary {
     
     @JsonProperty("MonitoringJobDefinitionName")
     public String monitoringJobDefinitionName;
+
     public MonitoringJobDefinitionSummary withMonitoringJobDefinitionName(String monitoringJobDefinitionName) {
         this.monitoringJobDefinitionName = monitoringJobDefinitionName;
         return this;
     }
     
+    public MonitoringJobDefinitionSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("EndpointName") String endpointName, @JsonProperty("MonitoringJobDefinitionArn") String monitoringJobDefinitionArn, @JsonProperty("MonitoringJobDefinitionName") String monitoringJobDefinitionName) {
+        this.creationTime = creationTime;
+        this.endpointName = endpointName;
+        this.monitoringJobDefinitionArn = monitoringJobDefinitionArn;
+        this.monitoringJobDefinitionName = monitoringJobDefinitionName;
+  }
 }

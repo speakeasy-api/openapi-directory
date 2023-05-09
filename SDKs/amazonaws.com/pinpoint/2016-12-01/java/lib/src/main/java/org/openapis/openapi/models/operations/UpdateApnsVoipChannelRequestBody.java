@@ -12,9 +12,13 @@ public class UpdateApnsVoipChannelRequestBody {
      */
     @JsonProperty("APNSVoipChannelRequest")
     public UpdateAPNSVoipChannelRequestBodyAPNSVoipChannelRequest apnsVoipChannelRequest;
+
     public UpdateApnsVoipChannelRequestBody withAPNSVoipChannelRequest(UpdateAPNSVoipChannelRequestBodyAPNSVoipChannelRequest apnsVoipChannelRequest) {
         this.apnsVoipChannelRequest = apnsVoipChannelRequest;
         return this;
     }
     
+    public UpdateApnsVoipChannelRequestBody(@JsonProperty("APNSVoipChannelRequest") UpdateAPNSVoipChannelRequestBodyAPNSVoipChannelRequest apnsVoipChannelRequest) {
+        this.apnsVoipChannelRequest = apnsVoipChannelRequest;
+  }
 }

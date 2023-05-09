@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportationSaveCustomColumnRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ChangeCustomColumnRequest changeCustomColumnRequest;
+
     public ImportationSaveCustomColumnRequest withChangeCustomColumnRequest(org.openapis.openapi.models.shared.ChangeCustomColumnRequest changeCustomColumnRequest) {
         this.changeCustomColumnRequest = changeCustomColumnRequest;
         return this;
@@ -19,6 +21,7 @@ public class ImportationSaveCustomColumnRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnId")
     public String columnId;
+
     public ImportationSaveCustomColumnRequest withColumnId(String columnId) {
         this.columnId = columnId;
         return this;
@@ -29,6 +32,7 @@ public class ImportationSaveCustomColumnRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
     public String executionId;
+
     public ImportationSaveCustomColumnRequest withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -39,9 +43,16 @@ public class ImportationSaveCustomColumnRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public ImportationSaveCustomColumnRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public ImportationSaveCustomColumnRequest(@JsonProperty("changeCustomColumnRequest") org.openapis.openapi.models.shared.ChangeCustomColumnRequest changeCustomColumnRequest, @JsonProperty("columnId") String columnId, @JsonProperty("executionId") String executionId, @JsonProperty("storeId") String storeId) {
+        this.changeCustomColumnRequest = changeCustomColumnRequest;
+        this.columnId = columnId;
+        this.executionId = executionId;
+        this.storeId = storeId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePotResponse {
     
     public String contentType;
+
     public UpdatePotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdatePotResponse {
     
     
     public Integer statusCode;
+
     public UpdatePotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdatePotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdatePotResponse {
      */
     
     public UpdatePot200ApplicationJSON updatePot200ApplicationJSONObject;
+
     public UpdatePotResponse withUpdatePot200ApplicationJSONObject(UpdatePot200ApplicationJSON updatePot200ApplicationJSONObject) {
         this.updatePot200ApplicationJSONObject = updatePot200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class UpdatePotResponse {
      */
     
     public UpdatePot400ApplicationJSON updatePot400ApplicationJSONObject;
+
     public UpdatePotResponse withUpdatePot400ApplicationJSONObject(UpdatePot400ApplicationJSON updatePot400ApplicationJSONObject) {
         this.updatePot400ApplicationJSONObject = updatePot400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class UpdatePotResponse {
      */
     
     public UpdatePot401ApplicationJSON updatePot401ApplicationJSONObject;
+
     public UpdatePotResponse withUpdatePot401ApplicationJSONObject(UpdatePot401ApplicationJSON updatePot401ApplicationJSONObject) {
         this.updatePot401ApplicationJSONObject = updatePot401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class UpdatePotResponse {
      */
     
     public UpdatePot403ApplicationJSON updatePot403ApplicationJSONObject;
+
     public UpdatePotResponse withUpdatePot403ApplicationJSONObject(UpdatePot403ApplicationJSON updatePot403ApplicationJSONObject) {
         this.updatePot403ApplicationJSONObject = updatePot403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class UpdatePotResponse {
      */
     
     public UpdatePot404ApplicationJSON updatePot404ApplicationJSONObject;
+
     public UpdatePotResponse withUpdatePot404ApplicationJSONObject(UpdatePot404ApplicationJSON updatePot404ApplicationJSONObject) {
         this.updatePot404ApplicationJSONObject = updatePot404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class UpdatePotResponse {
      */
     
     public UpdatePot409ApplicationJSON updatePot409ApplicationJSONObject;
+
     public UpdatePotResponse withUpdatePot409ApplicationJSONObject(UpdatePot409ApplicationJSON updatePot409ApplicationJSONObject) {
         this.updatePot409ApplicationJSONObject = updatePot409ApplicationJSONObject;
         return this;
@@ -93,6 +103,7 @@ public class UpdatePotResponse {
      */
     
     public UpdatePot429ApplicationJSON updatePot429ApplicationJSONObject;
+
     public UpdatePotResponse withUpdatePot429ApplicationJSONObject(UpdatePot429ApplicationJSON updatePot429ApplicationJSONObject) {
         this.updatePot429ApplicationJSONObject = updatePot429ApplicationJSONObject;
         return this;
@@ -103,9 +114,14 @@ public class UpdatePotResponse {
      */
     
     public UpdatePot500ApplicationJSON updatePot500ApplicationJSONObject;
+
     public UpdatePotResponse withUpdatePot500ApplicationJSONObject(UpdatePot500ApplicationJSON updatePot500ApplicationJSONObject) {
         this.updatePot500ApplicationJSONObject = updatePot500ApplicationJSONObject;
         return this;
     }
     
+    public UpdatePotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

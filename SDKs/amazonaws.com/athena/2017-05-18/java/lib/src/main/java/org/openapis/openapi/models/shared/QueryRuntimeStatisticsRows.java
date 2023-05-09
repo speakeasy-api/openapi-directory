@@ -15,6 +15,7 @@ public class QueryRuntimeStatisticsRows {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputBytes")
     public Long inputBytes;
+
     public QueryRuntimeStatisticsRows withInputBytes(Long inputBytes) {
         this.inputBytes = inputBytes;
         return this;
@@ -23,6 +24,7 @@ public class QueryRuntimeStatisticsRows {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputRows")
     public Long inputRows;
+
     public QueryRuntimeStatisticsRows withInputRows(Long inputRows) {
         this.inputRows = inputRows;
         return this;
@@ -31,6 +33,7 @@ public class QueryRuntimeStatisticsRows {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputBytes")
     public Long outputBytes;
+
     public QueryRuntimeStatisticsRows withOutputBytes(Long outputBytes) {
         this.outputBytes = outputBytes;
         return this;
@@ -39,9 +42,11 @@ public class QueryRuntimeStatisticsRows {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputRows")
     public Long outputRows;
+
     public QueryRuntimeStatisticsRows withOutputRows(Long outputRows) {
         this.outputRows = outputRows;
         return this;
     }
     
+    public QueryRuntimeStatisticsRows(){}
 }

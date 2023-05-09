@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SetIdentityMailFromDomainRequest - Represents a request to enable or disable the Amazon SES custom MAIL FROM domain setup for a verified identity. For information about using a custom MAIL FROM domain, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/mail-from.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SetIdentityMailFromDomainRequest {
     
     public BehaviorOnMXFailureEnum behaviorOnMXFailure;
+
     public SetIdentityMailFromDomainRequest withBehaviorOnMXFailure(BehaviorOnMXFailureEnum behaviorOnMXFailure) {
         this.behaviorOnMXFailure = behaviorOnMXFailure;
         return this;
@@ -19,6 +20,7 @@ public class SetIdentityMailFromDomainRequest {
     
     
     public String identity;
+
     public SetIdentityMailFromDomainRequest withIdentity(String identity) {
         this.identity = identity;
         return this;
@@ -26,9 +28,13 @@ public class SetIdentityMailFromDomainRequest {
     
     
     public String mailFromDomain;
+
     public SetIdentityMailFromDomainRequest withMailFromDomain(String mailFromDomain) {
         this.mailFromDomain = mailFromDomain;
         return this;
     }
     
+    public SetIdentityMailFromDomainRequest(@JsonProperty("Identity") String identity) {
+        this.identity = identity;
+  }
 }

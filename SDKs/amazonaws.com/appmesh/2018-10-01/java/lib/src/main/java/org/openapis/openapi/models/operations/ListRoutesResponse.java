@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRoutesResponse {
@@ -12,6 +13,7 @@ public class ListRoutesResponse {
      */
     
     public Object badRequestException;
+
     public ListRoutesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListRoutesResponse {
     
     
     public String contentType;
+
     public ListRoutesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListRoutesResponse {
      */
     
     public Object forbiddenException;
+
     public ListRoutesResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class ListRoutesResponse {
      */
     
     public Object internalServerErrorException;
+
     public ListRoutesResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class ListRoutesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRoutesOutput listRoutesOutput;
+
     public ListRoutesResponse withListRoutesOutput(org.openapis.openapi.models.shared.ListRoutesOutput listRoutesOutput) {
         this.listRoutesOutput = listRoutesOutput;
         return this;
@@ -59,6 +65,7 @@ public class ListRoutesResponse {
      */
     
     public Object notFoundException;
+
     public ListRoutesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListRoutesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListRoutesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class ListRoutesResponse {
     
     
     public Integer statusCode;
+
     public ListRoutesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListRoutesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRoutesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ListRoutesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListRoutesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListRoutesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

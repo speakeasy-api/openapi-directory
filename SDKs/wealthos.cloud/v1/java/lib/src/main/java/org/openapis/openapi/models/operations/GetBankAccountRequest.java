@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBankAccountRequest {
@@ -12,6 +13,7 @@ public class GetBankAccountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bank_account_id")
     public String bankAccountId;
+
     public GetBankAccountRequest withBankAccountId(String bankAccountId) {
         this.bankAccountId = bankAccountId;
         return this;
@@ -22,9 +24,14 @@ public class GetBankAccountRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public GetBankAccountRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public GetBankAccountRequest(@JsonProperty("bank_account_id") String bankAccountId, @JsonProperty("x-api-key") String xApiKey) {
+        this.bankAccountId = bankAccountId;
+        this.xApiKey = xApiKey;
+  }
 }

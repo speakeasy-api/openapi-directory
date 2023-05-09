@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MoveReplicationTaskMessage {
     @JsonProperty("ReplicationTaskArn")
     public String replicationTaskArn;
+
     public MoveReplicationTaskMessage withReplicationTaskArn(String replicationTaskArn) {
         this.replicationTaskArn = replicationTaskArn;
         return this;
@@ -19,9 +20,14 @@ public class MoveReplicationTaskMessage {
     
     @JsonProperty("TargetReplicationInstanceArn")
     public String targetReplicationInstanceArn;
+
     public MoveReplicationTaskMessage withTargetReplicationInstanceArn(String targetReplicationInstanceArn) {
         this.targetReplicationInstanceArn = targetReplicationInstanceArn;
         return this;
     }
     
+    public MoveReplicationTaskMessage(@JsonProperty("ReplicationTaskArn") String replicationTaskArn, @JsonProperty("TargetReplicationInstanceArn") String targetReplicationInstanceArn) {
+        this.replicationTaskArn = replicationTaskArn;
+        this.targetReplicationInstanceArn = targetReplicationInstanceArn;
+  }
 }

@@ -15,6 +15,7 @@ public class EvaluationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackTestWindowOffset")
     public Long backTestWindowOffset;
+
     public EvaluationParameters withBackTestWindowOffset(Long backTestWindowOffset) {
         this.backTestWindowOffset = backTestWindowOffset;
         return this;
@@ -23,9 +24,11 @@ public class EvaluationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfBacktestWindows")
     public Long numberOfBacktestWindows;
+
     public EvaluationParameters withNumberOfBacktestWindows(Long numberOfBacktestWindows) {
         this.numberOfBacktestWindows = numberOfBacktestWindows;
         return this;
     }
     
+    public EvaluationParameters(){}
 }

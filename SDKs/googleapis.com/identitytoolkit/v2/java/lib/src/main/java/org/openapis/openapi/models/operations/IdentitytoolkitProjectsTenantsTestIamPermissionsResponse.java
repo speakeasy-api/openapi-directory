@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdentitytoolkitProjectsTenantsTestIamPermissionsResponse {
     
     public String contentType;
+
     public IdentitytoolkitProjectsTenantsTestIamPermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IdentitytoolkitProjectsTenantsTestIamPermissionsResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleIamV1TestIamPermissionsResponse googleIamV1TestIamPermissionsResponse;
+
     public IdentitytoolkitProjectsTenantsTestIamPermissionsResponse withGoogleIamV1TestIamPermissionsResponse(org.openapis.openapi.models.shared.GoogleIamV1TestIamPermissionsResponse googleIamV1TestIamPermissionsResponse) {
         this.googleIamV1TestIamPermissionsResponse = googleIamV1TestIamPermissionsResponse;
         return this;
@@ -26,6 +29,7 @@ public class IdentitytoolkitProjectsTenantsTestIamPermissionsResponse {
     
     
     public Integer statusCode;
+
     public IdentitytoolkitProjectsTenantsTestIamPermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IdentitytoolkitProjectsTenantsTestIamPermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdentitytoolkitProjectsTenantsTestIamPermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IdentitytoolkitProjectsTenantsTestIamPermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

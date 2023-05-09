@@ -15,9 +15,11 @@ public class UpdateEventIntegrationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateEventIntegrationRequestBody withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public UpdateEventIntegrationRequestBody(){}
 }

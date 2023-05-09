@@ -133,6 +133,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -169,14 +174,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPostReviewResponse res = new org.openapis.openapi.models.operations.PostPostReviewResponse() {{
+        org.openapis.openapi.models.operations.PostPostReviewResponse res = new org.openapis.openapi.models.operations.PostPostReviewResponse(contentType, httpRes.statusCode()) {{
             postPostReview200ApplicationJSONObject = null;
             postPostReview400ApplicationJSONObject = null;
             postPostReview401ApplicationJSONObject = null;
             postPostReview403ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

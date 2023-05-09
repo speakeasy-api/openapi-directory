@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteVpcConnectorResponse {
     
     public String contentType;
+
     public DeleteVpcConnectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteVpcConnectorResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteVpcConnectorResponse deleteVpcConnectorResponse;
+
     public DeleteVpcConnectorResponse withDeleteVpcConnectorResponse(org.openapis.openapi.models.shared.DeleteVpcConnectorResponse deleteVpcConnectorResponse) {
         this.deleteVpcConnectorResponse = deleteVpcConnectorResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteVpcConnectorResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DeleteVpcConnectorResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteVpcConnectorResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteVpcConnectorResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteVpcConnectorResponse {
     
     
     public Integer statusCode;
+
     public DeleteVpcConnectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteVpcConnectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteVpcConnectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteVpcConnectorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteVpcConnectorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteVpcConnectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

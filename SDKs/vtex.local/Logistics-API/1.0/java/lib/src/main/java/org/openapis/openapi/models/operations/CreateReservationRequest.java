@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateReservationRequest {
@@ -12,6 +13,7 @@ public class CreateReservationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CreateReservationRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CreateReservationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CreateReservationRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class CreateReservationRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateReservationCreateReservationRequest requestBody;
+
     public CreateReservationRequest withRequestBody(CreateReservationCreateReservationRequest requestBody) {
         this.requestBody = requestBody;
         return this;
     }
     
+    public CreateReservationRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") CreateReservationCreateReservationRequest requestBody) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+  }
 }

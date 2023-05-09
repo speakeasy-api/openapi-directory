@@ -18,6 +18,7 @@ public class CustomerSearchApplicationStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public CustomerSearchApplicationStats withCount(String count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class CustomerSearchApplicationStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public Date date;
+
     public CustomerSearchApplicationStats withDate(Date date) {
         this.date = date;
         return this;
     }
     
+    public CustomerSearchApplicationStats(){}
 }

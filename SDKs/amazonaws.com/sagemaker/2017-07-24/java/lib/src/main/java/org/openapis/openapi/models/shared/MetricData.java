@@ -20,6 +20,7 @@ public class MetricData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public MetricData withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -30,6 +31,7 @@ public class MetricData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Timestamp")
     public OffsetDateTime timestamp;
+
     public MetricData withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -38,9 +40,11 @@ public class MetricData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public Float value;
+
     public MetricData withValue(Float value) {
         this.value = value;
         return this;
     }
     
+    public MetricData(){}
 }

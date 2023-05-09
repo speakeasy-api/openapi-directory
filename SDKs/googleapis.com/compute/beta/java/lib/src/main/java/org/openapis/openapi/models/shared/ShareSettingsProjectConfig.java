@@ -18,9 +18,11 @@ public class ShareSettingsProjectConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public ShareSettingsProjectConfig withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public ShareSettingsProjectConfig(){}
 }

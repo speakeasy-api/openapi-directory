@@ -18,6 +18,7 @@ public class StreamLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customSourceLocation")
     public CustomSourceLocation customSourceLocation;
+
     public StreamLocation withCustomSourceLocation(CustomSourceLocation customSourceLocation) {
         this.customSourceLocation = customSourceLocation;
         return this;
@@ -29,6 +30,7 @@ public class StreamLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubsubLocation")
     public PubsubLocation pubsubLocation;
+
     public StreamLocation withPubsubLocation(PubsubLocation pubsubLocation) {
         this.pubsubLocation = pubsubLocation;
         return this;
@@ -40,6 +42,7 @@ public class StreamLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sideInputLocation")
     public StreamingSideInputLocation sideInputLocation;
+
     public StreamLocation withSideInputLocation(StreamingSideInputLocation sideInputLocation) {
         this.sideInputLocation = sideInputLocation;
         return this;
@@ -51,9 +54,11 @@ public class StreamLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamingStageLocation")
     public StreamingStageLocation streamingStageLocation;
+
     public StreamLocation withStreamingStageLocation(StreamingStageLocation streamingStageLocation) {
         this.streamingStageLocation = streamingStageLocation;
         return this;
     }
     
+    public StreamLocation(){}
 }

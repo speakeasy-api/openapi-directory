@@ -15,6 +15,7 @@ public class ListCoverageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coveredResources")
     public CoveredResource[] coveredResources;
+
     public ListCoverageResponse withCoveredResources(CoveredResource[] coveredResources) {
         this.coveredResources = coveredResources;
         return this;
@@ -23,9 +24,11 @@ public class ListCoverageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListCoverageResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCoverageResponse(){}
 }

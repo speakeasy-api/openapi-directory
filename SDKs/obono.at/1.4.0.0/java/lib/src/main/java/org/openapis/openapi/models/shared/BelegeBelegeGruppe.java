@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BelegeBelegeGruppe {
     @JsonProperty("Belege-kompakt")
     public String[] belegeKompakt;
+
     public BelegeBelegeGruppe withBelegeKompakt(String[] belegeKompakt) {
         this.belegeKompakt = belegeKompakt;
         return this;
@@ -16,6 +17,7 @@ public class BelegeBelegeGruppe {
     
     @JsonProperty("Signaturzertifikat")
     public String signaturzertifikat;
+
     public BelegeBelegeGruppe withSignaturzertifikat(String signaturzertifikat) {
         this.signaturzertifikat = signaturzertifikat;
         return this;
@@ -23,9 +25,15 @@ public class BelegeBelegeGruppe {
     
     @JsonProperty("Zertifizierungsstellen")
     public String[] zertifizierungsstellen;
+
     public BelegeBelegeGruppe withZertifizierungsstellen(String[] zertifizierungsstellen) {
         this.zertifizierungsstellen = zertifizierungsstellen;
         return this;
     }
     
+    public BelegeBelegeGruppe(@JsonProperty("Belege-kompakt") String[] belegeKompakt, @JsonProperty("Signaturzertifikat") String signaturzertifikat, @JsonProperty("Zertifizierungsstellen") String[] zertifizierungsstellen) {
+        this.belegeKompakt = belegeKompakt;
+        this.signaturzertifikat = signaturzertifikat;
+        this.zertifizierungsstellen = zertifizierungsstellen;
+  }
 }

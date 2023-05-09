@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateImagePipelineResponse {
@@ -12,6 +13,7 @@ public class UpdateImagePipelineResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public UpdateImagePipelineResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateImagePipelineResponse {
      */
     
     public Object clientException;
+
     public UpdateImagePipelineResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateImagePipelineResponse {
     
     
     public String contentType;
+
     public UpdateImagePipelineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateImagePipelineResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateImagePipelineResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateImagePipelineResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public UpdateImagePipelineResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateImagePipelineResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateImagePipelineResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateImagePipelineResponse {
     
     
     public Integer statusCode;
+
     public UpdateImagePipelineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateImagePipelineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateImagePipelineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateImagePipelineResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateImagePipelineResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateImagePipelineResponse {
      */
     
     public Object serviceException;
+
     public UpdateImagePipelineResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateImagePipelineResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateImagePipelineResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class UpdateImagePipelineResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateImagePipelineResponse updateImagePipelineResponse;
+
     public UpdateImagePipelineResponse withUpdateImagePipelineResponse(org.openapis.openapi.models.shared.UpdateImagePipelineResponse updateImagePipelineResponse) {
         this.updateImagePipelineResponse = updateImagePipelineResponse;
         return this;
     }
     
+    public UpdateImagePipelineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

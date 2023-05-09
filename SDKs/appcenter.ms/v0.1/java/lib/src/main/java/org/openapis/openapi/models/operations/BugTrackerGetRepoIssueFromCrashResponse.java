@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BugTrackerGetRepoIssueFromCrashResponse {
     
     public String contentType;
+
     public BugTrackerGetRepoIssueFromCrashResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class BugTrackerGetRepoIssueFromCrashResponse {
     
     
     public Integer statusCode;
+
     public BugTrackerGetRepoIssueFromCrashResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class BugTrackerGetRepoIssueFromCrashResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BugTrackerGetRepoIssueFromCrashResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class BugTrackerGetRepoIssueFromCrashResponse {
      */
     
     public BugTrackerGetRepoIssueFromCrash200ApplicationJSON bugTrackerGetRepoIssueFromCrash200ApplicationJSONObject;
+
     public BugTrackerGetRepoIssueFromCrashResponse withBugTrackerGetRepoIssueFromCrash200ApplicationJSONObject(BugTrackerGetRepoIssueFromCrash200ApplicationJSON bugTrackerGetRepoIssueFromCrash200ApplicationJSONObject) {
         this.bugTrackerGetRepoIssueFromCrash200ApplicationJSONObject = bugTrackerGetRepoIssueFromCrash200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class BugTrackerGetRepoIssueFromCrashResponse {
      */
     
     public BugTrackerGetRepoIssueFromCrashDefaultApplicationJSON bugTrackerGetRepoIssueFromCrashDefaultApplicationJSONObject;
+
     public BugTrackerGetRepoIssueFromCrashResponse withBugTrackerGetRepoIssueFromCrashDefaultApplicationJSONObject(BugTrackerGetRepoIssueFromCrashDefaultApplicationJSON bugTrackerGetRepoIssueFromCrashDefaultApplicationJSONObject) {
         this.bugTrackerGetRepoIssueFromCrashDefaultApplicationJSONObject = bugTrackerGetRepoIssueFromCrashDefaultApplicationJSONObject;
         return this;
     }
     
+    public BugTrackerGetRepoIssueFromCrashResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

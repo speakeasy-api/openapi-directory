@@ -50,7 +50,7 @@ public class WorkgroupMembers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkgroupMemberInfoResponse res = new org.openapis.openapi.models.operations.GetWorkgroupMemberInfoResponse() {{
+        org.openapis.openapi.models.operations.GetWorkgroupMemberInfoResponse res = new org.openapis.openapi.models.operations.GetWorkgroupMemberInfoResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -68,8 +68,6 @@ public class WorkgroupMembers {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -169,7 +167,7 @@ public class WorkgroupMembers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkgroupMemberListResponse res = new org.openapis.openapi.models.operations.GetWorkgroupMemberListResponse() {{
+        org.openapis.openapi.models.operations.GetWorkgroupMemberListResponse res = new org.openapis.openapi.models.operations.GetWorkgroupMemberListResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -187,8 +185,6 @@ public class WorkgroupMembers {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

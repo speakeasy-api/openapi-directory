@@ -15,6 +15,7 @@ public class OrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public OrderMerchantProvidedAnnotation[] annotations;
+
     public OrderLineItem withAnnotations(OrderMerchantProvidedAnnotation[] annotations) {
         this.annotations = annotations;
         return this;
@@ -26,6 +27,7 @@ public class OrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancellations")
     public OrderCancellation[] cancellations;
+
     public OrderLineItem withCancellations(OrderCancellation[] cancellations) {
         this.cancellations = cancellations;
         return this;
@@ -37,6 +39,7 @@ public class OrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public OrderLineItem withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class OrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Price price;
+
     public OrderLineItem withPrice(Price price) {
         this.price = price;
         return this;
@@ -53,6 +57,7 @@ public class OrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public OrderLineItemProduct product;
+
     public OrderLineItem withProduct(OrderLineItemProduct product) {
         this.product = product;
         return this;
@@ -64,6 +69,7 @@ public class OrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantityCanceled")
     public Long quantityCanceled;
+
     public OrderLineItem withQuantityCanceled(Long quantityCanceled) {
         this.quantityCanceled = quantityCanceled;
         return this;
@@ -75,6 +81,7 @@ public class OrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantityDelivered")
     public Long quantityDelivered;
+
     public OrderLineItem withQuantityDelivered(Long quantityDelivered) {
         this.quantityDelivered = quantityDelivered;
         return this;
@@ -86,6 +93,7 @@ public class OrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantityOrdered")
     public Long quantityOrdered;
+
     public OrderLineItem withQuantityOrdered(Long quantityOrdered) {
         this.quantityOrdered = quantityOrdered;
         return this;
@@ -97,6 +105,7 @@ public class OrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantityPending")
     public Long quantityPending;
+
     public OrderLineItem withQuantityPending(Long quantityPending) {
         this.quantityPending = quantityPending;
         return this;
@@ -108,6 +117,7 @@ public class OrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantityReadyForPickup")
     public Long quantityReadyForPickup;
+
     public OrderLineItem withQuantityReadyForPickup(Long quantityReadyForPickup) {
         this.quantityReadyForPickup = quantityReadyForPickup;
         return this;
@@ -119,6 +129,7 @@ public class OrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantityReturned")
     public Long quantityReturned;
+
     public OrderLineItem withQuantityReturned(Long quantityReturned) {
         this.quantityReturned = quantityReturned;
         return this;
@@ -130,6 +141,7 @@ public class OrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantityShipped")
     public Long quantityShipped;
+
     public OrderLineItem withQuantityShipped(Long quantityShipped) {
         this.quantityShipped = quantityShipped;
         return this;
@@ -138,6 +150,7 @@ public class OrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnInfo")
     public OrderLineItemReturnInfo returnInfo;
+
     public OrderLineItem withReturnInfo(OrderLineItemReturnInfo returnInfo) {
         this.returnInfo = returnInfo;
         return this;
@@ -149,6 +162,7 @@ public class OrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returns")
     public OrderReturn[] returns;
+
     public OrderLineItem withReturns(OrderReturn[] returns) {
         this.returns = returns;
         return this;
@@ -157,6 +171,7 @@ public class OrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingDetails")
     public OrderLineItemShippingDetails shippingDetails;
+
     public OrderLineItem withShippingDetails(OrderLineItemShippingDetails shippingDetails) {
         this.shippingDetails = shippingDetails;
         return this;
@@ -165,9 +180,11 @@ public class OrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public Price tax;
+
     public OrderLineItem withTax(Price tax) {
         this.tax = tax;
         return this;
     }
     
+    public OrderLineItem(){}
 }

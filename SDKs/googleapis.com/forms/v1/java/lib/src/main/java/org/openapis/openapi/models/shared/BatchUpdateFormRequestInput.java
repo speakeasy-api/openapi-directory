@@ -18,6 +18,7 @@ public class BatchUpdateFormRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeFormInResponse")
     public Boolean includeFormInResponse;
+
     public BatchUpdateFormRequestInput withIncludeFormInResponse(Boolean includeFormInResponse) {
         this.includeFormInResponse = includeFormInResponse;
         return this;
@@ -29,6 +30,7 @@ public class BatchUpdateFormRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public RequestInput[] requests;
+
     public BatchUpdateFormRequestInput withRequests(RequestInput[] requests) {
         this.requests = requests;
         return this;
@@ -40,9 +42,11 @@ public class BatchUpdateFormRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeControl")
     public WriteControl writeControl;
+
     public BatchUpdateFormRequestInput withWriteControl(WriteControl writeControl) {
         this.writeControl = writeControl;
         return this;
     }
     
+    public BatchUpdateFormRequestInput(){}
 }

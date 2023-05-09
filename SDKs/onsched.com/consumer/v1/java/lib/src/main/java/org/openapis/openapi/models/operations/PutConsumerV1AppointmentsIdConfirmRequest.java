@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutConsumerV1AppointmentsIdConfirmRequest {
@@ -12,6 +13,7 @@ public class PutConsumerV1AppointmentsIdConfirmRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PutConsumerV1AppointmentsIdConfirmRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -22,9 +24,13 @@ public class PutConsumerV1AppointmentsIdConfirmRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=undo")
     public Boolean undo;
+
     public PutConsumerV1AppointmentsIdConfirmRequest withUndo(Boolean undo) {
         this.undo = undo;
         return this;
     }
     
+    public PutConsumerV1AppointmentsIdConfirmRequest(@JsonProperty("id") Integer id) {
+        this.id = id;
+  }
 }

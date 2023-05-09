@@ -18,6 +18,7 @@ public class ComposeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public Object destination;
+
     public ComposeRequest withDestination(Object destination) {
         this.destination = destination;
         return this;
@@ -29,6 +30,7 @@ public class ComposeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ComposeRequest withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class ComposeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceObjects")
     public ComposeRequestSourceObjects[] sourceObjects;
+
     public ComposeRequest withSourceObjects(ComposeRequestSourceObjects[] sourceObjects) {
         this.sourceObjects = sourceObjects;
         return this;
     }
     
+    public ComposeRequest(){}
 }

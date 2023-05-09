@@ -15,6 +15,7 @@ public class ServerGroupLaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchOrder")
     public Long launchOrder;
+
     public ServerGroupLaunchConfiguration withLaunchOrder(Long launchOrder) {
         this.launchOrder = launchOrder;
         return this;
@@ -23,6 +24,7 @@ public class ServerGroupLaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverGroupId")
     public String serverGroupId;
+
     public ServerGroupLaunchConfiguration withServerGroupId(String serverGroupId) {
         this.serverGroupId = serverGroupId;
         return this;
@@ -31,9 +33,11 @@ public class ServerGroupLaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverLaunchConfigurations")
     public ServerLaunchConfiguration[] serverLaunchConfigurations;
+
     public ServerGroupLaunchConfiguration withServerLaunchConfigurations(ServerLaunchConfiguration[] serverLaunchConfigurations) {
         this.serverLaunchConfigurations = serverLaunchConfigurations;
         return this;
     }
     
+    public ServerGroupLaunchConfiguration(){}
 }

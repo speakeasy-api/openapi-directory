@@ -15,9 +15,11 @@ public class AwsAutoScalingAutoScalingGroupAvailabilityZonesListDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public AwsAutoScalingAutoScalingGroupAvailabilityZonesListDetails withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AwsAutoScalingAutoScalingGroupAvailabilityZonesListDetails(){}
 }

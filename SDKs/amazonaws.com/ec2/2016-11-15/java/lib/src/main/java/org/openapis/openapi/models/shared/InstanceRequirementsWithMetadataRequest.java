@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class InstanceRequirementsWithMetadataRequest {
     
     public InstanceRequirementsWithMetadataRequestArchitectureTypesEnum[] architectureTypes;
+
     public InstanceRequirementsWithMetadataRequest withArchitectureTypes(InstanceRequirementsWithMetadataRequestArchitectureTypesEnum[] architectureTypes) {
         this.architectureTypes = architectureTypes;
         return this;
@@ -19,6 +20,7 @@ public class InstanceRequirementsWithMetadataRequest {
     
     
     public InstanceRequirementsRequest instanceRequirements;
+
     public InstanceRequirementsWithMetadataRequest withInstanceRequirements(InstanceRequirementsRequest instanceRequirements) {
         this.instanceRequirements = instanceRequirements;
         return this;
@@ -26,9 +28,11 @@ public class InstanceRequirementsWithMetadataRequest {
     
     
     public InstanceRequirementsWithMetadataRequestVirtualizationTypesEnum[] virtualizationTypes;
+
     public InstanceRequirementsWithMetadataRequest withVirtualizationTypes(InstanceRequirementsWithMetadataRequestVirtualizationTypesEnum[] virtualizationTypes) {
         this.virtualizationTypes = virtualizationTypes;
         return this;
     }
     
+    public InstanceRequirementsWithMetadataRequest(){}
 }

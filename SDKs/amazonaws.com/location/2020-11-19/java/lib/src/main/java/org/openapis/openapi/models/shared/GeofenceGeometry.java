@@ -15,6 +15,7 @@ public class GeofenceGeometry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Circle")
     public Circle circle;
+
     public GeofenceGeometry withCircle(Circle circle) {
         this.circle = circle;
         return this;
@@ -23,9 +24,11 @@ public class GeofenceGeometry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Polygon")
     public Double[][][] polygon;
+
     public GeofenceGeometry withPolygon(Double[][][] polygon) {
         this.polygon = polygon;
         return this;
     }
     
+    public GeofenceGeometry(){}
 }

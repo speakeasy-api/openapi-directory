@@ -15,6 +15,7 @@ public class CardCreateRequest {
      */
     @JsonProperty("actions")
     public CardActions actions;
+
     public CardCreateRequest withActions(CardActions actions) {
         this.actions = actions;
         return this;
@@ -25,6 +26,7 @@ public class CardCreateRequest {
      */
     @JsonProperty("display")
     public CardDisplayBody display;
+
     public CardCreateRequest withDisplay(CardDisplayBody display) {
         this.display = display;
         return this;
@@ -35,6 +37,7 @@ public class CardCreateRequest {
      */
     @JsonProperty("fetch")
     public CardFetchBody fetch;
+
     public CardCreateRequest withFetch(CardFetchBody fetch) {
         this.fetch = fetch;
         return this;
@@ -45,9 +48,16 @@ public class CardCreateRequest {
      */
     @JsonProperty("title")
     public String title;
+
     public CardCreateRequest withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CardCreateRequest(@JsonProperty("actions") CardActions actions, @JsonProperty("display") CardDisplayBody display, @JsonProperty("fetch") CardFetchBody fetch, @JsonProperty("title") String title) {
+        this.actions = actions;
+        this.display = display;
+        this.fetch = fetch;
+        this.title = title;
+  }
 }

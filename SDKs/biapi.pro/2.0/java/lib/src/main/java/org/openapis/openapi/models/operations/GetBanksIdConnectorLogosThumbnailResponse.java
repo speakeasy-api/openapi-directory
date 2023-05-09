@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBanksIdConnectorLogosThumbnailResponse {
     
     public String contentType;
+
     public GetBanksIdConnectorLogosThumbnailResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetBanksIdConnectorLogosThumbnailResponse {
     
     
     public Integer statusCode;
+
     public GetBanksIdConnectorLogosThumbnailResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetBanksIdConnectorLogosThumbnailResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBanksIdConnectorLogosThumbnailResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetBanksIdConnectorLogosThumbnailResponse {
      */
     
     public GetBanksIdConnectorLogosThumbnail200ApplicationJSON getBanksIdConnectorLogosThumbnail200ApplicationJSONObject;
+
     public GetBanksIdConnectorLogosThumbnailResponse withGetBanksIdConnectorLogosThumbnail200ApplicationJSONObject(GetBanksIdConnectorLogosThumbnail200ApplicationJSON getBanksIdConnectorLogosThumbnail200ApplicationJSONObject) {
         this.getBanksIdConnectorLogosThumbnail200ApplicationJSONObject = getBanksIdConnectorLogosThumbnail200ApplicationJSONObject;
         return this;
     }
     
+    public GetBanksIdConnectorLogosThumbnailResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

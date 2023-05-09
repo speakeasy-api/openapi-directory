@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSchedulingPolicyResponse {
@@ -12,6 +13,7 @@ public class DeleteSchedulingPolicyResponse {
      */
     
     public Object clientException;
+
     public DeleteSchedulingPolicyResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSchedulingPolicyResponse {
     
     
     public String contentType;
+
     public DeleteSchedulingPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSchedulingPolicyResponse {
      */
     
     public java.util.Map<String, Object> deleteSchedulingPolicyResponse;
+
     public DeleteSchedulingPolicyResponse withDeleteSchedulingPolicyResponse(java.util.Map<String, Object> deleteSchedulingPolicyResponse) {
         this.deleteSchedulingPolicyResponse = deleteSchedulingPolicyResponse;
         return this;
@@ -36,6 +40,7 @@ public class DeleteSchedulingPolicyResponse {
     
     
     public Integer statusCode;
+
     public DeleteSchedulingPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DeleteSchedulingPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSchedulingPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DeleteSchedulingPolicyResponse {
      */
     
     public Object serverException;
+
     public DeleteSchedulingPolicyResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public DeleteSchedulingPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

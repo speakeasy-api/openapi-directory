@@ -15,9 +15,11 @@ public class UpdateDataSourceRequestBodyEventBridgeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventBusArn")
     public String eventBusArn;
+
     public UpdateDataSourceRequestBodyEventBridgeConfig withEventBusArn(String eventBusArn) {
         this.eventBusArn = eventBusArn;
         return this;
     }
     
+    public UpdateDataSourceRequestBodyEventBridgeConfig(){}
 }

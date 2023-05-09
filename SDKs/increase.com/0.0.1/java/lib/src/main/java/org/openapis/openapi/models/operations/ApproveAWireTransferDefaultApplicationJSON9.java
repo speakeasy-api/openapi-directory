@@ -4,13 +4,12 @@
 
 package org.openapis.openapi.models.operations;
 
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ApproveAWireTransferDefaultApplicationJSON9 {
     @JsonProperty("detail")
     public String detail;
+
     public ApproveAWireTransferDefaultApplicationJSON9 withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -19,9 +18,9 @@ public class ApproveAWireTransferDefaultApplicationJSON9 {
     /**
      * All errors related to parsing the request parameters.
      */
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public java.util.Map<String, Object>[] errors;
+
     public ApproveAWireTransferDefaultApplicationJSON9 withErrors(java.util.Map<String, Object>[] errors) {
         this.errors = errors;
         return this;
@@ -29,6 +28,7 @@ public class ApproveAWireTransferDefaultApplicationJSON9 {
     
     @JsonProperty("status")
     public ApproveAWireTransferDefaultApplicationJSON9StatusEnum status;
+
     public ApproveAWireTransferDefaultApplicationJSON9 withStatus(ApproveAWireTransferDefaultApplicationJSON9StatusEnum status) {
         this.status = status;
         return this;
@@ -36,6 +36,7 @@ public class ApproveAWireTransferDefaultApplicationJSON9 {
     
     @JsonProperty("title")
     public String title;
+
     public ApproveAWireTransferDefaultApplicationJSON9 withTitle(String title) {
         this.title = title;
         return this;
@@ -43,9 +44,17 @@ public class ApproveAWireTransferDefaultApplicationJSON9 {
     
     @JsonProperty("type")
     public ApproveAWireTransferDefaultApplicationJSON9TypeEnum type;
+
     public ApproveAWireTransferDefaultApplicationJSON9 withType(ApproveAWireTransferDefaultApplicationJSON9TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ApproveAWireTransferDefaultApplicationJSON9(@JsonProperty("detail") String detail, @JsonProperty("errors") java.util.Map<String, Object>[] errors, @JsonProperty("status") ApproveAWireTransferDefaultApplicationJSON9StatusEnum status, @JsonProperty("title") String title, @JsonProperty("type") ApproveAWireTransferDefaultApplicationJSON9TypeEnum type) {
+        this.detail = detail;
+        this.errors = errors;
+        this.status = status;
+        this.title = title;
+        this.type = type;
+  }
 }

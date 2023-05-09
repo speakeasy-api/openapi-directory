@@ -15,6 +15,7 @@ public class JobStatistics4 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationUriFileCounts")
     public String[] destinationUriFileCounts;
+
     public JobStatistics4 withDestinationUriFileCounts(String[] destinationUriFileCounts) {
         this.destinationUriFileCounts = destinationUriFileCounts;
         return this;
@@ -26,9 +27,11 @@ public class JobStatistics4 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputBytes")
     public String inputBytes;
+
     public JobStatistics4 withInputBytes(String inputBytes) {
         this.inputBytes = inputBytes;
         return this;
     }
     
+    public JobStatistics4(){}
 }

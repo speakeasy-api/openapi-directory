@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus {
     
     public String code;
+
     public DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAtt
     
     
     public String message;
+
     public DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus(){}
 }

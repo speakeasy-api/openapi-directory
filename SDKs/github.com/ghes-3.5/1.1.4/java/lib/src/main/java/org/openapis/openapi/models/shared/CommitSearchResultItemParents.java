@@ -12,6 +12,7 @@ public class CommitSearchResultItemParents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public CommitSearchResultItemParents withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -20,6 +21,7 @@ public class CommitSearchResultItemParents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha")
     public String sha;
+
     public CommitSearchResultItemParents withSha(String sha) {
         this.sha = sha;
         return this;
@@ -28,9 +30,11 @@ public class CommitSearchResultItemParents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public CommitSearchResultItemParents withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CommitSearchResultItemParents(){}
 }

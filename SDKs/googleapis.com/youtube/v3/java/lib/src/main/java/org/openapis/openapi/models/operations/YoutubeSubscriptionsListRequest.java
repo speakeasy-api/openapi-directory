@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class YoutubeSubscriptionsListRequest {
@@ -12,6 +13,7 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public YoutubeSubscriptionsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public YoutubeSubscriptionsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public YoutubeSubscriptionsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public YoutubeSubscriptionsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=channelId")
     public String channelId;
+
     public YoutubeSubscriptionsListRequest withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -62,6 +68,7 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public YoutubeSubscriptionsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forChannelId")
     public String forChannelId;
+
     public YoutubeSubscriptionsListRequest withForChannelId(String forChannelId) {
         this.forChannelId = forChannelId;
         return this;
@@ -82,6 +90,7 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String[] id;
+
     public YoutubeSubscriptionsListRequest withId(String[] id) {
         this.id = id;
         return this;
@@ -92,6 +101,7 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public YoutubeSubscriptionsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -102,6 +112,7 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public YoutubeSubscriptionsListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -112,6 +123,7 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mine")
     public Boolean mine;
+
     public YoutubeSubscriptionsListRequest withMine(Boolean mine) {
         this.mine = mine;
         return this;
@@ -119,6 +131,7 @@ public class YoutubeSubscriptionsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=myRecentSubscribers")
     public Boolean myRecentSubscribers;
+
     public YoutubeSubscriptionsListRequest withMyRecentSubscribers(Boolean myRecentSubscribers) {
         this.myRecentSubscribers = myRecentSubscribers;
         return this;
@@ -129,6 +142,7 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mySubscribers")
     public Boolean mySubscribers;
+
     public YoutubeSubscriptionsListRequest withMySubscribers(Boolean mySubscribers) {
         this.mySubscribers = mySubscribers;
         return this;
@@ -139,6 +153,7 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public YoutubeSubscriptionsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -149,6 +164,7 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onBehalfOfContentOwner")
     public String onBehalfOfContentOwner;
+
     public YoutubeSubscriptionsListRequest withOnBehalfOfContentOwner(String onBehalfOfContentOwner) {
         this.onBehalfOfContentOwner = onBehalfOfContentOwner;
         return this;
@@ -159,6 +175,7 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onBehalfOfContentOwnerChannel")
     public String onBehalfOfContentOwnerChannel;
+
     public YoutubeSubscriptionsListRequest withOnBehalfOfContentOwnerChannel(String onBehalfOfContentOwnerChannel) {
         this.onBehalfOfContentOwnerChannel = onBehalfOfContentOwnerChannel;
         return this;
@@ -169,6 +186,7 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public YoutubeSubscriptionsListOrderEnum order;
+
     public YoutubeSubscriptionsListRequest withOrder(YoutubeSubscriptionsListOrderEnum order) {
         this.order = order;
         return this;
@@ -179,6 +197,7 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public YoutubeSubscriptionsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -189,6 +208,7 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part")
     public String[] part;
+
     public YoutubeSubscriptionsListRequest withPart(String[] part) {
         this.part = part;
         return this;
@@ -199,6 +219,7 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public YoutubeSubscriptionsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -209,6 +230,7 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public YoutubeSubscriptionsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -219,6 +241,7 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public YoutubeSubscriptionsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -229,9 +252,13 @@ public class YoutubeSubscriptionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public YoutubeSubscriptionsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public YoutubeSubscriptionsListRequest(@JsonProperty("part") String[] part) {
+        this.part = part;
+  }
 }

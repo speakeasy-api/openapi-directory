@@ -15,9 +15,11 @@ public class PrevHref {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public PrevHref withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public PrevHref(){}
 }

@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2DeidentifyDataSourceStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transformationCount")
     public String transformationCount;
+
     public GooglePrivacyDlpV2DeidentifyDataSourceStats withTransformationCount(String transformationCount) {
         this.transformationCount = transformationCount;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2DeidentifyDataSourceStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transformationErrorCount")
     public String transformationErrorCount;
+
     public GooglePrivacyDlpV2DeidentifyDataSourceStats withTransformationErrorCount(String transformationErrorCount) {
         this.transformationErrorCount = transformationErrorCount;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2DeidentifyDataSourceStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transformedBytes")
     public String transformedBytes;
+
     public GooglePrivacyDlpV2DeidentifyDataSourceStats withTransformedBytes(String transformedBytes) {
         this.transformedBytes = transformedBytes;
         return this;
     }
     
+    public GooglePrivacyDlpV2DeidentifyDataSourceStats(){}
 }

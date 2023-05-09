@@ -18,6 +18,7 @@ public class UserMentionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public UserMentionMetadataTypeEnum type;
+
     public UserMentionMetadata withType(UserMentionMetadataTypeEnum type) {
         this.type = type;
         return this;
@@ -29,9 +30,11 @@ public class UserMentionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public User user;
+
     public UserMentionMetadata withUser(User user) {
         this.user = user;
         return this;
     }
     
+    public UserMentionMetadata(){}
 }

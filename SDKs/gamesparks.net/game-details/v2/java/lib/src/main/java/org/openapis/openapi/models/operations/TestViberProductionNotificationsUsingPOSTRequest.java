@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestViberProductionNotificationsUsingPOSTRequest {
@@ -12,6 +13,7 @@ public class TestViberProductionNotificationsUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PushNotificationTestModel pushNotificationTestModel;
+
     public TestViberProductionNotificationsUsingPOSTRequest withPushNotificationTestModel(org.openapis.openapi.models.shared.PushNotificationTestModel pushNotificationTestModel) {
         this.pushNotificationTestModel = pushNotificationTestModel;
         return this;
@@ -22,9 +24,14 @@ public class TestViberProductionNotificationsUsingPOSTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public TestViberProductionNotificationsUsingPOSTRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public TestViberProductionNotificationsUsingPOSTRequest(@JsonProperty("PushNotificationTestModel") org.openapis.openapi.models.shared.PushNotificationTestModel pushNotificationTestModel, @JsonProperty("apiKey") String apiKey) {
+        this.pushNotificationTestModel = pushNotificationTestModel;
+        this.apiKey = apiKey;
+  }
 }

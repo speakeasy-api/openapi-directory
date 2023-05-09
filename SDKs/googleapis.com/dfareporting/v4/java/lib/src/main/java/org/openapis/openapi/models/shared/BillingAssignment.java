@@ -18,6 +18,7 @@ public class BillingAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public BillingAssignment withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class BillingAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public BillingAssignment withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -40,6 +42,7 @@ public class BillingAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignId")
     public String campaignId;
+
     public BillingAssignment withCampaignId(String campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -51,6 +54,7 @@ public class BillingAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public BillingAssignment withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,9 +66,11 @@ public class BillingAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subaccountId")
     public String subaccountId;
+
     public BillingAssignment withSubaccountId(String subaccountId) {
         this.subaccountId = subaccountId;
         return this;
     }
     
+    public BillingAssignment(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buttons")
     public GoogleCloudDialogflowV2beta1IntentMessageCardButton[] buttons;
+
     public GoogleCloudDialogflowV2beta1IntentMessageCard withButtons(GoogleCloudDialogflowV2beta1IntentMessageCardButton[] buttons) {
         this.buttons = buttons;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUri")
     public String imageUri;
+
     public GoogleCloudDialogflowV2beta1IntentMessageCard withImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtitle")
     public String subtitle;
+
     public GoogleCloudDialogflowV2beta1IntentMessageCard withSubtitle(String subtitle) {
         this.subtitle = subtitle;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleCloudDialogflowV2beta1IntentMessageCard withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageCard(){}
 }

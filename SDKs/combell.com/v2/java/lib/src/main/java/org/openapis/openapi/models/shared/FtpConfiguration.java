@@ -15,9 +15,11 @@ public class FtpConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public FtpConfiguration withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public FtpConfiguration(){}
 }

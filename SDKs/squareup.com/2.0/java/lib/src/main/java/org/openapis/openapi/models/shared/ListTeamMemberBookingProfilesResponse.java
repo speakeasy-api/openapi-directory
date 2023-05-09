@@ -18,6 +18,7 @@ public class ListTeamMemberBookingProfilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public ListTeamMemberBookingProfilesResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -29,6 +30,7 @@ public class ListTeamMemberBookingProfilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public ListTeamMemberBookingProfilesResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -40,9 +42,11 @@ public class ListTeamMemberBookingProfilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_member_booking_profiles")
     public TeamMemberBookingProfile[] teamMemberBookingProfiles;
+
     public ListTeamMemberBookingProfilesResponse withTeamMemberBookingProfiles(TeamMemberBookingProfile[] teamMemberBookingProfiles) {
         this.teamMemberBookingProfiles = teamMemberBookingProfiles;
         return this;
     }
     
+    public ListTeamMemberBookingProfilesResponse(){}
 }

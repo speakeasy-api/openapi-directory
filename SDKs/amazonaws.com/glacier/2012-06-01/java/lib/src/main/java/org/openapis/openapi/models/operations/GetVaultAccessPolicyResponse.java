@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetVaultAccessPolicyResponse {
     
     public String contentType;
+
     public GetVaultAccessPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetVaultAccessPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetVaultAccessPolicyOutput getVaultAccessPolicyOutput;
+
     public GetVaultAccessPolicyResponse withGetVaultAccessPolicyOutput(org.openapis.openapi.models.shared.GetVaultAccessPolicyOutput getVaultAccessPolicyOutput) {
         this.getVaultAccessPolicyOutput = getVaultAccessPolicyOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetVaultAccessPolicyResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetVaultAccessPolicyResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class GetVaultAccessPolicyResponse {
      */
     
     public Object missingParameterValueException;
+
     public GetVaultAccessPolicyResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class GetVaultAccessPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetVaultAccessPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetVaultAccessPolicyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetVaultAccessPolicyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class GetVaultAccessPolicyResponse {
     
     
     public Integer statusCode;
+
     public GetVaultAccessPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetVaultAccessPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetVaultAccessPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetVaultAccessPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

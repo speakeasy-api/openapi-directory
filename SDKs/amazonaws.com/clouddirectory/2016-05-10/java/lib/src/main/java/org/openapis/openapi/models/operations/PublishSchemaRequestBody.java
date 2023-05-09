@@ -15,6 +15,7 @@ public class PublishSchemaRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinorVersion")
     public String minorVersion;
+
     public PublishSchemaRequestBody withMinorVersion(String minorVersion) {
         this.minorVersion = minorVersion;
         return this;
@@ -26,6 +27,7 @@ public class PublishSchemaRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PublishSchemaRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +38,13 @@ public class PublishSchemaRequestBody {
      */
     @JsonProperty("Version")
     public String version;
+
     public PublishSchemaRequestBody withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public PublishSchemaRequestBody(@JsonProperty("Version") String version) {
+        this.version = version;
+  }
 }

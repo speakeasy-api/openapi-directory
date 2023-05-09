@@ -15,6 +15,7 @@ public class AddressesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addresses")
     public Address[] addresses;
+
     public AddressesScopedList withAddresses(Address[] addresses) {
         this.addresses = addresses;
         return this;
@@ -26,9 +27,11 @@ public class AddressesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public AddressesScopedListWarning warning;
+
     public AddressesScopedList withWarning(AddressesScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public AddressesScopedList(){}
 }

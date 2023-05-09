@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeImageRequest {
@@ -12,6 +13,7 @@ public class DescribeImageRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ImageUrl imageUrl;
+
     public DescribeImageRequest withImageUrl(org.openapis.openapi.models.shared.ImageUrl imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -22,6 +24,7 @@ public class DescribeImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public org.openapis.openapi.models.shared.ServiceLanguageEnum language;
+
     public DescribeImageRequest withLanguage(org.openapis.openapi.models.shared.ServiceLanguageEnum language) {
         this.language = language;
         return this;
@@ -32,9 +35,13 @@ public class DescribeImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxCandidates")
     public Integer maxCandidates;
+
     public DescribeImageRequest withMaxCandidates(Integer maxCandidates) {
         this.maxCandidates = maxCandidates;
         return this;
     }
     
+    public DescribeImageRequest(@JsonProperty("ImageUrl") org.openapis.openapi.models.shared.ImageUrl imageUrl) {
+        this.imageUrl = imageUrl;
+  }
 }

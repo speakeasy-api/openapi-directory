@@ -18,6 +18,7 @@ public class HistoryRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionPeriods")
     public CollectionPeriod[] collectionPeriods;
+
     public HistoryRecord withCollectionPeriods(CollectionPeriod[] collectionPeriods) {
         this.collectionPeriods = collectionPeriods;
         return this;
@@ -29,6 +30,7 @@ public class HistoryRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public HistoryKey key;
+
     public HistoryRecord withKey(HistoryKey key) {
         this.key = key;
         return this;
@@ -40,9 +42,11 @@ public class HistoryRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public java.util.Map<String, MetricTimeseries> metrics;
+
     public HistoryRecord withMetrics(java.util.Map<String, MetricTimeseries> metrics) {
         this.metrics = metrics;
         return this;
     }
     
+    public HistoryRecord(){}
 }

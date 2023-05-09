@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTableReplicaAutoScalingResponse {
     
     public String contentType;
+
     public UpdateTableReplicaAutoScalingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateTableReplicaAutoScalingResponse {
      */
     
     public Object internalServerError;
+
     public UpdateTableReplicaAutoScalingResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateTableReplicaAutoScalingResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateTableReplicaAutoScalingResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateTableReplicaAutoScalingResponse {
     
     
     public Integer statusCode;
+
     public UpdateTableReplicaAutoScalingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateTableReplicaAutoScalingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTableReplicaAutoScalingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateTableReplicaAutoScalingResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateTableReplicaAutoScalingResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateTableReplicaAutoScalingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateTableReplicaAutoScalingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateTableReplicaAutoScalingResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateTableReplicaAutoScalingOutput updateTableReplicaAutoScalingOutput;
+
     public UpdateTableReplicaAutoScalingResponse withUpdateTableReplicaAutoScalingOutput(org.openapis.openapi.models.shared.UpdateTableReplicaAutoScalingOutput updateTableReplicaAutoScalingOutput) {
         this.updateTableReplicaAutoScalingOutput = updateTableReplicaAutoScalingOutput;
         return this;
     }
     
+    public UpdateTableReplicaAutoScalingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

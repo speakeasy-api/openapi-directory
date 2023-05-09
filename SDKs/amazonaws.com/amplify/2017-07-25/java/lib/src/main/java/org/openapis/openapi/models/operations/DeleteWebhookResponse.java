@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteWebhookResponse {
@@ -12,6 +13,7 @@ public class DeleteWebhookResponse {
      */
     
     public Object badRequestException;
+
     public DeleteWebhookResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteWebhookResponse {
     
     
     public String contentType;
+
     public DeleteWebhookResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteWebhookResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteWebhookResult deleteWebhookResult;
+
     public DeleteWebhookResponse withDeleteWebhookResult(org.openapis.openapi.models.shared.DeleteWebhookResult deleteWebhookResult) {
         this.deleteWebhookResult = deleteWebhookResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteWebhookResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteWebhookResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteWebhookResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteWebhookResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteWebhookResponse {
      */
     
     public Object notFoundException;
+
     public DeleteWebhookResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteWebhookResponse {
     
     
     public Integer statusCode;
+
     public DeleteWebhookResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteWebhookResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteWebhookResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteWebhookResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteWebhookResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteWebhookResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

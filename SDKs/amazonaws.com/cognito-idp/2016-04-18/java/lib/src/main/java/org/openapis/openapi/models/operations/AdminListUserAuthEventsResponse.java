@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminListUserAuthEventsResponse {
@@ -12,6 +13,7 @@ public class AdminListUserAuthEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.AdminListUserAuthEventsResponse adminListUserAuthEventsResponse;
+
     public AdminListUserAuthEventsResponse withAdminListUserAuthEventsResponse(org.openapis.openapi.models.shared.AdminListUserAuthEventsResponse adminListUserAuthEventsResponse) {
         this.adminListUserAuthEventsResponse = adminListUserAuthEventsResponse;
         return this;
@@ -19,6 +21,7 @@ public class AdminListUserAuthEventsResponse {
     
     
     public String contentType;
+
     public AdminListUserAuthEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AdminListUserAuthEventsResponse {
      */
     
     public Object internalErrorException;
+
     public AdminListUserAuthEventsResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class AdminListUserAuthEventsResponse {
      */
     
     public Object invalidParameterException;
+
     public AdminListUserAuthEventsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class AdminListUserAuthEventsResponse {
      */
     
     public Object notAuthorizedException;
+
     public AdminListUserAuthEventsResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class AdminListUserAuthEventsResponse {
     
     
     public Integer statusCode;
+
     public AdminListUserAuthEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AdminListUserAuthEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminListUserAuthEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AdminListUserAuthEventsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AdminListUserAuthEventsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class AdminListUserAuthEventsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AdminListUserAuthEventsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,6 +103,7 @@ public class AdminListUserAuthEventsResponse {
      */
     
     public Object userNotFoundException;
+
     public AdminListUserAuthEventsResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class AdminListUserAuthEventsResponse {
      */
     
     public Object userPoolAddOnNotEnabledException;
+
     public AdminListUserAuthEventsResponse withUserPoolAddOnNotEnabledException(Object userPoolAddOnNotEnabledException) {
         this.userPoolAddOnNotEnabledException = userPoolAddOnNotEnabledException;
         return this;
     }
     
+    public AdminListUserAuthEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

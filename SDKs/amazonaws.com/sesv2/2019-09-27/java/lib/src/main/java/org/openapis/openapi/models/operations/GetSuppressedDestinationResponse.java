@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSuppressedDestinationResponse {
@@ -12,6 +13,7 @@ public class GetSuppressedDestinationResponse {
      */
     
     public Object badRequestException;
+
     public GetSuppressedDestinationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetSuppressedDestinationResponse {
     
     
     public String contentType;
+
     public GetSuppressedDestinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSuppressedDestinationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSuppressedDestinationResponse getSuppressedDestinationResponse;
+
     public GetSuppressedDestinationResponse withGetSuppressedDestinationResponse(org.openapis.openapi.models.shared.GetSuppressedDestinationResponse getSuppressedDestinationResponse) {
         this.getSuppressedDestinationResponse = getSuppressedDestinationResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetSuppressedDestinationResponse {
      */
     
     public Object notFoundException;
+
     public GetSuppressedDestinationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetSuppressedDestinationResponse {
     
     
     public Integer statusCode;
+
     public GetSuppressedDestinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetSuppressedDestinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSuppressedDestinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetSuppressedDestinationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetSuppressedDestinationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetSuppressedDestinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

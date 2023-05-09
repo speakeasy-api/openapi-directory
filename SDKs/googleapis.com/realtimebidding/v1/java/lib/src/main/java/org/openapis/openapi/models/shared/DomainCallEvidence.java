@@ -18,6 +18,7 @@ public class DomainCallEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topHttpCallDomains")
     public DomainCalls[] topHttpCallDomains;
+
     public DomainCallEvidence withTopHttpCallDomains(DomainCalls[] topHttpCallDomains) {
         this.topHttpCallDomains = topHttpCallDomains;
         return this;
@@ -29,9 +30,11 @@ public class DomainCallEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalHttpCallCount")
     public Integer totalHttpCallCount;
+
     public DomainCallEvidence withTotalHttpCallCount(Integer totalHttpCallCount) {
         this.totalHttpCallCount = totalHttpCallCount;
         return this;
     }
     
+    public DomainCallEvidence(){}
 }

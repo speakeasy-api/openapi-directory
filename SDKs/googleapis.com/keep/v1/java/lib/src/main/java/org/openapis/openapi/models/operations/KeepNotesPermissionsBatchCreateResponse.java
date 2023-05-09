@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class KeepNotesPermissionsBatchCreateResponse {
@@ -12,6 +13,7 @@ public class KeepNotesPermissionsBatchCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchCreatePermissionsResponse batchCreatePermissionsResponse;
+
     public KeepNotesPermissionsBatchCreateResponse withBatchCreatePermissionsResponse(org.openapis.openapi.models.shared.BatchCreatePermissionsResponse batchCreatePermissionsResponse) {
         this.batchCreatePermissionsResponse = batchCreatePermissionsResponse;
         return this;
@@ -19,6 +21,7 @@ public class KeepNotesPermissionsBatchCreateResponse {
     
     
     public String contentType;
+
     public KeepNotesPermissionsBatchCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class KeepNotesPermissionsBatchCreateResponse {
     
     
     public Integer statusCode;
+
     public KeepNotesPermissionsBatchCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class KeepNotesPermissionsBatchCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public KeepNotesPermissionsBatchCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public KeepNotesPermissionsBatchCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

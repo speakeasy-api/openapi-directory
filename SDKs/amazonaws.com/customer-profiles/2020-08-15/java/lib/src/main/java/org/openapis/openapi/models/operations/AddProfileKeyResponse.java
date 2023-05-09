@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddProfileKeyResponse {
@@ -12,6 +13,7 @@ public class AddProfileKeyResponse {
      */
     
     public Object accessDeniedException;
+
     public AddProfileKeyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AddProfileKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.AddProfileKeyResponse addProfileKeyResponse;
+
     public AddProfileKeyResponse withAddProfileKeyResponse(org.openapis.openapi.models.shared.AddProfileKeyResponse addProfileKeyResponse) {
         this.addProfileKeyResponse = addProfileKeyResponse;
         return this;
@@ -32,6 +35,7 @@ public class AddProfileKeyResponse {
      */
     
     public Object badRequestException;
+
     public AddProfileKeyResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -39,6 +43,7 @@ public class AddProfileKeyResponse {
     
     
     public String contentType;
+
     public AddProfileKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AddProfileKeyResponse {
      */
     
     public Object internalServerException;
+
     public AddProfileKeyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class AddProfileKeyResponse {
     
     
     public Integer statusCode;
+
     public AddProfileKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AddProfileKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddProfileKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AddProfileKeyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AddProfileKeyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class AddProfileKeyResponse {
      */
     
     public Object throttlingException;
+
     public AddProfileKeyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public AddProfileKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

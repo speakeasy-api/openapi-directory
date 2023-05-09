@@ -59,11 +59,9 @@ public class EmailTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2EmailTemplatesJsonResponse res = new org.openapis.openapi.models.operations.GetV2EmailTemplatesJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2EmailTemplatesJsonResponse res = new org.openapis.openapi.models.operations.GetV2EmailTemplatesJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class EmailTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2EmailTemplatesIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2EmailTemplatesIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2EmailTemplatesIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2EmailTemplatesIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

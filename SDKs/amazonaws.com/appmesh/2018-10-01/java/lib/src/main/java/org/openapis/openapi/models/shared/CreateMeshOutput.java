@@ -15,9 +15,11 @@ public class CreateMeshOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mesh")
     public MeshData mesh;
+
     public CreateMeshOutput withMesh(MeshData mesh) {
         this.mesh = mesh;
         return this;
     }
     
+    public CreateMeshOutput(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoAdvertisersCreativesGetResponse {
     
     public String contentType;
+
     public DisplayvideoAdvertisersCreativesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoAdvertisersCreativesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Creative creative;
+
     public DisplayvideoAdvertisersCreativesGetResponse withCreative(org.openapis.openapi.models.shared.Creative creative) {
         this.creative = creative;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoAdvertisersCreativesGetResponse {
     
     
     public Integer statusCode;
+
     public DisplayvideoAdvertisersCreativesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoAdvertisersCreativesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoAdvertisersCreativesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoAdvertisersCreativesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -53,10 +53,8 @@ public class ServiceInformation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetServiceDetailsByIDResponse res = new org.openapis.openapi.models.operations.GetServiceDetailsByIDResponse() {{
+        org.openapis.openapi.models.operations.GetServiceDetailsByIDResponse res = new org.openapis.openapi.models.operations.GetServiceDetailsByIDResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 429 || httpRes.statusCode() == 500 || httpRes.statusCode() == 503) {

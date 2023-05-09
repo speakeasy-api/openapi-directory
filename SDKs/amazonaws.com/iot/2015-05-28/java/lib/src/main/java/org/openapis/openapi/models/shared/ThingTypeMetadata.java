@@ -22,6 +22,7 @@ public class ThingTypeMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public ThingTypeMetadata withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -30,6 +31,7 @@ public class ThingTypeMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecated")
     public Boolean deprecated;
+
     public ThingTypeMetadata withDeprecated(Boolean deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -40,9 +42,11 @@ public class ThingTypeMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("deprecationDate")
     public OffsetDateTime deprecationDate;
+
     public ThingTypeMetadata withDeprecationDate(OffsetDateTime deprecationDate) {
         this.deprecationDate = deprecationDate;
         return this;
     }
     
+    public ThingTypeMetadata(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostVolumesNameRequest {
@@ -12,6 +13,7 @@ public class PostVolumesNameRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateVolume updateVolume;
+
     public PostVolumesNameRequest withUpdateVolume(org.openapis.openapi.models.shared.UpdateVolume updateVolume) {
         this.updateVolume = updateVolume;
         return this;
@@ -22,6 +24,7 @@ public class PostVolumesNameRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
     public String xAuthProjectId;
+
     public PostVolumesNameRequest withXAuthProjectId(String xAuthProjectId) {
         this.xAuthProjectId = xAuthProjectId;
         return this;
@@ -32,6 +35,7 @@ public class PostVolumesNameRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
     public String xAuthToken;
+
     public PostVolumesNameRequest withXAuthToken(String xAuthToken) {
         this.xAuthToken = xAuthToken;
         return this;
@@ -42,9 +46,16 @@ public class PostVolumesNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public PostVolumesNameRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PostVolumesNameRequest(@JsonProperty("UpdateVolume") org.openapis.openapi.models.shared.UpdateVolume updateVolume, @JsonProperty("X-Auth-Project-Id") String xAuthProjectId, @JsonProperty("X-Auth-Token") String xAuthToken, @JsonProperty("name") String name) {
+        this.updateVolume = updateVolume;
+        this.xAuthProjectId = xAuthProjectId;
+        this.xAuthToken = xAuthToken;
+        this.name = name;
+  }
 }

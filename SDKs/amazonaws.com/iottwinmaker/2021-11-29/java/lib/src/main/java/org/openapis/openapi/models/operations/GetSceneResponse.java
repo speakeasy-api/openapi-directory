@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSceneResponse {
@@ -12,6 +13,7 @@ public class GetSceneResponse {
      */
     
     public Object accessDeniedException;
+
     public GetSceneResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetSceneResponse {
     
     
     public String contentType;
+
     public GetSceneResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSceneResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSceneResponse getSceneResponse;
+
     public GetSceneResponse withGetSceneResponse(org.openapis.openapi.models.shared.GetSceneResponse getSceneResponse) {
         this.getSceneResponse = getSceneResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetSceneResponse {
      */
     
     public Object internalServerException;
+
     public GetSceneResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetSceneResponse {
     
     
     public Integer statusCode;
+
     public GetSceneResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetSceneResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSceneResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetSceneResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSceneResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetSceneResponse {
      */
     
     public Object throttlingException;
+
     public GetSceneResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetSceneResponse {
      */
     
     public Object validationException;
+
     public GetSceneResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetSceneResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

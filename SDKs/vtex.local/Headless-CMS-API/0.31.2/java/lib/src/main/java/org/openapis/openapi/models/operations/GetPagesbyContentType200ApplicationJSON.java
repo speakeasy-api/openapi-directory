@@ -18,6 +18,7 @@ public class GetPagesbyContentType200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetPagesbyContentType200ApplicationJSONData[] data;
+
     public GetPagesbyContentType200ApplicationJSON withData(GetPagesbyContentType200ApplicationJSONData[] data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class GetPagesbyContentType200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasNextPage")
     public Boolean hasNextPage;
+
     public GetPagesbyContentType200ApplicationJSON withHasNextPage(Boolean hasNextPage) {
         this.hasNextPage = hasNextPage;
         return this;
@@ -40,9 +42,11 @@ public class GetPagesbyContentType200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalItems")
     public Long totalItems;
+
     public GetPagesbyContentType200ApplicationJSON withTotalItems(Long totalItems) {
         this.totalItems = totalItems;
         return this;
     }
     
+    public GetPagesbyContentType200ApplicationJSON(){}
 }

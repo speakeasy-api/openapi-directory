@@ -49,10 +49,8 @@ public class Sms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSmsResponse res = new org.openapis.openapi.models.operations.GetSmsResponse() {{
+        org.openapis.openapi.models.operations.GetSmsResponse res = new org.openapis.openapi.models.operations.GetSmsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

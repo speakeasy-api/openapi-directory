@@ -18,6 +18,7 @@ public class Aspect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localizedName")
     public String localizedName;
+
     public Aspect withLocalizedName(String localizedName) {
         this.localizedName = localizedName;
         return this;
@@ -29,9 +30,11 @@ public class Aspect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localizedValues")
     public String[] localizedValues;
+
     public Aspect withLocalizedValues(String[] localizedValues) {
         this.localizedValues = localizedValues;
         return this;
     }
     
+    public Aspect(){}
 }

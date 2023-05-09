@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActivityMarkThreadAsReadResponse {
     
     public String contentType;
+
     public ActivityMarkThreadAsReadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActivityMarkThreadAsReadResponse {
     
     
     public Integer statusCode;
+
     public ActivityMarkThreadAsReadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActivityMarkThreadAsReadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActivityMarkThreadAsReadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ActivityMarkThreadAsReadResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ActivityMarkThreadAsReadResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
     }
     
+    public ActivityMarkThreadAsReadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

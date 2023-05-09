@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestPushAppleDevNotificationsUsingPOSTResponse {
     
     public byte[] body;
+
     public TestPushAppleDevNotificationsUsingPOSTResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class TestPushAppleDevNotificationsUsingPOSTResponse {
     
     
     public String contentType;
+
     public TestPushAppleDevNotificationsUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class TestPushAppleDevNotificationsUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public TestPushAppleDevNotificationsUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class TestPushAppleDevNotificationsUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestPushAppleDevNotificationsUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TestPushAppleDevNotificationsUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

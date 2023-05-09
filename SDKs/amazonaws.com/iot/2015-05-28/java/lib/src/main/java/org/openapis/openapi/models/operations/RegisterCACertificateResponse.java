@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterCACertificateResponse {
@@ -12,6 +13,7 @@ public class RegisterCACertificateResponse {
      */
     
     public Object certificateValidationException;
+
     public RegisterCACertificateResponse withCertificateValidationException(Object certificateValidationException) {
         this.certificateValidationException = certificateValidationException;
         return this;
@@ -19,6 +21,7 @@ public class RegisterCACertificateResponse {
     
     
     public String contentType;
+
     public RegisterCACertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RegisterCACertificateResponse {
      */
     
     public Object internalFailureException;
+
     public RegisterCACertificateResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class RegisterCACertificateResponse {
      */
     
     public Object invalidRequestException;
+
     public RegisterCACertificateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterCACertificateResponse {
      */
     
     public Object limitExceededException;
+
     public RegisterCACertificateResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class RegisterCACertificateResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterCACertificateResponse registerCACertificateResponse;
+
     public RegisterCACertificateResponse withRegisterCACertificateResponse(org.openapis.openapi.models.shared.RegisterCACertificateResponse registerCACertificateResponse) {
         this.registerCACertificateResponse = registerCACertificateResponse;
         return this;
@@ -69,6 +76,7 @@ public class RegisterCACertificateResponse {
      */
     
     public Object registrationCodeValidationException;
+
     public RegisterCACertificateResponse withRegistrationCodeValidationException(Object registrationCodeValidationException) {
         this.registrationCodeValidationException = registrationCodeValidationException;
         return this;
@@ -79,6 +87,7 @@ public class RegisterCACertificateResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public RegisterCACertificateResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -89,6 +98,7 @@ public class RegisterCACertificateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RegisterCACertificateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -96,6 +106,7 @@ public class RegisterCACertificateResponse {
     
     
     public Integer statusCode;
+
     public RegisterCACertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class RegisterCACertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterCACertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class RegisterCACertificateResponse {
      */
     
     public Object serviceUnavailableException;
+
     public RegisterCACertificateResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -123,6 +136,7 @@ public class RegisterCACertificateResponse {
      */
     
     public Object throttlingException;
+
     public RegisterCACertificateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -133,9 +147,14 @@ public class RegisterCACertificateResponse {
      */
     
     public Object unauthorizedException;
+
     public RegisterCACertificateResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public RegisterCACertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

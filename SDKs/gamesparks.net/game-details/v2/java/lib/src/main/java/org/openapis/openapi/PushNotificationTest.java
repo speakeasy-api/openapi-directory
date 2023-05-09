@@ -55,11 +55,9 @@ public class PushNotificationTest {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestPushAmazonNotificationsUsingPOSTResponse res = new org.openapis.openapi.models.operations.TestPushAmazonNotificationsUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.TestPushAmazonNotificationsUsingPOSTResponse res = new org.openapis.openapi.models.operations.TestPushAmazonNotificationsUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -99,11 +97,9 @@ public class PushNotificationTest {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestPushAppleDevNotificationsUsingPOSTResponse res = new org.openapis.openapi.models.operations.TestPushAppleDevNotificationsUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.TestPushAppleDevNotificationsUsingPOSTResponse res = new org.openapis.openapi.models.operations.TestPushAppleDevNotificationsUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -143,11 +139,9 @@ public class PushNotificationTest {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestPushAppleProdNotificationsUsingPOSTResponse res = new org.openapis.openapi.models.operations.TestPushAppleProdNotificationsUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.TestPushAppleProdNotificationsUsingPOSTResponse res = new org.openapis.openapi.models.operations.TestPushAppleProdNotificationsUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -187,11 +181,9 @@ public class PushNotificationTest {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestPushGoogleNotificationsUsingPOSTResponse res = new org.openapis.openapi.models.operations.TestPushGoogleNotificationsUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.TestPushGoogleNotificationsUsingPOSTResponse res = new org.openapis.openapi.models.operations.TestPushGoogleNotificationsUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -231,11 +223,9 @@ public class PushNotificationTest {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestViberIntegrationNotificationsUsingPOSTResponse res = new org.openapis.openapi.models.operations.TestViberIntegrationNotificationsUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.TestViberIntegrationNotificationsUsingPOSTResponse res = new org.openapis.openapi.models.operations.TestViberIntegrationNotificationsUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -275,11 +265,9 @@ public class PushNotificationTest {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestViberProductionNotificationsUsingPOSTResponse res = new org.openapis.openapi.models.operations.TestViberProductionNotificationsUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.TestViberProductionNotificationsUsingPOSTResponse res = new org.openapis.openapi.models.operations.TestViberProductionNotificationsUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -319,11 +307,9 @@ public class PushNotificationTest {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestWindows8NotificationsUsingPOSTResponse res = new org.openapis.openapi.models.operations.TestWindows8NotificationsUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.TestWindows8NotificationsUsingPOSTResponse res = new org.openapis.openapi.models.operations.TestWindows8NotificationsUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -363,11 +349,9 @@ public class PushNotificationTest {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestWindowsPhone8NotificationsUsingPOSTResponse res = new org.openapis.openapi.models.operations.TestWindowsPhone8NotificationsUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.TestWindowsPhone8NotificationsUsingPOSTResponse res = new org.openapis.openapi.models.operations.TestWindowsPhone8NotificationsUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {

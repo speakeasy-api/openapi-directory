@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class Term {
     
     public String accId;
+
     public Term withAccId(String accId) {
         this.accId = accId;
         return this;
@@ -19,6 +20,7 @@ public class Term {
     
     
     public String comment;
+
     public Term withComment(String comment) {
         this.comment = comment;
         return this;
@@ -26,6 +28,7 @@ public class Term {
     
     
     public String createdBy;
+
     public Term withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -33,6 +36,7 @@ public class Term {
     
     
     public OffsetDateTime creationDate;
+
     public Term withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -40,6 +44,7 @@ public class Term {
     
     
     public String definition;
+
     public Term withDefinition(String definition) {
         this.definition = definition;
         return this;
@@ -47,6 +52,7 @@ public class Term {
     
     
     public OffsetDateTime modificationDate;
+
     public Term withModificationDate(OffsetDateTime modificationDate) {
         this.modificationDate = modificationDate;
         return this;
@@ -54,6 +60,7 @@ public class Term {
     
     
     public Integer obsolete;
+
     public Term withObsolete(Integer obsolete) {
         this.obsolete = obsolete;
         return this;
@@ -61,6 +68,7 @@ public class Term {
     
     
     public String ontologyId;
+
     public Term withOntologyId(String ontologyId) {
         this.ontologyId = ontologyId;
         return this;
@@ -68,6 +76,7 @@ public class Term {
     
     
     public String term;
+
     public Term withTerm(String term) {
         this.term = term;
         return this;
@@ -75,9 +84,11 @@ public class Term {
     
     
     public TermXRef[] xrefs;
+
     public Term withXrefs(TermXRef[] xrefs) {
         this.xrefs = xrefs;
         return this;
     }
     
+    public Term(){}
 }

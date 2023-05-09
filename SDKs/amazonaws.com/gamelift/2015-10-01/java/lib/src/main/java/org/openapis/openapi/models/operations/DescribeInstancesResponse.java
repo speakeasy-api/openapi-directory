@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeInstancesResponse {
     
     public String contentType;
+
     public DescribeInstancesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeInstancesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeInstancesOutput describeInstancesOutput;
+
     public DescribeInstancesResponse withDescribeInstancesOutput(org.openapis.openapi.models.shared.DescribeInstancesOutput describeInstancesOutput) {
         this.describeInstancesOutput = describeInstancesOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeInstancesResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeInstancesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeInstancesResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeInstancesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeInstancesResponse {
      */
     
     public Object notFoundException;
+
     public DescribeInstancesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeInstancesResponse {
     
     
     public Integer statusCode;
+
     public DescribeInstancesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeInstancesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeInstancesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeInstancesResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeInstancesResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeInstancesResponse {
      */
     
     public Object unsupportedRegionException;
+
     public DescribeInstancesResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public DescribeInstancesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

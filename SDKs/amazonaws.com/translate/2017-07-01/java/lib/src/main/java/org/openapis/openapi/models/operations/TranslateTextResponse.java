@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TranslateTextResponse {
     
     public String contentType;
+
     public TranslateTextResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TranslateTextResponse {
      */
     
     public Object detectedLanguageLowConfidenceException;
+
     public TranslateTextResponse withDetectedLanguageLowConfidenceException(Object detectedLanguageLowConfidenceException) {
         this.detectedLanguageLowConfidenceException = detectedLanguageLowConfidenceException;
         return this;
@@ -29,6 +32,7 @@ public class TranslateTextResponse {
      */
     
     public Object internalServerException;
+
     public TranslateTextResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class TranslateTextResponse {
      */
     
     public Object invalidRequestException;
+
     public TranslateTextResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class TranslateTextResponse {
     
     
     public Integer statusCode;
+
     public TranslateTextResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class TranslateTextResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TranslateTextResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class TranslateTextResponse {
      */
     
     public Object resourceNotFoundException;
+
     public TranslateTextResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class TranslateTextResponse {
      */
     
     public Object serviceUnavailableException;
+
     public TranslateTextResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,6 +92,7 @@ public class TranslateTextResponse {
      */
     
     public Object textSizeLimitExceededException;
+
     public TranslateTextResponse withTextSizeLimitExceededException(Object textSizeLimitExceededException) {
         this.textSizeLimitExceededException = textSizeLimitExceededException;
         return this;
@@ -93,6 +103,7 @@ public class TranslateTextResponse {
      */
     
     public Object tooManyRequestsException;
+
     public TranslateTextResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,6 +114,7 @@ public class TranslateTextResponse {
      */
     
     public org.openapis.openapi.models.shared.TranslateTextResponse translateTextResponse;
+
     public TranslateTextResponse withTranslateTextResponse(org.openapis.openapi.models.shared.TranslateTextResponse translateTextResponse) {
         this.translateTextResponse = translateTextResponse;
         return this;
@@ -113,9 +125,14 @@ public class TranslateTextResponse {
      */
     
     public Object unsupportedLanguagePairException;
+
     public TranslateTextResponse withUnsupportedLanguagePairException(Object unsupportedLanguagePairException) {
         this.unsupportedLanguagePairException = unsupportedLanguagePairException;
         return this;
     }
     
+    public TranslateTextResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

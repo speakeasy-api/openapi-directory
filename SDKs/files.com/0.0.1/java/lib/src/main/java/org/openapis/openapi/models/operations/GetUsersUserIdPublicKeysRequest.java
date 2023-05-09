@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersUserIdPublicKeysRequest {
@@ -12,6 +13,7 @@ public class GetUsersUserIdPublicKeysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetUsersUserIdPublicKeysRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +24,7 @@ public class GetUsersUserIdPublicKeysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetUsersUserIdPublicKeysRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -32,9 +35,13 @@ public class GetUsersUserIdPublicKeysRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
     public Integer userId;
+
     public GetUsersUserIdPublicKeysRequest withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetUsersUserIdPublicKeysRequest(@JsonProperty("user_id") Integer userId) {
+        this.userId = userId;
+  }
 }

@@ -7,7 +7,7 @@ package org.openapis.openapi.models.operations;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * PostEntitiesRequestBodyDocumentTypeEnum - Tipo de documento, requerido seg\u00fan la entidad. Si es requerido o no, est\u00e1 indicado en el listado de entidades. Ver definici\u00f3n.
+ * PostEntitiesRequestBodyDocumentTypeEnum - Tipo de documento, requerido según la entidad. Si es requerido o no, está indicado en el listado de entidades. Ver definición.
  */
 public enum PostEntitiesRequestBodyDocumentTypeEnum {
     NIF("NIF"),

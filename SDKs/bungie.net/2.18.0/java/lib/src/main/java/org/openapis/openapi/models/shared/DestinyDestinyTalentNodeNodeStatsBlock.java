@@ -15,6 +15,7 @@ public class DestinyDestinyTalentNodeNodeStatsBlock {
      */
     
     public DestinyDestinyStat[] currentStepStats;
+
     public DestinyDestinyTalentNodeNodeStatsBlock withCurrentStepStats(DestinyDestinyStat[] currentStepStats) {
         this.currentStepStats = currentStepStats;
         return this;
@@ -25,9 +26,11 @@ public class DestinyDestinyTalentNodeNodeStatsBlock {
      */
     
     public DestinyDestinyStat[] nextStepStats;
+
     public DestinyDestinyTalentNodeNodeStatsBlock withNextStepStats(DestinyDestinyStat[] nextStepStats) {
         this.nextStepStats = nextStepStats;
         return this;
     }
     
+    public DestinyDestinyTalentNodeNodeStatsBlock(){}
 }

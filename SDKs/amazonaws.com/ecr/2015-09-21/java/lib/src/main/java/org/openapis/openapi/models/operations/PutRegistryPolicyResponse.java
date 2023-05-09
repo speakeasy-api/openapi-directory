@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRegistryPolicyResponse {
     
     public String contentType;
+
     public PutRegistryPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutRegistryPolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public PutRegistryPolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class PutRegistryPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.PutRegistryPolicyResponse putRegistryPolicyResponse;
+
     public PutRegistryPolicyResponse withPutRegistryPolicyResponse(org.openapis.openapi.models.shared.PutRegistryPolicyResponse putRegistryPolicyResponse) {
         this.putRegistryPolicyResponse = putRegistryPolicyResponse;
         return this;
@@ -39,6 +43,7 @@ public class PutRegistryPolicyResponse {
      */
     
     public Object serverException;
+
     public PutRegistryPolicyResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -46,6 +51,7 @@ public class PutRegistryPolicyResponse {
     
     
     public Integer statusCode;
+
     public PutRegistryPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutRegistryPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRegistryPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PutRegistryPolicyResponse {
      */
     
     public Object validationException;
+
     public PutRegistryPolicyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutRegistryPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

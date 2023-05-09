@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutIndividualsPartyIdAddressesAddressIdRequest {
@@ -12,6 +13,7 @@ public class PutIndividualsPartyIdAddressesAddressIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=addressId")
     public String addressId;
+
     public PutIndividualsPartyIdAddressesAddressIdRequest withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
@@ -22,6 +24,7 @@ public class PutIndividualsPartyIdAddressesAddressIdRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AddressInput addressInput;
+
     public PutIndividualsPartyIdAddressesAddressIdRequest withAddressInput(org.openapis.openapi.models.shared.AddressInput addressInput) {
         this.addressInput = addressInput;
         return this;
@@ -32,6 +35,7 @@ public class PutIndividualsPartyIdAddressesAddressIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public PutIndividualsPartyIdAddressesAddressIdRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -42,9 +46,16 @@ public class PutIndividualsPartyIdAddressesAddressIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
     public String partyId;
+
     public PutIndividualsPartyIdAddressesAddressIdRequest withPartyId(String partyId) {
         this.partyId = partyId;
         return this;
     }
     
+    public PutIndividualsPartyIdAddressesAddressIdRequest(@JsonProperty("addressId") String addressId, @JsonProperty("addressInput") org.openapis.openapi.models.shared.AddressInput addressInput, @JsonProperty("apiKey") String apiKey, @JsonProperty("partyId") String partyId) {
+        this.addressId = addressId;
+        this.addressInput = addressInput;
+        this.apiKey = apiKey;
+        this.partyId = partyId;
+  }
 }

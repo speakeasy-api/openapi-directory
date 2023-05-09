@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestRepositoryTriggersResponse {
     
     public String contentType;
+
     public TestRepositoryTriggersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TestRepositoryTriggersResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public TestRepositoryTriggersResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -29,6 +32,7 @@ public class TestRepositoryTriggersResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public TestRepositoryTriggersResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -39,6 +43,7 @@ public class TestRepositoryTriggersResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public TestRepositoryTriggersResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -49,6 +54,7 @@ public class TestRepositoryTriggersResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public TestRepositoryTriggersResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class TestRepositoryTriggersResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public TestRepositoryTriggersResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -69,6 +76,7 @@ public class TestRepositoryTriggersResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public TestRepositoryTriggersResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -79,6 +87,7 @@ public class TestRepositoryTriggersResponse {
      */
     
     public Object invalidRepositoryTriggerBranchNameException;
+
     public TestRepositoryTriggersResponse withInvalidRepositoryTriggerBranchNameException(Object invalidRepositoryTriggerBranchNameException) {
         this.invalidRepositoryTriggerBranchNameException = invalidRepositoryTriggerBranchNameException;
         return this;
@@ -89,6 +98,7 @@ public class TestRepositoryTriggersResponse {
      */
     
     public Object invalidRepositoryTriggerCustomDataException;
+
     public TestRepositoryTriggersResponse withInvalidRepositoryTriggerCustomDataException(Object invalidRepositoryTriggerCustomDataException) {
         this.invalidRepositoryTriggerCustomDataException = invalidRepositoryTriggerCustomDataException;
         return this;
@@ -99,6 +109,7 @@ public class TestRepositoryTriggersResponse {
      */
     
     public Object invalidRepositoryTriggerDestinationArnException;
+
     public TestRepositoryTriggersResponse withInvalidRepositoryTriggerDestinationArnException(Object invalidRepositoryTriggerDestinationArnException) {
         this.invalidRepositoryTriggerDestinationArnException = invalidRepositoryTriggerDestinationArnException;
         return this;
@@ -109,6 +120,7 @@ public class TestRepositoryTriggersResponse {
      */
     
     public Object invalidRepositoryTriggerEventsException;
+
     public TestRepositoryTriggersResponse withInvalidRepositoryTriggerEventsException(Object invalidRepositoryTriggerEventsException) {
         this.invalidRepositoryTriggerEventsException = invalidRepositoryTriggerEventsException;
         return this;
@@ -119,6 +131,7 @@ public class TestRepositoryTriggersResponse {
      */
     
     public Object invalidRepositoryTriggerNameException;
+
     public TestRepositoryTriggersResponse withInvalidRepositoryTriggerNameException(Object invalidRepositoryTriggerNameException) {
         this.invalidRepositoryTriggerNameException = invalidRepositoryTriggerNameException;
         return this;
@@ -129,6 +142,7 @@ public class TestRepositoryTriggersResponse {
      */
     
     public Object invalidRepositoryTriggerRegionException;
+
     public TestRepositoryTriggersResponse withInvalidRepositoryTriggerRegionException(Object invalidRepositoryTriggerRegionException) {
         this.invalidRepositoryTriggerRegionException = invalidRepositoryTriggerRegionException;
         return this;
@@ -139,6 +153,7 @@ public class TestRepositoryTriggersResponse {
      */
     
     public Object maximumBranchesExceededException;
+
     public TestRepositoryTriggersResponse withMaximumBranchesExceededException(Object maximumBranchesExceededException) {
         this.maximumBranchesExceededException = maximumBranchesExceededException;
         return this;
@@ -149,6 +164,7 @@ public class TestRepositoryTriggersResponse {
      */
     
     public Object maximumRepositoryTriggersExceededException;
+
     public TestRepositoryTriggersResponse withMaximumRepositoryTriggersExceededException(Object maximumRepositoryTriggersExceededException) {
         this.maximumRepositoryTriggersExceededException = maximumRepositoryTriggersExceededException;
         return this;
@@ -156,6 +172,7 @@ public class TestRepositoryTriggersResponse {
     
     
     public Integer statusCode;
+
     public TestRepositoryTriggersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -163,6 +180,7 @@ public class TestRepositoryTriggersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestRepositoryTriggersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -173,6 +191,7 @@ public class TestRepositoryTriggersResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public TestRepositoryTriggersResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -183,6 +202,7 @@ public class TestRepositoryTriggersResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public TestRepositoryTriggersResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -193,6 +213,7 @@ public class TestRepositoryTriggersResponse {
      */
     
     public Object repositoryTriggerBranchNameListRequiredException;
+
     public TestRepositoryTriggersResponse withRepositoryTriggerBranchNameListRequiredException(Object repositoryTriggerBranchNameListRequiredException) {
         this.repositoryTriggerBranchNameListRequiredException = repositoryTriggerBranchNameListRequiredException;
         return this;
@@ -203,6 +224,7 @@ public class TestRepositoryTriggersResponse {
      */
     
     public Object repositoryTriggerDestinationArnRequiredException;
+
     public TestRepositoryTriggersResponse withRepositoryTriggerDestinationArnRequiredException(Object repositoryTriggerDestinationArnRequiredException) {
         this.repositoryTriggerDestinationArnRequiredException = repositoryTriggerDestinationArnRequiredException;
         return this;
@@ -213,6 +235,7 @@ public class TestRepositoryTriggersResponse {
      */
     
     public Object repositoryTriggerEventsListRequiredException;
+
     public TestRepositoryTriggersResponse withRepositoryTriggerEventsListRequiredException(Object repositoryTriggerEventsListRequiredException) {
         this.repositoryTriggerEventsListRequiredException = repositoryTriggerEventsListRequiredException;
         return this;
@@ -223,6 +246,7 @@ public class TestRepositoryTriggersResponse {
      */
     
     public Object repositoryTriggerNameRequiredException;
+
     public TestRepositoryTriggersResponse withRepositoryTriggerNameRequiredException(Object repositoryTriggerNameRequiredException) {
         this.repositoryTriggerNameRequiredException = repositoryTriggerNameRequiredException;
         return this;
@@ -233,6 +257,7 @@ public class TestRepositoryTriggersResponse {
      */
     
     public Object repositoryTriggersListRequiredException;
+
     public TestRepositoryTriggersResponse withRepositoryTriggersListRequiredException(Object repositoryTriggersListRequiredException) {
         this.repositoryTriggersListRequiredException = repositoryTriggersListRequiredException;
         return this;
@@ -243,9 +268,14 @@ public class TestRepositoryTriggersResponse {
      */
     
     public org.openapis.openapi.models.shared.TestRepositoryTriggersOutput testRepositoryTriggersOutput;
+
     public TestRepositoryTriggersResponse withTestRepositoryTriggersOutput(org.openapis.openapi.models.shared.TestRepositoryTriggersOutput testRepositoryTriggersOutput) {
         this.testRepositoryTriggersOutput = testRepositoryTriggersOutput;
         return this;
     }
     
+    public TestRepositoryTriggersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

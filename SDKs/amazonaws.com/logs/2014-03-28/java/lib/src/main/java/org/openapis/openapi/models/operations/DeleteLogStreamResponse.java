@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLogStreamResponse {
     
     public String contentType;
+
     public DeleteLogStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteLogStreamResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteLogStreamResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteLogStreamResponse {
      */
     
     public Object operationAbortedException;
+
     public DeleteLogStreamResponse withOperationAbortedException(Object operationAbortedException) {
         this.operationAbortedException = operationAbortedException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteLogStreamResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteLogStreamResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteLogStreamResponse {
     
     
     public Integer statusCode;
+
     public DeleteLogStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteLogStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLogStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteLogStreamResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteLogStreamResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public DeleteLogStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

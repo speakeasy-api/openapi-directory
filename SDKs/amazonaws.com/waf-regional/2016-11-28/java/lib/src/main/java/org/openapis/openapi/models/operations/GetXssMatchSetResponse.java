@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetXssMatchSetResponse {
     
     public String contentType;
+
     public GetXssMatchSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetXssMatchSetResponse {
      */
     
     public org.openapis.openapi.models.shared.GetXssMatchSetResponse getXssMatchSetResponse;
+
     public GetXssMatchSetResponse withGetXssMatchSetResponse(org.openapis.openapi.models.shared.GetXssMatchSetResponse getXssMatchSetResponse) {
         this.getXssMatchSetResponse = getXssMatchSetResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetXssMatchSetResponse {
     
     
     public Integer statusCode;
+
     public GetXssMatchSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetXssMatchSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetXssMatchSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class GetXssMatchSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public GetXssMatchSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class GetXssMatchSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public GetXssMatchSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,9 +70,14 @@ public class GetXssMatchSetResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public GetXssMatchSetResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
     }
     
+    public GetXssMatchSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

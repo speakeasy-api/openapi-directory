@@ -18,6 +18,7 @@ public class CustomEventsBatchInsertRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customEvents")
     public CustomEvent[] customEvents;
+
     public CustomEventsBatchInsertRequest withCustomEvents(CustomEvent[] customEvents) {
         this.customEvents = customEvents;
         return this;
@@ -29,9 +30,11 @@ public class CustomEventsBatchInsertRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CustomEventsBatchInsertRequest withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public CustomEventsBatchInsertRequest(){}
 }

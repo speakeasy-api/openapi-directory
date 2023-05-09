@@ -12,6 +12,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Canceled")
     public Boolean canceled;
+
     public Tournament withCanceled(Boolean canceled) {
         this.canceled = canceled;
         return this;
@@ -20,6 +21,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("City")
     public String city;
+
     public Tournament withCity(String city) {
         this.city = city;
         return this;
@@ -28,6 +30,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Country")
     public String country;
+
     public Tournament withCountry(String country) {
         this.country = country;
         return this;
@@ -36,6 +39,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Covered")
     public Boolean covered;
+
     public Tournament withCovered(Boolean covered) {
         this.covered = covered;
         return this;
@@ -44,6 +48,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndDate")
     public String endDate;
+
     public Tournament withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -52,6 +57,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public Tournament withFormat(String format) {
         this.format = format;
         return this;
@@ -60,6 +66,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsInProgress")
     public Boolean isInProgress;
+
     public Tournament withIsInProgress(Boolean isInProgress) {
         this.isInProgress = isInProgress;
         return this;
@@ -68,6 +75,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsOver")
     public Boolean isOver;
+
     public Tournament withIsOver(Boolean isOver) {
         this.isOver = isOver;
         return this;
@@ -76,6 +84,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public Tournament withLocation(String location) {
         this.location = location;
         return this;
@@ -84,14 +93,25 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Tournament withName(String name) {
         this.name = name;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("OddsCoverage")
+    public String oddsCoverage;
+
+    public Tournament withOddsCoverage(String oddsCoverage) {
+        this.oddsCoverage = oddsCoverage;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Par")
     public Long par;
+
     public Tournament withPar(Long par) {
         this.par = par;
         return this;
@@ -100,6 +120,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Purse")
     public Double purse;
+
     public Tournament withPurse(Double purse) {
         this.purse = purse;
         return this;
@@ -108,6 +129,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rounds")
     public Round[] rounds;
+
     public Tournament withRounds(Round[] rounds) {
         this.rounds = rounds;
         return this;
@@ -116,6 +138,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SportRadarTournamentID")
     public String sportRadarTournamentID;
+
     public Tournament withSportRadarTournamentID(String sportRadarTournamentID) {
         this.sportRadarTournamentID = sportRadarTournamentID;
         return this;
@@ -124,6 +147,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartDate")
     public String startDate;
+
     public Tournament withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -132,6 +156,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartDateTime")
     public String startDateTime;
+
     public Tournament withStartDateTime(String startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -140,6 +165,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public Tournament withState(String state) {
         this.state = state;
         return this;
@@ -148,6 +174,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeZone")
     public String timeZone;
+
     public Tournament withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -156,6 +183,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TournamentID")
     public Long tournamentID;
+
     public Tournament withTournamentID(Long tournamentID) {
         this.tournamentID = tournamentID;
         return this;
@@ -164,6 +192,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Venue")
     public String venue;
+
     public Tournament withVenue(String venue) {
         this.venue = venue;
         return this;
@@ -172,6 +201,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Yards")
     public Long yards;
+
     public Tournament withYards(Long yards) {
         this.yards = yards;
         return this;
@@ -180,9 +210,11 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ZipCode")
     public String zipCode;
+
     public Tournament withZipCode(String zipCode) {
         this.zipCode = zipCode;
         return this;
     }
     
+    public Tournament(){}
 }

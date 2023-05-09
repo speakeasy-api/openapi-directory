@@ -15,6 +15,7 @@ public class ListAnnotationImportJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public ListAnnotationImportJobsRequestBodyFilter filter;
+
     public ListAnnotationImportJobsRequestBody withFilter(ListAnnotationImportJobsRequestBodyFilter filter) {
         this.filter = filter;
         return this;
@@ -26,9 +27,11 @@ public class ListAnnotationImportJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ids")
     public String[] ids;
+
     public ListAnnotationImportJobsRequestBody withIds(String[] ids) {
         this.ids = ids;
         return this;
     }
     
+    public ListAnnotationImportJobsRequestBody(){}
 }

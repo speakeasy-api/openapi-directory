@@ -9,15 +9,16 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * NodePool - Provides GKE Node Pool information.
+ * NodePool - Provides GKE node pool information.
  */
 public class NodePool {
     /**
-     * Kubernetes Node pool name.
+     * Kubernetes node pool name.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NodePool withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodes")
     public Node[] nodes;
+
     public NodePool withNodes(Node[] nodes) {
         this.nodes = nodes;
         return this;
     }
     
+    public NodePool(){}
 }

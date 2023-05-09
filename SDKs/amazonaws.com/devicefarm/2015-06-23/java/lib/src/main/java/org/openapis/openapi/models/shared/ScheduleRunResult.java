@@ -15,9 +15,11 @@ public class ScheduleRunResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("run")
     public Run run;
+
     public ScheduleRunResult withRun(Run run) {
         this.run = run;
         return this;
     }
     
+    public ScheduleRunResult(){}
 }

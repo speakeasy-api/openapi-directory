@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ShareDirectoryResponse {
@@ -12,6 +13,7 @@ public class ShareDirectoryResponse {
      */
     
     public Object accessDeniedException;
+
     public ShareDirectoryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ShareDirectoryResponse {
      */
     
     public Object clientException;
+
     public ShareDirectoryResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class ShareDirectoryResponse {
     
     
     public String contentType;
+
     public ShareDirectoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ShareDirectoryResponse {
      */
     
     public Object directoryAlreadySharedException;
+
     public ShareDirectoryResponse withDirectoryAlreadySharedException(Object directoryAlreadySharedException) {
         this.directoryAlreadySharedException = directoryAlreadySharedException;
         return this;
@@ -49,6 +54,7 @@ public class ShareDirectoryResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public ShareDirectoryResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -59,6 +65,7 @@ public class ShareDirectoryResponse {
      */
     
     public Object invalidParameterException;
+
     public ShareDirectoryResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class ShareDirectoryResponse {
      */
     
     public Object invalidTargetException;
+
     public ShareDirectoryResponse withInvalidTargetException(Object invalidTargetException) {
         this.invalidTargetException = invalidTargetException;
         return this;
@@ -79,6 +87,7 @@ public class ShareDirectoryResponse {
      */
     
     public Object organizationsException;
+
     public ShareDirectoryResponse withOrganizationsException(Object organizationsException) {
         this.organizationsException = organizationsException;
         return this;
@@ -89,6 +98,7 @@ public class ShareDirectoryResponse {
      */
     
     public Object serviceException;
+
     public ShareDirectoryResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -99,6 +109,7 @@ public class ShareDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ShareDirectoryResult shareDirectoryResult;
+
     public ShareDirectoryResponse withShareDirectoryResult(org.openapis.openapi.models.shared.ShareDirectoryResult shareDirectoryResult) {
         this.shareDirectoryResult = shareDirectoryResult;
         return this;
@@ -109,6 +120,7 @@ public class ShareDirectoryResponse {
      */
     
     public Object shareLimitExceededException;
+
     public ShareDirectoryResponse withShareLimitExceededException(Object shareLimitExceededException) {
         this.shareLimitExceededException = shareLimitExceededException;
         return this;
@@ -116,6 +128,7 @@ public class ShareDirectoryResponse {
     
     
     public Integer statusCode;
+
     public ShareDirectoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,6 +136,7 @@ public class ShareDirectoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ShareDirectoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -133,9 +147,14 @@ public class ShareDirectoryResponse {
      */
     
     public Object unsupportedOperationException;
+
     public ShareDirectoryResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public ShareDirectoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

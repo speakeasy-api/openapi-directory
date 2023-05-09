@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 public class CreateFleetRequest {
     
     public String clientToken;
+
     public CreateFleetRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +18,7 @@ public class CreateFleetRequest {
     
     
     public String context;
+
     public CreateFleetRequest withContext(String context) {
         this.context = context;
         return this;
@@ -23,6 +26,7 @@ public class CreateFleetRequest {
     
     
     public Boolean dryRun;
+
     public CreateFleetRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +34,7 @@ public class CreateFleetRequest {
     
     
     public FleetExcessCapacityTerminationPolicyEnum excessCapacityTerminationPolicy;
+
     public CreateFleetRequest withExcessCapacityTerminationPolicy(FleetExcessCapacityTerminationPolicyEnum excessCapacityTerminationPolicy) {
         this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
         return this;
@@ -37,6 +42,7 @@ public class CreateFleetRequest {
     
     
     public FleetLaunchTemplateConfigListRequest[] launchTemplateConfigs;
+
     public CreateFleetRequest withLaunchTemplateConfigs(FleetLaunchTemplateConfigListRequest[] launchTemplateConfigs) {
         this.launchTemplateConfigs = launchTemplateConfigs;
         return this;
@@ -44,6 +50,7 @@ public class CreateFleetRequest {
     
     
     public OnDemandOptionsRequest onDemandOptions;
+
     public CreateFleetRequest withOnDemandOptions(OnDemandOptionsRequest onDemandOptions) {
         this.onDemandOptions = onDemandOptions;
         return this;
@@ -51,6 +58,7 @@ public class CreateFleetRequest {
     
     
     public Boolean replaceUnhealthyInstances;
+
     public CreateFleetRequest withReplaceUnhealthyInstances(Boolean replaceUnhealthyInstances) {
         this.replaceUnhealthyInstances = replaceUnhealthyInstances;
         return this;
@@ -58,6 +66,7 @@ public class CreateFleetRequest {
     
     
     public SpotOptionsRequest spotOptions;
+
     public CreateFleetRequest withSpotOptions(SpotOptionsRequest spotOptions) {
         this.spotOptions = spotOptions;
         return this;
@@ -65,6 +74,7 @@ public class CreateFleetRequest {
     
     
     public CreateFleetRequestTagSpecifications[] tagSpecifications;
+
     public CreateFleetRequest withTagSpecifications(CreateFleetRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -72,6 +82,7 @@ public class CreateFleetRequest {
     
     
     public TargetCapacitySpecificationRequest targetCapacitySpecification;
+
     public CreateFleetRequest withTargetCapacitySpecification(TargetCapacitySpecificationRequest targetCapacitySpecification) {
         this.targetCapacitySpecification = targetCapacitySpecification;
         return this;
@@ -79,6 +90,7 @@ public class CreateFleetRequest {
     
     
     public Boolean terminateInstancesWithExpiration;
+
     public CreateFleetRequest withTerminateInstancesWithExpiration(Boolean terminateInstancesWithExpiration) {
         this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
         return this;
@@ -86,6 +98,7 @@ public class CreateFleetRequest {
     
     
     public FleetTypeEnum type;
+
     public CreateFleetRequest withType(FleetTypeEnum type) {
         this.type = type;
         return this;
@@ -93,6 +106,7 @@ public class CreateFleetRequest {
     
     
     public OffsetDateTime validFrom;
+
     public CreateFleetRequest withValidFrom(OffsetDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
@@ -100,9 +114,14 @@ public class CreateFleetRequest {
     
     
     public OffsetDateTime validUntil;
+
     public CreateFleetRequest withValidUntil(OffsetDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
     
+    public CreateFleetRequest(@JsonProperty("LaunchTemplateConfigs") FleetLaunchTemplateConfigListRequest[] launchTemplateConfigs, @JsonProperty("TargetCapacitySpecification") TargetCapacitySpecificationRequest targetCapacitySpecification) {
+        this.launchTemplateConfigs = launchTemplateConfigs;
+        this.targetCapacitySpecification = targetCapacitySpecification;
+  }
 }

@@ -22,6 +22,7 @@ public class DescribeInferenceRecommendationsJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompletionTime")
     public OffsetDateTime completionTime;
+
     public DescribeInferenceRecommendationsJobResponse withCompletionTime(OffsetDateTime completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -31,6 +32,7 @@ public class DescribeInferenceRecommendationsJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeInferenceRecommendationsJobResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -39,6 +41,7 @@ public class DescribeInferenceRecommendationsJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointPerformances")
     public EndpointPerformance[] endpointPerformances;
+
     public DescribeInferenceRecommendationsJobResponse withEndpointPerformances(EndpointPerformance[] endpointPerformances) {
         this.endpointPerformances = endpointPerformances;
         return this;
@@ -47,6 +50,7 @@ public class DescribeInferenceRecommendationsJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeInferenceRecommendationsJobResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -55,6 +59,7 @@ public class DescribeInferenceRecommendationsJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceRecommendations")
     public InferenceRecommendation[] inferenceRecommendations;
+
     public DescribeInferenceRecommendationsJobResponse withInferenceRecommendations(InferenceRecommendation[] inferenceRecommendations) {
         this.inferenceRecommendations = inferenceRecommendations;
         return this;
@@ -62,6 +67,7 @@ public class DescribeInferenceRecommendationsJobResponse {
     
     @JsonProperty("InputConfig")
     public RecommendationJobInputConfig inputConfig;
+
     public DescribeInferenceRecommendationsJobResponse withInputConfig(RecommendationJobInputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -69,6 +75,7 @@ public class DescribeInferenceRecommendationsJobResponse {
     
     @JsonProperty("JobArn")
     public String jobArn;
+
     public DescribeInferenceRecommendationsJobResponse withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -77,6 +84,7 @@ public class DescribeInferenceRecommendationsJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobDescription")
     public String jobDescription;
+
     public DescribeInferenceRecommendationsJobResponse withJobDescription(String jobDescription) {
         this.jobDescription = jobDescription;
         return this;
@@ -84,6 +92,7 @@ public class DescribeInferenceRecommendationsJobResponse {
     
     @JsonProperty("JobName")
     public String jobName;
+
     public DescribeInferenceRecommendationsJobResponse withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -91,6 +100,7 @@ public class DescribeInferenceRecommendationsJobResponse {
     
     @JsonProperty("JobType")
     public RecommendationJobTypeEnum jobType;
+
     public DescribeInferenceRecommendationsJobResponse withJobType(RecommendationJobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -100,6 +110,7 @@ public class DescribeInferenceRecommendationsJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeInferenceRecommendationsJobResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -107,6 +118,7 @@ public class DescribeInferenceRecommendationsJobResponse {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeInferenceRecommendationsJobResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -114,6 +126,7 @@ public class DescribeInferenceRecommendationsJobResponse {
     
     @JsonProperty("Status")
     public RecommendationJobStatusEnum status;
+
     public DescribeInferenceRecommendationsJobResponse withStatus(RecommendationJobStatusEnum status) {
         this.status = status;
         return this;
@@ -122,9 +135,20 @@ public class DescribeInferenceRecommendationsJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoppingConditions")
     public RecommendationJobStoppingConditions stoppingConditions;
+
     public DescribeInferenceRecommendationsJobResponse withStoppingConditions(RecommendationJobStoppingConditions stoppingConditions) {
         this.stoppingConditions = stoppingConditions;
         return this;
     }
     
+    public DescribeInferenceRecommendationsJobResponse(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("InputConfig") RecommendationJobInputConfig inputConfig, @JsonProperty("JobArn") String jobArn, @JsonProperty("JobName") String jobName, @JsonProperty("JobType") RecommendationJobTypeEnum jobType, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime, @JsonProperty("RoleArn") String roleArn, @JsonProperty("Status") RecommendationJobStatusEnum status) {
+        this.creationTime = creationTime;
+        this.inputConfig = inputConfig;
+        this.jobArn = jobArn;
+        this.jobName = jobName;
+        this.jobType = jobType;
+        this.lastModifiedTime = lastModifiedTime;
+        this.roleArn = roleArn;
+        this.status = status;
+  }
 }

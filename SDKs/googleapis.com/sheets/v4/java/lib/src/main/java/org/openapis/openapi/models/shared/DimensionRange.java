@@ -18,6 +18,7 @@ public class DimensionRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     public DimensionRangeDimensionEnum dimension;
+
     public DimensionRange withDimension(DimensionRangeDimensionEnum dimension) {
         this.dimension = dimension;
         return this;
@@ -29,6 +30,7 @@ public class DimensionRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endIndex")
     public Integer endIndex;
+
     public DimensionRange withEndIndex(Integer endIndex) {
         this.endIndex = endIndex;
         return this;
@@ -40,6 +42,7 @@ public class DimensionRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sheetId")
     public Integer sheetId;
+
     public DimensionRange withSheetId(Integer sheetId) {
         this.sheetId = sheetId;
         return this;
@@ -51,9 +54,11 @@ public class DimensionRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startIndex")
     public Integer startIndex;
+
     public DimensionRange withStartIndex(Integer startIndex) {
         this.startIndex = startIndex;
         return this;
     }
     
+    public DimensionRange(){}
 }

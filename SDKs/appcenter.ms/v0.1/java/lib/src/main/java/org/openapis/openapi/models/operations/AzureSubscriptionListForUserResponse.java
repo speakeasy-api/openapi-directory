@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AzureSubscriptionListForUserResponse {
     
     public String contentType;
+
     public AzureSubscriptionListForUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AzureSubscriptionListForUserResponse {
     
     
     public Integer statusCode;
+
     public AzureSubscriptionListForUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AzureSubscriptionListForUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AzureSubscriptionListForUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AzureSubscriptionListForUserResponse {
      */
     
     public AzureSubscriptionListForUser200ApplicationJSON[] azureSubscriptionListForUser200ApplicationJSONObjects;
+
     public AzureSubscriptionListForUserResponse withAzureSubscriptionListForUser200ApplicationJSONObjects(AzureSubscriptionListForUser200ApplicationJSON[] azureSubscriptionListForUser200ApplicationJSONObjects) {
         this.azureSubscriptionListForUser200ApplicationJSONObjects = azureSubscriptionListForUser200ApplicationJSONObjects;
         return this;
@@ -43,9 +48,14 @@ public class AzureSubscriptionListForUserResponse {
      */
     
     public AzureSubscriptionListForUserDefaultApplicationJSON azureSubscriptionListForUserDefaultApplicationJSONObject;
+
     public AzureSubscriptionListForUserResponse withAzureSubscriptionListForUserDefaultApplicationJSONObject(AzureSubscriptionListForUserDefaultApplicationJSON azureSubscriptionListForUserDefaultApplicationJSONObject) {
         this.azureSubscriptionListForUserDefaultApplicationJSONObject = azureSubscriptionListForUserDefaultApplicationJSONObject;
         return this;
     }
     
+    public AzureSubscriptionListForUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class UpdateDeviceFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateDeviceFleetRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class UpdateDeviceFleetRequest {
     
     @JsonProperty("DeviceFleetName")
     public String deviceFleetName;
+
     public UpdateDeviceFleetRequest withDeviceFleetName(String deviceFleetName) {
         this.deviceFleetName = deviceFleetName;
         return this;
@@ -27,6 +29,7 @@ public class UpdateDeviceFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableIotRoleAlias")
     public Boolean enableIotRoleAlias;
+
     public UpdateDeviceFleetRequest withEnableIotRoleAlias(Boolean enableIotRoleAlias) {
         this.enableIotRoleAlias = enableIotRoleAlias;
         return this;
@@ -34,6 +37,7 @@ public class UpdateDeviceFleetRequest {
     
     @JsonProperty("OutputConfig")
     public EdgeOutputConfig outputConfig;
+
     public UpdateDeviceFleetRequest withOutputConfig(EdgeOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -42,9 +46,14 @@ public class UpdateDeviceFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public UpdateDeviceFleetRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public UpdateDeviceFleetRequest(@JsonProperty("DeviceFleetName") String deviceFleetName, @JsonProperty("OutputConfig") EdgeOutputConfig outputConfig) {
+        this.deviceFleetName = deviceFleetName;
+        this.outputConfig = outputConfig;
+  }
 }

@@ -18,9 +18,11 @@ public class V2Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentCategoriesVersion")
     public V2ModelContentCategoriesVersionEnum contentCategoriesVersion;
+
     public V2Model withContentCategoriesVersion(V2ModelContentCategoriesVersionEnum contentCategoriesVersion) {
         this.contentCategoriesVersion = contentCategoriesVersion;
         return this;
     }
     
+    public V2Model(){}
 }

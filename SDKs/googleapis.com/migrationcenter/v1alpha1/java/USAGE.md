@@ -3,14 +3,13 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsAggregateValuesSecurity;
 import org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsAggregateValuesRequest;
 import org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsAggregateValuesResponse;
-import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsAggregateValuesSecurity;
 import org.openapis.openapi.models.shared.AggregateAssetsValuesRequest;
 import org.openapis.openapi.models.shared.Aggregation;
 import org.openapis.openapi.models.shared.AggregationHistogram;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -19,109 +18,106 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            MigrationcenterProjectsLocationsAssetsAggregateValuesRequest req = new MigrationcenterProjectsLocationsAssetsAggregateValuesRequest() {{
-                dollarXgafv = "2";
+            MigrationcenterProjectsLocationsAssetsAggregateValuesRequest req = new MigrationcenterProjectsLocationsAssetsAggregateValuesRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 aggregateAssetsValuesRequest = new AggregateAssetsValuesRequest() {{
                     aggregations = new org.openapis.openapi.models.shared.Aggregation[]{{
                         add(new Aggregation() {{
                             count = new java.util.HashMap<String, Object>() {{
-                                put("quibusdam", "unde");
-                                put("nulla", "corrupti");
-                                put("illum", "vel");
+                                put("unde", "nulla");
+                                put("corrupti", "illum");
+                                put("vel", "error");
+                                put("deserunt", "suscipit");
                             }};
-                            field = "error";
+                            field = "iure";
                             frequency = new java.util.HashMap<String, Object>() {{
-                                put("suscipit", "iure");
-                                put("magnam", "debitis");
-                                put("ipsa", "delectus");
+                                put("debitis", "ipsa");
+                                put("delectus", "tempora");
                             }};
                             histogram = new AggregationHistogram() {{
                                 lowerBounds = new Double[]{{
-                                    add(3834.41),
                                     add(4776.65),
+                                    add(7917.25),
                                 }};
                             }};
                             sum = new java.util.HashMap<String, Object>() {{
-                                put("placeat", "voluptatum");
-                                put("iusto", "excepturi");
-                                put("nisi", "recusandae");
-                                put("temporibus", "ab");
+                                put("voluptatum", "iusto");
+                                put("excepturi", "nisi");
+                                put("recusandae", "temporibus");
+                                put("ab", "quis");
                             }};
                         }}),
                         add(new Aggregation() {{
                             count = new java.util.HashMap<String, Object>() {{
-                                put("veritatis", "deserunt");
-                                put("perferendis", "ipsam");
+                                put("deserunt", "perferendis");
                             }};
-                            field = "repellendus";
+                            field = "ipsam";
                             frequency = new java.util.HashMap<String, Object>() {{
-                                put("quo", "odit");
-                                put("at", "at");
-                                put("maiores", "molestiae");
-                                put("quod", "quod");
+                                put("sapiente", "quo");
+                                put("odit", "at");
+                                put("at", "maiores");
+                                put("molestiae", "quod");
                             }};
                             histogram = new AggregationHistogram() {{
                                 lowerBounds = new Double[]{{
+                                    add(4614.79),
                                     add(5204.78),
                                     add(7805.29),
+                                    add(6788.8),
                                 }};
                             }};
                             sum = new java.util.HashMap<String, Object>() {{
-                                put("dicta", "nam");
-                                put("officia", "occaecati");
-                                put("fugit", "deleniti");
+                                put("nam", "officia");
                             }};
                         }}),
                         add(new Aggregation() {{
                             count = new java.util.HashMap<String, Object>() {{
-                                put("optio", "totam");
-                                put("beatae", "commodi");
-                                put("molestiae", "modi");
-                                put("qui", "impedit");
+                                put("fugit", "deleniti");
+                                put("hic", "optio");
+                                put("totam", "beatae");
                             }};
-                            field = "cum";
+                            field = "commodi";
                             frequency = new java.util.HashMap<String, Object>() {{
-                                put("ipsum", "excepturi");
-                                put("aspernatur", "perferendis");
+                                put("modi", "qui");
+                                put("impedit", "cum");
                             }};
                             histogram = new AggregationHistogram() {{
                                 lowerBounds = new Double[]{{
-                                    add(6176.36),
-                                    add(1496.75),
+                                    add(2165.5),
+                                    add(5684.34),
                                 }};
                             }};
                             sum = new java.util.HashMap<String, Object>() {{
-                                put("dolor", "natus");
-                                put("laboriosam", "hic");
-                                put("saepe", "fuga");
+                                put("perferendis", "ad");
                             }};
                         }}),
                     }};
-                    filter = "in";
-                }};
-                accessToken = "corporis";
-                alt = "media";
-                callback = "iure";
-                fields = "saepe";
-                key = "quidem";
-                oauthToken = "architecto";
-                parent = "ipsa";
+                    filter = "natus";
+                }};;
+                accessToken = "sed";
+                alt = AltEnum.MEDIA;
+                callback = "dolor";
+                fields = "natus";
+                key = "laboriosam";
+                oauthToken = "hic";
                 prettyPrint = false;
-                quotaUser = "reiciendis";
-                uploadType = "est";
-                uploadProtocol = "mollitia";
-            }}            
+                quotaUser = "saepe";
+                uploadType = "fuga";
+                uploadProtocol = "in";
+            }};            
 
-            MigrationcenterProjectsLocationsAssetsAggregateValuesResponse res = sdk.projects.migrationcenterProjectsLocationsAssetsAggregateValues(req, new MigrationcenterProjectsLocationsAssetsAggregateValuesSecurity() {{
+            MigrationcenterProjectsLocationsAssetsAggregateValuesResponse res = sdk.projects.migrationcenterProjectsLocationsAssetsAggregateValues(req, new MigrationcenterProjectsLocationsAssetsAggregateValuesSecurity("corporis", "iste") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.aggregateAssetsValuesResponse.isPresent()) {
+            if (res.aggregateAssetsValuesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsDestinyEntitySearchResultResults {
     
     public Boolean hasMore;
+
     public DestinyDefinitionsDestinyEntitySearchResultResults withHasMore(Boolean hasMore) {
         this.hasMore = hasMore;
         return this;
@@ -19,6 +20,7 @@ public class DestinyDefinitionsDestinyEntitySearchResultResults {
     
     
     public QueriesPagedQuery query;
+
     public DestinyDefinitionsDestinyEntitySearchResultResults withQuery(QueriesPagedQuery query) {
         this.query = query;
         return this;
@@ -26,6 +28,7 @@ public class DestinyDefinitionsDestinyEntitySearchResultResults {
     
     
     public String replacementContinuationToken;
+
     public DestinyDefinitionsDestinyEntitySearchResultResults withReplacementContinuationToken(String replacementContinuationToken) {
         this.replacementContinuationToken = replacementContinuationToken;
         return this;
@@ -33,6 +36,7 @@ public class DestinyDefinitionsDestinyEntitySearchResultResults {
     
     
     public DestinyDefinitionsDestinyEntitySearchResultItem[] results;
+
     public DestinyDefinitionsDestinyEntitySearchResultResults withResults(DestinyDefinitionsDestinyEntitySearchResultItem[] results) {
         this.results = results;
         return this;
@@ -40,6 +44,7 @@ public class DestinyDefinitionsDestinyEntitySearchResultResults {
     
     
     public Integer totalResults;
+
     public DestinyDefinitionsDestinyEntitySearchResultResults withTotalResults(Integer totalResults) {
         this.totalResults = totalResults;
         return this;
@@ -53,9 +58,11 @@ public class DestinyDefinitionsDestinyEntitySearchResultResults {
      */
     
     public Boolean useTotalResults;
+
     public DestinyDefinitionsDestinyEntitySearchResultResults withUseTotalResults(Boolean useTotalResults) {
         this.useTotalResults = useTotalResults;
         return this;
     }
     
+    public DestinyDefinitionsDestinyEntitySearchResultResults(){}
 }

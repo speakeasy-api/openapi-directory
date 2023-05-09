@@ -15,6 +15,7 @@ public class PancrRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public PancrRequestBodyCertificateParameters certificateParameters;
+
     public PancrRequestBody withCertificateParameters(PancrRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class PancrRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public PancrRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class PancrRequestBody {
      */
     @JsonProperty("format")
     public PancrRequestBodyFormatEnum format;
+
     public PancrRequestBody withFormat(PancrRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class PancrRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public PancrRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public PancrRequestBody(@JsonProperty("format") PancrRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

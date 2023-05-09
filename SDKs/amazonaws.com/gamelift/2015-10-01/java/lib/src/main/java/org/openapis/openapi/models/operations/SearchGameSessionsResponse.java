@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchGameSessionsResponse {
     
     public String contentType;
+
     public SearchGameSessionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SearchGameSessionsResponse {
      */
     
     public Object internalServiceException;
+
     public SearchGameSessionsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class SearchGameSessionsResponse {
      */
     
     public Object invalidRequestException;
+
     public SearchGameSessionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class SearchGameSessionsResponse {
      */
     
     public Object notFoundException;
+
     public SearchGameSessionsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -49,6 +54,7 @@ public class SearchGameSessionsResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchGameSessionsOutput searchGameSessionsOutput;
+
     public SearchGameSessionsResponse withSearchGameSessionsOutput(org.openapis.openapi.models.shared.SearchGameSessionsOutput searchGameSessionsOutput) {
         this.searchGameSessionsOutput = searchGameSessionsOutput;
         return this;
@@ -56,6 +62,7 @@ public class SearchGameSessionsResponse {
     
     
     public Integer statusCode;
+
     public SearchGameSessionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class SearchGameSessionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchGameSessionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class SearchGameSessionsResponse {
      */
     
     public Object terminalRoutingStrategyException;
+
     public SearchGameSessionsResponse withTerminalRoutingStrategyException(Object terminalRoutingStrategyException) {
         this.terminalRoutingStrategyException = terminalRoutingStrategyException;
         return this;
@@ -83,6 +92,7 @@ public class SearchGameSessionsResponse {
      */
     
     public Object unauthorizedException;
+
     public SearchGameSessionsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -93,9 +103,14 @@ public class SearchGameSessionsResponse {
      */
     
     public Object unsupportedRegionException;
+
     public SearchGameSessionsResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public SearchGameSessionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class CheckInResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deadline")
     public String deadline;
+
     public CheckInResponse withDeadline(String deadline) {
         this.deadline = deadline;
         return this;
@@ -29,6 +30,7 @@ public class CheckInResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public java.util.Map<String, Object> features;
+
     public CheckInResponse withFeatures(java.util.Map<String, Object> features) {
         this.features = features;
         return this;
@@ -40,9 +42,11 @@ public class CheckInResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, Object> metadata;
+
     public CheckInResponse withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public CheckInResponse(){}
 }

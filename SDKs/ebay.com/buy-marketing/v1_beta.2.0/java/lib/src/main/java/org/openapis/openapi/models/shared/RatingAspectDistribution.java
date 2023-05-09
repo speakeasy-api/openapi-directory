@@ -15,6 +15,7 @@ public class RatingAspectDistribution {
      */
     
     public Long count;
+
     public RatingAspectDistribution withCount(Long count) {
         this.count = count;
         return this;
@@ -25,6 +26,7 @@ public class RatingAspectDistribution {
      */
     
     public String percentage;
+
     public RatingAspectDistribution withPercentage(String percentage) {
         this.percentage = percentage;
         return this;
@@ -35,9 +37,11 @@ public class RatingAspectDistribution {
      */
     
     public String value;
+
     public RatingAspectDistribution withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public RatingAspectDistribution(){}
 }

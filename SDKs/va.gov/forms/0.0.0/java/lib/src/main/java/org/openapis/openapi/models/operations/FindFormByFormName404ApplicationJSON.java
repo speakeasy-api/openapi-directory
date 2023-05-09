@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FindFormByFormName404ApplicationJSON {
     @JsonProperty("errors")
     public FindFormByFormName404ApplicationJSONErrors[] errors;
+
     public FindFormByFormName404ApplicationJSON withErrors(FindFormByFormName404ApplicationJSONErrors[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public FindFormByFormName404ApplicationJSON(@JsonProperty("errors") FindFormByFormName404ApplicationJSONErrors[] errors) {
+        this.errors = errors;
+  }
 }

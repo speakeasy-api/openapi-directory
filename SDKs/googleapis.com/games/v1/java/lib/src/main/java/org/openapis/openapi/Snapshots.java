@@ -58,11 +58,9 @@ public class Snapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesSnapshotsGetResponse res = new org.openapis.openapi.models.operations.GamesSnapshotsGetResponse() {{
+        org.openapis.openapi.models.operations.GamesSnapshotsGetResponse res = new org.openapis.openapi.models.operations.GamesSnapshotsGetResponse(contentType, httpRes.statusCode()) {{
             snapshot = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Snapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesSnapshotsListResponse res = new org.openapis.openapi.models.operations.GamesSnapshotsListResponse() {{
+        org.openapis.openapi.models.operations.GamesSnapshotsListResponse res = new org.openapis.openapi.models.operations.GamesSnapshotsListResponse(contentType, httpRes.statusCode()) {{
             snapshotListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

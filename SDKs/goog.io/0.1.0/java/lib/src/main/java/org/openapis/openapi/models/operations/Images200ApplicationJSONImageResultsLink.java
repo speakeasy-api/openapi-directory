@@ -12,6 +12,7 @@ public class Images200ApplicationJSONImageResultsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public Images200ApplicationJSONImageResultsLink withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -20,6 +21,7 @@ public class Images200ApplicationJSONImageResultsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public Images200ApplicationJSONImageResultsLink withHref(String href) {
         this.href = href;
         return this;
@@ -28,9 +30,11 @@ public class Images200ApplicationJSONImageResultsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Images200ApplicationJSONImageResultsLink withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Images200ApplicationJSONImageResultsLink(){}
 }

@@ -15,6 +15,7 @@ public class DeleteCollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DeleteCollectionDetail withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class DeleteCollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DeleteCollectionDetail withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class DeleteCollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CollectionStatusEnum status;
+
     public DeleteCollectionDetail withStatus(CollectionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DeleteCollectionDetail(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountInstitutionCurationRequest {
@@ -12,9 +13,13 @@ public class AccountInstitutionCurationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=curation_id")
     public Long curationId;
+
     public AccountInstitutionCurationRequest withCurationId(Long curationId) {
         this.curationId = curationId;
         return this;
     }
     
+    public AccountInstitutionCurationRequest(@JsonProperty("curation_id") Long curationId) {
+        this.curationId = curationId;
+  }
 }

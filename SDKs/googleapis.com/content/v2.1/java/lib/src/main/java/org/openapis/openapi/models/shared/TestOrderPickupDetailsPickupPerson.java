@@ -15,6 +15,7 @@ public class TestOrderPickupDetailsPickupPerson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TestOrderPickupDetailsPickupPerson withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +27,11 @@ public class TestOrderPickupDetailsPickupPerson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public TestOrderPickupDetailsPickupPerson withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public TestOrderPickupDetailsPickupPerson(){}
 }

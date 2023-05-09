@@ -17,6 +17,7 @@ public class SearchResult {
      */
     @JsonProperty("context")
     public String context;
+
     public SearchResult withContext(String context) {
         this.context = context;
         return this;
@@ -28,6 +29,7 @@ public class SearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context_after")
     public String[] contextAfter;
+
     public SearchResult withContextAfter(String[] contextAfter) {
         this.contextAfter = contextAfter;
         return this;
@@ -39,6 +41,7 @@ public class SearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context_before")
     public String[] contextBefore;
+
     public SearchResult withContextBefore(String[] contextBefore) {
         this.contextBefore = contextBefore;
         return this;
@@ -49,6 +52,7 @@ public class SearchResult {
      */
     @JsonProperty("line")
     public Long line;
+
     public SearchResult withLine(Long line) {
         this.line = line;
         return this;
@@ -59,6 +63,7 @@ public class SearchResult {
      */
     @JsonProperty("package")
     public String package_;
+
     public SearchResult withPackage(String package_) {
         this.package_ = package_;
         return this;
@@ -69,9 +74,16 @@ public class SearchResult {
      */
     @JsonProperty("path")
     public String path;
+
     public SearchResult withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public SearchResult(@JsonProperty("context") String context, @JsonProperty("line") Long line, @JsonProperty("package") String package_, @JsonProperty("path") String path) {
+        this.context = context;
+        this.line = line;
+        this.package_ = package_;
+        this.path = path;
+  }
 }

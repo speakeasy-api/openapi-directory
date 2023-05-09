@@ -18,9 +18,11 @@ public class RequestMirrorPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backendService")
     public String backendService;
+
     public RequestMirrorPolicy withBackendService(String backendService) {
         this.backendService = backendService;
         return this;
     }
     
+    public RequestMirrorPolicy(){}
 }

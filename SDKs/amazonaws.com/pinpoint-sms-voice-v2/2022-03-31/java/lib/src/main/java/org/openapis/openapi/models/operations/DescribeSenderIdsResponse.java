@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeSenderIdsResponse {
@@ -12,6 +13,7 @@ public class DescribeSenderIdsResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeSenderIdsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeSenderIdsResponse {
     
     
     public String contentType;
+
     public DescribeSenderIdsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeSenderIdsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeSenderIdsResult describeSenderIdsResult;
+
     public DescribeSenderIdsResponse withDescribeSenderIdsResult(org.openapis.openapi.models.shared.DescribeSenderIdsResult describeSenderIdsResult) {
         this.describeSenderIdsResult = describeSenderIdsResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeSenderIdsResponse {
      */
     
     public Object internalServerException;
+
     public DescribeSenderIdsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeSenderIdsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeSenderIdsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeSenderIdsResponse {
     
     
     public Integer statusCode;
+
     public DescribeSenderIdsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeSenderIdsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeSenderIdsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeSenderIdsResponse {
      */
     
     public Object throttlingException;
+
     public DescribeSenderIdsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeSenderIdsResponse {
      */
     
     public Object validationException;
+
     public DescribeSenderIdsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeSenderIdsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

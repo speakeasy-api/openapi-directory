@@ -18,6 +18,7 @@ public class DeleteAccountRequestBodyIdentification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public DeleteAccountRequestBodyIdentification withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,9 +30,11 @@ public class DeleteAccountRequestBodyIdentification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public DeleteAccountRequestBodyIdentification withDomain(String domain) {
         this.domain = domain;
         return this;
     }
     
+    public DeleteAccountRequestBodyIdentification(){}
 }

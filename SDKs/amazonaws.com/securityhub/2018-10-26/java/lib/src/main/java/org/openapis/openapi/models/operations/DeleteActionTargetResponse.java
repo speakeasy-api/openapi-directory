@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteActionTargetResponse {
     
     public String contentType;
+
     public DeleteActionTargetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteActionTargetResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteActionTargetResponse deleteActionTargetResponse;
+
     public DeleteActionTargetResponse withDeleteActionTargetResponse(org.openapis.openapi.models.shared.DeleteActionTargetResponse deleteActionTargetResponse) {
         this.deleteActionTargetResponse = deleteActionTargetResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteActionTargetResponse {
      */
     
     public Object internalException;
+
     public DeleteActionTargetResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteActionTargetResponse {
      */
     
     public Object invalidAccessException;
+
     public DeleteActionTargetResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteActionTargetResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteActionTargetResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteActionTargetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteActionTargetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteActionTargetResponse {
     
     
     public Integer statusCode;
+
     public DeleteActionTargetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteActionTargetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteActionTargetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteActionTargetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

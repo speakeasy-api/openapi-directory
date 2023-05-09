@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAutoPredictorResponse {
     
     public String contentType;
+
     public CreateAutoPredictorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateAutoPredictorResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAutoPredictorResponse createAutoPredictorResponse;
+
     public CreateAutoPredictorResponse withCreateAutoPredictorResponse(org.openapis.openapi.models.shared.CreateAutoPredictorResponse createAutoPredictorResponse) {
         this.createAutoPredictorResponse = createAutoPredictorResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateAutoPredictorResponse {
      */
     
     public Object invalidInputException;
+
     public CreateAutoPredictorResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class CreateAutoPredictorResponse {
      */
     
     public Object limitExceededException;
+
     public CreateAutoPredictorResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateAutoPredictorResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateAutoPredictorResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAutoPredictorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateAutoPredictorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateAutoPredictorResponse {
     
     
     public Integer statusCode;
+
     public CreateAutoPredictorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateAutoPredictorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAutoPredictorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateAutoPredictorResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateAutoPredictorResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
     }
     
+    public CreateAutoPredictorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartDominantLanguageDetectionJobResponse {
     
     public String contentType;
+
     public StartDominantLanguageDetectionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartDominantLanguageDetectionJobResponse {
      */
     
     public Object internalServerException;
+
     public StartDominantLanguageDetectionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StartDominantLanguageDetectionJobResponse {
      */
     
     public Object invalidRequestException;
+
     public StartDominantLanguageDetectionJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,8 +43,20 @@ public class StartDominantLanguageDetectionJobResponse {
      */
     
     public Object kmsKeyValidationException;
+
     public StartDominantLanguageDetectionJobResponse withKmsKeyValidationException(Object kmsKeyValidationException) {
         this.kmsKeyValidationException = kmsKeyValidationException;
+        return this;
+    }
+    
+    /**
+     * ResourceInUseException
+     */
+    
+    public Object resourceInUseException;
+
+    public StartDominantLanguageDetectionJobResponse withResourceInUseException(Object resourceInUseException) {
+        this.resourceInUseException = resourceInUseException;
         return this;
     }
     
@@ -49,6 +65,7 @@ public class StartDominantLanguageDetectionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartDominantLanguageDetectionJobResponse startDominantLanguageDetectionJobResponse;
+
     public StartDominantLanguageDetectionJobResponse withStartDominantLanguageDetectionJobResponse(org.openapis.openapi.models.shared.StartDominantLanguageDetectionJobResponse startDominantLanguageDetectionJobResponse) {
         this.startDominantLanguageDetectionJobResponse = startDominantLanguageDetectionJobResponse;
         return this;
@@ -56,6 +73,7 @@ public class StartDominantLanguageDetectionJobResponse {
     
     
     public Integer statusCode;
+
     public StartDominantLanguageDetectionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +81,7 @@ public class StartDominantLanguageDetectionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartDominantLanguageDetectionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +92,7 @@ public class StartDominantLanguageDetectionJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public StartDominantLanguageDetectionJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +103,14 @@ public class StartDominantLanguageDetectionJobResponse {
      */
     
     public Object tooManyTagsException;
+
     public StartDominantLanguageDetectionJobResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public StartDominantLanguageDetectionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

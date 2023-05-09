@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public GoogleCloudIntegrationsV1alphaIntegration withActive(Boolean active) {
         this.active = active;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudIntegrationsV1alphaIntegration withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudIntegrationsV1alphaIntegration withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudIntegrationsV1alphaIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudIntegrationsV1alphaIntegration withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaIntegration(){}
 }

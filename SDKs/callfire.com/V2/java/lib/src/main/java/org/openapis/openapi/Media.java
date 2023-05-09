@@ -59,12 +59,10 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateMediaResponse res = new org.openapis.openapi.models.operations.CreateMediaResponse() {{
+        org.openapis.openapi.models.operations.CreateMediaResponse res = new org.openapis.openapi.models.operations.CreateMediaResponse(contentType, httpRes.statusCode()) {{
             resourceId = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -114,12 +112,10 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindMediaResponse res = new org.openapis.openapi.models.operations.FindMediaResponse() {{
+        org.openapis.openapi.models.operations.FindMediaResponse res = new org.openapis.openapi.models.operations.FindMediaResponse(contentType, httpRes.statusCode()) {{
             mediaPage = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -169,12 +165,10 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMediaResponse res = new org.openapis.openapi.models.operations.GetMediaResponse() {{
+        org.openapis.openapi.models.operations.GetMediaResponse res = new org.openapis.openapi.models.operations.GetMediaResponse(contentType, httpRes.statusCode()) {{
             media = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -218,7 +212,7 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMediaDataResponse res = new org.openapis.openapi.models.operations.GetMediaDataResponse() {{
+        org.openapis.openapi.models.operations.GetMediaDataResponse res = new org.openapis.openapi.models.operations.GetMediaDataResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -229,8 +223,6 @@ public class Media {
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -298,11 +290,9 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMediaDataBinaryResponse res = new org.openapis.openapi.models.operations.GetMediaDataBinaryResponse() {{
+        org.openapis.openapi.models.operations.GetMediaDataBinaryResponse res = new org.openapis.openapi.models.operations.GetMediaDataBinaryResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -338,7 +328,7 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMediaDataByKeyResponse res = new org.openapis.openapi.models.operations.GetMediaDataByKeyResponse() {{
+        org.openapis.openapi.models.operations.GetMediaDataByKeyResponse res = new org.openapis.openapi.models.operations.GetMediaDataByKeyResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -349,8 +339,6 @@ public class Media {
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {

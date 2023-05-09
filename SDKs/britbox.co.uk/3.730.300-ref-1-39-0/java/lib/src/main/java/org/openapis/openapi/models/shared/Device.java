@@ -20,6 +20,7 @@ public class Device {
      */
     @JsonProperty("id")
     public String id;
+
     public Device withId(String id) {
         this.id = id;
         return this;
@@ -30,6 +31,7 @@ public class Device {
      */
     @JsonProperty("name")
     public String name;
+
     public Device withName(String name) {
         this.name = name;
         return this;
@@ -42,6 +44,7 @@ public class Device {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("registrationDate")
     public OffsetDateTime registrationDate;
+
     public Device withRegistrationDate(OffsetDateTime registrationDate) {
         this.registrationDate = registrationDate;
         return this;
@@ -52,9 +55,16 @@ public class Device {
      */
     @JsonProperty("type")
     public String type;
+
     public Device withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Device(@JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("registrationDate") OffsetDateTime registrationDate, @JsonProperty("type") String type) {
+        this.id = id;
+        this.name = name;
+        this.registrationDate = registrationDate;
+        this.type = type;
+  }
 }

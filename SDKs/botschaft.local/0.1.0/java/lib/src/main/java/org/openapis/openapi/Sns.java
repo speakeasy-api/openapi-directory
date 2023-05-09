@@ -65,12 +65,10 @@ public class Sns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SnsGetSnsGetResponse res = new org.openapis.openapi.models.operations.SnsGetSnsGetResponse() {{
+        org.openapis.openapi.models.operations.SnsGetSnsGetResponse res = new org.openapis.openapi.models.operations.SnsGetSnsGetResponse(contentType, httpRes.statusCode()) {{
             snsGetSnsGet200ApplicationJSONAny = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,12 +122,10 @@ public class Sns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SnsPostSnsPostResponse res = new org.openapis.openapi.models.operations.SnsPostSnsPostResponse() {{
+        org.openapis.openapi.models.operations.SnsPostSnsPostResponse res = new org.openapis.openapi.models.operations.SnsPostSnsPostResponse(contentType, httpRes.statusCode()) {{
             snsPostSnsPost200ApplicationJSONAny = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

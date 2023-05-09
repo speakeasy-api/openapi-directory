@@ -18,6 +18,7 @@ public class InsertTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cellLocation")
     public TableCellLocation cellLocation;
+
     public InsertTextRequest withCellLocation(TableCellLocation cellLocation) {
         this.cellLocation = cellLocation;
         return this;
@@ -29,6 +30,7 @@ public class InsertTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertionIndex")
     public Integer insertionIndex;
+
     public InsertTextRequest withInsertionIndex(Integer insertionIndex) {
         this.insertionIndex = insertionIndex;
         return this;
@@ -40,6 +42,7 @@ public class InsertTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public InsertTextRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -51,9 +54,11 @@ public class InsertTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public InsertTextRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public InsertTextRequest(){}
 }

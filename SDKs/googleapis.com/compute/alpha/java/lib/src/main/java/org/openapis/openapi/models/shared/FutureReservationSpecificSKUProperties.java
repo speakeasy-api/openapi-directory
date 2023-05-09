@@ -15,6 +15,7 @@ public class FutureReservationSpecificSKUProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceProperties")
     public AllocationSpecificSKUAllocationReservedInstanceProperties instanceProperties;
+
     public FutureReservationSpecificSKUProperties withInstanceProperties(AllocationSpecificSKUAllocationReservedInstanceProperties instanceProperties) {
         this.instanceProperties = instanceProperties;
         return this;
@@ -26,6 +27,7 @@ public class FutureReservationSpecificSKUProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceInstanceTemplate")
     public String sourceInstanceTemplate;
+
     public FutureReservationSpecificSKUProperties withSourceInstanceTemplate(String sourceInstanceTemplate) {
         this.sourceInstanceTemplate = sourceInstanceTemplate;
         return this;
@@ -37,9 +39,11 @@ public class FutureReservationSpecificSKUProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public String totalCount;
+
     public FutureReservationSpecificSKUProperties withTotalCount(String totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public FutureReservationSpecificSKUProperties(){}
 }

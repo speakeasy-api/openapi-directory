@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetsSetCardLocalIdRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cardLocalId")
     public String cardLocalId;
+
     public GetSetsSetCardLocalIdRequest withCardLocalId(String cardLocalId) {
         this.cardLocalId = cardLocalId;
         return this;
@@ -16,9 +18,14 @@ public class GetSetsSetCardLocalIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=set")
     public String set;
+
     public GetSetsSetCardLocalIdRequest withSet(String set) {
         this.set = set;
         return this;
     }
     
+    public GetSetsSetCardLocalIdRequest(@JsonProperty("cardLocalId") String cardLocalId, @JsonProperty("set") String set) {
+        this.cardLocalId = cardLocalId;
+        this.set = set;
+  }
 }

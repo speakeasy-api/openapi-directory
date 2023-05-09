@@ -20,9 +20,11 @@ public class TrainingParameters {
     @JsonProperty("selectedTags")
     @SpeakeasyMetadata("form:name=selectedTags")
     public String[] selectedTags;
+
     public TrainingParameters withSelectedTags(String[] selectedTags) {
         this.selectedTags = selectedTags;
         return this;
     }
     
+    public TrainingParameters(){}
 }

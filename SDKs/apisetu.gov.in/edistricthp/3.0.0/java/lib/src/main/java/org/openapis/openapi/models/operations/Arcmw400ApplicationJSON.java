@@ -15,6 +15,7 @@ public class Arcmw400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Arcmw400ApplicationJSONErrorEnum error;
+
     public Arcmw400ApplicationJSON withError(Arcmw400ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Arcmw400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Arcmw400ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Arcmw400ApplicationJSON withErrorDescription(Arcmw400ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Arcmw400ApplicationJSON(){}
 }

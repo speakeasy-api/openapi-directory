@@ -15,9 +15,11 @@ public class ArtifactOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public ArtifactOwner withOwner(String owner) {
         this.owner = owner;
         return this;
     }
     
+    public ArtifactOwner(){}
 }

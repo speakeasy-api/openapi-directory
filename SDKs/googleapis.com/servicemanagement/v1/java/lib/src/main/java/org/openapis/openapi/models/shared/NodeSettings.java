@@ -18,9 +18,11 @@ public class NodeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("common")
     public CommonLanguageSettings common;
+
     public NodeSettings withCommon(CommonLanguageSettings common) {
         this.common = common;
         return this;
     }
     
+    public NodeSettings(){}
 }

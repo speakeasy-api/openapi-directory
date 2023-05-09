@@ -15,6 +15,7 @@ public class PageResultCompanySettingDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public PageResultCompanySettingDto withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class PageResultCompanySettingDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public CompanySettingDto[] items;
+
     public PageResultCompanySettingDto withItems(CompanySettingDto[] items) {
         this.items = items;
         return this;
@@ -31,9 +33,11 @@ public class PageResultCompanySettingDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageLink")
     public String nextPageLink;
+
     public PageResultCompanySettingDto withNextPageLink(String nextPageLink) {
         this.nextPageLink = nextPageLink;
         return this;
     }
     
+    public PageResultCompanySettingDto(){}
 }

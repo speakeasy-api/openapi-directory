@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RegisterTypeInput {
     
     public String clientRequestToken;
+
     public RegisterTypeInput withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -16,6 +17,7 @@ public class RegisterTypeInput {
     
     
     public String executionRoleArn;
+
     public RegisterTypeInput withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -23,6 +25,7 @@ public class RegisterTypeInput {
     
     
     public LoggingConfig loggingConfig;
+
     public RegisterTypeInput withLoggingConfig(LoggingConfig loggingConfig) {
         this.loggingConfig = loggingConfig;
         return this;
@@ -30,6 +33,7 @@ public class RegisterTypeInput {
     
     
     public String schemaHandlerPackage;
+
     public RegisterTypeInput withSchemaHandlerPackage(String schemaHandlerPackage) {
         this.schemaHandlerPackage = schemaHandlerPackage;
         return this;
@@ -37,6 +41,7 @@ public class RegisterTypeInput {
     
     
     public RegistryTypeEnum type;
+
     public RegisterTypeInput withType(RegistryTypeEnum type) {
         this.type = type;
         return this;
@@ -44,9 +49,14 @@ public class RegisterTypeInput {
     
     
     public String typeName;
+
     public RegisterTypeInput withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public RegisterTypeInput(@JsonProperty("SchemaHandlerPackage") String schemaHandlerPackage, @JsonProperty("TypeName") String typeName) {
+        this.schemaHandlerPackage = schemaHandlerPackage;
+        this.typeName = typeName;
+  }
 }

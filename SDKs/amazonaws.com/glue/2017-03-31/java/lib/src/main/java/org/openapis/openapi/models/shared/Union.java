@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Union {
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public Union withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -19,6 +20,7 @@ public class Union {
     
     @JsonProperty("Name")
     public String name;
+
     public Union withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class Union {
     
     @JsonProperty("UnionType")
     public UnionTypeEnum unionType;
+
     public Union withUnionType(UnionTypeEnum unionType) {
         this.unionType = unionType;
         return this;
     }
     
+    public Union(@JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name, @JsonProperty("UnionType") UnionTypeEnum unionType) {
+        this.inputs = inputs;
+        this.name = name;
+        this.unionType = unionType;
+  }
 }

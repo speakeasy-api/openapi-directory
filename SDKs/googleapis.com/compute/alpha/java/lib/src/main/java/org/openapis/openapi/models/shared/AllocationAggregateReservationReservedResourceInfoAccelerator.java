@@ -15,6 +15,7 @@ public class AllocationAggregateReservationReservedResourceInfoAccelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorCount")
     public Integer acceleratorCount;
+
     public AllocationAggregateReservationReservedResourceInfoAccelerator withAcceleratorCount(Integer acceleratorCount) {
         this.acceleratorCount = acceleratorCount;
         return this;
@@ -26,9 +27,11 @@ public class AllocationAggregateReservationReservedResourceInfoAccelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorType")
     public String acceleratorType;
+
     public AllocationAggregateReservationReservedResourceInfoAccelerator withAcceleratorType(String acceleratorType) {
         this.acceleratorType = acceleratorType;
         return this;
     }
     
+    public AllocationAggregateReservationReservedResourceInfoAccelerator(){}
 }

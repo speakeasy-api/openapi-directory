@@ -15,6 +15,7 @@ public class RegistrationsCommentsListCommentAttributes {
      */
     
     public Boolean canEdit;
+
     public RegistrationsCommentsListCommentAttributes withCanEdit(Boolean canEdit) {
         this.canEdit = canEdit;
         return this;
@@ -25,6 +26,7 @@ public class RegistrationsCommentsListCommentAttributes {
      */
     
     public String content;
+
     public RegistrationsCommentsListCommentAttributes withContent(String content) {
         this.content = content;
         return this;
@@ -35,6 +37,7 @@ public class RegistrationsCommentsListCommentAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public RegistrationsCommentsListCommentAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -45,6 +48,7 @@ public class RegistrationsCommentsListCommentAttributes {
      */
     
     public OffsetDateTime dateModified;
+
     public RegistrationsCommentsListCommentAttributes withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -55,6 +59,7 @@ public class RegistrationsCommentsListCommentAttributes {
      */
     
     public Boolean deleted;
+
     public RegistrationsCommentsListCommentAttributes withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -65,6 +70,7 @@ public class RegistrationsCommentsListCommentAttributes {
      */
     
     public Boolean hasChildren;
+
     public RegistrationsCommentsListCommentAttributes withHasChildren(Boolean hasChildren) {
         this.hasChildren = hasChildren;
         return this;
@@ -75,6 +81,7 @@ public class RegistrationsCommentsListCommentAttributes {
      */
     
     public Boolean hasReport;
+
     public RegistrationsCommentsListCommentAttributes withHasReport(Boolean hasReport) {
         this.hasReport = hasReport;
         return this;
@@ -85,6 +92,7 @@ public class RegistrationsCommentsListCommentAttributes {
      */
     
     public Boolean isAbuse;
+
     public RegistrationsCommentsListCommentAttributes withIsAbuse(Boolean isAbuse) {
         this.isAbuse = isAbuse;
         return this;
@@ -95,6 +103,7 @@ public class RegistrationsCommentsListCommentAttributes {
      */
     
     public Boolean isHam;
+
     public RegistrationsCommentsListCommentAttributes withIsHam(Boolean isHam) {
         this.isHam = isHam;
         return this;
@@ -105,6 +114,7 @@ public class RegistrationsCommentsListCommentAttributes {
      */
     
     public Boolean modified;
+
     public RegistrationsCommentsListCommentAttributes withModified(Boolean modified) {
         this.modified = modified;
         return this;
@@ -115,9 +125,11 @@ public class RegistrationsCommentsListCommentAttributes {
      */
     
     public String page;
+
     public RegistrationsCommentsListCommentAttributes withPage(String page) {
         this.page = page;
         return this;
     }
     
+    public RegistrationsCommentsListCommentAttributes(){}
 }

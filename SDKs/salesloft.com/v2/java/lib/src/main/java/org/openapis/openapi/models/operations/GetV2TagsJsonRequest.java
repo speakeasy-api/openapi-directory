@@ -12,6 +12,7 @@ public class GetV2TagsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
     public Long[] ids;
+
     public GetV2TagsJsonRequest withIds(Long[] ids) {
         this.ids = ids;
         return this;
@@ -22,6 +23,7 @@ public class GetV2TagsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public GetV2TagsJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
         return this;
@@ -32,6 +34,7 @@ public class GetV2TagsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
     public Boolean limitPagingCounts;
+
     public GetV2TagsJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
         this.limitPagingCounts = limitPagingCounts;
         return this;
@@ -42,6 +45,7 @@ public class GetV2TagsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2TagsJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -52,6 +56,7 @@ public class GetV2TagsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2TagsJsonRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -62,6 +67,7 @@ public class GetV2TagsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public GetV2TagsJsonRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -72,6 +78,7 @@ public class GetV2TagsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetV2TagsJsonRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -82,9 +89,11 @@ public class GetV2TagsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public GetV2TagsJsonRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
     }
     
+    public GetV2TagsJsonRequest(){}
 }

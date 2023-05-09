@@ -15,9 +15,11 @@ public class SettingsObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Settings")
     public Settings settings;
+
     public SettingsObject withSettings(Settings settings) {
         this.settings = settings;
         return this;
     }
     
+    public SettingsObject(){}
 }

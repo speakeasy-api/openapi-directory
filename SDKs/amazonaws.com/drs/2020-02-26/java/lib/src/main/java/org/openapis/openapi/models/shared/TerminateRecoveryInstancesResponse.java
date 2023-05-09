@@ -15,9 +15,11 @@ public class TerminateRecoveryInstancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public Job job;
+
     public TerminateRecoveryInstancesResponse withJob(Job job) {
         this.job = job;
         return this;
     }
     
+    public TerminateRecoveryInstancesResponse(){}
 }

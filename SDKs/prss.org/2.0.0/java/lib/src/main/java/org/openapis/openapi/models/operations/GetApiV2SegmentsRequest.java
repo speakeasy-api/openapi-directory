@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2SegmentsRequest {
@@ -12,6 +13,7 @@ public class GetApiV2SegmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=episodeId")
     public Long episodeId;
+
     public GetApiV2SegmentsRequest withEpisodeId(Long episodeId) {
         this.episodeId = episodeId;
         return this;
@@ -22,6 +24,7 @@ public class GetApiV2SegmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderById")
     public GetApiV2SegmentsOrderByIDEnum orderById;
+
     public GetApiV2SegmentsRequest withOrderById(GetApiV2SegmentsOrderByIDEnum orderById) {
         this.orderById = orderById;
         return this;
@@ -32,6 +35,7 @@ public class GetApiV2SegmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public GetApiV2SegmentsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -42,6 +46,7 @@ public class GetApiV2SegmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageStart")
     public Integer pageStart;
+
     public GetApiV2SegmentsRequest withPageStart(Integer pageStart) {
         this.pageStart = pageStart;
         return this;
@@ -49,9 +54,13 @@ public class GetApiV2SegmentsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=segmentNumber")
     public Integer segmentNumber;
+
     public GetApiV2SegmentsRequest withSegmentNumber(Integer segmentNumber) {
         this.segmentNumber = segmentNumber;
         return this;
     }
     
+    public GetApiV2SegmentsRequest(@JsonProperty("episodeId") Long episodeId) {
+        this.episodeId = episodeId;
+  }
 }

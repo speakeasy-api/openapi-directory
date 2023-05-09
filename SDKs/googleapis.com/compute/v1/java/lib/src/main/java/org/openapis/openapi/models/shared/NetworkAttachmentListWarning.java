@@ -18,6 +18,7 @@ public class NetworkAttachmentListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public NetworkAttachmentListWarningCodeEnum code;
+
     public NetworkAttachmentListWarning withCode(NetworkAttachmentListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class NetworkAttachmentListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public NetworkAttachmentListWarningData[] data;
+
     public NetworkAttachmentListWarning withData(NetworkAttachmentListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class NetworkAttachmentListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public NetworkAttachmentListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public NetworkAttachmentListWarning(){}
 }

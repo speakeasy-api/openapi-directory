@@ -18,6 +18,7 @@ public class DevicesGetReleaseUpdateDevicesStatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public String errorCode;
+
     public DevicesGetReleaseUpdateDevicesStatus200ApplicationJSON withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -29,6 +30,7 @@ public class DevicesGetReleaseUpdateDevicesStatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_message")
     public String errorMessage;
+
     public DevicesGetReleaseUpdateDevicesStatus200ApplicationJSON withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -39,9 +41,13 @@ public class DevicesGetReleaseUpdateDevicesStatus200ApplicationJSON {
      */
     @JsonProperty("status")
     public String status;
+
     public DevicesGetReleaseUpdateDevicesStatus200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DevicesGetReleaseUpdateDevicesStatus200ApplicationJSON(@JsonProperty("status") String status) {
+        this.status = status;
+  }
 }

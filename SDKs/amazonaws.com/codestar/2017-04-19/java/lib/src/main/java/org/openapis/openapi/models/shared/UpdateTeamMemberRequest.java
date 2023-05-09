@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateTeamMemberRequest {
     @JsonProperty("projectId")
     public String projectId;
+
     public UpdateTeamMemberRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -19,6 +20,7 @@ public class UpdateTeamMemberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectRole")
     public String projectRole;
+
     public UpdateTeamMemberRequest withProjectRole(String projectRole) {
         this.projectRole = projectRole;
         return this;
@@ -27,6 +29,7 @@ public class UpdateTeamMemberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteAccessAllowed")
     public Boolean remoteAccessAllowed;
+
     public UpdateTeamMemberRequest withRemoteAccessAllowed(Boolean remoteAccessAllowed) {
         this.remoteAccessAllowed = remoteAccessAllowed;
         return this;
@@ -34,9 +37,14 @@ public class UpdateTeamMemberRequest {
     
     @JsonProperty("userArn")
     public String userArn;
+
     public UpdateTeamMemberRequest withUserArn(String userArn) {
         this.userArn = userArn;
         return this;
     }
     
+    public UpdateTeamMemberRequest(@JsonProperty("projectId") String projectId, @JsonProperty("userArn") String userArn) {
+        this.projectId = projectId;
+        this.userArn = userArn;
+  }
 }

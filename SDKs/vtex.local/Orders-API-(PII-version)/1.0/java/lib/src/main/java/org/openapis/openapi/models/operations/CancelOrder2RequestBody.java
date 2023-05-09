@@ -15,9 +15,11 @@ public class CancelOrder2RequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public CancelOrder2RequestBody withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public CancelOrder2RequestBody(){}
 }

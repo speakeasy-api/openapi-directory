@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUuidRequest {
@@ -12,9 +13,13 @@ public class PostUuidRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uuidstr")
     public String uuidstr;
+
     public PostUuidRequest withUuidstr(String uuidstr) {
         this.uuidstr = uuidstr;
         return this;
     }
     
+    public PostUuidRequest(@JsonProperty("uuidstr") String uuidstr) {
+        this.uuidstr = uuidstr;
+  }
 }

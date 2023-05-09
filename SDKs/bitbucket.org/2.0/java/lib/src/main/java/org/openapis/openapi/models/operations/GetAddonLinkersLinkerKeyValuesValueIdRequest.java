@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAddonLinkersLinkerKeyValuesValueIdRequest {
@@ -13,6 +14,7 @@ public class GetAddonLinkersLinkerKeyValuesValueIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=linker_key")
     public String linkerKey;
+
     public GetAddonLinkersLinkerKeyValuesValueIdRequest withLinkerKey(String linkerKey) {
         this.linkerKey = linkerKey;
         return this;
@@ -23,9 +25,14 @@ public class GetAddonLinkersLinkerKeyValuesValueIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=value_id")
     public Long valueId;
+
     public GetAddonLinkersLinkerKeyValuesValueIdRequest withValueId(Long valueId) {
         this.valueId = valueId;
         return this;
     }
     
+    public GetAddonLinkersLinkerKeyValuesValueIdRequest(@JsonProperty("linker_key") String linkerKey, @JsonProperty("value_id") Long valueId) {
+        this.linkerKey = linkerKey;
+        this.valueId = valueId;
+  }
 }

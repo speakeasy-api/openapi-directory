@@ -59,11 +59,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStatisticsChargingResponse res = new org.openapis.openapi.models.operations.GetStatisticsChargingResponse() {{
+        org.openapis.openapi.models.operations.GetStatisticsChargingResponse res = new org.openapis.openapi.models.operations.GetStatisticsChargingResponse(contentType, httpRes.statusCode()) {{
             getStatisticsCharging200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

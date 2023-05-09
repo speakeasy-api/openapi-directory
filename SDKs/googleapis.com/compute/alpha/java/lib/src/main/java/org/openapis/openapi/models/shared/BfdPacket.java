@@ -15,6 +15,7 @@ public class BfdPacket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authenticationPresent")
     public Boolean authenticationPresent;
+
     public BfdPacket withAuthenticationPresent(Boolean authenticationPresent) {
         this.authenticationPresent = authenticationPresent;
         return this;
@@ -26,6 +27,7 @@ public class BfdPacket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlPlaneIndependent")
     public Boolean controlPlaneIndependent;
+
     public BfdPacket withControlPlaneIndependent(Boolean controlPlaneIndependent) {
         this.controlPlaneIndependent = controlPlaneIndependent;
         return this;
@@ -37,6 +39,7 @@ public class BfdPacket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("demand")
     public Boolean demand;
+
     public BfdPacket withDemand(Boolean demand) {
         this.demand = demand;
         return this;
@@ -48,6 +51,7 @@ public class BfdPacket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diagnostic")
     public BfdPacketDiagnosticEnum diagnostic;
+
     public BfdPacket withDiagnostic(BfdPacketDiagnosticEnum diagnostic) {
         this.diagnostic = diagnostic;
         return this;
@@ -59,6 +63,7 @@ public class BfdPacket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("final")
     public Boolean final_;
+
     public BfdPacket withFinal(Boolean final_) {
         this.final_ = final_;
         return this;
@@ -70,6 +75,7 @@ public class BfdPacket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("length")
     public Long length;
+
     public BfdPacket withLength(Long length) {
         this.length = length;
         return this;
@@ -81,6 +87,7 @@ public class BfdPacket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minEchoRxIntervalMs")
     public Long minEchoRxIntervalMs;
+
     public BfdPacket withMinEchoRxIntervalMs(Long minEchoRxIntervalMs) {
         this.minEchoRxIntervalMs = minEchoRxIntervalMs;
         return this;
@@ -92,6 +99,7 @@ public class BfdPacket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minRxIntervalMs")
     public Long minRxIntervalMs;
+
     public BfdPacket withMinRxIntervalMs(Long minRxIntervalMs) {
         this.minRxIntervalMs = minRxIntervalMs;
         return this;
@@ -103,6 +111,7 @@ public class BfdPacket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minTxIntervalMs")
     public Long minTxIntervalMs;
+
     public BfdPacket withMinTxIntervalMs(Long minTxIntervalMs) {
         this.minTxIntervalMs = minTxIntervalMs;
         return this;
@@ -114,6 +123,7 @@ public class BfdPacket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiplier")
     public Long multiplier;
+
     public BfdPacket withMultiplier(Long multiplier) {
         this.multiplier = multiplier;
         return this;
@@ -125,6 +135,7 @@ public class BfdPacket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multipoint")
     public Boolean multipoint;
+
     public BfdPacket withMultipoint(Boolean multipoint) {
         this.multipoint = multipoint;
         return this;
@@ -136,6 +147,7 @@ public class BfdPacket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("myDiscriminator")
     public Long myDiscriminator;
+
     public BfdPacket withMyDiscriminator(Long myDiscriminator) {
         this.myDiscriminator = myDiscriminator;
         return this;
@@ -147,6 +159,7 @@ public class BfdPacket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("poll")
     public Boolean poll;
+
     public BfdPacket withPoll(Boolean poll) {
         this.poll = poll;
         return this;
@@ -158,6 +171,7 @@ public class BfdPacket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public BfdPacketStateEnum state;
+
     public BfdPacket withState(BfdPacketStateEnum state) {
         this.state = state;
         return this;
@@ -169,6 +183,7 @@ public class BfdPacket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public BfdPacket withVersion(Long version) {
         this.version = version;
         return this;
@@ -180,9 +195,11 @@ public class BfdPacket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yourDiscriminator")
     public Long yourDiscriminator;
+
     public BfdPacket withYourDiscriminator(Long yourDiscriminator) {
         this.yourDiscriminator = yourDiscriminator;
         return this;
     }
     
+    public BfdPacket(){}
 }

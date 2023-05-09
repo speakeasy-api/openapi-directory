@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TopONDRequest {
@@ -12,6 +13,7 @@ public class TopONDRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public TopONDRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class TopONDRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=catalogues")
     public String catalogues;
+
     public TopONDRequest withCatalogues(String catalogues) {
         this.catalogues = catalogues;
         return this;
@@ -32,9 +35,13 @@ public class TopONDRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=origin")
     public String origin;
+
     public TopONDRequest withOrigin(String origin) {
         this.origin = origin;
         return this;
     }
     
+    public TopONDRequest(@JsonProperty("Accept") String accept) {
+        this.accept = accept;
+  }
 }

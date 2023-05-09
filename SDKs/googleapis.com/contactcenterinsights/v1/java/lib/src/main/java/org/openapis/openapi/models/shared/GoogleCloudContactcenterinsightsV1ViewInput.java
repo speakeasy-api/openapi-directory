@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1ViewInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudContactcenterinsightsV1ViewInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudContactcenterinsightsV1ViewInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudContactcenterinsightsV1ViewInput withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudContactcenterinsightsV1ViewInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleCloudContactcenterinsightsV1ViewInput withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1ViewInput(){}
 }

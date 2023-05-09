@@ -15,6 +15,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public Endpoint withAddress(String address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Long port;
+
     public Endpoint withPort(Long port) {
         this.port = port;
         return this;
@@ -31,9 +33,11 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcEndpoints")
     public VpcEndpoint[] vpcEndpoints;
+
     public Endpoint withVpcEndpoints(VpcEndpoint[] vpcEndpoints) {
         this.vpcEndpoints = vpcEndpoints;
         return this;
     }
     
+    public Endpoint(){}
 }

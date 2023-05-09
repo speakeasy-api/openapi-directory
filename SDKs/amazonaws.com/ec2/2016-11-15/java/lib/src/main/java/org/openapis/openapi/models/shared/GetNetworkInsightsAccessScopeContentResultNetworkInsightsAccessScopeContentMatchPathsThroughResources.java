@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsThroughResources {
     
     public GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsThroughResourcesResourceStatement resourceStatement;
+
     public GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsThroughResources withResourceStatement(GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsThroughResourcesResourceStatement resourceStatement) {
         this.resourceStatement = resourceStatement;
         return this;
     }
     
+    public GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsThroughResources(){}
 }

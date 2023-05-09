@@ -15,9 +15,11 @@ public class StopTriggerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public StopTriggerResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StopTriggerResponse(){}
 }

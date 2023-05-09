@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNextDeparturesByCRSRequest {
@@ -12,6 +13,7 @@ public class GetNextDeparturesByCRSRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CRS")
     public String crs;
+
     public GetNextDeparturesByCRSRequest withCrs(String crs) {
         this.crs = crs;
         return this;
@@ -22,6 +24,7 @@ public class GetNextDeparturesByCRSRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apiKey")
     public String apiKey;
+
     public GetNextDeparturesByCRSRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -32,6 +35,7 @@ public class GetNextDeparturesByCRSRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterList")
     public String filterList;
+
     public GetNextDeparturesByCRSRequest withFilterList(String filterList) {
         this.filterList = filterList;
         return this;
@@ -42,6 +46,7 @@ public class GetNextDeparturesByCRSRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceDetails")
     public Boolean serviceDetails;
+
     public GetNextDeparturesByCRSRequest withServiceDetails(Boolean serviceDetails) {
         this.serviceDetails = serviceDetails;
         return this;
@@ -52,6 +57,7 @@ public class GetNextDeparturesByCRSRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeOffset")
     public Long timeOffset;
+
     public GetNextDeparturesByCRSRequest withTimeOffset(Long timeOffset) {
         this.timeOffset = timeOffset;
         return this;
@@ -62,9 +68,15 @@ public class GetNextDeparturesByCRSRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeWindow")
     public Long timeWindow;
+
     public GetNextDeparturesByCRSRequest withTimeWindow(Long timeWindow) {
         this.timeWindow = timeWindow;
         return this;
     }
     
+    public GetNextDeparturesByCRSRequest(@JsonProperty("CRS") String crs, @JsonProperty("apiKey") String apiKey, @JsonProperty("filterList") String filterList) {
+        this.crs = crs;
+        this.apiKey = apiKey;
+        this.filterList = filterList;
+  }
 }

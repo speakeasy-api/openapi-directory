@@ -15,6 +15,7 @@ public class EndpointMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointConfigName")
     public String endpointConfigName;
+
     public EndpointMetadata withEndpointConfigName(String endpointConfigName) {
         this.endpointConfigName = endpointConfigName;
         return this;
@@ -22,6 +23,7 @@ public class EndpointMetadata {
     
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public EndpointMetadata withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -30,6 +32,7 @@ public class EndpointMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointStatus")
     public EndpointStatusEnum endpointStatus;
+
     public EndpointMetadata withEndpointStatus(EndpointStatusEnum endpointStatus) {
         this.endpointStatus = endpointStatus;
         return this;
@@ -38,9 +41,13 @@ public class EndpointMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public EndpointMetadata withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
     }
     
+    public EndpointMetadata(@JsonProperty("EndpointName") String endpointName) {
+        this.endpointName = endpointName;
+  }
 }

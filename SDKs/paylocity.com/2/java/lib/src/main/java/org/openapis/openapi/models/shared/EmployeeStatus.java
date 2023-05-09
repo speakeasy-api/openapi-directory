@@ -18,6 +18,7 @@ public class EmployeeStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adjustedSeniorityDate")
     public String adjustedSeniorityDate;
+
     public EmployeeStatus withAdjustedSeniorityDate(String adjustedSeniorityDate) {
         this.adjustedSeniorityDate = adjustedSeniorityDate;
         return this;
@@ -29,6 +30,7 @@ public class EmployeeStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changeReason")
     public String changeReason;
+
     public EmployeeStatus withChangeReason(String changeReason) {
         this.changeReason = changeReason;
         return this;
@@ -40,6 +42,7 @@ public class EmployeeStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveDate")
     public String effectiveDate;
+
     public EmployeeStatus withEffectiveDate(String effectiveDate) {
         this.effectiveDate = effectiveDate;
         return this;
@@ -51,6 +54,7 @@ public class EmployeeStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employeeStatus")
     public String employeeStatus;
+
     public EmployeeStatus withEmployeeStatus(String employeeStatus) {
         this.employeeStatus = employeeStatus;
         return this;
@@ -62,6 +66,7 @@ public class EmployeeStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hireDate")
     public String hireDate;
+
     public EmployeeStatus withHireDate(String hireDate) {
         this.hireDate = hireDate;
         return this;
@@ -73,6 +78,7 @@ public class EmployeeStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isEligibleForRehire")
     public Boolean isEligibleForRehire;
+
     public EmployeeStatus withIsEligibleForRehire(Boolean isEligibleForRehire) {
         this.isEligibleForRehire = isEligibleForRehire;
         return this;
@@ -84,6 +90,7 @@ public class EmployeeStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reHireDate")
     public String reHireDate;
+
     public EmployeeStatus withReHireDate(String reHireDate) {
         this.reHireDate = reHireDate;
         return this;
@@ -95,6 +102,7 @@ public class EmployeeStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusType")
     public String statusType;
+
     public EmployeeStatus withStatusType(String statusType) {
         this.statusType = statusType;
         return this;
@@ -106,9 +114,11 @@ public class EmployeeStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terminationDate")
     public String terminationDate;
+
     public EmployeeStatus withTerminationDate(String terminationDate) {
         this.terminationDate = terminationDate;
         return this;
     }
     
+    public EmployeeStatus(){}
 }

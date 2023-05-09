@@ -18,6 +18,7 @@ public class GetQueryResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheHit")
     public Boolean cacheHit;
+
     public GetQueryResultsResponse withCacheHit(Boolean cacheHit) {
         this.cacheHit = cacheHit;
         return this;
@@ -29,6 +30,7 @@ public class GetQueryResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ErrorProto[] errors;
+
     public GetQueryResultsResponse withErrors(ErrorProto[] errors) {
         this.errors = errors;
         return this;
@@ -40,6 +42,7 @@ public class GetQueryResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GetQueryResultsResponse withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,6 +54,7 @@ public class GetQueryResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobComplete")
     public Boolean jobComplete;
+
     public GetQueryResultsResponse withJobComplete(Boolean jobComplete) {
         this.jobComplete = jobComplete;
         return this;
@@ -59,6 +63,7 @@ public class GetQueryResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobReference")
     public JobReference jobReference;
+
     public GetQueryResultsResponse withJobReference(JobReference jobReference) {
         this.jobReference = jobReference;
         return this;
@@ -70,6 +75,7 @@ public class GetQueryResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public GetQueryResultsResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -81,6 +87,7 @@ public class GetQueryResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numDmlAffectedRows")
     public String numDmlAffectedRows;
+
     public GetQueryResultsResponse withNumDmlAffectedRows(String numDmlAffectedRows) {
         this.numDmlAffectedRows = numDmlAffectedRows;
         return this;
@@ -92,6 +99,7 @@ public class GetQueryResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GetQueryResultsResponse withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -103,6 +111,7 @@ public class GetQueryResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public TableRow[] rows;
+
     public GetQueryResultsResponse withRows(TableRow[] rows) {
         this.rows = rows;
         return this;
@@ -111,6 +120,7 @@ public class GetQueryResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public TableSchema schema;
+
     public GetQueryResultsResponse withSchema(TableSchema schema) {
         this.schema = schema;
         return this;
@@ -122,6 +132,7 @@ public class GetQueryResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalBytesProcessed")
     public String totalBytesProcessed;
+
     public GetQueryResultsResponse withTotalBytesProcessed(String totalBytesProcessed) {
         this.totalBytesProcessed = totalBytesProcessed;
         return this;
@@ -133,9 +144,11 @@ public class GetQueryResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalRows")
     public String totalRows;
+
     public GetQueryResultsResponse withTotalRows(String totalRows) {
         this.totalRows = totalRows;
         return this;
     }
     
+    public GetQueryResultsResponse(){}
 }

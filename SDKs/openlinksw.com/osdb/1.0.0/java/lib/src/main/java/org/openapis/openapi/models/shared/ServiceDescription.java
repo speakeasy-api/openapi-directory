@@ -15,6 +15,7 @@ public class ServiceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ServiceDescription withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class ServiceDescription {
      */
     @JsonProperty("import_source_uri")
     public String importSourceUri;
+
     public ServiceDescription withImportSourceUri(String importSourceUri) {
         this.importSourceUri = importSourceUri;
         return this;
@@ -35,6 +37,7 @@ public class ServiceDescription {
      */
     @JsonProperty("service_id")
     public String serviceId;
+
     public ServiceDescription withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -45,9 +48,15 @@ public class ServiceDescription {
      */
     @JsonProperty("service_name")
     public String serviceName;
+
     public ServiceDescription withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public ServiceDescription(@JsonProperty("import_source_uri") String importSourceUri, @JsonProperty("service_id") String serviceId, @JsonProperty("service_name") String serviceName) {
+        this.importSourceUri = importSourceUri;
+        this.serviceId = serviceId;
+        this.serviceName = serviceName;
+  }
 }

@@ -18,6 +18,7 @@ public class LinearBuckets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numFiniteBuckets")
     public Integer numFiniteBuckets;
+
     public LinearBuckets withNumFiniteBuckets(Integer numFiniteBuckets) {
         this.numFiniteBuckets = numFiniteBuckets;
         return this;
@@ -29,6 +30,7 @@ public class LinearBuckets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Double offset;
+
     public LinearBuckets withOffset(Double offset) {
         this.offset = offset;
         return this;
@@ -40,9 +42,11 @@ public class LinearBuckets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Double width;
+
     public LinearBuckets withWidth(Double width) {
         this.width = width;
         return this;
     }
     
+    public LinearBuckets(){}
 }

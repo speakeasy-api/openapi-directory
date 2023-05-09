@@ -12,6 +12,7 @@ public class LicerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public LicerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class LicerRequestBodyCertificateParameters {
      */
     @JsonProperty("UDF1")
     public String udf1;
+
     public LicerRequestBodyCertificateParameters withUdf1(String udf1) {
         this.udf1 = udf1;
         return this;
@@ -32,9 +34,15 @@ public class LicerRequestBodyCertificateParameters {
      */
     @JsonProperty("UDF2")
     public String udf2;
+
     public LicerRequestBodyCertificateParameters withUdf2(String udf2) {
         this.udf2 = udf2;
         return this;
     }
     
+    public LicerRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("UDF1") String udf1, @JsonProperty("UDF2") String udf2) {
+        this.fullName = fullName;
+        this.udf1 = udf1;
+        this.udf2 = udf2;
+  }
 }

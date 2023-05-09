@@ -18,6 +18,7 @@ public class UpdateTrustResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestId")
     public String requestId;
+
     public UpdateTrustResult withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -26,9 +27,11 @@ public class UpdateTrustResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrustId")
     public String trustId;
+
     public UpdateTrustResult withTrustId(String trustId) {
         this.trustId = trustId;
         return this;
     }
     
+    public UpdateTrustResult(){}
 }

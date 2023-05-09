@@ -15,6 +15,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addresses")
     public String[] addresses;
+
     public Asset withAddresses(String[] addresses) {
         this.addresses = addresses;
         return this;
@@ -23,6 +24,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addresses_extra")
     public String[] addressesExtra;
+
     public Asset withAddressesExtra(String[] addressesExtra) {
         this.addressesExtra = addressesExtra;
         return this;
@@ -31,6 +33,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agent_name")
     public String agentName;
+
     public Asset withAgentName(String agentName) {
         this.agentName = agentName;
         return this;
@@ -39,6 +42,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alive")
     public Boolean alive;
+
     public Asset withAlive(Boolean alive) {
         this.alive = alive;
         return this;
@@ -47,6 +51,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public Asset withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -55,6 +60,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public Asset withComments(String comments) {
         this.comments = comments;
         return this;
@@ -63,6 +69,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public Long createdAt;
+
     public Asset withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -71,6 +78,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credentials")
     public java.util.Map<String, String> credentials;
+
     public Asset withCredentials(java.util.Map<String, String> credentials) {
         this.credentials = credentials;
         return this;
@@ -79,6 +87,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detected_by")
     public String detectedBy;
+
     public Asset withDetectedBy(String detectedBy) {
         this.detectedBy = detectedBy;
         return this;
@@ -87,6 +96,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domains")
     public String[] domains;
+
     public Asset withDomains(String[] domains) {
         this.domains = domains;
         return this;
@@ -95,6 +105,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_seen")
     public Long firstSeen;
+
     public Asset withFirstSeen(Long firstSeen) {
         this.firstSeen = firstSeen;
         return this;
@@ -103,6 +114,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hw")
     public String hw;
+
     public Asset withHw(String hw) {
         this.hw = hw;
         return this;
@@ -110,6 +122,7 @@ public class Asset {
     
     @JsonProperty("id")
     public String id;
+
     public Asset withId(String id) {
         this.id = id;
         return this;
@@ -118,6 +131,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_agent_id")
     public String lastAgentId;
+
     public Asset withLastAgentId(String lastAgentId) {
         this.lastAgentId = lastAgentId;
         return this;
@@ -126,6 +140,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_seen")
     public Long lastSeen;
+
     public Asset withLastSeen(Long lastSeen) {
         this.lastSeen = lastSeen;
         return this;
@@ -134,6 +149,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_task_id")
     public String lastTaskId;
+
     public Asset withLastTaskId(String lastTaskId) {
         this.lastTaskId = lastTaskId;
         return this;
@@ -142,6 +158,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowest_rtt")
     public Long lowestRtt;
+
     public Asset withLowestRtt(Long lowestRtt) {
         this.lowestRtt = lowestRtt;
         return this;
@@ -150,6 +167,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowest_ttl")
     public Long lowestTtl;
+
     public Asset withLowestTtl(Long lowestTtl) {
         this.lowestTtl = lowestTtl;
         return this;
@@ -158,6 +176,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mac_vendors")
     public String[] macVendors;
+
     public Asset withMacVendors(String[] macVendors) {
         this.macVendors = macVendors;
         return this;
@@ -166,6 +185,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("macs")
     public String[] macs;
+
     public Asset withMacs(String[] macs) {
         this.macs = macs;
         return this;
@@ -174,6 +194,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public String[] names;
+
     public Asset withNames(String[] names) {
         this.names = names;
         return this;
@@ -182,6 +203,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newest_mac")
     public String newestMac;
+
     public Asset withNewestMac(String newestMac) {
         this.newestMac = newestMac;
         return this;
@@ -190,6 +212,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newest_mac_age")
     public Long newestMacAge;
+
     public Asset withNewestMacAge(Long newestMacAge) {
         this.newestMacAge = newestMacAge;
         return this;
@@ -198,6 +221,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newest_mac_vendor")
     public String newestMacVendor;
+
     public Asset withNewestMacVendor(String newestMacVendor) {
         this.newestMacVendor = newestMacVendor;
         return this;
@@ -206,6 +230,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org_name")
     public String orgName;
+
     public Asset withOrgName(String orgName) {
         this.orgName = orgName;
         return this;
@@ -214,6 +239,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     public String organizationId;
+
     public Asset withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -222,6 +248,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os")
     public String os;
+
     public Asset withOs(String os) {
         this.os = os;
         return this;
@@ -230,6 +257,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os_version")
     public String osVersion;
+
     public Asset withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -238,6 +266,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rtts")
     public java.util.Map<String, Object> rtts;
+
     public Asset withRtts(java.util.Map<String, Object> rtts) {
         this.rtts = rtts;
         return this;
@@ -246,6 +275,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_count")
     public Long serviceCount;
+
     public Asset withServiceCount(Long serviceCount) {
         this.serviceCount = serviceCount;
         return this;
@@ -254,6 +284,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_count_arp")
     public Long serviceCountArp;
+
     public Asset withServiceCountArp(Long serviceCountArp) {
         this.serviceCountArp = serviceCountArp;
         return this;
@@ -262,6 +293,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_count_icmp")
     public Long serviceCountIcmp;
+
     public Asset withServiceCountIcmp(Long serviceCountIcmp) {
         this.serviceCountIcmp = serviceCountIcmp;
         return this;
@@ -270,6 +302,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_count_tcp")
     public Long serviceCountTcp;
+
     public Asset withServiceCountTcp(Long serviceCountTcp) {
         this.serviceCountTcp = serviceCountTcp;
         return this;
@@ -278,6 +311,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_count_udp")
     public Long serviceCountUdp;
+
     public Asset withServiceCountUdp(Long serviceCountUdp) {
         this.serviceCountUdp = serviceCountUdp;
         return this;
@@ -286,6 +320,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_ports_products")
     public String[] servicePortsProducts;
+
     public Asset withServicePortsProducts(String[] servicePortsProducts) {
         this.servicePortsProducts = servicePortsProducts;
         return this;
@@ -294,6 +329,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_ports_protocols")
     public String[] servicePortsProtocols;
+
     public Asset withServicePortsProtocols(String[] servicePortsProtocols) {
         this.servicePortsProtocols = servicePortsProtocols;
         return this;
@@ -302,6 +338,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_ports_tcp")
     public String[] servicePortsTcp;
+
     public Asset withServicePortsTcp(String[] servicePortsTcp) {
         this.servicePortsTcp = servicePortsTcp;
         return this;
@@ -310,6 +347,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_ports_udp")
     public String[] servicePortsUdp;
+
     public Asset withServicePortsUdp(String[] servicePortsUdp) {
         this.servicePortsUdp = servicePortsUdp;
         return this;
@@ -318,6 +356,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("services")
     public java.util.Map<String, java.util.Map<String, String>> services;
+
     public Asset withServices(java.util.Map<String, java.util.Map<String, String>> services) {
         this.services = services;
         return this;
@@ -326,6 +365,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("site_id")
     public String siteId;
+
     public Asset withSiteId(String siteId) {
         this.siteId = siteId;
         return this;
@@ -334,6 +374,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("site_name")
     public String siteName;
+
     public Asset withSiteName(String siteName) {
         this.siteName = siteName;
         return this;
@@ -342,6 +383,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Asset withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -350,6 +392,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Asset withType(String type) {
         this.type = type;
         return this;
@@ -358,9 +401,13 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public Long updatedAt;
+
     public Asset withUpdatedAt(Long updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Asset(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

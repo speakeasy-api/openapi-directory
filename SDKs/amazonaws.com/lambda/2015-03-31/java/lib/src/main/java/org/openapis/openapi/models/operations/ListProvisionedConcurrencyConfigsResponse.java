@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListProvisionedConcurrencyConfigsResponse {
     
     public String contentType;
+
     public ListProvisionedConcurrencyConfigsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListProvisionedConcurrencyConfigsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListProvisionedConcurrencyConfigsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class ListProvisionedConcurrencyConfigsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListProvisionedConcurrencyConfigsResponse listProvisionedConcurrencyConfigsResponse;
+
     public ListProvisionedConcurrencyConfigsResponse withListProvisionedConcurrencyConfigsResponse(org.openapis.openapi.models.shared.ListProvisionedConcurrencyConfigsResponse listProvisionedConcurrencyConfigsResponse) {
         this.listProvisionedConcurrencyConfigsResponse = listProvisionedConcurrencyConfigsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListProvisionedConcurrencyConfigsResponse {
      */
     
     public Object serviceException;
+
     public ListProvisionedConcurrencyConfigsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -46,6 +51,7 @@ public class ListProvisionedConcurrencyConfigsResponse {
     
     
     public Integer statusCode;
+
     public ListProvisionedConcurrencyConfigsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListProvisionedConcurrencyConfigsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListProvisionedConcurrencyConfigsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListProvisionedConcurrencyConfigsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListProvisionedConcurrencyConfigsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class ListProvisionedConcurrencyConfigsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListProvisionedConcurrencyConfigsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListProvisionedConcurrencyConfigsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

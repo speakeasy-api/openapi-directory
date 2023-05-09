@@ -12,9 +12,13 @@ public class UpdatePipelineRequestBody {
      */
     @JsonProperty("pipelineActivities")
     public org.openapis.openapi.models.shared.PipelineActivity[] pipelineActivities;
+
     public UpdatePipelineRequestBody withPipelineActivities(org.openapis.openapi.models.shared.PipelineActivity[] pipelineActivities) {
         this.pipelineActivities = pipelineActivities;
         return this;
     }
     
+    public UpdatePipelineRequestBody(@JsonProperty("pipelineActivities") org.openapis.openapi.models.shared.PipelineActivity[] pipelineActivities) {
+        this.pipelineActivities = pipelineActivities;
+  }
 }

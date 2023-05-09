@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartLifecyclePolicyPreviewResponse {
     
     public String contentType;
+
     public StartLifecyclePolicyPreviewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartLifecyclePolicyPreviewResponse {
      */
     
     public Object invalidParameterException;
+
     public StartLifecyclePolicyPreviewResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class StartLifecyclePolicyPreviewResponse {
      */
     
     public Object lifecyclePolicyNotFoundException;
+
     public StartLifecyclePolicyPreviewResponse withLifecyclePolicyNotFoundException(Object lifecyclePolicyNotFoundException) {
         this.lifecyclePolicyNotFoundException = lifecyclePolicyNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class StartLifecyclePolicyPreviewResponse {
      */
     
     public Object lifecyclePolicyPreviewInProgressException;
+
     public StartLifecyclePolicyPreviewResponse withLifecyclePolicyPreviewInProgressException(Object lifecyclePolicyPreviewInProgressException) {
         this.lifecyclePolicyPreviewInProgressException = lifecyclePolicyPreviewInProgressException;
         return this;
@@ -49,6 +54,7 @@ public class StartLifecyclePolicyPreviewResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public StartLifecyclePolicyPreviewResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartLifecyclePolicyPreviewResponse {
      */
     
     public Object serverException;
+
     public StartLifecyclePolicyPreviewResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -69,6 +76,7 @@ public class StartLifecyclePolicyPreviewResponse {
      */
     
     public org.openapis.openapi.models.shared.StartLifecyclePolicyPreviewResponse startLifecyclePolicyPreviewResponse;
+
     public StartLifecyclePolicyPreviewResponse withStartLifecyclePolicyPreviewResponse(org.openapis.openapi.models.shared.StartLifecyclePolicyPreviewResponse startLifecyclePolicyPreviewResponse) {
         this.startLifecyclePolicyPreviewResponse = startLifecyclePolicyPreviewResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartLifecyclePolicyPreviewResponse {
     
     
     public Integer statusCode;
+
     public StartLifecyclePolicyPreviewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class StartLifecyclePolicyPreviewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartLifecyclePolicyPreviewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartLifecyclePolicyPreviewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

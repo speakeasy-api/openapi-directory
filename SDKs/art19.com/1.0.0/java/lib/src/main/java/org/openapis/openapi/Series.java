@@ -65,12 +65,10 @@ public class Series {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSeriesResponse res = new org.openapis.openapi.models.operations.GetSeriesResponse() {{
+        org.openapis.openapi.models.operations.GetSeriesResponse res = new org.openapis.openapi.models.operations.GetSeriesResponse(contentType, httpRes.statusCode()) {{
             getSeries200ApplicationVndApiPlusJsonObject = null;
             getSeries400ApplicationVndApiPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -119,11 +117,9 @@ public class Series {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSeriesIdResponse res = new org.openapis.openapi.models.operations.GetSeriesIdResponse() {{
+        org.openapis.openapi.models.operations.GetSeriesIdResponse res = new org.openapis.openapi.models.operations.GetSeriesIdResponse(contentType, httpRes.statusCode()) {{
             getSeriesId200ApplicationVndApiPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersResponse {
     
     public String contentType;
+
     public RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersRe
      */
     
     public org.openapis.openapi.models.shared.PretargetingConfig pretargetingConfig;
+
     public RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersResponse withPretargetingConfig(org.openapis.openapi.models.shared.PretargetingConfig pretargetingConfig) {
         this.pretargetingConfig = pretargetingConfig;
         return this;
@@ -26,6 +29,7 @@ public class RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersRe
     
     
     public Integer statusCode;
+
     public RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersRe
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

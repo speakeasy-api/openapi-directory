@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyVpnConnectionResultVpnConnectionTags {
     
     public String key;
+
     public ModifyVpnConnectionResultVpnConnectionTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class ModifyVpnConnectionResultVpnConnectionTags {
     
     
     public String value;
+
     public ModifyVpnConnectionResultVpnConnectionTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ModifyVpnConnectionResultVpnConnectionTags(){}
 }

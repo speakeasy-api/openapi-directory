@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InvoiceApiSendToAccountantJsonResponse {
     
     public byte[] body;
+
     public InvoiceApiSendToAccountantJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class InvoiceApiSendToAccountantJsonResponse {
     
     
     public String contentType;
+
     public InvoiceApiSendToAccountantJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class InvoiceApiSendToAccountantJsonResponse {
      */
     
     public Integer invoiceApiSendToAccountantJSON200ApplicationJSONInt32Integer;
+
     public InvoiceApiSendToAccountantJsonResponse withInvoiceApiSendToAccountantJSON200ApplicationJSONInt32Integer(Integer invoiceApiSendToAccountantJSON200ApplicationJSONInt32Integer) {
         this.invoiceApiSendToAccountantJSON200ApplicationJSONInt32Integer = invoiceApiSendToAccountantJSON200ApplicationJSONInt32Integer;
         return this;
@@ -36,6 +40,7 @@ public class InvoiceApiSendToAccountantJsonResponse {
      */
     
     public Integer invoiceApiSendToAccountantJSON200TextJSONInt32Integer;
+
     public InvoiceApiSendToAccountantJsonResponse withInvoiceApiSendToAccountantJSON200TextJSONInt32Integer(Integer invoiceApiSendToAccountantJSON200TextJSONInt32Integer) {
         this.invoiceApiSendToAccountantJSON200TextJSONInt32Integer = invoiceApiSendToAccountantJSON200TextJSONInt32Integer;
         return this;
@@ -43,6 +48,7 @@ public class InvoiceApiSendToAccountantJsonResponse {
     
     
     public Integer statusCode;
+
     public InvoiceApiSendToAccountantJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class InvoiceApiSendToAccountantJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InvoiceApiSendToAccountantJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public InvoiceApiSendToAccountantJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

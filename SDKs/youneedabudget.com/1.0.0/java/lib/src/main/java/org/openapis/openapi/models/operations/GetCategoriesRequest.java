@@ -4,14 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCategoriesRequest {
     /**
-     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.ynab.com/#oauth-default-budget).
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=budget_id")
     public String budgetId;
+
     public GetCategoriesRequest withBudgetId(String budgetId) {
         this.budgetId = budgetId;
         return this;
@@ -22,9 +24,13 @@ public class GetCategoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_knowledge_of_server")
     public Long lastKnowledgeOfServer;
+
     public GetCategoriesRequest withLastKnowledgeOfServer(Long lastKnowledgeOfServer) {
         this.lastKnowledgeOfServer = lastKnowledgeOfServer;
         return this;
     }
     
+    public GetCategoriesRequest(@JsonProperty("budget_id") String budgetId) {
+        this.budgetId = budgetId;
+  }
 }

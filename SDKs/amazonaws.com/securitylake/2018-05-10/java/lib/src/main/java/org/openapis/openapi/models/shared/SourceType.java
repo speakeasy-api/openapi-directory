@@ -15,6 +15,7 @@ public class SourceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsSourceType")
     public AwsLogSourceTypeEnum awsSourceType;
+
     public SourceType withAwsSourceType(AwsLogSourceTypeEnum awsSourceType) {
         this.awsSourceType = awsSourceType;
         return this;
@@ -23,9 +24,11 @@ public class SourceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customSourceType")
     public String customSourceType;
+
     public SourceType withCustomSourceType(String customSourceType) {
         this.customSourceType = customSourceType;
         return this;
     }
     
+    public SourceType(){}
 }

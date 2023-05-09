@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest {
@@ -12,6 +13,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=basePlanId")
     public String basePlanId;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest withBasePlanId(String basePlanId) {
         this.basePlanId = basePlanId;
         return this;
@@ -52,6 +57,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offerId")
     public String offerId;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest withOfferId(String offerId) {
         this.offerId = offerId;
         return this;
@@ -102,6 +112,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
     public String packageName;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -112,6 +123,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
     public String productId;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -132,6 +145,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -142,6 +156,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,9 +167,16 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest(@JsonProperty("basePlanId") String basePlanId, @JsonProperty("offerId") String offerId, @JsonProperty("packageName") String packageName, @JsonProperty("productId") String productId) {
+        this.basePlanId = basePlanId;
+        this.offerId = offerId;
+        this.packageName = packageName;
+        this.productId = productId;
+  }
 }

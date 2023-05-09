@@ -60,12 +60,10 @@ public class Tools {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ToolsShareFileMultipartResponse res = new org.openapis.openapi.models.operations.ToolsShareFileMultipartResponse() {{
+        org.openapis.openapi.models.operations.ToolsShareFileMultipartResponse res = new org.openapis.openapi.models.operations.ToolsShareFileMultipartResponse(contentType, httpRes.statusCode()) {{
             shareFileResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -113,12 +111,10 @@ public class Tools {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ToolsShareFileRawResponse res = new org.openapis.openapi.models.operations.ToolsShareFileRawResponse() {{
+        org.openapis.openapi.models.operations.ToolsShareFileRawResponse res = new org.openapis.openapi.models.operations.ToolsShareFileRawResponse(contentType, httpRes.statusCode()) {{
             shareFileResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

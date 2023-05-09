@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchDescribeModelPackageError {
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public BatchDescribeModelPackageError withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -19,9 +20,14 @@ public class BatchDescribeModelPackageError {
     
     @JsonProperty("ErrorResponse")
     public String errorResponse;
+
     public BatchDescribeModelPackageError withErrorResponse(String errorResponse) {
         this.errorResponse = errorResponse;
         return this;
     }
     
+    public BatchDescribeModelPackageError(@JsonProperty("ErrorCode") String errorCode, @JsonProperty("ErrorResponse") String errorResponse) {
+        this.errorCode = errorCode;
+        this.errorResponse = errorResponse;
+  }
 }

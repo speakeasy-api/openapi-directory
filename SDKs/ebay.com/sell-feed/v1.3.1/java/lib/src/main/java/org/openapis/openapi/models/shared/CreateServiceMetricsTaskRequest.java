@@ -18,6 +18,7 @@ public class CreateServiceMetricsTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedType")
     public String feedType;
+
     public CreateServiceMetricsTaskRequest withFeedType(String feedType) {
         this.feedType = feedType;
         return this;
@@ -29,6 +30,7 @@ public class CreateServiceMetricsTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterCriteria")
     public CustomerServiceMetricsFilterCriteria filterCriteria;
+
     public CreateServiceMetricsTaskRequest withFilterCriteria(CustomerServiceMetricsFilterCriteria filterCriteria) {
         this.filterCriteria = filterCriteria;
         return this;
@@ -40,9 +42,11 @@ public class CreateServiceMetricsTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaVersion")
     public String schemaVersion;
+
     public CreateServiceMetricsTaskRequest withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
     }
     
+    public CreateServiceMetricsTaskRequest(){}
 }

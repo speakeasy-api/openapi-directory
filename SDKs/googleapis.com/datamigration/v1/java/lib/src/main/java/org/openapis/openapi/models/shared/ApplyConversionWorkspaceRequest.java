@@ -18,6 +18,7 @@ public class ApplyConversionWorkspaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionProfile")
     public String connectionProfile;
+
     public ApplyConversionWorkspaceRequest withConnectionProfile(String connectionProfile) {
         this.connectionProfile = connectionProfile;
         return this;
@@ -29,9 +30,11 @@ public class ApplyConversionWorkspaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public ApplyConversionWorkspaceRequest withFilter(String filter) {
         this.filter = filter;
         return this;
     }
     
+    public ApplyConversionWorkspaceRequest(){}
 }

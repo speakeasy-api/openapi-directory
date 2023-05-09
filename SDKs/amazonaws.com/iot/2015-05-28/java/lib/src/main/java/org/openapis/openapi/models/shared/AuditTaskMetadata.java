@@ -15,6 +15,7 @@ public class AuditTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public AuditTaskMetadata withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -23,6 +24,7 @@ public class AuditTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskStatus")
     public AuditTaskStatusEnum taskStatus;
+
     public AuditTaskMetadata withTaskStatus(AuditTaskStatusEnum taskStatus) {
         this.taskStatus = taskStatus;
         return this;
@@ -31,9 +33,11 @@ public class AuditTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskType")
     public AuditTaskTypeEnum taskType;
+
     public AuditTaskMetadata withTaskType(AuditTaskTypeEnum taskType) {
         this.taskType = taskType;
         return this;
     }
     
+    public AuditTaskMetadata(){}
 }

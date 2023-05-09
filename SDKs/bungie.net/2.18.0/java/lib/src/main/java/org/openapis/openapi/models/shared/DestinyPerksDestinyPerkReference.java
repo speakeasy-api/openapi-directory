@@ -16,6 +16,7 @@ public class DestinyPerksDestinyPerkReference {
      */
     
     public String iconPath;
+
     public DestinyPerksDestinyPerkReference withIconPath(String iconPath) {
         this.iconPath = iconPath;
         return this;
@@ -26,6 +27,7 @@ public class DestinyPerksDestinyPerkReference {
      */
     
     public Boolean isActive;
+
     public DestinyPerksDestinyPerkReference withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -36,6 +38,7 @@ public class DestinyPerksDestinyPerkReference {
      */
     
     public Long perkHash;
+
     public DestinyPerksDestinyPerkReference withPerkHash(Long perkHash) {
         this.perkHash = perkHash;
         return this;
@@ -46,9 +49,11 @@ public class DestinyPerksDestinyPerkReference {
      */
     
     public Boolean visible;
+
     public DestinyPerksDestinyPerkReference withVisible(Boolean visible) {
         this.visible = visible;
         return this;
     }
     
+    public DestinyPerksDestinyPerkReference(){}
 }

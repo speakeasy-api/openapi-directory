@@ -12,9 +12,11 @@ public class CustomerAccountingDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxNumbers")
     public CustomerTaxNoDTO[] taxNumbers;
+
     public CustomerAccountingDTO withTaxNumbers(CustomerTaxNoDTO[] taxNumbers) {
         this.taxNumbers = taxNumbers;
         return this;
     }
     
+    public CustomerAccountingDTO(){}
 }

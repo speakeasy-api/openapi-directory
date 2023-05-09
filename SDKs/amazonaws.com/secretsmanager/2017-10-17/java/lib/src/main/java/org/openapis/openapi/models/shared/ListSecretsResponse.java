@@ -15,6 +15,7 @@ public class ListSecretsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSecretsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListSecretsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretList")
     public SecretListEntry[] secretList;
+
     public ListSecretsResponse withSecretList(SecretListEntry[] secretList) {
         this.secretList = secretList;
         return this;
     }
     
+    public ListSecretsResponse(){}
 }

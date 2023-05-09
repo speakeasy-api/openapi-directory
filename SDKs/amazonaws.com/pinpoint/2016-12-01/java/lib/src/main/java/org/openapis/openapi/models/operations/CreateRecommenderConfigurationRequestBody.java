@@ -12,9 +12,13 @@ public class CreateRecommenderConfigurationRequestBody {
      */
     @JsonProperty("CreateRecommenderConfiguration")
     public CreateRecommenderConfigurationRequestBodyCreateRecommenderConfiguration createRecommenderConfiguration;
+
     public CreateRecommenderConfigurationRequestBody withCreateRecommenderConfiguration(CreateRecommenderConfigurationRequestBodyCreateRecommenderConfiguration createRecommenderConfiguration) {
         this.createRecommenderConfiguration = createRecommenderConfiguration;
         return this;
     }
     
+    public CreateRecommenderConfigurationRequestBody(@JsonProperty("CreateRecommenderConfiguration") CreateRecommenderConfigurationRequestBodyCreateRecommenderConfiguration createRecommenderConfiguration) {
+        this.createRecommenderConfiguration = createRecommenderConfiguration;
+  }
 }

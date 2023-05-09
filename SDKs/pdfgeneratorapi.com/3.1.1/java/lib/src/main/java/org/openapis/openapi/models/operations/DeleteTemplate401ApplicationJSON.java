@@ -18,6 +18,7 @@ public class DeleteTemplate401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public DeleteTemplate401ApplicationJSONErrorEnum error;
+
     public DeleteTemplate401ApplicationJSON withError(DeleteTemplate401ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -29,9 +30,11 @@ public class DeleteTemplate401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public DeleteTemplate401ApplicationJSON withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public DeleteTemplate401ApplicationJSON(){}
 }

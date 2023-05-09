@@ -15,6 +15,7 @@ public class SubjectTypesWorkspaceLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public SubjectTypesWorkspaceLink withHref(String href) {
         this.href = href;
         return this;
@@ -23,9 +24,11 @@ public class SubjectTypesWorkspaceLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SubjectTypesWorkspaceLink withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SubjectTypesWorkspaceLink(){}
 }

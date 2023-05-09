@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeSpotInstanceRequestsResultSpotInstanceRequestsStatus {
     
     public String code;
+
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsStatus withCode(String code) {
         this.code = code;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSpotInstanceRequestsResultSpotInstanceRequestsStatus {
     
     
     public String message;
+
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsStatus withMessage(String message) {
         this.message = message;
         return this;
@@ -26,9 +28,11 @@ public class DescribeSpotInstanceRequestsResultSpotInstanceRequestsStatus {
     
     
     public OffsetDateTime updateTime;
+
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsStatus withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public DescribeSpotInstanceRequestsResultSpotInstanceRequestsStatus(){}
 }

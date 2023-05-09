@@ -12,6 +12,7 @@ public class CreateAutoMLJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoMLJobConfig")
     public AutoMLJobConfig autoMLJobConfig;
+
     public CreateAutoMLJobRequest withAutoMLJobConfig(AutoMLJobConfig autoMLJobConfig) {
         this.autoMLJobConfig = autoMLJobConfig;
         return this;
@@ -19,6 +20,7 @@ public class CreateAutoMLJobRequest {
     
     @JsonProperty("AutoMLJobName")
     public String autoMLJobName;
+
     public CreateAutoMLJobRequest withAutoMLJobName(String autoMLJobName) {
         this.autoMLJobName = autoMLJobName;
         return this;
@@ -27,6 +29,7 @@ public class CreateAutoMLJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoMLJobObjective")
     public AutoMLJobObjective autoMLJobObjective;
+
     public CreateAutoMLJobRequest withAutoMLJobObjective(AutoMLJobObjective autoMLJobObjective) {
         this.autoMLJobObjective = autoMLJobObjective;
         return this;
@@ -35,6 +38,7 @@ public class CreateAutoMLJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GenerateCandidateDefinitionsOnly")
     public Boolean generateCandidateDefinitionsOnly;
+
     public CreateAutoMLJobRequest withGenerateCandidateDefinitionsOnly(Boolean generateCandidateDefinitionsOnly) {
         this.generateCandidateDefinitionsOnly = generateCandidateDefinitionsOnly;
         return this;
@@ -42,6 +46,7 @@ public class CreateAutoMLJobRequest {
     
     @JsonProperty("InputDataConfig")
     public AutoMLChannel[] inputDataConfig;
+
     public CreateAutoMLJobRequest withInputDataConfig(AutoMLChannel[] inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -50,6 +55,7 @@ public class CreateAutoMLJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelDeployConfig")
     public ModelDeployConfig modelDeployConfig;
+
     public CreateAutoMLJobRequest withModelDeployConfig(ModelDeployConfig modelDeployConfig) {
         this.modelDeployConfig = modelDeployConfig;
         return this;
@@ -57,6 +63,7 @@ public class CreateAutoMLJobRequest {
     
     @JsonProperty("OutputDataConfig")
     public AutoMLOutputDataConfig outputDataConfig;
+
     public CreateAutoMLJobRequest withOutputDataConfig(AutoMLOutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -65,6 +72,7 @@ public class CreateAutoMLJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProblemType")
     public ProblemTypeEnum problemType;
+
     public CreateAutoMLJobRequest withProblemType(ProblemTypeEnum problemType) {
         this.problemType = problemType;
         return this;
@@ -72,6 +80,7 @@ public class CreateAutoMLJobRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateAutoMLJobRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -80,9 +89,16 @@ public class CreateAutoMLJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateAutoMLJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAutoMLJobRequest(@JsonProperty("AutoMLJobName") String autoMLJobName, @JsonProperty("InputDataConfig") AutoMLChannel[] inputDataConfig, @JsonProperty("OutputDataConfig") AutoMLOutputDataConfig outputDataConfig, @JsonProperty("RoleArn") String roleArn) {
+        this.autoMLJobName = autoMLJobName;
+        this.inputDataConfig = inputDataConfig;
+        this.outputDataConfig = outputDataConfig;
+        this.roleArn = roleArn;
+  }
 }

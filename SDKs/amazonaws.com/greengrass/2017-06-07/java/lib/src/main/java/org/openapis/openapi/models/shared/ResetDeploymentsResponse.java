@@ -15,6 +15,7 @@ public class ResetDeploymentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentArn")
     public String deploymentArn;
+
     public ResetDeploymentsResponse withDeploymentArn(String deploymentArn) {
         this.deploymentArn = deploymentArn;
         return this;
@@ -23,9 +24,11 @@ public class ResetDeploymentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentId")
     public String deploymentId;
+
     public ResetDeploymentsResponse withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
     }
     
+    public ResetDeploymentsResponse(){}
 }

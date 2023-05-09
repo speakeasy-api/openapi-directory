@@ -18,6 +18,7 @@ public class VLMError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Detais")
     public String detais;
+
     public VLMError withDetais(String detais) {
         this.detais = detais;
         return this;
@@ -29,6 +30,7 @@ public class VLMError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpStatusCode")
     public Long httpStatusCode;
+
     public VLMError withHttpStatusCode(Long httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
@@ -40,6 +42,7 @@ public class VLMError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public VLMError withMessage(String message) {
         this.message = message;
         return this;
@@ -51,9 +54,11 @@ public class VLMError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VLMErrorCode")
     public Long vlmErrorCode;
+
     public VLMError withVLMErrorCode(Long vlmErrorCode) {
         this.vlmErrorCode = vlmErrorCode;
         return this;
     }
     
+    public VLMError(){}
 }

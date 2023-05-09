@@ -15,6 +15,7 @@ public class FormsIndexAttributesBenefitCategories {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public FormsIndexAttributesBenefitCategories withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class FormsIndexAttributesBenefitCategories {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FormsIndexAttributesBenefitCategories withName(String name) {
         this.name = name;
         return this;
     }
     
+    public FormsIndexAttributesBenefitCategories(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class TopicSentimentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Post[] requestBody;
+
     public TopicSentimentRequest withRequestBody(org.openapis.openapi.models.shared.Post[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +20,11 @@ public class TopicSentimentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
     public TopicSentimentDomainEnum domain;
+
     public TopicSentimentRequest withDomain(TopicSentimentDomainEnum domain) {
         this.domain = domain;
         return this;
     }
     
+    public TopicSentimentRequest(){}
 }

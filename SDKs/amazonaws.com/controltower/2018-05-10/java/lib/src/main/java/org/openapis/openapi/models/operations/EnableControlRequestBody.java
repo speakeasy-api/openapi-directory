@@ -12,6 +12,7 @@ public class EnableControlRequestBody {
      */
     @JsonProperty("controlIdentifier")
     public String controlIdentifier;
+
     public EnableControlRequestBody withControlIdentifier(String controlIdentifier) {
         this.controlIdentifier = controlIdentifier;
         return this;
@@ -22,9 +23,14 @@ public class EnableControlRequestBody {
      */
     @JsonProperty("targetIdentifier")
     public String targetIdentifier;
+
     public EnableControlRequestBody withTargetIdentifier(String targetIdentifier) {
         this.targetIdentifier = targetIdentifier;
         return this;
     }
     
+    public EnableControlRequestBody(@JsonProperty("controlIdentifier") String controlIdentifier, @JsonProperty("targetIdentifier") String targetIdentifier) {
+        this.controlIdentifier = controlIdentifier;
+        this.targetIdentifier = targetIdentifier;
+  }
 }

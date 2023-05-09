@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsGetReviewCommentRequest {
@@ -12,6 +13,7 @@ public class PullsGetReviewCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
     public Long commentId;
+
     public PullsGetReviewCommentRequest withCommentId(Long commentId) {
         this.commentId = commentId;
         return this;
@@ -19,6 +21,7 @@ public class PullsGetReviewCommentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public PullsGetReviewCommentRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -26,9 +29,15 @@ public class PullsGetReviewCommentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public PullsGetReviewCommentRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public PullsGetReviewCommentRequest(@JsonProperty("comment_id") Long commentId, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.commentId = commentId;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

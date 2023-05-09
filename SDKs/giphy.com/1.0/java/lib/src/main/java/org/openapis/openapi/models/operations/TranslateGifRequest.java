@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TranslateGifRequest {
@@ -12,9 +13,13 @@ public class TranslateGifRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=s")
     public String s;
+
     public TranslateGifRequest withS(String s) {
         this.s = s;
         return this;
     }
     
+    public TranslateGifRequest(@JsonProperty("s") String s) {
+        this.s = s;
+  }
 }

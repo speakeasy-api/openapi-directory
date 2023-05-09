@@ -15,9 +15,11 @@ public class OrderHistoryEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public OrderHistoryEditFields withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public OrderHistoryEditFields(){}
 }

@@ -15,6 +15,7 @@ public class ListImportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public ImportTask[] items;
+
     public ListImportsResponse withItems(ImportTask[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class ListImportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListImportsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListImportsResponse(){}
 }

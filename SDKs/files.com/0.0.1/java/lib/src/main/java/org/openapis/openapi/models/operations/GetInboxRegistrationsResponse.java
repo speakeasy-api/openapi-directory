@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInboxRegistrationsResponse {
     
     public String contentType;
+
     public GetInboxRegistrationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetInboxRegistrationsResponse {
      */
     
     public org.openapis.openapi.models.shared.InboxRegistrationEntity[] inboxRegistrationEntities;
+
     public GetInboxRegistrationsResponse withInboxRegistrationEntities(org.openapis.openapi.models.shared.InboxRegistrationEntity[] inboxRegistrationEntities) {
         this.inboxRegistrationEntities = inboxRegistrationEntities;
         return this;
@@ -26,6 +29,7 @@ public class GetInboxRegistrationsResponse {
     
     
     public Integer statusCode;
+
     public GetInboxRegistrationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetInboxRegistrationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInboxRegistrationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetInboxRegistrationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

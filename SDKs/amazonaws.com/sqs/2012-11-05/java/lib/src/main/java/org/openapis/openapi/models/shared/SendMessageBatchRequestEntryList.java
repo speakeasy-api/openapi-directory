@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SendMessageBatchRequestEntryList - Contains the details of a single Amazon SQS message along with an &lt;code&gt;Id&lt;/code&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SendMessageBatchRequestEntryList {
     
     public Long delaySeconds;
+
     public SendMessageBatchRequestEntryList withDelaySeconds(Long delaySeconds) {
         this.delaySeconds = delaySeconds;
         return this;
@@ -19,6 +20,7 @@ public class SendMessageBatchRequestEntryList {
     
     
     public String id;
+
     public SendMessageBatchRequestEntryList withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +28,7 @@ public class SendMessageBatchRequestEntryList {
     
     
     public java.util.Map<String, MessageAttributeValue> messageAttributes;
+
     public SendMessageBatchRequestEntryList withMessageAttributes(java.util.Map<String, MessageAttributeValue> messageAttributes) {
         this.messageAttributes = messageAttributes;
         return this;
@@ -33,6 +36,7 @@ public class SendMessageBatchRequestEntryList {
     
     
     public String messageBody;
+
     public SendMessageBatchRequestEntryList withMessageBody(String messageBody) {
         this.messageBody = messageBody;
         return this;
@@ -40,6 +44,7 @@ public class SendMessageBatchRequestEntryList {
     
     
     public String messageDeduplicationId;
+
     public SendMessageBatchRequestEntryList withMessageDeduplicationId(String messageDeduplicationId) {
         this.messageDeduplicationId = messageDeduplicationId;
         return this;
@@ -47,6 +52,7 @@ public class SendMessageBatchRequestEntryList {
     
     
     public String messageGroupId;
+
     public SendMessageBatchRequestEntryList withMessageGroupId(String messageGroupId) {
         this.messageGroupId = messageGroupId;
         return this;
@@ -54,9 +60,14 @@ public class SendMessageBatchRequestEntryList {
     
     
     public java.util.Map<String, MessageSystemAttributeValue> messageSystemAttributes;
+
     public SendMessageBatchRequestEntryList withMessageSystemAttributes(java.util.Map<String, MessageSystemAttributeValue> messageSystemAttributes) {
         this.messageSystemAttributes = messageSystemAttributes;
         return this;
     }
     
+    public SendMessageBatchRequestEntryList(@JsonProperty("Id") String id, @JsonProperty("MessageBody") String messageBody) {
+        this.id = id;
+        this.messageBody = messageBody;
+  }
 }

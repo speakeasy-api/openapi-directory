@@ -18,6 +18,7 @@ public class ListPeeringsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListPeeringsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListPeeringsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peerings")
     public Peering[] peerings;
+
     public ListPeeringsResponse withPeerings(Peering[] peerings) {
         this.peerings = peerings;
         return this;
@@ -40,9 +42,11 @@ public class ListPeeringsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListPeeringsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListPeeringsResponse(){}
 }

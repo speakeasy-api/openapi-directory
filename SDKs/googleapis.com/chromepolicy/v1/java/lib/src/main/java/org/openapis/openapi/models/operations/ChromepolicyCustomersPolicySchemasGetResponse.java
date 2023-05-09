@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChromepolicyCustomersPolicySchemasGetResponse {
     
     public String contentType;
+
     public ChromepolicyCustomersPolicySchemasGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ChromepolicyCustomersPolicySchemasGetResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1PolicySchema googleChromePolicyVersionsV1PolicySchema;
+
     public ChromepolicyCustomersPolicySchemasGetResponse withGoogleChromePolicyVersionsV1PolicySchema(org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1PolicySchema googleChromePolicyVersionsV1PolicySchema) {
         this.googleChromePolicyVersionsV1PolicySchema = googleChromePolicyVersionsV1PolicySchema;
         return this;
@@ -26,6 +29,7 @@ public class ChromepolicyCustomersPolicySchemasGetResponse {
     
     
     public Integer statusCode;
+
     public ChromepolicyCustomersPolicySchemasGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ChromepolicyCustomersPolicySchemasGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChromepolicyCustomersPolicySchemasGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ChromepolicyCustomersPolicySchemasGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

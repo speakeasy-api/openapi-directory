@@ -15,6 +15,7 @@ public class ProductDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answeredQuestions")
     public Long answeredQuestions;
+
     public ProductDetailsResponse withAnsweredQuestions(Long answeredQuestions) {
         this.answeredQuestions = answeredQuestions;
         return this;
@@ -23,6 +24,7 @@ public class ProductDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asin")
     public String asin;
+
     public ProductDetailsResponse withAsin(String asin) {
         this.asin = asin;
         return this;
@@ -31,6 +33,7 @@ public class ProductDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countReview")
     public Long countReview;
+
     public ProductDetailsResponse withCountReview(Long countReview) {
         this.countReview = countReview;
         return this;
@@ -39,6 +42,7 @@ public class ProductDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public String[] features;
+
     public ProductDetailsResponse withFeatures(String[] features) {
         this.features = features;
         return this;
@@ -47,6 +51,7 @@ public class ProductDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfilledBy")
     public String fulfilledBy;
+
     public ProductDetailsResponse withFulfilledBy(String fulfilledBy) {
         this.fulfilledBy = fulfilledBy;
         return this;
@@ -55,6 +60,7 @@ public class ProductDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturer")
     public String manufacturer;
+
     public ProductDetailsResponse withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
@@ -63,6 +69,7 @@ public class ProductDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Double price;
+
     public ProductDetailsResponse withPrice(Double price) {
         this.price = price;
         return this;
@@ -71,6 +78,7 @@ public class ProductDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceSaving")
     public String priceSaving;
+
     public ProductDetailsResponse withPriceSaving(String priceSaving) {
         this.priceSaving = priceSaving;
         return this;
@@ -79,6 +87,7 @@ public class ProductDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceShippingInformation")
     public String priceShippingInformation;
+
     public ProductDetailsResponse withPriceShippingInformation(String priceShippingInformation) {
         this.priceShippingInformation = priceShippingInformation;
         return this;
@@ -87,6 +96,7 @@ public class ProductDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prime")
     public Boolean prime;
+
     public ProductDetailsResponse withPrime(Boolean prime) {
         this.prime = prime;
         return this;
@@ -95,6 +105,7 @@ public class ProductDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productRating")
     public String productRating;
+
     public ProductDetailsResponse withProductRating(String productRating) {
         this.productRating = productRating;
         return this;
@@ -103,6 +114,7 @@ public class ProductDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productTitle")
     public String productTitle;
+
     public ProductDetailsResponse withProductTitle(String productTitle) {
         this.productTitle = productTitle;
         return this;
@@ -111,6 +123,7 @@ public class ProductDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseMessage")
     public String responseMessage;
+
     public ProductDetailsResponse withResponseMessage(String responseMessage) {
         this.responseMessage = responseMessage;
         return this;
@@ -119,6 +132,7 @@ public class ProductDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseStatus")
     public String responseStatus;
+
     public ProductDetailsResponse withResponseStatus(String responseStatus) {
         this.responseStatus = responseStatus;
         return this;
@@ -127,6 +141,7 @@ public class ProductDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retailPrice")
     public Double retailPrice;
+
     public ProductDetailsResponse withRetailPrice(Double retailPrice) {
         this.retailPrice = retailPrice;
         return this;
@@ -135,6 +150,7 @@ public class ProductDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeSelection")
     public String[] sizeSelection;
+
     public ProductDetailsResponse withSizeSelection(String[] sizeSelection) {
         this.sizeSelection = sizeSelection;
         return this;
@@ -143,6 +159,7 @@ public class ProductDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("soldBy")
     public String soldBy;
+
     public ProductDetailsResponse withSoldBy(String soldBy) {
         this.soldBy = soldBy;
         return this;
@@ -151,9 +168,11 @@ public class ProductDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warehouseAvailability")
     public String warehouseAvailability;
+
     public ProductDetailsResponse withWarehouseAvailability(String warehouseAvailability) {
         this.warehouseAvailability = warehouseAvailability;
         return this;
     }
     
+    public ProductDetailsResponse(){}
 }

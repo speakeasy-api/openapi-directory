@@ -15,6 +15,7 @@ public class BulkDeploymentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedAt")
     public String createdAt;
+
     public BulkDeploymentResult withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -23,6 +24,7 @@ public class BulkDeploymentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentArn")
     public String deploymentArn;
+
     public BulkDeploymentResult withDeploymentArn(String deploymentArn) {
         this.deploymentArn = deploymentArn;
         return this;
@@ -31,6 +33,7 @@ public class BulkDeploymentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentId")
     public String deploymentId;
+
     public BulkDeploymentResult withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -39,6 +42,7 @@ public class BulkDeploymentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentStatus")
     public String deploymentStatus;
+
     public BulkDeploymentResult withDeploymentStatus(String deploymentStatus) {
         this.deploymentStatus = deploymentStatus;
         return this;
@@ -47,6 +51,7 @@ public class BulkDeploymentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentType")
     public DeploymentTypeEnum deploymentType;
+
     public BulkDeploymentResult withDeploymentType(DeploymentTypeEnum deploymentType) {
         this.deploymentType = deploymentType;
         return this;
@@ -55,6 +60,7 @@ public class BulkDeploymentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorDetails")
     public ErrorDetail[] errorDetails;
+
     public BulkDeploymentResult withErrorDetails(ErrorDetail[] errorDetails) {
         this.errorDetails = errorDetails;
         return this;
@@ -63,6 +69,7 @@ public class BulkDeploymentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public BulkDeploymentResult withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -71,9 +78,11 @@ public class BulkDeploymentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupArn")
     public String groupArn;
+
     public BulkDeploymentResult withGroupArn(String groupArn) {
         this.groupArn = groupArn;
         return this;
     }
     
+    public BulkDeploymentResult(){}
 }

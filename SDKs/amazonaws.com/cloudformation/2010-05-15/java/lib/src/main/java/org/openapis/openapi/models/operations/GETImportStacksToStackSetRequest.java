@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETImportStacksToStackSetRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETImportStacksToStackSetActionEnum action;
+
     public GETImportStacksToStackSetRequest withAction(GETImportStacksToStackSetActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETImportStacksToStackSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CallAs")
     public GETImportStacksToStackSetCallAsEnum callAs;
+
     public GETImportStacksToStackSetRequest withCallAs(GETImportStacksToStackSetCallAsEnum callAs) {
         this.callAs = callAs;
         return this;
@@ -29,6 +32,7 @@ public class GETImportStacksToStackSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OperationId")
     public String operationId;
+
     public GETImportStacksToStackSetRequest withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -39,6 +43,7 @@ public class GETImportStacksToStackSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OperationPreferences")
     public GETImportStacksToStackSetOperationPreferences operationPreferences;
+
     public GETImportStacksToStackSetRequest withOperationPreferences(GETImportStacksToStackSetOperationPreferences operationPreferences) {
         this.operationPreferences = operationPreferences;
         return this;
@@ -49,6 +54,7 @@ public class GETImportStacksToStackSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OrganizationalUnitIds")
     public String[] organizationalUnitIds;
+
     public GETImportStacksToStackSetRequest withOrganizationalUnitIds(String[] organizationalUnitIds) {
         this.organizationalUnitIds = organizationalUnitIds;
         return this;
@@ -59,6 +65,7 @@ public class GETImportStacksToStackSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackIds")
     public String[] stackIds;
+
     public GETImportStacksToStackSetRequest withStackIds(String[] stackIds) {
         this.stackIds = stackIds;
         return this;
@@ -69,6 +76,7 @@ public class GETImportStacksToStackSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackIdsUrl")
     public String stackIdsUrl;
+
     public GETImportStacksToStackSetRequest withStackIdsUrl(String stackIdsUrl) {
         this.stackIdsUrl = stackIdsUrl;
         return this;
@@ -79,6 +87,7 @@ public class GETImportStacksToStackSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackSetName")
     public String stackSetName;
+
     public GETImportStacksToStackSetRequest withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
@@ -86,6 +95,7 @@ public class GETImportStacksToStackSetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETImportStacksToStackSetVersionEnum version;
+
     public GETImportStacksToStackSetRequest withVersion(GETImportStacksToStackSetVersionEnum version) {
         this.version = version;
         return this;
@@ -93,6 +103,7 @@ public class GETImportStacksToStackSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETImportStacksToStackSetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -100,6 +111,7 @@ public class GETImportStacksToStackSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETImportStacksToStackSetRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -107,6 +119,7 @@ public class GETImportStacksToStackSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETImportStacksToStackSetRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -114,6 +127,7 @@ public class GETImportStacksToStackSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETImportStacksToStackSetRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -121,6 +135,7 @@ public class GETImportStacksToStackSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETImportStacksToStackSetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -128,6 +143,7 @@ public class GETImportStacksToStackSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETImportStacksToStackSetRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -135,9 +151,15 @@ public class GETImportStacksToStackSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETImportStacksToStackSetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETImportStacksToStackSetRequest(@JsonProperty("Action") GETImportStacksToStackSetActionEnum action, @JsonProperty("StackSetName") String stackSetName, @JsonProperty("Version") GETImportStacksToStackSetVersionEnum version) {
+        this.action = action;
+        this.stackSetName = stackSetName;
+        this.version = version;
+  }
 }

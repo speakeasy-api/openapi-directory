@@ -12,6 +12,7 @@ public class BillbeeInterfacesShippingShipmentDataDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Double height;
+
     public BillbeeInterfacesShippingShipmentDataDimensions withHeight(Double height) {
         this.height = height;
         return this;
@@ -20,6 +21,7 @@ public class BillbeeInterfacesShippingShipmentDataDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("length")
     public Double length;
+
     public BillbeeInterfacesShippingShipmentDataDimensions withLength(Double length) {
         this.length = length;
         return this;
@@ -28,9 +30,11 @@ public class BillbeeInterfacesShippingShipmentDataDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Double width;
+
     public BillbeeInterfacesShippingShipmentDataDimensions withWidth(Double width) {
         this.width = width;
         return this;
     }
     
+    public BillbeeInterfacesShippingShipmentDataDimensions(){}
 }

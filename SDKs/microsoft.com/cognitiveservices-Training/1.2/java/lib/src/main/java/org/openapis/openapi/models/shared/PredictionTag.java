@@ -12,6 +12,7 @@ public class PredictionTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Probability")
     public Float probability;
+
     public PredictionTag withProbability(Float probability) {
         this.probability = probability;
         return this;
@@ -20,6 +21,7 @@ public class PredictionTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tag")
     public String tag;
+
     public PredictionTag withTag(String tag) {
         this.tag = tag;
         return this;
@@ -28,9 +30,11 @@ public class PredictionTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagId")
     public String tagId;
+
     public PredictionTag withTagId(String tagId) {
         this.tagId = tagId;
         return this;
     }
     
+    public PredictionTag(){}
 }

@@ -12,6 +12,7 @@ public class WorkType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public WorkType withId(Integer id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class WorkType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public WorkType withTitle(String title) {
         this.title = title;
         return this;
@@ -28,9 +30,11 @@ public class WorkType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserId")
     public Integer userId;
+
     public WorkType withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public WorkType(){}
 }

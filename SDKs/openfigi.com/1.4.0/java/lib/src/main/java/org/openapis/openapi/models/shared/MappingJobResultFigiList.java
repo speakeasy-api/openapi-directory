@@ -12,9 +12,11 @@ public class MappingJobResultFigiList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public FigiResult[] data;
+
     public MappingJobResultFigiList withData(FigiResult[] data) {
         this.data = data;
         return this;
     }
     
+    public MappingJobResultFigiList(){}
 }

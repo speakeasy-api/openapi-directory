@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAppsAppIdPublishRequest {
@@ -12,6 +13,7 @@ public class PostAppsAppIdPublishRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public String appId;
+
     public PostAppsAppIdPublishRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -22,6 +24,7 @@ public class PostAppsAppIdPublishRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=autoApprove")
     public Boolean autoApprove;
+
     public PostAppsAppIdPublishRequest withAutoApprove(Boolean autoApprove) {
         this.autoApprove = autoApprove;
         return this;
@@ -32,6 +35,7 @@ public class PostAppsAppIdPublishRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developerId")
     public String developerId;
+
     public PostAppsAppIdPublishRequest withDeveloperId(String developerId) {
         this.developerId = developerId;
         return this;
@@ -42,9 +46,15 @@ public class PostAppsAppIdPublishRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
     public Long version;
+
     public PostAppsAppIdPublishRequest withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public PostAppsAppIdPublishRequest(@JsonProperty("appId") String appId, @JsonProperty("developerId") String developerId, @JsonProperty("version") Long version) {
+        this.appId = appId;
+        this.developerId = developerId;
+        this.version = version;
+  }
 }

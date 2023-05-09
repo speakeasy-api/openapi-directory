@@ -15,9 +15,11 @@ public class AutoTerminationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdleTimeout")
     public Long idleTimeout;
+
     public AutoTerminationPolicy withIdleTimeout(Long idleTimeout) {
         this.idleTimeout = idleTimeout;
         return this;
     }
     
+    public AutoTerminationPolicy(){}
 }

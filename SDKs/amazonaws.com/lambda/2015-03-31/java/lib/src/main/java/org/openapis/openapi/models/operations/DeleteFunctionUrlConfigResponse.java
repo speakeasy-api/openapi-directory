@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFunctionUrlConfigResponse {
     
     public String contentType;
+
     public DeleteFunctionUrlConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteFunctionUrlConfigResponse {
      */
     
     public Object resourceConflictException;
+
     public DeleteFunctionUrlConfigResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFunctionUrlConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteFunctionUrlConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DeleteFunctionUrlConfigResponse {
     
     
     public Integer statusCode;
+
     public DeleteFunctionUrlConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DeleteFunctionUrlConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFunctionUrlConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class DeleteFunctionUrlConfigResponse {
      */
     
     public Object serviceException;
+
     public DeleteFunctionUrlConfigResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -63,9 +70,14 @@ public class DeleteFunctionUrlConfigResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteFunctionUrlConfigResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteFunctionUrlConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

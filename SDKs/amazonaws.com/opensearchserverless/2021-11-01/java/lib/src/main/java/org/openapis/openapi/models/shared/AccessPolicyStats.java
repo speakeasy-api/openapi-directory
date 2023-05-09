@@ -15,9 +15,11 @@ public class AccessPolicyStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataPolicyCount")
     public Long dataPolicyCount;
+
     public AccessPolicyStats withDataPolicyCount(Long dataPolicyCount) {
         this.dataPolicyCount = dataPolicyCount;
         return this;
     }
     
+    public AccessPolicyStats(){}
 }

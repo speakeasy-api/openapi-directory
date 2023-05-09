@@ -15,9 +15,11 @@ public class ModifyRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetInstances")
     public TargetInstance[] targetInstances;
+
     public ModifyRecommendationDetail withTargetInstances(TargetInstance[] targetInstances) {
         this.targetInstances = targetInstances;
         return this;
     }
     
+    public ModifyRecommendationDetail(){}
 }

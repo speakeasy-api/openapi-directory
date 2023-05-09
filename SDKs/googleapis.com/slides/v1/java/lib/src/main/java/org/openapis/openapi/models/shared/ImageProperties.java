@@ -18,6 +18,7 @@ public class ImageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brightness")
     public Float brightness;
+
     public ImageProperties withBrightness(Float brightness) {
         this.brightness = brightness;
         return this;
@@ -29,6 +30,7 @@ public class ImageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contrast")
     public Float contrast;
+
     public ImageProperties withContrast(Float contrast) {
         this.contrast = contrast;
         return this;
@@ -40,6 +42,7 @@ public class ImageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cropProperties")
     public CropProperties cropProperties;
+
     public ImageProperties withCropProperties(CropProperties cropProperties) {
         this.cropProperties = cropProperties;
         return this;
@@ -51,6 +54,7 @@ public class ImageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public Link link;
+
     public ImageProperties withLink(Link link) {
         this.link = link;
         return this;
@@ -62,6 +66,7 @@ public class ImageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outline")
     public Outline outline;
+
     public ImageProperties withOutline(Outline outline) {
         this.outline = outline;
         return this;
@@ -73,6 +78,7 @@ public class ImageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recolor")
     public Recolor recolor;
+
     public ImageProperties withRecolor(Recolor recolor) {
         this.recolor = recolor;
         return this;
@@ -84,6 +90,7 @@ public class ImageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shadow")
     public Shadow shadow;
+
     public ImageProperties withShadow(Shadow shadow) {
         this.shadow = shadow;
         return this;
@@ -95,9 +102,11 @@ public class ImageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transparency")
     public Float transparency;
+
     public ImageProperties withTransparency(Float transparency) {
         this.transparency = transparency;
         return this;
     }
     
+    public ImageProperties(){}
 }

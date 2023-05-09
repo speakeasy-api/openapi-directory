@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreatePublicIpv4PoolRequestTagSpecifications {
     
     public CreatePublicIpv4PoolRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreatePublicIpv4PoolRequestTagSpecifications withResourceType(CreatePublicIpv4PoolRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreatePublicIpv4PoolRequestTagSpecifications {
     
     
     public CreatePublicIpv4PoolRequestTagSpecificationsTags[] tags;
+
     public CreatePublicIpv4PoolRequestTagSpecifications withTags(CreatePublicIpv4PoolRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreatePublicIpv4PoolRequestTagSpecifications(){}
 }

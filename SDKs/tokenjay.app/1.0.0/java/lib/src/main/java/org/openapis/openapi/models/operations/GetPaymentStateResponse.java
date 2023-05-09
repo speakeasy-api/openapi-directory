@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPaymentStateResponse {
     
     public byte[] body;
+
     public GetPaymentStateResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetPaymentStateResponse {
     
     
     public String contentType;
+
     public GetPaymentStateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetPaymentStateResponse {
     
     
     public Integer statusCode;
+
     public GetPaymentStateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetPaymentStateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPaymentStateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetPaymentStateResponse {
      */
     
     public String getPaymentState400WildcardString;
+
     public GetPaymentStateResponse withGetPaymentState400WildcardString(String getPaymentState400WildcardString) {
         this.getPaymentState400WildcardString = getPaymentState400WildcardString;
         return this;
@@ -50,6 +56,7 @@ public class GetPaymentStateResponse {
      */
     
     public String getPaymentState401WildcardString;
+
     public GetPaymentStateResponse withGetPaymentState401WildcardString(String getPaymentState401WildcardString) {
         this.getPaymentState401WildcardString = getPaymentState401WildcardString;
         return this;
@@ -60,6 +67,7 @@ public class GetPaymentStateResponse {
      */
     
     public String getPaymentState404WildcardString;
+
     public GetPaymentStateResponse withGetPaymentState404WildcardString(String getPaymentState404WildcardString) {
         this.getPaymentState404WildcardString = getPaymentState404WildcardString;
         return this;
@@ -70,9 +78,14 @@ public class GetPaymentStateResponse {
      */
     
     public String getPaymentState409WildcardString;
+
     public GetPaymentStateResponse withGetPaymentState409WildcardString(String getPaymentState409WildcardString) {
         this.getPaymentState409WildcardString = getPaymentState409WildcardString;
         return this;
     }
     
+    public GetPaymentStateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

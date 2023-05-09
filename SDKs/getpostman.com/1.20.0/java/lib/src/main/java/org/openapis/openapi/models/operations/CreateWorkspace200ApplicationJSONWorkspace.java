@@ -12,6 +12,7 @@ public class CreateWorkspace200ApplicationJSONWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateWorkspace200ApplicationJSONWorkspace withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class CreateWorkspace200ApplicationJSONWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateWorkspace200ApplicationJSONWorkspace withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateWorkspace200ApplicationJSONWorkspace(){}
 }

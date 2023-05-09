@@ -12,6 +12,7 @@ public class ListFirewallRulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public ActionEnum action;
+
     public ListFirewallRulesRequest withAction(ActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +20,7 @@ public class ListFirewallRulesRequest {
     
     @JsonProperty("FirewallRuleGroupId")
     public String firewallRuleGroupId;
+
     public ListFirewallRulesRequest withFirewallRuleGroupId(String firewallRuleGroupId) {
         this.firewallRuleGroupId = firewallRuleGroupId;
         return this;
@@ -27,6 +29,7 @@ public class ListFirewallRulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListFirewallRulesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,6 +38,7 @@ public class ListFirewallRulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFirewallRulesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -43,9 +47,13 @@ public class ListFirewallRulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Priority")
     public Long priority;
+
     public ListFirewallRulesRequest withPriority(Long priority) {
         this.priority = priority;
         return this;
     }
     
+    public ListFirewallRulesRequest(@JsonProperty("FirewallRuleGroupId") String firewallRuleGroupId) {
+        this.firewallRuleGroupId = firewallRuleGroupId;
+  }
 }

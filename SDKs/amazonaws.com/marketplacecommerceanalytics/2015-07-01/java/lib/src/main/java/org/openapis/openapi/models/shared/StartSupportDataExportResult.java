@@ -15,9 +15,11 @@ public class StartSupportDataExportResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSetRequestId")
     public String dataSetRequestId;
+
     public StartSupportDataExportResult withDataSetRequestId(String dataSetRequestId) {
         this.dataSetRequestId = dataSetRequestId;
         return this;
     }
     
+    public StartSupportDataExportResult(){}
 }

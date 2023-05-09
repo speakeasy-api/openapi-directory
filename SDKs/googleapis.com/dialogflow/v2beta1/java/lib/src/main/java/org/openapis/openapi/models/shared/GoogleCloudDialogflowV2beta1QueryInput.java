@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioConfig")
     public GoogleCloudDialogflowV2beta1InputAudioConfig audioConfig;
+
     public GoogleCloudDialogflowV2beta1QueryInput withAudioConfig(GoogleCloudDialogflowV2beta1InputAudioConfig audioConfig) {
         this.audioConfig = audioConfig;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dtmf")
     public GoogleCloudDialogflowV2beta1TelephonyDtmfEvents dtmf;
+
     public GoogleCloudDialogflowV2beta1QueryInput withDtmf(GoogleCloudDialogflowV2beta1TelephonyDtmfEvents dtmf) {
         this.dtmf = dtmf;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public GoogleCloudDialogflowV2beta1EventInput event;
+
     public GoogleCloudDialogflowV2beta1QueryInput withEvent(GoogleCloudDialogflowV2beta1EventInput event) {
         this.event = event;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowV2beta1QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public GoogleCloudDialogflowV2beta1TextInput text;
+
     public GoogleCloudDialogflowV2beta1QueryInput withText(GoogleCloudDialogflowV2beta1TextInput text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1QueryInput(){}
 }

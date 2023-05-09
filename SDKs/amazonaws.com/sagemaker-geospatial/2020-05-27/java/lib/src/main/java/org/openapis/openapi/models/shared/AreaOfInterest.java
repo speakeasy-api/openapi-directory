@@ -9,15 +9,17 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * AreaOfInterest - &lt;p/&gt;
+ * AreaOfInterest - The geographic extent of the Earth Observation job.
  */
 public class AreaOfInterest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AreaOfInterestGeometry")
     public AreaOfInterestGeometry areaOfInterestGeometry;
+
     public AreaOfInterest withAreaOfInterestGeometry(AreaOfInterestGeometry areaOfInterestGeometry) {
         this.areaOfInterestGeometry = areaOfInterestGeometry;
         return this;
     }
     
+    public AreaOfInterest(){}
 }

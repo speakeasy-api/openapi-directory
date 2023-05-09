@@ -15,6 +15,7 @@ public class KnowledgeBaseSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public KnowledgeBaseSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class KnowledgeBaseSummary {
     
     @JsonProperty("knowledgeBaseArn")
     public String knowledgeBaseArn;
+
     public KnowledgeBaseSummary withKnowledgeBaseArn(String knowledgeBaseArn) {
         this.knowledgeBaseArn = knowledgeBaseArn;
         return this;
@@ -29,6 +31,7 @@ public class KnowledgeBaseSummary {
     
     @JsonProperty("knowledgeBaseId")
     public String knowledgeBaseId;
+
     public KnowledgeBaseSummary withKnowledgeBaseId(String knowledgeBaseId) {
         this.knowledgeBaseId = knowledgeBaseId;
         return this;
@@ -36,6 +39,7 @@ public class KnowledgeBaseSummary {
     
     @JsonProperty("knowledgeBaseType")
     public KnowledgeBaseTypeEnum knowledgeBaseType;
+
     public KnowledgeBaseSummary withKnowledgeBaseType(KnowledgeBaseTypeEnum knowledgeBaseType) {
         this.knowledgeBaseType = knowledgeBaseType;
         return this;
@@ -43,6 +47,7 @@ public class KnowledgeBaseSummary {
     
     @JsonProperty("name")
     public String name;
+
     public KnowledgeBaseSummary withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +56,7 @@ public class KnowledgeBaseSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renderingConfiguration")
     public RenderingConfiguration renderingConfiguration;
+
     public KnowledgeBaseSummary withRenderingConfiguration(RenderingConfiguration renderingConfiguration) {
         this.renderingConfiguration = renderingConfiguration;
         return this;
@@ -59,6 +65,7 @@ public class KnowledgeBaseSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverSideEncryptionConfiguration")
     public ServerSideEncryptionConfiguration serverSideEncryptionConfiguration;
+
     public KnowledgeBaseSummary withServerSideEncryptionConfiguration(ServerSideEncryptionConfiguration serverSideEncryptionConfiguration) {
         this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
         return this;
@@ -67,6 +74,7 @@ public class KnowledgeBaseSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceConfiguration")
     public SourceConfiguration sourceConfiguration;
+
     public KnowledgeBaseSummary withSourceConfiguration(SourceConfiguration sourceConfiguration) {
         this.sourceConfiguration = sourceConfiguration;
         return this;
@@ -74,6 +82,7 @@ public class KnowledgeBaseSummary {
     
     @JsonProperty("status")
     public KnowledgeBaseStatusEnum status;
+
     public KnowledgeBaseSummary withStatus(KnowledgeBaseStatusEnum status) {
         this.status = status;
         return this;
@@ -82,9 +91,17 @@ public class KnowledgeBaseSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public KnowledgeBaseSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public KnowledgeBaseSummary(@JsonProperty("knowledgeBaseArn") String knowledgeBaseArn, @JsonProperty("knowledgeBaseId") String knowledgeBaseId, @JsonProperty("knowledgeBaseType") KnowledgeBaseTypeEnum knowledgeBaseType, @JsonProperty("name") String name, @JsonProperty("status") KnowledgeBaseStatusEnum status) {
+        this.knowledgeBaseArn = knowledgeBaseArn;
+        this.knowledgeBaseId = knowledgeBaseId;
+        this.knowledgeBaseType = knowledgeBaseType;
+        this.name = name;
+        this.status = status;
+  }
 }

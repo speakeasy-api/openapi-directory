@@ -14,6 +14,7 @@ public class UpdateOrganizationConfigurationRequestBody {
      */
     @JsonProperty("AutoEnable")
     public Boolean autoEnable;
+
     public UpdateOrganizationConfigurationRequestBody withAutoEnable(Boolean autoEnable) {
         this.autoEnable = autoEnable;
         return this;
@@ -25,9 +26,13 @@ public class UpdateOrganizationConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoEnableStandards")
     public UpdateOrganizationConfigurationRequestBodyAutoEnableStandardsEnum autoEnableStandards;
+
     public UpdateOrganizationConfigurationRequestBody withAutoEnableStandards(UpdateOrganizationConfigurationRequestBodyAutoEnableStandardsEnum autoEnableStandards) {
         this.autoEnableStandards = autoEnableStandards;
         return this;
     }
     
+    public UpdateOrganizationConfigurationRequestBody(@JsonProperty("AutoEnable") Boolean autoEnable) {
+        this.autoEnable = autoEnable;
+  }
 }

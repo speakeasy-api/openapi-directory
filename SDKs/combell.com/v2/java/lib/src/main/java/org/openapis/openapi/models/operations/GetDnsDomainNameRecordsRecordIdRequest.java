@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDnsDomainNameRecordsRecordIdRequest {
@@ -12,6 +13,7 @@ public class GetDnsDomainNameRecordsRecordIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
     public String domainNamePathParameter;
+
     public GetDnsDomainNameRecordsRecordIdRequest withDomainNamePathParameter(String domainNamePathParameter) {
         this.domainNamePathParameter = domainNamePathParameter;
         return this;
@@ -22,6 +24,7 @@ public class GetDnsDomainNameRecordsRecordIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
     public String domainNameQueryParameter;
+
     public GetDnsDomainNameRecordsRecordIdRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
         this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
@@ -32,6 +35,7 @@ public class GetDnsDomainNameRecordsRecordIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=recordId")
     public String recordIdPathParameter;
+
     public GetDnsDomainNameRecordsRecordIdRequest withRecordIdPathParameter(String recordIdPathParameter) {
         this.recordIdPathParameter = recordIdPathParameter;
         return this;
@@ -42,9 +46,16 @@ public class GetDnsDomainNameRecordsRecordIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=record_id")
     public String recordIdQueryParameter;
+
     public GetDnsDomainNameRecordsRecordIdRequest withRecordIdQueryParameter(String recordIdQueryParameter) {
         this.recordIdQueryParameter = recordIdQueryParameter;
         return this;
     }
     
+    public GetDnsDomainNameRecordsRecordIdRequest(@JsonProperty("domainNamePathParameter") String domainNamePathParameter, @JsonProperty("domain_nameQueryParameter") String domainNameQueryParameter, @JsonProperty("recordIdPathParameter") String recordIdPathParameter, @JsonProperty("record_idQueryParameter") String recordIdQueryParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        this.recordIdPathParameter = recordIdPathParameter;
+        this.recordIdQueryParameter = recordIdQueryParameter;
+  }
 }

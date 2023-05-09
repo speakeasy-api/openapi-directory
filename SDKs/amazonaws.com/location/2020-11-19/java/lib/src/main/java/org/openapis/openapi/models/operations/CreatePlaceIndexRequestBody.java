@@ -14,6 +14,7 @@ public class CreatePlaceIndexRequestBody {
      */
     @JsonProperty("DataSource")
     public String dataSource;
+
     public CreatePlaceIndexRequestBody withDataSource(String dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -25,6 +26,7 @@ public class CreatePlaceIndexRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceConfiguration")
     public CreatePlaceIndexRequestBodyDataSourceConfiguration dataSourceConfiguration;
+
     public CreatePlaceIndexRequestBody withDataSourceConfiguration(CreatePlaceIndexRequestBodyDataSourceConfiguration dataSourceConfiguration) {
         this.dataSourceConfiguration = dataSourceConfiguration;
         return this;
@@ -36,6 +38,7 @@ public class CreatePlaceIndexRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreatePlaceIndexRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class CreatePlaceIndexRequestBody {
      */
     @JsonProperty("IndexName")
     public String indexName;
+
     public CreatePlaceIndexRequestBody withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -57,6 +61,7 @@ public class CreatePlaceIndexRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlan")
     public CreatePlaceIndexRequestBodyPricingPlanEnum pricingPlan;
+
     public CreatePlaceIndexRequestBody withPricingPlan(CreatePlaceIndexRequestBodyPricingPlanEnum pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
@@ -68,9 +73,14 @@ public class CreatePlaceIndexRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreatePlaceIndexRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreatePlaceIndexRequestBody(@JsonProperty("DataSource") String dataSource, @JsonProperty("IndexName") String indexName) {
+        this.dataSource = dataSource;
+        this.indexName = indexName;
+  }
 }

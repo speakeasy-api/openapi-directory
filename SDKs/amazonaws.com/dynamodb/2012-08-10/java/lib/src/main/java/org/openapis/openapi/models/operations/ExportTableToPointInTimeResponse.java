@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportTableToPointInTimeResponse {
     
     public String contentType;
+
     public ExportTableToPointInTimeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ExportTableToPointInTimeResponse {
      */
     
     public Object exportConflictException;
+
     public ExportTableToPointInTimeResponse withExportConflictException(Object exportConflictException) {
         this.exportConflictException = exportConflictException;
         return this;
@@ -29,6 +32,7 @@ public class ExportTableToPointInTimeResponse {
      */
     
     public org.openapis.openapi.models.shared.ExportTableToPointInTimeOutput exportTableToPointInTimeOutput;
+
     public ExportTableToPointInTimeResponse withExportTableToPointInTimeOutput(org.openapis.openapi.models.shared.ExportTableToPointInTimeOutput exportTableToPointInTimeOutput) {
         this.exportTableToPointInTimeOutput = exportTableToPointInTimeOutput;
         return this;
@@ -39,6 +43,7 @@ public class ExportTableToPointInTimeResponse {
      */
     
     public Object internalServerError;
+
     public ExportTableToPointInTimeResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class ExportTableToPointInTimeResponse {
      */
     
     public Object invalidExportTimeException;
+
     public ExportTableToPointInTimeResponse withInvalidExportTimeException(Object invalidExportTimeException) {
         this.invalidExportTimeException = invalidExportTimeException;
         return this;
@@ -59,6 +65,7 @@ public class ExportTableToPointInTimeResponse {
      */
     
     public Object limitExceededException;
+
     public ExportTableToPointInTimeResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ExportTableToPointInTimeResponse {
      */
     
     public Object pointInTimeRecoveryUnavailableException;
+
     public ExportTableToPointInTimeResponse withPointInTimeRecoveryUnavailableException(Object pointInTimeRecoveryUnavailableException) {
         this.pointInTimeRecoveryUnavailableException = pointInTimeRecoveryUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class ExportTableToPointInTimeResponse {
     
     
     public Integer statusCode;
+
     public ExportTableToPointInTimeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ExportTableToPointInTimeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportTableToPointInTimeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ExportTableToPointInTimeResponse {
      */
     
     public Object tableNotFoundException;
+
     public ExportTableToPointInTimeResponse withTableNotFoundException(Object tableNotFoundException) {
         this.tableNotFoundException = tableNotFoundException;
         return this;
     }
     
+    public ExportTableToPointInTimeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

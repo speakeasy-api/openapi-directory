@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProvidersIdConnectorLogosThumbnailResponse {
     
     public String contentType;
+
     public GetProvidersIdConnectorLogosThumbnailResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetProvidersIdConnectorLogosThumbnailResponse {
     
     
     public Integer statusCode;
+
     public GetProvidersIdConnectorLogosThumbnailResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetProvidersIdConnectorLogosThumbnailResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProvidersIdConnectorLogosThumbnailResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetProvidersIdConnectorLogosThumbnailResponse {
      */
     
     public GetProvidersIdConnectorLogosThumbnail200ApplicationJSON getProvidersIdConnectorLogosThumbnail200ApplicationJSONObject;
+
     public GetProvidersIdConnectorLogosThumbnailResponse withGetProvidersIdConnectorLogosThumbnail200ApplicationJSONObject(GetProvidersIdConnectorLogosThumbnail200ApplicationJSON getProvidersIdConnectorLogosThumbnail200ApplicationJSONObject) {
         this.getProvidersIdConnectorLogosThumbnail200ApplicationJSONObject = getProvidersIdConnectorLogosThumbnail200ApplicationJSONObject;
         return this;
     }
     
+    public GetProvidersIdConnectorLogosThumbnailResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

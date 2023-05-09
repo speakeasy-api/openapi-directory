@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisableMacieResponse {
@@ -12,6 +13,7 @@ public class DisableMacieResponse {
      */
     
     public Object accessDeniedException;
+
     public DisableMacieResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DisableMacieResponse {
      */
     
     public Object conflictException;
+
     public DisableMacieResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DisableMacieResponse {
     
     
     public String contentType;
+
     public DisableMacieResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DisableMacieResponse {
      */
     
     public java.util.Map<String, Object> disableMacieResponse;
+
     public DisableMacieResponse withDisableMacieResponse(java.util.Map<String, Object> disableMacieResponse) {
         this.disableMacieResponse = disableMacieResponse;
         return this;
@@ -49,6 +54,7 @@ public class DisableMacieResponse {
      */
     
     public Object internalServerException;
+
     public DisableMacieResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DisableMacieResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisableMacieResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DisableMacieResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DisableMacieResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class DisableMacieResponse {
     
     
     public Integer statusCode;
+
     public DisableMacieResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DisableMacieResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisableMacieResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DisableMacieResponse {
      */
     
     public Object throttlingException;
+
     public DisableMacieResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DisableMacieResponse {
      */
     
     public Object validationException;
+
     public DisableMacieResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisableMacieResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

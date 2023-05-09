@@ -23,6 +23,7 @@ public class TenderCashDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyer_tendered_money")
     public Money buyerTenderedMoney;
+
     public TenderCashDetails withBuyerTenderedMoney(Money buyerTenderedMoney) {
         this.buyerTenderedMoney = buyerTenderedMoney;
         return this;
@@ -39,9 +40,11 @@ public class TenderCashDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("change_back_money")
     public Money changeBackMoney;
+
     public TenderCashDetails withChangeBackMoney(Money changeBackMoney) {
         this.changeBackMoney = changeBackMoney;
         return this;
     }
     
+    public TenderCashDetails(){}
 }

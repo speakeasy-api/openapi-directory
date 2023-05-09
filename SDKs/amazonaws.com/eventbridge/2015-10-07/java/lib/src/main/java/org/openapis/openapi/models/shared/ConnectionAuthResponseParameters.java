@@ -15,6 +15,7 @@ public class ConnectionAuthResponseParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiKeyAuthParameters")
     public ConnectionApiKeyAuthResponseParameters apiKeyAuthParameters;
+
     public ConnectionAuthResponseParameters withApiKeyAuthParameters(ConnectionApiKeyAuthResponseParameters apiKeyAuthParameters) {
         this.apiKeyAuthParameters = apiKeyAuthParameters;
         return this;
@@ -23,6 +24,7 @@ public class ConnectionAuthResponseParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BasicAuthParameters")
     public ConnectionBasicAuthResponseParameters basicAuthParameters;
+
     public ConnectionAuthResponseParameters withBasicAuthParameters(ConnectionBasicAuthResponseParameters basicAuthParameters) {
         this.basicAuthParameters = basicAuthParameters;
         return this;
@@ -31,6 +33,7 @@ public class ConnectionAuthResponseParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvocationHttpParameters")
     public ConnectionHttpParameters invocationHttpParameters;
+
     public ConnectionAuthResponseParameters withInvocationHttpParameters(ConnectionHttpParameters invocationHttpParameters) {
         this.invocationHttpParameters = invocationHttpParameters;
         return this;
@@ -39,9 +42,11 @@ public class ConnectionAuthResponseParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OAuthParameters")
     public ConnectionOAuthResponseParameters oAuthParameters;
+
     public ConnectionAuthResponseParameters withOAuthParameters(ConnectionOAuthResponseParameters oAuthParameters) {
         this.oAuthParameters = oAuthParameters;
         return this;
     }
     
+    public ConnectionAuthResponseParameters(){}
 }

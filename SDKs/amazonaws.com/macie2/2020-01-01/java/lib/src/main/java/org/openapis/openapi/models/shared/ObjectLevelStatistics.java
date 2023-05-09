@@ -15,6 +15,7 @@ public class ObjectLevelStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileType")
     public Long fileType;
+
     public ObjectLevelStatistics withFileType(Long fileType) {
         this.fileType = fileType;
         return this;
@@ -23,6 +24,7 @@ public class ObjectLevelStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageClass")
     public Long storageClass;
+
     public ObjectLevelStatistics withStorageClass(Long storageClass) {
         this.storageClass = storageClass;
         return this;
@@ -31,9 +33,11 @@ public class ObjectLevelStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public ObjectLevelStatistics withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public ObjectLevelStatistics(){}
 }

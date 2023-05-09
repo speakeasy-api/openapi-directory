@@ -71,11 +71,9 @@ public class Region {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSellersByRegionResponse res = new org.openapis.openapi.models.operations.GetSellersByRegionResponse() {{
+        org.openapis.openapi.models.operations.GetSellersByRegionResponse res = new org.openapis.openapi.models.operations.GetSellersByRegionResponse(contentType, httpRes.statusCode()) {{
             getSellersByRegion200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

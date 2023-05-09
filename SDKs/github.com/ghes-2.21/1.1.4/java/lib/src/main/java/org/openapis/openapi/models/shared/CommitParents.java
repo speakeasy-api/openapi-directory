@@ -12,6 +12,7 @@ public class CommitParents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public CommitParents withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -19,6 +20,7 @@ public class CommitParents {
     
     @JsonProperty("sha")
     public String sha;
+
     public CommitParents withSha(String sha) {
         this.sha = sha;
         return this;
@@ -26,9 +28,14 @@ public class CommitParents {
     
     @JsonProperty("url")
     public String url;
+
     public CommitParents withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CommitParents(@JsonProperty("sha") String sha, @JsonProperty("url") String url) {
+        this.sha = sha;
+        this.url = url;
+  }
 }

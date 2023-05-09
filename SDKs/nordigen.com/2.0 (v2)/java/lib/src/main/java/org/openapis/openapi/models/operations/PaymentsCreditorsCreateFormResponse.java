@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PaymentsCreditorsCreateFormResponse {
     
     public String contentType;
+
     public PaymentsCreditorsCreateFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PaymentsCreditorsCreateFormResponse {
     
     
     public org.openapis.openapi.models.shared.CreditorAccountWrite creditorAccountWrite;
+
     public PaymentsCreditorsCreateFormResponse withCreditorAccountWrite(org.openapis.openapi.models.shared.CreditorAccountWrite creditorAccountWrite) {
         this.creditorAccountWrite = creditorAccountWrite;
         return this;
@@ -23,6 +26,7 @@ public class PaymentsCreditorsCreateFormResponse {
     
     
     public Integer statusCode;
+
     public PaymentsCreditorsCreateFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class PaymentsCreditorsCreateFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PaymentsCreditorsCreateFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PaymentsCreditorsCreateFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

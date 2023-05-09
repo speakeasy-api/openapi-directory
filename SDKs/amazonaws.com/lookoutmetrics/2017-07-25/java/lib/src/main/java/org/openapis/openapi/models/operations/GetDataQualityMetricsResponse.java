@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDataQualityMetricsResponse {
@@ -12,6 +13,7 @@ public class GetDataQualityMetricsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetDataQualityMetricsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetDataQualityMetricsResponse {
     
     
     public String contentType;
+
     public GetDataQualityMetricsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDataQualityMetricsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDataQualityMetricsResponse getDataQualityMetricsResponse;
+
     public GetDataQualityMetricsResponse withGetDataQualityMetricsResponse(org.openapis.openapi.models.shared.GetDataQualityMetricsResponse getDataQualityMetricsResponse) {
         this.getDataQualityMetricsResponse = getDataQualityMetricsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetDataQualityMetricsResponse {
      */
     
     public Object internalServerException;
+
     public GetDataQualityMetricsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetDataQualityMetricsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetDataQualityMetricsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetDataQualityMetricsResponse {
     
     
     public Integer statusCode;
+
     public GetDataQualityMetricsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetDataQualityMetricsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDataQualityMetricsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetDataQualityMetricsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetDataQualityMetricsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class GetDataQualityMetricsResponse {
      */
     
     public Object validationException;
+
     public GetDataQualityMetricsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetDataQualityMetricsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

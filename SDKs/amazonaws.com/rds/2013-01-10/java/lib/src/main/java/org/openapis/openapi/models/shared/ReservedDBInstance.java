@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class ReservedDBInstance {
     
     public String currencyCode;
+
     public ReservedDBInstance withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -16,6 +17,7 @@ public class ReservedDBInstance {
     
     
     public String dbInstanceClass;
+
     public ReservedDBInstance withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -23,6 +25,7 @@ public class ReservedDBInstance {
     
     
     public Long dbInstanceCount;
+
     public ReservedDBInstance withDBInstanceCount(Long dbInstanceCount) {
         this.dbInstanceCount = dbInstanceCount;
         return this;
@@ -30,6 +33,7 @@ public class ReservedDBInstance {
     
     
     public Long duration;
+
     public ReservedDBInstance withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -37,6 +41,7 @@ public class ReservedDBInstance {
     
     
     public Double fixedPrice;
+
     public ReservedDBInstance withFixedPrice(Double fixedPrice) {
         this.fixedPrice = fixedPrice;
         return this;
@@ -44,6 +49,7 @@ public class ReservedDBInstance {
     
     
     public Boolean multiAZ;
+
     public ReservedDBInstance withMultiAZ(Boolean multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -51,6 +57,7 @@ public class ReservedDBInstance {
     
     
     public String offeringType;
+
     public ReservedDBInstance withOfferingType(String offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -58,6 +65,7 @@ public class ReservedDBInstance {
     
     
     public String productDescription;
+
     public ReservedDBInstance withProductDescription(String productDescription) {
         this.productDescription = productDescription;
         return this;
@@ -65,6 +73,7 @@ public class ReservedDBInstance {
     
     
     public RecurringChargeList[] recurringCharges;
+
     public ReservedDBInstance withRecurringCharges(RecurringChargeList[] recurringCharges) {
         this.recurringCharges = recurringCharges;
         return this;
@@ -72,6 +81,7 @@ public class ReservedDBInstance {
     
     
     public String reservedDBInstanceId;
+
     public ReservedDBInstance withReservedDBInstanceId(String reservedDBInstanceId) {
         this.reservedDBInstanceId = reservedDBInstanceId;
         return this;
@@ -79,6 +89,7 @@ public class ReservedDBInstance {
     
     
     public String reservedDBInstancesOfferingId;
+
     public ReservedDBInstance withReservedDBInstancesOfferingId(String reservedDBInstancesOfferingId) {
         this.reservedDBInstancesOfferingId = reservedDBInstancesOfferingId;
         return this;
@@ -86,6 +97,7 @@ public class ReservedDBInstance {
     
     
     public OffsetDateTime startTime;
+
     public ReservedDBInstance withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -93,6 +105,7 @@ public class ReservedDBInstance {
     
     
     public String state;
+
     public ReservedDBInstance withState(String state) {
         this.state = state;
         return this;
@@ -100,9 +113,11 @@ public class ReservedDBInstance {
     
     
     public Double usagePrice;
+
     public ReservedDBInstance withUsagePrice(Double usagePrice) {
         this.usagePrice = usagePrice;
         return this;
     }
     
+    public ReservedDBInstance(){}
 }

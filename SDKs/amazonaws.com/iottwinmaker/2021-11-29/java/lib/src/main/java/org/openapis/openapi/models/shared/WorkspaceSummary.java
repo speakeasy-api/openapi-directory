@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class WorkspaceSummary {
     @JsonProperty("arn")
     public String arn;
+
     public WorkspaceSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class WorkspaceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public WorkspaceSummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -36,6 +38,7 @@ public class WorkspaceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public WorkspaceSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class WorkspaceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateDateTime")
     public OffsetDateTime updateDateTime;
+
     public WorkspaceSummary withUpdateDateTime(OffsetDateTime updateDateTime) {
         this.updateDateTime = updateDateTime;
         return this;
@@ -52,9 +56,16 @@ public class WorkspaceSummary {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public WorkspaceSummary withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public WorkspaceSummary(@JsonProperty("arn") String arn, @JsonProperty("creationDateTime") OffsetDateTime creationDateTime, @JsonProperty("updateDateTime") OffsetDateTime updateDateTime, @JsonProperty("workspaceId") String workspaceId) {
+        this.arn = arn;
+        this.creationDateTime = creationDateTime;
+        this.updateDateTime = updateDateTime;
+        this.workspaceId = workspaceId;
+  }
 }

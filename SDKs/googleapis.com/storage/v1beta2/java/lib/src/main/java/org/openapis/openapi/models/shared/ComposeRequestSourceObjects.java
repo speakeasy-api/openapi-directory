@@ -15,6 +15,7 @@ public class ComposeRequestSourceObjects {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generation")
     public String generation;
+
     public ComposeRequestSourceObjects withGeneration(String generation) {
         this.generation = generation;
         return this;
@@ -26,6 +27,7 @@ public class ComposeRequestSourceObjects {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ComposeRequestSourceObjects withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class ComposeRequestSourceObjects {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectPreconditions")
     public ComposeRequestSourceObjectsObjectPreconditions objectPreconditions;
+
     public ComposeRequestSourceObjects withObjectPreconditions(ComposeRequestSourceObjectsObjectPreconditions objectPreconditions) {
         this.objectPreconditions = objectPreconditions;
         return this;
     }
     
+    public ComposeRequestSourceObjects(){}
 }

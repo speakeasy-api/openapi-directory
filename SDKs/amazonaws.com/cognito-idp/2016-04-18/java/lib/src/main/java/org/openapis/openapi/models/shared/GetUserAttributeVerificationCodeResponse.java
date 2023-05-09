@@ -15,9 +15,11 @@ public class GetUserAttributeVerificationCodeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeDeliveryDetails")
     public CodeDeliveryDetailsType codeDeliveryDetails;
+
     public GetUserAttributeVerificationCodeResponse withCodeDeliveryDetails(CodeDeliveryDetailsType codeDeliveryDetails) {
         this.codeDeliveryDetails = codeDeliveryDetails;
         return this;
     }
     
+    public GetUserAttributeVerificationCodeResponse(){}
 }

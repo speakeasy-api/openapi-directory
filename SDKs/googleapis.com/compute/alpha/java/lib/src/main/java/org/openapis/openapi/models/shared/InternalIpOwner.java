@@ -15,6 +15,7 @@ public class InternalIpOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipCidrRange")
     public String ipCidrRange;
+
     public InternalIpOwner withIpCidrRange(String ipCidrRange) {
         this.ipCidrRange = ipCidrRange;
         return this;
@@ -26,6 +27,7 @@ public class InternalIpOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owners")
     public String[] owners;
+
     public InternalIpOwner withOwners(String[] owners) {
         this.owners = owners;
         return this;
@@ -37,9 +39,11 @@ public class InternalIpOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemOwned")
     public Boolean systemOwned;
+
     public InternalIpOwner withSystemOwned(Boolean systemOwned) {
         this.systemOwned = systemOwned;
         return this;
     }
     
+    public InternalIpOwner(){}
 }

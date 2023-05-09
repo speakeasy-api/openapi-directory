@@ -12,6 +12,7 @@ public class RemoveSourceServerActionRequestBody {
      */
     @JsonProperty("actionID")
     public String actionID;
+
     public RemoveSourceServerActionRequestBody withActionID(String actionID) {
         this.actionID = actionID;
         return this;
@@ -22,9 +23,14 @@ public class RemoveSourceServerActionRequestBody {
      */
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public RemoveSourceServerActionRequestBody withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
     }
     
+    public RemoveSourceServerActionRequestBody(@JsonProperty("actionID") String actionID, @JsonProperty("sourceServerID") String sourceServerID) {
+        this.actionID = actionID;
+        this.sourceServerID = sourceServerID;
+  }
 }

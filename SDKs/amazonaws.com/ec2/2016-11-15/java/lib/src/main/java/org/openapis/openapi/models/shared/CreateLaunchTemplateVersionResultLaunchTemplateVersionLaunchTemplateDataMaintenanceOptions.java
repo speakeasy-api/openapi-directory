@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMaintenanceOptions {
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMaintenanceOptionsAutoRecoveryEnum autoRecovery;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMaintenanceOptions withAutoRecovery(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMaintenanceOptionsAutoRecoveryEnum autoRecovery) {
         this.autoRecovery = autoRecovery;
         return this;
     }
     
+    public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMaintenanceOptions(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateArtifactVersionJsonRequest {
@@ -23,9 +24,10 @@ public class CreateArtifactVersionJsonRequest {
      * 
      */
     @SpeakeasyMetadata("request:mediaType=application/vnd.create.extended+json")
-    public org.openapis.openapi.models.shared.ContentCreateRequest contentCreateRequest;
-    public CreateArtifactVersionJsonRequest withContentCreateRequest(org.openapis.openapi.models.shared.ContentCreateRequest contentCreateRequest) {
-        this.contentCreateRequest = contentCreateRequest;
+    public org.openapis.openapi.models.shared.ArtifactContent artifactContent;
+
+    public CreateArtifactVersionJsonRequest withArtifactContent(org.openapis.openapi.models.shared.ArtifactContent artifactContent) {
+        this.artifactContent = artifactContent;
         return this;
     }
     
@@ -34,6 +36,7 @@ public class CreateArtifactVersionJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Description")
     public String xRegistryDescription;
+
     public CreateArtifactVersionJsonRequest withXRegistryDescription(String xRegistryDescription) {
         this.xRegistryDescription = xRegistryDescription;
         return this;
@@ -44,6 +47,7 @@ public class CreateArtifactVersionJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Description-Encoded")
     public String xRegistryDescriptionEncoded;
+
     public CreateArtifactVersionJsonRequest withXRegistryDescriptionEncoded(String xRegistryDescriptionEncoded) {
         this.xRegistryDescriptionEncoded = xRegistryDescriptionEncoded;
         return this;
@@ -55,6 +59,7 @@ public class CreateArtifactVersionJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Name")
     public String xRegistryName;
+
     public CreateArtifactVersionJsonRequest withXRegistryName(String xRegistryName) {
         this.xRegistryName = xRegistryName;
         return this;
@@ -65,6 +70,7 @@ public class CreateArtifactVersionJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Name-Encoded")
     public String xRegistryNameEncoded;
+
     public CreateArtifactVersionJsonRequest withXRegistryNameEncoded(String xRegistryNameEncoded) {
         this.xRegistryNameEncoded = xRegistryNameEncoded;
         return this;
@@ -77,6 +83,7 @@ public class CreateArtifactVersionJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Version")
     public String xRegistryVersion;
+
     public CreateArtifactVersionJsonRequest withXRegistryVersion(String xRegistryVersion) {
         this.xRegistryVersion = xRegistryVersion;
         return this;
@@ -87,6 +94,7 @@ public class CreateArtifactVersionJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
     public String artifactId;
+
     public CreateArtifactVersionJsonRequest withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -97,9 +105,15 @@ public class CreateArtifactVersionJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public CreateArtifactVersionJsonRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public CreateArtifactVersionJsonRequest(@JsonProperty("ArtifactContent") org.openapis.openapi.models.shared.ArtifactContent artifactContent, @JsonProperty("artifactId") String artifactId, @JsonProperty("groupId") String groupId) {
+        this.artifactContent = artifactContent;
+        this.artifactId = artifactId;
+        this.groupId = groupId;
+  }
 }

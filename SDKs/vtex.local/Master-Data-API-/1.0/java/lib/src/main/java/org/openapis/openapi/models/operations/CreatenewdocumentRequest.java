@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatenewdocumentRequest {
@@ -12,6 +13,7 @@ public class CreatenewdocumentRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CreatenewdocumentRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CreatenewdocumentRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CreatenewdocumentRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreatenewdocumentRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, String> requestBody;
+
     public CreatenewdocumentRequest withRequestBody(java.util.Map<String, String> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -39,6 +43,7 @@ public class CreatenewdocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_schema")
     public String schema;
+
     public CreatenewdocumentRequest withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -49,9 +54,16 @@ public class CreatenewdocumentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataEntityName")
     public String dataEntityName;
+
     public CreatenewdocumentRequest withDataEntityName(String dataEntityName) {
         this.dataEntityName = dataEntityName;
         return this;
     }
     
+    public CreatenewdocumentRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") java.util.Map<String, String> requestBody, @JsonProperty("dataEntityName") String dataEntityName) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+        this.dataEntityName = dataEntityName;
+  }
 }

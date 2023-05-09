@@ -58,7 +58,7 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReportsResponse res = new org.openapis.openapi.models.operations.GetReportsResponse() {{
+        org.openapis.openapi.models.operations.GetReportsResponse res = new org.openapis.openapi.models.operations.GetReportsResponse(contentType, httpRes.statusCode()) {{
             reportSuccess = null;
             fourHundredError = null;
             fourHundredAndOneError = null;
@@ -66,8 +66,6 @@ public class Reports {
             fourHundredAndFourError = null;
             fiveHundredError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,7 +143,7 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReportsDatesResponse res = new org.openapis.openapi.models.operations.GetReportsDatesResponse() {{
+        org.openapis.openapi.models.operations.GetReportsDatesResponse res = new org.openapis.openapi.models.operations.GetReportsDatesResponse(contentType, httpRes.statusCode()) {{
             reportDates = null;
             fourHundredError = null;
             fourHundredAndOneError = null;
@@ -153,8 +151,6 @@ public class Reports {
             fourHundredAndFourError = null;
             fiveHundredError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -232,15 +228,13 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReportsStatusResponse res = new org.openapis.openapi.models.operations.GetReportsStatusResponse() {{
+        org.openapis.openapi.models.operations.GetReportsStatusResponse res = new org.openapis.openapi.models.operations.GetReportsStatusResponse(contentType, httpRes.statusCode()) {{
             reportStatus = null;
             fourHundredError = null;
             fourHundredAndOneError = null;
             fourHundredAndThreeError = null;
             fiveHundredError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -311,7 +305,7 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostReportsResponse res = new org.openapis.openapi.models.operations.PostReportsResponse() {{
+        org.openapis.openapi.models.operations.PostReportsResponse res = new org.openapis.openapi.models.operations.PostReportsResponse(contentType, httpRes.statusCode()) {{
             reportSuccess = null;
             fourHundredError = null;
             fourHundredAndOneError = null;
@@ -319,8 +313,6 @@ public class Reports {
             fourHundredAndFourError = null;
             fiveHundredError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -398,7 +390,7 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostReportsDatesResponse res = new org.openapis.openapi.models.operations.PostReportsDatesResponse() {{
+        org.openapis.openapi.models.operations.PostReportsDatesResponse res = new org.openapis.openapi.models.operations.PostReportsDatesResponse(contentType, httpRes.statusCode()) {{
             reportDates = null;
             fourHundredError = null;
             fourHundredAndOneError = null;
@@ -406,8 +398,6 @@ public class Reports {
             fourHundredAndFourError = null;
             fiveHundredError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -485,15 +475,13 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostReportsStatusResponse res = new org.openapis.openapi.models.operations.PostReportsStatusResponse() {{
+        org.openapis.openapi.models.operations.PostReportsStatusResponse res = new org.openapis.openapi.models.operations.PostReportsStatusResponse(contentType, httpRes.statusCode()) {{
             reportStatus = null;
             fourHundredError = null;
             fourHundredAndOneError = null;
             fourHundredAndThreeError = null;
             fiveHundredError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

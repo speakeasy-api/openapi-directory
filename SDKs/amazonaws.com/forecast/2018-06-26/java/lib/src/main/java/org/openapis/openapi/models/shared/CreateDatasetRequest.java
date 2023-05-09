@@ -12,6 +12,7 @@ public class CreateDatasetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataFrequency")
     public String dataFrequency;
+
     public CreateDatasetRequest withDataFrequency(String dataFrequency) {
         this.dataFrequency = dataFrequency;
         return this;
@@ -19,6 +20,7 @@ public class CreateDatasetRequest {
     
     @JsonProperty("DatasetName")
     public String datasetName;
+
     public CreateDatasetRequest withDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
@@ -26,6 +28,7 @@ public class CreateDatasetRequest {
     
     @JsonProperty("DatasetType")
     public DatasetTypeEnum datasetType;
+
     public CreateDatasetRequest withDatasetType(DatasetTypeEnum datasetType) {
         this.datasetType = datasetType;
         return this;
@@ -33,6 +36,7 @@ public class CreateDatasetRequest {
     
     @JsonProperty("Domain")
     public DomainEnum domain;
+
     public CreateDatasetRequest withDomain(DomainEnum domain) {
         this.domain = domain;
         return this;
@@ -41,6 +45,7 @@ public class CreateDatasetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfig")
     public EncryptionConfig encryptionConfig;
+
     public CreateDatasetRequest withEncryptionConfig(EncryptionConfig encryptionConfig) {
         this.encryptionConfig = encryptionConfig;
         return this;
@@ -48,6 +53,7 @@ public class CreateDatasetRequest {
     
     @JsonProperty("Schema")
     public Schema schema;
+
     public CreateDatasetRequest withSchema(Schema schema) {
         this.schema = schema;
         return this;
@@ -56,9 +62,16 @@ public class CreateDatasetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateDatasetRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDatasetRequest(@JsonProperty("DatasetName") String datasetName, @JsonProperty("DatasetType") DatasetTypeEnum datasetType, @JsonProperty("Domain") DomainEnum domain, @JsonProperty("Schema") Schema schema) {
+        this.datasetName = datasetName;
+        this.datasetType = datasetType;
+        this.domain = domain;
+        this.schema = schema;
+  }
 }

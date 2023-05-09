@@ -18,6 +18,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("@id")
     public String atId;
+
     public GetUserUsername200ApplicationJSON withAtId(String atId) {
         this.atId = atId;
         return this;
@@ -29,6 +30,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public GetUserUsername200ApplicationJSONAddress address;
+
     public GetUserUsername200ApplicationJSON withAddress(GetUserUsername200ApplicationJSONAddress address) {
         this.address = address;
         return this;
@@ -40,6 +42,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("birthdate")
     public String birthdate;
+
     public GetUserUsername200ApplicationJSON withBirthdate(String birthdate) {
         this.birthdate = birthdate;
         return this;
@@ -51,6 +54,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public GetUserUsername200ApplicationJSON withEmail(String email) {
         this.email = email;
         return this;
@@ -62,6 +66,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_verified")
     public Boolean emailVerified;
+
     public GetUserUsername200ApplicationJSON withEmailVerified(Boolean emailVerified) {
         this.emailVerified = emailVerified;
         return this;
@@ -73,6 +78,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("family_name")
     public String familyName;
+
     public GetUserUsername200ApplicationJSON withFamilyName(String familyName) {
         this.familyName = familyName;
         return this;
@@ -84,6 +90,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public String gender;
+
     public GetUserUsername200ApplicationJSON withGender(String gender) {
         this.gender = gender;
         return this;
@@ -95,6 +102,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("given_name")
     public String givenName;
+
     public GetUserUsername200ApplicationJSON withGivenName(String givenName) {
         this.givenName = givenName;
         return this;
@@ -106,6 +114,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public GetUserUsername200ApplicationJSON withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -117,6 +126,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("me")
     public String me;
+
     public GetUserUsername200ApplicationJSON withMe(String me) {
         this.me = me;
         return this;
@@ -128,6 +138,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("middle_name")
     public String middleName;
+
     public GetUserUsername200ApplicationJSON withMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
@@ -139,6 +150,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetUserUsername200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -150,6 +162,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nickname")
     public String nickname;
+
     public GetUserUsername200ApplicationJSON withNickname(String nickname) {
         this.nickname = nickname;
         return this;
@@ -161,6 +174,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public GetUserUsername200ApplicationJSON withPassword(String password) {
         this.password = password;
         return this;
@@ -172,6 +186,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_number")
     public String phoneNumber;
+
     public GetUserUsername200ApplicationJSON withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -183,6 +198,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_number_verified")
     public Boolean phoneNumberVerified;
+
     public GetUserUsername200ApplicationJSON withPhoneNumberVerified(Boolean phoneNumberVerified) {
         this.phoneNumberVerified = phoneNumberVerified;
         return this;
@@ -194,6 +210,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("picture")
     public String picture;
+
     public GetUserUsername200ApplicationJSON withPicture(String picture) {
         this.picture = picture;
         return this;
@@ -205,6 +222,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferred_username")
     public String preferredUsername;
+
     public GetUserUsername200ApplicationJSON withPreferredUsername(String preferredUsername) {
         this.preferredUsername = preferredUsername;
         return this;
@@ -216,6 +234,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile")
     public String profile;
+
     public GetUserUsername200ApplicationJSON withProfile(String profile) {
         this.profile = profile;
         return this;
@@ -226,6 +245,7 @@ public class GetUserUsername200ApplicationJSON {
      */
     @JsonProperty("sub")
     public String sub;
+
     public GetUserUsername200ApplicationJSON withSub(String sub) {
         this.sub = sub;
         return this;
@@ -237,6 +257,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public GetUserUsername200ApplicationJSON withUid(String uid) {
         this.uid = uid;
         return this;
@@ -248,6 +269,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public Double updatedAt;
+
     public GetUserUsername200ApplicationJSON withUpdatedAt(Double updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -259,6 +281,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webmail")
     public String webmail;
+
     public GetUserUsername200ApplicationJSON withWebmail(String webmail) {
         this.webmail = webmail;
         return this;
@@ -270,6 +293,7 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website")
     public String website;
+
     public GetUserUsername200ApplicationJSON withWebsite(String website) {
         this.website = website;
         return this;
@@ -281,9 +305,13 @@ public class GetUserUsername200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zoneinfo")
     public String zoneinfo;
+
     public GetUserUsername200ApplicationJSON withZoneinfo(String zoneinfo) {
         this.zoneinfo = zoneinfo;
         return this;
     }
     
+    public GetUserUsername200ApplicationJSON(@JsonProperty("sub") String sub) {
+        this.sub = sub;
+  }
 }

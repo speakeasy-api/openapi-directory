@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SetAlarmStateInput {
     
     public String alarmName;
+
     public SetAlarmStateInput withAlarmName(String alarmName) {
         this.alarmName = alarmName;
         return this;
@@ -16,6 +17,7 @@ public class SetAlarmStateInput {
     
     
     public String stateReason;
+
     public SetAlarmStateInput withStateReason(String stateReason) {
         this.stateReason = stateReason;
         return this;
@@ -23,6 +25,7 @@ public class SetAlarmStateInput {
     
     
     public String stateReasonData;
+
     public SetAlarmStateInput withStateReasonData(String stateReasonData) {
         this.stateReasonData = stateReasonData;
         return this;
@@ -30,9 +33,15 @@ public class SetAlarmStateInput {
     
     
     public StateValueEnum stateValue;
+
     public SetAlarmStateInput withStateValue(StateValueEnum stateValue) {
         this.stateValue = stateValue;
         return this;
     }
     
+    public SetAlarmStateInput(@JsonProperty("AlarmName") String alarmName, @JsonProperty("StateReason") String stateReason, @JsonProperty("StateValue") StateValueEnum stateValue) {
+        this.alarmName = alarmName;
+        this.stateReason = stateReason;
+        this.stateValue = stateValue;
+  }
 }

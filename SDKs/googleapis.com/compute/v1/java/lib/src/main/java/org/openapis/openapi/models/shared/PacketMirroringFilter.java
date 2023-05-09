@@ -15,6 +15,7 @@ public class PacketMirroringFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IPProtocols")
     public String[] ipProtocols;
+
     public PacketMirroringFilter withIPProtocols(String[] ipProtocols) {
         this.ipProtocols = ipProtocols;
         return this;
@@ -26,6 +27,7 @@ public class PacketMirroringFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cidrRanges")
     public String[] cidrRanges;
+
     public PacketMirroringFilter withCidrRanges(String[] cidrRanges) {
         this.cidrRanges = cidrRanges;
         return this;
@@ -37,9 +39,11 @@ public class PacketMirroringFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public PacketMirroringFilterDirectionEnum direction;
+
     public PacketMirroringFilter withDirection(PacketMirroringFilterDirectionEnum direction) {
         this.direction = direction;
         return this;
     }
     
+    public PacketMirroringFilter(){}
 }

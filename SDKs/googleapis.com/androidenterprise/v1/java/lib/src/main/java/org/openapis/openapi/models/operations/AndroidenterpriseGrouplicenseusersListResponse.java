@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AndroidenterpriseGrouplicenseusersListResponse {
     
     public String contentType;
+
     public AndroidenterpriseGrouplicenseusersListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AndroidenterpriseGrouplicenseusersListResponse {
      */
     
     public org.openapis.openapi.models.shared.GroupLicenseUsersListResponse groupLicenseUsersListResponse;
+
     public AndroidenterpriseGrouplicenseusersListResponse withGroupLicenseUsersListResponse(org.openapis.openapi.models.shared.GroupLicenseUsersListResponse groupLicenseUsersListResponse) {
         this.groupLicenseUsersListResponse = groupLicenseUsersListResponse;
         return this;
@@ -26,6 +29,7 @@ public class AndroidenterpriseGrouplicenseusersListResponse {
     
     
     public Integer statusCode;
+
     public AndroidenterpriseGrouplicenseusersListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AndroidenterpriseGrouplicenseusersListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AndroidenterpriseGrouplicenseusersListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AndroidenterpriseGrouplicenseusersListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

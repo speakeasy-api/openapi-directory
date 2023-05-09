@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CreateTicketResponse;
-import org.openapis.openapi.models.shared.AbuseTicketCreateTypeEnum;
 import org.openapis.openapi.models.shared.AbuseTicketCreate;
+import org.openapis.openapi.models.shared.AbuseTicketCreateTypeEnum;
 
 public class Application {
     public static void main(String[] args) {
@@ -21,16 +20,18 @@ public class Application {
                 proxy = "distinctio";
                 source = "quibusdam";
                 target = "unde";
-                type = "PHISHING";
-            }}            
+                type = AbuseTicketCreateTypeEnum.PHISHING;
+            }};            
 
             CreateTicketResponse res = sdk.v1.createTicket(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

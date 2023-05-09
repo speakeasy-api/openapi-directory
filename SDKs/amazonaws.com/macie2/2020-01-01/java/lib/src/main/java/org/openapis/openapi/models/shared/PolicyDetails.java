@@ -15,6 +15,7 @@ public class PolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public FindingAction action;
+
     public PolicyDetails withAction(FindingAction action) {
         this.action = action;
         return this;
@@ -23,9 +24,11 @@ public class PolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actor")
     public FindingActor actor;
+
     public PolicyDetails withActor(FindingActor actor) {
         this.actor = actor;
         return this;
     }
     
+    public PolicyDetails(){}
 }

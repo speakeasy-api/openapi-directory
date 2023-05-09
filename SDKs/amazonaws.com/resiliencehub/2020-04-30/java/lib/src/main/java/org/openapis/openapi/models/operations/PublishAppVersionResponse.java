@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PublishAppVersionResponse {
@@ -12,6 +13,7 @@ public class PublishAppVersionResponse {
      */
     
     public Object accessDeniedException;
+
     public PublishAppVersionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class PublishAppVersionResponse {
      */
     
     public Object conflictException;
+
     public PublishAppVersionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class PublishAppVersionResponse {
     
     
     public String contentType;
+
     public PublishAppVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PublishAppVersionResponse {
      */
     
     public Object internalServerException;
+
     public PublishAppVersionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class PublishAppVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.PublishAppVersionResponse publishAppVersionResponse;
+
     public PublishAppVersionResponse withPublishAppVersionResponse(org.openapis.openapi.models.shared.PublishAppVersionResponse publishAppVersionResponse) {
         this.publishAppVersionResponse = publishAppVersionResponse;
         return this;
@@ -56,6 +62,7 @@ public class PublishAppVersionResponse {
     
     
     public Integer statusCode;
+
     public PublishAppVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class PublishAppVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PublishAppVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class PublishAppVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PublishAppVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class PublishAppVersionResponse {
      */
     
     public Object throttlingException;
+
     public PublishAppVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class PublishAppVersionResponse {
      */
     
     public Object validationException;
+
     public PublishAppVersionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PublishAppVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

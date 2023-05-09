@@ -68,11 +68,9 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetResponse res = new org.openapis.openapi.models.operations.OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetResponse() {{
+        org.openapis.openapi.models.operations.OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetResponse res = new org.openapis.openapi.models.operations.OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetResponse(contentType, httpRes.statusCode()) {{
             operationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGet200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -123,11 +121,9 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OperationsFlightstatusByFlightNumberAndDateGetResponse res = new org.openapis.openapi.models.operations.OperationsFlightstatusByFlightNumberAndDateGetResponse() {{
+        org.openapis.openapi.models.operations.OperationsFlightstatusByFlightNumberAndDateGetResponse res = new org.openapis.openapi.models.operations.OperationsFlightstatusByFlightNumberAndDateGetResponse(contentType, httpRes.statusCode()) {{
             operationsFlightstatusByFlightNumberAndDateGet200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,11 +174,9 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetResponse res = new org.openapis.openapi.models.operations.OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetResponse() {{
+        org.openapis.openapi.models.operations.OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetResponse res = new org.openapis.openapi.models.operations.OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetResponse(contentType, httpRes.statusCode()) {{
             operationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGet200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -233,11 +227,9 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OperationsFlightstatusRouteDateByOriginAndDestinationGetResponse res = new org.openapis.openapi.models.operations.OperationsFlightstatusRouteDateByOriginAndDestinationGetResponse() {{
+        org.openapis.openapi.models.operations.OperationsFlightstatusRouteDateByOriginAndDestinationGetResponse res = new org.openapis.openapi.models.operations.OperationsFlightstatusRouteDateByOriginAndDestinationGetResponse(contentType, httpRes.statusCode()) {{
             operationsFlightstatusRouteDateByOriginAndDestinationGet200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -288,11 +280,9 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OperationsSchedulesFromDateTimeByOriginAndDestinationGetResponse res = new org.openapis.openapi.models.operations.OperationsSchedulesFromDateTimeByOriginAndDestinationGetResponse() {{
+        org.openapis.openapi.models.operations.OperationsSchedulesFromDateTimeByOriginAndDestinationGetResponse res = new org.openapis.openapi.models.operations.OperationsSchedulesFromDateTimeByOriginAndDestinationGetResponse(contentType, httpRes.statusCode()) {{
             operationsSchedulesFromDateTimeByOriginAndDestinationGet200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

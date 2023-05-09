@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetSecurityConfigRequest {
     @JsonProperty("id")
     public String id;
+
     public GetSecurityConfigRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetSecurityConfigRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

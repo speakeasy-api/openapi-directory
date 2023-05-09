@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.FileProjectsLocationsBackupsCreateSecurity;
 import org.openapis.openapi.models.operations.FileProjectsLocationsBackupsCreateRequest;
 import org.openapis.openapi.models.operations.FileProjectsLocationsBackupsCreateResponse;
+import org.openapis.openapi.models.operations.FileProjectsLocationsBackupsCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.BackupInput;
 import org.openapis.openapi.models.shared.XgafvEnum;
@@ -30,45 +29,45 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            FileProjectsLocationsBackupsCreateRequest req = new FileProjectsLocationsBackupsCreateRequest() {{
-                dollarXgafv = "2";
+            FileProjectsLocationsBackupsCreateRequest req = new FileProjectsLocationsBackupsCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 backupInput = new BackupInput() {{
-                    description = "provident";
-                    kmsKey = "distinctio";
+                    description = "distinctio";
+                    kmsKey = "quibusdam";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("unde", "nulla");
-                        put("corrupti", "illum");
-                        put("vel", "error");
-                        put("deserunt", "suscipit");
+                        put("nulla", "corrupti");
+                        put("illum", "vel");
+                        put("error", "deserunt");
                     }};
-                    sourceFileShare = "iure";
-                    sourceInstance = "magnam";
-                }};
-                accessToken = "debitis";
-                alt = "json";
-                backupId = "delectus";
-                callback = "tempora";
-                fields = "suscipit";
-                key = "molestiae";
-                oauthToken = "minus";
-                parent = "placeat";
+                    sourceFileShare = "suscipit";
+                    sourceInstance = "iure";
+                }};;
+                accessToken = "magnam";
+                alt = AltEnum.PROTO;
+                backupId = "ipsa";
+                callback = "delectus";
+                fields = "tempora";
+                key = "suscipit";
+                oauthToken = "molestiae";
                 prettyPrint = false;
-                quotaUser = "voluptatum";
-                uploadType = "iusto";
-                uploadProtocol = "excepturi";
-            }}            
+                quotaUser = "minus";
+                uploadType = "placeat";
+                uploadProtocol = "voluptatum";
+            }};            
 
-            FileProjectsLocationsBackupsCreateResponse res = sdk.projects.fileProjectsLocationsBackupsCreate(req, new FileProjectsLocationsBackupsCreateSecurity() {{
+            FileProjectsLocationsBackupsCreateResponse res = sdk.projects.fileProjectsLocationsBackupsCreate(req, new FileProjectsLocationsBackupsCreateSecurity("iusto", "excepturi") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.operation.isPresent()) {
+            if (res.operation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -76,21 +75,22 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `fileProjectsLocationsBackupsCreate` - Creates a backup.
-* `fileProjectsLocationsBackupsList` - Lists all backups in a project for either a specified location or for all locations.
-* `fileProjectsLocationsInstancesCreate` - Creates an instance. When creating from a backup, the capacity of the new instance needs to be equal to or larger than the capacity of the backup (and also equal to or larger than the minimum capacity of the tier).
-* `fileProjectsLocationsInstancesList` - Lists all instances in a project for either a specified location or for all locations.
-* `fileProjectsLocationsInstancesRestore` - Restores an existing instance's file share from a backup. The capacity of the instance needs to be equal to or larger than the capacity of the backup (and also equal to or larger than the minimum capacity of the tier).
-* `fileProjectsLocationsInstancesSnapshotsCreate` - Creates a snapshot.
-* `fileProjectsLocationsInstancesSnapshotsList` - Lists all snapshots in a project for either a specified location or for all locations.
-* `fileProjectsLocationsInstancesSnapshotsPatch` - Updates the settings of a specific snapshot.
-* `fileProjectsLocationsList` - Lists information about the supported locations for this service.
-* `fileProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `fileProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-* `fileProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `fileProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [fileProjectsLocationsBackupsCreate](docs/projects/README.md#fileprojectslocationsbackupscreate) - Creates a backup.
+* [fileProjectsLocationsBackupsList](docs/projects/README.md#fileprojectslocationsbackupslist) - Lists all backups in a project for either a specified location or for all locations.
+* [fileProjectsLocationsInstancesCreate](docs/projects/README.md#fileprojectslocationsinstancescreate) - Creates an instance. When creating from a backup, the capacity of the new instance needs to be equal to or larger than the capacity of the backup (and also equal to or larger than the minimum capacity of the tier).
+* [fileProjectsLocationsInstancesList](docs/projects/README.md#fileprojectslocationsinstanceslist) - Lists all instances in a project for either a specified location or for all locations.
+* [fileProjectsLocationsInstancesRestore](docs/projects/README.md#fileprojectslocationsinstancesrestore) - Restores an existing instance's file share from a backup. The capacity of the instance needs to be equal to or larger than the capacity of the backup (and also equal to or larger than the minimum capacity of the tier).
+* [fileProjectsLocationsInstancesRevert](docs/projects/README.md#fileprojectslocationsinstancesrevert) - Revert an existing instance's file system to a specified snapshot.
+* [fileProjectsLocationsInstancesSnapshotsCreate](docs/projects/README.md#fileprojectslocationsinstancessnapshotscreate) - Creates a snapshot.
+* [fileProjectsLocationsInstancesSnapshotsList](docs/projects/README.md#fileprojectslocationsinstancessnapshotslist) - Lists all snapshots in a project for either a specified location or for all locations.
+* [fileProjectsLocationsInstancesSnapshotsPatch](docs/projects/README.md#fileprojectslocationsinstancessnapshotspatch) - Updates the settings of a specific snapshot.
+* [fileProjectsLocationsList](docs/projects/README.md#fileprojectslocationslist) - Lists information about the supported locations for this service.
+* [fileProjectsLocationsOperationsCancel](docs/projects/README.md#fileprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [fileProjectsLocationsOperationsDelete](docs/projects/README.md#fileprojectslocationsoperationsdelete) - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+* [fileProjectsLocationsOperationsGet](docs/projects/README.md#fileprojectslocationsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* [fileProjectsLocationsOperationsList](docs/projects/README.md#fileprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 <!-- End SDK Available Operations -->
 
 ### Maturity

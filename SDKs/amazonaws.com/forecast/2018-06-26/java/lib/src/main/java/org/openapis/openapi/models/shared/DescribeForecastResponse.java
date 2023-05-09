@@ -22,6 +22,7 @@ public class DescribeForecastResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeForecastResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DescribeForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetGroupArn")
     public String datasetGroupArn;
+
     public DescribeForecastResponse withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -38,6 +40,7 @@ public class DescribeForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedTimeRemainingInMinutes")
     public Long estimatedTimeRemainingInMinutes;
+
     public DescribeForecastResponse withEstimatedTimeRemainingInMinutes(Long estimatedTimeRemainingInMinutes) {
         this.estimatedTimeRemainingInMinutes = estimatedTimeRemainingInMinutes;
         return this;
@@ -46,6 +49,7 @@ public class DescribeForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastArn")
     public String forecastArn;
+
     public DescribeForecastResponse withForecastArn(String forecastArn) {
         this.forecastArn = forecastArn;
         return this;
@@ -54,6 +58,7 @@ public class DescribeForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastName")
     public String forecastName;
+
     public DescribeForecastResponse withForecastName(String forecastName) {
         this.forecastName = forecastName;
         return this;
@@ -62,6 +67,7 @@ public class DescribeForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastTypes")
     public String[] forecastTypes;
+
     public DescribeForecastResponse withForecastTypes(String[] forecastTypes) {
         this.forecastTypes = forecastTypes;
         return this;
@@ -72,6 +78,7 @@ public class DescribeForecastResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public DescribeForecastResponse withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -80,6 +87,7 @@ public class DescribeForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public DescribeForecastResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -88,6 +96,7 @@ public class DescribeForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictorArn")
     public String predictorArn;
+
     public DescribeForecastResponse withPredictorArn(String predictorArn) {
         this.predictorArn = predictorArn;
         return this;
@@ -96,6 +105,7 @@ public class DescribeForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public DescribeForecastResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -104,9 +114,11 @@ public class DescribeForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeSeriesSelector")
     public TimeSeriesSelector timeSeriesSelector;
+
     public DescribeForecastResponse withTimeSeriesSelector(TimeSeriesSelector timeSeriesSelector) {
         this.timeSeriesSelector = timeSeriesSelector;
         return this;
     }
     
+    public DescribeForecastResponse(){}
 }

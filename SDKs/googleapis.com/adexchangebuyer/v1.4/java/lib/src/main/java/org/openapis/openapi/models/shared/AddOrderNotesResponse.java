@@ -15,9 +15,11 @@ public class AddOrderNotesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public MarketplaceNote[] notes;
+
     public AddOrderNotesResponse withNotes(MarketplaceNote[] notes) {
         this.notes = notes;
         return this;
     }
     
+    public AddOrderNotesResponse(){}
 }

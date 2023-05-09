@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTCreateEgressOnlyInternetGatewayResponse {
     
     public byte[] body;
+
     public POSTCreateEgressOnlyInternetGatewayResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTCreateEgressOnlyInternetGatewayResponse {
     
     
     public String contentType;
+
     public POSTCreateEgressOnlyInternetGatewayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTCreateEgressOnlyInternetGatewayResponse {
     
     
     public Integer statusCode;
+
     public POSTCreateEgressOnlyInternetGatewayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTCreateEgressOnlyInternetGatewayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTCreateEgressOnlyInternetGatewayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTCreateEgressOnlyInternetGatewayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

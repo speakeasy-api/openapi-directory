@@ -15,6 +15,7 @@ public class AwsEc2InstanceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEc2NetworkInterfaceViolations")
     public AwsEc2NetworkInterfaceViolation[] awsEc2NetworkInterfaceViolations;
+
     public AwsEc2InstanceViolation withAwsEc2NetworkInterfaceViolations(AwsEc2NetworkInterfaceViolation[] awsEc2NetworkInterfaceViolations) {
         this.awsEc2NetworkInterfaceViolations = awsEc2NetworkInterfaceViolations;
         return this;
@@ -23,9 +24,11 @@ public class AwsEc2InstanceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViolationTarget")
     public String violationTarget;
+
     public AwsEc2InstanceViolation withViolationTarget(String violationTarget) {
         this.violationTarget = violationTarget;
         return this;
     }
     
+    public AwsEc2InstanceViolation(){}
 }

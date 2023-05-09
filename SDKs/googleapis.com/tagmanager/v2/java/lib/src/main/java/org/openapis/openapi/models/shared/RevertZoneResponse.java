@@ -18,9 +18,11 @@ public class RevertZoneResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public Zone zone;
+
     public RevertZoneResponse withZone(Zone zone) {
         this.zone = zone;
         return this;
     }
     
+    public RevertZoneResponse(){}
 }

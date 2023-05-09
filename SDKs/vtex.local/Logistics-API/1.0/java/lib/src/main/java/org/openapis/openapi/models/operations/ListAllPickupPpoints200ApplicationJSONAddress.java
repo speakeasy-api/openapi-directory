@@ -15,6 +15,7 @@ public class ListAllPickupPpoints200ApplicationJSONAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public ListAllPickupPpoints200ApplicationJSONAddress withCity(String city) {
         this.city = city;
         return this;
@@ -26,6 +27,7 @@ public class ListAllPickupPpoints200ApplicationJSONAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complement")
     public String complement;
+
     public ListAllPickupPpoints200ApplicationJSONAddress withComplement(String complement) {
         this.complement = complement;
         return this;
@@ -34,6 +36,7 @@ public class ListAllPickupPpoints200ApplicationJSONAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public ListAllPickupPpoints200ApplicationJSONAddressCountry country;
+
     public ListAllPickupPpoints200ApplicationJSONAddress withCountry(ListAllPickupPpoints200ApplicationJSONAddressCountry country) {
         this.country = country;
         return this;
@@ -45,6 +48,7 @@ public class ListAllPickupPpoints200ApplicationJSONAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public ListAllPickupPpoints200ApplicationJSONAddressLocation location;
+
     public ListAllPickupPpoints200ApplicationJSONAddress withLocation(ListAllPickupPpoints200ApplicationJSONAddressLocation location) {
         this.location = location;
         return this;
@@ -56,6 +60,7 @@ public class ListAllPickupPpoints200ApplicationJSONAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("neighborhood")
     public String neighborhood;
+
     public ListAllPickupPpoints200ApplicationJSONAddress withNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
         return this;
@@ -67,6 +72,7 @@ public class ListAllPickupPpoints200ApplicationJSONAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public ListAllPickupPpoints200ApplicationJSONAddress withNumber(String number) {
         this.number = number;
         return this;
@@ -78,6 +84,7 @@ public class ListAllPickupPpoints200ApplicationJSONAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public ListAllPickupPpoints200ApplicationJSONAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -89,6 +96,7 @@ public class ListAllPickupPpoints200ApplicationJSONAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public ListAllPickupPpoints200ApplicationJSONAddress withState(String state) {
         this.state = state;
         return this;
@@ -100,9 +108,11 @@ public class ListAllPickupPpoints200ApplicationJSONAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street")
     public String street;
+
     public ListAllPickupPpoints200ApplicationJSONAddress withStreet(String street) {
         this.street = street;
         return this;
     }
     
+    public ListAllPickupPpoints200ApplicationJSONAddress(){}
 }

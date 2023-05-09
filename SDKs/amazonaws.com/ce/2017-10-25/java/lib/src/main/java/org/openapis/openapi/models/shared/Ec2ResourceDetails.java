@@ -15,6 +15,7 @@ public class Ec2ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HourlyOnDemandRate")
     public String hourlyOnDemandRate;
+
     public Ec2ResourceDetails withHourlyOnDemandRate(String hourlyOnDemandRate) {
         this.hourlyOnDemandRate = hourlyOnDemandRate;
         return this;
@@ -23,6 +24,7 @@ public class Ec2ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public Ec2ResourceDetails withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -31,6 +33,7 @@ public class Ec2ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Memory")
     public String memory;
+
     public Ec2ResourceDetails withMemory(String memory) {
         this.memory = memory;
         return this;
@@ -39,6 +42,7 @@ public class Ec2ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkPerformance")
     public String networkPerformance;
+
     public Ec2ResourceDetails withNetworkPerformance(String networkPerformance) {
         this.networkPerformance = networkPerformance;
         return this;
@@ -47,6 +51,7 @@ public class Ec2ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Platform")
     public String platform;
+
     public Ec2ResourceDetails withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -55,6 +60,7 @@ public class Ec2ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public Ec2ResourceDetails withRegion(String region) {
         this.region = region;
         return this;
@@ -63,6 +69,7 @@ public class Ec2ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sku")
     public String sku;
+
     public Ec2ResourceDetails withSku(String sku) {
         this.sku = sku;
         return this;
@@ -71,6 +78,7 @@ public class Ec2ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Storage")
     public String storage;
+
     public Ec2ResourceDetails withStorage(String storage) {
         this.storage = storage;
         return this;
@@ -79,9 +87,11 @@ public class Ec2ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Vcpu")
     public String vcpu;
+
     public Ec2ResourceDetails withVcpu(String vcpu) {
         this.vcpu = vcpu;
         return this;
     }
     
+    public Ec2ResourceDetails(){}
 }

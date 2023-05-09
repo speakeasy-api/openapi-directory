@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateScheduleRequest {
@@ -12,6 +13,7 @@ public class UpdateScheduleRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateUserScheduleRequest updateUserScheduleRequest;
+
     public UpdateScheduleRequest withUpdateUserScheduleRequest(org.openapis.openapi.models.shared.UpdateUserScheduleRequest updateUserScheduleRequest) {
         this.updateUserScheduleRequest = updateUserScheduleRequest;
         return this;
@@ -22,9 +24,14 @@ public class UpdateScheduleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schedule_id")
     public String scheduleId;
+
     public UpdateScheduleRequest withScheduleId(String scheduleId) {
         this.scheduleId = scheduleId;
         return this;
     }
     
+    public UpdateScheduleRequest(@JsonProperty("UpdateUserScheduleRequest") org.openapis.openapi.models.shared.UpdateUserScheduleRequest updateUserScheduleRequest, @JsonProperty("schedule_id") String scheduleId) {
+        this.updateUserScheduleRequest = updateUserScheduleRequest;
+        this.scheduleId = scheduleId;
+  }
 }

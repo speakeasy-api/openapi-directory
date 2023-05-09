@@ -15,6 +15,7 @@ public class TaskListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public TaskSimpleVO[] results;
+
     public TaskListVO withResults(TaskSimpleVO[] results) {
         this.results = results;
         return this;
@@ -23,6 +24,7 @@ public class TaskListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public TaskListVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class TaskListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public TaskListVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public TaskListVO(){}
 }

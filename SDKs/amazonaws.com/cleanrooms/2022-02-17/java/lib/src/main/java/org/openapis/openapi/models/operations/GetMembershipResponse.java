@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMembershipResponse {
@@ -12,6 +13,7 @@ public class GetMembershipResponse {
      */
     
     public Object accessDeniedException;
+
     public GetMembershipResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetMembershipResponse {
     
     
     public String contentType;
+
     public GetMembershipResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetMembershipResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMembershipOutput getMembershipOutput;
+
     public GetMembershipResponse withGetMembershipOutput(org.openapis.openapi.models.shared.GetMembershipOutput getMembershipOutput) {
         this.getMembershipOutput = getMembershipOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetMembershipResponse {
      */
     
     public Object internalServerException;
+
     public GetMembershipResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetMembershipResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetMembershipResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetMembershipResponse {
     
     
     public Integer statusCode;
+
     public GetMembershipResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetMembershipResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMembershipResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetMembershipResponse {
      */
     
     public Object throttlingException;
+
     public GetMembershipResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetMembershipResponse {
      */
     
     public Object validationException;
+
     public GetMembershipResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetMembershipResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

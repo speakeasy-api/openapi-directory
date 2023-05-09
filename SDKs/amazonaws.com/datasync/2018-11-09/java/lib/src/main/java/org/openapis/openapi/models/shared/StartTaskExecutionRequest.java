@@ -15,6 +15,7 @@ public class StartTaskExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Excludes")
     public FilterRule[] excludes;
+
     public StartTaskExecutionRequest withExcludes(FilterRule[] excludes) {
         this.excludes = excludes;
         return this;
@@ -23,6 +24,7 @@ public class StartTaskExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Includes")
     public FilterRule[] includes;
+
     public StartTaskExecutionRequest withIncludes(FilterRule[] includes) {
         this.includes = includes;
         return this;
@@ -34,6 +36,7 @@ public class StartTaskExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OverrideOptions")
     public Options overrideOptions;
+
     public StartTaskExecutionRequest withOverrideOptions(Options overrideOptions) {
         this.overrideOptions = overrideOptions;
         return this;
@@ -42,6 +45,7 @@ public class StartTaskExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public TagListEntry[] tags;
+
     public StartTaskExecutionRequest withTags(TagListEntry[] tags) {
         this.tags = tags;
         return this;
@@ -49,9 +53,13 @@ public class StartTaskExecutionRequest {
     
     @JsonProperty("TaskArn")
     public String taskArn;
+
     public StartTaskExecutionRequest withTaskArn(String taskArn) {
         this.taskArn = taskArn;
         return this;
     }
     
+    public StartTaskExecutionRequest(@JsonProperty("TaskArn") String taskArn) {
+        this.taskArn = taskArn;
+  }
 }

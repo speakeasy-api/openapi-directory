@@ -15,6 +15,7 @@ public class TimeSpan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Duration")
     public String duration;
+
     public TimeSpan withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -23,9 +24,11 @@ public class TimeSpan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartTime")
     public String startTime;
+
     public TimeSpan withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public TimeSpan(){}
 }

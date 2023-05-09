@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1TrialSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GoogleCloudChannelV1TrialSettings withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudChannelV1TrialSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trial")
     public Boolean trial;
+
     public GoogleCloudChannelV1TrialSettings withTrial(Boolean trial) {
         this.trial = trial;
         return this;
     }
     
+    public GoogleCloudChannelV1TrialSettings(){}
 }

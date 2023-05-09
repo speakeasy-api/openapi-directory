@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KeywordSearchRequest {
@@ -12,6 +13,7 @@ public class KeywordSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domainCode")
     public String domainCode;
+
     public KeywordSearchRequest withDomainCode(String domainCode) {
         this.domainCode = domainCode;
         return this;
@@ -22,6 +24,7 @@ public class KeywordSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyword")
     public String keyword;
+
     public KeywordSearchRequest withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -32,6 +35,7 @@ public class KeywordSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=numberOfProducts")
     public Long numberOfProducts;
+
     public KeywordSearchRequest withNumberOfProducts(Long numberOfProducts) {
         this.numberOfProducts = numberOfProducts;
         return this;
@@ -42,9 +46,14 @@ public class KeywordSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
     public String sortBy;
+
     public KeywordSearchRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public KeywordSearchRequest(@JsonProperty("domainCode") String domainCode, @JsonProperty("keyword") String keyword) {
+        this.domainCode = domainCode;
+        this.keyword = keyword;
+  }
 }

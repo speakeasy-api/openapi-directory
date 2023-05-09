@@ -12,6 +12,7 @@ public class UpdateMetricAttributionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addMetrics")
     public MetricAttribute[] addMetrics;
+
     public UpdateMetricAttributionRequest withAddMetrics(MetricAttribute[] addMetrics) {
         this.addMetrics = addMetrics;
         return this;
@@ -20,6 +21,7 @@ public class UpdateMetricAttributionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricAttributionArn")
     public String metricAttributionArn;
+
     public UpdateMetricAttributionRequest withMetricAttributionArn(String metricAttributionArn) {
         this.metricAttributionArn = metricAttributionArn;
         return this;
@@ -28,6 +30,7 @@ public class UpdateMetricAttributionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricsOutputConfig")
     public MetricAttributionOutput metricsOutputConfig;
+
     public UpdateMetricAttributionRequest withMetricsOutputConfig(MetricAttributionOutput metricsOutputConfig) {
         this.metricsOutputConfig = metricsOutputConfig;
         return this;
@@ -36,9 +39,11 @@ public class UpdateMetricAttributionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeMetrics")
     public String[] removeMetrics;
+
     public UpdateMetricAttributionRequest withRemoveMetrics(String[] removeMetrics) {
         this.removeMetrics = removeMetrics;
         return this;
     }
     
+    public UpdateMetricAttributionRequest(){}
 }

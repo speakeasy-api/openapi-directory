@@ -12,6 +12,7 @@ public class ScheduleInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availability")
     public AvailabilityInputModel availability;
+
     public ScheduleInputModel withAvailability(AvailabilityInputModel availability) {
         this.availability = availability;
         return this;
@@ -20,6 +21,7 @@ public class ScheduleInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingsPerSlot")
     public Integer bookingsPerSlot;
+
     public ScheduleInputModel withBookingsPerSlot(Integer bookingsPerSlot) {
         this.bookingsPerSlot = bookingsPerSlot;
         return this;
@@ -28,6 +30,7 @@ public class ScheduleInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     public Integer interval;
+
     public ScheduleInputModel withInterval(Integer interval) {
         this.interval = interval;
         return this;
@@ -36,6 +39,7 @@ public class ScheduleInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public ScheduleInputModel withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -44,6 +48,7 @@ public class ScheduleInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ScheduleInputModel withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class ScheduleInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceGroupId")
     public String resourceGroupId;
+
     public ScheduleInputModel withResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -60,9 +66,11 @@ public class ScheduleInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ScheduleInputModel withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ScheduleInputModel(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DirectJDBCSource {
     @JsonProperty("ConnectionName")
     public String connectionName;
+
     public DirectJDBCSource withConnectionName(String connectionName) {
         this.connectionName = connectionName;
         return this;
@@ -21,6 +22,7 @@ public class DirectJDBCSource {
     
     @JsonProperty("ConnectionType")
     public JDBCConnectionTypeEnum connectionType;
+
     public DirectJDBCSource withConnectionType(JDBCConnectionTypeEnum connectionType) {
         this.connectionType = connectionType;
         return this;
@@ -28,6 +30,7 @@ public class DirectJDBCSource {
     
     @JsonProperty("Database")
     public String database;
+
     public DirectJDBCSource withDatabase(String database) {
         this.database = database;
         return this;
@@ -35,6 +38,7 @@ public class DirectJDBCSource {
     
     @JsonProperty("Name")
     public String name;
+
     public DirectJDBCSource withName(String name) {
         this.name = name;
         return this;
@@ -43,6 +47,7 @@ public class DirectJDBCSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedshiftTmpDir")
     public String redshiftTmpDir;
+
     public DirectJDBCSource withRedshiftTmpDir(String redshiftTmpDir) {
         this.redshiftTmpDir = redshiftTmpDir;
         return this;
@@ -50,9 +55,17 @@ public class DirectJDBCSource {
     
     @JsonProperty("Table")
     public String table;
+
     public DirectJDBCSource withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public DirectJDBCSource(@JsonProperty("ConnectionName") String connectionName, @JsonProperty("ConnectionType") JDBCConnectionTypeEnum connectionType, @JsonProperty("Database") String database, @JsonProperty("Name") String name, @JsonProperty("Table") String table) {
+        this.connectionName = connectionName;
+        this.connectionType = connectionType;
+        this.database = database;
+        this.name = name;
+        this.table = table;
+  }
 }

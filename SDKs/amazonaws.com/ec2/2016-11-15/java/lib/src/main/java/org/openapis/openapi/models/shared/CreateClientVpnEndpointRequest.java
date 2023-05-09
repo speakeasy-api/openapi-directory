@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateClientVpnEndpointRequest {
     
     public ClientVpnAuthenticationRequest[] authenticationOptions;
+
     public CreateClientVpnEndpointRequest withAuthenticationOptions(ClientVpnAuthenticationRequest[] authenticationOptions) {
         this.authenticationOptions = authenticationOptions;
         return this;
@@ -16,6 +17,7 @@ public class CreateClientVpnEndpointRequest {
     
     
     public String clientCidrBlock;
+
     public CreateClientVpnEndpointRequest withClientCidrBlock(String clientCidrBlock) {
         this.clientCidrBlock = clientCidrBlock;
         return this;
@@ -23,6 +25,7 @@ public class CreateClientVpnEndpointRequest {
     
     
     public ClientConnectOptions clientConnectOptions;
+
     public CreateClientVpnEndpointRequest withClientConnectOptions(ClientConnectOptions clientConnectOptions) {
         this.clientConnectOptions = clientConnectOptions;
         return this;
@@ -30,6 +33,7 @@ public class CreateClientVpnEndpointRequest {
     
     
     public ClientLoginBannerOptions clientLoginBannerOptions;
+
     public CreateClientVpnEndpointRequest withClientLoginBannerOptions(ClientLoginBannerOptions clientLoginBannerOptions) {
         this.clientLoginBannerOptions = clientLoginBannerOptions;
         return this;
@@ -37,6 +41,7 @@ public class CreateClientVpnEndpointRequest {
     
     
     public String clientToken;
+
     public CreateClientVpnEndpointRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -44,6 +49,7 @@ public class CreateClientVpnEndpointRequest {
     
     
     public ConnectionLogOptions connectionLogOptions;
+
     public CreateClientVpnEndpointRequest withConnectionLogOptions(ConnectionLogOptions connectionLogOptions) {
         this.connectionLogOptions = connectionLogOptions;
         return this;
@@ -51,6 +57,7 @@ public class CreateClientVpnEndpointRequest {
     
     
     public String description;
+
     public CreateClientVpnEndpointRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -58,6 +65,7 @@ public class CreateClientVpnEndpointRequest {
     
     
     public String[] dnsServers;
+
     public CreateClientVpnEndpointRequest withDnsServers(String[] dnsServers) {
         this.dnsServers = dnsServers;
         return this;
@@ -65,6 +73,7 @@ public class CreateClientVpnEndpointRequest {
     
     
     public Boolean dryRun;
+
     public CreateClientVpnEndpointRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -72,6 +81,7 @@ public class CreateClientVpnEndpointRequest {
     
     
     public String[] securityGroupIds;
+
     public CreateClientVpnEndpointRequest withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -79,6 +89,7 @@ public class CreateClientVpnEndpointRequest {
     
     
     public SelfServicePortalEnum selfServicePortal;
+
     public CreateClientVpnEndpointRequest withSelfServicePortal(SelfServicePortalEnum selfServicePortal) {
         this.selfServicePortal = selfServicePortal;
         return this;
@@ -86,6 +97,7 @@ public class CreateClientVpnEndpointRequest {
     
     
     public String serverCertificateArn;
+
     public CreateClientVpnEndpointRequest withServerCertificateArn(String serverCertificateArn) {
         this.serverCertificateArn = serverCertificateArn;
         return this;
@@ -93,6 +105,7 @@ public class CreateClientVpnEndpointRequest {
     
     
     public Long sessionTimeoutHours;
+
     public CreateClientVpnEndpointRequest withSessionTimeoutHours(Long sessionTimeoutHours) {
         this.sessionTimeoutHours = sessionTimeoutHours;
         return this;
@@ -100,6 +113,7 @@ public class CreateClientVpnEndpointRequest {
     
     
     public Boolean splitTunnel;
+
     public CreateClientVpnEndpointRequest withSplitTunnel(Boolean splitTunnel) {
         this.splitTunnel = splitTunnel;
         return this;
@@ -107,6 +121,7 @@ public class CreateClientVpnEndpointRequest {
     
     
     public CreateClientVpnEndpointRequestTagSpecifications[] tagSpecifications;
+
     public CreateClientVpnEndpointRequest withTagSpecifications(CreateClientVpnEndpointRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -114,6 +129,7 @@ public class CreateClientVpnEndpointRequest {
     
     
     public TransportProtocolEnum transportProtocol;
+
     public CreateClientVpnEndpointRequest withTransportProtocol(TransportProtocolEnum transportProtocol) {
         this.transportProtocol = transportProtocol;
         return this;
@@ -121,6 +137,7 @@ public class CreateClientVpnEndpointRequest {
     
     
     public String vpcId;
+
     public CreateClientVpnEndpointRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -128,9 +145,16 @@ public class CreateClientVpnEndpointRequest {
     
     
     public Long vpnPort;
+
     public CreateClientVpnEndpointRequest withVpnPort(Long vpnPort) {
         this.vpnPort = vpnPort;
         return this;
     }
     
+    public CreateClientVpnEndpointRequest(@JsonProperty("AuthenticationOptions") ClientVpnAuthenticationRequest[] authenticationOptions, @JsonProperty("ClientCidrBlock") String clientCidrBlock, @JsonProperty("ConnectionLogOptions") ConnectionLogOptions connectionLogOptions, @JsonProperty("ServerCertificateArn") String serverCertificateArn) {
+        this.authenticationOptions = authenticationOptions;
+        this.clientCidrBlock = clientCidrBlock;
+        this.connectionLogOptions = connectionLogOptions;
+        this.serverCertificateArn = serverCertificateArn;
+  }
 }

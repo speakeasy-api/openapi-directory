@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateQuoteExpiryRequest {
@@ -12,6 +13,7 @@ public class UpdateQuoteExpiryRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TimeDTO timeDTO;
+
     public UpdateQuoteExpiryRequest withTimeDTO(org.openapis.openapi.models.shared.TimeDTO timeDTO) {
         this.timeDTO = timeDTO;
         return this;
@@ -22,9 +24,14 @@ public class UpdateQuoteExpiryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
     public String quoteId;
+
     public UpdateQuoteExpiryRequest withQuoteId(String quoteId) {
         this.quoteId = quoteId;
         return this;
     }
     
+    public UpdateQuoteExpiryRequest(@JsonProperty("TimeDTO") org.openapis.openapi.models.shared.TimeDTO timeDTO, @JsonProperty("quoteId") String quoteId) {
+        this.timeDTO = timeDTO;
+        this.quoteId = quoteId;
+  }
 }

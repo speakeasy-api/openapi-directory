@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteObjectResponse {
@@ -12,6 +13,7 @@ public class DeleteObjectResponse {
      */
     
     public Object containerNotFoundException;
+
     public DeleteObjectResponse withContainerNotFoundException(Object containerNotFoundException) {
         this.containerNotFoundException = containerNotFoundException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteObjectResponse {
     
     
     public String contentType;
+
     public DeleteObjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteObjectResponse {
      */
     
     public java.util.Map<String, Object> deleteObjectResponse;
+
     public DeleteObjectResponse withDeleteObjectResponse(java.util.Map<String, Object> deleteObjectResponse) {
         this.deleteObjectResponse = deleteObjectResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteObjectResponse {
      */
     
     public Object internalServerError;
+
     public DeleteObjectResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class DeleteObjectResponse {
      */
     
     public Object objectNotFoundException;
+
     public DeleteObjectResponse withObjectNotFoundException(Object objectNotFoundException) {
         this.objectNotFoundException = objectNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteObjectResponse {
     
     
     public Integer statusCode;
+
     public DeleteObjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteObjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteObjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteObjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

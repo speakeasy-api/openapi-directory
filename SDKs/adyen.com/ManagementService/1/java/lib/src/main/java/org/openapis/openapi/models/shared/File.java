@@ -12,6 +12,7 @@ public class File {
      */
     @JsonProperty("data")
     public String data;
+
     public File withData(String data) {
         this.data = data;
         return this;
@@ -22,9 +23,14 @@ public class File {
      */
     @JsonProperty("name")
     public String name;
+
     public File withName(String name) {
         this.name = name;
         return this;
     }
     
+    public File(@JsonProperty("data") String data, @JsonProperty("name") String name) {
+        this.data = data;
+        this.name = name;
+  }
 }

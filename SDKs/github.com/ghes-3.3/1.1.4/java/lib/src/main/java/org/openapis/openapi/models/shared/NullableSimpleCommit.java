@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class NullableSimpleCommit {
     @JsonProperty("author")
     public NullableSimpleCommitAuthor author;
+
     public NullableSimpleCommit withAuthor(NullableSimpleCommitAuthor author) {
         this.author = author;
         return this;
@@ -24,6 +25,7 @@ public class NullableSimpleCommit {
     
     @JsonProperty("committer")
     public NullableSimpleCommitCommitter committer;
+
     public NullableSimpleCommit withCommitter(NullableSimpleCommitCommitter committer) {
         this.committer = committer;
         return this;
@@ -31,6 +33,7 @@ public class NullableSimpleCommit {
     
     @JsonProperty("id")
     public String id;
+
     public NullableSimpleCommit withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +41,7 @@ public class NullableSimpleCommit {
     
     @JsonProperty("message")
     public String message;
+
     public NullableSimpleCommit withMessage(String message) {
         this.message = message;
         return this;
@@ -47,6 +51,7 @@ public class NullableSimpleCommit {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public NullableSimpleCommit withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -54,9 +59,18 @@ public class NullableSimpleCommit {
     
     @JsonProperty("tree_id")
     public String treeId;
+
     public NullableSimpleCommit withTreeId(String treeId) {
         this.treeId = treeId;
         return this;
     }
     
+    public NullableSimpleCommit(@JsonProperty("author") NullableSimpleCommitAuthor author, @JsonProperty("committer") NullableSimpleCommitCommitter committer, @JsonProperty("id") String id, @JsonProperty("message") String message, @JsonProperty("timestamp") OffsetDateTime timestamp, @JsonProperty("tree_id") String treeId) {
+        this.author = author;
+        this.committer = committer;
+        this.id = id;
+        this.message = message;
+        this.timestamp = timestamp;
+        this.treeId = treeId;
+  }
 }

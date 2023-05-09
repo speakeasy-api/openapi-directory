@@ -18,6 +18,7 @@ public class ItvPurchase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public String customerId;
+
     public ItvPurchase withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -28,6 +29,7 @@ public class ItvPurchase {
      */
     @JsonProperty("planId")
     public String planId;
+
     public ItvPurchase withPlanId(String planId) {
         this.planId = planId;
         return this;
@@ -39,9 +41,13 @@ public class ItvPurchase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionId")
     public String subscriptionId;
+
     public ItvPurchase withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
     
+    public ItvPurchase(@JsonProperty("planId") String planId) {
+        this.planId = planId;
+  }
 }

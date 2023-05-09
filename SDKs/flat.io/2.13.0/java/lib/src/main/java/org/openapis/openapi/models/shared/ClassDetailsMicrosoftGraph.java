@@ -15,9 +15,11 @@ public class ClassDetailsMicrosoftGraph {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ClassDetailsMicrosoftGraph withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ClassDetailsMicrosoftGraph(){}
 }

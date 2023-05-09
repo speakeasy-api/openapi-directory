@@ -18,6 +18,7 @@ public class NodeSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node")
     public Node node;
+
     public NodeSpec withNode(Node node) {
         this.node = node;
         return this;
@@ -29,6 +30,7 @@ public class NodeSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeId")
     public String nodeId;
+
     public NodeSpec withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -40,9 +42,11 @@ public class NodeSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public NodeSpec withParent(String parent) {
         this.parent = parent;
         return this;
     }
     
+    public NodeSpec(){}
 }

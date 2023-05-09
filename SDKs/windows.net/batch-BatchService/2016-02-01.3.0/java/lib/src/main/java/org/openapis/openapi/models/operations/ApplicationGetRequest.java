@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApplicationGetRequest {
@@ -12,6 +13,7 @@ public class ApplicationGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public ApplicationGetRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -22,6 +24,7 @@ public class ApplicationGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=applicationId")
     public String applicationId;
+
     public ApplicationGetRequest withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -32,6 +35,7 @@ public class ApplicationGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public ApplicationGetRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -42,6 +46,7 @@ public class ApplicationGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public ApplicationGetRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -52,6 +57,7 @@ public class ApplicationGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public ApplicationGetRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -62,9 +68,14 @@ public class ApplicationGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public ApplicationGetRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public ApplicationGetRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("applicationId") String applicationId) {
+        this.apiVersion = apiVersion;
+        this.applicationId = applicationId;
+  }
 }

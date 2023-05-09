@@ -15,6 +15,7 @@ public class GetGroupObjectSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetGroupObjectSchemaData data;
+
     public GetGroupObjectSchema withData(GetGroupObjectSchemaData data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class GetGroupObjectSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public GetGroupObjectSchemaPermissions permissions;
+
     public GetGroupObjectSchema withPermissions(GetGroupObjectSchemaPermissions permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public GetGroupObjectSchema(){}
 }

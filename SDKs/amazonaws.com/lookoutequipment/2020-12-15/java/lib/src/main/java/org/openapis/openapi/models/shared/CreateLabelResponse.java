@@ -15,9 +15,11 @@ public class CreateLabelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelId")
     public String labelId;
+
     public CreateLabelResponse withLabelId(String labelId) {
         this.labelId = labelId;
         return this;
     }
     
+    public CreateLabelResponse(){}
 }

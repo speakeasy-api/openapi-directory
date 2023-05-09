@@ -15,6 +15,7 @@ public class OrderShippingTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public OrderShippingTax withCountry(String country) {
         this.country = country;
         return this;
@@ -26,6 +27,7 @@ public class OrderShippingTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixed")
     public Boolean fixed;
+
     public OrderShippingTax withFixed(Boolean fixed) {
         this.fixed = fixed;
         return this;
@@ -37,6 +39,7 @@ public class OrderShippingTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public OrderShippingTax withId(Integer id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class OrderShippingTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrderShippingTax withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +63,7 @@ public class OrderShippingTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate")
     public Float rate;
+
     public OrderShippingTax withRate(Float rate) {
         this.rate = rate;
         return this;
@@ -70,6 +75,7 @@ public class OrderShippingTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public OrderShippingTax withRegion(String region) {
         this.region = region;
         return this;
@@ -81,9 +87,11 @@ public class OrderShippingTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_on_shipping_price")
     public Boolean taxOnShippingPrice;
+
     public OrderShippingTax withTaxOnShippingPrice(Boolean taxOnShippingPrice) {
         this.taxOnShippingPrice = taxOnShippingPrice;
         return this;
     }
     
+    public OrderShippingTax(){}
 }

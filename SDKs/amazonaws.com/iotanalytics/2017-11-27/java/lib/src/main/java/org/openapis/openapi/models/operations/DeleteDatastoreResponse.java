@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDatastoreResponse {
     
     public String contentType;
+
     public DeleteDatastoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDatastoreResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteDatastoreResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDatastoreResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteDatastoreResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDatastoreResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteDatastoreResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteDatastoreResponse {
     
     
     public Integer statusCode;
+
     public DeleteDatastoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteDatastoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDatastoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteDatastoreResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteDatastoreResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteDatastoreResponse {
      */
     
     public Object throttlingException;
+
     public DeleteDatastoreResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteDatastoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

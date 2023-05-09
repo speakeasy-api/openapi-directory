@@ -18,6 +18,7 @@ public class AppleMappingTestFlightGroups200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appleId")
     public Double appleId;
+
     public AppleMappingTestFlightGroups200ApplicationJSON withAppleId(Double appleId) {
         this.appleId = appleId;
         return this;
@@ -29,6 +30,7 @@ public class AppleMappingTestFlightGroups200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AppleMappingTestFlightGroups200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class AppleMappingTestFlightGroups200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AppleMappingTestFlightGroups200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class AppleMappingTestFlightGroups200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("providerId")
     public Double providerId;
+
     public AppleMappingTestFlightGroups200ApplicationJSON withProviderId(Double providerId) {
         this.providerId = providerId;
         return this;
     }
     
+    public AppleMappingTestFlightGroups200ApplicationJSON(){}
 }

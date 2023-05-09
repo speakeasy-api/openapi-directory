@@ -15,6 +15,7 @@ public class ListUniqueProblemsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListUniqueProblemsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListUniqueProblemsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uniqueProblems")
     public java.util.Map<String, UniqueProblem[]> uniqueProblems;
+
     public ListUniqueProblemsResult withUniqueProblems(java.util.Map<String, UniqueProblem[]> uniqueProblems) {
         this.uniqueProblems = uniqueProblems;
         return this;
     }
     
+    public ListUniqueProblemsResult(){}
 }

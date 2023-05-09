@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AllPlayersSearchRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public AllPlayersSearchRequest withSearch(String search) {
         this.search = search;
         return this;
     }
     
+    public AllPlayersSearchRequest(){}
 }

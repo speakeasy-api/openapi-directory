@@ -15,6 +15,7 @@ public class UpdateSafetyRuleRequestBodyAssertionRuleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateSafetyRuleRequestBodyAssertionRuleUpdate withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class UpdateSafetyRuleRequestBodyAssertionRuleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SafetyRuleArn")
     public String safetyRuleArn;
+
     public UpdateSafetyRuleRequestBodyAssertionRuleUpdate withSafetyRuleArn(String safetyRuleArn) {
         this.safetyRuleArn = safetyRuleArn;
         return this;
@@ -31,9 +33,11 @@ public class UpdateSafetyRuleRequestBodyAssertionRuleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WaitPeriodMs")
     public Long waitPeriodMs;
+
     public UpdateSafetyRuleRequestBodyAssertionRuleUpdate withWaitPeriodMs(Long waitPeriodMs) {
         this.waitPeriodMs = waitPeriodMs;
         return this;
     }
     
+    public UpdateSafetyRuleRequestBodyAssertionRuleUpdate(){}
 }

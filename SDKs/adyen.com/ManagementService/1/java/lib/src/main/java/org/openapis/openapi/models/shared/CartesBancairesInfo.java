@@ -12,9 +12,13 @@ public class CartesBancairesInfo {
      */
     @JsonProperty("siret")
     public String siret;
+
     public CartesBancairesInfo withSiret(String siret) {
         this.siret = siret;
         return this;
     }
     
+    public CartesBancairesInfo(@JsonProperty("siret") String siret) {
+        this.siret = siret;
+  }
 }

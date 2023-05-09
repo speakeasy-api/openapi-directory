@@ -13,6 +13,7 @@ public class FetchPatientHealthMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[groups]")
     public String filterGroups;
+
     public FetchPatientHealthMetricsRequest withFilterGroups(String filterGroups) {
         this.filterGroups = filterGroups;
         return this;
@@ -24,6 +25,7 @@ public class FetchPatientHealthMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[organization]")
     public String filterOrganization;
+
     public FetchPatientHealthMetricsRequest withFilterOrganization(String filterOrganization) {
         this.filterOrganization = filterOrganization;
         return this;
@@ -35,6 +37,7 @@ public class FetchPatientHealthMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[patient]")
     public String filterPatient;
+
     public FetchPatientHealthMetricsRequest withFilterPatient(String filterPatient) {
         this.filterPatient = filterPatient;
         return this;
@@ -45,6 +48,7 @@ public class FetchPatientHealthMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[cursor]")
     public String pageCursor;
+
     public FetchPatientHealthMetricsRequest withPageCursor(String pageCursor) {
         this.pageCursor = pageCursor;
         return this;
@@ -55,6 +59,7 @@ public class FetchPatientHealthMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[limit]")
     public Long pageLimit;
+
     public FetchPatientHealthMetricsRequest withPageLimit(Long pageLimit) {
         this.pageLimit = pageLimit;
         return this;
@@ -65,6 +70,7 @@ public class FetchPatientHealthMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[number]")
     public Long pageNumber;
+
     public FetchPatientHealthMetricsRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -75,9 +81,11 @@ public class FetchPatientHealthMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
     public Long pageSize;
+
     public FetchPatientHealthMetricsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public FetchPatientHealthMetricsRequest(){}
 }

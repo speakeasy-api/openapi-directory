@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDescribeSimulationJobResponse {
@@ -12,6 +13,7 @@ public class BatchDescribeSimulationJobResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDescribeSimulationJobResponse batchDescribeSimulationJobResponse;
+
     public BatchDescribeSimulationJobResponse withBatchDescribeSimulationJobResponse(org.openapis.openapi.models.shared.BatchDescribeSimulationJobResponse batchDescribeSimulationJobResponse) {
         this.batchDescribeSimulationJobResponse = batchDescribeSimulationJobResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchDescribeSimulationJobResponse {
     
     
     public String contentType;
+
     public BatchDescribeSimulationJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchDescribeSimulationJobResponse {
      */
     
     public Object internalServerException;
+
     public BatchDescribeSimulationJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class BatchDescribeSimulationJobResponse {
      */
     
     public Object invalidParameterException;
+
     public BatchDescribeSimulationJobResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class BatchDescribeSimulationJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchDescribeSimulationJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class BatchDescribeSimulationJobResponse {
     
     
     public Integer statusCode;
+
     public BatchDescribeSimulationJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BatchDescribeSimulationJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDescribeSimulationJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class BatchDescribeSimulationJobResponse {
      */
     
     public Object throttlingException;
+
     public BatchDescribeSimulationJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public BatchDescribeSimulationJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

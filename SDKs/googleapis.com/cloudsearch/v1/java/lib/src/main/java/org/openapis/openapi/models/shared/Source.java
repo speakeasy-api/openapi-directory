@@ -18,6 +18,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Source withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predefinedSource")
     public SourcePredefinedSourceEnum predefinedSource;
+
     public Source withPredefinedSource(SourcePredefinedSourceEnum predefinedSource) {
         this.predefinedSource = predefinedSource;
         return this;
     }
     
+    public Source(){}
 }

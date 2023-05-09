@@ -12,6 +12,7 @@ public class UpdateTypedLinkFacetRequestBody {
      */
     @JsonProperty("AttributeUpdates")
     public org.openapis.openapi.models.shared.TypedLinkFacetAttributeUpdate[] attributeUpdates;
+
     public UpdateTypedLinkFacetRequestBody withAttributeUpdates(org.openapis.openapi.models.shared.TypedLinkFacetAttributeUpdate[] attributeUpdates) {
         this.attributeUpdates = attributeUpdates;
         return this;
@@ -22,6 +23,7 @@ public class UpdateTypedLinkFacetRequestBody {
      */
     @JsonProperty("IdentityAttributeOrder")
     public String[] identityAttributeOrder;
+
     public UpdateTypedLinkFacetRequestBody withIdentityAttributeOrder(String[] identityAttributeOrder) {
         this.identityAttributeOrder = identityAttributeOrder;
         return this;
@@ -32,9 +34,15 @@ public class UpdateTypedLinkFacetRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public UpdateTypedLinkFacetRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateTypedLinkFacetRequestBody(@JsonProperty("AttributeUpdates") org.openapis.openapi.models.shared.TypedLinkFacetAttributeUpdate[] attributeUpdates, @JsonProperty("IdentityAttributeOrder") String[] identityAttributeOrder, @JsonProperty("Name") String name) {
+        this.attributeUpdates = attributeUpdates;
+        this.identityAttributeOrder = identityAttributeOrder;
+        this.name = name;
+  }
 }

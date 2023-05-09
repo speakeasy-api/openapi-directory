@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSlackChannelConfigurationResponse {
@@ -12,6 +13,7 @@ public class DeleteSlackChannelConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteSlackChannelConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteSlackChannelConfigurationResponse {
      */
     
     public Object conflictException;
+
     public DeleteSlackChannelConfigurationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSlackChannelConfigurationResponse {
     
     
     public String contentType;
+
     public DeleteSlackChannelConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSlackChannelConfigurationResponse {
      */
     
     public java.util.Map<String, Object> deleteSlackChannelConfigurationResult;
+
     public DeleteSlackChannelConfigurationResponse withDeleteSlackChannelConfigurationResult(java.util.Map<String, Object> deleteSlackChannelConfigurationResult) {
         this.deleteSlackChannelConfigurationResult = deleteSlackChannelConfigurationResult;
         return this;
@@ -49,6 +54,7 @@ public class DeleteSlackChannelConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public DeleteSlackChannelConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteSlackChannelConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DeleteSlackChannelConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteSlackChannelConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSlackChannelConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteSlackChannelConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteSlackChannelConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteSlackChannelConfigurationResponse {
      */
     
     public Object validationException;
+
     public DeleteSlackChannelConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteSlackChannelConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

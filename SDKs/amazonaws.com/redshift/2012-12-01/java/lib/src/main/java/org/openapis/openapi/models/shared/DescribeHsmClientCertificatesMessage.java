@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeHsmClientCertificatesMessage {
     
     public String hsmClientCertificateIdentifier;
+
     public DescribeHsmClientCertificatesMessage withHsmClientCertificateIdentifier(String hsmClientCertificateIdentifier) {
         this.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class DescribeHsmClientCertificatesMessage {
     
     
     public String marker;
+
     public DescribeHsmClientCertificatesMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,6 +28,7 @@ public class DescribeHsmClientCertificatesMessage {
     
     
     public Long maxRecords;
+
     public DescribeHsmClientCertificatesMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -33,6 +36,7 @@ public class DescribeHsmClientCertificatesMessage {
     
     
     public String[] tagKeys;
+
     public DescribeHsmClientCertificatesMessage withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
@@ -40,9 +44,11 @@ public class DescribeHsmClientCertificatesMessage {
     
     
     public String[] tagValues;
+
     public DescribeHsmClientCertificatesMessage withTagValues(String[] tagValues) {
         this.tagValues = tagValues;
         return this;
     }
     
+    public DescribeHsmClientCertificatesMessage(){}
 }

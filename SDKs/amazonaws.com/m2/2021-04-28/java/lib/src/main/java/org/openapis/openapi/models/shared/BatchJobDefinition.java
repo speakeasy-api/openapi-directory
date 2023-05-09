@@ -15,6 +15,7 @@ public class BatchJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileBatchJobDefinition")
     public FileBatchJobDefinition fileBatchJobDefinition;
+
     public BatchJobDefinition withFileBatchJobDefinition(FileBatchJobDefinition fileBatchJobDefinition) {
         this.fileBatchJobDefinition = fileBatchJobDefinition;
         return this;
@@ -23,9 +24,11 @@ public class BatchJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptBatchJobDefinition")
     public ScriptBatchJobDefinition scriptBatchJobDefinition;
+
     public BatchJobDefinition withScriptBatchJobDefinition(ScriptBatchJobDefinition scriptBatchJobDefinition) {
         this.scriptBatchJobDefinition = scriptBatchJobDefinition;
         return this;
     }
     
+    public BatchJobDefinition(){}
 }

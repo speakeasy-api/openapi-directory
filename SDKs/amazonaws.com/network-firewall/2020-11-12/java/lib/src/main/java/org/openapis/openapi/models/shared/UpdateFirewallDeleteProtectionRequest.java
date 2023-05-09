@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateFirewallDeleteProtectionRequest {
     @JsonProperty("DeleteProtection")
     public Boolean deleteProtection;
+
     public UpdateFirewallDeleteProtectionRequest withDeleteProtection(Boolean deleteProtection) {
         this.deleteProtection = deleteProtection;
         return this;
@@ -19,6 +20,7 @@ public class UpdateFirewallDeleteProtectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallArn")
     public String firewallArn;
+
     public UpdateFirewallDeleteProtectionRequest withFirewallArn(String firewallArn) {
         this.firewallArn = firewallArn;
         return this;
@@ -27,6 +29,7 @@ public class UpdateFirewallDeleteProtectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallName")
     public String firewallName;
+
     public UpdateFirewallDeleteProtectionRequest withFirewallName(String firewallName) {
         this.firewallName = firewallName;
         return this;
@@ -35,9 +38,13 @@ public class UpdateFirewallDeleteProtectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateToken")
     public String updateToken;
+
     public UpdateFirewallDeleteProtectionRequest withUpdateToken(String updateToken) {
         this.updateToken = updateToken;
         return this;
     }
     
+    public UpdateFirewallDeleteProtectionRequest(@JsonProperty("DeleteProtection") Boolean deleteProtection) {
+        this.deleteProtection = deleteProtection;
+  }
 }

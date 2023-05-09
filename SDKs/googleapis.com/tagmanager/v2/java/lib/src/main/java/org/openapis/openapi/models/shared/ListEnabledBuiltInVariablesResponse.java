@@ -18,6 +18,7 @@ public class ListEnabledBuiltInVariablesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("builtInVariable")
     public BuiltInVariable[] builtInVariable;
+
     public ListEnabledBuiltInVariablesResponse withBuiltInVariable(BuiltInVariable[] builtInVariable) {
         this.builtInVariable = builtInVariable;
         return this;
@@ -29,9 +30,11 @@ public class ListEnabledBuiltInVariablesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListEnabledBuiltInVariablesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListEnabledBuiltInVariablesResponse(){}
 }

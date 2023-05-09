@@ -13,24 +13,38 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudRunV2Container {
     /**
-     * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+     * Arguments to the entrypoint. The docker image's CMD is used if this is not provided.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("args")
     public String[] args;
+
     public GoogleCloudRunV2Container withArgs(String[] args) {
         this.args = args;
         return this;
     }
     
     /**
-     * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+     * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("command")
     public String[] command;
+
     public GoogleCloudRunV2Container withCommand(String[] command) {
         this.command = command;
+        return this;
+    }
+    
+    /**
+     * Container names which must start before this container.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dependsOn")
+    public String[] dependsOn;
+
+    public GoogleCloudRunV2Container withDependsOn(String[] dependsOn) {
+        this.dependsOn = dependsOn;
         return this;
     }
     
@@ -40,17 +54,19 @@ public class GoogleCloudRunV2Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("env")
     public GoogleCloudRunV2EnvVar[] env;
+
     public GoogleCloudRunV2Container withEnv(GoogleCloudRunV2EnvVar[] env) {
         this.env = env;
         return this;
     }
     
     /**
-     * Required. Name of the container image in Dockerhub, Google Artifact Registry, or Google Container Registry. If the host is not provided, Dockerhub is assumed. More info: https://kubernetes.io/docs/concepts/containers/images
+     * Required. Name of the container image in Dockerhub, Google Artifact Registry, or Google Container Registry. If the host is not provided, Dockerhub is assumed.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public GoogleCloudRunV2Container withImage(String image) {
         this.image = image;
         return this;
@@ -62,6 +78,7 @@ public class GoogleCloudRunV2Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("livenessProbe")
     public GoogleCloudRunV2Probe livenessProbe;
+
     public GoogleCloudRunV2Container withLivenessProbe(GoogleCloudRunV2Probe livenessProbe) {
         this.livenessProbe = livenessProbe;
         return this;
@@ -73,6 +90,7 @@ public class GoogleCloudRunV2Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRunV2Container withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +102,7 @@ public class GoogleCloudRunV2Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ports")
     public GoogleCloudRunV2ContainerPort[] ports;
+
     public GoogleCloudRunV2Container withPorts(GoogleCloudRunV2ContainerPort[] ports) {
         this.ports = ports;
         return this;
@@ -95,6 +114,7 @@ public class GoogleCloudRunV2Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public GoogleCloudRunV2ResourceRequirements resources;
+
     public GoogleCloudRunV2Container withResources(GoogleCloudRunV2ResourceRequirements resources) {
         this.resources = resources;
         return this;
@@ -106,6 +126,7 @@ public class GoogleCloudRunV2Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startupProbe")
     public GoogleCloudRunV2Probe startupProbe;
+
     public GoogleCloudRunV2Container withStartupProbe(GoogleCloudRunV2Probe startupProbe) {
         this.startupProbe = startupProbe;
         return this;
@@ -117,6 +138,7 @@ public class GoogleCloudRunV2Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeMounts")
     public GoogleCloudRunV2VolumeMount[] volumeMounts;
+
     public GoogleCloudRunV2Container withVolumeMounts(GoogleCloudRunV2VolumeMount[] volumeMounts) {
         this.volumeMounts = volumeMounts;
         return this;
@@ -128,9 +150,11 @@ public class GoogleCloudRunV2Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workingDir")
     public String workingDir;
+
     public GoogleCloudRunV2Container withWorkingDir(String workingDir) {
         this.workingDir = workingDir;
         return this;
     }
     
+    public GoogleCloudRunV2Container(){}
 }

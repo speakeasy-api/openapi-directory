@@ -59,11 +59,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsResponse(contentType, httpRes.statusCode()) {{
             containerThreatDetectionSettings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsResponse(contentType, httpRes.statusCode()) {{
             containerThreatDetectionSettings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterProjectsWebSecurityScannerSettingsCalculateResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsWebSecurityScannerSettingsCalculateResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterProjectsWebSecurityScannerSettingsCalculateResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsWebSecurityScannerSettingsCalculateResponse(contentType, httpRes.statusCode()) {{
             webSecurityScannerSettings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

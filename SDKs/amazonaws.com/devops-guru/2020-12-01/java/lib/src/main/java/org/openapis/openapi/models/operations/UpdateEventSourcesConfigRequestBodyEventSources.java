@@ -15,9 +15,11 @@ public class UpdateEventSourcesConfigRequestBodyEventSources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmazonCodeGuruProfiler")
     public org.openapis.openapi.models.shared.AmazonCodeGuruProfilerIntegration amazonCodeGuruProfiler;
+
     public UpdateEventSourcesConfigRequestBodyEventSources withAmazonCodeGuruProfiler(org.openapis.openapi.models.shared.AmazonCodeGuruProfilerIntegration amazonCodeGuruProfiler) {
         this.amazonCodeGuruProfiler = amazonCodeGuruProfiler;
         return this;
     }
     
+    public UpdateEventSourcesConfigRequestBodyEventSources(){}
 }

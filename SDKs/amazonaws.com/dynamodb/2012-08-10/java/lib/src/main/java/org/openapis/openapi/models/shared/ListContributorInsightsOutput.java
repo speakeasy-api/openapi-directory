@@ -15,6 +15,7 @@ public class ListContributorInsightsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContributorInsightsSummaries")
     public ContributorInsightsSummary[] contributorInsightsSummaries;
+
     public ListContributorInsightsOutput withContributorInsightsSummaries(ContributorInsightsSummary[] contributorInsightsSummaries) {
         this.contributorInsightsSummaries = contributorInsightsSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListContributorInsightsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListContributorInsightsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListContributorInsightsOutput(){}
 }

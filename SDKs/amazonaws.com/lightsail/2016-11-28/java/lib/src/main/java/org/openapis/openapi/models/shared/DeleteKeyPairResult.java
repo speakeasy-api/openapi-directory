@@ -15,9 +15,11 @@ public class DeleteKeyPairResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public Operation operation;
+
     public DeleteKeyPairResult withOperation(Operation operation) {
         this.operation = operation;
         return this;
     }
     
+    public DeleteKeyPairResult(){}
 }

@@ -12,6 +12,7 @@ public class PutComponentPolicyRequestBody {
      */
     @JsonProperty("componentArn")
     public String componentArn;
+
     public PutComponentPolicyRequestBody withComponentArn(String componentArn) {
         this.componentArn = componentArn;
         return this;
@@ -22,9 +23,14 @@ public class PutComponentPolicyRequestBody {
      */
     @JsonProperty("policy")
     public String policy;
+
     public PutComponentPolicyRequestBody withPolicy(String policy) {
         this.policy = policy;
         return this;
     }
     
+    public PutComponentPolicyRequestBody(@JsonProperty("componentArn") String componentArn, @JsonProperty("policy") String policy) {
+        this.componentArn = componentArn;
+        this.policy = policy;
+  }
 }

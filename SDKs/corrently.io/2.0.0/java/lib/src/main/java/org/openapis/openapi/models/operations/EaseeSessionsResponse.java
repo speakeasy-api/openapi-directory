@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EaseeSessionsResponse {
     
     public String contentType;
+
     public EaseeSessionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EaseeSessionsResponse {
     
     
     public Integer statusCode;
+
     public EaseeSessionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EaseeSessionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EaseeSessionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class EaseeSessionsResponse {
      */
     
     public org.openapis.openapi.models.shared.EaseeCharger[] easeeChargers;
+
     public EaseeSessionsResponse withEaseeChargers(org.openapis.openapi.models.shared.EaseeCharger[] easeeChargers) {
         this.easeeChargers = easeeChargers;
         return this;
     }
     
+    public EaseeSessionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

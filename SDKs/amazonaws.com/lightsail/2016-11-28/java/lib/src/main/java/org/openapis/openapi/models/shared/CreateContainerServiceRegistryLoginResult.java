@@ -15,9 +15,11 @@ public class CreateContainerServiceRegistryLoginResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryLogin")
     public ContainerServiceRegistryLogin registryLogin;
+
     public CreateContainerServiceRegistryLoginResult withRegistryLogin(ContainerServiceRegistryLogin registryLogin) {
         this.registryLogin = registryLogin;
         return this;
     }
     
+    public CreateContainerServiceRegistryLoginResult(){}
 }

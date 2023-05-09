@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CatalogConfigurationDescription {
     @JsonProperty("GlueDataCatalogConfigurationDescription")
     public GlueDataCatalogConfigurationDescription glueDataCatalogConfigurationDescription;
+
     public CatalogConfigurationDescription withGlueDataCatalogConfigurationDescription(GlueDataCatalogConfigurationDescription glueDataCatalogConfigurationDescription) {
         this.glueDataCatalogConfigurationDescription = glueDataCatalogConfigurationDescription;
         return this;
     }
     
+    public CatalogConfigurationDescription(@JsonProperty("GlueDataCatalogConfigurationDescription") GlueDataCatalogConfigurationDescription glueDataCatalogConfigurationDescription) {
+        this.glueDataCatalogConfigurationDescription = glueDataCatalogConfigurationDescription;
+  }
 }

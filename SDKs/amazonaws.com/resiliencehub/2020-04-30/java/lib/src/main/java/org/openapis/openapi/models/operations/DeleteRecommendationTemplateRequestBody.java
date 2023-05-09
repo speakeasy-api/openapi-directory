@@ -15,6 +15,7 @@ public class DeleteRecommendationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public DeleteRecommendationTemplateRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,9 +26,13 @@ public class DeleteRecommendationTemplateRequestBody {
      */
     @JsonProperty("recommendationTemplateArn")
     public String recommendationTemplateArn;
+
     public DeleteRecommendationTemplateRequestBody withRecommendationTemplateArn(String recommendationTemplateArn) {
         this.recommendationTemplateArn = recommendationTemplateArn;
         return this;
     }
     
+    public DeleteRecommendationTemplateRequestBody(@JsonProperty("recommendationTemplateArn") String recommendationTemplateArn) {
+        this.recommendationTemplateArn = recommendationTemplateArn;
+  }
 }

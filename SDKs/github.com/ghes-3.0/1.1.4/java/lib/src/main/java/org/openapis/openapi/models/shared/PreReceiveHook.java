@@ -15,6 +15,7 @@ public class PreReceiveHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_downstream_configuration")
     public Boolean allowDownstreamConfiguration;
+
     public PreReceiveHook withAllowDownstreamConfiguration(Boolean allowDownstreamConfiguration) {
         this.allowDownstreamConfiguration = allowDownstreamConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class PreReceiveHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforcement")
     public String enforcement;
+
     public PreReceiveHook withEnforcement(String enforcement) {
         this.enforcement = enforcement;
         return this;
@@ -31,6 +33,7 @@ public class PreReceiveHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public PreReceiveHookEnvironment environment;
+
     public PreReceiveHook withEnvironment(PreReceiveHookEnvironment environment) {
         this.environment = environment;
         return this;
@@ -39,6 +42,7 @@ public class PreReceiveHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PreReceiveHook withId(Long id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class PreReceiveHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PreReceiveHook withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +60,7 @@ public class PreReceiveHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public PreReceiveHook withScript(String script) {
         this.script = script;
         return this;
@@ -63,9 +69,11 @@ public class PreReceiveHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script_repository")
     public PreReceiveHookScriptRepository scriptRepository;
+
     public PreReceiveHook withScriptRepository(PreReceiveHookScriptRepository scriptRepository) {
         this.scriptRepository = scriptRepository;
         return this;
     }
     
+    public PreReceiveHook(){}
 }

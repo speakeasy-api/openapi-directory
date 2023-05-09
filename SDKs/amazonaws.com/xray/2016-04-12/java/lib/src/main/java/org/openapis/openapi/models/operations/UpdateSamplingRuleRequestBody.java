@@ -12,9 +12,13 @@ public class UpdateSamplingRuleRequestBody {
      */
     @JsonProperty("SamplingRuleUpdate")
     public UpdateSamplingRuleRequestBodySamplingRuleUpdate samplingRuleUpdate;
+
     public UpdateSamplingRuleRequestBody withSamplingRuleUpdate(UpdateSamplingRuleRequestBodySamplingRuleUpdate samplingRuleUpdate) {
         this.samplingRuleUpdate = samplingRuleUpdate;
         return this;
     }
     
+    public UpdateSamplingRuleRequestBody(@JsonProperty("SamplingRuleUpdate") UpdateSamplingRuleRequestBodySamplingRuleUpdate samplingRuleUpdate) {
+        this.samplingRuleUpdate = samplingRuleUpdate;
+  }
 }

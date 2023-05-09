@@ -15,6 +15,7 @@ public class TargetTrackingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomizedScalingMetricSpecification")
     public CustomizedScalingMetricSpecification customizedScalingMetricSpecification;
+
     public TargetTrackingConfiguration withCustomizedScalingMetricSpecification(CustomizedScalingMetricSpecification customizedScalingMetricSpecification) {
         this.customizedScalingMetricSpecification = customizedScalingMetricSpecification;
         return this;
@@ -23,6 +24,7 @@ public class TargetTrackingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisableScaleIn")
     public Boolean disableScaleIn;
+
     public TargetTrackingConfiguration withDisableScaleIn(Boolean disableScaleIn) {
         this.disableScaleIn = disableScaleIn;
         return this;
@@ -31,6 +33,7 @@ public class TargetTrackingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedInstanceWarmup")
     public Long estimatedInstanceWarmup;
+
     public TargetTrackingConfiguration withEstimatedInstanceWarmup(Long estimatedInstanceWarmup) {
         this.estimatedInstanceWarmup = estimatedInstanceWarmup;
         return this;
@@ -39,6 +42,7 @@ public class TargetTrackingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredefinedScalingMetricSpecification")
     public PredefinedScalingMetricSpecification predefinedScalingMetricSpecification;
+
     public TargetTrackingConfiguration withPredefinedScalingMetricSpecification(PredefinedScalingMetricSpecification predefinedScalingMetricSpecification) {
         this.predefinedScalingMetricSpecification = predefinedScalingMetricSpecification;
         return this;
@@ -47,6 +51,7 @@ public class TargetTrackingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScaleInCooldown")
     public Long scaleInCooldown;
+
     public TargetTrackingConfiguration withScaleInCooldown(Long scaleInCooldown) {
         this.scaleInCooldown = scaleInCooldown;
         return this;
@@ -55,6 +60,7 @@ public class TargetTrackingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScaleOutCooldown")
     public Long scaleOutCooldown;
+
     public TargetTrackingConfiguration withScaleOutCooldown(Long scaleOutCooldown) {
         this.scaleOutCooldown = scaleOutCooldown;
         return this;
@@ -62,9 +68,13 @@ public class TargetTrackingConfiguration {
     
     @JsonProperty("TargetValue")
     public Double targetValue;
+
     public TargetTrackingConfiguration withTargetValue(Double targetValue) {
         this.targetValue = targetValue;
         return this;
     }
     
+    public TargetTrackingConfiguration(@JsonProperty("TargetValue") Double targetValue) {
+        this.targetValue = targetValue;
+  }
 }

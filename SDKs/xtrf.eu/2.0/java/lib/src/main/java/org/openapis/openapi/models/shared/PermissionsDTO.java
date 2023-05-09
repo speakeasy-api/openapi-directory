@@ -15,9 +15,11 @@ public class PermissionsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedGroups")
     public Long[] sharedGroups;
+
     public PermissionsDTO withSharedGroups(Long[] sharedGroups) {
         this.sharedGroups = sharedGroups;
         return this;
     }
     
+    public PermissionsDTO(){}
 }

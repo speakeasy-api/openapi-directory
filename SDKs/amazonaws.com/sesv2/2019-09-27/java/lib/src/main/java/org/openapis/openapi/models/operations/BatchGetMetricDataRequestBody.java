@@ -12,9 +12,13 @@ public class BatchGetMetricDataRequestBody {
      */
     @JsonProperty("Queries")
     public org.openapis.openapi.models.shared.BatchGetMetricDataQuery[] queries;
+
     public BatchGetMetricDataRequestBody withQueries(org.openapis.openapi.models.shared.BatchGetMetricDataQuery[] queries) {
         this.queries = queries;
         return this;
     }
     
+    public BatchGetMetricDataRequestBody(@JsonProperty("Queries") org.openapis.openapi.models.shared.BatchGetMetricDataQuery[] queries) {
+        this.queries = queries;
+  }
 }

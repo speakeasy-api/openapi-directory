@@ -15,6 +15,7 @@ public class Betslippart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eachWayAvailable")
     public Boolean eachWayAvailable;
+
     public Betslippart withEachWayAvailable(Boolean eachWayAvailable) {
         this.eachWayAvailable = eachWayAvailable;
         return this;
@@ -25,6 +26,7 @@ public class Betslippart {
      */
     @JsonProperty("includeInMultiple")
     public Boolean includeInMultiple;
+
     public Betslippart withIncludeInMultiple(Boolean includeInMultiple) {
         this.includeInMultiple = includeInMultiple;
         return this;
@@ -36,6 +38,7 @@ public class Betslippart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legGroup")
     public Long legGroup;
+
     public Betslippart withLegGroup(Long legGroup) {
         this.legGroup = legGroup;
         return this;
@@ -47,6 +50,7 @@ public class Betslippart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceChanged")
     public Boolean priceChanged;
+
     public Betslippart withPriceChanged(Boolean priceChanged) {
         this.priceChanged = priceChanged;
         return this;
@@ -57,6 +61,7 @@ public class Betslippart {
      */
     @JsonProperty("priceDen")
     public Long priceDen;
+
     public Betslippart withPriceDen(Long priceDen) {
         this.priceDen = priceDen;
         return this;
@@ -67,16 +72,18 @@ public class Betslippart {
      */
     @JsonProperty("priceNum")
     public Long priceNum;
+
     public Betslippart withPriceNum(Long priceNum) {
         this.priceNum = priceNum;
         return this;
     }
     
     /**
-     * The type of price selected. For example - \u2018L\u2019 (Fixed)
+     * The type of price selected. For example - ‘L’ (Fixed)
      */
     @JsonProperty("priceType")
     public Long priceType;
+
     public Betslippart withPriceType(Long priceType) {
         this.priceType = priceType;
         return this;
@@ -87,6 +94,7 @@ public class Betslippart {
      */
     @JsonProperty("selectionId")
     public Long selectionId;
+
     public Betslippart withSelectionId(Long selectionId) {
         this.selectionId = selectionId;
         return this;
@@ -98,6 +106,7 @@ public class Betslippart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("singleAvailable")
     public Boolean singleAvailable;
+
     public Betslippart withSingleAvailable(Boolean singleAvailable) {
         this.singleAvailable = singleAvailable;
         return this;
@@ -109,6 +118,7 @@ public class Betslippart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startingPriceAvailable")
     public Boolean startingPriceAvailable;
+
     public Betslippart withStartingPriceAvailable(Boolean startingPriceAvailable) {
         this.startingPriceAvailable = startingPriceAvailable;
         return this;
@@ -120,6 +130,7 @@ public class Betslippart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Betslippart withStatus(String status) {
         this.status = status;
         return this;
@@ -131,9 +142,17 @@ public class Betslippart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusChanged")
     public Boolean statusChanged;
+
     public Betslippart withStatusChanged(Boolean statusChanged) {
         this.statusChanged = statusChanged;
         return this;
     }
     
+    public Betslippart(@JsonProperty("includeInMultiple") Boolean includeInMultiple, @JsonProperty("priceDen") Long priceDen, @JsonProperty("priceNum") Long priceNum, @JsonProperty("priceType") Long priceType, @JsonProperty("selectionId") Long selectionId) {
+        this.includeInMultiple = includeInMultiple;
+        this.priceDen = priceDen;
+        this.priceNum = priceNum;
+        this.priceType = priceType;
+        this.selectionId = selectionId;
+  }
 }

@@ -12,6 +12,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityProviderStrategy")
     public CapacityProviderStrategyItem[] capacityProviderStrategy;
+
     public CreateServiceRequest withCapacityProviderStrategy(CapacityProviderStrategyItem[] capacityProviderStrategy) {
         this.capacityProviderStrategy = capacityProviderStrategy;
         return this;
@@ -20,6 +21,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateServiceRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -28,6 +30,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public CreateServiceRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -36,6 +39,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentConfiguration")
     public DeploymentConfiguration deploymentConfiguration;
+
     public CreateServiceRequest withDeploymentConfiguration(DeploymentConfiguration deploymentConfiguration) {
         this.deploymentConfiguration = deploymentConfiguration;
         return this;
@@ -44,6 +48,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentController")
     public DeploymentController deploymentController;
+
     public CreateServiceRequest withDeploymentController(DeploymentController deploymentController) {
         this.deploymentController = deploymentController;
         return this;
@@ -52,6 +57,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredCount")
     public Long desiredCount;
+
     public CreateServiceRequest withDesiredCount(Long desiredCount) {
         this.desiredCount = desiredCount;
         return this;
@@ -60,6 +66,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableECSManagedTags")
     public Boolean enableECSManagedTags;
+
     public CreateServiceRequest withEnableECSManagedTags(Boolean enableECSManagedTags) {
         this.enableECSManagedTags = enableECSManagedTags;
         return this;
@@ -68,6 +75,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableExecuteCommand")
     public Boolean enableExecuteCommand;
+
     public CreateServiceRequest withEnableExecuteCommand(Boolean enableExecuteCommand) {
         this.enableExecuteCommand = enableExecuteCommand;
         return this;
@@ -76,6 +84,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthCheckGracePeriodSeconds")
     public Long healthCheckGracePeriodSeconds;
+
     public CreateServiceRequest withHealthCheckGracePeriodSeconds(Long healthCheckGracePeriodSeconds) {
         this.healthCheckGracePeriodSeconds = healthCheckGracePeriodSeconds;
         return this;
@@ -84,6 +93,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchType")
     public LaunchTypeEnum launchType;
+
     public CreateServiceRequest withLaunchType(LaunchTypeEnum launchType) {
         this.launchType = launchType;
         return this;
@@ -92,6 +102,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadBalancers")
     public LoadBalancer[] loadBalancers;
+
     public CreateServiceRequest withLoadBalancers(LoadBalancer[] loadBalancers) {
         this.loadBalancers = loadBalancers;
         return this;
@@ -100,6 +111,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
+
     public CreateServiceRequest withNetworkConfiguration(NetworkConfiguration networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
         return this;
@@ -108,6 +120,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placementConstraints")
     public PlacementConstraint[] placementConstraints;
+
     public CreateServiceRequest withPlacementConstraints(PlacementConstraint[] placementConstraints) {
         this.placementConstraints = placementConstraints;
         return this;
@@ -116,6 +129,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placementStrategy")
     public PlacementStrategy[] placementStrategy;
+
     public CreateServiceRequest withPlacementStrategy(PlacementStrategy[] placementStrategy) {
         this.placementStrategy = placementStrategy;
         return this;
@@ -124,6 +138,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformVersion")
     public String platformVersion;
+
     public CreateServiceRequest withPlatformVersion(String platformVersion) {
         this.platformVersion = platformVersion;
         return this;
@@ -132,6 +147,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propagateTags")
     public PropagateTagsEnum propagateTags;
+
     public CreateServiceRequest withPropagateTags(PropagateTagsEnum propagateTags) {
         this.propagateTags = propagateTags;
         return this;
@@ -140,6 +156,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public CreateServiceRequest withRole(String role) {
         this.role = role;
         return this;
@@ -148,6 +165,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulingStrategy")
     public SchedulingStrategyEnum schedulingStrategy;
+
     public CreateServiceRequest withSchedulingStrategy(SchedulingStrategyEnum schedulingStrategy) {
         this.schedulingStrategy = schedulingStrategy;
         return this;
@@ -156,6 +174,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceConnectConfiguration")
     public ServiceConnectConfiguration serviceConnectConfiguration;
+
     public CreateServiceRequest withServiceConnectConfiguration(ServiceConnectConfiguration serviceConnectConfiguration) {
         this.serviceConnectConfiguration = serviceConnectConfiguration;
         return this;
@@ -163,6 +182,7 @@ public class CreateServiceRequest {
     
     @JsonProperty("serviceName")
     public String serviceName;
+
     public CreateServiceRequest withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -171,6 +191,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceRegistries")
     public ServiceRegistry[] serviceRegistries;
+
     public CreateServiceRequest withServiceRegistries(ServiceRegistry[] serviceRegistries) {
         this.serviceRegistries = serviceRegistries;
         return this;
@@ -179,6 +200,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateServiceRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -187,9 +209,13 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskDefinition")
     public String taskDefinition;
+
     public CreateServiceRequest withTaskDefinition(String taskDefinition) {
         this.taskDefinition = taskDefinition;
         return this;
     }
     
+    public CreateServiceRequest(@JsonProperty("serviceName") String serviceName) {
+        this.serviceName = serviceName;
+  }
 }

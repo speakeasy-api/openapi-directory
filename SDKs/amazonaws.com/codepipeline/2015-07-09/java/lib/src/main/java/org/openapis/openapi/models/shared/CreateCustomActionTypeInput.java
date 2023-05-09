@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateCustomActionTypeInput {
     @JsonProperty("category")
     public ActionCategoryEnum category;
+
     public CreateCustomActionTypeInput withCategory(ActionCategoryEnum category) {
         this.category = category;
         return this;
@@ -22,6 +23,7 @@ public class CreateCustomActionTypeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationProperties")
     public ActionConfigurationProperty[] configurationProperties;
+
     public CreateCustomActionTypeInput withConfigurationProperties(ActionConfigurationProperty[] configurationProperties) {
         this.configurationProperties = configurationProperties;
         return this;
@@ -29,6 +31,7 @@ public class CreateCustomActionTypeInput {
     
     @JsonProperty("inputArtifactDetails")
     public ArtifactDetails inputArtifactDetails;
+
     public CreateCustomActionTypeInput withInputArtifactDetails(ArtifactDetails inputArtifactDetails) {
         this.inputArtifactDetails = inputArtifactDetails;
         return this;
@@ -36,6 +39,7 @@ public class CreateCustomActionTypeInput {
     
     @JsonProperty("outputArtifactDetails")
     public ArtifactDetails outputArtifactDetails;
+
     public CreateCustomActionTypeInput withOutputArtifactDetails(ArtifactDetails outputArtifactDetails) {
         this.outputArtifactDetails = outputArtifactDetails;
         return this;
@@ -43,6 +47,7 @@ public class CreateCustomActionTypeInput {
     
     @JsonProperty("provider")
     public String provider;
+
     public CreateCustomActionTypeInput withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -51,6 +56,7 @@ public class CreateCustomActionTypeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public ActionTypeSettings settings;
+
     public CreateCustomActionTypeInput withSettings(ActionTypeSettings settings) {
         this.settings = settings;
         return this;
@@ -59,6 +65,7 @@ public class CreateCustomActionTypeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateCustomActionTypeInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -66,9 +73,17 @@ public class CreateCustomActionTypeInput {
     
     @JsonProperty("version")
     public String version;
+
     public CreateCustomActionTypeInput withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public CreateCustomActionTypeInput(@JsonProperty("category") ActionCategoryEnum category, @JsonProperty("inputArtifactDetails") ArtifactDetails inputArtifactDetails, @JsonProperty("outputArtifactDetails") ArtifactDetails outputArtifactDetails, @JsonProperty("provider") String provider, @JsonProperty("version") String version) {
+        this.category = category;
+        this.inputArtifactDetails = inputArtifactDetails;
+        this.outputArtifactDetails = outputArtifactDetails;
+        this.provider = provider;
+        this.version = version;
+  }
 }

@@ -18,9 +18,11 @@ public class ExpiryDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public ExpiryDetail withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
     }
     
+    public ExpiryDetail(){}
 }

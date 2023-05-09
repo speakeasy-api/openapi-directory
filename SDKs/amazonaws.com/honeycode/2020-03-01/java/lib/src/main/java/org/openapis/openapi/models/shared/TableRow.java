@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TableRow {
     @JsonProperty("cells")
     public Cell[] cells;
+
     public TableRow withCells(Cell[] cells) {
         this.cells = cells;
         return this;
@@ -19,9 +20,14 @@ public class TableRow {
     
     @JsonProperty("rowId")
     public String rowId;
+
     public TableRow withRowId(String rowId) {
         this.rowId = rowId;
         return this;
     }
     
+    public TableRow(@JsonProperty("cells") Cell[] cells, @JsonProperty("rowId") String rowId) {
+        this.cells = cells;
+        this.rowId = rowId;
+  }
 }

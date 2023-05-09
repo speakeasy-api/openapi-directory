@@ -15,9 +15,11 @@ public class Section {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldGroup")
     public FieldGroup fieldGroup;
+
     public Section withFieldGroup(FieldGroup fieldGroup) {
         this.fieldGroup = fieldGroup;
         return this;
     }
     
+    public Section(){}
 }

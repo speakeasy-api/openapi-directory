@@ -15,6 +15,7 @@ public class StartRecommendationReportGenerationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupIdFilter")
     public org.openapis.openapi.models.shared.Group[] groupIdFilter;
+
     public StartRecommendationReportGenerationRequestBody withGroupIdFilter(org.openapis.openapi.models.shared.Group[] groupIdFilter) {
         this.groupIdFilter = groupIdFilter;
         return this;
@@ -26,9 +27,11 @@ public class StartRecommendationReportGenerationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputFormat")
     public StartRecommendationReportGenerationRequestBodyOutputFormatEnum outputFormat;
+
     public StartRecommendationReportGenerationRequestBody withOutputFormat(StartRecommendationReportGenerationRequestBodyOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
     }
     
+    public StartRecommendationReportGenerationRequestBody(){}
 }

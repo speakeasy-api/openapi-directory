@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateLensReviewRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=LensAlias")
     public String lensAlias;
+
     public UpdateLensReviewRequest withLensAlias(String lensAlias) {
         this.lensAlias = lensAlias;
         return this;
@@ -16,6 +18,7 @@ public class UpdateLensReviewRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateLensReviewRequestBody requestBody;
+
     public UpdateLensReviewRequest withRequestBody(UpdateLensReviewRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class UpdateLensReviewRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkloadId")
     public String workloadId;
+
     public UpdateLensReviewRequest withWorkloadId(String workloadId) {
         this.workloadId = workloadId;
         return this;
@@ -30,6 +34,7 @@ public class UpdateLensReviewRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateLensReviewRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class UpdateLensReviewRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateLensReviewRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class UpdateLensReviewRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateLensReviewRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class UpdateLensReviewRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateLensReviewRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class UpdateLensReviewRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateLensReviewRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class UpdateLensReviewRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateLensReviewRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,15 @@ public class UpdateLensReviewRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateLensReviewRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public UpdateLensReviewRequest(@JsonProperty("LensAlias") String lensAlias, @JsonProperty("RequestBody") UpdateLensReviewRequestBody requestBody, @JsonProperty("WorkloadId") String workloadId) {
+        this.lensAlias = lensAlias;
+        this.requestBody = requestBody;
+        this.workloadId = workloadId;
+  }
 }

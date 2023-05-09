@@ -18,9 +18,11 @@ public class RollbackInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetSnapshot")
     public String targetSnapshot;
+
     public RollbackInstanceRequest withTargetSnapshot(String targetSnapshot) {
         this.targetSnapshot = targetSnapshot;
         return this;
     }
     
+    public RollbackInstanceRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AirQualityAirQualityGetResponse {
@@ -12,6 +13,7 @@ public class AirQualityAirQualityGetResponse {
      */
     
     public org.openapis.openapi.models.shared.AirQualityPointData airQualityPointData;
+
     public AirQualityAirQualityGetResponse withAirQualityPointData(org.openapis.openapi.models.shared.AirQualityPointData airQualityPointData) {
         this.airQualityPointData = airQualityPointData;
         return this;
@@ -19,6 +21,7 @@ public class AirQualityAirQualityGetResponse {
     
     
     public String contentType;
+
     public AirQualityAirQualityGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AirQualityAirQualityGetResponse {
      */
     
     public org.openapis.openapi.models.shared.GeneralRequestError generalRequestError;
+
     public AirQualityAirQualityGetResponse withGeneralRequestError(org.openapis.openapi.models.shared.GeneralRequestError generalRequestError) {
         this.generalRequestError = generalRequestError;
         return this;
@@ -39,6 +43,7 @@ public class AirQualityAirQualityGetResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public AirQualityAirQualityGetResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -46,6 +51,7 @@ public class AirQualityAirQualityGetResponse {
     
     
     public Integer statusCode;
+
     public AirQualityAirQualityGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class AirQualityAirQualityGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AirQualityAirQualityGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AirQualityAirQualityGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

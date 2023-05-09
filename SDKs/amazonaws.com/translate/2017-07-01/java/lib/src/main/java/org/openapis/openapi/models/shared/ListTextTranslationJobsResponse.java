@@ -15,6 +15,7 @@ public class ListTextTranslationJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTextTranslationJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTextTranslationJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TextTranslationJobPropertiesList")
     public TextTranslationJobProperties[] textTranslationJobPropertiesList;
+
     public ListTextTranslationJobsResponse withTextTranslationJobPropertiesList(TextTranslationJobProperties[] textTranslationJobPropertiesList) {
         this.textTranslationJobPropertiesList = textTranslationJobPropertiesList;
         return this;
     }
     
+    public ListTextTranslationJobsResponse(){}
 }

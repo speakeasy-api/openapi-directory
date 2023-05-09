@@ -20,6 +20,7 @@ public class StarredRepository {
      */
     @JsonProperty("repo")
     public Repository repo;
+
     public StarredRepository withRepo(Repository repo) {
         this.repo = repo;
         return this;
@@ -29,9 +30,14 @@ public class StarredRepository {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("starred_at")
     public OffsetDateTime starredAt;
+
     public StarredRepository withStarredAt(OffsetDateTime starredAt) {
         this.starredAt = starredAt;
         return this;
     }
     
+    public StarredRepository(@JsonProperty("repo") Repository repo, @JsonProperty("starred_at") OffsetDateTime starredAt) {
+        this.repo = repo;
+        this.starredAt = starredAt;
+  }
 }

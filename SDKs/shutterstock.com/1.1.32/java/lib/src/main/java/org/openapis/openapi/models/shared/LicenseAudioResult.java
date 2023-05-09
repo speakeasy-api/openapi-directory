@@ -18,6 +18,7 @@ public class LicenseAudioResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allotment_charge")
     public Double allotmentCharge;
+
     public LicenseAudioResult withAllotmentCharge(Double allotmentCharge) {
         this.allotmentCharge = allotmentCharge;
         return this;
@@ -28,6 +29,7 @@ public class LicenseAudioResult {
      */
     @JsonProperty("audio_id")
     public String audioId;
+
     public LicenseAudioResult withAudioId(String audioId) {
         this.audioId = audioId;
         return this;
@@ -39,6 +41,7 @@ public class LicenseAudioResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download")
     public AudioUrl download;
+
     public LicenseAudioResult withDownload(AudioUrl download) {
         this.download = download;
         return this;
@@ -50,6 +53,7 @@ public class LicenseAudioResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public LicenseAudioResult withError(String error) {
         this.error = error;
         return this;
@@ -61,9 +65,13 @@ public class LicenseAudioResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license_id")
     public String licenseId;
+
     public LicenseAudioResult withLicenseId(String licenseId) {
         this.licenseId = licenseId;
         return this;
     }
     
+    public LicenseAudioResult(@JsonProperty("audio_id") String audioId) {
+        this.audioId = audioId;
+  }
 }

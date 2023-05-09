@@ -15,6 +15,7 @@ public class SSESpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public SSESpecification withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,6 +24,7 @@ public class SSESpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSMasterKeyId")
     public String kmsMasterKeyId;
+
     public SSESpecification withKMSMasterKeyId(String kmsMasterKeyId) {
         this.kmsMasterKeyId = kmsMasterKeyId;
         return this;
@@ -31,9 +33,11 @@ public class SSESpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SSEType")
     public SSETypeEnum sseType;
+
     public SSESpecification withSSEType(SSETypeEnum sseType) {
         this.sseType = sseType;
         return this;
     }
     
+    public SSESpecification(){}
 }

@@ -15,6 +15,7 @@ public class LookupDeveloperIdentityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeveloperUserIdentifierList")
     public String[] developerUserIdentifierList;
+
     public LookupDeveloperIdentityResponse withDeveloperUserIdentifierList(String[] developerUserIdentifierList) {
         this.developerUserIdentifierList = developerUserIdentifierList;
         return this;
@@ -23,6 +24,7 @@ public class LookupDeveloperIdentityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityId")
     public String identityId;
+
     public LookupDeveloperIdentityResponse withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
@@ -31,9 +33,11 @@ public class LookupDeveloperIdentityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public LookupDeveloperIdentityResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public LookupDeveloperIdentityResponse(){}
 }

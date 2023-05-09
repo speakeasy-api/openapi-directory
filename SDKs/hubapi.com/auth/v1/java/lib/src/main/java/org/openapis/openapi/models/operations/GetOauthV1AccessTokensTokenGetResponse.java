@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOauthV1AccessTokensTokenGetResponse {
@@ -12,6 +13,7 @@ public class GetOauthV1AccessTokensTokenGetResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessTokenInfoResponse accessTokenInfoResponse;
+
     public GetOauthV1AccessTokensTokenGetResponse withAccessTokenInfoResponse(org.openapis.openapi.models.shared.AccessTokenInfoResponse accessTokenInfoResponse) {
         this.accessTokenInfoResponse = accessTokenInfoResponse;
         return this;
@@ -19,6 +21,7 @@ public class GetOauthV1AccessTokensTokenGetResponse {
     
     
     public byte[] body;
+
     public GetOauthV1AccessTokensTokenGetResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -26,6 +29,7 @@ public class GetOauthV1AccessTokensTokenGetResponse {
     
     
     public String contentType;
+
     public GetOauthV1AccessTokensTokenGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class GetOauthV1AccessTokensTokenGetResponse {
     
     
     public Integer statusCode;
+
     public GetOauthV1AccessTokensTokenGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetOauthV1AccessTokensTokenGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOauthV1AccessTokensTokenGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetOauthV1AccessTokensTokenGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

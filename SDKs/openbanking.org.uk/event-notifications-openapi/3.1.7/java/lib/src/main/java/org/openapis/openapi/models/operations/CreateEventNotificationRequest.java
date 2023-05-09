@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateEventNotificationRequest {
@@ -12,6 +13,7 @@ public class CreateEventNotificationRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/jwt")
     public String requestBody;
+
     public CreateEventNotificationRequest withRequestBody(String requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class CreateEventNotificationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-financial-id")
     public String xFapiFinancialId;
+
     public CreateEventNotificationRequest withXFapiFinancialId(String xFapiFinancialId) {
         this.xFapiFinancialId = xFapiFinancialId;
         return this;
@@ -32,9 +35,14 @@ public class CreateEventNotificationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
     public String xFapiInteractionId;
+
     public CreateEventNotificationRequest withXFapiInteractionId(String xFapiInteractionId) {
         this.xFapiInteractionId = xFapiInteractionId;
         return this;
     }
     
+    public CreateEventNotificationRequest(@JsonProperty("RequestBody") String requestBody, @JsonProperty("x-fapi-financial-id") String xFapiFinancialId) {
+        this.requestBody = requestBody;
+        this.xFapiFinancialId = xFapiFinancialId;
+  }
 }

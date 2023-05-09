@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetectEntitiesV2Response {
     
     public String contentType;
+
     public DetectEntitiesV2Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DetectEntitiesV2Response {
      */
     
     public org.openapis.openapi.models.shared.DetectEntitiesV2Response detectEntitiesV2Response;
+
     public DetectEntitiesV2Response withDetectEntitiesV2Response(org.openapis.openapi.models.shared.DetectEntitiesV2Response detectEntitiesV2Response) {
         this.detectEntitiesV2Response = detectEntitiesV2Response;
         return this;
@@ -29,6 +32,7 @@ public class DetectEntitiesV2Response {
      */
     
     public Object internalServerException;
+
     public DetectEntitiesV2Response withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DetectEntitiesV2Response {
      */
     
     public Object invalidEncodingException;
+
     public DetectEntitiesV2Response withInvalidEncodingException(Object invalidEncodingException) {
         this.invalidEncodingException = invalidEncodingException;
         return this;
@@ -49,6 +54,7 @@ public class DetectEntitiesV2Response {
      */
     
     public Object invalidRequestException;
+
     public DetectEntitiesV2Response withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class DetectEntitiesV2Response {
     
     
     public Integer statusCode;
+
     public DetectEntitiesV2Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DetectEntitiesV2Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetectEntitiesV2Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DetectEntitiesV2Response {
      */
     
     public Object serviceUnavailableException;
+
     public DetectEntitiesV2Response withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,6 +92,7 @@ public class DetectEntitiesV2Response {
      */
     
     public Object textSizeLimitExceededException;
+
     public DetectEntitiesV2Response withTextSizeLimitExceededException(Object textSizeLimitExceededException) {
         this.textSizeLimitExceededException = textSizeLimitExceededException;
         return this;
@@ -93,9 +103,14 @@ public class DetectEntitiesV2Response {
      */
     
     public Object tooManyRequestsException;
+
     public DetectEntitiesV2Response withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DetectEntitiesV2Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class RemoveUserFromAccount400ApplicationJSON {
      */
     @JsonProperty("errors")
     public RemoveUserFromAccount400ApplicationJSONErrors errors;
+
     public RemoveUserFromAccount400ApplicationJSON withErrors(RemoveUserFromAccount400ApplicationJSONErrors errors) {
         this.errors = errors;
         return this;
@@ -22,6 +23,7 @@ public class RemoveUserFromAccount400ApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public RemoveUserFromAccount400ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -29,9 +31,15 @@ public class RemoveUserFromAccount400ApplicationJSON {
     
     @JsonProperty("meta")
     public RemoveUserFromAccount400ApplicationJSONMeta meta;
+
     public RemoveUserFromAccount400ApplicationJSON withMeta(RemoveUserFromAccount400ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public RemoveUserFromAccount400ApplicationJSON(@JsonProperty("errors") RemoveUserFromAccount400ApplicationJSONErrors errors, @JsonProperty("message") String message, @JsonProperty("meta") RemoveUserFromAccount400ApplicationJSONMeta meta) {
+        this.errors = errors;
+        this.message = message;
+        this.meta = meta;
+  }
 }

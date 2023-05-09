@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateProcessingJobRequest {
     @JsonProperty("AppSpecification")
     public AppSpecification appSpecification;
+
     public CreateProcessingJobRequest withAppSpecification(AppSpecification appSpecification) {
         this.appSpecification = appSpecification;
         return this;
@@ -19,17 +20,19 @@ public class CreateProcessingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public java.util.Map<String, String> environment;
+
     public CreateProcessingJobRequest withEnvironment(java.util.Map<String, String> environment) {
         this.environment = environment;
         return this;
     }
     
     /**
-     * &lt;p&gt;Associates a SageMaker job as a trial component with an experiment and trial. Specified when you call the following APIs:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateProcessingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateTrainingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateTransformJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     * &lt;p&gt;Associates a SageMaker job as a trial component with an experiment and trial. Specified when you call the following APIs:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateProcessingJob.html"&gt;CreateProcessingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html"&gt;CreateTrainingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTransformJob.html"&gt;CreateTransformJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentConfig")
     public ExperimentConfig experimentConfig;
+
     public CreateProcessingJobRequest withExperimentConfig(ExperimentConfig experimentConfig) {
         this.experimentConfig = experimentConfig;
         return this;
@@ -38,6 +41,7 @@ public class CreateProcessingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkConfig")
     public NetworkConfig networkConfig;
+
     public CreateProcessingJobRequest withNetworkConfig(NetworkConfig networkConfig) {
         this.networkConfig = networkConfig;
         return this;
@@ -46,6 +50,7 @@ public class CreateProcessingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingInputs")
     public ProcessingInput[] processingInputs;
+
     public CreateProcessingJobRequest withProcessingInputs(ProcessingInput[] processingInputs) {
         this.processingInputs = processingInputs;
         return this;
@@ -53,6 +58,7 @@ public class CreateProcessingJobRequest {
     
     @JsonProperty("ProcessingJobName")
     public String processingJobName;
+
     public CreateProcessingJobRequest withProcessingJobName(String processingJobName) {
         this.processingJobName = processingJobName;
         return this;
@@ -61,6 +67,7 @@ public class CreateProcessingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingOutputConfig")
     public ProcessingOutputConfig processingOutputConfig;
+
     public CreateProcessingJobRequest withProcessingOutputConfig(ProcessingOutputConfig processingOutputConfig) {
         this.processingOutputConfig = processingOutputConfig;
         return this;
@@ -68,6 +75,7 @@ public class CreateProcessingJobRequest {
     
     @JsonProperty("ProcessingResources")
     public ProcessingResources processingResources;
+
     public CreateProcessingJobRequest withProcessingResources(ProcessingResources processingResources) {
         this.processingResources = processingResources;
         return this;
@@ -75,6 +83,7 @@ public class CreateProcessingJobRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateProcessingJobRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -83,6 +92,7 @@ public class CreateProcessingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoppingCondition")
     public ProcessingStoppingCondition stoppingCondition;
+
     public CreateProcessingJobRequest withStoppingCondition(ProcessingStoppingCondition stoppingCondition) {
         this.stoppingCondition = stoppingCondition;
         return this;
@@ -91,9 +101,16 @@ public class CreateProcessingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateProcessingJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateProcessingJobRequest(@JsonProperty("AppSpecification") AppSpecification appSpecification, @JsonProperty("ProcessingJobName") String processingJobName, @JsonProperty("ProcessingResources") ProcessingResources processingResources, @JsonProperty("RoleArn") String roleArn) {
+        this.appSpecification = appSpecification;
+        this.processingJobName = processingJobName;
+        this.processingResources = processingResources;
+        this.roleArn = roleArn;
+  }
 }

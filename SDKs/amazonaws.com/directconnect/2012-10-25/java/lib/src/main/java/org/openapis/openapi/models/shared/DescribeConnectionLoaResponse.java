@@ -15,9 +15,11 @@ public class DescribeConnectionLoaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loa")
     public Loa loa;
+
     public DescribeConnectionLoaResponse withLoa(Loa loa) {
         this.loa = loa;
         return this;
     }
     
+    public DescribeConnectionLoaResponse(){}
 }

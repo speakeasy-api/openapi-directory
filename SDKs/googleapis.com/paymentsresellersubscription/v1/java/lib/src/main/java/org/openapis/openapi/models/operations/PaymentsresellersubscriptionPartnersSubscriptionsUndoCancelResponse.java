@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelResponse {
     
     public String contentType;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelResponse
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudPaymentsResellerSubscriptionV1UndoCancelSubscriptionResponse googleCloudPaymentsResellerSubscriptionV1UndoCancelSubscriptionResponse;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelResponse withGoogleCloudPaymentsResellerSubscriptionV1UndoCancelSubscriptionResponse(org.openapis.openapi.models.shared.GoogleCloudPaymentsResellerSubscriptionV1UndoCancelSubscriptionResponse googleCloudPaymentsResellerSubscriptionV1UndoCancelSubscriptionResponse) {
         this.googleCloudPaymentsResellerSubscriptionV1UndoCancelSubscriptionResponse = googleCloudPaymentsResellerSubscriptionV1UndoCancelSubscriptionResponse;
         return this;
@@ -26,6 +29,7 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelResponse
     
     
     public Integer statusCode;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelResponse
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class DialogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotToElicit")
     public String slotToElicit;
+
     public DialogAction withSlotToElicit(String slotToElicit) {
         this.slotToElicit = slotToElicit;
         return this;
@@ -23,6 +24,7 @@ public class DialogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suppressNextMessage")
     public Boolean suppressNextMessage;
+
     public DialogAction withSuppressNextMessage(Boolean suppressNextMessage) {
         this.suppressNextMessage = suppressNextMessage;
         return this;
@@ -30,9 +32,13 @@ public class DialogAction {
     
     @JsonProperty("type")
     public DialogActionTypeEnum type;
+
     public DialogAction withType(DialogActionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DialogAction(@JsonProperty("type") DialogActionTypeEnum type) {
+        this.type = type;
+  }
 }

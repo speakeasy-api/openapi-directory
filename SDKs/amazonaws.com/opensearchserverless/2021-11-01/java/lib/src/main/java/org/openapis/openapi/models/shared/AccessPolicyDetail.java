@@ -15,6 +15,7 @@ public class AccessPolicyDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdDate")
     public Long createdDate;
+
     public AccessPolicyDetail withCreatedDate(Long createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -23,6 +24,7 @@ public class AccessPolicyDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AccessPolicyDetail withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class AccessPolicyDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedDate")
     public Long lastModifiedDate;
+
     public AccessPolicyDetail withLastModifiedDate(Long lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -39,6 +42,7 @@ public class AccessPolicyDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AccessPolicyDetail withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class AccessPolicyDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public java.util.Map<String, Object> policy;
+
     public AccessPolicyDetail withPolicy(java.util.Map<String, Object> policy) {
         this.policy = policy;
         return this;
@@ -55,6 +60,7 @@ public class AccessPolicyDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyVersion")
     public String policyVersion;
+
     public AccessPolicyDetail withPolicyVersion(String policyVersion) {
         this.policyVersion = policyVersion;
         return this;
@@ -63,9 +69,11 @@ public class AccessPolicyDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AccessPolicyTypeEnum type;
+
     public AccessPolicyDetail withType(AccessPolicyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AccessPolicyDetail(){}
 }

@@ -12,6 +12,7 @@ public class DestinyComponentsCraftablesDestinyCraftableSocketPlugComponent {
      */
     
     public Integer[] failedRequirementIndexes;
+
     public DestinyComponentsCraftablesDestinyCraftableSocketPlugComponent withFailedRequirementIndexes(Integer[] failedRequirementIndexes) {
         this.failedRequirementIndexes = failedRequirementIndexes;
         return this;
@@ -19,9 +20,11 @@ public class DestinyComponentsCraftablesDestinyCraftableSocketPlugComponent {
     
     
     public Long plugItemHash;
+
     public DestinyComponentsCraftablesDestinyCraftableSocketPlugComponent withPlugItemHash(Long plugItemHash) {
         this.plugItemHash = plugItemHash;
         return this;
     }
     
+    public DestinyComponentsCraftablesDestinyCraftableSocketPlugComponent(){}
 }

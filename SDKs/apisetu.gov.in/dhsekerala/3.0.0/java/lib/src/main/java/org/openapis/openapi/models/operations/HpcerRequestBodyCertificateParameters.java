@@ -12,6 +12,7 @@ public class HpcerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public HpcerRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class HpcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public HpcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class HpcerRequestBodyCertificateParameters {
      */
     @JsonProperty("regno")
     public String regno;
+
     public HpcerRequestBodyCertificateParameters withRegno(String regno) {
         this.regno = regno;
         return this;
@@ -42,6 +45,7 @@ public class HpcerRequestBodyCertificateParameters {
      */
     @JsonProperty("type")
     public String type;
+
     public HpcerRequestBodyCertificateParameters withType(String type) {
         this.type = type;
         return this;
@@ -52,9 +56,17 @@ public class HpcerRequestBodyCertificateParameters {
      */
     @JsonProperty("year")
     public String year;
+
     public HpcerRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public HpcerRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("regno") String regno, @JsonProperty("type") String type, @JsonProperty("year") String year) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.regno = regno;
+        this.type = type;
+        this.year = year;
+  }
 }

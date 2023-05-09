@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class RunsForRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_utc")
     public OffsetDateTime dateUtc;
+
     public RunsForRunRequest withDateUtc(OffsetDateTime dateUtc) {
         this.dateUtc = dateUtc;
         return this;
@@ -23,6 +25,7 @@ public class RunsForRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
     public String devid;
+
     public RunsForRunRequest withDevid(String devid) {
         this.devid = devid;
         return this;
@@ -33,6 +36,7 @@ public class RunsForRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public RunsForRunExpandEnum[] expand;
+
     public RunsForRunRequest withExpand(RunsForRunExpandEnum[] expand) {
         this.expand = expand;
         return this;
@@ -43,6 +47,7 @@ public class RunsForRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_geopath")
     public Boolean includeGeopath;
+
     public RunsForRunRequest withIncludeGeopath(Boolean includeGeopath) {
         this.includeGeopath = includeGeopath;
         return this;
@@ -53,6 +58,7 @@ public class RunsForRunRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=run_ref")
     public String runRef;
+
     public RunsForRunRequest withRunRef(String runRef) {
         this.runRef = runRef;
         return this;
@@ -63,6 +69,7 @@ public class RunsForRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
     public String signature;
+
     public RunsForRunRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -73,9 +80,14 @@ public class RunsForRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public RunsForRunRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public RunsForRunRequest(@JsonProperty("expand") RunsForRunExpandEnum[] expand, @JsonProperty("run_ref") String runRef) {
+        this.expand = expand;
+        this.runRef = runRef;
+  }
 }

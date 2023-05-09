@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UrbanDeliveryRequestBody {
@@ -12,6 +13,7 @@ public class UrbanDeliveryRequestBody {
      */
     @SpeakeasyMetadata("form:name=apiKey_l1")
     public String apiKeyL1;
+
     public UrbanDeliveryRequestBody withApiKeyL1(String apiKeyL1) {
         this.apiKeyL1 = apiKeyL1;
         return this;
@@ -22,6 +24,7 @@ public class UrbanDeliveryRequestBody {
      */
     @SpeakeasyMetadata("form:name=apiKey_l2")
     public String apiKeyL2;
+
     public UrbanDeliveryRequestBody withApiKeyL2(String apiKeyL2) {
         this.apiKeyL2 = apiKeyL2;
         return this;
@@ -32,6 +35,7 @@ public class UrbanDeliveryRequestBody {
      */
     @SpeakeasyMetadata("form:name=destination_latitude")
     public Double destinationLatitude;
+
     public UrbanDeliveryRequestBody withDestinationLatitude(Double destinationLatitude) {
         this.destinationLatitude = destinationLatitude;
         return this;
@@ -42,6 +46,7 @@ public class UrbanDeliveryRequestBody {
      */
     @SpeakeasyMetadata("form:name=destination_longitude")
     public Double destinationLongitude;
+
     public UrbanDeliveryRequestBody withDestinationLongitude(Double destinationLongitude) {
         this.destinationLongitude = destinationLongitude;
         return this;
@@ -52,6 +57,7 @@ public class UrbanDeliveryRequestBody {
      */
     @SpeakeasyMetadata("form:name=item_count")
     public Integer itemCount;
+
     public UrbanDeliveryRequestBody withItemCount(Integer itemCount) {
         this.itemCount = itemCount;
         return this;
@@ -62,6 +68,7 @@ public class UrbanDeliveryRequestBody {
      */
     @SpeakeasyMetadata("form:name=origin_latitude")
     public Double originLatitude;
+
     public UrbanDeliveryRequestBody withOriginLatitude(Double originLatitude) {
         this.originLatitude = originLatitude;
         return this;
@@ -72,6 +79,7 @@ public class UrbanDeliveryRequestBody {
      */
     @SpeakeasyMetadata("form:name=origin_longitude")
     public Double originLongitude;
+
     public UrbanDeliveryRequestBody withOriginLongitude(Double originLongitude) {
         this.originLongitude = originLongitude;
         return this;
@@ -82,9 +90,20 @@ public class UrbanDeliveryRequestBody {
      */
     @SpeakeasyMetadata("form:name=vehicle_type")
     public String vehicleType;
+
     public UrbanDeliveryRequestBody withVehicleType(String vehicleType) {
         this.vehicleType = vehicleType;
         return this;
     }
     
+    public UrbanDeliveryRequestBody(@JsonProperty("apiKey_l1") String apiKeyL1, @JsonProperty("apiKey_l2") String apiKeyL2, @JsonProperty("destination_latitude") Double destinationLatitude, @JsonProperty("destination_longitude") Double destinationLongitude, @JsonProperty("item_count") Integer itemCount, @JsonProperty("origin_latitude") Double originLatitude, @JsonProperty("origin_longitude") Double originLongitude, @JsonProperty("vehicle_type") String vehicleType) {
+        this.apiKeyL1 = apiKeyL1;
+        this.apiKeyL2 = apiKeyL2;
+        this.destinationLatitude = destinationLatitude;
+        this.destinationLongitude = destinationLongitude;
+        this.itemCount = itemCount;
+        this.originLatitude = originLatitude;
+        this.originLongitude = originLongitude;
+        this.vehicleType = vehicleType;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePoolsResponse {
@@ -12,6 +13,7 @@ public class DescribePoolsResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribePoolsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribePoolsResponse {
     
     
     public String contentType;
+
     public DescribePoolsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribePoolsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePoolsResult describePoolsResult;
+
     public DescribePoolsResponse withDescribePoolsResult(org.openapis.openapi.models.shared.DescribePoolsResult describePoolsResult) {
         this.describePoolsResult = describePoolsResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribePoolsResponse {
      */
     
     public Object internalServerException;
+
     public DescribePoolsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribePoolsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribePoolsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribePoolsResponse {
     
     
     public Integer statusCode;
+
     public DescribePoolsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribePoolsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePoolsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribePoolsResponse {
      */
     
     public Object throttlingException;
+
     public DescribePoolsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribePoolsResponse {
      */
     
     public Object validationException;
+
     public DescribePoolsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribePoolsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

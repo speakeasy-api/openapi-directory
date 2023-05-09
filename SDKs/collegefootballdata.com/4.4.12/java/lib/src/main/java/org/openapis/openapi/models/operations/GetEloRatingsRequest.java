@@ -12,6 +12,7 @@ public class GetEloRatingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
     public String conference;
+
     public GetEloRatingsRequest withConference(String conference) {
         this.conference = conference;
         return this;
@@ -22,6 +23,7 @@ public class GetEloRatingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
     public String team;
+
     public GetEloRatingsRequest withTeam(String team) {
         this.team = team;
         return this;
@@ -32,6 +34,7 @@ public class GetEloRatingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=week")
     public Long week;
+
     public GetEloRatingsRequest withWeek(Long week) {
         this.week = week;
         return this;
@@ -42,9 +45,11 @@ public class GetEloRatingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public GetEloRatingsRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetEloRatingsRequest(){}
 }

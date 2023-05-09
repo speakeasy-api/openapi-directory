@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelMandateByUuidRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mandateUuid")
     public String mandateUuid;
+
     public CancelMandateByUuidRequest withMandateUuid(String mandateUuid) {
         this.mandateUuid = mandateUuid;
         return this;
     }
     
+    public CancelMandateByUuidRequest(@JsonProperty("mandateUuid") String mandateUuid) {
+        this.mandateUuid = mandateUuid;
+  }
 }

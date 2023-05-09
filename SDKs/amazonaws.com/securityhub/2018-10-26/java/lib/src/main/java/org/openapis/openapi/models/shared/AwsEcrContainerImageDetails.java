@@ -15,6 +15,7 @@ public class AwsEcrContainerImageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Architecture")
     public String architecture;
+
     public AwsEcrContainerImageDetails withArchitecture(String architecture) {
         this.architecture = architecture;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcrContainerImageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageDigest")
     public String imageDigest;
+
     public AwsEcrContainerImageDetails withImageDigest(String imageDigest) {
         this.imageDigest = imageDigest;
         return this;
@@ -31,6 +33,7 @@ public class AwsEcrContainerImageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImagePublishedAt")
     public String imagePublishedAt;
+
     public AwsEcrContainerImageDetails withImagePublishedAt(String imagePublishedAt) {
         this.imagePublishedAt = imagePublishedAt;
         return this;
@@ -39,6 +42,7 @@ public class AwsEcrContainerImageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageTags")
     public String[] imageTags;
+
     public AwsEcrContainerImageDetails withImageTags(String[] imageTags) {
         this.imageTags = imageTags;
         return this;
@@ -47,6 +51,7 @@ public class AwsEcrContainerImageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistryId")
     public String registryId;
+
     public AwsEcrContainerImageDetails withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -55,9 +60,11 @@ public class AwsEcrContainerImageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RepositoryName")
     public String repositoryName;
+
     public AwsEcrContainerImageDetails withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public AwsEcrContainerImageDetails(){}
 }

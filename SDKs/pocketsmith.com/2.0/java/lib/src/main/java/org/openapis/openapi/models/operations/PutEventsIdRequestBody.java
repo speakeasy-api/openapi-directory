@@ -15,6 +15,7 @@ public class PutEventsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public PutEventsIdRequestBody withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -25,6 +26,7 @@ public class PutEventsIdRequestBody {
      */
     @JsonProperty("behaviour")
     public PutEventsIdRequestBodyBehaviourEnum behaviour;
+
     public PutEventsIdRequestBody withBehaviour(PutEventsIdRequestBodyBehaviourEnum behaviour) {
         this.behaviour = behaviour;
         return this;
@@ -36,6 +38,7 @@ public class PutEventsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public PutEventsIdRequestBody withNote(String note) {
         this.note = note;
         return this;
@@ -47,6 +50,7 @@ public class PutEventsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeat_interval")
     public Long repeatInterval;
+
     public PutEventsIdRequestBody withRepeatInterval(Long repeatInterval) {
         this.repeatInterval = repeatInterval;
         return this;
@@ -58,9 +62,13 @@ public class PutEventsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeat_type")
     public PutEventsIdRequestBodyRepeatTypeEnum repeatType;
+
     public PutEventsIdRequestBody withRepeatType(PutEventsIdRequestBodyRepeatTypeEnum repeatType) {
         this.repeatType = repeatType;
         return this;
     }
     
+    public PutEventsIdRequestBody(@JsonProperty("behaviour") PutEventsIdRequestBodyBehaviourEnum behaviour) {
+        this.behaviour = behaviour;
+  }
 }

@@ -18,6 +18,7 @@ public class NonBillableWinningBidStatusRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bidCount")
     public MetricValue bidCount;
+
     public NonBillableWinningBidStatusRow withBidCount(MetricValue bidCount) {
         this.bidCount = bidCount;
         return this;
@@ -29,6 +30,7 @@ public class NonBillableWinningBidStatusRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowDimensions")
     public RowDimensions rowDimensions;
+
     public NonBillableWinningBidStatusRow withRowDimensions(RowDimensions rowDimensions) {
         this.rowDimensions = rowDimensions;
         return this;
@@ -40,9 +42,11 @@ public class NonBillableWinningBidStatusRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public NonBillableWinningBidStatusRowStatusEnum status;
+
     public NonBillableWinningBidStatusRow withStatus(NonBillableWinningBidStatusRowStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public NonBillableWinningBidStatusRow(){}
 }

@@ -15,6 +15,7 @@ public class BucketPermissionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountLevelPermissions")
     public AccountLevelPermissions accountLevelPermissions;
+
     public BucketPermissionConfiguration withAccountLevelPermissions(AccountLevelPermissions accountLevelPermissions) {
         this.accountLevelPermissions = accountLevelPermissions;
         return this;
@@ -23,9 +24,11 @@ public class BucketPermissionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketLevelPermissions")
     public BucketLevelPermissions bucketLevelPermissions;
+
     public BucketPermissionConfiguration withBucketLevelPermissions(BucketLevelPermissions bucketLevelPermissions) {
         this.bucketLevelPermissions = bucketLevelPermissions;
         return this;
     }
     
+    public BucketPermissionConfiguration(){}
 }

@@ -12,6 +12,7 @@ public class CrmUser {
      */
     
     public OffsetDateTime createdAt;
+
     public CrmUser withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -22,6 +23,7 @@ public class CrmUser {
      */
     
     public String crmId;
+
     public CrmUser withCrmId(String crmId) {
         this.crmId = crmId;
         return this;
@@ -32,6 +34,7 @@ public class CrmUser {
      */
     
     public Long id;
+
     public CrmUser withId(Long id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class CrmUser {
      */
     
     public OffsetDateTime updatedAt;
+
     public CrmUser withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -49,9 +53,11 @@ public class CrmUser {
     
     
     public EmbeddedResource user;
+
     public CrmUser withUser(EmbeddedResource user) {
         this.user = user;
         return this;
     }
     
+    public CrmUser(){}
 }

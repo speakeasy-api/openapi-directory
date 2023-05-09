@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProfileTokenResponse {
@@ -12,6 +13,7 @@ public class GetProfileTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessToken[] accessTokens;
+
     public GetProfileTokenResponse withAccessTokens(org.openapis.openapi.models.shared.AccessToken[] accessTokens) {
         this.accessTokens = accessTokens;
         return this;
@@ -19,6 +21,7 @@ public class GetProfileTokenResponse {
     
     
     public String contentType;
+
     public GetProfileTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetProfileTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public GetProfileTokenResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class GetProfileTokenResponse {
     
     
     public Integer statusCode;
+
     public GetProfileTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetProfileTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProfileTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetProfileTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

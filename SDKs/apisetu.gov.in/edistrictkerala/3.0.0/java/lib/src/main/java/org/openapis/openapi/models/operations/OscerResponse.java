@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OscerResponse {
     
     public String contentType;
+
     public OscerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OscerResponse {
     
     
     public Integer statusCode;
+
     public OscerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class OscerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OscerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class OscerResponse {
      */
     
     public Oscer400ApplicationJSON oscer400ApplicationJSONObject;
+
     public OscerResponse withOscer400ApplicationJSONObject(Oscer400ApplicationJSON oscer400ApplicationJSONObject) {
         this.oscer400ApplicationJSONObject = oscer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class OscerResponse {
      */
     
     public Oscer401ApplicationJSON oscer401ApplicationJSONObject;
+
     public OscerResponse withOscer401ApplicationJSONObject(Oscer401ApplicationJSON oscer401ApplicationJSONObject) {
         this.oscer401ApplicationJSONObject = oscer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class OscerResponse {
      */
     
     public Oscer404ApplicationJSON oscer404ApplicationJSONObject;
+
     public OscerResponse withOscer404ApplicationJSONObject(Oscer404ApplicationJSON oscer404ApplicationJSONObject) {
         this.oscer404ApplicationJSONObject = oscer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class OscerResponse {
      */
     
     public Oscer500ApplicationJSON oscer500ApplicationJSONObject;
+
     public OscerResponse withOscer500ApplicationJSONObject(Oscer500ApplicationJSON oscer500ApplicationJSONObject) {
         this.oscer500ApplicationJSONObject = oscer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class OscerResponse {
      */
     
     public Oscer502ApplicationJSON oscer502ApplicationJSONObject;
+
     public OscerResponse withOscer502ApplicationJSONObject(Oscer502ApplicationJSON oscer502ApplicationJSONObject) {
         this.oscer502ApplicationJSONObject = oscer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class OscerResponse {
      */
     
     public Oscer503ApplicationJSON oscer503ApplicationJSONObject;
+
     public OscerResponse withOscer503ApplicationJSONObject(Oscer503ApplicationJSON oscer503ApplicationJSONObject) {
         this.oscer503ApplicationJSONObject = oscer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class OscerResponse {
      */
     
     public Oscer504ApplicationJSON oscer504ApplicationJSONObject;
+
     public OscerResponse withOscer504ApplicationJSONObject(Oscer504ApplicationJSON oscer504ApplicationJSONObject) {
         this.oscer504ApplicationJSONObject = oscer504ApplicationJSONObject;
         return this;
     }
     
+    public OscerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

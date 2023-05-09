@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DialogflowProjectsLocationsConversationsSuggestionsSuggestConversationSummaryResponse {
     
     public String contentType;
+
     public DialogflowProjectsLocationsConversationsSuggestionsSuggestConversationSummaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DialogflowProjectsLocationsConversationsSuggestionsSuggestConversat
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDialogflowV2SuggestConversationSummaryResponse googleCloudDialogflowV2SuggestConversationSummaryResponse;
+
     public DialogflowProjectsLocationsConversationsSuggestionsSuggestConversationSummaryResponse withGoogleCloudDialogflowV2SuggestConversationSummaryResponse(org.openapis.openapi.models.shared.GoogleCloudDialogflowV2SuggestConversationSummaryResponse googleCloudDialogflowV2SuggestConversationSummaryResponse) {
         this.googleCloudDialogflowV2SuggestConversationSummaryResponse = googleCloudDialogflowV2SuggestConversationSummaryResponse;
         return this;
@@ -26,6 +29,7 @@ public class DialogflowProjectsLocationsConversationsSuggestionsSuggestConversat
     
     
     public Integer statusCode;
+
     public DialogflowProjectsLocationsConversationsSuggestionsSuggestConversationSummaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DialogflowProjectsLocationsConversationsSuggestionsSuggestConversat
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DialogflowProjectsLocationsConversationsSuggestionsSuggestConversationSummaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DialogflowProjectsLocationsConversationsSuggestionsSuggestConversationSummaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

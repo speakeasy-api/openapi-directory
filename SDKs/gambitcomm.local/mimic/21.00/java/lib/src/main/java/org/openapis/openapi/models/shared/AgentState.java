@@ -12,6 +12,7 @@ public class AgentState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentNum")
     public Integer agentNum;
+
     public AgentState withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -20,9 +21,11 @@ public class AgentState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public Integer state;
+
     public AgentState withState(Integer state) {
         this.state = state;
         return this;
     }
     
+    public AgentState(){}
 }

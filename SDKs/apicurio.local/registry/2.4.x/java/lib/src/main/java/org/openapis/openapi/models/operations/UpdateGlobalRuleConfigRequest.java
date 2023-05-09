@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateGlobalRuleConfigRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Rule rule1;
+
     public UpdateGlobalRuleConfigRequest withRule1(org.openapis.openapi.models.shared.Rule rule1) {
         this.rule1 = rule1;
         return this;
@@ -19,9 +21,14 @@ public class UpdateGlobalRuleConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rule")
     public org.openapis.openapi.models.shared.RuleTypeEnum rulePathParameter;
+
     public UpdateGlobalRuleConfigRequest withRulePathParameter(org.openapis.openapi.models.shared.RuleTypeEnum rulePathParameter) {
         this.rulePathParameter = rulePathParameter;
         return this;
     }
     
+    public UpdateGlobalRuleConfigRequest(@JsonProperty("Rule1") org.openapis.openapi.models.shared.Rule rule1, @JsonProperty("rulePathParameter") org.openapis.openapi.models.shared.RuleTypeEnum rulePathParameter) {
+        this.rule1 = rule1;
+        this.rulePathParameter = rulePathParameter;
+  }
 }

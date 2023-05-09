@@ -15,6 +15,7 @@ public class MemberLeftEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public MemberLeftEventLinks links;
+
     public MemberLeftEvent withLinks(MemberLeftEventLinks links) {
         this.links = links;
         return this;
@@ -23,6 +24,7 @@ public class MemberLeftEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public Member body;
+
     public MemberLeftEvent withBody(Member body) {
         this.body = body;
         return this;
@@ -34,6 +36,7 @@ public class MemberLeftEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public String from;
+
     public MemberLeftEvent withFrom(String from) {
         this.from = from;
         return this;
@@ -45,6 +48,7 @@ public class MemberLeftEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public MemberLeftEvent withId(Long id) {
         this.id = id;
         return this;
@@ -56,6 +60,7 @@ public class MemberLeftEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public MemberLeftEvent withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -67,9 +72,11 @@ public class MemberLeftEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public MemberLeftEvent withType(String type) {
         this.type = type;
         return this;
     }
     
+    public MemberLeftEvent(){}
 }

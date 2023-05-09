@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class UserModelsGetCredentialTypesForAccountResponse {
     
     public String credentialAsString;
+
     public UserModelsGetCredentialTypesForAccountResponse withCredentialAsString(String credentialAsString) {
         this.credentialAsString = credentialAsString;
         return this;
@@ -16,6 +17,7 @@ public class UserModelsGetCredentialTypesForAccountResponse {
     
     
     public String credentialDisplayName;
+
     public UserModelsGetCredentialTypesForAccountResponse withCredentialDisplayName(String credentialDisplayName) {
         this.credentialDisplayName = credentialDisplayName;
         return this;
@@ -23,6 +25,7 @@ public class UserModelsGetCredentialTypesForAccountResponse {
     
     
     public Long credentialType;
+
     public UserModelsGetCredentialTypesForAccountResponse withCredentialType(Long credentialType) {
         this.credentialType = credentialType;
         return this;
@@ -30,9 +33,11 @@ public class UserModelsGetCredentialTypesForAccountResponse {
     
     
     public Boolean isPublic;
+
     public UserModelsGetCredentialTypesForAccountResponse withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
     }
     
+    public UserModelsGetCredentialTypesForAccountResponse(){}
 }

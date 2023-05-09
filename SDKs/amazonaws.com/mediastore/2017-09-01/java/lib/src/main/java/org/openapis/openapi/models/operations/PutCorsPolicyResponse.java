@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutCorsPolicyResponse {
@@ -12,6 +13,7 @@ public class PutCorsPolicyResponse {
      */
     
     public Object containerInUseException;
+
     public PutCorsPolicyResponse withContainerInUseException(Object containerInUseException) {
         this.containerInUseException = containerInUseException;
         return this;
@@ -22,6 +24,7 @@ public class PutCorsPolicyResponse {
      */
     
     public Object containerNotFoundException;
+
     public PutCorsPolicyResponse withContainerNotFoundException(Object containerNotFoundException) {
         this.containerNotFoundException = containerNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class PutCorsPolicyResponse {
     
     
     public String contentType;
+
     public PutCorsPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutCorsPolicyResponse {
      */
     
     public Object internalServerError;
+
     public PutCorsPolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class PutCorsPolicyResponse {
      */
     
     public java.util.Map<String, Object> putCorsPolicyOutput;
+
     public PutCorsPolicyResponse withPutCorsPolicyOutput(java.util.Map<String, Object> putCorsPolicyOutput) {
         this.putCorsPolicyOutput = putCorsPolicyOutput;
         return this;
@@ -56,6 +62,7 @@ public class PutCorsPolicyResponse {
     
     
     public Integer statusCode;
+
     public PutCorsPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class PutCorsPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutCorsPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutCorsPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GsiBesthourResponse {
     
     public String contentType;
+
     public GsiBesthourResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GsiBesthourResponse {
     
     
     public Integer statusCode;
+
     public GsiBesthourResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GsiBesthourResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GsiBesthourResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GsiBesthourResponse {
      */
     
     public Boolean gsiBesthour200ApplicationJSONBoolean;
+
     public GsiBesthourResponse withGsiBesthour200ApplicationJSONBoolean(Boolean gsiBesthour200ApplicationJSONBoolean) {
         this.gsiBesthour200ApplicationJSONBoolean = gsiBesthour200ApplicationJSONBoolean;
         return this;
     }
     
+    public GsiBesthourResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

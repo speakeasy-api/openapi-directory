@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartReplicationTaskAssessmentRunMessage {
     @JsonProperty("AssessmentRunName")
     public String assessmentRunName;
+
     public StartReplicationTaskAssessmentRunMessage withAssessmentRunName(String assessmentRunName) {
         this.assessmentRunName = assessmentRunName;
         return this;
@@ -22,6 +23,7 @@ public class StartReplicationTaskAssessmentRunMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Exclude")
     public String[] exclude;
+
     public StartReplicationTaskAssessmentRunMessage withExclude(String[] exclude) {
         this.exclude = exclude;
         return this;
@@ -30,6 +32,7 @@ public class StartReplicationTaskAssessmentRunMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeOnly")
     public String[] includeOnly;
+
     public StartReplicationTaskAssessmentRunMessage withIncludeOnly(String[] includeOnly) {
         this.includeOnly = includeOnly;
         return this;
@@ -37,6 +40,7 @@ public class StartReplicationTaskAssessmentRunMessage {
     
     @JsonProperty("ReplicationTaskArn")
     public String replicationTaskArn;
+
     public StartReplicationTaskAssessmentRunMessage withReplicationTaskArn(String replicationTaskArn) {
         this.replicationTaskArn = replicationTaskArn;
         return this;
@@ -45,6 +49,7 @@ public class StartReplicationTaskAssessmentRunMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultEncryptionMode")
     public String resultEncryptionMode;
+
     public StartReplicationTaskAssessmentRunMessage withResultEncryptionMode(String resultEncryptionMode) {
         this.resultEncryptionMode = resultEncryptionMode;
         return this;
@@ -53,6 +58,7 @@ public class StartReplicationTaskAssessmentRunMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultKmsKeyArn")
     public String resultKmsKeyArn;
+
     public StartReplicationTaskAssessmentRunMessage withResultKmsKeyArn(String resultKmsKeyArn) {
         this.resultKmsKeyArn = resultKmsKeyArn;
         return this;
@@ -60,6 +66,7 @@ public class StartReplicationTaskAssessmentRunMessage {
     
     @JsonProperty("ResultLocationBucket")
     public String resultLocationBucket;
+
     public StartReplicationTaskAssessmentRunMessage withResultLocationBucket(String resultLocationBucket) {
         this.resultLocationBucket = resultLocationBucket;
         return this;
@@ -68,6 +75,7 @@ public class StartReplicationTaskAssessmentRunMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultLocationFolder")
     public String resultLocationFolder;
+
     public StartReplicationTaskAssessmentRunMessage withResultLocationFolder(String resultLocationFolder) {
         this.resultLocationFolder = resultLocationFolder;
         return this;
@@ -75,9 +83,16 @@ public class StartReplicationTaskAssessmentRunMessage {
     
     @JsonProperty("ServiceAccessRoleArn")
     public String serviceAccessRoleArn;
+
     public StartReplicationTaskAssessmentRunMessage withServiceAccessRoleArn(String serviceAccessRoleArn) {
         this.serviceAccessRoleArn = serviceAccessRoleArn;
         return this;
     }
     
+    public StartReplicationTaskAssessmentRunMessage(@JsonProperty("AssessmentRunName") String assessmentRunName, @JsonProperty("ReplicationTaskArn") String replicationTaskArn, @JsonProperty("ResultLocationBucket") String resultLocationBucket, @JsonProperty("ServiceAccessRoleArn") String serviceAccessRoleArn) {
+        this.assessmentRunName = assessmentRunName;
+        this.replicationTaskArn = replicationTaskArn;
+        this.resultLocationBucket = resultLocationBucket;
+        this.serviceAccessRoleArn = serviceAccessRoleArn;
+  }
 }

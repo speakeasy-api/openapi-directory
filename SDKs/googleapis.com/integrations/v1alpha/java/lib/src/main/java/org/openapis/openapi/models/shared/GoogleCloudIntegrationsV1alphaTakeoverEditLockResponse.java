@@ -18,9 +18,11 @@ public class GoogleCloudIntegrationsV1alphaTakeoverEditLockResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrationVersion")
     public GoogleCloudIntegrationsV1alphaIntegrationVersion integrationVersion;
+
     public GoogleCloudIntegrationsV1alphaTakeoverEditLockResponse withIntegrationVersion(GoogleCloudIntegrationsV1alphaIntegrationVersion integrationVersion) {
         this.integrationVersion = integrationVersion;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaTakeoverEditLockResponse(){}
 }

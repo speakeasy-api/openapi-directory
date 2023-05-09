@@ -15,6 +15,7 @@ public class AwsEksClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public AwsEksClusterDetails withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class AwsEksClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateAuthorityData")
     public String certificateAuthorityData;
+
     public AwsEksClusterDetails withCertificateAuthorityData(String certificateAuthorityData) {
         this.certificateAuthorityData = certificateAuthorityData;
         return this;
@@ -31,6 +33,7 @@ public class AwsEksClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterStatus")
     public String clusterStatus;
+
     public AwsEksClusterDetails withClusterStatus(String clusterStatus) {
         this.clusterStatus = clusterStatus;
         return this;
@@ -39,6 +42,7 @@ public class AwsEksClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Endpoint")
     public String endpoint;
+
     public AwsEksClusterDetails withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -47,6 +51,7 @@ public class AwsEksClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Logging")
     public AwsEksClusterLoggingDetails logging;
+
     public AwsEksClusterDetails withLogging(AwsEksClusterLoggingDetails logging) {
         this.logging = logging;
         return this;
@@ -55,6 +60,7 @@ public class AwsEksClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsEksClusterDetails withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +69,7 @@ public class AwsEksClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourcesVpcConfig")
     public AwsEksClusterResourcesVpcConfigDetails resourcesVpcConfig;
+
     public AwsEksClusterDetails withResourcesVpcConfig(AwsEksClusterResourcesVpcConfigDetails resourcesVpcConfig) {
         this.resourcesVpcConfig = resourcesVpcConfig;
         return this;
@@ -71,6 +78,7 @@ public class AwsEksClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public AwsEksClusterDetails withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -79,9 +87,11 @@ public class AwsEksClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public AwsEksClusterDetails withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public AwsEksClusterDetails(){}
 }

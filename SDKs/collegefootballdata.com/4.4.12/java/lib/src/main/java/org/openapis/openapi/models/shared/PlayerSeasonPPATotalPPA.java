@@ -12,6 +12,7 @@ public class PlayerSeasonPPATotalPPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("all")
     public Double all;
+
     public PlayerSeasonPPATotalPPA withAll(Double all) {
         this.all = all;
         return this;
@@ -20,6 +21,7 @@ public class PlayerSeasonPPATotalPPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstDown")
     public Double firstDown;
+
     public PlayerSeasonPPATotalPPA withFirstDown(Double firstDown) {
         this.firstDown = firstDown;
         return this;
@@ -28,6 +30,7 @@ public class PlayerSeasonPPATotalPPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pass")
     public Double pass;
+
     public PlayerSeasonPPATotalPPA withPass(Double pass) {
         this.pass = pass;
         return this;
@@ -36,6 +39,7 @@ public class PlayerSeasonPPATotalPPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passingDowns")
     public Double passingDowns;
+
     public PlayerSeasonPPATotalPPA withPassingDowns(Double passingDowns) {
         this.passingDowns = passingDowns;
         return this;
@@ -44,6 +48,7 @@ public class PlayerSeasonPPATotalPPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rush")
     public Double rush;
+
     public PlayerSeasonPPATotalPPA withRush(Double rush) {
         this.rush = rush;
         return this;
@@ -52,6 +57,7 @@ public class PlayerSeasonPPATotalPPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondDown")
     public Double secondDown;
+
     public PlayerSeasonPPATotalPPA withSecondDown(Double secondDown) {
         this.secondDown = secondDown;
         return this;
@@ -60,6 +66,7 @@ public class PlayerSeasonPPATotalPPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardDowns")
     public Double standardDowns;
+
     public PlayerSeasonPPATotalPPA withStandardDowns(Double standardDowns) {
         this.standardDowns = standardDowns;
         return this;
@@ -68,9 +75,11 @@ public class PlayerSeasonPPATotalPPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thirdDown")
     public Double thirdDown;
+
     public PlayerSeasonPPATotalPPA withThirdDown(Double thirdDown) {
         this.thirdDown = thirdDown;
         return this;
     }
     
+    public PlayerSeasonPPATotalPPA(){}
 }

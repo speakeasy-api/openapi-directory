@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeUserProfileResponse {
     
     public String contentType;
+
     public DescribeUserProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeUserProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeUserProfileResponse describeUserProfileResponse;
+
     public DescribeUserProfileResponse withDescribeUserProfileResponse(org.openapis.openapi.models.shared.DescribeUserProfileResponse describeUserProfileResponse) {
         this.describeUserProfileResponse = describeUserProfileResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeUserProfileResponse {
      */
     
     public Object resourceNotFound;
+
     public DescribeUserProfileResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class DescribeUserProfileResponse {
     
     
     public Integer statusCode;
+
     public DescribeUserProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeUserProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeUserProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeUserProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

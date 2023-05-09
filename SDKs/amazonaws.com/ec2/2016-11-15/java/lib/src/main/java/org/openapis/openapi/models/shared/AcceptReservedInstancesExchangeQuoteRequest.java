@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AcceptReservedInstancesExchangeQuoteRequest - Contains the parameters for accepting the quote.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AcceptReservedInstancesExchangeQuoteRequest {
     
     public Boolean dryRun;
+
     public AcceptReservedInstancesExchangeQuoteRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,6 +20,7 @@ public class AcceptReservedInstancesExchangeQuoteRequest {
     
     
     public String[] reservedInstanceIds;
+
     public AcceptReservedInstancesExchangeQuoteRequest withReservedInstanceIds(String[] reservedInstanceIds) {
         this.reservedInstanceIds = reservedInstanceIds;
         return this;
@@ -26,9 +28,13 @@ public class AcceptReservedInstancesExchangeQuoteRequest {
     
     
     public AcceptReservedInstancesExchangeQuoteRequestTargetConfigurations[] targetConfigurations;
+
     public AcceptReservedInstancesExchangeQuoteRequest withTargetConfigurations(AcceptReservedInstancesExchangeQuoteRequestTargetConfigurations[] targetConfigurations) {
         this.targetConfigurations = targetConfigurations;
         return this;
     }
     
+    public AcceptReservedInstancesExchangeQuoteRequest(@JsonProperty("ReservedInstanceIds") String[] reservedInstanceIds) {
+        this.reservedInstanceIds = reservedInstanceIds;
+  }
 }

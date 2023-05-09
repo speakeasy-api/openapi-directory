@@ -55,11 +55,9 @@ public class Dictionaries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetActiveResponse res = new org.openapis.openapi.models.operations.GetActiveResponse() {{
+        org.openapis.openapi.models.operations.GetActiveResponse res = new org.openapis.openapi.models.operations.GetActiveResponse(contentType, httpRes.statusCode()) {{
             manyValuesPerTypeDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -101,11 +99,9 @@ public class Dictionaries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetActiveByTypeResponse res = new org.openapis.openapi.models.operations.GetActiveByTypeResponse() {{
+        org.openapis.openapi.models.operations.GetActiveByTypeResponse res = new org.openapis.openapi.models.operations.GetActiveByTypeResponse(contentType, httpRes.statusCode()) {{
             dictionaryEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -147,11 +143,9 @@ public class Dictionaries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllActiveResponse res = new org.openapis.openapi.models.operations.GetAllActiveResponse() {{
+        org.openapis.openapi.models.operations.GetAllActiveResponse res = new org.openapis.openapi.models.operations.GetAllActiveResponse(contentType, httpRes.statusCode()) {{
             serviceDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -193,11 +187,9 @@ public class Dictionaries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllByTypeResponse res = new org.openapis.openapi.models.operations.GetAllByTypeResponse() {{
+        org.openapis.openapi.models.operations.GetAllByTypeResponse res = new org.openapis.openapi.models.operations.GetAllByTypeResponse(contentType, httpRes.statusCode()) {{
             dictionaryEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -260,11 +252,9 @@ public class Dictionaries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAll1Response res = new org.openapis.openapi.models.operations.GetAll1Response() {{
+        org.openapis.openapi.models.operations.GetAll1Response res = new org.openapis.openapi.models.operations.GetAll1Response(contentType, httpRes.statusCode()) {{
             manyValuesPerTypeDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -306,11 +296,9 @@ public class Dictionaries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAll3Response res = new org.openapis.openapi.models.operations.GetAll3Response() {{
+        org.openapis.openapi.models.operations.GetAll3Response res = new org.openapis.openapi.models.operations.GetAll3Response(contentType, httpRes.statusCode()) {{
             serviceDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -346,11 +334,9 @@ public class Dictionaries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetByTypeAndIdResponse res = new org.openapis.openapi.models.operations.GetByTypeAndIdResponse() {{
+        org.openapis.openapi.models.operations.GetByTypeAndIdResponse res = new org.openapis.openapi.models.operations.GetByTypeAndIdResponse(contentType, httpRes.statusCode()) {{
             dictionaryEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

@@ -12,6 +12,7 @@ public class SourcesGetV2SourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public SourcesGetV2SourcesGetRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -19,6 +20,7 @@ public class SourcesGetV2SourcesGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public SourcesGetV2SourcesGetRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -29,6 +31,7 @@ public class SourcesGetV2SourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
     public SourcesGetV2SourcesGetOrderBySourcesOrderEnum orderBy;
+
     public SourcesGetV2SourcesGetRequest withOrderBy(SourcesGetV2SourcesGetOrderBySourcesOrderEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -39,6 +42,7 @@ public class SourcesGetV2SourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public SourcesGetV2SourcesGetRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -49,6 +53,7 @@ public class SourcesGetV2SourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public SourcesGetV2SourcesGetSortSortEnum sort;
+
     public SourcesGetV2SourcesGetRequest withSort(SourcesGetV2SourcesGetSortSortEnum sort) {
         this.sort = sort;
         return this;
@@ -56,6 +61,7 @@ public class SourcesGetV2SourcesGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceId")
     public Long[] sourceId;
+
     public SourcesGetV2SourcesGetRequest withSourceId(Long[] sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -63,6 +69,7 @@ public class SourcesGetV2SourcesGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceName")
     public String[] sourceName;
+
     public SourcesGetV2SourcesGetRequest withSourceName(String[] sourceName) {
         this.sourceName = sourceName;
         return this;
@@ -70,9 +77,11 @@ public class SourcesGetV2SourcesGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceSlug")
     public String[] sourceSlug;
+
     public SourcesGetV2SourcesGetRequest withSourceSlug(String[] sourceSlug) {
         this.sourceSlug = sourceSlug;
         return this;
     }
     
+    public SourcesGetV2SourcesGetRequest(){}
 }

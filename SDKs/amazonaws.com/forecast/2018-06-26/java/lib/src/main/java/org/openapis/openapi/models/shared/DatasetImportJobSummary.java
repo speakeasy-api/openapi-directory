@@ -22,6 +22,7 @@ public class DatasetImportJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DatasetImportJobSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DatasetImportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSource")
     public DataSource dataSource;
+
     public DatasetImportJobSummary withDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -38,6 +40,7 @@ public class DatasetImportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetImportJobArn")
     public String datasetImportJobArn;
+
     public DatasetImportJobSummary withDatasetImportJobArn(String datasetImportJobArn) {
         this.datasetImportJobArn = datasetImportJobArn;
         return this;
@@ -46,6 +49,7 @@ public class DatasetImportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetImportJobName")
     public String datasetImportJobName;
+
     public DatasetImportJobSummary withDatasetImportJobName(String datasetImportJobName) {
         this.datasetImportJobName = datasetImportJobName;
         return this;
@@ -54,6 +58,7 @@ public class DatasetImportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportMode")
     public ImportModeEnum importMode;
+
     public DatasetImportJobSummary withImportMode(ImportModeEnum importMode) {
         this.importMode = importMode;
         return this;
@@ -64,6 +69,7 @@ public class DatasetImportJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public DatasetImportJobSummary withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -72,6 +78,7 @@ public class DatasetImportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public DatasetImportJobSummary withMessage(String message) {
         this.message = message;
         return this;
@@ -80,9 +87,11 @@ public class DatasetImportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public DatasetImportJobSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DatasetImportJobSummary(){}
 }

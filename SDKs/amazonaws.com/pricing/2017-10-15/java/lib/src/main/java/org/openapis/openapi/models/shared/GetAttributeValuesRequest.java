@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAttributeValuesRequest {
     @JsonProperty("AttributeName")
     public String attributeName;
+
     public GetAttributeValuesRequest withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -19,6 +20,7 @@ public class GetAttributeValuesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetAttributeValuesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,6 +29,7 @@ public class GetAttributeValuesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetAttributeValuesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -34,9 +37,14 @@ public class GetAttributeValuesRequest {
     
     @JsonProperty("ServiceCode")
     public String serviceCode;
+
     public GetAttributeValuesRequest withServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
     }
     
+    public GetAttributeValuesRequest(@JsonProperty("AttributeName") String attributeName, @JsonProperty("ServiceCode") String serviceCode) {
+        this.attributeName = attributeName;
+        this.serviceCode = serviceCode;
+  }
 }

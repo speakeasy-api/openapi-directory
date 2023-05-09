@@ -18,9 +18,11 @@ public class TrafficPercentStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentages")
     public java.util.Map<String, Double> percentages;
+
     public TrafficPercentStrategy withPercentages(java.util.Map<String, Double> percentages) {
         this.percentages = percentages;
         return this;
     }
     
+    public TrafficPercentStrategy(){}
 }

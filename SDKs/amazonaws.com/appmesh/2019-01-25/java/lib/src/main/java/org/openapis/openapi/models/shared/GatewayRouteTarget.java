@@ -15,6 +15,7 @@ public class GatewayRouteTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Long port;
+
     public GatewayRouteTarget withPort(Long port) {
         this.port = port;
         return this;
@@ -22,9 +23,13 @@ public class GatewayRouteTarget {
     
     @JsonProperty("virtualService")
     public GatewayRouteVirtualService virtualService;
+
     public GatewayRouteTarget withVirtualService(GatewayRouteVirtualService virtualService) {
         this.virtualService = virtualService;
         return this;
     }
     
+    public GatewayRouteTarget(@JsonProperty("virtualService") GatewayRouteVirtualService virtualService) {
+        this.virtualService = virtualService;
+  }
 }

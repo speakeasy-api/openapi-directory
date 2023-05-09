@@ -19,6 +19,7 @@ public class ListModelBiasJobDefinitionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListModelBiasJobDefinitionsRequest withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListModelBiasJobDefinitionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListModelBiasJobDefinitionsRequest withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -37,6 +39,7 @@ public class ListModelBiasJobDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public ListModelBiasJobDefinitionsRequest withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -45,6 +48,7 @@ public class ListModelBiasJobDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListModelBiasJobDefinitionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -53,6 +57,7 @@ public class ListModelBiasJobDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameContains")
     public String nameContains;
+
     public ListModelBiasJobDefinitionsRequest withNameContains(String nameContains) {
         this.nameContains = nameContains;
         return this;
@@ -61,6 +66,7 @@ public class ListModelBiasJobDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListModelBiasJobDefinitionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -69,6 +75,7 @@ public class ListModelBiasJobDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public MonitoringJobDefinitionSortKeyEnum sortBy;
+
     public ListModelBiasJobDefinitionsRequest withSortBy(MonitoringJobDefinitionSortKeyEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -77,9 +84,11 @@ public class ListModelBiasJobDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListModelBiasJobDefinitionsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListModelBiasJobDefinitionsRequest(){}
 }

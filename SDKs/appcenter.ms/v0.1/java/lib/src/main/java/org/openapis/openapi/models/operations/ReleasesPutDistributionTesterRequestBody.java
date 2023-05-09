@@ -12,9 +12,13 @@ public class ReleasesPutDistributionTesterRequestBody {
      */
     @JsonProperty("mandatory_update")
     public Boolean mandatoryUpdate;
+
     public ReleasesPutDistributionTesterRequestBody withMandatoryUpdate(Boolean mandatoryUpdate) {
         this.mandatoryUpdate = mandatoryUpdate;
         return this;
     }
     
+    public ReleasesPutDistributionTesterRequestBody(@JsonProperty("mandatory_update") Boolean mandatoryUpdate) {
+        this.mandatoryUpdate = mandatoryUpdate;
+  }
 }

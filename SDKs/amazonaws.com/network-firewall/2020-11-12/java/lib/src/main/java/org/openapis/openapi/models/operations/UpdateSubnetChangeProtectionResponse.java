@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSubnetChangeProtectionResponse {
     
     public String contentType;
+
     public UpdateSubnetChangeProtectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSubnetChangeProtectionResponse {
      */
     
     public Object internalServerError;
+
     public UpdateSubnetChangeProtectionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSubnetChangeProtectionResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateSubnetChangeProtectionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateSubnetChangeProtectionResponse {
      */
     
     public Object invalidTokenException;
+
     public UpdateSubnetChangeProtectionResponse withInvalidTokenException(Object invalidTokenException) {
         this.invalidTokenException = invalidTokenException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateSubnetChangeProtectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateSubnetChangeProtectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateSubnetChangeProtectionResponse {
     
     
     public Integer statusCode;
+
     public UpdateSubnetChangeProtectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateSubnetChangeProtectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSubnetChangeProtectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateSubnetChangeProtectionResponse {
      */
     
     public Object resourceOwnerCheckException;
+
     public UpdateSubnetChangeProtectionResponse withResourceOwnerCheckException(Object resourceOwnerCheckException) {
         this.resourceOwnerCheckException = resourceOwnerCheckException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateSubnetChangeProtectionResponse {
      */
     
     public Object throttlingException;
+
     public UpdateSubnetChangeProtectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateSubnetChangeProtectionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSubnetChangeProtectionResponse updateSubnetChangeProtectionResponse;
+
     public UpdateSubnetChangeProtectionResponse withUpdateSubnetChangeProtectionResponse(org.openapis.openapi.models.shared.UpdateSubnetChangeProtectionResponse updateSubnetChangeProtectionResponse) {
         this.updateSubnetChangeProtectionResponse = updateSubnetChangeProtectionResponse;
         return this;
     }
     
+    public UpdateSubnetChangeProtectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

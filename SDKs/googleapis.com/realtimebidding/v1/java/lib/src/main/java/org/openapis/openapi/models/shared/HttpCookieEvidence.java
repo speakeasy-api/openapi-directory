@@ -18,6 +18,7 @@ public class HttpCookieEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cookieNames")
     public String[] cookieNames;
+
     public HttpCookieEvidence withCookieNames(String[] cookieNames) {
         this.cookieNames = cookieNames;
         return this;
@@ -29,9 +30,11 @@ public class HttpCookieEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxCookieCount")
     public Integer maxCookieCount;
+
     public HttpCookieEvidence withMaxCookieCount(Integer maxCookieCount) {
         this.maxCookieCount = maxCookieCount;
         return this;
     }
     
+    public HttpCookieEvidence(){}
 }

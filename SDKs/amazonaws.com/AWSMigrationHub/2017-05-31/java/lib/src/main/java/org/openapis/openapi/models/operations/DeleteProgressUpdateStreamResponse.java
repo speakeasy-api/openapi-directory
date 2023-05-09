@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteProgressUpdateStreamResponse {
@@ -12,6 +13,7 @@ public class DeleteProgressUpdateStreamResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteProgressUpdateStreamResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteProgressUpdateStreamResponse {
     
     
     public String contentType;
+
     public DeleteProgressUpdateStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteProgressUpdateStreamResponse {
      */
     
     public java.util.Map<String, Object> deleteProgressUpdateStreamResult;
+
     public DeleteProgressUpdateStreamResponse withDeleteProgressUpdateStreamResult(java.util.Map<String, Object> deleteProgressUpdateStreamResult) {
         this.deleteProgressUpdateStreamResult = deleteProgressUpdateStreamResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteProgressUpdateStreamResponse {
      */
     
     public Object dryRunOperation;
+
     public DeleteProgressUpdateStreamResponse withDryRunOperation(Object dryRunOperation) {
         this.dryRunOperation = dryRunOperation;
         return this;
@@ -49,6 +54,7 @@ public class DeleteProgressUpdateStreamResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public DeleteProgressUpdateStreamResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteProgressUpdateStreamResponse {
      */
     
     public Object internalServerError;
+
     public DeleteProgressUpdateStreamResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -69,6 +76,7 @@ public class DeleteProgressUpdateStreamResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteProgressUpdateStreamResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteProgressUpdateStreamResponse {
     
     
     public Integer statusCode;
+
     public DeleteProgressUpdateStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteProgressUpdateStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteProgressUpdateStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteProgressUpdateStreamResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteProgressUpdateStreamResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class DeleteProgressUpdateStreamResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteProgressUpdateStreamResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,6 +125,7 @@ public class DeleteProgressUpdateStreamResponse {
      */
     
     public Object throttlingException;
+
     public DeleteProgressUpdateStreamResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -123,9 +136,14 @@ public class DeleteProgressUpdateStreamResponse {
      */
     
     public Object unauthorizedOperation;
+
     public DeleteProgressUpdateStreamResponse withUnauthorizedOperation(Object unauthorizedOperation) {
         this.unauthorizedOperation = unauthorizedOperation;
         return this;
     }
     
+    public DeleteProgressUpdateStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

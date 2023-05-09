@@ -15,6 +15,7 @@ public class DatasetStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorEntries")
     public Long errorEntries;
+
     public DatasetStats withErrorEntries(Long errorEntries) {
         this.errorEntries = errorEntries;
         return this;
@@ -23,6 +24,7 @@ public class DatasetStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabeledEntries")
     public Long labeledEntries;
+
     public DatasetStats withLabeledEntries(Long labeledEntries) {
         this.labeledEntries = labeledEntries;
         return this;
@@ -31,6 +33,7 @@ public class DatasetStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalEntries")
     public Long totalEntries;
+
     public DatasetStats withTotalEntries(Long totalEntries) {
         this.totalEntries = totalEntries;
         return this;
@@ -39,9 +42,11 @@ public class DatasetStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalLabels")
     public Long totalLabels;
+
     public DatasetStats withTotalLabels(Long totalLabels) {
         this.totalLabels = totalLabels;
         return this;
     }
     
+    public DatasetStats(){}
 }

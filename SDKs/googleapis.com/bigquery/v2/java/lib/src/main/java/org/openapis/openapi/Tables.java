@@ -59,10 +59,8 @@ public class Tables {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryTablesDeleteResponse res = new org.openapis.openapi.models.operations.BigqueryTablesDeleteResponse() {{
+        org.openapis.openapi.models.operations.BigqueryTablesDeleteResponse res = new org.openapis.openapi.models.operations.BigqueryTablesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Tables {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryTablesGetResponse res = new org.openapis.openapi.models.operations.BigqueryTablesGetResponse() {{
+        org.openapis.openapi.models.operations.BigqueryTablesGetResponse res = new org.openapis.openapi.models.operations.BigqueryTablesGetResponse(contentType, httpRes.statusCode()) {{
             table = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Tables {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryTablesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.BigqueryTablesGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.BigqueryTablesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.BigqueryTablesGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,11 +189,9 @@ public class Tables {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryTablesInsertResponse res = new org.openapis.openapi.models.operations.BigqueryTablesInsertResponse() {{
+        org.openapis.openapi.models.operations.BigqueryTablesInsertResponse res = new org.openapis.openapi.models.operations.BigqueryTablesInsertResponse(contentType, httpRes.statusCode()) {{
             table = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class Tables {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryTablesListResponse res = new org.openapis.openapi.models.operations.BigqueryTablesListResponse() {{
+        org.openapis.openapi.models.operations.BigqueryTablesListResponse res = new org.openapis.openapi.models.operations.BigqueryTablesListResponse(contentType, httpRes.statusCode()) {{
             tableList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class Tables {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryTablesPatchResponse res = new org.openapis.openapi.models.operations.BigqueryTablesPatchResponse() {{
+        org.openapis.openapi.models.operations.BigqueryTablesPatchResponse res = new org.openapis.openapi.models.operations.BigqueryTablesPatchResponse(contentType, httpRes.statusCode()) {{
             table = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -337,11 +325,9 @@ public class Tables {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryTablesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.BigqueryTablesSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.BigqueryTablesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.BigqueryTablesSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -385,11 +371,9 @@ public class Tables {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryTablesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.BigqueryTablesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.BigqueryTablesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.BigqueryTablesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -433,11 +417,9 @@ public class Tables {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryTablesUpdateResponse res = new org.openapis.openapi.models.operations.BigqueryTablesUpdateResponse() {{
+        org.openapis.openapi.models.operations.BigqueryTablesUpdateResponse res = new org.openapis.openapi.models.operations.BigqueryTablesUpdateResponse(contentType, httpRes.statusCode()) {{
             table = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

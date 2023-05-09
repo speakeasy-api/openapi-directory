@@ -12,6 +12,7 @@ public class TestGdprExportAccounts200ApplicationJSONResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public TestGdprExportAccounts200ApplicationJSONResources withPath(String path) {
         this.path = path;
         return this;
@@ -20,9 +21,11 @@ public class TestGdprExportAccounts200ApplicationJSONResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rel")
     public String rel;
+
     public TestGdprExportAccounts200ApplicationJSONResources withRel(String rel) {
         this.rel = rel;
         return this;
     }
     
+    public TestGdprExportAccounts200ApplicationJSONResources(){}
 }

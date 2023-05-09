@@ -21,6 +21,7 @@ public class DestinyEntitiesItemsDestinyItemTalentGridComponent {
      */
     
     public DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression gridProgression;
+
     public DestinyEntitiesItemsDestinyItemTalentGridComponent withGridProgression(DestinyEntitiesItemsDestinyItemTalentGridComponentGridProgression gridProgression) {
         this.gridProgression = gridProgression;
         return this;
@@ -32,6 +33,7 @@ public class DestinyEntitiesItemsDestinyItemTalentGridComponent {
      */
     
     public Boolean isGridComplete;
+
     public DestinyEntitiesItemsDestinyItemTalentGridComponent withIsGridComplete(Boolean isGridComplete) {
         this.isGridComplete = isGridComplete;
         return this;
@@ -43,6 +45,7 @@ public class DestinyEntitiesItemsDestinyItemTalentGridComponent {
      */
     
     public DestinyDestinyTalentNode[] nodes;
+
     public DestinyEntitiesItemsDestinyItemTalentGridComponent withNodes(DestinyDestinyTalentNode[] nodes) {
         this.nodes = nodes;
         return this;
@@ -54,9 +57,11 @@ public class DestinyEntitiesItemsDestinyItemTalentGridComponent {
      */
     
     public Long talentGridHash;
+
     public DestinyEntitiesItemsDestinyItemTalentGridComponent withTalentGridHash(Long talentGridHash) {
         this.talentGridHash = talentGridHash;
         return this;
     }
     
+    public DestinyEntitiesItemsDestinyItemTalentGridComponent(){}
 }

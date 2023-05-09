@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListAccountAliasesRequest {
     
     public String marker;
+
     public ListAccountAliasesRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -16,9 +17,11 @@ public class ListAccountAliasesRequest {
     
     
     public Long maxItems;
+
     public ListAccountAliasesRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
     }
     
+    public ListAccountAliasesRequest(){}
 }

@@ -18,6 +18,7 @@ public class ServingRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contexts")
     public ServingContext[] contexts;
+
     public ServingRestriction withContexts(ServingContext[] contexts) {
         this.contexts = contexts;
         return this;
@@ -29,6 +30,7 @@ public class ServingRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disapproval")
     public Disapproval disapproval;
+
     public ServingRestriction withDisapproval(Disapproval disapproval) {
         this.disapproval = disapproval;
         return this;
@@ -40,6 +42,7 @@ public class ServingRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disapprovalReasons")
     public Disapproval[] disapprovalReasons;
+
     public ServingRestriction withDisapprovalReasons(Disapproval[] disapprovalReasons) {
         this.disapprovalReasons = disapprovalReasons;
         return this;
@@ -51,9 +54,11 @@ public class ServingRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ServingRestrictionStatusEnum status;
+
     public ServingRestriction withStatus(ServingRestrictionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ServingRestriction(){}
 }

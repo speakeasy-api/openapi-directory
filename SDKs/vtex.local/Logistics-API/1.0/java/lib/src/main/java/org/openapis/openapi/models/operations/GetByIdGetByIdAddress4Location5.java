@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetByIdGetByIdAddress4Location5 {
     @JsonProperty("latitude")
     public Double latitude;
+
     public GetByIdGetByIdAddress4Location5 withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -16,9 +17,14 @@ public class GetByIdGetByIdAddress4Location5 {
     
     @JsonProperty("longitude")
     public Double longitude;
+
     public GetByIdGetByIdAddress4Location5 withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public GetByIdGetByIdAddress4Location5(@JsonProperty("latitude") Double latitude, @JsonProperty("longitude") Double longitude) {
+        this.latitude = latitude;
+        this.longitude = longitude;
+  }
 }

@@ -12,6 +12,7 @@ public class GetLegalSearchDefaultApplicationJSONMursDispositions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("citations")
     public GetLegalSearchDefaultApplicationJSONMursDispositionsCitations[] citations;
+
     public GetLegalSearchDefaultApplicationJSONMursDispositions withCitations(GetLegalSearchDefaultApplicationJSONMursDispositionsCitations[] citations) {
         this.citations = citations;
         return this;
@@ -20,6 +21,7 @@ public class GetLegalSearchDefaultApplicationJSONMursDispositions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disposition")
     public String disposition;
+
     public GetLegalSearchDefaultApplicationJSONMursDispositions withDisposition(String disposition) {
         this.disposition = disposition;
         return this;
@@ -28,6 +30,7 @@ public class GetLegalSearchDefaultApplicationJSONMursDispositions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("penalty")
     public Double penalty;
+
     public GetLegalSearchDefaultApplicationJSONMursDispositions withPenalty(Double penalty) {
         this.penalty = penalty;
         return this;
@@ -36,9 +39,11 @@ public class GetLegalSearchDefaultApplicationJSONMursDispositions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("respondent")
     public String respondent;
+
     public GetLegalSearchDefaultApplicationJSONMursDispositions withRespondent(String respondent) {
         this.respondent = respondent;
         return this;
     }
     
+    public GetLegalSearchDefaultApplicationJSONMursDispositions(){}
 }

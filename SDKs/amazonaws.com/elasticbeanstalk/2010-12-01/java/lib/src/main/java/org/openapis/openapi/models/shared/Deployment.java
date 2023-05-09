@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class Deployment {
     
     public Long deploymentId;
+
     public Deployment withDeploymentId(Long deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -19,6 +20,7 @@ public class Deployment {
     
     
     public OffsetDateTime deploymentTime;
+
     public Deployment withDeploymentTime(OffsetDateTime deploymentTime) {
         this.deploymentTime = deploymentTime;
         return this;
@@ -26,6 +28,7 @@ public class Deployment {
     
     
     public String status;
+
     public Deployment withStatus(String status) {
         this.status = status;
         return this;
@@ -33,9 +36,11 @@ public class Deployment {
     
     
     public String versionLabel;
+
     public Deployment withVersionLabel(String versionLabel) {
         this.versionLabel = versionLabel;
         return this;
     }
     
+    public Deployment(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UserAccount - A User Account
@@ -15,6 +15,7 @@ public class UserAccount {
      */
     
     public java.util.Map<String, Object> customData;
+
     public UserAccount withCustomData(java.util.Map<String, Object> customData) {
         this.customData = customData;
         return this;
@@ -25,6 +26,7 @@ public class UserAccount {
      */
     
     public String email;
+
     public UserAccount withEmail(String email) {
         this.email = email;
         return this;
@@ -35,6 +37,7 @@ public class UserAccount {
      */
     
     public String name;
+
     public UserAccount withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +48,7 @@ public class UserAccount {
      */
     
     public String userAccountId;
+
     public UserAccount withUserAccountId(String userAccountId) {
         this.userAccountId = userAccountId;
         return this;
@@ -55,9 +59,14 @@ public class UserAccount {
      */
     
     public String userId;
+
     public UserAccount withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public UserAccount(@JsonProperty("userAccountId") String userAccountId, @JsonProperty("userId") String userId) {
+        this.userAccountId = userAccountId;
+        this.userId = userId;
+  }
 }

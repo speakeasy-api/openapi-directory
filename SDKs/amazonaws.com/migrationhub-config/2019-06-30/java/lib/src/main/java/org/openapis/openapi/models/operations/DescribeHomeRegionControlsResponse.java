@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeHomeRegionControlsResponse {
@@ -12,6 +13,7 @@ public class DescribeHomeRegionControlsResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeHomeRegionControlsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeHomeRegionControlsResponse {
     
     
     public String contentType;
+
     public DescribeHomeRegionControlsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeHomeRegionControlsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeHomeRegionControlsResult describeHomeRegionControlsResult;
+
     public DescribeHomeRegionControlsResponse withDescribeHomeRegionControlsResult(org.openapis.openapi.models.shared.DescribeHomeRegionControlsResult describeHomeRegionControlsResult) {
         this.describeHomeRegionControlsResult = describeHomeRegionControlsResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeHomeRegionControlsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeHomeRegionControlsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class DescribeHomeRegionControlsResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeHomeRegionControlsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeHomeRegionControlsResponse {
     
     
     public Integer statusCode;
+
     public DescribeHomeRegionControlsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeHomeRegionControlsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeHomeRegionControlsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeHomeRegionControlsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeHomeRegionControlsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeHomeRegionControlsResponse {
      */
     
     public Object throttlingException;
+
     public DescribeHomeRegionControlsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeHomeRegionControlsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

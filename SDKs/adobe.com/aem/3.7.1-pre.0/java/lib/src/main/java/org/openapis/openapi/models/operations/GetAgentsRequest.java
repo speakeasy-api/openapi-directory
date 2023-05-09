@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAgentsRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runmode")
     public String runmode;
+
     public GetAgentsRequest withRunmode(String runmode) {
         this.runmode = runmode;
         return this;
     }
     
+    public GetAgentsRequest(@JsonProperty("runmode") String runmode) {
+        this.runmode = runmode;
+  }
 }

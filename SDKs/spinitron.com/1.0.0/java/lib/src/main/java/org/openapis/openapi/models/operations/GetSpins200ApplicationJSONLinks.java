@@ -12,9 +12,11 @@ public class GetSpins200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public org.openapis.openapi.models.shared.Link self;
+
     public GetSpins200ApplicationJSONLinks withSelf(org.openapis.openapi.models.shared.Link self) {
         this.self = self;
         return this;
     }
     
+    public GetSpins200ApplicationJSONLinks(){}
 }

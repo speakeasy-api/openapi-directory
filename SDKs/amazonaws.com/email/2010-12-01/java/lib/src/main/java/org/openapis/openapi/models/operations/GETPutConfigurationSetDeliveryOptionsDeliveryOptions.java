@@ -12,9 +12,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETPutConfigurationSetDeliveryOptionsDeliveryOptions {
     @SpeakeasyMetadata("queryParam:name=TlsPolicy")
     public org.openapis.openapi.models.shared.TlsPolicyEnum tlsPolicy;
+
     public GETPutConfigurationSetDeliveryOptionsDeliveryOptions withTlsPolicy(org.openapis.openapi.models.shared.TlsPolicyEnum tlsPolicy) {
         this.tlsPolicy = tlsPolicy;
         return this;
     }
     
+    public GETPutConfigurationSetDeliveryOptionsDeliveryOptions(){}
 }

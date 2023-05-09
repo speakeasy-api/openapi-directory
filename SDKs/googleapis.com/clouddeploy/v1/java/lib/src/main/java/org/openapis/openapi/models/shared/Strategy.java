@@ -18,6 +18,7 @@ public class Strategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canary")
     public Canary canary;
+
     public Strategy withCanary(Canary canary) {
         this.canary = canary;
         return this;
@@ -29,9 +30,11 @@ public class Strategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standard")
     public Standard standard;
+
     public Strategy withStandard(Standard standard) {
         this.standard = standard;
         return this;
     }
     
+    public Strategy(){}
 }

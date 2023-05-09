@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddLogRequest {
     @JsonProperty("message")
     public String message;
+
     public AddLogRequest withMessage(String message) {
         this.message = message;
         return this;
@@ -16,9 +17,14 @@ public class AddLogRequest {
     
     @JsonProperty("source")
     public String source;
+
     public AddLogRequest withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public AddLogRequest(@JsonProperty("message") String message, @JsonProperty("source") String source) {
+        this.message = message;
+        this.source = source;
+  }
 }

@@ -15,9 +15,11 @@ public class DescribeSchedulingPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulingPolicies")
     public SchedulingPolicyDetail[] schedulingPolicies;
+
     public DescribeSchedulingPoliciesResponse withSchedulingPolicies(SchedulingPolicyDetail[] schedulingPolicies) {
         this.schedulingPolicies = schedulingPolicies;
         return this;
     }
     
+    public DescribeSchedulingPoliciesResponse(){}
 }

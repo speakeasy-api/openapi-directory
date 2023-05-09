@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Offer {
     @JsonProperty("availability")
     public OfferAvailabilityEnum availability;
+
     public Offer withAvailability(OfferAvailabilityEnum availability) {
         this.availability = availability;
         return this;
@@ -30,6 +31,7 @@ public class Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public java.util.Map<String, Object> customFields;
+
     public Offer withCustomFields(java.util.Map<String, Object> customFields) {
         this.customFields = customFields;
         return this;
@@ -37,6 +39,7 @@ public class Offer {
     
     @JsonProperty("deliveryType")
     public OfferDeliveryTypeEnum deliveryType;
+
     public Offer withDeliveryType(OfferDeliveryTypeEnum deliveryType) {
         this.deliveryType = deliveryType;
         return this;
@@ -47,6 +50,7 @@ public class Offer {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDate")
     public OffsetDateTime endDate;
+
     public Offer withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -58,6 +62,7 @@ public class Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclusionRules")
     public ExclusionRule[] exclusionRules;
+
     public Offer withExclusionRules(ExclusionRule[] exclusionRules) {
         this.exclusionRules = exclusionRules;
         return this;
@@ -66,6 +71,7 @@ public class Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Offer withId(String id) {
         this.id = id;
         return this;
@@ -77,6 +83,7 @@ public class Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxDownloads")
     public Integer maxDownloads;
+
     public Offer withMaxDownloads(Integer maxDownloads) {
         this.maxDownloads = maxDownloads;
         return this;
@@ -88,6 +95,7 @@ public class Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxPlays")
     public Integer maxPlays;
+
     public Offer withMaxPlays(Integer maxPlays) {
         this.maxPlays = maxPlays;
         return this;
@@ -96,6 +104,7 @@ public class Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Offer withName(String name) {
         this.name = name;
         return this;
@@ -103,6 +112,7 @@ public class Offer {
     
     @JsonProperty("ownership")
     public OfferOwnershipEnum ownership;
+
     public Offer withOwnership(OfferOwnershipEnum ownership) {
         this.ownership = ownership;
         return this;
@@ -114,6 +124,7 @@ public class Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playPeriod")
     public Integer playPeriod;
+
     public Offer withPlayPeriod(Integer playPeriod) {
         this.playPeriod = playPeriod;
         return this;
@@ -121,6 +132,7 @@ public class Offer {
     
     @JsonProperty("price")
     public Float price;
+
     public Offer withPrice(Float price) {
         this.price = price;
         return this;
@@ -132,6 +144,7 @@ public class Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rentalPeriod")
     public Integer rentalPeriod;
+
     public Offer withRentalPeriod(Integer rentalPeriod) {
         this.rentalPeriod = rentalPeriod;
         return this;
@@ -139,6 +152,7 @@ public class Offer {
     
     @JsonProperty("resolution")
     public OfferResolutionEnum resolution;
+
     public Offer withResolution(OfferResolutionEnum resolution) {
         this.resolution = resolution;
         return this;
@@ -146,6 +160,7 @@ public class Offer {
     
     @JsonProperty("scopes")
     public String[] scopes;
+
     public Offer withScopes(String[] scopes) {
         this.scopes = scopes;
         return this;
@@ -156,6 +171,7 @@ public class Offer {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDate")
     public OffsetDateTime startDate;
+
     public Offer withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -167,9 +183,18 @@ public class Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionCode")
     public String subscriptionCode;
+
     public Offer withSubscriptionCode(String subscriptionCode) {
         this.subscriptionCode = subscriptionCode;
         return this;
     }
     
+    public Offer(@JsonProperty("availability") OfferAvailabilityEnum availability, @JsonProperty("deliveryType") OfferDeliveryTypeEnum deliveryType, @JsonProperty("ownership") OfferOwnershipEnum ownership, @JsonProperty("price") Float price, @JsonProperty("resolution") OfferResolutionEnum resolution, @JsonProperty("scopes") String[] scopes) {
+        this.availability = availability;
+        this.deliveryType = deliveryType;
+        this.ownership = ownership;
+        this.price = price;
+        this.resolution = resolution;
+        this.scopes = scopes;
+  }
 }

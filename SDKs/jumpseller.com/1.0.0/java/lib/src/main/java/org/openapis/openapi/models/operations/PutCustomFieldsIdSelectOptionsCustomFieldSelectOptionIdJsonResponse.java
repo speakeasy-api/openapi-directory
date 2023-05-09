@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse {
     
     public String contentType;
+
     public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse
      */
     
     public org.openapis.openapi.models.shared.CustomFieldSelectOption customFieldSelectOption;
+
     public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse withCustomFieldSelectOption(org.openapis.openapi.models.shared.CustomFieldSelectOption customFieldSelectOption) {
         this.customFieldSelectOption = customFieldSelectOption;
         return this;
@@ -29,6 +32,7 @@ public class PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -36,6 +40,7 @@ public class PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse
     
     
     public Integer statusCode;
+
     public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

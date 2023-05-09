@@ -16,16 +16,15 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.KeepNotesCreateSecurity;
 import org.openapis.openapi.models.operations.KeepNotesCreateRequest;
 import org.openapis.openapi.models.operations.KeepNotesCreateResponse;
+import org.openapis.openapi.models.operations.KeepNotesCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.ListContent;
+import org.openapis.openapi.models.shared.ListItem;
 import org.openapis.openapi.models.shared.NoteInput;
 import org.openapis.openapi.models.shared.Section;
 import org.openapis.openapi.models.shared.TextContent;
-import org.openapis.openapi.models.shared.ListContent;
-import org.openapis.openapi.models.shared.ListItem;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -35,7 +34,7 @@ public class Application {
                 .build();
 
             KeepNotesCreateRequest req = new KeepNotesCreateRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 noteInput = new NoteInput() {{
                     body = new Section() {{
                         list = new ListContent() {{
@@ -74,15 +73,15 @@ public class Application {
                                     }};
                                 }}),
                             }};
-                        }};
+                        }};;
                         text = new TextContent() {{
                             text = "vel";
-                        }};
-                    }};
+                        }};;
+                    }};;
                     title = "Miss";
-                }};
+                }};;
                 accessToken = "deserunt";
-                alt = "media";
+                alt = AltEnum.MEDIA;
                 callback = "iure";
                 fields = "magnam";
                 key = "debitis";
@@ -91,19 +90,21 @@ public class Application {
                 quotaUser = "delectus";
                 uploadType = "tempora";
                 uploadProtocol = "suscipit";
-            }}            
+            }};            
 
-            KeepNotesCreateResponse res = sdk.notes.keepNotesCreate(req, new KeepNotesCreateSecurity() {{
+            KeepNotesCreateResponse res = sdk.notes.keepNotesCreate(req, new KeepNotesCreateSecurity("molestiae", "minus") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.note.isPresent()) {
+            if (res.note != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -111,14 +112,14 @@ public class Application {
 ## Available Resources and Operations
 
 
-### notes
+### [notes](docs/notes/README.md)
 
-* `keepNotesCreate` - Creates a new note.
-* `keepNotesDelete` - Deletes a note. Caller must have the `OWNER` role on the note to delete. Deleting a note removes the resource immediately and cannot be undone. Any collaborators will lose access to the note.
-* `keepNotesGet` - Gets a note.
-* `keepNotesList` - Lists notes. Every list call returns a page of results with `page_size` as the upper bound of returned items. A `page_size` of zero allows the server to choose the upper bound. The ListNotesResponse contains at most `page_size` entries. If there are more things left to list, it provides a `next_page_token` value. (Page tokens are opaque values.) To get the next page of results, copy the result's `next_page_token` into the next request's `page_token`. Repeat until the `next_page_token` returned with a page of results is empty. ListNotes return consistent results in the face of concurrent changes, or signals that it cannot with an ABORTED error.
-* `keepNotesPermissionsBatchCreate` - Creates one or more permissions on the note. Only permissions with the `WRITER` role may be created. If adding any permission fails, then the entire request fails and no changes are made.
-* `keepNotesPermissionsBatchDelete` - Deletes one or more permissions on the note. The specified entities will immediately lose access. A permission with the `OWNER` role can't be removed. If removing a permission fails, then the entire request fails and no changes are made. Returns a 400 bad request error if a specified permission does not exist on the note.
+* [keepNotesCreate](docs/notes/README.md#keepnotescreate) - Creates a new note.
+* [keepNotesDelete](docs/notes/README.md#keepnotesdelete) - Deletes a note. Caller must have the `OWNER` role on the note to delete. Deleting a note removes the resource immediately and cannot be undone. Any collaborators will lose access to the note.
+* [keepNotesGet](docs/notes/README.md#keepnotesget) - Gets a note.
+* [keepNotesList](docs/notes/README.md#keepnoteslist) - Lists notes. Every list call returns a page of results with `page_size` as the upper bound of returned items. A `page_size` of zero allows the server to choose the upper bound. The ListNotesResponse contains at most `page_size` entries. If there are more things left to list, it provides a `next_page_token` value. (Page tokens are opaque values.) To get the next page of results, copy the result's `next_page_token` into the next request's `page_token`. Repeat until the `next_page_token` returned with a page of results is empty. ListNotes return consistent results in the face of concurrent changes, or signals that it cannot with an ABORTED error.
+* [keepNotesPermissionsBatchCreate](docs/notes/README.md#keepnotespermissionsbatchcreate) - Creates one or more permissions on the note. Only permissions with the `WRITER` role may be created. If adding any permission fails, then the entire request fails and no changes are made.
+* [keepNotesPermissionsBatchDelete](docs/notes/README.md#keepnotespermissionsbatchdelete) - Deletes one or more permissions on the note. The specified entities will immediately lose access. A permission with the `OWNER` role can't be removed. If removing a permission fails, then the entire request fails and no changes are made. Returns a 400 bad request error if a specified permission does not exist on the note.
 <!-- End SDK Available Operations -->
 
 ### Maturity

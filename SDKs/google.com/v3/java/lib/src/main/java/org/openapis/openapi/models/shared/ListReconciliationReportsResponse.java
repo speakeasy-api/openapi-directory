@@ -18,9 +18,11 @@ public class ListReconciliationReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reconciliationReports")
     public ReconciliationReport[] reconciliationReports;
+
     public ListReconciliationReportsResponse withReconciliationReports(ReconciliationReport[] reconciliationReports) {
         this.reconciliationReports = reconciliationReports;
         return this;
     }
     
+    public ListReconciliationReportsResponse(){}
 }

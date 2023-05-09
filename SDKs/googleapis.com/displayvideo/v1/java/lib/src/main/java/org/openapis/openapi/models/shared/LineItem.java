@@ -18,6 +18,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public LineItem withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -29,6 +30,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bidStrategy")
     public BiddingStrategy bidStrategy;
+
     public LineItem withBidStrategy(BiddingStrategy bidStrategy) {
         this.bidStrategy = bidStrategy;
         return this;
@@ -40,6 +42,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budget")
     public LineItemBudget budget;
+
     public LineItem withBudget(LineItemBudget budget) {
         this.budget = budget;
         return this;
@@ -51,6 +54,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignId")
     public String campaignId;
+
     public LineItem withCampaignId(String campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -62,6 +66,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionCounting")
     public ConversionCountingConfig conversionCounting;
+
     public LineItem withConversionCounting(ConversionCountingConfig conversionCounting) {
         this.conversionCounting = conversionCounting;
         return this;
@@ -73,6 +78,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeIds")
     public String[] creativeIds;
+
     public LineItem withCreativeIds(String[] creativeIds) {
         this.creativeIds = creativeIds;
         return this;
@@ -84,6 +90,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public LineItem withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -95,6 +102,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityStatus")
     public LineItemEntityStatusEnum entityStatus;
+
     public LineItem withEntityStatus(LineItemEntityStatusEnum entityStatus) {
         this.entityStatus = entityStatus;
         return this;
@@ -106,6 +114,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludeNewExchanges")
     public Boolean excludeNewExchanges;
+
     public LineItem withExcludeNewExchanges(Boolean excludeNewExchanges) {
         this.excludeNewExchanges = excludeNewExchanges;
         return this;
@@ -117,6 +126,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flight")
     public LineItemFlight flight;
+
     public LineItem withFlight(LineItemFlight flight) {
         this.flight = flight;
         return this;
@@ -128,6 +138,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequencyCap")
     public FrequencyCap frequencyCap;
+
     public LineItem withFrequencyCap(FrequencyCap frequencyCap) {
         this.frequencyCap = frequencyCap;
         return this;
@@ -139,6 +150,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertionOrderId")
     public String insertionOrderId;
+
     public LineItem withInsertionOrderId(String insertionOrderId) {
         this.insertionOrderId = insertionOrderId;
         return this;
@@ -150,6 +162,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrationDetails")
     public IntegrationDetails integrationDetails;
+
     public LineItem withIntegrationDetails(IntegrationDetails integrationDetails) {
         this.integrationDetails = integrationDetails;
         return this;
@@ -161,6 +174,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventorySourceIds")
     public String[] inventorySourceIds;
+
     public LineItem withInventorySourceIds(String[] inventorySourceIds) {
         this.inventorySourceIds = inventorySourceIds;
         return this;
@@ -172,6 +186,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemId")
     public String lineItemId;
+
     public LineItem withLineItemId(String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
@@ -183,6 +198,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemType")
     public LineItemLineItemTypeEnum lineItemType;
+
     public LineItem withLineItemType(LineItemLineItemTypeEnum lineItemType) {
         this.lineItemType = lineItemType;
         return this;
@@ -194,6 +210,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobileApp")
     public MobileApp mobileApp;
+
     public LineItem withMobileApp(MobileApp mobileApp) {
         this.mobileApp = mobileApp;
         return this;
@@ -205,6 +222,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LineItem withName(String name) {
         this.name = name;
         return this;
@@ -216,6 +234,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pacing")
     public Pacing pacing;
+
     public LineItem withPacing(Pacing pacing) {
         this.pacing = pacing;
         return this;
@@ -227,6 +246,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerCosts")
     public PartnerCost[] partnerCosts;
+
     public LineItem withPartnerCosts(PartnerCost[] partnerCosts) {
         this.partnerCosts = partnerCosts;
         return this;
@@ -238,6 +258,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerRevenueModel")
     public PartnerRevenueModel partnerRevenueModel;
+
     public LineItem withPartnerRevenueModel(PartnerRevenueModel partnerRevenueModel) {
         this.partnerRevenueModel = partnerRevenueModel;
         return this;
@@ -249,17 +270,19 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservationType")
     public LineItemReservationTypeEnum reservationType;
+
     public LineItem withReservationType(LineItemReservationTypeEnum reservationType) {
         this.reservationType = reservationType;
         return this;
     }
     
     /**
-     * Settings that control the targeting expansion of the line item. Targeting expansion allows the line item to reach a larger audience based on the original audience list and the targeting expansion level. Beginning **March 25, 2023**, these settings may represent the [optimized targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting expansion. This feature will be rolled out to all partners by mid-April 2023.
+     * Settings that control the targeting expansion of the line item. Targeting expansion allows the line item to reach a larger audience based on the original audience list and the targeting expansion level. Beginning **March 25, 2023**, these settings may represent the [optimized targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting expansion. This feature will be rolled out to all partners by early May 2023.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingExpansion")
     public TargetingExpansionConfig targetingExpansion;
+
     public LineItem withTargetingExpansion(TargetingExpansionConfig targetingExpansion) {
         this.targetingExpansion = targetingExpansion;
         return this;
@@ -271,6 +294,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public LineItem withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -282,9 +306,11 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warningMessages")
     public LineItemWarningMessagesEnum[] warningMessages;
+
     public LineItem withWarningMessages(LineItemWarningMessagesEnum[] warningMessages) {
         this.warningMessages = warningMessages;
         return this;
     }
     
+    public LineItem(){}
 }

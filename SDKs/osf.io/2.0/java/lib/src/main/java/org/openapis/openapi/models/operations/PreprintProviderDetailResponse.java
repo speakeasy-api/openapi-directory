@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PreprintProviderDetailResponse {
     
     public byte[] body;
+
     public PreprintProviderDetailResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PreprintProviderDetailResponse {
     
     
     public String contentType;
+
     public PreprintProviderDetailResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PreprintProviderDetailResponse {
     
     
     public Integer statusCode;
+
     public PreprintProviderDetailResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class PreprintProviderDetailResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PreprintProviderDetailResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PreprintProviderDetailResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3HudiDirectTarget {
     @JsonProperty("AdditionalOptions")
     public java.util.Map<String, String> additionalOptions;
+
     public S3HudiDirectTarget withAdditionalOptions(java.util.Map<String, String> additionalOptions) {
         this.additionalOptions = additionalOptions;
         return this;
@@ -21,6 +22,7 @@ public class S3HudiDirectTarget {
     
     @JsonProperty("Compression")
     public HudiTargetCompressionTypeEnum compression;
+
     public S3HudiDirectTarget withCompression(HudiTargetCompressionTypeEnum compression) {
         this.compression = compression;
         return this;
@@ -28,6 +30,7 @@ public class S3HudiDirectTarget {
     
     @JsonProperty("Format")
     public TargetFormatEnum format;
+
     public S3HudiDirectTarget withFormat(TargetFormatEnum format) {
         this.format = format;
         return this;
@@ -35,6 +38,7 @@ public class S3HudiDirectTarget {
     
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public S3HudiDirectTarget withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -42,6 +46,7 @@ public class S3HudiDirectTarget {
     
     @JsonProperty("Name")
     public String name;
+
     public S3HudiDirectTarget withName(String name) {
         this.name = name;
         return this;
@@ -50,6 +55,7 @@ public class S3HudiDirectTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionKeys")
     public String[][] partitionKeys;
+
     public S3HudiDirectTarget withPartitionKeys(String[][] partitionKeys) {
         this.partitionKeys = partitionKeys;
         return this;
@@ -57,6 +63,7 @@ public class S3HudiDirectTarget {
     
     @JsonProperty("Path")
     public String path;
+
     public S3HudiDirectTarget withPath(String path) {
         this.path = path;
         return this;
@@ -65,9 +72,18 @@ public class S3HudiDirectTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaChangePolicy")
     public DirectSchemaChangePolicy schemaChangePolicy;
+
     public S3HudiDirectTarget withSchemaChangePolicy(DirectSchemaChangePolicy schemaChangePolicy) {
         this.schemaChangePolicy = schemaChangePolicy;
         return this;
     }
     
+    public S3HudiDirectTarget(@JsonProperty("AdditionalOptions") java.util.Map<String, String> additionalOptions, @JsonProperty("Compression") HudiTargetCompressionTypeEnum compression, @JsonProperty("Format") TargetFormatEnum format, @JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name, @JsonProperty("Path") String path) {
+        this.additionalOptions = additionalOptions;
+        this.compression = compression;
+        this.format = format;
+        this.inputs = inputs;
+        this.name = name;
+        this.path = path;
+  }
 }

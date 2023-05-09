@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListGatewayRoutesResponse {
@@ -12,6 +13,7 @@ public class ListGatewayRoutesResponse {
      */
     
     public Object badRequestException;
+
     public ListGatewayRoutesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListGatewayRoutesResponse {
     
     
     public String contentType;
+
     public ListGatewayRoutesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListGatewayRoutesResponse {
      */
     
     public Object forbiddenException;
+
     public ListGatewayRoutesResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class ListGatewayRoutesResponse {
      */
     
     public Object internalServerErrorException;
+
     public ListGatewayRoutesResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class ListGatewayRoutesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListGatewayRoutesOutput listGatewayRoutesOutput;
+
     public ListGatewayRoutesResponse withListGatewayRoutesOutput(org.openapis.openapi.models.shared.ListGatewayRoutesOutput listGatewayRoutesOutput) {
         this.listGatewayRoutesOutput = listGatewayRoutesOutput;
         return this;
@@ -59,6 +65,7 @@ public class ListGatewayRoutesResponse {
      */
     
     public Object notFoundException;
+
     public ListGatewayRoutesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListGatewayRoutesResponse {
     
     
     public Integer statusCode;
+
     public ListGatewayRoutesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListGatewayRoutesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListGatewayRoutesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListGatewayRoutesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListGatewayRoutesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class ListGatewayRoutesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListGatewayRoutesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListGatewayRoutesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

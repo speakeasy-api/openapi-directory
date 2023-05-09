@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSlackChannelConfigurationsResponse {
@@ -12,6 +13,7 @@ public class ListSlackChannelConfigurationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListSlackChannelConfigurationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListSlackChannelConfigurationsResponse {
     
     
     public String contentType;
+
     public ListSlackChannelConfigurationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListSlackChannelConfigurationsResponse {
      */
     
     public Object internalServerException;
+
     public ListSlackChannelConfigurationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListSlackChannelConfigurationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSlackChannelConfigurationsResult listSlackChannelConfigurationsResult;
+
     public ListSlackChannelConfigurationsResponse withListSlackChannelConfigurationsResult(org.openapis.openapi.models.shared.ListSlackChannelConfigurationsResult listSlackChannelConfigurationsResult) {
         this.listSlackChannelConfigurationsResult = listSlackChannelConfigurationsResult;
         return this;
@@ -46,6 +51,7 @@ public class ListSlackChannelConfigurationsResponse {
     
     
     public Integer statusCode;
+
     public ListSlackChannelConfigurationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListSlackChannelConfigurationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSlackChannelConfigurationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListSlackChannelConfigurationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

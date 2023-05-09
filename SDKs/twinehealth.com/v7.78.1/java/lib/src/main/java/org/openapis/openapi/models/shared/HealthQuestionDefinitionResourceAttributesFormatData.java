@@ -15,6 +15,7 @@ public class HealthQuestionDefinitionResourceAttributesFormatData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
+
     public HealthQuestionDefinitionResourceAttributesFormatData withIcon(String icon) {
         this.icon = icon;
         return this;
@@ -23,6 +24,7 @@ public class HealthQuestionDefinitionResourceAttributesFormatData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public HealthQuestionDefinitionResourceAttributesFormatData withLabel(String label) {
         this.label = label;
         return this;
@@ -31,9 +33,11 @@ public class HealthQuestionDefinitionResourceAttributesFormatData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public HealthQuestionDefinitionResourceAttributesFormatData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public HealthQuestionDefinitionResourceAttributesFormatData(){}
 }

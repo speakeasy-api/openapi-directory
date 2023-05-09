@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConvertcurrencyRequest {
@@ -12,6 +13,7 @@ public class ConvertcurrencyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amount")
     public String amount;
+
     public ConvertcurrencyRequest withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -22,6 +24,7 @@ public class ConvertcurrencyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
     public String from;
+
     public ConvertcurrencyRequest withFrom(String from) {
         this.from = from;
         return this;
@@ -32,6 +35,7 @@ public class ConvertcurrencyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
     public String license;
+
     public ConvertcurrencyRequest withLicense(String license) {
         this.license = license;
         return this;
@@ -42,9 +46,16 @@ public class ConvertcurrencyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
     public String to;
+
     public ConvertcurrencyRequest withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public ConvertcurrencyRequest(@JsonProperty("amount") String amount, @JsonProperty("from") String from, @JsonProperty("license") String license, @JsonProperty("to") String to) {
+        this.amount = amount;
+        this.from = from;
+        this.license = license;
+        this.to = to;
+  }
 }

@@ -18,6 +18,7 @@ public class Release {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fraction")
     public Double fraction;
+
     public Release withFraction(Double fraction) {
         this.fraction = fraction;
         return this;
@@ -29,6 +30,7 @@ public class Release {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fractionGroup")
     public String fractionGroup;
+
     public Release withFractionGroup(String fractionGroup) {
         this.fractionGroup = fractionGroup;
         return this;
@@ -40,6 +42,7 @@ public class Release {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Release withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class Release {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serving")
     public Interval serving;
+
     public Release withServing(Interval serving) {
         this.serving = serving;
         return this;
@@ -62,9 +66,11 @@ public class Release {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public Release withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Release(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetVmknicResponse {
@@ -12,6 +13,7 @@ public class GetVmknicResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiError apiError;
+
     public GetVmknicResponse withApiError(org.openapis.openapi.models.shared.ApiError apiError) {
         this.apiError = apiError;
         return this;
@@ -19,6 +21,7 @@ public class GetVmknicResponse {
     
     
     public String contentType;
+
     public GetVmknicResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetVmknicResponse {
     
     
     public Integer statusCode;
+
     public GetVmknicResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetVmknicResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetVmknicResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetVmknicResponse {
      */
     
     public org.openapis.openapi.models.shared.Vmknic vmknic;
+
     public GetVmknicResponse withVmknic(org.openapis.openapi.models.shared.Vmknic vmknic) {
         this.vmknic = vmknic;
         return this;
     }
     
+    public GetVmknicResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

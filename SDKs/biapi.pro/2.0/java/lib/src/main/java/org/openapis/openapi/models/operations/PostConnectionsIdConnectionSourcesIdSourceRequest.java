@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostConnectionsIdConnectionSourcesIdSourceRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PostConnectionsIdConnectionSourcesIdSourceRequestBody requestBody;
+
     public PostConnectionsIdConnectionSourcesIdSourceRequest withRequestBody(PostConnectionsIdConnectionSourcesIdSourceRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class PostConnectionsIdConnectionSourcesIdSourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=background")
     public Boolean background;
+
     public PostConnectionsIdConnectionSourcesIdSourceRequest withBackground(Boolean background) {
         this.background = background;
         return this;
@@ -26,6 +29,7 @@ public class PostConnectionsIdConnectionSourcesIdSourceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public PostConnectionsIdConnectionSourcesIdSourceRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -33,6 +37,7 @@ public class PostConnectionsIdConnectionSourcesIdSourceRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
     public Long idConnection;
+
     public PostConnectionsIdConnectionSourcesIdSourceRequest withIdConnection(Long idConnection) {
         this.idConnection = idConnection;
         return this;
@@ -40,9 +45,14 @@ public class PostConnectionsIdConnectionSourcesIdSourceRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_source")
     public Long idSource;
+
     public PostConnectionsIdConnectionSourcesIdSourceRequest withIdSource(Long idSource) {
         this.idSource = idSource;
         return this;
     }
     
+    public PostConnectionsIdConnectionSourcesIdSourceRequest(@JsonProperty("id_connection") Long idConnection, @JsonProperty("id_source") Long idSource) {
+        this.idConnection = idConnection;
+        this.idSource = idSource;
+  }
 }

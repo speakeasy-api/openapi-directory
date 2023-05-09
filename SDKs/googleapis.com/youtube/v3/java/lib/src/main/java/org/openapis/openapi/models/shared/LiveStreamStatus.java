@@ -15,6 +15,7 @@ public class LiveStreamStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthStatus")
     public LiveStreamHealthStatus healthStatus;
+
     public LiveStreamStatus withHealthStatus(LiveStreamHealthStatus healthStatus) {
         this.healthStatus = healthStatus;
         return this;
@@ -23,9 +24,11 @@ public class LiveStreamStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamStatus")
     public LiveStreamStatusStreamStatusEnum streamStatus;
+
     public LiveStreamStatus withStreamStatus(LiveStreamStatusStreamStatusEnum streamStatus) {
         this.streamStatus = streamStatus;
         return this;
     }
     
+    public LiveStreamStatus(){}
 }

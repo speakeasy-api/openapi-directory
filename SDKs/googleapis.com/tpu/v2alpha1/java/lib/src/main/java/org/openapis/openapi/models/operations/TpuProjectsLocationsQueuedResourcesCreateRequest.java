@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TpuProjectsLocationsQueuedResourcesCreateRequest {
@@ -12,6 +13,7 @@ public class TpuProjectsLocationsQueuedResourcesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public TpuProjectsLocationsQueuedResourcesCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class TpuProjectsLocationsQueuedResourcesCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.QueuedResourceInput queuedResourceInput;
+
     public TpuProjectsLocationsQueuedResourcesCreateRequest withQueuedResourceInput(org.openapis.openapi.models.shared.QueuedResourceInput queuedResourceInput) {
         this.queuedResourceInput = queuedResourceInput;
         return this;
@@ -29,6 +32,7 @@ public class TpuProjectsLocationsQueuedResourcesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public TpuProjectsLocationsQueuedResourcesCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class TpuProjectsLocationsQueuedResourcesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public TpuProjectsLocationsQueuedResourcesCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class TpuProjectsLocationsQueuedResourcesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public TpuProjectsLocationsQueuedResourcesCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class TpuProjectsLocationsQueuedResourcesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public TpuProjectsLocationsQueuedResourcesCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class TpuProjectsLocationsQueuedResourcesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public TpuProjectsLocationsQueuedResourcesCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class TpuProjectsLocationsQueuedResourcesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public TpuProjectsLocationsQueuedResourcesCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class TpuProjectsLocationsQueuedResourcesCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public TpuProjectsLocationsQueuedResourcesCreateRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -99,16 +109,18 @@ public class TpuProjectsLocationsQueuedResourcesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public TpuProjectsLocationsQueuedResourcesCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
     }
     
     /**
-     * The unqualified resource name. Should follow the ^[A-Za-z0-9_.~+%-]+$ regex format.
+     * The unqualified resource name. Should follow the `^[A-Za-z0-9_.~+%-]+$` regex format.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=queuedResourceId")
     public String queuedResourceId;
+
     public TpuProjectsLocationsQueuedResourcesCreateRequest withQueuedResourceId(String queuedResourceId) {
         this.queuedResourceId = queuedResourceId;
         return this;
@@ -119,6 +131,7 @@ public class TpuProjectsLocationsQueuedResourcesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public TpuProjectsLocationsQueuedResourcesCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class TpuProjectsLocationsQueuedResourcesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public TpuProjectsLocationsQueuedResourcesCreateRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -139,6 +153,7 @@ public class TpuProjectsLocationsQueuedResourcesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public TpuProjectsLocationsQueuedResourcesCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,9 +164,13 @@ public class TpuProjectsLocationsQueuedResourcesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public TpuProjectsLocationsQueuedResourcesCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public TpuProjectsLocationsQueuedResourcesCreateRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

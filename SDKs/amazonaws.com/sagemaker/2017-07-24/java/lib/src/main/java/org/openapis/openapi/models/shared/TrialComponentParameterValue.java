@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * TrialComponentParameterValue - &lt;p&gt;The value of a hyperparameter. Only one of &lt;code&gt;NumberValue&lt;/code&gt; or &lt;code&gt;StringValue&lt;/code&gt; can be specified.&lt;/p&gt; &lt;p&gt;This object is specified in the &lt;a&gt;CreateTrialComponent&lt;/a&gt; request.&lt;/p&gt;
+ * TrialComponentParameterValue - &lt;p&gt;The value of a hyperparameter. Only one of &lt;code&gt;NumberValue&lt;/code&gt; or &lt;code&gt;StringValue&lt;/code&gt; can be specified.&lt;/p&gt; &lt;p&gt;This object is specified in the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrialComponent.html"&gt;CreateTrialComponent&lt;/a&gt; request.&lt;/p&gt;
  */
 public class TrialComponentParameterValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberValue")
     public Double numberValue;
+
     public TrialComponentParameterValue withNumberValue(Double numberValue) {
         this.numberValue = numberValue;
         return this;
@@ -23,9 +24,11 @@ public class TrialComponentParameterValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StringValue")
     public String stringValue;
+
     public TrialComponentParameterValue withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public TrialComponentParameterValue(){}
 }

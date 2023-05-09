@@ -12,6 +12,7 @@ public class ScheduleApiTriggeredCanvasesRequestBodyAudienceANDCustomAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparison")
     public String comparison;
+
     public ScheduleApiTriggeredCanvasesRequestBodyAudienceANDCustomAttribute withComparison(String comparison) {
         this.comparison = comparison;
         return this;
@@ -20,6 +21,7 @@ public class ScheduleApiTriggeredCanvasesRequestBodyAudienceANDCustomAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_attribute_name")
     public String customAttributeName;
+
     public ScheduleApiTriggeredCanvasesRequestBodyAudienceANDCustomAttribute withCustomAttributeName(String customAttributeName) {
         this.customAttributeName = customAttributeName;
         return this;
@@ -28,9 +30,11 @@ public class ScheduleApiTriggeredCanvasesRequestBodyAudienceANDCustomAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ScheduleApiTriggeredCanvasesRequestBodyAudienceANDCustomAttribute withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ScheduleApiTriggeredCanvasesRequestBodyAudienceANDCustomAttribute(){}
 }

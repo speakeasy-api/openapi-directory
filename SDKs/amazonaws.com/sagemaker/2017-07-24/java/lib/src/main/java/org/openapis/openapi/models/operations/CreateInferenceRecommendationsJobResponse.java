@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateInferenceRecommendationsJobResponse {
     
     public String contentType;
+
     public CreateInferenceRecommendationsJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateInferenceRecommendationsJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateInferenceRecommendationsJobResponse createInferenceRecommendationsJobResponse;
+
     public CreateInferenceRecommendationsJobResponse withCreateInferenceRecommendationsJobResponse(org.openapis.openapi.models.shared.CreateInferenceRecommendationsJobResponse createInferenceRecommendationsJobResponse) {
         this.createInferenceRecommendationsJobResponse = createInferenceRecommendationsJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateInferenceRecommendationsJobResponse {
      */
     
     public Object resourceInUse;
+
     public CreateInferenceRecommendationsJobResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -36,6 +40,7 @@ public class CreateInferenceRecommendationsJobResponse {
     
     
     public Integer statusCode;
+
     public CreateInferenceRecommendationsJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CreateInferenceRecommendationsJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateInferenceRecommendationsJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class CreateInferenceRecommendationsJobResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateInferenceRecommendationsJobResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
     }
     
+    public CreateInferenceRecommendationsJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

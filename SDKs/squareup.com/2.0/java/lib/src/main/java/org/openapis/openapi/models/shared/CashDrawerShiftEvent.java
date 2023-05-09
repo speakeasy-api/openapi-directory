@@ -15,6 +15,7 @@ public class CashDrawerShiftEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public CashDrawerShiftEvent withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -27,6 +28,7 @@ public class CashDrawerShiftEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CashDrawerShiftEvent withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class CashDrawerShiftEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee_id")
     public String employeeId;
+
     public CashDrawerShiftEvent withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
@@ -54,6 +57,7 @@ public class CashDrawerShiftEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_money")
     public Money eventMoney;
+
     public CashDrawerShiftEvent withEventMoney(Money eventMoney) {
         this.eventMoney = eventMoney;
         return this;
@@ -65,6 +69,7 @@ public class CashDrawerShiftEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_type")
     public String eventType;
+
     public CashDrawerShiftEvent withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -76,9 +81,11 @@ public class CashDrawerShiftEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CashDrawerShiftEvent withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CashDrawerShiftEvent(){}
 }

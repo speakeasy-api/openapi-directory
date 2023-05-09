@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesGetIosManifestRequest {
@@ -12,6 +13,7 @@ public class ReleasesGetIosManifestRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_id")
     public String appId;
+
     public ReleasesGetIosManifestRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -22,6 +24,7 @@ public class ReleasesGetIosManifestRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
     public Long releaseId;
+
     public ReleasesGetIosManifestRequest withReleaseId(Long releaseId) {
         this.releaseId = releaseId;
         return this;
@@ -32,9 +35,15 @@ public class ReleasesGetIosManifestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public ReleasesGetIosManifestRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public ReleasesGetIosManifestRequest(@JsonProperty("app_id") String appId, @JsonProperty("release_id") Long releaseId, @JsonProperty("token") String token) {
+        this.appId = appId;
+        this.releaseId = releaseId;
+        this.token = token;
+  }
 }

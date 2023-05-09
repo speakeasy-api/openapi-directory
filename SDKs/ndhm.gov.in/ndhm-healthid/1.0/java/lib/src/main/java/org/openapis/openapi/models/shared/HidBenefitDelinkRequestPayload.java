@@ -15,6 +15,7 @@ public class HidBenefitDelinkRequestPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("benefitName")
     public String benefitName;
+
     public HidBenefitDelinkRequestPayload withBenefitName(String benefitName) {
         this.benefitName = benefitName;
         return this;
@@ -23,9 +24,11 @@ public class HidBenefitDelinkRequestPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uidToken")
     public String uidToken;
+
     public HidBenefitDelinkRequestPayload withUidToken(String uidToken) {
         this.uidToken = uidToken;
         return this;
     }
     
+    public HidBenefitDelinkRequestPayload(){}
 }

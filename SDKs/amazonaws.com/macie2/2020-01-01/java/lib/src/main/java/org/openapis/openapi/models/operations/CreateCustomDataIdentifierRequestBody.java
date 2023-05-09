@@ -15,6 +15,7 @@ public class CreateCustomDataIdentifierRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateCustomDataIdentifierRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class CreateCustomDataIdentifierRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateCustomDataIdentifierRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class CreateCustomDataIdentifierRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreWords")
     public String[] ignoreWords;
+
     public CreateCustomDataIdentifierRequestBody withIgnoreWords(String[] ignoreWords) {
         this.ignoreWords = ignoreWords;
         return this;
@@ -48,6 +51,7 @@ public class CreateCustomDataIdentifierRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywords")
     public String[] keywords;
+
     public CreateCustomDataIdentifierRequestBody withKeywords(String[] keywords) {
         this.keywords = keywords;
         return this;
@@ -59,6 +63,7 @@ public class CreateCustomDataIdentifierRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumMatchDistance")
     public Long maximumMatchDistance;
+
     public CreateCustomDataIdentifierRequestBody withMaximumMatchDistance(Long maximumMatchDistance) {
         this.maximumMatchDistance = maximumMatchDistance;
         return this;
@@ -69,6 +74,7 @@ public class CreateCustomDataIdentifierRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateCustomDataIdentifierRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -79,6 +85,7 @@ public class CreateCustomDataIdentifierRequestBody {
      */
     @JsonProperty("regex")
     public String regex;
+
     public CreateCustomDataIdentifierRequestBody withRegex(String regex) {
         this.regex = regex;
         return this;
@@ -90,6 +97,7 @@ public class CreateCustomDataIdentifierRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severityLevels")
     public org.openapis.openapi.models.shared.SeverityLevel[] severityLevels;
+
     public CreateCustomDataIdentifierRequestBody withSeverityLevels(org.openapis.openapi.models.shared.SeverityLevel[] severityLevels) {
         this.severityLevels = severityLevels;
         return this;
@@ -101,9 +109,14 @@ public class CreateCustomDataIdentifierRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateCustomDataIdentifierRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateCustomDataIdentifierRequestBody(@JsonProperty("name") String name, @JsonProperty("regex") String regex) {
+        this.name = name;
+        this.regex = regex;
+  }
 }

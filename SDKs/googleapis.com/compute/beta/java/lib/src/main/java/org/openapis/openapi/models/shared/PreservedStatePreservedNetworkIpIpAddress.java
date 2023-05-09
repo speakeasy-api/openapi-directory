@@ -15,6 +15,7 @@ public class PreservedStatePreservedNetworkIpIpAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public PreservedStatePreservedNetworkIpIpAddress withAddress(String address) {
         this.address = address;
         return this;
@@ -26,9 +27,11 @@ public class PreservedStatePreservedNetworkIpIpAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("literal")
     public String literal;
+
     public PreservedStatePreservedNetworkIpIpAddress withLiteral(String literal) {
         this.literal = literal;
         return this;
     }
     
+    public PreservedStatePreservedNetworkIpIpAddress(){}
 }

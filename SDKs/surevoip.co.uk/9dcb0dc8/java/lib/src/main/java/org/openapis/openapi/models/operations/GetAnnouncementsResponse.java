@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAnnouncementsResponse {
     
     public byte[] body;
+
     public GetAnnouncementsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetAnnouncementsResponse {
     
     
     public String contentType;
+
     public GetAnnouncementsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetAnnouncementsResponse {
     
     
     public Integer statusCode;
+
     public GetAnnouncementsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetAnnouncementsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAnnouncementsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetAnnouncementsResponse {
      */
     
     public org.openapis.openapi.models.shared.OneGetResponses200ContentApplication1jsonSchema oneGetResponses200ContentApplication1jsonSchema;
+
     public GetAnnouncementsResponse withOneGetResponses200ContentApplication1jsonSchema(org.openapis.openapi.models.shared.OneGetResponses200ContentApplication1jsonSchema oneGetResponses200ContentApplication1jsonSchema) {
         this.oneGetResponses200ContentApplication1jsonSchema = oneGetResponses200ContentApplication1jsonSchema;
         return this;
     }
     
+    public GetAnnouncementsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

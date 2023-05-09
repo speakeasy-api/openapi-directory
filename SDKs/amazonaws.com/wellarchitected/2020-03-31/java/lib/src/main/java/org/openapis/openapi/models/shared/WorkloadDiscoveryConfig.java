@@ -15,9 +15,11 @@ public class WorkloadDiscoveryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrustedAdvisorIntegrationStatus")
     public TrustedAdvisorIntegrationStatusEnum trustedAdvisorIntegrationStatus;
+
     public WorkloadDiscoveryConfig withTrustedAdvisorIntegrationStatus(TrustedAdvisorIntegrationStatusEnum trustedAdvisorIntegrationStatus) {
         this.trustedAdvisorIntegrationStatus = trustedAdvisorIntegrationStatus;
         return this;
     }
     
+    public WorkloadDiscoveryConfig(){}
 }

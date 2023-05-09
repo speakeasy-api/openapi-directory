@@ -15,6 +15,7 @@ public class UpdateReplicationGroupMemberAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalSecondaryIndexes")
     public ReplicaGlobalSecondaryIndex[] globalSecondaryIndexes;
+
     public UpdateReplicationGroupMemberAction withGlobalSecondaryIndexes(ReplicaGlobalSecondaryIndex[] globalSecondaryIndexes) {
         this.globalSecondaryIndexes = globalSecondaryIndexes;
         return this;
@@ -23,6 +24,7 @@ public class UpdateReplicationGroupMemberAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSMasterKeyId")
     public String kmsMasterKeyId;
+
     public UpdateReplicationGroupMemberAction withKMSMasterKeyId(String kmsMasterKeyId) {
         this.kmsMasterKeyId = kmsMasterKeyId;
         return this;
@@ -31,6 +33,7 @@ public class UpdateReplicationGroupMemberAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedThroughputOverride")
     public ProvisionedThroughputOverride provisionedThroughputOverride;
+
     public UpdateReplicationGroupMemberAction withProvisionedThroughputOverride(ProvisionedThroughputOverride provisionedThroughputOverride) {
         this.provisionedThroughputOverride = provisionedThroughputOverride;
         return this;
@@ -38,6 +41,7 @@ public class UpdateReplicationGroupMemberAction {
     
     @JsonProperty("RegionName")
     public String regionName;
+
     public UpdateReplicationGroupMemberAction withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
@@ -46,9 +50,13 @@ public class UpdateReplicationGroupMemberAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableClassOverride")
     public TableClassEnum tableClassOverride;
+
     public UpdateReplicationGroupMemberAction withTableClassOverride(TableClassEnum tableClassOverride) {
         this.tableClassOverride = tableClassOverride;
         return this;
     }
     
+    public UpdateReplicationGroupMemberAction(@JsonProperty("RegionName") String regionName) {
+        this.regionName = regionName;
+  }
 }

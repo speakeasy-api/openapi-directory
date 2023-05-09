@@ -18,6 +18,7 @@ public class DnsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customDns")
     public CustomDns customDns;
+
     public DnsSettings withCustomDns(CustomDns customDns) {
         this.customDns = customDns;
         return this;
@@ -29,6 +30,7 @@ public class DnsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glueRecords")
     public GlueRecord[] glueRecords;
+
     public DnsSettings withGlueRecords(GlueRecord[] glueRecords) {
         this.glueRecords = glueRecords;
         return this;
@@ -40,9 +42,11 @@ public class DnsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleDomainsDns")
     public GoogleDomainsDns googleDomainsDns;
+
     public DnsSettings withGoogleDomainsDns(GoogleDomainsDns googleDomainsDns) {
         this.googleDomainsDns = googleDomainsDns;
         return this;
     }
     
+    public DnsSettings(){}
 }

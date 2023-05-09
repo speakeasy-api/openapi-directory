@@ -18,6 +18,7 @@ public class SignedUrlKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyName")
     public String keyName;
+
     public SignedUrlKey withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -29,9 +30,11 @@ public class SignedUrlKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyValue")
     public String keyValue;
+
     public SignedUrlKey withKeyValue(String keyValue) {
         this.keyValue = keyValue;
         return this;
     }
     
+    public SignedUrlKey(){}
 }

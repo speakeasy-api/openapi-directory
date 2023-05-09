@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateComponentTypeResponse {
@@ -12,6 +13,7 @@ public class UpdateComponentTypeResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateComponentTypeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateComponentTypeResponse {
     
     
     public String contentType;
+
     public UpdateComponentTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateComponentTypeResponse {
      */
     
     public Object internalServerException;
+
     public UpdateComponentTypeResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateComponentTypeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateComponentTypeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateComponentTypeResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateComponentTypeResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateComponentTypeResponse {
     
     
     public Integer statusCode;
+
     public UpdateComponentTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateComponentTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateComponentTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateComponentTypeResponse {
      */
     
     public Object throttlingException;
+
     public UpdateComponentTypeResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateComponentTypeResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateComponentTypeResponse updateComponentTypeResponse;
+
     public UpdateComponentTypeResponse withUpdateComponentTypeResponse(org.openapis.openapi.models.shared.UpdateComponentTypeResponse updateComponentTypeResponse) {
         this.updateComponentTypeResponse = updateComponentTypeResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateComponentTypeResponse {
      */
     
     public Object validationException;
+
     public UpdateComponentTypeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateComponentTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

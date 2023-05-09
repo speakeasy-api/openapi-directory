@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MonitoringClusterConfig {
     @JsonProperty("InstanceCount")
     public Long instanceCount;
+
     public MonitoringClusterConfig withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -21,6 +22,7 @@ public class MonitoringClusterConfig {
     
     @JsonProperty("InstanceType")
     public ProcessingInstanceTypeEnum instanceType;
+
     public MonitoringClusterConfig withInstanceType(ProcessingInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -29,6 +31,7 @@ public class MonitoringClusterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeKmsKeyId")
     public String volumeKmsKeyId;
+
     public MonitoringClusterConfig withVolumeKmsKeyId(String volumeKmsKeyId) {
         this.volumeKmsKeyId = volumeKmsKeyId;
         return this;
@@ -36,9 +39,15 @@ public class MonitoringClusterConfig {
     
     @JsonProperty("VolumeSizeInGB")
     public Long volumeSizeInGB;
+
     public MonitoringClusterConfig withVolumeSizeInGB(Long volumeSizeInGB) {
         this.volumeSizeInGB = volumeSizeInGB;
         return this;
     }
     
+    public MonitoringClusterConfig(@JsonProperty("InstanceCount") Long instanceCount, @JsonProperty("InstanceType") ProcessingInstanceTypeEnum instanceType, @JsonProperty("VolumeSizeInGB") Long volumeSizeInGB) {
+        this.instanceCount = instanceCount;
+        this.instanceType = instanceType;
+        this.volumeSizeInGB = volumeSizeInGB;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SslSetupRequestBodyPrivatekeyFile {
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public SslSetupRequestBodyPrivatekeyFile withContent(byte[] content) {
         this.content = content;
         return this;
@@ -16,9 +18,14 @@ public class SslSetupRequestBodyPrivatekeyFile {
     
     @SpeakeasyMetadata("multipartForm:name=privatekeyFile")
     public String privatekeyFile;
+
     public SslSetupRequestBodyPrivatekeyFile withPrivatekeyFile(String privatekeyFile) {
         this.privatekeyFile = privatekeyFile;
         return this;
     }
     
+    public SslSetupRequestBodyPrivatekeyFile(@JsonProperty("content") byte[] content, @JsonProperty("privatekeyFile") String privatekeyFile) {
+        this.content = content;
+        this.privatekeyFile = privatekeyFile;
+  }
 }

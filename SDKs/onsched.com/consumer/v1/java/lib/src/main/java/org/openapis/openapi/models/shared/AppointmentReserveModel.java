@@ -12,6 +12,7 @@ public class AppointmentReserveModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appointmentBookingFields")
     public BookingFieldItem[] appointmentBookingFields;
+
     public AppointmentReserveModel withAppointmentBookingFields(BookingFieldItem[] appointmentBookingFields) {
         this.appointmentBookingFields = appointmentBookingFields;
         return this;
@@ -20,6 +21,7 @@ public class AppointmentReserveModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public CustomFieldInputModel customFields;
+
     public AppointmentReserveModel withCustomFields(CustomFieldInputModel customFields) {
         this.customFields = customFields;
         return this;
@@ -28,6 +30,7 @@ public class AppointmentReserveModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerBookingFields")
     public BookingFieldItem[] customerBookingFields;
+
     public AppointmentReserveModel withCustomerBookingFields(BookingFieldItem[] customerBookingFields) {
         this.customerBookingFields = customerBookingFields;
         return this;
@@ -36,6 +39,7 @@ public class AppointmentReserveModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerMessage")
     public String customerMessage;
+
     public AppointmentReserveModel withCustomerMessage(String customerMessage) {
         this.customerMessage = customerMessage;
         return this;
@@ -44,6 +48,7 @@ public class AppointmentReserveModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public AppointmentReserveModel withEmail(String email) {
         this.email = email;
         return this;
@@ -52,6 +57,7 @@ public class AppointmentReserveModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AppointmentReserveModel withName(String name) {
         this.name = name;
         return this;
@@ -60,6 +66,7 @@ public class AppointmentReserveModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public AppointmentReserveModel withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -68,6 +75,7 @@ public class AppointmentReserveModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public AppointmentReserveModel withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -76,6 +84,7 @@ public class AppointmentReserveModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneExt")
     public String phoneExt;
+
     public AppointmentReserveModel withPhoneExt(String phoneExt) {
         this.phoneExt = phoneExt;
         return this;
@@ -84,9 +93,11 @@ public class AppointmentReserveModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneType")
     public String phoneType;
+
     public AppointmentReserveModel withPhoneType(String phoneType) {
         this.phoneType = phoneType;
         return this;
     }
     
+    public AppointmentReserveModel(){}
 }

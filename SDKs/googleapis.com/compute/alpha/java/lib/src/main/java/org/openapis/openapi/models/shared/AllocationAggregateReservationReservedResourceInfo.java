@@ -12,9 +12,11 @@ public class AllocationAggregateReservationReservedResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accelerator")
     public AllocationAggregateReservationReservedResourceInfoAccelerator accelerator;
+
     public AllocationAggregateReservationReservedResourceInfo withAccelerator(AllocationAggregateReservationReservedResourceInfoAccelerator accelerator) {
         this.accelerator = accelerator;
         return this;
     }
     
+    public AllocationAggregateReservationReservedResourceInfo(){}
 }

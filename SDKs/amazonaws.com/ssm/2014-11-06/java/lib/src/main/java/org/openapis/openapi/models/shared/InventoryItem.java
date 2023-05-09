@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InventoryItem {
     @JsonProperty("CaptureTime")
     public String captureTime;
+
     public InventoryItem withCaptureTime(String captureTime) {
         this.captureTime = captureTime;
         return this;
@@ -22,6 +23,7 @@ public class InventoryItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Content")
     public java.util.Map<String, String>[] content;
+
     public InventoryItem withContent(java.util.Map<String, String>[] content) {
         this.content = content;
         return this;
@@ -30,6 +32,7 @@ public class InventoryItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentHash")
     public String contentHash;
+
     public InventoryItem withContentHash(String contentHash) {
         this.contentHash = contentHash;
         return this;
@@ -38,6 +41,7 @@ public class InventoryItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Context")
     public java.util.Map<String, String> context;
+
     public InventoryItem withContext(java.util.Map<String, String> context) {
         this.context = context;
         return this;
@@ -45,6 +49,7 @@ public class InventoryItem {
     
     @JsonProperty("SchemaVersion")
     public String schemaVersion;
+
     public InventoryItem withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
@@ -52,9 +57,15 @@ public class InventoryItem {
     
     @JsonProperty("TypeName")
     public String typeName;
+
     public InventoryItem withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public InventoryItem(@JsonProperty("CaptureTime") String captureTime, @JsonProperty("SchemaVersion") String schemaVersion, @JsonProperty("TypeName") String typeName) {
+        this.captureTime = captureTime;
+        this.schemaVersion = schemaVersion;
+        this.typeName = typeName;
+  }
 }

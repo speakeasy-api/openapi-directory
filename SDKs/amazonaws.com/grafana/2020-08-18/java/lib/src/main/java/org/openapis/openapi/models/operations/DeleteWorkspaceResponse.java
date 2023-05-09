@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteWorkspaceResponse {
@@ -12,6 +13,7 @@ public class DeleteWorkspaceResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteWorkspaceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteWorkspaceResponse {
      */
     
     public Object conflictException;
+
     public DeleteWorkspaceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteWorkspaceResponse {
     
     
     public String contentType;
+
     public DeleteWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteWorkspaceResponse deleteWorkspaceResponse;
+
     public DeleteWorkspaceResponse withDeleteWorkspaceResponse(org.openapis.openapi.models.shared.DeleteWorkspaceResponse deleteWorkspaceResponse) {
         this.deleteWorkspaceResponse = deleteWorkspaceResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteWorkspaceResponse {
      */
     
     public Object internalServerException;
+
     public DeleteWorkspaceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteWorkspaceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteWorkspaceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public DeleteWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteWorkspaceResponse {
      */
     
     public Object throttlingException;
+
     public DeleteWorkspaceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteWorkspaceResponse {
      */
     
     public Object validationException;
+
     public DeleteWorkspaceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

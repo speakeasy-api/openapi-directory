@@ -18,6 +18,7 @@ public class AsymmetricDecryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ciphertext")
     public String ciphertext;
+
     public AsymmetricDecryptRequest withCiphertext(String ciphertext) {
         this.ciphertext = ciphertext;
         return this;
@@ -29,9 +30,11 @@ public class AsymmetricDecryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ciphertextCrc32c")
     public String ciphertextCrc32c;
+
     public AsymmetricDecryptRequest withCiphertextCrc32c(String ciphertextCrc32c) {
         this.ciphertextCrc32c = ciphertextCrc32c;
         return this;
     }
     
+    public AsymmetricDecryptRequest(){}
 }

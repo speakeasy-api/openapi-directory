@@ -18,6 +18,7 @@ public class SyncResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public SyncResponsePayload payload;
+
     public SyncResponse withPayload(SyncResponsePayload payload) {
         this.payload = payload;
         return this;
@@ -29,9 +30,11 @@ public class SyncResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public SyncResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public SyncResponse(){}
 }

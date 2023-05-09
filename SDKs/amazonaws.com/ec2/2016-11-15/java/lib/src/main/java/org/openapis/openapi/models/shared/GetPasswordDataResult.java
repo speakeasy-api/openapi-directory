@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class GetPasswordDataResult {
     
     public String instanceId;
+
     public GetPasswordDataResult withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -19,6 +20,7 @@ public class GetPasswordDataResult {
     
     
     public String passwordData;
+
     public GetPasswordDataResult withPasswordData(String passwordData) {
         this.passwordData = passwordData;
         return this;
@@ -26,9 +28,11 @@ public class GetPasswordDataResult {
     
     
     public OffsetDateTime timestamp;
+
     public GetPasswordDataResult withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public GetPasswordDataResult(){}
 }

@@ -15,6 +15,7 @@ public class NodeTypesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeTypes")
     public NodeType[] nodeTypes;
+
     public NodeTypesScopedList withNodeTypes(NodeType[] nodeTypes) {
         this.nodeTypes = nodeTypes;
         return this;
@@ -26,9 +27,11 @@ public class NodeTypesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public NodeTypesScopedListWarning warning;
+
     public NodeTypesScopedList withWarning(NodeTypesScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public NodeTypesScopedList(){}
 }

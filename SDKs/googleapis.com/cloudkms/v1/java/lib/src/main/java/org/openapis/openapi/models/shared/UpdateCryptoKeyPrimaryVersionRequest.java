@@ -18,9 +18,11 @@ public class UpdateCryptoKeyPrimaryVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cryptoKeyVersionId")
     public String cryptoKeyVersionId;
+
     public UpdateCryptoKeyPrimaryVersionRequest withCryptoKeyVersionId(String cryptoKeyVersionId) {
         this.cryptoKeyVersionId = cryptoKeyVersionId;
         return this;
     }
     
+    public UpdateCryptoKeyPrimaryVersionRequest(){}
 }

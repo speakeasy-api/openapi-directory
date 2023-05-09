@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyClientVpnEndpointRequest {
     
     public ClientConnectOptions clientConnectOptions;
+
     public ModifyClientVpnEndpointRequest withClientConnectOptions(ClientConnectOptions clientConnectOptions) {
         this.clientConnectOptions = clientConnectOptions;
         return this;
@@ -16,6 +17,7 @@ public class ModifyClientVpnEndpointRequest {
     
     
     public ClientLoginBannerOptions clientLoginBannerOptions;
+
     public ModifyClientVpnEndpointRequest withClientLoginBannerOptions(ClientLoginBannerOptions clientLoginBannerOptions) {
         this.clientLoginBannerOptions = clientLoginBannerOptions;
         return this;
@@ -23,6 +25,7 @@ public class ModifyClientVpnEndpointRequest {
     
     
     public String clientVpnEndpointId;
+
     public ModifyClientVpnEndpointRequest withClientVpnEndpointId(String clientVpnEndpointId) {
         this.clientVpnEndpointId = clientVpnEndpointId;
         return this;
@@ -30,6 +33,7 @@ public class ModifyClientVpnEndpointRequest {
     
     
     public ConnectionLogOptions connectionLogOptions;
+
     public ModifyClientVpnEndpointRequest withConnectionLogOptions(ConnectionLogOptions connectionLogOptions) {
         this.connectionLogOptions = connectionLogOptions;
         return this;
@@ -37,6 +41,7 @@ public class ModifyClientVpnEndpointRequest {
     
     
     public String description;
+
     public ModifyClientVpnEndpointRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +49,7 @@ public class ModifyClientVpnEndpointRequest {
     
     
     public DnsServersOptionsModifyStructure dnsServers;
+
     public ModifyClientVpnEndpointRequest withDnsServers(DnsServersOptionsModifyStructure dnsServers) {
         this.dnsServers = dnsServers;
         return this;
@@ -51,6 +57,7 @@ public class ModifyClientVpnEndpointRequest {
     
     
     public Boolean dryRun;
+
     public ModifyClientVpnEndpointRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -58,6 +65,7 @@ public class ModifyClientVpnEndpointRequest {
     
     
     public String[] securityGroupIds;
+
     public ModifyClientVpnEndpointRequest withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -65,6 +73,7 @@ public class ModifyClientVpnEndpointRequest {
     
     
     public SelfServicePortalEnum selfServicePortal;
+
     public ModifyClientVpnEndpointRequest withSelfServicePortal(SelfServicePortalEnum selfServicePortal) {
         this.selfServicePortal = selfServicePortal;
         return this;
@@ -72,6 +81,7 @@ public class ModifyClientVpnEndpointRequest {
     
     
     public String serverCertificateArn;
+
     public ModifyClientVpnEndpointRequest withServerCertificateArn(String serverCertificateArn) {
         this.serverCertificateArn = serverCertificateArn;
         return this;
@@ -79,6 +89,7 @@ public class ModifyClientVpnEndpointRequest {
     
     
     public Long sessionTimeoutHours;
+
     public ModifyClientVpnEndpointRequest withSessionTimeoutHours(Long sessionTimeoutHours) {
         this.sessionTimeoutHours = sessionTimeoutHours;
         return this;
@@ -86,6 +97,7 @@ public class ModifyClientVpnEndpointRequest {
     
     
     public Boolean splitTunnel;
+
     public ModifyClientVpnEndpointRequest withSplitTunnel(Boolean splitTunnel) {
         this.splitTunnel = splitTunnel;
         return this;
@@ -93,6 +105,7 @@ public class ModifyClientVpnEndpointRequest {
     
     
     public String vpcId;
+
     public ModifyClientVpnEndpointRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -100,9 +113,13 @@ public class ModifyClientVpnEndpointRequest {
     
     
     public Long vpnPort;
+
     public ModifyClientVpnEndpointRequest withVpnPort(Long vpnPort) {
         this.vpnPort = vpnPort;
         return this;
     }
     
+    public ModifyClientVpnEndpointRequest(@JsonProperty("ClientVpnEndpointId") String clientVpnEndpointId) {
+        this.clientVpnEndpointId = clientVpnEndpointId;
+  }
 }

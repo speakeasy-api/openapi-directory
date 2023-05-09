@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApiCacheResponse {
@@ -12,6 +13,7 @@ public class DeleteApiCacheResponse {
      */
     
     public Object badRequestException;
+
     public DeleteApiCacheResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteApiCacheResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteApiCacheResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteApiCacheResponse {
     
     
     public String contentType;
+
     public DeleteApiCacheResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteApiCacheResponse {
      */
     
     public java.util.Map<String, Object> deleteApiCacheResponse;
+
     public DeleteApiCacheResponse withDeleteApiCacheResponse(java.util.Map<String, Object> deleteApiCacheResponse) {
         this.deleteApiCacheResponse = deleteApiCacheResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteApiCacheResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteApiCacheResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteApiCacheResponse {
      */
     
     public Object notFoundException;
+
     public DeleteApiCacheResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteApiCacheResponse {
     
     
     public Integer statusCode;
+
     public DeleteApiCacheResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteApiCacheResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApiCacheResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteApiCacheResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteApiCacheResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteApiCacheResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

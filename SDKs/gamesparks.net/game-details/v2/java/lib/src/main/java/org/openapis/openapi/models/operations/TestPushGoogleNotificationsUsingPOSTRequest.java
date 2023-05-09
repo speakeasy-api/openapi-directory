@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestPushGoogleNotificationsUsingPOSTRequest {
@@ -12,6 +13,7 @@ public class TestPushGoogleNotificationsUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PushNotificationTestModel pushNotificationTestModel;
+
     public TestPushGoogleNotificationsUsingPOSTRequest withPushNotificationTestModel(org.openapis.openapi.models.shared.PushNotificationTestModel pushNotificationTestModel) {
         this.pushNotificationTestModel = pushNotificationTestModel;
         return this;
@@ -22,9 +24,14 @@ public class TestPushGoogleNotificationsUsingPOSTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public TestPushGoogleNotificationsUsingPOSTRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public TestPushGoogleNotificationsUsingPOSTRequest(@JsonProperty("PushNotificationTestModel") org.openapis.openapi.models.shared.PushNotificationTestModel pushNotificationTestModel, @JsonProperty("apiKey") String apiKey) {
+        this.pushNotificationTestModel = pushNotificationTestModel;
+        this.apiKey = apiKey;
+  }
 }

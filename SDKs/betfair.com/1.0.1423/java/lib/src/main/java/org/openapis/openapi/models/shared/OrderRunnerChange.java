@@ -12,6 +12,7 @@ public class OrderRunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullImage")
     public Boolean fullImage;
+
     public OrderRunnerChange withFullImage(Boolean fullImage) {
         this.fullImage = fullImage;
         return this;
@@ -23,6 +24,7 @@ public class OrderRunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hc")
     public Double hc;
+
     public OrderRunnerChange withHc(Double hc) {
         this.hc = hc;
         return this;
@@ -34,6 +36,7 @@ public class OrderRunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public OrderRunnerChange withId(Long id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class OrderRunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mb")
     public Double[][] mb;
+
     public OrderRunnerChange withMb(Double[][] mb) {
         this.mb = mb;
         return this;
@@ -56,6 +60,7 @@ public class OrderRunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ml")
     public Double[][] ml;
+
     public OrderRunnerChange withMl(Double[][] ml) {
         this.ml = ml;
         return this;
@@ -67,6 +72,7 @@ public class OrderRunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smc")
     public java.util.Map<String, StrategyMatchChange> smc;
+
     public OrderRunnerChange withSmc(java.util.Map<String, StrategyMatchChange> smc) {
         this.smc = smc;
         return this;
@@ -78,9 +84,11 @@ public class OrderRunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uo")
     public Order[] uo;
+
     public OrderRunnerChange withUo(Order[] uo) {
         this.uo = uo;
         return this;
     }
     
+    public OrderRunnerChange(){}
 }

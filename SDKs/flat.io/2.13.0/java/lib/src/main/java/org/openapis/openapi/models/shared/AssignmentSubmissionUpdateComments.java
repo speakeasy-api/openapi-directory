@@ -15,6 +15,7 @@ public class AssignmentSubmissionUpdateComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public AssignmentSubmissionUpdateComments withTotal(Double total) {
         this.total = total;
         return this;
@@ -26,9 +27,11 @@ public class AssignmentSubmissionUpdateComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unread")
     public Double unread;
+
     public AssignmentSubmissionUpdateComments withUnread(Double unread) {
         this.unread = unread;
         return this;
     }
     
+    public AssignmentSubmissionUpdateComments(){}
 }

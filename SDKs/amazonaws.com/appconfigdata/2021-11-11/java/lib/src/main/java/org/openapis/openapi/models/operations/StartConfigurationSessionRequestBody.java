@@ -14,6 +14,7 @@ public class StartConfigurationSessionRequestBody {
      */
     @JsonProperty("ApplicationIdentifier")
     public String applicationIdentifier;
+
     public StartConfigurationSessionRequestBody withApplicationIdentifier(String applicationIdentifier) {
         this.applicationIdentifier = applicationIdentifier;
         return this;
@@ -24,6 +25,7 @@ public class StartConfigurationSessionRequestBody {
      */
     @JsonProperty("ConfigurationProfileIdentifier")
     public String configurationProfileIdentifier;
+
     public StartConfigurationSessionRequestBody withConfigurationProfileIdentifier(String configurationProfileIdentifier) {
         this.configurationProfileIdentifier = configurationProfileIdentifier;
         return this;
@@ -34,6 +36,7 @@ public class StartConfigurationSessionRequestBody {
      */
     @JsonProperty("EnvironmentIdentifier")
     public String environmentIdentifier;
+
     public StartConfigurationSessionRequestBody withEnvironmentIdentifier(String environmentIdentifier) {
         this.environmentIdentifier = environmentIdentifier;
         return this;
@@ -45,9 +48,15 @@ public class StartConfigurationSessionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequiredMinimumPollIntervalInSeconds")
     public Long requiredMinimumPollIntervalInSeconds;
+
     public StartConfigurationSessionRequestBody withRequiredMinimumPollIntervalInSeconds(Long requiredMinimumPollIntervalInSeconds) {
         this.requiredMinimumPollIntervalInSeconds = requiredMinimumPollIntervalInSeconds;
         return this;
     }
     
+    public StartConfigurationSessionRequestBody(@JsonProperty("ApplicationIdentifier") String applicationIdentifier, @JsonProperty("ConfigurationProfileIdentifier") String configurationProfileIdentifier, @JsonProperty("EnvironmentIdentifier") String environmentIdentifier) {
+        this.applicationIdentifier = applicationIdentifier;
+        this.configurationProfileIdentifier = configurationProfileIdentifier;
+        this.environmentIdentifier = environmentIdentifier;
+  }
 }

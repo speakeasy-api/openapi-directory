@@ -15,6 +15,7 @@ public class QueryTimelineSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeUnits")
     public String activeUnits;
+
     public QueryTimelineSample withActiveUnits(String activeUnits) {
         this.activeUnits = activeUnits;
         return this;
@@ -26,6 +27,7 @@ public class QueryTimelineSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completedUnits")
     public String completedUnits;
+
     public QueryTimelineSample withCompletedUnits(String completedUnits) {
         this.completedUnits = completedUnits;
         return this;
@@ -37,6 +39,7 @@ public class QueryTimelineSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elapsedMs")
     public String elapsedMs;
+
     public QueryTimelineSample withElapsedMs(String elapsedMs) {
         this.elapsedMs = elapsedMs;
         return this;
@@ -48,6 +51,7 @@ public class QueryTimelineSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedRunnableUnits")
     public String estimatedRunnableUnits;
+
     public QueryTimelineSample withEstimatedRunnableUnits(String estimatedRunnableUnits) {
         this.estimatedRunnableUnits = estimatedRunnableUnits;
         return this;
@@ -59,6 +63,7 @@ public class QueryTimelineSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingUnits")
     public String pendingUnits;
+
     public QueryTimelineSample withPendingUnits(String pendingUnits) {
         this.pendingUnits = pendingUnits;
         return this;
@@ -70,9 +75,11 @@ public class QueryTimelineSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSlotMs")
     public String totalSlotMs;
+
     public QueryTimelineSample withTotalSlotMs(String totalSlotMs) {
         this.totalSlotMs = totalSlotMs;
         return this;
     }
     
+    public QueryTimelineSample(){}
 }

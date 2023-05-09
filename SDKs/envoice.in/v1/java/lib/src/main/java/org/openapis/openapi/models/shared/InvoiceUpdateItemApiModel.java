@@ -15,6 +15,7 @@ public class InvoiceUpdateItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cost")
     public Double cost;
+
     public InvoiceUpdateItemApiModel withCost(Double cost) {
         this.cost = cost;
         return this;
@@ -26,6 +27,7 @@ public class InvoiceUpdateItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public InvoiceUpdateItemApiModel withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class InvoiceUpdateItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiscountPercentage")
     public Double discountPercentage;
+
     public InvoiceUpdateItemApiModel withDiscountPercentage(Double discountPercentage) {
         this.discountPercentage = discountPercentage;
         return this;
@@ -48,6 +51,7 @@ public class InvoiceUpdateItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public InvoiceUpdateItemApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class InvoiceUpdateItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quantity")
     public Double quantity;
+
     public InvoiceUpdateItemApiModel withQuantity(Double quantity) {
         this.quantity = quantity;
         return this;
@@ -70,6 +75,7 @@ public class InvoiceUpdateItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxId")
     public Integer taxId;
+
     public InvoiceUpdateItemApiModel withTaxId(Integer taxId) {
         this.taxId = taxId;
         return this;
@@ -81,6 +87,7 @@ public class InvoiceUpdateItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxPercentage")
     public Double taxPercentage;
+
     public InvoiceUpdateItemApiModel withTaxPercentage(Double taxPercentage) {
         this.taxPercentage = taxPercentage;
         return this;
@@ -92,9 +99,11 @@ public class InvoiceUpdateItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkTypeId")
     public Integer workTypeId;
+
     public InvoiceUpdateItemApiModel withWorkTypeId(Integer workTypeId) {
         this.workTypeId = workTypeId;
         return this;
     }
     
+    public InvoiceUpdateItemApiModel(){}
 }

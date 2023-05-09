@@ -15,6 +15,7 @@ public class NotificationContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ValidationStatusEnum status;
+
     public NotificationContext withStatus(ValidationStatusEnum status) {
         this.status = status;
         return this;
@@ -23,6 +24,7 @@ public class NotificationContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public NotificationContext withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -31,9 +33,11 @@ public class NotificationContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationId")
     public String validationId;
+
     public NotificationContext withValidationId(String validationId) {
         this.validationId = validationId;
         return this;
     }
     
+    public NotificationContext(){}
 }

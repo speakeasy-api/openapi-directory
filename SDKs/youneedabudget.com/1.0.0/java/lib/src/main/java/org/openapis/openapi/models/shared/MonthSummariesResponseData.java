@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MonthSummariesResponseData {
     @JsonProperty("months")
     public MonthSummary[] months;
+
     public MonthSummariesResponseData withMonths(MonthSummary[] months) {
         this.months = months;
         return this;
@@ -19,9 +20,14 @@ public class MonthSummariesResponseData {
      */
     @JsonProperty("server_knowledge")
     public Long serverKnowledge;
+
     public MonthSummariesResponseData withServerKnowledge(Long serverKnowledge) {
         this.serverKnowledge = serverKnowledge;
         return this;
     }
     
+    public MonthSummariesResponseData(@JsonProperty("months") MonthSummary[] months, @JsonProperty("server_knowledge") Long serverKnowledge) {
+        this.months = months;
+        this.serverKnowledge = serverKnowledge;
+  }
 }

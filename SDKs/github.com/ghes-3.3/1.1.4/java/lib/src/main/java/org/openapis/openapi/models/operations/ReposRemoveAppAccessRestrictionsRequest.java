@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposRemoveAppAccessRestrictionsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public Object requestBody;
+
     public ReposRemoveAppAccessRestrictionsRequest withRequestBody(Object requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ReposRemoveAppAccessRestrictionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
     public String branch;
+
     public ReposRemoveAppAccessRestrictionsRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -29,6 +32,7 @@ public class ReposRemoveAppAccessRestrictionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposRemoveAppAccessRestrictionsRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -39,9 +43,15 @@ public class ReposRemoveAppAccessRestrictionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposRemoveAppAccessRestrictionsRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposRemoveAppAccessRestrictionsRequest(@JsonProperty("branch") String branch, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.branch = branch;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

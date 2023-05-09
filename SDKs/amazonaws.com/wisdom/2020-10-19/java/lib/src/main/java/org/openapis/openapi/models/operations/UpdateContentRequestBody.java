@@ -15,6 +15,7 @@ public class UpdateContentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public UpdateContentRequestBody withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -26,6 +27,7 @@ public class UpdateContentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrideLinkOutUri")
     public String overrideLinkOutUri;
+
     public UpdateContentRequestBody withOverrideLinkOutUri(String overrideLinkOutUri) {
         this.overrideLinkOutUri = overrideLinkOutUri;
         return this;
@@ -37,6 +39,7 @@ public class UpdateContentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeOverrideLinkOutUri")
     public Boolean removeOverrideLinkOutUri;
+
     public UpdateContentRequestBody withRemoveOverrideLinkOutUri(Boolean removeOverrideLinkOutUri) {
         this.removeOverrideLinkOutUri = removeOverrideLinkOutUri;
         return this;
@@ -48,6 +51,7 @@ public class UpdateContentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public UpdateContentRequestBody withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -59,6 +63,7 @@ public class UpdateContentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public UpdateContentRequestBody withTitle(String title) {
         this.title = title;
         return this;
@@ -70,9 +75,11 @@ public class UpdateContentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadId")
     public String uploadId;
+
     public UpdateContentRequestBody withUploadId(String uploadId) {
         this.uploadId = uploadId;
         return this;
     }
     
+    public UpdateContentRequestBody(){}
 }

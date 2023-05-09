@@ -18,6 +18,7 @@ public class GoogleCloudDatapipelinesV1Workload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataflowFlexTemplateRequest")
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequest dataflowFlexTemplateRequest;
+
     public GoogleCloudDatapipelinesV1Workload withDataflowFlexTemplateRequest(GoogleCloudDatapipelinesV1LaunchFlexTemplateRequest dataflowFlexTemplateRequest) {
         this.dataflowFlexTemplateRequest = dataflowFlexTemplateRequest;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatapipelinesV1Workload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataflowLaunchTemplateRequest")
     public GoogleCloudDatapipelinesV1LaunchTemplateRequest dataflowLaunchTemplateRequest;
+
     public GoogleCloudDatapipelinesV1Workload withDataflowLaunchTemplateRequest(GoogleCloudDatapipelinesV1LaunchTemplateRequest dataflowLaunchTemplateRequest) {
         this.dataflowLaunchTemplateRequest = dataflowLaunchTemplateRequest;
         return this;
     }
     
+    public GoogleCloudDatapipelinesV1Workload(){}
 }

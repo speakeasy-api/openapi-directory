@@ -15,6 +15,7 @@ public class HttpEndpointConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessKey")
     public String accessKey;
+
     public HttpEndpointConfiguration withAccessKey(String accessKey) {
         this.accessKey = accessKey;
         return this;
@@ -23,6 +24,7 @@ public class HttpEndpointConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public HttpEndpointConfiguration withName(String name) {
         this.name = name;
         return this;
@@ -30,9 +32,13 @@ public class HttpEndpointConfiguration {
     
     @JsonProperty("Url")
     public String url;
+
     public HttpEndpointConfiguration withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public HttpEndpointConfiguration(@JsonProperty("Url") String url) {
+        this.url = url;
+  }
 }

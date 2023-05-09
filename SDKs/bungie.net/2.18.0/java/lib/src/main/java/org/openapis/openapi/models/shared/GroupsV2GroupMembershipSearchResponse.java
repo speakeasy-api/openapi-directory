@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class GroupsV2GroupMembershipSearchResponse {
     
     public Boolean hasMore;
+
     public GroupsV2GroupMembershipSearchResponse withHasMore(Boolean hasMore) {
         this.hasMore = hasMore;
         return this;
@@ -16,6 +17,7 @@ public class GroupsV2GroupMembershipSearchResponse {
     
     
     public QueriesPagedQuery query;
+
     public GroupsV2GroupMembershipSearchResponse withQuery(QueriesPagedQuery query) {
         this.query = query;
         return this;
@@ -23,6 +25,7 @@ public class GroupsV2GroupMembershipSearchResponse {
     
     
     public String replacementContinuationToken;
+
     public GroupsV2GroupMembershipSearchResponse withReplacementContinuationToken(String replacementContinuationToken) {
         this.replacementContinuationToken = replacementContinuationToken;
         return this;
@@ -30,6 +33,7 @@ public class GroupsV2GroupMembershipSearchResponse {
     
     
     public GroupsV2GroupMembership[] results;
+
     public GroupsV2GroupMembershipSearchResponse withResults(GroupsV2GroupMembership[] results) {
         this.results = results;
         return this;
@@ -37,6 +41,7 @@ public class GroupsV2GroupMembershipSearchResponse {
     
     
     public Integer totalResults;
+
     public GroupsV2GroupMembershipSearchResponse withTotalResults(Integer totalResults) {
         this.totalResults = totalResults;
         return this;
@@ -50,9 +55,11 @@ public class GroupsV2GroupMembershipSearchResponse {
      */
     
     public Boolean useTotalResults;
+
     public GroupsV2GroupMembershipSearchResponse withUseTotalResults(Boolean useTotalResults) {
         this.useTotalResults = useTotalResults;
         return this;
     }
     
+    public GroupsV2GroupMembershipSearchResponse(){}
 }

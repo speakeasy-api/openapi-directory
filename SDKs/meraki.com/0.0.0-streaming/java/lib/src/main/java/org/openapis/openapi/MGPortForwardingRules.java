@@ -53,11 +53,9 @@ public class MGPortForwardingRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeviceCellularGatewaySettingsPortForwardingRulesResponse res = new org.openapis.openapi.models.operations.GetDeviceCellularGatewaySettingsPortForwardingRulesResponse() {{
+        org.openapis.openapi.models.operations.GetDeviceCellularGatewaySettingsPortForwardingRulesResponse res = new org.openapis.openapi.models.operations.GetDeviceCellularGatewaySettingsPortForwardingRulesResponse(contentType, httpRes.statusCode()) {{
             getDeviceCellularGatewaySettingsPortForwardingRules200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,11 +93,9 @@ public class MGPortForwardingRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDeviceCellularGatewaySettingsPortForwardingRulesResponse res = new org.openapis.openapi.models.operations.UpdateDeviceCellularGatewaySettingsPortForwardingRulesResponse() {{
+        org.openapis.openapi.models.operations.UpdateDeviceCellularGatewaySettingsPortForwardingRulesResponse res = new org.openapis.openapi.models.operations.UpdateDeviceCellularGatewaySettingsPortForwardingRulesResponse(contentType, httpRes.statusCode()) {{
             updateDeviceCellularGatewaySettingsPortForwardingRules200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

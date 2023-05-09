@@ -44,11 +44,9 @@ public class Health {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUtilityV1HealthHeartbeatResponse res = new org.openapis.openapi.models.operations.GetUtilityV1HealthHeartbeatResponse() {{
+        org.openapis.openapi.models.operations.GetUtilityV1HealthHeartbeatResponse res = new org.openapis.openapi.models.operations.GetUtilityV1HealthHeartbeatResponse(contentType, httpRes.statusCode()) {{
             getUtilityV1HealthHeartbeat200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -76,11 +74,9 @@ public class Health {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUtilityV1HealthThreadinfoResponse res = new org.openapis.openapi.models.operations.GetUtilityV1HealthThreadinfoResponse() {{
+        org.openapis.openapi.models.operations.GetUtilityV1HealthThreadinfoResponse res = new org.openapis.openapi.models.operations.GetUtilityV1HealthThreadinfoResponse(contentType, httpRes.statusCode()) {{
             threadPoolInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

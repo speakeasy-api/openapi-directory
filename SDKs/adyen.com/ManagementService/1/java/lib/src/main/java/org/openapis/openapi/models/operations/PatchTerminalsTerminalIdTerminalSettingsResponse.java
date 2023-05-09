@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PatchTerminalsTerminalIdTerminalSettingsResponse {
     
     public String contentType;
+
     public PatchTerminalsTerminalIdTerminalSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PatchTerminalsTerminalIdTerminalSettingsResponse {
     
     
     public Integer statusCode;
+
     public PatchTerminalsTerminalIdTerminalSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PatchTerminalsTerminalIdTerminalSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PatchTerminalsTerminalIdTerminalSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PatchTerminalsTerminalIdTerminalSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public PatchTerminalsTerminalIdTerminalSettingsResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -43,9 +48,14 @@ public class PatchTerminalsTerminalIdTerminalSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.TerminalSettings terminalSettings;
+
     public PatchTerminalsTerminalIdTerminalSettingsResponse withTerminalSettings(org.openapis.openapi.models.shared.TerminalSettings terminalSettings) {
         this.terminalSettings = terminalSettings;
         return this;
     }
     
+    public PatchTerminalsTerminalIdTerminalSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

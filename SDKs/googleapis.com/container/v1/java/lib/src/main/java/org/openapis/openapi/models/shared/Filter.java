@@ -18,9 +18,11 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public FilterEventTypeEnum[] eventType;
+
     public Filter withEventType(FilterEventTypeEnum[] eventType) {
         this.eventType = eventType;
         return this;
     }
     
+    public Filter(){}
 }

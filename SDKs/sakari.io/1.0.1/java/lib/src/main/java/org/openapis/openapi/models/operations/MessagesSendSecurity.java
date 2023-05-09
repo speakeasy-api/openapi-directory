@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MessagesSendSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String sakariAuth;
+
     public MessagesSendSecurity withSakariAuth(String sakariAuth) {
         this.sakariAuth = sakariAuth;
         return this;
     }
     
+    public MessagesSendSecurity(@JsonProperty("sakari_auth") String sakariAuth) {
+        this.sakariAuth = sakariAuth;
+  }
 }

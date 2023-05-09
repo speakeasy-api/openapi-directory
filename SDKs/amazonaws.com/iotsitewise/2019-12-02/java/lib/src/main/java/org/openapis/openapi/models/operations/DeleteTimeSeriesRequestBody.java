@@ -15,9 +15,11 @@ public class DeleteTimeSeriesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public DeleteTimeSeriesRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
+    public DeleteTimeSeriesRequestBody(){}
 }

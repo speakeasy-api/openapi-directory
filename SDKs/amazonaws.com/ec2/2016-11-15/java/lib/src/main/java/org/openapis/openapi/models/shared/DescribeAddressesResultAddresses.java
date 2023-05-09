@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAddressesResultAddresses {
     
     public String allocationId;
+
     public DescribeAddressesResultAddresses withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeAddressesResultAddresses {
     
     
     public String associationId;
+
     public DescribeAddressesResultAddresses withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeAddressesResultAddresses {
     
     
     public String carrierIp;
+
     public DescribeAddressesResultAddresses withCarrierIp(String carrierIp) {
         this.carrierIp = carrierIp;
         return this;
@@ -33,6 +36,7 @@ public class DescribeAddressesResultAddresses {
     
     
     public String customerOwnedIp;
+
     public DescribeAddressesResultAddresses withCustomerOwnedIp(String customerOwnedIp) {
         this.customerOwnedIp = customerOwnedIp;
         return this;
@@ -40,6 +44,7 @@ public class DescribeAddressesResultAddresses {
     
     
     public String customerOwnedIpv4Pool;
+
     public DescribeAddressesResultAddresses withCustomerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
         this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
         return this;
@@ -47,6 +52,7 @@ public class DescribeAddressesResultAddresses {
     
     
     public DescribeAddressesResultAddressesDomainEnum domain;
+
     public DescribeAddressesResultAddresses withDomain(DescribeAddressesResultAddressesDomainEnum domain) {
         this.domain = domain;
         return this;
@@ -54,6 +60,7 @@ public class DescribeAddressesResultAddresses {
     
     
     public String instanceId;
+
     public DescribeAddressesResultAddresses withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -61,6 +68,7 @@ public class DescribeAddressesResultAddresses {
     
     
     public String networkBorderGroup;
+
     public DescribeAddressesResultAddresses withNetworkBorderGroup(String networkBorderGroup) {
         this.networkBorderGroup = networkBorderGroup;
         return this;
@@ -68,6 +76,7 @@ public class DescribeAddressesResultAddresses {
     
     
     public String networkInterfaceId;
+
     public DescribeAddressesResultAddresses withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -75,6 +84,7 @@ public class DescribeAddressesResultAddresses {
     
     
     public String networkInterfaceOwnerId;
+
     public DescribeAddressesResultAddresses withNetworkInterfaceOwnerId(String networkInterfaceOwnerId) {
         this.networkInterfaceOwnerId = networkInterfaceOwnerId;
         return this;
@@ -82,6 +92,7 @@ public class DescribeAddressesResultAddresses {
     
     
     public String privateIpAddress;
+
     public DescribeAddressesResultAddresses withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -89,6 +100,7 @@ public class DescribeAddressesResultAddresses {
     
     
     public String publicIp;
+
     public DescribeAddressesResultAddresses withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -96,6 +108,7 @@ public class DescribeAddressesResultAddresses {
     
     
     public String publicIpv4Pool;
+
     public DescribeAddressesResultAddresses withPublicIpv4Pool(String publicIpv4Pool) {
         this.publicIpv4Pool = publicIpv4Pool;
         return this;
@@ -103,9 +116,11 @@ public class DescribeAddressesResultAddresses {
     
     
     public DescribeAddressesResultAddressesTags[] tags;
+
     public DescribeAddressesResultAddresses withTags(DescribeAddressesResultAddressesTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeAddressesResultAddresses(){}
 }

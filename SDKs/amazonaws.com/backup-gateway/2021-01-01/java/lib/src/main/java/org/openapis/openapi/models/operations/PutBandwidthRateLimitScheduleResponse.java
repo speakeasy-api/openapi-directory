@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutBandwidthRateLimitScheduleResponse {
     
     public String contentType;
+
     public PutBandwidthRateLimitScheduleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutBandwidthRateLimitScheduleResponse {
      */
     
     public Object internalServerException;
+
     public PutBandwidthRateLimitScheduleResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class PutBandwidthRateLimitScheduleResponse {
      */
     
     public org.openapis.openapi.models.shared.PutBandwidthRateLimitScheduleOutput putBandwidthRateLimitScheduleOutput;
+
     public PutBandwidthRateLimitScheduleResponse withPutBandwidthRateLimitScheduleOutput(org.openapis.openapi.models.shared.PutBandwidthRateLimitScheduleOutput putBandwidthRateLimitScheduleOutput) {
         this.putBandwidthRateLimitScheduleOutput = putBandwidthRateLimitScheduleOutput;
         return this;
@@ -39,6 +43,7 @@ public class PutBandwidthRateLimitScheduleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutBandwidthRateLimitScheduleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class PutBandwidthRateLimitScheduleResponse {
     
     
     public Integer statusCode;
+
     public PutBandwidthRateLimitScheduleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutBandwidthRateLimitScheduleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutBandwidthRateLimitScheduleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class PutBandwidthRateLimitScheduleResponse {
      */
     
     public Object throttlingException;
+
     public PutBandwidthRateLimitScheduleResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class PutBandwidthRateLimitScheduleResponse {
      */
     
     public Object validationException;
+
     public PutBandwidthRateLimitScheduleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutBandwidthRateLimitScheduleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

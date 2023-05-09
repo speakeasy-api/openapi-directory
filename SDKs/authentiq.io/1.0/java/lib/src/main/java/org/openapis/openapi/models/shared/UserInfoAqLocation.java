@@ -18,6 +18,7 @@ public class UserInfoAqLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public Address address;
+
     public UserInfoAqLocation withAddress(Address address) {
         this.address = address;
         return this;
@@ -26,6 +27,7 @@ public class UserInfoAqLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Float latitude;
+
     public UserInfoAqLocation withLatitude(Float latitude) {
         this.latitude = latitude;
         return this;
@@ -34,9 +36,11 @@ public class UserInfoAqLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Float longitude;
+
     public UserInfoAqLocation withLongitude(Float longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public UserInfoAqLocation(){}
 }

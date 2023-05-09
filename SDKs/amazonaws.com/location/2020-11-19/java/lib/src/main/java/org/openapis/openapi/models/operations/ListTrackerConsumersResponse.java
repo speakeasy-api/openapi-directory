@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTrackerConsumersResponse {
@@ -12,6 +13,7 @@ public class ListTrackerConsumersResponse {
      */
     
     public Object accessDeniedException;
+
     public ListTrackerConsumersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListTrackerConsumersResponse {
     
     
     public String contentType;
+
     public ListTrackerConsumersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTrackerConsumersResponse {
      */
     
     public Object internalServerException;
+
     public ListTrackerConsumersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListTrackerConsumersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTrackerConsumersResponse listTrackerConsumersResponse;
+
     public ListTrackerConsumersResponse withListTrackerConsumersResponse(org.openapis.openapi.models.shared.ListTrackerConsumersResponse listTrackerConsumersResponse) {
         this.listTrackerConsumersResponse = listTrackerConsumersResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListTrackerConsumersResponse {
     
     
     public Integer statusCode;
+
     public ListTrackerConsumersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListTrackerConsumersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTrackerConsumersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListTrackerConsumersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListTrackerConsumersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class ListTrackerConsumersResponse {
      */
     
     public Object throttlingException;
+
     public ListTrackerConsumersResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListTrackerConsumersResponse {
      */
     
     public Object validationException;
+
     public ListTrackerConsumersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListTrackerConsumersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

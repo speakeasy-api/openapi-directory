@@ -18,9 +18,11 @@ public class AppEngineHttpQueue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appEngineRoutingOverride")
     public AppEngineRouting appEngineRoutingOverride;
+
     public AppEngineHttpQueue withAppEngineRoutingOverride(AppEngineRouting appEngineRoutingOverride) {
         this.appEngineRoutingOverride = appEngineRoutingOverride;
         return this;
     }
     
+    public AppEngineHttpQueue(){}
 }

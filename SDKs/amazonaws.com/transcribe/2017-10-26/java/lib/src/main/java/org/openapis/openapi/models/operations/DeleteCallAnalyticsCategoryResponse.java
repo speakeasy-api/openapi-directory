@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCallAnalyticsCategoryResponse {
@@ -12,6 +13,7 @@ public class DeleteCallAnalyticsCategoryResponse {
      */
     
     public Object badRequestException;
+
     public DeleteCallAnalyticsCategoryResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCallAnalyticsCategoryResponse {
     
     
     public String contentType;
+
     public DeleteCallAnalyticsCategoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCallAnalyticsCategoryResponse {
      */
     
     public java.util.Map<String, Object> deleteCallAnalyticsCategoryResponse;
+
     public DeleteCallAnalyticsCategoryResponse withDeleteCallAnalyticsCategoryResponse(java.util.Map<String, Object> deleteCallAnalyticsCategoryResponse) {
         this.deleteCallAnalyticsCategoryResponse = deleteCallAnalyticsCategoryResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCallAnalyticsCategoryResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteCallAnalyticsCategoryResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteCallAnalyticsCategoryResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteCallAnalyticsCategoryResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteCallAnalyticsCategoryResponse {
      */
     
     public Object notFoundException;
+
     public DeleteCallAnalyticsCategoryResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteCallAnalyticsCategoryResponse {
     
     
     public Integer statusCode;
+
     public DeleteCallAnalyticsCategoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteCallAnalyticsCategoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCallAnalyticsCategoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteCallAnalyticsCategoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposGetCommitSignatureProtectionRequest {
@@ -12,6 +13,7 @@ public class ReposGetCommitSignatureProtectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
     public String branch;
+
     public ReposGetCommitSignatureProtectionRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -19,6 +21,7 @@ public class ReposGetCommitSignatureProtectionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposGetCommitSignatureProtectionRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -26,9 +29,15 @@ public class ReposGetCommitSignatureProtectionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposGetCommitSignatureProtectionRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposGetCommitSignatureProtectionRequest(@JsonProperty("branch") String branch, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.branch = branch;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

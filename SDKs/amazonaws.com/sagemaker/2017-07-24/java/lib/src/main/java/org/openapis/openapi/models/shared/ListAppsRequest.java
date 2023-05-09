@@ -12,6 +12,7 @@ public class ListAppsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainIdEquals")
     public String domainIdEquals;
+
     public ListAppsRequest withDomainIdEquals(String domainIdEquals) {
         this.domainIdEquals = domainIdEquals;
         return this;
@@ -20,6 +21,7 @@ public class ListAppsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAppsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListAppsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAppsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class ListAppsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public AppSortKeyEnum sortBy;
+
     public ListAppsRequest withSortBy(AppSortKeyEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -44,6 +48,7 @@ public class ListAppsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListAppsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -52,6 +57,7 @@ public class ListAppsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpaceNameEquals")
     public String spaceNameEquals;
+
     public ListAppsRequest withSpaceNameEquals(String spaceNameEquals) {
         this.spaceNameEquals = spaceNameEquals;
         return this;
@@ -60,9 +66,11 @@ public class ListAppsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserProfileNameEquals")
     public String userProfileNameEquals;
+
     public ListAppsRequest withUserProfileNameEquals(String userProfileNameEquals) {
         this.userProfileNameEquals = userProfileNameEquals;
         return this;
     }
     
+    public ListAppsRequest(){}
 }

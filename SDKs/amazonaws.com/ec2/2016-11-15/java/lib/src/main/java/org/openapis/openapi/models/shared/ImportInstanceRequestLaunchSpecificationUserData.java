@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ImportInstanceRequestLaunchSpecificationUserData {
     
     public String data;
+
     public ImportInstanceRequestLaunchSpecificationUserData withData(String data) {
         this.data = data;
         return this;
     }
     
+    public ImportInstanceRequestLaunchSpecificationUserData(){}
 }

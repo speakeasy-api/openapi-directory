@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RecommendationSettings {
     @JsonProperty("InstanceSizingType")
     public String instanceSizingType;
+
     public RecommendationSettings withInstanceSizingType(String instanceSizingType) {
         this.instanceSizingType = instanceSizingType;
         return this;
@@ -19,9 +20,14 @@ public class RecommendationSettings {
     
     @JsonProperty("WorkloadType")
     public String workloadType;
+
     public RecommendationSettings withWorkloadType(String workloadType) {
         this.workloadType = workloadType;
         return this;
     }
     
+    public RecommendationSettings(@JsonProperty("InstanceSizingType") String instanceSizingType, @JsonProperty("WorkloadType") String workloadType) {
+        this.instanceSizingType = instanceSizingType;
+        this.workloadType = workloadType;
+  }
 }

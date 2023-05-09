@@ -15,9 +15,11 @@ public class ACLsUpdateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ACLToApply")
     public String aclToApply;
+
     public ACLsUpdateStatus withACLToApply(String aclToApply) {
         this.aclToApply = aclToApply;
         return this;
     }
     
+    public ACLsUpdateStatus(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetStatus")
     public GoogleCloudDataplexV1AssetStatus assetStatus;
+
     public GoogleCloudDataplexV1Zone withAssetStatus(GoogleCloudDataplexV1AssetStatus assetStatus) {
         this.assetStatus = assetStatus;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDataplexV1Zone withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDataplexV1Zone withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discoverySpec")
     public GoogleCloudDataplexV1ZoneDiscoverySpec discoverySpec;
+
     public GoogleCloudDataplexV1Zone withDiscoverySpec(GoogleCloudDataplexV1ZoneDiscoverySpec discoverySpec) {
         this.discoverySpec = discoverySpec;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDataplexV1Zone withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDataplexV1Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudDataplexV1Zone withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDataplexV1Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDataplexV1Zone withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDataplexV1Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceSpec")
     public GoogleCloudDataplexV1ZoneResourceSpec resourceSpec;
+
     public GoogleCloudDataplexV1Zone withResourceSpec(GoogleCloudDataplexV1ZoneResourceSpec resourceSpec) {
         this.resourceSpec = resourceSpec;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDataplexV1Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDataplexV1ZoneStateEnum state;
+
     public GoogleCloudDataplexV1Zone withState(GoogleCloudDataplexV1ZoneStateEnum state) {
         this.state = state;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDataplexV1Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDataplexV1ZoneTypeEnum type;
+
     public GoogleCloudDataplexV1Zone withType(GoogleCloudDataplexV1ZoneTypeEnum type) {
         this.type = type;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDataplexV1Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public GoogleCloudDataplexV1Zone withUid(String uid) {
         this.uid = uid;
         return this;
@@ -139,9 +150,11 @@ public class GoogleCloudDataplexV1Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDataplexV1Zone withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudDataplexV1Zone(){}
 }

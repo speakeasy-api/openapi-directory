@@ -14,6 +14,7 @@ public class Rabatt {
      */
     @JsonProperty("Betrag-Brutto")
     public Long betragBrutto;
+
     public Rabatt withBetragBrutto(Long betragBrutto) {
         this.betragBrutto = betragBrutto;
         return this;
@@ -24,6 +25,7 @@ public class Rabatt {
      */
     @JsonProperty("Betrag-Netto")
     public Long betragNetto;
+
     public Rabatt withBetragNetto(Long betragNetto) {
         this.betragNetto = betragNetto;
         return this;
@@ -31,6 +33,7 @@ public class Rabatt {
     
     @JsonProperty("Bezeichnung")
     public String bezeichnung;
+
     public Rabatt withBezeichnung(String bezeichnung) {
         this.bezeichnung = bezeichnung;
         return this;
@@ -39,9 +42,15 @@ public class Rabatt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Satz")
     public RabattSatzEnum satz;
+
     public Rabatt withSatz(RabattSatzEnum satz) {
         this.satz = satz;
         return this;
     }
     
+    public Rabatt(@JsonProperty("Betrag-Brutto") Long betragBrutto, @JsonProperty("Betrag-Netto") Long betragNetto, @JsonProperty("Bezeichnung") String bezeichnung) {
+        this.betragBrutto = betragBrutto;
+        this.betragNetto = betragNetto;
+        this.bezeichnung = bezeichnung;
+  }
 }

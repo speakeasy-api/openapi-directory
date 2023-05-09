@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ValidatePolicyFinding {
     @JsonProperty("findingDetails")
     public String findingDetails;
+
     public ValidatePolicyFinding withFindingDetails(String findingDetails) {
         this.findingDetails = findingDetails;
         return this;
@@ -19,6 +20,7 @@ public class ValidatePolicyFinding {
     
     @JsonProperty("findingType")
     public ValidatePolicyFindingTypeEnum findingType;
+
     public ValidatePolicyFinding withFindingType(ValidatePolicyFindingTypeEnum findingType) {
         this.findingType = findingType;
         return this;
@@ -26,6 +28,7 @@ public class ValidatePolicyFinding {
     
     @JsonProperty("issueCode")
     public String issueCode;
+
     public ValidatePolicyFinding withIssueCode(String issueCode) {
         this.issueCode = issueCode;
         return this;
@@ -33,6 +36,7 @@ public class ValidatePolicyFinding {
     
     @JsonProperty("learnMoreLink")
     public String learnMoreLink;
+
     public ValidatePolicyFinding withLearnMoreLink(String learnMoreLink) {
         this.learnMoreLink = learnMoreLink;
         return this;
@@ -40,9 +44,17 @@ public class ValidatePolicyFinding {
     
     @JsonProperty("locations")
     public Location[] locations;
+
     public ValidatePolicyFinding withLocations(Location[] locations) {
         this.locations = locations;
         return this;
     }
     
+    public ValidatePolicyFinding(@JsonProperty("findingDetails") String findingDetails, @JsonProperty("findingType") ValidatePolicyFindingTypeEnum findingType, @JsonProperty("issueCode") String issueCode, @JsonProperty("learnMoreLink") String learnMoreLink, @JsonProperty("locations") Location[] locations) {
+        this.findingDetails = findingDetails;
+        this.findingType = findingType;
+        this.issueCode = issueCode;
+        this.learnMoreLink = learnMoreLink;
+        this.locations = locations;
+  }
 }

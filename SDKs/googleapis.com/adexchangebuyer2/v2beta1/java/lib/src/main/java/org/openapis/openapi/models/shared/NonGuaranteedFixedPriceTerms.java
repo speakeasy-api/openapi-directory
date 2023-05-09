@@ -18,9 +18,11 @@ public class NonGuaranteedFixedPriceTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedPrices")
     public PricePerBuyer[] fixedPrices;
+
     public NonGuaranteedFixedPriceTerms withFixedPrices(PricePerBuyer[] fixedPrices) {
         this.fixedPrices = fixedPrices;
         return this;
     }
     
+    public NonGuaranteedFixedPriceTerms(){}
 }

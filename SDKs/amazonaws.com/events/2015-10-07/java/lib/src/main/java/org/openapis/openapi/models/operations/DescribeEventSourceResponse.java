@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeEventSourceResponse {
     
     public String contentType;
+
     public DescribeEventSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeEventSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeEventSourceResponse describeEventSourceResponse;
+
     public DescribeEventSourceResponse withDescribeEventSourceResponse(org.openapis.openapi.models.shared.DescribeEventSourceResponse describeEventSourceResponse) {
         this.describeEventSourceResponse = describeEventSourceResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeEventSourceResponse {
      */
     
     public Object internalException;
+
     public DescribeEventSourceResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeEventSourceResponse {
      */
     
     public Object operationDisabledException;
+
     public DescribeEventSourceResponse withOperationDisabledException(Object operationDisabledException) {
         this.operationDisabledException = operationDisabledException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeEventSourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeEventSourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeEventSourceResponse {
     
     
     public Integer statusCode;
+
     public DescribeEventSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeEventSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeEventSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeEventSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

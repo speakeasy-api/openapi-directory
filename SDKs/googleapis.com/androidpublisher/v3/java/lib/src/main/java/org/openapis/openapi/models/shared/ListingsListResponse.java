@@ -18,6 +18,7 @@ public class ListingsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ListingsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class ListingsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listings")
     public Listing[] listings;
+
     public ListingsListResponse withListings(Listing[] listings) {
         this.listings = listings;
         return this;
     }
     
+    public ListingsListResponse(){}
 }

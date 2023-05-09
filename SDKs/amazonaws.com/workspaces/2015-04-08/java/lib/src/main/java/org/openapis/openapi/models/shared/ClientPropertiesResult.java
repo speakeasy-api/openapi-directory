@@ -15,6 +15,7 @@ public class ClientPropertiesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientProperties")
     public ClientProperties clientProperties;
+
     public ClientPropertiesResult withClientProperties(ClientProperties clientProperties) {
         this.clientProperties = clientProperties;
         return this;
@@ -23,9 +24,11 @@ public class ClientPropertiesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ClientPropertiesResult withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public ClientPropertiesResult(){}
 }

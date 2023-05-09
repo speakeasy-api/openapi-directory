@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReceiptRuleSetResponse {
     
     public ReceiptRuleSetMetadata metadata;
+
     public DescribeReceiptRuleSetResponse withMetadata(ReceiptRuleSetMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -19,9 +20,11 @@ public class DescribeReceiptRuleSetResponse {
     
     
     public ReceiptRule[] rules;
+
     public DescribeReceiptRuleSetResponse withRules(ReceiptRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public DescribeReceiptRuleSetResponse(){}
 }

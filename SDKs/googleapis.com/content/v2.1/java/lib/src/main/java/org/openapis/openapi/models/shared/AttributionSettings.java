@@ -18,6 +18,7 @@ public class AttributionSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributionLookbackWindowInDays")
     public Integer attributionLookbackWindowInDays;
+
     public AttributionSettings withAttributionLookbackWindowInDays(Integer attributionLookbackWindowInDays) {
         this.attributionLookbackWindowInDays = attributionLookbackWindowInDays;
         return this;
@@ -29,6 +30,7 @@ public class AttributionSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributionModel")
     public AttributionSettingsAttributionModelEnum attributionModel;
+
     public AttributionSettings withAttributionModel(AttributionSettingsAttributionModelEnum attributionModel) {
         this.attributionModel = attributionModel;
         return this;
@@ -40,9 +42,11 @@ public class AttributionSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionType")
     public AttributionSettingsConversionType[] conversionType;
+
     public AttributionSettings withConversionType(AttributionSettingsConversionType[] conversionType) {
         this.conversionType = conversionType;
         return this;
     }
     
+    public AttributionSettings(){}
 }

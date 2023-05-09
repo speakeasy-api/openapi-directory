@@ -12,6 +12,7 @@ public class SrcerRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public SrcerRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
@@ -22,9 +23,14 @@ public class SrcerRequestBodyCertificateParameters {
      */
     @JsonProperty("lino")
     public String lino;
+
     public SrcerRequestBodyCertificateParameters withLino(String lino) {
         this.lino = lino;
         return this;
     }
     
+    public SrcerRequestBodyCertificateParameters(@JsonProperty("UID") String uid, @JsonProperty("lino") String lino) {
+        this.uid = uid;
+        this.lino = lino;
+  }
 }

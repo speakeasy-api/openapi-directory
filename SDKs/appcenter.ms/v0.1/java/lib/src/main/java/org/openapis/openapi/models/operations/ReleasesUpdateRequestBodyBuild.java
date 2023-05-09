@@ -15,6 +15,7 @@ public class ReleasesUpdateRequestBodyBuild {
      */
     
     public String branchName;
+
     public ReleasesUpdateRequestBodyBuild withBranchName(String branchName) {
         this.branchName = branchName;
         return this;
@@ -25,6 +26,7 @@ public class ReleasesUpdateRequestBodyBuild {
      */
     
     public String commitHash;
+
     public ReleasesUpdateRequestBodyBuild withCommitHash(String commitHash) {
         this.commitHash = commitHash;
         return this;
@@ -35,9 +37,11 @@ public class ReleasesUpdateRequestBodyBuild {
      */
     
     public String commitMessage;
+
     public ReleasesUpdateRequestBodyBuild withCommitMessage(String commitMessage) {
         this.commitMessage = commitMessage;
         return this;
     }
     
+    public ReleasesUpdateRequestBodyBuild(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ByteMatchSetSummary {
     @JsonProperty("ByteMatchSetId")
     public String byteMatchSetId;
+
     public ByteMatchSetSummary withByteMatchSetId(String byteMatchSetId) {
         this.byteMatchSetId = byteMatchSetId;
         return this;
@@ -19,9 +20,14 @@ public class ByteMatchSetSummary {
     
     @JsonProperty("Name")
     public String name;
+
     public ByteMatchSetSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ByteMatchSetSummary(@JsonProperty("ByteMatchSetId") String byteMatchSetId, @JsonProperty("Name") String name) {
+        this.byteMatchSetId = byteMatchSetId;
+        this.name = name;
+  }
 }

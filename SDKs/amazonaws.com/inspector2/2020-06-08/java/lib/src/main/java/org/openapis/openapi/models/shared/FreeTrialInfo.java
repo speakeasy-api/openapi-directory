@@ -19,6 +19,7 @@ public class FreeTrialInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("end")
     public OffsetDateTime end;
+
     public FreeTrialInfo withEnd(OffsetDateTime end) {
         this.end = end;
         return this;
@@ -28,6 +29,7 @@ public class FreeTrialInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("start")
     public OffsetDateTime start;
+
     public FreeTrialInfo withStart(OffsetDateTime start) {
         this.start = start;
         return this;
@@ -35,6 +37,7 @@ public class FreeTrialInfo {
     
     @JsonProperty("status")
     public FreeTrialStatusEnum status;
+
     public FreeTrialInfo withStatus(FreeTrialStatusEnum status) {
         this.status = status;
         return this;
@@ -42,9 +45,16 @@ public class FreeTrialInfo {
     
     @JsonProperty("type")
     public FreeTrialTypeEnum type;
+
     public FreeTrialInfo withType(FreeTrialTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public FreeTrialInfo(@JsonProperty("end") OffsetDateTime end, @JsonProperty("start") OffsetDateTime start, @JsonProperty("status") FreeTrialStatusEnum status, @JsonProperty("type") FreeTrialTypeEnum type) {
+        this.end = end;
+        this.start = start;
+        this.status = status;
+        this.type = type;
+  }
 }

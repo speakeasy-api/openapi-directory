@@ -15,6 +15,7 @@ public class Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeValueList")
     public AttributeValue[] attributeValueList;
+
     public Condition withAttributeValueList(AttributeValue[] attributeValueList) {
         this.attributeValueList = attributeValueList;
         return this;
@@ -25,9 +26,13 @@ public class Condition {
      */
     @JsonProperty("ComparisonOperator")
     public ComparisonOperatorEnum comparisonOperator;
+
     public Condition withComparisonOperator(ComparisonOperatorEnum comparisonOperator) {
         this.comparisonOperator = comparisonOperator;
         return this;
     }
     
+    public Condition(@JsonProperty("ComparisonOperator") ComparisonOperatorEnum comparisonOperator) {
+        this.comparisonOperator = comparisonOperator;
+  }
 }

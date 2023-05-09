@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BigqueryJobsGetQueryResultsResponse {
     
     public String contentType;
+
     public BigqueryJobsGetQueryResultsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BigqueryJobsGetQueryResultsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetQueryResultsResponse getQueryResultsResponse;
+
     public BigqueryJobsGetQueryResultsResponse withGetQueryResultsResponse(org.openapis.openapi.models.shared.GetQueryResultsResponse getQueryResultsResponse) {
         this.getQueryResultsResponse = getQueryResultsResponse;
         return this;
@@ -26,6 +29,7 @@ public class BigqueryJobsGetQueryResultsResponse {
     
     
     public Integer statusCode;
+
     public BigqueryJobsGetQueryResultsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BigqueryJobsGetQueryResultsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BigqueryJobsGetQueryResultsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BigqueryJobsGetQueryResultsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

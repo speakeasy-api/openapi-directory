@@ -12,6 +12,7 @@ public class GetDocumentationRelations200ApplicationJSONDocumentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionId")
     public String collectionId;
+
     public GetDocumentationRelations200ApplicationJSONDocumentation withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
@@ -20,6 +21,7 @@ public class GetDocumentationRelations200ApplicationJSONDocumentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetDocumentationRelations200ApplicationJSONDocumentation withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class GetDocumentationRelations200ApplicationJSONDocumentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetDocumentationRelations200ApplicationJSONDocumentation withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,11 @@ public class GetDocumentationRelations200ApplicationJSONDocumentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedAt")
     public String updatedAt;
+
     public GetDocumentationRelations200ApplicationJSONDocumentation withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetDocumentationRelations200ApplicationJSONDocumentation(){}
 }

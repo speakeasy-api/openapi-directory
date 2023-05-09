@@ -15,6 +15,7 @@ public class UserAccessLoggingSettingsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kinesisStreamArn")
     public String kinesisStreamArn;
+
     public UserAccessLoggingSettingsSummary withKinesisStreamArn(String kinesisStreamArn) {
         this.kinesisStreamArn = kinesisStreamArn;
         return this;
@@ -23,9 +24,11 @@ public class UserAccessLoggingSettingsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAccessLoggingSettingsArn")
     public String userAccessLoggingSettingsArn;
+
     public UserAccessLoggingSettingsSummary withUserAccessLoggingSettingsArn(String userAccessLoggingSettingsArn) {
         this.userAccessLoggingSettingsArn = userAccessLoggingSettingsArn;
         return this;
     }
     
+    public UserAccessLoggingSettingsSummary(){}
 }

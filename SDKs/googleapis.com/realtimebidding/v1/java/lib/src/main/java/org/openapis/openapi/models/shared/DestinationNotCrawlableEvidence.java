@@ -18,6 +18,7 @@ public class DestinationNotCrawlableEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crawlTime")
     public String crawlTime;
+
     public DestinationNotCrawlableEvidence withCrawlTime(String crawlTime) {
         this.crawlTime = crawlTime;
         return this;
@@ -29,6 +30,7 @@ public class DestinationNotCrawlableEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crawledUrl")
     public String crawledUrl;
+
     public DestinationNotCrawlableEvidence withCrawledUrl(String crawledUrl) {
         this.crawledUrl = crawledUrl;
         return this;
@@ -40,9 +42,11 @@ public class DestinationNotCrawlableEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public DestinationNotCrawlableEvidenceReasonEnum reason;
+
     public DestinationNotCrawlableEvidence withReason(DestinationNotCrawlableEvidenceReasonEnum reason) {
         this.reason = reason;
         return this;
     }
     
+    public DestinationNotCrawlableEvidence(){}
 }

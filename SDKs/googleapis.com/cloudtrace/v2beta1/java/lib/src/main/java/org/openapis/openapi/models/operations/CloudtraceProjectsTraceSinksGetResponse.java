@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudtraceProjectsTraceSinksGetResponse {
     
     public String contentType;
+
     public CloudtraceProjectsTraceSinksGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CloudtraceProjectsTraceSinksGetResponse {
     
     
     public Integer statusCode;
+
     public CloudtraceProjectsTraceSinksGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CloudtraceProjectsTraceSinksGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudtraceProjectsTraceSinksGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class CloudtraceProjectsTraceSinksGetResponse {
      */
     
     public org.openapis.openapi.models.shared.TraceSink traceSink;
+
     public CloudtraceProjectsTraceSinksGetResponse withTraceSink(org.openapis.openapi.models.shared.TraceSink traceSink) {
         this.traceSink = traceSink;
         return this;
     }
     
+    public CloudtraceProjectsTraceSinksGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

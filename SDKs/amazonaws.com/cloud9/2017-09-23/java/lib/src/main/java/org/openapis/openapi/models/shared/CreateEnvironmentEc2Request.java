@@ -12,6 +12,7 @@ public class CreateEnvironmentEc2Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automaticStopTimeMinutes")
     public Long automaticStopTimeMinutes;
+
     public CreateEnvironmentEc2Request withAutomaticStopTimeMinutes(Long automaticStopTimeMinutes) {
         this.automaticStopTimeMinutes = automaticStopTimeMinutes;
         return this;
@@ -20,6 +21,7 @@ public class CreateEnvironmentEc2Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public CreateEnvironmentEc2Request withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -28,6 +30,7 @@ public class CreateEnvironmentEc2Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionType")
     public ConnectionTypeEnum connectionType;
+
     public CreateEnvironmentEc2Request withConnectionType(ConnectionTypeEnum connectionType) {
         this.connectionType = connectionType;
         return this;
@@ -36,6 +39,7 @@ public class CreateEnvironmentEc2Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateEnvironmentEc2Request withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +48,7 @@ public class CreateEnvironmentEc2Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dryRun")
     public Boolean dryRun;
+
     public CreateEnvironmentEc2Request withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -52,6 +57,7 @@ public class CreateEnvironmentEc2Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageId")
     public String imageId;
+
     public CreateEnvironmentEc2Request withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -59,6 +65,7 @@ public class CreateEnvironmentEc2Request {
     
     @JsonProperty("instanceType")
     public String instanceType;
+
     public CreateEnvironmentEc2Request withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -66,6 +73,7 @@ public class CreateEnvironmentEc2Request {
     
     @JsonProperty("name")
     public String name;
+
     public CreateEnvironmentEc2Request withName(String name) {
         this.name = name;
         return this;
@@ -74,6 +82,7 @@ public class CreateEnvironmentEc2Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerArn")
     public String ownerArn;
+
     public CreateEnvironmentEc2Request withOwnerArn(String ownerArn) {
         this.ownerArn = ownerArn;
         return this;
@@ -82,6 +91,7 @@ public class CreateEnvironmentEc2Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetId")
     public String subnetId;
+
     public CreateEnvironmentEc2Request withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -90,9 +100,14 @@ public class CreateEnvironmentEc2Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateEnvironmentEc2Request withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateEnvironmentEc2Request(@JsonProperty("instanceType") String instanceType, @JsonProperty("name") String name) {
+        this.instanceType = instanceType;
+        this.name = name;
+  }
 }

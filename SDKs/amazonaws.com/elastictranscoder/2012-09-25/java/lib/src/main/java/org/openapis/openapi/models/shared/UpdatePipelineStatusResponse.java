@@ -15,9 +15,11 @@ public class UpdatePipelineStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pipeline")
     public Pipeline pipeline;
+
     public UpdatePipelineStatusResponse withPipeline(Pipeline pipeline) {
         this.pipeline = pipeline;
         return this;
     }
     
+    public UpdatePipelineStatusResponse(){}
 }

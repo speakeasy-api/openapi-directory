@@ -3,22 +3,20 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DeleteSigninSigninIdRequest;
 import org.openapis.openapi.models.operations.DeleteSigninSigninIdResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     tokenHeader = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            DeleteSigninSigninIdRequest req = new DeleteSigninSigninIdRequest() {{
-                signinId = 1;
-            }}            
+            DeleteSigninSigninIdRequest req = new DeleteSigninSigninIdRequest(1L);            
 
             DeleteSigninSigninIdResponse res = sdk.attendeesSignins.deleteSigninSigninId(req);
 
@@ -28,5 +26,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

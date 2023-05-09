@@ -12,6 +12,7 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityProviders")
     public String[] capacityProviders;
+
     public CreateClusterRequest withCapacityProviders(String[] capacityProviders) {
         this.capacityProviders = capacityProviders;
         return this;
@@ -20,6 +21,7 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterName")
     public String clusterName;
+
     public CreateClusterRequest withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -28,6 +30,7 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public ClusterConfiguration configuration;
+
     public CreateClusterRequest withConfiguration(ClusterConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -36,6 +39,7 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultCapacityProviderStrategy")
     public CapacityProviderStrategyItem[] defaultCapacityProviderStrategy;
+
     public CreateClusterRequest withDefaultCapacityProviderStrategy(CapacityProviderStrategyItem[] defaultCapacityProviderStrategy) {
         this.defaultCapacityProviderStrategy = defaultCapacityProviderStrategy;
         return this;
@@ -44,6 +48,7 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceConnectDefaults")
     public ClusterServiceConnectDefaultsRequest serviceConnectDefaults;
+
     public CreateClusterRequest withServiceConnectDefaults(ClusterServiceConnectDefaultsRequest serviceConnectDefaults) {
         this.serviceConnectDefaults = serviceConnectDefaults;
         return this;
@@ -52,6 +57,7 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public ClusterSetting[] settings;
+
     public CreateClusterRequest withSettings(ClusterSetting[] settings) {
         this.settings = settings;
         return this;
@@ -60,9 +66,11 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateClusterRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateClusterRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRateBasedRuleResponse {
     
     public String contentType;
+
     public GetRateBasedRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRateBasedRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRateBasedRuleResponse getRateBasedRuleResponse;
+
     public GetRateBasedRuleResponse withGetRateBasedRuleResponse(org.openapis.openapi.models.shared.GetRateBasedRuleResponse getRateBasedRuleResponse) {
         this.getRateBasedRuleResponse = getRateBasedRuleResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetRateBasedRuleResponse {
     
     
     public Integer statusCode;
+
     public GetRateBasedRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetRateBasedRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRateBasedRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class GetRateBasedRuleResponse {
      */
     
     public Object wafInternalErrorException;
+
     public GetRateBasedRuleResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class GetRateBasedRuleResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public GetRateBasedRuleResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,9 +70,14 @@ public class GetRateBasedRuleResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public GetRateBasedRuleResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
     }
     
+    public GetRateBasedRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

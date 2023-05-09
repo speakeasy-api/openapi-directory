@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CheckDomainAvailabilityRequest {
     @JsonProperty("DomainName")
     public String domainName;
+
     public CheckDomainAvailabilityRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -22,9 +23,13 @@ public class CheckDomainAvailabilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdnLangCode")
     public String idnLangCode;
+
     public CheckDomainAvailabilityRequest withIdnLangCode(String idnLangCode) {
         this.idnLangCode = idnLangCode;
         return this;
     }
     
+    public CheckDomainAvailabilityRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

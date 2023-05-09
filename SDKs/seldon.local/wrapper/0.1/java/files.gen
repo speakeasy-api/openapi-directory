@@ -58,4 +58,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/TensorflowDataTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Tensor.java
 lib/src/main/java/org/openapis/openapi/models/shared/SeldonMessageList.java
 lib/src/main/java/org/openapis/openapi/models/shared/Feedback.java
+docs/sdk/README.md
+docs/internal/README.md
 USAGE.md

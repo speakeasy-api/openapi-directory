@@ -15,6 +15,7 @@ public class EffectiveDeploymentStatusDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorStack")
     public String[] errorStack;
+
     public EffectiveDeploymentStatusDetails withErrorStack(String[] errorStack) {
         this.errorStack = errorStack;
         return this;
@@ -23,9 +24,11 @@ public class EffectiveDeploymentStatusDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorTypes")
     public String[] errorTypes;
+
     public EffectiveDeploymentStatusDetails withErrorTypes(String[] errorTypes) {
         this.errorTypes = errorTypes;
         return this;
     }
     
+    public EffectiveDeploymentStatusDetails(){}
 }

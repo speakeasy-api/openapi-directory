@@ -15,6 +15,7 @@ public class ViewsBriefDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access")
     public AccessDTO access;
+
     public ViewsBriefDTO withAccess(AccessDTO access) {
         this.access = access;
         return this;
@@ -23,9 +24,11 @@ public class ViewsBriefDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list")
     public ViewBriefDTO[] list;
+
     public ViewsBriefDTO withList(ViewBriefDTO[] list) {
         this.list = list;
         return this;
     }
     
+    public ViewsBriefDTO(){}
 }

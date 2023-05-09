@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AthenaConnectorSource {
     @JsonProperty("ConnectionName")
     public String connectionName;
+
     public AthenaConnectorSource withConnectionName(String connectionName) {
         this.connectionName = connectionName;
         return this;
@@ -22,6 +23,7 @@ public class AthenaConnectorSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionTable")
     public String connectionTable;
+
     public AthenaConnectorSource withConnectionTable(String connectionTable) {
         this.connectionTable = connectionTable;
         return this;
@@ -29,6 +31,7 @@ public class AthenaConnectorSource {
     
     @JsonProperty("ConnectionType")
     public String connectionType;
+
     public AthenaConnectorSource withConnectionType(String connectionType) {
         this.connectionType = connectionType;
         return this;
@@ -36,6 +39,7 @@ public class AthenaConnectorSource {
     
     @JsonProperty("ConnectorName")
     public String connectorName;
+
     public AthenaConnectorSource withConnectorName(String connectorName) {
         this.connectorName = connectorName;
         return this;
@@ -43,6 +47,7 @@ public class AthenaConnectorSource {
     
     @JsonProperty("Name")
     public String name;
+
     public AthenaConnectorSource withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +56,7 @@ public class AthenaConnectorSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputSchemas")
     public GlueSchema[] outputSchemas;
+
     public AthenaConnectorSource withOutputSchemas(GlueSchema[] outputSchemas) {
         this.outputSchemas = outputSchemas;
         return this;
@@ -58,9 +64,17 @@ public class AthenaConnectorSource {
     
     @JsonProperty("SchemaName")
     public String schemaName;
+
     public AthenaConnectorSource withSchemaName(String schemaName) {
         this.schemaName = schemaName;
         return this;
     }
     
+    public AthenaConnectorSource(@JsonProperty("ConnectionName") String connectionName, @JsonProperty("ConnectionType") String connectionType, @JsonProperty("ConnectorName") String connectorName, @JsonProperty("Name") String name, @JsonProperty("SchemaName") String schemaName) {
+        this.connectionName = connectionName;
+        this.connectionType = connectionType;
+        this.connectorName = connectorName;
+        this.name = name;
+        this.schemaName = schemaName;
+  }
 }

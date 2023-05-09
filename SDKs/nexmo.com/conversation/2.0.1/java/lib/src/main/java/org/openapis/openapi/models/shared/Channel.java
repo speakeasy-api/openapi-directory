@@ -15,6 +15,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public Object from;
+
     public Channel withFrom(Object from) {
         this.from = from;
         return this;
@@ -26,6 +27,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leg_id")
     public String legId;
+
     public Channel withLegId(String legId) {
         this.legId = legId;
         return this;
@@ -37,6 +39,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leg_ids")
     public ChannelLegIds[] legIds;
+
     public Channel withLegIds(ChannelLegIds[] legIds) {
         this.legIds = legIds;
         return this;
@@ -45,6 +48,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public Object to;
+
     public Channel withTo(Object to) {
         this.to = to;
         return this;
@@ -56,9 +60,11 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ChannelTypeEnum type;
+
     public Channel withType(ChannelTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Channel(){}
 }

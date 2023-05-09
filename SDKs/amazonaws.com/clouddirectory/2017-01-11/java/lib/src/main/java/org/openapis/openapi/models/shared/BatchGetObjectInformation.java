@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetObjectInformation {
     @JsonProperty("ObjectReference")
     public ObjectReference objectReference;
+
     public BatchGetObjectInformation withObjectReference(ObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
     }
     
+    public BatchGetObjectInformation(@JsonProperty("ObjectReference") ObjectReference objectReference) {
+        this.objectReference = objectReference;
+  }
 }

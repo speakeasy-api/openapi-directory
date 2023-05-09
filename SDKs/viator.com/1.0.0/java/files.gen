@@ -247,4 +247,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/SearchFreetextResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SortOrderEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DestinationTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/bookingservices/README.md
+docs/deprecatedservices/README.md
+docs/generalservices/README.md
+docs/productservices/README.md
+docs/taxonomyservices/README.md
 USAGE.md

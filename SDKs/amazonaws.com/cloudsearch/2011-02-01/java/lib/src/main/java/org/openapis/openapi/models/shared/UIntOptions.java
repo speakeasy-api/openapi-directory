@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class UIntOptions {
     
     public Long defaultValue;
+
     public UIntOptions withDefaultValue(Long defaultValue) {
         this.defaultValue = defaultValue;
         return this;
     }
     
+    public UIntOptions(){}
 }

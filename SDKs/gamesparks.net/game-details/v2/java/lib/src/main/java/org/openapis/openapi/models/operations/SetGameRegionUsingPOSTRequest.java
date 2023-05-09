@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetGameRegionUsingPOSTRequest {
@@ -12,6 +13,7 @@ public class SetGameRegionUsingPOSTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gameApiKey")
     public String gameApiKey;
+
     public SetGameRegionUsingPOSTRequest withGameApiKey(String gameApiKey) {
         this.gameApiKey = gameApiKey;
         return this;
@@ -22,9 +24,14 @@ public class SetGameRegionUsingPOSTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=regionCode")
     public String regionCode;
+
     public SetGameRegionUsingPOSTRequest withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
     
+    public SetGameRegionUsingPOSTRequest(@JsonProperty("gameApiKey") String gameApiKey, @JsonProperty("regionCode") String regionCode) {
+        this.gameApiKey = gameApiKey;
+        this.regionCode = regionCode;
+  }
 }

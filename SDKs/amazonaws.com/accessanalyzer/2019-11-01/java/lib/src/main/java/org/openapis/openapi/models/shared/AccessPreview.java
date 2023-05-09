@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class AccessPreview {
     @JsonProperty("analyzerArn")
     public String analyzerArn;
+
     public AccessPreview withAnalyzerArn(String analyzerArn) {
         this.analyzerArn = analyzerArn;
         return this;
@@ -26,6 +27,7 @@ public class AccessPreview {
     
     @JsonProperty("configurations")
     public java.util.Map<String, Configuration> configurations;
+
     public AccessPreview withConfigurations(java.util.Map<String, Configuration> configurations) {
         this.configurations = configurations;
         return this;
@@ -35,6 +37,7 @@ public class AccessPreview {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public AccessPreview withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -42,6 +45,7 @@ public class AccessPreview {
     
     @JsonProperty("id")
     public String id;
+
     public AccessPreview withId(String id) {
         this.id = id;
         return this;
@@ -49,6 +53,7 @@ public class AccessPreview {
     
     @JsonProperty("status")
     public AccessPreviewStatusEnum status;
+
     public AccessPreview withStatus(AccessPreviewStatusEnum status) {
         this.status = status;
         return this;
@@ -57,9 +62,17 @@ public class AccessPreview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public AccessPreviewStatusReason statusReason;
+
     public AccessPreview withStatusReason(AccessPreviewStatusReason statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public AccessPreview(@JsonProperty("analyzerArn") String analyzerArn, @JsonProperty("configurations") java.util.Map<String, Configuration> configurations, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("status") AccessPreviewStatusEnum status) {
+        this.analyzerArn = analyzerArn;
+        this.configurations = configurations;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.status = status;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContentAspectIdCivixDocumentIdRequest {
@@ -12,6 +13,7 @@ public class GetContentAspectIdCivixDocumentIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aspectId")
     public GetContentAspectIDCivixDocumentIDAspectIDEnum aspectId;
+
     public GetContentAspectIdCivixDocumentIdRequest withAspectId(GetContentAspectIDCivixDocumentIDAspectIDEnum aspectId) {
         this.aspectId = aspectId;
         return this;
@@ -22,9 +24,14 @@ public class GetContentAspectIdCivixDocumentIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=civixDocumentId")
     public String civixDocumentId;
+
     public GetContentAspectIdCivixDocumentIdRequest withCivixDocumentId(String civixDocumentId) {
         this.civixDocumentId = civixDocumentId;
         return this;
     }
     
+    public GetContentAspectIdCivixDocumentIdRequest(@JsonProperty("aspectId") GetContentAspectIDCivixDocumentIDAspectIDEnum aspectId, @JsonProperty("civixDocumentId") String civixDocumentId) {
+        this.aspectId = aspectId;
+        this.civixDocumentId = civixDocumentId;
+  }
 }

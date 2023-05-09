@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartTargetedSentimentDetectionJobResponse {
     
     public String contentType;
+
     public StartTargetedSentimentDetectionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartTargetedSentimentDetectionJobResponse {
      */
     
     public Object internalServerException;
+
     public StartTargetedSentimentDetectionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StartTargetedSentimentDetectionJobResponse {
      */
     
     public Object invalidRequestException;
+
     public StartTargetedSentimentDetectionJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,8 +43,20 @@ public class StartTargetedSentimentDetectionJobResponse {
      */
     
     public Object kmsKeyValidationException;
+
     public StartTargetedSentimentDetectionJobResponse withKmsKeyValidationException(Object kmsKeyValidationException) {
         this.kmsKeyValidationException = kmsKeyValidationException;
+        return this;
+    }
+    
+    /**
+     * ResourceInUseException
+     */
+    
+    public Object resourceInUseException;
+
+    public StartTargetedSentimentDetectionJobResponse withResourceInUseException(Object resourceInUseException) {
+        this.resourceInUseException = resourceInUseException;
         return this;
     }
     
@@ -49,6 +65,7 @@ public class StartTargetedSentimentDetectionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartTargetedSentimentDetectionJobResponse startTargetedSentimentDetectionJobResponse;
+
     public StartTargetedSentimentDetectionJobResponse withStartTargetedSentimentDetectionJobResponse(org.openapis.openapi.models.shared.StartTargetedSentimentDetectionJobResponse startTargetedSentimentDetectionJobResponse) {
         this.startTargetedSentimentDetectionJobResponse = startTargetedSentimentDetectionJobResponse;
         return this;
@@ -56,6 +73,7 @@ public class StartTargetedSentimentDetectionJobResponse {
     
     
     public Integer statusCode;
+
     public StartTargetedSentimentDetectionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +81,7 @@ public class StartTargetedSentimentDetectionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartTargetedSentimentDetectionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +92,7 @@ public class StartTargetedSentimentDetectionJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public StartTargetedSentimentDetectionJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +103,14 @@ public class StartTargetedSentimentDetectionJobResponse {
      */
     
     public Object tooManyTagsException;
+
     public StartTargetedSentimentDetectionJobResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public StartTargetedSentimentDetectionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

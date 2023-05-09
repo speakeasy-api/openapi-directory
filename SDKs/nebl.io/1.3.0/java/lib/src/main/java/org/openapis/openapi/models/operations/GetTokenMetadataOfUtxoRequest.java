@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTokenMetadataOfUtxoRequest {
@@ -12,6 +13,7 @@ public class GetTokenMetadataOfUtxoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tokenid")
     public String tokenid;
+
     public GetTokenMetadataOfUtxoRequest withTokenid(String tokenid) {
         this.tokenid = tokenid;
         return this;
@@ -22,6 +24,7 @@ public class GetTokenMetadataOfUtxoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=utxo")
     public String utxo;
+
     public GetTokenMetadataOfUtxoRequest withUtxo(String utxo) {
         this.utxo = utxo;
         return this;
@@ -32,9 +35,14 @@ public class GetTokenMetadataOfUtxoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=verbosity")
     public Double verbosity;
+
     public GetTokenMetadataOfUtxoRequest withVerbosity(Double verbosity) {
         this.verbosity = verbosity;
         return this;
     }
     
+    public GetTokenMetadataOfUtxoRequest(@JsonProperty("tokenid") String tokenid, @JsonProperty("utxo") String utxo) {
+        this.tokenid = tokenid;
+        this.utxo = utxo;
+  }
 }

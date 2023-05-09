@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class Call {
     
     public EmbeddedResource action;
+
     public Call withAction(EmbeddedResource action) {
         this.action = action;
         return this;
@@ -19,6 +20,7 @@ public class Call {
     
     
     public EmbeddedResource cadence;
+
     public Call withCadence(EmbeddedResource cadence) {
         this.cadence = cadence;
         return this;
@@ -26,6 +28,7 @@ public class Call {
     
     
     public EmbeddedResource calledPerson;
+
     public Call withCalledPerson(EmbeddedResource calledPerson) {
         this.calledPerson = calledPerson;
         return this;
@@ -36,6 +39,7 @@ public class Call {
      */
     
     public OffsetDateTime createdAt;
+
     public Call withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -43,6 +47,7 @@ public class Call {
     
     
     public EmbeddedResource crmActivity;
+
     public Call withCrmActivity(EmbeddedResource crmActivity) {
         this.crmActivity = crmActivity;
         return this;
@@ -53,6 +58,7 @@ public class Call {
      */
     
     public String disposition;
+
     public Call withDisposition(String disposition) {
         this.disposition = disposition;
         return this;
@@ -63,6 +69,7 @@ public class Call {
      */
     
     public Long duration;
+
     public Call withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -73,6 +80,7 @@ public class Call {
      */
     
     public Long id;
+
     public Call withId(Long id) {
         this.id = id;
         return this;
@@ -80,6 +88,7 @@ public class Call {
     
     
     public EmbeddedResource note;
+
     public Call withNote(EmbeddedResource note) {
         this.note = note;
         return this;
@@ -90,6 +99,7 @@ public class Call {
      */
     
     public EmbeddedRecordingResource[] recordings;
+
     public Call withRecordings(EmbeddedRecordingResource[] recordings) {
         this.recordings = recordings;
         return this;
@@ -100,6 +110,7 @@ public class Call {
      */
     
     public String sentiment;
+
     public Call withSentiment(String sentiment) {
         this.sentiment = sentiment;
         return this;
@@ -107,6 +118,7 @@ public class Call {
     
     
     public EmbeddedResource step;
+
     public Call withStep(EmbeddedResource step) {
         this.step = step;
         return this;
@@ -117,6 +129,7 @@ public class Call {
      */
     
     public String to;
+
     public Call withTo(String to) {
         this.to = to;
         return this;
@@ -127,6 +140,7 @@ public class Call {
      */
     
     public OffsetDateTime updatedAt;
+
     public Call withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -134,9 +148,11 @@ public class Call {
     
     
     public EmbeddedResource user;
+
     public Call withUser(EmbeddedResource user) {
         this.user = user;
         return this;
     }
     
+    public Call(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class VehicleRegistrationSchemaIssuedToPerson {
     
     public VehicleRegistrationSchemaIssuedToPersonAddress address;
+
     public VehicleRegistrationSchemaIssuedToPerson withAddress(VehicleRegistrationSchemaIssuedToPersonAddress address) {
         this.address = address;
         return this;
@@ -16,6 +17,7 @@ public class VehicleRegistrationSchemaIssuedToPerson {
     
     
     public VehicleRegistrationSchemaIssuedToPersonPhoto photo;
+
     public VehicleRegistrationSchemaIssuedToPerson withPhoto(VehicleRegistrationSchemaIssuedToPersonPhoto photo) {
         this.photo = photo;
         return this;
@@ -23,6 +25,7 @@ public class VehicleRegistrationSchemaIssuedToPerson {
     
     
     public String dob;
+
     public VehicleRegistrationSchemaIssuedToPerson withDob(String dob) {
         this.dob = dob;
         return this;
@@ -30,6 +33,7 @@ public class VehicleRegistrationSchemaIssuedToPerson {
     
     
     public String email;
+
     public VehicleRegistrationSchemaIssuedToPerson withEmail(String email) {
         this.email = email;
         return this;
@@ -37,6 +41,7 @@ public class VehicleRegistrationSchemaIssuedToPerson {
     
     
     public String gender;
+
     public VehicleRegistrationSchemaIssuedToPerson withGender(String gender) {
         this.gender = gender;
         return this;
@@ -44,6 +49,7 @@ public class VehicleRegistrationSchemaIssuedToPerson {
     
     
     public String maritalStatus;
+
     public VehicleRegistrationSchemaIssuedToPerson withMaritalStatus(String maritalStatus) {
         this.maritalStatus = maritalStatus;
         return this;
@@ -51,6 +57,7 @@ public class VehicleRegistrationSchemaIssuedToPerson {
     
     
     public String name;
+
     public VehicleRegistrationSchemaIssuedToPerson withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +65,7 @@ public class VehicleRegistrationSchemaIssuedToPerson {
     
     
     public String phone;
+
     public VehicleRegistrationSchemaIssuedToPerson withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -65,6 +73,7 @@ public class VehicleRegistrationSchemaIssuedToPerson {
     
     
     public String religion;
+
     public VehicleRegistrationSchemaIssuedToPerson withReligion(String religion) {
         this.religion = religion;
         return this;
@@ -72,6 +81,7 @@ public class VehicleRegistrationSchemaIssuedToPerson {
     
     
     public String swd;
+
     public VehicleRegistrationSchemaIssuedToPerson withSwd(String swd) {
         this.swd = swd;
         return this;
@@ -79,6 +89,7 @@ public class VehicleRegistrationSchemaIssuedToPerson {
     
     
     public String swdIndicator;
+
     public VehicleRegistrationSchemaIssuedToPerson withSwdIndicator(String swdIndicator) {
         this.swdIndicator = swdIndicator;
         return this;
@@ -86,6 +97,7 @@ public class VehicleRegistrationSchemaIssuedToPerson {
     
     
     public String title;
+
     public VehicleRegistrationSchemaIssuedToPerson withTitle(String title) {
         this.title = title;
         return this;
@@ -93,9 +105,25 @@ public class VehicleRegistrationSchemaIssuedToPerson {
     
     
     public String uid;
+
     public VehicleRegistrationSchemaIssuedToPerson withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public VehicleRegistrationSchemaIssuedToPerson(@JsonProperty("Address") VehicleRegistrationSchemaIssuedToPersonAddress address, @JsonProperty("Photo") VehicleRegistrationSchemaIssuedToPersonPhoto photo, @JsonProperty("dob") String dob, @JsonProperty("email") String email, @JsonProperty("gender") String gender, @JsonProperty("maritalStatus") String maritalStatus, @JsonProperty("name") String name, @JsonProperty("phone") String phone, @JsonProperty("religion") String religion, @JsonProperty("swd") String swd, @JsonProperty("swdIndicator") String swdIndicator, @JsonProperty("title") String title, @JsonProperty("uid") String uid) {
+        this.address = address;
+        this.photo = photo;
+        this.dob = dob;
+        this.email = email;
+        this.gender = gender;
+        this.maritalStatus = maritalStatus;
+        this.name = name;
+        this.phone = phone;
+        this.religion = religion;
+        this.swd = swd;
+        this.swdIndicator = swdIndicator;
+        this.title = title;
+        this.uid = uid;
+  }
 }

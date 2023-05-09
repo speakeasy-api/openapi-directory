@@ -54,7 +54,7 @@ public class Segments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountSegmentsResponse res = new org.openapis.openapi.models.operations.GetAccountSegmentsResponse() {{
+        org.openapis.openapi.models.operations.GetAccountSegmentsResponse res = new org.openapis.openapi.models.operations.GetAccountSegmentsResponse(contentType, httpRes.statusCode()) {{
             getAccountSegments200ApplicationJSONObject = null;
             getAccountSegments400ApplicationJSONObject = null;
             getAccountSegments401ApplicationJSONObject = null;
@@ -62,8 +62,6 @@ public class Segments {
             getAccountSegments429ApplicationJSONObject = null;
             getAccountSegments500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,7 +142,7 @@ public class Segments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserSegmentsResponse res = new org.openapis.openapi.models.operations.GetUserSegmentsResponse() {{
+        org.openapis.openapi.models.operations.GetUserSegmentsResponse res = new org.openapis.openapi.models.operations.GetUserSegmentsResponse(contentType, httpRes.statusCode()) {{
             getUserSegments200ApplicationJSONObject = null;
             getUserSegments400ApplicationJSONObject = null;
             getUserSegments401ApplicationJSONObject = null;
@@ -152,8 +150,6 @@ public class Segments {
             getUserSegments429ApplicationJSONObject = null;
             getUserSegments500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchChangeInventoryResponse {
@@ -12,6 +13,7 @@ public class BatchChangeInventoryResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchChangeInventoryResponse batchChangeInventoryResponse;
+
     public BatchChangeInventoryResponse withBatchChangeInventoryResponse(org.openapis.openapi.models.shared.BatchChangeInventoryResponse batchChangeInventoryResponse) {
         this.batchChangeInventoryResponse = batchChangeInventoryResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchChangeInventoryResponse {
     
     
     public String contentType;
+
     public BatchChangeInventoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class BatchChangeInventoryResponse {
     
     
     public Integer statusCode;
+
     public BatchChangeInventoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BatchChangeInventoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchChangeInventoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchChangeInventoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class DetectLabelsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeneralLabels")
     public GeneralLabelsSettings generalLabels;
+
     public DetectLabelsSettings withGeneralLabels(GeneralLabelsSettings generalLabels) {
         this.generalLabels = generalLabels;
         return this;
@@ -23,9 +24,11 @@ public class DetectLabelsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageProperties")
     public DetectLabelsImagePropertiesSettings imageProperties;
+
     public DetectLabelsSettings withImageProperties(DetectLabelsImagePropertiesSettings imageProperties) {
         this.imageProperties = imageProperties;
         return this;
     }
     
+    public DetectLabelsSettings(){}
 }

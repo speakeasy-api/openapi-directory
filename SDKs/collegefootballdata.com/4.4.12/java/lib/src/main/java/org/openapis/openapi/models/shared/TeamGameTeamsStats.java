@@ -12,6 +12,7 @@ public class TeamGameTeamsStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public TeamGameTeamsStats withCategory(String category) {
         this.category = category;
         return this;
@@ -20,9 +21,11 @@ public class TeamGameTeamsStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stat")
     public String stat;
+
     public TeamGameTeamsStats withStat(String stat) {
         this.stat = stat;
         return this;
     }
     
+    public TeamGameTeamsStats(){}
 }

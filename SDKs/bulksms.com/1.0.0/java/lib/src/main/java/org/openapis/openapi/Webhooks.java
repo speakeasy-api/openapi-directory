@@ -51,11 +51,9 @@ public class Webhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteWebhooksIdResponse res = new org.openapis.openapi.models.operations.DeleteWebhooksIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteWebhooksIdResponse res = new org.openapis.openapi.models.operations.DeleteWebhooksIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -74,10 +72,11 @@ public class Webhooks {
     /**
      * List webhooks
      * Contains a list of your webhooks
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWebhooksResponse getWebhooks() throws Exception {
+    public org.openapis.openapi.models.operations.GetWebhooksResponse getWebhooks(org.openapis.openapi.models.operations.GetWebhooksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/webhooks");
         
@@ -86,17 +85,15 @@ public class Webhooks {
         req.setURL(url);
         
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWebhooksResponse res = new org.openapis.openapi.models.operations.GetWebhooksResponse() {{
+        org.openapis.openapi.models.operations.GetWebhooksResponse res = new org.openapis.openapi.models.operations.GetWebhooksResponse(contentType, httpRes.statusCode()) {{
             webhooks = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -131,12 +128,10 @@ public class Webhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWebhooksIdResponse res = new org.openapis.openapi.models.operations.GetWebhooksIdResponse() {{
+        org.openapis.openapi.models.operations.GetWebhooksIdResponse res = new org.openapis.openapi.models.operations.GetWebhooksIdResponse(contentType, httpRes.statusCode()) {{
             webhook = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -238,12 +233,10 @@ public class Webhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostWebhooksResponse res = new org.openapis.openapi.models.operations.PostWebhooksResponse() {{
+        org.openapis.openapi.models.operations.PostWebhooksResponse res = new org.openapis.openapi.models.operations.PostWebhooksResponse(contentType, httpRes.statusCode()) {{
             webhook = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -290,12 +283,10 @@ public class Webhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostWebhooksIdResponse res = new org.openapis.openapi.models.operations.PostWebhooksIdResponse() {{
+        org.openapis.openapi.models.operations.PostWebhooksIdResponse res = new org.openapis.openapi.models.operations.PostWebhooksIdResponse(contentType, httpRes.statusCode()) {{
             webhook = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

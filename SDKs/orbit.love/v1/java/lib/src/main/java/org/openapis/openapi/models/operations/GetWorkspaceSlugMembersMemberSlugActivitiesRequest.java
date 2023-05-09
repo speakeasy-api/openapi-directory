@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspaceSlugMembersMemberSlugActivitiesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=activity_type")
     public String activityType;
+
     public GetWorkspaceSlugMembersMemberSlugActivitiesRequest withActivityType(String activityType) {
         this.activityType = activityType;
         return this;
@@ -16,6 +18,7 @@ public class GetWorkspaceSlugMembersMemberSlugActivitiesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public GetWorkspaceSlugMembersMemberSlugActivitiesDirectionEnum direction;
+
     public GetWorkspaceSlugMembersMemberSlugActivitiesRequest withDirection(GetWorkspaceSlugMembersMemberSlugActivitiesDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -23,6 +26,7 @@ public class GetWorkspaceSlugMembersMemberSlugActivitiesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=items")
     public GetWorkspaceSlugMembersMemberSlugActivitiesItemsEnum items;
+
     public GetWorkspaceSlugMembersMemberSlugActivitiesRequest withItems(GetWorkspaceSlugMembersMemberSlugActivitiesItemsEnum items) {
         this.items = items;
         return this;
@@ -30,6 +34,7 @@ public class GetWorkspaceSlugMembersMemberSlugActivitiesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=member_slug")
     public String memberSlug;
+
     public GetWorkspaceSlugMembersMemberSlugActivitiesRequest withMemberSlug(String memberSlug) {
         this.memberSlug = memberSlug;
         return this;
@@ -37,6 +42,7 @@ public class GetWorkspaceSlugMembersMemberSlugActivitiesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetWorkspaceSlugMembersMemberSlugActivitiesRequest withPage(String page) {
         this.page = page;
         return this;
@@ -44,6 +50,7 @@ public class GetWorkspaceSlugMembersMemberSlugActivitiesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetWorkspaceSlugMembersMemberSlugActivitiesSortEnum sort;
+
     public GetWorkspaceSlugMembersMemberSlugActivitiesRequest withSort(GetWorkspaceSlugMembersMemberSlugActivitiesSortEnum sort) {
         this.sort = sort;
         return this;
@@ -51,9 +58,13 @@ public class GetWorkspaceSlugMembersMemberSlugActivitiesRequest {
     
     /**
      * Deprecated in favor of the activity_type parameter.
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    @Deprecated
     public String type;
+
+    @Deprecated
     public GetWorkspaceSlugMembersMemberSlugActivitiesRequest withType(String type) {
         this.type = type;
         return this;
@@ -61,9 +72,14 @@ public class GetWorkspaceSlugMembersMemberSlugActivitiesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
     public String workspaceSlug;
+
     public GetWorkspaceSlugMembersMemberSlugActivitiesRequest withWorkspaceSlug(String workspaceSlug) {
         this.workspaceSlug = workspaceSlug;
         return this;
     }
     
+    public GetWorkspaceSlugMembersMemberSlugActivitiesRequest(@JsonProperty("member_slug") String memberSlug, @JsonProperty("workspace_slug") String workspaceSlug) {
+        this.memberSlug = memberSlug;
+        this.workspaceSlug = workspaceSlug;
+  }
 }

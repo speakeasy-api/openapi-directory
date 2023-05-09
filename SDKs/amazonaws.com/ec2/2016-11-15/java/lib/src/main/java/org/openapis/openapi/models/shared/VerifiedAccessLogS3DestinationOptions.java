@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * VerifiedAccessLogS3DestinationOptions - Options for Amazon S3 as a logging destination.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class VerifiedAccessLogS3DestinationOptions {
     
     public String bucketName;
+
     public VerifiedAccessLogS3DestinationOptions withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -19,6 +20,7 @@ public class VerifiedAccessLogS3DestinationOptions {
     
     
     public String bucketOwner;
+
     public VerifiedAccessLogS3DestinationOptions withBucketOwner(String bucketOwner) {
         this.bucketOwner = bucketOwner;
         return this;
@@ -26,6 +28,7 @@ public class VerifiedAccessLogS3DestinationOptions {
     
     
     public Boolean enabled;
+
     public VerifiedAccessLogS3DestinationOptions withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -33,9 +36,13 @@ public class VerifiedAccessLogS3DestinationOptions {
     
     
     public String prefix;
+
     public VerifiedAccessLogS3DestinationOptions withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public VerifiedAccessLogS3DestinationOptions(@JsonProperty("Enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

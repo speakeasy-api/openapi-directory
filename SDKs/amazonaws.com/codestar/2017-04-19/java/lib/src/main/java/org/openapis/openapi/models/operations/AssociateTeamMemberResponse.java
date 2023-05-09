@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateTeamMemberResponse {
@@ -12,6 +13,7 @@ public class AssociateTeamMemberResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateTeamMemberResult associateTeamMemberResult;
+
     public AssociateTeamMemberResponse withAssociateTeamMemberResult(org.openapis.openapi.models.shared.AssociateTeamMemberResult associateTeamMemberResult) {
         this.associateTeamMemberResult = associateTeamMemberResult;
         return this;
@@ -22,6 +24,7 @@ public class AssociateTeamMemberResponse {
      */
     
     public Object concurrentModificationException;
+
     public AssociateTeamMemberResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class AssociateTeamMemberResponse {
     
     
     public String contentType;
+
     public AssociateTeamMemberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AssociateTeamMemberResponse {
      */
     
     public Object invalidServiceRoleException;
+
     public AssociateTeamMemberResponse withInvalidServiceRoleException(Object invalidServiceRoleException) {
         this.invalidServiceRoleException = invalidServiceRoleException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateTeamMemberResponse {
      */
     
     public Object limitExceededException;
+
     public AssociateTeamMemberResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateTeamMemberResponse {
      */
     
     public Object projectConfigurationException;
+
     public AssociateTeamMemberResponse withProjectConfigurationException(Object projectConfigurationException) {
         this.projectConfigurationException = projectConfigurationException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateTeamMemberResponse {
      */
     
     public Object projectNotFoundException;
+
     public AssociateTeamMemberResponse withProjectNotFoundException(Object projectNotFoundException) {
         this.projectNotFoundException = projectNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class AssociateTeamMemberResponse {
     
     
     public Integer statusCode;
+
     public AssociateTeamMemberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class AssociateTeamMemberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateTeamMemberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class AssociateTeamMemberResponse {
      */
     
     public Object teamMemberAlreadyAssociatedException;
+
     public AssociateTeamMemberResponse withTeamMemberAlreadyAssociatedException(Object teamMemberAlreadyAssociatedException) {
         this.teamMemberAlreadyAssociatedException = teamMemberAlreadyAssociatedException;
         return this;
@@ -103,9 +114,14 @@ public class AssociateTeamMemberResponse {
      */
     
     public Object validationException;
+
     public AssociateTeamMemberResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AssociateTeamMemberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

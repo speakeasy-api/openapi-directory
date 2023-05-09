@@ -15,9 +15,11 @@ public class CreateEnumOptionForCustomFieldRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.EnumOptionRequestInput data;
+
     public CreateEnumOptionForCustomFieldRequestBodyInput withData(org.openapis.openapi.models.shared.EnumOptionRequestInput data) {
         this.data = data;
         return this;
     }
     
+    public CreateEnumOptionForCustomFieldRequestBodyInput(){}
 }

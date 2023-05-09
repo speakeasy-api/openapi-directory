@@ -18,6 +18,7 @@ public class Registration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactSettings")
     public ContactSettings contactSettings;
+
     public Registration withContactSettings(ContactSettings contactSettings) {
         this.contactSettings = contactSettings;
         return this;
@@ -29,6 +30,7 @@ public class Registration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Registration withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class Registration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsSettings")
     public DnsSettings dnsSettings;
+
     public Registration withDnsSettings(DnsSettings dnsSettings) {
         this.dnsSettings = dnsSettings;
         return this;
@@ -51,6 +54,7 @@ public class Registration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public Registration withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -62,6 +66,7 @@ public class Registration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public Registration withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -73,6 +78,7 @@ public class Registration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issues")
     public RegistrationIssuesEnum[] issues;
+
     public Registration withIssues(RegistrationIssuesEnum[] issues) {
         this.issues = issues;
         return this;
@@ -84,6 +90,7 @@ public class Registration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Registration withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -95,6 +102,7 @@ public class Registration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managementSettings")
     public ManagementSettings managementSettings;
+
     public Registration withManagementSettings(ManagementSettings managementSettings) {
         this.managementSettings = managementSettings;
         return this;
@@ -106,6 +114,7 @@ public class Registration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Registration withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +126,7 @@ public class Registration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingContactSettings")
     public ContactSettings pendingContactSettings;
+
     public Registration withPendingContactSettings(ContactSettings pendingContactSettings) {
         this.pendingContactSettings = pendingContactSettings;
         return this;
@@ -128,6 +138,7 @@ public class Registration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registerFailureReason")
     public RegistrationRegisterFailureReasonEnum registerFailureReason;
+
     public Registration withRegisterFailureReason(RegistrationRegisterFailureReasonEnum registerFailureReason) {
         this.registerFailureReason = registerFailureReason;
         return this;
@@ -139,6 +150,7 @@ public class Registration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public RegistrationStateEnum state;
+
     public Registration withState(RegistrationStateEnum state) {
         this.state = state;
         return this;
@@ -150,6 +162,7 @@ public class Registration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedPrivacy")
     public RegistrationSupportedPrivacyEnum[] supportedPrivacy;
+
     public Registration withSupportedPrivacy(RegistrationSupportedPrivacyEnum[] supportedPrivacy) {
         this.supportedPrivacy = supportedPrivacy;
         return this;
@@ -161,9 +174,11 @@ public class Registration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferFailureReason")
     public RegistrationTransferFailureReasonEnum transferFailureReason;
+
     public Registration withTransferFailureReason(RegistrationTransferFailureReasonEnum transferFailureReason) {
         this.transferFailureReason = transferFailureReason;
         return this;
     }
     
+    public Registration(){}
 }

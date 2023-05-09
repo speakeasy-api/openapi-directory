@@ -18,6 +18,7 @@ public class TagResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ImageMetadata metadata;
+
     public TagResult withMetadata(ImageMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -29,6 +30,7 @@ public class TagResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public TagResult withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -40,9 +42,11 @@ public class TagResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public ImageTag[] tags;
+
     public TagResult withTags(ImageTag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagResult(){}
 }

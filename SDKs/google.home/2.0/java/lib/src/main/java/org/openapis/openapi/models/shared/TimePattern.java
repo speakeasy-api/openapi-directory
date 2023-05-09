@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TimePattern {
     @JsonProperty("hour")
     public Integer hour;
+
     public TimePattern withHour(Integer hour) {
         this.hour = hour;
         return this;
@@ -16,6 +17,7 @@ public class TimePattern {
     
     @JsonProperty("minute")
     public Integer minute;
+
     public TimePattern withMinute(Integer minute) {
         this.minute = minute;
         return this;
@@ -23,9 +25,15 @@ public class TimePattern {
     
     @JsonProperty("second")
     public Integer second;
+
     public TimePattern withSecond(Integer second) {
         this.second = second;
         return this;
     }
     
+    public TimePattern(@JsonProperty("hour") Integer hour, @JsonProperty("minute") Integer minute, @JsonProperty("second") Integer second) {
+        this.hour = hour;
+        this.minute = minute;
+        this.second = second;
+  }
 }

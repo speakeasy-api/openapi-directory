@@ -12,6 +12,7 @@ public class QuoteAcEntriesDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountCode")
     public String accountCode;
+
     public QuoteAcEntriesDto withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -20,6 +21,7 @@ public class QuoteAcEntriesDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisCategoryId")
     public Long analysisCategoryId;
+
     public QuoteAcEntriesDto withAnalysisCategoryId(Long analysisCategoryId) {
         this.analysisCategoryId = analysisCategoryId;
         return this;
@@ -28,6 +30,7 @@ public class QuoteAcEntriesDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyId")
     public Long companyId;
+
     public QuoteAcEntriesDto withCompanyId(Long companyId) {
         this.companyId = companyId;
         return this;
@@ -36,6 +39,7 @@ public class QuoteAcEntriesDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public QuoteAcEntriesDto withId(Long id) {
         this.id = id;
         return this;
@@ -44,6 +48,7 @@ public class QuoteAcEntriesDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quoteProductTranId")
     public Long quoteProductTranId;
+
     public QuoteAcEntriesDto withQuoteProductTranId(Long quoteProductTranId) {
         this.quoteProductTranId = quoteProductTranId;
         return this;
@@ -52,9 +57,11 @@ public class QuoteAcEntriesDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public QuoteAcEntriesDto withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public QuoteAcEntriesDto(){}
 }

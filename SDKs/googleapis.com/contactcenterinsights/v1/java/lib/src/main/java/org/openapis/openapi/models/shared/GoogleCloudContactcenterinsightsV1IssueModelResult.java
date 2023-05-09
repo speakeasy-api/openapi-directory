@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1IssueModelResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issueModel")
     public String issueModel;
+
     public GoogleCloudContactcenterinsightsV1IssueModelResult withIssueModel(String issueModel) {
         this.issueModel = issueModel;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudContactcenterinsightsV1IssueModelResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issues")
     public GoogleCloudContactcenterinsightsV1IssueAssignment[] issues;
+
     public GoogleCloudContactcenterinsightsV1IssueModelResult withIssues(GoogleCloudContactcenterinsightsV1IssueAssignment[] issues) {
         this.issues = issues;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1IssueModelResult(){}
 }

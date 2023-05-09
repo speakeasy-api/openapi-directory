@@ -15,6 +15,7 @@ public class GetPlaylists200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public GetPlaylists200ApplicationJSONLinks links;
+
     public GetPlaylists200ApplicationJSON withLinks(GetPlaylists200ApplicationJSONLinks links) {
         this.links = links;
         return this;
@@ -23,6 +24,7 @@ public class GetPlaylists200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_meta")
     public org.openapis.openapi.models.shared.Pagination meta;
+
     public GetPlaylists200ApplicationJSON withMeta(org.openapis.openapi.models.shared.Pagination meta) {
         this.meta = meta;
         return this;
@@ -31,9 +33,11 @@ public class GetPlaylists200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public org.openapis.openapi.models.shared.Playlist[] items;
+
     public GetPlaylists200ApplicationJSON withItems(org.openapis.openapi.models.shared.Playlist[] items) {
         this.items = items;
         return this;
     }
     
+    public GetPlaylists200ApplicationJSON(){}
 }

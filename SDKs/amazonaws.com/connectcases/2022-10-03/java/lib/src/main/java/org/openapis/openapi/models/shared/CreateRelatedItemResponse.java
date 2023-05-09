@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateRelatedItemResponse {
     @JsonProperty("relatedItemArn")
     public String relatedItemArn;
+
     public CreateRelatedItemResponse withRelatedItemArn(String relatedItemArn) {
         this.relatedItemArn = relatedItemArn;
         return this;
@@ -19,9 +20,14 @@ public class CreateRelatedItemResponse {
     
     @JsonProperty("relatedItemId")
     public String relatedItemId;
+
     public CreateRelatedItemResponse withRelatedItemId(String relatedItemId) {
         this.relatedItemId = relatedItemId;
         return this;
     }
     
+    public CreateRelatedItemResponse(@JsonProperty("relatedItemArn") String relatedItemArn, @JsonProperty("relatedItemId") String relatedItemId) {
+        this.relatedItemArn = relatedItemArn;
+        this.relatedItemId = relatedItemId;
+  }
 }

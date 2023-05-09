@@ -15,9 +15,11 @@ public class UserAttributeUpdateSettingsType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributesRequireVerificationBeforeUpdate")
     public VerifiedAttributeTypeEnum[] attributesRequireVerificationBeforeUpdate;
+
     public UserAttributeUpdateSettingsType withAttributesRequireVerificationBeforeUpdate(VerifiedAttributeTypeEnum[] attributesRequireVerificationBeforeUpdate) {
         this.attributesRequireVerificationBeforeUpdate = attributesRequireVerificationBeforeUpdate;
         return this;
     }
     
+    public UserAttributeUpdateSettingsType(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPedigreeResponse {
@@ -12,6 +13,7 @@ public class GetPedigreeResponse {
      */
     
     public org.openapis.openapi.models.shared.Association[] associations;
+
     public GetPedigreeResponse withAssociations(org.openapis.openapi.models.shared.Association[] associations) {
         this.associations = associations;
         return this;
@@ -19,6 +21,7 @@ public class GetPedigreeResponse {
     
     
     public String contentType;
+
     public GetPedigreeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetPedigreeResponse {
     
     
     public Integer statusCode;
+
     public GetPedigreeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetPedigreeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPedigreeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPedigreeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

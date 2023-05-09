@@ -66,10 +66,8 @@ public class Retrieve {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAssociationByIdResponse res = new org.openapis.openapi.models.operations.GetAssociationByIdResponse() {{
+        org.openapis.openapi.models.operations.GetAssociationByIdResponse res = new org.openapis.openapi.models.operations.GetAssociationByIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,10 +113,8 @@ public class Retrieve {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEvidenceByIdResponse res = new org.openapis.openapi.models.operations.GetEvidenceByIdResponse() {{
+        org.openapis.openapi.models.operations.GetEvidenceByIdResponse res = new org.openapis.openapi.models.operations.GetEvidenceByIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,10 +151,8 @@ public class Retrieve {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostEvidenceByIdResponse res = new org.openapis.openapi.models.operations.PostEvidenceByIdResponse() {{
+        org.openapis.openapi.models.operations.PostEvidenceByIdResponse res = new org.openapis.openapi.models.operations.PostEvidenceByIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

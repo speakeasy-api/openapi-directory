@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterEventTopicResponse {
@@ -12,6 +13,7 @@ public class DeregisterEventTopicResponse {
      */
     
     public Object clientException;
+
     public DeregisterEventTopicResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DeregisterEventTopicResponse {
     
     
     public String contentType;
+
     public DeregisterEventTopicResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeregisterEventTopicResponse {
      */
     
     public java.util.Map<String, Object> deregisterEventTopicResult;
+
     public DeregisterEventTopicResponse withDeregisterEventTopicResult(java.util.Map<String, Object> deregisterEventTopicResult) {
         this.deregisterEventTopicResult = deregisterEventTopicResult;
         return this;
@@ -39,6 +43,7 @@ public class DeregisterEventTopicResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public DeregisterEventTopicResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class DeregisterEventTopicResponse {
      */
     
     public Object invalidParameterException;
+
     public DeregisterEventTopicResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeregisterEventTopicResponse {
      */
     
     public Object serviceException;
+
     public DeregisterEventTopicResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class DeregisterEventTopicResponse {
     
     
     public Integer statusCode;
+
     public DeregisterEventTopicResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeregisterEventTopicResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterEventTopicResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeregisterEventTopicResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class UserRoles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public UserRoles withCode(String code) {
         this.code = code;
         return this;
@@ -26,9 +27,11 @@ public class UserRoles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UserRoles withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UserRoles(){}
 }

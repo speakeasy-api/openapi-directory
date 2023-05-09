@@ -3,68 +3,57 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateCampaignRequest;
+import org.openapis.openapi.models.operations.CreateCampaignRequestBody;
 import org.openapis.openapi.models.operations.CreateCampaignRequestBodyDialerConfig;
 import org.openapis.openapi.models.operations.CreateCampaignRequestBodyOutboundCallConfig;
-import org.openapis.openapi.models.operations.CreateCampaignRequestBody;
-import org.openapis.openapi.models.operations.CreateCampaignRequest;
 import org.openapis.openapi.models.operations.CreateCampaignResponse;
 import org.openapis.openapi.models.shared.AnswerMachineDetectionConfig;
-import org.openapis.openapi.models.shared.ProgressiveDialerConfig;
 import org.openapis.openapi.models.shared.PredictiveDialerConfig;
+import org.openapis.openapi.models.shared.ProgressiveDialerConfig;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateCampaignRequest req = new CreateCampaignRequest() {{
-                requestBody = new CreateCampaignRequestBody() {{
-                    connectInstanceId = "corrupti";
-                    dialerConfig = new CreateCampaignRequestBodyDialerConfig() {{
-                        predictiveDialerConfig = new PredictiveDialerConfig() {{
-                            bandwidthAllocation = 5928.45;
-                        }};
-                        progressiveDialerConfig = new ProgressiveDialerConfig() {{
-                            bandwidthAllocation = 7151.9;
-                        }};
-                    }};
-                    name = "quibusdam";
-                    outboundCallConfig = new CreateCampaignRequestBodyOutboundCallConfig() {{
-                        answerMachineDetectionConfig = new AnswerMachineDetectionConfig() {{
-                            enableAnswerMachineDetection = false;
-                        }};
-                        connectContactFlowId = "unde";
-                        connectQueueId = "nulla";
-                        connectSourcePhoneNumber = "corrupti";
-                    }};
-                    tags = new java.util.HashMap<String, String>() {{
-                        put("vel", "error");
-                        put("deserunt", "suscipit");
-                        put("iure", "magnam");
-                        put("debitis", "ipsa");
-                    }};
-                }};
-                xAmzAlgorithm = "delectus";
-                xAmzContentSha256 = "tempora";
-                xAmzCredential = "suscipit";
-                xAmzDate = "molestiae";
-                xAmzSecurityToken = "minus";
-                xAmzSignature = "placeat";
-                xAmzSignedHeaders = "voluptatum";
-            }}            
+            CreateCampaignRequest req = new CreateCampaignRequest(                new CreateCampaignRequestBody("provident",                 new CreateCampaignRequestBodyDialerConfig() {{
+                                                predictiveDialerConfig = new PredictiveDialerConfig(7151.9);;
+                                                progressiveDialerConfig = new ProgressiveDialerConfig(8442.66);;
+                                            }};, "unde",                 new CreateCampaignRequestBodyOutboundCallConfig() {{
+                                                answerMachineDetectionConfig = new AnswerMachineDetectionConfig(false);;
+                                                connectContactFlowId = "nulla";
+                                                connectQueueId = "corrupti";
+                                                connectSourcePhoneNumber = "illum";
+                                            }};) {{
+                                tags = new java.util.HashMap<String, String>() {{
+                                    put("error", "deserunt");
+                                    put("suscipit", "iure");
+                                }};
+                            }};) {{
+                xAmzAlgorithm = "magnam";
+                xAmzContentSha256 = "debitis";
+                xAmzCredential = "ipsa";
+                xAmzDate = "delectus";
+                xAmzSecurityToken = "tempora";
+                xAmzSignature = "suscipit";
+                xAmzSignedHeaders = "molestiae";
+            }};            
 
             CreateCampaignResponse res = sdk.createCampaign(req);
 
-            if (res.createCampaignResponse.isPresent()) {
+            if (res.createCampaignResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

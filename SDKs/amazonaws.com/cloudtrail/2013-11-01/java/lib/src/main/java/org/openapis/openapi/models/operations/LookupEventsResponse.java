@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LookupEventsResponse {
     
     public String contentType;
+
     public LookupEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class LookupEventsResponse {
      */
     
     public Object invalidEventCategoryException;
+
     public LookupEventsResponse withInvalidEventCategoryException(Object invalidEventCategoryException) {
         this.invalidEventCategoryException = invalidEventCategoryException;
         return this;
@@ -29,6 +32,7 @@ public class LookupEventsResponse {
      */
     
     public Object invalidLookupAttributesException;
+
     public LookupEventsResponse withInvalidLookupAttributesException(Object invalidLookupAttributesException) {
         this.invalidLookupAttributesException = invalidLookupAttributesException;
         return this;
@@ -39,6 +43,7 @@ public class LookupEventsResponse {
      */
     
     public Object invalidMaxResultsException;
+
     public LookupEventsResponse withInvalidMaxResultsException(Object invalidMaxResultsException) {
         this.invalidMaxResultsException = invalidMaxResultsException;
         return this;
@@ -49,6 +54,7 @@ public class LookupEventsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public LookupEventsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class LookupEventsResponse {
      */
     
     public Object invalidTimeRangeException;
+
     public LookupEventsResponse withInvalidTimeRangeException(Object invalidTimeRangeException) {
         this.invalidTimeRangeException = invalidTimeRangeException;
         return this;
@@ -69,6 +76,7 @@ public class LookupEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.LookupEventsResponse lookupEventsResponse;
+
     public LookupEventsResponse withLookupEventsResponse(org.openapis.openapi.models.shared.LookupEventsResponse lookupEventsResponse) {
         this.lookupEventsResponse = lookupEventsResponse;
         return this;
@@ -79,6 +87,7 @@ public class LookupEventsResponse {
      */
     
     public Object operationNotPermittedException;
+
     public LookupEventsResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -86,6 +95,7 @@ public class LookupEventsResponse {
     
     
     public Integer statusCode;
+
     public LookupEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class LookupEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LookupEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class LookupEventsResponse {
      */
     
     public Object unsupportedOperationException;
+
     public LookupEventsResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public LookupEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

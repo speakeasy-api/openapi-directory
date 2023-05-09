@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UnlockRuleResponse {
@@ -12,6 +13,7 @@ public class UnlockRuleResponse {
      */
     
     public Object conflictException;
+
     public UnlockRuleResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UnlockRuleResponse {
     
     
     public String contentType;
+
     public UnlockRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UnlockRuleResponse {
      */
     
     public Object internalServerException;
+
     public UnlockRuleResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UnlockRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UnlockRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UnlockRuleResponse {
     
     
     public Integer statusCode;
+
     public UnlockRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UnlockRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UnlockRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UnlockRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.UnlockRuleResponse unlockRuleResponse;
+
     public UnlockRuleResponse withUnlockRuleResponse(org.openapis.openapi.models.shared.UnlockRuleResponse unlockRuleResponse) {
         this.unlockRuleResponse = unlockRuleResponse;
         return this;
@@ -73,9 +81,14 @@ public class UnlockRuleResponse {
      */
     
     public Object validationException;
+
     public UnlockRuleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UnlockRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AnswerMachineDetectionConfig {
     @JsonProperty("enableAnswerMachineDetection")
     public Boolean enableAnswerMachineDetection;
+
     public AnswerMachineDetectionConfig withEnableAnswerMachineDetection(Boolean enableAnswerMachineDetection) {
         this.enableAnswerMachineDetection = enableAnswerMachineDetection;
         return this;
     }
     
+    public AnswerMachineDetectionConfig(@JsonProperty("enableAnswerMachineDetection") Boolean enableAnswerMachineDetection) {
+        this.enableAnswerMachineDetection = enableAnswerMachineDetection;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteVoiceTemplateResponse {
@@ -12,6 +13,7 @@ public class DeleteVoiceTemplateResponse {
      */
     
     public Object badRequestException;
+
     public DeleteVoiceTemplateResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteVoiceTemplateResponse {
     
     
     public String contentType;
+
     public DeleteVoiceTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteVoiceTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteVoiceTemplateResponse deleteVoiceTemplateResponse;
+
     public DeleteVoiceTemplateResponse withDeleteVoiceTemplateResponse(org.openapis.openapi.models.shared.DeleteVoiceTemplateResponse deleteVoiceTemplateResponse) {
         this.deleteVoiceTemplateResponse = deleteVoiceTemplateResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteVoiceTemplateResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteVoiceTemplateResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteVoiceTemplateResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteVoiceTemplateResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteVoiceTemplateResponse {
      */
     
     public Object methodNotAllowedException;
+
     public DeleteVoiceTemplateResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteVoiceTemplateResponse {
      */
     
     public Object notFoundException;
+
     public DeleteVoiceTemplateResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteVoiceTemplateResponse {
      */
     
     public Object payloadTooLargeException;
+
     public DeleteVoiceTemplateResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteVoiceTemplateResponse {
     
     
     public Integer statusCode;
+
     public DeleteVoiceTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteVoiceTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteVoiceTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteVoiceTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteVoiceTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteVoiceTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

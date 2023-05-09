@@ -15,6 +15,7 @@ public class UltimateParentCompanyBusinessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalBusinessName")
     public String legalBusinessName;
+
     public UltimateParentCompanyBusinessDetails withLegalBusinessName(String legalBusinessName) {
         this.legalBusinessName = legalBusinessName;
         return this;
@@ -26,6 +27,7 @@ public class UltimateParentCompanyBusinessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationNumber")
     public String registrationNumber;
+
     public UltimateParentCompanyBusinessDetails withRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
         return this;
@@ -37,6 +39,7 @@ public class UltimateParentCompanyBusinessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stockExchange")
     public String stockExchange;
+
     public UltimateParentCompanyBusinessDetails withStockExchange(String stockExchange) {
         this.stockExchange = stockExchange;
         return this;
@@ -48,6 +51,7 @@ public class UltimateParentCompanyBusinessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stockNumber")
     public String stockNumber;
+
     public UltimateParentCompanyBusinessDetails withStockNumber(String stockNumber) {
         this.stockNumber = stockNumber;
         return this;
@@ -59,9 +63,11 @@ public class UltimateParentCompanyBusinessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stockTicker")
     public String stockTicker;
+
     public UltimateParentCompanyBusinessDetails withStockTicker(String stockTicker) {
         this.stockTicker = stockTicker;
         return this;
     }
     
+    public UltimateParentCompanyBusinessDetails(){}
 }

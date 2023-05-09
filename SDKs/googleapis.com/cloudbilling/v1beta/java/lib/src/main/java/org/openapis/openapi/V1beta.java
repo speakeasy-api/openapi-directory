@@ -61,11 +61,9 @@ public class V1beta {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudbillingEstimateCostScenarioResponse res = new org.openapis.openapi.models.operations.CloudbillingEstimateCostScenarioResponse() {{
+        org.openapis.openapi.models.operations.CloudbillingEstimateCostScenarioResponse res = new org.openapis.openapi.models.operations.CloudbillingEstimateCostScenarioResponse(contentType, httpRes.statusCode()) {{
             estimateCostScenarioWithListPriceResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,9 +15,11 @@ public class LimitExceededException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public LimitExceededException withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public LimitExceededException(){}
 }

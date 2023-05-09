@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRestoreTableFromClusterSnapshotRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRestoreTableFromClusterSnapshotActionEnum action;
+
     public GETRestoreTableFromClusterSnapshotRequest withAction(GETRestoreTableFromClusterSnapshotActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETRestoreTableFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
     public String clusterIdentifier;
+
     public GETRestoreTableFromClusterSnapshotRequest withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -29,6 +32,7 @@ public class GETRestoreTableFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableCaseSensitiveIdentifier")
     public Boolean enableCaseSensitiveIdentifier;
+
     public GETRestoreTableFromClusterSnapshotRequest withEnableCaseSensitiveIdentifier(Boolean enableCaseSensitiveIdentifier) {
         this.enableCaseSensitiveIdentifier = enableCaseSensitiveIdentifier;
         return this;
@@ -39,6 +43,7 @@ public class GETRestoreTableFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NewTableName")
     public String newTableName;
+
     public GETRestoreTableFromClusterSnapshotRequest withNewTableName(String newTableName) {
         this.newTableName = newTableName;
         return this;
@@ -49,6 +54,7 @@ public class GETRestoreTableFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotIdentifier")
     public String snapshotIdentifier;
+
     public GETRestoreTableFromClusterSnapshotRequest withSnapshotIdentifier(String snapshotIdentifier) {
         this.snapshotIdentifier = snapshotIdentifier;
         return this;
@@ -59,6 +65,7 @@ public class GETRestoreTableFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceDatabaseName")
     public String sourceDatabaseName;
+
     public GETRestoreTableFromClusterSnapshotRequest withSourceDatabaseName(String sourceDatabaseName) {
         this.sourceDatabaseName = sourceDatabaseName;
         return this;
@@ -69,6 +76,7 @@ public class GETRestoreTableFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceSchemaName")
     public String sourceSchemaName;
+
     public GETRestoreTableFromClusterSnapshotRequest withSourceSchemaName(String sourceSchemaName) {
         this.sourceSchemaName = sourceSchemaName;
         return this;
@@ -79,6 +87,7 @@ public class GETRestoreTableFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceTableName")
     public String sourceTableName;
+
     public GETRestoreTableFromClusterSnapshotRequest withSourceTableName(String sourceTableName) {
         this.sourceTableName = sourceTableName;
         return this;
@@ -89,6 +98,7 @@ public class GETRestoreTableFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetDatabaseName")
     public String targetDatabaseName;
+
     public GETRestoreTableFromClusterSnapshotRequest withTargetDatabaseName(String targetDatabaseName) {
         this.targetDatabaseName = targetDatabaseName;
         return this;
@@ -99,6 +109,7 @@ public class GETRestoreTableFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetSchemaName")
     public String targetSchemaName;
+
     public GETRestoreTableFromClusterSnapshotRequest withTargetSchemaName(String targetSchemaName) {
         this.targetSchemaName = targetSchemaName;
         return this;
@@ -106,6 +117,7 @@ public class GETRestoreTableFromClusterSnapshotRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRestoreTableFromClusterSnapshotVersionEnum version;
+
     public GETRestoreTableFromClusterSnapshotRequest withVersion(GETRestoreTableFromClusterSnapshotVersionEnum version) {
         this.version = version;
         return this;
@@ -113,6 +125,7 @@ public class GETRestoreTableFromClusterSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRestoreTableFromClusterSnapshotRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -120,6 +133,7 @@ public class GETRestoreTableFromClusterSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRestoreTableFromClusterSnapshotRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -127,6 +141,7 @@ public class GETRestoreTableFromClusterSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRestoreTableFromClusterSnapshotRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -134,6 +149,7 @@ public class GETRestoreTableFromClusterSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRestoreTableFromClusterSnapshotRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -141,6 +157,7 @@ public class GETRestoreTableFromClusterSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRestoreTableFromClusterSnapshotRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -148,6 +165,7 @@ public class GETRestoreTableFromClusterSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRestoreTableFromClusterSnapshotRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -155,9 +173,19 @@ public class GETRestoreTableFromClusterSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRestoreTableFromClusterSnapshotRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRestoreTableFromClusterSnapshotRequest(@JsonProperty("Action") GETRestoreTableFromClusterSnapshotActionEnum action, @JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("NewTableName") String newTableName, @JsonProperty("SnapshotIdentifier") String snapshotIdentifier, @JsonProperty("SourceDatabaseName") String sourceDatabaseName, @JsonProperty("SourceTableName") String sourceTableName, @JsonProperty("Version") GETRestoreTableFromClusterSnapshotVersionEnum version) {
+        this.action = action;
+        this.clusterIdentifier = clusterIdentifier;
+        this.newTableName = newTableName;
+        this.snapshotIdentifier = snapshotIdentifier;
+        this.sourceDatabaseName = sourceDatabaseName;
+        this.sourceTableName = sourceTableName;
+        this.version = version;
+  }
 }

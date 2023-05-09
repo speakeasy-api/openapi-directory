@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class TagWikisLastExcerptEditor {
     
     public Long acceptRate;
+
     public TagWikisLastExcerptEditor withAcceptRate(Long acceptRate) {
         this.acceptRate = acceptRate;
         return this;
@@ -16,6 +17,7 @@ public class TagWikisLastExcerptEditor {
     
     
     public TagWikisLastExcerptEditorBadgeCounts badgeCounts;
+
     public TagWikisLastExcerptEditor withBadgeCounts(TagWikisLastExcerptEditorBadgeCounts badgeCounts) {
         this.badgeCounts = badgeCounts;
         return this;
@@ -23,6 +25,7 @@ public class TagWikisLastExcerptEditor {
     
     
     public String displayName;
+
     public TagWikisLastExcerptEditor withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -30,6 +33,7 @@ public class TagWikisLastExcerptEditor {
     
     
     public String link;
+
     public TagWikisLastExcerptEditor withLink(String link) {
         this.link = link;
         return this;
@@ -37,6 +41,7 @@ public class TagWikisLastExcerptEditor {
     
     
     public String profileImage;
+
     public TagWikisLastExcerptEditor withProfileImage(String profileImage) {
         this.profileImage = profileImage;
         return this;
@@ -44,6 +49,7 @@ public class TagWikisLastExcerptEditor {
     
     
     public Long reputation;
+
     public TagWikisLastExcerptEditor withReputation(Long reputation) {
         this.reputation = reputation;
         return this;
@@ -51,6 +57,7 @@ public class TagWikisLastExcerptEditor {
     
     
     public Long userId;
+
     public TagWikisLastExcerptEditor withUserId(Long userId) {
         this.userId = userId;
         return this;
@@ -58,9 +65,11 @@ public class TagWikisLastExcerptEditor {
     
     
     public String userType;
+
     public TagWikisLastExcerptEditor withUserType(String userType) {
         this.userType = userType;
         return this;
     }
     
+    public TagWikisLastExcerptEditor(){}
 }

@@ -15,6 +15,7 @@ public class RuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LongDescription")
     public String longDescription;
+
     public RuleMetadata withLongDescription(String longDescription) {
         this.longDescription = longDescription;
         return this;
@@ -23,6 +24,7 @@ public class RuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleId")
     public String ruleId;
+
     public RuleMetadata withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
@@ -31,6 +33,7 @@ public class RuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleName")
     public String ruleName;
+
     public RuleMetadata withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
@@ -39,6 +42,7 @@ public class RuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleTags")
     public String[] ruleTags;
+
     public RuleMetadata withRuleTags(String[] ruleTags) {
         this.ruleTags = ruleTags;
         return this;
@@ -47,9 +51,11 @@ public class RuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortDescription")
     public String shortDescription;
+
     public RuleMetadata withShortDescription(String shortDescription) {
         this.shortDescription = shortDescription;
         return this;
     }
     
+    public RuleMetadata(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAutoMergingPreviewResponse {
@@ -12,6 +13,7 @@ public class GetAutoMergingPreviewResponse {
      */
     
     public Object accessDeniedException;
+
     public GetAutoMergingPreviewResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetAutoMergingPreviewResponse {
      */
     
     public Object badRequestException;
+
     public GetAutoMergingPreviewResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class GetAutoMergingPreviewResponse {
     
     
     public String contentType;
+
     public GetAutoMergingPreviewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetAutoMergingPreviewResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAutoMergingPreviewResponse getAutoMergingPreviewResponse;
+
     public GetAutoMergingPreviewResponse withGetAutoMergingPreviewResponse(org.openapis.openapi.models.shared.GetAutoMergingPreviewResponse getAutoMergingPreviewResponse) {
         this.getAutoMergingPreviewResponse = getAutoMergingPreviewResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetAutoMergingPreviewResponse {
      */
     
     public Object internalServerException;
+
     public GetAutoMergingPreviewResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class GetAutoMergingPreviewResponse {
     
     
     public Integer statusCode;
+
     public GetAutoMergingPreviewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetAutoMergingPreviewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAutoMergingPreviewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetAutoMergingPreviewResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAutoMergingPreviewResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class GetAutoMergingPreviewResponse {
      */
     
     public Object throttlingException;
+
     public GetAutoMergingPreviewResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetAutoMergingPreviewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

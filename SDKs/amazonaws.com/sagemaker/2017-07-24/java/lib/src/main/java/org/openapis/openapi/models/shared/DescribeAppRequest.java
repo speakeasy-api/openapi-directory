@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAppRequest {
     @JsonProperty("AppName")
     public String appName;
+
     public DescribeAppRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -18,6 +19,7 @@ public class DescribeAppRequest {
     
     @JsonProperty("AppType")
     public AppTypeEnum appType;
+
     public DescribeAppRequest withAppType(AppTypeEnum appType) {
         this.appType = appType;
         return this;
@@ -25,6 +27,7 @@ public class DescribeAppRequest {
     
     @JsonProperty("DomainId")
     public String domainId;
+
     public DescribeAppRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpaceName")
     public String spaceName;
+
     public DescribeAppRequest withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
@@ -41,9 +45,15 @@ public class DescribeAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserProfileName")
     public String userProfileName;
+
     public DescribeAppRequest withUserProfileName(String userProfileName) {
         this.userProfileName = userProfileName;
         return this;
     }
     
+    public DescribeAppRequest(@JsonProperty("AppName") String appName, @JsonProperty("AppType") AppTypeEnum appType, @JsonProperty("DomainId") String domainId) {
+        this.appName = appName;
+        this.appType = appType;
+        this.domainId = domainId;
+  }
 }

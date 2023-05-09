@@ -15,6 +15,7 @@ public class ConfluenceAttachmentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachmentFieldMappings")
     public ConfluenceAttachmentToIndexFieldMapping[] attachmentFieldMappings;
+
     public ConfluenceAttachmentConfiguration withAttachmentFieldMappings(ConfluenceAttachmentToIndexFieldMapping[] attachmentFieldMappings) {
         this.attachmentFieldMappings = attachmentFieldMappings;
         return this;
@@ -23,9 +24,11 @@ public class ConfluenceAttachmentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlAttachments")
     public Boolean crawlAttachments;
+
     public ConfluenceAttachmentConfiguration withCrawlAttachments(Boolean crawlAttachments) {
         this.crawlAttachments = crawlAttachments;
         return this;
     }
     
+    public ConfluenceAttachmentConfiguration(){}
 }

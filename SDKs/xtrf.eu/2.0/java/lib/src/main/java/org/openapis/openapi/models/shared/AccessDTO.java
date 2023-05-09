@@ -12,6 +12,7 @@ public class AccessDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("change")
     public Boolean change;
+
     public AccessDTO withChange(Boolean change) {
         this.change = change;
         return this;
@@ -20,9 +21,11 @@ public class AccessDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delete")
     public Boolean delete;
+
     public AccessDTO withDelete(Boolean delete) {
         this.delete = delete;
         return this;
     }
     
+    public AccessDTO(){}
 }

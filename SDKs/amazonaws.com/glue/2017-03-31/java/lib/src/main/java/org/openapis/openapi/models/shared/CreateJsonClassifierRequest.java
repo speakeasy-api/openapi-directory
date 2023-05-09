@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateJsonClassifierRequest {
     @JsonProperty("JsonPath")
     public String jsonPath;
+
     public CreateJsonClassifierRequest withJsonPath(String jsonPath) {
         this.jsonPath = jsonPath;
         return this;
@@ -19,9 +20,14 @@ public class CreateJsonClassifierRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateJsonClassifierRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateJsonClassifierRequest(@JsonProperty("JsonPath") String jsonPath, @JsonProperty("Name") String name) {
+        this.jsonPath = jsonPath;
+        this.name = name;
+  }
 }

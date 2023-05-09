@@ -56,10 +56,8 @@ public class Bundles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteBundlesIdResponse res = new org.openapis.openapi.models.operations.DeleteBundlesIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteBundlesIdResponse res = new org.openapis.openapi.models.operations.DeleteBundlesIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 409 || httpRes.statusCode() == 412 || httpRes.statusCode() == 422 || httpRes.statusCode() == 423 || httpRes.statusCode() == 429) {
@@ -95,11 +93,9 @@ public class Bundles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBundlesResponse res = new org.openapis.openapi.models.operations.GetBundlesResponse() {{
+        org.openapis.openapi.models.operations.GetBundlesResponse res = new org.openapis.openapi.models.operations.GetBundlesResponse(contentType, httpRes.statusCode()) {{
             bundleEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,11 +132,9 @@ public class Bundles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBundlesIdResponse res = new org.openapis.openapi.models.operations.GetBundlesIdResponse() {{
+        org.openapis.openapi.models.operations.GetBundlesIdResponse res = new org.openapis.openapi.models.operations.GetBundlesIdResponse(contentType, httpRes.statusCode()) {{
             bundleEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -179,11 +173,9 @@ public class Bundles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchBundlesIdResponse res = new org.openapis.openapi.models.operations.PatchBundlesIdResponse() {{
+        org.openapis.openapi.models.operations.PatchBundlesIdResponse res = new org.openapis.openapi.models.operations.PatchBundlesIdResponse(contentType, httpRes.statusCode()) {{
             bundleEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -222,11 +214,9 @@ public class Bundles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostBundlesResponse res = new org.openapis.openapi.models.operations.PostBundlesResponse() {{
+        org.openapis.openapi.models.operations.PostBundlesResponse res = new org.openapis.openapi.models.operations.PostBundlesResponse(contentType, httpRes.statusCode()) {{
             bundleEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -265,10 +255,8 @@ public class Bundles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostBundlesIdShareResponse res = new org.openapis.openapi.models.operations.PostBundlesIdShareResponse() {{
+        org.openapis.openapi.models.operations.PostBundlesIdShareResponse res = new org.openapis.openapi.models.operations.PostBundlesIdShareResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 409 || httpRes.statusCode() == 412 || httpRes.statusCode() == 422 || httpRes.statusCode() == 423 || httpRes.statusCode() == 429) {

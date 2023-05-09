@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeSolutionVersionResponse {
     
     public String contentType;
+
     public DescribeSolutionVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeSolutionVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeSolutionVersionResponse describeSolutionVersionResponse;
+
     public DescribeSolutionVersionResponse withDescribeSolutionVersionResponse(org.openapis.openapi.models.shared.DescribeSolutionVersionResponse describeSolutionVersionResponse) {
         this.describeSolutionVersionResponse = describeSolutionVersionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeSolutionVersionResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeSolutionVersionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeSolutionVersionResponse {
     
     
     public Integer statusCode;
+
     public DescribeSolutionVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeSolutionVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeSolutionVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeSolutionVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeSolutionVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeSolutionVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

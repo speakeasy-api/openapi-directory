@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1EvaluationCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluatedDocumentsCount")
     public Integer evaluatedDocumentsCount;
+
     public GoogleCloudDocumentaiV1EvaluationCounters withEvaluatedDocumentsCount(Integer evaluatedDocumentsCount) {
         this.evaluatedDocumentsCount = evaluatedDocumentsCount;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1EvaluationCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedDocumentsCount")
     public Integer failedDocumentsCount;
+
     public GoogleCloudDocumentaiV1EvaluationCounters withFailedDocumentsCount(Integer failedDocumentsCount) {
         this.failedDocumentsCount = failedDocumentsCount;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1EvaluationCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputDocumentsCount")
     public Integer inputDocumentsCount;
+
     public GoogleCloudDocumentaiV1EvaluationCounters withInputDocumentsCount(Integer inputDocumentsCount) {
         this.inputDocumentsCount = inputDocumentsCount;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDocumentaiV1EvaluationCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidDocumentsCount")
     public Integer invalidDocumentsCount;
+
     public GoogleCloudDocumentaiV1EvaluationCounters withInvalidDocumentsCount(Integer invalidDocumentsCount) {
         this.invalidDocumentsCount = invalidDocumentsCount;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1EvaluationCounters(){}
 }

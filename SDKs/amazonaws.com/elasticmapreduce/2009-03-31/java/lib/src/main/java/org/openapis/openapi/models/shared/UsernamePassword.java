@@ -15,6 +15,7 @@ public class UsernamePassword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Password")
     public String password;
+
     public UsernamePassword withPassword(String password) {
         this.password = password;
         return this;
@@ -23,9 +24,11 @@ public class UsernamePassword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public UsernamePassword withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public UsernamePassword(){}
 }

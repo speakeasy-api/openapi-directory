@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AnalysisRuleList {
     @JsonProperty("joinColumns")
     public String[] joinColumns;
+
     public AnalysisRuleList withJoinColumns(String[] joinColumns) {
         this.joinColumns = joinColumns;
         return this;
@@ -19,9 +20,14 @@ public class AnalysisRuleList {
     
     @JsonProperty("listColumns")
     public String[] listColumns;
+
     public AnalysisRuleList withListColumns(String[] listColumns) {
         this.listColumns = listColumns;
         return this;
     }
     
+    public AnalysisRuleList(@JsonProperty("joinColumns") String[] joinColumns, @JsonProperty("listColumns") String[] listColumns) {
+        this.joinColumns = joinColumns;
+        this.listColumns = listColumns;
+  }
 }

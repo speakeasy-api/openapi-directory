@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteEndpointRequest {
     @JsonProperty("Name")
     public String name;
+
     public DeleteEndpointRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeleteEndpointRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

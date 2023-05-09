@@ -12,9 +12,13 @@ public class DisconnectSourceServerRequestBody {
      */
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public DisconnectSourceServerRequestBody withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
     }
     
+    public DisconnectSourceServerRequestBody(@JsonProperty("sourceServerID") String sourceServerID) {
+        this.sourceServerID = sourceServerID;
+  }
 }

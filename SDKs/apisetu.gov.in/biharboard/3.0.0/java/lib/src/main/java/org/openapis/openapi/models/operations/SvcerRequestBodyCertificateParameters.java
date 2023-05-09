@@ -12,6 +12,7 @@ public class SvcerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public SvcerRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class SvcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public SvcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class SvcerRequestBodyCertificateParameters {
      */
     @JsonProperty("RROLL")
     public String rroll;
+
     public SvcerRequestBodyCertificateParameters withRroll(String rroll) {
         this.rroll = rroll;
         return this;
@@ -42,6 +45,7 @@ public class SvcerRequestBodyCertificateParameters {
      */
     @JsonProperty("RROLL_CODE")
     public String rrollCode;
+
     public SvcerRequestBodyCertificateParameters withRrollCode(String rrollCode) {
         this.rrollCode = rrollCode;
         return this;
@@ -52,9 +56,17 @@ public class SvcerRequestBodyCertificateParameters {
      */
     @JsonProperty("year")
     public String year;
+
     public SvcerRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public SvcerRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("RROLL") String rroll, @JsonProperty("RROLL_CODE") String rrollCode, @JsonProperty("year") String year) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.rroll = rroll;
+        this.rrollCode = rrollCode;
+        this.year = year;
+  }
 }

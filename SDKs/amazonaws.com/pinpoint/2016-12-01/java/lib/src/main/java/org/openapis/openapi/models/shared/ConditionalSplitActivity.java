@@ -15,6 +15,7 @@ public class ConditionalSplitActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Condition")
     public Condition condition;
+
     public ConditionalSplitActivity withCondition(Condition condition) {
         this.condition = condition;
         return this;
@@ -23,6 +24,7 @@ public class ConditionalSplitActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationWaitTime")
     public WaitTime evaluationWaitTime;
+
     public ConditionalSplitActivity withEvaluationWaitTime(WaitTime evaluationWaitTime) {
         this.evaluationWaitTime = evaluationWaitTime;
         return this;
@@ -31,6 +33,7 @@ public class ConditionalSplitActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FalseActivity")
     public String falseActivity;
+
     public ConditionalSplitActivity withFalseActivity(String falseActivity) {
         this.falseActivity = falseActivity;
         return this;
@@ -39,9 +42,11 @@ public class ConditionalSplitActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrueActivity")
     public String trueActivity;
+
     public ConditionalSplitActivity withTrueActivity(String trueActivity) {
         this.trueActivity = trueActivity;
         return this;
     }
     
+    public ConditionalSplitActivity(){}
 }

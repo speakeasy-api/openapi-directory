@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCollectionRequest {
@@ -17,6 +18,7 @@ public class GetCollectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
     public String collection;
+
     public GetCollectionRequest withCollection(String collection) {
         this.collection = collection;
         return this;
@@ -28,9 +30,13 @@ public class GetCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sharingKey")
     public String sharingKey;
+
     public GetCollectionRequest withSharingKey(String sharingKey) {
         this.sharingKey = sharingKey;
         return this;
     }
     
+    public GetCollectionRequest(@JsonProperty("collection") String collection) {
+        this.collection = collection;
+  }
 }

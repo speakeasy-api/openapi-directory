@@ -12,9 +12,11 @@ public class LocationsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public LocationInputModel[] locations;
+
     public LocationsInputModel withLocations(LocationInputModel[] locations) {
         this.locations = locations;
         return this;
     }
     
+    public LocationsInputModel(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPresidentialFinancialSummaryResponse {
     
     public String contentType;
+
     public GetPresidentialFinancialSummaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetPresidentialFinancialSummaryResponse {
     
     
     public org.openapis.openapi.models.shared.PresidentialSummaryPage presidentialSummaryPage;
+
     public GetPresidentialFinancialSummaryResponse withPresidentialSummaryPage(org.openapis.openapi.models.shared.PresidentialSummaryPage presidentialSummaryPage) {
         this.presidentialSummaryPage = presidentialSummaryPage;
         return this;
@@ -23,6 +26,7 @@ public class GetPresidentialFinancialSummaryResponse {
     
     
     public Integer statusCode;
+
     public GetPresidentialFinancialSummaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetPresidentialFinancialSummaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPresidentialFinancialSummaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPresidentialFinancialSummaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

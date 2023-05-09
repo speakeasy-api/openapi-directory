@@ -18,9 +18,11 @@ public class SitemapsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sitemap")
     public WmxSitemap[] sitemap;
+
     public SitemapsListResponse withSitemap(WmxSitemap[] sitemap) {
         this.sitemap = sitemap;
         return this;
     }
     
+    public SitemapsListResponse(){}
 }

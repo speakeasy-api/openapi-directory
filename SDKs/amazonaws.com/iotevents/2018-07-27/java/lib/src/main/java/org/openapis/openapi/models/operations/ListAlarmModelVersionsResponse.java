@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAlarmModelVersionsResponse {
     
     public String contentType;
+
     public ListAlarmModelVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAlarmModelVersionsResponse {
      */
     
     public Object internalFailureException;
+
     public ListAlarmModelVersionsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListAlarmModelVersionsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListAlarmModelVersionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListAlarmModelVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAlarmModelVersionsResponse listAlarmModelVersionsResponse;
+
     public ListAlarmModelVersionsResponse withListAlarmModelVersionsResponse(org.openapis.openapi.models.shared.ListAlarmModelVersionsResponse listAlarmModelVersionsResponse) {
         this.listAlarmModelVersionsResponse = listAlarmModelVersionsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListAlarmModelVersionsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListAlarmModelVersionsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class ListAlarmModelVersionsResponse {
     
     
     public Integer statusCode;
+
     public ListAlarmModelVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListAlarmModelVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAlarmModelVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListAlarmModelVersionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAlarmModelVersionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class ListAlarmModelVersionsResponse {
      */
     
     public Object throttlingException;
+
     public ListAlarmModelVersionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListAlarmModelVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

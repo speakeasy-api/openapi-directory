@@ -18,9 +18,11 @@ public class IapCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iapTestServiceAccountInfo")
     public IapTestServiceAccountInfo iapTestServiceAccountInfo;
+
     public IapCredential withIapTestServiceAccountInfo(IapTestServiceAccountInfo iapTestServiceAccountInfo) {
         this.iapTestServiceAccountInfo = iapTestServiceAccountInfo;
         return this;
     }
     
+    public IapCredential(){}
 }

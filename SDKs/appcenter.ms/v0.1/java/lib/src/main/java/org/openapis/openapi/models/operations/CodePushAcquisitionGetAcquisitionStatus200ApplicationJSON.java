@@ -15,6 +15,7 @@ public class CodePushAcquisitionGetAcquisitionStatus200ApplicationJSON {
      */
     @JsonProperty("code")
     public String code;
+
     public CodePushAcquisitionGetAcquisitionStatus200ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class CodePushAcquisitionGetAcquisitionStatus200ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public CodePushAcquisitionGetAcquisitionStatus200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CodePushAcquisitionGetAcquisitionStatus200ApplicationJSON(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

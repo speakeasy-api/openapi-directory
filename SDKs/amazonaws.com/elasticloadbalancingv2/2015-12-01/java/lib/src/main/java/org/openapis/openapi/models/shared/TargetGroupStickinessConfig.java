@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TargetGroupStickinessConfig {
     
     public Long durationSeconds;
+
     public TargetGroupStickinessConfig withDurationSeconds(Long durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -19,9 +20,11 @@ public class TargetGroupStickinessConfig {
     
     
     public Boolean enabled;
+
     public TargetGroupStickinessConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public TargetGroupStickinessConfig(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max")
     public Float max;
+
     public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange withMax(Float max) {
         this.max = max;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min")
     public Float min;
+
     public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange withMin(Float min) {
         this.min = min;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange(){}
 }

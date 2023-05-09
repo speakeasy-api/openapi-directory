@@ -15,9 +15,11 @@ public class GetBucketBundlesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundles")
     public BucketBundle[] bundles;
+
     public GetBucketBundlesResult withBundles(BucketBundle[] bundles) {
         this.bundles = bundles;
         return this;
     }
     
+    public GetBucketBundlesResult(){}
 }

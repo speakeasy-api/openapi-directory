@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPermissionsResponse {
@@ -12,6 +13,7 @@ public class ListPermissionsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListPermissionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListPermissionsResponse {
     
     
     public String contentType;
+
     public ListPermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListPermissionsResponse {
      */
     
     public Object internalServerException;
+
     public ListPermissionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListPermissionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPermissionsResponse listPermissionsResponse;
+
     public ListPermissionsResponse withListPermissionsResponse(org.openapis.openapi.models.shared.ListPermissionsResponse listPermissionsResponse) {
         this.listPermissionsResponse = listPermissionsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListPermissionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListPermissionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListPermissionsResponse {
     
     
     public Integer statusCode;
+
     public ListPermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListPermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListPermissionsResponse {
      */
     
     public Object throttlingException;
+
     public ListPermissionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListPermissionsResponse {
      */
     
     public Object validationException;
+
     public ListPermissionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListPermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

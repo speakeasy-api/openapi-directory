@@ -18,6 +18,7 @@ public class BackendServiceCdnPolicyNegativeCachingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Integer code;
+
     public BackendServiceCdnPolicyNegativeCachingPolicy withCode(Integer code) {
         this.code = code;
         return this;
@@ -29,9 +30,11 @@ public class BackendServiceCdnPolicyNegativeCachingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public Integer ttl;
+
     public BackendServiceCdnPolicyNegativeCachingPolicy withTtl(Integer ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public BackendServiceCdnPolicyNegativeCachingPolicy(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmpv3AccessAddRequest {
@@ -12,6 +13,7 @@ public class ProtocolSnmpv3AccessAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolSnmpv3AccessAddRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,6 +24,7 @@ public class ProtocolSnmpv3AccessAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contextMatch")
     public String contextMatch;
+
     public ProtocolSnmpv3AccessAddRequest withContextMatch(String contextMatch) {
         this.contextMatch = contextMatch;
         return this;
@@ -32,6 +35,7 @@ public class ProtocolSnmpv3AccessAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupName")
     public String groupName;
+
     public ProtocolSnmpv3AccessAddRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -42,6 +46,7 @@ public class ProtocolSnmpv3AccessAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=notifyView")
     public String notifyView;
+
     public ProtocolSnmpv3AccessAddRequest withNotifyView(String notifyView) {
         this.notifyView = notifyView;
         return this;
@@ -52,6 +57,7 @@ public class ProtocolSnmpv3AccessAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=prefix")
     public String prefix;
+
     public ProtocolSnmpv3AccessAddRequest withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -62,6 +68,7 @@ public class ProtocolSnmpv3AccessAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=readView")
     public String readView;
+
     public ProtocolSnmpv3AccessAddRequest withReadView(String readView) {
         this.readView = readView;
         return this;
@@ -72,6 +79,7 @@ public class ProtocolSnmpv3AccessAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=securityLevel")
     public String securityLevel;
+
     public ProtocolSnmpv3AccessAddRequest withSecurityLevel(String securityLevel) {
         this.securityLevel = securityLevel;
         return this;
@@ -82,6 +90,7 @@ public class ProtocolSnmpv3AccessAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=securityModel")
     public String securityModel;
+
     public ProtocolSnmpv3AccessAddRequest withSecurityModel(String securityModel) {
         this.securityModel = securityModel;
         return this;
@@ -92,9 +101,21 @@ public class ProtocolSnmpv3AccessAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=writeView")
     public String writeView;
+
     public ProtocolSnmpv3AccessAddRequest withWriteView(String writeView) {
         this.writeView = writeView;
         return this;
     }
     
+    public ProtocolSnmpv3AccessAddRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("contextMatch") String contextMatch, @JsonProperty("groupName") String groupName, @JsonProperty("notifyView") String notifyView, @JsonProperty("prefix") String prefix, @JsonProperty("readView") String readView, @JsonProperty("securityLevel") String securityLevel, @JsonProperty("securityModel") String securityModel, @JsonProperty("writeView") String writeView) {
+        this.agentNum = agentNum;
+        this.contextMatch = contextMatch;
+        this.groupName = groupName;
+        this.notifyView = notifyView;
+        this.prefix = prefix;
+        this.readView = readView;
+        this.securityLevel = securityLevel;
+        this.securityModel = securityModel;
+        this.writeView = writeView;
+  }
 }

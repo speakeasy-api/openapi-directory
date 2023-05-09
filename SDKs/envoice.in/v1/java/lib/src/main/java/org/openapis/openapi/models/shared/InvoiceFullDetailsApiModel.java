@@ -23,6 +23,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public InvoiceFullDetailsApiModel withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -34,6 +35,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Activities")
     public InvoiceActivityApiModel[] activities;
+
     public InvoiceFullDetailsApiModel withActivities(InvoiceActivityApiModel[] activities) {
         this.activities = activities;
         return this;
@@ -45,6 +47,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attachments")
     public InvoiceAttachmentApiModel[] attachments;
+
     public InvoiceFullDetailsApiModel withAttachments(InvoiceAttachmentApiModel[] attachments) {
         this.attachments = attachments;
         return this;
@@ -53,6 +56,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Client")
     public ClientDetailsApiModel client;
+
     public InvoiceFullDetailsApiModel withClient(ClientDetailsApiModel client) {
         this.client = client;
         return this;
@@ -64,6 +68,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClonedFromId")
     public Integer clonedFromId;
+
     public InvoiceFullDetailsApiModel withClonedFromId(Integer clonedFromId) {
         this.clonedFromId = clonedFromId;
         return this;
@@ -72,6 +77,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Currency")
     public CurrencyDetailsApiModel currency;
+
     public InvoiceFullDetailsApiModel withCurrency(CurrencyDetailsApiModel currency) {
         this.currency = currency;
         return this;
@@ -83,6 +89,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiscountAmount")
     public Double discountAmount;
+
     public InvoiceFullDetailsApiModel withDiscountAmount(Double discountAmount) {
         this.discountAmount = discountAmount;
         return this;
@@ -96,6 +103,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Duedate")
     public OffsetDateTime duedate;
+
     public InvoiceFullDetailsApiModel withDuedate(OffsetDateTime duedate) {
         this.duedate = duedate;
         return this;
@@ -107,6 +115,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnablePartialPayments")
     public Boolean enablePartialPayments;
+
     public InvoiceFullDetailsApiModel withEnablePartialPayments(Boolean enablePartialPayments) {
         this.enablePartialPayments = enablePartialPayments;
         return this;
@@ -118,6 +127,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public InvoiceFullDetailsApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -129,6 +139,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvoiceCategoryId")
     public Integer invoiceCategoryId;
+
     public InvoiceFullDetailsApiModel withInvoiceCategoryId(Integer invoiceCategoryId) {
         this.invoiceCategoryId = invoiceCategoryId;
         return this;
@@ -142,6 +153,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("IssuedOn")
     public OffsetDateTime issuedOn;
+
     public InvoiceFullDetailsApiModel withIssuedOn(OffsetDateTime issuedOn) {
         this.issuedOn = issuedOn;
         return this;
@@ -153,6 +165,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public InvoiceItemApiModel[] items;
+
     public InvoiceFullDetailsApiModel withItems(InvoiceItemApiModel[] items) {
         this.items = items;
         return this;
@@ -164,6 +177,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notes")
     public String notes;
+
     public InvoiceFullDetailsApiModel withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -175,6 +189,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public String number;
+
     public InvoiceFullDetailsApiModel withNumber(String number) {
         this.number = number;
         return this;
@@ -186,6 +201,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaymentGateways")
     public InvoiceGatewayApiModel[] paymentGateways;
+
     public InvoiceFullDetailsApiModel withPaymentGateways(InvoiceGatewayApiModel[] paymentGateways) {
         this.paymentGateways = paymentGateways;
         return this;
@@ -197,6 +213,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Payments")
     public InvoicePaymentApiModel[] payments;
+
     public InvoiceFullDetailsApiModel withPayments(InvoicePaymentApiModel[] payments) {
         this.payments = payments;
         return this;
@@ -208,6 +225,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PoNumber")
     public String poNumber;
+
     public InvoiceFullDetailsApiModel withPoNumber(String poNumber) {
         this.poNumber = poNumber;
         return this;
@@ -219,6 +237,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecurringProfile")
     public InvoiceRecurringApiModel recurringProfile;
+
     public InvoiceFullDetailsApiModel withRecurringProfile(InvoiceRecurringApiModel recurringProfile) {
         this.recurringProfile = recurringProfile;
         return this;
@@ -230,6 +249,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecurringProfileId")
     public Integer recurringProfileId;
+
     public InvoiceFullDetailsApiModel withRecurringProfileId(Integer recurringProfileId) {
         this.recurringProfileId = recurringProfileId;
         return this;
@@ -241,6 +261,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShouldSendReminders")
     public Boolean shouldSendReminders;
+
     public InvoiceFullDetailsApiModel withShouldSendReminders(Boolean shouldSendReminders) {
         this.shouldSendReminders = shouldSendReminders;
         return this;
@@ -252,6 +273,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public InvoiceFullDetailsApiModelStatusEnum status;
+
     public InvoiceFullDetailsApiModel withStatus(InvoiceFullDetailsApiModelStatusEnum status) {
         this.status = status;
         return this;
@@ -263,6 +285,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubTotalAmount")
     public Double subTotalAmount;
+
     public InvoiceFullDetailsApiModel withSubTotalAmount(Double subTotalAmount) {
         this.subTotalAmount = subTotalAmount;
         return this;
@@ -274,6 +297,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxAmount")
     public Double taxAmount;
+
     public InvoiceFullDetailsApiModel withTaxAmount(Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
@@ -285,6 +309,7 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Terms")
     public String terms;
+
     public InvoiceFullDetailsApiModel withTerms(String terms) {
         this.terms = terms;
         return this;
@@ -296,9 +321,11 @@ public class InvoiceFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalAmount")
     public Double totalAmount;
+
     public InvoiceFullDetailsApiModel withTotalAmount(Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }
     
+    public InvoiceFullDetailsApiModel(){}
 }

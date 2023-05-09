@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateClientVpnEndpointRequestTagSpecifications {
     
     public CreateClientVpnEndpointRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateClientVpnEndpointRequestTagSpecifications withResourceType(CreateClientVpnEndpointRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateClientVpnEndpointRequestTagSpecifications {
     
     
     public CreateClientVpnEndpointRequestTagSpecificationsTags[] tags;
+
     public CreateClientVpnEndpointRequestTagSpecifications withTags(CreateClientVpnEndpointRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateClientVpnEndpointRequestTagSpecifications(){}
 }

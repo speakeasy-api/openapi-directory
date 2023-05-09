@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateAssociationBatchRequest {
     @JsonProperty("Entries")
     public CreateAssociationBatchRequestEntry[] entries;
+
     public CreateAssociationBatchRequest withEntries(CreateAssociationBatchRequestEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public CreateAssociationBatchRequest(@JsonProperty("Entries") CreateAssociationBatchRequestEntry[] entries) {
+        this.entries = entries;
+  }
 }

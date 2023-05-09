@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETUserContentUrlJsonRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
     public String url;
+
     public GETUserContentUrlJsonRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GETUserContentUrlJsonRequest(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateStackSetInput {
     
     public String[] accounts;
+
     public UpdateStackSetInput withAccounts(String[] accounts) {
         this.accounts = accounts;
         return this;
@@ -16,6 +17,7 @@ public class UpdateStackSetInput {
     
     
     public String administrationRoleARN;
+
     public UpdateStackSetInput withAdministrationRoleARN(String administrationRoleARN) {
         this.administrationRoleARN = administrationRoleARN;
         return this;
@@ -23,6 +25,7 @@ public class UpdateStackSetInput {
     
     
     public AutoDeployment autoDeployment;
+
     public UpdateStackSetInput withAutoDeployment(AutoDeployment autoDeployment) {
         this.autoDeployment = autoDeployment;
         return this;
@@ -30,6 +33,7 @@ public class UpdateStackSetInput {
     
     
     public CallAsEnum callAs;
+
     public UpdateStackSetInput withCallAs(CallAsEnum callAs) {
         this.callAs = callAs;
         return this;
@@ -37,6 +41,7 @@ public class UpdateStackSetInput {
     
     
     public CapabilityEnum[] capabilities;
+
     public UpdateStackSetInput withCapabilities(CapabilityEnum[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -44,6 +49,7 @@ public class UpdateStackSetInput {
     
     
     public DeploymentTargets deploymentTargets;
+
     public UpdateStackSetInput withDeploymentTargets(DeploymentTargets deploymentTargets) {
         this.deploymentTargets = deploymentTargets;
         return this;
@@ -51,6 +57,7 @@ public class UpdateStackSetInput {
     
     
     public String description;
+
     public UpdateStackSetInput withDescription(String description) {
         this.description = description;
         return this;
@@ -58,6 +65,7 @@ public class UpdateStackSetInput {
     
     
     public String executionRoleName;
+
     public UpdateStackSetInput withExecutionRoleName(String executionRoleName) {
         this.executionRoleName = executionRoleName;
         return this;
@@ -65,6 +73,7 @@ public class UpdateStackSetInput {
     
     
     public ManagedExecution managedExecution;
+
     public UpdateStackSetInput withManagedExecution(ManagedExecution managedExecution) {
         this.managedExecution = managedExecution;
         return this;
@@ -72,6 +81,7 @@ public class UpdateStackSetInput {
     
     
     public String operationId;
+
     public UpdateStackSetInput withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -79,6 +89,7 @@ public class UpdateStackSetInput {
     
     
     public StackSetOperationPreferences operationPreferences;
+
     public UpdateStackSetInput withOperationPreferences(StackSetOperationPreferences operationPreferences) {
         this.operationPreferences = operationPreferences;
         return this;
@@ -86,6 +97,7 @@ public class UpdateStackSetInput {
     
     
     public Parameter[] parameters;
+
     public UpdateStackSetInput withParameters(Parameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -93,6 +105,7 @@ public class UpdateStackSetInput {
     
     
     public PermissionModelsEnum permissionModel;
+
     public UpdateStackSetInput withPermissionModel(PermissionModelsEnum permissionModel) {
         this.permissionModel = permissionModel;
         return this;
@@ -100,6 +113,7 @@ public class UpdateStackSetInput {
     
     
     public String[] regions;
+
     public UpdateStackSetInput withRegions(String[] regions) {
         this.regions = regions;
         return this;
@@ -107,6 +121,7 @@ public class UpdateStackSetInput {
     
     
     public String stackSetName;
+
     public UpdateStackSetInput withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
@@ -114,6 +129,7 @@ public class UpdateStackSetInput {
     
     
     public Tag[] tags;
+
     public UpdateStackSetInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -121,6 +137,7 @@ public class UpdateStackSetInput {
     
     
     public String templateBody;
+
     public UpdateStackSetInput withTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
@@ -128,6 +145,7 @@ public class UpdateStackSetInput {
     
     
     public String templateURL;
+
     public UpdateStackSetInput withTemplateURL(String templateURL) {
         this.templateURL = templateURL;
         return this;
@@ -135,9 +153,13 @@ public class UpdateStackSetInput {
     
     
     public Boolean usePreviousTemplate;
+
     public UpdateStackSetInput withUsePreviousTemplate(Boolean usePreviousTemplate) {
         this.usePreviousTemplate = usePreviousTemplate;
         return this;
     }
     
+    public UpdateStackSetInput(@JsonProperty("StackSetName") String stackSetName) {
+        this.stackSetName = stackSetName;
+  }
 }

@@ -15,6 +15,7 @@ public class TaskStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archived")
     public Boolean archived;
+
     public TaskStatus withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -23,6 +24,7 @@ public class TaskStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public TaskStatus withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -31,6 +33,7 @@ public class TaskStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public TaskStatus withId(Long id) {
         this.id = id;
         return this;
@@ -38,6 +41,7 @@ public class TaskStatus {
     
     @JsonProperty("name")
     public String name;
+
     public TaskStatus withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +49,7 @@ public class TaskStatus {
     
     @JsonProperty("practice_group")
     public Long practiceGroup;
+
     public TaskStatus withPracticeGroup(Long practiceGroup) {
         this.practiceGroup = practiceGroup;
         return this;
@@ -56,6 +61,7 @@ public class TaskStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_category")
     public TaskStatusStatusCategoryEnum statusCategory;
+
     public TaskStatus withStatusCategory(TaskStatusStatusCategoryEnum statusCategory) {
         this.statusCategory = statusCategory;
         return this;
@@ -67,6 +73,7 @@ public class TaskStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task_category")
     public Long taskCategory;
+
     public TaskStatus withTaskCategory(Long taskCategory) {
         this.taskCategory = taskCategory;
         return this;
@@ -75,9 +82,14 @@ public class TaskStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public TaskStatus withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public TaskStatus(@JsonProperty("name") String name, @JsonProperty("practice_group") Long practiceGroup) {
+        this.name = name;
+        this.practiceGroup = practiceGroup;
+  }
 }

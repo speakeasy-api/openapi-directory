@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuoteForDocumentsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetQuotesForDocumentsBody getQuotesForDocumentsBody;
+
     public GetQuoteForDocumentsRequest withGetQuotesForDocumentsBody(org.openapis.openapi.models.shared.GetQuotesForDocumentsBody getQuotesForDocumentsBody) {
         this.getQuotesForDocumentsBody = getQuotesForDocumentsBody;
         return this;
@@ -19,9 +21,13 @@ public class GetQuoteForDocumentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetQuoteForDocumentsRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public GetQuoteForDocumentsRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

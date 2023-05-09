@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CategoryDetails {
     @JsonProperty("PointsOfInterest")
     public PointOfInterest[] pointsOfInterest;
+
     public CategoryDetails withPointsOfInterest(PointOfInterest[] pointsOfInterest) {
         this.pointsOfInterest = pointsOfInterest;
         return this;
     }
     
+    public CategoryDetails(@JsonProperty("PointsOfInterest") PointOfInterest[] pointsOfInterest) {
+        this.pointsOfInterest = pointsOfInterest;
+  }
 }

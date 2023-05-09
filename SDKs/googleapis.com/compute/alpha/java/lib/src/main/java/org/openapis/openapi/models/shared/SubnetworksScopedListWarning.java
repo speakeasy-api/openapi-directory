@@ -18,6 +18,7 @@ public class SubnetworksScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public SubnetworksScopedListWarningCodeEnum code;
+
     public SubnetworksScopedListWarning withCode(SubnetworksScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class SubnetworksScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public SubnetworksScopedListWarningData[] data;
+
     public SubnetworksScopedListWarning withData(SubnetworksScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class SubnetworksScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public SubnetworksScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public SubnetworksScopedListWarning(){}
 }

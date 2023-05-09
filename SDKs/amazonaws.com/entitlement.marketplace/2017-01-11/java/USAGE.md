@@ -3,61 +3,61 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetEntitlementsXAmzTargetEnum;
 import org.openapis.openapi.models.operations.GetEntitlementsRequest;
 import org.openapis.openapi.models.operations.GetEntitlementsResponse;
+import org.openapis.openapi.models.operations.GetEntitlementsXAmzTargetEnum;
 import org.openapis.openapi.models.shared.GetEntitlementsRequest;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            GetEntitlementsRequest req = new GetEntitlementsRequest() {{
-                getEntitlementsRequest = new GetEntitlementsRequest() {{
-                    filter = new java.util.HashMap<String, String[]>() {{
-                        put("provident", new String[]{{
-                            add("quibusdam"),
-                            add("unde"),
-                            add("nulla"),
-                        }});
-                        put("corrupti", new String[]{{
-                            add("vel"),
-                            add("error"),
-                            add("deserunt"),
-                            add("suscipit"),
-                        }});
-                        put("iure", new String[]{{
-                            add("debitis"),
-                            add("ipsa"),
-                        }});
-                    }};
-                    maxResults = 963663;
-                    nextToken = "tempora";
-                    productCode = "suscipit";
-                }};
-                xAmzAlgorithm = "molestiae";
-                xAmzContentSha256 = "minus";
-                xAmzCredential = "placeat";
-                xAmzDate = "voluptatum";
-                xAmzSecurityToken = "iusto";
-                xAmzSignature = "excepturi";
-                xAmzSignedHeaders = "nisi";
-                xAmzTarget = "AWSMPEntitlementService.GetEntitlements";
-            }}            
+            GetEntitlementsRequest req = new GetEntitlementsRequest(                new GetEntitlementsRequest("provident") {{
+                                filter = new java.util.HashMap<String, String[]>() {{
+                                    put("quibusdam", new String[]{{
+                                        add("nulla"),
+                                        add("corrupti"),
+                                        add("illum"),
+                                    }});
+                                    put("vel", new String[]{{
+                                        add("deserunt"),
+                                        add("suscipit"),
+                                        add("iure"),
+                                    }});
+                                    put("magnam", new String[]{{
+                                        add("ipsa"),
+                                        add("delectus"),
+                                        add("tempora"),
+                                        add("suscipit"),
+                                    }});
+                                }};
+                                maxResults = 477665L;
+                                nextToken = "minus";
+                            }};, GetEntitlementsXAmzTargetEnum.AWSMP_ENTITLEMENT_SERVICE_GET_ENTITLEMENTS) {{
+                xAmzAlgorithm = "placeat";
+                xAmzContentSha256 = "voluptatum";
+                xAmzCredential = "iusto";
+                xAmzDate = "excepturi";
+                xAmzSecurityToken = "nisi";
+                xAmzSignature = "recusandae";
+                xAmzSignedHeaders = "temporibus";
+            }};            
 
             GetEntitlementsResponse res = sdk.getEntitlements(req);
 
-            if (res.getEntitlementsResult.isPresent()) {
+            if (res.getEntitlementsResult != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

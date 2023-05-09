@@ -18,6 +18,7 @@ public class SearchSubscriptionsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_ids")
     public String[] customerIds;
+
     public SearchSubscriptionsFilter withCustomerIds(String[] customerIds) {
         this.customerIds = customerIds;
         return this;
@@ -29,9 +30,11 @@ public class SearchSubscriptionsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_ids")
     public String[] locationIds;
+
     public SearchSubscriptionsFilter withLocationIds(String[] locationIds) {
         this.locationIds = locationIds;
         return this;
     }
     
+    public SearchSubscriptionsFilter(){}
 }

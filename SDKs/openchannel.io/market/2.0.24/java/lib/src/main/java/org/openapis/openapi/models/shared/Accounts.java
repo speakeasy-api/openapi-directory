@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Accounts - A developer's connected Stripe accounts
@@ -15,6 +15,7 @@ public class Accounts {
      */
     
     public Account[] accounts;
+
     public Accounts withAccounts(Account[] accounts) {
         this.accounts = accounts;
         return this;
@@ -25,9 +26,14 @@ public class Accounts {
      */
     
     public String developerId;
+
     public Accounts withDeveloperId(String developerId) {
         this.developerId = developerId;
         return this;
     }
     
+    public Accounts(@JsonProperty("accounts") Account[] accounts, @JsonProperty("developerId") String developerId) {
+        this.accounts = accounts;
+        this.developerId = developerId;
+  }
 }

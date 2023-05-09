@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateEndpointOutput {
     @JsonProperty("EndpointArn")
     public String endpointArn;
+
     public CreateEndpointOutput withEndpointArn(String endpointArn) {
         this.endpointArn = endpointArn;
         return this;
     }
     
+    public CreateEndpointOutput(@JsonProperty("EndpointArn") String endpointArn) {
+        this.endpointArn = endpointArn;
+  }
 }

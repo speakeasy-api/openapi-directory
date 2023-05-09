@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Area {
     @JsonProperty("Description")
     public String description;
+
     public Area withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class Area {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Area withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +28,7 @@ public class Area {
     
     @JsonProperty("Name")
     public String name;
+
     public Area withName(String name) {
         this.name = name;
         return this;
@@ -33,6 +36,7 @@ public class Area {
     
     @JsonProperty("XLatitude")
     public String xLatitude;
+
     public Area withXLatitude(String xLatitude) {
         this.xLatitude = xLatitude;
         return this;
@@ -40,6 +44,7 @@ public class Area {
     
     @JsonProperty("XLongitude")
     public String xLongitude;
+
     public Area withXLongitude(String xLongitude) {
         this.xLongitude = xLongitude;
         return this;
@@ -47,6 +52,7 @@ public class Area {
     
     @JsonProperty("YLatitude")
     public String yLatitude;
+
     public Area withYLatitude(String yLatitude) {
         this.yLatitude = yLatitude;
         return this;
@@ -54,9 +60,18 @@ public class Area {
     
     @JsonProperty("YLongitude")
     public String yLongitude;
+
     public Area withYLongitude(String yLongitude) {
         this.yLongitude = yLongitude;
         return this;
     }
     
+    public Area(@JsonProperty("Description") String description, @JsonProperty("Name") String name, @JsonProperty("XLatitude") String xLatitude, @JsonProperty("XLongitude") String xLongitude, @JsonProperty("YLatitude") String yLatitude, @JsonProperty("YLongitude") String yLongitude) {
+        this.description = description;
+        this.name = name;
+        this.xLatitude = xLatitude;
+        this.xLongitude = xLongitude;
+        this.yLatitude = yLatitude;
+        this.yLongitude = yLongitude;
+  }
 }

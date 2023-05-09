@@ -22,6 +22,7 @@ public class PredictorSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public PredictorSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class PredictorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetGroupArn")
     public String datasetGroupArn;
+
     public PredictorSummary withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -38,6 +40,7 @@ public class PredictorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsAutoPredictor")
     public Boolean isAutoPredictor;
+
     public PredictorSummary withIsAutoPredictor(Boolean isAutoPredictor) {
         this.isAutoPredictor = isAutoPredictor;
         return this;
@@ -48,6 +51,7 @@ public class PredictorSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public PredictorSummary withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -56,6 +60,7 @@ public class PredictorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public PredictorSummary withMessage(String message) {
         this.message = message;
         return this;
@@ -64,6 +69,7 @@ public class PredictorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictorArn")
     public String predictorArn;
+
     public PredictorSummary withPredictorArn(String predictorArn) {
         this.predictorArn = predictorArn;
         return this;
@@ -72,6 +78,7 @@ public class PredictorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictorName")
     public String predictorName;
+
     public PredictorSummary withPredictorName(String predictorName) {
         this.predictorName = predictorName;
         return this;
@@ -80,6 +87,7 @@ public class PredictorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferencePredictorSummary")
     public ReferencePredictorSummary referencePredictorSummary;
+
     public PredictorSummary withReferencePredictorSummary(ReferencePredictorSummary referencePredictorSummary) {
         this.referencePredictorSummary = referencePredictorSummary;
         return this;
@@ -88,9 +96,11 @@ public class PredictorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public PredictorSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public PredictorSummary(){}
 }

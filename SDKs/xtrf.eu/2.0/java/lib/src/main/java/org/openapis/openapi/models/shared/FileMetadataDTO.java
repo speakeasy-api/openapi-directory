@@ -15,6 +15,7 @@ public class FileMetadataDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryKey")
     public String categoryKey;
+
     public FileMetadataDTO withCategoryKey(String categoryKey) {
         this.categoryKey = categoryKey;
         return this;
@@ -23,6 +24,7 @@ public class FileMetadataDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public FileMetadataDTO withId(Long id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class FileMetadataDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedOn")
     public Long lastModifiedOn;
+
     public FileMetadataDTO withLastModifiedOn(Long lastModifiedOn) {
         this.lastModifiedOn = lastModifiedOn;
         return this;
@@ -39,6 +42,7 @@ public class FileMetadataDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FileMetadataDTO withName(String name) {
         this.name = name;
         return this;
@@ -47,9 +51,11 @@ public class FileMetadataDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public FileMetadataDTO withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public FileMetadataDTO(){}
 }

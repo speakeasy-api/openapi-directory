@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifyVpcPeeringConnectionOptionsAccepterPeeringConnectionOptions {
     @SpeakeasyMetadata("queryParam:name=AllowDnsResolutionFromRemoteVpc")
     public Boolean allowDnsResolutionFromRemoteVpc;
+
     public GETModifyVpcPeeringConnectionOptionsAccepterPeeringConnectionOptions withAllowDnsResolutionFromRemoteVpc(Boolean allowDnsResolutionFromRemoteVpc) {
         this.allowDnsResolutionFromRemoteVpc = allowDnsResolutionFromRemoteVpc;
         return this;
@@ -19,6 +20,7 @@ public class GETModifyVpcPeeringConnectionOptionsAccepterPeeringConnectionOption
     
     @SpeakeasyMetadata("queryParam:name=AllowEgressFromLocalClassicLinkToRemoteVpc")
     public Boolean allowEgressFromLocalClassicLinkToRemoteVpc;
+
     public GETModifyVpcPeeringConnectionOptionsAccepterPeeringConnectionOptions withAllowEgressFromLocalClassicLinkToRemoteVpc(Boolean allowEgressFromLocalClassicLinkToRemoteVpc) {
         this.allowEgressFromLocalClassicLinkToRemoteVpc = allowEgressFromLocalClassicLinkToRemoteVpc;
         return this;
@@ -26,9 +28,11 @@ public class GETModifyVpcPeeringConnectionOptionsAccepterPeeringConnectionOption
     
     @SpeakeasyMetadata("queryParam:name=AllowEgressFromLocalVpcToRemoteClassicLink")
     public Boolean allowEgressFromLocalVpcToRemoteClassicLink;
+
     public GETModifyVpcPeeringConnectionOptionsAccepterPeeringConnectionOptions withAllowEgressFromLocalVpcToRemoteClassicLink(Boolean allowEgressFromLocalVpcToRemoteClassicLink) {
         this.allowEgressFromLocalVpcToRemoteClassicLink = allowEgressFromLocalVpcToRemoteClassicLink;
         return this;
     }
     
+    public GETModifyVpcPeeringConnectionOptionsAccepterPeeringConnectionOptions(){}
 }

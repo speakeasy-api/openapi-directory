@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Stats {
     @JsonProperty("num_check_connectivity")
     public Integer numCheckConnectivity;
+
     public Stats withNumCheckConnectivity(Integer numCheckConnectivity) {
         this.numCheckConnectivity = numCheckConnectivity;
         return this;
@@ -16,6 +17,7 @@ public class Stats {
     
     @JsonProperty("num_connect_wifi")
     public Integer numConnectWifi;
+
     public Stats withNumConnectWifi(Integer numConnectWifi) {
         this.numConnectWifi = numConnectWifi;
         return this;
@@ -23,6 +25,7 @@ public class Stats {
     
     @JsonProperty("num_connected_wifi_not_saved")
     public Integer numConnectedWifiNotSaved;
+
     public Stats withNumConnectedWifiNotSaved(Integer numConnectedWifiNotSaved) {
         this.numConnectedWifiNotSaved = numConnectedWifiNotSaved;
         return this;
@@ -30,6 +33,7 @@ public class Stats {
     
     @JsonProperty("num_initial_eureka_info")
     public Integer numInitialEurekaInfo;
+
     public Stats withNumInitialEurekaInfo(Integer numInitialEurekaInfo) {
         this.numInitialEurekaInfo = numInitialEurekaInfo;
         return this;
@@ -37,9 +41,17 @@ public class Stats {
     
     @JsonProperty("num_obtain_ip")
     public Integer numObtainIp;
+
     public Stats withNumObtainIp(Integer numObtainIp) {
         this.numObtainIp = numObtainIp;
         return this;
     }
     
+    public Stats(@JsonProperty("num_check_connectivity") Integer numCheckConnectivity, @JsonProperty("num_connect_wifi") Integer numConnectWifi, @JsonProperty("num_connected_wifi_not_saved") Integer numConnectedWifiNotSaved, @JsonProperty("num_initial_eureka_info") Integer numInitialEurekaInfo, @JsonProperty("num_obtain_ip") Integer numObtainIp) {
+        this.numCheckConnectivity = numCheckConnectivity;
+        this.numConnectWifi = numConnectWifi;
+        this.numConnectedWifiNotSaved = numConnectedWifiNotSaved;
+        this.numInitialEurekaInfo = numInitialEurekaInfo;
+        this.numObtainIp = numObtainIp;
+  }
 }

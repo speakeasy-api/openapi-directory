@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AcknowledgeJobResponse {
@@ -12,6 +13,7 @@ public class AcknowledgeJobResponse {
      */
     
     public org.openapis.openapi.models.shared.AcknowledgeJobOutput acknowledgeJobOutput;
+
     public AcknowledgeJobResponse withAcknowledgeJobOutput(org.openapis.openapi.models.shared.AcknowledgeJobOutput acknowledgeJobOutput) {
         this.acknowledgeJobOutput = acknowledgeJobOutput;
         return this;
@@ -19,6 +21,7 @@ public class AcknowledgeJobResponse {
     
     
     public String contentType;
+
     public AcknowledgeJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AcknowledgeJobResponse {
      */
     
     public Object invalidNonceException;
+
     public AcknowledgeJobResponse withInvalidNonceException(Object invalidNonceException) {
         this.invalidNonceException = invalidNonceException;
         return this;
@@ -39,6 +43,7 @@ public class AcknowledgeJobResponse {
      */
     
     public Object jobNotFoundException;
+
     public AcknowledgeJobResponse withJobNotFoundException(Object jobNotFoundException) {
         this.jobNotFoundException = jobNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class AcknowledgeJobResponse {
     
     
     public Integer statusCode;
+
     public AcknowledgeJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class AcknowledgeJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AcknowledgeJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class AcknowledgeJobResponse {
      */
     
     public Object validationException;
+
     public AcknowledgeJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AcknowledgeJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

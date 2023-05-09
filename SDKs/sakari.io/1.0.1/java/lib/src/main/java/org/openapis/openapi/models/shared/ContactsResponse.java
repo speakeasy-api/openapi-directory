@@ -15,6 +15,7 @@ public class ContactsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Contact[] data;
+
     public ContactsResponse withData(Contact[] data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class ContactsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public ContactsResponseError error;
+
     public ContactsResponse withError(ContactsResponseError error) {
         this.error = error;
         return this;
@@ -31,6 +33,7 @@ public class ContactsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public ContactsResponsePagination pagination;
+
     public ContactsResponse withPagination(ContactsResponsePagination pagination) {
         this.pagination = pagination;
         return this;
@@ -39,9 +42,11 @@ public class ContactsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public ContactsResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public ContactsResponse(){}
 }

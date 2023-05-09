@@ -18,6 +18,7 @@ public class AwsSourceVmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committedStorageBytes")
     public String committedStorageBytes;
+
     public AwsSourceVmDetails withCommittedStorageBytes(String committedStorageBytes) {
         this.committedStorageBytes = committedStorageBytes;
         return this;
@@ -29,9 +30,11 @@ public class AwsSourceVmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firmware")
     public AwsSourceVmDetailsFirmwareEnum firmware;
+
     public AwsSourceVmDetails withFirmware(AwsSourceVmDetailsFirmwareEnum firmware) {
         this.firmware = firmware;
         return this;
     }
     
+    public AwsSourceVmDetails(){}
 }

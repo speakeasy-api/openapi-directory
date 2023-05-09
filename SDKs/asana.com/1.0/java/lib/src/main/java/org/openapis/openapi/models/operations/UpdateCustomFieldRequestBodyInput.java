@@ -15,9 +15,11 @@ public class UpdateCustomFieldRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.CustomFieldRequestInput data;
+
     public UpdateCustomFieldRequestBodyInput withData(org.openapis.openapi.models.shared.CustomFieldRequestInput data) {
         this.data = data;
         return this;
     }
     
+    public UpdateCustomFieldRequestBodyInput(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class EstimateTemplateCostOutput {
     
     public String url;
+
     public EstimateTemplateCostOutput withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public EstimateTemplateCostOutput(){}
 }

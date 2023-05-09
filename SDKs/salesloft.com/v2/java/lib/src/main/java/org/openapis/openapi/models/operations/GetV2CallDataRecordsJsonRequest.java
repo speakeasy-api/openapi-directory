@@ -16,6 +16,7 @@ public class GetV2CallDataRecordsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=created_at")
     public String[] createdAt;
+
     public GetV2CallDataRecordsJsonRequest withCreatedAt(String[] createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -26,6 +27,7 @@ public class GetV2CallDataRecordsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=has_call")
     public Boolean hasCall;
+
     public GetV2CallDataRecordsJsonRequest withHasCall(Boolean hasCall) {
         this.hasCall = hasCall;
         return this;
@@ -36,6 +38,7 @@ public class GetV2CallDataRecordsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
     public Long[] ids;
+
     public GetV2CallDataRecordsJsonRequest withIds(Long[] ids) {
         this.ids = ids;
         return this;
@@ -46,6 +49,7 @@ public class GetV2CallDataRecordsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public GetV2CallDataRecordsJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
         return this;
@@ -56,6 +60,7 @@ public class GetV2CallDataRecordsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
     public Boolean limitPagingCounts;
+
     public GetV2CallDataRecordsJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
         this.limitPagingCounts = limitPagingCounts;
         return this;
@@ -66,6 +71,7 @@ public class GetV2CallDataRecordsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2CallDataRecordsJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -76,6 +82,7 @@ public class GetV2CallDataRecordsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2CallDataRecordsJsonRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -86,6 +93,7 @@ public class GetV2CallDataRecordsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=person_id")
     public Long[] personId;
+
     public GetV2CallDataRecordsJsonRequest withPersonId(Long[] personId) {
         this.personId = personId;
         return this;
@@ -96,6 +104,7 @@ public class GetV2CallDataRecordsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetV2CallDataRecordsJsonRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -106,6 +115,7 @@ public class GetV2CallDataRecordsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public GetV2CallDataRecordsJsonRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -120,6 +130,7 @@ public class GetV2CallDataRecordsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=updated_at")
     public String[] updatedAt;
+
     public GetV2CallDataRecordsJsonRequest withUpdatedAt(String[] updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -130,9 +141,11 @@ public class GetV2CallDataRecordsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=user_guid")
     public String[] userGuid;
+
     public GetV2CallDataRecordsJsonRequest withUserGuid(String[] userGuid) {
         this.userGuid = userGuid;
         return this;
     }
     
+    public GetV2CallDataRecordsJsonRequest(){}
 }

@@ -15,6 +15,7 @@ public class PlaceOrder200ApplicationJSONOrdersTotals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PlaceOrder200ApplicationJSONOrdersTotals withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class PlaceOrder200ApplicationJSONOrdersTotals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PlaceOrder200ApplicationJSONOrdersTotals withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class PlaceOrder200ApplicationJSONOrdersTotals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public PlaceOrder200ApplicationJSONOrdersTotals withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONOrdersTotals(){}
 }

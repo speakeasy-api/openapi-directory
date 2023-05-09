@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetConfigLogs200ApplicationJSON {
     @JsonProperty("configlogs")
     public org.openapis.openapi.models.shared.ConfigLog[] configlogs;
+
     public GetConfigLogs200ApplicationJSON withConfiglogs(org.openapis.openapi.models.shared.ConfigLog[] configlogs) {
         this.configlogs = configlogs;
         return this;
@@ -25,9 +26,13 @@ public class GetConfigLogs200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public GetConfigLogs200ApplicationJSON withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public GetConfigLogs200ApplicationJSON(@JsonProperty("configlogs") org.openapis.openapi.models.shared.ConfigLog[] configlogs) {
+        this.configlogs = configlogs;
+  }
 }

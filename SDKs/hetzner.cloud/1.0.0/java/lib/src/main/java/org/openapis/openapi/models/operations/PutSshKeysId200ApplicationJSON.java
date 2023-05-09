@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutSshKeysId200ApplicationJSON {
     @JsonProperty("ssh_key")
     public PutSshKeysId200ApplicationJSONSshKey sshKey;
+
     public PutSshKeysId200ApplicationJSON withSshKey(PutSshKeysId200ApplicationJSONSshKey sshKey) {
         this.sshKey = sshKey;
         return this;
     }
     
+    public PutSshKeysId200ApplicationJSON(@JsonProperty("ssh_key") PutSshKeysId200ApplicationJSONSshKey sshKey) {
+        this.sshKey = sshKey;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AdminSetUserSettingsRequest {
     @JsonProperty("MFAOptions")
     public MFAOptionType[] mfaOptions;
+
     public AdminSetUserSettingsRequest withMFAOptions(MFAOptionType[] mfaOptions) {
         this.mfaOptions = mfaOptions;
         return this;
@@ -19,6 +20,7 @@ public class AdminSetUserSettingsRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public AdminSetUserSettingsRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
@@ -26,9 +28,15 @@ public class AdminSetUserSettingsRequest {
     
     @JsonProperty("Username")
     public String username;
+
     public AdminSetUserSettingsRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public AdminSetUserSettingsRequest(@JsonProperty("MFAOptions") MFAOptionType[] mfaOptions, @JsonProperty("UserPoolId") String userPoolId, @JsonProperty("Username") String username) {
+        this.mfaOptions = mfaOptions;
+        this.userPoolId = userPoolId;
+        this.username = username;
+  }
 }

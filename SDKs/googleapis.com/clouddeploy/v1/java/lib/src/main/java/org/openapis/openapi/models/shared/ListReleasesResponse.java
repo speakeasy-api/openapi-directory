@@ -18,6 +18,7 @@ public class ListReleasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListReleasesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListReleasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releases")
     public Release[] releases;
+
     public ListReleasesResponse withReleases(Release[] releases) {
         this.releases = releases;
         return this;
@@ -40,9 +42,11 @@ public class ListReleasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListReleasesResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListReleasesResponse(){}
 }

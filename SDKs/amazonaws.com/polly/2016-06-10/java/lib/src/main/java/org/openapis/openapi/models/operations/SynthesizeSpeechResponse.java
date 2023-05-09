@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SynthesizeSpeechResponse {
     
     public String contentType;
+
     public SynthesizeSpeechResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SynthesizeSpeechResponse {
      */
     
     public Object engineNotSupportedException;
+
     public SynthesizeSpeechResponse withEngineNotSupportedException(Object engineNotSupportedException) {
         this.engineNotSupportedException = engineNotSupportedException;
         return this;
@@ -29,6 +32,7 @@ public class SynthesizeSpeechResponse {
      */
     
     public Object invalidSampleRateException;
+
     public SynthesizeSpeechResponse withInvalidSampleRateException(Object invalidSampleRateException) {
         this.invalidSampleRateException = invalidSampleRateException;
         return this;
@@ -39,6 +43,7 @@ public class SynthesizeSpeechResponse {
      */
     
     public Object invalidSsmlException;
+
     public SynthesizeSpeechResponse withInvalidSsmlException(Object invalidSsmlException) {
         this.invalidSsmlException = invalidSsmlException;
         return this;
@@ -49,6 +54,7 @@ public class SynthesizeSpeechResponse {
      */
     
     public Object languageNotSupportedException;
+
     public SynthesizeSpeechResponse withLanguageNotSupportedException(Object languageNotSupportedException) {
         this.languageNotSupportedException = languageNotSupportedException;
         return this;
@@ -59,6 +65,7 @@ public class SynthesizeSpeechResponse {
      */
     
     public Object lexiconNotFoundException;
+
     public SynthesizeSpeechResponse withLexiconNotFoundException(Object lexiconNotFoundException) {
         this.lexiconNotFoundException = lexiconNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class SynthesizeSpeechResponse {
      */
     
     public Object marksNotSupportedForFormatException;
+
     public SynthesizeSpeechResponse withMarksNotSupportedForFormatException(Object marksNotSupportedForFormatException) {
         this.marksNotSupportedForFormatException = marksNotSupportedForFormatException;
         return this;
@@ -79,6 +87,7 @@ public class SynthesizeSpeechResponse {
      */
     
     public Object serviceFailureException;
+
     public SynthesizeSpeechResponse withServiceFailureException(Object serviceFailureException) {
         this.serviceFailureException = serviceFailureException;
         return this;
@@ -86,6 +95,7 @@ public class SynthesizeSpeechResponse {
     
     
     public Integer statusCode;
+
     public SynthesizeSpeechResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class SynthesizeSpeechResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SynthesizeSpeechResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class SynthesizeSpeechResponse {
      */
     
     public Object ssmlMarksNotSupportedForTextTypeException;
+
     public SynthesizeSpeechResponse withSsmlMarksNotSupportedForTextTypeException(Object ssmlMarksNotSupportedForTextTypeException) {
         this.ssmlMarksNotSupportedForTextTypeException = ssmlMarksNotSupportedForTextTypeException;
         return this;
@@ -113,6 +125,7 @@ public class SynthesizeSpeechResponse {
      */
     
     public org.openapis.openapi.models.shared.SynthesizeSpeechOutput synthesizeSpeechOutput;
+
     public SynthesizeSpeechResponse withSynthesizeSpeechOutput(org.openapis.openapi.models.shared.SynthesizeSpeechOutput synthesizeSpeechOutput) {
         this.synthesizeSpeechOutput = synthesizeSpeechOutput;
         return this;
@@ -123,9 +136,14 @@ public class SynthesizeSpeechResponse {
      */
     
     public Object textLengthExceededException;
+
     public SynthesizeSpeechResponse withTextLengthExceededException(Object textLengthExceededException) {
         this.textLengthExceededException = textLengthExceededException;
         return this;
     }
     
+    public SynthesizeSpeechResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

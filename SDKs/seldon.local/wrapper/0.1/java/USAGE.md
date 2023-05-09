@@ -3,24 +3,23 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.Aggregate2RequestBody;
 import org.openapis.openapi.models.operations.Aggregate2Response;
-import org.openapis.openapi.models.shared.SeldonMessageList;
-import org.openapis.openapi.models.shared.SeldonMessage;
-import org.openapis.openapi.models.shared.Status;
-import org.openapis.openapi.models.shared.StatusStatusFlagEnum;
+import org.openapis.openapi.models.shared.DefaultData;
 import org.openapis.openapi.models.shared.Meta;
 import org.openapis.openapi.models.shared.Metric;
 import org.openapis.openapi.models.shared.MetricTypeEnum;
-import org.openapis.openapi.models.shared.DefaultData;
-import org.openapis.openapi.models.shared.TensorflowTensorProto;
-import org.openapis.openapi.models.shared.TensorflowVariantTensorDataProto;
-import org.openapis.openapi.models.shared.TensorflowTensorShapeProto;
-import org.openapis.openapi.models.shared.TensorShapeProtoDim;
-import org.openapis.openapi.models.shared.TensorflowResourceHandleProto;
-import org.openapis.openapi.models.shared.TensorflowDataTypeEnum;
+import org.openapis.openapi.models.shared.SeldonMessage;
+import org.openapis.openapi.models.shared.SeldonMessageList;
+import org.openapis.openapi.models.shared.Status;
+import org.openapis.openapi.models.shared.StatusStatusFlagEnum;
 import org.openapis.openapi.models.shared.Tensor;
+import org.openapis.openapi.models.shared.TensorShapeProtoDim;
+import org.openapis.openapi.models.shared.TensorflowDataTypeEnum;
+import org.openapis.openapi.models.shared.TensorflowResourceHandleProto;
+import org.openapis.openapi.models.shared.TensorflowTensorProto;
+import org.openapis.openapi.models.shared.TensorflowTensorShapeProto;
+import org.openapis.openapi.models.shared.TensorflowVariantTensorDataProto;
 
 public class Application {
     public static void main(String[] args) {
@@ -72,7 +71,7 @@ public class Application {
                                         add(9255.97),
                                         add(8360.79),
                                     }};
-                                    dtype = "DT_INT32";
+                                    dtype = TensorflowDataTypeEnum.DT_INT32;
                                     floatVal = new Float[]{{
                                         add(871.29),
                                         add(6481.72),
@@ -98,519 +97,478 @@ public class Application {
                                             device = "porro";
                                             hashCode = "dolorum";
                                             maybeTypeName = "dicta";
-                                            name = "nam";
+                                            name = "Luke McCullough";
                                         }}),
                                         add(new TensorflowResourceHandleProto() {{
-                                            container = "officia";
-                                            device = "occaecati";
-                                            hashCode = "fugit";
-                                            maybeTypeName = "deleniti";
-                                            name = "hic";
+                                            container = "hic";
+                                            device = "optio";
+                                            hashCode = "totam";
+                                            maybeTypeName = "beatae";
+                                            name = "Tanya Gleason";
                                         }}),
                                     }};
                                     scomplexVal = new Float[]{{
-                                        add(5218.48),
-                                        add(1059.07),
-                                        add(4146.62),
-                                        add(4736),
+                                        add(4561.5),
+                                        add(2165.5),
+                                        add(5684.34),
                                     }};
                                     stringVal = new String[]{{
-                                        add("qui"),
-                                        add("impedit"),
+                                        add("perferendis"),
                                     }};
-                                    tensorContent = "cum";
+                                    tensorContent = "ad";
                                     tensorShape = new TensorflowTensorShapeProto() {{
                                         dim = new org.openapis.openapi.models.shared.TensorShapeProtoDim[]{{
                                             add(new TensorShapeProtoDim() {{
-                                                name = "ipsum";
-                                                size = "excepturi";
+                                                name = "Sheryl Fadel";
+                                                size = "hic";
                                             }}),
                                             add(new TensorShapeProtoDim() {{
-                                                name = "aspernatur";
-                                                size = "perferendis";
+                                                name = "Wilbur Kirlin";
+                                                size = "iure";
+                                            }}),
+                                            add(new TensorShapeProtoDim() {{
+                                                name = "Dr. Rickey Boyle";
+                                                size = "mollitia";
                                             }}),
                                         }};
                                         unknownRank = false;
                                     }};
                                     uint32Val = new Long[]{{
-                                        add(617636),
-                                        add(149675),
+                                        add(170909L),
+                                        add(210382L),
+                                        add(358152L),
                                     }};
                                     uint64Val = new String[]{{
-                                        add("dolor"),
-                                        add("natus"),
-                                        add("laboriosam"),
+                                        add("nobis"),
                                     }};
                                     variantVal = new org.openapis.openapi.models.shared.TensorflowVariantTensorDataProto[]{{
                                         add(new TensorflowVariantTensorDataProto() {{
-                                            metadata = "saepe";
+                                            metadata = "omnis";
                                             tensors = new org.openapis.openapi.models.shared.TensorflowTensorProto[]{{
-                                                add(new TensorflowTensorProto() {{}}),
                                                 add(new TensorflowTensorProto() {{}}),
                                                 add(new TensorflowTensorProto() {{}}),
                                             }};
-                                            typeName = "in";
+                                            typeName = "minima";
                                         }}),
                                         add(new TensorflowVariantTensorDataProto() {{
-                                            metadata = "corporis";
+                                            metadata = "excepturi";
                                             tensors = new org.openapis.openapi.models.shared.TensorflowTensorProto[]{{
-                                                add(new TensorflowTensorProto() {{}}),
-                                                add(new TensorflowTensorProto() {{}}),
                                                 add(new TensorflowTensorProto() {{}}),
                                             }};
                                             typeName = "iure";
                                         }}),
-                                        add(new TensorflowVariantTensorDataProto() {{
-                                            metadata = "saepe";
-                                            tensors = new org.openapis.openapi.models.shared.TensorflowTensorProto[]{{
-                                                add(new TensorflowTensorProto() {{}}),
-                                                add(new TensorflowTensorProto() {{}}),
-                                                add(new TensorflowTensorProto() {{}}),
-                                            }};
-                                            typeName = "architecto";
-                                        }}),
-                                        add(new TensorflowVariantTensorDataProto() {{
-                                            metadata = "ipsa";
-                                            tensors = new org.openapis.openapi.models.shared.TensorflowTensorProto[]{{
-                                                add(new TensorflowTensorProto() {{}}),
-                                                add(new TensorflowTensorProto() {{}}),
-                                                add(new TensorflowTensorProto() {{}}),
-                                                add(new TensorflowTensorProto() {{}}),
-                                            }};
-                                            typeName = "est";
-                                        }}),
                                     }};
-                                    versionNumber = 653140;
+                                    versionNumber = 634274;
                                 }};
                             }};
                             meta = new Meta() {{
                                 metrics = new org.openapis.openapi.models.shared.Metric[]{{
                                     add(new Metric() {{
-                                        key = "dolores";
-                                        type = "COUNTER";
-                                        value = 3581.52;
+                                        key = "sapiente";
+                                        type = MetricTypeEnum.COUNTER;
+                                        value = 6527.9;
                                     }}),
                                     add(new Metric() {{
-                                        key = "explicabo";
-                                        type = "TIMER";
-                                        value = 3154.28;
+                                        key = "dolorem";
+                                        type = MetricTypeEnum.GAUGE;
+                                        value = 1613.09;
                                     }}),
                                     add(new Metric() {{
-                                        key = "omnis";
-                                        type = "GAUGE";
-                                        value = 3250.47;
+                                        key = "repellat";
+                                        type = MetricTypeEnum.GAUGE;
+                                        value = 5818.5;
+                                    }}),
+                                    add(new Metric() {{
+                                        key = "numquam";
+                                        type = MetricTypeEnum.GAUGE;
+                                        value = 4663.11;
                                     }}),
                                 }};
-                                puid = "excepturi";
+                                puid = "molestiae";
                                 requestPath = new java.util.HashMap<String, String>() {{
-                                    put("iure", "culpa");
+                                    put("error", "quia");
                                 }};
                                 routing = new java.util.HashMap<String, Integer>() {{
-                                    put("sapiente", 102044);
-                                    put("mollitia", 208876);
-                                    put("culpa", 161309);
-                                    put("repellat", 653108);
+                                    put("vitae", 674752);
+                                    put("animi", 317202);
                                 }};
                                 tags = new java.util.HashMap<String, Object>() {{
-                                    put("numquam", "commodi");
-                                    put("quam", "molestiae");
-                                    put("velit", "error");
+                                    put("quo", "sequi");
                                 }};
                             }};
                             status = new Status() {{
-                                code = 158969;
-                                info = "quis";
-                                reason = "vitae";
-                                status = "FAILURE";
+                                code = 949572;
+                                info = "ipsam";
+                                reason = "id";
+                                status = StatusStatusFlagEnum.FAILURE;
                             }};
-                            strData = "animi";
+                            strData = "aut";
                         }}),
                         add(new SeldonMessage() {{
-                            binData = "enim";
+                            binData = "quasi";
                             data = new DefaultData() {{
                                 names = new String[]{{
-                                    add("quo"),
+                                    add("temporibus"),
+                                    add("laborum"),
+                                    add("quasi"),
                                 }};
                                 ndarry = new Object[]{{
-                                    add("tenetur"),
+                                    add("voluptatibus"),
+                                    add("vero"),
+                                    add("nihil"),
+                                    add("praesentium"),
                                 }};
                                 tensor = new Tensor() {{
                                     shape = new Integer[]{{
-                                        add(662527),
-                                        add(820994),
+                                        add(55714),
+                                        add(604846),
+                                        add(451159),
+                                        add(739264),
                                     }};
                                     values = new Double[]{{
-                                        add(971.01),
+                                        add(391.87),
                                     }};
                                 }};
                                 tftensor = new TensorflowTensorProto() {{
                                     boolVal = new Boolean[]{{
                                         add(false),
                                         add(false),
-                                        add(false),
                                     }};
                                     dcomplexVal = new Double[]{{
-                                        add(6736.6),
-                                        add(960.98),
-                                        add(9719.45),
-                                        add(9764.6),
+                                        add(9795.87),
+                                        add(1201.96),
                                     }};
                                     doubleVal = new Double[]{{
-                                        add(4686.51),
-                                        add(5096.24),
-                                        add(9767.62),
-                                        add(557.14),
+                                        add(2961.4),
+                                        add(4808.94),
                                     }};
-                                    dtype = "DT_INT16_REF";
+                                    dtype = TensorflowDataTypeEnum.DT_INT16;
                                     floatVal = new Float[]{{
-                                        add(7392.64),
-                                        add(199.87),
+                                        add(3179.83),
+                                        add(8804.76),
+                                        add(4142.63),
                                     }};
                                     halfVal = new Integer[]{{
-                                        add(441711),
+                                        add(64147),
+                                        add(216822),
+                                        add(692472),
+                                        add(565189),
                                     }};
                                     int64Val = new String[]{{
-                                        add("maiores"),
-                                        add("dicta"),
-                                    }};
-                                    intVal = new Integer[]{{
-                                        add(296140),
-                                        add(480894),
-                                    }};
-                                    resourceHandleVal = new org.openapis.openapi.models.shared.TensorflowResourceHandleProto[]{{
-                                        add(new TensorflowResourceHandleProto() {{
-                                            container = "harum";
-                                            device = "enim";
-                                            hashCode = "accusamus";
-                                            maybeTypeName = "commodi";
-                                            name = "repudiandae";
-                                        }}),
-                                    }};
-                                    scomplexVal = new Float[]{{
-                                        add(2168.22),
-                                    }};
-                                    stringVal = new String[]{{
-                                        add("molestias"),
-                                        add("excepturi"),
                                         add("pariatur"),
-                                    }};
-                                    tensorContent = "modi";
-                                    tensorShape = new TensorflowTensorShapeProto() {{
-                                        dim = new org.openapis.openapi.models.shared.TensorShapeProtoDim[]{{
-                                            add(new TensorShapeProtoDim() {{
-                                                name = "rem";
-                                                size = "voluptates";
-                                            }}),
-                                            add(new TensorShapeProtoDim() {{
-                                                name = "quasi";
-                                                size = "repudiandae";
-                                            }}),
-                                            add(new TensorShapeProtoDim() {{
-                                                name = "sint";
-                                                size = "veritatis";
-                                            }}),
-                                        }};
-                                        unknownRank = false;
-                                    }};
-                                    uint32Val = new Long[]{{
-                                        add(277718),
-                                        add(318569),
-                                        add(9356),
-                                        add(667411),
-                                    }};
-                                    uint64Val = new String[]{{
-                                        add("explicabo"),
-                                        add("deserunt"),
-                                        add("distinctio"),
-                                        add("quibusdam"),
-                                    }};
-                                    variantVal = new org.openapis.openapi.models.shared.TensorflowVariantTensorDataProto[]{{
-                                        add(new TensorflowVariantTensorDataProto() {{
-                                            metadata = "modi";
-                                            tensors = new org.openapis.openapi.models.shared.TensorflowTensorProto[]{{
-                                                add(new TensorflowTensorProto() {{}}),
-                                            }};
-                                            typeName = "aliquid";
-                                        }}),
-                                        add(new TensorflowVariantTensorDataProto() {{
-                                            metadata = "cupiditate";
-                                            tensors = new org.openapis.openapi.models.shared.TensorflowTensorProto[]{{
-                                                add(new TensorflowTensorProto() {{}}),
-                                                add(new TensorflowTensorProto() {{}}),
-                                                add(new TensorflowTensorProto() {{}}),
-                                            }};
-                                            typeName = "perferendis";
-                                        }}),
-                                    }};
-                                    versionNumber = 164940;
-                                }};
-                            }};
-                            meta = new Meta() {{
-                                metrics = new org.openapis.openapi.models.shared.Metric[]{{
-                                    add(new Metric() {{
-                                        key = "ipsam";
-                                        type = "COUNTER";
-                                        value = 1464.41;
-                                    }}),
-                                    add(new Metric() {{
-                                        key = "dolorum";
-                                        type = "GAUGE";
-                                        value = 2700.08;
-                                    }}),
-                                    add(new Metric() {{
-                                        key = "facilis";
-                                        type = "TIMER";
-                                        value = 2884.76;
-                                    }}),
-                                    add(new Metric() {{
-                                        key = "delectus";
-                                        type = "GAUGE";
-                                        value = 2487.53;
-                                    }}),
-                                }};
-                                puid = "eligendi";
-                                requestPath = new java.util.HashMap<String, String>() {{
-                                    put("aliquid", "provident");
-                                    put("necessitatibus", "sint");
-                                    put("officia", "dolor");
-                                }};
-                                routing = new java.util.HashMap<String, Integer>() {{
-                                    put("a", 680056);
-                                    put("in", 449198);
-                                    put("illum", 978571);
-                                    put("rerum", 116202);
-                                }};
-                                tags = new java.util.HashMap<String, Object>() {{
-                                    put("cumque", "facere");
-                                    put("ea", "aliquid");
-                                }};
-                            }};
-                            status = new Status() {{
-                                code = 675439;
-                                info = "accusamus";
-                                reason = "non";
-                                status = "FAILURE";
-                            }};
-                            strData = "enim";
-                        }}),
-                        add(new SeldonMessage() {{
-                            binData = "accusamus";
-                            data = new DefaultData() {{
-                                names = new String[]{{
-                                    add("quidem"),
-                                    add("provident"),
-                                    add("nam"),
-                                    add("id"),
-                                }};
-                                ndarry = new Object[]{{
-                                    add("deleniti"),
-                                    add("sapiente"),
-                                    add("amet"),
-                                }};
-                                tensor = new Tensor() {{
-                                    shape = new Integer[]{{
-                                        add(394869),
-                                        add(423855),
-                                        add(618809),
-                                    }};
-                                    values = new Double[]{{
-                                        add(4748.67),
-                                        add(191.93),
-                                        add(4701.32),
-                                    }};
-                                }};
-                                tftensor = new TensorflowTensorProto() {{
-                                    boolVal = new Boolean[]{{
-                                        add(false),
-                                        add(false),
-                                    }};
-                                    dcomplexVal = new Double[]{{
-                                        add(6601.74),
-                                        add(2879.91),
-                                        add(2900.77),
-                                    }};
-                                    doubleVal = new Double[]{{
-                                        add(6180.16),
-                                        add(7491.7),
-                                    }};
-                                    dtype = "DT_RESOURCE";
-                                    floatVal = new Float[]{{
-                                        add(1354.74),
-                                        add(1028.63),
-                                        add(2982.82),
-                                        add(923.73),
-                                    }};
-                                    halfVal = new Integer[]{{
-                                        add(354047),
-                                        add(590873),
-                                        add(551816),
-                                    }};
-                                    int64Val = new String[]{{
-                                        add("accusantium"),
-                                        add("mollitia"),
-                                        add("reiciendis"),
+                                        add("modi"),
+                                        add("praesentium"),
                                     }};
                                     intVal = new Integer[]{{
-                                        add(320997),
-                                        add(431418),
-                                        add(221262),
+                                        add(916723),
+                                        add(93940),
+                                        add(921158),
                                     }};
                                     resourceHandleVal = new org.openapis.openapi.models.shared.TensorflowResourceHandleProto[]{{
                                         add(new TensorflowResourceHandleProto() {{
-                                            container = "odit";
-                                            device = "nemo";
-                                            hashCode = "quasi";
-                                            maybeTypeName = "iure";
-                                            name = "doloribus";
+                                            container = "veritatis";
+                                            device = "itaque";
+                                            hashCode = "incidunt";
+                                            maybeTypeName = "enim";
+                                            name = "Monique Spinka";
                                         }}),
                                         add(new TensorflowResourceHandleProto() {{
-                                            container = "debitis";
-                                            device = "eius";
-                                            hashCode = "maxime";
-                                            maybeTypeName = "deleniti";
-                                            name = "facilis";
+                                            container = "distinctio";
+                                            device = "quibusdam";
+                                            hashCode = "labore";
+                                            maybeTypeName = "modi";
+                                            name = "Beth McGlynn Sr.";
                                         }}),
                                         add(new TensorflowResourceHandleProto() {{
-                                            container = "in";
-                                            device = "architecto";
-                                            hashCode = "architecto";
-                                            maybeTypeName = "repudiandae";
-                                            name = "ullam";
-                                        }}),
-                                        add(new TensorflowResourceHandleProto() {{
-                                            container = "expedita";
-                                            device = "nihil";
-                                            hashCode = "repellat";
-                                            maybeTypeName = "quibusdam";
-                                            name = "sed";
+                                            container = "assumenda";
+                                            device = "ipsam";
+                                            hashCode = "alias";
+                                            maybeTypeName = "fugit";
+                                            name = "Marshall Glover";
                                         }}),
                                     }};
                                     scomplexVal = new Float[]{{
-                                        add(8681.26),
-                                        add(375.59),
-                                        add(1624.93),
-                                        add(5083.15),
+                                        add(9621.89),
+                                        add(4332.88),
                                     }};
                                     stringVal = new String[]{{
-                                        add("magni"),
-                                        add("sunt"),
-                                        add("quo"),
+                                        add("eligendi"),
                                     }};
-                                    tensorContent = "illum";
+                                    tensorContent = "sint";
                                     tensorShape = new TensorflowTensorShapeProto() {{
                                         dim = new org.openapis.openapi.models.shared.TensorShapeProtoDim[]{{
                                             add(new TensorShapeProtoDim() {{
-                                                name = "maxime";
-                                                size = "ea";
+                                                name = "Terence Marquardt";
+                                                size = "debitis";
                                             }}),
                                             add(new TensorShapeProtoDim() {{
-                                                name = "excepturi";
-                                                size = "odit";
-                                            }}),
-                                            add(new TensorShapeProtoDim() {{
-                                                name = "ea";
-                                                size = "accusantium";
-                                            }}),
-                                            add(new TensorShapeProtoDim() {{
-                                                name = "ab";
+                                                name = "Wilbur King";
                                                 size = "maiores";
                                             }}),
                                         }};
                                         unknownRank = false;
                                     }};
                                     uint32Val = new Long[]{{
-                                        add(373291),
-                                        add(453543),
-                                        add(420075),
+                                        add(116202L),
+                                        add(297437L),
+                                        add(767024L),
                                     }};
                                     uint64Val = new String[]{{
-                                        add("eaque"),
-                                        add("pariatur"),
-                                        add("nemo"),
+                                        add("ea"),
+                                        add("aliquid"),
+                                        add("laborum"),
+                                        add("accusamus"),
                                     }};
                                     variantVal = new org.openapis.openapi.models.shared.TensorflowVariantTensorDataProto[]{{
                                         add(new TensorflowVariantTensorDataProto() {{
-                                            metadata = "perferendis";
-                                            tensors = new org.openapis.openapi.models.shared.TensorflowTensorProto[]{{
-                                                add(new TensorflowTensorProto() {{}}),
-                                                add(new TensorflowTensorProto() {{}}),
-                                                add(new TensorflowTensorProto() {{}}),
-                                                add(new TensorflowTensorProto() {{}}),
-                                            }};
-                                            typeName = "amet";
-                                        }}),
-                                        add(new TensorflowVariantTensorDataProto() {{
-                                            metadata = "aut";
-                                            tensors = new org.openapis.openapi.models.shared.TensorflowTensorProto[]{{
-                                                add(new TensorflowTensorProto() {{}}),
-                                                add(new TensorflowTensorProto() {{}}),
-                                                add(new TensorflowTensorProto() {{}}),
-                                                add(new TensorflowTensorProto() {{}}),
-                                            }};
-                                            typeName = "corporis";
-                                        }}),
-                                        add(new TensorflowVariantTensorDataProto() {{
-                                            metadata = "hic";
-                                            tensors = new org.openapis.openapi.models.shared.TensorflowTensorProto[]{{
-                                                add(new TensorflowTensorProto() {{}}),
-                                                add(new TensorflowTensorProto() {{}}),
-                                                add(new TensorflowTensorProto() {{}}),
-                                            }};
-                                            typeName = "nobis";
-                                        }}),
-                                        add(new TensorflowVariantTensorDataProto() {{
-                                            metadata = "dolores";
+                                            metadata = "occaecati";
                                             tensors = new org.openapis.openapi.models.shared.TensorflowTensorProto[]{{
                                                 add(new TensorflowTensorProto() {{}}),
                                                 add(new TensorflowTensorProto() {{}}),
                                             }};
-                                            typeName = "totam";
+                                            typeName = "accusamus";
                                         }}),
                                     }};
-                                    versionNumber = 489549;
+                                    versionNumber = 965417;
                                 }};
                             }};
                             meta = new Meta() {{
                                 metrics = new org.openapis.openapi.models.shared.Metric[]{{
                                     add(new Metric() {{
-                                        key = "quis";
-                                        type = "COUNTER";
-                                        value = 1794.9;
+                                        key = "provident";
+                                        type = MetricTypeEnum.TIMER;
+                                        value = 6596.69;
+                                    }}),
+                                    add(new Metric() {{
+                                        key = "blanditiis";
+                                        type = MetricTypeEnum.GAUGE;
+                                        value = 9560.84;
+                                    }}),
+                                    add(new Metric() {{
+                                        key = "amet";
+                                        type = MetricTypeEnum.GAUGE;
+                                        value = 3948.69;
                                     }}),
                                 }};
-                                puid = "perferendis";
+                                puid = "vel";
                                 requestPath = new java.util.HashMap<String, String>() {{
-                                    put("minus", "quam");
+                                    put("omnis", "molestiae");
+                                    put("perferendis", "nihil");
+                                    put("magnam", "distinctio");
                                 }};
                                 routing = new java.util.HashMap<String, Integer>() {{
-                                    put("vero", 345352);
+                                    put("labore", 290077);
+                                    put("suscipit", 618016);
+                                    put("nobis", 428769);
                                 }};
                                 tags = new java.util.HashMap<String, Object>() {{
-                                    put("recusandae", "omnis");
-                                    put("facilis", "perspiciatis");
-                                    put("voluptatem", "porro");
-                                    put("consequuntur", "blanditiis");
+                                    put("aspernatur", "architecto");
+                                    put("magnam", "et");
+                                    put("excepturi", "ullam");
+                                    put("provident", "quos");
                                 }};
                             }};
                             status = new Status() {{
-                                code = 621479;
-                                info = "eaque";
-                                reason = "occaecati";
-                                status = "FAILURE";
+                                code = 574325;
+                                info = "accusantium";
+                                reason = "mollitia";
+                                status = StatusStatusFlagEnum.FAILURE;
                             }};
-                            strData = "adipisci";
+                            strData = "mollitia";
+                        }}),
+                        add(new SeldonMessage() {{
+                            binData = "ad";
+                            data = new DefaultData() {{
+                                names = new String[]{{
+                                    add("dolor"),
+                                    add("necessitatibus"),
+                                }};
+                                ndarry = new Object[]{{
+                                    add("nemo"),
+                                }};
+                                tensor = new Tensor() {{
+                                    shape = new Integer[]{{
+                                        add(435865),
+                                    }};
+                                    values = new Double[]{{
+                                        add(8919.24),
+                                        add(2603.41),
+                                        add(8061.94),
+                                        add(5370.23),
+                                    }};
+                                }};
+                                tftensor = new TensorflowTensorProto() {{
+                                    boolVal = new Boolean[]{{
+                                        add(false),
+                                        add(false),
+                                        add(false),
+                                    }};
+                                    dcomplexVal = new Double[]{{
+                                        add(1002.26),
+                                        add(995.69),
+                                    }};
+                                    doubleVal = new Double[]{{
+                                        add(3523.12),
+                                        add(7142.42),
+                                        add(4692.49),
+                                        add(9988.48),
+                                    }};
+                                    dtype = TensorflowDataTypeEnum.DT_QUINT16_REF;
+                                    floatVal = new Float[]{{
+                                        add(9046.48),
+                                    }};
+                                    halfVal = new Integer[]{{
+                                        add(37559),
+                                        add(162493),
+                                        add(508315),
+                                        add(615560),
+                                    }};
+                                    int64Val = new String[]{{
+                                        add("sunt"),
+                                    }};
+                                    intVal = new Integer[]{{
+                                        add(848009),
+                                        add(864934),
+                                        add(807319),
+                                        add(411397),
+                                    }};
+                                    resourceHandleVal = new org.openapis.openapi.models.shared.TensorflowResourceHandleProto[]{{
+                                        add(new TensorflowResourceHandleProto() {{
+                                            container = "odit";
+                                            device = "ea";
+                                            hashCode = "accusantium";
+                                            maybeTypeName = "ab";
+                                            name = "Rickey Hintz";
+                                        }}),
+                                        add(new TensorflowResourceHandleProto() {{
+                                            container = "nam";
+                                            device = "eaque";
+                                            hashCode = "pariatur";
+                                            maybeTypeName = "nemo";
+                                            name = "Joseph Steuber DDS";
+                                        }}),
+                                        add(new TensorflowResourceHandleProto() {{
+                                            container = "corporis";
+                                            device = "hic";
+                                            hashCode = "libero";
+                                            maybeTypeName = "nobis";
+                                            name = "Beatrice Lebsack II";
+                                        }}),
+                                    }};
+                                    scomplexVal = new Float[]{{
+                                        add(1794.9),
+                                    }};
+                                    stringVal = new String[]{{
+                                        add("dolores"),
+                                    }};
+                                    tensorContent = "minus";
+                                    tensorShape = new TensorflowTensorShapeProto() {{
+                                        dim = new org.openapis.openapi.models.shared.TensorShapeProtoDim[]{{
+                                            add(new TensorShapeProtoDim() {{
+                                                name = "Eula Hegmann";
+                                                size = "omnis";
+                                            }}),
+                                            add(new TensorShapeProtoDim() {{
+                                                name = "Freddie Bartoletti";
+                                                size = "blanditiis";
+                                            }}),
+                                        }};
+                                        unknownRank = false;
+                                    }};
+                                    uint32Val = new Long[]{{
+                                        add(50370L),
+                                        add(577229L),
+                                        add(699098L),
+                                    }};
+                                    uint64Val = new String[]{{
+                                        add("asperiores"),
+                                    }};
+                                    variantVal = new org.openapis.openapi.models.shared.TensorflowVariantTensorDataProto[]{{
+                                        add(new TensorflowVariantTensorDataProto() {{
+                                            metadata = "modi";
+                                            tensors = new org.openapis.openapi.models.shared.TensorflowTensorProto[]{{
+                                                add(new TensorflowTensorProto() {{}}),
+                                                add(new TensorflowTensorProto() {{}}),
+                                                add(new TensorflowTensorProto() {{}}),
+                                            }};
+                                            typeName = "dolorum";
+                                        }}),
+                                        add(new TensorflowVariantTensorDataProto() {{
+                                            metadata = "deleniti";
+                                            tensors = new org.openapis.openapi.models.shared.TensorflowTensorProto[]{{
+                                                add(new TensorflowTensorProto() {{}}),
+                                                add(new TensorflowTensorProto() {{}}),
+                                                add(new TensorflowTensorProto() {{}}),
+                                                add(new TensorflowTensorProto() {{}}),
+                                            }};
+                                            typeName = "provident";
+                                        }}),
+                                        add(new TensorflowVariantTensorDataProto() {{
+                                            metadata = "nobis";
+                                            tensors = new org.openapis.openapi.models.shared.TensorflowTensorProto[]{{
+                                                add(new TensorflowTensorProto() {{}}),
+                                                add(new TensorflowTensorProto() {{}}),
+                                                add(new TensorflowTensorProto() {{}}),
+                                            }};
+                                            typeName = "delectus";
+                                        }}),
+                                        add(new TensorflowVariantTensorDataProto() {{
+                                            metadata = "quaerat";
+                                            tensors = new org.openapis.openapi.models.shared.TensorflowTensorProto[]{{
+                                                add(new TensorflowTensorProto() {{}}),
+                                                add(new TensorflowTensorProto() {{}}),
+                                                add(new TensorflowTensorProto() {{}}),
+                                            }};
+                                            typeName = "aliquid";
+                                        }}),
+                                    }};
+                                    versionNumber = 212390;
+                                }};
+                            }};
+                            meta = new Meta() {{
+                                metrics = new org.openapis.openapi.models.shared.Metric[]{{
+                                    add(new Metric() {{
+                                        key = "dolor";
+                                        type = MetricTypeEnum.COUNTER;
+                                        value = 2187.49;
+                                    }}),
+                                }};
+                                puid = "hic";
+                                requestPath = new java.util.HashMap<String, String>() {{
+                                    put("cum", "voluptate");
+                                    put("dignissimos", "reiciendis");
+                                    put("amet", "dolorum");
+                                }};
+                                routing = new java.util.HashMap<String, Integer>() {{
+                                    put("veritatis", 58029);
+                                    put("ipsa", 434417);
+                                }};
+                                tags = new java.util.HashMap<String, Object>() {{
+                                    put("quaerat", "accusamus");
+                                    put("quidem", "voluptatibus");
+                                }};
+                            }};
+                            status = new Status() {{
+                                code = 377752;
+                                info = "natus";
+                                reason = "eos";
+                                status = StatusStatusFlagEnum.FAILURE;
+                            }};
+                            strData = "sit";
                         }}),
                     }};
-                }};
-            }}            
+                }};;
+            }};            
 
             Aggregate2Response res = sdk.internal.aggregate2(req);
 
-            if (res.seldonMessage.isPresent()) {
+            if (res.seldonMessage != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

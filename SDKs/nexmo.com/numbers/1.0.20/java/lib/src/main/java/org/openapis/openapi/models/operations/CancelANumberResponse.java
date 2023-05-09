@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelANumberResponse {
     
     public byte[] body;
+
     public CancelANumberResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CancelANumberResponse {
     
     
     public String contentType;
+
     public CancelANumberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class CancelANumberResponse {
     
     
     public Integer statusCode;
+
     public CancelANumberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class CancelANumberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelANumberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class CancelANumberResponse {
      */
     
     public org.openapis.openapi.models.shared.Response response;
+
     public CancelANumberResponse withResponse(org.openapis.openapi.models.shared.Response response) {
         this.response = response;
         return this;
@@ -50,9 +56,14 @@ public class CancelANumberResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthorized unauthorized;
+
     public CancelANumberResponse withUnauthorized(org.openapis.openapi.models.shared.Unauthorized unauthorized) {
         this.unauthorized = unauthorized;
         return this;
     }
     
+    public CancelANumberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

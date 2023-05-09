@@ -12,9 +12,11 @@ public class GetTotalPotValue200ApplicationJSONTotalValuesPots {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pot_id")
     public String potId;
+
     public GetTotalPotValue200ApplicationJSONTotalValuesPots withPotId(String potId) {
         this.potId = potId;
         return this;
     }
     
+    public GetTotalPotValue200ApplicationJSONTotalValuesPots(){}
 }

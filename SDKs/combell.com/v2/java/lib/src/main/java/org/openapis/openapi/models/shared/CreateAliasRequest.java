@@ -18,6 +18,7 @@ public class CreateAliasRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinations")
     public String[] destinations;
+
     public CreateAliasRequest withDestinations(String[] destinations) {
         this.destinations = destinations;
         return this;
@@ -29,9 +30,11 @@ public class CreateAliasRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_address")
     public String emailAddress;
+
     public CreateAliasRequest withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
     }
     
+    public CreateAliasRequest(){}
 }

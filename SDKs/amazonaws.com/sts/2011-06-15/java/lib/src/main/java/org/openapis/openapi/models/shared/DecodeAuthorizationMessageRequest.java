@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DecodeAuthorizationMessageRequest {
     
     public String encodedMessage;
+
     public DecodeAuthorizationMessageRequest withEncodedMessage(String encodedMessage) {
         this.encodedMessage = encodedMessage;
         return this;
     }
     
+    public DecodeAuthorizationMessageRequest(@JsonProperty("EncodedMessage") String encodedMessage) {
+        this.encodedMessage = encodedMessage;
+  }
 }

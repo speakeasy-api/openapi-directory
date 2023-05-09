@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDynamicThingGroupResponse {
     
     public String contentType;
+
     public CreateDynamicThingGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateDynamicThingGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDynamicThingGroupResponse createDynamicThingGroupResponse;
+
     public CreateDynamicThingGroupResponse withCreateDynamicThingGroupResponse(org.openapis.openapi.models.shared.CreateDynamicThingGroupResponse createDynamicThingGroupResponse) {
         this.createDynamicThingGroupResponse = createDynamicThingGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateDynamicThingGroupResponse {
      */
     
     public Object internalFailureException;
+
     public CreateDynamicThingGroupResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateDynamicThingGroupResponse {
      */
     
     public Object invalidQueryException;
+
     public CreateDynamicThingGroupResponse withInvalidQueryException(Object invalidQueryException) {
         this.invalidQueryException = invalidQueryException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDynamicThingGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateDynamicThingGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDynamicThingGroupResponse {
      */
     
     public Object limitExceededException;
+
     public CreateDynamicThingGroupResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateDynamicThingGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateDynamicThingGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class CreateDynamicThingGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateDynamicThingGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateDynamicThingGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDynamicThingGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateDynamicThingGroupResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateDynamicThingGroupResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -103,9 +114,14 @@ public class CreateDynamicThingGroupResponse {
      */
     
     public Object throttlingException;
+
     public CreateDynamicThingGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateDynamicThingGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

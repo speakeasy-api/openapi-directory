@@ -12,9 +12,11 @@ public class GetServicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public GetServicesRequest withSearch(String search) {
         this.search = search;
         return this;
     }
     
+    public GetServicesRequest(){}
 }

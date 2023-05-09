@@ -18,6 +18,7 @@ public class OSPolicyResourceFileRemote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha256Checksum")
     public String sha256Checksum;
+
     public OSPolicyResourceFileRemote withSha256Checksum(String sha256Checksum) {
         this.sha256Checksum = sha256Checksum;
         return this;
@@ -29,9 +30,11 @@ public class OSPolicyResourceFileRemote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public OSPolicyResourceFileRemote withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public OSPolicyResourceFileRemote(){}
 }

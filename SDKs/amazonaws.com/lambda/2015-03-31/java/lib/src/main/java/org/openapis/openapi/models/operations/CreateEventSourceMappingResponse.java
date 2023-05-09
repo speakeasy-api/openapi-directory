@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEventSourceMappingResponse {
     
     public String contentType;
+
     public CreateEventSourceMappingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateEventSourceMappingResponse {
      */
     
     public org.openapis.openapi.models.shared.EventSourceMappingConfiguration eventSourceMappingConfiguration;
+
     public CreateEventSourceMappingResponse withEventSourceMappingConfiguration(org.openapis.openapi.models.shared.EventSourceMappingConfiguration eventSourceMappingConfiguration) {
         this.eventSourceMappingConfiguration = eventSourceMappingConfiguration;
         return this;
@@ -29,6 +32,7 @@ public class CreateEventSourceMappingResponse {
      */
     
     public Object invalidParameterValueException;
+
     public CreateEventSourceMappingResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class CreateEventSourceMappingResponse {
      */
     
     public Object resourceConflictException;
+
     public CreateEventSourceMappingResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -49,6 +54,7 @@ public class CreateEventSourceMappingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateEventSourceMappingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateEventSourceMappingResponse {
      */
     
     public Object serviceException;
+
     public CreateEventSourceMappingResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class CreateEventSourceMappingResponse {
     
     
     public Integer statusCode;
+
     public CreateEventSourceMappingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateEventSourceMappingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEventSourceMappingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateEventSourceMappingResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateEventSourceMappingResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateEventSourceMappingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

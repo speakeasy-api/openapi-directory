@@ -12,6 +12,7 @@ public class RewardEarningFulfillmentResourceRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patient")
     public RewardEarningFulfillmentResourceRelationshipsPatient patient;
+
     public RewardEarningFulfillmentResourceRelationships withPatient(RewardEarningFulfillmentResourceRelationshipsPatient patient) {
         this.patient = patient;
         return this;
@@ -19,9 +20,13 @@ public class RewardEarningFulfillmentResourceRelationships {
     
     @JsonProperty("reward_earning")
     public RewardEarningFulfillmentResourceRelationshipsRewardEarning rewardEarning;
+
     public RewardEarningFulfillmentResourceRelationships withRewardEarning(RewardEarningFulfillmentResourceRelationshipsRewardEarning rewardEarning) {
         this.rewardEarning = rewardEarning;
         return this;
     }
     
+    public RewardEarningFulfillmentResourceRelationships(@JsonProperty("reward_earning") RewardEarningFulfillmentResourceRelationshipsRewardEarning rewardEarning) {
+        this.rewardEarning = rewardEarning;
+  }
 }

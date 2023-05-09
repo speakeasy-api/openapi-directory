@@ -12,9 +12,11 @@ public class ApiCoreResponsesEntitiesResponseApiCoreDtoGrantsGrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entities")
     public ApiCoreDtoGrantsGrant[] entities;
+
     public ApiCoreResponsesEntitiesResponseApiCoreDtoGrantsGrant withEntities(ApiCoreDtoGrantsGrant[] entities) {
         this.entities = entities;
         return this;
     }
     
+    public ApiCoreResponsesEntitiesResponseApiCoreDtoGrantsGrant(){}
 }

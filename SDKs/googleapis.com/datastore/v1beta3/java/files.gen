@@ -125,4 +125,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/QueryResultBatchEntityResul
 lib/src/main/java/org/openapis/openapi/models/shared/QueryResultBatchMoreResultsEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/QueryResultBatch.java
 lib/src/main/java/org/openapis/openapi/models/shared/RunQueryRequest.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

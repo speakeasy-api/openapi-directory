@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRemediationExceptionsResponse {
     
     public String contentType;
+
     public DescribeRemediationExceptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeRemediationExceptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRemediationExceptionsResponse describeRemediationExceptionsResponse;
+
     public DescribeRemediationExceptionsResponse withDescribeRemediationExceptionsResponse(org.openapis.openapi.models.shared.DescribeRemediationExceptionsResponse describeRemediationExceptionsResponse) {
         this.describeRemediationExceptionsResponse = describeRemediationExceptionsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRemediationExceptionsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeRemediationExceptionsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRemediationExceptionsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeRemediationExceptionsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeRemediationExceptionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeRemediationExceptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeRemediationExceptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRemediationExceptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeRemediationExceptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

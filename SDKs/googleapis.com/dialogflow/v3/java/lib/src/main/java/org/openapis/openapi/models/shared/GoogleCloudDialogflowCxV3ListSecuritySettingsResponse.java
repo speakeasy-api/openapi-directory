@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3ListSecuritySettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDialogflowCxV3ListSecuritySettingsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3ListSecuritySettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securitySettings")
     public GoogleCloudDialogflowCxV3SecuritySettings[] securitySettings;
+
     public GoogleCloudDialogflowCxV3ListSecuritySettingsResponse withSecuritySettings(GoogleCloudDialogflowCxV3SecuritySettings[] securitySettings) {
         this.securitySettings = securitySettings;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ListSecuritySettingsResponse(){}
 }

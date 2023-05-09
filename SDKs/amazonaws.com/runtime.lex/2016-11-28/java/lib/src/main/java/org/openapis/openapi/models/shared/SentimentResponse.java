@@ -15,6 +15,7 @@ public class SentimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentimentLabel")
     public String sentimentLabel;
+
     public SentimentResponse withSentimentLabel(String sentimentLabel) {
         this.sentimentLabel = sentimentLabel;
         return this;
@@ -23,9 +24,11 @@ public class SentimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentimentScore")
     public String sentimentScore;
+
     public SentimentResponse withSentimentScore(String sentimentScore) {
         this.sentimentScore = sentimentScore;
         return this;
     }
     
+    public SentimentResponse(){}
 }

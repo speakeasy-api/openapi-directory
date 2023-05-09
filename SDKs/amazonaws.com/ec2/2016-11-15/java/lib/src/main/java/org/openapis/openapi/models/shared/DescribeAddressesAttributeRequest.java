@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAddressesAttributeRequest {
     
     public String[] allocationIds;
+
     public DescribeAddressesAttributeRequest withAllocationIds(String[] allocationIds) {
         this.allocationIds = allocationIds;
         return this;
@@ -16,6 +17,7 @@ public class DescribeAddressesAttributeRequest {
     
     
     public AddressAttributeNameEnum attribute;
+
     public DescribeAddressesAttributeRequest withAttribute(AddressAttributeNameEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -23,6 +25,7 @@ public class DescribeAddressesAttributeRequest {
     
     
     public Boolean dryRun;
+
     public DescribeAddressesAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class DescribeAddressesAttributeRequest {
     
     
     public Long maxResults;
+
     public DescribeAddressesAttributeRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,11 @@ public class DescribeAddressesAttributeRequest {
     
     
     public String nextToken;
+
     public DescribeAddressesAttributeRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAddressesAttributeRequest(){}
 }

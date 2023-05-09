@@ -15,9 +15,11 @@ public class LogAnomalyShowcase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogAnomalyClasses")
     public LogAnomalyClass[] logAnomalyClasses;
+
     public LogAnomalyShowcase withLogAnomalyClasses(LogAnomalyClass[] logAnomalyClasses) {
         this.logAnomalyClasses = logAnomalyClasses;
         return this;
     }
     
+    public LogAnomalyShowcase(){}
 }

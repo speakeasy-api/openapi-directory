@@ -91,4 +91,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/FantasyDefenseGameProjectio
 lib/src/main/java/org/openapis/openapi/models/shared/FantasyDefenseSeasonProjection.java
 lib/src/main/java/org/openapis/openapi/models/shared/PlayerSeasonProjection.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

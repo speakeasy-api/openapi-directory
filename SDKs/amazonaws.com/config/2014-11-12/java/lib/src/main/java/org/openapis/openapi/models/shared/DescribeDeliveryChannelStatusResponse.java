@@ -15,9 +15,11 @@ public class DescribeDeliveryChannelStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryChannelsStatus")
     public DeliveryChannelStatus[] deliveryChannelsStatus;
+
     public DescribeDeliveryChannelStatusResponse withDeliveryChannelsStatus(DeliveryChannelStatus[] deliveryChannelsStatus) {
         this.deliveryChannelsStatus = deliveryChannelsStatus;
         return this;
     }
     
+    public DescribeDeliveryChannelStatusResponse(){}
 }

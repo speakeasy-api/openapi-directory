@@ -50,13 +50,11 @@ public class Get {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KeyRetrieveResponse res = new org.openapis.openapi.models.operations.KeyRetrieveResponse() {{
+        org.openapis.openapi.models.operations.KeyRetrieveResponse res = new org.openapis.openapi.models.operations.KeyRetrieveResponse(contentType, httpRes.statusCode()) {{
             jwt = null;
             error = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,15 +101,13 @@ public class Get {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SignRetrieveResponse res = new org.openapis.openapi.models.operations.SignRetrieveResponse() {{
+        org.openapis.openapi.models.operations.SignRetrieveResponse res = new org.openapis.openapi.models.operations.SignRetrieveResponse(contentType, httpRes.statusCode()) {{
             jwt = null;
             body = null;
             body = null;
             error = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

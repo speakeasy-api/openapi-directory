@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostMerchantsMerchantIdWebhooksWebhookIdTestResponse {
     
     public String contentType;
+
     public PostMerchantsMerchantIdWebhooksWebhookIdTestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostMerchantsMerchantIdWebhooksWebhookIdTestResponse {
     
     
     public Integer statusCode;
+
     public PostMerchantsMerchantIdWebhooksWebhookIdTestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostMerchantsMerchantIdWebhooksWebhookIdTestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostMerchantsMerchantIdWebhooksWebhookIdTestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostMerchantsMerchantIdWebhooksWebhookIdTestResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public PostMerchantsMerchantIdWebhooksWebhookIdTestResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -43,9 +48,14 @@ public class PostMerchantsMerchantIdWebhooksWebhookIdTestResponse {
      */
     
     public org.openapis.openapi.models.shared.TestWebhookResponse testWebhookResponse;
+
     public PostMerchantsMerchantIdWebhooksWebhookIdTestResponse withTestWebhookResponse(org.openapis.openapi.models.shared.TestWebhookResponse testWebhookResponse) {
         this.testWebhookResponse = testWebhookResponse;
         return this;
     }
     
+    public PostMerchantsMerchantIdWebhooksWebhookIdTestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

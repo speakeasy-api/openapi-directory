@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetShippingLabelInput {
     /**
@@ -12,6 +12,7 @@ public class GetShippingLabelInput {
      */
     
     public String apiVersion;
+
     public GetShippingLabelInput withAPIVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -22,6 +23,7 @@ public class GetShippingLabelInput {
      */
     
     public String city;
+
     public GetShippingLabelInput withCity(String city) {
         this.city = city;
         return this;
@@ -32,6 +34,7 @@ public class GetShippingLabelInput {
      */
     
     public String company;
+
     public GetShippingLabelInput withCompany(String company) {
         this.company = company;
         return this;
@@ -42,6 +45,7 @@ public class GetShippingLabelInput {
      */
     
     public String country;
+
     public GetShippingLabelInput withCountry(String country) {
         this.country = country;
         return this;
@@ -49,6 +53,7 @@ public class GetShippingLabelInput {
     
     
     public String[] jobIds;
+
     public GetShippingLabelInput withJobIds(String[] jobIds) {
         this.jobIds = jobIds;
         return this;
@@ -59,6 +64,7 @@ public class GetShippingLabelInput {
      */
     
     public String name;
+
     public GetShippingLabelInput withName(String name) {
         this.name = name;
         return this;
@@ -69,6 +75,7 @@ public class GetShippingLabelInput {
      */
     
     public String phoneNumber;
+
     public GetShippingLabelInput withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -79,6 +86,7 @@ public class GetShippingLabelInput {
      */
     
     public String postalCode;
+
     public GetShippingLabelInput withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -89,6 +97,7 @@ public class GetShippingLabelInput {
      */
     
     public String stateOrProvince;
+
     public GetShippingLabelInput withStateOrProvince(String stateOrProvince) {
         this.stateOrProvince = stateOrProvince;
         return this;
@@ -99,6 +108,7 @@ public class GetShippingLabelInput {
      */
     
     public String street1;
+
     public GetShippingLabelInput withStreet1(String street1) {
         this.street1 = street1;
         return this;
@@ -109,6 +119,7 @@ public class GetShippingLabelInput {
      */
     
     public String street2;
+
     public GetShippingLabelInput withStreet2(String street2) {
         this.street2 = street2;
         return this;
@@ -119,9 +130,13 @@ public class GetShippingLabelInput {
      */
     
     public String street3;
+
     public GetShippingLabelInput withStreet3(String street3) {
         this.street3 = street3;
         return this;
     }
     
+    public GetShippingLabelInput(@JsonProperty("jobIds") String[] jobIds) {
+        this.jobIds = jobIds;
+  }
 }

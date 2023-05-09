@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveSignaturesV1Response {
     
     public String contentType;
+
     public RemoveSignaturesV1Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RemoveSignaturesV1Response {
     
     
     public Integer statusCode;
+
     public RemoveSignaturesV1Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RemoveSignaturesV1Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveSignaturesV1Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class RemoveSignaturesV1Response {
      */
     
     public byte[] removeSignaturesV1200ApplicationPdfBinaryString;
+
     public RemoveSignaturesV1Response withRemoveSignaturesV1200ApplicationPdfBinaryString(byte[] removeSignaturesV1200ApplicationPdfBinaryString) {
         this.removeSignaturesV1200ApplicationPdfBinaryString = removeSignaturesV1200ApplicationPdfBinaryString;
         return this;
@@ -43,9 +48,14 @@ public class RemoveSignaturesV1Response {
      */
     
     public RemoveSignaturesV14XXApplicationProblemPlusJson removeSignaturesV14XXApplicationProblemPlusJsonObject;
+
     public RemoveSignaturesV1Response withRemoveSignaturesV14XXApplicationProblemPlusJsonObject(RemoveSignaturesV14XXApplicationProblemPlusJson removeSignaturesV14XXApplicationProblemPlusJsonObject) {
         this.removeSignaturesV14XXApplicationProblemPlusJsonObject = removeSignaturesV14XXApplicationProblemPlusJsonObject;
         return this;
     }
     
+    public RemoveSignaturesV1Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

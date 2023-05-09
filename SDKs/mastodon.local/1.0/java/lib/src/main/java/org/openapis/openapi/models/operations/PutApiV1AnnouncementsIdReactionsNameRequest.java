@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutApiV1AnnouncementsIdReactionsNameRequest {
@@ -12,6 +13,7 @@ public class PutApiV1AnnouncementsIdReactionsNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutApiV1AnnouncementsIdReactionsNameRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +24,14 @@ public class PutApiV1AnnouncementsIdReactionsNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public PutApiV1AnnouncementsIdReactionsNameRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PutApiV1AnnouncementsIdReactionsNameRequest(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUnassignPrivateNatGatewayAddressRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETUnassignPrivateNatGatewayAddressActionEnum action;
+
     public GETUnassignPrivateNatGatewayAddressRequest withAction(GETUnassignPrivateNatGatewayAddressActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETUnassignPrivateNatGatewayAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETUnassignPrivateNatGatewayAddressRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETUnassignPrivateNatGatewayAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxDrainDurationSeconds")
     public Long maxDrainDurationSeconds;
+
     public GETUnassignPrivateNatGatewayAddressRequest withMaxDrainDurationSeconds(Long maxDrainDurationSeconds) {
         this.maxDrainDurationSeconds = maxDrainDurationSeconds;
         return this;
@@ -39,6 +43,7 @@ public class GETUnassignPrivateNatGatewayAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NatGatewayId")
     public String natGatewayId;
+
     public GETUnassignPrivateNatGatewayAddressRequest withNatGatewayId(String natGatewayId) {
         this.natGatewayId = natGatewayId;
         return this;
@@ -49,6 +54,7 @@ public class GETUnassignPrivateNatGatewayAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrivateIpAddress")
     public String[] privateIpAddress;
+
     public GETUnassignPrivateNatGatewayAddressRequest withPrivateIpAddress(String[] privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -56,6 +62,7 @@ public class GETUnassignPrivateNatGatewayAddressRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETUnassignPrivateNatGatewayAddressVersionEnum version;
+
     public GETUnassignPrivateNatGatewayAddressRequest withVersion(GETUnassignPrivateNatGatewayAddressVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETUnassignPrivateNatGatewayAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETUnassignPrivateNatGatewayAddressRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETUnassignPrivateNatGatewayAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETUnassignPrivateNatGatewayAddressRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETUnassignPrivateNatGatewayAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETUnassignPrivateNatGatewayAddressRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETUnassignPrivateNatGatewayAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETUnassignPrivateNatGatewayAddressRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETUnassignPrivateNatGatewayAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETUnassignPrivateNatGatewayAddressRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETUnassignPrivateNatGatewayAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETUnassignPrivateNatGatewayAddressRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,16 @@ public class GETUnassignPrivateNatGatewayAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETUnassignPrivateNatGatewayAddressRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETUnassignPrivateNatGatewayAddressRequest(@JsonProperty("Action") GETUnassignPrivateNatGatewayAddressActionEnum action, @JsonProperty("NatGatewayId") String natGatewayId, @JsonProperty("PrivateIpAddress") String[] privateIpAddress, @JsonProperty("Version") GETUnassignPrivateNatGatewayAddressVersionEnum version) {
+        this.action = action;
+        this.natGatewayId = natGatewayId;
+        this.privateIpAddress = privateIpAddress;
+        this.version = version;
+  }
 }

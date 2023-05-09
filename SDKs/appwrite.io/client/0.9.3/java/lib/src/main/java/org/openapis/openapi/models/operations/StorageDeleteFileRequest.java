@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageDeleteFileRequest {
@@ -12,9 +13,13 @@ public class StorageDeleteFileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
     public String fileId;
+
     public StorageDeleteFileRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
     }
     
+    public StorageDeleteFileRequest(@JsonProperty("fileId") String fileId) {
+        this.fileId = fileId;
+  }
 }

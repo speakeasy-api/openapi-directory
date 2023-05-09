@@ -15,9 +15,11 @@ public class UpdateConfigurationRequestBodyEcrConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rescanDuration")
     public org.openapis.openapi.models.shared.EcrRescanDurationEnum rescanDuration;
+
     public UpdateConfigurationRequestBodyEcrConfiguration withRescanDuration(org.openapis.openapi.models.shared.EcrRescanDurationEnum rescanDuration) {
         this.rescanDuration = rescanDuration;
         return this;
     }
     
+    public UpdateConfigurationRequestBodyEcrConfiguration(){}
 }

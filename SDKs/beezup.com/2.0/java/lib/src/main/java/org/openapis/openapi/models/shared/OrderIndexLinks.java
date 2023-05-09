@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OrderIndexLinks {
     @JsonProperty("autoTransitions")
     public LinksGetAutomaticTransitionsLink autoTransitions;
+
     public OrderIndexLinks withAutoTransitions(LinksGetAutomaticTransitionsLink autoTransitions) {
         this.autoTransitions = autoTransitions;
         return this;
@@ -21,6 +22,7 @@ public class OrderIndexLinks {
     
     @JsonProperty("clearMerchantInfos")
     public LinksClearMerchantOrderInfoListLink clearMerchantInfos;
+
     public OrderIndexLinks withClearMerchantInfos(LinksClearMerchantOrderInfoListLink clearMerchantInfos) {
         this.clearMerchantInfos = clearMerchantInfos;
         return this;
@@ -28,6 +30,7 @@ public class OrderIndexLinks {
     
     @JsonProperty("export")
     public LinksExportOrdersLink export;
+
     public OrderIndexLinks withExport(LinksExportOrdersLink export) {
         this.export = export;
         return this;
@@ -36,6 +39,7 @@ public class OrderIndexLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportations")
     public LinksGetOrderExportationsLink exportations;
+
     public OrderIndexLinks withExportations(LinksGetOrderExportationsLink exportations) {
         this.exportations = exportations;
         return this;
@@ -43,6 +47,7 @@ public class OrderIndexLinks {
     
     @JsonProperty("harvest")
     public LinksHarvestAllLink harvest;
+
     public OrderIndexLinks withHarvest(LinksHarvestAllLink harvest) {
         this.harvest = harvest;
         return this;
@@ -50,6 +55,7 @@ public class OrderIndexLinks {
     
     @JsonProperty("lightOrders")
     public LinksGetOrderListLightLink lightOrders;
+
     public OrderIndexLinks withLightOrders(LinksGetOrderListLightLink lightOrders) {
         this.lightOrders = lightOrders;
         return this;
@@ -57,6 +63,7 @@ public class OrderIndexLinks {
     
     @JsonProperty("orders")
     public LinksGetOrderListFullLink orders;
+
     public OrderIndexLinks withOrders(LinksGetOrderListFullLink orders) {
         this.orders = orders;
         return this;
@@ -64,6 +71,7 @@ public class OrderIndexLinks {
     
     @JsonProperty("self")
     public LinksGetOrderIndexLink self;
+
     public OrderIndexLinks withSelf(LinksGetOrderIndexLink self) {
         this.self = self;
         return this;
@@ -71,6 +79,7 @@ public class OrderIndexLinks {
     
     @JsonProperty("setMerchantInfos")
     public LinksSetMerchantOrderInfoListLink setMerchantInfos;
+
     public OrderIndexLinks withSetMerchantInfos(LinksSetMerchantOrderInfoListLink setMerchantInfos) {
         this.setMerchantInfos = setMerchantInfos;
         return this;
@@ -78,9 +87,21 @@ public class OrderIndexLinks {
     
     @JsonProperty("status")
     public LinksGetMarketplaceAccountsSynchronizationLink status;
+
     public OrderIndexLinks withStatus(LinksGetMarketplaceAccountsSynchronizationLink status) {
         this.status = status;
         return this;
     }
     
+    public OrderIndexLinks(@JsonProperty("autoTransitions") LinksGetAutomaticTransitionsLink autoTransitions, @JsonProperty("clearMerchantInfos") LinksClearMerchantOrderInfoListLink clearMerchantInfos, @JsonProperty("export") LinksExportOrdersLink export, @JsonProperty("harvest") LinksHarvestAllLink harvest, @JsonProperty("lightOrders") LinksGetOrderListLightLink lightOrders, @JsonProperty("orders") LinksGetOrderListFullLink orders, @JsonProperty("self") LinksGetOrderIndexLink self, @JsonProperty("setMerchantInfos") LinksSetMerchantOrderInfoListLink setMerchantInfos, @JsonProperty("status") LinksGetMarketplaceAccountsSynchronizationLink status) {
+        this.autoTransitions = autoTransitions;
+        this.clearMerchantInfos = clearMerchantInfos;
+        this.export = export;
+        this.harvest = harvest;
+        this.lightOrders = lightOrders;
+        this.orders = orders;
+        this.self = self;
+        this.setMerchantInfos = setMerchantInfos;
+        this.status = status;
+  }
 }

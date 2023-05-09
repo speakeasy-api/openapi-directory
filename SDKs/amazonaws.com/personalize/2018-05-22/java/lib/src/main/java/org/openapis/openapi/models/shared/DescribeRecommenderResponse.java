@@ -15,9 +15,11 @@ public class DescribeRecommenderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommender")
     public Recommender recommender;
+
     public DescribeRecommenderResponse withRecommender(Recommender recommender) {
         this.recommender = recommender;
         return this;
     }
     
+    public DescribeRecommenderResponse(){}
 }

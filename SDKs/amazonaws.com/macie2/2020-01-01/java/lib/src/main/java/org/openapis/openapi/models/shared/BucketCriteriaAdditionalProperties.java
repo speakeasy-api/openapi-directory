@@ -15,6 +15,7 @@ public class BucketCriteriaAdditionalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eq")
     public String[] eq;
+
     public BucketCriteriaAdditionalProperties withEq(String[] eq) {
         this.eq = eq;
         return this;
@@ -23,6 +24,7 @@ public class BucketCriteriaAdditionalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gt")
     public Long gt;
+
     public BucketCriteriaAdditionalProperties withGt(Long gt) {
         this.gt = gt;
         return this;
@@ -31,6 +33,7 @@ public class BucketCriteriaAdditionalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gte")
     public Long gte;
+
     public BucketCriteriaAdditionalProperties withGte(Long gte) {
         this.gte = gte;
         return this;
@@ -39,6 +42,7 @@ public class BucketCriteriaAdditionalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lt")
     public Long lt;
+
     public BucketCriteriaAdditionalProperties withLt(Long lt) {
         this.lt = lt;
         return this;
@@ -47,6 +51,7 @@ public class BucketCriteriaAdditionalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lte")
     public Long lte;
+
     public BucketCriteriaAdditionalProperties withLte(Long lte) {
         this.lte = lte;
         return this;
@@ -55,6 +60,7 @@ public class BucketCriteriaAdditionalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("neq")
     public String[] neq;
+
     public BucketCriteriaAdditionalProperties withNeq(String[] neq) {
         this.neq = neq;
         return this;
@@ -63,9 +69,11 @@ public class BucketCriteriaAdditionalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public BucketCriteriaAdditionalProperties withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public BucketCriteriaAdditionalProperties(){}
 }

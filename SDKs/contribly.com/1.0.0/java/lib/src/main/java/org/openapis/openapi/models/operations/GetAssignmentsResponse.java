@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAssignmentsResponse {
@@ -12,6 +13,7 @@ public class GetAssignmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.Assignment[] assignments;
+
     public GetAssignmentsResponse withAssignments(org.openapis.openapi.models.shared.Assignment[] assignments) {
         this.assignments = assignments;
         return this;
@@ -19,6 +21,7 @@ public class GetAssignmentsResponse {
     
     
     public String contentType;
+
     public GetAssignmentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetAssignmentsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetAssignmentsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetAssignmentsResponse {
     
     
     public Integer statusCode;
+
     public GetAssignmentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetAssignmentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAssignmentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAssignmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

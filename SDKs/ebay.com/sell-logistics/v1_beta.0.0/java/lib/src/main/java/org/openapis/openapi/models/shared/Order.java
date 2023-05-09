@@ -18,6 +18,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public String channel;
+
     public Order withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -29,9 +30,11 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderId")
     public String orderId;
+
     public Order withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     
+    public Order(){}
 }

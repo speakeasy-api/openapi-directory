@@ -15,9 +15,11 @@ public class DescribeKeyPhrasesDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyPhrasesDetectionJobProperties")
     public KeyPhrasesDetectionJobProperties keyPhrasesDetectionJobProperties;
+
     public DescribeKeyPhrasesDetectionJobResponse withKeyPhrasesDetectionJobProperties(KeyPhrasesDetectionJobProperties keyPhrasesDetectionJobProperties) {
         this.keyPhrasesDetectionJobProperties = keyPhrasesDetectionJobProperties;
         return this;
     }
     
+    public DescribeKeyPhrasesDetectionJobResponse(){}
 }

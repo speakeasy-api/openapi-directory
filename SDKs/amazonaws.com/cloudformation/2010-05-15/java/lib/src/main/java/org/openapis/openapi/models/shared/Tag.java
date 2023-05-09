@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Tag - The Tag type enables you to specify a key-value pair that can be used to store information about an CloudFormation stack.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Tag {
     
     public String key;
+
     public Tag withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class Tag {
     
     
     public String value;
+
     public Tag withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Tag(@JsonProperty("Key") String key, @JsonProperty("Value") String value) {
+        this.key = key;
+        this.value = value;
+  }
 }

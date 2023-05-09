@@ -18,6 +18,7 @@ public class ListCampaignsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignSummaryList")
     public CampaignSummary[] campaignSummaryList;
+
     public ListCampaignsResponse withCampaignSummaryList(CampaignSummary[] campaignSummaryList) {
         this.campaignSummaryList = campaignSummaryList;
         return this;
@@ -29,9 +30,11 @@ public class ListCampaignsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListCampaignsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCampaignsResponse(){}
 }

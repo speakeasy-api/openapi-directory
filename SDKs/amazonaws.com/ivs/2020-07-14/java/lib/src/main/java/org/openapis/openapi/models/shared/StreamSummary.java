@@ -20,6 +20,7 @@ public class StreamSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelArn")
     public String channelArn;
+
     public StreamSummary withChannelArn(String channelArn) {
         this.channelArn = channelArn;
         return this;
@@ -28,6 +29,7 @@ public class StreamSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("health")
     public StreamHealthEnum health;
+
     public StreamSummary withHealth(StreamHealthEnum health) {
         this.health = health;
         return this;
@@ -38,6 +40,7 @@ public class StreamSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public StreamSummary withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -46,6 +49,7 @@ public class StreamSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public StreamStateEnum state;
+
     public StreamSummary withState(StreamStateEnum state) {
         this.state = state;
         return this;
@@ -54,6 +58,7 @@ public class StreamSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamId")
     public String streamId;
+
     public StreamSummary withStreamId(String streamId) {
         this.streamId = streamId;
         return this;
@@ -62,9 +67,11 @@ public class StreamSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewerCount")
     public Long viewerCount;
+
     public StreamSummary withViewerCount(Long viewerCount) {
         this.viewerCount = viewerCount;
         return this;
     }
     
+    public StreamSummary(){}
 }

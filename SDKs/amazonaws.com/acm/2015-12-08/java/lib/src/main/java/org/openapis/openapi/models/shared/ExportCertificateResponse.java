@@ -15,6 +15,7 @@ public class ExportCertificateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Certificate")
     public String certificate;
+
     public ExportCertificateResponse withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -23,6 +24,7 @@ public class ExportCertificateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateChain")
     public String certificateChain;
+
     public ExportCertificateResponse withCertificateChain(String certificateChain) {
         this.certificateChain = certificateChain;
         return this;
@@ -31,9 +33,11 @@ public class ExportCertificateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateKey")
     public String privateKey;
+
     public ExportCertificateResponse withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
     }
     
+    public ExportCertificateResponse(){}
 }

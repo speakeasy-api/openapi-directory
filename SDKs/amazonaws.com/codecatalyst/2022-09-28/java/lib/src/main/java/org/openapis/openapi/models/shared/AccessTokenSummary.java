@@ -22,6 +22,7 @@ public class AccessTokenSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiresTime")
     public OffsetDateTime expiresTime;
+
     public AccessTokenSummary withExpiresTime(OffsetDateTime expiresTime) {
         this.expiresTime = expiresTime;
         return this;
@@ -29,6 +30,7 @@ public class AccessTokenSummary {
     
     @JsonProperty("id")
     public String id;
+
     public AccessTokenSummary withId(String id) {
         this.id = id;
         return this;
@@ -36,9 +38,14 @@ public class AccessTokenSummary {
     
     @JsonProperty("name")
     public String name;
+
     public AccessTokenSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AccessTokenSummary(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

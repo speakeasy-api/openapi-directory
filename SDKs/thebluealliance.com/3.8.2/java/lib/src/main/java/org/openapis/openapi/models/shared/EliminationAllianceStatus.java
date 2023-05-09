@@ -15,6 +15,7 @@ public class EliminationAllianceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_level_record")
     public WLTRecord currentLevelRecord;
+
     public EliminationAllianceStatus withCurrentLevelRecord(WLTRecord currentLevelRecord) {
         this.currentLevelRecord = currentLevelRecord;
         return this;
@@ -23,6 +24,7 @@ public class EliminationAllianceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public String level;
+
     public EliminationAllianceStatus withLevel(String level) {
         this.level = level;
         return this;
@@ -31,6 +33,7 @@ public class EliminationAllianceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playoff_average")
     public Double playoffAverage;
+
     public EliminationAllianceStatus withPlayoffAverage(Double playoffAverage) {
         this.playoffAverage = playoffAverage;
         return this;
@@ -42,6 +45,7 @@ public class EliminationAllianceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("record")
     public WLTRecord record;
+
     public EliminationAllianceStatus withRecord(WLTRecord record) {
         this.record = record;
         return this;
@@ -50,9 +54,11 @@ public class EliminationAllianceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public EliminationAllianceStatus withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public EliminationAllianceStatus(){}
 }

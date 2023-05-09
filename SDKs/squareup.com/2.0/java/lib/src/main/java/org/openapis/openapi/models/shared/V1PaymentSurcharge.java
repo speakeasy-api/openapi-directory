@@ -15,6 +15,7 @@ public class V1PaymentSurcharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount_money")
     public V1Money amountMoney;
+
     public V1PaymentSurcharge withAmountMoney(V1Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -23,6 +24,7 @@ public class V1PaymentSurcharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applied_money")
     public V1Money appliedMoney;
+
     public V1PaymentSurcharge withAppliedMoney(V1Money appliedMoney) {
         this.appliedMoney = appliedMoney;
         return this;
@@ -34,6 +36,7 @@ public class V1PaymentSurcharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public V1PaymentSurcharge withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +48,7 @@ public class V1PaymentSurcharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate")
     public String rate;
+
     public V1PaymentSurcharge withRate(String rate) {
         this.rate = rate;
         return this;
@@ -56,6 +60,7 @@ public class V1PaymentSurcharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("surcharge_id")
     public String surchargeId;
+
     public V1PaymentSurcharge withSurchargeId(String surchargeId) {
         this.surchargeId = surchargeId;
         return this;
@@ -67,6 +72,7 @@ public class V1PaymentSurcharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxable")
     public Boolean taxable;
+
     public V1PaymentSurcharge withTaxable(Boolean taxable) {
         this.taxable = taxable;
         return this;
@@ -78,6 +84,7 @@ public class V1PaymentSurcharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxes")
     public V1PaymentTax[] taxes;
+
     public V1PaymentSurcharge withTaxes(V1PaymentTax[] taxes) {
         this.taxes = taxes;
         return this;
@@ -89,9 +96,11 @@ public class V1PaymentSurcharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public V1PaymentSurcharge withType(String type) {
         this.type = type;
         return this;
     }
     
+    public V1PaymentSurcharge(){}
 }

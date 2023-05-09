@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteRequest {
     @JsonProperty("Key")
     public java.util.Map<String, AttributeValue> key;
+
     public DeleteRequest withKey(java.util.Map<String, AttributeValue> key) {
         this.key = key;
         return this;
     }
     
+    public DeleteRequest(@JsonProperty("Key") java.util.Map<String, AttributeValue> key) {
+        this.key = key;
+  }
 }

@@ -46,4 +46,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Play.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScoringPlay.java
 lib/src/main/java/org/openapis/openapi/models/shared/PlayStat.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

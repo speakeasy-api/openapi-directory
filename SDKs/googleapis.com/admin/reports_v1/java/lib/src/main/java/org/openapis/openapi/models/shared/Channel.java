@@ -18,6 +18,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public Channel withAddress(String address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiration")
     public String expiration;
+
     public Channel withExpiration(String expiration) {
         this.expiration = expiration;
         return this;
@@ -40,6 +42,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Channel withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Channel withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,17 +66,19 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public java.util.Map<String, String> params;
+
     public Channel withParams(java.util.Map<String, String> params) {
         this.params = params;
         return this;
     }
     
     /**
-     * A Boolean value to indicate whether payload is wanted. Optional.
+     * A Boolean value to indicate whether payload is wanted. A payload is data that is sent in the body of an HTTP POST, PUT, or PATCH message and contains important information about the request. Optional.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public Boolean payload;
+
     public Channel withPayload(Boolean payload) {
         this.payload = payload;
         return this;
@@ -84,6 +90,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public String resourceId;
+
     public Channel withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -95,6 +102,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceUri")
     public String resourceUri;
+
     public Channel withResourceUri(String resourceUri) {
         this.resourceUri = resourceUri;
         return this;
@@ -106,6 +114,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public Channel withToken(String token) {
         this.token = token;
         return this;
@@ -117,9 +126,11 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Channel withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Channel(){}
 }

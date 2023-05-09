@@ -12,6 +12,7 @@ public class WkHtmlToPdfAdvancedOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orientation")
     public String orientation;
+
     public WkHtmlToPdfAdvancedOptions withOrientation(String orientation) {
         this.orientation = orientation;
         return this;
@@ -20,9 +21,11 @@ public class WkHtmlToPdfAdvancedOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public String pageSize;
+
     public WkHtmlToPdfAdvancedOptions withPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public WkHtmlToPdfAdvancedOptions(){}
 }

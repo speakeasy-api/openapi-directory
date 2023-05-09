@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRiskResponse {
     
     public String contentType;
+
     public GetRiskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRiskResponse {
      */
     
     public org.openapis.openapi.models.shared.FirmwareRisk firmwareRisk;
+
     public GetRiskResponse withFirmwareRisk(org.openapis.openapi.models.shared.FirmwareRisk firmwareRisk) {
         this.firmwareRisk = firmwareRisk;
         return this;
@@ -29,6 +32,7 @@ public class GetRiskResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public GetRiskResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -36,6 +40,7 @@ public class GetRiskResponse {
     
     
     public Integer statusCode;
+
     public GetRiskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetRiskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRiskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetRiskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

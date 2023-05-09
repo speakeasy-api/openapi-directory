@@ -12,6 +12,7 @@ public class ListUsageLimitsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListUsageLimitsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListUsageLimitsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListUsageLimitsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,6 +30,7 @@ public class ListUsageLimitsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public ListUsageLimitsRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -36,9 +39,11 @@ public class ListUsageLimitsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageType")
     public UsageLimitUsageTypeEnum usageType;
+
     public ListUsageLimitsRequest withUsageType(UsageLimitUsageTypeEnum usageType) {
         this.usageType = usageType;
         return this;
     }
     
+    public ListUsageLimitsRequest(){}
 }

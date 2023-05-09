@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Getversion {
     @JsonProperty("author")
     public String author;
+
     public Getversion withAuthor(String author) {
         this.author = author;
         return this;
@@ -16,6 +17,7 @@ public class Getversion {
     
     @JsonProperty("document")
     public Document document;
+
     public Getversion withDocument(Document document) {
         this.document = document;
         return this;
@@ -23,9 +25,15 @@ public class Getversion {
     
     @JsonProperty("id")
     public String id;
+
     public Getversion withId(String id) {
         this.id = id;
         return this;
     }
     
+    public Getversion(@JsonProperty("author") String author, @JsonProperty("document") Document document, @JsonProperty("id") String id) {
+        this.author = author;
+        this.document = document;
+        this.id = id;
+  }
 }

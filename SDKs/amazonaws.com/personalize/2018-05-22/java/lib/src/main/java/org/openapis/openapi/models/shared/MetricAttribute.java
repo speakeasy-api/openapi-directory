@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MetricAttribute {
     @JsonProperty("eventType")
     public String eventType;
+
     public MetricAttribute withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -19,6 +20,7 @@ public class MetricAttribute {
     
     @JsonProperty("expression")
     public String expression;
+
     public MetricAttribute withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -26,9 +28,15 @@ public class MetricAttribute {
     
     @JsonProperty("metricName")
     public String metricName;
+
     public MetricAttribute withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
     }
     
+    public MetricAttribute(@JsonProperty("eventType") String eventType, @JsonProperty("expression") String expression, @JsonProperty("metricName") String metricName) {
+        this.eventType = eventType;
+        this.expression = expression;
+        this.metricName = metricName;
+  }
 }

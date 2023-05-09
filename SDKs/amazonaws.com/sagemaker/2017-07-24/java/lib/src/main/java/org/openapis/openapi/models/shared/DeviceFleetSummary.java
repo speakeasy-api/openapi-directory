@@ -22,6 +22,7 @@ public class DeviceFleetSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DeviceFleetSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class DeviceFleetSummary {
     
     @JsonProperty("DeviceFleetArn")
     public String deviceFleetArn;
+
     public DeviceFleetSummary withDeviceFleetArn(String deviceFleetArn) {
         this.deviceFleetArn = deviceFleetArn;
         return this;
@@ -36,6 +38,7 @@ public class DeviceFleetSummary {
     
     @JsonProperty("DeviceFleetName")
     public String deviceFleetName;
+
     public DeviceFleetSummary withDeviceFleetName(String deviceFleetName) {
         this.deviceFleetName = deviceFleetName;
         return this;
@@ -46,9 +49,14 @@ public class DeviceFleetSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DeviceFleetSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
     }
     
+    public DeviceFleetSummary(@JsonProperty("DeviceFleetArn") String deviceFleetArn, @JsonProperty("DeviceFleetName") String deviceFleetName) {
+        this.deviceFleetArn = deviceFleetArn;
+        this.deviceFleetName = deviceFleetName;
+  }
 }

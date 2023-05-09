@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeGlobalTableSettingsResponse {
     
     public String contentType;
+
     public DescribeGlobalTableSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeGlobalTableSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeGlobalTableSettingsOutput describeGlobalTableSettingsOutput;
+
     public DescribeGlobalTableSettingsResponse withDescribeGlobalTableSettingsOutput(org.openapis.openapi.models.shared.DescribeGlobalTableSettingsOutput describeGlobalTableSettingsOutput) {
         this.describeGlobalTableSettingsOutput = describeGlobalTableSettingsOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeGlobalTableSettingsResponse {
      */
     
     public Object globalTableNotFoundException;
+
     public DescribeGlobalTableSettingsResponse withGlobalTableNotFoundException(Object globalTableNotFoundException) {
         this.globalTableNotFoundException = globalTableNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeGlobalTableSettingsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeGlobalTableSettingsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class DescribeGlobalTableSettingsResponse {
     
     
     public Integer statusCode;
+
     public DescribeGlobalTableSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeGlobalTableSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeGlobalTableSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeGlobalTableSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

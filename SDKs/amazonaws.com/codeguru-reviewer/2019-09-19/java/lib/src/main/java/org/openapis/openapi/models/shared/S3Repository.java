@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3Repository {
     @JsonProperty("BucketName")
     public String bucketName;
+
     public S3Repository withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -19,9 +20,14 @@ public class S3Repository {
     
     @JsonProperty("Name")
     public String name;
+
     public S3Repository withName(String name) {
         this.name = name;
         return this;
     }
     
+    public S3Repository(@JsonProperty("BucketName") String bucketName, @JsonProperty("Name") String name) {
+        this.bucketName = bucketName;
+        this.name = name;
+  }
 }

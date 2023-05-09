@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetReplicationJobsResponse {
     
     public String contentType;
+
     public GetReplicationJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetReplicationJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetReplicationJobsResponse getReplicationJobsResponse;
+
     public GetReplicationJobsResponse withGetReplicationJobsResponse(org.openapis.openapi.models.shared.GetReplicationJobsResponse getReplicationJobsResponse) {
         this.getReplicationJobsResponse = getReplicationJobsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetReplicationJobsResponse {
      */
     
     public Object invalidParameterException;
+
     public GetReplicationJobsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class GetReplicationJobsResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public GetReplicationJobsResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -46,6 +51,7 @@ public class GetReplicationJobsResponse {
     
     
     public Integer statusCode;
+
     public GetReplicationJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetReplicationJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetReplicationJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetReplicationJobsResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public GetReplicationJobsResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public GetReplicationJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

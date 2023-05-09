@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetResourceRequestStatusInput {
     @JsonProperty("RequestToken")
     public String requestToken;
+
     public GetResourceRequestStatusInput withRequestToken(String requestToken) {
         this.requestToken = requestToken;
         return this;
     }
     
+    public GetResourceRequestStatusInput(@JsonProperty("RequestToken") String requestToken) {
+        this.requestToken = requestToken;
+  }
 }

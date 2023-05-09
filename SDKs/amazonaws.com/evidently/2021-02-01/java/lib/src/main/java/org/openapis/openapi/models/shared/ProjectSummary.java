@@ -20,6 +20,7 @@ public class ProjectSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeExperimentCount")
     public Long activeExperimentCount;
+
     public ProjectSummary withActiveExperimentCount(Long activeExperimentCount) {
         this.activeExperimentCount = activeExperimentCount;
         return this;
@@ -28,6 +29,7 @@ public class ProjectSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeLaunchCount")
     public Long activeLaunchCount;
+
     public ProjectSummary withActiveLaunchCount(Long activeLaunchCount) {
         this.activeLaunchCount = activeLaunchCount;
         return this;
@@ -35,6 +37,7 @@ public class ProjectSummary {
     
     @JsonProperty("arn")
     public String arn;
+
     public ProjectSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -44,6 +47,7 @@ public class ProjectSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdTime")
     public OffsetDateTime createdTime;
+
     public ProjectSummary withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -52,6 +56,7 @@ public class ProjectSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ProjectSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -60,6 +65,7 @@ public class ProjectSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("experimentCount")
     public Long experimentCount;
+
     public ProjectSummary withExperimentCount(Long experimentCount) {
         this.experimentCount = experimentCount;
         return this;
@@ -68,6 +74,7 @@ public class ProjectSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featureCount")
     public Long featureCount;
+
     public ProjectSummary withFeatureCount(Long featureCount) {
         this.featureCount = featureCount;
         return this;
@@ -77,6 +84,7 @@ public class ProjectSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public ProjectSummary withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -85,6 +93,7 @@ public class ProjectSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchCount")
     public Long launchCount;
+
     public ProjectSummary withLaunchCount(Long launchCount) {
         this.launchCount = launchCount;
         return this;
@@ -92,6 +101,7 @@ public class ProjectSummary {
     
     @JsonProperty("name")
     public String name;
+
     public ProjectSummary withName(String name) {
         this.name = name;
         return this;
@@ -99,6 +109,7 @@ public class ProjectSummary {
     
     @JsonProperty("status")
     public ProjectStatusEnum status;
+
     public ProjectSummary withStatus(ProjectStatusEnum status) {
         this.status = status;
         return this;
@@ -107,9 +118,17 @@ public class ProjectSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ProjectSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public ProjectSummary(@JsonProperty("arn") String arn, @JsonProperty("createdTime") OffsetDateTime createdTime, @JsonProperty("lastUpdatedTime") OffsetDateTime lastUpdatedTime, @JsonProperty("name") String name, @JsonProperty("status") ProjectStatusEnum status) {
+        this.arn = arn;
+        this.createdTime = createdTime;
+        this.lastUpdatedTime = lastUpdatedTime;
+        this.name = name;
+        this.status = status;
+  }
 }

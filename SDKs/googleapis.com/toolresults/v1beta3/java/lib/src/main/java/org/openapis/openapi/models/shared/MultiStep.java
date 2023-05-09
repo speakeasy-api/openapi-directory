@@ -18,6 +18,7 @@ public class MultiStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multistepNumber")
     public Integer multistepNumber;
+
     public MultiStep withMultistepNumber(Integer multistepNumber) {
         this.multistepNumber = multistepNumber;
         return this;
@@ -29,6 +30,7 @@ public class MultiStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryStep")
     public PrimaryStep primaryStep;
+
     public MultiStep withPrimaryStep(PrimaryStep primaryStep) {
         this.primaryStep = primaryStep;
         return this;
@@ -40,9 +42,11 @@ public class MultiStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryStepId")
     public String primaryStepId;
+
     public MultiStep withPrimaryStepId(String primaryStepId) {
         this.primaryStepId = primaryStepId;
         return this;
     }
     
+    public MultiStep(){}
 }

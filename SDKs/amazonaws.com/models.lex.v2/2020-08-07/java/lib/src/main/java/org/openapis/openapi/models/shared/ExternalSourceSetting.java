@@ -15,9 +15,11 @@ public class ExternalSourceSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grammarSlotTypeSetting")
     public GrammarSlotTypeSetting grammarSlotTypeSetting;
+
     public ExternalSourceSetting withGrammarSlotTypeSetting(GrammarSlotTypeSetting grammarSlotTypeSetting) {
         this.grammarSlotTypeSetting = grammarSlotTypeSetting;
         return this;
     }
     
+    public ExternalSourceSetting(){}
 }

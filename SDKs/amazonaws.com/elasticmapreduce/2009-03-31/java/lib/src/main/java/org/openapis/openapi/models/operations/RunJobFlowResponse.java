@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RunJobFlowResponse {
     
     public String contentType;
+
     public RunJobFlowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RunJobFlowResponse {
      */
     
     public Object internalServerError;
+
     public RunJobFlowResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class RunJobFlowResponse {
      */
     
     public org.openapis.openapi.models.shared.RunJobFlowOutput runJobFlowOutput;
+
     public RunJobFlowResponse withRunJobFlowOutput(org.openapis.openapi.models.shared.RunJobFlowOutput runJobFlowOutput) {
         this.runJobFlowOutput = runJobFlowOutput;
         return this;
@@ -36,6 +40,7 @@ public class RunJobFlowResponse {
     
     
     public Integer statusCode;
+
     public RunJobFlowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class RunJobFlowResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RunJobFlowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RunJobFlowResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

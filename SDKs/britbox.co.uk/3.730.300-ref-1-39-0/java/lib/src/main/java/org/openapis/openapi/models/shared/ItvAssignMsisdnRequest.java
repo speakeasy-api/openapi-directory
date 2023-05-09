@@ -15,6 +15,7 @@ public class ItvAssignMsisdnRequest {
      */
     @JsonProperty("eeProductId")
     public String eeProductId;
+
     public ItvAssignMsisdnRequest withEeProductId(String eeProductId) {
         this.eeProductId = eeProductId;
         return this;
@@ -25,6 +26,7 @@ public class ItvAssignMsisdnRequest {
      */
     @JsonProperty("msisdn")
     public String msisdn;
+
     public ItvAssignMsisdnRequest withMsisdn(String msisdn) {
         this.msisdn = msisdn;
         return this;
@@ -35,6 +37,7 @@ public class ItvAssignMsisdnRequest {
      */
     @JsonProperty("profileToken")
     public String profileToken;
+
     public ItvAssignMsisdnRequest withProfileToken(String profileToken) {
         this.profileToken = profileToken;
         return this;
@@ -45,9 +48,16 @@ public class ItvAssignMsisdnRequest {
      */
     @JsonProperty("trackingHeader")
     public String trackingHeader;
+
     public ItvAssignMsisdnRequest withTrackingHeader(String trackingHeader) {
         this.trackingHeader = trackingHeader;
         return this;
     }
     
+    public ItvAssignMsisdnRequest(@JsonProperty("eeProductId") String eeProductId, @JsonProperty("msisdn") String msisdn, @JsonProperty("profileToken") String profileToken, @JsonProperty("trackingHeader") String trackingHeader) {
+        this.eeProductId = eeProductId;
+        this.msisdn = msisdn;
+        this.profileToken = profileToken;
+        this.trackingHeader = trackingHeader;
+  }
 }

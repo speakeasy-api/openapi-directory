@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Item {
     @JsonProperty("category")
     public ItemCategoryEnum category;
+
     public Item withCategory(ItemCategoryEnum category) {
         this.category = category;
         return this;
@@ -26,6 +27,7 @@ public class Item {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Item withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -34,6 +36,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("favorite")
     public Boolean favorite;
+
     public Item withFavorite(Boolean favorite) {
         this.favorite = favorite;
         return this;
@@ -42,6 +45,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Item withId(String id) {
         this.id = id;
         return this;
@@ -50,6 +54,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastEditedBy")
     public String lastEditedBy;
+
     public Item withLastEditedBy(String lastEditedBy) {
         this.lastEditedBy = lastEditedBy;
         return this;
@@ -58,6 +63,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ItemStateEnum state;
+
     public Item withState(ItemStateEnum state) {
         this.state = state;
         return this;
@@ -66,6 +72,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public Item withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -74,6 +81,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Item withTitle(String title) {
         this.title = title;
         return this;
@@ -84,6 +92,7 @@ public class Item {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public Item withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -92,6 +101,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urls")
     public ItemUrls[] urls;
+
     public Item withUrls(ItemUrls[] urls) {
         this.urls = urls;
         return this;
@@ -99,6 +109,7 @@ public class Item {
     
     @JsonProperty("vault")
     public ItemVault vault;
+
     public Item withVault(ItemVault vault) {
         this.vault = vault;
         return this;
@@ -107,9 +118,14 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public Item withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public Item(@JsonProperty("category") ItemCategoryEnum category, @JsonProperty("vault") ItemVault vault) {
+        this.category = category;
+        this.vault = vault;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HandOffTime {
     @JsonProperty("HourOfDay")
     public Long hourOfDay;
+
     public HandOffTime withHourOfDay(Long hourOfDay) {
         this.hourOfDay = hourOfDay;
         return this;
@@ -19,9 +20,14 @@ public class HandOffTime {
     
     @JsonProperty("MinuteOfHour")
     public Long minuteOfHour;
+
     public HandOffTime withMinuteOfHour(Long minuteOfHour) {
         this.minuteOfHour = minuteOfHour;
         return this;
     }
     
+    public HandOffTime(@JsonProperty("HourOfDay") Long hourOfDay, @JsonProperty("MinuteOfHour") Long minuteOfHour) {
+        this.hourOfDay = hourOfDay;
+        this.minuteOfHour = minuteOfHour;
+  }
 }

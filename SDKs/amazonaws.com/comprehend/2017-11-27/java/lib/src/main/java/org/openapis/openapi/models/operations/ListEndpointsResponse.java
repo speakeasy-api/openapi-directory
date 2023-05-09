@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEndpointsResponse {
     
     public String contentType;
+
     public ListEndpointsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListEndpointsResponse {
      */
     
     public Object internalServerException;
+
     public ListEndpointsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListEndpointsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListEndpointsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListEndpointsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEndpointsResponse listEndpointsResponse;
+
     public ListEndpointsResponse withListEndpointsResponse(org.openapis.openapi.models.shared.ListEndpointsResponse listEndpointsResponse) {
         this.listEndpointsResponse = listEndpointsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListEndpointsResponse {
     
     
     public Integer statusCode;
+
     public ListEndpointsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListEndpointsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEndpointsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListEndpointsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListEndpointsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListEndpointsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

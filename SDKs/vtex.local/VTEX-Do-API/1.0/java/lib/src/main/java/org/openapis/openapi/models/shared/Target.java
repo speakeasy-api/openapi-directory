@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Target {
     @JsonProperty("id")
     public String id;
+
     public Target withId(String id) {
         this.id = id;
         return this;
@@ -16,6 +17,7 @@ public class Target {
     
     @JsonProperty("type")
     public String type;
+
     public Target withType(String type) {
         this.type = type;
         return this;
@@ -23,9 +25,15 @@ public class Target {
     
     @JsonProperty("url")
     public String url;
+
     public Target withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Target(@JsonProperty("id") String id, @JsonProperty("type") String type, @JsonProperty("url") String url) {
+        this.id = id;
+        this.type = type;
+        this.url = url;
+  }
 }

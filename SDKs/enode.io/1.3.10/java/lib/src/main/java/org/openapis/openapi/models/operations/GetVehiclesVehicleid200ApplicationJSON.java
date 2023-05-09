@@ -17,6 +17,7 @@ public class GetVehiclesVehicleid200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargeState")
     public org.openapis.openapi.models.shared.Onevehicles1Percent7BvehicleIdPercent7D1chargeStateGetResponses200ContentApplication1jsonSchema chargeState;
+
     public GetVehiclesVehicleid200ApplicationJSON withChargeState(org.openapis.openapi.models.shared.Onevehicles1Percent7BvehicleIdPercent7D1chargeStateGetResponses200ContentApplication1jsonSchema chargeState) {
         this.chargeState = chargeState;
         return this;
@@ -27,6 +28,7 @@ public class GetVehiclesVehicleid200ApplicationJSON {
      */
     @JsonProperty("chargingLocationId")
     public String chargingLocationId;
+
     public GetVehiclesVehicleid200ApplicationJSON withChargingLocationId(String chargingLocationId) {
         this.chargingLocationId = chargingLocationId;
         return this;
@@ -37,6 +39,7 @@ public class GetVehiclesVehicleid200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public GetVehiclesVehicleid200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class GetVehiclesVehicleid200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("information")
     public org.openapis.openapi.models.shared.Onevehicles1Percent7BvehicleIdPercent7D1informationGetResponses200ContentApplication1jsonSchema information;
+
     public GetVehiclesVehicleid200ApplicationJSON withInformation(org.openapis.openapi.models.shared.Onevehicles1Percent7BvehicleIdPercent7D1informationGetResponses200ContentApplication1jsonSchema information) {
         this.information = information;
         return this;
@@ -58,6 +62,7 @@ public class GetVehiclesVehicleid200ApplicationJSON {
      */
     @JsonProperty("isReachable")
     public Boolean isReachable;
+
     public GetVehiclesVehicleid200ApplicationJSON withIsReachable(Boolean isReachable) {
         this.isReachable = isReachable;
         return this;
@@ -69,6 +74,7 @@ public class GetVehiclesVehicleid200ApplicationJSON {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("lastSeen")
     public LocalDate lastSeen;
+
     public GetVehiclesVehicleid200ApplicationJSON withLastSeen(LocalDate lastSeen) {
         this.lastSeen = lastSeen;
         return this;
@@ -80,6 +86,7 @@ public class GetVehiclesVehicleid200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public org.openapis.openapi.models.shared.Onevehicles1Percent7BvehicleIdPercent7D1locationGetResponses200ContentApplication1jsonSchema location;
+
     public GetVehiclesVehicleid200ApplicationJSON withLocation(org.openapis.openapi.models.shared.Onevehicles1Percent7BvehicleIdPercent7D1locationGetResponses200ContentApplication1jsonSchema location) {
         this.location = location;
         return this;
@@ -91,6 +98,7 @@ public class GetVehiclesVehicleid200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("odometer")
     public org.openapis.openapi.models.shared.Onevehicles1Percent7BvehicleIdPercent7D1odometerGetResponses200ContentApplication1jsonSchema odometer;
+
     public GetVehiclesVehicleid200ApplicationJSON withOdometer(org.openapis.openapi.models.shared.Onevehicles1Percent7BvehicleIdPercent7D1odometerGetResponses200ContentApplication1jsonSchema odometer) {
         this.odometer = odometer;
         return this;
@@ -99,9 +107,16 @@ public class GetVehiclesVehicleid200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smartChargingPolicy")
     public org.openapis.openapi.models.shared.Onevehicles1Percent7BvehicleIdPercent7D1smartChargingPolicyPutRequestBodyContentApplication1jsonSchema smartChargingPolicy;
+
     public GetVehiclesVehicleid200ApplicationJSON withSmartChargingPolicy(org.openapis.openapi.models.shared.Onevehicles1Percent7BvehicleIdPercent7D1smartChargingPolicyPutRequestBodyContentApplication1jsonSchema smartChargingPolicy) {
         this.smartChargingPolicy = smartChargingPolicy;
         return this;
     }
     
+    public GetVehiclesVehicleid200ApplicationJSON(@JsonProperty("chargingLocationId") String chargingLocationId, @JsonProperty("id") String id, @JsonProperty("isReachable") Boolean isReachable, @JsonProperty("lastSeen") LocalDate lastSeen) {
+        this.chargingLocationId = chargingLocationId;
+        this.id = id;
+        this.isReachable = isReachable;
+        this.lastSeen = lastSeen;
+  }
 }

@@ -12,6 +12,7 @@ public class DescribeDomainRequestBody {
      */
     @JsonProperty("DomainName")
     public String domainName;
+
     public DescribeDomainRequestBody withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -22,9 +23,14 @@ public class DescribeDomainRequestBody {
      */
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public DescribeDomainRequestBody withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
     }
     
+    public DescribeDomainRequestBody(@JsonProperty("DomainName") String domainName, @JsonProperty("FleetArn") String fleetArn) {
+        this.domainName = domainName;
+        this.fleetArn = fleetArn;
+  }
 }

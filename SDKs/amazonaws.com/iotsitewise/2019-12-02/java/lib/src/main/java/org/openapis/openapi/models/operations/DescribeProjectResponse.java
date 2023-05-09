@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeProjectResponse {
     
     public String contentType;
+
     public DescribeProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeProjectResponse describeProjectResponse;
+
     public DescribeProjectResponse withDescribeProjectResponse(org.openapis.openapi.models.shared.DescribeProjectResponse describeProjectResponse) {
         this.describeProjectResponse = describeProjectResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeProjectResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeProjectResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeProjectResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeProjectResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeProjectResponse {
     
     
     public Integer statusCode;
+
     public DescribeProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeProjectResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeProjectResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeProjectResponse {
      */
     
     public Object throttlingException;
+
     public DescribeProjectResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

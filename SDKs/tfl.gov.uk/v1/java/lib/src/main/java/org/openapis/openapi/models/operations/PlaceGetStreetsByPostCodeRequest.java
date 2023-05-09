@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlaceGetStreetsByPostCodeRequest {
@@ -12,6 +13,7 @@ public class PlaceGetStreetsByPostCodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Postcode")
     public String postcodePathParameter;
+
     public PlaceGetStreetsByPostCodeRequest withPostcodePathParameter(String postcodePathParameter) {
         this.postcodePathParameter = postcodePathParameter;
         return this;
@@ -19,6 +21,7 @@ public class PlaceGetStreetsByPostCodeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=postcodeInput.postcode")
     public String postcodeInputPostcode;
+
     public PlaceGetStreetsByPostCodeRequest withPostcodeInputPostcode(String postcodeInputPostcode) {
         this.postcodeInputPostcode = postcodeInputPostcode;
         return this;
@@ -26,9 +29,14 @@ public class PlaceGetStreetsByPostCodeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=postcode")
     public String postcodeQueryParameter;
+
     public PlaceGetStreetsByPostCodeRequest withPostcodeQueryParameter(String postcodeQueryParameter) {
         this.postcodeQueryParameter = postcodeQueryParameter;
         return this;
     }
     
+    public PlaceGetStreetsByPostCodeRequest(@JsonProperty("PostcodePathParameter") String postcodePathParameter, @JsonProperty("postcodeQueryParameter") String postcodeQueryParameter) {
+        this.postcodePathParameter = postcodePathParameter;
+        this.postcodeQueryParameter = postcodeQueryParameter;
+  }
 }

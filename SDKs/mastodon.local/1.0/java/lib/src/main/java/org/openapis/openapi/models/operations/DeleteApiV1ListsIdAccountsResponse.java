@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApiV1ListsIdAccountsResponse {
     
     public String contentType;
+
     public DeleteApiV1ListsIdAccountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteApiV1ListsIdAccountsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public DeleteApiV1ListsIdAccountsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class DeleteApiV1ListsIdAccountsResponse {
     
     
     public Integer statusCode;
+
     public DeleteApiV1ListsIdAccountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteApiV1ListsIdAccountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApiV1ListsIdAccountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DeleteApiV1ListsIdAccountsResponse {
      */
     
     public java.util.Map<String, Object> deleteApiV1ListsIdAccounts200ApplicationJSONObject;
+
     public DeleteApiV1ListsIdAccountsResponse withDeleteApiV1ListsIdAccounts200ApplicationJSONObject(java.util.Map<String, Object> deleteApiV1ListsIdAccounts200ApplicationJSONObject) {
         this.deleteApiV1ListsIdAccounts200ApplicationJSONObject = deleteApiV1ListsIdAccounts200ApplicationJSONObject;
         return this;
     }
     
+    public DeleteApiV1ListsIdAccountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

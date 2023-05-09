@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelHandshakeRequest {
     @JsonProperty("HandshakeId")
     public String handshakeId;
+
     public CancelHandshakeRequest withHandshakeId(String handshakeId) {
         this.handshakeId = handshakeId;
         return this;
     }
     
+    public CancelHandshakeRequest(@JsonProperty("HandshakeId") String handshakeId) {
+        this.handshakeId = handshakeId;
+  }
 }

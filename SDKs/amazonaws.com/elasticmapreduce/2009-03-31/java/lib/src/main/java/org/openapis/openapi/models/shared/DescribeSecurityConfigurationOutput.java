@@ -22,6 +22,7 @@ public class DescribeSecurityConfigurationOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public DescribeSecurityConfigurationOutput withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class DescribeSecurityConfigurationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribeSecurityConfigurationOutput withName(String name) {
         this.name = name;
         return this;
@@ -38,9 +40,11 @@ public class DescribeSecurityConfigurationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityConfiguration")
     public String securityConfiguration;
+
     public DescribeSecurityConfigurationOutput withSecurityConfiguration(String securityConfiguration) {
         this.securityConfiguration = securityConfiguration;
         return this;
     }
     
+    public DescribeSecurityConfigurationOutput(){}
 }

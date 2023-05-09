@@ -18,6 +18,7 @@ public class TagRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public TagRequestColorEnum color;
+
     public TagRequestInput withColor(TagRequestColorEnum color) {
         this.color = color;
         return this;
@@ -29,6 +30,7 @@ public class TagRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("followers")
     public String[] followers;
+
     public TagRequestInput withFollowers(String[] followers) {
         this.followers = followers;
         return this;
@@ -40,6 +42,7 @@ public class TagRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TagRequestInput withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class TagRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public TagRequestInput withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -62,9 +66,11 @@ public class TagRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace")
     public String workspace;
+
     public TagRequestInput withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public TagRequestInput(){}
 }

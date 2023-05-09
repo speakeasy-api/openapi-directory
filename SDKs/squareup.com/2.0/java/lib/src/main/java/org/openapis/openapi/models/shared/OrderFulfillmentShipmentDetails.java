@@ -18,6 +18,7 @@ public class OrderFulfillmentShipmentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancel_reason")
     public String cancelReason;
+
     public OrderFulfillmentShipmentDetails withCancelReason(String cancelReason) {
         this.cancelReason = cancelReason;
         return this;
@@ -31,6 +32,7 @@ public class OrderFulfillmentShipmentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canceled_at")
     public String canceledAt;
+
     public OrderFulfillmentShipmentDetails withCanceledAt(String canceledAt) {
         this.canceledAt = canceledAt;
         return this;
@@ -42,6 +44,7 @@ public class OrderFulfillmentShipmentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier")
     public String carrier;
+
     public OrderFulfillmentShipmentDetails withCarrier(String carrier) {
         this.carrier = carrier;
         return this;
@@ -55,6 +58,7 @@ public class OrderFulfillmentShipmentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expected_shipped_at")
     public String expectedShippedAt;
+
     public OrderFulfillmentShipmentDetails withExpectedShippedAt(String expectedShippedAt) {
         this.expectedShippedAt = expectedShippedAt;
         return this;
@@ -68,6 +72,7 @@ public class OrderFulfillmentShipmentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failed_at")
     public String failedAt;
+
     public OrderFulfillmentShipmentDetails withFailedAt(String failedAt) {
         this.failedAt = failedAt;
         return this;
@@ -79,6 +84,7 @@ public class OrderFulfillmentShipmentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failure_reason")
     public String failureReason;
+
     public OrderFulfillmentShipmentDetails withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -92,6 +98,7 @@ public class OrderFulfillmentShipmentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in_progress_at")
     public String inProgressAt;
+
     public OrderFulfillmentShipmentDetails withInProgressAt(String inProgressAt) {
         this.inProgressAt = inProgressAt;
         return this;
@@ -105,6 +112,7 @@ public class OrderFulfillmentShipmentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packaged_at")
     public String packagedAt;
+
     public OrderFulfillmentShipmentDetails withPackagedAt(String packagedAt) {
         this.packagedAt = packagedAt;
         return this;
@@ -118,6 +126,7 @@ public class OrderFulfillmentShipmentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placed_at")
     public String placedAt;
+
     public OrderFulfillmentShipmentDetails withPlacedAt(String placedAt) {
         this.placedAt = placedAt;
         return this;
@@ -129,6 +138,7 @@ public class OrderFulfillmentShipmentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipient")
     public OrderFulfillmentRecipient recipient;
+
     public OrderFulfillmentShipmentDetails withRecipient(OrderFulfillmentRecipient recipient) {
         this.recipient = recipient;
         return this;
@@ -143,6 +153,7 @@ public class OrderFulfillmentShipmentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipped_at")
     public String shippedAt;
+
     public OrderFulfillmentShipmentDetails withShippedAt(String shippedAt) {
         this.shippedAt = shippedAt;
         return this;
@@ -154,6 +165,7 @@ public class OrderFulfillmentShipmentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_note")
     public String shippingNote;
+
     public OrderFulfillmentShipmentDetails withShippingNote(String shippingNote) {
         this.shippingNote = shippingNote;
         return this;
@@ -166,6 +178,7 @@ public class OrderFulfillmentShipmentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_type")
     public String shippingType;
+
     public OrderFulfillmentShipmentDetails withShippingType(String shippingType) {
         this.shippingType = shippingType;
         return this;
@@ -177,6 +190,7 @@ public class OrderFulfillmentShipmentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracking_number")
     public String trackingNumber;
+
     public OrderFulfillmentShipmentDetails withTrackingNumber(String trackingNumber) {
         this.trackingNumber = trackingNumber;
         return this;
@@ -188,9 +202,11 @@ public class OrderFulfillmentShipmentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracking_url")
     public String trackingUrl;
+
     public OrderFulfillmentShipmentDetails withTrackingUrl(String trackingUrl) {
         this.trackingUrl = trackingUrl;
         return this;
     }
     
+    public OrderFulfillmentShipmentDetails(){}
 }

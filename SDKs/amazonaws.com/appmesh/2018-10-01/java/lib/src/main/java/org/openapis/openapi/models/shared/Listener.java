@@ -15,6 +15,7 @@ public class Listener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthCheck")
     public HealthCheckPolicy healthCheck;
+
     public Listener withHealthCheck(HealthCheckPolicy healthCheck) {
         this.healthCheck = healthCheck;
         return this;
@@ -23,9 +24,11 @@ public class Listener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portMapping")
     public PortMapping portMapping;
+
     public Listener withPortMapping(PortMapping portMapping) {
         this.portMapping = portMapping;
         return this;
     }
     
+    public Listener(){}
 }

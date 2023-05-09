@@ -15,6 +15,7 @@ public class Queue {
      */
     @JsonProperty("MessageRetentionPeriodInSeconds")
     public Integer messageRetentionPeriodInSeconds;
+
     public Queue withMessageRetentionPeriodInSeconds(Integer messageRetentionPeriodInSeconds) {
         this.messageRetentionPeriodInSeconds = messageRetentionPeriodInSeconds;
         return this;
@@ -25,9 +26,14 @@ public class Queue {
      */
     @JsonProperty("visibilityTimeoutInSeconds")
     public Integer visibilityTimeoutInSeconds;
+
     public Queue withVisibilityTimeoutInSeconds(Integer visibilityTimeoutInSeconds) {
         this.visibilityTimeoutInSeconds = visibilityTimeoutInSeconds;
         return this;
     }
     
+    public Queue(@JsonProperty("MessageRetentionPeriodInSeconds") Integer messageRetentionPeriodInSeconds, @JsonProperty("visibilityTimeoutInSeconds") Integer visibilityTimeoutInSeconds) {
+        this.messageRetentionPeriodInSeconds = messageRetentionPeriodInSeconds;
+        this.visibilityTimeoutInSeconds = visibilityTimeoutInSeconds;
+  }
 }

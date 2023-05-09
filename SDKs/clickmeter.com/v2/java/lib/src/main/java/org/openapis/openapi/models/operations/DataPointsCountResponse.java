@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DataPointsCountResponse {
     
     public org.openapis.openapi.models.shared.ApiCoreResponsesCountResponce apiCoreResponsesCountResponce;
+
     public DataPointsCountResponse withApiCoreResponsesCountResponce(org.openapis.openapi.models.shared.ApiCoreResponsesCountResponce apiCoreResponsesCountResponce) {
         this.apiCoreResponsesCountResponce = apiCoreResponsesCountResponce;
         return this;
@@ -16,6 +18,7 @@ public class DataPointsCountResponse {
     
     
     public byte[] body;
+
     public DataPointsCountResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -23,6 +26,7 @@ public class DataPointsCountResponse {
     
     
     public String contentType;
+
     public DataPointsCountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -30,6 +34,7 @@ public class DataPointsCountResponse {
     
     
     public Integer statusCode;
+
     public DataPointsCountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,9 +42,14 @@ public class DataPointsCountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DataPointsCountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DataPointsCountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

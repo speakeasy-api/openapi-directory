@@ -18,6 +18,7 @@ public class Hub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Hub withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Hub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Hub withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class Hub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Hub withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,6 +54,7 @@ public class Hub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Hub withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class Hub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spokes")
     public String[] spokes;
+
     public Hub withSpokes(String[] spokes) {
         this.spokes = spokes;
         return this;
@@ -73,6 +78,7 @@ public class Hub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public HubStateEnum state;
+
     public Hub withState(HubStateEnum state) {
         this.state = state;
         return this;
@@ -84,6 +90,7 @@ public class Hub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uniqueId")
     public String uniqueId;
+
     public Hub withUniqueId(String uniqueId) {
         this.uniqueId = uniqueId;
         return this;
@@ -95,9 +102,11 @@ public class Hub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Hub withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Hub(){}
 }

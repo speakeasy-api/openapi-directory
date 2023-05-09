@@ -18,9 +18,11 @@ public class ConnectionDraining {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drainingTimeoutSec")
     public Integer drainingTimeoutSec;
+
     public ConnectionDraining withDrainingTimeoutSec(Integer drainingTimeoutSec) {
         this.drainingTimeoutSec = drainingTimeoutSec;
         return this;
     }
     
+    public ConnectionDraining(){}
 }

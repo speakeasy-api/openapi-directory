@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class YoutubeCaptionsUpdateResponse {
@@ -12,6 +13,7 @@ public class YoutubeCaptionsUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.Caption caption;
+
     public YoutubeCaptionsUpdateResponse withCaption(org.openapis.openapi.models.shared.Caption caption) {
         this.caption = caption;
         return this;
@@ -19,6 +21,7 @@ public class YoutubeCaptionsUpdateResponse {
     
     
     public String contentType;
+
     public YoutubeCaptionsUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class YoutubeCaptionsUpdateResponse {
     
     
     public Integer statusCode;
+
     public YoutubeCaptionsUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class YoutubeCaptionsUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public YoutubeCaptionsUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public YoutubeCaptionsUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

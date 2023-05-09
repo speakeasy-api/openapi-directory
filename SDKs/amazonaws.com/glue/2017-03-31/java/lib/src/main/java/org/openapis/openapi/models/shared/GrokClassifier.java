@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GrokClassifier {
     @JsonProperty("Classification")
     public String classification;
+
     public GrokClassifier withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -29,6 +30,7 @@ public class GrokClassifier {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public GrokClassifier withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -37,6 +39,7 @@ public class GrokClassifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomPatterns")
     public String customPatterns;
+
     public GrokClassifier withCustomPatterns(String customPatterns) {
         this.customPatterns = customPatterns;
         return this;
@@ -44,6 +47,7 @@ public class GrokClassifier {
     
     @JsonProperty("GrokPattern")
     public String grokPattern;
+
     public GrokClassifier withGrokPattern(String grokPattern) {
         this.grokPattern = grokPattern;
         return this;
@@ -54,6 +58,7 @@ public class GrokClassifier {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdated")
     public OffsetDateTime lastUpdated;
+
     public GrokClassifier withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -61,6 +66,7 @@ public class GrokClassifier {
     
     @JsonProperty("Name")
     public String name;
+
     public GrokClassifier withName(String name) {
         this.name = name;
         return this;
@@ -69,9 +75,15 @@ public class GrokClassifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public GrokClassifier withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public GrokClassifier(@JsonProperty("Classification") String classification, @JsonProperty("GrokPattern") String grokPattern, @JsonProperty("Name") String name) {
+        this.classification = classification;
+        this.grokPattern = grokPattern;
+        this.name = name;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardContent")
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent cardContent;
+
     public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCard withCardContent(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent cardContent) {
         this.cardContent = cardContent;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardOrientation")
     public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientationEnum cardOrientation;
+
     public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCard withCardOrientation(GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientationEnum cardOrientation) {
         this.cardOrientation = cardOrientation;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailImageAlignment")
     public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignmentEnum thumbnailImageAlignment;
+
     public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCard withThumbnailImageAlignment(GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignmentEnum thumbnailImageAlignment) {
         this.thumbnailImageAlignment = thumbnailImageAlignment;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCard(){}
 }

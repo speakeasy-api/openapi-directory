@@ -18,6 +18,7 @@ public class SearchTargetingOptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SearchTargetingOptionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class SearchTargetingOptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptions")
     public TargetingOption[] targetingOptions;
+
     public SearchTargetingOptionsResponse withTargetingOptions(TargetingOption[] targetingOptions) {
         this.targetingOptions = targetingOptions;
         return this;
     }
     
+    public SearchTargetingOptionsResponse(){}
 }

@@ -18,9 +18,11 @@ public class CreateSheetsChartResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public CreateSheetsChartResponse withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public CreateSheetsChartResponse(){}
 }

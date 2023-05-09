@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IncreaseReplicationFactorResponse {
@@ -12,6 +13,7 @@ public class IncreaseReplicationFactorResponse {
      */
     
     public Object clusterNotFoundFault;
+
     public IncreaseReplicationFactorResponse withClusterNotFoundFault(Object clusterNotFoundFault) {
         this.clusterNotFoundFault = clusterNotFoundFault;
         return this;
@@ -19,6 +21,7 @@ public class IncreaseReplicationFactorResponse {
     
     
     public String contentType;
+
     public IncreaseReplicationFactorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class IncreaseReplicationFactorResponse {
      */
     
     public org.openapis.openapi.models.shared.IncreaseReplicationFactorResponse increaseReplicationFactorResponse;
+
     public IncreaseReplicationFactorResponse withIncreaseReplicationFactorResponse(org.openapis.openapi.models.shared.IncreaseReplicationFactorResponse increaseReplicationFactorResponse) {
         this.increaseReplicationFactorResponse = increaseReplicationFactorResponse;
         return this;
@@ -39,6 +43,7 @@ public class IncreaseReplicationFactorResponse {
      */
     
     public Object insufficientClusterCapacityFault;
+
     public IncreaseReplicationFactorResponse withInsufficientClusterCapacityFault(Object insufficientClusterCapacityFault) {
         this.insufficientClusterCapacityFault = insufficientClusterCapacityFault;
         return this;
@@ -49,6 +54,7 @@ public class IncreaseReplicationFactorResponse {
      */
     
     public Object invalidClusterStateFault;
+
     public IncreaseReplicationFactorResponse withInvalidClusterStateFault(Object invalidClusterStateFault) {
         this.invalidClusterStateFault = invalidClusterStateFault;
         return this;
@@ -59,6 +65,7 @@ public class IncreaseReplicationFactorResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public IncreaseReplicationFactorResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -69,6 +76,7 @@ public class IncreaseReplicationFactorResponse {
      */
     
     public Object invalidParameterValueException;
+
     public IncreaseReplicationFactorResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -79,6 +87,7 @@ public class IncreaseReplicationFactorResponse {
      */
     
     public Object invalidVPCNetworkStateFault;
+
     public IncreaseReplicationFactorResponse withInvalidVPCNetworkStateFault(Object invalidVPCNetworkStateFault) {
         this.invalidVPCNetworkStateFault = invalidVPCNetworkStateFault;
         return this;
@@ -89,6 +98,7 @@ public class IncreaseReplicationFactorResponse {
      */
     
     public Object nodeQuotaForClusterExceededFault;
+
     public IncreaseReplicationFactorResponse withNodeQuotaForClusterExceededFault(Object nodeQuotaForClusterExceededFault) {
         this.nodeQuotaForClusterExceededFault = nodeQuotaForClusterExceededFault;
         return this;
@@ -99,6 +109,7 @@ public class IncreaseReplicationFactorResponse {
      */
     
     public Object nodeQuotaForCustomerExceededFault;
+
     public IncreaseReplicationFactorResponse withNodeQuotaForCustomerExceededFault(Object nodeQuotaForCustomerExceededFault) {
         this.nodeQuotaForCustomerExceededFault = nodeQuotaForCustomerExceededFault;
         return this;
@@ -109,6 +120,7 @@ public class IncreaseReplicationFactorResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public IncreaseReplicationFactorResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
@@ -116,6 +128,7 @@ public class IncreaseReplicationFactorResponse {
     
     
     public Integer statusCode;
+
     public IncreaseReplicationFactorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,9 +136,14 @@ public class IncreaseReplicationFactorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IncreaseReplicationFactorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IncreaseReplicationFactorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

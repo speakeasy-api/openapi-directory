@@ -18,6 +18,7 @@ public class UrlAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negative")
     public Boolean negative;
+
     public UrlAssignedTargetingOptionDetails withNegative(Boolean negative) {
         this.negative = negative;
         return this;
@@ -29,9 +30,11 @@ public class UrlAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public UrlAssignedTargetingOptionDetails withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public UrlAssignedTargetingOptionDetails(){}
 }

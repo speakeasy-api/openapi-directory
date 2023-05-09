@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubclassificationRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryIso2")
     public String countryIso2;
+
     public SubclassificationRequest withCountryIso2(String countryIso2) {
         this.countryIso2 = countryIso2;
         return this;
@@ -16,6 +18,7 @@ public class SubclassificationRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firstName")
     public String firstName;
+
     public SubclassificationRequest withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -23,9 +26,15 @@ public class SubclassificationRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lastName")
     public String lastName;
+
     public SubclassificationRequest withLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
     
+    public SubclassificationRequest(@JsonProperty("countryIso2") String countryIso2, @JsonProperty("firstName") String firstName, @JsonProperty("lastName") String lastName) {
+        this.countryIso2 = countryIso2;
+        this.firstName = firstName;
+        this.lastName = lastName;
+  }
 }

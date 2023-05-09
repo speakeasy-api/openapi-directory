@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1MarketingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultLogo")
     public GoogleCloudChannelV1Media defaultLogo;
+
     public GoogleCloudChannelV1MarketingInfo withDefaultLogo(GoogleCloudChannelV1Media defaultLogo) {
         this.defaultLogo = defaultLogo;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1MarketingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudChannelV1MarketingInfo withDescription(String description) {
         this.description = description;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudChannelV1MarketingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudChannelV1MarketingInfo withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public GoogleCloudChannelV1MarketingInfo(){}
 }

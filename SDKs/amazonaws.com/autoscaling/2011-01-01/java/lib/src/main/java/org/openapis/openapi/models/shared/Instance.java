@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Instance - Describes an EC2 instance.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Instance {
     
     public String availabilityZone;
+
     public Instance withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class Instance {
     
     
     public String healthStatus;
+
     public Instance withHealthStatus(String healthStatus) {
         this.healthStatus = healthStatus;
         return this;
@@ -26,6 +28,7 @@ public class Instance {
     
     
     public String instanceId;
+
     public Instance withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -33,6 +36,7 @@ public class Instance {
     
     
     public String instanceType;
+
     public Instance withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -40,6 +44,7 @@ public class Instance {
     
     
     public String launchConfigurationName;
+
     public Instance withLaunchConfigurationName(String launchConfigurationName) {
         this.launchConfigurationName = launchConfigurationName;
         return this;
@@ -47,6 +52,7 @@ public class Instance {
     
     
     public LaunchTemplateSpecification launchTemplate;
+
     public Instance withLaunchTemplate(LaunchTemplateSpecification launchTemplate) {
         this.launchTemplate = launchTemplate;
         return this;
@@ -54,6 +60,7 @@ public class Instance {
     
     
     public LifecycleStateEnum lifecycleState;
+
     public Instance withLifecycleState(LifecycleStateEnum lifecycleState) {
         this.lifecycleState = lifecycleState;
         return this;
@@ -61,6 +68,7 @@ public class Instance {
     
     
     public Boolean protectedFromScaleIn;
+
     public Instance withProtectedFromScaleIn(Boolean protectedFromScaleIn) {
         this.protectedFromScaleIn = protectedFromScaleIn;
         return this;
@@ -68,9 +76,17 @@ public class Instance {
     
     
     public String weightedCapacity;
+
     public Instance withWeightedCapacity(String weightedCapacity) {
         this.weightedCapacity = weightedCapacity;
         return this;
     }
     
+    public Instance(@JsonProperty("AvailabilityZone") String availabilityZone, @JsonProperty("HealthStatus") String healthStatus, @JsonProperty("InstanceId") String instanceId, @JsonProperty("LifecycleState") LifecycleStateEnum lifecycleState, @JsonProperty("ProtectedFromScaleIn") Boolean protectedFromScaleIn) {
+        this.availabilityZone = availabilityZone;
+        this.healthStatus = healthStatus;
+        this.instanceId = instanceId;
+        this.lifecycleState = lifecycleState;
+        this.protectedFromScaleIn = protectedFromScaleIn;
+  }
 }

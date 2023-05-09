@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBSecurityGroups {
     
     public String dbSecurityGroupArn;
+
     public DBSecurityGroups withDBSecurityGroupArn(String dbSecurityGroupArn) {
         this.dbSecurityGroupArn = dbSecurityGroupArn;
         return this;
@@ -19,6 +20,7 @@ public class DBSecurityGroups {
     
     
     public String dbSecurityGroupDescription;
+
     public DBSecurityGroups withDBSecurityGroupDescription(String dbSecurityGroupDescription) {
         this.dbSecurityGroupDescription = dbSecurityGroupDescription;
         return this;
@@ -26,6 +28,7 @@ public class DBSecurityGroups {
     
     
     public String dbSecurityGroupName;
+
     public DBSecurityGroups withDBSecurityGroupName(String dbSecurityGroupName) {
         this.dbSecurityGroupName = dbSecurityGroupName;
         return this;
@@ -33,6 +36,7 @@ public class DBSecurityGroups {
     
     
     public Ec2SecurityGroupList[] ec2SecurityGroups;
+
     public DBSecurityGroups withEc2SecurityGroups(Ec2SecurityGroupList[] ec2SecurityGroups) {
         this.ec2SecurityGroups = ec2SecurityGroups;
         return this;
@@ -40,6 +44,7 @@ public class DBSecurityGroups {
     
     
     public IPRangeList[] ipRanges;
+
     public DBSecurityGroups withIPRanges(IPRangeList[] ipRanges) {
         this.ipRanges = ipRanges;
         return this;
@@ -47,6 +52,7 @@ public class DBSecurityGroups {
     
     
     public String ownerId;
+
     public DBSecurityGroups withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -54,9 +60,11 @@ public class DBSecurityGroups {
     
     
     public String vpcId;
+
     public DBSecurityGroups withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DBSecurityGroups(){}
 }

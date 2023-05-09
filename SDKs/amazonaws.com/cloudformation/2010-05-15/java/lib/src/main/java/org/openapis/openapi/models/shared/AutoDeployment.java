@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AutoDeployment {
     
     public Boolean enabled;
+
     public AutoDeployment withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -19,9 +20,11 @@ public class AutoDeployment {
     
     
     public Boolean retainStacksOnAccountRemoval;
+
     public AutoDeployment withRetainStacksOnAccountRemoval(Boolean retainStacksOnAccountRemoval) {
         this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
         return this;
     }
     
+    public AutoDeployment(){}
 }

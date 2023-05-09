@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAssetRelationshipsResponse {
     
     public String contentType;
+
     public ListAssetRelationshipsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAssetRelationshipsResponse {
      */
     
     public Object internalFailureException;
+
     public ListAssetRelationshipsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListAssetRelationshipsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListAssetRelationshipsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListAssetRelationshipsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAssetRelationshipsResponse listAssetRelationshipsResponse;
+
     public ListAssetRelationshipsResponse withListAssetRelationshipsResponse(org.openapis.openapi.models.shared.ListAssetRelationshipsResponse listAssetRelationshipsResponse) {
         this.listAssetRelationshipsResponse = listAssetRelationshipsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListAssetRelationshipsResponse {
     
     
     public Integer statusCode;
+
     public ListAssetRelationshipsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListAssetRelationshipsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAssetRelationshipsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListAssetRelationshipsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAssetRelationshipsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class ListAssetRelationshipsResponse {
      */
     
     public Object throttlingException;
+
     public ListAssetRelationshipsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListAssetRelationshipsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

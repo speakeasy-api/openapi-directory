@@ -25,6 +25,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archived")
     public Boolean archived;
+
     public ProjectResponse withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -36,6 +37,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public ProjectResponseColorEnum color;
+
     public ProjectResponse withColor(ProjectResponseColorEnum color) {
         this.color = color;
         return this;
@@ -47,6 +49,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completed")
     public Boolean completed;
+
     public ProjectResponse withCompleted(Boolean completed) {
         this.completed = completed;
         return this;
@@ -60,6 +63,7 @@ public class ProjectResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completed_at")
     public OffsetDateTime completedAt;
+
     public ProjectResponse withCompletedAt(OffsetDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -68,6 +72,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completed_by")
     public UserCompact completedBy;
+
     public ProjectResponse withCompletedBy(UserCompact completedBy) {
         this.completedBy = completedBy;
         return this;
@@ -81,6 +86,7 @@ public class ProjectResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public ProjectResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -89,6 +95,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_from_template")
     public ProjectResponseCreatedFromTemplate createdFromTemplate;
+
     public ProjectResponse withCreatedFromTemplate(ProjectResponseCreatedFromTemplate createdFromTemplate) {
         this.createdFromTemplate = createdFromTemplate;
         return this;
@@ -100,6 +107,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_status")
     public ProjectResponseCurrentStatus currentStatus;
+
     public ProjectResponse withCurrentStatus(ProjectResponseCurrentStatus currentStatus) {
         this.currentStatus = currentStatus;
         return this;
@@ -111,6 +119,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_status_update")
     public ProjectResponseCurrentStatusUpdate currentStatusUpdate;
+
     public ProjectResponse withCurrentStatusUpdate(ProjectResponseCurrentStatusUpdate currentStatusUpdate) {
         this.currentStatusUpdate = currentStatusUpdate;
         return this;
@@ -122,6 +131,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_field_settings")
     public CustomFieldSettingResponse[] customFieldSettings;
+
     public ProjectResponse withCustomFieldSettings(CustomFieldSettingResponse[] customFieldSettings) {
         this.customFieldSettings = customFieldSettings;
         return this;
@@ -133,6 +143,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public CustomFieldCompact[] customFields;
+
     public ProjectResponse withCustomFields(CustomFieldCompact[] customFields) {
         this.customFields = customFields;
         return this;
@@ -144,6 +155,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_view")
     public ProjectResponseDefaultViewEnum defaultView;
+
     public ProjectResponse withDefaultView(ProjectResponseDefaultViewEnum defaultView) {
         this.defaultView = defaultView;
         return this;
@@ -157,6 +169,7 @@ public class ProjectResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("due_date")
     public OffsetDateTime dueDate;
+
     public ProjectResponse withDueDate(OffsetDateTime dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -170,6 +183,7 @@ public class ProjectResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("due_on")
     public OffsetDateTime dueOn;
+
     public ProjectResponse withDueOn(OffsetDateTime dueOn) {
         this.dueOn = dueOn;
         return this;
@@ -181,6 +195,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("followers")
     public UserCompact[] followers;
+
     public ProjectResponse withFollowers(UserCompact[] followers) {
         this.followers = followers;
         return this;
@@ -192,6 +207,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public ProjectResponse withGid(String gid) {
         this.gid = gid;
         return this;
@@ -203,6 +219,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_notes")
     public String htmlNotes;
+
     public ProjectResponse withHtmlNotes(String htmlNotes) {
         this.htmlNotes = htmlNotes;
         return this;
@@ -214,6 +231,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public ProjectResponseIconEnum icon;
+
     public ProjectResponse withIcon(ProjectResponseIconEnum icon) {
         this.icon = icon;
         return this;
@@ -225,6 +243,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_template")
     public Boolean isTemplate;
+
     public ProjectResponse withIsTemplate(Boolean isTemplate) {
         this.isTemplate = isTemplate;
         return this;
@@ -236,6 +255,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public UserCompact[] members;
+
     public ProjectResponse withMembers(UserCompact[] members) {
         this.members = members;
         return this;
@@ -250,6 +270,7 @@ public class ProjectResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modified_at")
     public OffsetDateTime modifiedAt;
+
     public ProjectResponse withModifiedAt(OffsetDateTime modifiedAt) {
         this.modifiedAt = modifiedAt;
         return this;
@@ -261,6 +282,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProjectResponse withName(String name) {
         this.name = name;
         return this;
@@ -272,6 +294,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public ProjectResponse withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -283,6 +306,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public ProjectResponseOwner owner;
+
     public ProjectResponse withOwner(ProjectResponseOwner owner) {
         this.owner = owner;
         return this;
@@ -294,6 +318,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permalink_url")
     public String permalinkUrl;
+
     public ProjectResponse withPermalinkUrl(String permalinkUrl) {
         this.permalinkUrl = permalinkUrl;
         return this;
@@ -302,6 +327,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_brief")
     public ProjectResponseProjectBrief projectBrief;
+
     public ProjectResponse withProjectBrief(ProjectResponseProjectBrief projectBrief) {
         this.projectBrief = projectBrief;
         return this;
@@ -313,6 +339,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public")
     public Boolean public_;
+
     public ProjectResponse withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -324,6 +351,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public ProjectResponse withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -336,6 +364,7 @@ public class ProjectResponse {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("start_on")
     public LocalDate startOn;
+
     public ProjectResponse withStartOn(LocalDate startOn) {
         this.startOn = startOn;
         return this;
@@ -344,6 +373,7 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public ProjectResponseTeam team;
+
     public ProjectResponse withTeam(ProjectResponseTeam team) {
         this.team = team;
         return this;
@@ -352,9 +382,11 @@ public class ProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace")
     public ProjectResponseWorkspace workspace;
+
     public ProjectResponse withWorkspace(ProjectResponseWorkspace workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public ProjectResponse(){}
 }

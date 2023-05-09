@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FileListFromComputeNodeResponse {
@@ -12,6 +13,7 @@ public class FileListFromComputeNodeResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public FileListFromComputeNodeResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -19,6 +21,7 @@ public class FileListFromComputeNodeResponse {
     
     
     public String contentType;
+
     public FileListFromComputeNodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class FileListFromComputeNodeResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public FileListFromComputeNodeResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class FileListFromComputeNodeResponse {
     
     
     public org.openapis.openapi.models.shared.NodeFileListResult nodeFileListResult;
+
     public FileListFromComputeNodeResponse withNodeFileListResult(org.openapis.openapi.models.shared.NodeFileListResult nodeFileListResult) {
         this.nodeFileListResult = nodeFileListResult;
         return this;
@@ -40,6 +45,7 @@ public class FileListFromComputeNodeResponse {
     
     
     public Integer statusCode;
+
     public FileListFromComputeNodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +53,14 @@ public class FileListFromComputeNodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FileListFromComputeNodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FileListFromComputeNodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

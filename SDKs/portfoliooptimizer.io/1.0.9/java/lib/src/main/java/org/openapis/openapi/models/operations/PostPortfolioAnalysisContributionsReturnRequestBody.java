@@ -14,6 +14,7 @@ public class PostPortfolioAnalysisContributionsReturnRequestBody {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioAnalysisContributionsReturnRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -22,6 +23,7 @@ public class PostPortfolioAnalysisContributionsReturnRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetsGroups")
     public Long[][] assetsGroups;
+
     public PostPortfolioAnalysisContributionsReturnRequestBody withAssetsGroups(Long[][] assetsGroups) {
         this.assetsGroups = assetsGroups;
         return this;
@@ -32,6 +34,7 @@ public class PostPortfolioAnalysisContributionsReturnRequestBody {
      */
     @JsonProperty("assetsReturns")
     public Double[] assetsReturns;
+
     public PostPortfolioAnalysisContributionsReturnRequestBody withAssetsReturns(Double[] assetsReturns) {
         this.assetsReturns = assetsReturns;
         return this;
@@ -39,9 +42,15 @@ public class PostPortfolioAnalysisContributionsReturnRequestBody {
     
     @JsonProperty("portfolios")
     public PostPortfolioAnalysisContributionsReturnRequestBodyPortfolios[] portfolios;
+
     public PostPortfolioAnalysisContributionsReturnRequestBody withPortfolios(PostPortfolioAnalysisContributionsReturnRequestBodyPortfolios[] portfolios) {
         this.portfolios = portfolios;
         return this;
     }
     
+    public PostPortfolioAnalysisContributionsReturnRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsReturns") Double[] assetsReturns, @JsonProperty("portfolios") PostPortfolioAnalysisContributionsReturnRequestBodyPortfolios[] portfolios) {
+        this.assets = assets;
+        this.assetsReturns = assetsReturns;
+        this.portfolios = portfolios;
+  }
 }

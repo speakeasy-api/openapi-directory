@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HIUSubscriptionContext {
     @JsonProperty("categories")
     public SubscriptionCategoryEnum[] categories;
+
     public HIUSubscriptionContext withCategories(SubscriptionCategoryEnum[] categories) {
         this.categories = categories;
         return this;
@@ -19,6 +20,7 @@ public class HIUSubscriptionContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hip")
     public OrganizationRepresentation hip;
+
     public HIUSubscriptionContext withHip(OrganizationRepresentation hip) {
         this.hip = hip;
         return this;
@@ -26,9 +28,14 @@ public class HIUSubscriptionContext {
     
     @JsonProperty("period")
     public SubscriptionPeriod period;
+
     public HIUSubscriptionContext withPeriod(SubscriptionPeriod period) {
         this.period = period;
         return this;
     }
     
+    public HIUSubscriptionContext(@JsonProperty("categories") SubscriptionCategoryEnum[] categories, @JsonProperty("period") SubscriptionPeriod period) {
+        this.categories = categories;
+        this.period = period;
+  }
 }

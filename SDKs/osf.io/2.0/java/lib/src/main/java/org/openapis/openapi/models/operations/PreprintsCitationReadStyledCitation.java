@@ -12,6 +12,7 @@ public class PreprintsCitationReadStyledCitation {
      */
     
     public PreprintsCitationReadStyledCitationAttributes attributes;
+
     public PreprintsCitationReadStyledCitation withAttributes(PreprintsCitationReadStyledCitationAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class PreprintsCitationReadStyledCitation {
      */
     
     public String id;
+
     public PreprintsCitationReadStyledCitation withId(String id) {
         this.id = id;
         return this;
@@ -32,9 +34,11 @@ public class PreprintsCitationReadStyledCitation {
      */
     
     public String type;
+
     public PreprintsCitationReadStyledCitation withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PreprintsCitationReadStyledCitation(){}
 }

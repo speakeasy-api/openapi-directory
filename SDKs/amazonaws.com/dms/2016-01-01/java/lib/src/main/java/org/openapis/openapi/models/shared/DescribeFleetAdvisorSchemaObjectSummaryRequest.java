@@ -12,6 +12,7 @@ public class DescribeFleetAdvisorSchemaObjectSummaryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public Filter[] filters;
+
     public DescribeFleetAdvisorSchemaObjectSummaryRequest withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class DescribeFleetAdvisorSchemaObjectSummaryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRecords")
     public Long maxRecords;
+
     public DescribeFleetAdvisorSchemaObjectSummaryRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -28,9 +30,11 @@ public class DescribeFleetAdvisorSchemaObjectSummaryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeFleetAdvisorSchemaObjectSummaryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFleetAdvisorSchemaObjectSummaryRequest(){}
 }

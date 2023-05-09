@@ -22,6 +22,7 @@ public class PipelineSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public PipelineSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -32,6 +33,7 @@ public class PipelineSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public PipelineSummary withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -40,6 +42,7 @@ public class PipelineSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineName")
     public String pipelineName;
+
     public PipelineSummary withPipelineName(String pipelineName) {
         this.pipelineName = pipelineName;
         return this;
@@ -48,9 +51,11 @@ public class PipelineSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reprocessingSummaries")
     public ReprocessingSummary[] reprocessingSummaries;
+
     public PipelineSummary withReprocessingSummaries(ReprocessingSummary[] reprocessingSummaries) {
         this.reprocessingSummaries = reprocessingSummaries;
         return this;
     }
     
+    public PipelineSummary(){}
 }

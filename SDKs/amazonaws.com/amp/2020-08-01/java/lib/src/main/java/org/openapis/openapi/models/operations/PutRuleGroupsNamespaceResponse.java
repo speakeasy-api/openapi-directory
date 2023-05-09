@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRuleGroupsNamespaceResponse {
@@ -12,6 +13,7 @@ public class PutRuleGroupsNamespaceResponse {
      */
     
     public Object accessDeniedException;
+
     public PutRuleGroupsNamespaceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class PutRuleGroupsNamespaceResponse {
      */
     
     public Object conflictException;
+
     public PutRuleGroupsNamespaceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class PutRuleGroupsNamespaceResponse {
     
     
     public String contentType;
+
     public PutRuleGroupsNamespaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutRuleGroupsNamespaceResponse {
      */
     
     public Object internalServerException;
+
     public PutRuleGroupsNamespaceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class PutRuleGroupsNamespaceResponse {
      */
     
     public org.openapis.openapi.models.shared.PutRuleGroupsNamespaceResponse putRuleGroupsNamespaceResponse;
+
     public PutRuleGroupsNamespaceResponse withPutRuleGroupsNamespaceResponse(org.openapis.openapi.models.shared.PutRuleGroupsNamespaceResponse putRuleGroupsNamespaceResponse) {
         this.putRuleGroupsNamespaceResponse = putRuleGroupsNamespaceResponse;
         return this;
@@ -59,6 +65,7 @@ public class PutRuleGroupsNamespaceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutRuleGroupsNamespaceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class PutRuleGroupsNamespaceResponse {
     
     
     public Integer statusCode;
+
     public PutRuleGroupsNamespaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PutRuleGroupsNamespaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRuleGroupsNamespaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class PutRuleGroupsNamespaceResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public PutRuleGroupsNamespaceResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class PutRuleGroupsNamespaceResponse {
      */
     
     public Object throttlingException;
+
     public PutRuleGroupsNamespaceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class PutRuleGroupsNamespaceResponse {
      */
     
     public Object validationException;
+
     public PutRuleGroupsNamespaceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutRuleGroupsNamespaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

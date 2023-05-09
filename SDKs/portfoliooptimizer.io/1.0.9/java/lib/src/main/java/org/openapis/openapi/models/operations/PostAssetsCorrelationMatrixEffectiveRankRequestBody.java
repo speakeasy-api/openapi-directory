@@ -12,6 +12,7 @@ public class PostAssetsCorrelationMatrixEffectiveRankRequestBody {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostAssetsCorrelationMatrixEffectiveRankRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -22,9 +23,14 @@ public class PostAssetsCorrelationMatrixEffectiveRankRequestBody {
      */
     @JsonProperty("assetsCorrelationMatrix")
     public Double[][] assetsCorrelationMatrix;
+
     public PostAssetsCorrelationMatrixEffectiveRankRequestBody withAssetsCorrelationMatrix(Double[][] assetsCorrelationMatrix) {
         this.assetsCorrelationMatrix = assetsCorrelationMatrix;
         return this;
     }
     
+    public PostAssetsCorrelationMatrixEffectiveRankRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsCorrelationMatrix") Double[][] assetsCorrelationMatrix) {
+        this.assets = assets;
+        this.assetsCorrelationMatrix = assetsCorrelationMatrix;
+  }
 }

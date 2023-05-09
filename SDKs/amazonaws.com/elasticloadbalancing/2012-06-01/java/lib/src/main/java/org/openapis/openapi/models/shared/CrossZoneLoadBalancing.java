@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CrossZoneLoadBalancing - Information about the &lt;code&gt;CrossZoneLoadBalancing&lt;/code&gt; attribute.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class CrossZoneLoadBalancing {
     
     public Boolean enabled;
+
     public CrossZoneLoadBalancing withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public CrossZoneLoadBalancing(@JsonProperty("Enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

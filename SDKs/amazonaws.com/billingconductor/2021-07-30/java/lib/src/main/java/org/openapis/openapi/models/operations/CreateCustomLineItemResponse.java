@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCustomLineItemResponse {
@@ -12,6 +13,7 @@ public class CreateCustomLineItemResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateCustomLineItemResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateCustomLineItemResponse {
      */
     
     public Object conflictException;
+
     public CreateCustomLineItemResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateCustomLineItemResponse {
     
     
     public String contentType;
+
     public CreateCustomLineItemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateCustomLineItemResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCustomLineItemOutput createCustomLineItemOutput;
+
     public CreateCustomLineItemResponse withCreateCustomLineItemOutput(org.openapis.openapi.models.shared.CreateCustomLineItemOutput createCustomLineItemOutput) {
         this.createCustomLineItemOutput = createCustomLineItemOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateCustomLineItemResponse {
      */
     
     public Object internalServerException;
+
     public CreateCustomLineItemResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateCustomLineItemResponse {
      */
     
     public Object serviceLimitExceededException;
+
     public CreateCustomLineItemResponse withServiceLimitExceededException(Object serviceLimitExceededException) {
         this.serviceLimitExceededException = serviceLimitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateCustomLineItemResponse {
     
     
     public Integer statusCode;
+
     public CreateCustomLineItemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateCustomLineItemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCustomLineItemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateCustomLineItemResponse {
      */
     
     public Object throttlingException;
+
     public CreateCustomLineItemResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateCustomLineItemResponse {
      */
     
     public Object validationException;
+
     public CreateCustomLineItemResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateCustomLineItemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

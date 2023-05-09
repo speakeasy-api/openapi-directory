@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteResponse {
     
     public String contentType;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRe
      */
     
     public java.util.Map<String, Object> empty;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteResponse withEmpty(java.util.Map<String, Object> empty) {
         this.empty = empty;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRe
     
     
     public Integer statusCode;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRe
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

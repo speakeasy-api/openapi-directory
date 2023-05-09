@@ -18,9 +18,11 @@ public class PerformDiskShrinkContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetSizeGb")
     public String targetSizeGb;
+
     public PerformDiskShrinkContext withTargetSizeGb(String targetSizeGb) {
         this.targetSizeGb = targetSizeGb;
         return this;
     }
     
+    public PerformDiskShrinkContext(){}
 }

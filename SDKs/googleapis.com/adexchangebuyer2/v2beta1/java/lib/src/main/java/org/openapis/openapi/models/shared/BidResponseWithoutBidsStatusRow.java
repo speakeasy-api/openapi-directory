@@ -18,6 +18,7 @@ public class BidResponseWithoutBidsStatusRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impressionCount")
     public MetricValue impressionCount;
+
     public BidResponseWithoutBidsStatusRow withImpressionCount(MetricValue impressionCount) {
         this.impressionCount = impressionCount;
         return this;
@@ -29,6 +30,7 @@ public class BidResponseWithoutBidsStatusRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowDimensions")
     public RowDimensions rowDimensions;
+
     public BidResponseWithoutBidsStatusRow withRowDimensions(RowDimensions rowDimensions) {
         this.rowDimensions = rowDimensions;
         return this;
@@ -40,9 +42,11 @@ public class BidResponseWithoutBidsStatusRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public BidResponseWithoutBidsStatusRowStatusEnum status;
+
     public BidResponseWithoutBidsStatusRow withStatus(BidResponseWithoutBidsStatusRowStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public BidResponseWithoutBidsStatusRow(){}
 }

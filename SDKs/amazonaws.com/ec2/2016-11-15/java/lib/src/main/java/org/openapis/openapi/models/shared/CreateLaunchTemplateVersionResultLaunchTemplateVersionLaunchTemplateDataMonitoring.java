@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMonitoring {
     
     public Boolean enabled;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMonitoring withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMonitoring(){}
 }

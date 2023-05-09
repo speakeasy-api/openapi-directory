@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTaskSetResponse {
@@ -12,6 +13,7 @@ public class DeleteTaskSetResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteTaskSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteTaskSetResponse {
      */
     
     public Object clientException;
+
     public DeleteTaskSetResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -32,6 +35,7 @@ public class DeleteTaskSetResponse {
      */
     
     public Object clusterNotFoundException;
+
     public DeleteTaskSetResponse withClusterNotFoundException(Object clusterNotFoundException) {
         this.clusterNotFoundException = clusterNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTaskSetResponse {
     
     
     public String contentType;
+
     public DeleteTaskSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class DeleteTaskSetResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteTaskSetResponse deleteTaskSetResponse;
+
     public DeleteTaskSetResponse withDeleteTaskSetResponse(org.openapis.openapi.models.shared.DeleteTaskSetResponse deleteTaskSetResponse) {
         this.deleteTaskSetResponse = deleteTaskSetResponse;
         return this;
@@ -59,6 +65,7 @@ public class DeleteTaskSetResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteTaskSetResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteTaskSetResponse {
      */
     
     public Object serverException;
+
     public DeleteTaskSetResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteTaskSetResponse {
     
     
     public Integer statusCode;
+
     public DeleteTaskSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteTaskSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTaskSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteTaskSetResponse {
      */
     
     public Object serviceNotActiveException;
+
     public DeleteTaskSetResponse withServiceNotActiveException(Object serviceNotActiveException) {
         this.serviceNotActiveException = serviceNotActiveException;
         return this;
@@ -103,6 +114,7 @@ public class DeleteTaskSetResponse {
      */
     
     public Object serviceNotFoundException;
+
     public DeleteTaskSetResponse withServiceNotFoundException(Object serviceNotFoundException) {
         this.serviceNotFoundException = serviceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class DeleteTaskSetResponse {
      */
     
     public Object taskSetNotFoundException;
+
     public DeleteTaskSetResponse withTaskSetNotFoundException(Object taskSetNotFoundException) {
         this.taskSetNotFoundException = taskSetNotFoundException;
         return this;
@@ -123,9 +136,14 @@ public class DeleteTaskSetResponse {
      */
     
     public Object unsupportedFeatureException;
+
     public DeleteTaskSetResponse withUnsupportedFeatureException(Object unsupportedFeatureException) {
         this.unsupportedFeatureException = unsupportedFeatureException;
         return this;
     }
     
+    public DeleteTaskSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class DeleteDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceId")
     public String dataSourceId;
+
     public DeleteDataSourceRequest withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
     }
     
+    public DeleteDataSourceRequest(){}
 }

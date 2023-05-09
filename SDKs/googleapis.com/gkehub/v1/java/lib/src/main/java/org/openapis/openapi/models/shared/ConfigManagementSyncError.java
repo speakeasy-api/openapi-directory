@@ -18,6 +18,7 @@ public class ConfigManagementSyncError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public ConfigManagementSyncError withCode(String code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class ConfigManagementSyncError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public ConfigManagementSyncError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -40,9 +42,11 @@ public class ConfigManagementSyncError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorResources")
     public ConfigManagementErrorResource[] errorResources;
+
     public ConfigManagementSyncError withErrorResources(ConfigManagementErrorResource[] errorResources) {
         this.errorResources = errorResources;
         return this;
     }
     
+    public ConfigManagementSyncError(){}
 }

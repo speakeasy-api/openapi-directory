@@ -12,9 +12,13 @@ public class StartDetectorModelAnalysisRequestBody {
      */
     @JsonProperty("detectorModelDefinition")
     public StartDetectorModelAnalysisRequestBodyDetectorModelDefinition detectorModelDefinition;
+
     public StartDetectorModelAnalysisRequestBody withDetectorModelDefinition(StartDetectorModelAnalysisRequestBodyDetectorModelDefinition detectorModelDefinition) {
         this.detectorModelDefinition = detectorModelDefinition;
         return this;
     }
     
+    public StartDetectorModelAnalysisRequestBody(@JsonProperty("detectorModelDefinition") StartDetectorModelAnalysisRequestBodyDetectorModelDefinition detectorModelDefinition) {
+        this.detectorModelDefinition = detectorModelDefinition;
+  }
 }

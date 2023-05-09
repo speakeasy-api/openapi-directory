@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListtasksbyassigneeRequest {
@@ -12,6 +13,7 @@ public class ListtasksbyassigneeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ListtasksbyassigneeRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ListtasksbyassigneeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public ListtasksbyassigneeRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class ListtasksbyassigneeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee.email")
     public String assigneeEmail;
+
     public ListtasksbyassigneeRequest withAssigneeEmail(String assigneeEmail) {
         this.assigneeEmail = assigneeEmail;
         return this;
@@ -42,6 +46,7 @@ public class ListtasksbyassigneeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=context")
     public String context;
+
     public ListtasksbyassigneeRequest withContext(String context) {
         this.context = context;
         return this;
@@ -52,6 +57,7 @@ public class ListtasksbyassigneeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public ListtasksbyassigneeRequest withPage(String page) {
         this.page = page;
         return this;
@@ -62,6 +68,7 @@ public class ListtasksbyassigneeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
     public String perPage;
+
     public ListtasksbyassigneeRequest withPerPage(String perPage) {
         this.perPage = perPage;
         return this;
@@ -72,6 +79,7 @@ public class ListtasksbyassigneeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public ListtasksbyassigneeRequest withStatus(String status) {
         this.status = status;
         return this;
@@ -82,9 +90,14 @@ public class ListtasksbyassigneeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=target.id")
     public String targetId;
+
     public ListtasksbyassigneeRequest withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
     }
     
+    public ListtasksbyassigneeRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType) {
+        this.accept = accept;
+        this.contentType = contentType;
+  }
 }

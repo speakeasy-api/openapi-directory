@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsCheckPermissionsForProjectLegacyRequest {
@@ -12,6 +13,7 @@ public class TeamsCheckPermissionsForProjectLegacyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public Long projectId;
+
     public TeamsCheckPermissionsForProjectLegacyRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
@@ -22,9 +24,14 @@ public class TeamsCheckPermissionsForProjectLegacyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
     public Long teamId;
+
     public TeamsCheckPermissionsForProjectLegacyRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public TeamsCheckPermissionsForProjectLegacyRequest(@JsonProperty("project_id") Long projectId, @JsonProperty("team_id") Long teamId) {
+        this.projectId = projectId;
+        this.teamId = teamId;
+  }
 }

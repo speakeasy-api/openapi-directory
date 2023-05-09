@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class EntityDetails {
     
     public EntityInfo entityInfo;
+
     public EntityDetails withEntityInfo(EntityInfo entityInfo) {
         this.entityInfo = entityInfo;
         return this;
@@ -19,9 +21,13 @@ public class EntityDetails {
     
     
     public OffsetDateTime lastAuthenticated;
+
     public EntityDetails withLastAuthenticated(OffsetDateTime lastAuthenticated) {
         this.lastAuthenticated = lastAuthenticated;
         return this;
     }
     
+    public EntityDetails(@JsonProperty("EntityInfo") EntityInfo entityInfo) {
+        this.entityInfo = entityInfo;
+  }
 }

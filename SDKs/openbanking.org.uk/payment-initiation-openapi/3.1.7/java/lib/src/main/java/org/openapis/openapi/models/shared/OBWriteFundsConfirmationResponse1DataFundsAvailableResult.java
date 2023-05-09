@@ -20,6 +20,7 @@ public class OBWriteFundsConfirmationResponse1DataFundsAvailableResult {
      */
     @JsonProperty("FundsAvailable")
     public Boolean fundsAvailable;
+
     public OBWriteFundsConfirmationResponse1DataFundsAvailableResult withFundsAvailable(Boolean fundsAvailable) {
         this.fundsAvailable = fundsAvailable;
         return this;
@@ -34,9 +35,14 @@ public class OBWriteFundsConfirmationResponse1DataFundsAvailableResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FundsAvailableDateTime")
     public OffsetDateTime fundsAvailableDateTime;
+
     public OBWriteFundsConfirmationResponse1DataFundsAvailableResult withFundsAvailableDateTime(OffsetDateTime fundsAvailableDateTime) {
         this.fundsAvailableDateTime = fundsAvailableDateTime;
         return this;
     }
     
+    public OBWriteFundsConfirmationResponse1DataFundsAvailableResult(@JsonProperty("FundsAvailable") Boolean fundsAvailable, @JsonProperty("FundsAvailableDateTime") OffsetDateTime fundsAvailableDateTime) {
+        this.fundsAvailable = fundsAvailable;
+        this.fundsAvailableDateTime = fundsAvailableDateTime;
+  }
 }

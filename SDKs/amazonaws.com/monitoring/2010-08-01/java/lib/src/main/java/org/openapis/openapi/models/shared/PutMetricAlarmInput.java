@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PutMetricAlarmInput {
     
     public Boolean actionsEnabled;
+
     public PutMetricAlarmInput withActionsEnabled(Boolean actionsEnabled) {
         this.actionsEnabled = actionsEnabled;
         return this;
@@ -16,6 +17,7 @@ public class PutMetricAlarmInput {
     
     
     public String[] alarmActions;
+
     public PutMetricAlarmInput withAlarmActions(String[] alarmActions) {
         this.alarmActions = alarmActions;
         return this;
@@ -23,6 +25,7 @@ public class PutMetricAlarmInput {
     
     
     public String alarmDescription;
+
     public PutMetricAlarmInput withAlarmDescription(String alarmDescription) {
         this.alarmDescription = alarmDescription;
         return this;
@@ -30,6 +33,7 @@ public class PutMetricAlarmInput {
     
     
     public String alarmName;
+
     public PutMetricAlarmInput withAlarmName(String alarmName) {
         this.alarmName = alarmName;
         return this;
@@ -37,6 +41,7 @@ public class PutMetricAlarmInput {
     
     
     public ComparisonOperatorEnum comparisonOperator;
+
     public PutMetricAlarmInput withComparisonOperator(ComparisonOperatorEnum comparisonOperator) {
         this.comparisonOperator = comparisonOperator;
         return this;
@@ -44,6 +49,7 @@ public class PutMetricAlarmInput {
     
     
     public Long datapointsToAlarm;
+
     public PutMetricAlarmInput withDatapointsToAlarm(Long datapointsToAlarm) {
         this.datapointsToAlarm = datapointsToAlarm;
         return this;
@@ -51,6 +57,7 @@ public class PutMetricAlarmInput {
     
     
     public Dimension[] dimensions;
+
     public PutMetricAlarmInput withDimensions(Dimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -58,6 +65,7 @@ public class PutMetricAlarmInput {
     
     
     public String evaluateLowSampleCountPercentile;
+
     public PutMetricAlarmInput withEvaluateLowSampleCountPercentile(String evaluateLowSampleCountPercentile) {
         this.evaluateLowSampleCountPercentile = evaluateLowSampleCountPercentile;
         return this;
@@ -65,6 +73,7 @@ public class PutMetricAlarmInput {
     
     
     public Long evaluationPeriods;
+
     public PutMetricAlarmInput withEvaluationPeriods(Long evaluationPeriods) {
         this.evaluationPeriods = evaluationPeriods;
         return this;
@@ -72,6 +81,7 @@ public class PutMetricAlarmInput {
     
     
     public String extendedStatistic;
+
     public PutMetricAlarmInput withExtendedStatistic(String extendedStatistic) {
         this.extendedStatistic = extendedStatistic;
         return this;
@@ -79,6 +89,7 @@ public class PutMetricAlarmInput {
     
     
     public String[] insufficientDataActions;
+
     public PutMetricAlarmInput withInsufficientDataActions(String[] insufficientDataActions) {
         this.insufficientDataActions = insufficientDataActions;
         return this;
@@ -86,6 +97,7 @@ public class PutMetricAlarmInput {
     
     
     public String metricName;
+
     public PutMetricAlarmInput withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -93,6 +105,7 @@ public class PutMetricAlarmInput {
     
     
     public MetricDataQuery[] metrics;
+
     public PutMetricAlarmInput withMetrics(MetricDataQuery[] metrics) {
         this.metrics = metrics;
         return this;
@@ -100,6 +113,7 @@ public class PutMetricAlarmInput {
     
     
     public String namespace;
+
     public PutMetricAlarmInput withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -107,6 +121,7 @@ public class PutMetricAlarmInput {
     
     
     public String[] okActions;
+
     public PutMetricAlarmInput withOKActions(String[] okActions) {
         this.okActions = okActions;
         return this;
@@ -114,6 +129,7 @@ public class PutMetricAlarmInput {
     
     
     public Long period;
+
     public PutMetricAlarmInput withPeriod(Long period) {
         this.period = period;
         return this;
@@ -121,6 +137,7 @@ public class PutMetricAlarmInput {
     
     
     public StatisticEnum statistic;
+
     public PutMetricAlarmInput withStatistic(StatisticEnum statistic) {
         this.statistic = statistic;
         return this;
@@ -128,6 +145,7 @@ public class PutMetricAlarmInput {
     
     
     public Tag[] tags;
+
     public PutMetricAlarmInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -135,6 +153,7 @@ public class PutMetricAlarmInput {
     
     
     public Double threshold;
+
     public PutMetricAlarmInput withThreshold(Double threshold) {
         this.threshold = threshold;
         return this;
@@ -142,6 +161,7 @@ public class PutMetricAlarmInput {
     
     
     public String thresholdMetricId;
+
     public PutMetricAlarmInput withThresholdMetricId(String thresholdMetricId) {
         this.thresholdMetricId = thresholdMetricId;
         return this;
@@ -149,6 +169,7 @@ public class PutMetricAlarmInput {
     
     
     public String treatMissingData;
+
     public PutMetricAlarmInput withTreatMissingData(String treatMissingData) {
         this.treatMissingData = treatMissingData;
         return this;
@@ -156,9 +177,15 @@ public class PutMetricAlarmInput {
     
     
     public StandardUnitEnum unit;
+
     public PutMetricAlarmInput withUnit(StandardUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public PutMetricAlarmInput(@JsonProperty("AlarmName") String alarmName, @JsonProperty("ComparisonOperator") ComparisonOperatorEnum comparisonOperator, @JsonProperty("EvaluationPeriods") Long evaluationPeriods) {
+        this.alarmName = alarmName;
+        this.comparisonOperator = comparisonOperator;
+        this.evaluationPeriods = evaluationPeriods;
+  }
 }

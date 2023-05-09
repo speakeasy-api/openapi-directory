@@ -15,6 +15,7 @@ public class PutInstitutionsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency_code")
     public String currencyCode;
+
     public PutInstitutionsIdRequestBody withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -26,9 +27,11 @@ public class PutInstitutionsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PutInstitutionsIdRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PutInstitutionsIdRequestBody(){}
 }

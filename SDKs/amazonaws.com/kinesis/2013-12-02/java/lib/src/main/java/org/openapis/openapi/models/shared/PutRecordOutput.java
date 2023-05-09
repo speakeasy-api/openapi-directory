@@ -15,6 +15,7 @@ public class PutRecordOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionType")
     public EncryptionTypeEnum encryptionType;
+
     public PutRecordOutput withEncryptionType(EncryptionTypeEnum encryptionType) {
         this.encryptionType = encryptionType;
         return this;
@@ -22,6 +23,7 @@ public class PutRecordOutput {
     
     @JsonProperty("SequenceNumber")
     public String sequenceNumber;
+
     public PutRecordOutput withSequenceNumber(String sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
@@ -29,9 +31,14 @@ public class PutRecordOutput {
     
     @JsonProperty("ShardId")
     public String shardId;
+
     public PutRecordOutput withShardId(String shardId) {
         this.shardId = shardId;
         return this;
     }
     
+    public PutRecordOutput(@JsonProperty("SequenceNumber") String sequenceNumber, @JsonProperty("ShardId") String shardId) {
+        this.sequenceNumber = sequenceNumber;
+        this.shardId = shardId;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OutputFileUriValue {
     @JsonProperty("fileName")
     public String fileName;
+
     public OutputFileUriValue withFileName(String fileName) {
         this.fileName = fileName;
         return this;
     }
     
+    public OutputFileUriValue(@JsonProperty("fileName") String fileName) {
+        this.fileName = fileName;
+  }
 }

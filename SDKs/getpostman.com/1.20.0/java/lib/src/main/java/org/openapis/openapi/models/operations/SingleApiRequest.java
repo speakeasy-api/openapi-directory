@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SingleApiRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
     public String apiId;
+
     public SingleApiRequest withApiId(String apiId) {
         this.apiId = apiId;
         return this;
     }
     
+    public SingleApiRequest(@JsonProperty("apiId") String apiId) {
+        this.apiId = apiId;
+  }
 }

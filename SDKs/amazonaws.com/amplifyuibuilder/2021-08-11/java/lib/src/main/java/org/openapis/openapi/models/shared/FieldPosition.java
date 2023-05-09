@@ -15,6 +15,7 @@ public class FieldPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("below")
     public String below;
+
     public FieldPosition withBelow(String below) {
         this.below = below;
         return this;
@@ -23,6 +24,7 @@ public class FieldPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixed")
     public FixedPositionEnum fixed;
+
     public FieldPosition withFixed(FixedPositionEnum fixed) {
         this.fixed = fixed;
         return this;
@@ -31,9 +33,11 @@ public class FieldPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rightOf")
     public String rightOf;
+
     public FieldPosition withRightOf(String rightOf) {
         this.rightOf = rightOf;
         return this;
     }
     
+    public FieldPosition(){}
 }

@@ -15,6 +15,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WebhookResource {
     @JsonProperty("attributes")
     public WebhookResourceAttributes attributes;
+
     public WebhookResource withAttributes(WebhookResourceAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -26,6 +27,7 @@ public class WebhookResource {
      */
     @JsonProperty("id")
     public String id;
+
     public WebhookResource withId(String id) {
         this.id = id;
         return this;
@@ -34,6 +36,7 @@ public class WebhookResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public WebhookResourceLinks links;
+
     public WebhookResource withLinks(WebhookResourceLinks links) {
         this.links = links;
         return this;
@@ -41,6 +44,7 @@ public class WebhookResource {
     
     @JsonProperty("relationships")
     public WebhookResourceRelationships relationships;
+
     public WebhookResource withRelationships(WebhookResourceRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -51,9 +55,16 @@ public class WebhookResource {
      */
     @JsonProperty("type")
     public String type;
+
     public WebhookResource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public WebhookResource(@JsonProperty("attributes") WebhookResourceAttributes attributes, @JsonProperty("id") String id, @JsonProperty("relationships") WebhookResourceRelationships relationships, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

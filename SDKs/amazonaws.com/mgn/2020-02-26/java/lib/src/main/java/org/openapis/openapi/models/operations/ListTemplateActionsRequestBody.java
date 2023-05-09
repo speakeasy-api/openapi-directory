@@ -15,6 +15,7 @@ public class ListTemplateActionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public ListTemplateActionsRequestBodyFilters filters;
+
     public ListTemplateActionsRequestBody withFilters(ListTemplateActionsRequestBodyFilters filters) {
         this.filters = filters;
         return this;
@@ -25,6 +26,7 @@ public class ListTemplateActionsRequestBody {
      */
     @JsonProperty("launchConfigurationTemplateID")
     public String launchConfigurationTemplateID;
+
     public ListTemplateActionsRequestBody withLaunchConfigurationTemplateID(String launchConfigurationTemplateID) {
         this.launchConfigurationTemplateID = launchConfigurationTemplateID;
         return this;
@@ -36,6 +38,7 @@ public class ListTemplateActionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListTemplateActionsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -47,9 +50,13 @@ public class ListTemplateActionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTemplateActionsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListTemplateActionsRequestBody(@JsonProperty("launchConfigurationTemplateID") String launchConfigurationTemplateID) {
+        this.launchConfigurationTemplateID = launchConfigurationTemplateID;
+  }
 }

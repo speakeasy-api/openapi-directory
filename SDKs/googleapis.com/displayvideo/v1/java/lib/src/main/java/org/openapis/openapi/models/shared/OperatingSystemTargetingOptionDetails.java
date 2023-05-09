@@ -18,9 +18,11 @@ public class OperatingSystemTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public OperatingSystemTargetingOptionDetails withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public OperatingSystemTargetingOptionDetails(){}
 }

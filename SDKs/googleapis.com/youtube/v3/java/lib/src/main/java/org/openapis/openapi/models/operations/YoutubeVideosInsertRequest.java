@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class YoutubeVideosInsertRequest {
@@ -12,6 +13,7 @@ public class YoutubeVideosInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public YoutubeVideosInsertRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class YoutubeVideosInsertRequest {
     
     @SpeakeasyMetadata("request:mediaType=video/x-smv")
     public byte[] requestBody;
+
     public YoutubeVideosInsertRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -29,6 +32,7 @@ public class YoutubeVideosInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public YoutubeVideosInsertRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class YoutubeVideosInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public YoutubeVideosInsertRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class YoutubeVideosInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=autoLevels")
     public Boolean autoLevels;
+
     public YoutubeVideosInsertRequest withAutoLevels(Boolean autoLevels) {
         this.autoLevels = autoLevels;
         return this;
@@ -59,6 +65,7 @@ public class YoutubeVideosInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public YoutubeVideosInsertRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +76,7 @@ public class YoutubeVideosInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public YoutubeVideosInsertRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class YoutubeVideosInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public YoutubeVideosInsertRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class YoutubeVideosInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=notifySubscribers")
     public Boolean notifySubscribers;
+
     public YoutubeVideosInsertRequest withNotifySubscribers(Boolean notifySubscribers) {
         this.notifySubscribers = notifySubscribers;
         return this;
@@ -99,6 +109,7 @@ public class YoutubeVideosInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public YoutubeVideosInsertRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -109,6 +120,7 @@ public class YoutubeVideosInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onBehalfOfContentOwner")
     public String onBehalfOfContentOwner;
+
     public YoutubeVideosInsertRequest withOnBehalfOfContentOwner(String onBehalfOfContentOwner) {
         this.onBehalfOfContentOwner = onBehalfOfContentOwner;
         return this;
@@ -119,6 +131,7 @@ public class YoutubeVideosInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onBehalfOfContentOwnerChannel")
     public String onBehalfOfContentOwnerChannel;
+
     public YoutubeVideosInsertRequest withOnBehalfOfContentOwnerChannel(String onBehalfOfContentOwnerChannel) {
         this.onBehalfOfContentOwnerChannel = onBehalfOfContentOwnerChannel;
         return this;
@@ -129,6 +142,7 @@ public class YoutubeVideosInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part")
     public String[] part;
+
     public YoutubeVideosInsertRequest withPart(String[] part) {
         this.part = part;
         return this;
@@ -139,6 +153,7 @@ public class YoutubeVideosInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public YoutubeVideosInsertRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -149,6 +164,7 @@ public class YoutubeVideosInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public YoutubeVideosInsertRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -159,6 +175,7 @@ public class YoutubeVideosInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stabilize")
     public Boolean stabilize;
+
     public YoutubeVideosInsertRequest withStabilize(Boolean stabilize) {
         this.stabilize = stabilize;
         return this;
@@ -169,6 +186,7 @@ public class YoutubeVideosInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public YoutubeVideosInsertRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -179,9 +197,13 @@ public class YoutubeVideosInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public YoutubeVideosInsertRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public YoutubeVideosInsertRequest(@JsonProperty("part") String[] part) {
+        this.part = part;
+  }
 }

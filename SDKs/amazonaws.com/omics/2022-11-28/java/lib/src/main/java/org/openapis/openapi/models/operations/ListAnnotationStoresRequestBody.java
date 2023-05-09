@@ -15,6 +15,7 @@ public class ListAnnotationStoresRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public ListAnnotationStoresRequestBodyFilter filter;
+
     public ListAnnotationStoresRequestBody withFilter(ListAnnotationStoresRequestBodyFilter filter) {
         this.filter = filter;
         return this;
@@ -26,9 +27,11 @@ public class ListAnnotationStoresRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ids")
     public String[] ids;
+
     public ListAnnotationStoresRequestBody withIds(String[] ids) {
         this.ids = ids;
         return this;
     }
     
+    public ListAnnotationStoresRequestBody(){}
 }

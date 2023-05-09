@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsPostRequest {
@@ -12,6 +13,7 @@ public class GroupsPostRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ApiCoreDtoGroupsGroup apiCoreDtoGroupsGroup;
+
     public GroupsPostRequest withApiCoreDtoGroupsGroup(org.openapis.openapi.models.shared.ApiCoreDtoGroupsGroup apiCoreDtoGroupsGroup) {
         this.apiCoreDtoGroupsGroup = apiCoreDtoGroupsGroup;
         return this;
@@ -22,9 +24,14 @@ public class GroupsPostRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GroupsPostRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public GroupsPostRequest(@JsonProperty("Api.Core.Dto.Groups.Group") org.openapis.openapi.models.shared.ApiCoreDtoGroupsGroup apiCoreDtoGroupsGroup, @JsonProperty("id") Long id) {
+        this.apiCoreDtoGroupsGroup = apiCoreDtoGroupsGroup;
+        this.id = id;
+  }
 }

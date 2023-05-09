@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProcessingFeatureStoreOutput {
     @JsonProperty("FeatureGroupName")
     public String featureGroupName;
+
     public ProcessingFeatureStoreOutput withFeatureGroupName(String featureGroupName) {
         this.featureGroupName = featureGroupName;
         return this;
     }
     
+    public ProcessingFeatureStoreOutput(@JsonProperty("FeatureGroupName") String featureGroupName) {
+        this.featureGroupName = featureGroupName;
+  }
 }

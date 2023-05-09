@@ -15,6 +15,7 @@ public class FunctionList {
      */
     @JsonProperty("functions")
     public Function[] functions;
+
     public FunctionList withFunctions(Function[] functions) {
         this.functions = functions;
         return this;
@@ -25,9 +26,14 @@ public class FunctionList {
      */
     @JsonProperty("sum")
     public Integer sum;
+
     public FunctionList withSum(Integer sum) {
         this.sum = sum;
         return this;
     }
     
+    public FunctionList(@JsonProperty("functions") Function[] functions, @JsonProperty("sum") Integer sum) {
+        this.functions = functions;
+        this.sum = sum;
+  }
 }

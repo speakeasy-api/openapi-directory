@@ -15,9 +15,11 @@ public class NodeGroupsDeleteNodesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodes")
     public String[] nodes;
+
     public NodeGroupsDeleteNodesRequest withNodes(String[] nodes) {
         this.nodes = nodes;
         return this;
     }
     
+    public NodeGroupsDeleteNodesRequest(){}
 }

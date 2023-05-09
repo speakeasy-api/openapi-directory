@@ -81,4 +81,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/LockRuleResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UnlockRuleResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateRuleResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

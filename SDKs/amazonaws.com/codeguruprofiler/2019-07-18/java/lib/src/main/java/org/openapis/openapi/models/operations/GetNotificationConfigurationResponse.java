@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNotificationConfigurationResponse {
     
     public String contentType;
+
     public GetNotificationConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetNotificationConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetNotificationConfigurationResponse getNotificationConfigurationResponse;
+
     public GetNotificationConfigurationResponse withGetNotificationConfigurationResponse(org.openapis.openapi.models.shared.GetNotificationConfigurationResponse getNotificationConfigurationResponse) {
         this.getNotificationConfigurationResponse = getNotificationConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetNotificationConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public GetNotificationConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetNotificationConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetNotificationConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetNotificationConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetNotificationConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetNotificationConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNotificationConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetNotificationConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public GetNotificationConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class GetNotificationConfigurationResponse {
      */
     
     public Object validationException;
+
     public GetNotificationConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetNotificationConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

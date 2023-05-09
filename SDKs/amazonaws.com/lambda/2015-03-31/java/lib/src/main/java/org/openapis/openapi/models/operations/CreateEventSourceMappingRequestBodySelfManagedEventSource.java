@@ -15,9 +15,11 @@ public class CreateEventSourceMappingRequestBodySelfManagedEventSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Endpoints")
     public java.util.Map<String, String[]> endpoints;
+
     public CreateEventSourceMappingRequestBodySelfManagedEventSource withEndpoints(java.util.Map<String, String[]> endpoints) {
         this.endpoints = endpoints;
         return this;
     }
     
+    public CreateEventSourceMappingRequestBodySelfManagedEventSource(){}
 }

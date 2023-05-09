@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeEventCategoriesMessage {
     
     public FilterList[] filters;
+
     public DescribeEventCategoriesMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -19,9 +20,11 @@ public class DescribeEventCategoriesMessage {
     
     
     public String sourceType;
+
     public DescribeEventCategoriesMessage withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public DescribeEventCategoriesMessage(){}
 }

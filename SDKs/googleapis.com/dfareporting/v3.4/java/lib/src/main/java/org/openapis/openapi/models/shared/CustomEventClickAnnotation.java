@@ -18,6 +18,7 @@ public class CustomEventClickAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gclid")
     public String gclid;
+
     public CustomEventClickAnnotation withGclid(String gclid) {
         this.gclid = gclid;
         return this;
@@ -29,9 +30,11 @@ public class CustomEventClickAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CustomEventClickAnnotation withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public CustomEventClickAnnotation(){}
 }

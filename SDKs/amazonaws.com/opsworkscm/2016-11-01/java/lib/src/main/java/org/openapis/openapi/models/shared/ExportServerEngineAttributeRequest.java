@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExportServerEngineAttributeRequest {
     @JsonProperty("ExportAttributeName")
     public String exportAttributeName;
+
     public ExportServerEngineAttributeRequest withExportAttributeName(String exportAttributeName) {
         this.exportAttributeName = exportAttributeName;
         return this;
@@ -19,6 +20,7 @@ public class ExportServerEngineAttributeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputAttributes")
     public EngineAttribute[] inputAttributes;
+
     public ExportServerEngineAttributeRequest withInputAttributes(EngineAttribute[] inputAttributes) {
         this.inputAttributes = inputAttributes;
         return this;
@@ -26,9 +28,14 @@ public class ExportServerEngineAttributeRequest {
     
     @JsonProperty("ServerName")
     public String serverName;
+
     public ExportServerEngineAttributeRequest withServerName(String serverName) {
         this.serverName = serverName;
         return this;
     }
     
+    public ExportServerEngineAttributeRequest(@JsonProperty("ExportAttributeName") String exportAttributeName, @JsonProperty("ServerName") String serverName) {
+        this.exportAttributeName = exportAttributeName;
+        this.serverName = serverName;
+  }
 }

@@ -15,6 +15,7 @@ public class EventContextDataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("City")
     public String city;
+
     public EventContextDataType withCity(String city) {
         this.city = city;
         return this;
@@ -23,6 +24,7 @@ public class EventContextDataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Country")
     public String country;
+
     public EventContextDataType withCountry(String country) {
         this.country = country;
         return this;
@@ -31,6 +33,7 @@ public class EventContextDataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceName")
     public String deviceName;
+
     public EventContextDataType withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -39,6 +42,7 @@ public class EventContextDataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddress")
     public String ipAddress;
+
     public EventContextDataType withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -47,9 +51,11 @@ public class EventContextDataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timezone")
     public String timezone;
+
     public EventContextDataType withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public EventContextDataType(){}
 }

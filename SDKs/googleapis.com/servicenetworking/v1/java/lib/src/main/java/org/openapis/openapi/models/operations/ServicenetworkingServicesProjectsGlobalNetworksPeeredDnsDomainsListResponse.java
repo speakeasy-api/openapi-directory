@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsListResponse {
     
     public String contentType;
+
     public ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsList
      */
     
     public org.openapis.openapi.models.shared.ListPeeredDnsDomainsResponse listPeeredDnsDomainsResponse;
+
     public ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsListResponse withListPeeredDnsDomainsResponse(org.openapis.openapi.models.shared.ListPeeredDnsDomainsResponse listPeeredDnsDomainsResponse) {
         this.listPeeredDnsDomainsResponse = listPeeredDnsDomainsResponse;
         return this;
@@ -26,6 +29,7 @@ public class ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsList
     
     
     public Integer statusCode;
+
     public ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsList
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class EventsCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public EventsCount withCount(Long count) {
         this.count = count;
         return this;
     }
     
+    public EventsCount(){}
 }

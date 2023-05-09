@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVehiclesVehicleidLocationRequest {
@@ -12,9 +13,13 @@ public class GetVehiclesVehicleidLocationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vehicleId")
     public String vehicleId;
+
     public GetVehiclesVehicleidLocationRequest withVehicleId(String vehicleId) {
         this.vehicleId = vehicleId;
         return this;
     }
     
+    public GetVehiclesVehicleidLocationRequest(@JsonProperty("vehicleId") String vehicleId) {
+        this.vehicleId = vehicleId;
+  }
 }

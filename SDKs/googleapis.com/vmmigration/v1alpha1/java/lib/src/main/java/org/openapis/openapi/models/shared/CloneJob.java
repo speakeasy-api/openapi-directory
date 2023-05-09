@@ -18,6 +18,7 @@ public class CloneJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeEngineTargetDetails")
     public ComputeEngineTargetDetails computeEngineTargetDetails;
+
     public CloneJob withComputeEngineTargetDetails(ComputeEngineTargetDetails computeEngineTargetDetails) {
         this.computeEngineTargetDetails = computeEngineTargetDetails;
         return this;
@@ -29,6 +30,7 @@ public class CloneJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeEngineVmDetails")
     public TargetVMDetails computeEngineVmDetails;
+
     public CloneJob withComputeEngineVmDetails(TargetVMDetails computeEngineVmDetails) {
         this.computeEngineVmDetails = computeEngineVmDetails;
         return this;
@@ -40,6 +42,7 @@ public class CloneJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public CloneJob withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +54,7 @@ public class CloneJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public CloneJob withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -62,6 +66,7 @@ public class CloneJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Status error;
+
     public CloneJob withError(Status error) {
         this.error = error;
         return this;
@@ -73,6 +78,7 @@ public class CloneJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CloneJob withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class CloneJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public CloneJobStateEnum state;
+
     public CloneJob withState(CloneJobStateEnum state) {
         this.state = state;
         return this;
@@ -95,6 +102,7 @@ public class CloneJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateTime")
     public String stateTime;
+
     public CloneJob withStateTime(String stateTime) {
         this.stateTime = stateTime;
         return this;
@@ -106,6 +114,7 @@ public class CloneJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("steps")
     public CloneStep[] steps;
+
     public CloneJob withSteps(CloneStep[] steps) {
         this.steps = steps;
         return this;
@@ -117,9 +126,11 @@ public class CloneJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetDetails")
     public TargetVMDetails targetDetails;
+
     public CloneJob withTargetDetails(TargetVMDetails targetDetails) {
         this.targetDetails = targetDetails;
         return this;
     }
     
+    public CloneJob(){}
 }

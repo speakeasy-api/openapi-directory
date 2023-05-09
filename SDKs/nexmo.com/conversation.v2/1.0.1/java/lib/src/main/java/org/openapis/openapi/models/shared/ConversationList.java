@@ -12,6 +12,7 @@ public class ConversationList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public ConversationListLinks links;
+
     public ConversationList withLinks(ConversationListLinks links) {
         this.links = links;
         return this;
@@ -23,6 +24,7 @@ public class ConversationList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public ConversationList withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -34,6 +36,7 @@ public class ConversationList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ConversationList withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class ConversationList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
     public String imageUrl;
+
     public ConversationList withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -56,6 +60,7 @@ public class ConversationList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConversationList withName(String name) {
         this.name = name;
         return this;
@@ -64,9 +69,11 @@ public class ConversationList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public ConversationListTimestamp timestamp;
+
     public ConversationList withTimestamp(ConversationListTimestamp timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public ConversationList(){}
 }

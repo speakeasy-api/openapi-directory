@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyVerifiedAccessEndpointPolicyRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyVerifiedAccessEndpointPolicyActionEnum action;
+
     public GETModifyVerifiedAccessEndpointPolicyRequest withAction(GETModifyVerifiedAccessEndpointPolicyActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyVerifiedAccessEndpointPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientToken")
     public String clientToken;
+
     public GETModifyVerifiedAccessEndpointPolicyRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -29,16 +32,18 @@ public class GETModifyVerifiedAccessEndpointPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyVerifiedAccessEndpointPolicyRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
     /**
-     * The Amazon Web Services Verified Access policy document.
+     * The Verified Access policy document.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyDocument")
     public String policyDocument;
+
     public GETModifyVerifiedAccessEndpointPolicyRequest withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -49,16 +54,18 @@ public class GETModifyVerifiedAccessEndpointPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyEnabled")
     public Boolean policyEnabled;
+
     public GETModifyVerifiedAccessEndpointPolicyRequest withPolicyEnabled(Boolean policyEnabled) {
         this.policyEnabled = policyEnabled;
         return this;
     }
     
     /**
-     * The ID of the Amazon Web Services Verified Access endpoint.
+     * The ID of the Verified Access endpoint.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VerifiedAccessEndpointId")
     public String verifiedAccessEndpointId;
+
     public GETModifyVerifiedAccessEndpointPolicyRequest withVerifiedAccessEndpointId(String verifiedAccessEndpointId) {
         this.verifiedAccessEndpointId = verifiedAccessEndpointId;
         return this;
@@ -66,6 +73,7 @@ public class GETModifyVerifiedAccessEndpointPolicyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyVerifiedAccessEndpointPolicyVersionEnum version;
+
     public GETModifyVerifiedAccessEndpointPolicyRequest withVersion(GETModifyVerifiedAccessEndpointPolicyVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETModifyVerifiedAccessEndpointPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyVerifiedAccessEndpointPolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETModifyVerifiedAccessEndpointPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyVerifiedAccessEndpointPolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETModifyVerifiedAccessEndpointPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyVerifiedAccessEndpointPolicyRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETModifyVerifiedAccessEndpointPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyVerifiedAccessEndpointPolicyRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETModifyVerifiedAccessEndpointPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyVerifiedAccessEndpointPolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETModifyVerifiedAccessEndpointPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyVerifiedAccessEndpointPolicyRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,16 @@ public class GETModifyVerifiedAccessEndpointPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyVerifiedAccessEndpointPolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyVerifiedAccessEndpointPolicyRequest(@JsonProperty("Action") GETModifyVerifiedAccessEndpointPolicyActionEnum action, @JsonProperty("PolicyEnabled") Boolean policyEnabled, @JsonProperty("VerifiedAccessEndpointId") String verifiedAccessEndpointId, @JsonProperty("Version") GETModifyVerifiedAccessEndpointPolicyVersionEnum version) {
+        this.action = action;
+        this.policyEnabled = policyEnabled;
+        this.verifiedAccessEndpointId = verifiedAccessEndpointId;
+        this.version = version;
+  }
 }

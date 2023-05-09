@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SiteTypesGetSitesForPublicFacingAPIRequest {
@@ -12,6 +13,7 @@ public class SiteTypesGetSitesForPublicFacingAPIRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=siteType_Id")
     public Integer siteTypeId;
+
     public SiteTypesGetSitesForPublicFacingAPIRequest withSiteTypeId(Integer siteTypeId) {
         this.siteTypeId = siteTypeId;
         return this;
@@ -19,9 +21,14 @@ public class SiteTypesGetSitesForPublicFacingAPIRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public String version;
+
     public SiteTypesGetSitesForPublicFacingAPIRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public SiteTypesGetSitesForPublicFacingAPIRequest(@JsonProperty("siteType_Id") Integer siteTypeId, @JsonProperty("version") String version) {
+        this.siteTypeId = siteTypeId;
+        this.version = version;
+  }
 }

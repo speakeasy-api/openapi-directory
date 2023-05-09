@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateGroupResponse - Contains the response to a successful &lt;a&gt;CreateGroup&lt;/a&gt; request. 
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class CreateGroupResponse {
     
     public Group group;
+
     public CreateGroupResponse withGroup(Group group) {
         this.group = group;
         return this;
     }
     
+    public CreateGroupResponse(@JsonProperty("Group") Group group) {
+        this.group = group;
+  }
 }

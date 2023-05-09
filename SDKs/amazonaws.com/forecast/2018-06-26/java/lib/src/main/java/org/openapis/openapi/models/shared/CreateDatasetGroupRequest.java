@@ -12,6 +12,7 @@ public class CreateDatasetGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetArns")
     public String[] datasetArns;
+
     public CreateDatasetGroupRequest withDatasetArns(String[] datasetArns) {
         this.datasetArns = datasetArns;
         return this;
@@ -19,6 +20,7 @@ public class CreateDatasetGroupRequest {
     
     @JsonProperty("DatasetGroupName")
     public String datasetGroupName;
+
     public CreateDatasetGroupRequest withDatasetGroupName(String datasetGroupName) {
         this.datasetGroupName = datasetGroupName;
         return this;
@@ -26,6 +28,7 @@ public class CreateDatasetGroupRequest {
     
     @JsonProperty("Domain")
     public DomainEnum domain;
+
     public CreateDatasetGroupRequest withDomain(DomainEnum domain) {
         this.domain = domain;
         return this;
@@ -34,9 +37,14 @@ public class CreateDatasetGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateDatasetGroupRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDatasetGroupRequest(@JsonProperty("DatasetGroupName") String datasetGroupName, @JsonProperty("Domain") DomainEnum domain) {
+        this.datasetGroupName = datasetGroupName;
+        this.domain = domain;
+  }
 }

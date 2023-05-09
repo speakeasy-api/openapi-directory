@@ -15,6 +15,7 @@ public class AssetRelationshipSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hierarchyInfo")
     public AssetHierarchyInfo hierarchyInfo;
+
     public AssetRelationshipSummary withHierarchyInfo(AssetHierarchyInfo hierarchyInfo) {
         this.hierarchyInfo = hierarchyInfo;
         return this;
@@ -22,9 +23,13 @@ public class AssetRelationshipSummary {
     
     @JsonProperty("relationshipType")
     public AssetRelationshipTypeEnum relationshipType;
+
     public AssetRelationshipSummary withRelationshipType(AssetRelationshipTypeEnum relationshipType) {
         this.relationshipType = relationshipType;
         return this;
     }
     
+    public AssetRelationshipSummary(@JsonProperty("relationshipType") AssetRelationshipTypeEnum relationshipType) {
+        this.relationshipType = relationshipType;
+  }
 }

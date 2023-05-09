@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CheckDNSAvailabilityMessage - Results message indicating whether a CNAME is available.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class CheckDNSAvailabilityMessage {
     
     public String cnamePrefix;
+
     public CheckDNSAvailabilityMessage withCNAMEPrefix(String cnamePrefix) {
         this.cnamePrefix = cnamePrefix;
         return this;
     }
     
+    public CheckDNSAvailabilityMessage(@JsonProperty("CNAMEPrefix") String cnamePrefix) {
+        this.cnamePrefix = cnamePrefix;
+  }
 }

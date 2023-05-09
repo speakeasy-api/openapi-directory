@@ -18,6 +18,7 @@ public class GoogleCloudMlV1PredictionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCount")
     public String errorCount;
+
     public GoogleCloudMlV1PredictionOutput withErrorCount(String errorCount) {
         this.errorCount = errorCount;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1PredictionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeHours")
     public Double nodeHours;
+
     public GoogleCloudMlV1PredictionOutput withNodeHours(Double nodeHours) {
         this.nodeHours = nodeHours;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudMlV1PredictionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputPath")
     public String outputPath;
+
     public GoogleCloudMlV1PredictionOutput withOutputPath(String outputPath) {
         this.outputPath = outputPath;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudMlV1PredictionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictionCount")
     public String predictionCount;
+
     public GoogleCloudMlV1PredictionOutput withPredictionCount(String predictionCount) {
         this.predictionCount = predictionCount;
         return this;
     }
     
+    public GoogleCloudMlV1PredictionOutput(){}
 }

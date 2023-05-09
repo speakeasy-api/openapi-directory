@@ -20,6 +20,7 @@ public class GetResourceConfigHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chronologicalOrder")
     public ChronologicalOrderEnum chronologicalOrder;
+
     public GetResourceConfigHistoryRequest withChronologicalOrder(ChronologicalOrderEnum chronologicalOrder) {
         this.chronologicalOrder = chronologicalOrder;
         return this;
@@ -30,6 +31,7 @@ public class GetResourceConfigHistoryRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("earlierTime")
     public OffsetDateTime earlierTime;
+
     public GetResourceConfigHistoryRequest withEarlierTime(OffsetDateTime earlierTime) {
         this.earlierTime = earlierTime;
         return this;
@@ -40,6 +42,7 @@ public class GetResourceConfigHistoryRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("laterTime")
     public OffsetDateTime laterTime;
+
     public GetResourceConfigHistoryRequest withLaterTime(OffsetDateTime laterTime) {
         this.laterTime = laterTime;
         return this;
@@ -48,6 +51,7 @@ public class GetResourceConfigHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public GetResourceConfigHistoryRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -56,6 +60,7 @@ public class GetResourceConfigHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetResourceConfigHistoryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -63,6 +68,7 @@ public class GetResourceConfigHistoryRequest {
     
     @JsonProperty("resourceId")
     public String resourceId;
+
     public GetResourceConfigHistoryRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -70,9 +76,14 @@ public class GetResourceConfigHistoryRequest {
     
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public GetResourceConfigHistoryRequest withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public GetResourceConfigHistoryRequest(@JsonProperty("resourceId") String resourceId, @JsonProperty("resourceType") ResourceTypeEnum resourceType) {
+        this.resourceId = resourceId;
+        this.resourceType = resourceType;
+  }
 }

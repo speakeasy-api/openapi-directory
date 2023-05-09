@@ -15,6 +15,7 @@ public class InstanceCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Secret")
     public String secret;
+
     public InstanceCredentials withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -23,9 +24,11 @@ public class InstanceCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserName")
     public String userName;
+
     public InstanceCredentials withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public InstanceCredentials(){}
 }

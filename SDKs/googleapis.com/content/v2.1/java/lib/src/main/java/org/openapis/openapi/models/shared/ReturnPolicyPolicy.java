@@ -15,6 +15,7 @@ public class ReturnPolicyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastReturnDate")
     public String lastReturnDate;
+
     public ReturnPolicyPolicy withLastReturnDate(String lastReturnDate) {
         this.lastReturnDate = lastReturnDate;
         return this;
@@ -26,6 +27,7 @@ public class ReturnPolicyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfDays")
     public String numberOfDays;
+
     public ReturnPolicyPolicy withNumberOfDays(String numberOfDays) {
         this.numberOfDays = numberOfDays;
         return this;
@@ -37,9 +39,11 @@ public class ReturnPolicyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ReturnPolicyPolicy withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ReturnPolicyPolicy(){}
 }

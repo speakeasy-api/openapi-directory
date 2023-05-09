@@ -18,6 +18,7 @@ public class Bullet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bulletStyle")
     public TextStyle bulletStyle;
+
     public Bullet withBulletStyle(TextStyle bulletStyle) {
         this.bulletStyle = bulletStyle;
         return this;
@@ -29,6 +30,7 @@ public class Bullet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glyph")
     public String glyph;
+
     public Bullet withGlyph(String glyph) {
         this.glyph = glyph;
         return this;
@@ -40,6 +42,7 @@ public class Bullet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listId")
     public String listId;
+
     public Bullet withListId(String listId) {
         this.listId = listId;
         return this;
@@ -51,9 +54,11 @@ public class Bullet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nestingLevel")
     public Integer nestingLevel;
+
     public Bullet withNestingLevel(Integer nestingLevel) {
         this.nestingLevel = nestingLevel;
         return this;
     }
     
+    public Bullet(){}
 }

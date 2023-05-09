@@ -12,9 +12,13 @@ public class UpdateRevealConfigurationRequestBody {
      */
     @JsonProperty("configuration")
     public UpdateRevealConfigurationRequestBodyConfiguration configuration;
+
     public UpdateRevealConfigurationRequestBody withConfiguration(UpdateRevealConfigurationRequestBodyConfiguration configuration) {
         this.configuration = configuration;
         return this;
     }
     
+    public UpdateRevealConfigurationRequestBody(@JsonProperty("configuration") UpdateRevealConfigurationRequestBodyConfiguration configuration) {
+        this.configuration = configuration;
+  }
 }

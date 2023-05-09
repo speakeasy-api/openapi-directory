@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccessSetEnabledRequest {
@@ -12,9 +13,13 @@ public class AccessSetEnabledRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enabledOrNot")
     public String enabledOrNot;
+
     public AccessSetEnabledRequest withEnabledOrNot(String enabledOrNot) {
         this.enabledOrNot = enabledOrNot;
         return this;
     }
     
+    public AccessSetEnabledRequest(@JsonProperty("enabledOrNot") String enabledOrNot) {
+        this.enabledOrNot = enabledOrNot;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchTypeEsriGeometryserverResponse {
     
     public String contentType;
+
     public SearchTypeEsriGeometryserverResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SearchTypeEsriGeometryserverResponse {
     
     
     public Integer statusCode;
+
     public SearchTypeEsriGeometryserverResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class SearchTypeEsriGeometryserverResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchTypeEsriGeometryserverResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SearchTypeEsriGeometryserverResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

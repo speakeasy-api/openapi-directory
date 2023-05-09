@@ -12,6 +12,7 @@ public class DeleteMonitor200ApplicationJSONMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DeleteMonitor200ApplicationJSONMonitor withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class DeleteMonitor200ApplicationJSONMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public DeleteMonitor200ApplicationJSONMonitor withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public DeleteMonitor200ApplicationJSONMonitor(){}
 }

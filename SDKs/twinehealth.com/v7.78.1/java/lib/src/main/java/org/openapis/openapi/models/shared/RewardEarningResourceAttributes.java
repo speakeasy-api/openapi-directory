@@ -14,6 +14,7 @@ public class RewardEarningResourceAttributes {
      */
     @JsonProperty("earned_at")
     public String earnedAt;
+
     public RewardEarningResourceAttributes withEarnedAt(String earnedAt) {
         this.earnedAt = earnedAt;
         return this;
@@ -25,6 +26,7 @@ public class RewardEarningResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("earned_unit")
     public String earnedUnit;
+
     public RewardEarningResourceAttributes withEarnedUnit(String earnedUnit) {
         this.earnedUnit = earnedUnit;
         return this;
@@ -35,6 +37,7 @@ public class RewardEarningResourceAttributes {
      */
     @JsonProperty("earned_value")
     public Double earnedValue;
+
     public RewardEarningResourceAttributes withEarnedValue(Double earnedValue) {
         this.earnedValue = earnedValue;
         return this;
@@ -46,6 +49,7 @@ public class RewardEarningResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfilled_at")
     public String fulfilledAt;
+
     public RewardEarningResourceAttributes withFulfilledAt(String fulfilledAt) {
         this.fulfilledAt = fulfilledAt;
         return this;
@@ -57,6 +61,7 @@ public class RewardEarningResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfilled_value")
     public Double fulfilledValue;
+
     public RewardEarningResourceAttributes withFulfilledValue(Double fulfilledValue) {
         this.fulfilledValue = fulfilledValue;
         return this;
@@ -68,9 +73,14 @@ public class RewardEarningResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ready_for_fulfillment")
     public Boolean readyForFulfillment;
+
     public RewardEarningResourceAttributes withReadyForFulfillment(Boolean readyForFulfillment) {
         this.readyForFulfillment = readyForFulfillment;
         return this;
     }
     
+    public RewardEarningResourceAttributes(@JsonProperty("earned_at") String earnedAt, @JsonProperty("earned_value") Double earnedValue) {
+        this.earnedAt = earnedAt;
+        this.earnedValue = earnedValue;
+  }
 }

@@ -56,12 +56,10 @@ public class Sms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SendSmsResponse res = new org.openapis.openapi.models.operations.SendSmsResponse() {{
+        org.openapis.openapi.models.operations.SendSmsResponse res = new org.openapis.openapi.models.operations.SendSmsResponse(contentType, httpRes.statusCode()) {{
             smsReponse = null;
             erreur = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,12 +107,10 @@ public class Sms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SendSmsMultiResponse res = new org.openapis.openapi.models.operations.SendSmsMultiResponse() {{
+        org.openapis.openapi.models.operations.SendSmsMultiResponse res = new org.openapis.openapi.models.operations.SendSmsMultiResponse(contentType, httpRes.statusCode()) {{
             smsReponse = null;
             erreur = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

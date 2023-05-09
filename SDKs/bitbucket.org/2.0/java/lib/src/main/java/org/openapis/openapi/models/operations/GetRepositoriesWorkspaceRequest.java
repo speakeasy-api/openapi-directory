@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRequest {
@@ -13,6 +14,7 @@ public class GetRepositoriesWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetRepositoriesWorkspaceRequest withQ(String q) {
         this.q = q;
         return this;
@@ -29,6 +31,7 @@ public class GetRepositoriesWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
     public GetRepositoriesWorkspaceRoleEnum role;
+
     public GetRepositoriesWorkspaceRequest withRole(GetRepositoriesWorkspaceRoleEnum role) {
         this.role = role;
         return this;
@@ -40,6 +43,7 @@ public class GetRepositoriesWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetRepositoriesWorkspaceRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -52,9 +56,13 @@ public class GetRepositoriesWorkspaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetRepositoriesWorkspaceRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRequest(@JsonProperty("workspace") String workspace) {
+        this.workspace = workspace;
+  }
 }

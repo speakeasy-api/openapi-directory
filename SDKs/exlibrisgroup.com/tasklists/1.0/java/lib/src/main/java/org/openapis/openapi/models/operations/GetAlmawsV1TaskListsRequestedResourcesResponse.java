@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAlmawsV1TaskListsRequestedResourcesResponse {
     
     public byte[] body;
+
     public GetAlmawsV1TaskListsRequestedResourcesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetAlmawsV1TaskListsRequestedResourcesResponse {
     
     
     public String contentType;
+
     public GetAlmawsV1TaskListsRequestedResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetAlmawsV1TaskListsRequestedResourcesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetAlmawsV1TaskListsRequestedResourcesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -30,6 +34,7 @@ public class GetAlmawsV1TaskListsRequestedResourcesResponse {
     
     
     public Integer statusCode;
+
     public GetAlmawsV1TaskListsRequestedResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,6 +42,7 @@ public class GetAlmawsV1TaskListsRequestedResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAlmawsV1TaskListsRequestedResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -47,9 +53,14 @@ public class GetAlmawsV1TaskListsRequestedResourcesResponse {
      */
     
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSON getAlmawsV1TaskListsRequestedResources200ApplicationJSONObject;
+
     public GetAlmawsV1TaskListsRequestedResourcesResponse withGetAlmawsV1TaskListsRequestedResources200ApplicationJSONObject(GetAlmawsV1TaskListsRequestedResources200ApplicationJSON getAlmawsV1TaskListsRequestedResources200ApplicationJSONObject) {
         this.getAlmawsV1TaskListsRequestedResources200ApplicationJSONObject = getAlmawsV1TaskListsRequestedResources200ApplicationJSONObject;
         return this;
     }
     
+    public GetAlmawsV1TaskListsRequestedResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

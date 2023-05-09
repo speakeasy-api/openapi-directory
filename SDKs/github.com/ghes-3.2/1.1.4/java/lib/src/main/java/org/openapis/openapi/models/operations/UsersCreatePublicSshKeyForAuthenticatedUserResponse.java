@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UsersCreatePublicSshKeyForAuthenticatedUserResponse {
     
     public String contentType;
+
     public UsersCreatePublicSshKeyForAuthenticatedUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UsersCreatePublicSshKeyForAuthenticatedUserResponse {
     
     
     public Integer statusCode;
+
     public UsersCreatePublicSshKeyForAuthenticatedUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UsersCreatePublicSshKeyForAuthenticatedUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UsersCreatePublicSshKeyForAuthenticatedUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UsersCreatePublicSshKeyForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public UsersCreatePublicSshKeyForAuthenticatedUserResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class UsersCreatePublicSshKeyForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.Key key;
+
     public UsersCreatePublicSshKeyForAuthenticatedUserResponse withKey(org.openapis.openapi.models.shared.Key key) {
         this.key = key;
         return this;
@@ -53,9 +59,14 @@ public class UsersCreatePublicSshKeyForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public UsersCreatePublicSshKeyForAuthenticatedUserResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public UsersCreatePublicSshKeyForAuthenticatedUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

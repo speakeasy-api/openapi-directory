@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAvailableZonesResponse {
@@ -12,6 +13,7 @@ public class ListAvailableZonesResponse {
      */
     
     public Object cloudHsmInternalException;
+
     public ListAvailableZonesResponse withCloudHsmInternalException(Object cloudHsmInternalException) {
         this.cloudHsmInternalException = cloudHsmInternalException;
         return this;
@@ -22,6 +24,7 @@ public class ListAvailableZonesResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public ListAvailableZonesResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -29,6 +32,7 @@ public class ListAvailableZonesResponse {
     
     
     public String contentType;
+
     public ListAvailableZonesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListAvailableZonesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListAvailableZonesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListAvailableZonesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAvailableZonesResponse listAvailableZonesResponse;
+
     public ListAvailableZonesResponse withListAvailableZonesResponse(org.openapis.openapi.models.shared.ListAvailableZonesResponse listAvailableZonesResponse) {
         this.listAvailableZonesResponse = listAvailableZonesResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListAvailableZonesResponse {
     
     
     public Integer statusCode;
+
     public ListAvailableZonesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListAvailableZonesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAvailableZonesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAvailableZonesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

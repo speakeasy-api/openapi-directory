@@ -18,9 +18,11 @@ public class CommentThreadReplies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public Comment[] comments;
+
     public CommentThreadReplies withComments(Comment[] comments) {
         this.comments = comments;
         return this;
     }
     
+    public CommentThreadReplies(){}
 }

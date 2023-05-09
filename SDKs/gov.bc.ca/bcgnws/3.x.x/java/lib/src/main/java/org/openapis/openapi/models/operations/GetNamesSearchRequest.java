@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamesSearchRequest {
@@ -12,6 +13,7 @@ public class GetNamesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
     public GetNamesSearchEmbedEnum embed;
+
     public GetNamesSearchRequest withEmbed(GetNamesSearchEmbedEnum embed) {
         this.embed = embed;
         return this;
@@ -22,6 +24,7 @@ public class GetNamesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exactSpelling")
     public GetNamesSearchExactSpellingEnum exactSpelling;
+
     public GetNamesSearchRequest withExactSpelling(GetNamesSearchExactSpellingEnum exactSpelling) {
         this.exactSpelling = exactSpelling;
         return this;
@@ -32,6 +35,7 @@ public class GetNamesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureCategory")
     public String featureCategory;
+
     public GetNamesSearchRequest withFeatureCategory(String featureCategory) {
         this.featureCategory = featureCategory;
         return this;
@@ -42,6 +46,7 @@ public class GetNamesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureClass")
     public String featureClass;
+
     public GetNamesSearchRequest withFeatureClass(String featureClass) {
         this.featureClass = featureClass;
         return this;
@@ -52,6 +57,7 @@ public class GetNamesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureType")
     public String featureType;
+
     public GetNamesSearchRequest withFeatureType(String featureType) {
         this.featureType = featureType;
         return this;
@@ -62,6 +68,7 @@ public class GetNamesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=itemsPerPage")
     public Long itemsPerPage;
+
     public GetNamesSearchRequest withItemsPerPage(Long itemsPerPage) {
         this.itemsPerPage = itemsPerPage;
         return this;
@@ -72,6 +79,7 @@ public class GetNamesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetNamesSearchRequest withName(String name) {
         this.name = name;
         return this;
@@ -82,6 +90,7 @@ public class GetNamesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputFormat")
     public GetNamesSearchOutputFormatEnum outputFormat;
+
     public GetNamesSearchRequest withOutputFormat(GetNamesSearchOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -92,6 +101,7 @@ public class GetNamesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
     public GetNamesSearchOutputSrsEnum outputSRS;
+
     public GetNamesSearchRequest withOutputSRS(GetNamesSearchOutputSrsEnum outputSRS) {
         this.outputSRS = outputSRS;
         return this;
@@ -102,6 +112,7 @@ public class GetNamesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputStyle")
     public GetNamesSearchOutputStyleEnum outputStyle;
+
     public GetNamesSearchRequest withOutputStyle(GetNamesSearchOutputStyleEnum outputStyle) {
         this.outputStyle = outputStyle;
         return this;
@@ -112,6 +123,7 @@ public class GetNamesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
     public GetNamesSearchSortByEnum sortBy;
+
     public GetNamesSearchRequest withSortBy(GetNamesSearchSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -122,9 +134,14 @@ public class GetNamesSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
     public Long startIndex;
+
     public GetNamesSearchRequest withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
     }
     
+    public GetNamesSearchRequest(@JsonProperty("name") String name, @JsonProperty("outputFormat") GetNamesSearchOutputFormatEnum outputFormat) {
+        this.name = name;
+        this.outputFormat = outputFormat;
+  }
 }

@@ -25,6 +25,7 @@ public class ComputeNodeUser {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiryTime")
     public OffsetDateTime expiryTime;
+
     public ComputeNodeUser withExpiryTime(OffsetDateTime expiryTime) {
         this.expiryTime = expiryTime;
         return this;
@@ -36,6 +37,7 @@ public class ComputeNodeUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAdmin")
     public Boolean isAdmin;
+
     public ComputeNodeUser withIsAdmin(Boolean isAdmin) {
         this.isAdmin = isAdmin;
         return this;
@@ -46,6 +48,7 @@ public class ComputeNodeUser {
      */
     @JsonProperty("name")
     public String name;
+
     public ComputeNodeUser withName(String name) {
         this.name = name;
         return this;
@@ -57,6 +60,7 @@ public class ComputeNodeUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public ComputeNodeUser withPassword(String password) {
         this.password = password;
         return this;
@@ -68,9 +72,13 @@ public class ComputeNodeUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sshPublicKey")
     public String sshPublicKey;
+
     public ComputeNodeUser withSshPublicKey(String sshPublicKey) {
         this.sshPublicKey = sshPublicKey;
         return this;
     }
     
+    public ComputeNodeUser(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

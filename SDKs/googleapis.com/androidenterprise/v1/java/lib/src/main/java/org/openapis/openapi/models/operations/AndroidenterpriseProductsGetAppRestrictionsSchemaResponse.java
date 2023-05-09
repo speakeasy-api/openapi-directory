@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AndroidenterpriseProductsGetAppRestrictionsSchemaResponse {
@@ -12,6 +13,7 @@ public class AndroidenterpriseProductsGetAppRestrictionsSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.AppRestrictionsSchema appRestrictionsSchema;
+
     public AndroidenterpriseProductsGetAppRestrictionsSchemaResponse withAppRestrictionsSchema(org.openapis.openapi.models.shared.AppRestrictionsSchema appRestrictionsSchema) {
         this.appRestrictionsSchema = appRestrictionsSchema;
         return this;
@@ -19,6 +21,7 @@ public class AndroidenterpriseProductsGetAppRestrictionsSchemaResponse {
     
     
     public String contentType;
+
     public AndroidenterpriseProductsGetAppRestrictionsSchemaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AndroidenterpriseProductsGetAppRestrictionsSchemaResponse {
     
     
     public Integer statusCode;
+
     public AndroidenterpriseProductsGetAppRestrictionsSchemaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AndroidenterpriseProductsGetAppRestrictionsSchemaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AndroidenterpriseProductsGetAppRestrictionsSchemaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AndroidenterpriseProductsGetAppRestrictionsSchemaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

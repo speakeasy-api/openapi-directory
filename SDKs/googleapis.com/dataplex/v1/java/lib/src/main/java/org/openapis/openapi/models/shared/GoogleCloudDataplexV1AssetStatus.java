@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1AssetStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeAssets")
     public Integer activeAssets;
+
     public GoogleCloudDataplexV1AssetStatus withActiveAssets(Integer activeAssets) {
         this.activeAssets = activeAssets;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1AssetStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityPolicyApplyingAssets")
     public Integer securityPolicyApplyingAssets;
+
     public GoogleCloudDataplexV1AssetStatus withSecurityPolicyApplyingAssets(Integer securityPolicyApplyingAssets) {
         this.securityPolicyApplyingAssets = securityPolicyApplyingAssets;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDataplexV1AssetStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDataplexV1AssetStatus withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudDataplexV1AssetStatus(){}
 }

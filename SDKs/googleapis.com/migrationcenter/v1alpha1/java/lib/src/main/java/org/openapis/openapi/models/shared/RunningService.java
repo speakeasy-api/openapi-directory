@@ -18,6 +18,7 @@ public class RunningService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cmdline")
     public String cmdline;
+
     public RunningService withCmdline(String cmdline) {
         this.cmdline = cmdline;
         return this;
@@ -29,6 +30,7 @@ public class RunningService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exePath")
     public String exePath;
+
     public RunningService withExePath(String exePath) {
         this.exePath = exePath;
         return this;
@@ -40,6 +42,7 @@ public class RunningService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RunningService withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class RunningService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pid")
     public String pid;
+
     public RunningService withPid(String pid) {
         this.pid = pid;
         return this;
@@ -62,6 +66,7 @@ public class RunningService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startMode")
     public String startMode;
+
     public RunningService withStartMode(String startMode) {
         this.startMode = startMode;
         return this;
@@ -73,6 +78,7 @@ public class RunningService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public RunningService withState(String state) {
         this.state = state;
         return this;
@@ -84,9 +90,11 @@ public class RunningService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public RunningService withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public RunningService(){}
 }

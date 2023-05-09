@@ -22,6 +22,7 @@ public class Comment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Comment withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_code")
     public String idCode;
+
     public Comment withIdCode(String idCode) {
         this.idCode = idCode;
         return this;
@@ -41,6 +43,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
     public String imageUrl;
+
     public Comment withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -49,9 +52,11 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type_of")
     public String typeOf;
+
     public Comment withTypeOf(String typeOf) {
         this.typeOf = typeOf;
         return this;
     }
     
+    public Comment(){}
 }

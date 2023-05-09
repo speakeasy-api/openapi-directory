@@ -12,9 +12,11 @@ public class ImportExternalApiSpecificationRequestBodyInputServers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ImportExternalApiSpecificationRequestBodyInputServers withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ImportExternalApiSpecificationRequestBodyInputServers(){}
 }

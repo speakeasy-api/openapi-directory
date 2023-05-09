@@ -18,6 +18,7 @@ public class CustomViewabilityMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public CustomViewabilityMetricConfiguration configuration;
+
     public CustomViewabilityMetric withConfiguration(CustomViewabilityMetricConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -29,6 +30,7 @@ public class CustomViewabilityMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CustomViewabilityMetric withId(String id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class CustomViewabilityMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomViewabilityMetric withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CustomViewabilityMetric(){}
 }

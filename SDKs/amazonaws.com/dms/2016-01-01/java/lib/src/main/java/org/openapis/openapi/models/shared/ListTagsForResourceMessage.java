@@ -15,6 +15,7 @@ public class ListTagsForResourceMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public ListTagsForResourceMessage withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -23,9 +24,11 @@ public class ListTagsForResourceMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArnList")
     public String[] resourceArnList;
+
     public ListTagsForResourceMessage withResourceArnList(String[] resourceArnList) {
         this.resourceArnList = resourceArnList;
         return this;
     }
     
+    public ListTagsForResourceMessage(){}
 }

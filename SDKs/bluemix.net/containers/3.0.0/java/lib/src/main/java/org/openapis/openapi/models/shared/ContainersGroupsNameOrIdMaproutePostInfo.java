@@ -18,6 +18,7 @@ public class ContainersGroupsNameOrIdMaproutePostInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ContainersGroupsNameOrIdMaproutePostInfo withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class ContainersGroupsNameOrIdMaproutePostInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Warnings")
     public String[] warnings;
+
     public ContainersGroupsNameOrIdMaproutePostInfo withWarnings(String[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public ContainersGroupsNameOrIdMaproutePostInfo(){}
 }

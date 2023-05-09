@@ -111,4 +111,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/AllowedDomainsSettings.java
 lib/src/main/java/org/openapis/openapi/models/shared/SetIamPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsRequest.java
+docs/sdk/README.md
+docs/projects/README.md
+docs/v1/README.md
 USAGE.md

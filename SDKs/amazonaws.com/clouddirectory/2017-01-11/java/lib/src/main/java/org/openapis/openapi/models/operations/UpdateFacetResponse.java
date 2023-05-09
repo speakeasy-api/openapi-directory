@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFacetResponse {
@@ -12,6 +13,7 @@ public class UpdateFacetResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateFacetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateFacetResponse {
     
     
     public String contentType;
+
     public UpdateFacetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFacetResponse {
      */
     
     public Object facetNotFoundException;
+
     public UpdateFacetResponse withFacetNotFoundException(Object facetNotFoundException) {
         this.facetNotFoundException = facetNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFacetResponse {
      */
     
     public Object facetValidationException;
+
     public UpdateFacetResponse withFacetValidationException(Object facetValidationException) {
         this.facetValidationException = facetValidationException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateFacetResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateFacetResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateFacetResponse {
      */
     
     public Object invalidArnException;
+
     public UpdateFacetResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateFacetResponse {
      */
     
     public Object invalidFacetUpdateException;
+
     public UpdateFacetResponse withInvalidFacetUpdateException(Object invalidFacetUpdateException) {
         this.invalidFacetUpdateException = invalidFacetUpdateException;
         return this;
@@ -79,6 +87,7 @@ public class UpdateFacetResponse {
      */
     
     public Object invalidRuleException;
+
     public UpdateFacetResponse withInvalidRuleException(Object invalidRuleException) {
         this.invalidRuleException = invalidRuleException;
         return this;
@@ -89,6 +98,7 @@ public class UpdateFacetResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateFacetResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -99,6 +109,7 @@ public class UpdateFacetResponse {
      */
     
     public Object retryableConflictException;
+
     public UpdateFacetResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -106,6 +117,7 @@ public class UpdateFacetResponse {
     
     
     public Integer statusCode;
+
     public UpdateFacetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class UpdateFacetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFacetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class UpdateFacetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateFacetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -133,6 +147,7 @@ public class UpdateFacetResponse {
      */
     
     public java.util.Map<String, Object> updateFacetResponse;
+
     public UpdateFacetResponse withUpdateFacetResponse(java.util.Map<String, Object> updateFacetResponse) {
         this.updateFacetResponse = updateFacetResponse;
         return this;
@@ -143,9 +158,14 @@ public class UpdateFacetResponse {
      */
     
     public Object validationException;
+
     public UpdateFacetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateFacetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

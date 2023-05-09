@@ -18,6 +18,7 @@ public class Metric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("histogram")
     public Bin[] histogram;
+
     public Metric withHistogram(Bin[] histogram) {
         this.histogram = histogram;
         return this;
@@ -29,9 +30,11 @@ public class Metric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentiles")
     public Percentiles percentiles;
+
     public Metric withPercentiles(Percentiles percentiles) {
         this.percentiles = percentiles;
         return this;
     }
     
+    public Metric(){}
 }

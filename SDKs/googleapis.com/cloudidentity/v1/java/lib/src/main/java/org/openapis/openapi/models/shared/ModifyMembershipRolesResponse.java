@@ -18,9 +18,11 @@ public class ModifyMembershipRolesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membership")
     public Membership membership;
+
     public ModifyMembershipRolesResponse withMembership(Membership membership) {
         this.membership = membership;
         return this;
     }
     
+    public ModifyMembershipRolesResponse(){}
 }

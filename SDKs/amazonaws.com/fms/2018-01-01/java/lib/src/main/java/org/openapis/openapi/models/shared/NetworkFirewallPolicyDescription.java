@@ -15,6 +15,7 @@ public class NetworkFirewallPolicyDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatefulDefaultActions")
     public String[] statefulDefaultActions;
+
     public NetworkFirewallPolicyDescription withStatefulDefaultActions(String[] statefulDefaultActions) {
         this.statefulDefaultActions = statefulDefaultActions;
         return this;
@@ -23,6 +24,7 @@ public class NetworkFirewallPolicyDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatefulEngineOptions")
     public StatefulEngineOptions statefulEngineOptions;
+
     public NetworkFirewallPolicyDescription withStatefulEngineOptions(StatefulEngineOptions statefulEngineOptions) {
         this.statefulEngineOptions = statefulEngineOptions;
         return this;
@@ -31,6 +33,7 @@ public class NetworkFirewallPolicyDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatefulRuleGroups")
     public StatefulRuleGroup[] statefulRuleGroups;
+
     public NetworkFirewallPolicyDescription withStatefulRuleGroups(StatefulRuleGroup[] statefulRuleGroups) {
         this.statefulRuleGroups = statefulRuleGroups;
         return this;
@@ -39,6 +42,7 @@ public class NetworkFirewallPolicyDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatelessCustomActions")
     public String[] statelessCustomActions;
+
     public NetworkFirewallPolicyDescription withStatelessCustomActions(String[] statelessCustomActions) {
         this.statelessCustomActions = statelessCustomActions;
         return this;
@@ -47,6 +51,7 @@ public class NetworkFirewallPolicyDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatelessDefaultActions")
     public String[] statelessDefaultActions;
+
     public NetworkFirewallPolicyDescription withStatelessDefaultActions(String[] statelessDefaultActions) {
         this.statelessDefaultActions = statelessDefaultActions;
         return this;
@@ -55,6 +60,7 @@ public class NetworkFirewallPolicyDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatelessFragmentDefaultActions")
     public String[] statelessFragmentDefaultActions;
+
     public NetworkFirewallPolicyDescription withStatelessFragmentDefaultActions(String[] statelessFragmentDefaultActions) {
         this.statelessFragmentDefaultActions = statelessFragmentDefaultActions;
         return this;
@@ -63,9 +69,11 @@ public class NetworkFirewallPolicyDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatelessRuleGroups")
     public StatelessRuleGroup[] statelessRuleGroups;
+
     public NetworkFirewallPolicyDescription withStatelessRuleGroups(StatelessRuleGroup[] statelessRuleGroups) {
         this.statelessRuleGroups = statelessRuleGroups;
         return this;
     }
     
+    public NetworkFirewallPolicyDescription(){}
 }

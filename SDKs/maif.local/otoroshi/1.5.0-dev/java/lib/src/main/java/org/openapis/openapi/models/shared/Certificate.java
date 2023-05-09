@@ -15,6 +15,7 @@ public class Certificate {
      */
     @JsonProperty("autoRenew")
     public String autoRenew;
+
     public Certificate withAutoRenew(String autoRenew) {
         this.autoRenew = autoRenew;
         return this;
@@ -25,6 +26,7 @@ public class Certificate {
      */
     @JsonProperty("ca")
     public String ca;
+
     public Certificate withCa(String ca) {
         this.ca = ca;
         return this;
@@ -35,6 +37,7 @@ public class Certificate {
      */
     @JsonProperty("caRef")
     public String caRef;
+
     public Certificate withCaRef(String caRef) {
         this.caRef = caRef;
         return this;
@@ -45,6 +48,7 @@ public class Certificate {
      */
     @JsonProperty("chain")
     public String chain;
+
     public Certificate withChain(String chain) {
         this.chain = chain;
         return this;
@@ -55,6 +59,7 @@ public class Certificate {
      */
     @JsonProperty("domain")
     public String domain;
+
     public Certificate withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -65,6 +70,7 @@ public class Certificate {
      */
     @JsonProperty("from")
     public String from;
+
     public Certificate withFrom(String from) {
         this.from = from;
         return this;
@@ -75,6 +81,7 @@ public class Certificate {
      */
     @JsonProperty("id")
     public String id;
+
     public Certificate withId(String id) {
         this.id = id;
         return this;
@@ -85,6 +92,7 @@ public class Certificate {
      */
     @JsonProperty("privateKey")
     public String privateKey;
+
     public Certificate withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -95,6 +103,7 @@ public class Certificate {
      */
     @JsonProperty("selfSigned")
     public String selfSigned;
+
     public Certificate withSelfSigned(String selfSigned) {
         this.selfSigned = selfSigned;
         return this;
@@ -105,6 +114,7 @@ public class Certificate {
      */
     @JsonProperty("subject")
     public String subject;
+
     public Certificate withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -115,6 +125,7 @@ public class Certificate {
      */
     @JsonProperty("to")
     public String to;
+
     public Certificate withTo(String to) {
         this.to = to;
         return this;
@@ -125,9 +136,24 @@ public class Certificate {
      */
     @JsonProperty("valid")
     public String valid;
+
     public Certificate withValid(String valid) {
         this.valid = valid;
         return this;
     }
     
+    public Certificate(@JsonProperty("autoRenew") String autoRenew, @JsonProperty("ca") String ca, @JsonProperty("caRef") String caRef, @JsonProperty("chain") String chain, @JsonProperty("domain") String domain, @JsonProperty("from") String from, @JsonProperty("id") String id, @JsonProperty("privateKey") String privateKey, @JsonProperty("selfSigned") String selfSigned, @JsonProperty("subject") String subject, @JsonProperty("to") String to, @JsonProperty("valid") String valid) {
+        this.autoRenew = autoRenew;
+        this.ca = ca;
+        this.caRef = caRef;
+        this.chain = chain;
+        this.domain = domain;
+        this.from = from;
+        this.id = id;
+        this.privateKey = privateKey;
+        this.selfSigned = selfSigned;
+        this.subject = subject;
+        this.to = to;
+        this.valid = valid;
+  }
 }

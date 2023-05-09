@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * TargetDescription - Information about a target.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TargetDescription {
     
     public String availabilityZone;
+
     public TargetDescription withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class TargetDescription {
     
     
     public String id;
+
     public TargetDescription withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +28,13 @@ public class TargetDescription {
     
     
     public Long port;
+
     public TargetDescription withPort(Long port) {
         this.port = port;
         return this;
     }
     
+    public TargetDescription(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

@@ -15,6 +15,7 @@ public class GetClassificationScopeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetClassificationScopeResponse withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class GetClassificationScopeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetClassificationScopeResponse withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class GetClassificationScopeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3")
     public S3ClassificationScope s3;
+
     public GetClassificationScopeResponse withS3(S3ClassificationScope s3) {
         this.s3 = s3;
         return this;
     }
     
+    public GetClassificationScopeResponse(){}
 }

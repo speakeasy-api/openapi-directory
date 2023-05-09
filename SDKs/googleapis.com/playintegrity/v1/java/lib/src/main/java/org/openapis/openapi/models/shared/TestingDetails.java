@@ -18,9 +18,11 @@ public class TestingDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isTestingResponse")
     public Boolean isTestingResponse;
+
     public TestingDetails withIsTestingResponse(Boolean isTestingResponse) {
         this.isTestingResponse = isTestingResponse;
         return this;
     }
     
+    public TestingDetails(){}
 }

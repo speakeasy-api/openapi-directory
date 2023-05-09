@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CompositeAlarm {
     
     public Boolean actionsEnabled;
+
     public CompositeAlarm withActionsEnabled(Boolean actionsEnabled) {
         this.actionsEnabled = actionsEnabled;
         return this;
@@ -19,6 +20,7 @@ public class CompositeAlarm {
     
     
     public ActionsSuppressedByEnum actionsSuppressedBy;
+
     public CompositeAlarm withActionsSuppressedBy(ActionsSuppressedByEnum actionsSuppressedBy) {
         this.actionsSuppressedBy = actionsSuppressedBy;
         return this;
@@ -26,6 +28,7 @@ public class CompositeAlarm {
     
     
     public String actionsSuppressedReason;
+
     public CompositeAlarm withActionsSuppressedReason(String actionsSuppressedReason) {
         this.actionsSuppressedReason = actionsSuppressedReason;
         return this;
@@ -33,6 +36,7 @@ public class CompositeAlarm {
     
     
     public String actionsSuppressor;
+
     public CompositeAlarm withActionsSuppressor(String actionsSuppressor) {
         this.actionsSuppressor = actionsSuppressor;
         return this;
@@ -40,6 +44,7 @@ public class CompositeAlarm {
     
     
     public Long actionsSuppressorExtensionPeriod;
+
     public CompositeAlarm withActionsSuppressorExtensionPeriod(Long actionsSuppressorExtensionPeriod) {
         this.actionsSuppressorExtensionPeriod = actionsSuppressorExtensionPeriod;
         return this;
@@ -47,6 +52,7 @@ public class CompositeAlarm {
     
     
     public Long actionsSuppressorWaitPeriod;
+
     public CompositeAlarm withActionsSuppressorWaitPeriod(Long actionsSuppressorWaitPeriod) {
         this.actionsSuppressorWaitPeriod = actionsSuppressorWaitPeriod;
         return this;
@@ -54,6 +60,7 @@ public class CompositeAlarm {
     
     
     public String[] alarmActions;
+
     public CompositeAlarm withAlarmActions(String[] alarmActions) {
         this.alarmActions = alarmActions;
         return this;
@@ -61,6 +68,7 @@ public class CompositeAlarm {
     
     
     public String alarmArn;
+
     public CompositeAlarm withAlarmArn(String alarmArn) {
         this.alarmArn = alarmArn;
         return this;
@@ -68,6 +76,7 @@ public class CompositeAlarm {
     
     
     public OffsetDateTime alarmConfigurationUpdatedTimestamp;
+
     public CompositeAlarm withAlarmConfigurationUpdatedTimestamp(OffsetDateTime alarmConfigurationUpdatedTimestamp) {
         this.alarmConfigurationUpdatedTimestamp = alarmConfigurationUpdatedTimestamp;
         return this;
@@ -75,6 +84,7 @@ public class CompositeAlarm {
     
     
     public String alarmDescription;
+
     public CompositeAlarm withAlarmDescription(String alarmDescription) {
         this.alarmDescription = alarmDescription;
         return this;
@@ -82,6 +92,7 @@ public class CompositeAlarm {
     
     
     public String alarmName;
+
     public CompositeAlarm withAlarmName(String alarmName) {
         this.alarmName = alarmName;
         return this;
@@ -89,6 +100,7 @@ public class CompositeAlarm {
     
     
     public String alarmRule;
+
     public CompositeAlarm withAlarmRule(String alarmRule) {
         this.alarmRule = alarmRule;
         return this;
@@ -96,6 +108,7 @@ public class CompositeAlarm {
     
     
     public String[] insufficientDataActions;
+
     public CompositeAlarm withInsufficientDataActions(String[] insufficientDataActions) {
         this.insufficientDataActions = insufficientDataActions;
         return this;
@@ -103,6 +116,7 @@ public class CompositeAlarm {
     
     
     public String[] okActions;
+
     public CompositeAlarm withOKActions(String[] okActions) {
         this.okActions = okActions;
         return this;
@@ -110,6 +124,7 @@ public class CompositeAlarm {
     
     
     public String stateReason;
+
     public CompositeAlarm withStateReason(String stateReason) {
         this.stateReason = stateReason;
         return this;
@@ -117,6 +132,7 @@ public class CompositeAlarm {
     
     
     public String stateReasonData;
+
     public CompositeAlarm withStateReasonData(String stateReasonData) {
         this.stateReasonData = stateReasonData;
         return this;
@@ -124,6 +140,7 @@ public class CompositeAlarm {
     
     
     public OffsetDateTime stateTransitionedTimestamp;
+
     public CompositeAlarm withStateTransitionedTimestamp(OffsetDateTime stateTransitionedTimestamp) {
         this.stateTransitionedTimestamp = stateTransitionedTimestamp;
         return this;
@@ -131,6 +148,7 @@ public class CompositeAlarm {
     
     
     public OffsetDateTime stateUpdatedTimestamp;
+
     public CompositeAlarm withStateUpdatedTimestamp(OffsetDateTime stateUpdatedTimestamp) {
         this.stateUpdatedTimestamp = stateUpdatedTimestamp;
         return this;
@@ -138,9 +156,11 @@ public class CompositeAlarm {
     
     
     public StateValueEnum stateValue;
+
     public CompositeAlarm withStateValue(StateValueEnum stateValue) {
         this.stateValue = stateValue;
         return this;
     }
     
+    public CompositeAlarm(){}
 }

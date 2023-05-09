@@ -15,9 +15,11 @@ public class IssuesAddAssigneesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignees")
     public String[] assignees;
+
     public IssuesAddAssigneesRequestBody withAssignees(String[] assignees) {
         this.assignees = assignees;
         return this;
     }
     
+    public IssuesAddAssigneesRequestBody(){}
 }

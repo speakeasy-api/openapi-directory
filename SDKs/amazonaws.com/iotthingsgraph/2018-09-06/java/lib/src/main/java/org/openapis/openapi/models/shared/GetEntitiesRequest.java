@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetEntitiesRequest {
     @JsonProperty("ids")
     public String[] ids;
+
     public GetEntitiesRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -19,9 +20,13 @@ public class GetEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceVersion")
     public Long namespaceVersion;
+
     public GetEntitiesRequest withNamespaceVersion(Long namespaceVersion) {
         this.namespaceVersion = namespaceVersion;
         return this;
     }
     
+    public GetEntitiesRequest(@JsonProperty("ids") String[] ids) {
+        this.ids = ids;
+  }
 }

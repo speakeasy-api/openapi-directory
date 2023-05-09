@@ -15,6 +15,7 @@ public class PostSendCode401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PostSendCode401ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class PostSendCode401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public PostSendCode401ApplicationJSON withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public PostSendCode401ApplicationJSON(){}
 }

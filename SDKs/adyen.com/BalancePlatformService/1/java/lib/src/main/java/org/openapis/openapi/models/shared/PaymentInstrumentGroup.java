@@ -17,6 +17,7 @@ public class PaymentInstrumentGroup {
      */
     @JsonProperty("balancePlatform")
     public String balancePlatform;
+
     public PaymentInstrumentGroup withBalancePlatform(String balancePlatform) {
         this.balancePlatform = balancePlatform;
         return this;
@@ -28,6 +29,7 @@ public class PaymentInstrumentGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PaymentInstrumentGroup withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +41,7 @@ public class PaymentInstrumentGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PaymentInstrumentGroup withId(String id) {
         this.id = id;
         return this;
@@ -50,6 +53,7 @@ public class PaymentInstrumentGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public PaymentInstrumentGroup withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -61,6 +65,7 @@ public class PaymentInstrumentGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public PaymentInstrumentGroup withReference(String reference) {
         this.reference = reference;
         return this;
@@ -71,9 +76,14 @@ public class PaymentInstrumentGroup {
      */
     @JsonProperty("txVariant")
     public String txVariant;
+
     public PaymentInstrumentGroup withTxVariant(String txVariant) {
         this.txVariant = txVariant;
         return this;
     }
     
+    public PaymentInstrumentGroup(@JsonProperty("balancePlatform") String balancePlatform, @JsonProperty("txVariant") String txVariant) {
+        this.balancePlatform = balancePlatform;
+        this.txVariant = txVariant;
+  }
 }

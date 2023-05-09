@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeConfigurationRecorderStatusRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DescribeConfigurationRecorderStatusRequest describeConfigurationRecorderStatusRequest;
+
     public DescribeConfigurationRecorderStatusRequest withDescribeConfigurationRecorderStatusRequest(org.openapis.openapi.models.shared.DescribeConfigurationRecorderStatusRequest describeConfigurationRecorderStatusRequest) {
         this.describeConfigurationRecorderStatusRequest = describeConfigurationRecorderStatusRequest;
         return this;
@@ -16,6 +18,7 @@ public class DescribeConfigurationRecorderStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeConfigurationRecorderStatusRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class DescribeConfigurationRecorderStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeConfigurationRecorderStatusRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class DescribeConfigurationRecorderStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeConfigurationRecorderStatusRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class DescribeConfigurationRecorderStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeConfigurationRecorderStatusRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class DescribeConfigurationRecorderStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeConfigurationRecorderStatusRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class DescribeConfigurationRecorderStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeConfigurationRecorderStatusRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class DescribeConfigurationRecorderStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeConfigurationRecorderStatusRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class DescribeConfigurationRecorderStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DescribeConfigurationRecorderStatusXAmzTargetEnum xAmzTarget;
+
     public DescribeConfigurationRecorderStatusRequest withXAmzTarget(DescribeConfigurationRecorderStatusXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DescribeConfigurationRecorderStatusRequest(@JsonProperty("DescribeConfigurationRecorderStatusRequest") org.openapis.openapi.models.shared.DescribeConfigurationRecorderStatusRequest describeConfigurationRecorderStatusRequest, @JsonProperty("X-Amz-Target") DescribeConfigurationRecorderStatusXAmzTargetEnum xAmzTarget) {
+        this.describeConfigurationRecorderStatusRequest = describeConfigurationRecorderStatusRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPullRequestsResponse {
@@ -12,6 +13,7 @@ public class ListPullRequestsResponse {
      */
     
     public Object authorDoesNotExistException;
+
     public ListPullRequestsResponse withAuthorDoesNotExistException(Object authorDoesNotExistException) {
         this.authorDoesNotExistException = authorDoesNotExistException;
         return this;
@@ -19,6 +21,7 @@ public class ListPullRequestsResponse {
     
     
     public String contentType;
+
     public ListPullRequestsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListPullRequestsResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public ListPullRequestsResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -39,6 +43,7 @@ public class ListPullRequestsResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public ListPullRequestsResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -49,6 +54,7 @@ public class ListPullRequestsResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public ListPullRequestsResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -59,6 +65,7 @@ public class ListPullRequestsResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public ListPullRequestsResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListPullRequestsResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public ListPullRequestsResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -79,6 +87,7 @@ public class ListPullRequestsResponse {
      */
     
     public Object invalidAuthorArnException;
+
     public ListPullRequestsResponse withInvalidAuthorArnException(Object invalidAuthorArnException) {
         this.invalidAuthorArnException = invalidAuthorArnException;
         return this;
@@ -89,6 +98,7 @@ public class ListPullRequestsResponse {
      */
     
     public Object invalidContinuationTokenException;
+
     public ListPullRequestsResponse withInvalidContinuationTokenException(Object invalidContinuationTokenException) {
         this.invalidContinuationTokenException = invalidContinuationTokenException;
         return this;
@@ -99,6 +109,7 @@ public class ListPullRequestsResponse {
      */
     
     public Object invalidMaxResultsException;
+
     public ListPullRequestsResponse withInvalidMaxResultsException(Object invalidMaxResultsException) {
         this.invalidMaxResultsException = invalidMaxResultsException;
         return this;
@@ -109,6 +120,7 @@ public class ListPullRequestsResponse {
      */
     
     public Object invalidPullRequestStatusException;
+
     public ListPullRequestsResponse withInvalidPullRequestStatusException(Object invalidPullRequestStatusException) {
         this.invalidPullRequestStatusException = invalidPullRequestStatusException;
         return this;
@@ -119,6 +131,7 @@ public class ListPullRequestsResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public ListPullRequestsResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -129,6 +142,7 @@ public class ListPullRequestsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPullRequestsOutput listPullRequestsOutput;
+
     public ListPullRequestsResponse withListPullRequestsOutput(org.openapis.openapi.models.shared.ListPullRequestsOutput listPullRequestsOutput) {
         this.listPullRequestsOutput = listPullRequestsOutput;
         return this;
@@ -139,6 +153,7 @@ public class ListPullRequestsResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public ListPullRequestsResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -149,6 +164,7 @@ public class ListPullRequestsResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public ListPullRequestsResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -156,6 +172,7 @@ public class ListPullRequestsResponse {
     
     
     public Integer statusCode;
+
     public ListPullRequestsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -163,9 +180,14 @@ public class ListPullRequestsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPullRequestsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListPullRequestsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

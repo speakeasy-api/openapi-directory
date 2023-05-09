@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InvalidRequestValue {
     @JsonProperty("error")
     public Error error;
+
     public InvalidRequestValue withError(Error error) {
         this.error = error;
         return this;
     }
     
+    public InvalidRequestValue(@JsonProperty("error") Error error) {
+        this.error = error;
+  }
 }

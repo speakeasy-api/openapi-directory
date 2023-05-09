@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PrivateArticlePrivateLinkCreateResponse {
     
     public String contentType;
+
     public PrivateArticlePrivateLinkCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PrivateArticlePrivateLinkCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorMessage errorMessage;
+
     public PrivateArticlePrivateLinkCreateResponse withErrorMessage(org.openapis.openapi.models.shared.ErrorMessage errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -26,6 +29,7 @@ public class PrivateArticlePrivateLinkCreateResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PrivateArticlePrivateLinkCreateResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -36,6 +40,7 @@ public class PrivateArticlePrivateLinkCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.PrivateLinkResponse privateLinkResponse;
+
     public PrivateArticlePrivateLinkCreateResponse withPrivateLinkResponse(org.openapis.openapi.models.shared.PrivateLinkResponse privateLinkResponse) {
         this.privateLinkResponse = privateLinkResponse;
         return this;
@@ -43,6 +48,7 @@ public class PrivateArticlePrivateLinkCreateResponse {
     
     
     public Integer statusCode;
+
     public PrivateArticlePrivateLinkCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class PrivateArticlePrivateLinkCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PrivateArticlePrivateLinkCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PrivateArticlePrivateLinkCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

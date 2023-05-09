@@ -15,6 +15,7 @@ public class GetMissionProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactPostPassDurationSeconds")
     public Long contactPostPassDurationSeconds;
+
     public GetMissionProfileResponse withContactPostPassDurationSeconds(Long contactPostPassDurationSeconds) {
         this.contactPostPassDurationSeconds = contactPostPassDurationSeconds;
         return this;
@@ -23,6 +24,7 @@ public class GetMissionProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactPrePassDurationSeconds")
     public Long contactPrePassDurationSeconds;
+
     public GetMissionProfileResponse withContactPrePassDurationSeconds(Long contactPrePassDurationSeconds) {
         this.contactPrePassDurationSeconds = contactPrePassDurationSeconds;
         return this;
@@ -31,6 +33,7 @@ public class GetMissionProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataflowEdges")
     public String[][] dataflowEdges;
+
     public GetMissionProfileResponse withDataflowEdges(String[][] dataflowEdges) {
         this.dataflowEdges = dataflowEdges;
         return this;
@@ -39,6 +42,7 @@ public class GetMissionProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumViableContactDurationSeconds")
     public Long minimumViableContactDurationSeconds;
+
     public GetMissionProfileResponse withMinimumViableContactDurationSeconds(Long minimumViableContactDurationSeconds) {
         this.minimumViableContactDurationSeconds = minimumViableContactDurationSeconds;
         return this;
@@ -47,6 +51,7 @@ public class GetMissionProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missionProfileArn")
     public String missionProfileArn;
+
     public GetMissionProfileResponse withMissionProfileArn(String missionProfileArn) {
         this.missionProfileArn = missionProfileArn;
         return this;
@@ -55,6 +60,7 @@ public class GetMissionProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missionProfileId")
     public String missionProfileId;
+
     public GetMissionProfileResponse withMissionProfileId(String missionProfileId) {
         this.missionProfileId = missionProfileId;
         return this;
@@ -63,6 +69,7 @@ public class GetMissionProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetMissionProfileResponse withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class GetMissionProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public GetMissionProfileResponse withRegion(String region) {
         this.region = region;
         return this;
@@ -79,6 +87,7 @@ public class GetMissionProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamsKmsKey")
     public KmsKey streamsKmsKey;
+
     public GetMissionProfileResponse withStreamsKmsKey(KmsKey streamsKmsKey) {
         this.streamsKmsKey = streamsKmsKey;
         return this;
@@ -87,6 +96,7 @@ public class GetMissionProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamsKmsRole")
     public String streamsKmsRole;
+
     public GetMissionProfileResponse withStreamsKmsRole(String streamsKmsRole) {
         this.streamsKmsRole = streamsKmsRole;
         return this;
@@ -95,6 +105,7 @@ public class GetMissionProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetMissionProfileResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -103,9 +114,11 @@ public class GetMissionProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingConfigArn")
     public String trackingConfigArn;
+
     public GetMissionProfileResponse withTrackingConfigArn(String trackingConfigArn) {
         this.trackingConfigArn = trackingConfigArn;
         return this;
     }
     
+    public GetMissionProfileResponse(){}
 }

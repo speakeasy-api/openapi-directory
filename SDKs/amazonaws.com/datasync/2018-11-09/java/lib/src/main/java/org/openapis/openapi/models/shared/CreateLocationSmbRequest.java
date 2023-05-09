@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateLocationSmbRequest {
     @JsonProperty("AgentArns")
     public String[] agentArns;
+
     public CreateLocationSmbRequest withAgentArns(String[] agentArns) {
         this.agentArns = agentArns;
         return this;
@@ -22,6 +23,7 @@ public class CreateLocationSmbRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public String domain;
+
     public CreateLocationSmbRequest withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -30,6 +32,7 @@ public class CreateLocationSmbRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MountOptions")
     public SmbMountOptions mountOptions;
+
     public CreateLocationSmbRequest withMountOptions(SmbMountOptions mountOptions) {
         this.mountOptions = mountOptions;
         return this;
@@ -37,6 +40,7 @@ public class CreateLocationSmbRequest {
     
     @JsonProperty("Password")
     public String password;
+
     public CreateLocationSmbRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -44,6 +48,7 @@ public class CreateLocationSmbRequest {
     
     @JsonProperty("ServerHostname")
     public String serverHostname;
+
     public CreateLocationSmbRequest withServerHostname(String serverHostname) {
         this.serverHostname = serverHostname;
         return this;
@@ -51,6 +56,7 @@ public class CreateLocationSmbRequest {
     
     @JsonProperty("Subdirectory")
     public String subdirectory;
+
     public CreateLocationSmbRequest withSubdirectory(String subdirectory) {
         this.subdirectory = subdirectory;
         return this;
@@ -59,6 +65,7 @@ public class CreateLocationSmbRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public TagListEntry[] tags;
+
     public CreateLocationSmbRequest withTags(TagListEntry[] tags) {
         this.tags = tags;
         return this;
@@ -66,9 +73,17 @@ public class CreateLocationSmbRequest {
     
     @JsonProperty("User")
     public String user;
+
     public CreateLocationSmbRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public CreateLocationSmbRequest(@JsonProperty("User") String user, @JsonProperty("Password") String password, @JsonProperty("AgentArns") String[] agentArns, @JsonProperty("ServerHostname") String serverHostname, @JsonProperty("Subdirectory") String subdirectory) {
+        this.user = user;
+        this.password = password;
+        this.agentArns = agentArns;
+        this.serverHostname = serverHostname;
+        this.subdirectory = subdirectory;
+  }
 }

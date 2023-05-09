@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RepositoryConfigurationsDeleteResponse {
     
     public String contentType;
+
     public RepositoryConfigurationsDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RepositoryConfigurationsDeleteResponse {
     
     
     public Integer statusCode;
+
     public RepositoryConfigurationsDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RepositoryConfigurationsDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RepositoryConfigurationsDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class RepositoryConfigurationsDeleteResponse {
      */
     
     public RepositoryConfigurationsDelete200ApplicationJSON repositoryConfigurationsDelete200ApplicationJSONObject;
+
     public RepositoryConfigurationsDeleteResponse withRepositoryConfigurationsDelete200ApplicationJSONObject(RepositoryConfigurationsDelete200ApplicationJSON repositoryConfigurationsDelete200ApplicationJSONObject) {
         this.repositoryConfigurationsDelete200ApplicationJSONObject = repositoryConfigurationsDelete200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class RepositoryConfigurationsDeleteResponse {
      */
     
     public RepositoryConfigurationsDeleteDefaultApplicationJSON repositoryConfigurationsDeleteDefaultApplicationJSONObject;
+
     public RepositoryConfigurationsDeleteResponse withRepositoryConfigurationsDeleteDefaultApplicationJSONObject(RepositoryConfigurationsDeleteDefaultApplicationJSON repositoryConfigurationsDeleteDefaultApplicationJSONObject) {
         this.repositoryConfigurationsDeleteDefaultApplicationJSONObject = repositoryConfigurationsDeleteDefaultApplicationJSONObject;
         return this;
     }
     
+    public RepositoryConfigurationsDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Assists")
     public Double assists;
+
     public PlayerSeason withAssists(Double assists) {
         this.assists = assists;
         return this;
@@ -20,6 +21,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BenchPenaltyMinutes")
     public Double benchPenaltyMinutes;
+
     public PlayerSeason withBenchPenaltyMinutes(Double benchPenaltyMinutes) {
         this.benchPenaltyMinutes = benchPenaltyMinutes;
         return this;
@@ -28,6 +30,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Blocks")
     public Double blocks;
+
     public PlayerSeason withBlocks(Double blocks) {
         this.blocks = blocks;
         return this;
@@ -36,6 +39,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmptyNetGoals")
     public Double emptyNetGoals;
+
     public PlayerSeason withEmptyNetGoals(Double emptyNetGoals) {
         this.emptyNetGoals = emptyNetGoals;
         return this;
@@ -44,6 +48,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaceoffsLost")
     public Double faceoffsLost;
+
     public PlayerSeason withFaceoffsLost(Double faceoffsLost) {
         this.faceoffsLost = faceoffsLost;
         return this;
@@ -52,6 +57,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaceoffsWon")
     public Double faceoffsWon;
+
     public PlayerSeason withFaceoffsWon(Double faceoffsWon) {
         this.faceoffsWon = faceoffsWon;
         return this;
@@ -60,6 +66,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPoints")
     public Double fantasyPoints;
+
     public PlayerSeason withFantasyPoints(Double fantasyPoints) {
         this.fantasyPoints = fantasyPoints;
         return this;
@@ -68,6 +75,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsDraftKings")
     public Double fantasyPointsDraftKings;
+
     public PlayerSeason withFantasyPointsDraftKings(Double fantasyPointsDraftKings) {
         this.fantasyPointsDraftKings = fantasyPointsDraftKings;
         return this;
@@ -76,6 +84,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsFanDuel")
     public Double fantasyPointsFanDuel;
+
     public PlayerSeason withFantasyPointsFanDuel(Double fantasyPointsFanDuel) {
         this.fantasyPointsFanDuel = fantasyPointsFanDuel;
         return this;
@@ -84,6 +93,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsFantasyDraft")
     public Double fantasyPointsFantasyDraft;
+
     public PlayerSeason withFantasyPointsFantasyDraft(Double fantasyPointsFantasyDraft) {
         this.fantasyPointsFantasyDraft = fantasyPointsFantasyDraft;
         return this;
@@ -92,6 +102,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsYahoo")
     public Double fantasyPointsYahoo;
+
     public PlayerSeason withFantasyPointsYahoo(Double fantasyPointsYahoo) {
         this.fantasyPointsYahoo = fantasyPointsYahoo;
         return this;
@@ -100,6 +111,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Games")
     public Long games;
+
     public PlayerSeason withGames(Long games) {
         this.games = games;
         return this;
@@ -108,6 +120,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Giveaways")
     public Double giveaways;
+
     public PlayerSeason withGiveaways(Double giveaways) {
         this.giveaways = giveaways;
         return this;
@@ -116,6 +129,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTeamID")
     public Long globalTeamID;
+
     public PlayerSeason withGlobalTeamID(Long globalTeamID) {
         this.globalTeamID = globalTeamID;
         return this;
@@ -124,6 +138,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Goals")
     public Double goals;
+
     public PlayerSeason withGoals(Double goals) {
         this.goals = goals;
         return this;
@@ -132,6 +147,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoaltendingGoalsAgainst")
     public Double goaltendingGoalsAgainst;
+
     public PlayerSeason withGoaltendingGoalsAgainst(Double goaltendingGoalsAgainst) {
         this.goaltendingGoalsAgainst = goaltendingGoalsAgainst;
         return this;
@@ -140,6 +156,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoaltendingLosses")
     public Double goaltendingLosses;
+
     public PlayerSeason withGoaltendingLosses(Double goaltendingLosses) {
         this.goaltendingLosses = goaltendingLosses;
         return this;
@@ -148,6 +165,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoaltendingMinutes")
     public Long goaltendingMinutes;
+
     public PlayerSeason withGoaltendingMinutes(Long goaltendingMinutes) {
         this.goaltendingMinutes = goaltendingMinutes;
         return this;
@@ -156,6 +174,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoaltendingOvertimeLosses")
     public Double goaltendingOvertimeLosses;
+
     public PlayerSeason withGoaltendingOvertimeLosses(Double goaltendingOvertimeLosses) {
         this.goaltendingOvertimeLosses = goaltendingOvertimeLosses;
         return this;
@@ -164,6 +183,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoaltendingSaves")
     public Double goaltendingSaves;
+
     public PlayerSeason withGoaltendingSaves(Double goaltendingSaves) {
         this.goaltendingSaves = goaltendingSaves;
         return this;
@@ -172,6 +192,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoaltendingSeconds")
     public Long goaltendingSeconds;
+
     public PlayerSeason withGoaltendingSeconds(Long goaltendingSeconds) {
         this.goaltendingSeconds = goaltendingSeconds;
         return this;
@@ -180,6 +201,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoaltendingShotsAgainst")
     public Double goaltendingShotsAgainst;
+
     public PlayerSeason withGoaltendingShotsAgainst(Double goaltendingShotsAgainst) {
         this.goaltendingShotsAgainst = goaltendingShotsAgainst;
         return this;
@@ -188,6 +210,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoaltendingShutouts")
     public Double goaltendingShutouts;
+
     public PlayerSeason withGoaltendingShutouts(Double goaltendingShutouts) {
         this.goaltendingShutouts = goaltendingShutouts;
         return this;
@@ -196,6 +219,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoaltendingWins")
     public Double goaltendingWins;
+
     public PlayerSeason withGoaltendingWins(Double goaltendingWins) {
         this.goaltendingWins = goaltendingWins;
         return this;
@@ -204,6 +228,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HatTricks")
     public Double hatTricks;
+
     public PlayerSeason withHatTricks(Double hatTricks) {
         this.hatTricks = hatTricks;
         return this;
@@ -212,6 +237,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hits")
     public Double hits;
+
     public PlayerSeason withHits(Double hits) {
         this.hits = hits;
         return this;
@@ -220,6 +246,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Minutes")
     public Long minutes;
+
     public PlayerSeason withMinutes(Long minutes) {
         this.minutes = minutes;
         return this;
@@ -228,6 +255,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PlayerSeason withName(String name) {
         this.name = name;
         return this;
@@ -236,6 +264,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PenaltyMinutes")
     public Double penaltyMinutes;
+
     public PlayerSeason withPenaltyMinutes(Double penaltyMinutes) {
         this.penaltyMinutes = penaltyMinutes;
         return this;
@@ -244,6 +273,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public PlayerSeason withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -252,6 +282,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlusMinus")
     public Double plusMinus;
+
     public PlayerSeason withPlusMinus(Double plusMinus) {
         this.plusMinus = plusMinus;
         return this;
@@ -260,6 +291,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public PlayerSeason withPosition(String position) {
         this.position = position;
         return this;
@@ -268,6 +300,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PowerPlayAssists")
     public Double powerPlayAssists;
+
     public PlayerSeason withPowerPlayAssists(Double powerPlayAssists) {
         this.powerPlayAssists = powerPlayAssists;
         return this;
@@ -276,6 +309,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PowerPlayGoals")
     public Double powerPlayGoals;
+
     public PlayerSeason withPowerPlayGoals(Double powerPlayGoals) {
         this.powerPlayGoals = powerPlayGoals;
         return this;
@@ -284,6 +318,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public PlayerSeason withSeason(Long season) {
         this.season = season;
         return this;
@@ -292,6 +327,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonType")
     public Long seasonType;
+
     public PlayerSeason withSeasonType(Long seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -300,6 +336,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Seconds")
     public Long seconds;
+
     public PlayerSeason withSeconds(Long seconds) {
         this.seconds = seconds;
         return this;
@@ -308,6 +345,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Shifts")
     public Double shifts;
+
     public PlayerSeason withShifts(Double shifts) {
         this.shifts = shifts;
         return this;
@@ -316,6 +354,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShootoutGoals")
     public Double shootoutGoals;
+
     public PlayerSeason withShootoutGoals(Double shootoutGoals) {
         this.shootoutGoals = shootoutGoals;
         return this;
@@ -324,6 +363,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortHandedAssists")
     public Double shortHandedAssists;
+
     public PlayerSeason withShortHandedAssists(Double shortHandedAssists) {
         this.shortHandedAssists = shortHandedAssists;
         return this;
@@ -332,6 +372,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortHandedGoals")
     public Double shortHandedGoals;
+
     public PlayerSeason withShortHandedGoals(Double shortHandedGoals) {
         this.shortHandedGoals = shortHandedGoals;
         return this;
@@ -340,6 +381,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShotsOnGoal")
     public Double shotsOnGoal;
+
     public PlayerSeason withShotsOnGoal(Double shotsOnGoal) {
         this.shotsOnGoal = shotsOnGoal;
         return this;
@@ -348,6 +390,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Started")
     public Long started;
+
     public PlayerSeason withStarted(Long started) {
         this.started = started;
         return this;
@@ -356,6 +399,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatID")
     public Long statID;
+
     public PlayerSeason withStatID(Long statID) {
         this.statID = statID;
         return this;
@@ -364,6 +408,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Takeaways")
     public Double takeaways;
+
     public PlayerSeason withTakeaways(Double takeaways) {
         this.takeaways = takeaways;
         return this;
@@ -372,6 +417,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public PlayerSeason withTeam(String team) {
         this.team = team;
         return this;
@@ -380,6 +426,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamID")
     public Long teamID;
+
     public PlayerSeason withTeamID(Long teamID) {
         this.teamID = teamID;
         return this;
@@ -388,9 +435,11 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public PlayerSeason withUpdated(String updated) {
         this.updated = updated;
         return this;
     }
     
+    public PlayerSeason(){}
 }

@@ -12,6 +12,7 @@ public class PageCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PageCategory withId(Long id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class PageCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PageCategory withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class PageCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Long position;
+
     public PageCategory withPosition(Long position) {
         this.position = position;
         return this;
     }
     
+    public PageCategory(){}
 }

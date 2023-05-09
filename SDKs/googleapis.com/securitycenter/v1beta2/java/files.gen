@@ -48,4 +48,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/WebSecurityScannerSettingsServiceEnablementStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/WebSecurityScannerSettings.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

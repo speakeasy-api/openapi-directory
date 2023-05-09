@@ -15,9 +15,11 @@ public class CreateGoalMetricRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.GoalMetricRequestInput data;
+
     public CreateGoalMetricRequestBodyInput withData(org.openapis.openapi.models.shared.GoalMetricRequestInput data) {
         this.data = data;
         return this;
     }
     
+    public CreateGoalMetricRequestBodyInput(){}
 }

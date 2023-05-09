@@ -53,11 +53,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSetupV1LocationsServicesIdResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1LocationsServicesIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteSetupV1LocationsServicesIdResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1LocationsServicesIdResponse(contentType, httpRes.statusCode()) {{
             locationViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -93,11 +91,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdResponse(contentType, httpRes.statusCode()) {{
             locationViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdDeleteallimagesResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdDeleteallimagesResponse() {{
+        org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdDeleteallimagesResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdDeleteallimagesResponse(contentType, httpRes.statusCode()) {{
             deleteSetupV1LocationsIdDeleteallimages200ApplicationJSONBoolean = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -179,11 +173,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdDeleteimageResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdDeleteimageResponse() {{
+        org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdDeleteimageResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdDeleteimageResponse(contentType, httpRes.statusCode()) {{
             locationViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -219,11 +211,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdEmailTemplatesMasterResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdEmailTemplatesMasterResponse() {{
+        org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdEmailTemplatesMasterResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdEmailTemplatesMasterResponse(contentType, httpRes.statusCode()) {{
             masterEmailTemplateSettingsViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -260,11 +250,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdEmailTemplatesTemplateNameResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdEmailTemplatesTemplateNameResponse() {{
+        org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdEmailTemplatesTemplateNameResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdEmailTemplatesTemplateNameResponse(contentType, httpRes.statusCode()) {{
             contentResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,10 +288,8 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdGoogleServiceAccountResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdGoogleServiceAccountResponse() {{
+        org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdGoogleServiceAccountResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdGoogleServiceAccountResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -334,11 +320,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdServicesResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdServicesResponse() {{
+        org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdServicesResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdServicesResponse(contentType, httpRes.statusCode()) {{
             locationViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -382,11 +366,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1LocationsResponse res = new org.openapis.openapi.models.operations.GetSetupV1LocationsResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1LocationsResponse res = new org.openapis.openapi.models.operations.GetSetupV1LocationsResponse(contentType, httpRes.statusCode()) {{
             locationListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -422,11 +404,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1LocationsServicesIdResponse res = new org.openapis.openapi.models.operations.GetSetupV1LocationsServicesIdResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1LocationsServicesIdResponse res = new org.openapis.openapi.models.operations.GetSetupV1LocationsServicesIdResponse(contentType, httpRes.statusCode()) {{
             businessServiceViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -466,11 +446,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1LocationsIdResponse res = new org.openapis.openapi.models.operations.GetSetupV1LocationsIdResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1LocationsIdResponse res = new org.openapis.openapi.models.operations.GetSetupV1LocationsIdResponse(contentType, httpRes.statusCode()) {{
             locationViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -506,11 +484,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1LocationsIdAppointmentremindersResponse res = new org.openapis.openapi.models.operations.GetSetupV1LocationsIdAppointmentremindersResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1LocationsIdAppointmentremindersResponse res = new org.openapis.openapi.models.operations.GetSetupV1LocationsIdAppointmentremindersResponse(contentType, httpRes.statusCode()) {{
             appointmentReminderViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -546,11 +522,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesResponse res = new org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesResponse res = new org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesResponse(contentType, httpRes.statusCode()) {{
             emailTemplateListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -586,11 +560,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesMasterResponse res = new org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesMasterResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesMasterResponse res = new org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesMasterResponse(contentType, httpRes.statusCode()) {{
             masterEmailTemplateSettingsViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -626,11 +598,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesTemplateNameResponse res = new org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesTemplateNameResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesTemplateNameResponse res = new org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesTemplateNameResponse(contentType, httpRes.statusCode()) {{
             contentResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -672,11 +642,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1LocationsIdServicesResponse res = new org.openapis.openapi.models.operations.GetSetupV1LocationsIdServicesResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1LocationsIdServicesResponse res = new org.openapis.openapi.models.operations.GetSetupV1LocationsIdServicesResponse(contentType, httpRes.statusCode()) {{
             businessServiceListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -729,11 +697,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSetupV1LocationsResponse res = new org.openapis.openapi.models.operations.PostSetupV1LocationsResponse() {{
+        org.openapis.openapi.models.operations.PostSetupV1LocationsResponse res = new org.openapis.openapi.models.operations.PostSetupV1LocationsResponse(contentType, httpRes.statusCode()) {{
             locationViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -784,11 +750,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSetupV1LocationsBulkResponse res = new org.openapis.openapi.models.operations.PostSetupV1LocationsBulkResponse() {{
+        org.openapis.openapi.models.operations.PostSetupV1LocationsBulkResponse res = new org.openapis.openapi.models.operations.PostSetupV1LocationsBulkResponse(contentType, httpRes.statusCode()) {{
             locationViewModels = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -827,11 +791,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSetupV1LocationsIdEmailTemplatesResponse res = new org.openapis.openapi.models.operations.PostSetupV1LocationsIdEmailTemplatesResponse() {{
+        org.openapis.openapi.models.operations.PostSetupV1LocationsIdEmailTemplatesResponse res = new org.openapis.openapi.models.operations.PostSetupV1LocationsIdEmailTemplatesResponse(contentType, httpRes.statusCode()) {{
             contentResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -870,11 +832,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSetupV1LocationsIdEmailTemplatesMasterResponse res = new org.openapis.openapi.models.operations.PostSetupV1LocationsIdEmailTemplatesMasterResponse() {{
+        org.openapis.openapi.models.operations.PostSetupV1LocationsIdEmailTemplatesMasterResponse res = new org.openapis.openapi.models.operations.PostSetupV1LocationsIdEmailTemplatesMasterResponse(contentType, httpRes.statusCode()) {{
             masterEmailTemplateSettingsViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -912,11 +872,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSetupV1LocationsIdGoogleServiceAccountResponse res = new org.openapis.openapi.models.operations.PostSetupV1LocationsIdGoogleServiceAccountResponse() {{
+        org.openapis.openapi.models.operations.PostSetupV1LocationsIdGoogleServiceAccountResponse res = new org.openapis.openapi.models.operations.PostSetupV1LocationsIdGoogleServiceAccountResponse(contentType, httpRes.statusCode()) {{
             googleServiceAccountCreds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -957,11 +915,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSetupV1LocationsIdServicesResponse res = new org.openapis.openapi.models.operations.PostSetupV1LocationsIdServicesResponse() {{
+        org.openapis.openapi.models.operations.PostSetupV1LocationsIdServicesResponse res = new org.openapis.openapi.models.operations.PostSetupV1LocationsIdServicesResponse(contentType, httpRes.statusCode()) {{
             locationViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -999,11 +955,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSetupV1LocationsIdUploadimageResponse res = new org.openapis.openapi.models.operations.PostSetupV1LocationsIdUploadimageResponse() {{
+        org.openapis.openapi.models.operations.PostSetupV1LocationsIdUploadimageResponse res = new org.openapis.openapi.models.operations.PostSetupV1LocationsIdUploadimageResponse(contentType, httpRes.statusCode()) {{
             locationViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1049,11 +1003,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSetupV1LocationsIdResponse res = new org.openapis.openapi.models.operations.PutSetupV1LocationsIdResponse() {{
+        org.openapis.openapi.models.operations.PutSetupV1LocationsIdResponse res = new org.openapis.openapi.models.operations.PutSetupV1LocationsIdResponse(contentType, httpRes.statusCode()) {{
             locationViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1095,11 +1047,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSetupV1LocationsIdAppointmentremindersResponse res = new org.openapis.openapi.models.operations.PutSetupV1LocationsIdAppointmentremindersResponse() {{
+        org.openapis.openapi.models.operations.PutSetupV1LocationsIdAppointmentremindersResponse res = new org.openapis.openapi.models.operations.PutSetupV1LocationsIdAppointmentremindersResponse(contentType, httpRes.statusCode()) {{
             locationViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1136,11 +1086,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSetupV1LocationsIdHolidaysHolidayIdClosedResponse res = new org.openapis.openapi.models.operations.PutSetupV1LocationsIdHolidaysHolidayIdClosedResponse() {{
+        org.openapis.openapi.models.operations.PutSetupV1LocationsIdHolidaysHolidayIdClosedResponse res = new org.openapis.openapi.models.operations.PutSetupV1LocationsIdHolidaysHolidayIdClosedResponse(contentType, httpRes.statusCode()) {{
             locationViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1176,11 +1124,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSetupV1LocationsIdRecoverResponse res = new org.openapis.openapi.models.operations.PutSetupV1LocationsIdRecoverResponse() {{
+        org.openapis.openapi.models.operations.PutSetupV1LocationsIdRecoverResponse res = new org.openapis.openapi.models.operations.PutSetupV1LocationsIdRecoverResponse(contentType, httpRes.statusCode()) {{
             locationViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1218,11 +1164,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSetupV1LocationsIdSettingsScopeSettingsScopeResponse res = new org.openapis.openapi.models.operations.PutSetupV1LocationsIdSettingsScopeSettingsScopeResponse() {{
+        org.openapis.openapi.models.operations.PutSetupV1LocationsIdSettingsScopeSettingsScopeResponse res = new org.openapis.openapi.models.operations.PutSetupV1LocationsIdSettingsScopeSettingsScopeResponse(contentType, httpRes.statusCode()) {{
             locationViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

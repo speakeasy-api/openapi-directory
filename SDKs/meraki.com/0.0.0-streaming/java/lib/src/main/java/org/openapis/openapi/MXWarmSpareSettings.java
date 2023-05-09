@@ -53,11 +53,9 @@ public class MXWarmSpareSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkWarmSpareSettingsResponse res = new org.openapis.openapi.models.operations.GetNetworkWarmSpareSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkWarmSpareSettingsResponse res = new org.openapis.openapi.models.operations.GetNetworkWarmSpareSettingsResponse(contentType, httpRes.statusCode()) {{
             getNetworkWarmSpareSettings200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -93,11 +91,9 @@ public class MXWarmSpareSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SwapNetworkWarmSpareResponse res = new org.openapis.openapi.models.operations.SwapNetworkWarmSpareResponse() {{
+        org.openapis.openapi.models.operations.SwapNetworkWarmSpareResponse res = new org.openapis.openapi.models.operations.SwapNetworkWarmSpareResponse(contentType, httpRes.statusCode()) {{
             swapNetworkWarmSpare200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,11 +134,9 @@ public class MXWarmSpareSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkWarmSpareSettingsResponse res = new org.openapis.openapi.models.operations.UpdateNetworkWarmSpareSettingsResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkWarmSpareSettingsResponse res = new org.openapis.openapi.models.operations.UpdateNetworkWarmSpareSettingsResponse(contentType, httpRes.statusCode()) {{
             updateNetworkWarmSpareSettings200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

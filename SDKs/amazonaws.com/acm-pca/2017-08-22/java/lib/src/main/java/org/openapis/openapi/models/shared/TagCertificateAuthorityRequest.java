@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TagCertificateAuthorityRequest {
     @JsonProperty("CertificateAuthorityArn")
     public String certificateAuthorityArn;
+
     public TagCertificateAuthorityRequest withCertificateAuthorityArn(String certificateAuthorityArn) {
         this.certificateAuthorityArn = certificateAuthorityArn;
         return this;
@@ -16,9 +17,14 @@ public class TagCertificateAuthorityRequest {
     
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public TagCertificateAuthorityRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagCertificateAuthorityRequest(@JsonProperty("CertificateAuthorityArn") String certificateAuthorityArn, @JsonProperty("Tags") Tag[] tags) {
+        this.certificateAuthorityArn = certificateAuthorityArn;
+        this.tags = tags;
+  }
 }

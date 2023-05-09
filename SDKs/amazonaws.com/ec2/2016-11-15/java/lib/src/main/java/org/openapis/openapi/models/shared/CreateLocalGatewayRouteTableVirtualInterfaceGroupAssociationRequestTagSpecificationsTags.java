@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequestTagSpecificationsTags {
     
     public String key;
+
     public CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest
     
     
     public String value;
+
     public CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequestTagSpecificationsTags(){}
 }

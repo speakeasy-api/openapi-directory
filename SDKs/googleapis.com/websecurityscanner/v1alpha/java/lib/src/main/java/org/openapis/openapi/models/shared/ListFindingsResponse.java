@@ -18,6 +18,7 @@ public class ListFindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findings")
     public Finding[] findings;
+
     public ListFindingsResponse withFindings(Finding[] findings) {
         this.findings = findings;
         return this;
@@ -29,9 +30,11 @@ public class ListFindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListFindingsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListFindingsResponse(){}
 }

@@ -12,6 +12,7 @@ public class DescribeServicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public DescribeServicesRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -20,6 +21,7 @@ public class DescribeServicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("include")
     public ServiceFieldEnum[] include;
+
     public DescribeServicesRequest withInclude(ServiceFieldEnum[] include) {
         this.include = include;
         return this;
@@ -27,9 +29,13 @@ public class DescribeServicesRequest {
     
     @JsonProperty("services")
     public String[] services;
+
     public DescribeServicesRequest withServices(String[] services) {
         this.services = services;
         return this;
     }
     
+    public DescribeServicesRequest(@JsonProperty("services") String[] services) {
+        this.services = services;
+  }
 }

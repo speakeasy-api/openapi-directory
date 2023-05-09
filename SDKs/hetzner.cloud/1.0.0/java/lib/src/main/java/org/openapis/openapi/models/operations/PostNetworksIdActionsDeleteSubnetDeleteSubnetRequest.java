@@ -12,9 +12,13 @@ public class PostNetworksIdActionsDeleteSubnetDeleteSubnetRequest {
      */
     @JsonProperty("ip_range")
     public String ipRange;
+
     public PostNetworksIdActionsDeleteSubnetDeleteSubnetRequest withIpRange(String ipRange) {
         this.ipRange = ipRange;
         return this;
     }
     
+    public PostNetworksIdActionsDeleteSubnetDeleteSubnetRequest(@JsonProperty("ip_range") String ipRange) {
+        this.ipRange = ipRange;
+  }
 }

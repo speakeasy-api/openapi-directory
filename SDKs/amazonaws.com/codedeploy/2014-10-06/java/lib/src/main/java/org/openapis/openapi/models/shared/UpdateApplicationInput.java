@@ -15,6 +15,7 @@ public class UpdateApplicationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationName")
     public String applicationName;
+
     public UpdateApplicationInput withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -23,9 +24,11 @@ public class UpdateApplicationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newApplicationName")
     public String newApplicationName;
+
     public UpdateApplicationInput withNewApplicationName(String newApplicationName) {
         this.newApplicationName = newApplicationName;
         return this;
     }
     
+    public UpdateApplicationInput(){}
 }

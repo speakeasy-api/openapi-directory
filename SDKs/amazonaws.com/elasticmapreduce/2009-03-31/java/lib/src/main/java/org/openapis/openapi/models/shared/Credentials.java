@@ -15,9 +15,11 @@ public class Credentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsernamePassword")
     public UsernamePassword usernamePassword;
+
     public Credentials withUsernamePassword(UsernamePassword usernamePassword) {
         this.usernamePassword = usernamePassword;
         return this;
     }
     
+    public Credentials(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTemplateDesignerTemplatesIdPutResponse {
     
     public String contentType;
+
     public UpdateTemplateDesignerTemplatesIdPutResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateTemplateDesignerTemplatesIdPutResponse {
      */
     
     public org.openapis.openapi.models.shared.ResponseError responseError;
+
     public UpdateTemplateDesignerTemplatesIdPutResponse withResponseError(org.openapis.openapi.models.shared.ResponseError responseError) {
         this.responseError = responseError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateTemplateDesignerTemplatesIdPutResponse {
      */
     
     public org.openapis.openapi.models.shared.ResponseOkDesignerTemplate responseOkDesignerTemplate;
+
     public UpdateTemplateDesignerTemplatesIdPutResponse withResponseOkDesignerTemplate(org.openapis.openapi.models.shared.ResponseOkDesignerTemplate responseOkDesignerTemplate) {
         this.responseOkDesignerTemplate = responseOkDesignerTemplate;
         return this;
@@ -36,6 +40,7 @@ public class UpdateTemplateDesignerTemplatesIdPutResponse {
     
     
     public Integer statusCode;
+
     public UpdateTemplateDesignerTemplatesIdPutResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class UpdateTemplateDesignerTemplatesIdPutResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTemplateDesignerTemplatesIdPutResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateTemplateDesignerTemplatesIdPutResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

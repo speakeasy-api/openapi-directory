@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyInstanceMaintenanceOptionsResult {
     
     public ModifyInstanceMaintenanceOptionsResultAutoRecoveryEnum autoRecovery;
+
     public ModifyInstanceMaintenanceOptionsResult withAutoRecovery(ModifyInstanceMaintenanceOptionsResultAutoRecoveryEnum autoRecovery) {
         this.autoRecovery = autoRecovery;
         return this;
@@ -19,9 +20,11 @@ public class ModifyInstanceMaintenanceOptionsResult {
     
     
     public String instanceId;
+
     public ModifyInstanceMaintenanceOptionsResult withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public ModifyInstanceMaintenanceOptionsResult(){}
 }

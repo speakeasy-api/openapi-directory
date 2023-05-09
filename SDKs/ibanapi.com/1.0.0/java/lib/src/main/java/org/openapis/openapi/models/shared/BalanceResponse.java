@@ -15,6 +15,7 @@ public class BalanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public BalanceResponse withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class BalanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public BalanceResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -31,9 +33,11 @@ public class BalanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public Long result;
+
     public BalanceResponse withResult(Long result) {
         this.result = result;
         return this;
     }
     
+    public BalanceResponse(){}
 }

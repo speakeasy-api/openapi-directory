@@ -15,9 +15,11 @@ public class AwsWafv2CustomRequestHandlingDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InsertHeaders")
     public AwsWafv2CustomHttpHeader[] insertHeaders;
+
     public AwsWafv2CustomRequestHandlingDetails withInsertHeaders(AwsWafv2CustomHttpHeader[] insertHeaders) {
         this.insertHeaders = insertHeaders;
         return this;
     }
     
+    public AwsWafv2CustomRequestHandlingDetails(){}
 }

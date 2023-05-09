@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCustomPluginResponse {
@@ -12,6 +13,7 @@ public class DeleteCustomPluginResponse {
      */
     
     public Object badRequestException;
+
     public DeleteCustomPluginResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCustomPluginResponse {
     
     
     public String contentType;
+
     public DeleteCustomPluginResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCustomPluginResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteCustomPluginResponse deleteCustomPluginResponse;
+
     public DeleteCustomPluginResponse withDeleteCustomPluginResponse(org.openapis.openapi.models.shared.DeleteCustomPluginResponse deleteCustomPluginResponse) {
         this.deleteCustomPluginResponse = deleteCustomPluginResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCustomPluginResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteCustomPluginResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteCustomPluginResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteCustomPluginResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteCustomPluginResponse {
      */
     
     public Object notFoundException;
+
     public DeleteCustomPluginResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteCustomPluginResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteCustomPluginResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteCustomPluginResponse {
     
     
     public Integer statusCode;
+
     public DeleteCustomPluginResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteCustomPluginResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCustomPluginResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteCustomPluginResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteCustomPluginResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteCustomPluginResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteCustomPluginResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteCustomPluginResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

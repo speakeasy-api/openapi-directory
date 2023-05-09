@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteConfigurationSetTrackingOptionsRequest - Represents a request to delete open and click tracking options in a configuration set. 
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteConfigurationSetTrackingOptionsRequest {
     
     public String configurationSetName;
+
     public DeleteConfigurationSetTrackingOptionsRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
     }
     
+    public DeleteConfigurationSetTrackingOptionsRequest(@JsonProperty("ConfigurationSetName") String configurationSetName) {
+        this.configurationSetName = configurationSetName;
+  }
 }

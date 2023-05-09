@@ -18,9 +18,11 @@ public class GoogleCloudRunV2CloudSqlInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public String[] instances;
+
     public GoogleCloudRunV2CloudSqlInstance withInstances(String[] instances) {
         this.instances = instances;
         return this;
     }
     
+    public GoogleCloudRunV2CloudSqlInstance(){}
 }

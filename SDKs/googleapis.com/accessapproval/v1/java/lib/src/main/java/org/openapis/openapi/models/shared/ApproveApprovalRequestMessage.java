@@ -18,9 +18,11 @@ public class ApproveApprovalRequestMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public ApproveApprovalRequestMessage withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
     }
     
+    public ApproveApprovalRequestMessage(){}
 }

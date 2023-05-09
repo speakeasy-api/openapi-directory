@@ -15,6 +15,7 @@ public class AssessmentReportsDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public AssessmentReportsDestination withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -23,9 +24,11 @@ public class AssessmentReportsDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationType")
     public AssessmentReportDestinationTypeEnum destinationType;
+
     public AssessmentReportsDestination withDestinationType(AssessmentReportDestinationTypeEnum destinationType) {
         this.destinationType = destinationType;
         return this;
     }
     
+    public AssessmentReportsDestination(){}
 }

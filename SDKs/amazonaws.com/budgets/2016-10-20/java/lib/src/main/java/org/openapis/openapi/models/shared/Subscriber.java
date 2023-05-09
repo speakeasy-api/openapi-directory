@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Subscriber {
     @JsonProperty("Address")
     public String address;
+
     public Subscriber withAddress(String address) {
         this.address = address;
         return this;
@@ -19,9 +20,14 @@ public class Subscriber {
     
     @JsonProperty("SubscriptionType")
     public SubscriptionTypeEnum subscriptionType;
+
     public Subscriber withSubscriptionType(SubscriptionTypeEnum subscriptionType) {
         this.subscriptionType = subscriptionType;
         return this;
     }
     
+    public Subscriber(@JsonProperty("Address") String address, @JsonProperty("SubscriptionType") SubscriptionTypeEnum subscriptionType) {
+        this.address = address;
+        this.subscriptionType = subscriptionType;
+  }
 }

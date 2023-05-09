@@ -12,9 +12,11 @@ public class AppsUpdateAvatarRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public AppsUpdateAvatarRequestBodyAvatar avatar;
+
     public AppsUpdateAvatarRequestBody withAvatar(AppsUpdateAvatarRequestBodyAvatar avatar) {
         this.avatar = avatar;
         return this;
     }
     
+    public AppsUpdateAvatarRequestBody(){}
 }

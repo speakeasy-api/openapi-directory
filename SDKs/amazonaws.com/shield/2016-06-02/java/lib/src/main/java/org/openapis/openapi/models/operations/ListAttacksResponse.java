@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAttacksResponse {
     
     public String contentType;
+
     public ListAttacksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAttacksResponse {
      */
     
     public Object internalErrorException;
+
     public ListAttacksResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListAttacksResponse {
      */
     
     public Object invalidOperationException;
+
     public ListAttacksResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -39,6 +43,7 @@ public class ListAttacksResponse {
      */
     
     public Object invalidParameterException;
+
     public ListAttacksResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class ListAttacksResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAttacksResponse listAttacksResponse;
+
     public ListAttacksResponse withListAttacksResponse(org.openapis.openapi.models.shared.ListAttacksResponse listAttacksResponse) {
         this.listAttacksResponse = listAttacksResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListAttacksResponse {
     
     
     public Integer statusCode;
+
     public ListAttacksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListAttacksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAttacksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAttacksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

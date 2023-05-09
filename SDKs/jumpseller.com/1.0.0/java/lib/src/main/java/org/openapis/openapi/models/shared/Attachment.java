@@ -15,9 +15,11 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachment")
     public AttachmentFields attachment;
+
     public Attachment withAttachment(AttachmentFields attachment) {
         this.attachment = attachment;
         return this;
     }
     
+    public Attachment(){}
 }

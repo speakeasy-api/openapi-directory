@@ -15,6 +15,7 @@ public class FindingSourceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessPointAccount")
     public String accessPointAccount;
+
     public FindingSourceDetail withAccessPointAccount(String accessPointAccount) {
         this.accessPointAccount = accessPointAccount;
         return this;
@@ -23,9 +24,11 @@ public class FindingSourceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessPointArn")
     public String accessPointArn;
+
     public FindingSourceDetail withAccessPointArn(String accessPointArn) {
         this.accessPointArn = accessPointArn;
         return this;
     }
     
+    public FindingSourceDetail(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetautoApprovevaluefromconfigRequest {
@@ -12,6 +13,7 @@ public class GetautoApprovevaluefromconfigRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetautoApprovevaluefromconfigRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetautoApprovevaluefromconfigRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetautoApprovevaluefromconfigRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetautoApprovevaluefromconfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public GetautoApprovevaluefromconfigRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -42,9 +46,16 @@ public class GetautoApprovevaluefromconfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sellerId")
     public String sellerId;
+
     public GetautoApprovevaluefromconfigRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
     }
     
+    public GetautoApprovevaluefromconfigRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("accountName") String accountName, @JsonProperty("sellerId") String sellerId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.accountName = accountName;
+        this.sellerId = sellerId;
+  }
 }

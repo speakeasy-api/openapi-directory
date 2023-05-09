@@ -9,6 +9,7 @@ import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import org.apache.http.NameValuePair;
 import org.openapis.openapi.utils.HTTPClient;
 import org.openapis.openapi.utils.HTTPRequest;
 import org.openapis.openapi.utils.JSON;
@@ -63,11 +64,9 @@ public class InsightsAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPodcastAudienceResponse res = new org.openapis.openapi.models.operations.GetPodcastAudienceResponse() {{
+        org.openapis.openapi.models.operations.GetPodcastAudienceResponse res = new org.openapis.openapi.models.operations.GetPodcastAudienceResponse(contentType, httpRes.statusCode()) {{
             podcastAudienceResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -77,6 +76,63 @@ public class InsightsAPI {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.PodcastAudienceResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.PodcastAudienceResponse.class);
                 res.podcastAudienceResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429 || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {
+        }
+
+        return res;
+    }
+
+    /**
+     * Fetch podcasts by a publisher's domain name
+     * Fetch podcasts by a publisher's domain name, e.g., nytimes.com, wondery.com, npr.org...
+     * Each request will return up to 10 podcasts. You can use the `page` parameter to paginate.
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetPodcastsByDomainNameResponse getPodcastsByDomainName(org.openapis.openapi.models.operations.GetPodcastsByDomainNameRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPodcastsByDomainNameRequest.class, baseUrl, "/podcasts/domains/{domain_name}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPodcastsByDomainNameRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.GetPodcastsByDomainNameResponse res = new org.openapis.openapi.models.operations.GetPodcastsByDomainNameResponse(contentType, httpRes.statusCode()) {{
+            podcastDomainResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
+            
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.PodcastDomainResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.PodcastDomainResponse.class);
+                res.podcastDomainResponse = out;
             }
         }
         else if (httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429 || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {

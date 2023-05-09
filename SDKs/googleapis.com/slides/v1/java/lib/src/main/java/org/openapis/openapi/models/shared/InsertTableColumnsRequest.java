@@ -18,6 +18,7 @@ public class InsertTableColumnsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cellLocation")
     public TableCellLocation cellLocation;
+
     public InsertTableColumnsRequest withCellLocation(TableCellLocation cellLocation) {
         this.cellLocation = cellLocation;
         return this;
@@ -29,6 +30,7 @@ public class InsertTableColumnsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertRight")
     public Boolean insertRight;
+
     public InsertTableColumnsRequest withInsertRight(Boolean insertRight) {
         this.insertRight = insertRight;
         return this;
@@ -40,6 +42,7 @@ public class InsertTableColumnsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public Integer number;
+
     public InsertTableColumnsRequest withNumber(Integer number) {
         this.number = number;
         return this;
@@ -51,9 +54,11 @@ public class InsertTableColumnsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableObjectId")
     public String tableObjectId;
+
     public InsertTableColumnsRequest withTableObjectId(String tableObjectId) {
         this.tableObjectId = tableObjectId;
         return this;
     }
     
+    public InsertTableColumnsRequest(){}
 }

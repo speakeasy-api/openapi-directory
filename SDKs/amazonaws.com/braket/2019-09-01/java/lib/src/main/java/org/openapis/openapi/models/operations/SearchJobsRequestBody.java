@@ -14,6 +14,7 @@ public class SearchJobsRequestBody {
      */
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.SearchJobsFilter[] filters;
+
     public SearchJobsRequestBody withFilters(org.openapis.openapi.models.shared.SearchJobsFilter[] filters) {
         this.filters = filters;
         return this;
@@ -25,6 +26,7 @@ public class SearchJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public SearchJobsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class SearchJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public SearchJobsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public SearchJobsRequestBody(@JsonProperty("filters") org.openapis.openapi.models.shared.SearchJobsFilter[] filters) {
+        this.filters = filters;
+  }
 }

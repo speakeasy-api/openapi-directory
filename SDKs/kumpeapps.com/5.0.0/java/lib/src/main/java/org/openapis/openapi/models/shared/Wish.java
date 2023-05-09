@@ -12,6 +12,7 @@ public class Wish {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Wish withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class Wish {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Wish withId(Long id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class Wish {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public Wish withLink(String link) {
         this.link = link;
         return this;
@@ -36,6 +39,7 @@ public class Wish {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("master_id")
     public Long masterId;
+
     public Wish withMasterId(Long masterId) {
         this.masterId = masterId;
         return this;
@@ -44,6 +48,7 @@ public class Wish {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public Wish withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -52,6 +57,7 @@ public class Wish {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Wish withTitle(String title) {
         this.title = title;
         return this;
@@ -60,9 +66,11 @@ public class Wish {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public Long userId;
+
     public Wish withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public Wish(){}
 }

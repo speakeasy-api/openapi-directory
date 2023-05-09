@@ -12,6 +12,7 @@ public class CollectionMetaOneWayCombinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flightOfferIds")
     public String[] flightOfferIds;
+
     public CollectionMetaOneWayCombinations withFlightOfferIds(String[] flightOfferIds) {
         this.flightOfferIds = flightOfferIds;
         return this;
@@ -20,9 +21,11 @@ public class CollectionMetaOneWayCombinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originDestinationId")
     public String originDestinationId;
+
     public CollectionMetaOneWayCombinations withOriginDestinationId(String originDestinationId) {
         this.originDestinationId = originDestinationId;
         return this;
     }
     
+    public CollectionMetaOneWayCombinations(){}
 }

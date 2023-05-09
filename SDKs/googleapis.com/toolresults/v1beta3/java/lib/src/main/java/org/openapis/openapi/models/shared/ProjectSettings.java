@@ -18,6 +18,7 @@ public class ProjectSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultBucket")
     public String defaultBucket;
+
     public ProjectSettings withDefaultBucket(String defaultBucket) {
         this.defaultBucket = defaultBucket;
         return this;
@@ -29,9 +30,11 @@ public class ProjectSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProjectSettings withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ProjectSettings(){}
 }

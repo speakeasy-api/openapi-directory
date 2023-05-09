@@ -18,6 +18,7 @@ public class TextExtractionEvaluationMetricsConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidenceThreshold")
     public Float confidenceThreshold;
+
     public TextExtractionEvaluationMetricsConfidenceMetricsEntry withConfidenceThreshold(Float confidenceThreshold) {
         this.confidenceThreshold = confidenceThreshold;
         return this;
@@ -29,6 +30,7 @@ public class TextExtractionEvaluationMetricsConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("f1Score")
     public Float f1Score;
+
     public TextExtractionEvaluationMetricsConfidenceMetricsEntry withF1Score(Float f1Score) {
         this.f1Score = f1Score;
         return this;
@@ -40,6 +42,7 @@ public class TextExtractionEvaluationMetricsConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precision")
     public Float precision;
+
     public TextExtractionEvaluationMetricsConfidenceMetricsEntry withPrecision(Float precision) {
         this.precision = precision;
         return this;
@@ -51,9 +54,11 @@ public class TextExtractionEvaluationMetricsConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recall")
     public Float recall;
+
     public TextExtractionEvaluationMetricsConfidenceMetricsEntry withRecall(Float recall) {
         this.recall = recall;
         return this;
     }
     
+    public TextExtractionEvaluationMetricsConfidenceMetricsEntry(){}
 }

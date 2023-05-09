@@ -58,11 +58,9 @@ public class PlatformTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingPlatformTypesGetResponse res = new org.openapis.openapi.models.operations.DfareportingPlatformTypesGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingPlatformTypesGetResponse res = new org.openapis.openapi.models.operations.DfareportingPlatformTypesGetResponse(contentType, httpRes.statusCode()) {{
             platformType = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class PlatformTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingPlatformTypesListResponse res = new org.openapis.openapi.models.operations.DfareportingPlatformTypesListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingPlatformTypesListResponse res = new org.openapis.openapi.models.operations.DfareportingPlatformTypesListResponse(contentType, httpRes.statusCode()) {{
             platformTypesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

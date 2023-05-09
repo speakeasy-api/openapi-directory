@@ -14,6 +14,7 @@ public class UpdateNetworkSiteToSiteVpnRequestBodySubnets {
      */
     @JsonProperty("localSubnet")
     public String localSubnet;
+
     public UpdateNetworkSiteToSiteVpnRequestBodySubnets withLocalSubnet(String localSubnet) {
         this.localSubnet = localSubnet;
         return this;
@@ -25,9 +26,13 @@ public class UpdateNetworkSiteToSiteVpnRequestBodySubnets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useVpn")
     public Boolean useVpn;
+
     public UpdateNetworkSiteToSiteVpnRequestBodySubnets withUseVpn(Boolean useVpn) {
         this.useVpn = useVpn;
         return this;
     }
     
+    public UpdateNetworkSiteToSiteVpnRequestBodySubnets(@JsonProperty("localSubnet") String localSubnet) {
+        this.localSubnet = localSubnet;
+  }
 }

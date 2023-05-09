@@ -18,6 +18,7 @@ public class ScheduleTerminalActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionDetails")
     public Object actionDetails;
+
     public ScheduleTerminalActionsResponse withActionDetails(Object actionDetails) {
         this.actionDetails = actionDetails;
         return this;
@@ -29,6 +30,7 @@ public class ScheduleTerminalActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public TerminalActionScheduleDetail[] items;
+
     public ScheduleTerminalActionsResponse withItems(TerminalActionScheduleDetail[] items) {
         this.items = items;
         return this;
@@ -43,6 +45,7 @@ public class ScheduleTerminalActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduledAt")
     public String scheduledAt;
+
     public ScheduleTerminalActionsResponse withScheduledAt(String scheduledAt) {
         this.scheduledAt = scheduledAt;
         return this;
@@ -54,6 +57,7 @@ public class ScheduleTerminalActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeId")
     public String storeId;
+
     public ScheduleTerminalActionsResponse withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
@@ -65,6 +69,7 @@ public class ScheduleTerminalActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terminalIds")
     public String[] terminalIds;
+
     public ScheduleTerminalActionsResponse withTerminalIds(String[] terminalIds) {
         this.terminalIds = terminalIds;
         return this;
@@ -76,6 +81,7 @@ public class ScheduleTerminalActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terminalsWithErrors")
     public java.util.Map<String, String[]> terminalsWithErrors;
+
     public ScheduleTerminalActionsResponse withTerminalsWithErrors(java.util.Map<String, String[]> terminalsWithErrors) {
         this.terminalsWithErrors = terminalsWithErrors;
         return this;
@@ -87,6 +93,7 @@ public class ScheduleTerminalActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalErrors")
     public Integer totalErrors;
+
     public ScheduleTerminalActionsResponse withTotalErrors(Integer totalErrors) {
         this.totalErrors = totalErrors;
         return this;
@@ -98,9 +105,11 @@ public class ScheduleTerminalActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalScheduled")
     public Integer totalScheduled;
+
     public ScheduleTerminalActionsResponse withTotalScheduled(Integer totalScheduled) {
         this.totalScheduled = totalScheduled;
         return this;
     }
     
+    public ScheduleTerminalActionsResponse(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Ec2AmiResource {
     @JsonProperty("AmiId")
     public String amiId;
+
     public Ec2AmiResource withAmiId(String amiId) {
         this.amiId = amiId;
         return this;
@@ -22,9 +23,13 @@ public class Ec2AmiResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnowballAmiId")
     public String snowballAmiId;
+
     public Ec2AmiResource withSnowballAmiId(String snowballAmiId) {
         this.snowballAmiId = snowballAmiId;
         return this;
     }
     
+    public Ec2AmiResource(@JsonProperty("AmiId") String amiId) {
+        this.amiId = amiId;
+  }
 }

@@ -18,6 +18,7 @@ public class EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleIntRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max")
     public String max;
+
     public EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleIntRange withMax(String max) {
         this.max = max;
         return this;
@@ -29,9 +30,11 @@ public class EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleIntRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min")
     public String min;
+
     public EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleIntRange withMin(String min) {
         this.min = min;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleIntRange(){}
 }

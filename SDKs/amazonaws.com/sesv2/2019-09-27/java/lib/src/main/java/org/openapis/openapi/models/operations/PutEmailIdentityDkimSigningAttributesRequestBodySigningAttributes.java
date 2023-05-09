@@ -15,6 +15,7 @@ public class PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainSigningPrivateKey")
     public String domainSigningPrivateKey;
+
     public PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributes withDomainSigningPrivateKey(String domainSigningPrivateKey) {
         this.domainSigningPrivateKey = domainSigningPrivateKey;
         return this;
@@ -23,6 +24,7 @@ public class PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainSigningSelector")
     public String domainSigningSelector;
+
     public PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributes withDomainSigningSelector(String domainSigningSelector) {
         this.domainSigningSelector = domainSigningSelector;
         return this;
@@ -31,9 +33,11 @@ public class PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextSigningKeyLength")
     public org.openapis.openapi.models.shared.DkimSigningKeyLengthEnum nextSigningKeyLength;
+
     public PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributes withNextSigningKeyLength(org.openapis.openapi.models.shared.DkimSigningKeyLengthEnum nextSigningKeyLength) {
         this.nextSigningKeyLength = nextSigningKeyLength;
         return this;
     }
     
+    public PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributes(){}
 }

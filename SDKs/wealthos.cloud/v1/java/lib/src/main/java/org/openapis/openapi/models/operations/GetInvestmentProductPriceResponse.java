@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInvestmentProductPriceResponse {
     
     public String contentType;
+
     public GetInvestmentProductPriceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetInvestmentProductPriceResponse {
     
     
     public Integer statusCode;
+
     public GetInvestmentProductPriceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetInvestmentProductPriceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInvestmentProductPriceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetInvestmentProductPriceResponse {
      */
     
     public GetInvestmentProductPrice200ApplicationJSON getInvestmentProductPrice200ApplicationJSONObject;
+
     public GetInvestmentProductPriceResponse withGetInvestmentProductPrice200ApplicationJSONObject(GetInvestmentProductPrice200ApplicationJSON getInvestmentProductPrice200ApplicationJSONObject) {
         this.getInvestmentProductPrice200ApplicationJSONObject = getInvestmentProductPrice200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetInvestmentProductPriceResponse {
      */
     
     public GetInvestmentProductPrice401ApplicationJSON getInvestmentProductPrice401ApplicationJSONObject;
+
     public GetInvestmentProductPriceResponse withGetInvestmentProductPrice401ApplicationJSONObject(GetInvestmentProductPrice401ApplicationJSON getInvestmentProductPrice401ApplicationJSONObject) {
         this.getInvestmentProductPrice401ApplicationJSONObject = getInvestmentProductPrice401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetInvestmentProductPriceResponse {
      */
     
     public GetInvestmentProductPrice403ApplicationJSON getInvestmentProductPrice403ApplicationJSONObject;
+
     public GetInvestmentProductPriceResponse withGetInvestmentProductPrice403ApplicationJSONObject(GetInvestmentProductPrice403ApplicationJSON getInvestmentProductPrice403ApplicationJSONObject) {
         this.getInvestmentProductPrice403ApplicationJSONObject = getInvestmentProductPrice403ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetInvestmentProductPriceResponse {
      */
     
     public GetInvestmentProductPrice404ApplicationJSON getInvestmentProductPrice404ApplicationJSONObject;
+
     public GetInvestmentProductPriceResponse withGetInvestmentProductPrice404ApplicationJSONObject(GetInvestmentProductPrice404ApplicationJSON getInvestmentProductPrice404ApplicationJSONObject) {
         this.getInvestmentProductPrice404ApplicationJSONObject = getInvestmentProductPrice404ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetInvestmentProductPriceResponse {
      */
     
     public GetInvestmentProductPrice429ApplicationJSON getInvestmentProductPrice429ApplicationJSONObject;
+
     public GetInvestmentProductPriceResponse withGetInvestmentProductPrice429ApplicationJSONObject(GetInvestmentProductPrice429ApplicationJSON getInvestmentProductPrice429ApplicationJSONObject) {
         this.getInvestmentProductPrice429ApplicationJSONObject = getInvestmentProductPrice429ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class GetInvestmentProductPriceResponse {
      */
     
     public GetInvestmentProductPrice500ApplicationJSON getInvestmentProductPrice500ApplicationJSONObject;
+
     public GetInvestmentProductPriceResponse withGetInvestmentProductPrice500ApplicationJSONObject(GetInvestmentProductPrice500ApplicationJSON getInvestmentProductPrice500ApplicationJSONObject) {
         this.getInvestmentProductPrice500ApplicationJSONObject = getInvestmentProductPrice500ApplicationJSONObject;
         return this;
     }
     
+    public GetInvestmentProductPriceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

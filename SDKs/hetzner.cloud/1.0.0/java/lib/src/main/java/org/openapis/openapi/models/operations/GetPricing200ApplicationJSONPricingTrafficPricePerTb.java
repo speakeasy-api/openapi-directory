@@ -12,6 +12,7 @@ public class GetPricing200ApplicationJSONPricingTrafficPricePerTb {
      */
     @JsonProperty("gross")
     public String gross;
+
     public GetPricing200ApplicationJSONPricingTrafficPricePerTb withGross(String gross) {
         this.gross = gross;
         return this;
@@ -22,9 +23,14 @@ public class GetPricing200ApplicationJSONPricingTrafficPricePerTb {
      */
     @JsonProperty("net")
     public String net;
+
     public GetPricing200ApplicationJSONPricingTrafficPricePerTb withNet(String net) {
         this.net = net;
         return this;
     }
     
+    public GetPricing200ApplicationJSONPricingTrafficPricePerTb(@JsonProperty("gross") String gross, @JsonProperty("net") String net) {
+        this.gross = gross;
+        this.net = net;
+  }
 }

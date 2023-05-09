@@ -18,6 +18,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Project withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Project withKind(String kind) {
         this.kind = kind;
         return this;
@@ -37,6 +39,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public Project withNumber(String number) {
         this.number = number;
         return this;
@@ -48,9 +51,11 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quota")
     public Quota quota;
+
     public Project withQuota(Quota quota) {
         this.quota = quota;
         return this;
     }
     
+    public Project(){}
 }

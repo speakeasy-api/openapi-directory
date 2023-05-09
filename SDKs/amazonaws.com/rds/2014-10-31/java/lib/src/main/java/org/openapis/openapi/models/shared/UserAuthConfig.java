@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UserAuthConfig {
     
     public AuthSchemeEnum authScheme;
+
     public UserAuthConfig withAuthScheme(AuthSchemeEnum authScheme) {
         this.authScheme = authScheme;
         return this;
@@ -19,6 +20,7 @@ public class UserAuthConfig {
     
     
     public ClientPasswordAuthTypeEnum clientPasswordAuthType;
+
     public UserAuthConfig withClientPasswordAuthType(ClientPasswordAuthTypeEnum clientPasswordAuthType) {
         this.clientPasswordAuthType = clientPasswordAuthType;
         return this;
@@ -26,6 +28,7 @@ public class UserAuthConfig {
     
     
     public String description;
+
     public UserAuthConfig withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class UserAuthConfig {
     
     
     public IAMAuthModeEnum iamAuth;
+
     public UserAuthConfig withIAMAuth(IAMAuthModeEnum iamAuth) {
         this.iamAuth = iamAuth;
         return this;
@@ -40,6 +44,7 @@ public class UserAuthConfig {
     
     
     public String secretArn;
+
     public UserAuthConfig withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -47,9 +52,11 @@ public class UserAuthConfig {
     
     
     public String userName;
+
     public UserAuthConfig withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public UserAuthConfig(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchUserAccountsUserAccountIdRequest {
@@ -12,6 +13,7 @@ public class PatchUserAccountsUserAccountIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
     public String customData;
+
     public PatchUserAccountsUserAccountIdRequest withCustomData(String customData) {
         this.customData = customData;
         return this;
@@ -22,6 +24,7 @@ public class PatchUserAccountsUserAccountIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public PatchUserAccountsUserAccountIdRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -32,6 +35,7 @@ public class PatchUserAccountsUserAccountIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public PatchUserAccountsUserAccountIdRequest withName(String name) {
         this.name = name;
         return this;
@@ -42,6 +46,7 @@ public class PatchUserAccountsUserAccountIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userAccountId")
     public String userAccountId;
+
     public PatchUserAccountsUserAccountIdRequest withUserAccountId(String userAccountId) {
         this.userAccountId = userAccountId;
         return this;
@@ -52,9 +57,14 @@ public class PatchUserAccountsUserAccountIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
     public String userId;
+
     public PatchUserAccountsUserAccountIdRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public PatchUserAccountsUserAccountIdRequest(@JsonProperty("userAccountId") String userAccountId, @JsonProperty("userId") String userId) {
+        this.userAccountId = userAccountId;
+        this.userId = userId;
+  }
 }

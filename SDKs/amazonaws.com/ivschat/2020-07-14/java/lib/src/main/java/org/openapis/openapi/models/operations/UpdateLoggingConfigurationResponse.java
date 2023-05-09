@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateLoggingConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateLoggingConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateLoggingConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateLoggingConfigurationResponse {
      */
     
     public Object conflictException;
+
     public UpdateLoggingConfigurationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateLoggingConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateLoggingConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateLoggingConfigurationResponse {
      */
     
     public Object pendingVerification;
+
     public UpdateLoggingConfigurationResponse withPendingVerification(Object pendingVerification) {
         this.pendingVerification = pendingVerification;
         return this;
@@ -49,6 +54,7 @@ public class UpdateLoggingConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateLoggingConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateLoggingConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateLoggingConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateLoggingConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateLoggingConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateLoggingConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateLoggingConfigurationResponse updateLoggingConfigurationResponse;
+
     public UpdateLoggingConfigurationResponse withUpdateLoggingConfigurationResponse(org.openapis.openapi.models.shared.UpdateLoggingConfigurationResponse updateLoggingConfigurationResponse) {
         this.updateLoggingConfigurationResponse = updateLoggingConfigurationResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateLoggingConfigurationResponse {
      */
     
     public Object validationException;
+
     public UpdateLoggingConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateLoggingConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

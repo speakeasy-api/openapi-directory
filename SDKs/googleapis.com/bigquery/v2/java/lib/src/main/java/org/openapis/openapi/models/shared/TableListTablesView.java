@@ -18,9 +18,11 @@ public class TableListTablesView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useLegacySql")
     public Boolean useLegacySql;
+
     public TableListTablesView withUseLegacySql(Boolean useLegacySql) {
         this.useLegacySql = useLegacySql;
         return this;
     }
     
+    public TableListTablesView(){}
 }

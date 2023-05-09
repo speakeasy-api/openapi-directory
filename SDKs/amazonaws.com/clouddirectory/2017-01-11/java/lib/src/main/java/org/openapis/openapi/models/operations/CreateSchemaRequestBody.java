@@ -12,9 +12,13 @@ public class CreateSchemaRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public CreateSchemaRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateSchemaRequestBody(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

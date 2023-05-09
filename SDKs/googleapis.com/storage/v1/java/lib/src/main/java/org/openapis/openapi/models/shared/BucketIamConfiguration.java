@@ -18,6 +18,7 @@ public class BucketIamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketPolicyOnly")
     public BucketIamConfigurationBucketPolicyOnly bucketPolicyOnly;
+
     public BucketIamConfiguration withBucketPolicyOnly(BucketIamConfigurationBucketPolicyOnly bucketPolicyOnly) {
         this.bucketPolicyOnly = bucketPolicyOnly;
         return this;
@@ -29,6 +30,7 @@ public class BucketIamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicAccessPrevention")
     public String publicAccessPrevention;
+
     public BucketIamConfiguration withPublicAccessPrevention(String publicAccessPrevention) {
         this.publicAccessPrevention = publicAccessPrevention;
         return this;
@@ -40,9 +42,11 @@ public class BucketIamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uniformBucketLevelAccess")
     public BucketIamConfigurationUniformBucketLevelAccess uniformBucketLevelAccess;
+
     public BucketIamConfiguration withUniformBucketLevelAccess(BucketIamConfigurationUniformBucketLevelAccess uniformBucketLevelAccess) {
         this.uniformBucketLevelAccess = uniformBucketLevelAccess;
         return this;
     }
     
+    public BucketIamConfiguration(){}
 }

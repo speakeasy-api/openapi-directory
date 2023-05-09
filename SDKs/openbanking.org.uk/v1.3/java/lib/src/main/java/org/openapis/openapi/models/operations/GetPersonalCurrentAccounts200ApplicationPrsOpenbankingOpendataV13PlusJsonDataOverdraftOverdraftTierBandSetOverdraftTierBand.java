@@ -18,6 +18,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EAR")
     public String ear;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBand withEar(String ear) {
         this.ear = ear;
         return this;
@@ -26,6 +27,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeesAndCharges")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndCharges[] feesAndCharges;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBand withFeesAndCharges(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndCharges[] feesAndCharges) {
         this.feesAndCharges = feesAndCharges;
         return this;
@@ -37,6 +39,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notes")
     public String notes;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBand withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -48,6 +51,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TierBandIdentification")
     public String tierBandIdentification;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBand withTierBandIdentification(String tierBandIdentification) {
         this.tierBandIdentification = tierBandIdentification;
         return this;
@@ -58,6 +62,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("TierValueMaximum")
     public String tierValueMaximum;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBand withTierValueMaximum(String tierValueMaximum) {
         this.tierValueMaximum = tierValueMaximum;
         return this;
@@ -68,9 +73,14 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("TierValueMinimum")
     public String tierValueMinimum;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBand withTierValueMinimum(String tierValueMinimum) {
         this.tierValueMinimum = tierValueMinimum;
         return this;
     }
     
+    public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraftOverdraftTierBandSetOverdraftTierBand(@JsonProperty("TierValueMaximum") String tierValueMaximum, @JsonProperty("TierValueMinimum") String tierValueMinimum) {
+        this.tierValueMaximum = tierValueMaximum;
+        this.tierValueMinimum = tierValueMinimum;
+  }
 }

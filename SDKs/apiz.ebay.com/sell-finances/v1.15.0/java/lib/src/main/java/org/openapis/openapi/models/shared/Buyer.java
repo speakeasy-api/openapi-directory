@@ -18,9 +18,11 @@ public class Buyer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public Buyer withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public Buyer(){}
 }

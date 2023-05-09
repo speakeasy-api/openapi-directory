@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMailboxPermissionsResponse {
     
     public String contentType;
+
     public DeleteMailboxPermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteMailboxPermissionsResponse {
      */
     
     public java.util.Map<String, Object> deleteMailboxPermissionsResponse;
+
     public DeleteMailboxPermissionsResponse withDeleteMailboxPermissionsResponse(java.util.Map<String, Object> deleteMailboxPermissionsResponse) {
         this.deleteMailboxPermissionsResponse = deleteMailboxPermissionsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteMailboxPermissionsResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeleteMailboxPermissionsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteMailboxPermissionsResponse {
      */
     
     public Object entityStateException;
+
     public DeleteMailboxPermissionsResponse withEntityStateException(Object entityStateException) {
         this.entityStateException = entityStateException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteMailboxPermissionsResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteMailboxPermissionsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteMailboxPermissionsResponse {
      */
     
     public Object organizationNotFoundException;
+
     public DeleteMailboxPermissionsResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteMailboxPermissionsResponse {
      */
     
     public Object organizationStateException;
+
     public DeleteMailboxPermissionsResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteMailboxPermissionsResponse {
     
     
     public Integer statusCode;
+
     public DeleteMailboxPermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteMailboxPermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMailboxPermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteMailboxPermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

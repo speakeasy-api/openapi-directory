@@ -12,9 +12,11 @@ public class ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponses
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefaultContentApplicationJsonSchema schema;
+
     public ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefaultContentApplicationJson withSchema(ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefaultContentApplicationJsonSchema schema) {
         this.schema = schema;
         return this;
     }
     
+    public ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefaultContentApplicationJson(){}
 }

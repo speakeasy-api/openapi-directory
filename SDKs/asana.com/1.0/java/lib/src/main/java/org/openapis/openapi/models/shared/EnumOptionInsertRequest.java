@@ -15,6 +15,7 @@ public class EnumOptionInsertRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("after_enum_option")
     public String afterEnumOption;
+
     public EnumOptionInsertRequest withAfterEnumOption(String afterEnumOption) {
         this.afterEnumOption = afterEnumOption;
         return this;
@@ -26,6 +27,7 @@ public class EnumOptionInsertRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("before_enum_option")
     public String beforeEnumOption;
+
     public EnumOptionInsertRequest withBeforeEnumOption(String beforeEnumOption) {
         this.beforeEnumOption = beforeEnumOption;
         return this;
@@ -36,9 +38,13 @@ public class EnumOptionInsertRequest {
      */
     @JsonProperty("enum_option")
     public String enumOption;
+
     public EnumOptionInsertRequest withEnumOption(String enumOption) {
         this.enumOption = enumOption;
         return this;
     }
     
+    public EnumOptionInsertRequest(@JsonProperty("enum_option") String enumOption) {
+        this.enumOption = enumOption;
+  }
 }

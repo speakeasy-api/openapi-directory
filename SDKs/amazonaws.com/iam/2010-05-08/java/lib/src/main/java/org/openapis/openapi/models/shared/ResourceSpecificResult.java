@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ResourceSpecificResult - &lt;p&gt;Contains the result of the simulation of a single API operation call on a single resource.&lt;/p&gt; &lt;p&gt;This data type is used by a member of the &lt;a&gt;EvaluationResult&lt;/a&gt; data type.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ResourceSpecificResult {
     
     public java.util.Map<String, PolicyEvaluationDecisionTypeEnum> evalDecisionDetails;
+
     public ResourceSpecificResult withEvalDecisionDetails(java.util.Map<String, PolicyEvaluationDecisionTypeEnum> evalDecisionDetails) {
         this.evalDecisionDetails = evalDecisionDetails;
         return this;
@@ -19,6 +20,7 @@ public class ResourceSpecificResult {
     
     
     public PolicyEvaluationDecisionTypeEnum evalResourceDecision;
+
     public ResourceSpecificResult withEvalResourceDecision(PolicyEvaluationDecisionTypeEnum evalResourceDecision) {
         this.evalResourceDecision = evalResourceDecision;
         return this;
@@ -26,6 +28,7 @@ public class ResourceSpecificResult {
     
     
     public String evalResourceName;
+
     public ResourceSpecificResult withEvalResourceName(String evalResourceName) {
         this.evalResourceName = evalResourceName;
         return this;
@@ -33,6 +36,7 @@ public class ResourceSpecificResult {
     
     
     public Statement[] matchedStatements;
+
     public ResourceSpecificResult withMatchedStatements(Statement[] matchedStatements) {
         this.matchedStatements = matchedStatements;
         return this;
@@ -40,6 +44,7 @@ public class ResourceSpecificResult {
     
     
     public String[] missingContextValues;
+
     public ResourceSpecificResult withMissingContextValues(String[] missingContextValues) {
         this.missingContextValues = missingContextValues;
         return this;
@@ -47,9 +52,14 @@ public class ResourceSpecificResult {
     
     
     public PermissionsBoundaryDecisionDetail permissionsBoundaryDecisionDetail;
+
     public ResourceSpecificResult withPermissionsBoundaryDecisionDetail(PermissionsBoundaryDecisionDetail permissionsBoundaryDecisionDetail) {
         this.permissionsBoundaryDecisionDetail = permissionsBoundaryDecisionDetail;
         return this;
     }
     
+    public ResourceSpecificResult(@JsonProperty("EvalResourceDecision") PolicyEvaluationDecisionTypeEnum evalResourceDecision, @JsonProperty("EvalResourceName") String evalResourceName) {
+        this.evalResourceDecision = evalResourceDecision;
+        this.evalResourceName = evalResourceName;
+  }
 }

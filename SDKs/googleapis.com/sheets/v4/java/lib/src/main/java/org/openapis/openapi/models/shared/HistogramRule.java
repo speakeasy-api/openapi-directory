@@ -18,6 +18,7 @@ public class HistogramRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public Double end;
+
     public HistogramRule withEnd(Double end) {
         this.end = end;
         return this;
@@ -29,6 +30,7 @@ public class HistogramRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     public Double interval;
+
     public HistogramRule withInterval(Double interval) {
         this.interval = interval;
         return this;
@@ -40,9 +42,11 @@ public class HistogramRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public Double start;
+
     public HistogramRule withStart(Double start) {
         this.start = start;
         return this;
     }
     
+    public HistogramRule(){}
 }

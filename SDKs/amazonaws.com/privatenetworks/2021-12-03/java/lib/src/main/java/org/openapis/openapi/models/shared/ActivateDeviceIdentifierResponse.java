@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActivateDeviceIdentifierResponse {
     @JsonProperty("deviceIdentifier")
     public DeviceIdentifier deviceIdentifier;
+
     public ActivateDeviceIdentifierResponse withDeviceIdentifier(DeviceIdentifier deviceIdentifier) {
         this.deviceIdentifier = deviceIdentifier;
         return this;
@@ -22,9 +23,13 @@ public class ActivateDeviceIdentifierResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ActivateDeviceIdentifierResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public ActivateDeviceIdentifierResponse(@JsonProperty("deviceIdentifier") DeviceIdentifier deviceIdentifier) {
+        this.deviceIdentifier = deviceIdentifier;
+  }
 }

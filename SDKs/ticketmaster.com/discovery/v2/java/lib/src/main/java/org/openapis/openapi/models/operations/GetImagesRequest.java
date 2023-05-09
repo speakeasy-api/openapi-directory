@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImagesRequest {
@@ -12,6 +13,7 @@ public class GetImagesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetImagesRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class GetImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLicensedContent")
     public GetImagesIncludeLicensedContentEnum includeLicensedContent;
+
     public GetImagesRequest withIncludeLicensedContent(GetImagesIncludeLicensedContentEnum includeLicensedContent) {
         this.includeLicensedContent = includeLicensedContent;
         return this;
@@ -32,9 +35,13 @@ public class GetImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public GetImagesRequest withLocale(String locale) {
         this.locale = locale;
         return this;
     }
     
+    public GetImagesRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

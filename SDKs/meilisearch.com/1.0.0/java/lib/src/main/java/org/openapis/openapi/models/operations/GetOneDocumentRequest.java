@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetOneDocumentRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public GetOneDocumentRequest withFields(String fields) {
         this.fields = fields;
         return this;
     }
     
+    public GetOneDocumentRequest(){}
 }

@@ -55,4 +55,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/HTTPValidationError.java
 lib/src/main/java/org/openapis/openapi/models/shared/ValidationError.java
 lib/src/main/java/org/openapis/openapi/models/shared/SerpData.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileUri")
     public String fileUri;
+
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia withFileUri(String fileUri) {
         this.fileUri = fileUri;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeightEnum height;
+
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia withHeight(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeightEnum height) {
         this.height = height;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailUri")
     public String thumbnailUri;
+
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia withThumbnailUri(String thumbnailUri) {
         this.thumbnailUri = thumbnailUri;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia(){}
 }

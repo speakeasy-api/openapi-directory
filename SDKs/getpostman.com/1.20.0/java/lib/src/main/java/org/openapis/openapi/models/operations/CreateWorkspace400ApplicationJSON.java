@@ -15,9 +15,11 @@ public class CreateWorkspace400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public CreateWorkspace400ApplicationJSONError error;
+
     public CreateWorkspace400ApplicationJSON withError(CreateWorkspace400ApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public CreateWorkspace400ApplicationJSON(){}
 }

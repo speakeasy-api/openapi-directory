@@ -15,6 +15,7 @@ public class RelatedWorkspaceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public RelatedWorkspaceProperties withRegion(String region) {
         this.region = region;
         return this;
@@ -23,6 +24,7 @@ public class RelatedWorkspaceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public WorkspaceStateEnum state;
+
     public RelatedWorkspaceProperties withState(WorkspaceStateEnum state) {
         this.state = state;
         return this;
@@ -31,6 +33,7 @@ public class RelatedWorkspaceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public StandbyWorkspaceRelationshipTypeEnum type;
+
     public RelatedWorkspaceProperties withType(StandbyWorkspaceRelationshipTypeEnum type) {
         this.type = type;
         return this;
@@ -39,9 +42,11 @@ public class RelatedWorkspaceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkspaceId")
     public String workspaceId;
+
     public RelatedWorkspaceProperties withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public RelatedWorkspaceProperties(){}
 }

@@ -12,6 +12,7 @@ public class TeamDepthChart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Defense")
     public DepthChart[] defense;
+
     public TeamDepthChart withDefense(DepthChart[] defense) {
         this.defense = defense;
         return this;
@@ -20,6 +21,7 @@ public class TeamDepthChart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Offense")
     public DepthChart[] offense;
+
     public TeamDepthChart withOffense(DepthChart[] offense) {
         this.offense = offense;
         return this;
@@ -28,6 +30,7 @@ public class TeamDepthChart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpecialTeams")
     public DepthChart[] specialTeams;
+
     public TeamDepthChart withSpecialTeams(DepthChart[] specialTeams) {
         this.specialTeams = specialTeams;
         return this;
@@ -36,9 +39,11 @@ public class TeamDepthChart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamID")
     public Long teamID;
+
     public TeamDepthChart withTeamID(Long teamID) {
         this.teamID = teamID;
         return this;
     }
     
+    public TeamDepthChart(){}
 }

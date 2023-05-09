@@ -15,6 +15,7 @@ public class ListFindingsRequestBodySortCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeName")
     public String attributeName;
+
     public ListFindingsRequestBodySortCriteria withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -23,9 +24,11 @@ public class ListFindingsRequestBodySortCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderBy")
     public org.openapis.openapi.models.shared.OrderByEnum orderBy;
+
     public ListFindingsRequestBodySortCriteria withOrderBy(org.openapis.openapi.models.shared.OrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
     }
     
+    public ListFindingsRequestBodySortCriteria(){}
 }

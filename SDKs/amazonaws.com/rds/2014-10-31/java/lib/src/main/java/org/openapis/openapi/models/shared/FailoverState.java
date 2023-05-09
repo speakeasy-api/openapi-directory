@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class FailoverState {
     
     public String fromDbClusterArn;
+
     public FailoverState withFromDbClusterArn(String fromDbClusterArn) {
         this.fromDbClusterArn = fromDbClusterArn;
         return this;
@@ -19,6 +20,7 @@ public class FailoverState {
     
     
     public FailoverStatusEnum status;
+
     public FailoverState withStatus(FailoverStatusEnum status) {
         this.status = status;
         return this;
@@ -26,9 +28,11 @@ public class FailoverState {
     
     
     public String toDbClusterArn;
+
     public FailoverState withToDbClusterArn(String toDbClusterArn) {
         this.toDbClusterArn = toDbClusterArn;
         return this;
     }
     
+    public FailoverState(){}
 }

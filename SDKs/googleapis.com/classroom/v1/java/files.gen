@@ -388,4 +388,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/GuardianInvitation.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListGuardianInvitationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Guardian.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListGuardiansResponse.java
+docs/sdk/README.md
+docs/courses/README.md
+docs/invitations/README.md
+docs/registrations/README.md
+docs/userprofiles/README.md
 USAGE.md

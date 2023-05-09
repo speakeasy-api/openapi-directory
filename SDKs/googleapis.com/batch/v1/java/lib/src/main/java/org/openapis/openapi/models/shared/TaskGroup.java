@@ -18,6 +18,7 @@ public class TaskGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TaskGroup withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class TaskGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parallelism")
     public String parallelism;
+
     public TaskGroup withParallelism(String parallelism) {
         this.parallelism = parallelism;
         return this;
@@ -40,6 +42,7 @@ public class TaskGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissiveSsh")
     public Boolean permissiveSsh;
+
     public TaskGroup withPermissiveSsh(Boolean permissiveSsh) {
         this.permissiveSsh = permissiveSsh;
         return this;
@@ -51,6 +54,7 @@ public class TaskGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requireHostsFile")
     public Boolean requireHostsFile;
+
     public TaskGroup withRequireHostsFile(Boolean requireHostsFile) {
         this.requireHostsFile = requireHostsFile;
         return this;
@@ -62,6 +66,7 @@ public class TaskGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskCount")
     public String taskCount;
+
     public TaskGroup withTaskCount(String taskCount) {
         this.taskCount = taskCount;
         return this;
@@ -73,6 +78,7 @@ public class TaskGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskCountPerNode")
     public String taskCountPerNode;
+
     public TaskGroup withTaskCountPerNode(String taskCountPerNode) {
         this.taskCountPerNode = taskCountPerNode;
         return this;
@@ -84,6 +90,7 @@ public class TaskGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskEnvironments")
     public Environment[] taskEnvironments;
+
     public TaskGroup withTaskEnvironments(Environment[] taskEnvironments) {
         this.taskEnvironments = taskEnvironments;
         return this;
@@ -95,9 +102,11 @@ public class TaskGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskSpec")
     public TaskSpec taskSpec;
+
     public TaskGroup withTaskSpec(TaskSpec taskSpec) {
         this.taskSpec = taskSpec;
         return this;
     }
     
+    public TaskGroup(){}
 }

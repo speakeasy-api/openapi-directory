@@ -18,6 +18,7 @@ public class AppLinkedAppInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appStoreId")
     public String appStoreId;
+
     public AppLinkedAppInfo withAppStoreId(String appStoreId) {
         this.appStoreId = appStoreId;
         return this;
@@ -29,9 +30,11 @@ public class AppLinkedAppInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public AppLinkedAppInfo withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public AppLinkedAppInfo(){}
 }

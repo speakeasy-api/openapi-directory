@@ -57,10 +57,8 @@ public class TypeTypeServiceLink {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTypeServiceLinkResponse res = new org.openapis.openapi.models.operations.SearchTypeServiceLinkResponse() {{
+        org.openapis.openapi.models.operations.SearchTypeServiceLinkResponse res = new org.openapis.openapi.models.operations.SearchTypeServiceLinkResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

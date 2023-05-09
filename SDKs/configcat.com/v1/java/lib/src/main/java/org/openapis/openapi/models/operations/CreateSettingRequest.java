@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSettingRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateSettingInitialValues createSettingInitialValues;
+
     public CreateSettingRequest withCreateSettingInitialValues(org.openapis.openapi.models.shared.CreateSettingInitialValues createSettingInitialValues) {
         this.createSettingInitialValues = createSettingInitialValues;
         return this;
@@ -19,9 +21,14 @@ public class CreateSettingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=configId")
     public String configId;
+
     public CreateSettingRequest withConfigId(String configId) {
         this.configId = configId;
         return this;
     }
     
+    public CreateSettingRequest(@JsonProperty("CreateSettingInitialValues") org.openapis.openapi.models.shared.CreateSettingInitialValues createSettingInitialValues, @JsonProperty("configId") String configId) {
+        this.createSettingInitialValues = createSettingInitialValues;
+        this.configId = configId;
+  }
 }

@@ -15,6 +15,7 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostArn")
     public String hostArn;
+
     public Host withHostArn(String hostArn) {
         this.hostArn = hostArn;
         return this;
@@ -23,6 +24,7 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Host withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderEndpoint")
     public String providerEndpoint;
+
     public Host withProviderEndpoint(String providerEndpoint) {
         this.providerEndpoint = providerEndpoint;
         return this;
@@ -39,6 +42,7 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderType")
     public ProviderTypeEnum providerType;
+
     public Host withProviderType(ProviderTypeEnum providerType) {
         this.providerType = providerType;
         return this;
@@ -47,6 +51,7 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public Host withStatus(String status) {
         this.status = status;
         return this;
@@ -55,6 +60,7 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public Host withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -63,9 +69,11 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfiguration")
     public VpcConfiguration vpcConfiguration;
+
     public Host withVpcConfiguration(VpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
     }
     
+    public Host(){}
 }

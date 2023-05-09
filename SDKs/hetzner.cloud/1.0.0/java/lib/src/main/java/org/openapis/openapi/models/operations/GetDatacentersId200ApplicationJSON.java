@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDatacentersId200ApplicationJSON {
     @JsonProperty("datacenter")
     public GetDatacentersId200ApplicationJSONDatacenter datacenter;
+
     public GetDatacentersId200ApplicationJSON withDatacenter(GetDatacentersId200ApplicationJSONDatacenter datacenter) {
         this.datacenter = datacenter;
         return this;
     }
     
+    public GetDatacentersId200ApplicationJSON(@JsonProperty("datacenter") GetDatacentersId200ApplicationJSONDatacenter datacenter) {
+        this.datacenter = datacenter;
+  }
 }

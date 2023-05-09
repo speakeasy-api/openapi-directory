@@ -22,6 +22,7 @@ public class GetPortfolioTemplate200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public GetPortfolioTemplate200ApplicationJSON withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class GetPortfolioTemplate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public GetPortfolioTemplate200ApplicationJSON withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -37,6 +39,7 @@ public class GetPortfolioTemplate200ApplicationJSON {
     
     @JsonProperty("portfolio_name")
     public String portfolioName;
+
     public GetPortfolioTemplate200ApplicationJSON withPortfolioName(String portfolioName) {
         this.portfolioName = portfolioName;
         return this;
@@ -47,6 +50,7 @@ public class GetPortfolioTemplate200ApplicationJSON {
      */
     @JsonProperty("portfolio_template_id")
     public String portfolioTemplateId;
+
     public GetPortfolioTemplate200ApplicationJSON withPortfolioTemplateId(String portfolioTemplateId) {
         this.portfolioTemplateId = portfolioTemplateId;
         return this;
@@ -54,6 +58,7 @@ public class GetPortfolioTemplate200ApplicationJSON {
     
     @JsonProperty("ratios")
     public GetPortfolioTemplate200ApplicationJSONRatios[] ratios;
+
     public GetPortfolioTemplate200ApplicationJSON withRatios(GetPortfolioTemplate200ApplicationJSONRatios[] ratios) {
         this.ratios = ratios;
         return this;
@@ -61,6 +66,7 @@ public class GetPortfolioTemplate200ApplicationJSON {
     
     @JsonProperty("reference_version")
     public Long referenceVersion;
+
     public GetPortfolioTemplate200ApplicationJSON withReferenceVersion(Long referenceVersion) {
         this.referenceVersion = referenceVersion;
         return this;
@@ -71,9 +77,16 @@ public class GetPortfolioTemplate200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public GetPortfolioTemplate200ApplicationJSON withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetPortfolioTemplate200ApplicationJSON(@JsonProperty("portfolio_name") String portfolioName, @JsonProperty("portfolio_template_id") String portfolioTemplateId, @JsonProperty("ratios") GetPortfolioTemplate200ApplicationJSONRatios[] ratios, @JsonProperty("reference_version") Long referenceVersion) {
+        this.portfolioName = portfolioName;
+        this.portfolioTemplateId = portfolioTemplateId;
+        this.ratios = ratios;
+        this.referenceVersion = referenceVersion;
+  }
 }

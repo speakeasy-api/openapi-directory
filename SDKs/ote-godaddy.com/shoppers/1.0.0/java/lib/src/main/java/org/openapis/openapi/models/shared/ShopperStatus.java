@@ -18,9 +18,11 @@ public class ShopperStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingState")
     public ShopperStatusBillingStateEnum billingState;
+
     public ShopperStatus withBillingState(ShopperStatusBillingStateEnum billingState) {
         this.billingState = billingState;
         return this;
     }
     
+    public ShopperStatus(){}
 }

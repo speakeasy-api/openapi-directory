@@ -12,6 +12,7 @@ public class PostLoadBalancersIdActionsDeleteServiceActionResponseActionResource
      */
     @JsonProperty("id")
     public Long id;
+
     public PostLoadBalancersIdActionsDeleteServiceActionResponseActionResources withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +23,14 @@ public class PostLoadBalancersIdActionsDeleteServiceActionResponseActionResource
      */
     @JsonProperty("type")
     public String type;
+
     public PostLoadBalancersIdActionsDeleteServiceActionResponseActionResources withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PostLoadBalancersIdActionsDeleteServiceActionResponseActionResources(@JsonProperty("id") Long id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

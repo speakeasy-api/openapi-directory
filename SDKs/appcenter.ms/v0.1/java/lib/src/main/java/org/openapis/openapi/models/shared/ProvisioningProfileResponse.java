@@ -18,6 +18,7 @@ public class ProvisioningProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appex_profiles")
     public ProvisioningProfileResponse[] appexProfiles;
+
     public ProvisioningProfileResponse withAppexProfiles(ProvisioningProfileResponse[] appexProfiles) {
         this.appexProfiles = appexProfiles;
         return this;
@@ -29,6 +30,7 @@ public class ProvisioningProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioning_bundle_id")
     public String provisioningBundleId;
+
     public ProvisioningProfileResponse withProvisioningBundleId(String provisioningBundleId) {
         this.provisioningBundleId = provisioningBundleId;
         return this;
@@ -40,6 +42,7 @@ public class ProvisioningProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioning_profile_name")
     public String provisioningProfileName;
+
     public ProvisioningProfileResponse withProvisioningProfileName(String provisioningProfileName) {
         this.provisioningProfileName = provisioningProfileName;
         return this;
@@ -47,6 +50,7 @@ public class ProvisioningProfileResponse {
     
     @JsonProperty("provisioning_profile_type")
     public ProvisioningProfileResponseProvisioningProfileTypeEnum provisioningProfileType;
+
     public ProvisioningProfileResponse withProvisioningProfileType(ProvisioningProfileResponseProvisioningProfileTypeEnum provisioningProfileType) {
         this.provisioningProfileType = provisioningProfileType;
         return this;
@@ -58,6 +62,7 @@ public class ProvisioningProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_identifier")
     public String teamIdentifier;
+
     public ProvisioningProfileResponse withTeamIdentifier(String teamIdentifier) {
         this.teamIdentifier = teamIdentifier;
         return this;
@@ -66,9 +71,13 @@ public class ProvisioningProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("udids")
     public String[] udids;
+
     public ProvisioningProfileResponse withUdids(String[] udids) {
         this.udids = udids;
         return this;
     }
     
+    public ProvisioningProfileResponse(@JsonProperty("provisioning_profile_type") ProvisioningProfileResponseProvisioningProfileTypeEnum provisioningProfileType) {
+        this.provisioningProfileType = provisioningProfileType;
+  }
 }

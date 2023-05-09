@@ -12,6 +12,7 @@ public class GetGeocodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=debug")
     public Boolean debug;
+
     public GetGeocodeRequest withDebug(Boolean debug) {
         this.debug = debug;
         return this;
@@ -22,6 +23,7 @@ public class GetGeocodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetGeocodeRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -32,6 +34,7 @@ public class GetGeocodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public GetGeocodeRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -42,6 +45,7 @@ public class GetGeocodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=point")
     public String point;
+
     public GetGeocodeRequest withPoint(String point) {
         this.point = point;
         return this;
@@ -112,6 +116,7 @@ public class GetGeocodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=provider")
     public String provider;
+
     public GetGeocodeRequest withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -122,6 +127,7 @@ public class GetGeocodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetGeocodeRequest withQ(String q) {
         this.q = q;
         return this;
@@ -132,9 +138,11 @@ public class GetGeocodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reverse")
     public Boolean reverse;
+
     public GetGeocodeRequest withReverse(Boolean reverse) {
         this.reverse = reverse;
         return this;
     }
     
+    public GetGeocodeRequest(){}
 }

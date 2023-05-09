@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FaresRequest {
@@ -12,6 +13,7 @@ public class FaresRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public FaresRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class FaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=carriers")
     public String carriers;
+
     public FaresRequest withCarriers(String carriers) {
         this.carriers = carriers;
         return this;
@@ -32,6 +35,7 @@ public class FaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=catalogues")
     public String catalogues;
+
     public FaresRequest withCatalogues(String catalogues) {
         this.catalogues = catalogues;
         return this;
@@ -42,6 +46,7 @@ public class FaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fare-types")
     public String fareTypes;
+
     public FaresRequest withFareTypes(String fareTypes) {
         this.fareTypes = fareTypes;
         return this;
@@ -52,6 +57,7 @@ public class FaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=segments")
     public String segments;
+
     public FaresRequest withSegments(String segments) {
         this.segments = segments;
         return this;
@@ -62,9 +68,16 @@ public class FaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelers")
     public String travelers;
+
     public FaresRequest withTravelers(String travelers) {
         this.travelers = travelers;
         return this;
     }
     
+    public FaresRequest(@JsonProperty("Accept") String accept, @JsonProperty("carriers") String carriers, @JsonProperty("catalogues") String catalogues, @JsonProperty("segments") String segments) {
+        this.accept = accept;
+        this.carriers = carriers;
+        this.catalogues = catalogues;
+        this.segments = segments;
+  }
 }

@@ -12,6 +12,7 @@ public class ReleasesUpdateDetails200ApplicationJSONDestinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ReleasesUpdateDetails200ApplicationJSONDestinations withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class ReleasesUpdateDetails200ApplicationJSONDestinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReleasesUpdateDetails200ApplicationJSONDestinations withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ReleasesUpdateDetails200ApplicationJSONDestinations(){}
 }

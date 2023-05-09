@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteProfilingGroupResponse {
@@ -12,6 +13,7 @@ public class DeleteProfilingGroupResponse {
      */
     
     public Object conflictException;
+
     public DeleteProfilingGroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteProfilingGroupResponse {
     
     
     public String contentType;
+
     public DeleteProfilingGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteProfilingGroupResponse {
      */
     
     public java.util.Map<String, Object> deleteProfilingGroupResponse;
+
     public DeleteProfilingGroupResponse withDeleteProfilingGroupResponse(java.util.Map<String, Object> deleteProfilingGroupResponse) {
         this.deleteProfilingGroupResponse = deleteProfilingGroupResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteProfilingGroupResponse {
      */
     
     public Object internalServerException;
+
     public DeleteProfilingGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteProfilingGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteProfilingGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteProfilingGroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteProfilingGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteProfilingGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteProfilingGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteProfilingGroupResponse {
      */
     
     public Object throttlingException;
+
     public DeleteProfilingGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteProfilingGroupResponse {
      */
     
     public Object validationException;
+
     public DeleteProfilingGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteProfilingGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

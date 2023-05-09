@@ -15,6 +15,7 @@ public class JobDriver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hive")
     public Hive hive;
+
     public JobDriver withHive(Hive hive) {
         this.hive = hive;
         return this;
@@ -23,9 +24,11 @@ public class JobDriver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkSubmit")
     public SparkSubmit sparkSubmit;
+
     public JobDriver withSparkSubmit(SparkSubmit sparkSubmit) {
         this.sparkSubmit = sparkSubmit;
         return this;
     }
     
+    public JobDriver(){}
 }

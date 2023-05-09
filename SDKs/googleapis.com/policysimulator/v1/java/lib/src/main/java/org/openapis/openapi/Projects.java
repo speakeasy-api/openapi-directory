@@ -61,11 +61,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysCreateResponse res = new org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysCreateResponse() {{
+        org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysCreateResponse res = new org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysOperationsListResponse res = new org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysOperationsListResponse() {{
+        org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysOperationsListResponse res = new org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysOperationsListResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningListOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysResultsListResponse res = new org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysResultsListResponse() {{
+        org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysResultsListResponse res = new org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysResultsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudPolicysimulatorV1ListReplayResultsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

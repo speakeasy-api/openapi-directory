@@ -18,9 +18,11 @@ public class InputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsSource")
     public GcsSource gcsSource;
+
     public InputConfig withGcsSource(GcsSource gcsSource) {
         this.gcsSource = gcsSource;
         return this;
     }
     
+    public InputConfig(){}
 }

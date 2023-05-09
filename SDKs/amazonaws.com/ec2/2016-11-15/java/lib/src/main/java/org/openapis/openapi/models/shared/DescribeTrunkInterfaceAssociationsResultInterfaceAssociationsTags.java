@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTrunkInterfaceAssociationsResultInterfaceAssociationsTags {
     
     public String key;
+
     public DescribeTrunkInterfaceAssociationsResultInterfaceAssociationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeTrunkInterfaceAssociationsResultInterfaceAssociationsTags {
     
     
     public String value;
+
     public DescribeTrunkInterfaceAssociationsResultInterfaceAssociationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeTrunkInterfaceAssociationsResultInterfaceAssociationsTags(){}
 }

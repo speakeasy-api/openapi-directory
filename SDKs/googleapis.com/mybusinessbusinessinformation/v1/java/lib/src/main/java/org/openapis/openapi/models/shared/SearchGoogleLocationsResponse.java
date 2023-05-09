@@ -18,9 +18,11 @@ public class SearchGoogleLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleLocations")
     public GoogleLocation[] googleLocations;
+
     public SearchGoogleLocationsResponse withGoogleLocations(GoogleLocation[] googleLocations) {
         this.googleLocations = googleLocations;
         return this;
     }
     
+    public SearchGoogleLocationsResponse(){}
 }

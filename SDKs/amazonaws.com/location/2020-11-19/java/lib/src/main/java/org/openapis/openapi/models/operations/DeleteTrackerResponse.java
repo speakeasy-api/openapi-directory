@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTrackerResponse {
@@ -12,6 +13,7 @@ public class DeleteTrackerResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteTrackerResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteTrackerResponse {
     
     
     public String contentType;
+
     public DeleteTrackerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTrackerResponse {
      */
     
     public java.util.Map<String, Object> deleteTrackerResponse;
+
     public DeleteTrackerResponse withDeleteTrackerResponse(java.util.Map<String, Object> deleteTrackerResponse) {
         this.deleteTrackerResponse = deleteTrackerResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTrackerResponse {
      */
     
     public Object internalServerException;
+
     public DeleteTrackerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteTrackerResponse {
     
     
     public Integer statusCode;
+
     public DeleteTrackerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteTrackerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTrackerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteTrackerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteTrackerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteTrackerResponse {
      */
     
     public Object throttlingException;
+
     public DeleteTrackerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteTrackerResponse {
      */
     
     public Object validationException;
+
     public DeleteTrackerResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteTrackerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

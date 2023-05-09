@@ -18,9 +18,11 @@ public class WorkloadALTSConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableAlts")
     public Boolean enableAlts;
+
     public WorkloadALTSConfig withEnableAlts(Boolean enableAlts) {
         this.enableAlts = enableAlts;
         return this;
     }
     
+    public WorkloadALTSConfig(){}
 }

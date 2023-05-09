@@ -12,6 +12,7 @@ public class ScheduleBByPurposePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public ScheduleBByPurposePage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class ScheduleBByPurposePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ScheduleBByPurpose[] results;
+
     public ScheduleBByPurposePage withResults(ScheduleBByPurpose[] results) {
         this.results = results;
         return this;
     }
     
+    public ScheduleBByPurposePage(){}
 }

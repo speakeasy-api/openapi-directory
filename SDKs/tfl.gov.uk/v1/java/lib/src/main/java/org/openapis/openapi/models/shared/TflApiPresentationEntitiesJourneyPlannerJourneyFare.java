@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesJourneyPlannerJourneyFare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caveats")
     public TflApiPresentationEntitiesJourneyPlannerFareCaveat[] caveats;
+
     public TflApiPresentationEntitiesJourneyPlannerJourneyFare withCaveats(TflApiPresentationEntitiesJourneyPlannerFareCaveat[] caveats) {
         this.caveats = caveats;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesJourneyPlannerJourneyFare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fares")
     public TflApiPresentationEntitiesJourneyPlannerFare[] fares;
+
     public TflApiPresentationEntitiesJourneyPlannerJourneyFare withFares(TflApiPresentationEntitiesJourneyPlannerFare[] fares) {
         this.fares = fares;
         return this;
@@ -28,9 +30,11 @@ public class TflApiPresentationEntitiesJourneyPlannerJourneyFare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCost")
     public Integer totalCost;
+
     public TflApiPresentationEntitiesJourneyPlannerJourneyFare withTotalCost(Integer totalCost) {
         this.totalCost = totalCost;
         return this;
     }
     
+    public TflApiPresentationEntitiesJourneyPlannerJourneyFare(){}
 }

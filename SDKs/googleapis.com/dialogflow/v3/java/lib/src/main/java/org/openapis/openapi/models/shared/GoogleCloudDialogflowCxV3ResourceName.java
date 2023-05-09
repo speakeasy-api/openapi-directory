@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3ResourceName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowCxV3ResourceName withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3ResourceName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowCxV3ResourceName withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ResourceName(){}
 }

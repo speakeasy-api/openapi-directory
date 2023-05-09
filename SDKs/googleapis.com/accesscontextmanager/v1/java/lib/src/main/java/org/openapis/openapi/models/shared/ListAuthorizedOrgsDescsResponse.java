@@ -18,6 +18,7 @@ public class ListAuthorizedOrgsDescsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizedOrgsDescs")
     public AuthorizedOrgsDesc[] authorizedOrgsDescs;
+
     public ListAuthorizedOrgsDescsResponse withAuthorizedOrgsDescs(AuthorizedOrgsDesc[] authorizedOrgsDescs) {
         this.authorizedOrgsDescs = authorizedOrgsDescs;
         return this;
@@ -29,9 +30,11 @@ public class ListAuthorizedOrgsDescsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAuthorizedOrgsDescsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListAuthorizedOrgsDescsResponse(){}
 }

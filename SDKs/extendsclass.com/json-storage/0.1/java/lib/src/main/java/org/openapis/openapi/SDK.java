@@ -117,6 +117,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -140,12 +145,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteBinIdResponse res = new org.openapis.openapi.models.operations.DeleteBinIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteBinIdResponse res = new org.openapis.openapi.models.operations.DeleteBinIdResponse(contentType, httpRes.statusCode()) {{
             deleteStatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -186,12 +189,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBinIdResponse res = new org.openapis.openapi.models.operations.GetBinIdResponse() {{
+        org.openapis.openapi.models.operations.GetBinIdResponse res = new org.openapis.openapi.models.operations.GetBinIdResponse(contentType, httpRes.statusCode()) {{
             getBinId200ApplicationJSONObject = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -232,12 +233,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchBinIdResponse res = new org.openapis.openapi.models.operations.PatchBinIdResponse() {{
+        org.openapis.openapi.models.operations.PatchBinIdResponse res = new org.openapis.openapi.models.operations.PatchBinIdResponse(contentType, httpRes.statusCode()) {{
             updateStatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -277,12 +276,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostBinResponse res = new org.openapis.openapi.models.operations.PostBinResponse() {{
+        org.openapis.openapi.models.operations.PostBinResponse res = new org.openapis.openapi.models.operations.PostBinResponse(contentType, httpRes.statusCode()) {{
             createStatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -323,12 +320,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutBinIdResponse res = new org.openapis.openapi.models.operations.PutBinIdResponse() {{
+        org.openapis.openapi.models.operations.PutBinIdResponse res = new org.openapis.openapi.models.operations.PutBinIdResponse(contentType, httpRes.statusCode()) {{
             updateStatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

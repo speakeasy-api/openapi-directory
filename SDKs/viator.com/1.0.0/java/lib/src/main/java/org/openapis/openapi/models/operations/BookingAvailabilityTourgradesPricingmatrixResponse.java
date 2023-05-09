@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BookingAvailabilityTourgradesPricingmatrixResponse {
     
     public String contentType;
+
     public BookingAvailabilityTourgradesPricingmatrixResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class BookingAvailabilityTourgradesPricingmatrixResponse {
     
     
     public Integer statusCode;
+
     public BookingAvailabilityTourgradesPricingmatrixResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class BookingAvailabilityTourgradesPricingmatrixResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BookingAvailabilityTourgradesPricingmatrixResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class BookingAvailabilityTourgradesPricingmatrixResponse {
      */
     
     public BookingAvailabilityTourgradesPricingmatrix200ApplicationJSON bookingAvailabilityTourgradesPricingmatrix200ApplicationJSONObject;
+
     public BookingAvailabilityTourgradesPricingmatrixResponse withBookingAvailabilityTourgradesPricingmatrix200ApplicationJSONObject(BookingAvailabilityTourgradesPricingmatrix200ApplicationJSON bookingAvailabilityTourgradesPricingmatrix200ApplicationJSONObject) {
         this.bookingAvailabilityTourgradesPricingmatrix200ApplicationJSONObject = bookingAvailabilityTourgradesPricingmatrix200ApplicationJSONObject;
         return this;
     }
     
+    public BookingAvailabilityTourgradesPricingmatrixResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

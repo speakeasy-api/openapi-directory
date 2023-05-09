@@ -15,6 +15,7 @@ public class RecommendationJobInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerConfig")
     public RecommendationJobContainerConfig containerConfig;
+
     public RecommendationJobInputConfig withContainerConfig(RecommendationJobContainerConfig containerConfig) {
         this.containerConfig = containerConfig;
         return this;
@@ -23,6 +24,7 @@ public class RecommendationJobInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointConfigurations")
     public EndpointInputConfiguration[] endpointConfigurations;
+
     public RecommendationJobInputConfig withEndpointConfigurations(EndpointInputConfiguration[] endpointConfigurations) {
         this.endpointConfigurations = endpointConfigurations;
         return this;
@@ -31,6 +33,7 @@ public class RecommendationJobInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Endpoints")
     public EndpointInfo[] endpoints;
+
     public RecommendationJobInputConfig withEndpoints(EndpointInfo[] endpoints) {
         this.endpoints = endpoints;
         return this;
@@ -39,6 +42,7 @@ public class RecommendationJobInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobDurationInSeconds")
     public Long jobDurationInSeconds;
+
     public RecommendationJobInputConfig withJobDurationInSeconds(Long jobDurationInSeconds) {
         this.jobDurationInSeconds = jobDurationInSeconds;
         return this;
@@ -47,6 +51,7 @@ public class RecommendationJobInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelName")
     public String modelName;
+
     public RecommendationJobInputConfig withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -55,6 +60,7 @@ public class RecommendationJobInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageVersionArn")
     public String modelPackageVersionArn;
+
     public RecommendationJobInputConfig withModelPackageVersionArn(String modelPackageVersionArn) {
         this.modelPackageVersionArn = modelPackageVersionArn;
         return this;
@@ -63,6 +69,7 @@ public class RecommendationJobInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceLimit")
     public RecommendationJobResourceLimit resourceLimit;
+
     public RecommendationJobInputConfig withResourceLimit(RecommendationJobResourceLimit resourceLimit) {
         this.resourceLimit = resourceLimit;
         return this;
@@ -71,6 +78,7 @@ public class RecommendationJobInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrafficPattern")
     public TrafficPattern trafficPattern;
+
     public RecommendationJobInputConfig withTrafficPattern(TrafficPattern trafficPattern) {
         this.trafficPattern = trafficPattern;
         return this;
@@ -79,6 +87,7 @@ public class RecommendationJobInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeKmsKeyId")
     public String volumeKmsKeyId;
+
     public RecommendationJobInputConfig withVolumeKmsKeyId(String volumeKmsKeyId) {
         this.volumeKmsKeyId = volumeKmsKeyId;
         return this;
@@ -87,9 +96,11 @@ public class RecommendationJobInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public RecommendationJobVpcConfig vpcConfig;
+
     public RecommendationJobInputConfig withVpcConfig(RecommendationJobVpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public RecommendationJobInputConfig(){}
 }

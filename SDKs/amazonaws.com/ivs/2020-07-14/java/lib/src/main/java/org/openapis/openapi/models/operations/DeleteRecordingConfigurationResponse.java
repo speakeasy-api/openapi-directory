@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRecordingConfigurationResponse {
@@ -12,6 +13,7 @@ public class DeleteRecordingConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteRecordingConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteRecordingConfigurationResponse {
      */
     
     public Object conflictException;
+
     public DeleteRecordingConfigurationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRecordingConfigurationResponse {
     
     
     public String contentType;
+
     public DeleteRecordingConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRecordingConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public DeleteRecordingConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteRecordingConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteRecordingConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteRecordingConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DeleteRecordingConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteRecordingConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRecordingConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteRecordingConfigurationResponse {
      */
     
     public Object validationException;
+
     public DeleteRecordingConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteRecordingConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

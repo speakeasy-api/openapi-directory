@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class StartEarthObservationJobOutput {
     @JsonProperty("Arn")
     public String arn;
+
     public StartEarthObservationJobOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class StartEarthObservationJobOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public StartEarthObservationJobOutput withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -35,6 +37,7 @@ public class StartEarthObservationJobOutput {
     
     @JsonProperty("DurationInSeconds")
     public Long durationInSeconds;
+
     public StartEarthObservationJobOutput withDurationInSeconds(Long durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
         return this;
@@ -43,6 +46,7 @@ public class StartEarthObservationJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public StartEarthObservationJobOutput withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -51,6 +55,7 @@ public class StartEarthObservationJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputConfig")
     public InputConfigOutput inputConfig;
+
     public StartEarthObservationJobOutput withInputConfig(InputConfigOutput inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -58,6 +63,7 @@ public class StartEarthObservationJobOutput {
     
     @JsonProperty("JobConfig")
     public JobConfigInput jobConfig;
+
     public StartEarthObservationJobOutput withJobConfig(JobConfigInput jobConfig) {
         this.jobConfig = jobConfig;
         return this;
@@ -66,6 +72,7 @@ public class StartEarthObservationJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public StartEarthObservationJobOutput withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -73,6 +80,7 @@ public class StartEarthObservationJobOutput {
     
     @JsonProperty("Name")
     public String name;
+
     public StartEarthObservationJobOutput withName(String name) {
         this.name = name;
         return this;
@@ -80,6 +88,7 @@ public class StartEarthObservationJobOutput {
     
     @JsonProperty("Status")
     public EarthObservationJobStatusEnum status;
+
     public StartEarthObservationJobOutput withStatus(EarthObservationJobStatusEnum status) {
         this.status = status;
         return this;
@@ -88,9 +97,18 @@ public class StartEarthObservationJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public StartEarthObservationJobOutput withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public StartEarthObservationJobOutput(@JsonProperty("Arn") String arn, @JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("DurationInSeconds") Long durationInSeconds, @JsonProperty("JobConfig") JobConfigInput jobConfig, @JsonProperty("Name") String name, @JsonProperty("Status") EarthObservationJobStatusEnum status) {
+        this.arn = arn;
+        this.creationTime = creationTime;
+        this.durationInSeconds = durationInSeconds;
+        this.jobConfig = jobConfig;
+        this.name = name;
+        this.status = status;
+  }
 }

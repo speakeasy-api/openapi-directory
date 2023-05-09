@@ -15,6 +15,7 @@ public class CustomInsert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public CustomInsertResponse data;
+
     public CustomInsert withData(CustomInsertResponse data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class CustomInsert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("msg")
     public String msg;
+
     public CustomInsert withMsg(String msg) {
         this.msg = msg;
         return this;
@@ -31,9 +33,11 @@ public class CustomInsert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public String success;
+
     public CustomInsert withSuccess(String success) {
         this.success = success;
         return this;
     }
     
+    public CustomInsert(){}
 }

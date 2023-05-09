@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class KeySchemaElement {
     @JsonProperty("AttributeName")
     public String attributeName;
+
     public KeySchemaElement withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -19,9 +20,14 @@ public class KeySchemaElement {
     
     @JsonProperty("KeyType")
     public KeyTypeEnum keyType;
+
     public KeySchemaElement withKeyType(KeyTypeEnum keyType) {
         this.keyType = keyType;
         return this;
     }
     
+    public KeySchemaElement(@JsonProperty("AttributeName") String attributeName, @JsonProperty("KeyType") KeyTypeEnum keyType) {
+        this.attributeName = attributeName;
+        this.keyType = keyType;
+  }
 }

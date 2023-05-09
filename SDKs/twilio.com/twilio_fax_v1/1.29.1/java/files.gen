@@ -56,4 +56,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/FaxV1FaxQualityEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/FaxV1FaxStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/FaxV1Fax.java
 lib/src/main/java/org/openapis/openapi/models/shared/FaxV1FaxFaxMedia.java
+docs/sdk/README.md
 USAGE.md

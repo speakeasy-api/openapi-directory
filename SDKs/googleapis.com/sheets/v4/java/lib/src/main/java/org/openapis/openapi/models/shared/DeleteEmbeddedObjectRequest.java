@@ -18,9 +18,11 @@ public class DeleteEmbeddedObjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public Integer objectId;
+
     public DeleteEmbeddedObjectRequest withObjectId(Integer objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public DeleteEmbeddedObjectRequest(){}
 }

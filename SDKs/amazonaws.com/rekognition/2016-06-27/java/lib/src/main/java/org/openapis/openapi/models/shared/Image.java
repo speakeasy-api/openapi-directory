@@ -15,6 +15,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bytes")
     public String bytes;
+
     public Image withBytes(String bytes) {
         this.bytes = bytes;
         return this;
@@ -23,9 +24,11 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Object")
     public S3Object s3Object;
+
     public Image withS3Object(S3Object s3Object) {
         this.s3Object = s3Object;
         return this;
     }
     
+    public Image(){}
 }

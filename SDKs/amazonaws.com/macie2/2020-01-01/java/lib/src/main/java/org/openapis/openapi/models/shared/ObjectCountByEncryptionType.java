@@ -15,6 +15,7 @@ public class ObjectCountByEncryptionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerManaged")
     public Long customerManaged;
+
     public ObjectCountByEncryptionType withCustomerManaged(Long customerManaged) {
         this.customerManaged = customerManaged;
         return this;
@@ -23,6 +24,7 @@ public class ObjectCountByEncryptionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsManaged")
     public Long kmsManaged;
+
     public ObjectCountByEncryptionType withKmsManaged(Long kmsManaged) {
         this.kmsManaged = kmsManaged;
         return this;
@@ -31,6 +33,7 @@ public class ObjectCountByEncryptionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Managed")
     public Long s3Managed;
+
     public ObjectCountByEncryptionType withS3Managed(Long s3Managed) {
         this.s3Managed = s3Managed;
         return this;
@@ -39,6 +42,7 @@ public class ObjectCountByEncryptionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unencrypted")
     public Long unencrypted;
+
     public ObjectCountByEncryptionType withUnencrypted(Long unencrypted) {
         this.unencrypted = unencrypted;
         return this;
@@ -47,9 +51,11 @@ public class ObjectCountByEncryptionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unknown")
     public Long unknown;
+
     public ObjectCountByEncryptionType withUnknown(Long unknown) {
         this.unknown = unknown;
         return this;
     }
     
+    public ObjectCountByEncryptionType(){}
 }

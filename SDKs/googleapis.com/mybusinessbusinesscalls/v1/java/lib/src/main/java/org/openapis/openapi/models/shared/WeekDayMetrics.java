@@ -18,6 +18,7 @@ public class WeekDayMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day")
     public WeekDayMetricsDayEnum day;
+
     public WeekDayMetrics withDay(WeekDayMetricsDayEnum day) {
         this.day = day;
         return this;
@@ -29,9 +30,11 @@ public class WeekDayMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missedCallsCount")
     public Integer missedCallsCount;
+
     public WeekDayMetrics withMissedCallsCount(Integer missedCallsCount) {
         this.missedCallsCount = missedCallsCount;
         return this;
     }
     
+    public WeekDayMetrics(){}
 }

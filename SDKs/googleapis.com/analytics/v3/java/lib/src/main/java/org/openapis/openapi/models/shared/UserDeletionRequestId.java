@@ -18,6 +18,7 @@ public class UserDeletionRequestId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public UserDeletionRequestId withType(String type) {
         this.type = type;
         return this;
@@ -29,9 +30,11 @@ public class UserDeletionRequestId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public UserDeletionRequestId withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public UserDeletionRequestId(){}
 }

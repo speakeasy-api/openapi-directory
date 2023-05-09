@@ -15,9 +15,11 @@ public class AnalyticsMetadataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalyticsEndpointId")
     public String analyticsEndpointId;
+
     public AnalyticsMetadataType withAnalyticsEndpointId(String analyticsEndpointId) {
         this.analyticsEndpointId = analyticsEndpointId;
         return this;
     }
     
+    public AnalyticsMetadataType(){}
 }

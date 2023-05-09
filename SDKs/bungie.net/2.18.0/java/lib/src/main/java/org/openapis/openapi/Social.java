@@ -51,11 +51,9 @@ public class Social {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SocialAcceptFriendRequestResponse res = new org.openapis.openapi.models.operations.SocialAcceptFriendRequestResponse() {{
+        org.openapis.openapi.models.operations.SocialAcceptFriendRequestResponse res = new org.openapis.openapi.models.operations.SocialAcceptFriendRequestResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -90,11 +88,9 @@ public class Social {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SocialDeclineFriendRequestResponse res = new org.openapis.openapi.models.operations.SocialDeclineFriendRequestResponse() {{
+        org.openapis.openapi.models.operations.SocialDeclineFriendRequestResponse res = new org.openapis.openapi.models.operations.SocialDeclineFriendRequestResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,10 +105,11 @@ public class Social {
 
     /**
      * Returns your Bungie Friend list
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SocialGetFriendListResponse socialGetFriendList() throws Exception {
+    public org.openapis.openapi.models.operations.SocialGetFriendListResponse socialGetFriendList(org.openapis.openapi.models.operations.SocialGetFriendListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Social/Friends/");
         
@@ -121,16 +118,15 @@ public class Social {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SocialGetFriendListResponse res = new org.openapis.openapi.models.operations.SocialGetFriendListResponse() {{
+        org.openapis.openapi.models.operations.SocialGetFriendListResponse res = new org.openapis.openapi.models.operations.SocialGetFriendListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,10 +141,11 @@ public class Social {
 
     /**
      * Returns your friend request queue.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SocialGetFriendRequestListResponse socialGetFriendRequestList() throws Exception {
+    public org.openapis.openapi.models.operations.SocialGetFriendRequestListResponse socialGetFriendRequestList(org.openapis.openapi.models.operations.SocialGetFriendRequestListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Social/Friends/Requests/");
         
@@ -157,16 +154,15 @@ public class Social {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SocialGetFriendRequestListResponse res = new org.openapis.openapi.models.operations.SocialGetFriendRequestListResponse() {{
+        org.openapis.openapi.models.operations.SocialGetFriendRequestListResponse res = new org.openapis.openapi.models.operations.SocialGetFriendRequestListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +195,9 @@ public class Social {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SocialGetPlatformFriendListResponse res = new org.openapis.openapi.models.operations.SocialGetPlatformFriendListResponse() {{
+        org.openapis.openapi.models.operations.SocialGetPlatformFriendListResponse res = new org.openapis.openapi.models.operations.SocialGetPlatformFriendListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -238,11 +232,9 @@ public class Social {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SocialIssueFriendRequestResponse res = new org.openapis.openapi.models.operations.SocialIssueFriendRequestResponse() {{
+        org.openapis.openapi.models.operations.SocialIssueFriendRequestResponse res = new org.openapis.openapi.models.operations.SocialIssueFriendRequestResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -277,11 +269,9 @@ public class Social {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SocialRemoveFriendResponse res = new org.openapis.openapi.models.operations.SocialRemoveFriendResponse() {{
+        org.openapis.openapi.models.operations.SocialRemoveFriendResponse res = new org.openapis.openapi.models.operations.SocialRemoveFriendResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -316,11 +306,9 @@ public class Social {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SocialRemoveFriendRequestResponse res = new org.openapis.openapi.models.operations.SocialRemoveFriendRequestResponse() {{
+        org.openapis.openapi.models.operations.SocialRemoveFriendRequestResponse res = new org.openapis.openapi.models.operations.SocialRemoveFriendRequestResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

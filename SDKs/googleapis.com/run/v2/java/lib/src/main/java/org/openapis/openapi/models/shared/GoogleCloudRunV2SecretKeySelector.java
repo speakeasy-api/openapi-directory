@@ -18,6 +18,7 @@ public class GoogleCloudRunV2SecretKeySelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public GoogleCloudRunV2SecretKeySelector withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRunV2SecretKeySelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public GoogleCloudRunV2SecretKeySelector withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GoogleCloudRunV2SecretKeySelector(){}
 }

@@ -12,6 +12,7 @@ public class CreateRelationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contracttest")
     public String[] contracttest;
+
     public CreateRelationsRequestBody withContracttest(String[] contracttest) {
         this.contracttest = contracttest;
         return this;
@@ -20,6 +21,7 @@ public class CreateRelationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentation")
     public String[] documentation;
+
     public CreateRelationsRequestBody withDocumentation(String[] documentation) {
         this.documentation = documentation;
         return this;
@@ -28,6 +30,7 @@ public class CreateRelationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mock")
     public String[] mock;
+
     public CreateRelationsRequestBody withMock(String[] mock) {
         this.mock = mock;
         return this;
@@ -36,9 +39,11 @@ public class CreateRelationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testsuite")
     public String[] testsuite;
+
     public CreateRelationsRequestBody withTestsuite(String[] testsuite) {
         this.testsuite = testsuite;
         return this;
     }
     
+    public CreateRelationsRequestBody(){}
 }

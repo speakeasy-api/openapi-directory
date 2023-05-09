@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLatestBaseCurrencyRequest {
@@ -12,9 +13,13 @@ public class GetLatestBaseCurrencyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=base_currency")
     public String baseCurrency;
+
     public GetLatestBaseCurrencyRequest withBaseCurrency(String baseCurrency) {
         this.baseCurrency = baseCurrency;
         return this;
     }
     
+    public GetLatestBaseCurrencyRequest(@JsonProperty("base_currency") String baseCurrency) {
+        this.baseCurrency = baseCurrency;
+  }
 }

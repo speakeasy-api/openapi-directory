@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameRequest {
@@ -12,6 +13,7 @@ public class DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameRequest withName(String name) {
         this.name = name;
         return this;
@@ -24,6 +26,7 @@ public class DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -36,9 +39,15 @@ public class DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameRequest(@JsonProperty("name") String name, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.name = name;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

@@ -18,6 +18,7 @@ public class PerformanceReportList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PerformanceReportList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class PerformanceReportList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performanceReport")
     public PerformanceReport[] performanceReport;
+
     public PerformanceReportList withPerformanceReport(PerformanceReport[] performanceReport) {
         this.performanceReport = performanceReport;
         return this;
     }
     
+    public PerformanceReportList(){}
 }

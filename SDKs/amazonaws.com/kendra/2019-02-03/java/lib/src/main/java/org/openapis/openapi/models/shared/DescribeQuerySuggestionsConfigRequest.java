@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeQuerySuggestionsConfigRequest {
     @JsonProperty("IndexId")
     public String indexId;
+
     public DescribeQuerySuggestionsConfigRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
     }
     
+    public DescribeQuerySuggestionsConfigRequest(@JsonProperty("IndexId") String indexId) {
+        this.indexId = indexId;
+  }
 }

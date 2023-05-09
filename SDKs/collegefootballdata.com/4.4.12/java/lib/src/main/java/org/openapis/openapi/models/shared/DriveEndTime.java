@@ -12,6 +12,7 @@ public class DriveEndTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minutes")
     public Long minutes;
+
     public DriveEndTime withMinutes(Long minutes) {
         this.minutes = minutes;
         return this;
@@ -20,9 +21,11 @@ public class DriveEndTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seconds")
     public Long seconds;
+
     public DriveEndTime withSeconds(Long seconds) {
         this.seconds = seconds;
         return this;
     }
     
+    public DriveEndTime(){}
 }

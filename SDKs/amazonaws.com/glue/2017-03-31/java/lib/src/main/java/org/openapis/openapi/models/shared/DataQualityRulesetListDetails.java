@@ -22,6 +22,7 @@ public class DataQualityRulesetListDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedOn")
     public OffsetDateTime createdOn;
+
     public DataQualityRulesetListDetails withCreatedOn(OffsetDateTime createdOn) {
         this.createdOn = createdOn;
         return this;
@@ -30,6 +31,7 @@ public class DataQualityRulesetListDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DataQualityRulesetListDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class DataQualityRulesetListDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedOn")
     public OffsetDateTime lastModifiedOn;
+
     public DataQualityRulesetListDetails withLastModifiedOn(OffsetDateTime lastModifiedOn) {
         this.lastModifiedOn = lastModifiedOn;
         return this;
@@ -48,6 +51,7 @@ public class DataQualityRulesetListDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DataQualityRulesetListDetails withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +60,7 @@ public class DataQualityRulesetListDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationRunId")
     public String recommendationRunId;
+
     public DataQualityRulesetListDetails withRecommendationRunId(String recommendationRunId) {
         this.recommendationRunId = recommendationRunId;
         return this;
@@ -64,6 +69,7 @@ public class DataQualityRulesetListDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleCount")
     public Long ruleCount;
+
     public DataQualityRulesetListDetails withRuleCount(Long ruleCount) {
         this.ruleCount = ruleCount;
         return this;
@@ -72,9 +78,11 @@ public class DataQualityRulesetListDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetTable")
     public DataQualityTargetTable targetTable;
+
     public DataQualityRulesetListDetails withTargetTable(DataQualityTargetTable targetTable) {
         this.targetTable = targetTable;
         return this;
     }
     
+    public DataQualityRulesetListDetails(){}
 }

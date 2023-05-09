@@ -18,6 +18,7 @@ public class GetRecaptchaParamResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public GetRecaptchaParamResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class GetRecaptchaParamResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recaptchaSiteKey")
     public String recaptchaSiteKey;
+
     public GetRecaptchaParamResponse withRecaptchaSiteKey(String recaptchaSiteKey) {
         this.recaptchaSiteKey = recaptchaSiteKey;
         return this;
@@ -40,9 +42,11 @@ public class GetRecaptchaParamResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recaptchaStoken")
     public String recaptchaStoken;
+
     public GetRecaptchaParamResponse withRecaptchaStoken(String recaptchaStoken) {
         this.recaptchaStoken = recaptchaStoken;
         return this;
     }
     
+    public GetRecaptchaParamResponse(){}
 }

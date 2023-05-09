@@ -15,9 +15,13 @@ public class TeamsAddUserRequestBody {
      */
     @JsonProperty("user_email")
     public String userEmail;
+
     public TeamsAddUserRequestBody withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public TeamsAddUserRequestBody(@JsonProperty("user_email") String userEmail) {
+        this.userEmail = userEmail;
+  }
 }

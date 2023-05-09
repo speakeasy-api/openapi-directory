@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PrfndResponse {
     
     public String contentType;
+
     public PrfndResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PrfndResponse {
     
     
     public Integer statusCode;
+
     public PrfndResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PrfndResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PrfndResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PrfndResponse {
      */
     
     public Prfnd400ApplicationJSON prfnd400ApplicationJSONObject;
+
     public PrfndResponse withPrfnd400ApplicationJSONObject(Prfnd400ApplicationJSON prfnd400ApplicationJSONObject) {
         this.prfnd400ApplicationJSONObject = prfnd400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class PrfndResponse {
      */
     
     public Prfnd401ApplicationJSON prfnd401ApplicationJSONObject;
+
     public PrfndResponse withPrfnd401ApplicationJSONObject(Prfnd401ApplicationJSON prfnd401ApplicationJSONObject) {
         this.prfnd401ApplicationJSONObject = prfnd401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class PrfndResponse {
      */
     
     public Prfnd404ApplicationJSON prfnd404ApplicationJSONObject;
+
     public PrfndResponse withPrfnd404ApplicationJSONObject(Prfnd404ApplicationJSON prfnd404ApplicationJSONObject) {
         this.prfnd404ApplicationJSONObject = prfnd404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class PrfndResponse {
      */
     
     public Prfnd500ApplicationJSON prfnd500ApplicationJSONObject;
+
     public PrfndResponse withPrfnd500ApplicationJSONObject(Prfnd500ApplicationJSON prfnd500ApplicationJSONObject) {
         this.prfnd500ApplicationJSONObject = prfnd500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class PrfndResponse {
      */
     
     public Prfnd502ApplicationJSON prfnd502ApplicationJSONObject;
+
     public PrfndResponse withPrfnd502ApplicationJSONObject(Prfnd502ApplicationJSON prfnd502ApplicationJSONObject) {
         this.prfnd502ApplicationJSONObject = prfnd502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class PrfndResponse {
      */
     
     public Prfnd503ApplicationJSON prfnd503ApplicationJSONObject;
+
     public PrfndResponse withPrfnd503ApplicationJSONObject(Prfnd503ApplicationJSON prfnd503ApplicationJSONObject) {
         this.prfnd503ApplicationJSONObject = prfnd503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class PrfndResponse {
      */
     
     public Prfnd504ApplicationJSON prfnd504ApplicationJSONObject;
+
     public PrfndResponse withPrfnd504ApplicationJSONObject(Prfnd504ApplicationJSON prfnd504ApplicationJSONObject) {
         this.prfnd504ApplicationJSONObject = prfnd504ApplicationJSONObject;
         return this;
     }
     
+    public PrfndResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

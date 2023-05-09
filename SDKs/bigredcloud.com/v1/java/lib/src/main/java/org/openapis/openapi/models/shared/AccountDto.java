@@ -12,6 +12,7 @@ public class AccountDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountGroup")
     public String accountGroup;
+
     public AccountDto withAccountGroup(String accountGroup) {
         this.accountGroup = accountGroup;
         return this;
@@ -20,6 +21,7 @@ public class AccountDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountType")
     public String accountType;
+
     public AccountDto withAccountType(String accountType) {
         this.accountType = accountType;
         return this;
@@ -28,6 +30,7 @@ public class AccountDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public AccountDto withCode(String code) {
         this.code = code;
         return this;
@@ -36,6 +39,7 @@ public class AccountDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AccountDto withDescription(String description) {
         this.description = description;
         return this;
@@ -44,9 +48,11 @@ public class AccountDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public AccountDto withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public AccountDto(){}
 }

@@ -18,9 +18,11 @@ public class OpenFileList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public OpenFileDetails[] entries;
+
     public OpenFileList withEntries(OpenFileDetails[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public OpenFileList(){}
 }

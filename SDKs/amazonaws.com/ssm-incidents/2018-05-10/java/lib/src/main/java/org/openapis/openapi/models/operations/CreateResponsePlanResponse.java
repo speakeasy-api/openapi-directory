@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateResponsePlanResponse {
@@ -12,6 +13,7 @@ public class CreateResponsePlanResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateResponsePlanResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateResponsePlanResponse {
      */
     
     public Object conflictException;
+
     public CreateResponsePlanResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateResponsePlanResponse {
     
     
     public String contentType;
+
     public CreateResponsePlanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateResponsePlanResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateResponsePlanOutput createResponsePlanOutput;
+
     public CreateResponsePlanResponse withCreateResponsePlanOutput(org.openapis.openapi.models.shared.CreateResponsePlanOutput createResponsePlanOutput) {
         this.createResponsePlanOutput = createResponsePlanOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateResponsePlanResponse {
      */
     
     public Object internalServerException;
+
     public CreateResponsePlanResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateResponsePlanResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateResponsePlanResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateResponsePlanResponse {
     
     
     public Integer statusCode;
+
     public CreateResponsePlanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateResponsePlanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateResponsePlanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateResponsePlanResponse {
      */
     
     public Object throttlingException;
+
     public CreateResponsePlanResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateResponsePlanResponse {
      */
     
     public Object validationException;
+
     public CreateResponsePlanResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateResponsePlanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

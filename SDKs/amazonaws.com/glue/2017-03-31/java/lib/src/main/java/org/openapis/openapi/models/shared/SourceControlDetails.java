@@ -15,6 +15,7 @@ public class SourceControlDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthStrategy")
     public SourceControlAuthStrategyEnum authStrategy;
+
     public SourceControlDetails withAuthStrategy(SourceControlAuthStrategyEnum authStrategy) {
         this.authStrategy = authStrategy;
         return this;
@@ -23,6 +24,7 @@ public class SourceControlDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthToken")
     public String authToken;
+
     public SourceControlDetails withAuthToken(String authToken) {
         this.authToken = authToken;
         return this;
@@ -31,6 +33,7 @@ public class SourceControlDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Branch")
     public String branch;
+
     public SourceControlDetails withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -39,6 +42,7 @@ public class SourceControlDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Folder")
     public String folder;
+
     public SourceControlDetails withFolder(String folder) {
         this.folder = folder;
         return this;
@@ -47,6 +51,7 @@ public class SourceControlDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastCommitId")
     public String lastCommitId;
+
     public SourceControlDetails withLastCommitId(String lastCommitId) {
         this.lastCommitId = lastCommitId;
         return this;
@@ -55,6 +60,7 @@ public class SourceControlDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Owner")
     public String owner;
+
     public SourceControlDetails withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -63,6 +69,7 @@ public class SourceControlDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Provider")
     public SourceControlProviderEnum provider;
+
     public SourceControlDetails withProvider(SourceControlProviderEnum provider) {
         this.provider = provider;
         return this;
@@ -71,9 +78,11 @@ public class SourceControlDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Repository")
     public String repository;
+
     public SourceControlDetails withRepository(String repository) {
         this.repository = repository;
         return this;
     }
     
+    public SourceControlDetails(){}
 }

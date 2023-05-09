@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class YoutubeVideosListRequest {
@@ -12,6 +13,7 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public YoutubeVideosListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public YoutubeVideosListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public YoutubeVideosListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public YoutubeVideosListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=chart")
     public YoutubeVideosListChartEnum chart;
+
     public YoutubeVideosListRequest withChart(YoutubeVideosListChartEnum chart) {
         this.chart = chart;
         return this;
@@ -62,6 +68,7 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public YoutubeVideosListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hl")
     public String hl;
+
     public YoutubeVideosListRequest withHl(String hl) {
         this.hl = hl;
         return this;
@@ -82,6 +90,7 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String[] id;
+
     public YoutubeVideosListRequest withId(String[] id) {
         this.id = id;
         return this;
@@ -92,6 +101,7 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public YoutubeVideosListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -99,6 +109,7 @@ public class YoutubeVideosListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public YoutubeVideosListRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -106,6 +117,7 @@ public class YoutubeVideosListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxHeight")
     public Long maxHeight;
+
     public YoutubeVideosListRequest withMaxHeight(Long maxHeight) {
         this.maxHeight = maxHeight;
         return this;
@@ -116,6 +128,7 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public YoutubeVideosListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -126,6 +139,7 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxWidth")
     public Long maxWidth;
+
     public YoutubeVideosListRequest withMaxWidth(Long maxWidth) {
         this.maxWidth = maxWidth;
         return this;
@@ -136,6 +150,7 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=myRating")
     public YoutubeVideosListMyRatingEnum myRating;
+
     public YoutubeVideosListRequest withMyRating(YoutubeVideosListMyRatingEnum myRating) {
         this.myRating = myRating;
         return this;
@@ -146,6 +161,7 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public YoutubeVideosListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -156,6 +172,7 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onBehalfOfContentOwner")
     public String onBehalfOfContentOwner;
+
     public YoutubeVideosListRequest withOnBehalfOfContentOwner(String onBehalfOfContentOwner) {
         this.onBehalfOfContentOwner = onBehalfOfContentOwner;
         return this;
@@ -166,6 +183,7 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public YoutubeVideosListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -176,6 +194,7 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part")
     public String[] part;
+
     public YoutubeVideosListRequest withPart(String[] part) {
         this.part = part;
         return this;
@@ -186,6 +205,7 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public YoutubeVideosListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -196,6 +216,7 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public YoutubeVideosListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -206,6 +227,7 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=regionCode")
     public String regionCode;
+
     public YoutubeVideosListRequest withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
@@ -216,6 +238,7 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public YoutubeVideosListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -226,6 +249,7 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public YoutubeVideosListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -236,9 +260,13 @@ public class YoutubeVideosListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=videoCategoryId")
     public String videoCategoryId;
+
     public YoutubeVideosListRequest withVideoCategoryId(String videoCategoryId) {
         this.videoCategoryId = videoCategoryId;
         return this;
     }
     
+    public YoutubeVideosListRequest(@JsonProperty("part") String[] part) {
+        this.part = part;
+  }
 }

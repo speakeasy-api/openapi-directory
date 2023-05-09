@@ -59,10 +59,8 @@ public class Routines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryRoutinesDeleteResponse res = new org.openapis.openapi.models.operations.BigqueryRoutinesDeleteResponse() {{
+        org.openapis.openapi.models.operations.BigqueryRoutinesDeleteResponse res = new org.openapis.openapi.models.operations.BigqueryRoutinesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Routines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryRoutinesGetResponse res = new org.openapis.openapi.models.operations.BigqueryRoutinesGetResponse() {{
+        org.openapis.openapi.models.operations.BigqueryRoutinesGetResponse res = new org.openapis.openapi.models.operations.BigqueryRoutinesGetResponse(contentType, httpRes.statusCode()) {{
             routine = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Routines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryRoutinesInsertResponse res = new org.openapis.openapi.models.operations.BigqueryRoutinesInsertResponse() {{
+        org.openapis.openapi.models.operations.BigqueryRoutinesInsertResponse res = new org.openapis.openapi.models.operations.BigqueryRoutinesInsertResponse(contentType, httpRes.statusCode()) {{
             routine = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Routines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryRoutinesListResponse res = new org.openapis.openapi.models.operations.BigqueryRoutinesListResponse() {{
+        org.openapis.openapi.models.operations.BigqueryRoutinesListResponse res = new org.openapis.openapi.models.operations.BigqueryRoutinesListResponse(contentType, httpRes.statusCode()) {{
             listRoutinesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class Routines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryRoutinesUpdateResponse res = new org.openapis.openapi.models.operations.BigqueryRoutinesUpdateResponse() {{
+        org.openapis.openapi.models.operations.BigqueryRoutinesUpdateResponse res = new org.openapis.openapi.models.operations.BigqueryRoutinesUpdateResponse(contentType, httpRes.statusCode()) {{
             routine = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -22,6 +22,7 @@ public class WorkflowRun {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompletedOn")
     public OffsetDateTime completedOn;
+
     public WorkflowRun withCompletedOn(OffsetDateTime completedOn) {
         this.completedOn = completedOn;
         return this;
@@ -30,6 +31,7 @@ public class WorkflowRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public WorkflowRun withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -38,6 +40,7 @@ public class WorkflowRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Graph")
     public WorkflowGraph graph;
+
     public WorkflowRun withGraph(WorkflowGraph graph) {
         this.graph = graph;
         return this;
@@ -46,6 +49,7 @@ public class WorkflowRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public WorkflowRun withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +58,7 @@ public class WorkflowRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreviousRunId")
     public String previousRunId;
+
     public WorkflowRun withPreviousRunId(String previousRunId) {
         this.previousRunId = previousRunId;
         return this;
@@ -64,6 +69,7 @@ public class WorkflowRun {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartedOn")
     public OffsetDateTime startedOn;
+
     public WorkflowRun withStartedOn(OffsetDateTime startedOn) {
         this.startedOn = startedOn;
         return this;
@@ -72,6 +78,7 @@ public class WorkflowRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartingEventBatchCondition")
     public StartingEventBatchCondition startingEventBatchCondition;
+
     public WorkflowRun withStartingEventBatchCondition(StartingEventBatchCondition startingEventBatchCondition) {
         this.startingEventBatchCondition = startingEventBatchCondition;
         return this;
@@ -80,6 +87,7 @@ public class WorkflowRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Statistics")
     public WorkflowRunStatistics statistics;
+
     public WorkflowRun withStatistics(WorkflowRunStatistics statistics) {
         this.statistics = statistics;
         return this;
@@ -88,6 +96,7 @@ public class WorkflowRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public WorkflowRunStatusEnum status;
+
     public WorkflowRun withStatus(WorkflowRunStatusEnum status) {
         this.status = status;
         return this;
@@ -96,6 +105,7 @@ public class WorkflowRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkflowRunId")
     public String workflowRunId;
+
     public WorkflowRun withWorkflowRunId(String workflowRunId) {
         this.workflowRunId = workflowRunId;
         return this;
@@ -104,9 +114,11 @@ public class WorkflowRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkflowRunProperties")
     public java.util.Map<String, String> workflowRunProperties;
+
     public WorkflowRun withWorkflowRunProperties(java.util.Map<String, String> workflowRunProperties) {
         this.workflowRunProperties = workflowRunProperties;
         return this;
     }
     
+    public WorkflowRun(){}
 }

@@ -18,9 +18,11 @@ public class DocumentInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsSource")
     public GcsSource gcsSource;
+
     public DocumentInputConfig withGcsSource(GcsSource gcsSource) {
         this.gcsSource = gcsSource;
         return this;
     }
     
+    public DocumentInputConfig(){}
 }

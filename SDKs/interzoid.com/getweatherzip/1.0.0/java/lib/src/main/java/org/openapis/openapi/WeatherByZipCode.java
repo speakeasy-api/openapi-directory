@@ -57,11 +57,9 @@ public class WeatherByZipCode {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetweatherzipcodeResponse res = new org.openapis.openapi.models.operations.GetweatherzipcodeResponse() {{
+        org.openapis.openapi.models.operations.GetweatherzipcodeResponse res = new org.openapis.openapi.models.operations.GetweatherzipcodeResponse(contentType, httpRes.statusCode()) {{
             getweatherzipcode200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReservationInstancesIamInstanceProfile {
     
     public String arn;
+
     public ReservationInstancesIamInstanceProfile withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,9 +20,11 @@ public class ReservationInstancesIamInstanceProfile {
     
     
     public String id;
+
     public ReservationInstancesIamInstanceProfile withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ReservationInstancesIamInstanceProfile(){}
 }

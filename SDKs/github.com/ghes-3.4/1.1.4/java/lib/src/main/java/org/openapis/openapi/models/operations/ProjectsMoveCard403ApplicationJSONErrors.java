@@ -12,6 +12,7 @@ public class ProjectsMoveCard403ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public ProjectsMoveCard403ApplicationJSONErrors withCode(String code) {
         this.code = code;
         return this;
@@ -20,6 +21,7 @@ public class ProjectsMoveCard403ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public ProjectsMoveCard403ApplicationJSONErrors withField(String field) {
         this.field = field;
         return this;
@@ -28,6 +30,7 @@ public class ProjectsMoveCard403ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ProjectsMoveCard403ApplicationJSONErrors withMessage(String message) {
         this.message = message;
         return this;
@@ -36,9 +39,11 @@ public class ProjectsMoveCard403ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public ProjectsMoveCard403ApplicationJSONErrors withResource(String resource) {
         this.resource = resource;
         return this;
     }
     
+    public ProjectsMoveCard403ApplicationJSONErrors(){}
 }

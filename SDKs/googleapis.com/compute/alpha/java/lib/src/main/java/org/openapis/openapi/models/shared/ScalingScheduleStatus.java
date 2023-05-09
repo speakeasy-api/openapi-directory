@@ -15,6 +15,7 @@ public class ScalingScheduleStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastStartTime")
     public String lastStartTime;
+
     public ScalingScheduleStatus withLastStartTime(String lastStartTime) {
         this.lastStartTime = lastStartTime;
         return this;
@@ -26,6 +27,7 @@ public class ScalingScheduleStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextStartTime")
     public String nextStartTime;
+
     public ScalingScheduleStatus withNextStartTime(String nextStartTime) {
         this.nextStartTime = nextStartTime;
         return this;
@@ -37,9 +39,11 @@ public class ScalingScheduleStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ScalingScheduleStatusStateEnum state;
+
     public ScalingScheduleStatus withState(ScalingScheduleStatusStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ScalingScheduleStatus(){}
 }

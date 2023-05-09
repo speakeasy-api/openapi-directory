@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TravelTimeGetCompareOverlayResponse {
     
     public byte[] body;
+
     public TravelTimeGetCompareOverlayResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class TravelTimeGetCompareOverlayResponse {
     
     
     public String contentType;
+
     public TravelTimeGetCompareOverlayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class TravelTimeGetCompareOverlayResponse {
     
     
     public Integer statusCode;
+
     public TravelTimeGetCompareOverlayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class TravelTimeGetCompareOverlayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TravelTimeGetCompareOverlayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class TravelTimeGetCompareOverlayResponse {
      */
     
     public java.util.Map<String, Object> systemObject;
+
     public TravelTimeGetCompareOverlayResponse withSystemObject(java.util.Map<String, Object> systemObject) {
         this.systemObject = systemObject;
         return this;
     }
     
+    public TravelTimeGetCompareOverlayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

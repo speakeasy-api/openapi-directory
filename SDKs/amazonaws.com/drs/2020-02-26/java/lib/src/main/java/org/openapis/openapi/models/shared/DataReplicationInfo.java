@@ -15,6 +15,7 @@ public class DataReplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataReplicationError")
     public DataReplicationError dataReplicationError;
+
     public DataReplicationInfo withDataReplicationError(DataReplicationError dataReplicationError) {
         this.dataReplicationError = dataReplicationError;
         return this;
@@ -23,6 +24,7 @@ public class DataReplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataReplicationInitiation")
     public DataReplicationInitiation dataReplicationInitiation;
+
     public DataReplicationInfo withDataReplicationInitiation(DataReplicationInitiation dataReplicationInitiation) {
         this.dataReplicationInitiation = dataReplicationInitiation;
         return this;
@@ -31,6 +33,7 @@ public class DataReplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataReplicationState")
     public DataReplicationStateEnum dataReplicationState;
+
     public DataReplicationInfo withDataReplicationState(DataReplicationStateEnum dataReplicationState) {
         this.dataReplicationState = dataReplicationState;
         return this;
@@ -39,6 +42,7 @@ public class DataReplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etaDateTime")
     public String etaDateTime;
+
     public DataReplicationInfo withEtaDateTime(String etaDateTime) {
         this.etaDateTime = etaDateTime;
         return this;
@@ -47,6 +51,7 @@ public class DataReplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lagDuration")
     public String lagDuration;
+
     public DataReplicationInfo withLagDuration(String lagDuration) {
         this.lagDuration = lagDuration;
         return this;
@@ -55,6 +60,7 @@ public class DataReplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicatedDisks")
     public DataReplicationInfoReplicatedDisk[] replicatedDisks;
+
     public DataReplicationInfo withReplicatedDisks(DataReplicationInfoReplicatedDisk[] replicatedDisks) {
         this.replicatedDisks = replicatedDisks;
         return this;
@@ -63,9 +69,11 @@ public class DataReplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stagingAvailabilityZone")
     public String stagingAvailabilityZone;
+
     public DataReplicationInfo withStagingAvailabilityZone(String stagingAvailabilityZone) {
         this.stagingAvailabilityZone = stagingAvailabilityZone;
         return this;
     }
     
+    public DataReplicationInfo(){}
 }

@@ -18,6 +18,7 @@ public class EnterpriseCrmEventbusProtoConditionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentTaskNumber")
     public String currentTaskNumber;
+
     public EnterpriseCrmEventbusProtoConditionResult withCurrentTaskNumber(String currentTaskNumber) {
         this.currentTaskNumber = currentTaskNumber;
         return this;
@@ -29,6 +30,7 @@ public class EnterpriseCrmEventbusProtoConditionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextTaskNumber")
     public String nextTaskNumber;
+
     public EnterpriseCrmEventbusProtoConditionResult withNextTaskNumber(String nextTaskNumber) {
         this.nextTaskNumber = nextTaskNumber;
         return this;
@@ -40,9 +42,11 @@ public class EnterpriseCrmEventbusProtoConditionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public Boolean result;
+
     public EnterpriseCrmEventbusProtoConditionResult withResult(Boolean result) {
         this.result = result;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoConditionResult(){}
 }

@@ -18,6 +18,7 @@ public class CreativeDealIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dealStatuses")
     public CreativeDealIdsDealStatuses[] dealStatuses;
+
     public CreativeDealIds withDealStatuses(CreativeDealIdsDealStatuses[] dealStatuses) {
         this.dealStatuses = dealStatuses;
         return this;
@@ -29,9 +30,11 @@ public class CreativeDealIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CreativeDealIds withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public CreativeDealIds(){}
 }

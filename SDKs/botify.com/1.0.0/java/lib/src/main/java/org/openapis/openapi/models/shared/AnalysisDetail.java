@@ -20,6 +20,7 @@ public class AnalysisDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public String config;
+
     public AnalysisDetail withConfig(String config) {
         this.config = config;
         return this;
@@ -30,6 +31,7 @@ public class AnalysisDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date_finished")
     public OffsetDateTime dateFinished;
+
     public AnalysisDetail withDateFinished(OffsetDateTime dateFinished) {
         this.dateFinished = dateFinished;
         return this;
@@ -43,6 +45,7 @@ public class AnalysisDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date_last_modified")
     public OffsetDateTime dateLastModified;
+
     public AnalysisDetail withDateLastModified(OffsetDateTime dateLastModified) {
         this.dateLastModified = dateLastModified;
         return this;
@@ -53,6 +56,7 @@ public class AnalysisDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date_launched")
     public OffsetDateTime dateLaunched;
+
     public AnalysisDetail withDateLaunched(OffsetDateTime dateLaunched) {
         this.dateLaunched = dateLaunched;
         return this;
@@ -61,6 +65,7 @@ public class AnalysisDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failures")
     public String failures;
+
     public AnalysisDetail withFailures(String failures) {
         this.failures = failures;
         return this;
@@ -69,6 +74,7 @@ public class AnalysisDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public String features;
+
     public AnalysisDetail withFeatures(String features) {
         this.features = features;
         return this;
@@ -77,6 +83,7 @@ public class AnalysisDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public AnalysisDetail withId(Long id) {
         this.id = id;
         return this;
@@ -85,6 +92,7 @@ public class AnalysisDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AnalysisDetail withName(String name) {
         this.name = name;
         return this;
@@ -93,6 +101,7 @@ public class AnalysisDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("red_button_domain")
     public String redButtonDomain;
+
     public AnalysisDetail withRedButtonDomain(String redButtonDomain) {
         this.redButtonDomain = redButtonDomain;
         return this;
@@ -101,6 +110,7 @@ public class AnalysisDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public AnalysisDetail withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -109,6 +119,7 @@ public class AnalysisDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public AnalysisDetail withUrl(String url) {
         this.url = url;
         return this;
@@ -117,6 +128,7 @@ public class AnalysisDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urls_done")
     public String urlsDone;
+
     public AnalysisDetail withUrlsDone(String urlsDone) {
         this.urlsDone = urlsDone;
         return this;
@@ -125,6 +137,7 @@ public class AnalysisDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urls_in_queue")
     public String urlsInQueue;
+
     public AnalysisDetail withUrlsInQueue(String urlsInQueue) {
         this.urlsInQueue = urlsInQueue;
         return this;
@@ -132,9 +145,13 @@ public class AnalysisDetail {
     
     @JsonProperty("user")
     public User user;
+
     public AnalysisDetail withUser(User user) {
         this.user = user;
         return this;
     }
     
+    public AnalysisDetail(@JsonProperty("user") User user) {
+        this.user = user;
+  }
 }

@@ -20,6 +20,7 @@ public class LicenseConversionTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationLicenseContext")
     public LicenseConversionContext destinationLicenseContext;
+
     public LicenseConversionTask withDestinationLicenseContext(LicenseConversionContext destinationLicenseContext) {
         this.destinationLicenseContext = destinationLicenseContext;
         return this;
@@ -30,6 +31,7 @@ public class LicenseConversionTask {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public LicenseConversionTask withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -38,6 +40,7 @@ public class LicenseConversionTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseConversionTaskId")
     public String licenseConversionTaskId;
+
     public LicenseConversionTask withLicenseConversionTaskId(String licenseConversionTaskId) {
         this.licenseConversionTaskId = licenseConversionTaskId;
         return this;
@@ -48,6 +51,7 @@ public class LicenseConversionTask {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LicenseConversionTime")
     public OffsetDateTime licenseConversionTime;
+
     public LicenseConversionTask withLicenseConversionTime(OffsetDateTime licenseConversionTime) {
         this.licenseConversionTime = licenseConversionTime;
         return this;
@@ -56,6 +60,7 @@ public class LicenseConversionTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public LicenseConversionTask withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -64,6 +69,7 @@ public class LicenseConversionTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceLicenseContext")
     public LicenseConversionContext sourceLicenseContext;
+
     public LicenseConversionTask withSourceLicenseContext(LicenseConversionContext sourceLicenseContext) {
         this.sourceLicenseContext = sourceLicenseContext;
         return this;
@@ -74,6 +80,7 @@ public class LicenseConversionTask {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public LicenseConversionTask withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -82,6 +89,7 @@ public class LicenseConversionTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public LicenseConversionTaskStatusEnum status;
+
     public LicenseConversionTask withStatus(LicenseConversionTaskStatusEnum status) {
         this.status = status;
         return this;
@@ -90,9 +98,11 @@ public class LicenseConversionTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public LicenseConversionTask withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public LicenseConversionTask(){}
 }

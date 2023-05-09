@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppleMappingGetResponse {
     
     public String contentType;
+
     public AppleMappingGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppleMappingGetResponse {
     
     
     public Integer statusCode;
+
     public AppleMappingGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AppleMappingGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppleMappingGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AppleMappingGetResponse {
      */
     
     public AppleMappingGet200ApplicationJSON appleMappingGet200ApplicationJSONObject;
+
     public AppleMappingGetResponse withAppleMappingGet200ApplicationJSONObject(AppleMappingGet200ApplicationJSON appleMappingGet200ApplicationJSONObject) {
         this.appleMappingGet200ApplicationJSONObject = appleMappingGet200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class AppleMappingGetResponse {
      */
     
     public AppleMappingGetDefaultApplicationJSON appleMappingGetDefaultApplicationJSONObject;
+
     public AppleMappingGetResponse withAppleMappingGetDefaultApplicationJSONObject(AppleMappingGetDefaultApplicationJSON appleMappingGetDefaultApplicationJSONObject) {
         this.appleMappingGetDefaultApplicationJSONObject = appleMappingGetDefaultApplicationJSONObject;
         return this;
     }
     
+    public AppleMappingGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class Dipcr400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Dipcr400ApplicationJSONErrorEnum error;
+
     public Dipcr400ApplicationJSON withError(Dipcr400ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Dipcr400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Dipcr400ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Dipcr400ApplicationJSON withErrorDescription(Dipcr400ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Dipcr400ApplicationJSON(){}
 }

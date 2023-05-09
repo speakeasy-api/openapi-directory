@@ -15,6 +15,7 @@ public class ScheduleAByOccupation {
      */
     @JsonProperty("committee_id")
     public String committeeId;
+
     public ScheduleAByOccupation withCommitteeId(String committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -27,6 +28,7 @@ public class ScheduleAByOccupation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public ScheduleAByOccupation withCount(Integer count) {
         this.count = count;
         return this;
@@ -40,6 +42,7 @@ public class ScheduleAByOccupation {
      */
     @JsonProperty("cycle")
     public Integer cycle;
+
     public ScheduleAByOccupation withCycle(Integer cycle) {
         this.cycle = cycle;
         return this;
@@ -50,6 +53,7 @@ public class ScheduleAByOccupation {
      */
     @JsonProperty("occupation")
     public String occupation;
+
     public ScheduleAByOccupation withOccupation(String occupation) {
         this.occupation = occupation;
         return this;
@@ -61,9 +65,15 @@ public class ScheduleAByOccupation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public ScheduleAByOccupation withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public ScheduleAByOccupation(@JsonProperty("committee_id") String committeeId, @JsonProperty("cycle") Integer cycle, @JsonProperty("occupation") String occupation) {
+        this.committeeId = committeeId;
+        this.cycle = cycle;
+        this.occupation = occupation;
+  }
 }

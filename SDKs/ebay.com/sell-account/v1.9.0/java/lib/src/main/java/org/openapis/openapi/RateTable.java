@@ -58,11 +58,9 @@ public class RateTable {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRateTablesResponse res = new org.openapis.openapi.models.operations.GetRateTablesResponse() {{
+        org.openapis.openapi.models.operations.GetRateTablesResponse res = new org.openapis.openapi.models.operations.GetRateTablesResponse(contentType, httpRes.statusCode()) {{
             rateTableResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

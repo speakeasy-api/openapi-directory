@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteResolverRuleRequest {
     @JsonProperty("ResolverRuleId")
     public String resolverRuleId;
+
     public DeleteResolverRuleRequest withResolverRuleId(String resolverRuleId) {
         this.resolverRuleId = resolverRuleId;
         return this;
     }
     
+    public DeleteResolverRuleRequest(@JsonProperty("ResolverRuleId") String resolverRuleId) {
+        this.resolverRuleId = resolverRuleId;
+  }
 }

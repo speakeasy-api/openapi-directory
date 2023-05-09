@@ -18,6 +18,7 @@ public class AppsList200ApplicationJSONOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public AppsList200ApplicationJSONOwner withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -28,6 +29,7 @@ public class AppsList200ApplicationJSONOwner {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public AppsList200ApplicationJSONOwner withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -39,6 +41,7 @@ public class AppsList200ApplicationJSONOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public AppsList200ApplicationJSONOwner withEmail(String email) {
         this.email = email;
         return this;
@@ -49,6 +52,7 @@ public class AppsList200ApplicationJSONOwner {
      */
     @JsonProperty("id")
     public String id;
+
     public AppsList200ApplicationJSONOwner withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class AppsList200ApplicationJSONOwner {
      */
     @JsonProperty("name")
     public String name;
+
     public AppsList200ApplicationJSONOwner withName(String name) {
         this.name = name;
         return this;
@@ -69,9 +74,16 @@ public class AppsList200ApplicationJSONOwner {
      */
     @JsonProperty("type")
     public AppsList200ApplicationJSONOwnerTypeEnum type;
+
     public AppsList200ApplicationJSONOwner withType(AppsList200ApplicationJSONOwnerTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AppsList200ApplicationJSONOwner(@JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("type") AppsList200ApplicationJSONOwnerTypeEnum type) {
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.type = type;
+  }
 }

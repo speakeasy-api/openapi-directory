@@ -22,6 +22,7 @@ public class DescribeDataIngestionJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public DescribeDataIngestionJobResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -32,6 +33,7 @@ public class DescribeDataIngestionJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DataEndTime")
     public OffsetDateTime dataEndTime;
+
     public DescribeDataIngestionJobResponse withDataEndTime(OffsetDateTime dataEndTime) {
         this.dataEndTime = dataEndTime;
         return this;
@@ -40,6 +42,7 @@ public class DescribeDataIngestionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataQualitySummary")
     public DataQualitySummary dataQualitySummary;
+
     public DescribeDataIngestionJobResponse withDataQualitySummary(DataQualitySummary dataQualitySummary) {
         this.dataQualitySummary = dataQualitySummary;
         return this;
@@ -50,6 +53,7 @@ public class DescribeDataIngestionJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DataStartTime")
     public OffsetDateTime dataStartTime;
+
     public DescribeDataIngestionJobResponse withDataStartTime(OffsetDateTime dataStartTime) {
         this.dataStartTime = dataStartTime;
         return this;
@@ -58,6 +62,7 @@ public class DescribeDataIngestionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetArn")
     public String datasetArn;
+
     public DescribeDataIngestionJobResponse withDatasetArn(String datasetArn) {
         this.datasetArn = datasetArn;
         return this;
@@ -66,6 +71,7 @@ public class DescribeDataIngestionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedReason")
     public String failedReason;
+
     public DescribeDataIngestionJobResponse withFailedReason(String failedReason) {
         this.failedReason = failedReason;
         return this;
@@ -74,6 +80,7 @@ public class DescribeDataIngestionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IngestedDataSize")
     public Long ingestedDataSize;
+
     public DescribeDataIngestionJobResponse withIngestedDataSize(Long ingestedDataSize) {
         this.ingestedDataSize = ingestedDataSize;
         return this;
@@ -85,6 +92,7 @@ public class DescribeDataIngestionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IngestedFilesSummary")
     public IngestedFilesSummary ingestedFilesSummary;
+
     public DescribeDataIngestionJobResponse withIngestedFilesSummary(IngestedFilesSummary ingestedFilesSummary) {
         this.ingestedFilesSummary = ingestedFilesSummary;
         return this;
@@ -93,6 +101,7 @@ public class DescribeDataIngestionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IngestionInputConfiguration")
     public IngestionInputConfiguration ingestionInputConfiguration;
+
     public DescribeDataIngestionJobResponse withIngestionInputConfiguration(IngestionInputConfiguration ingestionInputConfiguration) {
         this.ingestionInputConfiguration = ingestionInputConfiguration;
         return this;
@@ -101,6 +110,7 @@ public class DescribeDataIngestionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public DescribeDataIngestionJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -109,6 +119,7 @@ public class DescribeDataIngestionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeDataIngestionJobResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -117,6 +128,7 @@ public class DescribeDataIngestionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public IngestionJobStatusEnum status;
+
     public DescribeDataIngestionJobResponse withStatus(IngestionJobStatusEnum status) {
         this.status = status;
         return this;
@@ -125,9 +137,11 @@ public class DescribeDataIngestionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusDetail")
     public String statusDetail;
+
     public DescribeDataIngestionJobResponse withStatusDetail(String statusDetail) {
         this.statusDetail = statusDetail;
         return this;
     }
     
+    public DescribeDataIngestionJobResponse(){}
 }

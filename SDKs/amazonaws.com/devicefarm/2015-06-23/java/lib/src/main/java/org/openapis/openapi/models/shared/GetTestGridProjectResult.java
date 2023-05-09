@@ -15,9 +15,11 @@ public class GetTestGridProjectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testGridProject")
     public TestGridProject testGridProject;
+
     public GetTestGridProjectResult withTestGridProject(TestGridProject testGridProject) {
         this.testGridProject = testGridProject;
         return this;
     }
     
+    public GetTestGridProjectResult(){}
 }

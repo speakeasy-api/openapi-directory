@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HeadV2NamespacesNamespaceRepositoriesRepositoryTagsTagRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
     public String namespace;
+
     public HeadV2NamespacesNamespaceRepositoriesRepositoryTagsTagRequest withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -16,6 +18,7 @@ public class HeadV2NamespacesNamespaceRepositoriesRepositoryTagsTagRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository")
     public String repository;
+
     public HeadV2NamespacesNamespaceRepositoriesRepositoryTagsTagRequest withRepository(String repository) {
         this.repository = repository;
         return this;
@@ -23,9 +26,15 @@ public class HeadV2NamespacesNamespaceRepositoriesRepositoryTagsTagRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tag")
     public String tag;
+
     public HeadV2NamespacesNamespaceRepositoriesRepositoryTagsTagRequest withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public HeadV2NamespacesNamespaceRepositoriesRepositoryTagsTagRequest(@JsonProperty("namespace") String namespace, @JsonProperty("repository") String repository, @JsonProperty("tag") String tag) {
+        this.namespace = namespace;
+        this.repository = repository;
+        this.tag = tag;
+  }
 }

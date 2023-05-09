@@ -18,6 +18,7 @@ public class GetEvents400ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public java.util.Map<String, String> fields;
+
     public GetEvents400ApplicationJSONErrors withFields(java.util.Map<String, String> fields) {
         this.fields = fields;
         return this;
@@ -29,9 +30,11 @@ public class GetEvents400ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public GetEvents400ApplicationJSONErrorsParameters parameters;
+
     public GetEvents400ApplicationJSONErrors withParameters(GetEvents400ApplicationJSONErrorsParameters parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public GetEvents400ApplicationJSONErrors(){}
 }

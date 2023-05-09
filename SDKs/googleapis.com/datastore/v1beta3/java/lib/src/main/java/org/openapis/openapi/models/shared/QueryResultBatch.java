@@ -18,6 +18,7 @@ public class QueryResultBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endCursor")
     public String endCursor;
+
     public QueryResultBatch withEndCursor(String endCursor) {
         this.endCursor = endCursor;
         return this;
@@ -29,6 +30,7 @@ public class QueryResultBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityResultType")
     public QueryResultBatchEntityResultTypeEnum entityResultType;
+
     public QueryResultBatch withEntityResultType(QueryResultBatchEntityResultTypeEnum entityResultType) {
         this.entityResultType = entityResultType;
         return this;
@@ -40,6 +42,7 @@ public class QueryResultBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityResults")
     public EntityResult[] entityResults;
+
     public QueryResultBatch withEntityResults(EntityResult[] entityResults) {
         this.entityResults = entityResults;
         return this;
@@ -51,6 +54,7 @@ public class QueryResultBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moreResults")
     public QueryResultBatchMoreResultsEnum moreResults;
+
     public QueryResultBatch withMoreResults(QueryResultBatchMoreResultsEnum moreResults) {
         this.moreResults = moreResults;
         return this;
@@ -62,6 +66,7 @@ public class QueryResultBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public QueryResultBatch withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
@@ -73,6 +78,7 @@ public class QueryResultBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skippedCursor")
     public String skippedCursor;
+
     public QueryResultBatch withSkippedCursor(String skippedCursor) {
         this.skippedCursor = skippedCursor;
         return this;
@@ -84,6 +90,7 @@ public class QueryResultBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skippedResults")
     public Integer skippedResults;
+
     public QueryResultBatch withSkippedResults(Integer skippedResults) {
         this.skippedResults = skippedResults;
         return this;
@@ -95,9 +102,11 @@ public class QueryResultBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotVersion")
     public String snapshotVersion;
+
     public QueryResultBatch withSnapshotVersion(String snapshotVersion) {
         this.snapshotVersion = snapshotVersion;
         return this;
     }
     
+    public QueryResultBatch(){}
 }

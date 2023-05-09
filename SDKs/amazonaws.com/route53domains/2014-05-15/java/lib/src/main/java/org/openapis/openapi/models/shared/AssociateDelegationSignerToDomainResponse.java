@@ -15,9 +15,11 @@ public class AssociateDelegationSignerToDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationId")
     public String operationId;
+
     public AssociateDelegationSignerToDomainResponse withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public AssociateDelegationSignerToDomainResponse(){}
 }

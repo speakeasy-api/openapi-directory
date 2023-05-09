@@ -15,6 +15,7 @@ public class SearchResourcesTagCriterionPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public SearchResourcesTagCriterionPair withKey(String key) {
         this.key = key;
         return this;
@@ -23,9 +24,11 @@ public class SearchResourcesTagCriterionPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public SearchResourcesTagCriterionPair withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public SearchResourcesTagCriterionPair(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteVpcEndpointServiceConfigurationsResult {
     
     public DeleteVpcEndpointServiceConfigurationsResultUnsuccessful[] unsuccessful;
+
     public DeleteVpcEndpointServiceConfigurationsResult withUnsuccessful(DeleteVpcEndpointServiceConfigurationsResultUnsuccessful[] unsuccessful) {
         this.unsuccessful = unsuccessful;
         return this;
     }
     
+    public DeleteVpcEndpointServiceConfigurationsResult(){}
 }

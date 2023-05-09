@@ -20,6 +20,7 @@ public class ExternalPaymentDetails {
      */
     @JsonProperty("source")
     public String source;
+
     public ExternalPaymentDetails withSource(String source) {
         this.source = source;
         return this;
@@ -36,6 +37,7 @@ public class ExternalPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_fee_money")
     public Money sourceFeeMoney;
+
     public ExternalPaymentDetails withSourceFeeMoney(Money sourceFeeMoney) {
         this.sourceFeeMoney = sourceFeeMoney;
         return this;
@@ -47,6 +49,7 @@ public class ExternalPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_id")
     public String sourceId;
+
     public ExternalPaymentDetails withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -69,9 +72,14 @@ public class ExternalPaymentDetails {
      */
     @JsonProperty("type")
     public String type;
+
     public ExternalPaymentDetails withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ExternalPaymentDetails(@JsonProperty("source") String source, @JsonProperty("type") String type) {
+        this.source = source;
+        this.type = type;
+  }
 }

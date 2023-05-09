@@ -87,4 +87,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/TranscriptMonologues.java
 lib/src/main/java/org/openapis/openapi/models/shared/Transcript.java
 lib/src/main/java/org/openapis/openapi/models/shared/AcceptTranscriptEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/account/README.md
+docs/captions/README.md
+docs/jobs/README.md
+docs/transcript/README.md
 USAGE.md

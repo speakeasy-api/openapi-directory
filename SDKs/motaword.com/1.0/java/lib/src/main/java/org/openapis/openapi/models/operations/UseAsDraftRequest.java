@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UseAsDraftRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UseAsDraftPayload useAsDraftPayload;
+
     public UseAsDraftRequest withUseAsDraftPayload(org.openapis.openapi.models.shared.UseAsDraftPayload useAsDraftPayload) {
         this.useAsDraftPayload = useAsDraftPayload;
         return this;
@@ -19,9 +21,13 @@ public class UseAsDraftRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
     public Long documentId;
+
     public UseAsDraftRequest withDocumentId(Long documentId) {
         this.documentId = documentId;
         return this;
     }
     
+    public UseAsDraftRequest(@JsonProperty("documentId") Long documentId) {
+        this.documentId = documentId;
+  }
 }

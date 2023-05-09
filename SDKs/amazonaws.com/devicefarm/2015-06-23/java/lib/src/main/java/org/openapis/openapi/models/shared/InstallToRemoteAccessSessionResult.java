@@ -15,9 +15,11 @@ public class InstallToRemoteAccessSessionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appUpload")
     public Upload appUpload;
+
     public InstallToRemoteAccessSessionResult withAppUpload(Upload appUpload) {
         this.appUpload = appUpload;
         return this;
     }
     
+    public InstallToRemoteAccessSessionResult(){}
 }

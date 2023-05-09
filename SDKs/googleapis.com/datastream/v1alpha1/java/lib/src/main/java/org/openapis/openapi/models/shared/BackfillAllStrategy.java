@@ -18,6 +18,7 @@ public class BackfillAllStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mysqlExcludedObjects")
     public MysqlRdbms mysqlExcludedObjects;
+
     public BackfillAllStrategy withMysqlExcludedObjects(MysqlRdbms mysqlExcludedObjects) {
         this.mysqlExcludedObjects = mysqlExcludedObjects;
         return this;
@@ -29,9 +30,11 @@ public class BackfillAllStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oracleExcludedObjects")
     public OracleRdbms oracleExcludedObjects;
+
     public BackfillAllStrategy withOracleExcludedObjects(OracleRdbms oracleExcludedObjects) {
         this.oracleExcludedObjects = oracleExcludedObjects;
         return this;
     }
     
+    public BackfillAllStrategy(){}
 }

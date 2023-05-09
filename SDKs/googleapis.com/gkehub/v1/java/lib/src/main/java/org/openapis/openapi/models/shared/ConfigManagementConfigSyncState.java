@@ -18,6 +18,7 @@ public class ConfigManagementConfigSyncState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentState")
     public ConfigManagementConfigSyncDeploymentState deploymentState;
+
     public ConfigManagementConfigSyncState withDeploymentState(ConfigManagementConfigSyncDeploymentState deploymentState) {
         this.deploymentState = deploymentState;
         return this;
@@ -29,6 +30,7 @@ public class ConfigManagementConfigSyncState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncState")
     public ConfigManagementSyncState syncState;
+
     public ConfigManagementConfigSyncState withSyncState(ConfigManagementSyncState syncState) {
         this.syncState = syncState;
         return this;
@@ -40,9 +42,11 @@ public class ConfigManagementConfigSyncState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public ConfigManagementConfigSyncVersion version;
+
     public ConfigManagementConfigSyncState withVersion(ConfigManagementConfigSyncVersion version) {
         this.version = version;
         return this;
     }
     
+    public ConfigManagementConfigSyncState(){}
 }

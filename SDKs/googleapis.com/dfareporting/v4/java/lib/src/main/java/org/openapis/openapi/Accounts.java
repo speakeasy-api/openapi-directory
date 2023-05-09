@@ -59,11 +59,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAccountsGetResponse res = new org.openapis.openapi.models.operations.DfareportingAccountsGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAccountsGetResponse res = new org.openapis.openapi.models.operations.DfareportingAccountsGetResponse(contentType, httpRes.statusCode()) {{
             account = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAccountsListResponse res = new org.openapis.openapi.models.operations.DfareportingAccountsListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAccountsListResponse res = new org.openapis.openapi.models.operations.DfareportingAccountsListResponse(contentType, httpRes.statusCode()) {{
             accountsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAccountsPatchResponse res = new org.openapis.openapi.models.operations.DfareportingAccountsPatchResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAccountsPatchResponse res = new org.openapis.openapi.models.operations.DfareportingAccountsPatchResponse(contentType, httpRes.statusCode()) {{
             account = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAccountsUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingAccountsUpdateResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAccountsUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingAccountsUpdateResponse(contentType, httpRes.statusCode()) {{
             account = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

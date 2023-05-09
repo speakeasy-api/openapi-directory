@@ -20,6 +20,7 @@ public class CredentialSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public CredentialSummary withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -28,6 +29,7 @@ public class CredentialSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failed")
     public Boolean failed;
+
     public CredentialSummary withFailed(Boolean failed) {
         this.failed = failed;
         return this;
@@ -36,6 +38,7 @@ public class CredentialSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuer")
     public String issuer;
+
     public CredentialSummary withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -46,6 +49,7 @@ public class CredentialSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("seenAt")
     public OffsetDateTime seenAt;
+
     public CredentialSummary withSeenAt(OffsetDateTime seenAt) {
         this.seenAt = seenAt;
         return this;
@@ -54,6 +58,7 @@ public class CredentialSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serialNumber")
     public String serialNumber;
+
     public CredentialSummary withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -62,9 +67,11 @@ public class CredentialSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x509CertificateData")
     public String x509CertificateData;
+
     public CredentialSummary withX509CertificateData(String x509CertificateData) {
         this.x509CertificateData = x509CertificateData;
         return this;
     }
     
+    public CredentialSummary(){}
 }

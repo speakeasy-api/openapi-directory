@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetIpResponse;
 
 public class Application {
@@ -14,11 +13,13 @@ public class Application {
 
             GetIpResponse res = sdk.getIp();
 
-            if (res.dateTimeJsonResponse.isPresent()) {
+            if (res.dateTimeJsonResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

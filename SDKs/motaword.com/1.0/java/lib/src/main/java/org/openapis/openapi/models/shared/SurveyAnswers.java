@@ -12,9 +12,11 @@ public class SurveyAnswers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answers")
     public SurveyAnswer[] answers;
+
     public SurveyAnswers withAnswers(SurveyAnswer[] answers) {
         this.answers = answers;
         return this;
     }
     
+    public SurveyAnswers(){}
 }

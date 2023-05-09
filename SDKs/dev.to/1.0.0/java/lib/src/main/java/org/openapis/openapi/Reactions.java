@@ -57,10 +57,8 @@ public class Reactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiReactionsResponse res = new org.openapis.openapi.models.operations.PostApiReactionsResponse() {{
+        org.openapis.openapi.models.operations.PostApiReactionsResponse res = new org.openapis.openapi.models.operations.PostApiReactionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -99,10 +97,8 @@ public class Reactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiReactionsToggleResponse res = new org.openapis.openapi.models.operations.PostApiReactionsToggleResponse() {{
+        org.openapis.openapi.models.operations.PostApiReactionsToggleResponse res = new org.openapis.openapi.models.operations.PostApiReactionsToggleResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {

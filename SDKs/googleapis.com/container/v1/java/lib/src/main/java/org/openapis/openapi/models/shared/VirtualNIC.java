@@ -18,9 +18,11 @@ public class VirtualNIC {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public VirtualNIC withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public VirtualNIC(){}
 }

@@ -146,4 +146,15 @@ lib/src/main/java/org/openapis/openapi/models/shared/Source.java
 lib/src/main/java/org/openapis/openapi/models/shared/GraphQLResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GraphQLRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/servicecredential/README.md
+docs/servicecredentialtype/README.md
+docs/serviceinstance/README.md
+docs/serviceinventory/README.md
+docs/serviceoffering/README.md
+docs/serviceofferingnode/README.md
+docs/serviceplan/README.md
+docs/source/README.md
+docs/tags/README.md
+docs/task/README.md
 USAGE.md

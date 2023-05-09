@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2SpeechContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boost")
     public Float boost;
+
     public GoogleCloudDialogflowV2SpeechContext withBoost(Float boost) {
         this.boost = boost;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2SpeechContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phrases")
     public String[] phrases;
+
     public GoogleCloudDialogflowV2SpeechContext withPhrases(String[] phrases) {
         this.phrases = phrases;
         return this;
     }
     
+    public GoogleCloudDialogflowV2SpeechContext(){}
 }

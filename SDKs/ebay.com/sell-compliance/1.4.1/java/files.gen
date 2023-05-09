@@ -50,4 +50,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/AspectRecommendations.java
 lib/src/main/java/org/openapis/openapi/models/shared/SuppressViolationRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ComplianceSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/ComplianceSummaryInfo.java
+docs/sdk/README.md
+docs/listingviolation/README.md
+docs/listingviolationsummary/README.md
 USAGE.md

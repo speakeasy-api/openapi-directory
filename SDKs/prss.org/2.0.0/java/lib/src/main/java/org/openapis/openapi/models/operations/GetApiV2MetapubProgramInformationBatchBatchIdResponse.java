@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApiV2MetapubProgramInformationBatchBatchIdResponse {
     
     public String contentType;
+
     public GetApiV2MetapubProgramInformationBatchBatchIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetApiV2MetapubProgramInformationBatchBatchIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ProgramInformationBatch programInformationBatch;
+
     public GetApiV2MetapubProgramInformationBatchBatchIdResponse withProgramInformationBatch(org.openapis.openapi.models.shared.ProgramInformationBatch programInformationBatch) {
         this.programInformationBatch = programInformationBatch;
         return this;
@@ -26,6 +29,7 @@ public class GetApiV2MetapubProgramInformationBatchBatchIdResponse {
     
     
     public Integer statusCode;
+
     public GetApiV2MetapubProgramInformationBatchBatchIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetApiV2MetapubProgramInformationBatchBatchIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApiV2MetapubProgramInformationBatchBatchIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetApiV2MetapubProgramInformationBatchBatchIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

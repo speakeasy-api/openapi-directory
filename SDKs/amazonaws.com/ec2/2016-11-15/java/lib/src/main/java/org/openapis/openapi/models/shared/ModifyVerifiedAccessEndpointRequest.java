@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyVerifiedAccessEndpointRequest {
     
     public String clientToken;
+
     public ModifyVerifiedAccessEndpointRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class ModifyVerifiedAccessEndpointRequest {
     
     
     public String description;
+
     public ModifyVerifiedAccessEndpointRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class ModifyVerifiedAccessEndpointRequest {
     
     
     public Boolean dryRun;
+
     public ModifyVerifiedAccessEndpointRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class ModifyVerifiedAccessEndpointRequest {
     
     
     public ModifyVerifiedAccessEndpointLoadBalancerOptions loadBalancerOptions;
+
     public ModifyVerifiedAccessEndpointRequest withLoadBalancerOptions(ModifyVerifiedAccessEndpointLoadBalancerOptions loadBalancerOptions) {
         this.loadBalancerOptions = loadBalancerOptions;
         return this;
@@ -37,6 +41,7 @@ public class ModifyVerifiedAccessEndpointRequest {
     
     
     public ModifyVerifiedAccessEndpointEniOptions networkInterfaceOptions;
+
     public ModifyVerifiedAccessEndpointRequest withNetworkInterfaceOptions(ModifyVerifiedAccessEndpointEniOptions networkInterfaceOptions) {
         this.networkInterfaceOptions = networkInterfaceOptions;
         return this;
@@ -44,6 +49,7 @@ public class ModifyVerifiedAccessEndpointRequest {
     
     
     public String verifiedAccessEndpointId;
+
     public ModifyVerifiedAccessEndpointRequest withVerifiedAccessEndpointId(String verifiedAccessEndpointId) {
         this.verifiedAccessEndpointId = verifiedAccessEndpointId;
         return this;
@@ -51,9 +57,13 @@ public class ModifyVerifiedAccessEndpointRequest {
     
     
     public String verifiedAccessGroupId;
+
     public ModifyVerifiedAccessEndpointRequest withVerifiedAccessGroupId(String verifiedAccessGroupId) {
         this.verifiedAccessGroupId = verifiedAccessGroupId;
         return this;
     }
     
+    public ModifyVerifiedAccessEndpointRequest(@JsonProperty("VerifiedAccessEndpointId") String verifiedAccessEndpointId) {
+        this.verifiedAccessEndpointId = verifiedAccessEndpointId;
+  }
 }

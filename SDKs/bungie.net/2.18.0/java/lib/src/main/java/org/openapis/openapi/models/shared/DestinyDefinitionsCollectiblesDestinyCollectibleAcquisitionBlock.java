@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsCollectiblesDestinyCollectibleAcquisitionBlock {
     
     public Long acquireMaterialRequirementHash;
+
     public DestinyDefinitionsCollectiblesDestinyCollectibleAcquisitionBlock withAcquireMaterialRequirementHash(Long acquireMaterialRequirementHash) {
         this.acquireMaterialRequirementHash = acquireMaterialRequirementHash;
         return this;
@@ -16,9 +17,11 @@ public class DestinyDefinitionsCollectiblesDestinyCollectibleAcquisitionBlock {
     
     
     public Long acquireTimestampUnlockValueHash;
+
     public DestinyDefinitionsCollectiblesDestinyCollectibleAcquisitionBlock withAcquireTimestampUnlockValueHash(Long acquireTimestampUnlockValueHash) {
         this.acquireTimestampUnlockValueHash = acquireTimestampUnlockValueHash;
         return this;
     }
     
+    public DestinyDefinitionsCollectiblesDestinyCollectibleAcquisitionBlock(){}
 }

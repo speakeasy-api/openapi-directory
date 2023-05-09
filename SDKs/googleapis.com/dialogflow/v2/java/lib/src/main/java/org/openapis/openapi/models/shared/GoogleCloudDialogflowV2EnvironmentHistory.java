@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2EnvironmentHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public GoogleCloudDialogflowV2EnvironmentHistoryEntry[] entries;
+
     public GoogleCloudDialogflowV2EnvironmentHistory withEntries(GoogleCloudDialogflowV2EnvironmentHistoryEntry[] entries) {
         this.entries = entries;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2EnvironmentHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDialogflowV2EnvironmentHistory withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2EnvironmentHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public GoogleCloudDialogflowV2EnvironmentHistory withParent(String parent) {
         this.parent = parent;
         return this;
     }
     
+    public GoogleCloudDialogflowV2EnvironmentHistory(){}
 }

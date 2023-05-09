@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListServicePipelineOutputsResponse {
@@ -12,6 +13,7 @@ public class ListServicePipelineOutputsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListServicePipelineOutputsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListServicePipelineOutputsResponse {
     
     
     public String contentType;
+
     public ListServicePipelineOutputsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListServicePipelineOutputsResponse {
      */
     
     public Object internalServerException;
+
     public ListServicePipelineOutputsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListServicePipelineOutputsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListServicePipelineOutputsOutput listServicePipelineOutputsOutput;
+
     public ListServicePipelineOutputsResponse withListServicePipelineOutputsOutput(org.openapis.openapi.models.shared.ListServicePipelineOutputsOutput listServicePipelineOutputsOutput) {
         this.listServicePipelineOutputsOutput = listServicePipelineOutputsOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListServicePipelineOutputsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListServicePipelineOutputsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListServicePipelineOutputsResponse {
     
     
     public Integer statusCode;
+
     public ListServicePipelineOutputsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListServicePipelineOutputsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListServicePipelineOutputsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListServicePipelineOutputsResponse {
      */
     
     public Object throttlingException;
+
     public ListServicePipelineOutputsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListServicePipelineOutputsResponse {
      */
     
     public Object validationException;
+
     public ListServicePipelineOutputsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListServicePipelineOutputsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

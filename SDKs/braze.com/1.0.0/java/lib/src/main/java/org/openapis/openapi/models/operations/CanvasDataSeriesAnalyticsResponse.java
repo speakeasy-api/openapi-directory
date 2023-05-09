@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CanvasDataSeriesAnalyticsResponse {
     
     public String contentType;
+
     public CanvasDataSeriesAnalyticsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CanvasDataSeriesAnalyticsResponse {
     
     
     public Integer statusCode;
+
     public CanvasDataSeriesAnalyticsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class CanvasDataSeriesAnalyticsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CanvasDataSeriesAnalyticsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CanvasDataSeriesAnalyticsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

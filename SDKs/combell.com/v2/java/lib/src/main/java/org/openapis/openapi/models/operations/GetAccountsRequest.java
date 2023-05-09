@@ -12,6 +12,7 @@ public class GetAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_type")
     public org.openapis.openapi.models.shared.AssetTypeEnum assetType;
+
     public GetAccountsRequest withAssetType(org.openapis.openapi.models.shared.AssetTypeEnum assetType) {
         this.assetType = assetType;
         return this;
@@ -22,6 +23,7 @@ public class GetAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=identifier")
     public String identifier;
+
     public GetAccountsRequest withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -32,6 +34,7 @@ public class GetAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Integer skip;
+
     public GetAccountsRequest withSkip(Integer skip) {
         this.skip = skip;
         return this;
@@ -42,9 +45,11 @@ public class GetAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=take")
     public Integer take;
+
     public GetAccountsRequest withTake(Integer take) {
         this.take = take;
         return this;
     }
     
+    public GetAccountsRequest(){}
 }

@@ -18,6 +18,7 @@ public class GooglePlayDeveloperReportingV1alpha1MetricValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("decimalValue")
     public GoogleTypeDecimal decimalValue;
+
     public GooglePlayDeveloperReportingV1alpha1MetricValue withDecimalValue(GoogleTypeDecimal decimalValue) {
         this.decimalValue = decimalValue;
         return this;
@@ -29,6 +30,7 @@ public class GooglePlayDeveloperReportingV1alpha1MetricValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("decimalValueConfidenceInterval")
     public GooglePlayDeveloperReportingV1alpha1DecimalConfidenceInterval decimalValueConfidenceInterval;
+
     public GooglePlayDeveloperReportingV1alpha1MetricValue withDecimalValueConfidenceInterval(GooglePlayDeveloperReportingV1alpha1DecimalConfidenceInterval decimalValueConfidenceInterval) {
         this.decimalValueConfidenceInterval = decimalValueConfidenceInterval;
         return this;
@@ -40,9 +42,11 @@ public class GooglePlayDeveloperReportingV1alpha1MetricValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public String metric;
+
     public GooglePlayDeveloperReportingV1alpha1MetricValue withMetric(String metric) {
         this.metric = metric;
         return this;
     }
     
+    public GooglePlayDeveloperReportingV1alpha1MetricValue(){}
 }

@@ -15,6 +15,7 @@ public class ReleasesUpdateReleaseUploadStatus200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public ReleasesUpdateReleaseUploadStatus200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -25,9 +26,14 @@ public class ReleasesUpdateReleaseUploadStatus200ApplicationJSON {
      */
     @JsonProperty("upload_status")
     public ReleasesUpdateReleaseUploadStatus200ApplicationJSONUploadStatusEnum uploadStatus;
+
     public ReleasesUpdateReleaseUploadStatus200ApplicationJSON withUploadStatus(ReleasesUpdateReleaseUploadStatus200ApplicationJSONUploadStatusEnum uploadStatus) {
         this.uploadStatus = uploadStatus;
         return this;
     }
     
+    public ReleasesUpdateReleaseUploadStatus200ApplicationJSON(@JsonProperty("id") String id, @JsonProperty("upload_status") ReleasesUpdateReleaseUploadStatus200ApplicationJSONUploadStatusEnum uploadStatus) {
+        this.id = id;
+        this.uploadStatus = uploadStatus;
+  }
 }

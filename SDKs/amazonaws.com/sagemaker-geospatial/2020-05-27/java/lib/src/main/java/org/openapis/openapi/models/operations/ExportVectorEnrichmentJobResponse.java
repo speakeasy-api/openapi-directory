@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportVectorEnrichmentJobResponse {
@@ -12,6 +13,7 @@ public class ExportVectorEnrichmentJobResponse {
      */
     
     public Object accessDeniedException;
+
     public ExportVectorEnrichmentJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ExportVectorEnrichmentJobResponse {
      */
     
     public Object conflictException;
+
     public ExportVectorEnrichmentJobResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ExportVectorEnrichmentJobResponse {
     
     
     public String contentType;
+
     public ExportVectorEnrichmentJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ExportVectorEnrichmentJobResponse {
      */
     
     public org.openapis.openapi.models.shared.ExportVectorEnrichmentJobOutput exportVectorEnrichmentJobOutput;
+
     public ExportVectorEnrichmentJobResponse withExportVectorEnrichmentJobOutput(org.openapis.openapi.models.shared.ExportVectorEnrichmentJobOutput exportVectorEnrichmentJobOutput) {
         this.exportVectorEnrichmentJobOutput = exportVectorEnrichmentJobOutput;
         return this;
@@ -49,6 +54,7 @@ public class ExportVectorEnrichmentJobResponse {
      */
     
     public Object internalServerException;
+
     public ExportVectorEnrichmentJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class ExportVectorEnrichmentJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ExportVectorEnrichmentJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ExportVectorEnrichmentJobResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ExportVectorEnrichmentJobResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ExportVectorEnrichmentJobResponse {
     
     
     public Integer statusCode;
+
     public ExportVectorEnrichmentJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ExportVectorEnrichmentJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportVectorEnrichmentJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ExportVectorEnrichmentJobResponse {
      */
     
     public Object throttlingException;
+
     public ExportVectorEnrichmentJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class ExportVectorEnrichmentJobResponse {
      */
     
     public Object validationException;
+
     public ExportVectorEnrichmentJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ExportVectorEnrichmentJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

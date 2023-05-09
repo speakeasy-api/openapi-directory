@@ -18,6 +18,7 @@ public class DiagnosticConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyHomeFilesFlagEnabled")
     public Boolean copyHomeFilesFlagEnabled;
+
     public DiagnosticConfig withCopyHomeFilesFlagEnabled(Boolean copyHomeFilesFlagEnabled) {
         this.copyHomeFilesFlagEnabled = copyHomeFilesFlagEnabled;
         return this;
@@ -29,6 +30,7 @@ public class DiagnosticConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsBucket")
     public String gcsBucket;
+
     public DiagnosticConfig withGcsBucket(String gcsBucket) {
         this.gcsBucket = gcsBucket;
         return this;
@@ -40,6 +42,7 @@ public class DiagnosticConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packetCaptureFlagEnabled")
     public Boolean packetCaptureFlagEnabled;
+
     public DiagnosticConfig withPacketCaptureFlagEnabled(Boolean packetCaptureFlagEnabled) {
         this.packetCaptureFlagEnabled = packetCaptureFlagEnabled;
         return this;
@@ -51,6 +54,7 @@ public class DiagnosticConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relativePath")
     public String relativePath;
+
     public DiagnosticConfig withRelativePath(String relativePath) {
         this.relativePath = relativePath;
         return this;
@@ -62,9 +66,11 @@ public class DiagnosticConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repairFlagEnabled")
     public Boolean repairFlagEnabled;
+
     public DiagnosticConfig withRepairFlagEnabled(Boolean repairFlagEnabled) {
         this.repairFlagEnabled = repairFlagEnabled;
         return this;
     }
     
+    public DiagnosticConfig(){}
 }

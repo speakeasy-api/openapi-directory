@@ -15,6 +15,7 @@ public class AwsElbLoadBalancerAdditionalAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public AwsElbLoadBalancerAdditionalAttribute withKey(String key) {
         this.key = key;
         return this;
@@ -23,9 +24,11 @@ public class AwsElbLoadBalancerAdditionalAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public AwsElbLoadBalancerAdditionalAttribute withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AwsElbLoadBalancerAdditionalAttribute(){}
 }

@@ -15,9 +15,13 @@ public class UpdateMembershipOutput {
      */
     @JsonProperty("membership")
     public Membership membership;
+
     public UpdateMembershipOutput withMembership(Membership membership) {
         this.membership = membership;
         return this;
     }
     
+    public UpdateMembershipOutput(@JsonProperty("membership") Membership membership) {
+        this.membership = membership;
+  }
 }

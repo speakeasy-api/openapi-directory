@@ -18,6 +18,7 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authors")
     public java.util.Map<String, Object>[] authors;
+
     public ArticleUpdate withAuthors(java.util.Map<String, Object>[] authors) {
         this.authors = authors;
         return this;
@@ -29,6 +30,7 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public Long[] categories;
+
     public ArticleUpdate withCategories(Long[] categories) {
         this.categories = categories;
         return this;
@@ -40,6 +42,7 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories_by_source_id")
     public String[] categoriesBySourceId;
+
     public ArticleUpdate withCategoriesBySourceId(String[] categoriesBySourceId) {
         this.categoriesBySourceId = categoriesBySourceId;
         return this;
@@ -51,6 +54,7 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public java.util.Map<String, Object> customFields;
+
     public ArticleUpdate withCustomFields(java.util.Map<String, Object> customFields) {
         this.customFields = customFields;
         return this;
@@ -62,6 +66,7 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields_list")
     public CustomArticleFieldAdd[] customFieldsList;
+
     public ArticleUpdate withCustomFieldsList(CustomArticleFieldAdd[] customFieldsList) {
         this.customFieldsList = customFieldsList;
         return this;
@@ -73,6 +78,7 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defined_type")
     public String definedType;
+
     public ArticleUpdate withDefinedType(String definedType) {
         this.definedType = definedType;
         return this;
@@ -84,6 +90,7 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ArticleUpdate withDescription(String description) {
         this.description = description;
         return this;
@@ -95,6 +102,7 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doi")
     public String doi;
+
     public ArticleUpdate withDoi(String doi) {
         this.doi = doi;
         return this;
@@ -106,6 +114,7 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("funding")
     public String funding;
+
     public ArticleUpdate withFunding(String funding) {
         this.funding = funding;
         return this;
@@ -117,6 +126,7 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("funding_list")
     public FundingCreate[] fundingList;
+
     public ArticleUpdate withFundingList(FundingCreate[] fundingList) {
         this.fundingList = fundingList;
         return this;
@@ -128,6 +138,7 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
     public Long groupId;
+
     public ArticleUpdate withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -139,6 +150,7 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("handle")
     public String handle;
+
     public ArticleUpdate withHandle(String handle) {
         this.handle = handle;
         return this;
@@ -150,6 +162,7 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_metadata_record")
     public Boolean isMetadataRecord;
+
     public ArticleUpdate withIsMetadataRecord(Boolean isMetadataRecord) {
         this.isMetadataRecord = isMetadataRecord;
         return this;
@@ -161,6 +174,7 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywords")
     public String[] keywords;
+
     public ArticleUpdate withKeywords(String[] keywords) {
         this.keywords = keywords;
         return this;
@@ -172,6 +186,7 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license")
     public Long license;
+
     public ArticleUpdate withLicense(Long license) {
         this.license = license;
         return this;
@@ -183,6 +198,7 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata_reason")
     public String metadataReason;
+
     public ArticleUpdate withMetadataReason(String metadataReason) {
         this.metadataReason = metadataReason;
         return this;
@@ -194,6 +210,7 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("references")
     public String[] references;
+
     public ArticleUpdate withReferences(String[] references) {
         this.references = references;
         return this;
@@ -205,6 +222,7 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_doi")
     public String resourceDoi;
+
     public ArticleUpdate withResourceDoi(String resourceDoi) {
         this.resourceDoi = resourceDoi;
         return this;
@@ -216,6 +234,7 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_title")
     public String resourceTitle;
+
     public ArticleUpdate withResourceTitle(String resourceTitle) {
         this.resourceTitle = resourceTitle;
         return this;
@@ -227,6 +246,7 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public ArticleUpdate withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -235,6 +255,7 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeline")
     public TimelineUpdate timeline;
+
     public ArticleUpdate withTimeline(TimelineUpdate timeline) {
         this.timeline = timeline;
         return this;
@@ -246,9 +267,11 @@ public class ArticleUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ArticleUpdate withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ArticleUpdate(){}
 }

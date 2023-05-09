@@ -55,11 +55,9 @@ public class StatsFindMarketplaceStatistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStatsSeriesPeriodFieldsResponse res = new org.openapis.openapi.models.operations.GetStatsSeriesPeriodFieldsResponse() {{
+        org.openapis.openapi.models.operations.GetStatsSeriesPeriodFieldsResponse res = new org.openapis.openapi.models.operations.GetStatsSeriesPeriodFieldsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -99,11 +97,9 @@ public class StatsFindMarketplaceStatistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStatsTotalResponse res = new org.openapis.openapi.models.operations.GetStatsTotalResponse() {{
+        org.openapis.openapi.models.operations.GetStatsTotalResponse res = new org.openapis.openapi.models.operations.GetStatsTotalResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -144,10 +140,8 @@ public class StatsFindMarketplaceStatistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostStatsIncrementFieldResponse res = new org.openapis.openapi.models.operations.PostStatsIncrementFieldResponse() {{
+        org.openapis.openapi.models.operations.PostStatsIncrementFieldResponse res = new org.openapis.openapi.models.operations.PostStatsIncrementFieldResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

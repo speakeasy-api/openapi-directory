@@ -15,6 +15,7 @@ public class BatchContainerOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Command")
     public String[] command;
+
     public BatchContainerOverrides withCommand(String[] command) {
         this.command = command;
         return this;
@@ -23,6 +24,7 @@ public class BatchContainerOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public BatchEnvironmentVariable[] environment;
+
     public BatchContainerOverrides withEnvironment(BatchEnvironmentVariable[] environment) {
         this.environment = environment;
         return this;
@@ -31,6 +33,7 @@ public class BatchContainerOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public BatchContainerOverrides withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -39,9 +42,11 @@ public class BatchContainerOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceRequirements")
     public BatchResourceRequirement[] resourceRequirements;
+
     public BatchContainerOverrides withResourceRequirements(BatchResourceRequirement[] resourceRequirements) {
         this.resourceRequirements = resourceRequirements;
         return this;
     }
     
+    public BatchContainerOverrides(){}
 }

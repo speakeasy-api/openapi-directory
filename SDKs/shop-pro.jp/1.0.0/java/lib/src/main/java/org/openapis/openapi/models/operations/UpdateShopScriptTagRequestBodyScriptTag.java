@@ -18,6 +18,7 @@ public class UpdateShopScriptTagRequestBodyScriptTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_scope")
     public UpdateShopScriptTagRequestBodyScriptTagDisplayScopeEnum displayScope;
+
     public UpdateShopScriptTagRequestBodyScriptTag withDisplayScope(UpdateShopScriptTagRequestBodyScriptTagDisplayScopeEnum displayScope) {
         this.displayScope = displayScope;
         return this;
@@ -32,6 +33,7 @@ public class UpdateShopScriptTagRequestBodyScriptTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrity")
     public String integrity;
+
     public UpdateShopScriptTagRequestBodyScriptTag withIntegrity(String integrity) {
         this.integrity = integrity;
         return this;
@@ -43,9 +45,11 @@ public class UpdateShopScriptTagRequestBodyScriptTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("src")
     public String src;
+
     public UpdateShopScriptTagRequestBodyScriptTag withSrc(String src) {
         this.src = src;
         return this;
     }
     
+    public UpdateShopScriptTagRequestBodyScriptTag(){}
 }

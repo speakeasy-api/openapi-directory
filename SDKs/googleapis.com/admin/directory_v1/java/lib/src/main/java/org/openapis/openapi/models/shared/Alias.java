@@ -15,6 +15,7 @@ public class Alias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public Alias withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -23,6 +24,7 @@ public class Alias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Alias withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -31,6 +33,7 @@ public class Alias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Alias withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class Alias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Alias withKind(String kind) {
         this.kind = kind;
         return this;
@@ -47,9 +51,11 @@ public class Alias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryEmail")
     public String primaryEmail;
+
     public Alias withPrimaryEmail(String primaryEmail) {
         this.primaryEmail = primaryEmail;
         return this;
     }
     
+    public Alias(){}
 }

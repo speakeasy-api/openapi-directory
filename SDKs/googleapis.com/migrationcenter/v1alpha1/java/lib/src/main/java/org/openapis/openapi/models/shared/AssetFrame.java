@@ -18,6 +18,7 @@ public class AssetFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public AssetFrame withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class AssetFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public AssetFrame withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class AssetFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performanceSamples")
     public PerformanceSample[] performanceSamples;
+
     public AssetFrame withPerformanceSamples(PerformanceSample[] performanceSamples) {
         this.performanceSamples = performanceSamples;
         return this;
@@ -51,6 +54,7 @@ public class AssetFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportTime")
     public String reportTime;
+
     public AssetFrame withReportTime(String reportTime) {
         this.reportTime = reportTime;
         return this;
@@ -62,6 +66,7 @@ public class AssetFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("traceToken")
     public String traceToken;
+
     public AssetFrame withTraceToken(String traceToken) {
         this.traceToken = traceToken;
         return this;
@@ -73,9 +78,11 @@ public class AssetFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualMachineDetails")
     public VirtualMachineDetails virtualMachineDetails;
+
     public AssetFrame withVirtualMachineDetails(VirtualMachineDetails virtualMachineDetails) {
         this.virtualMachineDetails = virtualMachineDetails;
         return this;
     }
     
+    public AssetFrame(){}
 }

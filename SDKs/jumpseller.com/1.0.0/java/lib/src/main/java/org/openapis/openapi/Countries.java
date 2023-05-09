@@ -56,11 +56,9 @@ public class Countries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCountriesJsonResponse res = new org.openapis.openapi.models.operations.GetCountriesJsonResponse() {{
+        org.openapis.openapi.models.operations.GetCountriesJsonResponse res = new org.openapis.openapi.models.operations.GetCountriesJsonResponse(contentType, httpRes.statusCode()) {{
             countries = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,12 +98,10 @@ public class Countries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCountriesCountryCodeJsonResponse res = new org.openapis.openapi.models.operations.GetCountriesCountryCodeJsonResponse() {{
+        org.openapis.openapi.models.operations.GetCountriesCountryCodeJsonResponse res = new org.openapis.openapi.models.operations.GetCountriesCountryCodeJsonResponse(contentType, httpRes.statusCode()) {{
             country = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,12 +148,10 @@ public class Countries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCountriesCountryCodeRegionsJsonResponse res = new org.openapis.openapi.models.operations.GetCountriesCountryCodeRegionsJsonResponse() {{
+        org.openapis.openapi.models.operations.GetCountriesCountryCodeRegionsJsonResponse res = new org.openapis.openapi.models.operations.GetCountriesCountryCodeRegionsJsonResponse(contentType, httpRes.statusCode()) {{
             regions = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,12 +198,10 @@ public class Countries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCountriesCountryCodeRegionsRegionCodeJsonResponse res = new org.openapis.openapi.models.operations.GetCountriesCountryCodeRegionsRegionCodeJsonResponse() {{
+        org.openapis.openapi.models.operations.GetCountriesCountryCodeRegionsRegionCodeJsonResponse res = new org.openapis.openapi.models.operations.GetCountriesCountryCodeRegionsRegionCodeJsonResponse(contentType, httpRes.statusCode()) {{
             region = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

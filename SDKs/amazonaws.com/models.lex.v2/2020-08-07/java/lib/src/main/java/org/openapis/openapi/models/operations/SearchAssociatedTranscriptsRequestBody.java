@@ -14,6 +14,7 @@ public class SearchAssociatedTranscriptsRequestBody {
      */
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.AssociatedTranscriptFilter[] filters;
+
     public SearchAssociatedTranscriptsRequestBody withFilters(org.openapis.openapi.models.shared.AssociatedTranscriptFilter[] filters) {
         this.filters = filters;
         return this;
@@ -25,6 +26,7 @@ public class SearchAssociatedTranscriptsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public SearchAssociatedTranscriptsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,6 +38,7 @@ public class SearchAssociatedTranscriptsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextIndex")
     public Long nextIndex;
+
     public SearchAssociatedTranscriptsRequestBody withNextIndex(Long nextIndex) {
         this.nextIndex = nextIndex;
         return this;
@@ -47,9 +50,13 @@ public class SearchAssociatedTranscriptsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchOrder")
     public SearchAssociatedTranscriptsRequestBodySearchOrderEnum searchOrder;
+
     public SearchAssociatedTranscriptsRequestBody withSearchOrder(SearchAssociatedTranscriptsRequestBodySearchOrderEnum searchOrder) {
         this.searchOrder = searchOrder;
         return this;
     }
     
+    public SearchAssociatedTranscriptsRequestBody(@JsonProperty("filters") org.openapis.openapi.models.shared.AssociatedTranscriptFilter[] filters) {
+        this.filters = filters;
+  }
 }

@@ -18,9 +18,11 @@ public class UnmergeTableCellsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableRange")
     public TableRange tableRange;
+
     public UnmergeTableCellsRequest withTableRange(TableRange tableRange) {
         this.tableRange = tableRange;
         return this;
     }
     
+    public UnmergeTableCellsRequest(){}
 }

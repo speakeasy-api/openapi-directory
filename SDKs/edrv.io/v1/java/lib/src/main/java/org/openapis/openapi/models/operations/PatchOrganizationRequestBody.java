@@ -15,6 +15,7 @@ public class PatchOrganizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public PatchOrganizationRequestBody withActive(Boolean active) {
         this.active = active;
         return this;
@@ -23,6 +24,7 @@ public class PatchOrganizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public PatchOrganizationRequestBodyAddress address;
+
     public PatchOrganizationRequestBody withAddress(PatchOrganizationRequestBodyAddress address) {
         this.address = address;
         return this;
@@ -31,6 +33,7 @@ public class PatchOrganizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channels")
     public PatchOrganizationRequestBodyChannels channels;
+
     public PatchOrganizationRequestBody withChannels(PatchOrganizationRequestBodyChannels channels) {
         this.channels = channels;
         return this;
@@ -39,6 +42,7 @@ public class PatchOrganizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurations")
     public PatchOrganizationRequestBodyConfigurations configurations;
+
     public PatchOrganizationRequestBody withConfigurations(PatchOrganizationRequestBodyConfigurations configurations) {
         this.configurations = configurations;
         return this;
@@ -47,6 +51,7 @@ public class PatchOrganizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public PatchOrganizationRequestBodyLinks links;
+
     public PatchOrganizationRequestBody withLinks(PatchOrganizationRequestBodyLinks links) {
         this.links = links;
         return this;
@@ -55,6 +60,7 @@ public class PatchOrganizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public Object[] locations;
+
     public PatchOrganizationRequestBody withLocations(Object[] locations) {
         this.locations = locations;
         return this;
@@ -63,6 +69,7 @@ public class PatchOrganizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public PatchOrganizationRequestBody withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -71,6 +78,7 @@ public class PatchOrganizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PatchOrganizationRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -79,6 +87,7 @@ public class PatchOrganizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otp")
     public String otp;
+
     public PatchOrganizationRequestBody withOtp(String otp) {
         this.otp = otp;
         return this;
@@ -87,6 +96,7 @@ public class PatchOrganizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stripe_connected_account_id")
     public String stripeConnectedAccountId;
+
     public PatchOrganizationRequestBody withStripeConnectedAccountId(String stripeConnectedAccountId) {
         this.stripeConnectedAccountId = stripeConnectedAccountId;
         return this;
@@ -95,6 +105,7 @@ public class PatchOrganizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stripe_country")
     public String stripeCountry;
+
     public PatchOrganizationRequestBody withStripeCountry(String stripeCountry) {
         this.stripeCountry = stripeCountry;
         return this;
@@ -103,6 +114,7 @@ public class PatchOrganizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stripe_currency")
     public String stripeCurrency;
+
     public PatchOrganizationRequestBody withStripeCurrency(String stripeCurrency) {
         this.stripeCurrency = stripeCurrency;
         return this;
@@ -111,6 +123,7 @@ public class PatchOrganizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stripe_reserve_amount")
     public Long stripeReserveAmount;
+
     public PatchOrganizationRequestBody withStripeReserveAmount(Long stripeReserveAmount) {
         this.stripeReserveAmount = stripeReserveAmount;
         return this;
@@ -119,6 +132,7 @@ public class PatchOrganizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("support")
     public PatchOrganizationRequestBodySupport support;
+
     public PatchOrganizationRequestBody withSupport(PatchOrganizationRequestBodySupport support) {
         this.support = support;
         return this;
@@ -127,6 +141,7 @@ public class PatchOrganizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportChat")
     public PatchOrganizationRequestBodySupportChat1 supportChat;
+
     public PatchOrganizationRequestBody withSupportChat(PatchOrganizationRequestBodySupportChat1 supportChat) {
         this.supportChat = supportChat;
         return this;
@@ -135,9 +150,11 @@ public class PatchOrganizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("theme")
     public PatchOrganizationRequestBodyTheme theme;
+
     public PatchOrganizationRequestBody withTheme(PatchOrganizationRequestBodyTheme theme) {
         this.theme = theme;
         return this;
     }
     
+    public PatchOrganizationRequestBody(){}
 }

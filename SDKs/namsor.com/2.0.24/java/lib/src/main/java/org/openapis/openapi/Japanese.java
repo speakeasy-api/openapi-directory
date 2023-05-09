@@ -55,11 +55,9 @@ public class Japanese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenderJapaneseNameFullResponse res = new org.openapis.openapi.models.operations.GenderJapaneseNameFullResponse() {{
+        org.openapis.openapi.models.operations.GenderJapaneseNameFullResponse res = new org.openapis.openapi.models.operations.GenderJapaneseNameFullResponse(contentType, httpRes.statusCode()) {{
             personalNameGenderedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Japanese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenderJapaneseNameFullBatchResponse res = new org.openapis.openapi.models.operations.GenderJapaneseNameFullBatchResponse() {{
+        org.openapis.openapi.models.operations.GenderJapaneseNameFullBatchResponse res = new org.openapis.openapi.models.operations.GenderJapaneseNameFullBatchResponse(contentType, httpRes.statusCode()) {{
             batchPersonalNameGenderedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -141,11 +137,9 @@ public class Japanese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenderJapaneseNamePinyinResponse res = new org.openapis.openapi.models.operations.GenderJapaneseNamePinyinResponse() {{
+        org.openapis.openapi.models.operations.GenderJapaneseNamePinyinResponse res = new org.openapis.openapi.models.operations.GenderJapaneseNamePinyinResponse(contentType, httpRes.statusCode()) {{
             firstLastNameGenderedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -185,11 +179,9 @@ public class Japanese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenderJapaneseNamePinyinBatchResponse res = new org.openapis.openapi.models.operations.GenderJapaneseNamePinyinBatchResponse() {{
+        org.openapis.openapi.models.operations.GenderJapaneseNamePinyinBatchResponse res = new org.openapis.openapi.models.operations.GenderJapaneseNamePinyinBatchResponse(contentType, httpRes.statusCode()) {{
             batchFirstLastNameGenderedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -229,11 +221,9 @@ public class Japanese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JapaneseNameGenderKanjiCandidatesBatchResponse res = new org.openapis.openapi.models.operations.JapaneseNameGenderKanjiCandidatesBatchResponse() {{
+        org.openapis.openapi.models.operations.JapaneseNameGenderKanjiCandidatesBatchResponse res = new org.openapis.openapi.models.operations.JapaneseNameGenderKanjiCandidatesBatchResponse(contentType, httpRes.statusCode()) {{
             batchNameMatchCandidatesOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,7 +240,7 @@ public class Japanese {
     }
 
     /**
-     * Identify japanese name candidates in KANJI, based on the romanized name ex. Yamamoto Sanae
+     * Identify japanese name candidates in KANJI, based on the romanized name ex. Yamamoto Sanae - and a known gender.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -258,7 +248,7 @@ public class Japanese {
      */
     public org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesResponse japaneseNameKanjiCandidates(org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesRequest request, org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesRequest.class, baseUrl, "/api2/json/japaneseNameKanjiCandidates/{japaneseSurnameLatin}/{japaneseGivenNameLatin}", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesRequest.class, baseUrl, "/api2/json/japaneseNameKanjiCandidates/{japaneseSurnameLatin}/{japaneseGivenNameLatin}/{knownGender}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -271,11 +261,9 @@ public class Japanese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesResponse res = new org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesResponse() {{
+        org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesResponse res = new org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesResponse(contentType, httpRes.statusCode()) {{
             nameMatchCandidatesOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -315,11 +303,9 @@ public class Japanese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesBatchResponse res = new org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesBatchResponse() {{
+        org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesBatchResponse res = new org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesBatchResponse(contentType, httpRes.statusCode()) {{
             batchNameMatchCandidatesOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -336,7 +322,7 @@ public class Japanese {
     }
 
     /**
-     * Identify japanese name candidates in KANJI, based on the romanized name ex. Yamamoto Sanae - and a known gender.
+     * Identify japanese name candidates in KANJI, based on the romanized name ex. Yamamoto Sanae
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -344,7 +330,7 @@ public class Japanese {
      */
     public org.openapis.openapi.models.operations.JapaneseNameKanjiCandidates1Response japaneseNameKanjiCandidates1(org.openapis.openapi.models.operations.JapaneseNameKanjiCandidates1Request request, org.openapis.openapi.models.operations.JapaneseNameKanjiCandidates1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JapaneseNameKanjiCandidates1Request.class, baseUrl, "/api2/json/japaneseNameKanjiCandidates/{japaneseSurnameLatin}/{japaneseGivenNameLatin}/{knownGender}", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JapaneseNameKanjiCandidates1Request.class, baseUrl, "/api2/json/japaneseNameKanjiCandidates/{japaneseSurnameLatin}/{japaneseGivenNameLatin}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -357,11 +343,9 @@ public class Japanese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JapaneseNameKanjiCandidates1Response res = new org.openapis.openapi.models.operations.JapaneseNameKanjiCandidates1Response() {{
+        org.openapis.openapi.models.operations.JapaneseNameKanjiCandidates1Response res = new org.openapis.openapi.models.operations.JapaneseNameKanjiCandidates1Response(contentType, httpRes.statusCode()) {{
             nameMatchCandidatesOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -399,11 +383,9 @@ public class Japanese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JapaneseNameLatinCandidatesResponse res = new org.openapis.openapi.models.operations.JapaneseNameLatinCandidatesResponse() {{
+        org.openapis.openapi.models.operations.JapaneseNameLatinCandidatesResponse res = new org.openapis.openapi.models.operations.JapaneseNameLatinCandidatesResponse(contentType, httpRes.statusCode()) {{
             nameMatchCandidatesOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -443,11 +425,9 @@ public class Japanese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JapaneseNameLatinCandidatesBatchResponse res = new org.openapis.openapi.models.operations.JapaneseNameLatinCandidatesBatchResponse() {{
+        org.openapis.openapi.models.operations.JapaneseNameLatinCandidatesBatchResponse res = new org.openapis.openapi.models.operations.JapaneseNameLatinCandidatesBatchResponse(contentType, httpRes.statusCode()) {{
             batchNameMatchCandidatesOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -485,11 +465,9 @@ public class Japanese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JapaneseNameMatchResponse res = new org.openapis.openapi.models.operations.JapaneseNameMatchResponse() {{
+        org.openapis.openapi.models.operations.JapaneseNameMatchResponse res = new org.openapis.openapi.models.operations.JapaneseNameMatchResponse(contentType, httpRes.statusCode()) {{
             nameMatchedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -529,11 +507,9 @@ public class Japanese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JapaneseNameMatchBatchResponse res = new org.openapis.openapi.models.operations.JapaneseNameMatchBatchResponse() {{
+        org.openapis.openapi.models.operations.JapaneseNameMatchBatchResponse res = new org.openapis.openapi.models.operations.JapaneseNameMatchBatchResponse(contentType, httpRes.statusCode()) {{
             batchNameMatchedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -571,11 +547,9 @@ public class Japanese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JapaneseNameMatchFeedbackLoopResponse res = new org.openapis.openapi.models.operations.JapaneseNameMatchFeedbackLoopResponse() {{
+        org.openapis.openapi.models.operations.JapaneseNameMatchFeedbackLoopResponse res = new org.openapis.openapi.models.operations.JapaneseNameMatchFeedbackLoopResponse(contentType, httpRes.statusCode()) {{
             feedbackLoopOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -613,11 +587,9 @@ public class Japanese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ParseJapaneseNameResponse res = new org.openapis.openapi.models.operations.ParseJapaneseNameResponse() {{
+        org.openapis.openapi.models.operations.ParseJapaneseNameResponse res = new org.openapis.openapi.models.operations.ParseJapaneseNameResponse(contentType, httpRes.statusCode()) {{
             personalNameParsedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -657,11 +629,9 @@ public class Japanese {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ParseJapaneseNameBatchResponse res = new org.openapis.openapi.models.operations.ParseJapaneseNameBatchResponse() {{
+        org.openapis.openapi.models.operations.ParseJapaneseNameBatchResponse res = new org.openapis.openapi.models.operations.ParseJapaneseNameBatchResponse(contentType, httpRes.statusCode()) {{
             batchPersonalNameParsedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

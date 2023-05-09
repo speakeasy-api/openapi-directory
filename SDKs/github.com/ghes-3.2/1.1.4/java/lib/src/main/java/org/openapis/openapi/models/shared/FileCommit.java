@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FileCommit {
     @JsonProperty("commit")
     public FileCommitCommit commit;
+
     public FileCommit withCommit(FileCommitCommit commit) {
         this.commit = commit;
         return this;
@@ -19,9 +20,14 @@ public class FileCommit {
     
     @JsonProperty("content")
     public FileCommitContent content;
+
     public FileCommit withContent(FileCommitContent content) {
         this.content = content;
         return this;
     }
     
+    public FileCommit(@JsonProperty("commit") FileCommitCommit commit, @JsonProperty("content") FileCommitContent content) {
+        this.commit = commit;
+        this.content = content;
+  }
 }

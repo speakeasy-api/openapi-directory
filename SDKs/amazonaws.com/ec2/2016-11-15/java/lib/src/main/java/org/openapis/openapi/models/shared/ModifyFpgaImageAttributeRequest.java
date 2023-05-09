@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyFpgaImageAttributeRequest {
     
     public FpgaImageAttributeNameEnum attribute;
+
     public ModifyFpgaImageAttributeRequest withAttribute(FpgaImageAttributeNameEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -16,6 +17,7 @@ public class ModifyFpgaImageAttributeRequest {
     
     
     public String description;
+
     public ModifyFpgaImageAttributeRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class ModifyFpgaImageAttributeRequest {
     
     
     public Boolean dryRun;
+
     public ModifyFpgaImageAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class ModifyFpgaImageAttributeRequest {
     
     
     public String fpgaImageId;
+
     public ModifyFpgaImageAttributeRequest withFpgaImageId(String fpgaImageId) {
         this.fpgaImageId = fpgaImageId;
         return this;
@@ -37,6 +41,7 @@ public class ModifyFpgaImageAttributeRequest {
     
     
     public LoadPermissionModifications loadPermission;
+
     public ModifyFpgaImageAttributeRequest withLoadPermission(LoadPermissionModifications loadPermission) {
         this.loadPermission = loadPermission;
         return this;
@@ -44,6 +49,7 @@ public class ModifyFpgaImageAttributeRequest {
     
     
     public String name;
+
     public ModifyFpgaImageAttributeRequest withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +57,7 @@ public class ModifyFpgaImageAttributeRequest {
     
     
     public OperationTypeEnum operationType;
+
     public ModifyFpgaImageAttributeRequest withOperationType(OperationTypeEnum operationType) {
         this.operationType = operationType;
         return this;
@@ -58,6 +65,7 @@ public class ModifyFpgaImageAttributeRequest {
     
     
     public String[] productCodes;
+
     public ModifyFpgaImageAttributeRequest withProductCodes(String[] productCodes) {
         this.productCodes = productCodes;
         return this;
@@ -65,6 +73,7 @@ public class ModifyFpgaImageAttributeRequest {
     
     
     public String[] userGroups;
+
     public ModifyFpgaImageAttributeRequest withUserGroups(String[] userGroups) {
         this.userGroups = userGroups;
         return this;
@@ -72,9 +81,13 @@ public class ModifyFpgaImageAttributeRequest {
     
     
     public String[] userIds;
+
     public ModifyFpgaImageAttributeRequest withUserIds(String[] userIds) {
         this.userIds = userIds;
         return this;
     }
     
+    public ModifyFpgaImageAttributeRequest(@JsonProperty("FpgaImageId") String fpgaImageId) {
+        this.fpgaImageId = fpgaImageId;
+  }
 }

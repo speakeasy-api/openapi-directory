@@ -12,6 +12,7 @@ public class MarketDataFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public MarketDataFilterFieldsEnum[] fields;
+
     public MarketDataFilter withFields(MarketDataFilterFieldsEnum[] fields) {
         this.fields = fields;
         return this;
@@ -20,9 +21,11 @@ public class MarketDataFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ladderLevels")
     public Integer ladderLevels;
+
     public MarketDataFilter withLadderLevels(Integer ladderLevels) {
         this.ladderLevels = ladderLevels;
         return this;
     }
     
+    public MarketDataFilter(){}
 }

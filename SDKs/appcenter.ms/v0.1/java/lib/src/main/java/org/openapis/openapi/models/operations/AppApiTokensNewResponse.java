@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppApiTokensNewResponse {
     
     public String contentType;
+
     public AppApiTokensNewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppApiTokensNewResponse {
     
     
     public Integer statusCode;
+
     public AppApiTokensNewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AppApiTokensNewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppApiTokensNewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AppApiTokensNewResponse {
      */
     
     public AppApiTokensNew201ApplicationJSON appApiTokensNew201ApplicationJSONObject;
+
     public AppApiTokensNewResponse withAppApiTokensNew201ApplicationJSONObject(AppApiTokensNew201ApplicationJSON appApiTokensNew201ApplicationJSONObject) {
         this.appApiTokensNew201ApplicationJSONObject = appApiTokensNew201ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class AppApiTokensNewResponse {
      */
     
     public AppApiTokensNew400ApplicationJSON appApiTokensNew400ApplicationJSONObject;
+
     public AppApiTokensNewResponse withAppApiTokensNew400ApplicationJSONObject(AppApiTokensNew400ApplicationJSON appApiTokensNew400ApplicationJSONObject) {
         this.appApiTokensNew400ApplicationJSONObject = appApiTokensNew400ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class AppApiTokensNewResponse {
      */
     
     public AppApiTokensNew401ApplicationJSON appApiTokensNew401ApplicationJSONObject;
+
     public AppApiTokensNewResponse withAppApiTokensNew401ApplicationJSONObject(AppApiTokensNew401ApplicationJSON appApiTokensNew401ApplicationJSONObject) {
         this.appApiTokensNew401ApplicationJSONObject = appApiTokensNew401ApplicationJSONObject;
         return this;
     }
     
+    public AppApiTokensNewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

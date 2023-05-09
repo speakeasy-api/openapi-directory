@@ -15,6 +15,7 @@ public class SignRetrieveJWT {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exp")
     public Long exp;
+
     public SignRetrieveJWT withExp(Long exp) {
         this.exp = exp;
         return this;
@@ -23,6 +24,7 @@ public class SignRetrieveJWT {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public SignRetrieveJWT withField(String field) {
         this.field = field;
         return this;
@@ -34,9 +36,11 @@ public class SignRetrieveJWT {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub")
     public String sub;
+
     public SignRetrieveJWT withSub(String sub) {
         this.sub = sub;
         return this;
     }
     
+    public SignRetrieveJWT(){}
 }

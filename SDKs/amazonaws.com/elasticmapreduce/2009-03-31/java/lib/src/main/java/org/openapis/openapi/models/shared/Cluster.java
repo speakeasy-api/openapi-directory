@@ -15,6 +15,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Applications")
     public Application[] applications;
+
     public Cluster withApplications(Application[] applications) {
         this.applications = applications;
         return this;
@@ -23,6 +24,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingRole")
     public String autoScalingRole;
+
     public Cluster withAutoScalingRole(String autoScalingRole) {
         this.autoScalingRole = autoScalingRole;
         return this;
@@ -31,6 +33,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoTerminate")
     public Boolean autoTerminate;
+
     public Cluster withAutoTerminate(Boolean autoTerminate) {
         this.autoTerminate = autoTerminate;
         return this;
@@ -39,6 +42,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterArn")
     public String clusterArn;
+
     public Cluster withClusterArn(String clusterArn) {
         this.clusterArn = clusterArn;
         return this;
@@ -47,6 +51,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configurations")
     public Configuration[] configurations;
+
     public Cluster withConfigurations(Configuration[] configurations) {
         this.configurations = configurations;
         return this;
@@ -55,6 +60,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomAmiId")
     public String customAmiId;
+
     public Cluster withCustomAmiId(String customAmiId) {
         this.customAmiId = customAmiId;
         return this;
@@ -63,6 +69,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsRootVolumeSize")
     public Long ebsRootVolumeSize;
+
     public Cluster withEbsRootVolumeSize(Long ebsRootVolumeSize) {
         this.ebsRootVolumeSize = ebsRootVolumeSize;
         return this;
@@ -71,6 +78,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ec2InstanceAttributes")
     public Ec2InstanceAttributes ec2InstanceAttributes;
+
     public Cluster withEc2InstanceAttributes(Ec2InstanceAttributes ec2InstanceAttributes) {
         this.ec2InstanceAttributes = ec2InstanceAttributes;
         return this;
@@ -79,6 +87,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Cluster withId(String id) {
         this.id = id;
         return this;
@@ -87,6 +96,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceCollectionType")
     public InstanceCollectionTypeEnum instanceCollectionType;
+
     public Cluster withInstanceCollectionType(InstanceCollectionTypeEnum instanceCollectionType) {
         this.instanceCollectionType = instanceCollectionType;
         return this;
@@ -95,6 +105,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KerberosAttributes")
     public KerberosAttributes kerberosAttributes;
+
     public Cluster withKerberosAttributes(KerberosAttributes kerberosAttributes) {
         this.kerberosAttributes = kerberosAttributes;
         return this;
@@ -103,6 +114,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogEncryptionKmsKeyId")
     public String logEncryptionKmsKeyId;
+
     public Cluster withLogEncryptionKmsKeyId(String logEncryptionKmsKeyId) {
         this.logEncryptionKmsKeyId = logEncryptionKmsKeyId;
         return this;
@@ -111,6 +123,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogUri")
     public String logUri;
+
     public Cluster withLogUri(String logUri) {
         this.logUri = logUri;
         return this;
@@ -119,6 +132,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MasterPublicDnsName")
     public String masterPublicDnsName;
+
     public Cluster withMasterPublicDnsName(String masterPublicDnsName) {
         this.masterPublicDnsName = masterPublicDnsName;
         return this;
@@ -127,6 +141,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Cluster withName(String name) {
         this.name = name;
         return this;
@@ -135,6 +150,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NormalizedInstanceHours")
     public Long normalizedInstanceHours;
+
     public Cluster withNormalizedInstanceHours(Long normalizedInstanceHours) {
         this.normalizedInstanceHours = normalizedInstanceHours;
         return this;
@@ -143,6 +159,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OSReleaseLabel")
     public String osReleaseLabel;
+
     public Cluster withOSReleaseLabel(String osReleaseLabel) {
         this.osReleaseLabel = osReleaseLabel;
         return this;
@@ -151,6 +168,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutpostArn")
     public String outpostArn;
+
     public Cluster withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -159,6 +177,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlacementGroups")
     public PlacementGroupConfig[] placementGroups;
+
     public Cluster withPlacementGroups(PlacementGroupConfig[] placementGroups) {
         this.placementGroups = placementGroups;
         return this;
@@ -167,6 +186,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReleaseLabel")
     public String releaseLabel;
+
     public Cluster withReleaseLabel(String releaseLabel) {
         this.releaseLabel = releaseLabel;
         return this;
@@ -175,6 +195,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RepoUpgradeOnBoot")
     public RepoUpgradeOnBootEnum repoUpgradeOnBoot;
+
     public Cluster withRepoUpgradeOnBoot(RepoUpgradeOnBootEnum repoUpgradeOnBoot) {
         this.repoUpgradeOnBoot = repoUpgradeOnBoot;
         return this;
@@ -183,6 +204,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestedAmiVersion")
     public String requestedAmiVersion;
+
     public Cluster withRequestedAmiVersion(String requestedAmiVersion) {
         this.requestedAmiVersion = requestedAmiVersion;
         return this;
@@ -191,6 +213,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunningAmiVersion")
     public String runningAmiVersion;
+
     public Cluster withRunningAmiVersion(String runningAmiVersion) {
         this.runningAmiVersion = runningAmiVersion;
         return this;
@@ -199,6 +222,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScaleDownBehavior")
     public ScaleDownBehaviorEnum scaleDownBehavior;
+
     public Cluster withScaleDownBehavior(ScaleDownBehaviorEnum scaleDownBehavior) {
         this.scaleDownBehavior = scaleDownBehavior;
         return this;
@@ -207,6 +231,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityConfiguration")
     public String securityConfiguration;
+
     public Cluster withSecurityConfiguration(String securityConfiguration) {
         this.securityConfiguration = securityConfiguration;
         return this;
@@ -215,6 +240,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceRole")
     public String serviceRole;
+
     public Cluster withServiceRole(String serviceRole) {
         this.serviceRole = serviceRole;
         return this;
@@ -223,6 +249,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ClusterStatus status;
+
     public Cluster withStatus(ClusterStatus status) {
         this.status = status;
         return this;
@@ -231,6 +258,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepConcurrencyLevel")
     public Long stepConcurrencyLevel;
+
     public Cluster withStepConcurrencyLevel(Long stepConcurrencyLevel) {
         this.stepConcurrencyLevel = stepConcurrencyLevel;
         return this;
@@ -239,6 +267,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public Cluster withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -247,6 +276,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TerminationProtected")
     public Boolean terminationProtected;
+
     public Cluster withTerminationProtected(Boolean terminationProtected) {
         this.terminationProtected = terminationProtected;
         return this;
@@ -255,9 +285,11 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VisibleToAllUsers")
     public Boolean visibleToAllUsers;
+
     public Cluster withVisibleToAllUsers(Boolean visibleToAllUsers) {
         this.visibleToAllUsers = visibleToAllUsers;
         return this;
     }
     
+    public Cluster(){}
 }

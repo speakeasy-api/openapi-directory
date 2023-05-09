@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExecuteSwitchTrasactionSwitchInstructionRequest {
     @JsonProperty("buy_instructions")
     public ExecuteSwitchTrasactionSwitchInstructionRequestEachBuyOrSellInstructionOfTheSwitchRequest[] buyInstructions;
+
     public ExecuteSwitchTrasactionSwitchInstructionRequest withBuyInstructions(ExecuteSwitchTrasactionSwitchInstructionRequestEachBuyOrSellInstructionOfTheSwitchRequest[] buyInstructions) {
         this.buyInstructions = buyInstructions;
         return this;
@@ -22,6 +23,7 @@ public class ExecuteSwitchTrasactionSwitchInstructionRequest {
      */
     @JsonProperty("pot_id")
     public String potId;
+
     public ExecuteSwitchTrasactionSwitchInstructionRequest withPotId(String potId) {
         this.potId = potId;
         return this;
@@ -32,6 +34,7 @@ public class ExecuteSwitchTrasactionSwitchInstructionRequest {
      */
     @JsonProperty("request_id")
     public String requestId;
+
     public ExecuteSwitchTrasactionSwitchInstructionRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -39,9 +42,16 @@ public class ExecuteSwitchTrasactionSwitchInstructionRequest {
     
     @JsonProperty("sell_instructions")
     public ExecuteSwitchTrasactionSwitchInstructionRequestEachBuyOrSellInstructionOfTheSwitchRequest[] sellInstructions;
+
     public ExecuteSwitchTrasactionSwitchInstructionRequest withSellInstructions(ExecuteSwitchTrasactionSwitchInstructionRequestEachBuyOrSellInstructionOfTheSwitchRequest[] sellInstructions) {
         this.sellInstructions = sellInstructions;
         return this;
     }
     
+    public ExecuteSwitchTrasactionSwitchInstructionRequest(@JsonProperty("buy_instructions") ExecuteSwitchTrasactionSwitchInstructionRequestEachBuyOrSellInstructionOfTheSwitchRequest[] buyInstructions, @JsonProperty("pot_id") String potId, @JsonProperty("request_id") String requestId, @JsonProperty("sell_instructions") ExecuteSwitchTrasactionSwitchInstructionRequestEachBuyOrSellInstructionOfTheSwitchRequest[] sellInstructions) {
+        this.buyInstructions = buyInstructions;
+        this.potId = potId;
+        this.requestId = requestId;
+        this.sellInstructions = sellInstructions;
+  }
 }

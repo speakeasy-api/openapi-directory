@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SenderIdFilter {
     @JsonProperty("Name")
     public SenderIdFilterNameEnum name;
+
     public SenderIdFilter withName(SenderIdFilterNameEnum name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class SenderIdFilter {
     
     @JsonProperty("Values")
     public String[] values;
+
     public SenderIdFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public SenderIdFilter(@JsonProperty("Name") SenderIdFilterNameEnum name, @JsonProperty("Values") String[] values) {
+        this.name = name;
+        this.values = values;
+  }
 }

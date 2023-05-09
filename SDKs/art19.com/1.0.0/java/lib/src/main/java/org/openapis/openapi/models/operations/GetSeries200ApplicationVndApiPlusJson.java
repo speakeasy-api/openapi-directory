@@ -15,6 +15,7 @@ public class GetSeries200ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.Series[] data;
+
     public GetSeries200ApplicationVndApiPlusJson withData(org.openapis.openapi.models.shared.Series[] data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class GetSeries200ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public org.openapis.openapi.models.shared.Links links;
+
     public GetSeries200ApplicationVndApiPlusJson withLinks(org.openapis.openapi.models.shared.Links links) {
         this.links = links;
         return this;
     }
     
+    public GetSeries200ApplicationVndApiPlusJson(){}
 }

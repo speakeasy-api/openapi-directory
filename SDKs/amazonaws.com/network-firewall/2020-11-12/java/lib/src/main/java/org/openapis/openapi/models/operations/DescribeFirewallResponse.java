@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFirewallResponse {
     
     public String contentType;
+
     public DescribeFirewallResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFirewallResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFirewallResponse describeFirewallResponse;
+
     public DescribeFirewallResponse withDescribeFirewallResponse(org.openapis.openapi.models.shared.DescribeFirewallResponse describeFirewallResponse) {
         this.describeFirewallResponse = describeFirewallResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFirewallResponse {
      */
     
     public Object internalServerError;
+
     public DescribeFirewallResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeFirewallResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeFirewallResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeFirewallResponse {
     
     
     public Integer statusCode;
+
     public DescribeFirewallResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeFirewallResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFirewallResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeFirewallResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeFirewallResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeFirewallResponse {
      */
     
     public Object throttlingException;
+
     public DescribeFirewallResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeFirewallResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

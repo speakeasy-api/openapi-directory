@@ -22,6 +22,7 @@ public class UserProfileDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public UserProfileDetails withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class UserProfileDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainId")
     public String domainId;
+
     public UserProfileDetails withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -40,6 +42,7 @@ public class UserProfileDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public UserProfileDetails withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -48,6 +51,7 @@ public class UserProfileDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public UserProfileStatusEnum status;
+
     public UserProfileDetails withStatus(UserProfileStatusEnum status) {
         this.status = status;
         return this;
@@ -56,9 +60,11 @@ public class UserProfileDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserProfileName")
     public String userProfileName;
+
     public UserProfileDetails withUserProfileName(String userProfileName) {
         this.userProfileName = userProfileName;
         return this;
     }
     
+    public UserProfileDetails(){}
 }

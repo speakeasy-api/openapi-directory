@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetHomeRegionResponse {
@@ -12,6 +13,7 @@ public class GetHomeRegionResponse {
      */
     
     public Object accessDeniedException;
+
     public GetHomeRegionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetHomeRegionResponse {
     
     
     public String contentType;
+
     public GetHomeRegionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetHomeRegionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetHomeRegionResult getHomeRegionResult;
+
     public GetHomeRegionResponse withGetHomeRegionResult(org.openapis.openapi.models.shared.GetHomeRegionResult getHomeRegionResult) {
         this.getHomeRegionResult = getHomeRegionResult;
         return this;
@@ -39,6 +43,7 @@ public class GetHomeRegionResponse {
      */
     
     public Object internalServerError;
+
     public GetHomeRegionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class GetHomeRegionResponse {
      */
     
     public Object invalidInputException;
+
     public GetHomeRegionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -56,6 +62,7 @@ public class GetHomeRegionResponse {
     
     
     public Integer statusCode;
+
     public GetHomeRegionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetHomeRegionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetHomeRegionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetHomeRegionResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetHomeRegionResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,9 +92,14 @@ public class GetHomeRegionResponse {
      */
     
     public Object throttlingException;
+
     public GetHomeRegionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetHomeRegionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

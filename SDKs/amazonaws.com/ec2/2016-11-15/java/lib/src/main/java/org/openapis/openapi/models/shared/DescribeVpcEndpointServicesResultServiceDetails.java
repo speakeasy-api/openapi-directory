@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcEndpointServicesResultServiceDetails {
     
     public Boolean acceptanceRequired;
+
     public DescribeVpcEndpointServicesResultServiceDetails withAcceptanceRequired(Boolean acceptanceRequired) {
         this.acceptanceRequired = acceptanceRequired;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVpcEndpointServicesResultServiceDetails {
     
     
     public String[] availabilityZones;
+
     public DescribeVpcEndpointServicesResultServiceDetails withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVpcEndpointServicesResultServiceDetails {
     
     
     public String[] baseEndpointDnsNames;
+
     public DescribeVpcEndpointServicesResultServiceDetails withBaseEndpointDnsNames(String[] baseEndpointDnsNames) {
         this.baseEndpointDnsNames = baseEndpointDnsNames;
         return this;
@@ -33,6 +36,7 @@ public class DescribeVpcEndpointServicesResultServiceDetails {
     
     
     public Boolean managesVpcEndpoints;
+
     public DescribeVpcEndpointServicesResultServiceDetails withManagesVpcEndpoints(Boolean managesVpcEndpoints) {
         this.managesVpcEndpoints = managesVpcEndpoints;
         return this;
@@ -40,6 +44,7 @@ public class DescribeVpcEndpointServicesResultServiceDetails {
     
     
     public String owner;
+
     public DescribeVpcEndpointServicesResultServiceDetails withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -47,6 +52,7 @@ public class DescribeVpcEndpointServicesResultServiceDetails {
     
     
     public DescribeVpcEndpointServicesResultServiceDetailsPayerResponsibilityEnum payerResponsibility;
+
     public DescribeVpcEndpointServicesResultServiceDetails withPayerResponsibility(DescribeVpcEndpointServicesResultServiceDetailsPayerResponsibilityEnum payerResponsibility) {
         this.payerResponsibility = payerResponsibility;
         return this;
@@ -54,6 +60,7 @@ public class DescribeVpcEndpointServicesResultServiceDetails {
     
     
     public String privateDnsName;
+
     public DescribeVpcEndpointServicesResultServiceDetails withPrivateDnsName(String privateDnsName) {
         this.privateDnsName = privateDnsName;
         return this;
@@ -61,6 +68,7 @@ public class DescribeVpcEndpointServicesResultServiceDetails {
     
     
     public DescribeVpcEndpointServicesResultServiceDetailsPrivateDnsNameVerificationStateEnum privateDnsNameVerificationState;
+
     public DescribeVpcEndpointServicesResultServiceDetails withPrivateDnsNameVerificationState(DescribeVpcEndpointServicesResultServiceDetailsPrivateDnsNameVerificationStateEnum privateDnsNameVerificationState) {
         this.privateDnsNameVerificationState = privateDnsNameVerificationState;
         return this;
@@ -68,6 +76,7 @@ public class DescribeVpcEndpointServicesResultServiceDetails {
     
     
     public DescribeVpcEndpointServicesResultServiceDetailsPrivateDnsNames[] privateDnsNames;
+
     public DescribeVpcEndpointServicesResultServiceDetails withPrivateDnsNames(DescribeVpcEndpointServicesResultServiceDetailsPrivateDnsNames[] privateDnsNames) {
         this.privateDnsNames = privateDnsNames;
         return this;
@@ -75,6 +84,7 @@ public class DescribeVpcEndpointServicesResultServiceDetails {
     
     
     public String serviceId;
+
     public DescribeVpcEndpointServicesResultServiceDetails withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -82,6 +92,7 @@ public class DescribeVpcEndpointServicesResultServiceDetails {
     
     
     public String serviceName;
+
     public DescribeVpcEndpointServicesResultServiceDetails withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -89,6 +100,7 @@ public class DescribeVpcEndpointServicesResultServiceDetails {
     
     
     public DescribeVpcEndpointServicesResultServiceDetailsServiceType[] serviceType;
+
     public DescribeVpcEndpointServicesResultServiceDetails withServiceType(DescribeVpcEndpointServicesResultServiceDetailsServiceType[] serviceType) {
         this.serviceType = serviceType;
         return this;
@@ -96,6 +108,7 @@ public class DescribeVpcEndpointServicesResultServiceDetails {
     
     
     public DescribeVpcEndpointServicesResultServiceDetailsSupportedIpAddressTypesEnum[] supportedIpAddressTypes;
+
     public DescribeVpcEndpointServicesResultServiceDetails withSupportedIpAddressTypes(DescribeVpcEndpointServicesResultServiceDetailsSupportedIpAddressTypesEnum[] supportedIpAddressTypes) {
         this.supportedIpAddressTypes = supportedIpAddressTypes;
         return this;
@@ -103,6 +116,7 @@ public class DescribeVpcEndpointServicesResultServiceDetails {
     
     
     public DescribeVpcEndpointServicesResultServiceDetailsTags[] tags;
+
     public DescribeVpcEndpointServicesResultServiceDetails withTags(DescribeVpcEndpointServicesResultServiceDetailsTags[] tags) {
         this.tags = tags;
         return this;
@@ -110,9 +124,11 @@ public class DescribeVpcEndpointServicesResultServiceDetails {
     
     
     public Boolean vpcEndpointPolicySupported;
+
     public DescribeVpcEndpointServicesResultServiceDetails withVpcEndpointPolicySupported(Boolean vpcEndpointPolicySupported) {
         this.vpcEndpointPolicySupported = vpcEndpointPolicySupported;
         return this;
     }
     
+    public DescribeVpcEndpointServicesResultServiceDetails(){}
 }

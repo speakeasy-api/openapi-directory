@@ -18,6 +18,7 @@ public class ManagedZonesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public ResponseHeader header;
+
     public ManagedZonesListResponse withHeader(ResponseHeader header) {
         this.header = header;
         return this;
@@ -29,6 +30,7 @@ public class ManagedZonesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ManagedZonesListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class ManagedZonesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedZones")
     public ManagedZone[] managedZones;
+
     public ManagedZonesListResponse withManagedZones(ManagedZone[] managedZones) {
         this.managedZones = managedZones;
         return this;
@@ -51,9 +54,11 @@ public class ManagedZonesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ManagedZonesListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ManagedZonesListResponse(){}
 }

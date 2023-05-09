@@ -15,9 +15,11 @@ public class TrainingJobStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public TrainingJobStepMetadata withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public TrainingJobStepMetadata(){}
 }

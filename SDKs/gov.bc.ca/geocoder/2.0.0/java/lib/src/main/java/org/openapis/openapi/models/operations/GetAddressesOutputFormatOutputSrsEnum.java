@@ -10,19 +10,19 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * GetAddressesOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank"&gt;outputSRS&lt;/a&gt;
  */
 public enum GetAddressesOutputFormatOutputSrsEnum {
-    FOUR_THOUSAND_THREE_HUNDRED_AND_TWENTY_SIX("4326"),
-    FOUR_THOUSAND_TWO_HUNDRED_AND_SIXTY_NINE("4269"),
-    THREE_THOUSAND_AND_FIVE("3005"),
-    TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_SEVEN("26907"),
-    TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_EIGHT("26908"),
-    TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_NINE("26909"),
-    TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_TEN("26910"),
-    TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_ELEVEN("26911");
+    FOUR_THOUSAND_THREE_HUNDRED_AND_TWENTY_SIX(4326L),
+    FOUR_THOUSAND_TWO_HUNDRED_AND_SIXTY_NINE(4269L),
+    THREE_THOUSAND_AND_FIVE(3005L),
+    TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_SEVEN(26907L),
+    TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_EIGHT(26908L),
+    TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_NINE(26909L),
+    TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_TEN(26910L),
+    TWENTY_SIX_THOUSAND_NINE_HUNDRED_AND_ELEVEN(26911L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private GetAddressesOutputFormatOutputSrsEnum(String value) {
+    private GetAddressesOutputFormatOutputSrsEnum(Long value) {
         this.value = value;
     }
 }

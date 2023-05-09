@@ -15,6 +15,7 @@ public class Taint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effect")
     public TaintEffectEnum effect;
+
     public Taint withEffect(TaintEffectEnum effect) {
         this.effect = effect;
         return this;
@@ -23,6 +24,7 @@ public class Taint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public Taint withKey(String key) {
         this.key = key;
         return this;
@@ -31,9 +33,11 @@ public class Taint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Taint withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Taint(){}
 }

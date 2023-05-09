@@ -18,6 +18,7 @@ public class CampaignsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaigns")
     public Campaign[] campaigns;
+
     public CampaignsListResponse withCampaigns(Campaign[] campaigns) {
         this.campaigns = campaigns;
         return this;
@@ -29,6 +30,7 @@ public class CampaignsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CampaignsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class CampaignsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public CampaignsListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public CampaignsListResponse(){}
 }

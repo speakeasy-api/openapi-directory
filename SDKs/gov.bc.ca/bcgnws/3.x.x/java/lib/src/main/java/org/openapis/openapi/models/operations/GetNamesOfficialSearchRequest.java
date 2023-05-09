@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamesOfficialSearchRequest {
@@ -12,6 +13,7 @@ public class GetNamesOfficialSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
     public GetNamesOfficialSearchEmbedEnum embed;
+
     public GetNamesOfficialSearchRequest withEmbed(GetNamesOfficialSearchEmbedEnum embed) {
         this.embed = embed;
         return this;
@@ -22,6 +24,7 @@ public class GetNamesOfficialSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exactSpelling")
     public GetNamesOfficialSearchExactSpellingEnum exactSpelling;
+
     public GetNamesOfficialSearchRequest withExactSpelling(GetNamesOfficialSearchExactSpellingEnum exactSpelling) {
         this.exactSpelling = exactSpelling;
         return this;
@@ -32,6 +35,7 @@ public class GetNamesOfficialSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureCategory")
     public String featureCategory;
+
     public GetNamesOfficialSearchRequest withFeatureCategory(String featureCategory) {
         this.featureCategory = featureCategory;
         return this;
@@ -42,6 +46,7 @@ public class GetNamesOfficialSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureClass")
     public String featureClass;
+
     public GetNamesOfficialSearchRequest withFeatureClass(String featureClass) {
         this.featureClass = featureClass;
         return this;
@@ -52,6 +57,7 @@ public class GetNamesOfficialSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureType")
     public String featureType;
+
     public GetNamesOfficialSearchRequest withFeatureType(String featureType) {
         this.featureType = featureType;
         return this;
@@ -62,6 +68,7 @@ public class GetNamesOfficialSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=itemsPerPage")
     public Long itemsPerPage;
+
     public GetNamesOfficialSearchRequest withItemsPerPage(Long itemsPerPage) {
         this.itemsPerPage = itemsPerPage;
         return this;
@@ -72,6 +79,7 @@ public class GetNamesOfficialSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetNamesOfficialSearchRequest withName(String name) {
         this.name = name;
         return this;
@@ -82,6 +90,7 @@ public class GetNamesOfficialSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputFormat")
     public GetNamesOfficialSearchOutputFormatEnum outputFormat;
+
     public GetNamesOfficialSearchRequest withOutputFormat(GetNamesOfficialSearchOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -92,6 +101,7 @@ public class GetNamesOfficialSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
     public GetNamesOfficialSearchOutputSrsEnum outputSRS;
+
     public GetNamesOfficialSearchRequest withOutputSRS(GetNamesOfficialSearchOutputSrsEnum outputSRS) {
         this.outputSRS = outputSRS;
         return this;
@@ -102,6 +112,7 @@ public class GetNamesOfficialSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputStyle")
     public GetNamesOfficialSearchOutputStyleEnum outputStyle;
+
     public GetNamesOfficialSearchRequest withOutputStyle(GetNamesOfficialSearchOutputStyleEnum outputStyle) {
         this.outputStyle = outputStyle;
         return this;
@@ -112,6 +123,7 @@ public class GetNamesOfficialSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
     public GetNamesOfficialSearchSortByEnum sortBy;
+
     public GetNamesOfficialSearchRequest withSortBy(GetNamesOfficialSearchSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -122,9 +134,14 @@ public class GetNamesOfficialSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
     public Long startIndex;
+
     public GetNamesOfficialSearchRequest withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
     }
     
+    public GetNamesOfficialSearchRequest(@JsonProperty("name") String name, @JsonProperty("outputFormat") GetNamesOfficialSearchOutputFormatEnum outputFormat) {
+        this.name = name;
+        this.outputFormat = outputFormat;
+  }
 }

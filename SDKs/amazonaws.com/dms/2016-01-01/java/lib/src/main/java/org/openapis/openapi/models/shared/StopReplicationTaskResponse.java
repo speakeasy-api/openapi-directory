@@ -15,9 +15,11 @@ public class StopReplicationTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationTask")
     public ReplicationTask replicationTask;
+
     public StopReplicationTaskResponse withReplicationTask(ReplicationTask replicationTask) {
         this.replicationTask = replicationTask;
         return this;
     }
     
+    public StopReplicationTaskResponse(){}
 }

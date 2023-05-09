@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateServiceQuotaTemplateResponse {
@@ -12,6 +13,7 @@ public class DisassociateServiceQuotaTemplateResponse {
      */
     
     public Object awsServiceAccessNotEnabledException;
+
     public DisassociateServiceQuotaTemplateResponse withAWSServiceAccessNotEnabledException(Object awsServiceAccessNotEnabledException) {
         this.awsServiceAccessNotEnabledException = awsServiceAccessNotEnabledException;
         return this;
@@ -22,6 +24,7 @@ public class DisassociateServiceQuotaTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateServiceQuotaTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateServiceQuotaTemplateResponse {
     
     
     public String contentType;
+
     public DisassociateServiceQuotaTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateServiceQuotaTemplateResponse {
      */
     
     public Object dependencyAccessDeniedException;
+
     public DisassociateServiceQuotaTemplateResponse withDependencyAccessDeniedException(Object dependencyAccessDeniedException) {
         this.dependencyAccessDeniedException = dependencyAccessDeniedException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateServiceQuotaTemplateResponse {
      */
     
     public java.util.Map<String, Object> disassociateServiceQuotaTemplateResponse;
+
     public DisassociateServiceQuotaTemplateResponse withDisassociateServiceQuotaTemplateResponse(java.util.Map<String, Object> disassociateServiceQuotaTemplateResponse) {
         this.disassociateServiceQuotaTemplateResponse = disassociateServiceQuotaTemplateResponse;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateServiceQuotaTemplateResponse {
      */
     
     public Object noAvailableOrganizationException;
+
     public DisassociateServiceQuotaTemplateResponse withNoAvailableOrganizationException(Object noAvailableOrganizationException) {
         this.noAvailableOrganizationException = noAvailableOrganizationException;
         return this;
@@ -66,6 +73,7 @@ public class DisassociateServiceQuotaTemplateResponse {
     
     
     public Integer statusCode;
+
     public DisassociateServiceQuotaTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DisassociateServiceQuotaTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateServiceQuotaTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DisassociateServiceQuotaTemplateResponse {
      */
     
     public Object serviceException;
+
     public DisassociateServiceQuotaTemplateResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -93,6 +103,7 @@ public class DisassociateServiceQuotaTemplateResponse {
      */
     
     public Object serviceQuotaTemplateNotInUseException;
+
     public DisassociateServiceQuotaTemplateResponse withServiceQuotaTemplateNotInUseException(Object serviceQuotaTemplateNotInUseException) {
         this.serviceQuotaTemplateNotInUseException = serviceQuotaTemplateNotInUseException;
         return this;
@@ -103,6 +114,7 @@ public class DisassociateServiceQuotaTemplateResponse {
      */
     
     public Object templatesNotAvailableInRegionException;
+
     public DisassociateServiceQuotaTemplateResponse withTemplatesNotAvailableInRegionException(Object templatesNotAvailableInRegionException) {
         this.templatesNotAvailableInRegionException = templatesNotAvailableInRegionException;
         return this;
@@ -113,9 +125,14 @@ public class DisassociateServiceQuotaTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DisassociateServiceQuotaTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DisassociateServiceQuotaTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class PollForJobsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobs")
     public Job[] jobs;
+
     public PollForJobsOutput withJobs(Job[] jobs) {
         this.jobs = jobs;
         return this;
     }
     
+    public PollForJobsOutput(){}
 }

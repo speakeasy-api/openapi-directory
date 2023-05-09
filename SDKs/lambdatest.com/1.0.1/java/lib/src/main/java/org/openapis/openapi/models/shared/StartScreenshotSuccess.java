@@ -15,9 +15,11 @@ public class StartScreenshotSuccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("test_id")
     public String testId;
+
     public StartScreenshotSuccess withTestId(String testId) {
         this.testId = testId;
         return this;
     }
     
+    public StartScreenshotSuccess(){}
 }

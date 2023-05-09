@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeScheduledInstancesResultScheduledInstanceSet {
     
     public String availabilityZone;
+
     public DescribeScheduledInstancesResultScheduledInstanceSet withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class DescribeScheduledInstancesResultScheduledInstanceSet {
     
     
     public OffsetDateTime createDate;
+
     public DescribeScheduledInstancesResultScheduledInstanceSet withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -26,6 +28,7 @@ public class DescribeScheduledInstancesResultScheduledInstanceSet {
     
     
     public String hourlyPrice;
+
     public DescribeScheduledInstancesResultScheduledInstanceSet withHourlyPrice(String hourlyPrice) {
         this.hourlyPrice = hourlyPrice;
         return this;
@@ -33,6 +36,7 @@ public class DescribeScheduledInstancesResultScheduledInstanceSet {
     
     
     public Long instanceCount;
+
     public DescribeScheduledInstancesResultScheduledInstanceSet withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -40,6 +44,7 @@ public class DescribeScheduledInstancesResultScheduledInstanceSet {
     
     
     public String instanceType;
+
     public DescribeScheduledInstancesResultScheduledInstanceSet withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -47,6 +52,7 @@ public class DescribeScheduledInstancesResultScheduledInstanceSet {
     
     
     public String networkPlatform;
+
     public DescribeScheduledInstancesResultScheduledInstanceSet withNetworkPlatform(String networkPlatform) {
         this.networkPlatform = networkPlatform;
         return this;
@@ -54,6 +60,7 @@ public class DescribeScheduledInstancesResultScheduledInstanceSet {
     
     
     public OffsetDateTime nextSlotStartTime;
+
     public DescribeScheduledInstancesResultScheduledInstanceSet withNextSlotStartTime(OffsetDateTime nextSlotStartTime) {
         this.nextSlotStartTime = nextSlotStartTime;
         return this;
@@ -61,6 +68,7 @@ public class DescribeScheduledInstancesResultScheduledInstanceSet {
     
     
     public String platform;
+
     public DescribeScheduledInstancesResultScheduledInstanceSet withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -68,6 +76,7 @@ public class DescribeScheduledInstancesResultScheduledInstanceSet {
     
     
     public OffsetDateTime previousSlotEndTime;
+
     public DescribeScheduledInstancesResultScheduledInstanceSet withPreviousSlotEndTime(OffsetDateTime previousSlotEndTime) {
         this.previousSlotEndTime = previousSlotEndTime;
         return this;
@@ -75,6 +84,7 @@ public class DescribeScheduledInstancesResultScheduledInstanceSet {
     
     
     public DescribeScheduledInstancesResultScheduledInstanceSetRecurrence recurrence;
+
     public DescribeScheduledInstancesResultScheduledInstanceSet withRecurrence(DescribeScheduledInstancesResultScheduledInstanceSetRecurrence recurrence) {
         this.recurrence = recurrence;
         return this;
@@ -82,6 +92,7 @@ public class DescribeScheduledInstancesResultScheduledInstanceSet {
     
     
     public String scheduledInstanceId;
+
     public DescribeScheduledInstancesResultScheduledInstanceSet withScheduledInstanceId(String scheduledInstanceId) {
         this.scheduledInstanceId = scheduledInstanceId;
         return this;
@@ -89,6 +100,7 @@ public class DescribeScheduledInstancesResultScheduledInstanceSet {
     
     
     public Long slotDurationInHours;
+
     public DescribeScheduledInstancesResultScheduledInstanceSet withSlotDurationInHours(Long slotDurationInHours) {
         this.slotDurationInHours = slotDurationInHours;
         return this;
@@ -96,6 +108,7 @@ public class DescribeScheduledInstancesResultScheduledInstanceSet {
     
     
     public OffsetDateTime termEndDate;
+
     public DescribeScheduledInstancesResultScheduledInstanceSet withTermEndDate(OffsetDateTime termEndDate) {
         this.termEndDate = termEndDate;
         return this;
@@ -103,6 +116,7 @@ public class DescribeScheduledInstancesResultScheduledInstanceSet {
     
     
     public OffsetDateTime termStartDate;
+
     public DescribeScheduledInstancesResultScheduledInstanceSet withTermStartDate(OffsetDateTime termStartDate) {
         this.termStartDate = termStartDate;
         return this;
@@ -110,9 +124,11 @@ public class DescribeScheduledInstancesResultScheduledInstanceSet {
     
     
     public Long totalScheduledInstanceHours;
+
     public DescribeScheduledInstancesResultScheduledInstanceSet withTotalScheduledInstanceHours(Long totalScheduledInstanceHours) {
         this.totalScheduledInstanceHours = totalScheduledInstanceHours;
         return this;
     }
     
+    public DescribeScheduledInstancesResultScheduledInstanceSet(){}
 }

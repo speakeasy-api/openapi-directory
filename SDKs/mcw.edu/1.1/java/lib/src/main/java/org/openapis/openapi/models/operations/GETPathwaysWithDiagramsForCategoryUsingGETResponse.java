@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETPathwaysWithDiagramsForCategoryUsingGETResponse {
     
     public byte[] body;
+
     public GETPathwaysWithDiagramsForCategoryUsingGETResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETPathwaysWithDiagramsForCategoryUsingGETResponse {
     
     
     public String contentType;
+
     public GETPathwaysWithDiagramsForCategoryUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETPathwaysWithDiagramsForCategoryUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETPathwaysWithDiagramsForCategoryUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETPathwaysWithDiagramsForCategoryUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETPathwaysWithDiagramsForCategoryUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETPathwaysWithDiagramsForCategoryUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

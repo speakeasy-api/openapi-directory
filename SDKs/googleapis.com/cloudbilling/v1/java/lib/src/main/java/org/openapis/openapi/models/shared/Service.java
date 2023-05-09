@@ -18,6 +18,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessEntityName")
     public String businessEntityName;
+
     public Service withBusinessEntityName(String businessEntityName) {
         this.businessEntityName = businessEntityName;
         return this;
@@ -29,6 +30,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Service withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Service withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceId")
     public String serviceId;
+
     public Service withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     
+    public Service(){}
 }

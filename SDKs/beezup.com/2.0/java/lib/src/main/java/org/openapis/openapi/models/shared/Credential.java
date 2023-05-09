@@ -18,6 +18,7 @@ public class Credential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public Credential withPassword(String password) {
         this.password = password;
         return this;
@@ -28,9 +29,13 @@ public class Credential {
      */
     @JsonProperty("userName")
     public String userName;
+
     public Credential withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public Credential(@JsonProperty("userName") String userName) {
+        this.userName = userName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetContentModerationResponse {
@@ -12,6 +13,7 @@ public class GetContentModerationResponse {
      */
     
     public Object accessDeniedException;
+
     public GetContentModerationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetContentModerationResponse {
     
     
     public String contentType;
+
     public GetContentModerationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetContentModerationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetContentModerationResponse getContentModerationResponse;
+
     public GetContentModerationResponse withGetContentModerationResponse(org.openapis.openapi.models.shared.GetContentModerationResponse getContentModerationResponse) {
         this.getContentModerationResponse = getContentModerationResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetContentModerationResponse {
      */
     
     public Object internalServerError;
+
     public GetContentModerationResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class GetContentModerationResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public GetContentModerationResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -59,6 +65,7 @@ public class GetContentModerationResponse {
      */
     
     public Object invalidParameterException;
+
     public GetContentModerationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class GetContentModerationResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public GetContentModerationResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -79,6 +87,7 @@ public class GetContentModerationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetContentModerationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class GetContentModerationResponse {
     
     
     public Integer statusCode;
+
     public GetContentModerationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetContentModerationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetContentModerationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetContentModerationResponse {
      */
     
     public Object throttlingException;
+
     public GetContentModerationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetContentModerationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

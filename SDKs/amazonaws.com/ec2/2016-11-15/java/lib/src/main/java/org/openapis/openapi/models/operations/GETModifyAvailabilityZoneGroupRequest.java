@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyAvailabilityZoneGroupRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyAvailabilityZoneGroupActionEnum action;
+
     public GETModifyAvailabilityZoneGroupRequest withAction(GETModifyAvailabilityZoneGroupActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyAvailabilityZoneGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyAvailabilityZoneGroupRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyAvailabilityZoneGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GroupName")
     public String groupName;
+
     public GETModifyAvailabilityZoneGroupRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyAvailabilityZoneGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OptInStatus")
     public GETModifyAvailabilityZoneGroupOptInStatusEnum optInStatus;
+
     public GETModifyAvailabilityZoneGroupRequest withOptInStatus(GETModifyAvailabilityZoneGroupOptInStatusEnum optInStatus) {
         this.optInStatus = optInStatus;
         return this;
@@ -46,6 +51,7 @@ public class GETModifyAvailabilityZoneGroupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyAvailabilityZoneGroupVersionEnum version;
+
     public GETModifyAvailabilityZoneGroupRequest withVersion(GETModifyAvailabilityZoneGroupVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETModifyAvailabilityZoneGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyAvailabilityZoneGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETModifyAvailabilityZoneGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyAvailabilityZoneGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETModifyAvailabilityZoneGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyAvailabilityZoneGroupRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETModifyAvailabilityZoneGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyAvailabilityZoneGroupRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETModifyAvailabilityZoneGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyAvailabilityZoneGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETModifyAvailabilityZoneGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyAvailabilityZoneGroupRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETModifyAvailabilityZoneGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyAvailabilityZoneGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyAvailabilityZoneGroupRequest(@JsonProperty("Action") GETModifyAvailabilityZoneGroupActionEnum action, @JsonProperty("GroupName") String groupName, @JsonProperty("OptInStatus") GETModifyAvailabilityZoneGroupOptInStatusEnum optInStatus, @JsonProperty("Version") GETModifyAvailabilityZoneGroupVersionEnum version) {
+        this.action = action;
+        this.groupName = groupName;
+        this.optInStatus = optInStatus;
+        this.version = version;
+  }
 }

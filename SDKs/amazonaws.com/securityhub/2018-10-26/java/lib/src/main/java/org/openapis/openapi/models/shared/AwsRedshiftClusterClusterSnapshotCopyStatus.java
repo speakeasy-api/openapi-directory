@@ -15,6 +15,7 @@ public class AwsRedshiftClusterClusterSnapshotCopyStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationRegion")
     public String destinationRegion;
+
     public AwsRedshiftClusterClusterSnapshotCopyStatus withDestinationRegion(String destinationRegion) {
         this.destinationRegion = destinationRegion;
         return this;
@@ -23,6 +24,7 @@ public class AwsRedshiftClusterClusterSnapshotCopyStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManualSnapshotRetentionPeriod")
     public Long manualSnapshotRetentionPeriod;
+
     public AwsRedshiftClusterClusterSnapshotCopyStatus withManualSnapshotRetentionPeriod(Long manualSnapshotRetentionPeriod) {
         this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
         return this;
@@ -31,6 +33,7 @@ public class AwsRedshiftClusterClusterSnapshotCopyStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetentionPeriod")
     public Long retentionPeriod;
+
     public AwsRedshiftClusterClusterSnapshotCopyStatus withRetentionPeriod(Long retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
@@ -39,9 +42,11 @@ public class AwsRedshiftClusterClusterSnapshotCopyStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotCopyGrantName")
     public String snapshotCopyGrantName;
+
     public AwsRedshiftClusterClusterSnapshotCopyStatus withSnapshotCopyGrantName(String snapshotCopyGrantName) {
         this.snapshotCopyGrantName = snapshotCopyGrantName;
         return this;
     }
     
+    public AwsRedshiftClusterClusterSnapshotCopyStatus(){}
 }

@@ -12,6 +12,7 @@ public class DescribeContinuousExportsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportIds")
     public String[] exportIds;
+
     public DescribeContinuousExportsRequest withExportIds(String[] exportIds) {
         this.exportIds = exportIds;
         return this;
@@ -20,6 +21,7 @@ public class DescribeContinuousExportsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeContinuousExportsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class DescribeContinuousExportsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeContinuousExportsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeContinuousExportsRequest(){}
 }

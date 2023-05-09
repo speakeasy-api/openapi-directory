@@ -13,14 +13,28 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class BulkInsertInstanceResourcePerInstanceProperties {
     /**
+     * Specifies the hostname of the instance. More details in: https://cloud.google.com/compute/docs/instances/custom-hostname-vm#naming_convention
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("hostname")
+    public String hostname;
+
+    public BulkInsertInstanceResourcePerInstanceProperties withHostname(String hostname) {
+        this.hostname = hostname;
+        return this;
+    }
+    
+    /**
      * This field is only temporary. It will be removed. Do not use it.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BulkInsertInstanceResourcePerInstanceProperties withName(String name) {
         this.name = name;
         return this;
     }
     
+    public BulkInsertInstanceResourcePerInstanceProperties(){}
 }

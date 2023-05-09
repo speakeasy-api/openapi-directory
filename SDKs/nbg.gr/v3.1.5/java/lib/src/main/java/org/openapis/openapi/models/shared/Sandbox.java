@@ -17,6 +17,7 @@ public class Sandbox {
      */
     @JsonProperty("sandboxId")
     public String sandboxId;
+
     public Sandbox withSandboxId(String sandboxId) {
         this.sandboxId = sandboxId;
         return this;
@@ -28,9 +29,13 @@ public class Sandbox {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("users")
     public SandboxUser[] users;
+
     public Sandbox withUsers(SandboxUser[] users) {
         this.users = users;
         return this;
     }
     
+    public Sandbox(@JsonProperty("sandboxId") String sandboxId) {
+        this.sandboxId = sandboxId;
+  }
 }

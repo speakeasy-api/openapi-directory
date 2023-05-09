@@ -18,6 +18,7 @@ public class NestingLevelSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bulletAlignmentSuggested")
     public Boolean bulletAlignmentSuggested;
+
     public NestingLevelSuggestionState withBulletAlignmentSuggested(Boolean bulletAlignmentSuggested) {
         this.bulletAlignmentSuggested = bulletAlignmentSuggested;
         return this;
@@ -29,6 +30,7 @@ public class NestingLevelSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glyphFormatSuggested")
     public Boolean glyphFormatSuggested;
+
     public NestingLevelSuggestionState withGlyphFormatSuggested(Boolean glyphFormatSuggested) {
         this.glyphFormatSuggested = glyphFormatSuggested;
         return this;
@@ -40,6 +42,7 @@ public class NestingLevelSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glyphSymbolSuggested")
     public Boolean glyphSymbolSuggested;
+
     public NestingLevelSuggestionState withGlyphSymbolSuggested(Boolean glyphSymbolSuggested) {
         this.glyphSymbolSuggested = glyphSymbolSuggested;
         return this;
@@ -51,6 +54,7 @@ public class NestingLevelSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glyphTypeSuggested")
     public Boolean glyphTypeSuggested;
+
     public NestingLevelSuggestionState withGlyphTypeSuggested(Boolean glyphTypeSuggested) {
         this.glyphTypeSuggested = glyphTypeSuggested;
         return this;
@@ -62,6 +66,7 @@ public class NestingLevelSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indentFirstLineSuggested")
     public Boolean indentFirstLineSuggested;
+
     public NestingLevelSuggestionState withIndentFirstLineSuggested(Boolean indentFirstLineSuggested) {
         this.indentFirstLineSuggested = indentFirstLineSuggested;
         return this;
@@ -73,6 +78,7 @@ public class NestingLevelSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indentStartSuggested")
     public Boolean indentStartSuggested;
+
     public NestingLevelSuggestionState withIndentStartSuggested(Boolean indentStartSuggested) {
         this.indentStartSuggested = indentStartSuggested;
         return this;
@@ -84,6 +90,7 @@ public class NestingLevelSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startNumberSuggested")
     public Boolean startNumberSuggested;
+
     public NestingLevelSuggestionState withStartNumberSuggested(Boolean startNumberSuggested) {
         this.startNumberSuggested = startNumberSuggested;
         return this;
@@ -95,9 +102,11 @@ public class NestingLevelSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textStyleSuggestionState")
     public TextStyleSuggestionState textStyleSuggestionState;
+
     public NestingLevelSuggestionState withTextStyleSuggestionState(TextStyleSuggestionState textStyleSuggestionState) {
         this.textStyleSuggestionState = textStyleSuggestionState;
         return this;
     }
     
+    public NestingLevelSuggestionState(){}
 }

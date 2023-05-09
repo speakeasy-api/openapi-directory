@@ -25,6 +25,7 @@ public class RechnungsdruckWebAppControllersApiShipmentWithLabel {
     @JsonProperty("ChangeStateToSend")
     @SpeakeasyMetadata("form:name=ChangeStateToSend")
     public Boolean changeStateToSend;
+
     public RechnungsdruckWebAppControllersApiShipmentWithLabel withChangeStateToSend(Boolean changeStateToSend) {
         this.changeStateToSend = changeStateToSend;
         return this;
@@ -37,6 +38,7 @@ public class RechnungsdruckWebAppControllersApiShipmentWithLabel {
     @JsonProperty("ClientReference")
     @SpeakeasyMetadata("form:name=ClientReference")
     public String clientReference;
+
     public RechnungsdruckWebAppControllersApiShipmentWithLabel withClientReference(String clientReference) {
         this.clientReference = clientReference;
         return this;
@@ -46,6 +48,7 @@ public class RechnungsdruckWebAppControllersApiShipmentWithLabel {
     @JsonProperty("Dimension")
     @SpeakeasyMetadata("form:name=Dimension,json")
     public BillbeeInterfacesShippingShipmentDataDimensions dimension;
+
     public RechnungsdruckWebAppControllersApiShipmentWithLabel withDimension(BillbeeInterfacesShippingShipmentDataDimensions dimension) {
         this.dimension = dimension;
         return this;
@@ -58,6 +61,7 @@ public class RechnungsdruckWebAppControllersApiShipmentWithLabel {
     @JsonProperty("OrderId")
     @SpeakeasyMetadata("form:name=OrderId")
     public Long orderId;
+
     public RechnungsdruckWebAppControllersApiShipmentWithLabel withOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
@@ -70,6 +74,7 @@ public class RechnungsdruckWebAppControllersApiShipmentWithLabel {
     @JsonProperty("PrinterName")
     @SpeakeasyMetadata("form:name=PrinterName")
     public String printerName;
+
     public RechnungsdruckWebAppControllersApiShipmentWithLabel withPrinterName(String printerName) {
         this.printerName = printerName;
         return this;
@@ -82,6 +87,7 @@ public class RechnungsdruckWebAppControllersApiShipmentWithLabel {
     @JsonProperty("ProductId")
     @SpeakeasyMetadata("form:name=ProductId")
     public Long productId;
+
     public RechnungsdruckWebAppControllersApiShipmentWithLabel withProductId(Long productId) {
         this.productId = productId;
         return this;
@@ -94,6 +100,7 @@ public class RechnungsdruckWebAppControllersApiShipmentWithLabel {
     @JsonProperty("ProviderId")
     @SpeakeasyMetadata("form:name=ProviderId")
     public Long providerId;
+
     public RechnungsdruckWebAppControllersApiShipmentWithLabel withProviderId(Long providerId) {
         this.providerId = providerId;
         return this;
@@ -108,6 +115,7 @@ public class RechnungsdruckWebAppControllersApiShipmentWithLabel {
     @JsonProperty("ShipDate")
     @SpeakeasyMetadata("form:name=ShipDate")
     public OffsetDateTime shipDate;
+
     public RechnungsdruckWebAppControllersApiShipmentWithLabel withShipDate(OffsetDateTime shipDate) {
         this.shipDate = shipDate;
         return this;
@@ -120,9 +128,11 @@ public class RechnungsdruckWebAppControllersApiShipmentWithLabel {
     @JsonProperty("WeightInGram")
     @SpeakeasyMetadata("form:name=WeightInGram")
     public Integer weightInGram;
+
     public RechnungsdruckWebAppControllersApiShipmentWithLabel withWeightInGram(Integer weightInGram) {
         this.weightInGram = weightInGram;
         return this;
     }
     
+    public RechnungsdruckWebAppControllersApiShipmentWithLabel(){}
 }

@@ -18,6 +18,7 @@ public class InsertTableColumnRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertRight")
     public Boolean insertRight;
+
     public InsertTableColumnRequest withInsertRight(Boolean insertRight) {
         this.insertRight = insertRight;
         return this;
@@ -29,9 +30,11 @@ public class InsertTableColumnRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableCellLocation")
     public TableCellLocation tableCellLocation;
+
     public InsertTableColumnRequest withTableCellLocation(TableCellLocation tableCellLocation) {
         this.tableCellLocation = tableCellLocation;
         return this;
     }
     
+    public InsertTableColumnRequest(){}
 }

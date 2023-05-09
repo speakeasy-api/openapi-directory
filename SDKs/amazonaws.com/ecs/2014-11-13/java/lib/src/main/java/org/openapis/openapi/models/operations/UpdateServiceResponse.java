@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateServiceResponse {
@@ -12,6 +13,7 @@ public class UpdateServiceResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateServiceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateServiceResponse {
      */
     
     public Object clientException;
+
     public UpdateServiceResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -32,6 +35,7 @@ public class UpdateServiceResponse {
      */
     
     public Object clusterNotFoundException;
+
     public UpdateServiceResponse withClusterNotFoundException(Object clusterNotFoundException) {
         this.clusterNotFoundException = clusterNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateServiceResponse {
     
     
     public String contentType;
+
     public UpdateServiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class UpdateServiceResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateServiceResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateServiceResponse {
      */
     
     public Object namespaceNotFoundException;
+
     public UpdateServiceResponse withNamespaceNotFoundException(Object namespaceNotFoundException) {
         this.namespaceNotFoundException = namespaceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateServiceResponse {
      */
     
     public Object platformTaskDefinitionIncompatibilityException;
+
     public UpdateServiceResponse withPlatformTaskDefinitionIncompatibilityException(Object platformTaskDefinitionIncompatibilityException) {
         this.platformTaskDefinitionIncompatibilityException = platformTaskDefinitionIncompatibilityException;
         return this;
@@ -79,6 +87,7 @@ public class UpdateServiceResponse {
      */
     
     public Object platformUnknownException;
+
     public UpdateServiceResponse withPlatformUnknownException(Object platformUnknownException) {
         this.platformUnknownException = platformUnknownException;
         return this;
@@ -89,6 +98,7 @@ public class UpdateServiceResponse {
      */
     
     public Object serviceNotActiveException;
+
     public UpdateServiceResponse withServiceNotActiveException(Object serviceNotActiveException) {
         this.serviceNotActiveException = serviceNotActiveException;
         return this;
@@ -99,6 +109,7 @@ public class UpdateServiceResponse {
      */
     
     public Object serviceNotFoundException;
+
     public UpdateServiceResponse withServiceNotFoundException(Object serviceNotFoundException) {
         this.serviceNotFoundException = serviceNotFoundException;
         return this;
@@ -106,6 +117,7 @@ public class UpdateServiceResponse {
     
     
     public Integer statusCode;
+
     public UpdateServiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class UpdateServiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateServiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class UpdateServiceResponse {
      */
     
     public Object serverException;
+
     public UpdateServiceResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -133,9 +147,14 @@ public class UpdateServiceResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateServiceResponse updateServiceResponse;
+
     public UpdateServiceResponse withUpdateServiceResponse(org.openapis.openapi.models.shared.UpdateServiceResponse updateServiceResponse) {
         this.updateServiceResponse = updateServiceResponse;
         return this;
     }
     
+    public UpdateServiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class DeploymentBranchPolicySettings {
      */
     @JsonProperty("custom_branch_policies")
     public Boolean customBranchPolicies;
+
     public DeploymentBranchPolicySettings withCustomBranchPolicies(Boolean customBranchPolicies) {
         this.customBranchPolicies = customBranchPolicies;
         return this;
@@ -25,9 +26,14 @@ public class DeploymentBranchPolicySettings {
      */
     @JsonProperty("protected_branches")
     public Boolean protectedBranches;
+
     public DeploymentBranchPolicySettings withProtectedBranches(Boolean protectedBranches) {
         this.protectedBranches = protectedBranches;
         return this;
     }
     
+    public DeploymentBranchPolicySettings(@JsonProperty("custom_branch_policies") Boolean customBranchPolicies, @JsonProperty("protected_branches") Boolean protectedBranches) {
+        this.customBranchPolicies = customBranchPolicies;
+        this.protectedBranches = protectedBranches;
+  }
 }

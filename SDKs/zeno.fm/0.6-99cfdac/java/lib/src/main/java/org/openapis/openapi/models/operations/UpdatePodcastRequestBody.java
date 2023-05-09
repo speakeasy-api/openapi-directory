@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePodcastRequestBody {
     @SpeakeasyMetadata("multipartForm:file")
     public UpdatePodcastRequestBodyFileLogo fileLogo;
+
     public UpdatePodcastRequestBody withFileLogo(UpdatePodcastRequestBodyFileLogo fileLogo) {
         this.fileLogo = fileLogo;
         return this;
@@ -19,9 +21,13 @@ public class UpdatePodcastRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=podcast,json")
     public org.openapis.openapi.models.shared.Podcast podcast;
+
     public UpdatePodcastRequestBody withPodcast(org.openapis.openapi.models.shared.Podcast podcast) {
         this.podcast = podcast;
         return this;
     }
     
+    public UpdatePodcastRequestBody(@JsonProperty("podcast") org.openapis.openapi.models.shared.Podcast podcast) {
+        this.podcast = podcast;
+  }
 }

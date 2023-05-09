@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListGroupUsersResponse {
     
     public String contentType;
+
     public ListGroupUsersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListGroupUsersResponse {
      */
     
     public org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse;
+
     public ListGroupUsersResponse withFlatErrorResponse(org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse) {
         this.flatErrorResponse = flatErrorResponse;
         return this;
@@ -26,6 +29,7 @@ public class ListGroupUsersResponse {
     
     
     public Integer statusCode;
+
     public ListGroupUsersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ListGroupUsersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListGroupUsersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class ListGroupUsersResponse {
      */
     
     public org.openapis.openapi.models.shared.UserPublic[] userPublics;
+
     public ListGroupUsersResponse withUserPublics(org.openapis.openapi.models.shared.UserPublic[] userPublics) {
         this.userPublics = userPublics;
         return this;
     }
     
+    public ListGroupUsersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

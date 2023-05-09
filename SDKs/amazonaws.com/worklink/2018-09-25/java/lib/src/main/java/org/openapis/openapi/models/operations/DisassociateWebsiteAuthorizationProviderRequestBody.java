@@ -12,6 +12,7 @@ public class DisassociateWebsiteAuthorizationProviderRequestBody {
      */
     @JsonProperty("AuthorizationProviderId")
     public String authorizationProviderId;
+
     public DisassociateWebsiteAuthorizationProviderRequestBody withAuthorizationProviderId(String authorizationProviderId) {
         this.authorizationProviderId = authorizationProviderId;
         return this;
@@ -22,9 +23,14 @@ public class DisassociateWebsiteAuthorizationProviderRequestBody {
      */
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public DisassociateWebsiteAuthorizationProviderRequestBody withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
     }
     
+    public DisassociateWebsiteAuthorizationProviderRequestBody(@JsonProperty("AuthorizationProviderId") String authorizationProviderId, @JsonProperty("FleetArn") String fleetArn) {
+        this.authorizationProviderId = authorizationProviderId;
+        this.fleetArn = fleetArn;
+  }
 }

@@ -12,6 +12,7 @@ public class ListDatasetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public DatasetFilter filter;
+
     public ListDatasetsRequest withFilter(DatasetFilter filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class ListDatasetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlywheelArn")
     public String flywheelArn;
+
     public ListDatasetsRequest withFlywheelArn(String flywheelArn) {
         this.flywheelArn = flywheelArn;
         return this;
@@ -28,6 +30,7 @@ public class ListDatasetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDatasetsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +39,11 @@ public class ListDatasetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDatasetsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDatasetsRequest(){}
 }

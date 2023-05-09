@@ -18,9 +18,11 @@ public class ViolatingSitesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("violatingSites")
     public SiteSummaryResponse[] violatingSites;
+
     public ViolatingSitesResponse withViolatingSites(SiteSummaryResponse[] violatingSites) {
         this.violatingSites = violatingSites;
         return this;
     }
     
+    public ViolatingSitesResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTypedLinkFacetAttributesResponse {
@@ -12,6 +13,7 @@ public class ListTypedLinkFacetAttributesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListTypedLinkFacetAttributesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListTypedLinkFacetAttributesResponse {
     
     
     public String contentType;
+
     public ListTypedLinkFacetAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTypedLinkFacetAttributesResponse {
      */
     
     public Object facetNotFoundException;
+
     public ListTypedLinkFacetAttributesResponse withFacetNotFoundException(Object facetNotFoundException) {
         this.facetNotFoundException = facetNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class ListTypedLinkFacetAttributesResponse {
      */
     
     public Object internalServiceException;
+
     public ListTypedLinkFacetAttributesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class ListTypedLinkFacetAttributesResponse {
      */
     
     public Object invalidArnException;
+
     public ListTypedLinkFacetAttributesResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -59,6 +65,7 @@ public class ListTypedLinkFacetAttributesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListTypedLinkFacetAttributesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -69,6 +76,7 @@ public class ListTypedLinkFacetAttributesResponse {
      */
     
     public Object limitExceededException;
+
     public ListTypedLinkFacetAttributesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class ListTypedLinkFacetAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTypedLinkFacetAttributesResponse listTypedLinkFacetAttributesResponse;
+
     public ListTypedLinkFacetAttributesResponse withListTypedLinkFacetAttributesResponse(org.openapis.openapi.models.shared.ListTypedLinkFacetAttributesResponse listTypedLinkFacetAttributesResponse) {
         this.listTypedLinkFacetAttributesResponse = listTypedLinkFacetAttributesResponse;
         return this;
@@ -86,6 +95,7 @@ public class ListTypedLinkFacetAttributesResponse {
     
     
     public Integer statusCode;
+
     public ListTypedLinkFacetAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ListTypedLinkFacetAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTypedLinkFacetAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class ListTypedLinkFacetAttributesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListTypedLinkFacetAttributesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class ListTypedLinkFacetAttributesResponse {
      */
     
     public Object retryableConflictException;
+
     public ListTypedLinkFacetAttributesResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -123,9 +136,14 @@ public class ListTypedLinkFacetAttributesResponse {
      */
     
     public Object validationException;
+
     public ListTypedLinkFacetAttributesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListTypedLinkFacetAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

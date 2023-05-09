@@ -18,6 +18,7 @@ public class TextSentimentEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSpecId")
     public String[] annotationSpecId;
+
     public TextSentimentEvaluationMetrics withAnnotationSpecId(String[] annotationSpecId) {
         this.annotationSpecId = annotationSpecId;
         return this;
@@ -29,6 +30,7 @@ public class TextSentimentEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confusionMatrix")
     public ConfusionMatrix confusionMatrix;
+
     public TextSentimentEvaluationMetrics withConfusionMatrix(ConfusionMatrix confusionMatrix) {
         this.confusionMatrix = confusionMatrix;
         return this;
@@ -40,6 +42,7 @@ public class TextSentimentEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("f1Score")
     public Float f1Score;
+
     public TextSentimentEvaluationMetrics withF1Score(Float f1Score) {
         this.f1Score = f1Score;
         return this;
@@ -51,6 +54,7 @@ public class TextSentimentEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linearKappa")
     public Float linearKappa;
+
     public TextSentimentEvaluationMetrics withLinearKappa(Float linearKappa) {
         this.linearKappa = linearKappa;
         return this;
@@ -62,6 +66,7 @@ public class TextSentimentEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meanAbsoluteError")
     public Float meanAbsoluteError;
+
     public TextSentimentEvaluationMetrics withMeanAbsoluteError(Float meanAbsoluteError) {
         this.meanAbsoluteError = meanAbsoluteError;
         return this;
@@ -73,6 +78,7 @@ public class TextSentimentEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meanSquaredError")
     public Float meanSquaredError;
+
     public TextSentimentEvaluationMetrics withMeanSquaredError(Float meanSquaredError) {
         this.meanSquaredError = meanSquaredError;
         return this;
@@ -84,6 +90,7 @@ public class TextSentimentEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precision")
     public Float precision;
+
     public TextSentimentEvaluationMetrics withPrecision(Float precision) {
         this.precision = precision;
         return this;
@@ -95,6 +102,7 @@ public class TextSentimentEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quadraticKappa")
     public Float quadraticKappa;
+
     public TextSentimentEvaluationMetrics withQuadraticKappa(Float quadraticKappa) {
         this.quadraticKappa = quadraticKappa;
         return this;
@@ -106,9 +114,11 @@ public class TextSentimentEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recall")
     public Float recall;
+
     public TextSentimentEvaluationMetrics withRecall(Float recall) {
         this.recall = recall;
         return this;
     }
     
+    public TextSentimentEvaluationMetrics(){}
 }

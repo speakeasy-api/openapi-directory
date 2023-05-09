@@ -12,6 +12,7 @@ public class GetFileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitSpecifier")
     public String commitSpecifier;
+
     public GetFileInput withCommitSpecifier(String commitSpecifier) {
         this.commitSpecifier = commitSpecifier;
         return this;
@@ -19,6 +20,7 @@ public class GetFileInput {
     
     @JsonProperty("filePath")
     public String filePath;
+
     public GetFileInput withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
@@ -26,9 +28,14 @@ public class GetFileInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public GetFileInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public GetFileInput(@JsonProperty("filePath") String filePath, @JsonProperty("repositoryName") String repositoryName) {
+        this.filePath = filePath;
+        this.repositoryName = repositoryName;
+  }
 }

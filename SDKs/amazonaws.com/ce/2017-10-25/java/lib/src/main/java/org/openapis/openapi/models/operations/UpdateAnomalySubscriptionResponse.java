@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAnomalySubscriptionResponse {
     
     public String contentType;
+
     public UpdateAnomalySubscriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAnomalySubscriptionResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateAnomalySubscriptionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -26,6 +29,7 @@ public class UpdateAnomalySubscriptionResponse {
     
     
     public Integer statusCode;
+
     public UpdateAnomalySubscriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateAnomalySubscriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAnomalySubscriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateAnomalySubscriptionResponse {
      */
     
     public Object unknownMonitorException;
+
     public UpdateAnomalySubscriptionResponse withUnknownMonitorException(Object unknownMonitorException) {
         this.unknownMonitorException = unknownMonitorException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAnomalySubscriptionResponse {
      */
     
     public Object unknownSubscriptionException;
+
     public UpdateAnomalySubscriptionResponse withUnknownSubscriptionException(Object unknownSubscriptionException) {
         this.unknownSubscriptionException = unknownSubscriptionException;
         return this;
@@ -63,9 +70,14 @@ public class UpdateAnomalySubscriptionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAnomalySubscriptionResponse updateAnomalySubscriptionResponse;
+
     public UpdateAnomalySubscriptionResponse withUpdateAnomalySubscriptionResponse(org.openapis.openapi.models.shared.UpdateAnomalySubscriptionResponse updateAnomalySubscriptionResponse) {
         this.updateAnomalySubscriptionResponse = updateAnomalySubscriptionResponse;
         return this;
     }
     
+    public UpdateAnomalySubscriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

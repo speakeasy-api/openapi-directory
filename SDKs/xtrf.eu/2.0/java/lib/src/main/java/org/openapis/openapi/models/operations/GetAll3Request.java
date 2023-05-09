@@ -12,9 +12,11 @@ public class GetAll3Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nameEquals")
     public String nameEquals;
+
     public GetAll3Request withNameEquals(String nameEquals) {
         this.nameEquals = nameEquals;
         return this;
     }
     
+    public GetAll3Request(){}
 }

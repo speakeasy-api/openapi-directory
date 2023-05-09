@@ -59,11 +59,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutOrdersIdShipResponse res = new org.openapis.openapi.models.operations.PutOrdersIdShipResponse() {{
+        org.openapis.openapi.models.operations.PutOrdersIdShipResponse res = new org.openapis.openapi.models.operations.PutOrdersIdShipResponse(contentType, httpRes.statusCode()) {{
             oneordersPostResponses201ContentApplication1jsonSchema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutOrdersIdStatusResponse res = new org.openapis.openapi.models.operations.PutOrdersIdStatusResponse() {{
+        org.openapis.openapi.models.operations.PutOrdersIdStatusResponse res = new org.openapis.openapi.models.operations.PutOrdersIdStatusResponse(contentType, httpRes.statusCode()) {{
             oneordersPostResponses201ContentApplication1jsonSchema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

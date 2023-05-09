@@ -18,6 +18,7 @@ public class GroupConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("co2Emission")
     public Double co2Emission;
+
     public GroupConfiguration withCo2Emission(Double co2Emission) {
         this.co2Emission = co2Emission;
         return this;
@@ -29,6 +30,7 @@ public class GroupConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("energyCost")
     public Double energyCost;
+
     public GroupConfiguration withEnergyCost(Double energyCost) {
         this.energyCost = energyCost;
         return this;
@@ -40,9 +42,11 @@ public class GroupConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupNameFilter")
     public String groupNameFilter;
+
     public GroupConfiguration withGroupNameFilter(String groupNameFilter) {
         this.groupNameFilter = groupNameFilter;
         return this;
     }
     
+    public GroupConfiguration(){}
 }

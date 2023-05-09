@@ -12,9 +12,11 @@ public class GetMeFollowersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetMeFollowersRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public GetMeFollowersRequest(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaGetDefaultBranchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branch")
     public String branch;
+
     public GoogleCloudRetailV2alphaGetDefaultBranchResponse withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2alphaGetDefaultBranchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public GoogleCloudRetailV2alphaGetDefaultBranchResponse withNote(String note) {
         this.note = note;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRetailV2alphaGetDefaultBranchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setTime")
     public String setTime;
+
     public GoogleCloudRetailV2alphaGetDefaultBranchResponse withSetTime(String setTime) {
         this.setTime = setTime;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaGetDefaultBranchResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCMSpageRequest {
@@ -12,6 +13,7 @@ public class GetCMSpageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=builderId")
     public String builderId;
+
     public GetCMSpageRequest withBuilderId(String builderId) {
         this.builderId = builderId;
         return this;
@@ -22,6 +24,7 @@ public class GetCMSpageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=content-type")
     public String contentType;
+
     public GetCMSpageRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetCMSpageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=document-id")
     public String documentId;
+
     public GetCMSpageRequest withDocumentId(String documentId) {
         this.documentId = documentId;
         return this;
@@ -42,6 +46,7 @@ public class GetCMSpageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=releaseId")
     public String releaseId;
+
     public GetCMSpageRequest withReleaseId(String releaseId) {
         this.releaseId = releaseId;
         return this;
@@ -52,9 +57,15 @@ public class GetCMSpageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=versionId")
     public String versionId;
+
     public GetCMSpageRequest withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public GetCMSpageRequest(@JsonProperty("builderId") String builderId, @JsonProperty("content-type") String contentType, @JsonProperty("document-id") String documentId) {
+        this.builderId = builderId;
+        this.contentType = contentType;
+        this.documentId = documentId;
+  }
 }

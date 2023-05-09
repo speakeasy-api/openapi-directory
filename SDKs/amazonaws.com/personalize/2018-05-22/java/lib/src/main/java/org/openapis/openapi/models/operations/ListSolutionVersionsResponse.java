@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSolutionVersionsResponse {
     
     public String contentType;
+
     public ListSolutionVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSolutionVersionsResponse {
      */
     
     public Object invalidInputException;
+
     public ListSolutionVersionsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class ListSolutionVersionsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListSolutionVersionsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListSolutionVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSolutionVersionsResponse listSolutionVersionsResponse;
+
     public ListSolutionVersionsResponse withListSolutionVersionsResponse(org.openapis.openapi.models.shared.ListSolutionVersionsResponse listSolutionVersionsResponse) {
         this.listSolutionVersionsResponse = listSolutionVersionsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListSolutionVersionsResponse {
     
     
     public Integer statusCode;
+
     public ListSolutionVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListSolutionVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSolutionVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListSolutionVersionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListSolutionVersionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListSolutionVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

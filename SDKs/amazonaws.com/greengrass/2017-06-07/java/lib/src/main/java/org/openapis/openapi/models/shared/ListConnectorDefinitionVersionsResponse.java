@@ -15,6 +15,7 @@ public class ListConnectorDefinitionVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListConnectorDefinitionVersionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListConnectorDefinitionVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Versions")
     public VersionInformation[] versions;
+
     public ListConnectorDefinitionVersionsResponse withVersions(VersionInformation[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public ListConnectorDefinitionVersionsResponse(){}
 }

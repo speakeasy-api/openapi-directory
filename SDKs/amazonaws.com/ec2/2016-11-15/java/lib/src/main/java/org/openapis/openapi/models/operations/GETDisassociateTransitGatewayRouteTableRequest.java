@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDisassociateTransitGatewayRouteTableRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDisassociateTransitGatewayRouteTableActionEnum action;
+
     public GETDisassociateTransitGatewayRouteTableRequest withAction(GETDisassociateTransitGatewayRouteTableActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDisassociateTransitGatewayRouteTableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDisassociateTransitGatewayRouteTableRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETDisassociateTransitGatewayRouteTableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayAttachmentId")
     public String transitGatewayAttachmentId;
+
     public GETDisassociateTransitGatewayRouteTableRequest withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -39,6 +43,7 @@ public class GETDisassociateTransitGatewayRouteTableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayRouteTableId")
     public String transitGatewayRouteTableId;
+
     public GETDisassociateTransitGatewayRouteTableRequest withTransitGatewayRouteTableId(String transitGatewayRouteTableId) {
         this.transitGatewayRouteTableId = transitGatewayRouteTableId;
         return this;
@@ -46,6 +51,7 @@ public class GETDisassociateTransitGatewayRouteTableRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDisassociateTransitGatewayRouteTableVersionEnum version;
+
     public GETDisassociateTransitGatewayRouteTableRequest withVersion(GETDisassociateTransitGatewayRouteTableVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETDisassociateTransitGatewayRouteTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDisassociateTransitGatewayRouteTableRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETDisassociateTransitGatewayRouteTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDisassociateTransitGatewayRouteTableRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETDisassociateTransitGatewayRouteTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDisassociateTransitGatewayRouteTableRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETDisassociateTransitGatewayRouteTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDisassociateTransitGatewayRouteTableRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETDisassociateTransitGatewayRouteTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDisassociateTransitGatewayRouteTableRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETDisassociateTransitGatewayRouteTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDisassociateTransitGatewayRouteTableRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETDisassociateTransitGatewayRouteTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDisassociateTransitGatewayRouteTableRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDisassociateTransitGatewayRouteTableRequest(@JsonProperty("Action") GETDisassociateTransitGatewayRouteTableActionEnum action, @JsonProperty("TransitGatewayAttachmentId") String transitGatewayAttachmentId, @JsonProperty("TransitGatewayRouteTableId") String transitGatewayRouteTableId, @JsonProperty("Version") GETDisassociateTransitGatewayRouteTableVersionEnum version) {
+        this.action = action;
+        this.transitGatewayAttachmentId = transitGatewayAttachmentId;
+        this.transitGatewayRouteTableId = transitGatewayRouteTableId;
+        this.version = version;
+  }
 }

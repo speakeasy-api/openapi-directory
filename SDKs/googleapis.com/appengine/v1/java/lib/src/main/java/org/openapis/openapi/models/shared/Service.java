@@ -18,6 +18,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Service withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Service withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Service withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkSettings")
     public NetworkSettings networkSettings;
+
     public Service withNetworkSettings(NetworkSettings networkSettings) {
         this.networkSettings = networkSettings;
         return this;
@@ -62,9 +66,11 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("split")
     public TrafficSplit split;
+
     public Service withSplit(TrafficSplit split) {
         this.split = split;
         return this;
     }
     
+    public Service(){}
 }

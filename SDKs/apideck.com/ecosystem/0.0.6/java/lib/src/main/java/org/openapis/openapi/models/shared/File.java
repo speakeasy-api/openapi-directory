@@ -17,6 +17,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content_type")
     public String contentType;
+
     public File withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -27,6 +28,7 @@ public class File {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public File withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public File withId(String id) {
         this.id = id;
         return this;
@@ -43,6 +46,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public FileTypeEnum type;
+
     public File withType(FileTypeEnum type) {
         this.type = type;
         return this;
@@ -53,6 +57,7 @@ public class File {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public File withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -60,9 +65,13 @@ public class File {
     
     @JsonProperty("url")
     public String url;
+
     public File withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public File(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

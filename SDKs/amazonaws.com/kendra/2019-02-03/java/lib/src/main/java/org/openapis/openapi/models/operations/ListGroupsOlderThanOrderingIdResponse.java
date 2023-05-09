@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListGroupsOlderThanOrderingIdResponse {
@@ -12,6 +13,7 @@ public class ListGroupsOlderThanOrderingIdResponse {
      */
     
     public Object accessDeniedException;
+
     public ListGroupsOlderThanOrderingIdResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListGroupsOlderThanOrderingIdResponse {
      */
     
     public Object conflictException;
+
     public ListGroupsOlderThanOrderingIdResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListGroupsOlderThanOrderingIdResponse {
     
     
     public String contentType;
+
     public ListGroupsOlderThanOrderingIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListGroupsOlderThanOrderingIdResponse {
      */
     
     public Object internalServerException;
+
     public ListGroupsOlderThanOrderingIdResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListGroupsOlderThanOrderingIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ListGroupsOlderThanOrderingIdResponse listGroupsOlderThanOrderingIdResponse;
+
     public ListGroupsOlderThanOrderingIdResponse withListGroupsOlderThanOrderingIdResponse(org.openapis.openapi.models.shared.ListGroupsOlderThanOrderingIdResponse listGroupsOlderThanOrderingIdResponse) {
         this.listGroupsOlderThanOrderingIdResponse = listGroupsOlderThanOrderingIdResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListGroupsOlderThanOrderingIdResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListGroupsOlderThanOrderingIdResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListGroupsOlderThanOrderingIdResponse {
     
     
     public Integer statusCode;
+
     public ListGroupsOlderThanOrderingIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListGroupsOlderThanOrderingIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListGroupsOlderThanOrderingIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListGroupsOlderThanOrderingIdResponse {
      */
     
     public Object throttlingException;
+
     public ListGroupsOlderThanOrderingIdResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ListGroupsOlderThanOrderingIdResponse {
      */
     
     public Object validationException;
+
     public ListGroupsOlderThanOrderingIdResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListGroupsOlderThanOrderingIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

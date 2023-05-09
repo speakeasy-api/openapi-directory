@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * HealthCheck - Represents a Health Check resource. Google Compute Engine has two Health Check resources: * [Global](/compute/docs/reference/rest/alpha/healthChecks) * [Regional](/compute/docs/reference/rest/alpha/regionHealthChecks) Internal HTTP(S) load balancers must use regional health checks (`compute.v1.regionHealthChecks`). Traffic Director must use global health checks (`compute.v1.HealthChecks`). Internal TCP/UDP load balancers can use either regional or global health checks (`compute.v1.regionHealthChecks` or `compute.v1.HealthChecks`). External HTTP(S), TCP proxy, and SSL proxy load balancers as well as managed instance group auto-healing must use global health checks (`compute.v1.HealthChecks`). Backend service-based network load balancers must use regional health checks (`compute.v1.regionHealthChecks`). Target pool-based network load balancers must use legacy HTTP health checks (`compute.v1.httpHealthChecks`). For more information, see Health checks overview.
+ * HealthCheck - Represents a Health Check resource. Google Compute Engine has two Health Check resources: * [Global](/compute/docs/reference/rest/alpha/healthChecks) * [Regional](/compute/docs/reference/rest/alpha/regionHealthChecks) Internal HTTP(S) load balancers must use regional health checks (`compute.v1.regionHealthChecks`). Traffic Director must use global health checks (`compute.v1.healthChecks`). Internal TCP/UDP load balancers can use either regional or global health checks (`compute.v1.regionHealthChecks` or `compute.v1.healthChecks`). External HTTP(S), TCP proxy, and SSL proxy load balancers as well as managed instance group auto-healing must use global health checks (`compute.v1.healthChecks`). Backend service-based network load balancers must use regional health checks (`compute.v1.regionHealthChecks`). Target pool-based network load balancers must use legacy HTTP health checks (`compute.v1.httpHealthChecks`). For more information, see Health checks overview.
  */
 public class HealthCheck {
     /**
@@ -18,6 +18,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkIntervalSec")
     public Integer checkIntervalSec;
+
     public HealthCheck withCheckIntervalSec(Integer checkIntervalSec) {
         this.checkIntervalSec = checkIntervalSec;
         return this;
@@ -29,6 +30,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public HealthCheck withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -40,6 +42,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public HealthCheck withDescription(String description) {
         this.description = description;
         return this;
@@ -48,6 +51,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grpcHealthCheck")
     public GRPCHealthCheck grpcHealthCheck;
+
     public HealthCheck withGrpcHealthCheck(GRPCHealthCheck grpcHealthCheck) {
         this.grpcHealthCheck = grpcHealthCheck;
         return this;
@@ -59,6 +63,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthyThreshold")
     public Integer healthyThreshold;
+
     public HealthCheck withHealthyThreshold(Integer healthyThreshold) {
         this.healthyThreshold = healthyThreshold;
         return this;
@@ -67,6 +72,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http2HealthCheck")
     public Http2HealthCheck http2HealthCheck;
+
     public HealthCheck withHttp2HealthCheck(Http2HealthCheck http2HealthCheck) {
         this.http2HealthCheck = http2HealthCheck;
         return this;
@@ -75,6 +81,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpHealthCheck")
     public HTTPHealthCheck httpHealthCheck;
+
     public HealthCheck withHttpHealthCheck(HTTPHealthCheck httpHealthCheck) {
         this.httpHealthCheck = httpHealthCheck;
         return this;
@@ -83,6 +90,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpsHealthCheck")
     public HTTPSHealthCheck httpsHealthCheck;
+
     public HealthCheck withHttpsHealthCheck(HTTPSHealthCheck httpsHealthCheck) {
         this.httpsHealthCheck = httpsHealthCheck;
         return this;
@@ -94,6 +102,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public HealthCheck withId(String id) {
         this.id = id;
         return this;
@@ -105,6 +114,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public HealthCheck withKind(String kind) {
         this.kind = kind;
         return this;
@@ -116,6 +126,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logConfig")
     public HealthCheckLogConfig logConfig;
+
     public HealthCheck withLogConfig(HealthCheckLogConfig logConfig) {
         this.logConfig = logConfig;
         return this;
@@ -127,6 +138,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public HealthCheck withName(String name) {
         this.name = name;
         return this;
@@ -138,6 +150,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public HealthCheck withRegion(String region) {
         this.region = region;
         return this;
@@ -149,6 +162,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public HealthCheck withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -160,6 +174,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public HealthCheck withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -171,6 +186,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceRegions")
     public String[] sourceRegions;
+
     public HealthCheck withSourceRegions(String[] sourceRegions) {
         this.sourceRegions = sourceRegions;
         return this;
@@ -179,6 +195,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslHealthCheck")
     public SSLHealthCheck sslHealthCheck;
+
     public HealthCheck withSslHealthCheck(SSLHealthCheck sslHealthCheck) {
         this.sslHealthCheck = sslHealthCheck;
         return this;
@@ -187,6 +204,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tcpHealthCheck")
     public TCPHealthCheck tcpHealthCheck;
+
     public HealthCheck withTcpHealthCheck(TCPHealthCheck tcpHealthCheck) {
         this.tcpHealthCheck = tcpHealthCheck;
         return this;
@@ -198,6 +216,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutSec")
     public Integer timeoutSec;
+
     public HealthCheck withTimeoutSec(Integer timeoutSec) {
         this.timeoutSec = timeoutSec;
         return this;
@@ -209,6 +228,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public HealthCheckTypeEnum type;
+
     public HealthCheck withType(HealthCheckTypeEnum type) {
         this.type = type;
         return this;
@@ -217,6 +237,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("udpHealthCheck")
     public UDPHealthCheck udpHealthCheck;
+
     public HealthCheck withUdpHealthCheck(UDPHealthCheck udpHealthCheck) {
         this.udpHealthCheck = udpHealthCheck;
         return this;
@@ -228,9 +249,11 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unhealthyThreshold")
     public Integer unhealthyThreshold;
+
     public HealthCheck withUnhealthyThreshold(Integer unhealthyThreshold) {
         this.unhealthyThreshold = unhealthyThreshold;
         return this;
     }
     
+    public HealthCheck(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AdvancedSecurityActiveCommittersUser {
     @JsonProperty("last_pushed_date")
     public String lastPushedDate;
+
     public AdvancedSecurityActiveCommittersUser withLastPushedDate(String lastPushedDate) {
         this.lastPushedDate = lastPushedDate;
         return this;
@@ -16,9 +17,14 @@ public class AdvancedSecurityActiveCommittersUser {
     
     @JsonProperty("user_login")
     public String userLogin;
+
     public AdvancedSecurityActiveCommittersUser withUserLogin(String userLogin) {
         this.userLogin = userLogin;
         return this;
     }
     
+    public AdvancedSecurityActiveCommittersUser(@JsonProperty("last_pushed_date") String lastPushedDate, @JsonProperty("user_login") String userLogin) {
+        this.lastPushedDate = lastPushedDate;
+        this.userLogin = userLogin;
+  }
 }

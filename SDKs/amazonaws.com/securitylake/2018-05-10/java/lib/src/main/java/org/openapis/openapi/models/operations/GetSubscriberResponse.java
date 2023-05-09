@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSubscriberResponse {
@@ -12,6 +13,7 @@ public class GetSubscriberResponse {
      */
     
     public Object accessDeniedException;
+
     public GetSubscriberResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetSubscriberResponse {
      */
     
     public Object accountNotFoundException;
+
     public GetSubscriberResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetSubscriberResponse {
     
     
     public String contentType;
+
     public GetSubscriberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetSubscriberResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSubscriberResponse getSubscriberResponse;
+
     public GetSubscriberResponse withGetSubscriberResponse(org.openapis.openapi.models.shared.GetSubscriberResponse getSubscriberResponse) {
         this.getSubscriberResponse = getSubscriberResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetSubscriberResponse {
      */
     
     public Object internalServerException;
+
     public GetSubscriberResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class GetSubscriberResponse {
      */
     
     public Object invalidInputException;
+
     public GetSubscriberResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -66,6 +73,7 @@ public class GetSubscriberResponse {
     
     
     public Integer statusCode;
+
     public GetSubscriberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetSubscriberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSubscriberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetSubscriberResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSubscriberResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetSubscriberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

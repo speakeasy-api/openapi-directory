@@ -12,9 +12,13 @@ public class UpdateCaseRequestBody {
      */
     @JsonProperty("fields")
     public org.openapis.openapi.models.shared.FieldValue[] fields;
+
     public UpdateCaseRequestBody withFields(org.openapis.openapi.models.shared.FieldValue[] fields) {
         this.fields = fields;
         return this;
     }
     
+    public UpdateCaseRequestBody(@JsonProperty("fields") org.openapis.openapi.models.shared.FieldValue[] fields) {
+        this.fields = fields;
+  }
 }

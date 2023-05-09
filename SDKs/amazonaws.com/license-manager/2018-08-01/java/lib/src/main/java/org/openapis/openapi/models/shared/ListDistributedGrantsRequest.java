@@ -12,6 +12,7 @@ public class ListDistributedGrantsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public Filter[] filters;
+
     public ListDistributedGrantsRequest withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class ListDistributedGrantsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrantArns")
     public String[] grantArns;
+
     public ListDistributedGrantsRequest withGrantArns(String[] grantArns) {
         this.grantArns = grantArns;
         return this;
@@ -28,6 +30,7 @@ public class ListDistributedGrantsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDistributedGrantsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +39,11 @@ public class ListDistributedGrantsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDistributedGrantsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDistributedGrantsRequest(){}
 }

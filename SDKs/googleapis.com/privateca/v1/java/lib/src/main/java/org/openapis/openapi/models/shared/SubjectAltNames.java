@@ -18,6 +18,7 @@ public class SubjectAltNames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customSans")
     public X509Extension[] customSans;
+
     public SubjectAltNames withCustomSans(X509Extension[] customSans) {
         this.customSans = customSans;
         return this;
@@ -29,6 +30,7 @@ public class SubjectAltNames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsNames")
     public String[] dnsNames;
+
     public SubjectAltNames withDnsNames(String[] dnsNames) {
         this.dnsNames = dnsNames;
         return this;
@@ -40,6 +42,7 @@ public class SubjectAltNames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddresses")
     public String[] emailAddresses;
+
     public SubjectAltNames withEmailAddresses(String[] emailAddresses) {
         this.emailAddresses = emailAddresses;
         return this;
@@ -51,6 +54,7 @@ public class SubjectAltNames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddresses")
     public String[] ipAddresses;
+
     public SubjectAltNames withIpAddresses(String[] ipAddresses) {
         this.ipAddresses = ipAddresses;
         return this;
@@ -62,9 +66,11 @@ public class SubjectAltNames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uris")
     public String[] uris;
+
     public SubjectAltNames withUris(String[] uris) {
         this.uris = uris;
         return this;
     }
     
+    public SubjectAltNames(){}
 }

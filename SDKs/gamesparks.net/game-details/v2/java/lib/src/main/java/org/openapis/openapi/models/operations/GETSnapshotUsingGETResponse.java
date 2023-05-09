@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETSnapshotUsingGETResponse {
     
     public String contentType;
+
     public GETSnapshotUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GETSnapshotUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.MessageModel messageModel;
+
     public GETSnapshotUsingGETResponse withMessageModel(org.openapis.openapi.models.shared.MessageModel messageModel) {
         this.messageModel = messageModel;
         return this;
@@ -29,6 +32,7 @@ public class GETSnapshotUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.SnapshotModel snapshotModel;
+
     public GETSnapshotUsingGETResponse withSnapshotModel(org.openapis.openapi.models.shared.SnapshotModel snapshotModel) {
         this.snapshotModel = snapshotModel;
         return this;
@@ -36,6 +40,7 @@ public class GETSnapshotUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETSnapshotUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GETSnapshotUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETSnapshotUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETSnapshotUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

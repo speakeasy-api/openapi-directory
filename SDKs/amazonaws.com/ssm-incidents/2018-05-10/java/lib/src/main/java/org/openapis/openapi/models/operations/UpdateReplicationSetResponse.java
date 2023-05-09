@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateReplicationSetResponse {
@@ -12,6 +13,7 @@ public class UpdateReplicationSetResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateReplicationSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateReplicationSetResponse {
      */
     
     public Object conflictException;
+
     public UpdateReplicationSetResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateReplicationSetResponse {
     
     
     public String contentType;
+
     public UpdateReplicationSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateReplicationSetResponse {
      */
     
     public Object internalServerException;
+
     public UpdateReplicationSetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateReplicationSetResponse {
     
     
     public Integer statusCode;
+
     public UpdateReplicationSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateReplicationSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateReplicationSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateReplicationSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateReplicationSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateReplicationSetResponse {
      */
     
     public Object throttlingException;
+
     public UpdateReplicationSetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateReplicationSetResponse {
      */
     
     public java.util.Map<String, Object> updateReplicationSetOutput;
+
     public UpdateReplicationSetResponse withUpdateReplicationSetOutput(java.util.Map<String, Object> updateReplicationSetOutput) {
         this.updateReplicationSetOutput = updateReplicationSetOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateReplicationSetResponse {
      */
     
     public Object validationException;
+
     public UpdateReplicationSetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateReplicationSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

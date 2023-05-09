@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserResponsivityRequest {
@@ -12,6 +13,7 @@ public class GetUserResponsivityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
     public GetUserResponsivityPeriodEnum period;
+
     public GetUserResponsivityRequest withPeriod(GetUserResponsivityPeriodEnum period) {
         this.period = period;
         return this;
@@ -22,9 +24,13 @@ public class GetUserResponsivityRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public Long userId;
+
     public GetUserResponsivityRequest withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetUserResponsivityRequest(@JsonProperty("userId") Long userId) {
+        this.userId = userId;
+  }
 }

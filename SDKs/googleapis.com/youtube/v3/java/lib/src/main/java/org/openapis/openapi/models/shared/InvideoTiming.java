@@ -15,6 +15,7 @@ public class InvideoTiming {
      */
     
     public String durationMs;
+
     public InvideoTiming withDurationMs(String durationMs) {
         this.durationMs = durationMs;
         return this;
@@ -25,6 +26,7 @@ public class InvideoTiming {
      */
     
     public String offsetMs;
+
     public InvideoTiming withOffsetMs(String offsetMs) {
         this.offsetMs = offsetMs;
         return this;
@@ -35,9 +37,11 @@ public class InvideoTiming {
      */
     
     public InvideoTimingTypeEnum type;
+
     public InvideoTiming withType(InvideoTimingTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public InvideoTiming(){}
 }

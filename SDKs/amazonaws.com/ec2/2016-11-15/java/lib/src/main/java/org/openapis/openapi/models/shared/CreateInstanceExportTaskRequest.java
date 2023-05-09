@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateInstanceExportTaskRequest {
     
     public String description;
+
     public CreateInstanceExportTaskRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -16,6 +17,7 @@ public class CreateInstanceExportTaskRequest {
     
     
     public CreateInstanceExportTaskRequestExportToS3Task exportToS3Task;
+
     public CreateInstanceExportTaskRequest withExportToS3Task(CreateInstanceExportTaskRequestExportToS3Task exportToS3Task) {
         this.exportToS3Task = exportToS3Task;
         return this;
@@ -23,6 +25,7 @@ public class CreateInstanceExportTaskRequest {
     
     
     public String instanceId;
+
     public CreateInstanceExportTaskRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -30,6 +33,7 @@ public class CreateInstanceExportTaskRequest {
     
     
     public CreateInstanceExportTaskRequestTagSpecifications[] tagSpecifications;
+
     public CreateInstanceExportTaskRequest withTagSpecifications(CreateInstanceExportTaskRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -37,9 +41,15 @@ public class CreateInstanceExportTaskRequest {
     
     
     public CreateInstanceExportTaskRequestTargetEnvironmentEnum targetEnvironment;
+
     public CreateInstanceExportTaskRequest withTargetEnvironment(CreateInstanceExportTaskRequestTargetEnvironmentEnum targetEnvironment) {
         this.targetEnvironment = targetEnvironment;
         return this;
     }
     
+    public CreateInstanceExportTaskRequest(@JsonProperty("ExportToS3Task") CreateInstanceExportTaskRequestExportToS3Task exportToS3Task, @JsonProperty("InstanceId") String instanceId, @JsonProperty("TargetEnvironment") CreateInstanceExportTaskRequestTargetEnvironmentEnum targetEnvironment) {
+        this.exportToS3Task = exportToS3Task;
+        this.instanceId = instanceId;
+        this.targetEnvironment = targetEnvironment;
+  }
 }

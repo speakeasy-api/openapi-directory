@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateRouteTableRequest {
     
     public Boolean dryRun;
+
     public CreateRouteTableRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class CreateRouteTableRequest {
     
     
     public CreateRouteTableRequestTagSpecifications[] tagSpecifications;
+
     public CreateRouteTableRequest withTagSpecifications(CreateRouteTableRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -23,9 +25,13 @@ public class CreateRouteTableRequest {
     
     
     public String vpcId;
+
     public CreateRouteTableRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateRouteTableRequest(@JsonProperty("VpcId") String vpcId) {
+        this.vpcId = vpcId;
+  }
 }

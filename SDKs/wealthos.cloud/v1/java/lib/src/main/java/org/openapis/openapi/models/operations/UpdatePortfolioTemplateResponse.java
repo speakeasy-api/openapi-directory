@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePortfolioTemplateResponse {
     
     public String contentType;
+
     public UpdatePortfolioTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdatePortfolioTemplateResponse {
     
     
     public Integer statusCode;
+
     public UpdatePortfolioTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdatePortfolioTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePortfolioTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdatePortfolioTemplateResponse {
      */
     
     public UpdatePortfolioTemplate200ApplicationJSON updatePortfolioTemplate200ApplicationJSONObject;
+
     public UpdatePortfolioTemplateResponse withUpdatePortfolioTemplate200ApplicationJSONObject(UpdatePortfolioTemplate200ApplicationJSON updatePortfolioTemplate200ApplicationJSONObject) {
         this.updatePortfolioTemplate200ApplicationJSONObject = updatePortfolioTemplate200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class UpdatePortfolioTemplateResponse {
      */
     
     public UpdatePortfolioTemplate400ApplicationJSON updatePortfolioTemplate400ApplicationJSONObject;
+
     public UpdatePortfolioTemplateResponse withUpdatePortfolioTemplate400ApplicationJSONObject(UpdatePortfolioTemplate400ApplicationJSON updatePortfolioTemplate400ApplicationJSONObject) {
         this.updatePortfolioTemplate400ApplicationJSONObject = updatePortfolioTemplate400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class UpdatePortfolioTemplateResponse {
      */
     
     public UpdatePortfolioTemplate401ApplicationJSON updatePortfolioTemplate401ApplicationJSONObject;
+
     public UpdatePortfolioTemplateResponse withUpdatePortfolioTemplate401ApplicationJSONObject(UpdatePortfolioTemplate401ApplicationJSON updatePortfolioTemplate401ApplicationJSONObject) {
         this.updatePortfolioTemplate401ApplicationJSONObject = updatePortfolioTemplate401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class UpdatePortfolioTemplateResponse {
      */
     
     public UpdatePortfolioTemplate403ApplicationJSON updatePortfolioTemplate403ApplicationJSONObject;
+
     public UpdatePortfolioTemplateResponse withUpdatePortfolioTemplate403ApplicationJSONObject(UpdatePortfolioTemplate403ApplicationJSON updatePortfolioTemplate403ApplicationJSONObject) {
         this.updatePortfolioTemplate403ApplicationJSONObject = updatePortfolioTemplate403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class UpdatePortfolioTemplateResponse {
      */
     
     public UpdatePortfolioTemplate404ApplicationJSON updatePortfolioTemplate404ApplicationJSONObject;
+
     public UpdatePortfolioTemplateResponse withUpdatePortfolioTemplate404ApplicationJSONObject(UpdatePortfolioTemplate404ApplicationJSON updatePortfolioTemplate404ApplicationJSONObject) {
         this.updatePortfolioTemplate404ApplicationJSONObject = updatePortfolioTemplate404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class UpdatePortfolioTemplateResponse {
      */
     
     public UpdatePortfolioTemplate409ApplicationJSON updatePortfolioTemplate409ApplicationJSONObject;
+
     public UpdatePortfolioTemplateResponse withUpdatePortfolioTemplate409ApplicationJSONObject(UpdatePortfolioTemplate409ApplicationJSON updatePortfolioTemplate409ApplicationJSONObject) {
         this.updatePortfolioTemplate409ApplicationJSONObject = updatePortfolioTemplate409ApplicationJSONObject;
         return this;
@@ -93,6 +103,7 @@ public class UpdatePortfolioTemplateResponse {
      */
     
     public UpdatePortfolioTemplate429ApplicationJSON updatePortfolioTemplate429ApplicationJSONObject;
+
     public UpdatePortfolioTemplateResponse withUpdatePortfolioTemplate429ApplicationJSONObject(UpdatePortfolioTemplate429ApplicationJSON updatePortfolioTemplate429ApplicationJSONObject) {
         this.updatePortfolioTemplate429ApplicationJSONObject = updatePortfolioTemplate429ApplicationJSONObject;
         return this;
@@ -103,9 +114,14 @@ public class UpdatePortfolioTemplateResponse {
      */
     
     public UpdatePortfolioTemplate500ApplicationJSON updatePortfolioTemplate500ApplicationJSONObject;
+
     public UpdatePortfolioTemplateResponse withUpdatePortfolioTemplate500ApplicationJSONObject(UpdatePortfolioTemplate500ApplicationJSON updatePortfolioTemplate500ApplicationJSONObject) {
         this.updatePortfolioTemplate500ApplicationJSONObject = updatePortfolioTemplate500ApplicationJSONObject;
         return this;
     }
     
+    public UpdatePortfolioTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

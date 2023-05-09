@@ -15,6 +15,7 @@ public class RobotSoftwareSuite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public RobotSoftwareSuiteTypeEnum name;
+
     public RobotSoftwareSuite withName(RobotSoftwareSuiteTypeEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class RobotSoftwareSuite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public RobotSoftwareSuiteVersionTypeEnum version;
+
     public RobotSoftwareSuite withVersion(RobotSoftwareSuiteVersionTypeEnum version) {
         this.version = version;
         return this;
     }
     
+    public RobotSoftwareSuite(){}
 }

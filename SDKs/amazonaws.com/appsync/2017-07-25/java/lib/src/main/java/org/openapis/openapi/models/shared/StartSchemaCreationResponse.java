@@ -15,9 +15,11 @@ public class StartSchemaCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SchemaStatusEnum status;
+
     public StartSchemaCreationResponse withStatus(SchemaStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public StartSchemaCreationResponse(){}
 }

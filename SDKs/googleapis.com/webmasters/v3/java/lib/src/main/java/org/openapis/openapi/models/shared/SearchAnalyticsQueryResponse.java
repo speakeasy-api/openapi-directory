@@ -18,6 +18,7 @@ public class SearchAnalyticsQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseAggregationType")
     public String responseAggregationType;
+
     public SearchAnalyticsQueryResponse withResponseAggregationType(String responseAggregationType) {
         this.responseAggregationType = responseAggregationType;
         return this;
@@ -29,9 +30,11 @@ public class SearchAnalyticsQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public ApiDataRow[] rows;
+
     public SearchAnalyticsQueryResponse withRows(ApiDataRow[] rows) {
         this.rows = rows;
         return this;
     }
     
+    public SearchAnalyticsQueryResponse(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetIpamDiscoveredAccountsRequest {
     
     public String discoveryRegion;
+
     public GetIpamDiscoveredAccountsRequest withDiscoveryRegion(String discoveryRegion) {
         this.discoveryRegion = discoveryRegion;
         return this;
@@ -16,6 +17,7 @@ public class GetIpamDiscoveredAccountsRequest {
     
     
     public Boolean dryRun;
+
     public GetIpamDiscoveredAccountsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class GetIpamDiscoveredAccountsRequest {
     
     
     public GetIpamDiscoveredAccountsRequestFilters[] filters;
+
     public GetIpamDiscoveredAccountsRequest withFilters(GetIpamDiscoveredAccountsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -30,6 +33,7 @@ public class GetIpamDiscoveredAccountsRequest {
     
     
     public String ipamResourceDiscoveryId;
+
     public GetIpamDiscoveredAccountsRequest withIpamResourceDiscoveryId(String ipamResourceDiscoveryId) {
         this.ipamResourceDiscoveryId = ipamResourceDiscoveryId;
         return this;
@@ -37,6 +41,7 @@ public class GetIpamDiscoveredAccountsRequest {
     
     
     public Long maxResults;
+
     public GetIpamDiscoveredAccountsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -44,9 +49,14 @@ public class GetIpamDiscoveredAccountsRequest {
     
     
     public String nextToken;
+
     public GetIpamDiscoveredAccountsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetIpamDiscoveredAccountsRequest(@JsonProperty("DiscoveryRegion") String discoveryRegion, @JsonProperty("IpamResourceDiscoveryId") String ipamResourceDiscoveryId) {
+        this.discoveryRegion = discoveryRegion;
+        this.ipamResourceDiscoveryId = ipamResourceDiscoveryId;
+  }
 }

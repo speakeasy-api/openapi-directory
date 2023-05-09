@@ -15,6 +15,7 @@ public class StartEntitiesDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityRecognizerArn")
     public String entityRecognizerArn;
+
     public StartEntitiesDetectionJobResponse withEntityRecognizerArn(String entityRecognizerArn) {
         this.entityRecognizerArn = entityRecognizerArn;
         return this;
@@ -23,6 +24,7 @@ public class StartEntitiesDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobArn")
     public String jobArn;
+
     public StartEntitiesDetectionJobResponse withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -31,6 +33,7 @@ public class StartEntitiesDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public StartEntitiesDetectionJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -39,9 +42,11 @@ public class StartEntitiesDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public StartEntitiesDetectionJobResponse withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
     }
     
+    public StartEntitiesDetectionJobResponse(){}
 }

@@ -12,6 +12,7 @@ public class TeamEloRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conference")
     public String conference;
+
     public TeamEloRating withConference(String conference) {
         this.conference = conference;
         return this;
@@ -20,6 +21,7 @@ public class TeamEloRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elo")
     public Double elo;
+
     public TeamEloRating withElo(Double elo) {
         this.elo = elo;
         return this;
@@ -28,6 +30,7 @@ public class TeamEloRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public TeamEloRating withTeam(String team) {
         this.team = team;
         return this;
@@ -36,9 +39,11 @@ public class TeamEloRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public Long year;
+
     public TeamEloRating withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public TeamEloRating(){}
 }

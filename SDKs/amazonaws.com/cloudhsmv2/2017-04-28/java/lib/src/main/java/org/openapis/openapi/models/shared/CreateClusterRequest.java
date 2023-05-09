@@ -12,6 +12,7 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupRetentionPolicy")
     public BackupRetentionPolicy backupRetentionPolicy;
+
     public CreateClusterRequest withBackupRetentionPolicy(BackupRetentionPolicy backupRetentionPolicy) {
         this.backupRetentionPolicy = backupRetentionPolicy;
         return this;
@@ -19,6 +20,7 @@ public class CreateClusterRequest {
     
     @JsonProperty("HsmType")
     public String hsmType;
+
     public CreateClusterRequest withHsmType(String hsmType) {
         this.hsmType = hsmType;
         return this;
@@ -27,6 +29,7 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceBackupId")
     public String sourceBackupId;
+
     public CreateClusterRequest withSourceBackupId(String sourceBackupId) {
         this.sourceBackupId = sourceBackupId;
         return this;
@@ -34,6 +37,7 @@ public class CreateClusterRequest {
     
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public CreateClusterRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -42,9 +46,14 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagList")
     public Tag[] tagList;
+
     public CreateClusterRequest withTagList(Tag[] tagList) {
         this.tagList = tagList;
         return this;
     }
     
+    public CreateClusterRequest(@JsonProperty("HsmType") String hsmType, @JsonProperty("SubnetIds") String[] subnetIds) {
+        this.hsmType = hsmType;
+        this.subnetIds = subnetIds;
+  }
 }

@@ -17,6 +17,7 @@ public class Upload {
      */
     @JsonProperty("contentType")
     public UploadContentTypeEnum contentType;
+
     public Upload withContentType(UploadContentTypeEnum contentType) {
         this.contentType = contentType;
         return this;
@@ -27,6 +28,7 @@ public class Upload {
      */
     @JsonProperty("length")
     public Long length;
+
     public Upload withLength(Long length) {
         this.length = length;
         return this;
@@ -37,6 +39,7 @@ public class Upload {
      */
     @JsonProperty("md5")
     public String md5;
+
     public Upload withMd5(String md5) {
         this.md5 = md5;
         return this;
@@ -45,9 +48,15 @@ public class Upload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, Object> metadata;
+
     public Upload withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public Upload(@JsonProperty("contentType") UploadContentTypeEnum contentType, @JsonProperty("length") Long length, @JsonProperty("md5") String md5) {
+        this.contentType = contentType;
+        this.length = length;
+        this.md5 = md5;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1ServicegroupsIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ServiceGroupInputModel serviceGroupInputModel;
+
     public PutSetupV1ServicegroupsIdRequest withServiceGroupInputModel(org.openapis.openapi.models.shared.ServiceGroupInputModel serviceGroupInputModel) {
         this.serviceGroupInputModel = serviceGroupInputModel;
         return this;
@@ -19,9 +21,13 @@ public class PutSetupV1ServicegroupsIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PutSetupV1ServicegroupsIdRequest withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public PutSetupV1ServicegroupsIdRequest(@JsonProperty("id") Integer id) {
+        this.id = id;
+  }
 }

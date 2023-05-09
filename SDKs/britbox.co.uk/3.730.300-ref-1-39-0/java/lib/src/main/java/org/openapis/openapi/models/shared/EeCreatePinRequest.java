@@ -17,6 +17,7 @@ public class EeCreatePinRequest {
      */
     @JsonProperty("accessToken")
     public String accessToken;
+
     public EeCreatePinRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -27,6 +28,7 @@ public class EeCreatePinRequest {
      */
     @JsonProperty("msisdn")
     public String msisdn;
+
     public EeCreatePinRequest withMsisdn(String msisdn) {
         this.msisdn = msisdn;
         return this;
@@ -38,9 +40,14 @@ public class EeCreatePinRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingHeader")
     public String trackingHeader;
+
     public EeCreatePinRequest withTrackingHeader(String trackingHeader) {
         this.trackingHeader = trackingHeader;
         return this;
     }
     
+    public EeCreatePinRequest(@JsonProperty("accessToken") String accessToken, @JsonProperty("msisdn") String msisdn) {
+        this.accessToken = accessToken;
+        this.msisdn = msisdn;
+  }
 }

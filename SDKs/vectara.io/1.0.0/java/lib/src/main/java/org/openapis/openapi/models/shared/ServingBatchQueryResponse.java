@@ -18,6 +18,7 @@ public class ServingBatchQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public ServingPerformanceMetrics metrics;
+
     public ServingBatchQueryResponse withMetrics(ServingPerformanceMetrics metrics) {
         this.metrics = metrics;
         return this;
@@ -26,6 +27,7 @@ public class ServingBatchQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseSet")
     public ServingResponseSet[] responseSet;
+
     public ServingBatchQueryResponse withResponseSet(ServingResponseSet[] responseSet) {
         this.responseSet = responseSet;
         return this;
@@ -34,9 +36,11 @@ public class ServingBatchQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ComvectaraStatus[] status;
+
     public ServingBatchQueryResponse withStatus(ComvectaraStatus[] status) {
         this.status = status;
         return this;
     }
     
+    public ServingBatchQueryResponse(){}
 }

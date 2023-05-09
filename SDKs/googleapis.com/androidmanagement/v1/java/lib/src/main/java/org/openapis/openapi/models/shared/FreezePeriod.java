@@ -18,6 +18,7 @@ public class FreezePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public Date endDate;
+
     public FreezePeriod withEndDate(Date endDate) {
         this.endDate = endDate;
         return this;
@@ -29,9 +30,11 @@ public class FreezePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public Date startDate;
+
     public FreezePeriod withStartDate(Date startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public FreezePeriod(){}
 }

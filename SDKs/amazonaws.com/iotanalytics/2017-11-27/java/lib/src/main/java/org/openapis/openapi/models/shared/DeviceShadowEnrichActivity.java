@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeviceShadowEnrichActivity {
     @JsonProperty("attribute")
     public String attribute;
+
     public DeviceShadowEnrichActivity withAttribute(String attribute) {
         this.attribute = attribute;
         return this;
@@ -21,6 +22,7 @@ public class DeviceShadowEnrichActivity {
     
     @JsonProperty("name")
     public String name;
+
     public DeviceShadowEnrichActivity withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +31,7 @@ public class DeviceShadowEnrichActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public DeviceShadowEnrichActivity withNext(String next) {
         this.next = next;
         return this;
@@ -36,6 +39,7 @@ public class DeviceShadowEnrichActivity {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public DeviceShadowEnrichActivity withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -43,9 +47,16 @@ public class DeviceShadowEnrichActivity {
     
     @JsonProperty("thingName")
     public String thingName;
+
     public DeviceShadowEnrichActivity withThingName(String thingName) {
         this.thingName = thingName;
         return this;
     }
     
+    public DeviceShadowEnrichActivity(@JsonProperty("attribute") String attribute, @JsonProperty("name") String name, @JsonProperty("roleArn") String roleArn, @JsonProperty("thingName") String thingName) {
+        this.attribute = attribute;
+        this.name = name;
+        this.roleArn = roleArn;
+        this.thingName = thingName;
+  }
 }

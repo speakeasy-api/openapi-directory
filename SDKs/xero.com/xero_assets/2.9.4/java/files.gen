@@ -62,4 +62,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Setting.java
 lib/src/main/java/org/openapis/openapi/models/shared/Assets.java
 lib/src/main/java/org/openapis/openapi/models/shared/Pagination.java
 lib/src/main/java/org/openapis/openapi/models/shared/AssetStatusQueryParamEnum.java
+docs/sdk/README.md
+docs/asset/README.md
 USAGE.md

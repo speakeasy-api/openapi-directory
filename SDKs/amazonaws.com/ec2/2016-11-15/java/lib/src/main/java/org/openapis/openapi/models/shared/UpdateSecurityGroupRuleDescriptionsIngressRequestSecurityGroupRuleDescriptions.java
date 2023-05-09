@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UpdateSecurityGroupRuleDescriptionsIngressRequestSecurityGroupRuleDescriptions {
     
     public String description;
+
     public UpdateSecurityGroupRuleDescriptionsIngressRequestSecurityGroupRuleDescriptions withDescription(String description) {
         this.description = description;
         return this;
@@ -19,9 +20,11 @@ public class UpdateSecurityGroupRuleDescriptionsIngressRequestSecurityGroupRuleD
     
     
     public String securityGroupRuleId;
+
     public UpdateSecurityGroupRuleDescriptionsIngressRequestSecurityGroupRuleDescriptions withSecurityGroupRuleId(String securityGroupRuleId) {
         this.securityGroupRuleId = securityGroupRuleId;
         return this;
     }
     
+    public UpdateSecurityGroupRuleDescriptionsIngressRequestSecurityGroupRuleDescriptions(){}
 }

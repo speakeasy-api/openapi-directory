@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RecorderConfig {
     @JsonProperty("MediaSourceConfig")
     public MediaSourceConfig mediaSourceConfig;
+
     public RecorderConfig withMediaSourceConfig(MediaSourceConfig mediaSourceConfig) {
         this.mediaSourceConfig = mediaSourceConfig;
         return this;
@@ -22,9 +23,13 @@ public class RecorderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleConfig")
     public ScheduleConfig scheduleConfig;
+
     public RecorderConfig withScheduleConfig(ScheduleConfig scheduleConfig) {
         this.scheduleConfig = scheduleConfig;
         return this;
     }
     
+    public RecorderConfig(@JsonProperty("MediaSourceConfig") MediaSourceConfig mediaSourceConfig) {
+        this.mediaSourceConfig = mediaSourceConfig;
+  }
 }

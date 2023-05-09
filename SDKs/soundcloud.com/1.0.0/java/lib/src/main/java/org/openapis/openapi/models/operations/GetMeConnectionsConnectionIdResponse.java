@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMeConnectionsConnectionIdResponse {
@@ -12,6 +13,7 @@ public class GetMeConnectionsConnectionIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Connection connection;
+
     public GetMeConnectionsConnectionIdResponse withConnection(org.openapis.openapi.models.shared.Connection connection) {
         this.connection = connection;
         return this;
@@ -19,6 +21,7 @@ public class GetMeConnectionsConnectionIdResponse {
     
     
     public String contentType;
+
     public GetMeConnectionsConnectionIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetMeConnectionsConnectionIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetMeConnectionsConnectionIdResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetMeConnectionsConnectionIdResponse {
     
     
     public Integer statusCode;
+
     public GetMeConnectionsConnectionIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetMeConnectionsConnectionIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMeConnectionsConnectionIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMeConnectionsConnectionIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

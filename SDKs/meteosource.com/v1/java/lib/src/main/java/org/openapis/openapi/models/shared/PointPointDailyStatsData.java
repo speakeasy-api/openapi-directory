@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PointPointDailyStatsData {
     @JsonProperty("precipitation")
     public PointPointDailyStatsPrecipitationData precipitation;
+
     public PointPointDailyStatsData withPrecipitation(PointPointDailyStatsPrecipitationData precipitation) {
         this.precipitation = precipitation;
         return this;
@@ -16,6 +17,7 @@ public class PointPointDailyStatsData {
     
     @JsonProperty("temperature")
     public PointPointDailyStatsTemperatureData temperature;
+
     public PointPointDailyStatsData withTemperature(PointPointDailyStatsTemperatureData temperature) {
         this.temperature = temperature;
         return this;
@@ -23,9 +25,15 @@ public class PointPointDailyStatsData {
     
     @JsonProperty("wind")
     public PointPointDailyStatsWindData wind;
+
     public PointPointDailyStatsData withWind(PointPointDailyStatsWindData wind) {
         this.wind = wind;
         return this;
     }
     
+    public PointPointDailyStatsData(@JsonProperty("precipitation") PointPointDailyStatsPrecipitationData precipitation, @JsonProperty("temperature") PointPointDailyStatsTemperatureData temperature, @JsonProperty("wind") PointPointDailyStatsWindData wind) {
+        this.precipitation = precipitation;
+        this.temperature = temperature;
+        this.wind = wind;
+  }
 }

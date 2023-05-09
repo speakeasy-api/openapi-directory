@@ -15,9 +15,11 @@ public class NodeGroupsSetNodeTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeTemplate")
     public String nodeTemplate;
+
     public NodeGroupsSetNodeTemplateRequest withNodeTemplate(String nodeTemplate) {
         this.nodeTemplate = nodeTemplate;
         return this;
     }
     
+    public NodeGroupsSetNodeTemplateRequest(){}
 }

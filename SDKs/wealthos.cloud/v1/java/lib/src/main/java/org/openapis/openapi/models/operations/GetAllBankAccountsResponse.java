@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAllBankAccountsResponse {
     
     public String contentType;
+
     public GetAllBankAccountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetAllBankAccountsResponse {
     
     
     public Integer statusCode;
+
     public GetAllBankAccountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetAllBankAccountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAllBankAccountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetAllBankAccountsResponse {
      */
     
     public GetAllBankAccounts200ApplicationJSON getAllBankAccounts200ApplicationJSONObject;
+
     public GetAllBankAccountsResponse withGetAllBankAccounts200ApplicationJSONObject(GetAllBankAccounts200ApplicationJSON getAllBankAccounts200ApplicationJSONObject) {
         this.getAllBankAccounts200ApplicationJSONObject = getAllBankAccounts200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetAllBankAccountsResponse {
      */
     
     public GetAllBankAccounts400ApplicationJSON getAllBankAccounts400ApplicationJSONObject;
+
     public GetAllBankAccountsResponse withGetAllBankAccounts400ApplicationJSONObject(GetAllBankAccounts400ApplicationJSON getAllBankAccounts400ApplicationJSONObject) {
         this.getAllBankAccounts400ApplicationJSONObject = getAllBankAccounts400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetAllBankAccountsResponse {
      */
     
     public GetAllBankAccounts401ApplicationJSON getAllBankAccounts401ApplicationJSONObject;
+
     public GetAllBankAccountsResponse withGetAllBankAccounts401ApplicationJSONObject(GetAllBankAccounts401ApplicationJSON getAllBankAccounts401ApplicationJSONObject) {
         this.getAllBankAccounts401ApplicationJSONObject = getAllBankAccounts401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetAllBankAccountsResponse {
      */
     
     public GetAllBankAccounts403ApplicationJSON getAllBankAccounts403ApplicationJSONObject;
+
     public GetAllBankAccountsResponse withGetAllBankAccounts403ApplicationJSONObject(GetAllBankAccounts403ApplicationJSON getAllBankAccounts403ApplicationJSONObject) {
         this.getAllBankAccounts403ApplicationJSONObject = getAllBankAccounts403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetAllBankAccountsResponse {
      */
     
     public GetAllBankAccounts404ApplicationJSON getAllBankAccounts404ApplicationJSONObject;
+
     public GetAllBankAccountsResponse withGetAllBankAccounts404ApplicationJSONObject(GetAllBankAccounts404ApplicationJSON getAllBankAccounts404ApplicationJSONObject) {
         this.getAllBankAccounts404ApplicationJSONObject = getAllBankAccounts404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class GetAllBankAccountsResponse {
      */
     
     public GetAllBankAccounts409ApplicationJSON getAllBankAccounts409ApplicationJSONObject;
+
     public GetAllBankAccountsResponse withGetAllBankAccounts409ApplicationJSONObject(GetAllBankAccounts409ApplicationJSON getAllBankAccounts409ApplicationJSONObject) {
         this.getAllBankAccounts409ApplicationJSONObject = getAllBankAccounts409ApplicationJSONObject;
         return this;
@@ -93,6 +103,7 @@ public class GetAllBankAccountsResponse {
      */
     
     public GetAllBankAccounts429ApplicationJSON getAllBankAccounts429ApplicationJSONObject;
+
     public GetAllBankAccountsResponse withGetAllBankAccounts429ApplicationJSONObject(GetAllBankAccounts429ApplicationJSON getAllBankAccounts429ApplicationJSONObject) {
         this.getAllBankAccounts429ApplicationJSONObject = getAllBankAccounts429ApplicationJSONObject;
         return this;
@@ -103,9 +114,14 @@ public class GetAllBankAccountsResponse {
      */
     
     public GetAllBankAccounts500ApplicationJSON getAllBankAccounts500ApplicationJSONObject;
+
     public GetAllBankAccountsResponse withGetAllBankAccounts500ApplicationJSONObject(GetAllBankAccounts500ApplicationJSON getAllBankAccounts500ApplicationJSONObject) {
         this.getAllBankAccounts500ApplicationJSONObject = getAllBankAccounts500ApplicationJSONObject;
         return this;
     }
     
+    public GetAllBankAccountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

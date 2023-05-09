@@ -14,6 +14,7 @@ public class CreatePolicyRequestBody {
      */
     @JsonProperty("policyDocument")
     public String policyDocument;
+
     public CreatePolicyRequestBody withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -25,9 +26,13 @@ public class CreatePolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreatePolicyRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreatePolicyRequestBody(@JsonProperty("policyDocument") String policyDocument) {
+        this.policyDocument = policyDocument;
+  }
 }

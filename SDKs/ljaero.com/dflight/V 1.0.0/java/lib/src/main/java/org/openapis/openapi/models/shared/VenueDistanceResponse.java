@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VenueDistanceResponse {
     @JsonProperty("found")
     public java.util.Map<String, Object> found;
+
     public VenueDistanceResponse withFound(java.util.Map<String, Object> found) {
         this.found = found;
         return this;
     }
     
+    public VenueDistanceResponse(@JsonProperty("found") java.util.Map<String, Object> found) {
+        this.found = found;
+  }
 }

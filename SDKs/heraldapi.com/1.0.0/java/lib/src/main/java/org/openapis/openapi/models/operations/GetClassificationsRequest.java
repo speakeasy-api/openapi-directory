@@ -12,6 +12,7 @@ public class GetClassificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Double limit;
+
     public GetClassificationsRequest withLimit(Double limit) {
         this.limit = limit;
         return this;
@@ -22,6 +23,7 @@ public class GetClassificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=naics_2017")
     public String naics2017;
+
     public GetClassificationsRequest withNaics2017(String naics2017) {
         this.naics2017 = naics2017;
         return this;
@@ -32,6 +34,7 @@ public class GetClassificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Double page;
+
     public GetClassificationsRequest withPage(Double page) {
         this.page = page;
         return this;
@@ -42,9 +45,11 @@ public class GetClassificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public GetClassificationsRequest withSearch(String search) {
         this.search = search;
         return this;
     }
     
+    public GetClassificationsRequest(){}
 }

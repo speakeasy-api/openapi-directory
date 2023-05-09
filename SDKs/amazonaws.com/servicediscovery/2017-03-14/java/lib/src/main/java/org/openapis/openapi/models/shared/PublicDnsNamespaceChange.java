@@ -15,6 +15,7 @@ public class PublicDnsNamespaceChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public PublicDnsNamespaceChange withDescription(String description) {
         this.description = description;
         return this;
@@ -23,9 +24,11 @@ public class PublicDnsNamespaceChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public PublicDnsNamespacePropertiesChange properties;
+
     public PublicDnsNamespaceChange withProperties(PublicDnsNamespacePropertiesChange properties) {
         this.properties = properties;
         return this;
     }
     
+    public PublicDnsNamespaceChange(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBSnapshotMessage {
     
     public DBSnapshotList[] dbSnapshots;
+
     public DBSnapshotMessage withDBSnapshots(DBSnapshotList[] dbSnapshots) {
         this.dbSnapshots = dbSnapshots;
         return this;
@@ -19,9 +20,11 @@ public class DBSnapshotMessage {
     
     
     public String marker;
+
     public DBSnapshotMessage withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public DBSnapshotMessage(){}
 }

@@ -138,4 +138,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/DomainVerificationSummarySt
 lib/src/main/java/org/openapis/openapi/models/shared/DomainVerificationSummaryTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DomainVerificationSummaryUsageEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DomainVerificationSummary.java
+docs/sdk/README.md
+docs/v1/README.md
+docs/v2/README.md
 USAGE.md

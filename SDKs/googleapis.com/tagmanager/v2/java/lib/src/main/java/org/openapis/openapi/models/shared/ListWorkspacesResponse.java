@@ -18,6 +18,7 @@ public class ListWorkspacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListWorkspacesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListWorkspacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace")
     public Workspace[] workspace;
+
     public ListWorkspacesResponse withWorkspace(Workspace[] workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public ListWorkspacesResponse(){}
 }

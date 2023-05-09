@@ -18,9 +18,11 @@ public class UploadItemRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UploadItemRef withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UploadItemRef(){}
 }

@@ -24,6 +24,7 @@ public class CalculateOrderRequest {
      */
     @JsonProperty("order")
     public Order order;
+
     public CalculateOrderRequest withOrder(Order order) {
         this.order = order;
         return this;
@@ -39,9 +40,13 @@ public class CalculateOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proposed_rewards")
     public OrderReward[] proposedRewards;
+
     public CalculateOrderRequest withProposedRewards(OrderReward[] proposedRewards) {
         this.proposedRewards = proposedRewards;
         return this;
     }
     
+    public CalculateOrderRequest(@JsonProperty("order") Order order) {
+        this.order = order;
+  }
 }

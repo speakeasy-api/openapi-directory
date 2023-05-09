@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetQueryRuntimeStatisticsInput {
     @JsonProperty("QueryExecutionId")
     public String queryExecutionId;
+
     public GetQueryRuntimeStatisticsInput withQueryExecutionId(String queryExecutionId) {
         this.queryExecutionId = queryExecutionId;
         return this;
     }
     
+    public GetQueryRuntimeStatisticsInput(@JsonProperty("QueryExecutionId") String queryExecutionId) {
+        this.queryExecutionId = queryExecutionId;
+  }
 }

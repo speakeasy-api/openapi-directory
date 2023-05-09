@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SecurityProfileIdentifier {
     @JsonProperty("arn")
     public String arn;
+
     public SecurityProfileIdentifier withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,9 +20,14 @@ public class SecurityProfileIdentifier {
     
     @JsonProperty("name")
     public String name;
+
     public SecurityProfileIdentifier withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SecurityProfileIdentifier(@JsonProperty("arn") String arn, @JsonProperty("name") String name) {
+        this.arn = arn;
+        this.name = name;
+  }
 }

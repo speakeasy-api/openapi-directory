@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLocalGatewayRouteTableVpcAssociationsResultLocalGatewayRouteTableVpcAssociationsTags {
     
     public String key;
+
     public DescribeLocalGatewayRouteTableVpcAssociationsResultLocalGatewayRouteTableVpcAssociationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeLocalGatewayRouteTableVpcAssociationsResultLocalGatewayRout
     
     
     public String value;
+
     public DescribeLocalGatewayRouteTableVpcAssociationsResultLocalGatewayRouteTableVpcAssociationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeLocalGatewayRouteTableVpcAssociationsResultLocalGatewayRouteTableVpcAssociationsTags(){}
 }

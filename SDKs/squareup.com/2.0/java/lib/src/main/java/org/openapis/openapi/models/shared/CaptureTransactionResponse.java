@@ -19,9 +19,11 @@ public class CaptureTransactionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CaptureTransactionResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public CaptureTransactionResponse(){}
 }

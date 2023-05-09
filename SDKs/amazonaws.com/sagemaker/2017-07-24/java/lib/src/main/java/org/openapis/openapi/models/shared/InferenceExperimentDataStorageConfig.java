@@ -18,6 +18,7 @@ public class InferenceExperimentDataStorageConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentType")
     public CaptureContentTypeHeader contentType;
+
     public InferenceExperimentDataStorageConfig withContentType(CaptureContentTypeHeader contentType) {
         this.contentType = contentType;
         return this;
@@ -25,6 +26,7 @@ public class InferenceExperimentDataStorageConfig {
     
     @JsonProperty("Destination")
     public String destination;
+
     public InferenceExperimentDataStorageConfig withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -33,9 +35,13 @@ public class InferenceExperimentDataStorageConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKey")
     public String kmsKey;
+
     public InferenceExperimentDataStorageConfig withKmsKey(String kmsKey) {
         this.kmsKey = kmsKey;
         return this;
     }
     
+    public InferenceExperimentDataStorageConfig(@JsonProperty("Destination") String destination) {
+        this.destination = destination;
+  }
 }

@@ -15,6 +15,7 @@ public class ListJobsInput {
      */
     
     public String apiVersion;
+
     public ListJobsInput withAPIVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -25,6 +26,7 @@ public class ListJobsInput {
      */
     
     public String marker;
+
     public ListJobsInput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -35,9 +37,11 @@ public class ListJobsInput {
      */
     
     public Long maxJobs;
+
     public ListJobsInput withMaxJobs(Long maxJobs) {
         this.maxJobs = maxJobs;
         return this;
     }
     
+    public ListJobsInput(){}
 }

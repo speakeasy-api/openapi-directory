@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRelationalDatabaseFromSnapshotResponse {
@@ -12,6 +13,7 @@ public class CreateRelationalDatabaseFromSnapshotResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateRelationalDatabaseFromSnapshotResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateRelationalDatabaseFromSnapshotResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public CreateRelationalDatabaseFromSnapshotResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class CreateRelationalDatabaseFromSnapshotResponse {
     
     
     public String contentType;
+
     public CreateRelationalDatabaseFromSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateRelationalDatabaseFromSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRelationalDatabaseFromSnapshotResult createRelationalDatabaseFromSnapshotResult;
+
     public CreateRelationalDatabaseFromSnapshotResponse withCreateRelationalDatabaseFromSnapshotResult(org.openapis.openapi.models.shared.CreateRelationalDatabaseFromSnapshotResult createRelationalDatabaseFromSnapshotResult) {
         this.createRelationalDatabaseFromSnapshotResult = createRelationalDatabaseFromSnapshotResult;
         return this;
@@ -49,6 +54,7 @@ public class CreateRelationalDatabaseFromSnapshotResponse {
      */
     
     public Object invalidInputException;
+
     public CreateRelationalDatabaseFromSnapshotResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class CreateRelationalDatabaseFromSnapshotResponse {
      */
     
     public Object notFoundException;
+
     public CreateRelationalDatabaseFromSnapshotResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateRelationalDatabaseFromSnapshotResponse {
      */
     
     public Object operationFailureException;
+
     public CreateRelationalDatabaseFromSnapshotResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class CreateRelationalDatabaseFromSnapshotResponse {
      */
     
     public Object serviceException;
+
     public CreateRelationalDatabaseFromSnapshotResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class CreateRelationalDatabaseFromSnapshotResponse {
     
     
     public Integer statusCode;
+
     public CreateRelationalDatabaseFromSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateRelationalDatabaseFromSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRelationalDatabaseFromSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CreateRelationalDatabaseFromSnapshotResponse {
      */
     
     public Object unauthenticatedException;
+
     public CreateRelationalDatabaseFromSnapshotResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public CreateRelationalDatabaseFromSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

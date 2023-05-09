@@ -18,6 +18,7 @@ public class GoogleCloudVideointelligenceV1p3beta1TextDetectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageHints")
     public String[] languageHints;
+
     public GoogleCloudVideointelligenceV1p3beta1TextDetectionConfig withLanguageHints(String[] languageHints) {
         this.languageHints = languageHints;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudVideointelligenceV1p3beta1TextDetectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public GoogleCloudVideointelligenceV1p3beta1TextDetectionConfig withModel(String model) {
         this.model = model;
         return this;
     }
     
+    public GoogleCloudVideointelligenceV1p3beta1TextDetectionConfig(){}
 }

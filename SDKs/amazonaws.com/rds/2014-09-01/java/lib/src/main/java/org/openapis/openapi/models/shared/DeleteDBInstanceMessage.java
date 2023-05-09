@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteDBInstanceMessage {
     
     public String dbInstanceIdentifier;
+
     public DeleteDBInstanceMessage withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class DeleteDBInstanceMessage {
     
     
     public String finalDBSnapshotIdentifier;
+
     public DeleteDBInstanceMessage withFinalDBSnapshotIdentifier(String finalDBSnapshotIdentifier) {
         this.finalDBSnapshotIdentifier = finalDBSnapshotIdentifier;
         return this;
@@ -23,9 +25,13 @@ public class DeleteDBInstanceMessage {
     
     
     public Boolean skipFinalSnapshot;
+
     public DeleteDBInstanceMessage withSkipFinalSnapshot(Boolean skipFinalSnapshot) {
         this.skipFinalSnapshot = skipFinalSnapshot;
         return this;
     }
     
+    public DeleteDBInstanceMessage(@JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier) {
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+  }
 }

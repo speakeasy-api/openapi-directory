@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Placement {
     
     public String affinity;
+
     public Placement withAffinity(String affinity) {
         this.affinity = affinity;
         return this;
@@ -19,6 +20,7 @@ public class Placement {
     
     
     public String availabilityZone;
+
     public Placement withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class Placement {
     
     
     public String groupId;
+
     public Placement withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -33,6 +36,7 @@ public class Placement {
     
     
     public String groupName;
+
     public Placement withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -40,6 +44,7 @@ public class Placement {
     
     
     public String hostId;
+
     public Placement withHostId(String hostId) {
         this.hostId = hostId;
         return this;
@@ -47,6 +52,7 @@ public class Placement {
     
     
     public String hostResourceGroupArn;
+
     public Placement withHostResourceGroupArn(String hostResourceGroupArn) {
         this.hostResourceGroupArn = hostResourceGroupArn;
         return this;
@@ -54,6 +60,7 @@ public class Placement {
     
     
     public Long partitionNumber;
+
     public Placement withPartitionNumber(Long partitionNumber) {
         this.partitionNumber = partitionNumber;
         return this;
@@ -61,6 +68,7 @@ public class Placement {
     
     
     public String spreadDomain;
+
     public Placement withSpreadDomain(String spreadDomain) {
         this.spreadDomain = spreadDomain;
         return this;
@@ -68,9 +76,11 @@ public class Placement {
     
     
     public PlacementTenancyEnum tenancy;
+
     public Placement withTenancy(PlacementTenancyEnum tenancy) {
         this.tenancy = tenancy;
         return this;
     }
     
+    public Placement(){}
 }

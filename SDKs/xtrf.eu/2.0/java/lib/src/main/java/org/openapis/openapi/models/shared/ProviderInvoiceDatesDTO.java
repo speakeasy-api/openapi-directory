@@ -12,6 +12,7 @@ public class ProviderInvoiceDatesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("draftDate")
     public TimeDTO draftDate;
+
     public ProviderInvoiceDatesDTO withDraftDate(TimeDTO draftDate) {
         this.draftDate = draftDate;
         return this;
@@ -20,6 +21,7 @@ public class ProviderInvoiceDatesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalDate")
     public TimeDTO finalDate;
+
     public ProviderInvoiceDatesDTO withFinalDate(TimeDTO finalDate) {
         this.finalDate = finalDate;
         return this;
@@ -28,6 +30,7 @@ public class ProviderInvoiceDatesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceUploadedDate")
     public TimeDTO invoiceUploadedDate;
+
     public ProviderInvoiceDatesDTO withInvoiceUploadedDate(TimeDTO invoiceUploadedDate) {
         this.invoiceUploadedDate = invoiceUploadedDate;
         return this;
@@ -36,9 +39,11 @@ public class ProviderInvoiceDatesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentDueDate")
     public TimeDTO paymentDueDate;
+
     public ProviderInvoiceDatesDTO withPaymentDueDate(TimeDTO paymentDueDate) {
         this.paymentDueDate = paymentDueDate;
         return this;
     }
     
+    public ProviderInvoiceDatesDTO(){}
 }

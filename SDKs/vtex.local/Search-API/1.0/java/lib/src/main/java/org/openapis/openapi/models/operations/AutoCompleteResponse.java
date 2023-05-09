@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AutoCompleteResponse {
     
     public String contentType;
+
     public AutoCompleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AutoCompleteResponse {
     
     
     public Integer statusCode;
+
     public AutoCompleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AutoCompleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AutoCompleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -30,9 +34,14 @@ public class AutoCompleteResponse {
     
     
     public AutoCompleteTheRootSchema theRootSchema;
+
     public AutoCompleteResponse withTheRootSchema(AutoCompleteTheRootSchema theRootSchema) {
         this.theRootSchema = theRootSchema;
         return this;
     }
     
+    public AutoCompleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

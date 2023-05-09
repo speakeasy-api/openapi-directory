@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UploaderConfig {
     @JsonProperty("ScheduleConfig")
     public ScheduleConfig scheduleConfig;
+
     public UploaderConfig withScheduleConfig(ScheduleConfig scheduleConfig) {
         this.scheduleConfig = scheduleConfig;
         return this;
     }
     
+    public UploaderConfig(@JsonProperty("ScheduleConfig") ScheduleConfig scheduleConfig) {
+        this.scheduleConfig = scheduleConfig;
+  }
 }

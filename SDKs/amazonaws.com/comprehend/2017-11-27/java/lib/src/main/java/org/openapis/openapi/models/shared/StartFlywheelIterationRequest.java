@@ -12,6 +12,7 @@ public class StartFlywheelIterationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartFlywheelIterationRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,9 +20,13 @@ public class StartFlywheelIterationRequest {
     
     @JsonProperty("FlywheelArn")
     public String flywheelArn;
+
     public StartFlywheelIterationRequest withFlywheelArn(String flywheelArn) {
         this.flywheelArn = flywheelArn;
         return this;
     }
     
+    public StartFlywheelIterationRequest(@JsonProperty("FlywheelArn") String flywheelArn) {
+        this.flywheelArn = flywheelArn;
+  }
 }

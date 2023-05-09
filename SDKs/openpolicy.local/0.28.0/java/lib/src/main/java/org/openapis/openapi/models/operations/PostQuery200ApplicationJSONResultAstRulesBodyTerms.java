@@ -15,6 +15,7 @@ public class PostQuery200ApplicationJSONResultAstRulesBodyTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PostQuery200ApplicationJSONResultAstRulesBodyTerms withType(String type) {
         this.type = type;
         return this;
@@ -26,9 +27,11 @@ public class PostQuery200ApplicationJSONResultAstRulesBodyTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public PostQuery200ApplicationJSONResultAstRulesBodyTermsValue[] value;
+
     public PostQuery200ApplicationJSONResultAstRulesBodyTerms withValue(PostQuery200ApplicationJSONResultAstRulesBodyTermsValue[] value) {
         this.value = value;
         return this;
     }
     
+    public PostQuery200ApplicationJSONResultAstRulesBodyTerms(){}
 }

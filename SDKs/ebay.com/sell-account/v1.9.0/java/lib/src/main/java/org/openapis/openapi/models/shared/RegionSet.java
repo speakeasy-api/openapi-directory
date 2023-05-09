@@ -18,6 +18,7 @@ public class RegionSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionExcluded")
     public Region[] regionExcluded;
+
     public RegionSet withRegionExcluded(Region[] regionExcluded) {
         this.regionExcluded = regionExcluded;
         return this;
@@ -29,9 +30,11 @@ public class RegionSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionIncluded")
     public Region[] regionIncluded;
+
     public RegionSet withRegionIncluded(Region[] regionIncluded) {
         this.regionIncluded = regionIncluded;
         return this;
     }
     
+    public RegionSet(){}
 }

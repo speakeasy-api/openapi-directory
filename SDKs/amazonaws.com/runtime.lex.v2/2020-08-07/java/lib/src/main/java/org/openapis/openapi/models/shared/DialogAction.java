@@ -15,6 +15,7 @@ public class DialogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotElicitationStyle")
     public StyleTypeEnum slotElicitationStyle;
+
     public DialogAction withSlotElicitationStyle(StyleTypeEnum slotElicitationStyle) {
         this.slotElicitationStyle = slotElicitationStyle;
         return this;
@@ -23,6 +24,7 @@ public class DialogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotToElicit")
     public String slotToElicit;
+
     public DialogAction withSlotToElicit(String slotToElicit) {
         this.slotToElicit = slotToElicit;
         return this;
@@ -31,6 +33,7 @@ public class DialogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subSlotToElicit")
     public ElicitSubSlot subSlotToElicit;
+
     public DialogAction withSubSlotToElicit(ElicitSubSlot subSlotToElicit) {
         this.subSlotToElicit = subSlotToElicit;
         return this;
@@ -38,9 +41,13 @@ public class DialogAction {
     
     @JsonProperty("type")
     public DialogActionTypeEnum type;
+
     public DialogAction withType(DialogActionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DialogAction(@JsonProperty("type") DialogActionTypeEnum type) {
+        this.type = type;
+  }
 }

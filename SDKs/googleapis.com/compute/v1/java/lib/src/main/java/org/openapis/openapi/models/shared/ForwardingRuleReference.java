@@ -12,9 +12,11 @@ public class ForwardingRuleReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forwardingRule")
     public String forwardingRule;
+
     public ForwardingRuleReference withForwardingRule(String forwardingRule) {
         this.forwardingRule = forwardingRule;
         return this;
     }
     
+    public ForwardingRuleReference(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListVaultsResponse {
     
     public String contentType;
+
     public ListVaultsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListVaultsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListVaultsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class ListVaultsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListVaultsOutput listVaultsOutput;
+
     public ListVaultsResponse withListVaultsOutput(org.openapis.openapi.models.shared.ListVaultsOutput listVaultsOutput) {
         this.listVaultsOutput = listVaultsOutput;
         return this;
@@ -39,6 +43,7 @@ public class ListVaultsResponse {
      */
     
     public Object missingParameterValueException;
+
     public ListVaultsResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class ListVaultsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListVaultsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListVaultsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListVaultsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class ListVaultsResponse {
     
     
     public Integer statusCode;
+
     public ListVaultsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListVaultsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListVaultsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListVaultsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class TaskCreatedVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public TaskCreatedVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +24,7 @@ public class TaskCreatedVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public TaskCreatedVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -31,9 +33,11 @@ public class TaskCreatedVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task_id")
     public Long taskId;
+
     public TaskCreatedVO withTaskId(Long taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public TaskCreatedVO(){}
 }

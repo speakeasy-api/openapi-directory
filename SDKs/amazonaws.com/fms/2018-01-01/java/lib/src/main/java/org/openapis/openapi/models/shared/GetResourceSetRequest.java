@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetResourceSetRequest {
     @JsonProperty("Identifier")
     public String identifier;
+
     public GetResourceSetRequest withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
     }
     
+    public GetResourceSetRequest(@JsonProperty("Identifier") String identifier) {
+        this.identifier = identifier;
+  }
 }

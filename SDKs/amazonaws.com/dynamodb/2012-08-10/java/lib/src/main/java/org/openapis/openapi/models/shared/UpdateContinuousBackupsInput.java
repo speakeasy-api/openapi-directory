@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateContinuousBackupsInput {
     @JsonProperty("PointInTimeRecoverySpecification")
     public PointInTimeRecoverySpecification pointInTimeRecoverySpecification;
+
     public UpdateContinuousBackupsInput withPointInTimeRecoverySpecification(PointInTimeRecoverySpecification pointInTimeRecoverySpecification) {
         this.pointInTimeRecoverySpecification = pointInTimeRecoverySpecification;
         return this;
@@ -16,9 +17,14 @@ public class UpdateContinuousBackupsInput {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public UpdateContinuousBackupsInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public UpdateContinuousBackupsInput(@JsonProperty("PointInTimeRecoverySpecification") PointInTimeRecoverySpecification pointInTimeRecoverySpecification, @JsonProperty("TableName") String tableName) {
+        this.pointInTimeRecoverySpecification = pointInTimeRecoverySpecification;
+        this.tableName = tableName;
+  }
 }

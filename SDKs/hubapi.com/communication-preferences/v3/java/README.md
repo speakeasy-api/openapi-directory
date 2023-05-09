@@ -16,8 +16,8 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetCommunicationPreferencesV3DefinitionsGetPageResponse;
+import org.openapis.openapi.models.operations.GetCommunicationPreferencesV3DefinitionsGetPageSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -25,14 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetCommunicationPreferencesV3DefinitionsGetPageResponse res = sdk.definition.getCommunicationPreferencesV3DefinitionsGetPage();
+            GetCommunicationPreferencesV3DefinitionsGetPageResponse res = sdk.definition.getCommunicationPreferencesV3DefinitionsGetPage(new GetCommunicationPreferencesV3DefinitionsGetPageSecurity() {{
+                hapikey = "YOUR_API_KEY_HERE";
+            }});
 
-            if (res.subscriptionDefinitionsResponse.isPresent()) {
+            if (res.subscriptionDefinitionsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -40,15 +44,15 @@ public class Application {
 ## Available Resources and Operations
 
 
-### definition
+### [definition](docs/definition/README.md)
 
-* `getCommunicationPreferencesV3DefinitionsGetPage` - Get subscription definitions
+* [getCommunicationPreferencesV3DefinitionsGetPage](docs/definition/README.md#getcommunicationpreferencesv3definitionsgetpage) - Get subscription definitions
 
-### status
+### [status](docs/status/README.md)
 
-* `getCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatus` - Get subscription statuses for a contact
-* `postCommunicationPreferencesV3SubscribeSubscribe` - Subscribe a contact
-* `postCommunicationPreferencesV3UnsubscribeUnsubscribe` - Unsubscribe a contact
+* [getCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatus](docs/status/README.md#getcommunicationpreferencesv3statusemailemailaddressgetemailstatus) - Get subscription statuses for a contact
+* [postCommunicationPreferencesV3SubscribeSubscribe](docs/status/README.md#postcommunicationpreferencesv3subscribesubscribe) - Subscribe a contact
+* [postCommunicationPreferencesV3UnsubscribeUnsubscribe](docs/status/README.md#postcommunicationpreferencesv3unsubscribeunsubscribe) - Unsubscribe a contact
 <!-- End SDK Available Operations -->
 
 ### Maturity

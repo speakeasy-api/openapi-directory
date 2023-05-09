@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateKnowledgeBaseTemplateUriResponse {
@@ -12,6 +13,7 @@ public class UpdateKnowledgeBaseTemplateUriResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateKnowledgeBaseTemplateUriResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateKnowledgeBaseTemplateUriResponse {
     
     
     public String contentType;
+
     public UpdateKnowledgeBaseTemplateUriResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class UpdateKnowledgeBaseTemplateUriResponse {
     
     
     public Integer statusCode;
+
     public UpdateKnowledgeBaseTemplateUriResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateKnowledgeBaseTemplateUriResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateKnowledgeBaseTemplateUriResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateKnowledgeBaseTemplateUriResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateKnowledgeBaseTemplateUriResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateKnowledgeBaseTemplateUriResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateKnowledgeBaseTemplateUriResponse updateKnowledgeBaseTemplateUriResponse;
+
     public UpdateKnowledgeBaseTemplateUriResponse withUpdateKnowledgeBaseTemplateUriResponse(org.openapis.openapi.models.shared.UpdateKnowledgeBaseTemplateUriResponse updateKnowledgeBaseTemplateUriResponse) {
         this.updateKnowledgeBaseTemplateUriResponse = updateKnowledgeBaseTemplateUriResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateKnowledgeBaseTemplateUriResponse {
      */
     
     public Object validationException;
+
     public UpdateKnowledgeBaseTemplateUriResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateKnowledgeBaseTemplateUriResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

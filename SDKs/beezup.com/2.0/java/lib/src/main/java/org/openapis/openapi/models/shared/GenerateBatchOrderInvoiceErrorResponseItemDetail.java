@@ -12,6 +12,7 @@ public class GenerateBatchOrderInvoiceErrorResponseItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public UserErrorMessage errorMessage;
+
     public GenerateBatchOrderInvoiceErrorResponseItemDetail withErrorMessage(UserErrorMessage errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -20,9 +21,11 @@ public class GenerateBatchOrderInvoiceErrorResponseItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request")
     public GenerateBatchOrderInvoiceRequestItem request;
+
     public GenerateBatchOrderInvoiceErrorResponseItemDetail withRequest(GenerateBatchOrderInvoiceRequestItem request) {
         this.request = request;
         return this;
     }
     
+    public GenerateBatchOrderInvoiceErrorResponseItemDetail(){}
 }

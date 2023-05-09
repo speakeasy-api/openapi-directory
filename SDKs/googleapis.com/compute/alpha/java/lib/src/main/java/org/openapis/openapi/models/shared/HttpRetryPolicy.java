@@ -18,6 +18,7 @@ public class HttpRetryPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numRetries")
     public Long numRetries;
+
     public HttpRetryPolicy withNumRetries(Long numRetries) {
         this.numRetries = numRetries;
         return this;
@@ -29,6 +30,7 @@ public class HttpRetryPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("perTryTimeout")
     public Duration perTryTimeout;
+
     public HttpRetryPolicy withPerTryTimeout(Duration perTryTimeout) {
         this.perTryTimeout = perTryTimeout;
         return this;
@@ -40,9 +42,11 @@ public class HttpRetryPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryConditions")
     public String[] retryConditions;
+
     public HttpRetryPolicy withRetryConditions(String[] retryConditions) {
         this.retryConditions = retryConditions;
         return this;
     }
     
+    public HttpRetryPolicy(){}
 }

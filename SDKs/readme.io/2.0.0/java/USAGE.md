@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DeleteAPISpecificationSecurity;
 import org.openapis.openapi.models.operations.DeleteAPISpecificationRequest;
 import org.openapis.openapi.models.operations.DeleteAPISpecificationResponse;
+import org.openapis.openapi.models.operations.DeleteAPISpecificationSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -14,11 +13,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteAPISpecificationRequest req = new DeleteAPISpecificationRequest() {{
-                id = "corrupti";
-            }}            
+            DeleteAPISpecificationRequest req = new DeleteAPISpecificationRequest("corrupti");            
 
-            DeleteAPISpecificationResponse res = sdk.apiSpecification.deleteAPISpecification(req, new DeleteAPISpecificationSecurity() {{
+            DeleteAPISpecificationResponse res = sdk.apiSpecification.deleteAPISpecification(req, new DeleteAPISpecificationSecurity("provident", "distinctio") {{
                 password = "YOUR_PASSWORD_HERE";
                 username = "YOUR_USERNAME_HERE";
             }});
@@ -29,5 +26,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ClearQuerySuggestionsRequest {
     @JsonProperty("IndexId")
     public String indexId;
+
     public ClearQuerySuggestionsRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
     }
     
+    public ClearQuerySuggestionsRequest(@JsonProperty("IndexId") String indexId) {
+        this.indexId = indexId;
+  }
 }

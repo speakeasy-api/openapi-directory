@@ -15,6 +15,7 @@ public class GetLicenseResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public GetLicenseResult withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -23,9 +24,11 @@ public class GetLicenseResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, Parameter> parameters;
+
     public GetLicenseResult withParameters(java.util.Map<String, Parameter> parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public GetLicenseResult(){}
 }

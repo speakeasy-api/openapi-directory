@@ -15,6 +15,7 @@ public class DataflowEndpointListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataflowEndpointGroupArn")
     public String dataflowEndpointGroupArn;
+
     public DataflowEndpointListItem withDataflowEndpointGroupArn(String dataflowEndpointGroupArn) {
         this.dataflowEndpointGroupArn = dataflowEndpointGroupArn;
         return this;
@@ -23,9 +24,11 @@ public class DataflowEndpointListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataflowEndpointGroupId")
     public String dataflowEndpointGroupId;
+
     public DataflowEndpointListItem withDataflowEndpointGroupId(String dataflowEndpointGroupId) {
         this.dataflowEndpointGroupId = dataflowEndpointGroupId;
         return this;
     }
     
+    public DataflowEndpointListItem(){}
 }

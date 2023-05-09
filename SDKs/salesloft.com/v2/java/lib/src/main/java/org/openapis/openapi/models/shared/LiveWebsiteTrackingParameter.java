@@ -15,9 +15,11 @@ public class LiveWebsiteTrackingParameter {
      */
     
     public java.util.Map<String, Object>[] parameters;
+
     public LiveWebsiteTrackingParameter withParameters(java.util.Map<String, Object>[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public LiveWebsiteTrackingParameter(){}
 }

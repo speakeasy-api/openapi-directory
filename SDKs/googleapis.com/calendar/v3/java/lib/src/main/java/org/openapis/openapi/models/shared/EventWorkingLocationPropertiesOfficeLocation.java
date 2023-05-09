@@ -18,6 +18,7 @@ public class EventWorkingLocationPropertiesOfficeLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildingId")
     public String buildingId;
+
     public EventWorkingLocationPropertiesOfficeLocation withBuildingId(String buildingId) {
         this.buildingId = buildingId;
         return this;
@@ -29,6 +30,7 @@ public class EventWorkingLocationPropertiesOfficeLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deskId")
     public String deskId;
+
     public EventWorkingLocationPropertiesOfficeLocation withDeskId(String deskId) {
         this.deskId = deskId;
         return this;
@@ -40,6 +42,7 @@ public class EventWorkingLocationPropertiesOfficeLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floorId")
     public String floorId;
+
     public EventWorkingLocationPropertiesOfficeLocation withFloorId(String floorId) {
         this.floorId = floorId;
         return this;
@@ -51,6 +54,7 @@ public class EventWorkingLocationPropertiesOfficeLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floorSectionId")
     public String floorSectionId;
+
     public EventWorkingLocationPropertiesOfficeLocation withFloorSectionId(String floorSectionId) {
         this.floorSectionId = floorSectionId;
         return this;
@@ -62,9 +66,11 @@ public class EventWorkingLocationPropertiesOfficeLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public EventWorkingLocationPropertiesOfficeLocation withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public EventWorkingLocationPropertiesOfficeLocation(){}
 }

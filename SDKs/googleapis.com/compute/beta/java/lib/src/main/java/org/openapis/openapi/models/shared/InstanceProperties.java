@@ -15,6 +15,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advancedMachineFeatures")
     public AdvancedMachineFeatures advancedMachineFeatures;
+
     public InstanceProperties withAdvancedMachineFeatures(AdvancedMachineFeatures advancedMachineFeatures) {
         this.advancedMachineFeatures = advancedMachineFeatures;
         return this;
@@ -26,6 +27,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canIpForward")
     public Boolean canIpForward;
+
     public InstanceProperties withCanIpForward(Boolean canIpForward) {
         this.canIpForward = canIpForward;
         return this;
@@ -37,6 +39,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidentialInstanceConfig")
     public ConfidentialInstanceConfig confidentialInstanceConfig;
+
     public InstanceProperties withConfidentialInstanceConfig(ConfidentialInstanceConfig confidentialInstanceConfig) {
         this.confidentialInstanceConfig = confidentialInstanceConfig;
         return this;
@@ -48,6 +51,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public InstanceProperties withDescription(String description) {
         this.description = description;
         return this;
@@ -59,6 +63,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disks")
     public AttachedDisk[] disks;
+
     public InstanceProperties withDisks(AttachedDisk[] disks) {
         this.disks = disks;
         return this;
@@ -70,6 +75,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayDevice")
     public DisplayDevice displayDevice;
+
     public InstanceProperties withDisplayDevice(DisplayDevice displayDevice) {
         this.displayDevice = displayDevice;
         return this;
@@ -81,6 +87,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestAccelerators")
     public AcceleratorConfig[] guestAccelerators;
+
     public InstanceProperties withGuestAccelerators(AcceleratorConfig[] guestAccelerators) {
         this.guestAccelerators = guestAccelerators;
         return this;
@@ -92,6 +99,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyRevocationActionType")
     public InstancePropertiesKeyRevocationActionTypeEnum keyRevocationActionType;
+
     public InstanceProperties withKeyRevocationActionType(InstancePropertiesKeyRevocationActionTypeEnum keyRevocationActionType) {
         this.keyRevocationActionType = keyRevocationActionType;
         return this;
@@ -103,6 +111,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public InstanceProperties withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -114,6 +123,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public String machineType;
+
     public InstanceProperties withMachineType(String machineType) {
         this.machineType = machineType;
         return this;
@@ -125,6 +135,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public Metadata metadata;
+
     public InstanceProperties withMetadata(Metadata metadata) {
         this.metadata = metadata;
         return this;
@@ -136,6 +147,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minCpuPlatform")
     public String minCpuPlatform;
+
     public InstanceProperties withMinCpuPlatform(String minCpuPlatform) {
         this.minCpuPlatform = minCpuPlatform;
         return this;
@@ -147,6 +159,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkInterfaces")
     public NetworkInterface[] networkInterfaces;
+
     public InstanceProperties withNetworkInterfaces(NetworkInterface[] networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
@@ -155,6 +168,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkPerformanceConfig")
     public NetworkPerformanceConfig networkPerformanceConfig;
+
     public InstanceProperties withNetworkPerformanceConfig(NetworkPerformanceConfig networkPerformanceConfig) {
         this.networkPerformanceConfig = networkPerformanceConfig;
         return this;
@@ -166,6 +180,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postKeyRevocationActionType")
     public InstancePropertiesPostKeyRevocationActionTypeEnum postKeyRevocationActionType;
+
     public InstanceProperties withPostKeyRevocationActionType(InstancePropertiesPostKeyRevocationActionTypeEnum postKeyRevocationActionType) {
         this.postKeyRevocationActionType = postKeyRevocationActionType;
         return this;
@@ -177,6 +192,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateIpv6GoogleAccess")
     public InstancePropertiesPrivateIpv6GoogleAccessEnum privateIpv6GoogleAccess;
+
     public InstanceProperties withPrivateIpv6GoogleAccess(InstancePropertiesPrivateIpv6GoogleAccessEnum privateIpv6GoogleAccess) {
         this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
         return this;
@@ -188,6 +204,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservationAffinity")
     public ReservationAffinity reservationAffinity;
+
     public InstanceProperties withReservationAffinity(ReservationAffinity reservationAffinity) {
         this.reservationAffinity = reservationAffinity;
         return this;
@@ -199,6 +216,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceManagerTags")
     public java.util.Map<String, String> resourceManagerTags;
+
     public InstanceProperties withResourceManagerTags(java.util.Map<String, String> resourceManagerTags) {
         this.resourceManagerTags = resourceManagerTags;
         return this;
@@ -210,6 +228,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourcePolicies")
     public String[] resourcePolicies;
+
     public InstanceProperties withResourcePolicies(String[] resourcePolicies) {
         this.resourcePolicies = resourcePolicies;
         return this;
@@ -221,6 +240,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduling")
     public Scheduling scheduling;
+
     public InstanceProperties withScheduling(Scheduling scheduling) {
         this.scheduling = scheduling;
         return this;
@@ -232,6 +252,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccounts")
     public ServiceAccount[] serviceAccounts;
+
     public InstanceProperties withServiceAccounts(ServiceAccount[] serviceAccounts) {
         this.serviceAccounts = serviceAccounts;
         return this;
@@ -243,6 +264,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shieldedInstanceConfig")
     public ShieldedInstanceConfig shieldedInstanceConfig;
+
     public InstanceProperties withShieldedInstanceConfig(ShieldedInstanceConfig shieldedInstanceConfig) {
         this.shieldedInstanceConfig = shieldedInstanceConfig;
         return this;
@@ -254,6 +276,7 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shieldedVmConfig")
     public ShieldedVmConfig shieldedVmConfig;
+
     public InstanceProperties withShieldedVmConfig(ShieldedVmConfig shieldedVmConfig) {
         this.shieldedVmConfig = shieldedVmConfig;
         return this;
@@ -265,9 +288,11 @@ public class InstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tags tags;
+
     public InstanceProperties withTags(Tags tags) {
         this.tags = tags;
         return this;
     }
     
+    public InstanceProperties(){}
 }

@@ -61,11 +61,9 @@ public class Regionalinventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentRegionalinventoryCustombatchResponse res = new org.openapis.openapi.models.operations.ContentRegionalinventoryCustombatchResponse() {{
+        org.openapis.openapi.models.operations.ContentRegionalinventoryCustombatchResponse res = new org.openapis.openapi.models.operations.ContentRegionalinventoryCustombatchResponse(contentType, httpRes.statusCode()) {{
             regionalinventoryCustomBatchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Regionalinventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentRegionalinventoryInsertResponse res = new org.openapis.openapi.models.operations.ContentRegionalinventoryInsertResponse() {{
+        org.openapis.openapi.models.operations.ContentRegionalinventoryInsertResponse res = new org.openapis.openapi.models.operations.ContentRegionalinventoryInsertResponse(contentType, httpRes.statusCode()) {{
             regionalInventory = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

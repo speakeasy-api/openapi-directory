@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeRegionTargetHttpProxiesTestIamPermissionsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionTargetHttpProxiesTestIamPermissionsSecurityOption1 option1;
+
     public ComputeRegionTargetHttpProxiesTestIamPermissionsSecurity withOption1(ComputeRegionTargetHttpProxiesTestIamPermissionsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeRegionTargetHttpProxiesTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionTargetHttpProxiesTestIamPermissionsSecurityOption2 option2;
+
     public ComputeRegionTargetHttpProxiesTestIamPermissionsSecurity withOption2(ComputeRegionTargetHttpProxiesTestIamPermissionsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeRegionTargetHttpProxiesTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionTargetHttpProxiesTestIamPermissionsSecurityOption3 option3;
+
     public ComputeRegionTargetHttpProxiesTestIamPermissionsSecurity withOption3(ComputeRegionTargetHttpProxiesTestIamPermissionsSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeRegionTargetHttpProxiesTestIamPermissionsSecurity(){}
 }

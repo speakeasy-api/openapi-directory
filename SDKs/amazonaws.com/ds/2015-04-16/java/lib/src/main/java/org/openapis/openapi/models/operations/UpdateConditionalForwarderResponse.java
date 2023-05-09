@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateConditionalForwarderResponse {
@@ -12,6 +13,7 @@ public class UpdateConditionalForwarderResponse {
      */
     
     public Object clientException;
+
     public UpdateConditionalForwarderResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateConditionalForwarderResponse {
     
     
     public String contentType;
+
     public UpdateConditionalForwarderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateConditionalForwarderResponse {
      */
     
     public Object directoryUnavailableException;
+
     public UpdateConditionalForwarderResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateConditionalForwarderResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public UpdateConditionalForwarderResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateConditionalForwarderResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateConditionalForwarderResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateConditionalForwarderResponse {
     
     
     public Integer statusCode;
+
     public UpdateConditionalForwarderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateConditionalForwarderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateConditionalForwarderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateConditionalForwarderResponse {
      */
     
     public Object serviceException;
+
     public UpdateConditionalForwarderResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateConditionalForwarderResponse {
      */
     
     public Object unsupportedOperationException;
+
     public UpdateConditionalForwarderResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateConditionalForwarderResponse {
      */
     
     public java.util.Map<String, Object> updateConditionalForwarderResult;
+
     public UpdateConditionalForwarderResponse withUpdateConditionalForwarderResult(java.util.Map<String, Object> updateConditionalForwarderResult) {
         this.updateConditionalForwarderResult = updateConditionalForwarderResult;
         return this;
     }
     
+    public UpdateConditionalForwarderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

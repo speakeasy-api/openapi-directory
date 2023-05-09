@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Origin1 {
     @JsonProperty("Fulfillment")
     public Fulfillment1 fulfillment;
+
     public Origin1 withFulfillment(Fulfillment1 fulfillment) {
         this.fulfillment = fulfillment;
         return this;
@@ -16,9 +17,14 @@ public class Origin1 {
     
     @JsonProperty("Marketplace")
     public Marketplace2 marketplace;
+
     public Origin1 withMarketplace(Marketplace2 marketplace) {
         this.marketplace = marketplace;
         return this;
     }
     
+    public Origin1(@JsonProperty("Fulfillment") Fulfillment1 fulfillment, @JsonProperty("Marketplace") Marketplace2 marketplace) {
+        this.fulfillment = fulfillment;
+        this.marketplace = marketplace;
+  }
 }

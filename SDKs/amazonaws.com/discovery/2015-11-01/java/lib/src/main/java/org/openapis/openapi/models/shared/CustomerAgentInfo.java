@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomerAgentInfo {
     @JsonProperty("activeAgents")
     public Long activeAgents;
+
     public CustomerAgentInfo withActiveAgents(Long activeAgents) {
         this.activeAgents = activeAgents;
         return this;
@@ -19,6 +20,7 @@ public class CustomerAgentInfo {
     
     @JsonProperty("blackListedAgents")
     public Long blackListedAgents;
+
     public CustomerAgentInfo withBlackListedAgents(Long blackListedAgents) {
         this.blackListedAgents = blackListedAgents;
         return this;
@@ -26,6 +28,7 @@ public class CustomerAgentInfo {
     
     @JsonProperty("healthyAgents")
     public Long healthyAgents;
+
     public CustomerAgentInfo withHealthyAgents(Long healthyAgents) {
         this.healthyAgents = healthyAgents;
         return this;
@@ -33,6 +36,7 @@ public class CustomerAgentInfo {
     
     @JsonProperty("shutdownAgents")
     public Long shutdownAgents;
+
     public CustomerAgentInfo withShutdownAgents(Long shutdownAgents) {
         this.shutdownAgents = shutdownAgents;
         return this;
@@ -40,6 +44,7 @@ public class CustomerAgentInfo {
     
     @JsonProperty("totalAgents")
     public Long totalAgents;
+
     public CustomerAgentInfo withTotalAgents(Long totalAgents) {
         this.totalAgents = totalAgents;
         return this;
@@ -47,6 +52,7 @@ public class CustomerAgentInfo {
     
     @JsonProperty("unhealthyAgents")
     public Long unhealthyAgents;
+
     public CustomerAgentInfo withUnhealthyAgents(Long unhealthyAgents) {
         this.unhealthyAgents = unhealthyAgents;
         return this;
@@ -54,9 +60,19 @@ public class CustomerAgentInfo {
     
     @JsonProperty("unknownAgents")
     public Long unknownAgents;
+
     public CustomerAgentInfo withUnknownAgents(Long unknownAgents) {
         this.unknownAgents = unknownAgents;
         return this;
     }
     
+    public CustomerAgentInfo(@JsonProperty("activeAgents") Long activeAgents, @JsonProperty("blackListedAgents") Long blackListedAgents, @JsonProperty("healthyAgents") Long healthyAgents, @JsonProperty("shutdownAgents") Long shutdownAgents, @JsonProperty("totalAgents") Long totalAgents, @JsonProperty("unhealthyAgents") Long unhealthyAgents, @JsonProperty("unknownAgents") Long unknownAgents) {
+        this.activeAgents = activeAgents;
+        this.blackListedAgents = blackListedAgents;
+        this.healthyAgents = healthyAgents;
+        this.shutdownAgents = shutdownAgents;
+        this.totalAgents = totalAgents;
+        this.unhealthyAgents = unhealthyAgents;
+        this.unknownAgents = unknownAgents;
+  }
 }

@@ -12,6 +12,7 @@ public class UpdateDatalakeExceptionsSubscriptionRequestBody {
      */
     @JsonProperty("notificationEndpoint")
     public String notificationEndpoint;
+
     public UpdateDatalakeExceptionsSubscriptionRequestBody withNotificationEndpoint(String notificationEndpoint) {
         this.notificationEndpoint = notificationEndpoint;
         return this;
@@ -22,9 +23,14 @@ public class UpdateDatalakeExceptionsSubscriptionRequestBody {
      */
     @JsonProperty("subscriptionProtocol")
     public UpdateDatalakeExceptionsSubscriptionRequestBodySubscriptionProtocolEnum subscriptionProtocol;
+
     public UpdateDatalakeExceptionsSubscriptionRequestBody withSubscriptionProtocol(UpdateDatalakeExceptionsSubscriptionRequestBodySubscriptionProtocolEnum subscriptionProtocol) {
         this.subscriptionProtocol = subscriptionProtocol;
         return this;
     }
     
+    public UpdateDatalakeExceptionsSubscriptionRequestBody(@JsonProperty("notificationEndpoint") String notificationEndpoint, @JsonProperty("subscriptionProtocol") UpdateDatalakeExceptionsSubscriptionRequestBodySubscriptionProtocolEnum subscriptionProtocol) {
+        this.notificationEndpoint = notificationEndpoint;
+        this.subscriptionProtocol = subscriptionProtocol;
+  }
 }

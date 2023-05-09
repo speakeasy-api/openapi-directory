@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2SuggestFaqAnswersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contextSize")
     public Integer contextSize;
+
     public GoogleCloudDialogflowV2SuggestFaqAnswersResponse withContextSize(Integer contextSize) {
         this.contextSize = contextSize;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2SuggestFaqAnswersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("faqAnswers")
     public GoogleCloudDialogflowV2FaqAnswer[] faqAnswers;
+
     public GoogleCloudDialogflowV2SuggestFaqAnswersResponse withFaqAnswers(GoogleCloudDialogflowV2FaqAnswer[] faqAnswers) {
         this.faqAnswers = faqAnswers;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2SuggestFaqAnswersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestMessage")
     public String latestMessage;
+
     public GoogleCloudDialogflowV2SuggestFaqAnswersResponse withLatestMessage(String latestMessage) {
         this.latestMessage = latestMessage;
         return this;
     }
     
+    public GoogleCloudDialogflowV2SuggestFaqAnswersResponse(){}
 }

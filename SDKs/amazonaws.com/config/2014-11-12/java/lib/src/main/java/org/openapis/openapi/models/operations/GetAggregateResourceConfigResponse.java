@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAggregateResourceConfigResponse {
     
     public String contentType;
+
     public GetAggregateResourceConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAggregateResourceConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAggregateResourceConfigResponse getAggregateResourceConfigResponse;
+
     public GetAggregateResourceConfigResponse withGetAggregateResourceConfigResponse(org.openapis.openapi.models.shared.GetAggregateResourceConfigResponse getAggregateResourceConfigResponse) {
         this.getAggregateResourceConfigResponse = getAggregateResourceConfigResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetAggregateResourceConfigResponse {
      */
     
     public Object noSuchConfigurationAggregatorException;
+
     public GetAggregateResourceConfigResponse withNoSuchConfigurationAggregatorException(Object noSuchConfigurationAggregatorException) {
         this.noSuchConfigurationAggregatorException = noSuchConfigurationAggregatorException;
         return this;
@@ -39,6 +43,7 @@ public class GetAggregateResourceConfigResponse {
      */
     
     public Object oversizedConfigurationItemException;
+
     public GetAggregateResourceConfigResponse withOversizedConfigurationItemException(Object oversizedConfigurationItemException) {
         this.oversizedConfigurationItemException = oversizedConfigurationItemException;
         return this;
@@ -46,6 +51,7 @@ public class GetAggregateResourceConfigResponse {
     
     
     public Integer statusCode;
+
     public GetAggregateResourceConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetAggregateResourceConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAggregateResourceConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetAggregateResourceConfigResponse {
      */
     
     public Object resourceNotDiscoveredException;
+
     public GetAggregateResourceConfigResponse withResourceNotDiscoveredException(Object resourceNotDiscoveredException) {
         this.resourceNotDiscoveredException = resourceNotDiscoveredException;
         return this;
@@ -73,9 +81,14 @@ public class GetAggregateResourceConfigResponse {
      */
     
     public Object validationException;
+
     public GetAggregateResourceConfigResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetAggregateResourceConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

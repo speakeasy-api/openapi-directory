@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ResourceChangeDetail {
     
     public String causingEntity;
+
     public ResourceChangeDetail withCausingEntity(String causingEntity) {
         this.causingEntity = causingEntity;
         return this;
@@ -19,6 +20,7 @@ public class ResourceChangeDetail {
     
     
     public ChangeSourceEnum changeSource;
+
     public ResourceChangeDetail withChangeSource(ChangeSourceEnum changeSource) {
         this.changeSource = changeSource;
         return this;
@@ -26,6 +28,7 @@ public class ResourceChangeDetail {
     
     
     public EvaluationTypeEnum evaluation;
+
     public ResourceChangeDetail withEvaluation(EvaluationTypeEnum evaluation) {
         this.evaluation = evaluation;
         return this;
@@ -33,9 +36,11 @@ public class ResourceChangeDetail {
     
     
     public ResourceTargetDefinition target;
+
     public ResourceChangeDetail withTarget(ResourceTargetDefinition target) {
         this.target = target;
         return this;
     }
     
+    public ResourceChangeDetail(){}
 }

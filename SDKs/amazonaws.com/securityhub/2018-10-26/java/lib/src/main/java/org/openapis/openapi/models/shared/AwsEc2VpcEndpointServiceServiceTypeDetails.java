@@ -15,9 +15,11 @@ public class AwsEc2VpcEndpointServiceServiceTypeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceType")
     public String serviceType;
+
     public AwsEc2VpcEndpointServiceServiceTypeDetails withServiceType(String serviceType) {
         this.serviceType = serviceType;
         return this;
     }
     
+    public AwsEc2VpcEndpointServiceServiceTypeDetails(){}
 }

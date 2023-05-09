@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SerpResponse {
     
     public String contentType;
+
     public SerpResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SerpResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public SerpResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -26,6 +29,7 @@ public class SerpResponse {
     
     
     public Integer statusCode;
+
     public SerpResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class SerpResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SerpResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class SerpResponse {
      */
     
     public Serp200ApplicationJSON serp200ApplicationJSONObject;
+
     public SerpResponse withSerp200ApplicationJSONObject(Serp200ApplicationJSON serp200ApplicationJSONObject) {
         this.serp200ApplicationJSONObject = serp200ApplicationJSONObject;
         return this;
     }
     
+    public SerpResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

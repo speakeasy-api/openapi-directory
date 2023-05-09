@@ -18,6 +18,7 @@ public class QueryTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public QueryTarget withParent(String parent) {
         this.parent = parent;
         return this;
@@ -29,9 +30,11 @@ public class QueryTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("structuredQuery")
     public StructuredQuery structuredQuery;
+
     public QueryTarget withStructuredQuery(StructuredQuery structuredQuery) {
         this.structuredQuery = structuredQuery;
         return this;
     }
     
+    public QueryTarget(){}
 }

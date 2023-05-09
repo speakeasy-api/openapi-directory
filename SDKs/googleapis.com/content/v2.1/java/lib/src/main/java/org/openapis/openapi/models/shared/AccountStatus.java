@@ -18,6 +18,7 @@ public class AccountStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public AccountStatus withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class AccountStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountLevelIssues")
     public AccountStatusAccountLevelIssue[] accountLevelIssues;
+
     public AccountStatus withAccountLevelIssues(AccountStatusAccountLevelIssue[] accountLevelIssues) {
         this.accountLevelIssues = accountLevelIssues;
         return this;
@@ -40,6 +42,7 @@ public class AccountStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountManagement")
     public String accountManagement;
+
     public AccountStatus withAccountManagement(String accountManagement) {
         this.accountManagement = accountManagement;
         return this;
@@ -51,6 +54,7 @@ public class AccountStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccountStatus withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class AccountStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public AccountStatusProducts[] products;
+
     public AccountStatus withProducts(AccountStatusProducts[] products) {
         this.products = products;
         return this;
@@ -73,9 +78,11 @@ public class AccountStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("websiteClaimed")
     public Boolean websiteClaimed;
+
     public AccountStatus withWebsiteClaimed(Boolean websiteClaimed) {
         this.websiteClaimed = websiteClaimed;
         return this;
     }
     
+    public AccountStatus(){}
 }

@@ -15,6 +15,7 @@ public class ActivityTypeInfos {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ActivityTypeInfos withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -22,9 +23,13 @@ public class ActivityTypeInfos {
     
     @JsonProperty("typeInfos")
     public ActivityTypeInfo[] typeInfos;
+
     public ActivityTypeInfos withTypeInfos(ActivityTypeInfo[] typeInfos) {
         this.typeInfos = typeInfos;
         return this;
     }
     
+    public ActivityTypeInfos(@JsonProperty("typeInfos") ActivityTypeInfo[] typeInfos) {
+        this.typeInfos = typeInfos;
+  }
 }

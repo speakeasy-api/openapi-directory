@@ -89,4 +89,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/DeleteTenantProjectRequest.
 lib/src/main/java/org/openapis/openapi/models/shared/ListTenancyUnitsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/RemoveTenantProjectRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UndeleteTenantProjectRequest.java
+docs/sdk/README.md
+docs/operations/README.md
+docs/services/README.md
 USAGE.md

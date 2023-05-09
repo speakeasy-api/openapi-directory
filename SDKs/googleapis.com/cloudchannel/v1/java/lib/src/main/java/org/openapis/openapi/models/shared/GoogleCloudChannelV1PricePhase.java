@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1PricePhase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstPeriod")
     public Integer firstPeriod;
+
     public GoogleCloudChannelV1PricePhase withFirstPeriod(Integer firstPeriod) {
         this.firstPeriod = firstPeriod;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1PricePhase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastPeriod")
     public Integer lastPeriod;
+
     public GoogleCloudChannelV1PricePhase withLastPeriod(Integer lastPeriod) {
         this.lastPeriod = lastPeriod;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudChannelV1PricePhase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periodType")
     public GoogleCloudChannelV1PricePhasePeriodTypeEnum periodType;
+
     public GoogleCloudChannelV1PricePhase withPeriodType(GoogleCloudChannelV1PricePhasePeriodTypeEnum periodType) {
         this.periodType = periodType;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudChannelV1PricePhase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public GoogleCloudChannelV1Price price;
+
     public GoogleCloudChannelV1PricePhase withPrice(GoogleCloudChannelV1Price price) {
         this.price = price;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudChannelV1PricePhase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceTiers")
     public GoogleCloudChannelV1PriceTier[] priceTiers;
+
     public GoogleCloudChannelV1PricePhase withPriceTiers(GoogleCloudChannelV1PriceTier[] priceTiers) {
         this.priceTiers = priceTiers;
         return this;
     }
     
+    public GoogleCloudChannelV1PricePhase(){}
 }

@@ -12,6 +12,7 @@ public class BatchGetCollectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ids")
     public String[] ids;
+
     public BatchGetCollectionRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -20,9 +21,11 @@ public class BatchGetCollectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public String[] names;
+
     public BatchGetCollectionRequest withNames(String[] names) {
         this.names = names;
         return this;
     }
     
+    public BatchGetCollectionRequest(){}
 }

@@ -18,6 +18,7 @@ public class NodeMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeId")
     public StringMatcher nodeId;
+
     public NodeMatcher withNodeId(StringMatcher nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -29,9 +30,11 @@ public class NodeMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeMetadatas")
     public StructMatcher[] nodeMetadatas;
+
     public NodeMatcher withNodeMetadatas(StructMatcher[] nodeMetadatas) {
         this.nodeMetadatas = nodeMetadatas;
         return this;
     }
     
+    public NodeMatcher(){}
 }

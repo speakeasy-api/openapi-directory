@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2InspectTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GooglePrivacyDlpV2InspectTemplate withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2InspectTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GooglePrivacyDlpV2InspectTemplate withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GooglePrivacyDlpV2InspectTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GooglePrivacyDlpV2InspectTemplate withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GooglePrivacyDlpV2InspectTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inspectConfig")
     public GooglePrivacyDlpV2InspectConfig inspectConfig;
+
     public GooglePrivacyDlpV2InspectTemplate withInspectConfig(GooglePrivacyDlpV2InspectConfig inspectConfig) {
         this.inspectConfig = inspectConfig;
         return this;
@@ -62,6 +66,7 @@ public class GooglePrivacyDlpV2InspectTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GooglePrivacyDlpV2InspectTemplate withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class GooglePrivacyDlpV2InspectTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GooglePrivacyDlpV2InspectTemplate withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GooglePrivacyDlpV2InspectTemplate(){}
 }

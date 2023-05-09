@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeSpotPriceHistoryResultSpotPriceHistory {
     
     public String availabilityZone;
+
     public DescribeSpotPriceHistoryResultSpotPriceHistory withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSpotPriceHistoryResultSpotPriceHistory {
     
     
     public DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum instanceType;
+
     public DescribeSpotPriceHistoryResultSpotPriceHistory withInstanceType(DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSpotPriceHistoryResultSpotPriceHistory {
     
     
     public DescribeSpotPriceHistoryResultSpotPriceHistoryProductDescriptionEnum productDescription;
+
     public DescribeSpotPriceHistoryResultSpotPriceHistory withProductDescription(DescribeSpotPriceHistoryResultSpotPriceHistoryProductDescriptionEnum productDescription) {
         this.productDescription = productDescription;
         return this;
@@ -33,6 +36,7 @@ public class DescribeSpotPriceHistoryResultSpotPriceHistory {
     
     
     public String spotPrice;
+
     public DescribeSpotPriceHistoryResultSpotPriceHistory withSpotPrice(String spotPrice) {
         this.spotPrice = spotPrice;
         return this;
@@ -40,9 +44,11 @@ public class DescribeSpotPriceHistoryResultSpotPriceHistory {
     
     
     public OffsetDateTime timestamp;
+
     public DescribeSpotPriceHistoryResultSpotPriceHistory withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public DescribeSpotPriceHistoryResultSpotPriceHistory(){}
 }

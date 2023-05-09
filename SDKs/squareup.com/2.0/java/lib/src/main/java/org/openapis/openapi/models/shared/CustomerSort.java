@@ -22,6 +22,7 @@ public class CustomerSort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public CustomerSort withField(String field) {
         this.field = field;
         return this;
@@ -37,9 +38,11 @@ public class CustomerSort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public String order;
+
     public CustomerSort withOrder(String order) {
         this.order = order;
         return this;
     }
     
+    public CustomerSort(){}
 }

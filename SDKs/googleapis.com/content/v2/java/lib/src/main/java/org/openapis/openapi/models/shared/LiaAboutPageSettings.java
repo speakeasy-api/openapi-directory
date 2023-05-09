@@ -15,6 +15,7 @@ public class LiaAboutPageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public LiaAboutPageSettings withStatus(String status) {
         this.status = status;
         return this;
@@ -26,9 +27,11 @@ public class LiaAboutPageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public LiaAboutPageSettings withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public LiaAboutPageSettings(){}
 }

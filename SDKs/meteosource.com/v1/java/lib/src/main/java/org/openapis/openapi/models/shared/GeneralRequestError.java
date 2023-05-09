@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GeneralRequestError {
     @JsonProperty("detail")
     public String detail;
+
     public GeneralRequestError withDetail(String detail) {
         this.detail = detail;
         return this;
     }
     
+    public GeneralRequestError(@JsonProperty("detail") String detail) {
+        this.detail = detail;
+  }
 }

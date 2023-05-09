@@ -23,6 +23,7 @@ public class RetrieveCardResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public Card card;
+
     public RetrieveCardResponse withCard(Card card) {
         this.card = card;
         return this;
@@ -34,9 +35,11 @@ public class RetrieveCardResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RetrieveCardResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public RetrieveCardResponse(){}
 }

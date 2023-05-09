@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutSetupV1CalendarsIdRecoverResponse {
     
     public String contentType;
+
     public PutSetupV1CalendarsIdRecoverResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutSetupV1CalendarsIdRecoverResponse {
      */
     
     public org.openapis.openapi.models.shared.ScheduleViewModel scheduleViewModel;
+
     public PutSetupV1CalendarsIdRecoverResponse withScheduleViewModel(org.openapis.openapi.models.shared.ScheduleViewModel scheduleViewModel) {
         this.scheduleViewModel = scheduleViewModel;
         return this;
@@ -26,6 +29,7 @@ public class PutSetupV1CalendarsIdRecoverResponse {
     
     
     public Integer statusCode;
+
     public PutSetupV1CalendarsIdRecoverResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PutSetupV1CalendarsIdRecoverResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutSetupV1CalendarsIdRecoverResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutSetupV1CalendarsIdRecoverResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

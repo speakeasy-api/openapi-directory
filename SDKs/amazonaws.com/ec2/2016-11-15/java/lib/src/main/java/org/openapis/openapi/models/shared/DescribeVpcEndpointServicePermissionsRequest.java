@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeVpcEndpointServicePermissionsRequest {
     
     public Boolean dryRun;
+
     public DescribeVpcEndpointServicePermissionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeVpcEndpointServicePermissionsRequest {
     
     
     public DescribeVpcEndpointServicePermissionsRequestFilters[] filters;
+
     public DescribeVpcEndpointServicePermissionsRequest withFilters(DescribeVpcEndpointServicePermissionsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeVpcEndpointServicePermissionsRequest {
     
     
     public Long maxResults;
+
     public DescribeVpcEndpointServicePermissionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeVpcEndpointServicePermissionsRequest {
     
     
     public String nextToken;
+
     public DescribeVpcEndpointServicePermissionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,13 @@ public class DescribeVpcEndpointServicePermissionsRequest {
     
     
     public String serviceId;
+
     public DescribeVpcEndpointServicePermissionsRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     
+    public DescribeVpcEndpointServicePermissionsRequest(@JsonProperty("ServiceId") String serviceId) {
+        this.serviceId = serviceId;
+  }
 }

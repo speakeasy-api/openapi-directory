@@ -15,9 +15,11 @@ public class XksKeyConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public XksKeyConfigurationType withId(String id) {
         this.id = id;
         return this;
     }
     
+    public XksKeyConfigurationType(){}
 }

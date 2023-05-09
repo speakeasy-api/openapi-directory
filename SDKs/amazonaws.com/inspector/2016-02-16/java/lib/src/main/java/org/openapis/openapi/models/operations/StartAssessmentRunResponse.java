@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartAssessmentRunResponse {
@@ -12,6 +13,7 @@ public class StartAssessmentRunResponse {
      */
     
     public Object accessDeniedException;
+
     public StartAssessmentRunResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartAssessmentRunResponse {
      */
     
     public Object agentsAlreadyRunningAssessmentException;
+
     public StartAssessmentRunResponse withAgentsAlreadyRunningAssessmentException(Object agentsAlreadyRunningAssessmentException) {
         this.agentsAlreadyRunningAssessmentException = agentsAlreadyRunningAssessmentException;
         return this;
@@ -29,6 +32,7 @@ public class StartAssessmentRunResponse {
     
     
     public String contentType;
+
     public StartAssessmentRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartAssessmentRunResponse {
      */
     
     public Object internalException;
+
     public StartAssessmentRunResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -49,6 +54,7 @@ public class StartAssessmentRunResponse {
      */
     
     public Object invalidCrossAccountRoleException;
+
     public StartAssessmentRunResponse withInvalidCrossAccountRoleException(Object invalidCrossAccountRoleException) {
         this.invalidCrossAccountRoleException = invalidCrossAccountRoleException;
         return this;
@@ -59,6 +65,7 @@ public class StartAssessmentRunResponse {
      */
     
     public Object invalidInputException;
+
     public StartAssessmentRunResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class StartAssessmentRunResponse {
      */
     
     public Object limitExceededException;
+
     public StartAssessmentRunResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class StartAssessmentRunResponse {
      */
     
     public Object noSuchEntityException;
+
     public StartAssessmentRunResponse withNoSuchEntityException(Object noSuchEntityException) {
         this.noSuchEntityException = noSuchEntityException;
         return this;
@@ -89,6 +98,7 @@ public class StartAssessmentRunResponse {
      */
     
     public Object serviceTemporarilyUnavailableException;
+
     public StartAssessmentRunResponse withServiceTemporarilyUnavailableException(Object serviceTemporarilyUnavailableException) {
         this.serviceTemporarilyUnavailableException = serviceTemporarilyUnavailableException;
         return this;
@@ -99,6 +109,7 @@ public class StartAssessmentRunResponse {
      */
     
     public org.openapis.openapi.models.shared.StartAssessmentRunResponse startAssessmentRunResponse;
+
     public StartAssessmentRunResponse withStartAssessmentRunResponse(org.openapis.openapi.models.shared.StartAssessmentRunResponse startAssessmentRunResponse) {
         this.startAssessmentRunResponse = startAssessmentRunResponse;
         return this;
@@ -106,6 +117,7 @@ public class StartAssessmentRunResponse {
     
     
     public Integer statusCode;
+
     public StartAssessmentRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class StartAssessmentRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartAssessmentRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartAssessmentRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

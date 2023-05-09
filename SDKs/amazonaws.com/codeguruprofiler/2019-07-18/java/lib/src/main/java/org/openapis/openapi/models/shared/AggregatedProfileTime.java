@@ -20,6 +20,7 @@ public class AggregatedProfileTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("period")
     public AggregationPeriodEnum period;
+
     public AggregatedProfileTime withPeriod(AggregationPeriodEnum period) {
         this.period = period;
         return this;
@@ -30,9 +31,11 @@ public class AggregatedProfileTime {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("start")
     public OffsetDateTime start;
+
     public AggregatedProfileTime withStart(OffsetDateTime start) {
         this.start = start;
         return this;
     }
     
+    public AggregatedProfileTime(){}
 }

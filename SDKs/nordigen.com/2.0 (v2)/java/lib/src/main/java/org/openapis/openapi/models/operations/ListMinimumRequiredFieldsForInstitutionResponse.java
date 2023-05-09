@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListMinimumRequiredFieldsForInstitutionResponse {
     
     public String contentType;
+
     public ListMinimumRequiredFieldsForInstitutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ListMinimumRequiredFieldsForInstitutionResponse {
     
     
     public Integer statusCode;
+
     public ListMinimumRequiredFieldsForInstitutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ListMinimumRequiredFieldsForInstitutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListMinimumRequiredFieldsForInstitutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ListMinimumRequiredFieldsForInstitutionResponse {
      */
     
     public java.util.Map<String, Object> listMinimumRequiredFieldsForInstitution200ApplicationJSONObject;
+
     public ListMinimumRequiredFieldsForInstitutionResponse withListMinimumRequiredFieldsForInstitution200ApplicationJSONObject(java.util.Map<String, Object> listMinimumRequiredFieldsForInstitution200ApplicationJSONObject) {
         this.listMinimumRequiredFieldsForInstitution200ApplicationJSONObject = listMinimumRequiredFieldsForInstitution200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ListMinimumRequiredFieldsForInstitutionResponse {
      */
     
     public java.util.Map<String, Object> listMinimumRequiredFieldsForInstitution400ApplicationJSONObject;
+
     public ListMinimumRequiredFieldsForInstitutionResponse withListMinimumRequiredFieldsForInstitution400ApplicationJSONObject(java.util.Map<String, Object> listMinimumRequiredFieldsForInstitution400ApplicationJSONObject) {
         this.listMinimumRequiredFieldsForInstitution400ApplicationJSONObject = listMinimumRequiredFieldsForInstitution400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ListMinimumRequiredFieldsForInstitutionResponse {
      */
     
     public java.util.Map<String, Object> listMinimumRequiredFieldsForInstitution401ApplicationJSONObject;
+
     public ListMinimumRequiredFieldsForInstitutionResponse withListMinimumRequiredFieldsForInstitution401ApplicationJSONObject(java.util.Map<String, Object> listMinimumRequiredFieldsForInstitution401ApplicationJSONObject) {
         this.listMinimumRequiredFieldsForInstitution401ApplicationJSONObject = listMinimumRequiredFieldsForInstitution401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class ListMinimumRequiredFieldsForInstitutionResponse {
      */
     
     public java.util.Map<String, Object> listMinimumRequiredFieldsForInstitution403ApplicationJSONObject;
+
     public ListMinimumRequiredFieldsForInstitutionResponse withListMinimumRequiredFieldsForInstitution403ApplicationJSONObject(java.util.Map<String, Object> listMinimumRequiredFieldsForInstitution403ApplicationJSONObject) {
         this.listMinimumRequiredFieldsForInstitution403ApplicationJSONObject = listMinimumRequiredFieldsForInstitution403ApplicationJSONObject;
         return this;
     }
     
+    public ListMinimumRequiredFieldsForInstitutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

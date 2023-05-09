@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductsApiDeleteProductRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Api-Key")
     public String xApiKey;
+
     public ProductsApiDeleteProductRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
@@ -16,9 +18,14 @@ public class ProductsApiDeleteProductRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
     public String serial;
+
     public ProductsApiDeleteProductRequest withSerial(String serial) {
         this.serial = serial;
         return this;
     }
     
+    public ProductsApiDeleteProductRequest(@JsonProperty("X-Api-Key") String xApiKey, @JsonProperty("serial") String serial) {
+        this.xApiKey = xApiKey;
+        this.serial = serial;
+  }
 }

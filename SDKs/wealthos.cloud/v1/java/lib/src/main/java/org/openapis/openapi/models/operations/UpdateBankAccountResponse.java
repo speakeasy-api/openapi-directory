@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateBankAccountResponse {
     
     public String contentType;
+
     public UpdateBankAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateBankAccountResponse {
     
     
     public Integer statusCode;
+
     public UpdateBankAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateBankAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateBankAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateBankAccountResponse {
      */
     
     public UpdateBankAccount201ApplicationJSON updateBankAccount201ApplicationJSONObject;
+
     public UpdateBankAccountResponse withUpdateBankAccount201ApplicationJSONObject(UpdateBankAccount201ApplicationJSON updateBankAccount201ApplicationJSONObject) {
         this.updateBankAccount201ApplicationJSONObject = updateBankAccount201ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class UpdateBankAccountResponse {
      */
     
     public UpdateBankAccount400ApplicationJSON updateBankAccount400ApplicationJSONObject;
+
     public UpdateBankAccountResponse withUpdateBankAccount400ApplicationJSONObject(UpdateBankAccount400ApplicationJSON updateBankAccount400ApplicationJSONObject) {
         this.updateBankAccount400ApplicationJSONObject = updateBankAccount400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class UpdateBankAccountResponse {
      */
     
     public UpdateBankAccount401ApplicationJSON updateBankAccount401ApplicationJSONObject;
+
     public UpdateBankAccountResponse withUpdateBankAccount401ApplicationJSONObject(UpdateBankAccount401ApplicationJSON updateBankAccount401ApplicationJSONObject) {
         this.updateBankAccount401ApplicationJSONObject = updateBankAccount401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class UpdateBankAccountResponse {
      */
     
     public UpdateBankAccount403ApplicationJSON updateBankAccount403ApplicationJSONObject;
+
     public UpdateBankAccountResponse withUpdateBankAccount403ApplicationJSONObject(UpdateBankAccount403ApplicationJSON updateBankAccount403ApplicationJSONObject) {
         this.updateBankAccount403ApplicationJSONObject = updateBankAccount403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class UpdateBankAccountResponse {
      */
     
     public UpdateBankAccount404ApplicationJSON updateBankAccount404ApplicationJSONObject;
+
     public UpdateBankAccountResponse withUpdateBankAccount404ApplicationJSONObject(UpdateBankAccount404ApplicationJSON updateBankAccount404ApplicationJSONObject) {
         this.updateBankAccount404ApplicationJSONObject = updateBankAccount404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class UpdateBankAccountResponse {
      */
     
     public UpdateBankAccount409ApplicationJSON updateBankAccount409ApplicationJSONObject;
+
     public UpdateBankAccountResponse withUpdateBankAccount409ApplicationJSONObject(UpdateBankAccount409ApplicationJSON updateBankAccount409ApplicationJSONObject) {
         this.updateBankAccount409ApplicationJSONObject = updateBankAccount409ApplicationJSONObject;
         return this;
@@ -93,6 +103,7 @@ public class UpdateBankAccountResponse {
      */
     
     public UpdateBankAccount429ApplicationJSON updateBankAccount429ApplicationJSONObject;
+
     public UpdateBankAccountResponse withUpdateBankAccount429ApplicationJSONObject(UpdateBankAccount429ApplicationJSON updateBankAccount429ApplicationJSONObject) {
         this.updateBankAccount429ApplicationJSONObject = updateBankAccount429ApplicationJSONObject;
         return this;
@@ -103,9 +114,14 @@ public class UpdateBankAccountResponse {
      */
     
     public UpdateBankAccount500ApplicationJSON updateBankAccount500ApplicationJSONObject;
+
     public UpdateBankAccountResponse withUpdateBankAccount500ApplicationJSONObject(UpdateBankAccount500ApplicationJSON updateBankAccount500ApplicationJSONObject) {
         this.updateBankAccount500ApplicationJSONObject = updateBankAccount500ApplicationJSONObject;
         return this;
     }
     
+    public UpdateBankAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

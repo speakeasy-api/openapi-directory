@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ValidateTemplateInput {
     
     public String templateBody;
+
     public ValidateTemplateInput withTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
@@ -19,9 +20,11 @@ public class ValidateTemplateInput {
     
     
     public String templateURL;
+
     public ValidateTemplateInput withTemplateURL(String templateURL) {
         this.templateURL = templateURL;
         return this;
     }
     
+    public ValidateTemplateInput(){}
 }

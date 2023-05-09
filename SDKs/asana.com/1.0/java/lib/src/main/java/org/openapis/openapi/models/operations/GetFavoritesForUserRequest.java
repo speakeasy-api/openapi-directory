@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFavoritesForUserRequest {
@@ -14,6 +15,7 @@ public class GetFavoritesForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetFavoritesForUserRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -25,6 +27,7 @@ public class GetFavoritesForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetFavoritesForUserRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -35,6 +38,7 @@ public class GetFavoritesForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resource_type")
     public GetFavoritesForUserResourceTypeEnum resourceType;
+
     public GetFavoritesForUserRequest withResourceType(GetFavoritesForUserResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -45,6 +49,7 @@ public class GetFavoritesForUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_gid")
     public String userGid;
+
     public GetFavoritesForUserRequest withUserGid(String userGid) {
         this.userGid = userGid;
         return this;
@@ -55,9 +60,15 @@ public class GetFavoritesForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workspace")
     public String workspace;
+
     public GetFavoritesForUserRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetFavoritesForUserRequest(@JsonProperty("resource_type") GetFavoritesForUserResourceTypeEnum resourceType, @JsonProperty("user_gid") String userGid, @JsonProperty("workspace") String workspace) {
+        this.resourceType = resourceType;
+        this.userGid = userGid;
+        this.workspace = workspace;
+  }
 }

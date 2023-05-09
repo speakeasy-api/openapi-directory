@@ -59,11 +59,9 @@ public class NetworkEndpointGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsAggregatedListResponse(contentType, httpRes.statusCode()) {{
             networkEndpointGroupAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class NetworkEndpointGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsAttachNetworkEndpointsResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsAttachNetworkEndpointsResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsAttachNetworkEndpointsResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsAttachNetworkEndpointsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class NetworkEndpointGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class NetworkEndpointGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsDetachNetworkEndpointsResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsDetachNetworkEndpointsResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsDetachNetworkEndpointsResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsDetachNetworkEndpointsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class NetworkEndpointGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsGetResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsGetResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsGetResponse(contentType, httpRes.statusCode()) {{
             networkEndpointGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class NetworkEndpointGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsInsertResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsInsertResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class NetworkEndpointGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsListResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsListResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsListResponse(contentType, httpRes.statusCode()) {{
             networkEndpointGroupList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -389,11 +375,9 @@ public class NetworkEndpointGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsListNetworkEndpointsResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsListNetworkEndpointsResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsListNetworkEndpointsResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsListNetworkEndpointsResponse(contentType, httpRes.statusCode()) {{
             networkEndpointGroupsListNetworkEndpoints = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -437,11 +421,9 @@ public class NetworkEndpointGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeNetworkEndpointGroupsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

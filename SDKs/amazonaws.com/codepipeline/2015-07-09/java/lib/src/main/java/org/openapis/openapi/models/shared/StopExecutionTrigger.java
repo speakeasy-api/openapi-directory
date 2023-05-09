@@ -15,9 +15,11 @@ public class StopExecutionTrigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public StopExecutionTrigger withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public StopExecutionTrigger(){}
 }

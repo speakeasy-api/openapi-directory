@@ -18,6 +18,7 @@ public class StreamingSetupTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drain")
     public Boolean drain;
+
     public StreamingSetupTask withDrain(Boolean drain) {
         this.drain = drain;
         return this;
@@ -29,6 +30,7 @@ public class StreamingSetupTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receiveWorkPort")
     public Integer receiveWorkPort;
+
     public StreamingSetupTask withReceiveWorkPort(Integer receiveWorkPort) {
         this.receiveWorkPort = receiveWorkPort;
         return this;
@@ -40,6 +42,7 @@ public class StreamingSetupTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotConfig")
     public StreamingApplianceSnapshotConfig snapshotConfig;
+
     public StreamingSetupTask withSnapshotConfig(StreamingApplianceSnapshotConfig snapshotConfig) {
         this.snapshotConfig = snapshotConfig;
         return this;
@@ -51,6 +54,7 @@ public class StreamingSetupTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamingComputationTopology")
     public TopologyConfig streamingComputationTopology;
+
     public StreamingSetupTask withStreamingComputationTopology(TopologyConfig streamingComputationTopology) {
         this.streamingComputationTopology = streamingComputationTopology;
         return this;
@@ -62,9 +66,11 @@ public class StreamingSetupTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerHarnessPort")
     public Integer workerHarnessPort;
+
     public StreamingSetupTask withWorkerHarnessPort(Integer workerHarnessPort) {
         this.workerHarnessPort = workerHarnessPort;
         return this;
     }
     
+    public StreamingSetupTask(){}
 }

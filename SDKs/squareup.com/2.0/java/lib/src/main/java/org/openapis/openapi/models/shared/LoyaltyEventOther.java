@@ -15,6 +15,7 @@ public class LoyaltyEventOther {
      */
     @JsonProperty("loyalty_program_id")
     public String loyaltyProgramId;
+
     public LoyaltyEventOther withLoyaltyProgramId(String loyaltyProgramId) {
         this.loyaltyProgramId = loyaltyProgramId;
         return this;
@@ -25,9 +26,14 @@ public class LoyaltyEventOther {
      */
     @JsonProperty("points")
     public Long points;
+
     public LoyaltyEventOther withPoints(Long points) {
         this.points = points;
         return this;
     }
     
+    public LoyaltyEventOther(@JsonProperty("loyalty_program_id") String loyaltyProgramId, @JsonProperty("points") Long points) {
+        this.loyaltyProgramId = loyaltyProgramId;
+        this.points = points;
+  }
 }

@@ -18,9 +18,11 @@ public class SubscriptionPurchasesDeferResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newExpiryTimeMillis")
     public String newExpiryTimeMillis;
+
     public SubscriptionPurchasesDeferResponse withNewExpiryTimeMillis(String newExpiryTimeMillis) {
         this.newExpiryTimeMillis = newExpiryTimeMillis;
         return this;
     }
     
+    public SubscriptionPurchasesDeferResponse(){}
 }

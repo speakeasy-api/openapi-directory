@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateDataQualityJobDefinitionRequest {
     @JsonProperty("DataQualityAppSpecification")
     public DataQualityAppSpecification dataQualityAppSpecification;
+
     public CreateDataQualityJobDefinitionRequest withDataQualityAppSpecification(DataQualityAppSpecification dataQualityAppSpecification) {
         this.dataQualityAppSpecification = dataQualityAppSpecification;
         return this;
@@ -19,6 +20,7 @@ public class CreateDataQualityJobDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataQualityBaselineConfig")
     public DataQualityBaselineConfig dataQualityBaselineConfig;
+
     public CreateDataQualityJobDefinitionRequest withDataQualityBaselineConfig(DataQualityBaselineConfig dataQualityBaselineConfig) {
         this.dataQualityBaselineConfig = dataQualityBaselineConfig;
         return this;
@@ -26,6 +28,7 @@ public class CreateDataQualityJobDefinitionRequest {
     
     @JsonProperty("DataQualityJobInput")
     public DataQualityJobInput dataQualityJobInput;
+
     public CreateDataQualityJobDefinitionRequest withDataQualityJobInput(DataQualityJobInput dataQualityJobInput) {
         this.dataQualityJobInput = dataQualityJobInput;
         return this;
@@ -36,6 +39,7 @@ public class CreateDataQualityJobDefinitionRequest {
      */
     @JsonProperty("DataQualityJobOutputConfig")
     public MonitoringOutputConfig dataQualityJobOutputConfig;
+
     public CreateDataQualityJobDefinitionRequest withDataQualityJobOutputConfig(MonitoringOutputConfig dataQualityJobOutputConfig) {
         this.dataQualityJobOutputConfig = dataQualityJobOutputConfig;
         return this;
@@ -43,6 +47,7 @@ public class CreateDataQualityJobDefinitionRequest {
     
     @JsonProperty("JobDefinitionName")
     public String jobDefinitionName;
+
     public CreateDataQualityJobDefinitionRequest withJobDefinitionName(String jobDefinitionName) {
         this.jobDefinitionName = jobDefinitionName;
         return this;
@@ -53,6 +58,7 @@ public class CreateDataQualityJobDefinitionRequest {
      */
     @JsonProperty("JobResources")
     public MonitoringResources jobResources;
+
     public CreateDataQualityJobDefinitionRequest withJobResources(MonitoringResources jobResources) {
         this.jobResources = jobResources;
         return this;
@@ -61,6 +67,7 @@ public class CreateDataQualityJobDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkConfig")
     public MonitoringNetworkConfig networkConfig;
+
     public CreateDataQualityJobDefinitionRequest withNetworkConfig(MonitoringNetworkConfig networkConfig) {
         this.networkConfig = networkConfig;
         return this;
@@ -68,6 +75,7 @@ public class CreateDataQualityJobDefinitionRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateDataQualityJobDefinitionRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -79,6 +87,7 @@ public class CreateDataQualityJobDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoppingCondition")
     public MonitoringStoppingCondition stoppingCondition;
+
     public CreateDataQualityJobDefinitionRequest withStoppingCondition(MonitoringStoppingCondition stoppingCondition) {
         this.stoppingCondition = stoppingCondition;
         return this;
@@ -87,9 +96,18 @@ public class CreateDataQualityJobDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateDataQualityJobDefinitionRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDataQualityJobDefinitionRequest(@JsonProperty("DataQualityAppSpecification") DataQualityAppSpecification dataQualityAppSpecification, @JsonProperty("DataQualityJobInput") DataQualityJobInput dataQualityJobInput, @JsonProperty("DataQualityJobOutputConfig") MonitoringOutputConfig dataQualityJobOutputConfig, @JsonProperty("JobDefinitionName") String jobDefinitionName, @JsonProperty("JobResources") MonitoringResources jobResources, @JsonProperty("RoleArn") String roleArn) {
+        this.dataQualityAppSpecification = dataQualityAppSpecification;
+        this.dataQualityJobInput = dataQualityJobInput;
+        this.dataQualityJobOutputConfig = dataQualityJobOutputConfig;
+        this.jobDefinitionName = jobDefinitionName;
+        this.jobResources = jobResources;
+        this.roleArn = roleArn;
+  }
 }

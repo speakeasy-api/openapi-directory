@@ -12,6 +12,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccelerationCount")
     public Double accelerationCount;
+
     public TripsTripDetails200ApplicationJSONResultTrack withAccelerationCount(Double accelerationCount) {
         this.accelerationCount = accelerationCount;
         return this;
@@ -20,6 +21,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressEnd")
     public String addressEnd;
+
     public TripsTripDetails200ApplicationJSONResultTrack withAddressEnd(String addressEnd) {
         this.addressEnd = addressEnd;
         return this;
@@ -28,6 +30,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressFinishParts")
     public TripsTripDetails200ApplicationJSONResultTrackAddressFinishParts addressFinishParts;
+
     public TripsTripDetails200ApplicationJSONResultTrack withAddressFinishParts(TripsTripDetails200ApplicationJSONResultTrackAddressFinishParts addressFinishParts) {
         this.addressFinishParts = addressFinishParts;
         return this;
@@ -36,6 +39,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressStart")
     public String addressStart;
+
     public TripsTripDetails200ApplicationJSONResultTrack withAddressStart(String addressStart) {
         this.addressStart = addressStart;
         return this;
@@ -44,6 +48,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressStartParts")
     public TripsTripDetails200ApplicationJSONResultTrackAddressStartParts addressStartParts;
+
     public TripsTripDetails200ApplicationJSONResultTrack withAddressStartParts(TripsTripDetails200ApplicationJSONResultTrackAddressStartParts addressStartParts) {
         this.addressStartParts = addressStartParts;
         return this;
@@ -52,6 +57,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BeaconId")
     public Double beaconId;
+
     public TripsTripDetails200ApplicationJSONResultTrack withBeaconId(Double beaconId) {
         this.beaconId = beaconId;
         return this;
@@ -60,6 +66,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CityFinish")
     public String cityFinish;
+
     public TripsTripDetails200ApplicationJSONResultTrack withCityFinish(String cityFinish) {
         this.cityFinish = cityFinish;
         return this;
@@ -68,6 +75,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CityStart")
     public String cityStart;
+
     public TripsTripDetails200ApplicationJSONResultTrack withCityStart(String cityStart) {
         this.cityStart = cityStart;
         return this;
@@ -76,6 +84,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DecelerationCount")
     public Double decelerationCount;
+
     public TripsTripDetails200ApplicationJSONResultTrack withDecelerationCount(Double decelerationCount) {
         this.decelerationCount = decelerationCount;
         return this;
@@ -84,6 +93,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Distance")
     public Double distance;
+
     public TripsTripDetails200ApplicationJSONResultTrack withDistance(Double distance) {
         this.distance = distance;
         return this;
@@ -92,6 +102,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DrivingTips")
     public String drivingTips;
+
     public TripsTripDetails200ApplicationJSONResultTrack withDrivingTips(String drivingTips) {
         this.drivingTips = drivingTips;
         return this;
@@ -100,6 +111,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Duration")
     public Double duration;
+
     public TripsTripDetails200ApplicationJSONResultTrack withDuration(Double duration) {
         this.duration = duration;
         return this;
@@ -108,6 +120,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EcoScore")
     public Double ecoScore;
+
     public TripsTripDetails200ApplicationJSONResultTrack withEcoScore(Double ecoScore) {
         this.ecoScore = ecoScore;
         return this;
@@ -116,6 +129,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EcoScoreBrakes")
     public Double ecoScoreBrakes;
+
     public TripsTripDetails200ApplicationJSONResultTrack withEcoScoreBrakes(Double ecoScoreBrakes) {
         this.ecoScoreBrakes = ecoScoreBrakes;
         return this;
@@ -124,6 +138,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EcoScoreDepreciation")
     public Double ecoScoreDepreciation;
+
     public TripsTripDetails200ApplicationJSONResultTrack withEcoScoreDepreciation(Double ecoScoreDepreciation) {
         this.ecoScoreDepreciation = ecoScoreDepreciation;
         return this;
@@ -132,6 +147,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EcoScoreFuel")
     public Double ecoScoreFuel;
+
     public TripsTripDetails200ApplicationJSONResultTrack withEcoScoreFuel(Double ecoScoreFuel) {
         this.ecoScoreFuel = ecoScoreFuel;
         return this;
@@ -140,6 +156,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EcoScoreTyres")
     public Double ecoScoreTyres;
+
     public TripsTripDetails200ApplicationJSONResultTrack withEcoScoreTyres(Double ecoScoreTyres) {
         this.ecoScoreTyres = ecoScoreTyres;
         return this;
@@ -148,6 +165,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndDate")
     public String endDate;
+
     public TripsTripDetails200ApplicationJSONResultTrack withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -156,6 +174,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HighOverSpeedMileage")
     public Double highOverSpeedMileage;
+
     public TripsTripDetails200ApplicationJSONResultTrack withHighOverSpeedMileage(Double highOverSpeedMileage) {
         this.highOverSpeedMileage = highOverSpeedMileage;
         return this;
@@ -164,6 +183,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MidOverSpeedMileage")
     public Double midOverSpeedMileage;
+
     public TripsTripDetails200ApplicationJSONResultTrack withMidOverSpeedMileage(Double midOverSpeedMileage) {
         this.midOverSpeedMileage = midOverSpeedMileage;
         return this;
@@ -172,6 +192,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginChanged")
     public Boolean originChanged;
+
     public TripsTripDetails200ApplicationJSONResultTrack withOriginChanged(Boolean originChanged) {
         this.originChanged = originChanged;
         return this;
@@ -180,6 +201,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneUsage")
     public Double phoneUsage;
+
     public TripsTripDetails200ApplicationJSONResultTrack withPhoneUsage(Double phoneUsage) {
         this.phoneUsage = phoneUsage;
         return this;
@@ -188,6 +210,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Points")
     public TripsTripDetails200ApplicationJSONResultTrackPoints[] points;
+
     public TripsTripDetails200ApplicationJSONResultTrack withPoints(TripsTripDetails200ApplicationJSONResultTrackPoints[] points) {
         this.points = points;
         return this;
@@ -196,6 +219,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rating")
     public Double rating;
+
     public TripsTripDetails200ApplicationJSONResultTrack withRating(Double rating) {
         this.rating = rating;
         return this;
@@ -204,6 +228,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rating100")
     public Double rating100;
+
     public TripsTripDetails200ApplicationJSONResultTrack withRating100(Double rating100) {
         this.rating100 = rating100;
         return this;
@@ -212,6 +237,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RatingAcceleration")
     public Double ratingAcceleration;
+
     public TripsTripDetails200ApplicationJSONResultTrack withRatingAcceleration(Double ratingAcceleration) {
         this.ratingAcceleration = ratingAcceleration;
         return this;
@@ -220,6 +246,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RatingAcceleration100")
     public Double ratingAcceleration100;
+
     public TripsTripDetails200ApplicationJSONResultTrack withRatingAcceleration100(Double ratingAcceleration100) {
         this.ratingAcceleration100 = ratingAcceleration100;
         return this;
@@ -228,6 +255,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RatingBraking")
     public Double ratingBraking;
+
     public TripsTripDetails200ApplicationJSONResultTrack withRatingBraking(Double ratingBraking) {
         this.ratingBraking = ratingBraking;
         return this;
@@ -236,6 +264,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RatingBraking100")
     public Double ratingBraking100;
+
     public TripsTripDetails200ApplicationJSONResultTrack withRatingBraking100(Double ratingBraking100) {
         this.ratingBraking100 = ratingBraking100;
         return this;
@@ -244,6 +273,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RatingCornering")
     public Double ratingCornering;
+
     public TripsTripDetails200ApplicationJSONResultTrack withRatingCornering(Double ratingCornering) {
         this.ratingCornering = ratingCornering;
         return this;
@@ -252,6 +282,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RatingCornering100")
     public Double ratingCornering100;
+
     public TripsTripDetails200ApplicationJSONResultTrack withRatingCornering100(Double ratingCornering100) {
         this.ratingCornering100 = ratingCornering100;
         return this;
@@ -260,6 +291,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RatingPhoneDistraction100")
     public Double ratingPhoneDistraction100;
+
     public TripsTripDetails200ApplicationJSONResultTrack withRatingPhoneDistraction100(Double ratingPhoneDistraction100) {
         this.ratingPhoneDistraction100 = ratingPhoneDistraction100;
         return this;
@@ -268,6 +300,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RatingPhoneUsage")
     public Double ratingPhoneUsage;
+
     public TripsTripDetails200ApplicationJSONResultTrack withRatingPhoneUsage(Double ratingPhoneUsage) {
         this.ratingPhoneUsage = ratingPhoneUsage;
         return this;
@@ -276,6 +309,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RatingSpeeding")
     public Double ratingSpeeding;
+
     public TripsTripDetails200ApplicationJSONResultTrack withRatingSpeeding(Double ratingSpeeding) {
         this.ratingSpeeding = ratingSpeeding;
         return this;
@@ -284,6 +318,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RatingSpeeding100")
     public Double ratingSpeeding100;
+
     public TripsTripDetails200ApplicationJSONResultTrack withRatingSpeeding100(Double ratingSpeeding100) {
         this.ratingSpeeding100 = ratingSpeeding100;
         return this;
@@ -292,6 +327,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RatingTimeOfDay")
     public Double ratingTimeOfDay;
+
     public TripsTripDetails200ApplicationJSONResultTrack withRatingTimeOfDay(Double ratingTimeOfDay) {
         this.ratingTimeOfDay = ratingTimeOfDay;
         return this;
@@ -300,6 +336,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShareType")
     public String shareType;
+
     public TripsTripDetails200ApplicationJSONResultTrack withShareType(String shareType) {
         this.shareType = shareType;
         return this;
@@ -308,6 +345,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartDate")
     public String startDate;
+
     public TripsTripDetails200ApplicationJSONResultTrack withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -316,6 +354,7 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public TripsTripDetails200ApplicationJSONResultTrack withStatus(String status) {
         this.status = status;
         return this;
@@ -324,9 +363,11 @@ public class TripsTripDetails200ApplicationJSONResultTrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrackOriginCode")
     public String trackOriginCode;
+
     public TripsTripDetails200ApplicationJSONResultTrack withTrackOriginCode(String trackOriginCode) {
         this.trackOriginCode = trackOriginCode;
         return this;
     }
     
+    public TripsTripDetails200ApplicationJSONResultTrack(){}
 }

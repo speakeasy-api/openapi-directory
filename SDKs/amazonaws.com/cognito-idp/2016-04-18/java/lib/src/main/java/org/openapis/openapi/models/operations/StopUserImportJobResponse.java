@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopUserImportJobResponse {
     
     public String contentType;
+
     public StopUserImportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopUserImportJobResponse {
      */
     
     public Object internalErrorException;
+
     public StopUserImportJobResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class StopUserImportJobResponse {
      */
     
     public Object invalidParameterException;
+
     public StopUserImportJobResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class StopUserImportJobResponse {
      */
     
     public Object notAuthorizedException;
+
     public StopUserImportJobResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -49,6 +54,7 @@ public class StopUserImportJobResponse {
      */
     
     public Object preconditionNotMetException;
+
     public StopUserImportJobResponse withPreconditionNotMetException(Object preconditionNotMetException) {
         this.preconditionNotMetException = preconditionNotMetException;
         return this;
@@ -56,6 +62,7 @@ public class StopUserImportJobResponse {
     
     
     public Integer statusCode;
+
     public StopUserImportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StopUserImportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopUserImportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class StopUserImportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopUserImportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class StopUserImportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StopUserImportJobResponse stopUserImportJobResponse;
+
     public StopUserImportJobResponse withStopUserImportJobResponse(org.openapis.openapi.models.shared.StopUserImportJobResponse stopUserImportJobResponse) {
         this.stopUserImportJobResponse = stopUserImportJobResponse;
         return this;
@@ -93,9 +103,14 @@ public class StopUserImportJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public StopUserImportJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public StopUserImportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

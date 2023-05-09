@@ -17,6 +17,7 @@ public class ScimEnterpriseUserResponse {
      */
     @JsonProperty("active")
     public Boolean active;
+
     public ScimEnterpriseUserResponse withActive(Boolean active) {
         this.active = active;
         return this;
@@ -28,6 +29,7 @@ public class ScimEnterpriseUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ScimEnterpriseUserResponse withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -38,6 +40,7 @@ public class ScimEnterpriseUserResponse {
      */
     @JsonProperty("emails")
     public UserEmailsResponse[] emails;
+
     public ScimEnterpriseUserResponse withEmails(UserEmailsResponse[] emails) {
         this.emails = emails;
         return this;
@@ -49,6 +52,7 @@ public class ScimEnterpriseUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public String externalId;
+
     public ScimEnterpriseUserResponse withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -60,6 +64,7 @@ public class ScimEnterpriseUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public ScimEnterpriseUserResponseGroups[] groups;
+
     public ScimEnterpriseUserResponse withGroups(ScimEnterpriseUserResponseGroups[] groups) {
         this.groups = groups;
         return this;
@@ -70,6 +75,7 @@ public class ScimEnterpriseUserResponse {
      */
     @JsonProperty("id")
     public String id;
+
     public ScimEnterpriseUserResponse withId(String id) {
         this.id = id;
         return this;
@@ -80,6 +86,7 @@ public class ScimEnterpriseUserResponse {
      */
     @JsonProperty("meta")
     public Meta meta;
+
     public ScimEnterpriseUserResponse withMeta(Meta meta) {
         this.meta = meta;
         return this;
@@ -88,6 +95,7 @@ public class ScimEnterpriseUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public UserNameResponse name;
+
     public ScimEnterpriseUserResponse withName(UserNameResponse name) {
         this.name = name;
         return this;
@@ -99,6 +107,7 @@ public class ScimEnterpriseUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public UserRole[] roles;
+
     public ScimEnterpriseUserResponse withRoles(UserRole[] roles) {
         this.roles = roles;
         return this;
@@ -109,6 +118,7 @@ public class ScimEnterpriseUserResponse {
      */
     @JsonProperty("schemas")
     public ScimEnterpriseUserResponseSchemasEnum[] schemas;
+
     public ScimEnterpriseUserResponse withSchemas(ScimEnterpriseUserResponseSchemasEnum[] schemas) {
         this.schemas = schemas;
         return this;
@@ -120,9 +130,17 @@ public class ScimEnterpriseUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userName")
     public String userName;
+
     public ScimEnterpriseUserResponse withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public ScimEnterpriseUserResponse(@JsonProperty("active") Boolean active, @JsonProperty("emails") UserEmailsResponse[] emails, @JsonProperty("id") String id, @JsonProperty("meta") Meta meta, @JsonProperty("schemas") ScimEnterpriseUserResponseSchemasEnum[] schemas) {
+        this.active = active;
+        this.emails = emails;
+        this.id = id;
+        this.meta = meta;
+        this.schemas = schemas;
+  }
 }

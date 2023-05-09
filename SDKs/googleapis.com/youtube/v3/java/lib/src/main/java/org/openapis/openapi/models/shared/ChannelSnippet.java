@@ -23,6 +23,7 @@ public class ChannelSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public ChannelSnippet withCountry(String country) {
         this.country = country;
         return this;
@@ -34,6 +35,7 @@ public class ChannelSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customUrl")
     public String customUrl;
+
     public ChannelSnippet withCustomUrl(String customUrl) {
         this.customUrl = customUrl;
         return this;
@@ -45,6 +47,7 @@ public class ChannelSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultLanguage")
     public String defaultLanguage;
+
     public ChannelSnippet withDefaultLanguage(String defaultLanguage) {
         this.defaultLanguage = defaultLanguage;
         return this;
@@ -56,6 +59,7 @@ public class ChannelSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ChannelSnippet withDescription(String description) {
         this.description = description;
         return this;
@@ -67,6 +71,7 @@ public class ChannelSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localized")
     public ChannelLocalization localized;
+
     public ChannelSnippet withLocalized(ChannelLocalization localized) {
         this.localized = localized;
         return this;
@@ -80,6 +85,7 @@ public class ChannelSnippet {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("publishedAt")
     public OffsetDateTime publishedAt;
+
     public ChannelSnippet withPublishedAt(OffsetDateTime publishedAt) {
         this.publishedAt = publishedAt;
         return this;
@@ -91,6 +97,7 @@ public class ChannelSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnails")
     public ThumbnailDetails thumbnails;
+
     public ChannelSnippet withThumbnails(ThumbnailDetails thumbnails) {
         this.thumbnails = thumbnails;
         return this;
@@ -102,9 +109,11 @@ public class ChannelSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ChannelSnippet withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ChannelSnippet(){}
 }

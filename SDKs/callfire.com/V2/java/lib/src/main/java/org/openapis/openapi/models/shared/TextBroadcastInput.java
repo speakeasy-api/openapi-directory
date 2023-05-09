@@ -18,6 +18,7 @@ public class TextBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigMessageStrategy")
     public TextBroadcastBigMessageStrategyEnum bigMessageStrategy;
+
     public TextBroadcastInput withBigMessageStrategy(TextBroadcastBigMessageStrategyEnum bigMessageStrategy) {
         this.bigMessageStrategy = bigMessageStrategy;
         return this;
@@ -29,6 +30,7 @@ public class TextBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromNumber")
     public String fromNumber;
+
     public TextBroadcastInput withFromNumber(String fromNumber) {
         this.fromNumber = fromNumber;
         return this;
@@ -40,6 +42,7 @@ public class TextBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public TextBroadcastInput withId(Long id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class TextBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String[] labels;
+
     public TextBroadcastInput withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -62,6 +66,7 @@ public class TextBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localTimeRestriction")
     public LocalTimeRestriction localTimeRestriction;
+
     public TextBroadcastInput withLocalTimeRestriction(LocalTimeRestriction localTimeRestriction) {
         this.localTimeRestriction = localTimeRestriction;
         return this;
@@ -73,6 +78,7 @@ public class TextBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxActive")
     public Integer maxActive;
+
     public TextBroadcastInput withMaxActive(Integer maxActive) {
         this.maxActive = maxActive;
         return this;
@@ -84,6 +90,7 @@ public class TextBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
     public Media[] media;
+
     public TextBroadcastInput withMedia(Media[] media) {
         this.media = media;
         return this;
@@ -95,6 +102,7 @@ public class TextBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public TextBroadcastInput withMessage(String message) {
         this.message = message;
         return this;
@@ -106,6 +114,7 @@ public class TextBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TextBroadcastInput withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +126,7 @@ public class TextBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipients")
     public TextRecipient[] recipients;
+
     public TextBroadcastInput withRecipients(TextRecipient[] recipients) {
         this.recipients = recipients;
         return this;
@@ -128,6 +138,7 @@ public class TextBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resumeNextDay")
     public Boolean resumeNextDay;
+
     public TextBroadcastInput withResumeNextDay(Boolean resumeNextDay) {
         this.resumeNextDay = resumeNextDay;
         return this;
@@ -139,9 +150,11 @@ public class TextBroadcastInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedules")
     public Schedule[] schedules;
+
     public TextBroadcastInput withSchedules(Schedule[] schedules) {
         this.schedules = schedules;
         return this;
     }
     
+    public TextBroadcastInput(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRoleMappingRequest {
@@ -12,9 +13,13 @@ public class DeleteRoleMappingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=principalId")
     public String principalId;
+
     public DeleteRoleMappingRequest withPrincipalId(String principalId) {
         this.principalId = principalId;
         return this;
     }
     
+    public DeleteRoleMappingRequest(@JsonProperty("principalId") String principalId) {
+        this.principalId = principalId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostAutomationV4ActionsAppIdCreateResponse {
     
     public byte[] body;
+
     public PostAutomationV4ActionsAppIdCreateResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostAutomationV4ActionsAppIdCreateResponse {
     
     
     public String contentType;
+
     public PostAutomationV4ActionsAppIdCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostAutomationV4ActionsAppIdCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.ExtensionActionDefinition extensionActionDefinition;
+
     public PostAutomationV4ActionsAppIdCreateResponse withExtensionActionDefinition(org.openapis.openapi.models.shared.ExtensionActionDefinition extensionActionDefinition) {
         this.extensionActionDefinition = extensionActionDefinition;
         return this;
@@ -33,6 +37,7 @@ public class PostAutomationV4ActionsAppIdCreateResponse {
     
     
     public Integer statusCode;
+
     public PostAutomationV4ActionsAppIdCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class PostAutomationV4ActionsAppIdCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostAutomationV4ActionsAppIdCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostAutomationV4ActionsAppIdCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

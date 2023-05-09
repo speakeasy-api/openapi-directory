@@ -14,6 +14,7 @@ public class TimesheetInput {
      */
     @JsonProperty("EmployeeID")
     public String employeeID;
+
     public TimesheetInput withEmployeeID(String employeeID) {
         this.employeeID = employeeID;
         return this;
@@ -24,6 +25,7 @@ public class TimesheetInput {
      */
     @JsonProperty("EndDate")
     public String endDate;
+
     public TimesheetInput withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -35,6 +37,7 @@ public class TimesheetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hours")
     public Double hours;
+
     public TimesheetInput withHours(Double hours) {
         this.hours = hours;
         return this;
@@ -45,6 +48,7 @@ public class TimesheetInput {
      */
     @JsonProperty("StartDate")
     public String startDate;
+
     public TimesheetInput withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -53,6 +57,7 @@ public class TimesheetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public TimesheetStatusEnum status;
+
     public TimesheetInput withStatus(TimesheetStatusEnum status) {
         this.status = status;
         return this;
@@ -64,6 +69,7 @@ public class TimesheetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimesheetID")
     public String timesheetID;
+
     public TimesheetInput withTimesheetID(String timesheetID) {
         this.timesheetID = timesheetID;
         return this;
@@ -72,6 +78,7 @@ public class TimesheetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimesheetLines")
     public TimesheetLineInput[] timesheetLines;
+
     public TimesheetInput withTimesheetLines(TimesheetLineInput[] timesheetLines) {
         this.timesheetLines = timesheetLines;
         return this;
@@ -83,9 +90,15 @@ public class TimesheetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationErrors")
     public ValidationError[] validationErrors;
+
     public TimesheetInput withValidationErrors(ValidationError[] validationErrors) {
         this.validationErrors = validationErrors;
         return this;
     }
     
+    public TimesheetInput(@JsonProperty("EmployeeID") String employeeID, @JsonProperty("EndDate") String endDate, @JsonProperty("StartDate") String startDate) {
+        this.employeeID = employeeID;
+        this.endDate = endDate;
+        this.startDate = startDate;
+  }
 }

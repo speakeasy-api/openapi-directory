@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteJobByIdResponse {
     
     public String contentType;
+
     public DeleteJobByIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -22,6 +24,7 @@ public class DeleteJobByIdResponse {
      */
     
     public DeleteJobById401ApplicationProblemPlusJson deleteJobById401ApplicationProblemPlusJsonObject;
+
     public DeleteJobByIdResponse withDeleteJobById401ApplicationProblemPlusJsonObject(DeleteJobById401ApplicationProblemPlusJson deleteJobById401ApplicationProblemPlusJsonObject) {
         this.deleteJobById401ApplicationProblemPlusJsonObject = deleteJobById401ApplicationProblemPlusJsonObject;
         return this;
@@ -32,6 +35,7 @@ public class DeleteJobByIdResponse {
      */
     
     public DeleteJobById404ApplicationProblemPlusJson deleteJobById404ApplicationProblemPlusJsonObject;
+
     public DeleteJobByIdResponse withDeleteJobById404ApplicationProblemPlusJsonObject(DeleteJobById404ApplicationProblemPlusJson deleteJobById404ApplicationProblemPlusJsonObject) {
         this.deleteJobById404ApplicationProblemPlusJsonObject = deleteJobById404ApplicationProblemPlusJsonObject;
         return this;
@@ -43,6 +47,7 @@ public class DeleteJobByIdResponse {
      */
     
     public DeleteJobById409ApplicationProblemPlusJson deleteJobById409ApplicationProblemPlusJsonObject;
+
     public DeleteJobByIdResponse withDeleteJobById409ApplicationProblemPlusJsonObject(DeleteJobById409ApplicationProblemPlusJson deleteJobById409ApplicationProblemPlusJsonObject) {
         this.deleteJobById409ApplicationProblemPlusJsonObject = deleteJobById409ApplicationProblemPlusJsonObject;
         return this;
@@ -50,6 +55,7 @@ public class DeleteJobByIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteJobByIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -57,9 +63,14 @@ public class DeleteJobByIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteJobByIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteJobByIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

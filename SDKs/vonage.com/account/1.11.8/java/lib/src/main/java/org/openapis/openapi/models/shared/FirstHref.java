@@ -15,9 +15,11 @@ public class FirstHref {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public FirstHref withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public FirstHref(){}
 }

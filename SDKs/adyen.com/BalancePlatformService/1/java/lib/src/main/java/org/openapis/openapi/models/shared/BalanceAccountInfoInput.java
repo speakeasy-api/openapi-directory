@@ -14,6 +14,7 @@ public class BalanceAccountInfoInput {
      */
     @JsonProperty("accountHolderId")
     public String accountHolderId;
+
     public BalanceAccountInfoInput withAccountHolderId(String accountHolderId) {
         this.accountHolderId = accountHolderId;
         return this;
@@ -26,6 +27,7 @@ public class BalanceAccountInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultCurrencyCode")
     public String defaultCurrencyCode;
+
     public BalanceAccountInfoInput withDefaultCurrencyCode(String defaultCurrencyCode) {
         this.defaultCurrencyCode = defaultCurrencyCode;
         return this;
@@ -37,6 +39,7 @@ public class BalanceAccountInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BalanceAccountInfoInput withDescription(String description) {
         this.description = description;
         return this;
@@ -48,6 +51,7 @@ public class BalanceAccountInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public BalanceAccountInfoInput withReference(String reference) {
         this.reference = reference;
         return this;
@@ -61,6 +65,7 @@ public class BalanceAccountInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sweepConfigurations")
     public java.util.Map<String, SweepConfigurationInput> sweepConfigurations;
+
     public BalanceAccountInfoInput withSweepConfigurations(java.util.Map<String, SweepConfigurationInput> sweepConfigurations) {
         this.sweepConfigurations = sweepConfigurations;
         return this;
@@ -73,9 +78,13 @@ public class BalanceAccountInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public BalanceAccountInfoInput withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public BalanceAccountInfoInput(@JsonProperty("accountHolderId") String accountHolderId) {
+        this.accountHolderId = accountHolderId;
+  }
 }

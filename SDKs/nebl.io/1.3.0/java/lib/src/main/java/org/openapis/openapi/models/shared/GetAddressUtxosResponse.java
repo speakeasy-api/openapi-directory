@@ -15,6 +15,7 @@ public class GetAddressUtxosResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public GetAddressUtxosResponse withAddress(String address) {
         this.address = address;
         return this;
@@ -26,6 +27,7 @@ public class GetAddressUtxosResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public GetAddressUtxosResponse withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -37,6 +39,7 @@ public class GetAddressUtxosResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confirmations")
     public Double confirmations;
+
     public GetAddressUtxosResponse withConfirmations(Double confirmations) {
         this.confirmations = confirmations;
         return this;
@@ -48,6 +51,7 @@ public class GetAddressUtxosResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptPubKey")
     public String scriptPubKey;
+
     public GetAddressUtxosResponse withScriptPubKey(String scriptPubKey) {
         this.scriptPubKey = scriptPubKey;
         return this;
@@ -59,6 +63,7 @@ public class GetAddressUtxosResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ts")
     public Double ts;
+
     public GetAddressUtxosResponse withTs(Double ts) {
         this.ts = ts;
         return this;
@@ -70,6 +75,7 @@ public class GetAddressUtxosResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txid")
     public String txid;
+
     public GetAddressUtxosResponse withTxid(String txid) {
         this.txid = txid;
         return this;
@@ -81,9 +87,11 @@ public class GetAddressUtxosResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vout")
     public Double vout;
+
     public GetAddressUtxosResponse withVout(Double vout) {
         this.vout = vout;
         return this;
     }
     
+    public GetAddressUtxosResponse(){}
 }

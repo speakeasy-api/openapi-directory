@@ -15,6 +15,7 @@ public class RuleGroupSourceCustomActionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionDefinition")
     public StatelessCustomActionDefinition actionDefinition;
+
     public RuleGroupSourceCustomActionsDetails withActionDefinition(StatelessCustomActionDefinition actionDefinition) {
         this.actionDefinition = actionDefinition;
         return this;
@@ -23,9 +24,11 @@ public class RuleGroupSourceCustomActionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionName")
     public String actionName;
+
     public RuleGroupSourceCustomActionsDetails withActionName(String actionName) {
         this.actionName = actionName;
         return this;
     }
     
+    public RuleGroupSourceCustomActionsDetails(){}
 }

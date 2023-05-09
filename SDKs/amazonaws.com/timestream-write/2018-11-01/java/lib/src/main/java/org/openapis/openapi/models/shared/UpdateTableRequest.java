@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateTableRequest {
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public UpdateTableRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -19,6 +20,7 @@ public class UpdateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MagneticStoreWriteProperties")
     public MagneticStoreWriteProperties magneticStoreWriteProperties;
+
     public UpdateTableRequest withMagneticStoreWriteProperties(MagneticStoreWriteProperties magneticStoreWriteProperties) {
         this.magneticStoreWriteProperties = magneticStoreWriteProperties;
         return this;
@@ -27,6 +29,7 @@ public class UpdateTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetentionProperties")
     public RetentionProperties retentionProperties;
+
     public UpdateTableRequest withRetentionProperties(RetentionProperties retentionProperties) {
         this.retentionProperties = retentionProperties;
         return this;
@@ -34,9 +37,14 @@ public class UpdateTableRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public UpdateTableRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public UpdateTableRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.tableName = tableName;
+  }
 }

@@ -20,6 +20,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public Parameter withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataType")
     public String dataType;
+
     public Parameter withDataType(String dataType) {
         this.dataType = dataType;
         return this;
@@ -38,6 +40,7 @@ public class Parameter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public Parameter withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -46,6 +49,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Parameter withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +58,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Selector")
     public String selector;
+
     public Parameter withSelector(String selector) {
         this.selector = selector;
         return this;
@@ -62,6 +67,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceResult")
     public String sourceResult;
+
     public Parameter withSourceResult(String sourceResult) {
         this.sourceResult = sourceResult;
         return this;
@@ -70,6 +76,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ParameterTypeEnum type;
+
     public Parameter withType(ParameterTypeEnum type) {
         this.type = type;
         return this;
@@ -78,6 +85,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public Parameter withValue(String value) {
         this.value = value;
         return this;
@@ -86,9 +94,11 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public Parameter withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public Parameter(){}
 }

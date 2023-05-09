@@ -18,6 +18,7 @@ public class LockConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locked")
     public Boolean locked;
+
     public LockConfig withLocked(Boolean locked) {
         this.locked = locked;
         return this;
@@ -29,9 +30,11 @@ public class LockConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public LockConfig withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public LockConfig(){}
 }

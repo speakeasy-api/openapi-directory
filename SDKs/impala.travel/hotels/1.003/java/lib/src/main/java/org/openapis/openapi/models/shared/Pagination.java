@@ -15,6 +15,7 @@ public class Pagination {
      */
     @JsonProperty("count")
     public Double count;
+
     public Pagination withCount(Double count) {
         this.count = count;
         return this;
@@ -25,6 +26,7 @@ public class Pagination {
      */
     @JsonProperty("next")
     public String next;
+
     public Pagination withNext(String next) {
         this.next = next;
         return this;
@@ -35,6 +37,7 @@ public class Pagination {
      */
     @JsonProperty("prev")
     public String prev;
+
     public Pagination withPrev(String prev) {
         this.prev = prev;
         return this;
@@ -45,9 +48,16 @@ public class Pagination {
      */
     @JsonProperty("total")
     public Double total;
+
     public Pagination withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public Pagination(@JsonProperty("count") Double count, @JsonProperty("next") String next, @JsonProperty("prev") String prev, @JsonProperty("total") Double total) {
+        this.count = count;
+        this.next = next;
+        this.prev = prev;
+        this.total = total;
+  }
 }

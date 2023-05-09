@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomerMeCollectorInfo {
     @JsonProperty("activeMeCollectors")
     public Long activeMeCollectors;
+
     public CustomerMeCollectorInfo withActiveMeCollectors(Long activeMeCollectors) {
         this.activeMeCollectors = activeMeCollectors;
         return this;
@@ -19,6 +20,7 @@ public class CustomerMeCollectorInfo {
     
     @JsonProperty("denyListedMeCollectors")
     public Long denyListedMeCollectors;
+
     public CustomerMeCollectorInfo withDenyListedMeCollectors(Long denyListedMeCollectors) {
         this.denyListedMeCollectors = denyListedMeCollectors;
         return this;
@@ -26,6 +28,7 @@ public class CustomerMeCollectorInfo {
     
     @JsonProperty("healthyMeCollectors")
     public Long healthyMeCollectors;
+
     public CustomerMeCollectorInfo withHealthyMeCollectors(Long healthyMeCollectors) {
         this.healthyMeCollectors = healthyMeCollectors;
         return this;
@@ -33,6 +36,7 @@ public class CustomerMeCollectorInfo {
     
     @JsonProperty("shutdownMeCollectors")
     public Long shutdownMeCollectors;
+
     public CustomerMeCollectorInfo withShutdownMeCollectors(Long shutdownMeCollectors) {
         this.shutdownMeCollectors = shutdownMeCollectors;
         return this;
@@ -40,6 +44,7 @@ public class CustomerMeCollectorInfo {
     
     @JsonProperty("totalMeCollectors")
     public Long totalMeCollectors;
+
     public CustomerMeCollectorInfo withTotalMeCollectors(Long totalMeCollectors) {
         this.totalMeCollectors = totalMeCollectors;
         return this;
@@ -47,6 +52,7 @@ public class CustomerMeCollectorInfo {
     
     @JsonProperty("unhealthyMeCollectors")
     public Long unhealthyMeCollectors;
+
     public CustomerMeCollectorInfo withUnhealthyMeCollectors(Long unhealthyMeCollectors) {
         this.unhealthyMeCollectors = unhealthyMeCollectors;
         return this;
@@ -54,9 +60,19 @@ public class CustomerMeCollectorInfo {
     
     @JsonProperty("unknownMeCollectors")
     public Long unknownMeCollectors;
+
     public CustomerMeCollectorInfo withUnknownMeCollectors(Long unknownMeCollectors) {
         this.unknownMeCollectors = unknownMeCollectors;
         return this;
     }
     
+    public CustomerMeCollectorInfo(@JsonProperty("activeMeCollectors") Long activeMeCollectors, @JsonProperty("denyListedMeCollectors") Long denyListedMeCollectors, @JsonProperty("healthyMeCollectors") Long healthyMeCollectors, @JsonProperty("shutdownMeCollectors") Long shutdownMeCollectors, @JsonProperty("totalMeCollectors") Long totalMeCollectors, @JsonProperty("unhealthyMeCollectors") Long unhealthyMeCollectors, @JsonProperty("unknownMeCollectors") Long unknownMeCollectors) {
+        this.activeMeCollectors = activeMeCollectors;
+        this.denyListedMeCollectors = denyListedMeCollectors;
+        this.healthyMeCollectors = healthyMeCollectors;
+        this.shutdownMeCollectors = shutdownMeCollectors;
+        this.totalMeCollectors = totalMeCollectors;
+        this.unhealthyMeCollectors = unhealthyMeCollectors;
+        this.unknownMeCollectors = unknownMeCollectors;
+  }
 }

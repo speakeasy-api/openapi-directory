@@ -18,9 +18,11 @@ public class AdvanceRolloutRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phaseId")
     public String phaseId;
+
     public AdvanceRolloutRequest withPhaseId(String phaseId) {
         this.phaseId = phaseId;
         return this;
     }
     
+    public AdvanceRolloutRequest(){}
 }

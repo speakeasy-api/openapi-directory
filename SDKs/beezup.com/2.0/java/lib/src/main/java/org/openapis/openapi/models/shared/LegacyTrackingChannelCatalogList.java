@@ -18,6 +18,7 @@ public class LegacyTrackingChannelCatalogList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelCatalogs")
     public java.util.Map<String, LegacyTrackingChannelCatalog> channelCatalogs;
+
     public LegacyTrackingChannelCatalogList withChannelCatalogs(java.util.Map<String, LegacyTrackingChannelCatalog> channelCatalogs) {
         this.channelCatalogs = channelCatalogs;
         return this;
@@ -30,9 +31,11 @@ public class LegacyTrackingChannelCatalogList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public LegacyTrackingChannelCatalogListLinks links;
+
     public LegacyTrackingChannelCatalogList withLinks(LegacyTrackingChannelCatalogListLinks links) {
         this.links = links;
         return this;
     }
     
+    public LegacyTrackingChannelCatalogList(){}
 }

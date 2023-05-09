@@ -18,6 +18,7 @@ public class ImportExportServiceGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ImportExportServiceGroups withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +29,7 @@ public class ImportExportServiceGroups {
      */
     @JsonProperty("id")
     public String id;
+
     public ImportExportServiceGroups withId(String id) {
         this.id = id;
         return this;
@@ -38,9 +40,14 @@ public class ImportExportServiceGroups {
      */
     @JsonProperty("name")
     public String name;
+
     public ImportExportServiceGroups withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ImportExportServiceGroups(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

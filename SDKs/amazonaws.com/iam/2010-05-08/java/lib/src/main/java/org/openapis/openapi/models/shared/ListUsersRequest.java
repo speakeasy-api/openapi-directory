@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListUsersRequest {
     
     public String marker;
+
     public ListUsersRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -16,6 +17,7 @@ public class ListUsersRequest {
     
     
     public Long maxItems;
+
     public ListUsersRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -23,9 +25,11 @@ public class ListUsersRequest {
     
     
     public String pathPrefix;
+
     public ListUsersRequest withPathPrefix(String pathPrefix) {
         this.pathPrefix = pathPrefix;
         return this;
     }
     
+    public ListUsersRequest(){}
 }

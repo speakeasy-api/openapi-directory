@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetProvidersIdConnectorLogosThumbnail200ApplicationJSON {
     @JsonProperty("connectorlogos")
     public org.openapis.openapi.models.shared.ConnectorLogo[] connectorlogos;
+
     public GetProvidersIdConnectorLogosThumbnail200ApplicationJSON withConnectorlogos(org.openapis.openapi.models.shared.ConnectorLogo[] connectorlogos) {
         this.connectorlogos = connectorlogos;
         return this;
@@ -25,9 +26,13 @@ public class GetProvidersIdConnectorLogosThumbnail200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public GetProvidersIdConnectorLogosThumbnail200ApplicationJSON withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public GetProvidersIdConnectorLogosThumbnail200ApplicationJSON(@JsonProperty("connectorlogos") org.openapis.openapi.models.shared.ConnectorLogo[] connectorlogos) {
+        this.connectorlogos = connectorlogos;
+  }
 }

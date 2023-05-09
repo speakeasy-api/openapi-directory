@@ -15,6 +15,7 @@ public class ListResolverQueryLogConfigAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResolverQueryLogConfigAssociationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +24,7 @@ public class ListResolverQueryLogConfigAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolverQueryLogConfigAssociations")
     public ResolverQueryLogConfigAssociation[] resolverQueryLogConfigAssociations;
+
     public ListResolverQueryLogConfigAssociationsResponse withResolverQueryLogConfigAssociations(ResolverQueryLogConfigAssociation[] resolverQueryLogConfigAssociations) {
         this.resolverQueryLogConfigAssociations = resolverQueryLogConfigAssociations;
         return this;
@@ -31,6 +33,7 @@ public class ListResolverQueryLogConfigAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalCount")
     public Long totalCount;
+
     public ListResolverQueryLogConfigAssociationsResponse withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -39,9 +42,11 @@ public class ListResolverQueryLogConfigAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalFilteredCount")
     public Long totalFilteredCount;
+
     public ListResolverQueryLogConfigAssociationsResponse withTotalFilteredCount(Long totalFilteredCount) {
         this.totalFilteredCount = totalFilteredCount;
         return this;
     }
     
+    public ListResolverQueryLogConfigAssociationsResponse(){}
 }

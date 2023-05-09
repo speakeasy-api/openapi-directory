@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResetJobBookmarkRequest {
     @JsonProperty("JobName")
     public String jobName;
+
     public ResetJobBookmarkRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -19,9 +20,13 @@ public class ResetJobBookmarkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunId")
     public String runId;
+
     public ResetJobBookmarkRequest withRunId(String runId) {
         this.runId = runId;
         return this;
     }
     
+    public ResetJobBookmarkRequest(@JsonProperty("JobName") String jobName) {
+        this.jobName = jobName;
+  }
 }

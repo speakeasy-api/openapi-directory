@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifyDBClusterCloudwatchLogsExportConfiguration {
     @SpeakeasyMetadata("queryParam:name=DisableLogTypes")
     public String[] disableLogTypes;
+
     public GETModifyDBClusterCloudwatchLogsExportConfiguration withDisableLogTypes(String[] disableLogTypes) {
         this.disableLogTypes = disableLogTypes;
         return this;
@@ -19,9 +20,11 @@ public class GETModifyDBClusterCloudwatchLogsExportConfiguration {
     
     @SpeakeasyMetadata("queryParam:name=EnableLogTypes")
     public String[] enableLogTypes;
+
     public GETModifyDBClusterCloudwatchLogsExportConfiguration withEnableLogTypes(String[] enableLogTypes) {
         this.enableLogTypes = enableLogTypes;
         return this;
     }
     
+    public GETModifyDBClusterCloudwatchLogsExportConfiguration(){}
 }

@@ -15,6 +15,7 @@ public class ResponseResourceMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ResponseResourceMetric withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class ResponseResourceMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metric")
     public String metric;
+
     public ResponseResourceMetric withMetric(String metric) {
         this.metric = metric;
         return this;
@@ -31,9 +33,11 @@ public class ResponseResourceMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unit")
     public String unit;
+
     public ResponseResourceMetric withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public ResponseResourceMetric(){}
 }

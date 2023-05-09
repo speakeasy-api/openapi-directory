@@ -18,6 +18,7 @@ public class RegionalSubscriptionOfferConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newSubscriberAvailability")
     public Boolean newSubscriberAvailability;
+
     public RegionalSubscriptionOfferConfig withNewSubscriberAvailability(Boolean newSubscriberAvailability) {
         this.newSubscriberAvailability = newSubscriberAvailability;
         return this;
@@ -29,9 +30,11 @@ public class RegionalSubscriptionOfferConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public RegionalSubscriptionOfferConfig withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
     
+    public RegionalSubscriptionOfferConfig(){}
 }

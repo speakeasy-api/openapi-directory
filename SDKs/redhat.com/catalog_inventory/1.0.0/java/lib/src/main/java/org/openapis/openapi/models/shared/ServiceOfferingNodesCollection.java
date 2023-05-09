@@ -15,6 +15,7 @@ public class ServiceOfferingNodesCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ServiceOfferingNode[] data;
+
     public ServiceOfferingNodesCollection withData(ServiceOfferingNode[] data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class ServiceOfferingNodesCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public CollectionLinks links;
+
     public ServiceOfferingNodesCollection withLinks(CollectionLinks links) {
         this.links = links;
         return this;
@@ -31,9 +33,11 @@ public class ServiceOfferingNodesCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public CollectionMetadata meta;
+
     public ServiceOfferingNodesCollection withMeta(CollectionMetadata meta) {
         this.meta = meta;
         return this;
     }
     
+    public ServiceOfferingNodesCollection(){}
 }

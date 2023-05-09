@@ -15,6 +15,7 @@ public class NAWelcomeCamera {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alim_status")
     public String alimStatus;
+
     public NAWelcomeCamera withAlimStatus(String alimStatus) {
         this.alimStatus = alimStatus;
         return this;
@@ -26,6 +27,7 @@ public class NAWelcomeCamera {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NAWelcomeCamera withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class NAWelcomeCamera {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_local")
     public Boolean isLocal;
+
     public NAWelcomeCamera withIsLocal(Boolean isLocal) {
         this.isLocal = isLocal;
         return this;
@@ -48,6 +51,7 @@ public class NAWelcomeCamera {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("light_mode_status")
     public NAWelcomeCameraLightModeStatusEnum lightModeStatus;
+
     public NAWelcomeCamera withLightModeStatus(NAWelcomeCameraLightModeStatusEnum lightModeStatus) {
         this.lightModeStatus = lightModeStatus;
         return this;
@@ -59,6 +63,7 @@ public class NAWelcomeCamera {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NAWelcomeCamera withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +75,7 @@ public class NAWelcomeCamera {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sd_status")
     public String sdStatus;
+
     public NAWelcomeCamera withSdStatus(String sdStatus) {
         this.sdStatus = sdStatus;
         return this;
@@ -81,6 +87,7 @@ public class NAWelcomeCamera {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public NAWelcomeCamera withStatus(String status) {
         this.status = status;
         return this;
@@ -92,6 +99,7 @@ public class NAWelcomeCamera {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public NAWelcomeCamera withType(String type) {
         this.type = type;
         return this;
@@ -103,9 +111,11 @@ public class NAWelcomeCamera {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpn_url")
     public String vpnUrl;
+
     public NAWelcomeCamera withVpnUrl(String vpnUrl) {
         this.vpnUrl = vpnUrl;
         return this;
     }
     
+    public NAWelcomeCamera(){}
 }

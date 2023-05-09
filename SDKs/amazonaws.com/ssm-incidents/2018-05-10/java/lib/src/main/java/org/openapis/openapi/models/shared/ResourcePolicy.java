@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResourcePolicy {
     @JsonProperty("policyDocument")
     public String policyDocument;
+
     public ResourcePolicy withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -19,6 +20,7 @@ public class ResourcePolicy {
     
     @JsonProperty("policyId")
     public String policyId;
+
     public ResourcePolicy withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
@@ -26,9 +28,15 @@ public class ResourcePolicy {
     
     @JsonProperty("ramResourceShareRegion")
     public String ramResourceShareRegion;
+
     public ResourcePolicy withRamResourceShareRegion(String ramResourceShareRegion) {
         this.ramResourceShareRegion = ramResourceShareRegion;
         return this;
     }
     
+    public ResourcePolicy(@JsonProperty("policyDocument") String policyDocument, @JsonProperty("policyId") String policyId, @JsonProperty("ramResourceShareRegion") String ramResourceShareRegion) {
+        this.policyDocument = policyDocument;
+        this.policyId = policyId;
+        this.ramResourceShareRegion = ramResourceShareRegion;
+  }
 }

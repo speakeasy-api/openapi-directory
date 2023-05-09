@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetEnvironmentInput {
     @JsonProperty("name")
     public String name;
+
     public GetEnvironmentInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetEnvironmentInput(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

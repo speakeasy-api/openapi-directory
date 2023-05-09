@@ -22,6 +22,7 @@ public class SearchLoyaltyEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public SearchLoyaltyEventsResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -33,6 +34,7 @@ public class SearchLoyaltyEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public SearchLoyaltyEventsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -44,9 +46,11 @@ public class SearchLoyaltyEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public LoyaltyEvent[] events;
+
     public SearchLoyaltyEventsResponse withEvents(LoyaltyEvent[] events) {
         this.events = events;
         return this;
     }
     
+    public SearchLoyaltyEventsResponse(){}
 }

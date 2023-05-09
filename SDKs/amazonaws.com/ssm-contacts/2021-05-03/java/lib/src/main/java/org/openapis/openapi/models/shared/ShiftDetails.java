@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ShiftDetails {
     @JsonProperty("OverriddenContactIds")
     public String[] overriddenContactIds;
+
     public ShiftDetails withOverriddenContactIds(String[] overriddenContactIds) {
         this.overriddenContactIds = overriddenContactIds;
         return this;
     }
     
+    public ShiftDetails(@JsonProperty("OverriddenContactIds") String[] overriddenContactIds) {
+        this.overriddenContactIds = overriddenContactIds;
+  }
 }

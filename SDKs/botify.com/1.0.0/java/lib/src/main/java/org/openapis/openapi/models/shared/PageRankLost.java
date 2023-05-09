@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PageRankLost {
     @JsonProperty("external")
     public Float external;
+
     public PageRankLost withExternal(Float external) {
         this.external = external;
         return this;
@@ -19,6 +20,7 @@ public class PageRankLost {
     
     @JsonProperty("non_crawled")
     public Float nonCrawled;
+
     public PageRankLost withNonCrawled(Float nonCrawled) {
         this.nonCrawled = nonCrawled;
         return this;
@@ -26,9 +28,15 @@ public class PageRankLost {
     
     @JsonProperty("robots_txt")
     public Float robotsTxt;
+
     public PageRankLost withRobotsTxt(Float robotsTxt) {
         this.robotsTxt = robotsTxt;
         return this;
     }
     
+    public PageRankLost(@JsonProperty("external") Float external, @JsonProperty("non_crawled") Float nonCrawled, @JsonProperty("robots_txt") Float robotsTxt) {
+        this.external = external;
+        this.nonCrawled = nonCrawled;
+        this.robotsTxt = robotsTxt;
+  }
 }

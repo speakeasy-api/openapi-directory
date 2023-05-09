@@ -12,9 +12,13 @@ public class CreateComponentRequestBody {
      */
     @JsonProperty("componentToCreate")
     public CreateComponentRequestBodyComponentToCreate componentToCreate;
+
     public CreateComponentRequestBody withComponentToCreate(CreateComponentRequestBodyComponentToCreate componentToCreate) {
         this.componentToCreate = componentToCreate;
         return this;
     }
     
+    public CreateComponentRequestBody(@JsonProperty("componentToCreate") CreateComponentRequestBodyComponentToCreate componentToCreate) {
+        this.componentToCreate = componentToCreate;
+  }
 }

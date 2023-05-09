@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SchemaDefinition {
     @JsonProperty("allColumns")
     public ColumnDefinition[] allColumns;
+
     public SchemaDefinition withAllColumns(ColumnDefinition[] allColumns) {
         this.allColumns = allColumns;
         return this;
@@ -22,6 +23,7 @@ public class SchemaDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusteringKeys")
     public ClusteringKey[] clusteringKeys;
+
     public SchemaDefinition withClusteringKeys(ClusteringKey[] clusteringKeys) {
         this.clusteringKeys = clusteringKeys;
         return this;
@@ -29,6 +31,7 @@ public class SchemaDefinition {
     
     @JsonProperty("partitionKeys")
     public PartitionKey[] partitionKeys;
+
     public SchemaDefinition withPartitionKeys(PartitionKey[] partitionKeys) {
         this.partitionKeys = partitionKeys;
         return this;
@@ -37,9 +40,14 @@ public class SchemaDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("staticColumns")
     public StaticColumn[] staticColumns;
+
     public SchemaDefinition withStaticColumns(StaticColumn[] staticColumns) {
         this.staticColumns = staticColumns;
         return this;
     }
     
+    public SchemaDefinition(@JsonProperty("allColumns") ColumnDefinition[] allColumns, @JsonProperty("partitionKeys") PartitionKey[] partitionKeys) {
+        this.allColumns = allColumns;
+        this.partitionKeys = partitionKeys;
+  }
 }

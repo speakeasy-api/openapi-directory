@@ -20,6 +20,7 @@ public class ObtainTokenRequest {
      */
     @JsonProperty("client_id")
     public String clientId;
+
     public ObtainTokenRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -31,6 +32,7 @@ public class ObtainTokenRequest {
      */
     @JsonProperty("client_secret")
     public String clientSecret;
+
     public ObtainTokenRequest withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -44,6 +46,7 @@ public class ObtainTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public ObtainTokenRequest withCode(String code) {
         this.code = code;
         return this;
@@ -55,6 +58,7 @@ public class ObtainTokenRequest {
      */
     @JsonProperty("grant_type")
     public String grantType;
+
     public ObtainTokenRequest withGrantType(String grantType) {
         this.grantType = grantType;
         return this;
@@ -70,6 +74,7 @@ public class ObtainTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("migration_token")
     public String migrationToken;
+
     public ObtainTokenRequest withMigrationToken(String migrationToken) {
         this.migrationToken = migrationToken;
         return this;
@@ -81,6 +86,7 @@ public class ObtainTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirect_uri")
     public String redirectUri;
+
     public ObtainTokenRequest withRedirectUri(String redirectUri) {
         this.redirectUri = redirectUri;
         return this;
@@ -93,6 +99,7 @@ public class ObtainTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refresh_token")
     public String refreshToken;
+
     public ObtainTokenRequest withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
@@ -108,6 +115,7 @@ public class ObtainTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scopes")
     public String[] scopes;
+
     public ObtainTokenRequest withScopes(String[] scopes) {
         this.scopes = scopes;
         return this;
@@ -120,9 +128,15 @@ public class ObtainTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("short_lived")
     public Boolean shortLived;
+
     public ObtainTokenRequest withShortLived(Boolean shortLived) {
         this.shortLived = shortLived;
         return this;
     }
     
+    public ObtainTokenRequest(@JsonProperty("client_id") String clientId, @JsonProperty("client_secret") String clientSecret, @JsonProperty("grant_type") String grantType) {
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+        this.grantType = grantType;
+  }
 }

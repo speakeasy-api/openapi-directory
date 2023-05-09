@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPagesJsonRequest {
@@ -12,6 +13,7 @@ public class GetPagesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public GetPagesJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -22,6 +24,7 @@ public class GetPagesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetPagesJsonRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,6 +35,7 @@ public class GetPagesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public GetPagesJsonRequest withLogin(String login) {
         this.login = login;
         return this;
@@ -42,9 +46,14 @@ public class GetPagesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetPagesJsonRequest withPage(Long page) {
         this.page = page;
         return this;
     }
     
+    public GetPagesJsonRequest(@JsonProperty("authtoken") String authtoken, @JsonProperty("login") String login) {
+        this.authtoken = authtoken;
+        this.login = login;
+  }
 }

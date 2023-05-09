@@ -18,6 +18,7 @@ public class NetworkEndpointGroupsListNetworkEndpoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NetworkEndpointGroupsListNetworkEndpoints withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class NetworkEndpointGroupsListNetworkEndpoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public NetworkEndpointWithHealthStatus[] items;
+
     public NetworkEndpointGroupsListNetworkEndpoints withItems(NetworkEndpointWithHealthStatus[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class NetworkEndpointGroupsListNetworkEndpoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public NetworkEndpointGroupsListNetworkEndpoints withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class NetworkEndpointGroupsListNetworkEndpoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public NetworkEndpointGroupsListNetworkEndpoints withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -62,9 +66,11 @@ public class NetworkEndpointGroupsListNetworkEndpoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public NetworkEndpointGroupsListNetworkEndpointsWarning warning;
+
     public NetworkEndpointGroupsListNetworkEndpoints withWarning(NetworkEndpointGroupsListNetworkEndpointsWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public NetworkEndpointGroupsListNetworkEndpoints(){}
 }

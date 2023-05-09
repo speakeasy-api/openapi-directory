@@ -50,10 +50,8 @@ public class ActionWebhookFailures {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostActionWebhookFailuresIdRetryResponse res = new org.openapis.openapi.models.operations.PostActionWebhookFailuresIdRetryResponse() {{
+        org.openapis.openapi.models.operations.PostActionWebhookFailuresIdRetryResponse res = new org.openapis.openapi.models.operations.PostActionWebhookFailuresIdRetryResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 409 || httpRes.statusCode() == 412 || httpRes.statusCode() == 422 || httpRes.statusCode() == 423 || httpRes.statusCode() == 429) {

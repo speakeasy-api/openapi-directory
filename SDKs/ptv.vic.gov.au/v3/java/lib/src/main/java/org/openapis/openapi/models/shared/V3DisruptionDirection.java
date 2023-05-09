@@ -15,6 +15,7 @@ public class V3DisruptionDirection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction_id")
     public Integer directionId;
+
     public V3DisruptionDirection withDirectionId(Integer directionId) {
         this.directionId = directionId;
         return this;
@@ -26,6 +27,7 @@ public class V3DisruptionDirection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction_name")
     public String directionName;
+
     public V3DisruptionDirection withDirectionName(String directionName) {
         this.directionName = directionName;
         return this;
@@ -37,6 +39,7 @@ public class V3DisruptionDirection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("route_direction_id")
     public Integer routeDirectionId;
+
     public V3DisruptionDirection withRouteDirectionId(Integer routeDirectionId) {
         this.routeDirectionId = routeDirectionId;
         return this;
@@ -48,9 +51,11 @@ public class V3DisruptionDirection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_time")
     public String serviceTime;
+
     public V3DisruptionDirection withServiceTime(String serviceTime) {
         this.serviceTime = serviceTime;
         return this;
     }
     
+    public V3DisruptionDirection(){}
 }

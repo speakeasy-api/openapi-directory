@@ -15,6 +15,7 @@ public class LambdaFunctionRecommendationFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public LambdaFunctionRecommendationFilterNameEnum name;
+
     public LambdaFunctionRecommendationFilter withName(LambdaFunctionRecommendationFilterNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class LambdaFunctionRecommendationFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public LambdaFunctionRecommendationFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public LambdaFunctionRecommendationFilter(){}
 }

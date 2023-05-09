@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeGlobalAddressesGetOwnerInstanceResponse {
     
     public String contentType;
+
     public ComputeGlobalAddressesGetOwnerInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeGlobalAddressesGetOwnerInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.GetOwnerInstanceResponse getOwnerInstanceResponse;
+
     public ComputeGlobalAddressesGetOwnerInstanceResponse withGetOwnerInstanceResponse(org.openapis.openapi.models.shared.GetOwnerInstanceResponse getOwnerInstanceResponse) {
         this.getOwnerInstanceResponse = getOwnerInstanceResponse;
         return this;
@@ -26,6 +29,7 @@ public class ComputeGlobalAddressesGetOwnerInstanceResponse {
     
     
     public Integer statusCode;
+
     public ComputeGlobalAddressesGetOwnerInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeGlobalAddressesGetOwnerInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeGlobalAddressesGetOwnerInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeGlobalAddressesGetOwnerInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

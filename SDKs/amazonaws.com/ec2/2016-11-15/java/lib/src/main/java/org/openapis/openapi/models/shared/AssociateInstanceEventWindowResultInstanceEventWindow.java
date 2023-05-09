@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AssociateInstanceEventWindowResultInstanceEventWindow {
     
     public AssociateInstanceEventWindowResultInstanceEventWindowAssociationTarget associationTarget;
+
     public AssociateInstanceEventWindowResultInstanceEventWindow withAssociationTarget(AssociateInstanceEventWindowResultInstanceEventWindowAssociationTarget associationTarget) {
         this.associationTarget = associationTarget;
         return this;
@@ -19,6 +20,7 @@ public class AssociateInstanceEventWindowResultInstanceEventWindow {
     
     
     public String cronExpression;
+
     public AssociateInstanceEventWindowResultInstanceEventWindow withCronExpression(String cronExpression) {
         this.cronExpression = cronExpression;
         return this;
@@ -26,6 +28,7 @@ public class AssociateInstanceEventWindowResultInstanceEventWindow {
     
     
     public String instanceEventWindowId;
+
     public AssociateInstanceEventWindowResultInstanceEventWindow withInstanceEventWindowId(String instanceEventWindowId) {
         this.instanceEventWindowId = instanceEventWindowId;
         return this;
@@ -33,6 +36,7 @@ public class AssociateInstanceEventWindowResultInstanceEventWindow {
     
     
     public String name;
+
     public AssociateInstanceEventWindowResultInstanceEventWindow withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +44,7 @@ public class AssociateInstanceEventWindowResultInstanceEventWindow {
     
     
     public AssociateInstanceEventWindowResultInstanceEventWindowStateEnum state;
+
     public AssociateInstanceEventWindowResultInstanceEventWindow withState(AssociateInstanceEventWindowResultInstanceEventWindowStateEnum state) {
         this.state = state;
         return this;
@@ -47,6 +52,7 @@ public class AssociateInstanceEventWindowResultInstanceEventWindow {
     
     
     public AssociateInstanceEventWindowResultInstanceEventWindowTags[] tags;
+
     public AssociateInstanceEventWindowResultInstanceEventWindow withTags(AssociateInstanceEventWindowResultInstanceEventWindowTags[] tags) {
         this.tags = tags;
         return this;
@@ -54,9 +60,11 @@ public class AssociateInstanceEventWindowResultInstanceEventWindow {
     
     
     public AssociateInstanceEventWindowResultInstanceEventWindowTimeRanges[] timeRanges;
+
     public AssociateInstanceEventWindowResultInstanceEventWindow withTimeRanges(AssociateInstanceEventWindowResultInstanceEventWindowTimeRanges[] timeRanges) {
         this.timeRanges = timeRanges;
         return this;
     }
     
+    public AssociateInstanceEventWindowResultInstanceEventWindow(){}
 }

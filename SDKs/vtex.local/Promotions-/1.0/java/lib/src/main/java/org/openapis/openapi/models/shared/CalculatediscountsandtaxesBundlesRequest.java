@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CalculatediscountsandtaxesBundlesRequest {
     @JsonProperty("isShoppingCart")
     public Boolean isShoppingCart;
+
     public CalculatediscountsandtaxesBundlesRequest withIsShoppingCart(Boolean isShoppingCart) {
         this.isShoppingCart = isShoppingCart;
         return this;
@@ -16,6 +17,7 @@ public class CalculatediscountsandtaxesBundlesRequest {
     
     @JsonProperty("items")
     public Item[] items;
+
     public CalculatediscountsandtaxesBundlesRequest withItems(Item[] items) {
         this.items = items;
         return this;
@@ -23,6 +25,7 @@ public class CalculatediscountsandtaxesBundlesRequest {
     
     @JsonProperty("origin")
     public String origin;
+
     public CalculatediscountsandtaxesBundlesRequest withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -30,6 +33,7 @@ public class CalculatediscountsandtaxesBundlesRequest {
     
     @JsonProperty("params")
     public Param[] params;
+
     public CalculatediscountsandtaxesBundlesRequest withParams(Param[] params) {
         this.params = params;
         return this;
@@ -37,6 +41,7 @@ public class CalculatediscountsandtaxesBundlesRequest {
     
     @JsonProperty("profileId")
     public String profileId;
+
     public CalculatediscountsandtaxesBundlesRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -44,9 +49,18 @@ public class CalculatediscountsandtaxesBundlesRequest {
     
     @JsonProperty("salesChannel")
     public String salesChannel;
+
     public CalculatediscountsandtaxesBundlesRequest withSalesChannel(String salesChannel) {
         this.salesChannel = salesChannel;
         return this;
     }
     
+    public CalculatediscountsandtaxesBundlesRequest(@JsonProperty("isShoppingCart") Boolean isShoppingCart, @JsonProperty("items") Item[] items, @JsonProperty("origin") String origin, @JsonProperty("params") Param[] params, @JsonProperty("profileId") String profileId, @JsonProperty("salesChannel") String salesChannel) {
+        this.isShoppingCart = isShoppingCart;
+        this.items = items;
+        this.origin = origin;
+        this.params = params;
+        this.profileId = profileId;
+        this.salesChannel = salesChannel;
+  }
 }

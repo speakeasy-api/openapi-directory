@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeStreamResponse {
     
     public String contentType;
+
     public DescribeStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeStreamResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeStreamResponse describeStreamResponse;
+
     public DescribeStreamResponse withDescribeStreamResponse(org.openapis.openapi.models.shared.DescribeStreamResponse describeStreamResponse) {
         this.describeStreamResponse = describeStreamResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeStreamResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeStreamResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeStreamResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeStreamResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeStreamResponse {
     
     
     public Integer statusCode;
+
     public DescribeStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeStreamResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeStreamResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeStreamResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeStreamResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,6 +92,7 @@ public class DescribeStreamResponse {
      */
     
     public Object throttlingException;
+
     public DescribeStreamResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeStreamResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeStreamResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

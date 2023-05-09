@@ -15,9 +15,11 @@ public class GetBucketsAggregationRequestBodyBucketsAggregationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("termsAggregation")
     public org.openapis.openapi.models.shared.TermsAggregation termsAggregation;
+
     public GetBucketsAggregationRequestBodyBucketsAggregationType withTermsAggregation(org.openapis.openapi.models.shared.TermsAggregation termsAggregation) {
         this.termsAggregation = termsAggregation;
         return this;
     }
     
+    public GetBucketsAggregationRequestBodyBucketsAggregationType(){}
 }

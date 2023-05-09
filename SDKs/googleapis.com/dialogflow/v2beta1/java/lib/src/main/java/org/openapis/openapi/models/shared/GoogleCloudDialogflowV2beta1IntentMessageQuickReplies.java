@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageQuickReplies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quickReplies")
     public String[] quickReplies;
+
     public GoogleCloudDialogflowV2beta1IntentMessageQuickReplies withQuickReplies(String[] quickReplies) {
         this.quickReplies = quickReplies;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageQuickReplies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleCloudDialogflowV2beta1IntentMessageQuickReplies withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageQuickReplies(){}
 }

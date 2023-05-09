@@ -15,6 +15,7 @@ public class ListKeyPhrasesDetectionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyPhrasesDetectionJobPropertiesList")
     public KeyPhrasesDetectionJobProperties[] keyPhrasesDetectionJobPropertiesList;
+
     public ListKeyPhrasesDetectionJobsResponse withKeyPhrasesDetectionJobPropertiesList(KeyPhrasesDetectionJobProperties[] keyPhrasesDetectionJobPropertiesList) {
         this.keyPhrasesDetectionJobPropertiesList = keyPhrasesDetectionJobPropertiesList;
         return this;
@@ -23,9 +24,11 @@ public class ListKeyPhrasesDetectionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListKeyPhrasesDetectionJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListKeyPhrasesDetectionJobsResponse(){}
 }

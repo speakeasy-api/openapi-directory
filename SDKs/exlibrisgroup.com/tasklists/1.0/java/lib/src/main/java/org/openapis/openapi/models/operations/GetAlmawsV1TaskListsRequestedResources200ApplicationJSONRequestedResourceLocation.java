@@ -18,6 +18,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("call_number")
     public String callNumber;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocation withCallNumber(String callNumber) {
         this.callNumber = callNumber;
         return this;
@@ -29,6 +30,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copy")
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocationCopy[] copy;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocation withCopy(GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocationCopy[] copy) {
         this.copy = copy;
         return this;
@@ -40,6 +42,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("holding_id")
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocationHoldingId holdingId;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocation withHoldingId(GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocationHoldingId holdingId) {
         this.holdingId = holdingId;
         return this;
@@ -51,6 +54,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("library")
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocationLibrary library;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocation withLibrary(GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocationLibrary library) {
         this.library = library;
         return this;
@@ -62,9 +66,11 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shelving_location")
     public String shelvingLocation;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocation withShelvingLocation(String shelvingLocation) {
         this.shelvingLocation = shelvingLocation;
         return this;
     }
     
+    public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocation(){}
 }

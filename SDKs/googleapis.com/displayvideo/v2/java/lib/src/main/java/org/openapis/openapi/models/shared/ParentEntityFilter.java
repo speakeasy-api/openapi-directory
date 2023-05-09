@@ -18,6 +18,7 @@ public class ParentEntityFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileType")
     public ParentEntityFilterFileTypeEnum[] fileType;
+
     public ParentEntityFilter withFileType(ParentEntityFilterFileTypeEnum[] fileType) {
         this.fileType = fileType;
         return this;
@@ -29,6 +30,7 @@ public class ParentEntityFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterIds")
     public String[] filterIds;
+
     public ParentEntityFilter withFilterIds(String[] filterIds) {
         this.filterIds = filterIds;
         return this;
@@ -40,9 +42,11 @@ public class ParentEntityFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterType")
     public ParentEntityFilterFilterTypeEnum filterType;
+
     public ParentEntityFilter withFilterType(ParentEntityFilterFilterTypeEnum filterType) {
         this.filterType = filterType;
         return this;
     }
     
+    public ParentEntityFilter(){}
 }

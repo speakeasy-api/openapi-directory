@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSubscriberResponse {
@@ -12,6 +13,7 @@ public class CreateSubscriberResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateSubscriberResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateSubscriberResponse {
     
     
     public String contentType;
+
     public CreateSubscriberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateSubscriberResponse {
      */
     
     public java.util.Map<String, Object> createSubscriberResponse;
+
     public CreateSubscriberResponse withCreateSubscriberResponse(java.util.Map<String, Object> createSubscriberResponse) {
         this.createSubscriberResponse = createSubscriberResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateSubscriberResponse {
      */
     
     public Object creationLimitExceededException;
+
     public CreateSubscriberResponse withCreationLimitExceededException(Object creationLimitExceededException) {
         this.creationLimitExceededException = creationLimitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateSubscriberResponse {
      */
     
     public Object duplicateRecordException;
+
     public CreateSubscriberResponse withDuplicateRecordException(Object duplicateRecordException) {
         this.duplicateRecordException = duplicateRecordException;
         return this;
@@ -59,6 +65,7 @@ public class CreateSubscriberResponse {
      */
     
     public Object internalErrorException;
+
     public CreateSubscriberResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -69,6 +76,7 @@ public class CreateSubscriberResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateSubscriberResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class CreateSubscriberResponse {
      */
     
     public Object notFoundException;
+
     public CreateSubscriberResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class CreateSubscriberResponse {
     
     
     public Integer statusCode;
+
     public CreateSubscriberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateSubscriberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSubscriberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CreateSubscriberResponse {
      */
     
     public Object throttlingException;
+
     public CreateSubscriberResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateSubscriberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,11 @@ public class KeyLineDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kl")
     public KeyLineSelection[] kl;
+
     public KeyLineDefinition withKl(KeyLineSelection[] kl) {
         this.kl = kl;
         return this;
     }
     
+    public KeyLineDefinition(){}
 }

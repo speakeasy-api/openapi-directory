@@ -18,6 +18,7 @@ public class OSPolicyResourceConfigStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public OSPolicyResourceConfigStep withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -29,6 +30,7 @@ public class OSPolicyResourceConfigStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outcome")
     public OSPolicyResourceConfigStepOutcomeEnum outcome;
+
     public OSPolicyResourceConfigStep withOutcome(OSPolicyResourceConfigStepOutcomeEnum outcome) {
         this.outcome = outcome;
         return this;
@@ -40,9 +42,11 @@ public class OSPolicyResourceConfigStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public OSPolicyResourceConfigStepTypeEnum type;
+
     public OSPolicyResourceConfigStep withType(OSPolicyResourceConfigStepTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public OSPolicyResourceConfigStep(){}
 }

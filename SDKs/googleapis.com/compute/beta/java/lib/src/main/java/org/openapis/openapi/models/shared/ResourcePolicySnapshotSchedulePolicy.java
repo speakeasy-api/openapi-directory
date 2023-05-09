@@ -18,6 +18,7 @@ public class ResourcePolicySnapshotSchedulePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionPolicy")
     public ResourcePolicySnapshotSchedulePolicyRetentionPolicy retentionPolicy;
+
     public ResourcePolicySnapshotSchedulePolicy withRetentionPolicy(ResourcePolicySnapshotSchedulePolicyRetentionPolicy retentionPolicy) {
         this.retentionPolicy = retentionPolicy;
         return this;
@@ -29,6 +30,7 @@ public class ResourcePolicySnapshotSchedulePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public ResourcePolicySnapshotSchedulePolicySchedule schedule;
+
     public ResourcePolicySnapshotSchedulePolicy withSchedule(ResourcePolicySnapshotSchedulePolicySchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -40,9 +42,11 @@ public class ResourcePolicySnapshotSchedulePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotProperties")
     public ResourcePolicySnapshotSchedulePolicySnapshotProperties snapshotProperties;
+
     public ResourcePolicySnapshotSchedulePolicy withSnapshotProperties(ResourcePolicySnapshotSchedulePolicySnapshotProperties snapshotProperties) {
         this.snapshotProperties = snapshotProperties;
         return this;
     }
     
+    public ResourcePolicySnapshotSchedulePolicy(){}
 }

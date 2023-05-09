@@ -15,6 +15,7 @@ public class UpdateApplicationRequestBodyDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public UpdateApplicationRequestBodyDefinition withContent(String content) {
         this.content = content;
         return this;
@@ -23,9 +24,11 @@ public class UpdateApplicationRequestBodyDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Location")
     public String s3Location;
+
     public UpdateApplicationRequestBodyDefinition withS3Location(String s3Location) {
         this.s3Location = s3Location;
         return this;
     }
     
+    public UpdateApplicationRequestBodyDefinition(){}
 }

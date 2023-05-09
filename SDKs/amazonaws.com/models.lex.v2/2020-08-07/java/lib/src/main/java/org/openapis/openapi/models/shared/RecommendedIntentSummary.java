@@ -15,6 +15,7 @@ public class RecommendedIntentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentId")
     public String intentId;
+
     public RecommendedIntentSummary withIntentId(String intentId) {
         this.intentId = intentId;
         return this;
@@ -23,6 +24,7 @@ public class RecommendedIntentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentName")
     public String intentName;
+
     public RecommendedIntentSummary withIntentName(String intentName) {
         this.intentName = intentName;
         return this;
@@ -31,9 +33,11 @@ public class RecommendedIntentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleUtterancesCount")
     public Long sampleUtterancesCount;
+
     public RecommendedIntentSummary withSampleUtterancesCount(Long sampleUtterancesCount) {
         this.sampleUtterancesCount = sampleUtterancesCount;
         return this;
     }
     
+    public RecommendedIntentSummary(){}
 }

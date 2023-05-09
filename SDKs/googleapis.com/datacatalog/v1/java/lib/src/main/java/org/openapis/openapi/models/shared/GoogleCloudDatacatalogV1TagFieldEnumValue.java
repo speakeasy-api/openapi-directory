@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1TagFieldEnumValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDatacatalogV1TagFieldEnumValue withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1TagFieldEnumValue(){}
 }

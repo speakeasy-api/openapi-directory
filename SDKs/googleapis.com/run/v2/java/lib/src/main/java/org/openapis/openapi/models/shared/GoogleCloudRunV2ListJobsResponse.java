@@ -18,6 +18,7 @@ public class GoogleCloudRunV2ListJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobs")
     public GoogleCloudRunV2Job[] jobs;
+
     public GoogleCloudRunV2ListJobsResponse withJobs(GoogleCloudRunV2Job[] jobs) {
         this.jobs = jobs;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRunV2ListJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudRunV2ListJobsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudRunV2ListJobsResponse(){}
 }

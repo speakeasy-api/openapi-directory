@@ -55,12 +55,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostChangeStatusResponse res = new org.openapis.openapi.models.operations.PostChangeStatusResponse() {{
+        org.openapis.openapi.models.operations.PostChangeStatusResponse res = new org.openapis.openapi.models.operations.PostChangeStatusResponse(contentType, httpRes.statusCode()) {{
             storedValueStatusChangeResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,12 +104,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCheckBalanceResponse res = new org.openapis.openapi.models.operations.PostCheckBalanceResponse() {{
+        org.openapis.openapi.models.operations.PostCheckBalanceResponse res = new org.openapis.openapi.models.operations.PostCheckBalanceResponse(contentType, httpRes.statusCode()) {{
             storedValueBalanceCheckResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,12 +153,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostIssueResponse res = new org.openapis.openapi.models.operations.PostIssueResponse() {{
+        org.openapis.openapi.models.operations.PostIssueResponse res = new org.openapis.openapi.models.operations.PostIssueResponse(contentType, httpRes.statusCode()) {{
             storedValueIssueResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -208,12 +202,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLoadResponse res = new org.openapis.openapi.models.operations.PostLoadResponse() {{
+        org.openapis.openapi.models.operations.PostLoadResponse res = new org.openapis.openapi.models.operations.PostLoadResponse(contentType, httpRes.statusCode()) {{
             storedValueLoadResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -259,12 +251,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMergeBalanceResponse res = new org.openapis.openapi.models.operations.PostMergeBalanceResponse() {{
+        org.openapis.openapi.models.operations.PostMergeBalanceResponse res = new org.openapis.openapi.models.operations.PostMergeBalanceResponse(contentType, httpRes.statusCode()) {{
             storedValueBalanceMergeResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -310,12 +300,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostVoidTransactionResponse res = new org.openapis.openapi.models.operations.PostVoidTransactionResponse() {{
+        org.openapis.openapi.models.operations.PostVoidTransactionResponse res = new org.openapis.openapi.models.operations.PostVoidTransactionResponse(contentType, httpRes.statusCode()) {{
             storedValueVoidResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

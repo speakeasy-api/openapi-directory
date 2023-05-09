@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateUpdatedImageResponse {
@@ -12,6 +13,7 @@ public class CreateUpdatedImageResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateUpdatedImageResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class CreateUpdatedImageResponse {
     
     
     public String contentType;
+
     public CreateUpdatedImageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateUpdatedImageResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateUpdatedImageResult createUpdatedImageResult;
+
     public CreateUpdatedImageResponse withCreateUpdatedImageResult(org.openapis.openapi.models.shared.CreateUpdatedImageResult createUpdatedImageResult) {
         this.createUpdatedImageResult = createUpdatedImageResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateUpdatedImageResponse {
      */
     
     public Object incompatibleImageException;
+
     public CreateUpdatedImageResponse withIncompatibleImageException(Object incompatibleImageException) {
         this.incompatibleImageException = incompatibleImageException;
         return this;
@@ -49,6 +54,7 @@ public class CreateUpdatedImageResponse {
      */
     
     public Object invalidAccountStatusException;
+
     public CreateUpdatedImageResponse withInvalidAccountStatusException(Object invalidAccountStatusException) {
         this.invalidAccountStatusException = invalidAccountStatusException;
         return this;
@@ -59,6 +65,7 @@ public class CreateUpdatedImageResponse {
      */
     
     public Object limitExceededException;
+
     public CreateUpdatedImageResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateUpdatedImageResponse {
      */
     
     public Object operationNotPermittedException;
+
     public CreateUpdatedImageResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -79,6 +87,7 @@ public class CreateUpdatedImageResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateUpdatedImageResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -89,6 +98,7 @@ public class CreateUpdatedImageResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateUpdatedImageResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -96,6 +106,7 @@ public class CreateUpdatedImageResponse {
     
     
     public Integer statusCode;
+
     public CreateUpdatedImageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class CreateUpdatedImageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateUpdatedImageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateUpdatedImageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

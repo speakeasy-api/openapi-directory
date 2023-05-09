@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class UpdateAccountPasswordPolicyRequest {
     
     public Boolean allowUsersToChangePassword;
+
     public UpdateAccountPasswordPolicyRequest withAllowUsersToChangePassword(Boolean allowUsersToChangePassword) {
         this.allowUsersToChangePassword = allowUsersToChangePassword;
         return this;
@@ -16,6 +17,7 @@ public class UpdateAccountPasswordPolicyRequest {
     
     
     public Boolean hardExpiry;
+
     public UpdateAccountPasswordPolicyRequest withHardExpiry(Boolean hardExpiry) {
         this.hardExpiry = hardExpiry;
         return this;
@@ -23,6 +25,7 @@ public class UpdateAccountPasswordPolicyRequest {
     
     
     public Long maxPasswordAge;
+
     public UpdateAccountPasswordPolicyRequest withMaxPasswordAge(Long maxPasswordAge) {
         this.maxPasswordAge = maxPasswordAge;
         return this;
@@ -30,6 +33,7 @@ public class UpdateAccountPasswordPolicyRequest {
     
     
     public Long minimumPasswordLength;
+
     public UpdateAccountPasswordPolicyRequest withMinimumPasswordLength(Long minimumPasswordLength) {
         this.minimumPasswordLength = minimumPasswordLength;
         return this;
@@ -37,6 +41,7 @@ public class UpdateAccountPasswordPolicyRequest {
     
     
     public Long passwordReusePrevention;
+
     public UpdateAccountPasswordPolicyRequest withPasswordReusePrevention(Long passwordReusePrevention) {
         this.passwordReusePrevention = passwordReusePrevention;
         return this;
@@ -44,6 +49,7 @@ public class UpdateAccountPasswordPolicyRequest {
     
     
     public Boolean requireLowercaseCharacters;
+
     public UpdateAccountPasswordPolicyRequest withRequireLowercaseCharacters(Boolean requireLowercaseCharacters) {
         this.requireLowercaseCharacters = requireLowercaseCharacters;
         return this;
@@ -51,6 +57,7 @@ public class UpdateAccountPasswordPolicyRequest {
     
     
     public Boolean requireNumbers;
+
     public UpdateAccountPasswordPolicyRequest withRequireNumbers(Boolean requireNumbers) {
         this.requireNumbers = requireNumbers;
         return this;
@@ -58,6 +65,7 @@ public class UpdateAccountPasswordPolicyRequest {
     
     
     public Boolean requireSymbols;
+
     public UpdateAccountPasswordPolicyRequest withRequireSymbols(Boolean requireSymbols) {
         this.requireSymbols = requireSymbols;
         return this;
@@ -65,9 +73,11 @@ public class UpdateAccountPasswordPolicyRequest {
     
     
     public Boolean requireUppercaseCharacters;
+
     public UpdateAccountPasswordPolicyRequest withRequireUppercaseCharacters(Boolean requireUppercaseCharacters) {
         this.requireUppercaseCharacters = requireUppercaseCharacters;
         return this;
     }
     
+    public UpdateAccountPasswordPolicyRequest(){}
 }

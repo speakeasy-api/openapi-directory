@@ -18,9 +18,11 @@ public class CustomerUnclaimDeviceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device")
     public DeviceReference device;
+
     public CustomerUnclaimDeviceRequest withDevice(DeviceReference device) {
         this.device = device;
         return this;
     }
     
+    public CustomerUnclaimDeviceRequest(){}
 }

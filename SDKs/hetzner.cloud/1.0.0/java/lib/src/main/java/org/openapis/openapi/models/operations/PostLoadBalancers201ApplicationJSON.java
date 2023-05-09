@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostLoadBalancers201ApplicationJSON {
     @JsonProperty("action")
     public PostLoadBalancers201ApplicationJSONAction action;
+
     public PostLoadBalancers201ApplicationJSON withAction(PostLoadBalancers201ApplicationJSONAction action) {
         this.action = action;
         return this;
@@ -19,9 +20,14 @@ public class PostLoadBalancers201ApplicationJSON {
     
     @JsonProperty("load_balancer")
     public PostLoadBalancers201ApplicationJSONLoadBalancer loadBalancer;
+
     public PostLoadBalancers201ApplicationJSON withLoadBalancer(PostLoadBalancers201ApplicationJSONLoadBalancer loadBalancer) {
         this.loadBalancer = loadBalancer;
         return this;
     }
     
+    public PostLoadBalancers201ApplicationJSON(@JsonProperty("action") PostLoadBalancers201ApplicationJSONAction action, @JsonProperty("load_balancer") PostLoadBalancers201ApplicationJSONLoadBalancer loadBalancer) {
+        this.action = action;
+        this.loadBalancer = loadBalancer;
+  }
 }

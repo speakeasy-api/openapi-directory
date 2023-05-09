@@ -15,6 +15,7 @@ public class PermissionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PagingMeta meta;
+
     public PermissionList withMeta(PagingMeta meta) {
         this.meta = meta;
         return this;
@@ -23,9 +24,11 @@ public class PermissionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public String[] permissions;
+
     public PermissionList withPermissions(String[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public PermissionList(){}
 }

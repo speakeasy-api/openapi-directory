@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateResourceProfileResponse {
@@ -12,6 +13,7 @@ public class UpdateResourceProfileResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateResourceProfileResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateResourceProfileResponse {
     
     
     public String contentType;
+
     public UpdateResourceProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateResourceProfileResponse {
      */
     
     public Object internalServerException;
+
     public UpdateResourceProfileResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateResourceProfileResponse {
     
     
     public Integer statusCode;
+
     public UpdateResourceProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateResourceProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateResourceProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateResourceProfileResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateResourceProfileResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateResourceProfileResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateResourceProfileResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateResourceProfileResponse {
      */
     
     public Object throttlingException;
+
     public UpdateResourceProfileResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateResourceProfileResponse {
      */
     
     public java.util.Map<String, Object> updateResourceProfileResponse;
+
     public UpdateResourceProfileResponse withUpdateResourceProfileResponse(java.util.Map<String, Object> updateResourceProfileResponse) {
         this.updateResourceProfileResponse = updateResourceProfileResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateResourceProfileResponse {
      */
     
     public Object validationException;
+
     public UpdateResourceProfileResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateResourceProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class Trace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Duration")
     public Double duration;
+
     public Trace withDuration(Double duration) {
         this.duration = duration;
         return this;
@@ -23,6 +24,7 @@ public class Trace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Trace withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class Trace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LimitExceeded")
     public Boolean limitExceeded;
+
     public Trace withLimitExceeded(Boolean limitExceeded) {
         this.limitExceeded = limitExceeded;
         return this;
@@ -39,9 +42,11 @@ public class Trace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Segments")
     public Segment[] segments;
+
     public Trace withSegments(Segment[] segments) {
         this.segments = segments;
         return this;
     }
     
+    public Trace(){}
 }

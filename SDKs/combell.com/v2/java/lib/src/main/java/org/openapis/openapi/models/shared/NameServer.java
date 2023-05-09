@@ -15,6 +15,7 @@ public class NameServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip")
     public String ip;
+
     public NameServer withIp(String ip) {
         this.ip = ip;
         return this;
@@ -26,9 +27,11 @@ public class NameServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NameServer withName(String name) {
         this.name = name;
         return this;
     }
     
+    public NameServer(){}
 }

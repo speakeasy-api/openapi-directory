@@ -15,9 +15,11 @@ public class ReloadTablesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationTaskArn")
     public String replicationTaskArn;
+
     public ReloadTablesResponse withReplicationTaskArn(String replicationTaskArn) {
         this.replicationTaskArn = replicationTaskArn;
         return this;
     }
     
+    public ReloadTablesResponse(){}
 }

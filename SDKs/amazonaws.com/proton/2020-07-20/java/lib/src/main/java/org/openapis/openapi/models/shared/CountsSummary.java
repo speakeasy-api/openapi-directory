@@ -15,6 +15,7 @@ public class CountsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("components")
     public ResourceCountsSummary components;
+
     public CountsSummary withComponents(ResourceCountsSummary components) {
         this.components = components;
         return this;
@@ -23,6 +24,7 @@ public class CountsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentTemplates")
     public ResourceCountsSummary environmentTemplates;
+
     public CountsSummary withEnvironmentTemplates(ResourceCountsSummary environmentTemplates) {
         this.environmentTemplates = environmentTemplates;
         return this;
@@ -31,6 +33,7 @@ public class CountsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environments")
     public ResourceCountsSummary environments;
+
     public CountsSummary withEnvironments(ResourceCountsSummary environments) {
         this.environments = environments;
         return this;
@@ -39,6 +42,7 @@ public class CountsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelines")
     public ResourceCountsSummary pipelines;
+
     public CountsSummary withPipelines(ResourceCountsSummary pipelines) {
         this.pipelines = pipelines;
         return this;
@@ -47,6 +51,7 @@ public class CountsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceInstances")
     public ResourceCountsSummary serviceInstances;
+
     public CountsSummary withServiceInstances(ResourceCountsSummary serviceInstances) {
         this.serviceInstances = serviceInstances;
         return this;
@@ -55,6 +60,7 @@ public class CountsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceTemplates")
     public ResourceCountsSummary serviceTemplates;
+
     public CountsSummary withServiceTemplates(ResourceCountsSummary serviceTemplates) {
         this.serviceTemplates = serviceTemplates;
         return this;
@@ -63,9 +69,11 @@ public class CountsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("services")
     public ResourceCountsSummary services;
+
     public CountsSummary withServices(ResourceCountsSummary services) {
         this.services = services;
         return this;
     }
     
+    public CountsSummary(){}
 }

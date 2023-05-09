@@ -15,6 +15,7 @@ public class AdminListUserAuthEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthEvents")
     public AuthEventType[] authEvents;
+
     public AdminListUserAuthEventsResponse withAuthEvents(AuthEventType[] authEvents) {
         this.authEvents = authEvents;
         return this;
@@ -23,9 +24,11 @@ public class AdminListUserAuthEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public AdminListUserAuthEventsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public AdminListUserAuthEventsResponse(){}
 }

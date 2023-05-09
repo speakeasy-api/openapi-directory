@@ -3,17 +3,16 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateSecurity;
 import org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest;
 import org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateResponse;
+import org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.AuthorizationPolicyActionEnum;
 import org.openapis.openapi.models.shared.AuthorizationPolicyInput;
-import org.openapis.openapi.models.shared.Rule;
-import org.openapis.openapi.models.shared.Source;
 import org.openapis.openapi.models.shared.Destination;
 import org.openapis.openapi.models.shared.HttpHeaderMatch;
+import org.openapis.openapi.models.shared.Rule;
+import org.openapis.openapi.models.shared.Source;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -22,126 +21,81 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest req = new NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest() {{
-                dollarXgafv = "2";
+            NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest req = new NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 authorizationPolicyInput = new AuthorizationPolicyInput() {{
-                    action = "ALLOW";
-                    description = "distinctio";
+                    action = AuthorizationPolicyActionEnum.DENY;
+                    description = "quibusdam";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("unde", "nulla");
-                        put("corrupti", "illum");
-                        put("vel", "error");
-                        put("deserunt", "suscipit");
+                        put("nulla", "corrupti");
+                        put("illum", "vel");
+                        put("error", "deserunt");
                     }};
-                    name = "iure";
+                    name = "Willie Gulgowski DVM";
                     rules = new org.openapis.openapi.models.shared.Rule[]{{
                         add(new Rule() {{
                             destinations = new org.openapis.openapi.models.shared.Destination[]{{
                                 add(new Destination() {{
                                     hosts = new String[]{{
-                                        add("delectus"),
-                                    }};
-                                    httpHeaderMatch = new HttpHeaderMatch() {{
-                                        headerName = "tempora";
-                                        regexMatch = "suscipit";
-                                    }};
-                                    methods = new String[]{{
                                         add("minus"),
                                         add("placeat"),
                                     }};
-                                    ports = new Long[]{{
-                                        add(479977),
-                                        add(568045),
-                                        add(392785),
+                                    httpHeaderMatch = new HttpHeaderMatch() {{
+                                        headerName = "voluptatum";
+                                        regexMatch = "iusto";
                                     }};
-                                }}),
-                                add(new Destination() {{
-                                    hosts = new String[]{{
+                                    methods = new String[]{{
+                                        add("nisi"),
+                                        add("recusandae"),
                                         add("temporibus"),
-                                        add("ab"),
-                                        add("quis"),
-                                        add("veritatis"),
+                                    }};
+                                    ports = new Long[]{{
+                                        add(337396L),
+                                    }};
+                                }}),
+                                add(new Destination() {{
+                                    hosts = new String[]{{
+                                        add("deserunt"),
                                     }};
                                     httpHeaderMatch = new HttpHeaderMatch() {{
-                                        headerName = "deserunt";
-                                        regexMatch = "perferendis";
+                                        headerName = "perferendis";
+                                        regexMatch = "ipsam";
                                     }};
                                     methods = new String[]{{
-                                        add("repellendus"),
                                         add("sapiente"),
+                                        add("quo"),
+                                        add("odit"),
+                                        add("at"),
                                     }};
                                     ports = new Long[]{{
-                                        add(140350),
-                                        add(870013),
-                                        add(870088),
-                                        add(978619),
-                                    }};
-                                }}),
-                                add(new Destination() {{
-                                    hosts = new String[]{{
-                                        add("quod"),
-                                        add("quod"),
-                                    }};
-                                    httpHeaderMatch = new HttpHeaderMatch() {{
-                                        headerName = "esse";
-                                        regexMatch = "totam";
-                                    }};
-                                    methods = new String[]{{
-                                        add("dolorum"),
-                                        add("dicta"),
-                                        add("nam"),
-                                        add("officia"),
-                                    }};
-                                    ports = new Long[]{{
-                                        add(143353),
-                                        add(537373),
-                                        add(944669),
-                                    }};
-                                }}),
-                                add(new Destination() {{
-                                    hosts = new String[]{{
-                                        add("totam"),
-                                        add("beatae"),
-                                        add("commodi"),
-                                        add("molestiae"),
-                                    }};
-                                    httpHeaderMatch = new HttpHeaderMatch() {{
-                                        headerName = "modi";
-                                        regexMatch = "qui";
-                                    }};
-                                    methods = new String[]{{
-                                        add("cum"),
-                                        add("esse"),
-                                        add("ipsum"),
-                                        add("excepturi"),
-                                    }};
-                                    ports = new Long[]{{
-                                        add(18789),
+                                        add(978619L),
+                                        add(473608L),
+                                        add(799159L),
+                                        add(800911L),
                                     }};
                                 }}),
                             }};
                             sources = new org.openapis.openapi.models.shared.Source[]{{
                                 add(new Source() {{
                                     ipBlocks = new String[]{{
-                                        add("sed"),
-                                        add("iste"),
-                                        add("dolor"),
+                                        add("porro"),
+                                        add("dolorum"),
+                                        add("dicta"),
                                     }};
                                     principals = new String[]{{
-                                        add("laboriosam"),
-                                        add("hic"),
-                                        add("saepe"),
+                                        add("officia"),
+                                        add("occaecati"),
+                                        add("fugit"),
                                     }};
                                 }}),
                                 add(new Source() {{
                                     ipBlocks = new String[]{{
-                                        add("in"),
-                                        add("corporis"),
-                                        add("iste"),
+                                        add("hic"),
+                                        add("optio"),
+                                        add("totam"),
                                     }};
                                     principals = new String[]{{
-                                        add("saepe"),
-                                        add("quidem"),
+                                        add("commodi"),
                                     }};
                                 }}),
                             }};
@@ -150,73 +104,92 @@ public class Application {
                             destinations = new org.openapis.openapi.models.shared.Destination[]{{
                                 add(new Destination() {{
                                     hosts = new String[]{{
-                                        add("reiciendis"),
+                                        add("qui"),
+                                        add("impedit"),
                                     }};
                                     httpHeaderMatch = new HttpHeaderMatch() {{
-                                        headerName = "est";
-                                        regexMatch = "mollitia";
+                                        headerName = "cum";
+                                        regexMatch = "esse";
                                     }};
                                     methods = new String[]{{
-                                        add("dolores"),
-                                        add("dolorem"),
-                                        add("corporis"),
+                                        add("excepturi"),
                                     }};
                                     ports = new Long[]{{
-                                        add(750686),
+                                        add(18789L),
+                                    }};
+                                }}),
+                                add(new Destination() {{
+                                    hosts = new String[]{{
+                                        add("natus"),
+                                        add("sed"),
+                                    }};
+                                    httpHeaderMatch = new HttpHeaderMatch() {{
+                                        headerName = "iste";
+                                        regexMatch = "dolor";
+                                    }};
+                                    methods = new String[]{{
+                                        add("laboriosam"),
+                                        add("hic"),
+                                        add("saepe"),
+                                    }};
+                                    ports = new Long[]{{
+                                        add(449950L),
+                                        add(359508L),
+                                        add(613064L),
                                     }};
                                 }}),
                             }};
                             sources = new org.openapis.openapi.models.shared.Source[]{{
                                 add(new Source() {{
                                     ipBlocks = new String[]{{
-                                        add("nemo"),
-                                        add("minima"),
-                                        add("excepturi"),
+                                        add("quidem"),
+                                        add("architecto"),
+                                        add("ipsa"),
+                                        add("reiciendis"),
                                     }};
                                     principals = new String[]{{
-                                        add("iure"),
+                                        add("mollitia"),
+                                        add("laborum"),
+                                        add("dolores"),
                                     }};
                                 }}),
                                 add(new Source() {{
                                     ipBlocks = new String[]{{
-                                        add("doloribus"),
-                                        add("sapiente"),
-                                        add("architecto"),
+                                        add("corporis"),
                                     }};
                                     principals = new String[]{{
-                                        add("dolorem"),
-                                        add("culpa"),
-                                        add("consequuntur"),
+                                        add("nobis"),
                                     }};
                                 }}),
                             }};
                         }}),
                     }};
-                }};
-                accessToken = "repellat";
-                alt = "media";
-                authorizationPolicyId = "occaecati";
-                callback = "numquam";
-                fields = "commodi";
-                key = "quam";
-                oauthToken = "molestiae";
-                parent = "velit";
+                }};;
+                accessToken = "enim";
+                alt = AltEnum.MEDIA;
+                authorizationPolicyId = "nemo";
+                callback = "minima";
+                fields = "excepturi";
+                key = "accusantium";
+                oauthToken = "iure";
                 prettyPrint = false;
-                quotaUser = "error";
-                uploadType = "quia";
-                uploadProtocol = "quis";
-            }}            
+                quotaUser = "culpa";
+                uploadType = "doloribus";
+                uploadProtocol = "sapiente";
+            }};            
 
-            NetworksecurityProjectsLocationsAuthorizationPoliciesCreateResponse res = sdk.projects.networksecurityProjectsLocationsAuthorizationPoliciesCreate(req, new NetworksecurityProjectsLocationsAuthorizationPoliciesCreateSecurity() {{
+            NetworksecurityProjectsLocationsAuthorizationPoliciesCreateResponse res = sdk.projects.networksecurityProjectsLocationsAuthorizationPoliciesCreate(req, new NetworksecurityProjectsLocationsAuthorizationPoliciesCreateSecurity("architecto", "mollitia") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.operation.isPresent()) {
+            if (res.operation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

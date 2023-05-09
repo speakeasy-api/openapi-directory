@@ -17,8 +17,9 @@ public class AccountHolderTransactionListResponse {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountTransactionLists")
-    public AccountTransactionList[] accountTransactionLists;
-    public AccountHolderTransactionListResponse withAccountTransactionLists(AccountTransactionList[] accountTransactionLists) {
+    public AccountTransactionListWrapper[] accountTransactionLists;
+
+    public AccountHolderTransactionListResponse withAccountTransactionLists(AccountTransactionListWrapper[] accountTransactionLists) {
         this.accountTransactionLists = accountTransactionLists;
         return this;
     }
@@ -29,6 +30,7 @@ public class AccountHolderTransactionListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public AccountHolderTransactionListResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -40,6 +42,7 @@ public class AccountHolderTransactionListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public AccountHolderTransactionListResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -53,9 +56,11 @@ public class AccountHolderTransactionListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submittedAsync")
     public Boolean submittedAsync;
+
     public AccountHolderTransactionListResponse withSubmittedAsync(Boolean submittedAsync) {
         this.submittedAsync = submittedAsync;
         return this;
     }
     
+    public AccountHolderTransactionListResponse(){}
 }

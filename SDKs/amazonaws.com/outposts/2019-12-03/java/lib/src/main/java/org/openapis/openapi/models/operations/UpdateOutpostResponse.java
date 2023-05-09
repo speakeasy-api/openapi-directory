@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateOutpostResponse {
@@ -12,6 +13,7 @@ public class UpdateOutpostResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateOutpostResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateOutpostResponse {
      */
     
     public Object conflictException;
+
     public UpdateOutpostResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateOutpostResponse {
     
     
     public String contentType;
+
     public UpdateOutpostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateOutpostResponse {
      */
     
     public Object internalServerException;
+
     public UpdateOutpostResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateOutpostResponse {
      */
     
     public Object notFoundException;
+
     public UpdateOutpostResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateOutpostResponse {
     
     
     public Integer statusCode;
+
     public UpdateOutpostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateOutpostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateOutpostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateOutpostResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateOutpostOutput updateOutpostOutput;
+
     public UpdateOutpostResponse withUpdateOutpostOutput(org.openapis.openapi.models.shared.UpdateOutpostOutput updateOutpostOutput) {
         this.updateOutpostOutput = updateOutpostOutput;
         return this;
@@ -83,9 +92,14 @@ public class UpdateOutpostResponse {
      */
     
     public Object validationException;
+
     public UpdateOutpostResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateOutpostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

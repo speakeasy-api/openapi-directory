@@ -18,6 +18,7 @@ public class TextToColumnsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delimiter")
     public String delimiter;
+
     public TextToColumnsRequest withDelimiter(String delimiter) {
         this.delimiter = delimiter;
         return this;
@@ -29,6 +30,7 @@ public class TextToColumnsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delimiterType")
     public TextToColumnsRequestDelimiterTypeEnum delimiterType;
+
     public TextToColumnsRequest withDelimiterType(TextToColumnsRequestDelimiterTypeEnum delimiterType) {
         this.delimiterType = delimiterType;
         return this;
@@ -40,9 +42,11 @@ public class TextToColumnsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public GridRange source;
+
     public TextToColumnsRequest withSource(GridRange source) {
         this.source = source;
         return this;
     }
     
+    public TextToColumnsRequest(){}
 }

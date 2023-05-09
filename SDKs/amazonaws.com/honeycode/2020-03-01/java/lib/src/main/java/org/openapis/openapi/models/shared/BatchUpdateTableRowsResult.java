@@ -15,6 +15,7 @@ public class BatchUpdateTableRowsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedBatchItems")
     public FailedBatchItem[] failedBatchItems;
+
     public BatchUpdateTableRowsResult withFailedBatchItems(FailedBatchItem[] failedBatchItems) {
         this.failedBatchItems = failedBatchItems;
         return this;
@@ -22,9 +23,13 @@ public class BatchUpdateTableRowsResult {
     
     @JsonProperty("workbookCursor")
     public Long workbookCursor;
+
     public BatchUpdateTableRowsResult withWorkbookCursor(Long workbookCursor) {
         this.workbookCursor = workbookCursor;
         return this;
     }
     
+    public BatchUpdateTableRowsResult(@JsonProperty("workbookCursor") Long workbookCursor) {
+        this.workbookCursor = workbookCursor;
+  }
 }

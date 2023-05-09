@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminListPreReceiveHooksForOrgRequest {
@@ -12,6 +13,7 @@ public class EnterpriseAdminListPreReceiveHooksForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public org.openapis.openapi.models.shared.DirectionEnum direction;
+
     public EnterpriseAdminListPreReceiveHooksForOrgRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -22,6 +24,7 @@ public class EnterpriseAdminListPreReceiveHooksForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public EnterpriseAdminListPreReceiveHooksForOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -32,6 +35,7 @@ public class EnterpriseAdminListPreReceiveHooksForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public EnterpriseAdminListPreReceiveHooksForOrgRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +46,7 @@ public class EnterpriseAdminListPreReceiveHooksForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public EnterpriseAdminListPreReceiveHooksForOrgRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -52,9 +57,13 @@ public class EnterpriseAdminListPreReceiveHooksForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public EnterpriseAdminListPreReceiveHooksForOrgSortEnum sort;
+
     public EnterpriseAdminListPreReceiveHooksForOrgRequest withSort(EnterpriseAdminListPreReceiveHooksForOrgSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public EnterpriseAdminListPreReceiveHooksForOrgRequest(@JsonProperty("org") String org) {
+        this.org = org;
+  }
 }

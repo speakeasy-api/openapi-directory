@@ -15,6 +15,7 @@ public class AwsAutoScalingLaunchConfigurationBlockDeviceMappingsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceName")
     public String deviceName;
+
     public AwsAutoScalingLaunchConfigurationBlockDeviceMappingsDetails withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -23,6 +24,7 @@ public class AwsAutoScalingLaunchConfigurationBlockDeviceMappingsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ebs")
     public AwsAutoScalingLaunchConfigurationBlockDeviceMappingsEbsDetails ebs;
+
     public AwsAutoScalingLaunchConfigurationBlockDeviceMappingsDetails withEbs(AwsAutoScalingLaunchConfigurationBlockDeviceMappingsEbsDetails ebs) {
         this.ebs = ebs;
         return this;
@@ -31,6 +33,7 @@ public class AwsAutoScalingLaunchConfigurationBlockDeviceMappingsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NoDevice")
     public Boolean noDevice;
+
     public AwsAutoScalingLaunchConfigurationBlockDeviceMappingsDetails withNoDevice(Boolean noDevice) {
         this.noDevice = noDevice;
         return this;
@@ -39,9 +42,11 @@ public class AwsAutoScalingLaunchConfigurationBlockDeviceMappingsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VirtualName")
     public String virtualName;
+
     public AwsAutoScalingLaunchConfigurationBlockDeviceMappingsDetails withVirtualName(String virtualName) {
         this.virtualName = virtualName;
         return this;
     }
     
+    public AwsAutoScalingLaunchConfigurationBlockDeviceMappingsDetails(){}
 }

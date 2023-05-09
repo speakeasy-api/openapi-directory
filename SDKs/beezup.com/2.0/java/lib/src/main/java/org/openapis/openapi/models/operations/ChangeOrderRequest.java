@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeOrderRequest {
@@ -15,6 +16,7 @@ public class ChangeOrderRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
     public String ifMatch;
+
     public ChangeOrderRequest withIfMatch(String ifMatch) {
         this.ifMatch = ifMatch;
         return this;
@@ -22,6 +24,7 @@ public class ChangeOrderRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, String> requestBody;
+
     public ChangeOrderRequest withRequestBody(java.util.Map<String, String> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -29,6 +32,7 @@ public class ChangeOrderRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public Integer accountId;
+
     public ChangeOrderRequest withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -39,6 +43,7 @@ public class ChangeOrderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=beezUPOrderId")
     public String beezUPOrderId;
+
     public ChangeOrderRequest withBeezUPOrderId(String beezUPOrderId) {
         this.beezUPOrderId = beezUPOrderId;
         return this;
@@ -49,6 +54,7 @@ public class ChangeOrderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=changeOrderType")
     public String changeOrderType;
+
     public ChangeOrderRequest withChangeOrderType(String changeOrderType) {
         this.changeOrderType = changeOrderType;
         return this;
@@ -59,6 +65,7 @@ public class ChangeOrderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public ChangeOrderRequest withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
@@ -69,6 +76,7 @@ public class ChangeOrderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=testMode")
     public Boolean testMode;
+
     public ChangeOrderRequest withTestMode(Boolean testMode) {
         this.testMode = testMode;
         return this;
@@ -79,9 +87,18 @@ public class ChangeOrderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userName")
     public String userName;
+
     public ChangeOrderRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public ChangeOrderRequest(@JsonProperty("If-Match") String ifMatch, @JsonProperty("accountId") Integer accountId, @JsonProperty("beezUPOrderId") String beezUPOrderId, @JsonProperty("changeOrderType") String changeOrderType, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode, @JsonProperty("userName") String userName) {
+        this.ifMatch = ifMatch;
+        this.accountId = accountId;
+        this.beezUPOrderId = beezUPOrderId;
+        this.changeOrderType = changeOrderType;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+        this.userName = userName;
+  }
 }

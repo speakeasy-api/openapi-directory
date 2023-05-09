@@ -12,6 +12,7 @@ public class AdjustmentConditionsRules {
      */
     @JsonProperty("bookableDateRange")
     public AdjustmentConditionsRulesBookableDateRange bookableDateRange;
+
     public AdjustmentConditionsRules withBookableDateRange(AdjustmentConditionsRulesBookableDateRange bookableDateRange) {
         this.bookableDateRange = bookableDateRange;
         return this;
@@ -22,9 +23,14 @@ public class AdjustmentConditionsRules {
      */
     @JsonProperty("nightsRange")
     public AdjustmentConditionsRulesNightsRange nightsRange;
+
     public AdjustmentConditionsRules withNightsRange(AdjustmentConditionsRulesNightsRange nightsRange) {
         this.nightsRange = nightsRange;
         return this;
     }
     
+    public AdjustmentConditionsRules(@JsonProperty("bookableDateRange") AdjustmentConditionsRulesBookableDateRange bookableDateRange, @JsonProperty("nightsRange") AdjustmentConditionsRulesNightsRange nightsRange) {
+        this.bookableDateRange = bookableDateRange;
+        this.nightsRange = nightsRange;
+  }
 }

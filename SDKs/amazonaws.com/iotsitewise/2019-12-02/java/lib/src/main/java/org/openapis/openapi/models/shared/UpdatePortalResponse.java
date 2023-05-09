@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdatePortalResponse {
     @JsonProperty("portalStatus")
     public PortalStatus portalStatus;
+
     public UpdatePortalResponse withPortalStatus(PortalStatus portalStatus) {
         this.portalStatus = portalStatus;
         return this;
     }
     
+    public UpdatePortalResponse(@JsonProperty("portalStatus") PortalStatus portalStatus) {
+        this.portalStatus = portalStatus;
+  }
 }

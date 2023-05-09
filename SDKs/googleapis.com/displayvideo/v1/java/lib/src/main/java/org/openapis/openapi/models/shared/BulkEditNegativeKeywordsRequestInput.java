@@ -18,6 +18,7 @@ public class BulkEditNegativeKeywordsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdNegativeKeywords")
     public NegativeKeywordInput[] createdNegativeKeywords;
+
     public BulkEditNegativeKeywordsRequestInput withCreatedNegativeKeywords(NegativeKeywordInput[] createdNegativeKeywords) {
         this.createdNegativeKeywords = createdNegativeKeywords;
         return this;
@@ -29,9 +30,11 @@ public class BulkEditNegativeKeywordsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletedNegativeKeywords")
     public String[] deletedNegativeKeywords;
+
     public BulkEditNegativeKeywordsRequestInput withDeletedNegativeKeywords(String[] deletedNegativeKeywords) {
         this.deletedNegativeKeywords = deletedNegativeKeywords;
         return this;
     }
     
+    public BulkEditNegativeKeywordsRequestInput(){}
 }

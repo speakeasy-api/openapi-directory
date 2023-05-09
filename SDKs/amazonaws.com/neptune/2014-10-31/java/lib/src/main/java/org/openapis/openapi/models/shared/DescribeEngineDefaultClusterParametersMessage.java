@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeEngineDefaultClusterParametersMessage {
     
     public String dbParameterGroupFamily;
+
     public DescribeEngineDefaultClusterParametersMessage withDBParameterGroupFamily(String dbParameterGroupFamily) {
         this.dbParameterGroupFamily = dbParameterGroupFamily;
         return this;
@@ -16,6 +17,7 @@ public class DescribeEngineDefaultClusterParametersMessage {
     
     
     public FilterList[] filters;
+
     public DescribeEngineDefaultClusterParametersMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeEngineDefaultClusterParametersMessage {
     
     
     public String marker;
+
     public DescribeEngineDefaultClusterParametersMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,9 +33,13 @@ public class DescribeEngineDefaultClusterParametersMessage {
     
     
     public Long maxRecords;
+
     public DescribeEngineDefaultClusterParametersMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeEngineDefaultClusterParametersMessage(@JsonProperty("DBParameterGroupFamily") String dbParameterGroupFamily) {
+        this.dbParameterGroupFamily = dbParameterGroupFamily;
+  }
 }

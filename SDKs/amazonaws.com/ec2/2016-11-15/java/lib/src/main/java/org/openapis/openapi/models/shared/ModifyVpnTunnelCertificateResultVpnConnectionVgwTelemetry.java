@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ModifyVpnTunnelCertificateResultVpnConnectionVgwTelemetry {
     
     public Long acceptedRouteCount;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionVgwTelemetry withAcceptedRouteCount(Long acceptedRouteCount) {
         this.acceptedRouteCount = acceptedRouteCount;
         return this;
@@ -19,6 +20,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionVgwTelemetry {
     
     
     public String certificateArn;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionVgwTelemetry withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -26,6 +28,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionVgwTelemetry {
     
     
     public OffsetDateTime lastStatusChange;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionVgwTelemetry withLastStatusChange(OffsetDateTime lastStatusChange) {
         this.lastStatusChange = lastStatusChange;
         return this;
@@ -33,6 +36,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionVgwTelemetry {
     
     
     public String outsideIpAddress;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionVgwTelemetry withOutsideIpAddress(String outsideIpAddress) {
         this.outsideIpAddress = outsideIpAddress;
         return this;
@@ -40,6 +44,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionVgwTelemetry {
     
     
     public ModifyVpnTunnelCertificateResultVpnConnectionVgwTelemetryStatusEnum status;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionVgwTelemetry withStatus(ModifyVpnTunnelCertificateResultVpnConnectionVgwTelemetryStatusEnum status) {
         this.status = status;
         return this;
@@ -47,9 +52,11 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionVgwTelemetry {
     
     
     public String statusMessage;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionVgwTelemetry withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public ModifyVpnTunnelCertificateResultVpnConnectionVgwTelemetry(){}
 }

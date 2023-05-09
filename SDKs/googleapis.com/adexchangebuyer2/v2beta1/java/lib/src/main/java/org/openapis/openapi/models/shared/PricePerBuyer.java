@@ -18,6 +18,7 @@ public class PricePerBuyer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserIds")
     public String[] advertiserIds;
+
     public PricePerBuyer withAdvertiserIds(String[] advertiserIds) {
         this.advertiserIds = advertiserIds;
         return this;
@@ -29,6 +30,7 @@ public class PricePerBuyer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyer")
     public Buyer buyer;
+
     public PricePerBuyer withBuyer(Buyer buyer) {
         this.buyer = buyer;
         return this;
@@ -40,9 +42,11 @@ public class PricePerBuyer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Price price;
+
     public PricePerBuyer withPrice(Price price) {
         this.price = price;
         return this;
     }
     
+    public PricePerBuyer(){}
 }

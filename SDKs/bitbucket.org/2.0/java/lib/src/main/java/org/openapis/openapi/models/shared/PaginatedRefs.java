@@ -18,6 +18,7 @@ public class PaginatedRefs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public PaginatedRefs withNext(String next) {
         this.next = next;
         return this;
@@ -29,6 +30,7 @@ public class PaginatedRefs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public PaginatedRefs withPage(Long page) {
         this.page = page;
         return this;
@@ -40,6 +42,7 @@ public class PaginatedRefs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagelen")
     public Long pagelen;
+
     public PaginatedRefs withPagelen(Long pagelen) {
         this.pagelen = pagelen;
         return this;
@@ -51,6 +54,7 @@ public class PaginatedRefs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public PaginatedRefs withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -62,6 +66,7 @@ public class PaginatedRefs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public PaginatedRefs withSize(Long size) {
         this.size = size;
         return this;
@@ -70,9 +75,11 @@ public class PaginatedRefs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public java.util.Map<String, Object>[] values;
+
     public PaginatedRefs withValues(java.util.Map<String, Object>[] values) {
         this.values = values;
         return this;
     }
     
+    public PaginatedRefs(){}
 }

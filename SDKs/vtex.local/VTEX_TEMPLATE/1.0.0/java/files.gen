@@ -38,4 +38,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ShowPetByIdResponse.jav
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java
 lib/src/main/java/org/openapis/openapi/models/shared/Pet.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/pets/README.md
 USAGE.md

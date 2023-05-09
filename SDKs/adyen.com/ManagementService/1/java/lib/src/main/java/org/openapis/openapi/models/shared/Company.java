@@ -15,6 +15,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public CompanyLinks links;
+
     public Company withLinks(CompanyLinks links) {
         this.links = links;
         return this;
@@ -28,6 +29,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataCenters")
     public DataCenter[] dataCenters;
+
     public Company withDataCenters(DataCenter[] dataCenters) {
         this.dataCenters = dataCenters;
         return this;
@@ -39,6 +41,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Company withDescription(String description) {
         this.description = description;
         return this;
@@ -50,6 +53,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Company withId(String id) {
         this.id = id;
         return this;
@@ -61,6 +65,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Company withName(String name) {
         this.name = name;
         return this;
@@ -72,6 +77,7 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public Company withReference(String reference) {
         this.reference = reference;
         return this;
@@ -89,9 +95,11 @@ public class Company {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Company withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Company(){}
 }

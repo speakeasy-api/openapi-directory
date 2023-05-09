@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateResolverDnssecConfigRequest {
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public UpdateResolverDnssecConfigRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -16,9 +17,14 @@ public class UpdateResolverDnssecConfigRequest {
     
     @JsonProperty("Validation")
     public ValidationEnum validation;
+
     public UpdateResolverDnssecConfigRequest withValidation(ValidationEnum validation) {
         this.validation = validation;
         return this;
     }
     
+    public UpdateResolverDnssecConfigRequest(@JsonProperty("ResourceId") String resourceId, @JsonProperty("Validation") ValidationEnum validation) {
+        this.resourceId = resourceId;
+        this.validation = validation;
+  }
 }

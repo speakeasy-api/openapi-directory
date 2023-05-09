@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteUserResponse {
     
     public String contentType;
+
     public DeleteUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteUserResponse {
      */
     
     public java.util.Map<String, Object> deleteUserResponse;
+
     public DeleteUserResponse withDeleteUserResponse(java.util.Map<String, Object> deleteUserResponse) {
         this.deleteUserResponse = deleteUserResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteUserResponse {
      */
     
     public Object directoryServiceAuthenticationFailedException;
+
     public DeleteUserResponse withDirectoryServiceAuthenticationFailedException(Object directoryServiceAuthenticationFailedException) {
         this.directoryServiceAuthenticationFailedException = directoryServiceAuthenticationFailedException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteUserResponse {
      */
     
     public Object directoryUnavailableException;
+
     public DeleteUserResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteUserResponse {
      */
     
     public Object entityStateException;
+
     public DeleteUserResponse withEntityStateException(Object entityStateException) {
         this.entityStateException = entityStateException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteUserResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteUserResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteUserResponse {
      */
     
     public Object organizationNotFoundException;
+
     public DeleteUserResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteUserResponse {
      */
     
     public Object organizationStateException;
+
     public DeleteUserResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteUserResponse {
     
     
     public Integer statusCode;
+
     public DeleteUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteUserResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DeleteUserResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DeleteUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ public class DescribeSimulationApplicationRequestBody {
      */
     @JsonProperty("application")
     public String application;
+
     public DescribeSimulationApplicationRequestBody withApplication(String application) {
         this.application = application;
         return this;
@@ -25,9 +26,13 @@ public class DescribeSimulationApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationVersion")
     public String applicationVersion;
+
     public DescribeSimulationApplicationRequestBody withApplicationVersion(String applicationVersion) {
         this.applicationVersion = applicationVersion;
         return this;
     }
     
+    public DescribeSimulationApplicationRequestBody(@JsonProperty("application") String application) {
+        this.application = application;
+  }
 }

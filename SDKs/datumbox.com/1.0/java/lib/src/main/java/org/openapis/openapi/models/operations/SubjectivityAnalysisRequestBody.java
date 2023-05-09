@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubjectivityAnalysisRequestBody {
@@ -12,6 +13,7 @@ public class SubjectivityAnalysisRequestBody {
      */
     @SpeakeasyMetadata("form:name=api_key")
     public String apiKey;
+
     public SubjectivityAnalysisRequestBody withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,9 +24,13 @@ public class SubjectivityAnalysisRequestBody {
      */
     @SpeakeasyMetadata("form:name=text")
     public String text;
+
     public SubjectivityAnalysisRequestBody withText(String text) {
         this.text = text;
         return this;
     }
     
+    public SubjectivityAnalysisRequestBody(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

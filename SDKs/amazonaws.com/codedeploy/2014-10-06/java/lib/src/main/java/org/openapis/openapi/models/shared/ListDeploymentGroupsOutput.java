@@ -15,6 +15,7 @@ public class ListDeploymentGroupsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationName")
     public String applicationName;
+
     public ListDeploymentGroupsOutput withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -23,6 +24,7 @@ public class ListDeploymentGroupsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentGroups")
     public String[] deploymentGroups;
+
     public ListDeploymentGroupsOutput withDeploymentGroups(String[] deploymentGroups) {
         this.deploymentGroups = deploymentGroups;
         return this;
@@ -31,9 +33,11 @@ public class ListDeploymentGroupsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDeploymentGroupsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDeploymentGroupsOutput(){}
 }

@@ -15,9 +15,11 @@ public class SubmitJobRequestBodyEksPropertiesOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("podProperties")
     public org.openapis.openapi.models.shared.EksPodPropertiesOverride podProperties;
+
     public SubmitJobRequestBodyEksPropertiesOverride withPodProperties(org.openapis.openapi.models.shared.EksPodPropertiesOverride podProperties) {
         this.podProperties = podProperties;
         return this;
     }
     
+    public SubmitJobRequestBodyEksPropertiesOverride(){}
 }

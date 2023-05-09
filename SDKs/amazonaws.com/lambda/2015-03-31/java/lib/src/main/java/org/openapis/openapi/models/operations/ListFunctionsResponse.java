@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFunctionsResponse {
     
     public String contentType;
+
     public ListFunctionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListFunctionsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListFunctionsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class ListFunctionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFunctionsResponse listFunctionsResponse;
+
     public ListFunctionsResponse withListFunctionsResponse(org.openapis.openapi.models.shared.ListFunctionsResponse listFunctionsResponse) {
         this.listFunctionsResponse = listFunctionsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListFunctionsResponse {
      */
     
     public Object serviceException;
+
     public ListFunctionsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -46,6 +51,7 @@ public class ListFunctionsResponse {
     
     
     public Integer statusCode;
+
     public ListFunctionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListFunctionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFunctionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListFunctionsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListFunctionsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListFunctionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class CreateProvisioningArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public CreateProvisioningArtifactInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,6 +20,7 @@ public class CreateProvisioningArtifactInput {
     
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public CreateProvisioningArtifactInput withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -26,6 +28,7 @@ public class CreateProvisioningArtifactInput {
     
     @JsonProperty("Parameters")
     public ProvisioningArtifactProperties parameters;
+
     public CreateProvisioningArtifactInput withParameters(ProvisioningArtifactProperties parameters) {
         this.parameters = parameters;
         return this;
@@ -33,9 +36,15 @@ public class CreateProvisioningArtifactInput {
     
     @JsonProperty("ProductId")
     public String productId;
+
     public CreateProvisioningArtifactInput withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public CreateProvisioningArtifactInput(@JsonProperty("IdempotencyToken") String idempotencyToken, @JsonProperty("Parameters") ProvisioningArtifactProperties parameters, @JsonProperty("ProductId") String productId) {
+        this.idempotencyToken = idempotencyToken;
+        this.parameters = parameters;
+        this.productId = productId;
+  }
 }

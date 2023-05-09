@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyVolumeAttributeRequest {
     
     public AttributeBooleanValue autoEnableIO;
+
     public ModifyVolumeAttributeRequest withAutoEnableIO(AttributeBooleanValue autoEnableIO) {
         this.autoEnableIO = autoEnableIO;
         return this;
@@ -16,6 +17,7 @@ public class ModifyVolumeAttributeRequest {
     
     
     public Boolean dryRun;
+
     public ModifyVolumeAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,13 @@ public class ModifyVolumeAttributeRequest {
     
     
     public String volumeId;
+
     public ModifyVolumeAttributeRequest withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public ModifyVolumeAttributeRequest(@JsonProperty("VolumeId") String volumeId) {
+        this.volumeId = volumeId;
+  }
 }

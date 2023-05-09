@@ -18,6 +18,7 @@ public class SourceFork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
     public SourceSplitShard primary;
+
     public SourceFork withPrimary(SourceSplitShard primary) {
         this.primary = primary;
         return this;
@@ -29,6 +30,7 @@ public class SourceFork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primarySource")
     public DerivedSource primarySource;
+
     public SourceFork withPrimarySource(DerivedSource primarySource) {
         this.primarySource = primarySource;
         return this;
@@ -40,6 +42,7 @@ public class SourceFork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("residual")
     public SourceSplitShard residual;
+
     public SourceFork withResidual(SourceSplitShard residual) {
         this.residual = residual;
         return this;
@@ -51,9 +54,11 @@ public class SourceFork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("residualSource")
     public DerivedSource residualSource;
+
     public SourceFork withResidualSource(DerivedSource residualSource) {
         this.residualSource = residualSource;
         return this;
     }
     
+    public SourceFork(){}
 }

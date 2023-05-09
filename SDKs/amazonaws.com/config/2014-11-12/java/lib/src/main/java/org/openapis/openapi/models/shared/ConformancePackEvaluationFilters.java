@@ -15,6 +15,7 @@ public class ConformancePackEvaluationFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceType")
     public ConformancePackComplianceTypeEnum complianceType;
+
     public ConformancePackEvaluationFilters withComplianceType(ConformancePackComplianceTypeEnum complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -23,6 +24,7 @@ public class ConformancePackEvaluationFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigRuleNames")
     public String[] configRuleNames;
+
     public ConformancePackEvaluationFilters withConfigRuleNames(String[] configRuleNames) {
         this.configRuleNames = configRuleNames;
         return this;
@@ -31,6 +33,7 @@ public class ConformancePackEvaluationFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceIds")
     public String[] resourceIds;
+
     public ConformancePackEvaluationFilters withResourceIds(String[] resourceIds) {
         this.resourceIds = resourceIds;
         return this;
@@ -39,9 +42,11 @@ public class ConformancePackEvaluationFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public ConformancePackEvaluationFilters withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ConformancePackEvaluationFilters(){}
 }

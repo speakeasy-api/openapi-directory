@@ -20,6 +20,7 @@ public class Schema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisMethod")
     public AnalysisMethodEnum analysisMethod;
+
     public Schema withAnalysisMethod(AnalysisMethodEnum analysisMethod) {
         this.analysisMethod = analysisMethod;
         return this;
@@ -27,6 +28,7 @@ public class Schema {
     
     @JsonProperty("analysisRuleTypes")
     public AnalysisRuleTypeEnum[] analysisRuleTypes;
+
     public Schema withAnalysisRuleTypes(AnalysisRuleTypeEnum[] analysisRuleTypes) {
         this.analysisRuleTypes = analysisRuleTypes;
         return this;
@@ -34,6 +36,7 @@ public class Schema {
     
     @JsonProperty("collaborationArn")
     public String collaborationArn;
+
     public Schema withCollaborationArn(String collaborationArn) {
         this.collaborationArn = collaborationArn;
         return this;
@@ -41,6 +44,7 @@ public class Schema {
     
     @JsonProperty("collaborationId")
     public String collaborationId;
+
     public Schema withCollaborationId(String collaborationId) {
         this.collaborationId = collaborationId;
         return this;
@@ -48,6 +52,7 @@ public class Schema {
     
     @JsonProperty("columns")
     public Column[] columns;
+
     public Schema withColumns(Column[] columns) {
         this.columns = columns;
         return this;
@@ -57,6 +62,7 @@ public class Schema {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public Schema withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -64,6 +70,7 @@ public class Schema {
     
     @JsonProperty("creatorAccountId")
     public String creatorAccountId;
+
     public Schema withCreatorAccountId(String creatorAccountId) {
         this.creatorAccountId = creatorAccountId;
         return this;
@@ -71,6 +78,7 @@ public class Schema {
     
     @JsonProperty("description")
     public String description;
+
     public Schema withDescription(String description) {
         this.description = description;
         return this;
@@ -78,6 +86,7 @@ public class Schema {
     
     @JsonProperty("name")
     public String name;
+
     public Schema withName(String name) {
         this.name = name;
         return this;
@@ -85,6 +94,7 @@ public class Schema {
     
     @JsonProperty("partitionKeys")
     public Column[] partitionKeys;
+
     public Schema withPartitionKeys(Column[] partitionKeys) {
         this.partitionKeys = partitionKeys;
         return this;
@@ -92,6 +102,7 @@ public class Schema {
     
     @JsonProperty("type")
     public SchemaTypeEnum type;
+
     public Schema withType(SchemaTypeEnum type) {
         this.type = type;
         return this;
@@ -101,9 +112,23 @@ public class Schema {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public Schema withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Schema(@JsonProperty("analysisRuleTypes") AnalysisRuleTypeEnum[] analysisRuleTypes, @JsonProperty("collaborationArn") String collaborationArn, @JsonProperty("collaborationId") String collaborationId, @JsonProperty("columns") Column[] columns, @JsonProperty("createTime") OffsetDateTime createTime, @JsonProperty("creatorAccountId") String creatorAccountId, @JsonProperty("description") String description, @JsonProperty("name") String name, @JsonProperty("partitionKeys") Column[] partitionKeys, @JsonProperty("type") SchemaTypeEnum type, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.analysisRuleTypes = analysisRuleTypes;
+        this.collaborationArn = collaborationArn;
+        this.collaborationId = collaborationId;
+        this.columns = columns;
+        this.createTime = createTime;
+        this.creatorAccountId = creatorAccountId;
+        this.description = description;
+        this.name = name;
+        this.partitionKeys = partitionKeys;
+        this.type = type;
+        this.updateTime = updateTime;
+  }
 }

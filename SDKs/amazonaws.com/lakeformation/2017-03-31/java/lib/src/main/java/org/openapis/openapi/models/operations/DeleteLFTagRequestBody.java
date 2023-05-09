@@ -15,6 +15,7 @@ public class DeleteLFTagRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public DeleteLFTagRequestBody withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -25,9 +26,13 @@ public class DeleteLFTagRequestBody {
      */
     @JsonProperty("TagKey")
     public String tagKey;
+
     public DeleteLFTagRequestBody withTagKey(String tagKey) {
         this.tagKey = tagKey;
         return this;
     }
     
+    public DeleteLFTagRequestBody(@JsonProperty("TagKey") String tagKey) {
+        this.tagKey = tagKey;
+  }
 }

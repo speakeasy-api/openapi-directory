@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HashtagsCleanerRequest {
@@ -12,9 +13,13 @@ public class HashtagsCleanerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=post")
     public String post;
+
     public HashtagsCleanerRequest withPost(String post) {
         this.post = post;
         return this;
     }
     
+    public HashtagsCleanerRequest(@JsonProperty("post") String post) {
+        this.post = post;
+  }
 }

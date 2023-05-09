@@ -18,6 +18,7 @@ public class ListConversionSourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionSources")
     public ConversionSource[] conversionSources;
+
     public ListConversionSourcesResponse withConversionSources(ConversionSource[] conversionSources) {
         this.conversionSources = conversionSources;
         return this;
@@ -29,9 +30,11 @@ public class ListConversionSourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListConversionSourcesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListConversionSourcesResponse(){}
 }

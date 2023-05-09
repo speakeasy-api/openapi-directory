@@ -7,7 +7,8 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * PeriodicPaymentRequestExecutionRuleEnum - Behavior when periodic payment dates fall on holiday.
+ * PeriodicPaymentRequestExecutionRuleEnum - * `following` - following
+ * * `preceding` - preceding
  */
 public enum PeriodicPaymentRequestExecutionRuleEnum {
     FOLLOWING("following"),

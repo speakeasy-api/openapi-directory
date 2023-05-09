@@ -15,6 +15,7 @@ public class InterconnectDiagnosticsLinkLACPStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleSystemId")
     public String googleSystemId;
+
     public InterconnectDiagnosticsLinkLACPStatus withGoogleSystemId(String googleSystemId) {
         this.googleSystemId = googleSystemId;
         return this;
@@ -26,6 +27,7 @@ public class InterconnectDiagnosticsLinkLACPStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("neighborSystemId")
     public String neighborSystemId;
+
     public InterconnectDiagnosticsLinkLACPStatus withNeighborSystemId(String neighborSystemId) {
         this.neighborSystemId = neighborSystemId;
         return this;
@@ -37,9 +39,11 @@ public class InterconnectDiagnosticsLinkLACPStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public InterconnectDiagnosticsLinkLACPStatusStateEnum state;
+
     public InterconnectDiagnosticsLinkLACPStatus withState(InterconnectDiagnosticsLinkLACPStatusStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public InterconnectDiagnosticsLinkLACPStatus(){}
 }

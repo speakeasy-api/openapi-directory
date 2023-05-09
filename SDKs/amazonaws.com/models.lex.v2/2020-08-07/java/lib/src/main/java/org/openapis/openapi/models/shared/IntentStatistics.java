@@ -15,9 +15,11 @@ public class IntentStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discoveredIntentCount")
     public Long discoveredIntentCount;
+
     public IntentStatistics withDiscoveredIntentCount(Long discoveredIntentCount) {
         this.discoveredIntentCount = discoveredIntentCount;
         return this;
     }
     
+    public IntentStatistics(){}
 }

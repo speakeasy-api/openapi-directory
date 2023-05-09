@@ -15,9 +15,11 @@ public class DeleteLaunchProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchProfile")
     public LaunchProfile launchProfile;
+
     public DeleteLaunchProfileResponse withLaunchProfile(LaunchProfile launchProfile) {
         this.launchProfile = launchProfile;
         return this;
     }
     
+    public DeleteLaunchProfileResponse(){}
 }

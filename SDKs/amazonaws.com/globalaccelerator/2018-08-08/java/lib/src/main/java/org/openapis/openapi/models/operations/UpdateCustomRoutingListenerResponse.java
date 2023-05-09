@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCustomRoutingListenerResponse {
     
     public String contentType;
+
     public UpdateCustomRoutingListenerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateCustomRoutingListenerResponse {
      */
     
     public Object internalServiceErrorException;
+
     public UpdateCustomRoutingListenerResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCustomRoutingListenerResponse {
      */
     
     public Object invalidArgumentException;
+
     public UpdateCustomRoutingListenerResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateCustomRoutingListenerResponse {
      */
     
     public Object invalidPortRangeException;
+
     public UpdateCustomRoutingListenerResponse withInvalidPortRangeException(Object invalidPortRangeException) {
         this.invalidPortRangeException = invalidPortRangeException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateCustomRoutingListenerResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateCustomRoutingListenerResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateCustomRoutingListenerResponse {
      */
     
     public Object listenerNotFoundException;
+
     public UpdateCustomRoutingListenerResponse withListenerNotFoundException(Object listenerNotFoundException) {
         this.listenerNotFoundException = listenerNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateCustomRoutingListenerResponse {
     
     
     public Integer statusCode;
+
     public UpdateCustomRoutingListenerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateCustomRoutingListenerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCustomRoutingListenerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateCustomRoutingListenerResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateCustomRoutingListenerResponse updateCustomRoutingListenerResponse;
+
     public UpdateCustomRoutingListenerResponse withUpdateCustomRoutingListenerResponse(org.openapis.openapi.models.shared.UpdateCustomRoutingListenerResponse updateCustomRoutingListenerResponse) {
         this.updateCustomRoutingListenerResponse = updateCustomRoutingListenerResponse;
         return this;
     }
     
+    public UpdateCustomRoutingListenerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

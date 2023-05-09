@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSnippetsWorkspaceEncodedIdCommentsRequest {
@@ -12,6 +13,7 @@ public class PostSnippetsWorkspaceEncodedIdCommentsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public PostSnippetsWorkspaceEncodedIdCommentsRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class PostSnippetsWorkspaceEncodedIdCommentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=encoded_id")
     public String encodedId;
+
     public PostSnippetsWorkspaceEncodedIdCommentsRequest withEncodedId(String encodedId) {
         this.encodedId = encodedId;
         return this;
@@ -34,9 +37,15 @@ public class PostSnippetsWorkspaceEncodedIdCommentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public PostSnippetsWorkspaceEncodedIdCommentsRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public PostSnippetsWorkspaceEncodedIdCommentsRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("encoded_id") String encodedId, @JsonProperty("workspace") String workspace) {
+        this.requestBody = requestBody;
+        this.encodedId = encodedId;
+        this.workspace = workspace;
+  }
 }

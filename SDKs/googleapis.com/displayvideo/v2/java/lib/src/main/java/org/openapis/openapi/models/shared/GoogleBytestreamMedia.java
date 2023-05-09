@@ -18,9 +18,11 @@ public class GoogleBytestreamMedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public GoogleBytestreamMedia withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public GoogleBytestreamMedia(){}
 }

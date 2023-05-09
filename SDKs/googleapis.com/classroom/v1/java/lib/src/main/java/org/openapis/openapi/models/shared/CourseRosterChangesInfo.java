@@ -18,9 +18,11 @@ public class CourseRosterChangesInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("courseId")
     public String courseId;
+
     public CourseRosterChangesInfo withCourseId(String courseId) {
         this.courseId = courseId;
         return this;
     }
     
+    public CourseRosterChangesInfo(){}
 }

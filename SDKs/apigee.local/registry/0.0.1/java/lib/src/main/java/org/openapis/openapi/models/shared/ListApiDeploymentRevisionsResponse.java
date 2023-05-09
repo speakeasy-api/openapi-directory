@@ -18,6 +18,7 @@ public class ListApiDeploymentRevisionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiDeployments")
     public ApiDeployment[] apiDeployments;
+
     public ListApiDeploymentRevisionsResponse withApiDeployments(ApiDeployment[] apiDeployments) {
         this.apiDeployments = apiDeployments;
         return this;
@@ -29,9 +30,11 @@ public class ListApiDeploymentRevisionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListApiDeploymentRevisionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListApiDeploymentRevisionsResponse(){}
 }

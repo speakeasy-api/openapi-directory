@@ -15,6 +15,7 @@ public class NumberFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Eq")
     public Double eq;
+
     public NumberFilter withEq(Double eq) {
         this.eq = eq;
         return this;
@@ -23,6 +24,7 @@ public class NumberFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Gte")
     public Double gte;
+
     public NumberFilter withGte(Double gte) {
         this.gte = gte;
         return this;
@@ -31,9 +33,11 @@ public class NumberFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lte")
     public Double lte;
+
     public NumberFilter withLte(Double lte) {
         this.lte = lte;
         return this;
     }
     
+    public NumberFilter(){}
 }

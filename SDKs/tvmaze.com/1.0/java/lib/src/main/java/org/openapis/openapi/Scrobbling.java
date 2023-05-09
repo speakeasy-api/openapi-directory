@@ -59,11 +59,9 @@ public class Scrobbling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetScrobbleShowsShowIdResponse res = new org.openapis.openapi.models.operations.GetScrobbleShowsShowIdResponse() {{
+        org.openapis.openapi.models.operations.GetScrobbleShowsShowIdResponse res = new org.openapis.openapi.models.operations.GetScrobbleShowsShowIdResponse(contentType, httpRes.statusCode()) {{
             markedEpisodes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Scrobbling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostScrobbleEpisodesResponse res = new org.openapis.openapi.models.operations.PostScrobbleEpisodesResponse() {{
+        org.openapis.openapi.models.operations.PostScrobbleEpisodesResponse res = new org.openapis.openapi.models.operations.PostScrobbleEpisodesResponse(contentType, httpRes.statusCode()) {{
             bulkResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 207 || httpRes.statusCode() == 422) {
@@ -152,11 +148,9 @@ public class Scrobbling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostScrobbleShowsResponse res = new org.openapis.openapi.models.operations.PostScrobbleShowsResponse() {{
+        org.openapis.openapi.models.operations.PostScrobbleShowsResponse res = new org.openapis.openapi.models.operations.PostScrobbleShowsResponse(contentType, httpRes.statusCode()) {{
             bulkResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 207 || httpRes.statusCode() == 422) {
@@ -194,11 +188,9 @@ public class Scrobbling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutScrobbleEpisodesEpisodeIdResponse res = new org.openapis.openapi.models.operations.PutScrobbleEpisodesEpisodeIdResponse() {{
+        org.openapis.openapi.models.operations.PutScrobbleEpisodesEpisodeIdResponse res = new org.openapis.openapi.models.operations.PutScrobbleEpisodesEpisodeIdResponse(contentType, httpRes.statusCode()) {{
             markedEpisode = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

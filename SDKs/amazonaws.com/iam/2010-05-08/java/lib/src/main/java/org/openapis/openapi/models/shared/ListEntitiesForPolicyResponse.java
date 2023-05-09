@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListEntitiesForPolicyResponse {
     
     public Boolean isTruncated;
+
     public ListEntitiesForPolicyResponse withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -19,6 +20,7 @@ public class ListEntitiesForPolicyResponse {
     
     
     public String marker;
+
     public ListEntitiesForPolicyResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,6 +28,7 @@ public class ListEntitiesForPolicyResponse {
     
     
     public PolicyGroup[] policyGroups;
+
     public ListEntitiesForPolicyResponse withPolicyGroups(PolicyGroup[] policyGroups) {
         this.policyGroups = policyGroups;
         return this;
@@ -33,6 +36,7 @@ public class ListEntitiesForPolicyResponse {
     
     
     public PolicyRole[] policyRoles;
+
     public ListEntitiesForPolicyResponse withPolicyRoles(PolicyRole[] policyRoles) {
         this.policyRoles = policyRoles;
         return this;
@@ -40,9 +44,11 @@ public class ListEntitiesForPolicyResponse {
     
     
     public PolicyUser[] policyUsers;
+
     public ListEntitiesForPolicyResponse withPolicyUsers(PolicyUser[] policyUsers) {
         this.policyUsers = policyUsers;
         return this;
     }
     
+    public ListEntitiesForPolicyResponse(){}
 }

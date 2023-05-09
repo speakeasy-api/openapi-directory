@@ -15,6 +15,7 @@ public class AwsRdsDbPendingModifiedValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllocatedStorage")
     public Long allocatedStorage;
+
     public AwsRdsDbPendingModifiedValues withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
         return this;
@@ -23,6 +24,7 @@ public class AwsRdsDbPendingModifiedValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupRetentionPeriod")
     public Long backupRetentionPeriod;
+
     public AwsRdsDbPendingModifiedValues withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -31,6 +33,7 @@ public class AwsRdsDbPendingModifiedValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CaCertificateIdentifier")
     public String caCertificateIdentifier;
+
     public AwsRdsDbPendingModifiedValues withCaCertificateIdentifier(String caCertificateIdentifier) {
         this.caCertificateIdentifier = caCertificateIdentifier;
         return this;
@@ -39,6 +42,7 @@ public class AwsRdsDbPendingModifiedValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbInstanceClass")
     public String dbInstanceClass;
+
     public AwsRdsDbPendingModifiedValues withDbInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -47,6 +51,7 @@ public class AwsRdsDbPendingModifiedValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbInstanceIdentifier")
     public String dbInstanceIdentifier;
+
     public AwsRdsDbPendingModifiedValues withDbInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -55,6 +60,7 @@ public class AwsRdsDbPendingModifiedValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbSubnetGroupName")
     public String dbSubnetGroupName;
+
     public AwsRdsDbPendingModifiedValues withDbSubnetGroupName(String dbSubnetGroupName) {
         this.dbSubnetGroupName = dbSubnetGroupName;
         return this;
@@ -63,6 +69,7 @@ public class AwsRdsDbPendingModifiedValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineVersion")
     public String engineVersion;
+
     public AwsRdsDbPendingModifiedValues withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -71,6 +78,7 @@ public class AwsRdsDbPendingModifiedValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Iops")
     public Long iops;
+
     public AwsRdsDbPendingModifiedValues withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -79,6 +87,7 @@ public class AwsRdsDbPendingModifiedValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseModel")
     public String licenseModel;
+
     public AwsRdsDbPendingModifiedValues withLicenseModel(String licenseModel) {
         this.licenseModel = licenseModel;
         return this;
@@ -87,6 +96,7 @@ public class AwsRdsDbPendingModifiedValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MasterUserPassword")
     public String masterUserPassword;
+
     public AwsRdsDbPendingModifiedValues withMasterUserPassword(String masterUserPassword) {
         this.masterUserPassword = masterUserPassword;
         return this;
@@ -95,6 +105,7 @@ public class AwsRdsDbPendingModifiedValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MultiAZ")
     public Boolean multiAZ;
+
     public AwsRdsDbPendingModifiedValues withMultiAZ(Boolean multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -103,6 +114,7 @@ public class AwsRdsDbPendingModifiedValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PendingCloudWatchLogsExports")
     public AwsRdsPendingCloudWatchLogsExports pendingCloudWatchLogsExports;
+
     public AwsRdsDbPendingModifiedValues withPendingCloudWatchLogsExports(AwsRdsPendingCloudWatchLogsExports pendingCloudWatchLogsExports) {
         this.pendingCloudWatchLogsExports = pendingCloudWatchLogsExports;
         return this;
@@ -111,6 +123,7 @@ public class AwsRdsDbPendingModifiedValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Long port;
+
     public AwsRdsDbPendingModifiedValues withPort(Long port) {
         this.port = port;
         return this;
@@ -119,6 +132,7 @@ public class AwsRdsDbPendingModifiedValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessorFeatures")
     public AwsRdsDbProcessorFeature[] processorFeatures;
+
     public AwsRdsDbPendingModifiedValues withProcessorFeatures(AwsRdsDbProcessorFeature[] processorFeatures) {
         this.processorFeatures = processorFeatures;
         return this;
@@ -127,9 +141,11 @@ public class AwsRdsDbPendingModifiedValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageType")
     public String storageType;
+
     public AwsRdsDbPendingModifiedValues withStorageType(String storageType) {
         this.storageType = storageType;
         return this;
     }
     
+    public AwsRdsDbPendingModifiedValues(){}
 }

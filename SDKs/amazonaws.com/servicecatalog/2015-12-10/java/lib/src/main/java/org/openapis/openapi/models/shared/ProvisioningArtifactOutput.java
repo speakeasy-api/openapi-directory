@@ -15,6 +15,7 @@ public class ProvisioningArtifactOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ProvisioningArtifactOutput withDescription(String description) {
         this.description = description;
         return this;
@@ -23,9 +24,11 @@ public class ProvisioningArtifactOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public ProvisioningArtifactOutput withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public ProvisioningArtifactOutput(){}
 }

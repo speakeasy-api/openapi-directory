@@ -18,6 +18,7 @@ public class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchParameter")
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter launchParameter;
+
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequest withLaunchParameter(GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter launchParameter) {
         this.launchParameter = launchParameter;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateOnly")
     public Boolean validateOnly;
+
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequest withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequest(){}
 }

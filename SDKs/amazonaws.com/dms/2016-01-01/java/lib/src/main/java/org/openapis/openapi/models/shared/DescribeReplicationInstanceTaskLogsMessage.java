@@ -12,6 +12,7 @@ public class DescribeReplicationInstanceTaskLogsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeReplicationInstanceTaskLogsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -20,6 +21,7 @@ public class DescribeReplicationInstanceTaskLogsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRecords")
     public Long maxRecords;
+
     public DescribeReplicationInstanceTaskLogsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -27,9 +29,13 @@ public class DescribeReplicationInstanceTaskLogsMessage {
     
     @JsonProperty("ReplicationInstanceArn")
     public String replicationInstanceArn;
+
     public DescribeReplicationInstanceTaskLogsMessage withReplicationInstanceArn(String replicationInstanceArn) {
         this.replicationInstanceArn = replicationInstanceArn;
         return this;
     }
     
+    public DescribeReplicationInstanceTaskLogsMessage(@JsonProperty("ReplicationInstanceArn") String replicationInstanceArn) {
+        this.replicationInstanceArn = replicationInstanceArn;
+  }
 }

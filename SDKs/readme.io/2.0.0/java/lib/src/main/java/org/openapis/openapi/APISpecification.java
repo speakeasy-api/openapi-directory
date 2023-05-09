@@ -52,10 +52,8 @@ public class APISpecification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAPISpecificationResponse res = new org.openapis.openapi.models.operations.DeleteAPISpecificationResponse() {{
+        org.openapis.openapi.models.operations.DeleteAPISpecificationResponse res = new org.openapis.openapi.models.operations.DeleteAPISpecificationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -100,10 +98,8 @@ public class APISpecification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAPISpecificationResponse res = new org.openapis.openapi.models.operations.GetAPISpecificationResponse() {{
+        org.openapis.openapi.models.operations.GetAPISpecificationResponse res = new org.openapis.openapi.models.operations.GetAPISpecificationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -141,10 +137,8 @@ public class APISpecification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateAPISpecificationResponse res = new org.openapis.openapi.models.operations.UpdateAPISpecificationResponse() {{
+        org.openapis.openapi.models.operations.UpdateAPISpecificationResponse res = new org.openapis.openapi.models.operations.UpdateAPISpecificationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
@@ -188,10 +182,8 @@ public class APISpecification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UploadAPISpecificationResponse res = new org.openapis.openapi.models.operations.UploadAPISpecificationResponse() {{
+        org.openapis.openapi.models.operations.UploadAPISpecificationResponse res = new org.openapis.openapi.models.operations.UploadAPISpecificationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201 || httpRes.statusCode() == 400) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReleasesGetLatestPublicReleaseResponse {
     
     public String contentType;
+
     public ReleasesGetLatestPublicReleaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReleasesGetLatestPublicReleaseResponse {
     
     
     public Integer statusCode;
+
     public ReleasesGetLatestPublicReleaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReleasesGetLatestPublicReleaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReleasesGetLatestPublicReleaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReleasesGetLatestPublicReleaseResponse {
      */
     
     public ReleasesGetLatestPublicRelease200ApplicationJSON releasesGetLatestPublicRelease200ApplicationJSONObject;
+
     public ReleasesGetLatestPublicReleaseResponse withReleasesGetLatestPublicRelease200ApplicationJSONObject(ReleasesGetLatestPublicRelease200ApplicationJSON releasesGetLatestPublicRelease200ApplicationJSONObject) {
         this.releasesGetLatestPublicRelease200ApplicationJSONObject = releasesGetLatestPublicRelease200ApplicationJSONObject;
         return this;
@@ -46,9 +51,14 @@ public class ReleasesGetLatestPublicReleaseResponse {
      */
     
     public ReleasesGetLatestPublicRelease404ApplicationJSON releasesGetLatestPublicRelease404ApplicationJSONObject;
+
     public ReleasesGetLatestPublicReleaseResponse withReleasesGetLatestPublicRelease404ApplicationJSONObject(ReleasesGetLatestPublicRelease404ApplicationJSON releasesGetLatestPublicRelease404ApplicationJSONObject) {
         this.releasesGetLatestPublicRelease404ApplicationJSONObject = releasesGetLatestPublicRelease404ApplicationJSONObject;
         return this;
     }
     
+    public ReleasesGetLatestPublicReleaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class PushItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentHash")
     public String contentHash;
+
     public PushItem withContentHash(String contentHash) {
         this.contentHash = contentHash;
         return this;
@@ -29,6 +30,7 @@ public class PushItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataHash")
     public String metadataHash;
+
     public PushItem withMetadataHash(String metadataHash) {
         this.metadataHash = metadataHash;
         return this;
@@ -40,6 +42,7 @@ public class PushItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public String payload;
+
     public PushItem withPayload(String payload) {
         this.payload = payload;
         return this;
@@ -51,6 +54,7 @@ public class PushItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queue")
     public String queue;
+
     public PushItem withQueue(String queue) {
         this.queue = queue;
         return this;
@@ -62,6 +66,7 @@ public class PushItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryError")
     public RepositoryError repositoryError;
+
     public PushItem withRepositoryError(RepositoryError repositoryError) {
         this.repositoryError = repositoryError;
         return this;
@@ -73,6 +78,7 @@ public class PushItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("structuredDataHash")
     public String structuredDataHash;
+
     public PushItem withStructuredDataHash(String structuredDataHash) {
         this.structuredDataHash = structuredDataHash;
         return this;
@@ -84,9 +90,11 @@ public class PushItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PushItemTypeEnum type;
+
     public PushItem withType(PushItemTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PushItem(){}
 }

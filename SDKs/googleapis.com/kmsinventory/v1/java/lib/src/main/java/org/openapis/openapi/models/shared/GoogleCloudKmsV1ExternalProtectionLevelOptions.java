@@ -18,6 +18,7 @@ public class GoogleCloudKmsV1ExternalProtectionLevelOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ekmConnectionKeyPath")
     public String ekmConnectionKeyPath;
+
     public GoogleCloudKmsV1ExternalProtectionLevelOptions withEkmConnectionKeyPath(String ekmConnectionKeyPath) {
         this.ekmConnectionKeyPath = ekmConnectionKeyPath;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudKmsV1ExternalProtectionLevelOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalKeyUri")
     public String externalKeyUri;
+
     public GoogleCloudKmsV1ExternalProtectionLevelOptions withExternalKeyUri(String externalKeyUri) {
         this.externalKeyUri = externalKeyUri;
         return this;
     }
     
+    public GoogleCloudKmsV1ExternalProtectionLevelOptions(){}
 }

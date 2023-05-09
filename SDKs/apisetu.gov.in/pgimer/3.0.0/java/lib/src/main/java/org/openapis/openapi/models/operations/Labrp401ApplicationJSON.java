@@ -15,6 +15,7 @@ public class Labrp401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Labrp401ApplicationJSONErrorEnum error;
+
     public Labrp401ApplicationJSON withError(Labrp401ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Labrp401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Labrp401ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Labrp401ApplicationJSON withErrorDescription(Labrp401ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Labrp401ApplicationJSON(){}
 }

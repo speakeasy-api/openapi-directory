@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreatePortalResponse {
     @JsonProperty("portalArn")
     public String portalArn;
+
     public CreatePortalResponse withPortalArn(String portalArn) {
         this.portalArn = portalArn;
         return this;
@@ -19,6 +20,7 @@ public class CreatePortalResponse {
     
     @JsonProperty("portalId")
     public String portalId;
+
     public CreatePortalResponse withPortalId(String portalId) {
         this.portalId = portalId;
         return this;
@@ -26,6 +28,7 @@ public class CreatePortalResponse {
     
     @JsonProperty("portalStartUrl")
     public String portalStartUrl;
+
     public CreatePortalResponse withPortalStartUrl(String portalStartUrl) {
         this.portalStartUrl = portalStartUrl;
         return this;
@@ -33,6 +36,7 @@ public class CreatePortalResponse {
     
     @JsonProperty("portalStatus")
     public PortalStatus portalStatus;
+
     public CreatePortalResponse withPortalStatus(PortalStatus portalStatus) {
         this.portalStatus = portalStatus;
         return this;
@@ -40,9 +44,17 @@ public class CreatePortalResponse {
     
     @JsonProperty("ssoApplicationId")
     public String ssoApplicationId;
+
     public CreatePortalResponse withSsoApplicationId(String ssoApplicationId) {
         this.ssoApplicationId = ssoApplicationId;
         return this;
     }
     
+    public CreatePortalResponse(@JsonProperty("portalArn") String portalArn, @JsonProperty("portalId") String portalId, @JsonProperty("portalStartUrl") String portalStartUrl, @JsonProperty("portalStatus") PortalStatus portalStatus, @JsonProperty("ssoApplicationId") String ssoApplicationId) {
+        this.portalArn = portalArn;
+        this.portalId = portalId;
+        this.portalStartUrl = portalStartUrl;
+        this.portalStatus = portalStatus;
+        this.ssoApplicationId = ssoApplicationId;
+  }
 }

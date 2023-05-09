@@ -18,6 +18,7 @@ public class GoogleCloudResourcesettingsV1SettingMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public GoogleCloudResourcesettingsV1SettingMetadataDataTypeEnum dataType;
+
     public GoogleCloudResourcesettingsV1SettingMetadata withDataType(GoogleCloudResourcesettingsV1SettingMetadataDataTypeEnum dataType) {
         this.dataType = dataType;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudResourcesettingsV1SettingMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public GoogleCloudResourcesettingsV1Value defaultValue;
+
     public GoogleCloudResourcesettingsV1SettingMetadata withDefaultValue(GoogleCloudResourcesettingsV1Value defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudResourcesettingsV1SettingMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudResourcesettingsV1SettingMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudResourcesettingsV1SettingMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudResourcesettingsV1SettingMetadata withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudResourcesettingsV1SettingMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readOnly")
     public Boolean readOnly;
+
     public GoogleCloudResourcesettingsV1SettingMetadata withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
     }
     
+    public GoogleCloudResourcesettingsV1SettingMetadata(){}
 }

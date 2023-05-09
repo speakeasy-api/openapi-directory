@@ -15,9 +15,11 @@ public class SwishInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("swishNumber")
     public String swishNumber;
+
     public SwishInfo withSwishNumber(String swishNumber) {
         this.swishNumber = swishNumber;
         return this;
     }
     
+    public SwishInfo(){}
 }

@@ -18,9 +18,11 @@ public class TaxDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IND")
     public INDTaxDocuments ind;
+
     public TaxDocuments withInd(INDTaxDocuments ind) {
         this.ind = ind;
         return this;
     }
     
+    public TaxDocuments(){}
 }

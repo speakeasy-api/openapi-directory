@@ -15,9 +15,11 @@ public class CheckoutCustomFieldEdit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkout_custom_field")
     public CheckoutCustomFieldEditFields checkoutCustomField;
+
     public CheckoutCustomFieldEdit withCheckoutCustomField(CheckoutCustomFieldEditFields checkoutCustomField) {
         this.checkoutCustomField = checkoutCustomField;
         return this;
     }
     
+    public CheckoutCustomFieldEdit(){}
 }

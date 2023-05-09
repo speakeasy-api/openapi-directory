@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBClusterRoles {
     
     public String featureName;
+
     public DBClusterRoles withFeatureName(String featureName) {
         this.featureName = featureName;
         return this;
@@ -19,6 +20,7 @@ public class DBClusterRoles {
     
     
     public String roleArn;
+
     public DBClusterRoles withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -26,9 +28,11 @@ public class DBClusterRoles {
     
     
     public String status;
+
     public DBClusterRoles withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DBClusterRoles(){}
 }

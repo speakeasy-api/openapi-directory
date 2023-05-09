@@ -18,6 +18,7 @@ public class Screenshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contents")
     public String contents;
+
     public Screenshot withContents(String contents) {
         this.contents = contents;
         return this;
@@ -29,9 +30,11 @@ public class Screenshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Screenshot withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public Screenshot(){}
 }

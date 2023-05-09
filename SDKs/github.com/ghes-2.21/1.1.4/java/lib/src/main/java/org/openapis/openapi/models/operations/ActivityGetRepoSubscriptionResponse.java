@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActivityGetRepoSubscriptionResponse {
     
     public String contentType;
+
     public ActivityGetRepoSubscriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActivityGetRepoSubscriptionResponse {
     
     
     public Integer statusCode;
+
     public ActivityGetRepoSubscriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActivityGetRepoSubscriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActivityGetRepoSubscriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ActivityGetRepoSubscriptionResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ActivityGetRepoSubscriptionResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class ActivityGetRepoSubscriptionResponse {
      */
     
     public org.openapis.openapi.models.shared.RepositorySubscription repositorySubscription;
+
     public ActivityGetRepoSubscriptionResponse withRepositorySubscription(org.openapis.openapi.models.shared.RepositorySubscription repositorySubscription) {
         this.repositorySubscription = repositorySubscription;
         return this;
     }
     
+    public ActivityGetRepoSubscriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

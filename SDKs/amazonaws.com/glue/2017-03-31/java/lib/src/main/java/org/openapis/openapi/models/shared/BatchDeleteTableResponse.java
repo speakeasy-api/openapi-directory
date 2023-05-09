@@ -15,9 +15,11 @@ public class BatchDeleteTableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public TableError[] errors;
+
     public BatchDeleteTableResponse withErrors(TableError[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public BatchDeleteTableResponse(){}
 }

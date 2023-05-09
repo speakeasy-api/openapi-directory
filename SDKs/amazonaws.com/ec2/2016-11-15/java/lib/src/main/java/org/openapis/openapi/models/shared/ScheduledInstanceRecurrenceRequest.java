@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ScheduledInstanceRecurrenceRequest {
     
     public String frequency;
+
     public ScheduledInstanceRecurrenceRequest withFrequency(String frequency) {
         this.frequency = frequency;
         return this;
@@ -19,6 +20,7 @@ public class ScheduledInstanceRecurrenceRequest {
     
     
     public Long interval;
+
     public ScheduledInstanceRecurrenceRequest withInterval(Long interval) {
         this.interval = interval;
         return this;
@@ -26,6 +28,7 @@ public class ScheduledInstanceRecurrenceRequest {
     
     
     public Long[] occurrenceDays;
+
     public ScheduledInstanceRecurrenceRequest withOccurrenceDays(Long[] occurrenceDays) {
         this.occurrenceDays = occurrenceDays;
         return this;
@@ -33,6 +36,7 @@ public class ScheduledInstanceRecurrenceRequest {
     
     
     public Boolean occurrenceRelativeToEnd;
+
     public ScheduledInstanceRecurrenceRequest withOccurrenceRelativeToEnd(Boolean occurrenceRelativeToEnd) {
         this.occurrenceRelativeToEnd = occurrenceRelativeToEnd;
         return this;
@@ -40,9 +44,11 @@ public class ScheduledInstanceRecurrenceRequest {
     
     
     public String occurrenceUnit;
+
     public ScheduledInstanceRecurrenceRequest withOccurrenceUnit(String occurrenceUnit) {
         this.occurrenceUnit = occurrenceUnit;
         return this;
     }
     
+    public ScheduledInstanceRecurrenceRequest(){}
 }

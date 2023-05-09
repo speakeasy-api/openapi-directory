@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaTaskExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskAttemptStats")
     public GoogleCloudIntegrationsV1alphaAttemptStats[] taskAttemptStats;
+
     public GoogleCloudIntegrationsV1alphaTaskExecutionDetails withTaskAttemptStats(GoogleCloudIntegrationsV1alphaAttemptStats[] taskAttemptStats) {
         this.taskAttemptStats = taskAttemptStats;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaTaskExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskExecutionState")
     public GoogleCloudIntegrationsV1alphaTaskExecutionDetailsTaskExecutionStateEnum taskExecutionState;
+
     public GoogleCloudIntegrationsV1alphaTaskExecutionDetails withTaskExecutionState(GoogleCloudIntegrationsV1alphaTaskExecutionDetailsTaskExecutionStateEnum taskExecutionState) {
         this.taskExecutionState = taskExecutionState;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudIntegrationsV1alphaTaskExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskNumber")
     public String taskNumber;
+
     public GoogleCloudIntegrationsV1alphaTaskExecutionDetails withTaskNumber(String taskNumber) {
         this.taskNumber = taskNumber;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaTaskExecutionDetails(){}
 }

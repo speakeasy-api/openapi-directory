@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1ListRelatedAccountGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudRecaptchaenterpriseV1ListRelatedAccountGroupsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecaptchaenterpriseV1ListRelatedAccountGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relatedAccountGroups")
     public GoogleCloudRecaptchaenterpriseV1RelatedAccountGroup[] relatedAccountGroups;
+
     public GoogleCloudRecaptchaenterpriseV1ListRelatedAccountGroupsResponse withRelatedAccountGroups(GoogleCloudRecaptchaenterpriseV1RelatedAccountGroup[] relatedAccountGroups) {
         this.relatedAccountGroups = relatedAccountGroups;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1ListRelatedAccountGroupsResponse(){}
 }

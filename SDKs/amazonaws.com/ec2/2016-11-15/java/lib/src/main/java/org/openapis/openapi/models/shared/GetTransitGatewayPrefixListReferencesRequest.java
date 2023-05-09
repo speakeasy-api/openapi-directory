@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetTransitGatewayPrefixListReferencesRequest {
     
     public Boolean dryRun;
+
     public GetTransitGatewayPrefixListReferencesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class GetTransitGatewayPrefixListReferencesRequest {
     
     
     public GetTransitGatewayPrefixListReferencesRequestFilters[] filters;
+
     public GetTransitGatewayPrefixListReferencesRequest withFilters(GetTransitGatewayPrefixListReferencesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class GetTransitGatewayPrefixListReferencesRequest {
     
     
     public Long maxResults;
+
     public GetTransitGatewayPrefixListReferencesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class GetTransitGatewayPrefixListReferencesRequest {
     
     
     public String nextToken;
+
     public GetTransitGatewayPrefixListReferencesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,13 @@ public class GetTransitGatewayPrefixListReferencesRequest {
     
     
     public String transitGatewayRouteTableId;
+
     public GetTransitGatewayPrefixListReferencesRequest withTransitGatewayRouteTableId(String transitGatewayRouteTableId) {
         this.transitGatewayRouteTableId = transitGatewayRouteTableId;
         return this;
     }
     
+    public GetTransitGatewayPrefixListReferencesRequest(@JsonProperty("TransitGatewayRouteTableId") String transitGatewayRouteTableId) {
+        this.transitGatewayRouteTableId = transitGatewayRouteTableId;
+  }
 }

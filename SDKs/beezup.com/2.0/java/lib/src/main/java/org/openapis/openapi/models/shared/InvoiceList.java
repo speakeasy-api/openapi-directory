@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InvoiceList {
     @JsonProperty("invoices")
     public Invoice[] invoices;
+
     public InvoiceList withInvoices(Invoice[] invoices) {
         this.invoices = invoices;
         return this;
@@ -19,9 +20,14 @@ public class InvoiceList {
     
     @JsonProperty("links")
     public InvoiceListLinks links;
+
     public InvoiceList withLinks(InvoiceListLinks links) {
         this.links = links;
         return this;
     }
     
+    public InvoiceList(@JsonProperty("invoices") Invoice[] invoices, @JsonProperty("links") InvoiceListLinks links) {
+        this.invoices = invoices;
+        this.links = links;
+  }
 }

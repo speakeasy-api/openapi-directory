@@ -18,9 +18,11 @@ public class PollItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Item[] items;
+
     public PollItemsResponse withItems(Item[] items) {
         this.items = items;
         return this;
     }
     
+    public PollItemsResponse(){}
 }

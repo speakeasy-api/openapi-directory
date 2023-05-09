@@ -15,6 +15,7 @@ public class UpdateNodegroupVersionRequestBodyLaunchTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UpdateNodegroupVersionRequestBodyLaunchTemplate withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class UpdateNodegroupVersionRequestBodyLaunchTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateNodegroupVersionRequestBodyLaunchTemplate withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class UpdateNodegroupVersionRequestBodyLaunchTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public UpdateNodegroupVersionRequestBodyLaunchTemplate withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public UpdateNodegroupVersionRequestBodyLaunchTemplate(){}
 }

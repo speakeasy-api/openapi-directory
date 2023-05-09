@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETTestHarnessScenarioUsingGETResponse {
     
     public String contentType;
+
     public GETTestHarnessScenarioUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GETTestHarnessScenarioUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.MessageModel messageModel;
+
     public GETTestHarnessScenarioUsingGETResponse withMessageModel(org.openapis.openapi.models.shared.MessageModel messageModel) {
         this.messageModel = messageModel;
         return this;
@@ -26,6 +29,7 @@ public class GETTestHarnessScenarioUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETTestHarnessScenarioUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GETTestHarnessScenarioUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETTestHarnessScenarioUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GETTestHarnessScenarioUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.TestHarnessScenarioModel testHarnessScenarioModel;
+
     public GETTestHarnessScenarioUsingGETResponse withTestHarnessScenarioModel(org.openapis.openapi.models.shared.TestHarnessScenarioModel testHarnessScenarioModel) {
         this.testHarnessScenarioModel = testHarnessScenarioModel;
         return this;
     }
     
+    public GETTestHarnessScenarioUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

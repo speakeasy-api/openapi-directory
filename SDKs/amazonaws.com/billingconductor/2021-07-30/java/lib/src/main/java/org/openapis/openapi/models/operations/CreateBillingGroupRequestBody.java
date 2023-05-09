@@ -14,6 +14,7 @@ public class CreateBillingGroupRequestBody {
      */
     @JsonProperty("AccountGrouping")
     public CreateBillingGroupRequestBodyAccountGrouping accountGrouping;
+
     public CreateBillingGroupRequestBody withAccountGrouping(CreateBillingGroupRequestBodyAccountGrouping accountGrouping) {
         this.accountGrouping = accountGrouping;
         return this;
@@ -24,6 +25,7 @@ public class CreateBillingGroupRequestBody {
      */
     @JsonProperty("ComputationPreference")
     public CreateBillingGroupRequestBodyComputationPreference computationPreference;
+
     public CreateBillingGroupRequestBody withComputationPreference(CreateBillingGroupRequestBodyComputationPreference computationPreference) {
         this.computationPreference = computationPreference;
         return this;
@@ -35,6 +37,7 @@ public class CreateBillingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateBillingGroupRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class CreateBillingGroupRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public CreateBillingGroupRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +60,7 @@ public class CreateBillingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrimaryAccountId")
     public String primaryAccountId;
+
     public CreateBillingGroupRequestBody withPrimaryAccountId(String primaryAccountId) {
         this.primaryAccountId = primaryAccountId;
         return this;
@@ -67,9 +72,15 @@ public class CreateBillingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateBillingGroupRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateBillingGroupRequestBody(@JsonProperty("AccountGrouping") CreateBillingGroupRequestBodyAccountGrouping accountGrouping, @JsonProperty("ComputationPreference") CreateBillingGroupRequestBodyComputationPreference computationPreference, @JsonProperty("Name") String name) {
+        this.accountGrouping = accountGrouping;
+        this.computationPreference = computationPreference;
+        this.name = name;
+  }
 }

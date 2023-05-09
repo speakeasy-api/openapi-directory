@@ -15,6 +15,7 @@ public class RouterBgpPeerBfd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minReceiveInterval")
     public Long minReceiveInterval;
+
     public RouterBgpPeerBfd withMinReceiveInterval(Long minReceiveInterval) {
         this.minReceiveInterval = minReceiveInterval;
         return this;
@@ -26,6 +27,7 @@ public class RouterBgpPeerBfd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minTransmitInterval")
     public Long minTransmitInterval;
+
     public RouterBgpPeerBfd withMinTransmitInterval(Long minTransmitInterval) {
         this.minTransmitInterval = minTransmitInterval;
         return this;
@@ -37,6 +39,7 @@ public class RouterBgpPeerBfd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiplier")
     public Long multiplier;
+
     public RouterBgpPeerBfd withMultiplier(Long multiplier) {
         this.multiplier = multiplier;
         return this;
@@ -48,9 +51,11 @@ public class RouterBgpPeerBfd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionInitializationMode")
     public RouterBgpPeerBfdSessionInitializationModeEnum sessionInitializationMode;
+
     public RouterBgpPeerBfd withSessionInitializationMode(RouterBgpPeerBfdSessionInitializationModeEnum sessionInitializationMode) {
         this.sessionInitializationMode = sessionInitializationMode;
         return this;
     }
     
+    public RouterBgpPeerBfd(){}
 }

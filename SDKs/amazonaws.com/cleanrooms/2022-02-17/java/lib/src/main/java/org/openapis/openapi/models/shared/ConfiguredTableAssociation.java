@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ConfiguredTableAssociation {
     @JsonProperty("arn")
     public String arn;
+
     public ConfiguredTableAssociation withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class ConfiguredTableAssociation {
     
     @JsonProperty("configuredTableArn")
     public String configuredTableArn;
+
     public ConfiguredTableAssociation withConfiguredTableArn(String configuredTableArn) {
         this.configuredTableArn = configuredTableArn;
         return this;
@@ -33,6 +35,7 @@ public class ConfiguredTableAssociation {
     
     @JsonProperty("configuredTableId")
     public String configuredTableId;
+
     public ConfiguredTableAssociation withConfiguredTableId(String configuredTableId) {
         this.configuredTableId = configuredTableId;
         return this;
@@ -42,6 +45,7 @@ public class ConfiguredTableAssociation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public ConfiguredTableAssociation withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -50,6 +54,7 @@ public class ConfiguredTableAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ConfiguredTableAssociation withDescription(String description) {
         this.description = description;
         return this;
@@ -57,6 +62,7 @@ public class ConfiguredTableAssociation {
     
     @JsonProperty("id")
     public String id;
+
     public ConfiguredTableAssociation withId(String id) {
         this.id = id;
         return this;
@@ -64,6 +70,7 @@ public class ConfiguredTableAssociation {
     
     @JsonProperty("membershipArn")
     public String membershipArn;
+
     public ConfiguredTableAssociation withMembershipArn(String membershipArn) {
         this.membershipArn = membershipArn;
         return this;
@@ -71,6 +78,7 @@ public class ConfiguredTableAssociation {
     
     @JsonProperty("membershipId")
     public String membershipId;
+
     public ConfiguredTableAssociation withMembershipId(String membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -78,6 +86,7 @@ public class ConfiguredTableAssociation {
     
     @JsonProperty("name")
     public String name;
+
     public ConfiguredTableAssociation withName(String name) {
         this.name = name;
         return this;
@@ -85,6 +94,7 @@ public class ConfiguredTableAssociation {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public ConfiguredTableAssociation withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -94,9 +104,22 @@ public class ConfiguredTableAssociation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public ConfiguredTableAssociation withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ConfiguredTableAssociation(@JsonProperty("arn") String arn, @JsonProperty("configuredTableArn") String configuredTableArn, @JsonProperty("configuredTableId") String configuredTableId, @JsonProperty("createTime") OffsetDateTime createTime, @JsonProperty("id") String id, @JsonProperty("membershipArn") String membershipArn, @JsonProperty("membershipId") String membershipId, @JsonProperty("name") String name, @JsonProperty("roleArn") String roleArn, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.arn = arn;
+        this.configuredTableArn = configuredTableArn;
+        this.configuredTableId = configuredTableId;
+        this.createTime = createTime;
+        this.id = id;
+        this.membershipArn = membershipArn;
+        this.membershipId = membershipId;
+        this.name = name;
+        this.roleArn = roleArn;
+        this.updateTime = updateTime;
+  }
 }

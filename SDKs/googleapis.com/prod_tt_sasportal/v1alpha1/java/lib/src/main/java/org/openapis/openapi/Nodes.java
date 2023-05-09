@@ -62,11 +62,9 @@ public class Nodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesSignDeviceResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesSignDeviceResponse() {{
+        org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesSignDeviceResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesSignDeviceResponse(contentType, httpRes.statusCode()) {{
             sasPortalEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Nodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesUpdateSignedResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesUpdateSignedResponse() {{
+        org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesUpdateSignedResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesUpdateSignedResponse(contentType, httpRes.statusCode()) {{
             sasPortalDevice = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Nodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeleteResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeleteResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeleteResponse(contentType, httpRes.statusCode()) {{
             sasPortalEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Nodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsCreateResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsCreateResponse() {{
+        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsCreateResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsCreateResponse(contentType, httpRes.statusCode()) {{
             sasPortalDeployment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Nodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsListResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsListResponse() {{
+        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsListResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsListResponse(contentType, httpRes.statusCode()) {{
             sasPortalListDeploymentsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,11 +288,9 @@ public class Nodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateResponse() {{
+        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateResponse(contentType, httpRes.statusCode()) {{
             sasPortalDevice = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,11 +334,9 @@ public class Nodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateSignedResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateSignedResponse() {{
+        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateSignedResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateSignedResponse(contentType, httpRes.statusCode()) {{
             sasPortalDevice = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,11 +378,9 @@ public class Nodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesListResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesListResponse() {{
+        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesListResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesListResponse(contentType, httpRes.statusCode()) {{
             sasPortalListDevicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,11 +422,9 @@ public class Nodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesGetResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesGetResponse() {{
+        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesGetResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesGetResponse(contentType, httpRes.statusCode()) {{
             sasPortalNode = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,11 +468,9 @@ public class Nodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesMoveResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesMoveResponse() {{
+        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesMoveResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesMoveResponse(contentType, httpRes.statusCode()) {{
             sasPortalOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -534,11 +514,9 @@ public class Nodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesCreateResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesCreateResponse() {{
+        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesCreateResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesCreateResponse(contentType, httpRes.statusCode()) {{
             sasPortalNode = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -580,11 +558,9 @@ public class Nodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesListResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesListResponse() {{
+        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesListResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesListResponse(contentType, httpRes.statusCode()) {{
             sasPortalListNodesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -628,11 +604,9 @@ public class Nodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesPatchResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesPatchResponse() {{
+        org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesPatchResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesPatchResponse(contentType, httpRes.statusCode()) {{
             sasPortalNode = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

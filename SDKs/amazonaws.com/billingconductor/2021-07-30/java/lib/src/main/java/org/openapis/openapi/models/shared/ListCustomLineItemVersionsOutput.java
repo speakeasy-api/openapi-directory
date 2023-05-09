@@ -15,6 +15,7 @@ public class ListCustomLineItemVersionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomLineItemVersions")
     public CustomLineItemVersionListElement[] customLineItemVersions;
+
     public ListCustomLineItemVersionsOutput withCustomLineItemVersions(CustomLineItemVersionListElement[] customLineItemVersions) {
         this.customLineItemVersions = customLineItemVersions;
         return this;
@@ -23,9 +24,11 @@ public class ListCustomLineItemVersionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCustomLineItemVersionsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCustomLineItemVersionsOutput(){}
 }

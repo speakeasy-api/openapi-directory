@@ -18,9 +18,11 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Location")
     public S3Location s3Location;
+
     public Source withS3Location(S3Location s3Location) {
         this.s3Location = s3Location;
         return this;
     }
     
+    public Source(){}
 }

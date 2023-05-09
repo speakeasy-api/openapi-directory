@@ -15,6 +15,7 @@ public class DataReplicationInfoReplicatedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backloggedStorageBytes")
     public Long backloggedStorageBytes;
+
     public DataReplicationInfoReplicatedDisk withBackloggedStorageBytes(Long backloggedStorageBytes) {
         this.backloggedStorageBytes = backloggedStorageBytes;
         return this;
@@ -23,6 +24,7 @@ public class DataReplicationInfoReplicatedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceName")
     public String deviceName;
+
     public DataReplicationInfoReplicatedDisk withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -31,6 +33,7 @@ public class DataReplicationInfoReplicatedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicatedStorageBytes")
     public Long replicatedStorageBytes;
+
     public DataReplicationInfoReplicatedDisk withReplicatedStorageBytes(Long replicatedStorageBytes) {
         this.replicatedStorageBytes = replicatedStorageBytes;
         return this;
@@ -39,6 +42,7 @@ public class DataReplicationInfoReplicatedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rescannedStorageBytes")
     public Long rescannedStorageBytes;
+
     public DataReplicationInfoReplicatedDisk withRescannedStorageBytes(Long rescannedStorageBytes) {
         this.rescannedStorageBytes = rescannedStorageBytes;
         return this;
@@ -47,9 +51,11 @@ public class DataReplicationInfoReplicatedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalStorageBytes")
     public Long totalStorageBytes;
+
     public DataReplicationInfoReplicatedDisk withTotalStorageBytes(Long totalStorageBytes) {
         this.totalStorageBytes = totalStorageBytes;
         return this;
     }
     
+    public DataReplicationInfoReplicatedDisk(){}
 }

@@ -18,6 +18,7 @@ public class CancelPaymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CancelPaymentResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -29,9 +30,11 @@ public class CancelPaymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment")
     public Payment payment;
+
     public CancelPaymentResponse withPayment(Payment payment) {
         this.payment = payment;
         return this;
     }
     
+    public CancelPaymentResponse(){}
 }

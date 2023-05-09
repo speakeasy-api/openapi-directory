@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HdfsNameNode {
     @JsonProperty("Hostname")
     public String hostname;
+
     public HdfsNameNode withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -19,9 +20,14 @@ public class HdfsNameNode {
     
     @JsonProperty("Port")
     public Long port;
+
     public HdfsNameNode withPort(Long port) {
         this.port = port;
         return this;
     }
     
+    public HdfsNameNode(@JsonProperty("Hostname") String hostname, @JsonProperty("Port") Long port) {
+        this.hostname = hostname;
+        this.port = port;
+  }
 }

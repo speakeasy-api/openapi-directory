@@ -18,6 +18,7 @@ public class SubscriptionSubscriberSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelId")
     public String channelId;
+
     public SubscriptionSubscriberSnippet withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -29,6 +30,7 @@ public class SubscriptionSubscriberSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SubscriptionSubscriberSnippet withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class SubscriptionSubscriberSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnails")
     public ThumbnailDetails thumbnails;
+
     public SubscriptionSubscriberSnippet withThumbnails(ThumbnailDetails thumbnails) {
         this.thumbnails = thumbnails;
         return this;
@@ -51,9 +54,11 @@ public class SubscriptionSubscriberSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public SubscriptionSubscriberSnippet withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public SubscriptionSubscriberSnippet(){}
 }

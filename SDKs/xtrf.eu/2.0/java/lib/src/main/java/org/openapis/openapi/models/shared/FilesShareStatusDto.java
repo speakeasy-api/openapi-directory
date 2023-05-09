@@ -15,9 +15,11 @@ public class FilesShareStatusDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statuses")
     public FileShareStatusDto[] statuses;
+
     public FilesShareStatusDto withStatuses(FileShareStatusDto[] statuses) {
         this.statuses = statuses;
         return this;
     }
     
+    public FilesShareStatusDto(){}
 }

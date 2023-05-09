@@ -15,6 +15,7 @@ public class StartCostEstimationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public StartCostEstimationRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,9 +26,13 @@ public class StartCostEstimationRequestBody {
      */
     @JsonProperty("ResourceCollection")
     public StartCostEstimationRequestBodyResourceCollection resourceCollection;
+
     public StartCostEstimationRequestBody withResourceCollection(StartCostEstimationRequestBodyResourceCollection resourceCollection) {
         this.resourceCollection = resourceCollection;
         return this;
     }
     
+    public StartCostEstimationRequestBody(@JsonProperty("ResourceCollection") StartCostEstimationRequestBodyResourceCollection resourceCollection) {
+        this.resourceCollection = resourceCollection;
+  }
 }

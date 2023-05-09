@@ -18,6 +18,7 @@ public class ListActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public Action[] actions;
+
     public ListActionsResponse withActions(Action[] actions) {
         this.actions = actions;
         return this;
@@ -29,6 +30,7 @@ public class ListActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListActionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unsupportedActionNames")
     public String[] unsupportedActionNames;
+
     public ListActionsResponse withUnsupportedActionNames(String[] unsupportedActionNames) {
         this.unsupportedActionNames = unsupportedActionNames;
         return this;
     }
     
+    public ListActionsResponse(){}
 }

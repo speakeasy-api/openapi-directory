@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSetPasswordRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=old")
     public String old;
+
     public PostSetPasswordRequest withOld(String old) {
         this.old = old;
         return this;
@@ -16,6 +18,7 @@ public class PostSetPasswordRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=plain")
     public String plain;
+
     public PostSetPasswordRequest withPlain(String plain) {
         this.plain = plain;
         return this;
@@ -23,9 +26,15 @@ public class PostSetPasswordRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=verify")
     public String verify;
+
     public PostSetPasswordRequest withVerify(String verify) {
         this.verify = verify;
         return this;
     }
     
+    public PostSetPasswordRequest(@JsonProperty("old") String old, @JsonProperty("plain") String plain, @JsonProperty("verify") String verify) {
+        this.old = old;
+        this.plain = plain;
+        this.verify = verify;
+  }
 }

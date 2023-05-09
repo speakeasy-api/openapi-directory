@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsNetworkInterfaceCount {
     
     public Long max;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsNetworkInterfaceCount withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsNe
     
     
     public Long min;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsNetworkInterfaceCount withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsNetworkInterfaceCount(){}
 }

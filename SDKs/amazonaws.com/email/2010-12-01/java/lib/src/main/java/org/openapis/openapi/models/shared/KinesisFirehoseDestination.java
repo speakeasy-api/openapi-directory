@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * KinesisFirehoseDestination - &lt;p&gt;Contains the delivery stream ARN and the IAM role ARN associated with an Amazon Kinesis Firehose event destination.&lt;/p&gt; &lt;p&gt;Event destinations, such as Amazon Kinesis Firehose, are associated with configuration sets, which enable you to publish email sending events. For information about using configuration sets, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class KinesisFirehoseDestination {
     
     public String deliveryStreamARN;
+
     public KinesisFirehoseDestination withDeliveryStreamARN(String deliveryStreamARN) {
         this.deliveryStreamARN = deliveryStreamARN;
         return this;
@@ -19,9 +20,14 @@ public class KinesisFirehoseDestination {
     
     
     public String iamRoleARN;
+
     public KinesisFirehoseDestination withIAMRoleARN(String iamRoleARN) {
         this.iamRoleARN = iamRoleARN;
         return this;
     }
     
+    public KinesisFirehoseDestination(@JsonProperty("DeliveryStreamARN") String deliveryStreamARN, @JsonProperty("IAMRoleARN") String iamRoleARN) {
+        this.deliveryStreamARN = deliveryStreamARN;
+        this.iamRoleARN = iamRoleARN;
+  }
 }

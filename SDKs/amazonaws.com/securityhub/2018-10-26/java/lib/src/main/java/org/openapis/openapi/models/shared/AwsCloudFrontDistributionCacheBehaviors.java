@@ -15,9 +15,11 @@ public class AwsCloudFrontDistributionCacheBehaviors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public AwsCloudFrontDistributionCacheBehavior[] items;
+
     public AwsCloudFrontDistributionCacheBehaviors withItems(AwsCloudFrontDistributionCacheBehavior[] items) {
         this.items = items;
         return this;
     }
     
+    public AwsCloudFrontDistributionCacheBehaviors(){}
 }

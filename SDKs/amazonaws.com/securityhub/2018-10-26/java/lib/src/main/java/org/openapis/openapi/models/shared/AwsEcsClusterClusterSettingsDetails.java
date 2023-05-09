@@ -15,6 +15,7 @@ public class AwsEcsClusterClusterSettingsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsEcsClusterClusterSettingsDetails withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class AwsEcsClusterClusterSettingsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public AwsEcsClusterClusterSettingsDetails withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AwsEcsClusterClusterSettingsDetails(){}
 }

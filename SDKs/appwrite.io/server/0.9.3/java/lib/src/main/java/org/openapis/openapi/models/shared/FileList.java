@@ -15,6 +15,7 @@ public class FileList {
      */
     @JsonProperty("files")
     public File[] files;
+
     public FileList withFiles(File[] files) {
         this.files = files;
         return this;
@@ -25,9 +26,14 @@ public class FileList {
      */
     @JsonProperty("sum")
     public Integer sum;
+
     public FileList withSum(Integer sum) {
         this.sum = sum;
         return this;
     }
     
+    public FileList(@JsonProperty("files") File[] files, @JsonProperty("sum") Integer sum) {
+        this.files = files;
+        this.sum = sum;
+  }
 }

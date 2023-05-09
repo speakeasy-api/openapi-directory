@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommentsRequest {
@@ -13,6 +14,7 @@ public class GetCommentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetCommentsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -53,6 +55,7 @@ public class GetCommentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetCommentsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -63,6 +66,7 @@ public class GetCommentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public Long fromdate;
+
     public GetCommentsRequest withFromdate(Long fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -75,6 +79,7 @@ public class GetCommentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public String max;
+
     public GetCommentsRequest withMax(String max) {
         this.max = max;
         return this;
@@ -87,6 +92,7 @@ public class GetCommentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min")
     public String min;
+
     public GetCommentsRequest withMin(String min) {
         this.min = min;
         return this;
@@ -94,6 +100,7 @@ public class GetCommentsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public GetCommentsOrderEnum order;
+
     public GetCommentsRequest withOrder(GetCommentsOrderEnum order) {
         this.order = order;
         return this;
@@ -101,6 +108,7 @@ public class GetCommentsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetCommentsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -108,6 +116,7 @@ public class GetCommentsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetCommentsRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
@@ -119,6 +128,7 @@ public class GetCommentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
     public String site;
+
     public GetCommentsRequest withSite(String site) {
         this.site = site;
         return this;
@@ -126,6 +136,7 @@ public class GetCommentsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetCommentsSortEnum sort;
+
     public GetCommentsRequest withSort(GetCommentsSortEnum sort) {
         this.sort = sort;
         return this;
@@ -136,9 +147,13 @@ public class GetCommentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public Long todate;
+
     public GetCommentsRequest withTodate(Long todate) {
         this.todate = todate;
         return this;
     }
     
+    public GetCommentsRequest(@JsonProperty("site") String site) {
+        this.site = site;
+  }
 }

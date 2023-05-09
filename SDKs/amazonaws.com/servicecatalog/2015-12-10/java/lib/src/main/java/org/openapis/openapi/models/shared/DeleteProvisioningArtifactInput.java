@@ -12,6 +12,7 @@ public class DeleteProvisioningArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public DeleteProvisioningArtifactInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,6 +20,7 @@ public class DeleteProvisioningArtifactInput {
     
     @JsonProperty("ProductId")
     public String productId;
+
     public DeleteProvisioningArtifactInput withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -26,9 +28,14 @@ public class DeleteProvisioningArtifactInput {
     
     @JsonProperty("ProvisioningArtifactId")
     public String provisioningArtifactId;
+
     public DeleteProvisioningArtifactInput withProvisioningArtifactId(String provisioningArtifactId) {
         this.provisioningArtifactId = provisioningArtifactId;
         return this;
     }
     
+    public DeleteProvisioningArtifactInput(@JsonProperty("ProductId") String productId, @JsonProperty("ProvisioningArtifactId") String provisioningArtifactId) {
+        this.productId = productId;
+        this.provisioningArtifactId = provisioningArtifactId;
+  }
 }

@@ -15,6 +15,7 @@ public class PostUsersUseridLinkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceLanguage")
     public String forceLanguage;
+
     public PostUsersUseridLinkRequestBody withForceLanguage(String forceLanguage) {
         this.forceLanguage = forceLanguage;
         return this;
@@ -26,6 +27,7 @@ public class PostUsersUseridLinkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkMultiple")
     public Boolean linkMultiple;
+
     public PostUsersUseridLinkRequestBody withLinkMultiple(Boolean linkMultiple) {
         this.linkMultiple = linkMultiple;
         return this;
@@ -37,6 +39,7 @@ public class PostUsersUseridLinkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userImage")
     public String userImage;
+
     public PostUsersUseridLinkRequestBody withUserImage(String userImage) {
         this.userImage = userImage;
         return this;
@@ -48,6 +51,7 @@ public class PostUsersUseridLinkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userName")
     public String userName;
+
     public PostUsersUseridLinkRequestBody withUserName(String userName) {
         this.userName = userName;
         return this;
@@ -59,9 +63,11 @@ public class PostUsersUseridLinkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor")
     public PostUsersUseridLinkRequestBodyVendorEnum vendor;
+
     public PostUsersUseridLinkRequestBody withVendor(PostUsersUseridLinkRequestBodyVendorEnum vendor) {
         this.vendor = vendor;
         return this;
     }
     
+    public PostUsersUseridLinkRequestBody(){}
 }

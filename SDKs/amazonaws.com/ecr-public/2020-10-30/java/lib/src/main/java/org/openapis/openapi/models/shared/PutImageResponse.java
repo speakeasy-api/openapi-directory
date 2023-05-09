@@ -15,9 +15,11 @@ public class PutImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public Image image;
+
     public PutImageResponse withImage(Image image) {
         this.image = image;
         return this;
     }
     
+    public PutImageResponse(){}
 }

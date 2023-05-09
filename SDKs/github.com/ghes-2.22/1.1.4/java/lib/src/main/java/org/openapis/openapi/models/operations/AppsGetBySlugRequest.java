@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsGetBySlugRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_slug")
     public String appSlug;
+
     public AppsGetBySlugRequest withAppSlug(String appSlug) {
         this.appSlug = appSlug;
         return this;
     }
     
+    public AppsGetBySlugRequest(@JsonProperty("app_slug") String appSlug) {
+        this.appSlug = appSlug;
+  }
 }

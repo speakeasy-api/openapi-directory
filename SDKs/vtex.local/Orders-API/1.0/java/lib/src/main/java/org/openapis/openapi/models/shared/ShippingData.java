@@ -15,6 +15,7 @@ public class ShippingData {
      */
     @JsonProperty("address")
     public Address address;
+
     public ShippingData withAddress(Address address) {
         this.address = address;
         return this;
@@ -25,6 +26,7 @@ public class ShippingData {
      */
     @JsonProperty("id")
     public String id;
+
     public ShippingData withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class ShippingData {
      */
     @JsonProperty("logisticsInfo")
     public LogisticsInfo[] logisticsInfo;
+
     public ShippingData withLogisticsInfo(LogisticsInfo[] logisticsInfo) {
         this.logisticsInfo = logisticsInfo;
         return this;
@@ -45,6 +48,7 @@ public class ShippingData {
      */
     @JsonProperty("selectedAddresses")
     public SelectedAddress[] selectedAddresses;
+
     public ShippingData withSelectedAddresses(SelectedAddress[] selectedAddresses) {
         this.selectedAddresses = selectedAddresses;
         return this;
@@ -52,9 +56,17 @@ public class ShippingData {
     
     @JsonProperty("trackingHints")
     public String trackingHints;
+
     public ShippingData withTrackingHints(String trackingHints) {
         this.trackingHints = trackingHints;
         return this;
     }
     
+    public ShippingData(@JsonProperty("address") Address address, @JsonProperty("id") String id, @JsonProperty("logisticsInfo") LogisticsInfo[] logisticsInfo, @JsonProperty("selectedAddresses") SelectedAddress[] selectedAddresses, @JsonProperty("trackingHints") String trackingHints) {
+        this.address = address;
+        this.id = id;
+        this.logisticsInfo = logisticsInfo;
+        this.selectedAddresses = selectedAddresses;
+        this.trackingHints = trackingHints;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateMonitoringScheduleRequest {
     @JsonProperty("MonitoringScheduleConfig")
     public MonitoringScheduleConfig monitoringScheduleConfig;
+
     public CreateMonitoringScheduleRequest withMonitoringScheduleConfig(MonitoringScheduleConfig monitoringScheduleConfig) {
         this.monitoringScheduleConfig = monitoringScheduleConfig;
         return this;
@@ -18,6 +19,7 @@ public class CreateMonitoringScheduleRequest {
     
     @JsonProperty("MonitoringScheduleName")
     public String monitoringScheduleName;
+
     public CreateMonitoringScheduleRequest withMonitoringScheduleName(String monitoringScheduleName) {
         this.monitoringScheduleName = monitoringScheduleName;
         return this;
@@ -26,9 +28,14 @@ public class CreateMonitoringScheduleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateMonitoringScheduleRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateMonitoringScheduleRequest(@JsonProperty("MonitoringScheduleConfig") MonitoringScheduleConfig monitoringScheduleConfig, @JsonProperty("MonitoringScheduleName") String monitoringScheduleName) {
+        this.monitoringScheduleConfig = monitoringScheduleConfig;
+        this.monitoringScheduleName = monitoringScheduleName;
+  }
 }

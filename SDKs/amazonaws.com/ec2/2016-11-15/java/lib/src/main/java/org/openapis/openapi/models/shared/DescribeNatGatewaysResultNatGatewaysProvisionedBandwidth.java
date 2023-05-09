@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeNatGatewaysResultNatGatewaysProvisionedBandwidth {
     
     public OffsetDateTime provisionTime;
+
     public DescribeNatGatewaysResultNatGatewaysProvisionedBandwidth withProvisionTime(OffsetDateTime provisionTime) {
         this.provisionTime = provisionTime;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNatGatewaysResultNatGatewaysProvisionedBandwidth {
     
     
     public String provisioned;
+
     public DescribeNatGatewaysResultNatGatewaysProvisionedBandwidth withProvisioned(String provisioned) {
         this.provisioned = provisioned;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNatGatewaysResultNatGatewaysProvisionedBandwidth {
     
     
     public OffsetDateTime requestTime;
+
     public DescribeNatGatewaysResultNatGatewaysProvisionedBandwidth withRequestTime(OffsetDateTime requestTime) {
         this.requestTime = requestTime;
         return this;
@@ -33,6 +36,7 @@ public class DescribeNatGatewaysResultNatGatewaysProvisionedBandwidth {
     
     
     public String requested;
+
     public DescribeNatGatewaysResultNatGatewaysProvisionedBandwidth withRequested(String requested) {
         this.requested = requested;
         return this;
@@ -40,9 +44,11 @@ public class DescribeNatGatewaysResultNatGatewaysProvisionedBandwidth {
     
     
     public String status;
+
     public DescribeNatGatewaysResultNatGatewaysProvisionedBandwidth withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DescribeNatGatewaysResultNatGatewaysProvisionedBandwidth(){}
 }

@@ -14,6 +14,7 @@ public class RegisterChangeRequest {
      */
     @JsonProperty("discountValue")
     public Integer discountValue;
+
     public RegisterChangeRequest withDiscountValue(Integer discountValue) {
         this.discountValue = discountValue;
         return this;
@@ -24,6 +25,7 @@ public class RegisterChangeRequest {
      */
     @JsonProperty("incrementValue")
     public Integer incrementValue;
+
     public RegisterChangeRequest withIncrementValue(Integer incrementValue) {
         this.incrementValue = incrementValue;
         return this;
@@ -35,6 +37,7 @@ public class RegisterChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemsAdded")
     public RegisterChangeRequestItemsAdded[] itemsAdded;
+
     public RegisterChangeRequest withItemsAdded(RegisterChangeRequestItemsAdded[] itemsAdded) {
         this.itemsAdded = itemsAdded;
         return this;
@@ -46,6 +49,7 @@ public class RegisterChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemsRemoved")
     public RegisterChangeRequestItemsRemoved[] itemsRemoved;
+
     public RegisterChangeRequest withItemsRemoved(RegisterChangeRequestItemsRemoved[] itemsRemoved) {
         this.itemsRemoved = itemsRemoved;
         return this;
@@ -56,6 +60,7 @@ public class RegisterChangeRequest {
      */
     @JsonProperty("reason")
     public String reason;
+
     public RegisterChangeRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -66,9 +71,16 @@ public class RegisterChangeRequest {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public RegisterChangeRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public RegisterChangeRequest(@JsonProperty("discountValue") Integer discountValue, @JsonProperty("incrementValue") Integer incrementValue, @JsonProperty("reason") String reason, @JsonProperty("requestId") String requestId) {
+        this.discountValue = discountValue;
+        this.incrementValue = incrementValue;
+        this.reason = reason;
+        this.requestId = requestId;
+  }
 }

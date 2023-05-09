@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateInvoiceRequest {
@@ -14,6 +15,7 @@ public class UpdateInvoiceRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateInvoiceRequest updateInvoiceRequest;
+
     public UpdateInvoiceRequest withUpdateInvoiceRequest(org.openapis.openapi.models.shared.UpdateInvoiceRequest updateInvoiceRequest) {
         this.updateInvoiceRequest = updateInvoiceRequest;
         return this;
@@ -24,9 +26,14 @@ public class UpdateInvoiceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invoice_id")
     public String invoiceId;
+
     public UpdateInvoiceRequest withInvoiceId(String invoiceId) {
         this.invoiceId = invoiceId;
         return this;
     }
     
+    public UpdateInvoiceRequest(@JsonProperty("UpdateInvoiceRequest") org.openapis.openapi.models.shared.UpdateInvoiceRequest updateInvoiceRequest, @JsonProperty("invoice_id") String invoiceId) {
+        this.updateInvoiceRequest = updateInvoiceRequest;
+        this.invoiceId = invoiceId;
+  }
 }

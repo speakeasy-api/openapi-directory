@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteOrganisationsPartyIdRolesRoleIdRequest {
@@ -12,6 +13,7 @@ public class DeleteOrganisationsPartyIdRolesRoleIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public DeleteOrganisationsPartyIdRolesRoleIdRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class DeleteOrganisationsPartyIdRolesRoleIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
     public String partyId;
+
     public DeleteOrganisationsPartyIdRolesRoleIdRequest withPartyId(String partyId) {
         this.partyId = partyId;
         return this;
@@ -32,9 +35,15 @@ public class DeleteOrganisationsPartyIdRolesRoleIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roleId")
     public String roleId;
+
     public DeleteOrganisationsPartyIdRolesRoleIdRequest withRoleId(String roleId) {
         this.roleId = roleId;
         return this;
     }
     
+    public DeleteOrganisationsPartyIdRolesRoleIdRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("partyId") String partyId, @JsonProperty("roleId") String roleId) {
+        this.apiKey = apiKey;
+        this.partyId = partyId;
+        this.roleId = roleId;
+  }
 }

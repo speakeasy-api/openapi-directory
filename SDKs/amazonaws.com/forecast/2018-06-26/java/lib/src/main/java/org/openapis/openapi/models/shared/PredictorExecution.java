@@ -15,6 +15,7 @@ public class PredictorExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlgorithmArn")
     public String algorithmArn;
+
     public PredictorExecution withAlgorithmArn(String algorithmArn) {
         this.algorithmArn = algorithmArn;
         return this;
@@ -23,9 +24,11 @@ public class PredictorExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TestWindows")
     public TestWindowSummary[] testWindows;
+
     public PredictorExecution withTestWindows(TestWindowSummary[] testWindows) {
         this.testWindows = testWindows;
         return this;
     }
     
+    public PredictorExecution(){}
 }

@@ -12,6 +12,7 @@ public class ListAndSearchMediaItems200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first")
     public ListAndSearchMediaItems200ApplicationJSONLinksFirst first;
+
     public ListAndSearchMediaItems200ApplicationJSONLinks withFirst(ListAndSearchMediaItems200ApplicationJSONLinksFirst first) {
         this.first = first;
         return this;
@@ -20,6 +21,7 @@ public class ListAndSearchMediaItems200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last")
     public ListAndSearchMediaItems200ApplicationJSONLinksLast last;
+
     public ListAndSearchMediaItems200ApplicationJSONLinks withLast(ListAndSearchMediaItems200ApplicationJSONLinksLast last) {
         this.last = last;
         return this;
@@ -28,9 +30,11 @@ public class ListAndSearchMediaItems200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public ListAndSearchMediaItems200ApplicationJSONLinksSelf self;
+
     public ListAndSearchMediaItems200ApplicationJSONLinks withSelf(ListAndSearchMediaItems200ApplicationJSONLinksSelf self) {
         this.self = self;
         return this;
     }
     
+    public ListAndSearchMediaItems200ApplicationJSONLinks(){}
 }

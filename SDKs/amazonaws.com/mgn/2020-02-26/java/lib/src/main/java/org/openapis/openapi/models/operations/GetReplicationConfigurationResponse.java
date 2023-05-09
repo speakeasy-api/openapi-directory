@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetReplicationConfigurationResponse {
     
     public String contentType;
+
     public GetReplicationConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetReplicationConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.ReplicationConfiguration replicationConfiguration;
+
     public GetReplicationConfigurationResponse withReplicationConfiguration(org.openapis.openapi.models.shared.ReplicationConfiguration replicationConfiguration) {
         this.replicationConfiguration = replicationConfiguration;
         return this;
@@ -29,6 +32,7 @@ public class GetReplicationConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetReplicationConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class GetReplicationConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetReplicationConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetReplicationConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetReplicationConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetReplicationConfigurationResponse {
      */
     
     public Object uninitializedAccountException;
+
     public GetReplicationConfigurationResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public GetReplicationConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

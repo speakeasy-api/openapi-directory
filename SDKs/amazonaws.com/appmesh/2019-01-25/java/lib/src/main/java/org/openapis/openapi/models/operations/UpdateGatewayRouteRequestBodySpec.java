@@ -15,6 +15,7 @@ public class UpdateGatewayRouteRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grpcRoute")
     public org.openapis.openapi.models.shared.GrpcGatewayRoute grpcRoute;
+
     public UpdateGatewayRouteRequestBodySpec withGrpcRoute(org.openapis.openapi.models.shared.GrpcGatewayRoute grpcRoute) {
         this.grpcRoute = grpcRoute;
         return this;
@@ -23,6 +24,7 @@ public class UpdateGatewayRouteRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http2Route")
     public org.openapis.openapi.models.shared.HttpGatewayRoute http2Route;
+
     public UpdateGatewayRouteRequestBodySpec withHttp2Route(org.openapis.openapi.models.shared.HttpGatewayRoute http2Route) {
         this.http2Route = http2Route;
         return this;
@@ -31,6 +33,7 @@ public class UpdateGatewayRouteRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpRoute")
     public org.openapis.openapi.models.shared.HttpGatewayRoute httpRoute;
+
     public UpdateGatewayRouteRequestBodySpec withHttpRoute(org.openapis.openapi.models.shared.HttpGatewayRoute httpRoute) {
         this.httpRoute = httpRoute;
         return this;
@@ -39,9 +42,11 @@ public class UpdateGatewayRouteRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public UpdateGatewayRouteRequestBodySpec withPriority(Long priority) {
         this.priority = priority;
         return this;
     }
     
+    public UpdateGatewayRouteRequestBodySpec(){}
 }

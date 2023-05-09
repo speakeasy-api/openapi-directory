@@ -15,6 +15,7 @@ public class DescribeClustersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusters")
     public Cluster[] clusters;
+
     public DescribeClustersResponse withClusters(Cluster[] clusters) {
         this.clusters = clusters;
         return this;
@@ -23,9 +24,11 @@ public class DescribeClustersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failures")
     public Failure[] failures;
+
     public DescribeClustersResponse withFailures(Failure[] failures) {
         this.failures = failures;
         return this;
     }
     
+    public DescribeClustersResponse(){}
 }

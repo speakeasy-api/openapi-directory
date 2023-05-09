@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStoreTrackedOrdersRequest {
@@ -12,6 +13,7 @@ public class GetStoreTrackedOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public Long count;
+
     public GetStoreTrackedOrdersRequest withCount(Long count) {
         this.count = count;
         return this;
@@ -22,9 +24,13 @@ public class GetStoreTrackedOrdersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public GetStoreTrackedOrdersRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public GetStoreTrackedOrdersRequest(@JsonProperty("storeId") String storeId) {
+        this.storeId = storeId;
+  }
 }

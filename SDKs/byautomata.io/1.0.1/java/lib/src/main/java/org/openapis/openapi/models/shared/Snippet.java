@@ -12,6 +12,7 @@ public class Snippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String[] description;
+
     public Snippet withDescription(String[] description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class Snippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String[] text;
+
     public Snippet withText(String[] text) {
         this.text = text;
         return this;
@@ -28,9 +30,11 @@ public class Snippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String[] title;
+
     public Snippet withTitle(String[] title) {
         this.title = title;
         return this;
     }
     
+    public Snippet(){}
 }

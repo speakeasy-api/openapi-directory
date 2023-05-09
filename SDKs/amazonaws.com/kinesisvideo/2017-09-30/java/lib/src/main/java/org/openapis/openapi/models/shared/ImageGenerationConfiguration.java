@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImageGenerationConfiguration {
     @JsonProperty("DestinationConfig")
     public ImageGenerationDestinationConfig destinationConfig;
+
     public ImageGenerationConfiguration withDestinationConfig(ImageGenerationDestinationConfig destinationConfig) {
         this.destinationConfig = destinationConfig;
         return this;
@@ -21,6 +22,7 @@ public class ImageGenerationConfiguration {
     
     @JsonProperty("Format")
     public FormatEnum format;
+
     public ImageGenerationConfiguration withFormat(FormatEnum format) {
         this.format = format;
         return this;
@@ -29,6 +31,7 @@ public class ImageGenerationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FormatConfig")
     public java.util.Map<String, String> formatConfig;
+
     public ImageGenerationConfiguration withFormatConfig(java.util.Map<String, String> formatConfig) {
         this.formatConfig = formatConfig;
         return this;
@@ -37,6 +40,7 @@ public class ImageGenerationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HeightPixels")
     public Long heightPixels;
+
     public ImageGenerationConfiguration withHeightPixels(Long heightPixels) {
         this.heightPixels = heightPixels;
         return this;
@@ -44,6 +48,7 @@ public class ImageGenerationConfiguration {
     
     @JsonProperty("ImageSelectorType")
     public ImageSelectorTypeEnum imageSelectorType;
+
     public ImageGenerationConfiguration withImageSelectorType(ImageSelectorTypeEnum imageSelectorType) {
         this.imageSelectorType = imageSelectorType;
         return this;
@@ -51,6 +56,7 @@ public class ImageGenerationConfiguration {
     
     @JsonProperty("SamplingInterval")
     public Long samplingInterval;
+
     public ImageGenerationConfiguration withSamplingInterval(Long samplingInterval) {
         this.samplingInterval = samplingInterval;
         return this;
@@ -58,6 +64,7 @@ public class ImageGenerationConfiguration {
     
     @JsonProperty("Status")
     public ConfigurationStatusEnum status;
+
     public ImageGenerationConfiguration withStatus(ConfigurationStatusEnum status) {
         this.status = status;
         return this;
@@ -66,9 +73,17 @@ public class ImageGenerationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WidthPixels")
     public Long widthPixels;
+
     public ImageGenerationConfiguration withWidthPixels(Long widthPixels) {
         this.widthPixels = widthPixels;
         return this;
     }
     
+    public ImageGenerationConfiguration(@JsonProperty("DestinationConfig") ImageGenerationDestinationConfig destinationConfig, @JsonProperty("Format") FormatEnum format, @JsonProperty("ImageSelectorType") ImageSelectorTypeEnum imageSelectorType, @JsonProperty("SamplingInterval") Long samplingInterval, @JsonProperty("Status") ConfigurationStatusEnum status) {
+        this.destinationConfig = destinationConfig;
+        this.format = format;
+        this.imageSelectorType = imageSelectorType;
+        this.samplingInterval = samplingInterval;
+        this.status = status;
+  }
 }

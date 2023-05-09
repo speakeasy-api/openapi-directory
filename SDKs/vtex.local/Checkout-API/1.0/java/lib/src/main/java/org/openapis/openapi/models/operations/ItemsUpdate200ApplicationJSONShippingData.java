@@ -18,6 +18,7 @@ public class ItemsUpdate200ApplicationJSONShippingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public ItemsUpdate200ApplicationJSONShippingDataAddress address;
+
     public ItemsUpdate200ApplicationJSONShippingData withAddress(ItemsUpdate200ApplicationJSONShippingDataAddress address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class ItemsUpdate200ApplicationJSONShippingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableAddresses")
     public ItemsUpdate200ApplicationJSONShippingDataAvailableAddresses[] availableAddresses;
+
     public ItemsUpdate200ApplicationJSONShippingData withAvailableAddresses(ItemsUpdate200ApplicationJSONShippingDataAvailableAddresses[] availableAddresses) {
         this.availableAddresses = availableAddresses;
         return this;
@@ -40,6 +42,7 @@ public class ItemsUpdate200ApplicationJSONShippingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logisticsInfo")
     public ItemsUpdate200ApplicationJSONShippingDataLogisticsInfo[] logisticsInfo;
+
     public ItemsUpdate200ApplicationJSONShippingData withLogisticsInfo(ItemsUpdate200ApplicationJSONShippingDataLogisticsInfo[] logisticsInfo) {
         this.logisticsInfo = logisticsInfo;
         return this;
@@ -51,9 +54,11 @@ public class ItemsUpdate200ApplicationJSONShippingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedAddresses")
     public ItemsUpdate200ApplicationJSONShippingDataSelectedAddresses[] selectedAddresses;
+
     public ItemsUpdate200ApplicationJSONShippingData withSelectedAddresses(ItemsUpdate200ApplicationJSONShippingDataSelectedAddresses[] selectedAddresses) {
         this.selectedAddresses = selectedAddresses;
         return this;
     }
     
+    public ItemsUpdate200ApplicationJSONShippingData(){}
 }

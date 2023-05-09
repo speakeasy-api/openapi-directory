@@ -16,29 +16,30 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateSecurity;
 import org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateRequest;
 import org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateResponse;
+import org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1AnalysisInput;
-import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1AnnotatorSelector;
 import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1AnalysisResult;
 import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata;
-import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1ConversationLevelSentiment;
-import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1SentimentData;
-import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1PhraseMatchData;
-import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1IssueModelResult;
-import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1IssueAssignment;
-import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1Intent;
-import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1EntityTypeEnum;
-import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1Entity;
-import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1CallAnnotation;
-import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1IssueMatchData;
-import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1IntentMatchData;
-import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum;
-import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1EntityMentionData;
 import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1AnnotationBoundary;
+import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1AnnotatorSelector;
+import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1AnnotatorSelectorSummarizationConfig;
+import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1AnnotatorSelectorSummarizationConfigSummarizationModelEnum;
+import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1CallAnnotation;
+import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1ConversationLevelSentiment;
+import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1Entity;
+import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1EntityMentionData;
+import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum;
+import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1EntityTypeEnum;
+import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1Intent;
+import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1IntentMatchData;
+import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1IssueAssignment;
+import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1IssueMatchData;
+import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1IssueModelResult;
+import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1PhraseMatchData;
+import org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1SentimentData;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -47,294 +48,234 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateRequest req = new ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateRequest() {{
-                dollarXgafv = "2";
+            ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateRequest req = new ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 googleCloudContactcenterinsightsV1AnalysisInput = new GoogleCloudContactcenterinsightsV1AnalysisInput() {{
                     analysisResult = new GoogleCloudContactcenterinsightsV1AnalysisResult() {{
                         callAnalysisMetadata = new GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata() {{
                             annotations = new org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1CallAnnotation[]{{
                                 add(new GoogleCloudContactcenterinsightsV1CallAnnotation() {{
                                     annotationEndBoundary = new GoogleCloudContactcenterinsightsV1AnnotationBoundary() {{
-                                        transcriptIndex = 715190;
-                                        wordIndex = 844266;
+                                        transcriptIndex = 844266;
+                                        wordIndex = 602763;
                                     }};
                                     annotationStartBoundary = new GoogleCloudContactcenterinsightsV1AnnotationBoundary() {{
-                                        transcriptIndex = 602763;
-                                        wordIndex = 857946;
+                                        transcriptIndex = 857946;
+                                        wordIndex = 544883;
                                     }};
-                                    channelTag = 544883;
+                                    channelTag = 847252;
                                     entityMentionData = new GoogleCloudContactcenterinsightsV1EntityMentionData() {{
-                                        entityUniqueId = "illum";
+                                        entityUniqueId = "vel";
                                         sentiment = new GoogleCloudContactcenterinsightsV1SentimentData() {{
-                                            magnitude = 4236.55;
-                                            score = 6235.64;
+                                            magnitude = 6235.64;
+                                            score = 6458.94;
                                         }};
-                                        type = "PROPER";
+                                        type = GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum.PROPER;
                                     }};
                                     holdData = new java.util.HashMap<String, Object>() {{
-                                        put("iure", "magnam");
-                                        put("debitis", "ipsa");
+                                        put("magnam", "debitis");
+                                        put("ipsa", "delectus");
                                     }};
                                     intentMatchData = new GoogleCloudContactcenterinsightsV1IntentMatchData() {{
-                                        intentUniqueId = "delectus";
+                                        intentUniqueId = "tempora";
                                     }};
                                     interruptionData = new java.util.HashMap<String, Object>() {{
-                                        put("suscipit", "molestiae");
-                                        put("minus", "placeat");
+                                        put("molestiae", "minus");
+                                        put("placeat", "voluptatum");
                                     }};
                                     issueMatchData = new GoogleCloudContactcenterinsightsV1IssueMatchData() {{
                                         issueAssignment = new GoogleCloudContactcenterinsightsV1IssueAssignment() {{
-                                            displayName = "voluptatum";
-                                            issue = "iusto";
-                                            score = 5680.45;
+                                            displayName = "iusto";
+                                            issue = "excepturi";
+                                            score = 3927.85;
                                         }};
                                     }};
                                     phraseMatchData = new GoogleCloudContactcenterinsightsV1PhraseMatchData() {{
-                                        displayName = "nisi";
-                                        phraseMatcher = "recusandae";
+                                        displayName = "recusandae";
+                                        phraseMatcher = "temporibus";
                                     }};
                                     sentimentData = new GoogleCloudContactcenterinsightsV1SentimentData() {{
-                                        magnitude = 8360.79;
-                                        score = 710.36;
+                                        magnitude = 710.36;
+                                        score = 3373.96;
                                     }};
                                     silenceData = new java.util.HashMap<String, Object>() {{
-                                        put("veritatis", "deserunt");
-                                        put("perferendis", "ipsam");
+                                        put("deserunt", "perferendis");
                                     }};
                                 }}),
                                 add(new GoogleCloudContactcenterinsightsV1CallAnnotation() {{
                                     annotationEndBoundary = new GoogleCloudContactcenterinsightsV1AnnotationBoundary() {{
-                                        transcriptIndex = 832620;
-                                        wordIndex = 957156;
+                                        transcriptIndex = 368241;
+                                        wordIndex = 832620;
                                     }};
                                     annotationStartBoundary = new GoogleCloudContactcenterinsightsV1AnnotationBoundary() {{
-                                        transcriptIndex = 778157;
-                                        wordIndex = 140350;
+                                        transcriptIndex = 957156;
+                                        wordIndex = 778157;
                                     }};
-                                    channelTag = 870013;
+                                    channelTag = 140350;
                                     entityMentionData = new GoogleCloudContactcenterinsightsV1EntityMentionData() {{
                                         entityUniqueId = "at";
                                         sentiment = new GoogleCloudContactcenterinsightsV1SentimentData() {{
-                                            magnitude = 9786.19;
-                                            score = 4736.08;
+                                            magnitude = 8700.88;
+                                            score = 9786.19;
                                         }};
-                                        type = "COMMON";
+                                        type = GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum.PROPER;
                                     }};
                                     holdData = new java.util.HashMap<String, Object>() {{
-                                        put("esse", "totam");
-                                        put("porro", "dolorum");
-                                        put("dicta", "nam");
-                                        put("officia", "occaecati");
+                                        put("quod", "esse");
+                                        put("totam", "porro");
+                                        put("dolorum", "dicta");
+                                        put("nam", "officia");
                                     }};
                                     intentMatchData = new GoogleCloudContactcenterinsightsV1IntentMatchData() {{
-                                        intentUniqueId = "fugit";
+                                        intentUniqueId = "occaecati";
                                     }};
                                     interruptionData = new java.util.HashMap<String, Object>() {{
-                                        put("hic", "optio");
-                                        put("totam", "beatae");
-                                        put("commodi", "molestiae");
+                                        put("deleniti", "hic");
                                     }};
                                     issueMatchData = new GoogleCloudContactcenterinsightsV1IssueMatchData() {{
                                         issueAssignment = new GoogleCloudContactcenterinsightsV1IssueAssignment() {{
-                                            displayName = "modi";
-                                            issue = "qui";
-                                            score = 7742.34;
+                                            displayName = "optio";
+                                            issue = "totam";
+                                            score = 1059.07;
                                         }};
                                     }};
                                     phraseMatchData = new GoogleCloudContactcenterinsightsV1PhraseMatchData() {{
-                                        displayName = "cum";
-                                        phraseMatcher = "esse";
+                                        displayName = "commodi";
+                                        phraseMatcher = "molestiae";
                                     }};
                                     sentimentData = new GoogleCloudContactcenterinsightsV1SentimentData() {{
-                                        magnitude = 2165.5;
-                                        score = 5684.34;
+                                        magnitude = 2645.55;
+                                        score = 1863.32;
                                     }};
                                     silenceData = new java.util.HashMap<String, Object>() {{
-                                        put("perferendis", "ad");
+                                        put("cum", "esse");
+                                        put("ipsum", "excepturi");
+                                        put("aspernatur", "perferendis");
+                                        put("ad", "natus");
                                     }};
                                 }}),
                                 add(new GoogleCloudContactcenterinsightsV1CallAnnotation() {{
                                     annotationEndBoundary = new GoogleCloudContactcenterinsightsV1AnnotationBoundary() {{
-                                        transcriptIndex = 617636;
-                                        wordIndex = 149675;
+                                        transcriptIndex = 149675;
+                                        wordIndex = 612096;
                                     }};
                                     annotationStartBoundary = new GoogleCloudContactcenterinsightsV1AnnotationBoundary() {{
-                                        transcriptIndex = 612096;
-                                        wordIndex = 222321;
+                                        transcriptIndex = 222321;
+                                        wordIndex = 616934;
                                     }};
-                                    channelTag = 616934;
+                                    channelTag = 386489;
                                     entityMentionData = new GoogleCloudContactcenterinsightsV1EntityMentionData() {{
-                                        entityUniqueId = "laboriosam";
+                                        entityUniqueId = "hic";
                                         sentiment = new GoogleCloudContactcenterinsightsV1SentimentData() {{
-                                            magnitude = 9437.49;
-                                            score = 9025.99;
+                                            magnitude = 9025.99;
+                                            score = 6818.2;
                                         }};
-                                        type = "COMMON";
+                                        type = GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum.PROPER;
                                     }};
                                     holdData = new java.util.HashMap<String, Object>() {{
-                                        put("corporis", "iste");
-                                        put("iure", "saepe");
+                                        put("iste", "iure");
+                                        put("saepe", "quidem");
                                     }};
                                     intentMatchData = new GoogleCloudContactcenterinsightsV1IntentMatchData() {{
-                                        intentUniqueId = "quidem";
+                                        intentUniqueId = "architecto";
                                     }};
                                     interruptionData = new java.util.HashMap<String, Object>() {{
-                                        put("ipsa", "reiciendis");
+                                        put("reiciendis", "est");
                                     }};
                                     issueMatchData = new GoogleCloudContactcenterinsightsV1IssueMatchData() {{
                                         issueAssignment = new GoogleCloudContactcenterinsightsV1IssueAssignment() {{
-                                            displayName = "est";
-                                            issue = "mollitia";
-                                            score = 6706.38;
+                                            displayName = "mollitia";
+                                            issue = "laborum";
+                                            score = 1709.09;
                                         }};
                                     }};
                                     phraseMatchData = new GoogleCloudContactcenterinsightsV1PhraseMatchData() {{
-                                        displayName = "dolores";
-                                        phraseMatcher = "dolorem";
+                                        displayName = "dolorem";
+                                        phraseMatcher = "corporis";
                                     }};
                                     sentimentData = new GoogleCloudContactcenterinsightsV1SentimentData() {{
-                                        magnitude = 3581.52;
-                                        score = 1289.26;
+                                        magnitude = 1289.26;
+                                        score = 7506.86;
                                     }};
                                     silenceData = new java.util.HashMap<String, Object>() {{
-                                        put("enim", "omnis");
-                                        put("nemo", "minima");
-                                        put("excepturi", "accusantium");
-                                        put("iure", "culpa");
+                                        put("omnis", "nemo");
+                                        put("minima", "excepturi");
                                     }};
                                 }}),
                             }};
                             entities = new java.util.HashMap<String, org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1Entity>() {{
-                                put("sapiente", new GoogleCloudContactcenterinsightsV1Entity() {{
-                                    displayName = "architecto";
+                                put("iure", new GoogleCloudContactcenterinsightsV1Entity() {{
+                                    displayName = "culpa";
                                     metadata = new java.util.HashMap<String, String>() {{
-                                        put("dolorem", "culpa");
-                                        put("consequuntur", "repellat");
-                                        put("mollitia", "occaecati");
+                                        put("sapiente", "architecto");
+                                        put("mollitia", "dolorem");
+                                        put("culpa", "consequuntur");
+                                        put("repellat", "mollitia");
                                     }};
-                                    salience = 2532.91;
+                                    salience = 5818.5;
                                     sentiment = new GoogleCloudContactcenterinsightsV1SentimentData() {{
-                                        magnitude = 4143.69;
-                                        score = 4663.11;
+                                        magnitude = 2532.91;
+                                        score = 4143.69;
                                     }};
-                                    type = "CONSUMER_GOOD";
-                                }});
-                                put("velit", new GoogleCloudContactcenterinsightsV1Entity() {{
-                                    displayName = "error";
-                                    metadata = new java.util.HashMap<String, String>() {{
-                                        put("quis", "vitae");
-                                    }};
-                                    salience = 6747.52;
-                                    sentiment = new GoogleCloudContactcenterinsightsV1SentimentData() {{
-                                        magnitude = 6563.3;
-                                        score = 3172.02;
-                                    }};
-                                    type = "PERSON";
-                                }});
-                                put("quo", new GoogleCloudContactcenterinsightsV1Entity() {{
-                                    displayName = "sequi";
-                                    metadata = new java.util.HashMap<String, String>() {{
-                                        put("ipsam", "id");
-                                        put("possimus", "aut");
-                                        put("quasi", "error");
-                                        put("temporibus", "laborum");
-                                    }};
-                                    salience = 960.98;
-                                    sentiment = new GoogleCloudContactcenterinsightsV1SentimentData() {{
-                                        magnitude = 9719.45;
-                                        score = 9764.6;
-                                    }};
-                                    type = "NUMBER";
-                                }});
-                                put("nihil", new GoogleCloudContactcenterinsightsV1Entity() {{
-                                    displayName = "praesentium";
-                                    metadata = new java.util.HashMap<String, String>() {{
-                                        put("ipsa", "omnis");
-                                        put("voluptate", "cum");
-                                        put("perferendis", "doloremque");
-                                        put("reprehenderit", "ut");
-                                    }};
-                                    salience = 9795.87;
-                                    sentiment = new GoogleCloudContactcenterinsightsV1SentimentData() {{
-                                        magnitude = 1201.96;
-                                        score = 3594.44;
-                                    }};
-                                    type = "ORGANIZATION";
+                                    type = GoogleCloudContactcenterinsightsV1EntityTypeEnum.CONSUMER_GOOD;
                                 }});
                             }};
                             intents = new java.util.HashMap<String, org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1Intent>() {{
-                                put("dicta", new GoogleCloudContactcenterinsightsV1Intent() {{
-                                    displayName = "harum";
-                                    id = "enim";
+                                put("velit", new GoogleCloudContactcenterinsightsV1Intent() {{
+                                    displayName = "error";
+                                    id = "251aa52c-3f5a-4d01-9da1-ffe78f097b00";
                                 }});
-                                put("accusamus", new GoogleCloudContactcenterinsightsV1Intent() {{
-                                    displayName = "commodi";
-                                    id = "repudiandae";
+                                put("reprehenderit", new GoogleCloudContactcenterinsightsV1Intent() {{
+                                    displayName = "ut";
+                                    id = "f15471b5-e6e1-43b9-9d48-8e1e91e450ad";
                                 }});
                             }};
                             issueModelResult = new GoogleCloudContactcenterinsightsV1IssueModelResult() {{
-                                issueModel = "quae";
+                                issueModel = "explicabo";
                                 issues = new org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1IssueAssignment[]{{
                                     add(new GoogleCloudContactcenterinsightsV1IssueAssignment() {{
-                                        displayName = "quidem";
-                                        issue = "molestias";
-                                        score = 5666.02;
+                                        displayName = "distinctio";
+                                        issue = "quibusdam";
+                                        score = 2894.06;
+                                    }}),
+                                    add(new GoogleCloudContactcenterinsightsV1IssueAssignment() {{
+                                        displayName = "modi";
+                                        issue = "qui";
+                                        score = 3978.21;
+                                    }}),
+                                    add(new GoogleCloudContactcenterinsightsV1IssueAssignment() {{
+                                        displayName = "cupiditate";
+                                        issue = "quos";
+                                        score = 201.07;
                                     }}),
                                 }};
-                            }};
+                            }};;
                             phraseMatchers = new java.util.HashMap<String, org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1PhraseMatchData>() {{
-                                put("modi", new GoogleCloudContactcenterinsightsV1PhraseMatchData() {{
-                                    displayName = "praesentium";
-                                    phraseMatcher = "rem";
-                                }});
-                                put("voluptates", new GoogleCloudContactcenterinsightsV1PhraseMatchData() {{
-                                    displayName = "quasi";
-                                    phraseMatcher = "repudiandae";
-                                }});
-                                put("sint", new GoogleCloudContactcenterinsightsV1PhraseMatchData() {{
-                                    displayName = "veritatis";
-                                    phraseMatcher = "itaque";
-                                }});
-                                put("incidunt", new GoogleCloudContactcenterinsightsV1PhraseMatchData() {{
-                                    displayName = "enim";
-                                    phraseMatcher = "consequatur";
+                                put("assumenda", new GoogleCloudContactcenterinsightsV1PhraseMatchData() {{
+                                    displayName = "ipsam";
+                                    phraseMatcher = "alias";
                                 }});
                             }};
                             sentiments = new org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1ConversationLevelSentiment[]{{
                                 add(new GoogleCloudContactcenterinsightsV1ConversationLevelSentiment() {{
-                                    channelTag = 842342;
+                                    channelTag = 677817;
                                     sentimentData = new GoogleCloudContactcenterinsightsV1SentimentData() {{
-                                        magnitude = 1317.97;
-                                        score = 6471.74;
-                                    }};
-                                }}),
-                                add(new GoogleCloudContactcenterinsightsV1ConversationLevelSentiment() {{
-                                    channelTag = 716327;
-                                    sentimentData = new GoogleCloudContactcenterinsightsV1SentimentData() {{
-                                        magnitude = 8413.86;
-                                        score = 2894.06;
-                                    }};
-                                }}),
-                                add(new GoogleCloudContactcenterinsightsV1ConversationLevelSentiment() {{
-                                    channelTag = 264730;
-                                    sentimentData = new GoogleCloudContactcenterinsightsV1SentimentData() {{
-                                        magnitude = 1831.91;
-                                        score = 3978.21;
+                                        magnitude = 5696.18;
+                                        score = 2700.08;
                                     }};
                                 }}),
                             }};
-                        }};
-                        endTime = "cupiditate";
-                    }};
+                        }};;
+                        endTime = "facilis";
+                    }};;
                     annotatorSelector = new GoogleCloudContactcenterinsightsV1AnnotatorSelector() {{
                         issueModels = new String[]{{
-                            add("perferendis"),
-                            add("magni"),
-                            add("assumenda"),
+                            add("labore"),
+                            add("delectus"),
+                            add("eum"),
                         }};
                         phraseMatchers = new String[]{{
-                            add("alias"),
-                            add("fugit"),
+                            add("eligendi"),
                         }};
                         runEntityAnnotator = false;
                         runIntentAnnotator = false;
@@ -343,33 +284,39 @@ public class Application {
                         runPhraseMatcherAnnotator = false;
                         runSentimentAnnotator = false;
                         runSilenceAnnotator = false;
-                    }};
-                    name = "dolorum";
-                }};
-                accessToken = "excepturi";
-                alt = "json";
-                callback = "facilis";
-                fields = "tempore";
-                key = "labore";
-                oauthToken = "delectus";
-                parent = "eum";
+                        runSummarizationAnnotator = false;
+                        summarizationConfig = new GoogleCloudContactcenterinsightsV1AnnotatorSelectorSummarizationConfig() {{
+                            conversationProfile = "sint";
+                            summarizationModel = GoogleCloudContactcenterinsightsV1AnnotatorSelectorSummarizationConfigSummarizationModelEnum.SUMMARIZATION_MODEL_UNSPECIFIED;
+                        }};;
+                    }};;
+                    name = "Terence Marquardt";
+                }};;
+                accessToken = "debitis";
+                alt = AltEnum.PROTO;
+                callback = "dolorum";
+                fields = "in";
+                key = "in";
+                oauthToken = "illum";
                 prettyPrint = false;
-                quotaUser = "non";
-                uploadType = "eligendi";
-                uploadProtocol = "sint";
-            }}            
+                quotaUser = "maiores";
+                uploadType = "rerum";
+                uploadProtocol = "dicta";
+            }};            
 
-            ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateResponse res = sdk.projects.contactcenterinsightsProjectsLocationsConversationsAnalysesCreate(req, new ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateSecurity() {{
+            ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateResponse res = sdk.projects.contactcenterinsightsProjectsLocationsConversationsAnalysesCreate(req, new ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateSecurity("magnam", "cumque") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.googleLongrunningOperation.isPresent()) {
+            if (res.googleLongrunningOperation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -377,31 +324,32 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `contactcenterinsightsProjectsLocationsConversationsAnalysesCreate` - Creates an analysis. The long running operation is done when the analysis has completed.
-* `contactcenterinsightsProjectsLocationsConversationsAnalysesList` - Lists analyses.
-* `contactcenterinsightsProjectsLocationsConversationsBulkAnalyze` - Analyzes multiple conversations in a single request.
-* `contactcenterinsightsProjectsLocationsConversationsCalculateStats` - Gets conversation statistics.
-* `contactcenterinsightsProjectsLocationsConversationsCreate` - Creates a conversation.
-* `contactcenterinsightsProjectsLocationsConversationsIngest` - Imports conversations and processes them according to the user's configuration.
-* `contactcenterinsightsProjectsLocationsConversationsList` - Lists conversations.
-* `contactcenterinsightsProjectsLocationsInsightsdataExport` - Export insights data to a destination defined in the request body.
-* `contactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStats` - Gets an issue model's statistics.
-* `contactcenterinsightsProjectsLocationsIssueModelsCreate` - Creates an issue model.
-* `contactcenterinsightsProjectsLocationsIssueModelsDeploy` - Deploys an issue model. Returns an error if a model is already deployed. An issue model can only be used in analysis after it has been deployed.
-* `contactcenterinsightsProjectsLocationsIssueModelsIssuesList` - Lists issues.
-* `contactcenterinsightsProjectsLocationsIssueModelsList` - Lists issue models.
-* `contactcenterinsightsProjectsLocationsIssueModelsUndeploy` - Undeploys an issue model. An issue model can not be used in analysis after it has been undeployed.
-* `contactcenterinsightsProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `contactcenterinsightsProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-* `contactcenterinsightsProjectsLocationsPhraseMatchersCreate` - Creates a phrase matcher.
-* `contactcenterinsightsProjectsLocationsPhraseMatchersList` - Lists phrase matchers.
-* `contactcenterinsightsProjectsLocationsViewsCreate` - Creates a view.
-* `contactcenterinsightsProjectsLocationsViewsDelete` - Deletes a view.
-* `contactcenterinsightsProjectsLocationsViewsGet` - Gets a view.
-* `contactcenterinsightsProjectsLocationsViewsList` - Lists views.
-* `contactcenterinsightsProjectsLocationsViewsPatch` - Updates a view.
+* [contactcenterinsightsProjectsLocationsConversationsAnalysesCreate](docs/projects/README.md#contactcenterinsightsprojectslocationsconversationsanalysescreate) - Creates an analysis. The long running operation is done when the analysis has completed.
+* [contactcenterinsightsProjectsLocationsConversationsAnalysesList](docs/projects/README.md#contactcenterinsightsprojectslocationsconversationsanalyseslist) - Lists analyses.
+* [contactcenterinsightsProjectsLocationsConversationsBulkAnalyze](docs/projects/README.md#contactcenterinsightsprojectslocationsconversationsbulkanalyze) - Analyzes multiple conversations in a single request.
+* [contactcenterinsightsProjectsLocationsConversationsCalculateStats](docs/projects/README.md#contactcenterinsightsprojectslocationsconversationscalculatestats) - Gets conversation statistics.
+* [contactcenterinsightsProjectsLocationsConversationsCreate](docs/projects/README.md#contactcenterinsightsprojectslocationsconversationscreate) - Creates a conversation.
+* [contactcenterinsightsProjectsLocationsConversationsIngest](docs/projects/README.md#contactcenterinsightsprojectslocationsconversationsingest) - Imports conversations and processes them according to the user's configuration.
+* [contactcenterinsightsProjectsLocationsConversationsList](docs/projects/README.md#contactcenterinsightsprojectslocationsconversationslist) - Lists conversations.
+* [contactcenterinsightsProjectsLocationsConversationsUpload](docs/projects/README.md#contactcenterinsightsprojectslocationsconversationsupload) - Create a longrunning conversation upload operation. This method differs from CreateConversation by allowing audio transcription and optional DLP redaction.
+* [contactcenterinsightsProjectsLocationsInsightsdataExport](docs/projects/README.md#contactcenterinsightsprojectslocationsinsightsdataexport) - Export insights data to a destination defined in the request body.
+* [contactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStats](docs/projects/README.md#contactcenterinsightsprojectslocationsissuemodelscalculateissuemodelstats) - Gets an issue model's statistics.
+* [contactcenterinsightsProjectsLocationsIssueModelsCreate](docs/projects/README.md#contactcenterinsightsprojectslocationsissuemodelscreate) - Creates an issue model.
+* [contactcenterinsightsProjectsLocationsIssueModelsDeploy](docs/projects/README.md#contactcenterinsightsprojectslocationsissuemodelsdeploy) - Deploys an issue model. Returns an error if a model is already deployed. An issue model can only be used in analysis after it has been deployed.
+* [contactcenterinsightsProjectsLocationsIssueModelsIssuesList](docs/projects/README.md#contactcenterinsightsprojectslocationsissuemodelsissueslist) - Lists issues.
+* [contactcenterinsightsProjectsLocationsIssueModelsList](docs/projects/README.md#contactcenterinsightsprojectslocationsissuemodelslist) - Lists issue models.
+* [contactcenterinsightsProjectsLocationsIssueModelsUndeploy](docs/projects/README.md#contactcenterinsightsprojectslocationsissuemodelsundeploy) - Undeploys an issue model. An issue model can not be used in analysis after it has been undeployed.
+* [contactcenterinsightsProjectsLocationsOperationsCancel](docs/projects/README.md#contactcenterinsightsprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [contactcenterinsightsProjectsLocationsOperationsList](docs/projects/README.md#contactcenterinsightsprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [contactcenterinsightsProjectsLocationsPhraseMatchersCreate](docs/projects/README.md#contactcenterinsightsprojectslocationsphrasematcherscreate) - Creates a phrase matcher.
+* [contactcenterinsightsProjectsLocationsPhraseMatchersList](docs/projects/README.md#contactcenterinsightsprojectslocationsphrasematcherslist) - Lists phrase matchers.
+* [contactcenterinsightsProjectsLocationsViewsCreate](docs/projects/README.md#contactcenterinsightsprojectslocationsviewscreate) - Creates a view.
+* [contactcenterinsightsProjectsLocationsViewsDelete](docs/projects/README.md#contactcenterinsightsprojectslocationsviewsdelete) - Deletes a view.
+* [contactcenterinsightsProjectsLocationsViewsGet](docs/projects/README.md#contactcenterinsightsprojectslocationsviewsget) - Gets a view.
+* [contactcenterinsightsProjectsLocationsViewsList](docs/projects/README.md#contactcenterinsightsprojectslocationsviewslist) - Lists views.
+* [contactcenterinsightsProjectsLocationsViewsPatch](docs/projects/README.md#contactcenterinsightsprojectslocationsviewspatch) - Updates a view.
 <!-- End SDK Available Operations -->
 
 ### Maturity

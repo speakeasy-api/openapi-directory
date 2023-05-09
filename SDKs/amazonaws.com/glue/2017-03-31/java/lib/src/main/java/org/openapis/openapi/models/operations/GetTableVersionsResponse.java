@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTableVersionsResponse {
     
     public String contentType;
+
     public GetTableVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetTableVersionsResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetTableVersionsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetTableVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTableVersionsResponse getTableVersionsResponse;
+
     public GetTableVersionsResponse withGetTableVersionsResponse(org.openapis.openapi.models.shared.GetTableVersionsResponse getTableVersionsResponse) {
         this.getTableVersionsResponse = getTableVersionsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetTableVersionsResponse {
      */
     
     public Object glueEncryptionException;
+
     public GetTableVersionsResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -49,6 +54,7 @@ public class GetTableVersionsResponse {
      */
     
     public Object internalServiceException;
+
     public GetTableVersionsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class GetTableVersionsResponse {
      */
     
     public Object invalidInputException;
+
     public GetTableVersionsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class GetTableVersionsResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetTableVersionsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class GetTableVersionsResponse {
     
     
     public Integer statusCode;
+
     public GetTableVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetTableVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTableVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTableVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

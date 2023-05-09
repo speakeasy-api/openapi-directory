@@ -12,9 +12,13 @@ public class BatchDeleteDelegationByAssessmentRequestBody {
      */
     @JsonProperty("delegationIds")
     public String[] delegationIds;
+
     public BatchDeleteDelegationByAssessmentRequestBody withDelegationIds(String[] delegationIds) {
         this.delegationIds = delegationIds;
         return this;
     }
     
+    public BatchDeleteDelegationByAssessmentRequestBody(@JsonProperty("delegationIds") String[] delegationIds) {
+        this.delegationIds = delegationIds;
+  }
 }

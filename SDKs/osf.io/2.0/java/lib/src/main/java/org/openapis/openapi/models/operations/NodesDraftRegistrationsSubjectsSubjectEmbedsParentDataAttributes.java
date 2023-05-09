@@ -15,6 +15,7 @@ public class NodesDraftRegistrationsSubjectsSubjectEmbedsParentDataAttributes {
      */
     
     public String taxonomyName;
+
     public NodesDraftRegistrationsSubjectsSubjectEmbedsParentDataAttributes withTaxonomyName(String taxonomyName) {
         this.taxonomyName = taxonomyName;
         return this;
@@ -25,9 +26,11 @@ public class NodesDraftRegistrationsSubjectsSubjectEmbedsParentDataAttributes {
      */
     
     public String text;
+
     public NodesDraftRegistrationsSubjectsSubjectEmbedsParentDataAttributes withText(String text) {
         this.text = text;
         return this;
     }
     
+    public NodesDraftRegistrationsSubjectsSubjectEmbedsParentDataAttributes(){}
 }

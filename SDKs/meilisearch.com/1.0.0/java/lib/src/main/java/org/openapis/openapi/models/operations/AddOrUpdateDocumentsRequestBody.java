@@ -12,6 +12,7 @@ public class AddOrUpdateDocumentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public String author;
+
     public AddOrUpdateDocumentsRequestBody withAuthor(String author) {
         this.author = author;
         return this;
@@ -20,6 +21,7 @@ public class AddOrUpdateDocumentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public AddOrUpdateDocumentsRequestBody withDate(String date) {
         this.date = date;
         return this;
@@ -28,9 +30,11 @@ public class AddOrUpdateDocumentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Double id;
+
     public AddOrUpdateDocumentsRequestBody withId(Double id) {
         this.id = id;
         return this;
     }
     
+    public AddOrUpdateDocumentsRequestBody(){}
 }

@@ -15,9 +15,11 @@ public class SetVaultNotificationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vaultNotificationConfig")
     public SetVaultNotificationsRequestBodyVaultNotificationConfig vaultNotificationConfig;
+
     public SetVaultNotificationsRequestBody withVaultNotificationConfig(SetVaultNotificationsRequestBodyVaultNotificationConfig vaultNotificationConfig) {
         this.vaultNotificationConfig = vaultNotificationConfig;
         return this;
     }
     
+    public SetVaultNotificationsRequestBody(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InstallToRemoteAccessSessionResponse {
@@ -12,6 +13,7 @@ public class InstallToRemoteAccessSessionResponse {
      */
     
     public Object argumentException;
+
     public InstallToRemoteAccessSessionResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class InstallToRemoteAccessSessionResponse {
     
     
     public String contentType;
+
     public InstallToRemoteAccessSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class InstallToRemoteAccessSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.InstallToRemoteAccessSessionResult installToRemoteAccessSessionResult;
+
     public InstallToRemoteAccessSessionResponse withInstallToRemoteAccessSessionResult(org.openapis.openapi.models.shared.InstallToRemoteAccessSessionResult installToRemoteAccessSessionResult) {
         this.installToRemoteAccessSessionResult = installToRemoteAccessSessionResult;
         return this;
@@ -39,6 +43,7 @@ public class InstallToRemoteAccessSessionResponse {
      */
     
     public Object limitExceededException;
+
     public InstallToRemoteAccessSessionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class InstallToRemoteAccessSessionResponse {
      */
     
     public Object notFoundException;
+
     public InstallToRemoteAccessSessionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class InstallToRemoteAccessSessionResponse {
      */
     
     public Object serviceAccountException;
+
     public InstallToRemoteAccessSessionResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class InstallToRemoteAccessSessionResponse {
     
     
     public Integer statusCode;
+
     public InstallToRemoteAccessSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class InstallToRemoteAccessSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InstallToRemoteAccessSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public InstallToRemoteAccessSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

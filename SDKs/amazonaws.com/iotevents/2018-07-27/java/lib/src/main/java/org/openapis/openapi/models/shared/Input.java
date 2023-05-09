@@ -15,6 +15,7 @@ public class Input {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputConfiguration")
     public InputConfiguration inputConfiguration;
+
     public Input withInputConfiguration(InputConfiguration inputConfiguration) {
         this.inputConfiguration = inputConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class Input {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputDefinition")
     public InputDefinition inputDefinition;
+
     public Input withInputDefinition(InputDefinition inputDefinition) {
         this.inputDefinition = inputDefinition;
         return this;
     }
     
+    public Input(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSecurityProfileResponse {
     
     public String contentType;
+
     public DeleteSecurityProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSecurityProfileResponse {
      */
     
     public java.util.Map<String, Object> deleteSecurityProfileResponse;
+
     public DeleteSecurityProfileResponse withDeleteSecurityProfileResponse(java.util.Map<String, Object> deleteSecurityProfileResponse) {
         this.deleteSecurityProfileResponse = deleteSecurityProfileResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSecurityProfileResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteSecurityProfileResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSecurityProfileResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteSecurityProfileResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteSecurityProfileResponse {
     
     
     public Integer statusCode;
+
     public DeleteSecurityProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteSecurityProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSecurityProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteSecurityProfileResponse {
      */
     
     public Object throttlingException;
+
     public DeleteSecurityProfileResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteSecurityProfileResponse {
      */
     
     public Object versionConflictException;
+
     public DeleteSecurityProfileResponse withVersionConflictException(Object versionConflictException) {
         this.versionConflictException = versionConflictException;
         return this;
     }
     
+    public DeleteSecurityProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

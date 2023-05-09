@@ -18,6 +18,7 @@ public class GoogleAppsCloudidentityDevicesV1ListDevicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public GoogleAppsCloudidentityDevicesV1Device[] devices;
+
     public GoogleAppsCloudidentityDevicesV1ListDevicesResponse withDevices(GoogleAppsCloudidentityDevicesV1Device[] devices) {
         this.devices = devices;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsCloudidentityDevicesV1ListDevicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleAppsCloudidentityDevicesV1ListDevicesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleAppsCloudidentityDevicesV1ListDevicesResponse(){}
 }

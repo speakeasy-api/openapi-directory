@@ -18,9 +18,11 @@ public class RowLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public Row[] rows;
+
     public RowLayout withRows(Row[] rows) {
         this.rows = rows;
         return this;
     }
     
+    public RowLayout(){}
 }

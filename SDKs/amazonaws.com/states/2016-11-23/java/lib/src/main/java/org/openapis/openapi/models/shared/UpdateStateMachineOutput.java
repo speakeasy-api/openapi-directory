@@ -19,9 +19,13 @@ public class UpdateStateMachineOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateDate")
     public OffsetDateTime updateDate;
+
     public UpdateStateMachineOutput withUpdateDate(OffsetDateTime updateDate) {
         this.updateDate = updateDate;
         return this;
     }
     
+    public UpdateStateMachineOutput(@JsonProperty("updateDate") OffsetDateTime updateDate) {
+        this.updateDate = updateDate;
+  }
 }

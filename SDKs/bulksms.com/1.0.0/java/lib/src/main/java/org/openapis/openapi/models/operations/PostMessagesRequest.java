@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -16,6 +17,7 @@ public class PostMessagesRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SubmissionEntry[] requestBody;
+
     public PostMessagesRequest withRequestBody(org.openapis.openapi.models.shared.SubmissionEntry[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -38,6 +40,7 @@ public class PostMessagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auto-unicode")
     public Boolean autoUnicode;
+
     public PostMessagesRequest withAutoUnicode(Boolean autoUnicode) {
         this.autoUnicode = autoUnicode;
         return this;
@@ -51,6 +54,7 @@ public class PostMessagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deduplication-id")
     public Integer deduplicationId;
+
     public PostMessagesRequest withDeduplicationId(Integer deduplicationId) {
         this.deduplicationId = deduplicationId;
         return this;
@@ -68,6 +72,7 @@ public class PostMessagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=schedule-date")
     public OffsetDateTime scheduleDate;
+
     public PostMessagesRequest withScheduleDate(OffsetDateTime scheduleDate) {
         this.scheduleDate = scheduleDate;
         return this;
@@ -82,9 +87,13 @@ public class PostMessagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=schedule-description")
     public String scheduleDescription;
+
     public PostMessagesRequest withScheduleDescription(String scheduleDescription) {
         this.scheduleDescription = scheduleDescription;
         return this;
     }
     
+    public PostMessagesRequest(@JsonProperty("RequestBody") org.openapis.openapi.models.shared.SubmissionEntry[] requestBody) {
+        this.requestBody = requestBody;
+  }
 }

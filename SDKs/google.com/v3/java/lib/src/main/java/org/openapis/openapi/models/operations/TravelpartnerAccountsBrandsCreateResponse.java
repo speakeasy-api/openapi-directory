@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TravelpartnerAccountsBrandsCreateResponse {
@@ -12,6 +13,7 @@ public class TravelpartnerAccountsBrandsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.Brand brand;
+
     public TravelpartnerAccountsBrandsCreateResponse withBrand(org.openapis.openapi.models.shared.Brand brand) {
         this.brand = brand;
         return this;
@@ -19,6 +21,7 @@ public class TravelpartnerAccountsBrandsCreateResponse {
     
     
     public String contentType;
+
     public TravelpartnerAccountsBrandsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class TravelpartnerAccountsBrandsCreateResponse {
     
     
     public Integer statusCode;
+
     public TravelpartnerAccountsBrandsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class TravelpartnerAccountsBrandsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TravelpartnerAccountsBrandsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TravelpartnerAccountsBrandsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

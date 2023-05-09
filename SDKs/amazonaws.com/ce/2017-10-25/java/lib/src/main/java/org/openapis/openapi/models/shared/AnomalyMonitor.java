@@ -15,6 +15,7 @@ public class AnomalyMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public AnomalyMonitor withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -23,6 +24,7 @@ public class AnomalyMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DimensionalValueCount")
     public Long dimensionalValueCount;
+
     public AnomalyMonitor withDimensionalValueCount(Long dimensionalValueCount) {
         this.dimensionalValueCount = dimensionalValueCount;
         return this;
@@ -31,6 +33,7 @@ public class AnomalyMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastEvaluatedDate")
     public String lastEvaluatedDate;
+
     public AnomalyMonitor withLastEvaluatedDate(String lastEvaluatedDate) {
         this.lastEvaluatedDate = lastEvaluatedDate;
         return this;
@@ -39,6 +42,7 @@ public class AnomalyMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastUpdatedDate")
     public String lastUpdatedDate;
+
     public AnomalyMonitor withLastUpdatedDate(String lastUpdatedDate) {
         this.lastUpdatedDate = lastUpdatedDate;
         return this;
@@ -47,6 +51,7 @@ public class AnomalyMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitorArn")
     public String monitorArn;
+
     public AnomalyMonitor withMonitorArn(String monitorArn) {
         this.monitorArn = monitorArn;
         return this;
@@ -55,6 +60,7 @@ public class AnomalyMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitorDimension")
     public MonitorDimensionEnum monitorDimension;
+
     public AnomalyMonitor withMonitorDimension(MonitorDimensionEnum monitorDimension) {
         this.monitorDimension = monitorDimension;
         return this;
@@ -62,6 +68,7 @@ public class AnomalyMonitor {
     
     @JsonProperty("MonitorName")
     public String monitorName;
+
     public AnomalyMonitor withMonitorName(String monitorName) {
         this.monitorName = monitorName;
         return this;
@@ -73,6 +80,7 @@ public class AnomalyMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitorSpecification")
     public Expression monitorSpecification;
+
     public AnomalyMonitor withMonitorSpecification(Expression monitorSpecification) {
         this.monitorSpecification = monitorSpecification;
         return this;
@@ -80,9 +88,14 @@ public class AnomalyMonitor {
     
     @JsonProperty("MonitorType")
     public MonitorTypeEnum monitorType;
+
     public AnomalyMonitor withMonitorType(MonitorTypeEnum monitorType) {
         this.monitorType = monitorType;
         return this;
     }
     
+    public AnomalyMonitor(@JsonProperty("MonitorName") String monitorName, @JsonProperty("MonitorType") MonitorTypeEnum monitorType) {
+        this.monitorName = monitorName;
+        this.monitorType = monitorType;
+  }
 }

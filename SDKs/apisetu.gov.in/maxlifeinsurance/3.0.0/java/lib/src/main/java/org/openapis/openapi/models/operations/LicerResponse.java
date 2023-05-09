@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LicerResponse {
     
     public String contentType;
+
     public LicerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class LicerResponse {
     
     
     public Integer statusCode;
+
     public LicerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class LicerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LicerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class LicerResponse {
      */
     
     public Licer400ApplicationJSON licer400ApplicationJSONObject;
+
     public LicerResponse withLicer400ApplicationJSONObject(Licer400ApplicationJSON licer400ApplicationJSONObject) {
         this.licer400ApplicationJSONObject = licer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class LicerResponse {
      */
     
     public Licer401ApplicationJSON licer401ApplicationJSONObject;
+
     public LicerResponse withLicer401ApplicationJSONObject(Licer401ApplicationJSON licer401ApplicationJSONObject) {
         this.licer401ApplicationJSONObject = licer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class LicerResponse {
      */
     
     public Licer404ApplicationJSON licer404ApplicationJSONObject;
+
     public LicerResponse withLicer404ApplicationJSONObject(Licer404ApplicationJSON licer404ApplicationJSONObject) {
         this.licer404ApplicationJSONObject = licer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class LicerResponse {
      */
     
     public Licer500ApplicationJSON licer500ApplicationJSONObject;
+
     public LicerResponse withLicer500ApplicationJSONObject(Licer500ApplicationJSON licer500ApplicationJSONObject) {
         this.licer500ApplicationJSONObject = licer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class LicerResponse {
      */
     
     public Licer502ApplicationJSON licer502ApplicationJSONObject;
+
     public LicerResponse withLicer502ApplicationJSONObject(Licer502ApplicationJSON licer502ApplicationJSONObject) {
         this.licer502ApplicationJSONObject = licer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class LicerResponse {
      */
     
     public Licer503ApplicationJSON licer503ApplicationJSONObject;
+
     public LicerResponse withLicer503ApplicationJSONObject(Licer503ApplicationJSON licer503ApplicationJSONObject) {
         this.licer503ApplicationJSONObject = licer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class LicerResponse {
      */
     
     public Licer504ApplicationJSON licer504ApplicationJSONObject;
+
     public LicerResponse withLicer504ApplicationJSONObject(Licer504ApplicationJSON licer504ApplicationJSONObject) {
         this.licer504ApplicationJSONObject = licer504ApplicationJSONObject;
         return this;
     }
     
+    public LicerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

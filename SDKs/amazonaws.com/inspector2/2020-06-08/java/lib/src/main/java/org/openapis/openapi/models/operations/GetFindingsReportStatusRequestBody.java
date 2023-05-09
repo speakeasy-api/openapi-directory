@@ -15,9 +15,11 @@ public class GetFindingsReportStatusRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportId")
     public String reportId;
+
     public GetFindingsReportStatusRequestBody withReportId(String reportId) {
         this.reportId = reportId;
         return this;
     }
     
+    public GetFindingsReportStatusRequestBody(){}
 }

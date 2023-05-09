@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RoomType {
     @JsonProperty("amenities")
     public Amenity[] amenities;
+
     public RoomType withAmenities(Amenity[] amenities) {
         this.amenities = amenities;
         return this;
@@ -24,6 +25,7 @@ public class RoomType {
      */
     @JsonProperty("description")
     public String description;
+
     public RoomType withDescription(String description) {
         this.description = description;
         return this;
@@ -34,6 +36,7 @@ public class RoomType {
      */
     @JsonProperty("images")
     public Image[] images;
+
     public RoomType withImages(Image[] images) {
         this.images = images;
         return this;
@@ -44,6 +47,7 @@ public class RoomType {
      */
     @JsonProperty("maxOccupancy")
     public Long maxOccupancy;
+
     public RoomType withMaxOccupancy(Long maxOccupancy) {
         this.maxOccupancy = maxOccupancy;
         return this;
@@ -54,6 +58,7 @@ public class RoomType {
      */
     @JsonProperty("name")
     public String name;
+
     public RoomType withName(String name) {
         this.name = name;
         return this;
@@ -65,6 +70,7 @@ public class RoomType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rates")
     public Rate[] rates;
+
     public RoomType withRates(Rate[] rates) {
         this.rates = rates;
         return this;
@@ -75,9 +81,18 @@ public class RoomType {
      */
     @JsonProperty("roomTypeId")
     public String roomTypeId;
+
     public RoomType withRoomTypeId(String roomTypeId) {
         this.roomTypeId = roomTypeId;
         return this;
     }
     
+    public RoomType(@JsonProperty("amenities") Amenity[] amenities, @JsonProperty("description") String description, @JsonProperty("images") Image[] images, @JsonProperty("maxOccupancy") Long maxOccupancy, @JsonProperty("name") String name, @JsonProperty("roomTypeId") String roomTypeId) {
+        this.amenities = amenities;
+        this.description = description;
+        this.images = images;
+        this.maxOccupancy = maxOccupancy;
+        this.name = name;
+        this.roomTypeId = roomTypeId;
+  }
 }

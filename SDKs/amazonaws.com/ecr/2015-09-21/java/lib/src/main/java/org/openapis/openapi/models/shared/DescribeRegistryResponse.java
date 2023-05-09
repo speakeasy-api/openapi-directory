@@ -15,6 +15,7 @@ public class DescribeRegistryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public DescribeRegistryResponse withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -23,9 +24,11 @@ public class DescribeRegistryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationConfiguration")
     public ReplicationConfiguration replicationConfiguration;
+
     public DescribeRegistryResponse withReplicationConfiguration(ReplicationConfiguration replicationConfiguration) {
         this.replicationConfiguration = replicationConfiguration;
         return this;
     }
     
+    public DescribeRegistryResponse(){}
 }

@@ -15,6 +15,7 @@ public class CreateDestinationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalFixedProperties")
     public String additionalFixedProperties;
+
     public CreateDestinationRequestBody withAdditionalFixedProperties(String additionalFixedProperties) {
         this.additionalFixedProperties = additionalFixedProperties;
         return this;
@@ -26,6 +27,7 @@ public class CreateDestinationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateDestinationRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -36,6 +38,7 @@ public class CreateDestinationRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateDestinationRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -46,6 +49,7 @@ public class CreateDestinationRequestBody {
      */
     @JsonProperty("site")
     public String site;
+
     public CreateDestinationRequestBody withSite(String site) {
         this.site = site;
         return this;
@@ -57,9 +61,14 @@ public class CreateDestinationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public CreateDestinationRequestBodyStateEnum state;
+
     public CreateDestinationRequestBody withState(CreateDestinationRequestBodyStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public CreateDestinationRequestBody(@JsonProperty("name") String name, @JsonProperty("site") String site) {
+        this.name = name;
+        this.site = site;
+  }
 }

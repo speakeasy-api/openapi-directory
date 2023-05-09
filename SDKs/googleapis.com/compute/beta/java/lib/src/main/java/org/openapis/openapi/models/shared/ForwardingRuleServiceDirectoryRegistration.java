@@ -18,6 +18,7 @@ public class ForwardingRuleServiceDirectoryRegistration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     public String namespace;
+
     public ForwardingRuleServiceDirectoryRegistration withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -29,6 +30,7 @@ public class ForwardingRuleServiceDirectoryRegistration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public ForwardingRuleServiceDirectoryRegistration withService(String service) {
         this.service = service;
         return this;
@@ -40,9 +42,11 @@ public class ForwardingRuleServiceDirectoryRegistration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceDirectoryRegion")
     public String serviceDirectoryRegion;
+
     public ForwardingRuleServiceDirectoryRegistration withServiceDirectoryRegion(String serviceDirectoryRegion) {
         this.serviceDirectoryRegion = serviceDirectoryRegion;
         return this;
     }
     
+    public ForwardingRuleServiceDirectoryRegistration(){}
 }

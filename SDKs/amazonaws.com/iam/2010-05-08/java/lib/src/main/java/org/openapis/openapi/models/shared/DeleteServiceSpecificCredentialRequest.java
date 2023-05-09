@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteServiceSpecificCredentialRequest {
     
     public String serviceSpecificCredentialId;
+
     public DeleteServiceSpecificCredentialRequest withServiceSpecificCredentialId(String serviceSpecificCredentialId) {
         this.serviceSpecificCredentialId = serviceSpecificCredentialId;
         return this;
@@ -16,9 +17,13 @@ public class DeleteServiceSpecificCredentialRequest {
     
     
     public String userName;
+
     public DeleteServiceSpecificCredentialRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public DeleteServiceSpecificCredentialRequest(@JsonProperty("ServiceSpecificCredentialId") String serviceSpecificCredentialId) {
+        this.serviceSpecificCredentialId = serviceSpecificCredentialId;
+  }
 }

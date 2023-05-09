@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class InfoObject {
     
     public Double answersPerMinute;
+
     public InfoObject withAnswersPerMinute(Double answersPerMinute) {
         this.answersPerMinute = answersPerMinute;
         return this;
@@ -19,6 +20,7 @@ public class InfoObject {
     
     
     public String apiRevision;
+
     public InfoObject withApiRevision(String apiRevision) {
         this.apiRevision = apiRevision;
         return this;
@@ -26,6 +28,7 @@ public class InfoObject {
     
     
     public Double badgesPerMinute;
+
     public InfoObject withBadgesPerMinute(Double badgesPerMinute) {
         this.badgesPerMinute = badgesPerMinute;
         return this;
@@ -33,6 +36,7 @@ public class InfoObject {
     
     
     public Long newActiveUsers;
+
     public InfoObject withNewActiveUsers(Long newActiveUsers) {
         this.newActiveUsers = newActiveUsers;
         return this;
@@ -40,6 +44,7 @@ public class InfoObject {
     
     
     public Double questionsPerMinute;
+
     public InfoObject withQuestionsPerMinute(Double questionsPerMinute) {
         this.questionsPerMinute = questionsPerMinute;
         return this;
@@ -47,6 +52,7 @@ public class InfoObject {
     
     
     public InfoObjectSite site;
+
     public InfoObject withSite(InfoObjectSite site) {
         this.site = site;
         return this;
@@ -54,6 +60,7 @@ public class InfoObject {
     
     
     public Long totalAccepted;
+
     public InfoObject withTotalAccepted(Long totalAccepted) {
         this.totalAccepted = totalAccepted;
         return this;
@@ -61,6 +68,7 @@ public class InfoObject {
     
     
     public Long totalAnswers;
+
     public InfoObject withTotalAnswers(Long totalAnswers) {
         this.totalAnswers = totalAnswers;
         return this;
@@ -68,6 +76,7 @@ public class InfoObject {
     
     
     public Long totalBadges;
+
     public InfoObject withTotalBadges(Long totalBadges) {
         this.totalBadges = totalBadges;
         return this;
@@ -75,6 +84,7 @@ public class InfoObject {
     
     
     public Long totalComments;
+
     public InfoObject withTotalComments(Long totalComments) {
         this.totalComments = totalComments;
         return this;
@@ -82,6 +92,7 @@ public class InfoObject {
     
     
     public Long totalQuestions;
+
     public InfoObject withTotalQuestions(Long totalQuestions) {
         this.totalQuestions = totalQuestions;
         return this;
@@ -89,6 +100,7 @@ public class InfoObject {
     
     
     public Long totalUnanswered;
+
     public InfoObject withTotalUnanswered(Long totalUnanswered) {
         this.totalUnanswered = totalUnanswered;
         return this;
@@ -96,6 +108,7 @@ public class InfoObject {
     
     
     public Long totalUsers;
+
     public InfoObject withTotalUsers(Long totalUsers) {
         this.totalUsers = totalUsers;
         return this;
@@ -103,9 +116,11 @@ public class InfoObject {
     
     
     public Long totalVotes;
+
     public InfoObject withTotalVotes(Long totalVotes) {
         this.totalVotes = totalVotes;
         return this;
     }
     
+    public InfoObject(){}
 }

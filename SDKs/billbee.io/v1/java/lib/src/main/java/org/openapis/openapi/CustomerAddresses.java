@@ -56,14 +56,12 @@ public class CustomerAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomerAddressesCreateFormResponse res = new org.openapis.openapi.models.operations.CustomerAddressesCreateFormResponse() {{
+        org.openapis.openapi.models.operations.CustomerAddressesCreateFormResponse res = new org.openapis.openapi.models.operations.CustomerAddressesCreateFormResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = null;
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,14 +113,12 @@ public class CustomerAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomerAddressesCreateJsonResponse res = new org.openapis.openapi.models.operations.CustomerAddressesCreateJsonResponse() {{
+        org.openapis.openapi.models.operations.CustomerAddressesCreateJsonResponse res = new org.openapis.openapi.models.operations.CustomerAddressesCreateJsonResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = null;
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,14 +170,12 @@ public class CustomerAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomerAddressesCreateRawResponse res = new org.openapis.openapi.models.operations.CustomerAddressesCreateRawResponse() {{
+        org.openapis.openapi.models.operations.CustomerAddressesCreateRawResponse res = new org.openapis.openapi.models.operations.CustomerAddressesCreateRawResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = null;
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -234,14 +228,12 @@ public class CustomerAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomerAddressesGetAllResponse res = new org.openapis.openapi.models.operations.CustomerAddressesGetAllResponse() {{
+        org.openapis.openapi.models.operations.CustomerAddressesGetAllResponse res = new org.openapis.openapi.models.operations.CustomerAddressesGetAllResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = null;
             rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -288,14 +280,12 @@ public class CustomerAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomerAddressesGetOneResponse res = new org.openapis.openapi.models.operations.CustomerAddressesGetOneResponse() {{
+        org.openapis.openapi.models.operations.CustomerAddressesGetOneResponse res = new org.openapis.openapi.models.operations.CustomerAddressesGetOneResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = null;
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -347,14 +337,12 @@ public class CustomerAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomerAddressesUpdateFormResponse res = new org.openapis.openapi.models.operations.CustomerAddressesUpdateFormResponse() {{
+        org.openapis.openapi.models.operations.CustomerAddressesUpdateFormResponse res = new org.openapis.openapi.models.operations.CustomerAddressesUpdateFormResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = null;
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -406,14 +394,12 @@ public class CustomerAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomerAddressesUpdateJsonResponse res = new org.openapis.openapi.models.operations.CustomerAddressesUpdateJsonResponse() {{
+        org.openapis.openapi.models.operations.CustomerAddressesUpdateJsonResponse res = new org.openapis.openapi.models.operations.CustomerAddressesUpdateJsonResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = null;
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -465,14 +451,12 @@ public class CustomerAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomerAddressesUpdateRawResponse res = new org.openapis.openapi.models.operations.CustomerAddressesUpdateRawResponse() {{
+        org.openapis.openapi.models.operations.CustomerAddressesUpdateRawResponse res = new org.openapis.openapi.models.operations.CustomerAddressesUpdateRawResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = null;
             rechnungsdruckWebAppControllersAPIAPIResultBillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

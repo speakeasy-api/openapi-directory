@@ -15,6 +15,7 @@ public class ItvAssignBtTokenRequest {
      */
     @JsonProperty("profileToken")
     public String profileToken;
+
     public ItvAssignBtTokenRequest withProfileToken(String profileToken) {
         this.profileToken = profileToken;
         return this;
@@ -25,9 +26,14 @@ public class ItvAssignBtTokenRequest {
      */
     @JsonProperty("token")
     public String token;
+
     public ItvAssignBtTokenRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public ItvAssignBtTokenRequest(@JsonProperty("profileToken") String profileToken, @JsonProperty("token") String token) {
+        this.profileToken = profileToken;
+        this.token = token;
+  }
 }

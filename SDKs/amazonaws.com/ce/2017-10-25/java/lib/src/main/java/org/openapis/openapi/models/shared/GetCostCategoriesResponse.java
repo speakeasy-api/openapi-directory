@@ -15,6 +15,7 @@ public class GetCostCategoriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CostCategoryNames")
     public String[] costCategoryNames;
+
     public GetCostCategoriesResponse withCostCategoryNames(String[] costCategoryNames) {
         this.costCategoryNames = costCategoryNames;
         return this;
@@ -23,6 +24,7 @@ public class GetCostCategoriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CostCategoryValues")
     public String[] costCategoryValues;
+
     public GetCostCategoriesResponse withCostCategoryValues(String[] costCategoryValues) {
         this.costCategoryValues = costCategoryValues;
         return this;
@@ -31,6 +33,7 @@ public class GetCostCategoriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetCostCategoriesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -38,6 +41,7 @@ public class GetCostCategoriesResponse {
     
     @JsonProperty("ReturnSize")
     public Long returnSize;
+
     public GetCostCategoriesResponse withReturnSize(Long returnSize) {
         this.returnSize = returnSize;
         return this;
@@ -45,9 +49,14 @@ public class GetCostCategoriesResponse {
     
     @JsonProperty("TotalSize")
     public Long totalSize;
+
     public GetCostCategoriesResponse withTotalSize(Long totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public GetCostCategoriesResponse(@JsonProperty("ReturnSize") Long returnSize, @JsonProperty("TotalSize") Long totalSize) {
+        this.returnSize = returnSize;
+        this.totalSize = totalSize;
+  }
 }

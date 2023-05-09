@@ -15,6 +15,7 @@ public class ActionsCacheUsageByRepository {
      */
     @JsonProperty("active_caches_count")
     public Long activeCachesCount;
+
     public ActionsCacheUsageByRepository withActiveCachesCount(Long activeCachesCount) {
         this.activeCachesCount = activeCachesCount;
         return this;
@@ -25,6 +26,7 @@ public class ActionsCacheUsageByRepository {
      */
     @JsonProperty("active_caches_size_in_bytes")
     public Long activeCachesSizeInBytes;
+
     public ActionsCacheUsageByRepository withActiveCachesSizeInBytes(Long activeCachesSizeInBytes) {
         this.activeCachesSizeInBytes = activeCachesSizeInBytes;
         return this;
@@ -35,9 +37,15 @@ public class ActionsCacheUsageByRepository {
      */
     @JsonProperty("full_name")
     public String fullName;
+
     public ActionsCacheUsageByRepository withFullName(String fullName) {
         this.fullName = fullName;
         return this;
     }
     
+    public ActionsCacheUsageByRepository(@JsonProperty("active_caches_count") Long activeCachesCount, @JsonProperty("active_caches_size_in_bytes") Long activeCachesSizeInBytes, @JsonProperty("full_name") String fullName) {
+        this.activeCachesCount = activeCachesCount;
+        this.activeCachesSizeInBytes = activeCachesSizeInBytes;
+        this.fullName = fullName;
+  }
 }

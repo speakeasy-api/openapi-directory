@@ -15,6 +15,7 @@ public class SpotProvisioningSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllocationStrategy")
     public SpotProvisioningAllocationStrategyEnum allocationStrategy;
+
     public SpotProvisioningSpecification withAllocationStrategy(SpotProvisioningAllocationStrategyEnum allocationStrategy) {
         this.allocationStrategy = allocationStrategy;
         return this;
@@ -23,6 +24,7 @@ public class SpotProvisioningSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockDurationMinutes")
     public Long blockDurationMinutes;
+
     public SpotProvisioningSpecification withBlockDurationMinutes(Long blockDurationMinutes) {
         this.blockDurationMinutes = blockDurationMinutes;
         return this;
@@ -30,6 +32,7 @@ public class SpotProvisioningSpecification {
     
     @JsonProperty("TimeoutAction")
     public SpotProvisioningTimeoutActionEnum timeoutAction;
+
     public SpotProvisioningSpecification withTimeoutAction(SpotProvisioningTimeoutActionEnum timeoutAction) {
         this.timeoutAction = timeoutAction;
         return this;
@@ -37,9 +40,14 @@ public class SpotProvisioningSpecification {
     
     @JsonProperty("TimeoutDurationMinutes")
     public Long timeoutDurationMinutes;
+
     public SpotProvisioningSpecification withTimeoutDurationMinutes(Long timeoutDurationMinutes) {
         this.timeoutDurationMinutes = timeoutDurationMinutes;
         return this;
     }
     
+    public SpotProvisioningSpecification(@JsonProperty("TimeoutAction") SpotProvisioningTimeoutActionEnum timeoutAction, @JsonProperty("TimeoutDurationMinutes") Long timeoutDurationMinutes) {
+        this.timeoutAction = timeoutAction;
+        this.timeoutDurationMinutes = timeoutDurationMinutes;
+  }
 }

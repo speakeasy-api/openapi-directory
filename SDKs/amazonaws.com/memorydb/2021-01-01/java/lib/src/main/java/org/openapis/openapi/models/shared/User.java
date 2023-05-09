@@ -15,6 +15,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ACLNames")
     public String[] aclNames;
+
     public User withACLNames(String[] aclNames) {
         this.aclNames = aclNames;
         return this;
@@ -23,6 +24,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public User withArn(String arn) {
         this.arn = arn;
         return this;
@@ -31,6 +33,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessString")
     public String accessString;
+
     public User withAccessString(String accessString) {
         this.accessString = accessString;
         return this;
@@ -39,6 +42,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Authentication")
     public Authentication authentication;
+
     public User withAuthentication(Authentication authentication) {
         this.authentication = authentication;
         return this;
@@ -47,6 +51,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinimumEngineVersion")
     public String minimumEngineVersion;
+
     public User withMinimumEngineVersion(String minimumEngineVersion) {
         this.minimumEngineVersion = minimumEngineVersion;
         return this;
@@ -55,6 +60,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public User withName(String name) {
         this.name = name;
         return this;
@@ -63,9 +69,11 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public User withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public User(){}
 }

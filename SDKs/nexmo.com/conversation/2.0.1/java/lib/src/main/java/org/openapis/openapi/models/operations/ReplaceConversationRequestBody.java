@@ -18,6 +18,7 @@ public class ReplaceConversationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public ReplaceConversationRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class ReplaceConversationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
     public String imageUrl;
+
     public ReplaceConversationRequestBody withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -40,6 +42,7 @@ public class ReplaceConversationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReplaceConversationRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class ReplaceConversationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public org.openapis.openapi.models.shared.ConversationProperties properties;
+
     public ReplaceConversationRequestBody withProperties(org.openapis.openapi.models.shared.ConversationProperties properties) {
         this.properties = properties;
         return this;
     }
     
+    public ReplaceConversationRequestBody(){}
 }

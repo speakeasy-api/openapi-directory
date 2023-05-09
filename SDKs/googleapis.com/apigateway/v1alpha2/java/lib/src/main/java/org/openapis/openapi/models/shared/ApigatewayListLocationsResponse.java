@@ -18,6 +18,7 @@ public class ApigatewayListLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public ApigatewayLocation[] locations;
+
     public ApigatewayListLocationsResponse withLocations(ApigatewayLocation[] locations) {
         this.locations = locations;
         return this;
@@ -29,9 +30,11 @@ public class ApigatewayListLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ApigatewayListLocationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ApigatewayListLocationsResponse(){}
 }

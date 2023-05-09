@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adServingOptimizationStatus")
     public GoogleAdsSearchads360V0ResourcesCampaignAdServingOptimizationStatusEnum adServingOptimizationStatus;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withAdServingOptimizationStatus(GoogleAdsSearchads360V0ResourcesCampaignAdServingOptimizationStatusEnum adServingOptimizationStatus) {
         this.adServingOptimizationStatus = adServingOptimizationStatus;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertisingChannelSubType")
     public GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelSubTypeEnum advertisingChannelSubType;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withAdvertisingChannelSubType(GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelSubTypeEnum advertisingChannelSubType) {
         this.advertisingChannelSubType = advertisingChannelSubType;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertisingChannelType")
     public GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelTypeEnum advertisingChannelType;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withAdvertisingChannelType(GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelTypeEnum advertisingChannelType) {
         this.advertisingChannelType = advertisingChannelType;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("biddingStrategy")
     public String biddingStrategy;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withBiddingStrategy(String biddingStrategy) {
         this.biddingStrategy = biddingStrategy;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("biddingStrategySystemStatus")
     public GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategySystemStatusEnum biddingStrategySystemStatus;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withBiddingStrategySystemStatus(GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategySystemStatusEnum biddingStrategySystemStatus) {
         this.biddingStrategySystemStatus = biddingStrategySystemStatus;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("biddingStrategyType")
     public GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategyTypeEnum biddingStrategyType;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withBiddingStrategyType(GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategyTypeEnum biddingStrategyType) {
         this.biddingStrategyType = biddingStrategyType;
         return this;
@@ -84,19 +90,33 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignBudget")
     public String campaignBudget;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withCampaignBudget(String campaignBudget) {
         this.campaignBudget = campaignBudget;
         return this;
     }
     
     /**
-     * Output only. Timestamp of the campaign's creation time, formatted in ISO 8601.
+     * Output only. The timestamp when this campaign was created. The timestamp is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss" format. create_time will be deprecated in v1. Use creation_time instead.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withCreateTime(String createTime) {
         this.createTime = createTime;
+        return this;
+    }
+    
+    /**
+     * Output only. The timestamp when this campaign was created. The timestamp is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss" format.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("creationTime")
+    public String creationTime;
+
+    public GoogleAdsSearchads360V0ResourcesCampaign withCreationTime(String creationTime) {
+        this.creationTime = creationTime;
         return this;
     }
     
@@ -106,6 +126,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamicSearchAdsSetting")
     public GoogleAdsSearchads360V0ResourcesCampaignDynamicSearchAdsSetting dynamicSearchAdsSetting;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withDynamicSearchAdsSetting(GoogleAdsSearchads360V0ResourcesCampaignDynamicSearchAdsSetting dynamicSearchAdsSetting) {
         this.dynamicSearchAdsSetting = dynamicSearchAdsSetting;
         return this;
@@ -117,6 +138,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public String endDate;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -128,6 +150,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("engineId")
     public String engineId;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withEngineId(String engineId) {
         this.engineId = engineId;
         return this;
@@ -139,6 +162,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedParentAssetFieldTypes")
     public GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldTypesEnum[] excludedParentAssetFieldTypes;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withExcludedParentAssetFieldTypes(GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldTypesEnum[] excludedParentAssetFieldTypes) {
         this.excludedParentAssetFieldTypes = excludedParentAssetFieldTypes;
         return this;
@@ -150,6 +174,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalUrlSuffix")
     public String finalUrlSuffix;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withFinalUrlSuffix(String finalUrlSuffix) {
         this.finalUrlSuffix = finalUrlSuffix;
         return this;
@@ -161,6 +186,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequencyCaps")
     public java.util.Map<String, Object>[] frequencyCaps;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withFrequencyCaps(java.util.Map<String, Object>[] frequencyCaps) {
         this.frequencyCaps = frequencyCaps;
         return this;
@@ -172,6 +198,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoTargetTypeSetting")
     public GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSetting geoTargetTypeSetting;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withGeoTargetTypeSetting(GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSetting geoTargetTypeSetting) {
         this.geoTargetTypeSetting = geoTargetTypeSetting;
         return this;
@@ -183,6 +210,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withId(String id) {
         this.id = id;
         return this;
@@ -194,6 +222,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String[] labels;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -205,6 +234,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedTime")
     public String lastModifiedTime;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withLastModifiedTime(String lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -216,6 +246,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manualCpa")
     public java.util.Map<String, Object> manualCpa;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withManualCpa(java.util.Map<String, Object> manualCpa) {
         this.manualCpa = manualCpa;
         return this;
@@ -227,6 +258,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manualCpc")
     public GoogleAdsSearchads360V0CommonManualCpc manualCpc;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withManualCpc(GoogleAdsSearchads360V0CommonManualCpc manualCpc) {
         this.manualCpc = manualCpc;
         return this;
@@ -238,6 +270,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manualCpm")
     public java.util.Map<String, Object> manualCpm;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withManualCpm(java.util.Map<String, Object> manualCpm) {
         this.manualCpm = manualCpm;
         return this;
@@ -249,6 +282,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximizeConversionValue")
     public GoogleAdsSearchads360V0CommonMaximizeConversionValue maximizeConversionValue;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withMaximizeConversionValue(GoogleAdsSearchads360V0CommonMaximizeConversionValue maximizeConversionValue) {
         this.maximizeConversionValue = maximizeConversionValue;
         return this;
@@ -260,6 +294,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximizeConversions")
     public GoogleAdsSearchads360V0CommonMaximizeConversions maximizeConversions;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withMaximizeConversions(GoogleAdsSearchads360V0CommonMaximizeConversions maximizeConversions) {
         this.maximizeConversions = maximizeConversions;
         return this;
@@ -271,6 +306,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withName(String name) {
         this.name = name;
         return this;
@@ -282,6 +318,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkSettings")
     public GoogleAdsSearchads360V0ResourcesCampaignNetworkSettings networkSettings;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withNetworkSettings(GoogleAdsSearchads360V0ResourcesCampaignNetworkSettings networkSettings) {
         this.networkSettings = networkSettings;
         return this;
@@ -293,6 +330,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optimizationGoalSetting")
     public GoogleAdsSearchads360V0ResourcesCampaignOptimizationGoalSetting optimizationGoalSetting;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withOptimizationGoalSetting(GoogleAdsSearchads360V0ResourcesCampaignOptimizationGoalSetting optimizationGoalSetting) {
         this.optimizationGoalSetting = optimizationGoalSetting;
         return this;
@@ -304,6 +342,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentCpc")
     public GoogleAdsSearchads360V0CommonPercentCpc percentCpc;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withPercentCpc(GoogleAdsSearchads360V0CommonPercentCpc percentCpc) {
         this.percentCpc = percentCpc;
         return this;
@@ -315,6 +354,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("realTimeBiddingSetting")
     public GoogleAdsSearchads360V0CommonRealTimeBiddingSetting realTimeBiddingSetting;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withRealTimeBiddingSetting(GoogleAdsSearchads360V0CommonRealTimeBiddingSetting realTimeBiddingSetting) {
         this.realTimeBiddingSetting = realTimeBiddingSetting;
         return this;
@@ -326,6 +366,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -337,6 +378,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectiveOptimization")
     public GoogleAdsSearchads360V0ResourcesCampaignSelectiveOptimization selectiveOptimization;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withSelectiveOptimization(GoogleAdsSearchads360V0ResourcesCampaignSelectiveOptimization selectiveOptimization) {
         this.selectiveOptimization = selectiveOptimization;
         return this;
@@ -348,6 +390,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servingStatus")
     public GoogleAdsSearchads360V0ResourcesCampaignServingStatusEnum servingStatus;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withServingStatus(GoogleAdsSearchads360V0ResourcesCampaignServingStatusEnum servingStatus) {
         this.servingStatus = servingStatus;
         return this;
@@ -359,6 +402,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shoppingSetting")
     public GoogleAdsSearchads360V0ResourcesCampaignShoppingSetting shoppingSetting;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withShoppingSetting(GoogleAdsSearchads360V0ResourcesCampaignShoppingSetting shoppingSetting) {
         this.shoppingSetting = shoppingSetting;
         return this;
@@ -370,6 +414,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public String startDate;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -381,6 +426,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GoogleAdsSearchads360V0ResourcesCampaignStatusEnum status;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withStatus(GoogleAdsSearchads360V0ResourcesCampaignStatusEnum status) {
         this.status = status;
         return this;
@@ -392,6 +438,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetCpa")
     public GoogleAdsSearchads360V0CommonTargetCpa targetCpa;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withTargetCpa(GoogleAdsSearchads360V0CommonTargetCpa targetCpa) {
         this.targetCpa = targetCpa;
         return this;
@@ -403,6 +450,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetCpm")
     public java.util.Map<String, Object> targetCpm;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withTargetCpm(java.util.Map<String, Object> targetCpm) {
         this.targetCpm = targetCpm;
         return this;
@@ -414,6 +462,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetImpressionShare")
     public GoogleAdsSearchads360V0CommonTargetImpressionShare targetImpressionShare;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withTargetImpressionShare(GoogleAdsSearchads360V0CommonTargetImpressionShare targetImpressionShare) {
         this.targetImpressionShare = targetImpressionShare;
         return this;
@@ -425,6 +474,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetRoas")
     public GoogleAdsSearchads360V0CommonTargetRoas targetRoas;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withTargetRoas(GoogleAdsSearchads360V0CommonTargetRoas targetRoas) {
         this.targetRoas = targetRoas;
         return this;
@@ -436,6 +486,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetSpend")
     public GoogleAdsSearchads360V0CommonTargetSpend targetSpend;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withTargetSpend(GoogleAdsSearchads360V0CommonTargetSpend targetSpend) {
         this.targetSpend = targetSpend;
         return this;
@@ -447,6 +498,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingSetting")
     public GoogleAdsSearchads360V0ResourcesCampaignTrackingSetting trackingSetting;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withTrackingSetting(GoogleAdsSearchads360V0ResourcesCampaignTrackingSetting trackingSetting) {
         this.trackingSetting = trackingSetting;
         return this;
@@ -458,6 +510,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingUrlTemplate")
     public String trackingUrlTemplate;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withTrackingUrlTemplate(String trackingUrlTemplate) {
         this.trackingUrlTemplate = trackingUrlTemplate;
         return this;
@@ -469,6 +522,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlCustomParameters")
     public GoogleAdsSearchads360V0CommonCustomParameter[] urlCustomParameters;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withUrlCustomParameters(GoogleAdsSearchads360V0CommonCustomParameter[] urlCustomParameters) {
         this.urlCustomParameters = urlCustomParameters;
         return this;
@@ -480,9 +534,11 @@ public class GoogleAdsSearchads360V0ResourcesCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlExpansionOptOut")
     public Boolean urlExpansionOptOut;
+
     public GoogleAdsSearchads360V0ResourcesCampaign withUrlExpansionOptOut(Boolean urlExpansionOptOut) {
         this.urlExpansionOptOut = urlExpansionOptOut;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesCampaign(){}
 }

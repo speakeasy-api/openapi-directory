@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateCustomActionTypeOutput {
     @JsonProperty("actionType")
     public ActionType actionType;
+
     public CreateCustomActionTypeOutput withActionType(ActionType actionType) {
         this.actionType = actionType;
         return this;
@@ -22,9 +23,13 @@ public class CreateCustomActionTypeOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateCustomActionTypeOutput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateCustomActionTypeOutput(@JsonProperty("actionType") ActionType actionType) {
+        this.actionType = actionType;
+  }
 }

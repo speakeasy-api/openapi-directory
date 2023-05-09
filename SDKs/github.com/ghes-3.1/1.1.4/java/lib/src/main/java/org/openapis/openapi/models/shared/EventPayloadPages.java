@@ -12,6 +12,7 @@ public class EventPayloadPages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public EventPayloadPages withAction(String action) {
         this.action = action;
         return this;
@@ -20,6 +21,7 @@ public class EventPayloadPages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public EventPayloadPages withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -28,6 +30,7 @@ public class EventPayloadPages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_name")
     public String pageName;
+
     public EventPayloadPages withPageName(String pageName) {
         this.pageName = pageName;
         return this;
@@ -36,6 +39,7 @@ public class EventPayloadPages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha")
     public String sha;
+
     public EventPayloadPages withSha(String sha) {
         this.sha = sha;
         return this;
@@ -44,6 +48,7 @@ public class EventPayloadPages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public EventPayloadPages withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -52,9 +57,11 @@ public class EventPayloadPages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public EventPayloadPages withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public EventPayloadPages(){}
 }

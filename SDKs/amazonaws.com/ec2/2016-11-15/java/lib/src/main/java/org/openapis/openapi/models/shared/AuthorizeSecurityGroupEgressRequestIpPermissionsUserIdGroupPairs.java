@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AuthorizeSecurityGroupEgressRequestIpPermissionsUserIdGroupPairs {
     
     public String description;
+
     public AuthorizeSecurityGroupEgressRequestIpPermissionsUserIdGroupPairs withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class AuthorizeSecurityGroupEgressRequestIpPermissionsUserIdGroupPairs {
     
     
     public String groupId;
+
     public AuthorizeSecurityGroupEgressRequestIpPermissionsUserIdGroupPairs withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -26,6 +28,7 @@ public class AuthorizeSecurityGroupEgressRequestIpPermissionsUserIdGroupPairs {
     
     
     public String groupName;
+
     public AuthorizeSecurityGroupEgressRequestIpPermissionsUserIdGroupPairs withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -33,6 +36,7 @@ public class AuthorizeSecurityGroupEgressRequestIpPermissionsUserIdGroupPairs {
     
     
     public String peeringStatus;
+
     public AuthorizeSecurityGroupEgressRequestIpPermissionsUserIdGroupPairs withPeeringStatus(String peeringStatus) {
         this.peeringStatus = peeringStatus;
         return this;
@@ -40,6 +44,7 @@ public class AuthorizeSecurityGroupEgressRequestIpPermissionsUserIdGroupPairs {
     
     
     public String userId;
+
     public AuthorizeSecurityGroupEgressRequestIpPermissionsUserIdGroupPairs withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -47,6 +52,7 @@ public class AuthorizeSecurityGroupEgressRequestIpPermissionsUserIdGroupPairs {
     
     
     public String vpcId;
+
     public AuthorizeSecurityGroupEgressRequestIpPermissionsUserIdGroupPairs withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -54,9 +60,11 @@ public class AuthorizeSecurityGroupEgressRequestIpPermissionsUserIdGroupPairs {
     
     
     public String vpcPeeringConnectionId;
+
     public AuthorizeSecurityGroupEgressRequestIpPermissionsUserIdGroupPairs withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public AuthorizeSecurityGroupEgressRequestIpPermissionsUserIdGroupPairs(){}
 }

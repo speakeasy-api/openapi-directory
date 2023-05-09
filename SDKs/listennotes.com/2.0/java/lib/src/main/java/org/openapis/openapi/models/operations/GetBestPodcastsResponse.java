@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBestPodcastsResponse {
@@ -12,6 +13,7 @@ public class GetBestPodcastsResponse {
      */
     
     public org.openapis.openapi.models.shared.BestPodcastsResponse bestPodcastsResponse;
+
     public GetBestPodcastsResponse withBestPodcastsResponse(org.openapis.openapi.models.shared.BestPodcastsResponse bestPodcastsResponse) {
         this.bestPodcastsResponse = bestPodcastsResponse;
         return this;
@@ -19,6 +21,7 @@ public class GetBestPodcastsResponse {
     
     
     public String contentType;
+
     public GetBestPodcastsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetBestPodcastsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetBestPodcastsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetBestPodcastsResponse {
     
     
     public Integer statusCode;
+
     public GetBestPodcastsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetBestPodcastsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBestPodcastsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetBestPodcastsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

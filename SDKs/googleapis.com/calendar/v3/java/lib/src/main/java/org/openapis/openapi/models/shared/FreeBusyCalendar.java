@@ -15,6 +15,7 @@ public class FreeBusyCalendar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("busy")
     public TimePeriod[] busy;
+
     public FreeBusyCalendar withBusy(TimePeriod[] busy) {
         this.busy = busy;
         return this;
@@ -26,9 +27,11 @@ public class FreeBusyCalendar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public FreeBusyCalendar withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public FreeBusyCalendar(){}
 }

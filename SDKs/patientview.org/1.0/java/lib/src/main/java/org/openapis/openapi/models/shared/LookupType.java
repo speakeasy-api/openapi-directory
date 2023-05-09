@@ -19,6 +19,7 @@ public class LookupType {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public LookupType withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -27,6 +28,7 @@ public class LookupType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public LookupType withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class LookupType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public LookupType withId(Long id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class LookupType {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdate")
     public OffsetDateTime lastUpdate;
+
     public LookupType withLastUpdate(OffsetDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
         return this;
@@ -53,9 +57,11 @@ public class LookupType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public LookupTypeTypeEnum type;
+
     public LookupType withType(LookupTypeTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public LookupType(){}
 }

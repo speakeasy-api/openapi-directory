@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeprecatedRetrieveInventoryPhysicalCountResponse {
     
     public String contentType;
+
     public DeprecatedRetrieveInventoryPhysicalCountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeprecatedRetrieveInventoryPhysicalCountResponse {
      */
     
     public org.openapis.openapi.models.shared.RetrieveInventoryPhysicalCountResponse retrieveInventoryPhysicalCountResponse;
+
     public DeprecatedRetrieveInventoryPhysicalCountResponse withRetrieveInventoryPhysicalCountResponse(org.openapis.openapi.models.shared.RetrieveInventoryPhysicalCountResponse retrieveInventoryPhysicalCountResponse) {
         this.retrieveInventoryPhysicalCountResponse = retrieveInventoryPhysicalCountResponse;
         return this;
@@ -26,6 +29,7 @@ public class DeprecatedRetrieveInventoryPhysicalCountResponse {
     
     
     public Integer statusCode;
+
     public DeprecatedRetrieveInventoryPhysicalCountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeprecatedRetrieveInventoryPhysicalCountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeprecatedRetrieveInventoryPhysicalCountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeprecatedRetrieveInventoryPhysicalCountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

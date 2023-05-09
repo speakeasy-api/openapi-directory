@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IPSetUpdate {
     @JsonProperty("Action")
     public ChangeActionEnum action;
+
     public IPSetUpdate withAction(ChangeActionEnum action) {
         this.action = action;
         return this;
@@ -19,9 +20,14 @@ public class IPSetUpdate {
     
     @JsonProperty("IPSetDescriptor")
     public IPSetDescriptor ipSetDescriptor;
+
     public IPSetUpdate withIPSetDescriptor(IPSetDescriptor ipSetDescriptor) {
         this.ipSetDescriptor = ipSetDescriptor;
         return this;
     }
     
+    public IPSetUpdate(@JsonProperty("Action") ChangeActionEnum action, @JsonProperty("IPSetDescriptor") IPSetDescriptor ipSetDescriptor) {
+        this.action = action;
+        this.ipSetDescriptor = ipSetDescriptor;
+  }
 }

@@ -15,6 +15,7 @@ public class DescribeRecordOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public DescribeRecordOutput withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,6 +24,7 @@ public class DescribeRecordOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordDetail")
     public RecordDetail recordDetail;
+
     public DescribeRecordOutput withRecordDetail(RecordDetail recordDetail) {
         this.recordDetail = recordDetail;
         return this;
@@ -31,9 +33,11 @@ public class DescribeRecordOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordOutputs")
     public RecordOutput[] recordOutputs;
+
     public DescribeRecordOutput withRecordOutputs(RecordOutput[] recordOutputs) {
         this.recordOutputs = recordOutputs;
         return this;
     }
     
+    public DescribeRecordOutput(){}
 }

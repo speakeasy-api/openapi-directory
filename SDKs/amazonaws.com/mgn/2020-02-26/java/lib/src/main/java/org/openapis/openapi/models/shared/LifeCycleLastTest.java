@@ -15,6 +15,7 @@ public class LifeCycleLastTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalized")
     public LifeCycleLastTestFinalized finalized;
+
     public LifeCycleLastTest withFinalized(LifeCycleLastTestFinalized finalized) {
         this.finalized = finalized;
         return this;
@@ -23,6 +24,7 @@ public class LifeCycleLastTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initiated")
     public LifeCycleLastTestInitiated initiated;
+
     public LifeCycleLastTest withInitiated(LifeCycleLastTestInitiated initiated) {
         this.initiated = initiated;
         return this;
@@ -31,9 +33,11 @@ public class LifeCycleLastTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reverted")
     public LifeCycleLastTestReverted reverted;
+
     public LifeCycleLastTest withReverted(LifeCycleLastTestReverted reverted) {
         this.reverted = reverted;
         return this;
     }
     
+    public LifeCycleLastTest(){}
 }

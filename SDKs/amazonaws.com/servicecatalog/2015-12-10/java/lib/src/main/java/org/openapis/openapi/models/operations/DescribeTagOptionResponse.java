@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeTagOptionResponse {
     
     public String contentType;
+
     public DescribeTagOptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeTagOptionResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeTagOptionOutput describeTagOptionOutput;
+
     public DescribeTagOptionResponse withDescribeTagOptionOutput(org.openapis.openapi.models.shared.DescribeTagOptionOutput describeTagOptionOutput) {
         this.describeTagOptionOutput = describeTagOptionOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeTagOptionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeTagOptionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeTagOptionResponse {
     
     
     public Integer statusCode;
+
     public DescribeTagOptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeTagOptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeTagOptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeTagOptionResponse {
      */
     
     public Object tagOptionNotMigratedException;
+
     public DescribeTagOptionResponse withTagOptionNotMigratedException(Object tagOptionNotMigratedException) {
         this.tagOptionNotMigratedException = tagOptionNotMigratedException;
         return this;
     }
     
+    public DescribeTagOptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class CloudServiceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentOSVersion")
     public String currentOSVersion;
+
     public CloudServiceConfiguration withCurrentOSVersion(String currentOSVersion) {
         this.currentOSVersion = currentOSVersion;
         return this;
@@ -28,6 +29,7 @@ public class CloudServiceConfiguration {
      */
     @JsonProperty("osFamily")
     public String osFamily;
+
     public CloudServiceConfiguration withOsFamily(String osFamily) {
         this.osFamily = osFamily;
         return this;
@@ -39,9 +41,13 @@ public class CloudServiceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetOSVersion")
     public String targetOSVersion;
+
     public CloudServiceConfiguration withTargetOSVersion(String targetOSVersion) {
         this.targetOSVersion = targetOSVersion;
         return this;
     }
     
+    public CloudServiceConfiguration(@JsonProperty("osFamily") String osFamily) {
+        this.osFamily = osFamily;
+  }
 }

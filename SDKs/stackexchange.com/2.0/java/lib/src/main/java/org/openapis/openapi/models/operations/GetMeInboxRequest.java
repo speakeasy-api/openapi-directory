@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMeInboxRequest {
@@ -13,6 +14,7 @@ public class GetMeInboxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetMeInboxRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -53,6 +55,7 @@ public class GetMeInboxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetMeInboxRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -60,6 +63,7 @@ public class GetMeInboxRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetMeInboxRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -67,6 +71,7 @@ public class GetMeInboxRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetMeInboxRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
@@ -78,9 +83,13 @@ public class GetMeInboxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
     public String site;
+
     public GetMeInboxRequest withSite(String site) {
         this.site = site;
         return this;
     }
     
+    public GetMeInboxRequest(@JsonProperty("site") String site) {
+        this.site = site;
+  }
 }

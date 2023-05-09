@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetJourneyExecutionMetricsResponse {
@@ -12,6 +13,7 @@ public class GetJourneyExecutionMetricsResponse {
      */
     
     public Object badRequestException;
+
     public GetJourneyExecutionMetricsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetJourneyExecutionMetricsResponse {
     
     
     public String contentType;
+
     public GetJourneyExecutionMetricsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetJourneyExecutionMetricsResponse {
      */
     
     public Object forbiddenException;
+
     public GetJourneyExecutionMetricsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetJourneyExecutionMetricsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetJourneyExecutionMetricsResponse getJourneyExecutionMetricsResponse;
+
     public GetJourneyExecutionMetricsResponse withGetJourneyExecutionMetricsResponse(org.openapis.openapi.models.shared.GetJourneyExecutionMetricsResponse getJourneyExecutionMetricsResponse) {
         this.getJourneyExecutionMetricsResponse = getJourneyExecutionMetricsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetJourneyExecutionMetricsResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetJourneyExecutionMetricsResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetJourneyExecutionMetricsResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetJourneyExecutionMetricsResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetJourneyExecutionMetricsResponse {
      */
     
     public Object notFoundException;
+
     public GetJourneyExecutionMetricsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetJourneyExecutionMetricsResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetJourneyExecutionMetricsResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetJourneyExecutionMetricsResponse {
     
     
     public Integer statusCode;
+
     public GetJourneyExecutionMetricsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetJourneyExecutionMetricsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetJourneyExecutionMetricsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetJourneyExecutionMetricsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetJourneyExecutionMetricsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetJourneyExecutionMetricsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

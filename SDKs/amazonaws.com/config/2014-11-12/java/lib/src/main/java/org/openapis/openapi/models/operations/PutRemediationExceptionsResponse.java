@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRemediationExceptionsResponse {
     
     public String contentType;
+
     public PutRemediationExceptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutRemediationExceptionsResponse {
      */
     
     public Object insufficientPermissionsException;
+
     public PutRemediationExceptionsResponse withInsufficientPermissionsException(Object insufficientPermissionsException) {
         this.insufficientPermissionsException = insufficientPermissionsException;
         return this;
@@ -29,6 +32,7 @@ public class PutRemediationExceptionsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public PutRemediationExceptionsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class PutRemediationExceptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.PutRemediationExceptionsResponse putRemediationExceptionsResponse;
+
     public PutRemediationExceptionsResponse withPutRemediationExceptionsResponse(org.openapis.openapi.models.shared.PutRemediationExceptionsResponse putRemediationExceptionsResponse) {
         this.putRemediationExceptionsResponse = putRemediationExceptionsResponse;
         return this;
@@ -46,6 +51,7 @@ public class PutRemediationExceptionsResponse {
     
     
     public Integer statusCode;
+
     public PutRemediationExceptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class PutRemediationExceptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRemediationExceptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutRemediationExceptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

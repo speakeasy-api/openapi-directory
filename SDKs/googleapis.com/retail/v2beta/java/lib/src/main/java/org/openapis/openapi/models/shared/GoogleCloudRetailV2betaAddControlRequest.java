@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2betaAddControlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlId")
     public String controlId;
+
     public GoogleCloudRetailV2betaAddControlRequest withControlId(String controlId) {
         this.controlId = controlId;
         return this;
     }
     
+    public GoogleCloudRetailV2betaAddControlRequest(){}
 }

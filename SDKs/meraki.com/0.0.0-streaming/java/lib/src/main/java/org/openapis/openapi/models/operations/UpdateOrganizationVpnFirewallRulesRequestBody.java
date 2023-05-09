@@ -15,6 +15,7 @@ public class UpdateOrganizationVpnFirewallRulesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public UpdateOrganizationVpnFirewallRulesRequestBodyRules[] rules;
+
     public UpdateOrganizationVpnFirewallRulesRequestBody withRules(UpdateOrganizationVpnFirewallRulesRequestBodyRules[] rules) {
         this.rules = rules;
         return this;
@@ -26,9 +27,11 @@ public class UpdateOrganizationVpnFirewallRulesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syslogDefaultRule")
     public Boolean syslogDefaultRule;
+
     public UpdateOrganizationVpnFirewallRulesRequestBody withSyslogDefaultRule(Boolean syslogDefaultRule) {
         this.syslogDefaultRule = syslogDefaultRule;
         return this;
     }
     
+    public UpdateOrganizationVpnFirewallRulesRequestBody(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchEntitiesResponse {
     
     public String contentType;
+
     public SearchEntitiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SearchEntitiesResponse {
      */
     
     public Object internalFailureException;
+
     public SearchEntitiesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class SearchEntitiesResponse {
      */
     
     public Object invalidRequestException;
+
     public SearchEntitiesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class SearchEntitiesResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchEntitiesResponse searchEntitiesResponse;
+
     public SearchEntitiesResponse withSearchEntitiesResponse(org.openapis.openapi.models.shared.SearchEntitiesResponse searchEntitiesResponse) {
         this.searchEntitiesResponse = searchEntitiesResponse;
         return this;
@@ -46,6 +51,7 @@ public class SearchEntitiesResponse {
     
     
     public Integer statusCode;
+
     public SearchEntitiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class SearchEntitiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchEntitiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class SearchEntitiesResponse {
      */
     
     public Object throttlingException;
+
     public SearchEntitiesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public SearchEntitiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

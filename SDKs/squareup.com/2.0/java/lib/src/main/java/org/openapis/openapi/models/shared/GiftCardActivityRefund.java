@@ -23,6 +23,7 @@ public class GiftCardActivityRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public GiftCardActivityRefund withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -36,6 +37,7 @@ public class GiftCardActivityRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
     public String paymentId;
+
     public GiftCardActivityRefund withPaymentId(String paymentId) {
         this.paymentId = paymentId;
         return this;
@@ -47,6 +49,7 @@ public class GiftCardActivityRefund {
      */
     @JsonProperty("redeem_activity_id")
     public String redeemActivityId;
+
     public GiftCardActivityRefund withRedeemActivityId(String redeemActivityId) {
         this.redeemActivityId = redeemActivityId;
         return this;
@@ -60,9 +63,13 @@ public class GiftCardActivityRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_id")
     public String referenceId;
+
     public GiftCardActivityRefund withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
     }
     
+    public GiftCardActivityRefund(@JsonProperty("redeem_activity_id") String redeemActivityId) {
+        this.redeemActivityId = redeemActivityId;
+  }
 }

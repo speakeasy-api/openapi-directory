@@ -18,6 +18,7 @@ public class ReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public AttributeContext[] operations;
+
     public ReportRequest withOperations(AttributeContext[] operations) {
         this.operations = operations;
         return this;
@@ -29,9 +30,11 @@ public class ReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceConfigId")
     public String serviceConfigId;
+
     public ReportRequest withServiceConfigId(String serviceConfigId) {
         this.serviceConfigId = serviceConfigId;
         return this;
     }
     
+    public ReportRequest(){}
 }

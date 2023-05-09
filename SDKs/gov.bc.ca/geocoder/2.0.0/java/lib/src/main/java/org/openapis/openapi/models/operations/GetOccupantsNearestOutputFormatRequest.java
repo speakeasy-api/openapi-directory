@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOccupantsNearestOutputFormatRequest {
@@ -12,6 +13,7 @@ public class GetOccupantsNearestOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=brief")
     public Boolean brief;
+
     public GetOccupantsNearestOutputFormatRequest withBrief(Boolean brief) {
         this.brief = brief;
         return this;
@@ -22,6 +24,7 @@ public class GetOccupantsNearestOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationDescriptor")
     public GetOccupantsNearestOutputFormatLocationDescriptorEnum locationDescriptor;
+
     public GetOccupantsNearestOutputFormatRequest withLocationDescriptor(GetOccupantsNearestOutputFormatLocationDescriptorEnum locationDescriptor) {
         this.locationDescriptor = locationDescriptor;
         return this;
@@ -32,6 +35,7 @@ public class GetOccupantsNearestOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDistance")
     public Long maxDistance;
+
     public GetOccupantsNearestOutputFormatRequest withMaxDistance(Long maxDistance) {
         this.maxDistance = maxDistance;
         return this;
@@ -44,6 +48,7 @@ public class GetOccupantsNearestOutputFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
     public GetOccupantsNearestOutputFormatOutputFormatEnum outputFormat;
+
     public GetOccupantsNearestOutputFormatRequest withOutputFormat(GetOccupantsNearestOutputFormatOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -54,6 +59,7 @@ public class GetOccupantsNearestOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
     public GetOccupantsNearestOutputFormatOutputSrsEnum outputSRS;
+
     public GetOccupantsNearestOutputFormatRequest withOutputSRS(GetOccupantsNearestOutputFormatOutputSrsEnum outputSRS) {
         this.outputSRS = outputSRS;
         return this;
@@ -64,6 +70,7 @@ public class GetOccupantsNearestOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=point")
     public String point;
+
     public GetOccupantsNearestOutputFormatRequest withPoint(String point) {
         this.point = point;
         return this;
@@ -74,6 +81,7 @@ public class GetOccupantsNearestOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setBack")
     public Long setBack;
+
     public GetOccupantsNearestOutputFormatRequest withSetBack(Long setBack) {
         this.setBack = setBack;
         return this;
@@ -84,9 +92,14 @@ public class GetOccupantsNearestOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String tags;
+
     public GetOccupantsNearestOutputFormatRequest withTags(String tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetOccupantsNearestOutputFormatRequest(@JsonProperty("outputFormat") GetOccupantsNearestOutputFormatOutputFormatEnum outputFormat, @JsonProperty("point") String point) {
+        this.outputFormat = outputFormat;
+        this.point = point;
+  }
 }

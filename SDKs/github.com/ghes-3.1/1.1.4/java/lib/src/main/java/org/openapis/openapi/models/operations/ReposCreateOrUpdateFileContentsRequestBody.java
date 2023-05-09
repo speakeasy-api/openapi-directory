@@ -15,6 +15,7 @@ public class ReposCreateOrUpdateFileContentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public ReposCreateOrUpdateFileContentsRequestBodyAuthor author;
+
     public ReposCreateOrUpdateFileContentsRequestBody withAuthor(ReposCreateOrUpdateFileContentsRequestBodyAuthor author) {
         this.author = author;
         return this;
@@ -26,6 +27,7 @@ public class ReposCreateOrUpdateFileContentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branch")
     public String branch;
+
     public ReposCreateOrUpdateFileContentsRequestBody withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -37,6 +39,7 @@ public class ReposCreateOrUpdateFileContentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committer")
     public ReposCreateOrUpdateFileContentsRequestBodyCommitter committer;
+
     public ReposCreateOrUpdateFileContentsRequestBody withCommitter(ReposCreateOrUpdateFileContentsRequestBodyCommitter committer) {
         this.committer = committer;
         return this;
@@ -47,6 +50,7 @@ public class ReposCreateOrUpdateFileContentsRequestBody {
      */
     @JsonProperty("content")
     public String content;
+
     public ReposCreateOrUpdateFileContentsRequestBody withContent(String content) {
         this.content = content;
         return this;
@@ -57,6 +61,7 @@ public class ReposCreateOrUpdateFileContentsRequestBody {
      */
     @JsonProperty("message")
     public String message;
+
     public ReposCreateOrUpdateFileContentsRequestBody withMessage(String message) {
         this.message = message;
         return this;
@@ -68,9 +73,14 @@ public class ReposCreateOrUpdateFileContentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha")
     public String sha;
+
     public ReposCreateOrUpdateFileContentsRequestBody withSha(String sha) {
         this.sha = sha;
         return this;
     }
     
+    public ReposCreateOrUpdateFileContentsRequestBody(@JsonProperty("content") String content, @JsonProperty("message") String message) {
+        this.content = content;
+        this.message = message;
+  }
 }

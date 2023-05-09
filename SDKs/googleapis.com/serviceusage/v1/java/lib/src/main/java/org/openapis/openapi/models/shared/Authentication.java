@@ -18,6 +18,7 @@ public class Authentication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("providers")
     public AuthProvider[] providers;
+
     public Authentication withProviders(AuthProvider[] providers) {
         this.providers = providers;
         return this;
@@ -29,9 +30,11 @@ public class Authentication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public AuthenticationRule[] rules;
+
     public Authentication withRules(AuthenticationRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public Authentication(){}
 }

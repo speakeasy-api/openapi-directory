@@ -12,9 +12,13 @@ public class NncerRequestBodyCertificateParameters {
      */
     @JsonProperty("RefNo")
     public String refNo;
+
     public NncerRequestBodyCertificateParameters withRefNo(String refNo) {
         this.refNo = refNo;
         return this;
     }
     
+    public NncerRequestBodyCertificateParameters(@JsonProperty("RefNo") String refNo) {
+        this.refNo = refNo;
+  }
 }

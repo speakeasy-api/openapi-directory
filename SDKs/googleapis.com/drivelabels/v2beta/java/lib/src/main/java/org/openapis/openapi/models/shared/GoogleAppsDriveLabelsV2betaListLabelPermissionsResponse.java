@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2betaListLabelPermissionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelPermissions")
     public GoogleAppsDriveLabelsV2betaLabelPermission[] labelPermissions;
+
     public GoogleAppsDriveLabelsV2betaListLabelPermissionsResponse withLabelPermissions(GoogleAppsDriveLabelsV2betaLabelPermission[] labelPermissions) {
         this.labelPermissions = labelPermissions;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsDriveLabelsV2betaListLabelPermissionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleAppsDriveLabelsV2betaListLabelPermissionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2betaListLabelPermissionsResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePipelineVariableForWorkspaceRequest {
@@ -12,6 +13,7 @@ public class CreatePipelineVariableForWorkspaceRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public CreatePipelineVariableForWorkspaceRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,13 @@ public class CreatePipelineVariableForWorkspaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public CreatePipelineVariableForWorkspaceRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public CreatePipelineVariableForWorkspaceRequest(@JsonProperty("workspace") String workspace) {
+        this.workspace = workspace;
+  }
 }

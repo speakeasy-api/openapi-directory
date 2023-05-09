@@ -15,9 +15,11 @@ public class AddFollowersForProject200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.ProjectResponse data;
+
     public AddFollowersForProject200ApplicationJSON withData(org.openapis.openapi.models.shared.ProjectResponse data) {
         this.data = data;
         return this;
     }
     
+    public AddFollowersForProject200ApplicationJSON(){}
 }

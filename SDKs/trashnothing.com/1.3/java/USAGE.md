@@ -3,35 +3,29 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.ContactModeratorsRequestBody;
-import org.openapis.openapi.models.operations.ContactModeratorsRequest;
-import org.openapis.openapi.models.operations.ContactModeratorsResponse;
+import org.openapis.openapi.models.operations.GetGroupRequest;
+import org.openapis.openapi.models.operations.GetGroupResponse;
+import org.openapis.openapi.models.operations.GetGroupSecurity;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
-                    oauth2Code = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                }})
                 .build();
 
-            ContactModeratorsRequest req = new ContactModeratorsRequest() {{
-                requestBody = new ContactModeratorsRequestBody() {{
-                    message = "corrupti";
-                    subject = "provident";
-                }};
-                groupId = "distinctio";
-            }}            
+            GetGroupRequest req = new GetGroupRequest("corrupti");            
 
-            ContactModeratorsResponse res = sdk.groups.contactModerators(req);
+            GetGroupResponse res = sdk.groups.getGroup(req, new GetGroupSecurity("provident") {{
+                apiKey = "YOUR_API_KEY_HERE";
+            }});
 
-            if (res.statusCode == 200) {
+            if (res.group != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

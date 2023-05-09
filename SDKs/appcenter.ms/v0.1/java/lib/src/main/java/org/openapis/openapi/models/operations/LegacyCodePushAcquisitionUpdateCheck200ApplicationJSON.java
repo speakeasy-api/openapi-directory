@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LegacyCodePushAcquisitionUpdateCheck200ApplicationJSON {
     @JsonProperty("updateInfo")
     public LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo updateInfo;
+
     public LegacyCodePushAcquisitionUpdateCheck200ApplicationJSON withUpdateInfo(LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo updateInfo) {
         this.updateInfo = updateInfo;
         return this;
     }
     
+    public LegacyCodePushAcquisitionUpdateCheck200ApplicationJSON(@JsonProperty("updateInfo") LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo updateInfo) {
+        this.updateInfo = updateInfo;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetTransitGatewayRouteTableAssociationsRequest {
     
     public Boolean dryRun;
+
     public GetTransitGatewayRouteTableAssociationsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class GetTransitGatewayRouteTableAssociationsRequest {
     
     
     public GetTransitGatewayRouteTableAssociationsRequestFilters[] filters;
+
     public GetTransitGatewayRouteTableAssociationsRequest withFilters(GetTransitGatewayRouteTableAssociationsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class GetTransitGatewayRouteTableAssociationsRequest {
     
     
     public Long maxResults;
+
     public GetTransitGatewayRouteTableAssociationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class GetTransitGatewayRouteTableAssociationsRequest {
     
     
     public String nextToken;
+
     public GetTransitGatewayRouteTableAssociationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,13 @@ public class GetTransitGatewayRouteTableAssociationsRequest {
     
     
     public String transitGatewayRouteTableId;
+
     public GetTransitGatewayRouteTableAssociationsRequest withTransitGatewayRouteTableId(String transitGatewayRouteTableId) {
         this.transitGatewayRouteTableId = transitGatewayRouteTableId;
         return this;
     }
     
+    public GetTransitGatewayRouteTableAssociationsRequest(@JsonProperty("TransitGatewayRouteTableId") String transitGatewayRouteTableId) {
+        this.transitGatewayRouteTableId = transitGatewayRouteTableId;
+  }
 }

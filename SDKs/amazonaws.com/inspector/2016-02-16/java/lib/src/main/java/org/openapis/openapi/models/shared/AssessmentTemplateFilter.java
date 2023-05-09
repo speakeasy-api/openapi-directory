@@ -15,6 +15,7 @@ public class AssessmentTemplateFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationRange")
     public DurationRange durationRange;
+
     public AssessmentTemplateFilter withDurationRange(DurationRange durationRange) {
         this.durationRange = durationRange;
         return this;
@@ -23,6 +24,7 @@ public class AssessmentTemplateFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namePattern")
     public String namePattern;
+
     public AssessmentTemplateFilter withNamePattern(String namePattern) {
         this.namePattern = namePattern;
         return this;
@@ -31,9 +33,11 @@ public class AssessmentTemplateFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rulesPackageArns")
     public String[] rulesPackageArns;
+
     public AssessmentTemplateFilter withRulesPackageArns(String[] rulesPackageArns) {
         this.rulesPackageArns = rulesPackageArns;
         return this;
     }
     
+    public AssessmentTemplateFilter(){}
 }

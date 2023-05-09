@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyActivityStreamResponse {
     
     public Boolean engineNativeAuditFieldsIncluded;
+
     public ModifyActivityStreamResponse withEngineNativeAuditFieldsIncluded(Boolean engineNativeAuditFieldsIncluded) {
         this.engineNativeAuditFieldsIncluded = engineNativeAuditFieldsIncluded;
         return this;
@@ -19,6 +20,7 @@ public class ModifyActivityStreamResponse {
     
     
     public String kinesisStreamName;
+
     public ModifyActivityStreamResponse withKinesisStreamName(String kinesisStreamName) {
         this.kinesisStreamName = kinesisStreamName;
         return this;
@@ -26,6 +28,7 @@ public class ModifyActivityStreamResponse {
     
     
     public String kmsKeyId;
+
     public ModifyActivityStreamResponse withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -33,6 +36,7 @@ public class ModifyActivityStreamResponse {
     
     
     public ActivityStreamModeEnum mode;
+
     public ModifyActivityStreamResponse withMode(ActivityStreamModeEnum mode) {
         this.mode = mode;
         return this;
@@ -40,6 +44,7 @@ public class ModifyActivityStreamResponse {
     
     
     public ActivityStreamPolicyStatusEnum policyStatus;
+
     public ModifyActivityStreamResponse withPolicyStatus(ActivityStreamPolicyStatusEnum policyStatus) {
         this.policyStatus = policyStatus;
         return this;
@@ -47,9 +52,11 @@ public class ModifyActivityStreamResponse {
     
     
     public ActivityStreamStatusEnum status;
+
     public ModifyActivityStreamResponse withStatus(ActivityStreamStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ModifyActivityStreamResponse(){}
 }

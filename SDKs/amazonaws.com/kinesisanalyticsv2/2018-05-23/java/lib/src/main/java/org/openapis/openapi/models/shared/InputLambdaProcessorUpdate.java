@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InputLambdaProcessorUpdate {
     @JsonProperty("ResourceARNUpdate")
     public String resourceARNUpdate;
+
     public InputLambdaProcessorUpdate withResourceARNUpdate(String resourceARNUpdate) {
         this.resourceARNUpdate = resourceARNUpdate;
         return this;
     }
     
+    public InputLambdaProcessorUpdate(@JsonProperty("ResourceARNUpdate") String resourceARNUpdate) {
+        this.resourceARNUpdate = resourceARNUpdate;
+  }
 }

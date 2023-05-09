@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * TemporalStatisticsConfigInput - &lt;p/&gt;
+ * TemporalStatisticsConfigInput - The structure representing the configuration for Temporal Statistics operation.
  */
 public class TemporalStatisticsConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupBy")
     public GroupByEnum groupBy;
+
     public TemporalStatisticsConfigInput withGroupBy(GroupByEnum groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -22,6 +23,7 @@ public class TemporalStatisticsConfigInput {
     
     @JsonProperty("Statistics")
     public TemporalStatisticsEnum[] statistics;
+
     public TemporalStatisticsConfigInput withStatistics(TemporalStatisticsEnum[] statistics) {
         this.statistics = statistics;
         return this;
@@ -30,9 +32,13 @@ public class TemporalStatisticsConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetBands")
     public String[] targetBands;
+
     public TemporalStatisticsConfigInput withTargetBands(String[] targetBands) {
         this.targetBands = targetBands;
         return this;
     }
     
+    public TemporalStatisticsConfigInput(@JsonProperty("Statistics") TemporalStatisticsEnum[] statistics) {
+        this.statistics = statistics;
+  }
 }

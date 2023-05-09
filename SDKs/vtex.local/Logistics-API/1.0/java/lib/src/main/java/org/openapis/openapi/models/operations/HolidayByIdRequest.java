@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HolidayByIdRequest {
@@ -12,6 +13,7 @@ public class HolidayByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public HolidayByIdRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class HolidayByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public HolidayByIdRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class HolidayByIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=holidayId")
     public String holidayId;
+
     public HolidayByIdRequest withHolidayId(String holidayId) {
         this.holidayId = holidayId;
         return this;
     }
     
+    public HolidayByIdRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("holidayId") String holidayId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.holidayId = holidayId;
+  }
 }

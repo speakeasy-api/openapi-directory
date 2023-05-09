@@ -15,6 +15,7 @@ public class PolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Actions")
     public Action[] actions;
+
     public PolicyDetails withActions(Action[] actions) {
         this.actions = actions;
         return this;
@@ -23,6 +24,7 @@ public class PolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSource")
     public EventSource eventSource;
+
     public PolicyDetails withEventSource(EventSource eventSource) {
         this.eventSource = eventSource;
         return this;
@@ -31,6 +33,7 @@ public class PolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public Parameters parameters;
+
     public PolicyDetails withParameters(Parameters parameters) {
         this.parameters = parameters;
         return this;
@@ -39,6 +42,7 @@ public class PolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyType")
     public PolicyTypeValuesEnum policyType;
+
     public PolicyDetails withPolicyType(PolicyTypeValuesEnum policyType) {
         this.policyType = policyType;
         return this;
@@ -47,6 +51,7 @@ public class PolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceLocations")
     public ResourceLocationValuesEnum[] resourceLocations;
+
     public PolicyDetails withResourceLocations(ResourceLocationValuesEnum[] resourceLocations) {
         this.resourceLocations = resourceLocations;
         return this;
@@ -55,6 +60,7 @@ public class PolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTypes")
     public ResourceTypeValuesEnum[] resourceTypes;
+
     public PolicyDetails withResourceTypes(ResourceTypeValuesEnum[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
@@ -63,6 +69,7 @@ public class PolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedules")
     public Schedule[] schedules;
+
     public PolicyDetails withSchedules(Schedule[] schedules) {
         this.schedules = schedules;
         return this;
@@ -71,9 +78,11 @@ public class PolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetTags")
     public Tag[] targetTags;
+
     public PolicyDetails withTargetTags(Tag[] targetTags) {
         this.targetTags = targetTags;
         return this;
     }
     
+    public PolicyDetails(){}
 }

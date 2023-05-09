@@ -15,9 +15,13 @@ public class SubscriptionDefinitionsResponse {
      */
     @JsonProperty("subscriptionDefinitions")
     public SubscriptionDefinition[] subscriptionDefinitions;
+
     public SubscriptionDefinitionsResponse withSubscriptionDefinitions(SubscriptionDefinition[] subscriptionDefinitions) {
         this.subscriptionDefinitions = subscriptionDefinitions;
         return this;
     }
     
+    public SubscriptionDefinitionsResponse(@JsonProperty("subscriptionDefinitions") SubscriptionDefinition[] subscriptionDefinitions) {
+        this.subscriptionDefinitions = subscriptionDefinitions;
+  }
 }

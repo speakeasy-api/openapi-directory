@@ -63,11 +63,9 @@ public class Schedule {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListScheduleResponse res = new org.openapis.openapi.models.operations.ListScheduleResponse() {{
+        org.openapis.openapi.models.operations.ListScheduleResponse res = new org.openapis.openapi.models.operations.ListScheduleResponse(contentType, httpRes.statusCode()) {{
             listSchedule200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

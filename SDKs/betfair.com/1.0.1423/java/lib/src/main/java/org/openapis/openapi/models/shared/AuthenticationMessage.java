@@ -12,6 +12,7 @@ public class AuthenticationMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appKey")
     public String appKey;
+
     public AuthenticationMessage withAppKey(String appKey) {
         this.appKey = appKey;
         return this;
@@ -23,6 +24,7 @@ public class AuthenticationMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public AuthenticationMessage withId(Integer id) {
         this.id = id;
         return this;
@@ -34,6 +36,7 @@ public class AuthenticationMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("op")
     public String op;
+
     public AuthenticationMessage withOp(String op) {
         this.op = op;
         return this;
@@ -42,9 +45,11 @@ public class AuthenticationMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("session")
     public String session;
+
     public AuthenticationMessage withSession(String session) {
         this.session = session;
         return this;
     }
     
+    public AuthenticationMessage(){}
 }

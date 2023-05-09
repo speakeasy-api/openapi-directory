@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class DailySubEntityType {
     /**
-     * Represents the day of the week. Eg: MONDAY.
+     * Represents the day of the week. Eg: MONDAY. Currently supported DailyMetrics = NONE.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfWeek")
     public DailySubEntityTypeDayOfWeekEnum dayOfWeek;
+
     public DailySubEntityType withDayOfWeek(DailySubEntityTypeDayOfWeekEnum dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -29,9 +30,11 @@ public class DailySubEntityType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeOfDay")
     public TimeOfDay timeOfDay;
+
     public DailySubEntityType withTimeOfDay(TimeOfDay timeOfDay) {
         this.timeOfDay = timeOfDay;
         return this;
     }
     
+    public DailySubEntityType(){}
 }

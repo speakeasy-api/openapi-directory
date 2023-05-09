@@ -15,9 +15,11 @@ public class UpdateFormResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity")
     public Form entity;
+
     public UpdateFormResponse withEntity(Form entity) {
         this.entity = entity;
         return this;
     }
     
+    public UpdateFormResponse(){}
 }

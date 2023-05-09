@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteResourceSetResponse {
     
     public String contentType;
+
     public DeleteResourceSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteResourceSetResponse {
      */
     
     public Object internalErrorException;
+
     public DeleteResourceSetResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteResourceSetResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteResourceSetResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteResourceSetResponse {
      */
     
     public Object invalidOperationException;
+
     public DeleteResourceSetResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteResourceSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteResourceSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteResourceSetResponse {
     
     
     public Integer statusCode;
+
     public DeleteResourceSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteResourceSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteResourceSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteResourceSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

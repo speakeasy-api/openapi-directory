@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAllPickupPpointsResponse {
     
     public String contentType;
+
     public ListAllPickupPpointsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAllPickupPpointsResponse {
      */
     
     public ListAllPickupPpoints200ApplicationJSON[] listAllPickupPpoints200ApplicationJSONObjects;
+
     public ListAllPickupPpointsResponse withListAllPickupPpoints200ApplicationJSONObjects(ListAllPickupPpoints200ApplicationJSON[] listAllPickupPpoints200ApplicationJSONObjects) {
         this.listAllPickupPpoints200ApplicationJSONObjects = listAllPickupPpoints200ApplicationJSONObjects;
         return this;
@@ -26,6 +29,7 @@ public class ListAllPickupPpointsResponse {
     
     
     public Integer statusCode;
+
     public ListAllPickupPpointsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ListAllPickupPpointsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAllPickupPpointsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAllPickupPpointsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

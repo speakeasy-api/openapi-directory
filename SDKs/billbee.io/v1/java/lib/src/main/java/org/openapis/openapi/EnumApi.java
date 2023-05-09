@@ -49,12 +49,10 @@ public class EnumApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnumApiGetOrderStatesResponse res = new org.openapis.openapi.models.operations.EnumApiGetOrderStatesResponse() {{
+        org.openapis.openapi.models.operations.EnumApiGetOrderStatesResponse res = new org.openapis.openapi.models.operations.EnumApiGetOrderStatesResponse(contentType, httpRes.statusCode()) {{
             enumApiGetOrderStates200ApplicationJSONObject = null;
             enumApiGetOrderStates200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -92,12 +90,10 @@ public class EnumApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnumApiGetPaymentTypesResponse res = new org.openapis.openapi.models.operations.EnumApiGetPaymentTypesResponse() {{
+        org.openapis.openapi.models.operations.EnumApiGetPaymentTypesResponse res = new org.openapis.openapi.models.operations.EnumApiGetPaymentTypesResponse(contentType, httpRes.statusCode()) {{
             enumApiGetPaymentTypes200ApplicationJSONObject = null;
             enumApiGetPaymentTypes200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,12 +131,10 @@ public class EnumApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnumApiGetShipmentTypesResponse res = new org.openapis.openapi.models.operations.EnumApiGetShipmentTypesResponse() {{
+        org.openapis.openapi.models.operations.EnumApiGetShipmentTypesResponse res = new org.openapis.openapi.models.operations.EnumApiGetShipmentTypesResponse(contentType, httpRes.statusCode()) {{
             enumApiGetShipmentTypes200ApplicationJSONObject = null;
             enumApiGetShipmentTypes200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,12 +172,10 @@ public class EnumApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnumApiGetShippingCarriersResponse res = new org.openapis.openapi.models.operations.EnumApiGetShippingCarriersResponse() {{
+        org.openapis.openapi.models.operations.EnumApiGetShippingCarriersResponse res = new org.openapis.openapi.models.operations.EnumApiGetShippingCarriersResponse(contentType, httpRes.statusCode()) {{
             enumApiGetShippingCarriers200ApplicationJSONObject = null;
             enumApiGetShippingCarriers200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

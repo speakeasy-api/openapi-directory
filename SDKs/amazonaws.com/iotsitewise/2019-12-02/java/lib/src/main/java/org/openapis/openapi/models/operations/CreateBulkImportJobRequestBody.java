@@ -12,6 +12,7 @@ public class CreateBulkImportJobRequestBody {
      */
     @JsonProperty("errorReportLocation")
     public CreateBulkImportJobRequestBodyErrorReportLocation errorReportLocation;
+
     public CreateBulkImportJobRequestBody withErrorReportLocation(CreateBulkImportJobRequestBodyErrorReportLocation errorReportLocation) {
         this.errorReportLocation = errorReportLocation;
         return this;
@@ -22,6 +23,7 @@ public class CreateBulkImportJobRequestBody {
      */
     @JsonProperty("files")
     public org.openapis.openapi.models.shared.File[] files;
+
     public CreateBulkImportJobRequestBody withFiles(org.openapis.openapi.models.shared.File[] files) {
         this.files = files;
         return this;
@@ -32,6 +34,7 @@ public class CreateBulkImportJobRequestBody {
      */
     @JsonProperty("jobConfiguration")
     public CreateBulkImportJobRequestBodyJobConfiguration jobConfiguration;
+
     public CreateBulkImportJobRequestBody withJobConfiguration(CreateBulkImportJobRequestBodyJobConfiguration jobConfiguration) {
         this.jobConfiguration = jobConfiguration;
         return this;
@@ -42,6 +45,7 @@ public class CreateBulkImportJobRequestBody {
      */
     @JsonProperty("jobName")
     public String jobName;
+
     public CreateBulkImportJobRequestBody withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -52,9 +56,17 @@ public class CreateBulkImportJobRequestBody {
      */
     @JsonProperty("jobRoleArn")
     public String jobRoleArn;
+
     public CreateBulkImportJobRequestBody withJobRoleArn(String jobRoleArn) {
         this.jobRoleArn = jobRoleArn;
         return this;
     }
     
+    public CreateBulkImportJobRequestBody(@JsonProperty("errorReportLocation") CreateBulkImportJobRequestBodyErrorReportLocation errorReportLocation, @JsonProperty("files") org.openapis.openapi.models.shared.File[] files, @JsonProperty("jobConfiguration") CreateBulkImportJobRequestBodyJobConfiguration jobConfiguration, @JsonProperty("jobName") String jobName, @JsonProperty("jobRoleArn") String jobRoleArn) {
+        this.errorReportLocation = errorReportLocation;
+        this.files = files;
+        this.jobConfiguration = jobConfiguration;
+        this.jobName = jobName;
+        this.jobRoleArn = jobRoleArn;
+  }
 }

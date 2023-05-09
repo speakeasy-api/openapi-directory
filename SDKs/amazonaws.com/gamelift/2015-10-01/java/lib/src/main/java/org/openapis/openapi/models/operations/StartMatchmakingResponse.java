@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartMatchmakingResponse {
     
     public String contentType;
+
     public StartMatchmakingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartMatchmakingResponse {
      */
     
     public Object internalServiceException;
+
     public StartMatchmakingResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class StartMatchmakingResponse {
      */
     
     public Object invalidRequestException;
+
     public StartMatchmakingResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StartMatchmakingResponse {
      */
     
     public Object notFoundException;
+
     public StartMatchmakingResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartMatchmakingResponse {
      */
     
     public org.openapis.openapi.models.shared.StartMatchmakingOutput startMatchmakingOutput;
+
     public StartMatchmakingResponse withStartMatchmakingOutput(org.openapis.openapi.models.shared.StartMatchmakingOutput startMatchmakingOutput) {
         this.startMatchmakingOutput = startMatchmakingOutput;
         return this;
@@ -56,6 +62,7 @@ public class StartMatchmakingResponse {
     
     
     public Integer statusCode;
+
     public StartMatchmakingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartMatchmakingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartMatchmakingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class StartMatchmakingResponse {
      */
     
     public Object unsupportedRegionException;
+
     public StartMatchmakingResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public StartMatchmakingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

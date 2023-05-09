@@ -15,6 +15,7 @@ public class ListImportsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportSummaryList")
     public ImportSummary[] importSummaryList;
+
     public ListImportsOutput withImportSummaryList(ImportSummary[] importSummaryList) {
         this.importSummaryList = importSummaryList;
         return this;
@@ -23,9 +24,11 @@ public class ListImportsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListImportsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListImportsOutput(){}
 }

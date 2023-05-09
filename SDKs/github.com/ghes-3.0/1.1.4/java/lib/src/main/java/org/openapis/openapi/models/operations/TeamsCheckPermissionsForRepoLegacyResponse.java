@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TeamsCheckPermissionsForRepoLegacyResponse {
     
     public String contentType;
+
     public TeamsCheckPermissionsForRepoLegacyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TeamsCheckPermissionsForRepoLegacyResponse {
     
     
     public Integer statusCode;
+
     public TeamsCheckPermissionsForRepoLegacyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TeamsCheckPermissionsForRepoLegacyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TeamsCheckPermissionsForRepoLegacyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class TeamsCheckPermissionsForRepoLegacyResponse {
      */
     
     public org.openapis.openapi.models.shared.TeamRepository teamRepository;
+
     public TeamsCheckPermissionsForRepoLegacyResponse withTeamRepository(org.openapis.openapi.models.shared.TeamRepository teamRepository) {
         this.teamRepository = teamRepository;
         return this;
     }
     
+    public TeamsCheckPermissionsForRepoLegacyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

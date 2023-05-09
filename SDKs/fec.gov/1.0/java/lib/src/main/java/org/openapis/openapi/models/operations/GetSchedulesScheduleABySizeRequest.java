@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchedulesScheduleABySizeRequest {
@@ -13,6 +14,7 @@ public class GetSchedulesScheduleABySizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetSchedulesScheduleABySizeRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -24,6 +26,7 @@ public class GetSchedulesScheduleABySizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
     public String[] committeeId;
+
     public GetSchedulesScheduleABySizeRequest withCommitteeId(String[] committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -37,6 +40,7 @@ public class GetSchedulesScheduleABySizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
     public Integer[] cycle;
+
     public GetSchedulesScheduleABySizeRequest withCycle(Integer[] cycle) {
         this.cycle = cycle;
         return this;
@@ -47,6 +51,7 @@ public class GetSchedulesScheduleABySizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetSchedulesScheduleABySizeRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -57,6 +62,7 @@ public class GetSchedulesScheduleABySizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetSchedulesScheduleABySizeRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -76,6 +82,7 @@ public class GetSchedulesScheduleABySizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public GetSchedulesScheduleABySizeSizeEnum[] size;
+
     public GetSchedulesScheduleABySizeRequest withSize(GetSchedulesScheduleABySizeSizeEnum[] size) {
         this.size = size;
         return this;
@@ -87,6 +94,7 @@ public class GetSchedulesScheduleABySizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetSchedulesScheduleABySizeRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -97,6 +105,7 @@ public class GetSchedulesScheduleABySizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetSchedulesScheduleABySizeRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -107,6 +116,7 @@ public class GetSchedulesScheduleABySizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetSchedulesScheduleABySizeRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -117,9 +127,13 @@ public class GetSchedulesScheduleABySizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetSchedulesScheduleABySizeRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
     }
     
+    public GetSchedulesScheduleABySizeRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

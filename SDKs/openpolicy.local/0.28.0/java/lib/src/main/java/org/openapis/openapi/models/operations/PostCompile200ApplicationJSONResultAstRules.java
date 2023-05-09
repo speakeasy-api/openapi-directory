@@ -15,6 +15,7 @@ public class PostCompile200ApplicationJSONResultAstRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public PostCompile200ApplicationJSONResultAstRulesBody[] body;
+
     public PostCompile200ApplicationJSONResultAstRules withBody(PostCompile200ApplicationJSONResultAstRulesBody[] body) {
         this.body = body;
         return this;
@@ -23,9 +24,11 @@ public class PostCompile200ApplicationJSONResultAstRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("head")
     public PostCompile200ApplicationJSONResultAstRulesHead head;
+
     public PostCompile200ApplicationJSONResultAstRules withHead(PostCompile200ApplicationJSONResultAstRulesHead head) {
         this.head = head;
         return this;
     }
     
+    public PostCompile200ApplicationJSONResultAstRules(){}
 }

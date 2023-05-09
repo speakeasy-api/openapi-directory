@@ -18,6 +18,7 @@ public class TaskCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientTaskPONumber")
     public String clientTaskPONumber;
+
     public TaskCreateDTO withClientTaskPONumber(String clientTaskPONumber) {
         this.clientTaskPONumber = clientTaskPONumber;
         return this;
@@ -26,6 +27,7 @@ public class TaskCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dates")
     public ProjectDatesDTO dates;
+
     public TaskCreateDTO withDates(ProjectDatesDTO dates) {
         this.dates = dates;
         return this;
@@ -37,6 +39,7 @@ public class TaskCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public TaskFileDTO[] files;
+
     public TaskCreateDTO withFiles(TaskFileDTO[] files) {
         this.files = files;
         return this;
@@ -45,6 +48,7 @@ public class TaskCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructions")
     public InstructionsDTO instructions;
+
     public TaskCreateDTO withInstructions(InstructionsDTO instructions) {
         this.instructions = instructions;
         return this;
@@ -56,6 +60,7 @@ public class TaskCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCombination")
     public CommonLanguageCombinationDTO languageCombination;
+
     public TaskCreateDTO withLanguageCombination(CommonLanguageCombinationDTO languageCombination) {
         this.languageCombination = languageCombination;
         return this;
@@ -67,6 +72,7 @@ public class TaskCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TaskCreateDTO withName(String name) {
         this.name = name;
         return this;
@@ -78,6 +84,7 @@ public class TaskCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("people")
     public ClassicPeopleDTO people;
+
     public TaskCreateDTO withPeople(ClassicPeopleDTO people) {
         this.people = people;
         return this;
@@ -89,6 +96,7 @@ public class TaskCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specializationId")
     public Long specializationId;
+
     public TaskCreateDTO withSpecializationId(Long specializationId) {
         this.specializationId = specializationId;
         return this;
@@ -100,9 +108,11 @@ public class TaskCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowId")
     public Long workflowId;
+
     public TaskCreateDTO withWorkflowId(Long workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public TaskCreateDTO(){}
 }

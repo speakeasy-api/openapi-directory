@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaRuleBoostAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boost")
     public Float boost;
+
     public GoogleCloudRetailV2alphaRuleBoostAction withBoost(Float boost) {
         this.boost = boost;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2alphaRuleBoostAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productsFilter")
     public String productsFilter;
+
     public GoogleCloudRetailV2alphaRuleBoostAction withProductsFilter(String productsFilter) {
         this.productsFilter = productsFilter;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaRuleBoostAction(){}
 }

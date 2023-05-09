@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyHostsResultUnsuccessfulError {
     
     public String code;
+
     public ModifyHostsResultUnsuccessfulError withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class ModifyHostsResultUnsuccessfulError {
     
     
     public String message;
+
     public ModifyHostsResultUnsuccessfulError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ModifyHostsResultUnsuccessfulError(){}
 }

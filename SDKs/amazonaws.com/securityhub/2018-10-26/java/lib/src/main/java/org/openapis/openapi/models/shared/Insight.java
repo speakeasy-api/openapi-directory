@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Insight {
     @JsonProperty("Filters")
     public AwsSecurityFindingFilters filters;
+
     public Insight withFilters(AwsSecurityFindingFilters filters) {
         this.filters = filters;
         return this;
@@ -19,6 +20,7 @@ public class Insight {
     
     @JsonProperty("GroupByAttribute")
     public String groupByAttribute;
+
     public Insight withGroupByAttribute(String groupByAttribute) {
         this.groupByAttribute = groupByAttribute;
         return this;
@@ -26,6 +28,7 @@ public class Insight {
     
     @JsonProperty("InsightArn")
     public String insightArn;
+
     public Insight withInsightArn(String insightArn) {
         this.insightArn = insightArn;
         return this;
@@ -33,9 +36,16 @@ public class Insight {
     
     @JsonProperty("Name")
     public String name;
+
     public Insight withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Insight(@JsonProperty("Filters") AwsSecurityFindingFilters filters, @JsonProperty("GroupByAttribute") String groupByAttribute, @JsonProperty("InsightArn") String insightArn, @JsonProperty("Name") String name) {
+        this.filters = filters;
+        this.groupByAttribute = groupByAttribute;
+        this.insightArn = insightArn;
+        this.name = name;
+  }
 }

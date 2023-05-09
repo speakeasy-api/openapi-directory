@@ -18,6 +18,7 @@ public class SMSRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_envoi")
     public String dateEnvoi;
+
     public SMSRequest withDateEnvoi(String dateEnvoi) {
         this.dateEnvoi = dateEnvoi;
         return this;
@@ -29,6 +30,7 @@ public class SMSRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emetteur")
     public String emetteur;
+
     public SMSRequest withEmetteur(String emetteur) {
         this.emetteur = emetteur;
         return this;
@@ -40,6 +42,7 @@ public class SMSRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gmt_zone")
     public SMSRequestGmtZoneEnum gmtZone;
+
     public SMSRequest withGmtZone(SMSRequestGmtZoneEnum gmtZone) {
         this.gmtZone = gmtZone;
         return this;
@@ -50,6 +53,7 @@ public class SMSRequest {
      */
     @JsonProperty("keyid")
     public String keyid;
+
     public SMSRequest withKeyid(String keyid) {
         this.keyid = keyid;
         return this;
@@ -61,6 +65,7 @@ public class SMSRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nostop")
     public String nostop;
+
     public SMSRequest withNostop(String nostop) {
         this.nostop = nostop;
         return this;
@@ -68,6 +73,7 @@ public class SMSRequest {
     
     @JsonProperty("num")
     public String[] num;
+
     public SMSRequest withNum(String[] num) {
         this.num = num;
         return this;
@@ -76,6 +82,7 @@ public class SMSRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numAzur")
     public SMSRequestNumAzurEnum numAzur;
+
     public SMSRequest withNumAzur(SMSRequestNumAzurEnum numAzur) {
         this.numAzur = numAzur;
         return this;
@@ -87,6 +94,7 @@ public class SMSRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repertoireId")
     public String repertoireId;
+
     public SMSRequest withRepertoireId(String repertoireId) {
         this.repertoireId = repertoireId;
         return this;
@@ -94,6 +102,7 @@ public class SMSRequest {
     
     @JsonProperty("sms")
     public String[] sms;
+
     public SMSRequest withSms(String[] sms) {
         this.sms = sms;
         return this;
@@ -105,6 +114,7 @@ public class SMSRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smslong")
     public String smslong;
+
     public SMSRequest withSmslong(String smslong) {
         this.smslong = smslong;
         return this;
@@ -113,6 +123,7 @@ public class SMSRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracker")
     public String[] tracker;
+
     public SMSRequest withTracker(String[] tracker) {
         this.tracker = tracker;
         return this;
@@ -124,9 +135,15 @@ public class SMSRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ucs2")
     public String ucs2;
+
     public SMSRequest withUcs2(String ucs2) {
         this.ucs2 = ucs2;
         return this;
     }
     
+    public SMSRequest(@JsonProperty("keyid") String keyid, @JsonProperty("num") String[] num, @JsonProperty("sms") String[] sms) {
+        this.keyid = keyid;
+        this.num = num;
+        this.sms = sms;
+  }
 }

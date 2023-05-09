@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * BundleInstanceRequest - Contains the parameters for BundleInstance.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class BundleInstanceRequest {
     
     public Boolean dryRun;
+
     public BundleInstanceRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,6 +20,7 @@ public class BundleInstanceRequest {
     
     
     public String instanceId;
+
     public BundleInstanceRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -26,9 +28,14 @@ public class BundleInstanceRequest {
     
     
     public Storage storage;
+
     public BundleInstanceRequest withStorage(Storage storage) {
         this.storage = storage;
         return this;
     }
     
+    public BundleInstanceRequest(@JsonProperty("InstanceId") String instanceId, @JsonProperty("Storage") Storage storage) {
+        this.instanceId = instanceId;
+        this.storage = storage;
+  }
 }

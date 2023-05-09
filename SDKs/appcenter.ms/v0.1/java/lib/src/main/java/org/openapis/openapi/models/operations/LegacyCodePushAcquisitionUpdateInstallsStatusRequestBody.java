@@ -15,6 +15,7 @@ public class LegacyCodePushAcquisitionUpdateInstallsStatusRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appVersion")
     public String appVersion;
+
     public LegacyCodePushAcquisitionUpdateInstallsStatusRequestBody withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -23,6 +24,7 @@ public class LegacyCodePushAcquisitionUpdateInstallsStatusRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientUniqueId")
     public String clientUniqueId;
+
     public LegacyCodePushAcquisitionUpdateInstallsStatusRequestBody withClientUniqueId(String clientUniqueId) {
         this.clientUniqueId = clientUniqueId;
         return this;
@@ -31,6 +33,7 @@ public class LegacyCodePushAcquisitionUpdateInstallsStatusRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentKey")
     public String deploymentKey;
+
     public LegacyCodePushAcquisitionUpdateInstallsStatusRequestBody withDeploymentKey(String deploymentKey) {
         this.deploymentKey = deploymentKey;
         return this;
@@ -39,6 +42,7 @@ public class LegacyCodePushAcquisitionUpdateInstallsStatusRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public LegacyCodePushAcquisitionUpdateInstallsStatusRequestBody withLabel(String label) {
         this.label = label;
         return this;
@@ -47,6 +51,7 @@ public class LegacyCodePushAcquisitionUpdateInstallsStatusRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousDeploymentKey")
     public String previousDeploymentKey;
+
     public LegacyCodePushAcquisitionUpdateInstallsStatusRequestBody withPreviousDeploymentKey(String previousDeploymentKey) {
         this.previousDeploymentKey = previousDeploymentKey;
         return this;
@@ -55,6 +60,7 @@ public class LegacyCodePushAcquisitionUpdateInstallsStatusRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousLabelOrAppVersion")
     public String previousLabelOrAppVersion;
+
     public LegacyCodePushAcquisitionUpdateInstallsStatusRequestBody withPreviousLabelOrAppVersion(String previousLabelOrAppVersion) {
         this.previousLabelOrAppVersion = previousLabelOrAppVersion;
         return this;
@@ -63,9 +69,11 @@ public class LegacyCodePushAcquisitionUpdateInstallsStatusRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public LegacyCodePushAcquisitionUpdateInstallsStatusRequestBody withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public LegacyCodePushAcquisitionUpdateInstallsStatusRequestBody(){}
 }

@@ -18,6 +18,7 @@ public class ListEkmConnectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ekmConnections")
     public EkmConnection[] ekmConnections;
+
     public ListEkmConnectionsResponse withEkmConnections(EkmConnection[] ekmConnections) {
         this.ekmConnections = ekmConnections;
         return this;
@@ -29,6 +30,7 @@ public class ListEkmConnectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListEkmConnectionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListEkmConnectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public ListEkmConnectionsResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public ListEkmConnectionsResponse(){}
 }

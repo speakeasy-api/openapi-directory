@@ -15,6 +15,7 @@ public class AwsCodeBuildProjectLogsConfigCloudWatchLogsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupName")
     public String groupName;
+
     public AwsCodeBuildProjectLogsConfigCloudWatchLogsDetails withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -23,6 +24,7 @@ public class AwsCodeBuildProjectLogsConfigCloudWatchLogsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsCodeBuildProjectLogsConfigCloudWatchLogsDetails withStatus(String status) {
         this.status = status;
         return this;
@@ -31,9 +33,11 @@ public class AwsCodeBuildProjectLogsConfigCloudWatchLogsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public AwsCodeBuildProjectLogsConfigCloudWatchLogsDetails withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public AwsCodeBuildProjectLogsConfigCloudWatchLogsDetails(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV4LayersAsHarvestedActivityIdContentsResponse {
     
     public byte[] body;
+
     public GetV4LayersAsHarvestedActivityIdContentsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetV4LayersAsHarvestedActivityIdContentsResponse {
     
     
     public String contentType;
+
     public GetV4LayersAsHarvestedActivityIdContentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetV4LayersAsHarvestedActivityIdContentsResponse {
      */
     
     public java.util.Map<String, Object> empty;
+
     public GetV4LayersAsHarvestedActivityIdContentsResponse withEmpty(java.util.Map<String, Object> empty) {
         this.empty = empty;
         return this;
@@ -36,6 +40,7 @@ public class GetV4LayersAsHarvestedActivityIdContentsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetV4LayersAsHarvestedActivityIdContentsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -43,6 +48,7 @@ public class GetV4LayersAsHarvestedActivityIdContentsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetV4LayersAsHarvestedActivityIdContentsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -50,6 +56,7 @@ public class GetV4LayersAsHarvestedActivityIdContentsResponse {
     
     
     public Integer statusCode;
+
     public GetV4LayersAsHarvestedActivityIdContentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -57,9 +64,14 @@ public class GetV4LayersAsHarvestedActivityIdContentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV4LayersAsHarvestedActivityIdContentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetV4LayersAsHarvestedActivityIdContentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

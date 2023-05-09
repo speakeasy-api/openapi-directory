@@ -18,6 +18,7 @@ public class SiteInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public SiteInput withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -29,9 +30,11 @@ public class SiteInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public SiteInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
     }
     
+    public SiteInput(){}
 }

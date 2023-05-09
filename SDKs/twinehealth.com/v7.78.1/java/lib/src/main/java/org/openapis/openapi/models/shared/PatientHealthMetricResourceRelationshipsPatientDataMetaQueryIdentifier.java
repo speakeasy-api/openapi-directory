@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatientHealthMetricResourceRelationshipsPatientDataMetaQueryIdentifier {
     @JsonProperty("system")
     public String system;
+
     public PatientHealthMetricResourceRelationshipsPatientDataMetaQueryIdentifier withSystem(String system) {
         this.system = system;
         return this;
@@ -16,9 +17,14 @@ public class PatientHealthMetricResourceRelationshipsPatientDataMetaQueryIdentif
     
     @JsonProperty("value")
     public String value;
+
     public PatientHealthMetricResourceRelationshipsPatientDataMetaQueryIdentifier withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PatientHealthMetricResourceRelationshipsPatientDataMetaQueryIdentifier(@JsonProperty("system") String system, @JsonProperty("value") String value) {
+        this.system = system;
+        this.value = value;
+  }
 }

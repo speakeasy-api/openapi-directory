@@ -18,9 +18,11 @@ public class ProductsGenerateApprovalUrlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ProductsGenerateApprovalUrlResponse withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ProductsGenerateApprovalUrlResponse(){}
 }

@@ -12,6 +12,7 @@ public class PatchOrganizationRequestBodySupportChat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PatchOrganizationRequestBodySupportChat withType(String type) {
         this.type = type;
         return this;
@@ -20,9 +21,11 @@ public class PatchOrganizationRequestBodySupportChat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public PatchOrganizationRequestBodySupportChat withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PatchOrganizationRequestBodySupportChat(){}
 }

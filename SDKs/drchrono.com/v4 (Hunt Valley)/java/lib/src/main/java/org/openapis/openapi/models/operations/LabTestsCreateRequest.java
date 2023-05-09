@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class LabTestsCreateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public LabTestsCreateRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -16,9 +17,11 @@ public class LabTestsCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public Long order;
+
     public LabTestsCreateRequest withOrder(Long order) {
         this.order = order;
         return this;
     }
     
+    public LabTestsCreateRequest(){}
 }

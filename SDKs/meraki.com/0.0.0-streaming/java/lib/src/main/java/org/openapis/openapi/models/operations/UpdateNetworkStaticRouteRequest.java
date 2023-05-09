@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkStaticRouteRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateNetworkStaticRouteRequestBody requestBody;
+
     public UpdateNetworkStaticRouteRequest withRequestBody(UpdateNetworkStaticRouteRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class UpdateNetworkStaticRouteRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public UpdateNetworkStaticRouteRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -23,9 +26,14 @@ public class UpdateNetworkStaticRouteRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=staticRouteId")
     public String staticRouteId;
+
     public UpdateNetworkStaticRouteRequest withStaticRouteId(String staticRouteId) {
         this.staticRouteId = staticRouteId;
         return this;
     }
     
+    public UpdateNetworkStaticRouteRequest(@JsonProperty("networkId") String networkId, @JsonProperty("staticRouteId") String staticRouteId) {
+        this.networkId = networkId;
+        this.staticRouteId = staticRouteId;
+  }
 }

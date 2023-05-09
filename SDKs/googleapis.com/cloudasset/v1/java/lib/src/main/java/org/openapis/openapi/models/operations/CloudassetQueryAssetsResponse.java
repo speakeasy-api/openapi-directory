@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudassetQueryAssetsResponse {
     
     public String contentType;
+
     public CloudassetQueryAssetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudassetQueryAssetsResponse {
      */
     
     public org.openapis.openapi.models.shared.QueryAssetsResponse queryAssetsResponse;
+
     public CloudassetQueryAssetsResponse withQueryAssetsResponse(org.openapis.openapi.models.shared.QueryAssetsResponse queryAssetsResponse) {
         this.queryAssetsResponse = queryAssetsResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudassetQueryAssetsResponse {
     
     
     public Integer statusCode;
+
     public CloudassetQueryAssetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudassetQueryAssetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudassetQueryAssetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudassetQueryAssetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

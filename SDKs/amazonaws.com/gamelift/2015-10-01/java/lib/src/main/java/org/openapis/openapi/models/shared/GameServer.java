@@ -14,12 +14,13 @@ import org.openapis.openapi.utils.DateTimeDeserializer;
 import org.openapis.openapi.utils.DateTimeSerializer;
 
 /**
- * GameServer - &lt;p&gt; &lt;b&gt;This data type is used with the GameLift FleetIQ and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Properties describing a game server that is running on an instance in a game server group. &lt;/p&gt; &lt;p&gt;A game server is created by a successful call to &lt;code&gt;RegisterGameServer&lt;/code&gt; and deleted by calling &lt;code&gt;DeregisterGameServer&lt;/code&gt;. A game server is claimed to host a game session by calling &lt;code&gt;ClaimGameServer&lt;/code&gt;. &lt;/p&gt;
+ * GameServer - &lt;p&gt; &lt;b&gt;This data type is used with the Amazon GameLift FleetIQ and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Properties describing a game server that is running on an instance in a game server group. &lt;/p&gt; &lt;p&gt;A game server is created by a successful call to &lt;code&gt;RegisterGameServer&lt;/code&gt; and deleted by calling &lt;code&gt;DeregisterGameServer&lt;/code&gt;. A game server is claimed to host a game session by calling &lt;code&gt;ClaimGameServer&lt;/code&gt;. &lt;/p&gt;
  */
 public class GameServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClaimStatus")
     public GameServerClaimStatusEnum claimStatus;
+
     public GameServer withClaimStatus(GameServerClaimStatusEnum claimStatus) {
         this.claimStatus = claimStatus;
         return this;
@@ -28,6 +29,7 @@ public class GameServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionInfo")
     public String connectionInfo;
+
     public GameServer withConnectionInfo(String connectionInfo) {
         this.connectionInfo = connectionInfo;
         return this;
@@ -36,6 +38,7 @@ public class GameServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServerData")
     public String gameServerData;
+
     public GameServer withGameServerData(String gameServerData) {
         this.gameServerData = gameServerData;
         return this;
@@ -44,6 +47,7 @@ public class GameServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServerGroupArn")
     public String gameServerGroupArn;
+
     public GameServer withGameServerGroupArn(String gameServerGroupArn) {
         this.gameServerGroupArn = gameServerGroupArn;
         return this;
@@ -52,6 +56,7 @@ public class GameServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServerGroupName")
     public String gameServerGroupName;
+
     public GameServer withGameServerGroupName(String gameServerGroupName) {
         this.gameServerGroupName = gameServerGroupName;
         return this;
@@ -60,6 +65,7 @@ public class GameServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServerId")
     public String gameServerId;
+
     public GameServer withGameServerId(String gameServerId) {
         this.gameServerId = gameServerId;
         return this;
@@ -68,6 +74,7 @@ public class GameServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public GameServer withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -78,6 +85,7 @@ public class GameServer {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastClaimTime")
     public OffsetDateTime lastClaimTime;
+
     public GameServer withLastClaimTime(OffsetDateTime lastClaimTime) {
         this.lastClaimTime = lastClaimTime;
         return this;
@@ -88,6 +96,7 @@ public class GameServer {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastHealthCheckTime")
     public OffsetDateTime lastHealthCheckTime;
+
     public GameServer withLastHealthCheckTime(OffsetDateTime lastHealthCheckTime) {
         this.lastHealthCheckTime = lastHealthCheckTime;
         return this;
@@ -98,6 +107,7 @@ public class GameServer {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RegistrationTime")
     public OffsetDateTime registrationTime;
+
     public GameServer withRegistrationTime(OffsetDateTime registrationTime) {
         this.registrationTime = registrationTime;
         return this;
@@ -106,9 +116,11 @@ public class GameServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UtilizationStatus")
     public GameServerUtilizationStatusEnum utilizationStatus;
+
     public GameServer withUtilizationStatus(GameServerUtilizationStatusEnum utilizationStatus) {
         this.utilizationStatus = utilizationStatus;
         return this;
     }
     
+    public GameServer(){}
 }

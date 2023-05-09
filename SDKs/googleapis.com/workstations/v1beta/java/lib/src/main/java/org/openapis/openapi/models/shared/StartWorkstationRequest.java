@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class StartWorkstationRequest {
     /**
-     * If set, the request will be rejected if the latest version of the workstation on the server does not have this etag.
+     * If set, the request will be rejected if the latest version of the workstation on the server does not have this ETag.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public StartWorkstationRequest withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,9 +30,11 @@ public class StartWorkstationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateOnly")
     public Boolean validateOnly;
+
     public StartWorkstationRequest withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public StartWorkstationRequest(){}
 }

@@ -18,6 +18,7 @@ public class V2ApiTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("methods")
     public String[] methods;
+
     public V2ApiTarget withMethods(String[] methods) {
         this.methods = methods;
         return this;
@@ -29,9 +30,11 @@ public class V2ApiTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public V2ApiTarget withService(String service) {
         this.service = service;
         return this;
     }
     
+    public V2ApiTarget(){}
 }

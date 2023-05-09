@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ChecksListSuitesForRef200ApplicationJSON {
     @JsonProperty("check_suites")
     public org.openapis.openapi.models.shared.CheckSuite[] checkSuites;
+
     public ChecksListSuitesForRef200ApplicationJSON withCheckSuites(org.openapis.openapi.models.shared.CheckSuite[] checkSuites) {
         this.checkSuites = checkSuites;
         return this;
@@ -19,9 +20,14 @@ public class ChecksListSuitesForRef200ApplicationJSON {
     
     @JsonProperty("total_count")
     public Long totalCount;
+
     public ChecksListSuitesForRef200ApplicationJSON withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public ChecksListSuitesForRef200ApplicationJSON(@JsonProperty("check_suites") org.openapis.openapi.models.shared.CheckSuite[] checkSuites, @JsonProperty("total_count") Long totalCount) {
+        this.checkSuites = checkSuites;
+        this.totalCount = totalCount;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateComputeEnvironmentRequestBodyComputeResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allocationStrategy")
     public org.openapis.openapi.models.shared.CRAllocationStrategyEnum allocationStrategy;
+
     public CreateComputeEnvironmentRequestBodyComputeResources withAllocationStrategy(org.openapis.openapi.models.shared.CRAllocationStrategyEnum allocationStrategy) {
         this.allocationStrategy = allocationStrategy;
         return this;
@@ -23,6 +24,7 @@ public class CreateComputeEnvironmentRequestBodyComputeResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bidPercentage")
     public Long bidPercentage;
+
     public CreateComputeEnvironmentRequestBodyComputeResources withBidPercentage(Long bidPercentage) {
         this.bidPercentage = bidPercentage;
         return this;
@@ -31,6 +33,7 @@ public class CreateComputeEnvironmentRequestBodyComputeResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredvCpus")
     public Long desiredvCpus;
+
     public CreateComputeEnvironmentRequestBodyComputeResources withDesiredvCpus(Long desiredvCpus) {
         this.desiredvCpus = desiredvCpus;
         return this;
@@ -39,6 +42,7 @@ public class CreateComputeEnvironmentRequestBodyComputeResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2Configuration")
     public org.openapis.openapi.models.shared.Ec2Configuration[] ec2Configuration;
+
     public CreateComputeEnvironmentRequestBodyComputeResources withEc2Configuration(org.openapis.openapi.models.shared.Ec2Configuration[] ec2Configuration) {
         this.ec2Configuration = ec2Configuration;
         return this;
@@ -47,6 +51,7 @@ public class CreateComputeEnvironmentRequestBodyComputeResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2KeyPair")
     public String ec2KeyPair;
+
     public CreateComputeEnvironmentRequestBodyComputeResources withEc2KeyPair(String ec2KeyPair) {
         this.ec2KeyPair = ec2KeyPair;
         return this;
@@ -55,6 +60,7 @@ public class CreateComputeEnvironmentRequestBodyComputeResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageId")
     public String imageId;
+
     public CreateComputeEnvironmentRequestBodyComputeResources withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -63,6 +69,7 @@ public class CreateComputeEnvironmentRequestBodyComputeResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceRole")
     public String instanceRole;
+
     public CreateComputeEnvironmentRequestBodyComputeResources withInstanceRole(String instanceRole) {
         this.instanceRole = instanceRole;
         return this;
@@ -71,6 +78,7 @@ public class CreateComputeEnvironmentRequestBodyComputeResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceTypes")
     public String[] instanceTypes;
+
     public CreateComputeEnvironmentRequestBodyComputeResources withInstanceTypes(String[] instanceTypes) {
         this.instanceTypes = instanceTypes;
         return this;
@@ -79,6 +87,7 @@ public class CreateComputeEnvironmentRequestBodyComputeResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchTemplate")
     public org.openapis.openapi.models.shared.LaunchTemplateSpecification launchTemplate;
+
     public CreateComputeEnvironmentRequestBodyComputeResources withLaunchTemplate(org.openapis.openapi.models.shared.LaunchTemplateSpecification launchTemplate) {
         this.launchTemplate = launchTemplate;
         return this;
@@ -87,6 +96,7 @@ public class CreateComputeEnvironmentRequestBodyComputeResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxvCpus")
     public Long maxvCpus;
+
     public CreateComputeEnvironmentRequestBodyComputeResources withMaxvCpus(Long maxvCpus) {
         this.maxvCpus = maxvCpus;
         return this;
@@ -95,6 +105,7 @@ public class CreateComputeEnvironmentRequestBodyComputeResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minvCpus")
     public Long minvCpus;
+
     public CreateComputeEnvironmentRequestBodyComputeResources withMinvCpus(Long minvCpus) {
         this.minvCpus = minvCpus;
         return this;
@@ -103,6 +114,7 @@ public class CreateComputeEnvironmentRequestBodyComputeResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placementGroup")
     public String placementGroup;
+
     public CreateComputeEnvironmentRequestBodyComputeResources withPlacementGroup(String placementGroup) {
         this.placementGroup = placementGroup;
         return this;
@@ -111,6 +123,7 @@ public class CreateComputeEnvironmentRequestBodyComputeResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroupIds")
     public String[] securityGroupIds;
+
     public CreateComputeEnvironmentRequestBodyComputeResources withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -119,6 +132,7 @@ public class CreateComputeEnvironmentRequestBodyComputeResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spotIamFleetRole")
     public String spotIamFleetRole;
+
     public CreateComputeEnvironmentRequestBodyComputeResources withSpotIamFleetRole(String spotIamFleetRole) {
         this.spotIamFleetRole = spotIamFleetRole;
         return this;
@@ -127,6 +141,7 @@ public class CreateComputeEnvironmentRequestBodyComputeResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnets")
     public String[] subnets;
+
     public CreateComputeEnvironmentRequestBodyComputeResources withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
@@ -135,6 +150,7 @@ public class CreateComputeEnvironmentRequestBodyComputeResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateComputeEnvironmentRequestBodyComputeResources withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -143,9 +159,11 @@ public class CreateComputeEnvironmentRequestBodyComputeResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public org.openapis.openapi.models.shared.CRTypeEnum type;
+
     public CreateComputeEnvironmentRequestBodyComputeResources withType(org.openapis.openapi.models.shared.CRTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateComputeEnvironmentRequestBodyComputeResources(){}
 }

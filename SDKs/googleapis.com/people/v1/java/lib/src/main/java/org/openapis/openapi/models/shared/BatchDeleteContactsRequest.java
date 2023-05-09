@@ -18,9 +18,11 @@ public class BatchDeleteContactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceNames")
     public String[] resourceNames;
+
     public BatchDeleteContactsRequest withResourceNames(String[] resourceNames) {
         this.resourceNames = resourceNames;
         return this;
     }
     
+    public BatchDeleteContactsRequest(){}
 }

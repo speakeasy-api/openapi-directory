@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClouddebuggerDebuggerDebuggeesListResponse {
     
     public String contentType;
+
     public ClouddebuggerDebuggerDebuggeesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ClouddebuggerDebuggerDebuggeesListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDebuggeesResponse listDebuggeesResponse;
+
     public ClouddebuggerDebuggerDebuggeesListResponse withListDebuggeesResponse(org.openapis.openapi.models.shared.ListDebuggeesResponse listDebuggeesResponse) {
         this.listDebuggeesResponse = listDebuggeesResponse;
         return this;
@@ -26,6 +29,7 @@ public class ClouddebuggerDebuggerDebuggeesListResponse {
     
     
     public Integer statusCode;
+
     public ClouddebuggerDebuggerDebuggeesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ClouddebuggerDebuggerDebuggeesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClouddebuggerDebuggerDebuggeesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ClouddebuggerDebuggerDebuggeesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

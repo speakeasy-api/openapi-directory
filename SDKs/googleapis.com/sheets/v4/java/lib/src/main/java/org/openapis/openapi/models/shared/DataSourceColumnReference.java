@@ -18,9 +18,11 @@ public class DataSourceColumnReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DataSourceColumnReference withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DataSourceColumnReference(){}
 }

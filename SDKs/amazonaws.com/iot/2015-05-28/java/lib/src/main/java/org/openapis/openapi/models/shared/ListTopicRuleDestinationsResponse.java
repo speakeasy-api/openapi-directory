@@ -15,6 +15,7 @@ public class ListTopicRuleDestinationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationSummaries")
     public TopicRuleDestinationSummary[] destinationSummaries;
+
     public ListTopicRuleDestinationsResponse withDestinationSummaries(TopicRuleDestinationSummary[] destinationSummaries) {
         this.destinationSummaries = destinationSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListTopicRuleDestinationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTopicRuleDestinationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListTopicRuleDestinationsResponse(){}
 }

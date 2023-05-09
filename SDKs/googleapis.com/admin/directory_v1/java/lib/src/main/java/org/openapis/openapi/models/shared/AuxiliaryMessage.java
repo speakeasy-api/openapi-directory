@@ -18,6 +18,7 @@ public class AuxiliaryMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auxiliaryMessage")
     public String auxiliaryMessage;
+
     public AuxiliaryMessage withAuxiliaryMessage(String auxiliaryMessage) {
         this.auxiliaryMessage = auxiliaryMessage;
         return this;
@@ -29,6 +30,7 @@ public class AuxiliaryMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldMask")
     public String fieldMask;
+
     public AuxiliaryMessage withFieldMask(String fieldMask) {
         this.fieldMask = fieldMask;
         return this;
@@ -40,9 +42,11 @@ public class AuxiliaryMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public AuxiliaryMessageSeverityEnum severity;
+
     public AuxiliaryMessage withSeverity(AuxiliaryMessageSeverityEnum severity) {
         this.severity = severity;
         return this;
     }
     
+    public AuxiliaryMessage(){}
 }

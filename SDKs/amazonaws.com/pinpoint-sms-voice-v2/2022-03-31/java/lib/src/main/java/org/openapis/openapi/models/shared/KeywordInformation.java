@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class KeywordInformation {
     @JsonProperty("Keyword")
     public String keyword;
+
     public KeywordInformation withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -19,6 +20,7 @@ public class KeywordInformation {
     
     @JsonProperty("KeywordAction")
     public KeywordActionEnum keywordAction;
+
     public KeywordInformation withKeywordAction(KeywordActionEnum keywordAction) {
         this.keywordAction = keywordAction;
         return this;
@@ -26,9 +28,15 @@ public class KeywordInformation {
     
     @JsonProperty("KeywordMessage")
     public String keywordMessage;
+
     public KeywordInformation withKeywordMessage(String keywordMessage) {
         this.keywordMessage = keywordMessage;
         return this;
     }
     
+    public KeywordInformation(@JsonProperty("Keyword") String keyword, @JsonProperty("KeywordAction") KeywordActionEnum keywordAction, @JsonProperty("KeywordMessage") String keywordMessage) {
+        this.keyword = keyword;
+        this.keywordAction = keywordAction;
+        this.keywordMessage = keywordMessage;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateXssMatchSetResponse {
     
     public String contentType;
+
     public CreateXssMatchSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateXssMatchSetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateXssMatchSetResponse createXssMatchSetResponse;
+
     public CreateXssMatchSetResponse withCreateXssMatchSetResponse(org.openapis.openapi.models.shared.CreateXssMatchSetResponse createXssMatchSetResponse) {
         this.createXssMatchSetResponse = createXssMatchSetResponse;
         return this;
@@ -26,6 +29,7 @@ public class CreateXssMatchSetResponse {
     
     
     public Integer statusCode;
+
     public CreateXssMatchSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateXssMatchSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateXssMatchSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class CreateXssMatchSetResponse {
      */
     
     public Object wafDisallowedNameException;
+
     public CreateXssMatchSetResponse withWAFDisallowedNameException(Object wafDisallowedNameException) {
         this.wafDisallowedNameException = wafDisallowedNameException;
         return this;
@@ -53,6 +59,7 @@ public class CreateXssMatchSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public CreateXssMatchSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -63,6 +70,7 @@ public class CreateXssMatchSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public CreateXssMatchSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -73,6 +81,7 @@ public class CreateXssMatchSetResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public CreateXssMatchSetResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -83,6 +92,7 @@ public class CreateXssMatchSetResponse {
      */
     
     public Object wafLimitsExceededException;
+
     public CreateXssMatchSetResponse withWAFLimitsExceededException(Object wafLimitsExceededException) {
         this.wafLimitsExceededException = wafLimitsExceededException;
         return this;
@@ -93,9 +103,14 @@ public class CreateXssMatchSetResponse {
      */
     
     public Object wafStaleDataException;
+
     public CreateXssMatchSetResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public CreateXssMatchSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

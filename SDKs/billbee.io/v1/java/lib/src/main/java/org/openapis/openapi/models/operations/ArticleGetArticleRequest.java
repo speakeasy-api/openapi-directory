@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleGetArticleRequest {
@@ -12,6 +13,7 @@ public class ArticleGetArticleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public ArticleGetArticleRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +24,13 @@ public class ArticleGetArticleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lookupBy")
     public String lookupBy;
+
     public ArticleGetArticleRequest withLookupBy(String lookupBy) {
         this.lookupBy = lookupBy;
         return this;
     }
     
+    public ArticleGetArticleRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

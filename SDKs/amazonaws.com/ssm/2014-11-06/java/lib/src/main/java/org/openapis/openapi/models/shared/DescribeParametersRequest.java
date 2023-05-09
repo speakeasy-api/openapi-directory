@@ -12,6 +12,7 @@ public class DescribeParametersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public ParametersFilter[] filters;
+
     public DescribeParametersRequest withFilters(ParametersFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class DescribeParametersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeParametersRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class DescribeParametersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeParametersRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class DescribeParametersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterFilters")
     public ParameterStringFilter[] parameterFilters;
+
     public DescribeParametersRequest withParameterFilters(ParameterStringFilter[] parameterFilters) {
         this.parameterFilters = parameterFilters;
         return this;
     }
     
+    public DescribeParametersRequest(){}
 }

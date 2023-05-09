@@ -12,6 +12,7 @@ public class GetDraftPicksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=college")
     public String college;
+
     public GetDraftPicksRequest withCollege(String college) {
         this.college = college;
         return this;
@@ -22,6 +23,7 @@ public class GetDraftPicksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
     public String conference;
+
     public GetDraftPicksRequest withConference(String conference) {
         this.conference = conference;
         return this;
@@ -32,6 +34,7 @@ public class GetDraftPicksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nflTeam")
     public String nflTeam;
+
     public GetDraftPicksRequest withNflTeam(String nflTeam) {
         this.nflTeam = nflTeam;
         return this;
@@ -42,6 +45,7 @@ public class GetDraftPicksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=position")
     public String position;
+
     public GetDraftPicksRequest withPosition(String position) {
         this.position = position;
         return this;
@@ -52,9 +56,11 @@ public class GetDraftPicksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public GetDraftPicksRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetDraftPicksRequest(){}
 }

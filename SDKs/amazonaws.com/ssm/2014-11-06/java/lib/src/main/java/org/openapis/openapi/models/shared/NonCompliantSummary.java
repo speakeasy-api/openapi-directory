@@ -15,6 +15,7 @@ public class NonCompliantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonCompliantCount")
     public Long nonCompliantCount;
+
     public NonCompliantSummary withNonCompliantCount(Long nonCompliantCount) {
         this.nonCompliantCount = nonCompliantCount;
         return this;
@@ -23,9 +24,11 @@ public class NonCompliantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeveritySummary")
     public SeveritySummary severitySummary;
+
     public NonCompliantSummary withSeveritySummary(SeveritySummary severitySummary) {
         this.severitySummary = severitySummary;
         return this;
     }
     
+    public NonCompliantSummary(){}
 }

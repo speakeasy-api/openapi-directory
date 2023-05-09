@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRiddleRequest {
@@ -12,6 +13,7 @@ public class PutRiddleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=answer")
     public String answer;
+
     public PutRiddleRequest withAnswer(String answer) {
         this.answer = answer;
         return this;
@@ -22,6 +24,7 @@ public class PutRiddleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
     public String category;
+
     public PutRiddleRequest withCategory(String category) {
         this.category = category;
         return this;
@@ -32,9 +35,15 @@ public class PutRiddleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=question")
     public String question;
+
     public PutRiddleRequest withQuestion(String question) {
         this.question = question;
         return this;
     }
     
+    public PutRiddleRequest(@JsonProperty("answer") String answer, @JsonProperty("category") String category, @JsonProperty("question") String question) {
+        this.answer = answer;
+        this.category = category;
+        this.question = question;
+  }
 }

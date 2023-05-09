@@ -15,9 +15,11 @@ public class SetParentForTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TaskSetParentRequest data;
+
     public SetParentForTaskRequestBody withData(org.openapis.openapi.models.shared.TaskSetParentRequest data) {
         this.data = data;
         return this;
     }
     
+    public SetParentForTaskRequestBody(){}
 }

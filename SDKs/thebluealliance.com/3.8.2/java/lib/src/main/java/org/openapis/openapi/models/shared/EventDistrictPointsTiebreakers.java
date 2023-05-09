@@ -12,6 +12,7 @@ public class EventDistrictPointsTiebreakers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highest_qual_scores")
     public Long[] highestQualScores;
+
     public EventDistrictPointsTiebreakers withHighestQualScores(Long[] highestQualScores) {
         this.highestQualScores = highestQualScores;
         return this;
@@ -20,9 +21,11 @@ public class EventDistrictPointsTiebreakers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qual_wins")
     public Long qualWins;
+
     public EventDistrictPointsTiebreakers withQualWins(Long qualWins) {
         this.qualWins = qualWins;
         return this;
     }
     
+    public EventDistrictPointsTiebreakers(){}
 }

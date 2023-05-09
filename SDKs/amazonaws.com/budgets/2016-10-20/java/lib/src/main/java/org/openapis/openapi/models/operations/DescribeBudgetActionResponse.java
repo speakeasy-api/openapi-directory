@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeBudgetActionResponse {
@@ -12,6 +13,7 @@ public class DescribeBudgetActionResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeBudgetActionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeBudgetActionResponse {
     
     
     public String contentType;
+
     public DescribeBudgetActionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeBudgetActionResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeBudgetActionResponse describeBudgetActionResponse;
+
     public DescribeBudgetActionResponse withDescribeBudgetActionResponse(org.openapis.openapi.models.shared.DescribeBudgetActionResponse describeBudgetActionResponse) {
         this.describeBudgetActionResponse = describeBudgetActionResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeBudgetActionResponse {
      */
     
     public Object internalErrorException;
+
     public DescribeBudgetActionResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeBudgetActionResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeBudgetActionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeBudgetActionResponse {
      */
     
     public Object notFoundException;
+
     public DescribeBudgetActionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeBudgetActionResponse {
     
     
     public Integer statusCode;
+
     public DescribeBudgetActionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeBudgetActionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeBudgetActionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DescribeBudgetActionResponse {
      */
     
     public Object throttlingException;
+
     public DescribeBudgetActionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeBudgetActionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV2MimeEmailPayloadsIdJsonResponse {
     
     public byte[] body;
+
     public GetV2MimeEmailPayloadsIdJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetV2MimeEmailPayloadsIdJsonResponse {
     
     
     public String contentType;
+
     public GetV2MimeEmailPayloadsIdJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetV2MimeEmailPayloadsIdJsonResponse {
     
     
     public Integer statusCode;
+
     public GetV2MimeEmailPayloadsIdJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetV2MimeEmailPayloadsIdJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV2MimeEmailPayloadsIdJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetV2MimeEmailPayloadsIdJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

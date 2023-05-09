@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DestinationSnippetRead {
     @JsonProperty("destinationDefinitionId")
     public String destinationDefinitionId;
+
     public DestinationSnippetRead withDestinationDefinitionId(String destinationDefinitionId) {
         this.destinationDefinitionId = destinationDefinitionId;
         return this;
@@ -18,6 +19,7 @@ public class DestinationSnippetRead {
     
     @JsonProperty("destinationId")
     public String destinationId;
+
     public DestinationSnippetRead withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -25,6 +27,7 @@ public class DestinationSnippetRead {
     
     @JsonProperty("destinationName")
     public String destinationName;
+
     public DestinationSnippetRead withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -33,6 +36,7 @@ public class DestinationSnippetRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
+
     public DestinationSnippetRead withIcon(String icon) {
         this.icon = icon;
         return this;
@@ -40,9 +44,16 @@ public class DestinationSnippetRead {
     
     @JsonProperty("name")
     public String name;
+
     public DestinationSnippetRead withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DestinationSnippetRead(@JsonProperty("destinationDefinitionId") String destinationDefinitionId, @JsonProperty("destinationId") String destinationId, @JsonProperty("destinationName") String destinationName, @JsonProperty("name") String name) {
+        this.destinationDefinitionId = destinationDefinitionId;
+        this.destinationId = destinationId;
+        this.destinationName = destinationName;
+        this.name = name;
+  }
 }

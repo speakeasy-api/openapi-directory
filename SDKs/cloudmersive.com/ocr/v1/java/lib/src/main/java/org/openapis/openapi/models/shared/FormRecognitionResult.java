@@ -18,6 +18,7 @@ public class FormRecognitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BestMatchFormSettingName")
     public String bestMatchFormSettingName;
+
     public FormRecognitionResult withBestMatchFormSettingName(String bestMatchFormSettingName) {
         this.bestMatchFormSettingName = bestMatchFormSettingName;
         return this;
@@ -29,6 +30,7 @@ public class FormRecognitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Diagnostics")
     public String[] diagnostics;
+
     public FormRecognitionResult withDiagnostics(String[] diagnostics) {
         this.diagnostics = diagnostics;
         return this;
@@ -40,6 +42,7 @@ public class FormRecognitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldValueExtractionResult")
     public FieldResult[] fieldValueExtractionResult;
+
     public FormRecognitionResult withFieldValueExtractionResult(FieldResult[] fieldValueExtractionResult) {
         this.fieldValueExtractionResult = fieldValueExtractionResult;
         return this;
@@ -51,6 +54,7 @@ public class FormRecognitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Successful")
     public Boolean successful;
+
     public FormRecognitionResult withSuccessful(Boolean successful) {
         this.successful = successful;
         return this;
@@ -62,9 +66,11 @@ public class FormRecognitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableValueExtractionResults")
     public TableResult[] tableValueExtractionResults;
+
     public FormRecognitionResult withTableValueExtractionResults(TableResult[] tableValueExtractionResults) {
         this.tableValueExtractionResults = tableValueExtractionResults;
         return this;
     }
     
+    public FormRecognitionResult(){}
 }

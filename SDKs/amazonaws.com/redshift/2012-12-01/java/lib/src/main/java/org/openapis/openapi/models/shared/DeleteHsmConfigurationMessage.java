@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteHsmConfigurationMessage - &lt;p/&gt;
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteHsmConfigurationMessage {
     
     public String hsmConfigurationIdentifier;
+
     public DeleteHsmConfigurationMessage withHsmConfigurationIdentifier(String hsmConfigurationIdentifier) {
         this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
         return this;
     }
     
+    public DeleteHsmConfigurationMessage(@JsonProperty("HsmConfigurationIdentifier") String hsmConfigurationIdentifier) {
+        this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
+  }
 }

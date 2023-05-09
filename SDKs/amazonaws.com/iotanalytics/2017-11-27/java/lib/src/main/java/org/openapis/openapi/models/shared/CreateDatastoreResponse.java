@@ -15,6 +15,7 @@ public class CreateDatastoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datastoreArn")
     public String datastoreArn;
+
     public CreateDatastoreResponse withDatastoreArn(String datastoreArn) {
         this.datastoreArn = datastoreArn;
         return this;
@@ -23,6 +24,7 @@ public class CreateDatastoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datastoreName")
     public String datastoreName;
+
     public CreateDatastoreResponse withDatastoreName(String datastoreName) {
         this.datastoreName = datastoreName;
         return this;
@@ -31,9 +33,11 @@ public class CreateDatastoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionPeriod")
     public RetentionPeriod retentionPeriod;
+
     public CreateDatastoreResponse withRetentionPeriod(RetentionPeriod retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
     }
     
+    public CreateDatastoreResponse(){}
 }

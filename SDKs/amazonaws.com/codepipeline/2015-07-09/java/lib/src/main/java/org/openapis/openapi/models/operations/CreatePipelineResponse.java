@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePipelineResponse {
@@ -12,6 +13,7 @@ public class CreatePipelineResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreatePipelineResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class CreatePipelineResponse {
     
     
     public String contentType;
+
     public CreatePipelineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreatePipelineResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePipelineOutput createPipelineOutput;
+
     public CreatePipelineResponse withCreatePipelineOutput(org.openapis.openapi.models.shared.CreatePipelineOutput createPipelineOutput) {
         this.createPipelineOutput = createPipelineOutput;
         return this;
@@ -39,6 +43,7 @@ public class CreatePipelineResponse {
      */
     
     public Object invalidActionDeclarationException;
+
     public CreatePipelineResponse withInvalidActionDeclarationException(Object invalidActionDeclarationException) {
         this.invalidActionDeclarationException = invalidActionDeclarationException;
         return this;
@@ -49,6 +54,7 @@ public class CreatePipelineResponse {
      */
     
     public Object invalidBlockerDeclarationException;
+
     public CreatePipelineResponse withInvalidBlockerDeclarationException(Object invalidBlockerDeclarationException) {
         this.invalidBlockerDeclarationException = invalidBlockerDeclarationException;
         return this;
@@ -59,6 +65,7 @@ public class CreatePipelineResponse {
      */
     
     public Object invalidStageDeclarationException;
+
     public CreatePipelineResponse withInvalidStageDeclarationException(Object invalidStageDeclarationException) {
         this.invalidStageDeclarationException = invalidStageDeclarationException;
         return this;
@@ -69,6 +76,7 @@ public class CreatePipelineResponse {
      */
     
     public Object invalidStructureException;
+
     public CreatePipelineResponse withInvalidStructureException(Object invalidStructureException) {
         this.invalidStructureException = invalidStructureException;
         return this;
@@ -79,6 +87,7 @@ public class CreatePipelineResponse {
      */
     
     public Object invalidTagsException;
+
     public CreatePipelineResponse withInvalidTagsException(Object invalidTagsException) {
         this.invalidTagsException = invalidTagsException;
         return this;
@@ -89,6 +98,7 @@ public class CreatePipelineResponse {
      */
     
     public Object limitExceededException;
+
     public CreatePipelineResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -99,6 +109,7 @@ public class CreatePipelineResponse {
      */
     
     public Object pipelineNameInUseException;
+
     public CreatePipelineResponse withPipelineNameInUseException(Object pipelineNameInUseException) {
         this.pipelineNameInUseException = pipelineNameInUseException;
         return this;
@@ -106,6 +117,7 @@ public class CreatePipelineResponse {
     
     
     public Integer statusCode;
+
     public CreatePipelineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class CreatePipelineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePipelineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class CreatePipelineResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreatePipelineResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
@@ -133,9 +147,14 @@ public class CreatePipelineResponse {
      */
     
     public Object validationException;
+
     public CreatePipelineResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreatePipelineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

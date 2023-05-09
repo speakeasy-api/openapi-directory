@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeHostsResultHosts {
     
     public OffsetDateTime allocationTime;
+
     public DescribeHostsResultHosts withAllocationTime(OffsetDateTime allocationTime) {
         this.allocationTime = allocationTime;
         return this;
@@ -19,6 +20,7 @@ public class DescribeHostsResultHosts {
     
     
     public DescribeHostsResultHostsAllowsMultipleInstanceTypesEnum allowsMultipleInstanceTypes;
+
     public DescribeHostsResultHosts withAllowsMultipleInstanceTypes(DescribeHostsResultHostsAllowsMultipleInstanceTypesEnum allowsMultipleInstanceTypes) {
         this.allowsMultipleInstanceTypes = allowsMultipleInstanceTypes;
         return this;
@@ -26,6 +28,7 @@ public class DescribeHostsResultHosts {
     
     
     public DescribeHostsResultHostsAutoPlacementEnum autoPlacement;
+
     public DescribeHostsResultHosts withAutoPlacement(DescribeHostsResultHostsAutoPlacementEnum autoPlacement) {
         this.autoPlacement = autoPlacement;
         return this;
@@ -33,6 +36,7 @@ public class DescribeHostsResultHosts {
     
     
     public String availabilityZone;
+
     public DescribeHostsResultHosts withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -40,6 +44,7 @@ public class DescribeHostsResultHosts {
     
     
     public String availabilityZoneId;
+
     public DescribeHostsResultHosts withAvailabilityZoneId(String availabilityZoneId) {
         this.availabilityZoneId = availabilityZoneId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeHostsResultHosts {
     
     
     public DescribeHostsResultHostsAvailableCapacity availableCapacity;
+
     public DescribeHostsResultHosts withAvailableCapacity(DescribeHostsResultHostsAvailableCapacity availableCapacity) {
         this.availableCapacity = availableCapacity;
         return this;
@@ -54,6 +60,7 @@ public class DescribeHostsResultHosts {
     
     
     public String clientToken;
+
     public DescribeHostsResultHosts withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -61,6 +68,7 @@ public class DescribeHostsResultHosts {
     
     
     public String hostId;
+
     public DescribeHostsResultHosts withHostId(String hostId) {
         this.hostId = hostId;
         return this;
@@ -68,6 +76,7 @@ public class DescribeHostsResultHosts {
     
     
     public DescribeHostsResultHostsHostMaintenanceEnum hostMaintenance;
+
     public DescribeHostsResultHosts withHostMaintenance(DescribeHostsResultHostsHostMaintenanceEnum hostMaintenance) {
         this.hostMaintenance = hostMaintenance;
         return this;
@@ -75,6 +84,7 @@ public class DescribeHostsResultHosts {
     
     
     public DescribeHostsResultHostsHostProperties hostProperties;
+
     public DescribeHostsResultHosts withHostProperties(DescribeHostsResultHostsHostProperties hostProperties) {
         this.hostProperties = hostProperties;
         return this;
@@ -82,6 +92,7 @@ public class DescribeHostsResultHosts {
     
     
     public DescribeHostsResultHostsHostRecoveryEnum hostRecovery;
+
     public DescribeHostsResultHosts withHostRecovery(DescribeHostsResultHostsHostRecoveryEnum hostRecovery) {
         this.hostRecovery = hostRecovery;
         return this;
@@ -89,6 +100,7 @@ public class DescribeHostsResultHosts {
     
     
     public String hostReservationId;
+
     public DescribeHostsResultHosts withHostReservationId(String hostReservationId) {
         this.hostReservationId = hostReservationId;
         return this;
@@ -96,6 +108,7 @@ public class DescribeHostsResultHosts {
     
     
     public DescribeHostsResultHostsInstances[] instances;
+
     public DescribeHostsResultHosts withInstances(DescribeHostsResultHostsInstances[] instances) {
         this.instances = instances;
         return this;
@@ -103,6 +116,7 @@ public class DescribeHostsResultHosts {
     
     
     public Boolean memberOfServiceLinkedResourceGroup;
+
     public DescribeHostsResultHosts withMemberOfServiceLinkedResourceGroup(Boolean memberOfServiceLinkedResourceGroup) {
         this.memberOfServiceLinkedResourceGroup = memberOfServiceLinkedResourceGroup;
         return this;
@@ -110,6 +124,7 @@ public class DescribeHostsResultHosts {
     
     
     public String outpostArn;
+
     public DescribeHostsResultHosts withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -117,6 +132,7 @@ public class DescribeHostsResultHosts {
     
     
     public String ownerId;
+
     public DescribeHostsResultHosts withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -124,6 +140,7 @@ public class DescribeHostsResultHosts {
     
     
     public OffsetDateTime releaseTime;
+
     public DescribeHostsResultHosts withReleaseTime(OffsetDateTime releaseTime) {
         this.releaseTime = releaseTime;
         return this;
@@ -131,6 +148,7 @@ public class DescribeHostsResultHosts {
     
     
     public DescribeHostsResultHostsStateEnum state;
+
     public DescribeHostsResultHosts withState(DescribeHostsResultHostsStateEnum state) {
         this.state = state;
         return this;
@@ -138,9 +156,11 @@ public class DescribeHostsResultHosts {
     
     
     public DescribeHostsResultHostsTags[] tags;
+
     public DescribeHostsResultHosts withTags(DescribeHostsResultHostsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeHostsResultHosts(){}
 }

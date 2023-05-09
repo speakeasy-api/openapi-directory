@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRepositoryPipelineScheduleRequest {
@@ -12,6 +13,7 @@ public class UpdateRepositoryPipelineScheduleRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public UpdateRepositoryPipelineScheduleRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class UpdateRepositoryPipelineScheduleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public UpdateRepositoryPipelineScheduleRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -32,6 +35,7 @@ public class UpdateRepositoryPipelineScheduleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schedule_uuid")
     public String scheduleUuid;
+
     public UpdateRepositoryPipelineScheduleRequest withScheduleUuid(String scheduleUuid) {
         this.scheduleUuid = scheduleUuid;
         return this;
@@ -42,9 +46,16 @@ public class UpdateRepositoryPipelineScheduleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public UpdateRepositoryPipelineScheduleRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public UpdateRepositoryPipelineScheduleRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("schedule_uuid") String scheduleUuid, @JsonProperty("workspace") String workspace) {
+        this.requestBody = requestBody;
+        this.repoSlug = repoSlug;
+        this.scheduleUuid = scheduleUuid;
+        this.workspace = workspace;
+  }
 }

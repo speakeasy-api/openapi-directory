@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAnnotationStoreResponse {
@@ -12,6 +13,7 @@ public class CreateAnnotationStoreResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateAnnotationStoreResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateAnnotationStoreResponse {
      */
     
     public Object conflictException;
+
     public CreateAnnotationStoreResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateAnnotationStoreResponse {
     
     
     public String contentType;
+
     public CreateAnnotationStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateAnnotationStoreResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAnnotationStoreResponse createAnnotationStoreResponse;
+
     public CreateAnnotationStoreResponse withCreateAnnotationStoreResponse(org.openapis.openapi.models.shared.CreateAnnotationStoreResponse createAnnotationStoreResponse) {
         this.createAnnotationStoreResponse = createAnnotationStoreResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateAnnotationStoreResponse {
      */
     
     public Object internalServerException;
+
     public CreateAnnotationStoreResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAnnotationStoreResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateAnnotationStoreResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateAnnotationStoreResponse {
     
     
     public Integer statusCode;
+
     public CreateAnnotationStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateAnnotationStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAnnotationStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateAnnotationStoreResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateAnnotationStoreResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateAnnotationStoreResponse {
      */
     
     public Object throttlingException;
+
     public CreateAnnotationStoreResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateAnnotationStoreResponse {
      */
     
     public Object validationException;
+
     public CreateAnnotationStoreResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateAnnotationStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

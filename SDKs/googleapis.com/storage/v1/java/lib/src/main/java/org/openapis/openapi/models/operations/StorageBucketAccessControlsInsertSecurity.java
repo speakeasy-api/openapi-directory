@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class StorageBucketAccessControlsInsertSecurity {
     @SpeakeasyMetadata("security:option=true")
     public StorageBucketAccessControlsInsertSecurityOption1 option1;
+
     public StorageBucketAccessControlsInsertSecurity withOption1(StorageBucketAccessControlsInsertSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class StorageBucketAccessControlsInsertSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public StorageBucketAccessControlsInsertSecurityOption2 option2;
+
     public StorageBucketAccessControlsInsertSecurity withOption2(StorageBucketAccessControlsInsertSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public StorageBucketAccessControlsInsertSecurity(){}
 }

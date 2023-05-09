@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCustomGatewayPaymentOwnershipIdRequest {
@@ -12,6 +13,7 @@ public class PostCustomGatewayPaymentOwnershipIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amount")
     public Long amount;
+
     public PostCustomGatewayPaymentOwnershipIdRequest withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -22,6 +24,7 @@ public class PostCustomGatewayPaymentOwnershipIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
     public String customData;
+
     public PostCustomGatewayPaymentOwnershipIdRequest withCustomData(String customData) {
         this.customData = customData;
         return this;
@@ -32,6 +35,7 @@ public class PostCustomGatewayPaymentOwnershipIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public Long date;
+
     public PostCustomGatewayPaymentOwnershipIdRequest withDate(Long date) {
         this.date = date;
         return this;
@@ -42,6 +46,7 @@ public class PostCustomGatewayPaymentOwnershipIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developerAmount")
     public Long developerAmount;
+
     public PostCustomGatewayPaymentOwnershipIdRequest withDeveloperAmount(Long developerAmount) {
         this.developerAmount = developerAmount;
         return this;
@@ -52,6 +57,7 @@ public class PostCustomGatewayPaymentOwnershipIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=feeAmount")
     public Long feeAmount;
+
     public PostCustomGatewayPaymentOwnershipIdRequest withFeeAmount(Long feeAmount) {
         this.feeAmount = feeAmount;
         return this;
@@ -62,6 +68,7 @@ public class PostCustomGatewayPaymentOwnershipIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=marketplaceAmount")
     public Long marketplaceAmount;
+
     public PostCustomGatewayPaymentOwnershipIdRequest withMarketplaceAmount(Long marketplaceAmount) {
         this.marketplaceAmount = marketplaceAmount;
         return this;
@@ -72,9 +79,14 @@ public class PostCustomGatewayPaymentOwnershipIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ownershipId")
     public String ownershipId;
+
     public PostCustomGatewayPaymentOwnershipIdRequest withOwnershipId(String ownershipId) {
         this.ownershipId = ownershipId;
         return this;
     }
     
+    public PostCustomGatewayPaymentOwnershipIdRequest(@JsonProperty("amount") Long amount, @JsonProperty("ownershipId") String ownershipId) {
+        this.amount = amount;
+        this.ownershipId = ownershipId;
+  }
 }

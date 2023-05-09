@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchMerchantsMerchantIdTerminalOrdersOrderIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TerminalOrderRequest terminalOrderRequest;
+
     public PatchMerchantsMerchantIdTerminalOrdersOrderIdRequest withTerminalOrderRequest(org.openapis.openapi.models.shared.TerminalOrderRequest terminalOrderRequest) {
         this.terminalOrderRequest = terminalOrderRequest;
         return this;
@@ -19,6 +21,7 @@ public class PatchMerchantsMerchantIdTerminalOrdersOrderIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public PatchMerchantsMerchantIdTerminalOrdersOrderIdRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -29,9 +32,14 @@ public class PatchMerchantsMerchantIdTerminalOrdersOrderIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
     public String orderId;
+
     public PatchMerchantsMerchantIdTerminalOrdersOrderIdRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     
+    public PatchMerchantsMerchantIdTerminalOrdersOrderIdRequest(@JsonProperty("merchantId") String merchantId, @JsonProperty("orderId") String orderId) {
+        this.merchantId = merchantId;
+        this.orderId = orderId;
+  }
 }

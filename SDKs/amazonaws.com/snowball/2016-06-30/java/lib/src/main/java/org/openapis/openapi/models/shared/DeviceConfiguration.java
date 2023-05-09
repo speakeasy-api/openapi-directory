@@ -15,9 +15,11 @@ public class DeviceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnowconeDeviceConfiguration")
     public SnowconeDeviceConfiguration snowconeDeviceConfiguration;
+
     public DeviceConfiguration withSnowconeDeviceConfiguration(SnowconeDeviceConfiguration snowconeDeviceConfiguration) {
         this.snowconeDeviceConfiguration = snowconeDeviceConfiguration;
         return this;
     }
     
+    public DeviceConfiguration(){}
 }

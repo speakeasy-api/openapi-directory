@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGroupScoresRequest {
@@ -13,6 +14,7 @@ public class GetGroupScoresRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group")
     public String group;
+
     public GetGroupScoresRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -23,9 +25,13 @@ public class GetGroupScoresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent")
     public String parent;
+
     public GetGroupScoresRequest withParent(String parent) {
         this.parent = parent;
         return this;
     }
     
+    public GetGroupScoresRequest(@JsonProperty("group") String group) {
+        this.group = group;
+  }
 }

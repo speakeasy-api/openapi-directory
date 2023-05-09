@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EstimationApiDeleteJsonResponse {
     
     public byte[] body;
+
     public EstimationApiDeleteJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class EstimationApiDeleteJsonResponse {
     
     
     public String contentType;
+
     public EstimationApiDeleteJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class EstimationApiDeleteJsonResponse {
      */
     
     public Integer estimationApiDeleteJSON200ApplicationJSONInt32Integer;
+
     public EstimationApiDeleteJsonResponse withEstimationApiDeleteJSON200ApplicationJSONInt32Integer(Integer estimationApiDeleteJSON200ApplicationJSONInt32Integer) {
         this.estimationApiDeleteJSON200ApplicationJSONInt32Integer = estimationApiDeleteJSON200ApplicationJSONInt32Integer;
         return this;
@@ -36,6 +40,7 @@ public class EstimationApiDeleteJsonResponse {
      */
     
     public Integer estimationApiDeleteJSON200TextJSONInt32Integer;
+
     public EstimationApiDeleteJsonResponse withEstimationApiDeleteJSON200TextJSONInt32Integer(Integer estimationApiDeleteJSON200TextJSONInt32Integer) {
         this.estimationApiDeleteJSON200TextJSONInt32Integer = estimationApiDeleteJSON200TextJSONInt32Integer;
         return this;
@@ -43,6 +48,7 @@ public class EstimationApiDeleteJsonResponse {
     
     
     public Integer statusCode;
+
     public EstimationApiDeleteJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class EstimationApiDeleteJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EstimationApiDeleteJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EstimationApiDeleteJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

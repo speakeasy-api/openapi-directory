@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeNotificationsForBudgetResponse {
@@ -12,6 +13,7 @@ public class DescribeNotificationsForBudgetResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeNotificationsForBudgetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeNotificationsForBudgetResponse {
     
     
     public String contentType;
+
     public DescribeNotificationsForBudgetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeNotificationsForBudgetResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeNotificationsForBudgetResponse describeNotificationsForBudgetResponse;
+
     public DescribeNotificationsForBudgetResponse withDescribeNotificationsForBudgetResponse(org.openapis.openapi.models.shared.DescribeNotificationsForBudgetResponse describeNotificationsForBudgetResponse) {
         this.describeNotificationsForBudgetResponse = describeNotificationsForBudgetResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeNotificationsForBudgetResponse {
      */
     
     public Object expiredNextTokenException;
+
     public DescribeNotificationsForBudgetResponse withExpiredNextTokenException(Object expiredNextTokenException) {
         this.expiredNextTokenException = expiredNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeNotificationsForBudgetResponse {
      */
     
     public Object internalErrorException;
+
     public DescribeNotificationsForBudgetResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeNotificationsForBudgetResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeNotificationsForBudgetResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeNotificationsForBudgetResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeNotificationsForBudgetResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class DescribeNotificationsForBudgetResponse {
      */
     
     public Object notFoundException;
+
     public DescribeNotificationsForBudgetResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class DescribeNotificationsForBudgetResponse {
     
     
     public Integer statusCode;
+
     public DescribeNotificationsForBudgetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DescribeNotificationsForBudgetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeNotificationsForBudgetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DescribeNotificationsForBudgetResponse {
      */
     
     public Object throttlingException;
+
     public DescribeNotificationsForBudgetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeNotificationsForBudgetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

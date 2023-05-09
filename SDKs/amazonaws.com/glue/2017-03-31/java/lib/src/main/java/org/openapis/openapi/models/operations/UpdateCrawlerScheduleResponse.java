@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCrawlerScheduleResponse {
     
     public String contentType;
+
     public UpdateCrawlerScheduleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateCrawlerScheduleResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateCrawlerScheduleResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCrawlerScheduleResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateCrawlerScheduleResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateCrawlerScheduleResponse {
      */
     
     public Object operationTimeoutException;
+
     public UpdateCrawlerScheduleResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateCrawlerScheduleResponse {
      */
     
     public Object schedulerTransitioningException;
+
     public UpdateCrawlerScheduleResponse withSchedulerTransitioningException(Object schedulerTransitioningException) {
         this.schedulerTransitioningException = schedulerTransitioningException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateCrawlerScheduleResponse {
     
     
     public Integer statusCode;
+
     public UpdateCrawlerScheduleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateCrawlerScheduleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCrawlerScheduleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateCrawlerScheduleResponse {
      */
     
     public java.util.Map<String, Object> updateCrawlerScheduleResponse;
+
     public UpdateCrawlerScheduleResponse withUpdateCrawlerScheduleResponse(java.util.Map<String, Object> updateCrawlerScheduleResponse) {
         this.updateCrawlerScheduleResponse = updateCrawlerScheduleResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateCrawlerScheduleResponse {
      */
     
     public Object versionMismatchException;
+
     public UpdateCrawlerScheduleResponse withVersionMismatchException(Object versionMismatchException) {
         this.versionMismatchException = versionMismatchException;
         return this;
     }
     
+    public UpdateCrawlerScheduleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

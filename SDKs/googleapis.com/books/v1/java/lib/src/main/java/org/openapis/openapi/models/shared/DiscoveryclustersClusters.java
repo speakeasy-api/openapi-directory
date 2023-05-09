@@ -12,6 +12,7 @@ public class DiscoveryclustersClusters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("banner_with_content_container")
     public DiscoveryclustersClustersBannerWithContentContainer bannerWithContentContainer;
+
     public DiscoveryclustersClusters withBannerWithContentContainer(DiscoveryclustersClustersBannerWithContentContainer bannerWithContentContainer) {
         this.bannerWithContentContainer = bannerWithContentContainer;
         return this;
@@ -20,6 +21,7 @@ public class DiscoveryclustersClusters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subTitle")
     public String subTitle;
+
     public DiscoveryclustersClusters withSubTitle(String subTitle) {
         this.subTitle = subTitle;
         return this;
@@ -28,6 +30,7 @@ public class DiscoveryclustersClusters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public DiscoveryclustersClusters withTitle(String title) {
         this.title = title;
         return this;
@@ -36,6 +39,7 @@ public class DiscoveryclustersClusters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalVolumes")
     public Integer totalVolumes;
+
     public DiscoveryclustersClusters withTotalVolumes(Integer totalVolumes) {
         this.totalVolumes = totalVolumes;
         return this;
@@ -44,6 +48,7 @@ public class DiscoveryclustersClusters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public DiscoveryclustersClusters withUid(String uid) {
         this.uid = uid;
         return this;
@@ -52,9 +57,11 @@ public class DiscoveryclustersClusters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumes")
     public Volume[] volumes;
+
     public DiscoveryclustersClusters withVolumes(Volume[] volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public DiscoveryclustersClusters(){}
 }

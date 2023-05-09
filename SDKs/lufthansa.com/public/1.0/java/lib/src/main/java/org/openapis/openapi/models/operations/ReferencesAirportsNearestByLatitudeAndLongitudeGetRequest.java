@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest {
@@ -12,6 +13,7 @@ public class ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -32,6 +35,7 @@ public class ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=latitude")
     public Integer latitude;
+
     public ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest withLatitude(Integer latitude) {
         this.latitude = latitude;
         return this;
@@ -42,9 +46,15 @@ public class ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=longitude")
     public Integer longitude;
+
     public ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest withLongitude(Integer longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest(@JsonProperty("Accept") String accept, @JsonProperty("latitude") Integer latitude, @JsonProperty("longitude") Integer longitude) {
+        this.accept = accept;
+        this.latitude = latitude;
+        this.longitude = longitude;
+  }
 }

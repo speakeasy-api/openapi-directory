@@ -14,6 +14,7 @@ public class RegisterIdentityProviderRequestBody {
      */
     @JsonProperty("IdentityProvider")
     public RegisterIdentityProviderRequestBodyIdentityProvider identityProvider;
+
     public RegisterIdentityProviderRequestBody withIdentityProvider(RegisterIdentityProviderRequestBodyIdentityProvider identityProvider) {
         this.identityProvider = identityProvider;
         return this;
@@ -24,6 +25,7 @@ public class RegisterIdentityProviderRequestBody {
      */
     @JsonProperty("Product")
     public String product;
+
     public RegisterIdentityProviderRequestBody withProduct(String product) {
         this.product = product;
         return this;
@@ -35,9 +37,14 @@ public class RegisterIdentityProviderRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Settings")
     public RegisterIdentityProviderRequestBodySettings settings;
+
     public RegisterIdentityProviderRequestBody withSettings(RegisterIdentityProviderRequestBodySettings settings) {
         this.settings = settings;
         return this;
     }
     
+    public RegisterIdentityProviderRequestBody(@JsonProperty("IdentityProvider") RegisterIdentityProviderRequestBodyIdentityProvider identityProvider, @JsonProperty("Product") String product) {
+        this.identityProvider = identityProvider;
+        this.product = product;
+  }
 }

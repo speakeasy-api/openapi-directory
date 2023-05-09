@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminListProvisionedGroupsEnterpriseResponse {
     
     public String contentType;
+
     public EnterpriseAdminListProvisionedGroupsEnterpriseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminListProvisionedGroupsEnterpriseResponse {
     
     
     public Integer statusCode;
+
     public EnterpriseAdminListProvisionedGroupsEnterpriseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminListProvisionedGroupsEnterpriseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminListProvisionedGroupsEnterpriseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class EnterpriseAdminListProvisionedGroupsEnterpriseResponse {
      */
     
     public org.openapis.openapi.models.shared.ScimEnterpriseGroupList scimEnterpriseGroupList;
+
     public EnterpriseAdminListProvisionedGroupsEnterpriseResponse withScimEnterpriseGroupList(org.openapis.openapi.models.shared.ScimEnterpriseGroupList scimEnterpriseGroupList) {
         this.scimEnterpriseGroupList = scimEnterpriseGroupList;
         return this;
@@ -43,9 +48,14 @@ public class EnterpriseAdminListProvisionedGroupsEnterpriseResponse {
      */
     
     public org.openapis.openapi.models.shared.ScimError scimError;
+
     public EnterpriseAdminListProvisionedGroupsEnterpriseResponse withScimError(org.openapis.openapi.models.shared.ScimError scimError) {
         this.scimError = scimError;
         return this;
     }
     
+    public EnterpriseAdminListProvisionedGroupsEnterpriseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class TableCellStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backgroundColor")
     public OptionalColor backgroundColor;
+
     public TableCellStyle withBackgroundColor(OptionalColor backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
@@ -29,6 +30,7 @@ public class TableCellStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("borderBottom")
     public TableCellBorder borderBottom;
+
     public TableCellStyle withBorderBottom(TableCellBorder borderBottom) {
         this.borderBottom = borderBottom;
         return this;
@@ -40,6 +42,7 @@ public class TableCellStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("borderLeft")
     public TableCellBorder borderLeft;
+
     public TableCellStyle withBorderLeft(TableCellBorder borderLeft) {
         this.borderLeft = borderLeft;
         return this;
@@ -51,6 +54,7 @@ public class TableCellStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("borderRight")
     public TableCellBorder borderRight;
+
     public TableCellStyle withBorderRight(TableCellBorder borderRight) {
         this.borderRight = borderRight;
         return this;
@@ -62,6 +66,7 @@ public class TableCellStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("borderTop")
     public TableCellBorder borderTop;
+
     public TableCellStyle withBorderTop(TableCellBorder borderTop) {
         this.borderTop = borderTop;
         return this;
@@ -73,6 +78,7 @@ public class TableCellStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnSpan")
     public Integer columnSpan;
+
     public TableCellStyle withColumnSpan(Integer columnSpan) {
         this.columnSpan = columnSpan;
         return this;
@@ -84,6 +90,7 @@ public class TableCellStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentAlignment")
     public TableCellStyleContentAlignmentEnum contentAlignment;
+
     public TableCellStyle withContentAlignment(TableCellStyleContentAlignmentEnum contentAlignment) {
         this.contentAlignment = contentAlignment;
         return this;
@@ -95,6 +102,7 @@ public class TableCellStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paddingBottom")
     public Dimension paddingBottom;
+
     public TableCellStyle withPaddingBottom(Dimension paddingBottom) {
         this.paddingBottom = paddingBottom;
         return this;
@@ -106,6 +114,7 @@ public class TableCellStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paddingLeft")
     public Dimension paddingLeft;
+
     public TableCellStyle withPaddingLeft(Dimension paddingLeft) {
         this.paddingLeft = paddingLeft;
         return this;
@@ -117,6 +126,7 @@ public class TableCellStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paddingRight")
     public Dimension paddingRight;
+
     public TableCellStyle withPaddingRight(Dimension paddingRight) {
         this.paddingRight = paddingRight;
         return this;
@@ -128,6 +138,7 @@ public class TableCellStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paddingTop")
     public Dimension paddingTop;
+
     public TableCellStyle withPaddingTop(Dimension paddingTop) {
         this.paddingTop = paddingTop;
         return this;
@@ -139,9 +150,11 @@ public class TableCellStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowSpan")
     public Integer rowSpan;
+
     public TableCellStyle withRowSpan(Integer rowSpan) {
         this.rowSpan = rowSpan;
         return this;
     }
     
+    public TableCellStyle(){}
 }

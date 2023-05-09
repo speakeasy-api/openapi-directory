@@ -58,11 +58,9 @@ public class Metagame {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesMetagameGetMetagameConfigResponse res = new org.openapis.openapi.models.operations.GamesMetagameGetMetagameConfigResponse() {{
+        org.openapis.openapi.models.operations.GamesMetagameGetMetagameConfigResponse res = new org.openapis.openapi.models.operations.GamesMetagameGetMetagameConfigResponse(contentType, httpRes.statusCode()) {{
             metagameConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Metagame {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesMetagameListCategoriesByPlayerResponse res = new org.openapis.openapi.models.operations.GamesMetagameListCategoriesByPlayerResponse() {{
+        org.openapis.openapi.models.operations.GamesMetagameListCategoriesByPlayerResponse res = new org.openapis.openapi.models.operations.GamesMetagameListCategoriesByPlayerResponse(contentType, httpRes.statusCode()) {{
             categoryListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

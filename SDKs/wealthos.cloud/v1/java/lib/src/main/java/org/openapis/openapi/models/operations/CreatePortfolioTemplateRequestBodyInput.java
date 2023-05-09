@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreatePortfolioTemplateRequestBodyInput {
     @JsonProperty("portfolio_name")
     public String portfolioName;
+
     public CreatePortfolioTemplateRequestBodyInput withPortfolioName(String portfolioName) {
         this.portfolioName = portfolioName;
         return this;
@@ -16,9 +17,14 @@ public class CreatePortfolioTemplateRequestBodyInput {
     
     @JsonProperty("ratios")
     public CreatePortfolioTemplateRequestBodyRatios[] ratios;
+
     public CreatePortfolioTemplateRequestBodyInput withRatios(CreatePortfolioTemplateRequestBodyRatios[] ratios) {
         this.ratios = ratios;
         return this;
     }
     
+    public CreatePortfolioTemplateRequestBodyInput(@JsonProperty("portfolio_name") String portfolioName, @JsonProperty("ratios") CreatePortfolioTemplateRequestBodyRatios[] ratios) {
+        this.portfolioName = portfolioName;
+        this.ratios = ratios;
+  }
 }

@@ -15,6 +15,7 @@ public class RRSetRoutingPolicyWrrPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public RRSetRoutingPolicyWrrPolicyWrrPolicyItem[] items;
+
     public RRSetRoutingPolicyWrrPolicy withItems(RRSetRoutingPolicyWrrPolicyWrrPolicyItem[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class RRSetRoutingPolicyWrrPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RRSetRoutingPolicyWrrPolicy withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public RRSetRoutingPolicyWrrPolicy(){}
 }

@@ -15,9 +15,11 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pattern")
     public String pattern;
+
     public Filter withPattern(String pattern) {
         this.pattern = pattern;
         return this;
     }
     
+    public Filter(){}
 }

@@ -18,6 +18,7 @@ public class ExitEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ExitEvent withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class ExitEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportingName")
     public String reportingName;
+
     public ExitEvent withReportingName(String reportingName) {
         this.reportingName = reportingName;
         return this;
@@ -40,6 +42,7 @@ public class ExitEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ExitEventTypeEnum type;
+
     public ExitEvent withType(ExitEventTypeEnum type) {
         this.type = type;
         return this;
@@ -51,9 +54,11 @@ public class ExitEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ExitEvent withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ExitEvent(){}
 }

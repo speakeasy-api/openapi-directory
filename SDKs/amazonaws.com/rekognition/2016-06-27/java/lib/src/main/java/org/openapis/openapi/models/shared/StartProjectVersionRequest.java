@@ -12,6 +12,7 @@ public class StartProjectVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxInferenceUnits")
     public Long maxInferenceUnits;
+
     public StartProjectVersionRequest withMaxInferenceUnits(Long maxInferenceUnits) {
         this.maxInferenceUnits = maxInferenceUnits;
         return this;
@@ -19,6 +20,7 @@ public class StartProjectVersionRequest {
     
     @JsonProperty("MinInferenceUnits")
     public Long minInferenceUnits;
+
     public StartProjectVersionRequest withMinInferenceUnits(Long minInferenceUnits) {
         this.minInferenceUnits = minInferenceUnits;
         return this;
@@ -26,9 +28,14 @@ public class StartProjectVersionRequest {
     
     @JsonProperty("ProjectVersionArn")
     public String projectVersionArn;
+
     public StartProjectVersionRequest withProjectVersionArn(String projectVersionArn) {
         this.projectVersionArn = projectVersionArn;
         return this;
     }
     
+    public StartProjectVersionRequest(@JsonProperty("MinInferenceUnits") Long minInferenceUnits, @JsonProperty("ProjectVersionArn") String projectVersionArn) {
+        this.minInferenceUnits = minInferenceUnits;
+        this.projectVersionArn = projectVersionArn;
+  }
 }

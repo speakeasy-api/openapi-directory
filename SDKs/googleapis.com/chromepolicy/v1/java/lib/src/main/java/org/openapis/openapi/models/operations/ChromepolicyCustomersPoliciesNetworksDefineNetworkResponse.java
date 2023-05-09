@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChromepolicyCustomersPoliciesNetworksDefineNetworkResponse {
     
     public String contentType;
+
     public ChromepolicyCustomersPoliciesNetworksDefineNetworkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ChromepolicyCustomersPoliciesNetworksDefineNetworkResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1DefineNetworkResponse googleChromePolicyVersionsV1DefineNetworkResponse;
+
     public ChromepolicyCustomersPoliciesNetworksDefineNetworkResponse withGoogleChromePolicyVersionsV1DefineNetworkResponse(org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1DefineNetworkResponse googleChromePolicyVersionsV1DefineNetworkResponse) {
         this.googleChromePolicyVersionsV1DefineNetworkResponse = googleChromePolicyVersionsV1DefineNetworkResponse;
         return this;
@@ -26,6 +29,7 @@ public class ChromepolicyCustomersPoliciesNetworksDefineNetworkResponse {
     
     
     public Integer statusCode;
+
     public ChromepolicyCustomersPoliciesNetworksDefineNetworkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ChromepolicyCustomersPoliciesNetworksDefineNetworkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChromepolicyCustomersPoliciesNetworksDefineNetworkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ChromepolicyCustomersPoliciesNetworksDefineNetworkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

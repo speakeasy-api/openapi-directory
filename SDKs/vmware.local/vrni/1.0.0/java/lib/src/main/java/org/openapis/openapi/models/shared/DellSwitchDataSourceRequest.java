@@ -12,6 +12,7 @@ public class DellSwitchDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credentials")
     public PasswordCredentials credentials;
+
     public DellSwitchDataSourceRequest withCredentials(PasswordCredentials credentials) {
         this.credentials = credentials;
         return this;
@@ -20,6 +21,7 @@ public class DellSwitchDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public DellSwitchDataSourceRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -28,6 +30,7 @@ public class DellSwitchDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fqdn")
     public String fqdn;
+
     public DellSwitchDataSourceRequest withFqdn(String fqdn) {
         this.fqdn = fqdn;
         return this;
@@ -36,6 +39,7 @@ public class DellSwitchDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip")
     public String ip;
+
     public DellSwitchDataSourceRequest withIp(String ip) {
         this.ip = ip;
         return this;
@@ -43,6 +47,7 @@ public class DellSwitchDataSourceRequest {
     
     @JsonProperty("nickname")
     public String nickname;
+
     public DellSwitchDataSourceRequest withNickname(String nickname) {
         this.nickname = nickname;
         return this;
@@ -51,6 +56,7 @@ public class DellSwitchDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public DellSwitchDataSourceRequest withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -61,6 +67,7 @@ public class DellSwitchDataSourceRequest {
      */
     @JsonProperty("proxy_id")
     public String proxyId;
+
     public DellSwitchDataSourceRequest withProxyId(String proxyId) {
         this.proxyId = proxyId;
         return this;
@@ -69,9 +76,14 @@ public class DellSwitchDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("switch_type")
     public DellSwitchTypeEnum switchType;
+
     public DellSwitchDataSourceRequest withSwitchType(DellSwitchTypeEnum switchType) {
         this.switchType = switchType;
         return this;
     }
     
+    public DellSwitchDataSourceRequest(@JsonProperty("nickname") String nickname, @JsonProperty("proxy_id") String proxyId) {
+        this.nickname = nickname;
+        this.proxyId = proxyId;
+  }
 }

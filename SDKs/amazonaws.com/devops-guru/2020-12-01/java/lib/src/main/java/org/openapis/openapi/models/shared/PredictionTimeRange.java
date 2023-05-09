@@ -22,6 +22,7 @@ public class PredictionTimeRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public PredictionTimeRange withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -31,9 +32,13 @@ public class PredictionTimeRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public PredictionTimeRange withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public PredictionTimeRange(@JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.startTime = startTime;
+  }
 }

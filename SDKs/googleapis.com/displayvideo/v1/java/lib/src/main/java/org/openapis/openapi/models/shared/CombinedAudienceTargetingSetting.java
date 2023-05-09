@@ -18,9 +18,11 @@ public class CombinedAudienceTargetingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("combinedAudienceId")
     public String combinedAudienceId;
+
     public CombinedAudienceTargetingSetting withCombinedAudienceId(String combinedAudienceId) {
         this.combinedAudienceId = combinedAudienceId;
         return this;
     }
     
+    public CombinedAudienceTargetingSetting(){}
 }

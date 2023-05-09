@@ -16,6 +16,7 @@ public class CreateLoyaltyRewardRequest {
      */
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CreateLoyaltyRewardRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -26,9 +27,14 @@ public class CreateLoyaltyRewardRequest {
      */
     @JsonProperty("reward")
     public LoyaltyReward reward;
+
     public CreateLoyaltyRewardRequest withReward(LoyaltyReward reward) {
         this.reward = reward;
         return this;
     }
     
+    public CreateLoyaltyRewardRequest(@JsonProperty("idempotency_key") String idempotencyKey, @JsonProperty("reward") LoyaltyReward reward) {
+        this.idempotencyKey = idempotencyKey;
+        this.reward = reward;
+  }
 }

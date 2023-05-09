@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationPeriod")
     public String aggregationPeriod;
+
     public GoogleCloudIntegrationsV1alphaIntegrationAlertConfig withAggregationPeriod(String aggregationPeriod) {
         this.aggregationPeriod = aggregationPeriod;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alertThreshold")
     public Integer alertThreshold;
+
     public GoogleCloudIntegrationsV1alphaIntegrationAlertConfig withAlertThreshold(Integer alertThreshold) {
         this.alertThreshold = alertThreshold;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableAlert")
     public Boolean disableAlert;
+
     public GoogleCloudIntegrationsV1alphaIntegrationAlertConfig withDisableAlert(Boolean disableAlert) {
         this.disableAlert = disableAlert;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudIntegrationsV1alphaIntegrationAlertConfig withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationThreshold")
     public String durationThreshold;
+
     public GoogleCloudIntegrationsV1alphaIntegrationAlertConfig withDurationThreshold(String durationThreshold) {
         this.durationThreshold = durationThreshold;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricType")
     public GoogleCloudIntegrationsV1alphaIntegrationAlertConfigMetricTypeEnum metricType;
+
     public GoogleCloudIntegrationsV1alphaIntegrationAlertConfig withMetricType(GoogleCloudIntegrationsV1alphaIntegrationAlertConfigMetricTypeEnum metricType) {
         this.metricType = metricType;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onlyFinalAttempt")
     public Boolean onlyFinalAttempt;
+
     public GoogleCloudIntegrationsV1alphaIntegrationAlertConfig withOnlyFinalAttempt(Boolean onlyFinalAttempt) {
         this.onlyFinalAttempt = onlyFinalAttempt;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thresholdType")
     public GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdTypeEnum thresholdType;
+
     public GoogleCloudIntegrationsV1alphaIntegrationAlertConfig withThresholdType(GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdTypeEnum thresholdType) {
         this.thresholdType = thresholdType;
         return this;
@@ -106,9 +114,11 @@ public class GoogleCloudIntegrationsV1alphaIntegrationAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thresholdValue")
     public GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdValue thresholdValue;
+
     public GoogleCloudIntegrationsV1alphaIntegrationAlertConfig withThresholdValue(GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdValue thresholdValue) {
         this.thresholdValue = thresholdValue;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaIntegrationAlertConfig(){}
 }

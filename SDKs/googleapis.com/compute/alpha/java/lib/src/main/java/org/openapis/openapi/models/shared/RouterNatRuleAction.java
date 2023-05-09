@@ -15,6 +15,7 @@ public class RouterNatRuleAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceNatActiveIps")
     public String[] sourceNatActiveIps;
+
     public RouterNatRuleAction withSourceNatActiveIps(String[] sourceNatActiveIps) {
         this.sourceNatActiveIps = sourceNatActiveIps;
         return this;
@@ -26,6 +27,7 @@ public class RouterNatRuleAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceNatActiveRanges")
     public String[] sourceNatActiveRanges;
+
     public RouterNatRuleAction withSourceNatActiveRanges(String[] sourceNatActiveRanges) {
         this.sourceNatActiveRanges = sourceNatActiveRanges;
         return this;
@@ -37,6 +39,7 @@ public class RouterNatRuleAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceNatDrainIps")
     public String[] sourceNatDrainIps;
+
     public RouterNatRuleAction withSourceNatDrainIps(String[] sourceNatDrainIps) {
         this.sourceNatDrainIps = sourceNatDrainIps;
         return this;
@@ -48,9 +51,11 @@ public class RouterNatRuleAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceNatDrainRanges")
     public String[] sourceNatDrainRanges;
+
     public RouterNatRuleAction withSourceNatDrainRanges(String[] sourceNatDrainRanges) {
         this.sourceNatDrainRanges = sourceNatDrainRanges;
         return this;
     }
     
+    public RouterNatRuleAction(){}
 }

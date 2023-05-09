@@ -12,6 +12,7 @@ public class UpdateNotificationSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Active")
     public Boolean active;
+
     public UpdateNotificationSettingsRequest withActive(Boolean active) {
         this.active = active;
         return this;
@@ -19,6 +20,7 @@ public class UpdateNotificationSettingsRequest {
     
     @JsonProperty("HITTypeId")
     public String hitTypeId;
+
     public UpdateNotificationSettingsRequest withHITTypeId(String hitTypeId) {
         this.hitTypeId = hitTypeId;
         return this;
@@ -27,9 +29,13 @@ public class UpdateNotificationSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notification")
     public NotificationSpecification notification;
+
     public UpdateNotificationSettingsRequest withNotification(NotificationSpecification notification) {
         this.notification = notification;
         return this;
     }
     
+    public UpdateNotificationSettingsRequest(@JsonProperty("HITTypeId") String hitTypeId) {
+        this.hitTypeId = hitTypeId;
+  }
 }

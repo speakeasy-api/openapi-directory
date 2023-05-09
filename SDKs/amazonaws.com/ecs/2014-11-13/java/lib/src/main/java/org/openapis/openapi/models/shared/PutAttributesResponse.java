@@ -15,9 +15,11 @@ public class PutAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public Attribute[] attributes;
+
     public PutAttributesResponse withAttributes(Attribute[] attributes) {
         this.attributes = attributes;
         return this;
     }
     
+    public PutAttributesResponse(){}
 }

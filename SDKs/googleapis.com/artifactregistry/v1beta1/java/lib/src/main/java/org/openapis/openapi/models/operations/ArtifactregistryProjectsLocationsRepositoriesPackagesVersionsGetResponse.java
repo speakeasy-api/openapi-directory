@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsGetResponse {
     
     public String contentType;
+
     public ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsGetRes
     
     
     public Integer statusCode;
+
     public ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsGetRes
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsGetRes
      */
     
     public org.openapis.openapi.models.shared.Version version;
+
     public ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsGetResponse withVersion(org.openapis.openapi.models.shared.Version version) {
         this.version = version;
         return this;
     }
     
+    public ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

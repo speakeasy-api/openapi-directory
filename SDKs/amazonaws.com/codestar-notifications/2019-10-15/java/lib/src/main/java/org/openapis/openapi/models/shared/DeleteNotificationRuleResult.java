@@ -15,9 +15,11 @@ public class DeleteNotificationRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public DeleteNotificationRuleResult withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DeleteNotificationRuleResult(){}
 }

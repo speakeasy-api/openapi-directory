@@ -14,6 +14,7 @@ public class GetAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[accountType]")
     public org.openapis.openapi.models.shared.AccountTypeEnumEnum filterAccountType;
+
     public GetAccountsRequest withFilterAccountType(org.openapis.openapi.models.shared.AccountTypeEnumEnum filterAccountType) {
         this.filterAccountType = filterAccountType;
         return this;
@@ -27,6 +28,7 @@ public class GetAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[ownershipType]")
     public org.openapis.openapi.models.shared.OwnershipTypeEnumEnum filterOwnershipType;
+
     public GetAccountsRequest withFilterOwnershipType(org.openapis.openapi.models.shared.OwnershipTypeEnumEnum filterOwnershipType) {
         this.filterOwnershipType = filterOwnershipType;
         return this;
@@ -38,9 +40,11 @@ public class GetAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
     public Long pageSize;
+
     public GetAccountsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetAccountsRequest(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisassociateUserResponse {
     @JsonProperty("InstanceUserSummary")
     public InstanceUserSummary instanceUserSummary;
+
     public DisassociateUserResponse withInstanceUserSummary(InstanceUserSummary instanceUserSummary) {
         this.instanceUserSummary = instanceUserSummary;
         return this;
     }
     
+    public DisassociateUserResponse(@JsonProperty("InstanceUserSummary") InstanceUserSummary instanceUserSummary) {
+        this.instanceUserSummary = instanceUserSummary;
+  }
 }

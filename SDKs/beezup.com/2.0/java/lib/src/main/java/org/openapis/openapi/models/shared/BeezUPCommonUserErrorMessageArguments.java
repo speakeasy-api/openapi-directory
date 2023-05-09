@@ -12,6 +12,7 @@ public class BeezUPCommonUserErrorMessageArguments {
      */
     @JsonProperty("name")
     public String name;
+
     public BeezUPCommonUserErrorMessageArguments withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,14 @@ public class BeezUPCommonUserErrorMessageArguments {
      */
     @JsonProperty("value")
     public java.util.Map<String, Object> value;
+
     public BeezUPCommonUserErrorMessageArguments withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;
     }
     
+    public BeezUPCommonUserErrorMessageArguments(@JsonProperty("name") String name, @JsonProperty("value") java.util.Map<String, Object> value) {
+        this.name = name;
+        this.value = value;
+  }
 }

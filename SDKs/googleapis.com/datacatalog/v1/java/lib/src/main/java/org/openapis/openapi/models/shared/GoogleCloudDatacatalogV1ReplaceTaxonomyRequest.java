@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1ReplaceTaxonomyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serializedTaxonomy")
     public GoogleCloudDatacatalogV1SerializedTaxonomy serializedTaxonomy;
+
     public GoogleCloudDatacatalogV1ReplaceTaxonomyRequest withSerializedTaxonomy(GoogleCloudDatacatalogV1SerializedTaxonomy serializedTaxonomy) {
         this.serializedTaxonomy = serializedTaxonomy;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1ReplaceTaxonomyRequest(){}
 }

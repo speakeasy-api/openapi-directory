@@ -12,6 +12,7 @@ public class AddMediaIntentHandlingResolveMediaDestinationInvocationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debug")
     public String debug;
+
     public AddMediaIntentHandlingResolveMediaDestinationInvocationResponse withDebug(String debug) {
         this.debug = debug;
         return this;
@@ -19,6 +20,7 @@ public class AddMediaIntentHandlingResolveMediaDestinationInvocationResponse {
     
     @JsonProperty("method")
     public String method;
+
     public AddMediaIntentHandlingResolveMediaDestinationInvocationResponse withMethod(String method) {
         this.method = method;
         return this;
@@ -27,6 +29,7 @@ public class AddMediaIntentHandlingResolveMediaDestinationInvocationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public ExecutionMetrics metrics;
+
     public AddMediaIntentHandlingResolveMediaDestinationInvocationResponse withMetrics(ExecutionMetrics metrics) {
         this.metrics = metrics;
         return this;
@@ -34,9 +37,14 @@ public class AddMediaIntentHandlingResolveMediaDestinationInvocationResponse {
     
     @JsonProperty("result")
     public java.util.Map<String, Object> result;
+
     public AddMediaIntentHandlingResolveMediaDestinationInvocationResponse withResult(java.util.Map<String, Object> result) {
         this.result = result;
         return this;
     }
     
+    public AddMediaIntentHandlingResolveMediaDestinationInvocationResponse(@JsonProperty("method") String method, @JsonProperty("result") java.util.Map<String, Object> result) {
+        this.method = method;
+        this.result = result;
+  }
 }

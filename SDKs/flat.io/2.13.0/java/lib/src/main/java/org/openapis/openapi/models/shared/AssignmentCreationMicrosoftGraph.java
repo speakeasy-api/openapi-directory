@@ -18,9 +18,11 @@ public class AssignmentCreationMicrosoftGraph {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public String[] categories;
+
     public AssignmentCreationMicrosoftGraph withCategories(String[] categories) {
         this.categories = categories;
         return this;
     }
     
+    public AssignmentCreationMicrosoftGraph(){}
 }

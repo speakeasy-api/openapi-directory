@@ -18,9 +18,11 @@ public class DriveDataRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driveFileId")
     public String driveFileId;
+
     public DriveDataRef withDriveFileId(String driveFileId) {
         this.driveFileId = driveFileId;
         return this;
     }
     
+    public DriveDataRef(){}
 }

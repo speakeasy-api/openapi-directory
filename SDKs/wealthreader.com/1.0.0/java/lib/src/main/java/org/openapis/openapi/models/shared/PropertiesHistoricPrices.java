@@ -15,6 +15,7 @@ public class PropertiesHistoricPrices {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date")
     public LocalDate date;
+
     public PropertiesHistoricPrices withDate(LocalDate date) {
         this.date = date;
         return this;
@@ -23,9 +24,11 @@ public class PropertiesHistoricPrices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Double price;
+
     public PropertiesHistoricPrices withPrice(Double price) {
         this.price = price;
         return this;
     }
     
+    public PropertiesHistoricPrices(){}
 }

@@ -12,6 +12,7 @@ public class FinalReportLinksMessages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public FinalReportLinksMessagesChannelEnum channel;
+
     public FinalReportLinksMessages withChannel(FinalReportLinksMessagesChannelEnum channel) {
         this.channel = channel;
         return this;
@@ -23,6 +24,7 @@ public class FinalReportLinksMessages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public FinalReportLinksMessages withHref(String href) {
         this.href = href;
         return this;
@@ -31,6 +33,7 @@ public class FinalReportLinksMessages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message_uuid")
     public String messageUuid;
+
     public FinalReportLinksMessages withMessageUuid(String messageUuid) {
         this.messageUuid = messageUuid;
         return this;
@@ -39,6 +42,7 @@ public class FinalReportLinksMessages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public FinalReportLinksMessagesStatusEnum status;
+
     public FinalReportLinksMessages withStatus(FinalReportLinksMessagesStatusEnum status) {
         this.status = status;
         return this;
@@ -47,9 +51,11 @@ public class FinalReportLinksMessages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public FinalReportLinksMessagesUsage usage;
+
     public FinalReportLinksMessages withUsage(FinalReportLinksMessagesUsage usage) {
         this.usage = usage;
         return this;
     }
     
+    public FinalReportLinksMessages(){}
 }

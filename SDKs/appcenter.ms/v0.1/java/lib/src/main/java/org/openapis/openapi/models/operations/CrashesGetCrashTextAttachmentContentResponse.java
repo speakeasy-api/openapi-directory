@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CrashesGetCrashTextAttachmentContentResponse {
     
     public String contentType;
+
     public CrashesGetCrashTextAttachmentContentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CrashesGetCrashTextAttachmentContentResponse {
     
     
     public Integer statusCode;
+
     public CrashesGetCrashTextAttachmentContentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CrashesGetCrashTextAttachmentContentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CrashesGetCrashTextAttachmentContentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CrashesGetCrashTextAttachmentContentResponse {
      */
     
     public String crashesGetCrashTextAttachmentContent200ApplicationJSONString;
+
     public CrashesGetCrashTextAttachmentContentResponse withCrashesGetCrashTextAttachmentContent200ApplicationJSONString(String crashesGetCrashTextAttachmentContent200ApplicationJSONString) {
         this.crashesGetCrashTextAttachmentContent200ApplicationJSONString = crashesGetCrashTextAttachmentContent200ApplicationJSONString;
         return this;
@@ -43,9 +48,14 @@ public class CrashesGetCrashTextAttachmentContentResponse {
      */
     
     public CrashesGetCrashTextAttachmentContentDefaultApplicationJSON crashesGetCrashTextAttachmentContentDefaultApplicationJSONObject;
+
     public CrashesGetCrashTextAttachmentContentResponse withCrashesGetCrashTextAttachmentContentDefaultApplicationJSONObject(CrashesGetCrashTextAttachmentContentDefaultApplicationJSON crashesGetCrashTextAttachmentContentDefaultApplicationJSONObject) {
         this.crashesGetCrashTextAttachmentContentDefaultApplicationJSONObject = crashesGetCrashTextAttachmentContentDefaultApplicationJSONObject;
         return this;
     }
     
+    public CrashesGetCrashTextAttachmentContentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InvokeEndpointAsyncResponse {
     
     public String contentType;
+
     public InvokeEndpointAsyncResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class InvokeEndpointAsyncResponse {
      */
     
     public Object internalFailure;
+
     public InvokeEndpointAsyncResponse withInternalFailure(Object internalFailure) {
         this.internalFailure = internalFailure;
         return this;
@@ -29,6 +32,7 @@ public class InvokeEndpointAsyncResponse {
      */
     
     public org.openapis.openapi.models.shared.InvokeEndpointAsyncOutput invokeEndpointAsyncOutput;
+
     public InvokeEndpointAsyncResponse withInvokeEndpointAsyncOutput(org.openapis.openapi.models.shared.InvokeEndpointAsyncOutput invokeEndpointAsyncOutput) {
         this.invokeEndpointAsyncOutput = invokeEndpointAsyncOutput;
         return this;
@@ -36,6 +40,7 @@ public class InvokeEndpointAsyncResponse {
     
     
     public Integer statusCode;
+
     public InvokeEndpointAsyncResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class InvokeEndpointAsyncResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InvokeEndpointAsyncResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class InvokeEndpointAsyncResponse {
      */
     
     public Object serviceUnavailable;
+
     public InvokeEndpointAsyncResponse withServiceUnavailable(Object serviceUnavailable) {
         this.serviceUnavailable = serviceUnavailable;
         return this;
@@ -63,9 +70,14 @@ public class InvokeEndpointAsyncResponse {
      */
     
     public Object validationError;
+
     public InvokeEndpointAsyncResponse withValidationError(Object validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public InvokeEndpointAsyncResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

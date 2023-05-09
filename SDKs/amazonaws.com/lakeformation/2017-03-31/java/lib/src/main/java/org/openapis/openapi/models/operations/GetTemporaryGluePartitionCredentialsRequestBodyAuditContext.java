@@ -15,9 +15,11 @@ public class GetTemporaryGluePartitionCredentialsRequestBodyAuditContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalAuditContext")
     public String additionalAuditContext;
+
     public GetTemporaryGluePartitionCredentialsRequestBodyAuditContext withAdditionalAuditContext(String additionalAuditContext) {
         this.additionalAuditContext = additionalAuditContext;
         return this;
     }
     
+    public GetTemporaryGluePartitionCredentialsRequestBodyAuditContext(){}
 }

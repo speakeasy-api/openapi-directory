@@ -15,6 +15,7 @@ public class NumberFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowerInclusive")
     public Double lowerInclusive;
+
     public NumberFilter withLowerInclusive(Double lowerInclusive) {
         this.lowerInclusive = lowerInclusive;
         return this;
@@ -23,9 +24,11 @@ public class NumberFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upperInclusive")
     public Double upperInclusive;
+
     public NumberFilter withUpperInclusive(Double upperInclusive) {
         this.upperInclusive = upperInclusive;
         return this;
     }
     
+    public NumberFilter(){}
 }

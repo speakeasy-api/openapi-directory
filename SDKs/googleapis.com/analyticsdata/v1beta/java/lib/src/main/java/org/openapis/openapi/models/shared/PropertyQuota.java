@@ -18,6 +18,7 @@ public class PropertyQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concurrentRequests")
     public QuotaStatus concurrentRequests;
+
     public PropertyQuota withConcurrentRequests(QuotaStatus concurrentRequests) {
         this.concurrentRequests = concurrentRequests;
         return this;
@@ -29,6 +30,7 @@ public class PropertyQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("potentiallyThresholdedRequestsPerHour")
     public QuotaStatus potentiallyThresholdedRequestsPerHour;
+
     public PropertyQuota withPotentiallyThresholdedRequestsPerHour(QuotaStatus potentiallyThresholdedRequestsPerHour) {
         this.potentiallyThresholdedRequestsPerHour = potentiallyThresholdedRequestsPerHour;
         return this;
@@ -40,6 +42,7 @@ public class PropertyQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverErrorsPerProjectPerHour")
     public QuotaStatus serverErrorsPerProjectPerHour;
+
     public PropertyQuota withServerErrorsPerProjectPerHour(QuotaStatus serverErrorsPerProjectPerHour) {
         this.serverErrorsPerProjectPerHour = serverErrorsPerProjectPerHour;
         return this;
@@ -51,6 +54,7 @@ public class PropertyQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokensPerDay")
     public QuotaStatus tokensPerDay;
+
     public PropertyQuota withTokensPerDay(QuotaStatus tokensPerDay) {
         this.tokensPerDay = tokensPerDay;
         return this;
@@ -62,6 +66,7 @@ public class PropertyQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokensPerHour")
     public QuotaStatus tokensPerHour;
+
     public PropertyQuota withTokensPerHour(QuotaStatus tokensPerHour) {
         this.tokensPerHour = tokensPerHour;
         return this;
@@ -73,9 +78,11 @@ public class PropertyQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokensPerProjectPerHour")
     public QuotaStatus tokensPerProjectPerHour;
+
     public PropertyQuota withTokensPerProjectPerHour(QuotaStatus tokensPerProjectPerHour) {
         this.tokensPerProjectPerHour = tokensPerProjectPerHour;
         return this;
     }
     
+    public PropertyQuota(){}
 }

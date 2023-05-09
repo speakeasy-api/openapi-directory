@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CustomVerificationEmailTemplate {
     
     public String failureRedirectionURL;
+
     public CustomVerificationEmailTemplate withFailureRedirectionURL(String failureRedirectionURL) {
         this.failureRedirectionURL = failureRedirectionURL;
         return this;
@@ -19,6 +20,7 @@ public class CustomVerificationEmailTemplate {
     
     
     public String fromEmailAddress;
+
     public CustomVerificationEmailTemplate withFromEmailAddress(String fromEmailAddress) {
         this.fromEmailAddress = fromEmailAddress;
         return this;
@@ -26,6 +28,7 @@ public class CustomVerificationEmailTemplate {
     
     
     public String successRedirectionURL;
+
     public CustomVerificationEmailTemplate withSuccessRedirectionURL(String successRedirectionURL) {
         this.successRedirectionURL = successRedirectionURL;
         return this;
@@ -33,6 +36,7 @@ public class CustomVerificationEmailTemplate {
     
     
     public String templateName;
+
     public CustomVerificationEmailTemplate withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -40,9 +44,11 @@ public class CustomVerificationEmailTemplate {
     
     
     public String templateSubject;
+
     public CustomVerificationEmailTemplate withTemplateSubject(String templateSubject) {
         this.templateSubject = templateSubject;
         return this;
     }
     
+    public CustomVerificationEmailTemplate(){}
 }

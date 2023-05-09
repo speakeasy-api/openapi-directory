@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SessionControllerLoginResponse {
     
     public String contentType;
+
     public SessionControllerLoginResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SessionControllerLoginResponse {
      */
     
     public String sessionControllerLogin200ApplicationJSONString;
+
     public SessionControllerLoginResponse withSessionControllerLogin200ApplicationJSONString(String sessionControllerLogin200ApplicationJSONString) {
         this.sessionControllerLogin200ApplicationJSONString = sessionControllerLogin200ApplicationJSONString;
         return this;
@@ -29,6 +32,7 @@ public class SessionControllerLoginResponse {
      */
     
     public String sessionControllerLogin200ApplicationXMLString;
+
     public SessionControllerLoginResponse withSessionControllerLogin200ApplicationXMLString(String sessionControllerLogin200ApplicationXMLString) {
         this.sessionControllerLogin200ApplicationXMLString = sessionControllerLogin200ApplicationXMLString;
         return this;
@@ -39,6 +43,7 @@ public class SessionControllerLoginResponse {
      */
     
     public String sessionControllerLogin200TextXMLString;
+
     public SessionControllerLoginResponse withSessionControllerLogin200TextXMLString(String sessionControllerLogin200TextXMLString) {
         this.sessionControllerLogin200TextXMLString = sessionControllerLogin200TextXMLString;
         return this;
@@ -46,6 +51,7 @@ public class SessionControllerLoginResponse {
     
     
     public Integer statusCode;
+
     public SessionControllerLoginResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class SessionControllerLoginResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SessionControllerLoginResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class SessionControllerLoginResponse {
      */
     
     public String sessionControllerLogin200TextJSONString;
+
     public SessionControllerLoginResponse withSessionControllerLogin200TextJSONString(String sessionControllerLogin200TextJSONString) {
         this.sessionControllerLogin200TextJSONString = sessionControllerLogin200TextJSONString;
         return this;
     }
     
+    public SessionControllerLoginResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

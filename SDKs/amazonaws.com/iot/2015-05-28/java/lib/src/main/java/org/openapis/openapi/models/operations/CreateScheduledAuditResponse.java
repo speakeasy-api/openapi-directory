@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateScheduledAuditResponse {
     
     public String contentType;
+
     public CreateScheduledAuditResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateScheduledAuditResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateScheduledAuditResponse createScheduledAuditResponse;
+
     public CreateScheduledAuditResponse withCreateScheduledAuditResponse(org.openapis.openapi.models.shared.CreateScheduledAuditResponse createScheduledAuditResponse) {
         this.createScheduledAuditResponse = createScheduledAuditResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateScheduledAuditResponse {
      */
     
     public Object internalFailureException;
+
     public CreateScheduledAuditResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateScheduledAuditResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateScheduledAuditResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateScheduledAuditResponse {
      */
     
     public Object limitExceededException;
+
     public CreateScheduledAuditResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateScheduledAuditResponse {
     
     
     public Integer statusCode;
+
     public CreateScheduledAuditResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateScheduledAuditResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateScheduledAuditResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateScheduledAuditResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateScheduledAuditResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -83,9 +92,14 @@ public class CreateScheduledAuditResponse {
      */
     
     public Object throttlingException;
+
     public CreateScheduledAuditResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateScheduledAuditResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

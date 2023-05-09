@@ -15,9 +15,11 @@ public class CreateCoreDefinitionRequestBodyInitialVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cores")
     public org.openapis.openapi.models.shared.Core[] cores;
+
     public CreateCoreDefinitionRequestBodyInitialVersion withCores(org.openapis.openapi.models.shared.Core[] cores) {
         this.cores = cores;
         return this;
     }
     
+    public CreateCoreDefinitionRequestBodyInitialVersion(){}
 }

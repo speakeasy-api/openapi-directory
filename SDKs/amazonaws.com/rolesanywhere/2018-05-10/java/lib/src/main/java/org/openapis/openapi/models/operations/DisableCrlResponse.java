@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisableCrlResponse {
@@ -12,6 +13,7 @@ public class DisableCrlResponse {
      */
     
     public Object accessDeniedException;
+
     public DisableCrlResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DisableCrlResponse {
     
     
     public String contentType;
+
     public DisableCrlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisableCrlResponse {
      */
     
     public org.openapis.openapi.models.shared.CrlDetailResponse crlDetailResponse;
+
     public DisableCrlResponse withCrlDetailResponse(org.openapis.openapi.models.shared.CrlDetailResponse crlDetailResponse) {
         this.crlDetailResponse = crlDetailResponse;
         return this;
@@ -39,6 +43,7 @@ public class DisableCrlResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisableCrlResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DisableCrlResponse {
     
     
     public Integer statusCode;
+
     public DisableCrlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DisableCrlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisableCrlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisableCrlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

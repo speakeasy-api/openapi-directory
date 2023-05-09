@@ -15,6 +15,7 @@ public class ActiveContextTimeToLive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeToLiveInSeconds")
     public Long timeToLiveInSeconds;
+
     public ActiveContextTimeToLive withTimeToLiveInSeconds(Long timeToLiveInSeconds) {
         this.timeToLiveInSeconds = timeToLiveInSeconds;
         return this;
@@ -23,9 +24,11 @@ public class ActiveContextTimeToLive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("turnsToLive")
     public Long turnsToLive;
+
     public ActiveContextTimeToLive withTurnsToLive(Long turnsToLive) {
         this.turnsToLive = turnsToLive;
         return this;
     }
     
+    public ActiveContextTimeToLive(){}
 }

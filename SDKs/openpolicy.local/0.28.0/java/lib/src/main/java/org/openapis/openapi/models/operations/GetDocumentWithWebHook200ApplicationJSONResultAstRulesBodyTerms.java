@@ -15,6 +15,7 @@ public class GetDocumentWithWebHook200ApplicationJSONResultAstRulesBodyTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GetDocumentWithWebHook200ApplicationJSONResultAstRulesBodyTerms withType(String type) {
         this.type = type;
         return this;
@@ -26,9 +27,11 @@ public class GetDocumentWithWebHook200ApplicationJSONResultAstRulesBodyTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public GetDocumentWithWebHook200ApplicationJSONResultAstRulesBodyTermsValue[] value;
+
     public GetDocumentWithWebHook200ApplicationJSONResultAstRulesBodyTerms withValue(GetDocumentWithWebHook200ApplicationJSONResultAstRulesBodyTermsValue[] value) {
         this.value = value;
         return this;
     }
     
+    public GetDocumentWithWebHook200ApplicationJSONResultAstRulesBodyTerms(){}
 }

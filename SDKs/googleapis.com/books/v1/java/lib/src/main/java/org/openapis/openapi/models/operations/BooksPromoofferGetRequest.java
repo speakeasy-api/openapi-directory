@@ -12,6 +12,7 @@ public class BooksPromoofferGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public BooksPromoofferGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class BooksPromoofferGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public BooksPromoofferGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class BooksPromoofferGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BooksPromoofferGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class BooksPromoofferGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=androidId")
     public String androidId;
+
     public BooksPromoofferGetRequest withAndroidId(String androidId) {
         this.androidId = androidId;
         return this;
@@ -52,6 +56,7 @@ public class BooksPromoofferGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public BooksPromoofferGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +67,7 @@ public class BooksPromoofferGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
     public String device;
+
     public BooksPromoofferGetRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -72,6 +78,7 @@ public class BooksPromoofferGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BooksPromoofferGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +89,7 @@ public class BooksPromoofferGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BooksPromoofferGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +100,7 @@ public class BooksPromoofferGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=manufacturer")
     public String manufacturer;
+
     public BooksPromoofferGetRequest withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
@@ -102,6 +111,7 @@ public class BooksPromoofferGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
     public String model;
+
     public BooksPromoofferGetRequest withModel(String model) {
         this.model = model;
         return this;
@@ -112,6 +122,7 @@ public class BooksPromoofferGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BooksPromoofferGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -122,6 +133,7 @@ public class BooksPromoofferGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BooksPromoofferGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +144,7 @@ public class BooksPromoofferGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=product")
     public String product;
+
     public BooksPromoofferGetRequest withProduct(String product) {
         this.product = product;
         return this;
@@ -142,6 +155,7 @@ public class BooksPromoofferGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BooksPromoofferGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +166,7 @@ public class BooksPromoofferGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serial")
     public String serial;
+
     public BooksPromoofferGetRequest withSerial(String serial) {
         this.serial = serial;
         return this;
@@ -162,6 +177,7 @@ public class BooksPromoofferGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public BooksPromoofferGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -172,9 +188,11 @@ public class BooksPromoofferGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public BooksPromoofferGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public BooksPromoofferGetRequest(){}
 }

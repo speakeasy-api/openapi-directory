@@ -15,6 +15,7 @@ public class DictlayerdataDictWordsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribution")
     public String attribution;
+
     public DictlayerdataDictWordsSource withAttribution(String attribution) {
         this.attribution = attribution;
         return this;
@@ -23,9 +24,11 @@ public class DictlayerdataDictWordsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public DictlayerdataDictWordsSource withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public DictlayerdataDictWordsSource(){}
 }

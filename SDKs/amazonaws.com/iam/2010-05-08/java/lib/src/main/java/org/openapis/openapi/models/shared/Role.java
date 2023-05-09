@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class Role {
     
     public String arn;
+
     public Role withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +21,7 @@ public class Role {
     
     
     public String assumeRolePolicyDocument;
+
     public Role withAssumeRolePolicyDocument(String assumeRolePolicyDocument) {
         this.assumeRolePolicyDocument = assumeRolePolicyDocument;
         return this;
@@ -26,6 +29,7 @@ public class Role {
     
     
     public OffsetDateTime createDate;
+
     public Role withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -33,6 +37,7 @@ public class Role {
     
     
     public String description;
+
     public Role withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +45,7 @@ public class Role {
     
     
     public Long maxSessionDuration;
+
     public Role withMaxSessionDuration(Long maxSessionDuration) {
         this.maxSessionDuration = maxSessionDuration;
         return this;
@@ -47,6 +53,7 @@ public class Role {
     
     
     public String path;
+
     public Role withPath(String path) {
         this.path = path;
         return this;
@@ -54,6 +61,7 @@ public class Role {
     
     
     public AttachedPermissionsBoundary permissionsBoundary;
+
     public Role withPermissionsBoundary(AttachedPermissionsBoundary permissionsBoundary) {
         this.permissionsBoundary = permissionsBoundary;
         return this;
@@ -61,6 +69,7 @@ public class Role {
     
     
     public String roleId;
+
     public Role withRoleId(String roleId) {
         this.roleId = roleId;
         return this;
@@ -68,6 +77,7 @@ public class Role {
     
     
     public RoleLastUsed roleLastUsed;
+
     public Role withRoleLastUsed(RoleLastUsed roleLastUsed) {
         this.roleLastUsed = roleLastUsed;
         return this;
@@ -75,6 +85,7 @@ public class Role {
     
     
     public String roleName;
+
     public Role withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
@@ -82,9 +93,17 @@ public class Role {
     
     
     public Tag[] tags;
+
     public Role withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public Role(@JsonProperty("Arn") String arn, @JsonProperty("CreateDate") OffsetDateTime createDate, @JsonProperty("Path") String path, @JsonProperty("RoleId") String roleId, @JsonProperty("RoleName") String roleName) {
+        this.arn = arn;
+        this.createDate = createDate;
+        this.path = path;
+        this.roleId = roleId;
+        this.roleName = roleName;
+  }
 }

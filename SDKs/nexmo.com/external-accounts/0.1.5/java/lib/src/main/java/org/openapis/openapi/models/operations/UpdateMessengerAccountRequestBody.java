@@ -15,6 +15,7 @@ public class UpdateMessengerAccountRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access_token")
     public String accessToken;
+
     public UpdateMessengerAccountRequestBody withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -23,6 +24,7 @@ public class UpdateMessengerAccountRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applications")
     public String[] applications;
+
     public UpdateMessengerAccountRequestBody withApplications(String[] applications) {
         this.applications = applications;
         return this;
@@ -34,9 +36,11 @@ public class UpdateMessengerAccountRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateMessengerAccountRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateMessengerAccountRequestBody(){}
 }

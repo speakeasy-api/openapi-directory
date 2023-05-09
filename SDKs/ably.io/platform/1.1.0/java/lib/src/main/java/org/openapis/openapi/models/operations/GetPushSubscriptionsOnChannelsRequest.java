@@ -12,6 +12,7 @@ public class GetPushSubscriptionsOnChannelsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
     public String xAblyVersion;
+
     public GetPushSubscriptionsOnChannelsRequest withXAblyVersion(String xAblyVersion) {
         this.xAblyVersion = xAblyVersion;
         return this;
@@ -22,6 +23,7 @@ public class GetPushSubscriptionsOnChannelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=channel")
     public String channel;
+
     public GetPushSubscriptionsOnChannelsRequest withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -32,6 +34,7 @@ public class GetPushSubscriptionsOnChannelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientId")
     public String clientId;
+
     public GetPushSubscriptionsOnChannelsRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -42,6 +45,7 @@ public class GetPushSubscriptionsOnChannelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceId")
     public String deviceId;
+
     public GetPushSubscriptionsOnChannelsRequest withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -52,6 +56,7 @@ public class GetPushSubscriptionsOnChannelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+
     public GetPushSubscriptionsOnChannelsRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
         this.format = format;
         return this;
@@ -62,9 +67,11 @@ public class GetPushSubscriptionsOnChannelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetPushSubscriptionsOnChannelsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public GetPushSubscriptionsOnChannelsRequest(){}
 }

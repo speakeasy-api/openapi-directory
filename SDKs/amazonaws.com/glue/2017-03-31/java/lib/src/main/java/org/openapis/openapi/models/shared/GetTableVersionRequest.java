@@ -12,6 +12,7 @@ public class GetTableVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetTableVersionRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class GetTableVersionRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public GetTableVersionRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -26,6 +28,7 @@ public class GetTableVersionRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public GetTableVersionRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -34,9 +37,14 @@ public class GetTableVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionId")
     public String versionId;
+
     public GetTableVersionRequest withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public GetTableVersionRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.tableName = tableName;
+  }
 }

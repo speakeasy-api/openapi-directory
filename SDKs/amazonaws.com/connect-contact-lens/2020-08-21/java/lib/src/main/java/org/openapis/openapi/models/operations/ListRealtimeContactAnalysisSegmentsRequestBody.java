@@ -14,6 +14,7 @@ public class ListRealtimeContactAnalysisSegmentsRequestBody {
      */
     @JsonProperty("ContactId")
     public String contactId;
+
     public ListRealtimeContactAnalysisSegmentsRequestBody withContactId(String contactId) {
         this.contactId = contactId;
         return this;
@@ -24,6 +25,7 @@ public class ListRealtimeContactAnalysisSegmentsRequestBody {
      */
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public ListRealtimeContactAnalysisSegmentsRequestBody withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -35,6 +37,7 @@ public class ListRealtimeContactAnalysisSegmentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListRealtimeContactAnalysisSegmentsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -46,9 +49,14 @@ public class ListRealtimeContactAnalysisSegmentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRealtimeContactAnalysisSegmentsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListRealtimeContactAnalysisSegmentsRequestBody(@JsonProperty("ContactId") String contactId, @JsonProperty("InstanceId") String instanceId) {
+        this.contactId = contactId;
+        this.instanceId = instanceId;
+  }
 }

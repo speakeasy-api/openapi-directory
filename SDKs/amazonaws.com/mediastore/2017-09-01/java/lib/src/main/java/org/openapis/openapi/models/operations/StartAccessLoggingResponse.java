@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartAccessLoggingResponse {
@@ -12,6 +13,7 @@ public class StartAccessLoggingResponse {
      */
     
     public Object containerInUseException;
+
     public StartAccessLoggingResponse withContainerInUseException(Object containerInUseException) {
         this.containerInUseException = containerInUseException;
         return this;
@@ -22,6 +24,7 @@ public class StartAccessLoggingResponse {
      */
     
     public Object containerNotFoundException;
+
     public StartAccessLoggingResponse withContainerNotFoundException(Object containerNotFoundException) {
         this.containerNotFoundException = containerNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class StartAccessLoggingResponse {
     
     
     public String contentType;
+
     public StartAccessLoggingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartAccessLoggingResponse {
      */
     
     public Object internalServerError;
+
     public StartAccessLoggingResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class StartAccessLoggingResponse {
      */
     
     public java.util.Map<String, Object> startAccessLoggingOutput;
+
     public StartAccessLoggingResponse withStartAccessLoggingOutput(java.util.Map<String, Object> startAccessLoggingOutput) {
         this.startAccessLoggingOutput = startAccessLoggingOutput;
         return this;
@@ -56,6 +62,7 @@ public class StartAccessLoggingResponse {
     
     
     public Integer statusCode;
+
     public StartAccessLoggingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class StartAccessLoggingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartAccessLoggingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartAccessLoggingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

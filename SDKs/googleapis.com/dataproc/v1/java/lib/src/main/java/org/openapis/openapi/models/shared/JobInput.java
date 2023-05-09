@@ -18,6 +18,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driverSchedulingConfig")
     public DriverSchedulingConfig driverSchedulingConfig;
+
     public JobInput withDriverSchedulingConfig(DriverSchedulingConfig driverSchedulingConfig) {
         this.driverSchedulingConfig = driverSchedulingConfig;
         return this;
@@ -29,6 +30,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hadoopJob")
     public HadoopJob hadoopJob;
+
     public JobInput withHadoopJob(HadoopJob hadoopJob) {
         this.hadoopJob = hadoopJob;
         return this;
@@ -40,6 +42,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hiveJob")
     public HiveJob hiveJob;
+
     public JobInput withHiveJob(HiveJob hiveJob) {
         this.hiveJob = hiveJob;
         return this;
@@ -51,6 +54,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public JobInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,6 +66,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pigJob")
     public PigJob pigJob;
+
     public JobInput withPigJob(PigJob pigJob) {
         this.pigJob = pigJob;
         return this;
@@ -73,6 +78,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placement")
     public JobPlacementInput placement;
+
     public JobInput withPlacement(JobPlacementInput placement) {
         this.placement = placement;
         return this;
@@ -84,6 +90,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prestoJob")
     public PrestoJob prestoJob;
+
     public JobInput withPrestoJob(PrestoJob prestoJob) {
         this.prestoJob = prestoJob;
         return this;
@@ -95,6 +102,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pysparkJob")
     public PySparkJob pysparkJob;
+
     public JobInput withPysparkJob(PySparkJob pysparkJob) {
         this.pysparkJob = pysparkJob;
         return this;
@@ -106,6 +114,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public JobReference reference;
+
     public JobInput withReference(JobReference reference) {
         this.reference = reference;
         return this;
@@ -117,6 +126,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduling")
     public JobScheduling scheduling;
+
     public JobInput withScheduling(JobScheduling scheduling) {
         this.scheduling = scheduling;
         return this;
@@ -128,6 +138,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkJob")
     public SparkJob sparkJob;
+
     public JobInput withSparkJob(SparkJob sparkJob) {
         this.sparkJob = sparkJob;
         return this;
@@ -139,6 +150,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkRJob")
     public SparkRJob sparkRJob;
+
     public JobInput withSparkRJob(SparkRJob sparkRJob) {
         this.sparkRJob = sparkRJob;
         return this;
@@ -150,6 +162,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkSqlJob")
     public SparkSqlJob sparkSqlJob;
+
     public JobInput withSparkSqlJob(SparkSqlJob sparkSqlJob) {
         this.sparkSqlJob = sparkSqlJob;
         return this;
@@ -161,9 +174,11 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trinoJob")
     public TrinoJob trinoJob;
+
     public JobInput withTrinoJob(TrinoJob trinoJob) {
         this.trinoJob = trinoJob;
         return this;
     }
     
+    public JobInput(){}
 }

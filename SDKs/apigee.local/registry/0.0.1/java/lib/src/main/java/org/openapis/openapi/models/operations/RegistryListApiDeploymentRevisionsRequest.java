@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryListApiDeploymentRevisionsRequest {
@@ -12,6 +13,7 @@ public class RegistryListApiDeploymentRevisionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
     public String api;
+
     public RegistryListApiDeploymentRevisionsRequest withApi(String api) {
         this.api = api;
         return this;
@@ -22,6 +24,7 @@ public class RegistryListApiDeploymentRevisionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment")
     public String deployment;
+
     public RegistryListApiDeploymentRevisionsRequest withDeployment(String deployment) {
         this.deployment = deployment;
         return this;
@@ -32,6 +35,7 @@ public class RegistryListApiDeploymentRevisionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public RegistryListApiDeploymentRevisionsRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -42,6 +46,7 @@ public class RegistryListApiDeploymentRevisionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public RegistryListApiDeploymentRevisionsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -52,6 +57,7 @@ public class RegistryListApiDeploymentRevisionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public RegistryListApiDeploymentRevisionsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -62,9 +68,16 @@ public class RegistryListApiDeploymentRevisionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public RegistryListApiDeploymentRevisionsRequest withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public RegistryListApiDeploymentRevisionsRequest(@JsonProperty("api") String api, @JsonProperty("deployment") String deployment, @JsonProperty("location") String location, @JsonProperty("project") String project) {
+        this.api = api;
+        this.deployment = deployment;
+        this.location = location;
+        this.project = project;
+  }
 }

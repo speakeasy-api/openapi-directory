@@ -15,6 +15,7 @@ public class ProductShippingWeight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public ProductShippingWeight withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -26,9 +27,11 @@ public class ProductShippingWeight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public ProductShippingWeight withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public ProductShippingWeight(){}
 }

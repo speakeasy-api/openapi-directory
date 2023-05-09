@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteFlowLogsResult {
     
     public DeleteFlowLogsResultUnsuccessful[] unsuccessful;
+
     public DeleteFlowLogsResult withUnsuccessful(DeleteFlowLogsResultUnsuccessful[] unsuccessful) {
         this.unsuccessful = unsuccessful;
         return this;
     }
     
+    public DeleteFlowLogsResult(){}
 }

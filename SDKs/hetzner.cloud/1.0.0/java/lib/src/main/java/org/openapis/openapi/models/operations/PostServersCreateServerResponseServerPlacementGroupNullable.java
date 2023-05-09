@@ -12,6 +12,7 @@ public class PostServersCreateServerResponseServerPlacementGroupNullable {
      */
     @JsonProperty("created")
     public String created;
+
     public PostServersCreateServerResponseServerPlacementGroupNullable withCreated(String created) {
         this.created = created;
         return this;
@@ -22,6 +23,7 @@ public class PostServersCreateServerResponseServerPlacementGroupNullable {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostServersCreateServerResponseServerPlacementGroupNullable withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class PostServersCreateServerResponseServerPlacementGroupNullable {
      */
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public PostServersCreateServerResponseServerPlacementGroupNullable withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -42,6 +45,7 @@ public class PostServersCreateServerResponseServerPlacementGroupNullable {
      */
     @JsonProperty("name")
     public String name;
+
     public PostServersCreateServerResponseServerPlacementGroupNullable withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +56,7 @@ public class PostServersCreateServerResponseServerPlacementGroupNullable {
      */
     @JsonProperty("servers")
     public Long[] servers;
+
     public PostServersCreateServerResponseServerPlacementGroupNullable withServers(Long[] servers) {
         this.servers = servers;
         return this;
@@ -62,9 +67,18 @@ public class PostServersCreateServerResponseServerPlacementGroupNullable {
      */
     @JsonProperty("type")
     public PostServersCreateServerResponseServerPlacementGroupNullableTypeEnum type;
+
     public PostServersCreateServerResponseServerPlacementGroupNullable withType(PostServersCreateServerResponseServerPlacementGroupNullableTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PostServersCreateServerResponseServerPlacementGroupNullable(@JsonProperty("created") String created, @JsonProperty("id") Long id, @JsonProperty("labels") java.util.Map<String, String> labels, @JsonProperty("name") String name, @JsonProperty("servers") Long[] servers, @JsonProperty("type") PostServersCreateServerResponseServerPlacementGroupNullableTypeEnum type) {
+        this.created = created;
+        this.id = id;
+        this.labels = labels;
+        this.name = name;
+        this.servers = servers;
+        this.type = type;
+  }
 }

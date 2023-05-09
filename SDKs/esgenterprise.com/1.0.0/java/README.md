@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetSearchSecurity;
 import org.openapis.openapi.models.operations.GetSearchRequest;
 import org.openapis.openapi.models.operations.GetSearchResponse;
+import org.openapis.openapi.models.operations.GetSearchSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,20 +26,20 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetSearchRequest req = new GetSearchRequest() {{
-                q = "corrupti";
-            }}            
+            GetSearchRequest req = new GetSearchRequest("corrupti");            
 
-            GetSearchResponse res = sdk.rating.getSearch(req, new GetSearchSecurity() {{
+            GetSearchResponse res = sdk.rating.getSearch(req, new GetSearchSecurity("provident") {{
                 apiKey = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.getSearch200ApplicationJSONObject.isPresent()) {
+            if (res.getSearch200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -48,9 +47,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### rating
+### [rating](docs/rating/README.md)
 
-* `getSearch` - List all company ESG Ratings
+* [getSearch](docs/rating/README.md#getsearch) - List all company ESG Ratings
 <!-- End SDK Available Operations -->
 
 ### Maturity

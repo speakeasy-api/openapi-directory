@@ -17,6 +17,7 @@ public class CodeScanningAlertItems {
      */
     @JsonProperty("classification")
     public CodeScanningAlertClassificationEnum classification;
+
     public CodeScanningAlertItems withClassification(CodeScanningAlertClassificationEnum classification) {
         this.classification = classification;
         return this;
@@ -29,6 +30,7 @@ public class CodeScanningAlertItems {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public CodeScanningAlertItems withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -41,6 +43,7 @@ public class CodeScanningAlertItems {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dismissed_at")
     public OffsetDateTime dismissedAt;
+
     public CodeScanningAlertItems withDismissedAt(OffsetDateTime dismissedAt) {
         this.dismissedAt = dismissedAt;
         return this;
@@ -51,6 +54,7 @@ public class CodeScanningAlertItems {
      */
     @JsonProperty("dismissed_by")
     public NullableSimpleUser dismissedBy;
+
     public CodeScanningAlertItems withDismissedBy(NullableSimpleUser dismissedBy) {
         this.dismissedBy = dismissedBy;
         return this;
@@ -61,6 +65,7 @@ public class CodeScanningAlertItems {
      */
     @JsonProperty("dismissed_reason")
     public CodeScanningAlertDismissedReasonEnum dismissedReason;
+
     public CodeScanningAlertItems withDismissedReason(CodeScanningAlertDismissedReasonEnum dismissedReason) {
         this.dismissedReason = dismissedReason;
         return this;
@@ -71,6 +76,7 @@ public class CodeScanningAlertItems {
      */
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public CodeScanningAlertItems withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -78,6 +84,7 @@ public class CodeScanningAlertItems {
     
     @JsonProperty("instance")
     public CodeScanningAlertInstance instance;
+
     public CodeScanningAlertItems withInstance(CodeScanningAlertInstance instance) {
         this.instance = instance;
         return this;
@@ -88,6 +95,7 @@ public class CodeScanningAlertItems {
      */
     @JsonProperty("number")
     public Long number;
+
     public CodeScanningAlertItems withNumber(Long number) {
         this.number = number;
         return this;
@@ -95,6 +103,7 @@ public class CodeScanningAlertItems {
     
     @JsonProperty("rule")
     public CodeScanningAlertRuleSummary rule;
+
     public CodeScanningAlertItems withRule(CodeScanningAlertRuleSummary rule) {
         this.rule = rule;
         return this;
@@ -105,6 +114,7 @@ public class CodeScanningAlertItems {
      */
     @JsonProperty("state")
     public CodeScanningAlertStateEnum state;
+
     public CodeScanningAlertItems withState(CodeScanningAlertStateEnum state) {
         this.state = state;
         return this;
@@ -112,6 +122,7 @@ public class CodeScanningAlertItems {
     
     @JsonProperty("tool")
     public CodeScanningAnalysisTool tool;
+
     public CodeScanningAlertItems withTool(CodeScanningAnalysisTool tool) {
         this.tool = tool;
         return this;
@@ -122,9 +133,24 @@ public class CodeScanningAlertItems {
      */
     @JsonProperty("url")
     public String url;
+
     public CodeScanningAlertItems withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CodeScanningAlertItems(@JsonProperty("classification") CodeScanningAlertClassificationEnum classification, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("dismissed_at") OffsetDateTime dismissedAt, @JsonProperty("dismissed_by") NullableSimpleUser dismissedBy, @JsonProperty("dismissed_reason") CodeScanningAlertDismissedReasonEnum dismissedReason, @JsonProperty("html_url") String htmlUrl, @JsonProperty("instance") CodeScanningAlertInstance instance, @JsonProperty("number") Long number, @JsonProperty("rule") CodeScanningAlertRuleSummary rule, @JsonProperty("state") CodeScanningAlertStateEnum state, @JsonProperty("tool") CodeScanningAnalysisTool tool, @JsonProperty("url") String url) {
+        this.classification = classification;
+        this.createdAt = createdAt;
+        this.dismissedAt = dismissedAt;
+        this.dismissedBy = dismissedBy;
+        this.dismissedReason = dismissedReason;
+        this.htmlUrl = htmlUrl;
+        this.instance = instance;
+        this.number = number;
+        this.rule = rule;
+        this.state = state;
+        this.tool = tool;
+        this.url = url;
+  }
 }

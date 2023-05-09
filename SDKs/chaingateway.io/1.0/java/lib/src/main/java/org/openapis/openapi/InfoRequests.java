@@ -67,11 +67,9 @@ public class InfoRequests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBlockResponse res = new org.openapis.openapi.models.operations.GetBlockResponse() {{
+        org.openapis.openapi.models.operations.GetBlockResponse res = new org.openapis.openapi.models.operations.GetBlockResponse(contentType, httpRes.statusCode()) {{
             getBlock = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -119,11 +117,9 @@ public class InfoRequests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEthereumBalanceResponse res = new org.openapis.openapi.models.operations.GetEthereumBalanceResponse() {{
+        org.openapis.openapi.models.operations.GetEthereumBalanceResponse res = new org.openapis.openapi.models.operations.GetEthereumBalanceResponse(contentType, httpRes.statusCode()) {{
             getEthereumBalance = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -171,11 +167,9 @@ public class InfoRequests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetExchangeRateResponse res = new org.openapis.openapi.models.operations.GetExchangeRateResponse() {{
+        org.openapis.openapi.models.operations.GetExchangeRateResponse res = new org.openapis.openapi.models.operations.GetExchangeRateResponse(contentType, httpRes.statusCode()) {{
             getExchangeRate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -218,11 +212,9 @@ public class InfoRequests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGasPriceResponse res = new org.openapis.openapi.models.operations.GetGasPriceResponse() {{
+        org.openapis.openapi.models.operations.GetGasPriceResponse res = new org.openapis.openapi.models.operations.GetGasPriceResponse(contentType, httpRes.statusCode()) {{
             getGasPrice = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -265,11 +257,9 @@ public class InfoRequests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLastBlockNumberResponse res = new org.openapis.openapi.models.operations.GetLastBlockNumberResponse() {{
+        org.openapis.openapi.models.operations.GetLastBlockNumberResponse res = new org.openapis.openapi.models.operations.GetLastBlockNumberResponse(contentType, httpRes.statusCode()) {{
             getLastBlockNumber = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -317,11 +307,9 @@ public class InfoRequests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTokenResponse res = new org.openapis.openapi.models.operations.GetTokenResponse() {{
+        org.openapis.openapi.models.operations.GetTokenResponse res = new org.openapis.openapi.models.operations.GetTokenResponse(contentType, httpRes.statusCode()) {{
             getToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -369,11 +357,9 @@ public class InfoRequests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTokenBalanceResponse res = new org.openapis.openapi.models.operations.GetTokenBalanceResponse() {{
+        org.openapis.openapi.models.operations.GetTokenBalanceResponse res = new org.openapis.openapi.models.operations.GetTokenBalanceResponse(contentType, httpRes.statusCode()) {{
             getTokenBalance = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -421,11 +407,9 @@ public class InfoRequests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTransactionsResponse res = new org.openapis.openapi.models.operations.GetTransactionsResponse() {{
+        org.openapis.openapi.models.operations.GetTransactionsResponse res = new org.openapis.openapi.models.operations.GetTransactionsResponse(contentType, httpRes.statusCode()) {{
             getTransactions = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class EnterpriseCrmEventbusProtoTeardownTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creatorEmail")
     public String creatorEmail;
+
     public EnterpriseCrmEventbusProtoTeardownTaskConfig withCreatorEmail(String creatorEmail) {
         this.creatorEmail = creatorEmail;
         return this;
@@ -26,6 +27,7 @@ public class EnterpriseCrmEventbusProtoTeardownTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EnterpriseCrmEventbusProtoTeardownTaskConfig withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class EnterpriseCrmEventbusProtoTeardownTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextTeardownTask")
     public EnterpriseCrmEventbusProtoNextTeardownTask nextTeardownTask;
+
     public EnterpriseCrmEventbusProtoTeardownTaskConfig withNextTeardownTask(EnterpriseCrmEventbusProtoNextTeardownTask nextTeardownTask) {
         this.nextTeardownTask = nextTeardownTask;
         return this;
@@ -48,6 +51,7 @@ public class EnterpriseCrmEventbusProtoTeardownTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public EnterpriseCrmEventbusProtoEventParameters parameters;
+
     public EnterpriseCrmEventbusProtoTeardownTaskConfig withParameters(EnterpriseCrmEventbusProtoEventParameters parameters) {
         this.parameters = parameters;
         return this;
@@ -59,6 +63,7 @@ public class EnterpriseCrmEventbusProtoTeardownTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public EnterpriseCrmEventbusProtoEventBusProperties properties;
+
     public EnterpriseCrmEventbusProtoTeardownTaskConfig withProperties(EnterpriseCrmEventbusProtoEventBusProperties properties) {
         this.properties = properties;
         return this;
@@ -70,9 +75,11 @@ public class EnterpriseCrmEventbusProtoTeardownTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teardownTaskImplementationClassName")
     public String teardownTaskImplementationClassName;
+
     public EnterpriseCrmEventbusProtoTeardownTaskConfig withTeardownTaskImplementationClassName(String teardownTaskImplementationClassName) {
         this.teardownTaskImplementationClassName = teardownTaskImplementationClassName;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoTeardownTaskConfig(){}
 }

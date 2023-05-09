@@ -19,9 +19,11 @@ public class ConferenceRequestStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCode")
     public String statusCode;
+
     public ConferenceRequestStatus withStatusCode(String statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public ConferenceRequestStatus(){}
 }

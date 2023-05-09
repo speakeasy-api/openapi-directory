@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListTrackerConsumersResponse {
     @JsonProperty("ConsumerArns")
     public String[] consumerArns;
+
     public ListTrackerConsumersResponse withConsumerArns(String[] consumerArns) {
         this.consumerArns = consumerArns;
         return this;
@@ -22,9 +23,13 @@ public class ListTrackerConsumersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTrackerConsumersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListTrackerConsumersResponse(@JsonProperty("ConsumerArns") String[] consumerArns) {
+        this.consumerArns = consumerArns;
+  }
 }

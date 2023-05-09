@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetRasterDataCollectionOutput {
     @JsonProperty("Arn")
     public String arn;
+
     public GetRasterDataCollectionOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -21,6 +22,7 @@ public class GetRasterDataCollectionOutput {
     
     @JsonProperty("Description")
     public String description;
+
     public GetRasterDataCollectionOutput withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class GetRasterDataCollectionOutput {
     
     @JsonProperty("DescriptionPageUrl")
     public String descriptionPageUrl;
+
     public GetRasterDataCollectionOutput withDescriptionPageUrl(String descriptionPageUrl) {
         this.descriptionPageUrl = descriptionPageUrl;
         return this;
@@ -35,6 +38,7 @@ public class GetRasterDataCollectionOutput {
     
     @JsonProperty("ImageSourceBands")
     public String[] imageSourceBands;
+
     public GetRasterDataCollectionOutput withImageSourceBands(String[] imageSourceBands) {
         this.imageSourceBands = imageSourceBands;
         return this;
@@ -42,6 +46,7 @@ public class GetRasterDataCollectionOutput {
     
     @JsonProperty("Name")
     public String name;
+
     public GetRasterDataCollectionOutput withName(String name) {
         this.name = name;
         return this;
@@ -49,6 +54,7 @@ public class GetRasterDataCollectionOutput {
     
     @JsonProperty("SupportedFilters")
     public Filter[] supportedFilters;
+
     public GetRasterDataCollectionOutput withSupportedFilters(Filter[] supportedFilters) {
         this.supportedFilters = supportedFilters;
         return this;
@@ -57,6 +63,7 @@ public class GetRasterDataCollectionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public GetRasterDataCollectionOutput withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -64,9 +71,19 @@ public class GetRasterDataCollectionOutput {
     
     @JsonProperty("Type")
     public DataCollectionTypeEnum type;
+
     public GetRasterDataCollectionOutput withType(DataCollectionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetRasterDataCollectionOutput(@JsonProperty("Arn") String arn, @JsonProperty("Description") String description, @JsonProperty("DescriptionPageUrl") String descriptionPageUrl, @JsonProperty("ImageSourceBands") String[] imageSourceBands, @JsonProperty("Name") String name, @JsonProperty("SupportedFilters") Filter[] supportedFilters, @JsonProperty("Type") DataCollectionTypeEnum type) {
+        this.arn = arn;
+        this.description = description;
+        this.descriptionPageUrl = descriptionPageUrl;
+        this.imageSourceBands = imageSourceBands;
+        this.name = name;
+        this.supportedFilters = supportedFilters;
+        this.type = type;
+  }
 }

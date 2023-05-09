@@ -15,6 +15,7 @@ public class PayableDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calculationUnitId")
     public Long calculationUnitId;
+
     public PayableDTO withCalculationUnitId(Long calculationUnitId) {
         this.calculationUnitId = calculationUnitId;
         return this;
@@ -23,6 +24,7 @@ public class PayableDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyId")
     public Long currencyId;
+
     public PayableDTO withCurrencyId(Long currencyId) {
         this.currencyId = currencyId;
         return this;
@@ -31,6 +33,7 @@ public class PayableDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PayableDTO withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class PayableDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PayableDTO withId(Long id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class PayableDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreMinimumCharge")
     public Boolean ignoreMinimumCharge;
+
     public PayableDTO withIgnoreMinimumCharge(Boolean ignoreMinimumCharge) {
         this.ignoreMinimumCharge = ignoreMinimumCharge;
         return this;
@@ -55,6 +60,7 @@ public class PayableDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceId")
     public String invoiceId;
+
     public PayableDTO withInvoiceId(String invoiceId) {
         this.invoiceId = invoiceId;
         return this;
@@ -63,6 +69,7 @@ public class PayableDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public java.util.Map<String, Object> jobId;
+
     public PayableDTO withJobId(java.util.Map<String, Object> jobId) {
         this.jobId = jobId;
         return this;
@@ -71,6 +78,7 @@ public class PayableDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTypeId")
     public Long jobTypeId;
+
     public PayableDTO withJobTypeId(Long jobTypeId) {
         this.jobTypeId = jobTypeId;
         return this;
@@ -79,6 +87,7 @@ public class PayableDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCombination")
     public ChargeLanguageCombinationDTO languageCombination;
+
     public PayableDTO withLanguageCombination(ChargeLanguageCombinationDTO languageCombination) {
         this.languageCombination = languageCombination;
         return this;
@@ -87,6 +96,7 @@ public class PayableDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCombinationIdNumber")
     public String languageCombinationIdNumber;
+
     public PayableDTO withLanguageCombinationIdNumber(String languageCombinationIdNumber) {
         this.languageCombinationIdNumber = languageCombinationIdNumber;
         return this;
@@ -95,6 +105,7 @@ public class PayableDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumCharge")
     public Double minimumCharge;
+
     public PayableDTO withMinimumCharge(Double minimumCharge) {
         this.minimumCharge = minimumCharge;
         return this;
@@ -103,6 +114,7 @@ public class PayableDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Double quantity;
+
     public PayableDTO withQuantity(Double quantity) {
         this.quantity = quantity;
         return this;
@@ -111,6 +123,7 @@ public class PayableDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate")
     public Double rate;
+
     public PayableDTO withRate(Double rate) {
         this.rate = rate;
         return this;
@@ -119,6 +132,7 @@ public class PayableDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rateOrigin")
     public PayableDTORateOriginEnum rateOrigin;
+
     public PayableDTO withRateOrigin(PayableDTORateOriginEnum rateOrigin) {
         this.rateOrigin = rateOrigin;
         return this;
@@ -127,6 +141,7 @@ public class PayableDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public PayableDTO withTotal(Double total) {
         this.total = total;
         return this;
@@ -135,9 +150,11 @@ public class PayableDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PayableDTOTypeEnum type;
+
     public PayableDTO withType(PayableDTOTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PayableDTO(){}
 }

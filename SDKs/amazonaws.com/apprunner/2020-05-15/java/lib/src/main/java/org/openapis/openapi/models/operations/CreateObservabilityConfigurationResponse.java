@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateObservabilityConfigurationResponse {
     
     public String contentType;
+
     public CreateObservabilityConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateObservabilityConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateObservabilityConfigurationResponse createObservabilityConfigurationResponse;
+
     public CreateObservabilityConfigurationResponse withCreateObservabilityConfigurationResponse(org.openapis.openapi.models.shared.CreateObservabilityConfigurationResponse createObservabilityConfigurationResponse) {
         this.createObservabilityConfigurationResponse = createObservabilityConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateObservabilityConfigurationResponse {
      */
     
     public Object internalServiceErrorException;
+
     public CreateObservabilityConfigurationResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class CreateObservabilityConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateObservabilityConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class CreateObservabilityConfigurationResponse {
     
     
     public Integer statusCode;
+
     public CreateObservabilityConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateObservabilityConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateObservabilityConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateObservabilityConfigurationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateObservabilityConfigurationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
     }
     
+    public CreateObservabilityConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

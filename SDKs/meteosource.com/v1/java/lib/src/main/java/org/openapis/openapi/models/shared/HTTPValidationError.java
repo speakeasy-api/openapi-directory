@@ -15,9 +15,11 @@ public class HTTPValidationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public ValidationError[] detail;
+
     public HTTPValidationError withDetail(ValidationError[] detail) {
         this.detail = detail;
         return this;
     }
     
+    public HTTPValidationError(){}
 }

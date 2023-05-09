@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Prediction {
     @JsonProperty("details")
     public String details;
+
     public Prediction withDetails(String details) {
         this.details = details;
         return this;
@@ -25,6 +26,7 @@ public class Prediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groundhog")
     public Groundhog groundhog;
+
     public Prediction withGroundhog(Groundhog groundhog) {
         this.groundhog = groundhog;
         return this;
@@ -32,6 +34,7 @@ public class Prediction {
     
     @JsonProperty("shadow")
     public Long shadow;
+
     public Prediction withShadow(Long shadow) {
         this.shadow = shadow;
         return this;
@@ -39,9 +42,15 @@ public class Prediction {
     
     @JsonProperty("year")
     public Long year;
+
     public Prediction withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public Prediction(@JsonProperty("details") String details, @JsonProperty("shadow") Long shadow, @JsonProperty("year") Long year) {
+        this.details = details;
+        this.shadow = shadow;
+        this.year = year;
+  }
 }

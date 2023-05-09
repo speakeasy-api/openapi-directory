@@ -12,6 +12,7 @@ public class ExportServicesJSONRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ExportServicesJSONRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -22,9 +23,11 @@ public class ExportServicesJSONRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public ExportServicesJSONRequest withSearch(String search) {
         this.search = search;
         return this;
     }
     
+    public ExportServicesJSONRequest(){}
 }

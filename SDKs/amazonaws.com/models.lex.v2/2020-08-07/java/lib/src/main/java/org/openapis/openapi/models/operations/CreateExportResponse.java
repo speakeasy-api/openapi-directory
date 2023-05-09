@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateExportResponse {
@@ -12,6 +13,7 @@ public class CreateExportResponse {
      */
     
     public Object conflictException;
+
     public CreateExportResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateExportResponse {
     
     
     public String contentType;
+
     public CreateExportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateExportResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateExportResponse createExportResponse;
+
     public CreateExportResponse withCreateExportResponse(org.openapis.openapi.models.shared.CreateExportResponse createExportResponse) {
         this.createExportResponse = createExportResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateExportResponse {
      */
     
     public Object internalServerException;
+
     public CreateExportResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateExportResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateExportResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateExportResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateExportResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateExportResponse {
     
     
     public Integer statusCode;
+
     public CreateExportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateExportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateExportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateExportResponse {
      */
     
     public Object throttlingException;
+
     public CreateExportResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateExportResponse {
      */
     
     public Object validationException;
+
     public CreateExportResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateExportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -10,11 +10,36 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DiskAsyncReplication {
     /**
+     * [Output Only] URL of the DiskConsistencyGroupPolicy if replication was started on the disk as a member of a group.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("consistencyGroupPolicy")
+    public String consistencyGroupPolicy;
+
+    public DiskAsyncReplication withConsistencyGroupPolicy(String consistencyGroupPolicy) {
+        this.consistencyGroupPolicy = consistencyGroupPolicy;
+        return this;
+    }
+    
+    /**
+     * [Output Only] ID of the DiskConsistencyGroupPolicy if replication was started on the disk as a member of a group.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("consistencyGroupPolicyId")
+    public String consistencyGroupPolicyId;
+
+    public DiskAsyncReplication withConsistencyGroupPolicyId(String consistencyGroupPolicyId) {
+        this.consistencyGroupPolicyId = consistencyGroupPolicyId;
+        return this;
+    }
+    
+    /**
      * The other disk asynchronously replicated to or from the current disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - projects/project/zones/zone/disks/disk - zones/zone/disks/disk 
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disk")
     public String disk;
+
     public DiskAsyncReplication withDisk(String disk) {
         this.disk = disk;
         return this;
@@ -26,9 +51,11 @@ public class DiskAsyncReplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskId")
     public String diskId;
+
     public DiskAsyncReplication withDiskId(String diskId) {
         this.diskId = diskId;
         return this;
     }
     
+    public DiskAsyncReplication(){}
 }

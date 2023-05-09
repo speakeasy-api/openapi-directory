@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateResolverEndpointIpAddressResponse {
@@ -12,6 +13,7 @@ public class AssociateResolverEndpointIpAddressResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateResolverEndpointIpAddressResponse associateResolverEndpointIpAddressResponse;
+
     public AssociateResolverEndpointIpAddressResponse withAssociateResolverEndpointIpAddressResponse(org.openapis.openapi.models.shared.AssociateResolverEndpointIpAddressResponse associateResolverEndpointIpAddressResponse) {
         this.associateResolverEndpointIpAddressResponse = associateResolverEndpointIpAddressResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateResolverEndpointIpAddressResponse {
     
     
     public String contentType;
+
     public AssociateResolverEndpointIpAddressResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateResolverEndpointIpAddressResponse {
      */
     
     public Object internalServiceErrorException;
+
     public AssociateResolverEndpointIpAddressResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateResolverEndpointIpAddressResponse {
      */
     
     public Object invalidParameterException;
+
     public AssociateResolverEndpointIpAddressResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateResolverEndpointIpAddressResponse {
      */
     
     public Object invalidRequestException;
+
     public AssociateResolverEndpointIpAddressResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateResolverEndpointIpAddressResponse {
      */
     
     public Object limitExceededException;
+
     public AssociateResolverEndpointIpAddressResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateResolverEndpointIpAddressResponse {
      */
     
     public Object resourceExistsException;
+
     public AssociateResolverEndpointIpAddressResponse withResourceExistsException(Object resourceExistsException) {
         this.resourceExistsException = resourceExistsException;
         return this;
@@ -79,6 +87,7 @@ public class AssociateResolverEndpointIpAddressResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateResolverEndpointIpAddressResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class AssociateResolverEndpointIpAddressResponse {
     
     
     public Integer statusCode;
+
     public AssociateResolverEndpointIpAddressResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class AssociateResolverEndpointIpAddressResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateResolverEndpointIpAddressResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class AssociateResolverEndpointIpAddressResponse {
      */
     
     public Object throttlingException;
+
     public AssociateResolverEndpointIpAddressResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public AssociateResolverEndpointIpAddressResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

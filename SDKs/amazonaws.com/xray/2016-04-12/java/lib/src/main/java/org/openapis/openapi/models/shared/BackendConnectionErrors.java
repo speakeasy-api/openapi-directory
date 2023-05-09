@@ -15,6 +15,7 @@ public class BackendConnectionErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionRefusedCount")
     public Long connectionRefusedCount;
+
     public BackendConnectionErrors withConnectionRefusedCount(Long connectionRefusedCount) {
         this.connectionRefusedCount = connectionRefusedCount;
         return this;
@@ -23,6 +24,7 @@ public class BackendConnectionErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HTTPCode4XXCount")
     public Long httpCode4XXCount;
+
     public BackendConnectionErrors withHTTPCode4XXCount(Long httpCode4XXCount) {
         this.httpCode4XXCount = httpCode4XXCount;
         return this;
@@ -31,6 +33,7 @@ public class BackendConnectionErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HTTPCode5XXCount")
     public Long httpCode5XXCount;
+
     public BackendConnectionErrors withHTTPCode5XXCount(Long httpCode5XXCount) {
         this.httpCode5XXCount = httpCode5XXCount;
         return this;
@@ -39,6 +42,7 @@ public class BackendConnectionErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OtherCount")
     public Long otherCount;
+
     public BackendConnectionErrors withOtherCount(Long otherCount) {
         this.otherCount = otherCount;
         return this;
@@ -47,6 +51,7 @@ public class BackendConnectionErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeoutCount")
     public Long timeoutCount;
+
     public BackendConnectionErrors withTimeoutCount(Long timeoutCount) {
         this.timeoutCount = timeoutCount;
         return this;
@@ -55,9 +60,11 @@ public class BackendConnectionErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnknownHostCount")
     public Long unknownHostCount;
+
     public BackendConnectionErrors withUnknownHostCount(Long unknownHostCount) {
         this.unknownHostCount = unknownHostCount;
         return this;
     }
     
+    public BackendConnectionErrors(){}
 }

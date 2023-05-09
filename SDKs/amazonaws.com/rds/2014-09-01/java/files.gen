@@ -468,4 +468,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/RestoreDBInstanceToPointInT
 lib/src/main/java/org/openapis/openapi/models/shared/RestoreDBInstanceToPointInTimeMessage.java
 lib/src/main/java/org/openapis/openapi/models/shared/RevokeDBSecurityGroupIngressMessage.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -10,13 +10,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * GetQueryJsonFacetsEnum - When facets is set to 1, a count of all facets will be included in the response.
  */
 public enum GetQueryJsonFacetsEnum {
-    ZERO("0"),
-    ONE("1");
+    ZERO(0L),
+    ONE(1L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private GetQueryJsonFacetsEnum(String value) {
+    private GetQueryJsonFacetsEnum(Long value) {
         this.value = value;
     }
 }

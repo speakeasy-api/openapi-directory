@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PaymentLinkApiNewJsonResponse {
     
     public byte[] body;
+
     public PaymentLinkApiNewJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PaymentLinkApiNewJsonResponse {
     
     
     public String contentType;
+
     public PaymentLinkApiNewJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PaymentLinkApiNewJsonResponse {
      */
     
     public Integer paymentLinkApiNewJSON200ApplicationJSONInt32Integer;
+
     public PaymentLinkApiNewJsonResponse withPaymentLinkApiNewJSON200ApplicationJSONInt32Integer(Integer paymentLinkApiNewJSON200ApplicationJSONInt32Integer) {
         this.paymentLinkApiNewJSON200ApplicationJSONInt32Integer = paymentLinkApiNewJSON200ApplicationJSONInt32Integer;
         return this;
@@ -36,6 +40,7 @@ public class PaymentLinkApiNewJsonResponse {
      */
     
     public Integer paymentLinkApiNewJSON200TextJSONInt32Integer;
+
     public PaymentLinkApiNewJsonResponse withPaymentLinkApiNewJSON200TextJSONInt32Integer(Integer paymentLinkApiNewJSON200TextJSONInt32Integer) {
         this.paymentLinkApiNewJSON200TextJSONInt32Integer = paymentLinkApiNewJSON200TextJSONInt32Integer;
         return this;
@@ -43,6 +48,7 @@ public class PaymentLinkApiNewJsonResponse {
     
     
     public Integer statusCode;
+
     public PaymentLinkApiNewJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class PaymentLinkApiNewJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PaymentLinkApiNewJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PaymentLinkApiNewJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

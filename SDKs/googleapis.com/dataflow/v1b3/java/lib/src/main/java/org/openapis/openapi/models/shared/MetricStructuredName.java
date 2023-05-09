@@ -18,6 +18,7 @@ public class MetricStructuredName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context")
     public java.util.Map<String, String> context;
+
     public MetricStructuredName withContext(java.util.Map<String, String> context) {
         this.context = context;
         return this;
@@ -29,6 +30,7 @@ public class MetricStructuredName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MetricStructuredName withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class MetricStructuredName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public String origin;
+
     public MetricStructuredName withOrigin(String origin) {
         this.origin = origin;
         return this;
     }
     
+    public MetricStructuredName(){}
 }

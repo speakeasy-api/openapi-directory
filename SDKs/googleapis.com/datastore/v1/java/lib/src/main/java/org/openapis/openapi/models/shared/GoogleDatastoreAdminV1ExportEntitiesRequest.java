@@ -18,6 +18,7 @@ public class GoogleDatastoreAdminV1ExportEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityFilter")
     public GoogleDatastoreAdminV1EntityFilter entityFilter;
+
     public GoogleDatastoreAdminV1ExportEntitiesRequest withEntityFilter(GoogleDatastoreAdminV1EntityFilter entityFilter) {
         this.entityFilter = entityFilter;
         return this;
@@ -29,6 +30,7 @@ public class GoogleDatastoreAdminV1ExportEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleDatastoreAdminV1ExportEntitiesRequest withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,9 +42,11 @@ public class GoogleDatastoreAdminV1ExportEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputUrlPrefix")
     public String outputUrlPrefix;
+
     public GoogleDatastoreAdminV1ExportEntitiesRequest withOutputUrlPrefix(String outputUrlPrefix) {
         this.outputUrlPrefix = outputUrlPrefix;
         return this;
     }
     
+    public GoogleDatastoreAdminV1ExportEntitiesRequest(){}
 }

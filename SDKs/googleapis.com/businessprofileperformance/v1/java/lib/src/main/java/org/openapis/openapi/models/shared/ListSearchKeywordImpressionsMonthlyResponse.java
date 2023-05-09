@@ -18,6 +18,7 @@ public class ListSearchKeywordImpressionsMonthlyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListSearchKeywordImpressionsMonthlyResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListSearchKeywordImpressionsMonthlyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchKeywordsCounts")
     public SearchKeywordCount[] searchKeywordsCounts;
+
     public ListSearchKeywordImpressionsMonthlyResponse withSearchKeywordsCounts(SearchKeywordCount[] searchKeywordsCounts) {
         this.searchKeywordsCounts = searchKeywordsCounts;
         return this;
     }
     
+    public ListSearchKeywordImpressionsMonthlyResponse(){}
 }

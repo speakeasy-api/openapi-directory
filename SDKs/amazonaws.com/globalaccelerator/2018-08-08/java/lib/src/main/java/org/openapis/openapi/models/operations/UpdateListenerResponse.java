@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateListenerResponse {
     
     public String contentType;
+
     public UpdateListenerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateListenerResponse {
      */
     
     public Object internalServiceErrorException;
+
     public UpdateListenerResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateListenerResponse {
      */
     
     public Object invalidArgumentException;
+
     public UpdateListenerResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateListenerResponse {
      */
     
     public Object invalidPortRangeException;
+
     public UpdateListenerResponse withInvalidPortRangeException(Object invalidPortRangeException) {
         this.invalidPortRangeException = invalidPortRangeException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateListenerResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateListenerResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateListenerResponse {
      */
     
     public Object listenerNotFoundException;
+
     public UpdateListenerResponse withListenerNotFoundException(Object listenerNotFoundException) {
         this.listenerNotFoundException = listenerNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateListenerResponse {
     
     
     public Integer statusCode;
+
     public UpdateListenerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateListenerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateListenerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateListenerResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateListenerResponse updateListenerResponse;
+
     public UpdateListenerResponse withUpdateListenerResponse(org.openapis.openapi.models.shared.UpdateListenerResponse updateListenerResponse) {
         this.updateListenerResponse = updateListenerResponse;
         return this;
     }
     
+    public UpdateListenerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

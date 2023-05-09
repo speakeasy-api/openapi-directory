@@ -12,6 +12,7 @@ public class PlayerGamePPAAveragePPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("all")
     public Double all;
+
     public PlayerGamePPAAveragePPA withAll(Double all) {
         this.all = all;
         return this;
@@ -20,6 +21,7 @@ public class PlayerGamePPAAveragePPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pass")
     public Double pass;
+
     public PlayerGamePPAAveragePPA withPass(Double pass) {
         this.pass = pass;
         return this;
@@ -28,9 +30,11 @@ public class PlayerGamePPAAveragePPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rush")
     public Double rush;
+
     public PlayerGamePPAAveragePPA withRush(Double rush) {
         this.rush = rush;
         return this;
     }
     
+    public PlayerGamePPAAveragePPA(){}
 }

@@ -12,6 +12,7 @@ public class AuditPrimaryCategoryPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public AuditPrimaryCategoryPage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class AuditPrimaryCategoryPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public AuditPrimaryCategory[] results;
+
     public AuditPrimaryCategoryPage withResults(AuditPrimaryCategory[] results) {
         this.results = results;
         return this;
     }
     
+    public AuditPrimaryCategoryPage(){}
 }

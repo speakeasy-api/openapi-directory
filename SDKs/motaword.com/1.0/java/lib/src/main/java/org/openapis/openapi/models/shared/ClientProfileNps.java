@@ -18,6 +18,7 @@ public class ClientProfileNps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average")
     public ClientProfileNpsAverage average;
+
     public ClientProfileNps withAverage(ClientProfileNpsAverage average) {
         this.average = average;
         return this;
@@ -29,9 +30,11 @@ public class ClientProfileNps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last")
     public ClientProfileNpsLast last;
+
     public ClientProfileNps withLast(ClientProfileNpsLast last) {
         this.last = last;
         return this;
     }
     
+    public ClientProfileNps(){}
 }

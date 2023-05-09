@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudDialogflowCxV3IntentCoverageIntent {
     /**
-     * Whether or not the intent is covered by at least one of the agent's test cases.
+     * Whether the intent is covered by at least one of the agent's test cases.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("covered")
     public Boolean covered;
+
     public GoogleCloudDialogflowCxV3IntentCoverageIntent withCovered(Boolean covered) {
         this.covered = covered;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3IntentCoverageIntent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intent")
     public String intent;
+
     public GoogleCloudDialogflowCxV3IntentCoverageIntent withIntent(String intent) {
         this.intent = intent;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3IntentCoverageIntent(){}
 }

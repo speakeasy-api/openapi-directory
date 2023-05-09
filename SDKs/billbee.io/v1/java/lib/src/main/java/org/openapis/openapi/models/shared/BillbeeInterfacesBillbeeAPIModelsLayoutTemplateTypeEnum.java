@@ -7,17 +7,17 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum {
-    ZERO("0"),
-    ONE("1"),
-    TWO("2"),
-    THREE("3"),
-    FOUR("4"),
-    FIVE("5");
+    ZERO(0),
+    ONE(1),
+    TWO(2),
+    THREE(3),
+    FOUR(4),
+    FIVE(5);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum(String value) {
+    private BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum(Integer value) {
         this.value = value;
     }
 }

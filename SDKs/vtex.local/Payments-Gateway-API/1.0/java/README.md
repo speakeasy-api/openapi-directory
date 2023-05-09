@@ -16,27 +16,21 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AffiliationByIdRequest;
 import org.openapis.openapi.models.operations.AffiliationByIdResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti", "provident") {{
                     appKey = "YOUR_API_KEY_HERE";
                     appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            AffiliationByIdRequest req = new AffiliationByIdRequest() {{
-                accept = "application/json";
-                contentType = "application/json";
-                xPROVIDERAPIAppKey = "{{X-PROVIDER-API-AppKey}}";
-                xPROVIDERAPIAppToken = "{{X-PROVIDER-API-AppToken}}";
-                affiliationId = "e046d326-5421-45ab-95ae-f13d37f260b5";
-            }}            
+            AffiliationByIdRequest req = new AffiliationByIdRequest("application/json", "application/json", "{{X-PROVIDER-API-AppKey}}", "{{X-PROVIDER-API-AppToken}}", "e046d326-5421-45ab-95ae-f13d37f260b5");            
 
             AffiliationByIdResponse res = sdk.configuration.affiliationById(req);
 
@@ -46,6 +40,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -53,39 +49,39 @@ public class Application {
 ## Available Resources and Operations
 
 
-### configuration
+### [configuration](docs/configuration/README.md)
 
-* `affiliationById` - Affiliation By Id
-* `affiliations` - Affiliations
-* `availablePaymentMethods` - Available Payment Methods
-* `insertAffiliation` - Insert Affiliation
-* `insertRule` - Insert Rule
-* `putRuleById` - Rule By Id
-* `rule` - Delete Rule
-* `ruleById` - Rule By Id
-* `rules` - Rules
-* `updateAffiliation` - Update Affiliation
+* [affiliationById](docs/configuration/README.md#affiliationbyid) - Affiliation By Id
+* [affiliations](docs/configuration/README.md#affiliations) - Affiliations
+* [availablePaymentMethods](docs/configuration/README.md#availablepaymentmethods) - Available Payment Methods
+* [insertAffiliation](docs/configuration/README.md#insertaffiliation) - Insert Affiliation
+* [insertRule](docs/configuration/README.md#insertrule) - Insert Rule
+* [putRuleById](docs/configuration/README.md#putrulebyid) - Rule By Id
+* [rule](docs/configuration/README.md#rule) - Delete Rule
+* [ruleById](docs/configuration/README.md#rulebyid) - Rule By Id
+* [rules](docs/configuration/README.md#rules) - Rules
+* [updateAffiliation](docs/configuration/README.md#updateaffiliation) - Update Affiliation
 
-### installments
+### [installments](docs/installments/README.md)
 
-* `installmentsoptions` - Installments options
+* [installmentsoptions](docs/installments/README.md#installmentsoptions) - Installments options
 
-### transactionFlow
+### [transactionFlow](docs/transactionflow/README.md)
 
-* `cancelthetransaction` - Cancel the transaction
-* `refundthetransaction` - Refund the transaction
-* `settlethetransaction` - Settle the transaction
+* [cancelthetransaction](docs/transactionflow/README.md#cancelthetransaction) - Cancel the transaction
+* [refundthetransaction](docs/transactionflow/README.md#refundthetransaction) - Refund the transaction
+* [settlethetransaction](docs/transactionflow/README.md#settlethetransaction) - Settle the transaction
 
-### transactionProcess
+### [transactionProcess](docs/transactionprocess/README.md)
 
-* `oneCreateanewtransaction` - 1. Starts a new transaction
-* `twoSendPaymentsPublic` - 2.1 Send Payments Information Public
-* `twoSendPaymentsWithSavedCreditCard` - 2.2 Send Payments With Saved Credit Card
-* `threeSendAdditionalData` - 3. Send Additional Data
-* `fourDoauthorization` - Do authorization
-* `paymentDetails` - Payment Details
-* `transactionDetails` - Transaction Details
-* `transactionSettlementDetails` - Transaction Settlement  Details
+* [oneCreateanewtransaction](docs/transactionprocess/README.md#onecreateanewtransaction) - 1. Starts a new transaction
+* [twoSendPaymentsPublic](docs/transactionprocess/README.md#twosendpaymentspublic) - 2.1 Send Payments Information Public
+* [twoSendPaymentsWithSavedCreditCard](docs/transactionprocess/README.md#twosendpaymentswithsavedcreditcard) - 2.2 Send Payments With Saved Credit Card
+* [threeSendAdditionalData](docs/transactionprocess/README.md#threesendadditionaldata) - 3. Send Additional Data
+* [fourDoauthorization](docs/transactionprocess/README.md#fourdoauthorization) - Do authorization
+* [paymentDetails](docs/transactionprocess/README.md#paymentdetails) - Payment Details
+* [transactionDetails](docs/transactionprocess/README.md#transactiondetails) - Transaction Details
+* [transactionSettlementDetails](docs/transactionprocess/README.md#transactionsettlementdetails) - Transaction Settlement  Details
 <!-- End SDK Available Operations -->
 
 ### Maturity

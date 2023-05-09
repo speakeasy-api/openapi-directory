@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitionId")
     public GooglePrivacyDlpV2PartitionId partitionId;
+
     public GooglePrivacyDlpV2Key withPartitionId(GooglePrivacyDlpV2PartitionId partitionId) {
         this.partitionId = partitionId;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public GooglePrivacyDlpV2PathElement[] path;
+
     public GooglePrivacyDlpV2Key withPath(GooglePrivacyDlpV2PathElement[] path) {
         this.path = path;
         return this;
     }
     
+    public GooglePrivacyDlpV2Key(){}
 }

@@ -15,6 +15,7 @@ public class ListDatasetGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetGroups")
     public DatasetGroupSummary[] datasetGroups;
+
     public ListDatasetGroupsResponse withDatasetGroups(DatasetGroupSummary[] datasetGroups) {
         this.datasetGroups = datasetGroups;
         return this;
@@ -23,9 +24,11 @@ public class ListDatasetGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDatasetGroupsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDatasetGroupsResponse(){}
 }

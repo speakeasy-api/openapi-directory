@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class YoutubePlaylistItemsDeleteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public YoutubePlaylistItemsDeleteSecurityOption1 option1;
+
     public YoutubePlaylistItemsDeleteSecurity withOption1(YoutubePlaylistItemsDeleteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class YoutubePlaylistItemsDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public YoutubePlaylistItemsDeleteSecurityOption2 option2;
+
     public YoutubePlaylistItemsDeleteSecurity withOption2(YoutubePlaylistItemsDeleteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class YoutubePlaylistItemsDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public YoutubePlaylistItemsDeleteSecurityOption3 option3;
+
     public YoutubePlaylistItemsDeleteSecurity withOption3(YoutubePlaylistItemsDeleteSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public YoutubePlaylistItemsDeleteSecurity(){}
 }

@@ -18,6 +18,7 @@ public class UsageRateTimeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public UsageRateTimeline withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -29,9 +30,11 @@ public class UsageRateTimeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageRateTimelineEntries")
     public UsageRateTimelineEntry[] usageRateTimelineEntries;
+
     public UsageRateTimeline withUsageRateTimelineEntries(UsageRateTimelineEntry[] usageRateTimelineEntries) {
         this.usageRateTimelineEntries = usageRateTimelineEntries;
         return this;
     }
     
+    public UsageRateTimeline(){}
 }

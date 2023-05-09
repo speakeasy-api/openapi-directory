@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SourceAlgorithm {
     @JsonProperty("AlgorithmName")
     public String algorithmName;
+
     public SourceAlgorithm withAlgorithmName(String algorithmName) {
         this.algorithmName = algorithmName;
         return this;
@@ -22,9 +23,13 @@ public class SourceAlgorithm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelDataUrl")
     public String modelDataUrl;
+
     public SourceAlgorithm withModelDataUrl(String modelDataUrl) {
         this.modelDataUrl = modelDataUrl;
         return this;
     }
     
+    public SourceAlgorithm(@JsonProperty("AlgorithmName") String algorithmName) {
+        this.algorithmName = algorithmName;
+  }
 }

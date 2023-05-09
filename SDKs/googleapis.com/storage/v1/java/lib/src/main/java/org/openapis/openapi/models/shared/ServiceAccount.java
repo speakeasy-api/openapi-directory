@@ -18,6 +18,7 @@ public class ServiceAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_address")
     public String emailAddress;
+
     public ServiceAccount withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -29,9 +30,11 @@ public class ServiceAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ServiceAccount withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public ServiceAccount(){}
 }

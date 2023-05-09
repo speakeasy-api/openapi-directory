@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTypeRegistrationOutput {
     
     public String description;
+
     public DescribeTypeRegistrationOutput withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DescribeTypeRegistrationOutput {
     
     
     public RegistrationStatusEnum progressStatus;
+
     public DescribeTypeRegistrationOutput withProgressStatus(RegistrationStatusEnum progressStatus) {
         this.progressStatus = progressStatus;
         return this;
@@ -26,6 +28,7 @@ public class DescribeTypeRegistrationOutput {
     
     
     public String typeArn;
+
     public DescribeTypeRegistrationOutput withTypeArn(String typeArn) {
         this.typeArn = typeArn;
         return this;
@@ -33,9 +36,11 @@ public class DescribeTypeRegistrationOutput {
     
     
     public String typeVersionArn;
+
     public DescribeTypeRegistrationOutput withTypeVersionArn(String typeVersionArn) {
         this.typeVersionArn = typeVersionArn;
         return this;
     }
     
+    public DescribeTypeRegistrationOutput(){}
 }

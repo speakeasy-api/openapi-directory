@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePadUsingPOSTResponse {
     
     public String contentType;
+
     public CreatePadUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreatePadUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public CreatePadUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreatePadUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePadUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreatePadUsingPOSTResponse {
      */
     
     public CreatePadUsingPOST200ApplicationJSON createPadUsingPOST200ApplicationJSONObject;
+
     public CreatePadUsingPOSTResponse withCreatePadUsingPOST200ApplicationJSONObject(CreatePadUsingPOST200ApplicationJSON createPadUsingPOST200ApplicationJSONObject) {
         this.createPadUsingPOST200ApplicationJSONObject = createPadUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CreatePadUsingPOSTResponse {
      */
     
     public CreatePadUsingPOST400ApplicationJSON createPadUsingPOST400ApplicationJSONObject;
+
     public CreatePadUsingPOSTResponse withCreatePadUsingPOST400ApplicationJSONObject(CreatePadUsingPOST400ApplicationJSON createPadUsingPOST400ApplicationJSONObject) {
         this.createPadUsingPOST400ApplicationJSONObject = createPadUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreatePadUsingPOSTResponse {
      */
     
     public CreatePadUsingPOST401ApplicationJSON createPadUsingPOST401ApplicationJSONObject;
+
     public CreatePadUsingPOSTResponse withCreatePadUsingPOST401ApplicationJSONObject(CreatePadUsingPOST401ApplicationJSON createPadUsingPOST401ApplicationJSONObject) {
         this.createPadUsingPOST401ApplicationJSONObject = createPadUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CreatePadUsingPOSTResponse {
      */
     
     public CreatePadUsingPOST500ApplicationJSON createPadUsingPOST500ApplicationJSONObject;
+
     public CreatePadUsingPOSTResponse withCreatePadUsingPOST500ApplicationJSONObject(CreatePadUsingPOST500ApplicationJSON createPadUsingPOST500ApplicationJSONObject) {
         this.createPadUsingPOST500ApplicationJSONObject = createPadUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public CreatePadUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

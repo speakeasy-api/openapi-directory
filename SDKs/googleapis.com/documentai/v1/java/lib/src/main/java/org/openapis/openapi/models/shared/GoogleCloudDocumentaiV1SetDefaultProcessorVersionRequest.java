@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleCloudDocumentaiV1SetDefaultProcessorVersionRequest - Request message for the set default processor version method.
+ * GoogleCloudDocumentaiV1SetDefaultProcessorVersionRequest - Request message for the SetDefaultProcessorVersion method.
  */
 public class GoogleCloudDocumentaiV1SetDefaultProcessorVersionRequest {
     /**
@@ -18,9 +18,11 @@ public class GoogleCloudDocumentaiV1SetDefaultProcessorVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultProcessorVersion")
     public String defaultProcessorVersion;
+
     public GoogleCloudDocumentaiV1SetDefaultProcessorVersionRequest withDefaultProcessorVersion(String defaultProcessorVersion) {
         this.defaultProcessorVersion = defaultProcessorVersion;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1SetDefaultProcessorVersionRequest(){}
 }

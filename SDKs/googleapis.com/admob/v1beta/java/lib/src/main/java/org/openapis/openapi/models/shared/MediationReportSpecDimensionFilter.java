@@ -18,6 +18,7 @@ public class MediationReportSpecDimensionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     public MediationReportSpecDimensionFilterDimensionEnum dimension;
+
     public MediationReportSpecDimensionFilter withDimension(MediationReportSpecDimensionFilterDimensionEnum dimension) {
         this.dimension = dimension;
         return this;
@@ -29,9 +30,11 @@ public class MediationReportSpecDimensionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchesAny")
     public StringList matchesAny;
+
     public MediationReportSpecDimensionFilter withMatchesAny(StringList matchesAny) {
         this.matchesAny = matchesAny;
         return this;
     }
     
+    public MediationReportSpecDimensionFilter(){}
 }

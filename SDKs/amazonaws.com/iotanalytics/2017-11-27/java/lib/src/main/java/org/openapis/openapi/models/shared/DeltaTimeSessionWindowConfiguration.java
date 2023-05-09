@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeltaTimeSessionWindowConfiguration {
     @JsonProperty("timeoutInMinutes")
     public Long timeoutInMinutes;
+
     public DeltaTimeSessionWindowConfiguration withTimeoutInMinutes(Long timeoutInMinutes) {
         this.timeoutInMinutes = timeoutInMinutes;
         return this;
     }
     
+    public DeltaTimeSessionWindowConfiguration(@JsonProperty("timeoutInMinutes") Long timeoutInMinutes) {
+        this.timeoutInMinutes = timeoutInMinutes;
+  }
 }

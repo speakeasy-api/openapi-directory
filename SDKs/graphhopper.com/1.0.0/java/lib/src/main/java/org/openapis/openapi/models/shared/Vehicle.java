@@ -12,6 +12,7 @@ public class Vehicle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("break")
     public Object break_;
+
     public Vehicle withBreak(Object break_) {
         this.break_ = break_;
         return this;
@@ -23,6 +24,7 @@ public class Vehicle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("earliest_start")
     public Long earliestStart;
+
     public Vehicle withEarliestStart(Long earliestStart) {
         this.earliestStart = earliestStart;
         return this;
@@ -31,6 +33,7 @@ public class Vehicle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_address")
     public Address endAddress;
+
     public Vehicle withEndAddress(Address endAddress) {
         this.endAddress = endAddress;
         return this;
@@ -42,6 +45,7 @@ public class Vehicle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latest_end")
     public Long latestEnd;
+
     public Vehicle withLatestEnd(Long latestEnd) {
         this.latestEnd = latestEnd;
         return this;
@@ -53,6 +57,7 @@ public class Vehicle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_activities")
     public Integer maxActivities;
+
     public Vehicle withMaxActivities(Integer maxActivities) {
         this.maxActivities = maxActivities;
         return this;
@@ -64,6 +69,7 @@ public class Vehicle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_distance")
     public Long maxDistance;
+
     public Vehicle withMaxDistance(Long maxDistance) {
         this.maxDistance = maxDistance;
         return this;
@@ -75,6 +81,7 @@ public class Vehicle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_driving_time")
     public Long maxDrivingTime;
+
     public Vehicle withMaxDrivingTime(Long maxDrivingTime) {
         this.maxDrivingTime = maxDrivingTime;
         return this;
@@ -86,6 +93,7 @@ public class Vehicle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_jobs")
     public Integer maxJobs;
+
     public Vehicle withMaxJobs(Integer maxJobs) {
         this.maxJobs = maxJobs;
         return this;
@@ -97,6 +105,7 @@ public class Vehicle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min_jobs")
     public Integer minJobs;
+
     public Vehicle withMinJobs(Integer minJobs) {
         this.minJobs = minJobs;
         return this;
@@ -108,6 +117,7 @@ public class Vehicle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("move_to_end_address")
     public Boolean moveToEndAddress;
+
     public Vehicle withMoveToEndAddress(Boolean moveToEndAddress) {
         this.moveToEndAddress = moveToEndAddress;
         return this;
@@ -119,6 +129,7 @@ public class Vehicle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_to_depot")
     public Boolean returnToDepot;
+
     public Vehicle withReturnToDepot(Boolean returnToDepot) {
         this.returnToDepot = returnToDepot;
         return this;
@@ -130,6 +141,7 @@ public class Vehicle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skills")
     public String[] skills;
+
     public Vehicle withSkills(String[] skills) {
         this.skills = skills;
         return this;
@@ -137,6 +149,7 @@ public class Vehicle {
     
     @JsonProperty("start_address")
     public Address startAddress;
+
     public Vehicle withStartAddress(Address startAddress) {
         this.startAddress = startAddress;
         return this;
@@ -148,6 +161,7 @@ public class Vehicle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type_id")
     public String typeId;
+
     public Vehicle withTypeId(String typeId) {
         this.typeId = typeId;
         return this;
@@ -158,9 +172,14 @@ public class Vehicle {
      */
     @JsonProperty("vehicle_id")
     public String vehicleId;
+
     public Vehicle withVehicleId(String vehicleId) {
         this.vehicleId = vehicleId;
         return this;
     }
     
+    public Vehicle(@JsonProperty("start_address") Address startAddress, @JsonProperty("vehicle_id") String vehicleId) {
+        this.startAddress = startAddress;
+        this.vehicleId = vehicleId;
+  }
 }

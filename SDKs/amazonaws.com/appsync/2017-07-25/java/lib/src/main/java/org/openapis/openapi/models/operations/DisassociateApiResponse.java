@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateApiResponse {
@@ -12,6 +13,7 @@ public class DisassociateApiResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateApiResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DisassociateApiResponse {
      */
     
     public Object badRequestException;
+
     public DisassociateApiResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -32,6 +35,7 @@ public class DisassociateApiResponse {
      */
     
     public Object concurrentModificationException;
+
     public DisassociateApiResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateApiResponse {
     
     
     public String contentType;
+
     public DisassociateApiResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateApiResponse {
      */
     
     public java.util.Map<String, Object> disassociateApiResponse;
+
     public DisassociateApiResponse withDisassociateApiResponse(java.util.Map<String, Object> disassociateApiResponse) {
         this.disassociateApiResponse = disassociateApiResponse;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateApiResponse {
      */
     
     public Object internalFailureException;
+
     public DisassociateApiResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -69,6 +76,7 @@ public class DisassociateApiResponse {
      */
     
     public Object notFoundException;
+
     public DisassociateApiResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DisassociateApiResponse {
     
     
     public Integer statusCode;
+
     public DisassociateApiResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DisassociateApiResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateApiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisassociateApiResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

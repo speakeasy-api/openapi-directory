@@ -15,6 +15,7 @@ public class StartBulkDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BulkDeploymentArn")
     public String bulkDeploymentArn;
+
     public StartBulkDeploymentResponse withBulkDeploymentArn(String bulkDeploymentArn) {
         this.bulkDeploymentArn = bulkDeploymentArn;
         return this;
@@ -23,9 +24,11 @@ public class StartBulkDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BulkDeploymentId")
     public String bulkDeploymentId;
+
     public StartBulkDeploymentResponse withBulkDeploymentId(String bulkDeploymentId) {
         this.bulkDeploymentId = bulkDeploymentId;
         return this;
     }
     
+    public StartBulkDeploymentResponse(){}
 }

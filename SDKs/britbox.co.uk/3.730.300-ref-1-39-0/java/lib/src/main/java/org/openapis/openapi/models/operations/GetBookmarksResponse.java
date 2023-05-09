@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 import java.time.OffsetDateTime;
 
 public class GetBookmarksResponse {
     
     public String contentType;
+
     public GetBookmarksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -17,6 +19,7 @@ public class GetBookmarksResponse {
     
     
     public Integer statusCode;
+
     public GetBookmarksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -24,6 +27,7 @@ public class GetBookmarksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBookmarksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -34,6 +38,7 @@ public class GetBookmarksResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public GetBookmarksResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -44,9 +49,14 @@ public class GetBookmarksResponse {
      */
     
     public java.util.Map<String, OffsetDateTime> getBookmarks200ApplicationJSONObject;
+
     public GetBookmarksResponse withGetBookmarks200ApplicationJSONObject(java.util.Map<String, OffsetDateTime> getBookmarks200ApplicationJSONObject) {
         this.getBookmarks200ApplicationJSONObject = getBookmarks200ApplicationJSONObject;
         return this;
     }
     
+    public GetBookmarksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

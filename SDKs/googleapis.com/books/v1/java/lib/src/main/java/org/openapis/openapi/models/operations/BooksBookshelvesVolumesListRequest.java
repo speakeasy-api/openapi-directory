@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BooksBookshelvesVolumesListRequest {
@@ -12,6 +13,7 @@ public class BooksBookshelvesVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public BooksBookshelvesVolumesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class BooksBookshelvesVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public BooksBookshelvesVolumesListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class BooksBookshelvesVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BooksBookshelvesVolumesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class BooksBookshelvesVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public BooksBookshelvesVolumesListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class BooksBookshelvesVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BooksBookshelvesVolumesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class BooksBookshelvesVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BooksBookshelvesVolumesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class BooksBookshelvesVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public BooksBookshelvesVolumesListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -82,6 +90,7 @@ public class BooksBookshelvesVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BooksBookshelvesVolumesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class BooksBookshelvesVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BooksBookshelvesVolumesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class BooksBookshelvesVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BooksBookshelvesVolumesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class BooksBookshelvesVolumesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shelf")
     public String shelf;
+
     public BooksBookshelvesVolumesListRequest withShelf(String shelf) {
         this.shelf = shelf;
         return this;
@@ -122,6 +134,7 @@ public class BooksBookshelvesVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showPreorders")
     public Boolean showPreorders;
+
     public BooksBookshelvesVolumesListRequest withShowPreorders(Boolean showPreorders) {
         this.showPreorders = showPreorders;
         return this;
@@ -132,6 +145,7 @@ public class BooksBookshelvesVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public String source;
+
     public BooksBookshelvesVolumesListRequest withSource(String source) {
         this.source = source;
         return this;
@@ -142,6 +156,7 @@ public class BooksBookshelvesVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
     public Long startIndex;
+
     public BooksBookshelvesVolumesListRequest withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -152,6 +167,7 @@ public class BooksBookshelvesVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public BooksBookshelvesVolumesListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -162,6 +178,7 @@ public class BooksBookshelvesVolumesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public BooksBookshelvesVolumesListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -172,9 +189,14 @@ public class BooksBookshelvesVolumesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public BooksBookshelvesVolumesListRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public BooksBookshelvesVolumesListRequest(@JsonProperty("shelf") String shelf, @JsonProperty("userId") String userId) {
+        this.shelf = shelf;
+        this.userId = userId;
+  }
 }

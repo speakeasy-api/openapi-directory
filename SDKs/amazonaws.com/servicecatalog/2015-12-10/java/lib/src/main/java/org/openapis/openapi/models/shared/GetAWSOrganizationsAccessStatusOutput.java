@@ -15,9 +15,11 @@ public class GetAWSOrganizationsAccessStatusOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessStatus")
     public AccessStatusEnum accessStatus;
+
     public GetAWSOrganizationsAccessStatusOutput withAccessStatus(AccessStatusEnum accessStatus) {
         this.accessStatus = accessStatus;
         return this;
     }
     
+    public GetAWSOrganizationsAccessStatusOutput(){}
 }

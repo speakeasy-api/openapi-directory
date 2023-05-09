@@ -18,6 +18,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latLng")
     public LatLng latLng;
+
     public Location withLatLng(LatLng latLng) {
         this.latLng = latLng;
         return this;
@@ -29,6 +30,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationType")
     public LocationLocationTypeEnum locationType;
+
     public Location withLocationType(LocationLocationTypeEnum locationType) {
         this.locationType = locationType;
         return this;
@@ -40,6 +42,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalAddress")
     public PostalAddress postalAddress;
+
     public Location withPostalAddress(PostalAddress postalAddress) {
         this.postalAddress = postalAddress;
         return this;
@@ -51,9 +54,11 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("radiusMiles")
     public Double radiusMiles;
+
     public Location withRadiusMiles(Double radiusMiles) {
         this.radiusMiles = radiusMiles;
         return this;
     }
     
+    public Location(){}
 }

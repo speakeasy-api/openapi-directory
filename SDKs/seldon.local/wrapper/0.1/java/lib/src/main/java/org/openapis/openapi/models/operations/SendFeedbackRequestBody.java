@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SendFeedbackRequestBody {
     @SpeakeasyMetadata("form:name=json,json")
     public org.openapis.openapi.models.shared.Feedback json;
+
     public SendFeedbackRequestBody withJson(org.openapis.openapi.models.shared.Feedback json) {
         this.json = json;
         return this;
     }
     
+    public SendFeedbackRequestBody(){}
 }

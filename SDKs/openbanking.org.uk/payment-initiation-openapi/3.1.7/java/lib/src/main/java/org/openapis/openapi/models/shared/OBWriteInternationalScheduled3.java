@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OBWriteInternationalScheduled3 {
     @JsonProperty("Data")
     public OBWriteInternationalScheduled3Data data;
+
     public OBWriteInternationalScheduled3 withData(OBWriteInternationalScheduled3Data data) {
         this.data = data;
         return this;
@@ -19,9 +20,14 @@ public class OBWriteInternationalScheduled3 {
      */
     @JsonProperty("Risk")
     public OBRisk1 risk;
+
     public OBWriteInternationalScheduled3 withRisk(OBRisk1 risk) {
         this.risk = risk;
         return this;
     }
     
+    public OBWriteInternationalScheduled3(@JsonProperty("Data") OBWriteInternationalScheduled3Data data, @JsonProperty("Risk") OBRisk1 risk) {
+        this.data = data;
+        this.risk = risk;
+  }
 }

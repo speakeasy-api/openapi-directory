@@ -12,9 +12,13 @@ public class DeclineInvitationsRequestBody {
      */
     @JsonProperty("AccountIds")
     public String[] accountIds;
+
     public DeclineInvitationsRequestBody withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
     }
     
+    public DeclineInvitationsRequestBody(@JsonProperty("AccountIds") String[] accountIds) {
+        this.accountIds = accountIds;
+  }
 }

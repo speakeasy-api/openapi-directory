@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Metric {
     @JsonProperty("AggregationFunction")
     public AggregationFunctionEnum aggregationFunction;
+
     public Metric withAggregationFunction(AggregationFunctionEnum aggregationFunction) {
         this.aggregationFunction = aggregationFunction;
         return this;
@@ -21,6 +22,7 @@ public class Metric {
     
     @JsonProperty("MetricName")
     public String metricName;
+
     public Metric withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -29,9 +31,14 @@ public class Metric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Namespace")
     public String namespace;
+
     public Metric withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public Metric(@JsonProperty("AggregationFunction") AggregationFunctionEnum aggregationFunction, @JsonProperty("MetricName") String metricName) {
+        this.aggregationFunction = aggregationFunction;
+        this.metricName = metricName;
+  }
 }

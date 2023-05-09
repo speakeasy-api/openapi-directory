@@ -21,6 +21,7 @@ public class ProcessingJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ProcessingJobSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class ProcessingJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExitMessage")
     public String exitMessage;
+
     public ProcessingJobSummary withExitMessage(String exitMessage) {
         this.exitMessage = exitMessage;
         return this;
@@ -37,6 +39,7 @@ public class ProcessingJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public ProcessingJobSummary withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -47,6 +50,7 @@ public class ProcessingJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public ProcessingJobSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -57,6 +61,7 @@ public class ProcessingJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ProcessingEndTime")
     public OffsetDateTime processingEndTime;
+
     public ProcessingJobSummary withProcessingEndTime(OffsetDateTime processingEndTime) {
         this.processingEndTime = processingEndTime;
         return this;
@@ -64,6 +69,7 @@ public class ProcessingJobSummary {
     
     @JsonProperty("ProcessingJobArn")
     public String processingJobArn;
+
     public ProcessingJobSummary withProcessingJobArn(String processingJobArn) {
         this.processingJobArn = processingJobArn;
         return this;
@@ -71,6 +77,7 @@ public class ProcessingJobSummary {
     
     @JsonProperty("ProcessingJobName")
     public String processingJobName;
+
     public ProcessingJobSummary withProcessingJobName(String processingJobName) {
         this.processingJobName = processingJobName;
         return this;
@@ -78,9 +85,16 @@ public class ProcessingJobSummary {
     
     @JsonProperty("ProcessingJobStatus")
     public ProcessingJobStatusEnum processingJobStatus;
+
     public ProcessingJobSummary withProcessingJobStatus(ProcessingJobStatusEnum processingJobStatus) {
         this.processingJobStatus = processingJobStatus;
         return this;
     }
     
+    public ProcessingJobSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("ProcessingJobArn") String processingJobArn, @JsonProperty("ProcessingJobName") String processingJobName, @JsonProperty("ProcessingJobStatus") ProcessingJobStatusEnum processingJobStatus) {
+        this.creationTime = creationTime;
+        this.processingJobArn = processingJobArn;
+        this.processingJobName = processingJobName;
+        this.processingJobStatus = processingJobStatus;
+  }
 }

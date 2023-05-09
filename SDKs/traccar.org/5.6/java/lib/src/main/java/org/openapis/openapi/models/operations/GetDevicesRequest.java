@@ -12,6 +12,7 @@ public class GetDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
     public Boolean all;
+
     public GetDevicesRequest withAll(Boolean all) {
         this.all = all;
         return this;
@@ -22,6 +23,7 @@ public class GetDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public Long id;
+
     public GetDevicesRequest withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class GetDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uniqueId")
     public String uniqueId;
+
     public GetDevicesRequest withUniqueId(String uniqueId) {
         this.uniqueId = uniqueId;
         return this;
@@ -42,9 +45,11 @@ public class GetDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
     public Long userId;
+
     public GetDevicesRequest withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetDevicesRequest(){}
 }

@@ -15,6 +15,7 @@ public class ListClassificationJobsRequestBodySortCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeName")
     public org.openapis.openapi.models.shared.ListJobsSortAttributeNameEnum attributeName;
+
     public ListClassificationJobsRequestBodySortCriteria withAttributeName(org.openapis.openapi.models.shared.ListJobsSortAttributeNameEnum attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -23,9 +24,11 @@ public class ListClassificationJobsRequestBodySortCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderBy")
     public org.openapis.openapi.models.shared.OrderByEnum orderBy;
+
     public ListClassificationJobsRequestBodySortCriteria withOrderBy(org.openapis.openapi.models.shared.OrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
     }
     
+    public ListClassificationJobsRequestBodySortCriteria(){}
 }

@@ -14,6 +14,7 @@ public class DescribeJobLogItemsRequestBody {
      */
     @JsonProperty("jobID")
     public String jobID;
+
     public DescribeJobLogItemsRequestBody withJobID(String jobID) {
         this.jobID = jobID;
         return this;
@@ -25,6 +26,7 @@ public class DescribeJobLogItemsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeJobLogItemsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class DescribeJobLogItemsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeJobLogItemsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeJobLogItemsRequestBody(@JsonProperty("jobID") String jobID) {
+        this.jobID = jobID;
+  }
 }

@@ -18,6 +18,7 @@ public class ResultStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleCloudStorage")
     public GoogleCloudStorage googleCloudStorage;
+
     public ResultStorage withGoogleCloudStorage(GoogleCloudStorage googleCloudStorage) {
         this.googleCloudStorage = googleCloudStorage;
         return this;
@@ -29,6 +30,7 @@ public class ResultStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultsUrl")
     public String resultsUrl;
+
     public ResultStorage withResultsUrl(String resultsUrl) {
         this.resultsUrl = resultsUrl;
         return this;
@@ -40,6 +42,7 @@ public class ResultStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toolResultsExecution")
     public ToolResultsExecution toolResultsExecution;
+
     public ResultStorage withToolResultsExecution(ToolResultsExecution toolResultsExecution) {
         this.toolResultsExecution = toolResultsExecution;
         return this;
@@ -51,9 +54,11 @@ public class ResultStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toolResultsHistory")
     public ToolResultsHistory toolResultsHistory;
+
     public ResultStorage withToolResultsHistory(ToolResultsHistory toolResultsHistory) {
         this.toolResultsHistory = toolResultsHistory;
         return this;
     }
     
+    public ResultStorage(){}
 }

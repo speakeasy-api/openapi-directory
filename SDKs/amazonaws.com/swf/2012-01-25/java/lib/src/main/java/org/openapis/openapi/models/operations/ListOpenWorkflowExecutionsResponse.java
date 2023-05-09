@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListOpenWorkflowExecutionsResponse {
     
     public String contentType;
+
     public ListOpenWorkflowExecutionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListOpenWorkflowExecutionsResponse {
      */
     
     public Object operationNotPermittedFault;
+
     public ListOpenWorkflowExecutionsResponse withOperationNotPermittedFault(Object operationNotPermittedFault) {
         this.operationNotPermittedFault = operationNotPermittedFault;
         return this;
@@ -26,6 +29,7 @@ public class ListOpenWorkflowExecutionsResponse {
     
     
     public Integer statusCode;
+
     public ListOpenWorkflowExecutionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ListOpenWorkflowExecutionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListOpenWorkflowExecutionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class ListOpenWorkflowExecutionsResponse {
      */
     
     public Object unknownResourceFault;
+
     public ListOpenWorkflowExecutionsResponse withUnknownResourceFault(Object unknownResourceFault) {
         this.unknownResourceFault = unknownResourceFault;
         return this;
@@ -53,9 +59,14 @@ public class ListOpenWorkflowExecutionsResponse {
      */
     
     public org.openapis.openapi.models.shared.WorkflowExecutionInfos workflowExecutionInfos;
+
     public ListOpenWorkflowExecutionsResponse withWorkflowExecutionInfos(org.openapis.openapi.models.shared.WorkflowExecutionInfos workflowExecutionInfos) {
         this.workflowExecutionInfos = workflowExecutionInfos;
         return this;
     }
     
+    public ListOpenWorkflowExecutionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

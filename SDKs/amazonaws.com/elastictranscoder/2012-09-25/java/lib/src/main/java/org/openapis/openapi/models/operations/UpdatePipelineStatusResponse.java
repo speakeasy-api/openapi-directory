@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePipelineStatusResponse {
@@ -12,6 +13,7 @@ public class UpdatePipelineStatusResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdatePipelineStatusResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdatePipelineStatusResponse {
     
     
     public String contentType;
+
     public UpdatePipelineStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdatePipelineStatusResponse {
      */
     
     public Object incompatibleVersionException;
+
     public UpdatePipelineStatusResponse withIncompatibleVersionException(Object incompatibleVersionException) {
         this.incompatibleVersionException = incompatibleVersionException;
         return this;
@@ -39,6 +43,7 @@ public class UpdatePipelineStatusResponse {
      */
     
     public Object internalServiceException;
+
     public UpdatePipelineStatusResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -46,6 +51,7 @@ public class UpdatePipelineStatusResponse {
     
     
     public Integer statusCode;
+
     public UpdatePipelineStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdatePipelineStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePipelineStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdatePipelineStatusResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdatePipelineStatusResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -73,6 +81,7 @@ public class UpdatePipelineStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdatePipelineStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class UpdatePipelineStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdatePipelineStatusResponse updatePipelineStatusResponse;
+
     public UpdatePipelineStatusResponse withUpdatePipelineStatusResponse(org.openapis.openapi.models.shared.UpdatePipelineStatusResponse updatePipelineStatusResponse) {
         this.updatePipelineStatusResponse = updatePipelineStatusResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdatePipelineStatusResponse {
      */
     
     public Object validationException;
+
     public UpdatePipelineStatusResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdatePipelineStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

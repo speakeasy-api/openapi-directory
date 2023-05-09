@@ -66,12 +66,10 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInventoryResponse res = new org.openapis.openapi.models.operations.GetInventoryResponse() {{
+        org.openapis.openapi.models.operations.GetInventoryResponse res = new org.openapis.openapi.models.operations.GetInventoryResponse(contentType, httpRes.statusCode()) {{
             getInventory200ApplicationJSONObject = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,11 +122,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMultiNodeInventoryForAllSkuAndAllShipNodesResponse res = new org.openapis.openapi.models.operations.GetMultiNodeInventoryForAllSkuAndAllShipNodesResponse() {{
+        org.openapis.openapi.models.operations.GetMultiNodeInventoryForAllSkuAndAllShipNodesResponse res = new org.openapis.openapi.models.operations.GetMultiNodeInventoryForAllSkuAndAllShipNodesResponse(contentType, httpRes.statusCode()) {{
             getMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,11 +173,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMultiNodeInventoryForSkuAndAllShipnodesResponse res = new org.openapis.openapi.models.operations.GetMultiNodeInventoryForSkuAndAllShipnodesResponse() {{
+        org.openapis.openapi.models.operations.GetMultiNodeInventoryForSkuAndAllShipnodesResponse res = new org.openapis.openapi.models.operations.GetMultiNodeInventoryForSkuAndAllShipnodesResponse(contentType, httpRes.statusCode()) {{
             getMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -230,11 +224,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWFSInventoryResponse res = new org.openapis.openapi.models.operations.GetWFSInventoryResponse() {{
+        org.openapis.openapi.models.operations.GetWFSInventoryResponse res = new org.openapis.openapi.models.operations.GetWFSInventoryResponse(contentType, httpRes.statusCode()) {{
             getWFSInventory200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,12 +286,10 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateBulkInventoryResponse res = new org.openapis.openapi.models.operations.UpdateBulkInventoryResponse() {{
+        org.openapis.openapi.models.operations.UpdateBulkInventoryResponse res = new org.openapis.openapi.models.operations.UpdateBulkInventoryResponse(contentType, httpRes.statusCode()) {{
             updateBulkInventory200ApplicationJSONObject = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -357,12 +347,10 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateInventoryForAnItemJsonResponse res = new org.openapis.openapi.models.operations.UpdateInventoryForAnItemJsonResponse() {{
+        org.openapis.openapi.models.operations.UpdateInventoryForAnItemJsonResponse res = new org.openapis.openapi.models.operations.UpdateInventoryForAnItemJsonResponse(contentType, httpRes.statusCode()) {{
             updateInventoryForAnItemJSON200ApplicationJSONObject = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -420,12 +408,10 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateInventoryForAnItemRawResponse res = new org.openapis.openapi.models.operations.UpdateInventoryForAnItemRawResponse() {{
+        org.openapis.openapi.models.operations.UpdateInventoryForAnItemRawResponse res = new org.openapis.openapi.models.operations.UpdateInventoryForAnItemRawResponse(contentType, httpRes.statusCode()) {{
             updateInventoryForAnItemRaw200ApplicationJSONObject = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -477,11 +463,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateMultiNodeInventoryResponse res = new org.openapis.openapi.models.operations.UpdateMultiNodeInventoryResponse() {{
+        org.openapis.openapi.models.operations.UpdateMultiNodeInventoryResponse res = new org.openapis.openapi.models.operations.UpdateMultiNodeInventoryResponse(contentType, httpRes.statusCode()) {{
             updateMultiNodeInventory200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

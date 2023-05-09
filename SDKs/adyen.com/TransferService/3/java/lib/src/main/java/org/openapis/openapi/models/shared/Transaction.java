@@ -22,6 +22,7 @@ public class Transaction {
      */
     @JsonProperty("accountHolderId")
     public String accountHolderId;
+
     public Transaction withAccountHolderId(String accountHolderId) {
         this.accountHolderId = accountHolderId;
         return this;
@@ -29,6 +30,7 @@ public class Transaction {
     
     @JsonProperty("amount")
     public Amount amount;
+
     public Transaction withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -39,6 +41,7 @@ public class Transaction {
      */
     @JsonProperty("balanceAccountId")
     public String balanceAccountId;
+
     public Transaction withBalanceAccountId(String balanceAccountId) {
         this.balanceAccountId = balanceAccountId;
         return this;
@@ -49,6 +52,7 @@ public class Transaction {
      */
     @JsonProperty("balancePlatform")
     public String balancePlatform;
+
     public Transaction withBalancePlatform(String balancePlatform) {
         this.balancePlatform = balancePlatform;
         return this;
@@ -61,6 +65,7 @@ public class Transaction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("bookingDate")
     public OffsetDateTime bookingDate;
+
     public Transaction withBookingDate(OffsetDateTime bookingDate) {
         this.bookingDate = bookingDate;
         return this;
@@ -84,6 +89,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public TransactionCategoryEnum category;
+
     public Transaction withCategory(TransactionCategoryEnum category) {
         this.category = category;
         return this;
@@ -91,6 +97,7 @@ public class Transaction {
     
     @JsonProperty("counterparty")
     public CounterpartyV3 counterparty;
+
     public Transaction withCounterparty(CounterpartyV3 counterparty) {
         this.counterparty = counterparty;
         return this;
@@ -103,6 +110,7 @@ public class Transaction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Transaction withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -114,6 +122,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Transaction withDescription(String description) {
         this.description = description;
         return this;
@@ -124,6 +133,7 @@ public class Transaction {
      */
     @JsonProperty("id")
     public String id;
+
     public Transaction withId(String id) {
         this.id = id;
         return this;
@@ -132,6 +142,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructedAmount")
     public Amount instructedAmount;
+
     public Transaction withInstructedAmount(Amount instructedAmount) {
         this.instructedAmount = instructedAmount;
         return this;
@@ -143,6 +154,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentInstrumentId")
     public String paymentInstrumentId;
+
     public Transaction withPaymentInstrumentId(String paymentInstrumentId) {
         this.paymentInstrumentId = paymentInstrumentId;
         return this;
@@ -153,6 +165,7 @@ public class Transaction {
      */
     @JsonProperty("reference")
     public String reference;
+
     public Transaction withReference(String reference) {
         this.reference = reference;
         return this;
@@ -168,6 +181,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceForBeneficiary")
     public String referenceForBeneficiary;
+
     public Transaction withReferenceForBeneficiary(String referenceForBeneficiary) {
         this.referenceForBeneficiary = referenceForBeneficiary;
         return this;
@@ -186,6 +200,7 @@ public class Transaction {
      */
     @JsonProperty("status")
     public TransactionStatusEnum status;
+
     public Transaction withStatus(TransactionStatusEnum status) {
         this.status = status;
         return this;
@@ -197,6 +212,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferId")
     public String transferId;
+
     public Transaction withTransferId(String transferId) {
         this.transferId = transferId;
         return this;
@@ -210,6 +226,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TransactionTypeEnum type;
+
     public Transaction withType(TransactionTypeEnum type) {
         this.type = type;
         return this;
@@ -222,9 +239,23 @@ public class Transaction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("valueDate")
     public OffsetDateTime valueDate;
+
     public Transaction withValueDate(OffsetDateTime valueDate) {
         this.valueDate = valueDate;
         return this;
     }
     
+    public Transaction(@JsonProperty("accountHolderId") String accountHolderId, @JsonProperty("amount") Amount amount, @JsonProperty("balanceAccountId") String balanceAccountId, @JsonProperty("balancePlatform") String balancePlatform, @JsonProperty("bookingDate") OffsetDateTime bookingDate, @JsonProperty("counterparty") CounterpartyV3 counterparty, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("reference") String reference, @JsonProperty("status") TransactionStatusEnum status, @JsonProperty("valueDate") OffsetDateTime valueDate) {
+        this.accountHolderId = accountHolderId;
+        this.amount = amount;
+        this.balanceAccountId = balanceAccountId;
+        this.balancePlatform = balancePlatform;
+        this.bookingDate = bookingDate;
+        this.counterparty = counterparty;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.reference = reference;
+        this.status = status;
+        this.valueDate = valueDate;
+  }
 }

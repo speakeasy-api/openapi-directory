@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Cart1 {
     @JsonProperty("discounts")
     public Double discounts;
+
     public Cart1 withDiscounts(Double discounts) {
         this.discounts = discounts;
         return this;
@@ -16,6 +17,7 @@ public class Cart1 {
     
     @JsonProperty("grandTotal")
     public Integer grandTotal;
+
     public Cart1 withGrandTotal(Integer grandTotal) {
         this.grandTotal = grandTotal;
         return this;
@@ -23,6 +25,7 @@ public class Cart1 {
     
     @JsonProperty("items")
     public Item2[] items;
+
     public Cart1 withItems(Item2[] items) {
         this.items = items;
         return this;
@@ -30,6 +33,7 @@ public class Cart1 {
     
     @JsonProperty("itemsTotal")
     public Double itemsTotal;
+
     public Cart1 withItemsTotal(Double itemsTotal) {
         this.itemsTotal = itemsTotal;
         return this;
@@ -37,6 +41,7 @@ public class Cart1 {
     
     @JsonProperty("shipping")
     public Double shipping;
+
     public Cart1 withShipping(Double shipping) {
         this.shipping = shipping;
         return this;
@@ -44,9 +49,18 @@ public class Cart1 {
     
     @JsonProperty("taxes")
     public Integer taxes;
+
     public Cart1 withTaxes(Integer taxes) {
         this.taxes = taxes;
         return this;
     }
     
+    public Cart1(@JsonProperty("discounts") Double discounts, @JsonProperty("grandTotal") Integer grandTotal, @JsonProperty("items") Item2[] items, @JsonProperty("itemsTotal") Double itemsTotal, @JsonProperty("shipping") Double shipping, @JsonProperty("taxes") Integer taxes) {
+        this.discounts = discounts;
+        this.grandTotal = grandTotal;
+        this.items = items;
+        this.itemsTotal = itemsTotal;
+        this.shipping = shipping;
+        this.taxes = taxes;
+  }
 }

@@ -14,6 +14,7 @@ public class BillbeeInterfacesBillbeeAPIModelUpdateStockCodeAPIModel {
     @JsonProperty("BillbeeId")
     @SpeakeasyMetadata("form:name=BillbeeId")
     public Long billbeeId;
+
     public BillbeeInterfacesBillbeeAPIModelUpdateStockCodeAPIModel withBillbeeId(Long billbeeId) {
         this.billbeeId = billbeeId;
         return this;
@@ -23,6 +24,7 @@ public class BillbeeInterfacesBillbeeAPIModelUpdateStockCodeAPIModel {
     @JsonProperty("Sku")
     @SpeakeasyMetadata("form:name=Sku")
     public String sku;
+
     public BillbeeInterfacesBillbeeAPIModelUpdateStockCodeAPIModel withSku(String sku) {
         this.sku = sku;
         return this;
@@ -32,6 +34,7 @@ public class BillbeeInterfacesBillbeeAPIModelUpdateStockCodeAPIModel {
     @JsonProperty("StockCode")
     @SpeakeasyMetadata("form:name=StockCode")
     public String stockCode;
+
     public BillbeeInterfacesBillbeeAPIModelUpdateStockCodeAPIModel withStockCode(String stockCode) {
         this.stockCode = stockCode;
         return this;
@@ -41,9 +44,11 @@ public class BillbeeInterfacesBillbeeAPIModelUpdateStockCodeAPIModel {
     @JsonProperty("StockId")
     @SpeakeasyMetadata("form:name=StockId")
     public Long stockId;
+
     public BillbeeInterfacesBillbeeAPIModelUpdateStockCodeAPIModel withStockId(Long stockId) {
         this.stockId = stockId;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelUpdateStockCodeAPIModel(){}
 }

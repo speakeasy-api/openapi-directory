@@ -18,6 +18,7 @@ public class Certification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authority")
     public String authority;
+
     public Certification withAuthority(String authority) {
         this.authority = authority;
         return this;
@@ -29,6 +30,7 @@ public class Certification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public Certification withLink(String link) {
         this.link = link;
         return this;
@@ -40,6 +42,7 @@ public class Certification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public Certification withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -51,6 +54,7 @@ public class Certification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Certification withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class Certification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validUntil")
     public String validUntil;
+
     public Certification withValidUntil(String validUntil) {
         this.validUntil = validUntil;
         return this;
@@ -73,9 +78,11 @@ public class Certification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Certification withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Certification(){}
 }

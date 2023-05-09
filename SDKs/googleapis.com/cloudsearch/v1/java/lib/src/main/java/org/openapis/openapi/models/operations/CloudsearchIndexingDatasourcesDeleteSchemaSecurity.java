@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CloudsearchIndexingDatasourcesDeleteSchemaSecurity {
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchIndexingDatasourcesDeleteSchemaSecurityOption1 option1;
+
     public CloudsearchIndexingDatasourcesDeleteSchemaSecurity withOption1(CloudsearchIndexingDatasourcesDeleteSchemaSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class CloudsearchIndexingDatasourcesDeleteSchemaSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchIndexingDatasourcesDeleteSchemaSecurityOption2 option2;
+
     public CloudsearchIndexingDatasourcesDeleteSchemaSecurity withOption2(CloudsearchIndexingDatasourcesDeleteSchemaSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class CloudsearchIndexingDatasourcesDeleteSchemaSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchIndexingDatasourcesDeleteSchemaSecurityOption3 option3;
+
     public CloudsearchIndexingDatasourcesDeleteSchemaSecurity withOption3(CloudsearchIndexingDatasourcesDeleteSchemaSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public CloudsearchIndexingDatasourcesDeleteSchemaSecurity(){}
 }

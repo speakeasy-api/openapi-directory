@@ -15,6 +15,7 @@ public class CreateCoreDefinitionVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public CreateCoreDefinitionVersionResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class CreateCoreDefinitionVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationTimestamp")
     public String creationTimestamp;
+
     public CreateCoreDefinitionVersionResponse withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -31,6 +33,7 @@ public class CreateCoreDefinitionVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public CreateCoreDefinitionVersionResponse withId(String id) {
         this.id = id;
         return this;
@@ -39,9 +42,11 @@ public class CreateCoreDefinitionVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public CreateCoreDefinitionVersionResponse withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public CreateCoreDefinitionVersionResponse(){}
 }

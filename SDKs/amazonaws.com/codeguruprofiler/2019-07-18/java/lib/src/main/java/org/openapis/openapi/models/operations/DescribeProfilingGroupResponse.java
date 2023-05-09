@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeProfilingGroupResponse {
     
     public String contentType;
+
     public DescribeProfilingGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeProfilingGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeProfilingGroupResponse describeProfilingGroupResponse;
+
     public DescribeProfilingGroupResponse withDescribeProfilingGroupResponse(org.openapis.openapi.models.shared.DescribeProfilingGroupResponse describeProfilingGroupResponse) {
         this.describeProfilingGroupResponse = describeProfilingGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeProfilingGroupResponse {
      */
     
     public Object internalServerException;
+
     public DescribeProfilingGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeProfilingGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeProfilingGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeProfilingGroupResponse {
     
     
     public Integer statusCode;
+
     public DescribeProfilingGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeProfilingGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeProfilingGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeProfilingGroupResponse {
      */
     
     public Object throttlingException;
+
     public DescribeProfilingGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeProfilingGroupResponse {
      */
     
     public Object validationException;
+
     public DescribeProfilingGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeProfilingGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

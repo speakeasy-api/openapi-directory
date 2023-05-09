@@ -15,6 +15,7 @@ public class NotFoundKnownExceptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionClassName")
     public String exceptionClassName;
+
     public NotFoundKnownExceptionInfo withExceptionClassName(String exceptionClassName) {
         this.exceptionClassName = exceptionClassName;
         return this;
@@ -23,6 +24,7 @@ public class NotFoundKnownExceptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionStack")
     public String[] exceptionStack;
+
     public NotFoundKnownExceptionInfo withExceptionStack(String[] exceptionStack) {
         this.exceptionStack = exceptionStack;
         return this;
@@ -31,6 +33,7 @@ public class NotFoundKnownExceptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NotFoundKnownExceptionInfo withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +41,7 @@ public class NotFoundKnownExceptionInfo {
     
     @JsonProperty("message")
     public String message;
+
     public NotFoundKnownExceptionInfo withMessage(String message) {
         this.message = message;
         return this;
@@ -46,6 +50,7 @@ public class NotFoundKnownExceptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootCauseExceptionClassName")
     public String rootCauseExceptionClassName;
+
     public NotFoundKnownExceptionInfo withRootCauseExceptionClassName(String rootCauseExceptionClassName) {
         this.rootCauseExceptionClassName = rootCauseExceptionClassName;
         return this;
@@ -54,9 +59,13 @@ public class NotFoundKnownExceptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootCauseExceptionStack")
     public String[] rootCauseExceptionStack;
+
     public NotFoundKnownExceptionInfo withRootCauseExceptionStack(String[] rootCauseExceptionStack) {
         this.rootCauseExceptionStack = rootCauseExceptionStack;
         return this;
     }
     
+    public NotFoundKnownExceptionInfo(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

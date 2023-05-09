@@ -15,9 +15,11 @@ public class DescribeInputResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public Input input;
+
     public DescribeInputResponse withInput(Input input) {
         this.input = input;
         return this;
     }
     
+    public DescribeInputResponse(){}
 }

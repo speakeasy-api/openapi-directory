@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDisassociateIpamResourceDiscoveryRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDisassociateIpamResourceDiscoveryActionEnum action;
+
     public GETDisassociateIpamResourceDiscoveryRequest withAction(GETDisassociateIpamResourceDiscoveryActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDisassociateIpamResourceDiscoveryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDisassociateIpamResourceDiscoveryRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETDisassociateIpamResourceDiscoveryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IpamResourceDiscoveryAssociationId")
     public String ipamResourceDiscoveryAssociationId;
+
     public GETDisassociateIpamResourceDiscoveryRequest withIpamResourceDiscoveryAssociationId(String ipamResourceDiscoveryAssociationId) {
         this.ipamResourceDiscoveryAssociationId = ipamResourceDiscoveryAssociationId;
         return this;
@@ -36,6 +40,7 @@ public class GETDisassociateIpamResourceDiscoveryRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDisassociateIpamResourceDiscoveryVersionEnum version;
+
     public GETDisassociateIpamResourceDiscoveryRequest withVersion(GETDisassociateIpamResourceDiscoveryVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDisassociateIpamResourceDiscoveryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDisassociateIpamResourceDiscoveryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDisassociateIpamResourceDiscoveryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDisassociateIpamResourceDiscoveryRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDisassociateIpamResourceDiscoveryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDisassociateIpamResourceDiscoveryRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDisassociateIpamResourceDiscoveryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDisassociateIpamResourceDiscoveryRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDisassociateIpamResourceDiscoveryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDisassociateIpamResourceDiscoveryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDisassociateIpamResourceDiscoveryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDisassociateIpamResourceDiscoveryRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETDisassociateIpamResourceDiscoveryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDisassociateIpamResourceDiscoveryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDisassociateIpamResourceDiscoveryRequest(@JsonProperty("Action") GETDisassociateIpamResourceDiscoveryActionEnum action, @JsonProperty("IpamResourceDiscoveryAssociationId") String ipamResourceDiscoveryAssociationId, @JsonProperty("Version") GETDisassociateIpamResourceDiscoveryVersionEnum version) {
+        this.action = action;
+        this.ipamResourceDiscoveryAssociationId = ipamResourceDiscoveryAssociationId;
+        this.version = version;
+  }
 }

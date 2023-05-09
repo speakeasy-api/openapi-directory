@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MoveByoipCidrToIpamResultByoipCidr {
     
     public String cidr;
+
     public MoveByoipCidrToIpamResultByoipCidr withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -19,6 +20,7 @@ public class MoveByoipCidrToIpamResultByoipCidr {
     
     
     public String description;
+
     public MoveByoipCidrToIpamResultByoipCidr withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class MoveByoipCidrToIpamResultByoipCidr {
     
     
     public MoveByoipCidrToIpamResultByoipCidrStateEnum state;
+
     public MoveByoipCidrToIpamResultByoipCidr withState(MoveByoipCidrToIpamResultByoipCidrStateEnum state) {
         this.state = state;
         return this;
@@ -33,9 +36,11 @@ public class MoveByoipCidrToIpamResultByoipCidr {
     
     
     public String statusMessage;
+
     public MoveByoipCidrToIpamResultByoipCidr withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public MoveByoipCidrToIpamResultByoipCidr(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSystemInstanceResponse {
     
     public String contentType;
+
     public DeleteSystemInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSystemInstanceResponse {
      */
     
     public java.util.Map<String, Object> deleteSystemInstanceResponse;
+
     public DeleteSystemInstanceResponse withDeleteSystemInstanceResponse(java.util.Map<String, Object> deleteSystemInstanceResponse) {
         this.deleteSystemInstanceResponse = deleteSystemInstanceResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSystemInstanceResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteSystemInstanceResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSystemInstanceResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteSystemInstanceResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteSystemInstanceResponse {
     
     
     public Integer statusCode;
+
     public DeleteSystemInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteSystemInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSystemInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteSystemInstanceResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteSystemInstanceResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteSystemInstanceResponse {
      */
     
     public Object throttlingException;
+
     public DeleteSystemInstanceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteSystemInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

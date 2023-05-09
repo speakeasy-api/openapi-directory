@@ -18,6 +18,7 @@ public class DescribeVolumesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeVolumesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,9 +27,11 @@ public class DescribeVolumesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Volumes")
     public Volume[] volumes;
+
     public DescribeVolumesResponse withVolumes(Volume[] volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public DescribeVolumesResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCalendarEventRequest {
     @SpeakeasyMetadata("request:mediaType=application/vnd.api+json")
     public org.openapis.openapi.models.shared.UpdateCalendarEventRequest updateCalendarEventRequest;
+
     public UpdateCalendarEventRequest withUpdateCalendarEventRequest(org.openapis.openapi.models.shared.UpdateCalendarEventRequest updateCalendarEventRequest) {
         this.updateCalendarEventRequest = updateCalendarEventRequest;
         return this;
@@ -19,9 +21,14 @@ public class UpdateCalendarEventRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public UpdateCalendarEventRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateCalendarEventRequest(@JsonProperty("UpdateCalendarEventRequest") org.openapis.openapi.models.shared.UpdateCalendarEventRequest updateCalendarEventRequest, @JsonProperty("id") String id) {
+        this.updateCalendarEventRequest = updateCalendarEventRequest;
+        this.id = id;
+  }
 }

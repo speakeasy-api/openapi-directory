@@ -18,6 +18,7 @@ public class ProductAvailabilityChangeEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityStatus")
     public ProductAvailabilityChangeEventAvailabilityStatusEnum availabilityStatus;
+
     public ProductAvailabilityChangeEvent withAvailabilityStatus(ProductAvailabilityChangeEventAvailabilityStatusEnum availabilityStatus) {
         this.availabilityStatus = availabilityStatus;
         return this;
@@ -29,9 +30,11 @@ public class ProductAvailabilityChangeEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public ProductAvailabilityChangeEvent withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public ProductAvailabilityChangeEvent(){}
 }

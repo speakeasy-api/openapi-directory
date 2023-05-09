@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AppointmentTemplatesListRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public AppointmentTemplatesListRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -16,6 +17,7 @@ public class AppointmentTemplatesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public AppointmentTemplatesListRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -23,6 +25,7 @@ public class AppointmentTemplatesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
     public Long office;
+
     public AppointmentTemplatesListRequest withOffice(Long office) {
         this.office = office;
         return this;
@@ -30,6 +33,7 @@ public class AppointmentTemplatesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public AppointmentTemplatesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -37,9 +41,11 @@ public class AppointmentTemplatesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=profile")
     public Long profile;
+
     public AppointmentTemplatesListRequest withProfile(Long profile) {
         this.profile = profile;
         return this;
     }
     
+    public AppointmentTemplatesListRequest(){}
 }

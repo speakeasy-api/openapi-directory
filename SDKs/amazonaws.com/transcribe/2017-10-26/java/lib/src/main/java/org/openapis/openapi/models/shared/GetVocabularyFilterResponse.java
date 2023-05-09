@@ -20,6 +20,7 @@ public class GetVocabularyFilterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DownloadUri")
     public String downloadUri;
+
     public GetVocabularyFilterResponse withDownloadUri(String downloadUri) {
         this.downloadUri = downloadUri;
         return this;
@@ -28,6 +29,7 @@ public class GetVocabularyFilterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public GetVocabularyFilterResponse withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -38,6 +40,7 @@ public class GetVocabularyFilterResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public GetVocabularyFilterResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -46,9 +49,11 @@ public class GetVocabularyFilterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VocabularyFilterName")
     public String vocabularyFilterName;
+
     public GetVocabularyFilterResponse withVocabularyFilterName(String vocabularyFilterName) {
         this.vocabularyFilterName = vocabularyFilterName;
         return this;
     }
     
+    public GetVocabularyFilterResponse(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetGroupMembershipIdRequest {
     @JsonProperty("GroupId")
     public String groupId;
+
     public GetGroupMembershipIdRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -16,6 +17,7 @@ public class GetGroupMembershipIdRequest {
     
     @JsonProperty("IdentityStoreId")
     public String identityStoreId;
+
     public GetGroupMembershipIdRequest withIdentityStoreId(String identityStoreId) {
         this.identityStoreId = identityStoreId;
         return this;
@@ -23,9 +25,15 @@ public class GetGroupMembershipIdRequest {
     
     @JsonProperty("MemberId")
     public MemberId memberId;
+
     public GetGroupMembershipIdRequest withMemberId(MemberId memberId) {
         this.memberId = memberId;
         return this;
     }
     
+    public GetGroupMembershipIdRequest(@JsonProperty("GroupId") String groupId, @JsonProperty("IdentityStoreId") String identityStoreId, @JsonProperty("MemberId") MemberId memberId) {
+        this.groupId = groupId;
+        this.identityStoreId = identityStoreId;
+        this.memberId = memberId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PrivateGroupEmbargoOptionsDetailsResponse {
     
     public String contentType;
+
     public PrivateGroupEmbargoOptionsDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PrivateGroupEmbargoOptionsDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorMessage errorMessage;
+
     public PrivateGroupEmbargoOptionsDetailsResponse withErrorMessage(org.openapis.openapi.models.shared.ErrorMessage errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -29,6 +32,7 @@ public class PrivateGroupEmbargoOptionsDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.GroupEmbargoOptions[] groupEmbargoOptions;
+
     public PrivateGroupEmbargoOptionsDetailsResponse withGroupEmbargoOptions(org.openapis.openapi.models.shared.GroupEmbargoOptions[] groupEmbargoOptions) {
         this.groupEmbargoOptions = groupEmbargoOptions;
         return this;
@@ -36,6 +40,7 @@ public class PrivateGroupEmbargoOptionsDetailsResponse {
     
     
     public Integer statusCode;
+
     public PrivateGroupEmbargoOptionsDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PrivateGroupEmbargoOptionsDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PrivateGroupEmbargoOptionsDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PrivateGroupEmbargoOptionsDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

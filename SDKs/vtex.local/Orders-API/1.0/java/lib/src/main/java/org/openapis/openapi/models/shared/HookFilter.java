@@ -15,6 +15,7 @@ public class HookFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableSingleFire")
     public Boolean disableSingleFire;
+
     public HookFilter withDisableSingleFire(Boolean disableSingleFire) {
         this.disableSingleFire = disableSingleFire;
         return this;
@@ -26,6 +27,7 @@ public class HookFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public HookFilter withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -37,6 +39,7 @@ public class HookFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String[] status;
+
     public HookFilter withStatus(String[] status) {
         this.status = status;
         return this;
@@ -51,9 +54,13 @@ public class HookFilter {
      */
     @JsonProperty("type")
     public String type;
+
     public HookFilter withType(String type) {
         this.type = type;
         return this;
     }
     
+    public HookFilter(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

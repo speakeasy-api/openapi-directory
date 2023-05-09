@@ -18,6 +18,7 @@ public class GradeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actorUserId")
     public String actorUserId;
+
     public GradeHistory withActorUserId(String actorUserId) {
         this.actorUserId = actorUserId;
         return this;
@@ -29,6 +30,7 @@ public class GradeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gradeChangeType")
     public GradeHistoryGradeChangeTypeEnum gradeChangeType;
+
     public GradeHistory withGradeChangeType(GradeHistoryGradeChangeTypeEnum gradeChangeType) {
         this.gradeChangeType = gradeChangeType;
         return this;
@@ -40,6 +42,7 @@ public class GradeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gradeTimestamp")
     public String gradeTimestamp;
+
     public GradeHistory withGradeTimestamp(String gradeTimestamp) {
         this.gradeTimestamp = gradeTimestamp;
         return this;
@@ -51,6 +54,7 @@ public class GradeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxPoints")
     public Double maxPoints;
+
     public GradeHistory withMaxPoints(Double maxPoints) {
         this.maxPoints = maxPoints;
         return this;
@@ -62,9 +66,11 @@ public class GradeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointsEarned")
     public Double pointsEarned;
+
     public GradeHistory withPointsEarned(Double pointsEarned) {
         this.pointsEarned = pointsEarned;
         return this;
     }
     
+    public GradeHistory(){}
 }

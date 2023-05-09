@@ -18,6 +18,7 @@ public class OracleConnectionProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseService")
     public String databaseService;
+
     public OracleConnectionProfileInput withDatabaseService(String databaseService) {
         this.databaseService = databaseService;
         return this;
@@ -29,6 +30,7 @@ public class OracleConnectionProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forwardSshConnectivity")
     public ForwardSshTunnelConnectivity forwardSshConnectivity;
+
     public OracleConnectionProfileInput withForwardSshConnectivity(ForwardSshTunnelConnectivity forwardSshConnectivity) {
         this.forwardSshConnectivity = forwardSshConnectivity;
         return this;
@@ -40,6 +42,7 @@ public class OracleConnectionProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public OracleConnectionProfileInput withHost(String host) {
         this.host = host;
         return this;
@@ -51,6 +54,7 @@ public class OracleConnectionProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public OracleConnectionProfileInput withPassword(String password) {
         this.password = password;
         return this;
@@ -62,6 +66,7 @@ public class OracleConnectionProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public OracleConnectionProfileInput withPort(Integer port) {
         this.port = port;
         return this;
@@ -73,6 +78,7 @@ public class OracleConnectionProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateConnectivity")
     public PrivateConnectivity privateConnectivity;
+
     public OracleConnectionProfileInput withPrivateConnectivity(PrivateConnectivity privateConnectivity) {
         this.privateConnectivity = privateConnectivity;
         return this;
@@ -84,6 +90,7 @@ public class OracleConnectionProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("staticServiceIpConnectivity")
     public java.util.Map<String, Object> staticServiceIpConnectivity;
+
     public OracleConnectionProfileInput withStaticServiceIpConnectivity(java.util.Map<String, Object> staticServiceIpConnectivity) {
         this.staticServiceIpConnectivity = staticServiceIpConnectivity;
         return this;
@@ -95,9 +102,11 @@ public class OracleConnectionProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public OracleConnectionProfileInput withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public OracleConnectionProfileInput(){}
 }

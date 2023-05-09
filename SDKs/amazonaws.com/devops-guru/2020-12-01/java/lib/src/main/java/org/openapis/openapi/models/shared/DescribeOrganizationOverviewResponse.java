@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeOrganizationOverviewResponse {
     @JsonProperty("ProactiveInsights")
     public Long proactiveInsights;
+
     public DescribeOrganizationOverviewResponse withProactiveInsights(Long proactiveInsights) {
         this.proactiveInsights = proactiveInsights;
         return this;
@@ -19,9 +20,14 @@ public class DescribeOrganizationOverviewResponse {
     
     @JsonProperty("ReactiveInsights")
     public Long reactiveInsights;
+
     public DescribeOrganizationOverviewResponse withReactiveInsights(Long reactiveInsights) {
         this.reactiveInsights = reactiveInsights;
         return this;
     }
     
+    public DescribeOrganizationOverviewResponse(@JsonProperty("ProactiveInsights") Long proactiveInsights, @JsonProperty("ReactiveInsights") Long reactiveInsights) {
+        this.proactiveInsights = proactiveInsights;
+        this.reactiveInsights = reactiveInsights;
+  }
 }

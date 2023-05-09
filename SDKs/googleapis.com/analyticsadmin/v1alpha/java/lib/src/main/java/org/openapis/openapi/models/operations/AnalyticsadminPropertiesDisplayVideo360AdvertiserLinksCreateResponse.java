@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateResponse {
     
     public String contentType;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRespons
      */
     
     public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink googleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateResponse withGoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink googleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink) {
         this.googleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink = googleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRespons
     
     
     public Integer statusCode;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRespons
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

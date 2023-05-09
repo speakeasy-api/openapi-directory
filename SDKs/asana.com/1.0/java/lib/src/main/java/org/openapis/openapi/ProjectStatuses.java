@@ -80,12 +80,10 @@ public class ProjectStatuses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateProjectStatusForProjectResponse res = new org.openapis.openapi.models.operations.CreateProjectStatusForProjectResponse() {{
+        org.openapis.openapi.models.operations.CreateProjectStatusForProjectResponse res = new org.openapis.openapi.models.operations.CreateProjectStatusForProjectResponse(contentType, httpRes.statusCode()) {{
             createProjectStatusForProject201ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -138,12 +136,10 @@ public class ProjectStatuses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteProjectStatusResponse res = new org.openapis.openapi.models.operations.DeleteProjectStatusResponse() {{
+        org.openapis.openapi.models.operations.DeleteProjectStatusResponse res = new org.openapis.openapi.models.operations.DeleteProjectStatusResponse(contentType, httpRes.statusCode()) {{
             deleteProjectStatus200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -194,12 +190,10 @@ public class ProjectStatuses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProjectStatusResponse res = new org.openapis.openapi.models.operations.GetProjectStatusResponse() {{
+        org.openapis.openapi.models.operations.GetProjectStatusResponse res = new org.openapis.openapi.models.operations.GetProjectStatusResponse(contentType, httpRes.statusCode()) {{
             getProjectStatus200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,12 +244,10 @@ public class ProjectStatuses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProjectStatusesForProjectResponse res = new org.openapis.openapi.models.operations.GetProjectStatusesForProjectResponse() {{
+        org.openapis.openapi.models.operations.GetProjectStatusesForProjectResponse res = new org.openapis.openapi.models.operations.GetProjectStatusesForProjectResponse(contentType, httpRes.statusCode()) {{
             getProjectStatusesForProject200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

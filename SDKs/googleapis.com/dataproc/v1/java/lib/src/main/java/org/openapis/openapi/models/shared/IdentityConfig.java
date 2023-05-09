@@ -18,9 +18,11 @@ public class IdentityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userServiceAccountMapping")
     public java.util.Map<String, String> userServiceAccountMapping;
+
     public IdentityConfig withUserServiceAccountMapping(java.util.Map<String, String> userServiceAccountMapping) {
         this.userServiceAccountMapping = userServiceAccountMapping;
         return this;
     }
     
+    public IdentityConfig(){}
 }

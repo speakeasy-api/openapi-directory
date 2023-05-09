@@ -12,6 +12,7 @@ public class DisassociateDomainRequestBody {
      */
     @JsonProperty("DomainName")
     public String domainName;
+
     public DisassociateDomainRequestBody withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -22,9 +23,14 @@ public class DisassociateDomainRequestBody {
      */
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public DisassociateDomainRequestBody withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
     }
     
+    public DisassociateDomainRequestBody(@JsonProperty("DomainName") String domainName, @JsonProperty("FleetArn") String fleetArn) {
+        this.domainName = domainName;
+        this.fleetArn = fleetArn;
+  }
 }

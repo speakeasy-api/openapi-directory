@@ -18,9 +18,11 @@ public class PingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pingsCount")
     public Integer pingsCount;
+
     public PingConfig withPingsCount(Integer pingsCount) {
         this.pingsCount = pingsCount;
         return this;
     }
     
+    public PingConfig(){}
 }

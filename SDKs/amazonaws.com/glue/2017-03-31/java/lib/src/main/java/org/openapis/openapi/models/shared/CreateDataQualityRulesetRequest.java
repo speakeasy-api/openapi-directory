@@ -12,6 +12,7 @@ public class CreateDataQualityRulesetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateDataQualityRulesetRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class CreateDataQualityRulesetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateDataQualityRulesetRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class CreateDataQualityRulesetRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateDataQualityRulesetRequest withName(String name) {
         this.name = name;
         return this;
@@ -34,6 +37,7 @@ public class CreateDataQualityRulesetRequest {
     
     @JsonProperty("Ruleset")
     public String ruleset;
+
     public CreateDataQualityRulesetRequest withRuleset(String ruleset) {
         this.ruleset = ruleset;
         return this;
@@ -42,6 +46,7 @@ public class CreateDataQualityRulesetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateDataQualityRulesetRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -50,9 +55,14 @@ public class CreateDataQualityRulesetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetTable")
     public DataQualityTargetTable targetTable;
+
     public CreateDataQualityRulesetRequest withTargetTable(DataQualityTargetTable targetTable) {
         this.targetTable = targetTable;
         return this;
     }
     
+    public CreateDataQualityRulesetRequest(@JsonProperty("Name") String name, @JsonProperty("Ruleset") String ruleset) {
+        this.name = name;
+        this.ruleset = ruleset;
+  }
 }

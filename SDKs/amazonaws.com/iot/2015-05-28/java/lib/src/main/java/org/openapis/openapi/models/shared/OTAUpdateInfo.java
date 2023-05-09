@@ -20,6 +20,7 @@ public class OTAUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalParameters")
     public java.util.Map<String, String> additionalParameters;
+
     public OTAUpdateInfo withAdditionalParameters(java.util.Map<String, String> additionalParameters) {
         this.additionalParameters = additionalParameters;
         return this;
@@ -28,6 +29,7 @@ public class OTAUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsIotJobArn")
     public String awsIotJobArn;
+
     public OTAUpdateInfo withAwsIotJobArn(String awsIotJobArn) {
         this.awsIotJobArn = awsIotJobArn;
         return this;
@@ -36,6 +38,7 @@ public class OTAUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsIotJobId")
     public String awsIotJobId;
+
     public OTAUpdateInfo withAwsIotJobId(String awsIotJobId) {
         this.awsIotJobId = awsIotJobId;
         return this;
@@ -44,6 +47,7 @@ public class OTAUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsJobExecutionsRolloutConfig")
     public AwsJobExecutionsRolloutConfig awsJobExecutionsRolloutConfig;
+
     public OTAUpdateInfo withAwsJobExecutionsRolloutConfig(AwsJobExecutionsRolloutConfig awsJobExecutionsRolloutConfig) {
         this.awsJobExecutionsRolloutConfig = awsJobExecutionsRolloutConfig;
         return this;
@@ -52,6 +56,7 @@ public class OTAUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsJobPresignedUrlConfig")
     public AwsJobPresignedUrlConfig awsJobPresignedUrlConfig;
+
     public OTAUpdateInfo withAwsJobPresignedUrlConfig(AwsJobPresignedUrlConfig awsJobPresignedUrlConfig) {
         this.awsJobPresignedUrlConfig = awsJobPresignedUrlConfig;
         return this;
@@ -62,6 +67,7 @@ public class OTAUpdateInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public OTAUpdateInfo withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -70,6 +76,7 @@ public class OTAUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public OTAUpdateInfo withDescription(String description) {
         this.description = description;
         return this;
@@ -78,6 +85,7 @@ public class OTAUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorInfo")
     public ErrorInfo errorInfo;
+
     public OTAUpdateInfo withErrorInfo(ErrorInfo errorInfo) {
         this.errorInfo = errorInfo;
         return this;
@@ -88,6 +96,7 @@ public class OTAUpdateInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public OTAUpdateInfo withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -96,6 +105,7 @@ public class OTAUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otaUpdateArn")
     public String otaUpdateArn;
+
     public OTAUpdateInfo withOtaUpdateArn(String otaUpdateArn) {
         this.otaUpdateArn = otaUpdateArn;
         return this;
@@ -104,6 +114,7 @@ public class OTAUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otaUpdateFiles")
     public OTAUpdateFile[] otaUpdateFiles;
+
     public OTAUpdateInfo withOtaUpdateFiles(OTAUpdateFile[] otaUpdateFiles) {
         this.otaUpdateFiles = otaUpdateFiles;
         return this;
@@ -112,6 +123,7 @@ public class OTAUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otaUpdateId")
     public String otaUpdateId;
+
     public OTAUpdateInfo withOtaUpdateId(String otaUpdateId) {
         this.otaUpdateId = otaUpdateId;
         return this;
@@ -120,6 +132,7 @@ public class OTAUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otaUpdateStatus")
     public OTAUpdateStatusEnum otaUpdateStatus;
+
     public OTAUpdateInfo withOtaUpdateStatus(OTAUpdateStatusEnum otaUpdateStatus) {
         this.otaUpdateStatus = otaUpdateStatus;
         return this;
@@ -128,6 +141,7 @@ public class OTAUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocols")
     public ProtocolEnum[] protocols;
+
     public OTAUpdateInfo withProtocols(ProtocolEnum[] protocols) {
         this.protocols = protocols;
         return this;
@@ -136,6 +150,7 @@ public class OTAUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetSelection")
     public TargetSelectionEnum targetSelection;
+
     public OTAUpdateInfo withTargetSelection(TargetSelectionEnum targetSelection) {
         this.targetSelection = targetSelection;
         return this;
@@ -144,9 +159,11 @@ public class OTAUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targets")
     public String[] targets;
+
     public OTAUpdateInfo withTargets(String[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public OTAUpdateInfo(){}
 }

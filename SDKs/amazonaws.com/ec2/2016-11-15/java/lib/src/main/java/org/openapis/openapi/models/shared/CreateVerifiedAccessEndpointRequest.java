@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateVerifiedAccessEndpointRequest {
     
     public String applicationDomain;
+
     public CreateVerifiedAccessEndpointRequest withApplicationDomain(String applicationDomain) {
         this.applicationDomain = applicationDomain;
         return this;
@@ -16,6 +17,7 @@ public class CreateVerifiedAccessEndpointRequest {
     
     
     public VerifiedAccessEndpointAttachmentTypeEnum attachmentType;
+
     public CreateVerifiedAccessEndpointRequest withAttachmentType(VerifiedAccessEndpointAttachmentTypeEnum attachmentType) {
         this.attachmentType = attachmentType;
         return this;
@@ -23,6 +25,7 @@ public class CreateVerifiedAccessEndpointRequest {
     
     
     public String clientToken;
+
     public CreateVerifiedAccessEndpointRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -30,6 +33,7 @@ public class CreateVerifiedAccessEndpointRequest {
     
     
     public String description;
+
     public CreateVerifiedAccessEndpointRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +41,7 @@ public class CreateVerifiedAccessEndpointRequest {
     
     
     public String domainCertificateArn;
+
     public CreateVerifiedAccessEndpointRequest withDomainCertificateArn(String domainCertificateArn) {
         this.domainCertificateArn = domainCertificateArn;
         return this;
@@ -44,6 +49,7 @@ public class CreateVerifiedAccessEndpointRequest {
     
     
     public Boolean dryRun;
+
     public CreateVerifiedAccessEndpointRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -51,6 +57,7 @@ public class CreateVerifiedAccessEndpointRequest {
     
     
     public String endpointDomainPrefix;
+
     public CreateVerifiedAccessEndpointRequest withEndpointDomainPrefix(String endpointDomainPrefix) {
         this.endpointDomainPrefix = endpointDomainPrefix;
         return this;
@@ -58,6 +65,7 @@ public class CreateVerifiedAccessEndpointRequest {
     
     
     public VerifiedAccessEndpointTypeEnum endpointType;
+
     public CreateVerifiedAccessEndpointRequest withEndpointType(VerifiedAccessEndpointTypeEnum endpointType) {
         this.endpointType = endpointType;
         return this;
@@ -65,6 +73,7 @@ public class CreateVerifiedAccessEndpointRequest {
     
     
     public CreateVerifiedAccessEndpointLoadBalancerOptions loadBalancerOptions;
+
     public CreateVerifiedAccessEndpointRequest withLoadBalancerOptions(CreateVerifiedAccessEndpointLoadBalancerOptions loadBalancerOptions) {
         this.loadBalancerOptions = loadBalancerOptions;
         return this;
@@ -72,6 +81,7 @@ public class CreateVerifiedAccessEndpointRequest {
     
     
     public CreateVerifiedAccessEndpointEniOptions networkInterfaceOptions;
+
     public CreateVerifiedAccessEndpointRequest withNetworkInterfaceOptions(CreateVerifiedAccessEndpointEniOptions networkInterfaceOptions) {
         this.networkInterfaceOptions = networkInterfaceOptions;
         return this;
@@ -79,6 +89,7 @@ public class CreateVerifiedAccessEndpointRequest {
     
     
     public String policyDocument;
+
     public CreateVerifiedAccessEndpointRequest withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -86,6 +97,7 @@ public class CreateVerifiedAccessEndpointRequest {
     
     
     public String[] securityGroupIds;
+
     public CreateVerifiedAccessEndpointRequest withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -93,6 +105,7 @@ public class CreateVerifiedAccessEndpointRequest {
     
     
     public CreateVerifiedAccessEndpointRequestTagSpecifications[] tagSpecifications;
+
     public CreateVerifiedAccessEndpointRequest withTagSpecifications(CreateVerifiedAccessEndpointRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -100,9 +113,18 @@ public class CreateVerifiedAccessEndpointRequest {
     
     
     public String verifiedAccessGroupId;
+
     public CreateVerifiedAccessEndpointRequest withVerifiedAccessGroupId(String verifiedAccessGroupId) {
         this.verifiedAccessGroupId = verifiedAccessGroupId;
         return this;
     }
     
+    public CreateVerifiedAccessEndpointRequest(@JsonProperty("ApplicationDomain") String applicationDomain, @JsonProperty("AttachmentType") VerifiedAccessEndpointAttachmentTypeEnum attachmentType, @JsonProperty("DomainCertificateArn") String domainCertificateArn, @JsonProperty("EndpointDomainPrefix") String endpointDomainPrefix, @JsonProperty("EndpointType") VerifiedAccessEndpointTypeEnum endpointType, @JsonProperty("VerifiedAccessGroupId") String verifiedAccessGroupId) {
+        this.applicationDomain = applicationDomain;
+        this.attachmentType = attachmentType;
+        this.domainCertificateArn = domainCertificateArn;
+        this.endpointDomainPrefix = endpointDomainPrefix;
+        this.endpointType = endpointType;
+        this.verifiedAccessGroupId = verifiedAccessGroupId;
+  }
 }

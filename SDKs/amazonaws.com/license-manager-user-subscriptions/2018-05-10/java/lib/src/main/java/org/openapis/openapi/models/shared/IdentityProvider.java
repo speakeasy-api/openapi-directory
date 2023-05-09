@@ -15,9 +15,11 @@ public class IdentityProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveDirectoryIdentityProvider")
     public ActiveDirectoryIdentityProvider activeDirectoryIdentityProvider;
+
     public IdentityProvider withActiveDirectoryIdentityProvider(ActiveDirectoryIdentityProvider activeDirectoryIdentityProvider) {
         this.activeDirectoryIdentityProvider = activeDirectoryIdentityProvider;
         return this;
     }
     
+    public IdentityProvider(){}
 }

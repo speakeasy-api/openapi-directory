@@ -176,4 +176,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateComponentConfiguratio
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateLogPatternResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateLogPatternRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

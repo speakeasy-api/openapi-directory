@@ -83,11 +83,9 @@ public class SKUApprovalSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetaccountconfigResponse res = new org.openapis.openapi.models.operations.GetaccountconfigResponse() {{
+        org.openapis.openapi.models.operations.GetaccountconfigResponse res = new org.openapis.openapi.models.operations.GetaccountconfigResponse(contentType, httpRes.statusCode()) {{
             getaccountconfig200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +137,9 @@ public class SKUApprovalSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetautoApprovevaluefromconfigResponse res = new org.openapis.openapi.models.operations.GetautoApprovevaluefromconfigResponse() {{
+        org.openapis.openapi.models.operations.GetautoApprovevaluefromconfigResponse res = new org.openapis.openapi.models.operations.GetautoApprovevaluefromconfigResponse(contentType, httpRes.statusCode()) {{
             getautoApprovevaluefromconfig200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -163,9 +159,9 @@ public class SKUApprovalSettings {
      * 
      * - `sellerId`: A string that identifies the seller in the marketplace. 
      * 
-     * - `accountId`: Marketplace\u2019s account ID. 
+     * - `accountId`: Marketplace’s account ID. 
      * 
-     * - `accountName`: Marketplace\u2019s account name. 
+     * - `accountName`: Marketplace’s account name. 
      * 
      * - `mapping`: Mapping of SKU and product Specifications. 
      * 
@@ -211,10 +207,8 @@ public class SKUApprovalSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetselleraccountconfigResponse res = new org.openapis.openapi.models.operations.GetselleraccountconfigResponse() {{
+        org.openapis.openapi.models.operations.GetselleraccountconfigResponse res = new org.openapis.openapi.models.operations.GetselleraccountconfigResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -266,10 +260,8 @@ public class SKUApprovalSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutselleraccountconfigResponse res = new org.openapis.openapi.models.operations.PutselleraccountconfigResponse() {{
+        org.openapis.openapi.models.operations.PutselleraccountconfigResponse res = new org.openapis.openapi.models.operations.PutselleraccountconfigResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -321,11 +313,9 @@ public class SKUApprovalSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SaveaccountconfigResponse res = new org.openapis.openapi.models.operations.SaveaccountconfigResponse() {{
+        org.openapis.openapi.models.operations.SaveaccountconfigResponse res = new org.openapis.openapi.models.operations.SaveaccountconfigResponse(contentType, httpRes.statusCode()) {{
             saveaccountconfig200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -382,11 +372,9 @@ public class SKUApprovalSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SaveautoapproveforaccountResponse res = new org.openapis.openapi.models.operations.SaveautoapproveforaccountResponse() {{
+        org.openapis.openapi.models.operations.SaveautoapproveforaccountResponse res = new org.openapis.openapi.models.operations.SaveautoapproveforaccountResponse(contentType, httpRes.statusCode()) {{
             saveautoapproveforaccount200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -441,10 +429,8 @@ public class SKUApprovalSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SaveautoapproveforaccountsellerResponse res = new org.openapis.openapi.models.operations.SaveautoapproveforaccountsellerResponse() {{
+        org.openapis.openapi.models.operations.SaveautoapproveforaccountsellerResponse res = new org.openapis.openapi.models.operations.SaveautoapproveforaccountsellerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

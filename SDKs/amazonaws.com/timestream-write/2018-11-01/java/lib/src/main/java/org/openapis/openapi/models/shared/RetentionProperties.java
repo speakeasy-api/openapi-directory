@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RetentionProperties {
     @JsonProperty("MagneticStoreRetentionPeriodInDays")
     public Long magneticStoreRetentionPeriodInDays;
+
     public RetentionProperties withMagneticStoreRetentionPeriodInDays(Long magneticStoreRetentionPeriodInDays) {
         this.magneticStoreRetentionPeriodInDays = magneticStoreRetentionPeriodInDays;
         return this;
@@ -19,9 +20,14 @@ public class RetentionProperties {
     
     @JsonProperty("MemoryStoreRetentionPeriodInHours")
     public Long memoryStoreRetentionPeriodInHours;
+
     public RetentionProperties withMemoryStoreRetentionPeriodInHours(Long memoryStoreRetentionPeriodInHours) {
         this.memoryStoreRetentionPeriodInHours = memoryStoreRetentionPeriodInHours;
         return this;
     }
     
+    public RetentionProperties(@JsonProperty("MagneticStoreRetentionPeriodInDays") Long magneticStoreRetentionPeriodInDays, @JsonProperty("MemoryStoreRetentionPeriodInHours") Long memoryStoreRetentionPeriodInHours) {
+        this.magneticStoreRetentionPeriodInDays = magneticStoreRetentionPeriodInDays;
+        this.memoryStoreRetentionPeriodInHours = memoryStoreRetentionPeriodInHours;
+  }
 }

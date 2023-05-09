@@ -15,6 +15,7 @@ public class UpdateGrokClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Classification")
     public String classification;
+
     public UpdateGrokClassifierRequest withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -23,6 +24,7 @@ public class UpdateGrokClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomPatterns")
     public String customPatterns;
+
     public UpdateGrokClassifierRequest withCustomPatterns(String customPatterns) {
         this.customPatterns = customPatterns;
         return this;
@@ -31,6 +33,7 @@ public class UpdateGrokClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrokPattern")
     public String grokPattern;
+
     public UpdateGrokClassifierRequest withGrokPattern(String grokPattern) {
         this.grokPattern = grokPattern;
         return this;
@@ -38,9 +41,13 @@ public class UpdateGrokClassifierRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateGrokClassifierRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateGrokClassifierRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

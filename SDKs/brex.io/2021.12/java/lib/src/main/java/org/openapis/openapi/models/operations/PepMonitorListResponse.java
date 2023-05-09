@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PepMonitorListResponse {
     
     public String contentType;
+
     public PepMonitorListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PepMonitorListResponse {
      */
     
     public PepMonitorList200ApplicationJSON[] pepMonitorList200ApplicationJSONObjects;
+
     public PepMonitorListResponse withPepMonitorList200ApplicationJSONObjects(PepMonitorList200ApplicationJSON[] pepMonitorList200ApplicationJSONObjects) {
         this.pepMonitorList200ApplicationJSONObjects = pepMonitorList200ApplicationJSONObjects;
         return this;
@@ -29,6 +32,7 @@ public class PepMonitorListResponse {
      */
     
     public PepMonitorListDefaultApplicationJSON pepMonitorListDefaultApplicationJSONObject;
+
     public PepMonitorListResponse withPepMonitorListDefaultApplicationJSONObject(PepMonitorListDefaultApplicationJSON pepMonitorListDefaultApplicationJSONObject) {
         this.pepMonitorListDefaultApplicationJSONObject = pepMonitorListDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class PepMonitorListResponse {
     
     
     public Integer statusCode;
+
     public PepMonitorListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PepMonitorListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PepMonitorListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PepMonitorListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

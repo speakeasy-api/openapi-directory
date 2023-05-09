@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ClientConnectOptions {
     
     public Boolean enabled;
+
     public ClientConnectOptions withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -19,9 +20,11 @@ public class ClientConnectOptions {
     
     
     public String lambdaFunctionArn;
+
     public ClientConnectOptions withLambdaFunctionArn(String lambdaFunctionArn) {
         this.lambdaFunctionArn = lambdaFunctionArn;
         return this;
     }
     
+    public ClientConnectOptions(){}
 }

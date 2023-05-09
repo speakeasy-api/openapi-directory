@@ -16,6 +16,7 @@ public class PublicKeyFull {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public PublicKeyFull withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -23,6 +24,7 @@ public class PublicKeyFull {
     
     @JsonProperty("id")
     public Long id;
+
     public PublicKeyFull withId(Long id) {
         this.id = id;
         return this;
@@ -30,6 +32,7 @@ public class PublicKeyFull {
     
     @JsonProperty("key")
     public String key;
+
     public PublicKeyFull withKey(String key) {
         this.key = key;
         return this;
@@ -37,6 +40,7 @@ public class PublicKeyFull {
     
     @JsonProperty("read_only")
     public Boolean readOnly;
+
     public PublicKeyFull withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -44,6 +48,7 @@ public class PublicKeyFull {
     
     @JsonProperty("repository_id")
     public Long repositoryId;
+
     public PublicKeyFull withRepositoryId(Long repositoryId) {
         this.repositoryId = repositoryId;
         return this;
@@ -51,6 +56,7 @@ public class PublicKeyFull {
     
     @JsonProperty("title")
     public String title;
+
     public PublicKeyFull withTitle(String title) {
         this.title = title;
         return this;
@@ -58,6 +64,7 @@ public class PublicKeyFull {
     
     @JsonProperty("url")
     public String url;
+
     public PublicKeyFull withUrl(String url) {
         this.url = url;
         return this;
@@ -65,6 +72,7 @@ public class PublicKeyFull {
     
     @JsonProperty("user_id")
     public Long userId;
+
     public PublicKeyFull withUserId(Long userId) {
         this.userId = userId;
         return this;
@@ -72,9 +80,21 @@ public class PublicKeyFull {
     
     @JsonProperty("verified")
     public Boolean verified;
+
     public PublicKeyFull withVerified(Boolean verified) {
         this.verified = verified;
         return this;
     }
     
+    public PublicKeyFull(@JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("id") Long id, @JsonProperty("key") String key, @JsonProperty("read_only") Boolean readOnly, @JsonProperty("repository_id") Long repositoryId, @JsonProperty("title") String title, @JsonProperty("url") String url, @JsonProperty("user_id") Long userId, @JsonProperty("verified") Boolean verified) {
+        this.createdAt = createdAt;
+        this.id = id;
+        this.key = key;
+        this.readOnly = readOnly;
+        this.repositoryId = repositoryId;
+        this.title = title;
+        this.url = url;
+        this.userId = userId;
+        this.verified = verified;
+  }
 }

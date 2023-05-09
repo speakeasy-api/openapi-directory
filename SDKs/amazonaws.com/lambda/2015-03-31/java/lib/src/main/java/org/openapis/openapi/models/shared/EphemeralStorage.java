@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EphemeralStorage {
     @JsonProperty("Size")
     public Long size;
+
     public EphemeralStorage withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public EphemeralStorage(@JsonProperty("Size") Long size) {
+        this.size = size;
+  }
 }

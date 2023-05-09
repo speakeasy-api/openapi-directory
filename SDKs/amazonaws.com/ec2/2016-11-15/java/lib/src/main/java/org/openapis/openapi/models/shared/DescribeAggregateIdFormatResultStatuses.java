@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeAggregateIdFormatResultStatuses {
     
     public OffsetDateTime deadline;
+
     public DescribeAggregateIdFormatResultStatuses withDeadline(OffsetDateTime deadline) {
         this.deadline = deadline;
         return this;
@@ -19,6 +20,7 @@ public class DescribeAggregateIdFormatResultStatuses {
     
     
     public String resource;
+
     public DescribeAggregateIdFormatResultStatuses withResource(String resource) {
         this.resource = resource;
         return this;
@@ -26,9 +28,11 @@ public class DescribeAggregateIdFormatResultStatuses {
     
     
     public Boolean useLongIds;
+
     public DescribeAggregateIdFormatResultStatuses withUseLongIds(Boolean useLongIds) {
         this.useLongIds = useLongIds;
         return this;
     }
     
+    public DescribeAggregateIdFormatResultStatuses(){}
 }

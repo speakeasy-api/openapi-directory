@@ -15,9 +15,11 @@ public class RebootReplicationInstanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationInstance")
     public ReplicationInstance replicationInstance;
+
     public RebootReplicationInstanceResponse withReplicationInstance(ReplicationInstance replicationInstance) {
         this.replicationInstance = replicationInstance;
         return this;
     }
     
+    public RebootReplicationInstanceResponse(){}
 }

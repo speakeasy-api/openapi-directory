@@ -18,6 +18,7 @@ public class SasPortalNrqzValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseId")
     public String caseId;
+
     public SasPortalNrqzValidation withCaseId(String caseId) {
         this.caseId = caseId;
         return this;
@@ -29,6 +30,7 @@ public class SasPortalNrqzValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpiId")
     public String cpiId;
+
     public SasPortalNrqzValidation withCpiId(String cpiId) {
         this.cpiId = cpiId;
         return this;
@@ -40,6 +42,7 @@ public class SasPortalNrqzValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public SasPortalNrqzValidation withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -51,6 +54,7 @@ public class SasPortalNrqzValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public SasPortalNrqzValidation withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -62,9 +66,11 @@ public class SasPortalNrqzValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public SasPortalNrqzValidationStateEnum state;
+
     public SasPortalNrqzValidation withState(SasPortalNrqzValidationStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public SasPortalNrqzValidation(){}
 }

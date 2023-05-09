@@ -15,6 +15,7 @@ public class CreateLocationEfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessPointArn")
     public String accessPointArn;
+
     public CreateLocationEfsRequest withAccessPointArn(String accessPointArn) {
         this.accessPointArn = accessPointArn;
         return this;
@@ -22,6 +23,7 @@ public class CreateLocationEfsRequest {
     
     @JsonProperty("Ec2Config")
     public Ec2Config ec2Config;
+
     public CreateLocationEfsRequest withEc2Config(Ec2Config ec2Config) {
         this.ec2Config = ec2Config;
         return this;
@@ -29,6 +31,7 @@ public class CreateLocationEfsRequest {
     
     @JsonProperty("EfsFilesystemArn")
     public String efsFilesystemArn;
+
     public CreateLocationEfsRequest withEfsFilesystemArn(String efsFilesystemArn) {
         this.efsFilesystemArn = efsFilesystemArn;
         return this;
@@ -37,6 +40,7 @@ public class CreateLocationEfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemAccessRoleArn")
     public String fileSystemAccessRoleArn;
+
     public CreateLocationEfsRequest withFileSystemAccessRoleArn(String fileSystemAccessRoleArn) {
         this.fileSystemAccessRoleArn = fileSystemAccessRoleArn;
         return this;
@@ -45,6 +49,7 @@ public class CreateLocationEfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InTransitEncryption")
     public EfsInTransitEncryptionEnum inTransitEncryption;
+
     public CreateLocationEfsRequest withInTransitEncryption(EfsInTransitEncryptionEnum inTransitEncryption) {
         this.inTransitEncryption = inTransitEncryption;
         return this;
@@ -53,6 +58,7 @@ public class CreateLocationEfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subdirectory")
     public String subdirectory;
+
     public CreateLocationEfsRequest withSubdirectory(String subdirectory) {
         this.subdirectory = subdirectory;
         return this;
@@ -61,9 +67,14 @@ public class CreateLocationEfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public TagListEntry[] tags;
+
     public CreateLocationEfsRequest withTags(TagListEntry[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLocationEfsRequest(@JsonProperty("Ec2Config") Ec2Config ec2Config, @JsonProperty("EfsFilesystemArn") String efsFilesystemArn) {
+        this.ec2Config = ec2Config;
+        this.efsFilesystemArn = efsFilesystemArn;
+  }
 }

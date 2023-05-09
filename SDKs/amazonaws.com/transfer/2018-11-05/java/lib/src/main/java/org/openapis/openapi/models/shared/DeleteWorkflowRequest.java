@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteWorkflowRequest {
     @JsonProperty("WorkflowId")
     public String workflowId;
+
     public DeleteWorkflowRequest withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public DeleteWorkflowRequest(@JsonProperty("WorkflowId") String workflowId) {
+        this.workflowId = workflowId;
+  }
 }

@@ -18,6 +18,7 @@ public class RunAggregationQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationQuery")
     public AggregationQuery aggregationQuery;
+
     public RunAggregationQueryRequest withAggregationQuery(AggregationQuery aggregationQuery) {
         this.aggregationQuery = aggregationQuery;
         return this;
@@ -29,6 +30,7 @@ public class RunAggregationQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gqlQuery")
     public GqlQuery gqlQuery;
+
     public RunAggregationQueryRequest withGqlQuery(GqlQuery gqlQuery) {
         this.gqlQuery = gqlQuery;
         return this;
@@ -40,6 +42,7 @@ public class RunAggregationQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitionId")
     public PartitionId partitionId;
+
     public RunAggregationQueryRequest withPartitionId(PartitionId partitionId) {
         this.partitionId = partitionId;
         return this;
@@ -51,9 +54,11 @@ public class RunAggregationQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readOptions")
     public ReadOptions readOptions;
+
     public RunAggregationQueryRequest withReadOptions(ReadOptions readOptions) {
         this.readOptions = readOptions;
         return this;
     }
     
+    public RunAggregationQueryRequest(){}
 }

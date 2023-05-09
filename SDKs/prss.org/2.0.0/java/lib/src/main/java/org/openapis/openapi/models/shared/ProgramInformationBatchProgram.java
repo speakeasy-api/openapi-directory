@@ -15,6 +15,7 @@ public class ProgramInformationBatchProgram {
      */
     @JsonProperty("airDate")
     public String airDate;
+
     public ProgramInformationBatchProgram withAirDate(String airDate) {
         this.airDate = airDate;
         return this;
@@ -25,9 +26,14 @@ public class ProgramInformationBatchProgram {
      */
     @JsonProperty("title")
     public String title;
+
     public ProgramInformationBatchProgram withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ProgramInformationBatchProgram(@JsonProperty("airDate") String airDate, @JsonProperty("title") String title) {
+        this.airDate = airDate;
+        this.title = title;
+  }
 }

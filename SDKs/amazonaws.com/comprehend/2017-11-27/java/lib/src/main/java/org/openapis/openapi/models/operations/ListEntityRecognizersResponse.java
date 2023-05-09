@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEntityRecognizersResponse {
     
     public String contentType;
+
     public ListEntityRecognizersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListEntityRecognizersResponse {
      */
     
     public Object internalServerException;
+
     public ListEntityRecognizersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListEntityRecognizersResponse {
      */
     
     public Object invalidFilterException;
+
     public ListEntityRecognizersResponse withInvalidFilterException(Object invalidFilterException) {
         this.invalidFilterException = invalidFilterException;
         return this;
@@ -39,6 +43,7 @@ public class ListEntityRecognizersResponse {
      */
     
     public Object invalidRequestException;
+
     public ListEntityRecognizersResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListEntityRecognizersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEntityRecognizersResponse listEntityRecognizersResponse;
+
     public ListEntityRecognizersResponse withListEntityRecognizersResponse(org.openapis.openapi.models.shared.ListEntityRecognizersResponse listEntityRecognizersResponse) {
         this.listEntityRecognizersResponse = listEntityRecognizersResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListEntityRecognizersResponse {
     
     
     public Integer statusCode;
+
     public ListEntityRecognizersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListEntityRecognizersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEntityRecognizersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListEntityRecognizersResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListEntityRecognizersResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListEntityRecognizersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

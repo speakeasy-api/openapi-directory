@@ -15,6 +15,7 @@ public class BatchDescribeMergeConflictsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseCommitId")
     public String baseCommitId;
+
     public BatchDescribeMergeConflictsOutput withBaseCommitId(String baseCommitId) {
         this.baseCommitId = baseCommitId;
         return this;
@@ -22,6 +23,7 @@ public class BatchDescribeMergeConflictsOutput {
     
     @JsonProperty("conflicts")
     public Conflict[] conflicts;
+
     public BatchDescribeMergeConflictsOutput withConflicts(Conflict[] conflicts) {
         this.conflicts = conflicts;
         return this;
@@ -29,6 +31,7 @@ public class BatchDescribeMergeConflictsOutput {
     
     @JsonProperty("destinationCommitId")
     public String destinationCommitId;
+
     public BatchDescribeMergeConflictsOutput withDestinationCommitId(String destinationCommitId) {
         this.destinationCommitId = destinationCommitId;
         return this;
@@ -37,6 +40,7 @@ public class BatchDescribeMergeConflictsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public BatchDescribeMergeConflictsError[] errors;
+
     public BatchDescribeMergeConflictsOutput withErrors(BatchDescribeMergeConflictsError[] errors) {
         this.errors = errors;
         return this;
@@ -45,6 +49,7 @@ public class BatchDescribeMergeConflictsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public BatchDescribeMergeConflictsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -52,9 +57,15 @@ public class BatchDescribeMergeConflictsOutput {
     
     @JsonProperty("sourceCommitId")
     public String sourceCommitId;
+
     public BatchDescribeMergeConflictsOutput withSourceCommitId(String sourceCommitId) {
         this.sourceCommitId = sourceCommitId;
         return this;
     }
     
+    public BatchDescribeMergeConflictsOutput(@JsonProperty("conflicts") Conflict[] conflicts, @JsonProperty("destinationCommitId") String destinationCommitId, @JsonProperty("sourceCommitId") String sourceCommitId) {
+        this.conflicts = conflicts;
+        this.destinationCommitId = destinationCommitId;
+        this.sourceCommitId = sourceCommitId;
+  }
 }

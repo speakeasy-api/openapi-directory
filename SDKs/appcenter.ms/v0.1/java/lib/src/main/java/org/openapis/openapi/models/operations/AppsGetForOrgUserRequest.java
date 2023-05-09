@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsGetForOrgUserRequest {
@@ -12,6 +13,7 @@ public class AppsGetForOrgUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
     public String orgName;
+
     public AppsGetForOrgUserRequest withOrgName(String orgName) {
         this.orgName = orgName;
         return this;
@@ -22,9 +24,14 @@ public class AppsGetForOrgUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_name")
     public String userName;
+
     public AppsGetForOrgUserRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public AppsGetForOrgUserRequest(@JsonProperty("org_name") String orgName, @JsonProperty("user_name") String userName) {
+        this.orgName = orgName;
+        this.userName = userName;
+  }
 }

@@ -18,6 +18,7 @@ public class RfeExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public RfeDetailsVO result;
+
     public RfeExpandVO withResult(RfeDetailsVO result) {
         this.result = result;
         return this;
@@ -26,6 +27,7 @@ public class RfeExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public RfeExpandVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -34,9 +36,11 @@ public class RfeExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public RfeExpandVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public RfeExpandVO(){}
 }

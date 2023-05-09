@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAutoScalingGroupRecommendationsResponse {
@@ -12,6 +13,7 @@ public class GetAutoScalingGroupRecommendationsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetAutoScalingGroupRecommendationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetAutoScalingGroupRecommendationsResponse {
     
     
     public String contentType;
+
     public GetAutoScalingGroupRecommendationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAutoScalingGroupRecommendationsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAutoScalingGroupRecommendationsResponse getAutoScalingGroupRecommendationsResponse;
+
     public GetAutoScalingGroupRecommendationsResponse withGetAutoScalingGroupRecommendationsResponse(org.openapis.openapi.models.shared.GetAutoScalingGroupRecommendationsResponse getAutoScalingGroupRecommendationsResponse) {
         this.getAutoScalingGroupRecommendationsResponse = getAutoScalingGroupRecommendationsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetAutoScalingGroupRecommendationsResponse {
      */
     
     public Object internalServerException;
+
     public GetAutoScalingGroupRecommendationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetAutoScalingGroupRecommendationsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetAutoScalingGroupRecommendationsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class GetAutoScalingGroupRecommendationsResponse {
      */
     
     public Object missingAuthenticationToken;
+
     public GetAutoScalingGroupRecommendationsResponse withMissingAuthenticationToken(Object missingAuthenticationToken) {
         this.missingAuthenticationToken = missingAuthenticationToken;
         return this;
@@ -69,6 +76,7 @@ public class GetAutoScalingGroupRecommendationsResponse {
      */
     
     public Object optInRequiredException;
+
     public GetAutoScalingGroupRecommendationsResponse withOptInRequiredException(Object optInRequiredException) {
         this.optInRequiredException = optInRequiredException;
         return this;
@@ -76,6 +84,7 @@ public class GetAutoScalingGroupRecommendationsResponse {
     
     
     public Integer statusCode;
+
     public GetAutoScalingGroupRecommendationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetAutoScalingGroupRecommendationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAutoScalingGroupRecommendationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetAutoScalingGroupRecommendationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAutoScalingGroupRecommendationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class GetAutoScalingGroupRecommendationsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetAutoScalingGroupRecommendationsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class GetAutoScalingGroupRecommendationsResponse {
      */
     
     public Object throttlingException;
+
     public GetAutoScalingGroupRecommendationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetAutoScalingGroupRecommendationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

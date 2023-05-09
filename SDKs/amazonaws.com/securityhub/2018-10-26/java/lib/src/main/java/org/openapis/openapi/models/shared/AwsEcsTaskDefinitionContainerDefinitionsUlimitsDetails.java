@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsUlimitsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HardLimit")
     public Long hardLimit;
+
     public AwsEcsTaskDefinitionContainerDefinitionsUlimitsDetails withHardLimit(Long hardLimit) {
         this.hardLimit = hardLimit;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsUlimitsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsEcsTaskDefinitionContainerDefinitionsUlimitsDetails withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class AwsEcsTaskDefinitionContainerDefinitionsUlimitsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SoftLimit")
     public Long softLimit;
+
     public AwsEcsTaskDefinitionContainerDefinitionsUlimitsDetails withSoftLimit(Long softLimit) {
         this.softLimit = softLimit;
         return this;
     }
     
+    public AwsEcsTaskDefinitionContainerDefinitionsUlimitsDetails(){}
 }

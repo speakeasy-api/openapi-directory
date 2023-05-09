@@ -22,6 +22,7 @@ public class AudioAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effect")
     public AudioAssetEffectEnum effect;
+
     public AudioAsset withEffect(AudioAssetEffectEnum effect) {
         this.effect = effect;
         return this;
@@ -32,6 +33,7 @@ public class AudioAsset {
      */
     @JsonProperty("src")
     public String src;
+
     public AudioAsset withSrc(String src) {
         this.src = src;
         return this;
@@ -43,6 +45,7 @@ public class AudioAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trim")
     public Double trim;
+
     public AudioAsset withTrim(Double trim) {
         this.trim = trim;
         return this;
@@ -53,6 +56,7 @@ public class AudioAsset {
      */
     @JsonProperty("type")
     public String type;
+
     public AudioAsset withType(String type) {
         this.type = type;
         return this;
@@ -64,9 +68,14 @@ public class AudioAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volume")
     public Double volume;
+
     public AudioAsset withVolume(Double volume) {
         this.volume = volume;
         return this;
     }
     
+    public AudioAsset(@JsonProperty("src") String src, @JsonProperty("type") String type) {
+        this.src = src;
+        this.type = type;
+  }
 }

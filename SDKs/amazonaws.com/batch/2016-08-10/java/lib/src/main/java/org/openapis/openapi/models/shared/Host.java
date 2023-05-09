@@ -15,9 +15,11 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourcePath")
     public String sourcePath;
+
     public Host withSourcePath(String sourcePath) {
         this.sourcePath = sourcePath;
         return this;
     }
     
+    public Host(){}
 }

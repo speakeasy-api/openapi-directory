@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class FetchActionResponse {
     
     public Action action;
+
     public FetchActionResponse withAction(Action action) {
         this.action = action;
         return this;
@@ -19,9 +20,11 @@ public class FetchActionResponse {
     
     
     public Integer appVersion;
+
     public FetchActionResponse withAppVersion(Integer appVersion) {
         this.appVersion = appVersion;
         return this;
     }
     
+    public FetchActionResponse(){}
 }

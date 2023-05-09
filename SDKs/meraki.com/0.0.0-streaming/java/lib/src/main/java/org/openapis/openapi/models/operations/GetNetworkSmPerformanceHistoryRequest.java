@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkSmPerformanceHistoryRequest {
@@ -12,6 +13,7 @@ public class GetNetworkSmPerformanceHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endingBefore")
     public String endingBefore;
+
     public GetNetworkSmPerformanceHistoryRequest withEndingBefore(String endingBefore) {
         this.endingBefore = endingBefore;
         return this;
@@ -19,6 +21,7 @@ public class GetNetworkSmPerformanceHistoryRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetNetworkSmPerformanceHistoryRequest withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +29,7 @@ public class GetNetworkSmPerformanceHistoryRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=network_id")
     public String networkId;
+
     public GetNetworkSmPerformanceHistoryRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -36,6 +40,7 @@ public class GetNetworkSmPerformanceHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
     public Long perPage;
+
     public GetNetworkSmPerformanceHistoryRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -46,9 +51,14 @@ public class GetNetworkSmPerformanceHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startingAfter")
     public String startingAfter;
+
     public GetNetworkSmPerformanceHistoryRequest withStartingAfter(String startingAfter) {
         this.startingAfter = startingAfter;
         return this;
     }
     
+    public GetNetworkSmPerformanceHistoryRequest(@JsonProperty("id") String id, @JsonProperty("network_id") String networkId) {
+        this.id = id;
+        this.networkId = networkId;
+  }
 }

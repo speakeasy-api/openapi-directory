@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsListRunnerApplicationsForRepoRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsListRunnerApplicationsForRepoRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -16,9 +18,14 @@ public class ActionsListRunnerApplicationsForRepoRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsListRunnerApplicationsForRepoRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ActionsListRunnerApplicationsForRepoRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

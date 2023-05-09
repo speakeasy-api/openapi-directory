@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SimulatePolicyResponse {
     
     public EvaluationResult[] evaluationResults;
+
     public SimulatePolicyResponse withEvaluationResults(EvaluationResult[] evaluationResults) {
         this.evaluationResults = evaluationResults;
         return this;
@@ -19,6 +20,7 @@ public class SimulatePolicyResponse {
     
     
     public Boolean isTruncated;
+
     public SimulatePolicyResponse withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -26,9 +28,11 @@ public class SimulatePolicyResponse {
     
     
     public String marker;
+
     public SimulatePolicyResponse withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public SimulatePolicyResponse(){}
 }

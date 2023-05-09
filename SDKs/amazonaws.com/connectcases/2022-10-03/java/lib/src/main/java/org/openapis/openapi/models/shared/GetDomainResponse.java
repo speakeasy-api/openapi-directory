@@ -21,6 +21,7 @@ public class GetDomainResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdTime")
     public OffsetDateTime createdTime;
+
     public GetDomainResponse withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -28,6 +29,7 @@ public class GetDomainResponse {
     
     @JsonProperty("domainArn")
     public String domainArn;
+
     public GetDomainResponse withDomainArn(String domainArn) {
         this.domainArn = domainArn;
         return this;
@@ -35,6 +37,7 @@ public class GetDomainResponse {
     
     @JsonProperty("domainId")
     public String domainId;
+
     public GetDomainResponse withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -42,6 +45,7 @@ public class GetDomainResponse {
     
     @JsonProperty("domainStatus")
     public DomainStatusEnum domainStatus;
+
     public GetDomainResponse withDomainStatus(DomainStatusEnum domainStatus) {
         this.domainStatus = domainStatus;
         return this;
@@ -49,6 +53,7 @@ public class GetDomainResponse {
     
     @JsonProperty("name")
     public String name;
+
     public GetDomainResponse withName(String name) {
         this.name = name;
         return this;
@@ -57,9 +62,17 @@ public class GetDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetDomainResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetDomainResponse(@JsonProperty("createdTime") OffsetDateTime createdTime, @JsonProperty("domainArn") String domainArn, @JsonProperty("domainId") String domainId, @JsonProperty("domainStatus") DomainStatusEnum domainStatus, @JsonProperty("name") String name) {
+        this.createdTime = createdTime;
+        this.domainArn = domainArn;
+        this.domainId = domainId;
+        this.domainStatus = domainStatus;
+        this.name = name;
+  }
 }

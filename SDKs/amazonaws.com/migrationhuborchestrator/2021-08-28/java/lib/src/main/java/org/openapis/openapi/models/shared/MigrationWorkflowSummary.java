@@ -20,6 +20,7 @@ public class MigrationWorkflowSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adsApplicationConfigurationName")
     public String adsApplicationConfigurationName;
+
     public MigrationWorkflowSummary withAdsApplicationConfigurationName(String adsApplicationConfigurationName) {
         this.adsApplicationConfigurationName = adsApplicationConfigurationName;
         return this;
@@ -28,6 +29,7 @@ public class MigrationWorkflowSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completedSteps")
     public Long completedSteps;
+
     public MigrationWorkflowSummary withCompletedSteps(Long completedSteps) {
         this.completedSteps = completedSteps;
         return this;
@@ -38,6 +40,7 @@ public class MigrationWorkflowSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public MigrationWorkflowSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -48,6 +51,7 @@ public class MigrationWorkflowSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public MigrationWorkflowSummary withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -56,6 +60,7 @@ public class MigrationWorkflowSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public MigrationWorkflowSummary withId(String id) {
         this.id = id;
         return this;
@@ -64,6 +69,7 @@ public class MigrationWorkflowSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MigrationWorkflowSummary withName(String name) {
         this.name = name;
         return this;
@@ -72,6 +78,7 @@ public class MigrationWorkflowSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public MigrationWorkflowStatusEnumEnum status;
+
     public MigrationWorkflowSummary withStatus(MigrationWorkflowStatusEnumEnum status) {
         this.status = status;
         return this;
@@ -80,6 +87,7 @@ public class MigrationWorkflowSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public MigrationWorkflowSummary withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -88,6 +96,7 @@ public class MigrationWorkflowSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateId")
     public String templateId;
+
     public MigrationWorkflowSummary withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
@@ -96,9 +105,11 @@ public class MigrationWorkflowSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSteps")
     public Long totalSteps;
+
     public MigrationWorkflowSummary withTotalSteps(Long totalSteps) {
         this.totalSteps = totalSteps;
         return this;
     }
     
+    public MigrationWorkflowSummary(){}
 }

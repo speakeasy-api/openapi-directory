@@ -54,11 +54,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelFineTuneResponse res = new org.openapis.openapi.models.operations.CancelFineTuneResponse() {{
+        org.openapis.openapi.models.operations.CancelFineTuneResponse res = new org.openapis.openapi.models.operations.CancelFineTuneResponse(contentType, httpRes.statusCode()) {{
             fineTune = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -77,7 +75,9 @@ public class OpenAI {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CreateAnswerResponse createAnswer(org.openapis.openapi.models.shared.CreateAnswerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/answers");
@@ -97,11 +97,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAnswerResponse res = new org.openapis.openapi.models.operations.CreateAnswerResponse() {{
+        org.openapis.openapi.models.operations.CreateAnswerResponse res = new org.openapis.openapi.models.operations.CreateAnswerResponse(contentType, httpRes.statusCode()) {{
             createAnswerResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -140,11 +138,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateChatCompletionResponse res = new org.openapis.openapi.models.operations.CreateChatCompletionResponse() {{
+        org.openapis.openapi.models.operations.CreateChatCompletionResponse res = new org.openapis.openapi.models.operations.CreateChatCompletionResponse(contentType, httpRes.statusCode()) {{
             createChatCompletionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -163,7 +159,9 @@ public class OpenAI {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CreateClassificationResponse createClassification(org.openapis.openapi.models.shared.CreateClassificationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/classifications");
@@ -183,11 +181,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateClassificationResponse res = new org.openapis.openapi.models.operations.CreateClassificationResponse() {{
+        org.openapis.openapi.models.operations.CreateClassificationResponse res = new org.openapis.openapi.models.operations.CreateClassificationResponse(contentType, httpRes.statusCode()) {{
             createClassificationResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -226,11 +222,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCompletionResponse res = new org.openapis.openapi.models.operations.CreateCompletionResponse() {{
+        org.openapis.openapi.models.operations.CreateCompletionResponse res = new org.openapis.openapi.models.operations.CreateCompletionResponse(contentType, httpRes.statusCode()) {{
             createCompletionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -269,11 +263,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateEditResponse res = new org.openapis.openapi.models.operations.CreateEditResponse() {{
+        org.openapis.openapi.models.operations.CreateEditResponse res = new org.openapis.openapi.models.operations.CreateEditResponse(contentType, httpRes.statusCode()) {{
             createEditResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -312,11 +304,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateEmbeddingResponse res = new org.openapis.openapi.models.operations.CreateEmbeddingResponse() {{
+        org.openapis.openapi.models.operations.CreateEmbeddingResponse res = new org.openapis.openapi.models.operations.CreateEmbeddingResponse(contentType, httpRes.statusCode()) {{
             createEmbeddingResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -355,11 +345,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFileResponse res = new org.openapis.openapi.models.operations.CreateFileResponse() {{
+        org.openapis.openapi.models.operations.CreateFileResponse res = new org.openapis.openapi.models.operations.CreateFileResponse(contentType, httpRes.statusCode()) {{
             openAIFile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -398,11 +386,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFineTuneResponse res = new org.openapis.openapi.models.operations.CreateFineTuneResponse() {{
+        org.openapis.openapi.models.operations.CreateFineTuneResponse res = new org.openapis.openapi.models.operations.CreateFineTuneResponse(contentType, httpRes.statusCode()) {{
             fineTune = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -441,11 +427,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateImageResponse res = new org.openapis.openapi.models.operations.CreateImageResponse() {{
+        org.openapis.openapi.models.operations.CreateImageResponse res = new org.openapis.openapi.models.operations.CreateImageResponse(contentType, httpRes.statusCode()) {{
             imagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,11 +468,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateImageEditResponse res = new org.openapis.openapi.models.operations.CreateImageEditResponse() {{
+        org.openapis.openapi.models.operations.CreateImageEditResponse res = new org.openapis.openapi.models.operations.CreateImageEditResponse(contentType, httpRes.statusCode()) {{
             imagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -527,11 +509,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateImageVariationResponse res = new org.openapis.openapi.models.operations.CreateImageVariationResponse() {{
+        org.openapis.openapi.models.operations.CreateImageVariationResponse res = new org.openapis.openapi.models.operations.CreateImageVariationResponse(contentType, httpRes.statusCode()) {{
             imagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -570,11 +550,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateModerationResponse res = new org.openapis.openapi.models.operations.CreateModerationResponse() {{
+        org.openapis.openapi.models.operations.CreateModerationResponse res = new org.openapis.openapi.models.operations.CreateModerationResponse(contentType, httpRes.statusCode()) {{
             createModerationResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -593,7 +571,9 @@ public class OpenAI {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CreateSearchResponse createSearch(org.openapis.openapi.models.operations.CreateSearchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSearchRequest.class, baseUrl, "/engines/{engine_id}/search", request, null);
@@ -613,11 +593,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSearchResponse res = new org.openapis.openapi.models.operations.CreateSearchResponse() {{
+        org.openapis.openapi.models.operations.CreateSearchResponse res = new org.openapis.openapi.models.operations.CreateSearchResponse(contentType, httpRes.statusCode()) {{
             createSearchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -656,11 +634,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTranscriptionResponse res = new org.openapis.openapi.models.operations.CreateTranscriptionResponse() {{
+        org.openapis.openapi.models.operations.CreateTranscriptionResponse res = new org.openapis.openapi.models.operations.CreateTranscriptionResponse(contentType, httpRes.statusCode()) {{
             createTranscriptionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -699,11 +675,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTranslationResponse res = new org.openapis.openapi.models.operations.CreateTranslationResponse() {{
+        org.openapis.openapi.models.operations.CreateTranslationResponse res = new org.openapis.openapi.models.operations.CreateTranslationResponse(contentType, httpRes.statusCode()) {{
             createTranslationResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -737,11 +711,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFileResponse res = new org.openapis.openapi.models.operations.DeleteFileResponse() {{
+        org.openapis.openapi.models.operations.DeleteFileResponse res = new org.openapis.openapi.models.operations.DeleteFileResponse(contentType, httpRes.statusCode()) {{
             deleteFileResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -775,11 +747,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteModelResponse res = new org.openapis.openapi.models.operations.DeleteModelResponse() {{
+        org.openapis.openapi.models.operations.DeleteModelResponse res = new org.openapis.openapi.models.operations.DeleteModelResponse(contentType, httpRes.statusCode()) {{
             deleteModelResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -813,11 +783,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DownloadFileResponse res = new org.openapis.openapi.models.operations.DownloadFileResponse() {{
+        org.openapis.openapi.models.operations.DownloadFileResponse res = new org.openapis.openapi.models.operations.DownloadFileResponse(contentType, httpRes.statusCode()) {{
             downloadFile200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -834,7 +802,9 @@ public class OpenAI {
      * Lists the currently available (non-finetuned) models, and provides basic information about each one such as the owner and availability.
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ListEnginesResponse listEngines() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/engines");
@@ -849,11 +819,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListEnginesResponse res = new org.openapis.openapi.models.operations.ListEnginesResponse() {{
+        org.openapis.openapi.models.operations.ListEnginesResponse res = new org.openapis.openapi.models.operations.ListEnginesResponse(contentType, httpRes.statusCode()) {{
             listEnginesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -886,11 +854,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFilesResponse res = new org.openapis.openapi.models.operations.ListFilesResponse() {{
+        org.openapis.openapi.models.operations.ListFilesResponse res = new org.openapis.openapi.models.operations.ListFilesResponse(contentType, httpRes.statusCode()) {{
             listFilesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -930,11 +896,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFineTuneEventsResponse res = new org.openapis.openapi.models.operations.ListFineTuneEventsResponse() {{
+        org.openapis.openapi.models.operations.ListFineTuneEventsResponse res = new org.openapis.openapi.models.operations.ListFineTuneEventsResponse(contentType, httpRes.statusCode()) {{
             listFineTuneEventsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -967,11 +931,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFineTunesResponse res = new org.openapis.openapi.models.operations.ListFineTunesResponse() {{
+        org.openapis.openapi.models.operations.ListFineTunesResponse res = new org.openapis.openapi.models.operations.ListFineTunesResponse(contentType, httpRes.statusCode()) {{
             listFineTunesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1004,11 +966,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListModelsResponse res = new org.openapis.openapi.models.operations.ListModelsResponse() {{
+        org.openapis.openapi.models.operations.ListModelsResponse res = new org.openapis.openapi.models.operations.ListModelsResponse(contentType, httpRes.statusCode()) {{
             listModelsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1027,7 +987,9 @@ public class OpenAI {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.RetrieveEngineResponse retrieveEngine(org.openapis.openapi.models.operations.RetrieveEngineRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveEngineRequest.class, baseUrl, "/engines/{engine_id}", request, null);
@@ -1042,11 +1004,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveEngineResponse res = new org.openapis.openapi.models.operations.RetrieveEngineResponse() {{
+        org.openapis.openapi.models.operations.RetrieveEngineResponse res = new org.openapis.openapi.models.operations.RetrieveEngineResponse(contentType, httpRes.statusCode()) {{
             engine = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1080,11 +1040,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveFileResponse res = new org.openapis.openapi.models.operations.RetrieveFileResponse() {{
+        org.openapis.openapi.models.operations.RetrieveFileResponse res = new org.openapis.openapi.models.operations.RetrieveFileResponse(contentType, httpRes.statusCode()) {{
             openAIFile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1118,11 +1076,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveFineTuneResponse res = new org.openapis.openapi.models.operations.RetrieveFineTuneResponse() {{
+        org.openapis.openapi.models.operations.RetrieveFineTuneResponse res = new org.openapis.openapi.models.operations.RetrieveFineTuneResponse(contentType, httpRes.statusCode()) {{
             fineTune = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1156,11 +1112,9 @@ public class OpenAI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveModelResponse res = new org.openapis.openapi.models.operations.RetrieveModelResponse() {{
+        org.openapis.openapi.models.operations.RetrieveModelResponse res = new org.openapis.openapi.models.operations.RetrieveModelResponse(contentType, httpRes.statusCode()) {{
             model = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

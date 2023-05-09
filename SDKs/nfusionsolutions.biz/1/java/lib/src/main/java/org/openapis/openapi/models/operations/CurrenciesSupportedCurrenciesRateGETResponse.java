@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CurrenciesSupportedCurrenciesRateGETResponse {
     
     public byte[] body;
+
     public CurrenciesSupportedCurrenciesRateGETResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CurrenciesSupportedCurrenciesRateGETResponse {
     
     
     public String contentType;
+
     public CurrenciesSupportedCurrenciesRateGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CurrenciesSupportedCurrenciesRateGETResponse {
      */
     
     public String[] currenciesSupportedCurrenciesRateGET200ApplicationJSONStrings;
+
     public CurrenciesSupportedCurrenciesRateGETResponse withCurrenciesSupportedCurrenciesRateGET200ApplicationJSONStrings(String[] currenciesSupportedCurrenciesRateGET200ApplicationJSONStrings) {
         this.currenciesSupportedCurrenciesRateGET200ApplicationJSONStrings = currenciesSupportedCurrenciesRateGET200ApplicationJSONStrings;
         return this;
@@ -33,6 +37,7 @@ public class CurrenciesSupportedCurrenciesRateGETResponse {
     
     
     public Integer statusCode;
+
     public CurrenciesSupportedCurrenciesRateGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class CurrenciesSupportedCurrenciesRateGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CurrenciesSupportedCurrenciesRateGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CurrenciesSupportedCurrenciesRateGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

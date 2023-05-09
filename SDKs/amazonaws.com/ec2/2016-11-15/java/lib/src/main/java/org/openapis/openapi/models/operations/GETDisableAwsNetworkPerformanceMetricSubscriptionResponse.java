@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETDisableAwsNetworkPerformanceMetricSubscriptionResponse {
     
     public byte[] body;
+
     public GETDisableAwsNetworkPerformanceMetricSubscriptionResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETDisableAwsNetworkPerformanceMetricSubscriptionResponse {
     
     
     public String contentType;
+
     public GETDisableAwsNetworkPerformanceMetricSubscriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETDisableAwsNetworkPerformanceMetricSubscriptionResponse {
     
     
     public Integer statusCode;
+
     public GETDisableAwsNetworkPerformanceMetricSubscriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETDisableAwsNetworkPerformanceMetricSubscriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETDisableAwsNetworkPerformanceMetricSubscriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETDisableAwsNetworkPerformanceMetricSubscriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

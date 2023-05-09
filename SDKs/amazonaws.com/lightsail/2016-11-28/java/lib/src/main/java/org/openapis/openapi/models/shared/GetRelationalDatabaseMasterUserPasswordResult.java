@@ -22,6 +22,7 @@ public class GetRelationalDatabaseMasterUserPasswordResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public GetRelationalDatabaseMasterUserPasswordResult withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,9 +31,11 @@ public class GetRelationalDatabaseMasterUserPasswordResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterUserPassword")
     public String masterUserPassword;
+
     public GetRelationalDatabaseMasterUserPasswordResult withMasterUserPassword(String masterUserPassword) {
         this.masterUserPassword = masterUserPassword;
         return this;
     }
     
+    public GetRelationalDatabaseMasterUserPasswordResult(){}
 }

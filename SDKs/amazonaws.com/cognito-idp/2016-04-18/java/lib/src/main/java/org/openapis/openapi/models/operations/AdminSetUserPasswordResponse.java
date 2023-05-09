@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminSetUserPasswordResponse {
@@ -12,6 +13,7 @@ public class AdminSetUserPasswordResponse {
      */
     
     public java.util.Map<String, Object> adminSetUserPasswordResponse;
+
     public AdminSetUserPasswordResponse withAdminSetUserPasswordResponse(java.util.Map<String, Object> adminSetUserPasswordResponse) {
         this.adminSetUserPasswordResponse = adminSetUserPasswordResponse;
         return this;
@@ -19,6 +21,7 @@ public class AdminSetUserPasswordResponse {
     
     
     public String contentType;
+
     public AdminSetUserPasswordResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AdminSetUserPasswordResponse {
      */
     
     public Object internalErrorException;
+
     public AdminSetUserPasswordResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class AdminSetUserPasswordResponse {
      */
     
     public Object invalidParameterException;
+
     public AdminSetUserPasswordResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class AdminSetUserPasswordResponse {
      */
     
     public Object invalidPasswordException;
+
     public AdminSetUserPasswordResponse withInvalidPasswordException(Object invalidPasswordException) {
         this.invalidPasswordException = invalidPasswordException;
         return this;
@@ -59,6 +65,7 @@ public class AdminSetUserPasswordResponse {
      */
     
     public Object notAuthorizedException;
+
     public AdminSetUserPasswordResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -69,6 +76,7 @@ public class AdminSetUserPasswordResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AdminSetUserPasswordResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class AdminSetUserPasswordResponse {
     
     
     public Integer statusCode;
+
     public AdminSetUserPasswordResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class AdminSetUserPasswordResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminSetUserPasswordResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class AdminSetUserPasswordResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AdminSetUserPasswordResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class AdminSetUserPasswordResponse {
      */
     
     public Object userNotFoundException;
+
     public AdminSetUserPasswordResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public AdminSetUserPasswordResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ public class GetIntegrationRequestBody {
      */
     @JsonProperty("Uri")
     public String uri;
+
     public GetIntegrationRequestBody withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GetIntegrationRequestBody(@JsonProperty("Uri") String uri) {
+        this.uri = uri;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OfferingUser {
     @JsonProperty("email")
     public String email;
+
     public OfferingUser withEmail(String email) {
         this.email = email;
         return this;
@@ -19,6 +20,7 @@ public class OfferingUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public OfferingUser withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -27,6 +29,7 @@ public class OfferingUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isFacilitator")
     public Boolean isFacilitator;
+
     public OfferingUser withIsFacilitator(Boolean isFacilitator) {
         this.isFacilitator = isFacilitator;
         return this;
@@ -35,6 +38,7 @@ public class OfferingUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isMarker")
     public Boolean isMarker;
+
     public OfferingUser withIsMarker(Boolean isMarker) {
         this.isMarker = isMarker;
         return this;
@@ -43,6 +47,7 @@ public class OfferingUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isReadonly")
     public Boolean isReadonly;
+
     public OfferingUser withIsReadonly(Boolean isReadonly) {
         this.isReadonly = isReadonly;
         return this;
@@ -51,6 +56,7 @@ public class OfferingUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public OfferingUser withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -59,6 +65,7 @@ public class OfferingUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public UserMetadata metadata;
+
     public OfferingUser withMetadata(UserMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -67,6 +74,7 @@ public class OfferingUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personId")
     public String personId;
+
     public OfferingUser withPersonId(String personId) {
         this.personId = personId;
         return this;
@@ -75,6 +83,7 @@ public class OfferingUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile")
     public UserProfileRequest profile;
+
     public OfferingUser withProfile(UserProfileRequest profile) {
         this.profile = profile;
         return this;
@@ -83,6 +92,7 @@ public class OfferingUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sendInvite")
     public Boolean sendInvite;
+
     public OfferingUser withSendInvite(Boolean sendInvite) {
         this.sendInvite = sendInvite;
         return this;
@@ -91,9 +101,13 @@ public class OfferingUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sendNotificationEmail")
     public Boolean sendNotificationEmail;
+
     public OfferingUser withSendNotificationEmail(Boolean sendNotificationEmail) {
         this.sendNotificationEmail = sendNotificationEmail;
         return this;
     }
     
+    public OfferingUser(@JsonProperty("email") String email) {
+        this.email = email;
+  }
 }

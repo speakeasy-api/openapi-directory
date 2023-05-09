@@ -18,9 +18,11 @@ public class DeviceIpBlockCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipBlocks")
     public DeviceIpBlock[] ipBlocks;
+
     public DeviceIpBlockCatalog withIpBlocks(DeviceIpBlock[] ipBlocks) {
         this.ipBlocks = ipBlocks;
         return this;
     }
     
+    public DeviceIpBlockCatalog(){}
 }

@@ -12,9 +12,13 @@ public class BatchResetAlarmRequestBody {
      */
     @JsonProperty("resetActionRequests")
     public org.openapis.openapi.models.shared.ResetAlarmActionRequest[] resetActionRequests;
+
     public BatchResetAlarmRequestBody withResetActionRequests(org.openapis.openapi.models.shared.ResetAlarmActionRequest[] resetActionRequests) {
         this.resetActionRequests = resetActionRequests;
         return this;
     }
     
+    public BatchResetAlarmRequestBody(@JsonProperty("resetActionRequests") org.openapis.openapi.models.shared.ResetAlarmActionRequest[] resetActionRequests) {
+        this.resetActionRequests = resetActionRequests;
+  }
 }

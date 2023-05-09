@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTopicRuleDestinationResponse {
@@ -12,6 +13,7 @@ public class UpdateTopicRuleDestinationResponse {
      */
     
     public Object conflictingResourceUpdateException;
+
     public UpdateTopicRuleDestinationResponse withConflictingResourceUpdateException(Object conflictingResourceUpdateException) {
         this.conflictingResourceUpdateException = conflictingResourceUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateTopicRuleDestinationResponse {
     
     
     public String contentType;
+
     public UpdateTopicRuleDestinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateTopicRuleDestinationResponse {
      */
     
     public Object internalException;
+
     public UpdateTopicRuleDestinationResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateTopicRuleDestinationResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateTopicRuleDestinationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateTopicRuleDestinationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateTopicRuleDestinationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateTopicRuleDestinationResponse {
     
     
     public Integer statusCode;
+
     public UpdateTopicRuleDestinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateTopicRuleDestinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTopicRuleDestinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateTopicRuleDestinationResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateTopicRuleDestinationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateTopicRuleDestinationResponse {
      */
     
     public java.util.Map<String, Object> updateTopicRuleDestinationResponse;
+
     public UpdateTopicRuleDestinationResponse withUpdateTopicRuleDestinationResponse(java.util.Map<String, Object> updateTopicRuleDestinationResponse) {
         this.updateTopicRuleDestinationResponse = updateTopicRuleDestinationResponse;
         return this;
     }
     
+    public UpdateTopicRuleDestinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class StartDBInstanceResult {
      */
     
     public DBInstance dbInstance;
+
     public StartDBInstanceResult withDBInstance(DBInstance dbInstance) {
         this.dbInstance = dbInstance;
         return this;
     }
     
+    public StartDBInstanceResult(){}
 }

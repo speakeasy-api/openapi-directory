@@ -15,6 +15,7 @@ public class SearchExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public Filter[] filters;
+
     public SearchExpression withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +24,7 @@ public class SearchExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NestedFilters")
     public NestedFilters[] nestedFilters;
+
     public SearchExpression withNestedFilters(NestedFilters[] nestedFilters) {
         this.nestedFilters = nestedFilters;
         return this;
@@ -31,6 +33,7 @@ public class SearchExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Operator")
     public BooleanOperatorEnum operator;
+
     public SearchExpression withOperator(BooleanOperatorEnum operator) {
         this.operator = operator;
         return this;
@@ -39,9 +42,11 @@ public class SearchExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubExpressions")
     public SearchExpression[] subExpressions;
+
     public SearchExpression withSubExpressions(SearchExpression[] subExpressions) {
         this.subExpressions = subExpressions;
         return this;
     }
     
+    public SearchExpression(){}
 }

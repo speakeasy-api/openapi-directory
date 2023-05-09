@@ -15,6 +15,7 @@ public class InputFileConfiguration {
      */
     @JsonProperty("fetch")
     public InputFileFetchConfiguration fetch;
+
     public InputFileConfiguration withFetch(InputFileFetchConfiguration fetch) {
         this.fetch = fetch;
         return this;
@@ -25,6 +26,7 @@ public class InputFileConfiguration {
      */
     @JsonProperty("fileNumber")
     public Integer fileNumber;
+
     public InputFileConfiguration withFileNumber(Integer fileNumber) {
         this.fileNumber = fileNumber;
         return this;
@@ -36,9 +38,15 @@ public class InputFileConfiguration {
      */
     @JsonProperty("read")
     public InputFileReadConfiguration read;
+
     public InputFileConfiguration withRead(InputFileReadConfiguration read) {
         this.read = read;
         return this;
     }
     
+    public InputFileConfiguration(@JsonProperty("fetch") InputFileFetchConfiguration fetch, @JsonProperty("fileNumber") Integer fileNumber, @JsonProperty("read") InputFileReadConfiguration read) {
+        this.fetch = fetch;
+        this.fileNumber = fileNumber;
+        this.read = read;
+  }
 }

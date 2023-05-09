@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSigninSigninIdRequest {
@@ -12,9 +13,13 @@ public class GetSigninSigninIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=signinId")
     public Long signinId;
+
     public GetSigninSigninIdRequest withSigninId(Long signinId) {
         this.signinId = signinId;
         return this;
     }
     
+    public GetSigninSigninIdRequest(@JsonProperty("signinId") Long signinId) {
+        this.signinId = signinId;
+  }
 }

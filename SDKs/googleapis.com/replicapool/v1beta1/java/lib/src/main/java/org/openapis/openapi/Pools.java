@@ -58,10 +58,8 @@ public class Pools {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteResponse res = new org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteResponse res = new org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class Pools {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReplicapoolPoolsGetResponse res = new org.openapis.openapi.models.operations.ReplicapoolPoolsGetResponse() {{
+        org.openapis.openapi.models.operations.ReplicapoolPoolsGetResponse res = new org.openapis.openapi.models.operations.ReplicapoolPoolsGetResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,11 +141,9 @@ public class Pools {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReplicapoolPoolsInsertResponse res = new org.openapis.openapi.models.operations.ReplicapoolPoolsInsertResponse() {{
+        org.openapis.openapi.models.operations.ReplicapoolPoolsInsertResponse res = new org.openapis.openapi.models.operations.ReplicapoolPoolsInsertResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -190,11 +184,9 @@ public class Pools {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReplicapoolPoolsListResponse res = new org.openapis.openapi.models.operations.ReplicapoolPoolsListResponse() {{
+        org.openapis.openapi.models.operations.ReplicapoolPoolsListResponse res = new org.openapis.openapi.models.operations.ReplicapoolPoolsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -235,11 +227,9 @@ public class Pools {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReplicapoolPoolsResizeResponse res = new org.openapis.openapi.models.operations.ReplicapoolPoolsResizeResponse() {{
+        org.openapis.openapi.models.operations.ReplicapoolPoolsResizeResponse res = new org.openapis.openapi.models.operations.ReplicapoolPoolsResizeResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -282,10 +272,8 @@ public class Pools {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReplicapoolPoolsUpdatetemplateResponse res = new org.openapis.openapi.models.operations.ReplicapoolPoolsUpdatetemplateResponse() {{
+        org.openapis.openapi.models.operations.ReplicapoolPoolsUpdatetemplateResponse res = new org.openapis.openapi.models.operations.ReplicapoolPoolsUpdatetemplateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

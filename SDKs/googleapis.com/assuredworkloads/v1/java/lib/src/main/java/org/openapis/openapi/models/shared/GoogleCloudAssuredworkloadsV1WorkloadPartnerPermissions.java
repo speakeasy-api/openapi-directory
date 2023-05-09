@@ -18,6 +18,7 @@ public class GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataLogsViewer")
     public Boolean dataLogsViewer;
+
     public GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions withDataLogsViewer(Boolean dataLogsViewer) {
         this.dataLogsViewer = dataLogsViewer;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remediateFolderViolations")
     public Boolean remediateFolderViolations;
+
     public GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions withRemediateFolderViolations(Boolean remediateFolderViolations) {
         this.remediateFolderViolations = remediateFolderViolations;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccessApprover")
     public Boolean serviceAccessApprover;
+
     public GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions withServiceAccessApprover(Boolean serviceAccessApprover) {
         this.serviceAccessApprover = serviceAccessApprover;
         return this;
     }
     
+    public GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions(){}
 }

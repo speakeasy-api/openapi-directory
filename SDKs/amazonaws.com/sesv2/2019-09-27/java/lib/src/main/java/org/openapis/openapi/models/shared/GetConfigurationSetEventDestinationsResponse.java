@@ -15,9 +15,11 @@ public class GetConfigurationSetEventDestinationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventDestinations")
     public EventDestination[] eventDestinations;
+
     public GetConfigurationSetEventDestinationsResponse withEventDestinations(EventDestination[] eventDestinations) {
         this.eventDestinations = eventDestinations;
         return this;
     }
     
+    public GetConfigurationSetEventDestinationsResponse(){}
 }

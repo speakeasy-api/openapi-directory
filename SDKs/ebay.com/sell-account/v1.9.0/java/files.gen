@@ -74,6 +74,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetFulfillmentPolicyByN
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateFulfillmentPolicySecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateFulfillmentPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateFulfillmentPolicyResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetKYCSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetKYCResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPaymentsProgramOnboardingSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPaymentsProgramOnboardingRequest.java
@@ -98,7 +99,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/UpdatePaymentPolicyResp
 lib/src/main/java/org/openapis/openapi/models/operations/GetPaymentsProgramSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPaymentsProgramRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPaymentsProgramResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetPrivilegesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPrivilegesResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetOptedInProgramsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetOptedInProgramsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/OptInToProgramSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/OptInToProgramResponse.java
@@ -187,4 +190,18 @@ lib/src/main/java/org/openapis/openapi/models/shared/SalesTax.java
 lib/src/main/java/org/openapis/openapi/models/shared/SalesTaxes.java
 lib/src/main/java/org/openapis/openapi/models/shared/SubscriptionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Subscription.java
+docs/sdk/README.md
+docs/advertisingeligibility/README.md
+docs/custompolicy/README.md
+docs/fulfillmentpolicy/README.md
+docs/kyc/README.md
+docs/onboarding/README.md
+docs/paymentpolicy/README.md
+docs/paymentsprogram/README.md
+docs/privilege/README.md
+docs/program/README.md
+docs/ratetable/README.md
+docs/returnpolicy/README.md
+docs/salestax/README.md
+docs/subscription/README.md
 USAGE.md

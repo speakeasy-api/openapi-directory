@@ -15,6 +15,7 @@ public class VoiceMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Body")
     public String body;
+
     public VoiceMessage withBody(String body) {
         this.body = body;
         return this;
@@ -23,6 +24,7 @@ public class VoiceMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public String languageCode;
+
     public VoiceMessage withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -31,6 +33,7 @@ public class VoiceMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginationNumber")
     public String originationNumber;
+
     public VoiceMessage withOriginationNumber(String originationNumber) {
         this.originationNumber = originationNumber;
         return this;
@@ -39,6 +42,7 @@ public class VoiceMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Substitutions")
     public java.util.Map<String, String[]> substitutions;
+
     public VoiceMessage withSubstitutions(java.util.Map<String, String[]> substitutions) {
         this.substitutions = substitutions;
         return this;
@@ -47,9 +51,11 @@ public class VoiceMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VoiceId")
     public String voiceId;
+
     public VoiceMessage withVoiceId(String voiceId) {
         this.voiceId = voiceId;
         return this;
     }
     
+    public VoiceMessage(){}
 }

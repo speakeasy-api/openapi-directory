@@ -12,6 +12,7 @@ public class DeleteEnvironment200ApplicationJSONEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DeleteEnvironment200ApplicationJSONEnvironment withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class DeleteEnvironment200ApplicationJSONEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public DeleteEnvironment200ApplicationJSONEnvironment withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public DeleteEnvironment200ApplicationJSONEnvironment(){}
 }

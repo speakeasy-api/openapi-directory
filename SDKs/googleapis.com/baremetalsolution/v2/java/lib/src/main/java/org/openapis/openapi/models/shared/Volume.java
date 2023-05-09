@@ -18,6 +18,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attached")
     public Boolean attached;
+
     public Volume withAttached(Boolean attached) {
         this.attached = attached;
         return this;
@@ -29,6 +30,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoGrownSizeGib")
     public String autoGrownSizeGib;
+
     public Volume withAutoGrownSizeGib(String autoGrownSizeGib) {
         this.autoGrownSizeGib = autoGrownSizeGib;
         return this;
@@ -40,6 +42,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootVolume")
     public Boolean bootVolume;
+
     public Volume withBootVolume(Boolean bootVolume) {
         this.bootVolume = bootVolume;
         return this;
@@ -51,6 +54,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentSizeGib")
     public String currentSizeGib;
+
     public Volume withCurrentSizeGib(String currentSizeGib) {
         this.currentSizeGib = currentSizeGib;
         return this;
@@ -62,6 +66,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emergencySizeGib")
     public String emergencySizeGib;
+
     public Volume withEmergencySizeGib(String emergencySizeGib) {
         this.emergencySizeGib = emergencySizeGib;
         return this;
@@ -73,6 +78,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public Volume withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -84,6 +90,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Volume withId(String id) {
         this.id = id;
         return this;
@@ -95,6 +102,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public String[] instances;
+
     public Volume withInstances(String[] instances) {
         this.instances = instances;
         return this;
@@ -106,6 +114,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Volume withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -117,6 +126,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxSizeGib")
     public String maxSizeGib;
+
     public Volume withMaxSizeGib(String maxSizeGib) {
         this.maxSizeGib = maxSizeGib;
         return this;
@@ -128,6 +138,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Volume withName(String name) {
         this.name = name;
         return this;
@@ -139,6 +150,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public Volume withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -150,6 +162,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originallyRequestedSizeGib")
     public String originallyRequestedSizeGib;
+
     public Volume withOriginallyRequestedSizeGib(String originallyRequestedSizeGib) {
         this.originallyRequestedSizeGib = originallyRequestedSizeGib;
         return this;
@@ -161,6 +174,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performanceTier")
     public VolumePerformanceTierEnum performanceTier;
+
     public Volume withPerformanceTier(VolumePerformanceTierEnum performanceTier) {
         this.performanceTier = performanceTier;
         return this;
@@ -172,6 +186,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pod")
     public String pod;
+
     public Volume withPod(String pod) {
         this.pod = pod;
         return this;
@@ -183,6 +198,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public VolumeProtocolEnum protocol;
+
     public Volume withProtocol(VolumeProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -194,6 +210,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remainingSpaceGib")
     public String remainingSpaceGib;
+
     public Volume withRemainingSpaceGib(String remainingSpaceGib) {
         this.remainingSpaceGib = remainingSpaceGib;
         return this;
@@ -205,6 +222,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedSizeGib")
     public String requestedSizeGib;
+
     public Volume withRequestedSizeGib(String requestedSizeGib) {
         this.requestedSizeGib = requestedSizeGib;
         return this;
@@ -216,6 +234,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotAutoDeleteBehavior")
     public VolumeSnapshotAutoDeleteBehaviorEnum snapshotAutoDeleteBehavior;
+
     public Volume withSnapshotAutoDeleteBehavior(VolumeSnapshotAutoDeleteBehaviorEnum snapshotAutoDeleteBehavior) {
         this.snapshotAutoDeleteBehavior = snapshotAutoDeleteBehavior;
         return this;
@@ -227,6 +246,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotEnabled")
     public Boolean snapshotEnabled;
+
     public Volume withSnapshotEnabled(Boolean snapshotEnabled) {
         this.snapshotEnabled = snapshotEnabled;
         return this;
@@ -238,6 +258,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotReservationDetail")
     public SnapshotReservationDetail snapshotReservationDetail;
+
     public Volume withSnapshotReservationDetail(SnapshotReservationDetail snapshotReservationDetail) {
         this.snapshotReservationDetail = snapshotReservationDetail;
         return this;
@@ -249,6 +270,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotSchedulePolicy")
     public String snapshotSchedulePolicy;
+
     public Volume withSnapshotSchedulePolicy(String snapshotSchedulePolicy) {
         this.snapshotSchedulePolicy = snapshotSchedulePolicy;
         return this;
@@ -260,6 +282,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public VolumeStateEnum state;
+
     public Volume withState(VolumeStateEnum state) {
         this.state = state;
         return this;
@@ -271,6 +294,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageAggregatePool")
     public String storageAggregatePool;
+
     public Volume withStorageAggregatePool(String storageAggregatePool) {
         this.storageAggregatePool = storageAggregatePool;
         return this;
@@ -282,6 +306,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageType")
     public VolumeStorageTypeEnum storageType;
+
     public Volume withStorageType(VolumeStorageTypeEnum storageType) {
         this.storageType = storageType;
         return this;
@@ -293,9 +318,11 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workloadProfile")
     public VolumeWorkloadProfileEnum workloadProfile;
+
     public Volume withWorkloadProfile(VolumeWorkloadProfileEnum workloadProfile) {
         this.workloadProfile = workloadProfile;
         return this;
     }
     
+    public Volume(){}
 }

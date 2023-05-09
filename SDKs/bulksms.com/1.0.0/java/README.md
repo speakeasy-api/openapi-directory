@@ -16,10 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.PostRmmPreSignAttachmentSecurity;
 import org.openapis.openapi.models.operations.PostRmmPreSignAttachmentResponse;
+import org.openapis.openapi.models.operations.PostRmmPreSignAttachmentSecurity;
 import org.openapis.openapi.models.shared.PreSignRequest;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,19 +30,21 @@ public class Application {
             org.openapis.openapi.models.shared.PreSignRequest req = new PreSignRequest() {{
                 fileExtension = "pdf";
                 mediaType = "application/pdf";
-            }}            
+            }};            
 
-            PostRmmPreSignAttachmentResponse res = sdk.attachments.postRmmPreSignAttachment(req, new PostRmmPreSignAttachmentSecurity() {{
+            PostRmmPreSignAttachmentResponse res = sdk.attachments.postRmmPreSignAttachment(req, new PostRmmPreSignAttachmentSecurity("corrupti", "provident") {{
                 password = "YOUR_PASSWORD_HERE";
                 username = "YOUR_USERNAME_HERE";
             }});
 
-            if (res.preSignInfo.isPresent()) {
+            if (res.preSignInfo != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -50,38 +52,38 @@ public class Application {
 ## Available Resources and Operations
 
 
-### attachments
+### [attachments](docs/attachments/README.md)
 
-* `postRmmPreSignAttachment` - Upload an attachment via a signed URL
+* [postRmmPreSignAttachment](docs/attachments/README.md#postrmmpresignattachment) - Upload an attachment via a signed URL
 
-### blockedNumbers
+### [blockedNumbers](docs/blockednumbers/README.md)
 
-* `getBlockedNumbers` - List blocked numbers
-* `postBlockedNumbers` - Create a blocked number
+* [getBlockedNumbers](docs/blockednumbers/README.md#getblockednumbers) - List blocked numbers
+* [postBlockedNumbers](docs/blockednumbers/README.md#postblockednumbers) - Create a blocked number
 
-### credits
+### [credits](docs/credits/README.md)
 
-* `postCreditTransfer` - Transfer credits to another account
+* [postCreditTransfer](docs/credits/README.md#postcredittransfer) - Transfer credits to another account
 
-### message
+### [message](docs/message/README.md)
 
-* `getMessages` - Retrieve Messages
-* `getMessagesSend` - Send message by simple GET or POST
-* `getMessagesId` - Show Message
-* `getMessagesIdRelatedReceivedMessages` - List Related Messages
-* `postMessages` - Send Messages
+* [getMessages](docs/message/README.md#getmessages) - Retrieve Messages
+* [getMessagesSend](docs/message/README.md#getmessagessend) - Send message by simple GET or POST
+* [getMessagesId](docs/message/README.md#getmessagesid) - Show Message
+* [getMessagesIdRelatedReceivedMessages](docs/message/README.md#getmessagesidrelatedreceivedmessages) - List Related Messages
+* [postMessages](docs/message/README.md#postmessages) - Send Messages
 
-### profile
+### [profile](docs/profile/README.md)
 
-* `getProfile` - Get profile
+* [getProfile](docs/profile/README.md#getprofile) - Get profile
 
-### webhooks
+### [webhooks](docs/webhooks/README.md)
 
-* `deleteWebhooksId` - Delete a webhook
-* `getWebhooks` - List webhooks
-* `getWebhooksId` - Read a webhook
-* `postWebhooks` - Create a webhook
-* `postWebhooksId` - Update a webhook
+* [deleteWebhooksId](docs/webhooks/README.md#deletewebhooksid) - Delete a webhook
+* [getWebhooks](docs/webhooks/README.md#getwebhooks) - List webhooks
+* [getWebhooksId](docs/webhooks/README.md#getwebhooksid) - Read a webhook
+* [postWebhooks](docs/webhooks/README.md#postwebhooks) - Create a webhook
+* [postWebhooksId](docs/webhooks/README.md#postwebhooksid) - Update a webhook
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -19,9 +19,11 @@ public class VeteranStatusConfirmation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("veteran_status")
     public VeteranStatusConfirmationVeteranStatusEnum veteranStatus;
+
     public VeteranStatusConfirmation withVeteranStatus(VeteranStatusConfirmationVeteranStatusEnum veteranStatus) {
         this.veteranStatus = veteranStatus;
         return this;
     }
     
+    public VeteranStatusConfirmation(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateInternationalStandingOrderConsentsJsonRequest {
@@ -12,6 +13,7 @@ public class CreateInternationalStandingOrderConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public CreateInternationalStandingOrderConsentsJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -22,6 +24,7 @@ public class CreateInternationalStandingOrderConsentsJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.OBWriteInternationalStandingOrderConsent6 obWriteInternationalStandingOrderConsent6;
+
     public CreateInternationalStandingOrderConsentsJsonRequest withOBWriteInternationalStandingOrderConsent6(org.openapis.openapi.models.shared.OBWriteInternationalStandingOrderConsent6 obWriteInternationalStandingOrderConsent6) {
         this.obWriteInternationalStandingOrderConsent6 = obWriteInternationalStandingOrderConsent6;
         return this;
@@ -32,6 +35,7 @@ public class CreateInternationalStandingOrderConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
     public String xCustomerUserAgent;
+
     public CreateInternationalStandingOrderConsentsJsonRequest withXCustomerUserAgent(String xCustomerUserAgent) {
         this.xCustomerUserAgent = xCustomerUserAgent;
         return this;
@@ -44,6 +48,7 @@ public class CreateInternationalStandingOrderConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
     public String xFapiAuthDate;
+
     public CreateInternationalStandingOrderConsentsJsonRequest withXFapiAuthDate(String xFapiAuthDate) {
         this.xFapiAuthDate = xFapiAuthDate;
         return this;
@@ -54,6 +59,7 @@ public class CreateInternationalStandingOrderConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
     public String xFapiCustomerIpAddress;
+
     public CreateInternationalStandingOrderConsentsJsonRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
         this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
         return this;
@@ -64,6 +70,7 @@ public class CreateInternationalStandingOrderConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
     public String xFapiInteractionId;
+
     public CreateInternationalStandingOrderConsentsJsonRequest withXFapiInteractionId(String xFapiInteractionId) {
         this.xFapiInteractionId = xFapiInteractionId;
         return this;
@@ -76,6 +83,7 @@ public class CreateInternationalStandingOrderConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-idempotency-key")
     public String xIdempotencyKey;
+
     public CreateInternationalStandingOrderConsentsJsonRequest withXIdempotencyKey(String xIdempotencyKey) {
         this.xIdempotencyKey = xIdempotencyKey;
         return this;
@@ -86,9 +94,16 @@ public class CreateInternationalStandingOrderConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-jws-signature")
     public String xJwsSignature;
+
     public CreateInternationalStandingOrderConsentsJsonRequest withXJwsSignature(String xJwsSignature) {
         this.xJwsSignature = xJwsSignature;
         return this;
     }
     
+    public CreateInternationalStandingOrderConsentsJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("OBWriteInternationalStandingOrderConsent6") org.openapis.openapi.models.shared.OBWriteInternationalStandingOrderConsent6 obWriteInternationalStandingOrderConsent6, @JsonProperty("x-idempotency-key") String xIdempotencyKey, @JsonProperty("x-jws-signature") String xJwsSignature) {
+        this.authorization = authorization;
+        this.obWriteInternationalStandingOrderConsent6 = obWriteInternationalStandingOrderConsent6;
+        this.xIdempotencyKey = xIdempotencyKey;
+        this.xJwsSignature = xJwsSignature;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOfferingsOfferingIdAnalyticsChannelsChannelIdCommentsResponse {
@@ -12,6 +13,7 @@ public class GetOfferingsOfferingIdAnalyticsChannelsChannelIdCommentsResponse {
      */
     
     public org.openapis.openapi.models.shared.Comment[] comments;
+
     public GetOfferingsOfferingIdAnalyticsChannelsChannelIdCommentsResponse withComments(org.openapis.openapi.models.shared.Comment[] comments) {
         this.comments = comments;
         return this;
@@ -19,6 +21,7 @@ public class GetOfferingsOfferingIdAnalyticsChannelsChannelIdCommentsResponse {
     
     
     public String contentType;
+
     public GetOfferingsOfferingIdAnalyticsChannelsChannelIdCommentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetOfferingsOfferingIdAnalyticsChannelsChannelIdCommentsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetOfferingsOfferingIdAnalyticsChannelsChannelIdCommentsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetOfferingsOfferingIdAnalyticsChannelsChannelIdCommentsResponse {
     
     
     public Integer statusCode;
+
     public GetOfferingsOfferingIdAnalyticsChannelsChannelIdCommentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetOfferingsOfferingIdAnalyticsChannelsChannelIdCommentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOfferingsOfferingIdAnalyticsChannelsChannelIdCommentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetOfferingsOfferingIdAnalyticsChannelsChannelIdCommentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

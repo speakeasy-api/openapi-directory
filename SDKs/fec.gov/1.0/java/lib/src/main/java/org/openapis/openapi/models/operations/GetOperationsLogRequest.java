@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -22,6 +23,7 @@ public class GetOperationsLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amendment_indicator")
     public String[] amendmentIndicator;
+
     public GetOperationsLogRequest withAmendmentIndicator(String[] amendmentIndicator) {
         this.amendmentIndicator = amendmentIndicator;
         return this;
@@ -33,6 +35,7 @@ public class GetOperationsLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetOperationsLogRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -45,6 +48,7 @@ public class GetOperationsLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=beginning_image_number")
     public String[] beginningImageNumber;
+
     public GetOperationsLogRequest withBeginningImageNumber(String[] beginningImageNumber) {
         this.beginningImageNumber = beginningImageNumber;
         return this;
@@ -56,6 +60,7 @@ public class GetOperationsLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_committee_id")
     public String[] candidateCommitteeId;
+
     public GetOperationsLogRequest withCandidateCommitteeId(String[] candidateCommitteeId) {
         this.candidateCommitteeId = candidateCommitteeId;
         return this;
@@ -83,6 +88,7 @@ public class GetOperationsLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=form_type")
     public String[] formType;
+
     public GetOperationsLogRequest withFormType(String[] formType) {
         this.formType = formType;
         return this;
@@ -94,6 +100,7 @@ public class GetOperationsLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_coverage_end_date")
     public LocalDate maxCoverageEndDate;
+
     public GetOperationsLogRequest withMaxCoverageEndDate(LocalDate maxCoverageEndDate) {
         this.maxCoverageEndDate = maxCoverageEndDate;
         return this;
@@ -105,6 +112,7 @@ public class GetOperationsLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_receipt_date")
     public LocalDate maxReceiptDate;
+
     public GetOperationsLogRequest withMaxReceiptDate(LocalDate maxReceiptDate) {
         this.maxReceiptDate = maxReceiptDate;
         return this;
@@ -116,6 +124,7 @@ public class GetOperationsLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_transaction_data_complete_date")
     public LocalDate maxTransactionDataCompleteDate;
+
     public GetOperationsLogRequest withMaxTransactionDataCompleteDate(LocalDate maxTransactionDataCompleteDate) {
         this.maxTransactionDataCompleteDate = maxTransactionDataCompleteDate;
         return this;
@@ -127,6 +136,7 @@ public class GetOperationsLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_coverage_end_date")
     public LocalDate minCoverageEndDate;
+
     public GetOperationsLogRequest withMinCoverageEndDate(LocalDate minCoverageEndDate) {
         this.minCoverageEndDate = minCoverageEndDate;
         return this;
@@ -138,6 +148,7 @@ public class GetOperationsLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_receipt_date")
     public LocalDate minReceiptDate;
+
     public GetOperationsLogRequest withMinReceiptDate(LocalDate minReceiptDate) {
         this.minReceiptDate = minReceiptDate;
         return this;
@@ -149,6 +160,7 @@ public class GetOperationsLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_transaction_data_complete_date")
     public LocalDate minTransactionDataCompleteDate;
+
     public GetOperationsLogRequest withMinTransactionDataCompleteDate(LocalDate minTransactionDataCompleteDate) {
         this.minTransactionDataCompleteDate = minTransactionDataCompleteDate;
         return this;
@@ -159,6 +171,7 @@ public class GetOperationsLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetOperationsLogRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -169,6 +182,7 @@ public class GetOperationsLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetOperationsLogRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -229,6 +243,7 @@ public class GetOperationsLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_type")
     public String[] reportType;
+
     public GetOperationsLogRequest withReportType(String[] reportType) {
         this.reportType = reportType;
         return this;
@@ -243,6 +258,7 @@ public class GetOperationsLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_year")
     public Integer[] reportYear;
+
     public GetOperationsLogRequest withReportYear(Integer[] reportYear) {
         this.reportYear = reportYear;
         return this;
@@ -254,6 +270,7 @@ public class GetOperationsLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String[] sort;
+
     public GetOperationsLogRequest withSort(String[] sort) {
         this.sort = sort;
         return this;
@@ -264,6 +281,7 @@ public class GetOperationsLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetOperationsLogRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -274,6 +292,7 @@ public class GetOperationsLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetOperationsLogRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -284,6 +303,7 @@ public class GetOperationsLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetOperationsLogRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
@@ -299,9 +319,13 @@ public class GetOperationsLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status_num")
     public GetOperationsLogStatusNumEnum[] statusNum;
+
     public GetOperationsLogRequest withStatusNum(GetOperationsLogStatusNumEnum[] statusNum) {
         this.statusNum = statusNum;
         return this;
     }
     
+    public GetOperationsLogRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

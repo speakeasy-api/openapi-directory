@@ -23,6 +23,7 @@ public class LatestTenancyModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessArrangements")
     public String accessArrangements;
+
     public LatestTenancyModel withAccessArrangements(String accessArrangements) {
         this.accessArrangements = accessArrangements;
         return this;
@@ -34,6 +35,7 @@ public class LatestTenancyModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessMobile1")
     public String accessMobile1;
+
     public LatestTenancyModel withAccessMobile1(String accessMobile1) {
         this.accessMobile1 = accessMobile1;
         return this;
@@ -45,6 +47,7 @@ public class LatestTenancyModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessMobile2")
     public String accessMobile2;
+
     public LatestTenancyModel withAccessMobile2(String accessMobile2) {
         this.accessMobile2 = accessMobile2;
         return this;
@@ -56,6 +59,7 @@ public class LatestTenancyModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessMobile3")
     public String accessMobile3;
+
     public LatestTenancyModel withAccessMobile3(String accessMobile3) {
         this.accessMobile3 = accessMobile3;
         return this;
@@ -67,6 +71,7 @@ public class LatestTenancyModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessName1")
     public String accessName1;
+
     public LatestTenancyModel withAccessName1(String accessName1) {
         this.accessName1 = accessName1;
         return this;
@@ -78,6 +83,7 @@ public class LatestTenancyModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessName2")
     public String accessName2;
+
     public LatestTenancyModel withAccessName2(String accessName2) {
         this.accessName2 = accessName2;
         return this;
@@ -89,6 +95,7 @@ public class LatestTenancyModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessName3")
     public String accessName3;
+
     public LatestTenancyModel withAccessName3(String accessName3) {
         this.accessName3 = accessName3;
         return this;
@@ -100,6 +107,7 @@ public class LatestTenancyModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ETag")
     public String eTag;
+
     public LatestTenancyModel withETag(String eTag) {
         this.eTag = eTag;
         return this;
@@ -113,6 +121,7 @@ public class LatestTenancyModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndDate")
     public OffsetDateTime endDate;
+
     public LatestTenancyModel withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -126,6 +135,7 @@ public class LatestTenancyModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FixedDate")
     public OffsetDateTime fixedDate;
+
     public LatestTenancyModel withFixedDate(OffsetDateTime fixedDate) {
         this.fixedDate = fixedDate;
         return this;
@@ -137,6 +147,7 @@ public class LatestTenancyModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalReference")
     public String globalReference;
+
     public LatestTenancyModel withGlobalReference(String globalReference) {
         this.globalReference = globalReference;
         return this;
@@ -148,6 +159,7 @@ public class LatestTenancyModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsTenancyEnded")
     public Boolean isTenancyEnded;
+
     public LatestTenancyModel withIsTenancyEnded(Boolean isTenancyEnded) {
         this.isTenancyEnded = isTenancyEnded;
         return this;
@@ -159,6 +171,7 @@ public class LatestTenancyModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsTenancyProposed")
     public Boolean isTenancyProposed;
+
     public LatestTenancyModel withIsTenancyProposed(Boolean isTenancyProposed) {
         this.isTenancyProposed = isTenancyProposed;
         return this;
@@ -170,6 +183,7 @@ public class LatestTenancyModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsTenancySigned")
     public Boolean isTenancySigned;
+
     public LatestTenancyModel withIsTenancySigned(Boolean isTenancySigned) {
         this.isTenancySigned = isTenancySigned;
         return this;
@@ -181,6 +195,7 @@ public class LatestTenancyModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LinkedTenants")
     public LinkedTenantModel[] linkedTenants;
+
     public LatestTenancyModel withLinkedTenants(LinkedTenantModel[] linkedTenants) {
         this.linkedTenants = linkedTenants;
         return this;
@@ -192,6 +207,7 @@ public class LatestTenancyModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OID")
     public String oid;
+
     public LatestTenancyModel withOid(String oid) {
         this.oid = oid;
         return this;
@@ -205,9 +221,11 @@ public class LatestTenancyModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartDate")
     public OffsetDateTime startDate;
+
     public LatestTenancyModel withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public LatestTenancyModel(){}
 }

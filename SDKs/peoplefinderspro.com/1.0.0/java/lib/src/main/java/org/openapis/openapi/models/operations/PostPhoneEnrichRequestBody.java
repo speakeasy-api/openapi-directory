@@ -12,9 +12,11 @@ public class PostPhoneEnrichRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Phone")
     public String phone;
+
     public PostPhoneEnrichRequestBody withPhone(String phone) {
         this.phone = phone;
         return this;
     }
     
+    public PostPhoneEnrichRequestBody(){}
 }

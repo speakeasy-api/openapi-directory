@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1SuggestionArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answerRecord")
     public String answerRecord;
+
     public GoogleCloudDialogflowV2beta1SuggestionArticle withAnswerRecord(String answerRecord) {
         this.answerRecord = answerRecord;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1SuggestionArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public GoogleCloudDialogflowV2beta1SuggestionArticle withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1SuggestionArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippets")
     public String[] snippets;
+
     public GoogleCloudDialogflowV2beta1SuggestionArticle withSnippets(String[] snippets) {
         this.snippets = snippets;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1SuggestionArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleCloudDialogflowV2beta1SuggestionArticle withTitle(String title) {
         this.title = title;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDialogflowV2beta1SuggestionArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudDialogflowV2beta1SuggestionArticle withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1SuggestionArticle(){}
 }

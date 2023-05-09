@@ -12,6 +12,7 @@ public class Group {
      */
     @JsonProperty("displayName")
     public String displayName;
+
     public Group withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -22,6 +23,7 @@ public class Group {
      */
     @JsonProperty("externalId")
     public String externalId;
+
     public Group withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -32,6 +34,7 @@ public class Group {
      */
     @JsonProperty("members")
     public GroupMembers[] members;
+
     public Group withMembers(GroupMembers[] members) {
         this.members = members;
         return this;
@@ -42,9 +45,16 @@ public class Group {
      */
     @JsonProperty("schemas")
     public GroupSchemasEnum[] schemas;
+
     public Group withSchemas(GroupSchemasEnum[] schemas) {
         this.schemas = schemas;
         return this;
     }
     
+    public Group(@JsonProperty("displayName") String displayName, @JsonProperty("externalId") String externalId, @JsonProperty("members") GroupMembers[] members, @JsonProperty("schemas") GroupSchemasEnum[] schemas) {
+        this.displayName = displayName;
+        this.externalId = externalId;
+        this.members = members;
+        this.schemas = schemas;
+  }
 }

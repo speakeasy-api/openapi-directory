@@ -12,6 +12,7 @@ public class CollectionMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public CollectionMeta withCount(Long count) {
         this.count = count;
         return this;
@@ -20,9 +21,11 @@ public class CollectionMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneWayCombinations")
     public CollectionMetaOneWayCombinations[] oneWayCombinations;
+
     public CollectionMeta withOneWayCombinations(CollectionMetaOneWayCombinations[] oneWayCombinations) {
         this.oneWayCombinations = oneWayCombinations;
         return this;
     }
     
+    public CollectionMeta(){}
 }

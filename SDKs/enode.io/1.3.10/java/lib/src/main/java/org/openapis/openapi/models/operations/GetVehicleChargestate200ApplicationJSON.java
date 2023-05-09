@@ -18,6 +18,7 @@ public class GetVehicleChargestate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batteryCapacity")
     public Double batteryCapacity;
+
     public GetVehicleChargestate200ApplicationJSON withBatteryCapacity(Double batteryCapacity) {
         this.batteryCapacity = batteryCapacity;
         return this;
@@ -29,6 +30,7 @@ public class GetVehicleChargestate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batteryLevel")
     public Double batteryLevel;
+
     public GetVehicleChargestate200ApplicationJSON withBatteryLevel(Double batteryLevel) {
         this.batteryLevel = batteryLevel;
         return this;
@@ -40,6 +42,7 @@ public class GetVehicleChargestate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargeLimit")
     public Double chargeLimit;
+
     public GetVehicleChargestate200ApplicationJSON withChargeLimit(Double chargeLimit) {
         this.chargeLimit = chargeLimit;
         return this;
@@ -53,6 +56,7 @@ public class GetVehicleChargestate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargeRate")
     public Double chargeRate;
+
     public GetVehicleChargestate200ApplicationJSON withChargeRate(Double chargeRate) {
         this.chargeRate = chargeRate;
         return this;
@@ -66,6 +70,7 @@ public class GetVehicleChargestate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargeTimeRemaining")
     public Double chargeTimeRemaining;
+
     public GetVehicleChargestate200ApplicationJSON withChargeTimeRemaining(Double chargeTimeRemaining) {
         this.chargeTimeRemaining = chargeTimeRemaining;
         return this;
@@ -77,6 +82,7 @@ public class GetVehicleChargestate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCharging")
     public Boolean isCharging;
+
     public GetVehicleChargestate200ApplicationJSON withIsCharging(Boolean isCharging) {
         this.isCharging = isCharging;
         return this;
@@ -102,6 +108,7 @@ public class GetVehicleChargestate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isChargingReasons")
     public GetVehicleChargestate200ApplicationJSONIsChargingReasonsEnum[] isChargingReasons;
+
     public GetVehicleChargestate200ApplicationJSON withIsChargingReasons(GetVehicleChargestate200ApplicationJSONIsChargingReasonsEnum[] isChargingReasons) {
         this.isChargingReasons = isChargingReasons;
         return this;
@@ -113,6 +120,7 @@ public class GetVehicleChargestate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPluggedIn")
     public Boolean isPluggedIn;
+
     public GetVehicleChargestate200ApplicationJSON withIsPluggedIn(Boolean isPluggedIn) {
         this.isPluggedIn = isPluggedIn;
         return this;
@@ -124,9 +132,11 @@ public class GetVehicleChargestate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public Double range;
+
     public GetVehicleChargestate200ApplicationJSON withRange(Double range) {
         this.range = range;
         return this;
     }
     
+    public GetVehicleChargestate200ApplicationJSON(){}
 }

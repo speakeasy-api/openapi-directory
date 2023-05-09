@@ -180,4 +180,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateShardCountInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScalingTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateStreamModeInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

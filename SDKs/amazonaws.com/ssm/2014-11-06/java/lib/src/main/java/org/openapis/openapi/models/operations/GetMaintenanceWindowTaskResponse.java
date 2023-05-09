@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMaintenanceWindowTaskResponse {
     
     public String contentType;
+
     public GetMaintenanceWindowTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetMaintenanceWindowTaskResponse {
      */
     
     public Object doesNotExistException;
+
     public GetMaintenanceWindowTaskResponse withDoesNotExistException(Object doesNotExistException) {
         this.doesNotExistException = doesNotExistException;
         return this;
@@ -29,6 +32,7 @@ public class GetMaintenanceWindowTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMaintenanceWindowTaskResult getMaintenanceWindowTaskResult;
+
     public GetMaintenanceWindowTaskResponse withGetMaintenanceWindowTaskResult(org.openapis.openapi.models.shared.GetMaintenanceWindowTaskResult getMaintenanceWindowTaskResult) {
         this.getMaintenanceWindowTaskResult = getMaintenanceWindowTaskResult;
         return this;
@@ -39,6 +43,7 @@ public class GetMaintenanceWindowTaskResponse {
      */
     
     public Object internalServerError;
+
     public GetMaintenanceWindowTaskResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class GetMaintenanceWindowTaskResponse {
     
     
     public Integer statusCode;
+
     public GetMaintenanceWindowTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetMaintenanceWindowTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMaintenanceWindowTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMaintenanceWindowTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -19,6 +19,7 @@ public class ListImageVersionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListImageVersionsRequest withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListImageVersionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListImageVersionsRequest withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -36,6 +38,7 @@ public class ListImageVersionsRequest {
     
     @JsonProperty("ImageName")
     public String imageName;
+
     public ListImageVersionsRequest withImageName(String imageName) {
         this.imageName = imageName;
         return this;
@@ -46,6 +49,7 @@ public class ListImageVersionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimeAfter")
     public OffsetDateTime lastModifiedTimeAfter;
+
     public ListImageVersionsRequest withLastModifiedTimeAfter(OffsetDateTime lastModifiedTimeAfter) {
         this.lastModifiedTimeAfter = lastModifiedTimeAfter;
         return this;
@@ -56,6 +60,7 @@ public class ListImageVersionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimeBefore")
     public OffsetDateTime lastModifiedTimeBefore;
+
     public ListImageVersionsRequest withLastModifiedTimeBefore(OffsetDateTime lastModifiedTimeBefore) {
         this.lastModifiedTimeBefore = lastModifiedTimeBefore;
         return this;
@@ -64,6 +69,7 @@ public class ListImageVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListImageVersionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -72,6 +78,7 @@ public class ListImageVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListImageVersionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -80,6 +87,7 @@ public class ListImageVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public ImageVersionSortByEnum sortBy;
+
     public ListImageVersionsRequest withSortBy(ImageVersionSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -88,9 +96,13 @@ public class ListImageVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public ImageVersionSortOrderEnum sortOrder;
+
     public ListImageVersionsRequest withSortOrder(ImageVersionSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListImageVersionsRequest(@JsonProperty("ImageName") String imageName) {
+        this.imageName = imageName;
+  }
 }

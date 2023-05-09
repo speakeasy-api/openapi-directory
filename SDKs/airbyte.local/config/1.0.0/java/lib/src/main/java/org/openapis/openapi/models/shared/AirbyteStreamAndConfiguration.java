@@ -18,6 +18,7 @@ public class AirbyteStreamAndConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public AirbyteStreamConfiguration config;
+
     public AirbyteStreamAndConfiguration withConfig(AirbyteStreamConfiguration config) {
         this.config = config;
         return this;
@@ -29,9 +30,11 @@ public class AirbyteStreamAndConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stream")
     public AirbyteStream stream;
+
     public AirbyteStreamAndConfiguration withStream(AirbyteStream stream) {
         this.stream = stream;
         return this;
     }
     
+    public AirbyteStreamAndConfiguration(){}
 }

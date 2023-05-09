@@ -16,15 +16,14 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateSecurity;
 import org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateRequest;
 import org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateResponse;
+import org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.ModelInput;
-import org.openapis.openapi.models.shared.TfLiteModelInput;
 import org.openapis.openapi.models.shared.ModelState;
 import org.openapis.openapi.models.shared.Status;
+import org.openapis.openapi.models.shared.TfLiteModelInput;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -33,69 +32,67 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            FirebasemlProjectsModelsCreateRequest req = new FirebasemlProjectsModelsCreateRequest() {{
-                dollarXgafv = "2";
+            FirebasemlProjectsModelsCreateRequest req = new FirebasemlProjectsModelsCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 modelInput = new ModelInput() {{
-                    displayName = "provident";
-                    name = "distinctio";
+                    displayName = "distinctio";
+                    name = "Stuart Stiedemann";
                     state = new ModelState() {{
                         published = false;
                         validationError = new Status() {{
-                            code = 844266;
+                            code = 423655;
                             details = new java.util.HashMap<String, Object>[]{{
                                 add(new java.util.HashMap<String, Object>() {{
-                                    put("corrupti", "illum");
-                                    put("vel", "error");
-                                    put("deserunt", "suscipit");
-                                    put("iure", "magnam");
-                                }}),
-                                add(new java.util.HashMap<String, Object>() {{
+                                    put("suscipit", "iure");
+                                    put("magnam", "debitis");
                                     put("ipsa", "delectus");
-                                    put("tempora", "suscipit");
-                                    put("molestiae", "minus");
-                                    put("placeat", "voluptatum");
                                 }}),
                                 add(new java.util.HashMap<String, Object>() {{
-                                    put("excepturi", "nisi");
-                                    put("recusandae", "temporibus");
+                                    put("suscipit", "molestiae");
+                                    put("minus", "placeat");
+                                }}),
+                                add(new java.util.HashMap<String, Object>() {{
+                                    put("iusto", "excepturi");
+                                    put("nisi", "recusandae");
+                                    put("temporibus", "ab");
                                 }}),
                             }};
-                            message = "ab";
-                        }};
-                    }};
+                            message = "quis";
+                        }};;
+                    }};;
                     tags = new String[]{{
-                        add("veritatis"),
                         add("deserunt"),
                     }};
                     tfliteModel = new TfLiteModelInput() {{
                         automlModel = "perferendis";
                         gcsTfliteUri = "ipsam";
-                    }};
-                }};
+                    }};;
+                }};;
                 accessToken = "repellendus";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "quo";
                 fields = "odit";
                 key = "at";
                 oauthToken = "at";
-                parent = "maiores";
                 prettyPrint = false;
-                quotaUser = "molestiae";
-                uploadType = "quod";
+                quotaUser = "maiores";
+                uploadType = "molestiae";
                 uploadProtocol = "quod";
-            }}            
+            }};            
 
-            FirebasemlProjectsModelsCreateResponse res = sdk.projects.firebasemlProjectsModelsCreate(req, new FirebasemlProjectsModelsCreateSecurity() {{
+            FirebasemlProjectsModelsCreateResponse res = sdk.projects.firebasemlProjectsModelsCreate(req, new FirebasemlProjectsModelsCreateSecurity("quod", "esse") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.operation.isPresent()) {
+            if (res.operation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -103,14 +100,14 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `firebasemlProjectsModelsCreate` - Creates a model in Firebase ML. The longrunning operation will eventually return a Model
-* `firebasemlProjectsModelsDelete` - Deletes a model
-* `firebasemlProjectsModelsDownload` - Gets Download information for a model. This is meant for downloading model resources onto devices. It gives very limited information about the model.
-* `firebasemlProjectsModelsList` - Lists the models
-* `firebasemlProjectsModelsPatch` - Updates a model. The longrunning operation will eventually return a Model.
-* `firebasemlProjectsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* [firebasemlProjectsModelsCreate](docs/projects/README.md#firebasemlprojectsmodelscreate) - Creates a model in Firebase ML. The longrunning operation will eventually return a Model
+* [firebasemlProjectsModelsDelete](docs/projects/README.md#firebasemlprojectsmodelsdelete) - Deletes a model
+* [firebasemlProjectsModelsDownload](docs/projects/README.md#firebasemlprojectsmodelsdownload) - Gets Download information for a model. This is meant for downloading model resources onto devices. It gives very limited information about the model.
+* [firebasemlProjectsModelsList](docs/projects/README.md#firebasemlprojectsmodelslist) - Lists the models
+* [firebasemlProjectsModelsPatch](docs/projects/README.md#firebasemlprojectsmodelspatch) - Updates a model. The longrunning operation will eventually return a Model.
+* [firebasemlProjectsOperationsGet](docs/projects/README.md#firebasemlprojectsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 <!-- End SDK Available Operations -->
 
 ### Maturity

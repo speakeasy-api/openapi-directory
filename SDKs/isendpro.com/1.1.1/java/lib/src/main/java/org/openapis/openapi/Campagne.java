@@ -62,20 +62,17 @@ public class Campagne {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCampagneResponse res = new org.openapis.openapi.models.operations.GetCampagneResponse() {{
+        org.openapis.openapi.models.operations.GetCampagneResponse res = new org.openapis.openapi.models.operations.GetCampagneResponse(contentType, httpRes.statusCode()) {{
             getCampagne200ApplicationJSONBinaryString = null;
             getCampagne200FileBinaryString = null;
             erreur = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                byte[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), byte[].class);
+                byte[] out = httpRes.body();
                 res.getCampagne200ApplicationJSONBinaryString = out;
             }
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "file")) {

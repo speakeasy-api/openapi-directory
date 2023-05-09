@@ -15,9 +15,11 @@ public class FilterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowedLocations")
     public String[] allowedLocations;
+
     public FilterConfiguration withAllowedLocations(String[] allowedLocations) {
         this.allowedLocations = allowedLocations;
         return this;
     }
     
+    public FilterConfiguration(){}
 }

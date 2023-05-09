@@ -18,6 +18,7 @@ public class GenerateDefaultLineItemRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GenerateDefaultLineItemRequestInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GenerateDefaultLineItemRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertionOrderId")
     public String insertionOrderId;
+
     public GenerateDefaultLineItemRequestInput withInsertionOrderId(String insertionOrderId) {
         this.insertionOrderId = insertionOrderId;
         return this;
@@ -40,6 +42,7 @@ public class GenerateDefaultLineItemRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemType")
     public GenerateDefaultLineItemRequestLineItemTypeEnum lineItemType;
+
     public GenerateDefaultLineItemRequestInput withLineItemType(GenerateDefaultLineItemRequestLineItemTypeEnum lineItemType) {
         this.lineItemType = lineItemType;
         return this;
@@ -51,9 +54,11 @@ public class GenerateDefaultLineItemRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobileApp")
     public MobileAppInput mobileApp;
+
     public GenerateDefaultLineItemRequestInput withMobileApp(MobileAppInput mobileApp) {
         this.mobileApp = mobileApp;
         return this;
     }
     
+    public GenerateDefaultLineItemRequestInput(){}
 }

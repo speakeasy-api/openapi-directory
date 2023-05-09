@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaRunAccessReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionHeaders")
     public GoogleAnalyticsAdminV1alphaAccessDimensionHeader[] dimensionHeaders;
+
     public GoogleAnalyticsAdminV1alphaRunAccessReportResponse withDimensionHeaders(GoogleAnalyticsAdminV1alphaAccessDimensionHeader[] dimensionHeaders) {
         this.dimensionHeaders = dimensionHeaders;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaRunAccessReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricHeaders")
     public GoogleAnalyticsAdminV1alphaAccessMetricHeader[] metricHeaders;
+
     public GoogleAnalyticsAdminV1alphaRunAccessReportResponse withMetricHeaders(GoogleAnalyticsAdminV1alphaAccessMetricHeader[] metricHeaders) {
         this.metricHeaders = metricHeaders;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaRunAccessReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quota")
     public GoogleAnalyticsAdminV1alphaAccessQuota quota;
+
     public GoogleAnalyticsAdminV1alphaRunAccessReportResponse withQuota(GoogleAnalyticsAdminV1alphaAccessQuota quota) {
         this.quota = quota;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1alphaRunAccessReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowCount")
     public Integer rowCount;
+
     public GoogleAnalyticsAdminV1alphaRunAccessReportResponse withRowCount(Integer rowCount) {
         this.rowCount = rowCount;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAnalyticsAdminV1alphaRunAccessReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public GoogleAnalyticsAdminV1alphaAccessRow[] rows;
+
     public GoogleAnalyticsAdminV1alphaRunAccessReportResponse withRows(GoogleAnalyticsAdminV1alphaAccessRow[] rows) {
         this.rows = rows;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaRunAccessReportResponse(){}
 }

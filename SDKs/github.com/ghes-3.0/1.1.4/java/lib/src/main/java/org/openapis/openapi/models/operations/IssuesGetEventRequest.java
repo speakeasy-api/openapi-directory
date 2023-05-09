@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesGetEventRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=event_id")
     public Long eventId;
+
     public IssuesGetEventRequest withEventId(Long eventId) {
         this.eventId = eventId;
         return this;
@@ -16,6 +18,7 @@ public class IssuesGetEventRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public IssuesGetEventRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -23,9 +26,15 @@ public class IssuesGetEventRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public IssuesGetEventRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public IssuesGetEventRequest(@JsonProperty("event_id") Long eventId, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.eventId = eventId;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

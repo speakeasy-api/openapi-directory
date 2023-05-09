@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutGeofenceResponse {
@@ -12,6 +13,7 @@ public class PutGeofenceResponse {
      */
     
     public Object accessDeniedException;
+
     public PutGeofenceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class PutGeofenceResponse {
      */
     
     public Object conflictException;
+
     public PutGeofenceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class PutGeofenceResponse {
     
     
     public String contentType;
+
     public PutGeofenceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutGeofenceResponse {
      */
     
     public Object internalServerException;
+
     public PutGeofenceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class PutGeofenceResponse {
      */
     
     public org.openapis.openapi.models.shared.PutGeofenceResponse putGeofenceResponse;
+
     public PutGeofenceResponse withPutGeofenceResponse(org.openapis.openapi.models.shared.PutGeofenceResponse putGeofenceResponse) {
         this.putGeofenceResponse = putGeofenceResponse;
         return this;
@@ -56,6 +62,7 @@ public class PutGeofenceResponse {
     
     
     public Integer statusCode;
+
     public PutGeofenceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class PutGeofenceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutGeofenceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class PutGeofenceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutGeofenceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class PutGeofenceResponse {
      */
     
     public Object throttlingException;
+
     public PutGeofenceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class PutGeofenceResponse {
      */
     
     public Object validationException;
+
     public PutGeofenceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutGeofenceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

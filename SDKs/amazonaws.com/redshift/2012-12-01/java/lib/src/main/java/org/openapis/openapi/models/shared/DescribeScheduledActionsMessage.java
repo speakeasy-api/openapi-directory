@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class DescribeScheduledActionsMessage {
     
     public Boolean active;
+
     public DescribeScheduledActionsMessage withActive(Boolean active) {
         this.active = active;
         return this;
@@ -16,6 +17,7 @@ public class DescribeScheduledActionsMessage {
     
     
     public OffsetDateTime endTime;
+
     public DescribeScheduledActionsMessage withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -23,6 +25,7 @@ public class DescribeScheduledActionsMessage {
     
     
     public ScheduledActionFilterList[] filters;
+
     public DescribeScheduledActionsMessage withFilters(ScheduledActionFilterList[] filters) {
         this.filters = filters;
         return this;
@@ -30,6 +33,7 @@ public class DescribeScheduledActionsMessage {
     
     
     public String marker;
+
     public DescribeScheduledActionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -37,6 +41,7 @@ public class DescribeScheduledActionsMessage {
     
     
     public Long maxRecords;
+
     public DescribeScheduledActionsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -44,6 +49,7 @@ public class DescribeScheduledActionsMessage {
     
     
     public String scheduledActionName;
+
     public DescribeScheduledActionsMessage withScheduledActionName(String scheduledActionName) {
         this.scheduledActionName = scheduledActionName;
         return this;
@@ -51,6 +57,7 @@ public class DescribeScheduledActionsMessage {
     
     
     public OffsetDateTime startTime;
+
     public DescribeScheduledActionsMessage withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -58,9 +65,11 @@ public class DescribeScheduledActionsMessage {
     
     
     public ScheduledActionTypeValuesEnum targetActionType;
+
     public DescribeScheduledActionsMessage withTargetActionType(ScheduledActionTypeValuesEnum targetActionType) {
         this.targetActionType = targetActionType;
         return this;
     }
     
+    public DescribeScheduledActionsMessage(){}
 }

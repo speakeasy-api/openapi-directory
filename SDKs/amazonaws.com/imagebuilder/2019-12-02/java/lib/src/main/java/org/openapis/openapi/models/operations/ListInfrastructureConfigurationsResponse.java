@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListInfrastructureConfigurationsResponse {
@@ -12,6 +13,7 @@ public class ListInfrastructureConfigurationsResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public ListInfrastructureConfigurationsResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class ListInfrastructureConfigurationsResponse {
      */
     
     public Object clientException;
+
     public ListInfrastructureConfigurationsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class ListInfrastructureConfigurationsResponse {
     
     
     public String contentType;
+
     public ListInfrastructureConfigurationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListInfrastructureConfigurationsResponse {
      */
     
     public Object forbiddenException;
+
     public ListInfrastructureConfigurationsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class ListInfrastructureConfigurationsResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public ListInfrastructureConfigurationsResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListInfrastructureConfigurationsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListInfrastructureConfigurationsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class ListInfrastructureConfigurationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListInfrastructureConfigurationsResponse listInfrastructureConfigurationsResponse;
+
     public ListInfrastructureConfigurationsResponse withListInfrastructureConfigurationsResponse(org.openapis.openapi.models.shared.ListInfrastructureConfigurationsResponse listInfrastructureConfigurationsResponse) {
         this.listInfrastructureConfigurationsResponse = listInfrastructureConfigurationsResponse;
         return this;
@@ -79,6 +87,7 @@ public class ListInfrastructureConfigurationsResponse {
      */
     
     public Object serviceException;
+
     public ListInfrastructureConfigurationsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class ListInfrastructureConfigurationsResponse {
     
     
     public Integer statusCode;
+
     public ListInfrastructureConfigurationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ListInfrastructureConfigurationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListInfrastructureConfigurationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class ListInfrastructureConfigurationsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListInfrastructureConfigurationsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public ListInfrastructureConfigurationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

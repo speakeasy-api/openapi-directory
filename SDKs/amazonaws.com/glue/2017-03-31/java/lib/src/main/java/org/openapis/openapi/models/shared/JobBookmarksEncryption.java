@@ -15,6 +15,7 @@ public class JobBookmarksEncryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobBookmarksEncryptionMode")
     public JobBookmarksEncryptionModeEnum jobBookmarksEncryptionMode;
+
     public JobBookmarksEncryption withJobBookmarksEncryptionMode(JobBookmarksEncryptionModeEnum jobBookmarksEncryptionMode) {
         this.jobBookmarksEncryptionMode = jobBookmarksEncryptionMode;
         return this;
@@ -23,9 +24,11 @@ public class JobBookmarksEncryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyArn")
     public String kmsKeyArn;
+
     public JobBookmarksEncryption withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
     }
     
+    public JobBookmarksEncryption(){}
 }

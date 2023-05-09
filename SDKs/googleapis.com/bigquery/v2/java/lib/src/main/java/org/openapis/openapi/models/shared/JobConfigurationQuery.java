@@ -15,6 +15,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowLargeResults")
     public Boolean allowLargeResults;
+
     public JobConfigurationQuery withAllowLargeResults(Boolean allowLargeResults) {
         this.allowLargeResults = allowLargeResults;
         return this;
@@ -23,6 +24,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clustering")
     public Clustering clustering;
+
     public JobConfigurationQuery withClustering(Clustering clustering) {
         this.clustering = clustering;
         return this;
@@ -34,6 +36,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionProperties")
     public ConnectionProperty[] connectionProperties;
+
     public JobConfigurationQuery withConnectionProperties(ConnectionProperty[] connectionProperties) {
         this.connectionProperties = connectionProperties;
         return this;
@@ -45,6 +48,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continuous")
     public Boolean continuous;
+
     public JobConfigurationQuery withContinuous(Boolean continuous) {
         this.continuous = continuous;
         return this;
@@ -56,6 +60,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createDisposition")
     public String createDisposition;
+
     public JobConfigurationQuery withCreateDisposition(String createDisposition) {
         this.createDisposition = createDisposition;
         return this;
@@ -67,6 +72,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createSession")
     public Boolean createSession;
+
     public JobConfigurationQuery withCreateSession(Boolean createSession) {
         this.createSession = createSession;
         return this;
@@ -75,6 +81,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultDataset")
     public DatasetReference defaultDataset;
+
     public JobConfigurationQuery withDefaultDataset(DatasetReference defaultDataset) {
         this.defaultDataset = defaultDataset;
         return this;
@@ -83,6 +90,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationEncryptionConfiguration")
     public EncryptionConfiguration destinationEncryptionConfiguration;
+
     public JobConfigurationQuery withDestinationEncryptionConfiguration(EncryptionConfiguration destinationEncryptionConfiguration) {
         this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
         return this;
@@ -91,6 +99,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationTable")
     public TableReference destinationTable;
+
     public JobConfigurationQuery withDestinationTable(TableReference destinationTable) {
         this.destinationTable = destinationTable;
         return this;
@@ -102,6 +111,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flattenResults")
     public Boolean flattenResults;
+
     public JobConfigurationQuery withFlattenResults(Boolean flattenResults) {
         this.flattenResults = flattenResults;
         return this;
@@ -113,6 +123,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumBillingTier")
     public Integer maximumBillingTier;
+
     public JobConfigurationQuery withMaximumBillingTier(Integer maximumBillingTier) {
         this.maximumBillingTier = maximumBillingTier;
         return this;
@@ -124,6 +135,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumBytesBilled")
     public String maximumBytesBilled;
+
     public JobConfigurationQuery withMaximumBytesBilled(String maximumBytesBilled) {
         this.maximumBytesBilled = maximumBytesBilled;
         return this;
@@ -135,6 +147,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterMode")
     public String parameterMode;
+
     public JobConfigurationQuery withParameterMode(String parameterMode) {
         this.parameterMode = parameterMode;
         return this;
@@ -146,6 +159,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preserveNulls")
     public Boolean preserveNulls;
+
     public JobConfigurationQuery withPreserveNulls(Boolean preserveNulls) {
         this.preserveNulls = preserveNulls;
         return this;
@@ -157,6 +171,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public String priority;
+
     public JobConfigurationQuery withPriority(String priority) {
         this.priority = priority;
         return this;
@@ -168,6 +183,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public JobConfigurationQuery withQuery(String query) {
         this.query = query;
         return this;
@@ -179,6 +195,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryParameters")
     public QueryParameter[] queryParameters;
+
     public JobConfigurationQuery withQueryParameters(QueryParameter[] queryParameters) {
         this.queryParameters = queryParameters;
         return this;
@@ -187,6 +204,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rangePartitioning")
     public RangePartitioning rangePartitioning;
+
     public JobConfigurationQuery withRangePartitioning(RangePartitioning rangePartitioning) {
         this.rangePartitioning = rangePartitioning;
         return this;
@@ -198,6 +216,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaUpdateOptions")
     public String[] schemaUpdateOptions;
+
     public JobConfigurationQuery withSchemaUpdateOptions(String[] schemaUpdateOptions) {
         this.schemaUpdateOptions = schemaUpdateOptions;
         return this;
@@ -209,6 +228,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableDefinitions")
     public java.util.Map<String, ExternalDataConfiguration> tableDefinitions;
+
     public JobConfigurationQuery withTableDefinitions(java.util.Map<String, ExternalDataConfiguration> tableDefinitions) {
         this.tableDefinitions = tableDefinitions;
         return this;
@@ -217,6 +237,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timePartitioning")
     public TimePartitioning timePartitioning;
+
     public JobConfigurationQuery withTimePartitioning(TimePartitioning timePartitioning) {
         this.timePartitioning = timePartitioning;
         return this;
@@ -228,6 +249,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useLegacySql")
     public Boolean useLegacySql;
+
     public JobConfigurationQuery withUseLegacySql(Boolean useLegacySql) {
         this.useLegacySql = useLegacySql;
         return this;
@@ -239,6 +261,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useQueryCache")
     public Boolean useQueryCache;
+
     public JobConfigurationQuery withUseQueryCache(Boolean useQueryCache) {
         this.useQueryCache = useQueryCache;
         return this;
@@ -250,6 +273,7 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userDefinedFunctionResources")
     public UserDefinedFunctionResource[] userDefinedFunctionResources;
+
     public JobConfigurationQuery withUserDefinedFunctionResources(UserDefinedFunctionResource[] userDefinedFunctionResources) {
         this.userDefinedFunctionResources = userDefinedFunctionResources;
         return this;
@@ -261,9 +285,11 @@ public class JobConfigurationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeDisposition")
     public String writeDisposition;
+
     public JobConfigurationQuery withWriteDisposition(String writeDisposition) {
         this.writeDisposition = writeDisposition;
         return this;
     }
     
+    public JobConfigurationQuery(){}
 }

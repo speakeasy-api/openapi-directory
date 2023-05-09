@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSubscriptionsToEventBridgeResponse {
@@ -12,6 +13,7 @@ public class UpdateSubscriptionsToEventBridgeResponse {
      */
     
     public Object accessDeniedFault;
+
     public UpdateSubscriptionsToEventBridgeResponse withAccessDeniedFault(Object accessDeniedFault) {
         this.accessDeniedFault = accessDeniedFault;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSubscriptionsToEventBridgeResponse {
     
     
     public String contentType;
+
     public UpdateSubscriptionsToEventBridgeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSubscriptionsToEventBridgeResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public UpdateSubscriptionsToEventBridgeResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -36,6 +40,7 @@ public class UpdateSubscriptionsToEventBridgeResponse {
     
     
     public Integer statusCode;
+
     public UpdateSubscriptionsToEventBridgeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateSubscriptionsToEventBridgeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSubscriptionsToEventBridgeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class UpdateSubscriptionsToEventBridgeResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSubscriptionsToEventBridgeResponse updateSubscriptionsToEventBridgeResponse;
+
     public UpdateSubscriptionsToEventBridgeResponse withUpdateSubscriptionsToEventBridgeResponse(org.openapis.openapi.models.shared.UpdateSubscriptionsToEventBridgeResponse updateSubscriptionsToEventBridgeResponse) {
         this.updateSubscriptionsToEventBridgeResponse = updateSubscriptionsToEventBridgeResponse;
         return this;
     }
     
+    public UpdateSubscriptionsToEventBridgeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

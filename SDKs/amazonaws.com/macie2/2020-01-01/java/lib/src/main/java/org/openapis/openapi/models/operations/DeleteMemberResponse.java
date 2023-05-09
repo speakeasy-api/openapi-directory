@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMemberResponse {
@@ -12,6 +13,7 @@ public class DeleteMemberResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteMemberResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteMemberResponse {
      */
     
     public Object conflictException;
+
     public DeleteMemberResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteMemberResponse {
     
     
     public String contentType;
+
     public DeleteMemberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteMemberResponse {
      */
     
     public java.util.Map<String, Object> deleteMemberResponse;
+
     public DeleteMemberResponse withDeleteMemberResponse(java.util.Map<String, Object> deleteMemberResponse) {
         this.deleteMemberResponse = deleteMemberResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteMemberResponse {
      */
     
     public Object internalServerException;
+
     public DeleteMemberResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteMemberResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteMemberResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteMemberResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DeleteMemberResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteMemberResponse {
     
     
     public Integer statusCode;
+
     public DeleteMemberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteMemberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMemberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteMemberResponse {
      */
     
     public Object throttlingException;
+
     public DeleteMemberResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteMemberResponse {
      */
     
     public Object validationException;
+
     public DeleteMemberResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteMemberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

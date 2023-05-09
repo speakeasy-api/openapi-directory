@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ResetAddressAttributeResultAddressPtrRecordUpdate {
     
     public String reason;
+
     public ResetAddressAttributeResultAddressPtrRecordUpdate withReason(String reason) {
         this.reason = reason;
         return this;
@@ -19,6 +20,7 @@ public class ResetAddressAttributeResultAddressPtrRecordUpdate {
     
     
     public String status;
+
     public ResetAddressAttributeResultAddressPtrRecordUpdate withStatus(String status) {
         this.status = status;
         return this;
@@ -26,9 +28,11 @@ public class ResetAddressAttributeResultAddressPtrRecordUpdate {
     
     
     public String value;
+
     public ResetAddressAttributeResultAddressPtrRecordUpdate withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ResetAddressAttributeResultAddressPtrRecordUpdate(){}
 }

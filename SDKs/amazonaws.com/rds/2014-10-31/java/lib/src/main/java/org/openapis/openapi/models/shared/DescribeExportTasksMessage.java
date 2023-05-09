@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeExportTasksMessage {
     
     public String exportTaskIdentifier;
+
     public DescribeExportTasksMessage withExportTaskIdentifier(String exportTaskIdentifier) {
         this.exportTaskIdentifier = exportTaskIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class DescribeExportTasksMessage {
     
     
     public FilterList[] filters;
+
     public DescribeExportTasksMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeExportTasksMessage {
     
     
     public String marker;
+
     public DescribeExportTasksMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,6 +33,7 @@ public class DescribeExportTasksMessage {
     
     
     public Long maxRecords;
+
     public DescribeExportTasksMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -37,6 +41,7 @@ public class DescribeExportTasksMessage {
     
     
     public String sourceArn;
+
     public DescribeExportTasksMessage withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
@@ -44,9 +49,11 @@ public class DescribeExportTasksMessage {
     
     
     public ExportSourceTypeEnum sourceType;
+
     public DescribeExportTasksMessage withSourceType(ExportSourceTypeEnum sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public DescribeExportTasksMessage(){}
 }

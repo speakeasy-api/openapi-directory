@@ -15,6 +15,7 @@ public class RouteMatrixEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Distance")
     public Double distance;
+
     public RouteMatrixEntry withDistance(Double distance) {
         this.distance = distance;
         return this;
@@ -23,6 +24,7 @@ public class RouteMatrixEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DurationSeconds")
     public Double durationSeconds;
+
     public RouteMatrixEntry withDurationSeconds(Double durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -31,9 +33,11 @@ public class RouteMatrixEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public RouteMatrixEntryError error;
+
     public RouteMatrixEntry withError(RouteMatrixEntryError error) {
         this.error = error;
         return this;
     }
     
+    public RouteMatrixEntry(){}
 }

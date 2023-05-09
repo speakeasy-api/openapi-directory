@@ -14,6 +14,7 @@ public class AssociateDomainRequestBody {
      */
     @JsonProperty("AcmCertificateArn")
     public String acmCertificateArn;
+
     public AssociateDomainRequestBody withAcmCertificateArn(String acmCertificateArn) {
         this.acmCertificateArn = acmCertificateArn;
         return this;
@@ -25,6 +26,7 @@ public class AssociateDomainRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public AssociateDomainRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -35,6 +37,7 @@ public class AssociateDomainRequestBody {
      */
     @JsonProperty("DomainName")
     public String domainName;
+
     public AssociateDomainRequestBody withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -45,9 +48,15 @@ public class AssociateDomainRequestBody {
      */
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public AssociateDomainRequestBody withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
     }
     
+    public AssociateDomainRequestBody(@JsonProperty("AcmCertificateArn") String acmCertificateArn, @JsonProperty("DomainName") String domainName, @JsonProperty("FleetArn") String fleetArn) {
+        this.acmCertificateArn = acmCertificateArn;
+        this.domainName = domainName;
+        this.fleetArn = fleetArn;
+  }
 }

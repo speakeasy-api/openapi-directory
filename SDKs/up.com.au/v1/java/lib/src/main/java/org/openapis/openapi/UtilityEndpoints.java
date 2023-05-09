@@ -59,12 +59,10 @@ public class UtilityEndpoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUtilPingResponse res = new org.openapis.openapi.models.operations.GetUtilPingResponse() {{
+        org.openapis.openapi.models.operations.GetUtilPingResponse res = new org.openapis.openapi.models.operations.GetUtilPingResponse(contentType, httpRes.statusCode()) {{
             pingResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class ConsumerQuotaMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerQuotaLimits")
     public ConsumerQuotaLimit[] consumerQuotaLimits;
+
     public ConsumerQuotaMetric withConsumerQuotaLimits(ConsumerQuotaLimit[] consumerQuotaLimits) {
         this.consumerQuotaLimits = consumerQuotaLimits;
         return this;
@@ -29,6 +30,7 @@ public class ConsumerQuotaMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("descendantConsumerQuotaLimits")
     public ConsumerQuotaLimit[] descendantConsumerQuotaLimits;
+
     public ConsumerQuotaMetric withDescendantConsumerQuotaLimits(ConsumerQuotaLimit[] descendantConsumerQuotaLimits) {
         this.descendantConsumerQuotaLimits = descendantConsumerQuotaLimits;
         return this;
@@ -40,6 +42,7 @@ public class ConsumerQuotaMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ConsumerQuotaMetric withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class ConsumerQuotaMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public String metric;
+
     public ConsumerQuotaMetric withMetric(String metric) {
         this.metric = metric;
         return this;
@@ -62,6 +66,7 @@ public class ConsumerQuotaMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConsumerQuotaMetric withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class ConsumerQuotaMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public ConsumerQuotaMetric withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public ConsumerQuotaMetric(){}
 }

@@ -15,6 +15,7 @@ public class LogoutResponse {
      */
     @JsonProperty("api")
     public String api;
+
     public LogoutResponse withApi(String api) {
         this.api = api;
         return this;
@@ -25,6 +26,7 @@ public class LogoutResponse {
      */
     @JsonProperty("method")
     public String method;
+
     public LogoutResponse withMethod(String method) {
         this.method = method;
         return this;
@@ -32,6 +34,7 @@ public class LogoutResponse {
     
     @JsonProperty("response")
     public LogoutResponseResponse response;
+
     public LogoutResponse withResponse(LogoutResponseResponse response) {
         this.response = response;
         return this;
@@ -39,9 +42,16 @@ public class LogoutResponse {
     
     @JsonProperty("status")
     public LogoutResponseStatusEnum status;
+
     public LogoutResponse withStatus(LogoutResponseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public LogoutResponse(@JsonProperty("api") String api, @JsonProperty("method") String method, @JsonProperty("response") LogoutResponseResponse response, @JsonProperty("status") LogoutResponseStatusEnum status) {
+        this.api = api;
+        this.method = method;
+        this.response = response;
+        this.status = status;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public GoogleCloudDocumentaiV1Document withContent(String content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entities")
     public GoogleCloudDocumentaiV1DocumentEntity[] entities;
+
     public GoogleCloudDocumentaiV1Document withEntities(GoogleCloudDocumentaiV1DocumentEntity[] entities) {
         this.entities = entities;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityRelations")
     public GoogleCloudDocumentaiV1DocumentEntityRelation[] entityRelations;
+
     public GoogleCloudDocumentaiV1Document withEntityRelations(GoogleCloudDocumentaiV1DocumentEntityRelation[] entityRelations) {
         this.entityRelations = entityRelations;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDocumentaiV1Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public GoogleRpcStatus error;
+
     public GoogleCloudDocumentaiV1Document withError(GoogleRpcStatus error) {
         this.error = error;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDocumentaiV1Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public GoogleCloudDocumentaiV1Document withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDocumentaiV1Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pages")
     public GoogleCloudDocumentaiV1DocumentPage[] pages;
+
     public GoogleCloudDocumentaiV1Document withPages(GoogleCloudDocumentaiV1DocumentPage[] pages) {
         this.pages = pages;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDocumentaiV1Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisions")
     public GoogleCloudDocumentaiV1DocumentRevision[] revisions;
+
     public GoogleCloudDocumentaiV1Document withRevisions(GoogleCloudDocumentaiV1DocumentRevision[] revisions) {
         this.revisions = revisions;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDocumentaiV1Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shardInfo")
     public GoogleCloudDocumentaiV1DocumentShardInfo shardInfo;
+
     public GoogleCloudDocumentaiV1Document withShardInfo(GoogleCloudDocumentaiV1DocumentShardInfo shardInfo) {
         this.shardInfo = shardInfo;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDocumentaiV1Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleCloudDocumentaiV1Document withText(String text) {
         this.text = text;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDocumentaiV1Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textChanges")
     public GoogleCloudDocumentaiV1DocumentTextChange[] textChanges;
+
     public GoogleCloudDocumentaiV1Document withTextChanges(GoogleCloudDocumentaiV1DocumentTextChange[] textChanges) {
         this.textChanges = textChanges;
         return this;
@@ -128,20 +138,23 @@ public class GoogleCloudDocumentaiV1Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textStyles")
     public GoogleCloudDocumentaiV1DocumentStyle[] textStyles;
+
     public GoogleCloudDocumentaiV1Document withTextStyles(GoogleCloudDocumentaiV1DocumentStyle[] textStyles) {
         this.textStyles = textStyles;
         return this;
     }
     
     /**
-     * Optional. Currently supports Google Cloud Storage URI of the form `gs://bucket_name/object_name`. Object versioning is not supported. See [Google Cloud Storage Request URIs](https://cloud.google.com/storage/docs/reference-uris) for more info.
+     * Optional. Currently supports Google Cloud Storage URI of the form `gs://bucket_name/object_name`. Object versioning is not supported. For more information, refer to [Google Cloud Storage Request URIs](https://cloud.google.com/storage/docs/reference-uris).
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudDocumentaiV1Document withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1Document(){}
 }

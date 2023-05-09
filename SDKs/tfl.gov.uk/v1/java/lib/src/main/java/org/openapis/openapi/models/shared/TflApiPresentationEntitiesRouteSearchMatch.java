@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesRouteSearchMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TflApiPresentationEntitiesRouteSearchMatch withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesRouteSearchMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lat")
     public Double lat;
+
     public TflApiPresentationEntitiesRouteSearchMatch withLat(Double lat) {
         this.lat = lat;
         return this;
@@ -28,6 +30,7 @@ public class TflApiPresentationEntitiesRouteSearchMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineId")
     public String lineId;
+
     public TflApiPresentationEntitiesRouteSearchMatch withLineId(String lineId) {
         this.lineId = lineId;
         return this;
@@ -36,6 +39,7 @@ public class TflApiPresentationEntitiesRouteSearchMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineName")
     public String lineName;
+
     public TflApiPresentationEntitiesRouteSearchMatch withLineName(String lineName) {
         this.lineName = lineName;
         return this;
@@ -44,6 +48,7 @@ public class TflApiPresentationEntitiesRouteSearchMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineRouteSection")
     public TflApiPresentationEntitiesLineRouteSection[] lineRouteSection;
+
     public TflApiPresentationEntitiesRouteSearchMatch withLineRouteSection(TflApiPresentationEntitiesLineRouteSection[] lineRouteSection) {
         this.lineRouteSection = lineRouteSection;
         return this;
@@ -52,6 +57,7 @@ public class TflApiPresentationEntitiesRouteSearchMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lon")
     public Double lon;
+
     public TflApiPresentationEntitiesRouteSearchMatch withLon(Double lon) {
         this.lon = lon;
         return this;
@@ -60,6 +66,7 @@ public class TflApiPresentationEntitiesRouteSearchMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchedRouteSections")
     public TflApiPresentationEntitiesMatchedRouteSections[] matchedRouteSections;
+
     public TflApiPresentationEntitiesRouteSearchMatch withMatchedRouteSections(TflApiPresentationEntitiesMatchedRouteSections[] matchedRouteSections) {
         this.matchedRouteSections = matchedRouteSections;
         return this;
@@ -68,6 +75,7 @@ public class TflApiPresentationEntitiesRouteSearchMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchedStops")
     public TflApiPresentationEntitiesMatchedStop[] matchedStops;
+
     public TflApiPresentationEntitiesRouteSearchMatch withMatchedStops(TflApiPresentationEntitiesMatchedStop[] matchedStops) {
         this.matchedStops = matchedStops;
         return this;
@@ -76,6 +84,7 @@ public class TflApiPresentationEntitiesRouteSearchMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public String mode;
+
     public TflApiPresentationEntitiesRouteSearchMatch withMode(String mode) {
         this.mode = mode;
         return this;
@@ -84,6 +93,7 @@ public class TflApiPresentationEntitiesRouteSearchMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TflApiPresentationEntitiesRouteSearchMatch withName(String name) {
         this.name = name;
         return this;
@@ -92,9 +102,11 @@ public class TflApiPresentationEntitiesRouteSearchMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public TflApiPresentationEntitiesRouteSearchMatch withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public TflApiPresentationEntitiesRouteSearchMatch(){}
 }

@@ -12,6 +12,7 @@ public class ActionResourceRelationshipsPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ActionResourceRelationshipsPlanData data;
+
     public ActionResourceRelationshipsPlan withData(ActionResourceRelationshipsPlanData data) {
         this.data = data;
         return this;
@@ -20,9 +21,11 @@ public class ActionResourceRelationshipsPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public java.util.Map<String, Object> links;
+
     public ActionResourceRelationshipsPlan withLinks(java.util.Map<String, Object> links) {
         this.links = links;
         return this;
     }
     
+    public ActionResourceRelationshipsPlan(){}
 }

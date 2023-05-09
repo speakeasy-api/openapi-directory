@@ -17,6 +17,7 @@ public class Statistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeDevices")
     public Long activeDevices;
+
     public Statistics withActiveDevices(Long activeDevices) {
         this.activeDevices = activeDevices;
         return this;
@@ -25,6 +26,7 @@ public class Statistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeUsers")
     public Long activeUsers;
+
     public Statistics withActiveUsers(Long activeUsers) {
         this.activeUsers = activeUsers;
         return this;
@@ -38,6 +40,7 @@ public class Statistics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("captureTime")
     public OffsetDateTime captureTime;
+
     public Statistics withCaptureTime(OffsetDateTime captureTime) {
         this.captureTime = captureTime;
         return this;
@@ -46,6 +49,7 @@ public class Statistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messagesReceived")
     public Long messagesReceived;
+
     public Statistics withMessagesReceived(Long messagesReceived) {
         this.messagesReceived = messagesReceived;
         return this;
@@ -54,6 +58,7 @@ public class Statistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messagesStored")
     public Long messagesStored;
+
     public Statistics withMessagesStored(Long messagesStored) {
         this.messagesStored = messagesStored;
         return this;
@@ -62,9 +67,11 @@ public class Statistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public Long requests;
+
     public Statistics withRequests(Long requests) {
         this.requests = requests;
         return this;
     }
     
+    public Statistics(){}
 }

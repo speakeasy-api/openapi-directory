@@ -15,6 +15,7 @@ public class S3CatalogHudiSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalHudiOptions")
     public java.util.Map<String, String> additionalHudiOptions;
+
     public S3CatalogHudiSource withAdditionalHudiOptions(java.util.Map<String, String> additionalHudiOptions) {
         this.additionalHudiOptions = additionalHudiOptions;
         return this;
@@ -22,6 +23,7 @@ public class S3CatalogHudiSource {
     
     @JsonProperty("Database")
     public String database;
+
     public S3CatalogHudiSource withDatabase(String database) {
         this.database = database;
         return this;
@@ -29,6 +31,7 @@ public class S3CatalogHudiSource {
     
     @JsonProperty("Name")
     public String name;
+
     public S3CatalogHudiSource withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +40,7 @@ public class S3CatalogHudiSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputSchemas")
     public GlueSchema[] outputSchemas;
+
     public S3CatalogHudiSource withOutputSchemas(GlueSchema[] outputSchemas) {
         this.outputSchemas = outputSchemas;
         return this;
@@ -44,9 +48,15 @@ public class S3CatalogHudiSource {
     
     @JsonProperty("Table")
     public String table;
+
     public S3CatalogHudiSource withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public S3CatalogHudiSource(@JsonProperty("Database") String database, @JsonProperty("Name") String name, @JsonProperty("Table") String table) {
+        this.database = database;
+        this.name = name;
+        this.table = table;
+  }
 }

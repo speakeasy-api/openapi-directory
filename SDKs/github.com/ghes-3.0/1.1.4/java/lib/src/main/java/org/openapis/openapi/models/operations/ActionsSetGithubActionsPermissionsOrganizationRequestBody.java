@@ -15,6 +15,7 @@ public class ActionsSetGithubActionsPermissionsOrganizationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed_actions")
     public org.openapis.openapi.models.shared.AllowedActionsEnum allowedActions;
+
     public ActionsSetGithubActionsPermissionsOrganizationRequestBody withAllowedActions(org.openapis.openapi.models.shared.AllowedActionsEnum allowedActions) {
         this.allowedActions = allowedActions;
         return this;
@@ -25,9 +26,13 @@ public class ActionsSetGithubActionsPermissionsOrganizationRequestBody {
      */
     @JsonProperty("enabled_repositories")
     public org.openapis.openapi.models.shared.EnabledRepositoriesEnum enabledRepositories;
+
     public ActionsSetGithubActionsPermissionsOrganizationRequestBody withEnabledRepositories(org.openapis.openapi.models.shared.EnabledRepositoriesEnum enabledRepositories) {
         this.enabledRepositories = enabledRepositories;
         return this;
     }
     
+    public ActionsSetGithubActionsPermissionsOrganizationRequestBody(@JsonProperty("enabled_repositories") org.openapis.openapi.models.shared.EnabledRepositoriesEnum enabledRepositories) {
+        this.enabledRepositories = enabledRepositories;
+  }
 }

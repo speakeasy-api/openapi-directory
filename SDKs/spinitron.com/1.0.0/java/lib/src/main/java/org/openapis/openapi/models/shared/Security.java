@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class Security {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=access-token")
     public String accessToken;
+
     public Security withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -16,9 +17,11 @@ public class Security {
     
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
     public String httpBearer;
+
     public Security withHttpBearer(String httpBearer) {
         this.httpBearer = httpBearer;
         return this;
     }
     
+    public Security(){}
 }

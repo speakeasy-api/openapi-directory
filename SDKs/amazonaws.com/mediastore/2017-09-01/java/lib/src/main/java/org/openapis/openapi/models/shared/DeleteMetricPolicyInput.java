@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteMetricPolicyInput {
     @JsonProperty("ContainerName")
     public String containerName;
+
     public DeleteMetricPolicyInput withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
     }
     
+    public DeleteMetricPolicyInput(@JsonProperty("ContainerName") String containerName) {
+        this.containerName = containerName;
+  }
 }

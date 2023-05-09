@@ -15,6 +15,7 @@ public class BatchAlarmActionErrorEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public ErrorCodeEnum errorCode;
+
     public BatchAlarmActionErrorEntry withErrorCode(ErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class BatchAlarmActionErrorEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public BatchAlarmActionErrorEntry withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class BatchAlarmActionErrorEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public BatchAlarmActionErrorEntry withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public BatchAlarmActionErrorEntry(){}
 }

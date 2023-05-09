@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class EnvironmentInfoDescription {
     
     public String ec2InstanceId;
+
     public EnvironmentInfoDescription withEc2InstanceId(String ec2InstanceId) {
         this.ec2InstanceId = ec2InstanceId;
         return this;
@@ -19,6 +20,7 @@ public class EnvironmentInfoDescription {
     
     
     public EnvironmentInfoTypeEnum infoType;
+
     public EnvironmentInfoDescription withInfoType(EnvironmentInfoTypeEnum infoType) {
         this.infoType = infoType;
         return this;
@@ -26,6 +28,7 @@ public class EnvironmentInfoDescription {
     
     
     public String message;
+
     public EnvironmentInfoDescription withMessage(String message) {
         this.message = message;
         return this;
@@ -33,9 +36,11 @@ public class EnvironmentInfoDescription {
     
     
     public OffsetDateTime sampleTimestamp;
+
     public EnvironmentInfoDescription withSampleTimestamp(OffsetDateTime sampleTimestamp) {
         this.sampleTimestamp = sampleTimestamp;
         return this;
     }
     
+    public EnvironmentInfoDescription(){}
 }

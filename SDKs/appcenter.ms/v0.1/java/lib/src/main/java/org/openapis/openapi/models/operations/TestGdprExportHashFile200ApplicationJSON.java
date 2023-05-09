@@ -15,6 +15,7 @@ public class TestGdprExportHashFile200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public TestGdprExportHashFile200ApplicationJSON withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -23,9 +24,11 @@ public class TestGdprExportHashFile200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TestGdprExportHashFile200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
     }
     
+    public TestGdprExportHashFile200ApplicationJSON(){}
 }

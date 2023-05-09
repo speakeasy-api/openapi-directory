@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCreditSessionRequest {
@@ -12,6 +13,7 @@ public class UpdateCreditSessionRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SessionInput sessionInput;
+
     public UpdateCreditSessionRequest withSessionInput(org.openapis.openapi.models.shared.SessionInput sessionInput) {
         this.sessionInput = sessionInput;
         return this;
@@ -22,9 +24,14 @@ public class UpdateCreditSessionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=session_id")
     public String sessionId;
+
     public UpdateCreditSessionRequest withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     
+    public UpdateCreditSessionRequest(@JsonProperty("sessionInput") org.openapis.openapi.models.shared.SessionInput sessionInput, @JsonProperty("session_id") String sessionId) {
+        this.sessionInput = sessionInput;
+        this.sessionId = sessionId;
+  }
 }

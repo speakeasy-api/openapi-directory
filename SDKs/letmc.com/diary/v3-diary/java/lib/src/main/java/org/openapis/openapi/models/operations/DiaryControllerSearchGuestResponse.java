@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DiaryControllerSearchGuestResponse {
     
     public String contentType;
+
     public DiaryControllerSearchGuestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DiaryControllerSearchGuestResponse {
      */
     
     public org.openapis.openapi.models.shared.GuestDiaryParametersResultsModel guestDiaryParametersResultsModel;
+
     public DiaryControllerSearchGuestResponse withGuestDiaryParametersResultsModel(org.openapis.openapi.models.shared.GuestDiaryParametersResultsModel guestDiaryParametersResultsModel) {
         this.guestDiaryParametersResultsModel = guestDiaryParametersResultsModel;
         return this;
@@ -26,6 +29,7 @@ public class DiaryControllerSearchGuestResponse {
     
     
     public Integer statusCode;
+
     public DiaryControllerSearchGuestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DiaryControllerSearchGuestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DiaryControllerSearchGuestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DiaryControllerSearchGuestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

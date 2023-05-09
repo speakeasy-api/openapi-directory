@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetcompanymatchRequest {
@@ -12,6 +13,7 @@ public class GetcompanymatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company")
     public String company;
+
     public GetcompanymatchRequest withCompany(String company) {
         this.company = company;
         return this;
@@ -22,9 +24,14 @@ public class GetcompanymatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
     public String license;
+
     public GetcompanymatchRequest withLicense(String license) {
         this.license = license;
         return this;
     }
     
+    public GetcompanymatchRequest(@JsonProperty("company") String company, @JsonProperty("license") String license) {
+        this.company = company;
+        this.license = license;
+  }
 }

@@ -15,6 +15,7 @@ public class IspPlacement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IspName")
     public String ispName;
+
     public IspPlacement withIspName(String ispName) {
         this.ispName = ispName;
         return this;
@@ -23,9 +24,11 @@ public class IspPlacement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlacementStatistics")
     public PlacementStatistics placementStatistics;
+
     public IspPlacement withPlacementStatistics(PlacementStatistics placementStatistics) {
         this.placementStatistics = placementStatistics;
         return this;
     }
     
+    public IspPlacement(){}
 }

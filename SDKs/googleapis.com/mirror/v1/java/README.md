@@ -16,13 +16,12 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.MirrorAccountsInsertRequest;
 import org.openapis.openapi.models.operations.MirrorAccountsInsertResponse;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.Account;
-import org.openapis.openapi.models.shared.UserData;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.AuthToken;
+import org.openapis.openapi.models.shared.UserData;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,60 +29,69 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            MirrorAccountsInsertRequest req = new MirrorAccountsInsertRequest() {{
+            MirrorAccountsInsertRequest req = new MirrorAccountsInsertRequest("corrupti", "provident", "distinctio") {{
                 account = new Account() {{
                     authTokens = new org.openapis.openapi.models.shared.AuthToken[]{{
                         add(new AuthToken() {{
-                            authToken = "provident";
-                            type = "distinctio";
+                            authToken = "unde";
+                            type = "nulla";
                         }}),
                         add(new AuthToken() {{
-                            authToken = "quibusdam";
-                            type = "unde";
+                            authToken = "corrupti";
+                            type = "illum";
                         }}),
                         add(new AuthToken() {{
-                            authToken = "nulla";
-                            type = "corrupti";
+                            authToken = "vel";
+                            type = "error";
+                        }}),
+                        add(new AuthToken() {{
+                            authToken = "deserunt";
+                            type = "suscipit";
                         }}),
                     }};
                     features = new String[]{{
-                        add("vel"),
-                        add("error"),
-                        add("deserunt"),
-                        add("suscipit"),
+                        add("magnam"),
+                        add("debitis"),
                     }};
-                    password = "iure";
+                    password = "ipsa";
                     userData = new org.openapis.openapi.models.shared.UserData[]{{
                         add(new UserData() {{
-                            key = "debitis";
-                            value = "ipsa";
+                            key = "tempora";
+                            value = "suscipit";
                         }}),
                         add(new UserData() {{
-                            key = "delectus";
-                            value = "tempora";
+                            key = "molestiae";
+                            value = "minus";
+                        }}),
+                        add(new UserData() {{
+                            key = "placeat";
+                            value = "voluptatum";
+                        }}),
+                        add(new UserData() {{
+                            key = "iusto";
+                            value = "excepturi";
                         }}),
                     }};
-                }};
-                accountName = "suscipit";
-                accountType = "molestiae";
-                alt = "json";
-                fields = "minus";
-                key = "placeat";
-                oauthToken = "voluptatum";
+                }};;
+                alt = AltEnum.JSON;
+                fields = "nisi";
+                key = "recusandae";
+                oauthToken = "temporibus";
                 prettyPrint = false;
-                quotaUser = "iusto";
-                userIp = "excepturi";
-                userToken = "nisi";
-            }}            
+                quotaUser = "ab";
+                userIp = "quis";
+            }};            
 
             MirrorAccountsInsertResponse res = sdk.accounts.mirrorAccountsInsert(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -91,47 +99,47 @@ public class Application {
 ## Available Resources and Operations
 
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `mirrorAccountsInsert` - Inserts a new account for a user
+* [mirrorAccountsInsert](docs/accounts/README.md#mirroraccountsinsert) - Inserts a new account for a user
 
-### contacts
+### [contacts](docs/contacts/README.md)
 
-* `mirrorContactsDelete` - Deletes a contact.
-* `mirrorContactsGet` - Gets a single contact by ID.
-* `mirrorContactsInsert` - Inserts a new contact.
-* `mirrorContactsList` - Retrieves a list of contacts for the authenticated user.
-* `mirrorContactsPatch` - Updates a contact in place. This method supports patch semantics.
-* `mirrorContactsUpdate` - Updates a contact in place.
+* [mirrorContactsDelete](docs/contacts/README.md#mirrorcontactsdelete) - Deletes a contact.
+* [mirrorContactsGet](docs/contacts/README.md#mirrorcontactsget) - Gets a single contact by ID.
+* [mirrorContactsInsert](docs/contacts/README.md#mirrorcontactsinsert) - Inserts a new contact.
+* [mirrorContactsList](docs/contacts/README.md#mirrorcontactslist) - Retrieves a list of contacts for the authenticated user.
+* [mirrorContactsPatch](docs/contacts/README.md#mirrorcontactspatch) - Updates a contact in place. This method supports patch semantics.
+* [mirrorContactsUpdate](docs/contacts/README.md#mirrorcontactsupdate) - Updates a contact in place.
 
-### locations
+### [locations](docs/locations/README.md)
 
-* `mirrorLocationsGet` - Gets a single location by ID.
-* `mirrorLocationsList` - Retrieves a list of locations for the user.
+* [mirrorLocationsGet](docs/locations/README.md#mirrorlocationsget) - Gets a single location by ID.
+* [mirrorLocationsList](docs/locations/README.md#mirrorlocationslist) - Retrieves a list of locations for the user.
 
-### settings
+### [settings](docs/settings/README.md)
 
-* `mirrorSettingsGet` - Gets a single setting by ID.
+* [mirrorSettingsGet](docs/settings/README.md#mirrorsettingsget) - Gets a single setting by ID.
 
-### subscriptions
+### [subscriptions](docs/subscriptions/README.md)
 
-* `mirrorSubscriptionsDelete` - Deletes a subscription.
-* `mirrorSubscriptionsInsert` - Creates a new subscription.
-* `mirrorSubscriptionsList` - Retrieves a list of subscriptions for the authenticated user and service.
-* `mirrorSubscriptionsUpdate` - Updates an existing subscription in place.
+* [mirrorSubscriptionsDelete](docs/subscriptions/README.md#mirrorsubscriptionsdelete) - Deletes a subscription.
+* [mirrorSubscriptionsInsert](docs/subscriptions/README.md#mirrorsubscriptionsinsert) - Creates a new subscription.
+* [mirrorSubscriptionsList](docs/subscriptions/README.md#mirrorsubscriptionslist) - Retrieves a list of subscriptions for the authenticated user and service.
+* [mirrorSubscriptionsUpdate](docs/subscriptions/README.md#mirrorsubscriptionsupdate) - Updates an existing subscription in place.
 
-### timeline
+### [timeline](docs/timeline/README.md)
 
-* `mirrorTimelineAttachmentsDelete` - Deletes an attachment from a timeline item.
-* `mirrorTimelineAttachmentsGet` - Retrieves an attachment on a timeline item by item ID and attachment ID.
-* `mirrorTimelineAttachmentsInsert` - Adds a new attachment to a timeline item.
-* `mirrorTimelineAttachmentsList` - Returns a list of attachments for a timeline item.
-* `mirrorTimelineDelete` - Deletes a timeline item.
-* `mirrorTimelineGet` - Gets a single timeline item by ID.
-* `mirrorTimelineInsert` - Inserts a new item into the timeline.
-* `mirrorTimelineList` - Retrieves a list of timeline items for the authenticated user.
-* `mirrorTimelinePatch` - Updates a timeline item in place. This method supports patch semantics.
-* `mirrorTimelineUpdate` - Updates a timeline item in place.
+* [mirrorTimelineAttachmentsDelete](docs/timeline/README.md#mirrortimelineattachmentsdelete) - Deletes an attachment from a timeline item.
+* [mirrorTimelineAttachmentsGet](docs/timeline/README.md#mirrortimelineattachmentsget) - Retrieves an attachment on a timeline item by item ID and attachment ID.
+* [mirrorTimelineAttachmentsInsert](docs/timeline/README.md#mirrortimelineattachmentsinsert) - Adds a new attachment to a timeline item.
+* [mirrorTimelineAttachmentsList](docs/timeline/README.md#mirrortimelineattachmentslist) - Returns a list of attachments for a timeline item.
+* [mirrorTimelineDelete](docs/timeline/README.md#mirrortimelinedelete) - Deletes a timeline item.
+* [mirrorTimelineGet](docs/timeline/README.md#mirrortimelineget) - Gets a single timeline item by ID.
+* [mirrorTimelineInsert](docs/timeline/README.md#mirrortimelineinsert) - Inserts a new item into the timeline.
+* [mirrorTimelineList](docs/timeline/README.md#mirrortimelinelist) - Retrieves a list of timeline items for the authenticated user.
+* [mirrorTimelinePatch](docs/timeline/README.md#mirrortimelinepatch) - Updates a timeline item in place. This method supports patch semantics.
+* [mirrorTimelineUpdate](docs/timeline/README.md#mirrortimelineupdate) - Updates a timeline item in place.
 <!-- End SDK Available Operations -->
 
 ### Maturity

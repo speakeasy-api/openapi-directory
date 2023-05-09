@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaListCustomDimensionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customDimensions")
     public GoogleAnalyticsAdminV1alphaCustomDimension[] customDimensions;
+
     public GoogleAnalyticsAdminV1alphaListCustomDimensionsResponse withCustomDimensions(GoogleAnalyticsAdminV1alphaCustomDimension[] customDimensions) {
         this.customDimensions = customDimensions;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaListCustomDimensionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleAnalyticsAdminV1alphaListCustomDimensionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaListCustomDimensionsResponse(){}
 }

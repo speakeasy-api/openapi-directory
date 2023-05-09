@@ -15,9 +15,11 @@ public class GetAutoTerminationPolicyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoTerminationPolicy")
     public AutoTerminationPolicy autoTerminationPolicy;
+
     public GetAutoTerminationPolicyOutput withAutoTerminationPolicy(AutoTerminationPolicy autoTerminationPolicy) {
         this.autoTerminationPolicy = autoTerminationPolicy;
         return this;
     }
     
+    public GetAutoTerminationPolicyOutput(){}
 }

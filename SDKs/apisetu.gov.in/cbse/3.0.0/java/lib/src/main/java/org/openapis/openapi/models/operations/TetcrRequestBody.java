@@ -15,6 +15,7 @@ public class TetcrRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public TetcrRequestBodyCertificateParameters certificateParameters;
+
     public TetcrRequestBody withCertificateParameters(TetcrRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class TetcrRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public TetcrRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class TetcrRequestBody {
      */
     @JsonProperty("format")
     public TetcrRequestBodyFormatEnum format;
+
     public TetcrRequestBody withFormat(TetcrRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class TetcrRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public TetcrRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public TetcrRequestBody(@JsonProperty("format") TetcrRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

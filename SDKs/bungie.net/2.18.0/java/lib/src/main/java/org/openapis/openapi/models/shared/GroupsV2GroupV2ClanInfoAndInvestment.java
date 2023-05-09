@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GroupsV2GroupV2ClanInfoAndInvestment {
     
     public GroupsV2ClanBanner clanBannerData;
+
     public GroupsV2GroupV2ClanInfoAndInvestment withClanBannerData(GroupsV2ClanBanner clanBannerData) {
         this.clanBannerData = clanBannerData;
         return this;
@@ -19,6 +20,7 @@ public class GroupsV2GroupV2ClanInfoAndInvestment {
     
     
     public String clanCallsign;
+
     public GroupsV2GroupV2ClanInfoAndInvestment withClanCallsign(String clanCallsign) {
         this.clanCallsign = clanCallsign;
         return this;
@@ -26,9 +28,11 @@ public class GroupsV2GroupV2ClanInfoAndInvestment {
     
     
     public java.util.Map<String, DestinyDestinyProgression> d2ClanProgressions;
+
     public GroupsV2GroupV2ClanInfoAndInvestment withD2ClanProgressions(java.util.Map<String, DestinyDestinyProgression> d2ClanProgressions) {
         this.d2ClanProgressions = d2ClanProgressions;
         return this;
     }
     
+    public GroupsV2GroupV2ClanInfoAndInvestment(){}
 }

@@ -55,12 +55,10 @@ public class ClientKeyCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCompaniesCompanyIdApiCredentialsApiCredentialIdGenerateClientKeyResponse res = new org.openapis.openapi.models.operations.PostCompaniesCompanyIdApiCredentialsApiCredentialIdGenerateClientKeyResponse() {{
+        org.openapis.openapi.models.operations.PostCompaniesCompanyIdApiCredentialsApiCredentialIdGenerateClientKeyResponse res = new org.openapis.openapi.models.operations.PostCompaniesCompanyIdApiCredentialsApiCredentialIdGenerateClientKeyResponse(contentType, httpRes.statusCode()) {{
             generateClientKeyResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

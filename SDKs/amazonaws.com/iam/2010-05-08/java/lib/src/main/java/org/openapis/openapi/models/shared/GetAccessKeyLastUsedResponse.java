@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetAccessKeyLastUsedResponse {
     
     public AccessKeyLastUsed accessKeyLastUsed;
+
     public GetAccessKeyLastUsedResponse withAccessKeyLastUsed(AccessKeyLastUsed accessKeyLastUsed) {
         this.accessKeyLastUsed = accessKeyLastUsed;
         return this;
@@ -19,9 +20,11 @@ public class GetAccessKeyLastUsedResponse {
     
     
     public String userName;
+
     public GetAccessKeyLastUsedResponse withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public GetAccessKeyLastUsedResponse(){}
 }

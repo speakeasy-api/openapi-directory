@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateMLModelResponse {
     
     public String contentType;
+
     public CreateMLModelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateMLModelResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateMLModelOutput createMLModelOutput;
+
     public CreateMLModelResponse withCreateMLModelOutput(org.openapis.openapi.models.shared.CreateMLModelOutput createMLModelOutput) {
         this.createMLModelOutput = createMLModelOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateMLModelResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateMLModelResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class CreateMLModelResponse {
      */
     
     public Object internalServerException;
+
     public CreateMLModelResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateMLModelResponse {
      */
     
     public Object invalidInputException;
+
     public CreateMLModelResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -56,6 +62,7 @@ public class CreateMLModelResponse {
     
     
     public Integer statusCode;
+
     public CreateMLModelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateMLModelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateMLModelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateMLModelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

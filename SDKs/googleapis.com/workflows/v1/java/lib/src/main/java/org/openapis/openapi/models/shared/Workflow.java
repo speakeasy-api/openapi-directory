@@ -13,13 +13,38 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class Workflow {
     /**
+     * Optional. Describes the level of platform logging to apply to calls and call responses during executions of this workflow. If both the workflow and the execution specify a logging level, the execution level takes precedence.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("callLogLevel")
+    public WorkflowCallLogLevelEnum callLogLevel;
+
+    public Workflow withCallLogLevel(WorkflowCallLogLevelEnum callLogLevel) {
+        this.callLogLevel = callLogLevel;
+        return this;
+    }
+    
+    /**
      * Output only. The timestamp for when the workflow was created.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Workflow withCreateTime(String createTime) {
         this.createTime = createTime;
+        return this;
+    }
+    
+    /**
+     * Optional. The resource name of a KMS crypto key used to encrypt or decrypt the data associated with the workflow. Format: projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey} Using `-` as a wildcard for the `{project}` or not providing one at all will infer the project from the account. If not provided, data associated with the workflow will not be CMEK-encrypted.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cryptoKeyName")
+    public String cryptoKeyName;
+
+    public Workflow withCryptoKeyName(String cryptoKeyName) {
+        this.cryptoKeyName = cryptoKeyName;
         return this;
     }
     
@@ -29,6 +54,7 @@ public class Workflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Workflow withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +66,7 @@ public class Workflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Workflow withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,6 +78,7 @@ public class Workflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Workflow withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +90,7 @@ public class Workflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionCreateTime")
     public String revisionCreateTime;
+
     public Workflow withRevisionCreateTime(String revisionCreateTime) {
         this.revisionCreateTime = revisionCreateTime;
         return this;
@@ -73,6 +102,7 @@ public class Workflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public Workflow withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -84,6 +114,7 @@ public class Workflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public Workflow withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
@@ -95,6 +126,7 @@ public class Workflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceContents")
     public String sourceContents;
+
     public Workflow withSourceContents(String sourceContents) {
         this.sourceContents = sourceContents;
         return this;
@@ -106,8 +138,21 @@ public class Workflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public WorkflowStateEnum state;
+
     public Workflow withState(WorkflowStateEnum state) {
         this.state = state;
+        return this;
+    }
+    
+    /**
+     * Describes an error related to the current state of the workflow.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("stateError")
+    public StateError stateError;
+
+    public Workflow withStateError(StateError stateError) {
+        this.stateError = stateError;
         return this;
     }
     
@@ -117,9 +162,11 @@ public class Workflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Workflow withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Workflow(){}
 }

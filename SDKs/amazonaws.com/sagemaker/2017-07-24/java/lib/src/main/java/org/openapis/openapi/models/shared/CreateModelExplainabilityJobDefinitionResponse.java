@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateModelExplainabilityJobDefinitionResponse {
     @JsonProperty("JobDefinitionArn")
     public String jobDefinitionArn;
+
     public CreateModelExplainabilityJobDefinitionResponse withJobDefinitionArn(String jobDefinitionArn) {
         this.jobDefinitionArn = jobDefinitionArn;
         return this;
     }
     
+    public CreateModelExplainabilityJobDefinitionResponse(@JsonProperty("JobDefinitionArn") String jobDefinitionArn) {
+        this.jobDefinitionArn = jobDefinitionArn;
+  }
 }

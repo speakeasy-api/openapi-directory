@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostCompaniesCompanyIdApiCredentialsApiCredentialIdGenerateClientKeyResponse {
     
     public String contentType;
+
     public PostCompaniesCompanyIdApiCredentialsApiCredentialIdGenerateClientKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostCompaniesCompanyIdApiCredentialsApiCredentialIdGenerateClientKe
      */
     
     public org.openapis.openapi.models.shared.GenerateClientKeyResponse generateClientKeyResponse;
+
     public PostCompaniesCompanyIdApiCredentialsApiCredentialIdGenerateClientKeyResponse withGenerateClientKeyResponse(org.openapis.openapi.models.shared.GenerateClientKeyResponse generateClientKeyResponse) {
         this.generateClientKeyResponse = generateClientKeyResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostCompaniesCompanyIdApiCredentialsApiCredentialIdGenerateClientKe
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public PostCompaniesCompanyIdApiCredentialsApiCredentialIdGenerateClientKeyResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class PostCompaniesCompanyIdApiCredentialsApiCredentialIdGenerateClientKe
     
     
     public Integer statusCode;
+
     public PostCompaniesCompanyIdApiCredentialsApiCredentialIdGenerateClientKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostCompaniesCompanyIdApiCredentialsApiCredentialIdGenerateClientKe
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostCompaniesCompanyIdApiCredentialsApiCredentialIdGenerateClientKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostCompaniesCompanyIdApiCredentialsApiCredentialIdGenerateClientKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

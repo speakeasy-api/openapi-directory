@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class InstanceRefreshProgressDetails {
     
     public InstanceRefreshLivePoolProgress livePoolProgress;
+
     public InstanceRefreshProgressDetails withLivePoolProgress(InstanceRefreshLivePoolProgress livePoolProgress) {
         this.livePoolProgress = livePoolProgress;
         return this;
@@ -19,9 +20,11 @@ public class InstanceRefreshProgressDetails {
     
     
     public InstanceRefreshWarmPoolProgress warmPoolProgress;
+
     public InstanceRefreshProgressDetails withWarmPoolProgress(InstanceRefreshWarmPoolProgress warmPoolProgress) {
         this.warmPoolProgress = warmPoolProgress;
         return this;
     }
     
+    public InstanceRefreshProgressDetails(){}
 }

@@ -18,6 +18,7 @@ public class FeatureIdProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cellId")
     public String cellId;
+
     public FeatureIdProto withCellId(String cellId) {
         this.cellId = cellId;
         return this;
@@ -29,6 +30,7 @@ public class FeatureIdProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fprint")
     public String fprint;
+
     public FeatureIdProto withFprint(String fprint) {
         this.fprint = fprint;
         return this;
@@ -40,9 +42,11 @@ public class FeatureIdProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temporaryData")
     public java.util.Map<String, Object> temporaryData;
+
     public FeatureIdProto withTemporaryData(java.util.Map<String, Object> temporaryData) {
         this.temporaryData = temporaryData;
         return this;
     }
     
+    public FeatureIdProto(){}
 }

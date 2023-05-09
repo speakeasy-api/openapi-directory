@@ -15,6 +15,7 @@ public class ConfigurationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progress")
     public ConfigurationStatusProgress[] progress;
+
     public ConfigurationStatus withProgress(ConfigurationStatusProgress[] progress) {
         this.progress = progress;
         return this;
@@ -23,9 +24,11 @@ public class ConfigurationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ConfigurationStatus withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ConfigurationStatus(){}
 }

@@ -15,6 +15,7 @@ public class ListSavingsPlansPurchaseRecommendationGenerationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GenerationSummaryList")
     public GenerationSummary[] generationSummaryList;
+
     public ListSavingsPlansPurchaseRecommendationGenerationResponse withGenerationSummaryList(GenerationSummary[] generationSummaryList) {
         this.generationSummaryList = generationSummaryList;
         return this;
@@ -23,9 +24,11 @@ public class ListSavingsPlansPurchaseRecommendationGenerationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public ListSavingsPlansPurchaseRecommendationGenerationResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListSavingsPlansPurchaseRecommendationGenerationResponse(){}
 }

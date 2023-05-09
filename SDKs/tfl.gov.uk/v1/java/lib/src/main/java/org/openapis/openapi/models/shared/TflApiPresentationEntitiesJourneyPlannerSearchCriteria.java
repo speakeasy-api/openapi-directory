@@ -19,6 +19,7 @@ public class TflApiPresentationEntitiesJourneyPlannerSearchCriteria {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dateTime")
     public OffsetDateTime dateTime;
+
     public TflApiPresentationEntitiesJourneyPlannerSearchCriteria withDateTime(OffsetDateTime dateTime) {
         this.dateTime = dateTime;
         return this;
@@ -27,6 +28,7 @@ public class TflApiPresentationEntitiesJourneyPlannerSearchCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateTimeType")
     public TflApiPresentationEntitiesJourneyPlannerSearchCriteriaDateTimeTypeEnum dateTimeType;
+
     public TflApiPresentationEntitiesJourneyPlannerSearchCriteria withDateTimeType(TflApiPresentationEntitiesJourneyPlannerSearchCriteriaDateTimeTypeEnum dateTimeType) {
         this.dateTimeType = dateTimeType;
         return this;
@@ -35,9 +37,11 @@ public class TflApiPresentationEntitiesJourneyPlannerSearchCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeAdjustments")
     public TflApiPresentationEntitiesJourneyPlannerTimeAdjustments timeAdjustments;
+
     public TflApiPresentationEntitiesJourneyPlannerSearchCriteria withTimeAdjustments(TflApiPresentationEntitiesJourneyPlannerTimeAdjustments timeAdjustments) {
         this.timeAdjustments = timeAdjustments;
         return this;
     }
     
+    public TflApiPresentationEntitiesJourneyPlannerSearchCriteria(){}
 }

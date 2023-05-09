@@ -18,9 +18,11 @@ public class AccountsClaimWebsiteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccountsClaimWebsiteResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public AccountsClaimWebsiteResponse(){}
 }

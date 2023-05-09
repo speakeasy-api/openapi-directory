@@ -15,6 +15,7 @@ public class OrgsUpdateWebhookConfigForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content_type")
     public String contentType;
+
     public OrgsUpdateWebhookConfigForOrgRequestBody withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +24,7 @@ public class OrgsUpdateWebhookConfigForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insecure_ssl")
     public Object insecureSsl;
+
     public OrgsUpdateWebhookConfigForOrgRequestBody withInsecureSsl(Object insecureSsl) {
         this.insecureSsl = insecureSsl;
         return this;
@@ -34,6 +36,7 @@ public class OrgsUpdateWebhookConfigForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public OrgsUpdateWebhookConfigForOrgRequestBody withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -45,9 +48,11 @@ public class OrgsUpdateWebhookConfigForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public OrgsUpdateWebhookConfigForOrgRequestBody withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public OrgsUpdateWebhookConfigForOrgRequestBody(){}
 }

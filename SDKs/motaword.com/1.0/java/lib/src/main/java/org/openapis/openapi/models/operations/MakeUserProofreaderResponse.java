@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MakeUserProofreaderResponse {
     
     public String contentType;
+
     public MakeUserProofreaderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MakeUserProofreaderResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public MakeUserProofreaderResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class MakeUserProofreaderResponse {
      */
     
     public org.openapis.openapi.models.shared.OperationStatus operationStatus;
+
     public MakeUserProofreaderResponse withOperationStatus(org.openapis.openapi.models.shared.OperationStatus operationStatus) {
         this.operationStatus = operationStatus;
         return this;
@@ -36,6 +40,7 @@ public class MakeUserProofreaderResponse {
     
     
     public Integer statusCode;
+
     public MakeUserProofreaderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class MakeUserProofreaderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MakeUserProofreaderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MakeUserProofreaderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

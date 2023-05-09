@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSitesSiteIDSubsitesOutputFormatRequest {
@@ -12,6 +13,7 @@ public class GetSitesSiteIDSubsitesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=brief")
     public Boolean brief;
+
     public GetSitesSiteIDSubsitesOutputFormatRequest withBrief(Boolean brief) {
         this.brief = brief;
         return this;
@@ -22,6 +24,7 @@ public class GetSitesSiteIDSubsitesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationDescriptor")
     public GetSitesSiteIDSubsitesOutputFormatLocationDescriptorEnum locationDescriptor;
+
     public GetSitesSiteIDSubsitesOutputFormatRequest withLocationDescriptor(GetSitesSiteIDSubsitesOutputFormatLocationDescriptorEnum locationDescriptor) {
         this.locationDescriptor = locationDescriptor;
         return this;
@@ -34,6 +37,7 @@ public class GetSitesSiteIDSubsitesOutputFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
     public GetSitesSiteIDSubsitesOutputFormatOutputFormatEnum outputFormat;
+
     public GetSitesSiteIDSubsitesOutputFormatRequest withOutputFormat(GetSitesSiteIDSubsitesOutputFormatOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -44,6 +48,7 @@ public class GetSitesSiteIDSubsitesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
     public GetSitesSiteIDSubsitesOutputFormatOutputSrsEnum outputSRS;
+
     public GetSitesSiteIDSubsitesOutputFormatRequest withOutputSRS(GetSitesSiteIDSubsitesOutputFormatOutputSrsEnum outputSRS) {
         this.outputSRS = outputSRS;
         return this;
@@ -54,6 +59,7 @@ public class GetSitesSiteIDSubsitesOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setBack")
     public Long setBack;
+
     public GetSitesSiteIDSubsitesOutputFormatRequest withSetBack(Long setBack) {
         this.setBack = setBack;
         return this;
@@ -64,9 +70,14 @@ public class GetSitesSiteIDSubsitesOutputFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=siteID")
     public String siteID;
+
     public GetSitesSiteIDSubsitesOutputFormatRequest withSiteID(String siteID) {
         this.siteID = siteID;
         return this;
     }
     
+    public GetSitesSiteIDSubsitesOutputFormatRequest(@JsonProperty("outputFormat") GetSitesSiteIDSubsitesOutputFormatOutputFormatEnum outputFormat, @JsonProperty("siteID") String siteID) {
+        this.outputFormat = outputFormat;
+        this.siteID = siteID;
+  }
 }

@@ -12,6 +12,7 @@ public class Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public Metric[] metrics;
+
     public Meta withMetrics(Metric[] metrics) {
         this.metrics = metrics;
         return this;
@@ -20,6 +21,7 @@ public class Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("puid")
     public String puid;
+
     public Meta withPuid(String puid) {
         this.puid = puid;
         return this;
@@ -28,6 +30,7 @@ public class Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestPath")
     public java.util.Map<String, String> requestPath;
+
     public Meta withRequestPath(java.util.Map<String, String> requestPath) {
         this.requestPath = requestPath;
         return this;
@@ -36,6 +39,7 @@ public class Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routing")
     public java.util.Map<String, Integer> routing;
+
     public Meta withRouting(java.util.Map<String, Integer> routing) {
         this.routing = routing;
         return this;
@@ -44,9 +48,11 @@ public class Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, Object> tags;
+
     public Meta withTags(java.util.Map<String, Object> tags) {
         this.tags = tags;
         return this;
     }
     
+    public Meta(){}
 }

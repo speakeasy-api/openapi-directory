@@ -19,6 +19,7 @@ public class DateRangeFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDateTime")
     public OffsetDateTime endDateTime;
+
     public DateRangeFilter withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -28,9 +29,14 @@ public class DateRangeFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDateTime")
     public OffsetDateTime startDateTime;
+
     public DateRangeFilter withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
     }
     
+    public DateRangeFilter(@JsonProperty("endDateTime") OffsetDateTime endDateTime, @JsonProperty("startDateTime") OffsetDateTime startDateTime) {
+        this.endDateTime = endDateTime;
+        this.startDateTime = startDateTime;
+  }
 }

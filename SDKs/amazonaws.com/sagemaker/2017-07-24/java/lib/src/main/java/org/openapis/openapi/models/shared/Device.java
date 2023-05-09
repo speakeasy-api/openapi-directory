@@ -15,6 +15,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Device withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class Device {
     
     @JsonProperty("DeviceName")
     public String deviceName;
+
     public Device withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -30,9 +32,13 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IotThingName")
     public String iotThingName;
+
     public Device withIotThingName(String iotThingName) {
         this.iotThingName = iotThingName;
         return this;
     }
     
+    public Device(@JsonProperty("DeviceName") String deviceName) {
+        this.deviceName = deviceName;
+  }
 }

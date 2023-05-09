@@ -12,6 +12,7 @@ public class PutPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("assignee_id")
     public Long assigneeId;
+
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIP withAssigneeId(Long assigneeId) {
         this.assigneeId = assigneeId;
         return this;
@@ -22,6 +23,7 @@ public class PutPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("assignee_type")
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIPAssigneeTypeEnum assigneeType;
+
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIP withAssigneeType(PutPrimaryIpsIdPrimaryIPResponsePrimaryIPAssigneeTypeEnum assigneeType) {
         this.assigneeType = assigneeType;
         return this;
@@ -32,6 +34,7 @@ public class PutPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("auto_delete")
     public Boolean autoDelete;
+
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIP withAutoDelete(Boolean autoDelete) {
         this.autoDelete = autoDelete;
         return this;
@@ -42,6 +45,7 @@ public class PutPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("blocked")
     public Boolean blocked;
+
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIP withBlocked(Boolean blocked) {
         this.blocked = blocked;
         return this;
@@ -52,6 +56,7 @@ public class PutPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("created")
     public String created;
+
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIP withCreated(String created) {
         this.created = created;
         return this;
@@ -62,6 +67,7 @@ public class PutPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("datacenter")
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenter datacenter;
+
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIP withDatacenter(PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenter datacenter) {
         this.datacenter = datacenter;
         return this;
@@ -72,6 +78,7 @@ public class PutPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("dns_ptr")
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDnsPtr[] dnsPtr;
+
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIP withDnsPtr(PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDnsPtr[] dnsPtr) {
         this.dnsPtr = dnsPtr;
         return this;
@@ -82,6 +89,7 @@ public class PutPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("id")
     public Long id;
+
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIP withId(Long id) {
         this.id = id;
         return this;
@@ -92,6 +100,7 @@ public class PutPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("ip")
     public String ip;
+
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIP withIp(String ip) {
         this.ip = ip;
         return this;
@@ -102,6 +111,7 @@ public class PutPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIP withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -112,6 +122,7 @@ public class PutPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("name")
     public String name;
+
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIP withName(String name) {
         this.name = name;
         return this;
@@ -122,6 +133,7 @@ public class PutPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("protection")
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIPProtection protection;
+
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIP withProtection(PutPrimaryIpsIdPrimaryIPResponsePrimaryIPProtection protection) {
         this.protection = protection;
         return this;
@@ -132,9 +144,25 @@ public class PutPrimaryIpsIdPrimaryIPResponsePrimaryIP {
      */
     @JsonProperty("type")
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIPTypeEnum type;
+
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIP withType(PutPrimaryIpsIdPrimaryIPResponsePrimaryIPTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PutPrimaryIpsIdPrimaryIPResponsePrimaryIP(@JsonProperty("assignee_id") Long assigneeId, @JsonProperty("assignee_type") PutPrimaryIpsIdPrimaryIPResponsePrimaryIPAssigneeTypeEnum assigneeType, @JsonProperty("auto_delete") Boolean autoDelete, @JsonProperty("blocked") Boolean blocked, @JsonProperty("created") String created, @JsonProperty("datacenter") PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenter datacenter, @JsonProperty("dns_ptr") PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDnsPtr[] dnsPtr, @JsonProperty("id") Long id, @JsonProperty("ip") String ip, @JsonProperty("labels") java.util.Map<String, String> labels, @JsonProperty("name") String name, @JsonProperty("protection") PutPrimaryIpsIdPrimaryIPResponsePrimaryIPProtection protection, @JsonProperty("type") PutPrimaryIpsIdPrimaryIPResponsePrimaryIPTypeEnum type) {
+        this.assigneeId = assigneeId;
+        this.assigneeType = assigneeType;
+        this.autoDelete = autoDelete;
+        this.blocked = blocked;
+        this.created = created;
+        this.datacenter = datacenter;
+        this.dnsPtr = dnsPtr;
+        this.id = id;
+        this.ip = ip;
+        this.labels = labels;
+        this.name = name;
+        this.protection = protection;
+        this.type = type;
+  }
 }

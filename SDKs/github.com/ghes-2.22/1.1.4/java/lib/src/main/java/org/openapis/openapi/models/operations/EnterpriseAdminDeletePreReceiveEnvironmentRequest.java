@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminDeletePreReceiveEnvironmentRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pre_receive_environment_id")
     public Long preReceiveEnvironmentId;
+
     public EnterpriseAdminDeletePreReceiveEnvironmentRequest withPreReceiveEnvironmentId(Long preReceiveEnvironmentId) {
         this.preReceiveEnvironmentId = preReceiveEnvironmentId;
         return this;
     }
     
+    public EnterpriseAdminDeletePreReceiveEnvironmentRequest(@JsonProperty("pre_receive_environment_id") Long preReceiveEnvironmentId) {
+        this.preReceiveEnvironmentId = preReceiveEnvironmentId;
+  }
 }

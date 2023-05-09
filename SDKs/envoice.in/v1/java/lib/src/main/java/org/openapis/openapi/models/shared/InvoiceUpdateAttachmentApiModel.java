@@ -15,6 +15,7 @@ public class InvoiceUpdateAttachmentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public InvoiceUpdateAttachmentApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class InvoiceUpdateAttachmentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Link")
     public String link;
+
     public InvoiceUpdateAttachmentApiModel withLink(String link) {
         this.link = link;
         return this;
@@ -37,6 +39,7 @@ public class InvoiceUpdateAttachmentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObfuscatedFileName")
     public String obfuscatedFileName;
+
     public InvoiceUpdateAttachmentApiModel withObfuscatedFileName(String obfuscatedFileName) {
         this.obfuscatedFileName = obfuscatedFileName;
         return this;
@@ -48,6 +51,7 @@ public class InvoiceUpdateAttachmentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginalFileName")
     public String originalFileName;
+
     public InvoiceUpdateAttachmentApiModel withOriginalFileName(String originalFileName) {
         this.originalFileName = originalFileName;
         return this;
@@ -59,6 +63,7 @@ public class InvoiceUpdateAttachmentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Size")
     public Long size;
+
     public InvoiceUpdateAttachmentApiModel withSize(Long size) {
         this.size = size;
         return this;
@@ -70,9 +75,11 @@ public class InvoiceUpdateAttachmentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public InvoiceUpdateAttachmentApiModelTypeEnum type;
+
     public InvoiceUpdateAttachmentApiModel withType(InvoiceUpdateAttachmentApiModelTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public InvoiceUpdateAttachmentApiModel(){}
 }

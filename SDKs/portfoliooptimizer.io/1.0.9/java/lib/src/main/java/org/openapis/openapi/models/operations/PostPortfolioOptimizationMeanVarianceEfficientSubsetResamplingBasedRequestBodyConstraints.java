@@ -12,6 +12,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetsGroups")
     public Long[][] assetsGroups;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBodyConstraints withAssetsGroups(Long[][] assetsGroups) {
         this.assetsGroups = assetsGroups;
         return this;
@@ -23,6 +24,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetsGroupsMatrix")
     public Double[][] assetsGroupsMatrix;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBodyConstraints withAssetsGroupsMatrix(Double[][] assetsGroupsMatrix) {
         this.assetsGroupsMatrix = assetsGroupsMatrix;
         return this;
@@ -34,6 +36,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumAssetsGroupsWeights")
     public Double[] maximumAssetsGroupsWeights;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBodyConstraints withMaximumAssetsGroupsWeights(Double[] maximumAssetsGroupsWeights) {
         this.maximumAssetsGroupsWeights = maximumAssetsGroupsWeights;
         return this;
@@ -45,6 +48,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumAssetsWeights")
     public Double[] maximumAssetsWeights;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBodyConstraints withMaximumAssetsWeights(Double[] maximumAssetsWeights) {
         this.maximumAssetsWeights = maximumAssetsWeights;
         return this;
@@ -56,6 +60,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumPortfolioExposure")
     public Double maximumPortfolioExposure;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBodyConstraints withMaximumPortfolioExposure(Double maximumPortfolioExposure) {
         this.maximumPortfolioExposure = maximumPortfolioExposure;
         return this;
@@ -67,6 +72,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumAssetsWeights")
     public Double[] minimumAssetsWeights;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBodyConstraints withMinimumAssetsWeights(Double[] minimumAssetsWeights) {
         this.minimumAssetsWeights = minimumAssetsWeights;
         return this;
@@ -78,6 +84,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumPortfolioExposure")
     public Double minimumPortfolioExposure;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBodyConstraints withMinimumPortfolioExposure(Double minimumPortfolioExposure) {
         this.minimumPortfolioExposure = minimumPortfolioExposure;
         return this;
@@ -89,6 +96,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portfolioReturn")
     public Double portfolioReturn;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBodyConstraints withPortfolioReturn(Double portfolioReturn) {
         this.portfolioReturn = portfolioReturn;
         return this;
@@ -100,6 +108,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portfolioVolatility")
     public Double portfolioVolatility;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBodyConstraints withPortfolioVolatility(Double portfolioVolatility) {
         this.portfolioVolatility = portfolioVolatility;
         return this;
@@ -111,9 +120,11 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("riskTolerance")
     public Double riskTolerance;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBodyConstraints withRiskTolerance(Double riskTolerance) {
         this.riskTolerance = riskTolerance;
         return this;
     }
     
+    public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBodyConstraints(){}
 }

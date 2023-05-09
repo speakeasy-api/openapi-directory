@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyVerifiedAccessInstanceRequest {
     
     public String clientToken;
+
     public ModifyVerifiedAccessInstanceRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class ModifyVerifiedAccessInstanceRequest {
     
     
     public String description;
+
     public ModifyVerifiedAccessInstanceRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class ModifyVerifiedAccessInstanceRequest {
     
     
     public Boolean dryRun;
+
     public ModifyVerifiedAccessInstanceRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,9 +33,13 @@ public class ModifyVerifiedAccessInstanceRequest {
     
     
     public String verifiedAccessInstanceId;
+
     public ModifyVerifiedAccessInstanceRequest withVerifiedAccessInstanceId(String verifiedAccessInstanceId) {
         this.verifiedAccessInstanceId = verifiedAccessInstanceId;
         return this;
     }
     
+    public ModifyVerifiedAccessInstanceRequest(@JsonProperty("VerifiedAccessInstanceId") String verifiedAccessInstanceId) {
+        this.verifiedAccessInstanceId = verifiedAccessInstanceId;
+  }
 }

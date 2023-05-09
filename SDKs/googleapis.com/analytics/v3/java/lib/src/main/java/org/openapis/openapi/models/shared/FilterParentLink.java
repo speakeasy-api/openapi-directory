@@ -18,6 +18,7 @@ public class FilterParentLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public FilterParentLink withHref(String href) {
         this.href = href;
         return this;
@@ -29,9 +30,11 @@ public class FilterParentLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public FilterParentLink withType(String type) {
         this.type = type;
         return this;
     }
     
+    public FilterParentLink(){}
 }

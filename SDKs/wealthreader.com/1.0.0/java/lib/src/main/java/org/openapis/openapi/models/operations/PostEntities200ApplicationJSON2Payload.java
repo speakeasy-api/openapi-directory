@@ -15,17 +15,19 @@ public class PostEntities200ApplicationJSON2Payload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accounts")
     public java.util.Map<String, Object>[] accounts;
+
     public PostEntities200ApplicationJSON2Payload withAccounts(java.util.Map<String, Object>[] accounts) {
         this.accounts = accounts;
         return this;
     }
     
     /**
-     * Tarjetas de cr\u00e9dito, d\u00e9bito y prepago
+     * Tarjetas de crédito, débito y prepago
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cards")
     public java.util.Map<String, Object>[] cards;
+
     public PostEntities200ApplicationJSON2Payload withCards(java.util.Map<String, Object>[] cards) {
         this.cards = cards;
         return this;
@@ -37,6 +39,7 @@ public class PostEntities200ApplicationJSON2Payload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portfolios")
     public java.util.Map<String, Object>[] portfolios;
+
     public PostEntities200ApplicationJSON2Payload withPortfolios(java.util.Map<String, Object>[] portfolios) {
         this.portfolios = portfolios;
         return this;
@@ -48,20 +51,23 @@ public class PostEntities200ApplicationJSON2Payload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public org.openapis.openapi.models.shared.Properties properties;
+
     public PostEntities200ApplicationJSON2Payload withProperties(org.openapis.openapi.models.shared.Properties properties) {
         this.properties = properties;
         return this;
     }
     
     /**
-     * Informaci\u00f3n relativa a la persona que hace login
+     * Información relativa a la persona que hace login
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_information")
     public org.openapis.openapi.models.shared.UserInformation userInformation;
+
     public PostEntities200ApplicationJSON2Payload withUserInformation(org.openapis.openapi.models.shared.UserInformation userInformation) {
         this.userInformation = userInformation;
         return this;
     }
     
+    public PostEntities200ApplicationJSON2Payload(){}
 }

@@ -43,12 +43,10 @@ public class AccessTokens {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOauthV1AccessTokensTokenGetResponse res = new org.openapis.openapi.models.operations.GetOauthV1AccessTokensTokenGetResponse() {{
+        org.openapis.openapi.models.operations.GetOauthV1AccessTokensTokenGetResponse res = new org.openapis.openapi.models.operations.GetOauthV1AccessTokensTokenGetResponse(contentType, httpRes.statusCode()) {{
             accessTokenInfoResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,9 +18,11 @@ public class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exactMatchConfig")
     public GoogleCloudContactcenterinsightsV1ExactMatchConfig exactMatchConfig;
+
     public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig withExactMatchConfig(GoogleCloudContactcenterinsightsV1ExactMatchConfig exactMatchConfig) {
         this.exactMatchConfig = exactMatchConfig;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig(){}
 }

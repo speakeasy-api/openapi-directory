@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkAirMarshalRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public GetNetworkAirMarshalRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -19,6 +21,7 @@ public class GetNetworkAirMarshalRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
     public String t0;
+
     public GetNetworkAirMarshalRequest withT0(String t0) {
         this.t0 = t0;
         return this;
@@ -29,9 +32,13 @@ public class GetNetworkAirMarshalRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
     public Float timespan;
+
     public GetNetworkAirMarshalRequest withTimespan(Float timespan) {
         this.timespan = timespan;
         return this;
     }
     
+    public GetNetworkAirMarshalRequest(@JsonProperty("networkId") String networkId) {
+        this.networkId = networkId;
+  }
 }

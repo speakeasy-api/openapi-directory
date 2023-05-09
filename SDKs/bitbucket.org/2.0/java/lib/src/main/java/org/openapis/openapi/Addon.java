@@ -51,10 +51,11 @@ public class Addon {
      * $ curl -X DELETE https://api.bitbucket.org/2.0/addon \
      *   -H "Authorization: JWT &lt;JWT Token&gt;"
      * ```
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteAddonResponse deleteAddon() throws Exception {
+    public org.openapis.openapi.models.operations.DeleteAddonResponse deleteAddon(org.openapis.openapi.models.operations.DeleteAddonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/addon");
         
@@ -63,16 +64,15 @@ public class Addon {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAddonResponse res = new org.openapis.openapi.models.operations.DeleteAddonResponse() {{
+        org.openapis.openapi.models.operations.DeleteAddonResponse res = new org.openapis.openapi.models.operations.DeleteAddonResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -112,11 +112,9 @@ public class Addon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesResponse res = new org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesResponse() {{
+        org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesResponse res = new org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -156,11 +154,9 @@ public class Addon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesValueIdResponse res = new org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesValueIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesValueIdResponse res = new org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesValueIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -180,10 +176,11 @@ public class Addon {
      * List linkers for an app
      * Gets a list of all [linkers](/cloud/bitbucket/modules/linker/)
      * for the authenticated application.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAddonLinkersResponse getAddonLinkers() throws Exception {
+    public org.openapis.openapi.models.operations.GetAddonLinkersResponse getAddonLinkers(org.openapis.openapi.models.operations.GetAddonLinkersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/addon/linkers");
         
@@ -192,16 +189,15 @@ public class Addon {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAddonLinkersResponse res = new org.openapis.openapi.models.operations.GetAddonLinkersResponse() {{
+        org.openapis.openapi.models.operations.GetAddonLinkersResponse res = new org.openapis.openapi.models.operations.GetAddonLinkersResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +237,9 @@ public class Addon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyResponse res = new org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyResponse() {{
+        org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyResponse res = new org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -292,11 +286,9 @@ public class Addon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesResponse res = new org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesResponse() {{
+        org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesResponse res = new org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -336,11 +328,9 @@ public class Addon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesValueIdResponse res = new org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesValueIdResponse() {{
+        org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesValueIdResponse res = new org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesValueIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -387,11 +377,9 @@ public class Addon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAddonLinkersLinkerKeyValuesResponse res = new org.openapis.openapi.models.operations.PostAddonLinkersLinkerKeyValuesResponse() {{
+        org.openapis.openapi.models.operations.PostAddonLinkersLinkerKeyValuesResponse res = new org.openapis.openapi.models.operations.PostAddonLinkersLinkerKeyValuesResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -456,10 +444,11 @@ public class Addon {
      * 
      * Note that the scopes of the application cannot be increased
      * in the new descriptor nor reduced to none.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutAddonResponse putAddon() throws Exception {
+    public org.openapis.openapi.models.operations.PutAddonResponse putAddon(org.openapis.openapi.models.operations.PutAddonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/addon");
         
@@ -468,16 +457,15 @@ public class Addon {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutAddonResponse res = new org.openapis.openapi.models.operations.PutAddonResponse() {{
+        org.openapis.openapi.models.operations.PutAddonResponse res = new org.openapis.openapi.models.operations.PutAddonResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -524,11 +512,9 @@ public class Addon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutAddonLinkersLinkerKeyValuesResponse res = new org.openapis.openapi.models.operations.PutAddonLinkersLinkerKeyValuesResponse() {{
+        org.openapis.openapi.models.operations.PutAddonLinkersLinkerKeyValuesResponse res = new org.openapis.openapi.models.operations.PutAddonLinkersLinkerKeyValuesResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

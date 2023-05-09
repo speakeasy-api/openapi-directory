@@ -15,6 +15,7 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeName")
     public String changeName;
+
     public Change withChangeName(String changeName) {
         this.changeName = changeName;
         return this;
@@ -22,6 +23,7 @@ public class Change {
     
     @JsonProperty("ChangeType")
     public String changeType;
+
     public Change withChangeType(String changeType) {
         this.changeType = changeType;
         return this;
@@ -29,6 +31,7 @@ public class Change {
     
     @JsonProperty("Details")
     public String details;
+
     public Change withDetails(String details) {
         this.details = details;
         return this;
@@ -36,6 +39,7 @@ public class Change {
     
     @JsonProperty("Entity")
     public Entity entity;
+
     public Change withEntity(Entity entity) {
         this.entity = entity;
         return this;
@@ -44,9 +48,15 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityTags")
     public Tag[] entityTags;
+
     public Change withEntityTags(Tag[] entityTags) {
         this.entityTags = entityTags;
         return this;
     }
     
+    public Change(@JsonProperty("ChangeType") String changeType, @JsonProperty("Details") String details, @JsonProperty("Entity") Entity entity) {
+        this.changeType = changeType;
+        this.details = details;
+        this.entity = entity;
+  }
 }

@@ -15,6 +15,7 @@ public class TerminalOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingEntityId")
     public String billingEntityId;
+
     public TerminalOrderRequest withBillingEntityId(String billingEntityId) {
         this.billingEntityId = billingEntityId;
         return this;
@@ -26,6 +27,7 @@ public class TerminalOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerOrderReference")
     public String customerOrderReference;
+
     public TerminalOrderRequest withCustomerOrderReference(String customerOrderReference) {
         this.customerOrderReference = customerOrderReference;
         return this;
@@ -37,6 +39,7 @@ public class TerminalOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public OrderItem[] items;
+
     public TerminalOrderRequest withItems(OrderItem[] items) {
         this.items = items;
         return this;
@@ -48,6 +51,7 @@ public class TerminalOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingLocationId")
     public String shippingLocationId;
+
     public TerminalOrderRequest withShippingLocationId(String shippingLocationId) {
         this.shippingLocationId = shippingLocationId;
         return this;
@@ -59,9 +63,11 @@ public class TerminalOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxId")
     public String taxId;
+
     public TerminalOrderRequest withTaxId(String taxId) {
         this.taxId = taxId;
         return this;
     }
     
+    public TerminalOrderRequest(){}
 }

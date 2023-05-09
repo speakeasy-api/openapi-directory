@@ -15,6 +15,7 @@ public class ResolverRuleAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ResolverRuleAssociation withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class ResolverRuleAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ResolverRuleAssociation withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class ResolverRuleAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolverRuleId")
     public String resolverRuleId;
+
     public ResolverRuleAssociation withResolverRuleId(String resolverRuleId) {
         this.resolverRuleId = resolverRuleId;
         return this;
@@ -39,6 +42,7 @@ public class ResolverRuleAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ResolverRuleAssociationStatusEnum status;
+
     public ResolverRuleAssociation withStatus(ResolverRuleAssociationStatusEnum status) {
         this.status = status;
         return this;
@@ -47,6 +51,7 @@ public class ResolverRuleAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public ResolverRuleAssociation withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -55,9 +60,11 @@ public class ResolverRuleAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VPCId")
     public String vpcId;
+
     public ResolverRuleAssociation withVPCId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public ResolverRuleAssociation(){}
 }

@@ -15,9 +15,11 @@ public class DeleteMembersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnprocessedAccounts")
     public Result[] unprocessedAccounts;
+
     public DeleteMembersResponse withUnprocessedAccounts(Result[] unprocessedAccounts) {
         this.unprocessedAccounts = unprocessedAccounts;
         return this;
     }
     
+    public DeleteMembersResponse(){}
 }

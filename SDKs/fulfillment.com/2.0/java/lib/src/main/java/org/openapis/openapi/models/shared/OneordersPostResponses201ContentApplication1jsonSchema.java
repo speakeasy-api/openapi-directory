@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class OneordersPostResponses201ContentApplication1jsonSchema {
     @JsonProperty("currentStatus")
     public OneordersPostResponses201ContentApplication1jsonSchemaStatusEventV2 currentStatus;
+
     public OneordersPostResponses201ContentApplication1jsonSchema withCurrentStatus(OneordersPostResponses201ContentApplication1jsonSchemaStatusEventV2 currentStatus) {
         this.currentStatus = currentStatus;
         return this;
@@ -32,6 +33,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchema {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("departDate")
     public OffsetDateTime departDate;
+
     public OneordersPostResponses201ContentApplication1jsonSchema withDepartDate(OffsetDateTime departDate) {
         this.departDate = departDate;
         return this;
@@ -45,6 +47,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchema {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dispatchDate")
     public OffsetDateTime dispatchDate;
+
     public OneordersPostResponses201ContentApplication1jsonSchema withDispatchDate(OffsetDateTime dispatchDate) {
         this.dispatchDate = dispatchDate;
         return this;
@@ -55,6 +58,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchema {
      */
     @JsonProperty("id")
     public Long id;
+
     public OneordersPostResponses201ContentApplication1jsonSchema withId(Long id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchema {
     
     @JsonProperty("merchant")
     public OneordersPostResponses201ContentApplication1jsonSchemaMerchantV2 merchant;
+
     public OneordersPostResponses201ContentApplication1jsonSchema withMerchant(OneordersPostResponses201ContentApplication1jsonSchemaMerchantV2 merchant) {
         this.merchant = merchant;
         return this;
@@ -72,6 +77,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchema {
      */
     @JsonProperty("merchantOrderId")
     public String merchantOrderId;
+
     public OneordersPostResponses201ContentApplication1jsonSchema withMerchantOrderId(String merchantOrderId) {
         this.merchantOrderId = merchantOrderId;
         return this;
@@ -82,6 +88,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchema {
      */
     @JsonProperty("merchantShippingMethod")
     public String merchantShippingMethod;
+
     public OneordersPostResponses201ContentApplication1jsonSchema withMerchantShippingMethod(String merchantShippingMethod) {
         this.merchantShippingMethod = merchantShippingMethod;
         return this;
@@ -89,6 +96,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchema {
     
     @JsonProperty("originalConsignee")
     public OneordersPostResponses201ContentApplication1jsonSchemaConsigneeV2 originalConsignee;
+
     public OneordersPostResponses201ContentApplication1jsonSchema withOriginalConsignee(OneordersPostResponses201ContentApplication1jsonSchemaConsigneeV2 originalConsignee) {
         this.originalConsignee = originalConsignee;
         return this;
@@ -97,6 +105,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentOrder")
     public OneordersPostResponses201ContentApplication1jsonSchemaParentOrder parentOrder;
+
     public OneordersPostResponses201ContentApplication1jsonSchema withParentOrder(OneordersPostResponses201ContentApplication1jsonSchemaParentOrder parentOrder) {
         this.parentOrder = parentOrder;
         return this;
@@ -108,6 +117,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchaseOrderNum")
     public String purchaseOrderNum;
+
     public OneordersPostResponses201ContentApplication1jsonSchema withPurchaseOrderNum(String purchaseOrderNum) {
         this.purchaseOrderNum = purchaseOrderNum;
         return this;
@@ -120,6 +130,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchema {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("recordedOn")
     public OffsetDateTime recordedOn;
+
     public OneordersPostResponses201ContentApplication1jsonSchema withRecordedOn(OffsetDateTime recordedOn) {
         this.recordedOn = recordedOn;
         return this;
@@ -128,6 +139,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingNumbers")
     public OneordersPostResponses201ContentApplication1jsonSchemaTrackingNumberV2[] trackingNumbers;
+
     public OneordersPostResponses201ContentApplication1jsonSchema withTrackingNumbers(OneordersPostResponses201ContentApplication1jsonSchemaTrackingNumberV2[] trackingNumbers) {
         this.trackingNumbers = trackingNumbers;
         return this;
@@ -135,6 +147,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchema {
     
     @JsonProperty("validatedConsignee")
     public OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee validatedConsignee;
+
     public OneordersPostResponses201ContentApplication1jsonSchema withValidatedConsignee(OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee validatedConsignee) {
         this.validatedConsignee = validatedConsignee;
         return this;
@@ -143,9 +156,20 @@ public class OneordersPostResponses201ContentApplication1jsonSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warehouse")
     public OneordersPostResponses201ContentApplication1jsonSchemaWarehouseV2 warehouse;
+
     public OneordersPostResponses201ContentApplication1jsonSchema withWarehouse(OneordersPostResponses201ContentApplication1jsonSchemaWarehouseV2 warehouse) {
         this.warehouse = warehouse;
         return this;
     }
     
+    public OneordersPostResponses201ContentApplication1jsonSchema(@JsonProperty("currentStatus") OneordersPostResponses201ContentApplication1jsonSchemaStatusEventV2 currentStatus, @JsonProperty("id") Long id, @JsonProperty("merchant") OneordersPostResponses201ContentApplication1jsonSchemaMerchantV2 merchant, @JsonProperty("merchantOrderId") String merchantOrderId, @JsonProperty("merchantShippingMethod") String merchantShippingMethod, @JsonProperty("originalConsignee") OneordersPostResponses201ContentApplication1jsonSchemaConsigneeV2 originalConsignee, @JsonProperty("recordedOn") OffsetDateTime recordedOn, @JsonProperty("validatedConsignee") OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee validatedConsignee) {
+        this.currentStatus = currentStatus;
+        this.id = id;
+        this.merchant = merchant;
+        this.merchantOrderId = merchantOrderId;
+        this.merchantShippingMethod = merchantShippingMethod;
+        this.originalConsignee = originalConsignee;
+        this.recordedOn = recordedOn;
+        this.validatedConsignee = validatedConsignee;
+  }
 }

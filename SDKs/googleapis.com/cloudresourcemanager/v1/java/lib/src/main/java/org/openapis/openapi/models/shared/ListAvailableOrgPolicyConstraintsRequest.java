@@ -18,6 +18,7 @@ public class ListAvailableOrgPolicyConstraintsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public ListAvailableOrgPolicyConstraintsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -29,9 +30,11 @@ public class ListAvailableOrgPolicyConstraintsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public ListAvailableOrgPolicyConstraintsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public ListAvailableOrgPolicyConstraintsRequest(){}
 }

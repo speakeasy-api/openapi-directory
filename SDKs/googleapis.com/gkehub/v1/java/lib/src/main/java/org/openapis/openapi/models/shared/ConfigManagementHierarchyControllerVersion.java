@@ -18,6 +18,7 @@ public class ConfigManagementHierarchyControllerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extension")
     public String extension;
+
     public ConfigManagementHierarchyControllerVersion withExtension(String extension) {
         this.extension = extension;
         return this;
@@ -29,9 +30,11 @@ public class ConfigManagementHierarchyControllerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hnc")
     public String hnc;
+
     public ConfigManagementHierarchyControllerVersion withHnc(String hnc) {
         this.hnc = hnc;
         return this;
     }
     
+    public ConfigManagementHierarchyControllerVersion(){}
 }

@@ -15,9 +15,11 @@ public class ResetDeploymentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Force")
     public Boolean force;
+
     public ResetDeploymentsRequestBody withForce(Boolean force) {
         this.force = force;
         return this;
     }
     
+    public ResetDeploymentsRequestBody(){}
 }

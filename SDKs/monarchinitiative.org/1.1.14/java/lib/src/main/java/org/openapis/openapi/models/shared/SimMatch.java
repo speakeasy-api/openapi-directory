@@ -14,6 +14,7 @@ public class SimMatch {
      */
     @JsonProperty("id")
     public String id;
+
     public SimMatch withId(String id) {
         this.id = id;
         return this;
@@ -25,6 +26,7 @@ public class SimMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public SimMatch withLabel(String label) {
         this.label = label;
         return this;
@@ -33,6 +35,7 @@ public class SimMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pairwise_match")
     public PairwiseMatch[] pairwiseMatch;
+
     public SimMatch withPairwiseMatch(PairwiseMatch[] pairwiseMatch) {
         this.pairwiseMatch = pairwiseMatch;
         return this;
@@ -44,6 +47,7 @@ public class SimMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rank")
     public String rank;
+
     public SimMatch withRank(String rank) {
         this.rank = rank;
         return this;
@@ -55,6 +59,7 @@ public class SimMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Double score;
+
     public SimMatch withScore(Double score) {
         this.score = score;
         return this;
@@ -66,6 +71,7 @@ public class SimMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("significance")
     public String significance;
+
     public SimMatch withSignificance(String significance) {
         this.significance = significance;
         return this;
@@ -77,6 +83,7 @@ public class SimMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxon")
     public Node taxon;
+
     public SimMatch withTaxon(Node taxon) {
         this.taxon = taxon;
         return this;
@@ -88,9 +95,13 @@ public class SimMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public SimMatch withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SimMatch(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -20,6 +20,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentLength")
     public Long contentLength;
+
     public Item withContentLength(Long contentLength) {
         this.contentLength = contentLength;
         return this;
@@ -28,6 +29,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentType")
     public String contentType;
+
     public Item withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +38,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ETag")
     public String eTag;
+
     public Item withETag(String eTag) {
         this.eTag = eTag;
         return this;
@@ -46,6 +49,7 @@ public class Item {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModified")
     public OffsetDateTime lastModified;
+
     public Item withLastModified(OffsetDateTime lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -54,6 +58,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Item withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +67,11 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ItemTypeEnum type;
+
     public Item withType(ItemTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Item(){}
 }

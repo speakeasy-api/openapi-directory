@@ -15,6 +15,7 @@ public class ReplicationRunStageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stage")
     public String stage;
+
     public ReplicationRunStageDetails withStage(String stage) {
         this.stage = stage;
         return this;
@@ -23,9 +24,11 @@ public class ReplicationRunStageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stageProgress")
     public String stageProgress;
+
     public ReplicationRunStageDetails withStageProgress(String stageProgress) {
         this.stageProgress = stageProgress;
         return this;
     }
     
+    public ReplicationRunStageDetails(){}
 }

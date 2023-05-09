@@ -15,9 +15,11 @@ public class AssociateWebsiteCertificateAuthorityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebsiteCaId")
     public String websiteCaId;
+
     public AssociateWebsiteCertificateAuthorityResponse withWebsiteCaId(String websiteCaId) {
         this.websiteCaId = websiteCaId;
         return this;
     }
     
+    public AssociateWebsiteCertificateAuthorityResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PublishMessagesToChannelFormResponse {
     
     public byte[] body;
+
     public PublishMessagesToChannelFormResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PublishMessagesToChannelFormResponse {
     
     
     public String contentType;
+
     public PublishMessagesToChannelFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PublishMessagesToChannelFormResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PublishMessagesToChannelFormResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -33,6 +37,7 @@ public class PublishMessagesToChannelFormResponse {
     
     
     public Integer statusCode;
+
     public PublishMessagesToChannelFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class PublishMessagesToChannelFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PublishMessagesToChannelFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class PublishMessagesToChannelFormResponse {
      */
     
     public PublishMessagesToChannelForm2XXApplicationJSON publishMessagesToChannelForm2XXApplicationJSONObject;
+
     public PublishMessagesToChannelFormResponse withPublishMessagesToChannelForm2XXApplicationJSONObject(PublishMessagesToChannelForm2XXApplicationJSON publishMessagesToChannelForm2XXApplicationJSONObject) {
         this.publishMessagesToChannelForm2XXApplicationJSONObject = publishMessagesToChannelForm2XXApplicationJSONObject;
         return this;
     }
     
+    public PublishMessagesToChannelFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

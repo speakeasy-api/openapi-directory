@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05UsersAuthFetchModesJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05UsersAuthFetchModesJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05UsersAuthFetchModesJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,9 +21,14 @@ public class PostV05UsersAuthFetchModesJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PatientAuthModeQueryRequest patientAuthModeQueryRequest;
+
     public PostV05UsersAuthFetchModesJsonRequest withPatientAuthModeQueryRequest(org.openapis.openapi.models.shared.PatientAuthModeQueryRequest patientAuthModeQueryRequest) {
         this.patientAuthModeQueryRequest = patientAuthModeQueryRequest;
         return this;
     }
     
+    public PostV05UsersAuthFetchModesJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("PatientAuthModeQueryRequest") org.openapis.openapi.models.shared.PatientAuthModeQueryRequest patientAuthModeQueryRequest) {
+        this.authorization = authorization;
+        this.patientAuthModeQueryRequest = patientAuthModeQueryRequest;
+  }
 }

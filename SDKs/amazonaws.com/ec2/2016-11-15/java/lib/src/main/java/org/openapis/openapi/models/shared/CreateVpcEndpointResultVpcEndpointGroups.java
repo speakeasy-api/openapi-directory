@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpcEndpointResultVpcEndpointGroups {
     
     public String groupId;
+
     public CreateVpcEndpointResultVpcEndpointGroups withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -19,9 +20,11 @@ public class CreateVpcEndpointResultVpcEndpointGroups {
     
     
     public String groupName;
+
     public CreateVpcEndpointResultVpcEndpointGroups withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     
+    public CreateVpcEndpointResultVpcEndpointGroups(){}
 }

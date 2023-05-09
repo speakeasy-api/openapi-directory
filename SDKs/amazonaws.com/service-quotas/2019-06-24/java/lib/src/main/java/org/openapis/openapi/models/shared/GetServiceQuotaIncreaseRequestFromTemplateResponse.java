@@ -15,9 +15,11 @@ public class GetServiceQuotaIncreaseRequestFromTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceQuotaIncreaseRequestInTemplate")
     public ServiceQuotaIncreaseRequestInTemplate serviceQuotaIncreaseRequestInTemplate;
+
     public GetServiceQuotaIncreaseRequestFromTemplateResponse withServiceQuotaIncreaseRequestInTemplate(ServiceQuotaIncreaseRequestInTemplate serviceQuotaIncreaseRequestInTemplate) {
         this.serviceQuotaIncreaseRequestInTemplate = serviceQuotaIncreaseRequestInTemplate;
         return this;
     }
     
+    public GetServiceQuotaIncreaseRequestFromTemplateResponse(){}
 }

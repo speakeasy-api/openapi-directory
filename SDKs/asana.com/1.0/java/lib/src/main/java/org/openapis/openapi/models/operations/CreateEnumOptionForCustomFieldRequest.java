@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateEnumOptionForCustomFieldRequest {
@@ -12,6 +13,7 @@ public class CreateEnumOptionForCustomFieldRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateEnumOptionForCustomFieldRequestBodyInput requestBody;
+
     public CreateEnumOptionForCustomFieldRequest withRequestBody(CreateEnumOptionForCustomFieldRequestBodyInput requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class CreateEnumOptionForCustomFieldRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=custom_field_gid")
     public String customFieldGid;
+
     public CreateEnumOptionForCustomFieldRequest withCustomFieldGid(String customFieldGid) {
         this.customFieldGid = customFieldGid;
         return this;
@@ -33,6 +36,7 @@ public class CreateEnumOptionForCustomFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public CreateEnumOptionForCustomFieldRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -45,6 +49,7 @@ public class CreateEnumOptionForCustomFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public CreateEnumOptionForCustomFieldRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -57,6 +62,7 @@ public class CreateEnumOptionForCustomFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public CreateEnumOptionForCustomFieldRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -68,9 +74,13 @@ public class CreateEnumOptionForCustomFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public CreateEnumOptionForCustomFieldRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
     }
     
+    public CreateEnumOptionForCustomFieldRequest(@JsonProperty("custom_field_gid") String customFieldGid) {
+        this.customFieldGid = customFieldGid;
+  }
 }

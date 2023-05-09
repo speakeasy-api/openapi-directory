@@ -18,6 +18,7 @@ public class SecurityCenterProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public SecurityCenterProperties withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -29,6 +30,7 @@ public class SecurityCenterProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceOwners")
     public String[] resourceOwners;
+
     public SecurityCenterProperties withResourceOwners(String[] resourceOwners) {
         this.resourceOwners = resourceOwners;
         return this;
@@ -40,6 +42,7 @@ public class SecurityCenterProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceParent")
     public String resourceParent;
+
     public SecurityCenterProperties withResourceParent(String resourceParent) {
         this.resourceParent = resourceParent;
         return this;
@@ -51,6 +54,7 @@ public class SecurityCenterProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceProject")
     public String resourceProject;
+
     public SecurityCenterProperties withResourceProject(String resourceProject) {
         this.resourceProject = resourceProject;
         return this;
@@ -62,9 +66,11 @@ public class SecurityCenterProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public String resourceType;
+
     public SecurityCenterProperties withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public SecurityCenterProperties(){}
 }

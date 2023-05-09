@@ -12,6 +12,7 @@ public class UpdateConnectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public UpdateConnectionRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class UpdateConnectionRequest {
     
     @JsonProperty("ConnectionInput")
     public ConnectionInput connectionInput;
+
     public UpdateConnectionRequest withConnectionInput(ConnectionInput connectionInput) {
         this.connectionInput = connectionInput;
         return this;
@@ -26,9 +28,14 @@ public class UpdateConnectionRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateConnectionRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateConnectionRequest(@JsonProperty("ConnectionInput") ConnectionInput connectionInput, @JsonProperty("Name") String name) {
+        this.connectionInput = connectionInput;
+        this.name = name;
+  }
 }

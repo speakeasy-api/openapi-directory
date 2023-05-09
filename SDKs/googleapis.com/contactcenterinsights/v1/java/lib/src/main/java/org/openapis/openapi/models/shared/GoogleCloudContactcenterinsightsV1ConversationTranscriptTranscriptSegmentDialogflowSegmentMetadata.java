@@ -18,9 +18,11 @@ public class GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smartReplyAllowlistCovered")
     public Boolean smartReplyAllowlistCovered;
+
     public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadata withSmartReplyAllowlistCovered(Boolean smartReplyAllowlistCovered) {
         this.smartReplyAllowlistCovered = smartReplyAllowlistCovered;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadata(){}
 }

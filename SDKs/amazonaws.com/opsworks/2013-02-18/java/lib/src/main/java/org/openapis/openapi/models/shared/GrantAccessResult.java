@@ -15,9 +15,11 @@ public class GrantAccessResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemporaryCredential")
     public TemporaryCredential temporaryCredential;
+
     public GrantAccessResult withTemporaryCredential(TemporaryCredential temporaryCredential) {
         this.temporaryCredential = temporaryCredential;
         return this;
     }
     
+    public GrantAccessResult(){}
 }

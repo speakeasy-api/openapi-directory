@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFieldResponse {
@@ -12,6 +13,7 @@ public class UpdateFieldResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateFieldResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateFieldResponse {
      */
     
     public Object conflictException;
+
     public UpdateFieldResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFieldResponse {
     
     
     public String contentType;
+
     public UpdateFieldResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFieldResponse {
      */
     
     public Object internalServerException;
+
     public UpdateFieldResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateFieldResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateFieldResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateFieldResponse {
     
     
     public Integer statusCode;
+
     public UpdateFieldResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateFieldResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFieldResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateFieldResponse {
      */
     
     public Object throttlingException;
+
     public UpdateFieldResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateFieldResponse {
      */
     
     public java.util.Map<String, Object> updateFieldResponse;
+
     public UpdateFieldResponse withUpdateFieldResponse(java.util.Map<String, Object> updateFieldResponse) {
         this.updateFieldResponse = updateFieldResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateFieldResponse {
      */
     
     public Object validationException;
+
     public UpdateFieldResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateFieldResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

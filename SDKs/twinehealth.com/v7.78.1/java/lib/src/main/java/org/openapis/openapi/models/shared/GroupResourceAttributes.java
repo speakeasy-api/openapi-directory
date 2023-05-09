@@ -15,6 +15,7 @@ public class GroupResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bio")
     public String bio;
+
     public GroupResourceAttributes withBio(String bio) {
         this.bio = bio;
         return this;
@@ -25,9 +26,13 @@ public class GroupResourceAttributes {
      */
     @JsonProperty("name")
     public String name;
+
     public GroupResourceAttributes withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GroupResourceAttributes(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

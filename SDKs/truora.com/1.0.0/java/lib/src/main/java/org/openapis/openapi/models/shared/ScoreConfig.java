@@ -15,6 +15,7 @@ public class ScoreConfig {
      */
     @JsonProperty("data_set")
     public String dataSet;
+
     public ScoreConfig withDataSet(String dataSet) {
         this.dataSet = dataSet;
         return this;
@@ -25,9 +26,14 @@ public class ScoreConfig {
      */
     @JsonProperty("weight")
     public String weight;
+
     public ScoreConfig withWeight(String weight) {
         this.weight = weight;
         return this;
     }
     
+    public ScoreConfig(@JsonProperty("data_set") String dataSet, @JsonProperty("weight") String weight) {
+        this.dataSet = dataSet;
+        this.weight = weight;
+  }
 }

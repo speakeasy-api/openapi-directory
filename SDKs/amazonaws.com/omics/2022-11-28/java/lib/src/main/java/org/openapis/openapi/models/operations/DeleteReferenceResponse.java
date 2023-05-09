@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteReferenceResponse {
@@ -12,6 +13,7 @@ public class DeleteReferenceResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteReferenceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteReferenceResponse {
      */
     
     public Object conflictException;
+
     public DeleteReferenceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteReferenceResponse {
     
     
     public String contentType;
+
     public DeleteReferenceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteReferenceResponse {
      */
     
     public java.util.Map<String, Object> deleteReferenceResponse;
+
     public DeleteReferenceResponse withDeleteReferenceResponse(java.util.Map<String, Object> deleteReferenceResponse) {
         this.deleteReferenceResponse = deleteReferenceResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteReferenceResponse {
      */
     
     public Object internalServerException;
+
     public DeleteReferenceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteReferenceResponse {
      */
     
     public Object requestTimeoutException;
+
     public DeleteReferenceResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteReferenceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteReferenceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteReferenceResponse {
     
     
     public Integer statusCode;
+
     public DeleteReferenceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteReferenceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteReferenceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteReferenceResponse {
      */
     
     public Object throttlingException;
+
     public DeleteReferenceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteReferenceResponse {
      */
     
     public Object validationException;
+
     public DeleteReferenceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteReferenceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

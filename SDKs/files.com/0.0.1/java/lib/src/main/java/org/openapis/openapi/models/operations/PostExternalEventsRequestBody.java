@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostExternalEventsRequestBody {
@@ -12,6 +13,7 @@ public class PostExternalEventsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=body")
     public String body;
+
     public PostExternalEventsRequestBody withBody(String body) {
         this.body = body;
         return this;
@@ -22,9 +24,14 @@ public class PostExternalEventsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=status")
     public PostExternalEventsRequestBodyStatusEnum status;
+
     public PostExternalEventsRequestBody withStatus(PostExternalEventsRequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostExternalEventsRequestBody(@JsonProperty("body") String body, @JsonProperty("status") PostExternalEventsRequestBodyStatusEnum status) {
+        this.body = body;
+        this.status = status;
+  }
 }

@@ -18,6 +18,7 @@ public class PubsubLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dropLateData")
     public Boolean dropLateData;
+
     public PubsubLocation withDropLateData(Boolean dropLateData) {
         this.dropLateData = dropLateData;
         return this;
@@ -29,6 +30,7 @@ public class PubsubLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idLabel")
     public String idLabel;
+
     public PubsubLocation withIdLabel(String idLabel) {
         this.idLabel = idLabel;
         return this;
@@ -40,6 +42,7 @@ public class PubsubLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription")
     public String subscription;
+
     public PubsubLocation withSubscription(String subscription) {
         this.subscription = subscription;
         return this;
@@ -51,6 +54,7 @@ public class PubsubLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestampLabel")
     public String timestampLabel;
+
     public PubsubLocation withTimestampLabel(String timestampLabel) {
         this.timestampLabel = timestampLabel;
         return this;
@@ -62,6 +66,7 @@ public class PubsubLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic")
     public String topic;
+
     public PubsubLocation withTopic(String topic) {
         this.topic = topic;
         return this;
@@ -73,6 +78,7 @@ public class PubsubLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingSubscription")
     public String trackingSubscription;
+
     public PubsubLocation withTrackingSubscription(String trackingSubscription) {
         this.trackingSubscription = trackingSubscription;
         return this;
@@ -84,9 +90,11 @@ public class PubsubLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("withAttributes")
     public Boolean withAttributes;
+
     public PubsubLocation withWithAttributes(Boolean withAttributes) {
         this.withAttributes = withAttributes;
         return this;
     }
     
+    public PubsubLocation(){}
 }

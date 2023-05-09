@@ -18,9 +18,11 @@ public class DescribeServiceIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceIntegration")
     public ServiceIntegrationConfig serviceIntegration;
+
     public DescribeServiceIntegrationResponse withServiceIntegration(ServiceIntegrationConfig serviceIntegration) {
         this.serviceIntegration = serviceIntegration;
         return this;
     }
     
+    public DescribeServiceIntegrationResponse(){}
 }

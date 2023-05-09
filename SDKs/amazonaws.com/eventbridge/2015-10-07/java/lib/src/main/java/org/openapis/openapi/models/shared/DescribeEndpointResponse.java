@@ -20,6 +20,7 @@ public class DescribeEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public DescribeEndpointResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class DescribeEndpointResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeEndpointResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class DescribeEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeEndpointResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class DescribeEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointId")
     public String endpointId;
+
     public DescribeEndpointResponse withEndpointId(String endpointId) {
         this.endpointId = endpointId;
         return this;
@@ -54,6 +58,7 @@ public class DescribeEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointUrl")
     public String endpointUrl;
+
     public DescribeEndpointResponse withEndpointUrl(String endpointUrl) {
         this.endpointUrl = endpointUrl;
         return this;
@@ -62,6 +67,7 @@ public class DescribeEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBuses")
     public EndpointEventBus[] eventBuses;
+
     public DescribeEndpointResponse withEventBuses(EndpointEventBus[] eventBuses) {
         this.eventBuses = eventBuses;
         return this;
@@ -72,6 +78,7 @@ public class DescribeEndpointResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeEndpointResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -80,6 +87,7 @@ public class DescribeEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribeEndpointResponse withName(String name) {
         this.name = name;
         return this;
@@ -88,6 +96,7 @@ public class DescribeEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationConfig")
     public ReplicationConfig replicationConfig;
+
     public DescribeEndpointResponse withReplicationConfig(ReplicationConfig replicationConfig) {
         this.replicationConfig = replicationConfig;
         return this;
@@ -96,6 +105,7 @@ public class DescribeEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeEndpointResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -104,6 +114,7 @@ public class DescribeEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoutingConfig")
     public RoutingConfig routingConfig;
+
     public DescribeEndpointResponse withRoutingConfig(RoutingConfig routingConfig) {
         this.routingConfig = routingConfig;
         return this;
@@ -112,6 +123,7 @@ public class DescribeEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public EndpointStateEnum state;
+
     public DescribeEndpointResponse withState(EndpointStateEnum state) {
         this.state = state;
         return this;
@@ -120,9 +132,11 @@ public class DescribeEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateReason")
     public String stateReason;
+
     public DescribeEndpointResponse withStateReason(String stateReason) {
         this.stateReason = stateReason;
         return this;
     }
     
+    public DescribeEndpointResponse(){}
 }

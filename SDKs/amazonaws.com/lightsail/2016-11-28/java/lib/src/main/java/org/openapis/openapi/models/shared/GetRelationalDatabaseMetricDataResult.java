@@ -15,6 +15,7 @@ public class GetRelationalDatabaseMetricDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricData")
     public MetricDatapoint[] metricData;
+
     public GetRelationalDatabaseMetricDataResult withMetricData(MetricDatapoint[] metricData) {
         this.metricData = metricData;
         return this;
@@ -23,9 +24,11 @@ public class GetRelationalDatabaseMetricDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricName")
     public RelationalDatabaseMetricNameEnum metricName;
+
     public GetRelationalDatabaseMetricDataResult withMetricName(RelationalDatabaseMetricNameEnum metricName) {
         this.metricName = metricName;
         return this;
     }
     
+    public GetRelationalDatabaseMetricDataResult(){}
 }

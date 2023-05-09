@@ -15,6 +15,7 @@ public class StartVectorEnrichmentJobRequestBodyJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MapMatchingConfig")
     public org.openapis.openapi.models.shared.MapMatchingConfig mapMatchingConfig;
+
     public StartVectorEnrichmentJobRequestBodyJobConfig withMapMatchingConfig(org.openapis.openapi.models.shared.MapMatchingConfig mapMatchingConfig) {
         this.mapMatchingConfig = mapMatchingConfig;
         return this;
@@ -23,9 +24,11 @@ public class StartVectorEnrichmentJobRequestBodyJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReverseGeocodingConfig")
     public org.openapis.openapi.models.shared.ReverseGeocodingConfig reverseGeocodingConfig;
+
     public StartVectorEnrichmentJobRequestBodyJobConfig withReverseGeocodingConfig(org.openapis.openapi.models.shared.ReverseGeocodingConfig reverseGeocodingConfig) {
         this.reverseGeocodingConfig = reverseGeocodingConfig;
         return this;
     }
     
+    public StartVectorEnrichmentJobRequestBodyJobConfig(){}
 }

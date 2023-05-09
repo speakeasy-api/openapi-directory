@@ -20,6 +20,7 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public GetDirectDebitMandatesMandatesMandate withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -31,6 +32,7 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public GetDirectDebitMandatesMandatesMandateCurrency currency;
+
     public GetDirectDebitMandatesMandatesMandate withCurrency(GetDirectDebitMandatesMandatesMandateCurrency currency) {
         this.currency = currency;
         return this;
@@ -44,6 +46,7 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dateCancelled")
     public OffsetDateTime dateCancelled;
+
     public GetDirectDebitMandatesMandatesMandate withDateCancelled(OffsetDateTime dateCancelled) {
         this.dateCancelled = dateCancelled;
         return this;
@@ -57,6 +60,7 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dateCompleted")
     public OffsetDateTime dateCompleted;
+
     public GetDirectDebitMandatesMandatesMandate withDateCompleted(OffsetDateTime dateCompleted) {
         this.dateCompleted = dateCompleted;
         return this;
@@ -70,6 +74,7 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dateCreated")
     public OffsetDateTime dateCreated;
+
     public GetDirectDebitMandatesMandatesMandate withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -81,6 +86,7 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fireRejectionReason")
     public GetDirectDebitMandatesMandatesMandateFireRejectionReasonEnum fireRejectionReason;
+
     public GetDirectDebitMandatesMandatesMandate withFireRejectionReason(GetDirectDebitMandatesMandatesMandateFireRejectionReasonEnum fireRejectionReason) {
         this.fireRejectionReason = fireRejectionReason;
         return this;
@@ -94,6 +100,7 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdated")
     public OffsetDateTime lastUpdated;
+
     public GetDirectDebitMandatesMandatesMandate withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -105,6 +112,7 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestDirectDebitAmount")
     public Long latestDirectDebitAmount;
+
     public GetDirectDebitMandatesMandatesMandate withLatestDirectDebitAmount(Long latestDirectDebitAmount) {
         this.latestDirectDebitAmount = latestDirectDebitAmount;
         return this;
@@ -118,6 +126,7 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("latestDirectDebitDate")
     public OffsetDateTime latestDirectDebitDate;
+
     public GetDirectDebitMandatesMandatesMandate withLatestDirectDebitDate(OffsetDateTime latestDirectDebitDate) {
         this.latestDirectDebitDate = latestDirectDebitDate;
         return this;
@@ -129,6 +138,7 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mandateReference")
     public String mandateReference;
+
     public GetDirectDebitMandatesMandatesMandate withMandateReference(String mandateReference) {
         this.mandateReference = mandateReference;
         return this;
@@ -140,6 +150,7 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mandateUuid")
     public String mandateUuid;
+
     public GetDirectDebitMandatesMandatesMandate withMandateUuid(String mandateUuid) {
         this.mandateUuid = mandateUuid;
         return this;
@@ -151,6 +162,7 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfDirectDebitCollected")
     public Long numberOfDirectDebitCollected;
+
     public GetDirectDebitMandatesMandatesMandate withNumberOfDirectDebitCollected(Long numberOfDirectDebitCollected) {
         this.numberOfDirectDebitCollected = numberOfDirectDebitCollected;
         return this;
@@ -162,6 +174,7 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originatorAlias")
     public String originatorAlias;
+
     public GetDirectDebitMandatesMandatesMandate withOriginatorAlias(String originatorAlias) {
         this.originatorAlias = originatorAlias;
         return this;
@@ -173,6 +186,7 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originatorLogoUrlLarge")
     public String originatorLogoUrlLarge;
+
     public GetDirectDebitMandatesMandatesMandate withOriginatorLogoUrlLarge(String originatorLogoUrlLarge) {
         this.originatorLogoUrlLarge = originatorLogoUrlLarge;
         return this;
@@ -184,6 +198,7 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originatorLogoUrlSmall")
     public String originatorLogoUrlSmall;
+
     public GetDirectDebitMandatesMandatesMandate withOriginatorLogoUrlSmall(String originatorLogoUrlSmall) {
         this.originatorLogoUrlSmall = originatorLogoUrlSmall;
         return this;
@@ -195,6 +210,7 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originatorName")
     public String originatorName;
+
     public GetDirectDebitMandatesMandatesMandate withOriginatorName(String originatorName) {
         this.originatorName = originatorName;
         return this;
@@ -206,6 +222,7 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originatorReference")
     public String originatorReference;
+
     public GetDirectDebitMandatesMandatesMandate withOriginatorReference(String originatorReference) {
         this.originatorReference = originatorReference;
         return this;
@@ -217,6 +234,7 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemeCancelReason")
     public String schemeCancelReason;
+
     public GetDirectDebitMandatesMandatesMandate withSchemeCancelReason(String schemeCancelReason) {
         this.schemeCancelReason = schemeCancelReason;
         return this;
@@ -228,6 +246,7 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemeCancelReasonCode")
     public String schemeCancelReasonCode;
+
     public GetDirectDebitMandatesMandatesMandate withSchemeCancelReasonCode(String schemeCancelReasonCode) {
         this.schemeCancelReasonCode = schemeCancelReasonCode;
         return this;
@@ -254,6 +273,7 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GetDirectDebitMandatesMandatesMandateStatusEnum status;
+
     public GetDirectDebitMandatesMandatesMandate withStatus(GetDirectDebitMandatesMandatesMandateStatusEnum status) {
         this.status = status;
         return this;
@@ -265,6 +285,7 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetIcan")
     public Long targetIcan;
+
     public GetDirectDebitMandatesMandatesMandate withTargetIcan(Long targetIcan) {
         this.targetIcan = targetIcan;
         return this;
@@ -276,9 +297,11 @@ public class GetDirectDebitMandatesMandatesMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueOfDirectDebitCollected")
     public Long valueOfDirectDebitCollected;
+
     public GetDirectDebitMandatesMandatesMandate withValueOfDirectDebitCollected(Long valueOfDirectDebitCollected) {
         this.valueOfDirectDebitCollected = valueOfDirectDebitCollected;
         return this;
     }
     
+    public GetDirectDebitMandatesMandatesMandate(){}
 }

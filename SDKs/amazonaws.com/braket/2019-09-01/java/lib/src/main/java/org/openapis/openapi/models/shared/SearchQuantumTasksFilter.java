@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SearchQuantumTasksFilter {
     @JsonProperty("name")
     public String name;
+
     public SearchQuantumTasksFilter withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class SearchQuantumTasksFilter {
     
     @JsonProperty("operator")
     public SearchQuantumTasksFilterOperatorEnum operator;
+
     public SearchQuantumTasksFilter withOperator(SearchQuantumTasksFilterOperatorEnum operator) {
         this.operator = operator;
         return this;
@@ -26,9 +28,15 @@ public class SearchQuantumTasksFilter {
     
     @JsonProperty("values")
     public String[] values;
+
     public SearchQuantumTasksFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public SearchQuantumTasksFilter(@JsonProperty("name") String name, @JsonProperty("operator") SearchQuantumTasksFilterOperatorEnum operator, @JsonProperty("values") String[] values) {
+        this.name = name;
+        this.operator = operator;
+        this.values = values;
+  }
 }

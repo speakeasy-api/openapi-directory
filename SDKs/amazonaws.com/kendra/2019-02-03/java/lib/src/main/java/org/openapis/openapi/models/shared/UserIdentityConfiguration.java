@@ -15,9 +15,11 @@ public class UserIdentityConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityAttributeName")
     public String identityAttributeName;
+
     public UserIdentityConfiguration withIdentityAttributeName(String identityAttributeName) {
         this.identityAttributeName = identityAttributeName;
         return this;
     }
     
+    public UserIdentityConfiguration(){}
 }

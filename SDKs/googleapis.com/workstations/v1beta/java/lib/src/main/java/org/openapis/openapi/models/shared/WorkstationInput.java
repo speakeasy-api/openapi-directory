@@ -18,6 +18,7 @@ public class WorkstationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public WorkstationInput withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,17 +30,31 @@ public class WorkstationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public WorkstationInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
     /**
-     * Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.
+     * Environment variables passed to the workstation container's entrypoint.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("env")
+    public java.util.Map<String, String> env;
+
+    public WorkstationInput withEnv(java.util.Map<String, String> env) {
+        this.env = env;
+        return this;
+    }
+    
+    /**
+     * Checksum computed by the server. May be sent on update and delete requests to make sure that the client has an up-to-date value before proceeding.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public WorkstationInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,6 +66,7 @@ public class WorkstationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public WorkstationInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,9 +78,11 @@ public class WorkstationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WorkstationInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public WorkstationInput(){}
 }

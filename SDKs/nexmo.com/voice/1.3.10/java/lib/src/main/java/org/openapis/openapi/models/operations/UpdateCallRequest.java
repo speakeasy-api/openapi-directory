@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCallRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public Object requestBody;
+
     public UpdateCallRequest withRequestBody(Object requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class UpdateCallRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uuid")
     public String uuid;
+
     public UpdateCallRequest withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public UpdateCallRequest(@JsonProperty("RequestBody") Object requestBody, @JsonProperty("uuid") String uuid) {
+        this.requestBody = requestBody;
+        this.uuid = uuid;
+  }
 }

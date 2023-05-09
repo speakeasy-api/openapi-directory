@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsUpdateMembershipRolesRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public TeamsUpdateMembershipRolesRequestBody requestBody;
+
     public TeamsUpdateMembershipRolesRequest withRequestBody(TeamsUpdateMembershipRolesRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class TeamsUpdateMembershipRolesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
     public String membershipId;
+
     public TeamsUpdateMembershipRolesRequest withMembershipId(String membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -29,9 +32,14 @@ public class TeamsUpdateMembershipRolesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=teamId")
     public String teamId;
+
     public TeamsUpdateMembershipRolesRequest withTeamId(String teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public TeamsUpdateMembershipRolesRequest(@JsonProperty("membershipId") String membershipId, @JsonProperty("teamId") String teamId) {
+        this.membershipId = membershipId;
+        this.teamId = teamId;
+  }
 }

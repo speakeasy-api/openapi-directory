@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadTranslatedDocumentForLanguageRequest {
@@ -12,6 +13,7 @@ public class DownloadTranslatedDocumentForLanguageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=certified")
     public Boolean certified;
+
     public DownloadTranslatedDocumentForLanguageRequest withCertified(Boolean certified) {
         this.certified = certified;
         return this;
@@ -22,6 +24,7 @@ public class DownloadTranslatedDocumentForLanguageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
     public Long documentId;
+
     public DownloadTranslatedDocumentForLanguageRequest withDocumentId(Long documentId) {
         this.documentId = documentId;
         return this;
@@ -32,6 +35,7 @@ public class DownloadTranslatedDocumentForLanguageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=language")
     public String language;
+
     public DownloadTranslatedDocumentForLanguageRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -42,9 +46,15 @@ public class DownloadTranslatedDocumentForLanguageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public Long projectId;
+
     public DownloadTranslatedDocumentForLanguageRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public DownloadTranslatedDocumentForLanguageRequest(@JsonProperty("documentId") Long documentId, @JsonProperty("language") String language, @JsonProperty("projectId") Long projectId) {
+        this.documentId = documentId;
+        this.language = language;
+        this.projectId = projectId;
+  }
 }

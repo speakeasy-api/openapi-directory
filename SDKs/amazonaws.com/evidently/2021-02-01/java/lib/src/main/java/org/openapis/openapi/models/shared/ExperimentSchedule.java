@@ -22,9 +22,11 @@ public class ExperimentSchedule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("analysisCompleteTime")
     public OffsetDateTime analysisCompleteTime;
+
     public ExperimentSchedule withAnalysisCompleteTime(OffsetDateTime analysisCompleteTime) {
         this.analysisCompleteTime = analysisCompleteTime;
         return this;
     }
     
+    public ExperimentSchedule(){}
 }

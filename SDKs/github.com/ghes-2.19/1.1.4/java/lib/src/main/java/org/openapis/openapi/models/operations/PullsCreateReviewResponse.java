@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PullsCreateReviewResponse {
     
     public String contentType;
+
     public PullsCreateReviewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PullsCreateReviewResponse {
     
     
     public Integer statusCode;
+
     public PullsCreateReviewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PullsCreateReviewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PullsCreateReviewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PullsCreateReviewResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public PullsCreateReviewResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class PullsCreateReviewResponse {
      */
     
     public org.openapis.openapi.models.shared.PullRequestReview pullRequestReview;
+
     public PullsCreateReviewResponse withPullRequestReview(org.openapis.openapi.models.shared.PullRequestReview pullRequestReview) {
         this.pullRequestReview = pullRequestReview;
         return this;
@@ -53,9 +59,14 @@ public class PullsCreateReviewResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrorSimple validationErrorSimple;
+
     public PullsCreateReviewResponse withValidationErrorSimple(org.openapis.openapi.models.shared.ValidationErrorSimple validationErrorSimple) {
         this.validationErrorSimple = validationErrorSimple;
         return this;
     }
     
+    public PullsCreateReviewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDatalakeResponse {
@@ -12,6 +13,7 @@ public class UpdateDatalakeResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateDatalakeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDatalakeResponse {
     
     
     public String contentType;
+
     public UpdateDatalakeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDatalakeResponse {
      */
     
     public Object eventBridgeException;
+
     public UpdateDatalakeResponse withEventBridgeException(Object eventBridgeException) {
         this.eventBridgeException = eventBridgeException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDatalakeResponse {
      */
     
     public Object internalServerException;
+
     public UpdateDatalakeResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDatalakeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateDatalakeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateDatalakeResponse {
     
     
     public Integer statusCode;
+
     public UpdateDatalakeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDatalakeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDatalakeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDatalakeResponse {
      */
     
     public java.util.Map<String, Object> updateDatalakeResponse;
+
     public UpdateDatalakeResponse withUpdateDatalakeResponse(java.util.Map<String, Object> updateDatalakeResponse) {
         this.updateDatalakeResponse = updateDatalakeResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateDatalakeResponse {
      */
     
     public Object validationException;
+
     public UpdateDatalakeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateDatalakeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

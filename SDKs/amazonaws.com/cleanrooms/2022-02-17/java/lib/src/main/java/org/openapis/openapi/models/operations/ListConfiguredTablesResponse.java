@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListConfiguredTablesResponse {
@@ -12,6 +13,7 @@ public class ListConfiguredTablesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListConfiguredTablesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListConfiguredTablesResponse {
     
     
     public String contentType;
+
     public ListConfiguredTablesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListConfiguredTablesResponse {
      */
     
     public Object internalServerException;
+
     public ListConfiguredTablesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListConfiguredTablesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListConfiguredTablesOutput listConfiguredTablesOutput;
+
     public ListConfiguredTablesResponse withListConfiguredTablesOutput(org.openapis.openapi.models.shared.ListConfiguredTablesOutput listConfiguredTablesOutput) {
         this.listConfiguredTablesOutput = listConfiguredTablesOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListConfiguredTablesResponse {
     
     
     public Integer statusCode;
+
     public ListConfiguredTablesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListConfiguredTablesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListConfiguredTablesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListConfiguredTablesResponse {
      */
     
     public Object throttlingException;
+
     public ListConfiguredTablesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListConfiguredTablesResponse {
      */
     
     public Object validationException;
+
     public ListConfiguredTablesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListConfiguredTablesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

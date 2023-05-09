@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV2WebhookSubscriptionsRequestBody {
@@ -12,6 +13,7 @@ public class PostV2WebhookSubscriptionsRequestBody {
      */
     @SpeakeasyMetadata("form:name=callback_token")
     public String callbackToken;
+
     public PostV2WebhookSubscriptionsRequestBody withCallbackToken(String callbackToken) {
         this.callbackToken = callbackToken;
         return this;
@@ -22,6 +24,7 @@ public class PostV2WebhookSubscriptionsRequestBody {
      */
     @SpeakeasyMetadata("form:name=callback_url")
     public String callbackUrl;
+
     public PostV2WebhookSubscriptionsRequestBody withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
@@ -32,9 +35,15 @@ public class PostV2WebhookSubscriptionsRequestBody {
      */
     @SpeakeasyMetadata("form:name=event_type")
     public String eventType;
+
     public PostV2WebhookSubscriptionsRequestBody withEventType(String eventType) {
         this.eventType = eventType;
         return this;
     }
     
+    public PostV2WebhookSubscriptionsRequestBody(@JsonProperty("callback_token") String callbackToken, @JsonProperty("callback_url") String callbackUrl, @JsonProperty("event_type") String eventType) {
+        this.callbackToken = callbackToken;
+        this.callbackUrl = callbackUrl;
+        this.eventType = eventType;
+  }
 }

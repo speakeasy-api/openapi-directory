@@ -15,6 +15,7 @@ public class RedisSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthPassword")
     public String authPassword;
+
     public RedisSettings withAuthPassword(String authPassword) {
         this.authPassword = authPassword;
         return this;
@@ -23,6 +24,7 @@ public class RedisSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthType")
     public RedisAuthTypeValueEnum authType;
+
     public RedisSettings withAuthType(RedisAuthTypeValueEnum authType) {
         this.authType = authType;
         return this;
@@ -31,6 +33,7 @@ public class RedisSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthUserName")
     public String authUserName;
+
     public RedisSettings withAuthUserName(String authUserName) {
         this.authUserName = authUserName;
         return this;
@@ -38,6 +41,7 @@ public class RedisSettings {
     
     @JsonProperty("Port")
     public Long port;
+
     public RedisSettings withPort(Long port) {
         this.port = port;
         return this;
@@ -45,6 +49,7 @@ public class RedisSettings {
     
     @JsonProperty("ServerName")
     public String serverName;
+
     public RedisSettings withServerName(String serverName) {
         this.serverName = serverName;
         return this;
@@ -53,6 +58,7 @@ public class RedisSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SslCaCertificateArn")
     public String sslCaCertificateArn;
+
     public RedisSettings withSslCaCertificateArn(String sslCaCertificateArn) {
         this.sslCaCertificateArn = sslCaCertificateArn;
         return this;
@@ -61,9 +67,14 @@ public class RedisSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SslSecurityProtocol")
     public SslSecurityProtocolValueEnum sslSecurityProtocol;
+
     public RedisSettings withSslSecurityProtocol(SslSecurityProtocolValueEnum sslSecurityProtocol) {
         this.sslSecurityProtocol = sslSecurityProtocol;
         return this;
     }
     
+    public RedisSettings(@JsonProperty("Port") Long port, @JsonProperty("ServerName") String serverName) {
+        this.port = port;
+        this.serverName = serverName;
+  }
 }

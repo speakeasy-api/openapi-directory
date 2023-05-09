@@ -20,6 +20,7 @@ public class DataRepositoryTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityToRelease")
     public Long capacityToRelease;
+
     public DataRepositoryTask withCapacityToRelease(Long capacityToRelease) {
         this.capacityToRelease = capacityToRelease;
         return this;
@@ -32,6 +33,7 @@ public class DataRepositoryTask {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DataRepositoryTask withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -42,6 +44,7 @@ public class DataRepositoryTask {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public DataRepositoryTask withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -50,6 +53,7 @@ public class DataRepositoryTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureDetails")
     public DataRepositoryTaskFailureDetails failureDetails;
+
     public DataRepositoryTask withFailureDetails(DataRepositoryTaskFailureDetails failureDetails) {
         this.failureDetails = failureDetails;
         return this;
@@ -58,6 +62,7 @@ public class DataRepositoryTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileCacheId")
     public String fileCacheId;
+
     public DataRepositoryTask withFileCacheId(String fileCacheId) {
         this.fileCacheId = fileCacheId;
         return this;
@@ -66,6 +71,7 @@ public class DataRepositoryTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public DataRepositoryTask withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -73,6 +79,7 @@ public class DataRepositoryTask {
     
     @JsonProperty("Lifecycle")
     public DataRepositoryTaskLifecycleEnum lifecycle;
+
     public DataRepositoryTask withLifecycle(DataRepositoryTaskLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -81,6 +88,7 @@ public class DataRepositoryTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Paths")
     public String[] paths;
+
     public DataRepositoryTask withPaths(String[] paths) {
         this.paths = paths;
         return this;
@@ -92,6 +100,7 @@ public class DataRepositoryTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Report")
     public CompletionReport report;
+
     public DataRepositoryTask withReport(CompletionReport report) {
         this.report = report;
         return this;
@@ -103,6 +112,7 @@ public class DataRepositoryTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public DataRepositoryTask withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
@@ -113,6 +123,7 @@ public class DataRepositoryTask {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public DataRepositoryTask withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -121,6 +132,7 @@ public class DataRepositoryTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public DataRepositoryTaskStatus status;
+
     public DataRepositoryTask withStatus(DataRepositoryTaskStatus status) {
         this.status = status;
         return this;
@@ -132,6 +144,7 @@ public class DataRepositoryTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public DataRepositoryTask withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -139,6 +152,7 @@ public class DataRepositoryTask {
     
     @JsonProperty("TaskId")
     public String taskId;
+
     public DataRepositoryTask withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -146,9 +160,16 @@ public class DataRepositoryTask {
     
     @JsonProperty("Type")
     public DataRepositoryTaskTypeEnum type;
+
     public DataRepositoryTask withType(DataRepositoryTaskTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DataRepositoryTask(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("Lifecycle") DataRepositoryTaskLifecycleEnum lifecycle, @JsonProperty("TaskId") String taskId, @JsonProperty("Type") DataRepositoryTaskTypeEnum type) {
+        this.creationTime = creationTime;
+        this.lifecycle = lifecycle;
+        this.taskId = taskId;
+        this.type = type;
+  }
 }

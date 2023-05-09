@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackageProjectTranslationMemoryRequest {
@@ -12,6 +13,7 @@ public class PackageProjectTranslationMemoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=async")
     public Long async;
+
     public PackageProjectTranslationMemoryRequest withAsync(Long async) {
         this.async = async;
         return this;
@@ -22,6 +24,7 @@ public class PackageProjectTranslationMemoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public String format;
+
     public PackageProjectTranslationMemoryRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -32,9 +35,13 @@ public class PackageProjectTranslationMemoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public Long projectId;
+
     public PackageProjectTranslationMemoryRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public PackageProjectTranslationMemoryRequest(@JsonProperty("projectId") Long projectId) {
+        this.projectId = projectId;
+  }
 }

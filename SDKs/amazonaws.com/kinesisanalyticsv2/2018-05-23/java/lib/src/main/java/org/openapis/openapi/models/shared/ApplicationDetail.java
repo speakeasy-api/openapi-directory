@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ApplicationDetail {
     @JsonProperty("ApplicationARN")
     public String applicationARN;
+
     public ApplicationDetail withApplicationARN(String applicationARN) {
         this.applicationARN = applicationARN;
         return this;
@@ -27,6 +28,7 @@ public class ApplicationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationConfigurationDescription")
     public ApplicationConfigurationDescription applicationConfigurationDescription;
+
     public ApplicationDetail withApplicationConfigurationDescription(ApplicationConfigurationDescription applicationConfigurationDescription) {
         this.applicationConfigurationDescription = applicationConfigurationDescription;
         return this;
@@ -35,6 +37,7 @@ public class ApplicationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationDescription")
     public String applicationDescription;
+
     public ApplicationDetail withApplicationDescription(String applicationDescription) {
         this.applicationDescription = applicationDescription;
         return this;
@@ -43,6 +46,7 @@ public class ApplicationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationMaintenanceConfigurationDescription")
     public ApplicationMaintenanceConfigurationDescription applicationMaintenanceConfigurationDescription;
+
     public ApplicationDetail withApplicationMaintenanceConfigurationDescription(ApplicationMaintenanceConfigurationDescription applicationMaintenanceConfigurationDescription) {
         this.applicationMaintenanceConfigurationDescription = applicationMaintenanceConfigurationDescription;
         return this;
@@ -51,6 +55,7 @@ public class ApplicationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationMode")
     public ApplicationModeEnum applicationMode;
+
     public ApplicationDetail withApplicationMode(ApplicationModeEnum applicationMode) {
         this.applicationMode = applicationMode;
         return this;
@@ -58,6 +63,7 @@ public class ApplicationDetail {
     
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public ApplicationDetail withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -65,6 +71,7 @@ public class ApplicationDetail {
     
     @JsonProperty("ApplicationStatus")
     public ApplicationStatusEnum applicationStatus;
+
     public ApplicationDetail withApplicationStatus(ApplicationStatusEnum applicationStatus) {
         this.applicationStatus = applicationStatus;
         return this;
@@ -72,6 +79,7 @@ public class ApplicationDetail {
     
     @JsonProperty("ApplicationVersionId")
     public Long applicationVersionId;
+
     public ApplicationDetail withApplicationVersionId(Long applicationVersionId) {
         this.applicationVersionId = applicationVersionId;
         return this;
@@ -80,6 +88,7 @@ public class ApplicationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationVersionRolledBackFrom")
     public Long applicationVersionRolledBackFrom;
+
     public ApplicationDetail withApplicationVersionRolledBackFrom(Long applicationVersionRolledBackFrom) {
         this.applicationVersionRolledBackFrom = applicationVersionRolledBackFrom;
         return this;
@@ -88,6 +97,7 @@ public class ApplicationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationVersionRolledBackTo")
     public Long applicationVersionRolledBackTo;
+
     public ApplicationDetail withApplicationVersionRolledBackTo(Long applicationVersionRolledBackTo) {
         this.applicationVersionRolledBackTo = applicationVersionRolledBackTo;
         return this;
@@ -96,6 +106,7 @@ public class ApplicationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationVersionUpdatedFrom")
     public Long applicationVersionUpdatedFrom;
+
     public ApplicationDetail withApplicationVersionUpdatedFrom(Long applicationVersionUpdatedFrom) {
         this.applicationVersionUpdatedFrom = applicationVersionUpdatedFrom;
         return this;
@@ -104,6 +115,7 @@ public class ApplicationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLoggingOptionDescriptions")
     public CloudWatchLoggingOptionDescription[] cloudWatchLoggingOptionDescriptions;
+
     public ApplicationDetail withCloudWatchLoggingOptionDescriptions(CloudWatchLoggingOptionDescription[] cloudWatchLoggingOptionDescriptions) {
         this.cloudWatchLoggingOptionDescriptions = cloudWatchLoggingOptionDescriptions;
         return this;
@@ -112,6 +124,7 @@ public class ApplicationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConditionalToken")
     public String conditionalToken;
+
     public ApplicationDetail withConditionalToken(String conditionalToken) {
         this.conditionalToken = conditionalToken;
         return this;
@@ -122,6 +135,7 @@ public class ApplicationDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTimestamp")
     public OffsetDateTime createTimestamp;
+
     public ApplicationDetail withCreateTimestamp(OffsetDateTime createTimestamp) {
         this.createTimestamp = createTimestamp;
         return this;
@@ -132,6 +146,7 @@ public class ApplicationDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateTimestamp")
     public OffsetDateTime lastUpdateTimestamp;
+
     public ApplicationDetail withLastUpdateTimestamp(OffsetDateTime lastUpdateTimestamp) {
         this.lastUpdateTimestamp = lastUpdateTimestamp;
         return this;
@@ -139,6 +154,7 @@ public class ApplicationDetail {
     
     @JsonProperty("RuntimeEnvironment")
     public RuntimeEnvironmentEnum runtimeEnvironment;
+
     public ApplicationDetail withRuntimeEnvironment(RuntimeEnvironmentEnum runtimeEnvironment) {
         this.runtimeEnvironment = runtimeEnvironment;
         return this;
@@ -147,9 +163,17 @@ public class ApplicationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceExecutionRole")
     public String serviceExecutionRole;
+
     public ApplicationDetail withServiceExecutionRole(String serviceExecutionRole) {
         this.serviceExecutionRole = serviceExecutionRole;
         return this;
     }
     
+    public ApplicationDetail(@JsonProperty("ApplicationARN") String applicationARN, @JsonProperty("ApplicationName") String applicationName, @JsonProperty("ApplicationStatus") ApplicationStatusEnum applicationStatus, @JsonProperty("ApplicationVersionId") Long applicationVersionId, @JsonProperty("RuntimeEnvironment") RuntimeEnvironmentEnum runtimeEnvironment) {
+        this.applicationARN = applicationARN;
+        this.applicationName = applicationName;
+        this.applicationStatus = applicationStatus;
+        this.applicationVersionId = applicationVersionId;
+        this.runtimeEnvironment = runtimeEnvironment;
+  }
 }

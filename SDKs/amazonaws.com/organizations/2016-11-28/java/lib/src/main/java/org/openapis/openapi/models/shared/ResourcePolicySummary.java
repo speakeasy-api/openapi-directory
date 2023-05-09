@@ -15,6 +15,7 @@ public class ResourcePolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public ResourcePolicySummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,9 +24,11 @@ public class ResourcePolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ResourcePolicySummary withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ResourcePolicySummary(){}
 }

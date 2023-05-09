@@ -16,6 +16,7 @@ public class DestinyResponsesDestinyCharacterResponse {
      */
     
     public DestinyResponsesDestinyCharacterResponseActivities activities;
+
     public DestinyResponsesDestinyCharacterResponse withActivities(DestinyResponsesDestinyCharacterResponseActivities activities) {
         this.activities = activities;
         return this;
@@ -27,6 +28,7 @@ public class DestinyResponsesDestinyCharacterResponse {
      */
     
     public DestinyResponsesDestinyCharacterResponseCharacter character;
+
     public DestinyResponsesDestinyCharacterResponse withCharacter(DestinyResponsesDestinyCharacterResponseCharacter character) {
         this.character = character;
         return this;
@@ -37,6 +39,7 @@ public class DestinyResponsesDestinyCharacterResponse {
      */
     
     public DestinyResponsesDestinyCharacterResponseCollectibles collectibles;
+
     public DestinyResponsesDestinyCharacterResponse withCollectibles(DestinyResponsesDestinyCharacterResponseCollectibles collectibles) {
         this.collectibles = collectibles;
         return this;
@@ -48,6 +51,7 @@ public class DestinyResponsesDestinyCharacterResponse {
      */
     
     public DestinyResponsesDestinyCharacterResponseCurrencyLookups currencyLookups;
+
     public DestinyResponsesDestinyCharacterResponse withCurrencyLookups(DestinyResponsesDestinyCharacterResponseCurrencyLookups currencyLookups) {
         this.currencyLookups = currencyLookups;
         return this;
@@ -59,6 +63,7 @@ public class DestinyResponsesDestinyCharacterResponse {
      */
     
     public DestinyResponsesDestinyCharacterResponseEquipment equipment;
+
     public DestinyResponsesDestinyCharacterResponse withEquipment(DestinyResponsesDestinyCharacterResponseEquipment equipment) {
         this.equipment = equipment;
         return this;
@@ -70,6 +75,7 @@ public class DestinyResponsesDestinyCharacterResponse {
      */
     
     public DestinyResponsesDestinyCharacterResponseInventory inventory;
+
     public DestinyResponsesDestinyCharacterResponse withInventory(DestinyResponsesDestinyCharacterResponseInventory inventory) {
         this.inventory = inventory;
         return this;
@@ -81,6 +87,7 @@ public class DestinyResponsesDestinyCharacterResponse {
      */
     
     public DestinyResponsesDestinyCharacterResponseItemComponents itemComponents;
+
     public DestinyResponsesDestinyCharacterResponse withItemComponents(DestinyResponsesDestinyCharacterResponseItemComponents itemComponents) {
         this.itemComponents = itemComponents;
         return this;
@@ -92,6 +99,7 @@ public class DestinyResponsesDestinyCharacterResponse {
      */
     
     public DestinyResponsesDestinyCharacterResponseKiosks kiosks;
+
     public DestinyResponsesDestinyCharacterResponse withKiosks(DestinyResponsesDestinyCharacterResponseKiosks kiosks) {
         this.kiosks = kiosks;
         return this;
@@ -103,6 +111,7 @@ public class DestinyResponsesDestinyCharacterResponse {
      */
     
     public DestinyResponsesDestinyCharacterResponseLoadouts loadouts;
+
     public DestinyResponsesDestinyCharacterResponse withLoadouts(DestinyResponsesDestinyCharacterResponseLoadouts loadouts) {
         this.loadouts = loadouts;
         return this;
@@ -115,6 +124,7 @@ public class DestinyResponsesDestinyCharacterResponse {
      */
     
     public DestinyResponsesDestinyCharacterResponsePlugSets plugSets;
+
     public DestinyResponsesDestinyCharacterResponse withPlugSets(DestinyResponsesDestinyCharacterResponsePlugSets plugSets) {
         this.plugSets = plugSets;
         return this;
@@ -125,6 +135,7 @@ public class DestinyResponsesDestinyCharacterResponse {
      */
     
     public DestinyResponsesDestinyCharacterResponsePresentationNodes presentationNodes;
+
     public DestinyResponsesDestinyCharacterResponse withPresentationNodes(DestinyResponsesDestinyCharacterResponsePresentationNodes presentationNodes) {
         this.presentationNodes = presentationNodes;
         return this;
@@ -136,6 +147,7 @@ public class DestinyResponsesDestinyCharacterResponse {
      */
     
     public DestinyResponsesDestinyCharacterResponseProgressions progressions;
+
     public DestinyResponsesDestinyCharacterResponse withProgressions(DestinyResponsesDestinyCharacterResponseProgressions progressions) {
         this.progressions = progressions;
         return this;
@@ -146,6 +158,7 @@ public class DestinyResponsesDestinyCharacterResponse {
      */
     
     public DestinyResponsesDestinyCharacterResponseRecords records;
+
     public DestinyResponsesDestinyCharacterResponse withRecords(DestinyResponsesDestinyCharacterResponseRecords records) {
         this.records = records;
         return this;
@@ -157,6 +170,7 @@ public class DestinyResponsesDestinyCharacterResponse {
      */
     
     public DestinyResponsesDestinyCharacterResponseRenderData renderData;
+
     public DestinyResponsesDestinyCharacterResponse withRenderData(DestinyResponsesDestinyCharacterResponseRenderData renderData) {
         this.renderData = renderData;
         return this;
@@ -168,9 +182,11 @@ public class DestinyResponsesDestinyCharacterResponse {
      */
     
     public DestinyResponsesDestinyCharacterResponseUninstancedItemComponents uninstancedItemComponents;
+
     public DestinyResponsesDestinyCharacterResponse withUninstancedItemComponents(DestinyResponsesDestinyCharacterResponseUninstancedItemComponents uninstancedItemComponents) {
         this.uninstancedItemComponents = uninstancedItemComponents;
         return this;
     }
     
+    public DestinyResponsesDestinyCharacterResponse(){}
 }

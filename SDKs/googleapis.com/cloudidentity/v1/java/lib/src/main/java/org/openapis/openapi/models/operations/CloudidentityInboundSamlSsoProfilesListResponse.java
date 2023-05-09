@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudidentityInboundSamlSsoProfilesListResponse {
     
     public String contentType;
+
     public CloudidentityInboundSamlSsoProfilesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudidentityInboundSamlSsoProfilesListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListInboundSamlSsoProfilesResponse listInboundSamlSsoProfilesResponse;
+
     public CloudidentityInboundSamlSsoProfilesListResponse withListInboundSamlSsoProfilesResponse(org.openapis.openapi.models.shared.ListInboundSamlSsoProfilesResponse listInboundSamlSsoProfilesResponse) {
         this.listInboundSamlSsoProfilesResponse = listInboundSamlSsoProfilesResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudidentityInboundSamlSsoProfilesListResponse {
     
     
     public Integer statusCode;
+
     public CloudidentityInboundSamlSsoProfilesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudidentityInboundSamlSsoProfilesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudidentityInboundSamlSsoProfilesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudidentityInboundSamlSsoProfilesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class OrderFee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icann")
     public Long icann;
+
     public OrderFee withIcann(Long icann) {
         this.icann = icann;
         return this;
@@ -25,9 +26,13 @@ public class OrderFee {
      */
     @JsonProperty("total")
     public Long total;
+
     public OrderFee withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public OrderFee(@JsonProperty("total") Long total) {
+        this.total = total;
+  }
 }

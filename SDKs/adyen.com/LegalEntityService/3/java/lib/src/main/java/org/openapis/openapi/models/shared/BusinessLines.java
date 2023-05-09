@@ -15,9 +15,13 @@ public class BusinessLines {
      */
     @JsonProperty("businessLines")
     public BusinessLine[] businessLines;
+
     public BusinessLines withBusinessLines(BusinessLine[] businessLines) {
         this.businessLines = businessLines;
         return this;
     }
     
+    public BusinessLines(@JsonProperty("businessLines") BusinessLine[] businessLines) {
+        this.businessLines = businessLines;
+  }
 }

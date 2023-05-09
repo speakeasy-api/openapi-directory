@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetTagsForResourceResponse {
@@ -12,6 +13,7 @@ public class SetTagsForResourceResponse {
      */
     
     public Object accessDeniedException;
+
     public SetTagsForResourceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class SetTagsForResourceResponse {
     
     
     public String contentType;
+
     public SetTagsForResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SetTagsForResourceResponse {
      */
     
     public Object internalException;
+
     public SetTagsForResourceResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class SetTagsForResourceResponse {
      */
     
     public Object invalidInputException;
+
     public SetTagsForResourceResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class SetTagsForResourceResponse {
      */
     
     public Object noSuchEntityException;
+
     public SetTagsForResourceResponse withNoSuchEntityException(Object noSuchEntityException) {
         this.noSuchEntityException = noSuchEntityException;
         return this;
@@ -59,6 +65,7 @@ public class SetTagsForResourceResponse {
      */
     
     public Object serviceTemporarilyUnavailableException;
+
     public SetTagsForResourceResponse withServiceTemporarilyUnavailableException(Object serviceTemporarilyUnavailableException) {
         this.serviceTemporarilyUnavailableException = serviceTemporarilyUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class SetTagsForResourceResponse {
     
     
     public Integer statusCode;
+
     public SetTagsForResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class SetTagsForResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetTagsForResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SetTagsForResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

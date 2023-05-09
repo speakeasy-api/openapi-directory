@@ -15,6 +15,7 @@ public class AwsEc2VpcPeeringConnectionStatusDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public AwsEc2VpcPeeringConnectionStatusDetails withCode(String code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class AwsEc2VpcPeeringConnectionStatusDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public AwsEc2VpcPeeringConnectionStatusDetails withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AwsEc2VpcPeeringConnectionStatusDetails(){}
 }

@@ -12,9 +12,11 @@ public class CalendarEventResourceLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public String self;
+
     public CalendarEventResourceLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public CalendarEventResourceLinks(){}
 }

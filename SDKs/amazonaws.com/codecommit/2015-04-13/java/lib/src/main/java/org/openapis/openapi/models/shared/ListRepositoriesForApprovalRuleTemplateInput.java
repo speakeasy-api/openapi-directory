@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListRepositoriesForApprovalRuleTemplateInput {
     @JsonProperty("approvalRuleTemplateName")
     public String approvalRuleTemplateName;
+
     public ListRepositoriesForApprovalRuleTemplateInput withApprovalRuleTemplateName(String approvalRuleTemplateName) {
         this.approvalRuleTemplateName = approvalRuleTemplateName;
         return this;
@@ -19,6 +20,7 @@ public class ListRepositoriesForApprovalRuleTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListRepositoriesForApprovalRuleTemplateInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListRepositoriesForApprovalRuleTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRepositoriesForApprovalRuleTemplateInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListRepositoriesForApprovalRuleTemplateInput(@JsonProperty("approvalRuleTemplateName") String approvalRuleTemplateName) {
+        this.approvalRuleTemplateName = approvalRuleTemplateName;
+  }
 }

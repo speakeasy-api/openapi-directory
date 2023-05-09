@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApplicationMaintenanceConfigurationDescription {
     @JsonProperty("ApplicationMaintenanceWindowEndTime")
     public String applicationMaintenanceWindowEndTime;
+
     public ApplicationMaintenanceConfigurationDescription withApplicationMaintenanceWindowEndTime(String applicationMaintenanceWindowEndTime) {
         this.applicationMaintenanceWindowEndTime = applicationMaintenanceWindowEndTime;
         return this;
@@ -19,9 +20,14 @@ public class ApplicationMaintenanceConfigurationDescription {
     
     @JsonProperty("ApplicationMaintenanceWindowStartTime")
     public String applicationMaintenanceWindowStartTime;
+
     public ApplicationMaintenanceConfigurationDescription withApplicationMaintenanceWindowStartTime(String applicationMaintenanceWindowStartTime) {
         this.applicationMaintenanceWindowStartTime = applicationMaintenanceWindowStartTime;
         return this;
     }
     
+    public ApplicationMaintenanceConfigurationDescription(@JsonProperty("ApplicationMaintenanceWindowEndTime") String applicationMaintenanceWindowEndTime, @JsonProperty("ApplicationMaintenanceWindowStartTime") String applicationMaintenanceWindowStartTime) {
+        this.applicationMaintenanceWindowEndTime = applicationMaintenanceWindowEndTime;
+        this.applicationMaintenanceWindowStartTime = applicationMaintenanceWindowStartTime;
+  }
 }

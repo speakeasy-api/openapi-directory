@@ -15,9 +15,11 @@ public class LabelingSetGenerationTaskRunProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputS3Path")
     public String outputS3Path;
+
     public LabelingSetGenerationTaskRunProperties withOutputS3Path(String outputS3Path) {
         this.outputS3Path = outputS3Path;
         return this;
     }
     
+    public LabelingSetGenerationTaskRunProperties(){}
 }

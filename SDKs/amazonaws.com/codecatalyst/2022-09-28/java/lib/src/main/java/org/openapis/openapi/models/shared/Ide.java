@@ -15,6 +15,7 @@ public class Ide {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Ide withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class Ide {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtime")
     public String runtime;
+
     public Ide withRuntime(String runtime) {
         this.runtime = runtime;
         return this;
     }
     
+    public Ide(){}
 }

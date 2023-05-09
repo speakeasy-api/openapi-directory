@@ -18,6 +18,7 @@ public class UpdateSlidePropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateSlidePropertiesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -29,6 +30,7 @@ public class UpdateSlidePropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public UpdateSlidePropertiesRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -40,9 +42,11 @@ public class UpdateSlidePropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slideProperties")
     public SlideProperties slideProperties;
+
     public UpdateSlidePropertiesRequest withSlideProperties(SlideProperties slideProperties) {
         this.slideProperties = slideProperties;
         return this;
     }
     
+    public UpdateSlidePropertiesRequest(){}
 }

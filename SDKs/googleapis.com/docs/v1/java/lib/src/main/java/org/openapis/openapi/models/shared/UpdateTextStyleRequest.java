@@ -18,6 +18,7 @@ public class UpdateTextStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateTextStyleRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -29,6 +30,7 @@ public class UpdateTextStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public Range range;
+
     public UpdateTextStyleRequest withRange(Range range) {
         this.range = range;
         return this;
@@ -40,9 +42,11 @@ public class UpdateTextStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textStyle")
     public TextStyle textStyle;
+
     public UpdateTextStyleRequest withTextStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
         return this;
     }
     
+    public UpdateTextStyleRequest(){}
 }

@@ -15,6 +15,7 @@ public class GetConnectionsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionType")
     public ConnectionTypeEnum connectionType;
+
     public GetConnectionsFilter withConnectionType(ConnectionTypeEnum connectionType) {
         this.connectionType = connectionType;
         return this;
@@ -23,9 +24,11 @@ public class GetConnectionsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchCriteria")
     public String[] matchCriteria;
+
     public GetConnectionsFilter withMatchCriteria(String[] matchCriteria) {
         this.matchCriteria = matchCriteria;
         return this;
     }
     
+    public GetConnectionsFilter(){}
 }

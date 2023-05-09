@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetGameSessionLogUrlResponse {
     
     public String contentType;
+
     public GetGameSessionLogUrlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetGameSessionLogUrlResponse {
      */
     
     public org.openapis.openapi.models.shared.GetGameSessionLogUrlOutput getGameSessionLogUrlOutput;
+
     public GetGameSessionLogUrlResponse withGetGameSessionLogUrlOutput(org.openapis.openapi.models.shared.GetGameSessionLogUrlOutput getGameSessionLogUrlOutput) {
         this.getGameSessionLogUrlOutput = getGameSessionLogUrlOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetGameSessionLogUrlResponse {
      */
     
     public Object internalServiceException;
+
     public GetGameSessionLogUrlResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class GetGameSessionLogUrlResponse {
      */
     
     public Object invalidRequestException;
+
     public GetGameSessionLogUrlResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class GetGameSessionLogUrlResponse {
      */
     
     public Object notFoundException;
+
     public GetGameSessionLogUrlResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetGameSessionLogUrlResponse {
     
     
     public Integer statusCode;
+
     public GetGameSessionLogUrlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetGameSessionLogUrlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetGameSessionLogUrlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetGameSessionLogUrlResponse {
      */
     
     public Object unauthorizedException;
+
     public GetGameSessionLogUrlResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetGameSessionLogUrlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

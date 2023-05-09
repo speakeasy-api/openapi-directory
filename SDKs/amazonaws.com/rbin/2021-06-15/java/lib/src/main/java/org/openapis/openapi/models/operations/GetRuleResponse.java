@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRuleResponse {
     
     public String contentType;
+
     public GetRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRuleResponse getRuleResponse;
+
     public GetRuleResponse withGetRuleResponse(org.openapis.openapi.models.shared.GetRuleResponse getRuleResponse) {
         this.getRuleResponse = getRuleResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetRuleResponse {
      */
     
     public Object internalServerException;
+
     public GetRuleResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetRuleResponse {
     
     
     public Integer statusCode;
+
     public GetRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetRuleResponse {
      */
     
     public Object validationException;
+
     public GetRuleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

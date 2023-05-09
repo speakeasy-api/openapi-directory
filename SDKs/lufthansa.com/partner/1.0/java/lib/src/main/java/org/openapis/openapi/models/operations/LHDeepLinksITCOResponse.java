@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LHDeepLinksITCOResponse {
     
     public String contentType;
+
     public LHDeepLinksITCOResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class LHDeepLinksITCOResponse {
     
     
     public String lhDeepLinksITCO200ApplicationJSONString;
+
     public LHDeepLinksITCOResponse withLHDeepLinksITCO200ApplicationJSONString(String lhDeepLinksITCO200ApplicationJSONString) {
         this.lhDeepLinksITCO200ApplicationJSONString = lhDeepLinksITCO200ApplicationJSONString;
         return this;
@@ -23,6 +26,7 @@ public class LHDeepLinksITCOResponse {
     
     
     public Integer statusCode;
+
     public LHDeepLinksITCOResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class LHDeepLinksITCOResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LHDeepLinksITCOResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public LHDeepLinksITCOResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

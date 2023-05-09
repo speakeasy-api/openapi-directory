@@ -18,6 +18,7 @@ public class TrackJourneyEventRequestBodyIdentification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public TrackJourneyEventRequestBodyIdentificationAccount account;
+
     public TrackJourneyEventRequestBodyIdentification withAccount(TrackJourneyEventRequestBodyIdentificationAccount account) {
         this.account = account;
         return this;
@@ -29,9 +30,11 @@ public class TrackJourneyEventRequestBodyIdentification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public TrackJourneyEventRequestBodyIdentificationUser user;
+
     public TrackJourneyEventRequestBodyIdentification withUser(TrackJourneyEventRequestBodyIdentificationUser user) {
         this.user = user;
         return this;
     }
     
+    public TrackJourneyEventRequestBodyIdentification(){}
 }

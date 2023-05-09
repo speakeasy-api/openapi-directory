@@ -18,6 +18,7 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featurePolicy")
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicy featurePolicy;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceInput withFeaturePolicy(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicy featurePolicy) {
         this.featurePolicy = featurePolicy;
         return this;
@@ -29,6 +30,7 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceInput withLocation(String location) {
         this.location = location;
         return this;
@@ -40,9 +42,11 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulerNotificationConfig")
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaSchedulerNotificationConfig schedulerNotificationConfig;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceInput withSchedulerNotificationConfig(GoogleDevtoolsRemotebuildexecutionAdminV1alphaSchedulerNotificationConfig schedulerNotificationConfig) {
         this.schedulerNotificationConfig = schedulerNotificationConfig;
         return this;
     }
     
+    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceInput(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VirtualTariffsStatusForPropertyGetResponse {
     
     public String contentType;
+
     public VirtualTariffsStatusForPropertyGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class VirtualTariffsStatusForPropertyGetResponse {
     
     
     public Integer statusCode;
+
     public VirtualTariffsStatusForPropertyGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class VirtualTariffsStatusForPropertyGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VirtualTariffsStatusForPropertyGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class VirtualTariffsStatusForPropertyGetResponse {
      */
     
     public String virtualTariffsStatusForPropertyGet200ApplicationJSONString;
+
     public VirtualTariffsStatusForPropertyGetResponse withVirtualTariffsStatusForPropertyGet200ApplicationJSONString(String virtualTariffsStatusForPropertyGet200ApplicationJSONString) {
         this.virtualTariffsStatusForPropertyGet200ApplicationJSONString = virtualTariffsStatusForPropertyGet200ApplicationJSONString;
         return this;
@@ -43,6 +48,7 @@ public class VirtualTariffsStatusForPropertyGetResponse {
      */
     
     public String virtualTariffsStatusForPropertyGet200ApplicationXMLString;
+
     public VirtualTariffsStatusForPropertyGetResponse withVirtualTariffsStatusForPropertyGet200ApplicationXMLString(String virtualTariffsStatusForPropertyGet200ApplicationXMLString) {
         this.virtualTariffsStatusForPropertyGet200ApplicationXMLString = virtualTariffsStatusForPropertyGet200ApplicationXMLString;
         return this;
@@ -53,6 +59,7 @@ public class VirtualTariffsStatusForPropertyGetResponse {
      */
     
     public String virtualTariffsStatusForPropertyGet200TextJSONString;
+
     public VirtualTariffsStatusForPropertyGetResponse withVirtualTariffsStatusForPropertyGet200TextJSONString(String virtualTariffsStatusForPropertyGet200TextJSONString) {
         this.virtualTariffsStatusForPropertyGet200TextJSONString = virtualTariffsStatusForPropertyGet200TextJSONString;
         return this;
@@ -63,9 +70,14 @@ public class VirtualTariffsStatusForPropertyGetResponse {
      */
     
     public String virtualTariffsStatusForPropertyGet200TextXMLString;
+
     public VirtualTariffsStatusForPropertyGetResponse withVirtualTariffsStatusForPropertyGet200TextXMLString(String virtualTariffsStatusForPropertyGet200TextXMLString) {
         this.virtualTariffsStatusForPropertyGet200TextXMLString = virtualTariffsStatusForPropertyGet200TextXMLString;
         return this;
     }
     
+    public VirtualTariffsStatusForPropertyGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

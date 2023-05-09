@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateLicenseVersionRequest {
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateLicenseVersionRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -18,6 +19,7 @@ public class CreateLicenseVersionRequest {
     
     @JsonProperty("ConsumptionConfiguration")
     public ConsumptionConfiguration consumptionConfiguration;
+
     public CreateLicenseVersionRequest withConsumptionConfiguration(ConsumptionConfiguration consumptionConfiguration) {
         this.consumptionConfiguration = consumptionConfiguration;
         return this;
@@ -25,6 +27,7 @@ public class CreateLicenseVersionRequest {
     
     @JsonProperty("Entitlements")
     public Entitlement[] entitlements;
+
     public CreateLicenseVersionRequest withEntitlements(Entitlement[] entitlements) {
         this.entitlements = entitlements;
         return this;
@@ -32,6 +35,7 @@ public class CreateLicenseVersionRequest {
     
     @JsonProperty("HomeRegion")
     public String homeRegion;
+
     public CreateLicenseVersionRequest withHomeRegion(String homeRegion) {
         this.homeRegion = homeRegion;
         return this;
@@ -39,6 +43,7 @@ public class CreateLicenseVersionRequest {
     
     @JsonProperty("Issuer")
     public Issuer issuer;
+
     public CreateLicenseVersionRequest withIssuer(Issuer issuer) {
         this.issuer = issuer;
         return this;
@@ -46,6 +51,7 @@ public class CreateLicenseVersionRequest {
     
     @JsonProperty("LicenseArn")
     public String licenseArn;
+
     public CreateLicenseVersionRequest withLicenseArn(String licenseArn) {
         this.licenseArn = licenseArn;
         return this;
@@ -54,6 +60,7 @@ public class CreateLicenseVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseMetadata")
     public Metadata[] licenseMetadata;
+
     public CreateLicenseVersionRequest withLicenseMetadata(Metadata[] licenseMetadata) {
         this.licenseMetadata = licenseMetadata;
         return this;
@@ -61,6 +68,7 @@ public class CreateLicenseVersionRequest {
     
     @JsonProperty("LicenseName")
     public String licenseName;
+
     public CreateLicenseVersionRequest withLicenseName(String licenseName) {
         this.licenseName = licenseName;
         return this;
@@ -68,6 +76,7 @@ public class CreateLicenseVersionRequest {
     
     @JsonProperty("ProductName")
     public String productName;
+
     public CreateLicenseVersionRequest withProductName(String productName) {
         this.productName = productName;
         return this;
@@ -76,6 +85,7 @@ public class CreateLicenseVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceVersion")
     public String sourceVersion;
+
     public CreateLicenseVersionRequest withSourceVersion(String sourceVersion) {
         this.sourceVersion = sourceVersion;
         return this;
@@ -83,6 +93,7 @@ public class CreateLicenseVersionRequest {
     
     @JsonProperty("Status")
     public LicenseStatusEnum status;
+
     public CreateLicenseVersionRequest withStatus(LicenseStatusEnum status) {
         this.status = status;
         return this;
@@ -90,9 +101,22 @@ public class CreateLicenseVersionRequest {
     
     @JsonProperty("Validity")
     public DatetimeRange validity;
+
     public CreateLicenseVersionRequest withValidity(DatetimeRange validity) {
         this.validity = validity;
         return this;
     }
     
+    public CreateLicenseVersionRequest(@JsonProperty("ClientToken") String clientToken, @JsonProperty("ConsumptionConfiguration") ConsumptionConfiguration consumptionConfiguration, @JsonProperty("Entitlements") Entitlement[] entitlements, @JsonProperty("HomeRegion") String homeRegion, @JsonProperty("Issuer") Issuer issuer, @JsonProperty("LicenseArn") String licenseArn, @JsonProperty("LicenseName") String licenseName, @JsonProperty("ProductName") String productName, @JsonProperty("Status") LicenseStatusEnum status, @JsonProperty("Validity") DatetimeRange validity) {
+        this.clientToken = clientToken;
+        this.consumptionConfiguration = consumptionConfiguration;
+        this.entitlements = entitlements;
+        this.homeRegion = homeRegion;
+        this.issuer = issuer;
+        this.licenseArn = licenseArn;
+        this.licenseName = licenseName;
+        this.productName = productName;
+        this.status = status;
+        this.validity = validity;
+  }
 }

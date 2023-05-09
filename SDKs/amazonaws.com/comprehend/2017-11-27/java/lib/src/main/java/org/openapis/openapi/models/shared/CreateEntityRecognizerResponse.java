@@ -15,9 +15,11 @@ public class CreateEntityRecognizerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityRecognizerArn")
     public String entityRecognizerArn;
+
     public CreateEntityRecognizerResponse withEntityRecognizerArn(String entityRecognizerArn) {
         this.entityRecognizerArn = entityRecognizerArn;
         return this;
     }
     
+    public CreateEntityRecognizerResponse(){}
 }

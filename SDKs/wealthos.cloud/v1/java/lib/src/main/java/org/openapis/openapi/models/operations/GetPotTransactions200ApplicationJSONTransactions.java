@@ -15,6 +15,7 @@ public class GetPotTransactions200ApplicationJSONTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additional_external_details")
     public java.util.Map<String, Object> additionalExternalDetails;
+
     public GetPotTransactions200ApplicationJSONTransactions withAdditionalExternalDetails(java.util.Map<String, Object> additionalExternalDetails) {
         this.additionalExternalDetails = additionalExternalDetails;
         return this;
@@ -26,6 +27,7 @@ public class GetPotTransactions200ApplicationJSONTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_order_id")
     public String clientOrderId;
+
     public GetPotTransactions200ApplicationJSONTransactions withClientOrderId(String clientOrderId) {
         this.clientOrderId = clientOrderId;
         return this;
@@ -36,6 +38,7 @@ public class GetPotTransactions200ApplicationJSONTransactions {
      */
     @JsonProperty("created_at")
     public String createdAt;
+
     public GetPotTransactions200ApplicationJSONTransactions withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class GetPotTransactions200ApplicationJSONTransactions {
      */
     @JsonProperty("currency")
     public String currency;
+
     public GetPotTransactions200ApplicationJSONTransactions withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -56,6 +60,7 @@ public class GetPotTransactions200ApplicationJSONTransactions {
      */
     @JsonProperty("direction")
     public GetPotTransactions200ApplicationJSONTransactionsDirectionEnum direction;
+
     public GetPotTransactions200ApplicationJSONTransactions withDirection(GetPotTransactions200ApplicationJSONTransactionsDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -67,6 +72,7 @@ public class GetPotTransactions200ApplicationJSONTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("execution_price")
     public String executionPrice;
+
     public GetPotTransactions200ApplicationJSONTransactions withExecutionPrice(String executionPrice) {
         this.executionPrice = executionPrice;
         return this;
@@ -78,6 +84,7 @@ public class GetPotTransactions200ApplicationJSONTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_transaction_reference")
     public String externalTransactionReference;
+
     public GetPotTransactions200ApplicationJSONTransactions withExternalTransactionReference(String externalTransactionReference) {
         this.externalTransactionReference = externalTransactionReference;
         return this;
@@ -88,6 +95,7 @@ public class GetPotTransactions200ApplicationJSONTransactions {
      */
     @JsonProperty("investment_product_id")
     public String investmentProductId;
+
     public GetPotTransactions200ApplicationJSONTransactions withInvestmentProductId(String investmentProductId) {
         this.investmentProductId = investmentProductId;
         return this;
@@ -98,6 +106,7 @@ public class GetPotTransactions200ApplicationJSONTransactions {
      */
     @JsonProperty("origin")
     public GetPotTransactions200ApplicationJSONTransactionsOriginEnum origin;
+
     public GetPotTransactions200ApplicationJSONTransactions withOrigin(GetPotTransactions200ApplicationJSONTransactionsOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -109,6 +118,7 @@ public class GetPotTransactions200ApplicationJSONTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_transaction_id")
     public String parentTransactionId;
+
     public GetPotTransactions200ApplicationJSONTransactions withParentTransactionId(String parentTransactionId) {
         this.parentTransactionId = parentTransactionId;
         return this;
@@ -119,6 +129,7 @@ public class GetPotTransactions200ApplicationJSONTransactions {
      */
     @JsonProperty("primary_transaction_type")
     public GetPotTransactions200ApplicationJSONTransactionsPrimaryTransactionTypeEnum primaryTransactionType;
+
     public GetPotTransactions200ApplicationJSONTransactions withPrimaryTransactionType(GetPotTransactions200ApplicationJSONTransactionsPrimaryTransactionTypeEnum primaryTransactionType) {
         this.primaryTransactionType = primaryTransactionType;
         return this;
@@ -130,6 +141,7 @@ public class GetPotTransactions200ApplicationJSONTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settlement_date")
     public String settlementDate;
+
     public GetPotTransactions200ApplicationJSONTransactions withSettlementDate(String settlementDate) {
         this.settlementDate = settlementDate;
         return this;
@@ -140,6 +152,7 @@ public class GetPotTransactions200ApplicationJSONTransactions {
      */
     @JsonProperty("sub_transaction_type")
     public GetPotTransactions200ApplicationJSONTransactionsSubTransactionTypeEnum subTransactionType;
+
     public GetPotTransactions200ApplicationJSONTransactions withSubTransactionType(GetPotTransactions200ApplicationJSONTransactionsSubTransactionTypeEnum subTransactionType) {
         this.subTransactionType = subTransactionType;
         return this;
@@ -150,6 +163,7 @@ public class GetPotTransactions200ApplicationJSONTransactions {
      */
     @JsonProperty("sub_type")
     public GetPotTransactions200ApplicationJSONTransactionsSubTypeEnum subType;
+
     public GetPotTransactions200ApplicationJSONTransactions withSubType(GetPotTransactions200ApplicationJSONTransactionsSubTypeEnum subType) {
         this.subType = subType;
         return this;
@@ -161,6 +175,7 @@ public class GetPotTransactions200ApplicationJSONTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trade_date")
     public String tradeDate;
+
     public GetPotTransactions200ApplicationJSONTransactions withTradeDate(String tradeDate) {
         this.tradeDate = tradeDate;
         return this;
@@ -171,6 +186,7 @@ public class GetPotTransactions200ApplicationJSONTransactions {
      */
     @JsonProperty("transaction_id")
     public String transactionId;
+
     public GetPotTransactions200ApplicationJSONTransactions withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
@@ -182,6 +198,7 @@ public class GetPotTransactions200ApplicationJSONTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction_quantity")
     public String transactionQuantity;
+
     public GetPotTransactions200ApplicationJSONTransactions withTransactionQuantity(String transactionQuantity) {
         this.transactionQuantity = transactionQuantity;
         return this;
@@ -193,6 +210,7 @@ public class GetPotTransactions200ApplicationJSONTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction_value")
     public String transactionValue;
+
     public GetPotTransactions200ApplicationJSONTransactions withTransactionValue(String transactionValue) {
         this.transactionValue = transactionValue;
         return this;
@@ -203,6 +221,7 @@ public class GetPotTransactions200ApplicationJSONTransactions {
      */
     @JsonProperty("type")
     public GetPotTransactions200ApplicationJSONTransactionsTypeEnum type;
+
     public GetPotTransactions200ApplicationJSONTransactions withType(GetPotTransactions200ApplicationJSONTransactionsTypeEnum type) {
         this.type = type;
         return this;
@@ -213,9 +232,23 @@ public class GetPotTransactions200ApplicationJSONTransactions {
      */
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public GetPotTransactions200ApplicationJSONTransactions withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetPotTransactions200ApplicationJSONTransactions(@JsonProperty("created_at") String createdAt, @JsonProperty("currency") String currency, @JsonProperty("direction") GetPotTransactions200ApplicationJSONTransactionsDirectionEnum direction, @JsonProperty("investment_product_id") String investmentProductId, @JsonProperty("origin") GetPotTransactions200ApplicationJSONTransactionsOriginEnum origin, @JsonProperty("primary_transaction_type") GetPotTransactions200ApplicationJSONTransactionsPrimaryTransactionTypeEnum primaryTransactionType, @JsonProperty("sub_transaction_type") GetPotTransactions200ApplicationJSONTransactionsSubTransactionTypeEnum subTransactionType, @JsonProperty("sub_type") GetPotTransactions200ApplicationJSONTransactionsSubTypeEnum subType, @JsonProperty("transaction_id") String transactionId, @JsonProperty("type") GetPotTransactions200ApplicationJSONTransactionsTypeEnum type, @JsonProperty("updated_at") String updatedAt) {
+        this.createdAt = createdAt;
+        this.currency = currency;
+        this.direction = direction;
+        this.investmentProductId = investmentProductId;
+        this.origin = origin;
+        this.primaryTransactionType = primaryTransactionType;
+        this.subTransactionType = subTransactionType;
+        this.subType = subType;
+        this.transactionId = transactionId;
+        this.type = type;
+        this.updatedAt = updatedAt;
+  }
 }

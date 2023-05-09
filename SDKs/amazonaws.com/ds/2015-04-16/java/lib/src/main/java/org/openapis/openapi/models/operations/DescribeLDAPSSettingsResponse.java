@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeLDAPSSettingsResponse {
@@ -12,6 +13,7 @@ public class DescribeLDAPSSettingsResponse {
      */
     
     public Object clientException;
+
     public DescribeLDAPSSettingsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeLDAPSSettingsResponse {
     
     
     public String contentType;
+
     public DescribeLDAPSSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeLDAPSSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeLDAPSSettingsResult describeLDAPSSettingsResult;
+
     public DescribeLDAPSSettingsResponse withDescribeLDAPSSettingsResult(org.openapis.openapi.models.shared.DescribeLDAPSSettingsResult describeLDAPSSettingsResult) {
         this.describeLDAPSSettingsResult = describeLDAPSSettingsResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeLDAPSSettingsResponse {
      */
     
     public Object directoryDoesNotExistException;
+
     public DescribeLDAPSSettingsResponse withDirectoryDoesNotExistException(Object directoryDoesNotExistException) {
         this.directoryDoesNotExistException = directoryDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeLDAPSSettingsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeLDAPSSettingsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeLDAPSSettingsResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeLDAPSSettingsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeLDAPSSettingsResponse {
     
     
     public Integer statusCode;
+
     public DescribeLDAPSSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeLDAPSSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeLDAPSSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribeLDAPSSettingsResponse {
      */
     
     public Object serviceException;
+
     public DescribeLDAPSSettingsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeLDAPSSettingsResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DescribeLDAPSSettingsResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DescribeLDAPSSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

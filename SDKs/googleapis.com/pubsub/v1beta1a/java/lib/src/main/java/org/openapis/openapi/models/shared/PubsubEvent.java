@@ -18,6 +18,7 @@ public class PubsubEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public PubsubEvent withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -29,6 +30,7 @@ public class PubsubEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public PubsubMessage message;
+
     public PubsubEvent withMessage(PubsubMessage message) {
         this.message = message;
         return this;
@@ -40,6 +42,7 @@ public class PubsubEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription")
     public String subscription;
+
     public PubsubEvent withSubscription(String subscription) {
         this.subscription = subscription;
         return this;
@@ -51,9 +54,11 @@ public class PubsubEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("truncated")
     public Boolean truncated;
+
     public PubsubEvent withTruncated(Boolean truncated) {
         this.truncated = truncated;
         return this;
     }
     
+    public PubsubEvent(){}
 }

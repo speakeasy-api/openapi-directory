@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSellerRequest {
@@ -12,6 +13,7 @@ public class UpdateSellerRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public UpdateSellerRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class UpdateSellerRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public UpdateSellerRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class UpdateSellerRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateSellerRequestBody[] requestBody;
+
     public UpdateSellerRequest withRequestBody(UpdateSellerRequestBody[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -42,6 +46,7 @@ public class UpdateSellerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public UpdateSellerRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -52,6 +57,7 @@ public class UpdateSellerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
     public String environment;
+
     public UpdateSellerRequest withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -62,9 +68,17 @@ public class UpdateSellerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
     public String sellerId;
+
     public UpdateSellerRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
     }
     
+    public UpdateSellerRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("accountName") String accountName, @JsonProperty("environment") String environment, @JsonProperty("sellerId") String sellerId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.accountName = accountName;
+        this.environment = environment;
+        this.sellerId = sellerId;
+  }
 }

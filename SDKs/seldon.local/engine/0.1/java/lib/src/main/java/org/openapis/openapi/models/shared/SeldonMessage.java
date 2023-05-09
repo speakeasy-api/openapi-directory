@@ -15,6 +15,7 @@ public class SeldonMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binData")
     public String binData;
+
     public SeldonMessage withBinData(String binData) {
         this.binData = binData;
         return this;
@@ -23,6 +24,7 @@ public class SeldonMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public DefaultData data;
+
     public SeldonMessage withData(DefaultData data) {
         this.data = data;
         return this;
@@ -31,6 +33,7 @@ public class SeldonMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public Meta meta;
+
     public SeldonMessage withMeta(Meta meta) {
         this.meta = meta;
         return this;
@@ -39,6 +42,7 @@ public class SeldonMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Status status;
+
     public SeldonMessage withStatus(Status status) {
         this.status = status;
         return this;
@@ -47,9 +51,11 @@ public class SeldonMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strData")
     public String strData;
+
     public SeldonMessage withStrData(String strData) {
         this.strData = strData;
         return this;
     }
     
+    public SeldonMessage(){}
 }

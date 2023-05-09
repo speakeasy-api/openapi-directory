@@ -12,9 +12,13 @@ public class GistsCreateRequestBodyFiles {
      */
     @JsonProperty("content")
     public String content;
+
     public GistsCreateRequestBodyFiles withContent(String content) {
         this.content = content;
         return this;
     }
     
+    public GistsCreateRequestBodyFiles(@JsonProperty("content") String content) {
+        this.content = content;
+  }
 }

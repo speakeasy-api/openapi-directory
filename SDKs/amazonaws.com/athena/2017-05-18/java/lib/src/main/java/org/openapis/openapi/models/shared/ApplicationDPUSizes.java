@@ -15,6 +15,7 @@ public class ApplicationDPUSizes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationRuntimeId")
     public String applicationRuntimeId;
+
     public ApplicationDPUSizes withApplicationRuntimeId(String applicationRuntimeId) {
         this.applicationRuntimeId = applicationRuntimeId;
         return this;
@@ -23,9 +24,11 @@ public class ApplicationDPUSizes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedDPUSizes")
     public Long[] supportedDPUSizes;
+
     public ApplicationDPUSizes withSupportedDPUSizes(Long[] supportedDPUSizes) {
         this.supportedDPUSizes = supportedDPUSizes;
         return this;
     }
     
+    public ApplicationDPUSizes(){}
 }

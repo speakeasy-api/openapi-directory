@@ -18,6 +18,7 @@ public class DeviceTypeAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceType")
     public DeviceTypeAssignedTargetingOptionDetailsDeviceTypeEnum deviceType;
+
     public DeviceTypeAssignedTargetingOptionDetails withDeviceType(DeviceTypeAssignedTargetingOptionDetailsDeviceTypeEnum deviceType) {
         this.deviceType = deviceType;
         return this;
@@ -29,9 +30,11 @@ public class DeviceTypeAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("youtubeAndPartnersBidMultiplier")
     public Double youtubeAndPartnersBidMultiplier;
+
     public DeviceTypeAssignedTargetingOptionDetails withYoutubeAndPartnersBidMultiplier(Double youtubeAndPartnersBidMultiplier) {
         this.youtubeAndPartnersBidMultiplier = youtubeAndPartnersBidMultiplier;
         return this;
     }
     
+    public DeviceTypeAssignedTargetingOptionDetails(){}
 }

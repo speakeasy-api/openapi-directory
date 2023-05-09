@@ -15,9 +15,11 @@ public class TcpRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Long port;
+
     public TcpRouteMatch withPort(Long port) {
         this.port = port;
         return this;
     }
     
+    public TcpRouteMatch(){}
 }

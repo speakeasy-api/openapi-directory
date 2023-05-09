@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ContentTreeEntriesLinks {
     
     public String git;
+
     public ContentTreeEntriesLinks withGit(String git) {
         this.git = git;
         return this;
@@ -16,6 +17,7 @@ public class ContentTreeEntriesLinks {
     
     
     public String html;
+
     public ContentTreeEntriesLinks withHtml(String html) {
         this.html = html;
         return this;
@@ -23,9 +25,15 @@ public class ContentTreeEntriesLinks {
     
     
     public String self;
+
     public ContentTreeEntriesLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public ContentTreeEntriesLinks(@JsonProperty("git") String git, @JsonProperty("html") String html, @JsonProperty("self") String self) {
+        this.git = git;
+        this.html = html;
+        this.self = self;
+  }
 }

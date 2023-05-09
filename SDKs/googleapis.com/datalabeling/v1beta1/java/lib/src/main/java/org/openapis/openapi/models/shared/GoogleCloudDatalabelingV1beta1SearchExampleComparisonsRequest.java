@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1SearchExampleComparisonsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public GoogleCloudDatalabelingV1beta1SearchExampleComparisonsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1SearchExampleComparisonsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GoogleCloudDatalabelingV1beta1SearchExampleComparisonsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1SearchExampleComparisonsRequest(){}
 }

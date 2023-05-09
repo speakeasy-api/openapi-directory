@@ -17,6 +17,7 @@ public class LicenseAudio {
      */
     @JsonProperty("audio_id")
     public String audioId;
+
     public LicenseAudio withAudioId(String audioId) {
         this.audioId = audioId;
         return this;
@@ -28,6 +29,7 @@ public class LicenseAudio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license")
     public LicenseAudioLicenseEnum license;
+
     public LicenseAudio withLicense(LicenseAudioLicenseEnum license) {
         this.license = license;
         return this;
@@ -39,9 +41,13 @@ public class LicenseAudio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_id")
     public String searchId;
+
     public LicenseAudio withSearchId(String searchId) {
         this.searchId = searchId;
         return this;
     }
     
+    public LicenseAudio(@JsonProperty("audio_id") String audioId) {
+        this.audioId = audioId;
+  }
 }

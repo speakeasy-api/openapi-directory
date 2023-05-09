@@ -18,9 +18,11 @@ public class ImportDataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputConfig")
     public InputConfig inputConfig;
+
     public ImportDataRequest withInputConfig(InputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
     }
     
+    public ImportDataRequest(){}
 }

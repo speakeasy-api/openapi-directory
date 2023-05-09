@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopSolutionVersionCreationResponse {
     
     public String contentType;
+
     public StopSolutionVersionCreationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopSolutionVersionCreationResponse {
      */
     
     public Object invalidInputException;
+
     public StopSolutionVersionCreationResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class StopSolutionVersionCreationResponse {
      */
     
     public Object resourceInUseException;
+
     public StopSolutionVersionCreationResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -39,6 +43,7 @@ public class StopSolutionVersionCreationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopSolutionVersionCreationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class StopSolutionVersionCreationResponse {
     
     
     public Integer statusCode;
+
     public StopSolutionVersionCreationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class StopSolutionVersionCreationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopSolutionVersionCreationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StopSolutionVersionCreationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

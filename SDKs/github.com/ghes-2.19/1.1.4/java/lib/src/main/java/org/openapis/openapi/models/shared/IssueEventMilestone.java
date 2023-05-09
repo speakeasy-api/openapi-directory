@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IssueEventMilestone {
     @JsonProperty("title")
     public String title;
+
     public IssueEventMilestone withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public IssueEventMilestone(@JsonProperty("title") String title) {
+        this.title = title;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest {
@@ -14,6 +15,7 @@ public class GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUse
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_key")
     public String projectKey;
+
     public GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest withProjectKey(String projectKey) {
         this.projectKey = projectKey;
         return this;
@@ -26,6 +28,7 @@ public class GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUse
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=selected_user")
     public String selectedUser;
+
     public GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest withSelectedUser(String selectedUser) {
         this.selectedUser = selectedUser;
         return this;
@@ -38,9 +41,15 @@ public class GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUse
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest(@JsonProperty("project_key") String projectKey, @JsonProperty("selected_user") String selectedUser, @JsonProperty("workspace") String workspace) {
+        this.projectKey = projectKey;
+        this.selectedUser = selectedUser;
+        this.workspace = workspace;
+  }
 }

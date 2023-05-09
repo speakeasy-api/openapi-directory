@@ -15,6 +15,7 @@ public class PublishCatalogToMarketplaceRequest {
      */
     @JsonProperty("feedType")
     public FeedTypeEnum feedType;
+
     public PublishCatalogToMarketplaceRequest withFeedType(FeedTypeEnum feedType) {
         this.feedType = feedType;
         return this;
@@ -29,6 +30,7 @@ public class PublishCatalogToMarketplaceRequest {
      */
     @JsonProperty("publicationStrategyKind")
     public PublicationStrategyKindEnum publicationStrategyKind;
+
     public PublishCatalogToMarketplaceRequest withPublicationStrategyKind(PublicationStrategyKindEnum publicationStrategyKind) {
         this.publicationStrategyKind = publicationStrategyKind;
         return this;
@@ -39,9 +41,15 @@ public class PublishCatalogToMarketplaceRequest {
      */
     @JsonProperty("withUnpublish")
     public Boolean withUnpublish;
+
     public PublishCatalogToMarketplaceRequest withWithUnpublish(Boolean withUnpublish) {
         this.withUnpublish = withUnpublish;
         return this;
     }
     
+    public PublishCatalogToMarketplaceRequest(@JsonProperty("feedType") FeedTypeEnum feedType, @JsonProperty("publicationStrategyKind") PublicationStrategyKindEnum publicationStrategyKind, @JsonProperty("withUnpublish") Boolean withUnpublish) {
+        this.feedType = feedType;
+        this.publicationStrategyKind = publicationStrategyKind;
+        this.withUnpublish = withUnpublish;
+  }
 }

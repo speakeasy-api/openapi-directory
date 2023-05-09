@@ -18,6 +18,7 @@ public class ExecuteSellTrasaction429ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public String errorCode;
+
     public ExecuteSellTrasaction429ApplicationJSON withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,9 +29,13 @@ public class ExecuteSellTrasaction429ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public ExecuteSellTrasaction429ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ExecuteSellTrasaction429ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

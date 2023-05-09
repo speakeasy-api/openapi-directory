@@ -18,6 +18,7 @@ public class ApplicationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessDeniedPageSettings")
     public AccessDeniedPageSettings accessDeniedPageSettings;
+
     public ApplicationSettings withAccessDeniedPageSettings(AccessDeniedPageSettings accessDeniedPageSettings) {
         this.accessDeniedPageSettings = accessDeniedPageSettings;
         return this;
@@ -29,6 +30,7 @@ public class ApplicationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributePropagationSettings")
     public AttributePropagationSettings attributePropagationSettings;
+
     public ApplicationSettings withAttributePropagationSettings(AttributePropagationSettings attributePropagationSettings) {
         this.attributePropagationSettings = attributePropagationSettings;
         return this;
@@ -40,6 +42,7 @@ public class ApplicationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cookieDomain")
     public String cookieDomain;
+
     public ApplicationSettings withCookieDomain(String cookieDomain) {
         this.cookieDomain = cookieDomain;
         return this;
@@ -51,9 +54,11 @@ public class ApplicationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("csmSettings")
     public CsmSettings csmSettings;
+
     public ApplicationSettings withCsmSettings(CsmSettings csmSettings) {
         this.csmSettings = csmSettings;
         return this;
     }
     
+    public ApplicationSettings(){}
 }

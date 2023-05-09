@@ -18,6 +18,7 @@ public class SchedulingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preemptible")
     public Boolean preemptible;
+
     public SchedulingConfig withPreemptible(Boolean preemptible) {
         this.preemptible = preemptible;
         return this;
@@ -29,9 +30,11 @@ public class SchedulingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reserved")
     public Boolean reserved;
+
     public SchedulingConfig withReserved(Boolean reserved) {
         this.reserved = reserved;
         return this;
     }
     
+    public SchedulingConfig(){}
 }

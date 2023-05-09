@@ -15,6 +15,7 @@ public class InlineResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public InlineResponse200 withCity(String city) {
         this.city = city;
         return this;
@@ -23,6 +24,7 @@ public class InlineResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city_geoname_id")
     public Long cityGeonameId;
+
     public InlineResponse200 withCityGeonameId(Long cityGeonameId) {
         this.cityGeonameId = cityGeonameId;
         return this;
@@ -31,6 +33,7 @@ public class InlineResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connection")
     public InlineResponse200Connection connection;
+
     public InlineResponse200 withConnection(InlineResponse200Connection connection) {
         this.connection = connection;
         return this;
@@ -39,6 +42,7 @@ public class InlineResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continent")
     public String continent;
+
     public InlineResponse200 withContinent(String continent) {
         this.continent = continent;
         return this;
@@ -47,6 +51,7 @@ public class InlineResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continent_code")
     public String continentCode;
+
     public InlineResponse200 withContinentCode(String continentCode) {
         this.continentCode = continentCode;
         return this;
@@ -55,6 +60,7 @@ public class InlineResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continent_geoname_id")
     public Long continentGeonameId;
+
     public InlineResponse200 withContinentGeonameId(Long continentGeonameId) {
         this.continentGeonameId = continentGeonameId;
         return this;
@@ -63,6 +69,7 @@ public class InlineResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public InlineResponse200 withCountry(String country) {
         this.country = country;
         return this;
@@ -71,6 +78,7 @@ public class InlineResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_code")
     public String countryCode;
+
     public InlineResponse200 withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -79,6 +87,7 @@ public class InlineResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_geoname_id")
     public Long countryGeonameId;
+
     public InlineResponse200 withCountryGeonameId(Long countryGeonameId) {
         this.countryGeonameId = countryGeonameId;
         return this;
@@ -87,6 +96,7 @@ public class InlineResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_is_eu")
     public Boolean countryIsEu;
+
     public InlineResponse200 withCountryIsEu(Boolean countryIsEu) {
         this.countryIsEu = countryIsEu;
         return this;
@@ -95,6 +105,7 @@ public class InlineResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public InlineResponse200Currency currency;
+
     public InlineResponse200 withCurrency(InlineResponse200Currency currency) {
         this.currency = currency;
         return this;
@@ -103,6 +114,7 @@ public class InlineResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flag")
     public InlineResponse200Flag flag;
+
     public InlineResponse200 withFlag(InlineResponse200Flag flag) {
         this.flag = flag;
         return this;
@@ -111,6 +123,7 @@ public class InlineResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip_address")
     public String ipAddress;
+
     public InlineResponse200 withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -119,6 +132,7 @@ public class InlineResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public InlineResponse200 withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -127,6 +141,7 @@ public class InlineResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public InlineResponse200 withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -135,6 +150,7 @@ public class InlineResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal_code")
     public String postalCode;
+
     public InlineResponse200 withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -143,6 +159,7 @@ public class InlineResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public InlineResponse200 withRegion(String region) {
         this.region = region;
         return this;
@@ -151,6 +168,7 @@ public class InlineResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region_geoname_id")
     public Long regionGeonameId;
+
     public InlineResponse200 withRegionGeonameId(Long regionGeonameId) {
         this.regionGeonameId = regionGeonameId;
         return this;
@@ -159,6 +177,7 @@ public class InlineResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region_iso_code")
     public String regionIsoCode;
+
     public InlineResponse200 withRegionIsoCode(String regionIsoCode) {
         this.regionIsoCode = regionIsoCode;
         return this;
@@ -167,6 +186,7 @@ public class InlineResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("security")
     public InlineResponse200Security security;
+
     public InlineResponse200 withSecurity(InlineResponse200Security security) {
         this.security = security;
         return this;
@@ -175,9 +195,11 @@ public class InlineResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public InlineResponse200Timezone timezone;
+
     public InlineResponse200 withTimezone(InlineResponse200Timezone timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public InlineResponse200(){}
 }

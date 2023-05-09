@@ -62,11 +62,9 @@ public class Macros {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RunResponse res = new org.openapis.openapi.models.operations.RunResponse() {{
+        org.openapis.openapi.models.operations.RunResponse res = new org.openapis.openapi.models.operations.RunResponse(contentType, httpRes.statusCode()) {{
             actionStartedDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

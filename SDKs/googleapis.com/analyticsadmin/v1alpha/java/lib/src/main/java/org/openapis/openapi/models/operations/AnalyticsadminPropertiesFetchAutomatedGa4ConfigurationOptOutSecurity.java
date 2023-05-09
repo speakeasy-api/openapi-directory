@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutSecurity {
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutSecurityOption1 option1;
+
     public AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutSecurity withOption1(AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutSecurit
     
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutSecurityOption2 option2;
+
     public AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutSecurity withOption2(AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutSecurity(){}
 }

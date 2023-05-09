@@ -12,9 +12,13 @@ public class BatchPutAssetPropertyValueRequestBody {
      */
     @JsonProperty("entries")
     public org.openapis.openapi.models.shared.PutAssetPropertyValueEntry[] entries;
+
     public BatchPutAssetPropertyValueRequestBody withEntries(org.openapis.openapi.models.shared.PutAssetPropertyValueEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public BatchPutAssetPropertyValueRequestBody(@JsonProperty("entries") org.openapis.openapi.models.shared.PutAssetPropertyValueEntry[] entries) {
+        this.entries = entries;
+  }
 }

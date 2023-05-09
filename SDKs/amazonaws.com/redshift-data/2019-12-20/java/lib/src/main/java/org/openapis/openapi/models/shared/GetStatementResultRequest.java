@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetStatementResultRequest {
     @JsonProperty("Id")
     public String id;
+
     public GetStatementResultRequest withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,13 @@ public class GetStatementResultRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetStatementResultRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetStatementResultRequest(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

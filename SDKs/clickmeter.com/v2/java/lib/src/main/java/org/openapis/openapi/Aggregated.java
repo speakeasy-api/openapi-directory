@@ -57,12 +57,10 @@ public class Aggregated {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AggregatedGetConversionsSummaryResponse res = new org.openapis.openapi.models.operations.AggregatedGetConversionsSummaryResponse() {{
+        org.openapis.openapi.models.operations.AggregatedGetConversionsSummaryResponse res = new org.openapis.openapi.models.operations.AggregatedGetConversionsSummaryResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAggregatedAggregatedSummaryResult = null;
             apiCoreDtoAggregatedAggregatedSummaryResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,12 +108,10 @@ public class Aggregated {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AggregatedGetDatapointsSummaryResponse res = new org.openapis.openapi.models.operations.AggregatedGetDatapointsSummaryResponse() {{
+        org.openapis.openapi.models.operations.AggregatedGetDatapointsSummaryResponse res = new org.openapis.openapi.models.operations.AggregatedGetDatapointsSummaryResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAggregatedAggregatedSummaryResult = null;
             apiCoreDtoAggregatedAggregatedSummaryResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -163,12 +159,10 @@ public class Aggregated {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AggregatedGetGroupsSummaryResponse res = new org.openapis.openapi.models.operations.AggregatedGetGroupsSummaryResponse() {{
+        org.openapis.openapi.models.operations.AggregatedGetGroupsSummaryResponse res = new org.openapis.openapi.models.operations.AggregatedGetGroupsSummaryResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAggregatedAggregatedSummaryResult = null;
             apiCoreDtoAggregatedAggregatedSummaryResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -216,12 +210,10 @@ public class Aggregated {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AggregatedGetStatisticsListResponse res = new org.openapis.openapi.models.operations.AggregatedGetStatisticsListResponse() {{
+        org.openapis.openapi.models.operations.AggregatedGetStatisticsListResponse res = new org.openapis.openapi.models.operations.AggregatedGetStatisticsListResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntitiesResponseApiCoreDtoAggregatedAggregatedResult = null;
             apiCoreResponsesEntitiesResponseApiCoreDtoAggregatedAggregatedResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -269,12 +261,10 @@ public class Aggregated {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AggregatedGetStatisticsSingleResponse res = new org.openapis.openapi.models.operations.AggregatedGetStatisticsSingleResponse() {{
+        org.openapis.openapi.models.operations.AggregatedGetStatisticsSingleResponse res = new org.openapis.openapi.models.operations.AggregatedGetStatisticsSingleResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAggregatedAggregatedResult = null;
             apiCoreDtoAggregatedAggregatedResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

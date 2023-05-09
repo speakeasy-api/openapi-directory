@@ -12,6 +12,7 @@ public class PackageSearchResult {
      */
     @JsonProperty("package")
     public String package_;
+
     public PackageSearchResult withPackage(String package_) {
         this.package_ = package_;
         return this;
@@ -19,9 +20,14 @@ public class PackageSearchResult {
     
     @JsonProperty("results")
     public SearchResult[] results;
+
     public PackageSearchResult withResults(SearchResult[] results) {
         this.results = results;
         return this;
     }
     
+    public PackageSearchResult(@JsonProperty("package") String package_, @JsonProperty("results") SearchResult[] results) {
+        this.package_ = package_;
+        this.results = results;
+  }
 }

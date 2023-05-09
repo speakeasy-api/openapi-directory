@@ -15,6 +15,7 @@ public class TagModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public TagModel withColor(String color) {
         this.color = color;
         return this;
@@ -23,6 +24,7 @@ public class TagModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TagModel withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class TagModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public ProductModel product;
+
     public TagModel withProduct(ProductModel product) {
         this.product = product;
         return this;
@@ -39,9 +42,11 @@ public class TagModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagId")
     public Long tagId;
+
     public TagModel withTagId(Long tagId) {
         this.tagId = tagId;
         return this;
     }
     
+    public TagModel(){}
 }

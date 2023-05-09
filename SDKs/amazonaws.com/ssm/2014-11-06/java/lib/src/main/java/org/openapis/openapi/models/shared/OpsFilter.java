@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OpsFilter {
     @JsonProperty("Key")
     public String key;
+
     public OpsFilter withKey(String key) {
         this.key = key;
         return this;
@@ -22,6 +23,7 @@ public class OpsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public OpsFilterOperatorTypeEnum type;
+
     public OpsFilter withType(OpsFilterOperatorTypeEnum type) {
         this.type = type;
         return this;
@@ -29,9 +31,14 @@ public class OpsFilter {
     
     @JsonProperty("Values")
     public String[] values;
+
     public OpsFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public OpsFilter(@JsonProperty("Key") String key, @JsonProperty("Values") String[] values) {
+        this.key = key;
+        this.values = values;
+  }
 }

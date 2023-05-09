@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListStatementsResponse {
@@ -12,6 +13,7 @@ public class ListStatementsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListStatementsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListStatementsResponse {
     
     
     public String contentType;
+
     public ListStatementsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListStatementsResponse {
      */
     
     public Object entityNotFoundException;
+
     public ListStatementsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class ListStatementsResponse {
      */
     
     public Object illegalSessionStateException;
+
     public ListStatementsResponse withIllegalSessionStateException(Object illegalSessionStateException) {
         this.illegalSessionStateException = illegalSessionStateException;
         return this;
@@ -49,6 +54,7 @@ public class ListStatementsResponse {
      */
     
     public Object internalServiceException;
+
     public ListStatementsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class ListStatementsResponse {
      */
     
     public Object invalidInputException;
+
     public ListStatementsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class ListStatementsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListStatementsResponse listStatementsResponse;
+
     public ListStatementsResponse withListStatementsResponse(org.openapis.openapi.models.shared.ListStatementsResponse listStatementsResponse) {
         this.listStatementsResponse = listStatementsResponse;
         return this;
@@ -79,6 +87,7 @@ public class ListStatementsResponse {
      */
     
     public Object operationTimeoutException;
+
     public ListStatementsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -86,6 +95,7 @@ public class ListStatementsResponse {
     
     
     public Integer statusCode;
+
     public ListStatementsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class ListStatementsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListStatementsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListStatementsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

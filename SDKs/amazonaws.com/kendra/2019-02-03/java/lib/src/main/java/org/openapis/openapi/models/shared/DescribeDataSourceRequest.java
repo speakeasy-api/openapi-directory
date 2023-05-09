@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeDataSourceRequest {
     @JsonProperty("Id")
     public String id;
+
     public DescribeDataSourceRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class DescribeDataSourceRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public DescribeDataSourceRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
     }
     
+    public DescribeDataSourceRequest(@JsonProperty("Id") String id, @JsonProperty("IndexId") String indexId) {
+        this.id = id;
+        this.indexId = indexId;
+  }
 }

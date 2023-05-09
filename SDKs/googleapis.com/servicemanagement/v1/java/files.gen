@@ -260,4 +260,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/RolloutStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Rollout.java
 lib/src/main/java/org/openapis/openapi/models/shared/TrafficPercentStrategy.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListServiceRolloutsResponse.java
+docs/sdk/README.md
+docs/operations/README.md
+docs/services/README.md
 USAGE.md

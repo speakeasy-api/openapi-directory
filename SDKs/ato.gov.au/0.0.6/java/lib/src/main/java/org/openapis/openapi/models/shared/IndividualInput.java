@@ -17,6 +17,7 @@ public class IndividualInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addresses")
     public IndividualAddressInput[] addresses;
+
     public IndividualInput withAddresses(IndividualAddressInput[] addresses) {
         this.addresses = addresses;
         return this;
@@ -28,6 +29,7 @@ public class IndividualInput {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("dateOfBirth")
     public LocalDate dateOfBirth;
+
     public IndividualInput withDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -36,6 +38,7 @@ public class IndividualInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("electronicAddresses")
     public ElectronicAddressInput[] electronicAddresses;
+
     public IndividualInput withElectronicAddresses(ElectronicAddressInput[] electronicAddresses) {
         this.electronicAddresses = electronicAddresses;
         return this;
@@ -47,6 +50,7 @@ public class IndividualInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public IndividualGenderEnum gender;
+
     public IndividualInput withGender(IndividualGenderEnum gender) {
         this.gender = gender;
         return this;
@@ -55,6 +59,7 @@ public class IndividualInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public IndividualNameInput[] names;
+
     public IndividualInput withNames(IndividualNameInput[] names) {
         this.names = names;
         return this;
@@ -65,9 +70,14 @@ public class IndividualInput {
      */
     @JsonProperty("placeOfBirth")
     public String placeOfBirth;
+
     public IndividualInput withPlaceOfBirth(String placeOfBirth) {
         this.placeOfBirth = placeOfBirth;
         return this;
     }
     
+    public IndividualInput(@JsonProperty("dateOfBirth") LocalDate dateOfBirth, @JsonProperty("placeOfBirth") String placeOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+        this.placeOfBirth = placeOfBirth;
+  }
 }

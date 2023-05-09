@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IbanBasic200ApplicationJSON {
     @JsonProperty("valid")
     public Boolean valid;
+
     public IbanBasic200ApplicationJSON withValid(Boolean valid) {
         this.valid = valid;
         return this;
     }
     
+    public IbanBasic200ApplicationJSON(@JsonProperty("valid") Boolean valid) {
+        this.valid = valid;
+  }
 }

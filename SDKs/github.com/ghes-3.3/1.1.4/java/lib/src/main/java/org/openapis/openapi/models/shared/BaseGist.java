@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class BaseGist {
     @JsonProperty("comments")
     public Long comments;
+
     public BaseGist withComments(Long comments) {
         this.comments = comments;
         return this;
@@ -26,6 +27,7 @@ public class BaseGist {
     
     @JsonProperty("comments_url")
     public String commentsUrl;
+
     public BaseGist withCommentsUrl(String commentsUrl) {
         this.commentsUrl = commentsUrl;
         return this;
@@ -33,6 +35,7 @@ public class BaseGist {
     
     @JsonProperty("commits_url")
     public String commitsUrl;
+
     public BaseGist withCommitsUrl(String commitsUrl) {
         this.commitsUrl = commitsUrl;
         return this;
@@ -42,6 +45,7 @@ public class BaseGist {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public BaseGist withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -49,6 +53,7 @@ public class BaseGist {
     
     @JsonProperty("description")
     public String description;
+
     public BaseGist withDescription(String description) {
         this.description = description;
         return this;
@@ -56,6 +61,7 @@ public class BaseGist {
     
     @JsonProperty("files")
     public java.util.Map<String, BaseGistFiles> files;
+
     public BaseGist withFiles(java.util.Map<String, BaseGistFiles> files) {
         this.files = files;
         return this;
@@ -64,6 +70,7 @@ public class BaseGist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forks")
     public Object[] forks;
+
     public BaseGist withForks(Object[] forks) {
         this.forks = forks;
         return this;
@@ -71,6 +78,7 @@ public class BaseGist {
     
     @JsonProperty("forks_url")
     public String forksUrl;
+
     public BaseGist withForksUrl(String forksUrl) {
         this.forksUrl = forksUrl;
         return this;
@@ -78,6 +86,7 @@ public class BaseGist {
     
     @JsonProperty("git_pull_url")
     public String gitPullUrl;
+
     public BaseGist withGitPullUrl(String gitPullUrl) {
         this.gitPullUrl = gitPullUrl;
         return this;
@@ -85,6 +94,7 @@ public class BaseGist {
     
     @JsonProperty("git_push_url")
     public String gitPushUrl;
+
     public BaseGist withGitPushUrl(String gitPushUrl) {
         this.gitPushUrl = gitPushUrl;
         return this;
@@ -93,6 +103,7 @@ public class BaseGist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("history")
     public Object[] history;
+
     public BaseGist withHistory(Object[] history) {
         this.history = history;
         return this;
@@ -100,6 +111,7 @@ public class BaseGist {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public BaseGist withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -107,6 +119,7 @@ public class BaseGist {
     
     @JsonProperty("id")
     public String id;
+
     public BaseGist withId(String id) {
         this.id = id;
         return this;
@@ -114,6 +127,7 @@ public class BaseGist {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public BaseGist withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -125,6 +139,7 @@ public class BaseGist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public SimpleUser owner;
+
     public BaseGist withOwner(SimpleUser owner) {
         this.owner = owner;
         return this;
@@ -132,6 +147,7 @@ public class BaseGist {
     
     @JsonProperty("public")
     public Boolean public_;
+
     public BaseGist withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -140,6 +156,7 @@ public class BaseGist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("truncated")
     public Boolean truncated;
+
     public BaseGist withTruncated(Boolean truncated) {
         this.truncated = truncated;
         return this;
@@ -149,6 +166,7 @@ public class BaseGist {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public BaseGist withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -156,6 +174,7 @@ public class BaseGist {
     
     @JsonProperty("url")
     public String url;
+
     public BaseGist withUrl(String url) {
         this.url = url;
         return this;
@@ -166,9 +185,28 @@ public class BaseGist {
      */
     @JsonProperty("user")
     public NullableSimpleUser user;
+
     public BaseGist withUser(NullableSimpleUser user) {
         this.user = user;
         return this;
     }
     
+    public BaseGist(@JsonProperty("comments") Long comments, @JsonProperty("comments_url") String commentsUrl, @JsonProperty("commits_url") String commitsUrl, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("description") String description, @JsonProperty("files") java.util.Map<String, BaseGistFiles> files, @JsonProperty("forks_url") String forksUrl, @JsonProperty("git_pull_url") String gitPullUrl, @JsonProperty("git_push_url") String gitPushUrl, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") String id, @JsonProperty("node_id") String nodeId, @JsonProperty("public") Boolean public_, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url, @JsonProperty("user") NullableSimpleUser user) {
+        this.comments = comments;
+        this.commentsUrl = commentsUrl;
+        this.commitsUrl = commitsUrl;
+        this.createdAt = createdAt;
+        this.description = description;
+        this.files = files;
+        this.forksUrl = forksUrl;
+        this.gitPullUrl = gitPullUrl;
+        this.gitPushUrl = gitPushUrl;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.nodeId = nodeId;
+        this.public_ = public_;
+        this.updatedAt = updatedAt;
+        this.url = url;
+        this.user = user;
+  }
 }

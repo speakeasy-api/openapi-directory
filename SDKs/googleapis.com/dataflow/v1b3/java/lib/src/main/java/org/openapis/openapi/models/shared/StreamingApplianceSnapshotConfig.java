@@ -18,6 +18,7 @@ public class StreamingApplianceSnapshotConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importStateEndpoint")
     public String importStateEndpoint;
+
     public StreamingApplianceSnapshotConfig withImportStateEndpoint(String importStateEndpoint) {
         this.importStateEndpoint = importStateEndpoint;
         return this;
@@ -29,9 +30,11 @@ public class StreamingApplianceSnapshotConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotId")
     public String snapshotId;
+
     public StreamingApplianceSnapshotConfig withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
     }
     
+    public StreamingApplianceSnapshotConfig(){}
 }

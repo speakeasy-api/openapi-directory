@@ -15,9 +15,11 @@ public class TerminateSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public SessionStateEnum state;
+
     public TerminateSessionResponse withState(SessionStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public TerminateSessionResponse(){}
 }

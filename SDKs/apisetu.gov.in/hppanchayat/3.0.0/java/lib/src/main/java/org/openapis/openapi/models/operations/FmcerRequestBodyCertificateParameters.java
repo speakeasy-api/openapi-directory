@@ -12,9 +12,13 @@ public class FmcerRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public FmcerRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public FmcerRequestBodyCertificateParameters(@JsonProperty("UID") String uid) {
+        this.uid = uid;
+  }
 }

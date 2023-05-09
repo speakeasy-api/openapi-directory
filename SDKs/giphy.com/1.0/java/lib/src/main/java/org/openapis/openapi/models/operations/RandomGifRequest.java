@@ -12,6 +12,7 @@ public class RandomGifRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rating")
     public String rating;
+
     public RandomGifRequest withRating(String rating) {
         this.rating = rating;
         return this;
@@ -22,9 +23,11 @@ public class RandomGifRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
     public String tag;
+
     public RandomGifRequest withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public RandomGifRequest(){}
 }

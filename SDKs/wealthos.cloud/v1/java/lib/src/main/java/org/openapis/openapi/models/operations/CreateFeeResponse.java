@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFeeResponse {
     
     public String contentType;
+
     public CreateFeeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateFeeResponse {
      */
     
     public CreateFeeRootTypeForFeeCreationResponse rootTypeForFeeCreationResponse;
+
     public CreateFeeResponse withRootTypeForFeeCreationResponse(CreateFeeRootTypeForFeeCreationResponse rootTypeForFeeCreationResponse) {
         this.rootTypeForFeeCreationResponse = rootTypeForFeeCreationResponse;
         return this;
@@ -26,6 +29,7 @@ public class CreateFeeResponse {
     
     
     public Integer statusCode;
+
     public CreateFeeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateFeeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFeeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class CreateFeeResponse {
      */
     
     public CreateFee400ApplicationJSON createFee400ApplicationJSONObject;
+
     public CreateFeeResponse withCreateFee400ApplicationJSONObject(CreateFee400ApplicationJSON createFee400ApplicationJSONObject) {
         this.createFee400ApplicationJSONObject = createFee400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreateFeeResponse {
      */
     
     public CreateFee401ApplicationJSON createFee401ApplicationJSONObject;
+
     public CreateFeeResponse withCreateFee401ApplicationJSONObject(CreateFee401ApplicationJSON createFee401ApplicationJSONObject) {
         this.createFee401ApplicationJSONObject = createFee401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class CreateFeeResponse {
      */
     
     public CreateFee403ApplicationJSON createFee403ApplicationJSONObject;
+
     public CreateFeeResponse withCreateFee403ApplicationJSONObject(CreateFee403ApplicationJSON createFee403ApplicationJSONObject) {
         this.createFee403ApplicationJSONObject = createFee403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class CreateFeeResponse {
      */
     
     public CreateFee404ApplicationJSON createFee404ApplicationJSONObject;
+
     public CreateFeeResponse withCreateFee404ApplicationJSONObject(CreateFee404ApplicationJSON createFee404ApplicationJSONObject) {
         this.createFee404ApplicationJSONObject = createFee404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class CreateFeeResponse {
      */
     
     public CreateFee409ApplicationJSON createFee409ApplicationJSONObject;
+
     public CreateFeeResponse withCreateFee409ApplicationJSONObject(CreateFee409ApplicationJSON createFee409ApplicationJSONObject) {
         this.createFee409ApplicationJSONObject = createFee409ApplicationJSONObject;
         return this;
@@ -93,6 +103,7 @@ public class CreateFeeResponse {
      */
     
     public CreateFee429ApplicationJSON createFee429ApplicationJSONObject;
+
     public CreateFeeResponse withCreateFee429ApplicationJSONObject(CreateFee429ApplicationJSON createFee429ApplicationJSONObject) {
         this.createFee429ApplicationJSONObject = createFee429ApplicationJSONObject;
         return this;
@@ -103,9 +114,14 @@ public class CreateFeeResponse {
      */
     
     public CreateFee500ApplicationJSON createFee500ApplicationJSONObject;
+
     public CreateFeeResponse withCreateFee500ApplicationJSONObject(CreateFee500ApplicationJSON createFee500ApplicationJSONObject) {
         this.createFee500ApplicationJSONObject = createFee500ApplicationJSONObject;
         return this;
     }
     
+    public CreateFeeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

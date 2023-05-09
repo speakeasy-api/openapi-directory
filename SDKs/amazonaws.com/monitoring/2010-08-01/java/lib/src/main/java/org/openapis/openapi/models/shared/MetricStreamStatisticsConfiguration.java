@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * MetricStreamStatisticsConfiguration - By default, a metric stream always sends the &lt;code&gt;MAX&lt;/code&gt;, &lt;code&gt;MIN&lt;/code&gt;, &lt;code&gt;SUM&lt;/code&gt;, and &lt;code&gt;SAMPLECOUNT&lt;/code&gt; statistics for each metric that is streamed. This structure contains information for one metric that includes additional statistics in the stream. For more information about statistics, see CloudWatch, listed in &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html"&gt; CloudWatch statistics definitions&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MetricStreamStatisticsConfiguration {
     
     public String[] additionalStatistics;
+
     public MetricStreamStatisticsConfiguration withAdditionalStatistics(String[] additionalStatistics) {
         this.additionalStatistics = additionalStatistics;
         return this;
@@ -19,9 +20,14 @@ public class MetricStreamStatisticsConfiguration {
     
     
     public MetricStreamStatisticsMetric[] includeMetrics;
+
     public MetricStreamStatisticsConfiguration withIncludeMetrics(MetricStreamStatisticsMetric[] includeMetrics) {
         this.includeMetrics = includeMetrics;
         return this;
     }
     
+    public MetricStreamStatisticsConfiguration(@JsonProperty("AdditionalStatistics") String[] additionalStatistics, @JsonProperty("IncludeMetrics") MetricStreamStatisticsMetric[] includeMetrics) {
+        this.additionalStatistics = additionalStatistics;
+        this.includeMetrics = includeMetrics;
+  }
 }

@@ -12,9 +12,11 @@ public class PatientCreateResourceRelationshipsCoachesDataMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
     public Boolean primary;
+
     public PatientCreateResourceRelationshipsCoachesDataMeta withPrimary(Boolean primary) {
         this.primary = primary;
         return this;
     }
     
+    public PatientCreateResourceRelationshipsCoachesDataMeta(){}
 }

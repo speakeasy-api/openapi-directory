@@ -23,6 +23,7 @@ public class OBWriteInternationalScheduled3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChargeBearer")
     public OBChargeBearerType1CodeEnum chargeBearer;
+
     public OBWriteInternationalScheduled3DataInitiation withChargeBearer(OBChargeBearerType1CodeEnum chargeBearer) {
         this.chargeBearer = chargeBearer;
         return this;
@@ -34,6 +35,7 @@ public class OBWriteInternationalScheduled3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Creditor")
     public OBWriteInternationalScheduled3DataInitiationCreditor creditor;
+
     public OBWriteInternationalScheduled3DataInitiation withCreditor(OBWriteInternationalScheduled3DataInitiationCreditor creditor) {
         this.creditor = creditor;
         return this;
@@ -44,6 +46,7 @@ public class OBWriteInternationalScheduled3DataInitiation {
      */
     @JsonProperty("CreditorAccount")
     public OBWriteInternationalScheduled3DataInitiationCreditorAccount creditorAccount;
+
     public OBWriteInternationalScheduled3DataInitiation withCreditorAccount(OBWriteInternationalScheduled3DataInitiationCreditorAccount creditorAccount) {
         this.creditorAccount = creditorAccount;
         return this;
@@ -55,6 +58,7 @@ public class OBWriteInternationalScheduled3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreditorAgent")
     public OBWriteInternationalScheduled3DataInitiationCreditorAgent creditorAgent;
+
     public OBWriteInternationalScheduled3DataInitiation withCreditorAgent(OBWriteInternationalScheduled3DataInitiationCreditorAgent creditorAgent) {
         this.creditorAgent = creditorAgent;
         return this;
@@ -65,6 +69,7 @@ public class OBWriteInternationalScheduled3DataInitiation {
      */
     @JsonProperty("CurrencyOfTransfer")
     public String currencyOfTransfer;
+
     public OBWriteInternationalScheduled3DataInitiation withCurrencyOfTransfer(String currencyOfTransfer) {
         this.currencyOfTransfer = currencyOfTransfer;
         return this;
@@ -76,6 +81,7 @@ public class OBWriteInternationalScheduled3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebtorAccount")
     public OBWriteInternationalScheduled3DataInitiationDebtorAccount debtorAccount;
+
     public OBWriteInternationalScheduled3DataInitiation withDebtorAccount(OBWriteInternationalScheduled3DataInitiationDebtorAccount debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -87,6 +93,7 @@ public class OBWriteInternationalScheduled3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationCountryCode")
     public String destinationCountryCode;
+
     public OBWriteInternationalScheduled3DataInitiation withDestinationCountryCode(String destinationCountryCode) {
         this.destinationCountryCode = destinationCountryCode;
         return this;
@@ -100,6 +107,7 @@ public class OBWriteInternationalScheduled3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndToEndIdentification")
     public String endToEndIdentification;
+
     public OBWriteInternationalScheduled3DataInitiation withEndToEndIdentification(String endToEndIdentification) {
         this.endToEndIdentification = endToEndIdentification;
         return this;
@@ -111,6 +119,7 @@ public class OBWriteInternationalScheduled3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExchangeRateInformation")
     public OBWriteInternationalScheduled3DataInitiationExchangeRateInformation exchangeRateInformation;
+
     public OBWriteInternationalScheduled3DataInitiation withExchangeRateInformation(OBWriteInternationalScheduled3DataInitiationExchangeRateInformation exchangeRateInformation) {
         this.exchangeRateInformation = exchangeRateInformation;
         return this;
@@ -122,6 +131,7 @@ public class OBWriteInternationalScheduled3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtendedPurpose")
     public String extendedPurpose;
+
     public OBWriteInternationalScheduled3DataInitiation withExtendedPurpose(String extendedPurpose) {
         this.extendedPurpose = extendedPurpose;
         return this;
@@ -133,6 +143,7 @@ public class OBWriteInternationalScheduled3DataInitiation {
      */
     @JsonProperty("InstructedAmount")
     public OBWriteInternationalScheduled3DataInitiationInstructedAmount instructedAmount;
+
     public OBWriteInternationalScheduled3DataInitiation withInstructedAmount(OBWriteInternationalScheduled3DataInitiationInstructedAmount instructedAmount) {
         this.instructedAmount = instructedAmount;
         return this;
@@ -144,6 +155,7 @@ public class OBWriteInternationalScheduled3DataInitiation {
      */
     @JsonProperty("InstructionIdentification")
     public String instructionIdentification;
+
     public OBWriteInternationalScheduled3DataInitiation withInstructionIdentification(String instructionIdentification) {
         this.instructionIdentification = instructionIdentification;
         return this;
@@ -155,6 +167,7 @@ public class OBWriteInternationalScheduled3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstructionPriority")
     public OBWriteInternationalScheduled3DataInitiationInstructionPriorityEnum instructionPriority;
+
     public OBWriteInternationalScheduled3DataInitiation withInstructionPriority(OBWriteInternationalScheduled3DataInitiationInstructionPriorityEnum instructionPriority) {
         this.instructionPriority = instructionPriority;
         return this;
@@ -167,6 +180,7 @@ public class OBWriteInternationalScheduled3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalInstrument")
     public String localInstrument;
+
     public OBWriteInternationalScheduled3DataInitiation withLocalInstrument(String localInstrument) {
         this.localInstrument = localInstrument;
         return this;
@@ -180,6 +194,7 @@ public class OBWriteInternationalScheduled3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Purpose")
     public String purpose;
+
     public OBWriteInternationalScheduled3DataInitiation withPurpose(String purpose) {
         this.purpose = purpose;
         return this;
@@ -191,6 +206,7 @@ public class OBWriteInternationalScheduled3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemittanceInformation")
     public OBWriteInternationalScheduled3DataInitiationRemittanceInformation remittanceInformation;
+
     public OBWriteInternationalScheduled3DataInitiation withRemittanceInformation(OBWriteInternationalScheduled3DataInitiationRemittanceInformation remittanceInformation) {
         this.remittanceInformation = remittanceInformation;
         return this;
@@ -206,6 +222,7 @@ public class OBWriteInternationalScheduled3DataInitiation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RequestedExecutionDateTime")
     public OffsetDateTime requestedExecutionDateTime;
+
     public OBWriteInternationalScheduled3DataInitiation withRequestedExecutionDateTime(OffsetDateTime requestedExecutionDateTime) {
         this.requestedExecutionDateTime = requestedExecutionDateTime;
         return this;
@@ -217,9 +234,17 @@ public class OBWriteInternationalScheduled3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupplementaryData")
     public java.util.Map<String, Object> supplementaryData;
+
     public OBWriteInternationalScheduled3DataInitiation withSupplementaryData(java.util.Map<String, Object> supplementaryData) {
         this.supplementaryData = supplementaryData;
         return this;
     }
     
+    public OBWriteInternationalScheduled3DataInitiation(@JsonProperty("CreditorAccount") OBWriteInternationalScheduled3DataInitiationCreditorAccount creditorAccount, @JsonProperty("CurrencyOfTransfer") String currencyOfTransfer, @JsonProperty("InstructedAmount") OBWriteInternationalScheduled3DataInitiationInstructedAmount instructedAmount, @JsonProperty("InstructionIdentification") String instructionIdentification, @JsonProperty("RequestedExecutionDateTime") OffsetDateTime requestedExecutionDateTime) {
+        this.creditorAccount = creditorAccount;
+        this.currencyOfTransfer = currencyOfTransfer;
+        this.instructedAmount = instructedAmount;
+        this.instructionIdentification = instructionIdentification;
+        this.requestedExecutionDateTime = requestedExecutionDateTime;
+  }
 }

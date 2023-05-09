@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePayItemRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PayItemInput payItemInput;
+
     public CreatePayItemRequest withPayItemInput(org.openapis.openapi.models.shared.PayItemInput payItemInput) {
         this.payItemInput = payItemInput;
         return this;
@@ -19,9 +21,14 @@ public class CreatePayItemRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
     public String xeroTenantId;
+
     public CreatePayItemRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    public CreatePayItemRequest(@JsonProperty("PayItemInput") org.openapis.openapi.models.shared.PayItemInput payItemInput, @JsonProperty("Xero-Tenant-Id") String xeroTenantId) {
+        this.payItemInput = payItemInput;
+        this.xeroTenantId = xeroTenantId;
+  }
 }

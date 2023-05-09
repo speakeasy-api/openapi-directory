@@ -18,6 +18,7 @@ public class AnnotateTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public Document document;
+
     public AnnotateTextRequest withDocument(Document document) {
         this.document = document;
         return this;
@@ -29,6 +30,7 @@ public class AnnotateTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encodingType")
     public AnnotateTextRequestEncodingTypeEnum encodingType;
+
     public AnnotateTextRequest withEncodingType(AnnotateTextRequestEncodingTypeEnum encodingType) {
         this.encodingType = encodingType;
         return this;
@@ -40,9 +42,11 @@ public class AnnotateTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public Features features;
+
     public AnnotateTextRequest withFeatures(Features features) {
         this.features = features;
         return this;
     }
     
+    public AnnotateTextRequest(){}
 }

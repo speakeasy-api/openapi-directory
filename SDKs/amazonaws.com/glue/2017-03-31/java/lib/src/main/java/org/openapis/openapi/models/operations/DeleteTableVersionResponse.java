@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTableVersionResponse {
     
     public String contentType;
+
     public DeleteTableVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteTableVersionResponse {
      */
     
     public java.util.Map<String, Object> deleteTableVersionResponse;
+
     public DeleteTableVersionResponse withDeleteTableVersionResponse(java.util.Map<String, Object> deleteTableVersionResponse) {
         this.deleteTableVersionResponse = deleteTableVersionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTableVersionResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeleteTableVersionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTableVersionResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteTableVersionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteTableVersionResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteTableVersionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteTableVersionResponse {
      */
     
     public Object operationTimeoutException;
+
     public DeleteTableVersionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteTableVersionResponse {
     
     
     public Integer statusCode;
+
     public DeleteTableVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteTableVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTableVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteTableVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteLocalGatewayRouteTableResultLocalGatewayRouteTable {
     
     public String localGatewayId;
+
     public DeleteLocalGatewayRouteTableResultLocalGatewayRouteTable withLocalGatewayId(String localGatewayId) {
         this.localGatewayId = localGatewayId;
         return this;
@@ -19,6 +20,7 @@ public class DeleteLocalGatewayRouteTableResultLocalGatewayRouteTable {
     
     
     public String localGatewayRouteTableArn;
+
     public DeleteLocalGatewayRouteTableResultLocalGatewayRouteTable withLocalGatewayRouteTableArn(String localGatewayRouteTableArn) {
         this.localGatewayRouteTableArn = localGatewayRouteTableArn;
         return this;
@@ -26,6 +28,7 @@ public class DeleteLocalGatewayRouteTableResultLocalGatewayRouteTable {
     
     
     public String localGatewayRouteTableId;
+
     public DeleteLocalGatewayRouteTableResultLocalGatewayRouteTable withLocalGatewayRouteTableId(String localGatewayRouteTableId) {
         this.localGatewayRouteTableId = localGatewayRouteTableId;
         return this;
@@ -33,6 +36,7 @@ public class DeleteLocalGatewayRouteTableResultLocalGatewayRouteTable {
     
     
     public DeleteLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnum mode;
+
     public DeleteLocalGatewayRouteTableResultLocalGatewayRouteTable withMode(DeleteLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnum mode) {
         this.mode = mode;
         return this;
@@ -40,6 +44,7 @@ public class DeleteLocalGatewayRouteTableResultLocalGatewayRouteTable {
     
     
     public String outpostArn;
+
     public DeleteLocalGatewayRouteTableResultLocalGatewayRouteTable withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -47,6 +52,7 @@ public class DeleteLocalGatewayRouteTableResultLocalGatewayRouteTable {
     
     
     public String ownerId;
+
     public DeleteLocalGatewayRouteTableResultLocalGatewayRouteTable withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -54,6 +60,7 @@ public class DeleteLocalGatewayRouteTableResultLocalGatewayRouteTable {
     
     
     public String state;
+
     public DeleteLocalGatewayRouteTableResultLocalGatewayRouteTable withState(String state) {
         this.state = state;
         return this;
@@ -61,6 +68,7 @@ public class DeleteLocalGatewayRouteTableResultLocalGatewayRouteTable {
     
     
     public DeleteLocalGatewayRouteTableResultLocalGatewayRouteTableStateReason stateReason;
+
     public DeleteLocalGatewayRouteTableResultLocalGatewayRouteTable withStateReason(DeleteLocalGatewayRouteTableResultLocalGatewayRouteTableStateReason stateReason) {
         this.stateReason = stateReason;
         return this;
@@ -68,9 +76,11 @@ public class DeleteLocalGatewayRouteTableResultLocalGatewayRouteTable {
     
     
     public DeleteLocalGatewayRouteTableResultLocalGatewayRouteTableTags[] tags;
+
     public DeleteLocalGatewayRouteTableResultLocalGatewayRouteTable withTags(DeleteLocalGatewayRouteTableResultLocalGatewayRouteTableTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DeleteLocalGatewayRouteTableResultLocalGatewayRouteTable(){}
 }

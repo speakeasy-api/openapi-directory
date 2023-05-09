@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostTransferFundsResponse {
     
     public String contentType;
+
     public PostTransferFundsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostTransferFundsResponse {
     
     
     public Integer statusCode;
+
     public PostTransferFundsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostTransferFundsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostTransferFundsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostTransferFundsResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostTransferFundsResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -43,9 +48,14 @@ public class PostTransferFundsResponse {
      */
     
     public org.openapis.openapi.models.shared.TransferFundsResponse transferFundsResponse;
+
     public PostTransferFundsResponse withTransferFundsResponse(org.openapis.openapi.models.shared.TransferFundsResponse transferFundsResponse) {
         this.transferFundsResponse = transferFundsResponse;
         return this;
     }
     
+    public PostTransferFundsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -16,9 +16,8 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.FetchBoundariesSecurity;
 import org.openapis.openapi.models.operations.FetchBoundariesResponse;
+import org.openapis.openapi.models.operations.FetchBoundariesSecurity;
 import org.openapis.openapi.models.shared.BoundariesQuery;
 
 public class Application {
@@ -27,24 +26,24 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            org.openapis.openapi.models.shared.BoundariesQuery req = new BoundariesQuery() {{
-                ids = new String[]{{
-                    add("9bd9d8d6-9a67-44e0-b467-cc8796ed151a"),
-                    add("05dfc2dd-f7cc-478c-a1ba-928fc816742c"),
-                    add("b7392059-2939-46fe-a759-6eb10faaa235"),
-                }};
-            }}            
+            org.openapis.openapi.models.shared.BoundariesQuery req = new BoundariesQuery(                new String[]{{
+                                add("9bd9d8d6-9a67-44e0-b467-cc8796ed151a"),
+                                add("05dfc2dd-f7cc-478c-a1ba-928fc816742c"),
+                                add("b7392059-2939-46fe-a759-6eb10faaa235"),
+                            }});            
 
             FetchBoundariesResponse res = sdk.boundaries.fetchBoundaries(req, new FetchBoundariesSecurity() {{
                 apiKey = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.boundaries.isPresent()) {
+            if (res.boundaries != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -52,55 +51,55 @@ public class Application {
 ## Available Resources and Operations
 
 
-### boundaries
+### [boundaries](docs/boundaries/README.md)
 
-* `fetchBoundaries` - Retrieve Boundaries in batch
-* `fetchBoundaryById` - Retrieve a Boundary by ID
-* `uploadBoundary` - Upload a boundary
+* [fetchBoundaries](docs/boundaries/README.md#fetchboundaries) - Retrieve Boundaries in batch
+* [fetchBoundaryById](docs/boundaries/README.md#fetchboundarybyid) - Retrieve a Boundary by ID
+* [uploadBoundary](docs/boundaries/README.md#uploadboundary) - Upload a boundary
 
-### exports
+### [exports](docs/exports/README.md)
 
-* `fetchExportContentsById` - Retrieve the binary contents of a processed export request.
-* `fetchExportStatusById` - Retrieve the status of an Export.
-* `postExport` - Initiate a new export request.
+* [fetchExportContentsById](docs/exports/README.md#fetchexportcontentsbyid) - Retrieve the binary contents of a processed export request.
+* [fetchExportStatusById](docs/exports/README.md#fetchexportstatusbyid) - Retrieve the status of an Export.
+* [postExport](docs/exports/README.md#postexport) - Initiate a new export request.
 
-### farmOrganizations
+### [farmOrganizations](docs/farmorganizations/README.md)
 
-* `fetchFarmOrganizationByTypeAndId` - Retrieve a specific farm organization by organization type and ID
+* [fetchFarmOrganizationByTypeAndId](docs/farmorganizations/README.md#fetchfarmorganizationbytypeandid) - Retrieve a specific farm organization by organization type and ID
 
-### fields
+### [fields](docs/fields/README.md)
 
-* `fetchAllFields` - Retrieve list of all Fields the user has access to.
-* `fetchFieldById` - Retrieve a specific Field by ID
-* `fetchFields` - Retrieve list of Fields
+* [fetchAllFields](docs/fields/README.md#fetchallfields) - Retrieve list of all Fields the user has access to.
+* [fetchFieldById](docs/fields/README.md#fetchfieldbyid) - Retrieve a specific Field by ID
+* [fetchFields](docs/fields/README.md#fetchfields) - Retrieve list of Fields
 
-### layers
+### [layers](docs/layers/README.md)
 
-* `getV4LayersAsApplied` - Retrieve a list of application activities
-* `getV4LayersAsAppliedActivityIdContents` - Retrieve the raw application activity
-* `getV4LayersAsHarvested` - Retrieve a list of harvest activities
-* `getV4LayersAsHarvestedActivityIdContents` - Retrieve the raw harvest activity
-* `getV4LayersAsPlanted` - Retrieve a list of planting activities
-* `getV4LayersAsPlantedActivityIdContents` - Retrieve the raw planting activity
-* `getV4LayersScoutingObservations` - Retrieve a list of scouting observations
-* `getV4LayersScoutingObservationsScoutingObservationId` - Retrieve individual scouting observation
-* `getV4LayersScoutingObservationsScoutingObservationIdAttachments` - Retrieve attachments associated with a given scouting observation.
-* `getV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContents` - Retrieve the binary contents of a scouting observation’s attachment.
+* [getV4LayersAsApplied](docs/layers/README.md#getv4layersasapplied) - Retrieve a list of application activities
+* [getV4LayersAsAppliedActivityIdContents](docs/layers/README.md#getv4layersasappliedactivityidcontents) - Retrieve the raw application activity
+* [getV4LayersAsHarvested](docs/layers/README.md#getv4layersasharvested) - Retrieve a list of harvest activities
+* [getV4LayersAsHarvestedActivityIdContents](docs/layers/README.md#getv4layersasharvestedactivityidcontents) - Retrieve the raw harvest activity
+* [getV4LayersAsPlanted](docs/layers/README.md#getv4layersasplanted) - Retrieve a list of planting activities
+* [getV4LayersAsPlantedActivityIdContents](docs/layers/README.md#getv4layersasplantedactivityidcontents) - Retrieve the raw planting activity
+* [getV4LayersScoutingObservations](docs/layers/README.md#getv4layersscoutingobservations) - Retrieve a list of scouting observations
+* [getV4LayersScoutingObservationsScoutingObservationId](docs/layers/README.md#getv4layersscoutingobservationsscoutingobservationid) - Retrieve individual scouting observation
+* [getV4LayersScoutingObservationsScoutingObservationIdAttachments](docs/layers/README.md#getv4layersscoutingobservationsscoutingobservationidattachments) - Retrieve attachments associated with a given scouting observation.
+* [getV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContents](docs/layers/README.md#getv4layersscoutingobservationsscoutingobservationidattachmentsattachmentidcontents) - Retrieve the binary contents of a scouting observation’s attachment.
 
-### operations
+### [operations](docs/operations/README.md)
 
-* `fetchOperations` - Retrieve the operations accessible to a a given user.
+* [fetchOperations](docs/operations/README.md#fetchoperations) - Retrieve the operations accessible to a a given user.
 
-### resourceOwners
+### [resourceOwners](docs/resourceowners/README.md)
 
-* `getResourceOwner` - Retrieve a resource owner by ID
+* [getResourceOwner](docs/resourceowners/README.md#getresourceowner) - Retrieve a resource owner by ID
 
-### uploads
+### [uploads](docs/uploads/README.md)
 
-* `chunkedUpload` - Chunked upload of data
-* `fetchUploadStatusById` - Retrieve Upload status
-* `fetchUploadStatuses` - Retrieve Upload statuses in batch
-* `postUpload` - Initiate a new upload
+* [chunkedUpload](docs/uploads/README.md#chunkedupload) - Chunked upload of data
+* [fetchUploadStatusById](docs/uploads/README.md#fetchuploadstatusbyid) - Retrieve Upload status
+* [fetchUploadStatuses](docs/uploads/README.md#fetchuploadstatuses) - Retrieve Upload statuses in batch
+* [postUpload](docs/uploads/README.md#postupload) - Initiate a new upload
 <!-- End SDK Available Operations -->
 
 ### Maturity

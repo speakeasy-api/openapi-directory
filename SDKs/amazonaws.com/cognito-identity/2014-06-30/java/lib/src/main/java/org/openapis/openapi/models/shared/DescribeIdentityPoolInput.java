@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeIdentityPoolInput {
     @JsonProperty("IdentityPoolId")
     public String identityPoolId;
+
     public DescribeIdentityPoolInput withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
     }
     
+    public DescribeIdentityPoolInput(@JsonProperty("IdentityPoolId") String identityPoolId) {
+        this.identityPoolId = identityPoolId;
+  }
 }

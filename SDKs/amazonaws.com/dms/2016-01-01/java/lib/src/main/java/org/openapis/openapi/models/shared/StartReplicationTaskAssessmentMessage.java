@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartReplicationTaskAssessmentMessage {
     @JsonProperty("ReplicationTaskArn")
     public String replicationTaskArn;
+
     public StartReplicationTaskAssessmentMessage withReplicationTaskArn(String replicationTaskArn) {
         this.replicationTaskArn = replicationTaskArn;
         return this;
     }
     
+    public StartReplicationTaskAssessmentMessage(@JsonProperty("ReplicationTaskArn") String replicationTaskArn) {
+        this.replicationTaskArn = replicationTaskArn;
+  }
 }

@@ -87,4 +87,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ExtendedPricingOptions.java
 lib/src/main/java/org/openapis/openapi/models/shared/CoverageEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/OriginDestination.java
 lib/src/main/java/org/openapis/openapi/models/shared/DateTimeRange.java
+docs/sdk/README.md
+docs/shopping/README.md
 USAGE.md

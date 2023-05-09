@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class TokensPartnerOfferHistoryResponse {
     
     public OffsetDateTime applyDate;
+
     public TokensPartnerOfferHistoryResponse withApplyDate(OffsetDateTime applyDate) {
         this.applyDate = applyDate;
         return this;
@@ -16,6 +17,7 @@ public class TokensPartnerOfferHistoryResponse {
     
     
     public Boolean isConsumable;
+
     public TokensPartnerOfferHistoryResponse withIsConsumable(Boolean isConsumable) {
         this.isConsumable = isConsumable;
         return this;
@@ -23,6 +25,7 @@ public class TokensPartnerOfferHistoryResponse {
     
     
     public String localizedDescription;
+
     public TokensPartnerOfferHistoryResponse withLocalizedDescription(String localizedDescription) {
         this.localizedDescription = localizedDescription;
         return this;
@@ -30,6 +33,7 @@ public class TokensPartnerOfferHistoryResponse {
     
     
     public String localizedName;
+
     public TokensPartnerOfferHistoryResponse withLocalizedName(String localizedName) {
         this.localizedName = localizedName;
         return this;
@@ -37,6 +41,7 @@ public class TokensPartnerOfferHistoryResponse {
     
     
     public Long membershipId;
+
     public TokensPartnerOfferHistoryResponse withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -44,6 +49,7 @@ public class TokensPartnerOfferHistoryResponse {
     
     
     public TokensPartnerOfferHistoryResponseMembershipTypeEnum membershipType;
+
     public TokensPartnerOfferHistoryResponse withMembershipType(TokensPartnerOfferHistoryResponseMembershipTypeEnum membershipType) {
         this.membershipType = membershipType;
         return this;
@@ -51,6 +57,7 @@ public class TokensPartnerOfferHistoryResponse {
     
     
     public String partnerOfferKey;
+
     public TokensPartnerOfferHistoryResponse withPartnerOfferKey(String partnerOfferKey) {
         this.partnerOfferKey = partnerOfferKey;
         return this;
@@ -58,9 +65,11 @@ public class TokensPartnerOfferHistoryResponse {
     
     
     public Integer quantityApplied;
+
     public TokensPartnerOfferHistoryResponse withQuantityApplied(Integer quantityApplied) {
         this.quantityApplied = quantityApplied;
         return this;
     }
     
+    public TokensPartnerOfferHistoryResponse(){}
 }

@@ -22,6 +22,7 @@ public class Group {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DisabledDate")
     public OffsetDateTime disabledDate;
+
     public Group withDisabledDate(OffsetDateTime disabledDate) {
         this.disabledDate = disabledDate;
         return this;
@@ -30,6 +31,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public Group withEmail(String email) {
         this.email = email;
         return this;
@@ -40,6 +42,7 @@ public class Group {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EnabledDate")
     public OffsetDateTime enabledDate;
+
     public Group withEnabledDate(OffsetDateTime enabledDate) {
         this.enabledDate = enabledDate;
         return this;
@@ -48,6 +51,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Group withId(String id) {
         this.id = id;
         return this;
@@ -56,6 +60,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Group withName(String name) {
         this.name = name;
         return this;
@@ -64,9 +69,11 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public EntityStateEnum state;
+
     public Group withState(EntityStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public Group(){}
 }

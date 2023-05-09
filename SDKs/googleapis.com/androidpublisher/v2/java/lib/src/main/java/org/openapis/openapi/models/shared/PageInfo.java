@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class PageInfo {
     
     public Integer resultPerPage;
+
     public PageInfo withResultPerPage(Integer resultPerPage) {
         this.resultPerPage = resultPerPage;
         return this;
@@ -16,6 +17,7 @@ public class PageInfo {
     
     
     public Integer startIndex;
+
     public PageInfo withStartIndex(Integer startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -23,9 +25,11 @@ public class PageInfo {
     
     
     public Integer totalResults;
+
     public PageInfo withTotalResults(Integer totalResults) {
         this.totalResults = totalResults;
         return this;
     }
     
+    public PageInfo(){}
 }

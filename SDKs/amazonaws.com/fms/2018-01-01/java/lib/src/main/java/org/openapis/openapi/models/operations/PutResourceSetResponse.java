@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutResourceSetResponse {
     
     public String contentType;
+
     public PutResourceSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutResourceSetResponse {
      */
     
     public Object internalErrorException;
+
     public PutResourceSetResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class PutResourceSetResponse {
      */
     
     public Object invalidInputException;
+
     public PutResourceSetResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class PutResourceSetResponse {
      */
     
     public Object invalidOperationException;
+
     public PutResourceSetResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -49,6 +54,7 @@ public class PutResourceSetResponse {
      */
     
     public Object limitExceededException;
+
     public PutResourceSetResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class PutResourceSetResponse {
      */
     
     public org.openapis.openapi.models.shared.PutResourceSetResponse putResourceSetResponse;
+
     public PutResourceSetResponse withPutResourceSetResponse(org.openapis.openapi.models.shared.PutResourceSetResponse putResourceSetResponse) {
         this.putResourceSetResponse = putResourceSetResponse;
         return this;
@@ -66,6 +73,7 @@ public class PutResourceSetResponse {
     
     
     public Integer statusCode;
+
     public PutResourceSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class PutResourceSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutResourceSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutResourceSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

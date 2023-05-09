@@ -12,6 +12,7 @@ public class CreateSolutionVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateSolutionVersionRequest withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class CreateSolutionVersionRequest {
     
     @JsonProperty("solutionArn")
     public String solutionArn;
+
     public CreateSolutionVersionRequest withSolutionArn(String solutionArn) {
         this.solutionArn = solutionArn;
         return this;
@@ -27,6 +29,7 @@ public class CreateSolutionVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateSolutionVersionRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -35,9 +38,13 @@ public class CreateSolutionVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingMode")
     public TrainingModeEnum trainingMode;
+
     public CreateSolutionVersionRequest withTrainingMode(TrainingModeEnum trainingMode) {
         this.trainingMode = trainingMode;
         return this;
     }
     
+    public CreateSolutionVersionRequest(@JsonProperty("solutionArn") String solutionArn) {
+        this.solutionArn = solutionArn;
+  }
 }

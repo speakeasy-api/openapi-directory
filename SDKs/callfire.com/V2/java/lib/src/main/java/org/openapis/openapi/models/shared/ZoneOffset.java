@@ -18,6 +18,7 @@ public class ZoneOffset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ZoneOffset withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class ZoneOffset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public ZoneRules rules;
+
     public ZoneOffset withRules(ZoneRules rules) {
         this.rules = rules;
         return this;
@@ -40,9 +42,11 @@ public class ZoneOffset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSeconds")
     public Integer totalSeconds;
+
     public ZoneOffset withTotalSeconds(Integer totalSeconds) {
         this.totalSeconds = totalSeconds;
         return this;
     }
     
+    public ZoneOffset(){}
 }

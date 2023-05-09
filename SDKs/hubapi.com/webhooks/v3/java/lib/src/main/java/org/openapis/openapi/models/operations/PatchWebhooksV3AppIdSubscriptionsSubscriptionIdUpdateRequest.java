@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SubscriptionPatchRequest subscriptionPatchRequest;
+
     public PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateRequest withSubscriptionPatchRequest(org.openapis.openapi.models.shared.SubscriptionPatchRequest subscriptionPatchRequest) {
         this.subscriptionPatchRequest = subscriptionPatchRequest;
         return this;
@@ -16,6 +18,7 @@ public class PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public Integer appId;
+
     public PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateRequest withAppId(Integer appId) {
         this.appId = appId;
         return this;
@@ -23,9 +26,15 @@ public class PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriptionId")
     public Integer subscriptionId;
+
     public PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateRequest withSubscriptionId(Integer subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
     
+    public PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateRequest(@JsonProperty("SubscriptionPatchRequest") org.openapis.openapi.models.shared.SubscriptionPatchRequest subscriptionPatchRequest, @JsonProperty("appId") Integer appId, @JsonProperty("subscriptionId") Integer subscriptionId) {
+        this.subscriptionPatchRequest = subscriptionPatchRequest;
+        this.appId = appId;
+        this.subscriptionId = subscriptionId;
+  }
 }

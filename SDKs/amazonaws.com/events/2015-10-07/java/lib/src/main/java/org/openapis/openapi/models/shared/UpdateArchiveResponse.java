@@ -20,6 +20,7 @@ public class UpdateArchiveResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArchiveArn")
     public String archiveArn;
+
     public UpdateArchiveResponse withArchiveArn(String archiveArn) {
         this.archiveArn = archiveArn;
         return this;
@@ -30,6 +31,7 @@ public class UpdateArchiveResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public UpdateArchiveResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class UpdateArchiveResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public ArchiveStateEnum state;
+
     public UpdateArchiveResponse withState(ArchiveStateEnum state) {
         this.state = state;
         return this;
@@ -46,9 +49,11 @@ public class UpdateArchiveResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateReason")
     public String stateReason;
+
     public UpdateArchiveResponse withStateReason(String stateReason) {
         this.stateReason = stateReason;
         return this;
     }
     
+    public UpdateArchiveResponse(){}
 }

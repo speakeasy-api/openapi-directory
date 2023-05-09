@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeProcessingJobRequest {
     @JsonProperty("ProcessingJobName")
     public String processingJobName;
+
     public DescribeProcessingJobRequest withProcessingJobName(String processingJobName) {
         this.processingJobName = processingJobName;
         return this;
     }
     
+    public DescribeProcessingJobRequest(@JsonProperty("ProcessingJobName") String processingJobName) {
+        this.processingJobName = processingJobName;
+  }
 }

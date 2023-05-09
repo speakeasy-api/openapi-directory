@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddOrUpdateJiraIntegrationLinkModel {
     @JsonProperty("clientKey")
     public String clientKey;
+
     public AddOrUpdateJiraIntegrationLinkModel withClientKey(String clientKey) {
         this.clientKey = clientKey;
         return this;
@@ -19,6 +20,7 @@ public class AddOrUpdateJiraIntegrationLinkModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AddOrUpdateJiraIntegrationLinkModel withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class AddOrUpdateJiraIntegrationLinkModel {
     
     @JsonProperty("jiraJwtToken")
     public String jiraJwtToken;
+
     public AddOrUpdateJiraIntegrationLinkModel withJiraJwtToken(String jiraJwtToken) {
         this.jiraJwtToken = jiraJwtToken;
         return this;
@@ -34,9 +37,14 @@ public class AddOrUpdateJiraIntegrationLinkModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public AddOrUpdateJiraIntegrationLinkModel withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public AddOrUpdateJiraIntegrationLinkModel(@JsonProperty("clientKey") String clientKey, @JsonProperty("jiraJwtToken") String jiraJwtToken) {
+        this.clientKey = clientKey;
+        this.jiraJwtToken = jiraJwtToken;
+  }
 }

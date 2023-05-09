@@ -18,6 +18,7 @@ public class OperationAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public OperationAggregatedListWarningCodeEnum code;
+
     public OperationAggregatedListWarning withCode(OperationAggregatedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class OperationAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public OperationAggregatedListWarningData[] data;
+
     public OperationAggregatedListWarning withData(OperationAggregatedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class OperationAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public OperationAggregatedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public OperationAggregatedListWarning(){}
 }

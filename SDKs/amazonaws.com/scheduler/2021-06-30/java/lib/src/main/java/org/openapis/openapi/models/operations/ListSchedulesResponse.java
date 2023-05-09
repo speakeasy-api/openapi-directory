@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSchedulesResponse {
     
     public String contentType;
+
     public ListSchedulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSchedulesResponse {
      */
     
     public Object internalServerException;
+
     public ListSchedulesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListSchedulesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSchedulesOutput listSchedulesOutput;
+
     public ListSchedulesResponse withListSchedulesOutput(org.openapis.openapi.models.shared.ListSchedulesOutput listSchedulesOutput) {
         this.listSchedulesOutput = listSchedulesOutput;
         return this;
@@ -39,6 +43,7 @@ public class ListSchedulesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListSchedulesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListSchedulesResponse {
     
     
     public Integer statusCode;
+
     public ListSchedulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListSchedulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSchedulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListSchedulesResponse {
      */
     
     public Object throttlingException;
+
     public ListSchedulesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListSchedulesResponse {
      */
     
     public Object validationException;
+
     public ListSchedulesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListSchedulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

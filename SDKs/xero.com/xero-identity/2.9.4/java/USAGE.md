@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DeleteConnectionSecurity;
 import org.openapis.openapi.models.operations.DeleteConnectionRequest;
 import org.openapis.openapi.models.operations.DeleteConnectionResponse;
+import org.openapis.openapi.models.operations.DeleteConnectionSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -14,11 +13,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteConnectionRequest req = new DeleteConnectionRequest() {{
-                id = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
-            }}            
+            DeleteConnectionRequest req = new DeleteConnectionRequest("89bd9d8d-69a6-474e-8f46-7cc8796ed151");            
 
-            DeleteConnectionResponse res = sdk.identity.deleteConnection(req, new DeleteConnectionSecurity() {{
+            DeleteConnectionResponse res = sdk.identity.deleteConnection(req, new DeleteConnectionSecurity("deserunt") {{
                 oAuth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
@@ -28,5 +25,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

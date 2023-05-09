@@ -14,6 +14,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("CSCIdentification")
     public String cscIdentification;
+
     public UpsertSellerRequest withCSCIdentification(String cscIdentification) {
         this.cscIdentification = cscIdentification;
         return this;
@@ -24,6 +25,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("account")
     public String account;
+
     public UpsertSellerRequest withAccount(String account) {
         this.account = account;
         return this;
@@ -34,6 +36,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("allowHybridPayments")
     public Boolean allowHybridPayments;
+
     public UpsertSellerRequest withAllowHybridPayments(Boolean allowHybridPayments) {
         this.allowHybridPayments = allowHybridPayments;
         return this;
@@ -44,6 +47,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("availableSalesChannels")
     public AvailableSalesChannel[] availableSalesChannels;
+
     public UpsertSellerRequest withAvailableSalesChannels(AvailableSalesChannel[] availableSalesChannels) {
         this.availableSalesChannels = availableSalesChannels;
         return this;
@@ -54,6 +58,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("catalogSystemEndpoint")
     public String catalogSystemEndpoint;
+
     public UpsertSellerRequest withCatalogSystemEndpoint(String catalogSystemEndpoint) {
         this.catalogSystemEndpoint = catalogSystemEndpoint;
         return this;
@@ -64,6 +69,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("channel")
     public String channel;
+
     public UpsertSellerRequest withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -74,6 +80,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("deliveryPolicy")
     public String deliveryPolicy;
+
     public UpsertSellerRequest withDeliveryPolicy(String deliveryPolicy) {
         this.deliveryPolicy = deliveryPolicy;
         return this;
@@ -84,6 +91,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("description")
     public String description;
+
     public UpsertSellerRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -94,6 +102,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("email")
     public String email;
+
     public UpsertSellerRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -104,6 +113,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("exchangeReturnPolicy")
     public String exchangeReturnPolicy;
+
     public UpsertSellerRequest withExchangeReturnPolicy(String exchangeReturnPolicy) {
         this.exchangeReturnPolicy = exchangeReturnPolicy;
         return this;
@@ -126,6 +136,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("fulfillmentEndpoint")
     public String fulfillmentEndpoint;
+
     public UpsertSellerRequest withFulfillmentEndpoint(String fulfillmentEndpoint) {
         this.fulfillmentEndpoint = fulfillmentEndpoint;
         return this;
@@ -136,6 +147,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("fulfillmentSellerId")
     public String fulfillmentSellerId;
+
     public UpsertSellerRequest withFulfillmentSellerId(String fulfillmentSellerId) {
         this.fulfillmentSellerId = fulfillmentSellerId;
         return this;
@@ -147,6 +159,7 @@ public class UpsertSellerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public Groups[] groups;
+
     public UpsertSellerRequest withGroups(Groups[] groups) {
         this.groups = groups;
         return this;
@@ -157,6 +170,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("id")
     public String id;
+
     public UpsertSellerRequest withId(String id) {
         this.id = id;
         return this;
@@ -167,6 +181,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public UpsertSellerRequest withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -177,6 +192,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("isBetterScope")
     public Boolean isBetterScope;
+
     public UpsertSellerRequest withIsBetterScope(Boolean isBetterScope) {
         this.isBetterScope = isBetterScope;
         return this;
@@ -187,6 +203,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("isVtex")
     public Boolean isVtex;
+
     public UpsertSellerRequest withIsVtex(Boolean isVtex) {
         this.isVtex = isVtex;
         return this;
@@ -197,6 +214,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public UpsertSellerRequest withName(String name) {
         this.name = name;
         return this;
@@ -207,6 +225,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("password")
     public String password;
+
     public UpsertSellerRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -217,6 +236,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("salesChannel")
     public String salesChannel;
+
     public UpsertSellerRequest withSalesChannel(String salesChannel) {
         this.salesChannel = salesChannel;
         return this;
@@ -227,6 +247,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("score")
     public Double score;
+
     public UpsertSellerRequest withScore(Double score) {
         this.score = score;
         return this;
@@ -237,6 +258,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("securityPrivacyPolicy")
     public String securityPrivacyPolicy;
+
     public UpsertSellerRequest withSecurityPrivacyPolicy(String securityPrivacyPolicy) {
         this.securityPrivacyPolicy = securityPrivacyPolicy;
         return this;
@@ -244,6 +266,7 @@ public class UpsertSellerRequest {
     
     @JsonProperty("sellerCommissionConfiguration")
     public java.util.Map<String, Object> sellerCommissionConfiguration;
+
     public UpsertSellerRequest withSellerCommissionConfiguration(java.util.Map<String, Object> sellerCommissionConfiguration) {
         this.sellerCommissionConfiguration = sellerCommissionConfiguration;
         return this;
@@ -258,6 +281,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("sellerType")
     public Integer sellerType;
+
     public UpsertSellerRequest withSellerType(Integer sellerType) {
         this.sellerType = sellerType;
         return this;
@@ -268,6 +292,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("taxCode")
     public String taxCode;
+
     public UpsertSellerRequest withTaxCode(String taxCode) {
         this.taxCode = taxCode;
         return this;
@@ -278,6 +303,7 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("trustPolicy")
     public String trustPolicy;
+
     public UpsertSellerRequest withTrustPolicy(String trustPolicy) {
         this.trustPolicy = trustPolicy;
         return this;
@@ -288,9 +314,38 @@ public class UpsertSellerRequest {
      */
     @JsonProperty("user")
     public String user;
+
     public UpsertSellerRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public UpsertSellerRequest(@JsonProperty("user") String user, @JsonProperty("password") String password, @JsonProperty("CSCIdentification") String cscIdentification, @JsonProperty("account") String account, @JsonProperty("allowHybridPayments") Boolean allowHybridPayments, @JsonProperty("availableSalesChannels") AvailableSalesChannel[] availableSalesChannels, @JsonProperty("catalogSystemEndpoint") String catalogSystemEndpoint, @JsonProperty("channel") String channel, @JsonProperty("deliveryPolicy") String deliveryPolicy, @JsonProperty("description") String description, @JsonProperty("email") String email, @JsonProperty("exchangeReturnPolicy") String exchangeReturnPolicy, @JsonProperty("fulfillmentEndpoint") String fulfillmentEndpoint, @JsonProperty("fulfillmentSellerId") String fulfillmentSellerId, @JsonProperty("id") String id, @JsonProperty("isActive") Boolean isActive, @JsonProperty("isBetterScope") Boolean isBetterScope, @JsonProperty("isVtex") Boolean isVtex, @JsonProperty("name") String name, @JsonProperty("salesChannel") String salesChannel, @JsonProperty("score") Double score, @JsonProperty("securityPrivacyPolicy") String securityPrivacyPolicy, @JsonProperty("sellerCommissionConfiguration") java.util.Map<String, Object> sellerCommissionConfiguration, @JsonProperty("sellerType") Integer sellerType, @JsonProperty("taxCode") String taxCode, @JsonProperty("trustPolicy") String trustPolicy) {
+        this.user = user;
+        this.password = password;
+        this.cscIdentification = cscIdentification;
+        this.account = account;
+        this.allowHybridPayments = allowHybridPayments;
+        this.availableSalesChannels = availableSalesChannels;
+        this.catalogSystemEndpoint = catalogSystemEndpoint;
+        this.channel = channel;
+        this.deliveryPolicy = deliveryPolicy;
+        this.description = description;
+        this.email = email;
+        this.exchangeReturnPolicy = exchangeReturnPolicy;
+        this.fulfillmentEndpoint = fulfillmentEndpoint;
+        this.fulfillmentSellerId = fulfillmentSellerId;
+        this.id = id;
+        this.isActive = isActive;
+        this.isBetterScope = isBetterScope;
+        this.isVtex = isVtex;
+        this.name = name;
+        this.salesChannel = salesChannel;
+        this.score = score;
+        this.securityPrivacyPolicy = securityPrivacyPolicy;
+        this.sellerCommissionConfiguration = sellerCommissionConfiguration;
+        this.sellerType = sellerType;
+        this.taxCode = taxCode;
+        this.trustPolicy = trustPolicy;
+  }
 }

@@ -18,6 +18,7 @@ public class ListRolesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public RoleItems[] items;
+
     public ListRolesResponse withItems(RoleItems[] items) {
         this.items = items;
         return this;
@@ -29,9 +30,11 @@ public class ListRolesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paging")
     public Paging paging;
+
     public ListRolesResponse withPaging(Paging paging) {
         this.paging = paging;
         return this;
     }
     
+    public ListRolesResponse(){}
 }

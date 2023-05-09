@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateClusterResponse {
@@ -12,6 +13,7 @@ public class UpdateClusterResponse {
      */
     
     public Object clientException;
+
     public UpdateClusterResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateClusterResponse {
      */
     
     public Object clusterNotFoundException;
+
     public UpdateClusterResponse withClusterNotFoundException(Object clusterNotFoundException) {
         this.clusterNotFoundException = clusterNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateClusterResponse {
     
     
     public String contentType;
+
     public UpdateClusterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateClusterResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateClusterResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateClusterResponse {
     
     
     public Integer statusCode;
+
     public UpdateClusterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateClusterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateClusterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateClusterResponse {
      */
     
     public Object serverException;
+
     public UpdateClusterResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateClusterResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateClusterResponse updateClusterResponse;
+
     public UpdateClusterResponse withUpdateClusterResponse(org.openapis.openapi.models.shared.UpdateClusterResponse updateClusterResponse) {
         this.updateClusterResponse = updateClusterResponse;
         return this;
     }
     
+    public UpdateClusterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

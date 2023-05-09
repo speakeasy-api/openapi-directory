@@ -12,6 +12,7 @@ public class ThemeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public ThemeResponse withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -20,9 +21,11 @@ public class ThemeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfQuestions")
     public String numberOfQuestions;
+
     public ThemeResponse withNumberOfQuestions(String numberOfQuestions) {
         this.numberOfQuestions = numberOfQuestions;
         return this;
     }
     
+    public ThemeResponse(){}
 }

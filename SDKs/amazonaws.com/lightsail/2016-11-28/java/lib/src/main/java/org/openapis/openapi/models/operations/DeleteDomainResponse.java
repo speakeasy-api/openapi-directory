@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDomainResponse {
@@ -12,6 +13,7 @@ public class DeleteDomainResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteDomainResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteDomainResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public DeleteDomainResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDomainResponse {
     
     
     public String contentType;
+
     public DeleteDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDomainResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteDomainResult deleteDomainResult;
+
     public DeleteDomainResponse withDeleteDomainResult(org.openapis.openapi.models.shared.DeleteDomainResult deleteDomainResult) {
         this.deleteDomainResult = deleteDomainResult;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDomainResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteDomainResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteDomainResponse {
      */
     
     public Object notFoundException;
+
     public DeleteDomainResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteDomainResponse {
      */
     
     public Object operationFailureException;
+
     public DeleteDomainResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteDomainResponse {
      */
     
     public Object serviceException;
+
     public DeleteDomainResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteDomainResponse {
     
     
     public Integer statusCode;
+
     public DeleteDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteDomainResponse {
      */
     
     public Object unauthenticatedException;
+
     public DeleteDomainResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public DeleteDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

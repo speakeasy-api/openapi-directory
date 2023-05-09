@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLoadBalancersResponse {
     
     public LoadBalancerState[] loadBalancers;
+
     public DescribeLoadBalancersResponse withLoadBalancers(LoadBalancerState[] loadBalancers) {
         this.loadBalancers = loadBalancers;
         return this;
@@ -19,9 +20,11 @@ public class DescribeLoadBalancersResponse {
     
     
     public String nextToken;
+
     public DescribeLoadBalancersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeLoadBalancersResponse(){}
 }

@@ -12,6 +12,7 @@ public class BoxScorePlayersUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passing")
     public Double passing;
+
     public BoxScorePlayersUsage withPassing(Double passing) {
         this.passing = passing;
         return this;
@@ -20,6 +21,7 @@ public class BoxScorePlayersUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("player")
     public String player;
+
     public BoxScorePlayersUsage withPlayer(String player) {
         this.player = player;
         return this;
@@ -28,6 +30,7 @@ public class BoxScorePlayersUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public String position;
+
     public BoxScorePlayersUsage withPosition(String position) {
         this.position = position;
         return this;
@@ -36,6 +39,7 @@ public class BoxScorePlayersUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quarter1")
     public Double quarter1;
+
     public BoxScorePlayersUsage withQuarter1(Double quarter1) {
         this.quarter1 = quarter1;
         return this;
@@ -44,6 +48,7 @@ public class BoxScorePlayersUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quarter2")
     public Double quarter2;
+
     public BoxScorePlayersUsage withQuarter2(Double quarter2) {
         this.quarter2 = quarter2;
         return this;
@@ -52,6 +57,7 @@ public class BoxScorePlayersUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quarter3")
     public Double quarter3;
+
     public BoxScorePlayersUsage withQuarter3(Double quarter3) {
         this.quarter3 = quarter3;
         return this;
@@ -60,6 +66,7 @@ public class BoxScorePlayersUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quarter4")
     public Double quarter4;
+
     public BoxScorePlayersUsage withQuarter4(Double quarter4) {
         this.quarter4 = quarter4;
         return this;
@@ -68,6 +75,7 @@ public class BoxScorePlayersUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rushing")
     public Double rushing;
+
     public BoxScorePlayersUsage withRushing(Double rushing) {
         this.rushing = rushing;
         return this;
@@ -76,6 +84,7 @@ public class BoxScorePlayersUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public BoxScorePlayersUsage withTeam(String team) {
         this.team = team;
         return this;
@@ -84,9 +93,11 @@ public class BoxScorePlayersUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public BoxScorePlayersUsage withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public BoxScorePlayersUsage(){}
 }

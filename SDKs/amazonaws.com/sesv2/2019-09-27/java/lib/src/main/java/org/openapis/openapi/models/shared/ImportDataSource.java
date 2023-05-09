@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImportDataSource {
     @JsonProperty("DataFormat")
     public DataFormatEnum dataFormat;
+
     public ImportDataSource withDataFormat(DataFormatEnum dataFormat) {
         this.dataFormat = dataFormat;
         return this;
@@ -19,9 +20,14 @@ public class ImportDataSource {
     
     @JsonProperty("S3Url")
     public String s3Url;
+
     public ImportDataSource withS3Url(String s3Url) {
         this.s3Url = s3Url;
         return this;
     }
     
+    public ImportDataSource(@JsonProperty("DataFormat") DataFormatEnum dataFormat, @JsonProperty("S3Url") String s3Url) {
+        this.dataFormat = dataFormat;
+        this.s3Url = s3Url;
+  }
 }

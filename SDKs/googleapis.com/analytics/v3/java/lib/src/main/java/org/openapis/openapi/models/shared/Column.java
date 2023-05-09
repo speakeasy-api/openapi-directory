@@ -18,6 +18,7 @@ public class Column {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public Column withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class Column {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Column withId(String id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class Column {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Column withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public Column(){}
 }

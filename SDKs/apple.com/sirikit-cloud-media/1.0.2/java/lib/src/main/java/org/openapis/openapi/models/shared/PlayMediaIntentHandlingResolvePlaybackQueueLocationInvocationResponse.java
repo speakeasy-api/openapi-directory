@@ -12,6 +12,7 @@ public class PlayMediaIntentHandlingResolvePlaybackQueueLocationInvocationRespon
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debug")
     public String debug;
+
     public PlayMediaIntentHandlingResolvePlaybackQueueLocationInvocationResponse withDebug(String debug) {
         this.debug = debug;
         return this;
@@ -19,6 +20,7 @@ public class PlayMediaIntentHandlingResolvePlaybackQueueLocationInvocationRespon
     
     @JsonProperty("method")
     public String method;
+
     public PlayMediaIntentHandlingResolvePlaybackQueueLocationInvocationResponse withMethod(String method) {
         this.method = method;
         return this;
@@ -27,6 +29,7 @@ public class PlayMediaIntentHandlingResolvePlaybackQueueLocationInvocationRespon
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public ExecutionMetrics metrics;
+
     public PlayMediaIntentHandlingResolvePlaybackQueueLocationInvocationResponse withMetrics(ExecutionMetrics metrics) {
         this.metrics = metrics;
         return this;
@@ -34,9 +37,14 @@ public class PlayMediaIntentHandlingResolvePlaybackQueueLocationInvocationRespon
     
     @JsonProperty("result")
     public java.util.Map<String, Object> result;
+
     public PlayMediaIntentHandlingResolvePlaybackQueueLocationInvocationResponse withResult(java.util.Map<String, Object> result) {
         this.result = result;
         return this;
     }
     
+    public PlayMediaIntentHandlingResolvePlaybackQueueLocationInvocationResponse(@JsonProperty("method") String method, @JsonProperty("result") java.util.Map<String, Object> result) {
+        this.method = method;
+        this.result = result;
+  }
 }

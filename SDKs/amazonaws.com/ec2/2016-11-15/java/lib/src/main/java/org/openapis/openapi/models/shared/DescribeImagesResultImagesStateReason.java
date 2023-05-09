@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeImagesResultImagesStateReason {
     
     public String code;
+
     public DescribeImagesResultImagesStateReason withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class DescribeImagesResultImagesStateReason {
     
     
     public String message;
+
     public DescribeImagesResultImagesStateReason withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DescribeImagesResultImagesStateReason(){}
 }

@@ -344,4 +344,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateConnectionOAuthClient
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateConnectionBasicAuthRequestParameters.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateConnectionApiKeyAuthRequestParameters.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

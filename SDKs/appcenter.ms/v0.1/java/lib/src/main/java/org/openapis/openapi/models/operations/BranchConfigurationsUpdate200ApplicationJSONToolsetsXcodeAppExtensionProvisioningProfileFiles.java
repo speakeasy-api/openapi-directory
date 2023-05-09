@@ -18,6 +18,7 @@ public class BranchConfigurationsUpdate200ApplicationJSONToolsetsXcodeAppExtensi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileId")
     public String fileId;
+
     public BranchConfigurationsUpdate200ApplicationJSONToolsetsXcodeAppExtensionProvisioningProfileFiles withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -29,6 +30,7 @@ public class BranchConfigurationsUpdate200ApplicationJSONToolsetsXcodeAppExtensi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public BranchConfigurationsUpdate200ApplicationJSONToolsetsXcodeAppExtensionProvisioningProfileFiles withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -40,6 +42,7 @@ public class BranchConfigurationsUpdate200ApplicationJSONToolsetsXcodeAppExtensi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetBundleIdentifier")
     public String targetBundleIdentifier;
+
     public BranchConfigurationsUpdate200ApplicationJSONToolsetsXcodeAppExtensionProvisioningProfileFiles withTargetBundleIdentifier(String targetBundleIdentifier) {
         this.targetBundleIdentifier = targetBundleIdentifier;
         return this;
@@ -51,9 +54,11 @@ public class BranchConfigurationsUpdate200ApplicationJSONToolsetsXcodeAppExtensi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadId")
     public String uploadId;
+
     public BranchConfigurationsUpdate200ApplicationJSONToolsetsXcodeAppExtensionProvisioningProfileFiles withUploadId(String uploadId) {
         this.uploadId = uploadId;
         return this;
     }
     
+    public BranchConfigurationsUpdate200ApplicationJSONToolsetsXcodeAppExtensionProvisioningProfileFiles(){}
 }

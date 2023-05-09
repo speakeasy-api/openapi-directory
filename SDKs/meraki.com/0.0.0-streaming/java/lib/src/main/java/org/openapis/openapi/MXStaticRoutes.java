@@ -58,11 +58,9 @@ public class MXStaticRoutes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateNetworkStaticRouteResponse res = new org.openapis.openapi.models.operations.CreateNetworkStaticRouteResponse() {{
+        org.openapis.openapi.models.operations.CreateNetworkStaticRouteResponse res = new org.openapis.openapi.models.operations.CreateNetworkStaticRouteResponse(contentType, httpRes.statusCode()) {{
             createNetworkStaticRoute201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -98,10 +96,8 @@ public class MXStaticRoutes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteNetworkStaticRouteResponse res = new org.openapis.openapi.models.operations.DeleteNetworkStaticRouteResponse() {{
+        org.openapis.openapi.models.operations.DeleteNetworkStaticRouteResponse res = new org.openapis.openapi.models.operations.DeleteNetworkStaticRouteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -132,11 +128,9 @@ public class MXStaticRoutes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkStaticRouteResponse res = new org.openapis.openapi.models.operations.GetNetworkStaticRouteResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkStaticRouteResponse res = new org.openapis.openapi.models.operations.GetNetworkStaticRouteResponse(contentType, httpRes.statusCode()) {{
             getNetworkStaticRoute200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -172,11 +166,9 @@ public class MXStaticRoutes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkStaticRoutesResponse res = new org.openapis.openapi.models.operations.GetNetworkStaticRoutesResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkStaticRoutesResponse res = new org.openapis.openapi.models.operations.GetNetworkStaticRoutesResponse(contentType, httpRes.statusCode()) {{
             getNetworkStaticRoutes200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -214,11 +206,9 @@ public class MXStaticRoutes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkStaticRouteResponse res = new org.openapis.openapi.models.operations.UpdateNetworkStaticRouteResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkStaticRouteResponse res = new org.openapis.openapi.models.operations.UpdateNetworkStaticRouteResponse(contentType, httpRes.statusCode()) {{
             updateNetworkStaticRoute200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

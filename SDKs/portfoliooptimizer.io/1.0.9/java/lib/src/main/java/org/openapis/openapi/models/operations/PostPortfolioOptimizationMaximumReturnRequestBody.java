@@ -14,6 +14,7 @@ public class PostPortfolioOptimizationMaximumReturnRequestBody {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioOptimizationMaximumReturnRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -25,6 +26,7 @@ public class PostPortfolioOptimizationMaximumReturnRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostPortfolioOptimizationMaximumReturnRequestBody withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
@@ -35,6 +37,7 @@ public class PostPortfolioOptimizationMaximumReturnRequestBody {
      */
     @JsonProperty("assetsReturns")
     public Double[] assetsReturns;
+
     public PostPortfolioOptimizationMaximumReturnRequestBody withAssetsReturns(Double[] assetsReturns) {
         this.assetsReturns = assetsReturns;
         return this;
@@ -43,9 +46,14 @@ public class PostPortfolioOptimizationMaximumReturnRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public PostPortfolioOptimizationMaximumReturnRequestBodyConstraints constraints;
+
     public PostPortfolioOptimizationMaximumReturnRequestBody withConstraints(PostPortfolioOptimizationMaximumReturnRequestBodyConstraints constraints) {
         this.constraints = constraints;
         return this;
     }
     
+    public PostPortfolioOptimizationMaximumReturnRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsReturns") Double[] assetsReturns) {
+        this.assets = assets;
+        this.assetsReturns = assetsReturns;
+  }
 }

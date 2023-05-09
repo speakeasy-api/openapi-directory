@@ -15,6 +15,7 @@ public class EliminationAlliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backup")
     public EliminationAllianceBackup backup;
+
     public EliminationAlliance withBackup(EliminationAllianceBackup backup) {
         this.backup = backup;
         return this;
@@ -26,6 +27,7 @@ public class EliminationAlliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("declines")
     public String[] declines;
+
     public EliminationAlliance withDeclines(String[] declines) {
         this.declines = declines;
         return this;
@@ -37,6 +39,7 @@ public class EliminationAlliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EliminationAlliance withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +50,7 @@ public class EliminationAlliance {
      */
     @JsonProperty("picks")
     public String[] picks;
+
     public EliminationAlliance withPicks(String[] picks) {
         this.picks = picks;
         return this;
@@ -55,9 +59,13 @@ public class EliminationAlliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public EliminationAllianceStatus status;
+
     public EliminationAlliance withStatus(EliminationAllianceStatus status) {
         this.status = status;
         return this;
     }
     
+    public EliminationAlliance(@JsonProperty("picks") String[] picks) {
+        this.picks = picks;
+  }
 }

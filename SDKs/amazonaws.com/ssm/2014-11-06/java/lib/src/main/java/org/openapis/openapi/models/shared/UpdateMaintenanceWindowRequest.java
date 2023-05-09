@@ -12,6 +12,7 @@ public class UpdateMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowUnassociatedTargets")
     public Boolean allowUnassociatedTargets;
+
     public UpdateMaintenanceWindowRequest withAllowUnassociatedTargets(Boolean allowUnassociatedTargets) {
         this.allowUnassociatedTargets = allowUnassociatedTargets;
         return this;
@@ -20,6 +21,7 @@ public class UpdateMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cutoff")
     public Long cutoff;
+
     public UpdateMaintenanceWindowRequest withCutoff(Long cutoff) {
         this.cutoff = cutoff;
         return this;
@@ -28,6 +30,7 @@ public class UpdateMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateMaintenanceWindowRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class UpdateMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Duration")
     public Long duration;
+
     public UpdateMaintenanceWindowRequest withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -44,6 +48,7 @@ public class UpdateMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public UpdateMaintenanceWindowRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -52,6 +57,7 @@ public class UpdateMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndDate")
     public String endDate;
+
     public UpdateMaintenanceWindowRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -60,6 +66,7 @@ public class UpdateMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateMaintenanceWindowRequest withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +75,7 @@ public class UpdateMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Replace")
     public Boolean replace;
+
     public UpdateMaintenanceWindowRequest withReplace(Boolean replace) {
         this.replace = replace;
         return this;
@@ -76,6 +84,7 @@ public class UpdateMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public String schedule;
+
     public UpdateMaintenanceWindowRequest withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
@@ -84,6 +93,7 @@ public class UpdateMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleOffset")
     public Long scheduleOffset;
+
     public UpdateMaintenanceWindowRequest withScheduleOffset(Long scheduleOffset) {
         this.scheduleOffset = scheduleOffset;
         return this;
@@ -92,6 +102,7 @@ public class UpdateMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleTimezone")
     public String scheduleTimezone;
+
     public UpdateMaintenanceWindowRequest withScheduleTimezone(String scheduleTimezone) {
         this.scheduleTimezone = scheduleTimezone;
         return this;
@@ -100,6 +111,7 @@ public class UpdateMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartDate")
     public String startDate;
+
     public UpdateMaintenanceWindowRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -107,9 +119,13 @@ public class UpdateMaintenanceWindowRequest {
     
     @JsonProperty("WindowId")
     public String windowId;
+
     public UpdateMaintenanceWindowRequest withWindowId(String windowId) {
         this.windowId = windowId;
         return this;
     }
     
+    public UpdateMaintenanceWindowRequest(@JsonProperty("WindowId") String windowId) {
+        this.windowId = windowId;
+  }
 }

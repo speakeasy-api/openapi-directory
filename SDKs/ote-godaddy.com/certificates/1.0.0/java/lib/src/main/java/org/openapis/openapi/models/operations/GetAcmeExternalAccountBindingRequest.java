@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAcmeExternalAccountBindingRequest {
@@ -12,9 +13,13 @@ public class GetAcmeExternalAccountBindingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
     public String customerId;
+
     public GetAcmeExternalAccountBindingRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
     }
     
+    public GetAcmeExternalAccountBindingRequest(@JsonProperty("customerId") String customerId) {
+        this.customerId = customerId;
+  }
 }

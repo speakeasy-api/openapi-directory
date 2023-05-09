@@ -15,6 +15,7 @@ public class AdjustLoyaltyPointsRequest {
      */
     @JsonProperty("adjust_points")
     public LoyaltyEventAdjustPoints adjustPoints;
+
     public AdjustLoyaltyPointsRequest withAdjustPoints(LoyaltyEventAdjustPoints adjustPoints) {
         this.adjustPoints = adjustPoints;
         return this;
@@ -26,9 +27,14 @@ public class AdjustLoyaltyPointsRequest {
      */
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public AdjustLoyaltyPointsRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
     }
     
+    public AdjustLoyaltyPointsRequest(@JsonProperty("adjust_points") LoyaltyEventAdjustPoints adjustPoints, @JsonProperty("idempotency_key") String idempotencyKey) {
+        this.adjustPoints = adjustPoints;
+        this.idempotencyKey = idempotencyKey;
+  }
 }

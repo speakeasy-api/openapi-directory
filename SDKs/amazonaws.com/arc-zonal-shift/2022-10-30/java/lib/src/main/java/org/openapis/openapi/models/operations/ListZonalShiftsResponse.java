@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListZonalShiftsResponse {
@@ -12,6 +13,7 @@ public class ListZonalShiftsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListZonalShiftsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListZonalShiftsResponse {
     
     
     public String contentType;
+
     public ListZonalShiftsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListZonalShiftsResponse {
      */
     
     public Object internalServerException;
+
     public ListZonalShiftsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListZonalShiftsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListZonalShiftsResponse listZonalShiftsResponse;
+
     public ListZonalShiftsResponse withListZonalShiftsResponse(org.openapis.openapi.models.shared.ListZonalShiftsResponse listZonalShiftsResponse) {
         this.listZonalShiftsResponse = listZonalShiftsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListZonalShiftsResponse {
     
     
     public Integer statusCode;
+
     public ListZonalShiftsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListZonalShiftsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListZonalShiftsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListZonalShiftsResponse {
      */
     
     public Object throttlingException;
+
     public ListZonalShiftsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListZonalShiftsResponse {
      */
     
     public Object validationException;
+
     public ListZonalShiftsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListZonalShiftsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

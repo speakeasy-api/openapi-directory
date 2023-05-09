@@ -16,6 +16,7 @@ public class PointPointDailyAllDayPrecipitationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public PointPointDailyAllDayPrecipitationData withTotal(Double total) {
         this.total = total;
         return this;
@@ -36,9 +37,11 @@ public class PointPointDailyAllDayPrecipitationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public byte[] type;
+
     public PointPointDailyAllDayPrecipitationData withType(byte[] type) {
         this.type = type;
         return this;
     }
     
+    public PointPointDailyAllDayPrecipitationData(){}
 }

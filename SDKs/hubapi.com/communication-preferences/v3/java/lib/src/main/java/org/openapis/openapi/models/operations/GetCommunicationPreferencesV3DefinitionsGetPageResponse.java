@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCommunicationPreferencesV3DefinitionsGetPageResponse {
     
     public byte[] body;
+
     public GetCommunicationPreferencesV3DefinitionsGetPageResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetCommunicationPreferencesV3DefinitionsGetPageResponse {
     
     
     public String contentType;
+
     public GetCommunicationPreferencesV3DefinitionsGetPageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetCommunicationPreferencesV3DefinitionsGetPageResponse {
     
     
     public Integer statusCode;
+
     public GetCommunicationPreferencesV3DefinitionsGetPageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetCommunicationPreferencesV3DefinitionsGetPageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCommunicationPreferencesV3DefinitionsGetPageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetCommunicationPreferencesV3DefinitionsGetPageResponse {
      */
     
     public org.openapis.openapi.models.shared.SubscriptionDefinitionsResponse subscriptionDefinitionsResponse;
+
     public GetCommunicationPreferencesV3DefinitionsGetPageResponse withSubscriptionDefinitionsResponse(org.openapis.openapi.models.shared.SubscriptionDefinitionsResponse subscriptionDefinitionsResponse) {
         this.subscriptionDefinitionsResponse = subscriptionDefinitionsResponse;
         return this;
     }
     
+    public GetCommunicationPreferencesV3DefinitionsGetPageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

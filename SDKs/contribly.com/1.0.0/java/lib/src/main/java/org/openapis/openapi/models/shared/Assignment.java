@@ -20,6 +20,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowsAnonymousContributions")
     public Boolean allowsAnonymousContributions;
+
     public Assignment withAllowsAnonymousContributions(Boolean allowsAnonymousContributions) {
         this.allowsAnonymousContributions = allowsAnonymousContributions;
         return this;
@@ -31,6 +32,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callToAction")
     public String callToAction;
+
     public Assignment withCallToAction(String callToAction) {
         this.callToAction = callToAction;
         return this;
@@ -39,6 +41,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cover")
     public MediaUsage cover;
+
     public Assignment withCover(MediaUsage cover) {
         this.cover = cover;
         return this;
@@ -49,6 +52,7 @@ public class Assignment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Assignment withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -57,6 +61,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Assignment withDescription(String description) {
         this.description = description;
         return this;
@@ -67,6 +72,7 @@ public class Assignment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("embargo")
     public OffsetDateTime embargo;
+
     public Assignment withEmbargo(OffsetDateTime embargo) {
         this.embargo = embargo;
         return this;
@@ -77,6 +83,7 @@ public class Assignment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ends")
     public OffsetDateTime ends;
+
     public Assignment withEnds(OffsetDateTime ends) {
         this.ends = ends;
         return this;
@@ -85,6 +92,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featured")
     public Boolean featured;
+
     public Assignment withFeatured(Boolean featured) {
         this.featured = featured;
         return this;
@@ -93,6 +101,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Assignment withId(String id) {
         this.id = id;
         return this;
@@ -101,6 +110,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaRequired")
     public Boolean mediaRequired;
+
     public Assignment withMediaRequired(Boolean mediaRequired) {
         this.mediaRequired = mediaRequired;
         return this;
@@ -112,6 +122,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moderator")
     public String moderator;
+
     public Assignment withModerator(String moderator) {
         this.moderator = moderator;
         return this;
@@ -120,6 +131,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Assignment withName(String name) {
         this.name = name;
         return this;
@@ -131,6 +143,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("open")
     public Boolean open;
+
     public Assignment withOpen(Boolean open) {
         this.open = open;
         return this;
@@ -142,6 +155,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receiptMessage")
     public String receiptMessage;
+
     public Assignment withReceiptMessage(String receiptMessage) {
         this.receiptMessage = receiptMessage;
         return this;
@@ -152,6 +166,7 @@ public class Assignment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("starts")
     public OffsetDateTime starts;
+
     public Assignment withStarts(OffsetDateTime starts) {
         this.starts = starts;
         return this;
@@ -160,6 +175,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public Assignment withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -168,6 +184,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlWords")
     public String urlWords;
+
     public Assignment withUrlWords(String urlWords) {
         this.urlWords = urlWords;
         return this;
@@ -176,9 +193,11 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webUrl")
     public String webUrl;
+
     public Assignment withWebUrl(String webUrl) {
         this.webUrl = webUrl;
         return this;
     }
     
+    public Assignment(){}
 }

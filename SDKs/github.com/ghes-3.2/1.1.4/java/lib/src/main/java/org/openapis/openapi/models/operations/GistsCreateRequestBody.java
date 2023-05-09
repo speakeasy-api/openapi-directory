@@ -15,6 +15,7 @@ public class GistsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GistsCreateRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class GistsCreateRequestBody {
      */
     @JsonProperty("files")
     public java.util.Map<String, GistsCreateRequestBodyFiles> files;
+
     public GistsCreateRequestBody withFiles(java.util.Map<String, GistsCreateRequestBodyFiles> files) {
         this.files = files;
         return this;
@@ -33,9 +35,13 @@ public class GistsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public")
     public Object public_;
+
     public GistsCreateRequestBody withPublic(Object public_) {
         this.public_ = public_;
         return this;
     }
     
+    public GistsCreateRequestBody(@JsonProperty("files") java.util.Map<String, GistsCreateRequestBodyFiles> files) {
+        this.files = files;
+  }
 }

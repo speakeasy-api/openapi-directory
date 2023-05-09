@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetaddressmatchRequest;
 import org.openapis.openapi.models.operations.GetaddressmatchResponse;
 
@@ -26,19 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetaddressmatchRequest req = new GetaddressmatchRequest() {{
-                address = "5786 Little Streets";
-                license = "vel";
-            }}            
+            GetaddressmatchRequest req = new GetaddressmatchRequest("corrupti", "provident");            
 
             GetaddressmatchResponse res = sdk.streetAddressSimilarityKey.getaddressmatch(req);
 
-            if (res.getaddressmatch200ApplicationJSONObject.isPresent()) {
+            if (res.getaddressmatch200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -46,9 +44,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### streetAddressSimilarityKey
+### [streetAddressSimilarityKey](docs/streetaddresssimilaritykey/README.md)
 
-* `getaddressmatch` - Gets a similarity key for matching purposes for address data
+* [getaddressmatch](docs/streetaddresssimilaritykey/README.md#getaddressmatch) - Gets a similarity key for matching purposes for address data
 <!-- End SDK Available Operations -->
 
 ### Maturity

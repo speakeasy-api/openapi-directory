@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RunNamespacesExecutionsCancelResponse {
     
     public String contentType;
+
     public RunNamespacesExecutionsCancelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RunNamespacesExecutionsCancelResponse {
      */
     
     public org.openapis.openapi.models.shared.Execution execution;
+
     public RunNamespacesExecutionsCancelResponse withExecution(org.openapis.openapi.models.shared.Execution execution) {
         this.execution = execution;
         return this;
@@ -26,6 +29,7 @@ public class RunNamespacesExecutionsCancelResponse {
     
     
     public Integer statusCode;
+
     public RunNamespacesExecutionsCancelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RunNamespacesExecutionsCancelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RunNamespacesExecutionsCancelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RunNamespacesExecutionsCancelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

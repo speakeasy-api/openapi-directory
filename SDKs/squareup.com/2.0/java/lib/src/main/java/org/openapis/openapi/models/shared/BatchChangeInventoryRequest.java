@@ -22,6 +22,7 @@ public class BatchChangeInventoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changes")
     public InventoryChange[] changes;
+
     public BatchChangeInventoryRequest withChanges(InventoryChange[] changes) {
         this.changes = changes;
         return this;
@@ -37,6 +38,7 @@ public class BatchChangeInventoryRequest {
      */
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public BatchChangeInventoryRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -49,9 +51,13 @@ public class BatchChangeInventoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignore_unchanged_counts")
     public Boolean ignoreUnchangedCounts;
+
     public BatchChangeInventoryRequest withIgnoreUnchangedCounts(Boolean ignoreUnchangedCounts) {
         this.ignoreUnchangedCounts = ignoreUnchangedCounts;
         return this;
     }
     
+    public BatchChangeInventoryRequest(@JsonProperty("idempotency_key") String idempotencyKey) {
+        this.idempotencyKey = idempotencyKey;
+  }
 }

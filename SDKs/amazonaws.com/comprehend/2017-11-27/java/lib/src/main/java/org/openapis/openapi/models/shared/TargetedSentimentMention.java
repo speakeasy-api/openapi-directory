@@ -15,6 +15,7 @@ public class TargetedSentimentMention {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BeginOffset")
     public Long beginOffset;
+
     public TargetedSentimentMention withBeginOffset(Long beginOffset) {
         this.beginOffset = beginOffset;
         return this;
@@ -23,6 +24,7 @@ public class TargetedSentimentMention {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndOffset")
     public Long endOffset;
+
     public TargetedSentimentMention withEndOffset(Long endOffset) {
         this.endOffset = endOffset;
         return this;
@@ -31,6 +33,7 @@ public class TargetedSentimentMention {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupScore")
     public Float groupScore;
+
     public TargetedSentimentMention withGroupScore(Float groupScore) {
         this.groupScore = groupScore;
         return this;
@@ -39,6 +42,7 @@ public class TargetedSentimentMention {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MentionSentiment")
     public MentionSentiment mentionSentiment;
+
     public TargetedSentimentMention withMentionSentiment(MentionSentiment mentionSentiment) {
         this.mentionSentiment = mentionSentiment;
         return this;
@@ -47,6 +51,7 @@ public class TargetedSentimentMention {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public TargetedSentimentMention withScore(Float score) {
         this.score = score;
         return this;
@@ -55,6 +60,7 @@ public class TargetedSentimentMention {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public TargetedSentimentMention withText(String text) {
         this.text = text;
         return this;
@@ -63,9 +69,11 @@ public class TargetedSentimentMention {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public TargetedSentimentEntityTypeEnum type;
+
     public TargetedSentimentMention withType(TargetedSentimentEntityTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TargetedSentimentMention(){}
 }

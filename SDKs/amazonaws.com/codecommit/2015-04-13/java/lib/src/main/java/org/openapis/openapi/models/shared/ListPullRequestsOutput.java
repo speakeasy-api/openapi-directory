@@ -15,6 +15,7 @@ public class ListPullRequestsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListPullRequestsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListPullRequestsOutput {
     
     @JsonProperty("pullRequestIds")
     public String[] pullRequestIds;
+
     public ListPullRequestsOutput withPullRequestIds(String[] pullRequestIds) {
         this.pullRequestIds = pullRequestIds;
         return this;
     }
     
+    public ListPullRequestsOutput(@JsonProperty("pullRequestIds") String[] pullRequestIds) {
+        this.pullRequestIds = pullRequestIds;
+  }
 }

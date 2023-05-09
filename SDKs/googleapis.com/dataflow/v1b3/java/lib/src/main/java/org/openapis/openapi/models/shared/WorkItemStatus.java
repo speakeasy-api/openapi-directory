@@ -18,6 +18,7 @@ public class WorkItemStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completed")
     public Boolean completed;
+
     public WorkItemStatus withCompleted(Boolean completed) {
         this.completed = completed;
         return this;
@@ -29,6 +30,7 @@ public class WorkItemStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("counterUpdates")
     public CounterUpdate[] counterUpdates;
+
     public WorkItemStatus withCounterUpdates(CounterUpdate[] counterUpdates) {
         this.counterUpdates = counterUpdates;
         return this;
@@ -40,6 +42,7 @@ public class WorkItemStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamicSourceSplit")
     public DynamicSourceSplit dynamicSourceSplit;
+
     public WorkItemStatus withDynamicSourceSplit(DynamicSourceSplit dynamicSourceSplit) {
         this.dynamicSourceSplit = dynamicSourceSplit;
         return this;
@@ -51,6 +54,7 @@ public class WorkItemStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Status[] errors;
+
     public WorkItemStatus withErrors(Status[] errors) {
         this.errors = errors;
         return this;
@@ -62,6 +66,7 @@ public class WorkItemStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricUpdates")
     public MetricUpdate[] metricUpdates;
+
     public WorkItemStatus withMetricUpdates(MetricUpdate[] metricUpdates) {
         this.metricUpdates = metricUpdates;
         return this;
@@ -73,6 +78,7 @@ public class WorkItemStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progress")
     public ApproximateProgress progress;
+
     public WorkItemStatus withProgress(ApproximateProgress progress) {
         this.progress = progress;
         return this;
@@ -84,6 +90,7 @@ public class WorkItemStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportIndex")
     public String reportIndex;
+
     public WorkItemStatus withReportIndex(String reportIndex) {
         this.reportIndex = reportIndex;
         return this;
@@ -95,6 +102,7 @@ public class WorkItemStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportedProgress")
     public ApproximateReportedProgress reportedProgress;
+
     public WorkItemStatus withReportedProgress(ApproximateReportedProgress reportedProgress) {
         this.reportedProgress = reportedProgress;
         return this;
@@ -106,6 +114,7 @@ public class WorkItemStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedLeaseDuration")
     public String requestedLeaseDuration;
+
     public WorkItemStatus withRequestedLeaseDuration(String requestedLeaseDuration) {
         this.requestedLeaseDuration = requestedLeaseDuration;
         return this;
@@ -117,6 +126,7 @@ public class WorkItemStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceFork")
     public SourceFork sourceFork;
+
     public WorkItemStatus withSourceFork(SourceFork sourceFork) {
         this.sourceFork = sourceFork;
         return this;
@@ -128,6 +138,7 @@ public class WorkItemStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceOperationResponse")
     public SourceOperationResponse sourceOperationResponse;
+
     public WorkItemStatus withSourceOperationResponse(SourceOperationResponse sourceOperationResponse) {
         this.sourceOperationResponse = sourceOperationResponse;
         return this;
@@ -139,6 +150,7 @@ public class WorkItemStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopPosition")
     public Position stopPosition;
+
     public WorkItemStatus withStopPosition(Position stopPosition) {
         this.stopPosition = stopPosition;
         return this;
@@ -150,6 +162,7 @@ public class WorkItemStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalThrottlerWaitTimeSeconds")
     public Double totalThrottlerWaitTimeSeconds;
+
     public WorkItemStatus withTotalThrottlerWaitTimeSeconds(Double totalThrottlerWaitTimeSeconds) {
         this.totalThrottlerWaitTimeSeconds = totalThrottlerWaitTimeSeconds;
         return this;
@@ -161,9 +174,11 @@ public class WorkItemStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workItemId")
     public String workItemId;
+
     public WorkItemStatus withWorkItemId(String workItemId) {
         this.workItemId = workItemId;
         return this;
     }
     
+    public WorkItemStatus(){}
 }

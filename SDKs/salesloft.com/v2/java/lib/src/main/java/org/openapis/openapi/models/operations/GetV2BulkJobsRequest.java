@@ -12,6 +12,7 @@ public class GetV2BulkJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public java.util.Map<String, Object> id;
+
     public GetV2BulkJobsRequest withId(java.util.Map<String, Object> id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class GetV2BulkJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2BulkJobsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -32,9 +34,11 @@ public class GetV2BulkJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=state")
     public String[] state;
+
     public GetV2BulkJobsRequest withState(String[] state) {
         this.state = state;
         return this;
     }
     
+    public GetV2BulkJobsRequest(){}
 }

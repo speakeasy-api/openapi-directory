@@ -15,6 +15,7 @@ public class GetPropertyValueHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetPropertyValueHistoryResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class GetPropertyValueHistoryResponse {
     
     @JsonProperty("propertyValues")
     public PropertyValueHistory[] propertyValues;
+
     public GetPropertyValueHistoryResponse withPropertyValues(PropertyValueHistory[] propertyValues) {
         this.propertyValues = propertyValues;
         return this;
     }
     
+    public GetPropertyValueHistoryResponse(@JsonProperty("propertyValues") PropertyValueHistory[] propertyValues) {
+        this.propertyValues = propertyValues;
+  }
 }

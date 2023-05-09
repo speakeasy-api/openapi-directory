@@ -50,12 +50,10 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommissionStatsResponse res = new org.openapis.openapi.models.operations.GetCommissionStatsResponse() {{
+        org.openapis.openapi.models.operations.GetCommissionStatsResponse res = new org.openapis.openapi.models.operations.GetCommissionStatsResponse(contentType, httpRes.statusCode()) {{
             commissionStats = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,12 +97,10 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommissionStatsByFilterResponse res = new org.openapis.openapi.models.operations.GetCommissionStatsByFilterResponse() {{
+        org.openapis.openapi.models.operations.GetCommissionStatsByFilterResponse res = new org.openapis.openapi.models.operations.GetCommissionStatsByFilterResponse(contentType, httpRes.statusCode()) {{
             commissionStats = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,12 +141,10 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPopularPairsResponse res = new org.openapis.openapi.models.operations.GetPopularPairsResponse() {{
+        org.openapis.openapi.models.operations.GetPopularPairsResponse res = new org.openapis.openapi.models.operations.GetPopularPairsResponse(contentType, httpRes.statusCode()) {{
             popularLanguagePairs = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -191,12 +185,10 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProjectStatsResponse res = new org.openapis.openapi.models.operations.GetProjectStatsResponse() {{
+        org.openapis.openapi.models.operations.GetProjectStatsResponse res = new org.openapis.openapi.models.operations.GetProjectStatsResponse(contentType, httpRes.statusCode()) {{
             clientProjectStats = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -237,12 +229,10 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStringStatsResponse res = new org.openapis.openapi.models.operations.GetStringStatsResponse() {{
+        org.openapis.openapi.models.operations.GetStringStatsResponse res = new org.openapis.openapi.models.operations.GetStringStatsResponse(contentType, httpRes.statusCode()) {{
             clientStringStats = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class KinesisSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeControlDetails")
     public Boolean includeControlDetails;
+
     public KinesisSettings withIncludeControlDetails(Boolean includeControlDetails) {
         this.includeControlDetails = includeControlDetails;
         return this;
@@ -23,6 +24,7 @@ public class KinesisSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeNullAndEmpty")
     public Boolean includeNullAndEmpty;
+
     public KinesisSettings withIncludeNullAndEmpty(Boolean includeNullAndEmpty) {
         this.includeNullAndEmpty = includeNullAndEmpty;
         return this;
@@ -31,6 +33,7 @@ public class KinesisSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludePartitionValue")
     public Boolean includePartitionValue;
+
     public KinesisSettings withIncludePartitionValue(Boolean includePartitionValue) {
         this.includePartitionValue = includePartitionValue;
         return this;
@@ -39,6 +42,7 @@ public class KinesisSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeTableAlterOperations")
     public Boolean includeTableAlterOperations;
+
     public KinesisSettings withIncludeTableAlterOperations(Boolean includeTableAlterOperations) {
         this.includeTableAlterOperations = includeTableAlterOperations;
         return this;
@@ -47,6 +51,7 @@ public class KinesisSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeTransactionDetails")
     public Boolean includeTransactionDetails;
+
     public KinesisSettings withIncludeTransactionDetails(Boolean includeTransactionDetails) {
         this.includeTransactionDetails = includeTransactionDetails;
         return this;
@@ -55,6 +60,7 @@ public class KinesisSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageFormat")
     public MessageFormatValueEnum messageFormat;
+
     public KinesisSettings withMessageFormat(MessageFormatValueEnum messageFormat) {
         this.messageFormat = messageFormat;
         return this;
@@ -63,6 +69,7 @@ public class KinesisSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NoHexPrefix")
     public Boolean noHexPrefix;
+
     public KinesisSettings withNoHexPrefix(Boolean noHexPrefix) {
         this.noHexPrefix = noHexPrefix;
         return this;
@@ -71,6 +78,7 @@ public class KinesisSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionIncludeSchemaTable")
     public Boolean partitionIncludeSchemaTable;
+
     public KinesisSettings withPartitionIncludeSchemaTable(Boolean partitionIncludeSchemaTable) {
         this.partitionIncludeSchemaTable = partitionIncludeSchemaTable;
         return this;
@@ -79,6 +87,7 @@ public class KinesisSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceAccessRoleArn")
     public String serviceAccessRoleArn;
+
     public KinesisSettings withServiceAccessRoleArn(String serviceAccessRoleArn) {
         this.serviceAccessRoleArn = serviceAccessRoleArn;
         return this;
@@ -87,9 +96,11 @@ public class KinesisSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamArn")
     public String streamArn;
+
     public KinesisSettings withStreamArn(String streamArn) {
         this.streamArn = streamArn;
         return this;
     }
     
+    public KinesisSettings(){}
 }

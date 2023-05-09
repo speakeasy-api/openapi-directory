@@ -15,6 +15,7 @@ public class AwsEc2InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamInstanceProfileArn")
     public String iamInstanceProfileArn;
+
     public AwsEc2InstanceDetails withIamInstanceProfileArn(String iamInstanceProfileArn) {
         this.iamInstanceProfileArn = iamInstanceProfileArn;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageId")
     public String imageId;
+
     public AwsEc2InstanceDetails withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpV4Addresses")
     public String[] ipV4Addresses;
+
     public AwsEc2InstanceDetails withIpV4Addresses(String[] ipV4Addresses) {
         this.ipV4Addresses = ipV4Addresses;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpV6Addresses")
     public String[] ipV6Addresses;
+
     public AwsEc2InstanceDetails withIpV6Addresses(String[] ipV6Addresses) {
         this.ipV6Addresses = ipV6Addresses;
         return this;
@@ -47,6 +51,7 @@ public class AwsEc2InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyName")
     public String keyName;
+
     public AwsEc2InstanceDetails withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -55,6 +60,7 @@ public class AwsEc2InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchedAt")
     public String launchedAt;
+
     public AwsEc2InstanceDetails withLaunchedAt(String launchedAt) {
         this.launchedAt = launchedAt;
         return this;
@@ -63,6 +69,7 @@ public class AwsEc2InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataOptions")
     public AwsEc2InstanceMetadataOptions metadataOptions;
+
     public AwsEc2InstanceDetails withMetadataOptions(AwsEc2InstanceMetadataOptions metadataOptions) {
         this.metadataOptions = metadataOptions;
         return this;
@@ -71,6 +78,7 @@ public class AwsEc2InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Monitoring")
     public AwsEc2InstanceMonitoringDetails monitoring;
+
     public AwsEc2InstanceDetails withMonitoring(AwsEc2InstanceMonitoringDetails monitoring) {
         this.monitoring = monitoring;
         return this;
@@ -79,6 +87,7 @@ public class AwsEc2InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkInterfaces")
     public AwsEc2InstanceNetworkInterfacesDetails[] networkInterfaces;
+
     public AwsEc2InstanceDetails withNetworkInterfaces(AwsEc2InstanceNetworkInterfacesDetails[] networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
@@ -87,6 +96,7 @@ public class AwsEc2InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public AwsEc2InstanceDetails withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -95,6 +105,7 @@ public class AwsEc2InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsEc2InstanceDetails withType(String type) {
         this.type = type;
         return this;
@@ -103,6 +114,7 @@ public class AwsEc2InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VirtualizationType")
     public String virtualizationType;
+
     public AwsEc2InstanceDetails withVirtualizationType(String virtualizationType) {
         this.virtualizationType = virtualizationType;
         return this;
@@ -111,9 +123,11 @@ public class AwsEc2InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public AwsEc2InstanceDetails withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public AwsEc2InstanceDetails(){}
 }

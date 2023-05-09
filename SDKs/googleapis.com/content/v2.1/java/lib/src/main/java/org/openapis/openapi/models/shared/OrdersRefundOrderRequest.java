@@ -12,6 +12,7 @@ public class OrdersRefundOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public MonetaryAmount amount;
+
     public OrdersRefundOrderRequest withAmount(MonetaryAmount amount) {
         this.amount = amount;
         return this;
@@ -23,6 +24,7 @@ public class OrdersRefundOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullRefund")
     public Boolean fullRefund;
+
     public OrdersRefundOrderRequest withFullRefund(Boolean fullRefund) {
         this.fullRefund = fullRefund;
         return this;
@@ -34,6 +36,7 @@ public class OrdersRefundOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationId")
     public String operationId;
+
     public OrdersRefundOrderRequest withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -45,6 +48,7 @@ public class OrdersRefundOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public OrdersRefundOrderRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -56,9 +60,11 @@ public class OrdersRefundOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonText")
     public String reasonText;
+
     public OrdersRefundOrderRequest withReasonText(String reasonText) {
         this.reasonText = reasonText;
         return this;
     }
     
+    public OrdersRefundOrderRequest(){}
 }

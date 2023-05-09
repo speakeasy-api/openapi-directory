@@ -18,9 +18,11 @@ public class PackageStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PackageStatusEnumEnum status;
+
     public PackageStatus withStatus(PackageStatusEnumEnum status) {
         this.status = status;
         return this;
     }
     
+    public PackageStatus(){}
 }

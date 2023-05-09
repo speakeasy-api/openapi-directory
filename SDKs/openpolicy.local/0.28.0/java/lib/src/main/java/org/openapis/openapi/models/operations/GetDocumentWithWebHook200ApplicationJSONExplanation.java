@@ -15,6 +15,7 @@ public class GetDocumentWithWebHook200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locals")
     public GetDocumentWithWebHook200ApplicationJSONExplanationLocals[] locals;
+
     public GetDocumentWithWebHook200ApplicationJSONExplanation withLocals(GetDocumentWithWebHook200ApplicationJSONExplanationLocals[] locals) {
         this.locals = locals;
         return this;
@@ -27,6 +28,7 @@ public class GetDocumentWithWebHook200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node")
     public GetDocumentWithWebHook200ApplicationJSONExplanationNode node;
+
     public GetDocumentWithWebHook200ApplicationJSONExplanation withNode(GetDocumentWithWebHook200ApplicationJSONExplanationNode node) {
         this.node = node;
         return this;
@@ -47,6 +49,7 @@ public class GetDocumentWithWebHook200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("op")
     public GetDocumentWithWebHook200ApplicationJSONExplanationOpEnum op;
+
     public GetDocumentWithWebHook200ApplicationJSONExplanation withOp(GetDocumentWithWebHook200ApplicationJSONExplanationOpEnum op) {
         this.op = op;
         return this;
@@ -60,6 +63,7 @@ public class GetDocumentWithWebHook200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     public Double parentId;
+
     public GetDocumentWithWebHook200ApplicationJSONExplanation withParentId(Double parentId) {
         this.parentId = parentId;
         return this;
@@ -71,6 +75,7 @@ public class GetDocumentWithWebHook200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query_id")
     public Double queryId;
+
     public GetDocumentWithWebHook200ApplicationJSONExplanation withQueryId(Double queryId) {
         this.queryId = queryId;
         return this;
@@ -82,9 +87,11 @@ public class GetDocumentWithWebHook200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GetDocumentWithWebHook200ApplicationJSONExplanationTypeEnum type;
+
     public GetDocumentWithWebHook200ApplicationJSONExplanation withType(GetDocumentWithWebHook200ApplicationJSONExplanationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetDocumentWithWebHook200ApplicationJSONExplanation(){}
 }

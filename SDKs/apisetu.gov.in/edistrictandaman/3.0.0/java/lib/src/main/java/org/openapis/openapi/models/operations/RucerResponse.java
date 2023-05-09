@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RucerResponse {
     
     public String contentType;
+
     public RucerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RucerResponse {
     
     
     public Integer statusCode;
+
     public RucerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RucerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RucerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class RucerResponse {
      */
     
     public Rucer400ApplicationJSON rucer400ApplicationJSONObject;
+
     public RucerResponse withRucer400ApplicationJSONObject(Rucer400ApplicationJSON rucer400ApplicationJSONObject) {
         this.rucer400ApplicationJSONObject = rucer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class RucerResponse {
      */
     
     public Rucer401ApplicationJSON rucer401ApplicationJSONObject;
+
     public RucerResponse withRucer401ApplicationJSONObject(Rucer401ApplicationJSON rucer401ApplicationJSONObject) {
         this.rucer401ApplicationJSONObject = rucer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class RucerResponse {
      */
     
     public Rucer404ApplicationJSON rucer404ApplicationJSONObject;
+
     public RucerResponse withRucer404ApplicationJSONObject(Rucer404ApplicationJSON rucer404ApplicationJSONObject) {
         this.rucer404ApplicationJSONObject = rucer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class RucerResponse {
      */
     
     public Rucer500ApplicationJSON rucer500ApplicationJSONObject;
+
     public RucerResponse withRucer500ApplicationJSONObject(Rucer500ApplicationJSON rucer500ApplicationJSONObject) {
         this.rucer500ApplicationJSONObject = rucer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class RucerResponse {
      */
     
     public Rucer502ApplicationJSON rucer502ApplicationJSONObject;
+
     public RucerResponse withRucer502ApplicationJSONObject(Rucer502ApplicationJSON rucer502ApplicationJSONObject) {
         this.rucer502ApplicationJSONObject = rucer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class RucerResponse {
      */
     
     public Rucer503ApplicationJSON rucer503ApplicationJSONObject;
+
     public RucerResponse withRucer503ApplicationJSONObject(Rucer503ApplicationJSON rucer503ApplicationJSONObject) {
         this.rucer503ApplicationJSONObject = rucer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class RucerResponse {
      */
     
     public Rucer504ApplicationJSON rucer504ApplicationJSONObject;
+
     public RucerResponse withRucer504ApplicationJSONObject(Rucer504ApplicationJSON rucer504ApplicationJSONObject) {
         this.rucer504ApplicationJSONObject = rucer504ApplicationJSONObject;
         return this;
     }
     
+    public RucerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

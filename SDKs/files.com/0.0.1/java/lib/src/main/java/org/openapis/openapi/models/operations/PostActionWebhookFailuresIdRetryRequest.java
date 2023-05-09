@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostActionWebhookFailuresIdRetryRequest {
@@ -12,9 +13,13 @@ public class PostActionWebhookFailuresIdRetryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PostActionWebhookFailuresIdRetryRequest withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public PostActionWebhookFailuresIdRetryRequest(@JsonProperty("id") Integer id) {
+        this.id = id;
+  }
 }

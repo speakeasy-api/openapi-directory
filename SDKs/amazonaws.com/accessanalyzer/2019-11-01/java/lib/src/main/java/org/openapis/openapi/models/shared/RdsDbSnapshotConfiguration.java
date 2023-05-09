@@ -15,6 +15,7 @@ public class RdsDbSnapshotConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, RdsDbSnapshotAttributeValue> attributes;
+
     public RdsDbSnapshotConfiguration withAttributes(java.util.Map<String, RdsDbSnapshotAttributeValue> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,9 +24,11 @@ public class RdsDbSnapshotConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public RdsDbSnapshotConfiguration withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
     }
     
+    public RdsDbSnapshotConfiguration(){}
 }

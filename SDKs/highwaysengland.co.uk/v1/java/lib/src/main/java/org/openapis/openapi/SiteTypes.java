@@ -49,11 +49,9 @@ public class SiteTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SiteTypesGetSitesForPublicFacingAPIResponse res = new org.openapis.openapi.models.operations.SiteTypesGetSitesForPublicFacingAPIResponse() {{
+        org.openapis.openapi.models.operations.SiteTypesGetSitesForPublicFacingAPIResponse res = new org.openapis.openapi.models.operations.SiteTypesGetSitesForPublicFacingAPIResponse(contentType, httpRes.statusCode()) {{
             siteTypeLayer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -89,11 +87,9 @@ public class SiteTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SiteTypesIndexResponse res = new org.openapis.openapi.models.operations.SiteTypesIndexResponse() {{
+        org.openapis.openapi.models.operations.SiteTypesIndexResponse res = new org.openapis.openapi.models.operations.SiteTypesIndexResponse(contentType, httpRes.statusCode()) {{
             siteTypeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AggregatedGetStatisticsListRequest {
@@ -12,6 +13,7 @@ public class AggregatedGetStatisticsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
     public String fromDay;
+
     public AggregatedGetStatisticsListRequest withFromDay(String fromDay) {
         this.fromDay = fromDay;
         return this;
@@ -22,6 +24,7 @@ public class AggregatedGetStatisticsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupBy")
     public AggregatedGetStatisticsListGroupByEnum groupBy;
+
     public AggregatedGetStatisticsListRequest withGroupBy(AggregatedGetStatisticsListGroupByEnum groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -32,6 +35,7 @@ public class AggregatedGetStatisticsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
     public AggregatedGetStatisticsListTimeFrameEnum timeFrame;
+
     public AggregatedGetStatisticsListRequest withTimeFrame(AggregatedGetStatisticsListTimeFrameEnum timeFrame) {
         this.timeFrame = timeFrame;
         return this;
@@ -42,9 +46,13 @@ public class AggregatedGetStatisticsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
     public String toDay;
+
     public AggregatedGetStatisticsListRequest withToDay(String toDay) {
         this.toDay = toDay;
         return this;
     }
     
+    public AggregatedGetStatisticsListRequest(@JsonProperty("timeFrame") AggregatedGetStatisticsListTimeFrameEnum timeFrame) {
+        this.timeFrame = timeFrame;
+  }
 }

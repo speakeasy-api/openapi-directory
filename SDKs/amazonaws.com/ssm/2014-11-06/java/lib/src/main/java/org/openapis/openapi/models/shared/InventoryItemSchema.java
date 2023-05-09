@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InventoryItemSchema {
     @JsonProperty("Attributes")
     public InventoryItemAttribute[] attributes;
+
     public InventoryItemSchema withAttributes(InventoryItemAttribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class InventoryItemSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public InventoryItemSchema withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +31,7 @@ public class InventoryItemSchema {
     
     @JsonProperty("TypeName")
     public String typeName;
+
     public InventoryItemSchema withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -37,9 +40,14 @@ public class InventoryItemSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public InventoryItemSchema withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public InventoryItemSchema(@JsonProperty("Attributes") InventoryItemAttribute[] attributes, @JsonProperty("TypeName") String typeName) {
+        this.attributes = attributes;
+        this.typeName = typeName;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1SearchCatalogRequestScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeGcpPublicDatasets")
     public Boolean includeGcpPublicDatasets;
+
     public GoogleCloudDatacatalogV1SearchCatalogRequestScope withIncludeGcpPublicDatasets(Boolean includeGcpPublicDatasets) {
         this.includeGcpPublicDatasets = includeGcpPublicDatasets;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1SearchCatalogRequestScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeOrgIds")
     public String[] includeOrgIds;
+
     public GoogleCloudDatacatalogV1SearchCatalogRequestScope withIncludeOrgIds(String[] includeOrgIds) {
         this.includeOrgIds = includeOrgIds;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1SearchCatalogRequestScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeProjectIds")
     public String[] includeProjectIds;
+
     public GoogleCloudDatacatalogV1SearchCatalogRequestScope withIncludeProjectIds(String[] includeProjectIds) {
         this.includeProjectIds = includeProjectIds;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatacatalogV1SearchCatalogRequestScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includePublicTagTemplates")
     public Boolean includePublicTagTemplates;
+
     public GoogleCloudDatacatalogV1SearchCatalogRequestScope withIncludePublicTagTemplates(Boolean includePublicTagTemplates) {
         this.includePublicTagTemplates = includePublicTagTemplates;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDatacatalogV1SearchCatalogRequestScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictedLocations")
     public String[] restrictedLocations;
+
     public GoogleCloudDatacatalogV1SearchCatalogRequestScope withRestrictedLocations(String[] restrictedLocations) {
         this.restrictedLocations = restrictedLocations;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDatacatalogV1SearchCatalogRequestScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("starredOnly")
     public Boolean starredOnly;
+
     public GoogleCloudDatacatalogV1SearchCatalogRequestScope withStarredOnly(Boolean starredOnly) {
         this.starredOnly = starredOnly;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1SearchCatalogRequestScope(){}
 }

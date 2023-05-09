@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmpv3VacmSaveasRequest {
@@ -12,6 +13,7 @@ public class ProtocolSnmpv3VacmSaveasRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolSnmpv3VacmSaveasRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class ProtocolSnmpv3VacmSaveasRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filename")
     public String filename;
+
     public ProtocolSnmpv3VacmSaveasRequest withFilename(String filename) {
         this.filename = filename;
         return this;
     }
     
+    public ProtocolSnmpv3VacmSaveasRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("filename") String filename) {
+        this.agentNum = agentNum;
+        this.filename = filename;
+  }
 }

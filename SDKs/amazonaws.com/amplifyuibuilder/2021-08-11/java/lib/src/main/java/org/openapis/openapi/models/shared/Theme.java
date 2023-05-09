@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Theme {
     @JsonProperty("appId")
     public String appId;
+
     public Theme withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -28,6 +29,7 @@ public class Theme {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Theme withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class Theme {
     
     @JsonProperty("environmentName")
     public String environmentName;
+
     public Theme withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -42,6 +45,7 @@ public class Theme {
     
     @JsonProperty("id")
     public String id;
+
     public Theme withId(String id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class Theme {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedAt")
     public OffsetDateTime modifiedAt;
+
     public Theme withModifiedAt(OffsetDateTime modifiedAt) {
         this.modifiedAt = modifiedAt;
         return this;
@@ -59,6 +64,7 @@ public class Theme {
     
     @JsonProperty("name")
     public String name;
+
     public Theme withName(String name) {
         this.name = name;
         return this;
@@ -67,6 +73,7 @@ public class Theme {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrides")
     public ThemeValues[] overrides;
+
     public Theme withOverrides(ThemeValues[] overrides) {
         this.overrides = overrides;
         return this;
@@ -75,6 +82,7 @@ public class Theme {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Theme withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -82,9 +90,18 @@ public class Theme {
     
     @JsonProperty("values")
     public ThemeValues[] values;
+
     public Theme withValues(ThemeValues[] values) {
         this.values = values;
         return this;
     }
     
+    public Theme(@JsonProperty("appId") String appId, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("environmentName") String environmentName, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("values") ThemeValues[] values) {
+        this.appId = appId;
+        this.createdAt = createdAt;
+        this.environmentName = environmentName;
+        this.id = id;
+        this.name = name;
+        this.values = values;
+  }
 }

@@ -18,9 +18,11 @@ public class IapTestServiceAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetAudienceClientId")
     public String targetAudienceClientId;
+
     public IapTestServiceAccountInfo withTargetAudienceClientId(String targetAudienceClientId) {
         this.targetAudienceClientId = targetAudienceClientId;
         return this;
     }
     
+    public IapTestServiceAccountInfo(){}
 }

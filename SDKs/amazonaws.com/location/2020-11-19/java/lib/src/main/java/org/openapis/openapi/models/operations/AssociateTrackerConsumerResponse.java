@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateTrackerConsumerResponse {
@@ -12,6 +13,7 @@ public class AssociateTrackerConsumerResponse {
      */
     
     public Object accessDeniedException;
+
     public AssociateTrackerConsumerResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AssociateTrackerConsumerResponse {
      */
     
     public java.util.Map<String, Object> associateTrackerConsumerResponse;
+
     public AssociateTrackerConsumerResponse withAssociateTrackerConsumerResponse(java.util.Map<String, Object> associateTrackerConsumerResponse) {
         this.associateTrackerConsumerResponse = associateTrackerConsumerResponse;
         return this;
@@ -32,6 +35,7 @@ public class AssociateTrackerConsumerResponse {
      */
     
     public Object conflictException;
+
     public AssociateTrackerConsumerResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateTrackerConsumerResponse {
     
     
     public String contentType;
+
     public AssociateTrackerConsumerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AssociateTrackerConsumerResponse {
      */
     
     public Object internalServerException;
+
     public AssociateTrackerConsumerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class AssociateTrackerConsumerResponse {
     
     
     public Integer statusCode;
+
     public AssociateTrackerConsumerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AssociateTrackerConsumerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateTrackerConsumerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AssociateTrackerConsumerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateTrackerConsumerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class AssociateTrackerConsumerResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public AssociateTrackerConsumerResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class AssociateTrackerConsumerResponse {
      */
     
     public Object throttlingException;
+
     public AssociateTrackerConsumerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class AssociateTrackerConsumerResponse {
      */
     
     public Object validationException;
+
     public AssociateTrackerConsumerResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AssociateTrackerConsumerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

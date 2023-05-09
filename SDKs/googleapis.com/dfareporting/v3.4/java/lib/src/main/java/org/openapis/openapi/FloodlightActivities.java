@@ -59,10 +59,8 @@ public class FloodlightActivities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesDeleteResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesDeleteResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class FloodlightActivities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesGeneratetagResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesGeneratetagResponse() {{
+        org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesGeneratetagResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesGeneratetagResponse(contentType, httpRes.statusCode()) {{
             floodlightActivitiesGenerateTagResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,11 +141,9 @@ public class FloodlightActivities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesGetResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesGetResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesGetResponse(contentType, httpRes.statusCode()) {{
             floodlightActivity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class FloodlightActivities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesInsertResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesInsertResponse() {{
+        org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesInsertResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesInsertResponse(contentType, httpRes.statusCode()) {{
             floodlightActivity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -239,11 +231,9 @@ public class FloodlightActivities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesListResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesListResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesListResponse(contentType, httpRes.statusCode()) {{
             floodlightActivitiesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -287,11 +277,9 @@ public class FloodlightActivities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesPatchResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesPatchResponse() {{
+        org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesPatchResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesPatchResponse(contentType, httpRes.statusCode()) {{
             floodlightActivity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -335,11 +323,9 @@ public class FloodlightActivities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightActivitiesUpdateResponse(contentType, httpRes.statusCode()) {{
             floodlightActivity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

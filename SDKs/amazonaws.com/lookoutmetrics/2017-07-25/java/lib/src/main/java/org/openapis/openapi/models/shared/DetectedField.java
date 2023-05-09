@@ -15,6 +15,7 @@ public class DetectedField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public ConfidenceEnum confidence;
+
     public DetectedField withConfidence(ConfidenceEnum confidence) {
         this.confidence = confidence;
         return this;
@@ -23,6 +24,7 @@ public class DetectedField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public DetectedField withMessage(String message) {
         this.message = message;
         return this;
@@ -31,9 +33,11 @@ public class DetectedField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public AttributeValue value;
+
     public DetectedField withValue(AttributeValue value) {
         this.value = value;
         return this;
     }
     
+    public DetectedField(){}
 }

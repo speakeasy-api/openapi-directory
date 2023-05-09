@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStatsSeriesPeriodFieldsRequest {
@@ -12,6 +13,7 @@ public class GetStatsSeriesPeriodFieldsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public Long end;
+
     public GetStatsSeriesPeriodFieldsRequest withEnd(Long end) {
         this.end = end;
         return this;
@@ -22,6 +24,7 @@ public class GetStatsSeriesPeriodFieldsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fields")
     public String fields;
+
     public GetStatsSeriesPeriodFieldsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class GetStatsSeriesPeriodFieldsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=period")
     public GetStatsSeriesPeriodFieldsPeriodEnum period;
+
     public GetStatsSeriesPeriodFieldsRequest withPeriod(GetStatsSeriesPeriodFieldsPeriodEnum period) {
         this.period = period;
         return this;
@@ -42,6 +46,7 @@ public class GetStatsSeriesPeriodFieldsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetStatsSeriesPeriodFieldsRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -52,9 +57,14 @@ public class GetStatsSeriesPeriodFieldsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public Long start;
+
     public GetStatsSeriesPeriodFieldsRequest withStart(Long start) {
         this.start = start;
         return this;
     }
     
+    public GetStatsSeriesPeriodFieldsRequest(@JsonProperty("fields") String fields, @JsonProperty("period") GetStatsSeriesPeriodFieldsPeriodEnum period) {
+        this.fields = fields;
+        this.period = period;
+  }
 }

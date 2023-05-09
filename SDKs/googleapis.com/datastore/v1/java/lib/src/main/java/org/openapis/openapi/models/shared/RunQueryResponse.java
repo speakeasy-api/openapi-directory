@@ -18,6 +18,7 @@ public class RunQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batch")
     public QueryResultBatch batch;
+
     public RunQueryResponse withBatch(QueryResultBatch batch) {
         this.batch = batch;
         return this;
@@ -29,6 +30,7 @@ public class RunQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public Query query;
+
     public RunQueryResponse withQuery(Query query) {
         this.query = query;
         return this;
@@ -40,9 +42,11 @@ public class RunQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction")
     public String transaction;
+
     public RunQueryResponse withTransaction(String transaction) {
         this.transaction = transaction;
         return this;
     }
     
+    public RunQueryResponse(){}
 }

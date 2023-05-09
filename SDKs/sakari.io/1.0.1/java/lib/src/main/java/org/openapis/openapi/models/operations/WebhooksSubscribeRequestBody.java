@@ -12,6 +12,7 @@ public class WebhooksSubscribeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventTypes")
     public WebhooksSubscribeRequestBodyEventTypesEnum[] eventTypes;
+
     public WebhooksSubscribeRequestBody withEventTypes(WebhooksSubscribeRequestBodyEventTypesEnum[] eventTypes) {
         this.eventTypes = eventTypes;
         return this;
@@ -20,9 +21,11 @@ public class WebhooksSubscribeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public WebhooksSubscribeRequestBody withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public WebhooksSubscribeRequestBody(){}
 }

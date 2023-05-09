@@ -18,6 +18,7 @@ public class CallTrackingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedTransferSoundId")
     public Long failedTransferSoundId;
+
     public CallTrackingConfig withFailedTransferSoundId(Long failedTransferSoundId) {
         this.failedTransferSoundId = failedTransferSoundId;
         return this;
@@ -29,6 +30,7 @@ public class CallTrackingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleAnalytics")
     public GoogleAnalytics googleAnalytics;
+
     public CallTrackingConfig withGoogleAnalytics(GoogleAnalytics googleAnalytics) {
         this.googleAnalytics = googleAnalytics;
         return this;
@@ -40,6 +42,7 @@ public class CallTrackingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("introSoundId")
     public Long introSoundId;
+
     public CallTrackingConfig withIntroSoundId(Long introSoundId) {
         this.introSoundId = introSoundId;
         return this;
@@ -51,6 +54,7 @@ public class CallTrackingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recorded")
     public Boolean recorded;
+
     public CallTrackingConfig withRecorded(Boolean recorded) {
         this.recorded = recorded;
         return this;
@@ -62,6 +66,7 @@ public class CallTrackingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screen")
     public Boolean screen;
+
     public CallTrackingConfig withScreen(Boolean screen) {
         this.screen = screen;
         return this;
@@ -73,6 +78,7 @@ public class CallTrackingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferNumbers")
     public String[] transferNumbers;
+
     public CallTrackingConfig withTransferNumbers(String[] transferNumbers) {
         this.transferNumbers = transferNumbers;
         return this;
@@ -84,6 +90,7 @@ public class CallTrackingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voicemail")
     public Boolean voicemail;
+
     public CallTrackingConfig withVoicemail(Boolean voicemail) {
         this.voicemail = voicemail;
         return this;
@@ -95,6 +102,7 @@ public class CallTrackingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voicemailSoundId")
     public Long voicemailSoundId;
+
     public CallTrackingConfig withVoicemailSoundId(Long voicemailSoundId) {
         this.voicemailSoundId = voicemailSoundId;
         return this;
@@ -106,6 +114,7 @@ public class CallTrackingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weeklySchedule")
     public WeeklySchedule weeklySchedule;
+
     public CallTrackingConfig withWeeklySchedule(WeeklySchedule weeklySchedule) {
         this.weeklySchedule = weeklySchedule;
         return this;
@@ -117,9 +126,11 @@ public class CallTrackingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("whisperSoundId")
     public Long whisperSoundId;
+
     public CallTrackingConfig withWhisperSoundId(Long whisperSoundId) {
         this.whisperSoundId = whisperSoundId;
         return this;
     }
     
+    public CallTrackingConfig(){}
 }

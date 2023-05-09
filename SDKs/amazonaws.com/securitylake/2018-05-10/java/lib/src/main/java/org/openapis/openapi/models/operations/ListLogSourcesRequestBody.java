@@ -15,6 +15,7 @@ public class ListLogSourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputOrder")
     public org.openapis.openapi.models.shared.DimensionEnum[] inputOrder;
+
     public ListLogSourcesRequestBody withInputOrder(org.openapis.openapi.models.shared.DimensionEnum[] inputOrder) {
         this.inputOrder = inputOrder;
         return this;
@@ -26,6 +27,7 @@ public class ListLogSourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listAllDimensions")
     public java.util.Map<String, java.util.Map<String, String[]>> listAllDimensions;
+
     public ListLogSourcesRequestBody withListAllDimensions(java.util.Map<String, java.util.Map<String, String[]>> listAllDimensions) {
         this.listAllDimensions = listAllDimensions;
         return this;
@@ -37,6 +39,7 @@ public class ListLogSourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listSingleDimension")
     public String[] listSingleDimension;
+
     public ListLogSourcesRequestBody withListSingleDimension(String[] listSingleDimension) {
         this.listSingleDimension = listSingleDimension;
         return this;
@@ -48,6 +51,7 @@ public class ListLogSourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listTwoDimensions")
     public java.util.Map<String, String[]> listTwoDimensions;
+
     public ListLogSourcesRequestBody withListTwoDimensions(java.util.Map<String, String[]> listTwoDimensions) {
         this.listTwoDimensions = listTwoDimensions;
         return this;
@@ -59,6 +63,7 @@ public class ListLogSourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListLogSourcesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -70,9 +75,11 @@ public class ListLogSourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListLogSourcesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLogSourcesRequestBody(){}
 }

@@ -18,9 +18,11 @@ public class BatchDocumentOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsDestination")
     public GcsDestination gcsDestination;
+
     public BatchDocumentOutputConfig withGcsDestination(GcsDestination gcsDestination) {
         this.gcsDestination = gcsDestination;
         return this;
     }
     
+    public BatchDocumentOutputConfig(){}
 }

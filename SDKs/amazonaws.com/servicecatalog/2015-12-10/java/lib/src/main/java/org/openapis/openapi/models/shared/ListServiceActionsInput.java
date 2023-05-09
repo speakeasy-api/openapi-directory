@@ -12,6 +12,7 @@ public class ListServiceActionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public ListServiceActionsInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class ListServiceActionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public ListServiceActionsInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -28,9 +30,11 @@ public class ListServiceActionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageToken")
     public String pageToken;
+
     public ListServiceActionsInput withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public ListServiceActionsInput(){}
 }

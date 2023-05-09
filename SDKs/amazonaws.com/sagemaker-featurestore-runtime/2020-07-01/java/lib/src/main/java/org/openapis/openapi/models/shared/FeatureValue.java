@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FeatureValue {
     @JsonProperty("FeatureName")
     public String featureName;
+
     public FeatureValue withFeatureName(String featureName) {
         this.featureName = featureName;
         return this;
@@ -19,9 +20,14 @@ public class FeatureValue {
     
     @JsonProperty("ValueAsString")
     public String valueAsString;
+
     public FeatureValue withValueAsString(String valueAsString) {
         this.valueAsString = valueAsString;
         return this;
     }
     
+    public FeatureValue(@JsonProperty("FeatureName") String featureName, @JsonProperty("ValueAsString") String valueAsString) {
+        this.featureName = featureName;
+        this.valueAsString = valueAsString;
+  }
 }

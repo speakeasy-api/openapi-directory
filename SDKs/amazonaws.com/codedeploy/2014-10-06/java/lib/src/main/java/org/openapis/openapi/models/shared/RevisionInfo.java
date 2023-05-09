@@ -15,6 +15,7 @@ public class RevisionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genericRevisionInfo")
     public GenericRevisionInfo genericRevisionInfo;
+
     public RevisionInfo withGenericRevisionInfo(GenericRevisionInfo genericRevisionInfo) {
         this.genericRevisionInfo = genericRevisionInfo;
         return this;
@@ -23,9 +24,11 @@ public class RevisionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionLocation")
     public RevisionLocation revisionLocation;
+
     public RevisionInfo withRevisionLocation(RevisionLocation revisionLocation) {
         this.revisionLocation = revisionLocation;
         return this;
     }
     
+    public RevisionInfo(){}
 }

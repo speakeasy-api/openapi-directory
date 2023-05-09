@@ -12,6 +12,7 @@ public class TeamSPRatingOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explosiveness")
     public Double explosiveness;
+
     public TeamSPRatingOffense withExplosiveness(Double explosiveness) {
         this.explosiveness = explosiveness;
         return this;
@@ -20,6 +21,7 @@ public class TeamSPRatingOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pace")
     public Double pace;
+
     public TeamSPRatingOffense withPace(Double pace) {
         this.pace = pace;
         return this;
@@ -28,6 +30,7 @@ public class TeamSPRatingOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passing")
     public Double passing;
+
     public TeamSPRatingOffense withPassing(Double passing) {
         this.passing = passing;
         return this;
@@ -36,6 +39,7 @@ public class TeamSPRatingOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passingDowns")
     public Double passingDowns;
+
     public TeamSPRatingOffense withPassingDowns(Double passingDowns) {
         this.passingDowns = passingDowns;
         return this;
@@ -44,6 +48,7 @@ public class TeamSPRatingOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ranking")
     public Double ranking;
+
     public TeamSPRatingOffense withRanking(Double ranking) {
         this.ranking = ranking;
         return this;
@@ -52,6 +57,7 @@ public class TeamSPRatingOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rating")
     public Double rating;
+
     public TeamSPRatingOffense withRating(Double rating) {
         this.rating = rating;
         return this;
@@ -60,6 +66,7 @@ public class TeamSPRatingOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runRate")
     public Double runRate;
+
     public TeamSPRatingOffense withRunRate(Double runRate) {
         this.runRate = runRate;
         return this;
@@ -68,6 +75,7 @@ public class TeamSPRatingOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rushing")
     public Double rushing;
+
     public TeamSPRatingOffense withRushing(Double rushing) {
         this.rushing = rushing;
         return this;
@@ -76,6 +84,7 @@ public class TeamSPRatingOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardDowns")
     public Double standardDowns;
+
     public TeamSPRatingOffense withStandardDowns(Double standardDowns) {
         this.standardDowns = standardDowns;
         return this;
@@ -84,9 +93,11 @@ public class TeamSPRatingOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Double success;
+
     public TeamSPRatingOffense withSuccess(Double success) {
         this.success = success;
         return this;
     }
     
+    public TeamSPRatingOffense(){}
 }

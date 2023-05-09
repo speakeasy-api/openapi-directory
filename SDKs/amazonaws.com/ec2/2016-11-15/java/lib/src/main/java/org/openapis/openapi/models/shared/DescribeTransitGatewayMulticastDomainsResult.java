@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTransitGatewayMulticastDomainsResult {
     
     public String nextToken;
+
     public DescribeTransitGatewayMulticastDomainsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeTransitGatewayMulticastDomainsResult {
     
     
     public DescribeTransitGatewayMulticastDomainsResultTransitGatewayMulticastDomains[] transitGatewayMulticastDomains;
+
     public DescribeTransitGatewayMulticastDomainsResult withTransitGatewayMulticastDomains(DescribeTransitGatewayMulticastDomainsResultTransitGatewayMulticastDomains[] transitGatewayMulticastDomains) {
         this.transitGatewayMulticastDomains = transitGatewayMulticastDomains;
         return this;
     }
     
+    public DescribeTransitGatewayMulticastDomainsResult(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateServerResponse {
     
     public String contentType;
+
     public CreateServerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateServerResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateServerResponse createServerResponse;
+
     public CreateServerResponse withCreateServerResponse(org.openapis.openapi.models.shared.CreateServerResponse createServerResponse) {
         this.createServerResponse = createServerResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateServerResponse {
      */
     
     public Object limitExceededException;
+
     public CreateServerResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class CreateServerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateServerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class CreateServerResponse {
     
     
     public Integer statusCode;
+
     public CreateServerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateServerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateServerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateServerResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateServerResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -73,9 +81,14 @@ public class CreateServerResponse {
      */
     
     public Object validationException;
+
     public CreateServerResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateServerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public ErrorField[] fields;
+
     public ErrorResponse withFields(ErrorField[] fields) {
         this.fields = fields;
         return this;
@@ -23,9 +24,11 @@ public class ErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ErrorResponse withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ErrorResponse(){}
 }

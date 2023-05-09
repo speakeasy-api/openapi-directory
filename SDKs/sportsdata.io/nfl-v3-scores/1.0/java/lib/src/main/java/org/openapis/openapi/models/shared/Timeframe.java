@@ -12,6 +12,7 @@ public class Timeframe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiSeason")
     public String apiSeason;
+
     public Timeframe withApiSeason(String apiSeason) {
         this.apiSeason = apiSeason;
         return this;
@@ -20,6 +21,7 @@ public class Timeframe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiWeek")
     public String apiWeek;
+
     public Timeframe withApiWeek(String apiWeek) {
         this.apiWeek = apiWeek;
         return this;
@@ -28,6 +30,7 @@ public class Timeframe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndDate")
     public String endDate;
+
     public Timeframe withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -36,6 +39,7 @@ public class Timeframe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstGameEnd")
     public String firstGameEnd;
+
     public Timeframe withFirstGameEnd(String firstGameEnd) {
         this.firstGameEnd = firstGameEnd;
         return this;
@@ -44,6 +48,7 @@ public class Timeframe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstGameStart")
     public String firstGameStart;
+
     public Timeframe withFirstGameStart(String firstGameStart) {
         this.firstGameStart = firstGameStart;
         return this;
@@ -52,6 +57,7 @@ public class Timeframe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasEnded")
     public Boolean hasEnded;
+
     public Timeframe withHasEnded(Boolean hasEnded) {
         this.hasEnded = hasEnded;
         return this;
@@ -60,6 +66,7 @@ public class Timeframe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasFirstGameEnded")
     public Boolean hasFirstGameEnded;
+
     public Timeframe withHasFirstGameEnded(Boolean hasFirstGameEnded) {
         this.hasFirstGameEnded = hasFirstGameEnded;
         return this;
@@ -68,6 +75,7 @@ public class Timeframe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasFirstGameStarted")
     public Boolean hasFirstGameStarted;
+
     public Timeframe withHasFirstGameStarted(Boolean hasFirstGameStarted) {
         this.hasFirstGameStarted = hasFirstGameStarted;
         return this;
@@ -76,6 +84,7 @@ public class Timeframe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasGames")
     public Boolean hasGames;
+
     public Timeframe withHasGames(Boolean hasGames) {
         this.hasGames = hasGames;
         return this;
@@ -84,6 +93,7 @@ public class Timeframe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasLastGameEnded")
     public Boolean hasLastGameEnded;
+
     public Timeframe withHasLastGameEnded(Boolean hasLastGameEnded) {
         this.hasLastGameEnded = hasLastGameEnded;
         return this;
@@ -92,6 +102,7 @@ public class Timeframe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasStarted")
     public Boolean hasStarted;
+
     public Timeframe withHasStarted(Boolean hasStarted) {
         this.hasStarted = hasStarted;
         return this;
@@ -100,6 +111,7 @@ public class Timeframe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastGameEnd")
     public String lastGameEnd;
+
     public Timeframe withLastGameEnd(String lastGameEnd) {
         this.lastGameEnd = lastGameEnd;
         return this;
@@ -108,6 +120,7 @@ public class Timeframe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Timeframe withName(String name) {
         this.name = name;
         return this;
@@ -116,6 +129,7 @@ public class Timeframe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public Timeframe withSeason(Long season) {
         this.season = season;
         return this;
@@ -124,6 +138,7 @@ public class Timeframe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonType")
     public Long seasonType;
+
     public Timeframe withSeasonType(Long seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -132,6 +147,7 @@ public class Timeframe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortName")
     public String shortName;
+
     public Timeframe withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -140,6 +156,7 @@ public class Timeframe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartDate")
     public String startDate;
+
     public Timeframe withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -148,9 +165,11 @@ public class Timeframe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Week")
     public Long week;
+
     public Timeframe withWeek(Long week) {
         this.week = week;
         return this;
     }
     
+    public Timeframe(){}
 }

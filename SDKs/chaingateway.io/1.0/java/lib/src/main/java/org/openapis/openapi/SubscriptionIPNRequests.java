@@ -62,11 +62,9 @@ public class SubscriptionIPNRequests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFailedIPNsResponse res = new org.openapis.openapi.models.operations.ListFailedIPNsResponse() {{
+        org.openapis.openapi.models.operations.ListFailedIPNsResponse res = new org.openapis.openapi.models.operations.ListFailedIPNsResponse(contentType, httpRes.statusCode()) {{
             listFailedIPNs = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class SubscriptionIPNRequests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSubscribedAddressesResponse res = new org.openapis.openapi.models.operations.ListSubscribedAddressesResponse() {{
+        org.openapis.openapi.models.operations.ListSubscribedAddressesResponse res = new org.openapis.openapi.models.operations.ListSubscribedAddressesResponse(contentType, httpRes.statusCode()) {{
             listSubscribedAddresses = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -161,11 +157,9 @@ public class SubscriptionIPNRequests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResendFailedIPNResponse res = new org.openapis.openapi.models.operations.ResendFailedIPNResponse() {{
+        org.openapis.openapi.models.operations.ResendFailedIPNResponse res = new org.openapis.openapi.models.operations.ResendFailedIPNResponse(contentType, httpRes.statusCode()) {{
             resendFailedIPN = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -214,11 +208,9 @@ public class SubscriptionIPNRequests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubscribeAddressResponse res = new org.openapis.openapi.models.operations.SubscribeAddressResponse() {{
+        org.openapis.openapi.models.operations.SubscribeAddressResponse res = new org.openapis.openapi.models.operations.SubscribeAddressResponse(contentType, httpRes.statusCode()) {{
             subscribeAddress = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -266,11 +258,9 @@ public class SubscriptionIPNRequests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UnsubscribeAddressResponse res = new org.openapis.openapi.models.operations.UnsubscribeAddressResponse() {{
+        org.openapis.openapi.models.operations.UnsubscribeAddressResponse res = new org.openapis.openapi.models.operations.UnsubscribeAddressResponse(contentType, httpRes.statusCode()) {{
             unsubscribeAddress = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

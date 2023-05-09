@@ -18,6 +18,7 @@ public class BusinessHoursPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day_of_week")
     public String dayOfWeek;
+
     public BusinessHoursPeriod withDayOfWeek(String dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -30,6 +31,7 @@ public class BusinessHoursPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_local_time")
     public String endLocalTime;
+
     public BusinessHoursPeriod withEndLocalTime(String endLocalTime) {
         this.endLocalTime = endLocalTime;
         return this;
@@ -42,9 +44,11 @@ public class BusinessHoursPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_local_time")
     public String startLocalTime;
+
     public BusinessHoursPeriod withStartLocalTime(String startLocalTime) {
         this.startLocalTime = startLocalTime;
         return this;
     }
     
+    public BusinessHoursPeriod(){}
 }

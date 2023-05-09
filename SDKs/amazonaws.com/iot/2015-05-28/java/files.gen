@@ -1120,4 +1120,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateThingGroupResponse.ja
 lib/src/main/java/org/openapis/openapi/models/shared/ValidateSecurityProfileBehaviorsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ValidationError.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

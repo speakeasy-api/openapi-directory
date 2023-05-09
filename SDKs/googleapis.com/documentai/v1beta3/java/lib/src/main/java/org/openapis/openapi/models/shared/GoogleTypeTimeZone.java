@@ -18,6 +18,7 @@ public class GoogleTypeTimeZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleTypeTimeZone withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class GoogleTypeTimeZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public GoogleTypeTimeZone withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GoogleTypeTimeZone(){}
 }

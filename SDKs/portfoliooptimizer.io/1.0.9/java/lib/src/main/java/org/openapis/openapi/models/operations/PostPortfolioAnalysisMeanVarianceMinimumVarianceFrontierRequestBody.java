@@ -14,6 +14,7 @@ public class PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierRequestBody
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -24,6 +25,7 @@ public class PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierRequestBody
      */
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierRequestBody withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
@@ -34,6 +36,7 @@ public class PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierRequestBody
      */
     @JsonProperty("assetsReturns")
     public Double[] assetsReturns;
+
     public PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierRequestBody withAssetsReturns(Double[] assetsReturns) {
         this.assetsReturns = assetsReturns;
         return this;
@@ -42,6 +45,7 @@ public class PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierRequestBody
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierRequestBodyConstraints constraints;
+
     public PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierRequestBody withConstraints(PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierRequestBodyConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -53,9 +57,15 @@ public class PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierRequestBody
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portfolios")
     public Long portfolios;
+
     public PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierRequestBody withPortfolios(Long portfolios) {
         this.portfolios = portfolios;
         return this;
     }
     
+    public PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsCovarianceMatrix") Double[][] assetsCovarianceMatrix, @JsonProperty("assetsReturns") Double[] assetsReturns) {
+        this.assets = assets;
+        this.assetsCovarianceMatrix = assetsCovarianceMatrix;
+        this.assetsReturns = assetsReturns;
+  }
 }

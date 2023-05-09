@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateProvisioningTemplateVersionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateProvisioningTemplateVersionRequestBody requestBody;
+
     public CreateProvisioningTemplateVersionRequest withRequestBody(CreateProvisioningTemplateVersionRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class CreateProvisioningTemplateVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public CreateProvisioningTemplateVersionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class CreateProvisioningTemplateVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public CreateProvisioningTemplateVersionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class CreateProvisioningTemplateVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public CreateProvisioningTemplateVersionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class CreateProvisioningTemplateVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public CreateProvisioningTemplateVersionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class CreateProvisioningTemplateVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public CreateProvisioningTemplateVersionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class CreateProvisioningTemplateVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public CreateProvisioningTemplateVersionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class CreateProvisioningTemplateVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public CreateProvisioningTemplateVersionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class CreateProvisioningTemplateVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setAsDefault")
     public Boolean setAsDefault;
+
     public CreateProvisioningTemplateVersionRequest withSetAsDefault(Boolean setAsDefault) {
         this.setAsDefault = setAsDefault;
         return this;
@@ -78,9 +88,14 @@ public class CreateProvisioningTemplateVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=templateName")
     public String templateName;
+
     public CreateProvisioningTemplateVersionRequest withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public CreateProvisioningTemplateVersionRequest(@JsonProperty("RequestBody") CreateProvisioningTemplateVersionRequestBody requestBody, @JsonProperty("templateName") String templateName) {
+        this.requestBody = requestBody;
+        this.templateName = templateName;
+  }
 }

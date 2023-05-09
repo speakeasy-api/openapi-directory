@@ -18,6 +18,7 @@ public class BasicMetricsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricRequests")
     public MetricRequest[] metricRequests;
+
     public BasicMetricsRequest withMetricRequests(MetricRequest[] metricRequests) {
         this.metricRequests = metricRequests;
         return this;
@@ -29,9 +30,11 @@ public class BasicMetricsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeRange")
     public TimeRange timeRange;
+
     public BasicMetricsRequest withTimeRange(TimeRange timeRange) {
         this.timeRange = timeRange;
         return this;
     }
     
+    public BasicMetricsRequest(){}
 }

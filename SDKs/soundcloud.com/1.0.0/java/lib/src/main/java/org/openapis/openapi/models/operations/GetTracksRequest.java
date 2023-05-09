@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTracksRequest {
@@ -13,6 +14,7 @@ public class GetTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=access")
     public org.openapis.openapi.models.shared.AccessEnum[] access;
+
     public GetTracksRequest withAccess(org.openapis.openapi.models.shared.AccessEnum[] access) {
         this.access = access;
         return this;
@@ -23,6 +25,7 @@ public class GetTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=bpm")
     public org.openapis.openapi.models.shared.Bpm bpm;
+
     public GetTracksRequest withBpm(org.openapis.openapi.models.shared.Bpm bpm) {
         this.bpm = bpm;
         return this;
@@ -33,6 +36,7 @@ public class GetTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=created_at")
     public org.openapis.openapi.models.shared.CreatedAt createdAt;
+
     public GetTracksRequest withCreatedAt(org.openapis.openapi.models.shared.CreatedAt createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -43,6 +47,7 @@ public class GetTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=duration")
     public org.openapis.openapi.models.shared.Duration duration;
+
     public GetTracksRequest withDuration(org.openapis.openapi.models.shared.Duration duration) {
         this.duration = duration;
         return this;
@@ -53,6 +58,7 @@ public class GetTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=genres")
     public String genres;
+
     public GetTracksRequest withGenres(String genres) {
         this.genres = genres;
         return this;
@@ -63,6 +69,7 @@ public class GetTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
     public String ids;
+
     public GetTracksRequest withIds(String ids) {
         this.ids = ids;
         return this;
@@ -73,6 +80,7 @@ public class GetTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetTracksRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -83,6 +91,7 @@ public class GetTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linked_partitioning")
     public Boolean linkedPartitioning;
+
     public GetTracksRequest withLinkedPartitioning(Boolean linkedPartitioning) {
         this.linkedPartitioning = linkedPartitioning;
         return this;
@@ -90,9 +99,13 @@ public class GetTracksRequest {
     
     /**
      * Offset of first result. Deprecated, use `linked_partitioning` instead.
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    @Deprecated
     public Long offset;
+
+    @Deprecated
     public GetTracksRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -103,6 +116,7 @@ public class GetTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetTracksRequest withQ(String q) {
         this.q = q;
         return this;
@@ -113,9 +127,13 @@ public class GetTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String tags;
+
     public GetTracksRequest withTags(String tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetTracksRequest(@JsonProperty("q") String q) {
+        this.q = q;
+  }
 }

@@ -15,6 +15,7 @@ public class DescribeReplicationTaskAssessmentResultsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeReplicationTaskAssessmentResultsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,6 +24,7 @@ public class DescribeReplicationTaskAssessmentResultsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRecords")
     public Long maxRecords;
+
     public DescribeReplicationTaskAssessmentResultsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -31,9 +33,11 @@ public class DescribeReplicationTaskAssessmentResultsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationTaskArn")
     public String replicationTaskArn;
+
     public DescribeReplicationTaskAssessmentResultsMessage withReplicationTaskArn(String replicationTaskArn) {
         this.replicationTaskArn = replicationTaskArn;
         return this;
     }
     
+    public DescribeReplicationTaskAssessmentResultsMessage(){}
 }

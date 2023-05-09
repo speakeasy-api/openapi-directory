@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateLoggingConfigurationResponse {
     
     public String contentType;
+
     public UpdateLoggingConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateLoggingConfigurationResponse {
      */
     
     public Object internalServerError;
+
     public UpdateLoggingConfigurationResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateLoggingConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateLoggingConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateLoggingConfigurationResponse {
      */
     
     public Object invalidTokenException;
+
     public UpdateLoggingConfigurationResponse withInvalidTokenException(Object invalidTokenException) {
         this.invalidTokenException = invalidTokenException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateLoggingConfigurationResponse {
      */
     
     public Object logDestinationPermissionException;
+
     public UpdateLoggingConfigurationResponse withLogDestinationPermissionException(Object logDestinationPermissionException) {
         this.logDestinationPermissionException = logDestinationPermissionException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateLoggingConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateLoggingConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateLoggingConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateLoggingConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateLoggingConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateLoggingConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateLoggingConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateLoggingConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateLoggingConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateLoggingConfigurationResponse updateLoggingConfigurationResponse;
+
     public UpdateLoggingConfigurationResponse withUpdateLoggingConfigurationResponse(org.openapis.openapi.models.shared.UpdateLoggingConfigurationResponse updateLoggingConfigurationResponse) {
         this.updateLoggingConfigurationResponse = updateLoggingConfigurationResponse;
         return this;
     }
     
+    public UpdateLoggingConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

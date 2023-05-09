@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagsGetGroupsCountRequest {
@@ -12,6 +13,7 @@ public class TagsGetGroupsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
     public String createdAfter;
+
     public TagsGetGroupsCountRequest withCreatedAfter(String createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -22,6 +24,7 @@ public class TagsGetGroupsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
     public String createdBefore;
+
     public TagsGetGroupsCountRequest withCreatedBefore(String createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -32,6 +35,7 @@ public class TagsGetGroupsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public TagsGetGroupsCountStatusEnum status;
+
     public TagsGetGroupsCountRequest withStatus(TagsGetGroupsCountStatusEnum status) {
         this.status = status;
         return this;
@@ -42,6 +46,7 @@ public class TagsGetGroupsCountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tagId")
     public Long tagId;
+
     public TagsGetGroupsCountRequest withTagId(Long tagId) {
         this.tagId = tagId;
         return this;
@@ -52,9 +57,13 @@ public class TagsGetGroupsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
     public String textSearch;
+
     public TagsGetGroupsCountRequest withTextSearch(String textSearch) {
         this.textSearch = textSearch;
         return this;
     }
     
+    public TagsGetGroupsCountRequest(@JsonProperty("tagId") Long tagId) {
+        this.tagId = tagId;
+  }
 }

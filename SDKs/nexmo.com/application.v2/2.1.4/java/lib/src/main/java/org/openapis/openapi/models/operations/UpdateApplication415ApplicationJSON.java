@@ -15,6 +15,7 @@ public class UpdateApplication415ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public UpdateApplication415ApplicationJSON withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -26,6 +27,7 @@ public class UpdateApplication415ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public UpdateApplication415ApplicationJSON withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -34,6 +36,7 @@ public class UpdateApplication415ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public UpdateApplication415ApplicationJSON withTitle(String title) {
         this.title = title;
         return this;
@@ -42,9 +45,11 @@ public class UpdateApplication415ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public UpdateApplication415ApplicationJSON withType(String type) {
         this.type = type;
         return this;
     }
     
+    public UpdateApplication415ApplicationJSON(){}
 }

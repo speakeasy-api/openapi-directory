@@ -15,9 +15,11 @@ public class RdsDbClusterSnapshotAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountIds")
     public String[] accountIds;
+
     public RdsDbClusterSnapshotAttributeValue withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
     }
     
+    public RdsDbClusterSnapshotAttributeValue(){}
 }

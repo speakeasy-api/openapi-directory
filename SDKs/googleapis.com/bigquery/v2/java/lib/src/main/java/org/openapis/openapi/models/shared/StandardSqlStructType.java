@@ -12,9 +12,11 @@ public class StandardSqlStructType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public StandardSqlField[] fields;
+
     public StandardSqlStructType withFields(StandardSqlField[] fields) {
         this.fields = fields;
         return this;
     }
     
+    public StandardSqlStructType(){}
 }

@@ -15,9 +15,13 @@ public class CollectionHandle {
      */
     @JsonProperty("handle")
     public String handle;
+
     public CollectionHandle withHandle(String handle) {
         this.handle = handle;
         return this;
     }
     
+    public CollectionHandle(@JsonProperty("handle") String handle) {
+        this.handle = handle;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CrashesGetRawCrashLocation200ApplicationJSON {
     @JsonProperty("uri")
     public String uri;
+
     public CrashesGetRawCrashLocation200ApplicationJSON withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public CrashesGetRawCrashLocation200ApplicationJSON(@JsonProperty("uri") String uri) {
+        this.uri = uri;
+  }
 }

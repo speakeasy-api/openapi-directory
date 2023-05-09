@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GETVersionIncidentsFormatIncidentTypeEnum;
 import org.openapis.openapi.models.operations.GETVersionIncidentsFormatRequest;
 import org.openapis.openapi.models.operations.GETVersionIncidentsFormatResponse;
@@ -15,7 +14,7 @@ public class Application {
                 .build();
 
             GETVersionIncidentsFormatRequest req = new GETVersionIncidentsFormatRequest() {{
-                incidentType = "unconfirmed";
+                incidentType = GETVersionIncidentsFormatIncidentTypeEnum.UNCONFIRMED;
                 occurredAfter = 592845;
                 occurredBefore = 715190;
                 page = 844266;
@@ -23,7 +22,7 @@ public class Application {
                 proximity = "nulla";
                 proximitySquare = 544883;
                 query = "illum";
-            }}            
+            }};            
 
             GETVersionIncidentsFormatResponse res = sdk.incidents.getVersionIncidentsFormat(req);
 
@@ -33,5 +32,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DataQualitySummary {
     @JsonProperty("DuplicateTimestamps")
     public DuplicateTimestamps duplicateTimestamps;
+
     public DataQualitySummary withDuplicateTimestamps(DuplicateTimestamps duplicateTimestamps) {
         this.duplicateTimestamps = duplicateTimestamps;
         return this;
@@ -19,6 +20,7 @@ public class DataQualitySummary {
     
     @JsonProperty("InsufficientSensorData")
     public InsufficientSensorData insufficientSensorData;
+
     public DataQualitySummary withInsufficientSensorData(InsufficientSensorData insufficientSensorData) {
         this.insufficientSensorData = insufficientSensorData;
         return this;
@@ -26,6 +28,7 @@ public class DataQualitySummary {
     
     @JsonProperty("InvalidSensorData")
     public InvalidSensorData invalidSensorData;
+
     public DataQualitySummary withInvalidSensorData(InvalidSensorData invalidSensorData) {
         this.invalidSensorData = invalidSensorData;
         return this;
@@ -33,6 +36,7 @@ public class DataQualitySummary {
     
     @JsonProperty("MissingSensorData")
     public MissingSensorData missingSensorData;
+
     public DataQualitySummary withMissingSensorData(MissingSensorData missingSensorData) {
         this.missingSensorData = missingSensorData;
         return this;
@@ -40,9 +44,17 @@ public class DataQualitySummary {
     
     @JsonProperty("UnsupportedTimestamps")
     public UnsupportedTimestamps unsupportedTimestamps;
+
     public DataQualitySummary withUnsupportedTimestamps(UnsupportedTimestamps unsupportedTimestamps) {
         this.unsupportedTimestamps = unsupportedTimestamps;
         return this;
     }
     
+    public DataQualitySummary(@JsonProperty("DuplicateTimestamps") DuplicateTimestamps duplicateTimestamps, @JsonProperty("InsufficientSensorData") InsufficientSensorData insufficientSensorData, @JsonProperty("InvalidSensorData") InvalidSensorData invalidSensorData, @JsonProperty("MissingSensorData") MissingSensorData missingSensorData, @JsonProperty("UnsupportedTimestamps") UnsupportedTimestamps unsupportedTimestamps) {
+        this.duplicateTimestamps = duplicateTimestamps;
+        this.insufficientSensorData = insufficientSensorData;
+        this.invalidSensorData = invalidSensorData;
+        this.missingSensorData = missingSensorData;
+        this.unsupportedTimestamps = unsupportedTimestamps;
+  }
 }

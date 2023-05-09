@@ -36,10 +36,11 @@ public class Apikeys {
     /**
      * Get all api keys
      * Get all api keys
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AllApiKeysResponse allApiKeys() throws Exception {
+    public org.openapis.openapi.models.operations.AllApiKeysResponse allApiKeys(org.openapis.openapi.models.operations.AllApiKeysSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/apikeys");
         
@@ -48,16 +49,15 @@ public class Apikeys {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllApiKeysResponse res = new org.openapis.openapi.models.operations.AllApiKeysResponse() {{
+        org.openapis.openapi.models.operations.AllApiKeysResponse res = new org.openapis.openapi.models.operations.AllApiKeysResponse(contentType, httpRes.statusCode()) {{
             apiKeys = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -96,11 +96,9 @@ public class Apikeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApiKeyResponse res = new org.openapis.openapi.models.operations.ApiKeyResponse() {{
+        org.openapis.openapi.models.operations.ApiKeyResponse res = new org.openapis.openapi.models.operations.ApiKeyResponse(contentType, httpRes.statusCode()) {{
             apiKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +137,9 @@ public class Apikeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApiKeyFromGroupResponse res = new org.openapis.openapi.models.operations.ApiKeyFromGroupResponse() {{
+        org.openapis.openapi.models.operations.ApiKeyFromGroupResponse res = new org.openapis.openapi.models.operations.ApiKeyFromGroupResponse(contentType, httpRes.statusCode()) {{
             apiKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -182,11 +178,9 @@ public class Apikeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApiKeyFromGroupQuotasResponse res = new org.openapis.openapi.models.operations.ApiKeyFromGroupQuotasResponse() {{
+        org.openapis.openapi.models.operations.ApiKeyFromGroupQuotasResponse res = new org.openapis.openapi.models.operations.ApiKeyFromGroupQuotasResponse(contentType, httpRes.statusCode()) {{
             quotas = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -225,11 +219,9 @@ public class Apikeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApiKeyGroupResponse res = new org.openapis.openapi.models.operations.ApiKeyGroupResponse() {{
+        org.openapis.openapi.models.operations.ApiKeyGroupResponse res = new org.openapis.openapi.models.operations.ApiKeyGroupResponse(contentType, httpRes.statusCode()) {{
             group = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -268,11 +260,9 @@ public class Apikeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApiKeyQuotasResponse res = new org.openapis.openapi.models.operations.ApiKeyQuotasResponse() {{
+        org.openapis.openapi.models.operations.ApiKeyQuotasResponse res = new org.openapis.openapi.models.operations.ApiKeyQuotasResponse(contentType, httpRes.statusCode()) {{
             quotas = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -311,11 +301,9 @@ public class Apikeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApiKeysResponse res = new org.openapis.openapi.models.operations.ApiKeysResponse() {{
+        org.openapis.openapi.models.operations.ApiKeysResponse res = new org.openapis.openapi.models.operations.ApiKeysResponse(contentType, httpRes.statusCode()) {{
             apiKeys = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -354,11 +342,9 @@ public class Apikeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApiKeysFromGroupResponse res = new org.openapis.openapi.models.operations.ApiKeysFromGroupResponse() {{
+        org.openapis.openapi.models.operations.ApiKeysFromGroupResponse res = new org.openapis.openapi.models.operations.ApiKeysFromGroupResponse(contentType, httpRes.statusCode()) {{
             apiKeys = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -398,11 +384,9 @@ public class Apikeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateApiKeyResponse res = new org.openapis.openapi.models.operations.CreateApiKeyResponse() {{
+        org.openapis.openapi.models.operations.CreateApiKeyResponse res = new org.openapis.openapi.models.operations.CreateApiKeyResponse(contentType, httpRes.statusCode()) {{
             apiKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -443,11 +427,9 @@ public class Apikeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateApiKeyFromGroupResponse res = new org.openapis.openapi.models.operations.CreateApiKeyFromGroupResponse() {{
+        org.openapis.openapi.models.operations.CreateApiKeyFromGroupResponse res = new org.openapis.openapi.models.operations.CreateApiKeyFromGroupResponse(contentType, httpRes.statusCode()) {{
             apiKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,11 +468,9 @@ public class Apikeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteApiKeyResponse res = new org.openapis.openapi.models.operations.DeleteApiKeyResponse() {{
+        org.openapis.openapi.models.operations.DeleteApiKeyResponse res = new org.openapis.openapi.models.operations.DeleteApiKeyResponse(contentType, httpRes.statusCode()) {{
             deleted = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -529,11 +509,9 @@ public class Apikeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteApiKeyFromGroupResponse res = new org.openapis.openapi.models.operations.DeleteApiKeyFromGroupResponse() {{
+        org.openapis.openapi.models.operations.DeleteApiKeyFromGroupResponse res = new org.openapis.openapi.models.operations.DeleteApiKeyFromGroupResponse(contentType, httpRes.statusCode()) {{
             deleted = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -574,11 +552,9 @@ public class Apikeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchApiKeyResponse res = new org.openapis.openapi.models.operations.PatchApiKeyResponse() {{
+        org.openapis.openapi.models.operations.PatchApiKeyResponse res = new org.openapis.openapi.models.operations.PatchApiKeyResponse(contentType, httpRes.statusCode()) {{
             apiKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -619,11 +595,9 @@ public class Apikeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchApiKeyFromGroupResponse res = new org.openapis.openapi.models.operations.PatchApiKeyFromGroupResponse() {{
+        org.openapis.openapi.models.operations.PatchApiKeyFromGroupResponse res = new org.openapis.openapi.models.operations.PatchApiKeyFromGroupResponse(contentType, httpRes.statusCode()) {{
             apiKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -662,11 +636,9 @@ public class Apikeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResetApiKeyFromGroupQuotasResponse res = new org.openapis.openapi.models.operations.ResetApiKeyFromGroupQuotasResponse() {{
+        org.openapis.openapi.models.operations.ResetApiKeyFromGroupQuotasResponse res = new org.openapis.openapi.models.operations.ResetApiKeyFromGroupQuotasResponse(contentType, httpRes.statusCode()) {{
             quotas = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -705,11 +677,9 @@ public class Apikeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResetApiKeyQuotasResponse res = new org.openapis.openapi.models.operations.ResetApiKeyQuotasResponse() {{
+        org.openapis.openapi.models.operations.ResetApiKeyQuotasResponse res = new org.openapis.openapi.models.operations.ResetApiKeyQuotasResponse(contentType, httpRes.statusCode()) {{
             quotas = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -750,11 +720,9 @@ public class Apikeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateApiKeyResponse res = new org.openapis.openapi.models.operations.UpdateApiKeyResponse() {{
+        org.openapis.openapi.models.operations.UpdateApiKeyResponse res = new org.openapis.openapi.models.operations.UpdateApiKeyResponse(contentType, httpRes.statusCode()) {{
             apiKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -795,11 +763,9 @@ public class Apikeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateApiKeyFromGroupResponse res = new org.openapis.openapi.models.operations.UpdateApiKeyFromGroupResponse() {{
+        org.openapis.openapi.models.operations.UpdateApiKeyFromGroupResponse res = new org.openapis.openapi.models.operations.UpdateApiKeyFromGroupResponse(contentType, httpRes.statusCode()) {{
             apiKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

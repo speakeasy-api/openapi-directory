@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TrackList {
     
     public String databaseVersion;
+
     public TrackList withDatabaseVersion(String databaseVersion) {
         this.databaseVersion = databaseVersion;
         return this;
@@ -19,6 +20,7 @@ public class TrackList {
     
     
     public String maintenanceTrackName;
+
     public TrackList withMaintenanceTrackName(String maintenanceTrackName) {
         this.maintenanceTrackName = maintenanceTrackName;
         return this;
@@ -26,9 +28,11 @@ public class TrackList {
     
     
     public EligibleTracksToUpdateList[] updateTargets;
+
     public TrackList withUpdateTargets(EligibleTracksToUpdateList[] updateTargets) {
         this.updateTargets = updateTargets;
         return this;
     }
     
+    public TrackList(){}
 }

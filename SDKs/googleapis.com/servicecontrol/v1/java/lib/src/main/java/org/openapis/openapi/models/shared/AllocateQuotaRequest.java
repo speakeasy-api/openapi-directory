@@ -18,6 +18,7 @@ public class AllocateQuotaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allocateOperation")
     public QuotaOperation allocateOperation;
+
     public AllocateQuotaRequest withAllocateOperation(QuotaOperation allocateOperation) {
         this.allocateOperation = allocateOperation;
         return this;
@@ -29,9 +30,11 @@ public class AllocateQuotaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceConfigId")
     public String serviceConfigId;
+
     public AllocateQuotaRequest withServiceConfigId(String serviceConfigId) {
         this.serviceConfigId = serviceConfigId;
         return this;
     }
     
+    public AllocateQuotaRequest(){}
 }

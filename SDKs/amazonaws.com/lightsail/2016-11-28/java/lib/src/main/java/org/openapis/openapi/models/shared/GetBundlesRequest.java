@@ -12,6 +12,7 @@ public class GetBundlesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appCategory")
     public AppCategoryEnum appCategory;
+
     public GetBundlesRequest withAppCategory(AppCategoryEnum appCategory) {
         this.appCategory = appCategory;
         return this;
@@ -20,6 +21,7 @@ public class GetBundlesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeInactive")
     public Boolean includeInactive;
+
     public GetBundlesRequest withIncludeInactive(Boolean includeInactive) {
         this.includeInactive = includeInactive;
         return this;
@@ -28,9 +30,11 @@ public class GetBundlesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GetBundlesRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public GetBundlesRequest(){}
 }

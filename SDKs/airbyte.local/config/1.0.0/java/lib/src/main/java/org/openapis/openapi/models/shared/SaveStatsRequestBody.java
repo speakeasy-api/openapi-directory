@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SaveStatsRequestBody {
     @JsonProperty("attemptNumber")
     public Integer attemptNumber;
+
     public SaveStatsRequestBody withAttemptNumber(Integer attemptNumber) {
         this.attemptNumber = attemptNumber;
         return this;
@@ -18,6 +19,7 @@ public class SaveStatsRequestBody {
     
     @JsonProperty("jobId")
     public Long jobId;
+
     public SaveStatsRequestBody withJobId(Long jobId) {
         this.jobId = jobId;
         return this;
@@ -25,6 +27,7 @@ public class SaveStatsRequestBody {
     
     @JsonProperty("stats")
     public AttemptStats stats;
+
     public SaveStatsRequestBody withStats(AttemptStats stats) {
         this.stats = stats;
         return this;
@@ -33,9 +36,15 @@ public class SaveStatsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamStats")
     public AttemptStreamStats[] streamStats;
+
     public SaveStatsRequestBody withStreamStats(AttemptStreamStats[] streamStats) {
         this.streamStats = streamStats;
         return this;
     }
     
+    public SaveStatsRequestBody(@JsonProperty("attemptNumber") Integer attemptNumber, @JsonProperty("jobId") Long jobId, @JsonProperty("stats") AttemptStats stats) {
+        this.attemptNumber = attemptNumber;
+        this.jobId = jobId;
+        this.stats = stats;
+  }
 }

@@ -15,6 +15,7 @@ public class ListV2LoggingLevelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logTargetConfigurations")
     public LogTargetConfiguration[] logTargetConfigurations;
+
     public ListV2LoggingLevelsResponse withLogTargetConfigurations(LogTargetConfiguration[] logTargetConfigurations) {
         this.logTargetConfigurations = logTargetConfigurations;
         return this;
@@ -23,9 +24,11 @@ public class ListV2LoggingLevelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListV2LoggingLevelsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListV2LoggingLevelsResponse(){}
 }

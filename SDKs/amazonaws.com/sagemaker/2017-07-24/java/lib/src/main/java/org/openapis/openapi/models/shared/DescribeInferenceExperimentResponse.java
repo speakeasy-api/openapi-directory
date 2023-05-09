@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DescribeInferenceExperimentResponse {
     @JsonProperty("Arn")
     public String arn;
+
     public DescribeInferenceExperimentResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -29,6 +30,7 @@ public class DescribeInferenceExperimentResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompletionTime")
     public OffsetDateTime completionTime;
+
     public DescribeInferenceExperimentResponse withCompletionTime(OffsetDateTime completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -39,6 +41,7 @@ public class DescribeInferenceExperimentResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeInferenceExperimentResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -47,6 +50,7 @@ public class DescribeInferenceExperimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataStorageConfig")
     public InferenceExperimentDataStorageConfig dataStorageConfig;
+
     public DescribeInferenceExperimentResponse withDataStorageConfig(InferenceExperimentDataStorageConfig dataStorageConfig) {
         this.dataStorageConfig = dataStorageConfig;
         return this;
@@ -55,6 +59,7 @@ public class DescribeInferenceExperimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeInferenceExperimentResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +67,7 @@ public class DescribeInferenceExperimentResponse {
     
     @JsonProperty("EndpointMetadata")
     public EndpointMetadata endpointMetadata;
+
     public DescribeInferenceExperimentResponse withEndpointMetadata(EndpointMetadata endpointMetadata) {
         this.endpointMetadata = endpointMetadata;
         return this;
@@ -70,6 +76,7 @@ public class DescribeInferenceExperimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKey")
     public String kmsKey;
+
     public DescribeInferenceExperimentResponse withKmsKey(String kmsKey) {
         this.kmsKey = kmsKey;
         return this;
@@ -80,6 +87,7 @@ public class DescribeInferenceExperimentResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeInferenceExperimentResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -87,6 +95,7 @@ public class DescribeInferenceExperimentResponse {
     
     @JsonProperty("ModelVariants")
     public ModelVariantConfigSummary[] modelVariants;
+
     public DescribeInferenceExperimentResponse withModelVariants(ModelVariantConfigSummary[] modelVariants) {
         this.modelVariants = modelVariants;
         return this;
@@ -94,6 +103,7 @@ public class DescribeInferenceExperimentResponse {
     
     @JsonProperty("Name")
     public String name;
+
     public DescribeInferenceExperimentResponse withName(String name) {
         this.name = name;
         return this;
@@ -102,6 +112,7 @@ public class DescribeInferenceExperimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeInferenceExperimentResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -110,6 +121,7 @@ public class DescribeInferenceExperimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public InferenceExperimentSchedule schedule;
+
     public DescribeInferenceExperimentResponse withSchedule(InferenceExperimentSchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -118,6 +130,7 @@ public class DescribeInferenceExperimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShadowModeConfig")
     public ShadowModeConfig shadowModeConfig;
+
     public DescribeInferenceExperimentResponse withShadowModeConfig(ShadowModeConfig shadowModeConfig) {
         this.shadowModeConfig = shadowModeConfig;
         return this;
@@ -125,6 +138,7 @@ public class DescribeInferenceExperimentResponse {
     
     @JsonProperty("Status")
     public InferenceExperimentStatusEnum status;
+
     public DescribeInferenceExperimentResponse withStatus(InferenceExperimentStatusEnum status) {
         this.status = status;
         return this;
@@ -133,6 +147,7 @@ public class DescribeInferenceExperimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusReason")
     public String statusReason;
+
     public DescribeInferenceExperimentResponse withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -140,9 +155,18 @@ public class DescribeInferenceExperimentResponse {
     
     @JsonProperty("Type")
     public InferenceExperimentTypeEnum type;
+
     public DescribeInferenceExperimentResponse withType(InferenceExperimentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DescribeInferenceExperimentResponse(@JsonProperty("Arn") String arn, @JsonProperty("EndpointMetadata") EndpointMetadata endpointMetadata, @JsonProperty("ModelVariants") ModelVariantConfigSummary[] modelVariants, @JsonProperty("Name") String name, @JsonProperty("Status") InferenceExperimentStatusEnum status, @JsonProperty("Type") InferenceExperimentTypeEnum type) {
+        this.arn = arn;
+        this.endpointMetadata = endpointMetadata;
+        this.modelVariants = modelVariants;
+        this.name = name;
+        this.status = status;
+        this.type = type;
+  }
 }

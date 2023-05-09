@@ -15,6 +15,7 @@ public class CreateEnvironmentRequestBodyLoggingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DagProcessingLogs")
     public org.openapis.openapi.models.shared.ModuleLoggingConfigurationInput dagProcessingLogs;
+
     public CreateEnvironmentRequestBodyLoggingConfiguration withDagProcessingLogs(org.openapis.openapi.models.shared.ModuleLoggingConfigurationInput dagProcessingLogs) {
         this.dagProcessingLogs = dagProcessingLogs;
         return this;
@@ -23,6 +24,7 @@ public class CreateEnvironmentRequestBodyLoggingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchedulerLogs")
     public org.openapis.openapi.models.shared.ModuleLoggingConfigurationInput schedulerLogs;
+
     public CreateEnvironmentRequestBodyLoggingConfiguration withSchedulerLogs(org.openapis.openapi.models.shared.ModuleLoggingConfigurationInput schedulerLogs) {
         this.schedulerLogs = schedulerLogs;
         return this;
@@ -31,6 +33,7 @@ public class CreateEnvironmentRequestBodyLoggingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskLogs")
     public org.openapis.openapi.models.shared.ModuleLoggingConfigurationInput taskLogs;
+
     public CreateEnvironmentRequestBodyLoggingConfiguration withTaskLogs(org.openapis.openapi.models.shared.ModuleLoggingConfigurationInput taskLogs) {
         this.taskLogs = taskLogs;
         return this;
@@ -39,6 +42,7 @@ public class CreateEnvironmentRequestBodyLoggingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebserverLogs")
     public org.openapis.openapi.models.shared.ModuleLoggingConfigurationInput webserverLogs;
+
     public CreateEnvironmentRequestBodyLoggingConfiguration withWebserverLogs(org.openapis.openapi.models.shared.ModuleLoggingConfigurationInput webserverLogs) {
         this.webserverLogs = webserverLogs;
         return this;
@@ -47,9 +51,11 @@ public class CreateEnvironmentRequestBodyLoggingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkerLogs")
     public org.openapis.openapi.models.shared.ModuleLoggingConfigurationInput workerLogs;
+
     public CreateEnvironmentRequestBodyLoggingConfiguration withWorkerLogs(org.openapis.openapi.models.shared.ModuleLoggingConfigurationInput workerLogs) {
         this.workerLogs = workerLogs;
         return this;
     }
     
+    public CreateEnvironmentRequestBodyLoggingConfiguration(){}
 }

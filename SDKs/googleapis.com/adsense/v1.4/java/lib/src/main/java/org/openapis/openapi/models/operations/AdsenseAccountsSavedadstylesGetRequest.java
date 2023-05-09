@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdsenseAccountsSavedadstylesGetRequest {
@@ -12,6 +13,7 @@ public class AdsenseAccountsSavedadstylesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public AdsenseAccountsSavedadstylesGetRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class AdsenseAccountsSavedadstylesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AdsenseAccountsSavedadstylesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -32,6 +35,7 @@ public class AdsenseAccountsSavedadstylesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AdsenseAccountsSavedadstylesGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +46,7 @@ public class AdsenseAccountsSavedadstylesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AdsenseAccountsSavedadstylesGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -52,6 +57,7 @@ public class AdsenseAccountsSavedadstylesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AdsenseAccountsSavedadstylesGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -62,6 +68,7 @@ public class AdsenseAccountsSavedadstylesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AdsenseAccountsSavedadstylesGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -72,6 +79,7 @@ public class AdsenseAccountsSavedadstylesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AdsenseAccountsSavedadstylesGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -82,6 +90,7 @@ public class AdsenseAccountsSavedadstylesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=savedAdStyleId")
     public String savedAdStyleId;
+
     public AdsenseAccountsSavedadstylesGetRequest withSavedAdStyleId(String savedAdStyleId) {
         this.savedAdStyleId = savedAdStyleId;
         return this;
@@ -92,9 +101,14 @@ public class AdsenseAccountsSavedadstylesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AdsenseAccountsSavedadstylesGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AdsenseAccountsSavedadstylesGetRequest(@JsonProperty("accountId") String accountId, @JsonProperty("savedAdStyleId") String savedAdStyleId) {
+        this.accountId = accountId;
+        this.savedAdStyleId = savedAdStyleId;
+  }
 }

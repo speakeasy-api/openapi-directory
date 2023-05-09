@@ -15,6 +15,7 @@ public class RdsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentOption")
     public String deploymentOption;
+
     public RdsConfiguration withDeploymentOption(String deploymentOption) {
         this.deploymentOption = deploymentOption;
         return this;
@@ -23,6 +24,7 @@ public class RdsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineEdition")
     public String engineEdition;
+
     public RdsConfiguration withEngineEdition(String engineEdition) {
         this.engineEdition = engineEdition;
         return this;
@@ -31,6 +33,7 @@ public class RdsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceMemory")
     public Double instanceMemory;
+
     public RdsConfiguration withInstanceMemory(Double instanceMemory) {
         this.instanceMemory = instanceMemory;
         return this;
@@ -39,6 +42,7 @@ public class RdsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public RdsConfiguration withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -47,6 +51,7 @@ public class RdsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceVcpu")
     public Double instanceVcpu;
+
     public RdsConfiguration withInstanceVcpu(Double instanceVcpu) {
         this.instanceVcpu = instanceVcpu;
         return this;
@@ -55,6 +60,7 @@ public class RdsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageIops")
     public Long storageIops;
+
     public RdsConfiguration withStorageIops(Long storageIops) {
         this.storageIops = storageIops;
         return this;
@@ -63,6 +69,7 @@ public class RdsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageSize")
     public Long storageSize;
+
     public RdsConfiguration withStorageSize(Long storageSize) {
         this.storageSize = storageSize;
         return this;
@@ -71,9 +78,11 @@ public class RdsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageType")
     public String storageType;
+
     public RdsConfiguration withStorageType(String storageType) {
         this.storageType = storageType;
         return this;
     }
     
+    public RdsConfiguration(){}
 }

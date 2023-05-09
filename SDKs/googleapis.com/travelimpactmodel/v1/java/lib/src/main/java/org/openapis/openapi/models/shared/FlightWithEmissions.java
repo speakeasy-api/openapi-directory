@@ -18,6 +18,7 @@ public class FlightWithEmissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emissionsGramsPerPax")
     public EmissionsGramsPerPax emissionsGramsPerPax;
+
     public FlightWithEmissions withEmissionsGramsPerPax(EmissionsGramsPerPax emissionsGramsPerPax) {
         this.emissionsGramsPerPax = emissionsGramsPerPax;
         return this;
@@ -29,9 +30,11 @@ public class FlightWithEmissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flight")
     public Flight flight;
+
     public FlightWithEmissions withFlight(Flight flight) {
         this.flight = flight;
         return this;
     }
     
+    public FlightWithEmissions(){}
 }

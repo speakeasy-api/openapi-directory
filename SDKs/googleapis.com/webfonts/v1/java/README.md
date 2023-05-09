@@ -16,10 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.WebfontsWebfontsListSortEnum;
+import org.openapis.openapi.models.operations.WebfontsWebfontsListCapabilityEnum;
 import org.openapis.openapi.models.operations.WebfontsWebfontsListRequest;
 import org.openapis.openapi.models.operations.WebfontsWebfontsListResponse;
+import org.openapis.openapi.models.operations.WebfontsWebfontsListSortEnum;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -30,28 +30,40 @@ public class Application {
                 .build();
 
             WebfontsWebfontsListRequest req = new WebfontsWebfontsListRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 accessToken = "provident";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "quibusdam";
-                fields = "unde";
-                key = "nulla";
-                oauthToken = "corrupti";
+                capability = new org.openapis.openapi.models.operations.WebfontsWebfontsListCapabilityEnum[]{{
+                    add(WebfontsWebfontsListCapabilityEnum.VF),
+                    add(WebfontsWebfontsListCapabilityEnum.WOFF2),
+                    add(WebfontsWebfontsListCapabilityEnum.VF),
+                }};
+                family = new String[]{{
+                    add("error"),
+                    add("deserunt"),
+                }};
+                fields = "suscipit";
+                key = "iure";
+                oauthToken = "magnam";
                 prettyPrint = false;
-                quotaUser = "illum";
-                sort = "DATE";
-                uploadType = "error";
-                uploadProtocol = "deserunt";
-            }}            
+                quotaUser = "debitis";
+                sort = WebfontsWebfontsListSortEnum.SORT_UNDEFINED;
+                subset = "delectus";
+                uploadType = "tempora";
+                uploadProtocol = "suscipit";
+            }};            
 
             WebfontsWebfontsListResponse res = sdk.webfonts.webfontsWebfontsList(req);
 
-            if (res.webfontList.isPresent()) {
+            if (res.webfontList != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -59,9 +71,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### webfonts
+### [webfonts](docs/webfonts/README.md)
 
-* `webfontsWebfontsList` - Retrieves the list of fonts currently served by the Google Fonts Developer API.
+* [webfontsWebfontsList](docs/webfonts/README.md#webfontswebfontslist) - Retrieves the list of fonts currently served by the Google Fonts Developer API.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetTextUsingPOSTResponse {
     
     public String contentType;
+
     public SetTextUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SetTextUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public SetTextUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SetTextUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetTextUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SetTextUsingPOSTResponse {
      */
     
     public SetTextUsingPOST200ApplicationJSON setTextUsingPOST200ApplicationJSONObject;
+
     public SetTextUsingPOSTResponse withSetTextUsingPOST200ApplicationJSONObject(SetTextUsingPOST200ApplicationJSON setTextUsingPOST200ApplicationJSONObject) {
         this.setTextUsingPOST200ApplicationJSONObject = setTextUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SetTextUsingPOSTResponse {
      */
     
     public SetTextUsingPOST400ApplicationJSON setTextUsingPOST400ApplicationJSONObject;
+
     public SetTextUsingPOSTResponse withSetTextUsingPOST400ApplicationJSONObject(SetTextUsingPOST400ApplicationJSON setTextUsingPOST400ApplicationJSONObject) {
         this.setTextUsingPOST400ApplicationJSONObject = setTextUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SetTextUsingPOSTResponse {
      */
     
     public SetTextUsingPOST401ApplicationJSON setTextUsingPOST401ApplicationJSONObject;
+
     public SetTextUsingPOSTResponse withSetTextUsingPOST401ApplicationJSONObject(SetTextUsingPOST401ApplicationJSON setTextUsingPOST401ApplicationJSONObject) {
         this.setTextUsingPOST401ApplicationJSONObject = setTextUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class SetTextUsingPOSTResponse {
      */
     
     public SetTextUsingPOST500ApplicationJSON setTextUsingPOST500ApplicationJSONObject;
+
     public SetTextUsingPOSTResponse withSetTextUsingPOST500ApplicationJSONObject(SetTextUsingPOST500ApplicationJSON setTextUsingPOST500ApplicationJSONObject) {
         this.setTextUsingPOST500ApplicationJSONObject = setTextUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public SetTextUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

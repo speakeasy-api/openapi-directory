@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WebriskThreatListsComputeDiffResponse {
     
     public String contentType;
+
     public WebriskThreatListsComputeDiffResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class WebriskThreatListsComputeDiffResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudWebriskV1ComputeThreatListDiffResponse googleCloudWebriskV1ComputeThreatListDiffResponse;
+
     public WebriskThreatListsComputeDiffResponse withGoogleCloudWebriskV1ComputeThreatListDiffResponse(org.openapis.openapi.models.shared.GoogleCloudWebriskV1ComputeThreatListDiffResponse googleCloudWebriskV1ComputeThreatListDiffResponse) {
         this.googleCloudWebriskV1ComputeThreatListDiffResponse = googleCloudWebriskV1ComputeThreatListDiffResponse;
         return this;
@@ -26,6 +29,7 @@ public class WebriskThreatListsComputeDiffResponse {
     
     
     public Integer statusCode;
+
     public WebriskThreatListsComputeDiffResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class WebriskThreatListsComputeDiffResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WebriskThreatListsComputeDiffResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public WebriskThreatListsComputeDiffResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

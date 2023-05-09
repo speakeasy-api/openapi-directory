@@ -15,6 +15,7 @@ public class Signature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("askSignatureOnScreen")
     public Boolean askSignatureOnScreen;
+
     public Signature withAskSignatureOnScreen(Boolean askSignatureOnScreen) {
         this.askSignatureOnScreen = askSignatureOnScreen;
         return this;
@@ -26,6 +27,7 @@ public class Signature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceName")
     public String deviceName;
+
     public Signature withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -37,6 +39,7 @@ public class Signature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceSlogan")
     public String deviceSlogan;
+
     public Signature withDeviceSlogan(String deviceSlogan) {
         this.deviceSlogan = deviceSlogan;
         return this;
@@ -48,9 +51,11 @@ public class Signature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipSignature")
     public Boolean skipSignature;
+
     public Signature withSkipSignature(Boolean skipSignature) {
         this.skipSignature = skipSignature;
         return this;
     }
     
+    public Signature(){}
 }

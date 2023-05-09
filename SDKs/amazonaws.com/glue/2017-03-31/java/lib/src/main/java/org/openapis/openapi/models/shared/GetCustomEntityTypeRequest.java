@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetCustomEntityTypeRequest {
     @JsonProperty("Name")
     public String name;
+
     public GetCustomEntityTypeRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetCustomEntityTypeRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteBuildInput {
     @JsonProperty("BuildId")
     public String buildId;
+
     public DeleteBuildInput withBuildId(String buildId) {
         this.buildId = buildId;
         return this;
     }
     
+    public DeleteBuildInput(@JsonProperty("BuildId") String buildId) {
+        this.buildId = buildId;
+  }
 }

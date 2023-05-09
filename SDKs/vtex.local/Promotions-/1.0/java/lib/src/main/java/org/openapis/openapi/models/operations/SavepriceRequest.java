@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SavepriceRequest {
@@ -12,6 +13,7 @@ public class SavepriceRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public SavepriceRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class SavepriceRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public SavepriceRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SavepriceRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SavepriceRequest[] requestBody;
+
     public SavepriceRequest withRequestBody(org.openapis.openapi.models.shared.SavepriceRequest[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -36,9 +40,16 @@ public class SavepriceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=an")
     public String an;
+
     public SavepriceRequest withAn(String an) {
         this.an = an;
         return this;
     }
     
+    public SavepriceRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") org.openapis.openapi.models.shared.SavepriceRequest[] requestBody, @JsonProperty("an") String an) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+        this.an = an;
+  }
 }

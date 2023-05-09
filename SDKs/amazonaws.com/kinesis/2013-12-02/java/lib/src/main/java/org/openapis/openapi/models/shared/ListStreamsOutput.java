@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListStreamsOutput {
     @JsonProperty("HasMoreStreams")
     public Boolean hasMoreStreams;
+
     public ListStreamsOutput withHasMoreStreams(Boolean hasMoreStreams) {
         this.hasMoreStreams = hasMoreStreams;
         return this;
@@ -22,6 +23,7 @@ public class ListStreamsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListStreamsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -29,6 +31,7 @@ public class ListStreamsOutput {
     
     @JsonProperty("StreamNames")
     public String[] streamNames;
+
     public ListStreamsOutput withStreamNames(String[] streamNames) {
         this.streamNames = streamNames;
         return this;
@@ -37,9 +40,14 @@ public class ListStreamsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamSummaries")
     public StreamSummary[] streamSummaries;
+
     public ListStreamsOutput withStreamSummaries(StreamSummary[] streamSummaries) {
         this.streamSummaries = streamSummaries;
         return this;
     }
     
+    public ListStreamsOutput(@JsonProperty("HasMoreStreams") Boolean hasMoreStreams, @JsonProperty("StreamNames") String[] streamNames) {
+        this.hasMoreStreams = hasMoreStreams;
+        this.streamNames = streamNames;
+  }
 }

@@ -15,6 +15,7 @@ public class ResourceCollectionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudFormation")
     public CloudFormationCollectionFilter cloudFormation;
+
     public ResourceCollectionFilter withCloudFormation(CloudFormationCollectionFilter cloudFormation) {
         this.cloudFormation = cloudFormation;
         return this;
@@ -23,9 +24,11 @@ public class ResourceCollectionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public TagCollectionFilter[] tags;
+
     public ResourceCollectionFilter withTags(TagCollectionFilter[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ResourceCollectionFilter(){}
 }

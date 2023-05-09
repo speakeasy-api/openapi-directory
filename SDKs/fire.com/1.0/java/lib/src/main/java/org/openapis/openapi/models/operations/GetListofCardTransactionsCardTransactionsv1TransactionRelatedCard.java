@@ -20,6 +20,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedCard withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -28,6 +29,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardId")
     public Long cardId;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedCard withCardId(Long cardId) {
         this.cardId = cardId;
         return this;
@@ -36,6 +38,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embossBusinessName")
     public String embossBusinessName;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedCard withEmbossBusinessName(String embossBusinessName) {
         this.embossBusinessName = embossBusinessName;
         return this;
@@ -44,6 +47,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embossCardName")
     public String embossCardName;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedCard withEmbossCardName(String embossCardName) {
         this.embossCardName = embossCardName;
         return this;
@@ -54,6 +58,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedCard {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiryDate")
     public OffsetDateTime expiryDate;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedCard withExpiryDate(OffsetDateTime expiryDate) {
         this.expiryDate = expiryDate;
         return this;
@@ -62,6 +67,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maskedPan")
     public String maskedPan;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedCard withMaskedPan(String maskedPan) {
         this.maskedPan = maskedPan;
         return this;
@@ -70,9 +76,11 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provider")
     public String provider;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedCard withProvider(String provider) {
         this.provider = provider;
         return this;
     }
     
+    public GetListofCardTransactionsCardTransactionsv1TransactionRelatedCard(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MigrationcenterProjectsLocationsPreferenceSetsListResponse {
     
     public String contentType;
+
     public MigrationcenterProjectsLocationsPreferenceSetsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MigrationcenterProjectsLocationsPreferenceSetsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPreferenceSetsResponse listPreferenceSetsResponse;
+
     public MigrationcenterProjectsLocationsPreferenceSetsListResponse withListPreferenceSetsResponse(org.openapis.openapi.models.shared.ListPreferenceSetsResponse listPreferenceSetsResponse) {
         this.listPreferenceSetsResponse = listPreferenceSetsResponse;
         return this;
@@ -26,6 +29,7 @@ public class MigrationcenterProjectsLocationsPreferenceSetsListResponse {
     
     
     public Integer statusCode;
+
     public MigrationcenterProjectsLocationsPreferenceSetsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MigrationcenterProjectsLocationsPreferenceSetsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MigrationcenterProjectsLocationsPreferenceSetsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MigrationcenterProjectsLocationsPreferenceSetsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

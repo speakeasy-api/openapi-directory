@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSetupV1CompaniesDomainsIdResponse {
@@ -12,6 +13,7 @@ public class DeleteSetupV1CompaniesDomainsIdResponse {
      */
     
     public org.openapis.openapi.models.shared.CompanyDomainViewModel companyDomainViewModel;
+
     public DeleteSetupV1CompaniesDomainsIdResponse withCompanyDomainViewModel(org.openapis.openapi.models.shared.CompanyDomainViewModel companyDomainViewModel) {
         this.companyDomainViewModel = companyDomainViewModel;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSetupV1CompaniesDomainsIdResponse {
     
     
     public String contentType;
+
     public DeleteSetupV1CompaniesDomainsIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DeleteSetupV1CompaniesDomainsIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteSetupV1CompaniesDomainsIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteSetupV1CompaniesDomainsIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSetupV1CompaniesDomainsIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteSetupV1CompaniesDomainsIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

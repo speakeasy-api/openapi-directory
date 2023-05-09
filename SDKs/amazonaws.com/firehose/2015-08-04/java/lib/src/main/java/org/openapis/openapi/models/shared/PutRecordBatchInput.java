@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutRecordBatchInput {
     @JsonProperty("DeliveryStreamName")
     public String deliveryStreamName;
+
     public PutRecordBatchInput withDeliveryStreamName(String deliveryStreamName) {
         this.deliveryStreamName = deliveryStreamName;
         return this;
@@ -16,9 +17,14 @@ public class PutRecordBatchInput {
     
     @JsonProperty("Records")
     public Record[] records;
+
     public PutRecordBatchInput withRecords(Record[] records) {
         this.records = records;
         return this;
     }
     
+    public PutRecordBatchInput(@JsonProperty("DeliveryStreamName") String deliveryStreamName, @JsonProperty("Records") Record[] records) {
+        this.deliveryStreamName = deliveryStreamName;
+        this.records = records;
+  }
 }

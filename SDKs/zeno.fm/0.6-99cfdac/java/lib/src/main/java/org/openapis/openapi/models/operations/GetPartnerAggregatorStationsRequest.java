@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetPartnerAggregatorStationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hitsPerPage")
     public String hitsPerPage;
+
     public GetPartnerAggregatorStationsRequest withHitsPerPage(String hitsPerPage) {
         this.hitsPerPage = hitsPerPage;
         return this;
@@ -16,9 +17,11 @@ public class GetPartnerAggregatorStationsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetPartnerAggregatorStationsRequest withPage(String page) {
         this.page = page;
         return this;
     }
     
+    public GetPartnerAggregatorStationsRequest(){}
 }

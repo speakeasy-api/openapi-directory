@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AccountPublications {
     @JsonProperty("links")
     public AccountPublicationsLinks links;
+
     public AccountPublications withLinks(AccountPublicationsLinks links) {
         this.links = links;
         return this;
@@ -22,9 +23,14 @@ public class AccountPublications {
      */
     @JsonProperty("publications")
     public PublicationReporting[] publications;
+
     public AccountPublications withPublications(PublicationReporting[] publications) {
         this.publications = publications;
         return this;
     }
     
+    public AccountPublications(@JsonProperty("links") AccountPublicationsLinks links, @JsonProperty("publications") PublicationReporting[] publications) {
+        this.links = links;
+        this.publications = publications;
+  }
 }

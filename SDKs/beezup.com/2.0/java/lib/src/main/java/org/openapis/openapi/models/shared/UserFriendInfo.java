@@ -17,6 +17,7 @@ public class UserFriendInfo {
      */
     @JsonProperty("company")
     public String company;
+
     public UserFriendInfo withCompany(String company) {
         this.company = company;
         return this;
@@ -27,6 +28,7 @@ public class UserFriendInfo {
      */
     @JsonProperty("countryIsoCodeAlpha3")
     public String countryIsoCodeAlpha3;
+
     public UserFriendInfo withCountryIsoCodeAlpha3(String countryIsoCodeAlpha3) {
         this.countryIsoCodeAlpha3 = countryIsoCodeAlpha3;
         return this;
@@ -37,6 +39,7 @@ public class UserFriendInfo {
      */
     @JsonProperty("email")
     public String email;
+
     public UserFriendInfo withEmail(String email) {
         this.email = email;
         return this;
@@ -47,6 +50,7 @@ public class UserFriendInfo {
      */
     @JsonProperty("firstName")
     public String firstName;
+
     public UserFriendInfo withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -57,6 +61,7 @@ public class UserFriendInfo {
      */
     @JsonProperty("lastName")
     public String lastName;
+
     public UserFriendInfo withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -68,6 +73,7 @@ public class UserFriendInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profilePictureUrl")
     public String profilePictureUrl;
+
     public UserFriendInfo withProfilePictureUrl(String profilePictureUrl) {
         this.profilePictureUrl = profilePictureUrl;
         return this;
@@ -78,6 +84,7 @@ public class UserFriendInfo {
      */
     @JsonProperty("userId")
     public String userId;
+
     public UserFriendInfo withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -89,9 +96,18 @@ public class UserFriendInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("whatIDo")
     public String whatIDo;
+
     public UserFriendInfo withWhatIDo(String whatIDo) {
         this.whatIDo = whatIDo;
         return this;
     }
     
+    public UserFriendInfo(@JsonProperty("company") String company, @JsonProperty("countryIsoCodeAlpha3") String countryIsoCodeAlpha3, @JsonProperty("email") String email, @JsonProperty("firstName") String firstName, @JsonProperty("lastName") String lastName, @JsonProperty("userId") String userId) {
+        this.company = company;
+        this.countryIsoCodeAlpha3 = countryIsoCodeAlpha3;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userId = userId;
+  }
 }

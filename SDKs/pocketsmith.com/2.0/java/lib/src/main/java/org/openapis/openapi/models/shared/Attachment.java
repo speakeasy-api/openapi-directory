@@ -18,6 +18,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content_type")
     public String contentType;
+
     public Attachment withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +27,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content_type_meta")
     public AttachmentContentTypeMeta contentTypeMeta;
+
     public Attachment withContentTypeMeta(AttachmentContentTypeMeta contentTypeMeta) {
         this.contentTypeMeta = contentTypeMeta;
         return this;
@@ -37,6 +39,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public Attachment withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -48,6 +51,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_name")
     public String fileName;
+
     public Attachment withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -59,6 +63,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Attachment withId(Long id) {
         this.id = id;
         return this;
@@ -70,6 +75,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_url")
     public String originalUrl;
+
     public Attachment withOriginalUrl(String originalUrl) {
         this.originalUrl = originalUrl;
         return this;
@@ -81,6 +87,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Attachment withTitle(String title) {
         this.title = title;
         return this;
@@ -92,6 +99,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Attachment withType(String type) {
         this.type = type;
         return this;
@@ -103,6 +111,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public Attachment withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -111,9 +120,11 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variants")
     public AttachmentVariants variants;
+
     public Attachment withVariants(AttachmentVariants variants) {
         this.variants = variants;
         return this;
     }
     
+    public Attachment(){}
 }

@@ -13,6 +13,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public Search2017BoulderElectionExpendituresRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public Search2017BoulderElectionExpendituresRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public Search2017BoulderElectionExpendituresRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public Search2017BoulderElectionExpendituresRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public Search2017BoulderElectionExpendituresRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public Search2017BoulderElectionExpendituresRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public Search2017BoulderElectionExpendituresRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public Search2017BoulderElectionExpendituresRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public Search2017BoulderElectionExpendituresRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public Search2017BoulderElectionExpendituresRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public Search2017BoulderElectionExpendituresRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public Search2017BoulderElectionExpendituresRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public Search2017BoulderElectionExpendituresRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public Search2017BoulderElectionExpendituresRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_2017_boulder_election_expenditures.city")
     public String searchDb2017BoulderElectionExpendituresCity;
+
     public Search2017BoulderElectionExpendituresRequest withSearchDb2017BoulderElectionExpendituresCity(String searchDb2017BoulderElectionExpendituresCity) {
         this.searchDb2017BoulderElectionExpendituresCity = searchDb2017BoulderElectionExpendituresCity;
         return this;
@@ -163,6 +178,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_2017_boulder_election_expenditures.committee")
     public String searchDb2017BoulderElectionExpendituresCommittee;
+
     public Search2017BoulderElectionExpendituresRequest withSearchDb2017BoulderElectionExpendituresCommittee(String searchDb2017BoulderElectionExpendituresCommittee) {
         this.searchDb2017BoulderElectionExpendituresCommittee = searchDb2017BoulderElectionExpendituresCommittee;
         return this;
@@ -173,6 +189,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_2017_boulder_election_expenditures.expenditure")
     public Double searchDb2017BoulderElectionExpendituresExpenditure;
+
     public Search2017BoulderElectionExpendituresRequest withSearchDb2017BoulderElectionExpendituresExpenditure(Double searchDb2017BoulderElectionExpendituresExpenditure) {
         this.searchDb2017BoulderElectionExpendituresExpenditure = searchDb2017BoulderElectionExpendituresExpenditure;
         return this;
@@ -183,6 +200,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_2017_boulder_election_expenditures.name")
     public String searchDb2017BoulderElectionExpendituresName;
+
     public Search2017BoulderElectionExpendituresRequest withSearchDb2017BoulderElectionExpendituresName(String searchDb2017BoulderElectionExpendituresName) {
         this.searchDb2017BoulderElectionExpendituresName = searchDb2017BoulderElectionExpendituresName;
         return this;
@@ -193,6 +211,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_2017_boulder_election_expenditures.purpose")
     public String searchDb2017BoulderElectionExpendituresPurpose;
+
     public Search2017BoulderElectionExpendituresRequest withSearchDb2017BoulderElectionExpendituresPurpose(String searchDb2017BoulderElectionExpendituresPurpose) {
         this.searchDb2017BoulderElectionExpendituresPurpose = searchDb2017BoulderElectionExpendituresPurpose;
         return this;
@@ -203,6 +222,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_2017_boulder_election_expenditures.state")
     public String searchDb2017BoulderElectionExpendituresState;
+
     public Search2017BoulderElectionExpendituresRequest withSearchDb2017BoulderElectionExpendituresState(String searchDb2017BoulderElectionExpendituresState) {
         this.searchDb2017BoulderElectionExpendituresState = searchDb2017BoulderElectionExpendituresState;
         return this;
@@ -213,6 +233,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_2017_boulder_election_expenditures.street")
     public String searchDb2017BoulderElectionExpendituresStreet;
+
     public Search2017BoulderElectionExpendituresRequest withSearchDb2017BoulderElectionExpendituresStreet(String searchDb2017BoulderElectionExpendituresStreet) {
         this.searchDb2017BoulderElectionExpendituresStreet = searchDb2017BoulderElectionExpendituresStreet;
         return this;
@@ -223,6 +244,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_2017_boulder_election_expenditures.transaction_date")
     public String searchDb2017BoulderElectionExpendituresTransactionDate;
+
     public Search2017BoulderElectionExpendituresRequest withSearchDb2017BoulderElectionExpendituresTransactionDate(String searchDb2017BoulderElectionExpendituresTransactionDate) {
         this.searchDb2017BoulderElectionExpendituresTransactionDate = searchDb2017BoulderElectionExpendituresTransactionDate;
         return this;
@@ -233,6 +255,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_2017_boulder_election_expenditures.zip")
     public String searchDb2017BoulderElectionExpendituresZip;
+
     public Search2017BoulderElectionExpendituresRequest withSearchDb2017BoulderElectionExpendituresZip(String searchDb2017BoulderElectionExpendituresZip) {
         this.searchDb2017BoulderElectionExpendituresZip = searchDb2017BoulderElectionExpendituresZip;
         return this;
@@ -243,6 +266,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public Search2017BoulderElectionExpendituresRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -253,6 +277,7 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public Search2017BoulderElectionExpendituresRequest withText(String text) {
         this.text = text;
         return this;
@@ -263,9 +288,11 @@ public class Search2017BoulderElectionExpendituresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public Search2017BoulderElectionExpendituresRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public Search2017BoulderElectionExpendituresRequest(){}
 }

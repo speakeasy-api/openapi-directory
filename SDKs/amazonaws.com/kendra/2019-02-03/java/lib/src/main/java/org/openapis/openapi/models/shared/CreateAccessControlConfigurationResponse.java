@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateAccessControlConfigurationResponse {
     @JsonProperty("Id")
     public String id;
+
     public CreateAccessControlConfigurationResponse withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CreateAccessControlConfigurationResponse(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

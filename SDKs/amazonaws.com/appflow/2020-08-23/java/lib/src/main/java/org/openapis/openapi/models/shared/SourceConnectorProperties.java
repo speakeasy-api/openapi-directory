@@ -15,6 +15,7 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Amplitude")
     public AmplitudeSourceProperties amplitude;
+
     public SourceConnectorProperties withAmplitude(AmplitudeSourceProperties amplitude) {
         this.amplitude = amplitude;
         return this;
@@ -26,6 +27,7 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomConnector")
     public CustomConnectorSourceProperties customConnector;
+
     public SourceConnectorProperties withCustomConnector(CustomConnectorSourceProperties customConnector) {
         this.customConnector = customConnector;
         return this;
@@ -34,6 +36,7 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Datadog")
     public DatadogSourceProperties datadog;
+
     public SourceConnectorProperties withDatadog(DatadogSourceProperties datadog) {
         this.datadog = datadog;
         return this;
@@ -42,6 +45,7 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dynatrace")
     public DynatraceSourceProperties dynatrace;
+
     public SourceConnectorProperties withDynatrace(DynatraceSourceProperties dynatrace) {
         this.dynatrace = dynatrace;
         return this;
@@ -50,6 +54,7 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoogleAnalytics")
     public GoogleAnalyticsSourceProperties googleAnalytics;
+
     public SourceConnectorProperties withGoogleAnalytics(GoogleAnalyticsSourceProperties googleAnalytics) {
         this.googleAnalytics = googleAnalytics;
         return this;
@@ -58,6 +63,7 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InforNexus")
     public InforNexusSourceProperties inforNexus;
+
     public SourceConnectorProperties withInforNexus(InforNexusSourceProperties inforNexus) {
         this.inforNexus = inforNexus;
         return this;
@@ -66,6 +72,7 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marketo")
     public MarketoSourceProperties marketo;
+
     public SourceConnectorProperties withMarketo(MarketoSourceProperties marketo) {
         this.marketo = marketo;
         return this;
@@ -74,6 +81,7 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pardot")
     public PardotSourceProperties pardot;
+
     public SourceConnectorProperties withPardot(PardotSourceProperties pardot) {
         this.pardot = pardot;
         return this;
@@ -82,6 +90,7 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3")
     public S3SourceProperties s3;
+
     public SourceConnectorProperties withS3(S3SourceProperties s3) {
         this.s3 = s3;
         return this;
@@ -93,6 +102,7 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SAPOData")
     public SAPODataSourceProperties sapoData;
+
     public SourceConnectorProperties withSAPOData(SAPODataSourceProperties sapoData) {
         this.sapoData = sapoData;
         return this;
@@ -101,6 +111,7 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Salesforce")
     public SalesforceSourceProperties salesforce;
+
     public SourceConnectorProperties withSalesforce(SalesforceSourceProperties salesforce) {
         this.salesforce = salesforce;
         return this;
@@ -109,6 +120,7 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceNow")
     public ServiceNowSourceProperties serviceNow;
+
     public SourceConnectorProperties withServiceNow(ServiceNowSourceProperties serviceNow) {
         this.serviceNow = serviceNow;
         return this;
@@ -117,6 +129,7 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Singular")
     public SingularSourceProperties singular;
+
     public SourceConnectorProperties withSingular(SingularSourceProperties singular) {
         this.singular = singular;
         return this;
@@ -125,6 +138,7 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Slack")
     public SlackSourceProperties slack;
+
     public SourceConnectorProperties withSlack(SlackSourceProperties slack) {
         this.slack = slack;
         return this;
@@ -133,6 +147,7 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Trendmicro")
     public TrendmicroSourceProperties trendmicro;
+
     public SourceConnectorProperties withTrendmicro(TrendmicroSourceProperties trendmicro) {
         this.trendmicro = trendmicro;
         return this;
@@ -141,6 +156,7 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Veeva")
     public VeevaSourceProperties veeva;
+
     public SourceConnectorProperties withVeeva(VeevaSourceProperties veeva) {
         this.veeva = veeva;
         return this;
@@ -149,9 +165,11 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Zendesk")
     public ZendeskSourceProperties zendesk;
+
     public SourceConnectorProperties withZendesk(ZendeskSourceProperties zendesk) {
         this.zendesk = zendesk;
         return this;
     }
     
+    public SourceConnectorProperties(){}
 }

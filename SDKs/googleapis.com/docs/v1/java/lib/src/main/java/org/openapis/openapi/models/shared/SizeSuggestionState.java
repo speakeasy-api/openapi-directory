@@ -18,6 +18,7 @@ public class SizeSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heightSuggested")
     public Boolean heightSuggested;
+
     public SizeSuggestionState withHeightSuggested(Boolean heightSuggested) {
         this.heightSuggested = heightSuggested;
         return this;
@@ -29,9 +30,11 @@ public class SizeSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("widthSuggested")
     public Boolean widthSuggested;
+
     public SizeSuggestionState withWidthSuggested(Boolean widthSuggested) {
         this.widthSuggested = widthSuggested;
         return this;
     }
     
+    public SizeSuggestionState(){}
 }

@@ -15,6 +15,7 @@ public class ListS3BucketsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Buckets")
     public S3BucketInfo[] buckets;
+
     public ListS3BucketsResponse withBuckets(S3BucketInfo[] buckets) {
         this.buckets = buckets;
         return this;
@@ -23,9 +24,11 @@ public class ListS3BucketsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListS3BucketsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListS3BucketsResponse(){}
 }

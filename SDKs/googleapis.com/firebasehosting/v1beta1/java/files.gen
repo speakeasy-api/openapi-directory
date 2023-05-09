@@ -174,4 +174,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/VersionFile.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListVersionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PopulateVersionFilesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PopulateVersionFilesRequest.java
+docs/sdk/README.md
+docs/projects/README.md
+docs/sites/README.md
 USAGE.md

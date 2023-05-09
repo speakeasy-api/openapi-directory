@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PeopleContactGroupsBatchGetResponse {
@@ -12,6 +13,7 @@ public class PeopleContactGroupsBatchGetResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetContactGroupsResponse batchGetContactGroupsResponse;
+
     public PeopleContactGroupsBatchGetResponse withBatchGetContactGroupsResponse(org.openapis.openapi.models.shared.BatchGetContactGroupsResponse batchGetContactGroupsResponse) {
         this.batchGetContactGroupsResponse = batchGetContactGroupsResponse;
         return this;
@@ -19,6 +21,7 @@ public class PeopleContactGroupsBatchGetResponse {
     
     
     public String contentType;
+
     public PeopleContactGroupsBatchGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PeopleContactGroupsBatchGetResponse {
     
     
     public Integer statusCode;
+
     public PeopleContactGroupsBatchGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PeopleContactGroupsBatchGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PeopleContactGroupsBatchGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PeopleContactGroupsBatchGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

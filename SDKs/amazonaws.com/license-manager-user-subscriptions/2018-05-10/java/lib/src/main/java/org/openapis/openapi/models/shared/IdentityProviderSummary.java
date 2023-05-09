@@ -15,6 +15,7 @@ public class IdentityProviderSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureMessage")
     public String failureMessage;
+
     public IdentityProviderSummary withFailureMessage(String failureMessage) {
         this.failureMessage = failureMessage;
         return this;
@@ -22,6 +23,7 @@ public class IdentityProviderSummary {
     
     @JsonProperty("IdentityProvider")
     public IdentityProvider identityProvider;
+
     public IdentityProviderSummary withIdentityProvider(IdentityProvider identityProvider) {
         this.identityProvider = identityProvider;
         return this;
@@ -29,6 +31,7 @@ public class IdentityProviderSummary {
     
     @JsonProperty("Product")
     public String product;
+
     public IdentityProviderSummary withProduct(String product) {
         this.product = product;
         return this;
@@ -36,6 +39,7 @@ public class IdentityProviderSummary {
     
     @JsonProperty("Settings")
     public Settings settings;
+
     public IdentityProviderSummary withSettings(Settings settings) {
         this.settings = settings;
         return this;
@@ -43,9 +47,16 @@ public class IdentityProviderSummary {
     
     @JsonProperty("Status")
     public String status;
+
     public IdentityProviderSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public IdentityProviderSummary(@JsonProperty("IdentityProvider") IdentityProvider identityProvider, @JsonProperty("Product") String product, @JsonProperty("Settings") Settings settings, @JsonProperty("Status") String status) {
+        this.identityProvider = identityProvider;
+        this.product = product;
+        this.settings = settings;
+        this.status = status;
+  }
 }

@@ -12,6 +12,7 @@ public class DeleteProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public DeleteProjectRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -20,6 +21,7 @@ public class DeleteProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteStack")
     public Boolean deleteStack;
+
     public DeleteProjectRequest withDeleteStack(Boolean deleteStack) {
         this.deleteStack = deleteStack;
         return this;
@@ -27,9 +29,13 @@ public class DeleteProjectRequest {
     
     @JsonProperty("id")
     public String id;
+
     public DeleteProjectRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeleteProjectRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

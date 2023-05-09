@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateObservabilityConfigurationRequest {
     @JsonProperty("ObservabilityConfigurationName")
     public String observabilityConfigurationName;
+
     public CreateObservabilityConfigurationRequest withObservabilityConfigurationName(String observabilityConfigurationName) {
         this.observabilityConfigurationName = observabilityConfigurationName;
         return this;
@@ -19,6 +20,7 @@ public class CreateObservabilityConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateObservabilityConfigurationRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -27,9 +29,13 @@ public class CreateObservabilityConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TraceConfiguration")
     public TraceConfiguration traceConfiguration;
+
     public CreateObservabilityConfigurationRequest withTraceConfiguration(TraceConfiguration traceConfiguration) {
         this.traceConfiguration = traceConfiguration;
         return this;
     }
     
+    public CreateObservabilityConfigurationRequest(@JsonProperty("ObservabilityConfigurationName") String observabilityConfigurationName) {
+        this.observabilityConfigurationName = observabilityConfigurationName;
+  }
 }

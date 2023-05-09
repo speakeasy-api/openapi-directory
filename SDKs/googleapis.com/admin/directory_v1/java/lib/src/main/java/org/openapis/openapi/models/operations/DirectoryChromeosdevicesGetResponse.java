@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DirectoryChromeosdevicesGetResponse {
@@ -12,6 +13,7 @@ public class DirectoryChromeosdevicesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.ChromeOsDevice chromeOsDevice;
+
     public DirectoryChromeosdevicesGetResponse withChromeOsDevice(org.openapis.openapi.models.shared.ChromeOsDevice chromeOsDevice) {
         this.chromeOsDevice = chromeOsDevice;
         return this;
@@ -19,6 +21,7 @@ public class DirectoryChromeosdevicesGetResponse {
     
     
     public String contentType;
+
     public DirectoryChromeosdevicesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DirectoryChromeosdevicesGetResponse {
     
     
     public Integer statusCode;
+
     public DirectoryChromeosdevicesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DirectoryChromeosdevicesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DirectoryChromeosdevicesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DirectoryChromeosdevicesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

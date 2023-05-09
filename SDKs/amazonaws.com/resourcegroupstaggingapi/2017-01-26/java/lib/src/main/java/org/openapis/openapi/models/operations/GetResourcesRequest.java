@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetResourcesInput getResourcesInput;
+
     public GetResourcesRequest withGetResourcesInput(org.openapis.openapi.models.shared.GetResourcesInput getResourcesInput) {
         this.getResourcesInput = getResourcesInput;
         return this;
@@ -19,6 +21,7 @@ public class GetResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PaginationToken")
     public String paginationToken;
+
     public GetResourcesRequest withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
@@ -29,6 +32,7 @@ public class GetResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourcesPerPage")
     public String resourcesPerPage;
+
     public GetResourcesRequest withResourcesPerPage(String resourcesPerPage) {
         this.resourcesPerPage = resourcesPerPage;
         return this;
@@ -36,6 +40,7 @@ public class GetResourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetResourcesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class GetResourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetResourcesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class GetResourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetResourcesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class GetResourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetResourcesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class GetResourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetResourcesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class GetResourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetResourcesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class GetResourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetResourcesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class GetResourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public GetResourcesXAmzTargetEnum xAmzTarget;
+
     public GetResourcesRequest withXAmzTarget(GetResourcesXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public GetResourcesRequest(@JsonProperty("GetResourcesInput") org.openapis.openapi.models.shared.GetResourcesInput getResourcesInput, @JsonProperty("X-Amz-Target") GetResourcesXAmzTargetEnum xAmzTarget) {
+        this.getResourcesInput = getResourcesInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

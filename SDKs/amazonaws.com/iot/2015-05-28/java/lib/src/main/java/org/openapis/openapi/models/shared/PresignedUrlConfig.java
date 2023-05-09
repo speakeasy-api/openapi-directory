@@ -15,6 +15,7 @@ public class PresignedUrlConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiresInSec")
     public Long expiresInSec;
+
     public PresignedUrlConfig withExpiresInSec(Long expiresInSec) {
         this.expiresInSec = expiresInSec;
         return this;
@@ -23,9 +24,11 @@ public class PresignedUrlConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public PresignedUrlConfig withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public PresignedUrlConfig(){}
 }

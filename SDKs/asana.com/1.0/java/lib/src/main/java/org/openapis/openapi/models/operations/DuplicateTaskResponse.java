@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DuplicateTaskResponse {
     
     public String contentType;
+
     public DuplicateTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DuplicateTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public DuplicateTaskResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class DuplicateTaskResponse {
     
     
     public Integer statusCode;
+
     public DuplicateTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DuplicateTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DuplicateTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DuplicateTaskResponse {
      */
     
     public DuplicateTask201ApplicationJSON duplicateTask201ApplicationJSONObject;
+
     public DuplicateTaskResponse withDuplicateTask201ApplicationJSONObject(DuplicateTask201ApplicationJSON duplicateTask201ApplicationJSONObject) {
         this.duplicateTask201ApplicationJSONObject = duplicateTask201ApplicationJSONObject;
         return this;
     }
     
+    public DuplicateTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

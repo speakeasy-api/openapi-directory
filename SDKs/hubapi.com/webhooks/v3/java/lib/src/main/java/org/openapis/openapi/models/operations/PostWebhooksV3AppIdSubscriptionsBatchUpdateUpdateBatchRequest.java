@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BatchInputSubscriptionBatchUpdateRequest batchInputSubscriptionBatchUpdateRequest;
+
     public PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchRequest withBatchInputSubscriptionBatchUpdateRequest(org.openapis.openapi.models.shared.BatchInputSubscriptionBatchUpdateRequest batchInputSubscriptionBatchUpdateRequest) {
         this.batchInputSubscriptionBatchUpdateRequest = batchInputSubscriptionBatchUpdateRequest;
         return this;
@@ -16,9 +18,14 @@ public class PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public Integer appId;
+
     public PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchRequest withAppId(Integer appId) {
         this.appId = appId;
         return this;
     }
     
+    public PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchRequest(@JsonProperty("BatchInputSubscriptionBatchUpdateRequest") org.openapis.openapi.models.shared.BatchInputSubscriptionBatchUpdateRequest batchInputSubscriptionBatchUpdateRequest, @JsonProperty("appId") Integer appId) {
+        this.batchInputSubscriptionBatchUpdateRequest = batchInputSubscriptionBatchUpdateRequest;
+        this.appId = appId;
+  }
 }

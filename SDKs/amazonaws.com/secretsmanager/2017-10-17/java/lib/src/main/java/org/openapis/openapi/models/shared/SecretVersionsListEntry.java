@@ -22,6 +22,7 @@ public class SecretVersionsListEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public SecretVersionsListEntry withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -30,6 +31,7 @@ public class SecretVersionsListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyIds")
     public String[] kmsKeyIds;
+
     public SecretVersionsListEntry withKmsKeyIds(String[] kmsKeyIds) {
         this.kmsKeyIds = kmsKeyIds;
         return this;
@@ -40,6 +42,7 @@ public class SecretVersionsListEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastAccessedDate")
     public OffsetDateTime lastAccessedDate;
+
     public SecretVersionsListEntry withLastAccessedDate(OffsetDateTime lastAccessedDate) {
         this.lastAccessedDate = lastAccessedDate;
         return this;
@@ -48,6 +51,7 @@ public class SecretVersionsListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionId")
     public String versionId;
+
     public SecretVersionsListEntry withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
@@ -56,9 +60,11 @@ public class SecretVersionsListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionStages")
     public String[] versionStages;
+
     public SecretVersionsListEntry withVersionStages(String[] versionStages) {
         this.versionStages = versionStages;
         return this;
     }
     
+    public SecretVersionsListEntry(){}
 }

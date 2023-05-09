@@ -15,6 +15,7 @@ public class ListCodeReviewsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeReviewSummaries")
     public CodeReviewSummary[] codeReviewSummaries;
+
     public ListCodeReviewsResponse withCodeReviewSummaries(CodeReviewSummary[] codeReviewSummaries) {
         this.codeReviewSummaries = codeReviewSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListCodeReviewsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCodeReviewsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCodeReviewsResponse(){}
 }

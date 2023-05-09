@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1DataTaxonomyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDataplexV1DataTaxonomyInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1DataTaxonomyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDataplexV1DataTaxonomyInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1DataTaxonomyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleCloudDataplexV1DataTaxonomyInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDataplexV1DataTaxonomyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudDataplexV1DataTaxonomyInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataTaxonomyInput(){}
 }

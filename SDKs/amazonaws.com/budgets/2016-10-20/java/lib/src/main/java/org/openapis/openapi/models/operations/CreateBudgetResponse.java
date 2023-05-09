@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateBudgetResponse {
@@ -12,6 +13,7 @@ public class CreateBudgetResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateBudgetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateBudgetResponse {
     
     
     public String contentType;
+
     public CreateBudgetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateBudgetResponse {
      */
     
     public java.util.Map<String, Object> createBudgetResponse;
+
     public CreateBudgetResponse withCreateBudgetResponse(java.util.Map<String, Object> createBudgetResponse) {
         this.createBudgetResponse = createBudgetResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateBudgetResponse {
      */
     
     public Object creationLimitExceededException;
+
     public CreateBudgetResponse withCreationLimitExceededException(Object creationLimitExceededException) {
         this.creationLimitExceededException = creationLimitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateBudgetResponse {
      */
     
     public Object duplicateRecordException;
+
     public CreateBudgetResponse withDuplicateRecordException(Object duplicateRecordException) {
         this.duplicateRecordException = duplicateRecordException;
         return this;
@@ -59,6 +65,7 @@ public class CreateBudgetResponse {
      */
     
     public Object internalErrorException;
+
     public CreateBudgetResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -69,6 +76,7 @@ public class CreateBudgetResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateBudgetResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -76,6 +84,7 @@ public class CreateBudgetResponse {
     
     
     public Integer statusCode;
+
     public CreateBudgetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateBudgetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateBudgetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CreateBudgetResponse {
      */
     
     public Object throttlingException;
+
     public CreateBudgetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateBudgetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

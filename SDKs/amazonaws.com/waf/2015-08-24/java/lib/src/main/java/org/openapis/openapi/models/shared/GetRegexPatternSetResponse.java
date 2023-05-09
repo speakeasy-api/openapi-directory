@@ -15,9 +15,11 @@ public class GetRegexPatternSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegexPatternSet")
     public RegexPatternSet regexPatternSet;
+
     public GetRegexPatternSetResponse withRegexPatternSet(RegexPatternSet regexPatternSet) {
         this.regexPatternSet = regexPatternSet;
         return this;
     }
     
+    public GetRegexPatternSetResponse(){}
 }

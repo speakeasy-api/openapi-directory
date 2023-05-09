@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivateClassRequest {
@@ -12,9 +13,13 @@ public class ActivateClassRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
     public String class_;
+
     public ActivateClassRequest withClass(String class_) {
         this.class_ = class_;
         return this;
     }
     
+    public ActivateClassRequest(@JsonProperty("class") String class_) {
+        this.class_ = class_;
+  }
 }

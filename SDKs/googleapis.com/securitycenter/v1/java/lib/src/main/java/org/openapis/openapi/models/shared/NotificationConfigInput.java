@@ -18,6 +18,7 @@ public class NotificationConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public NotificationConfigInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class NotificationConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NotificationConfigInput withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class NotificationConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubsubTopic")
     public String pubsubTopic;
+
     public NotificationConfigInput withPubsubTopic(String pubsubTopic) {
         this.pubsubTopic = pubsubTopic;
         return this;
@@ -51,9 +54,11 @@ public class NotificationConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamingConfig")
     public StreamingConfig streamingConfig;
+
     public NotificationConfigInput withStreamingConfig(StreamingConfig streamingConfig) {
         this.streamingConfig = streamingConfig;
         return this;
     }
     
+    public NotificationConfigInput(){}
 }

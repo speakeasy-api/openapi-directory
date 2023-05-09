@@ -18,6 +18,7 @@ public class AccountsCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public Account account;
+
     public AccountsCustomBatchResponseEntry withAccount(Account account) {
         this.account = account;
         return this;
@@ -29,6 +30,7 @@ public class AccountsCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchId")
     public Long batchId;
+
     public AccountsCustomBatchResponseEntry withBatchId(Long batchId) {
         this.batchId = batchId;
         return this;
@@ -40,6 +42,7 @@ public class AccountsCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Errors errors;
+
     public AccountsCustomBatchResponseEntry withErrors(Errors errors) {
         this.errors = errors;
         return this;
@@ -51,9 +54,11 @@ public class AccountsCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccountsCustomBatchResponseEntry withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public AccountsCustomBatchResponseEntry(){}
 }

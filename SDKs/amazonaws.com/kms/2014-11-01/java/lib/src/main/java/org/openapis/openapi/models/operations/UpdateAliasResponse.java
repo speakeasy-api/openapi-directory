@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAliasResponse {
     
     public String contentType;
+
     public UpdateAliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAliasResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public UpdateAliasResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAliasResponse {
      */
     
     public Object kmsInternalException;
+
     public UpdateAliasResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAliasResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public UpdateAliasResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateAliasResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateAliasResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateAliasResponse {
      */
     
     public Object notFoundException;
+
     public UpdateAliasResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateAliasResponse {
     
     
     public Integer statusCode;
+
     public UpdateAliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class UpdateAliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateAliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

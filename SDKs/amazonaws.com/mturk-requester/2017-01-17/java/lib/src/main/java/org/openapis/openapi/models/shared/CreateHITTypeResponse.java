@@ -15,9 +15,11 @@ public class CreateHITTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HITTypeId")
     public String hitTypeId;
+
     public CreateHITTypeResponse withHITTypeId(String hitTypeId) {
         this.hitTypeId = hitTypeId;
         return this;
     }
     
+    public CreateHITTypeResponse(){}
 }

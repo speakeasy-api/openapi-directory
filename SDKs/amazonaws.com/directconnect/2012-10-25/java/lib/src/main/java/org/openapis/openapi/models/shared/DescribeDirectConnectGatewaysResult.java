@@ -15,6 +15,7 @@ public class DescribeDirectConnectGatewaysResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directConnectGateways")
     public DirectConnectGateway[] directConnectGateways;
+
     public DescribeDirectConnectGatewaysResult withDirectConnectGateways(DirectConnectGateway[] directConnectGateways) {
         this.directConnectGateways = directConnectGateways;
         return this;
@@ -23,9 +24,11 @@ public class DescribeDirectConnectGatewaysResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeDirectConnectGatewaysResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeDirectConnectGatewaysResult(){}
 }

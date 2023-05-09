@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMandateRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mandateUuid")
     public String mandateUuid;
+
     public GetMandateRequest withMandateUuid(String mandateUuid) {
         this.mandateUuid = mandateUuid;
         return this;
     }
     
+    public GetMandateRequest(@JsonProperty("mandateUuid") String mandateUuid) {
+        this.mandateUuid = mandateUuid;
+  }
 }

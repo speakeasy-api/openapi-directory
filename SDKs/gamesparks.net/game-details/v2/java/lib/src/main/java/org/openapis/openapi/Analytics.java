@@ -59,12 +59,10 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETAnalyticsDataUsingGETResponse res = new org.openapis.openapi.models.operations.GETAnalyticsDataUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETAnalyticsDataUsingGETResponse res = new org.openapis.openapi.models.operations.GETAnalyticsDataUsingGETResponse(contentType, httpRes.statusCode()) {{
             analyticsDataSwaggerModels = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -113,12 +111,10 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDataCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETDataCountUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETDataCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETDataCountUsingGETResponse(contentType, httpRes.statusCode()) {{
             analyticsDataCountSwaggerModel = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -167,12 +163,10 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETRetentionUsingGETResponse res = new org.openapis.openapi.models.operations.GETRetentionUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETRetentionUsingGETResponse res = new org.openapis.openapi.models.operations.GETRetentionUsingGETResponse(contentType, httpRes.statusCode()) {{
             analyticsDataCountSwaggerModel = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

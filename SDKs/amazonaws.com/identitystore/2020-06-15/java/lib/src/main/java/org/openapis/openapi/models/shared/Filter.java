@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Filter {
     @JsonProperty("AttributePath")
     public String attributePath;
+
     public Filter withAttributePath(String attributePath) {
         this.attributePath = attributePath;
         return this;
@@ -19,9 +20,14 @@ public class Filter {
     
     @JsonProperty("AttributeValue")
     public String attributeValue;
+
     public Filter withAttributeValue(String attributeValue) {
         this.attributeValue = attributeValue;
         return this;
     }
     
+    public Filter(@JsonProperty("AttributePath") String attributePath, @JsonProperty("AttributeValue") String attributeValue) {
+        this.attributePath = attributePath;
+        this.attributeValue = attributeValue;
+  }
 }

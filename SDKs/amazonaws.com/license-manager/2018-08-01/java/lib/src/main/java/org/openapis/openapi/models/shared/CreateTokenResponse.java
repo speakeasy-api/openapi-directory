@@ -15,6 +15,7 @@ public class CreateTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Token")
     public String token;
+
     public CreateTokenResponse withToken(String token) {
         this.token = token;
         return this;
@@ -23,6 +24,7 @@ public class CreateTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TokenId")
     public String tokenId;
+
     public CreateTokenResponse withTokenId(String tokenId) {
         this.tokenId = tokenId;
         return this;
@@ -31,9 +33,11 @@ public class CreateTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TokenType")
     public TokenTypeEnum tokenType;
+
     public CreateTokenResponse withTokenType(TokenTypeEnum tokenType) {
         this.tokenType = tokenType;
         return this;
     }
     
+    public CreateTokenResponse(){}
 }

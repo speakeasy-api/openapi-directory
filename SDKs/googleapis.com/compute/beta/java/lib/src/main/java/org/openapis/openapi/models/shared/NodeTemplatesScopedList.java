@@ -15,6 +15,7 @@ public class NodeTemplatesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeTemplates")
     public NodeTemplate[] nodeTemplates;
+
     public NodeTemplatesScopedList withNodeTemplates(NodeTemplate[] nodeTemplates) {
         this.nodeTemplates = nodeTemplates;
         return this;
@@ -26,9 +27,11 @@ public class NodeTemplatesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public NodeTemplatesScopedListWarning warning;
+
     public NodeTemplatesScopedList withWarning(NodeTemplatesScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public NodeTemplatesScopedList(){}
 }

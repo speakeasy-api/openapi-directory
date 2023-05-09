@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyEbsDefaultKmsKeyIdRequest {
     
     public Boolean dryRun;
+
     public ModifyEbsDefaultKmsKeyIdRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class ModifyEbsDefaultKmsKeyIdRequest {
     
     
     public String kmsKeyId;
+
     public ModifyEbsDefaultKmsKeyIdRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
     }
     
+    public ModifyEbsDefaultKmsKeyIdRequest(@JsonProperty("KmsKeyId") String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+  }
 }

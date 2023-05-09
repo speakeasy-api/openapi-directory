@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportationCommitColumnsRequest {
@@ -12,6 +13,7 @@ public class ImportationCommitColumnsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
     public String executionId;
+
     public ImportationCommitColumnsRequest withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -22,9 +24,14 @@ public class ImportationCommitColumnsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public ImportationCommitColumnsRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public ImportationCommitColumnsRequest(@JsonProperty("executionId") String executionId, @JsonProperty("storeId") String storeId) {
+        this.executionId = executionId;
+        this.storeId = storeId;
+  }
 }

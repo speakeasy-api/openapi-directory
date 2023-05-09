@@ -34,7 +34,8 @@ public enum ExportableVolumeFieldEnum {
     CURRENT_PERFORMANCE_RISK("CurrentPerformanceRisk"),
     RECOMMENDATION_OPTIONS_SAVINGS_OPPORTUNITY_PERCENTAGE("RecommendationOptionsSavingsOpportunityPercentage"),
     RECOMMENDATION_OPTIONS_ESTIMATED_MONTHLY_SAVINGS_CURRENCY("RecommendationOptionsEstimatedMonthlySavingsCurrency"),
-    RECOMMENDATION_OPTIONS_ESTIMATED_MONTHLY_SAVINGS_VALUE("RecommendationOptionsEstimatedMonthlySavingsValue");
+    RECOMMENDATION_OPTIONS_ESTIMATED_MONTHLY_SAVINGS_VALUE("RecommendationOptionsEstimatedMonthlySavingsValue"),
+    ROOT_VOLUME("RootVolume");
 
     @JsonValue
     public final String value;

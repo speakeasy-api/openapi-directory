@@ -21,6 +21,7 @@ public class OrganizationDependabotSecret {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public OrganizationDependabotSecret withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -31,6 +32,7 @@ public class OrganizationDependabotSecret {
      */
     @JsonProperty("name")
     public String name;
+
     public OrganizationDependabotSecret withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +41,7 @@ public class OrganizationDependabotSecret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selected_repositories_url")
     public String selectedRepositoriesUrl;
+
     public OrganizationDependabotSecret withSelectedRepositoriesUrl(String selectedRepositoriesUrl) {
         this.selectedRepositoriesUrl = selectedRepositoriesUrl;
         return this;
@@ -48,6 +51,7 @@ public class OrganizationDependabotSecret {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public OrganizationDependabotSecret withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -58,9 +62,16 @@ public class OrganizationDependabotSecret {
      */
     @JsonProperty("visibility")
     public OrganizationDependabotSecretVisibilityEnum visibility;
+
     public OrganizationDependabotSecret withVisibility(OrganizationDependabotSecretVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public OrganizationDependabotSecret(@JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("name") String name, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("visibility") OrganizationDependabotSecretVisibilityEnum visibility) {
+        this.createdAt = createdAt;
+        this.name = name;
+        this.updatedAt = updatedAt;
+        this.visibility = visibility;
+  }
 }

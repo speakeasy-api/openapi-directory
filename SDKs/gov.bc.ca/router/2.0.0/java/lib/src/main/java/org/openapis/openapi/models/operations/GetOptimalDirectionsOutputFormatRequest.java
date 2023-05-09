@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetOptimalDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=correctSide")
     public Boolean correctSide;
+
     public GetOptimalDirectionsOutputFormatRequest withCorrectSide(Boolean correctSide) {
         this.correctSide = correctSide;
         return this;
@@ -23,6 +25,7 @@ public class GetOptimalDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=criteria")
     public GetOptimalDirectionsOutputFormatCriteriaEnum criteria;
+
     public GetOptimalDirectionsOutputFormatRequest withCriteria(GetOptimalDirectionsOutputFormatCriteriaEnum criteria) {
         this.criteria = criteria;
         return this;
@@ -33,6 +36,7 @@ public class GetOptimalDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=departure")
     public OffsetDateTime departure;
+
     public GetOptimalDirectionsOutputFormatRequest withDeparture(OffsetDateTime departure) {
         this.departure = departure;
         return this;
@@ -43,6 +47,7 @@ public class GetOptimalDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disable")
     public String disable;
+
     public GetOptimalDirectionsOutputFormatRequest withDisable(String disable) {
         this.disable = disable;
         return this;
@@ -53,6 +58,7 @@ public class GetOptimalDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=distanceUnit")
     public GetOptimalDirectionsOutputFormatDistanceUnitEnum distanceUnit;
+
     public GetOptimalDirectionsOutputFormatRequest withDistanceUnit(GetOptimalDirectionsOutputFormatDistanceUnitEnum distanceUnit) {
         this.distanceUnit = distanceUnit;
         return this;
@@ -63,6 +69,7 @@ public class GetOptimalDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
     public GetOptimalDirectionsOutputFormatOutputFormatEnum outputFormat;
+
     public GetOptimalDirectionsOutputFormatRequest withOutputFormat(GetOptimalDirectionsOutputFormatOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -73,6 +80,7 @@ public class GetOptimalDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
     public GetOptimalDirectionsOutputFormatOutputSrsEnum outputSRS;
+
     public GetOptimalDirectionsOutputFormatRequest withOutputSRS(GetOptimalDirectionsOutputFormatOutputSrsEnum outputSRS) {
         this.outputSRS = outputSRS;
         return this;
@@ -83,6 +91,7 @@ public class GetOptimalDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=points")
     public String points;
+
     public GetOptimalDirectionsOutputFormatRequest withPoints(String points) {
         this.points = points;
         return this;
@@ -93,6 +102,7 @@ public class GetOptimalDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=roundTrip")
     public Boolean roundTrip;
+
     public GetOptimalDirectionsOutputFormatRequest withRoundTrip(Boolean roundTrip) {
         this.roundTrip = roundTrip;
         return this;
@@ -103,9 +113,14 @@ public class GetOptimalDirectionsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routeDescription")
     public String routeDescription;
+
     public GetOptimalDirectionsOutputFormatRequest withRouteDescription(String routeDescription) {
         this.routeDescription = routeDescription;
         return this;
     }
     
+    public GetOptimalDirectionsOutputFormatRequest(@JsonProperty("outputFormat") GetOptimalDirectionsOutputFormatOutputFormatEnum outputFormat, @JsonProperty("points") String points) {
+        this.outputFormat = outputFormat;
+        this.points = points;
+  }
 }

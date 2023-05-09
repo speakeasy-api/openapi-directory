@@ -18,9 +18,11 @@ public class ListMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneOf")
     public ValueMatcher oneOf;
+
     public ListMatcher withOneOf(ValueMatcher oneOf) {
         this.oneOf = oneOf;
         return this;
     }
     
+    public ListMatcher(){}
 }

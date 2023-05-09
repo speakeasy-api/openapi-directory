@@ -12,9 +12,13 @@ public class LinksConversationsListSelf {
      */
     @JsonProperty("href")
     public String href;
+
     public LinksConversationsListSelf withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public LinksConversationsListSelf(@JsonProperty("href") String href) {
+        this.href = href;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypesResultInstanceTypesPlacementGroupInfo {
     
     public DescribeInstanceTypesResultInstanceTypesPlacementGroupInfoSupportedStrategiesEnum[] supportedStrategies;
+
     public DescribeInstanceTypesResultInstanceTypesPlacementGroupInfo withSupportedStrategies(DescribeInstanceTypesResultInstanceTypesPlacementGroupInfoSupportedStrategiesEnum[] supportedStrategies) {
         this.supportedStrategies = supportedStrategies;
         return this;
     }
     
+    public DescribeInstanceTypesResultInstanceTypesPlacementGroupInfo(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CompanyNotificationRegisterResponse {
@@ -12,6 +13,7 @@ public class CompanyNotificationRegisterResponse {
      */
     
     public CompanyNotificationRegister200ApplicationJSON companyNotificationRegister200ApplicationJSONObject;
+
     public CompanyNotificationRegisterResponse withCompanyNotificationRegister200ApplicationJSONObject(CompanyNotificationRegister200ApplicationJSON companyNotificationRegister200ApplicationJSONObject) {
         this.companyNotificationRegister200ApplicationJSONObject = companyNotificationRegister200ApplicationJSONObject;
         return this;
@@ -22,6 +24,7 @@ public class CompanyNotificationRegisterResponse {
      */
     
     public CompanyNotificationRegisterDefaultApplicationJSON companyNotificationRegisterDefaultApplicationJSONObject;
+
     public CompanyNotificationRegisterResponse withCompanyNotificationRegisterDefaultApplicationJSONObject(CompanyNotificationRegisterDefaultApplicationJSON companyNotificationRegisterDefaultApplicationJSONObject) {
         this.companyNotificationRegisterDefaultApplicationJSONObject = companyNotificationRegisterDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class CompanyNotificationRegisterResponse {
     
     
     public String contentType;
+
     public CompanyNotificationRegisterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class CompanyNotificationRegisterResponse {
     
     
     public Integer statusCode;
+
     public CompanyNotificationRegisterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CompanyNotificationRegisterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CompanyNotificationRegisterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CompanyNotificationRegisterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

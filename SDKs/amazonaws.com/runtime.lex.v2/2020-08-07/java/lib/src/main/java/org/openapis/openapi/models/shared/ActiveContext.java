@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActiveContext {
     @JsonProperty("contextAttributes")
     public java.util.Map<String, String> contextAttributes;
+
     public ActiveContext withContextAttributes(java.util.Map<String, String> contextAttributes) {
         this.contextAttributes = contextAttributes;
         return this;
@@ -19,6 +20,7 @@ public class ActiveContext {
     
     @JsonProperty("name")
     public String name;
+
     public ActiveContext withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class ActiveContext {
     
     @JsonProperty("timeToLive")
     public ActiveContextTimeToLive timeToLive;
+
     public ActiveContext withTimeToLive(ActiveContextTimeToLive timeToLive) {
         this.timeToLive = timeToLive;
         return this;
     }
     
+    public ActiveContext(@JsonProperty("contextAttributes") java.util.Map<String, String> contextAttributes, @JsonProperty("name") String name, @JsonProperty("timeToLive") ActiveContextTimeToLive timeToLive) {
+        this.contextAttributes = contextAttributes;
+        this.name = name;
+        this.timeToLive = timeToLive;
+  }
 }

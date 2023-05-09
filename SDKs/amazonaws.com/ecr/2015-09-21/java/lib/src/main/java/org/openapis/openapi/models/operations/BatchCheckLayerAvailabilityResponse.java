@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchCheckLayerAvailabilityResponse {
@@ -12,6 +13,7 @@ public class BatchCheckLayerAvailabilityResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchCheckLayerAvailabilityResponse batchCheckLayerAvailabilityResponse;
+
     public BatchCheckLayerAvailabilityResponse withBatchCheckLayerAvailabilityResponse(org.openapis.openapi.models.shared.BatchCheckLayerAvailabilityResponse batchCheckLayerAvailabilityResponse) {
         this.batchCheckLayerAvailabilityResponse = batchCheckLayerAvailabilityResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchCheckLayerAvailabilityResponse {
     
     
     public String contentType;
+
     public BatchCheckLayerAvailabilityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchCheckLayerAvailabilityResponse {
      */
     
     public Object invalidParameterException;
+
     public BatchCheckLayerAvailabilityResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class BatchCheckLayerAvailabilityResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public BatchCheckLayerAvailabilityResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class BatchCheckLayerAvailabilityResponse {
     
     
     public Integer statusCode;
+
     public BatchCheckLayerAvailabilityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchCheckLayerAvailabilityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchCheckLayerAvailabilityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class BatchCheckLayerAvailabilityResponse {
      */
     
     public Object serverException;
+
     public BatchCheckLayerAvailabilityResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public BatchCheckLayerAvailabilityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

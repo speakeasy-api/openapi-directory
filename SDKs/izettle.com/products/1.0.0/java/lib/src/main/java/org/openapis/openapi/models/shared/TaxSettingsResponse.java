@@ -15,6 +15,7 @@ public class TaxSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationUuid")
     public String organizationUuid;
+
     public TaxSettingsResponse withOrganizationUuid(String organizationUuid) {
         this.organizationUuid = organizationUuid;
         return this;
@@ -23,6 +24,7 @@ public class TaxSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxationMode")
     public TaxSettingsResponseTaxationModeEnum taxationMode;
+
     public TaxSettingsResponse withTaxationMode(TaxSettingsResponseTaxationModeEnum taxationMode) {
         this.taxationMode = taxationMode;
         return this;
@@ -31,9 +33,11 @@ public class TaxSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxationType")
     public TaxSettingsResponseTaxationTypeEnum taxationType;
+
     public TaxSettingsResponse withTaxationType(TaxSettingsResponseTaxationTypeEnum taxationType) {
         this.taxationType = taxationType;
         return this;
     }
     
+    public TaxSettingsResponse(){}
 }

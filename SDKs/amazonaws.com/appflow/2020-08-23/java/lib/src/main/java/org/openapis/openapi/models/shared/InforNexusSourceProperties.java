@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InforNexusSourceProperties {
     @JsonProperty("object")
     public String object;
+
     public InforNexusSourceProperties withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public InforNexusSourceProperties(@JsonProperty("object") String object) {
+        this.object = object;
+  }
 }

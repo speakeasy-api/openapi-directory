@@ -15,6 +15,7 @@ public class UpdateTrailRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogsLogGroupArn")
     public String cloudWatchLogsLogGroupArn;
+
     public UpdateTrailRequest withCloudWatchLogsLogGroupArn(String cloudWatchLogsLogGroupArn) {
         this.cloudWatchLogsLogGroupArn = cloudWatchLogsLogGroupArn;
         return this;
@@ -23,6 +24,7 @@ public class UpdateTrailRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogsRoleArn")
     public String cloudWatchLogsRoleArn;
+
     public UpdateTrailRequest withCloudWatchLogsRoleArn(String cloudWatchLogsRoleArn) {
         this.cloudWatchLogsRoleArn = cloudWatchLogsRoleArn;
         return this;
@@ -31,6 +33,7 @@ public class UpdateTrailRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableLogFileValidation")
     public Boolean enableLogFileValidation;
+
     public UpdateTrailRequest withEnableLogFileValidation(Boolean enableLogFileValidation) {
         this.enableLogFileValidation = enableLogFileValidation;
         return this;
@@ -39,6 +42,7 @@ public class UpdateTrailRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeGlobalServiceEvents")
     public Boolean includeGlobalServiceEvents;
+
     public UpdateTrailRequest withIncludeGlobalServiceEvents(Boolean includeGlobalServiceEvents) {
         this.includeGlobalServiceEvents = includeGlobalServiceEvents;
         return this;
@@ -47,6 +51,7 @@ public class UpdateTrailRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsMultiRegionTrail")
     public Boolean isMultiRegionTrail;
+
     public UpdateTrailRequest withIsMultiRegionTrail(Boolean isMultiRegionTrail) {
         this.isMultiRegionTrail = isMultiRegionTrail;
         return this;
@@ -55,6 +60,7 @@ public class UpdateTrailRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsOrganizationTrail")
     public Boolean isOrganizationTrail;
+
     public UpdateTrailRequest withIsOrganizationTrail(Boolean isOrganizationTrail) {
         this.isOrganizationTrail = isOrganizationTrail;
         return this;
@@ -63,6 +69,7 @@ public class UpdateTrailRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public UpdateTrailRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -70,6 +77,7 @@ public class UpdateTrailRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateTrailRequest withName(String name) {
         this.name = name;
         return this;
@@ -78,6 +86,7 @@ public class UpdateTrailRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BucketName")
     public String s3BucketName;
+
     public UpdateTrailRequest withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -86,6 +95,7 @@ public class UpdateTrailRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3KeyPrefix")
     public String s3KeyPrefix;
+
     public UpdateTrailRequest withS3KeyPrefix(String s3KeyPrefix) {
         this.s3KeyPrefix = s3KeyPrefix;
         return this;
@@ -94,9 +104,13 @@ public class UpdateTrailRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsTopicName")
     public String snsTopicName;
+
     public UpdateTrailRequest withSnsTopicName(String snsTopicName) {
         this.snsTopicName = snsTopicName;
         return this;
     }
     
+    public UpdateTrailRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

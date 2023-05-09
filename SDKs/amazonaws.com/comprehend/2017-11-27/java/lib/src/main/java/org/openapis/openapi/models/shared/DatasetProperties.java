@@ -22,6 +22,7 @@ public class DatasetProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DatasetProperties withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DatasetProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetArn")
     public String datasetArn;
+
     public DatasetProperties withDatasetArn(String datasetArn) {
         this.datasetArn = datasetArn;
         return this;
@@ -38,6 +40,7 @@ public class DatasetProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetName")
     public String datasetName;
+
     public DatasetProperties withDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
@@ -46,6 +49,7 @@ public class DatasetProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetS3Uri")
     public String datasetS3Uri;
+
     public DatasetProperties withDatasetS3Uri(String datasetS3Uri) {
         this.datasetS3Uri = datasetS3Uri;
         return this;
@@ -54,6 +58,7 @@ public class DatasetProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetType")
     public DatasetTypeEnum datasetType;
+
     public DatasetProperties withDatasetType(DatasetTypeEnum datasetType) {
         this.datasetType = datasetType;
         return this;
@@ -62,6 +67,7 @@ public class DatasetProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DatasetProperties withDescription(String description) {
         this.description = description;
         return this;
@@ -72,6 +78,7 @@ public class DatasetProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public DatasetProperties withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -80,6 +87,7 @@ public class DatasetProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public DatasetProperties withMessage(String message) {
         this.message = message;
         return this;
@@ -88,6 +96,7 @@ public class DatasetProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfDocuments")
     public Long numberOfDocuments;
+
     public DatasetProperties withNumberOfDocuments(Long numberOfDocuments) {
         this.numberOfDocuments = numberOfDocuments;
         return this;
@@ -96,9 +105,11 @@ public class DatasetProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public DatasetStatusEnum status;
+
     public DatasetProperties withStatus(DatasetStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DatasetProperties(){}
 }

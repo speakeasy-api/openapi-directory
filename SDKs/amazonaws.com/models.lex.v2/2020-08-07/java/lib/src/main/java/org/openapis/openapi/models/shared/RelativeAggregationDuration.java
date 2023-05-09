@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RelativeAggregationDuration {
     @JsonProperty("timeDimension")
     public TimeDimensionEnum timeDimension;
+
     public RelativeAggregationDuration withTimeDimension(TimeDimensionEnum timeDimension) {
         this.timeDimension = timeDimension;
         return this;
@@ -19,9 +20,14 @@ public class RelativeAggregationDuration {
     
     @JsonProperty("timeValue")
     public Long timeValue;
+
     public RelativeAggregationDuration withTimeValue(Long timeValue) {
         this.timeValue = timeValue;
         return this;
     }
     
+    public RelativeAggregationDuration(@JsonProperty("timeDimension") TimeDimensionEnum timeDimension, @JsonProperty("timeValue") Long timeValue) {
+        this.timeDimension = timeDimension;
+        this.timeValue = timeValue;
+  }
 }

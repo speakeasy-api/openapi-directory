@@ -15,9 +15,11 @@ public class RemoveBackendConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public String error;
+
     public RemoveBackendConfigResponse withError(String error) {
         this.error = error;
         return this;
     }
     
+    public RemoveBackendConfigResponse(){}
 }

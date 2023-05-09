@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSavingsPlansUtilizationDetailsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetSavingsPlansUtilizationDetailsRequest getSavingsPlansUtilizationDetailsRequest;
+
     public GetSavingsPlansUtilizationDetailsRequest withGetSavingsPlansUtilizationDetailsRequest(org.openapis.openapi.models.shared.GetSavingsPlansUtilizationDetailsRequest getSavingsPlansUtilizationDetailsRequest) {
         this.getSavingsPlansUtilizationDetailsRequest = getSavingsPlansUtilizationDetailsRequest;
         return this;
@@ -19,6 +21,7 @@ public class GetSavingsPlansUtilizationDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public String maxResults;
+
     public GetSavingsPlansUtilizationDetailsRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class GetSavingsPlansUtilizationDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public GetSavingsPlansUtilizationDetailsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class GetSavingsPlansUtilizationDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetSavingsPlansUtilizationDetailsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class GetSavingsPlansUtilizationDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetSavingsPlansUtilizationDetailsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class GetSavingsPlansUtilizationDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetSavingsPlansUtilizationDetailsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class GetSavingsPlansUtilizationDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetSavingsPlansUtilizationDetailsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class GetSavingsPlansUtilizationDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetSavingsPlansUtilizationDetailsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class GetSavingsPlansUtilizationDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetSavingsPlansUtilizationDetailsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class GetSavingsPlansUtilizationDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetSavingsPlansUtilizationDetailsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class GetSavingsPlansUtilizationDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public GetSavingsPlansUtilizationDetailsXAmzTargetEnum xAmzTarget;
+
     public GetSavingsPlansUtilizationDetailsRequest withXAmzTarget(GetSavingsPlansUtilizationDetailsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public GetSavingsPlansUtilizationDetailsRequest(@JsonProperty("GetSavingsPlansUtilizationDetailsRequest") org.openapis.openapi.models.shared.GetSavingsPlansUtilizationDetailsRequest getSavingsPlansUtilizationDetailsRequest, @JsonProperty("X-Amz-Target") GetSavingsPlansUtilizationDetailsXAmzTargetEnum xAmzTarget) {
+        this.getSavingsPlansUtilizationDetailsRequest = getSavingsPlansUtilizationDetailsRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

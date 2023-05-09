@@ -18,6 +18,7 @@ public class Range {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("length")
     public Float length;
+
     public Range withLength(Float length) {
         this.length = length;
         return this;
@@ -29,9 +30,11 @@ public class Range {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public Float start;
+
     public Range withStart(Float start) {
         this.start = start;
         return this;
     }
     
+    public Range(){}
 }

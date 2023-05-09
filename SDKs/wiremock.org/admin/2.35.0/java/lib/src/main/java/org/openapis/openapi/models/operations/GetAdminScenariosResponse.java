@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAdminScenariosResponse {
     
     public String contentType;
+
     public GetAdminScenariosResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetAdminScenariosResponse {
     
     
     public Integer statusCode;
+
     public GetAdminScenariosResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetAdminScenariosResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAdminScenariosResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetAdminScenariosResponse {
      */
     
     public GetAdminScenarios200ApplicationJSON getAdminScenarios200ApplicationJSONObject;
+
     public GetAdminScenariosResponse withGetAdminScenarios200ApplicationJSONObject(GetAdminScenarios200ApplicationJSON getAdminScenarios200ApplicationJSONObject) {
         this.getAdminScenarios200ApplicationJSONObject = getAdminScenarios200ApplicationJSONObject;
         return this;
     }
     
+    public GetAdminScenariosResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

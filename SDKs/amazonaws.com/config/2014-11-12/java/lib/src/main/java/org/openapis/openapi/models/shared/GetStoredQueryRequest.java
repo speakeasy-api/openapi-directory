@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetStoredQueryRequest {
     @JsonProperty("QueryName")
     public String queryName;
+
     public GetStoredQueryRequest withQueryName(String queryName) {
         this.queryName = queryName;
         return this;
     }
     
+    public GetStoredQueryRequest(@JsonProperty("QueryName") String queryName) {
+        this.queryName = queryName;
+  }
 }

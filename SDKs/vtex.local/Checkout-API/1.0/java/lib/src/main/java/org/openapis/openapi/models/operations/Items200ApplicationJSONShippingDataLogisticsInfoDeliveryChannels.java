@@ -15,9 +15,11 @@ public class Items200ApplicationJSONShippingDataLogisticsInfoDeliveryChannels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Items200ApplicationJSONShippingDataLogisticsInfoDeliveryChannels withId(String id) {
         this.id = id;
         return this;
     }
     
+    public Items200ApplicationJSONShippingDataLogisticsInfoDeliveryChannels(){}
 }

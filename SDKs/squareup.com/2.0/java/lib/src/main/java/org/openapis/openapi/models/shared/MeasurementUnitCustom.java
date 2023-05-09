@@ -16,6 +16,7 @@ public class MeasurementUnitCustom {
      */
     @JsonProperty("abbreviation")
     public String abbreviation;
+
     public MeasurementUnitCustom withAbbreviation(String abbreviation) {
         this.abbreviation = abbreviation;
         return this;
@@ -26,9 +27,14 @@ public class MeasurementUnitCustom {
      */
     @JsonProperty("name")
     public String name;
+
     public MeasurementUnitCustom withName(String name) {
         this.name = name;
         return this;
     }
     
+    public MeasurementUnitCustom(@JsonProperty("abbreviation") String abbreviation, @JsonProperty("name") String name) {
+        this.abbreviation = abbreviation;
+        this.name = name;
+  }
 }

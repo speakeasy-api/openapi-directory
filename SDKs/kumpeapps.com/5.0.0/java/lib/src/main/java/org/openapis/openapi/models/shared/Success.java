@@ -15,6 +15,7 @@ public class Success {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Success withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class Success {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public Success withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public Success(){}
 }

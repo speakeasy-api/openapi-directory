@@ -18,9 +18,11 @@ public class EnrollDataSourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceIds")
     public String[] dataSourceIds;
+
     public EnrollDataSourcesRequest withDataSourceIds(String[] dataSourceIds) {
         this.dataSourceIds = dataSourceIds;
         return this;
     }
     
+    public EnrollDataSourcesRequest(){}
 }

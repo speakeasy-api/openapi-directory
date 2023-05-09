@@ -15,9 +15,11 @@ public class DescribeBatchSegmentJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchSegmentJob")
     public BatchSegmentJob batchSegmentJob;
+
     public DescribeBatchSegmentJobResponse withBatchSegmentJob(BatchSegmentJob batchSegmentJob) {
         this.batchSegmentJob = batchSegmentJob;
         return this;
     }
     
+    public DescribeBatchSegmentJobResponse(){}
 }

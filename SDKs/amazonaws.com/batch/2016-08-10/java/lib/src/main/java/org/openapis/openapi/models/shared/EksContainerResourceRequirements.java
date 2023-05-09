@@ -15,6 +15,7 @@ public class EksContainerResourceRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limits")
     public java.util.Map<String, String> limits;
+
     public EksContainerResourceRequirements withLimits(java.util.Map<String, String> limits) {
         this.limits = limits;
         return this;
@@ -23,9 +24,11 @@ public class EksContainerResourceRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public java.util.Map<String, String> requests;
+
     public EksContainerResourceRequirements withRequests(java.util.Map<String, String> requests) {
         this.requests = requests;
         return this;
     }
     
+    public EksContainerResourceRequirements(){}
 }

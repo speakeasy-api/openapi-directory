@@ -15,6 +15,7 @@ public class ConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddressBasedRemoteInfoList")
     public IPAddressBasedRemoteInfo[] ipAddressBasedRemoteInfoList;
+
     public ConfigurationSummary withIpAddressBasedRemoteInfoList(IPAddressBasedRemoteInfo[] ipAddressBasedRemoteInfoList) {
         this.ipAddressBasedRemoteInfoList = ipAddressBasedRemoteInfoList;
         return this;
@@ -23,6 +24,7 @@ public class ConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineInfoList")
     public PipelineInfo[] pipelineInfoList;
+
     public ConfigurationSummary withPipelineInfoList(PipelineInfo[] pipelineInfoList) {
         this.pipelineInfoList = pipelineInfoList;
         return this;
@@ -31,6 +33,7 @@ public class ConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteSourceCodeAnalysisServerInfo")
     public RemoteSourceCodeAnalysisServerInfo remoteSourceCodeAnalysisServerInfo;
+
     public ConfigurationSummary withRemoteSourceCodeAnalysisServerInfo(RemoteSourceCodeAnalysisServerInfo remoteSourceCodeAnalysisServerInfo) {
         this.remoteSourceCodeAnalysisServerInfo = remoteSourceCodeAnalysisServerInfo;
         return this;
@@ -39,6 +42,7 @@ public class ConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcenterBasedRemoteInfoList")
     public VcenterBasedRemoteInfo[] vcenterBasedRemoteInfoList;
+
     public ConfigurationSummary withVcenterBasedRemoteInfoList(VcenterBasedRemoteInfo[] vcenterBasedRemoteInfoList) {
         this.vcenterBasedRemoteInfoList = vcenterBasedRemoteInfoList;
         return this;
@@ -47,9 +51,11 @@ public class ConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionControlInfoList")
     public VersionControlInfo[] versionControlInfoList;
+
     public ConfigurationSummary withVersionControlInfoList(VersionControlInfo[] versionControlInfoList) {
         this.versionControlInfoList = versionControlInfoList;
         return this;
     }
     
+    public ConfigurationSummary(){}
 }

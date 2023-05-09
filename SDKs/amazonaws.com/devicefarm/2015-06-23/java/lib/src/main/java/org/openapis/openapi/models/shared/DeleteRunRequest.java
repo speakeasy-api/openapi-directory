@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteRunRequest {
     @JsonProperty("arn")
     public String arn;
+
     public DeleteRunRequest withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DeleteRunRequest(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

@@ -18,6 +18,7 @@ public class AdvanceChildRolloutJobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollout")
     public String rollout;
+
     public AdvanceChildRolloutJobRun withRollout(String rollout) {
         this.rollout = rollout;
         return this;
@@ -29,9 +30,11 @@ public class AdvanceChildRolloutJobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rolloutPhaseId")
     public String rolloutPhaseId;
+
     public AdvanceChildRolloutJobRun withRolloutPhaseId(String rolloutPhaseId) {
         this.rolloutPhaseId = rolloutPhaseId;
         return this;
     }
     
+    public AdvanceChildRolloutJobRun(){}
 }

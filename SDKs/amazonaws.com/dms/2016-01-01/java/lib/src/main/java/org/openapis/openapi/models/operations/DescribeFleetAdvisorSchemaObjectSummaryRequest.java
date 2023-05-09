@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeFleetAdvisorSchemaObjectSummaryRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DescribeFleetAdvisorSchemaObjectSummaryRequest describeFleetAdvisorSchemaObjectSummaryRequest;
+
     public DescribeFleetAdvisorSchemaObjectSummaryRequest withDescribeFleetAdvisorSchemaObjectSummaryRequest(org.openapis.openapi.models.shared.DescribeFleetAdvisorSchemaObjectSummaryRequest describeFleetAdvisorSchemaObjectSummaryRequest) {
         this.describeFleetAdvisorSchemaObjectSummaryRequest = describeFleetAdvisorSchemaObjectSummaryRequest;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFleetAdvisorSchemaObjectSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public String maxRecords;
+
     public DescribeFleetAdvisorSchemaObjectSummaryRequest withMaxRecords(String maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFleetAdvisorSchemaObjectSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public DescribeFleetAdvisorSchemaObjectSummaryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class DescribeFleetAdvisorSchemaObjectSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeFleetAdvisorSchemaObjectSummaryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class DescribeFleetAdvisorSchemaObjectSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeFleetAdvisorSchemaObjectSummaryRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class DescribeFleetAdvisorSchemaObjectSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeFleetAdvisorSchemaObjectSummaryRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class DescribeFleetAdvisorSchemaObjectSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeFleetAdvisorSchemaObjectSummaryRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class DescribeFleetAdvisorSchemaObjectSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeFleetAdvisorSchemaObjectSummaryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class DescribeFleetAdvisorSchemaObjectSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeFleetAdvisorSchemaObjectSummaryRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class DescribeFleetAdvisorSchemaObjectSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeFleetAdvisorSchemaObjectSummaryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class DescribeFleetAdvisorSchemaObjectSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DescribeFleetAdvisorSchemaObjectSummaryXAmzTargetEnum xAmzTarget;
+
     public DescribeFleetAdvisorSchemaObjectSummaryRequest withXAmzTarget(DescribeFleetAdvisorSchemaObjectSummaryXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DescribeFleetAdvisorSchemaObjectSummaryRequest(@JsonProperty("DescribeFleetAdvisorSchemaObjectSummaryRequest") org.openapis.openapi.models.shared.DescribeFleetAdvisorSchemaObjectSummaryRequest describeFleetAdvisorSchemaObjectSummaryRequest, @JsonProperty("X-Amz-Target") DescribeFleetAdvisorSchemaObjectSummaryXAmzTargetEnum xAmzTarget) {
+        this.describeFleetAdvisorSchemaObjectSummaryRequest = describeFleetAdvisorSchemaObjectSummaryRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

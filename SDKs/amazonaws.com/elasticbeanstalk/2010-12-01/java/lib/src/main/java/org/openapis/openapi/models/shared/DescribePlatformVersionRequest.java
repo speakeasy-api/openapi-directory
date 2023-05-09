@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class DescribePlatformVersionRequest {
     
     public String platformArn;
+
     public DescribePlatformVersionRequest withPlatformArn(String platformArn) {
         this.platformArn = platformArn;
         return this;
     }
     
+    public DescribePlatformVersionRequest(){}
 }

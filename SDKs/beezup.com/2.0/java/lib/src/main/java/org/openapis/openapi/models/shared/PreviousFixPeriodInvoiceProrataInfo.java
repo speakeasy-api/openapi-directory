@@ -20,6 +20,7 @@ public class PreviousFixPeriodInvoiceProrataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amountAfterTax")
     public Double amountAfterTax;
+
     public PreviousFixPeriodInvoiceProrataInfo withAmountAfterTax(Double amountAfterTax) {
         this.amountAfterTax = amountAfterTax;
         return this;
@@ -31,6 +32,7 @@ public class PreviousFixPeriodInvoiceProrataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amountToBePaid")
     public Double amountToBePaid;
+
     public PreviousFixPeriodInvoiceProrataInfo withAmountToBePaid(Double amountToBePaid) {
         this.amountToBePaid = amountToBePaid;
         return this;
@@ -42,6 +44,7 @@ public class PreviousFixPeriodInvoiceProrataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computedProrataToBeDeducted")
     public Double computedProrataToBeDeducted;
+
     public PreviousFixPeriodInvoiceProrataInfo withComputedProrataToBeDeducted(Double computedProrataToBeDeducted) {
         this.computedProrataToBeDeducted = computedProrataToBeDeducted;
         return this;
@@ -53,6 +56,7 @@ public class PreviousFixPeriodInvoiceProrataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contractId")
     public String contractId;
+
     public PreviousFixPeriodInvoiceProrataInfo withContractId(String contractId) {
         this.contractId = contractId;
         return this;
@@ -65,6 +69,7 @@ public class PreviousFixPeriodInvoiceProrataInfo {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("fixedPeriodEndDate")
     public LocalDate fixedPeriodEndDate;
+
     public PreviousFixPeriodInvoiceProrataInfo withFixedPeriodEndDate(LocalDate fixedPeriodEndDate) {
         this.fixedPeriodEndDate = fixedPeriodEndDate;
         return this;
@@ -77,6 +82,7 @@ public class PreviousFixPeriodInvoiceProrataInfo {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("fixedPeriodStartDate")
     public LocalDate fixedPeriodStartDate;
+
     public PreviousFixPeriodInvoiceProrataInfo withFixedPeriodStartDate(LocalDate fixedPeriodStartDate) {
         this.fixedPeriodStartDate = fixedPeriodStartDate;
         return this;
@@ -88,9 +94,11 @@ public class PreviousFixPeriodInvoiceProrataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceNumber")
     public String invoiceNumber;
+
     public PreviousFixPeriodInvoiceProrataInfo withInvoiceNumber(String invoiceNumber) {
         this.invoiceNumber = invoiceNumber;
         return this;
     }
     
+    public PreviousFixPeriodInvoiceProrataInfo(){}
 }

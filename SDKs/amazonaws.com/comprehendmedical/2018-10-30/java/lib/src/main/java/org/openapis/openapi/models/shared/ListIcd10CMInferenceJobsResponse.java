@@ -15,6 +15,7 @@ public class ListIcd10CMInferenceJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComprehendMedicalAsyncJobPropertiesList")
     public ComprehendMedicalAsyncJobProperties[] comprehendMedicalAsyncJobPropertiesList;
+
     public ListIcd10CMInferenceJobsResponse withComprehendMedicalAsyncJobPropertiesList(ComprehendMedicalAsyncJobProperties[] comprehendMedicalAsyncJobPropertiesList) {
         this.comprehendMedicalAsyncJobPropertiesList = comprehendMedicalAsyncJobPropertiesList;
         return this;
@@ -23,9 +24,11 @@ public class ListIcd10CMInferenceJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListIcd10CMInferenceJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListIcd10CMInferenceJobsResponse(){}
 }

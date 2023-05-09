@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteConfigRuleResponse {
     
     public String contentType;
+
     public DeleteConfigRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteConfigRuleResponse {
      */
     
     public Object noSuchConfigRuleException;
+
     public DeleteConfigRuleResponse withNoSuchConfigRuleException(Object noSuchConfigRuleException) {
         this.noSuchConfigRuleException = noSuchConfigRuleException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteConfigRuleResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteConfigRuleResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -36,6 +40,7 @@ public class DeleteConfigRuleResponse {
     
     
     public Integer statusCode;
+
     public DeleteConfigRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DeleteConfigRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteConfigRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteConfigRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

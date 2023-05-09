@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetIntegrationResponseResponse {
     
     public String contentType;
+
     public GetIntegrationResponseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetIntegrationResponseResponse {
      */
     
     public org.openapis.openapi.models.shared.GetIntegrationResponseResponse getIntegrationResponseResponse;
+
     public GetIntegrationResponseResponse withGetIntegrationResponseResponse(org.openapis.openapi.models.shared.GetIntegrationResponseResponse getIntegrationResponseResponse) {
         this.getIntegrationResponseResponse = getIntegrationResponseResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetIntegrationResponseResponse {
      */
     
     public Object notFoundException;
+
     public GetIntegrationResponseResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -36,6 +40,7 @@ public class GetIntegrationResponseResponse {
     
     
     public Integer statusCode;
+
     public GetIntegrationResponseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetIntegrationResponseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetIntegrationResponseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetIntegrationResponseResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetIntegrationResponseResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetIntegrationResponseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

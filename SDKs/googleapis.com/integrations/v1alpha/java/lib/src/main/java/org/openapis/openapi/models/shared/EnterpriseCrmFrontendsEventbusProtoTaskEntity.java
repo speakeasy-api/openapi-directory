@@ -18,6 +18,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabledForVpcSc")
     public Boolean disabledForVpcSc;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskEntity withDisabledForVpcSc(Boolean disabledForVpcSc) {
         this.disabledForVpcSc = disabledForVpcSc;
         return this;
@@ -29,6 +30,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public EnterpriseCrmEventbusProtoTaskMetadata metadata;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskEntity withMetadata(EnterpriseCrmEventbusProtoTaskMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -37,6 +39,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paramSpecs")
     public EnterpriseCrmFrontendsEventbusProtoParamSpecsMessage paramSpecs;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskEntity withParamSpecs(EnterpriseCrmFrontendsEventbusProtoParamSpecsMessage paramSpecs) {
         this.paramSpecs = paramSpecs;
         return this;
@@ -48,6 +51,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public EnterpriseCrmEventbusStats stats;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskEntity withStats(EnterpriseCrmEventbusStats stats) {
         this.stats = stats;
         return this;
@@ -59,6 +63,7 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskType")
     public EnterpriseCrmFrontendsEventbusProtoTaskEntityTaskTypeEnum taskType;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskEntity withTaskType(EnterpriseCrmFrontendsEventbusProtoTaskEntityTaskTypeEnum taskType) {
         this.taskType = taskType;
         return this;
@@ -70,9 +75,11 @@ public class EnterpriseCrmFrontendsEventbusProtoTaskEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uiConfig")
     public EnterpriseCrmEventbusProtoTaskUiConfig uiConfig;
+
     public EnterpriseCrmFrontendsEventbusProtoTaskEntity withUiConfig(EnterpriseCrmEventbusProtoTaskUiConfig uiConfig) {
         this.uiConfig = uiConfig;
         return this;
     }
     
+    public EnterpriseCrmFrontendsEventbusProtoTaskEntity(){}
 }

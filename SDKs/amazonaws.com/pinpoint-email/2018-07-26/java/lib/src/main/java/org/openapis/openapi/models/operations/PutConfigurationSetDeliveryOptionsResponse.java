@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutConfigurationSetDeliveryOptionsResponse {
@@ -12,6 +13,7 @@ public class PutConfigurationSetDeliveryOptionsResponse {
      */
     
     public Object badRequestException;
+
     public PutConfigurationSetDeliveryOptionsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class PutConfigurationSetDeliveryOptionsResponse {
     
     
     public String contentType;
+
     public PutConfigurationSetDeliveryOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutConfigurationSetDeliveryOptionsResponse {
      */
     
     public Object notFoundException;
+
     public PutConfigurationSetDeliveryOptionsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -39,6 +43,7 @@ public class PutConfigurationSetDeliveryOptionsResponse {
      */
     
     public java.util.Map<String, Object> putConfigurationSetDeliveryOptionsResponse;
+
     public PutConfigurationSetDeliveryOptionsResponse withPutConfigurationSetDeliveryOptionsResponse(java.util.Map<String, Object> putConfigurationSetDeliveryOptionsResponse) {
         this.putConfigurationSetDeliveryOptionsResponse = putConfigurationSetDeliveryOptionsResponse;
         return this;
@@ -46,6 +51,7 @@ public class PutConfigurationSetDeliveryOptionsResponse {
     
     
     public Integer statusCode;
+
     public PutConfigurationSetDeliveryOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutConfigurationSetDeliveryOptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutConfigurationSetDeliveryOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PutConfigurationSetDeliveryOptionsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutConfigurationSetDeliveryOptionsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PutConfigurationSetDeliveryOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

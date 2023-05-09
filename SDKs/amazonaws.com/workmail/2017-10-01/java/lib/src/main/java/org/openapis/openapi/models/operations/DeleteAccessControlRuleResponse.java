@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAccessControlRuleResponse {
     
     public String contentType;
+
     public DeleteAccessControlRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAccessControlRuleResponse {
      */
     
     public java.util.Map<String, Object> deleteAccessControlRuleResponse;
+
     public DeleteAccessControlRuleResponse withDeleteAccessControlRuleResponse(java.util.Map<String, Object> deleteAccessControlRuleResponse) {
         this.deleteAccessControlRuleResponse = deleteAccessControlRuleResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAccessControlRuleResponse {
      */
     
     public Object organizationNotFoundException;
+
     public DeleteAccessControlRuleResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAccessControlRuleResponse {
      */
     
     public Object organizationStateException;
+
     public DeleteAccessControlRuleResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteAccessControlRuleResponse {
     
     
     public Integer statusCode;
+
     public DeleteAccessControlRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteAccessControlRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAccessControlRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteAccessControlRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

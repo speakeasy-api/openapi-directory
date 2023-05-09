@@ -15,6 +15,7 @@ public class GetQueryResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ResultField[][] results;
+
     public GetQueryResultsResponse withResults(ResultField[][] results) {
         this.results = results;
         return this;
@@ -23,6 +24,7 @@ public class GetQueryResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistics")
     public QueryStatistics statistics;
+
     public GetQueryResultsResponse withStatistics(QueryStatistics statistics) {
         this.statistics = statistics;
         return this;
@@ -31,9 +33,11 @@ public class GetQueryResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public QueryStatusEnum status;
+
     public GetQueryResultsResponse withStatus(QueryStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetQueryResultsResponse(){}
 }

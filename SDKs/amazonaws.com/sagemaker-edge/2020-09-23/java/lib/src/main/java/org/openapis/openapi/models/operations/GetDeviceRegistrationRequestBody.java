@@ -12,6 +12,7 @@ public class GetDeviceRegistrationRequestBody {
      */
     @JsonProperty("DeviceFleetName")
     public String deviceFleetName;
+
     public GetDeviceRegistrationRequestBody withDeviceFleetName(String deviceFleetName) {
         this.deviceFleetName = deviceFleetName;
         return this;
@@ -22,9 +23,14 @@ public class GetDeviceRegistrationRequestBody {
      */
     @JsonProperty("DeviceName")
     public String deviceName;
+
     public GetDeviceRegistrationRequestBody withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
     }
     
+    public GetDeviceRegistrationRequestBody(@JsonProperty("DeviceFleetName") String deviceFleetName, @JsonProperty("DeviceName") String deviceName) {
+        this.deviceFleetName = deviceFleetName;
+        this.deviceName = deviceName;
+  }
 }

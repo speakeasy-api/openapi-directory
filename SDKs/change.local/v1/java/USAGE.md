@@ -3,11 +3,10 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateSecurity;
-import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateTransportationMethodEnum;
 import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateRequest;
 import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateResponse;
+import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateSecurity;
+import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateTransportationMethodEnum;
 
 public class Application {
     public static void main(String[] args) {
@@ -15,15 +14,14 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetApiV1DonationsCarbonCalculateRequest req = new GetApiV1DonationsCarbonCalculateRequest() {{
-                destinationAddress = 5488.14;
-                distanceMi = 5928.45;
-                originAddress = 7151.9;
-                transportationMethod = "sea";
-                weightLb = 6027.63;
-            }}            
+            GetApiV1DonationsCarbonCalculateRequest req = new GetApiV1DonationsCarbonCalculateRequest(5488.14) {{
+                destinationAddress = 5928.45;
+                distanceMi = 7151.9;
+                originAddress = 8442.66;
+                transportationMethod = GetApiV1DonationsCarbonCalculateTransportationMethodEnum.RAIL;
+            }};            
 
-            GetApiV1DonationsCarbonCalculateResponse res = sdk.getApiV1DonationsCarbonCalculate(req, new GetApiV1DonationsCarbonCalculateSecurity() {{
+            GetApiV1DonationsCarbonCalculateResponse res = sdk.getApiV1DonationsCarbonCalculate(req, new GetApiV1DonationsCarbonCalculateSecurity("nulla", "corrupti") {{
                 password = "YOUR_PASSWORD_HERE";
                 username = "YOUR_USERNAME_HERE";
             }});
@@ -34,5 +32,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

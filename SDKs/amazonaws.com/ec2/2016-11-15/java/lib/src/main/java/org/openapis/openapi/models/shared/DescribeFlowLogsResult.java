@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFlowLogsResult {
     
     public DescribeFlowLogsResultFlowLogs[] flowLogs;
+
     public DescribeFlowLogsResult withFlowLogs(DescribeFlowLogsResultFlowLogs[] flowLogs) {
         this.flowLogs = flowLogs;
         return this;
@@ -19,9 +20,11 @@ public class DescribeFlowLogsResult {
     
     
     public String nextToken;
+
     public DescribeFlowLogsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFlowLogsResult(){}
 }

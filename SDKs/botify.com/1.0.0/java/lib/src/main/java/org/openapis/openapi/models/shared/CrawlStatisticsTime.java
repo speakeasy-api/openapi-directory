@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CrawlStatisticsTime {
     @JsonProperty("avg_delay")
     public CrawlStatisticsTimePoint[] avgDelay;
+
     public CrawlStatisticsTime withAvgDelay(CrawlStatisticsTimePoint[] avgDelay) {
         this.avgDelay = avgDelay;
         return this;
@@ -24,6 +25,7 @@ public class CrawlStatisticsTime {
     
     @JsonProperty("avg_size")
     public CrawlStatisticsTimePoint[] avgSize;
+
     public CrawlStatisticsTime withAvgSize(CrawlStatisticsTimePoint[] avgSize) {
         this.avgSize = avgSize;
         return this;
@@ -31,6 +33,7 @@ public class CrawlStatisticsTime {
     
     @JsonProperty("frequency")
     public String frequency;
+
     public CrawlStatisticsTime withFrequency(String frequency) {
         this.frequency = frequency;
         return this;
@@ -38,6 +41,7 @@ public class CrawlStatisticsTime {
     
     @JsonProperty("http_code_2xx")
     public CrawlStatisticsTimePoint[] httpCode2xx;
+
     public CrawlStatisticsTime withHttpCode2xx(CrawlStatisticsTimePoint[] httpCode2xx) {
         this.httpCode2xx = httpCode2xx;
         return this;
@@ -45,6 +49,7 @@ public class CrawlStatisticsTime {
     
     @JsonProperty("http_code_3xx")
     public CrawlStatisticsTimePoint[] httpCode3xx;
+
     public CrawlStatisticsTime withHttpCode3xx(CrawlStatisticsTimePoint[] httpCode3xx) {
         this.httpCode3xx = httpCode3xx;
         return this;
@@ -52,6 +57,7 @@ public class CrawlStatisticsTime {
     
     @JsonProperty("http_code_4xx")
     public CrawlStatisticsTimePoint[] httpCode4xx;
+
     public CrawlStatisticsTime withHttpCode4xx(CrawlStatisticsTimePoint[] httpCode4xx) {
         this.httpCode4xx = httpCode4xx;
         return this;
@@ -59,6 +65,7 @@ public class CrawlStatisticsTime {
     
     @JsonProperty("http_code_5xx")
     public CrawlStatisticsTimePoint[] httpCode5xx;
+
     public CrawlStatisticsTime withHttpCode5xx(CrawlStatisticsTimePoint[] httpCode5xx) {
         this.httpCode5xx = httpCode5xx;
         return this;
@@ -66,6 +73,7 @@ public class CrawlStatisticsTime {
     
     @JsonProperty("http_code_xxx")
     public CrawlStatisticsTimePoint[] httpCodeXxx;
+
     public CrawlStatisticsTime withHttpCodeXxx(CrawlStatisticsTimePoint[] httpCodeXxx) {
         this.httpCodeXxx = httpCodeXxx;
         return this;
@@ -75,6 +83,7 @@ public class CrawlStatisticsTime {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_update_date")
     public OffsetDateTime lastUpdateDate;
+
     public CrawlStatisticsTime withLastUpdateDate(OffsetDateTime lastUpdateDate) {
         this.lastUpdateDate = lastUpdateDate;
         return this;
@@ -82,9 +91,22 @@ public class CrawlStatisticsTime {
     
     @JsonProperty("new_urls")
     public CrawlStatisticsTimePoint[] newUrls;
+
     public CrawlStatisticsTime withNewUrls(CrawlStatisticsTimePoint[] newUrls) {
         this.newUrls = newUrls;
         return this;
     }
     
+    public CrawlStatisticsTime(@JsonProperty("avg_delay") CrawlStatisticsTimePoint[] avgDelay, @JsonProperty("avg_size") CrawlStatisticsTimePoint[] avgSize, @JsonProperty("frequency") String frequency, @JsonProperty("http_code_2xx") CrawlStatisticsTimePoint[] httpCode2xx, @JsonProperty("http_code_3xx") CrawlStatisticsTimePoint[] httpCode3xx, @JsonProperty("http_code_4xx") CrawlStatisticsTimePoint[] httpCode4xx, @JsonProperty("http_code_5xx") CrawlStatisticsTimePoint[] httpCode5xx, @JsonProperty("http_code_xxx") CrawlStatisticsTimePoint[] httpCodeXxx, @JsonProperty("last_update_date") OffsetDateTime lastUpdateDate, @JsonProperty("new_urls") CrawlStatisticsTimePoint[] newUrls) {
+        this.avgDelay = avgDelay;
+        this.avgSize = avgSize;
+        this.frequency = frequency;
+        this.httpCode2xx = httpCode2xx;
+        this.httpCode3xx = httpCode3xx;
+        this.httpCode4xx = httpCode4xx;
+        this.httpCode5xx = httpCode5xx;
+        this.httpCodeXxx = httpCodeXxx;
+        this.lastUpdateDate = lastUpdateDate;
+        this.newUrls = newUrls;
+  }
 }

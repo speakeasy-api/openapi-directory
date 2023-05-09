@@ -18,6 +18,7 @@ public class ItemsUpdate200ApplicationJSONItemsPriceDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calculatedSellingPrice")
     public Long calculatedSellingPrice;
+
     public ItemsUpdate200ApplicationJSONItemsPriceDefinition withCalculatedSellingPrice(Long calculatedSellingPrice) {
         this.calculatedSellingPrice = calculatedSellingPrice;
         return this;
@@ -29,6 +30,7 @@ public class ItemsUpdate200ApplicationJSONItemsPriceDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellingPrices")
     public ItemsUpdate200ApplicationJSONItemsPriceDefinitionSellingPrices[] sellingPrices;
+
     public ItemsUpdate200ApplicationJSONItemsPriceDefinition withSellingPrices(ItemsUpdate200ApplicationJSONItemsPriceDefinitionSellingPrices[] sellingPrices) {
         this.sellingPrices = sellingPrices;
         return this;
@@ -40,9 +42,11 @@ public class ItemsUpdate200ApplicationJSONItemsPriceDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public ItemsUpdate200ApplicationJSONItemsPriceDefinition withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public ItemsUpdate200ApplicationJSONItemsPriceDefinition(){}
 }

@@ -17,6 +17,7 @@ public class TflApiPresentationEntitiesPredictionTiming {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countdownServerAdjustment")
     public String countdownServerAdjustment;
+
     public TflApiPresentationEntitiesPredictionTiming withCountdownServerAdjustment(String countdownServerAdjustment) {
         this.countdownServerAdjustment = countdownServerAdjustment;
         return this;
@@ -27,6 +28,7 @@ public class TflApiPresentationEntitiesPredictionTiming {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("insert")
     public OffsetDateTime insert;
+
     public TflApiPresentationEntitiesPredictionTiming withInsert(OffsetDateTime insert) {
         this.insert = insert;
         return this;
@@ -37,6 +39,7 @@ public class TflApiPresentationEntitiesPredictionTiming {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("read")
     public OffsetDateTime read;
+
     public TflApiPresentationEntitiesPredictionTiming withRead(OffsetDateTime read) {
         this.read = read;
         return this;
@@ -47,6 +50,7 @@ public class TflApiPresentationEntitiesPredictionTiming {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("received")
     public OffsetDateTime received;
+
     public TflApiPresentationEntitiesPredictionTiming withReceived(OffsetDateTime received) {
         this.received = received;
         return this;
@@ -57,6 +61,7 @@ public class TflApiPresentationEntitiesPredictionTiming {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("sent")
     public OffsetDateTime sent;
+
     public TflApiPresentationEntitiesPredictionTiming withSent(OffsetDateTime sent) {
         this.sent = sent;
         return this;
@@ -67,9 +72,11 @@ public class TflApiPresentationEntitiesPredictionTiming {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("source")
     public OffsetDateTime source;
+
     public TflApiPresentationEntitiesPredictionTiming withSource(OffsetDateTime source) {
         this.source = source;
         return this;
     }
     
+    public TflApiPresentationEntitiesPredictionTiming(){}
 }

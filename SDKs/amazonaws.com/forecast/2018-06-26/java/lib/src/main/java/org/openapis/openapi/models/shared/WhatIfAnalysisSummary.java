@@ -22,6 +22,7 @@ public class WhatIfAnalysisSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public WhatIfAnalysisSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class WhatIfAnalysisSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastArn")
     public String forecastArn;
+
     public WhatIfAnalysisSummary withForecastArn(String forecastArn) {
         this.forecastArn = forecastArn;
         return this;
@@ -40,6 +42,7 @@ public class WhatIfAnalysisSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public WhatIfAnalysisSummary withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -48,6 +51,7 @@ public class WhatIfAnalysisSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public WhatIfAnalysisSummary withMessage(String message) {
         this.message = message;
         return this;
@@ -56,6 +60,7 @@ public class WhatIfAnalysisSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public WhatIfAnalysisSummary withStatus(String status) {
         this.status = status;
         return this;
@@ -64,6 +69,7 @@ public class WhatIfAnalysisSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatIfAnalysisArn")
     public String whatIfAnalysisArn;
+
     public WhatIfAnalysisSummary withWhatIfAnalysisArn(String whatIfAnalysisArn) {
         this.whatIfAnalysisArn = whatIfAnalysisArn;
         return this;
@@ -72,9 +78,11 @@ public class WhatIfAnalysisSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatIfAnalysisName")
     public String whatIfAnalysisName;
+
     public WhatIfAnalysisSummary withWhatIfAnalysisName(String whatIfAnalysisName) {
         this.whatIfAnalysisName = whatIfAnalysisName;
         return this;
     }
     
+    public WhatIfAnalysisSummary(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReservationInstancesNetworkInterfaces {
     
     public ReservationInstancesNetworkInterfacesAssociation association;
+
     public ReservationInstancesNetworkInterfaces withAssociation(ReservationInstancesNetworkInterfacesAssociation association) {
         this.association = association;
         return this;
@@ -19,6 +20,7 @@ public class ReservationInstancesNetworkInterfaces {
     
     
     public ReservationInstancesNetworkInterfacesAttachment attachment;
+
     public ReservationInstancesNetworkInterfaces withAttachment(ReservationInstancesNetworkInterfacesAttachment attachment) {
         this.attachment = attachment;
         return this;
@@ -26,6 +28,7 @@ public class ReservationInstancesNetworkInterfaces {
     
     
     public String description;
+
     public ReservationInstancesNetworkInterfaces withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class ReservationInstancesNetworkInterfaces {
     
     
     public ReservationInstancesNetworkInterfacesGroups[] groups;
+
     public ReservationInstancesNetworkInterfaces withGroups(ReservationInstancesNetworkInterfacesGroups[] groups) {
         this.groups = groups;
         return this;
@@ -40,6 +44,7 @@ public class ReservationInstancesNetworkInterfaces {
     
     
     public String interfaceType;
+
     public ReservationInstancesNetworkInterfaces withInterfaceType(String interfaceType) {
         this.interfaceType = interfaceType;
         return this;
@@ -47,6 +52,7 @@ public class ReservationInstancesNetworkInterfaces {
     
     
     public ReservationInstancesNetworkInterfacesIpv4Prefixes[] ipv4Prefixes;
+
     public ReservationInstancesNetworkInterfaces withIpv4Prefixes(ReservationInstancesNetworkInterfacesIpv4Prefixes[] ipv4Prefixes) {
         this.ipv4Prefixes = ipv4Prefixes;
         return this;
@@ -54,6 +60,7 @@ public class ReservationInstancesNetworkInterfaces {
     
     
     public ReservationInstancesNetworkInterfacesIpv6Addresses[] ipv6Addresses;
+
     public ReservationInstancesNetworkInterfaces withIpv6Addresses(ReservationInstancesNetworkInterfacesIpv6Addresses[] ipv6Addresses) {
         this.ipv6Addresses = ipv6Addresses;
         return this;
@@ -61,6 +68,7 @@ public class ReservationInstancesNetworkInterfaces {
     
     
     public ReservationInstancesNetworkInterfacesIpv6Prefixes[] ipv6Prefixes;
+
     public ReservationInstancesNetworkInterfaces withIpv6Prefixes(ReservationInstancesNetworkInterfacesIpv6Prefixes[] ipv6Prefixes) {
         this.ipv6Prefixes = ipv6Prefixes;
         return this;
@@ -68,6 +76,7 @@ public class ReservationInstancesNetworkInterfaces {
     
     
     public String macAddress;
+
     public ReservationInstancesNetworkInterfaces withMacAddress(String macAddress) {
         this.macAddress = macAddress;
         return this;
@@ -75,6 +84,7 @@ public class ReservationInstancesNetworkInterfaces {
     
     
     public String networkInterfaceId;
+
     public ReservationInstancesNetworkInterfaces withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -82,6 +92,7 @@ public class ReservationInstancesNetworkInterfaces {
     
     
     public String ownerId;
+
     public ReservationInstancesNetworkInterfaces withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -89,6 +100,7 @@ public class ReservationInstancesNetworkInterfaces {
     
     
     public String privateDnsName;
+
     public ReservationInstancesNetworkInterfaces withPrivateDnsName(String privateDnsName) {
         this.privateDnsName = privateDnsName;
         return this;
@@ -96,6 +108,7 @@ public class ReservationInstancesNetworkInterfaces {
     
     
     public String privateIpAddress;
+
     public ReservationInstancesNetworkInterfaces withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -103,6 +116,7 @@ public class ReservationInstancesNetworkInterfaces {
     
     
     public ReservationInstancesNetworkInterfacesPrivateIpAddresses[] privateIpAddresses;
+
     public ReservationInstancesNetworkInterfaces withPrivateIpAddresses(ReservationInstancesNetworkInterfacesPrivateIpAddresses[] privateIpAddresses) {
         this.privateIpAddresses = privateIpAddresses;
         return this;
@@ -110,6 +124,7 @@ public class ReservationInstancesNetworkInterfaces {
     
     
     public Boolean sourceDestCheck;
+
     public ReservationInstancesNetworkInterfaces withSourceDestCheck(Boolean sourceDestCheck) {
         this.sourceDestCheck = sourceDestCheck;
         return this;
@@ -117,6 +132,7 @@ public class ReservationInstancesNetworkInterfaces {
     
     
     public ReservationInstancesNetworkInterfacesStatusEnum status;
+
     public ReservationInstancesNetworkInterfaces withStatus(ReservationInstancesNetworkInterfacesStatusEnum status) {
         this.status = status;
         return this;
@@ -124,6 +140,7 @@ public class ReservationInstancesNetworkInterfaces {
     
     
     public String subnetId;
+
     public ReservationInstancesNetworkInterfaces withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -131,9 +148,11 @@ public class ReservationInstancesNetworkInterfaces {
     
     
     public String vpcId;
+
     public ReservationInstancesNetworkInterfaces withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public ReservationInstancesNetworkInterfaces(){}
 }

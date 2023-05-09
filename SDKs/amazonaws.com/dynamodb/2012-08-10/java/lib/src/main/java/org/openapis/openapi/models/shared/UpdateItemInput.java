@@ -15,6 +15,7 @@ public class UpdateItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeUpdates")
     public java.util.Map<String, AttributeValueUpdate> attributeUpdates;
+
     public UpdateItemInput withAttributeUpdates(java.util.Map<String, AttributeValueUpdate> attributeUpdates) {
         this.attributeUpdates = attributeUpdates;
         return this;
@@ -23,6 +24,7 @@ public class UpdateItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConditionExpression")
     public String conditionExpression;
+
     public UpdateItemInput withConditionExpression(String conditionExpression) {
         this.conditionExpression = conditionExpression;
         return this;
@@ -31,6 +33,7 @@ public class UpdateItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConditionalOperator")
     public ConditionalOperatorEnum conditionalOperator;
+
     public UpdateItemInput withConditionalOperator(ConditionalOperatorEnum conditionalOperator) {
         this.conditionalOperator = conditionalOperator;
         return this;
@@ -39,6 +42,7 @@ public class UpdateItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Expected")
     public java.util.Map<String, ExpectedAttributeValue> expected;
+
     public UpdateItemInput withExpected(java.util.Map<String, ExpectedAttributeValue> expected) {
         this.expected = expected;
         return this;
@@ -47,6 +51,7 @@ public class UpdateItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpressionAttributeNames")
     public java.util.Map<String, String> expressionAttributeNames;
+
     public UpdateItemInput withExpressionAttributeNames(java.util.Map<String, String> expressionAttributeNames) {
         this.expressionAttributeNames = expressionAttributeNames;
         return this;
@@ -55,6 +60,7 @@ public class UpdateItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpressionAttributeValues")
     public java.util.Map<String, AttributeValue> expressionAttributeValues;
+
     public UpdateItemInput withExpressionAttributeValues(java.util.Map<String, AttributeValue> expressionAttributeValues) {
         this.expressionAttributeValues = expressionAttributeValues;
         return this;
@@ -62,6 +68,7 @@ public class UpdateItemInput {
     
     @JsonProperty("Key")
     public java.util.Map<String, AttributeValue> key;
+
     public UpdateItemInput withKey(java.util.Map<String, AttributeValue> key) {
         this.key = key;
         return this;
@@ -73,6 +80,7 @@ public class UpdateItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnConsumedCapacity")
     public ReturnConsumedCapacityEnum returnConsumedCapacity;
+
     public UpdateItemInput withReturnConsumedCapacity(ReturnConsumedCapacityEnum returnConsumedCapacity) {
         this.returnConsumedCapacity = returnConsumedCapacity;
         return this;
@@ -81,6 +89,7 @@ public class UpdateItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnItemCollectionMetrics")
     public ReturnItemCollectionMetricsEnum returnItemCollectionMetrics;
+
     public UpdateItemInput withReturnItemCollectionMetrics(ReturnItemCollectionMetricsEnum returnItemCollectionMetrics) {
         this.returnItemCollectionMetrics = returnItemCollectionMetrics;
         return this;
@@ -89,6 +98,7 @@ public class UpdateItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnValues")
     public ReturnValueEnum returnValues;
+
     public UpdateItemInput withReturnValues(ReturnValueEnum returnValues) {
         this.returnValues = returnValues;
         return this;
@@ -96,6 +106,7 @@ public class UpdateItemInput {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public UpdateItemInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -104,9 +115,14 @@ public class UpdateItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateExpression")
     public String updateExpression;
+
     public UpdateItemInput withUpdateExpression(String updateExpression) {
         this.updateExpression = updateExpression;
         return this;
     }
     
+    public UpdateItemInput(@JsonProperty("Key") java.util.Map<String, AttributeValue> key, @JsonProperty("TableName") String tableName) {
+        this.key = key;
+        this.tableName = tableName;
+  }
 }

@@ -34,6 +34,7 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
+lib/src/main/java/org/openapis/openapi/models/operations/GetAuthSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAuthResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/AddBelegRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AddBelegResponse.java
@@ -91,4 +92,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/Belege.java
 lib/src/main/java/org/openapis/openapi/models/shared/Monatsbeleg.java
 lib/src/main/java/org/openapis/openapi/models/shared/Registrierkasse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/auth/README.md
+docs/beleg/README.md
+docs/export/README.md
+docs/monatsbelege/README.md
+docs/registrierkasse/README.md
 USAGE.md

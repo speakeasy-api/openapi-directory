@@ -15,6 +15,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityZones")
     public AvailabilityZone[] availabilityZones;
+
     public Region withAvailabilityZones(AvailabilityZone[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -23,6 +24,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continentCode")
     public String continentCode;
+
     public Region withContinentCode(String continentCode) {
         this.continentCode = continentCode;
         return this;
@@ -31,6 +33,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Region withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Region withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -47,6 +51,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public RegionNameEnum name;
+
     public Region withName(RegionNameEnum name) {
         this.name = name;
         return this;
@@ -55,9 +60,11 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationalDatabaseAvailabilityZones")
     public AvailabilityZone[] relationalDatabaseAvailabilityZones;
+
     public Region withRelationalDatabaseAvailabilityZones(AvailabilityZone[] relationalDatabaseAvailabilityZones) {
         this.relationalDatabaseAvailabilityZones = relationalDatabaseAvailabilityZones;
         return this;
     }
     
+    public Region(){}
 }

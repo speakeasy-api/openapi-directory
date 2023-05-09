@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AuthorizeSecurityGroupEgressRequestIpPermissionsPrefixListIds {
     
     public String description;
+
     public AuthorizeSecurityGroupEgressRequestIpPermissionsPrefixListIds withDescription(String description) {
         this.description = description;
         return this;
@@ -19,9 +20,11 @@ public class AuthorizeSecurityGroupEgressRequestIpPermissionsPrefixListIds {
     
     
     public String prefixListId;
+
     public AuthorizeSecurityGroupEgressRequestIpPermissionsPrefixListIds withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
     }
     
+    public AuthorizeSecurityGroupEgressRequestIpPermissionsPrefixListIds(){}
 }

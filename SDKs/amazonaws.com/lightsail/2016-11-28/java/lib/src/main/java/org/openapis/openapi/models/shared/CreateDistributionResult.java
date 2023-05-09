@@ -15,6 +15,7 @@ public class CreateDistributionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distribution")
     public LightsailDistribution distribution;
+
     public CreateDistributionResult withDistribution(LightsailDistribution distribution) {
         this.distribution = distribution;
         return this;
@@ -23,9 +24,11 @@ public class CreateDistributionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public Operation operation;
+
     public CreateDistributionResult withOperation(Operation operation) {
         this.operation = operation;
         return this;
     }
     
+    public CreateDistributionResult(){}
 }

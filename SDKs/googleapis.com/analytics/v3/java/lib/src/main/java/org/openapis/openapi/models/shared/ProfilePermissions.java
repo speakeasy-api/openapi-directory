@@ -18,9 +18,11 @@ public class ProfilePermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effective")
     public String[] effective;
+
     public ProfilePermissions withEffective(String[] effective) {
         this.effective = effective;
         return this;
     }
     
+    public ProfilePermissions(){}
 }

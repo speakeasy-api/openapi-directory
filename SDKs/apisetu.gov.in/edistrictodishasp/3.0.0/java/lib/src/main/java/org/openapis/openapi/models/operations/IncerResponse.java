@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IncerResponse {
     
     public String contentType;
+
     public IncerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class IncerResponse {
     
     
     public Integer statusCode;
+
     public IncerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class IncerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IncerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class IncerResponse {
      */
     
     public Incer400ApplicationJSON incer400ApplicationJSONObject;
+
     public IncerResponse withIncer400ApplicationJSONObject(Incer400ApplicationJSON incer400ApplicationJSONObject) {
         this.incer400ApplicationJSONObject = incer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class IncerResponse {
      */
     
     public Incer401ApplicationJSON incer401ApplicationJSONObject;
+
     public IncerResponse withIncer401ApplicationJSONObject(Incer401ApplicationJSON incer401ApplicationJSONObject) {
         this.incer401ApplicationJSONObject = incer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class IncerResponse {
      */
     
     public Incer404ApplicationJSON incer404ApplicationJSONObject;
+
     public IncerResponse withIncer404ApplicationJSONObject(Incer404ApplicationJSON incer404ApplicationJSONObject) {
         this.incer404ApplicationJSONObject = incer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class IncerResponse {
      */
     
     public Incer500ApplicationJSON incer500ApplicationJSONObject;
+
     public IncerResponse withIncer500ApplicationJSONObject(Incer500ApplicationJSON incer500ApplicationJSONObject) {
         this.incer500ApplicationJSONObject = incer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class IncerResponse {
      */
     
     public Incer502ApplicationJSON incer502ApplicationJSONObject;
+
     public IncerResponse withIncer502ApplicationJSONObject(Incer502ApplicationJSON incer502ApplicationJSONObject) {
         this.incer502ApplicationJSONObject = incer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class IncerResponse {
      */
     
     public Incer503ApplicationJSON incer503ApplicationJSONObject;
+
     public IncerResponse withIncer503ApplicationJSONObject(Incer503ApplicationJSON incer503ApplicationJSONObject) {
         this.incer503ApplicationJSONObject = incer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class IncerResponse {
      */
     
     public Incer504ApplicationJSON incer504ApplicationJSONObject;
+
     public IncerResponse withIncer504ApplicationJSONObject(Incer504ApplicationJSON incer504ApplicationJSONObject) {
         this.incer504ApplicationJSONObject = incer504ApplicationJSONObject;
         return this;
     }
     
+    public IncerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

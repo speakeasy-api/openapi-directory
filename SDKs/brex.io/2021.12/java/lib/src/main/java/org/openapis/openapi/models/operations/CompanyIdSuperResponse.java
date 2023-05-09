@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CompanyIdSuperResponse {
@@ -12,6 +13,7 @@ public class CompanyIdSuperResponse {
      */
     
     public CompanyIdSuper200ApplicationJSON[] companyIdSuper200ApplicationJSONObjects;
+
     public CompanyIdSuperResponse withCompanyIdSuper200ApplicationJSONObjects(CompanyIdSuper200ApplicationJSON[] companyIdSuper200ApplicationJSONObjects) {
         this.companyIdSuper200ApplicationJSONObjects = companyIdSuper200ApplicationJSONObjects;
         return this;
@@ -22,6 +24,7 @@ public class CompanyIdSuperResponse {
      */
     
     public CompanyIdSuperDefaultApplicationJSON companyIdSuperDefaultApplicationJSONObject;
+
     public CompanyIdSuperResponse withCompanyIdSuperDefaultApplicationJSONObject(CompanyIdSuperDefaultApplicationJSON companyIdSuperDefaultApplicationJSONObject) {
         this.companyIdSuperDefaultApplicationJSONObject = companyIdSuperDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class CompanyIdSuperResponse {
     
     
     public String contentType;
+
     public CompanyIdSuperResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class CompanyIdSuperResponse {
     
     
     public Integer statusCode;
+
     public CompanyIdSuperResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CompanyIdSuperResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CompanyIdSuperResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CompanyIdSuperResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

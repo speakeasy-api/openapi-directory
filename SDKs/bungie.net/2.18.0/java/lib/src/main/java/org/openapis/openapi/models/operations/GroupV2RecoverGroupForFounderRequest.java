@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2RecoverGroupForFounderRequest {
@@ -12,6 +13,7 @@ public class GroupV2RecoverGroupForFounderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupType")
     public Integer groupType;
+
     public GroupV2RecoverGroupForFounderRequest withGroupType(Integer groupType) {
         this.groupType = groupType;
         return this;
@@ -22,6 +24,7 @@ public class GroupV2RecoverGroupForFounderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
     public Long membershipId;
+
     public GroupV2RecoverGroupForFounderRequest withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -32,9 +35,15 @@ public class GroupV2RecoverGroupForFounderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
     public Integer membershipType;
+
     public GroupV2RecoverGroupForFounderRequest withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
     }
     
+    public GroupV2RecoverGroupForFounderRequest(@JsonProperty("groupType") Integer groupType, @JsonProperty("membershipId") Long membershipId, @JsonProperty("membershipType") Integer membershipType) {
+        this.groupType = groupType;
+        this.membershipId = membershipId;
+        this.membershipType = membershipType;
+  }
 }

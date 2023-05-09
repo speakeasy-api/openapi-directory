@@ -15,6 +15,7 @@ public class ActionExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionResult")
     public ActionExecutionResult executionResult;
+
     public ActionExecutionOutput withExecutionResult(ActionExecutionResult executionResult) {
         this.executionResult = executionResult;
         return this;
@@ -23,6 +24,7 @@ public class ActionExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputArtifacts")
     public ArtifactDetail[] outputArtifacts;
+
     public ActionExecutionOutput withOutputArtifacts(ArtifactDetail[] outputArtifacts) {
         this.outputArtifacts = outputArtifacts;
         return this;
@@ -31,9 +33,11 @@ public class ActionExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputVariables")
     public java.util.Map<String, String> outputVariables;
+
     public ActionExecutionOutput withOutputVariables(java.util.Map<String, String> outputVariables) {
         this.outputVariables = outputVariables;
         return this;
     }
     
+    public ActionExecutionOutput(){}
 }

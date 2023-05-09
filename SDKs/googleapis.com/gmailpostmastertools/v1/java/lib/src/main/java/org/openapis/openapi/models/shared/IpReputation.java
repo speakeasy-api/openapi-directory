@@ -18,6 +18,7 @@ public class IpReputation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipCount")
     public String ipCount;
+
     public IpReputation withIpCount(String ipCount) {
         this.ipCount = ipCount;
         return this;
@@ -29,6 +30,7 @@ public class IpReputation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reputation")
     public IpReputationReputationEnum reputation;
+
     public IpReputation withReputation(IpReputationReputationEnum reputation) {
         this.reputation = reputation;
         return this;
@@ -40,9 +42,11 @@ public class IpReputation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleIps")
     public String[] sampleIps;
+
     public IpReputation withSampleIps(String[] sampleIps) {
         this.sampleIps = sampleIps;
         return this;
     }
     
+    public IpReputation(){}
 }

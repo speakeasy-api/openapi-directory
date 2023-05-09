@@ -15,9 +15,11 @@ public class UpdateContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public ContentData content;
+
     public UpdateContentResponse withContent(ContentData content) {
         this.content = content;
         return this;
     }
     
+    public UpdateContentResponse(){}
 }

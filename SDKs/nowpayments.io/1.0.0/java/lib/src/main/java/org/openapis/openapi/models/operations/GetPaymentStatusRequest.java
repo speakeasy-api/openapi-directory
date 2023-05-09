@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymentStatusRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment_id")
     public String paymentId;
+
     public GetPaymentStatusRequest withPaymentId(String paymentId) {
         this.paymentId = paymentId;
         return this;
@@ -16,9 +18,13 @@ public class GetPaymentStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public GetPaymentStatusRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public GetPaymentStatusRequest(@JsonProperty("payment_id") String paymentId) {
+        this.paymentId = paymentId;
+  }
 }

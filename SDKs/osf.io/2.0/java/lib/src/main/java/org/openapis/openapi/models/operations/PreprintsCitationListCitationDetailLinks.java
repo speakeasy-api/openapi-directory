@@ -15,9 +15,11 @@ public class PreprintsCitationListCitationDetailLinks {
      */
     
     public String self;
+
     public PreprintsCitationListCitationDetailLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public PreprintsCitationListCitationDetailLinks(){}
 }

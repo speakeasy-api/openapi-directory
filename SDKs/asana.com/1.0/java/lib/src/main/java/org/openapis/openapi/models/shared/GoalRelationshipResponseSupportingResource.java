@@ -18,6 +18,7 @@ public class GoalRelationshipResponseSupportingResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public GoalRelationshipResponseSupportingResource withGid(String gid) {
         this.gid = gid;
         return this;
@@ -29,6 +30,7 @@ public class GoalRelationshipResponseSupportingResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoalRelationshipResponseSupportingResource withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class GoalRelationshipResponseSupportingResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public GoalRelationshipResponseSupportingResource withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public GoalRelationshipResponseSupportingResource(){}
 }

@@ -12,6 +12,7 @@ public class Tag {
      */
     
     public Long id;
+
     public Tag withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +23,11 @@ public class Tag {
      */
     
     public String name;
+
     public Tag withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Tag(){}
 }

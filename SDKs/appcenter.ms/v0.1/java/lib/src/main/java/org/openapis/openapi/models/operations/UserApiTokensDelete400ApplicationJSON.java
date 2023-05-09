@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UserApiTokensDelete400ApplicationJSON {
     @JsonProperty("error")
     public UserApiTokensDelete400ApplicationJSONError error;
+
     public UserApiTokensDelete400ApplicationJSON withError(UserApiTokensDelete400ApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public UserApiTokensDelete400ApplicationJSON(@JsonProperty("error") UserApiTokensDelete400ApplicationJSONError error) {
+        this.error = error;
+  }
 }

@@ -61,11 +61,9 @@ public class Debug {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsCheckAccessResponse res = new org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsCheckAccessResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsCheckAccessResponse res = new org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsCheckAccessResponse(contentType, httpRes.statusCode()) {{
             checkAccessResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Debug {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsSearchByViewUrlResponse res = new org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsSearchByViewUrlResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsSearchByViewUrlResponse res = new org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsSearchByViewUrlResponse(contentType, httpRes.statusCode()) {{
             searchItemsByViewUrlResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Debug {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesItemsListForunmappedidentityResponse res = new org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesItemsListForunmappedidentityResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesItemsListForunmappedidentityResponse res = new org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesItemsListForunmappedidentityResponse(contentType, httpRes.statusCode()) {{
             listItemNamesForUnmappedIdentityResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class Debug {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesUnmappedidsListResponse res = new org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesUnmappedidsListResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesUnmappedidsListResponse res = new org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesUnmappedidsListResponse(contentType, httpRes.statusCode()) {{
             listUnmappedIdentitiesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

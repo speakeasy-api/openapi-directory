@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Crypto {
     @JsonProperty("cipher")
     public String cipher;
+
     public Crypto withCipher(String cipher) {
         this.cipher = cipher;
         return this;
@@ -16,6 +17,7 @@ public class Crypto {
     
     @JsonProperty("cipherparams")
     public Cipherparams cipherparams;
+
     public Crypto withCipherparams(Cipherparams cipherparams) {
         this.cipherparams = cipherparams;
         return this;
@@ -23,6 +25,7 @@ public class Crypto {
     
     @JsonProperty("ciphertext")
     public String ciphertext;
+
     public Crypto withCiphertext(String ciphertext) {
         this.ciphertext = ciphertext;
         return this;
@@ -30,6 +33,7 @@ public class Crypto {
     
     @JsonProperty("kdf")
     public String kdf;
+
     public Crypto withKdf(String kdf) {
         this.kdf = kdf;
         return this;
@@ -37,6 +41,7 @@ public class Crypto {
     
     @JsonProperty("kdfparams")
     public Kdfparams kdfparams;
+
     public Crypto withKdfparams(Kdfparams kdfparams) {
         this.kdfparams = kdfparams;
         return this;
@@ -44,9 +49,18 @@ public class Crypto {
     
     @JsonProperty("mac")
     public String mac;
+
     public Crypto withMac(String mac) {
         this.mac = mac;
         return this;
     }
     
+    public Crypto(@JsonProperty("cipher") String cipher, @JsonProperty("cipherparams") Cipherparams cipherparams, @JsonProperty("ciphertext") String ciphertext, @JsonProperty("kdf") String kdf, @JsonProperty("kdfparams") Kdfparams kdfparams, @JsonProperty("mac") String mac) {
+        this.cipher = cipher;
+        this.cipherparams = cipherparams;
+        this.ciphertext = ciphertext;
+        this.kdf = kdf;
+        this.kdfparams = kdfparams;
+        this.mac = mac;
+  }
 }

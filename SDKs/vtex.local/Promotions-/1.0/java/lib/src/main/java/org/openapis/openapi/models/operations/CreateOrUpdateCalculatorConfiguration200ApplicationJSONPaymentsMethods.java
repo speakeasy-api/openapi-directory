@@ -18,6 +18,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSONPaymentsMeth
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSONPaymentsMethods withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSONPaymentsMeth
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSONPaymentsMethods withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateOrUpdateCalculatorConfiguration200ApplicationJSONPaymentsMethods(){}
 }

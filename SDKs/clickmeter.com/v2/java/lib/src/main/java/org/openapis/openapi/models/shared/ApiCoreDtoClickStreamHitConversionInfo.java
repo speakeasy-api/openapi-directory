@@ -15,6 +15,7 @@ public class ApiCoreDtoClickStreamHitConversionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessTime")
     public String accessTime;
+
     public ApiCoreDtoClickStreamHitConversionInfo withAccessTime(String accessTime) {
         this.accessTime = accessTime;
         return this;
@@ -23,6 +24,7 @@ public class ApiCoreDtoClickStreamHitConversionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comcost")
     public Double comcost;
+
     public ApiCoreDtoClickStreamHitConversionInfo withComcost(Double comcost) {
         this.comcost = comcost;
         return this;
@@ -31,6 +33,7 @@ public class ApiCoreDtoClickStreamHitConversionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost")
     public Double cost;
+
     public ApiCoreDtoClickStreamHitConversionInfo withCost(Double cost) {
         this.cost = cost;
         return this;
@@ -42,6 +45,7 @@ public class ApiCoreDtoClickStreamHitConversionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public ApiCoreDtoClickStreamHitConversionInfo withDate(String date) {
         this.date = date;
         return this;
@@ -50,6 +54,7 @@ public class ApiCoreDtoClickStreamHitConversionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public ApiCoreDtoClickStreamHitConversionInfo withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -58,6 +63,7 @@ public class ApiCoreDtoClickStreamHitConversionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ApiCoreDtoClickStreamHitConversionInfo withId(Long id) {
         this.id = id;
         return this;
@@ -66,6 +72,7 @@ public class ApiCoreDtoClickStreamHitConversionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ApiCoreDtoClickStreamHitConversionInfo withName(String name) {
         this.name = name;
         return this;
@@ -74,6 +81,7 @@ public class ApiCoreDtoClickStreamHitConversionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter")
     public String parameter;
+
     public ApiCoreDtoClickStreamHitConversionInfo withParameter(String parameter) {
         this.parameter = parameter;
         return this;
@@ -82,9 +90,11 @@ public class ApiCoreDtoClickStreamHitConversionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public ApiCoreDtoClickStreamHitConversionInfo withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public ApiCoreDtoClickStreamHitConversionInfo(){}
 }

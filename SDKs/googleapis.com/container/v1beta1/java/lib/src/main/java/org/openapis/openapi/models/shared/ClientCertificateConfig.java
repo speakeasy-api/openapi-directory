@@ -18,9 +18,11 @@ public class ClientCertificateConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issueClientCertificate")
     public Boolean issueClientCertificate;
+
     public ClientCertificateConfig withIssueClientCertificate(Boolean issueClientCertificate) {
         this.issueClientCertificate = issueClientCertificate;
         return this;
     }
     
+    public ClientCertificateConfig(){}
 }

@@ -27,6 +27,7 @@ public class SubUserData {
     @JsonProperty("AccessEndDate")
     @SpeakeasyMetadata("form:name=AccessEndDate")
     public OffsetDateTime accessEndDate;
+
     public SubUserData withAccessEndDate(OffsetDateTime accessEndDate) {
         this.accessEndDate = accessEndDate;
         return this;
@@ -41,6 +42,7 @@ public class SubUserData {
     @JsonProperty("AccessTimeStartDate")
     @SpeakeasyMetadata("form:name=AccessTimeStartDate")
     public OffsetDateTime accessTimeStartDate;
+
     public SubUserData withAccessTimeStartDate(OffsetDateTime accessTimeStartDate) {
         this.accessTimeStartDate = accessTimeStartDate;
         return this;
@@ -53,6 +55,7 @@ public class SubUserData {
     @JsonProperty("Email")
     @SpeakeasyMetadata("form:name=Email")
     public String email;
+
     public SubUserData withEmail(String email) {
         this.email = email;
         return this;
@@ -65,6 +68,7 @@ public class SubUserData {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public String id;
+
     public SubUserData withId(String id) {
         this.id = id;
         return this;
@@ -77,6 +81,7 @@ public class SubUserData {
     @JsonProperty("NewPassword")
     @SpeakeasyMetadata("form:name=NewPassword")
     public String newPassword;
+
     public SubUserData withNewPassword(String newPassword) {
         this.newPassword = newPassword;
         return this;
@@ -89,6 +94,7 @@ public class SubUserData {
     @JsonProperty("PermissionLevel")
     @SpeakeasyMetadata("form:name=PermissionLevel")
     public SubUserDataPermissionLevelEnum permissionLevel;
+
     public SubUserData withPermissionLevel(SubUserDataPermissionLevelEnum permissionLevel) {
         this.permissionLevel = permissionLevel;
         return this;
@@ -101,9 +107,11 @@ public class SubUserData {
     @JsonProperty("Username")
     @SpeakeasyMetadata("form:name=Username")
     public String username;
+
     public SubUserData withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public SubUserData(){}
 }

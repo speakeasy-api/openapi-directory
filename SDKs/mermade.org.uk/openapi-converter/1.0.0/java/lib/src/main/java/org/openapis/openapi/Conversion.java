@@ -56,14 +56,12 @@ public class Conversion {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConvertResponse res = new org.openapis.openapi.models.operations.ConvertResponse() {{
+        org.openapis.openapi.models.operations.ConvertResponse res = new org.openapis.openapi.models.operations.ConvertResponse(contentType, httpRes.statusCode()) {{
             convert200ApplicationJSONAny = null;
             body = null;
             body = null;
             convert400ApplicationJSONAny = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -118,12 +116,10 @@ public class Conversion {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConvertUrlResponse res = new org.openapis.openapi.models.operations.ConvertUrlResponse() {{
+        org.openapis.openapi.models.operations.ConvertUrlResponse res = new org.openapis.openapi.models.operations.ConvertUrlResponse(contentType, httpRes.statusCode()) {{
             convertUrl200ApplicationJSONAny = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

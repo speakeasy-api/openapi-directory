@@ -22,6 +22,7 @@ public class SearchLoyaltyAccountsRequestLoyaltyAccountQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_ids")
     public String[] customerIds;
+
     public SearchLoyaltyAccountsRequestLoyaltyAccountQuery withCustomerIds(String[] customerIds) {
         this.customerIds = customerIds;
         return this;
@@ -37,9 +38,11 @@ public class SearchLoyaltyAccountsRequestLoyaltyAccountQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mappings")
     public LoyaltyAccountMapping[] mappings;
+
     public SearchLoyaltyAccountsRequestLoyaltyAccountQuery withMappings(LoyaltyAccountMapping[] mappings) {
         this.mappings = mappings;
         return this;
     }
     
+    public SearchLoyaltyAccountsRequestLoyaltyAccountQuery(){}
 }

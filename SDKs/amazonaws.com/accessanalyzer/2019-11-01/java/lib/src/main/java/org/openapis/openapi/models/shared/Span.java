@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Span {
     @JsonProperty("end")
     public Position end;
+
     public Span withEnd(Position end) {
         this.end = end;
         return this;
@@ -19,9 +20,14 @@ public class Span {
     
     @JsonProperty("start")
     public Position start;
+
     public Span withStart(Position start) {
         this.start = start;
         return this;
     }
     
+    public Span(@JsonProperty("end") Position end, @JsonProperty("start") Position start) {
+        this.end = end;
+        this.start = start;
+  }
 }

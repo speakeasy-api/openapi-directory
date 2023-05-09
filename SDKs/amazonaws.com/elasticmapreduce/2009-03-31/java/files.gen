@@ -256,6 +256,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ClusterTimeline.java
 lib/src/main/java/org/openapis/openapi/models/shared/ClusterStateChangeReason.java
 lib/src/main/java/org/openapis/openapi/models/shared/ClusterStateChangeReasonCodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ClusterStateEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/ErrorDetail.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScaleDownBehaviorEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/RepoUpgradeOnBootEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/PlacementGroupConfig.java
@@ -411,4 +412,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/TerminateJobFlowsInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateStudioInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateStudioSessionMappingInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

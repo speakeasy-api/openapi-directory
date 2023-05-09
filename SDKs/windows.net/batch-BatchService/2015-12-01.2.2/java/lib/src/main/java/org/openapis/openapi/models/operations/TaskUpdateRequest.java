@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaskUpdateRequest {
@@ -12,6 +13,7 @@ public class TaskUpdateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
     public String ifMatch;
+
     public TaskUpdateRequest withIfMatch(String ifMatch) {
         this.ifMatch = ifMatch;
         return this;
@@ -22,6 +24,7 @@ public class TaskUpdateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
     public String ifModifiedSince;
+
     public TaskUpdateRequest withIfModifiedSince(String ifModifiedSince) {
         this.ifModifiedSince = ifModifiedSince;
         return this;
@@ -32,6 +35,7 @@ public class TaskUpdateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public TaskUpdateRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -42,6 +46,7 @@ public class TaskUpdateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Unmodified-Since")
     public String ifUnmodifiedSince;
+
     public TaskUpdateRequest withIfUnmodifiedSince(String ifUnmodifiedSince) {
         this.ifUnmodifiedSince = ifUnmodifiedSince;
         return this;
@@ -52,6 +57,7 @@ public class TaskUpdateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TaskUpdateParameter taskUpdateParameter;
+
     public TaskUpdateRequest withTaskUpdateParameter(org.openapis.openapi.models.shared.TaskUpdateParameter taskUpdateParameter) {
         this.taskUpdateParameter = taskUpdateParameter;
         return this;
@@ -62,6 +68,7 @@ public class TaskUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public TaskUpdateRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -72,6 +79,7 @@ public class TaskUpdateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public TaskUpdateRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -82,6 +90,7 @@ public class TaskUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public TaskUpdateRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -92,6 +101,7 @@ public class TaskUpdateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public TaskUpdateRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -102,6 +112,7 @@ public class TaskUpdateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public TaskUpdateRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -112,6 +123,7 @@ public class TaskUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
     public String taskId;
+
     public TaskUpdateRequest withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -122,9 +134,16 @@ public class TaskUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public TaskUpdateRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public TaskUpdateRequest(@JsonProperty("TaskUpdateParameter") org.openapis.openapi.models.shared.TaskUpdateParameter taskUpdateParameter, @JsonProperty("api-version") String apiVersion, @JsonProperty("jobId") String jobId, @JsonProperty("taskId") String taskId) {
+        this.taskUpdateParameter = taskUpdateParameter;
+        this.apiVersion = apiVersion;
+        this.jobId = jobId;
+        this.taskId = taskId;
+  }
 }

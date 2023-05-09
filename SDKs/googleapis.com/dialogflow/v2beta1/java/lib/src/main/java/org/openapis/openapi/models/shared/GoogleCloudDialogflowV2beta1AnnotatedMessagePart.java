@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1AnnotatedMessagePart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityType")
     public String entityType;
+
     public GoogleCloudDialogflowV2beta1AnnotatedMessagePart withEntityType(String entityType) {
         this.entityType = entityType;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1AnnotatedMessagePart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formattedValue")
     public Object formattedValue;
+
     public GoogleCloudDialogflowV2beta1AnnotatedMessagePart withFormattedValue(Object formattedValue) {
         this.formattedValue = formattedValue;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2beta1AnnotatedMessagePart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleCloudDialogflowV2beta1AnnotatedMessagePart withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1AnnotatedMessagePart(){}
 }

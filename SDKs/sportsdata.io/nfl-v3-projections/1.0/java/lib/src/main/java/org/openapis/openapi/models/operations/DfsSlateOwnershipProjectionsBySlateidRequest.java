@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfsSlateOwnershipProjectionsBySlateidRequest {
@@ -12,6 +13,7 @@ public class DfsSlateOwnershipProjectionsBySlateidRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public DfsSlateOwnershipProjectionsBySlateidFormatEnum format;
+
     public DfsSlateOwnershipProjectionsBySlateidRequest withFormat(DfsSlateOwnershipProjectionsBySlateidFormatEnum format) {
         this.format = format;
         return this;
@@ -22,9 +24,14 @@ public class DfsSlateOwnershipProjectionsBySlateidRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slateId")
     public String slateId;
+
     public DfsSlateOwnershipProjectionsBySlateidRequest withSlateId(String slateId) {
         this.slateId = slateId;
         return this;
     }
     
+    public DfsSlateOwnershipProjectionsBySlateidRequest(@JsonProperty("format") DfsSlateOwnershipProjectionsBySlateidFormatEnum format, @JsonProperty("slateId") String slateId) {
+        this.format = format;
+        this.slateId = slateId;
+  }
 }

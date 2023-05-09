@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAccessControlConfigurationsResponse {
     @JsonProperty("AccessControlConfigurations")
     public AccessControlConfigurationSummary[] accessControlConfigurations;
+
     public ListAccessControlConfigurationsResponse withAccessControlConfigurations(AccessControlConfigurationSummary[] accessControlConfigurations) {
         this.accessControlConfigurations = accessControlConfigurations;
         return this;
@@ -22,9 +23,13 @@ public class ListAccessControlConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAccessControlConfigurationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAccessControlConfigurationsResponse(@JsonProperty("AccessControlConfigurations") AccessControlConfigurationSummary[] accessControlConfigurations) {
+        this.accessControlConfigurations = accessControlConfigurations;
+  }
 }

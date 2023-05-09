@@ -120,6 +120,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConfigManagementPolicyContr
 lib/src/main/java/org/openapis/openapi/models/shared/ConfigManagementHierarchyControllerConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConfigManagementConfigSync.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConfigManagementOciConfig.java
+lib/src/main/java/org/openapis/openapi/models/shared/ConfigManagementManaged.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConfigManagementGitConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListFeaturesResponse.java
@@ -174,6 +175,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/MembershipBindingLifecycleS
 lib/src/main/java/org/openapis/openapi/models/shared/MembershipBindingLifecycleState.java
 lib/src/main/java/org/openapis/openapi/models/shared/Membership.java
 lib/src/main/java/org/openapis/openapi/models/shared/MembershipInput.java
+lib/src/main/java/org/openapis/openapi/models/shared/MonitoringConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/MembershipEndpoint.java
 lib/src/main/java/org/openapis/openapi/models/shared/MembershipEndpointInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/OnPremClusterClusterTypeEnum.java
@@ -213,4 +215,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ScopeInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScopeLifecycleStateCodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScopeLifecycleState.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListScopesResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

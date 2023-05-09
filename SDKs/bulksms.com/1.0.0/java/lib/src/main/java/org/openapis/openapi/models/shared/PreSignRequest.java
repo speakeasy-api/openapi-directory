@@ -18,6 +18,7 @@ public class PreSignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileExtension")
     public String fileExtension;
+
     public PreSignRequest withFileExtension(String fileExtension) {
         this.fileExtension = fileExtension;
         return this;
@@ -29,9 +30,11 @@ public class PreSignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaType")
     public String mediaType;
+
     public PreSignRequest withMediaType(String mediaType) {
         this.mediaType = mediaType;
         return this;
     }
     
+    public PreSignRequest(){}
 }

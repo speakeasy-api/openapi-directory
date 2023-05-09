@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BranchProtectionRequiredStatusChecks {
     @JsonProperty("contexts")
     public String[] contexts;
+
     public BranchProtectionRequiredStatusChecks withContexts(String[] contexts) {
         this.contexts = contexts;
         return this;
@@ -19,6 +20,7 @@ public class BranchProtectionRequiredStatusChecks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contexts_url")
     public String contextsUrl;
+
     public BranchProtectionRequiredStatusChecks withContextsUrl(String contextsUrl) {
         this.contextsUrl = contextsUrl;
         return this;
@@ -27,6 +29,7 @@ public class BranchProtectionRequiredStatusChecks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforcement_level")
     public String enforcementLevel;
+
     public BranchProtectionRequiredStatusChecks withEnforcementLevel(String enforcementLevel) {
         this.enforcementLevel = enforcementLevel;
         return this;
@@ -35,6 +38,7 @@ public class BranchProtectionRequiredStatusChecks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strict")
     public Boolean strict;
+
     public BranchProtectionRequiredStatusChecks withStrict(Boolean strict) {
         this.strict = strict;
         return this;
@@ -43,9 +47,13 @@ public class BranchProtectionRequiredStatusChecks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public BranchProtectionRequiredStatusChecks withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public BranchProtectionRequiredStatusChecks(@JsonProperty("contexts") String[] contexts) {
+        this.contexts = contexts;
+  }
 }

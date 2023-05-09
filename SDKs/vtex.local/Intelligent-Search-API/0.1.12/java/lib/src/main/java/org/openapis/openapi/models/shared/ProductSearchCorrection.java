@@ -18,9 +18,11 @@ public class ProductSearchCorrection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("misspelled")
     public Boolean misspelled;
+
     public ProductSearchCorrection withMisspelled(Boolean misspelled) {
         this.misspelled = misspelled;
         return this;
     }
     
+    public ProductSearchCorrection(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterTaskDefinitionResponse {
@@ -12,6 +13,7 @@ public class RegisterTaskDefinitionResponse {
      */
     
     public Object clientException;
+
     public RegisterTaskDefinitionResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class RegisterTaskDefinitionResponse {
     
     
     public String contentType;
+
     public RegisterTaskDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RegisterTaskDefinitionResponse {
      */
     
     public Object invalidParameterException;
+
     public RegisterTaskDefinitionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class RegisterTaskDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterTaskDefinitionResponse registerTaskDefinitionResponse;
+
     public RegisterTaskDefinitionResponse withRegisterTaskDefinitionResponse(org.openapis.openapi.models.shared.RegisterTaskDefinitionResponse registerTaskDefinitionResponse) {
         this.registerTaskDefinitionResponse = registerTaskDefinitionResponse;
         return this;
@@ -49,6 +54,7 @@ public class RegisterTaskDefinitionResponse {
      */
     
     public Object serverException;
+
     public RegisterTaskDefinitionResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class RegisterTaskDefinitionResponse {
     
     
     public Integer statusCode;
+
     public RegisterTaskDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class RegisterTaskDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterTaskDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RegisterTaskDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

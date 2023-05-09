@@ -18,6 +18,7 @@ public class GoogleChromePolicyVersionsV1ResolvedPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addedSourceKey")
     public GoogleChromePolicyVersionsV1PolicyTargetKey addedSourceKey;
+
     public GoogleChromePolicyVersionsV1ResolvedPolicy withAddedSourceKey(GoogleChromePolicyVersionsV1PolicyTargetKey addedSourceKey) {
         this.addedSourceKey = addedSourceKey;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromePolicyVersionsV1ResolvedPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceKey")
     public GoogleChromePolicyVersionsV1PolicyTargetKey sourceKey;
+
     public GoogleChromePolicyVersionsV1ResolvedPolicy withSourceKey(GoogleChromePolicyVersionsV1PolicyTargetKey sourceKey) {
         this.sourceKey = sourceKey;
         return this;
@@ -40,6 +42,7 @@ public class GoogleChromePolicyVersionsV1ResolvedPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetKey")
     public GoogleChromePolicyVersionsV1PolicyTargetKey targetKey;
+
     public GoogleChromePolicyVersionsV1ResolvedPolicy withTargetKey(GoogleChromePolicyVersionsV1PolicyTargetKey targetKey) {
         this.targetKey = targetKey;
         return this;
@@ -51,9 +54,11 @@ public class GoogleChromePolicyVersionsV1ResolvedPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public GoogleChromePolicyVersionsV1PolicyValue value;
+
     public GoogleChromePolicyVersionsV1ResolvedPolicy withValue(GoogleChromePolicyVersionsV1PolicyValue value) {
         this.value = value;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1ResolvedPolicy(){}
 }

@@ -15,6 +15,7 @@ public class EvaluationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public EvaluationResult withDetails(String details) {
         this.details = details;
         return this;
@@ -22,6 +23,7 @@ public class EvaluationResult {
     
     @JsonProperty("entityId")
     public String entityId;
+
     public EvaluationResult withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -29,6 +31,7 @@ public class EvaluationResult {
     
     @JsonProperty("feature")
     public String feature;
+
     public EvaluationResult withFeature(String feature) {
         this.feature = feature;
         return this;
@@ -37,6 +40,7 @@ public class EvaluationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public EvaluationResult withProject(String project) {
         this.project = project;
         return this;
@@ -45,6 +49,7 @@ public class EvaluationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public EvaluationResult withReason(String reason) {
         this.reason = reason;
         return this;
@@ -53,6 +58,7 @@ public class EvaluationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public VariableValue value;
+
     public EvaluationResult withValue(VariableValue value) {
         this.value = value;
         return this;
@@ -61,9 +67,14 @@ public class EvaluationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variation")
     public String variation;
+
     public EvaluationResult withVariation(String variation) {
         this.variation = variation;
         return this;
     }
     
+    public EvaluationResult(@JsonProperty("entityId") String entityId, @JsonProperty("feature") String feature) {
+        this.entityId = entityId;
+        this.feature = feature;
+  }
 }

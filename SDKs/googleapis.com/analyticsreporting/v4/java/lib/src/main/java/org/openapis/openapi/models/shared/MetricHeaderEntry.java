@@ -18,6 +18,7 @@ public class MetricHeaderEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MetricHeaderEntry withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class MetricHeaderEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public MetricHeaderEntryTypeEnum type;
+
     public MetricHeaderEntry withType(MetricHeaderEntryTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public MetricHeaderEntry(){}
 }

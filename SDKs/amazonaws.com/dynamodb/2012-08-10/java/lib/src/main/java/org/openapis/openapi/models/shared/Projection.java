@@ -15,6 +15,7 @@ public class Projection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonKeyAttributes")
     public String[] nonKeyAttributes;
+
     public Projection withNonKeyAttributes(String[] nonKeyAttributes) {
         this.nonKeyAttributes = nonKeyAttributes;
         return this;
@@ -23,9 +24,11 @@ public class Projection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectionType")
     public ProjectionTypeEnum projectionType;
+
     public Projection withProjectionType(ProjectionTypeEnum projectionType) {
         this.projectionType = projectionType;
         return this;
     }
     
+    public Projection(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ForwardActionConfig {
     
     public TargetGroupStickinessConfig targetGroupStickinessConfig;
+
     public ForwardActionConfig withTargetGroupStickinessConfig(TargetGroupStickinessConfig targetGroupStickinessConfig) {
         this.targetGroupStickinessConfig = targetGroupStickinessConfig;
         return this;
@@ -19,9 +20,11 @@ public class ForwardActionConfig {
     
     
     public TargetGroupTuple[] targetGroups;
+
     public ForwardActionConfig withTargetGroups(TargetGroupTuple[] targetGroups) {
         this.targetGroups = targetGroups;
         return this;
     }
     
+    public ForwardActionConfig(){}
 }

@@ -18,6 +18,7 @@ public class ClusterAutoscaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoprovisioningLocations")
     public String[] autoprovisioningLocations;
+
     public ClusterAutoscaling withAutoprovisioningLocations(String[] autoprovisioningLocations) {
         this.autoprovisioningLocations = autoprovisioningLocations;
         return this;
@@ -29,6 +30,7 @@ public class ClusterAutoscaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoprovisioningNodePoolDefaults")
     public AutoprovisioningNodePoolDefaults autoprovisioningNodePoolDefaults;
+
     public ClusterAutoscaling withAutoprovisioningNodePoolDefaults(AutoprovisioningNodePoolDefaults autoprovisioningNodePoolDefaults) {
         this.autoprovisioningNodePoolDefaults = autoprovisioningNodePoolDefaults;
         return this;
@@ -40,6 +42,7 @@ public class ClusterAutoscaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoscalingProfile")
     public ClusterAutoscalingAutoscalingProfileEnum autoscalingProfile;
+
     public ClusterAutoscaling withAutoscalingProfile(ClusterAutoscalingAutoscalingProfileEnum autoscalingProfile) {
         this.autoscalingProfile = autoscalingProfile;
         return this;
@@ -51,6 +54,7 @@ public class ClusterAutoscaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableNodeAutoprovisioning")
     public Boolean enableNodeAutoprovisioning;
+
     public ClusterAutoscaling withEnableNodeAutoprovisioning(Boolean enableNodeAutoprovisioning) {
         this.enableNodeAutoprovisioning = enableNodeAutoprovisioning;
         return this;
@@ -62,9 +66,11 @@ public class ClusterAutoscaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceLimits")
     public ResourceLimit[] resourceLimits;
+
     public ClusterAutoscaling withResourceLimits(ResourceLimit[] resourceLimits) {
         this.resourceLimits = resourceLimits;
         return this;
     }
     
+    public ClusterAutoscaling(){}
 }

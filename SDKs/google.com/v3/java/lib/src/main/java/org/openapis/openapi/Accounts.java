@@ -60,11 +60,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksCreateResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksCreateResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksCreateResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksCreateResponse(contentType, httpRes.statusCode()) {{
             accountLink = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksDeleteResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksDeleteResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksDeleteResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksListResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksListResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksListResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksListResponse(contentType, httpRes.statusCode()) {{
             listAccountLinksResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -194,11 +188,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsCreateResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsCreateResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsCreateResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsCreateResponse(contentType, httpRes.statusCode()) {{
             brand = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -238,11 +230,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsListResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsListResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsListResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsListResponse(contentType, httpRes.statusCode()) {{
             listBrandsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -284,11 +274,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsPatchResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsPatchResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsPatchResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsPatchResponse(contentType, httpRes.statusCode()) {{
             brand = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -328,11 +316,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsFreeBookingLinksReportViewsQueryResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsFreeBookingLinksReportViewsQueryResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsFreeBookingLinksReportViewsQueryResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsFreeBookingLinksReportViewsQueryResponse(contentType, httpRes.statusCode()) {{
             queryFreeBookingLinksReportResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -372,11 +358,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsHotelViewsListResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsHotelViewsListResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsHotelViewsListResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsHotelViewsListResponse(contentType, httpRes.statusCode()) {{
             listHotelViewsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -416,11 +400,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsHotelViewsSummarizeResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsHotelViewsSummarizeResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsHotelViewsSummarizeResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsHotelViewsSummarizeResponse(contentType, httpRes.statusCode()) {{
             summarizeHotelViewsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -462,11 +444,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsHotelsSetLiveOnGoogleResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsHotelsSetLiveOnGoogleResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsHotelsSetLiveOnGoogleResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsHotelsSetLiveOnGoogleResponse(contentType, httpRes.statusCode()) {{
             setLiveOnGoogleResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -508,11 +488,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsIconsCreateResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsIconsCreateResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsIconsCreateResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsIconsCreateResponse(contentType, httpRes.statusCode()) {{
             icon = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -552,11 +530,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsIconsListResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsIconsListResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsIconsListResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsIconsListResponse(contentType, httpRes.statusCode()) {{
             listIconsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -598,11 +574,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsListingsVerifyResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsListingsVerifyResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsListingsVerifyResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsListingsVerifyResponse(contentType, httpRes.statusCode()) {{
             verifyListingsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -642,11 +616,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsParticipationReportViewsQueryResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsParticipationReportViewsQueryResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsParticipationReportViewsQueryResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsParticipationReportViewsQueryResponse(contentType, httpRes.statusCode()) {{
             queryParticipationReportResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -686,11 +658,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsPriceAccuracyViewsListResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsPriceAccuracyViewsListResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsPriceAccuracyViewsListResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsPriceAccuracyViewsListResponse(contentType, httpRes.statusCode()) {{
             listPriceAccuracyViewsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -730,11 +700,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsPriceAccuracyViewsSummarizeResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsPriceAccuracyViewsSummarizeResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsPriceAccuracyViewsSummarizeResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsPriceAccuracyViewsSummarizeResponse(contentType, httpRes.statusCode()) {{
             summarizePriceAccuracyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -774,11 +742,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsPriceCoverageViewsGetLatestResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsPriceCoverageViewsGetLatestResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsPriceCoverageViewsGetLatestResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsPriceCoverageViewsGetLatestResponse(contentType, httpRes.statusCode()) {{
             priceCoverageView = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -818,11 +784,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsPriceCoverageViewsListResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsPriceCoverageViewsListResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsPriceCoverageViewsListResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsPriceCoverageViewsListResponse(contentType, httpRes.statusCode()) {{
             listPriceCoverageViewsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -862,11 +826,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsPropertyPerformanceReportViewsQueryResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsPropertyPerformanceReportViewsQueryResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsPropertyPerformanceReportViewsQueryResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsPropertyPerformanceReportViewsQueryResponse(contentType, httpRes.statusCode()) {{
             queryPropertyPerformanceReportResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -908,11 +870,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsCreateResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsCreateResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsCreateResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsCreateResponse(contentType, httpRes.statusCode()) {{
             createReconciliationReportResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -952,11 +912,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsGetResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsGetResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsGetResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsGetResponse(contentType, httpRes.statusCode()) {{
             reconciliationReport = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -996,11 +954,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsListResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsListResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsListResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsListResponse(contentType, httpRes.statusCode()) {{
             listReconciliationReportsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1042,11 +998,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsValidateResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsValidateResponse() {{
+        org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsValidateResponse res = new org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsValidateResponse(contentType, httpRes.statusCode()) {{
             validateReconciliationReportResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

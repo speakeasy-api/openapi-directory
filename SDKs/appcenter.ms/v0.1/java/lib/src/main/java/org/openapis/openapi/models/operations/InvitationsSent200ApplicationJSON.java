@@ -12,6 +12,7 @@ public class InvitationsSent200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app")
     public InvitationsSent200ApplicationJSONApp app;
+
     public InvitationsSent200ApplicationJSON withApp(InvitationsSent200ApplicationJSONApp app) {
         this.app = app;
         return this;
@@ -22,6 +23,7 @@ public class InvitationsSent200ApplicationJSON {
      */
     @JsonProperty("invitation_id")
     public String invitationId;
+
     public InvitationsSent200ApplicationJSON withInvitationId(String invitationId) {
         this.invitationId = invitationId;
         return this;
@@ -30,9 +32,13 @@ public class InvitationsSent200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public InvitationsSent200ApplicationJSONOrganization organization;
+
     public InvitationsSent200ApplicationJSON withOrganization(InvitationsSent200ApplicationJSONOrganization organization) {
         this.organization = organization;
         return this;
     }
     
+    public InvitationsSent200ApplicationJSON(@JsonProperty("invitation_id") String invitationId) {
+        this.invitationId = invitationId;
+  }
 }

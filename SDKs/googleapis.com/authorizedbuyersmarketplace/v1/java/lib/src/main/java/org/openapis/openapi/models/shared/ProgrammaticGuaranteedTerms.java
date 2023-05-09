@@ -18,17 +18,19 @@ public class ProgrammaticGuaranteedTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedPrice")
     public Price fixedPrice;
+
     public ProgrammaticGuaranteedTerms withFixedPrice(Price fixedPrice) {
         this.fixedPrice = fixedPrice;
         return this;
     }
     
     /**
-     * Count of guaranteed looks.
+     * Count of guaranteed looks. For CPD deals, buyer changes to guaranteed_looks will be ignored.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guaranteedLooks")
     public String guaranteedLooks;
+
     public ProgrammaticGuaranteedTerms withGuaranteedLooks(String guaranteedLooks) {
         this.guaranteedLooks = guaranteedLooks;
         return this;
@@ -40,17 +42,19 @@ public class ProgrammaticGuaranteedTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impressionCap")
     public String impressionCap;
+
     public ProgrammaticGuaranteedTerms withImpressionCap(String impressionCap) {
         this.impressionCap = impressionCap;
         return this;
     }
     
     /**
-     * Daily minimum looks for CPD deal types.
+     * Daily minimum looks for CPD deal types. For CPD deals, buyer should negotiate on this field instead of guaranteed_looks.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumDailyLooks")
     public String minimumDailyLooks;
+
     public ProgrammaticGuaranteedTerms withMinimumDailyLooks(String minimumDailyLooks) {
         this.minimumDailyLooks = minimumDailyLooks;
         return this;
@@ -62,6 +66,7 @@ public class ProgrammaticGuaranteedTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentShareOfVoice")
     public String percentShareOfVoice;
+
     public ProgrammaticGuaranteedTerms withPercentShareOfVoice(String percentShareOfVoice) {
         this.percentShareOfVoice = percentShareOfVoice;
         return this;
@@ -73,9 +78,11 @@ public class ProgrammaticGuaranteedTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservationType")
     public ProgrammaticGuaranteedTermsReservationTypeEnum reservationType;
+
     public ProgrammaticGuaranteedTerms withReservationType(ProgrammaticGuaranteedTermsReservationTypeEnum reservationType) {
         this.reservationType = reservationType;
         return this;
     }
     
+    public ProgrammaticGuaranteedTerms(){}
 }

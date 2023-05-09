@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateNotificationRuleResponse {
@@ -12,6 +13,7 @@ public class CreateNotificationRuleResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateNotificationRuleResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateNotificationRuleResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateNotificationRuleResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -32,6 +35,7 @@ public class CreateNotificationRuleResponse {
      */
     
     public Object configurationException;
+
     public CreateNotificationRuleResponse withConfigurationException(Object configurationException) {
         this.configurationException = configurationException;
         return this;
@@ -39,6 +43,7 @@ public class CreateNotificationRuleResponse {
     
     
     public String contentType;
+
     public CreateNotificationRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateNotificationRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateNotificationRuleResult createNotificationRuleResult;
+
     public CreateNotificationRuleResponse withCreateNotificationRuleResult(org.openapis.openapi.models.shared.CreateNotificationRuleResult createNotificationRuleResult) {
         this.createNotificationRuleResult = createNotificationRuleResult;
         return this;
@@ -59,6 +65,7 @@ public class CreateNotificationRuleResponse {
      */
     
     public Object limitExceededException;
+
     public CreateNotificationRuleResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateNotificationRuleResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateNotificationRuleResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -76,6 +84,7 @@ public class CreateNotificationRuleResponse {
     
     
     public Integer statusCode;
+
     public CreateNotificationRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateNotificationRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateNotificationRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CreateNotificationRuleResponse {
      */
     
     public Object validationException;
+
     public CreateNotificationRuleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateNotificationRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

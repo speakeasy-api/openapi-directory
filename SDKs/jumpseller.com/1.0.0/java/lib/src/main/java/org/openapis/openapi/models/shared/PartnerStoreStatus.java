@@ -12,9 +12,11 @@ public class PartnerStoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PartnerStoreStatusStatus status;
+
     public PartnerStoreStatus withStatus(PartnerStoreStatusStatus status) {
         this.status = status;
         return this;
     }
     
+    public PartnerStoreStatus(){}
 }

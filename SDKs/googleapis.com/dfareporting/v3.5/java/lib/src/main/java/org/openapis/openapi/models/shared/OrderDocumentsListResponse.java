@@ -18,6 +18,7 @@ public class OrderDocumentsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public OrderDocumentsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class OrderDocumentsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public OrderDocumentsListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class OrderDocumentsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderDocuments")
     public OrderDocument[] orderDocuments;
+
     public OrderDocumentsListResponse withOrderDocuments(OrderDocument[] orderDocuments) {
         this.orderDocuments = orderDocuments;
         return this;
     }
     
+    public OrderDocumentsListResponse(){}
 }

@@ -13,6 +13,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDestinyProgressionResetEntry {
     
     public Integer resets;
+
     public DestinyDestinyProgressionResetEntry withResets(Integer resets) {
         this.resets = resets;
         return this;
@@ -20,9 +21,11 @@ public class DestinyDestinyProgressionResetEntry {
     
     
     public Integer season;
+
     public DestinyDestinyProgressionResetEntry withSeason(Integer season) {
         this.season = season;
         return this;
     }
     
+    public DestinyDestinyProgressionResetEntry(){}
 }

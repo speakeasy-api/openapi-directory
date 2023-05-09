@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResolverEndpointsResponse {
     
     public String contentType;
+
     public ListResolverEndpointsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListResolverEndpointsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListResolverEndpointsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListResolverEndpointsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListResolverEndpointsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListResolverEndpointsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListResolverEndpointsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class ListResolverEndpointsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListResolverEndpointsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class ListResolverEndpointsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResolverEndpointsResponse listResolverEndpointsResponse;
+
     public ListResolverEndpointsResponse withListResolverEndpointsResponse(org.openapis.openapi.models.shared.ListResolverEndpointsResponse listResolverEndpointsResponse) {
         this.listResolverEndpointsResponse = listResolverEndpointsResponse;
         return this;
@@ -66,6 +73,7 @@ public class ListResolverEndpointsResponse {
     
     
     public Integer statusCode;
+
     public ListResolverEndpointsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListResolverEndpointsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResolverEndpointsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ListResolverEndpointsResponse {
      */
     
     public Object throttlingException;
+
     public ListResolverEndpointsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListResolverEndpointsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class GetComputeAccessOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeArn")
     public String computeArn;
+
     public GetComputeAccessOutput withComputeArn(String computeArn) {
         this.computeArn = computeArn;
         return this;
@@ -23,6 +24,7 @@ public class GetComputeAccessOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeName")
     public String computeName;
+
     public GetComputeAccessOutput withComputeName(String computeName) {
         this.computeName = computeName;
         return this;
@@ -31,6 +33,7 @@ public class GetComputeAccessOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credentials")
     public AwsCredentials credentials;
+
     public GetComputeAccessOutput withCredentials(AwsCredentials credentials) {
         this.credentials = credentials;
         return this;
@@ -39,6 +42,7 @@ public class GetComputeAccessOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public GetComputeAccessOutput withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -47,9 +51,11 @@ public class GetComputeAccessOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetId")
     public String fleetId;
+
     public GetComputeAccessOutput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
     }
     
+    public GetComputeAccessOutput(){}
 }

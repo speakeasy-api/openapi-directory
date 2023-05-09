@@ -15,9 +15,13 @@ public class GetAdmChannelResponse {
      */
     @JsonProperty("ADMChannelResponse")
     public ADMChannelResponse admChannelResponse;
+
     public GetAdmChannelResponse withADMChannelResponse(ADMChannelResponse admChannelResponse) {
         this.admChannelResponse = admChannelResponse;
         return this;
     }
     
+    public GetAdmChannelResponse(@JsonProperty("ADMChannelResponse") ADMChannelResponse admChannelResponse) {
+        this.admChannelResponse = admChannelResponse;
+  }
 }

@@ -15,6 +15,7 @@ public class DescribeReplicationInstanceTaskLogsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeReplicationInstanceTaskLogsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,6 +24,7 @@ public class DescribeReplicationInstanceTaskLogsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationInstanceArn")
     public String replicationInstanceArn;
+
     public DescribeReplicationInstanceTaskLogsResponse withReplicationInstanceArn(String replicationInstanceArn) {
         this.replicationInstanceArn = replicationInstanceArn;
         return this;
@@ -31,9 +33,11 @@ public class DescribeReplicationInstanceTaskLogsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationInstanceTaskLogs")
     public ReplicationInstanceTaskLog[] replicationInstanceTaskLogs;
+
     public DescribeReplicationInstanceTaskLogsResponse withReplicationInstanceTaskLogs(ReplicationInstanceTaskLog[] replicationInstanceTaskLogs) {
         this.replicationInstanceTaskLogs = replicationInstanceTaskLogs;
         return this;
     }
     
+    public DescribeReplicationInstanceTaskLogsResponse(){}
 }

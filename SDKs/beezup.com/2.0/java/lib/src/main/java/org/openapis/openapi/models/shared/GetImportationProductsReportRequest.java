@@ -18,6 +18,7 @@ public class GetImportationProductsReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ean")
     public String ean;
+
     public GetImportationProductsReportRequest withEan(String ean) {
         this.ean = ean;
         return this;
@@ -29,6 +30,7 @@ public class GetImportationProductsReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCodes")
     public GetImportationProductsReportRequestErrorCode[] errorCodes;
+
     public GetImportationProductsReportRequest withErrorCodes(GetImportationProductsReportRequestErrorCode[] errorCodes) {
         this.errorCodes = errorCodes;
         return this;
@@ -40,6 +42,7 @@ public class GetImportationProductsReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mpn")
     public String mpn;
+
     public GetImportationProductsReportRequest withMpn(String mpn) {
         this.mpn = mpn;
         return this;
@@ -50,6 +53,7 @@ public class GetImportationProductsReportRequest {
      */
     @JsonProperty("pageNumber")
     public Integer pageNumber;
+
     public GetImportationProductsReportRequest withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -60,6 +64,7 @@ public class GetImportationProductsReportRequest {
      */
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public GetImportationProductsReportRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -71,6 +76,7 @@ public class GetImportationProductsReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public GetImportationProductsReportRequest withSku(String sku) {
         this.sku = sku;
         return this;
@@ -82,9 +88,14 @@ public class GetImportationProductsReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GetImportationProductsReportRequest withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GetImportationProductsReportRequest(@JsonProperty("pageNumber") Integer pageNumber, @JsonProperty("pageSize") Integer pageSize) {
+        this.pageNumber = pageNumber;
+        this.pageSize = pageSize;
+  }
 }

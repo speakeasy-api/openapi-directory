@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest {
@@ -12,6 +13,7 @@ public class TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aggregateBy")
     public String aggregateBy;
+
     public TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest withAggregateBy(String aggregateBy) {
         this.aggregateBy = aggregateBy;
         return this;
@@ -42,6 +46,7 @@ public class TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -82,6 +90,7 @@ public class TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest withName(String name) {
         this.name = name;
         return this;
@@ -102,6 +112,7 @@ public class TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -122,6 +134,7 @@ public class TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -132,6 +145,7 @@ public class TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -142,6 +156,7 @@ public class TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +167,7 @@ public class TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -162,9 +178,13 @@ public class TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

@@ -18,9 +18,11 @@ public class RegisterDebuggeeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debuggee")
     public Debuggee debuggee;
+
     public RegisterDebuggeeRequest withDebuggee(Debuggee debuggee) {
         this.debuggee = debuggee;
         return this;
     }
     
+    public RegisterDebuggeeRequest(){}
 }

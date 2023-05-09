@@ -59,12 +59,10 @@ public class CalendarEventResponse {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCalendarEventResponseResponse res = new org.openapis.openapi.models.operations.CreateCalendarEventResponseResponse() {{
+        org.openapis.openapi.models.operations.CreateCalendarEventResponseResponse res = new org.openapis.openapi.models.operations.CreateCalendarEventResponseResponse(contentType, httpRes.statusCode()) {{
             createCalendarEventResponseRequest = null;
             createOrUpdateErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

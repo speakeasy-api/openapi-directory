@@ -12,9 +12,11 @@ public class JsonNodeOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyNameCaseInsensitive")
     public Boolean propertyNameCaseInsensitive;
+
     public JsonNodeOptions withPropertyNameCaseInsensitive(Boolean propertyNameCaseInsensitive) {
         this.propertyNameCaseInsensitive = propertyNameCaseInsensitive;
         return this;
     }
     
+    public JsonNodeOptions(){}
 }

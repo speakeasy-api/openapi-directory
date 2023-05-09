@@ -18,6 +18,7 @@ public class GetFeedConfiguration200ApplicationJSONQueue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageRetentionPeriodInSeconds")
     public Long messageRetentionPeriodInSeconds;
+
     public GetFeedConfiguration200ApplicationJSONQueue withMessageRetentionPeriodInSeconds(Long messageRetentionPeriodInSeconds) {
         this.messageRetentionPeriodInSeconds = messageRetentionPeriodInSeconds;
         return this;
@@ -29,9 +30,11 @@ public class GetFeedConfiguration200ApplicationJSONQueue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibilityTimeoutInSeconds")
     public Long visibilityTimeoutInSeconds;
+
     public GetFeedConfiguration200ApplicationJSONQueue withVisibilityTimeoutInSeconds(Long visibilityTimeoutInSeconds) {
         this.visibilityTimeoutInSeconds = visibilityTimeoutInSeconds;
         return this;
     }
     
+    public GetFeedConfiguration200ApplicationJSONQueue(){}
 }

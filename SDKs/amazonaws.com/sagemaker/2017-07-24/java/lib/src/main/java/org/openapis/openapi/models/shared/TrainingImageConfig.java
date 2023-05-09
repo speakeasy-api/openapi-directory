@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TrainingImageConfig {
     @JsonProperty("TrainingRepositoryAccessMode")
     public TrainingRepositoryAccessModeEnum trainingRepositoryAccessMode;
+
     public TrainingImageConfig withTrainingRepositoryAccessMode(TrainingRepositoryAccessModeEnum trainingRepositoryAccessMode) {
         this.trainingRepositoryAccessMode = trainingRepositoryAccessMode;
         return this;
@@ -22,9 +23,13 @@ public class TrainingImageConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingRepositoryAuthConfig")
     public TrainingRepositoryAuthConfig trainingRepositoryAuthConfig;
+
     public TrainingImageConfig withTrainingRepositoryAuthConfig(TrainingRepositoryAuthConfig trainingRepositoryAuthConfig) {
         this.trainingRepositoryAuthConfig = trainingRepositoryAuthConfig;
         return this;
     }
     
+    public TrainingImageConfig(@JsonProperty("TrainingRepositoryAccessMode") TrainingRepositoryAccessModeEnum trainingRepositoryAccessMode) {
+        this.trainingRepositoryAccessMode = trainingRepositoryAccessMode;
+  }
 }

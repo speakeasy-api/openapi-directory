@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InstanceInformationFilter {
     @JsonProperty("key")
     public InstanceInformationFilterKeyEnum key;
+
     public InstanceInformationFilter withKey(InstanceInformationFilterKeyEnum key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class InstanceInformationFilter {
     
     @JsonProperty("valueSet")
     public String[] valueSet;
+
     public InstanceInformationFilter withValueSet(String[] valueSet) {
         this.valueSet = valueSet;
         return this;
     }
     
+    public InstanceInformationFilter(@JsonProperty("key") InstanceInformationFilterKeyEnum key, @JsonProperty("valueSet") String[] valueSet) {
+        this.key = key;
+        this.valueSet = valueSet;
+  }
 }

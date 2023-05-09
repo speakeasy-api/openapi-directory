@@ -15,6 +15,7 @@ public class AwsEcsClusterConfigurationExecuteCommandConfigurationLogConfigurati
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchEncryptionEnabled")
     public Boolean cloudWatchEncryptionEnabled;
+
     public AwsEcsClusterConfigurationExecuteCommandConfigurationLogConfigurationDetails withCloudWatchEncryptionEnabled(Boolean cloudWatchEncryptionEnabled) {
         this.cloudWatchEncryptionEnabled = cloudWatchEncryptionEnabled;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsClusterConfigurationExecuteCommandConfigurationLogConfigurati
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogGroupName")
     public String cloudWatchLogGroupName;
+
     public AwsEcsClusterConfigurationExecuteCommandConfigurationLogConfigurationDetails withCloudWatchLogGroupName(String cloudWatchLogGroupName) {
         this.cloudWatchLogGroupName = cloudWatchLogGroupName;
         return this;
@@ -31,6 +33,7 @@ public class AwsEcsClusterConfigurationExecuteCommandConfigurationLogConfigurati
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BucketName")
     public String s3BucketName;
+
     public AwsEcsClusterConfigurationExecuteCommandConfigurationLogConfigurationDetails withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -39,6 +42,7 @@ public class AwsEcsClusterConfigurationExecuteCommandConfigurationLogConfigurati
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3EncryptionEnabled")
     public Boolean s3EncryptionEnabled;
+
     public AwsEcsClusterConfigurationExecuteCommandConfigurationLogConfigurationDetails withS3EncryptionEnabled(Boolean s3EncryptionEnabled) {
         this.s3EncryptionEnabled = s3EncryptionEnabled;
         return this;
@@ -47,9 +51,11 @@ public class AwsEcsClusterConfigurationExecuteCommandConfigurationLogConfigurati
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3KeyPrefix")
     public String s3KeyPrefix;
+
     public AwsEcsClusterConfigurationExecuteCommandConfigurationLogConfigurationDetails withS3KeyPrefix(String s3KeyPrefix) {
         this.s3KeyPrefix = s3KeyPrefix;
         return this;
     }
     
+    public AwsEcsClusterConfigurationExecuteCommandConfigurationLogConfigurationDetails(){}
 }

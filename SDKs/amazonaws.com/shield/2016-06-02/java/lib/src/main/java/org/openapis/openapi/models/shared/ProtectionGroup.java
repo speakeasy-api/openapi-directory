@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProtectionGroup {
     @JsonProperty("Aggregation")
     public ProtectionGroupAggregationEnum aggregation;
+
     public ProtectionGroup withAggregation(ProtectionGroupAggregationEnum aggregation) {
         this.aggregation = aggregation;
         return this;
@@ -21,6 +22,7 @@ public class ProtectionGroup {
     
     @JsonProperty("Members")
     public String[] members;
+
     public ProtectionGroup withMembers(String[] members) {
         this.members = members;
         return this;
@@ -28,6 +30,7 @@ public class ProtectionGroup {
     
     @JsonProperty("Pattern")
     public ProtectionGroupPatternEnum pattern;
+
     public ProtectionGroup withPattern(ProtectionGroupPatternEnum pattern) {
         this.pattern = pattern;
         return this;
@@ -36,6 +39,7 @@ public class ProtectionGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProtectionGroupArn")
     public String protectionGroupArn;
+
     public ProtectionGroup withProtectionGroupArn(String protectionGroupArn) {
         this.protectionGroupArn = protectionGroupArn;
         return this;
@@ -43,6 +47,7 @@ public class ProtectionGroup {
     
     @JsonProperty("ProtectionGroupId")
     public String protectionGroupId;
+
     public ProtectionGroup withProtectionGroupId(String protectionGroupId) {
         this.protectionGroupId = protectionGroupId;
         return this;
@@ -51,9 +56,16 @@ public class ProtectionGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public ProtectedResourceTypeEnum resourceType;
+
     public ProtectionGroup withResourceType(ProtectedResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ProtectionGroup(@JsonProperty("Aggregation") ProtectionGroupAggregationEnum aggregation, @JsonProperty("Members") String[] members, @JsonProperty("Pattern") ProtectionGroupPatternEnum pattern, @JsonProperty("ProtectionGroupId") String protectionGroupId) {
+        this.aggregation = aggregation;
+        this.members = members;
+        this.pattern = pattern;
+        this.protectionGroupId = protectionGroupId;
+  }
 }

@@ -15,6 +15,7 @@ public class GetStatementResultResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnMetadata")
     public ColumnMetadata[] columnMetadata;
+
     public GetStatementResultResponse withColumnMetadata(ColumnMetadata[] columnMetadata) {
         this.columnMetadata = columnMetadata;
         return this;
@@ -23,6 +24,7 @@ public class GetStatementResultResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetStatementResultResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,6 +32,7 @@ public class GetStatementResultResponse {
     
     @JsonProperty("Records")
     public Field[][] records;
+
     public GetStatementResultResponse withRecords(Field[][] records) {
         this.records = records;
         return this;
@@ -38,9 +41,13 @@ public class GetStatementResultResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalNumRows")
     public Long totalNumRows;
+
     public GetStatementResultResponse withTotalNumRows(Long totalNumRows) {
         this.totalNumRows = totalNumRows;
         return this;
     }
     
+    public GetStatementResultResponse(@JsonProperty("Records") Field[][] records) {
+        this.records = records;
+  }
 }

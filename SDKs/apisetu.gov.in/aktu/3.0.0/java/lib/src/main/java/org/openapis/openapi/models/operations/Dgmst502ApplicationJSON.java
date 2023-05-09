@@ -15,6 +15,7 @@ public class Dgmst502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Dgmst502ApplicationJSONErrorEnum error;
+
     public Dgmst502ApplicationJSON withError(Dgmst502ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Dgmst502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Dgmst502ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Dgmst502ApplicationJSON withErrorDescription(Dgmst502ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Dgmst502ApplicationJSON(){}
 }

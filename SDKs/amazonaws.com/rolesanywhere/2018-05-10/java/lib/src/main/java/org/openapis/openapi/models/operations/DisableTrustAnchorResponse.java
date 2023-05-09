@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisableTrustAnchorResponse {
@@ -12,6 +13,7 @@ public class DisableTrustAnchorResponse {
      */
     
     public Object accessDeniedException;
+
     public DisableTrustAnchorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DisableTrustAnchorResponse {
     
     
     public String contentType;
+
     public DisableTrustAnchorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DisableTrustAnchorResponse {
     
     
     public Integer statusCode;
+
     public DisableTrustAnchorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DisableTrustAnchorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisableTrustAnchorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class DisableTrustAnchorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisableTrustAnchorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,9 +59,14 @@ public class DisableTrustAnchorResponse {
      */
     
     public org.openapis.openapi.models.shared.TrustAnchorDetailResponse trustAnchorDetailResponse;
+
     public DisableTrustAnchorResponse withTrustAnchorDetailResponse(org.openapis.openapi.models.shared.TrustAnchorDetailResponse trustAnchorDetailResponse) {
         this.trustAnchorDetailResponse = trustAnchorDetailResponse;
         return this;
     }
     
+    public DisableTrustAnchorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

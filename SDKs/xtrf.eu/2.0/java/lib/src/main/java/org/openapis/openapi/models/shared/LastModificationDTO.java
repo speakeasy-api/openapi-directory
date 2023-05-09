@@ -12,6 +12,7 @@ public class LastModificationDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public LastModificationDTO withDate(String date) {
         this.date = date;
         return this;
@@ -20,9 +21,11 @@ public class LastModificationDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifier")
     public String modifier;
+
     public LastModificationDTO withModifier(String modifier) {
         this.modifier = modifier;
         return this;
     }
     
+    public LastModificationDTO(){}
 }

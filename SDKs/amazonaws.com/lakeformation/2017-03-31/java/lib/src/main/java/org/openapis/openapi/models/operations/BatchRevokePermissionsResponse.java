@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchRevokePermissionsResponse {
@@ -12,6 +13,7 @@ public class BatchRevokePermissionsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchRevokePermissionsResponse batchRevokePermissionsResponse;
+
     public BatchRevokePermissionsResponse withBatchRevokePermissionsResponse(org.openapis.openapi.models.shared.BatchRevokePermissionsResponse batchRevokePermissionsResponse) {
         this.batchRevokePermissionsResponse = batchRevokePermissionsResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchRevokePermissionsResponse {
     
     
     public String contentType;
+
     public BatchRevokePermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchRevokePermissionsResponse {
      */
     
     public Object invalidInputException;
+
     public BatchRevokePermissionsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class BatchRevokePermissionsResponse {
      */
     
     public Object operationTimeoutException;
+
     public BatchRevokePermissionsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -46,6 +51,7 @@ public class BatchRevokePermissionsResponse {
     
     
     public Integer statusCode;
+
     public BatchRevokePermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class BatchRevokePermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchRevokePermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchRevokePermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

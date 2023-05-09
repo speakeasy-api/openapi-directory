@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Cipherparams {
     @JsonProperty("iv")
     public String iv;
+
     public Cipherparams withIv(String iv) {
         this.iv = iv;
         return this;
     }
     
+    public Cipherparams(@JsonProperty("iv") String iv) {
+        this.iv = iv;
+  }
 }

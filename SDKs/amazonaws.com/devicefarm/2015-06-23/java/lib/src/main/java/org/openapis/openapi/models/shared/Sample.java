@@ -15,6 +15,7 @@ public class Sample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Sample withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class Sample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SampleTypeEnum type;
+
     public Sample withType(SampleTypeEnum type) {
         this.type = type;
         return this;
@@ -31,9 +33,11 @@ public class Sample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Sample withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Sample(){}
 }

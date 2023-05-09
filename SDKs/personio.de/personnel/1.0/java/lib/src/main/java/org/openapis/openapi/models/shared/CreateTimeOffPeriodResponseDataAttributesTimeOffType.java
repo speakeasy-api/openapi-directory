@@ -12,6 +12,7 @@ public class CreateTimeOffPeriodResponseDataAttributesTimeOffType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public CreateTimeOffPeriodResponseDataAttributesTimeOffTypeAttributes[] attributes;
+
     public CreateTimeOffPeriodResponseDataAttributesTimeOffType withAttributes(CreateTimeOffPeriodResponseDataAttributesTimeOffTypeAttributes[] attributes) {
         this.attributes = attributes;
         return this;
@@ -20,9 +21,11 @@ public class CreateTimeOffPeriodResponseDataAttributesTimeOffType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public CreateTimeOffPeriodResponseDataAttributesTimeOffType withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CreateTimeOffPeriodResponseDataAttributesTimeOffType(){}
 }

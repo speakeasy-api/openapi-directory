@@ -78,4 +78,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudWebriskV1RawHash
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudWebriskV1SearchUrisResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudWebriskV1SearchUrisResponseThreatUriThreatTypesEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudWebriskV1SearchUrisResponseThreatUri.java
+docs/sdk/README.md
+docs/hashes/README.md
+docs/projects/README.md
+docs/threatlists/README.md
+docs/uris/README.md
 USAGE.md

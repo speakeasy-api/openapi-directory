@@ -18,6 +18,7 @@ public class DeleteVolumeOntapResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FinalBackupId")
     public String finalBackupId;
+
     public DeleteVolumeOntapResponse withFinalBackupId(String finalBackupId) {
         this.finalBackupId = finalBackupId;
         return this;
@@ -29,9 +30,11 @@ public class DeleteVolumeOntapResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FinalBackupTags")
     public Tag[] finalBackupTags;
+
     public DeleteVolumeOntapResponse withFinalBackupTags(Tag[] finalBackupTags) {
         this.finalBackupTags = finalBackupTags;
         return this;
     }
     
+    public DeleteVolumeOntapResponse(){}
 }

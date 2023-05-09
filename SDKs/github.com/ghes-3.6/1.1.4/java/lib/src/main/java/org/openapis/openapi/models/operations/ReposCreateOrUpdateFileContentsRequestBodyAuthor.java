@@ -15,6 +15,7 @@ public class ReposCreateOrUpdateFileContentsRequestBodyAuthor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public ReposCreateOrUpdateFileContentsRequestBodyAuthor withDate(String date) {
         this.date = date;
         return this;
@@ -25,6 +26,7 @@ public class ReposCreateOrUpdateFileContentsRequestBodyAuthor {
      */
     @JsonProperty("email")
     public String email;
+
     public ReposCreateOrUpdateFileContentsRequestBodyAuthor withEmail(String email) {
         this.email = email;
         return this;
@@ -35,9 +37,14 @@ public class ReposCreateOrUpdateFileContentsRequestBodyAuthor {
      */
     @JsonProperty("name")
     public String name;
+
     public ReposCreateOrUpdateFileContentsRequestBodyAuthor withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ReposCreateOrUpdateFileContentsRequestBodyAuthor(@JsonProperty("email") String email, @JsonProperty("name") String name) {
+        this.email = email;
+        this.name = name;
+  }
 }

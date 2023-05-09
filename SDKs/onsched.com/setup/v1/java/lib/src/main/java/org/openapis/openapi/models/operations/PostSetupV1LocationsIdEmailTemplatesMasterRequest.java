@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSetupV1LocationsIdEmailTemplatesMasterRequest {
@@ -12,6 +13,7 @@ public class PostSetupV1LocationsIdEmailTemplatesMasterRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.MasterTemplateSettingsInputModel masterTemplateSettingsInputModel;
+
     public PostSetupV1LocationsIdEmailTemplatesMasterRequest withMasterTemplateSettingsInputModel(org.openapis.openapi.models.shared.MasterTemplateSettingsInputModel masterTemplateSettingsInputModel) {
         this.masterTemplateSettingsInputModel = masterTemplateSettingsInputModel;
         return this;
@@ -22,9 +24,13 @@ public class PostSetupV1LocationsIdEmailTemplatesMasterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PostSetupV1LocationsIdEmailTemplatesMasterRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PostSetupV1LocationsIdEmailTemplatesMasterRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

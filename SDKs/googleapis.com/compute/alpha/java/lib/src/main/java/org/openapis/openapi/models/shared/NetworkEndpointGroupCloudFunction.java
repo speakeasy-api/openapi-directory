@@ -18,6 +18,7 @@ public class NetworkEndpointGroupCloudFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("function")
     public String function;
+
     public NetworkEndpointGroupCloudFunction withFunction(String function) {
         this.function = function;
         return this;
@@ -29,9 +30,11 @@ public class NetworkEndpointGroupCloudFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlMask")
     public String urlMask;
+
     public NetworkEndpointGroupCloudFunction withUrlMask(String urlMask) {
         this.urlMask = urlMask;
         return this;
     }
     
+    public NetworkEndpointGroupCloudFunction(){}
 }

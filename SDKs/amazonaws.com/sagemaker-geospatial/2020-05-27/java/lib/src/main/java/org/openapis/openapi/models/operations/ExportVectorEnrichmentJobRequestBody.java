@@ -4,6 +4,8 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ExportVectorEnrichmentJobRequestBody {
@@ -12,8 +14,21 @@ public class ExportVectorEnrichmentJobRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public ExportVectorEnrichmentJobRequestBody withArn(String arn) {
         this.arn = arn;
+        return this;
+    }
+    
+    /**
+     * A unique token that guarantees that the call to this API is idempotent.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ClientToken")
+    public String clientToken;
+
+    public ExportVectorEnrichmentJobRequestBody withClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
     
@@ -22,6 +37,7 @@ public class ExportVectorEnrichmentJobRequestBody {
      */
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public ExportVectorEnrichmentJobRequestBody withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -32,9 +48,15 @@ public class ExportVectorEnrichmentJobRequestBody {
      */
     @JsonProperty("OutputConfig")
     public ExportVectorEnrichmentJobRequestBodyOutputConfig outputConfig;
+
     public ExportVectorEnrichmentJobRequestBody withOutputConfig(ExportVectorEnrichmentJobRequestBodyOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
     }
     
+    public ExportVectorEnrichmentJobRequestBody(@JsonProperty("Arn") String arn, @JsonProperty("ExecutionRoleArn") String executionRoleArn, @JsonProperty("OutputConfig") ExportVectorEnrichmentJobRequestBodyOutputConfig outputConfig) {
+        this.arn = arn;
+        this.executionRoleArn = executionRoleArn;
+        this.outputConfig = outputConfig;
+  }
 }

@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GatewayRouteRef {
     @JsonProperty("arn")
     public String arn;
+
     public GatewayRouteRef withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class GatewayRouteRef {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public GatewayRouteRef withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -33,6 +35,7 @@ public class GatewayRouteRef {
     
     @JsonProperty("gatewayRouteName")
     public String gatewayRouteName;
+
     public GatewayRouteRef withGatewayRouteName(String gatewayRouteName) {
         this.gatewayRouteName = gatewayRouteName;
         return this;
@@ -42,6 +45,7 @@ public class GatewayRouteRef {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public GatewayRouteRef withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -49,6 +53,7 @@ public class GatewayRouteRef {
     
     @JsonProperty("meshName")
     public String meshName;
+
     public GatewayRouteRef withMeshName(String meshName) {
         this.meshName = meshName;
         return this;
@@ -56,6 +61,7 @@ public class GatewayRouteRef {
     
     @JsonProperty("meshOwner")
     public String meshOwner;
+
     public GatewayRouteRef withMeshOwner(String meshOwner) {
         this.meshOwner = meshOwner;
         return this;
@@ -63,6 +69,7 @@ public class GatewayRouteRef {
     
     @JsonProperty("resourceOwner")
     public String resourceOwner;
+
     public GatewayRouteRef withResourceOwner(String resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
@@ -70,6 +77,7 @@ public class GatewayRouteRef {
     
     @JsonProperty("version")
     public Long version;
+
     public GatewayRouteRef withVersion(Long version) {
         this.version = version;
         return this;
@@ -77,9 +85,21 @@ public class GatewayRouteRef {
     
     @JsonProperty("virtualGatewayName")
     public String virtualGatewayName;
+
     public GatewayRouteRef withVirtualGatewayName(String virtualGatewayName) {
         this.virtualGatewayName = virtualGatewayName;
         return this;
     }
     
+    public GatewayRouteRef(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("gatewayRouteName") String gatewayRouteName, @JsonProperty("lastUpdatedAt") OffsetDateTime lastUpdatedAt, @JsonProperty("meshName") String meshName, @JsonProperty("meshOwner") String meshOwner, @JsonProperty("resourceOwner") String resourceOwner, @JsonProperty("version") Long version, @JsonProperty("virtualGatewayName") String virtualGatewayName) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.gatewayRouteName = gatewayRouteName;
+        this.lastUpdatedAt = lastUpdatedAt;
+        this.meshName = meshName;
+        this.meshOwner = meshOwner;
+        this.resourceOwner = resourceOwner;
+        this.version = version;
+        this.virtualGatewayName = virtualGatewayName;
+  }
 }

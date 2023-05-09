@@ -62,10 +62,8 @@ public class Reservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AcknowledgmentReservationResponse res = new org.openapis.openapi.models.operations.AcknowledgmentReservationResponse() {{
+        org.openapis.openapi.models.operations.AcknowledgmentReservationResponse res = new org.openapis.openapi.models.operations.AcknowledgmentReservationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,10 +102,8 @@ public class Reservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelReservationResponse res = new org.openapis.openapi.models.operations.CancelReservationResponse() {{
+        org.openapis.openapi.models.operations.CancelReservationResponse res = new org.openapis.openapi.models.operations.CancelReservationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -146,10 +142,8 @@ public class Reservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmReservationResponse res = new org.openapis.openapi.models.operations.ConfirmReservationResponse() {{
+        org.openapis.openapi.models.operations.ConfirmReservationResponse res = new org.openapis.openapi.models.operations.ConfirmReservationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Reservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateReservationResponse res = new org.openapis.openapi.models.operations.CreateReservationResponse() {{
+        org.openapis.openapi.models.operations.CreateReservationResponse res = new org.openapis.openapi.models.operations.CreateReservationResponse(contentType, httpRes.statusCode()) {{
             createReservation200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,11 +235,9 @@ public class Reservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReservationByIdResponse res = new org.openapis.openapi.models.operations.ReservationByIdResponse() {{
+        org.openapis.openapi.models.operations.ReservationByIdResponse res = new org.openapis.openapi.models.operations.ReservationByIdResponse(contentType, httpRes.statusCode()) {{
             reservationById200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,10 +283,8 @@ public class Reservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReservationbyWarehouseandSkuResponse res = new org.openapis.openapi.models.operations.ReservationbyWarehouseandSkuResponse() {{
+        org.openapis.openapi.models.operations.ReservationbyWarehouseandSkuResponse res = new org.openapis.openapi.models.operations.ReservationbyWarehouseandSkuResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -22,6 +22,7 @@ public class PredictorEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Datetime")
     public OffsetDateTime datetime;
+
     public PredictorEvent withDatetime(OffsetDateTime datetime) {
         this.datetime = datetime;
         return this;
@@ -30,9 +31,11 @@ public class PredictorEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Detail")
     public String detail;
+
     public PredictorEvent withDetail(String detail) {
         this.detail = detail;
         return this;
     }
     
+    public PredictorEvent(){}
 }

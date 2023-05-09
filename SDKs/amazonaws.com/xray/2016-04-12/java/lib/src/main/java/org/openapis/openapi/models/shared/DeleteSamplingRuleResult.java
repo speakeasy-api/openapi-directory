@@ -15,9 +15,11 @@ public class DeleteSamplingRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SamplingRuleRecord")
     public SamplingRuleRecord samplingRuleRecord;
+
     public DeleteSamplingRuleResult withSamplingRuleRecord(SamplingRuleRecord samplingRuleRecord) {
         this.samplingRuleRecord = samplingRuleRecord;
         return this;
     }
     
+    public DeleteSamplingRuleResult(){}
 }

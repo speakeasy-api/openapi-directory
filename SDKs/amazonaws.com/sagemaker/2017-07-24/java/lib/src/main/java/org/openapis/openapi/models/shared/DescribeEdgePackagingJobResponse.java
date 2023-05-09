@@ -20,6 +20,7 @@ public class DescribeEdgePackagingJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompilationJobName")
     public String compilationJobName;
+
     public DescribeEdgePackagingJobResponse withCompilationJobName(String compilationJobName) {
         this.compilationJobName = compilationJobName;
         return this;
@@ -30,6 +31,7 @@ public class DescribeEdgePackagingJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeEdgePackagingJobResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -37,6 +39,7 @@ public class DescribeEdgePackagingJobResponse {
     
     @JsonProperty("EdgePackagingJobArn")
     public String edgePackagingJobArn;
+
     public DescribeEdgePackagingJobResponse withEdgePackagingJobArn(String edgePackagingJobArn) {
         this.edgePackagingJobArn = edgePackagingJobArn;
         return this;
@@ -44,6 +47,7 @@ public class DescribeEdgePackagingJobResponse {
     
     @JsonProperty("EdgePackagingJobName")
     public String edgePackagingJobName;
+
     public DescribeEdgePackagingJobResponse withEdgePackagingJobName(String edgePackagingJobName) {
         this.edgePackagingJobName = edgePackagingJobName;
         return this;
@@ -51,6 +55,7 @@ public class DescribeEdgePackagingJobResponse {
     
     @JsonProperty("EdgePackagingJobStatus")
     public EdgePackagingJobStatusEnum edgePackagingJobStatus;
+
     public DescribeEdgePackagingJobResponse withEdgePackagingJobStatus(EdgePackagingJobStatusEnum edgePackagingJobStatus) {
         this.edgePackagingJobStatus = edgePackagingJobStatus;
         return this;
@@ -59,6 +64,7 @@ public class DescribeEdgePackagingJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EdgePackagingJobStatusMessage")
     public String edgePackagingJobStatusMessage;
+
     public DescribeEdgePackagingJobResponse withEdgePackagingJobStatusMessage(String edgePackagingJobStatusMessage) {
         this.edgePackagingJobStatusMessage = edgePackagingJobStatusMessage;
         return this;
@@ -69,6 +75,7 @@ public class DescribeEdgePackagingJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeEdgePackagingJobResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -77,6 +84,7 @@ public class DescribeEdgePackagingJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelArtifact")
     public String modelArtifact;
+
     public DescribeEdgePackagingJobResponse withModelArtifact(String modelArtifact) {
         this.modelArtifact = modelArtifact;
         return this;
@@ -85,6 +93,7 @@ public class DescribeEdgePackagingJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelName")
     public String modelName;
+
     public DescribeEdgePackagingJobResponse withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -93,6 +102,7 @@ public class DescribeEdgePackagingJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelSignature")
     public String modelSignature;
+
     public DescribeEdgePackagingJobResponse withModelSignature(String modelSignature) {
         this.modelSignature = modelSignature;
         return this;
@@ -101,6 +111,7 @@ public class DescribeEdgePackagingJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelVersion")
     public String modelVersion;
+
     public DescribeEdgePackagingJobResponse withModelVersion(String modelVersion) {
         this.modelVersion = modelVersion;
         return this;
@@ -109,6 +120,7 @@ public class DescribeEdgePackagingJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputConfig")
     public EdgeOutputConfig outputConfig;
+
     public DescribeEdgePackagingJobResponse withOutputConfig(EdgeOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -117,6 +129,7 @@ public class DescribeEdgePackagingJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PresetDeploymentOutput")
     public EdgePresetDeploymentOutput presetDeploymentOutput;
+
     public DescribeEdgePackagingJobResponse withPresetDeploymentOutput(EdgePresetDeploymentOutput presetDeploymentOutput) {
         this.presetDeploymentOutput = presetDeploymentOutput;
         return this;
@@ -125,6 +138,7 @@ public class DescribeEdgePackagingJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceKey")
     public String resourceKey;
+
     public DescribeEdgePackagingJobResponse withResourceKey(String resourceKey) {
         this.resourceKey = resourceKey;
         return this;
@@ -133,9 +147,15 @@ public class DescribeEdgePackagingJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeEdgePackagingJobResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public DescribeEdgePackagingJobResponse(@JsonProperty("EdgePackagingJobArn") String edgePackagingJobArn, @JsonProperty("EdgePackagingJobName") String edgePackagingJobName, @JsonProperty("EdgePackagingJobStatus") EdgePackagingJobStatusEnum edgePackagingJobStatus) {
+        this.edgePackagingJobArn = edgePackagingJobArn;
+        this.edgePackagingJobName = edgePackagingJobName;
+        this.edgePackagingJobStatus = edgePackagingJobStatus;
+  }
 }

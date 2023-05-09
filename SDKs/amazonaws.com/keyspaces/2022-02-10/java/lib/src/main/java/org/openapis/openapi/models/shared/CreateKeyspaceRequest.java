@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateKeyspaceRequest {
     @JsonProperty("keyspaceName")
     public String keyspaceName;
+
     public CreateKeyspaceRequest withKeyspaceName(String keyspaceName) {
         this.keyspaceName = keyspaceName;
         return this;
@@ -19,9 +20,13 @@ public class CreateKeyspaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateKeyspaceRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateKeyspaceRequest(@JsonProperty("keyspaceName") String keyspaceName) {
+        this.keyspaceName = keyspaceName;
+  }
 }

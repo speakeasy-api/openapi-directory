@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesJsonRequest {
@@ -12,9 +13,13 @@ public class GetResourcesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=q")
     public String q;
+
     public GetResourcesJsonRequest withQ(String q) {
         this.q = q;
         return this;
     }
     
+    public GetResourcesJsonRequest(@JsonProperty("q") String q) {
+        this.q = q;
+  }
 }

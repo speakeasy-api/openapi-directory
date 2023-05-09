@@ -12,6 +12,7 @@ public class ApiCoreDtoDatapointsUrlByLanguageItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public ApiCoreDtoDatapointsUrlByLanguageItem withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -20,9 +21,11 @@ public class ApiCoreDtoDatapointsUrlByLanguageItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ApiCoreDtoDatapointsUrlByLanguageItem withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ApiCoreDtoDatapointsUrlByLanguageItem(){}
 }

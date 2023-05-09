@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTranscriptionRequestFile {
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public CreateTranscriptionRequestFile withContent(byte[] content) {
         this.content = content;
         return this;
@@ -16,9 +18,14 @@ public class CreateTranscriptionRequestFile {
     
     @SpeakeasyMetadata("multipartForm:name=file")
     public String file;
+
     public CreateTranscriptionRequestFile withFile(String file) {
         this.file = file;
         return this;
     }
     
+    public CreateTranscriptionRequestFile(@JsonProperty("content") byte[] content, @JsonProperty("file") String file) {
+        this.content = content;
+        this.file = file;
+  }
 }

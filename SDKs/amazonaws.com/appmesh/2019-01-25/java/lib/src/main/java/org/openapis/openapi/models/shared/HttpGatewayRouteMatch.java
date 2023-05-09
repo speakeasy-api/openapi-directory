@@ -15,6 +15,7 @@ public class HttpGatewayRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public HttpGatewayRouteHeader[] headers;
+
     public HttpGatewayRouteMatch withHeaders(HttpGatewayRouteHeader[] headers) {
         this.headers = headers;
         return this;
@@ -23,6 +24,7 @@ public class HttpGatewayRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostname")
     public GatewayRouteHostnameMatch hostname;
+
     public HttpGatewayRouteMatch withHostname(GatewayRouteHostnameMatch hostname) {
         this.hostname = hostname;
         return this;
@@ -31,6 +33,7 @@ public class HttpGatewayRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public HttpMethodEnum method;
+
     public HttpGatewayRouteMatch withMethod(HttpMethodEnum method) {
         this.method = method;
         return this;
@@ -39,6 +42,7 @@ public class HttpGatewayRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public HttpPathMatch path;
+
     public HttpGatewayRouteMatch withPath(HttpPathMatch path) {
         this.path = path;
         return this;
@@ -47,6 +51,7 @@ public class HttpGatewayRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Long port;
+
     public HttpGatewayRouteMatch withPort(Long port) {
         this.port = port;
         return this;
@@ -55,6 +60,7 @@ public class HttpGatewayRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public HttpGatewayRouteMatch withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -63,9 +69,11 @@ public class HttpGatewayRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryParameters")
     public HttpQueryParameter[] queryParameters;
+
     public HttpGatewayRouteMatch withQueryParameters(HttpQueryParameter[] queryParameters) {
         this.queryParameters = queryParameters;
         return this;
     }
     
+    public HttpGatewayRouteMatch(){}
 }

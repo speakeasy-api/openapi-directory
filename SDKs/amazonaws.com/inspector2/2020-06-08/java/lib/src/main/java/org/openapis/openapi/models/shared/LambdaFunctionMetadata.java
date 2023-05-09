@@ -15,6 +15,7 @@ public class LambdaFunctionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functionName")
     public String functionName;
+
     public LambdaFunctionMetadata withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
@@ -23,6 +24,7 @@ public class LambdaFunctionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functionTags")
     public java.util.Map<String, String> functionTags;
+
     public LambdaFunctionMetadata withFunctionTags(java.util.Map<String, String> functionTags) {
         this.functionTags = functionTags;
         return this;
@@ -31,6 +33,7 @@ public class LambdaFunctionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layers")
     public String[] layers;
+
     public LambdaFunctionMetadata withLayers(String[] layers) {
         this.layers = layers;
         return this;
@@ -39,9 +42,11 @@ public class LambdaFunctionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtime")
     public RuntimeEnum runtime;
+
     public LambdaFunctionMetadata withRuntime(RuntimeEnum runtime) {
         this.runtime = runtime;
         return this;
     }
     
+    public LambdaFunctionMetadata(){}
 }

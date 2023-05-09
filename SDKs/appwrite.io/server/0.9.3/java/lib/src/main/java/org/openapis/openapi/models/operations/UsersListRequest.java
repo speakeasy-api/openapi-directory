@@ -12,6 +12,7 @@ public class UsersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public UsersListRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -22,6 +23,7 @@ public class UsersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public UsersListRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -32,6 +34,7 @@ public class UsersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderType")
     public String orderType;
+
     public UsersListRequest withOrderType(String orderType) {
         this.orderType = orderType;
         return this;
@@ -42,9 +45,11 @@ public class UsersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public UsersListRequest withSearch(String search) {
         this.search = search;
         return this;
     }
     
+    public UsersListRequest(){}
 }

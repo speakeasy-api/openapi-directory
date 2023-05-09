@@ -15,9 +15,13 @@ public class ScoreConfigsOutput {
      */
     @JsonProperty("score_configs")
     public ScoreConfigOutput[] scoreConfigs;
+
     public ScoreConfigsOutput withScoreConfigs(ScoreConfigOutput[] scoreConfigs) {
         this.scoreConfigs = scoreConfigs;
         return this;
     }
     
+    public ScoreConfigsOutput(@JsonProperty("score_configs") ScoreConfigOutput[] scoreConfigs) {
+        this.scoreConfigs = scoreConfigs;
+  }
 }

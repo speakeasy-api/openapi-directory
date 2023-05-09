@@ -15,6 +15,7 @@ public class CreateReferenceStoreRequestBodySseConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyArn")
     public String keyArn;
+
     public CreateReferenceStoreRequestBodySseConfig withKeyArn(String keyArn) {
         this.keyArn = keyArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateReferenceStoreRequestBodySseConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public org.openapis.openapi.models.shared.EncryptionTypeEnum type;
+
     public CreateReferenceStoreRequestBodySseConfig withType(org.openapis.openapi.models.shared.EncryptionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateReferenceStoreRequestBodySseConfig(){}
 }

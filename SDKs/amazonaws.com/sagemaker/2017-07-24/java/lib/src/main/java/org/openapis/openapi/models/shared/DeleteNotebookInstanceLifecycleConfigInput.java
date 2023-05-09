@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteNotebookInstanceLifecycleConfigInput {
     @JsonProperty("NotebookInstanceLifecycleConfigName")
     public String notebookInstanceLifecycleConfigName;
+
     public DeleteNotebookInstanceLifecycleConfigInput withNotebookInstanceLifecycleConfigName(String notebookInstanceLifecycleConfigName) {
         this.notebookInstanceLifecycleConfigName = notebookInstanceLifecycleConfigName;
         return this;
     }
     
+    public DeleteNotebookInstanceLifecycleConfigInput(@JsonProperty("NotebookInstanceLifecycleConfigName") String notebookInstanceLifecycleConfigName) {
+        this.notebookInstanceLifecycleConfigName = notebookInstanceLifecycleConfigName;
+  }
 }

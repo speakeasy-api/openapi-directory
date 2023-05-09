@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetCapacityReservationUsageResultInstanceUsages {
     
     public String accountId;
+
     public GetCapacityReservationUsageResultInstanceUsages withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,9 +20,11 @@ public class GetCapacityReservationUsageResultInstanceUsages {
     
     
     public Long usedInstanceCount;
+
     public GetCapacityReservationUsageResultInstanceUsages withUsedInstanceCount(Long usedInstanceCount) {
         this.usedInstanceCount = usedInstanceCount;
         return this;
     }
     
+    public GetCapacityReservationUsageResultInstanceUsages(){}
 }

@@ -12,6 +12,7 @@ public class EnterpriseSettingsEnterpriseLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster_support")
     public Boolean clusterSupport;
+
     public EnterpriseSettingsEnterpriseLicense withClusterSupport(Boolean clusterSupport) {
         this.clusterSupport = clusterSupport;
         return this;
@@ -20,6 +21,7 @@ public class EnterpriseSettingsEnterpriseLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluation")
     public Boolean evaluation;
+
     public EnterpriseSettingsEnterpriseLicense withEvaluation(Boolean evaluation) {
         this.evaluation = evaluation;
         return this;
@@ -28,6 +30,7 @@ public class EnterpriseSettingsEnterpriseLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expire_at")
     public String expireAt;
+
     public EnterpriseSettingsEnterpriseLicense withExpireAt(String expireAt) {
         this.expireAt = expireAt;
         return this;
@@ -36,6 +39,7 @@ public class EnterpriseSettingsEnterpriseLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("perpetual")
     public Boolean perpetual;
+
     public EnterpriseSettingsEnterpriseLicense withPerpetual(Boolean perpetual) {
         this.perpetual = perpetual;
         return this;
@@ -44,6 +48,7 @@ public class EnterpriseSettingsEnterpriseLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seats")
     public Long seats;
+
     public EnterpriseSettingsEnterpriseLicense withSeats(Long seats) {
         this.seats = seats;
         return this;
@@ -52,6 +57,7 @@ public class EnterpriseSettingsEnterpriseLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssh_allowed")
     public Boolean sshAllowed;
+
     public EnterpriseSettingsEnterpriseLicense withSshAllowed(Boolean sshAllowed) {
         this.sshAllowed = sshAllowed;
         return this;
@@ -60,6 +66,7 @@ public class EnterpriseSettingsEnterpriseLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("support_key")
     public String supportKey;
+
     public EnterpriseSettingsEnterpriseLicense withSupportKey(String supportKey) {
         this.supportKey = supportKey;
         return this;
@@ -68,9 +75,11 @@ public class EnterpriseSettingsEnterpriseLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unlimited_seating")
     public Boolean unlimitedSeating;
+
     public EnterpriseSettingsEnterpriseLicense withUnlimitedSeating(Boolean unlimitedSeating) {
         this.unlimitedSeating = unlimitedSeating;
         return this;
     }
     
+    public EnterpriseSettingsEnterpriseLicense(){}
 }

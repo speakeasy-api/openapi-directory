@@ -23,6 +23,7 @@ public class SubscriptionIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerHealthStatus")
     public ConsumptionAvailabilityStatusEnum consumerHealthStatus;
+
     public SubscriptionIndex withConsumerHealthStatus(ConsumptionAvailabilityStatusEnum consumerHealthStatus) {
         this.consumerHealthStatus = consumerHealthStatus;
         return this;
@@ -34,6 +35,7 @@ public class SubscriptionIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerLastRequestSentUri")
     public String consumerLastRequestSentUri;
+
     public SubscriptionIndex withConsumerLastRequestSentUri(String consumerLastRequestSentUri) {
         this.consumerLastRequestSentUri = consumerLastRequestSentUri;
         return this;
@@ -47,6 +49,7 @@ public class SubscriptionIndex {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("consumerUnvailableSinceUtcDate")
     public OffsetDateTime consumerUnvailableSinceUtcDate;
+
     public SubscriptionIndex withConsumerUnvailableSinceUtcDate(OffsetDateTime consumerUnvailableSinceUtcDate) {
         this.consumerUnvailableSinceUtcDate = consumerUnvailableSinceUtcDate;
         return this;
@@ -57,6 +60,7 @@ public class SubscriptionIndex {
      */
     @JsonProperty("id")
     public String id;
+
     public SubscriptionIndex withId(String id) {
         this.id = id;
         return this;
@@ -65,6 +69,7 @@ public class SubscriptionIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastErrorMessage")
     public ErrorResponseMessage lastErrorMessage;
+
     public SubscriptionIndex withLastErrorMessage(ErrorResponseMessage lastErrorMessage) {
         this.lastErrorMessage = lastErrorMessage;
         return this;
@@ -78,6 +83,7 @@ public class SubscriptionIndex {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastOrderPushedModificationUtcDate")
     public OffsetDateTime lastOrderPushedModificationUtcDate;
+
     public SubscriptionIndex withLastOrderPushedModificationUtcDate(OffsetDateTime lastOrderPushedModificationUtcDate) {
         this.lastOrderPushedModificationUtcDate = lastOrderPushedModificationUtcDate;
         return this;
@@ -91,6 +97,7 @@ public class SubscriptionIndex {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastRetryUtcDate")
     public OffsetDateTime lastRetryUtcDate;
+
     public SubscriptionIndex withLastRetryUtcDate(OffsetDateTime lastRetryUtcDate) {
         this.lastRetryUtcDate = lastRetryUtcDate;
         return this;
@@ -104,6 +111,7 @@ public class SubscriptionIndex {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastSuccessfulOrderPushedUtcDate")
     public OffsetDateTime lastSuccessfulOrderPushedUtcDate;
+
     public SubscriptionIndex withLastSuccessfulOrderPushedUtcDate(OffsetDateTime lastSuccessfulOrderPushedUtcDate) {
         this.lastSuccessfulOrderPushedUtcDate = lastSuccessfulOrderPushedUtcDate;
         return this;
@@ -112,6 +120,7 @@ public class SubscriptionIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public SubscriptionLinks links;
+
     public SubscriptionIndex withLinks(SubscriptionLinks links) {
         this.links = links;
         return this;
@@ -123,6 +132,7 @@ public class SubscriptionIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRetryCount")
     public Long maxRetryCount;
+
     public SubscriptionIndex withMaxRetryCount(Long maxRetryCount) {
         this.maxRetryCount = maxRetryCount;
         return this;
@@ -133,6 +143,7 @@ public class SubscriptionIndex {
      */
     @JsonProperty("merchantApplicationName")
     public String merchantApplicationName;
+
     public SubscriptionIndex withMerchantApplicationName(String merchantApplicationName) {
         this.merchantApplicationName = merchantApplicationName;
         return this;
@@ -143,6 +154,7 @@ public class SubscriptionIndex {
      */
     @JsonProperty("merchantApplicationVersion")
     public String merchantApplicationVersion;
+
     public SubscriptionIndex withMerchantApplicationVersion(String merchantApplicationVersion) {
         this.merchantApplicationVersion = merchantApplicationVersion;
         return this;
@@ -154,6 +166,7 @@ public class SubscriptionIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantEmailAlert")
     public String merchantEmailAlert;
+
     public SubscriptionIndex withMerchantEmailAlert(String merchantEmailAlert) {
         this.merchantEmailAlert = merchantEmailAlert;
         return this;
@@ -164,6 +177,7 @@ public class SubscriptionIndex {
      */
     @JsonProperty("name")
     public String name;
+
     public SubscriptionIndex withName(String name) {
         this.name = name;
         return this;
@@ -177,6 +191,7 @@ public class SubscriptionIndex {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("nextScheduledRetryUtcDate")
     public OffsetDateTime nextScheduledRetryUtcDate;
+
     public SubscriptionIndex withNextScheduledRetryUtcDate(OffsetDateTime nextScheduledRetryUtcDate) {
         this.nextScheduledRetryUtcDate = nextScheduledRetryUtcDate;
         return this;
@@ -190,6 +205,7 @@ public class SubscriptionIndex {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("recoverBeginPeriodOrderLastModificationUtcDate")
     public OffsetDateTime recoverBeginPeriodOrderLastModificationUtcDate;
+
     public SubscriptionIndex withRecoverBeginPeriodOrderLastModificationUtcDate(OffsetDateTime recoverBeginPeriodOrderLastModificationUtcDate) {
         this.recoverBeginPeriodOrderLastModificationUtcDate = recoverBeginPeriodOrderLastModificationUtcDate;
         return this;
@@ -205,6 +221,7 @@ public class SubscriptionIndex {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("recoverEndPeriodOrderLastModificationUtcDate")
     public OffsetDateTime recoverEndPeriodOrderLastModificationUtcDate;
+
     public SubscriptionIndex withRecoverEndPeriodOrderLastModificationUtcDate(OffsetDateTime recoverEndPeriodOrderLastModificationUtcDate) {
         this.recoverEndPeriodOrderLastModificationUtcDate = recoverEndPeriodOrderLastModificationUtcDate;
         return this;
@@ -216,6 +233,7 @@ public class SubscriptionIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryCount")
     public Long retryCount;
+
     public SubscriptionIndex withRetryCount(Long retryCount) {
         this.retryCount = retryCount;
         return this;
@@ -226,6 +244,7 @@ public class SubscriptionIndex {
      */
     @JsonProperty("status")
     public SubscriptionStatusEnum status;
+
     public SubscriptionIndex withStatus(SubscriptionStatusEnum status) {
         this.status = status;
         return this;
@@ -236,9 +255,18 @@ public class SubscriptionIndex {
      */
     @JsonProperty("targetUrl")
     public String targetUrl;
+
     public SubscriptionIndex withTargetUrl(String targetUrl) {
         this.targetUrl = targetUrl;
         return this;
     }
     
+    public SubscriptionIndex(@JsonProperty("id") String id, @JsonProperty("merchantApplicationName") String merchantApplicationName, @JsonProperty("merchantApplicationVersion") String merchantApplicationVersion, @JsonProperty("name") String name, @JsonProperty("status") SubscriptionStatusEnum status, @JsonProperty("targetUrl") String targetUrl) {
+        this.id = id;
+        this.merchantApplicationName = merchantApplicationName;
+        this.merchantApplicationVersion = merchantApplicationVersion;
+        this.name = name;
+        this.status = status;
+        this.targetUrl = targetUrl;
+  }
 }

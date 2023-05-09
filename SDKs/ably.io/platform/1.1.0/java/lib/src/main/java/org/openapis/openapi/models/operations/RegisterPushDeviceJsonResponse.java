@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterPushDeviceJsonResponse {
     
     public byte[] body;
+
     public RegisterPushDeviceJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class RegisterPushDeviceJsonResponse {
     
     
     public String contentType;
+
     public RegisterPushDeviceJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class RegisterPushDeviceJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.DeviceDetailsOutput deviceDetails;
+
     public RegisterPushDeviceJsonResponse withDeviceDetails(org.openapis.openapi.models.shared.DeviceDetailsOutput deviceDetails) {
         this.deviceDetails = deviceDetails;
         return this;
@@ -36,6 +40,7 @@ public class RegisterPushDeviceJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public RegisterPushDeviceJsonResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -43,6 +48,7 @@ public class RegisterPushDeviceJsonResponse {
     
     
     public Integer statusCode;
+
     public RegisterPushDeviceJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class RegisterPushDeviceJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterPushDeviceJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RegisterPushDeviceJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

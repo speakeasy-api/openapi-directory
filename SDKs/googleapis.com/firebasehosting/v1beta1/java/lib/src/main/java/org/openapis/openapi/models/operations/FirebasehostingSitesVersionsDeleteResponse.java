@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirebasehostingSitesVersionsDeleteResponse {
     
     public String contentType;
+
     public FirebasehostingSitesVersionsDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FirebasehostingSitesVersionsDeleteResponse {
      */
     
     public java.util.Map<String, Object> empty;
+
     public FirebasehostingSitesVersionsDeleteResponse withEmpty(java.util.Map<String, Object> empty) {
         this.empty = empty;
         return this;
@@ -26,6 +29,7 @@ public class FirebasehostingSitesVersionsDeleteResponse {
     
     
     public Integer statusCode;
+
     public FirebasehostingSitesVersionsDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirebasehostingSitesVersionsDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirebasehostingSitesVersionsDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirebasehostingSitesVersionsDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

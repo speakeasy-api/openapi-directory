@@ -12,6 +12,7 @@ public class CreateLocationFsxWindowsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public String domain;
+
     public CreateLocationFsxWindowsRequest withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -19,6 +20,7 @@ public class CreateLocationFsxWindowsRequest {
     
     @JsonProperty("FsxFilesystemArn")
     public String fsxFilesystemArn;
+
     public CreateLocationFsxWindowsRequest withFsxFilesystemArn(String fsxFilesystemArn) {
         this.fsxFilesystemArn = fsxFilesystemArn;
         return this;
@@ -26,6 +28,7 @@ public class CreateLocationFsxWindowsRequest {
     
     @JsonProperty("Password")
     public String password;
+
     public CreateLocationFsxWindowsRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -33,6 +36,7 @@ public class CreateLocationFsxWindowsRequest {
     
     @JsonProperty("SecurityGroupArns")
     public String[] securityGroupArns;
+
     public CreateLocationFsxWindowsRequest withSecurityGroupArns(String[] securityGroupArns) {
         this.securityGroupArns = securityGroupArns;
         return this;
@@ -41,6 +45,7 @@ public class CreateLocationFsxWindowsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subdirectory")
     public String subdirectory;
+
     public CreateLocationFsxWindowsRequest withSubdirectory(String subdirectory) {
         this.subdirectory = subdirectory;
         return this;
@@ -49,6 +54,7 @@ public class CreateLocationFsxWindowsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public TagListEntry[] tags;
+
     public CreateLocationFsxWindowsRequest withTags(TagListEntry[] tags) {
         this.tags = tags;
         return this;
@@ -56,9 +62,16 @@ public class CreateLocationFsxWindowsRequest {
     
     @JsonProperty("User")
     public String user;
+
     public CreateLocationFsxWindowsRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public CreateLocationFsxWindowsRequest(@JsonProperty("User") String user, @JsonProperty("Password") String password, @JsonProperty("FsxFilesystemArn") String fsxFilesystemArn, @JsonProperty("SecurityGroupArns") String[] securityGroupArns) {
+        this.user = user;
+        this.password = password;
+        this.fsxFilesystemArn = fsxFilesystemArn;
+        this.securityGroupArns = securityGroupArns;
+  }
 }

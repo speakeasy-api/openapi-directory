@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDomainAssociationResponse {
@@ -12,6 +13,7 @@ public class DeleteDomainAssociationResponse {
      */
     
     public Object badRequestException;
+
     public DeleteDomainAssociationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDomainAssociationResponse {
     
     
     public String contentType;
+
     public DeleteDomainAssociationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDomainAssociationResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteDomainAssociationResult deleteDomainAssociationResult;
+
     public DeleteDomainAssociationResponse withDeleteDomainAssociationResult(org.openapis.openapi.models.shared.DeleteDomainAssociationResult deleteDomainAssociationResult) {
         this.deleteDomainAssociationResult = deleteDomainAssociationResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDomainAssociationResponse {
      */
     
     public Object dependentServiceFailureException;
+
     public DeleteDomainAssociationResponse withDependentServiceFailureException(Object dependentServiceFailureException) {
         this.dependentServiceFailureException = dependentServiceFailureException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDomainAssociationResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteDomainAssociationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteDomainAssociationResponse {
      */
     
     public Object notFoundException;
+
     public DeleteDomainAssociationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteDomainAssociationResponse {
     
     
     public Integer statusCode;
+
     public DeleteDomainAssociationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteDomainAssociationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDomainAssociationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteDomainAssociationResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteDomainAssociationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteDomainAssociationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -60,11 +60,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecretmanagerProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.SecretmanagerProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsAddVersionResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsAddVersionResponse() {{
+        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsAddVersionResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsAddVersionResponse(contentType, httpRes.statusCode()) {{
             secretVersion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsCreateResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsCreateResponse() {{
+        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsCreateResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsCreateResponse(contentType, httpRes.statusCode()) {{
             secret = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsDeleteResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsDeleteResponse() {{
+        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsDeleteResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,11 +284,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsListResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsListResponse() {{
+        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsListResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsListResponse(contentType, httpRes.statusCode()) {{
             listSecretsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsPatchResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsPatchResponse() {{
+        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsPatchResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsPatchResponse(contentType, httpRes.statusCode()) {{
             secret = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +376,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,11 +422,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,11 +466,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsAccessResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsAccessResponse() {{
+        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsAccessResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsAccessResponse(contentType, httpRes.statusCode()) {{
             accessSecretVersionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -532,11 +512,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDestroyResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDestroyResponse() {{
+        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDestroyResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDestroyResponse(contentType, httpRes.statusCode()) {{
             secretVersion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -580,11 +558,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDisableResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDisableResponse() {{
+        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDisableResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDisableResponse(contentType, httpRes.statusCode()) {{
             secretVersion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -628,11 +604,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsEnableResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsEnableResponse() {{
+        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsEnableResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsEnableResponse(contentType, httpRes.statusCode()) {{
             secretVersion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -674,11 +648,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsGetResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsGetResponse() {{
+        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsGetResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsGetResponse(contentType, httpRes.statusCode()) {{
             secretVersion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -720,11 +692,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsListResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsListResponse() {{
+        org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsListResponse res = new org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsListResponse(contentType, httpRes.statusCode()) {{
             listSecretVersionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryIdGetRequest {
@@ -12,6 +13,7 @@ public class StoryIdGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=full")
     public Boolean full;
+
     public StoryIdGetRequest withFull(Boolean full) {
         this.full = full;
         return this;
@@ -22,6 +24,7 @@ public class StoryIdGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public StoryIdGetRequest withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +35,7 @@ public class StoryIdGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_outline")
     public Boolean includeOutline;
+
     public StoryIdGetRequest withIncludeOutline(Boolean includeOutline) {
         this.includeOutline = includeOutline;
         return this;
@@ -42,6 +46,7 @@ public class StoryIdGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_relationships")
     public Boolean includeRelationships;
+
     public StoryIdGetRequest withIncludeRelationships(Boolean includeRelationships) {
         this.includeRelationships = includeRelationships;
         return this;
@@ -52,9 +57,13 @@ public class StoryIdGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=refresh_cache")
     public Boolean refreshCache;
+
     public StoryIdGetRequest withRefreshCache(Boolean refreshCache) {
         this.refreshCache = refreshCache;
         return this;
     }
     
+    public StoryIdGetRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

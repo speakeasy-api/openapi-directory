@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsListRepoAccessToSelfHostedRunnerGroupInOrgResponse {
     
     public String contentType;
+
     public ActionsListRepoAccessToSelfHostedRunnerGroupInOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsListRepoAccessToSelfHostedRunnerGroupInOrgResponse {
     
     
     public Integer statusCode;
+
     public ActionsListRepoAccessToSelfHostedRunnerGroupInOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActionsListRepoAccessToSelfHostedRunnerGroupInOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsListRepoAccessToSelfHostedRunnerGroupInOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ActionsListRepoAccessToSelfHostedRunnerGroupInOrgResponse {
      */
     
     public ActionsListRepoAccessToSelfHostedRunnerGroupInOrg200ApplicationJSON actionsListRepoAccessToSelfHostedRunnerGroupInOrg200ApplicationJSONObject;
+
     public ActionsListRepoAccessToSelfHostedRunnerGroupInOrgResponse withActionsListRepoAccessToSelfHostedRunnerGroupInOrg200ApplicationJSONObject(ActionsListRepoAccessToSelfHostedRunnerGroupInOrg200ApplicationJSON actionsListRepoAccessToSelfHostedRunnerGroupInOrg200ApplicationJSONObject) {
         this.actionsListRepoAccessToSelfHostedRunnerGroupInOrg200ApplicationJSONObject = actionsListRepoAccessToSelfHostedRunnerGroupInOrg200ApplicationJSONObject;
         return this;
     }
     
+    public ActionsListRepoAccessToSelfHostedRunnerGroupInOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

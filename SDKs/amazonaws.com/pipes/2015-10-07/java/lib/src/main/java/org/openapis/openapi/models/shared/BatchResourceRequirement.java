@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchResourceRequirement {
     @JsonProperty("Type")
     public BatchResourceRequirementTypeEnum type;
+
     public BatchResourceRequirement withType(BatchResourceRequirementTypeEnum type) {
         this.type = type;
         return this;
@@ -19,9 +20,14 @@ public class BatchResourceRequirement {
     
     @JsonProperty("Value")
     public String value;
+
     public BatchResourceRequirement withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public BatchResourceRequirement(@JsonProperty("Type") BatchResourceRequirementTypeEnum type, @JsonProperty("Value") String value) {
+        this.type = type;
+        this.value = value;
+  }
 }

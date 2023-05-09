@@ -14,6 +14,7 @@ public class User {
      */
     @JsonProperty("active")
     public Boolean active;
+
     public User withActive(Boolean active) {
         this.active = active;
         return this;
@@ -24,6 +25,7 @@ public class User {
      */
     @JsonProperty("displayName")
     public String displayName;
+
     public User withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -34,6 +36,7 @@ public class User {
      */
     @JsonProperty("emails")
     public UserEmails[] emails;
+
     public User withEmails(UserEmails[] emails) {
         this.emails = emails;
         return this;
@@ -44,6 +47,7 @@ public class User {
      */
     @JsonProperty("externalId")
     public String externalId;
+
     public User withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -52,6 +56,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public UserName name;
+
     public User withName(UserName name) {
         this.name = name;
         return this;
@@ -63,6 +68,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public UserRole[] roles;
+
     public User withRoles(UserRole[] roles) {
         this.roles = roles;
         return this;
@@ -73,6 +79,7 @@ public class User {
      */
     @JsonProperty("schemas")
     public UserSchemasEnum[] schemas;
+
     public User withSchemas(UserSchemasEnum[] schemas) {
         this.schemas = schemas;
         return this;
@@ -83,9 +90,18 @@ public class User {
      */
     @JsonProperty("userName")
     public String userName;
+
     public User withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public User(@JsonProperty("active") Boolean active, @JsonProperty("displayName") String displayName, @JsonProperty("emails") UserEmails[] emails, @JsonProperty("externalId") String externalId, @JsonProperty("schemas") UserSchemasEnum[] schemas, @JsonProperty("userName") String userName) {
+        this.active = active;
+        this.displayName = displayName;
+        this.emails = emails;
+        this.externalId = externalId;
+        this.schemas = schemas;
+        this.userName = userName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BooksLayersVolumeAnnotationsGetRequest {
@@ -12,6 +13,7 @@ public class BooksLayersVolumeAnnotationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public BooksLayersVolumeAnnotationsGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class BooksLayersVolumeAnnotationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public BooksLayersVolumeAnnotationsGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class BooksLayersVolumeAnnotationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BooksLayersVolumeAnnotationsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class BooksLayersVolumeAnnotationsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=annotationId")
     public String annotationId;
+
     public BooksLayersVolumeAnnotationsGetRequest withAnnotationId(String annotationId) {
         this.annotationId = annotationId;
         return this;
@@ -52,6 +57,7 @@ public class BooksLayersVolumeAnnotationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public BooksLayersVolumeAnnotationsGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class BooksLayersVolumeAnnotationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BooksLayersVolumeAnnotationsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class BooksLayersVolumeAnnotationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BooksLayersVolumeAnnotationsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class BooksLayersVolumeAnnotationsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=layerId")
     public String layerId;
+
     public BooksLayersVolumeAnnotationsGetRequest withLayerId(String layerId) {
         this.layerId = layerId;
         return this;
@@ -92,6 +101,7 @@ public class BooksLayersVolumeAnnotationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public BooksLayersVolumeAnnotationsGetRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -102,6 +112,7 @@ public class BooksLayersVolumeAnnotationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BooksLayersVolumeAnnotationsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class BooksLayersVolumeAnnotationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BooksLayersVolumeAnnotationsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class BooksLayersVolumeAnnotationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BooksLayersVolumeAnnotationsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class BooksLayersVolumeAnnotationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public String source;
+
     public BooksLayersVolumeAnnotationsGetRequest withSource(String source) {
         this.source = source;
         return this;
@@ -142,6 +156,7 @@ public class BooksLayersVolumeAnnotationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public BooksLayersVolumeAnnotationsGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,6 +167,7 @@ public class BooksLayersVolumeAnnotationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public BooksLayersVolumeAnnotationsGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -162,9 +178,15 @@ public class BooksLayersVolumeAnnotationsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=volumeId")
     public String volumeId;
+
     public BooksLayersVolumeAnnotationsGetRequest withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public BooksLayersVolumeAnnotationsGetRequest(@JsonProperty("annotationId") String annotationId, @JsonProperty("layerId") String layerId, @JsonProperty("volumeId") String volumeId) {
+        this.annotationId = annotationId;
+        this.layerId = layerId;
+        this.volumeId = volumeId;
+  }
 }

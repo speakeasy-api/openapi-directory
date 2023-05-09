@@ -12,9 +12,13 @@ public class UpdateOrganizationThirdPartyVPNPeersRequestBody {
      */
     @JsonProperty("peers")
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers[] peers;
+
     public UpdateOrganizationThirdPartyVPNPeersRequestBody withPeers(UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers[] peers) {
         this.peers = peers;
         return this;
     }
     
+    public UpdateOrganizationThirdPartyVPNPeersRequestBody(@JsonProperty("peers") UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers[] peers) {
+        this.peers = peers;
+  }
 }

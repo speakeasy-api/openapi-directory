@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartMLEvaluationTaskRunRequest {
     @JsonProperty("TransformId")
     public String transformId;
+
     public StartMLEvaluationTaskRunRequest withTransformId(String transformId) {
         this.transformId = transformId;
         return this;
     }
     
+    public StartMLEvaluationTaskRunRequest(@JsonProperty("TransformId") String transformId) {
+        this.transformId = transformId;
+  }
 }

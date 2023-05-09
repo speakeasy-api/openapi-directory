@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSecurityPolicyResponse {
@@ -12,6 +13,7 @@ public class CreateSecurityPolicyResponse {
      */
     
     public Object conflictException;
+
     public CreateSecurityPolicyResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateSecurityPolicyResponse {
     
     
     public String contentType;
+
     public CreateSecurityPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateSecurityPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSecurityPolicyResponse createSecurityPolicyResponse;
+
     public CreateSecurityPolicyResponse withCreateSecurityPolicyResponse(org.openapis.openapi.models.shared.CreateSecurityPolicyResponse createSecurityPolicyResponse) {
         this.createSecurityPolicyResponse = createSecurityPolicyResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateSecurityPolicyResponse {
      */
     
     public Object internalServerException;
+
     public CreateSecurityPolicyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class CreateSecurityPolicyResponse {
     
     
     public Integer statusCode;
+
     public CreateSecurityPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateSecurityPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSecurityPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateSecurityPolicyResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateSecurityPolicyResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,9 +81,14 @@ public class CreateSecurityPolicyResponse {
      */
     
     public Object validationException;
+
     public CreateSecurityPolicyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateSecurityPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

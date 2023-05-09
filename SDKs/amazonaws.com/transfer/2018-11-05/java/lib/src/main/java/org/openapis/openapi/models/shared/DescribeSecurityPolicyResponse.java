@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeSecurityPolicyResponse {
     @JsonProperty("SecurityPolicy")
     public DescribedSecurityPolicy securityPolicy;
+
     public DescribeSecurityPolicyResponse withSecurityPolicy(DescribedSecurityPolicy securityPolicy) {
         this.securityPolicy = securityPolicy;
         return this;
     }
     
+    public DescribeSecurityPolicyResponse(@JsonProperty("SecurityPolicy") DescribedSecurityPolicy securityPolicy) {
+        this.securityPolicy = securityPolicy;
+  }
 }

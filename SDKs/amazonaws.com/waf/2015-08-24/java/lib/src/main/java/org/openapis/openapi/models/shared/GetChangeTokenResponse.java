@@ -15,9 +15,11 @@ public class GetChangeTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public GetChangeTokenResponse withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
     }
     
+    public GetChangeTokenResponse(){}
 }

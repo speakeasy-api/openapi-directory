@@ -183,4 +183,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ContactContent.java
 lib/src/main/java/org/openapis/openapi/models/shared/RelatedItemTypeFilter.java
 lib/src/main/java/org/openapis/openapi/models/shared/ContactFilter.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

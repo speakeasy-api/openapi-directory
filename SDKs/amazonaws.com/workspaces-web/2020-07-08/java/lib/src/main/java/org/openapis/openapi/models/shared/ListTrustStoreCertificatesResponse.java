@@ -15,6 +15,7 @@ public class ListTrustStoreCertificatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateList")
     public CertificateSummary[] certificateList;
+
     public ListTrustStoreCertificatesResponse withCertificateList(CertificateSummary[] certificateList) {
         this.certificateList = certificateList;
         return this;
@@ -23,6 +24,7 @@ public class ListTrustStoreCertificatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTrustStoreCertificatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class ListTrustStoreCertificatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustStoreArn")
     public String trustStoreArn;
+
     public ListTrustStoreCertificatesResponse withTrustStoreArn(String trustStoreArn) {
         this.trustStoreArn = trustStoreArn;
         return this;
     }
     
+    public ListTrustStoreCertificatesResponse(){}
 }

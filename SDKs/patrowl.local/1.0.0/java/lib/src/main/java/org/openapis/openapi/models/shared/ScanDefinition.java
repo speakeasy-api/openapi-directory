@@ -12,6 +12,7 @@ public class ScanDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assets")
     public ScanDefinitionAssets[] assets;
+
     public ScanDefinition withAssets(ScanDefinitionAssets[] assets) {
         this.assets = assets;
         return this;
@@ -20,6 +21,7 @@ public class ScanDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public java.util.Map<String, Object> options;
+
     public ScanDefinition withOptions(java.util.Map<String, Object> options) {
         this.options = options;
         return this;
@@ -28,9 +30,11 @@ public class ScanDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scan_id")
     public Long scanId;
+
     public ScanDefinition withScanId(Long scanId) {
         this.scanId = scanId;
         return this;
     }
     
+    public ScanDefinition(){}
 }

@@ -18,6 +18,7 @@ public class UpdatePageElementAltTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdatePageElementAltTextRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class UpdatePageElementAltTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public UpdatePageElementAltTextRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -40,9 +42,11 @@ public class UpdatePageElementAltTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public UpdatePageElementAltTextRequest withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public UpdatePageElementAltTextRequest(){}
 }

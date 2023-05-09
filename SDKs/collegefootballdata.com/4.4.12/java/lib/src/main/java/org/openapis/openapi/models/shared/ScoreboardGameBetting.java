@@ -12,6 +12,7 @@ public class ScoreboardGameBetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awayMoneyline")
     public Long awayMoneyline;
+
     public ScoreboardGameBetting withAwayMoneyline(Long awayMoneyline) {
         this.awayMoneyline = awayMoneyline;
         return this;
@@ -20,6 +21,7 @@ public class ScoreboardGameBetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homeMoneyline")
     public Long homeMoneyline;
+
     public ScoreboardGameBetting withHomeMoneyline(Long homeMoneyline) {
         this.homeMoneyline = homeMoneyline;
         return this;
@@ -28,6 +30,7 @@ public class ScoreboardGameBetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overUnder")
     public Double overUnder;
+
     public ScoreboardGameBetting withOverUnder(Double overUnder) {
         this.overUnder = overUnder;
         return this;
@@ -36,9 +39,11 @@ public class ScoreboardGameBetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spread")
     public Double spread;
+
     public ScoreboardGameBetting withSpread(Double spread) {
         this.spread = spread;
         return this;
     }
     
+    public ScoreboardGameBetting(){}
 }

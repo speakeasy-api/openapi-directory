@@ -15,9 +15,11 @@ public class StartDetectorModelAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisId")
     public String analysisId;
+
     public StartDetectorModelAnalysisResponse withAnalysisId(String analysisId) {
         this.analysisId = analysisId;
         return this;
     }
     
+    public StartDetectorModelAnalysisResponse(){}
 }

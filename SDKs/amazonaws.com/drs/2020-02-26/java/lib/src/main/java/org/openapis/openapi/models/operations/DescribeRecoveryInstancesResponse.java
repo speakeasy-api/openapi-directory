@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRecoveryInstancesResponse {
@@ -12,6 +13,7 @@ public class DescribeRecoveryInstancesResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeRecoveryInstancesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeRecoveryInstancesResponse {
     
     
     public String contentType;
+
     public DescribeRecoveryInstancesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRecoveryInstancesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRecoveryInstancesResponse describeRecoveryInstancesResponse;
+
     public DescribeRecoveryInstancesResponse withDescribeRecoveryInstancesResponse(org.openapis.openapi.models.shared.DescribeRecoveryInstancesResponse describeRecoveryInstancesResponse) {
         this.describeRecoveryInstancesResponse = describeRecoveryInstancesResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRecoveryInstancesResponse {
      */
     
     public Object internalServerException;
+
     public DescribeRecoveryInstancesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeRecoveryInstancesResponse {
     
     
     public Integer statusCode;
+
     public DescribeRecoveryInstancesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeRecoveryInstancesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRecoveryInstancesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeRecoveryInstancesResponse {
      */
     
     public Object throttlingException;
+
     public DescribeRecoveryInstancesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeRecoveryInstancesResponse {
      */
     
     public Object uninitializedAccountException;
+
     public DescribeRecoveryInstancesResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public DescribeRecoveryInstancesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

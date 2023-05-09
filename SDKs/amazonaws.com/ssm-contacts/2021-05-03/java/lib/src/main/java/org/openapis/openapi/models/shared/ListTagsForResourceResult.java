@@ -15,9 +15,11 @@ public class ListTagsForResourceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public ListTagsForResourceResult withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ListTagsForResourceResult(){}
 }

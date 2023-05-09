@@ -12,6 +12,7 @@ public class GetPartitionIndexesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetPartitionIndexesRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class GetPartitionIndexesRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public GetPartitionIndexesRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -27,6 +29,7 @@ public class GetPartitionIndexesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetPartitionIndexesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -34,9 +37,14 @@ public class GetPartitionIndexesRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public GetPartitionIndexesRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public GetPartitionIndexesRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.tableName = tableName;
+  }
 }

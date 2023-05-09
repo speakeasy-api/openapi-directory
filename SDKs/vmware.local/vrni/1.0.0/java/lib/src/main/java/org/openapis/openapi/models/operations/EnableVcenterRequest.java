@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnableVcenterRequest {
@@ -12,9 +13,13 @@ public class EnableVcenterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public EnableVcenterRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public EnableVcenterRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

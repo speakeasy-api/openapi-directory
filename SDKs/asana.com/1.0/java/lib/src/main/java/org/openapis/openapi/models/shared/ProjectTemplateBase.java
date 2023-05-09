@@ -18,6 +18,7 @@ public class ProjectTemplateBase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public ProjectTemplateBaseColorEnum color;
+
     public ProjectTemplateBase withColor(ProjectTemplateBaseColorEnum color) {
         this.color = color;
         return this;
@@ -29,6 +30,7 @@ public class ProjectTemplateBase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ProjectTemplateBase withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class ProjectTemplateBase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public ProjectTemplateBase withGid(String gid) {
         this.gid = gid;
         return this;
@@ -51,6 +54,7 @@ public class ProjectTemplateBase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_description")
     public String htmlDescription;
+
     public ProjectTemplateBase withHtmlDescription(String htmlDescription) {
         this.htmlDescription = htmlDescription;
         return this;
@@ -62,6 +66,7 @@ public class ProjectTemplateBase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProjectTemplateBase withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class ProjectTemplateBase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public ProjectTemplateBaseOwner owner;
+
     public ProjectTemplateBase withOwner(ProjectTemplateBaseOwner owner) {
         this.owner = owner;
         return this;
@@ -84,6 +90,7 @@ public class ProjectTemplateBase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public")
     public Boolean public_;
+
     public ProjectTemplateBase withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -95,6 +102,7 @@ public class ProjectTemplateBase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested_dates")
     public DateVariableCompact[] requestedDates;
+
     public ProjectTemplateBase withRequestedDates(DateVariableCompact[] requestedDates) {
         this.requestedDates = requestedDates;
         return this;
@@ -106,6 +114,7 @@ public class ProjectTemplateBase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public ProjectTemplateBase withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -114,9 +123,11 @@ public class ProjectTemplateBase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public TeamCompact team;
+
     public ProjectTemplateBase withTeam(TeamCompact team) {
         this.team = team;
         return this;
     }
     
+    public ProjectTemplateBase(){}
 }

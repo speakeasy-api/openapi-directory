@@ -15,6 +15,7 @@ public class UpdateImageGenerationConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageGenerationConfiguration")
     public UpdateImageGenerationConfigurationRequestBodyImageGenerationConfiguration imageGenerationConfiguration;
+
     public UpdateImageGenerationConfigurationRequestBody withImageGenerationConfiguration(UpdateImageGenerationConfigurationRequestBodyImageGenerationConfiguration imageGenerationConfiguration) {
         this.imageGenerationConfiguration = imageGenerationConfiguration;
         return this;
@@ -26,6 +27,7 @@ public class UpdateImageGenerationConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public UpdateImageGenerationConfigurationRequestBody withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -37,9 +39,11 @@ public class UpdateImageGenerationConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public UpdateImageGenerationConfigurationRequestBody withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public UpdateImageGenerationConfigurationRequestBody(){}
 }

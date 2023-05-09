@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteScheduledActionRequest {
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public DeleteScheduledActionRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -16,6 +17,7 @@ public class DeleteScheduledActionRequest {
     
     @JsonProperty("ScalableDimension")
     public ScalableDimensionEnum scalableDimension;
+
     public DeleteScheduledActionRequest withScalableDimension(ScalableDimensionEnum scalableDimension) {
         this.scalableDimension = scalableDimension;
         return this;
@@ -23,6 +25,7 @@ public class DeleteScheduledActionRequest {
     
     @JsonProperty("ScheduledActionName")
     public String scheduledActionName;
+
     public DeleteScheduledActionRequest withScheduledActionName(String scheduledActionName) {
         this.scheduledActionName = scheduledActionName;
         return this;
@@ -30,9 +33,16 @@ public class DeleteScheduledActionRequest {
     
     @JsonProperty("ServiceNamespace")
     public ServiceNamespaceEnum serviceNamespace;
+
     public DeleteScheduledActionRequest withServiceNamespace(ServiceNamespaceEnum serviceNamespace) {
         this.serviceNamespace = serviceNamespace;
         return this;
     }
     
+    public DeleteScheduledActionRequest(@JsonProperty("ResourceId") String resourceId, @JsonProperty("ScalableDimension") ScalableDimensionEnum scalableDimension, @JsonProperty("ScheduledActionName") String scheduledActionName, @JsonProperty("ServiceNamespace") ServiceNamespaceEnum serviceNamespace) {
+        this.resourceId = resourceId;
+        this.scalableDimension = scalableDimension;
+        this.scheduledActionName = scheduledActionName;
+        this.serviceNamespace = serviceNamespace;
+  }
 }

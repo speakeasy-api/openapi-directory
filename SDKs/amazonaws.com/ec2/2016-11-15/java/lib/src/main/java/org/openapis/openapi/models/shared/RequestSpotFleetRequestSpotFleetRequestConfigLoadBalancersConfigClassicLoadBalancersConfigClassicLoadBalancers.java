@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotFleetRequestSpotFleetRequestConfigLoadBalancersConfigClassicLoadBalancersConfigClassicLoadBalancers {
     
     public String name;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLoadBalancersConfigClassicLoadBalancersConfigClassicLoadBalancers withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RequestSpotFleetRequestSpotFleetRequestConfigLoadBalancersConfigClassicLoadBalancersConfigClassicLoadBalancers(){}
 }

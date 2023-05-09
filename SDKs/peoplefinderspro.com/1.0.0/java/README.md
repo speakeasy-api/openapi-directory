@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.SearchRequestBodyAddress;
-import org.openapis.openapi.models.operations.SearchRequestBody;
 import org.openapis.openapi.models.operations.SearchRequest;
+import org.openapis.openapi.models.operations.SearchRequestBody;
+import org.openapis.openapi.models.operations.SearchRequestBodyAddress;
 import org.openapis.openapi.models.operations.SearchResponse;
 
 public class Application {
@@ -33,7 +32,7 @@ public class Application {
                     address = new SearchRequestBodyAddress() {{
                         addressLine1 = "corrupti";
                         addressLine2 = "provident";
-                    }};
+                    }};;
                     age = 7151.9;
                     dob = "quibusdam";
                     email = "Ryan.Little62@yahoo.com";
@@ -41,11 +40,11 @@ public class Application {
                     lastName = "Hoppe";
                     middleName = "iure";
                     phoneNumber = "magnam";
-                }};
+                }};;
                 galaxyApName = "debitis";
                 galaxyApPassword = "ipsa";
                 galaxySearchType = "delectus";
-            }}            
+            }};            
 
             SearchResponse res = sdk.search(req);
 
@@ -55,19 +54,21 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `search` - Search
-* `postAddressAutocomplete` - Search
-* `postContactEnrich` - Search
-* `postEmailEnrich` - Search
-* `postPhoneEnrich` - Search
+* [search](docs/sdk/README.md#search) - Search
+* [postAddressAutocomplete](docs/sdk/README.md#postaddressautocomplete) - Search
+* [postContactEnrich](docs/sdk/README.md#postcontactenrich) - Search
+* [postEmailEnrich](docs/sdk/README.md#postemailenrich) - Search
+* [postPhoneEnrich](docs/sdk/README.md#postphoneenrich) - Search
 <!-- End SDK Available Operations -->
 
 ### Maturity

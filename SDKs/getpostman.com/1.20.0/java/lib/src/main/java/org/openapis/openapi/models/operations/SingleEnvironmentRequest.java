@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SingleEnvironmentRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_uid")
     public String environmentUid;
+
     public SingleEnvironmentRequest withEnvironmentUid(String environmentUid) {
         this.environmentUid = environmentUid;
         return this;
     }
     
+    public SingleEnvironmentRequest(@JsonProperty("environment_uid") String environmentUid) {
+        this.environmentUid = environmentUid;
+  }
 }

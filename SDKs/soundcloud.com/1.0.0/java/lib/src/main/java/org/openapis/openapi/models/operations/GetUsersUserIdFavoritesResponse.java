@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUsersUserIdFavoritesResponse {
     
     public String contentType;
+
     public GetUsersUserIdFavoritesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetUsersUserIdFavoritesResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetUsersUserIdFavoritesResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class GetUsersUserIdFavoritesResponse {
     
     
     public Integer statusCode;
+
     public GetUsersUserIdFavoritesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetUsersUserIdFavoritesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUsersUserIdFavoritesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetUsersUserIdFavoritesResponse {
      */
     
     public Object getUsersUserIdFavorites200ApplicationJSONOneOf;
+
     public GetUsersUserIdFavoritesResponse withGetUsersUserIdFavorites200ApplicationJSONOneOf(Object getUsersUserIdFavorites200ApplicationJSONOneOf) {
         this.getUsersUserIdFavorites200ApplicationJSONOneOf = getUsersUserIdFavorites200ApplicationJSONOneOf;
         return this;
     }
     
+    public GetUsersUserIdFavoritesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

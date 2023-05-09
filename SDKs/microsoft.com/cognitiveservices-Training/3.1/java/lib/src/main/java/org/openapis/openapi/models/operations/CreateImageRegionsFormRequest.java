@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateImageRegionsFormRequest {
@@ -12,6 +13,7 @@ public class CreateImageRegionsFormRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.ImageRegionCreateBatch imageRegionCreateBatch;
+
     public CreateImageRegionsFormRequest withImageRegionCreateBatch(org.openapis.openapi.models.shared.ImageRegionCreateBatch imageRegionCreateBatch) {
         this.imageRegionCreateBatch = imageRegionCreateBatch;
         return this;
@@ -22,6 +24,7 @@ public class CreateImageRegionsFormRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
     public String trainingKey;
+
     public CreateImageRegionsFormRequest withTrainingKey(String trainingKey) {
         this.trainingKey = trainingKey;
         return this;
@@ -32,9 +35,15 @@ public class CreateImageRegionsFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public CreateImageRegionsFormRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public CreateImageRegionsFormRequest(@JsonProperty("ImageRegionCreateBatch") org.openapis.openapi.models.shared.ImageRegionCreateBatch imageRegionCreateBatch, @JsonProperty("Training-Key") String trainingKey, @JsonProperty("projectId") String projectId) {
+        this.imageRegionCreateBatch = imageRegionCreateBatch;
+        this.trainingKey = trainingKey;
+        this.projectId = projectId;
+  }
 }

@@ -15,6 +15,7 @@ public class ListIndicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexNames")
     public String[] indexNames;
+
     public ListIndicesResponse withIndexNames(String[] indexNames) {
         this.indexNames = indexNames;
         return this;
@@ -23,9 +24,11 @@ public class ListIndicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListIndicesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListIndicesResponse(){}
 }

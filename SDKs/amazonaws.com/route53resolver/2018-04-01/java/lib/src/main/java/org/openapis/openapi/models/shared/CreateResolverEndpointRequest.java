@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateResolverEndpointRequest {
     @JsonProperty("CreatorRequestId")
     public String creatorRequestId;
+
     public CreateResolverEndpointRequest withCreatorRequestId(String creatorRequestId) {
         this.creatorRequestId = creatorRequestId;
         return this;
@@ -18,6 +19,7 @@ public class CreateResolverEndpointRequest {
     
     @JsonProperty("Direction")
     public ResolverEndpointDirectionEnum direction;
+
     public CreateResolverEndpointRequest withDirection(ResolverEndpointDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -25,6 +27,7 @@ public class CreateResolverEndpointRequest {
     
     @JsonProperty("IpAddresses")
     public IpAddressRequest[] ipAddresses;
+
     public CreateResolverEndpointRequest withIpAddresses(IpAddressRequest[] ipAddresses) {
         this.ipAddresses = ipAddresses;
         return this;
@@ -33,6 +36,7 @@ public class CreateResolverEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateResolverEndpointRequest withName(String name) {
         this.name = name;
         return this;
@@ -41,6 +45,7 @@ public class CreateResolverEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolverEndpointType")
     public ResolverEndpointTypeEnum resolverEndpointType;
+
     public CreateResolverEndpointRequest withResolverEndpointType(ResolverEndpointTypeEnum resolverEndpointType) {
         this.resolverEndpointType = resolverEndpointType;
         return this;
@@ -48,6 +53,7 @@ public class CreateResolverEndpointRequest {
     
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public CreateResolverEndpointRequest withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -56,9 +62,16 @@ public class CreateResolverEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateResolverEndpointRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateResolverEndpointRequest(@JsonProperty("CreatorRequestId") String creatorRequestId, @JsonProperty("Direction") ResolverEndpointDirectionEnum direction, @JsonProperty("IpAddresses") IpAddressRequest[] ipAddresses, @JsonProperty("SecurityGroupIds") String[] securityGroupIds) {
+        this.creatorRequestId = creatorRequestId;
+        this.direction = direction;
+        this.ipAddresses = ipAddresses;
+        this.securityGroupIds = securityGroupIds;
+  }
 }

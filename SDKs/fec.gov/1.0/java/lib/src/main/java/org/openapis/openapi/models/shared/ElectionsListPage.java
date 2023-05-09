@@ -12,6 +12,7 @@ public class ElectionsListPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public ElectionsListPage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class ElectionsListPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ElectionsList[] results;
+
     public ElectionsListPage withResults(ElectionsList[] results) {
         this.results = results;
         return this;
     }
     
+    public ElectionsListPage(){}
 }

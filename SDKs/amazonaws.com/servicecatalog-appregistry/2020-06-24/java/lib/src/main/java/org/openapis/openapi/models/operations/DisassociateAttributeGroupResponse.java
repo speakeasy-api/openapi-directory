@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateAttributeGroupResponse {
     
     public String contentType;
+
     public DisassociateAttributeGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateAttributeGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociateAttributeGroupResponse disassociateAttributeGroupResponse;
+
     public DisassociateAttributeGroupResponse withDisassociateAttributeGroupResponse(org.openapis.openapi.models.shared.DisassociateAttributeGroupResponse disassociateAttributeGroupResponse) {
         this.disassociateAttributeGroupResponse = disassociateAttributeGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateAttributeGroupResponse {
      */
     
     public Object internalServerException;
+
     public DisassociateAttributeGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateAttributeGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateAttributeGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DisassociateAttributeGroupResponse {
     
     
     public Integer statusCode;
+
     public DisassociateAttributeGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DisassociateAttributeGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateAttributeGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DisassociateAttributeGroupResponse {
      */
     
     public Object validationException;
+
     public DisassociateAttributeGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateAttributeGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

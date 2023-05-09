@@ -63,12 +63,10 @@ public class Organization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CountOrgaUsersResponse res = new org.openapis.openapi.models.operations.CountOrgaUsersResponse() {{
+        org.openapis.openapi.models.operations.CountOrgaUsersResponse res = new org.openapis.openapi.models.operations.CountOrgaUsersResponse(contentType, httpRes.statusCode()) {{
             countOrgaUsers200ApplicationJSONInteger = null;
             flatErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -118,12 +116,10 @@ public class Organization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLtiCredentialsResponse res = new org.openapis.openapi.models.operations.CreateLtiCredentialsResponse() {{
+        org.openapis.openapi.models.operations.CreateLtiCredentialsResponse res = new org.openapis.openapi.models.operations.CreateLtiCredentialsResponse(contentType, httpRes.statusCode()) {{
             ltiCredentials = null;
             flatErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,12 +170,10 @@ public class Organization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateOrganizationInvitationResponse res = new org.openapis.openapi.models.operations.CreateOrganizationInvitationResponse() {{
+        org.openapis.openapi.models.operations.CreateOrganizationInvitationResponse res = new org.openapis.openapi.models.operations.CreateOrganizationInvitationResponse(contentType, httpRes.statusCode()) {{
             organizationInvitation = null;
             flatErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -224,12 +218,10 @@ public class Organization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateOrganizationUserResponse res = new org.openapis.openapi.models.operations.CreateOrganizationUserResponse() {{
+        org.openapis.openapi.models.operations.CreateOrganizationUserResponse res = new org.openapis.openapi.models.operations.CreateOrganizationUserResponse(contentType, httpRes.statusCode()) {{
             userDetailsAdmin = null;
             flatErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,10 +244,11 @@ public class Organization {
 
     /**
      * List LTI 1.x credentials
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListLtiCredentialsResponse listLtiCredentials() throws Exception {
+    public org.openapis.openapi.models.operations.ListLtiCredentialsResponse listLtiCredentials(org.openapis.openapi.models.operations.ListLtiCredentialsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/organizations/lti/credentials");
         
@@ -264,17 +257,16 @@ public class Organization {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLtiCredentialsResponse res = new org.openapis.openapi.models.operations.ListLtiCredentialsResponse() {{
+        org.openapis.openapi.models.operations.ListLtiCredentialsResponse res = new org.openapis.openapi.models.operations.ListLtiCredentialsResponse(contentType, httpRes.statusCode()) {{
             ltiCredentials = null;
             flatErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -323,12 +315,10 @@ public class Organization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListOrganizationInvitationsResponse res = new org.openapis.openapi.models.operations.ListOrganizationInvitationsResponse() {{
+        org.openapis.openapi.models.operations.ListOrganizationInvitationsResponse res = new org.openapis.openapi.models.operations.ListOrganizationInvitationsResponse(contentType, httpRes.statusCode()) {{
             organizationInvitations = null;
             flatErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -377,12 +367,10 @@ public class Organization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListOrganizationUsersResponse res = new org.openapis.openapi.models.operations.ListOrganizationUsersResponse() {{
+        org.openapis.openapi.models.operations.ListOrganizationUsersResponse res = new org.openapis.openapi.models.operations.ListOrganizationUsersResponse(contentType, httpRes.statusCode()) {{
             userDetailsAdmins = null;
             flatErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -425,11 +413,9 @@ public class Organization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveOrganizationInvitationResponse res = new org.openapis.openapi.models.operations.RemoveOrganizationInvitationResponse() {{
+        org.openapis.openapi.models.operations.RemoveOrganizationInvitationResponse res = new org.openapis.openapi.models.operations.RemoveOrganizationInvitationResponse(contentType, httpRes.statusCode()) {{
             flatErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -477,11 +463,9 @@ public class Organization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveOrganizationUserResponse res = new org.openapis.openapi.models.operations.RemoveOrganizationUserResponse() {{
+        org.openapis.openapi.models.operations.RemoveOrganizationUserResponse res = new org.openapis.openapi.models.operations.RemoveOrganizationUserResponse(contentType, httpRes.statusCode()) {{
             flatErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -519,11 +503,9 @@ public class Organization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RevokeLtiCredentialsResponse res = new org.openapis.openapi.models.operations.RevokeLtiCredentialsResponse() {{
+        org.openapis.openapi.models.operations.RevokeLtiCredentialsResponse res = new org.openapis.openapi.models.operations.RevokeLtiCredentialsResponse(contentType, httpRes.statusCode()) {{
             flatErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -566,12 +548,10 @@ public class Organization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateOrganizationUserResponse res = new org.openapis.openapi.models.operations.UpdateOrganizationUserResponse() {{
+        org.openapis.openapi.models.operations.UpdateOrganizationUserResponse res = new org.openapis.openapi.models.operations.UpdateOrganizationUserResponse(contentType, httpRes.statusCode()) {{
             userDetailsAdmin = null;
             flatErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

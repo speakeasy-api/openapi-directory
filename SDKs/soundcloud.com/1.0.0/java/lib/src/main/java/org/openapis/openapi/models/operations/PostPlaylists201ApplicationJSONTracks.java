@@ -18,6 +18,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artwork_url")
     public String artworkUrl;
+
     public PostPlaylists201ApplicationJSONTracks withArtworkUrl(String artworkUrl) {
         this.artworkUrl = artworkUrl;
         return this;
@@ -29,6 +30,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bpm")
     public Long bpm;
+
     public PostPlaylists201ApplicationJSONTracks withBpm(Long bpm) {
         this.bpm = bpm;
         return this;
@@ -40,6 +42,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment_count")
     public Long commentCount;
+
     public PostPlaylists201ApplicationJSONTracks withCommentCount(Long commentCount) {
         this.commentCount = commentCount;
         return this;
@@ -51,6 +54,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commentable")
     public Boolean commentable;
+
     public PostPlaylists201ApplicationJSONTracks withCommentable(Boolean commentable) {
         this.commentable = commentable;
         return this;
@@ -62,6 +66,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public PostPlaylists201ApplicationJSONTracks withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -73,6 +78,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PostPlaylists201ApplicationJSONTracks withDescription(String description) {
         this.description = description;
         return this;
@@ -84,6 +90,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download_count")
     public Long downloadCount;
+
     public PostPlaylists201ApplicationJSONTracks withDownloadCount(Long downloadCount) {
         this.downloadCount = downloadCount;
         return this;
@@ -95,6 +102,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadable")
     public String downloadable;
+
     public PostPlaylists201ApplicationJSONTracks withDownloadable(String downloadable) {
         this.downloadable = downloadable;
         return this;
@@ -106,6 +114,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Long duration;
+
     public PostPlaylists201ApplicationJSONTracks withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -117,6 +126,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embeddable_by")
     public String embeddableBy;
+
     public PostPlaylists201ApplicationJSONTracks withEmbeddableBy(String embeddableBy) {
         this.embeddableBy = embeddableBy;
         return this;
@@ -128,6 +138,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("favoritings_count")
     public Long favoritingsCount;
+
     public PostPlaylists201ApplicationJSONTracks withFavoritingsCount(Long favoritingsCount) {
         this.favoritingsCount = favoritingsCount;
         return this;
@@ -139,6 +150,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genre")
     public String genre;
+
     public PostPlaylists201ApplicationJSONTracks withGenre(String genre) {
         this.genre = genre;
         return this;
@@ -150,6 +162,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PostPlaylists201ApplicationJSONTracks withId(Long id) {
         this.id = id;
         return this;
@@ -161,6 +174,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isrc")
     public String isrc;
+
     public PostPlaylists201ApplicationJSONTracks withIsrc(String isrc) {
         this.isrc = isrc;
         return this;
@@ -172,6 +186,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key_signature")
     public String keySignature;
+
     public PostPlaylists201ApplicationJSONTracks withKeySignature(String keySignature) {
         this.keySignature = keySignature;
         return this;
@@ -183,6 +198,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PostPlaylists201ApplicationJSONTracks withKind(String kind) {
         this.kind = kind;
         return this;
@@ -194,6 +210,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_name")
     public String labelName;
+
     public PostPlaylists201ApplicationJSONTracks withLabelName(String labelName) {
         this.labelName = labelName;
         return this;
@@ -205,6 +222,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license")
     public String license;
+
     public PostPlaylists201ApplicationJSONTracks withLicense(String license) {
         this.license = license;
         return this;
@@ -216,6 +234,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permalink_url")
     public String permalinkUrl;
+
     public PostPlaylists201ApplicationJSONTracks withPermalinkUrl(String permalinkUrl) {
         this.permalinkUrl = permalinkUrl;
         return this;
@@ -227,6 +246,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playback_count")
     public Long playbackCount;
+
     public PostPlaylists201ApplicationJSONTracks withPlaybackCount(Long playbackCount) {
         this.playbackCount = playbackCount;
         return this;
@@ -238,6 +258,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchase_title")
     public String purchaseTitle;
+
     public PostPlaylists201ApplicationJSONTracks withPurchaseTitle(String purchaseTitle) {
         this.purchaseTitle = purchaseTitle;
         return this;
@@ -249,6 +270,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchase_url")
     public String purchaseUrl;
+
     public PostPlaylists201ApplicationJSONTracks withPurchaseUrl(String purchaseUrl) {
         this.purchaseUrl = purchaseUrl;
         return this;
@@ -260,6 +282,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release")
     public String release;
+
     public PostPlaylists201ApplicationJSONTracks withRelease(String release) {
         this.release = release;
         return this;
@@ -271,6 +294,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_day")
     public Long releaseDay;
+
     public PostPlaylists201ApplicationJSONTracks withReleaseDay(Long releaseDay) {
         this.releaseDay = releaseDay;
         return this;
@@ -282,6 +306,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_month")
     public Long releaseMonth;
+
     public PostPlaylists201ApplicationJSONTracks withReleaseMonth(Long releaseMonth) {
         this.releaseMonth = releaseMonth;
         return this;
@@ -293,6 +318,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_year")
     public Long releaseYear;
+
     public PostPlaylists201ApplicationJSONTracks withReleaseYear(Long releaseYear) {
         this.releaseYear = releaseYear;
         return this;
@@ -304,6 +330,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharing")
     public String sharing;
+
     public PostPlaylists201ApplicationJSONTracks withSharing(String sharing) {
         this.sharing = sharing;
         return this;
@@ -315,6 +342,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stream_url")
     public String streamUrl;
+
     public PostPlaylists201ApplicationJSONTracks withStreamUrl(String streamUrl) {
         this.streamUrl = streamUrl;
         return this;
@@ -326,6 +354,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamable")
     public Boolean streamable;
+
     public PostPlaylists201ApplicationJSONTracks withStreamable(Boolean streamable) {
         this.streamable = streamable;
         return this;
@@ -337,6 +366,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag_list")
     public String tagList;
+
     public PostPlaylists201ApplicationJSONTracks withTagList(String tagList) {
         this.tagList = tagList;
         return this;
@@ -348,6 +378,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PostPlaylists201ApplicationJSONTracks withTitle(String title) {
         this.title = title;
         return this;
@@ -359,6 +390,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public PostPlaylists201ApplicationJSONTracks withUri(String uri) {
         this.uri = uri;
         return this;
@@ -370,6 +402,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public org.openapis.openapi.models.shared.MetaUser user;
+
     public PostPlaylists201ApplicationJSONTracks withUser(org.openapis.openapi.models.shared.MetaUser user) {
         this.user = user;
         return this;
@@ -381,6 +414,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_favorite")
     public Boolean userFavorite;
+
     public PostPlaylists201ApplicationJSONTracks withUserFavorite(Boolean userFavorite) {
         this.userFavorite = userFavorite;
         return this;
@@ -392,6 +426,7 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_playback_count")
     public Long userPlaybackCount;
+
     public PostPlaylists201ApplicationJSONTracks withUserPlaybackCount(Long userPlaybackCount) {
         this.userPlaybackCount = userPlaybackCount;
         return this;
@@ -403,9 +438,11 @@ public class PostPlaylists201ApplicationJSONTracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waveform_url")
     public String waveformUrl;
+
     public PostPlaylists201ApplicationJSONTracks withWaveformUrl(String waveformUrl) {
         this.waveformUrl = waveformUrl;
         return this;
     }
     
+    public PostPlaylists201ApplicationJSONTracks(){}
 }

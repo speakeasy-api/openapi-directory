@@ -15,6 +15,7 @@ public class WorldCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floorplanCount")
     public Long floorplanCount;
+
     public WorldCount withFloorplanCount(Long floorplanCount) {
         this.floorplanCount = floorplanCount;
         return this;
@@ -23,9 +24,11 @@ public class WorldCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interiorCountPerFloorplan")
     public Long interiorCountPerFloorplan;
+
     public WorldCount withInteriorCountPerFloorplan(Long interiorCountPerFloorplan) {
         this.interiorCountPerFloorplan = interiorCountPerFloorplan;
         return this;
     }
     
+    public WorldCount(){}
 }

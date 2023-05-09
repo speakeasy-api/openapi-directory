@@ -15,6 +15,7 @@ public class ListManagedEndpointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoints")
     public Endpoint[] endpoints;
+
     public ListManagedEndpointsResponse withEndpoints(Endpoint[] endpoints) {
         this.endpoints = endpoints;
         return this;
@@ -23,9 +24,11 @@ public class ListManagedEndpointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListManagedEndpointsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListManagedEndpointsResponse(){}
 }

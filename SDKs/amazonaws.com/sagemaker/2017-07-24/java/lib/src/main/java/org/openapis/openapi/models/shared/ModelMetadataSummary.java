@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModelMetadataSummary {
     @JsonProperty("Domain")
     public String domain;
+
     public ModelMetadataSummary withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -19,6 +20,7 @@ public class ModelMetadataSummary {
     
     @JsonProperty("Framework")
     public String framework;
+
     public ModelMetadataSummary withFramework(String framework) {
         this.framework = framework;
         return this;
@@ -26,6 +28,7 @@ public class ModelMetadataSummary {
     
     @JsonProperty("FrameworkVersion")
     public String frameworkVersion;
+
     public ModelMetadataSummary withFrameworkVersion(String frameworkVersion) {
         this.frameworkVersion = frameworkVersion;
         return this;
@@ -33,6 +36,7 @@ public class ModelMetadataSummary {
     
     @JsonProperty("Model")
     public String model;
+
     public ModelMetadataSummary withModel(String model) {
         this.model = model;
         return this;
@@ -40,9 +44,17 @@ public class ModelMetadataSummary {
     
     @JsonProperty("Task")
     public String task;
+
     public ModelMetadataSummary withTask(String task) {
         this.task = task;
         return this;
     }
     
+    public ModelMetadataSummary(@JsonProperty("Domain") String domain, @JsonProperty("Framework") String framework, @JsonProperty("FrameworkVersion") String frameworkVersion, @JsonProperty("Model") String model, @JsonProperty("Task") String task) {
+        this.domain = domain;
+        this.framework = framework;
+        this.frameworkVersion = frameworkVersion;
+        this.model = model;
+        this.task = task;
+  }
 }

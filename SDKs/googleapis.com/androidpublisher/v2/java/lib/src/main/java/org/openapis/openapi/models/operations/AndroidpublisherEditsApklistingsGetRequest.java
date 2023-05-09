@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherEditsApklistingsGetRequest {
@@ -12,6 +13,7 @@ public class AndroidpublisherEditsApklistingsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidpublisherEditsApklistingsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class AndroidpublisherEditsApklistingsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apkVersionCode")
     public Long apkVersionCode;
+
     public AndroidpublisherEditsApklistingsGetRequest withApkVersionCode(Long apkVersionCode) {
         this.apkVersionCode = apkVersionCode;
         return this;
@@ -32,6 +35,7 @@ public class AndroidpublisherEditsApklistingsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=editId")
     public String editId;
+
     public AndroidpublisherEditsApklistingsGetRequest withEditId(String editId) {
         this.editId = editId;
         return this;
@@ -42,6 +46,7 @@ public class AndroidpublisherEditsApklistingsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidpublisherEditsApklistingsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -52,6 +57,7 @@ public class AndroidpublisherEditsApklistingsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidpublisherEditsApklistingsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -62,6 +68,7 @@ public class AndroidpublisherEditsApklistingsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=language")
     public String language;
+
     public AndroidpublisherEditsApklistingsGetRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -72,6 +79,7 @@ public class AndroidpublisherEditsApklistingsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidpublisherEditsApklistingsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class AndroidpublisherEditsApklistingsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
     public String packageName;
+
     public AndroidpublisherEditsApklistingsGetRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -92,6 +101,7 @@ public class AndroidpublisherEditsApklistingsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidpublisherEditsApklistingsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class AndroidpublisherEditsApklistingsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidpublisherEditsApklistingsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,9 +123,16 @@ public class AndroidpublisherEditsApklistingsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AndroidpublisherEditsApklistingsGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AndroidpublisherEditsApklistingsGetRequest(@JsonProperty("apkVersionCode") Long apkVersionCode, @JsonProperty("editId") String editId, @JsonProperty("language") String language, @JsonProperty("packageName") String packageName) {
+        this.apkVersionCode = apkVersionCode;
+        this.editId = editId;
+        this.language = language;
+        this.packageName = packageName;
+  }
 }

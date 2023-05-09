@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateConfigurationProperty {
     @JsonProperty("value")
     public String value;
+
     public UpdateConfigurationProperty withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public UpdateConfigurationProperty(@JsonProperty("value") String value) {
+        this.value = value;
+  }
 }

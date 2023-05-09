@@ -15,6 +15,7 @@ public class OpenZFSCreateRootVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyTagsToSnapshots")
     public Boolean copyTagsToSnapshots;
+
     public OpenZFSCreateRootVolumeConfiguration withCopyTagsToSnapshots(Boolean copyTagsToSnapshots) {
         this.copyTagsToSnapshots = copyTagsToSnapshots;
         return this;
@@ -23,6 +24,7 @@ public class OpenZFSCreateRootVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataCompressionType")
     public OpenZFSDataCompressionTypeEnum dataCompressionType;
+
     public OpenZFSCreateRootVolumeConfiguration withDataCompressionType(OpenZFSDataCompressionTypeEnum dataCompressionType) {
         this.dataCompressionType = dataCompressionType;
         return this;
@@ -31,6 +33,7 @@ public class OpenZFSCreateRootVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NfsExports")
     public OpenZFSNfsExport[] nfsExports;
+
     public OpenZFSCreateRootVolumeConfiguration withNfsExports(OpenZFSNfsExport[] nfsExports) {
         this.nfsExports = nfsExports;
         return this;
@@ -39,6 +42,7 @@ public class OpenZFSCreateRootVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadOnly")
     public Boolean readOnly;
+
     public OpenZFSCreateRootVolumeConfiguration withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -47,6 +51,7 @@ public class OpenZFSCreateRootVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordSizeKiB")
     public Long recordSizeKiB;
+
     public OpenZFSCreateRootVolumeConfiguration withRecordSizeKiB(Long recordSizeKiB) {
         this.recordSizeKiB = recordSizeKiB;
         return this;
@@ -55,9 +60,11 @@ public class OpenZFSCreateRootVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserAndGroupQuotas")
     public OpenZFSUserOrGroupQuota[] userAndGroupQuotas;
+
     public OpenZFSCreateRootVolumeConfiguration withUserAndGroupQuotas(OpenZFSUserOrGroupQuota[] userAndGroupQuotas) {
         this.userAndGroupQuotas = userAndGroupQuotas;
         return this;
     }
     
+    public OpenZFSCreateRootVolumeConfiguration(){}
 }

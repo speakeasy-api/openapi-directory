@@ -18,9 +18,11 @@ public class BatchFirstLastNamePhoneCodedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalNamesWithPhoneNumbers")
     public FirstLastNamePhoneCodedOut[] personalNamesWithPhoneNumbers;
+
     public BatchFirstLastNamePhoneCodedOut withPersonalNamesWithPhoneNumbers(FirstLastNamePhoneCodedOut[] personalNamesWithPhoneNumbers) {
         this.personalNamesWithPhoneNumbers = personalNamesWithPhoneNumbers;
         return this;
     }
     
+    public BatchFirstLastNamePhoneCodedOut(){}
 }

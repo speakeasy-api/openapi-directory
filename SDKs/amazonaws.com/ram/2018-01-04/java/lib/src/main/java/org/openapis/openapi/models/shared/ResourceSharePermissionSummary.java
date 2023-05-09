@@ -14,12 +14,13 @@ import org.openapis.openapi.utils.DateTimeDeserializer;
 import org.openapis.openapi.utils.DateTimeSerializer;
 
 /**
- * ResourceSharePermissionSummary - Information about an RAM permission that is associated with a resource share and any of its resources of a specified type.
+ * ResourceSharePermissionSummary - Information about an RAM permission.
  */
 public class ResourceSharePermissionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ResourceSharePermissionSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class ResourceSharePermissionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public ResourceSharePermissionSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,14 +40,25 @@ public class ResourceSharePermissionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultVersion")
     public Boolean defaultVersion;
+
     public ResourceSharePermissionSummary withDefaultVersion(Boolean defaultVersion) {
         this.defaultVersion = defaultVersion;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("featureSet")
+    public PermissionFeatureSetEnum featureSet;
+
+    public ResourceSharePermissionSummary withFeatureSet(PermissionFeatureSetEnum featureSet) {
+        this.featureSet = featureSet;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isResourceTypeDefault")
     public Boolean isResourceTypeDefault;
+
     public ResourceSharePermissionSummary withIsResourceTypeDefault(Boolean isResourceTypeDefault) {
         this.isResourceTypeDefault = isResourceTypeDefault;
         return this;
@@ -56,6 +69,7 @@ public class ResourceSharePermissionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public ResourceSharePermissionSummary withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -64,14 +78,25 @@ public class ResourceSharePermissionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ResourceSharePermissionSummary withName(String name) {
         this.name = name;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("permissionType")
+    public PermissionTypeEnum permissionType;
+
+    public ResourceSharePermissionSummary withPermissionType(PermissionTypeEnum permissionType) {
+        this.permissionType = permissionType;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public String resourceType;
+
     public ResourceSharePermissionSummary withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -80,17 +105,29 @@ public class ResourceSharePermissionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ResourceSharePermissionSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public Tag[] tags;
+
+    public ResourceSharePermissionSummary withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public ResourceSharePermissionSummary withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ResourceSharePermissionSummary(){}
 }

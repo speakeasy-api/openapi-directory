@@ -19,6 +19,7 @@ public class RetrieveInventoryAdjustmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adjustment")
     public InventoryAdjustment adjustment;
+
     public RetrieveInventoryAdjustmentResponse withAdjustment(InventoryAdjustment adjustment) {
         this.adjustment = adjustment;
         return this;
@@ -30,9 +31,11 @@ public class RetrieveInventoryAdjustmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RetrieveInventoryAdjustmentResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public RetrieveInventoryAdjustmentResponse(){}
 }

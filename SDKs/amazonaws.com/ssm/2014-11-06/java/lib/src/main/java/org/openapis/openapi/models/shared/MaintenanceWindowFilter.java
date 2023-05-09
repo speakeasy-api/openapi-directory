@@ -15,6 +15,7 @@ public class MaintenanceWindowFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public MaintenanceWindowFilter withKey(String key) {
         this.key = key;
         return this;
@@ -23,9 +24,11 @@ public class MaintenanceWindowFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public MaintenanceWindowFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public MaintenanceWindowFilter(){}
 }

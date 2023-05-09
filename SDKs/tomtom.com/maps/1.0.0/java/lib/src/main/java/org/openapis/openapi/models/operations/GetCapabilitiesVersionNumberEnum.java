@@ -10,12 +10,12 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * GetCapabilitiesVersionNumberEnum
  */
 public enum GetCapabilitiesVersionNumberEnum {
-    ONE("1");
+    ONE(1L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private GetCapabilitiesVersionNumberEnum(String value) {
+    private GetCapabilitiesVersionNumberEnum(Long value) {
         this.value = value;
     }
 }

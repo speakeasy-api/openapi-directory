@@ -15,6 +15,7 @@ public class EnterpriseCrmEventbusStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public EnterpriseCrmEventbusStatsDimensions dimensions;
+
     public EnterpriseCrmEventbusStats withDimensions(EnterpriseCrmEventbusStatsDimensions dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -26,6 +27,7 @@ public class EnterpriseCrmEventbusStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationInSeconds")
     public Double durationInSeconds;
+
     public EnterpriseCrmEventbusStats withDurationInSeconds(Double durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
         return this;
@@ -37,6 +39,7 @@ public class EnterpriseCrmEventbusStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorRate")
     public Double errorRate;
+
     public EnterpriseCrmEventbusStats withErrorRate(Double errorRate) {
         this.errorRate = errorRate;
         return this;
@@ -48,6 +51,7 @@ public class EnterpriseCrmEventbusStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qps")
     public Double qps;
+
     public EnterpriseCrmEventbusStats withQps(Double qps) {
         this.qps = qps;
         return this;
@@ -59,9 +63,11 @@ public class EnterpriseCrmEventbusStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warningRate")
     public Double warningRate;
+
     public EnterpriseCrmEventbusStats withWarningRate(Double warningRate) {
         this.warningRate = warningRate;
         return this;
     }
     
+    public EnterpriseCrmEventbusStats(){}
 }

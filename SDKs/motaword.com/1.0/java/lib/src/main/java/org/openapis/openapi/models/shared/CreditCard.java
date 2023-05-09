@@ -15,6 +15,7 @@ public class CreditCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bin")
     public String bin;
+
     public CreditCard withBin(String bin) {
         this.bin = bin;
         return this;
@@ -23,6 +24,7 @@ public class CreditCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CreditCard withId(Long id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class CreditCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_default")
     public Boolean isDefault;
+
     public CreditCard withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -39,9 +42,11 @@ public class CreditCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_code")
     public String paymentCode;
+
     public CreditCard withPaymentCode(String paymentCode) {
         this.paymentCode = paymentCode;
         return this;
     }
     
+    public CreditCard(){}
 }

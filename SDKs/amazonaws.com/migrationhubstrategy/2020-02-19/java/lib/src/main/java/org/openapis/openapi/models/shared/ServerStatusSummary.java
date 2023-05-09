@@ -15,6 +15,7 @@ public class ServerStatusSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public ServerStatusSummary withCount(Long count) {
         this.count = count;
         return this;
@@ -23,9 +24,11 @@ public class ServerStatusSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runTimeAssessmentStatus")
     public RunTimeAssessmentStatusEnum runTimeAssessmentStatus;
+
     public ServerStatusSummary withRunTimeAssessmentStatus(RunTimeAssessmentStatusEnum runTimeAssessmentStatus) {
         this.runTimeAssessmentStatus = runTimeAssessmentStatus;
         return this;
     }
     
+    public ServerStatusSummary(){}
 }

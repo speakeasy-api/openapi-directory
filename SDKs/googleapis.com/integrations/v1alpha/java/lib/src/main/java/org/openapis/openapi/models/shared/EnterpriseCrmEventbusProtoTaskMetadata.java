@@ -18,6 +18,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeTaskName")
     public String activeTaskName;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withActiveTaskName(String activeTaskName) {
         this.activeTaskName = activeTaskName;
         return this;
@@ -26,6 +27,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("admins")
     public EnterpriseCrmEventbusProtoTaskMetadataAdmin[] admins;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withAdmins(EnterpriseCrmEventbusProtoTaskMetadataAdmin[] admins) {
         this.admins = admins;
         return this;
@@ -34,6 +36,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public EnterpriseCrmEventbusProtoTaskMetadataCategoryEnum category;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withCategory(EnterpriseCrmEventbusProtoTaskMetadataCategoryEnum category) {
         this.category = category;
         return this;
@@ -45,6 +48,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeSearchLink")
     public String codeSearchLink;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withCodeSearchLink(String codeSearchLink) {
         this.codeSearchLink = codeSearchLink;
         return this;
@@ -56,6 +60,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultJsonValidationOption")
     public EnterpriseCrmEventbusProtoTaskMetadataDefaultJsonValidationOptionEnum defaultJsonValidationOption;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withDefaultJsonValidationOption(EnterpriseCrmEventbusProtoTaskMetadataDefaultJsonValidationOptionEnum defaultJsonValidationOption) {
         this.defaultJsonValidationOption = defaultJsonValidationOption;
         return this;
@@ -67,6 +72,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultSpec")
     public String defaultSpec;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withDefaultSpec(String defaultSpec) {
         this.defaultSpec = defaultSpec;
         return this;
@@ -78,6 +84,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -89,6 +96,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("descriptiveName")
     public String descriptiveName;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withDescriptiveName(String descriptiveName) {
         this.descriptiveName = descriptiveName;
         return this;
@@ -100,6 +108,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("docMarkdown")
     public String docMarkdown;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withDocMarkdown(String docMarkdown) {
         this.docMarkdown = docMarkdown;
         return this;
@@ -108,6 +117,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalCategory")
     public EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum externalCategory;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withExternalCategory(EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum externalCategory) {
         this.externalCategory = externalCategory;
         return this;
@@ -119,6 +129,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalCategorySequence")
     public Integer externalCategorySequence;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withExternalCategorySequence(Integer externalCategorySequence) {
         this.externalCategorySequence = externalCategorySequence;
         return this;
@@ -130,6 +141,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalDocHtml")
     public String externalDocHtml;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withExternalDocHtml(String externalDocHtml) {
         this.externalDocHtml = externalDocHtml;
         return this;
@@ -141,6 +153,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalDocLink")
     public String externalDocLink;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withExternalDocLink(String externalDocLink) {
         this.externalDocLink = externalDocLink;
         return this;
@@ -152,6 +165,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalDocMarkdown")
     public String externalDocMarkdown;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withExternalDocMarkdown(String externalDocMarkdown) {
         this.externalDocMarkdown = externalDocMarkdown;
         return this;
@@ -163,6 +177,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("g3DocLink")
     public String g3DocLink;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withG3DocLink(String g3DocLink) {
         this.g3DocLink = g3DocLink;
         return this;
@@ -174,6 +189,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iconLink")
     public String iconLink;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withIconLink(String iconLink) {
         this.iconLink = iconLink;
         return this;
@@ -185,6 +201,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDeprecated")
     public Boolean isDeprecated;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withIsDeprecated(Boolean isDeprecated) {
         this.isDeprecated = isDeprecated;
         return this;
@@ -196,6 +213,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withName(String name) {
         this.name = name;
         return this;
@@ -207,6 +225,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standaloneExternalDocHtml")
     public String standaloneExternalDocHtml;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withStandaloneExternalDocHtml(String standaloneExternalDocHtml) {
         this.standaloneExternalDocHtml = standaloneExternalDocHtml;
         return this;
@@ -218,6 +237,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public EnterpriseCrmEventbusProtoTaskMetadataStatusEnum status;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withStatus(EnterpriseCrmEventbusProtoTaskMetadataStatusEnum status) {
         this.status = status;
         return this;
@@ -226,6 +246,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("system")
     public EnterpriseCrmEventbusProtoTaskMetadataSystemEnum system;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withSystem(EnterpriseCrmEventbusProtoTaskMetadataSystemEnum system) {
         this.system = system;
         return this;
@@ -237,9 +258,11 @@ public class EnterpriseCrmEventbusProtoTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public EnterpriseCrmEventbusProtoTaskMetadata withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoTaskMetadata(){}
 }

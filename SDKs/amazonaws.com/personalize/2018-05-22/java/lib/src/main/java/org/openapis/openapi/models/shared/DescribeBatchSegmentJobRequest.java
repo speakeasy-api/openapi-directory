@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeBatchSegmentJobRequest {
     @JsonProperty("batchSegmentJobArn")
     public String batchSegmentJobArn;
+
     public DescribeBatchSegmentJobRequest withBatchSegmentJobArn(String batchSegmentJobArn) {
         this.batchSegmentJobArn = batchSegmentJobArn;
         return this;
     }
     
+    public DescribeBatchSegmentJobRequest(@JsonProperty("batchSegmentJobArn") String batchSegmentJobArn) {
+        this.batchSegmentJobArn = batchSegmentJobArn;
+  }
 }

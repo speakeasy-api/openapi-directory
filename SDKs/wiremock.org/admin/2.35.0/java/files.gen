@@ -238,4 +238,11 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostAdminSettingsReques
 lib/src/main/java/org/openapis/openapi/models/operations/PostAdminSettingsRequestBodyLogNormal.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostAdminSettingsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostAdminShutdownResponse.java
+docs/sdk/README.md
+docs/nearmisses/README.md
+docs/recordings/README.md
+docs/requests/README.md
+docs/scenarios/README.md
+docs/stubmappings/README.md
+docs/system/README.md
 USAGE.md

@@ -18,6 +18,7 @@ public class ConsistentHashLoadBalancerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpCookie")
     public ConsistentHashLoadBalancerSettingsHttpCookie httpCookie;
+
     public ConsistentHashLoadBalancerSettings withHttpCookie(ConsistentHashLoadBalancerSettingsHttpCookie httpCookie) {
         this.httpCookie = httpCookie;
         return this;
@@ -29,6 +30,7 @@ public class ConsistentHashLoadBalancerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpHeaderName")
     public String httpHeaderName;
+
     public ConsistentHashLoadBalancerSettings withHttpHeaderName(String httpHeaderName) {
         this.httpHeaderName = httpHeaderName;
         return this;
@@ -40,9 +42,11 @@ public class ConsistentHashLoadBalancerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumRingSize")
     public String minimumRingSize;
+
     public ConsistentHashLoadBalancerSettings withMinimumRingSize(String minimumRingSize) {
         this.minimumRingSize = minimumRingSize;
         return this;
     }
     
+    public ConsistentHashLoadBalancerSettings(){}
 }

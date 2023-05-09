@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateBrowserSettingsResponse {
     @JsonProperty("browserSettingsArn")
     public String browserSettingsArn;
+
     public AssociateBrowserSettingsResponse withBrowserSettingsArn(String browserSettingsArn) {
         this.browserSettingsArn = browserSettingsArn;
         return this;
@@ -19,9 +20,14 @@ public class AssociateBrowserSettingsResponse {
     
     @JsonProperty("portalArn")
     public String portalArn;
+
     public AssociateBrowserSettingsResponse withPortalArn(String portalArn) {
         this.portalArn = portalArn;
         return this;
     }
     
+    public AssociateBrowserSettingsResponse(@JsonProperty("browserSettingsArn") String browserSettingsArn, @JsonProperty("portalArn") String portalArn) {
+        this.browserSettingsArn = browserSettingsArn;
+        this.portalArn = portalArn;
+  }
 }

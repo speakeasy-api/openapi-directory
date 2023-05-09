@@ -18,6 +18,7 @@ public class HeldMailQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public HeldMailQuery withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,6 +30,7 @@ public class HeldMailQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public HeldMailQuery withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -40,9 +42,11 @@ public class HeldMailQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terms")
     public String terms;
+
     public HeldMailQuery withTerms(String terms) {
         this.terms = terms;
         return this;
     }
     
+    public HeldMailQuery(){}
 }

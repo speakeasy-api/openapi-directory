@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Logger {
     @JsonProperty("Component")
     public LoggerComponentEnum component;
+
     public Logger withComponent(LoggerComponentEnum component) {
         this.component = component;
         return this;
@@ -21,6 +22,7 @@ public class Logger {
     
     @JsonProperty("Id")
     public String id;
+
     public Logger withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class Logger {
     
     @JsonProperty("Level")
     public LoggerLevelEnum level;
+
     public Logger withLevel(LoggerLevelEnum level) {
         this.level = level;
         return this;
@@ -36,6 +39,7 @@ public class Logger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Space")
     public Long space;
+
     public Logger withSpace(Long space) {
         this.space = space;
         return this;
@@ -43,9 +47,16 @@ public class Logger {
     
     @JsonProperty("Type")
     public LoggerTypeEnum type;
+
     public Logger withType(LoggerTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Logger(@JsonProperty("Component") LoggerComponentEnum component, @JsonProperty("Id") String id, @JsonProperty("Level") LoggerLevelEnum level, @JsonProperty("Type") LoggerTypeEnum type) {
+        this.component = component;
+        this.id = id;
+        this.level = level;
+        this.type = type;
+  }
 }

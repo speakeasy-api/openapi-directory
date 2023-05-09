@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTenantTenantnameRequest {
@@ -12,9 +13,13 @@ public class GetTenantTenantnameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantname")
     public String tenantname;
+
     public GetTenantTenantnameRequest withTenantname(String tenantname) {
         this.tenantname = tenantname;
         return this;
     }
     
+    public GetTenantTenantnameRequest(@JsonProperty("tenantname") String tenantname) {
+        this.tenantname = tenantname;
+  }
 }

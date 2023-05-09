@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigQueryDestination")
     public GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQueryDestination bigQueryDestination;
+
     public GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest withBigQueryDestination(GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQueryDestination bigQueryDestination) {
         this.bigQueryDestination = bigQueryDestination;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKey")
     public String kmsKey;
+
     public GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest withKmsKey(String kmsKey) {
         this.kmsKey = kmsKey;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeDisposition")
     public GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum writeDisposition;
+
     public GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest withWriteDisposition(GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum writeDisposition) {
         this.writeDisposition = writeDisposition;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest(){}
 }

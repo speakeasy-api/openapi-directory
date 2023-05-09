@@ -12,9 +12,13 @@ public class PutUsersIdAccountsRequestBody {
      */
     @JsonProperty("accounts")
     public org.openapis.openapi.models.shared.Account[] accounts;
+
     public PutUsersIdAccountsRequestBody withAccounts(org.openapis.openapi.models.shared.Account[] accounts) {
         this.accounts = accounts;
         return this;
     }
     
+    public PutUsersIdAccountsRequestBody(@JsonProperty("accounts") org.openapis.openapi.models.shared.Account[] accounts) {
+        this.accounts = accounts;
+  }
 }

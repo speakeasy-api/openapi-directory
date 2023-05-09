@@ -18,6 +18,7 @@ public class RestoreInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileShare")
     public String fileShare;
+
     public RestoreInstanceRequest withFileShare(String fileShare) {
         this.fileShare = fileShare;
         return this;
@@ -29,6 +30,7 @@ public class RestoreInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceBackup")
     public String sourceBackup;
+
     public RestoreInstanceRequest withSourceBackup(String sourceBackup) {
         this.sourceBackup = sourceBackup;
         return this;
@@ -40,9 +42,11 @@ public class RestoreInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSnapshot")
     public String sourceSnapshot;
+
     public RestoreInstanceRequest withSourceSnapshot(String sourceSnapshot) {
         this.sourceSnapshot = sourceSnapshot;
         return this;
     }
     
+    public RestoreInstanceRequest(){}
 }

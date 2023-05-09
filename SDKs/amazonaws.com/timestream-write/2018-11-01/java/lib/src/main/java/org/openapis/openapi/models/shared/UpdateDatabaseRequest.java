@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateDatabaseRequest {
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public UpdateDatabaseRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -16,9 +17,14 @@ public class UpdateDatabaseRequest {
     
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public UpdateDatabaseRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
     }
     
+    public UpdateDatabaseRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("KmsKeyId") String kmsKeyId) {
+        this.databaseName = databaseName;
+        this.kmsKeyId = kmsKeyId;
+  }
 }

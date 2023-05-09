@@ -18,9 +18,11 @@ public class FsxProtocolNfs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MountOptions")
     public NfsMountOptions mountOptions;
+
     public FsxProtocolNfs withMountOptions(NfsMountOptions mountOptions) {
         this.mountOptions = mountOptions;
         return this;
     }
     
+    public FsxProtocolNfs(){}
 }

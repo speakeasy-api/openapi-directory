@@ -12,9 +12,11 @@ public class EnterpriseCrmEventbusProtoSerializedObjectParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectValue")
     public String objectValue;
+
     public EnterpriseCrmEventbusProtoSerializedObjectParameter withObjectValue(String objectValue) {
         this.objectValue = objectValue;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoSerializedObjectParameter(){}
 }

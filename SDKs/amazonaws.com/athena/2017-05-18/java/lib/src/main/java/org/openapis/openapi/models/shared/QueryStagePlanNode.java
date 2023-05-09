@@ -15,6 +15,7 @@ public class QueryStagePlanNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Children")
     public QueryStagePlanNode[] children;
+
     public QueryStagePlanNode withChildren(QueryStagePlanNode[] children) {
         this.children = children;
         return this;
@@ -23,6 +24,7 @@ public class QueryStagePlanNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Identifier")
     public String identifier;
+
     public QueryStagePlanNode withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -31,6 +33,7 @@ public class QueryStagePlanNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public QueryStagePlanNode withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class QueryStagePlanNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoteSources")
     public String[] remoteSources;
+
     public QueryStagePlanNode withRemoteSources(String[] remoteSources) {
         this.remoteSources = remoteSources;
         return this;
     }
     
+    public QueryStagePlanNode(){}
 }

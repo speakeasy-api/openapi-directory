@@ -15,9 +15,13 @@ public class PostSessionsRequestBodyPublicCustomSessionKeys {
      */
     @JsonProperty("value")
     public String value;
+
     public PostSessionsRequestBodyPublicCustomSessionKeys withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PostSessionsRequestBodyPublicCustomSessionKeys(@JsonProperty("value") String value) {
+        this.value = value;
+  }
 }

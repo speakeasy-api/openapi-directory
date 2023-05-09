@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetIpamResourceCidrsResultIpamResourceCidrs {
     
     public GetIpamResourceCidrsResultIpamResourceCidrsComplianceStatusEnum complianceStatus;
+
     public GetIpamResourceCidrsResultIpamResourceCidrs withComplianceStatus(GetIpamResourceCidrsResultIpamResourceCidrsComplianceStatusEnum complianceStatus) {
         this.complianceStatus = complianceStatus;
         return this;
@@ -19,6 +20,7 @@ public class GetIpamResourceCidrsResultIpamResourceCidrs {
     
     
     public Double ipUsage;
+
     public GetIpamResourceCidrsResultIpamResourceCidrs withIpUsage(Double ipUsage) {
         this.ipUsage = ipUsage;
         return this;
@@ -26,6 +28,7 @@ public class GetIpamResourceCidrsResultIpamResourceCidrs {
     
     
     public String ipamId;
+
     public GetIpamResourceCidrsResultIpamResourceCidrs withIpamId(String ipamId) {
         this.ipamId = ipamId;
         return this;
@@ -33,6 +36,7 @@ public class GetIpamResourceCidrsResultIpamResourceCidrs {
     
     
     public String ipamPoolId;
+
     public GetIpamResourceCidrsResultIpamResourceCidrs withIpamPoolId(String ipamPoolId) {
         this.ipamPoolId = ipamPoolId;
         return this;
@@ -40,6 +44,7 @@ public class GetIpamResourceCidrsResultIpamResourceCidrs {
     
     
     public String ipamScopeId;
+
     public GetIpamResourceCidrsResultIpamResourceCidrs withIpamScopeId(String ipamScopeId) {
         this.ipamScopeId = ipamScopeId;
         return this;
@@ -47,6 +52,7 @@ public class GetIpamResourceCidrsResultIpamResourceCidrs {
     
     
     public GetIpamResourceCidrsResultIpamResourceCidrsManagementStateEnum managementState;
+
     public GetIpamResourceCidrsResultIpamResourceCidrs withManagementState(GetIpamResourceCidrsResultIpamResourceCidrsManagementStateEnum managementState) {
         this.managementState = managementState;
         return this;
@@ -54,6 +60,7 @@ public class GetIpamResourceCidrsResultIpamResourceCidrs {
     
     
     public GetIpamResourceCidrsResultIpamResourceCidrsOverlapStatusEnum overlapStatus;
+
     public GetIpamResourceCidrsResultIpamResourceCidrs withOverlapStatus(GetIpamResourceCidrsResultIpamResourceCidrsOverlapStatusEnum overlapStatus) {
         this.overlapStatus = overlapStatus;
         return this;
@@ -61,6 +68,7 @@ public class GetIpamResourceCidrsResultIpamResourceCidrs {
     
     
     public String resourceCidr;
+
     public GetIpamResourceCidrsResultIpamResourceCidrs withResourceCidr(String resourceCidr) {
         this.resourceCidr = resourceCidr;
         return this;
@@ -68,6 +76,7 @@ public class GetIpamResourceCidrsResultIpamResourceCidrs {
     
     
     public String resourceId;
+
     public GetIpamResourceCidrsResultIpamResourceCidrs withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -75,6 +84,7 @@ public class GetIpamResourceCidrsResultIpamResourceCidrs {
     
     
     public String resourceName;
+
     public GetIpamResourceCidrsResultIpamResourceCidrs withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -82,6 +92,7 @@ public class GetIpamResourceCidrsResultIpamResourceCidrs {
     
     
     public String resourceOwnerId;
+
     public GetIpamResourceCidrsResultIpamResourceCidrs withResourceOwnerId(String resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
@@ -89,6 +100,7 @@ public class GetIpamResourceCidrsResultIpamResourceCidrs {
     
     
     public String resourceRegion;
+
     public GetIpamResourceCidrsResultIpamResourceCidrs withResourceRegion(String resourceRegion) {
         this.resourceRegion = resourceRegion;
         return this;
@@ -96,6 +108,7 @@ public class GetIpamResourceCidrsResultIpamResourceCidrs {
     
     
     public GetIpamResourceCidrsResultIpamResourceCidrsResourceTags[] resourceTags;
+
     public GetIpamResourceCidrsResultIpamResourceCidrs withResourceTags(GetIpamResourceCidrsResultIpamResourceCidrsResourceTags[] resourceTags) {
         this.resourceTags = resourceTags;
         return this;
@@ -103,6 +116,7 @@ public class GetIpamResourceCidrsResultIpamResourceCidrs {
     
     
     public GetIpamResourceCidrsResultIpamResourceCidrsResourceTypeEnum resourceType;
+
     public GetIpamResourceCidrsResultIpamResourceCidrs withResourceType(GetIpamResourceCidrsResultIpamResourceCidrsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -110,9 +124,11 @@ public class GetIpamResourceCidrsResultIpamResourceCidrs {
     
     
     public String vpcId;
+
     public GetIpamResourceCidrsResultIpamResourceCidrs withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public GetIpamResourceCidrsResultIpamResourceCidrs(){}
 }

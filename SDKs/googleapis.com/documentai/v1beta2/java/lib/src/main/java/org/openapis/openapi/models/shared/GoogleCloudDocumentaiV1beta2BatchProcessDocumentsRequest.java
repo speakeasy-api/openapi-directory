@@ -18,9 +18,11 @@ public class GoogleCloudDocumentaiV1beta2BatchProcessDocumentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public GoogleCloudDocumentaiV1beta2ProcessDocumentRequest[] requests;
+
     public GoogleCloudDocumentaiV1beta2BatchProcessDocumentsRequest withRequests(GoogleCloudDocumentaiV1beta2ProcessDocumentRequest[] requests) {
         this.requests = requests;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2BatchProcessDocumentsRequest(){}
 }

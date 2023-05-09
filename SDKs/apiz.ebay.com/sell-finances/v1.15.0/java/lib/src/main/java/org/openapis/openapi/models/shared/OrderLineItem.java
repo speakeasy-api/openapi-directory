@@ -18,6 +18,7 @@ public class OrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feeBasisAmount")
     public Amount feeBasisAmount;
+
     public OrderLineItem withFeeBasisAmount(Amount feeBasisAmount) {
         this.feeBasisAmount = feeBasisAmount;
         return this;
@@ -29,6 +30,7 @@ public class OrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemId")
     public String lineItemId;
+
     public OrderLineItem withLineItemId(String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
@@ -40,9 +42,11 @@ public class OrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceFees")
     public Fee[] marketplaceFees;
+
     public OrderLineItem withMarketplaceFees(Fee[] marketplaceFees) {
         this.marketplaceFees = marketplaceFees;
         return this;
     }
     
+    public OrderLineItem(){}
 }

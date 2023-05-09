@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CostEstimateRequest {
     @JsonProperty("amount")
     public Amount amount;
+
     public CostEstimateRequest withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -19,6 +20,7 @@ public class CostEstimateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assumptions")
     public CostEstimateAssumptions assumptions;
+
     public CostEstimateRequest withAssumptions(CostEstimateAssumptions assumptions) {
         this.assumptions = assumptions;
         return this;
@@ -32,6 +34,7 @@ public class CostEstimateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardNumber")
     public String cardNumber;
+
     public CostEstimateRequest withCardNumber(String cardNumber) {
         this.cardNumber = cardNumber;
         return this;
@@ -45,6 +48,7 @@ public class CostEstimateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptedCardNumber")
     public String encryptedCardNumber;
+
     public CostEstimateRequest withEncryptedCardNumber(String encryptedCardNumber) {
         this.encryptedCardNumber = encryptedCardNumber;
         return this;
@@ -55,6 +59,7 @@ public class CostEstimateRequest {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public CostEstimateRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -63,6 +68,7 @@ public class CostEstimateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantDetails")
     public MerchantDetails merchantDetails;
+
     public CostEstimateRequest withMerchantDetails(MerchantDetails merchantDetails) {
         this.merchantDetails = merchantDetails;
         return this;
@@ -71,6 +77,7 @@ public class CostEstimateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurring")
     public Recurring recurring;
+
     public CostEstimateRequest withRecurring(Recurring recurring) {
         this.recurring = recurring;
         return this;
@@ -82,6 +89,7 @@ public class CostEstimateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedRecurringDetailReference")
     public String selectedRecurringDetailReference;
+
     public CostEstimateRequest withSelectedRecurringDetailReference(String selectedRecurringDetailReference) {
         this.selectedRecurringDetailReference = selectedRecurringDetailReference;
         return this;
@@ -100,6 +108,7 @@ public class CostEstimateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperInteraction")
     public CostEstimateRequestShopperInteractionEnum shopperInteraction;
+
     public CostEstimateRequest withShopperInteraction(CostEstimateRequestShopperInteractionEnum shopperInteraction) {
         this.shopperInteraction = shopperInteraction;
         return this;
@@ -113,9 +122,14 @@ public class CostEstimateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperReference")
     public String shopperReference;
+
     public CostEstimateRequest withShopperReference(String shopperReference) {
         this.shopperReference = shopperReference;
         return this;
     }
     
+    public CostEstimateRequest(@JsonProperty("amount") Amount amount, @JsonProperty("merchantAccount") String merchantAccount) {
+        this.amount = amount;
+        this.merchantAccount = merchantAccount;
+  }
 }

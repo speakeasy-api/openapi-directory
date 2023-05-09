@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveFilesGetRequest {
@@ -12,6 +13,7 @@ public class DriveFilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=acknowledgeAbuse")
     public Boolean acknowledgeAbuse;
+
     public DriveFilesGetRequest withAcknowledgeAbuse(Boolean acknowledgeAbuse) {
         this.acknowledgeAbuse = acknowledgeAbuse;
         return this;
@@ -22,6 +24,7 @@ public class DriveFilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DriveFilesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -32,6 +35,7 @@ public class DriveFilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DriveFilesGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +46,7 @@ public class DriveFilesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
     public String fileId;
+
     public DriveFilesGetRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -52,6 +57,7 @@ public class DriveFilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLabels")
     public String includeLabels;
+
     public DriveFilesGetRequest withIncludeLabels(String includeLabels) {
         this.includeLabels = includeLabels;
         return this;
@@ -62,6 +68,7 @@ public class DriveFilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includePermissionsForView")
     public String includePermissionsForView;
+
     public DriveFilesGetRequest withIncludePermissionsForView(String includePermissionsForView) {
         this.includePermissionsForView = includePermissionsForView;
         return this;
@@ -72,6 +79,7 @@ public class DriveFilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DriveFilesGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class DriveFilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DriveFilesGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class DriveFilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DriveFilesGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class DriveFilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
     public DriveFilesGetProjectionEnum projection;
+
     public DriveFilesGetRequest withProjection(DriveFilesGetProjectionEnum projection) {
         this.projection = projection;
         return this;
@@ -112,6 +123,7 @@ public class DriveFilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DriveFilesGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class DriveFilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=revisionId")
     public String revisionId;
+
     public DriveFilesGetRequest withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -132,6 +145,7 @@ public class DriveFilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsAllDrives")
     public Boolean supportsAllDrives;
+
     public DriveFilesGetRequest withSupportsAllDrives(Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -142,6 +156,7 @@ public class DriveFilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsTeamDrives")
     public Boolean supportsTeamDrives;
+
     public DriveFilesGetRequest withSupportsTeamDrives(Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -152,6 +167,7 @@ public class DriveFilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateViewedDate")
     public Boolean updateViewedDate;
+
     public DriveFilesGetRequest withUpdateViewedDate(Boolean updateViewedDate) {
         this.updateViewedDate = updateViewedDate;
         return this;
@@ -162,9 +178,13 @@ public class DriveFilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public DriveFilesGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public DriveFilesGetRequest(@JsonProperty("fileId") String fileId) {
+        this.fileId = fileId;
+  }
 }

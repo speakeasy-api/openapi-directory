@@ -18,9 +18,11 @@ public class ItemListWebhookResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public WebhookResource[] items;
+
     public ItemListWebhookResource withItems(WebhookResource[] items) {
         this.items = items;
         return this;
     }
     
+    public ItemListWebhookResource(){}
 }

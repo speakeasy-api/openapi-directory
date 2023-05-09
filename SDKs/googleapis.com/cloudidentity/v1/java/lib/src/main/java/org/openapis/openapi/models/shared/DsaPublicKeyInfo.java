@@ -18,9 +18,11 @@ public class DsaPublicKeyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keySize")
     public Integer keySize;
+
     public DsaPublicKeyInfo withKeySize(Integer keySize) {
         this.keySize = keySize;
         return this;
     }
     
+    public DsaPublicKeyInfo(){}
 }

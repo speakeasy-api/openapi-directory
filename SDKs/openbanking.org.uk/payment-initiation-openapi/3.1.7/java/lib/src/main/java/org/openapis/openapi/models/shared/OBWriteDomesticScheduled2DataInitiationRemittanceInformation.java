@@ -21,6 +21,7 @@ public class OBWriteDomesticScheduled2DataInitiationRemittanceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reference")
     public String reference;
+
     public OBWriteDomesticScheduled2DataInitiationRemittanceInformation withReference(String reference) {
         this.reference = reference;
         return this;
@@ -32,9 +33,11 @@ public class OBWriteDomesticScheduled2DataInitiationRemittanceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unstructured")
     public String unstructured;
+
     public OBWriteDomesticScheduled2DataInitiationRemittanceInformation withUnstructured(String unstructured) {
         this.unstructured = unstructured;
         return this;
     }
     
+    public OBWriteDomesticScheduled2DataInitiationRemittanceInformation(){}
 }

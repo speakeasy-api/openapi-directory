@@ -18,6 +18,7 @@ public class GcRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intersection")
     public Intersection intersection;
+
     public GcRule withIntersection(Intersection intersection) {
         this.intersection = intersection;
         return this;
@@ -29,6 +30,7 @@ public class GcRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxAge")
     public String maxAge;
+
     public GcRule withMaxAge(String maxAge) {
         this.maxAge = maxAge;
         return this;
@@ -40,6 +42,7 @@ public class GcRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxNumVersions")
     public Integer maxNumVersions;
+
     public GcRule withMaxNumVersions(Integer maxNumVersions) {
         this.maxNumVersions = maxNumVersions;
         return this;
@@ -51,9 +54,11 @@ public class GcRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("union")
     public Union union;
+
     public GcRule withUnion(Union union) {
         this.union = union;
         return this;
     }
     
+    public GcRule(){}
 }

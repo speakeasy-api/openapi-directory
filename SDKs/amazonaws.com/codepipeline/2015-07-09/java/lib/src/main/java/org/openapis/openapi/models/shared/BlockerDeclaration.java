@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BlockerDeclaration {
     @JsonProperty("name")
     public String name;
+
     public BlockerDeclaration withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class BlockerDeclaration {
     
     @JsonProperty("type")
     public BlockerTypeEnum type;
+
     public BlockerDeclaration withType(BlockerTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public BlockerDeclaration(@JsonProperty("name") String name, @JsonProperty("type") BlockerTypeEnum type) {
+        this.name = name;
+        this.type = type;
+  }
 }

@@ -12,9 +12,11 @@ public class OsBrowsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=os")
     public String os;
+
     public OsBrowsersRequest withOs(String os) {
         this.os = os;
         return this;
     }
     
+    public OsBrowsersRequest(){}
 }

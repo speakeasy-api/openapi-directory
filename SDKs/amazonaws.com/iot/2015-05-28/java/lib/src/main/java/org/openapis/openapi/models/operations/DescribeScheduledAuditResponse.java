@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeScheduledAuditResponse {
     
     public String contentType;
+
     public DescribeScheduledAuditResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeScheduledAuditResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeScheduledAuditResponse describeScheduledAuditResponse;
+
     public DescribeScheduledAuditResponse withDescribeScheduledAuditResponse(org.openapis.openapi.models.shared.DescribeScheduledAuditResponse describeScheduledAuditResponse) {
         this.describeScheduledAuditResponse = describeScheduledAuditResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeScheduledAuditResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeScheduledAuditResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeScheduledAuditResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeScheduledAuditResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeScheduledAuditResponse {
     
     
     public Integer statusCode;
+
     public DescribeScheduledAuditResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeScheduledAuditResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeScheduledAuditResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeScheduledAuditResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeScheduledAuditResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeScheduledAuditResponse {
      */
     
     public Object throttlingException;
+
     public DescribeScheduledAuditResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeScheduledAuditResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

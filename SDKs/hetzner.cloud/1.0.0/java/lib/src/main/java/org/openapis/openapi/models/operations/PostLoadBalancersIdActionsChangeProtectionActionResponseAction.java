@@ -12,6 +12,7 @@ public class PostLoadBalancersIdActionsChangeProtectionActionResponseAction {
      */
     @JsonProperty("command")
     public String command;
+
     public PostLoadBalancersIdActionsChangeProtectionActionResponseAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class PostLoadBalancersIdActionsChangeProtectionActionResponseAction {
      */
     @JsonProperty("error")
     public PostLoadBalancersIdActionsChangeProtectionActionResponseActionError error;
+
     public PostLoadBalancersIdActionsChangeProtectionActionResponseAction withError(PostLoadBalancersIdActionsChangeProtectionActionResponseActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class PostLoadBalancersIdActionsChangeProtectionActionResponseAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public PostLoadBalancersIdActionsChangeProtectionActionResponseAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class PostLoadBalancersIdActionsChangeProtectionActionResponseAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostLoadBalancersIdActionsChangeProtectionActionResponseAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostLoadBalancersIdActionsChangeProtectionActionResponseAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public PostLoadBalancersIdActionsChangeProtectionActionResponseAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class PostLoadBalancersIdActionsChangeProtectionActionResponseAction {
      */
     @JsonProperty("resources")
     public PostLoadBalancersIdActionsChangeProtectionActionResponseActionResources[] resources;
+
     public PostLoadBalancersIdActionsChangeProtectionActionResponseAction withResources(PostLoadBalancersIdActionsChangeProtectionActionResponseActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class PostLoadBalancersIdActionsChangeProtectionActionResponseAction {
      */
     @JsonProperty("started")
     public String started;
+
     public PostLoadBalancersIdActionsChangeProtectionActionResponseAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class PostLoadBalancersIdActionsChangeProtectionActionResponseAction {
      */
     @JsonProperty("status")
     public PostLoadBalancersIdActionsChangeProtectionActionResponseActionStatusEnum status;
+
     public PostLoadBalancersIdActionsChangeProtectionActionResponseAction withStatus(PostLoadBalancersIdActionsChangeProtectionActionResponseActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostLoadBalancersIdActionsChangeProtectionActionResponseAction(@JsonProperty("command") String command, @JsonProperty("error") PostLoadBalancersIdActionsChangeProtectionActionResponseActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") PostLoadBalancersIdActionsChangeProtectionActionResponseActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") PostLoadBalancersIdActionsChangeProtectionActionResponseActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

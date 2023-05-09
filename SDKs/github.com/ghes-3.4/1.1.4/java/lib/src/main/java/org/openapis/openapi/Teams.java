@@ -54,7 +54,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsAddMemberLegacyResponse teamsAddMemberLegacy(org.openapis.openapi.models.operations.TeamsAddMemberLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddMemberLegacyRequest.class, baseUrl, "/teams/{team_id}/members/{username}", request, null);
@@ -69,11 +71,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsAddMemberLegacyResponse res = new org.openapis.openapi.models.operations.TeamsAddMemberLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsAddMemberLegacyResponse res = new org.openapis.openapi.models.operations.TeamsAddMemberLegacyResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404 || httpRes.statusCode() == 422) {
@@ -123,11 +123,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserInOrgResponse res = new org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserInOrgResponse res = new org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserInOrgResponse(contentType, httpRes.statusCode()) {{
             teamMembership = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -160,7 +158,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserLegacyResponse teamsAddOrUpdateMembershipForUserLegacy(org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserLegacyRequest.class, baseUrl, "/teams/{team_id}/memberships/{username}", request, null);
@@ -177,12 +177,10 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserLegacyResponse res = new org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserLegacyResponse res = new org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserLegacyResponse(contentType, httpRes.statusCode()) {{
             teamMembership = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -231,11 +229,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsInOrgResponse res = new org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsInOrgResponse res = new org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsInOrgResponse(contentType, httpRes.statusCode()) {{
             teamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -260,7 +256,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsLegacyResponse teamsAddOrUpdateProjectPermissionsLegacy(org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsLegacyRequest.class, baseUrl, "/teams/{team_id}/projects/{project_id}", request, null);
@@ -277,13 +275,11 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsLegacyResponse res = new org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsLegacyResponse res = new org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsLegacyResponse(contentType, httpRes.statusCode()) {{
             teamsAddOrUpdateProjectPermissionsLegacy403ApplicationJSONObject = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -341,10 +337,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsInOrgResponse res = new org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsInOrgResponse res = new org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsInOrgResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -364,7 +358,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsLegacyResponse teamsAddOrUpdateRepoPermissionsLegacy(org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsLegacyRequest.class, baseUrl, "/teams/{team_id}/repos/{owner}/{repo}", request, null);
@@ -381,12 +377,10 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsLegacyResponse res = new org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsLegacyResponse res = new org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsLegacyResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -433,11 +427,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectInOrgResponse res = new org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectInOrgResponse res = new org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectInOrgResponse(contentType, httpRes.statusCode()) {{
             teamProject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -462,7 +454,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectLegacyResponse teamsCheckPermissionsForProjectLegacy(org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectLegacyRequest.class, baseUrl, "/teams/{team_id}/projects/{project_id}", request, null);
@@ -477,11 +471,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectLegacyResponse res = new org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectLegacyResponse res = new org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectLegacyResponse(contentType, httpRes.statusCode()) {{
             teamProject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -525,11 +517,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoInOrgResponse res = new org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoInOrgResponse res = new org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoInOrgResponse(contentType, httpRes.statusCode()) {{
             teamRepository = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -556,7 +546,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoLegacyResponse teamsCheckPermissionsForRepoLegacy(org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoLegacyRequest.class, baseUrl, "/teams/{team_id}/repos/{owner}/{repo}", request, null);
@@ -571,11 +563,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoLegacyResponse res = new org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoLegacyResponse res = new org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoLegacyResponse(contentType, httpRes.statusCode()) {{
             teamRepository = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -620,13 +610,11 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsCreateResponse res = new org.openapis.openapi.models.operations.TeamsCreateResponse() {{
+        org.openapis.openapi.models.operations.TeamsCreateResponse res = new org.openapis.openapi.models.operations.TeamsCreateResponse(contentType, httpRes.statusCode()) {{
             teamFull = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -685,11 +673,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentInOrgResponse res = new org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentInOrgResponse res = new org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentInOrgResponse(contentType, httpRes.statusCode()) {{
             teamDiscussionComment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -714,7 +700,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentLegacyResponse teamsCreateDiscussionCommentLegacy(org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentLegacyRequest.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/comments", request, null);
@@ -734,11 +722,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentLegacyResponse res = new org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentLegacyResponse res = new org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentLegacyResponse(contentType, httpRes.statusCode()) {{
             teamDiscussionComment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -783,11 +769,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsCreateDiscussionInOrgResponse res = new org.openapis.openapi.models.operations.TeamsCreateDiscussionInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsCreateDiscussionInOrgResponse res = new org.openapis.openapi.models.operations.TeamsCreateDiscussionInOrgResponse(contentType, httpRes.statusCode()) {{
             teamDiscussion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -812,7 +796,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsCreateDiscussionLegacyResponse teamsCreateDiscussionLegacy(org.openapis.openapi.models.operations.TeamsCreateDiscussionLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCreateDiscussionLegacyRequest.class, baseUrl, "/teams/{team_id}/discussions", request, null);
@@ -832,11 +818,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsCreateDiscussionLegacyResponse res = new org.openapis.openapi.models.operations.TeamsCreateDiscussionLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsCreateDiscussionLegacyResponse res = new org.openapis.openapi.models.operations.TeamsCreateDiscussionLegacyResponse(contentType, httpRes.statusCode()) {{
             teamDiscussion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -874,10 +858,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentInOrgResponse res = new org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentInOrgResponse res = new org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentInOrgResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -895,7 +877,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentLegacyResponse teamsDeleteDiscussionCommentLegacy(org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentLegacyRequest.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request, null);
@@ -910,10 +894,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentLegacyResponse res = new org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentLegacyResponse res = new org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentLegacyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -946,10 +928,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsDeleteDiscussionInOrgResponse res = new org.openapis.openapi.models.operations.TeamsDeleteDiscussionInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsDeleteDiscussionInOrgResponse res = new org.openapis.openapi.models.operations.TeamsDeleteDiscussionInOrgResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -967,7 +947,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsDeleteDiscussionLegacyResponse teamsDeleteDiscussionLegacy(org.openapis.openapi.models.operations.TeamsDeleteDiscussionLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsDeleteDiscussionLegacyRequest.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}", request, null);
@@ -982,10 +964,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsDeleteDiscussionLegacyResponse res = new org.openapis.openapi.models.operations.TeamsDeleteDiscussionLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsDeleteDiscussionLegacyResponse res = new org.openapis.openapi.models.operations.TeamsDeleteDiscussionLegacyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1020,10 +1000,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsDeleteInOrgResponse res = new org.openapis.openapi.models.operations.TeamsDeleteInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsDeleteInOrgResponse res = new org.openapis.openapi.models.operations.TeamsDeleteInOrgResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1043,7 +1021,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsDeleteLegacyResponse teamsDeleteLegacy(org.openapis.openapi.models.operations.TeamsDeleteLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsDeleteLegacyRequest.class, baseUrl, "/teams/{team_id}", request, null);
@@ -1058,12 +1038,10 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsDeleteLegacyResponse res = new org.openapis.openapi.models.operations.TeamsDeleteLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsDeleteLegacyResponse res = new org.openapis.openapi.models.operations.TeamsDeleteLegacyResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1110,12 +1088,10 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsGetByNameResponse res = new org.openapis.openapi.models.operations.TeamsGetByNameResponse() {{
+        org.openapis.openapi.models.operations.TeamsGetByNameResponse res = new org.openapis.openapi.models.operations.TeamsGetByNameResponse(contentType, httpRes.statusCode()) {{
             teamFull = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1160,11 +1136,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsGetDiscussionCommentInOrgResponse res = new org.openapis.openapi.models.operations.TeamsGetDiscussionCommentInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsGetDiscussionCommentInOrgResponse res = new org.openapis.openapi.models.operations.TeamsGetDiscussionCommentInOrgResponse(contentType, httpRes.statusCode()) {{
             teamDiscussionComment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1187,7 +1161,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsGetDiscussionCommentLegacyResponse teamsGetDiscussionCommentLegacy(org.openapis.openapi.models.operations.TeamsGetDiscussionCommentLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetDiscussionCommentLegacyRequest.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request, null);
@@ -1202,11 +1178,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsGetDiscussionCommentLegacyResponse res = new org.openapis.openapi.models.operations.TeamsGetDiscussionCommentLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsGetDiscussionCommentLegacyResponse res = new org.openapis.openapi.models.operations.TeamsGetDiscussionCommentLegacyResponse(contentType, httpRes.statusCode()) {{
             teamDiscussionComment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1244,11 +1218,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsGetDiscussionInOrgResponse res = new org.openapis.openapi.models.operations.TeamsGetDiscussionInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsGetDiscussionInOrgResponse res = new org.openapis.openapi.models.operations.TeamsGetDiscussionInOrgResponse(contentType, httpRes.statusCode()) {{
             teamDiscussion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1271,7 +1243,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsGetDiscussionLegacyResponse teamsGetDiscussionLegacy(org.openapis.openapi.models.operations.TeamsGetDiscussionLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetDiscussionLegacyRequest.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}", request, null);
@@ -1286,11 +1260,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsGetDiscussionLegacyResponse res = new org.openapis.openapi.models.operations.TeamsGetDiscussionLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsGetDiscussionLegacyResponse res = new org.openapis.openapi.models.operations.TeamsGetDiscussionLegacyResponse(contentType, httpRes.statusCode()) {{
             teamDiscussion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1311,7 +1283,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsGetLegacyResponse teamsGetLegacy(org.openapis.openapi.models.operations.TeamsGetLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetLegacyRequest.class, baseUrl, "/teams/{team_id}", request, null);
@@ -1326,12 +1300,10 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsGetLegacyResponse res = new org.openapis.openapi.models.operations.TeamsGetLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsGetLegacyResponse res = new org.openapis.openapi.models.operations.TeamsGetLegacyResponse(contentType, httpRes.statusCode()) {{
             teamFull = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1363,7 +1335,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsGetMemberLegacyResponse teamsGetMemberLegacy(org.openapis.openapi.models.operations.TeamsGetMemberLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetMemberLegacyRequest.class, baseUrl, "/teams/{team_id}/members/{username}", request, null);
@@ -1378,10 +1352,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsGetMemberLegacyResponse res = new org.openapis.openapi.models.operations.TeamsGetMemberLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsGetMemberLegacyResponse res = new org.openapis.openapi.models.operations.TeamsGetMemberLegacyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -1421,11 +1393,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsGetMembershipForUserInOrgResponse res = new org.openapis.openapi.models.operations.TeamsGetMembershipForUserInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsGetMembershipForUserInOrgResponse res = new org.openapis.openapi.models.operations.TeamsGetMembershipForUserInOrgResponse(contentType, httpRes.statusCode()) {{
             teamMembership = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1457,7 +1427,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsGetMembershipForUserLegacyResponse teamsGetMembershipForUserLegacy(org.openapis.openapi.models.operations.TeamsGetMembershipForUserLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetMembershipForUserLegacyRequest.class, baseUrl, "/teams/{team_id}/memberships/{username}", request, null);
@@ -1472,12 +1444,10 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsGetMembershipForUserLegacyResponse res = new org.openapis.openapi.models.operations.TeamsGetMembershipForUserLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsGetMembershipForUserLegacyResponse res = new org.openapis.openapi.models.operations.TeamsGetMembershipForUserLegacyResponse(contentType, httpRes.statusCode()) {{
             teamMembership = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1526,12 +1496,10 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListResponse res = new org.openapis.openapi.models.operations.TeamsListResponse() {{
+        org.openapis.openapi.models.operations.TeamsListResponse res = new org.openapis.openapi.models.operations.TeamsListResponse(contentType, httpRes.statusCode()) {{
             teams = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1584,11 +1552,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListChildInOrgResponse res = new org.openapis.openapi.models.operations.TeamsListChildInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsListChildInOrgResponse res = new org.openapis.openapi.models.operations.TeamsListChildInOrgResponse(contentType, httpRes.statusCode()) {{
             teams = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1611,7 +1577,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsListChildLegacyResponse teamsListChildLegacy(org.openapis.openapi.models.operations.TeamsListChildLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListChildLegacyRequest.class, baseUrl, "/teams/{team_id}/teams", request, null);
@@ -1632,13 +1600,11 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListChildLegacyResponse res = new org.openapis.openapi.models.operations.TeamsListChildLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsListChildLegacyResponse res = new org.openapis.openapi.models.operations.TeamsListChildLegacyResponse(contentType, httpRes.statusCode()) {{
             teams = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1698,11 +1664,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListDiscussionCommentsInOrgResponse res = new org.openapis.openapi.models.operations.TeamsListDiscussionCommentsInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsListDiscussionCommentsInOrgResponse res = new org.openapis.openapi.models.operations.TeamsListDiscussionCommentsInOrgResponse(contentType, httpRes.statusCode()) {{
             teamDiscussionComments = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1727,7 +1691,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsListDiscussionCommentsLegacyResponse teamsListDiscussionCommentsLegacy(org.openapis.openapi.models.operations.TeamsListDiscussionCommentsLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListDiscussionCommentsLegacyRequest.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/comments", request, null);
@@ -1748,11 +1714,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListDiscussionCommentsLegacyResponse res = new org.openapis.openapi.models.operations.TeamsListDiscussionCommentsLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsListDiscussionCommentsLegacyResponse res = new org.openapis.openapi.models.operations.TeamsListDiscussionCommentsLegacyResponse(contentType, httpRes.statusCode()) {{
             teamDiscussionComments = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1798,11 +1762,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListDiscussionsInOrgResponse res = new org.openapis.openapi.models.operations.TeamsListDiscussionsInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsListDiscussionsInOrgResponse res = new org.openapis.openapi.models.operations.TeamsListDiscussionsInOrgResponse(contentType, httpRes.statusCode()) {{
             teamDiscussions = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1827,7 +1789,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsListDiscussionsLegacyResponse teamsListDiscussionsLegacy(org.openapis.openapi.models.operations.TeamsListDiscussionsLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListDiscussionsLegacyRequest.class, baseUrl, "/teams/{team_id}/discussions", request, null);
@@ -1848,11 +1812,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListDiscussionsLegacyResponse res = new org.openapis.openapi.models.operations.TeamsListDiscussionsLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsListDiscussionsLegacyResponse res = new org.openapis.openapi.models.operations.TeamsListDiscussionsLegacyResponse(contentType, httpRes.statusCode()) {{
             teamDiscussions = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1896,12 +1858,10 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.TeamsListForAuthenticatedUserResponse() {{
+        org.openapis.openapi.models.operations.TeamsListForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.TeamsListForAuthenticatedUserResponse(contentType, httpRes.statusCode()) {{
             teamFulls = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1956,11 +1916,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListMembersInOrgResponse res = new org.openapis.openapi.models.operations.TeamsListMembersInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsListMembersInOrgResponse res = new org.openapis.openapi.models.operations.TeamsListMembersInOrgResponse(contentType, httpRes.statusCode()) {{
             simpleUsers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1985,7 +1943,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsListMembersLegacyResponse teamsListMembersLegacy(org.openapis.openapi.models.operations.TeamsListMembersLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListMembersLegacyRequest.class, baseUrl, "/teams/{team_id}/members", request, null);
@@ -2006,12 +1966,10 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListMembersLegacyResponse res = new org.openapis.openapi.models.operations.TeamsListMembersLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsListMembersLegacyResponse res = new org.openapis.openapi.models.operations.TeamsListMembersLegacyResponse(contentType, httpRes.statusCode()) {{
             simpleUsers = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2064,11 +2022,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListProjectsInOrgResponse res = new org.openapis.openapi.models.operations.TeamsListProjectsInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsListProjectsInOrgResponse res = new org.openapis.openapi.models.operations.TeamsListProjectsInOrgResponse(contentType, httpRes.statusCode()) {{
             teamProjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2093,7 +2049,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsListProjectsLegacyResponse teamsListProjectsLegacy(org.openapis.openapi.models.operations.TeamsListProjectsLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListProjectsLegacyRequest.class, baseUrl, "/teams/{team_id}/projects", request, null);
@@ -2114,12 +2072,10 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListProjectsLegacyResponse res = new org.openapis.openapi.models.operations.TeamsListProjectsLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsListProjectsLegacyResponse res = new org.openapis.openapi.models.operations.TeamsListProjectsLegacyResponse(contentType, httpRes.statusCode()) {{
             teamProjects = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2172,11 +2128,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListReposInOrgResponse res = new org.openapis.openapi.models.operations.TeamsListReposInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsListReposInOrgResponse res = new org.openapis.openapi.models.operations.TeamsListReposInOrgResponse(contentType, httpRes.statusCode()) {{
             minimalRepositories = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2199,7 +2153,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsListReposLegacyResponse teamsListReposLegacy(org.openapis.openapi.models.operations.TeamsListReposLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListReposLegacyRequest.class, baseUrl, "/teams/{team_id}/repos", request, null);
@@ -2220,12 +2176,10 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsListReposLegacyResponse res = new org.openapis.openapi.models.operations.TeamsListReposLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsListReposLegacyResponse res = new org.openapis.openapi.models.operations.TeamsListReposLegacyResponse(contentType, httpRes.statusCode()) {{
             minimalRepositories = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2263,7 +2217,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsRemoveMemberLegacyResponse teamsRemoveMemberLegacy(org.openapis.openapi.models.operations.TeamsRemoveMemberLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveMemberLegacyRequest.class, baseUrl, "/teams/{team_id}/members/{username}", request, null);
@@ -2278,10 +2234,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsRemoveMemberLegacyResponse res = new org.openapis.openapi.models.operations.TeamsRemoveMemberLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsRemoveMemberLegacyResponse res = new org.openapis.openapi.models.operations.TeamsRemoveMemberLegacyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -2318,10 +2272,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserInOrgResponse res = new org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserInOrgResponse res = new org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserInOrgResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 403) {
@@ -2343,7 +2295,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserLegacyResponse teamsRemoveMembershipForUserLegacy(org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserLegacyRequest.class, baseUrl, "/teams/{team_id}/memberships/{username}", request, null);
@@ -2358,10 +2312,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserLegacyResponse res = new org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserLegacyResponse res = new org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserLegacyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 403) {
@@ -2394,10 +2346,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsRemoveProjectInOrgResponse res = new org.openapis.openapi.models.operations.TeamsRemoveProjectInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsRemoveProjectInOrgResponse res = new org.openapis.openapi.models.operations.TeamsRemoveProjectInOrgResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -2415,7 +2365,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsRemoveProjectLegacyResponse teamsRemoveProjectLegacy(org.openapis.openapi.models.operations.TeamsRemoveProjectLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveProjectLegacyRequest.class, baseUrl, "/teams/{team_id}/projects/{project_id}", request, null);
@@ -2430,12 +2382,10 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsRemoveProjectLegacyResponse res = new org.openapis.openapi.models.operations.TeamsRemoveProjectLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsRemoveProjectLegacyResponse res = new org.openapis.openapi.models.operations.TeamsRemoveProjectLegacyResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -2482,10 +2432,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsRemoveRepoInOrgResponse res = new org.openapis.openapi.models.operations.TeamsRemoveRepoInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsRemoveRepoInOrgResponse res = new org.openapis.openapi.models.operations.TeamsRemoveRepoInOrgResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -2503,7 +2451,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsRemoveRepoLegacyResponse teamsRemoveRepoLegacy(org.openapis.openapi.models.operations.TeamsRemoveRepoLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveRepoLegacyRequest.class, baseUrl, "/teams/{team_id}/repos/{owner}/{repo}", request, null);
@@ -2518,10 +2468,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsRemoveRepoLegacyResponse res = new org.openapis.openapi.models.operations.TeamsRemoveRepoLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsRemoveRepoLegacyResponse res = new org.openapis.openapi.models.operations.TeamsRemoveRepoLegacyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -2559,11 +2507,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentInOrgResponse res = new org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentInOrgResponse res = new org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentInOrgResponse(contentType, httpRes.statusCode()) {{
             teamDiscussionComment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2586,7 +2532,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentLegacyResponse teamsUpdateDiscussionCommentLegacy(org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentLegacyRequest.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request, null);
@@ -2606,11 +2554,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentLegacyResponse res = new org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentLegacyResponse res = new org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentLegacyResponse(contentType, httpRes.statusCode()) {{
             teamDiscussionComment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2650,11 +2596,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsUpdateDiscussionInOrgResponse res = new org.openapis.openapi.models.operations.TeamsUpdateDiscussionInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsUpdateDiscussionInOrgResponse res = new org.openapis.openapi.models.operations.TeamsUpdateDiscussionInOrgResponse(contentType, httpRes.statusCode()) {{
             teamDiscussion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2677,7 +2621,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsUpdateDiscussionLegacyResponse teamsUpdateDiscussionLegacy(org.openapis.openapi.models.operations.TeamsUpdateDiscussionLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdateDiscussionLegacyRequest.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}", request, null);
@@ -2694,11 +2640,9 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsUpdateDiscussionLegacyResponse res = new org.openapis.openapi.models.operations.TeamsUpdateDiscussionLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsUpdateDiscussionLegacyResponse res = new org.openapis.openapi.models.operations.TeamsUpdateDiscussionLegacyResponse(contentType, httpRes.statusCode()) {{
             teamDiscussion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2738,13 +2682,11 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsUpdateInOrgResponse res = new org.openapis.openapi.models.operations.TeamsUpdateInOrgResponse() {{
+        org.openapis.openapi.models.operations.TeamsUpdateInOrgResponse res = new org.openapis.openapi.models.operations.TeamsUpdateInOrgResponse(contentType, httpRes.statusCode()) {{
             teamFull = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 201) {
@@ -2783,7 +2725,9 @@ public class Teams {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TeamsUpdateLegacyResponse teamsUpdateLegacy(org.openapis.openapi.models.operations.TeamsUpdateLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdateLegacyRequest.class, baseUrl, "/teams/{team_id}", request, null);
@@ -2803,13 +2747,11 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsUpdateLegacyResponse res = new org.openapis.openapi.models.operations.TeamsUpdateLegacyResponse() {{
+        org.openapis.openapi.models.operations.TeamsUpdateLegacyResponse res = new org.openapis.openapi.models.operations.TeamsUpdateLegacyResponse(contentType, httpRes.statusCode()) {{
             teamFull = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 201) {

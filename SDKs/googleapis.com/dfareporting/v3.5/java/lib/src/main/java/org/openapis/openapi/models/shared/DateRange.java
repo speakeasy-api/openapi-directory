@@ -18,6 +18,7 @@ public class DateRange {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("endDate")
     public LocalDate endDate;
+
     public DateRange withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -29,6 +30,7 @@ public class DateRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DateRange withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class DateRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relativeDateRange")
     public DateRangeRelativeDateRangeEnum relativeDateRange;
+
     public DateRange withRelativeDateRange(DateRangeRelativeDateRangeEnum relativeDateRange) {
         this.relativeDateRange = relativeDateRange;
         return this;
@@ -49,9 +52,11 @@ public class DateRange {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("startDate")
     public LocalDate startDate;
+
     public DateRange withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public DateRange(){}
 }

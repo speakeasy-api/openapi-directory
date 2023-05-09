@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListImagePackagesResponse {
@@ -12,6 +13,7 @@ public class ListImagePackagesResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public ListImagePackagesResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class ListImagePackagesResponse {
      */
     
     public Object clientException;
+
     public ListImagePackagesResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class ListImagePackagesResponse {
     
     
     public String contentType;
+
     public ListImagePackagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListImagePackagesResponse {
      */
     
     public Object forbiddenException;
+
     public ListImagePackagesResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class ListImagePackagesResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public ListImagePackagesResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListImagePackagesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListImagePackagesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class ListImagePackagesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListImagePackagesResponse listImagePackagesResponse;
+
     public ListImagePackagesResponse withListImagePackagesResponse(org.openapis.openapi.models.shared.ListImagePackagesResponse listImagePackagesResponse) {
         this.listImagePackagesResponse = listImagePackagesResponse;
         return this;
@@ -79,6 +87,7 @@ public class ListImagePackagesResponse {
      */
     
     public Object serviceException;
+
     public ListImagePackagesResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class ListImagePackagesResponse {
     
     
     public Integer statusCode;
+
     public ListImagePackagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ListImagePackagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListImagePackagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class ListImagePackagesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListImagePackagesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,9 +125,14 @@ public class ListImagePackagesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListImagePackagesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public ListImagePackagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

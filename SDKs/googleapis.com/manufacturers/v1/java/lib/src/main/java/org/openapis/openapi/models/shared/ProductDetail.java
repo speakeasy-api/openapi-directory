@@ -18,6 +18,7 @@ public class ProductDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeName")
     public String attributeName;
+
     public ProductDetail withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -29,6 +30,7 @@ public class ProductDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeValue")
     public String attributeValue;
+
     public ProductDetail withAttributeValue(String attributeValue) {
         this.attributeValue = attributeValue;
         return this;
@@ -40,9 +42,11 @@ public class ProductDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sectionName")
     public String sectionName;
+
     public ProductDetail withSectionName(String sectionName) {
         this.sectionName = sectionName;
         return this;
     }
     
+    public ProductDetail(){}
 }

@@ -18,9 +18,11 @@ public class GetInstanceOnboardingJobStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectInstanceOnboardingJobStatus")
     public InstanceOnboardingJobStatus connectInstanceOnboardingJobStatus;
+
     public GetInstanceOnboardingJobStatusResponse withConnectInstanceOnboardingJobStatus(InstanceOnboardingJobStatus connectInstanceOnboardingJobStatus) {
         this.connectInstanceOnboardingJobStatus = connectInstanceOnboardingJobStatus;
         return this;
     }
     
+    public GetInstanceOnboardingJobStatusResponse(){}
 }

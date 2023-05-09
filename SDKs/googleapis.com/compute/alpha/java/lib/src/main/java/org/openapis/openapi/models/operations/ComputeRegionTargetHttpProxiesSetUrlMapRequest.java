@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeRegionTargetHttpProxiesSetUrlMapRequest {
@@ -12,6 +13,7 @@ public class ComputeRegionTargetHttpProxiesSetUrlMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeRegionTargetHttpProxiesSetUrlMapRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ComputeRegionTargetHttpProxiesSetUrlMapRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UrlMapReference urlMapReference;
+
     public ComputeRegionTargetHttpProxiesSetUrlMapRequest withUrlMapReference(org.openapis.openapi.models.shared.UrlMapReference urlMapReference) {
         this.urlMapReference = urlMapReference;
         return this;
@@ -29,6 +32,7 @@ public class ComputeRegionTargetHttpProxiesSetUrlMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeRegionTargetHttpProxiesSetUrlMapRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ComputeRegionTargetHttpProxiesSetUrlMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeRegionTargetHttpProxiesSetUrlMapRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ComputeRegionTargetHttpProxiesSetUrlMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeRegionTargetHttpProxiesSetUrlMapRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ComputeRegionTargetHttpProxiesSetUrlMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeRegionTargetHttpProxiesSetUrlMapRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ComputeRegionTargetHttpProxiesSetUrlMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeRegionTargetHttpProxiesSetUrlMapRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class ComputeRegionTargetHttpProxiesSetUrlMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeRegionTargetHttpProxiesSetUrlMapRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class ComputeRegionTargetHttpProxiesSetUrlMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeRegionTargetHttpProxiesSetUrlMapRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class ComputeRegionTargetHttpProxiesSetUrlMapRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeRegionTargetHttpProxiesSetUrlMapRequest withProject(String project) {
         this.project = project;
         return this;
@@ -109,6 +120,7 @@ public class ComputeRegionTargetHttpProxiesSetUrlMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeRegionTargetHttpProxiesSetUrlMapRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class ComputeRegionTargetHttpProxiesSetUrlMapRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=region")
     public String region;
+
     public ComputeRegionTargetHttpProxiesSetUrlMapRequest withRegion(String region) {
         this.region = region;
         return this;
@@ -129,6 +142,7 @@ public class ComputeRegionTargetHttpProxiesSetUrlMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeRegionTargetHttpProxiesSetUrlMapRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -139,6 +153,7 @@ public class ComputeRegionTargetHttpProxiesSetUrlMapRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=targetHttpProxy")
     public String targetHttpProxy;
+
     public ComputeRegionTargetHttpProxiesSetUrlMapRequest withTargetHttpProxy(String targetHttpProxy) {
         this.targetHttpProxy = targetHttpProxy;
         return this;
@@ -149,6 +164,7 @@ public class ComputeRegionTargetHttpProxiesSetUrlMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeRegionTargetHttpProxiesSetUrlMapRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -159,6 +175,7 @@ public class ComputeRegionTargetHttpProxiesSetUrlMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeRegionTargetHttpProxiesSetUrlMapRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -169,9 +186,15 @@ public class ComputeRegionTargetHttpProxiesSetUrlMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeRegionTargetHttpProxiesSetUrlMapRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeRegionTargetHttpProxiesSetUrlMapRequest(@JsonProperty("project") String project, @JsonProperty("region") String region, @JsonProperty("targetHttpProxy") String targetHttpProxy) {
+        this.project = project;
+        this.region = region;
+        this.targetHttpProxy = targetHttpProxy;
+  }
 }

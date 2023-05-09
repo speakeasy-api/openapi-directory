@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutAdminMappingsStubMappingIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PutAdminMappingsStubMappingIdRequestBody requestBody;
+
     public PutAdminMappingsStubMappingIdRequest withRequestBody(PutAdminMappingsStubMappingIdRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class PutAdminMappingsStubMappingIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stubMappingId")
     public String stubMappingId;
+
     public PutAdminMappingsStubMappingIdRequest withStubMappingId(String stubMappingId) {
         this.stubMappingId = stubMappingId;
         return this;
     }
     
+    public PutAdminMappingsStubMappingIdRequest(@JsonProperty("stubMappingId") String stubMappingId) {
+        this.stubMappingId = stubMappingId;
+  }
 }

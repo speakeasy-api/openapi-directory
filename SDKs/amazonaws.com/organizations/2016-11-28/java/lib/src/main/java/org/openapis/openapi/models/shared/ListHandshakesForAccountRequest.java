@@ -12,6 +12,7 @@ public class ListHandshakesForAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public HandshakeFilter filter;
+
     public ListHandshakesForAccountRequest withFilter(HandshakeFilter filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class ListHandshakesForAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListHandshakesForAccountRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListHandshakesForAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListHandshakesForAccountRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListHandshakesForAccountRequest(){}
 }

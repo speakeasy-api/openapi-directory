@@ -18,6 +18,7 @@ public class Glossary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public Glossary withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,6 +30,7 @@ public class Glossary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryCount")
     public Integer entryCount;
+
     public Glossary withEntryCount(Integer entryCount) {
         this.entryCount = entryCount;
         return this;
@@ -40,6 +42,7 @@ public class Glossary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputConfig")
     public GlossaryInputConfig inputConfig;
+
     public Glossary withInputConfig(GlossaryInputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -51,6 +54,7 @@ public class Glossary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCodesSet")
     public LanguageCodesSet languageCodesSet;
+
     public Glossary withLanguageCodesSet(LanguageCodesSet languageCodesSet) {
         this.languageCodesSet = languageCodesSet;
         return this;
@@ -62,6 +66,7 @@ public class Glossary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languagePair")
     public LanguageCodePair languagePair;
+
     public Glossary withLanguagePair(LanguageCodePair languagePair) {
         this.languagePair = languagePair;
         return this;
@@ -73,6 +78,7 @@ public class Glossary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Glossary withName(String name) {
         this.name = name;
         return this;
@@ -84,9 +90,11 @@ public class Glossary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submitTime")
     public String submitTime;
+
     public Glossary withSubmitTime(String submitTime) {
         this.submitTime = submitTime;
         return this;
     }
     
+    public Glossary(){}
 }

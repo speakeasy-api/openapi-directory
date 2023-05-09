@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostPortfolioOptimizationMinimumCorrelationRequestBody {
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioOptimizationMinimumCorrelationRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -19,6 +20,7 @@ public class PostPortfolioOptimizationMinimumCorrelationRequestBody {
      */
     @JsonProperty("assetsCorrelationMatrix")
     public Double[][] assetsCorrelationMatrix;
+
     public PostPortfolioOptimizationMinimumCorrelationRequestBody withAssetsCorrelationMatrix(Double[][] assetsCorrelationMatrix) {
         this.assetsCorrelationMatrix = assetsCorrelationMatrix;
         return this;
@@ -29,9 +31,15 @@ public class PostPortfolioOptimizationMinimumCorrelationRequestBody {
      */
     @JsonProperty("assetsVolatilities")
     public Double[] assetsVolatilities;
+
     public PostPortfolioOptimizationMinimumCorrelationRequestBody withAssetsVolatilities(Double[] assetsVolatilities) {
         this.assetsVolatilities = assetsVolatilities;
         return this;
     }
     
+    public PostPortfolioOptimizationMinimumCorrelationRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsCorrelationMatrix") Double[][] assetsCorrelationMatrix, @JsonProperty("assetsVolatilities") Double[] assetsVolatilities) {
+        this.assets = assets;
+        this.assetsCorrelationMatrix = assetsCorrelationMatrix;
+        this.assetsVolatilities = assetsVolatilities;
+  }
 }

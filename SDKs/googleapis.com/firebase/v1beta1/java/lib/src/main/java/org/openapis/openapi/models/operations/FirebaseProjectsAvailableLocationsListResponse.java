@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirebaseProjectsAvailableLocationsListResponse {
     
     public String contentType;
+
     public FirebaseProjectsAvailableLocationsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FirebaseProjectsAvailableLocationsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAvailableLocationsResponse listAvailableLocationsResponse;
+
     public FirebaseProjectsAvailableLocationsListResponse withListAvailableLocationsResponse(org.openapis.openapi.models.shared.ListAvailableLocationsResponse listAvailableLocationsResponse) {
         this.listAvailableLocationsResponse = listAvailableLocationsResponse;
         return this;
@@ -26,6 +29,7 @@ public class FirebaseProjectsAvailableLocationsListResponse {
     
     
     public Integer statusCode;
+
     public FirebaseProjectsAvailableLocationsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirebaseProjectsAvailableLocationsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirebaseProjectsAvailableLocationsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirebaseProjectsAvailableLocationsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

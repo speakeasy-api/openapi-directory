@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteEnvironmentRequest {
@@ -12,9 +13,13 @@ public class DeleteEnvironmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environmentId")
     public String environmentId;
+
     public DeleteEnvironmentRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
     }
     
+    public DeleteEnvironmentRequest(@JsonProperty("environmentId") String environmentId) {
+        this.environmentId = environmentId;
+  }
 }

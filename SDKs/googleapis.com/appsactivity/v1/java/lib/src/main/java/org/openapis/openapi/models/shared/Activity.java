@@ -18,6 +18,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("combinedEvent")
     public Event combinedEvent;
+
     public Activity withCombinedEvent(Event combinedEvent) {
         this.combinedEvent = combinedEvent;
         return this;
@@ -29,9 +30,11 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("singleEvents")
     public Event[] singleEvents;
+
     public Activity withSingleEvents(Event[] singleEvents) {
         this.singleEvents = singleEvents;
         return this;
     }
     
+    public Activity(){}
 }

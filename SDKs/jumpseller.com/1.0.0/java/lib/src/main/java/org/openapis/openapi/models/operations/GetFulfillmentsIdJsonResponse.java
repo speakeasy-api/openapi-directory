@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFulfillmentsIdJsonResponse {
     
     public String contentType;
+
     public GetFulfillmentsIdJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetFulfillmentsIdJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.Fulfillment fulfillment;
+
     public GetFulfillmentsIdJsonResponse withFulfillment(org.openapis.openapi.models.shared.Fulfillment fulfillment) {
         this.fulfillment = fulfillment;
         return this;
@@ -29,6 +32,7 @@ public class GetFulfillmentsIdJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetFulfillmentsIdJsonResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -36,6 +40,7 @@ public class GetFulfillmentsIdJsonResponse {
     
     
     public Integer statusCode;
+
     public GetFulfillmentsIdJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetFulfillmentsIdJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFulfillmentsIdJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetFulfillmentsIdJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

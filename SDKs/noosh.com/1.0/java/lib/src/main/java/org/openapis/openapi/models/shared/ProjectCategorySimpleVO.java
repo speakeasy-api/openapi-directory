@@ -15,6 +15,7 @@ public class ProjectCategorySimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_category_id")
     public Long projectCategoryId;
+
     public ProjectCategorySimpleVO withProjectCategoryId(Long projectCategoryId) {
         this.projectCategoryId = projectCategoryId;
         return this;
@@ -23,9 +24,11 @@ public class ProjectCategorySimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_category_name")
     public String projectCategoryName;
+
     public ProjectCategorySimpleVO withProjectCategoryName(String projectCategoryName) {
         this.projectCategoryName = projectCategoryName;
         return this;
     }
     
+    public ProjectCategorySimpleVO(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AttachSecurityProfileResponse {
@@ -12,6 +13,7 @@ public class AttachSecurityProfileResponse {
      */
     
     public java.util.Map<String, Object> attachSecurityProfileResponse;
+
     public AttachSecurityProfileResponse withAttachSecurityProfileResponse(java.util.Map<String, Object> attachSecurityProfileResponse) {
         this.attachSecurityProfileResponse = attachSecurityProfileResponse;
         return this;
@@ -19,6 +21,7 @@ public class AttachSecurityProfileResponse {
     
     
     public String contentType;
+
     public AttachSecurityProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AttachSecurityProfileResponse {
      */
     
     public Object internalFailureException;
+
     public AttachSecurityProfileResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class AttachSecurityProfileResponse {
      */
     
     public Object invalidRequestException;
+
     public AttachSecurityProfileResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class AttachSecurityProfileResponse {
      */
     
     public Object limitExceededException;
+
     public AttachSecurityProfileResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class AttachSecurityProfileResponse {
     
     
     public Integer statusCode;
+
     public AttachSecurityProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AttachSecurityProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AttachSecurityProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AttachSecurityProfileResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AttachSecurityProfileResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class AttachSecurityProfileResponse {
      */
     
     public Object throttlingException;
+
     public AttachSecurityProfileResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class AttachSecurityProfileResponse {
      */
     
     public Object versionConflictException;
+
     public AttachSecurityProfileResponse withVersionConflictException(Object versionConflictException) {
         this.versionConflictException = versionConflictException;
         return this;
     }
     
+    public AttachSecurityProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

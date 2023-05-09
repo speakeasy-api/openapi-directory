@@ -18,6 +18,7 @@ public class ListCertificateRevocationListsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateRevocationLists")
     public CertificateRevocationList[] certificateRevocationLists;
+
     public ListCertificateRevocationListsResponse withCertificateRevocationLists(CertificateRevocationList[] certificateRevocationLists) {
         this.certificateRevocationLists = certificateRevocationLists;
         return this;
@@ -29,6 +30,7 @@ public class ListCertificateRevocationListsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCertificateRevocationListsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListCertificateRevocationListsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListCertificateRevocationListsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListCertificateRevocationListsResponse(){}
 }

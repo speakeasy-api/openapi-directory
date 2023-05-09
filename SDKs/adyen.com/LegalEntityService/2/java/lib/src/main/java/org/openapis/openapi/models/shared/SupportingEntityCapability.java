@@ -19,6 +19,7 @@ public class SupportingEntityCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed")
     public Boolean allowed;
+
     public SupportingEntityCapability withAllowed(Boolean allowed) {
         this.allowed = allowed;
         return this;
@@ -30,6 +31,7 @@ public class SupportingEntityCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SupportingEntityCapability withId(String id) {
         this.id = id;
         return this;
@@ -41,6 +43,7 @@ public class SupportingEntityCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested")
     public Boolean requested;
+
     public SupportingEntityCapability withRequested(Boolean requested) {
         this.requested = requested;
         return this;
@@ -63,9 +66,11 @@ public class SupportingEntityCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationStatus")
     public String verificationStatus;
+
     public SupportingEntityCapability withVerificationStatus(String verificationStatus) {
         this.verificationStatus = verificationStatus;
         return this;
     }
     
+    public SupportingEntityCapability(){}
 }

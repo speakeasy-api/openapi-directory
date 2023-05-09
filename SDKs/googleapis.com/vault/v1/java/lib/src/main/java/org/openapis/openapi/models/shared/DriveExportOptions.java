@@ -18,9 +18,11 @@ public class DriveExportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeAccessInfo")
     public Boolean includeAccessInfo;
+
     public DriveExportOptions withIncludeAccessInfo(Boolean includeAccessInfo) {
         this.includeAccessInfo = includeAccessInfo;
         return this;
     }
     
+    public DriveExportOptions(){}
 }

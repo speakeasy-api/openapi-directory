@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPodcastRecommendationsResponse {
     
     public String contentType;
+
     public GetPodcastRecommendationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPodcastRecommendationsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPodcastRecommendationsResponse getPodcastRecommendationsResponse;
+
     public GetPodcastRecommendationsResponse withGetPodcastRecommendationsResponse(org.openapis.openapi.models.shared.GetPodcastRecommendationsResponse getPodcastRecommendationsResponse) {
         this.getPodcastRecommendationsResponse = getPodcastRecommendationsResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetPodcastRecommendationsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetPodcastRecommendationsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetPodcastRecommendationsResponse {
     
     
     public Integer statusCode;
+
     public GetPodcastRecommendationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetPodcastRecommendationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPodcastRecommendationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPodcastRecommendationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

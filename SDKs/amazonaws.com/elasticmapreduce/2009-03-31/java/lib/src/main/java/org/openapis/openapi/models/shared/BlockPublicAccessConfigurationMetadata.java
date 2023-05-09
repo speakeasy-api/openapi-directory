@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class BlockPublicAccessConfigurationMetadata {
     @JsonProperty("CreatedByArn")
     public String createdByArn;
+
     public BlockPublicAccessConfigurationMetadata withCreatedByArn(String createdByArn) {
         this.createdByArn = createdByArn;
         return this;
@@ -26,9 +27,14 @@ public class BlockPublicAccessConfigurationMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public BlockPublicAccessConfigurationMetadata withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
     }
     
+    public BlockPublicAccessConfigurationMetadata(@JsonProperty("CreatedByArn") String createdByArn, @JsonProperty("CreationDateTime") OffsetDateTime creationDateTime) {
+        this.createdByArn = createdByArn;
+        this.creationDateTime = creationDateTime;
+  }
 }

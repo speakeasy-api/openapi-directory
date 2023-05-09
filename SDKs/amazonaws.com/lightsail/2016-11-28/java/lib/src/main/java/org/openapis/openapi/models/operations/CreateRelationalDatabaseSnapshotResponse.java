@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRelationalDatabaseSnapshotResponse {
@@ -12,6 +13,7 @@ public class CreateRelationalDatabaseSnapshotResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateRelationalDatabaseSnapshotResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateRelationalDatabaseSnapshotResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public CreateRelationalDatabaseSnapshotResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class CreateRelationalDatabaseSnapshotResponse {
     
     
     public String contentType;
+
     public CreateRelationalDatabaseSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateRelationalDatabaseSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRelationalDatabaseSnapshotResult createRelationalDatabaseSnapshotResult;
+
     public CreateRelationalDatabaseSnapshotResponse withCreateRelationalDatabaseSnapshotResult(org.openapis.openapi.models.shared.CreateRelationalDatabaseSnapshotResult createRelationalDatabaseSnapshotResult) {
         this.createRelationalDatabaseSnapshotResult = createRelationalDatabaseSnapshotResult;
         return this;
@@ -49,6 +54,7 @@ public class CreateRelationalDatabaseSnapshotResponse {
      */
     
     public Object invalidInputException;
+
     public CreateRelationalDatabaseSnapshotResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class CreateRelationalDatabaseSnapshotResponse {
      */
     
     public Object notFoundException;
+
     public CreateRelationalDatabaseSnapshotResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateRelationalDatabaseSnapshotResponse {
      */
     
     public Object operationFailureException;
+
     public CreateRelationalDatabaseSnapshotResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class CreateRelationalDatabaseSnapshotResponse {
      */
     
     public Object serviceException;
+
     public CreateRelationalDatabaseSnapshotResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class CreateRelationalDatabaseSnapshotResponse {
     
     
     public Integer statusCode;
+
     public CreateRelationalDatabaseSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateRelationalDatabaseSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRelationalDatabaseSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CreateRelationalDatabaseSnapshotResponse {
      */
     
     public Object unauthenticatedException;
+
     public CreateRelationalDatabaseSnapshotResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public CreateRelationalDatabaseSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

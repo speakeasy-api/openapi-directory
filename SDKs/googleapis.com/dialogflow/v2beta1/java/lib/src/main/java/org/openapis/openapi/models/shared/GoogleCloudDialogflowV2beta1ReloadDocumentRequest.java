@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1ReloadDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsSource")
     public GoogleCloudDialogflowV2beta1GcsSource gcsSource;
+
     public GoogleCloudDialogflowV2beta1ReloadDocumentRequest withGcsSource(GoogleCloudDialogflowV2beta1GcsSource gcsSource) {
         this.gcsSource = gcsSource;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1ReloadDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importGcsCustomMetadata")
     public Boolean importGcsCustomMetadata;
+
     public GoogleCloudDialogflowV2beta1ReloadDocumentRequest withImportGcsCustomMetadata(Boolean importGcsCustomMetadata) {
         this.importGcsCustomMetadata = importGcsCustomMetadata;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1ReloadDocumentRequest(){}
 }

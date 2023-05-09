@@ -36,4 +36,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/LegalAgreement.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorLimit.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorField.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java
+docs/sdk/README.md
+docs/v1/README.md
 USAGE.md

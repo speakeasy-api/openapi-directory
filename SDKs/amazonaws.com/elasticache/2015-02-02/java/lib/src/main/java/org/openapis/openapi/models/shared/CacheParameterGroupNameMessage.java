@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CacheParameterGroupNameMessage {
     
     public String cacheParameterGroupName;
+
     public CacheParameterGroupNameMessage withCacheParameterGroupName(String cacheParameterGroupName) {
         this.cacheParameterGroupName = cacheParameterGroupName;
         return this;
     }
     
+    public CacheParameterGroupNameMessage(){}
 }

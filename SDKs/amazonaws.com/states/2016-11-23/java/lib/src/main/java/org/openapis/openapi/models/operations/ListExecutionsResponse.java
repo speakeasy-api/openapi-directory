@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListExecutionsResponse {
     
     public String contentType;
+
     public ListExecutionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListExecutionsResponse {
      */
     
     public Object invalidArn;
+
     public ListExecutionsResponse withInvalidArn(Object invalidArn) {
         this.invalidArn = invalidArn;
         return this;
@@ -29,6 +32,7 @@ public class ListExecutionsResponse {
      */
     
     public Object invalidToken;
+
     public ListExecutionsResponse withInvalidToken(Object invalidToken) {
         this.invalidToken = invalidToken;
         return this;
@@ -39,6 +43,7 @@ public class ListExecutionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListExecutionsOutput listExecutionsOutput;
+
     public ListExecutionsResponse withListExecutionsOutput(org.openapis.openapi.models.shared.ListExecutionsOutput listExecutionsOutput) {
         this.listExecutionsOutput = listExecutionsOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListExecutionsResponse {
      */
     
     public Object resourceNotFound;
+
     public ListExecutionsResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -56,6 +62,7 @@ public class ListExecutionsResponse {
     
     
     public Integer statusCode;
+
     public ListExecutionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListExecutionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListExecutionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListExecutionsResponse {
      */
     
     public Object stateMachineDoesNotExist;
+
     public ListExecutionsResponse withStateMachineDoesNotExist(Object stateMachineDoesNotExist) {
         this.stateMachineDoesNotExist = stateMachineDoesNotExist;
         return this;
@@ -83,6 +92,7 @@ public class ListExecutionsResponse {
      */
     
     public Object stateMachineTypeNotSupported;
+
     public ListExecutionsResponse withStateMachineTypeNotSupported(Object stateMachineTypeNotSupported) {
         this.stateMachineTypeNotSupported = stateMachineTypeNotSupported;
         return this;
@@ -93,9 +103,14 @@ public class ListExecutionsResponse {
      */
     
     public Object validationException;
+
     public ListExecutionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListExecutionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class OneDriveUsers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OneDriveUserList")
     public String[] oneDriveUserList;
+
     public OneDriveUsers withOneDriveUserList(String[] oneDriveUserList) {
         this.oneDriveUserList = oneDriveUserList;
         return this;
@@ -23,9 +24,11 @@ public class OneDriveUsers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OneDriveUserS3Path")
     public S3Path oneDriveUserS3Path;
+
     public OneDriveUsers withOneDriveUserS3Path(S3Path oneDriveUserS3Path) {
         this.oneDriveUserS3Path = oneDriveUserS3Path;
         return this;
     }
     
+    public OneDriveUsers(){}
 }

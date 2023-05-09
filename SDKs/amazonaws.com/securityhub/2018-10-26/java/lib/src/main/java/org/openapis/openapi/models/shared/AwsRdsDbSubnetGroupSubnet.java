@@ -15,6 +15,7 @@ public class AwsRdsDbSubnetGroupSubnet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetAvailabilityZone")
     public AwsRdsDbSubnetGroupSubnetAvailabilityZone subnetAvailabilityZone;
+
     public AwsRdsDbSubnetGroupSubnet withSubnetAvailabilityZone(AwsRdsDbSubnetGroupSubnetAvailabilityZone subnetAvailabilityZone) {
         this.subnetAvailabilityZone = subnetAvailabilityZone;
         return this;
@@ -23,6 +24,7 @@ public class AwsRdsDbSubnetGroupSubnet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIdentifier")
     public String subnetIdentifier;
+
     public AwsRdsDbSubnetGroupSubnet withSubnetIdentifier(String subnetIdentifier) {
         this.subnetIdentifier = subnetIdentifier;
         return this;
@@ -31,9 +33,11 @@ public class AwsRdsDbSubnetGroupSubnet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetStatus")
     public String subnetStatus;
+
     public AwsRdsDbSubnetGroupSubnet withSubnetStatus(String subnetStatus) {
         this.subnetStatus = subnetStatus;
         return this;
     }
     
+    public AwsRdsDbSubnetGroupSubnet(){}
 }

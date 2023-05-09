@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV1BankAccountsIdResponse {
@@ -12,6 +13,7 @@ public class GetV1BankAccountsIdResponse {
      */
     
     public org.openapis.openapi.models.shared.BankAccountDto bankAccountDto;
+
     public GetV1BankAccountsIdResponse withBankAccountDto(org.openapis.openapi.models.shared.BankAccountDto bankAccountDto) {
         this.bankAccountDto = bankAccountDto;
         return this;
@@ -19,6 +21,7 @@ public class GetV1BankAccountsIdResponse {
     
     
     public String contentType;
+
     public GetV1BankAccountsIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetV1BankAccountsIdResponse {
     
     
     public Integer statusCode;
+
     public GetV1BankAccountsIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetV1BankAccountsIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV1BankAccountsIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetV1BankAccountsIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

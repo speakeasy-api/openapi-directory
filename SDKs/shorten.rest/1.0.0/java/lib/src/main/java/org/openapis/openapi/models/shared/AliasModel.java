@@ -15,6 +15,7 @@ public class AliasModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdAt")
     public Long createdAt;
+
     public AliasModel withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -23,6 +24,7 @@ public class AliasModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinations")
     public DestinationModel[] destinations;
+
     public AliasModel withDestinations(DestinationModel[] destinations) {
         this.destinations = destinations;
         return this;
@@ -31,6 +33,7 @@ public class AliasModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public AliasModel withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -39,6 +42,7 @@ public class AliasModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metatags")
     public MetaTagModel[] metatags;
+
     public AliasModel withMetatags(MetaTagModel[] metatags) {
         this.metatags = metatags;
         return this;
@@ -46,6 +50,7 @@ public class AliasModel {
     
     @JsonProperty("name")
     public String name;
+
     public AliasModel withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +59,7 @@ public class AliasModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippets")
     public SnippetModel[] snippets;
+
     public AliasModel withSnippets(SnippetModel[] snippets) {
         this.snippets = snippets;
         return this;
@@ -62,9 +68,13 @@ public class AliasModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedAt")
     public Long updatedAt;
+
     public AliasModel withUpdatedAt(Long updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public AliasModel(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

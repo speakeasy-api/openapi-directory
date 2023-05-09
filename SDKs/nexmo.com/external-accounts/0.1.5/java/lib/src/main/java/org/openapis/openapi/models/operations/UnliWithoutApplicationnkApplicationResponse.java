@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UnliWithoutApplicationnkApplicationResponse {
@@ -12,6 +13,7 @@ public class UnliWithoutApplicationnkApplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndOneResponse fourHundredAndOneResponse;
+
     public UnliWithoutApplicationnkApplicationResponse withFourHundredAndOneResponse(org.openapis.openapi.models.shared.FourHundredAndOneResponse fourHundredAndOneResponse) {
         this.fourHundredAndOneResponse = fourHundredAndOneResponse;
         return this;
@@ -19,6 +21,7 @@ public class UnliWithoutApplicationnkApplicationResponse {
     
     
     public String contentType;
+
     public UnliWithoutApplicationnkApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class UnliWithoutApplicationnkApplicationResponse {
     
     
     public Integer statusCode;
+
     public UnliWithoutApplicationnkApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UnliWithoutApplicationnkApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UnliWithoutApplicationnkApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UnliWithoutApplicationnkApplicationResponse {
      */
     
     public UnliWithoutApplicationnkApplication403ApplicationJSON unliWithoutApplicationnkApplication403ApplicationJSONObject;
+
     public UnliWithoutApplicationnkApplicationResponse withUnliWithoutApplicationnkApplication403ApplicationJSONObject(UnliWithoutApplicationnkApplication403ApplicationJSON unliWithoutApplicationnkApplication403ApplicationJSONObject) {
         this.unliWithoutApplicationnkApplication403ApplicationJSONObject = unliWithoutApplicationnkApplication403ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class UnliWithoutApplicationnkApplicationResponse {
      */
     
     public UnliWithoutApplicationnkApplication409ApplicationJSON unliWithoutApplicationnkApplication409ApplicationJSONObject;
+
     public UnliWithoutApplicationnkApplicationResponse withUnliWithoutApplicationnkApplication409ApplicationJSONObject(UnliWithoutApplicationnkApplication409ApplicationJSON unliWithoutApplicationnkApplication409ApplicationJSONObject) {
         this.unliWithoutApplicationnkApplication409ApplicationJSONObject = unliWithoutApplicationnkApplication409ApplicationJSONObject;
         return this;
     }
     
+    public UnliWithoutApplicationnkApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

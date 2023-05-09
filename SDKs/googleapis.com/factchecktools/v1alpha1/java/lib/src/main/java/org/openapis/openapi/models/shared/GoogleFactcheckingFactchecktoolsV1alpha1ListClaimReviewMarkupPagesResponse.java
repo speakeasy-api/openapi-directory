@@ -18,6 +18,7 @@ public class GoogleFactcheckingFactchecktoolsV1alpha1ListClaimReviewMarkupPagesR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("claimReviewMarkupPages")
     public GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage[] claimReviewMarkupPages;
+
     public GoogleFactcheckingFactchecktoolsV1alpha1ListClaimReviewMarkupPagesResponse withClaimReviewMarkupPages(GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage[] claimReviewMarkupPages) {
         this.claimReviewMarkupPages = claimReviewMarkupPages;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFactcheckingFactchecktoolsV1alpha1ListClaimReviewMarkupPagesR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleFactcheckingFactchecktoolsV1alpha1ListClaimReviewMarkupPagesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleFactcheckingFactchecktoolsV1alpha1ListClaimReviewMarkupPagesResponse(){}
 }

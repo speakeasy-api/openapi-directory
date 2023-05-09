@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteRetentionConfigurationRequest {
     @JsonProperty("RetentionConfigurationName")
     public String retentionConfigurationName;
+
     public DeleteRetentionConfigurationRequest withRetentionConfigurationName(String retentionConfigurationName) {
         this.retentionConfigurationName = retentionConfigurationName;
         return this;
     }
     
+    public DeleteRetentionConfigurationRequest(@JsonProperty("RetentionConfigurationName") String retentionConfigurationName) {
+        this.retentionConfigurationName = retentionConfigurationName;
+  }
 }

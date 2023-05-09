@@ -15,6 +15,7 @@ public class UpdateAppResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appSummary")
     public AppSummary appSummary;
+
     public UpdateAppResponse withAppSummary(AppSummary appSummary) {
         this.appSummary = appSummary;
         return this;
@@ -23,6 +24,7 @@ public class UpdateAppResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverGroups")
     public ServerGroup[] serverGroups;
+
     public UpdateAppResponse withServerGroups(ServerGroup[] serverGroups) {
         this.serverGroups = serverGroups;
         return this;
@@ -31,9 +33,11 @@ public class UpdateAppResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public UpdateAppResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public UpdateAppResponse(){}
 }

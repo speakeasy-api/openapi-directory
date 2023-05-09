@@ -18,6 +18,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public ServiceConfig config;
+
     public Service withConfig(ServiceConfig config) {
         this.config = config;
         return this;
@@ -29,6 +30,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Service withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public Service withParent(String parent) {
         this.parent = parent;
         return this;
@@ -51,9 +54,11 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ServiceStateEnum state;
+
     public Service withState(ServiceStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public Service(){}
 }

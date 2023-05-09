@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Point {
     @JsonProperty("coordinates")
     public Float[] coordinates;
+
     public Point withCoordinates(Float[] coordinates) {
         this.coordinates = coordinates;
         return this;
@@ -16,9 +17,14 @@ public class Point {
     
     @JsonProperty("type")
     public String type;
+
     public Point withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Point(@JsonProperty("coordinates") Float[] coordinates, @JsonProperty("type") String type) {
+        this.coordinates = coordinates;
+        this.type = type;
+  }
 }

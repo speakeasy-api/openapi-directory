@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetNetworkResourceResponse {
     @JsonProperty("networkResource")
     public NetworkResource networkResource;
+
     public GetNetworkResourceResponse withNetworkResource(NetworkResource networkResource) {
         this.networkResource = networkResource;
         return this;
@@ -22,9 +23,13 @@ public class GetNetworkResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetNetworkResourceResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetNetworkResourceResponse(@JsonProperty("networkResource") NetworkResource networkResource) {
+        this.networkResource = networkResource;
+  }
 }

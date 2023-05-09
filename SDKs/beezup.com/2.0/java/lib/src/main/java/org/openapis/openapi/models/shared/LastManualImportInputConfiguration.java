@@ -15,9 +15,13 @@ public class LastManualImportInputConfiguration {
      */
     @JsonProperty("input")
     public InputConfiguration input;
+
     public LastManualImportInputConfiguration withInput(InputConfiguration input) {
         this.input = input;
         return this;
     }
     
+    public LastManualImportInputConfiguration(@JsonProperty("input") InputConfiguration input) {
+        this.input = input;
+  }
 }

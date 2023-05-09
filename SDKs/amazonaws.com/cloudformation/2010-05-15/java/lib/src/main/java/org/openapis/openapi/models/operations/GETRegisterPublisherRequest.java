@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRegisterPublisherRequest {
@@ -12,6 +13,7 @@ public class GETRegisterPublisherRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AcceptTermsAndConditions")
     public Boolean acceptTermsAndConditions;
+
     public GETRegisterPublisherRequest withAcceptTermsAndConditions(Boolean acceptTermsAndConditions) {
         this.acceptTermsAndConditions = acceptTermsAndConditions;
         return this;
@@ -19,6 +21,7 @@ public class GETRegisterPublisherRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRegisterPublisherActionEnum action;
+
     public GETRegisterPublisherRequest withAction(GETRegisterPublisherActionEnum action) {
         this.action = action;
         return this;
@@ -29,6 +32,7 @@ public class GETRegisterPublisherRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConnectionArn")
     public String connectionArn;
+
     public GETRegisterPublisherRequest withConnectionArn(String connectionArn) {
         this.connectionArn = connectionArn;
         return this;
@@ -36,6 +40,7 @@ public class GETRegisterPublisherRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRegisterPublisherVersionEnum version;
+
     public GETRegisterPublisherRequest withVersion(GETRegisterPublisherVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETRegisterPublisherRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRegisterPublisherRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETRegisterPublisherRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRegisterPublisherRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETRegisterPublisherRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRegisterPublisherRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETRegisterPublisherRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRegisterPublisherRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETRegisterPublisherRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRegisterPublisherRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETRegisterPublisherRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRegisterPublisherRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,14 @@ public class GETRegisterPublisherRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRegisterPublisherRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRegisterPublisherRequest(@JsonProperty("Action") GETRegisterPublisherActionEnum action, @JsonProperty("Version") GETRegisterPublisherVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

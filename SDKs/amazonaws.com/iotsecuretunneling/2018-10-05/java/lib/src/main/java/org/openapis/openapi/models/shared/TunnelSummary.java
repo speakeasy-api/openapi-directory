@@ -22,6 +22,7 @@ public class TunnelSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public TunnelSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class TunnelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TunnelSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class TunnelSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public TunnelSummary withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -48,6 +51,7 @@ public class TunnelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TunnelStatusEnum status;
+
     public TunnelSummary withStatus(TunnelStatusEnum status) {
         this.status = status;
         return this;
@@ -56,6 +60,7 @@ public class TunnelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tunnelArn")
     public String tunnelArn;
+
     public TunnelSummary withTunnelArn(String tunnelArn) {
         this.tunnelArn = tunnelArn;
         return this;
@@ -64,9 +69,11 @@ public class TunnelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tunnelId")
     public String tunnelId;
+
     public TunnelSummary withTunnelId(String tunnelId) {
         this.tunnelId = tunnelId;
         return this;
     }
     
+    public TunnelSummary(){}
 }

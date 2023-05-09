@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV1VerificationSendRequest {
@@ -12,6 +13,7 @@ public class PostV1VerificationSendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country_code")
     public String countryCode;
+
     public PostV1VerificationSendRequest withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -22,6 +24,7 @@ public class PostV1VerificationSendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public PostV1VerificationSendFormatEnum format;
+
     public PostV1VerificationSendRequest withFormat(PostV1VerificationSendFormatEnum format) {
         this.format = format;
         return this;
@@ -32,6 +35,7 @@ public class PostV1VerificationSendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public PostV1VerificationSendRequest withKey(String key) {
         this.key = key;
         return this;
@@ -42,6 +46,7 @@ public class PostV1VerificationSendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mesg")
     public String mesg;
+
     public PostV1VerificationSendRequest withMesg(String mesg) {
         this.mesg = mesg;
         return this;
@@ -52,9 +57,14 @@ public class PostV1VerificationSendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tel")
     public String tel;
+
     public PostV1VerificationSendRequest withTel(String tel) {
         this.tel = tel;
         return this;
     }
     
+    public PostV1VerificationSendRequest(@JsonProperty("key") String key, @JsonProperty("tel") String tel) {
+        this.key = key;
+        this.tel = tel;
+  }
 }

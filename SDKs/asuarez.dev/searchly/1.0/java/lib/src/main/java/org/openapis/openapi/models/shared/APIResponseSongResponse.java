@@ -18,9 +18,11 @@ public class APIResponseSongResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public APIResponseSongResponseResults[] results;
+
     public APIResponseSongResponse withResults(APIResponseSongResponseResults[] results) {
         this.results = results;
         return this;
     }
     
+    public APIResponseSongResponse(){}
 }

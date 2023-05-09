@@ -15,6 +15,7 @@ public class OrderChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clk")
     public String clk;
+
     public OrderChangeMessage withClk(String clk) {
         this.clk = clk;
         return this;
@@ -26,6 +27,7 @@ public class OrderChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflateMs")
     public Long conflateMs;
+
     public OrderChangeMessage withConflateMs(Long conflateMs) {
         this.conflateMs = conflateMs;
         return this;
@@ -37,6 +39,7 @@ public class OrderChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ct")
     public OrderChangeMessageCtEnum ct;
+
     public OrderChangeMessage withCt(OrderChangeMessageCtEnum ct) {
         this.ct = ct;
         return this;
@@ -48,6 +51,7 @@ public class OrderChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heartbeatMs")
     public Long heartbeatMs;
+
     public OrderChangeMessage withHeartbeatMs(Long heartbeatMs) {
         this.heartbeatMs = heartbeatMs;
         return this;
@@ -59,6 +63,7 @@ public class OrderChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public OrderChangeMessage withId(Integer id) {
         this.id = id;
         return this;
@@ -70,6 +75,7 @@ public class OrderChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialClk")
     public String initialClk;
+
     public OrderChangeMessage withInitialClk(String initialClk) {
         this.initialClk = initialClk;
         return this;
@@ -81,6 +87,7 @@ public class OrderChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oc")
     public OrderMarketChange[] oc;
+
     public OrderChangeMessage withOc(OrderMarketChange[] oc) {
         this.oc = oc;
         return this;
@@ -92,6 +99,7 @@ public class OrderChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("op")
     public String op;
+
     public OrderChangeMessage withOp(String op) {
         this.op = op;
         return this;
@@ -103,6 +111,7 @@ public class OrderChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pt")
     public Long pt;
+
     public OrderChangeMessage withPt(Long pt) {
         this.pt = pt;
         return this;
@@ -114,6 +123,7 @@ public class OrderChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentType")
     public OrderChangeMessageSegmentTypeEnum segmentType;
+
     public OrderChangeMessage withSegmentType(OrderChangeMessageSegmentTypeEnum segmentType) {
         this.segmentType = segmentType;
         return this;
@@ -125,9 +135,11 @@ public class OrderChangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Integer status;
+
     public OrderChangeMessage withStatus(Integer status) {
         this.status = status;
         return this;
     }
     
+    public OrderChangeMessage(){}
 }

@@ -18,6 +18,7 @@ public class PremiumTierEgressWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationContinent")
     public PremiumTierEgressWorkloadDestinationContinentEnum destinationContinent;
+
     public PremiumTierEgressWorkload withDestinationContinent(PremiumTierEgressWorkloadDestinationContinentEnum destinationContinent) {
         this.destinationContinent = destinationContinent;
         return this;
@@ -29,6 +30,7 @@ public class PremiumTierEgressWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("egressRate")
     public Usage egressRate;
+
     public PremiumTierEgressWorkload withEgressRate(Usage egressRate) {
         this.egressRate = egressRate;
         return this;
@@ -40,9 +42,11 @@ public class PremiumTierEgressWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceRegion")
     public String sourceRegion;
+
     public PremiumTierEgressWorkload withSourceRegion(String sourceRegion) {
         this.sourceRegion = sourceRegion;
         return this;
     }
     
+    public PremiumTierEgressWorkload(){}
 }

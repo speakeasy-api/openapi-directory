@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrganizationUpdateAvatarRequestBodyAvatar {
     @SpeakeasyMetadata("multipartForm:name=avatar")
     public String avatar;
+
     public OrganizationUpdateAvatarRequestBodyAvatar withAvatar(String avatar) {
         this.avatar = avatar;
         return this;
@@ -16,9 +18,14 @@ public class OrganizationUpdateAvatarRequestBodyAvatar {
     
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public OrganizationUpdateAvatarRequestBodyAvatar withContent(byte[] content) {
         this.content = content;
         return this;
     }
     
+    public OrganizationUpdateAvatarRequestBodyAvatar(@JsonProperty("avatar") String avatar, @JsonProperty("content") byte[] content) {
+        this.avatar = avatar;
+        this.content = content;
+  }
 }

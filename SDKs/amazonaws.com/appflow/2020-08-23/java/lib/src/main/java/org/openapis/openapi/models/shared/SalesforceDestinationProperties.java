@@ -15,6 +15,7 @@ public class SalesforceDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataTransferApi")
     public SalesforceDataTransferApiEnum dataTransferApi;
+
     public SalesforceDestinationProperties withDataTransferApi(SalesforceDataTransferApiEnum dataTransferApi) {
         this.dataTransferApi = dataTransferApi;
         return this;
@@ -23,6 +24,7 @@ public class SalesforceDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorHandlingConfig")
     public ErrorHandlingConfig errorHandlingConfig;
+
     public SalesforceDestinationProperties withErrorHandlingConfig(ErrorHandlingConfig errorHandlingConfig) {
         this.errorHandlingConfig = errorHandlingConfig;
         return this;
@@ -31,6 +33,7 @@ public class SalesforceDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idFieldNames")
     public String[] idFieldNames;
+
     public SalesforceDestinationProperties withIdFieldNames(String[] idFieldNames) {
         this.idFieldNames = idFieldNames;
         return this;
@@ -38,6 +41,7 @@ public class SalesforceDestinationProperties {
     
     @JsonProperty("object")
     public String object;
+
     public SalesforceDestinationProperties withObject(String object) {
         this.object = object;
         return this;
@@ -46,9 +50,13 @@ public class SalesforceDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeOperationType")
     public WriteOperationTypeEnum writeOperationType;
+
     public SalesforceDestinationProperties withWriteOperationType(WriteOperationTypeEnum writeOperationType) {
         this.writeOperationType = writeOperationType;
         return this;
     }
     
+    public SalesforceDestinationProperties(@JsonProperty("object") String object) {
+        this.object = object;
+  }
 }

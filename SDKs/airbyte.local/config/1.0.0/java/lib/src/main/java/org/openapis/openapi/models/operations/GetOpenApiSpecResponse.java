@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOpenApiSpecResponse {
     
     public String contentType;
+
     public GetOpenApiSpecResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetOpenApiSpecResponse {
     
     
     public Integer statusCode;
+
     public GetOpenApiSpecResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetOpenApiSpecResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOpenApiSpecResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -32,10 +36,15 @@ public class GetOpenApiSpecResponse {
      * Returns the openapi specification file
      */
     
-    public String getOpenApiSpec200TextPlainBinaryString;
-    public GetOpenApiSpecResponse withGetOpenApiSpec200TextPlainBinaryString(String getOpenApiSpec200TextPlainBinaryString) {
+    public byte[] getOpenApiSpec200TextPlainBinaryString;
+
+    public GetOpenApiSpecResponse withGetOpenApiSpec200TextPlainBinaryString(byte[] getOpenApiSpec200TextPlainBinaryString) {
         this.getOpenApiSpec200TextPlainBinaryString = getOpenApiSpec200TextPlainBinaryString;
         return this;
     }
     
+    public GetOpenApiSpecResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

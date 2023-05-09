@@ -15,9 +15,11 @@ public class DeleteEvaluationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationId")
     public String evaluationId;
+
     public DeleteEvaluationOutput withEvaluationId(String evaluationId) {
         this.evaluationId = evaluationId;
         return this;
     }
     
+    public DeleteEvaluationOutput(){}
 }

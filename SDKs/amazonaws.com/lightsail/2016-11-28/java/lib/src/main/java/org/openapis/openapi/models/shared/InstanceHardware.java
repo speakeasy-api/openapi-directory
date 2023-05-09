@@ -15,6 +15,7 @@ public class InstanceHardware {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuCount")
     public Long cpuCount;
+
     public InstanceHardware withCpuCount(Long cpuCount) {
         this.cpuCount = cpuCount;
         return this;
@@ -23,6 +24,7 @@ public class InstanceHardware {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disks")
     public Disk[] disks;
+
     public InstanceHardware withDisks(Disk[] disks) {
         this.disks = disks;
         return this;
@@ -31,9 +33,11 @@ public class InstanceHardware {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ramSizeInGb")
     public Float ramSizeInGb;
+
     public InstanceHardware withRamSizeInGb(Float ramSizeInGb) {
         this.ramSizeInGb = ramSizeInGb;
         return this;
     }
     
+    public InstanceHardware(){}
 }

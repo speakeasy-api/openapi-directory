@@ -15,6 +15,7 @@ public class UpdateStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateStreamRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class UpdateStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public org.openapis.openapi.models.shared.StreamFile[] files;
+
     public UpdateStreamRequestBody withFiles(org.openapis.openapi.models.shared.StreamFile[] files) {
         this.files = files;
         return this;
@@ -37,9 +39,11 @@ public class UpdateStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public UpdateStreamRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public UpdateStreamRequestBody(){}
 }

@@ -50,7 +50,7 @@ public class SpecTemplate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSpecTemplateResponse res = new org.openapis.openapi.models.operations.GetSpecTemplateResponse() {{
+        org.openapis.openapi.models.operations.GetSpecTemplateResponse res = new org.openapis.openapi.models.operations.GetSpecTemplateResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -68,8 +68,6 @@ public class SpecTemplate {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -169,7 +167,7 @@ public class SpecTemplate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSpecTemplateListResponse res = new org.openapis.openapi.models.operations.GetSpecTemplateListResponse() {{
+        org.openapis.openapi.models.operations.GetSpecTemplateListResponse res = new org.openapis.openapi.models.operations.GetSpecTemplateListResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -187,8 +185,6 @@ public class SpecTemplate {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

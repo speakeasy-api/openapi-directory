@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEntitiesDetectionV2JobsResponse {
     
     public String contentType;
+
     public ListEntitiesDetectionV2JobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListEntitiesDetectionV2JobsResponse {
      */
     
     public Object internalServerException;
+
     public ListEntitiesDetectionV2JobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListEntitiesDetectionV2JobsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListEntitiesDetectionV2JobsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListEntitiesDetectionV2JobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEntitiesDetectionV2JobsResponse listEntitiesDetectionV2JobsResponse;
+
     public ListEntitiesDetectionV2JobsResponse withListEntitiesDetectionV2JobsResponse(org.openapis.openapi.models.shared.ListEntitiesDetectionV2JobsResponse listEntitiesDetectionV2JobsResponse) {
         this.listEntitiesDetectionV2JobsResponse = listEntitiesDetectionV2JobsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListEntitiesDetectionV2JobsResponse {
     
     
     public Integer statusCode;
+
     public ListEntitiesDetectionV2JobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListEntitiesDetectionV2JobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEntitiesDetectionV2JobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListEntitiesDetectionV2JobsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListEntitiesDetectionV2JobsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,9 +81,14 @@ public class ListEntitiesDetectionV2JobsResponse {
      */
     
     public Object validationException;
+
     public ListEntitiesDetectionV2JobsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListEntitiesDetectionV2JobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -22,6 +22,7 @@ public class QueryFilters {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAfter")
     public OffsetDateTime createdAfter;
+
     public QueryFilters withCreatedAfter(OffsetDateTime createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -32,6 +33,7 @@ public class QueryFilters {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedBefore")
     public OffsetDateTime createdBefore;
+
     public QueryFilters withCreatedBefore(OffsetDateTime createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -40,6 +42,7 @@ public class QueryFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineageTypes")
     public LineageTypeEnum[] lineageTypes;
+
     public QueryFilters withLineageTypes(LineageTypeEnum[] lineageTypes) {
         this.lineageTypes = lineageTypes;
         return this;
@@ -50,6 +53,7 @@ public class QueryFilters {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ModifiedAfter")
     public OffsetDateTime modifiedAfter;
+
     public QueryFilters withModifiedAfter(OffsetDateTime modifiedAfter) {
         this.modifiedAfter = modifiedAfter;
         return this;
@@ -60,6 +64,7 @@ public class QueryFilters {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ModifiedBefore")
     public OffsetDateTime modifiedBefore;
+
     public QueryFilters withModifiedBefore(OffsetDateTime modifiedBefore) {
         this.modifiedBefore = modifiedBefore;
         return this;
@@ -68,6 +73,7 @@ public class QueryFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public java.util.Map<String, String> properties;
+
     public QueryFilters withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -76,9 +82,11 @@ public class QueryFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Types")
     public String[] types;
+
     public QueryFilters withTypes(String[] types) {
         this.types = types;
         return this;
     }
     
+    public QueryFilters(){}
 }

@@ -12,6 +12,7 @@ public class ActivityLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public Href comments;
+
     public ActivityLinks withComments(Href comments) {
         this.comments = comments;
         return this;
@@ -20,6 +21,7 @@ public class ActivityLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public Href project;
+
     public ActivityLinks withProject(Href project) {
         this.project = project;
         return this;
@@ -28,9 +30,11 @@ public class ActivityLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public Href self;
+
     public ActivityLinks withSelf(Href self) {
         this.self = self;
         return this;
     }
     
+    public ActivityLinks(){}
 }

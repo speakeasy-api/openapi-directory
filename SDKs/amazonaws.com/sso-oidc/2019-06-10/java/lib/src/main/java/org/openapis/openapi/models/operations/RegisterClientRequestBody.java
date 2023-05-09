@@ -14,6 +14,7 @@ public class RegisterClientRequestBody {
      */
     @JsonProperty("clientName")
     public String clientName;
+
     public RegisterClientRequestBody withClientName(String clientName) {
         this.clientName = clientName;
         return this;
@@ -24,6 +25,7 @@ public class RegisterClientRequestBody {
      */
     @JsonProperty("clientType")
     public String clientType;
+
     public RegisterClientRequestBody withClientType(String clientType) {
         this.clientType = clientType;
         return this;
@@ -35,9 +37,14 @@ public class RegisterClientRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scopes")
     public String[] scopes;
+
     public RegisterClientRequestBody withScopes(String[] scopes) {
         this.scopes = scopes;
         return this;
     }
     
+    public RegisterClientRequestBody(@JsonProperty("clientName") String clientName, @JsonProperty("clientType") String clientType) {
+        this.clientName = clientName;
+        this.clientType = clientType;
+  }
 }

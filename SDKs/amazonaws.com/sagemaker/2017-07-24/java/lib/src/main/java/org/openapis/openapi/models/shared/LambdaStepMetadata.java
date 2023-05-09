@@ -15,6 +15,7 @@ public class LambdaStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public LambdaStepMetadata withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,9 +24,11 @@ public class LambdaStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputParameters")
     public OutputParameter[] outputParameters;
+
     public LambdaStepMetadata withOutputParameters(OutputParameter[] outputParameters) {
         this.outputParameters = outputParameters;
         return this;
     }
     
+    public LambdaStepMetadata(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDistributionsResponse {
@@ -12,6 +13,7 @@ public class GetDistributionsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetDistributionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetDistributionsResponse {
     
     
     public String contentType;
+
     public GetDistributionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDistributionsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDistributionsResult getDistributionsResult;
+
     public GetDistributionsResponse withGetDistributionsResult(org.openapis.openapi.models.shared.GetDistributionsResult getDistributionsResult) {
         this.getDistributionsResult = getDistributionsResult;
         return this;
@@ -39,6 +43,7 @@ public class GetDistributionsResponse {
      */
     
     public Object invalidInputException;
+
     public GetDistributionsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class GetDistributionsResponse {
      */
     
     public Object notFoundException;
+
     public GetDistributionsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetDistributionsResponse {
      */
     
     public Object operationFailureException;
+
     public GetDistributionsResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -69,6 +76,7 @@ public class GetDistributionsResponse {
      */
     
     public Object serviceException;
+
     public GetDistributionsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class GetDistributionsResponse {
     
     
     public Integer statusCode;
+
     public GetDistributionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetDistributionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDistributionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class GetDistributionsResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetDistributionsResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetDistributionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

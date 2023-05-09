@@ -15,6 +15,7 @@ public class RuntimeVersionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public RuntimeVersionError error;
+
     public RuntimeVersionConfig withError(RuntimeVersionError error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class RuntimeVersionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuntimeVersionArn")
     public String runtimeVersionArn;
+
     public RuntimeVersionConfig withRuntimeVersionArn(String runtimeVersionArn) {
         this.runtimeVersionArn = runtimeVersionArn;
         return this;
     }
     
+    public RuntimeVersionConfig(){}
 }

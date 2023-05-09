@@ -18,6 +18,7 @@ public class GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorsConfig")
     public GoogleCloudRecommendationengineV1beta1ImportErrorsConfig errorsConfig;
+
     public GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest withErrorsConfig(GoogleCloudRecommendationengineV1beta1ImportErrorsConfig errorsConfig) {
         this.errorsConfig = errorsConfig;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputConfig")
     public GoogleCloudRecommendationengineV1beta1InputConfig inputConfig;
+
     public GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest withInputConfig(GoogleCloudRecommendationengineV1beta1InputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest(){}
 }

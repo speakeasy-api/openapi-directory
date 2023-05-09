@@ -12,6 +12,7 @@ public class PatientIdentificationRequestQueryRequester {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PatientIdentificationRequestQueryRequester withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class PatientIdentificationRequestQueryRequester {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PatientIdentificationRequestQueryRequesterTypeEnum type;
+
     public PatientIdentificationRequestQueryRequester withType(PatientIdentificationRequestQueryRequesterTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PatientIdentificationRequestQueryRequester(){}
 }

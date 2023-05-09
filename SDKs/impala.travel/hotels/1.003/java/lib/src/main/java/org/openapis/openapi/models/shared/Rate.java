@@ -16,6 +16,7 @@ import java.time.LocalDate;
 public class Rate {
     @JsonProperty("cancellationPolicies")
     public CancellationPolicy[] cancellationPolicies;
+
     public Rate withCancellationPolicies(CancellationPolicy[] cancellationPolicies) {
         this.cancellationPolicies = cancellationPolicies;
         return this;
@@ -23,6 +24,7 @@ public class Rate {
     
     @JsonProperty("components")
     public RateComponent[] components;
+
     public Rate withComponents(RateComponent[] components) {
         this.components = components;
         return this;
@@ -31,6 +33,7 @@ public class Rate {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("end")
     public LocalDate end;
+
     public Rate withEnd(LocalDate end) {
         this.end = end;
         return this;
@@ -41,6 +44,7 @@ public class Rate {
      */
     @JsonProperty("hotelAgreement")
     public HotelAgreementStub hotelAgreement;
+
     public Rate withHotelAgreement(HotelAgreementStub hotelAgreement) {
         this.hotelAgreement = hotelAgreement;
         return this;
@@ -51,6 +55,7 @@ public class Rate {
      */
     @JsonProperty("maxOccupancy")
     public Long maxOccupancy;
+
     public Rate withMaxOccupancy(Long maxOccupancy) {
         this.maxOccupancy = maxOccupancy;
         return this;
@@ -58,6 +63,7 @@ public class Rate {
     
     @JsonProperty("rateId")
     public String rateId;
+
     public Rate withRateId(String rateId) {
         this.rateId = rateId;
         return this;
@@ -69,6 +75,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ratePlanId")
     public Long ratePlanId;
+
     public Rate withRatePlanId(Long ratePlanId) {
         this.ratePlanId = ratePlanId;
         return this;
@@ -79,6 +86,7 @@ public class Rate {
      */
     @JsonProperty("retailRate")
     public RateRetailRate retailRate;
+
     public Rate withRetailRate(RateRetailRate retailRate) {
         this.retailRate = retailRate;
         return this;
@@ -90,6 +98,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roomsSellable")
     public Double roomsSellable;
+
     public Rate withRoomsSellable(Double roomsSellable) {
         this.roomsSellable = roomsSellable;
         return this;
@@ -100,6 +109,7 @@ public class Rate {
      */
     @JsonProperty("sellerCommissionPercentage")
     public Float sellerCommissionPercentage;
+
     public Rate withSellerCommissionPercentage(Float sellerCommissionPercentage) {
         this.sellerCommissionPercentage = sellerCommissionPercentage;
         return this;
@@ -111,6 +121,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerToImpalaPayment")
     public Money sellerToImpalaPayment;
+
     public Rate withSellerToImpalaPayment(Money sellerToImpalaPayment) {
         this.sellerToImpalaPayment = sellerToImpalaPayment;
         return this;
@@ -119,9 +130,21 @@ public class Rate {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("start")
     public LocalDate start;
+
     public Rate withStart(LocalDate start) {
         this.start = start;
         return this;
     }
     
+    public Rate(@JsonProperty("cancellationPolicies") CancellationPolicy[] cancellationPolicies, @JsonProperty("components") RateComponent[] components, @JsonProperty("end") LocalDate end, @JsonProperty("hotelAgreement") HotelAgreementStub hotelAgreement, @JsonProperty("maxOccupancy") Long maxOccupancy, @JsonProperty("rateId") String rateId, @JsonProperty("retailRate") RateRetailRate retailRate, @JsonProperty("sellerCommissionPercentage") Float sellerCommissionPercentage, @JsonProperty("start") LocalDate start) {
+        this.cancellationPolicies = cancellationPolicies;
+        this.components = components;
+        this.end = end;
+        this.hotelAgreement = hotelAgreement;
+        this.maxOccupancy = maxOccupancy;
+        this.rateId = rateId;
+        this.retailRate = retailRate;
+        this.sellerCommissionPercentage = sellerCommissionPercentage;
+        this.start = start;
+  }
 }

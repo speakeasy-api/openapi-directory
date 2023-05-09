@@ -18,6 +18,7 @@ public class LocalizationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public LocalizationSettings withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -29,9 +30,11 @@ public class LocalizationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public LocalizationSettings withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
     }
     
+    public LocalizationSettings(){}
 }

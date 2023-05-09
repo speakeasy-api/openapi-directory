@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointGetRequest {
@@ -13,6 +14,7 @@ public class StopPointGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
     public String[] ids;
+
     public StopPointGetRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -23,9 +25,13 @@ public class StopPointGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeCrowdingData")
     public Boolean includeCrowdingData;
+
     public StopPointGetRequest withIncludeCrowdingData(Boolean includeCrowdingData) {
         this.includeCrowdingData = includeCrowdingData;
         return this;
     }
     
+    public StopPointGetRequest(@JsonProperty("ids") String[] ids) {
+        this.ids = ids;
+  }
 }

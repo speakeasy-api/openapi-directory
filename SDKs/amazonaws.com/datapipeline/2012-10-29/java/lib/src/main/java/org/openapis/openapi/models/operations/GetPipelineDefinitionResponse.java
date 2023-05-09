@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPipelineDefinitionResponse {
     
     public String contentType;
+
     public GetPipelineDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPipelineDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPipelineDefinitionOutput getPipelineDefinitionOutput;
+
     public GetPipelineDefinitionResponse withGetPipelineDefinitionOutput(org.openapis.openapi.models.shared.GetPipelineDefinitionOutput getPipelineDefinitionOutput) {
         this.getPipelineDefinitionOutput = getPipelineDefinitionOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetPipelineDefinitionResponse {
      */
     
     public Object internalServiceError;
+
     public GetPipelineDefinitionResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class GetPipelineDefinitionResponse {
      */
     
     public Object invalidRequestException;
+
     public GetPipelineDefinitionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class GetPipelineDefinitionResponse {
      */
     
     public Object pipelineDeletedException;
+
     public GetPipelineDefinitionResponse withPipelineDeletedException(Object pipelineDeletedException) {
         this.pipelineDeletedException = pipelineDeletedException;
         return this;
@@ -59,6 +65,7 @@ public class GetPipelineDefinitionResponse {
      */
     
     public Object pipelineNotFoundException;
+
     public GetPipelineDefinitionResponse withPipelineNotFoundException(Object pipelineNotFoundException) {
         this.pipelineNotFoundException = pipelineNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetPipelineDefinitionResponse {
     
     
     public Integer statusCode;
+
     public GetPipelineDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetPipelineDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPipelineDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPipelineDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

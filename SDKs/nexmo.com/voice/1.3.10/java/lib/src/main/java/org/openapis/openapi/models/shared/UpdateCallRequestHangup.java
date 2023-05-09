@@ -15,9 +15,11 @@ public class UpdateCallRequestHangup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public UpdateCallRequestHangupActionEnum action;
+
     public UpdateCallRequestHangup withAction(UpdateCallRequestHangupActionEnum action) {
         this.action = action;
         return this;
     }
     
+    public UpdateCallRequestHangup(){}
 }

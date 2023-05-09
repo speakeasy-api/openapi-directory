@@ -15,6 +15,7 @@ public class ListPipelineParametersForExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPipelineParametersForExecutionResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListPipelineParametersForExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineParameters")
     public Parameter[] pipelineParameters;
+
     public ListPipelineParametersForExecutionResponse withPipelineParameters(Parameter[] pipelineParameters) {
         this.pipelineParameters = pipelineParameters;
         return this;
     }
     
+    public ListPipelineParametersForExecutionResponse(){}
 }

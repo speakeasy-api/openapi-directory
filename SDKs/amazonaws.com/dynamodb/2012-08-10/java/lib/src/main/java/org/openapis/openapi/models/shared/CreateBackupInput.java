@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateBackupInput {
     @JsonProperty("BackupName")
     public String backupName;
+
     public CreateBackupInput withBackupName(String backupName) {
         this.backupName = backupName;
         return this;
@@ -16,9 +17,14 @@ public class CreateBackupInput {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public CreateBackupInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public CreateBackupInput(@JsonProperty("BackupName") String backupName, @JsonProperty("TableName") String tableName) {
+        this.backupName = backupName;
+        this.tableName = tableName;
+  }
 }

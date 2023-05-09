@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAs2PartnersRequestBody {
@@ -12,8 +13,17 @@ public class PostAs2PartnersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=as2_station_id")
     public Integer as2StationId;
+
     public PostAs2PartnersRequestBody withAs2StationId(Integer as2StationId) {
         this.as2StationId = as2StationId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("multipartForm:name=enable_dedicated_ips")
+    public Boolean enableDedicatedIps;
+
+    public PostAs2PartnersRequestBody withEnableDedicatedIps(Boolean enableDedicatedIps) {
+        this.enableDedicatedIps = enableDedicatedIps;
         return this;
     }
     
@@ -22,6 +32,7 @@ public class PostAs2PartnersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PostAs2PartnersRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +40,7 @@ public class PostAs2PartnersRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=public_certificate")
     public String publicCertificate;
+
     public PostAs2PartnersRequestBody withPublicCertificate(String publicCertificate) {
         this.publicCertificate = publicCertificate;
         return this;
@@ -39,6 +51,7 @@ public class PostAs2PartnersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=server_certificate")
     public String serverCertificate;
+
     public PostAs2PartnersRequestBody withServerCertificate(String serverCertificate) {
         this.serverCertificate = serverCertificate;
         return this;
@@ -49,9 +62,16 @@ public class PostAs2PartnersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=uri")
     public String uri;
+
     public PostAs2PartnersRequestBody withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public PostAs2PartnersRequestBody(@JsonProperty("as2_station_id") Integer as2StationId, @JsonProperty("name") String name, @JsonProperty("public_certificate") String publicCertificate, @JsonProperty("uri") String uri) {
+        this.as2StationId = as2StationId;
+        this.name = name;
+        this.publicCertificate = publicCertificate;
+        this.uri = uri;
+  }
 }

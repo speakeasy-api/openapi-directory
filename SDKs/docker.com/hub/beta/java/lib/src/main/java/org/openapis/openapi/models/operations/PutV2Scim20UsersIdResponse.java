@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutV2Scim20UsersIdResponse {
     
     public String contentType;
+
     public PutV2Scim20UsersIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PutV2Scim20UsersIdResponse {
     
     
     public Integer statusCode;
+
     public PutV2Scim20UsersIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PutV2Scim20UsersIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutV2Scim20UsersIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PutV2Scim20UsersIdResponse {
      */
     
     public PutV2Scim20UsersId400ApplicationScimPlusJson putV2Scim20UsersId400ApplicationScimPlusJsonObject;
+
     public PutV2Scim20UsersIdResponse withPutV2Scim20UsersId400ApplicationScimPlusJsonObject(PutV2Scim20UsersId400ApplicationScimPlusJson putV2Scim20UsersId400ApplicationScimPlusJsonObject) {
         this.putV2Scim20UsersId400ApplicationScimPlusJsonObject = putV2Scim20UsersId400ApplicationScimPlusJsonObject;
         return this;
@@ -43,6 +48,7 @@ public class PutV2Scim20UsersIdResponse {
      */
     
     public PutV2Scim20UsersId401ApplicationScimPlusJson putV2Scim20UsersId401ApplicationScimPlusJsonObject;
+
     public PutV2Scim20UsersIdResponse withPutV2Scim20UsersId401ApplicationScimPlusJsonObject(PutV2Scim20UsersId401ApplicationScimPlusJson putV2Scim20UsersId401ApplicationScimPlusJsonObject) {
         this.putV2Scim20UsersId401ApplicationScimPlusJsonObject = putV2Scim20UsersId401ApplicationScimPlusJsonObject;
         return this;
@@ -53,6 +59,7 @@ public class PutV2Scim20UsersIdResponse {
      */
     
     public PutV2Scim20UsersId403ApplicationScimPlusJson putV2Scim20UsersId403ApplicationScimPlusJsonObject;
+
     public PutV2Scim20UsersIdResponse withPutV2Scim20UsersId403ApplicationScimPlusJsonObject(PutV2Scim20UsersId403ApplicationScimPlusJson putV2Scim20UsersId403ApplicationScimPlusJsonObject) {
         this.putV2Scim20UsersId403ApplicationScimPlusJsonObject = putV2Scim20UsersId403ApplicationScimPlusJsonObject;
         return this;
@@ -63,6 +70,7 @@ public class PutV2Scim20UsersIdResponse {
      */
     
     public PutV2Scim20UsersId404ApplicationScimPlusJson putV2Scim20UsersId404ApplicationScimPlusJsonObject;
+
     public PutV2Scim20UsersIdResponse withPutV2Scim20UsersId404ApplicationScimPlusJsonObject(PutV2Scim20UsersId404ApplicationScimPlusJson putV2Scim20UsersId404ApplicationScimPlusJsonObject) {
         this.putV2Scim20UsersId404ApplicationScimPlusJsonObject = putV2Scim20UsersId404ApplicationScimPlusJsonObject;
         return this;
@@ -73,6 +81,7 @@ public class PutV2Scim20UsersIdResponse {
      */
     
     public PutV2Scim20UsersId409ApplicationScimPlusJson putV2Scim20UsersId409ApplicationScimPlusJsonObject;
+
     public PutV2Scim20UsersIdResponse withPutV2Scim20UsersId409ApplicationScimPlusJsonObject(PutV2Scim20UsersId409ApplicationScimPlusJson putV2Scim20UsersId409ApplicationScimPlusJsonObject) {
         this.putV2Scim20UsersId409ApplicationScimPlusJsonObject = putV2Scim20UsersId409ApplicationScimPlusJsonObject;
         return this;
@@ -83,6 +92,7 @@ public class PutV2Scim20UsersIdResponse {
      */
     
     public PutV2Scim20UsersId500ApplicationScimPlusJson putV2Scim20UsersId500ApplicationScimPlusJsonObject;
+
     public PutV2Scim20UsersIdResponse withPutV2Scim20UsersId500ApplicationScimPlusJsonObject(PutV2Scim20UsersId500ApplicationScimPlusJson putV2Scim20UsersId500ApplicationScimPlusJsonObject) {
         this.putV2Scim20UsersId500ApplicationScimPlusJsonObject = putV2Scim20UsersId500ApplicationScimPlusJsonObject;
         return this;
@@ -90,9 +100,14 @@ public class PutV2Scim20UsersIdResponse {
     
     
     public org.openapis.openapi.models.shared.ScimUser scimUser;
+
     public PutV2Scim20UsersIdResponse withScimUser(org.openapis.openapi.models.shared.ScimUser scimUser) {
         this.scimUser = scimUser;
         return this;
     }
     
+    public PutV2Scim20UsersIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

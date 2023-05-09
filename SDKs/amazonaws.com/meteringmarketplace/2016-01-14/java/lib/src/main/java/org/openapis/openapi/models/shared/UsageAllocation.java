@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UsageAllocation {
     @JsonProperty("AllocatedUsageQuantity")
     public Long allocatedUsageQuantity;
+
     public UsageAllocation withAllocatedUsageQuantity(Long allocatedUsageQuantity) {
         this.allocatedUsageQuantity = allocatedUsageQuantity;
         return this;
@@ -22,9 +23,13 @@ public class UsageAllocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public UsageAllocation withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public UsageAllocation(@JsonProperty("AllocatedUsageQuantity") Long allocatedUsageQuantity) {
+        this.allocatedUsageQuantity = allocatedUsageQuantity;
+  }
 }

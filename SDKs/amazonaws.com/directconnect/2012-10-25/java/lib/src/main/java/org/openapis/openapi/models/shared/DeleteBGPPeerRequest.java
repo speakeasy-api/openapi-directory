@@ -12,6 +12,7 @@ public class DeleteBGPPeerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asn")
     public Long asn;
+
     public DeleteBGPPeerRequest withAsn(Long asn) {
         this.asn = asn;
         return this;
@@ -20,6 +21,7 @@ public class DeleteBGPPeerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bgpPeerId")
     public String bgpPeerId;
+
     public DeleteBGPPeerRequest withBgpPeerId(String bgpPeerId) {
         this.bgpPeerId = bgpPeerId;
         return this;
@@ -28,6 +30,7 @@ public class DeleteBGPPeerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerAddress")
     public String customerAddress;
+
     public DeleteBGPPeerRequest withCustomerAddress(String customerAddress) {
         this.customerAddress = customerAddress;
         return this;
@@ -36,9 +39,11 @@ public class DeleteBGPPeerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualInterfaceId")
     public String virtualInterfaceId;
+
     public DeleteBGPPeerRequest withVirtualInterfaceId(String virtualInterfaceId) {
         this.virtualInterfaceId = virtualInterfaceId;
         return this;
     }
     
+    public DeleteBGPPeerRequest(){}
 }

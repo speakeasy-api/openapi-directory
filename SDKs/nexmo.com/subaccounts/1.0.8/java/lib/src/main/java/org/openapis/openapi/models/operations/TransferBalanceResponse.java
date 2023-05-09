@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TransferBalanceResponse {
     
     public String contentType;
+
     public TransferBalanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TransferBalanceResponse {
     
     
     public Integer statusCode;
+
     public TransferBalanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TransferBalanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TransferBalanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class TransferBalanceResponse {
      */
     
     public org.openapis.openapi.models.shared.TransferBalanceResponse transferBalanceResponse;
+
     public TransferBalanceResponse withTransferBalanceResponse(org.openapis.openapi.models.shared.TransferBalanceResponse transferBalanceResponse) {
         this.transferBalanceResponse = transferBalanceResponse;
         return this;
@@ -43,6 +48,7 @@ public class TransferBalanceResponse {
      */
     
     public org.openapis.openapi.models.shared.UnprovisionedErrorResponse unprovisionedErrorResponse;
+
     public TransferBalanceResponse withUnprovisionedErrorResponse(org.openapis.openapi.models.shared.UnprovisionedErrorResponse unprovisionedErrorResponse) {
         this.unprovisionedErrorResponse = unprovisionedErrorResponse;
         return this;
@@ -53,6 +59,7 @@ public class TransferBalanceResponse {
      */
     
     public TransferBalance401ApplicationJSON transferBalance401ApplicationJSONObject;
+
     public TransferBalanceResponse withTransferBalance401ApplicationJSONObject(TransferBalance401ApplicationJSON transferBalance401ApplicationJSONObject) {
         this.transferBalance401ApplicationJSONObject = transferBalance401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class TransferBalanceResponse {
      */
     
     public TransferBalance404ApplicationJSON transferBalance404ApplicationJSONObject;
+
     public TransferBalanceResponse withTransferBalance404ApplicationJSONObject(TransferBalance404ApplicationJSON transferBalance404ApplicationJSONObject) {
         this.transferBalance404ApplicationJSONObject = transferBalance404ApplicationJSONObject;
         return this;
@@ -73,9 +81,14 @@ public class TransferBalanceResponse {
      */
     
     public TransferBalance422ApplicationJSON transferBalance422ApplicationJSONObject;
+
     public TransferBalanceResponse withTransferBalance422ApplicationJSONObject(TransferBalance422ApplicationJSON transferBalance422ApplicationJSONObject) {
         this.transferBalance422ApplicationJSONObject = transferBalance422ApplicationJSONObject;
         return this;
     }
     
+    public TransferBalanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

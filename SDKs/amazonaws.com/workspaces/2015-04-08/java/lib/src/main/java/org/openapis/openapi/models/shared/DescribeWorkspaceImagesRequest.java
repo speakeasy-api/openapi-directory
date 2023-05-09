@@ -12,6 +12,7 @@ public class DescribeWorkspaceImagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageIds")
     public String[] imageIds;
+
     public DescribeWorkspaceImagesRequest withImageIds(String[] imageIds) {
         this.imageIds = imageIds;
         return this;
@@ -20,6 +21,7 @@ public class DescribeWorkspaceImagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageType")
     public ImageTypeEnum imageType;
+
     public DescribeWorkspaceImagesRequest withImageType(ImageTypeEnum imageType) {
         this.imageType = imageType;
         return this;
@@ -28,6 +30,7 @@ public class DescribeWorkspaceImagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeWorkspaceImagesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +39,11 @@ public class DescribeWorkspaceImagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeWorkspaceImagesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeWorkspaceImagesRequest(){}
 }

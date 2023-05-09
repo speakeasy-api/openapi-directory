@@ -12,6 +12,7 @@ public class DeleteResourcePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyHashCondition")
     public String policyHashCondition;
+
     public DeleteResourcePolicyRequest withPolicyHashCondition(String policyHashCondition) {
         this.policyHashCondition = policyHashCondition;
         return this;
@@ -20,9 +21,11 @@ public class DeleteResourcePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public DeleteResourcePolicyRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public DeleteResourcePolicyRequest(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DocumentFilter {
     @JsonProperty("key")
     public DocumentFilterKeyEnum key;
+
     public DocumentFilter withKey(DocumentFilterKeyEnum key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class DocumentFilter {
     
     @JsonProperty("value")
     public String value;
+
     public DocumentFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DocumentFilter(@JsonProperty("key") DocumentFilterKeyEnum key, @JsonProperty("value") String value) {
+        this.key = key;
+        this.value = value;
+  }
 }

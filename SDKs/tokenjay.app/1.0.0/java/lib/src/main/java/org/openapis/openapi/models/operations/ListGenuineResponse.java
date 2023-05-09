@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListGenuineResponse {
     
     public byte[] body;
+
     public ListGenuineResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ListGenuineResponse {
     
     
     public String contentType;
+
     public ListGenuineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ListGenuineResponse {
     
     
     public Integer statusCode;
+
     public ListGenuineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ListGenuineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListGenuineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ListGenuineResponse {
      */
     
     public String listGenuine400WildcardString;
+
     public ListGenuineResponse withListGenuine400WildcardString(String listGenuine400WildcardString) {
         this.listGenuine400WildcardString = listGenuine400WildcardString;
         return this;
@@ -50,6 +56,7 @@ public class ListGenuineResponse {
      */
     
     public String listGenuine401WildcardString;
+
     public ListGenuineResponse withListGenuine401WildcardString(String listGenuine401WildcardString) {
         this.listGenuine401WildcardString = listGenuine401WildcardString;
         return this;
@@ -60,6 +67,7 @@ public class ListGenuineResponse {
      */
     
     public String listGenuine404WildcardString;
+
     public ListGenuineResponse withListGenuine404WildcardString(String listGenuine404WildcardString) {
         this.listGenuine404WildcardString = listGenuine404WildcardString;
         return this;
@@ -70,9 +78,14 @@ public class ListGenuineResponse {
      */
     
     public String listGenuine409WildcardString;
+
     public ListGenuineResponse withListGenuine409WildcardString(String listGenuine409WildcardString) {
         this.listGenuine409WildcardString = listGenuine409WildcardString;
         return this;
     }
     
+    public ListGenuineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

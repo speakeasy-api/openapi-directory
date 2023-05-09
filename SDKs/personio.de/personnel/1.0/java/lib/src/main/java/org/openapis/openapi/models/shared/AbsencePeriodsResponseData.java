@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AbsencePeriodsResponseData {
     @JsonProperty("attributes")
     public AbsencePeriodsResponseDataAttributes[] attributes;
+
     public AbsencePeriodsResponseData withAttributes(AbsencePeriodsResponseDataAttributes[] attributes) {
         this.attributes = attributes;
         return this;
@@ -16,9 +17,14 @@ public class AbsencePeriodsResponseData {
     
     @JsonProperty("type")
     public String type;
+
     public AbsencePeriodsResponseData withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AbsencePeriodsResponseData(@JsonProperty("attributes") AbsencePeriodsResponseDataAttributes[] attributes, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.type = type;
+  }
 }

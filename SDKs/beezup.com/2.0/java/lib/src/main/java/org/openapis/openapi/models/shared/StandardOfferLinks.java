@@ -12,9 +12,11 @@ public class StandardOfferLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("getOffer")
     public LinksGetOfferLink getOffer;
+
     public StandardOfferLinks withGetOffer(LinksGetOfferLink getOffer) {
         this.getOffer = getOffer;
         return this;
     }
     
+    public StandardOfferLinks(){}
 }

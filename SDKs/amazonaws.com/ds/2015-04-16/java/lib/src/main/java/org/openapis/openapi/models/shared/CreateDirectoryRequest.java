@@ -15,6 +15,7 @@ public class CreateDirectoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateDirectoryRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class CreateDirectoryRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateDirectoryRequest withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +31,7 @@ public class CreateDirectoryRequest {
     
     @JsonProperty("Password")
     public String password;
+
     public CreateDirectoryRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -37,6 +40,7 @@ public class CreateDirectoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortName")
     public String shortName;
+
     public CreateDirectoryRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -44,6 +48,7 @@ public class CreateDirectoryRequest {
     
     @JsonProperty("Size")
     public DirectorySizeEnum size;
+
     public CreateDirectoryRequest withSize(DirectorySizeEnum size) {
         this.size = size;
         return this;
@@ -52,6 +57,7 @@ public class CreateDirectoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateDirectoryRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -60,9 +66,15 @@ public class CreateDirectoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcSettings")
     public DirectoryVpcSettings vpcSettings;
+
     public CreateDirectoryRequest withVpcSettings(DirectoryVpcSettings vpcSettings) {
         this.vpcSettings = vpcSettings;
         return this;
     }
     
+    public CreateDirectoryRequest(@JsonProperty("Name") String name, @JsonProperty("Password") String password, @JsonProperty("Size") DirectorySizeEnum size) {
+        this.name = name;
+        this.password = password;
+        this.size = size;
+  }
 }

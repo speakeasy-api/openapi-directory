@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateAnomalySubscriptionResponse {
     @JsonProperty("SubscriptionArn")
     public String subscriptionArn;
+
     public CreateAnomalySubscriptionResponse withSubscriptionArn(String subscriptionArn) {
         this.subscriptionArn = subscriptionArn;
         return this;
     }
     
+    public CreateAnomalySubscriptionResponse(@JsonProperty("SubscriptionArn") String subscriptionArn) {
+        this.subscriptionArn = subscriptionArn;
+  }
 }

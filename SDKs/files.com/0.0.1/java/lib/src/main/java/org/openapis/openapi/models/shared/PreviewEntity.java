@@ -15,6 +15,7 @@ public class PreviewEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download_uri")
     public String downloadUri;
+
     public PreviewEntity withDownloadUri(String downloadUri) {
         this.downloadUri = downloadUri;
         return this;
@@ -26,6 +27,7 @@ public class PreviewEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public PreviewEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class PreviewEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public String size;
+
     public PreviewEntity withSize(String size) {
         this.size = size;
         return this;
@@ -48,6 +51,7 @@ public class PreviewEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public PreviewEntity withStatus(String status) {
         this.status = status;
         return this;
@@ -59,9 +63,11 @@ public class PreviewEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PreviewEntity withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PreviewEntity(){}
 }

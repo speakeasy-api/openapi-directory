@@ -15,6 +15,7 @@ public class TargetLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Accounts")
     public String[] accounts;
+
     public TargetLocation withAccounts(String[] accounts) {
         this.accounts = accounts;
         return this;
@@ -23,6 +24,7 @@ public class TargetLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionRoleName")
     public String executionRoleName;
+
     public TargetLocation withExecutionRoleName(String executionRoleName) {
         this.executionRoleName = executionRoleName;
         return this;
@@ -31,6 +33,7 @@ public class TargetLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Regions")
     public String[] regions;
+
     public TargetLocation withRegions(String[] regions) {
         this.regions = regions;
         return this;
@@ -42,6 +45,7 @@ public class TargetLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetLocationAlarmConfiguration")
     public AlarmConfiguration targetLocationAlarmConfiguration;
+
     public TargetLocation withTargetLocationAlarmConfiguration(AlarmConfiguration targetLocationAlarmConfiguration) {
         this.targetLocationAlarmConfiguration = targetLocationAlarmConfiguration;
         return this;
@@ -50,6 +54,7 @@ public class TargetLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetLocationMaxConcurrency")
     public String targetLocationMaxConcurrency;
+
     public TargetLocation withTargetLocationMaxConcurrency(String targetLocationMaxConcurrency) {
         this.targetLocationMaxConcurrency = targetLocationMaxConcurrency;
         return this;
@@ -58,9 +63,11 @@ public class TargetLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetLocationMaxErrors")
     public String targetLocationMaxErrors;
+
     public TargetLocation withTargetLocationMaxErrors(String targetLocationMaxErrors) {
         this.targetLocationMaxErrors = targetLocationMaxErrors;
         return this;
     }
     
+    public TargetLocation(){}
 }

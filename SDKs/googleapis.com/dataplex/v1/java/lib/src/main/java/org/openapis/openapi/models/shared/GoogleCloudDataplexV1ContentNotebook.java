@@ -18,9 +18,11 @@ public class GoogleCloudDataplexV1ContentNotebook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kernelType")
     public GoogleCloudDataplexV1ContentNotebookKernelTypeEnum kernelType;
+
     public GoogleCloudDataplexV1ContentNotebook withKernelType(GoogleCloudDataplexV1ContentNotebookKernelTypeEnum kernelType) {
         this.kernelType = kernelType;
         return this;
     }
     
+    public GoogleCloudDataplexV1ContentNotebook(){}
 }

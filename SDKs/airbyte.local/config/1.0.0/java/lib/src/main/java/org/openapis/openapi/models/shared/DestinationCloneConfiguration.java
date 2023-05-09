@@ -15,6 +15,7 @@ public class DestinationCloneConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionConfiguration")
     public Object connectionConfiguration;
+
     public DestinationCloneConfiguration withConnectionConfiguration(Object connectionConfiguration) {
         this.connectionConfiguration = connectionConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class DestinationCloneConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DestinationCloneConfiguration withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DestinationCloneConfiguration(){}
 }

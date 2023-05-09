@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CrashGroupsListResponse {
     
     public String contentType;
+
     public CrashGroupsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CrashGroupsListResponse {
     
     
     public Integer statusCode;
+
     public CrashGroupsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CrashGroupsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CrashGroupsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CrashGroupsListResponse {
      */
     
     public CrashGroupsList200ApplicationJSON crashGroupsList200ApplicationJSONObject;
+
     public CrashGroupsListResponse withCrashGroupsList200ApplicationJSONObject(CrashGroupsList200ApplicationJSON crashGroupsList200ApplicationJSONObject) {
         this.crashGroupsList200ApplicationJSONObject = crashGroupsList200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class CrashGroupsListResponse {
      */
     
     public CrashGroupsListDefaultApplicationJSON crashGroupsListDefaultApplicationJSONObject;
+
     public CrashGroupsListResponse withCrashGroupsListDefaultApplicationJSONObject(CrashGroupsListDefaultApplicationJSON crashGroupsListDefaultApplicationJSONObject) {
         this.crashGroupsListDefaultApplicationJSONObject = crashGroupsListDefaultApplicationJSONObject;
         return this;
     }
     
+    public CrashGroupsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

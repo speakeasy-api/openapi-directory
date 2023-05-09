@@ -18,6 +18,7 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataset_score_changes")
     public Double datasetScoreChanges;
+
     public Change withDatasetScoreChanges(Double datasetScoreChanges) {
         this.datasetScoreChanges = datasetScoreChanges;
         return this;
@@ -29,9 +30,11 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score_changes")
     public Change[] scoreChanges;
+
     public Change withScoreChanges(Change[] scoreChanges) {
         this.scoreChanges = scoreChanges;
         return this;
     }
     
+    public Change(){}
 }

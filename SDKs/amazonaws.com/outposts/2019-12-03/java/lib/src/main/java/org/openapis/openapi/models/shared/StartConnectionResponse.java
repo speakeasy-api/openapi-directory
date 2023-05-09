@@ -15,6 +15,7 @@ public class StartConnectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionId")
     public String connectionId;
+
     public StartConnectionResponse withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -23,9 +24,11 @@ public class StartConnectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnderlayIpAddress")
     public String underlayIpAddress;
+
     public StartConnectionResponse withUnderlayIpAddress(String underlayIpAddress) {
         this.underlayIpAddress = underlayIpAddress;
         return this;
     }
     
+    public StartConnectionResponse(){}
 }

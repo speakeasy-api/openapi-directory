@@ -18,6 +18,7 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createFooter")
     public CreateFooterResponse createFooter;
+
     public Response withCreateFooter(CreateFooterResponse createFooter) {
         this.createFooter = createFooter;
         return this;
@@ -29,6 +30,7 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createFootnote")
     public CreateFootnoteResponse createFootnote;
+
     public Response withCreateFootnote(CreateFootnoteResponse createFootnote) {
         this.createFootnote = createFootnote;
         return this;
@@ -40,6 +42,7 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createHeader")
     public CreateHeaderResponse createHeader;
+
     public Response withCreateHeader(CreateHeaderResponse createHeader) {
         this.createHeader = createHeader;
         return this;
@@ -51,6 +54,7 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createNamedRange")
     public CreateNamedRangeResponse createNamedRange;
+
     public Response withCreateNamedRange(CreateNamedRangeResponse createNamedRange) {
         this.createNamedRange = createNamedRange;
         return this;
@@ -62,6 +66,7 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertInlineImage")
     public InsertInlineImageResponse insertInlineImage;
+
     public Response withInsertInlineImage(InsertInlineImageResponse insertInlineImage) {
         this.insertInlineImage = insertInlineImage;
         return this;
@@ -73,6 +78,7 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertInlineSheetsChart")
     public InsertInlineSheetsChartResponse insertInlineSheetsChart;
+
     public Response withInsertInlineSheetsChart(InsertInlineSheetsChartResponse insertInlineSheetsChart) {
         this.insertInlineSheetsChart = insertInlineSheetsChart;
         return this;
@@ -84,9 +90,11 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replaceAllText")
     public ReplaceAllTextResponse replaceAllText;
+
     public Response withReplaceAllText(ReplaceAllTextResponse replaceAllText) {
         this.replaceAllText = replaceAllText;
         return this;
     }
     
+    public Response(){}
 }

@@ -15,6 +15,7 @@ public class ListResourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListResourcesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class ListResourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListResourcesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,6 +39,7 @@ public class ListResourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principal")
     public String principal;
+
     public ListResourcesRequestBody withPrincipal(String principal) {
         this.principal = principal;
         return this;
@@ -48,6 +51,7 @@ public class ListResourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceArns")
     public String[] resourceArns;
+
     public ListResourcesRequestBody withResourceArns(String[] resourceArns) {
         this.resourceArns = resourceArns;
         return this;
@@ -58,6 +62,7 @@ public class ListResourcesRequestBody {
      */
     @JsonProperty("resourceOwner")
     public ListResourcesRequestBodyResourceOwnerEnum resourceOwner;
+
     public ListResourcesRequestBody withResourceOwner(ListResourcesRequestBodyResourceOwnerEnum resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
@@ -69,6 +74,7 @@ public class ListResourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRegionScope")
     public ListResourcesRequestBodyResourceRegionScopeEnum resourceRegionScope;
+
     public ListResourcesRequestBody withResourceRegionScope(ListResourcesRequestBodyResourceRegionScopeEnum resourceRegionScope) {
         this.resourceRegionScope = resourceRegionScope;
         return this;
@@ -80,6 +86,7 @@ public class ListResourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceShareArns")
     public String[] resourceShareArns;
+
     public ListResourcesRequestBody withResourceShareArns(String[] resourceShareArns) {
         this.resourceShareArns = resourceShareArns;
         return this;
@@ -91,9 +98,13 @@ public class ListResourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public String resourceType;
+
     public ListResourcesRequestBody withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ListResourcesRequestBody(@JsonProperty("resourceOwner") ListResourcesRequestBodyResourceOwnerEnum resourceOwner) {
+        this.resourceOwner = resourceOwner;
+  }
 }

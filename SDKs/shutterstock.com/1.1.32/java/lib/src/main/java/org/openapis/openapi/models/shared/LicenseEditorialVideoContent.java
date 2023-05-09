@@ -17,6 +17,7 @@ public class LicenseEditorialVideoContent {
      */
     @JsonProperty("editorial_id")
     public String editorialId;
+
     public LicenseEditorialVideoContent withEditorialId(String editorialId) {
         this.editorialId = editorialId;
         return this;
@@ -27,6 +28,7 @@ public class LicenseEditorialVideoContent {
      */
     @JsonProperty("license")
     public LicenseEditorialVideoContentLicenseEnum license;
+
     public LicenseEditorialVideoContent withLicense(LicenseEditorialVideoContentLicenseEnum license) {
         this.license = license;
         return this;
@@ -38,6 +40,7 @@ public class LicenseEditorialVideoContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, Object> metadata;
+
     public LicenseEditorialVideoContent withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -49,9 +52,14 @@ public class LicenseEditorialVideoContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public LicenseEditorialVideoContentSizeEnum size;
+
     public LicenseEditorialVideoContent withSize(LicenseEditorialVideoContentSizeEnum size) {
         this.size = size;
         return this;
     }
     
+    public LicenseEditorialVideoContent(@JsonProperty("editorial_id") String editorialId, @JsonProperty("license") LicenseEditorialVideoContentLicenseEnum license) {
+        this.editorialId = editorialId;
+        this.license = license;
+  }
 }

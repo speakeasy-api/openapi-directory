@@ -18,6 +18,7 @@ public class SearchDirectoryPeopleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SearchDirectoryPeopleResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class SearchDirectoryPeopleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("people")
     public Person[] people;
+
     public SearchDirectoryPeopleResponse withPeople(Person[] people) {
         this.people = people;
         return this;
@@ -40,9 +42,11 @@ public class SearchDirectoryPeopleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public SearchDirectoryPeopleResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public SearchDirectoryPeopleResponse(){}
 }

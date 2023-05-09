@@ -18,9 +18,11 @@ public class RegionGeoTargetArea {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geotargetCriteriaIds")
     public String[] geotargetCriteriaIds;
+
     public RegionGeoTargetArea withGeotargetCriteriaIds(String[] geotargetCriteriaIds) {
         this.geotargetCriteriaIds = geotargetCriteriaIds;
         return this;
     }
     
+    public RegionGeoTargetArea(){}
 }

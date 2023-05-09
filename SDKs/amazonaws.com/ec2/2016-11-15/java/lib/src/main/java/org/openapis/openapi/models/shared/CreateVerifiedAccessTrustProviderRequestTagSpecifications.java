@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVerifiedAccessTrustProviderRequestTagSpecifications {
     
     public CreateVerifiedAccessTrustProviderRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateVerifiedAccessTrustProviderRequestTagSpecifications withResourceType(CreateVerifiedAccessTrustProviderRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateVerifiedAccessTrustProviderRequestTagSpecifications {
     
     
     public CreateVerifiedAccessTrustProviderRequestTagSpecificationsTags[] tags;
+
     public CreateVerifiedAccessTrustProviderRequestTagSpecifications withTags(CreateVerifiedAccessTrustProviderRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateVerifiedAccessTrustProviderRequestTagSpecifications(){}
 }

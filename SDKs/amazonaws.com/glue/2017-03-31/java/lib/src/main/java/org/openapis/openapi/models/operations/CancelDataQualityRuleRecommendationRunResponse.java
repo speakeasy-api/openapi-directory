@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelDataQualityRuleRecommendationRunResponse {
@@ -12,6 +13,7 @@ public class CancelDataQualityRuleRecommendationRunResponse {
      */
     
     public java.util.Map<String, Object> cancelDataQualityRuleRecommendationRunResponse;
+
     public CancelDataQualityRuleRecommendationRunResponse withCancelDataQualityRuleRecommendationRunResponse(java.util.Map<String, Object> cancelDataQualityRuleRecommendationRunResponse) {
         this.cancelDataQualityRuleRecommendationRunResponse = cancelDataQualityRuleRecommendationRunResponse;
         return this;
@@ -19,6 +21,7 @@ public class CancelDataQualityRuleRecommendationRunResponse {
     
     
     public String contentType;
+
     public CancelDataQualityRuleRecommendationRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CancelDataQualityRuleRecommendationRunResponse {
      */
     
     public Object entityNotFoundException;
+
     public CancelDataQualityRuleRecommendationRunResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class CancelDataQualityRuleRecommendationRunResponse {
      */
     
     public Object internalServiceException;
+
     public CancelDataQualityRuleRecommendationRunResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class CancelDataQualityRuleRecommendationRunResponse {
      */
     
     public Object invalidInputException;
+
     public CancelDataQualityRuleRecommendationRunResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class CancelDataQualityRuleRecommendationRunResponse {
      */
     
     public Object operationTimeoutException;
+
     public CancelDataQualityRuleRecommendationRunResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class CancelDataQualityRuleRecommendationRunResponse {
     
     
     public Integer statusCode;
+
     public CancelDataQualityRuleRecommendationRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CancelDataQualityRuleRecommendationRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelDataQualityRuleRecommendationRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CancelDataQualityRuleRecommendationRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

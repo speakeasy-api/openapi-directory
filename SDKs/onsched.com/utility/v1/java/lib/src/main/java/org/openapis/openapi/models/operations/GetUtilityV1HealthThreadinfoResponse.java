@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUtilityV1HealthThreadinfoResponse {
     
     public String contentType;
+
     public GetUtilityV1HealthThreadinfoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetUtilityV1HealthThreadinfoResponse {
     
     
     public Integer statusCode;
+
     public GetUtilityV1HealthThreadinfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetUtilityV1HealthThreadinfoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUtilityV1HealthThreadinfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetUtilityV1HealthThreadinfoResponse {
      */
     
     public org.openapis.openapi.models.shared.ThreadPoolInfo threadPoolInfo;
+
     public GetUtilityV1HealthThreadinfoResponse withThreadPoolInfo(org.openapis.openapi.models.shared.ThreadPoolInfo threadPoolInfo) {
         this.threadPoolInfo = threadPoolInfo;
         return this;
     }
     
+    public GetUtilityV1HealthThreadinfoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

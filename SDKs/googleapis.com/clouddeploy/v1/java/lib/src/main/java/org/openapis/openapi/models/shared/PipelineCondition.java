@@ -18,6 +18,7 @@ public class PipelineCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineReadyCondition")
     public PipelineReadyCondition pipelineReadyCondition;
+
     public PipelineCondition withPipelineReadyCondition(PipelineReadyCondition pipelineReadyCondition) {
         this.pipelineReadyCondition = pipelineReadyCondition;
         return this;
@@ -29,6 +30,7 @@ public class PipelineCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetsPresentCondition")
     public TargetsPresentCondition targetsPresentCondition;
+
     public PipelineCondition withTargetsPresentCondition(TargetsPresentCondition targetsPresentCondition) {
         this.targetsPresentCondition = targetsPresentCondition;
         return this;
@@ -40,9 +42,11 @@ public class PipelineCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetsTypeCondition")
     public TargetsTypeCondition targetsTypeCondition;
+
     public PipelineCondition withTargetsTypeCondition(TargetsTypeCondition targetsTypeCondition) {
         this.targetsTypeCondition = targetsTypeCondition;
         return this;
     }
     
+    public PipelineCondition(){}
 }

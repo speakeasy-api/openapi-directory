@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateProspectRequest {
@@ -12,6 +13,7 @@ public class UpdateProspectRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public UpdateProspectRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class UpdateProspectRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public UpdateProspectRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateProspectRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public Object requestBody;
+
     public UpdateProspectRequest withRequestBody(Object requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -39,9 +43,15 @@ public class UpdateProspectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=prospectId")
     public String prospectId;
+
     public UpdateProspectRequest withProspectId(String prospectId) {
         this.prospectId = prospectId;
         return this;
     }
     
+    public UpdateProspectRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("prospectId") String prospectId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.prospectId = prospectId;
+  }
 }

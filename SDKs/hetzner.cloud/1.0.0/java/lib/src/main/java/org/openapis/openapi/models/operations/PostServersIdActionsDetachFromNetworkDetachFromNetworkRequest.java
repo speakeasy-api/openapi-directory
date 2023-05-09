@@ -12,9 +12,13 @@ public class PostServersIdActionsDetachFromNetworkDetachFromNetworkRequest {
      */
     @JsonProperty("network")
     public Long network;
+
     public PostServersIdActionsDetachFromNetworkDetachFromNetworkRequest withNetwork(Long network) {
         this.network = network;
         return this;
     }
     
+    public PostServersIdActionsDetachFromNetworkDetachFromNetworkRequest(@JsonProperty("network") Long network) {
+        this.network = network;
+  }
 }

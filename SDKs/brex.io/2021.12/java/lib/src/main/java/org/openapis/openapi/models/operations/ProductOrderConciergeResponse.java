@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProductOrderConciergeResponse {
     
     public String contentType;
+
     public ProductOrderConciergeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ProductOrderConciergeResponse {
      */
     
     public ProductOrderConcierge200ApplicationJSON productOrderConcierge200ApplicationJSONObject;
+
     public ProductOrderConciergeResponse withProductOrderConcierge200ApplicationJSONObject(ProductOrderConcierge200ApplicationJSON productOrderConcierge200ApplicationJSONObject) {
         this.productOrderConcierge200ApplicationJSONObject = productOrderConcierge200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class ProductOrderConciergeResponse {
      */
     
     public ProductOrderConciergeDefaultApplicationJSON productOrderConciergeDefaultApplicationJSONObject;
+
     public ProductOrderConciergeResponse withProductOrderConciergeDefaultApplicationJSONObject(ProductOrderConciergeDefaultApplicationJSON productOrderConciergeDefaultApplicationJSONObject) {
         this.productOrderConciergeDefaultApplicationJSONObject = productOrderConciergeDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class ProductOrderConciergeResponse {
     
     
     public Integer statusCode;
+
     public ProductOrderConciergeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ProductOrderConciergeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProductOrderConciergeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ProductOrderConciergeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

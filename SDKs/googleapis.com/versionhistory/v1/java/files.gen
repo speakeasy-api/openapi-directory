@@ -51,4 +51,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Interval.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListPlatformsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PlatformPlatformTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Platform.java
+docs/sdk/README.md
+docs/platforms/README.md
 USAGE.md

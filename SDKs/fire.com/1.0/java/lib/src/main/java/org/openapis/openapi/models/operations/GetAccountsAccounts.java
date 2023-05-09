@@ -15,9 +15,11 @@ public class GetAccountsAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accounts")
     public GetAccountsAccountsAccount[] accounts;
+
     public GetAccountsAccounts withAccounts(GetAccountsAccountsAccount[] accounts) {
         this.accounts = accounts;
         return this;
     }
     
+    public GetAccountsAccounts(){}
 }

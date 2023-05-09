@@ -15,6 +15,7 @@ public class Mripc404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Mripc404ApplicationJSONErrorEnum error;
+
     public Mripc404ApplicationJSON withError(Mripc404ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Mripc404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Mripc404ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Mripc404ApplicationJSON withErrorDescription(Mripc404ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Mripc404ApplicationJSON(){}
 }

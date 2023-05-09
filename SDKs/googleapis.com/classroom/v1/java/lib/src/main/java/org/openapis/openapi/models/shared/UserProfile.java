@@ -18,6 +18,7 @@ public class UserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public UserProfile withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -29,6 +30,7 @@ public class UserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UserProfile withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class UserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public Name name;
+
     public UserProfile withName(Name name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class UserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public GlobalPermission[] permissions;
+
     public UserProfile withPermissions(GlobalPermission[] permissions) {
         this.permissions = permissions;
         return this;
@@ -62,6 +66,7 @@ public class UserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photoUrl")
     public String photoUrl;
+
     public UserProfile withPhotoUrl(String photoUrl) {
         this.photoUrl = photoUrl;
         return this;
@@ -73,9 +78,11 @@ public class UserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verifiedTeacher")
     public Boolean verifiedTeacher;
+
     public UserProfile withVerifiedTeacher(Boolean verifiedTeacher) {
         this.verifiedTeacher = verifiedTeacher;
         return this;
     }
     
+    public UserProfile(){}
 }

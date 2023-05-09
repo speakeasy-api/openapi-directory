@@ -60,10 +60,8 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsAddMetadataResponse res = new org.openapis.openapi.models.operations.CollectionsAddMetadataResponse() {{
+        org.openapis.openapi.models.operations.CollectionsAddMetadataResponse res = new org.openapis.openapi.models.operations.CollectionsAddMetadataResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -103,10 +101,8 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsCollectedMetadataResponse res = new org.openapis.openapi.models.operations.CollectionsCollectedMetadataResponse() {{
+        org.openapis.openapi.models.operations.CollectionsCollectedMetadataResponse res = new org.openapis.openapi.models.operations.CollectionsCollectedMetadataResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,10 +147,8 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsCreateResponse res = new org.openapis.openapi.models.operations.CollectionsCreateResponse() {{
+        org.openapis.openapi.models.operations.CollectionsCreateResponse res = new org.openapis.openapi.models.operations.CollectionsCreateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -188,10 +182,8 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsDeleteResponse res = new org.openapis.openapi.models.operations.CollectionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.CollectionsDeleteResponse res = new org.openapis.openapi.models.operations.CollectionsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -228,11 +220,9 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsDetailResponse res = new org.openapis.openapi.models.operations.CollectionsDetailResponse() {{
+        org.openapis.openapi.models.operations.CollectionsDetailResponse res = new org.openapis.openapi.models.operations.CollectionsDetailResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -274,10 +264,8 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsLinkedNodesListResponse res = new org.openapis.openapi.models.operations.CollectionsLinkedNodesListResponse() {{
+        org.openapis.openapi.models.operations.CollectionsLinkedNodesListResponse res = new org.openapis.openapi.models.operations.CollectionsLinkedNodesListResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -320,10 +308,8 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsResponse res = new org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsResponse() {{
+        org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsResponse res = new org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -360,10 +346,8 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsCreateResponse res = new org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsCreateResponse() {{
+        org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsCreateResponse res = new org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsCreateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -403,10 +387,8 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsDeleteResponse res = new org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsDeleteResponse() {{
+        org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsDeleteResponse res = new org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -444,10 +426,8 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsLinkedPreprintsListResponse res = new org.openapis.openapi.models.operations.CollectionsLinkedPreprintsListResponse() {{
+        org.openapis.openapi.models.operations.CollectionsLinkedPreprintsListResponse res = new org.openapis.openapi.models.operations.CollectionsLinkedPreprintsListResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -485,10 +465,8 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsListResponse res = new org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsListResponse() {{
+        org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsListResponse res = new org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsListResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -531,10 +509,8 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsResponse res = new org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsResponse() {{
+        org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsResponse res = new org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -571,10 +547,8 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsCreateResponse res = new org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsCreateResponse() {{
+        org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsCreateResponse res = new org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsCreateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -614,10 +588,8 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsDeleteResponse res = new org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsDeleteResponse() {{
+        org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsDeleteResponse res = new org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -653,11 +625,9 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsListResponse res = new org.openapis.openapi.models.operations.CollectionsListResponse() {{
+        org.openapis.openapi.models.operations.CollectionsListResponse res = new org.openapis.openapi.models.operations.CollectionsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -698,10 +668,8 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsMetadataDeleteResponse res = new org.openapis.openapi.models.operations.CollectionsMetadataDeleteResponse() {{
+        org.openapis.openapi.models.operations.CollectionsMetadataDeleteResponse res = new org.openapis.openapi.models.operations.CollectionsMetadataDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -743,10 +711,8 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsMetadataDetailResponse res = new org.openapis.openapi.models.operations.CollectionsMetadataDetailResponse() {{
+        org.openapis.openapi.models.operations.CollectionsMetadataDetailResponse res = new org.openapis.openapi.models.operations.CollectionsMetadataDetailResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -785,10 +751,8 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsMetadataRegistrationsDetailResponse res = new org.openapis.openapi.models.operations.CollectionsMetadataRegistrationsDetailResponse() {{
+        org.openapis.openapi.models.operations.CollectionsMetadataRegistrationsDetailResponse res = new org.openapis.openapi.models.operations.CollectionsMetadataRegistrationsDetailResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -827,10 +791,8 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsMetadataRegistrationsListResponse res = new org.openapis.openapi.models.operations.CollectionsMetadataRegistrationsListResponse() {{
+        org.openapis.openapi.models.operations.CollectionsMetadataRegistrationsListResponse res = new org.openapis.openapi.models.operations.CollectionsMetadataRegistrationsListResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -867,10 +829,8 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsMetadataSubjectsRelationshipsResponse res = new org.openapis.openapi.models.operations.CollectionsMetadataSubjectsRelationshipsResponse() {{
+        org.openapis.openapi.models.operations.CollectionsMetadataSubjectsRelationshipsResponse res = new org.openapis.openapi.models.operations.CollectionsMetadataSubjectsRelationshipsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -913,10 +873,8 @@ public class Collections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CollectionsMetadataSubjectsRelationshipsUpdateResponse res = new org.openapis.openapi.models.operations.CollectionsMetadataSubjectsRelationshipsUpdateResponse() {{
+        org.openapis.openapi.models.operations.CollectionsMetadataSubjectsRelationshipsUpdateResponse res = new org.openapis.openapi.models.operations.CollectionsMetadataSubjectsRelationshipsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

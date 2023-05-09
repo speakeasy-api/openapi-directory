@@ -15,6 +15,7 @@ public class AwsCodeBuildProjectArtifactsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactIdentifier")
     public String artifactIdentifier;
+
     public AwsCodeBuildProjectArtifactsDetails withArtifactIdentifier(String artifactIdentifier) {
         this.artifactIdentifier = artifactIdentifier;
         return this;
@@ -23,6 +24,7 @@ public class AwsCodeBuildProjectArtifactsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionDisabled")
     public Boolean encryptionDisabled;
+
     public AwsCodeBuildProjectArtifactsDetails withEncryptionDisabled(Boolean encryptionDisabled) {
         this.encryptionDisabled = encryptionDisabled;
         return this;
@@ -31,6 +33,7 @@ public class AwsCodeBuildProjectArtifactsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public AwsCodeBuildProjectArtifactsDetails withLocation(String location) {
         this.location = location;
         return this;
@@ -39,6 +42,7 @@ public class AwsCodeBuildProjectArtifactsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsCodeBuildProjectArtifactsDetails withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class AwsCodeBuildProjectArtifactsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NamespaceType")
     public String namespaceType;
+
     public AwsCodeBuildProjectArtifactsDetails withNamespaceType(String namespaceType) {
         this.namespaceType = namespaceType;
         return this;
@@ -55,6 +60,7 @@ public class AwsCodeBuildProjectArtifactsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OverrideArtifactName")
     public Boolean overrideArtifactName;
+
     public AwsCodeBuildProjectArtifactsDetails withOverrideArtifactName(Boolean overrideArtifactName) {
         this.overrideArtifactName = overrideArtifactName;
         return this;
@@ -63,6 +69,7 @@ public class AwsCodeBuildProjectArtifactsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Packaging")
     public String packaging;
+
     public AwsCodeBuildProjectArtifactsDetails withPackaging(String packaging) {
         this.packaging = packaging;
         return this;
@@ -71,6 +78,7 @@ public class AwsCodeBuildProjectArtifactsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public AwsCodeBuildProjectArtifactsDetails withPath(String path) {
         this.path = path;
         return this;
@@ -79,9 +87,11 @@ public class AwsCodeBuildProjectArtifactsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsCodeBuildProjectArtifactsDetails withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AwsCodeBuildProjectArtifactsDetails(){}
 }

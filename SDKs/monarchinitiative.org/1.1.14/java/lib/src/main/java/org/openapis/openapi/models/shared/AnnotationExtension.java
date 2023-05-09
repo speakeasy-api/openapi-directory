@@ -15,6 +15,7 @@ public class AnnotationExtension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filler")
     public NamedObject filler;
+
     public AnnotationExtension withFiller(NamedObject filler) {
         this.filler = filler;
         return this;
@@ -26,9 +27,11 @@ public class AnnotationExtension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relation_chain")
     public Relation[] relationChain;
+
     public AnnotationExtension withRelationChain(Relation[] relationChain) {
         this.relationChain = relationChain;
         return this;
     }
     
+    public AnnotationExtension(){}
 }

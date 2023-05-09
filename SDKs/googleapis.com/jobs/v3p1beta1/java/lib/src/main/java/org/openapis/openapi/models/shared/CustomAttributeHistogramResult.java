@@ -18,6 +18,7 @@ public class CustomAttributeHistogramResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public CustomAttributeHistogramResult withKey(String key) {
         this.key = key;
         return this;
@@ -29,6 +30,7 @@ public class CustomAttributeHistogramResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longValueHistogramResult")
     public NumericBucketingResult longValueHistogramResult;
+
     public CustomAttributeHistogramResult withLongValueHistogramResult(NumericBucketingResult longValueHistogramResult) {
         this.longValueHistogramResult = longValueHistogramResult;
         return this;
@@ -40,9 +42,11 @@ public class CustomAttributeHistogramResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValueHistogramResult")
     public java.util.Map<String, Integer> stringValueHistogramResult;
+
     public CustomAttributeHistogramResult withStringValueHistogramResult(java.util.Map<String, Integer> stringValueHistogramResult) {
         this.stringValueHistogramResult = stringValueHistogramResult;
         return this;
     }
     
+    public CustomAttributeHistogramResult(){}
 }

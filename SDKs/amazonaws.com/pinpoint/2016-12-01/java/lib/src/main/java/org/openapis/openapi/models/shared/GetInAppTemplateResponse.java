@@ -15,9 +15,13 @@ public class GetInAppTemplateResponse {
      */
     @JsonProperty("InAppTemplateResponse")
     public InAppTemplateResponse inAppTemplateResponse;
+
     public GetInAppTemplateResponse withInAppTemplateResponse(InAppTemplateResponse inAppTemplateResponse) {
         this.inAppTemplateResponse = inAppTemplateResponse;
         return this;
     }
     
+    public GetInAppTemplateResponse(@JsonProperty("InAppTemplateResponse") InAppTemplateResponse inAppTemplateResponse) {
+        this.inAppTemplateResponse = inAppTemplateResponse;
+  }
 }

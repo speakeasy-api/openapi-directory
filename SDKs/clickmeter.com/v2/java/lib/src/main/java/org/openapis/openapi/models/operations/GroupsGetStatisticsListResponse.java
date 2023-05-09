@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GroupsGetStatisticsListResponse {
     
     public org.openapis.openapi.models.shared.ApiCoreResponsesEntitiesResponseApiCoreDtoAggregatedAggregatedResult apiCoreResponsesEntitiesResponseApiCoreDtoAggregatedAggregatedResult;
+
     public GroupsGetStatisticsListResponse withApiCoreResponsesEntitiesResponseApiCoreDtoAggregatedAggregatedResult(org.openapis.openapi.models.shared.ApiCoreResponsesEntitiesResponseApiCoreDtoAggregatedAggregatedResult apiCoreResponsesEntitiesResponseApiCoreDtoAggregatedAggregatedResult) {
         this.apiCoreResponsesEntitiesResponseApiCoreDtoAggregatedAggregatedResult = apiCoreResponsesEntitiesResponseApiCoreDtoAggregatedAggregatedResult;
         return this;
@@ -16,6 +18,7 @@ public class GroupsGetStatisticsListResponse {
     
     
     public String contentType;
+
     public GroupsGetStatisticsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GroupsGetStatisticsListResponse {
     
     
     public Integer statusCode;
+
     public GroupsGetStatisticsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GroupsGetStatisticsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GroupsGetStatisticsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GroupsGetStatisticsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

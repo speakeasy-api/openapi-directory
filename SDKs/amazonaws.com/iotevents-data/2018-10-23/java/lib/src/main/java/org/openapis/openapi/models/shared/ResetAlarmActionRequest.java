@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResetAlarmActionRequest {
     @JsonProperty("alarmModelName")
     public String alarmModelName;
+
     public ResetAlarmActionRequest withAlarmModelName(String alarmModelName) {
         this.alarmModelName = alarmModelName;
         return this;
@@ -22,6 +23,7 @@ public class ResetAlarmActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyValue")
     public String keyValue;
+
     public ResetAlarmActionRequest withKeyValue(String keyValue) {
         this.keyValue = keyValue;
         return this;
@@ -30,6 +32,7 @@ public class ResetAlarmActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public ResetAlarmActionRequest withNote(String note) {
         this.note = note;
         return this;
@@ -37,9 +40,14 @@ public class ResetAlarmActionRequest {
     
     @JsonProperty("requestId")
     public String requestId;
+
     public ResetAlarmActionRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public ResetAlarmActionRequest(@JsonProperty("alarmModelName") String alarmModelName, @JsonProperty("requestId") String requestId) {
+        this.alarmModelName = alarmModelName;
+        this.requestId = requestId;
+  }
 }

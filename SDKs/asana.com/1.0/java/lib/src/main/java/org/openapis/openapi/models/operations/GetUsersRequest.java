@@ -13,6 +13,7 @@ public class GetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetUsersRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -25,6 +26,7 @@ public class GetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetUsersRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -37,6 +39,7 @@ public class GetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetUsersRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -48,6 +51,7 @@ public class GetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetUsersRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -58,6 +62,7 @@ public class GetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
     public String team;
+
     public GetUsersRequest withTeam(String team) {
         this.team = team;
         return this;
@@ -68,9 +73,11 @@ public class GetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workspace")
     public String workspace;
+
     public GetUsersRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetUsersRequest(){}
 }

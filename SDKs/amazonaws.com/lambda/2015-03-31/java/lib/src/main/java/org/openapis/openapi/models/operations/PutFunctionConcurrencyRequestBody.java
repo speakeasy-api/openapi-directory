@@ -12,9 +12,13 @@ public class PutFunctionConcurrencyRequestBody {
      */
     @JsonProperty("ReservedConcurrentExecutions")
     public Long reservedConcurrentExecutions;
+
     public PutFunctionConcurrencyRequestBody withReservedConcurrentExecutions(Long reservedConcurrentExecutions) {
         this.reservedConcurrentExecutions = reservedConcurrentExecutions;
         return this;
     }
     
+    public PutFunctionConcurrencyRequestBody(@JsonProperty("ReservedConcurrentExecutions") Long reservedConcurrentExecutions) {
+        this.reservedConcurrentExecutions = reservedConcurrentExecutions;
+  }
 }

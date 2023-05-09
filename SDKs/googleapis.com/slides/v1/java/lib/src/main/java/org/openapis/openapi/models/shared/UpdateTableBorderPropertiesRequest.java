@@ -18,6 +18,7 @@ public class UpdateTableBorderPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("borderPosition")
     public UpdateTableBorderPropertiesRequestBorderPositionEnum borderPosition;
+
     public UpdateTableBorderPropertiesRequest withBorderPosition(UpdateTableBorderPropertiesRequestBorderPositionEnum borderPosition) {
         this.borderPosition = borderPosition;
         return this;
@@ -29,6 +30,7 @@ public class UpdateTableBorderPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateTableBorderPropertiesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -40,6 +42,7 @@ public class UpdateTableBorderPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public UpdateTableBorderPropertiesRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -51,6 +54,7 @@ public class UpdateTableBorderPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableBorderProperties")
     public TableBorderProperties tableBorderProperties;
+
     public UpdateTableBorderPropertiesRequest withTableBorderProperties(TableBorderProperties tableBorderProperties) {
         this.tableBorderProperties = tableBorderProperties;
         return this;
@@ -62,9 +66,11 @@ public class UpdateTableBorderPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableRange")
     public TableRange tableRange;
+
     public UpdateTableBorderPropertiesRequest withTableRange(TableRange tableRange) {
         this.tableRange = tableRange;
         return this;
     }
     
+    public UpdateTableBorderPropertiesRequest(){}
 }

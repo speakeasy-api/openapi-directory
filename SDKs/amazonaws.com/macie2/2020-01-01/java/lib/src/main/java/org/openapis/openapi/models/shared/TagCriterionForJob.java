@@ -15,6 +15,7 @@ public class TagCriterionForJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparator")
     public JobComparatorEnum comparator;
+
     public TagCriterionForJob withComparator(JobComparatorEnum comparator) {
         this.comparator = comparator;
         return this;
@@ -23,9 +24,11 @@ public class TagCriterionForJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagValues")
     public TagCriterionPairForJob[] tagValues;
+
     public TagCriterionForJob withTagValues(TagCriterionPairForJob[] tagValues) {
         this.tagValues = tagValues;
         return this;
     }
     
+    public TagCriterionForJob(){}
 }

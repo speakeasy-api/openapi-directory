@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInlinePolicyForPermissionSetRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetInlinePolicyForPermissionSetRequest getInlinePolicyForPermissionSetRequest;
+
     public GetInlinePolicyForPermissionSetRequest withGetInlinePolicyForPermissionSetRequest(org.openapis.openapi.models.shared.GetInlinePolicyForPermissionSetRequest getInlinePolicyForPermissionSetRequest) {
         this.getInlinePolicyForPermissionSetRequest = getInlinePolicyForPermissionSetRequest;
         return this;
@@ -16,6 +18,7 @@ public class GetInlinePolicyForPermissionSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetInlinePolicyForPermissionSetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class GetInlinePolicyForPermissionSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetInlinePolicyForPermissionSetRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class GetInlinePolicyForPermissionSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetInlinePolicyForPermissionSetRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class GetInlinePolicyForPermissionSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetInlinePolicyForPermissionSetRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class GetInlinePolicyForPermissionSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetInlinePolicyForPermissionSetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class GetInlinePolicyForPermissionSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetInlinePolicyForPermissionSetRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class GetInlinePolicyForPermissionSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetInlinePolicyForPermissionSetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class GetInlinePolicyForPermissionSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public GetInlinePolicyForPermissionSetXAmzTargetEnum xAmzTarget;
+
     public GetInlinePolicyForPermissionSetRequest withXAmzTarget(GetInlinePolicyForPermissionSetXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public GetInlinePolicyForPermissionSetRequest(@JsonProperty("GetInlinePolicyForPermissionSetRequest") org.openapis.openapi.models.shared.GetInlinePolicyForPermissionSetRequest getInlinePolicyForPermissionSetRequest, @JsonProperty("X-Amz-Target") GetInlinePolicyForPermissionSetXAmzTargetEnum xAmzTarget) {
+        this.getInlinePolicyForPermissionSetRequest = getInlinePolicyForPermissionSetRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

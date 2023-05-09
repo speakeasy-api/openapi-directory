@@ -22,6 +22,7 @@ public class DetectorModelSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public DetectorModelSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DetectorModelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectorModelDescription")
     public String detectorModelDescription;
+
     public DetectorModelSummary withDetectorModelDescription(String detectorModelDescription) {
         this.detectorModelDescription = detectorModelDescription;
         return this;
@@ -38,9 +40,11 @@ public class DetectorModelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectorModelName")
     public String detectorModelName;
+
     public DetectorModelSummary withDetectorModelName(String detectorModelName) {
         this.detectorModelName = detectorModelName;
         return this;
     }
     
+    public DetectorModelSummary(){}
 }

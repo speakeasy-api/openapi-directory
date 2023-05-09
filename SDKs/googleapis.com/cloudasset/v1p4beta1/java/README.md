@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicySecurity;
 import org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyRequest;
 import org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyResponse;
+import org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicySecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -29,12 +28,11 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CloudassetAnalyzeIamPolicyRequest req = new CloudassetAnalyzeIamPolicyRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
+            CloudassetAnalyzeIamPolicyRequest req = new CloudassetAnalyzeIamPolicyRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
                 analysisQueryAccessSelectorPermissions = new String[]{{
-                    add("unde"),
                     add("nulla"),
                     add("corrupti"),
                     add("illum"),
@@ -56,24 +54,25 @@ public class Application {
                 optionsExpandRoles = false;
                 optionsOutputGroupEdges = false;
                 optionsOutputResourceEdges = false;
-                parent = "suscipit";
                 prettyPrint = false;
-                quotaUser = "molestiae";
-                uploadType = "minus";
-                uploadProtocol = "placeat";
-            }}            
+                quotaUser = "suscipit";
+                uploadType = "molestiae";
+                uploadProtocol = "minus";
+            }};            
 
-            CloudassetAnalyzeIamPolicyResponse res = sdk.v1p4beta1.cloudassetAnalyzeIamPolicy(req, new CloudassetAnalyzeIamPolicySecurity() {{
+            CloudassetAnalyzeIamPolicyResponse res = sdk.v1p4beta1.cloudassetAnalyzeIamPolicy(req, new CloudassetAnalyzeIamPolicySecurity("placeat", "voluptatum") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.analyzeIamPolicyResponse.isPresent()) {
+            if (res.analyzeIamPolicyResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -81,10 +80,10 @@ public class Application {
 ## Available Resources and Operations
 
 
-### v1p4beta1
+### [v1p4beta1](docs/v1p4beta1/README.md)
 
-* `cloudassetAnalyzeIamPolicy` - Analyzes IAM policies to answer which identities have what accesses on which resources.
-* `cloudassetExportIamPolicyAnalysis` - Exports the answers of which identities have what accesses on which resources to a Google Cloud Storage destination. The output format is the JSON format that represents a AnalyzeIamPolicyResponse in the JSON format. This method implements the google.longrunning.Operation, which allows you to keep track of the export. We recommend intervals of at least 2 seconds with exponential retry to poll the export operation result. The metadata contains the request to help callers to map responses to requests.
+* [cloudassetAnalyzeIamPolicy](docs/v1p4beta1/README.md#cloudassetanalyzeiampolicy) - Analyzes IAM policies to answer which identities have what accesses on which resources.
+* [cloudassetExportIamPolicyAnalysis](docs/v1p4beta1/README.md#cloudassetexportiampolicyanalysis) - Exports the answers of which identities have what accesses on which resources to a Google Cloud Storage destination. The output format is the JSON format that represents a AnalyzeIamPolicyResponse in the JSON format. This method implements the google.longrunning.Operation, which allows you to keep track of the export. We recommend intervals of at least 2 seconds with exponential retry to poll the export operation result. The metadata contains the request to help callers to map responses to requests.
 <!-- End SDK Available Operations -->
 
 ### Maturity

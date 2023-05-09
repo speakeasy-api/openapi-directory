@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MetastoreProjectsLocationsServicesRemoveIamPolicyResponse {
     
     public String contentType;
+
     public MetastoreProjectsLocationsServicesRemoveIamPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MetastoreProjectsLocationsServicesRemoveIamPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.RemoveIamPolicyResponse removeIamPolicyResponse;
+
     public MetastoreProjectsLocationsServicesRemoveIamPolicyResponse withRemoveIamPolicyResponse(org.openapis.openapi.models.shared.RemoveIamPolicyResponse removeIamPolicyResponse) {
         this.removeIamPolicyResponse = removeIamPolicyResponse;
         return this;
@@ -26,6 +29,7 @@ public class MetastoreProjectsLocationsServicesRemoveIamPolicyResponse {
     
     
     public Integer statusCode;
+
     public MetastoreProjectsLocationsServicesRemoveIamPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MetastoreProjectsLocationsServicesRemoveIamPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MetastoreProjectsLocationsServicesRemoveIamPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MetastoreProjectsLocationsServicesRemoveIamPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

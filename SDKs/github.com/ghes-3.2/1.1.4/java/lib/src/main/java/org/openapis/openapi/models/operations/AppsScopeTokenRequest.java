@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsScopeTokenRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public AppsScopeTokenRequestBody requestBody;
+
     public AppsScopeTokenRequest withRequestBody(AppsScopeTokenRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class AppsScopeTokenRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_id")
     public String clientId;
+
     public AppsScopeTokenRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }
     
+    public AppsScopeTokenRequest(@JsonProperty("RequestBody") AppsScopeTokenRequestBody requestBody, @JsonProperty("client_id") String clientId) {
+        this.requestBody = requestBody;
+        this.clientId = clientId;
+  }
 }

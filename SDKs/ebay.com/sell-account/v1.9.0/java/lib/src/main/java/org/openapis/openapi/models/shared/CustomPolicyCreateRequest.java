@@ -18,6 +18,7 @@ public class CustomPolicyCreateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CustomPolicyCreateRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class CustomPolicyCreateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public CustomPolicyCreateRequest withLabel(String label) {
         this.label = label;
         return this;
@@ -40,6 +42,7 @@ public class CustomPolicyCreateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomPolicyCreateRequest withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class CustomPolicyCreateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyType")
     public String policyType;
+
     public CustomPolicyCreateRequest withPolicyType(String policyType) {
         this.policyType = policyType;
         return this;
     }
     
+    public CustomPolicyCreateRequest(){}
 }

@@ -15,9 +15,11 @@ public class IsVpcPeeredResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPeered")
     public Boolean isPeered;
+
     public IsVpcPeeredResult withIsPeered(Boolean isPeered) {
         this.isPeered = isPeered;
         return this;
     }
     
+    public IsVpcPeeredResult(){}
 }

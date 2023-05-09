@@ -55,12 +55,10 @@ public class ProjectDocument {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateProjectDocumentResponse res = new org.openapis.openapi.models.operations.CreateProjectDocumentResponse() {{
+        org.openapis.openapi.models.operations.CreateProjectDocumentResponse res = new org.openapis.openapi.models.operations.CreateProjectDocumentResponse(contentType, httpRes.statusCode()) {{
             documentList = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,12 +101,10 @@ public class ProjectDocument {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteProjectDocumentResponse res = new org.openapis.openapi.models.operations.DeleteProjectDocumentResponse() {{
+        org.openapis.openapi.models.operations.DeleteProjectDocumentResponse res = new org.openapis.openapi.models.operations.DeleteProjectDocumentResponse(contentType, httpRes.statusCode()) {{
             operationStatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,12 +147,10 @@ public class ProjectDocument {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DownloadProjectDocumentResponse res = new org.openapis.openapi.models.operations.DownloadProjectDocumentResponse() {{
+        org.openapis.openapi.models.operations.DownloadProjectDocumentResponse res = new org.openapis.openapi.models.operations.DownloadProjectDocumentResponse(contentType, httpRes.statusCode()) {{
             downloadProjectDocument200ApplicationJSONString = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,12 +198,10 @@ public class ProjectDocument {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DownloadTranslatedDocumentForLanguageResponse res = new org.openapis.openapi.models.operations.DownloadTranslatedDocumentForLanguageResponse() {{
+        org.openapis.openapi.models.operations.DownloadTranslatedDocumentForLanguageResponse res = new org.openapis.openapi.models.operations.DownloadTranslatedDocumentForLanguageResponse(contentType, httpRes.statusCode()) {{
             downloadTranslatedDocumentForLanguage200ApplicationOctetStreamBinaryString = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -257,12 +249,10 @@ public class ProjectDocument {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProjectDocumentResponse res = new org.openapis.openapi.models.operations.GetProjectDocumentResponse() {{
+        org.openapis.openapi.models.operations.GetProjectDocumentResponse res = new org.openapis.openapi.models.operations.GetProjectDocumentResponse(contentType, httpRes.statusCode()) {{
             document = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -311,12 +301,10 @@ public class ProjectDocument {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProjectDocumentsResponse res = new org.openapis.openapi.models.operations.GetProjectDocumentsResponse() {{
+        org.openapis.openapi.models.operations.GetProjectDocumentsResponse res = new org.openapis.openapi.models.operations.GetProjectDocumentsResponse(contentType, httpRes.statusCode()) {{
             documentList = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -361,12 +349,10 @@ public class ProjectDocument {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateProjectDocumentJsonResponse res = new org.openapis.openapi.models.operations.UpdateProjectDocumentJsonResponse() {{
+        org.openapis.openapi.models.operations.UpdateProjectDocumentJsonResponse res = new org.openapis.openapi.models.operations.UpdateProjectDocumentJsonResponse(contentType, httpRes.statusCode()) {{
             document = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -411,12 +397,10 @@ public class ProjectDocument {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateProjectDocumentMultipartResponse res = new org.openapis.openapi.models.operations.UpdateProjectDocumentMultipartResponse() {{
+        org.openapis.openapi.models.operations.UpdateProjectDocumentMultipartResponse res = new org.openapis.openapi.models.operations.UpdateProjectDocumentMultipartResponse(contentType, httpRes.statusCode()) {{
             document = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

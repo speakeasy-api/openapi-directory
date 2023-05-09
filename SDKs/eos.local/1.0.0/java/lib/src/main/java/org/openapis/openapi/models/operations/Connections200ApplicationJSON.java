@@ -15,6 +15,7 @@ public class Connections200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connecting")
     public Boolean connecting;
+
     public Connections200ApplicationJSON withConnecting(Boolean connecting) {
         this.connecting = connecting;
         return this;
@@ -26,6 +27,7 @@ public class Connections200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_handshake")
     public Connections200ApplicationJSONLastHandshake lastHandshake;
+
     public Connections200ApplicationJSON withLastHandshake(Connections200ApplicationJSONLastHandshake lastHandshake) {
         this.lastHandshake = lastHandshake;
         return this;
@@ -37,6 +39,7 @@ public class Connections200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peer")
     public String peer;
+
     public Connections200ApplicationJSON withPeer(String peer) {
         this.peer = peer;
         return this;
@@ -48,9 +51,11 @@ public class Connections200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncing")
     public Boolean syncing;
+
     public Connections200ApplicationJSON withSyncing(Boolean syncing) {
         this.syncing = syncing;
         return this;
     }
     
+    public Connections200ApplicationJSON(){}
 }

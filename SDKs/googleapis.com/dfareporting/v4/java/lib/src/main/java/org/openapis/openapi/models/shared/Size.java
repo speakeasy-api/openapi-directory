@@ -18,6 +18,7 @@ public class Size {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Integer height;
+
     public Size withHeight(Integer height) {
         this.height = height;
         return this;
@@ -29,6 +30,7 @@ public class Size {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iab")
     public Boolean iab;
+
     public Size withIab(Boolean iab) {
         this.iab = iab;
         return this;
@@ -40,6 +42,7 @@ public class Size {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Size withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class Size {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Size withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,9 +66,11 @@ public class Size {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Integer width;
+
     public Size withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public Size(){}
 }

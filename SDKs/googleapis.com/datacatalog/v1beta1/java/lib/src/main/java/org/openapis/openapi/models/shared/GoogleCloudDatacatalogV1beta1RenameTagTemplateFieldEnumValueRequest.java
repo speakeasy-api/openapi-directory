@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1beta1RenameTagTemplateFieldEnumValueRequest
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newEnumValueDisplayName")
     public String newEnumValueDisplayName;
+
     public GoogleCloudDatacatalogV1beta1RenameTagTemplateFieldEnumValueRequest withNewEnumValueDisplayName(String newEnumValueDisplayName) {
         this.newEnumValueDisplayName = newEnumValueDisplayName;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1RenameTagTemplateFieldEnumValueRequest(){}
 }

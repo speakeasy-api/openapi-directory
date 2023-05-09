@@ -18,9 +18,11 @@ public class BatchGetLocationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationNames")
     public String[] locationNames;
+
     public BatchGetLocationsRequest withLocationNames(String[] locationNames) {
         this.locationNames = locationNames;
         return this;
     }
     
+    public BatchGetLocationsRequest(){}
 }

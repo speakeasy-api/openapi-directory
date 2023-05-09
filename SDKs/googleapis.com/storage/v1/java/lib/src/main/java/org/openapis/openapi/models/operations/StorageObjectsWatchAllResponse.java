@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StorageObjectsWatchAllResponse {
@@ -12,6 +13,7 @@ public class StorageObjectsWatchAllResponse {
      */
     
     public org.openapis.openapi.models.shared.Channel channel;
+
     public StorageObjectsWatchAllResponse withChannel(org.openapis.openapi.models.shared.Channel channel) {
         this.channel = channel;
         return this;
@@ -19,6 +21,7 @@ public class StorageObjectsWatchAllResponse {
     
     
     public String contentType;
+
     public StorageObjectsWatchAllResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class StorageObjectsWatchAllResponse {
     
     
     public Integer statusCode;
+
     public StorageObjectsWatchAllResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class StorageObjectsWatchAllResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StorageObjectsWatchAllResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StorageObjectsWatchAllResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

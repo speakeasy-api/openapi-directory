@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestAlarmResponse {
@@ -12,6 +13,7 @@ public class TestAlarmResponse {
      */
     
     public Object accessDeniedException;
+
     public TestAlarmResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class TestAlarmResponse {
     
     
     public String contentType;
+
     public TestAlarmResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class TestAlarmResponse {
      */
     
     public Object invalidInputException;
+
     public TestAlarmResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class TestAlarmResponse {
      */
     
     public Object notFoundException;
+
     public TestAlarmResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -49,6 +54,7 @@ public class TestAlarmResponse {
      */
     
     public Object operationFailureException;
+
     public TestAlarmResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -56,6 +62,7 @@ public class TestAlarmResponse {
     
     
     public Integer statusCode;
+
     public TestAlarmResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class TestAlarmResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestAlarmResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class TestAlarmResponse {
      */
     
     public Object serviceException;
+
     public TestAlarmResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -83,6 +92,7 @@ public class TestAlarmResponse {
      */
     
     public org.openapis.openapi.models.shared.TestAlarmResult testAlarmResult;
+
     public TestAlarmResponse withTestAlarmResult(org.openapis.openapi.models.shared.TestAlarmResult testAlarmResult) {
         this.testAlarmResult = testAlarmResult;
         return this;
@@ -93,9 +103,14 @@ public class TestAlarmResponse {
      */
     
     public Object unauthenticatedException;
+
     public TestAlarmResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public TestAlarmResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

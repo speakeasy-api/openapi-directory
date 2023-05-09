@@ -15,9 +15,11 @@ public class Replica {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegionName")
     public String regionName;
+
     public Replica withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
     }
     
+    public Replica(){}
 }

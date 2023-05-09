@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DirectoryChromeosdevicesListRequest {
@@ -12,6 +13,7 @@ public class DirectoryChromeosdevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DirectoryChromeosdevicesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DirectoryChromeosdevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DirectoryChromeosdevicesListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DirectoryChromeosdevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DirectoryChromeosdevicesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DirectoryChromeosdevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DirectoryChromeosdevicesListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DirectoryChromeosdevicesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
     public String customerId;
+
     public DirectoryChromeosdevicesListRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -62,6 +68,7 @@ public class DirectoryChromeosdevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DirectoryChromeosdevicesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class DirectoryChromeosdevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeChildOrgunits")
     public Boolean includeChildOrgunits;
+
     public DirectoryChromeosdevicesListRequest withIncludeChildOrgunits(Boolean includeChildOrgunits) {
         this.includeChildOrgunits = includeChildOrgunits;
         return this;
@@ -82,6 +90,7 @@ public class DirectoryChromeosdevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DirectoryChromeosdevicesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class DirectoryChromeosdevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public DirectoryChromeosdevicesListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -102,6 +112,7 @@ public class DirectoryChromeosdevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DirectoryChromeosdevicesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class DirectoryChromeosdevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public DirectoryChromeosdevicesListOrderByEnum orderBy;
+
     public DirectoryChromeosdevicesListRequest withOrderBy(DirectoryChromeosdevicesListOrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -122,6 +134,7 @@ public class DirectoryChromeosdevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orgUnitPath")
     public String orgUnitPath;
+
     public DirectoryChromeosdevicesListRequest withOrgUnitPath(String orgUnitPath) {
         this.orgUnitPath = orgUnitPath;
         return this;
@@ -132,6 +145,7 @@ public class DirectoryChromeosdevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DirectoryChromeosdevicesListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -142,6 +156,7 @@ public class DirectoryChromeosdevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DirectoryChromeosdevicesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -152,6 +167,7 @@ public class DirectoryChromeosdevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
     public DirectoryChromeosdevicesListProjectionEnum projection;
+
     public DirectoryChromeosdevicesListRequest withProjection(DirectoryChromeosdevicesListProjectionEnum projection) {
         this.projection = projection;
         return this;
@@ -162,6 +178,7 @@ public class DirectoryChromeosdevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public DirectoryChromeosdevicesListRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -172,6 +189,7 @@ public class DirectoryChromeosdevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DirectoryChromeosdevicesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -182,6 +200,7 @@ public class DirectoryChromeosdevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
     public DirectoryChromeosdevicesListSortOrderEnum sortOrder;
+
     public DirectoryChromeosdevicesListRequest withSortOrder(DirectoryChromeosdevicesListSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -192,6 +211,7 @@ public class DirectoryChromeosdevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DirectoryChromeosdevicesListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -202,9 +222,13 @@ public class DirectoryChromeosdevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DirectoryChromeosdevicesListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DirectoryChromeosdevicesListRequest(@JsonProperty("customerId") String customerId) {
+        this.customerId = customerId;
+  }
 }

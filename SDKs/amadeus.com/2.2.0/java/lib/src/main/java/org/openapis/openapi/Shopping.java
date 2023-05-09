@@ -57,13 +57,11 @@ public class Shopping {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFlightOffersResponse res = new org.openapis.openapi.models.operations.GetFlightOffersResponse() {{
+        org.openapis.openapi.models.operations.GetFlightOffersResponse res = new org.openapis.openapi.models.operations.GetFlightOffersResponse(contentType, httpRes.statusCode()) {{
             success = null;
             error400 = null;
             error500 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,13 +122,11 @@ public class Shopping {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchFlightOffersResponse res = new org.openapis.openapi.models.operations.SearchFlightOffersResponse() {{
+        org.openapis.openapi.models.operations.SearchFlightOffersResponse res = new org.openapis.openapi.models.operations.SearchFlightOffersResponse(contentType, httpRes.statusCode()) {{
             success = null;
             error400 = null;
             error500 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

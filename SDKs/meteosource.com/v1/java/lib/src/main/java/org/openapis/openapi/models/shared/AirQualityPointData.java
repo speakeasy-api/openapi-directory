@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AirQualityPointData {
     @JsonProperty("data")
     public AirQualityPointHourlyData[] data;
+
     public AirQualityPointData withData(AirQualityPointHourlyData[] data) {
         this.data = data;
         return this;
@@ -24,6 +25,7 @@ public class AirQualityPointData {
      */
     @JsonProperty("elevation")
     public Long elevation;
+
     public AirQualityPointData withElevation(Long elevation) {
         this.elevation = elevation;
         return this;
@@ -34,6 +36,7 @@ public class AirQualityPointData {
      */
     @JsonProperty("lat")
     public String lat;
+
     public AirQualityPointData withLat(String lat) {
         this.lat = lat;
         return this;
@@ -44,6 +47,7 @@ public class AirQualityPointData {
      */
     @JsonProperty("lon")
     public String lon;
+
     public AirQualityPointData withLon(String lon) {
         this.lon = lon;
         return this;
@@ -55,9 +59,16 @@ public class AirQualityPointData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public AirQualityPointData withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public AirQualityPointData(@JsonProperty("data") AirQualityPointHourlyData[] data, @JsonProperty("elevation") Long elevation, @JsonProperty("lat") String lat, @JsonProperty("lon") String lon) {
+        this.data = data;
+        this.elevation = elevation;
+        this.lat = lat;
+        this.lon = lon;
+  }
 }

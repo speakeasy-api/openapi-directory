@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEventSubscriptionResponse {
     
     public String contentType;
+
     public DeleteEventSubscriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteEventSubscriptionResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteEventSubscriptionResponse deleteEventSubscriptionResponse;
+
     public DeleteEventSubscriptionResponse withDeleteEventSubscriptionResponse(org.openapis.openapi.models.shared.DeleteEventSubscriptionResponse deleteEventSubscriptionResponse) {
         this.deleteEventSubscriptionResponse = deleteEventSubscriptionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEventSubscriptionResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public DeleteEventSubscriptionResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -39,6 +43,7 @@ public class DeleteEventSubscriptionResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public DeleteEventSubscriptionResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -46,6 +51,7 @@ public class DeleteEventSubscriptionResponse {
     
     
     public Integer statusCode;
+
     public DeleteEventSubscriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteEventSubscriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEventSubscriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteEventSubscriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

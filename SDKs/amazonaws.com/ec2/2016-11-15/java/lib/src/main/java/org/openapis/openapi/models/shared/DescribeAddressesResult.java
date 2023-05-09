@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeAddressesResult {
     
     public DescribeAddressesResultAddresses[] addresses;
+
     public DescribeAddressesResult withAddresses(DescribeAddressesResultAddresses[] addresses) {
         this.addresses = addresses;
         return this;
     }
     
+    public DescribeAddressesResult(){}
 }

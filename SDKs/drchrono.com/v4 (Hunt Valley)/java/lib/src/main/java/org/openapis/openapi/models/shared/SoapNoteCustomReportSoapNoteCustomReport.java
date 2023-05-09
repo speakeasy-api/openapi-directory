@@ -18,6 +18,7 @@ public class SoapNoteCustomReportSoapNoteCustomReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("on_complete_note")
     public Long onCompleteNote;
+
     public SoapNoteCustomReportSoapNoteCustomReport withOnCompleteNote(Long onCompleteNote) {
         this.onCompleteNote = onCompleteNote;
         return this;
@@ -29,9 +30,11 @@ public class SoapNoteCustomReportSoapNoteCustomReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("on_ipad")
     public Long onIpad;
+
     public SoapNoteCustomReportSoapNoteCustomReport withOnIpad(Long onIpad) {
         this.onIpad = onIpad;
         return this;
     }
     
+    public SoapNoteCustomReportSoapNoteCustomReport(){}
 }

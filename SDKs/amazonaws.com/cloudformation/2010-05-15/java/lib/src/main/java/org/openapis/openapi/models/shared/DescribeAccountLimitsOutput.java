@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAccountLimitsOutput {
     
     public AccountLimit[] accountLimits;
+
     public DescribeAccountLimitsOutput withAccountLimits(AccountLimit[] accountLimits) {
         this.accountLimits = accountLimits;
         return this;
@@ -19,9 +20,11 @@ public class DescribeAccountLimitsOutput {
     
     
     public String nextToken;
+
     public DescribeAccountLimitsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAccountLimitsOutput(){}
 }

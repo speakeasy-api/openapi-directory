@@ -15,9 +15,11 @@ public class GetGrantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Grant")
     public Grant grant;
+
     public GetGrantResponse withGrant(Grant grant) {
         this.grant = grant;
         return this;
     }
     
+    public GetGrantResponse(){}
 }

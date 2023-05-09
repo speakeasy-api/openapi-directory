@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCompaniesCompanyIdTerminalProductsResponse {
     
     public String contentType;
+
     public GetCompaniesCompanyIdTerminalProductsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetCompaniesCompanyIdTerminalProductsResponse {
     
     
     public Integer statusCode;
+
     public GetCompaniesCompanyIdTerminalProductsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetCompaniesCompanyIdTerminalProductsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCompaniesCompanyIdTerminalProductsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetCompaniesCompanyIdTerminalProductsResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public GetCompaniesCompanyIdTerminalProductsResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -43,9 +48,14 @@ public class GetCompaniesCompanyIdTerminalProductsResponse {
      */
     
     public org.openapis.openapi.models.shared.TerminalProductsResponse terminalProductsResponse;
+
     public GetCompaniesCompanyIdTerminalProductsResponse withTerminalProductsResponse(org.openapis.openapi.models.shared.TerminalProductsResponse terminalProductsResponse) {
         this.terminalProductsResponse = terminalProductsResponse;
         return this;
     }
     
+    public GetCompaniesCompanyIdTerminalProductsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

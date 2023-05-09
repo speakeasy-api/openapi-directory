@@ -15,6 +15,7 @@ public class ConnectorCategory {
      */
     @JsonProperty("id")
     public Long id;
+
     public ConnectorCategory withId(Long id) {
         this.id = id;
         return this;
@@ -25,9 +26,14 @@ public class ConnectorCategory {
      */
     @JsonProperty("name")
     public String name;
+
     public ConnectorCategory withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ConnectorCategory(@JsonProperty("id") Long id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

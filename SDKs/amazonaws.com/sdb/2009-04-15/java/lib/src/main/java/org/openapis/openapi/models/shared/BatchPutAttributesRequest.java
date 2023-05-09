@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class BatchPutAttributesRequest {
     
     public String domainName;
+
     public BatchPutAttributesRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -16,9 +17,14 @@ public class BatchPutAttributesRequest {
     
     
     public ReplaceableItemList[] items;
+
     public BatchPutAttributesRequest withItems(ReplaceableItemList[] items) {
         this.items = items;
         return this;
     }
     
+    public BatchPutAttributesRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("Items") ReplaceableItemList[] items) {
+        this.domainName = domainName;
+        this.items = items;
+  }
 }

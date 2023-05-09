@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class TrendingTrendingEntryCommunityCreation {
     
     public String author;
+
     public TrendingTrendingEntryCommunityCreation withAuthor(String author) {
         this.author = author;
         return this;
@@ -16,6 +17,7 @@ public class TrendingTrendingEntryCommunityCreation {
     
     
     public Long authorMembershipId;
+
     public TrendingTrendingEntryCommunityCreation withAuthorMembershipId(Long authorMembershipId) {
         this.authorMembershipId = authorMembershipId;
         return this;
@@ -23,6 +25,7 @@ public class TrendingTrendingEntryCommunityCreation {
     
     
     public String body;
+
     public TrendingTrendingEntryCommunityCreation withBody(String body) {
         this.body = body;
         return this;
@@ -30,6 +33,7 @@ public class TrendingTrendingEntryCommunityCreation {
     
     
     public String media;
+
     public TrendingTrendingEntryCommunityCreation withMedia(String media) {
         this.media = media;
         return this;
@@ -37,6 +41,7 @@ public class TrendingTrendingEntryCommunityCreation {
     
     
     public Long postId;
+
     public TrendingTrendingEntryCommunityCreation withPostId(Long postId) {
         this.postId = postId;
         return this;
@@ -44,6 +49,7 @@ public class TrendingTrendingEntryCommunityCreation {
     
     
     public String title;
+
     public TrendingTrendingEntryCommunityCreation withTitle(String title) {
         this.title = title;
         return this;
@@ -51,9 +57,11 @@ public class TrendingTrendingEntryCommunityCreation {
     
     
     public Integer upvotes;
+
     public TrendingTrendingEntryCommunityCreation withUpvotes(Integer upvotes) {
         this.upvotes = upvotes;
         return this;
     }
     
+    public TrendingTrendingEntryCommunityCreation(){}
 }

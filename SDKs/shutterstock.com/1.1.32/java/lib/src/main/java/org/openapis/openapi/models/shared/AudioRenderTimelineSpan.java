@@ -18,6 +18,7 @@ public class AudioRenderTimelineSpan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Double id;
+
     public AudioRenderTimelineSpan withId(Double id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class AudioRenderTimelineSpan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instrument_groups")
     public AudioRenderTimelineSpanInstrumentGroup[] instrumentGroups;
+
     public AudioRenderTimelineSpan withInstrumentGroups(AudioRenderTimelineSpanInstrumentGroup[] instrumentGroups) {
         this.instrumentGroups = instrumentGroups;
         return this;
@@ -40,6 +42,7 @@ public class AudioRenderTimelineSpan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regions")
     public AudioRenderTimelineSpanRegion[] regions;
+
     public AudioRenderTimelineSpan withRegions(AudioRenderTimelineSpanRegion[] regions) {
         this.regions = regions;
         return this;
@@ -50,6 +53,7 @@ public class AudioRenderTimelineSpan {
      */
     @JsonProperty("span_type")
     public AudioRenderTimelineSpanSpanTypeEnum spanType;
+
     public AudioRenderTimelineSpan withSpanType(AudioRenderTimelineSpanSpanTypeEnum spanType) {
         this.spanType = spanType;
         return this;
@@ -61,6 +65,7 @@ public class AudioRenderTimelineSpan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tempo")
     public Long tempo;
+
     public AudioRenderTimelineSpan withTempo(Long tempo) {
         this.tempo = tempo;
         return this;
@@ -72,6 +77,7 @@ public class AudioRenderTimelineSpan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tempo_changes")
     public AudioRenderTimelineSpanTempoChanges[] tempoChanges;
+
     public AudioRenderTimelineSpan withTempoChanges(AudioRenderTimelineSpanTempoChanges[] tempoChanges) {
         this.tempoChanges = tempoChanges;
         return this;
@@ -82,9 +88,14 @@ public class AudioRenderTimelineSpan {
      */
     @JsonProperty("time")
     public Long time;
+
     public AudioRenderTimelineSpan withTime(Long time) {
         this.time = time;
         return this;
     }
     
+    public AudioRenderTimelineSpan(@JsonProperty("span_type") AudioRenderTimelineSpanSpanTypeEnum spanType, @JsonProperty("time") Long time) {
+        this.spanType = spanType;
+        this.time = time;
+  }
 }

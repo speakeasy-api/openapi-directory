@@ -22,6 +22,7 @@ public class OTAUpdateSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public OTAUpdateSummary withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -30,6 +31,7 @@ public class OTAUpdateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otaUpdateArn")
     public String otaUpdateArn;
+
     public OTAUpdateSummary withOtaUpdateArn(String otaUpdateArn) {
         this.otaUpdateArn = otaUpdateArn;
         return this;
@@ -38,9 +40,11 @@ public class OTAUpdateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otaUpdateId")
     public String otaUpdateId;
+
     public OTAUpdateSummary withOtaUpdateId(String otaUpdateId) {
         this.otaUpdateId = otaUpdateId;
         return this;
     }
     
+    public OTAUpdateSummary(){}
 }

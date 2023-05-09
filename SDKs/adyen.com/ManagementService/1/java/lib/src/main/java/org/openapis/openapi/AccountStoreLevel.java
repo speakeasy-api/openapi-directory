@@ -64,12 +64,10 @@ public class AccountStoreLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresResponse(contentType, httpRes.statusCode()) {{
             listStoresResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -119,12 +117,10 @@ public class AccountStoreLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresStoreIdResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresStoreIdResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresStoreIdResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresStoreIdResponse(contentType, httpRes.statusCode()) {{
             store = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -180,12 +176,10 @@ public class AccountStoreLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStoresResponse res = new org.openapis.openapi.models.operations.GetStoresResponse() {{
+        org.openapis.openapi.models.operations.GetStoresResponse res = new org.openapis.openapi.models.operations.GetStoresResponse(contentType, httpRes.statusCode()) {{
             listStoresResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -233,12 +227,10 @@ public class AccountStoreLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStoresStoreIdResponse res = new org.openapis.openapi.models.operations.GetStoresStoreIdResponse() {{
+        org.openapis.openapi.models.operations.GetStoresStoreIdResponse res = new org.openapis.openapi.models.operations.GetStoresStoreIdResponse(contentType, httpRes.statusCode()) {{
             store = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -287,12 +279,10 @@ public class AccountStoreLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdStoresStoreIdResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdStoresStoreIdResponse() {{
+        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdStoresStoreIdResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdStoresStoreIdResponse(contentType, httpRes.statusCode()) {{
             store = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,12 +334,10 @@ public class AccountStoreLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchStoresStoreIdResponse res = new org.openapis.openapi.models.operations.PatchStoresStoreIdResponse() {{
+        org.openapis.openapi.models.operations.PatchStoresStoreIdResponse res = new org.openapis.openapi.models.operations.PatchStoresStoreIdResponse(contentType, httpRes.statusCode()) {{
             store = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -398,12 +386,10 @@ public class AccountStoreLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMerchantsMerchantIdStoresResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdStoresResponse() {{
+        org.openapis.openapi.models.operations.PostMerchantsMerchantIdStoresResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdStoresResponse(contentType, httpRes.statusCode()) {{
             store = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -454,12 +440,10 @@ public class AccountStoreLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostStoresResponse res = new org.openapis.openapi.models.operations.PostStoresResponse() {{
+        org.openapis.openapi.models.operations.PostStoresResponse res = new org.openapis.openapi.models.operations.PostStoresResponse(contentType, httpRes.statusCode()) {{
             store = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

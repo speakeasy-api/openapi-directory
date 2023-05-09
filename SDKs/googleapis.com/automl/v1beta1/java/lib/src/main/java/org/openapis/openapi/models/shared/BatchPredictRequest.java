@@ -18,6 +18,7 @@ public class BatchPredictRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputConfig")
     public BatchPredictInputConfig inputConfig;
+
     public BatchPredictRequest withInputConfig(BatchPredictInputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -29,6 +30,7 @@ public class BatchPredictRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputConfig")
     public BatchPredictOutputConfig outputConfig;
+
     public BatchPredictRequest withOutputConfig(BatchPredictOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -40,9 +42,11 @@ public class BatchPredictRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public java.util.Map<String, String> params;
+
     public BatchPredictRequest withParams(java.util.Map<String, String> params) {
         this.params = params;
         return this;
     }
     
+    public BatchPredictRequest(){}
 }

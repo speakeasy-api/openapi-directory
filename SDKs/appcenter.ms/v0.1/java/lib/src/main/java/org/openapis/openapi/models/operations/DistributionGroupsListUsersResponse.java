@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DistributionGroupsListUsersResponse {
     
     public String contentType;
+
     public DistributionGroupsListUsersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DistributionGroupsListUsersResponse {
     
     
     public Integer statusCode;
+
     public DistributionGroupsListUsersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DistributionGroupsListUsersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DistributionGroupsListUsersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DistributionGroupsListUsersResponse {
      */
     
     public DistributionGroupsListUsers200ApplicationJSON[] distributionGroupsListUsers200ApplicationJSONObjects;
+
     public DistributionGroupsListUsersResponse withDistributionGroupsListUsers200ApplicationJSONObjects(DistributionGroupsListUsers200ApplicationJSON[] distributionGroupsListUsers200ApplicationJSONObjects) {
         this.distributionGroupsListUsers200ApplicationJSONObjects = distributionGroupsListUsers200ApplicationJSONObjects;
         return this;
@@ -43,9 +48,14 @@ public class DistributionGroupsListUsersResponse {
      */
     
     public DistributionGroupsListUsersDefaultApplicationJSON distributionGroupsListUsersDefaultApplicationJSONObject;
+
     public DistributionGroupsListUsersResponse withDistributionGroupsListUsersDefaultApplicationJSONObject(DistributionGroupsListUsersDefaultApplicationJSON distributionGroupsListUsersDefaultApplicationJSONObject) {
         this.distributionGroupsListUsersDefaultApplicationJSONObject = distributionGroupsListUsersDefaultApplicationJSONObject;
         return this;
     }
     
+    public DistributionGroupsListUsersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ChaosConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("badResponsesFaultConfig")
     public BadResponsesFaultConfig badResponsesFaultConfig;
+
     public ChaosConfig withBadResponsesFaultConfig(BadResponsesFaultConfig badResponsesFaultConfig) {
         this.badResponsesFaultConfig = badResponsesFaultConfig;
         return this;
@@ -28,6 +29,7 @@ public class ChaosConfig {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ChaosConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -39,6 +41,7 @@ public class ChaosConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("largeRequestFaultConfig")
     public LargeRequestFaultConfig largeRequestFaultConfig;
+
     public ChaosConfig withLargeRequestFaultConfig(LargeRequestFaultConfig largeRequestFaultConfig) {
         this.largeRequestFaultConfig = largeRequestFaultConfig;
         return this;
@@ -50,6 +53,7 @@ public class ChaosConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("largeResponseFaultConfig")
     public LargeResponseFaultConfig largeResponseFaultConfig;
+
     public ChaosConfig withLargeResponseFaultConfig(LargeResponseFaultConfig largeResponseFaultConfig) {
         this.largeResponseFaultConfig = largeResponseFaultConfig;
         return this;
@@ -61,9 +65,13 @@ public class ChaosConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latencyInjectionFaultConfig")
     public LatencyInjectionFaultConfig latencyInjectionFaultConfig;
+
     public ChaosConfig withLatencyInjectionFaultConfig(LatencyInjectionFaultConfig latencyInjectionFaultConfig) {
         this.latencyInjectionFaultConfig = latencyInjectionFaultConfig;
         return this;
     }
     
+    public ChaosConfig(@JsonProperty("enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

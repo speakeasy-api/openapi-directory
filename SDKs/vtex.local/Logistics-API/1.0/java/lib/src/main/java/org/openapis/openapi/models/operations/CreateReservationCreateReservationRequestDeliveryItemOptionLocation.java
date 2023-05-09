@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateReservationCreateReservationRequestDeliveryItemOptionLocation {
     @JsonProperty("country")
     public String country;
+
     public CreateReservationCreateReservationRequestDeliveryItemOptionLocation withCountry(String country) {
         this.country = country;
         return this;
@@ -16,6 +17,7 @@ public class CreateReservationCreateReservationRequestDeliveryItemOptionLocation
     
     @JsonProperty("inStore")
     public CreateReservationCreateReservationRequestDeliveryItemOptionLocationInStore inStore;
+
     public CreateReservationCreateReservationRequestDeliveryItemOptionLocation withInStore(CreateReservationCreateReservationRequestDeliveryItemOptionLocationInStore inStore) {
         this.inStore = inStore;
         return this;
@@ -23,9 +25,15 @@ public class CreateReservationCreateReservationRequestDeliveryItemOptionLocation
     
     @JsonProperty("zipCode")
     public String zipCode;
+
     public CreateReservationCreateReservationRequestDeliveryItemOptionLocation withZipCode(String zipCode) {
         this.zipCode = zipCode;
         return this;
     }
     
+    public CreateReservationCreateReservationRequestDeliveryItemOptionLocation(@JsonProperty("country") String country, @JsonProperty("inStore") CreateReservationCreateReservationRequestDeliveryItemOptionLocationInStore inStore, @JsonProperty("zipCode") String zipCode) {
+        this.country = country;
+        this.inStore = inStore;
+        this.zipCode = zipCode;
+  }
 }

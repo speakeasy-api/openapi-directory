@@ -15,6 +15,7 @@ public class ListDataIntegrationAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataIntegrationAssociations")
     public DataIntegrationAssociationSummary[] dataIntegrationAssociations;
+
     public ListDataIntegrationAssociationsResponse withDataIntegrationAssociations(DataIntegrationAssociationSummary[] dataIntegrationAssociations) {
         this.dataIntegrationAssociations = dataIntegrationAssociations;
         return this;
@@ -23,9 +24,11 @@ public class ListDataIntegrationAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDataIntegrationAssociationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDataIntegrationAssociationsResponse(){}
 }

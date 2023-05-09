@@ -15,6 +15,7 @@ public class PostLoadBalancersIdActionsChangeDnsPtrChangeLoadbalancerDnsPtrReque
      */
     @JsonProperty("dns_ptr")
     public String dnsPtr;
+
     public PostLoadBalancersIdActionsChangeDnsPtrChangeLoadbalancerDnsPtrRequest withDnsPtr(String dnsPtr) {
         this.dnsPtr = dnsPtr;
         return this;
@@ -25,9 +26,14 @@ public class PostLoadBalancersIdActionsChangeDnsPtrChangeLoadbalancerDnsPtrReque
      */
     @JsonProperty("ip")
     public String ip;
+
     public PostLoadBalancersIdActionsChangeDnsPtrChangeLoadbalancerDnsPtrRequest withIp(String ip) {
         this.ip = ip;
         return this;
     }
     
+    public PostLoadBalancersIdActionsChangeDnsPtrChangeLoadbalancerDnsPtrRequest(@JsonProperty("dns_ptr") String dnsPtr, @JsonProperty("ip") String ip) {
+        this.dnsPtr = dnsPtr;
+        this.ip = ip;
+  }
 }

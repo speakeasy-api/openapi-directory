@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateWorkloadResponse {
@@ -12,6 +13,7 @@ public class UpdateWorkloadResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateWorkloadResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateWorkloadResponse {
      */
     
     public Object conflictException;
+
     public UpdateWorkloadResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateWorkloadResponse {
     
     
     public String contentType;
+
     public UpdateWorkloadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateWorkloadResponse {
      */
     
     public Object internalServerException;
+
     public UpdateWorkloadResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateWorkloadResponse {
     
     
     public Integer statusCode;
+
     public UpdateWorkloadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateWorkloadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateWorkloadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateWorkloadResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateWorkloadResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateWorkloadResponse {
      */
     
     public Object throttlingException;
+
     public UpdateWorkloadResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateWorkloadResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateWorkloadOutput updateWorkloadOutput;
+
     public UpdateWorkloadResponse withUpdateWorkloadOutput(org.openapis.openapi.models.shared.UpdateWorkloadOutput updateWorkloadOutput) {
         this.updateWorkloadOutput = updateWorkloadOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateWorkloadResponse {
      */
     
     public Object validationException;
+
     public UpdateWorkloadResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateWorkloadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

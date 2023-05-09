@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SqlInjectionMatchTuple {
     @JsonProperty("FieldToMatch")
     public FieldToMatch fieldToMatch;
+
     public SqlInjectionMatchTuple withFieldToMatch(FieldToMatch fieldToMatch) {
         this.fieldToMatch = fieldToMatch;
         return this;
@@ -19,9 +20,14 @@ public class SqlInjectionMatchTuple {
     
     @JsonProperty("TextTransformation")
     public TextTransformationEnum textTransformation;
+
     public SqlInjectionMatchTuple withTextTransformation(TextTransformationEnum textTransformation) {
         this.textTransformation = textTransformation;
         return this;
     }
     
+    public SqlInjectionMatchTuple(@JsonProperty("FieldToMatch") FieldToMatch fieldToMatch, @JsonProperty("TextTransformation") TextTransformationEnum textTransformation) {
+        this.fieldToMatch = fieldToMatch;
+        this.textTransformation = textTransformation;
+  }
 }

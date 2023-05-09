@@ -15,6 +15,7 @@ public class SitePlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public NameValuePair[] options;
+
     public SitePlan withOptions(NameValuePair[] options) {
         this.options = options;
         return this;
@@ -23,9 +24,11 @@ public class SitePlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceDefinitions")
     public NetworkResourceDefinition[] resourceDefinitions;
+
     public SitePlan withResourceDefinitions(NetworkResourceDefinition[] resourceDefinitions) {
         this.resourceDefinitions = resourceDefinitions;
         return this;
     }
     
+    public SitePlan(){}
 }

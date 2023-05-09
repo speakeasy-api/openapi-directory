@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class KendraConfiguration {
     @JsonProperty("kendraIndex")
     public String kendraIndex;
+
     public KendraConfiguration withKendraIndex(String kendraIndex) {
         this.kendraIndex = kendraIndex;
         return this;
@@ -22,6 +23,7 @@ public class KendraConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryFilterString")
     public String queryFilterString;
+
     public KendraConfiguration withQueryFilterString(String queryFilterString) {
         this.queryFilterString = queryFilterString;
         return this;
@@ -30,9 +32,13 @@ public class KendraConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryFilterStringEnabled")
     public Boolean queryFilterStringEnabled;
+
     public KendraConfiguration withQueryFilterStringEnabled(Boolean queryFilterStringEnabled) {
         this.queryFilterStringEnabled = queryFilterStringEnabled;
         return this;
     }
     
+    public KendraConfiguration(@JsonProperty("kendraIndex") String kendraIndex) {
+        this.kendraIndex = kendraIndex;
+  }
 }

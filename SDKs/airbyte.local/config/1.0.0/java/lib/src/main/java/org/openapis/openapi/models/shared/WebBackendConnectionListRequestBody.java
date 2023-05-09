@@ -12,6 +12,7 @@ public class WebBackendConnectionListRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationId")
     public String[] destinationId;
+
     public WebBackendConnectionListRequestBody withDestinationId(String[] destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -20,6 +21,7 @@ public class WebBackendConnectionListRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceId")
     public String[] sourceId;
+
     public WebBackendConnectionListRequestBody withSourceId(String[] sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -27,9 +29,13 @@ public class WebBackendConnectionListRequestBody {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public WebBackendConnectionListRequestBody withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public WebBackendConnectionListRequestBody(@JsonProperty("workspaceId") String workspaceId) {
+        this.workspaceId = workspaceId;
+  }
 }

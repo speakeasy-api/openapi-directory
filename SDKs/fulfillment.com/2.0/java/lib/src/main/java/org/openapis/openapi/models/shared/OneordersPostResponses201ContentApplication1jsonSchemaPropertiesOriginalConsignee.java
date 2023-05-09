@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee {
     @JsonProperty("address1")
     public String address1;
+
     public OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee withAddress1(String address1) {
         this.address1 = address1;
         return this;
@@ -24,6 +25,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOri
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address2")
     public String address2;
+
     public OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee withAddress2(String address2) {
         this.address2 = address2;
         return this;
@@ -34,6 +36,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOri
      */
     @JsonProperty("addressLocality")
     public String addressLocality;
+
     public OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee withAddressLocality(String addressLocality) {
         this.addressLocality = addressLocality;
         return this;
@@ -44,6 +47,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOri
      */
     @JsonProperty("addressRegion")
     public String addressRegion;
+
     public OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee withAddressRegion(String addressRegion) {
         this.addressRegion = addressRegion;
         return this;
@@ -52,6 +56,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOri
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyName")
     public String companyName;
+
     public OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -62,6 +67,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOri
      */
     @JsonProperty("country")
     public String country;
+
     public OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee withCountry(String country) {
         this.country = country;
         return this;
@@ -70,6 +76,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOri
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee withEmail(String email) {
         this.email = email;
         return this;
@@ -77,6 +84,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOri
     
     @JsonProperty("firstName")
     public String firstName;
+
     public OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -84,6 +92,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOri
     
     @JsonProperty("id")
     public Long id;
+
     public OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee withId(Long id) {
         this.id = id;
         return this;
@@ -92,6 +101,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOri
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iso")
     public OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsigneeIsoCountryV2 iso;
+
     public OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee withIso(OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsigneeIsoCountryV2 iso) {
         this.iso = iso;
         return this;
@@ -99,6 +109,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOri
     
     @JsonProperty("lastName")
     public String lastName;
+
     public OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -107,6 +118,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOri
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -117,6 +129,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOri
      */
     @JsonProperty("postalCode")
     public String postalCode;
+
     public OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -127,6 +140,7 @@ public class OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOri
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -135,9 +149,20 @@ public class OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOri
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedBy")
     public OnereturnsGetResponses200ContentApplication1jsonSchemaPropertiesDataItemsPropertiesUpdatedBy updatedBy;
+
     public OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee withUpdatedBy(OnereturnsGetResponses200ContentApplication1jsonSchemaPropertiesDataItemsPropertiesUpdatedBy updatedBy) {
         this.updatedBy = updatedBy;
         return this;
     }
     
+    public OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee(@JsonProperty("address1") String address1, @JsonProperty("addressLocality") String addressLocality, @JsonProperty("addressRegion") String addressRegion, @JsonProperty("country") String country, @JsonProperty("firstName") String firstName, @JsonProperty("id") Long id, @JsonProperty("lastName") String lastName, @JsonProperty("postalCode") String postalCode) {
+        this.address1 = address1;
+        this.addressLocality = addressLocality;
+        this.addressRegion = addressRegion;
+        this.country = country;
+        this.firstName = firstName;
+        this.id = id;
+        this.lastName = lastName;
+        this.postalCode = postalCode;
+  }
 }

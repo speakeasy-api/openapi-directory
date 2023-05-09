@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeConformancePackComplianceRequest {
     @JsonProperty("ConformancePackName")
     public String conformancePackName;
+
     public DescribeConformancePackComplianceRequest withConformancePackName(String conformancePackName) {
         this.conformancePackName = conformancePackName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeConformancePackComplianceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public ConformancePackComplianceFilters filters;
+
     public DescribeConformancePackComplianceRequest withFilters(ConformancePackComplianceFilters filters) {
         this.filters = filters;
         return this;
@@ -27,6 +29,7 @@ public class DescribeConformancePackComplianceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeConformancePackComplianceRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -35,9 +38,13 @@ public class DescribeConformancePackComplianceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeConformancePackComplianceRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeConformancePackComplianceRequest(@JsonProperty("ConformancePackName") String conformancePackName) {
+        this.conformancePackName = conformancePackName;
+  }
 }

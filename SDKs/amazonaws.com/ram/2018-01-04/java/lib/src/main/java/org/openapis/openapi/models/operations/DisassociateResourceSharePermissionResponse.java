@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateResourceSharePermissionResponse {
     
     public String contentType;
+
     public DisassociateResourceSharePermissionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateResourceSharePermissionResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociateResourceSharePermissionResponse disassociateResourceSharePermissionResponse;
+
     public DisassociateResourceSharePermissionResponse withDisassociateResourceSharePermissionResponse(org.openapis.openapi.models.shared.DisassociateResourceSharePermissionResponse disassociateResourceSharePermissionResponse) {
         this.disassociateResourceSharePermissionResponse = disassociateResourceSharePermissionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateResourceSharePermissionResponse {
      */
     
     public Object invalidClientTokenException;
+
     public DisassociateResourceSharePermissionResponse withInvalidClientTokenException(Object invalidClientTokenException) {
         this.invalidClientTokenException = invalidClientTokenException;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateResourceSharePermissionResponse {
      */
     
     public Object invalidParameterException;
+
     public DisassociateResourceSharePermissionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateResourceSharePermissionResponse {
      */
     
     public Object invalidStateTransitionException;
+
     public DisassociateResourceSharePermissionResponse withInvalidStateTransitionException(Object invalidStateTransitionException) {
         this.invalidStateTransitionException = invalidStateTransitionException;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateResourceSharePermissionResponse {
      */
     
     public Object malformedArnException;
+
     public DisassociateResourceSharePermissionResponse withMalformedArnException(Object malformedArnException) {
         this.malformedArnException = malformedArnException;
         return this;
@@ -69,6 +76,7 @@ public class DisassociateResourceSharePermissionResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DisassociateResourceSharePermissionResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -76,6 +84,7 @@ public class DisassociateResourceSharePermissionResponse {
     
     
     public Integer statusCode;
+
     public DisassociateResourceSharePermissionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DisassociateResourceSharePermissionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateResourceSharePermissionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DisassociateResourceSharePermissionResponse {
      */
     
     public Object serverInternalException;
+
     public DisassociateResourceSharePermissionResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -103,6 +114,7 @@ public class DisassociateResourceSharePermissionResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DisassociateResourceSharePermissionResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class DisassociateResourceSharePermissionResponse {
      */
     
     public Object unknownResourceException;
+
     public DisassociateResourceSharePermissionResponse withUnknownResourceException(Object unknownResourceException) {
         this.unknownResourceException = unknownResourceException;
         return this;
     }
     
+    public DisassociateResourceSharePermissionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

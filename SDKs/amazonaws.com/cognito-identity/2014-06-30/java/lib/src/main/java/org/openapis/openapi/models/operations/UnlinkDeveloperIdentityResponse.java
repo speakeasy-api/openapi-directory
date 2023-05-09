@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UnlinkDeveloperIdentityResponse {
     
     public String contentType;
+
     public UnlinkDeveloperIdentityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UnlinkDeveloperIdentityResponse {
      */
     
     public Object internalErrorException;
+
     public UnlinkDeveloperIdentityResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class UnlinkDeveloperIdentityResponse {
      */
     
     public Object invalidParameterException;
+
     public UnlinkDeveloperIdentityResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UnlinkDeveloperIdentityResponse {
      */
     
     public Object notAuthorizedException;
+
     public UnlinkDeveloperIdentityResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -49,6 +54,7 @@ public class UnlinkDeveloperIdentityResponse {
      */
     
     public Object resourceConflictException;
+
     public UnlinkDeveloperIdentityResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -59,6 +65,7 @@ public class UnlinkDeveloperIdentityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UnlinkDeveloperIdentityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UnlinkDeveloperIdentityResponse {
     
     
     public Integer statusCode;
+
     public UnlinkDeveloperIdentityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UnlinkDeveloperIdentityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UnlinkDeveloperIdentityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UnlinkDeveloperIdentityResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UnlinkDeveloperIdentityResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public UnlinkDeveloperIdentityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

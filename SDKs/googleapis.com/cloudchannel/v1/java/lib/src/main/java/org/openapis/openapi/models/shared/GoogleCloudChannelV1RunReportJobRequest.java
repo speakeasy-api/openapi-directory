@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1RunReportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateRange")
     public GoogleCloudChannelV1DateRange dateRange;
+
     public GoogleCloudChannelV1RunReportJobRequest withDateRange(GoogleCloudChannelV1DateRange dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1RunReportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public GoogleCloudChannelV1RunReportJobRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudChannelV1RunReportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudChannelV1RunReportJobRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
     }
     
+    public GoogleCloudChannelV1RunReportJobRequest(){}
 }

@@ -18,9 +18,11 @@ public class StopBuildBatchOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildBatch")
     public BuildBatch buildBatch;
+
     public StopBuildBatchOutput withBuildBatch(BuildBatch buildBatch) {
         this.buildBatch = buildBatch;
         return this;
     }
     
+    public StopBuildBatchOutput(){}
 }

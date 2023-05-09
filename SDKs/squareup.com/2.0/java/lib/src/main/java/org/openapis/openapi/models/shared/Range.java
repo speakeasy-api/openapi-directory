@@ -18,6 +18,7 @@ public class Range {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max")
     public String max;
+
     public Range withMax(String max) {
         this.max = max;
         return this;
@@ -29,9 +30,11 @@ public class Range {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min")
     public String min;
+
     public Range withMin(String min) {
         this.min = min;
         return this;
     }
     
+    public Range(){}
 }

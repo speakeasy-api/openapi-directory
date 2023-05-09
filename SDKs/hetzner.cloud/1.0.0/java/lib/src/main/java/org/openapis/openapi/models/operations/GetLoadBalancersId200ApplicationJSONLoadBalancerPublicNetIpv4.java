@@ -18,6 +18,7 @@ public class GetLoadBalancersId200ApplicationJSONLoadBalancerPublicNetIpv4 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dns_ptr")
     public String dnsPtr;
+
     public GetLoadBalancersId200ApplicationJSONLoadBalancerPublicNetIpv4 withDnsPtr(String dnsPtr) {
         this.dnsPtr = dnsPtr;
         return this;
@@ -29,9 +30,11 @@ public class GetLoadBalancersId200ApplicationJSONLoadBalancerPublicNetIpv4 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip")
     public String ip;
+
     public GetLoadBalancersId200ApplicationJSONLoadBalancerPublicNetIpv4 withIp(String ip) {
         this.ip = ip;
         return this;
     }
     
+    public GetLoadBalancersId200ApplicationJSONLoadBalancerPublicNetIpv4(){}
 }

@@ -18,6 +18,7 @@ public class FileThumbnail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public FileThumbnail withImage(String image) {
         this.image = image;
         return this;
@@ -29,9 +30,11 @@ public class FileThumbnail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public FileThumbnail withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
     
+    public FileThumbnail(){}
 }

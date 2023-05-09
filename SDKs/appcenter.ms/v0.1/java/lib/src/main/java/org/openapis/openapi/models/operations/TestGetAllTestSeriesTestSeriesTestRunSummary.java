@@ -18,6 +18,7 @@ public class TestGetAllTestSeriesTestSeriesTestRunSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completed")
     public Boolean completed;
+
     public TestGetAllTestSeriesTestSeriesTestRunSummary withCompleted(Boolean completed) {
         this.completed = completed;
         return this;
@@ -29,6 +30,7 @@ public class TestGetAllTestSeriesTestSeriesTestRunSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public TestGetAllTestSeriesTestSeriesTestRunSummary withDate(String date) {
         this.date = date;
         return this;
@@ -40,6 +42,7 @@ public class TestGetAllTestSeriesTestSeriesTestRunSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failed")
     public Double failed;
+
     public TestGetAllTestSeriesTestSeriesTestRunSummary withFailed(Double failed) {
         this.failed = failed;
         return this;
@@ -51,6 +54,7 @@ public class TestGetAllTestSeriesTestSeriesTestRunSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passed")
     public Double passed;
+
     public TestGetAllTestSeriesTestSeriesTestRunSummary withPassed(Double passed) {
         this.passed = passed;
         return this;
@@ -62,9 +66,11 @@ public class TestGetAllTestSeriesTestSeriesTestRunSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusDescription")
     public String statusDescription;
+
     public TestGetAllTestSeriesTestSeriesTestRunSummary withStatusDescription(String statusDescription) {
         this.statusDescription = statusDescription;
         return this;
     }
     
+    public TestGetAllTestSeriesTestSeriesTestRunSummary(){}
 }

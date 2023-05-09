@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PatternsGetPatternByRunResponse {
     
     public byte[] body;
+
     public PatternsGetPatternByRunResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PatternsGetPatternByRunResponse {
     
     
     public String contentType;
+
     public PatternsGetPatternByRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PatternsGetPatternByRunResponse {
     
     
     public Integer statusCode;
+
     public PatternsGetPatternByRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PatternsGetPatternByRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PatternsGetPatternByRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PatternsGetPatternByRunResponse {
      */
     
     public org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse;
+
     public PatternsGetPatternByRunResponse withV3ErrorResponse(org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse) {
         this.v3ErrorResponse = v3ErrorResponse;
         return this;
@@ -50,9 +56,14 @@ public class PatternsGetPatternByRunResponse {
      */
     
     public org.openapis.openapi.models.shared.V3StoppingPattern v3StoppingPattern;
+
     public PatternsGetPatternByRunResponse withV3StoppingPattern(org.openapis.openapi.models.shared.V3StoppingPattern v3StoppingPattern) {
         this.v3StoppingPattern = v3StoppingPattern;
         return this;
     }
     
+    public PatternsGetPatternByRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

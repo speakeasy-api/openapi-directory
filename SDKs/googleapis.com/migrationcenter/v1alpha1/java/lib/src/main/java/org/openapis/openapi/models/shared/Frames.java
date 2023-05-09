@@ -18,9 +18,11 @@ public class Frames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("framesData")
     public AssetFrame[] framesData;
+
     public Frames withFramesData(AssetFrame[] framesData) {
         this.framesData = framesData;
         return this;
     }
     
+    public Frames(){}
 }

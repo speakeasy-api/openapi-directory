@@ -15,9 +15,11 @@ public class GetWorkspace200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public org.openapis.openapi.models.shared.Workspace response;
+
     public GetWorkspace200ApplicationJSON withResponse(org.openapis.openapi.models.shared.Workspace response) {
         this.response = response;
         return this;
     }
     
+    public GetWorkspace200ApplicationJSON(){}
 }

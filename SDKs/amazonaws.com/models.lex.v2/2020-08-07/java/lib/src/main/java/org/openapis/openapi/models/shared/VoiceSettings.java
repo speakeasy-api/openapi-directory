@@ -15,6 +15,7 @@ public class VoiceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("engine")
     public VoiceEngineEnum engine;
+
     public VoiceSettings withEngine(VoiceEngineEnum engine) {
         this.engine = engine;
         return this;
@@ -22,9 +23,13 @@ public class VoiceSettings {
     
     @JsonProperty("voiceId")
     public String voiceId;
+
     public VoiceSettings withVoiceId(String voiceId) {
         this.voiceId = voiceId;
         return this;
     }
     
+    public VoiceSettings(@JsonProperty("voiceId") String voiceId) {
+        this.voiceId = voiceId;
+  }
 }

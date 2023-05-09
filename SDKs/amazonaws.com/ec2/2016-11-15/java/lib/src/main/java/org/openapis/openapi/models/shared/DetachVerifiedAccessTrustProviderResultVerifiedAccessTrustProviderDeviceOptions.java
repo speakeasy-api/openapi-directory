@@ -7,14 +7,16 @@ package org.openapis.openapi.models.shared;
 
 
 /**
- * DetachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceOptions - The options for device-identity type trust provider.
+ * DetachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceOptions - The options for device-identity trust provider.
  */
 public class DetachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceOptions {
     
     public String tenantId;
+
     public DetachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceOptions withTenantId(String tenantId) {
         this.tenantId = tenantId;
         return this;
     }
     
+    public DetachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceOptions(){}
 }

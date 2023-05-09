@@ -15,6 +15,7 @@ public class AddNewCollaboratorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collaborator_type")
     public String collaboratorType;
+
     public AddNewCollaboratorRequest withCollaboratorType(String collaboratorType) {
         this.collaboratorType = collaboratorType;
         return this;
@@ -23,6 +24,7 @@ public class AddNewCollaboratorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_email")
     public String userEmail;
+
     public AddNewCollaboratorRequest withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
@@ -31,9 +33,11 @@ public class AddNewCollaboratorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public String userId;
+
     public AddNewCollaboratorRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public AddNewCollaboratorRequest(){}
 }

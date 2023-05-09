@@ -12,9 +12,13 @@ public class PaymentInstrumentReference {
      */
     @JsonProperty("id")
     public String id;
+
     public PaymentInstrumentReference withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PaymentInstrumentReference(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

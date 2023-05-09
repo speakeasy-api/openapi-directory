@@ -15,6 +15,7 @@ public class BlueGreenDeploymentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentReadyOption")
     public DeploymentReadyOption deploymentReadyOption;
+
     public BlueGreenDeploymentConfiguration withDeploymentReadyOption(DeploymentReadyOption deploymentReadyOption) {
         this.deploymentReadyOption = deploymentReadyOption;
         return this;
@@ -23,6 +24,7 @@ public class BlueGreenDeploymentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("greenFleetProvisioningOption")
     public GreenFleetProvisioningOption greenFleetProvisioningOption;
+
     public BlueGreenDeploymentConfiguration withGreenFleetProvisioningOption(GreenFleetProvisioningOption greenFleetProvisioningOption) {
         this.greenFleetProvisioningOption = greenFleetProvisioningOption;
         return this;
@@ -31,9 +33,11 @@ public class BlueGreenDeploymentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terminateBlueInstancesOnDeploymentSuccess")
     public BlueInstanceTerminationOption terminateBlueInstancesOnDeploymentSuccess;
+
     public BlueGreenDeploymentConfiguration withTerminateBlueInstancesOnDeploymentSuccess(BlueInstanceTerminationOption terminateBlueInstancesOnDeploymentSuccess) {
         this.terminateBlueInstancesOnDeploymentSuccess = terminateBlueInstancesOnDeploymentSuccess;
         return this;
     }
     
+    public BlueGreenDeploymentConfiguration(){}
 }

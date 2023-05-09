@@ -20,6 +20,7 @@ public class ContainerServiceDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containers")
     public java.util.Map<String, Container> containers;
+
     public ContainerServiceDeployment withContainers(java.util.Map<String, Container> containers) {
         this.containers = containers;
         return this;
@@ -30,6 +31,7 @@ public class ContainerServiceDeployment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ContainerServiceDeployment withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class ContainerServiceDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicEndpoint")
     public ContainerServiceEndpoint publicEndpoint;
+
     public ContainerServiceDeployment withPublicEndpoint(ContainerServiceEndpoint publicEndpoint) {
         this.publicEndpoint = publicEndpoint;
         return this;
@@ -46,6 +49,7 @@ public class ContainerServiceDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ContainerServiceDeploymentStateEnum state;
+
     public ContainerServiceDeployment withState(ContainerServiceDeploymentStateEnum state) {
         this.state = state;
         return this;
@@ -54,9 +58,11 @@ public class ContainerServiceDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public ContainerServiceDeployment withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public ContainerServiceDeployment(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class CrashGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$orderby")
     public CrashGroupsListDollarOrderbyEnum dollarOrderby;
+
     public CrashGroupsListRequest withDollarOrderby(CrashGroupsListDollarOrderbyEnum dollarOrderby) {
         this.dollarOrderby = dollarOrderby;
         return this;
@@ -23,6 +25,7 @@ public class CrashGroupsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public CrashGroupsListRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -33,6 +36,7 @@ public class CrashGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_version")
     public String appVersion;
+
     public CrashGroupsListRequest withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -43,6 +47,7 @@ public class CrashGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=continuation_token")
     public String continuationToken;
+
     public CrashGroupsListRequest withContinuationToken(String continuationToken) {
         this.continuationToken = continuationToken;
         return this;
@@ -50,6 +55,7 @@ public class CrashGroupsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_status")
     public CrashGroupsListGroupStatusEnum groupStatus;
+
     public CrashGroupsListRequest withGroupStatus(CrashGroupsListGroupStatusEnum groupStatus) {
         this.groupStatus = groupStatus;
         return this;
@@ -60,6 +66,7 @@ public class CrashGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_text_search")
     public String groupTextSearch;
+
     public CrashGroupsListRequest withGroupTextSearch(String groupTextSearch) {
         this.groupTextSearch = groupTextSearch;
         return this;
@@ -67,6 +74,7 @@ public class CrashGroupsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_type")
     public CrashGroupsListGroupTypeEnum groupType;
+
     public CrashGroupsListRequest withGroupType(CrashGroupsListGroupTypeEnum groupType) {
         this.groupType = groupType;
         return this;
@@ -77,6 +85,7 @@ public class CrashGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_occurrence_from")
     public OffsetDateTime lastOccurrenceFrom;
+
     public CrashGroupsListRequest withLastOccurrenceFrom(OffsetDateTime lastOccurrenceFrom) {
         this.lastOccurrenceFrom = lastOccurrenceFrom;
         return this;
@@ -87,6 +96,7 @@ public class CrashGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_occurrence_to")
     public OffsetDateTime lastOccurrenceTo;
+
     public CrashGroupsListRequest withLastOccurrenceTo(OffsetDateTime lastOccurrenceTo) {
         this.lastOccurrenceTo = lastOccurrenceTo;
         return this;
@@ -97,9 +107,14 @@ public class CrashGroupsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public CrashGroupsListRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public CrashGroupsListRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+  }
 }

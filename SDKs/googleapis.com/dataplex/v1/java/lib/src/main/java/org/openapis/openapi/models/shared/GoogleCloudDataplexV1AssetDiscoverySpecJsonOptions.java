@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1AssetDiscoverySpecJsonOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableTypeInference")
     public Boolean disableTypeInference;
+
     public GoogleCloudDataplexV1AssetDiscoverySpecJsonOptions withDisableTypeInference(Boolean disableTypeInference) {
         this.disableTypeInference = disableTypeInference;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1AssetDiscoverySpecJsonOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encoding")
     public String encoding;
+
     public GoogleCloudDataplexV1AssetDiscoverySpecJsonOptions withEncoding(String encoding) {
         this.encoding = encoding;
         return this;
     }
     
+    public GoogleCloudDataplexV1AssetDiscoverySpecJsonOptions(){}
 }

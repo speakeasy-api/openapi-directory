@@ -18,9 +18,11 @@ public class ListDataSourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSource")
     public DataSource[] dataSource;
+
     public ListDataSourcesResponse withDataSource(DataSource[] dataSource) {
         this.dataSource = dataSource;
         return this;
     }
     
+    public ListDataSourcesResponse(){}
 }

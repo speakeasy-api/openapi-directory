@@ -18,6 +18,7 @@ public class GetPayeesPayeeBankAccountsPayeeCurrency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public GetPayeesPayeeBankAccountsPayeeCurrencyCodeEnum code;
+
     public GetPayeesPayeeBankAccountsPayeeCurrency withCode(GetPayeesPayeeBankAccountsPayeeCurrencyCodeEnum code) {
         this.code = code;
         return this;
@@ -29,9 +30,11 @@ public class GetPayeesPayeeBankAccountsPayeeCurrency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetPayeesPayeeBankAccountsPayeeCurrency withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public GetPayeesPayeeBankAccountsPayeeCurrency(){}
 }

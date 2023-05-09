@@ -18,9 +18,11 @@ public class GoogleCloudChannelV1CheckCloudIdentityAccountsExistResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudIdentityAccounts")
     public GoogleCloudChannelV1CloudIdentityCustomerAccount[] cloudIdentityAccounts;
+
     public GoogleCloudChannelV1CheckCloudIdentityAccountsExistResponse withCloudIdentityAccounts(GoogleCloudChannelV1CloudIdentityCustomerAccount[] cloudIdentityAccounts) {
         this.cloudIdentityAccounts = cloudIdentityAccounts;
         return this;
     }
     
+    public GoogleCloudChannelV1CheckCloudIdentityAccountsExistResponse(){}
 }

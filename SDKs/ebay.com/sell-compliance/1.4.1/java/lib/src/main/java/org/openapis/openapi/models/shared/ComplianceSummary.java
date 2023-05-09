@@ -18,9 +18,11 @@ public class ComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("violationSummaries")
     public ComplianceSummaryInfo[] violationSummaries;
+
     public ComplianceSummary withViolationSummaries(ComplianceSummaryInfo[] violationSummaries) {
         this.violationSummaries = violationSummaries;
         return this;
     }
     
+    public ComplianceSummary(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomerIndexLinks {
     @JsonProperty("accountInfo")
     public LinksGetUserAccountInfoLink accountInfo;
+
     public CustomerIndexLinks withAccountInfo(LinksGetUserAccountInfoLink accountInfo) {
         this.accountInfo = accountInfo;
         return this;
@@ -21,6 +22,7 @@ public class CustomerIndexLinks {
     
     @JsonProperty("billingPeriods")
     public LinksGetBillingPeriodsLink billingPeriods;
+
     public CustomerIndexLinks withBillingPeriods(LinksGetBillingPeriodsLink billingPeriods) {
         this.billingPeriods = billingPeriods;
         return this;
@@ -29,6 +31,7 @@ public class CustomerIndexLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contracts")
     public LinksGetContractsLink contracts;
+
     public CustomerIndexLinks withContracts(LinksGetContractsLink contracts) {
         this.contracts = contracts;
         return this;
@@ -36,6 +39,7 @@ public class CustomerIndexLinks {
     
     @JsonProperty("friendInfo")
     public LinksGetFriendInfoLink friendInfo;
+
     public CustomerIndexLinks withFriendInfo(LinksGetFriendInfoLink friendInfo) {
         this.friendInfo = friendInfo;
         return this;
@@ -44,6 +48,7 @@ public class CustomerIndexLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("getOffer")
     public LinksGetOfferLink getOffer;
+
     public CustomerIndexLinks withGetOffer(LinksGetOfferLink getOffer) {
         this.getOffer = getOffer;
         return this;
@@ -52,6 +57,7 @@ public class CustomerIndexLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoices")
     public LinksGetInvoicesLink invoices;
+
     public CustomerIndexLinks withInvoices(LinksGetInvoicesLink invoices) {
         this.invoices = invoices;
         return this;
@@ -60,6 +66,7 @@ public class CustomerIndexLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logout")
     public LinksLogoutLink logout;
+
     public CustomerIndexLinks withLogout(LinksLogoutLink logout) {
         this.logout = logout;
         return this;
@@ -67,6 +74,7 @@ public class CustomerIndexLinks {
     
     @JsonProperty("self")
     public LinksGetCustomerIndexLink self;
+
     public CustomerIndexLinks withSelf(LinksGetCustomerIndexLink self) {
         this.self = self;
         return this;
@@ -74,6 +82,7 @@ public class CustomerIndexLinks {
     
     @JsonProperty("standardOffers")
     public LinksGetStandardOffersLink standardOffers;
+
     public CustomerIndexLinks withStandardOffers(LinksGetStandardOffersLink standardOffers) {
         this.standardOffers = standardOffers;
         return this;
@@ -82,9 +91,17 @@ public class CustomerIndexLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stores")
     public LinksGetStoresLink stores;
+
     public CustomerIndexLinks withStores(LinksGetStoresLink stores) {
         this.stores = stores;
         return this;
     }
     
+    public CustomerIndexLinks(@JsonProperty("accountInfo") LinksGetUserAccountInfoLink accountInfo, @JsonProperty("billingPeriods") LinksGetBillingPeriodsLink billingPeriods, @JsonProperty("friendInfo") LinksGetFriendInfoLink friendInfo, @JsonProperty("self") LinksGetCustomerIndexLink self, @JsonProperty("standardOffers") LinksGetStandardOffersLink standardOffers) {
+        this.accountInfo = accountInfo;
+        this.billingPeriods = billingPeriods;
+        this.friendInfo = friendInfo;
+        this.self = self;
+        this.standardOffers = standardOffers;
+  }
 }

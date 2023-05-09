@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOwnershipOwnershipIdRequest {
@@ -12,9 +13,13 @@ public class GetOwnershipOwnershipIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ownershipId")
     public String ownershipId;
+
     public GetOwnershipOwnershipIdRequest withOwnershipId(String ownershipId) {
         this.ownershipId = ownershipId;
         return this;
     }
     
+    public GetOwnershipOwnershipIdRequest(@JsonProperty("ownershipId") String ownershipId) {
+        this.ownershipId = ownershipId;
+  }
 }

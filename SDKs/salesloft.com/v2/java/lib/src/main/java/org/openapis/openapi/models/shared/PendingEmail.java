@@ -15,6 +15,7 @@ public class PendingEmail {
      */
     
     public Long id;
+
     public PendingEmail withId(Long id) {
         this.id = id;
         return this;
@@ -25,6 +26,7 @@ public class PendingEmail {
      */
     
     public String mailbox;
+
     public PendingEmail withMailbox(String mailbox) {
         this.mailbox = mailbox;
         return this;
@@ -32,9 +34,11 @@ public class PendingEmail {
     
     
     public EmbeddedResource mimeEmailPayload;
+
     public PendingEmail withMimeEmailPayload(EmbeddedResource mimeEmailPayload) {
         this.mimeEmailPayload = mimeEmailPayload;
         return this;
     }
     
+    public PendingEmail(){}
 }

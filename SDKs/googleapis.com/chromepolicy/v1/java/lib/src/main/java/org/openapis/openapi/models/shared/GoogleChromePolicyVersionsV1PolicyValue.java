@@ -18,6 +18,7 @@ public class GoogleChromePolicyVersionsV1PolicyValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policySchema")
     public String policySchema;
+
     public GoogleChromePolicyVersionsV1PolicyValue withPolicySchema(String policySchema) {
         this.policySchema = policySchema;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromePolicyVersionsV1PolicyValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public java.util.Map<String, Object> value;
+
     public GoogleChromePolicyVersionsV1PolicyValue withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1PolicyValue(){}
 }

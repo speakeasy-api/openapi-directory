@@ -15,6 +15,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsVolumes")
     public EbsVolume[] ebsVolumes;
+
     public Instance withEbsVolumes(EbsVolume[] ebsVolumes) {
         this.ebsVolumes = ebsVolumes;
         return this;
@@ -23,6 +24,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ec2InstanceId")
     public String ec2InstanceId;
+
     public Instance withEc2InstanceId(String ec2InstanceId) {
         this.ec2InstanceId = ec2InstanceId;
         return this;
@@ -31,6 +33,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Instance withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceFleetId")
     public String instanceFleetId;
+
     public Instance withInstanceFleetId(String instanceFleetId) {
         this.instanceFleetId = instanceFleetId;
         return this;
@@ -47,6 +51,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceGroupId")
     public String instanceGroupId;
+
     public Instance withInstanceGroupId(String instanceGroupId) {
         this.instanceGroupId = instanceGroupId;
         return this;
@@ -55,6 +60,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public Instance withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -63,6 +69,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Market")
     public MarketTypeEnum market;
+
     public Instance withMarket(MarketTypeEnum market) {
         this.market = market;
         return this;
@@ -71,6 +78,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateDnsName")
     public String privateDnsName;
+
     public Instance withPrivateDnsName(String privateDnsName) {
         this.privateDnsName = privateDnsName;
         return this;
@@ -79,6 +87,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateIpAddress")
     public String privateIpAddress;
+
     public Instance withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -87,6 +96,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicDnsName")
     public String publicDnsName;
+
     public Instance withPublicDnsName(String publicDnsName) {
         this.publicDnsName = publicDnsName;
         return this;
@@ -95,6 +105,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicIpAddress")
     public String publicIpAddress;
+
     public Instance withPublicIpAddress(String publicIpAddress) {
         this.publicIpAddress = publicIpAddress;
         return this;
@@ -103,9 +114,11 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public InstanceStatus status;
+
     public Instance withStatus(InstanceStatus status) {
         this.status = status;
         return this;
     }
     
+    public Instance(){}
 }

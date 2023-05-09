@@ -15,6 +15,7 @@ public class AppFlowConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlowName")
     public String flowName;
+
     public AppFlowConfig withFlowName(String flowName) {
         this.flowName = flowName;
         return this;
@@ -23,9 +24,11 @@ public class AppFlowConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public AppFlowConfig withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public AppFlowConfig(){}
 }

@@ -18,6 +18,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Account withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -26,6 +27,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public AccountFeatures features;
+
     public Account withFeatures(AccountFeatures features) {
         this.features = features;
         return this;
@@ -37,6 +39,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public Account withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -48,6 +51,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Account withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +63,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public Account withPath(String path) {
         this.path = path;
         return this;
@@ -70,6 +75,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareData")
     public Boolean shareData;
+
     public Account withShareData(Boolean shareData) {
         this.shareData = shareData;
         return this;
@@ -81,9 +87,11 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagManagerUrl")
     public String tagManagerUrl;
+
     public Account withTagManagerUrl(String tagManagerUrl) {
         this.tagManagerUrl = tagManagerUrl;
         return this;
     }
     
+    public Account(){}
 }

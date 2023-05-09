@@ -18,6 +18,7 @@ public class SellingLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Amount amount;
+
     public SellingLimit withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -29,9 +30,11 @@ public class SellingLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Integer quantity;
+
     public SellingLimit withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public SellingLimit(){}
 }

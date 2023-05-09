@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InjuriesHistoricalResponse {
     
     public String contentType;
+
     public InjuriesHistoricalResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class InjuriesHistoricalResponse {
     
     
     public org.openapis.openapi.models.shared.Injury[] injuries;
+
     public InjuriesHistoricalResponse withInjuries(org.openapis.openapi.models.shared.Injury[] injuries) {
         this.injuries = injuries;
         return this;
@@ -23,6 +26,7 @@ public class InjuriesHistoricalResponse {
     
     
     public Integer statusCode;
+
     public InjuriesHistoricalResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class InjuriesHistoricalResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InjuriesHistoricalResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public InjuriesHistoricalResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

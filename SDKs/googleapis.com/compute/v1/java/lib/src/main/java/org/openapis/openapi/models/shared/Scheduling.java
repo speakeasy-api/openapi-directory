@@ -18,6 +18,7 @@ public class Scheduling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automaticRestart")
     public Boolean automaticRestart;
+
     public Scheduling withAutomaticRestart(Boolean automaticRestart) {
         this.automaticRestart = automaticRestart;
         return this;
@@ -29,6 +30,7 @@ public class Scheduling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceTerminationAction")
     public SchedulingInstanceTerminationActionEnum instanceTerminationAction;
+
     public Scheduling withInstanceTerminationAction(SchedulingInstanceTerminationActionEnum instanceTerminationAction) {
         this.instanceTerminationAction = instanceTerminationAction;
         return this;
@@ -40,6 +42,7 @@ public class Scheduling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationHint")
     public String locationHint;
+
     public Scheduling withLocationHint(String locationHint) {
         this.locationHint = locationHint;
         return this;
@@ -51,6 +54,7 @@ public class Scheduling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minNodeCpus")
     public Integer minNodeCpus;
+
     public Scheduling withMinNodeCpus(Integer minNodeCpus) {
         this.minNodeCpus = minNodeCpus;
         return this;
@@ -62,6 +66,7 @@ public class Scheduling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeAffinities")
     public SchedulingNodeAffinity[] nodeAffinities;
+
     public Scheduling withNodeAffinities(SchedulingNodeAffinity[] nodeAffinities) {
         this.nodeAffinities = nodeAffinities;
         return this;
@@ -73,6 +78,7 @@ public class Scheduling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onHostMaintenance")
     public SchedulingOnHostMaintenanceEnum onHostMaintenance;
+
     public Scheduling withOnHostMaintenance(SchedulingOnHostMaintenanceEnum onHostMaintenance) {
         this.onHostMaintenance = onHostMaintenance;
         return this;
@@ -84,6 +90,7 @@ public class Scheduling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preemptible")
     public Boolean preemptible;
+
     public Scheduling withPreemptible(Boolean preemptible) {
         this.preemptible = preemptible;
         return this;
@@ -95,9 +102,11 @@ public class Scheduling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioningModel")
     public SchedulingProvisioningModelEnum provisioningModel;
+
     public Scheduling withProvisioningModel(SchedulingProvisioningModelEnum provisioningModel) {
         this.provisioningModel = provisioningModel;
         return this;
     }
     
+    public Scheduling(){}
 }

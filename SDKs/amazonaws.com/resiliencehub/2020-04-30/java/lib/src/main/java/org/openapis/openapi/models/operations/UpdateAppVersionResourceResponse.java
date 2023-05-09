@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAppVersionResourceResponse {
@@ -12,6 +13,7 @@ public class UpdateAppVersionResourceResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateAppVersionResourceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateAppVersionResourceResponse {
      */
     
     public Object conflictException;
+
     public UpdateAppVersionResourceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAppVersionResourceResponse {
     
     
     public String contentType;
+
     public UpdateAppVersionResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAppVersionResourceResponse {
      */
     
     public Object internalServerException;
+
     public UpdateAppVersionResourceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateAppVersionResourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAppVersionResourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateAppVersionResourceResponse {
     
     
     public Integer statusCode;
+
     public UpdateAppVersionResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAppVersionResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAppVersionResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateAppVersionResourceResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateAppVersionResourceResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateAppVersionResourceResponse {
      */
     
     public Object throttlingException;
+
     public UpdateAppVersionResourceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateAppVersionResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAppVersionResourceResponse updateAppVersionResourceResponse;
+
     public UpdateAppVersionResourceResponse withUpdateAppVersionResourceResponse(org.openapis.openapi.models.shared.UpdateAppVersionResourceResponse updateAppVersionResourceResponse) {
         this.updateAppVersionResourceResponse = updateAppVersionResourceResponse;
         return this;
@@ -103,9 +114,14 @@ public class UpdateAppVersionResourceResponse {
      */
     
     public Object validationException;
+
     public UpdateAppVersionResourceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateAppVersionResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

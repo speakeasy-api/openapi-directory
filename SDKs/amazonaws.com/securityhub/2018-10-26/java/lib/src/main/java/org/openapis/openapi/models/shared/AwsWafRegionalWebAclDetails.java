@@ -15,6 +15,7 @@ public class AwsWafRegionalWebAclDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultAction")
     public String defaultAction;
+
     public AwsWafRegionalWebAclDetails withDefaultAction(String defaultAction) {
         this.defaultAction = defaultAction;
         return this;
@@ -23,6 +24,7 @@ public class AwsWafRegionalWebAclDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public AwsWafRegionalWebAclDetails withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -31,6 +33,7 @@ public class AwsWafRegionalWebAclDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsWafRegionalWebAclDetails withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class AwsWafRegionalWebAclDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RulesList")
     public AwsWafRegionalWebAclRulesListDetails[] rulesList;
+
     public AwsWafRegionalWebAclDetails withRulesList(AwsWafRegionalWebAclRulesListDetails[] rulesList) {
         this.rulesList = rulesList;
         return this;
@@ -47,9 +51,11 @@ public class AwsWafRegionalWebAclDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebAclId")
     public String webAclId;
+
     public AwsWafRegionalWebAclDetails withWebAclId(String webAclId) {
         this.webAclId = webAclId;
         return this;
     }
     
+    public AwsWafRegionalWebAclDetails(){}
 }

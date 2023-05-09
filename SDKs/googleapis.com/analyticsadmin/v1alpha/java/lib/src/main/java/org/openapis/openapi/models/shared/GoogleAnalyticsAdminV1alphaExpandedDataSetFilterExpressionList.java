@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpressionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterExpressions")
     public GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpression[] filterExpressions;
+
     public GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpressionList withFilterExpressions(GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpression[] filterExpressions) {
         this.filterExpressions = filterExpressions;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpressionList(){}
 }

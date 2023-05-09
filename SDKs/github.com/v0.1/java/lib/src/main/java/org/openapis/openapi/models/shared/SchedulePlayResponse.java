@@ -15,6 +15,7 @@ public class SchedulePlayResponse {
      */
     @JsonProperty("Message")
     public SchedulePlayResponseMessageEnum message;
+
     public SchedulePlayResponse withMessage(SchedulePlayResponseMessageEnum message) {
         this.message = message;
         return this;
@@ -25,6 +26,7 @@ public class SchedulePlayResponse {
      */
     @JsonProperty("SchedPlayId")
     public String schedPlayId;
+
     public SchedulePlayResponse withSchedPlayId(String schedPlayId) {
         this.schedPlayId = schedPlayId;
         return this;
@@ -35,9 +37,15 @@ public class SchedulePlayResponse {
      */
     @JsonProperty("Success")
     public Boolean success;
+
     public SchedulePlayResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public SchedulePlayResponse(@JsonProperty("Message") SchedulePlayResponseMessageEnum message, @JsonProperty("SchedPlayId") String schedPlayId, @JsonProperty("Success") Boolean success) {
+        this.message = message;
+        this.schedPlayId = schedPlayId;
+        this.success = success;
+  }
 }

@@ -12,6 +12,7 @@ public class OrdersCustomBatchRequestEntrySetLineItemMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public OrderMerchantProvidedAnnotation[] annotations;
+
     public OrdersCustomBatchRequestEntrySetLineItemMetadata withAnnotations(OrderMerchantProvidedAnnotation[] annotations) {
         this.annotations = annotations;
         return this;
@@ -23,6 +24,7 @@ public class OrdersCustomBatchRequestEntrySetLineItemMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemId")
     public String lineItemId;
+
     public OrdersCustomBatchRequestEntrySetLineItemMetadata withLineItemId(String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
@@ -34,9 +36,11 @@ public class OrdersCustomBatchRequestEntrySetLineItemMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public OrdersCustomBatchRequestEntrySetLineItemMetadata withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public OrdersCustomBatchRequestEntrySetLineItemMetadata(){}
 }

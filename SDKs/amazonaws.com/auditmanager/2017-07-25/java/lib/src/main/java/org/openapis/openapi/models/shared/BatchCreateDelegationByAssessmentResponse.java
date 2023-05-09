@@ -15,6 +15,7 @@ public class BatchCreateDelegationByAssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegations")
     public Delegation[] delegations;
+
     public BatchCreateDelegationByAssessmentResponse withDelegations(Delegation[] delegations) {
         this.delegations = delegations;
         return this;
@@ -23,9 +24,11 @@ public class BatchCreateDelegationByAssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public BatchCreateDelegationByAssessmentError[] errors;
+
     public BatchCreateDelegationByAssessmentResponse withErrors(BatchCreateDelegationByAssessmentError[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public BatchCreateDelegationByAssessmentResponse(){}
 }

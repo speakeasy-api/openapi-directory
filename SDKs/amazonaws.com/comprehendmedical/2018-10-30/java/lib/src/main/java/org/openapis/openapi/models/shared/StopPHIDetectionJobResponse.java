@@ -15,9 +15,11 @@ public class StopPHIDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public StopPHIDetectionJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public StopPHIDetectionJobResponse(){}
 }

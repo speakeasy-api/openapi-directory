@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1DocumentPageParagraph {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedLanguages")
     public GoogleCloudDocumentaiV1DocumentPageDetectedLanguage[] detectedLanguages;
+
     public GoogleCloudDocumentaiV1DocumentPageParagraph withDetectedLanguages(GoogleCloudDocumentaiV1DocumentPageDetectedLanguage[] detectedLanguages) {
         this.detectedLanguages = detectedLanguages;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1DocumentPageParagraph {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public GoogleCloudDocumentaiV1DocumentPageLayout layout;
+
     public GoogleCloudDocumentaiV1DocumentPageParagraph withLayout(GoogleCloudDocumentaiV1DocumentPageLayout layout) {
         this.layout = layout;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDocumentaiV1DocumentPageParagraph {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provenance")
     public GoogleCloudDocumentaiV1DocumentProvenance provenance;
+
     public GoogleCloudDocumentaiV1DocumentPageParagraph withProvenance(GoogleCloudDocumentaiV1DocumentProvenance provenance) {
         this.provenance = provenance;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1DocumentPageParagraph(){}
 }

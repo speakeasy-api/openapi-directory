@@ -12,6 +12,7 @@ public class BoxScoreTeamsFieldPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageStart")
     public Double averageStart;
+
     public BoxScoreTeamsFieldPosition withAverageStart(Double averageStart) {
         this.averageStart = averageStart;
         return this;
@@ -20,6 +21,7 @@ public class BoxScoreTeamsFieldPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageStartingPredictedPoints")
     public Double averageStartingPredictedPoints;
+
     public BoxScoreTeamsFieldPosition withAverageStartingPredictedPoints(Double averageStartingPredictedPoints) {
         this.averageStartingPredictedPoints = averageStartingPredictedPoints;
         return this;
@@ -28,9 +30,11 @@ public class BoxScoreTeamsFieldPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public BoxScoreTeamsFieldPosition withTeam(String team) {
         this.team = team;
         return this;
     }
     
+    public BoxScoreTeamsFieldPosition(){}
 }

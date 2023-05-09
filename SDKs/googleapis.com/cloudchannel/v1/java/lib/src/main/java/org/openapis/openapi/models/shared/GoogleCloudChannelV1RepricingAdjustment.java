@@ -18,9 +18,11 @@ public class GoogleCloudChannelV1RepricingAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentageAdjustment")
     public GoogleCloudChannelV1PercentageAdjustment percentageAdjustment;
+
     public GoogleCloudChannelV1RepricingAdjustment withPercentageAdjustment(GoogleCloudChannelV1PercentageAdjustment percentageAdjustment) {
         this.percentageAdjustment = percentageAdjustment;
         return this;
     }
     
+    public GoogleCloudChannelV1RepricingAdjustment(){}
 }

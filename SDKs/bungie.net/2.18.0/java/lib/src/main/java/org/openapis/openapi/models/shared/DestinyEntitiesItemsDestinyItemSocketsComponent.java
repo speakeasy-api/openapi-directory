@@ -16,9 +16,11 @@ public class DestinyEntitiesItemsDestinyItemSocketsComponent {
      */
     
     public DestinyEntitiesItemsDestinyItemSocketState[] sockets;
+
     public DestinyEntitiesItemsDestinyItemSocketsComponent withSockets(DestinyEntitiesItemsDestinyItemSocketState[] sockets) {
         this.sockets = sockets;
         return this;
     }
     
+    public DestinyEntitiesItemsDestinyItemSocketsComponent(){}
 }

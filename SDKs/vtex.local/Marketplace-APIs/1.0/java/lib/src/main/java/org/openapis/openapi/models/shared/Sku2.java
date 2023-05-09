@@ -12,6 +12,7 @@ public class Sku2 {
      */
     @JsonProperty("EanId")
     public String eanId;
+
     public Sku2 withEanId(String eanId) {
         this.eanId = eanId;
         return this;
@@ -22,6 +23,7 @@ public class Sku2 {
      */
     @JsonProperty("IsActive")
     public Boolean isActive;
+
     public Sku2 withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -32,6 +34,7 @@ public class Sku2 {
      */
     @JsonProperty("MainImage")
     public java.util.Map<String, Object> mainImage;
+
     public Sku2 withMainImage(java.util.Map<String, Object> mainImage) {
         this.mainImage = mainImage;
         return this;
@@ -42,6 +45,7 @@ public class Sku2 {
      */
     @JsonProperty("Name")
     public String name;
+
     public Sku2 withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +56,7 @@ public class Sku2 {
      */
     @JsonProperty("NameComplete")
     public String nameComplete;
+
     public Sku2 withNameComplete(String nameComplete) {
         this.nameComplete = nameComplete;
         return this;
@@ -62,6 +67,7 @@ public class Sku2 {
      */
     @JsonProperty("Offers")
     public Offer[] offers;
+
     public Sku2 withOffers(Offer[] offers) {
         this.offers = offers;
         return this;
@@ -72,6 +78,7 @@ public class Sku2 {
      */
     @JsonProperty("RefId")
     public String refId;
+
     public Sku2 withRefId(String refId) {
         this.refId = refId;
         return this;
@@ -82,9 +89,20 @@ public class Sku2 {
      */
     @JsonProperty("SkuId")
     public String skuId;
+
     public Sku2 withSkuId(String skuId) {
         this.skuId = skuId;
         return this;
     }
     
+    public Sku2(@JsonProperty("EanId") String eanId, @JsonProperty("IsActive") Boolean isActive, @JsonProperty("MainImage") java.util.Map<String, Object> mainImage, @JsonProperty("Name") String name, @JsonProperty("NameComplete") String nameComplete, @JsonProperty("Offers") Offer[] offers, @JsonProperty("RefId") String refId, @JsonProperty("SkuId") String skuId) {
+        this.eanId = eanId;
+        this.isActive = isActive;
+        this.mainImage = mainImage;
+        this.name = name;
+        this.nameComplete = nameComplete;
+        this.offers = offers;
+        this.refId = refId;
+        this.skuId = skuId;
+  }
 }

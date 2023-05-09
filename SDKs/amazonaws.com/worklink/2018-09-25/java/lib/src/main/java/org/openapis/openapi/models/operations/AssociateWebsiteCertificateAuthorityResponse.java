@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateWebsiteCertificateAuthorityResponse {
@@ -12,6 +13,7 @@ public class AssociateWebsiteCertificateAuthorityResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateWebsiteCertificateAuthorityResponse associateWebsiteCertificateAuthorityResponse;
+
     public AssociateWebsiteCertificateAuthorityResponse withAssociateWebsiteCertificateAuthorityResponse(org.openapis.openapi.models.shared.AssociateWebsiteCertificateAuthorityResponse associateWebsiteCertificateAuthorityResponse) {
         this.associateWebsiteCertificateAuthorityResponse = associateWebsiteCertificateAuthorityResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateWebsiteCertificateAuthorityResponse {
     
     
     public String contentType;
+
     public AssociateWebsiteCertificateAuthorityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateWebsiteCertificateAuthorityResponse {
      */
     
     public Object internalServerErrorException;
+
     public AssociateWebsiteCertificateAuthorityResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateWebsiteCertificateAuthorityResponse {
      */
     
     public Object invalidRequestException;
+
     public AssociateWebsiteCertificateAuthorityResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateWebsiteCertificateAuthorityResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public AssociateWebsiteCertificateAuthorityResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -56,6 +62,7 @@ public class AssociateWebsiteCertificateAuthorityResponse {
     
     
     public Integer statusCode;
+
     public AssociateWebsiteCertificateAuthorityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AssociateWebsiteCertificateAuthorityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateWebsiteCertificateAuthorityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AssociateWebsiteCertificateAuthorityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateWebsiteCertificateAuthorityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class AssociateWebsiteCertificateAuthorityResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AssociateWebsiteCertificateAuthorityResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,9 +103,14 @@ public class AssociateWebsiteCertificateAuthorityResponse {
      */
     
     public Object unauthorizedException;
+
     public AssociateWebsiteCertificateAuthorityResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public AssociateWebsiteCertificateAuthorityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

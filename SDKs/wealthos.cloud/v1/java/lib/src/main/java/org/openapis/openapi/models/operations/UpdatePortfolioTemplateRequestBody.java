@@ -12,6 +12,7 @@ public class UpdatePortfolioTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portfolio_name")
     public String portfolioName;
+
     public UpdatePortfolioTemplateRequestBody withPortfolioName(String portfolioName) {
         this.portfolioName = portfolioName;
         return this;
@@ -23,6 +24,7 @@ public class UpdatePortfolioTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ratios")
     public UpdatePortfolioTemplateRequestBodyRatios[] ratios;
+
     public UpdatePortfolioTemplateRequestBody withRatios(UpdatePortfolioTemplateRequestBodyRatios[] ratios) {
         this.ratios = ratios;
         return this;
@@ -33,9 +35,13 @@ public class UpdatePortfolioTemplateRequestBody {
      */
     @JsonProperty("reference_version")
     public Long referenceVersion;
+
     public UpdatePortfolioTemplateRequestBody withReferenceVersion(Long referenceVersion) {
         this.referenceVersion = referenceVersion;
         return this;
     }
     
+    public UpdatePortfolioTemplateRequestBody(@JsonProperty("reference_version") Long referenceVersion) {
+        this.referenceVersion = referenceVersion;
+  }
 }

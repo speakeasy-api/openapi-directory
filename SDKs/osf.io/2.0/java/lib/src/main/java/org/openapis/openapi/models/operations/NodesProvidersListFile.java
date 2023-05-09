@@ -12,6 +12,7 @@ public class NodesProvidersListFile {
      */
     
     public NodesProvidersListFileAttributes attributes;
+
     public NodesProvidersListFile withAttributes(NodesProvidersListFileAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class NodesProvidersListFile {
      */
     
     public String id;
+
     public NodesProvidersListFile withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class NodesProvidersListFile {
      */
     
     public NodesProvidersListFileLinks links;
+
     public NodesProvidersListFile withLinks(NodesProvidersListFileLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class NodesProvidersListFile {
      */
     
     public NodesProvidersListFileRelationships relationships;
+
     public NodesProvidersListFile withRelationships(NodesProvidersListFileRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,11 @@ public class NodesProvidersListFile {
      */
     
     public String type;
+
     public NodesProvidersListFile withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NodesProvidersListFile(){}
 }

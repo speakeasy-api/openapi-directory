@@ -15,6 +15,7 @@ public class ZeppelinApplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogConfiguration")
     public CatalogConfiguration catalogConfiguration;
+
     public ZeppelinApplicationConfiguration withCatalogConfiguration(CatalogConfiguration catalogConfiguration) {
         this.catalogConfiguration = catalogConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class ZeppelinApplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomArtifactsConfiguration")
     public CustomArtifactConfiguration[] customArtifactsConfiguration;
+
     public ZeppelinApplicationConfiguration withCustomArtifactsConfiguration(CustomArtifactConfiguration[] customArtifactsConfiguration) {
         this.customArtifactsConfiguration = customArtifactsConfiguration;
         return this;
@@ -31,6 +33,7 @@ public class ZeppelinApplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeployAsApplicationConfiguration")
     public DeployAsApplicationConfiguration deployAsApplicationConfiguration;
+
     public ZeppelinApplicationConfiguration withDeployAsApplicationConfiguration(DeployAsApplicationConfiguration deployAsApplicationConfiguration) {
         this.deployAsApplicationConfiguration = deployAsApplicationConfiguration;
         return this;
@@ -39,9 +42,11 @@ public class ZeppelinApplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringConfiguration")
     public ZeppelinMonitoringConfiguration monitoringConfiguration;
+
     public ZeppelinApplicationConfiguration withMonitoringConfiguration(ZeppelinMonitoringConfiguration monitoringConfiguration) {
         this.monitoringConfiguration = monitoringConfiguration;
         return this;
     }
     
+    public ZeppelinApplicationConfiguration(){}
 }

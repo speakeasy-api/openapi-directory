@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyInstanceEventStartTimeResult {
     
     public ModifyInstanceEventStartTimeResultEvent event;
+
     public ModifyInstanceEventStartTimeResult withEvent(ModifyInstanceEventStartTimeResultEvent event) {
         this.event = event;
         return this;
     }
     
+    public ModifyInstanceEventStartTimeResult(){}
 }

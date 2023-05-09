@@ -15,6 +15,7 @@ public class ConfigRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigRuleArn")
     public String configRuleArn;
+
     public ConfigRule withConfigRuleArn(String configRuleArn) {
         this.configRuleArn = configRuleArn;
         return this;
@@ -23,6 +24,7 @@ public class ConfigRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigRuleId")
     public String configRuleId;
+
     public ConfigRule withConfigRuleId(String configRuleId) {
         this.configRuleId = configRuleId;
         return this;
@@ -31,6 +33,7 @@ public class ConfigRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigRuleName")
     public String configRuleName;
+
     public ConfigRule withConfigRuleName(String configRuleName) {
         this.configRuleName = configRuleName;
         return this;
@@ -39,6 +42,7 @@ public class ConfigRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigRuleState")
     public ConfigRuleStateEnum configRuleState;
+
     public ConfigRule withConfigRuleState(ConfigRuleStateEnum configRuleState) {
         this.configRuleState = configRuleState;
         return this;
@@ -47,6 +51,7 @@ public class ConfigRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public String createdBy;
+
     public ConfigRule withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -55,6 +60,7 @@ public class ConfigRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ConfigRule withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +69,7 @@ public class ConfigRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationModes")
     public EvaluationModeConfiguration[] evaluationModes;
+
     public ConfigRule withEvaluationModes(EvaluationModeConfiguration[] evaluationModes) {
         this.evaluationModes = evaluationModes;
         return this;
@@ -71,6 +78,7 @@ public class ConfigRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputParameters")
     public String inputParameters;
+
     public ConfigRule withInputParameters(String inputParameters) {
         this.inputParameters = inputParameters;
         return this;
@@ -79,6 +87,7 @@ public class ConfigRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumExecutionFrequency")
     public MaximumExecutionFrequencyEnum maximumExecutionFrequency;
+
     public ConfigRule withMaximumExecutionFrequency(MaximumExecutionFrequencyEnum maximumExecutionFrequency) {
         this.maximumExecutionFrequency = maximumExecutionFrequency;
         return this;
@@ -87,6 +96,7 @@ public class ConfigRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Scope")
     public Scope scope;
+
     public ConfigRule withScope(Scope scope) {
         this.scope = scope;
         return this;
@@ -94,9 +104,13 @@ public class ConfigRule {
     
     @JsonProperty("Source")
     public Source source;
+
     public ConfigRule withSource(Source source) {
         this.source = source;
         return this;
     }
     
+    public ConfigRule(@JsonProperty("Source") Source source) {
+        this.source = source;
+  }
 }

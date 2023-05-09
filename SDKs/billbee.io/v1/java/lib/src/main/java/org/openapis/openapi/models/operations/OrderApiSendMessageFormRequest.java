@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiSendMessageFormRequest {
@@ -12,6 +13,7 @@ public class OrderApiSendMessageFormRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel rechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel;
+
     public OrderApiSendMessageFormRequest withRechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel rechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel) {
         this.rechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel = rechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel;
         return this;
@@ -22,9 +24,14 @@ public class OrderApiSendMessageFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public OrderApiSendMessageFormRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public OrderApiSendMessageFormRequest(@JsonProperty("Rechnungsdruck.WebApp.Controllers.Api.OrderApiController.SendMessageModel") org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel rechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel, @JsonProperty("id") Long id) {
+        this.rechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel = rechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel;
+        this.id = id;
+  }
 }

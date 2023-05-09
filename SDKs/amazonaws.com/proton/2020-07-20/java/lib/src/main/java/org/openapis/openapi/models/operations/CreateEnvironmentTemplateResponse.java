@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEnvironmentTemplateResponse {
@@ -12,6 +13,7 @@ public class CreateEnvironmentTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateEnvironmentTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateEnvironmentTemplateResponse {
      */
     
     public Object conflictException;
+
     public CreateEnvironmentTemplateResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateEnvironmentTemplateResponse {
     
     
     public String contentType;
+
     public CreateEnvironmentTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateEnvironmentTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateEnvironmentTemplateOutput createEnvironmentTemplateOutput;
+
     public CreateEnvironmentTemplateResponse withCreateEnvironmentTemplateOutput(org.openapis.openapi.models.shared.CreateEnvironmentTemplateOutput createEnvironmentTemplateOutput) {
         this.createEnvironmentTemplateOutput = createEnvironmentTemplateOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateEnvironmentTemplateResponse {
      */
     
     public Object internalServerException;
+
     public CreateEnvironmentTemplateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateEnvironmentTemplateResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateEnvironmentTemplateResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateEnvironmentTemplateResponse {
     
     
     public Integer statusCode;
+
     public CreateEnvironmentTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateEnvironmentTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEnvironmentTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateEnvironmentTemplateResponse {
      */
     
     public Object throttlingException;
+
     public CreateEnvironmentTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateEnvironmentTemplateResponse {
      */
     
     public Object validationException;
+
     public CreateEnvironmentTemplateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateEnvironmentTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

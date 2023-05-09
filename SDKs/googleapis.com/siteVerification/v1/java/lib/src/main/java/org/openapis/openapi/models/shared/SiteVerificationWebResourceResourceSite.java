@@ -18,6 +18,7 @@ public class SiteVerificationWebResourceResourceSite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public SiteVerificationWebResourceResourceSite withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -29,9 +30,11 @@ public class SiteVerificationWebResourceResourceSite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public SiteVerificationWebResourceResourceSite withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SiteVerificationWebResourceResourceSite(){}
 }

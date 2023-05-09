@@ -15,6 +15,7 @@ public class ItineraryPriceMetricPriceMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public String amount;
+
     public ItineraryPriceMetricPriceMetrics withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -23,9 +24,11 @@ public class ItineraryPriceMetricPriceMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quartileRanking")
     public ItineraryPriceMetricPriceMetricsQuartileRankingEnum quartileRanking;
+
     public ItineraryPriceMetricPriceMetrics withQuartileRanking(ItineraryPriceMetricPriceMetricsQuartileRankingEnum quartileRanking) {
         this.quartileRanking = quartileRanking;
         return this;
     }
     
+    public ItineraryPriceMetricPriceMetrics(){}
 }

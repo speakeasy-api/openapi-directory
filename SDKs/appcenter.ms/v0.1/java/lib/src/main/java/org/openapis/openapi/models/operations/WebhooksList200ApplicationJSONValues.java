@@ -18,6 +18,7 @@ public class WebhooksList200ApplicationJSONValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public WebhooksList200ApplicationJSONValues withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -28,6 +29,7 @@ public class WebhooksList200ApplicationJSONValues {
      */
     @JsonProperty("event_types")
     public WebhooksList200ApplicationJSONValuesEventTypesEnum[] eventTypes;
+
     public WebhooksList200ApplicationJSONValues withEventTypes(WebhooksList200ApplicationJSONValuesEventTypesEnum[] eventTypes) {
         this.eventTypes = eventTypes;
         return this;
@@ -39,6 +41,7 @@ public class WebhooksList200ApplicationJSONValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public WebhooksList200ApplicationJSONValues withId(String id) {
         this.id = id;
         return this;
@@ -49,6 +52,7 @@ public class WebhooksList200ApplicationJSONValues {
      */
     @JsonProperty("name")
     public String name;
+
     public WebhooksList200ApplicationJSONValues withName(String name) {
         this.name = name;
         return this;
@@ -59,9 +63,15 @@ public class WebhooksList200ApplicationJSONValues {
      */
     @JsonProperty("url")
     public String url;
+
     public WebhooksList200ApplicationJSONValues withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public WebhooksList200ApplicationJSONValues(@JsonProperty("event_types") WebhooksList200ApplicationJSONValuesEventTypesEnum[] eventTypes, @JsonProperty("name") String name, @JsonProperty("url") String url) {
+        this.eventTypes = eventTypes;
+        this.name = name;
+        this.url = url;
+  }
 }

@@ -15,9 +15,11 @@ public class DescribeDatasetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetDescription")
     public DatasetDescription datasetDescription;
+
     public DescribeDatasetResponse withDatasetDescription(DatasetDescription datasetDescription) {
         this.datasetDescription = datasetDescription;
         return this;
     }
     
+    public DescribeDatasetResponse(){}
 }

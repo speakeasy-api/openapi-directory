@@ -18,6 +18,7 @@ public class GqlQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowLiterals")
     public Boolean allowLiterals;
+
     public GqlQuery withAllowLiterals(Boolean allowLiterals) {
         this.allowLiterals = allowLiterals;
         return this;
@@ -29,6 +30,7 @@ public class GqlQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedBindings")
     public java.util.Map<String, GqlQueryParameter> namedBindings;
+
     public GqlQuery withNamedBindings(java.util.Map<String, GqlQueryParameter> namedBindings) {
         this.namedBindings = namedBindings;
         return this;
@@ -40,6 +42,7 @@ public class GqlQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("positionalBindings")
     public GqlQueryParameter[] positionalBindings;
+
     public GqlQuery withPositionalBindings(GqlQueryParameter[] positionalBindings) {
         this.positionalBindings = positionalBindings;
         return this;
@@ -51,9 +54,11 @@ public class GqlQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryString")
     public String queryString;
+
     public GqlQuery withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
     }
     
+    public GqlQuery(){}
 }

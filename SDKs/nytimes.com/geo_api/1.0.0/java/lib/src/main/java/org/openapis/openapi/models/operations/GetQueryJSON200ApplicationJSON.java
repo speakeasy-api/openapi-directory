@@ -15,9 +15,11 @@ public class GetQueryJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public org.openapis.openapi.models.shared.Event[] results;
+
     public GetQueryJSON200ApplicationJSON withResults(org.openapis.openapi.models.shared.Event[] results) {
         this.results = results;
         return this;
     }
     
+    public GetQueryJSON200ApplicationJSON(){}
 }

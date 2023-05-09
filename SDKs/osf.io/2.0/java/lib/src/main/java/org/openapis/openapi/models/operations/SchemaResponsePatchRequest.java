@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SchemaResponsePatchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public SchemaResponsePatchSchemaResponsesInput requestBody;
+
     public SchemaResponsePatchRequest withRequestBody(SchemaResponsePatchSchemaResponsesInput requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class SchemaResponsePatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schema_response_id")
     public String schemaResponseId;
+
     public SchemaResponsePatchRequest withSchemaResponseId(String schemaResponseId) {
         this.schemaResponseId = schemaResponseId;
         return this;
     }
     
+    public SchemaResponsePatchRequest(@JsonProperty("RequestBody") SchemaResponsePatchSchemaResponsesInput requestBody, @JsonProperty("schema_response_id") String schemaResponseId) {
+        this.requestBody = requestBody;
+        this.schemaResponseId = schemaResponseId;
+  }
 }

@@ -15,6 +15,7 @@ public class BaseIPSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direct_destination_rules")
     public RuleSet[] directDestinationRules;
+
     public BaseIPSet withDirectDestinationRules(RuleSet[] directDestinationRules) {
         this.directDestinationRules = directDestinationRules;
         return this;
@@ -23,6 +24,7 @@ public class BaseIPSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direct_source_rules")
     public RuleSet[] directSourceRules;
+
     public BaseIPSet withDirectSourceRules(RuleSet[] directSourceRules) {
         this.directSourceRules = directSourceRules;
         return this;
@@ -31,6 +33,7 @@ public class BaseIPSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_id")
     public String entityId;
+
     public BaseIPSet withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -39,6 +42,7 @@ public class BaseIPSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public EntityTypeEnum entityType;
+
     public BaseIPSet withEntityType(EntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -47,6 +51,7 @@ public class BaseIPSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indirect_destination_rules")
     public RuleSet[] indirectDestinationRules;
+
     public BaseIPSet withIndirectDestinationRules(RuleSet[] indirectDestinationRules) {
         this.indirectDestinationRules = indirectDestinationRules;
         return this;
@@ -55,6 +60,7 @@ public class BaseIPSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indirect_source_rules")
     public RuleSet[] indirectSourceRules;
+
     public BaseIPSet withIndirectSourceRules(RuleSet[] indirectSourceRules) {
         this.indirectSourceRules = indirectSourceRules;
         return this;
@@ -63,6 +69,7 @@ public class BaseIPSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip_addresses")
     public IpV4Address[] ipAddresses;
+
     public BaseIPSet withIpAddresses(IpV4Address[] ipAddresses) {
         this.ipAddresses = ipAddresses;
         return this;
@@ -71,6 +78,7 @@ public class BaseIPSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip_numeric_ranges")
     public IpNumericRange[] ipNumericRanges;
+
     public BaseIPSet withIpNumericRanges(IpNumericRange[] ipNumericRanges) {
         this.ipNumericRanges = ipNumericRanges;
         return this;
@@ -79,6 +87,7 @@ public class BaseIPSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip_ranges")
     public IpAddressRange[] ipRanges;
+
     public BaseIPSet withIpRanges(IpAddressRange[] ipRanges) {
         this.ipRanges = ipRanges;
         return this;
@@ -87,6 +96,7 @@ public class BaseIPSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BaseIPSet withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +105,7 @@ public class BaseIPSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_security_groups")
     public Reference[] parentSecurityGroups;
+
     public BaseIPSet withParentSecurityGroups(Reference[] parentSecurityGroups) {
         this.parentSecurityGroups = parentSecurityGroups;
         return this;
@@ -103,6 +114,7 @@ public class BaseIPSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translated_vm_count")
     public Integer translatedVmCount;
+
     public BaseIPSet withTranslatedVmCount(Integer translatedVmCount) {
         this.translatedVmCount = translatedVmCount;
         return this;
@@ -111,6 +123,7 @@ public class BaseIPSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor")
     public String vendor;
+
     public BaseIPSet withVendor(String vendor) {
         this.vendor = vendor;
         return this;
@@ -119,9 +132,11 @@ public class BaseIPSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor_id")
     public String vendorId;
+
     public BaseIPSet withVendorId(String vendorId) {
         this.vendorId = vendorId;
         return this;
     }
     
+    public BaseIPSet(){}
 }

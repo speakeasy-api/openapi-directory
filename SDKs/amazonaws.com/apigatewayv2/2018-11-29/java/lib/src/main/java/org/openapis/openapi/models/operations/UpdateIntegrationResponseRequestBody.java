@@ -15,6 +15,7 @@ public class UpdateIntegrationResponseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentHandlingStrategy")
     public UpdateIntegrationResponseRequestBodyContentHandlingStrategyEnum contentHandlingStrategy;
+
     public UpdateIntegrationResponseRequestBody withContentHandlingStrategy(UpdateIntegrationResponseRequestBodyContentHandlingStrategyEnum contentHandlingStrategy) {
         this.contentHandlingStrategy = contentHandlingStrategy;
         return this;
@@ -26,6 +27,7 @@ public class UpdateIntegrationResponseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrationResponseKey")
     public String integrationResponseKey;
+
     public UpdateIntegrationResponseRequestBody withIntegrationResponseKey(String integrationResponseKey) {
         this.integrationResponseKey = integrationResponseKey;
         return this;
@@ -42,6 +44,7 @@ public class UpdateIntegrationResponseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseParameters")
     public java.util.Map<String, String> responseParameters;
+
     public UpdateIntegrationResponseRequestBody withResponseParameters(java.util.Map<String, String> responseParameters) {
         this.responseParameters = responseParameters;
         return this;
@@ -53,6 +56,7 @@ public class UpdateIntegrationResponseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseTemplates")
     public java.util.Map<String, String> responseTemplates;
+
     public UpdateIntegrationResponseRequestBody withResponseTemplates(java.util.Map<String, String> responseTemplates) {
         this.responseTemplates = responseTemplates;
         return this;
@@ -64,9 +68,11 @@ public class UpdateIntegrationResponseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateSelectionExpression")
     public String templateSelectionExpression;
+
     public UpdateIntegrationResponseRequestBody withTemplateSelectionExpression(String templateSelectionExpression) {
         this.templateSelectionExpression = templateSelectionExpression;
         return this;
     }
     
+    public UpdateIntegrationResponseRequestBody(){}
 }

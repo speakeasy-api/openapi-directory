@@ -12,6 +12,7 @@ public class TeamRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awayGames")
     public TeamRecordAwayGames awayGames;
+
     public TeamRecord withAwayGames(TeamRecordAwayGames awayGames) {
         this.awayGames = awayGames;
         return this;
@@ -20,6 +21,7 @@ public class TeamRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conference")
     public String conference;
+
     public TeamRecord withConference(String conference) {
         this.conference = conference;
         return this;
@@ -28,6 +30,7 @@ public class TeamRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conferenceGames")
     public TeamRecordConferenceGames conferenceGames;
+
     public TeamRecord withConferenceGames(TeamRecordConferenceGames conferenceGames) {
         this.conferenceGames = conferenceGames;
         return this;
@@ -36,6 +39,7 @@ public class TeamRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("division")
     public String division;
+
     public TeamRecord withDivision(String division) {
         this.division = division;
         return this;
@@ -44,6 +48,7 @@ public class TeamRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedWins")
     public Double expectedWins;
+
     public TeamRecord withExpectedWins(Double expectedWins) {
         this.expectedWins = expectedWins;
         return this;
@@ -52,6 +57,7 @@ public class TeamRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homeGames")
     public TeamRecordHomeGames homeGames;
+
     public TeamRecord withHomeGames(TeamRecordHomeGames homeGames) {
         this.homeGames = homeGames;
         return this;
@@ -60,6 +66,7 @@ public class TeamRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public TeamRecord withTeam(String team) {
         this.team = team;
         return this;
@@ -68,6 +75,7 @@ public class TeamRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public TeamRecordTotal total;
+
     public TeamRecord withTotal(TeamRecordTotal total) {
         this.total = total;
         return this;
@@ -76,9 +84,11 @@ public class TeamRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public Long year;
+
     public TeamRecord withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public TeamRecord(){}
 }

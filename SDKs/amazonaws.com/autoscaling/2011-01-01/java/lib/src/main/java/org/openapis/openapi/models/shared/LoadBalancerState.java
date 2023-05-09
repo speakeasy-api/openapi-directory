@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LoadBalancerState {
     
     public String loadBalancerName;
+
     public LoadBalancerState withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -19,9 +20,11 @@ public class LoadBalancerState {
     
     
     public String state;
+
     public LoadBalancerState withState(String state) {
         this.state = state;
         return this;
     }
     
+    public LoadBalancerState(){}
 }

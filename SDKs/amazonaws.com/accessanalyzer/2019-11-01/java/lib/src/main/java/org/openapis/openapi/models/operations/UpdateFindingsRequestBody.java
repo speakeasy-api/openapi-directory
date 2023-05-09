@@ -14,6 +14,7 @@ public class UpdateFindingsRequestBody {
      */
     @JsonProperty("analyzerArn")
     public String analyzerArn;
+
     public UpdateFindingsRequestBody withAnalyzerArn(String analyzerArn) {
         this.analyzerArn = analyzerArn;
         return this;
@@ -25,6 +26,7 @@ public class UpdateFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateFindingsRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -36,6 +38,7 @@ public class UpdateFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ids")
     public String[] ids;
+
     public UpdateFindingsRequestBody withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -47,6 +50,7 @@ public class UpdateFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public UpdateFindingsRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -57,9 +61,14 @@ public class UpdateFindingsRequestBody {
      */
     @JsonProperty("status")
     public UpdateFindingsRequestBodyStatusEnum status;
+
     public UpdateFindingsRequestBody withStatus(UpdateFindingsRequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateFindingsRequestBody(@JsonProperty("analyzerArn") String analyzerArn, @JsonProperty("status") UpdateFindingsRequestBodyStatusEnum status) {
+        this.analyzerArn = analyzerArn;
+        this.status = status;
+  }
 }

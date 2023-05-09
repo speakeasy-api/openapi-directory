@@ -15,9 +15,11 @@ public class UpdateRuleGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public UpdateRuleGroupResponse withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
     }
     
+    public UpdateRuleGroupResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTaskResponse {
@@ -12,6 +13,7 @@ public class CreateTaskResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateTaskResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateTaskResponse {
     
     
     public String contentType;
+
     public CreateTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateTaskOutput createTaskOutput;
+
     public CreateTaskResponse withCreateTaskOutput(org.openapis.openapi.models.shared.CreateTaskOutput createTaskOutput) {
         this.createTaskOutput = createTaskOutput;
         return this;
@@ -39,6 +43,7 @@ public class CreateTaskResponse {
      */
     
     public Object internalServerException;
+
     public CreateTaskResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateTaskResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateTaskResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateTaskResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateTaskResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateTaskResponse {
     
     
     public Integer statusCode;
+
     public CreateTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateTaskResponse {
      */
     
     public Object throttlingException;
+
     public CreateTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateTaskResponse {
      */
     
     public Object validationException;
+
     public CreateTaskResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

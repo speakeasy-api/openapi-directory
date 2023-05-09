@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDomainResponse {
@@ -12,6 +13,7 @@ public class UpdateDomainResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateDomainResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateDomainResponse {
      */
     
     public Object badRequestException;
+
     public UpdateDomainResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDomainResponse {
     
     
     public String contentType;
+
     public UpdateDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDomainResponse {
      */
     
     public Object internalServerException;
+
     public UpdateDomainResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDomainResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateDomainResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateDomainResponse {
     
     
     public Integer statusCode;
+
     public UpdateDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDomainResponse {
      */
     
     public Object throttlingException;
+
     public UpdateDomainResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateDomainResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDomainResponse updateDomainResponse;
+
     public UpdateDomainResponse withUpdateDomainResponse(org.openapis.openapi.models.shared.UpdateDomainResponse updateDomainResponse) {
         this.updateDomainResponse = updateDomainResponse;
         return this;
     }
     
+    public UpdateDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

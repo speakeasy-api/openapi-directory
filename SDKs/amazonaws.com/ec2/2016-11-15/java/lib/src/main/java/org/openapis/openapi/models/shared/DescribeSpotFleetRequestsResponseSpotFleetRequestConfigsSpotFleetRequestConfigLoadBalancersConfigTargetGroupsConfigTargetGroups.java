@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLoadBalancersConfigTargetGroupsConfigTargetGroups {
     
     public String arn;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLoadBalancersConfigTargetGroupsConfigTargetGroups withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLoadBalancersConfigTargetGroupsConfigTargetGroups(){}
 }

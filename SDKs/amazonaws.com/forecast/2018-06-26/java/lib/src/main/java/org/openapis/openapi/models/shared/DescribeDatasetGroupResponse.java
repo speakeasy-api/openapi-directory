@@ -22,6 +22,7 @@ public class DescribeDatasetGroupResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeDatasetGroupResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DescribeDatasetGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetArns")
     public String[] datasetArns;
+
     public DescribeDatasetGroupResponse withDatasetArns(String[] datasetArns) {
         this.datasetArns = datasetArns;
         return this;
@@ -38,6 +40,7 @@ public class DescribeDatasetGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetGroupArn")
     public String datasetGroupArn;
+
     public DescribeDatasetGroupResponse withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -46,6 +49,7 @@ public class DescribeDatasetGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetGroupName")
     public String datasetGroupName;
+
     public DescribeDatasetGroupResponse withDatasetGroupName(String datasetGroupName) {
         this.datasetGroupName = datasetGroupName;
         return this;
@@ -54,6 +58,7 @@ public class DescribeDatasetGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public DomainEnum domain;
+
     public DescribeDatasetGroupResponse withDomain(DomainEnum domain) {
         this.domain = domain;
         return this;
@@ -64,6 +69,7 @@ public class DescribeDatasetGroupResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public DescribeDatasetGroupResponse withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -72,9 +78,11 @@ public class DescribeDatasetGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public DescribeDatasetGroupResponse withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DescribeDatasetGroupResponse(){}
 }

@@ -18,9 +18,11 @@ public class EndpointConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableHttpPortAccess")
     public Boolean enableHttpPortAccess;
+
     public EndpointConfigInput withEnableHttpPortAccess(Boolean enableHttpPortAccess) {
         this.enableHttpPortAccess = enableHttpPortAccess;
         return this;
     }
     
+    public EndpointConfigInput(){}
 }

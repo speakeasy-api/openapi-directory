@@ -18,9 +18,11 @@ public class LandlordSettingsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LinkedAccounts")
     public LandlordDetailsModel[] linkedAccounts;
+
     public LandlordSettingsModel withLinkedAccounts(LandlordDetailsModel[] linkedAccounts) {
         this.linkedAccounts = linkedAccounts;
         return this;
     }
     
+    public LandlordSettingsModel(){}
 }

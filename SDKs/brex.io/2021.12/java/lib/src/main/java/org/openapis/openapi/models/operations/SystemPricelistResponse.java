@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SystemPricelistResponse {
     
     public String contentType;
+
     public SystemPricelistResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SystemPricelistResponse {
     
     
     public Integer statusCode;
+
     public SystemPricelistResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SystemPricelistResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SystemPricelistResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SystemPricelistResponse {
      */
     
     public SystemPricelist200ApplicationJSON[] systemPricelist200ApplicationJSONObjects;
+
     public SystemPricelistResponse withSystemPricelist200ApplicationJSONObjects(SystemPricelist200ApplicationJSON[] systemPricelist200ApplicationJSONObjects) {
         this.systemPricelist200ApplicationJSONObjects = systemPricelist200ApplicationJSONObjects;
         return this;
@@ -43,9 +48,14 @@ public class SystemPricelistResponse {
      */
     
     public SystemPricelistDefaultApplicationJSON systemPricelistDefaultApplicationJSONObject;
+
     public SystemPricelistResponse withSystemPricelistDefaultApplicationJSONObject(SystemPricelistDefaultApplicationJSON systemPricelistDefaultApplicationJSONObject) {
         this.systemPricelistDefaultApplicationJSONObject = systemPricelistDefaultApplicationJSONObject;
         return this;
     }
     
+    public SystemPricelistResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

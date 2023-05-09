@@ -18,6 +18,7 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UserResponse withEmail(String email) {
         this.email = email;
         return this;
@@ -29,6 +30,7 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public UserResponse withGid(String gid) {
         this.gid = gid;
         return this;
@@ -40,6 +42,7 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UserResponse withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photo")
     public UserResponsePhoto photo;
+
     public UserResponse withPhoto(UserResponsePhoto photo) {
         this.photo = photo;
         return this;
@@ -62,6 +66,7 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public UserResponse withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -74,9 +79,11 @@ public class UserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaces")
     public WorkspaceCompact[] workspaces;
+
     public UserResponse withWorkspaces(WorkspaceCompact[] workspaces) {
         this.workspaces = workspaces;
         return this;
     }
     
+    public UserResponse(){}
 }

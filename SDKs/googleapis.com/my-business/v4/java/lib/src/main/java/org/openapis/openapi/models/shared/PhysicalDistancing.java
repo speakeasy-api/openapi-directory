@@ -18,6 +18,7 @@ public class PhysicalDistancing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonAreasPhysicalDistancingArranged")
     public Boolean commonAreasPhysicalDistancingArranged;
+
     public PhysicalDistancing withCommonAreasPhysicalDistancingArranged(Boolean commonAreasPhysicalDistancingArranged) {
         this.commonAreasPhysicalDistancingArranged = commonAreasPhysicalDistancingArranged;
         return this;
@@ -29,6 +30,7 @@ public class PhysicalDistancing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonAreasPhysicalDistancingArrangedException")
     public PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum commonAreasPhysicalDistancingArrangedException;
+
     public PhysicalDistancing withCommonAreasPhysicalDistancingArrangedException(PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum commonAreasPhysicalDistancingArrangedException) {
         this.commonAreasPhysicalDistancingArrangedException = commonAreasPhysicalDistancingArrangedException;
         return this;
@@ -40,6 +42,7 @@ public class PhysicalDistancing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("physicalDistancingRequired")
     public Boolean physicalDistancingRequired;
+
     public PhysicalDistancing withPhysicalDistancingRequired(Boolean physicalDistancingRequired) {
         this.physicalDistancingRequired = physicalDistancingRequired;
         return this;
@@ -51,6 +54,7 @@ public class PhysicalDistancing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("physicalDistancingRequiredException")
     public PhysicalDistancingPhysicalDistancingRequiredExceptionEnum physicalDistancingRequiredException;
+
     public PhysicalDistancing withPhysicalDistancingRequiredException(PhysicalDistancingPhysicalDistancingRequiredExceptionEnum physicalDistancingRequiredException) {
         this.physicalDistancingRequiredException = physicalDistancingRequiredException;
         return this;
@@ -62,6 +66,7 @@ public class PhysicalDistancing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("safetyDividers")
     public Boolean safetyDividers;
+
     public PhysicalDistancing withSafetyDividers(Boolean safetyDividers) {
         this.safetyDividers = safetyDividers;
         return this;
@@ -73,6 +78,7 @@ public class PhysicalDistancing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("safetyDividersException")
     public PhysicalDistancingSafetyDividersExceptionEnum safetyDividersException;
+
     public PhysicalDistancing withSafetyDividersException(PhysicalDistancingSafetyDividersExceptionEnum safetyDividersException) {
         this.safetyDividersException = safetyDividersException;
         return this;
@@ -84,6 +90,7 @@ public class PhysicalDistancing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedAreasLimitedOccupancy")
     public Boolean sharedAreasLimitedOccupancy;
+
     public PhysicalDistancing withSharedAreasLimitedOccupancy(Boolean sharedAreasLimitedOccupancy) {
         this.sharedAreasLimitedOccupancy = sharedAreasLimitedOccupancy;
         return this;
@@ -95,6 +102,7 @@ public class PhysicalDistancing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedAreasLimitedOccupancyException")
     public PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum sharedAreasLimitedOccupancyException;
+
     public PhysicalDistancing withSharedAreasLimitedOccupancyException(PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum sharedAreasLimitedOccupancyException) {
         this.sharedAreasLimitedOccupancyException = sharedAreasLimitedOccupancyException;
         return this;
@@ -106,6 +114,7 @@ public class PhysicalDistancing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wellnessAreasHavePrivateSpaces")
     public Boolean wellnessAreasHavePrivateSpaces;
+
     public PhysicalDistancing withWellnessAreasHavePrivateSpaces(Boolean wellnessAreasHavePrivateSpaces) {
         this.wellnessAreasHavePrivateSpaces = wellnessAreasHavePrivateSpaces;
         return this;
@@ -117,9 +126,11 @@ public class PhysicalDistancing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wellnessAreasHavePrivateSpacesException")
     public PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum wellnessAreasHavePrivateSpacesException;
+
     public PhysicalDistancing withWellnessAreasHavePrivateSpacesException(PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum wellnessAreasHavePrivateSpacesException) {
         this.wellnessAreasHavePrivateSpacesException = wellnessAreasHavePrivateSpacesException;
         return this;
     }
     
+    public PhysicalDistancing(){}
 }

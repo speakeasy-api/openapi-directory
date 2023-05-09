@@ -55,12 +55,10 @@ public class StyleGuide {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateStyleGuideJsonResponse res = new org.openapis.openapi.models.operations.CreateStyleGuideJsonResponse() {{
+        org.openapis.openapi.models.operations.CreateStyleGuideJsonResponse res = new org.openapis.openapi.models.operations.CreateStyleGuideJsonResponse(contentType, httpRes.statusCode()) {{
             styleGuideList = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,12 +103,10 @@ public class StyleGuide {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateStyleGuideMultipartResponse res = new org.openapis.openapi.models.operations.CreateStyleGuideMultipartResponse() {{
+        org.openapis.openapi.models.operations.CreateStyleGuideMultipartResponse res = new org.openapis.openapi.models.operations.CreateStyleGuideMultipartResponse(contentType, httpRes.statusCode()) {{
             styleGuideList = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,12 +149,10 @@ public class StyleGuide {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteStyleGuideResponse res = new org.openapis.openapi.models.operations.DeleteStyleGuideResponse() {{
+        org.openapis.openapi.models.operations.DeleteStyleGuideResponse res = new org.openapis.openapi.models.operations.DeleteStyleGuideResponse(contentType, httpRes.statusCode()) {{
             operationStatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,12 +194,10 @@ public class StyleGuide {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DownloadGlobalStyleGuideResponse res = new org.openapis.openapi.models.operations.DownloadGlobalStyleGuideResponse() {{
+        org.openapis.openapi.models.operations.DownloadGlobalStyleGuideResponse res = new org.openapis.openapi.models.operations.DownloadGlobalStyleGuideResponse(contentType, httpRes.statusCode()) {{
             downloadGlobalStyleGuide200ApplicationJSONString = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,12 +239,10 @@ public class StyleGuide {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DownloadStyleGuideResponse res = new org.openapis.openapi.models.operations.DownloadStyleGuideResponse() {{
+        org.openapis.openapi.models.operations.DownloadStyleGuideResponse res = new org.openapis.openapi.models.operations.DownloadStyleGuideResponse(contentType, httpRes.statusCode()) {{
             downloadStyleGuide200ApplicationJSONString = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,12 +290,10 @@ public class StyleGuide {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStyleGuideResponse res = new org.openapis.openapi.models.operations.GetStyleGuideResponse() {{
+        org.openapis.openapi.models.operations.GetStyleGuideResponse res = new org.openapis.openapi.models.operations.GetStyleGuideResponse(contentType, httpRes.statusCode()) {{
             styleGuide = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -354,12 +342,10 @@ public class StyleGuide {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStyleGuidesResponse res = new org.openapis.openapi.models.operations.GetStyleGuidesResponse() {{
+        org.openapis.openapi.models.operations.GetStyleGuidesResponse res = new org.openapis.openapi.models.operations.GetStyleGuidesResponse(contentType, httpRes.statusCode()) {{
             styleGuideList = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -404,12 +390,10 @@ public class StyleGuide {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGlobalStyleGuideJsonResponse res = new org.openapis.openapi.models.operations.UpdateGlobalStyleGuideJsonResponse() {{
+        org.openapis.openapi.models.operations.UpdateGlobalStyleGuideJsonResponse res = new org.openapis.openapi.models.operations.UpdateGlobalStyleGuideJsonResponse(contentType, httpRes.statusCode()) {{
             operationStatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -454,12 +438,10 @@ public class StyleGuide {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGlobalStyleGuideMultipartResponse res = new org.openapis.openapi.models.operations.UpdateGlobalStyleGuideMultipartResponse() {{
+        org.openapis.openapi.models.operations.UpdateGlobalStyleGuideMultipartResponse res = new org.openapis.openapi.models.operations.UpdateGlobalStyleGuideMultipartResponse(contentType, httpRes.statusCode()) {{
             operationStatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -504,12 +486,10 @@ public class StyleGuide {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateStyleGuideJsonResponse res = new org.openapis.openapi.models.operations.UpdateStyleGuideJsonResponse() {{
+        org.openapis.openapi.models.operations.UpdateStyleGuideJsonResponse res = new org.openapis.openapi.models.operations.UpdateStyleGuideJsonResponse(contentType, httpRes.statusCode()) {{
             styleGuide = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -554,12 +534,10 @@ public class StyleGuide {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateStyleGuideMultipartResponse res = new org.openapis.openapi.models.operations.UpdateStyleGuideMultipartResponse() {{
+        org.openapis.openapi.models.operations.UpdateStyleGuideMultipartResponse res = new org.openapis.openapi.models.operations.UpdateStyleGuideMultipartResponse(contentType, httpRes.statusCode()) {{
             styleGuide = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

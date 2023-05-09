@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsManagementAccountUserLinksUpdateResponse {
     
     public String contentType;
+
     public AnalyticsManagementAccountUserLinksUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsManagementAccountUserLinksUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.EntityUserLink entityUserLink;
+
     public AnalyticsManagementAccountUserLinksUpdateResponse withEntityUserLink(org.openapis.openapi.models.shared.EntityUserLink entityUserLink) {
         this.entityUserLink = entityUserLink;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsManagementAccountUserLinksUpdateResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsManagementAccountUserLinksUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsManagementAccountUserLinksUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsManagementAccountUserLinksUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsManagementAccountUserLinksUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

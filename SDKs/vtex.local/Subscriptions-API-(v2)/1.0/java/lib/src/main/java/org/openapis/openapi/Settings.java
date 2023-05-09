@@ -65,11 +65,9 @@ public class Settings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EditSettingsResponse res = new org.openapis.openapi.models.operations.EditSettingsResponse() {{
+        org.openapis.openapi.models.operations.EditSettingsResponse res = new org.openapis.openapi.models.operations.EditSettingsResponse(contentType, httpRes.statusCode()) {{
             settings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -113,11 +111,9 @@ public class Settings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSettingsResponse res = new org.openapis.openapi.models.operations.GetSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetSettingsResponse res = new org.openapis.openapi.models.operations.GetSettingsResponse(contentType, httpRes.statusCode()) {{
             settings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

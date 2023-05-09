@@ -12,9 +12,13 @@ public class SaveautoapproveforaccountsellerRequest {
      */
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public SaveautoapproveforaccountsellerRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public SaveautoapproveforaccountsellerRequest(@JsonProperty("Enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

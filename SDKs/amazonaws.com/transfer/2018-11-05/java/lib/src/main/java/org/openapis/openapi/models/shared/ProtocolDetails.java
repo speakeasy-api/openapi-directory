@@ -15,6 +15,7 @@ public class ProtocolDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("As2Transports")
     public As2TransportEnum[] as2Transports;
+
     public ProtocolDetails withAs2Transports(As2TransportEnum[] as2Transports) {
         this.as2Transports = as2Transports;
         return this;
@@ -23,6 +24,7 @@ public class ProtocolDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassiveIp")
     public String passiveIp;
+
     public ProtocolDetails withPassiveIp(String passiveIp) {
         this.passiveIp = passiveIp;
         return this;
@@ -31,6 +33,7 @@ public class ProtocolDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SetStatOption")
     public SetStatOptionEnum setStatOption;
+
     public ProtocolDetails withSetStatOption(SetStatOptionEnum setStatOption) {
         this.setStatOption = setStatOption;
         return this;
@@ -39,9 +42,11 @@ public class ProtocolDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TlsSessionResumptionMode")
     public TlsSessionResumptionModeEnum tlsSessionResumptionMode;
+
     public ProtocolDetails withTlsSessionResumptionMode(TlsSessionResumptionModeEnum tlsSessionResumptionMode) {
         this.tlsSessionResumptionMode = tlsSessionResumptionMode;
         return this;
     }
     
+    public ProtocolDetails(){}
 }

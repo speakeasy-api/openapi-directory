@@ -18,6 +18,7 @@ public class CodePushDeploymentReleasesCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deployment_name")
     public String deploymentName;
+
     public CodePushDeploymentReleasesCreateRequestBody withDeploymentName(String deploymentName) {
         this.deploymentName = deploymentName;
         return this;
@@ -29,6 +30,7 @@ public class CodePushDeploymentReleasesCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CodePushDeploymentReleasesCreateRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class CodePushDeploymentReleasesCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public CodePushDeploymentReleasesCreateRequestBody withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -51,6 +54,7 @@ public class CodePushDeploymentReleasesCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mandatory")
     public Boolean mandatory;
+
     public CodePushDeploymentReleasesCreateRequestBody withMandatory(Boolean mandatory) {
         this.mandatory = mandatory;
         return this;
@@ -62,6 +66,7 @@ public class CodePushDeploymentReleasesCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("no_duplicate_release_error")
     public Boolean noDuplicateReleaseError;
+
     public CodePushDeploymentReleasesCreateRequestBody withNoDuplicateReleaseError(Boolean noDuplicateReleaseError) {
         this.noDuplicateReleaseError = noDuplicateReleaseError;
         return this;
@@ -72,6 +77,7 @@ public class CodePushDeploymentReleasesCreateRequestBody {
      */
     @JsonProperty("release_upload")
     public CodePushDeploymentReleasesCreateRequestBodyReleaseUpload releaseUpload;
+
     public CodePushDeploymentReleasesCreateRequestBody withReleaseUpload(CodePushDeploymentReleasesCreateRequestBodyReleaseUpload releaseUpload) {
         this.releaseUpload = releaseUpload;
         return this;
@@ -83,6 +89,7 @@ public class CodePushDeploymentReleasesCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollout")
     public Long rollout;
+
     public CodePushDeploymentReleasesCreateRequestBody withRollout(Long rollout) {
         this.rollout = rollout;
         return this;
@@ -93,9 +100,14 @@ public class CodePushDeploymentReleasesCreateRequestBody {
      */
     @JsonProperty("target_binary_version")
     public String targetBinaryVersion;
+
     public CodePushDeploymentReleasesCreateRequestBody withTargetBinaryVersion(String targetBinaryVersion) {
         this.targetBinaryVersion = targetBinaryVersion;
         return this;
     }
     
+    public CodePushDeploymentReleasesCreateRequestBody(@JsonProperty("release_upload") CodePushDeploymentReleasesCreateRequestBodyReleaseUpload releaseUpload, @JsonProperty("target_binary_version") String targetBinaryVersion) {
+        this.releaseUpload = releaseUpload;
+        this.targetBinaryVersion = targetBinaryVersion;
+  }
 }

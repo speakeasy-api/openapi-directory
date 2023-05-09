@@ -17,6 +17,7 @@ public class PostLoadBalancersCreateLoadBalancerRequestLoadBalancerServiceLoadBa
      */
     @JsonProperty("domain")
     public String domain;
+
     public PostLoadBalancersCreateLoadBalancerRequestLoadBalancerServiceLoadBalancerServiceHealthCheckHttp withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -27,6 +28,7 @@ public class PostLoadBalancersCreateLoadBalancerRequestLoadBalancerServiceLoadBa
      */
     @JsonProperty("path")
     public String path;
+
     public PostLoadBalancersCreateLoadBalancerRequestLoadBalancerServiceLoadBalancerServiceHealthCheckHttp withPath(String path) {
         this.path = path;
         return this;
@@ -38,6 +40,7 @@ public class PostLoadBalancersCreateLoadBalancerRequestLoadBalancerServiceLoadBa
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public String response;
+
     public PostLoadBalancersCreateLoadBalancerRequestLoadBalancerServiceLoadBalancerServiceHealthCheckHttp withResponse(String response) {
         this.response = response;
         return this;
@@ -49,6 +52,7 @@ public class PostLoadBalancersCreateLoadBalancerRequestLoadBalancerServiceLoadBa
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_codes")
     public String[] statusCodes;
+
     public PostLoadBalancersCreateLoadBalancerRequestLoadBalancerServiceLoadBalancerServiceHealthCheckHttp withStatusCodes(String[] statusCodes) {
         this.statusCodes = statusCodes;
         return this;
@@ -60,9 +64,14 @@ public class PostLoadBalancersCreateLoadBalancerRequestLoadBalancerServiceLoadBa
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tls")
     public Boolean tls;
+
     public PostLoadBalancersCreateLoadBalancerRequestLoadBalancerServiceLoadBalancerServiceHealthCheckHttp withTls(Boolean tls) {
         this.tls = tls;
         return this;
     }
     
+    public PostLoadBalancersCreateLoadBalancerRequestLoadBalancerServiceLoadBalancerServiceHealthCheckHttp(@JsonProperty("domain") String domain, @JsonProperty("path") String path) {
+        this.domain = domain;
+        this.path = path;
+  }
 }

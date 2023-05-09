@@ -18,6 +18,7 @@ public class ProjectStatusRequestInput {
      */
     @JsonProperty("color")
     public ProjectStatusRequestColorEnum color;
+
     public ProjectStatusRequestInput withColor(ProjectStatusRequestColorEnum color) {
         this.color = color;
         return this;
@@ -29,6 +30,7 @@ public class ProjectStatusRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_text")
     public String htmlText;
+
     public ProjectStatusRequestInput withHtmlText(String htmlText) {
         this.htmlText = htmlText;
         return this;
@@ -39,6 +41,7 @@ public class ProjectStatusRequestInput {
      */
     @JsonProperty("text")
     public String text;
+
     public ProjectStatusRequestInput withText(String text) {
         this.text = text;
         return this;
@@ -50,9 +53,14 @@ public class ProjectStatusRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ProjectStatusRequestInput withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ProjectStatusRequestInput(@JsonProperty("color") ProjectStatusRequestColorEnum color, @JsonProperty("text") String text) {
+        this.color = color;
+        this.text = text;
+  }
 }

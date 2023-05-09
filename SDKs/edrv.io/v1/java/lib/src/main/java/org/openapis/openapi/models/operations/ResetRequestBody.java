@@ -12,6 +12,7 @@ public class ResetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargestation")
     public String chargestation;
+
     public ResetRequestBody withChargestation(String chargestation) {
         this.chargestation = chargestation;
         return this;
@@ -20,9 +21,11 @@ public class ResetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ResetRequestBody withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ResetRequestBody(){}
 }

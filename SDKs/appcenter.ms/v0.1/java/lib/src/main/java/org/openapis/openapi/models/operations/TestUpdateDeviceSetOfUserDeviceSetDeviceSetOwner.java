@@ -18,6 +18,7 @@ public class TestUpdateDeviceSetOfUserDeviceSetDeviceSetOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public TestUpdateDeviceSetOfUserDeviceSetDeviceSetOwner withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -28,6 +29,7 @@ public class TestUpdateDeviceSetOfUserDeviceSetDeviceSetOwner {
      */
     @JsonProperty("id")
     public String id;
+
     public TestUpdateDeviceSetOfUserDeviceSetDeviceSetOwner withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +40,7 @@ public class TestUpdateDeviceSetOfUserDeviceSetDeviceSetOwner {
      */
     @JsonProperty("name")
     public String name;
+
     public TestUpdateDeviceSetOfUserDeviceSetDeviceSetOwner withName(String name) {
         this.name = name;
         return this;
@@ -48,9 +51,15 @@ public class TestUpdateDeviceSetOfUserDeviceSetDeviceSetOwner {
      */
     @JsonProperty("type")
     public String type;
+
     public TestUpdateDeviceSetOfUserDeviceSetDeviceSetOwner withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TestUpdateDeviceSetOfUserDeviceSetDeviceSetOwner(@JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("type") String type) {
+        this.id = id;
+        this.name = name;
+        this.type = type;
+  }
 }

@@ -15,6 +15,7 @@ public class StoresCreateRequestBodyIntuneDetailsSecretJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_token")
     public String idToken;
+
     public StoresCreateRequestBodyIntuneDetailsSecretJson withIdToken(String idToken) {
         this.idToken = idToken;
         return this;
@@ -26,6 +27,7 @@ public class StoresCreateRequestBodyIntuneDetailsSecretJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refresh_token")
     public String refreshToken;
+
     public StoresCreateRequestBodyIntuneDetailsSecretJson withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
@@ -37,9 +39,11 @@ public class StoresCreateRequestBodyIntuneDetailsSecretJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refresh_token_expiry")
     public String refreshTokenExpiry;
+
     public StoresCreateRequestBodyIntuneDetailsSecretJson withRefreshTokenExpiry(String refreshTokenExpiry) {
         this.refreshTokenExpiry = refreshTokenExpiry;
         return this;
     }
     
+    public StoresCreateRequestBodyIntuneDetailsSecretJson(){}
 }

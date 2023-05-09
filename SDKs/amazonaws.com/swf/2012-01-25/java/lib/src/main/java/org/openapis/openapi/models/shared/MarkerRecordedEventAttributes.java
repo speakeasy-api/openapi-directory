@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MarkerRecordedEventAttributes {
     @JsonProperty("decisionTaskCompletedEventId")
     public Long decisionTaskCompletedEventId;
+
     public MarkerRecordedEventAttributes withDecisionTaskCompletedEventId(Long decisionTaskCompletedEventId) {
         this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
         return this;
@@ -22,6 +23,7 @@ public class MarkerRecordedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public MarkerRecordedEventAttributes withDetails(String details) {
         this.details = details;
         return this;
@@ -29,9 +31,14 @@ public class MarkerRecordedEventAttributes {
     
     @JsonProperty("markerName")
     public String markerName;
+
     public MarkerRecordedEventAttributes withMarkerName(String markerName) {
         this.markerName = markerName;
         return this;
     }
     
+    public MarkerRecordedEventAttributes(@JsonProperty("decisionTaskCompletedEventId") Long decisionTaskCompletedEventId, @JsonProperty("markerName") String markerName) {
+        this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
+        this.markerName = markerName;
+  }
 }

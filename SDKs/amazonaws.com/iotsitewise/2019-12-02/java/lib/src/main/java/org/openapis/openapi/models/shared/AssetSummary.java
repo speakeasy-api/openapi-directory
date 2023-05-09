@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class AssetSummary {
     @JsonProperty("arn")
     public String arn;
+
     public AssetSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class AssetSummary {
     
     @JsonProperty("assetModelId")
     public String assetModelId;
+
     public AssetSummary withAssetModelId(String assetModelId) {
         this.assetModelId = assetModelId;
         return this;
@@ -35,6 +37,7 @@ public class AssetSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public AssetSummary withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -43,6 +46,7 @@ public class AssetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AssetSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -50,6 +54,7 @@ public class AssetSummary {
     
     @JsonProperty("hierarchies")
     public AssetHierarchy[] hierarchies;
+
     public AssetSummary withHierarchies(AssetHierarchy[] hierarchies) {
         this.hierarchies = hierarchies;
         return this;
@@ -57,6 +62,7 @@ public class AssetSummary {
     
     @JsonProperty("id")
     public String id;
+
     public AssetSummary withId(String id) {
         this.id = id;
         return this;
@@ -66,6 +72,7 @@ public class AssetSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateDate")
     public OffsetDateTime lastUpdateDate;
+
     public AssetSummary withLastUpdateDate(OffsetDateTime lastUpdateDate) {
         this.lastUpdateDate = lastUpdateDate;
         return this;
@@ -73,6 +80,7 @@ public class AssetSummary {
     
     @JsonProperty("name")
     public String name;
+
     public AssetSummary withName(String name) {
         this.name = name;
         return this;
@@ -80,9 +88,20 @@ public class AssetSummary {
     
     @JsonProperty("status")
     public AssetStatus status;
+
     public AssetSummary withStatus(AssetStatus status) {
         this.status = status;
         return this;
     }
     
+    public AssetSummary(@JsonProperty("arn") String arn, @JsonProperty("assetModelId") String assetModelId, @JsonProperty("creationDate") OffsetDateTime creationDate, @JsonProperty("hierarchies") AssetHierarchy[] hierarchies, @JsonProperty("id") String id, @JsonProperty("lastUpdateDate") OffsetDateTime lastUpdateDate, @JsonProperty("name") String name, @JsonProperty("status") AssetStatus status) {
+        this.arn = arn;
+        this.assetModelId = assetModelId;
+        this.creationDate = creationDate;
+        this.hierarchies = hierarchies;
+        this.id = id;
+        this.lastUpdateDate = lastUpdateDate;
+        this.name = name;
+        this.status = status;
+  }
 }

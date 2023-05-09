@@ -15,6 +15,7 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountRecoverySetting")
     public AccountRecoverySettingType accountRecoverySetting;
+
     public CreateUserPoolRequest withAccountRecoverySetting(AccountRecoverySettingType accountRecoverySetting) {
         this.accountRecoverySetting = accountRecoverySetting;
         return this;
@@ -23,6 +24,7 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdminCreateUserConfig")
     public AdminCreateUserConfigType adminCreateUserConfig;
+
     public CreateUserPoolRequest withAdminCreateUserConfig(AdminCreateUserConfigType adminCreateUserConfig) {
         this.adminCreateUserConfig = adminCreateUserConfig;
         return this;
@@ -31,6 +33,7 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AliasAttributes")
     public AliasAttributeTypeEnum[] aliasAttributes;
+
     public CreateUserPoolRequest withAliasAttributes(AliasAttributeTypeEnum[] aliasAttributes) {
         this.aliasAttributes = aliasAttributes;
         return this;
@@ -39,6 +42,7 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoVerifiedAttributes")
     public VerifiedAttributeTypeEnum[] autoVerifiedAttributes;
+
     public CreateUserPoolRequest withAutoVerifiedAttributes(VerifiedAttributeTypeEnum[] autoVerifiedAttributes) {
         this.autoVerifiedAttributes = autoVerifiedAttributes;
         return this;
@@ -47,6 +51,7 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletionProtection")
     public DeletionProtectionTypeEnum deletionProtection;
+
     public CreateUserPoolRequest withDeletionProtection(DeletionProtectionTypeEnum deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -55,6 +60,7 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceConfiguration")
     public DeviceConfigurationType deviceConfiguration;
+
     public CreateUserPoolRequest withDeviceConfiguration(DeviceConfigurationType deviceConfiguration) {
         this.deviceConfiguration = deviceConfiguration;
         return this;
@@ -63,6 +69,7 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailConfiguration")
     public EmailConfigurationType emailConfiguration;
+
     public CreateUserPoolRequest withEmailConfiguration(EmailConfigurationType emailConfiguration) {
         this.emailConfiguration = emailConfiguration;
         return this;
@@ -71,6 +78,7 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailVerificationMessage")
     public String emailVerificationMessage;
+
     public CreateUserPoolRequest withEmailVerificationMessage(String emailVerificationMessage) {
         this.emailVerificationMessage = emailVerificationMessage;
         return this;
@@ -79,6 +87,7 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailVerificationSubject")
     public String emailVerificationSubject;
+
     public CreateUserPoolRequest withEmailVerificationSubject(String emailVerificationSubject) {
         this.emailVerificationSubject = emailVerificationSubject;
         return this;
@@ -87,6 +96,7 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LambdaConfig")
     public LambdaConfigType lambdaConfig;
+
     public CreateUserPoolRequest withLambdaConfig(LambdaConfigType lambdaConfig) {
         this.lambdaConfig = lambdaConfig;
         return this;
@@ -95,6 +105,7 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MfaConfiguration")
     public UserPoolMfaTypeEnum mfaConfiguration;
+
     public CreateUserPoolRequest withMfaConfiguration(UserPoolMfaTypeEnum mfaConfiguration) {
         this.mfaConfiguration = mfaConfiguration;
         return this;
@@ -103,6 +114,7 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policies")
     public UserPoolPolicyType policies;
+
     public CreateUserPoolRequest withPolicies(UserPoolPolicyType policies) {
         this.policies = policies;
         return this;
@@ -110,6 +122,7 @@ public class CreateUserPoolRequest {
     
     @JsonProperty("PoolName")
     public String poolName;
+
     public CreateUserPoolRequest withPoolName(String poolName) {
         this.poolName = poolName;
         return this;
@@ -118,6 +131,7 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schema")
     public SchemaAttributeType[] schema;
+
     public CreateUserPoolRequest withSchema(SchemaAttributeType[] schema) {
         this.schema = schema;
         return this;
@@ -126,6 +140,7 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SmsAuthenticationMessage")
     public String smsAuthenticationMessage;
+
     public CreateUserPoolRequest withSmsAuthenticationMessage(String smsAuthenticationMessage) {
         this.smsAuthenticationMessage = smsAuthenticationMessage;
         return this;
@@ -134,6 +149,7 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SmsConfiguration")
     public SmsConfigurationType smsConfiguration;
+
     public CreateUserPoolRequest withSmsConfiguration(SmsConfigurationType smsConfiguration) {
         this.smsConfiguration = smsConfiguration;
         return this;
@@ -142,6 +158,7 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SmsVerificationMessage")
     public String smsVerificationMessage;
+
     public CreateUserPoolRequest withSmsVerificationMessage(String smsVerificationMessage) {
         this.smsVerificationMessage = smsVerificationMessage;
         return this;
@@ -150,6 +167,7 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserAttributeUpdateSettings")
     public UserAttributeUpdateSettingsType userAttributeUpdateSettings;
+
     public CreateUserPoolRequest withUserAttributeUpdateSettings(UserAttributeUpdateSettingsType userAttributeUpdateSettings) {
         this.userAttributeUpdateSettings = userAttributeUpdateSettings;
         return this;
@@ -158,6 +176,7 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserPoolAddOns")
     public UserPoolAddOnsType userPoolAddOns;
+
     public CreateUserPoolRequest withUserPoolAddOns(UserPoolAddOnsType userPoolAddOns) {
         this.userPoolAddOns = userPoolAddOns;
         return this;
@@ -166,6 +185,7 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserPoolTags")
     public java.util.Map<String, String> userPoolTags;
+
     public CreateUserPoolRequest withUserPoolTags(java.util.Map<String, String> userPoolTags) {
         this.userPoolTags = userPoolTags;
         return this;
@@ -174,6 +194,7 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsernameAttributes")
     public UsernameAttributeTypeEnum[] usernameAttributes;
+
     public CreateUserPoolRequest withUsernameAttributes(UsernameAttributeTypeEnum[] usernameAttributes) {
         this.usernameAttributes = usernameAttributes;
         return this;
@@ -182,6 +203,7 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsernameConfiguration")
     public UsernameConfigurationType usernameConfiguration;
+
     public CreateUserPoolRequest withUsernameConfiguration(UsernameConfigurationType usernameConfiguration) {
         this.usernameConfiguration = usernameConfiguration;
         return this;
@@ -190,9 +212,13 @@ public class CreateUserPoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VerificationMessageTemplate")
     public VerificationMessageTemplateType verificationMessageTemplate;
+
     public CreateUserPoolRequest withVerificationMessageTemplate(VerificationMessageTemplateType verificationMessageTemplate) {
         this.verificationMessageTemplate = verificationMessageTemplate;
         return this;
     }
     
+    public CreateUserPoolRequest(@JsonProperty("PoolName") String poolName) {
+        this.poolName = poolName;
+  }
 }

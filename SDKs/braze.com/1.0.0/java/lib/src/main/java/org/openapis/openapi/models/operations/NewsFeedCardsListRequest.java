@@ -14,6 +14,7 @@ public class NewsFeedCardsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_archived")
     public String includeArchived;
+
     public NewsFeedCardsListRequest withIncludeArchived(String includeArchived) {
         this.includeArchived = includeArchived;
         return this;
@@ -26,6 +27,7 @@ public class NewsFeedCardsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public NewsFeedCardsListRequest withPage(String page) {
         this.page = page;
         return this;
@@ -38,9 +40,11 @@ public class NewsFeedCardsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public NewsFeedCardsListRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
     }
     
+    public NewsFeedCardsListRequest(){}
 }

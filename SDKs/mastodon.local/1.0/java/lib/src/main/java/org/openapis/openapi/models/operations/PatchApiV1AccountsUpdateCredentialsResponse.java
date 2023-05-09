@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PatchApiV1AccountsUpdateCredentialsResponse {
@@ -12,6 +13,7 @@ public class PatchApiV1AccountsUpdateCredentialsResponse {
      */
     
     public org.openapis.openapi.models.shared.Account account;
+
     public PatchApiV1AccountsUpdateCredentialsResponse withAccount(org.openapis.openapi.models.shared.Account account) {
         this.account = account;
         return this;
@@ -19,6 +21,7 @@ public class PatchApiV1AccountsUpdateCredentialsResponse {
     
     
     public String contentType;
+
     public PatchApiV1AccountsUpdateCredentialsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PatchApiV1AccountsUpdateCredentialsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PatchApiV1AccountsUpdateCredentialsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class PatchApiV1AccountsUpdateCredentialsResponse {
     
     
     public Integer statusCode;
+
     public PatchApiV1AccountsUpdateCredentialsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PatchApiV1AccountsUpdateCredentialsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PatchApiV1AccountsUpdateCredentialsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PatchApiV1AccountsUpdateCredentialsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

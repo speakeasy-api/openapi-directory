@@ -15,9 +15,11 @@ public class ClientCertAuthSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OCSPUrl")
     public String ocspUrl;
+
     public ClientCertAuthSettings withOCSPUrl(String ocspUrl) {
         this.ocspUrl = ocspUrl;
         return this;
     }
     
+    public ClientCertAuthSettings(){}
 }

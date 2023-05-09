@@ -15,6 +15,7 @@ public class CampaignsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Campaign[] data;
+
     public CampaignsResponse withData(Campaign[] data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class CampaignsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public CampaignsResponseError error;
+
     public CampaignsResponse withError(CampaignsResponseError error) {
         this.error = error;
         return this;
@@ -31,6 +33,7 @@ public class CampaignsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public CampaignsResponsePagination pagination;
+
     public CampaignsResponse withPagination(CampaignsResponsePagination pagination) {
         this.pagination = pagination;
         return this;
@@ -39,9 +42,11 @@ public class CampaignsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public CampaignsResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public CampaignsResponse(){}
 }

@@ -15,9 +15,11 @@ public class UpdateExperimentTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("experimentTemplate")
     public ExperimentTemplate experimentTemplate;
+
     public UpdateExperimentTemplateResponse withExperimentTemplate(ExperimentTemplate experimentTemplate) {
         this.experimentTemplate = experimentTemplate;
         return this;
     }
     
+    public UpdateExperimentTemplateResponse(){}
 }

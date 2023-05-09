@@ -19,6 +19,7 @@ public class PersonEmails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PersonEmails withType(String type) {
         this.type = type;
         return this;
@@ -30,9 +31,11 @@ public class PersonEmails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public PersonEmails withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PersonEmails(){}
 }

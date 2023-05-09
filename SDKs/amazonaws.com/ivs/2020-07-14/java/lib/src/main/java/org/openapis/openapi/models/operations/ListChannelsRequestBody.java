@@ -15,6 +15,7 @@ public class ListChannelsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterByName")
     public String filterByName;
+
     public ListChannelsRequestBody withFilterByName(String filterByName) {
         this.filterByName = filterByName;
         return this;
@@ -26,6 +27,7 @@ public class ListChannelsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterByRecordingConfigurationArn")
     public String filterByRecordingConfigurationArn;
+
     public ListChannelsRequestBody withFilterByRecordingConfigurationArn(String filterByRecordingConfigurationArn) {
         this.filterByRecordingConfigurationArn = filterByRecordingConfigurationArn;
         return this;
@@ -37,6 +39,7 @@ public class ListChannelsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListChannelsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -48,9 +51,11 @@ public class ListChannelsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListChannelsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListChannelsRequestBody(){}
 }

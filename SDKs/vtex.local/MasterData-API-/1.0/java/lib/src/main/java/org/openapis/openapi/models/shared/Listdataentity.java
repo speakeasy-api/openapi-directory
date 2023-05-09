@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Listdataentity {
     @JsonProperty("acronym")
     public String acronym;
+
     public Listdataentity withAcronym(String acronym) {
         this.acronym = acronym;
         return this;
@@ -16,6 +17,7 @@ public class Listdataentity {
     
     @JsonProperty("allowGetAll")
     public Boolean allowGetAll;
+
     public Listdataentity withAllowGetAll(Boolean allowGetAll) {
         this.allowGetAll = allowGetAll;
         return this;
@@ -23,6 +25,7 @@ public class Listdataentity {
     
     @JsonProperty("name")
     public String name;
+
     public Listdataentity withName(String name) {
         this.name = name;
         return this;
@@ -30,9 +33,16 @@ public class Listdataentity {
     
     @JsonProperty("primaryKeyType")
     public String primaryKeyType;
+
     public Listdataentity withPrimaryKeyType(String primaryKeyType) {
         this.primaryKeyType = primaryKeyType;
         return this;
     }
     
+    public Listdataentity(@JsonProperty("acronym") String acronym, @JsonProperty("allowGetAll") Boolean allowGetAll, @JsonProperty("name") String name, @JsonProperty("primaryKeyType") String primaryKeyType) {
+        this.acronym = acronym;
+        this.allowGetAll = allowGetAll;
+        this.name = name;
+        this.primaryKeyType = primaryKeyType;
+  }
 }

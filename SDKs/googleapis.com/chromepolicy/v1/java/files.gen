@@ -130,4 +130,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleChromePolicyVersionsV
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleChromePolicyVersionsV1ListPolicySchemasResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleChromePolicyVersionsV1UploadPolicyFileResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleChromePolicyVersionsV1UploadPolicyFileRequest.java
+docs/sdk/README.md
+docs/customers/README.md
+docs/media/README.md
 USAGE.md

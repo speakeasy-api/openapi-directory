@@ -58,11 +58,9 @@ public class Call {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01BulkCallResponse res = new org.openapis.openapi.models.operations.PostV01BulkCallResponse() {{
+        org.openapis.openapi.models.operations.PostV01BulkCallResponse res = new org.openapis.openapi.models.operations.PostV01BulkCallResponse(contentType, httpRes.statusCode()) {{
             bulkCallResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Call {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01CallResponse res = new org.openapis.openapi.models.operations.PostV01CallResponse() {{
+        org.openapis.openapi.models.operations.PostV01CallResponse res = new org.openapis.openapi.models.operations.PostV01CallResponse(contentType, httpRes.statusCode()) {{
             callResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,11 +140,9 @@ public class Call {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01CancelScheduledHangupResponse res = new org.openapis.openapi.models.operations.PostV01CancelScheduledHangupResponse() {{
+        org.openapis.openapi.models.operations.PostV01CancelScheduledHangupResponse res = new org.openapis.openapi.models.operations.PostV01CancelScheduledHangupResponse(contentType, httpRes.statusCode()) {{
             cancelScheduledHangupResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -187,11 +181,9 @@ public class Call {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01CancelScheduledPlayResponse res = new org.openapis.openapi.models.operations.PostV01CancelScheduledPlayResponse() {{
+        org.openapis.openapi.models.operations.PostV01CancelScheduledPlayResponse res = new org.openapis.openapi.models.operations.PostV01CancelScheduledPlayResponse(contentType, httpRes.statusCode()) {{
             cancelScheduledPlayResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -230,11 +222,9 @@ public class Call {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01GroupCallResponse res = new org.openapis.openapi.models.operations.PostV01GroupCallResponse() {{
+        org.openapis.openapi.models.operations.PostV01GroupCallResponse res = new org.openapis.openapi.models.operations.PostV01GroupCallResponse(contentType, httpRes.statusCode()) {{
             groupCallResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -251,10 +241,11 @@ public class Call {
     /**
      * /v0.1/HangupAllCalls/
      * Hangs up all established calls
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01HangupAllCallsResponse postV01HangupAllCalls() throws Exception {
+    public org.openapis.openapi.models.operations.PostV01HangupAllCallsResponse postV01HangupAllCalls(org.openapis.openapi.models.operations.PostV01HangupAllCallsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/HangupAllCalls/");
         
@@ -263,16 +254,15 @@ public class Call {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01HangupAllCallsResponse res = new org.openapis.openapi.models.operations.PostV01HangupAllCallsResponse() {{
+        org.openapis.openapi.models.operations.PostV01HangupAllCallsResponse res = new org.openapis.openapi.models.operations.PostV01HangupAllCallsResponse(contentType, httpRes.statusCode()) {{
             hangupAllCallsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -311,11 +301,9 @@ public class Call {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01HangupCallResponse res = new org.openapis.openapi.models.operations.PostV01HangupCallResponse() {{
+        org.openapis.openapi.models.operations.PostV01HangupCallResponse res = new org.openapis.openapi.models.operations.PostV01HangupCallResponse(contentType, httpRes.statusCode()) {{
             hangupCallResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -354,11 +342,9 @@ public class Call {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01PlayResponse res = new org.openapis.openapi.models.operations.PostV01PlayResponse() {{
+        org.openapis.openapi.models.operations.PostV01PlayResponse res = new org.openapis.openapi.models.operations.PostV01PlayResponse(contentType, httpRes.statusCode()) {{
             playResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -397,11 +383,9 @@ public class Call {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01PlayStopResponse res = new org.openapis.openapi.models.operations.PostV01PlayStopResponse() {{
+        org.openapis.openapi.models.operations.PostV01PlayStopResponse res = new org.openapis.openapi.models.operations.PostV01PlayStopResponse(contentType, httpRes.statusCode()) {{
             playStopResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -440,11 +424,9 @@ public class Call {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01RecordStartResponse res = new org.openapis.openapi.models.operations.PostV01RecordStartResponse() {{
+        org.openapis.openapi.models.operations.PostV01RecordStartResponse res = new org.openapis.openapi.models.operations.PostV01RecordStartResponse(contentType, httpRes.statusCode()) {{
             recordStartResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -483,11 +465,9 @@ public class Call {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01RecordStopResponse res = new org.openapis.openapi.models.operations.PostV01RecordStopResponse() {{
+        org.openapis.openapi.models.operations.PostV01RecordStopResponse res = new org.openapis.openapi.models.operations.PostV01RecordStopResponse(contentType, httpRes.statusCode()) {{
             recordStopResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -526,11 +506,9 @@ public class Call {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01ScheduleHangupResponse res = new org.openapis.openapi.models.operations.PostV01ScheduleHangupResponse() {{
+        org.openapis.openapi.models.operations.PostV01ScheduleHangupResponse res = new org.openapis.openapi.models.operations.PostV01ScheduleHangupResponse(contentType, httpRes.statusCode()) {{
             scheduleHangupResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -569,11 +547,9 @@ public class Call {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01SchedulePlayResponse res = new org.openapis.openapi.models.operations.PostV01SchedulePlayResponse() {{
+        org.openapis.openapi.models.operations.PostV01SchedulePlayResponse res = new org.openapis.openapi.models.operations.PostV01SchedulePlayResponse(contentType, httpRes.statusCode()) {{
             schedulePlayResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -612,11 +588,9 @@ public class Call {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01SendDigitsResponse res = new org.openapis.openapi.models.operations.PostV01SendDigitsResponse() {{
+        org.openapis.openapi.models.operations.PostV01SendDigitsResponse res = new org.openapis.openapi.models.operations.PostV01SendDigitsResponse(contentType, httpRes.statusCode()) {{
             sendDigitsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -655,11 +629,9 @@ public class Call {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01SoundTouchResponse res = new org.openapis.openapi.models.operations.PostV01SoundTouchResponse() {{
+        org.openapis.openapi.models.operations.PostV01SoundTouchResponse res = new org.openapis.openapi.models.operations.PostV01SoundTouchResponse(contentType, httpRes.statusCode()) {{
             soundTouchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -698,11 +670,9 @@ public class Call {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01SoundTouchStopResponse res = new org.openapis.openapi.models.operations.PostV01SoundTouchStopResponse() {{
+        org.openapis.openapi.models.operations.PostV01SoundTouchStopResponse res = new org.openapis.openapi.models.operations.PostV01SoundTouchStopResponse(contentType, httpRes.statusCode()) {{
             soundTouchStopResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -741,11 +711,9 @@ public class Call {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV01TransferCallResponse res = new org.openapis.openapi.models.operations.PostV01TransferCallResponse() {{
+        org.openapis.openapi.models.operations.PostV01TransferCallResponse res = new org.openapis.openapi.models.operations.PostV01TransferCallResponse(contentType, httpRes.statusCode()) {{
             transferCallResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

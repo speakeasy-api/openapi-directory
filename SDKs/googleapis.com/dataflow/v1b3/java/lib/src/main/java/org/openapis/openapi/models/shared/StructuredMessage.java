@@ -18,6 +18,7 @@ public class StructuredMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageKey")
     public String messageKey;
+
     public StructuredMessage withMessageKey(String messageKey) {
         this.messageKey = messageKey;
         return this;
@@ -29,6 +30,7 @@ public class StructuredMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageText")
     public String messageText;
+
     public StructuredMessage withMessageText(String messageText) {
         this.messageText = messageText;
         return this;
@@ -40,9 +42,11 @@ public class StructuredMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public Parameter[] parameters;
+
     public StructuredMessage withParameters(Parameter[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public StructuredMessage(){}
 }

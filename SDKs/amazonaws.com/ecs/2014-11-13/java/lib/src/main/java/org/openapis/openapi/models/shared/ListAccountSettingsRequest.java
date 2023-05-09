@@ -12,6 +12,7 @@ public class ListAccountSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveSettings")
     public Boolean effectiveSettings;
+
     public ListAccountSettingsRequest withEffectiveSettings(Boolean effectiveSettings) {
         this.effectiveSettings = effectiveSettings;
         return this;
@@ -20,6 +21,7 @@ public class ListAccountSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListAccountSettingsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListAccountSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public SettingNameEnum name;
+
     public ListAccountSettingsRequest withName(SettingNameEnum name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class ListAccountSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAccountSettingsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,6 +48,7 @@ public class ListAccountSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalArn")
     public String principalArn;
+
     public ListAccountSettingsRequest withPrincipalArn(String principalArn) {
         this.principalArn = principalArn;
         return this;
@@ -52,9 +57,11 @@ public class ListAccountSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ListAccountSettingsRequest withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ListAccountSettingsRequest(){}
 }

@@ -12,9 +12,11 @@ public class SlsaBuilder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SlsaBuilder withId(String id) {
         this.id = id;
         return this;
     }
     
+    public SlsaBuilder(){}
 }

@@ -12,6 +12,7 @@ public class SingleMonitor200ApplicationJSONMonitorLastRunStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assertions")
     public SingleMonitor200ApplicationJSONMonitorLastRunStatsAssertions assertions;
+
     public SingleMonitor200ApplicationJSONMonitorLastRunStats withAssertions(SingleMonitor200ApplicationJSONMonitorLastRunStatsAssertions assertions) {
         this.assertions = assertions;
         return this;
@@ -20,9 +21,11 @@ public class SingleMonitor200ApplicationJSONMonitorLastRunStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public SingleMonitor200ApplicationJSONMonitorLastRunStatsRequests requests;
+
     public SingleMonitor200ApplicationJSONMonitorLastRunStats withRequests(SingleMonitor200ApplicationJSONMonitorLastRunStatsRequests requests) {
         this.requests = requests;
         return this;
     }
     
+    public SingleMonitor200ApplicationJSONMonitorLastRunStats(){}
 }

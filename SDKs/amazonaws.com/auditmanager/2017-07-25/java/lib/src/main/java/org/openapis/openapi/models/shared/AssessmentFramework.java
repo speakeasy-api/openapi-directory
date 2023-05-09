@@ -15,6 +15,7 @@ public class AssessmentFramework {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public AssessmentFramework withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class AssessmentFramework {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlSets")
     public AssessmentControlSet[] controlSets;
+
     public AssessmentFramework withControlSets(AssessmentControlSet[] controlSets) {
         this.controlSets = controlSets;
         return this;
@@ -31,6 +33,7 @@ public class AssessmentFramework {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AssessmentFramework withId(String id) {
         this.id = id;
         return this;
@@ -42,9 +45,11 @@ public class AssessmentFramework {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public FrameworkMetadata metadata;
+
     public AssessmentFramework withMetadata(FrameworkMetadata metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public AssessmentFramework(){}
 }

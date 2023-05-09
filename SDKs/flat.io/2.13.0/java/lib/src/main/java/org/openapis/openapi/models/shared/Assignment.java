@@ -20,6 +20,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
     public MediaAttachment[] attachments;
+
     public Assignment withAttachments(MediaAttachment[] attachments) {
         this.attachments = attachments;
         return this;
@@ -31,6 +32,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canvas")
     public AssignmentCanvas canvas;
+
     public Assignment withCanvas(AssignmentCanvas canvas) {
         this.canvas = canvas;
         return this;
@@ -42,6 +44,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classroom")
     public String classroom;
+
     public Assignment withClassroom(String classroom) {
         this.classroom = classroom;
         return this;
@@ -53,6 +56,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cover")
     public String cover;
+
     public Assignment withCover(String cover) {
         this.cover = cover;
         return this;
@@ -64,6 +68,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverFile")
     public String coverFile;
+
     public Assignment withCoverFile(String coverFile) {
         this.coverFile = coverFile;
         return this;
@@ -77,6 +82,7 @@ public class Assignment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public Assignment withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -89,6 +95,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator")
     public String creator;
+
     public Assignment withCreator(String creator) {
         this.creator = creator;
         return this;
@@ -100,6 +107,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Assignment withDescription(String description) {
         this.description = description;
         return this;
@@ -115,6 +123,7 @@ public class Assignment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dueDate")
     public OffsetDateTime dueDate;
+
     public Assignment withDueDate(OffsetDateTime dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -126,6 +135,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleClassroom")
     public GoogleClassroomCoursework googleClassroom;
+
     public Assignment withGoogleClassroom(GoogleClassroomCoursework googleClassroom) {
         this.googleClassroom = googleClassroom;
         return this;
@@ -137,6 +147,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lti")
     public AssignmentLti lti;
+
     public Assignment withLti(AssignmentLti lti) {
         this.lti = lti;
         return this;
@@ -149,6 +160,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxPoints")
     public Double maxPoints;
+
     public Assignment withMaxPoints(Double maxPoints) {
         this.maxPoints = maxPoints;
         return this;
@@ -160,6 +172,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mfc")
     public AssignmentMfc mfc;
+
     public Assignment withMfc(AssignmentMfc mfc) {
         this.mfc = mfc;
         return this;
@@ -171,6 +184,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("microsoftGraph")
     public MicrosoftGraphAssignment microsoftGraph;
+
     public Assignment withMicrosoftGraph(MicrosoftGraphAssignment microsoftGraph) {
         this.microsoftGraph = microsoftGraph;
         return this;
@@ -186,6 +200,7 @@ public class Assignment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("scheduledDate")
     public OffsetDateTime scheduledDate;
+
     public Assignment withScheduledDate(OffsetDateTime scheduledDate) {
         this.scheduledDate = scheduledDate;
         return this;
@@ -197,6 +212,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public AssignmentStateEnum state;
+
     public Assignment withState(AssignmentStateEnum state) {
         this.state = state;
         return this;
@@ -205,6 +221,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submissions")
     public AssignmentSubmission[] submissions;
+
     public Assignment withSubmissions(AssignmentSubmission[] submissions) {
         this.submissions = submissions;
         return this;
@@ -216,6 +233,7 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Assignment withTitle(String title) {
         this.title = title;
         return this;
@@ -227,9 +245,11 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AssignmentTypeEnum type;
+
     public Assignment withType(AssignmentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Assignment(){}
 }

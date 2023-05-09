@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MonitoringOutput {
     @JsonProperty("S3Output")
     public MonitoringS3Output s3Output;
+
     public MonitoringOutput withS3Output(MonitoringS3Output s3Output) {
         this.s3Output = s3Output;
         return this;
     }
     
+    public MonitoringOutput(@JsonProperty("S3Output") MonitoringS3Output s3Output) {
+        this.s3Output = s3Output;
+  }
 }

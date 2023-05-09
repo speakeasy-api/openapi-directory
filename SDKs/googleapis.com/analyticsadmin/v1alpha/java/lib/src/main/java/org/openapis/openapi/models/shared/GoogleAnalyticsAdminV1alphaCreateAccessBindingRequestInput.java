@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaCreateAccessBindingRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessBinding")
     public GoogleAnalyticsAdminV1alphaAccessBindingInput accessBinding;
+
     public GoogleAnalyticsAdminV1alphaCreateAccessBindingRequestInput withAccessBinding(GoogleAnalyticsAdminV1alphaAccessBindingInput accessBinding) {
         this.accessBinding = accessBinding;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaCreateAccessBindingRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public GoogleAnalyticsAdminV1alphaCreateAccessBindingRequestInput withParent(String parent) {
         this.parent = parent;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaCreateAccessBindingRequestInput(){}
 }

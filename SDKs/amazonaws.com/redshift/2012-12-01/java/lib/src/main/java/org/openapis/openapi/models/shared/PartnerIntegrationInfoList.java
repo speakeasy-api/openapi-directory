@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class PartnerIntegrationInfoList {
     
     public OffsetDateTime createdAt;
+
     public PartnerIntegrationInfoList withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -19,6 +20,7 @@ public class PartnerIntegrationInfoList {
     
     
     public String databaseName;
+
     public PartnerIntegrationInfoList withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -26,6 +28,7 @@ public class PartnerIntegrationInfoList {
     
     
     public String partnerName;
+
     public PartnerIntegrationInfoList withPartnerName(String partnerName) {
         this.partnerName = partnerName;
         return this;
@@ -33,6 +36,7 @@ public class PartnerIntegrationInfoList {
     
     
     public PartnerIntegrationStatusEnum status;
+
     public PartnerIntegrationInfoList withStatus(PartnerIntegrationStatusEnum status) {
         this.status = status;
         return this;
@@ -40,6 +44,7 @@ public class PartnerIntegrationInfoList {
     
     
     public String statusMessage;
+
     public PartnerIntegrationInfoList withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -47,9 +52,11 @@ public class PartnerIntegrationInfoList {
     
     
     public OffsetDateTime updatedAt;
+
     public PartnerIntegrationInfoList withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public PartnerIntegrationInfoList(){}
 }

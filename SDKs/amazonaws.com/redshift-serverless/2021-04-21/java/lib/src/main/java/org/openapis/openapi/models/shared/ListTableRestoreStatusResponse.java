@@ -15,6 +15,7 @@ public class ListTableRestoreStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTableRestoreStatusResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTableRestoreStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableRestoreStatuses")
     public TableRestoreStatus[] tableRestoreStatuses;
+
     public ListTableRestoreStatusResponse withTableRestoreStatuses(TableRestoreStatus[] tableRestoreStatuses) {
         this.tableRestoreStatuses = tableRestoreStatuses;
         return this;
     }
     
+    public ListTableRestoreStatusResponse(){}
 }

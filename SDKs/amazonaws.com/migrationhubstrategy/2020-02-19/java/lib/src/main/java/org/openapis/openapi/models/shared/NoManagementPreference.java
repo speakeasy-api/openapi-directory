@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NoManagementPreference {
     @JsonProperty("targetDestination")
     public NoPreferenceTargetDestinationEnum[] targetDestination;
+
     public NoManagementPreference withTargetDestination(NoPreferenceTargetDestinationEnum[] targetDestination) {
         this.targetDestination = targetDestination;
         return this;
     }
     
+    public NoManagementPreference(@JsonProperty("targetDestination") NoPreferenceTargetDestinationEnum[] targetDestination) {
+        this.targetDestination = targetDestination;
+  }
 }

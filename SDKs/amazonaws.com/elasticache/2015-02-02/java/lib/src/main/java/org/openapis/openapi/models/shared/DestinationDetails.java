@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DestinationDetails {
     
     public CloudWatchLogsDestinationDetails cloudWatchLogsDetails;
+
     public DestinationDetails withCloudWatchLogsDetails(CloudWatchLogsDestinationDetails cloudWatchLogsDetails) {
         this.cloudWatchLogsDetails = cloudWatchLogsDetails;
         return this;
@@ -19,9 +20,11 @@ public class DestinationDetails {
     
     
     public KinesisFirehoseDestinationDetails kinesisFirehoseDetails;
+
     public DestinationDetails withKinesisFirehoseDetails(KinesisFirehoseDestinationDetails kinesisFirehoseDetails) {
         this.kinesisFirehoseDetails = kinesisFirehoseDetails;
         return this;
     }
     
+    public DestinationDetails(){}
 }

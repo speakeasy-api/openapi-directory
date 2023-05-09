@@ -15,6 +15,7 @@ public class LambdaFunctionMemoryRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memorySize")
     public Long memorySize;
+
     public LambdaFunctionMemoryRecommendationOption withMemorySize(Long memorySize) {
         this.memorySize = memorySize;
         return this;
@@ -23,6 +24,7 @@ public class LambdaFunctionMemoryRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectedUtilizationMetrics")
     public LambdaFunctionMemoryProjectedMetric[] projectedUtilizationMetrics;
+
     public LambdaFunctionMemoryRecommendationOption withProjectedUtilizationMetrics(LambdaFunctionMemoryProjectedMetric[] projectedUtilizationMetrics) {
         this.projectedUtilizationMetrics = projectedUtilizationMetrics;
         return this;
@@ -31,6 +33,7 @@ public class LambdaFunctionMemoryRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rank")
     public Long rank;
+
     public LambdaFunctionMemoryRecommendationOption withRank(Long rank) {
         this.rank = rank;
         return this;
@@ -39,9 +42,11 @@ public class LambdaFunctionMemoryRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingsOpportunity")
     public SavingsOpportunity savingsOpportunity;
+
     public LambdaFunctionMemoryRecommendationOption withSavingsOpportunity(SavingsOpportunity savingsOpportunity) {
         this.savingsOpportunity = savingsOpportunity;
         return this;
     }
     
+    public LambdaFunctionMemoryRecommendationOption(){}
 }

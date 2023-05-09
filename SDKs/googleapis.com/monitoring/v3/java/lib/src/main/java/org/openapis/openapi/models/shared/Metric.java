@@ -18,6 +18,7 @@ public class Metric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Metric withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -29,9 +30,11 @@ public class Metric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Metric withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Metric(){}
 }

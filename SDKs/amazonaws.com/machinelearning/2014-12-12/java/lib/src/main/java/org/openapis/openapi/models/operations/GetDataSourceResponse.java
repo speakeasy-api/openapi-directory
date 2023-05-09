@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDataSourceResponse {
     
     public String contentType;
+
     public GetDataSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDataSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDataSourceOutput getDataSourceOutput;
+
     public GetDataSourceResponse withGetDataSourceOutput(org.openapis.openapi.models.shared.GetDataSourceOutput getDataSourceOutput) {
         this.getDataSourceOutput = getDataSourceOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetDataSourceResponse {
      */
     
     public Object internalServerException;
+
     public GetDataSourceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetDataSourceResponse {
      */
     
     public Object invalidInputException;
+
     public GetDataSourceResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -46,6 +51,7 @@ public class GetDataSourceResponse {
     
     
     public Integer statusCode;
+
     public GetDataSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetDataSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDataSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetDataSourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetDataSourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetDataSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

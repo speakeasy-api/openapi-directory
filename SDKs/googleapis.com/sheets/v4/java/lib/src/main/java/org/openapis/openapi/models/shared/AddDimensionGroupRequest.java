@@ -18,9 +18,11 @@ public class AddDimensionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public DimensionRange range;
+
     public AddDimensionGroupRequest withRange(DimensionRange range) {
         this.range = range;
         return this;
     }
     
+    public AddDimensionGroupRequest(){}
 }

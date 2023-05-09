@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DynamoDBCatalogSource {
     @JsonProperty("Database")
     public String database;
+
     public DynamoDBCatalogSource withDatabase(String database) {
         this.database = database;
         return this;
@@ -19,6 +20,7 @@ public class DynamoDBCatalogSource {
     
     @JsonProperty("Name")
     public String name;
+
     public DynamoDBCatalogSource withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class DynamoDBCatalogSource {
     
     @JsonProperty("Table")
     public String table;
+
     public DynamoDBCatalogSource withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public DynamoDBCatalogSource(@JsonProperty("Database") String database, @JsonProperty("Name") String name, @JsonProperty("Table") String table) {
+        this.database = database;
+        this.name = name;
+        this.table = table;
+  }
 }

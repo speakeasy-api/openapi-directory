@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteJourneyResponse {
@@ -12,6 +13,7 @@ public class DeleteJourneyResponse {
      */
     
     public Object badRequestException;
+
     public DeleteJourneyResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteJourneyResponse {
     
     
     public String contentType;
+
     public DeleteJourneyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteJourneyResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteJourneyResponse deleteJourneyResponse;
+
     public DeleteJourneyResponse withDeleteJourneyResponse(org.openapis.openapi.models.shared.DeleteJourneyResponse deleteJourneyResponse) {
         this.deleteJourneyResponse = deleteJourneyResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteJourneyResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteJourneyResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteJourneyResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteJourneyResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteJourneyResponse {
      */
     
     public Object methodNotAllowedException;
+
     public DeleteJourneyResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteJourneyResponse {
      */
     
     public Object notFoundException;
+
     public DeleteJourneyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteJourneyResponse {
      */
     
     public Object payloadTooLargeException;
+
     public DeleteJourneyResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteJourneyResponse {
     
     
     public Integer statusCode;
+
     public DeleteJourneyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteJourneyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteJourneyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteJourneyResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteJourneyResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteJourneyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

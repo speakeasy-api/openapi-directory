@@ -15,6 +15,7 @@ public class GetResourceShareAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetResourceShareAssociationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetResourceShareAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceShareAssociations")
     public ResourceShareAssociation[] resourceShareAssociations;
+
     public GetResourceShareAssociationsResponse withResourceShareAssociations(ResourceShareAssociation[] resourceShareAssociations) {
         this.resourceShareAssociations = resourceShareAssociations;
         return this;
     }
     
+    public GetResourceShareAssociationsResponse(){}
 }

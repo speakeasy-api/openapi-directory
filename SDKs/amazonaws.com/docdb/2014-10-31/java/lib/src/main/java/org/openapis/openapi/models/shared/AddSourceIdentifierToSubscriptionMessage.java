@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AddSourceIdentifierToSubscriptionMessage - Represents the input to &lt;a&gt;AddSourceIdentifierToSubscription&lt;/a&gt;. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AddSourceIdentifierToSubscriptionMessage {
     
     public String sourceIdentifier;
+
     public AddSourceIdentifierToSubscriptionMessage withSourceIdentifier(String sourceIdentifier) {
         this.sourceIdentifier = sourceIdentifier;
         return this;
@@ -19,9 +20,14 @@ public class AddSourceIdentifierToSubscriptionMessage {
     
     
     public String subscriptionName;
+
     public AddSourceIdentifierToSubscriptionMessage withSubscriptionName(String subscriptionName) {
         this.subscriptionName = subscriptionName;
         return this;
     }
     
+    public AddSourceIdentifierToSubscriptionMessage(@JsonProperty("SourceIdentifier") String sourceIdentifier, @JsonProperty("SubscriptionName") String subscriptionName) {
+        this.sourceIdentifier = sourceIdentifier;
+        this.subscriptionName = subscriptionName;
+  }
 }

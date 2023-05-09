@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Action {
     @JsonProperty("ActionId")
     public String actionId;
+
     public Action withActionId(String actionId) {
         this.actionId = actionId;
         return this;
@@ -19,6 +20,7 @@ public class Action {
     
     @JsonProperty("ActionThreshold")
     public ActionThreshold actionThreshold;
+
     public Action withActionThreshold(ActionThreshold actionThreshold) {
         this.actionThreshold = actionThreshold;
         return this;
@@ -26,6 +28,7 @@ public class Action {
     
     @JsonProperty("ActionType")
     public ActionTypeEnum actionType;
+
     public Action withActionType(ActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -33,6 +36,7 @@ public class Action {
     
     @JsonProperty("ApprovalModel")
     public ApprovalModelEnum approvalModel;
+
     public Action withApprovalModel(ApprovalModelEnum approvalModel) {
         this.approvalModel = approvalModel;
         return this;
@@ -43,6 +47,7 @@ public class Action {
      */
     @JsonProperty("BudgetName")
     public String budgetName;
+
     public Action withBudgetName(String budgetName) {
         this.budgetName = budgetName;
         return this;
@@ -50,6 +55,7 @@ public class Action {
     
     @JsonProperty("Definition")
     public Definition definition;
+
     public Action withDefinition(Definition definition) {
         this.definition = definition;
         return this;
@@ -57,6 +63,7 @@ public class Action {
     
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public Action withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -67,6 +74,7 @@ public class Action {
      */
     @JsonProperty("NotificationType")
     public NotificationTypeEnum notificationType;
+
     public Action withNotificationType(NotificationTypeEnum notificationType) {
         this.notificationType = notificationType;
         return this;
@@ -74,6 +82,7 @@ public class Action {
     
     @JsonProperty("Status")
     public ActionStatusEnum status;
+
     public Action withStatus(ActionStatusEnum status) {
         this.status = status;
         return this;
@@ -84,9 +93,22 @@ public class Action {
      */
     @JsonProperty("Subscribers")
     public Subscriber[] subscribers;
+
     public Action withSubscribers(Subscriber[] subscribers) {
         this.subscribers = subscribers;
         return this;
     }
     
+    public Action(@JsonProperty("ActionId") String actionId, @JsonProperty("ActionThreshold") ActionThreshold actionThreshold, @JsonProperty("ActionType") ActionTypeEnum actionType, @JsonProperty("ApprovalModel") ApprovalModelEnum approvalModel, @JsonProperty("BudgetName") String budgetName, @JsonProperty("Definition") Definition definition, @JsonProperty("ExecutionRoleArn") String executionRoleArn, @JsonProperty("NotificationType") NotificationTypeEnum notificationType, @JsonProperty("Status") ActionStatusEnum status, @JsonProperty("Subscribers") Subscriber[] subscribers) {
+        this.actionId = actionId;
+        this.actionThreshold = actionThreshold;
+        this.actionType = actionType;
+        this.approvalModel = approvalModel;
+        this.budgetName = budgetName;
+        this.definition = definition;
+        this.executionRoleArn = executionRoleArn;
+        this.notificationType = notificationType;
+        this.status = status;
+        this.subscribers = subscribers;
+  }
 }

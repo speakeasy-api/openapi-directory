@@ -15,6 +15,7 @@ public class CreateSafetyRuleRequestBodyAssertionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssertedControls")
     public String[] assertedControls;
+
     public CreateSafetyRuleRequestBodyAssertionRule withAssertedControls(String[] assertedControls) {
         this.assertedControls = assertedControls;
         return this;
@@ -23,6 +24,7 @@ public class CreateSafetyRuleRequestBodyAssertionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ControlPanelArn")
     public String controlPanelArn;
+
     public CreateSafetyRuleRequestBodyAssertionRule withControlPanelArn(String controlPanelArn) {
         this.controlPanelArn = controlPanelArn;
         return this;
@@ -31,6 +33,7 @@ public class CreateSafetyRuleRequestBodyAssertionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateSafetyRuleRequestBodyAssertionRule withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class CreateSafetyRuleRequestBodyAssertionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleConfig")
     public org.openapis.openapi.models.shared.RuleConfig ruleConfig;
+
     public CreateSafetyRuleRequestBodyAssertionRule withRuleConfig(org.openapis.openapi.models.shared.RuleConfig ruleConfig) {
         this.ruleConfig = ruleConfig;
         return this;
@@ -47,9 +51,11 @@ public class CreateSafetyRuleRequestBodyAssertionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WaitPeriodMs")
     public Long waitPeriodMs;
+
     public CreateSafetyRuleRequestBodyAssertionRule withWaitPeriodMs(Long waitPeriodMs) {
         this.waitPeriodMs = waitPeriodMs;
         return this;
     }
     
+    public CreateSafetyRuleRequestBodyAssertionRule(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TripcResponse {
     
     public String contentType;
+
     public TripcResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TripcResponse {
     
     
     public Integer statusCode;
+
     public TripcResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TripcResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TripcResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class TripcResponse {
      */
     
     public Tripc400ApplicationJSON tripc400ApplicationJSONObject;
+
     public TripcResponse withTripc400ApplicationJSONObject(Tripc400ApplicationJSON tripc400ApplicationJSONObject) {
         this.tripc400ApplicationJSONObject = tripc400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class TripcResponse {
      */
     
     public Tripc401ApplicationJSON tripc401ApplicationJSONObject;
+
     public TripcResponse withTripc401ApplicationJSONObject(Tripc401ApplicationJSON tripc401ApplicationJSONObject) {
         this.tripc401ApplicationJSONObject = tripc401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class TripcResponse {
      */
     
     public Tripc404ApplicationJSON tripc404ApplicationJSONObject;
+
     public TripcResponse withTripc404ApplicationJSONObject(Tripc404ApplicationJSON tripc404ApplicationJSONObject) {
         this.tripc404ApplicationJSONObject = tripc404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class TripcResponse {
      */
     
     public Tripc500ApplicationJSON tripc500ApplicationJSONObject;
+
     public TripcResponse withTripc500ApplicationJSONObject(Tripc500ApplicationJSON tripc500ApplicationJSONObject) {
         this.tripc500ApplicationJSONObject = tripc500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class TripcResponse {
      */
     
     public Tripc502ApplicationJSON tripc502ApplicationJSONObject;
+
     public TripcResponse withTripc502ApplicationJSONObject(Tripc502ApplicationJSON tripc502ApplicationJSONObject) {
         this.tripc502ApplicationJSONObject = tripc502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class TripcResponse {
      */
     
     public Tripc503ApplicationJSON tripc503ApplicationJSONObject;
+
     public TripcResponse withTripc503ApplicationJSONObject(Tripc503ApplicationJSON tripc503ApplicationJSONObject) {
         this.tripc503ApplicationJSONObject = tripc503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class TripcResponse {
      */
     
     public Tripc504ApplicationJSON tripc504ApplicationJSONObject;
+
     public TripcResponse withTripc504ApplicationJSONObject(Tripc504ApplicationJSON tripc504ApplicationJSONObject) {
         this.tripc504ApplicationJSONObject = tripc504ApplicationJSONObject;
         return this;
     }
     
+    public TripcResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

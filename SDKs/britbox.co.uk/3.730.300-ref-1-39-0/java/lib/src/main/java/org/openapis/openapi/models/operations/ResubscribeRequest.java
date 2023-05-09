@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResubscribeRequest {
@@ -22,6 +23,7 @@ public class ResubscribeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public ResubscribeRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -32,6 +34,7 @@ public class ResubscribeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=planId")
     public String planId;
+
     public ResubscribeRequest withPlanId(String planId) {
         this.planId = planId;
         return this;
@@ -42,9 +45,14 @@ public class ResubscribeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platform")
     public String platform;
+
     public ResubscribeRequest withPlatform(String platform) {
         this.platform = platform;
         return this;
     }
     
+    public ResubscribeRequest(@JsonProperty("planId") String planId, @JsonProperty("platform") String platform) {
+        this.planId = planId;
+        this.platform = platform;
+  }
 }

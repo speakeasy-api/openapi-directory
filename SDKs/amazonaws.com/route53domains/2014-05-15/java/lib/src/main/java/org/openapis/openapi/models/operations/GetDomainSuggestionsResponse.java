@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDomainSuggestionsResponse {
     
     public String contentType;
+
     public GetDomainSuggestionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDomainSuggestionsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDomainSuggestionsResponse getDomainSuggestionsResponse;
+
     public GetDomainSuggestionsResponse withGetDomainSuggestionsResponse(org.openapis.openapi.models.shared.GetDomainSuggestionsResponse getDomainSuggestionsResponse) {
         this.getDomainSuggestionsResponse = getDomainSuggestionsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetDomainSuggestionsResponse {
      */
     
     public Object invalidInput;
+
     public GetDomainSuggestionsResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -36,6 +40,7 @@ public class GetDomainSuggestionsResponse {
     
     
     public Integer statusCode;
+
     public GetDomainSuggestionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetDomainSuggestionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDomainSuggestionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetDomainSuggestionsResponse {
      */
     
     public Object unsupportedTLD;
+
     public GetDomainSuggestionsResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
     }
     
+    public GetDomainSuggestionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

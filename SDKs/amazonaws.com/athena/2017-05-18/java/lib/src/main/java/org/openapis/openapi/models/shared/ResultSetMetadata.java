@@ -15,9 +15,11 @@ public class ResultSetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnInfo")
     public ColumnInfo[] columnInfo;
+
     public ResultSetMetadata withColumnInfo(ColumnInfo[] columnInfo) {
         this.columnInfo = columnInfo;
         return this;
     }
     
+    public ResultSetMetadata(){}
 }

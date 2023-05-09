@@ -18,6 +18,7 @@ public class GoogleCloudRecommendationengineV1beta1EventDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventAttributes")
     public GoogleCloudRecommendationengineV1beta1FeatureMap eventAttributes;
+
     public GoogleCloudRecommendationengineV1beta1EventDetail withEventAttributes(GoogleCloudRecommendationengineV1beta1FeatureMap eventAttributes) {
         this.eventAttributes = eventAttributes;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecommendationengineV1beta1EventDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("experimentIds")
     public String[] experimentIds;
+
     public GoogleCloudRecommendationengineV1beta1EventDetail withExperimentIds(String[] experimentIds) {
         this.experimentIds = experimentIds;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecommendationengineV1beta1EventDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageViewId")
     public String pageViewId;
+
     public GoogleCloudRecommendationengineV1beta1EventDetail withPageViewId(String pageViewId) {
         this.pageViewId = pageViewId;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRecommendationengineV1beta1EventDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationToken")
     public String recommendationToken;
+
     public GoogleCloudRecommendationengineV1beta1EventDetail withRecommendationToken(String recommendationToken) {
         this.recommendationToken = recommendationToken;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRecommendationengineV1beta1EventDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referrerUri")
     public String referrerUri;
+
     public GoogleCloudRecommendationengineV1beta1EventDetail withReferrerUri(String referrerUri) {
         this.referrerUri = referrerUri;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudRecommendationengineV1beta1EventDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudRecommendationengineV1beta1EventDetail withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1EventDetail(){}
 }

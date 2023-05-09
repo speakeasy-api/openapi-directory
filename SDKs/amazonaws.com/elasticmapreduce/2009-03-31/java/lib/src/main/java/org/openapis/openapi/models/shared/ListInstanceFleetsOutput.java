@@ -15,6 +15,7 @@ public class ListInstanceFleetsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceFleets")
     public InstanceFleet[] instanceFleets;
+
     public ListInstanceFleetsOutput withInstanceFleets(InstanceFleet[] instanceFleets) {
         this.instanceFleets = instanceFleets;
         return this;
@@ -23,9 +24,11 @@ public class ListInstanceFleetsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListInstanceFleetsOutput withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListInstanceFleetsOutput(){}
 }

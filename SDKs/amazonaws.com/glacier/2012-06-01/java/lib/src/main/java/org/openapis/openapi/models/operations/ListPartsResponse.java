@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPartsResponse {
     
     public String contentType;
+
     public ListPartsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListPartsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListPartsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class ListPartsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPartsOutput listPartsOutput;
+
     public ListPartsResponse withListPartsOutput(org.openapis.openapi.models.shared.ListPartsOutput listPartsOutput) {
         this.listPartsOutput = listPartsOutput;
         return this;
@@ -39,6 +43,7 @@ public class ListPartsResponse {
      */
     
     public Object missingParameterValueException;
+
     public ListPartsResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class ListPartsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListPartsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListPartsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListPartsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class ListPartsResponse {
     
     
     public Integer statusCode;
+
     public ListPartsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListPartsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPartsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListPartsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

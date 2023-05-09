@@ -15,6 +15,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetContentVersionValue")
     public DatasetContentVersionValue datasetContentVersionValue;
+
     public Variable withDatasetContentVersionValue(DatasetContentVersionValue datasetContentVersionValue) {
         this.datasetContentVersionValue = datasetContentVersionValue;
         return this;
@@ -23,6 +24,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValue")
     public Double doubleValue;
+
     public Variable withDoubleValue(Double doubleValue) {
         this.doubleValue = doubleValue;
         return this;
@@ -30,6 +32,7 @@ public class Variable {
     
     @JsonProperty("name")
     public String name;
+
     public Variable withName(String name) {
         this.name = name;
         return this;
@@ -38,6 +41,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputFileUriValue")
     public OutputFileUriValue outputFileUriValue;
+
     public Variable withOutputFileUriValue(OutputFileUriValue outputFileUriValue) {
         this.outputFileUriValue = outputFileUriValue;
         return this;
@@ -46,9 +50,13 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public Variable withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public Variable(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

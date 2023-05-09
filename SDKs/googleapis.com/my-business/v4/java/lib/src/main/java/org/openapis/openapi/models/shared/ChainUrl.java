@@ -18,9 +18,11 @@ public class ChainUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ChainUrl withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ChainUrl(){}
 }

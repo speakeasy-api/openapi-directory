@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeClusterResponse {
@@ -12,6 +13,7 @@ public class DescribeClusterResponse {
      */
     
     public Object clientException;
+
     public DescribeClusterResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeClusterResponse {
     
     
     public String contentType;
+
     public DescribeClusterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeClusterResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeClusterResponse describeClusterResponse;
+
     public DescribeClusterResponse withDescribeClusterResponse(org.openapis.openapi.models.shared.DescribeClusterResponse describeClusterResponse) {
         this.describeClusterResponse = describeClusterResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeClusterResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeClusterResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeClusterResponse {
     
     
     public Integer statusCode;
+
     public DescribeClusterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeClusterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeClusterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeClusterResponse {
      */
     
     public Object serverException;
+
     public DescribeClusterResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeClusterResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeClusterResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public DescribeClusterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

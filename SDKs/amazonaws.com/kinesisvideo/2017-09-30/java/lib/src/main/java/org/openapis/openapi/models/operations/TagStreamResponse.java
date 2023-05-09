@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TagStreamResponse {
@@ -12,6 +13,7 @@ public class TagStreamResponse {
      */
     
     public Object clientLimitExceededException;
+
     public TagStreamResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -19,6 +21,7 @@ public class TagStreamResponse {
     
     
     public String contentType;
+
     public TagStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class TagStreamResponse {
      */
     
     public Object invalidArgumentException;
+
     public TagStreamResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class TagStreamResponse {
      */
     
     public Object invalidResourceFormatException;
+
     public TagStreamResponse withInvalidResourceFormatException(Object invalidResourceFormatException) {
         this.invalidResourceFormatException = invalidResourceFormatException;
         return this;
@@ -49,6 +54,7 @@ public class TagStreamResponse {
      */
     
     public Object notAuthorizedException;
+
     public TagStreamResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class TagStreamResponse {
      */
     
     public Object resourceNotFoundException;
+
     public TagStreamResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class TagStreamResponse {
     
     
     public Integer statusCode;
+
     public TagStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class TagStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TagStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class TagStreamResponse {
      */
     
     public java.util.Map<String, Object> tagStreamOutput;
+
     public TagStreamResponse withTagStreamOutput(java.util.Map<String, Object> tagStreamOutput) {
         this.tagStreamOutput = tagStreamOutput;
         return this;
@@ -93,9 +103,14 @@ public class TagStreamResponse {
      */
     
     public Object tagsPerResourceExceededLimitException;
+
     public TagStreamResponse withTagsPerResourceExceededLimitException(Object tagsPerResourceExceededLimitException) {
         this.tagsPerResourceExceededLimitException = tagsPerResourceExceededLimitException;
         return this;
     }
     
+    public TagStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

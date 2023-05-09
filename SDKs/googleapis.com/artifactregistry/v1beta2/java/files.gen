@@ -138,4 +138,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsRequest.j
 lib/src/main/java/org/openapis/openapi/models/shared/ImportYumArtifactsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ImportYumArtifactsGcsSource.java
 lib/src/main/java/org/openapis/openapi/models/shared/UploadYumArtifactMediaResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

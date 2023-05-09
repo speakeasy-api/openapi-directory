@@ -12,6 +12,7 @@ public class DeletePrincipalMappingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceId")
     public String dataSourceId;
+
     public DeletePrincipalMappingRequest withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -19,6 +20,7 @@ public class DeletePrincipalMappingRequest {
     
     @JsonProperty("GroupId")
     public String groupId;
+
     public DeletePrincipalMappingRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -26,6 +28,7 @@ public class DeletePrincipalMappingRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public DeletePrincipalMappingRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -34,9 +37,14 @@ public class DeletePrincipalMappingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrderingId")
     public Long orderingId;
+
     public DeletePrincipalMappingRequest withOrderingId(Long orderingId) {
         this.orderingId = orderingId;
         return this;
     }
     
+    public DeletePrincipalMappingRequest(@JsonProperty("GroupId") String groupId, @JsonProperty("IndexId") String indexId) {
+        this.groupId = groupId;
+        this.indexId = indexId;
+  }
 }

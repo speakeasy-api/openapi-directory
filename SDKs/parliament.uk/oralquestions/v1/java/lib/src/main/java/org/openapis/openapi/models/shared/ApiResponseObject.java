@@ -15,6 +15,7 @@ public class ApiResponseObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public String[] errors;
+
     public ApiResponseObject withErrors(String[] errors) {
         this.errors = errors;
         return this;
@@ -23,6 +24,7 @@ public class ApiResponseObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PagingInfo")
     public PagingInfo pagingInfo;
+
     public ApiResponseObject withPagingInfo(PagingInfo pagingInfo) {
         this.pagingInfo = pagingInfo;
         return this;
@@ -31,6 +33,7 @@ public class ApiResponseObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Response")
     public java.util.Map<String, Object> response;
+
     public ApiResponseObject withResponse(java.util.Map<String, Object> response) {
         this.response = response;
         return this;
@@ -39,6 +42,7 @@ public class ApiResponseObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusCode")
     public ApiResponseObjectStatusCodeEnum statusCode;
+
     public ApiResponseObject withStatusCode(ApiResponseObjectStatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +51,11 @@ public class ApiResponseObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Success")
     public Boolean success;
+
     public ApiResponseObject withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public ApiResponseObject(){}
 }

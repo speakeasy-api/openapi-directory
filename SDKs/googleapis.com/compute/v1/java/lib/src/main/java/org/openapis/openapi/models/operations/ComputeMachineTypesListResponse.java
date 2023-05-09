@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeMachineTypesListResponse {
     
     public String contentType;
+
     public ComputeMachineTypesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeMachineTypesListResponse {
      */
     
     public org.openapis.openapi.models.shared.MachineTypeList machineTypeList;
+
     public ComputeMachineTypesListResponse withMachineTypeList(org.openapis.openapi.models.shared.MachineTypeList machineTypeList) {
         this.machineTypeList = machineTypeList;
         return this;
@@ -26,6 +29,7 @@ public class ComputeMachineTypesListResponse {
     
     
     public Integer statusCode;
+
     public ComputeMachineTypesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeMachineTypesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeMachineTypesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeMachineTypesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeCertificateRequest {
     @JsonProperty("CertificateId")
     public String certificateId;
+
     public DescribeCertificateRequest withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
     }
     
+    public DescribeCertificateRequest(@JsonProperty("CertificateId") String certificateId) {
+        this.certificateId = certificateId;
+  }
 }

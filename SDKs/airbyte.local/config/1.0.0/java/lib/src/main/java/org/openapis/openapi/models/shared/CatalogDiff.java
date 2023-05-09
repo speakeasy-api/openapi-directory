@@ -15,9 +15,13 @@ public class CatalogDiff {
      */
     @JsonProperty("transforms")
     public StreamTransform[] transforms;
+
     public CatalogDiff withTransforms(StreamTransform[] transforms) {
         this.transforms = transforms;
         return this;
     }
     
+    public CatalogDiff(@JsonProperty("transforms") StreamTransform[] transforms) {
+        this.transforms = transforms;
+  }
 }

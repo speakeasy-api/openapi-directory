@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteStorageVirtualMachineResponse {
@@ -12,6 +13,7 @@ public class DeleteStorageVirtualMachineResponse {
      */
     
     public Object badRequest;
+
     public DeleteStorageVirtualMachineResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class DeleteStorageVirtualMachineResponse {
     
     
     public String contentType;
+
     public DeleteStorageVirtualMachineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteStorageVirtualMachineResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteStorageVirtualMachineResponse deleteStorageVirtualMachineResponse;
+
     public DeleteStorageVirtualMachineResponse withDeleteStorageVirtualMachineResponse(org.openapis.openapi.models.shared.DeleteStorageVirtualMachineResponse deleteStorageVirtualMachineResponse) {
         this.deleteStorageVirtualMachineResponse = deleteStorageVirtualMachineResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteStorageVirtualMachineResponse {
      */
     
     public Object incompatibleParameterError;
+
     public DeleteStorageVirtualMachineResponse withIncompatibleParameterError(Object incompatibleParameterError) {
         this.incompatibleParameterError = incompatibleParameterError;
         return this;
@@ -49,6 +54,7 @@ public class DeleteStorageVirtualMachineResponse {
      */
     
     public Object internalServerError;
+
     public DeleteStorageVirtualMachineResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -56,6 +62,7 @@ public class DeleteStorageVirtualMachineResponse {
     
     
     public Integer statusCode;
+
     public DeleteStorageVirtualMachineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteStorageVirtualMachineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteStorageVirtualMachineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteStorageVirtualMachineResponse {
      */
     
     public Object storageVirtualMachineNotFound;
+
     public DeleteStorageVirtualMachineResponse withStorageVirtualMachineNotFound(Object storageVirtualMachineNotFound) {
         this.storageVirtualMachineNotFound = storageVirtualMachineNotFound;
         return this;
     }
     
+    public DeleteStorageVirtualMachineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

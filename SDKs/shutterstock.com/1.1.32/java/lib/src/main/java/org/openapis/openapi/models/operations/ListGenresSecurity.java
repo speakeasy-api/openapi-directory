@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ListGenresSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic")
     public org.openapis.openapi.models.shared.SchemeBasic basic;
+
     public ListGenresSecurity withBasic(org.openapis.openapi.models.shared.SchemeBasic basic) {
         this.basic = basic;
         return this;
@@ -16,9 +17,11 @@ public class ListGenresSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String customerAccessCode;
+
     public ListGenresSecurity withCustomerAccessCode(String customerAccessCode) {
         this.customerAccessCode = customerAccessCode;
         return this;
     }
     
+    public ListGenresSecurity(){}
 }

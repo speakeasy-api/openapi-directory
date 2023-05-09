@@ -15,6 +15,7 @@ public class ReviewDismissedIssueEvent {
      */
     @JsonProperty("actor")
     public SimpleUser actor;
+
     public ReviewDismissedIssueEvent withActor(SimpleUser actor) {
         this.actor = actor;
         return this;
@@ -22,6 +23,7 @@ public class ReviewDismissedIssueEvent {
     
     @JsonProperty("commit_id")
     public String commitId;
+
     public ReviewDismissedIssueEvent withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -29,6 +31,7 @@ public class ReviewDismissedIssueEvent {
     
     @JsonProperty("commit_url")
     public String commitUrl;
+
     public ReviewDismissedIssueEvent withCommitUrl(String commitUrl) {
         this.commitUrl = commitUrl;
         return this;
@@ -36,6 +39,7 @@ public class ReviewDismissedIssueEvent {
     
     @JsonProperty("created_at")
     public String createdAt;
+
     public ReviewDismissedIssueEvent withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -43,6 +47,7 @@ public class ReviewDismissedIssueEvent {
     
     @JsonProperty("dismissed_review")
     public ReviewDismissedIssueEventDismissedReview dismissedReview;
+
     public ReviewDismissedIssueEvent withDismissedReview(ReviewDismissedIssueEventDismissedReview dismissedReview) {
         this.dismissedReview = dismissedReview;
         return this;
@@ -50,6 +55,7 @@ public class ReviewDismissedIssueEvent {
     
     @JsonProperty("event")
     public String event;
+
     public ReviewDismissedIssueEvent withEvent(String event) {
         this.event = event;
         return this;
@@ -57,6 +63,7 @@ public class ReviewDismissedIssueEvent {
     
     @JsonProperty("id")
     public Long id;
+
     public ReviewDismissedIssueEvent withId(Long id) {
         this.id = id;
         return this;
@@ -64,6 +71,7 @@ public class ReviewDismissedIssueEvent {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public ReviewDismissedIssueEvent withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -74,6 +82,7 @@ public class ReviewDismissedIssueEvent {
      */
     @JsonProperty("performed_via_github_app")
     public NullableIntegration performedViaGithubApp;
+
     public ReviewDismissedIssueEvent withPerformedViaGithubApp(NullableIntegration performedViaGithubApp) {
         this.performedViaGithubApp = performedViaGithubApp;
         return this;
@@ -81,9 +90,22 @@ public class ReviewDismissedIssueEvent {
     
     @JsonProperty("url")
     public String url;
+
     public ReviewDismissedIssueEvent withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ReviewDismissedIssueEvent(@JsonProperty("actor") SimpleUser actor, @JsonProperty("commit_id") String commitId, @JsonProperty("commit_url") String commitUrl, @JsonProperty("created_at") String createdAt, @JsonProperty("dismissed_review") ReviewDismissedIssueEventDismissedReview dismissedReview, @JsonProperty("event") String event, @JsonProperty("id") Long id, @JsonProperty("node_id") String nodeId, @JsonProperty("performed_via_github_app") NullableIntegration performedViaGithubApp, @JsonProperty("url") String url) {
+        this.actor = actor;
+        this.commitId = commitId;
+        this.commitUrl = commitUrl;
+        this.createdAt = createdAt;
+        this.dismissedReview = dismissedReview;
+        this.event = event;
+        this.id = id;
+        this.nodeId = nodeId;
+        this.performedViaGithubApp = performedViaGithubApp;
+        this.url = url;
+  }
 }

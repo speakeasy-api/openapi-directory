@@ -15,6 +15,7 @@ public class Phone {
      */
     @JsonProperty("code")
     public String code;
+
     public Phone withCode(String code) {
         this.code = code;
         return this;
@@ -25,6 +26,7 @@ public class Phone {
      */
     @JsonProperty("countryCode")
     public String countryCode;
+
     public Phone withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -35,9 +37,15 @@ public class Phone {
      */
     @JsonProperty("countryName")
     public String countryName;
+
     public Phone withCountryName(String countryName) {
         this.countryName = countryName;
         return this;
     }
     
+    public Phone(@JsonProperty("code") String code, @JsonProperty("countryCode") String countryCode, @JsonProperty("countryName") String countryName) {
+        this.code = code;
+        this.countryCode = countryCode;
+        this.countryName = countryName;
+  }
 }

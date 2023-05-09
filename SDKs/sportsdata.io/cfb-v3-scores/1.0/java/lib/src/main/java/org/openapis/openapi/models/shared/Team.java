@@ -12,6 +12,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Active")
     public Boolean active;
+
     public Team withActive(Boolean active) {
         this.active = active;
         return this;
@@ -20,6 +21,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApRank")
     public Long apRank;
+
     public Team withApRank(Long apRank) {
         this.apRank = apRank;
         return this;
@@ -28,6 +30,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CoachesRank")
     public Long coachesRank;
+
     public Team withCoachesRank(Long coachesRank) {
         this.coachesRank = coachesRank;
         return this;
@@ -36,6 +39,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Conference")
     public String conference;
+
     public Team withConference(String conference) {
         this.conference = conference;
         return this;
@@ -44,6 +48,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConferenceID")
     public Long conferenceID;
+
     public Team withConferenceID(Long conferenceID) {
         this.conferenceID = conferenceID;
         return this;
@@ -52,6 +57,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConferenceLosses")
     public Long conferenceLosses;
+
     public Team withConferenceLosses(Long conferenceLosses) {
         this.conferenceLosses = conferenceLosses;
         return this;
@@ -60,6 +66,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConferenceWins")
     public Long conferenceWins;
+
     public Team withConferenceWins(Long conferenceWins) {
         this.conferenceWins = conferenceWins;
         return this;
@@ -68,6 +75,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTeamID")
     public Long globalTeamID;
+
     public Team withGlobalTeamID(Long globalTeamID) {
         this.globalTeamID = globalTeamID;
         return this;
@@ -76,6 +84,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public Team withKey(String key) {
         this.key = key;
         return this;
@@ -84,6 +93,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Losses")
     public Long losses;
+
     public Team withLosses(Long losses) {
         this.losses = losses;
         return this;
@@ -92,6 +102,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Team withName(String name) {
         this.name = name;
         return this;
@@ -100,6 +111,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayoffRank")
     public Long playoffRank;
+
     public Team withPlayoffRank(Long playoffRank) {
         this.playoffRank = playoffRank;
         return this;
@@ -108,6 +120,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RankSeason")
     public Long rankSeason;
+
     public Team withRankSeason(Long rankSeason) {
         this.rankSeason = rankSeason;
         return this;
@@ -116,6 +129,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RankSeasonType")
     public Long rankSeasonType;
+
     public Team withRankSeasonType(Long rankSeasonType) {
         this.rankSeasonType = rankSeasonType;
         return this;
@@ -124,6 +138,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RankWeek")
     public Long rankWeek;
+
     public Team withRankWeek(Long rankWeek) {
         this.rankWeek = rankWeek;
         return this;
@@ -132,6 +147,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("School")
     public String school;
+
     public Team withSchool(String school) {
         this.school = school;
         return this;
@@ -140,6 +156,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortDisplayName")
     public String shortDisplayName;
+
     public Team withShortDisplayName(String shortDisplayName) {
         this.shortDisplayName = shortDisplayName;
         return this;
@@ -148,6 +165,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StadiumID")
     public Long stadiumID;
+
     public Team withStadiumID(Long stadiumID) {
         this.stadiumID = stadiumID;
         return this;
@@ -156,6 +174,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamID")
     public Long teamID;
+
     public Team withTeamID(Long teamID) {
         this.teamID = teamID;
         return this;
@@ -164,6 +183,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamLogoUrl")
     public String teamLogoUrl;
+
     public Team withTeamLogoUrl(String teamLogoUrl) {
         this.teamLogoUrl = teamLogoUrl;
         return this;
@@ -172,9 +192,11 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Wins")
     public Long wins;
+
     public Team withWins(Long wins) {
         this.wins = wins;
         return this;
     }
     
+    public Team(){}
 }

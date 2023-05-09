@@ -15,9 +15,11 @@ public class RegisterComputeOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Compute")
     public Compute compute;
+
     public RegisterComputeOutput withCompute(Compute compute) {
         this.compute = compute;
         return this;
     }
     
+    public RegisterComputeOutput(){}
 }

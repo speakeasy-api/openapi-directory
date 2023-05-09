@@ -20,6 +20,7 @@ public class GetQueryStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionStatistics")
     public ExecutionStatistics executionStatistics;
+
     public GetQueryStatisticsResponse withExecutionStatistics(ExecutionStatistics executionStatistics) {
         this.executionStatistics = executionStatistics;
         return this;
@@ -28,6 +29,7 @@ public class GetQueryStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlanningStatistics")
     public PlanningStatistics planningStatistics;
+
     public GetQueryStatisticsResponse withPlanningStatistics(PlanningStatistics planningStatistics) {
         this.planningStatistics = planningStatistics;
         return this;
@@ -38,9 +40,11 @@ public class GetQueryStatisticsResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("QuerySubmissionTime")
     public OffsetDateTime querySubmissionTime;
+
     public GetQueryStatisticsResponse withQuerySubmissionTime(OffsetDateTime querySubmissionTime) {
         this.querySubmissionTime = querySubmissionTime;
         return this;
     }
     
+    public GetQueryStatisticsResponse(){}
 }

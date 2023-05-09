@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteDatalakeExceptionsSubscriptionResponse {
     @JsonProperty("status")
     public String status;
+
     public DeleteDatalakeExceptionsSubscriptionResponse withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DeleteDatalakeExceptionsSubscriptionResponse(@JsonProperty("status") String status) {
+        this.status = status;
+  }
 }

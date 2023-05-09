@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptionsSpotOptions {
     
     public Long blockDurationMinutes;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptionsSpotOptions withBlockDurationMinutes(Long blockDurationMinutes) {
         this.blockDurationMinutes = blockDurationMinutes;
         return this;
@@ -19,6 +20,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptionsS
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptionsSpotOptionsInstanceInterruptionBehaviorEnum instanceInterruptionBehavior;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptionsSpotOptions withInstanceInterruptionBehavior(GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptionsSpotOptionsInstanceInterruptionBehaviorEnum instanceInterruptionBehavior) {
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         return this;
@@ -26,6 +28,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptionsS
     
     
     public String maxPrice;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptionsSpotOptions withMaxPrice(String maxPrice) {
         this.maxPrice = maxPrice;
         return this;
@@ -33,6 +36,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptionsS
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptionsSpotOptionsSpotInstanceTypeEnum spotInstanceType;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptionsSpotOptions withSpotInstanceType(GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptionsSpotOptionsSpotInstanceTypeEnum spotInstanceType) {
         this.spotInstanceType = spotInstanceType;
         return this;
@@ -40,9 +44,11 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptionsS
     
     
     public OffsetDateTime validUntil;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptionsSpotOptions withValidUntil(OffsetDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
     
+    public GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptionsSpotOptions(){}
 }

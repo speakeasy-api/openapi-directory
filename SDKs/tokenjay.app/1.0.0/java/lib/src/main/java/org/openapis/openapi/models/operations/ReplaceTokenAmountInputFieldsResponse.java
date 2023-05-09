@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReplaceTokenAmountInputFieldsResponse {
     
     public byte[] body;
+
     public ReplaceTokenAmountInputFieldsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ReplaceTokenAmountInputFieldsResponse {
     
     
     public String contentType;
+
     public ReplaceTokenAmountInputFieldsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ReplaceTokenAmountInputFieldsResponse {
     
     
     public Integer statusCode;
+
     public ReplaceTokenAmountInputFieldsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ReplaceTokenAmountInputFieldsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReplaceTokenAmountInputFieldsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ReplaceTokenAmountInputFieldsResponse {
      */
     
     public String replaceTokenAmountInputFields400WildcardString;
+
     public ReplaceTokenAmountInputFieldsResponse withReplaceTokenAmountInputFields400WildcardString(String replaceTokenAmountInputFields400WildcardString) {
         this.replaceTokenAmountInputFields400WildcardString = replaceTokenAmountInputFields400WildcardString;
         return this;
@@ -50,6 +56,7 @@ public class ReplaceTokenAmountInputFieldsResponse {
      */
     
     public String replaceTokenAmountInputFields401WildcardString;
+
     public ReplaceTokenAmountInputFieldsResponse withReplaceTokenAmountInputFields401WildcardString(String replaceTokenAmountInputFields401WildcardString) {
         this.replaceTokenAmountInputFields401WildcardString = replaceTokenAmountInputFields401WildcardString;
         return this;
@@ -60,6 +67,7 @@ public class ReplaceTokenAmountInputFieldsResponse {
      */
     
     public String replaceTokenAmountInputFields404WildcardString;
+
     public ReplaceTokenAmountInputFieldsResponse withReplaceTokenAmountInputFields404WildcardString(String replaceTokenAmountInputFields404WildcardString) {
         this.replaceTokenAmountInputFields404WildcardString = replaceTokenAmountInputFields404WildcardString;
         return this;
@@ -70,9 +78,14 @@ public class ReplaceTokenAmountInputFieldsResponse {
      */
     
     public String replaceTokenAmountInputFields409WildcardString;
+
     public ReplaceTokenAmountInputFieldsResponse withReplaceTokenAmountInputFields409WildcardString(String replaceTokenAmountInputFields409WildcardString) {
         this.replaceTokenAmountInputFields409WildcardString = replaceTokenAmountInputFields409WildcardString;
         return this;
     }
     
+    public ReplaceTokenAmountInputFieldsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

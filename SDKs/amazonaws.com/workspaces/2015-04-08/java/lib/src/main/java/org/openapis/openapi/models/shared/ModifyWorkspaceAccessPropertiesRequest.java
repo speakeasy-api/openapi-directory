@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModifyWorkspaceAccessPropertiesRequest {
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ModifyWorkspaceAccessPropertiesRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -16,9 +17,14 @@ public class ModifyWorkspaceAccessPropertiesRequest {
     
     @JsonProperty("WorkspaceAccessProperties")
     public WorkspaceAccessProperties workspaceAccessProperties;
+
     public ModifyWorkspaceAccessPropertiesRequest withWorkspaceAccessProperties(WorkspaceAccessProperties workspaceAccessProperties) {
         this.workspaceAccessProperties = workspaceAccessProperties;
         return this;
     }
     
+    public ModifyWorkspaceAccessPropertiesRequest(@JsonProperty("ResourceId") String resourceId, @JsonProperty("WorkspaceAccessProperties") WorkspaceAccessProperties workspaceAccessProperties) {
+        this.resourceId = resourceId;
+        this.workspaceAccessProperties = workspaceAccessProperties;
+  }
 }

@@ -18,6 +18,7 @@ public class LogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudAudit")
     public CloudAuditOptions cloudAudit;
+
     public LogConfig withCloudAudit(CloudAuditOptions cloudAudit) {
         this.cloudAudit = cloudAudit;
         return this;
@@ -29,6 +30,7 @@ public class LogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("counter")
     public CounterOptions counter;
+
     public LogConfig withCounter(CounterOptions counter) {
         this.counter = counter;
         return this;
@@ -40,9 +42,11 @@ public class LogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataAccess")
     public DataAccessOptions dataAccess;
+
     public LogConfig withDataAccess(DataAccessOptions dataAccess) {
         this.dataAccess = dataAccess;
         return this;
     }
     
+    public LogConfig(){}
 }

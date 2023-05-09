@@ -12,6 +12,7 @@ public class GetChannelsWithPushSubscribersRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
     public String xAblyVersion;
+
     public GetChannelsWithPushSubscribersRequest withXAblyVersion(String xAblyVersion) {
         this.xAblyVersion = xAblyVersion;
         return this;
@@ -22,9 +23,11 @@ public class GetChannelsWithPushSubscribersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+
     public GetChannelsWithPushSubscribersRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public GetChannelsWithPushSubscribersRequest(){}
 }

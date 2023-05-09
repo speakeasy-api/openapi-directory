@@ -18,6 +18,7 @@ public class EntityUserLinkEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountRef")
     public AccountRef accountRef;
+
     public EntityUserLinkEntity withAccountRef(AccountRef accountRef) {
         this.accountRef = accountRef;
         return this;
@@ -29,6 +30,7 @@ public class EntityUserLinkEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileRef")
     public ProfileRef profileRef;
+
     public EntityUserLinkEntity withProfileRef(ProfileRef profileRef) {
         this.profileRef = profileRef;
         return this;
@@ -40,9 +42,11 @@ public class EntityUserLinkEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webPropertyRef")
     public WebPropertyRef webPropertyRef;
+
     public EntityUserLinkEntity withWebPropertyRef(WebPropertyRef webPropertyRef) {
         this.webPropertyRef = webPropertyRef;
         return this;
     }
     
+    public EntityUserLinkEntity(){}
 }

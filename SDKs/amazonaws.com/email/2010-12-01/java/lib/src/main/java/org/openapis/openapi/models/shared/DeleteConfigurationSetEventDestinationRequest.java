@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteConfigurationSetEventDestinationRequest - Represents a request to delete a configuration set event destination. Configuration set event destinations are associated with configuration sets, which enable you to publish email sending events. For information about using configuration sets, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteConfigurationSetEventDestinationRequest {
     
     public String configurationSetName;
+
     public DeleteConfigurationSetEventDestinationRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -19,9 +20,14 @@ public class DeleteConfigurationSetEventDestinationRequest {
     
     
     public String eventDestinationName;
+
     public DeleteConfigurationSetEventDestinationRequest withEventDestinationName(String eventDestinationName) {
         this.eventDestinationName = eventDestinationName;
         return this;
     }
     
+    public DeleteConfigurationSetEventDestinationRequest(@JsonProperty("ConfigurationSetName") String configurationSetName, @JsonProperty("EventDestinationName") String eventDestinationName) {
+        this.configurationSetName = configurationSetName;
+        this.eventDestinationName = eventDestinationName;
+  }
 }

@@ -20,6 +20,7 @@ public class FunctionEventInvokeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationConfig")
     public DestinationConfig destinationConfig;
+
     public FunctionEventInvokeConfig withDestinationConfig(DestinationConfig destinationConfig) {
         this.destinationConfig = destinationConfig;
         return this;
@@ -28,6 +29,7 @@ public class FunctionEventInvokeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FunctionArn")
     public String functionArn;
+
     public FunctionEventInvokeConfig withFunctionArn(String functionArn) {
         this.functionArn = functionArn;
         return this;
@@ -38,6 +40,7 @@ public class FunctionEventInvokeConfig {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModified")
     public OffsetDateTime lastModified;
+
     public FunctionEventInvokeConfig withLastModified(OffsetDateTime lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -46,6 +49,7 @@ public class FunctionEventInvokeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumEventAgeInSeconds")
     public Long maximumEventAgeInSeconds;
+
     public FunctionEventInvokeConfig withMaximumEventAgeInSeconds(Long maximumEventAgeInSeconds) {
         this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
         return this;
@@ -54,9 +58,11 @@ public class FunctionEventInvokeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumRetryAttempts")
     public Long maximumRetryAttempts;
+
     public FunctionEventInvokeConfig withMaximumRetryAttempts(Long maximumRetryAttempts) {
         this.maximumRetryAttempts = maximumRetryAttempts;
         return this;
     }
     
+    public FunctionEventInvokeConfig(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AllTaxRatesResponse {
     
     public String contentType;
+
     public AllTaxRatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AllTaxRatesResponse {
     
     
     public Integer statusCode;
+
     public AllTaxRatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AllTaxRatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AllTaxRatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AllTaxRatesResponse {
      */
     
     public AllTaxRates200ApplicationJSON[] allTaxRates200ApplicationJSONObjects;
+
     public AllTaxRatesResponse withAllTaxRates200ApplicationJSONObjects(AllTaxRates200ApplicationJSON[] allTaxRates200ApplicationJSONObjects) {
         this.allTaxRates200ApplicationJSONObjects = allTaxRates200ApplicationJSONObjects;
         return this;
@@ -43,9 +48,14 @@ public class AllTaxRatesResponse {
      */
     
     public AllTaxRates500ApplicationJSON allTaxRates500ApplicationJSONObject;
+
     public AllTaxRatesResponse withAllTaxRates500ApplicationJSONObject(AllTaxRates500ApplicationJSON allTaxRates500ApplicationJSONObject) {
         this.allTaxRates500ApplicationJSONObject = allTaxRates500ApplicationJSONObject;
         return this;
     }
     
+    public AllTaxRatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class LoggingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinations")
     public LogDestination[] destinations;
+
     public LoggingConfiguration withDestinations(LogDestination[] destinations) {
         this.destinations = destinations;
         return this;
@@ -23,6 +24,7 @@ public class LoggingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeExecutionData")
     public Boolean includeExecutionData;
+
     public LoggingConfiguration withIncludeExecutionData(Boolean includeExecutionData) {
         this.includeExecutionData = includeExecutionData;
         return this;
@@ -31,9 +33,11 @@ public class LoggingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public LogLevelEnum level;
+
     public LoggingConfiguration withLevel(LogLevelEnum level) {
         this.level = level;
         return this;
     }
     
+    public LoggingConfiguration(){}
 }

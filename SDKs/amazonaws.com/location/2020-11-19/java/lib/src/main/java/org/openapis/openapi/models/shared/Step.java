@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Step {
     @JsonProperty("Distance")
     public Double distance;
+
     public Step withDistance(Double distance) {
         this.distance = distance;
         return this;
@@ -21,6 +22,7 @@ public class Step {
     
     @JsonProperty("DurationSeconds")
     public Double durationSeconds;
+
     public Step withDurationSeconds(Double durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -28,6 +30,7 @@ public class Step {
     
     @JsonProperty("EndPosition")
     public Double[] endPosition;
+
     public Step withEndPosition(Double[] endPosition) {
         this.endPosition = endPosition;
         return this;
@@ -36,6 +39,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeometryOffset")
     public Long geometryOffset;
+
     public Step withGeometryOffset(Long geometryOffset) {
         this.geometryOffset = geometryOffset;
         return this;
@@ -43,9 +47,16 @@ public class Step {
     
     @JsonProperty("StartPosition")
     public Double[] startPosition;
+
     public Step withStartPosition(Double[] startPosition) {
         this.startPosition = startPosition;
         return this;
     }
     
+    public Step(@JsonProperty("Distance") Double distance, @JsonProperty("DurationSeconds") Double durationSeconds, @JsonProperty("EndPosition") Double[] endPosition, @JsonProperty("StartPosition") Double[] startPosition) {
+        this.distance = distance;
+        this.durationSeconds = durationSeconds;
+        this.endPosition = endPosition;
+        this.startPosition = startPosition;
+  }
 }

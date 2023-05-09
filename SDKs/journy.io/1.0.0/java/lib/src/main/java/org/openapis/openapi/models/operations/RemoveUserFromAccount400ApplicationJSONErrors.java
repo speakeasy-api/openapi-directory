@@ -18,6 +18,7 @@ public class RemoveUserFromAccount400ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public java.util.Map<String, String> fields;
+
     public RemoveUserFromAccount400ApplicationJSONErrors withFields(java.util.Map<String, String> fields) {
         this.fields = fields;
         return this;
@@ -29,9 +30,11 @@ public class RemoveUserFromAccount400ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public RemoveUserFromAccount400ApplicationJSONErrorsParameters parameters;
+
     public RemoveUserFromAccount400ApplicationJSONErrors withParameters(RemoveUserFromAccount400ApplicationJSONErrorsParameters parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public RemoveUserFromAccount400ApplicationJSONErrors(){}
 }

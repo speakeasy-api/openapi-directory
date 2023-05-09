@@ -18,6 +18,7 @@ public class DimensionValueList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public DimensionValueList withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class DimensionValueList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public DimensionValue[] items;
+
     public DimensionValueList withItems(DimensionValue[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class DimensionValueList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DimensionValueList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class DimensionValueList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public DimensionValueList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public DimensionValueList(){}
 }

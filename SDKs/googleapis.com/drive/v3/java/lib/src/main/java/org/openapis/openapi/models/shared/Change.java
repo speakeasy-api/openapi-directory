@@ -23,6 +23,7 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changeType")
     public String changeType;
+
     public Change withChangeType(String changeType) {
         this.changeType = changeType;
         return this;
@@ -34,6 +35,7 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drive")
     public Drive drive;
+
     public Change withDrive(Drive drive) {
         this.drive = drive;
         return this;
@@ -45,6 +47,7 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driveId")
     public String driveId;
+
     public Change withDriveId(String driveId) {
         this.driveId = driveId;
         return this;
@@ -56,6 +59,7 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public File file;
+
     public Change withFile(File file) {
         this.file = file;
         return this;
@@ -67,6 +71,7 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileId")
     public String fileId;
+
     public Change withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -78,6 +83,7 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Change withKind(String kind) {
         this.kind = kind;
         return this;
@@ -89,6 +95,7 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removed")
     public Boolean removed;
+
     public Change withRemoved(Boolean removed) {
         this.removed = removed;
         return this;
@@ -100,6 +107,7 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teamDrive")
     public TeamDrive teamDrive;
+
     public Change withTeamDrive(TeamDrive teamDrive) {
         this.teamDrive = teamDrive;
         return this;
@@ -111,6 +119,7 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teamDriveId")
     public String teamDriveId;
+
     public Change withTeamDriveId(String teamDriveId) {
         this.teamDriveId = teamDriveId;
         return this;
@@ -124,6 +133,7 @@ public class Change {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("time")
     public OffsetDateTime time;
+
     public Change withTime(OffsetDateTime time) {
         this.time = time;
         return this;
@@ -135,9 +145,11 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Change withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Change(){}
 }

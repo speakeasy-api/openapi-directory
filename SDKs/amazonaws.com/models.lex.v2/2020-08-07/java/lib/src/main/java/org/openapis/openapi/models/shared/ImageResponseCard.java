@@ -15,6 +15,7 @@ public class ImageResponseCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buttons")
     public Button[] buttons;
+
     public ImageResponseCard withButtons(Button[] buttons) {
         this.buttons = buttons;
         return this;
@@ -23,6 +24,7 @@ public class ImageResponseCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public ImageResponseCard withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -31,6 +33,7 @@ public class ImageResponseCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtitle")
     public String subtitle;
+
     public ImageResponseCard withSubtitle(String subtitle) {
         this.subtitle = subtitle;
         return this;
@@ -38,9 +41,13 @@ public class ImageResponseCard {
     
     @JsonProperty("title")
     public String title;
+
     public ImageResponseCard withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ImageResponseCard(@JsonProperty("title") String title) {
+        this.title = title;
+  }
 }

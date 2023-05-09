@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomAttribute {
     @JsonProperty("ObjectIdentifier")
     public String objectIdentifier;
+
     public CustomAttribute withObjectIdentifier(String objectIdentifier) {
         this.objectIdentifier = objectIdentifier;
         return this;
@@ -19,9 +20,14 @@ public class CustomAttribute {
     
     @JsonProperty("Value")
     public String value;
+
     public CustomAttribute withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CustomAttribute(@JsonProperty("ObjectIdentifier") String objectIdentifier, @JsonProperty("Value") String value) {
+        this.objectIdentifier = objectIdentifier;
+        this.value = value;
+  }
 }

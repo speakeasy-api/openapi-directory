@@ -15,9 +15,11 @@ public class GetAccountSettingsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountSettings")
     public AccountSettings accountSettings;
+
     public GetAccountSettingsResult withAccountSettings(AccountSettings accountSettings) {
         this.accountSettings = accountSettings;
         return this;
     }
     
+    public GetAccountSettingsResult(){}
 }

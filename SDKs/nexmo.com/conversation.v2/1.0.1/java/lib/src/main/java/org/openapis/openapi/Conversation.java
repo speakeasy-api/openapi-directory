@@ -63,11 +63,9 @@ public class Conversation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConversationsResponse res = new org.openapis.openapi.models.operations.GetConversationsResponse() {{
+        org.openapis.openapi.models.operations.GetConversationsResponse res = new org.openapis.openapi.models.operations.GetConversationsResponse(contentType, httpRes.statusCode()) {{
             getConversations200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

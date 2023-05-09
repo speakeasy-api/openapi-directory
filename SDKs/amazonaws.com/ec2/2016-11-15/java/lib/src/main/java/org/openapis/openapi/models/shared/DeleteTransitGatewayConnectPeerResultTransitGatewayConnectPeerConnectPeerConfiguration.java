@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration {
     
     public DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationBgpConfigurations[] bgpConfigurations;
+
     public DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration withBgpConfigurations(DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationBgpConfigurations[] bgpConfigurations) {
         this.bgpConfigurations = bgpConfigurations;
         return this;
@@ -19,6 +20,7 @@ public class DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConne
     
     
     public String[] insideCidrBlocks;
+
     public DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration withInsideCidrBlocks(String[] insideCidrBlocks) {
         this.insideCidrBlocks = insideCidrBlocks;
         return this;
@@ -26,6 +28,7 @@ public class DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConne
     
     
     public String peerAddress;
+
     public DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration withPeerAddress(String peerAddress) {
         this.peerAddress = peerAddress;
         return this;
@@ -33,6 +36,7 @@ public class DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConne
     
     
     public DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationProtocolEnum protocol;
+
     public DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration withProtocol(DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -40,9 +44,11 @@ public class DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConne
     
     
     public String transitGatewayAddress;
+
     public DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration withTransitGatewayAddress(String transitGatewayAddress) {
         this.transitGatewayAddress = transitGatewayAddress;
         return this;
     }
     
+    public DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfiguration(){}
 }

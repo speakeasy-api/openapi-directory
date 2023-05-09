@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2TableLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowIndex")
     public String rowIndex;
+
     public GooglePrivacyDlpV2TableLocation withRowIndex(String rowIndex) {
         this.rowIndex = rowIndex;
         return this;
     }
     
+    public GooglePrivacyDlpV2TableLocation(){}
 }

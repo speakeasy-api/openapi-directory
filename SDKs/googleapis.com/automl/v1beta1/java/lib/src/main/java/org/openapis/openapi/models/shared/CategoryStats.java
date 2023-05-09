@@ -18,9 +18,11 @@ public class CategoryStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topCategoryStats")
     public SingleCategoryStats[] topCategoryStats;
+
     public CategoryStats withTopCategoryStats(SingleCategoryStats[] topCategoryStats) {
         this.topCategoryStats = topCategoryStats;
         return this;
     }
     
+    public CategoryStats(){}
 }

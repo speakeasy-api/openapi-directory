@@ -15,6 +15,7 @@ public class CodeArtifacts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BuildArtifactsObjectKey")
     public String buildArtifactsObjectKey;
+
     public CodeArtifacts withBuildArtifactsObjectKey(String buildArtifactsObjectKey) {
         this.buildArtifactsObjectKey = buildArtifactsObjectKey;
         return this;
@@ -22,9 +23,13 @@ public class CodeArtifacts {
     
     @JsonProperty("SourceCodeArtifactsObjectKey")
     public String sourceCodeArtifactsObjectKey;
+
     public CodeArtifacts withSourceCodeArtifactsObjectKey(String sourceCodeArtifactsObjectKey) {
         this.sourceCodeArtifactsObjectKey = sourceCodeArtifactsObjectKey;
         return this;
     }
     
+    public CodeArtifacts(@JsonProperty("SourceCodeArtifactsObjectKey") String sourceCodeArtifactsObjectKey) {
+        this.sourceCodeArtifactsObjectKey = sourceCodeArtifactsObjectKey;
+  }
 }

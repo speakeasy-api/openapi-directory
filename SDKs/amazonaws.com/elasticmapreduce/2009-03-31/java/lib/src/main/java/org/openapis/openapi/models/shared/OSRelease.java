@@ -15,9 +15,11 @@ public class OSRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Label")
     public String label;
+
     public OSRelease withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public OSRelease(){}
 }

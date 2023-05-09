@@ -168,4 +168,15 @@ lib/src/main/java/org/openapis/openapi/models/shared/Segment.java
 lib/src/main/java/org/openapis/openapi/models/shared/SpotInsertionInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/SpotInsertion.java
 lib/src/main/java/org/openapis/openapi/models/shared/Spot.java
+docs/sdk/README.md
+docs/broadcastservices/README.md
+docs/cddrive/README.md
+docs/episodes/README.md
+docs/metapub/README.md
+docs/pieces/README.md
+docs/programs/README.md
+docs/radiodns/README.md
+docs/segments/README.md
+docs/spotinsertions/README.md
+docs/spots/README.md
 USAGE.md

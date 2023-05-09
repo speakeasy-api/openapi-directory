@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeveloperToken - OK
@@ -15,6 +15,7 @@ public class DeveloperToken {
      */
     
     public String developerId;
+
     public DeveloperToken withDeveloperId(String developerId) {
         this.developerId = developerId;
         return this;
@@ -25,6 +26,7 @@ public class DeveloperToken {
      */
     
     public Long expires;
+
     public DeveloperToken withExpires(Long expires) {
         this.expires = expires;
         return this;
@@ -35,9 +37,15 @@ public class DeveloperToken {
      */
     
     public String targetUrl;
+
     public DeveloperToken withTargetUrl(String targetUrl) {
         this.targetUrl = targetUrl;
         return this;
     }
     
+    public DeveloperToken(@JsonProperty("developerId") String developerId, @JsonProperty("expires") Long expires, @JsonProperty("targetUrl") String targetUrl) {
+        this.developerId = developerId;
+        this.expires = expires;
+        this.targetUrl = targetUrl;
+  }
 }

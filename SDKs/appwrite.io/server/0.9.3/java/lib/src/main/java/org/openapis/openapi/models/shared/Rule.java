@@ -15,6 +15,7 @@ public class Rule {
      */
     @JsonProperty("$collection")
     public String dollarCollection;
+
     public Rule withDollarCollection(String dollarCollection) {
         this.dollarCollection = dollarCollection;
         return this;
@@ -25,6 +26,7 @@ public class Rule {
      */
     @JsonProperty("$id")
     public String dollarId;
+
     public Rule withDollarId(String dollarId) {
         this.dollarId = dollarId;
         return this;
@@ -35,6 +37,7 @@ public class Rule {
      */
     @JsonProperty("array")
     public Boolean array;
+
     public Rule withArray(Boolean array) {
         this.array = array;
         return this;
@@ -45,6 +48,7 @@ public class Rule {
      */
     @JsonProperty("default")
     public String default_;
+
     public Rule withDefault(String default_) {
         this.default_ = default_;
         return this;
@@ -55,6 +59,7 @@ public class Rule {
      */
     @JsonProperty("key")
     public String key;
+
     public Rule withKey(String key) {
         this.key = key;
         return this;
@@ -65,6 +70,7 @@ public class Rule {
      */
     @JsonProperty("label")
     public String label;
+
     public Rule withLabel(String label) {
         this.label = label;
         return this;
@@ -75,6 +81,7 @@ public class Rule {
      */
     @JsonProperty("list")
     public String[] list;
+
     public Rule withList(String[] list) {
         this.list = list;
         return this;
@@ -85,6 +92,7 @@ public class Rule {
      */
     @JsonProperty("required")
     public Boolean required;
+
     public Rule withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -95,9 +103,21 @@ public class Rule {
      */
     @JsonProperty("type")
     public String type;
+
     public Rule withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Rule(@JsonProperty("$collection") String dollarCollection, @JsonProperty("$id") String dollarId, @JsonProperty("array") Boolean array, @JsonProperty("default") String default_, @JsonProperty("key") String key, @JsonProperty("label") String label, @JsonProperty("list") String[] list, @JsonProperty("required") Boolean required, @JsonProperty("type") String type) {
+        this.dollarCollection = dollarCollection;
+        this.dollarId = dollarId;
+        this.array = array;
+        this.default_ = default_;
+        this.key = key;
+        this.label = label;
+        this.list = list;
+        this.required = required;
+        this.type = type;
+  }
 }

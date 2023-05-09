@@ -18,6 +18,7 @@ public class GetEditorUrl403ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public GetEditorUrl403ApplicationJSONErrorEnum error;
+
     public GetEditorUrl403ApplicationJSON withError(GetEditorUrl403ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -29,9 +30,11 @@ public class GetEditorUrl403ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public GetEditorUrl403ApplicationJSON withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public GetEditorUrl403ApplicationJSON(){}
 }

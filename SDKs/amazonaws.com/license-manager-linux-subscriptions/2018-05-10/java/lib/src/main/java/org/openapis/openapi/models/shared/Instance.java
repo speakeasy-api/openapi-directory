@@ -15,6 +15,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountID")
     public String accountID;
+
     public Instance withAccountID(String accountID) {
         this.accountID = accountID;
         return this;
@@ -23,6 +24,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmiId")
     public String amiId;
+
     public Instance withAmiId(String amiId) {
         this.amiId = amiId;
         return this;
@@ -31,6 +33,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceID")
     public String instanceID;
+
     public Instance withInstanceID(String instanceID) {
         this.instanceID = instanceID;
         return this;
@@ -39,6 +42,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public Instance withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -47,6 +51,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastUpdatedTime")
     public String lastUpdatedTime;
+
     public Instance withLastUpdatedTime(String lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -55,6 +60,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductCode")
     public String[] productCode;
+
     public Instance withProductCode(String[] productCode) {
         this.productCode = productCode;
         return this;
@@ -63,6 +69,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public Instance withRegion(String region) {
         this.region = region;
         return this;
@@ -71,6 +78,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public Instance withStatus(String status) {
         this.status = status;
         return this;
@@ -79,6 +87,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubscriptionName")
     public String subscriptionName;
+
     public Instance withSubscriptionName(String subscriptionName) {
         this.subscriptionName = subscriptionName;
         return this;
@@ -87,9 +96,11 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsageOperation")
     public String usageOperation;
+
     public Instance withUsageOperation(String usageOperation) {
         this.usageOperation = usageOperation;
         return this;
     }
     
+    public Instance(){}
 }

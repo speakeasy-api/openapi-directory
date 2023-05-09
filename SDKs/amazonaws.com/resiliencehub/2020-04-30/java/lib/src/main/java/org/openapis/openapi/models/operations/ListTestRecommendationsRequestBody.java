@@ -14,6 +14,7 @@ public class ListTestRecommendationsRequestBody {
      */
     @JsonProperty("assessmentArn")
     public String assessmentArn;
+
     public ListTestRecommendationsRequestBody withAssessmentArn(String assessmentArn) {
         this.assessmentArn = assessmentArn;
         return this;
@@ -25,6 +26,7 @@ public class ListTestRecommendationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListTestRecommendationsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class ListTestRecommendationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTestRecommendationsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListTestRecommendationsRequestBody(@JsonProperty("assessmentArn") String assessmentArn) {
+        this.assessmentArn = assessmentArn;
+  }
 }

@@ -15,9 +15,11 @@ public class DisconnectParticipantRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public DisconnectParticipantRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
+    public DisconnectParticipantRequestBody(){}
 }

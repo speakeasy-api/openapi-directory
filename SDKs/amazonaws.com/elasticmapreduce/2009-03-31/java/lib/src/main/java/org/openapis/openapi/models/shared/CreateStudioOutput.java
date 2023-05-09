@@ -15,6 +15,7 @@ public class CreateStudioOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StudioId")
     public String studioId;
+
     public CreateStudioOutput withStudioId(String studioId) {
         this.studioId = studioId;
         return this;
@@ -23,9 +24,11 @@ public class CreateStudioOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public CreateStudioOutput withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CreateStudioOutput(){}
 }

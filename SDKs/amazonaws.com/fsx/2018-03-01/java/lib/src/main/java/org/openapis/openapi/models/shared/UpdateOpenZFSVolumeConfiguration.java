@@ -15,6 +15,7 @@ public class UpdateOpenZFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataCompressionType")
     public OpenZFSDataCompressionTypeEnum dataCompressionType;
+
     public UpdateOpenZFSVolumeConfiguration withDataCompressionType(OpenZFSDataCompressionTypeEnum dataCompressionType) {
         this.dataCompressionType = dataCompressionType;
         return this;
@@ -23,6 +24,7 @@ public class UpdateOpenZFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NfsExports")
     public OpenZFSNfsExport[] nfsExports;
+
     public UpdateOpenZFSVolumeConfiguration withNfsExports(OpenZFSNfsExport[] nfsExports) {
         this.nfsExports = nfsExports;
         return this;
@@ -31,6 +33,7 @@ public class UpdateOpenZFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadOnly")
     public Boolean readOnly;
+
     public UpdateOpenZFSVolumeConfiguration withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -39,6 +42,7 @@ public class UpdateOpenZFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordSizeKiB")
     public Long recordSizeKiB;
+
     public UpdateOpenZFSVolumeConfiguration withRecordSizeKiB(Long recordSizeKiB) {
         this.recordSizeKiB = recordSizeKiB;
         return this;
@@ -47,6 +51,7 @@ public class UpdateOpenZFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageCapacityQuotaGiB")
     public Long storageCapacityQuotaGiB;
+
     public UpdateOpenZFSVolumeConfiguration withStorageCapacityQuotaGiB(Long storageCapacityQuotaGiB) {
         this.storageCapacityQuotaGiB = storageCapacityQuotaGiB;
         return this;
@@ -55,6 +60,7 @@ public class UpdateOpenZFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageCapacityReservationGiB")
     public Long storageCapacityReservationGiB;
+
     public UpdateOpenZFSVolumeConfiguration withStorageCapacityReservationGiB(Long storageCapacityReservationGiB) {
         this.storageCapacityReservationGiB = storageCapacityReservationGiB;
         return this;
@@ -63,9 +69,11 @@ public class UpdateOpenZFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserAndGroupQuotas")
     public OpenZFSUserOrGroupQuota[] userAndGroupQuotas;
+
     public UpdateOpenZFSVolumeConfiguration withUserAndGroupQuotas(OpenZFSUserOrGroupQuota[] userAndGroupQuotas) {
         this.userAndGroupQuotas = userAndGroupQuotas;
         return this;
     }
     
+    public UpdateOpenZFSVolumeConfiguration(){}
 }

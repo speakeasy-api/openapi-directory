@@ -15,6 +15,7 @@ public class PortRangeFromTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("From")
     public Long from;
+
     public PortRangeFromTo withFrom(Long from) {
         this.from = from;
         return this;
@@ -23,9 +24,11 @@ public class PortRangeFromTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("To")
     public Long to;
+
     public PortRangeFromTo withTo(Long to) {
         this.to = to;
         return this;
     }
     
+    public PortRangeFromTo(){}
 }

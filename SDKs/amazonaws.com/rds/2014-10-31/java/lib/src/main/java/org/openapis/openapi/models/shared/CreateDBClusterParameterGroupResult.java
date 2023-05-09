@@ -15,9 +15,11 @@ public class CreateDBClusterParameterGroupResult {
      */
     
     public DBClusterParameterGroup dbClusterParameterGroup;
+
     public CreateDBClusterParameterGroupResult withDBClusterParameterGroup(DBClusterParameterGroup dbClusterParameterGroup) {
         this.dbClusterParameterGroup = dbClusterParameterGroup;
         return this;
     }
     
+    public CreateDBClusterParameterGroupResult(){}
 }

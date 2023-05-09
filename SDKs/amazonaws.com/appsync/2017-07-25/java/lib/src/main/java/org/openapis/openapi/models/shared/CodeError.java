@@ -15,6 +15,7 @@ public class CodeError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorType")
     public String errorType;
+
     public CodeError withErrorType(String errorType) {
         this.errorType = errorType;
         return this;
@@ -23,6 +24,7 @@ public class CodeError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public CodeErrorLocation location;
+
     public CodeError withLocation(CodeErrorLocation location) {
         this.location = location;
         return this;
@@ -31,9 +33,11 @@ public class CodeError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public CodeError withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CodeError(){}
 }

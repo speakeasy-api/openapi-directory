@@ -18,6 +18,7 @@ public class EcommerceData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionType")
     public EcommerceDataActionTypeEnum actionType;
+
     public EcommerceData withActionType(EcommerceDataActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -29,6 +30,7 @@ public class EcommerceData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecommerceType")
     public EcommerceDataEcommerceTypeEnum ecommerceType;
+
     public EcommerceData withEcommerceType(EcommerceDataEcommerceTypeEnum ecommerceType) {
         this.ecommerceType = ecommerceType;
         return this;
@@ -40,6 +42,7 @@ public class EcommerceData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public ProductData[] products;
+
     public EcommerceData withProducts(ProductData[] products) {
         this.products = products;
         return this;
@@ -51,9 +54,11 @@ public class EcommerceData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction")
     public TransactionData transaction;
+
     public EcommerceData withTransaction(TransactionData transaction) {
         this.transaction = transaction;
         return this;
     }
     
+    public EcommerceData(){}
 }

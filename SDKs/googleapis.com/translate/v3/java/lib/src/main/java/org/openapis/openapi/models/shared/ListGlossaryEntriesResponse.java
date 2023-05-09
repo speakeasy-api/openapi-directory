@@ -18,6 +18,7 @@ public class ListGlossaryEntriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glossaryEntries")
     public GlossaryEntry[] glossaryEntries;
+
     public ListGlossaryEntriesResponse withGlossaryEntries(GlossaryEntry[] glossaryEntries) {
         this.glossaryEntries = glossaryEntries;
         return this;
@@ -29,9 +30,11 @@ public class ListGlossaryEntriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListGlossaryEntriesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListGlossaryEntriesResponse(){}
 }

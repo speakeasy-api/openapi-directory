@@ -18,6 +18,7 @@ public class SubmitConfigSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configSource")
     public ConfigSource configSource;
+
     public SubmitConfigSourceRequest withConfigSource(ConfigSource configSource) {
         this.configSource = configSource;
         return this;
@@ -29,9 +30,11 @@ public class SubmitConfigSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateOnly")
     public Boolean validateOnly;
+
     public SubmitConfigSourceRequest withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public SubmitConfigSourceRequest(){}
 }

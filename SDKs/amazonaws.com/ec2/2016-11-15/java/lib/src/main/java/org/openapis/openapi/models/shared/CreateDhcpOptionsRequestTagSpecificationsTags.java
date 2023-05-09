@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateDhcpOptionsRequestTagSpecificationsTags {
     
     public String key;
+
     public CreateDhcpOptionsRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateDhcpOptionsRequestTagSpecificationsTags {
     
     
     public String value;
+
     public CreateDhcpOptionsRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateDhcpOptionsRequestTagSpecificationsTags(){}
 }

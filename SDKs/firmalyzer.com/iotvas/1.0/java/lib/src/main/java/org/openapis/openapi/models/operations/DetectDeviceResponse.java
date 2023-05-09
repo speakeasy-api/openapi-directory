@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetectDeviceResponse {
     
     public String contentType;
+
     public DetectDeviceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DetectDeviceResponse {
      */
     
     public org.openapis.openapi.models.shared.DeviceInfo deviceInfo;
+
     public DetectDeviceResponse withDeviceInfo(org.openapis.openapi.models.shared.DeviceInfo deviceInfo) {
         this.deviceInfo = deviceInfo;
         return this;
@@ -29,6 +32,7 @@ public class DetectDeviceResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public DetectDeviceResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -36,6 +40,7 @@ public class DetectDeviceResponse {
     
     
     public Integer statusCode;
+
     public DetectDeviceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DetectDeviceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetectDeviceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DetectDeviceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class GetAnomalyMonitorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetAnomalyMonitorsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class GetAnomalyMonitorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitorArnList")
     public String[] monitorArnList;
+
     public GetAnomalyMonitorsRequest withMonitorArnList(String[] monitorArnList) {
         this.monitorArnList = monitorArnList;
         return this;
@@ -28,9 +30,11 @@ public class GetAnomalyMonitorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetAnomalyMonitorsRequest withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GetAnomalyMonitorsRequest(){}
 }

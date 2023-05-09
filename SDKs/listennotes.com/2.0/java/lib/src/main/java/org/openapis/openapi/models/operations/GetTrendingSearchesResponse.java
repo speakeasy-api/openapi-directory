@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTrendingSearchesResponse {
     
     public String contentType;
+
     public GetTrendingSearchesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetTrendingSearchesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetTrendingSearchesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetTrendingSearchesResponse {
     
     
     public Integer statusCode;
+
     public GetTrendingSearchesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetTrendingSearchesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTrendingSearchesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetTrendingSearchesResponse {
      */
     
     public org.openapis.openapi.models.shared.TrendingSearchesResponse trendingSearchesResponse;
+
     public GetTrendingSearchesResponse withTrendingSearchesResponse(org.openapis.openapi.models.shared.TrendingSearchesResponse trendingSearchesResponse) {
         this.trendingSearchesResponse = trendingSearchesResponse;
         return this;
     }
     
+    public GetTrendingSearchesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

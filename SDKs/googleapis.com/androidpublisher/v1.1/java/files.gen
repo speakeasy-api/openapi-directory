@@ -43,4 +43,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/AndroidpublisherPurchas
 lib/src/main/java/org/openapis/openapi/models/shared/InappPurchase.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/SubscriptionPurchase.java
+docs/sdk/README.md
+docs/inapppurchases/README.md
+docs/purchases/README.md
 USAGE.md

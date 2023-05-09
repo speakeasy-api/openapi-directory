@@ -15,6 +15,7 @@ public class ConfluenceBlogToIndexFieldMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceFieldName")
     public ConfluenceBlogFieldNameEnum dataSourceFieldName;
+
     public ConfluenceBlogToIndexFieldMapping withDataSourceFieldName(ConfluenceBlogFieldNameEnum dataSourceFieldName) {
         this.dataSourceFieldName = dataSourceFieldName;
         return this;
@@ -23,6 +24,7 @@ public class ConfluenceBlogToIndexFieldMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateFieldFormat")
     public String dateFieldFormat;
+
     public ConfluenceBlogToIndexFieldMapping withDateFieldFormat(String dateFieldFormat) {
         this.dateFieldFormat = dateFieldFormat;
         return this;
@@ -31,9 +33,11 @@ public class ConfluenceBlogToIndexFieldMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexFieldName")
     public String indexFieldName;
+
     public ConfluenceBlogToIndexFieldMapping withIndexFieldName(String indexFieldName) {
         this.indexFieldName = indexFieldName;
         return this;
     }
     
+    public ConfluenceBlogToIndexFieldMapping(){}
 }

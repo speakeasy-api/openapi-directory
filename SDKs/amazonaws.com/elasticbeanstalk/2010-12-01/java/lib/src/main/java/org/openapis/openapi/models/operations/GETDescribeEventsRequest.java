@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeEventsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeEventsActionEnum action;
+
     public GETDescribeEventsRequest withAction(GETDescribeEventsActionEnum action) {
         this.action = action;
         return this;
@@ -20,6 +22,7 @@ public class GETDescribeEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplicationName")
     public String applicationName;
+
     public GETDescribeEventsRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -30,6 +33,7 @@ public class GETDescribeEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndTime")
     public OffsetDateTime endTime;
+
     public GETDescribeEventsRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -40,6 +44,7 @@ public class GETDescribeEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentId")
     public String environmentId;
+
     public GETDescribeEventsRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -50,6 +55,7 @@ public class GETDescribeEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentName")
     public String environmentName;
+
     public GETDescribeEventsRequest withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -60,6 +66,7 @@ public class GETDescribeEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public Long maxRecords;
+
     public GETDescribeEventsRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -70,6 +77,7 @@ public class GETDescribeEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public GETDescribeEventsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -80,6 +88,7 @@ public class GETDescribeEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PlatformArn")
     public String platformArn;
+
     public GETDescribeEventsRequest withPlatformArn(String platformArn) {
         this.platformArn = platformArn;
         return this;
@@ -90,6 +99,7 @@ public class GETDescribeEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RequestId")
     public String requestId;
+
     public GETDescribeEventsRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -100,6 +110,7 @@ public class GETDescribeEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Severity")
     public GETDescribeEventsSeverityEnum severity;
+
     public GETDescribeEventsRequest withSeverity(GETDescribeEventsSeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -110,6 +121,7 @@ public class GETDescribeEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartTime")
     public OffsetDateTime startTime;
+
     public GETDescribeEventsRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -120,6 +132,7 @@ public class GETDescribeEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateName")
     public String templateName;
+
     public GETDescribeEventsRequest withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -127,6 +140,7 @@ public class GETDescribeEventsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeEventsVersionEnum version;
+
     public GETDescribeEventsRequest withVersion(GETDescribeEventsVersionEnum version) {
         this.version = version;
         return this;
@@ -137,6 +151,7 @@ public class GETDescribeEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VersionLabel")
     public String versionLabel;
+
     public GETDescribeEventsRequest withVersionLabel(String versionLabel) {
         this.versionLabel = versionLabel;
         return this;
@@ -144,6 +159,7 @@ public class GETDescribeEventsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeEventsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -151,6 +167,7 @@ public class GETDescribeEventsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeEventsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -158,6 +175,7 @@ public class GETDescribeEventsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeEventsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -165,6 +183,7 @@ public class GETDescribeEventsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeEventsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -172,6 +191,7 @@ public class GETDescribeEventsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeEventsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -179,6 +199,7 @@ public class GETDescribeEventsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeEventsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -186,9 +207,14 @@ public class GETDescribeEventsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeEventsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeEventsRequest(@JsonProperty("Action") GETDescribeEventsActionEnum action, @JsonProperty("Version") GETDescribeEventsVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

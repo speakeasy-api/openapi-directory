@@ -15,6 +15,7 @@ public class CreateAnnotationStoreRequestBodySseConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyArn")
     public String keyArn;
+
     public CreateAnnotationStoreRequestBodySseConfig withKeyArn(String keyArn) {
         this.keyArn = keyArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateAnnotationStoreRequestBodySseConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public org.openapis.openapi.models.shared.EncryptionTypeEnum type;
+
     public CreateAnnotationStoreRequestBodySseConfig withType(org.openapis.openapi.models.shared.EncryptionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateAnnotationStoreRequestBodySseConfig(){}
 }

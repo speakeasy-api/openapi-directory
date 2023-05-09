@@ -12,6 +12,7 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparison")
     public Comparison comparison;
+
     public Target withComparison(Comparison comparison) {
         this.comparison = comparison;
         return this;
@@ -20,9 +21,11 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenshot")
     public Screenshot screenshot;
+
     public Target withScreenshot(Screenshot screenshot) {
         this.screenshot = screenshot;
         return this;
     }
     
+    public Target(){}
 }

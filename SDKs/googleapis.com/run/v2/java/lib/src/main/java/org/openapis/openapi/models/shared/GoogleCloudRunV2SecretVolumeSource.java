@@ -18,6 +18,7 @@ public class GoogleCloudRunV2SecretVolumeSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultMode")
     public Integer defaultMode;
+
     public GoogleCloudRunV2SecretVolumeSource withDefaultMode(Integer defaultMode) {
         this.defaultMode = defaultMode;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRunV2SecretVolumeSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public GoogleCloudRunV2VersionToPath[] items;
+
     public GoogleCloudRunV2SecretVolumeSource withItems(GoogleCloudRunV2VersionToPath[] items) {
         this.items = items;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRunV2SecretVolumeSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public GoogleCloudRunV2SecretVolumeSource withSecret(String secret) {
         this.secret = secret;
         return this;
     }
     
+    public GoogleCloudRunV2SecretVolumeSource(){}
 }

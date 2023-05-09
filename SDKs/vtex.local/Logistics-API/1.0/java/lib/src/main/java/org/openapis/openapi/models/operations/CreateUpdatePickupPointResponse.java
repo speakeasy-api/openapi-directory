@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateUpdatePickupPointResponse {
     
     public String contentType;
+
     public CreateUpdatePickupPointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateUpdatePickupPointResponse {
     
     
     public CreateUpdatePickupPointCreateUpdate createUpdate;
+
     public CreateUpdatePickupPointResponse withCreateUpdate(CreateUpdatePickupPointCreateUpdate createUpdate) {
         this.createUpdate = createUpdate;
         return this;
@@ -23,6 +26,7 @@ public class CreateUpdatePickupPointResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CreateUpdatePickupPointResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -30,6 +34,7 @@ public class CreateUpdatePickupPointResponse {
     
     
     public Integer statusCode;
+
     public CreateUpdatePickupPointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,9 +42,14 @@ public class CreateUpdatePickupPointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateUpdatePickupPointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateUpdatePickupPointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

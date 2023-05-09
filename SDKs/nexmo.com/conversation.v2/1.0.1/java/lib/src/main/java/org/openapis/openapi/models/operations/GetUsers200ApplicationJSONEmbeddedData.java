@@ -15,9 +15,11 @@ public class GetUsers200ApplicationJSONEmbeddedData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("users")
     public org.openapis.openapi.models.shared.UserList[] users;
+
     public GetUsers200ApplicationJSONEmbeddedData withUsers(org.openapis.openapi.models.shared.UserList[] users) {
         this.users = users;
         return this;
     }
     
+    public GetUsers200ApplicationJSONEmbeddedData(){}
 }

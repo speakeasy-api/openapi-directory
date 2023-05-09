@@ -15,6 +15,7 @@ public class SecurityConfigSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configVersion")
     public String configVersion;
+
     public SecurityConfigSummary withConfigVersion(String configVersion) {
         this.configVersion = configVersion;
         return this;
@@ -23,6 +24,7 @@ public class SecurityConfigSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdDate")
     public Long createdDate;
+
     public SecurityConfigSummary withCreatedDate(Long createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -31,6 +33,7 @@ public class SecurityConfigSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SecurityConfigSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class SecurityConfigSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SecurityConfigSummary withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class SecurityConfigSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedDate")
     public Long lastModifiedDate;
+
     public SecurityConfigSummary withLastModifiedDate(Long lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -55,9 +60,11 @@ public class SecurityConfigSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SecurityConfigTypeEnum type;
+
     public SecurityConfigSummary withType(SecurityConfigTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SecurityConfigSummary(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetProtocolsRequest {
@@ -12,6 +13,7 @@ public class SetProtocolsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public String[] requestBody;
+
     public SetProtocolsRequest withRequestBody(String[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class SetProtocolsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public SetProtocolsRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
     }
     
+    public SetProtocolsRequest(@JsonProperty("RequestBody") String[] requestBody, @JsonProperty("agentNum") Integer agentNum) {
+        this.requestBody = requestBody;
+        this.agentNum = agentNum;
+  }
 }

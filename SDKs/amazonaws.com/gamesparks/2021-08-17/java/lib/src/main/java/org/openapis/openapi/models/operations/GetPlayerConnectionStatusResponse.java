@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPlayerConnectionStatusResponse {
@@ -12,6 +13,7 @@ public class GetPlayerConnectionStatusResponse {
      */
     
     public Object accessDeniedException;
+
     public GetPlayerConnectionStatusResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetPlayerConnectionStatusResponse {
     
     
     public String contentType;
+
     public GetPlayerConnectionStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetPlayerConnectionStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPlayerConnectionStatusResult getPlayerConnectionStatusResult;
+
     public GetPlayerConnectionStatusResponse withGetPlayerConnectionStatusResult(org.openapis.openapi.models.shared.GetPlayerConnectionStatusResult getPlayerConnectionStatusResult) {
         this.getPlayerConnectionStatusResult = getPlayerConnectionStatusResult;
         return this;
@@ -39,6 +43,7 @@ public class GetPlayerConnectionStatusResponse {
      */
     
     public Object internalServerException;
+
     public GetPlayerConnectionStatusResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetPlayerConnectionStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetPlayerConnectionStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetPlayerConnectionStatusResponse {
     
     
     public Integer statusCode;
+
     public GetPlayerConnectionStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetPlayerConnectionStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPlayerConnectionStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetPlayerConnectionStatusResponse {
      */
     
     public Object throttlingException;
+
     public GetPlayerConnectionStatusResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetPlayerConnectionStatusResponse {
      */
     
     public Object validationException;
+
     public GetPlayerConnectionStatusResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetPlayerConnectionStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

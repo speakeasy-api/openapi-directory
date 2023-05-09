@@ -15,6 +15,7 @@ public class ApiKeyOwner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public ApiKeyOwner200ApplicationJSONOperations[] operations;
+
     public ApiKeyOwner200ApplicationJSON withOperations(ApiKeyOwner200ApplicationJSONOperations[] operations) {
         this.operations = operations;
         return this;
@@ -23,9 +24,11 @@ public class ApiKeyOwner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public ApiKeyOwner200ApplicationJSONUser user;
+
     public ApiKeyOwner200ApplicationJSON withUser(ApiKeyOwner200ApplicationJSONUser user) {
         this.user = user;
         return this;
     }
     
+    public ApiKeyOwner200ApplicationJSON(){}
 }

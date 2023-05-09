@@ -12,6 +12,7 @@ public class GetApiV2PerformanceStats200ApplicationJSONDataDetailsYesterday {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lost")
     public Long lost;
+
     public GetApiV2PerformanceStats200ApplicationJSONDataDetailsYesterday withLost(Long lost) {
         this.lost = lost;
         return this;
@@ -20,6 +21,7 @@ public class GetApiV2PerformanceStats200ApplicationJSONDataDetailsYesterday {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pending")
     public Long pending;
+
     public GetApiV2PerformanceStats200ApplicationJSONDataDetailsYesterday withPending(Long pending) {
         this.pending = pending;
         return this;
@@ -28,6 +30,7 @@ public class GetApiV2PerformanceStats200ApplicationJSONDataDetailsYesterday {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postponed")
     public Long postponed;
+
     public GetApiV2PerformanceStats200ApplicationJSONDataDetailsYesterday withPostponed(Long postponed) {
         this.postponed = postponed;
         return this;
@@ -36,6 +39,7 @@ public class GetApiV2PerformanceStats200ApplicationJSONDataDetailsYesterday {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public GetApiV2PerformanceStats200ApplicationJSONDataDetailsYesterday withTotal(Long total) {
         this.total = total;
         return this;
@@ -44,9 +48,11 @@ public class GetApiV2PerformanceStats200ApplicationJSONDataDetailsYesterday {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("won")
     public Long won;
+
     public GetApiV2PerformanceStats200ApplicationJSONDataDetailsYesterday withWon(Long won) {
         this.won = won;
         return this;
     }
     
+    public GetApiV2PerformanceStats200ApplicationJSONDataDetailsYesterday(){}
 }

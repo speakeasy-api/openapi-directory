@@ -12,6 +12,7 @@ public class RespondActivityTaskCompletedInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public String result;
+
     public RespondActivityTaskCompletedInput withResult(String result) {
         this.result = result;
         return this;
@@ -19,9 +20,13 @@ public class RespondActivityTaskCompletedInput {
     
     @JsonProperty("taskToken")
     public String taskToken;
+
     public RespondActivityTaskCompletedInput withTaskToken(String taskToken) {
         this.taskToken = taskToken;
         return this;
     }
     
+    public RespondActivityTaskCompletedInput(@JsonProperty("taskToken") String taskToken) {
+        this.taskToken = taskToken;
+  }
 }

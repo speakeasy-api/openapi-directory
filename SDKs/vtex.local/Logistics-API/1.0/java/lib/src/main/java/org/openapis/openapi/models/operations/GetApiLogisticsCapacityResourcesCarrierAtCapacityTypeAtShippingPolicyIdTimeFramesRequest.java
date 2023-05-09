@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesRequest {
@@ -12,6 +13,7 @@ public class GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPoli
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPoli
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPoli
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=capacityType")
     public String capacityType;
+
     public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesRequest withCapacityType(String capacityType) {
         this.capacityType = capacityType;
         return this;
@@ -42,6 +46,7 @@ public class GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPoli
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rangeEnd")
     public String rangeEnd;
+
     public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesRequest withRangeEnd(String rangeEnd) {
         this.rangeEnd = rangeEnd;
         return this;
@@ -52,6 +57,7 @@ public class GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPoli
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rangeStart")
     public String rangeStart;
+
     public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesRequest withRangeStart(String rangeStart) {
         this.rangeStart = rangeStart;
         return this;
@@ -62,9 +68,18 @@ public class GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPoli
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shippingPolicyId")
     public String shippingPolicyId;
+
     public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesRequest withShippingPolicyId(String shippingPolicyId) {
         this.shippingPolicyId = shippingPolicyId;
         return this;
     }
     
+    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("capacityType") String capacityType, @JsonProperty("rangeEnd") String rangeEnd, @JsonProperty("rangeStart") String rangeStart, @JsonProperty("shippingPolicyId") String shippingPolicyId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.capacityType = capacityType;
+        this.rangeEnd = rangeEnd;
+        this.rangeStart = rangeStart;
+        this.shippingPolicyId = shippingPolicyId;
+  }
 }

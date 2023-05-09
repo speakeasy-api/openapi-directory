@@ -15,6 +15,7 @@ public class ErrorInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ErrorCodeEnum code;
+
     public ErrorInformation withCode(ErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class ErrorInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ErrorInformation withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ErrorInformation(){}
 }

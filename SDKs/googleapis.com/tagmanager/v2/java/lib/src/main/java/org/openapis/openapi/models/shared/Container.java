@@ -18,6 +18,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Container withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerId")
     public String containerId;
+
     public Container withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -40,6 +42,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String[] domainName;
+
     public Container withDomainName(String[] domainName) {
         this.domainName = domainName;
         return this;
@@ -48,6 +51,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public ContainerFeatures features;
+
     public Container withFeatures(ContainerFeatures features) {
         this.features = features;
         return this;
@@ -59,6 +63,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public Container withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -70,6 +75,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Container withName(String name) {
         this.name = name;
         return this;
@@ -81,6 +87,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public Container withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -92,6 +99,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public Container withPath(String path) {
         this.path = path;
         return this;
@@ -103,6 +111,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicId")
     public String publicId;
+
     public Container withPublicId(String publicId) {
         this.publicId = publicId;
         return this;
@@ -114,6 +123,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagIds")
     public String[] tagIds;
+
     public Container withTagIds(String[] tagIds) {
         this.tagIds = tagIds;
         return this;
@@ -125,6 +135,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagManagerUrl")
     public String tagManagerUrl;
+
     public Container withTagManagerUrl(String tagManagerUrl) {
         this.tagManagerUrl = tagManagerUrl;
         return this;
@@ -136,6 +147,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taggingServerUrls")
     public String[] taggingServerUrls;
+
     public Container withTaggingServerUrls(String[] taggingServerUrls) {
         this.taggingServerUrls = taggingServerUrls;
         return this;
@@ -147,9 +159,11 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageContext")
     public ContainerUsageContextEnum[] usageContext;
+
     public Container withUsageContext(ContainerUsageContextEnum[] usageContext) {
         this.usageContext = usageContext;
         return this;
     }
     
+    public Container(){}
 }

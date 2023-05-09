@@ -15,9 +15,11 @@ public class PathFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectPrefixes")
     public String[] objectPrefixes;
+
     public PathFormat withObjectPrefixes(String[] objectPrefixes) {
         this.objectPrefixes = objectPrefixes;
         return this;
     }
     
+    public PathFormat(){}
 }

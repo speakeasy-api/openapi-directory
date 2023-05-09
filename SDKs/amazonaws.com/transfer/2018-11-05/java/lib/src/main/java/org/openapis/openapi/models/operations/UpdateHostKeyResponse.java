@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateHostKeyResponse {
     
     public String contentType;
+
     public UpdateHostKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateHostKeyResponse {
      */
     
     public Object internalServiceError;
+
     public UpdateHostKeyResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateHostKeyResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateHostKeyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateHostKeyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateHostKeyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateHostKeyResponse {
     
     
     public Integer statusCode;
+
     public UpdateHostKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateHostKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateHostKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateHostKeyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateHostKeyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateHostKeyResponse {
      */
     
     public Object throttlingException;
+
     public UpdateHostKeyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateHostKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateHostKeyResponse updateHostKeyResponse;
+
     public UpdateHostKeyResponse withUpdateHostKeyResponse(org.openapis.openapi.models.shared.UpdateHostKeyResponse updateHostKeyResponse) {
         this.updateHostKeyResponse = updateHostKeyResponse;
         return this;
     }
     
+    public UpdateHostKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

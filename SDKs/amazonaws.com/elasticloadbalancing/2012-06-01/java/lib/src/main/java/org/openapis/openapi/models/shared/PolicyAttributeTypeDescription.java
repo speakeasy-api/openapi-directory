@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PolicyAttributeTypeDescription {
     
     public String attributeName;
+
     public PolicyAttributeTypeDescription withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -19,6 +20,7 @@ public class PolicyAttributeTypeDescription {
     
     
     public String attributeType;
+
     public PolicyAttributeTypeDescription withAttributeType(String attributeType) {
         this.attributeType = attributeType;
         return this;
@@ -26,6 +28,7 @@ public class PolicyAttributeTypeDescription {
     
     
     public String cardinality;
+
     public PolicyAttributeTypeDescription withCardinality(String cardinality) {
         this.cardinality = cardinality;
         return this;
@@ -33,6 +36,7 @@ public class PolicyAttributeTypeDescription {
     
     
     public String defaultValue;
+
     public PolicyAttributeTypeDescription withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -40,9 +44,11 @@ public class PolicyAttributeTypeDescription {
     
     
     public String description;
+
     public PolicyAttributeTypeDescription withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public PolicyAttributeTypeDescription(){}
 }

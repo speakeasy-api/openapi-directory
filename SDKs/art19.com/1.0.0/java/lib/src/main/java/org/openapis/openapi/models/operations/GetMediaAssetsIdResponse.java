@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMediaAssetsIdResponse {
     
     public String contentType;
+
     public GetMediaAssetsIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetMediaAssetsIdResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetMediaAssetsIdResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetMediaAssetsIdResponse {
     
     
     public Integer statusCode;
+
     public GetMediaAssetsIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetMediaAssetsIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMediaAssetsIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetMediaAssetsIdResponse {
      */
     
     public GetMediaAssetsId200ApplicationVndApiPlusJson getMediaAssetsId200ApplicationVndApiPlusJsonObject;
+
     public GetMediaAssetsIdResponse withGetMediaAssetsId200ApplicationVndApiPlusJsonObject(GetMediaAssetsId200ApplicationVndApiPlusJson getMediaAssetsId200ApplicationVndApiPlusJsonObject) {
         this.getMediaAssetsId200ApplicationVndApiPlusJsonObject = getMediaAssetsId200ApplicationVndApiPlusJsonObject;
         return this;
     }
     
+    public GetMediaAssetsIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class UserContextDataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncodedData")
     public String encodedData;
+
     public UserContextDataType withEncodedData(String encodedData) {
         this.encodedData = encodedData;
         return this;
@@ -23,9 +24,11 @@ public class UserContextDataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddress")
     public String ipAddress;
+
     public UserContextDataType withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
     }
     
+    public UserContextDataType(){}
 }

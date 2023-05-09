@@ -15,9 +15,11 @@ public class UpdateDirectoryConfigResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryConfig")
     public DirectoryConfig directoryConfig;
+
     public UpdateDirectoryConfigResult withDirectoryConfig(DirectoryConfig directoryConfig) {
         this.directoryConfig = directoryConfig;
         return this;
     }
     
+    public UpdateDirectoryConfigResult(){}
 }

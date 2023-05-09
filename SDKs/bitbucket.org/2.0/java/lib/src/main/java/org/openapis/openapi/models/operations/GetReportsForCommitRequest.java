@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReportsForCommitRequest {
@@ -12,6 +13,7 @@ public class GetReportsForCommitRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
     public String commit;
+
     public GetReportsForCommitRequest withCommit(String commit) {
         this.commit = commit;
         return this;
@@ -22,6 +24,7 @@ public class GetReportsForCommitRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetReportsForCommitRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -32,9 +35,15 @@ public class GetReportsForCommitRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetReportsForCommitRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetReportsForCommitRequest(@JsonProperty("commit") String commit, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.commit = commit;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ApmclResponse {
     
     public String contentType;
+
     public ApmclResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ApmclResponse {
     
     
     public Integer statusCode;
+
     public ApmclResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ApmclResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ApmclResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ApmclResponse {
      */
     
     public Apmcl400ApplicationJSON apmcl400ApplicationJSONObject;
+
     public ApmclResponse withApmcl400ApplicationJSONObject(Apmcl400ApplicationJSON apmcl400ApplicationJSONObject) {
         this.apmcl400ApplicationJSONObject = apmcl400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ApmclResponse {
      */
     
     public Apmcl401ApplicationJSON apmcl401ApplicationJSONObject;
+
     public ApmclResponse withApmcl401ApplicationJSONObject(Apmcl401ApplicationJSON apmcl401ApplicationJSONObject) {
         this.apmcl401ApplicationJSONObject = apmcl401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ApmclResponse {
      */
     
     public Apmcl404ApplicationJSON apmcl404ApplicationJSONObject;
+
     public ApmclResponse withApmcl404ApplicationJSONObject(Apmcl404ApplicationJSON apmcl404ApplicationJSONObject) {
         this.apmcl404ApplicationJSONObject = apmcl404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class ApmclResponse {
      */
     
     public Apmcl500ApplicationJSON apmcl500ApplicationJSONObject;
+
     public ApmclResponse withApmcl500ApplicationJSONObject(Apmcl500ApplicationJSON apmcl500ApplicationJSONObject) {
         this.apmcl500ApplicationJSONObject = apmcl500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class ApmclResponse {
      */
     
     public Apmcl502ApplicationJSON apmcl502ApplicationJSONObject;
+
     public ApmclResponse withApmcl502ApplicationJSONObject(Apmcl502ApplicationJSON apmcl502ApplicationJSONObject) {
         this.apmcl502ApplicationJSONObject = apmcl502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class ApmclResponse {
      */
     
     public Apmcl503ApplicationJSON apmcl503ApplicationJSONObject;
+
     public ApmclResponse withApmcl503ApplicationJSONObject(Apmcl503ApplicationJSON apmcl503ApplicationJSONObject) {
         this.apmcl503ApplicationJSONObject = apmcl503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class ApmclResponse {
      */
     
     public Apmcl504ApplicationJSON apmcl504ApplicationJSONObject;
+
     public ApmclResponse withApmcl504ApplicationJSONObject(Apmcl504ApplicationJSON apmcl504ApplicationJSONObject) {
         this.apmcl504ApplicationJSONObject = apmcl504ApplicationJSONObject;
         return this;
     }
     
+    public ApmclResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

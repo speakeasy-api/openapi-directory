@@ -24,6 +24,7 @@ public class FeaturedTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FeaturedTag withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +38,7 @@ public class FeaturedTag {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_status_at")
     public OffsetDateTime lastStatusAt;
+
     public FeaturedTag withLastStatusAt(OffsetDateTime lastStatusAt) {
         this.lastStatusAt = lastStatusAt;
         return this;
@@ -48,6 +50,7 @@ public class FeaturedTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FeaturedTag withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +62,7 @@ public class FeaturedTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statuses_count")
     public Long statusesCount;
+
     public FeaturedTag withStatusesCount(Long statusesCount) {
         this.statusesCount = statusesCount;
         return this;
@@ -70,9 +74,11 @@ public class FeaturedTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public FeaturedTag withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public FeaturedTag(){}
 }

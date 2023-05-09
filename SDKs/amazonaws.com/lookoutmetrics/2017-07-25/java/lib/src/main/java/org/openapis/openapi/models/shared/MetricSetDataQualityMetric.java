@@ -15,6 +15,7 @@ public class MetricSetDataQualityMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataQualityMetricList")
     public DataQualityMetric[] dataQualityMetricList;
+
     public MetricSetDataQualityMetric withDataQualityMetricList(DataQualityMetric[] dataQualityMetricList) {
         this.dataQualityMetricList = dataQualityMetricList;
         return this;
@@ -23,9 +24,11 @@ public class MetricSetDataQualityMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricSetArn")
     public String metricSetArn;
+
     public MetricSetDataQualityMetric withMetricSetArn(String metricSetArn) {
         this.metricSetArn = metricSetArn;
         return this;
     }
     
+    public MetricSetDataQualityMetric(){}
 }

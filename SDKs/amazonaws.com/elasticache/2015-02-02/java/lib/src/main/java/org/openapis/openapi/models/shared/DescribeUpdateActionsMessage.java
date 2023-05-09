@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeUpdateActionsMessage {
     
     public String[] cacheClusterIds;
+
     public DescribeUpdateActionsMessage withCacheClusterIds(String[] cacheClusterIds) {
         this.cacheClusterIds = cacheClusterIds;
         return this;
@@ -16,6 +17,7 @@ public class DescribeUpdateActionsMessage {
     
     
     public String engine;
+
     public DescribeUpdateActionsMessage withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -23,6 +25,7 @@ public class DescribeUpdateActionsMessage {
     
     
     public String marker;
+
     public DescribeUpdateActionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,6 +33,7 @@ public class DescribeUpdateActionsMessage {
     
     
     public Long maxRecords;
+
     public DescribeUpdateActionsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -37,6 +41,7 @@ public class DescribeUpdateActionsMessage {
     
     
     public String[] replicationGroupIds;
+
     public DescribeUpdateActionsMessage withReplicationGroupIds(String[] replicationGroupIds) {
         this.replicationGroupIds = replicationGroupIds;
         return this;
@@ -44,6 +49,7 @@ public class DescribeUpdateActionsMessage {
     
     
     public String serviceUpdateName;
+
     public DescribeUpdateActionsMessage withServiceUpdateName(String serviceUpdateName) {
         this.serviceUpdateName = serviceUpdateName;
         return this;
@@ -51,6 +57,7 @@ public class DescribeUpdateActionsMessage {
     
     
     public ServiceUpdateStatusEnum[] serviceUpdateStatus;
+
     public DescribeUpdateActionsMessage withServiceUpdateStatus(ServiceUpdateStatusEnum[] serviceUpdateStatus) {
         this.serviceUpdateStatus = serviceUpdateStatus;
         return this;
@@ -58,6 +65,7 @@ public class DescribeUpdateActionsMessage {
     
     
     public TimeRangeFilter serviceUpdateTimeRange;
+
     public DescribeUpdateActionsMessage withServiceUpdateTimeRange(TimeRangeFilter serviceUpdateTimeRange) {
         this.serviceUpdateTimeRange = serviceUpdateTimeRange;
         return this;
@@ -65,6 +73,7 @@ public class DescribeUpdateActionsMessage {
     
     
     public Boolean showNodeLevelUpdateStatus;
+
     public DescribeUpdateActionsMessage withShowNodeLevelUpdateStatus(Boolean showNodeLevelUpdateStatus) {
         this.showNodeLevelUpdateStatus = showNodeLevelUpdateStatus;
         return this;
@@ -72,9 +81,11 @@ public class DescribeUpdateActionsMessage {
     
     
     public UpdateActionStatusEnum[] updateActionStatus;
+
     public DescribeUpdateActionsMessage withUpdateActionStatus(UpdateActionStatusEnum[] updateActionStatus) {
         this.updateActionStatus = updateActionStatus;
         return this;
     }
     
+    public DescribeUpdateActionsMessage(){}
 }

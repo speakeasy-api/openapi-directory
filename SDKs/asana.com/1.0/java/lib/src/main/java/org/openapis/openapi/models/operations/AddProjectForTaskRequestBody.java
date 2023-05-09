@@ -15,9 +15,11 @@ public class AddProjectForTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TaskAddProjectRequest data;
+
     public AddProjectForTaskRequestBody withData(org.openapis.openapi.models.shared.TaskAddProjectRequest data) {
         this.data = data;
         return this;
     }
     
+    public AddProjectForTaskRequestBody(){}
 }

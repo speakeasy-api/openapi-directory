@@ -18,6 +18,7 @@ public class SearchKeywordCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insightsValue")
     public InsightsValue insightsValue;
+
     public SearchKeywordCount withInsightsValue(InsightsValue insightsValue) {
         this.insightsValue = insightsValue;
         return this;
@@ -29,9 +30,11 @@ public class SearchKeywordCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchKeyword")
     public String searchKeyword;
+
     public SearchKeywordCount withSearchKeyword(String searchKeyword) {
         this.searchKeyword = searchKeyword;
         return this;
     }
     
+    public SearchKeywordCount(){}
 }

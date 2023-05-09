@@ -18,6 +18,7 @@ public class BackupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionInfo")
     public EncryptionInfoInput encryptionInfo;
+
     public BackupInput withEncryptionInfo(EncryptionInfoInput encryptionInfo) {
         this.encryptionInfo = encryptionInfo;
         return this;
@@ -29,6 +30,7 @@ public class BackupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public BackupInput withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -40,6 +42,7 @@ public class BackupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BackupInput withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class BackupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceTable")
     public String sourceTable;
+
     public BackupInput withSourceTable(String sourceTable) {
         this.sourceTable = sourceTable;
         return this;
     }
     
+    public BackupInput(){}
 }

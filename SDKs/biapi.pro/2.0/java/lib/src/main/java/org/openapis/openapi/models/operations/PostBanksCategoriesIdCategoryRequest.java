@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostBanksCategoriesIdCategoryRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PostBanksCategoriesIdCategoryRequestBody requestBody;
+
     public PostBanksCategoriesIdCategoryRequest withRequestBody(PostBanksCategoriesIdCategoryRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class PostBanksCategoriesIdCategoryRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public PostBanksCategoriesIdCategoryRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -23,9 +26,14 @@ public class PostBanksCategoriesIdCategoryRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_category")
     public Long idCategory;
+
     public PostBanksCategoriesIdCategoryRequest withIdCategory(Long idCategory) {
         this.idCategory = idCategory;
         return this;
     }
     
+    public PostBanksCategoriesIdCategoryRequest(@JsonProperty("RequestBody") PostBanksCategoriesIdCategoryRequestBody requestBody, @JsonProperty("id_category") Long idCategory) {
+        this.requestBody = requestBody;
+        this.idCategory = idCategory;
+  }
 }

@@ -16,11 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsComputeSecurity;
 import org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum;
 import org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsComputeRequest;
 import org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsComputeResponse;
+import org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsComputeSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -30,39 +29,41 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            EssentialcontactsProjectsContactsComputeRequest req = new EssentialcontactsProjectsContactsComputeRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                key = "nulla";
+            EssentialcontactsProjectsContactsComputeRequest req = new EssentialcontactsProjectsContactsComputeRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                key = "corrupti";
                 notificationCategories = new org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum[]{{
-                    add("PRODUCT_UPDATES"),
-                    add("SECURITY"),
-                    add("BILLING"),
+                    add(EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum.SECURITY),
+                    add(EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum.BILLING),
+                    add(EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum.BILLING),
+                    add(EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum.SECURITY),
                 }};
-                oauthToken = "deserunt";
-                pageSize = 384382;
-                pageToken = "iure";
-                parent = "magnam";
+                oauthToken = "iure";
+                pageSize = 297534L;
+                pageToken = "debitis";
                 prettyPrint = false;
-                quotaUser = "debitis";
-                uploadType = "ipsa";
-                uploadProtocol = "delectus";
-            }}            
+                quotaUser = "ipsa";
+                uploadType = "delectus";
+                uploadProtocol = "tempora";
+            }};            
 
-            EssentialcontactsProjectsContactsComputeResponse res = sdk.projects.essentialcontactsProjectsContactsCompute(req, new EssentialcontactsProjectsContactsComputeSecurity() {{
+            EssentialcontactsProjectsContactsComputeResponse res = sdk.projects.essentialcontactsProjectsContactsCompute(req, new EssentialcontactsProjectsContactsComputeSecurity("suscipit", "molestiae") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.googleCloudEssentialcontactsV1ComputeContactsResponse.isPresent()) {
+            if (res.googleCloudEssentialcontactsV1ComputeContactsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -70,15 +71,15 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `essentialcontactsProjectsContactsCompute` - Lists all contacts for the resource that are subscribed to the specified notification categories, including contacts inherited from any parent resources.
-* `essentialcontactsProjectsContactsCreate` - Adds a new contact for a resource.
-* `essentialcontactsProjectsContactsDelete` - Deletes a contact.
-* `essentialcontactsProjectsContactsGet` - Gets a single contact.
-* `essentialcontactsProjectsContactsList` - Lists the contacts that have been set on a resource.
-* `essentialcontactsProjectsContactsPatch` - Updates a contact. Note: A contact's email address cannot be changed.
-* `essentialcontactsProjectsContactsSendTestMessage` - Allows a contact admin to send a test message to contact to verify that it has been configured correctly.
+* [essentialcontactsProjectsContactsCompute](docs/projects/README.md#essentialcontactsprojectscontactscompute) - Lists all contacts for the resource that are subscribed to the specified notification categories, including contacts inherited from any parent resources.
+* [essentialcontactsProjectsContactsCreate](docs/projects/README.md#essentialcontactsprojectscontactscreate) - Adds a new contact for a resource.
+* [essentialcontactsProjectsContactsDelete](docs/projects/README.md#essentialcontactsprojectscontactsdelete) - Deletes a contact.
+* [essentialcontactsProjectsContactsGet](docs/projects/README.md#essentialcontactsprojectscontactsget) - Gets a single contact.
+* [essentialcontactsProjectsContactsList](docs/projects/README.md#essentialcontactsprojectscontactslist) - Lists the contacts that have been set on a resource.
+* [essentialcontactsProjectsContactsPatch](docs/projects/README.md#essentialcontactsprojectscontactspatch) - Updates a contact. Note: A contact's email address cannot be changed.
+* [essentialcontactsProjectsContactsSendTestMessage](docs/projects/README.md#essentialcontactsprojectscontactssendtestmessage) - Allows a contact admin to send a test message to contact to verify that it has been configured correctly.
 <!-- End SDK Available Operations -->
 
 ### Maturity

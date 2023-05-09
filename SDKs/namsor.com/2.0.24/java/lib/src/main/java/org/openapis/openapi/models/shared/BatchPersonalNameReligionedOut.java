@@ -18,9 +18,11 @@ public class BatchPersonalNameReligionedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalNames")
     public PersonalNameReligionedOut[] personalNames;
+
     public BatchPersonalNameReligionedOut withPersonalNames(PersonalNameReligionedOut[] personalNames) {
         this.personalNames = personalNames;
         return this;
     }
     
+    public BatchPersonalNameReligionedOut(){}
 }

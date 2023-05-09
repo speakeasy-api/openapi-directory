@@ -12,6 +12,7 @@ public class PostOrdersOrderRequestV2Items {
      */
     @JsonProperty("declaredValue")
     public String declaredValue;
+
     public PostOrdersOrderRequestV2Items withDeclaredValue(String declaredValue) {
         this.declaredValue = declaredValue;
         return this;
@@ -19,6 +20,7 @@ public class PostOrdersOrderRequestV2Items {
     
     @JsonProperty("quantity")
     public Long quantity;
+
     public PostOrdersOrderRequestV2Items withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -26,9 +28,15 @@ public class PostOrdersOrderRequestV2Items {
     
     @JsonProperty("sku")
     public String sku;
+
     public PostOrdersOrderRequestV2Items withSku(String sku) {
         this.sku = sku;
         return this;
     }
     
+    public PostOrdersOrderRequestV2Items(@JsonProperty("declaredValue") String declaredValue, @JsonProperty("quantity") Long quantity, @JsonProperty("sku") String sku) {
+        this.declaredValue = declaredValue;
+        this.quantity = quantity;
+        this.sku = sku;
+  }
 }

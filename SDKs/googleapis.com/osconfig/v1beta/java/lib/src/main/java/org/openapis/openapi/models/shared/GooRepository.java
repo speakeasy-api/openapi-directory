@@ -18,6 +18,7 @@ public class GooRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GooRepository withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class GooRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GooRepository withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GooRepository(){}
 }

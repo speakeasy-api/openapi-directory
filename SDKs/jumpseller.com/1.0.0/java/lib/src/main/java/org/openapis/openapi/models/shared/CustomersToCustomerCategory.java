@@ -15,9 +15,11 @@ public class CustomersToCustomerCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customers")
     public CustomerToCustomerCategory[] customers;
+
     public CustomersToCustomerCategory withCustomers(CustomerToCustomerCategory[] customers) {
         this.customers = customers;
         return this;
     }
     
+    public CustomersToCustomerCategory(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetControlOperationResponse {
@@ -12,6 +13,7 @@ public class GetControlOperationResponse {
      */
     
     public Object accessDeniedException;
+
     public GetControlOperationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetControlOperationResponse {
     
     
     public String contentType;
+
     public GetControlOperationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetControlOperationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetControlOperationOutput getControlOperationOutput;
+
     public GetControlOperationResponse withGetControlOperationOutput(org.openapis.openapi.models.shared.GetControlOperationOutput getControlOperationOutput) {
         this.getControlOperationOutput = getControlOperationOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetControlOperationResponse {
      */
     
     public Object internalServerException;
+
     public GetControlOperationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetControlOperationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetControlOperationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetControlOperationResponse {
     
     
     public Integer statusCode;
+
     public GetControlOperationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetControlOperationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetControlOperationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetControlOperationResponse {
      */
     
     public Object throttlingException;
+
     public GetControlOperationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetControlOperationResponse {
      */
     
     public Object validationException;
+
     public GetControlOperationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetControlOperationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

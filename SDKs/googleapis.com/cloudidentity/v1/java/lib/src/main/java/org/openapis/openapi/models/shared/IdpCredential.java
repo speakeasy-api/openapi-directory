@@ -18,6 +18,7 @@ public class IdpCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dsaKeyInfo")
     public DsaPublicKeyInfo dsaKeyInfo;
+
     public IdpCredential withDsaKeyInfo(DsaPublicKeyInfo dsaKeyInfo) {
         this.dsaKeyInfo = dsaKeyInfo;
         return this;
@@ -29,6 +30,7 @@ public class IdpCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public IdpCredential withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class IdpCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rsaKeyInfo")
     public RsaPublicKeyInfo rsaKeyInfo;
+
     public IdpCredential withRsaKeyInfo(RsaPublicKeyInfo rsaKeyInfo) {
         this.rsaKeyInfo = rsaKeyInfo;
         return this;
@@ -51,9 +54,11 @@ public class IdpCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public IdpCredential withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public IdpCredential(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MerchantCancellationRequest {
@@ -13,6 +14,7 @@ public class MerchantCancellationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public MerchantCancellationRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,9 +22,13 @@ public class MerchantCancellationRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public MerchantCancellationRequestBody requestBody;
+
     public MerchantCancellationRequest withRequestBody(MerchantCancellationRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
     }
     
+    public MerchantCancellationRequest(@JsonProperty("Accept-Language") String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+  }
 }

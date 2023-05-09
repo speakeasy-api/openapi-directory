@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CorridorRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryIso2From")
     public String countryIso2From;
+
     public CorridorRequest withCountryIso2From(String countryIso2From) {
         this.countryIso2From = countryIso2From;
         return this;
@@ -16,6 +18,7 @@ public class CorridorRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryIso2To")
     public String countryIso2To;
+
     public CorridorRequest withCountryIso2To(String countryIso2To) {
         this.countryIso2To = countryIso2To;
         return this;
@@ -23,6 +26,7 @@ public class CorridorRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firstNameFrom")
     public String firstNameFrom;
+
     public CorridorRequest withFirstNameFrom(String firstNameFrom) {
         this.firstNameFrom = firstNameFrom;
         return this;
@@ -30,6 +34,7 @@ public class CorridorRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firstNameTo")
     public String firstNameTo;
+
     public CorridorRequest withFirstNameTo(String firstNameTo) {
         this.firstNameTo = firstNameTo;
         return this;
@@ -37,6 +42,7 @@ public class CorridorRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lastNameFrom")
     public String lastNameFrom;
+
     public CorridorRequest withLastNameFrom(String lastNameFrom) {
         this.lastNameFrom = lastNameFrom;
         return this;
@@ -44,9 +50,18 @@ public class CorridorRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lastNameTo")
     public String lastNameTo;
+
     public CorridorRequest withLastNameTo(String lastNameTo) {
         this.lastNameTo = lastNameTo;
         return this;
     }
     
+    public CorridorRequest(@JsonProperty("countryIso2From") String countryIso2From, @JsonProperty("countryIso2To") String countryIso2To, @JsonProperty("firstNameFrom") String firstNameFrom, @JsonProperty("firstNameTo") String firstNameTo, @JsonProperty("lastNameFrom") String lastNameFrom, @JsonProperty("lastNameTo") String lastNameTo) {
+        this.countryIso2From = countryIso2From;
+        this.countryIso2To = countryIso2To;
+        this.firstNameFrom = firstNameFrom;
+        this.firstNameTo = firstNameTo;
+        this.lastNameFrom = lastNameFrom;
+        this.lastNameTo = lastNameTo;
+  }
 }

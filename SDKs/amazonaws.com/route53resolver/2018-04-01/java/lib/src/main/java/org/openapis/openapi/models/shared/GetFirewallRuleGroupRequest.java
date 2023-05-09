@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetFirewallRuleGroupRequest {
     @JsonProperty("FirewallRuleGroupId")
     public String firewallRuleGroupId;
+
     public GetFirewallRuleGroupRequest withFirewallRuleGroupId(String firewallRuleGroupId) {
         this.firewallRuleGroupId = firewallRuleGroupId;
         return this;
     }
     
+    public GetFirewallRuleGroupRequest(@JsonProperty("FirewallRuleGroupId") String firewallRuleGroupId) {
+        this.firewallRuleGroupId = firewallRuleGroupId;
+  }
 }

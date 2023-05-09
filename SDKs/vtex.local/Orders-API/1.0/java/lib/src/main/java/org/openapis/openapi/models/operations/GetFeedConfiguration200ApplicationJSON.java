@@ -18,6 +18,7 @@ public class GetFeedConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approximateAgeOfOldestMessageInSeconds")
     public Double approximateAgeOfOldestMessageInSeconds;
+
     public GetFeedConfiguration200ApplicationJSON withApproximateAgeOfOldestMessageInSeconds(Double approximateAgeOfOldestMessageInSeconds) {
         this.approximateAgeOfOldestMessageInSeconds = approximateAgeOfOldestMessageInSeconds;
         return this;
@@ -29,6 +30,7 @@ public class GetFeedConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public GetFeedConfiguration200ApplicationJSONFilter filter;
+
     public GetFeedConfiguration200ApplicationJSON withFilter(GetFeedConfiguration200ApplicationJSONFilter filter) {
         this.filter = filter;
         return this;
@@ -40,6 +42,7 @@ public class GetFeedConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public GetFeedConfiguration200ApplicationJSON withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -51,9 +54,11 @@ public class GetFeedConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queue")
     public GetFeedConfiguration200ApplicationJSONQueue queue;
+
     public GetFeedConfiguration200ApplicationJSON withQueue(GetFeedConfiguration200ApplicationJSONQueue queue) {
         this.queue = queue;
         return this;
     }
     
+    public GetFeedConfiguration200ApplicationJSON(){}
 }

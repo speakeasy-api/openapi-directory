@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SnapshotTags {
     
     public String key;
+
     public SnapshotTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class SnapshotTags {
     
     
     public String value;
+
     public SnapshotTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public SnapshotTags(){}
 }

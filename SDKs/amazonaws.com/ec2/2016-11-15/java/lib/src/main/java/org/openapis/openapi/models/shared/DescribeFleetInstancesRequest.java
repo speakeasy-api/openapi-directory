@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeFleetInstancesRequest {
     
     public Boolean dryRun;
+
     public DescribeFleetInstancesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeFleetInstancesRequest {
     
     
     public DescribeFleetInstancesRequestFilters[] filters;
+
     public DescribeFleetInstancesRequest withFilters(DescribeFleetInstancesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeFleetInstancesRequest {
     
     
     public String fleetId;
+
     public DescribeFleetInstancesRequest withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -30,6 +33,7 @@ public class DescribeFleetInstancesRequest {
     
     
     public Long maxResults;
+
     public DescribeFleetInstancesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,13 @@ public class DescribeFleetInstancesRequest {
     
     
     public String nextToken;
+
     public DescribeFleetInstancesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFleetInstancesRequest(@JsonProperty("FleetId") String fleetId) {
+        this.fleetId = fleetId;
+  }
 }

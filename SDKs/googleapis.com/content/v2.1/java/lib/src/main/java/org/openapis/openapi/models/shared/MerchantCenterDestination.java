@@ -18,6 +18,7 @@ public class MerchantCenterDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributionSettings")
     public AttributionSettings attributionSettings;
+
     public MerchantCenterDestination withAttributionSettings(AttributionSettings attributionSettings) {
         this.attributionSettings = attributionSettings;
         return this;
@@ -29,6 +30,7 @@ public class MerchantCenterDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public MerchantCenterDestination withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -40,6 +42,7 @@ public class MerchantCenterDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationId")
     public String destinationId;
+
     public MerchantCenterDestination withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -51,9 +54,11 @@ public class MerchantCenterDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public MerchantCenterDestination withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public MerchantCenterDestination(){}
 }

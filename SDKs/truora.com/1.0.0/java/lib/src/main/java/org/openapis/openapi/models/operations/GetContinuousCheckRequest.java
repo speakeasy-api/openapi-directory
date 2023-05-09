@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContinuousCheckRequest {
@@ -12,9 +13,13 @@ public class GetContinuousCheckRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=continuous_check_id")
     public Double continuousCheckId;
+
     public GetContinuousCheckRequest withContinuousCheckId(Double continuousCheckId) {
         this.continuousCheckId = continuousCheckId;
         return this;
     }
     
+    public GetContinuousCheckRequest(@JsonProperty("continuous_check_id") Double continuousCheckId) {
+        this.continuousCheckId = continuousCheckId;
+  }
 }

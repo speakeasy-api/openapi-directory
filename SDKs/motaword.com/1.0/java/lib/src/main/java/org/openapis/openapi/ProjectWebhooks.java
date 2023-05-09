@@ -53,12 +53,10 @@ public class ProjectWebhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteProjectWebhookResponse res = new org.openapis.openapi.models.operations.DeleteProjectWebhookResponse() {{
+        org.openapis.openapi.models.operations.DeleteProjectWebhookResponse res = new org.openapis.openapi.models.operations.DeleteProjectWebhookResponse(contentType, httpRes.statusCode()) {{
             operationStatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,12 +99,10 @@ public class ProjectWebhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProjectWebhooksResponse res = new org.openapis.openapi.models.operations.GetProjectWebhooksResponse() {{
+        org.openapis.openapi.models.operations.GetProjectWebhooksResponse res = new org.openapis.openapi.models.operations.GetProjectWebhooksResponse(contentType, httpRes.statusCode()) {{
             project = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,12 +147,10 @@ public class ProjectWebhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostProjectWebhookResponse res = new org.openapis.openapi.models.operations.PostProjectWebhookResponse() {{
+        org.openapis.openapi.models.operations.PostProjectWebhookResponse res = new org.openapis.openapi.models.operations.PostProjectWebhookResponse(contentType, httpRes.statusCode()) {{
             project = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,12 +195,10 @@ public class ProjectWebhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateProjectWebhookResponse res = new org.openapis.openapi.models.operations.UpdateProjectWebhookResponse() {{
+        org.openapis.openapi.models.operations.UpdateProjectWebhookResponse res = new org.openapis.openapi.models.operations.UpdateProjectWebhookResponse(contentType, httpRes.statusCode()) {{
             project = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

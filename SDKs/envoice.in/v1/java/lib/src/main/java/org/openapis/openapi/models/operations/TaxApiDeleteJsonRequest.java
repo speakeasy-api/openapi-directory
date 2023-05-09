@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaxApiDeleteJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TaxDeleteApiModel taxDeleteApiModel;
+
     public TaxApiDeleteJsonRequest withTaxDeleteApiModel(org.openapis.openapi.models.shared.TaxDeleteApiModel taxDeleteApiModel) {
         this.taxDeleteApiModel = taxDeleteApiModel;
         return this;
@@ -16,6 +18,7 @@ public class TaxApiDeleteJsonRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
     public String xAuthKey;
+
     public TaxApiDeleteJsonRequest withXAuthKey(String xAuthKey) {
         this.xAuthKey = xAuthKey;
         return this;
@@ -23,9 +26,15 @@ public class TaxApiDeleteJsonRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
     public String xAuthSecret;
+
     public TaxApiDeleteJsonRequest withXAuthSecret(String xAuthSecret) {
         this.xAuthSecret = xAuthSecret;
         return this;
     }
     
+    public TaxApiDeleteJsonRequest(@JsonProperty("TaxDeleteApiModel") org.openapis.openapi.models.shared.TaxDeleteApiModel taxDeleteApiModel, @JsonProperty("x-auth-key") String xAuthKey, @JsonProperty("x-auth-secret") String xAuthSecret) {
+        this.taxDeleteApiModel = taxDeleteApiModel;
+        this.xAuthKey = xAuthKey;
+        this.xAuthSecret = xAuthSecret;
+  }
 }

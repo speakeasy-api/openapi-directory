@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAccountResponse {
     
     public String contentType;
+
     public DeleteAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteAccountResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public DeleteAccountResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class DeleteAccountResponse {
     
     
     public Integer statusCode;
+
     public DeleteAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class DeleteAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class DeleteAccountResponse {
      */
     
     public DeleteAccount202ApplicationJSON deleteAccount202ApplicationJSONObject;
+
     public DeleteAccountResponse withDeleteAccount202ApplicationJSONObject(DeleteAccount202ApplicationJSON deleteAccount202ApplicationJSONObject) {
         this.deleteAccount202ApplicationJSONObject = deleteAccount202ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class DeleteAccountResponse {
      */
     
     public DeleteAccount400ApplicationJSON deleteAccount400ApplicationJSONObject;
+
     public DeleteAccountResponse withDeleteAccount400ApplicationJSONObject(DeleteAccount400ApplicationJSON deleteAccount400ApplicationJSONObject) {
         this.deleteAccount400ApplicationJSONObject = deleteAccount400ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class DeleteAccountResponse {
      */
     
     public DeleteAccount401ApplicationJSON deleteAccount401ApplicationJSONObject;
+
     public DeleteAccountResponse withDeleteAccount401ApplicationJSONObject(DeleteAccount401ApplicationJSON deleteAccount401ApplicationJSONObject) {
         this.deleteAccount401ApplicationJSONObject = deleteAccount401ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class DeleteAccountResponse {
      */
     
     public DeleteAccount403ApplicationJSON deleteAccount403ApplicationJSONObject;
+
     public DeleteAccountResponse withDeleteAccount403ApplicationJSONObject(DeleteAccount403ApplicationJSON deleteAccount403ApplicationJSONObject) {
         this.deleteAccount403ApplicationJSONObject = deleteAccount403ApplicationJSONObject;
         return this;
@@ -80,6 +89,7 @@ public class DeleteAccountResponse {
      */
     
     public DeleteAccount429ApplicationJSON deleteAccount429ApplicationJSONObject;
+
     public DeleteAccountResponse withDeleteAccount429ApplicationJSONObject(DeleteAccount429ApplicationJSON deleteAccount429ApplicationJSONObject) {
         this.deleteAccount429ApplicationJSONObject = deleteAccount429ApplicationJSONObject;
         return this;
@@ -90,9 +100,14 @@ public class DeleteAccountResponse {
      */
     
     public DeleteAccount500ApplicationJSON deleteAccount500ApplicationJSONObject;
+
     public DeleteAccountResponse withDeleteAccount500ApplicationJSONObject(DeleteAccount500ApplicationJSON deleteAccount500ApplicationJSONObject) {
         this.deleteAccount500ApplicationJSONObject = deleteAccount500ApplicationJSONObject;
         return this;
     }
     
+    public DeleteAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

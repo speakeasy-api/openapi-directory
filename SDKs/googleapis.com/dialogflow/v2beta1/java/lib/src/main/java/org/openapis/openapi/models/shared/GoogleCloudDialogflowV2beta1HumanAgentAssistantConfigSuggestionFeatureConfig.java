@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversationModelConfig")
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfig conversationModelConfig;
+
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfig withConversationModelConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfig conversationModelConfig) {
         this.conversationModelConfig = conversationModelConfig;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversationProcessConfig")
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfig conversationProcessConfig;
+
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfig withConversationProcessConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfig conversationProcessConfig) {
         this.conversationProcessConfig = conversationProcessConfig;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableEventBasedSuggestion")
     public Boolean enableEventBasedSuggestion;
+
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfig withEnableEventBasedSuggestion(Boolean enableEventBasedSuggestion) {
         this.enableEventBasedSuggestion = enableEventBasedSuggestion;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryConfig")
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfig queryConfig;
+
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfig withQueryConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfig queryConfig) {
         this.queryConfig = queryConfig;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestionFeature")
     public GoogleCloudDialogflowV2beta1SuggestionFeature suggestionFeature;
+
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfig withSuggestionFeature(GoogleCloudDialogflowV2beta1SuggestionFeature suggestionFeature) {
         this.suggestionFeature = suggestionFeature;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestionTriggerSettings")
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettings suggestionTriggerSettings;
+
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfig withSuggestionTriggerSettings(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettings suggestionTriggerSettings) {
         this.suggestionTriggerSettings = suggestionTriggerSettings;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfig(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientSetPasswordRequest {
@@ -12,6 +13,7 @@ public class ProtocolMqttClientSetPasswordRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolMqttClientSetPasswordRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class ProtocolMqttClientSetPasswordRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=password")
     public String password;
+
     public ProtocolMqttClientSetPasswordRequest withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public ProtocolMqttClientSetPasswordRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("password") String password) {
+        this.agentNum = agentNum;
+        this.password = password;
+  }
 }

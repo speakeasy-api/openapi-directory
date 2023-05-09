@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAssetPropertyResponse {
     
     public String contentType;
+
     public DescribeAssetPropertyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAssetPropertyResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAssetPropertyResponse describeAssetPropertyResponse;
+
     public DescribeAssetPropertyResponse withDescribeAssetPropertyResponse(org.openapis.openapi.models.shared.DescribeAssetPropertyResponse describeAssetPropertyResponse) {
         this.describeAssetPropertyResponse = describeAssetPropertyResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAssetPropertyResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeAssetPropertyResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAssetPropertyResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeAssetPropertyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeAssetPropertyResponse {
     
     
     public Integer statusCode;
+
     public DescribeAssetPropertyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeAssetPropertyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAssetPropertyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeAssetPropertyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAssetPropertyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeAssetPropertyResponse {
      */
     
     public Object throttlingException;
+
     public DescribeAssetPropertyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeAssetPropertyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

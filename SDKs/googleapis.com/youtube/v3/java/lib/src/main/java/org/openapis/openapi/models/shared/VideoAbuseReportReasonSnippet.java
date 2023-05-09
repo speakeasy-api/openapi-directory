@@ -18,6 +18,7 @@ public class VideoAbuseReportReasonSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public VideoAbuseReportReasonSnippet withLabel(String label) {
         this.label = label;
         return this;
@@ -29,9 +30,11 @@ public class VideoAbuseReportReasonSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondaryReasons")
     public VideoAbuseReportSecondaryReason[] secondaryReasons;
+
     public VideoAbuseReportReasonSnippet withSecondaryReasons(VideoAbuseReportSecondaryReason[] secondaryReasons) {
         this.secondaryReasons = secondaryReasons;
         return this;
     }
     
+    public VideoAbuseReportReasonSnippet(){}
 }

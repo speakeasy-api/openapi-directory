@@ -15,6 +15,7 @@ public class DeleteSessionUsingPOST400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public DeleteSessionUsingPOST400ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class DeleteSessionUsingPOST400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public DeleteSessionUsingPOST400ApplicationJSON withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class DeleteSessionUsingPOST400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public DeleteSessionUsingPOST400ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DeleteSessionUsingPOST400ApplicationJSON(){}
 }

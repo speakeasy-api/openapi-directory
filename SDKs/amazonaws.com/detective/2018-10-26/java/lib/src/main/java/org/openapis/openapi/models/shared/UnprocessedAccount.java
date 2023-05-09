@@ -15,6 +15,7 @@ public class UnprocessedAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public UnprocessedAccount withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,9 +24,11 @@ public class UnprocessedAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public String reason;
+
     public UnprocessedAccount withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public UnprocessedAccount(){}
 }

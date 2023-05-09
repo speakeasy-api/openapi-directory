@@ -18,6 +18,7 @@ public class CallCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callCredentialType")
     public CallCredentialsCallCredentialTypeEnum callCredentialType;
+
     public CallCredentials withCallCredentialType(CallCredentialsCallCredentialTypeEnum callCredentialType) {
         this.callCredentialType = callCredentialType;
         return this;
@@ -29,9 +30,11 @@ public class CallCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromPlugin")
     public MetadataCredentialsFromPlugin fromPlugin;
+
     public CallCredentials withFromPlugin(MetadataCredentialsFromPlugin fromPlugin) {
         this.fromPlugin = fromPlugin;
         return this;
     }
     
+    public CallCredentials(){}
 }

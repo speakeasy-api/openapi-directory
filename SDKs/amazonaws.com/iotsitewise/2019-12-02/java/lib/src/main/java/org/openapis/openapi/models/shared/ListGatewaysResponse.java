@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListGatewaysResponse {
     @JsonProperty("gatewaySummaries")
     public GatewaySummary[] gatewaySummaries;
+
     public ListGatewaysResponse withGatewaySummaries(GatewaySummary[] gatewaySummaries) {
         this.gatewaySummaries = gatewaySummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListGatewaysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListGatewaysResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListGatewaysResponse(@JsonProperty("gatewaySummaries") GatewaySummary[] gatewaySummaries) {
+        this.gatewaySummaries = gatewaySummaries;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetailProjectsLocationsCatalogsUserEventsWriteResponse {
     
     public String contentType;
+
     public RetailProjectsLocationsCatalogsUserEventsWriteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RetailProjectsLocationsCatalogsUserEventsWriteResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudRetailV2UserEvent googleCloudRetailV2UserEvent;
+
     public RetailProjectsLocationsCatalogsUserEventsWriteResponse withGoogleCloudRetailV2UserEvent(org.openapis.openapi.models.shared.GoogleCloudRetailV2UserEvent googleCloudRetailV2UserEvent) {
         this.googleCloudRetailV2UserEvent = googleCloudRetailV2UserEvent;
         return this;
@@ -26,6 +29,7 @@ public class RetailProjectsLocationsCatalogsUserEventsWriteResponse {
     
     
     public Integer statusCode;
+
     public RetailProjectsLocationsCatalogsUserEventsWriteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RetailProjectsLocationsCatalogsUserEventsWriteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetailProjectsLocationsCatalogsUserEventsWriteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RetailProjectsLocationsCatalogsUserEventsWriteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

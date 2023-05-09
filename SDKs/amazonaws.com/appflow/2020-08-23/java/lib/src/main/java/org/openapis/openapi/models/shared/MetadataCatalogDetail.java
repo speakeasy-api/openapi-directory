@@ -15,6 +15,7 @@ public class MetadataCatalogDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogType")
     public CatalogTypeEnum catalogType;
+
     public MetadataCatalogDetail withCatalogType(CatalogTypeEnum catalogType) {
         this.catalogType = catalogType;
         return this;
@@ -23,6 +24,7 @@ public class MetadataCatalogDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitionRegistrationOutput")
     public RegistrationOutput partitionRegistrationOutput;
+
     public MetadataCatalogDetail withPartitionRegistrationOutput(RegistrationOutput partitionRegistrationOutput) {
         this.partitionRegistrationOutput = partitionRegistrationOutput;
         return this;
@@ -31,6 +33,7 @@ public class MetadataCatalogDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableName")
     public String tableName;
+
     public MetadataCatalogDetail withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -39,9 +42,11 @@ public class MetadataCatalogDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableRegistrationOutput")
     public RegistrationOutput tableRegistrationOutput;
+
     public MetadataCatalogDetail withTableRegistrationOutput(RegistrationOutput tableRegistrationOutput) {
         this.tableRegistrationOutput = tableRegistrationOutput;
         return this;
     }
     
+    public MetadataCatalogDetail(){}
 }

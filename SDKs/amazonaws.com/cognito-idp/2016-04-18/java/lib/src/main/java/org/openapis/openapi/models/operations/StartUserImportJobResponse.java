@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartUserImportJobResponse {
     
     public String contentType;
+
     public StartUserImportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartUserImportJobResponse {
      */
     
     public Object internalErrorException;
+
     public StartUserImportJobResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class StartUserImportJobResponse {
      */
     
     public Object invalidParameterException;
+
     public StartUserImportJobResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class StartUserImportJobResponse {
      */
     
     public Object notAuthorizedException;
+
     public StartUserImportJobResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -49,6 +54,7 @@ public class StartUserImportJobResponse {
      */
     
     public Object preconditionNotMetException;
+
     public StartUserImportJobResponse withPreconditionNotMetException(Object preconditionNotMetException) {
         this.preconditionNotMetException = preconditionNotMetException;
         return this;
@@ -59,6 +65,7 @@ public class StartUserImportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartUserImportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class StartUserImportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartUserImportJobResponse startUserImportJobResponse;
+
     public StartUserImportJobResponse withStartUserImportJobResponse(org.openapis.openapi.models.shared.StartUserImportJobResponse startUserImportJobResponse) {
         this.startUserImportJobResponse = startUserImportJobResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartUserImportJobResponse {
     
     
     public Integer statusCode;
+
     public StartUserImportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class StartUserImportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartUserImportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class StartUserImportJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public StartUserImportJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public StartUserImportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

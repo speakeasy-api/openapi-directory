@@ -18,6 +18,7 @@ public class Volume2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Volume[] items;
+
     public Volume2 withItems(Volume[] items) {
         this.items = items;
         return this;
@@ -29,6 +30,7 @@ public class Volume2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Volume2 withKind(String kind) {
         this.kind = kind;
         return this;
@@ -37,9 +39,11 @@ public class Volume2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public Volume2 withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public Volume2(){}
 }

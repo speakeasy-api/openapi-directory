@@ -15,6 +15,7 @@ public class IamIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public IamIdentity withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class IamIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrincipalId")
     public String principalId;
+
     public IamIdentity withPrincipalId(String principalId) {
         this.principalId = principalId;
         return this;
@@ -31,9 +33,11 @@ public class IamIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceIdentity")
     public String sourceIdentity;
+
     public IamIdentity withSourceIdentity(String sourceIdentity) {
         this.sourceIdentity = sourceIdentity;
         return this;
     }
     
+    public IamIdentity(){}
 }

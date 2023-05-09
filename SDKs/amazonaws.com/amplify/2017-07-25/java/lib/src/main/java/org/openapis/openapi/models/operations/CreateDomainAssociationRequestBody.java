@@ -15,6 +15,7 @@ public class CreateDomainAssociationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoSubDomainCreationPatterns")
     public String[] autoSubDomainCreationPatterns;
+
     public CreateDomainAssociationRequestBody withAutoSubDomainCreationPatterns(String[] autoSubDomainCreationPatterns) {
         this.autoSubDomainCreationPatterns = autoSubDomainCreationPatterns;
         return this;
@@ -26,6 +27,7 @@ public class CreateDomainAssociationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoSubDomainIAMRole")
     public String autoSubDomainIAMRole;
+
     public CreateDomainAssociationRequestBody withAutoSubDomainIAMRole(String autoSubDomainIAMRole) {
         this.autoSubDomainIAMRole = autoSubDomainIAMRole;
         return this;
@@ -36,6 +38,7 @@ public class CreateDomainAssociationRequestBody {
      */
     @JsonProperty("domainName")
     public String domainName;
+
     public CreateDomainAssociationRequestBody withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -47,6 +50,7 @@ public class CreateDomainAssociationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableAutoSubDomain")
     public Boolean enableAutoSubDomain;
+
     public CreateDomainAssociationRequestBody withEnableAutoSubDomain(Boolean enableAutoSubDomain) {
         this.enableAutoSubDomain = enableAutoSubDomain;
         return this;
@@ -57,9 +61,14 @@ public class CreateDomainAssociationRequestBody {
      */
     @JsonProperty("subDomainSettings")
     public org.openapis.openapi.models.shared.SubDomainSetting[] subDomainSettings;
+
     public CreateDomainAssociationRequestBody withSubDomainSettings(org.openapis.openapi.models.shared.SubDomainSetting[] subDomainSettings) {
         this.subDomainSettings = subDomainSettings;
         return this;
     }
     
+    public CreateDomainAssociationRequestBody(@JsonProperty("domainName") String domainName, @JsonProperty("subDomainSettings") org.openapis.openapi.models.shared.SubDomainSetting[] subDomainSettings) {
+        this.domainName = domainName;
+        this.subDomainSettings = subDomainSettings;
+  }
 }

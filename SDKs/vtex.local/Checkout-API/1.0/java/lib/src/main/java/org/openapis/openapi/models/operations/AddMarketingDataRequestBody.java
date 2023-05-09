@@ -15,6 +15,7 @@ public class AddMarketingDataRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coupon")
     public String coupon;
+
     public AddMarketingDataRequestBody withCoupon(String coupon) {
         this.coupon = coupon;
         return this;
@@ -26,6 +27,7 @@ public class AddMarketingDataRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketingTags")
     public String[] marketingTags;
+
     public AddMarketingDataRequestBody withMarketingTags(String[] marketingTags) {
         this.marketingTags = marketingTags;
         return this;
@@ -37,6 +39,7 @@ public class AddMarketingDataRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmCampaign")
     public String utmCampaign;
+
     public AddMarketingDataRequestBody withUtmCampaign(String utmCampaign) {
         this.utmCampaign = utmCampaign;
         return this;
@@ -48,6 +51,7 @@ public class AddMarketingDataRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmMedium")
     public String utmMedium;
+
     public AddMarketingDataRequestBody withUtmMedium(String utmMedium) {
         this.utmMedium = utmMedium;
         return this;
@@ -59,6 +63,7 @@ public class AddMarketingDataRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmSource")
     public String utmSource;
+
     public AddMarketingDataRequestBody withUtmSource(String utmSource) {
         this.utmSource = utmSource;
         return this;
@@ -70,6 +75,7 @@ public class AddMarketingDataRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmiCampaign")
     public String utmiCampaign;
+
     public AddMarketingDataRequestBody withUtmiCampaign(String utmiCampaign) {
         this.utmiCampaign = utmiCampaign;
         return this;
@@ -81,6 +87,7 @@ public class AddMarketingDataRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmiPage")
     public String utmiPage;
+
     public AddMarketingDataRequestBody withUtmiPage(String utmiPage) {
         this.utmiPage = utmiPage;
         return this;
@@ -92,9 +99,11 @@ public class AddMarketingDataRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmiPart")
     public String utmiPart;
+
     public AddMarketingDataRequestBody withUtmiPart(String utmiPart) {
         this.utmiPart = utmiPart;
         return this;
     }
     
+    public AddMarketingDataRequestBody(){}
 }

@@ -15,6 +15,7 @@ public class BatchRevokePermissionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public BatchRevokePermissionsRequestBody withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -25,9 +26,13 @@ public class BatchRevokePermissionsRequestBody {
      */
     @JsonProperty("Entries")
     public org.openapis.openapi.models.shared.BatchPermissionsRequestEntry[] entries;
+
     public BatchRevokePermissionsRequestBody withEntries(org.openapis.openapi.models.shared.BatchPermissionsRequestEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public BatchRevokePermissionsRequestBody(@JsonProperty("Entries") org.openapis.openapi.models.shared.BatchPermissionsRequestEntry[] entries) {
+        this.entries = entries;
+  }
 }

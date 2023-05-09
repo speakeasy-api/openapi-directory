@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ListChangeSetsInput - The input for the &lt;a&gt;ListChangeSets&lt;/a&gt; action.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListChangeSetsInput {
     
     public String nextToken;
+
     public ListChangeSetsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,13 @@ public class ListChangeSetsInput {
     
     
     public String stackName;
+
     public ListChangeSetsInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public ListChangeSetsInput(@JsonProperty("StackName") String stackName) {
+        this.stackName = stackName;
+  }
 }

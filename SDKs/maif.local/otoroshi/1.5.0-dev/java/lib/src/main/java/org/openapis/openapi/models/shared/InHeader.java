@@ -15,6 +15,7 @@ public class InHeader {
      */
     @JsonProperty("name")
     public String name;
+
     public InHeader withName(String name) {
         this.name = name;
         return this;
@@ -25,6 +26,7 @@ public class InHeader {
      */
     @JsonProperty("remove")
     public String remove;
+
     public InHeader withRemove(String remove) {
         this.remove = remove;
         return this;
@@ -35,9 +37,15 @@ public class InHeader {
      */
     @JsonProperty("type")
     public String type;
+
     public InHeader withType(String type) {
         this.type = type;
         return this;
     }
     
+    public InHeader(@JsonProperty("name") String name, @JsonProperty("remove") String remove, @JsonProperty("type") String type) {
+        this.name = name;
+        this.remove = remove;
+        this.type = type;
+  }
 }

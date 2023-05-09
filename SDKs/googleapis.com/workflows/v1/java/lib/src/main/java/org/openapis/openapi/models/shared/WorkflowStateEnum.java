@@ -11,7 +11,8 @@ import com.fasterxml.jackson.annotation.JsonValue;
  */
 public enum WorkflowStateEnum {
     STATE_UNSPECIFIED("STATE_UNSPECIFIED"),
-    ACTIVE("ACTIVE");
+    ACTIVE("ACTIVE"),
+    UNAVAILABLE("UNAVAILABLE");
 
     @JsonValue
     public final String value;

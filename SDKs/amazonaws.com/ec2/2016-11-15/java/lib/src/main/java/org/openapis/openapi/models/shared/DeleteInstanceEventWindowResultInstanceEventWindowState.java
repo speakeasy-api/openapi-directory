@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteInstanceEventWindowResultInstanceEventWindowState {
     
     public String instanceEventWindowId;
+
     public DeleteInstanceEventWindowResultInstanceEventWindowState withInstanceEventWindowId(String instanceEventWindowId) {
         this.instanceEventWindowId = instanceEventWindowId;
         return this;
@@ -19,9 +20,11 @@ public class DeleteInstanceEventWindowResultInstanceEventWindowState {
     
     
     public DeleteInstanceEventWindowResultInstanceEventWindowStateStateEnum state;
+
     public DeleteInstanceEventWindowResultInstanceEventWindowState withState(DeleteInstanceEventWindowResultInstanceEventWindowStateStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public DeleteInstanceEventWindowResultInstanceEventWindowState(){}
 }

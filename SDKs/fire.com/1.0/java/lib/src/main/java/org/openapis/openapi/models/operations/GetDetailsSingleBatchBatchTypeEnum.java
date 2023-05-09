@@ -7,11 +7,12 @@ package org.openapis.openapi.models.operations;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * GetDetailsSingleBatchBatchTypeEnum - The type of the batch - can be one of the listed 3
+ * GetDetailsSingleBatchBatchTypeEnum - The type of the batch - can be one of the listed enums
  */
 public enum GetDetailsSingleBatchBatchTypeEnum {
     INTERNAL_TRANSFER("INTERNAL_TRANSFER"),
     BANK_TRANSFER("BANK_TRANSFER"),
+    INTERNATIONAL_TRANSFER("INTERNATIONAL_TRANSFER"),
     NEW_PAYEE("NEW_PAYEE");
 
     @JsonValue

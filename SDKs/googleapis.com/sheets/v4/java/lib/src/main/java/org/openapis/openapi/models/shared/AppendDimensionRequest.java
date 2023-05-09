@@ -18,6 +18,7 @@ public class AppendDimensionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     public AppendDimensionRequestDimensionEnum dimension;
+
     public AppendDimensionRequest withDimension(AppendDimensionRequestDimensionEnum dimension) {
         this.dimension = dimension;
         return this;
@@ -29,6 +30,7 @@ public class AppendDimensionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("length")
     public Integer length;
+
     public AppendDimensionRequest withLength(Integer length) {
         this.length = length;
         return this;
@@ -40,9 +42,11 @@ public class AppendDimensionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sheetId")
     public Integer sheetId;
+
     public AppendDimensionRequest withSheetId(Integer sheetId) {
         this.sheetId = sheetId;
         return this;
     }
     
+    public AppendDimensionRequest(){}
 }

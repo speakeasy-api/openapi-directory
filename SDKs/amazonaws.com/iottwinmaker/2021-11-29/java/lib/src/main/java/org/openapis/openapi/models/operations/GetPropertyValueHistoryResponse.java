@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPropertyValueHistoryResponse {
@@ -12,6 +13,7 @@ public class GetPropertyValueHistoryResponse {
      */
     
     public Object accessDeniedException;
+
     public GetPropertyValueHistoryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetPropertyValueHistoryResponse {
      */
     
     public Object connectorFailureException;
+
     public GetPropertyValueHistoryResponse withConnectorFailureException(Object connectorFailureException) {
         this.connectorFailureException = connectorFailureException;
         return this;
@@ -32,6 +35,7 @@ public class GetPropertyValueHistoryResponse {
      */
     
     public Object connectorTimeoutException;
+
     public GetPropertyValueHistoryResponse withConnectorTimeoutException(Object connectorTimeoutException) {
         this.connectorTimeoutException = connectorTimeoutException;
         return this;
@@ -39,6 +43,7 @@ public class GetPropertyValueHistoryResponse {
     
     
     public String contentType;
+
     public GetPropertyValueHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class GetPropertyValueHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPropertyValueHistoryResponse getPropertyValueHistoryResponse;
+
     public GetPropertyValueHistoryResponse withGetPropertyValueHistoryResponse(org.openapis.openapi.models.shared.GetPropertyValueHistoryResponse getPropertyValueHistoryResponse) {
         this.getPropertyValueHistoryResponse = getPropertyValueHistoryResponse;
         return this;
@@ -59,6 +65,7 @@ public class GetPropertyValueHistoryResponse {
      */
     
     public Object internalServerException;
+
     public GetPropertyValueHistoryResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -69,6 +76,7 @@ public class GetPropertyValueHistoryResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetPropertyValueHistoryResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class GetPropertyValueHistoryResponse {
     
     
     public Integer statusCode;
+
     public GetPropertyValueHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetPropertyValueHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPropertyValueHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetPropertyValueHistoryResponse {
      */
     
     public Object throttlingException;
+
     public GetPropertyValueHistoryResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class GetPropertyValueHistoryResponse {
      */
     
     public Object validationException;
+
     public GetPropertyValueHistoryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetPropertyValueHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

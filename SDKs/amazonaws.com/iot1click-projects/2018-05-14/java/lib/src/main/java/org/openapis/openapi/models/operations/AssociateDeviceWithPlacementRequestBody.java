@@ -12,9 +12,13 @@ public class AssociateDeviceWithPlacementRequestBody {
      */
     @JsonProperty("deviceId")
     public String deviceId;
+
     public AssociateDeviceWithPlacementRequestBody withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
     }
     
+    public AssociateDeviceWithPlacementRequestBody(@JsonProperty("deviceId") String deviceId) {
+        this.deviceId = deviceId;
+  }
 }

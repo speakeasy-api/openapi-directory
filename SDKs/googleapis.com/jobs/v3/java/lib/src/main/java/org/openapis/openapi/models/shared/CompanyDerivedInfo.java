@@ -18,9 +18,11 @@ public class CompanyDerivedInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headquartersLocation")
     public Location headquartersLocation;
+
     public CompanyDerivedInfo withHeadquartersLocation(Location headquartersLocation) {
         this.headquartersLocation = headquartersLocation;
         return this;
     }
     
+    public CompanyDerivedInfo(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateAssessmentTargetRequest {
     @JsonProperty("assessmentTargetArn")
     public String assessmentTargetArn;
+
     public UpdateAssessmentTargetRequest withAssessmentTargetArn(String assessmentTargetArn) {
         this.assessmentTargetArn = assessmentTargetArn;
         return this;
@@ -18,6 +19,7 @@ public class UpdateAssessmentTargetRequest {
     
     @JsonProperty("assessmentTargetName")
     public String assessmentTargetName;
+
     public UpdateAssessmentTargetRequest withAssessmentTargetName(String assessmentTargetName) {
         this.assessmentTargetName = assessmentTargetName;
         return this;
@@ -26,9 +28,14 @@ public class UpdateAssessmentTargetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceGroupArn")
     public String resourceGroupArn;
+
     public UpdateAssessmentTargetRequest withResourceGroupArn(String resourceGroupArn) {
         this.resourceGroupArn = resourceGroupArn;
         return this;
     }
     
+    public UpdateAssessmentTargetRequest(@JsonProperty("assessmentTargetArn") String assessmentTargetArn, @JsonProperty("assessmentTargetName") String assessmentTargetName) {
+        this.assessmentTargetArn = assessmentTargetArn;
+        this.assessmentTargetName = assessmentTargetName;
+  }
 }

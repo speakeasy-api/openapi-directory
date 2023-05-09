@@ -18,6 +18,7 @@ public class GroupResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public GroupResult withCount(String count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class GroupResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, Object> properties;
+
     public GroupResult withProperties(java.util.Map<String, Object> properties) {
         this.properties = properties;
         return this;
     }
     
+    public GroupResult(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETGETIdentityVerificationAttributesResponse {
     
     public byte[] body;
+
     public GETGETIdentityVerificationAttributesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETGETIdentityVerificationAttributesResponse {
     
     
     public String contentType;
+
     public GETGETIdentityVerificationAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETGETIdentityVerificationAttributesResponse {
     
     
     public Integer statusCode;
+
     public GETGETIdentityVerificationAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETGETIdentityVerificationAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETGETIdentityVerificationAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETGETIdentityVerificationAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

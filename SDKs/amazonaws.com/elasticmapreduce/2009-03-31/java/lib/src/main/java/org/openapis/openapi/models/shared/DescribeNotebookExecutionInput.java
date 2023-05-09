@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeNotebookExecutionInput {
     @JsonProperty("NotebookExecutionId")
     public String notebookExecutionId;
+
     public DescribeNotebookExecutionInput withNotebookExecutionId(String notebookExecutionId) {
         this.notebookExecutionId = notebookExecutionId;
         return this;
     }
     
+    public DescribeNotebookExecutionInput(@JsonProperty("NotebookExecutionId") String notebookExecutionId) {
+        this.notebookExecutionId = notebookExecutionId;
+  }
 }

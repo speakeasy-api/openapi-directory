@@ -59,11 +59,9 @@ public class TargetGrpcProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class TargetGrpcProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesGetResponse res = new org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesGetResponse res = new org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesGetResponse(contentType, httpRes.statusCode()) {{
             targetGrpcProxy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class TargetGrpcProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesInsertResponse res = new org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesInsertResponse res = new org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class TargetGrpcProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesListResponse res = new org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesListResponse res = new org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesListResponse(contentType, httpRes.statusCode()) {{
             targetGrpcProxyList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class TargetGrpcProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesPatchResponse res = new org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesPatchResponse res = new org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class TargetGrpcProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeTargetGrpcProxiesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

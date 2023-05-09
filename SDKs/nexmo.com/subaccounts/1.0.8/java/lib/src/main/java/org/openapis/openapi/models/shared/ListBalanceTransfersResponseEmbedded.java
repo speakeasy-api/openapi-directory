@@ -12,9 +12,11 @@ public class ListBalanceTransfersResponseEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance_transfers")
     public TransferBalanceResponse[] balanceTransfers;
+
     public ListBalanceTransfersResponseEmbedded withBalanceTransfers(TransferBalanceResponse[] balanceTransfers) {
         this.balanceTransfers = balanceTransfers;
         return this;
     }
     
+    public ListBalanceTransfersResponseEmbedded(){}
 }

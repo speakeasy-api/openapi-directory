@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchExecuteStatementResponse {
@@ -12,6 +13,7 @@ public class BatchExecuteStatementResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchExecuteStatementResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchExecuteStatementResponse {
      */
     
     public Object badRequestException;
+
     public BatchExecuteStatementResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -32,6 +35,7 @@ public class BatchExecuteStatementResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchExecuteStatementResponse batchExecuteStatementResponse;
+
     public BatchExecuteStatementResponse withBatchExecuteStatementResponse(org.openapis.openapi.models.shared.BatchExecuteStatementResponse batchExecuteStatementResponse) {
         this.batchExecuteStatementResponse = batchExecuteStatementResponse;
         return this;
@@ -39,6 +43,7 @@ public class BatchExecuteStatementResponse {
     
     
     public String contentType;
+
     public BatchExecuteStatementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class BatchExecuteStatementResponse {
      */
     
     public Object forbiddenException;
+
     public BatchExecuteStatementResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class BatchExecuteStatementResponse {
      */
     
     public Object internalServerErrorException;
+
     public BatchExecuteStatementResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -66,6 +73,7 @@ public class BatchExecuteStatementResponse {
     
     
     public Integer statusCode;
+
     public BatchExecuteStatementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class BatchExecuteStatementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchExecuteStatementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class BatchExecuteStatementResponse {
      */
     
     public Object serviceUnavailableError;
+
     public BatchExecuteStatementResponse withServiceUnavailableError(Object serviceUnavailableError) {
         this.serviceUnavailableError = serviceUnavailableError;
         return this;
@@ -93,9 +103,14 @@ public class BatchExecuteStatementResponse {
      */
     
     public Object statementTimeoutException;
+
     public BatchExecuteStatementResponse withStatementTimeoutException(Object statementTimeoutException) {
         this.statementTimeoutException = statementTimeoutException;
         return this;
     }
     
+    public BatchExecuteStatementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

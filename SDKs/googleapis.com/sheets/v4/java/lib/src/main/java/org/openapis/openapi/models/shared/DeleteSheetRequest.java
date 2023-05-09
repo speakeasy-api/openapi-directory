@@ -18,9 +18,11 @@ public class DeleteSheetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sheetId")
     public Integer sheetId;
+
     public DeleteSheetRequest withSheetId(Integer sheetId) {
         this.sheetId = sheetId;
         return this;
     }
     
+    public DeleteSheetRequest(){}
 }

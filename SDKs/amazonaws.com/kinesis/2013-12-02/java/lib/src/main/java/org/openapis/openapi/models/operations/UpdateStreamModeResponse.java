@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateStreamModeResponse {
     
     public String contentType;
+
     public UpdateStreamModeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateStreamModeResponse {
      */
     
     public Object invalidArgumentException;
+
     public UpdateStreamModeResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateStreamModeResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateStreamModeResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateStreamModeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateStreamModeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateStreamModeResponse {
     
     
     public Integer statusCode;
+
     public UpdateStreamModeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateStreamModeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateStreamModeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateStreamModeResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateStreamModeResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
     }
     
+    public UpdateStreamModeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

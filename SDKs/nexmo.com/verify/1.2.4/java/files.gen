@@ -81,4 +81,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/SearchResponseStatusEnum.ja
 lib/src/main/java/org/openapis/openapi/models/shared/SearchResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SearchErrorResponseStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/SearchErrorResponse.java
+docs/sdk/README.md
+docs/fraudmanagement/README.md
+docs/requests/README.md
 USAGE.md

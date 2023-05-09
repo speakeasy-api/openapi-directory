@@ -15,9 +15,11 @@ public class PinpointDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationArn")
     public String applicationArn;
+
     public PinpointDestination withApplicationArn(String applicationArn) {
         this.applicationArn = applicationArn;
         return this;
     }
     
+    public PinpointDestination(){}
 }

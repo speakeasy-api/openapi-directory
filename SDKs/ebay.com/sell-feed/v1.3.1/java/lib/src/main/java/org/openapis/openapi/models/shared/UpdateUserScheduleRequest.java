@@ -18,6 +18,7 @@ public class UpdateUserScheduleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredTriggerDayOfMonth")
     public Integer preferredTriggerDayOfMonth;
+
     public UpdateUserScheduleRequest withPreferredTriggerDayOfMonth(Integer preferredTriggerDayOfMonth) {
         this.preferredTriggerDayOfMonth = preferredTriggerDayOfMonth;
         return this;
@@ -29,6 +30,7 @@ public class UpdateUserScheduleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredTriggerDayOfWeek")
     public String preferredTriggerDayOfWeek;
+
     public UpdateUserScheduleRequest withPreferredTriggerDayOfWeek(String preferredTriggerDayOfWeek) {
         this.preferredTriggerDayOfWeek = preferredTriggerDayOfWeek;
         return this;
@@ -40,6 +42,7 @@ public class UpdateUserScheduleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredTriggerHour")
     public String preferredTriggerHour;
+
     public UpdateUserScheduleRequest withPreferredTriggerHour(String preferredTriggerHour) {
         this.preferredTriggerHour = preferredTriggerHour;
         return this;
@@ -51,6 +54,7 @@ public class UpdateUserScheduleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleEndDate")
     public String scheduleEndDate;
+
     public UpdateUserScheduleRequest withScheduleEndDate(String scheduleEndDate) {
         this.scheduleEndDate = scheduleEndDate;
         return this;
@@ -62,6 +66,7 @@ public class UpdateUserScheduleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleName")
     public String scheduleName;
+
     public UpdateUserScheduleRequest withScheduleName(String scheduleName) {
         this.scheduleName = scheduleName;
         return this;
@@ -73,6 +78,7 @@ public class UpdateUserScheduleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleStartDate")
     public String scheduleStartDate;
+
     public UpdateUserScheduleRequest withScheduleStartDate(String scheduleStartDate) {
         this.scheduleStartDate = scheduleStartDate;
         return this;
@@ -84,9 +90,11 @@ public class UpdateUserScheduleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaVersion")
     public String schemaVersion;
+
     public UpdateUserScheduleRequest withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
     }
     
+    public UpdateUserScheduleRequest(){}
 }

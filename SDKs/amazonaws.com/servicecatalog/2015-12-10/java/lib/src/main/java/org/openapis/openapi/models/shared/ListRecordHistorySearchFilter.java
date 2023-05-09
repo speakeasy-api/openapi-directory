@@ -15,6 +15,7 @@ public class ListRecordHistorySearchFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public ListRecordHistorySearchFilter withKey(String key) {
         this.key = key;
         return this;
@@ -23,9 +24,11 @@ public class ListRecordHistorySearchFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public ListRecordHistorySearchFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ListRecordHistorySearchFilter(){}
 }

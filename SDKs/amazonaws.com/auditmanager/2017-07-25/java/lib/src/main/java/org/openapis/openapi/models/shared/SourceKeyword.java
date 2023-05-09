@@ -15,6 +15,7 @@ public class SourceKeyword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywordInputType")
     public KeywordInputTypeEnum keywordInputType;
+
     public SourceKeyword withKeywordInputType(KeywordInputTypeEnum keywordInputType) {
         this.keywordInputType = keywordInputType;
         return this;
@@ -23,9 +24,11 @@ public class SourceKeyword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywordValue")
     public String keywordValue;
+
     public SourceKeyword withKeywordValue(String keywordValue) {
         this.keywordValue = keywordValue;
         return this;
     }
     
+    public SourceKeyword(){}
 }

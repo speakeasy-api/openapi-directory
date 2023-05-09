@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFormResponse {
     
     public String contentType;
+
     public CreateFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateFormResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFormResponse createFormResponse;
+
     public CreateFormResponse withCreateFormResponse(org.openapis.openapi.models.shared.CreateFormResponse createFormResponse) {
         this.createFormResponse = createFormResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateFormResponse {
      */
     
     public Object internalServerException;
+
     public CreateFormResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateFormResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateFormResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CreateFormResponse {
      */
     
     public Object resourceConflictException;
+
     public CreateFormResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -59,6 +65,7 @@ public class CreateFormResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateFormResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateFormResponse {
     
     
     public Integer statusCode;
+
     public CreateFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PubsubTopicsPublishBatchResponse {
     
     public String contentType;
+
     public PubsubTopicsPublishBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PubsubTopicsPublishBatchResponse {
      */
     
     public org.openapis.openapi.models.shared.PublishBatchResponse publishBatchResponse;
+
     public PubsubTopicsPublishBatchResponse withPublishBatchResponse(org.openapis.openapi.models.shared.PublishBatchResponse publishBatchResponse) {
         this.publishBatchResponse = publishBatchResponse;
         return this;
@@ -26,6 +29,7 @@ public class PubsubTopicsPublishBatchResponse {
     
     
     public Integer statusCode;
+
     public PubsubTopicsPublishBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PubsubTopicsPublishBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PubsubTopicsPublishBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PubsubTopicsPublishBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudAssetV1p7beta1OutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigqueryDestination")
     public GoogleCloudAssetV1p7beta1BigQueryDestination bigqueryDestination;
+
     public GoogleCloudAssetV1p7beta1OutputConfig withBigqueryDestination(GoogleCloudAssetV1p7beta1BigQueryDestination bigqueryDestination) {
         this.bigqueryDestination = bigqueryDestination;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudAssetV1p7beta1OutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsDestination")
     public GoogleCloudAssetV1p7beta1GcsDestination gcsDestination;
+
     public GoogleCloudAssetV1p7beta1OutputConfig withGcsDestination(GoogleCloudAssetV1p7beta1GcsDestination gcsDestination) {
         this.gcsDestination = gcsDestination;
         return this;
     }
     
+    public GoogleCloudAssetV1p7beta1OutputConfig(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DistributeDatasetEntriesRequest {
     @JsonProperty("Datasets")
     public DistributeDataset[] datasets;
+
     public DistributeDatasetEntriesRequest withDatasets(DistributeDataset[] datasets) {
         this.datasets = datasets;
         return this;
     }
     
+    public DistributeDatasetEntriesRequest(@JsonProperty("Datasets") DistributeDataset[] datasets) {
+        this.datasets = datasets;
+  }
 }

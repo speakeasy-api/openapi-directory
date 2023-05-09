@@ -12,9 +12,13 @@ public class TransactionsImportResponseData {
      */
     @JsonProperty("transaction_ids")
     public String[] transactionIds;
+
     public TransactionsImportResponseData withTransactionIds(String[] transactionIds) {
         this.transactionIds = transactionIds;
         return this;
     }
     
+    public TransactionsImportResponseData(@JsonProperty("transaction_ids") String[] transactionIds) {
+        this.transactionIds = transactionIds;
+  }
 }

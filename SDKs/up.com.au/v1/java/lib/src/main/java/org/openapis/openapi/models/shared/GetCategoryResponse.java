@@ -17,9 +17,13 @@ public class GetCategoryResponse {
      */
     @JsonProperty("data")
     public CategoryResource data;
+
     public GetCategoryResponse withData(CategoryResource data) {
         this.data = data;
         return this;
     }
     
+    public GetCategoryResponse(@JsonProperty("data") CategoryResource data) {
+        this.data = data;
+  }
 }

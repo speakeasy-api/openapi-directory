@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsEnableWorkflowRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsEnableWorkflowRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -16,6 +18,7 @@ public class ActionsEnableWorkflowRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsEnableWorkflowRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -26,9 +29,15 @@ public class ActionsEnableWorkflowRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workflow_id")
     public Object workflowId;
+
     public ActionsEnableWorkflowRequest withWorkflowId(Object workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public ActionsEnableWorkflowRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("workflow_id") Object workflowId) {
+        this.owner = owner;
+        this.repo = repo;
+        this.workflowId = workflowId;
+  }
 }

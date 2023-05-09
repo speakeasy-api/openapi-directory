@@ -15,6 +15,7 @@ public class DescribeImagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageDetails")
     public ImageDetail[] imageDetails;
+
     public DescribeImagesResponse withImageDetails(ImageDetail[] imageDetails) {
         this.imageDetails = imageDetails;
         return this;
@@ -23,9 +24,11 @@ public class DescribeImagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeImagesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeImagesResponse(){}
 }

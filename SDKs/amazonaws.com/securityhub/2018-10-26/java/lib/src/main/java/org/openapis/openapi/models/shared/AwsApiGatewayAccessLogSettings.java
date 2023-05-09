@@ -15,6 +15,7 @@ public class AwsApiGatewayAccessLogSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationArn")
     public String destinationArn;
+
     public AwsApiGatewayAccessLogSettings withDestinationArn(String destinationArn) {
         this.destinationArn = destinationArn;
         return this;
@@ -23,9 +24,11 @@ public class AwsApiGatewayAccessLogSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public AwsApiGatewayAccessLogSettings withFormat(String format) {
         this.format = format;
         return this;
     }
     
+    public AwsApiGatewayAccessLogSettings(){}
 }

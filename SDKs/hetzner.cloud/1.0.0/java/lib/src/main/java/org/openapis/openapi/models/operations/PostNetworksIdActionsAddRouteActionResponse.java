@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostNetworksIdActionsAddRouteActionResponse {
     @JsonProperty("action")
     public PostNetworksIdActionsAddRouteActionResponseAction action;
+
     public PostNetworksIdActionsAddRouteActionResponse withAction(PostNetworksIdActionsAddRouteActionResponseAction action) {
         this.action = action;
         return this;
     }
     
+    public PostNetworksIdActionsAddRouteActionResponse(@JsonProperty("action") PostNetworksIdActionsAddRouteActionResponseAction action) {
+        this.action = action;
+  }
 }

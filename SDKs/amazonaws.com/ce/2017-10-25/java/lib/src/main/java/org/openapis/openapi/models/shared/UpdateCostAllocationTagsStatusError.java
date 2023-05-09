@@ -15,6 +15,7 @@ public class UpdateCostAllocationTagsStatusError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public UpdateCostAllocationTagsStatusError withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class UpdateCostAllocationTagsStatusError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public UpdateCostAllocationTagsStatusError withMessage(String message) {
         this.message = message;
         return this;
@@ -31,9 +33,11 @@ public class UpdateCostAllocationTagsStatusError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagKey")
     public String tagKey;
+
     public UpdateCostAllocationTagsStatusError withTagKey(String tagKey) {
         this.tagKey = tagKey;
         return this;
     }
     
+    public UpdateCostAllocationTagsStatusError(){}
 }

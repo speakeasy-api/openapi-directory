@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeBuildInput {
     @JsonProperty("BuildId")
     public String buildId;
+
     public DescribeBuildInput withBuildId(String buildId) {
         this.buildId = buildId;
         return this;
     }
     
+    public DescribeBuildInput(@JsonProperty("BuildId") String buildId) {
+        this.buildId = buildId;
+  }
 }

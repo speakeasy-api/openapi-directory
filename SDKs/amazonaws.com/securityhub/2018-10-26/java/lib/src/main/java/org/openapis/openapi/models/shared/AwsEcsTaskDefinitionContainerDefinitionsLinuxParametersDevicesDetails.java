@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDevicesDetai
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerPath")
     public String containerPath;
+
     public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDevicesDetails withContainerPath(String containerPath) {
         this.containerPath = containerPath;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDevicesDetai
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostPath")
     public String hostPath;
+
     public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDevicesDetails withHostPath(String hostPath) {
         this.hostPath = hostPath;
         return this;
@@ -31,9 +33,11 @@ public class AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDevicesDetai
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Permissions")
     public String[] permissions;
+
     public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDevicesDetails withPermissions(String[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDevicesDetails(){}
 }

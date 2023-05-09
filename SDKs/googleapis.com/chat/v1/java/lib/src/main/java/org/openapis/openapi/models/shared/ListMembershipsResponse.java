@@ -18,6 +18,7 @@ public class ListMembershipsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memberships")
     public Membership[] memberships;
+
     public ListMembershipsResponse withMemberships(Membership[] memberships) {
         this.memberships = memberships;
         return this;
@@ -29,9 +30,11 @@ public class ListMembershipsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListMembershipsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListMembershipsResponse(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetEpisodesInBatchResponse {
     @JsonProperty("episodes")
     public EpisodeSimple[] episodes;
+
     public GetEpisodesInBatchResponse withEpisodes(EpisodeSimple[] episodes) {
         this.episodes = episodes;
         return this;
     }
     
+    public GetEpisodesInBatchResponse(@JsonProperty("episodes") EpisodeSimple[] episodes) {
+        this.episodes = episodes;
+  }
 }

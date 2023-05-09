@@ -58,11 +58,9 @@ public class Scripts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompileScriptResponse res = new org.openapis.openapi.models.operations.CompileScriptResponse() {{
+        org.openapis.openapi.models.operations.CompileScriptResponse res = new org.openapis.openapi.models.operations.CompileScriptResponse(contentType, httpRes.statusCode()) {{
             scriptCompilationResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class Scripts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateScriptResponse res = new org.openapis.openapi.models.operations.CreateScriptResponse() {{
+        org.openapis.openapi.models.operations.CreateScriptResponse res = new org.openapis.openapi.models.operations.CreateScriptResponse(contentType, httpRes.statusCode()) {{
             script = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -146,11 +142,9 @@ public class Scripts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteScriptResponse res = new org.openapis.openapi.models.operations.DeleteScriptResponse() {{
+        org.openapis.openapi.models.operations.DeleteScriptResponse res = new org.openapis.openapi.models.operations.DeleteScriptResponse(contentType, httpRes.statusCode()) {{
             deleted = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -169,10 +163,11 @@ public class Scripts {
     /**
      * Get all scripts
      * Get all scripts
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindAllScriptsResponse findAllScripts() throws Exception {
+    public org.openapis.openapi.models.operations.FindAllScriptsResponse findAllScripts(org.openapis.openapi.models.operations.FindAllScriptsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/scripts");
         
@@ -181,16 +176,15 @@ public class Scripts {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindAllScriptsResponse res = new org.openapis.openapi.models.operations.FindAllScriptsResponse() {{
+        org.openapis.openapi.models.operations.FindAllScriptsResponse res = new org.openapis.openapi.models.operations.FindAllScriptsResponse(contentType, httpRes.statusCode()) {{
             scripts = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -229,11 +223,9 @@ public class Scripts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindScriptByIdResponse res = new org.openapis.openapi.models.operations.FindScriptByIdResponse() {{
+        org.openapis.openapi.models.operations.FindScriptByIdResponse res = new org.openapis.openapi.models.operations.FindScriptByIdResponse(contentType, httpRes.statusCode()) {{
             script = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -274,11 +266,9 @@ public class Scripts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchScriptResponse res = new org.openapis.openapi.models.operations.PatchScriptResponse() {{
+        org.openapis.openapi.models.operations.PatchScriptResponse res = new org.openapis.openapi.models.operations.PatchScriptResponse(contentType, httpRes.statusCode()) {{
             script = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -319,11 +309,9 @@ public class Scripts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateScriptResponse res = new org.openapis.openapi.models.operations.UpdateScriptResponse() {{
+        org.openapis.openapi.models.operations.UpdateScriptResponse res = new org.openapis.openapi.models.operations.UpdateScriptResponse(contentType, httpRes.statusCode()) {{
             script = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InferenceSpecification {
     @JsonProperty("Containers")
     public ModelPackageContainerDefinition[] containers;
+
     public InferenceSpecification withContainers(ModelPackageContainerDefinition[] containers) {
         this.containers = containers;
         return this;
@@ -21,6 +22,7 @@ public class InferenceSpecification {
     
     @JsonProperty("SupportedContentTypes")
     public String[] supportedContentTypes;
+
     public InferenceSpecification withSupportedContentTypes(String[] supportedContentTypes) {
         this.supportedContentTypes = supportedContentTypes;
         return this;
@@ -29,6 +31,7 @@ public class InferenceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedRealtimeInferenceInstanceTypes")
     public ProductionVariantInstanceTypeEnum[] supportedRealtimeInferenceInstanceTypes;
+
     public InferenceSpecification withSupportedRealtimeInferenceInstanceTypes(ProductionVariantInstanceTypeEnum[] supportedRealtimeInferenceInstanceTypes) {
         this.supportedRealtimeInferenceInstanceTypes = supportedRealtimeInferenceInstanceTypes;
         return this;
@@ -36,6 +39,7 @@ public class InferenceSpecification {
     
     @JsonProperty("SupportedResponseMIMETypes")
     public String[] supportedResponseMIMETypes;
+
     public InferenceSpecification withSupportedResponseMIMETypes(String[] supportedResponseMIMETypes) {
         this.supportedResponseMIMETypes = supportedResponseMIMETypes;
         return this;
@@ -44,9 +48,15 @@ public class InferenceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedTransformInstanceTypes")
     public TransformInstanceTypeEnum[] supportedTransformInstanceTypes;
+
     public InferenceSpecification withSupportedTransformInstanceTypes(TransformInstanceTypeEnum[] supportedTransformInstanceTypes) {
         this.supportedTransformInstanceTypes = supportedTransformInstanceTypes;
         return this;
     }
     
+    public InferenceSpecification(@JsonProperty("Containers") ModelPackageContainerDefinition[] containers, @JsonProperty("SupportedContentTypes") String[] supportedContentTypes, @JsonProperty("SupportedResponseMIMETypes") String[] supportedResponseMIMETypes) {
+        this.containers = containers;
+        this.supportedContentTypes = supportedContentTypes;
+        this.supportedResponseMIMETypes = supportedResponseMIMETypes;
+  }
 }

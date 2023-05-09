@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateWorkloadShareRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateWorkloadShareRequestBody requestBody;
+
     public UpdateWorkloadShareRequest withRequestBody(UpdateWorkloadShareRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class UpdateWorkloadShareRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ShareId")
     public String shareId;
+
     public UpdateWorkloadShareRequest withShareId(String shareId) {
         this.shareId = shareId;
         return this;
@@ -23,6 +26,7 @@ public class UpdateWorkloadShareRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkloadId")
     public String workloadId;
+
     public UpdateWorkloadShareRequest withWorkloadId(String workloadId) {
         this.workloadId = workloadId;
         return this;
@@ -30,6 +34,7 @@ public class UpdateWorkloadShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateWorkloadShareRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class UpdateWorkloadShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateWorkloadShareRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class UpdateWorkloadShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateWorkloadShareRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class UpdateWorkloadShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateWorkloadShareRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class UpdateWorkloadShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateWorkloadShareRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class UpdateWorkloadShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateWorkloadShareRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,15 @@ public class UpdateWorkloadShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateWorkloadShareRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public UpdateWorkloadShareRequest(@JsonProperty("RequestBody") UpdateWorkloadShareRequestBody requestBody, @JsonProperty("ShareId") String shareId, @JsonProperty("WorkloadId") String workloadId) {
+        this.requestBody = requestBody;
+        this.shareId = shareId;
+        this.workloadId = workloadId;
+  }
 }

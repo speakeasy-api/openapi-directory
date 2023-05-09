@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteGrantRequest {
     @JsonProperty("GrantArn")
     public String grantArn;
+
     public DeleteGrantRequest withGrantArn(String grantArn) {
         this.grantArn = grantArn;
         return this;
@@ -19,6 +20,7 @@ public class DeleteGrantRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusReason")
     public String statusReason;
+
     public DeleteGrantRequest withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -26,9 +28,14 @@ public class DeleteGrantRequest {
     
     @JsonProperty("Version")
     public String version;
+
     public DeleteGrantRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public DeleteGrantRequest(@JsonProperty("GrantArn") String grantArn, @JsonProperty("Version") String version) {
+        this.grantArn = grantArn;
+        this.version = version;
+  }
 }

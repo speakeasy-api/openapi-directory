@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutAutoScalingPolicyInput {
     @JsonProperty("AutoScalingPolicy")
     public AutoScalingPolicy autoScalingPolicy;
+
     public PutAutoScalingPolicyInput withAutoScalingPolicy(AutoScalingPolicy autoScalingPolicy) {
         this.autoScalingPolicy = autoScalingPolicy;
         return this;
@@ -16,6 +17,7 @@ public class PutAutoScalingPolicyInput {
     
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public PutAutoScalingPolicyInput withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -23,9 +25,15 @@ public class PutAutoScalingPolicyInput {
     
     @JsonProperty("InstanceGroupId")
     public String instanceGroupId;
+
     public PutAutoScalingPolicyInput withInstanceGroupId(String instanceGroupId) {
         this.instanceGroupId = instanceGroupId;
         return this;
     }
     
+    public PutAutoScalingPolicyInput(@JsonProperty("AutoScalingPolicy") AutoScalingPolicy autoScalingPolicy, @JsonProperty("ClusterId") String clusterId, @JsonProperty("InstanceGroupId") String instanceGroupId) {
+        this.autoScalingPolicy = autoScalingPolicy;
+        this.clusterId = clusterId;
+        this.instanceGroupId = instanceGroupId;
+  }
 }

@@ -17,6 +17,7 @@ public class OrderItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public OrderItemSimpleVO withComments(String comments) {
         this.comments = comments;
         return this;
@@ -26,6 +27,7 @@ public class OrderItemSimpleVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("completion_date")
     public LocalDate completionDate;
+
     public OrderItemSimpleVO withCompletionDate(LocalDate completionDate) {
         this.completionDate = completionDate;
         return this;
@@ -34,6 +36,7 @@ public class OrderItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public PropertyPaAndAttVO[] customFields;
+
     public OrderItemSimpleVO withCustomFields(PropertyPaAndAttVO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -42,6 +45,7 @@ public class OrderItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_id")
     public Long itemId;
+
     public OrderItemSimpleVO withItemId(Long itemId) {
         this.itemId = itemId;
         return this;
@@ -50,6 +54,7 @@ public class OrderItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_price")
     public Double itemPrice;
+
     public OrderItemSimpleVO withItemPrice(Double itemPrice) {
         this.itemPrice = itemPrice;
         return this;
@@ -58,6 +63,7 @@ public class OrderItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Double quantity;
+
     public OrderItemSimpleVO withQuantity(Double quantity) {
         this.quantity = quantity;
         return this;
@@ -69,6 +75,7 @@ public class OrderItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping")
     public Object shipping;
+
     public OrderItemSimpleVO withShipping(Object shipping) {
         this.shipping = shipping;
         return this;
@@ -80,6 +87,7 @@ public class OrderItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public SpecBaseVO spec;
+
     public OrderItemSimpleVO withSpec(SpecBaseVO spec) {
         this.spec = spec;
         return this;
@@ -91,6 +99,7 @@ public class OrderItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public Object tax;
+
     public OrderItemSimpleVO withTax(Object tax) {
         this.tax = tax;
         return this;
@@ -99,6 +108,7 @@ public class OrderItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_item_price")
     public Double transactionalItemPrice;
+
     public OrderItemSimpleVO withTransactionalItemPrice(Double transactionalItemPrice) {
         this.transactionalItemPrice = transactionalItemPrice;
         return this;
@@ -110,6 +120,7 @@ public class OrderItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_shipping")
     public Object transactionalShipping;
+
     public OrderItemSimpleVO withTransactionalShipping(Object transactionalShipping) {
         this.transactionalShipping = transactionalShipping;
         return this;
@@ -121,6 +132,7 @@ public class OrderItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_tax")
     public Object transactionalTax;
+
     public OrderItemSimpleVO withTransactionalTax(Object transactionalTax) {
         this.transactionalTax = transactionalTax;
         return this;
@@ -132,6 +144,7 @@ public class OrderItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_unit_price")
     public Object transactionalUnitPrice;
+
     public OrderItemSimpleVO withTransactionalUnitPrice(Object transactionalUnitPrice) {
         this.transactionalUnitPrice = transactionalUnitPrice;
         return this;
@@ -140,6 +153,7 @@ public class OrderItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit_description")
     public String unitDescription;
+
     public OrderItemSimpleVO withUnitDescription(String unitDescription) {
         this.unitDescription = unitDescription;
         return this;
@@ -151,9 +165,11 @@ public class OrderItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit_price")
     public Object unitPrice;
+
     public OrderItemSimpleVO withUnitPrice(Object unitPrice) {
         this.unitPrice = unitPrice;
         return this;
     }
     
+    public OrderItemSimpleVO(){}
 }

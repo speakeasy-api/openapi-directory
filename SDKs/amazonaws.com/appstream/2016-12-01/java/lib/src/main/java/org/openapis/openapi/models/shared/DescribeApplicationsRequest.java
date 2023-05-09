@@ -12,6 +12,7 @@ public class DescribeApplicationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arns")
     public String[] arns;
+
     public DescribeApplicationsRequest withArns(String[] arns) {
         this.arns = arns;
         return this;
@@ -20,6 +21,7 @@ public class DescribeApplicationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeApplicationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class DescribeApplicationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeApplicationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeApplicationsRequest(){}
 }

@@ -12,6 +12,7 @@ public class DigitalassetlinksStatementsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DigitalassetlinksStatementsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class DigitalassetlinksStatementsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DigitalassetlinksStatementsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class DigitalassetlinksStatementsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DigitalassetlinksStatementsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class DigitalassetlinksStatementsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DigitalassetlinksStatementsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +56,7 @@ public class DigitalassetlinksStatementsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DigitalassetlinksStatementsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +67,7 @@ public class DigitalassetlinksStatementsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DigitalassetlinksStatementsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +78,7 @@ public class DigitalassetlinksStatementsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DigitalassetlinksStatementsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +89,7 @@ public class DigitalassetlinksStatementsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DigitalassetlinksStatementsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -92,6 +100,7 @@ public class DigitalassetlinksStatementsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DigitalassetlinksStatementsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -102,6 +111,7 @@ public class DigitalassetlinksStatementsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=relation")
     public String relation;
+
     public DigitalassetlinksStatementsListRequest withRelation(String relation) {
         this.relation = relation;
         return this;
@@ -112,6 +122,7 @@ public class DigitalassetlinksStatementsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source.androidApp.certificate.sha256Fingerprint")
     public String sourceAndroidAppCertificateSha256Fingerprint;
+
     public DigitalassetlinksStatementsListRequest withSourceAndroidAppCertificateSha256Fingerprint(String sourceAndroidAppCertificateSha256Fingerprint) {
         this.sourceAndroidAppCertificateSha256Fingerprint = sourceAndroidAppCertificateSha256Fingerprint;
         return this;
@@ -122,6 +133,7 @@ public class DigitalassetlinksStatementsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source.androidApp.packageName")
     public String sourceAndroidAppPackageName;
+
     public DigitalassetlinksStatementsListRequest withSourceAndroidAppPackageName(String sourceAndroidAppPackageName) {
         this.sourceAndroidAppPackageName = sourceAndroidAppPackageName;
         return this;
@@ -132,6 +144,7 @@ public class DigitalassetlinksStatementsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source.web.site")
     public String sourceWebSite;
+
     public DigitalassetlinksStatementsListRequest withSourceWebSite(String sourceWebSite) {
         this.sourceWebSite = sourceWebSite;
         return this;
@@ -142,6 +155,7 @@ public class DigitalassetlinksStatementsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DigitalassetlinksStatementsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,9 +166,11 @@ public class DigitalassetlinksStatementsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DigitalassetlinksStatementsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DigitalassetlinksStatementsListRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBenefitsDocumentUploadStatusReportResponse {
     
     public String contentType;
+
     public GetBenefitsDocumentUploadStatusReportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetBenefitsDocumentUploadStatusReportResponse {
     
     
     public Integer statusCode;
+
     public GetBenefitsDocumentUploadStatusReportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetBenefitsDocumentUploadStatusReportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBenefitsDocumentUploadStatusReportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetBenefitsDocumentUploadStatusReportResponse {
      */
     
     public GetBenefitsDocumentUploadStatusReport200ApplicationJSON getBenefitsDocumentUploadStatusReport200ApplicationJSONObject;
+
     public GetBenefitsDocumentUploadStatusReportResponse withGetBenefitsDocumentUploadStatusReport200ApplicationJSONObject(GetBenefitsDocumentUploadStatusReport200ApplicationJSON getBenefitsDocumentUploadStatusReport200ApplicationJSONObject) {
         this.getBenefitsDocumentUploadStatusReport200ApplicationJSONObject = getBenefitsDocumentUploadStatusReport200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetBenefitsDocumentUploadStatusReportResponse {
      */
     
     public GetBenefitsDocumentUploadStatusReport401ApplicationJSON getBenefitsDocumentUploadStatusReport401ApplicationJSONObject;
+
     public GetBenefitsDocumentUploadStatusReportResponse withGetBenefitsDocumentUploadStatusReport401ApplicationJSONObject(GetBenefitsDocumentUploadStatusReport401ApplicationJSON getBenefitsDocumentUploadStatusReport401ApplicationJSONObject) {
         this.getBenefitsDocumentUploadStatusReport401ApplicationJSONObject = getBenefitsDocumentUploadStatusReport401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetBenefitsDocumentUploadStatusReportResponse {
      */
     
     public GetBenefitsDocumentUploadStatusReport403ApplicationJSON getBenefitsDocumentUploadStatusReport403ApplicationJSONObject;
+
     public GetBenefitsDocumentUploadStatusReportResponse withGetBenefitsDocumentUploadStatusReport403ApplicationJSONObject(GetBenefitsDocumentUploadStatusReport403ApplicationJSON getBenefitsDocumentUploadStatusReport403ApplicationJSONObject) {
         this.getBenefitsDocumentUploadStatusReport403ApplicationJSONObject = getBenefitsDocumentUploadStatusReport403ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetBenefitsDocumentUploadStatusReportResponse {
      */
     
     public GetBenefitsDocumentUploadStatusReport422ApplicationJSON getBenefitsDocumentUploadStatusReport422ApplicationJSONObject;
+
     public GetBenefitsDocumentUploadStatusReportResponse withGetBenefitsDocumentUploadStatusReport422ApplicationJSONObject(GetBenefitsDocumentUploadStatusReport422ApplicationJSON getBenefitsDocumentUploadStatusReport422ApplicationJSONObject) {
         this.getBenefitsDocumentUploadStatusReport422ApplicationJSONObject = getBenefitsDocumentUploadStatusReport422ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetBenefitsDocumentUploadStatusReportResponse {
      */
     
     public GetBenefitsDocumentUploadStatusReport429ApplicationJSON getBenefitsDocumentUploadStatusReport429ApplicationJSONObject;
+
     public GetBenefitsDocumentUploadStatusReportResponse withGetBenefitsDocumentUploadStatusReport429ApplicationJSONObject(GetBenefitsDocumentUploadStatusReport429ApplicationJSON getBenefitsDocumentUploadStatusReport429ApplicationJSONObject) {
         this.getBenefitsDocumentUploadStatusReport429ApplicationJSONObject = getBenefitsDocumentUploadStatusReport429ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class GetBenefitsDocumentUploadStatusReportResponse {
      */
     
     public GetBenefitsDocumentUploadStatusReport500ApplicationJSON getBenefitsDocumentUploadStatusReport500ApplicationJSONObject;
+
     public GetBenefitsDocumentUploadStatusReportResponse withGetBenefitsDocumentUploadStatusReport500ApplicationJSONObject(GetBenefitsDocumentUploadStatusReport500ApplicationJSON getBenefitsDocumentUploadStatusReport500ApplicationJSONObject) {
         this.getBenefitsDocumentUploadStatusReport500ApplicationJSONObject = getBenefitsDocumentUploadStatusReport500ApplicationJSONObject;
         return this;
     }
     
+    public GetBenefitsDocumentUploadStatusReportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

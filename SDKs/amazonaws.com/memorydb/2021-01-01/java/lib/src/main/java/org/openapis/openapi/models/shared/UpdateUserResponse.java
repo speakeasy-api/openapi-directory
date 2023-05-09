@@ -15,9 +15,11 @@ public class UpdateUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("User")
     public User user;
+
     public UpdateUserResponse withUser(User user) {
         this.user = user;
         return this;
     }
     
+    public UpdateUserResponse(){}
 }

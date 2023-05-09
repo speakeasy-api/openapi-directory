@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReplaceRootVolumeTasksRequest {
     
     public Boolean dryRun;
+
     public DescribeReplaceRootVolumeTasksRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeReplaceRootVolumeTasksRequest {
     
     
     public DescribeReplaceRootVolumeTasksRequestFilters[] filters;
+
     public DescribeReplaceRootVolumeTasksRequest withFilters(DescribeReplaceRootVolumeTasksRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeReplaceRootVolumeTasksRequest {
     
     
     public Long maxResults;
+
     public DescribeReplaceRootVolumeTasksRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeReplaceRootVolumeTasksRequest {
     
     
     public String nextToken;
+
     public DescribeReplaceRootVolumeTasksRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,11 @@ public class DescribeReplaceRootVolumeTasksRequest {
     
     
     public String[] replaceRootVolumeTaskIds;
+
     public DescribeReplaceRootVolumeTasksRequest withReplaceRootVolumeTaskIds(String[] replaceRootVolumeTaskIds) {
         this.replaceRootVolumeTaskIds = replaceRootVolumeTaskIds;
         return this;
     }
     
+    public DescribeReplaceRootVolumeTasksRequest(){}
 }

@@ -58,11 +58,9 @@ public class AccountPermissionGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAccountPermissionGroupsGetResponse res = new org.openapis.openapi.models.operations.DfareportingAccountPermissionGroupsGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAccountPermissionGroupsGetResponse res = new org.openapis.openapi.models.operations.DfareportingAccountPermissionGroupsGetResponse(contentType, httpRes.statusCode()) {{
             accountPermissionGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class AccountPermissionGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAccountPermissionGroupsListResponse res = new org.openapis.openapi.models.operations.DfareportingAccountPermissionGroupsListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAccountPermissionGroupsListResponse res = new org.openapis.openapi.models.operations.DfareportingAccountPermissionGroupsListResponse(contentType, httpRes.statusCode()) {{
             accountPermissionGroupsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

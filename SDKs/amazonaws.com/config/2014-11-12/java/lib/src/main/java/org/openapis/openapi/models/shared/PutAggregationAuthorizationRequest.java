@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutAggregationAuthorizationRequest {
     @JsonProperty("AuthorizedAccountId")
     public String authorizedAccountId;
+
     public PutAggregationAuthorizationRequest withAuthorizedAccountId(String authorizedAccountId) {
         this.authorizedAccountId = authorizedAccountId;
         return this;
@@ -18,6 +19,7 @@ public class PutAggregationAuthorizationRequest {
     
     @JsonProperty("AuthorizedAwsRegion")
     public String authorizedAwsRegion;
+
     public PutAggregationAuthorizationRequest withAuthorizedAwsRegion(String authorizedAwsRegion) {
         this.authorizedAwsRegion = authorizedAwsRegion;
         return this;
@@ -26,9 +28,14 @@ public class PutAggregationAuthorizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public PutAggregationAuthorizationRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public PutAggregationAuthorizationRequest(@JsonProperty("AuthorizedAccountId") String authorizedAccountId, @JsonProperty("AuthorizedAwsRegion") String authorizedAwsRegion) {
+        this.authorizedAccountId = authorizedAccountId;
+        this.authorizedAwsRegion = authorizedAwsRegion;
+  }
 }

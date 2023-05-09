@@ -15,6 +15,7 @@ public class CreateScheduledAuditRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfMonth")
     public String dayOfMonth;
+
     public CreateScheduledAuditRequestBody withDayOfMonth(String dayOfMonth) {
         this.dayOfMonth = dayOfMonth;
         return this;
@@ -26,6 +27,7 @@ public class CreateScheduledAuditRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfWeek")
     public CreateScheduledAuditRequestBodyDayOfWeekEnum dayOfWeek;
+
     public CreateScheduledAuditRequestBody withDayOfWeek(CreateScheduledAuditRequestBodyDayOfWeekEnum dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -36,6 +38,7 @@ public class CreateScheduledAuditRequestBody {
      */
     @JsonProperty("frequency")
     public CreateScheduledAuditRequestBodyFrequencyEnum frequency;
+
     public CreateScheduledAuditRequestBody withFrequency(CreateScheduledAuditRequestBodyFrequencyEnum frequency) {
         this.frequency = frequency;
         return this;
@@ -47,6 +50,7 @@ public class CreateScheduledAuditRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateScheduledAuditRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
@@ -57,9 +61,14 @@ public class CreateScheduledAuditRequestBody {
      */
     @JsonProperty("targetCheckNames")
     public String[] targetCheckNames;
+
     public CreateScheduledAuditRequestBody withTargetCheckNames(String[] targetCheckNames) {
         this.targetCheckNames = targetCheckNames;
         return this;
     }
     
+    public CreateScheduledAuditRequestBody(@JsonProperty("frequency") CreateScheduledAuditRequestBodyFrequencyEnum frequency, @JsonProperty("targetCheckNames") String[] targetCheckNames) {
+        this.frequency = frequency;
+        this.targetCheckNames = targetCheckNames;
+  }
 }

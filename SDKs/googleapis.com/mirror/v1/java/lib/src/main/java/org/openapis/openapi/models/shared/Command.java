@@ -20,9 +20,11 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Command withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Command(){}
 }

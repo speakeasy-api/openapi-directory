@@ -15,6 +15,7 @@ public class ListStreamKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListStreamKeysResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListStreamKeysResponse {
     
     @JsonProperty("streamKeys")
     public StreamKeySummary[] streamKeys;
+
     public ListStreamKeysResponse withStreamKeys(StreamKeySummary[] streamKeys) {
         this.streamKeys = streamKeys;
         return this;
     }
     
+    public ListStreamKeysResponse(@JsonProperty("streamKeys") StreamKeySummary[] streamKeys) {
+        this.streamKeys = streamKeys;
+  }
 }

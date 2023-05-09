@@ -15,6 +15,7 @@ public class PostLoadBalancers201ApplicationJSONActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public PostLoadBalancers201ApplicationJSONActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class PostLoadBalancers201ApplicationJSONActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public PostLoadBalancers201ApplicationJSONActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostLoadBalancers201ApplicationJSONActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

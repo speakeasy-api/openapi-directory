@@ -18,6 +18,7 @@ public class StartActivityIntent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public StartActivityIntent withAction(String action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class StartActivityIntent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public String[] categories;
+
     public StartActivityIntent withCategories(String[] categories) {
         this.categories = categories;
         return this;
@@ -40,9 +42,11 @@ public class StartActivityIntent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public StartActivityIntent withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public StartActivityIntent(){}
 }

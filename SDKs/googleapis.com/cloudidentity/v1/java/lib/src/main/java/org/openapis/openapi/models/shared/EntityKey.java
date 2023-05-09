@@ -18,6 +18,7 @@ public class EntityKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public EntityKey withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class EntityKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     public String namespace;
+
     public EntityKey withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public EntityKey(){}
 }

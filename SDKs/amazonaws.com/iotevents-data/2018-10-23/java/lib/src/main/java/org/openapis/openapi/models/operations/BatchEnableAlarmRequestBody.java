@@ -12,9 +12,13 @@ public class BatchEnableAlarmRequestBody {
      */
     @JsonProperty("enableActionRequests")
     public org.openapis.openapi.models.shared.EnableAlarmActionRequest[] enableActionRequests;
+
     public BatchEnableAlarmRequestBody withEnableActionRequests(org.openapis.openapi.models.shared.EnableAlarmActionRequest[] enableActionRequests) {
         this.enableActionRequests = enableActionRequests;
         return this;
     }
     
+    public BatchEnableAlarmRequestBody(@JsonProperty("enableActionRequests") org.openapis.openapi.models.shared.EnableAlarmActionRequest[] enableActionRequests) {
+        this.enableActionRequests = enableActionRequests;
+  }
 }

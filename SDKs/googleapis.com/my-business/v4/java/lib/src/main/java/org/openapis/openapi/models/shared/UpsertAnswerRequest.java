@@ -18,9 +18,11 @@ public class UpsertAnswerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answer")
     public Answer answer;
+
     public UpsertAnswerRequest withAnswer(Answer answer) {
         this.answer = answer;
         return this;
     }
     
+    public UpsertAnswerRequest(){}
 }

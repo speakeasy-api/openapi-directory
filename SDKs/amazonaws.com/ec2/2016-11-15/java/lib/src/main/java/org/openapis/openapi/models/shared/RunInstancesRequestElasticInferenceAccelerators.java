@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RunInstancesRequestElasticInferenceAccelerators -  Describes an elastic inference accelerator. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RunInstancesRequestElasticInferenceAccelerators {
     
     public Long count;
+
     public RunInstancesRequestElasticInferenceAccelerators withCount(Long count) {
         this.count = count;
         return this;
@@ -19,9 +20,13 @@ public class RunInstancesRequestElasticInferenceAccelerators {
     
     
     public String type;
+
     public RunInstancesRequestElasticInferenceAccelerators withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RunInstancesRequestElasticInferenceAccelerators(@JsonProperty("Type") String type) {
+        this.type = type;
+  }
 }

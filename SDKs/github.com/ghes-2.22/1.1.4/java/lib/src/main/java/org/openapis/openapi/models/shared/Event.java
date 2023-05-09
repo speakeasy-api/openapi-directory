@@ -22,6 +22,7 @@ public class Event {
      */
     @JsonProperty("actor")
     public Actor actor;
+
     public Event withActor(Actor actor) {
         this.actor = actor;
         return this;
@@ -31,6 +32,7 @@ public class Event {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Event withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class Event {
     
     @JsonProperty("id")
     public String id;
+
     public Event withId(String id) {
         this.id = id;
         return this;
@@ -49,6 +52,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org")
     public Actor org;
+
     public Event withOrg(Actor org) {
         this.org = org;
         return this;
@@ -56,6 +60,7 @@ public class Event {
     
     @JsonProperty("payload")
     public EventPayload payload;
+
     public Event withPayload(EventPayload payload) {
         this.payload = payload;
         return this;
@@ -63,6 +68,7 @@ public class Event {
     
     @JsonProperty("public")
     public Boolean public_;
+
     public Event withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -70,6 +76,7 @@ public class Event {
     
     @JsonProperty("repo")
     public EventRepo repo;
+
     public Event withRepo(EventRepo repo) {
         this.repo = repo;
         return this;
@@ -77,9 +84,19 @@ public class Event {
     
     @JsonProperty("type")
     public String type;
+
     public Event withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Event(@JsonProperty("actor") Actor actor, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("payload") EventPayload payload, @JsonProperty("public") Boolean public_, @JsonProperty("repo") EventRepo repo, @JsonProperty("type") String type) {
+        this.actor = actor;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.payload = payload;
+        this.public_ = public_;
+        this.repo = repo;
+        this.type = type;
+  }
 }

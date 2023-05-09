@@ -14,6 +14,7 @@ public class Payment {
      */
     @JsonProperty("amount")
     public Long amount;
+
     public Payment withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -25,6 +26,7 @@ public class Payment {
      */
     @JsonProperty("category")
     public PaymentCategoryEnum category;
+
     public Payment withCategory(PaymentCategoryEnum category) {
         this.category = category;
         return this;
@@ -35,6 +37,7 @@ public class Payment {
      */
     @JsonProperty("paymentProfileId")
     public String paymentProfileId;
+
     public Payment withPaymentProfileId(String paymentProfileId) {
         this.paymentProfileId = paymentProfileId;
         return this;
@@ -48,9 +51,15 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subcategory")
     public PaymentSubcategoryEnum subcategory;
+
     public Payment withSubcategory(PaymentSubcategoryEnum subcategory) {
         this.subcategory = subcategory;
         return this;
     }
     
+    public Payment(@JsonProperty("amount") Long amount, @JsonProperty("category") PaymentCategoryEnum category, @JsonProperty("paymentProfileId") String paymentProfileId) {
+        this.amount = amount;
+        this.category = category;
+        this.paymentProfileId = paymentProfileId;
+  }
 }

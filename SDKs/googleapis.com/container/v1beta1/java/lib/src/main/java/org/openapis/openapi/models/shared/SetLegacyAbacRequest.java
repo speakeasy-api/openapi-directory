@@ -18,6 +18,7 @@ public class SetLegacyAbacRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterId")
     public String clusterId;
+
     public SetLegacyAbacRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -29,6 +30,7 @@ public class SetLegacyAbacRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public SetLegacyAbacRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -40,6 +42,7 @@ public class SetLegacyAbacRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SetLegacyAbacRequest withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class SetLegacyAbacRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public SetLegacyAbacRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -62,9 +66,11 @@ public class SetLegacyAbacRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public SetLegacyAbacRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public SetLegacyAbacRequest(){}
 }

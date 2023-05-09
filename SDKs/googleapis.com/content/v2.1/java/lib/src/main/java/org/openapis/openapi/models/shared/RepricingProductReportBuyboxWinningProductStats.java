@@ -18,9 +18,11 @@ public class RepricingProductReportBuyboxWinningProductStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyboxWinsCount")
     public Integer buyboxWinsCount;
+
     public RepricingProductReportBuyboxWinningProductStats withBuyboxWinsCount(Integer buyboxWinsCount) {
         this.buyboxWinsCount = buyboxWinsCount;
         return this;
     }
     
+    public RepricingProductReportBuyboxWinningProductStats(){}
 }

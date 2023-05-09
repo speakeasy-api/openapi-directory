@@ -18,6 +18,7 @@ public class TemplateMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TemplateMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class TemplateMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TemplateMetadata withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class TemplateMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public ParameterMetadata[] parameters;
+
     public TemplateMetadata withParameters(ParameterMetadata[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public TemplateMetadata(){}
 }

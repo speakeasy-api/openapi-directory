@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * LawType - The category that the incentive/law/regulation falls under, described below: -State Incentives, -Laws and Regulations, -Utility/Private Incentives
@@ -15,6 +15,7 @@ public class LawType {
      */
     
     public String code;
+
     public LawType withCode(String code) {
         this.code = code;
         return this;
@@ -25,6 +26,7 @@ public class LawType {
      */
     
     public Long id;
+
     public LawType withId(Long id) {
         this.id = id;
         return this;
@@ -35,9 +37,15 @@ public class LawType {
      */
     
     public String title;
+
     public LawType withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public LawType(@JsonProperty("code") String code, @JsonProperty("id") Long id, @JsonProperty("title") String title) {
+        this.code = code;
+        this.id = id;
+        this.title = title;
+  }
 }

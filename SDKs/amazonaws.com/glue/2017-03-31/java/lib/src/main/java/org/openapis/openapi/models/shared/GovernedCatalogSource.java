@@ -15,6 +15,7 @@ public class GovernedCatalogSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalOptions")
     public S3SourceAdditionalOptions additionalOptions;
+
     public GovernedCatalogSource withAdditionalOptions(S3SourceAdditionalOptions additionalOptions) {
         this.additionalOptions = additionalOptions;
         return this;
@@ -22,6 +23,7 @@ public class GovernedCatalogSource {
     
     @JsonProperty("Database")
     public String database;
+
     public GovernedCatalogSource withDatabase(String database) {
         this.database = database;
         return this;
@@ -29,6 +31,7 @@ public class GovernedCatalogSource {
     
     @JsonProperty("Name")
     public String name;
+
     public GovernedCatalogSource withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +40,7 @@ public class GovernedCatalogSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionPredicate")
     public String partitionPredicate;
+
     public GovernedCatalogSource withPartitionPredicate(String partitionPredicate) {
         this.partitionPredicate = partitionPredicate;
         return this;
@@ -44,9 +48,15 @@ public class GovernedCatalogSource {
     
     @JsonProperty("Table")
     public String table;
+
     public GovernedCatalogSource withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public GovernedCatalogSource(@JsonProperty("Database") String database, @JsonProperty("Name") String name, @JsonProperty("Table") String table) {
+        this.database = database;
+        this.name = name;
+        this.table = table;
+  }
 }

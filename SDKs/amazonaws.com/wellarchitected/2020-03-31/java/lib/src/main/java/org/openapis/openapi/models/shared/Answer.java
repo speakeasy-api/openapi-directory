@@ -15,6 +15,7 @@ public class Answer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChoiceAnswers")
     public ChoiceAnswer[] choiceAnswers;
+
     public Answer withChoiceAnswers(ChoiceAnswer[] choiceAnswers) {
         this.choiceAnswers = choiceAnswers;
         return this;
@@ -26,6 +27,7 @@ public class Answer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Choices")
     public Choice[] choices;
+
     public Answer withChoices(Choice[] choices) {
         this.choices = choices;
         return this;
@@ -34,28 +36,31 @@ public class Answer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HelpfulResourceDisplayText")
     public String helpfulResourceDisplayText;
+
     public Answer withHelpfulResourceDisplayText(String helpfulResourceDisplayText) {
         this.helpfulResourceDisplayText = helpfulResourceDisplayText;
         return this;
     }
     
     /**
-     * The helpful resource URL for a question.
+     * &lt;p&gt;The helpful resource URL.&lt;/p&gt; &lt;p&gt;For Amazon Web Services official lenses, this is the helpful resource URL for a question or choice.&lt;/p&gt; &lt;p&gt;For custom lenses, this is the helpful resource URL for a question and is only provided if &lt;code&gt;HelpfulResourceDisplayText&lt;/code&gt; was specified for the question.&lt;/p&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HelpfulResourceUrl")
     public String helpfulResourceUrl;
+
     public Answer withHelpfulResourceUrl(String helpfulResourceUrl) {
         this.helpfulResourceUrl = helpfulResourceUrl;
         return this;
     }
     
     /**
-     * &lt;p&gt;The improvement plan URL for a question.&lt;/p&gt; &lt;p&gt;This value is only available if the question has been answered.&lt;/p&gt;
+     * &lt;p&gt;The improvement plan URL for a question in an Amazon Web Services official lenses.&lt;/p&gt; &lt;p&gt;This value is only available if the question has been answered.&lt;/p&gt; &lt;p&gt;This value does not apply to custom lenses.&lt;/p&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImprovementPlanUrl")
     public String improvementPlanUrl;
+
     public Answer withImprovementPlanUrl(String improvementPlanUrl) {
         this.improvementPlanUrl = improvementPlanUrl;
         return this;
@@ -67,6 +72,7 @@ public class Answer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsApplicable")
     public Boolean isApplicable;
+
     public Answer withIsApplicable(Boolean isApplicable) {
         this.isApplicable = isApplicable;
         return this;
@@ -78,6 +84,7 @@ public class Answer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notes")
     public String notes;
+
     public Answer withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -89,6 +96,7 @@ public class Answer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PillarId")
     public String pillarId;
+
     public Answer withPillarId(String pillarId) {
         this.pillarId = pillarId;
         return this;
@@ -100,6 +108,7 @@ public class Answer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuestionDescription")
     public String questionDescription;
+
     public Answer withQuestionDescription(String questionDescription) {
         this.questionDescription = questionDescription;
         return this;
@@ -111,6 +120,7 @@ public class Answer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuestionId")
     public String questionId;
+
     public Answer withQuestionId(String questionId) {
         this.questionId = questionId;
         return this;
@@ -122,6 +132,7 @@ public class Answer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuestionTitle")
     public String questionTitle;
+
     public Answer withQuestionTitle(String questionTitle) {
         this.questionTitle = questionTitle;
         return this;
@@ -130,6 +141,7 @@ public class Answer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public AnswerReasonEnum reason;
+
     public Answer withReason(AnswerReasonEnum reason) {
         this.reason = reason;
         return this;
@@ -141,6 +153,7 @@ public class Answer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Risk")
     public RiskEnum risk;
+
     public Answer withRisk(RiskEnum risk) {
         this.risk = risk;
         return this;
@@ -152,9 +165,11 @@ public class Answer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelectedChoices")
     public String[] selectedChoices;
+
     public Answer withSelectedChoices(String[] selectedChoices) {
         this.selectedChoices = selectedChoices;
         return this;
     }
     
+    public Answer(){}
 }

@@ -15,6 +15,7 @@ public class ModelClientConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvocationsMaxRetries")
     public Long invocationsMaxRetries;
+
     public ModelClientConfig withInvocationsMaxRetries(Long invocationsMaxRetries) {
         this.invocationsMaxRetries = invocationsMaxRetries;
         return this;
@@ -23,9 +24,11 @@ public class ModelClientConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvocationsTimeoutInSeconds")
     public Long invocationsTimeoutInSeconds;
+
     public ModelClientConfig withInvocationsTimeoutInSeconds(Long invocationsTimeoutInSeconds) {
         this.invocationsTimeoutInSeconds = invocationsTimeoutInSeconds;
         return this;
     }
     
+    public ModelClientConfig(){}
 }

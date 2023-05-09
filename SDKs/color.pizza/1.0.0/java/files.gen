@@ -47,4 +47,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Color.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java
 lib/src/main/java/org/openapis/openapi/models/shared/PossibleListsEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListDescription.java
+docs/sdk/README.md
 USAGE.md

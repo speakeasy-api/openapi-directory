@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdentitytoolkitRelyingpartySignOutUserResponse {
     
     public String contentType;
+
     public IdentitytoolkitRelyingpartySignOutUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IdentitytoolkitRelyingpartySignOutUserResponse {
      */
     
     public org.openapis.openapi.models.shared.IdentitytoolkitRelyingpartySignOutUserResponse identitytoolkitRelyingpartySignOutUserResponse;
+
     public IdentitytoolkitRelyingpartySignOutUserResponse withIdentitytoolkitRelyingpartySignOutUserResponse(org.openapis.openapi.models.shared.IdentitytoolkitRelyingpartySignOutUserResponse identitytoolkitRelyingpartySignOutUserResponse) {
         this.identitytoolkitRelyingpartySignOutUserResponse = identitytoolkitRelyingpartySignOutUserResponse;
         return this;
@@ -26,6 +29,7 @@ public class IdentitytoolkitRelyingpartySignOutUserResponse {
     
     
     public Integer statusCode;
+
     public IdentitytoolkitRelyingpartySignOutUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IdentitytoolkitRelyingpartySignOutUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdentitytoolkitRelyingpartySignOutUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartySignOutUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

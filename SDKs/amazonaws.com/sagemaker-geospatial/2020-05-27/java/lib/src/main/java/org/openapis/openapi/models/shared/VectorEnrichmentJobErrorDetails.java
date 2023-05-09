@@ -15,6 +15,7 @@ public class VectorEnrichmentJobErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public VectorEnrichmentJobErrorDetails withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -23,9 +24,11 @@ public class VectorEnrichmentJobErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorType")
     public VectorEnrichmentJobErrorTypeEnum errorType;
+
     public VectorEnrichmentJobErrorDetails withErrorType(VectorEnrichmentJobErrorTypeEnum errorType) {
         this.errorType = errorType;
         return this;
     }
     
+    public VectorEnrichmentJobErrorDetails(){}
 }

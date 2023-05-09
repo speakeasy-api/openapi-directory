@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GrpcRoute {
     @JsonProperty("action")
     public GrpcRouteAction action;
+
     public GrpcRoute withAction(GrpcRouteAction action) {
         this.action = action;
         return this;
@@ -21,6 +22,7 @@ public class GrpcRoute {
     
     @JsonProperty("match")
     public GrpcRouteMatch match;
+
     public GrpcRoute withMatch(GrpcRouteMatch match) {
         this.match = match;
         return this;
@@ -29,6 +31,7 @@ public class GrpcRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryPolicy")
     public GrpcRetryPolicy retryPolicy;
+
     public GrpcRoute withRetryPolicy(GrpcRetryPolicy retryPolicy) {
         this.retryPolicy = retryPolicy;
         return this;
@@ -37,9 +40,14 @@ public class GrpcRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public GrpcTimeout timeout;
+
     public GrpcRoute withTimeout(GrpcTimeout timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public GrpcRoute(@JsonProperty("action") GrpcRouteAction action, @JsonProperty("match") GrpcRouteMatch match) {
+        this.action = action;
+        this.match = match;
+  }
 }

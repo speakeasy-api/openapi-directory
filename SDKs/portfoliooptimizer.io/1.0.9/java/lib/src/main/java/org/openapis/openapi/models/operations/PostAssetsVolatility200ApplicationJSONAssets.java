@@ -12,9 +12,13 @@ public class PostAssetsVolatility200ApplicationJSONAssets {
      */
     @JsonProperty("assetVolatility")
     public Double assetVolatility;
+
     public PostAssetsVolatility200ApplicationJSONAssets withAssetVolatility(Double assetVolatility) {
         this.assetVolatility = assetVolatility;
         return this;
     }
     
+    public PostAssetsVolatility200ApplicationJSONAssets(@JsonProperty("assetVolatility") Double assetVolatility) {
+        this.assetVolatility = assetVolatility;
+  }
 }

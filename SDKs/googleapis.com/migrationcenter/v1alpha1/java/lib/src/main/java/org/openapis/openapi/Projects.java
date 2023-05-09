@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsAggregateValuesResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsAggregateValuesResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsAggregateValuesResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsAggregateValuesResponse(contentType, httpRes.statusCode()) {{
             aggregateAssetsValuesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsBatchDeleteResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsBatchDeleteResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsBatchDeleteResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsBatchDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,11 +154,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsBatchUpdateResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsBatchUpdateResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsBatchUpdateResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsBatchUpdateResponse(contentType, httpRes.statusCode()) {{
             batchUpdateAssetsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsListResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsListResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsListResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsListResponse(contentType, httpRes.statusCode()) {{
             listAssetsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,11 +244,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsReportAssetFramesResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsReportAssetFramesResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsReportAssetFramesResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsAssetsReportAssetFramesResponse(contentType, httpRes.statusCode()) {{
             reportAssetFramesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,11 +290,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsGroupsAddAssetsResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsGroupsAddAssetsResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsGroupsAddAssetsResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsGroupsAddAssetsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -348,11 +336,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsGroupsCreateResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsGroupsCreateResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsGroupsCreateResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsGroupsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -394,11 +380,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsGroupsListResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsGroupsListResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsGroupsListResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsGroupsListResponse(contentType, httpRes.statusCode()) {{
             listGroupsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -442,11 +426,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsGroupsRemoveAssetsResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsGroupsRemoveAssetsResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsGroupsRemoveAssetsResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsGroupsRemoveAssetsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -490,11 +472,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsCreateResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsCreateResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsCreateResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -538,11 +518,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsImportDataFilesCreateResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsImportDataFilesCreateResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsImportDataFilesCreateResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsImportDataFilesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -584,11 +562,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsImportDataFilesListResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsImportDataFilesListResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsImportDataFilesListResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsImportDataFilesListResponse(contentType, httpRes.statusCode()) {{
             listImportDataFilesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -630,11 +606,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsListResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsListResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsListResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsListResponse(contentType, httpRes.statusCode()) {{
             listImportJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -678,11 +652,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsRunResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsRunResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsRunResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsRunResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -726,11 +698,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsValidateResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsValidateResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsValidateResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsImportJobsValidateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -772,11 +742,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -820,11 +788,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -866,11 +832,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -914,11 +878,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsPreferenceSetsCreateResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsPreferenceSetsCreateResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsPreferenceSetsCreateResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsPreferenceSetsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -960,11 +922,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsPreferenceSetsListResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsPreferenceSetsListResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsPreferenceSetsListResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsPreferenceSetsListResponse(contentType, httpRes.statusCode()) {{
             listPreferenceSetsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -972,6 +932,186 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.ListPreferenceSetsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListPreferenceSetsResponse.class);
                 res.listPreferenceSetsResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Creates a report configuration.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsCreateResponse migrationcenterProjectsLocationsReportConfigsCreate(org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsCreateRequest request, org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsCreateSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsCreateRequest.class, baseUrl, "/v1alpha1/{parent}/reportConfigs", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "reportConfigInput", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsCreateRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsCreateResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsCreateResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Lists ReportConfigs in a given project and location.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsListResponse migrationcenterProjectsLocationsReportConfigsList(org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsListRequest request, org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsListSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsListRequest.class, baseUrl, "/v1alpha1/{parent}/reportConfigs", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsListRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsListResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsListResponse(contentType, httpRes.statusCode()) {{
+            listReportConfigsResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListReportConfigsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListReportConfigsResponse.class);
+                res.listReportConfigsResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Creates a report.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsReportsCreateResponse migrationcenterProjectsLocationsReportConfigsReportsCreate(org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsReportsCreateRequest request, org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsReportsCreateSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsReportsCreateRequest.class, baseUrl, "/v1alpha1/{parent}/reports", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "reportInput", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsReportsCreateRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsReportsCreateResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsReportsCreateResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Lists Reports in a given ReportConfig.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsReportsListResponse migrationcenterProjectsLocationsReportConfigsReportsList(org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsReportsListRequest request, org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsReportsListSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsReportsListRequest.class, baseUrl, "/v1alpha1/{parent}/reports", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsReportsListRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsReportsListResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsReportConfigsReportsListResponse(contentType, httpRes.statusCode()) {{
+            listReportsResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListReportsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListReportsResponse.class);
+                res.listReportsResponse = out;
             }
         }
 
@@ -1008,11 +1148,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesCreateResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesCreateResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesCreateResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1054,11 +1192,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesDeleteResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesDeleteResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesDeleteResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1073,21 +1209,21 @@ public class Projects {
     }
 
     /**
-     * Gets the details of a source.
+     * Gets the details of an error frame.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesGetResponse migrationcenterProjectsLocationsSourcesGet(org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesGetRequest request, org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesGetSecurity security) throws Exception {
+    public org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesErrorFramesGetResponse migrationcenterProjectsLocationsSourcesErrorFramesGet(org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesErrorFramesGetRequest request, org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesErrorFramesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesGetRequest.class, baseUrl, "/v1alpha1/{name}", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesErrorFramesGetRequest.class, baseUrl, "/v1alpha1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesGetRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesErrorFramesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1100,18 +1236,60 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesGetResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesGetResponse() {{
-            source = null;
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesErrorFramesGetResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesErrorFramesGetResponse(contentType, httpRes.statusCode()) {{
+            errorFrame = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.Source out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Source.class);
-                res.source = out;
+                org.openapis.openapi.models.shared.ErrorFrame out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ErrorFrame.class);
+                res.errorFrame = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Lists all error frames in a given source and location.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesErrorFramesListResponse migrationcenterProjectsLocationsSourcesErrorFramesList(org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesErrorFramesListRequest request, org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesErrorFramesListSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesErrorFramesListRequest.class, baseUrl, "/v1alpha1/{parent}/errorFrames", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesErrorFramesListRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesErrorFramesListResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesErrorFramesListResponse(contentType, httpRes.statusCode()) {{
+            listErrorFramesResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListErrorFramesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListErrorFramesResponse.class);
+                res.listErrorFramesResponse = out;
             }
         }
 
@@ -1146,11 +1324,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesListResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesListResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesListResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesListResponse(contentType, httpRes.statusCode()) {{
             listSourcesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1194,11 +1370,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesPatchResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesPatchResponse() {{
+        org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesPatchResponse res = new org.openapis.openapi.models.operations.MigrationcenterProjectsLocationsSourcesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

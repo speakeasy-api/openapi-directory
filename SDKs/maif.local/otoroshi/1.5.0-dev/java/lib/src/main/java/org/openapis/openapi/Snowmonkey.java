@@ -36,10 +36,11 @@ public class Snowmonkey {
     /**
      * Get current Snow Monkey config
      * Get current Snow Monkey config
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSnowMonkeyConfigResponse getSnowMonkeyConfig() throws Exception {
+    public org.openapis.openapi.models.operations.GetSnowMonkeyConfigResponse getSnowMonkeyConfig(org.openapis.openapi.models.operations.GetSnowMonkeyConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/snowmonkey/config");
         
@@ -48,16 +49,15 @@ public class Snowmonkey {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSnowMonkeyConfigResponse res = new org.openapis.openapi.models.operations.GetSnowMonkeyConfigResponse() {{
+        org.openapis.openapi.models.operations.GetSnowMonkeyConfigResponse res = new org.openapis.openapi.models.operations.GetSnowMonkeyConfigResponse(contentType, httpRes.statusCode()) {{
             snowMonkeyConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -76,10 +76,11 @@ public class Snowmonkey {
     /**
      * Get all current Snow Monkey ourages
      * Get all current Snow Monkey ourages
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSnowMonkeyOutagesResponse getSnowMonkeyOutages() throws Exception {
+    public org.openapis.openapi.models.operations.GetSnowMonkeyOutagesResponse getSnowMonkeyOutages(org.openapis.openapi.models.operations.GetSnowMonkeyOutagesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/snowmonkey/outages");
         
@@ -88,16 +89,15 @@ public class Snowmonkey {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSnowMonkeyOutagesResponse res = new org.openapis.openapi.models.operations.GetSnowMonkeyOutagesResponse() {{
+        org.openapis.openapi.models.operations.GetSnowMonkeyOutagesResponse res = new org.openapis.openapi.models.operations.GetSnowMonkeyOutagesResponse(contentType, httpRes.statusCode()) {{
             outages = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,11 +138,9 @@ public class Snowmonkey {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchSnowMonkeyResponse res = new org.openapis.openapi.models.operations.PatchSnowMonkeyResponse() {{
+        org.openapis.openapi.models.operations.PatchSnowMonkeyResponse res = new org.openapis.openapi.models.operations.PatchSnowMonkeyResponse(contentType, httpRes.statusCode()) {{
             snowMonkeyConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -161,10 +159,11 @@ public class Snowmonkey {
     /**
      * Reset Snow Monkey Outages for the day
      * Reset Snow Monkey Outages for the day
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ResetSnowMonkeyResponse resetSnowMonkey() throws Exception {
+    public org.openapis.openapi.models.operations.ResetSnowMonkeyResponse resetSnowMonkey(org.openapis.openapi.models.operations.ResetSnowMonkeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/snowmonkey/outages");
         
@@ -173,16 +172,15 @@ public class Snowmonkey {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResetSnowMonkeyResponse res = new org.openapis.openapi.models.operations.ResetSnowMonkeyResponse() {{
+        org.openapis.openapi.models.operations.ResetSnowMonkeyResponse res = new org.openapis.openapi.models.operations.ResetSnowMonkeyResponse(contentType, httpRes.statusCode()) {{
             done = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,10 +199,11 @@ public class Snowmonkey {
     /**
      * Start the Snow Monkey
      * Start the Snow Monkey
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StartSnowMonkeyResponse startSnowMonkey() throws Exception {
+    public org.openapis.openapi.models.operations.StartSnowMonkeyResponse startSnowMonkey(org.openapis.openapi.models.operations.StartSnowMonkeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/snowmonkey/_start");
         
@@ -213,16 +212,15 @@ public class Snowmonkey {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartSnowMonkeyResponse res = new org.openapis.openapi.models.operations.StartSnowMonkeyResponse() {{
+        org.openapis.openapi.models.operations.StartSnowMonkeyResponse res = new org.openapis.openapi.models.operations.StartSnowMonkeyResponse(contentType, httpRes.statusCode()) {{
             done = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,10 +239,11 @@ public class Snowmonkey {
     /**
      * Stop the Snow Monkey
      * Stop the Snow Monkey
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StopSnowMonkeyResponse stopSnowMonkey() throws Exception {
+    public org.openapis.openapi.models.operations.StopSnowMonkeyResponse stopSnowMonkey(org.openapis.openapi.models.operations.StopSnowMonkeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/snowmonkey/_stop");
         
@@ -253,16 +252,15 @@ public class Snowmonkey {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopSnowMonkeyResponse res = new org.openapis.openapi.models.operations.StopSnowMonkeyResponse() {{
+        org.openapis.openapi.models.operations.StopSnowMonkeyResponse res = new org.openapis.openapi.models.operations.StopSnowMonkeyResponse(contentType, httpRes.statusCode()) {{
             done = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -303,11 +301,9 @@ public class Snowmonkey {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSnowMonkeyResponse res = new org.openapis.openapi.models.operations.UpdateSnowMonkeyResponse() {{
+        org.openapis.openapi.models.operations.UpdateSnowMonkeyResponse res = new org.openapis.openapi.models.operations.UpdateSnowMonkeyResponse(contentType, httpRes.statusCode()) {{
             snowMonkeyConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListGroupMembersResponse {
     
     public String contentType;
+
     public ListGroupMembersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListGroupMembersResponse {
      */
     
     public Object entityNotFoundException;
+
     public ListGroupMembersResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class ListGroupMembersResponse {
      */
     
     public Object entityStateException;
+
     public ListGroupMembersResponse withEntityStateException(Object entityStateException) {
         this.entityStateException = entityStateException;
         return this;
@@ -39,6 +43,7 @@ public class ListGroupMembersResponse {
      */
     
     public Object invalidParameterException;
+
     public ListGroupMembersResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class ListGroupMembersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListGroupMembersResponse listGroupMembersResponse;
+
     public ListGroupMembersResponse withListGroupMembersResponse(org.openapis.openapi.models.shared.ListGroupMembersResponse listGroupMembersResponse) {
         this.listGroupMembersResponse = listGroupMembersResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListGroupMembersResponse {
      */
     
     public Object organizationNotFoundException;
+
     public ListGroupMembersResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListGroupMembersResponse {
      */
     
     public Object organizationStateException;
+
     public ListGroupMembersResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -76,6 +84,7 @@ public class ListGroupMembersResponse {
     
     
     public Integer statusCode;
+
     public ListGroupMembersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListGroupMembersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListGroupMembersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListGroupMembersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

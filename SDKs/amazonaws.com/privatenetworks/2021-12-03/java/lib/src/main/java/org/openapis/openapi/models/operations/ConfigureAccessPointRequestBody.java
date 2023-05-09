@@ -14,6 +14,7 @@ public class ConfigureAccessPointRequestBody {
      */
     @JsonProperty("accessPointArn")
     public String accessPointArn;
+
     public ConfigureAccessPointRequestBody withAccessPointArn(String accessPointArn) {
         this.accessPointArn = accessPointArn;
         return this;
@@ -25,6 +26,7 @@ public class ConfigureAccessPointRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpiSecretKey")
     public String cpiSecretKey;
+
     public ConfigureAccessPointRequestBody withCpiSecretKey(String cpiSecretKey) {
         this.cpiSecretKey = cpiSecretKey;
         return this;
@@ -36,6 +38,7 @@ public class ConfigureAccessPointRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpiUserId")
     public String cpiUserId;
+
     public ConfigureAccessPointRequestBody withCpiUserId(String cpiUserId) {
         this.cpiUserId = cpiUserId;
         return this;
@@ -47,6 +50,7 @@ public class ConfigureAccessPointRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpiUserPassword")
     public String cpiUserPassword;
+
     public ConfigureAccessPointRequestBody withCpiUserPassword(String cpiUserPassword) {
         this.cpiUserPassword = cpiUserPassword;
         return this;
@@ -58,6 +62,7 @@ public class ConfigureAccessPointRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpiUsername")
     public String cpiUsername;
+
     public ConfigureAccessPointRequestBody withCpiUsername(String cpiUsername) {
         this.cpiUsername = cpiUsername;
         return this;
@@ -69,9 +74,13 @@ public class ConfigureAccessPointRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public ConfigureAccessPointRequestBodyPosition position;
+
     public ConfigureAccessPointRequestBody withPosition(ConfigureAccessPointRequestBodyPosition position) {
         this.position = position;
         return this;
     }
     
+    public ConfigureAccessPointRequestBody(@JsonProperty("accessPointArn") String accessPointArn) {
+        this.accessPointArn = accessPointArn;
+  }
 }

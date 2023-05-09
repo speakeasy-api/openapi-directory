@@ -15,9 +15,11 @@ public class Measurement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processingConfig")
     public MeasurementProcessingConfig processingConfig;
+
     public Measurement withProcessingConfig(MeasurementProcessingConfig processingConfig) {
         this.processingConfig = processingConfig;
         return this;
     }
     
+    public Measurement(){}
 }

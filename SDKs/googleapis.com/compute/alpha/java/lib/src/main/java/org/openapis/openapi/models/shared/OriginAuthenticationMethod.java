@@ -18,9 +18,11 @@ public class OriginAuthenticationMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jwt")
     public Jwt jwt;
+
     public OriginAuthenticationMethod withJwt(Jwt jwt) {
         this.jwt = jwt;
         return this;
     }
     
+    public OriginAuthenticationMethod(){}
 }

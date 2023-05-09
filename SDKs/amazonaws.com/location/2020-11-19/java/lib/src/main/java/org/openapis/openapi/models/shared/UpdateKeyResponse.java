@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class UpdateKeyResponse {
     @JsonProperty("KeyArn")
     public String keyArn;
+
     public UpdateKeyResponse withKeyArn(String keyArn) {
         this.keyArn = keyArn;
         return this;
@@ -24,6 +25,7 @@ public class UpdateKeyResponse {
     
     @JsonProperty("KeyName")
     public String keyName;
+
     public UpdateKeyResponse withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -33,9 +35,15 @@ public class UpdateKeyResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public UpdateKeyResponse withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public UpdateKeyResponse(@JsonProperty("KeyArn") String keyArn, @JsonProperty("KeyName") String keyName, @JsonProperty("UpdateTime") OffsetDateTime updateTime) {
+        this.keyArn = keyArn;
+        this.keyName = keyName;
+        this.updateTime = updateTime;
+  }
 }

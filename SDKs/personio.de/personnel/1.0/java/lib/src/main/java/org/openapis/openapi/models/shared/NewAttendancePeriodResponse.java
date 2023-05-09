@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NewAttendancePeriodResponse {
     @JsonProperty("data")
     public NewAttendancePeriodResponseData data;
+
     public NewAttendancePeriodResponse withData(NewAttendancePeriodResponseData data) {
         this.data = data;
         return this;
@@ -19,9 +20,14 @@ public class NewAttendancePeriodResponse {
     
     @JsonProperty("success")
     public Boolean success;
+
     public NewAttendancePeriodResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public NewAttendancePeriodResponse(@JsonProperty("data") NewAttendancePeriodResponseData data, @JsonProperty("success") Boolean success) {
+        this.data = data;
+        this.success = success;
+  }
 }

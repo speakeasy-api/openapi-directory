@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaTestIntegrationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventParameters")
     public EnterpriseCrmFrontendsEventbusProtoEventParameters eventParameters;
+
     public GoogleCloudIntegrationsV1alphaTestIntegrationsResponse withEventParameters(EnterpriseCrmFrontendsEventbusProtoEventParameters eventParameters) {
         this.eventParameters = eventParameters;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaTestIntegrationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionFailed")
     public Boolean executionFailed;
+
     public GoogleCloudIntegrationsV1alphaTestIntegrationsResponse withExecutionFailed(Boolean executionFailed) {
         this.executionFailed = executionFailed;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaTestIntegrationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionId")
     public String executionId;
+
     public GoogleCloudIntegrationsV1alphaTestIntegrationsResponse withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaTestIntegrationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterEntries")
     public EnterpriseCrmFrontendsEventbusProtoParameterEntry[] parameterEntries;
+
     public GoogleCloudIntegrationsV1alphaTestIntegrationsResponse withParameterEntries(EnterpriseCrmFrontendsEventbusProtoParameterEntry[] parameterEntries) {
         this.parameterEntries = parameterEntries;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudIntegrationsV1alphaTestIntegrationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, GoogleCloudIntegrationsV1alphaValueType> parameters;
+
     public GoogleCloudIntegrationsV1alphaTestIntegrationsResponse withParameters(java.util.Map<String, GoogleCloudIntegrationsV1alphaValueType> parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaTestIntegrationsResponse(){}
 }

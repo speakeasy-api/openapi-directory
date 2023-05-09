@@ -18,6 +18,7 @@ public class GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJsonLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJsonLinks withHref(String href) {
         this.href = href;
         return this;
@@ -29,9 +30,11 @@ public class GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJsonLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("methods")
     public GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJsonLinksMethodsEnum[] methods;
+
     public GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJsonLinks withMethods(GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJsonLinksMethodsEnum[] methods) {
         this.methods = methods;
         return this;
     }
     
+    public GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJsonLinks(){}
 }

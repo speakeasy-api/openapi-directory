@@ -18,9 +18,11 @@ public class SourceGetMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public SourceGetMetadataRequest withSource(Source source) {
         this.source = source;
         return this;
     }
     
+    public SourceGetMetadataRequest(){}
 }

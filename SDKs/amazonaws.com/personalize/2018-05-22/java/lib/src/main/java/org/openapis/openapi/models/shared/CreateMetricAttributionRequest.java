@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateMetricAttributionRequest {
     @JsonProperty("datasetGroupArn")
     public String datasetGroupArn;
+
     public CreateMetricAttributionRequest withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -16,6 +17,7 @@ public class CreateMetricAttributionRequest {
     
     @JsonProperty("metrics")
     public MetricAttribute[] metrics;
+
     public CreateMetricAttributionRequest withMetrics(MetricAttribute[] metrics) {
         this.metrics = metrics;
         return this;
@@ -23,6 +25,7 @@ public class CreateMetricAttributionRequest {
     
     @JsonProperty("metricsOutputConfig")
     public MetricAttributionOutput metricsOutputConfig;
+
     public CreateMetricAttributionRequest withMetricsOutputConfig(MetricAttributionOutput metricsOutputConfig) {
         this.metricsOutputConfig = metricsOutputConfig;
         return this;
@@ -30,9 +33,16 @@ public class CreateMetricAttributionRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateMetricAttributionRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateMetricAttributionRequest(@JsonProperty("datasetGroupArn") String datasetGroupArn, @JsonProperty("metrics") MetricAttribute[] metrics, @JsonProperty("metricsOutputConfig") MetricAttributionOutput metricsOutputConfig, @JsonProperty("name") String name) {
+        this.datasetGroupArn = datasetGroupArn;
+        this.metrics = metrics;
+        this.metricsOutputConfig = metricsOutputConfig;
+        this.name = name;
+  }
 }

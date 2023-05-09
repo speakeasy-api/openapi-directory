@@ -12,9 +12,13 @@ public class TeamsLinkExternalIdpGroupToTeamForOrgRequestBody {
      */
     @JsonProperty("group_id")
     public Long groupId;
+
     public TeamsLinkExternalIdpGroupToTeamForOrgRequestBody withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public TeamsLinkExternalIdpGroupToTeamForOrgRequestBody(@JsonProperty("group_id") Long groupId) {
+        this.groupId = groupId;
+  }
 }

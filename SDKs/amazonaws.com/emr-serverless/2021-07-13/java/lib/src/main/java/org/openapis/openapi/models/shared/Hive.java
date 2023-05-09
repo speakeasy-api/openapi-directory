@@ -15,6 +15,7 @@ public class Hive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initQueryFile")
     public String initQueryFile;
+
     public Hive withInitQueryFile(String initQueryFile) {
         this.initQueryFile = initQueryFile;
         return this;
@@ -23,6 +24,7 @@ public class Hive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public String parameters;
+
     public Hive withParameters(String parameters) {
         this.parameters = parameters;
         return this;
@@ -30,9 +32,13 @@ public class Hive {
     
     @JsonProperty("query")
     public String query;
+
     public Hive withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public Hive(@JsonProperty("query") String query) {
+        this.query = query;
+  }
 }

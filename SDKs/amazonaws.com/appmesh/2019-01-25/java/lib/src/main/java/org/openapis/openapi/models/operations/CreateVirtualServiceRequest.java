@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateVirtualServiceRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateVirtualServiceRequestBody requestBody;
+
     public CreateVirtualServiceRequest withRequestBody(CreateVirtualServiceRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class CreateVirtualServiceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public CreateVirtualServiceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class CreateVirtualServiceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public CreateVirtualServiceRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class CreateVirtualServiceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public CreateVirtualServiceRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class CreateVirtualServiceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public CreateVirtualServiceRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class CreateVirtualServiceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public CreateVirtualServiceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class CreateVirtualServiceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public CreateVirtualServiceRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class CreateVirtualServiceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public CreateVirtualServiceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class CreateVirtualServiceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meshName")
     public String meshName;
+
     public CreateVirtualServiceRequest withMeshName(String meshName) {
         this.meshName = meshName;
         return this;
@@ -78,9 +88,14 @@ public class CreateVirtualServiceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=meshOwner")
     public String meshOwner;
+
     public CreateVirtualServiceRequest withMeshOwner(String meshOwner) {
         this.meshOwner = meshOwner;
         return this;
     }
     
+    public CreateVirtualServiceRequest(@JsonProperty("RequestBody") CreateVirtualServiceRequestBody requestBody, @JsonProperty("meshName") String meshName) {
+        this.requestBody = requestBody;
+        this.meshName = meshName;
+  }
 }

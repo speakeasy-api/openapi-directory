@@ -18,6 +18,7 @@ public class GoogleCloudMlV1PredictionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchSize")
     public String batchSize;
+
     public GoogleCloudMlV1PredictionInput withBatchSize(String batchSize) {
         this.batchSize = batchSize;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1PredictionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataFormat")
     public GoogleCloudMlV1PredictionInputDataFormatEnum dataFormat;
+
     public GoogleCloudMlV1PredictionInput withDataFormat(GoogleCloudMlV1PredictionInputDataFormatEnum dataFormat) {
         this.dataFormat = dataFormat;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudMlV1PredictionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputPaths")
     public String[] inputPaths;
+
     public GoogleCloudMlV1PredictionInput withInputPaths(String[] inputPaths) {
         this.inputPaths = inputPaths;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudMlV1PredictionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxWorkerCount")
     public String maxWorkerCount;
+
     public GoogleCloudMlV1PredictionInput withMaxWorkerCount(String maxWorkerCount) {
         this.maxWorkerCount = maxWorkerCount;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudMlV1PredictionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelName")
     public String modelName;
+
     public GoogleCloudMlV1PredictionInput withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudMlV1PredictionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputDataFormat")
     public GoogleCloudMlV1PredictionInputOutputDataFormatEnum outputDataFormat;
+
     public GoogleCloudMlV1PredictionInput withOutputDataFormat(GoogleCloudMlV1PredictionInputOutputDataFormatEnum outputDataFormat) {
         this.outputDataFormat = outputDataFormat;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudMlV1PredictionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputPath")
     public String outputPath;
+
     public GoogleCloudMlV1PredictionInput withOutputPath(String outputPath) {
         this.outputPath = outputPath;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudMlV1PredictionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public GoogleCloudMlV1PredictionInput withRegion(String region) {
         this.region = region;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudMlV1PredictionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeVersion")
     public String runtimeVersion;
+
     public GoogleCloudMlV1PredictionInput withRuntimeVersion(String runtimeVersion) {
         this.runtimeVersion = runtimeVersion;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudMlV1PredictionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatureName")
     public String signatureName;
+
     public GoogleCloudMlV1PredictionInput withSignatureName(String signatureName) {
         this.signatureName = signatureName;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudMlV1PredictionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudMlV1PredictionInput withUri(String uri) {
         this.uri = uri;
         return this;
@@ -139,9 +150,11 @@ public class GoogleCloudMlV1PredictionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionName")
     public String versionName;
+
     public GoogleCloudMlV1PredictionInput withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     
+    public GoogleCloudMlV1PredictionInput(){}
 }

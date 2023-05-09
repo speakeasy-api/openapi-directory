@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DomainConfiguration {
     @JsonProperty("workflowExecutionRetentionPeriodInDays")
     public String workflowExecutionRetentionPeriodInDays;
+
     public DomainConfiguration withWorkflowExecutionRetentionPeriodInDays(String workflowExecutionRetentionPeriodInDays) {
         this.workflowExecutionRetentionPeriodInDays = workflowExecutionRetentionPeriodInDays;
         return this;
     }
     
+    public DomainConfiguration(@JsonProperty("workflowExecutionRetentionPeriodInDays") String workflowExecutionRetentionPeriodInDays) {
+        this.workflowExecutionRetentionPeriodInDays = workflowExecutionRetentionPeriodInDays;
+  }
 }

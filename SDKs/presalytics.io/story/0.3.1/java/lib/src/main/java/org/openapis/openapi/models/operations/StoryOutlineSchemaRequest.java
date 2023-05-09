@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryOutlineSchemaRequest {
@@ -12,9 +13,13 @@ public class StoryOutlineSchemaRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schema_version")
     public String schemaVersion;
+
     public StoryOutlineSchemaRequest withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
     }
     
+    public StoryOutlineSchemaRequest(@JsonProperty("schema_version") String schemaVersion) {
+        this.schemaVersion = schemaVersion;
+  }
 }

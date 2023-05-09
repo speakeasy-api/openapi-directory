@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * CloudRemovalConfigInput - &lt;p/&gt;
+ * CloudRemovalConfigInput - Input structure for Cloud Removal Operation type
  */
 public class CloudRemovalConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlgorithmName")
     public AlgorithmNameCloudRemovalEnum algorithmName;
+
     public CloudRemovalConfigInput withAlgorithmName(AlgorithmNameCloudRemovalEnum algorithmName) {
         this.algorithmName = algorithmName;
         return this;
@@ -23,6 +24,7 @@ public class CloudRemovalConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InterpolationValue")
     public String interpolationValue;
+
     public CloudRemovalConfigInput withInterpolationValue(String interpolationValue) {
         this.interpolationValue = interpolationValue;
         return this;
@@ -31,9 +33,11 @@ public class CloudRemovalConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetBands")
     public String[] targetBands;
+
     public CloudRemovalConfigInput withTargetBands(String[] targetBands) {
         this.targetBands = targetBands;
         return this;
     }
     
+    public CloudRemovalConfigInput(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class YoutubeI18nLanguagesListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public YoutubeI18nLanguagesListSecurityOption1 option1;
+
     public YoutubeI18nLanguagesListSecurity withOption1(YoutubeI18nLanguagesListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class YoutubeI18nLanguagesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public YoutubeI18nLanguagesListSecurityOption2 option2;
+
     public YoutubeI18nLanguagesListSecurity withOption2(YoutubeI18nLanguagesListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class YoutubeI18nLanguagesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public YoutubeI18nLanguagesListSecurityOption3 option3;
+
     public YoutubeI18nLanguagesListSecurity withOption3(YoutubeI18nLanguagesListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,9 +33,11 @@ public class YoutubeI18nLanguagesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public YoutubeI18nLanguagesListSecurityOption4 option4;
+
     public YoutubeI18nLanguagesListSecurity withOption4(YoutubeI18nLanguagesListSecurityOption4 option4) {
         this.option4 = option4;
         return this;
     }
     
+    public YoutubeI18nLanguagesListSecurity(){}
 }

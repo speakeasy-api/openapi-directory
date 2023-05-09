@@ -18,6 +18,7 @@ public class VmCreationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnet")
     public String subnet;
+
     public VmCreationConfig withSubnet(String subnet) {
         this.subnet = subnet;
         return this;
@@ -29,6 +30,7 @@ public class VmCreationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmMachineType")
     public String vmMachineType;
+
     public VmCreationConfig withVmMachineType(String vmMachineType) {
         this.vmMachineType = vmMachineType;
         return this;
@@ -40,9 +42,11 @@ public class VmCreationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmZone")
     public String vmZone;
+
     public VmCreationConfig withVmZone(String vmZone) {
         this.vmZone = vmZone;
         return this;
     }
     
+    public VmCreationConfig(){}
 }

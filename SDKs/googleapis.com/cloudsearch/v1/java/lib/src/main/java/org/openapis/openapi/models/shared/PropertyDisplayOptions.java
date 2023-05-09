@@ -18,9 +18,11 @@ public class PropertyDisplayOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayLabel")
     public String displayLabel;
+
     public PropertyDisplayOptions withDisplayLabel(String displayLabel) {
         this.displayLabel = displayLabel;
         return this;
     }
     
+    public PropertyDisplayOptions(){}
 }

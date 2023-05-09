@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApplicationResponse {
     
     public String contentType;
+
     public DeleteApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteApplicationResponse {
      */
     
     public java.util.Map<String, Object> deleteApplicationResponse;
+
     public DeleteApplicationResponse withDeleteApplicationResponse(java.util.Map<String, Object> deleteApplicationResponse) {
         this.deleteApplicationResponse = deleteApplicationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteApplicationResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteApplicationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteApplicationResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteApplicationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteApplicationResponse {
     
     
     public Integer statusCode;
+
     public DeleteApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteApplicationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteApplicationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteApplicationResponse {
      */
     
     public Object throttlingException;
+
     public DeleteApplicationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

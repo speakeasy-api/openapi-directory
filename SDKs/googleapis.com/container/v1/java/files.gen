@@ -255,6 +255,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/BlueGreenInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/PlacementPolicyTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/PlacementPolicy.java
 lib/src/main/java/org/openapis/openapi/models/shared/NodeNetworkConfig.java
+lib/src/main/java/org/openapis/openapi/models/shared/PodCIDROverprovisionConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/NetworkPerformanceConfigTotalEgressBandwidthTierEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/NetworkPerformanceConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/MaxPodsConstraint.java
@@ -330,6 +331,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/IPAllocationPolicyIpv6Acces
 lib/src/main/java/org/openapis/openapi/models/shared/IPAllocationPolicyStackTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/IPAllocationPolicy.java
 lib/src/main/java/org/openapis/openapi/models/shared/IPAllocationPolicyInput.java
+lib/src/main/java/org/openapis/openapi/models/shared/AdditionalPodRangesConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/IdentityServiceConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/Fleet.java
 lib/src/main/java/org/openapis/openapi/models/shared/DatabaseEncryptionStateEnum.java
@@ -394,4 +396,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ClusterUpdateDesiredStackTy
 lib/src/main/java/org/openapis/openapi/models/shared/ClusterUpdate.java
 lib/src/main/java/org/openapis/openapi/models/shared/ILBSubsettingConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/IntraNodeVisibilityConfig.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

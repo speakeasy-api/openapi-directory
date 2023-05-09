@@ -15,6 +15,7 @@ public class WarehouseCutoffTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hour")
     public Integer hour;
+
     public WarehouseCutoffTime withHour(Integer hour) {
         this.hour = hour;
         return this;
@@ -26,9 +27,11 @@ public class WarehouseCutoffTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minute")
     public Integer minute;
+
     public WarehouseCutoffTime withMinute(Integer minute) {
         this.minute = minute;
         return this;
     }
     
+    public WarehouseCutoffTime(){}
 }

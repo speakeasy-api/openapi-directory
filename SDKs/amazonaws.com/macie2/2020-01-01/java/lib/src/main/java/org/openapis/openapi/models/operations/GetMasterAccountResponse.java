@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMasterAccountResponse {
@@ -12,6 +13,7 @@ public class GetMasterAccountResponse {
      */
     
     public Object accessDeniedException;
+
     public GetMasterAccountResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetMasterAccountResponse {
      */
     
     public Object conflictException;
+
     public GetMasterAccountResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class GetMasterAccountResponse {
     
     
     public String contentType;
+
     public GetMasterAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetMasterAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMasterAccountResponse getMasterAccountResponse;
+
     public GetMasterAccountResponse withGetMasterAccountResponse(org.openapis.openapi.models.shared.GetMasterAccountResponse getMasterAccountResponse) {
         this.getMasterAccountResponse = getMasterAccountResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetMasterAccountResponse {
      */
     
     public Object internalServerException;
+
     public GetMasterAccountResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class GetMasterAccountResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetMasterAccountResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetMasterAccountResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetMasterAccountResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class GetMasterAccountResponse {
     
     
     public Integer statusCode;
+
     public GetMasterAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetMasterAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMasterAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetMasterAccountResponse {
      */
     
     public Object throttlingException;
+
     public GetMasterAccountResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class GetMasterAccountResponse {
      */
     
     public Object validationException;
+
     public GetMasterAccountResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetMasterAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

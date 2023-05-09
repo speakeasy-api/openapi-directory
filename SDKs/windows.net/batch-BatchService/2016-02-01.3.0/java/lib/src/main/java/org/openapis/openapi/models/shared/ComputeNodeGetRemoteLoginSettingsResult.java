@@ -15,6 +15,7 @@ public class ComputeNodeGetRemoteLoginSettingsResult {
      */
     @JsonProperty("remoteLoginIPAddress")
     public String remoteLoginIPAddress;
+
     public ComputeNodeGetRemoteLoginSettingsResult withRemoteLoginIPAddress(String remoteLoginIPAddress) {
         this.remoteLoginIPAddress = remoteLoginIPAddress;
         return this;
@@ -25,9 +26,14 @@ public class ComputeNodeGetRemoteLoginSettingsResult {
      */
     @JsonProperty("remoteLoginPort")
     public Integer remoteLoginPort;
+
     public ComputeNodeGetRemoteLoginSettingsResult withRemoteLoginPort(Integer remoteLoginPort) {
         this.remoteLoginPort = remoteLoginPort;
         return this;
     }
     
+    public ComputeNodeGetRemoteLoginSettingsResult(@JsonProperty("remoteLoginIPAddress") String remoteLoginIPAddress, @JsonProperty("remoteLoginPort") Integer remoteLoginPort) {
+        this.remoteLoginIPAddress = remoteLoginIPAddress;
+        this.remoteLoginPort = remoteLoginPort;
+  }
 }

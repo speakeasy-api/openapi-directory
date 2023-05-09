@@ -13,11 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class ShareInput {
     /**
+     * Immutable. Full name of the Cloud Filestore Backup resource that this Share is restored from, in the format of projects/{project_id}/locations/{location_id}/backups/{backup_id}. Empty, if the Share is created from scratch and not restored from a backup.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("backup")
+    public String backup;
+
+    public ShareInput withBackup(String backup) {
+        this.backup = backup;
+        return this;
+    }
+    
+    /**
      * File share capacity in gigabytes (GB). Filestore defines 1 GB as 1024^3 bytes. Must be greater than 0.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityGb")
     public String capacityGb;
+
     public ShareInput withCapacityGb(String capacityGb) {
         this.capacityGb = capacityGb;
         return this;
@@ -29,6 +42,7 @@ public class ShareInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ShareInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +54,7 @@ public class ShareInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ShareInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,6 +66,7 @@ public class ShareInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mountName")
     public String mountName;
+
     public ShareInput withMountName(String mountName) {
         this.mountName = mountName;
         return this;
@@ -62,9 +78,11 @@ public class ShareInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nfsExportOptions")
     public NfsExportOptions[] nfsExportOptions;
+
     public ShareInput withNfsExportOptions(NfsExportOptions[] nfsExportOptions) {
         this.nfsExportOptions = nfsExportOptions;
         return this;
     }
     
+    public ShareInput(){}
 }

@@ -15,9 +15,11 @@ public class UpdateLoggerDefinitionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateLoggerDefinitionRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateLoggerDefinitionRequestBody(){}
 }

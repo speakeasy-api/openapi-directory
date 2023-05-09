@@ -15,9 +15,11 @@ public class GetAppReplicationConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverGroupReplicationConfigurations")
     public ServerGroupReplicationConfiguration[] serverGroupReplicationConfigurations;
+
     public GetAppReplicationConfigurationResponse withServerGroupReplicationConfigurations(ServerGroupReplicationConfiguration[] serverGroupReplicationConfigurations) {
         this.serverGroupReplicationConfigurations = serverGroupReplicationConfigurations;
         return this;
     }
     
+    public GetAppReplicationConfigurationResponse(){}
 }

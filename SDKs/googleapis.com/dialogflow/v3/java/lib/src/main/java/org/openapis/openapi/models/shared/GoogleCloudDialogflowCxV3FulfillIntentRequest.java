@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3FulfillIntentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("match")
     public GoogleCloudDialogflowCxV3Match match;
+
     public GoogleCloudDialogflowCxV3FulfillIntentRequest withMatch(GoogleCloudDialogflowCxV3Match match) {
         this.match = match;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3FulfillIntentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchIntentRequest")
     public GoogleCloudDialogflowCxV3MatchIntentRequest matchIntentRequest;
+
     public GoogleCloudDialogflowCxV3FulfillIntentRequest withMatchIntentRequest(GoogleCloudDialogflowCxV3MatchIntentRequest matchIntentRequest) {
         this.matchIntentRequest = matchIntentRequest;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowCxV3FulfillIntentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputAudioConfig")
     public GoogleCloudDialogflowCxV3OutputAudioConfig outputAudioConfig;
+
     public GoogleCloudDialogflowCxV3FulfillIntentRequest withOutputAudioConfig(GoogleCloudDialogflowCxV3OutputAudioConfig outputAudioConfig) {
         this.outputAudioConfig = outputAudioConfig;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3FulfillIntentRequest(){}
 }

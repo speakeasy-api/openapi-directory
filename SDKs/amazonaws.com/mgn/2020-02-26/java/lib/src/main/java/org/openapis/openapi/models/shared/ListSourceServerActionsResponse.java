@@ -15,6 +15,7 @@ public class ListSourceServerActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public SourceServerActionDocument[] items;
+
     public ListSourceServerActionsResponse withItems(SourceServerActionDocument[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class ListSourceServerActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSourceServerActionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListSourceServerActionsResponse(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReservedDBInstancesMessage {
     
     public String dbInstanceClass;
+
     public DescribeReservedDBInstancesMessage withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -19,6 +20,7 @@ public class DescribeReservedDBInstancesMessage {
     
     
     public String duration;
+
     public DescribeReservedDBInstancesMessage withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -26,6 +28,7 @@ public class DescribeReservedDBInstancesMessage {
     
     
     public FilterList[] filters;
+
     public DescribeReservedDBInstancesMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -33,6 +36,7 @@ public class DescribeReservedDBInstancesMessage {
     
     
     public String leaseId;
+
     public DescribeReservedDBInstancesMessage withLeaseId(String leaseId) {
         this.leaseId = leaseId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeReservedDBInstancesMessage {
     
     
     public String marker;
+
     public DescribeReservedDBInstancesMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -47,6 +52,7 @@ public class DescribeReservedDBInstancesMessage {
     
     
     public Long maxRecords;
+
     public DescribeReservedDBInstancesMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -54,6 +60,7 @@ public class DescribeReservedDBInstancesMessage {
     
     
     public Boolean multiAZ;
+
     public DescribeReservedDBInstancesMessage withMultiAZ(Boolean multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -61,6 +68,7 @@ public class DescribeReservedDBInstancesMessage {
     
     
     public String offeringType;
+
     public DescribeReservedDBInstancesMessage withOfferingType(String offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -68,6 +76,7 @@ public class DescribeReservedDBInstancesMessage {
     
     
     public String productDescription;
+
     public DescribeReservedDBInstancesMessage withProductDescription(String productDescription) {
         this.productDescription = productDescription;
         return this;
@@ -75,6 +84,7 @@ public class DescribeReservedDBInstancesMessage {
     
     
     public String reservedDBInstanceId;
+
     public DescribeReservedDBInstancesMessage withReservedDBInstanceId(String reservedDBInstanceId) {
         this.reservedDBInstanceId = reservedDBInstanceId;
         return this;
@@ -82,9 +92,11 @@ public class DescribeReservedDBInstancesMessage {
     
     
     public String reservedDBInstancesOfferingId;
+
     public DescribeReservedDBInstancesMessage withReservedDBInstancesOfferingId(String reservedDBInstancesOfferingId) {
         this.reservedDBInstancesOfferingId = reservedDBInstancesOfferingId;
         return this;
     }
     
+    public DescribeReservedDBInstancesMessage(){}
 }

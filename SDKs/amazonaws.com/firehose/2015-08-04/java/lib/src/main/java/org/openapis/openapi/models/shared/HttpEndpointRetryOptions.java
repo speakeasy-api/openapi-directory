@@ -15,9 +15,11 @@ public class HttpEndpointRetryOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DurationInSeconds")
     public Long durationInSeconds;
+
     public HttpEndpointRetryOptions withDurationInSeconds(Long durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
         return this;
     }
     
+    public HttpEndpointRetryOptions(){}
 }

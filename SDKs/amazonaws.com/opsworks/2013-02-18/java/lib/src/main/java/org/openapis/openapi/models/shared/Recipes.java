@@ -15,6 +15,7 @@ public class Recipes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configure")
     public String[] configure;
+
     public Recipes withConfigure(String[] configure) {
         this.configure = configure;
         return this;
@@ -23,6 +24,7 @@ public class Recipes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Deploy")
     public String[] deploy;
+
     public Recipes withDeploy(String[] deploy) {
         this.deploy = deploy;
         return this;
@@ -31,6 +33,7 @@ public class Recipes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Setup")
     public String[] setup;
+
     public Recipes withSetup(String[] setup) {
         this.setup = setup;
         return this;
@@ -39,6 +42,7 @@ public class Recipes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Shutdown")
     public String[] shutdown;
+
     public Recipes withShutdown(String[] shutdown) {
         this.shutdown = shutdown;
         return this;
@@ -47,9 +51,11 @@ public class Recipes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Undeploy")
     public String[] undeploy;
+
     public Recipes withUndeploy(String[] undeploy) {
         this.undeploy = undeploy;
         return this;
     }
     
+    public Recipes(){}
 }

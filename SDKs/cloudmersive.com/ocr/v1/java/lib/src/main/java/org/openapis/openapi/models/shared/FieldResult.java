@@ -18,6 +18,7 @@ public class FieldResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldValues")
     public OcrPhotoTextElement[] fieldValues;
+
     public FieldResult withFieldValues(OcrPhotoTextElement[] fieldValues) {
         this.fieldValues = fieldValues;
         return this;
@@ -29,9 +30,11 @@ public class FieldResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetField")
     public FormFieldDefinition targetField;
+
     public FieldResult withTargetField(FormFieldDefinition targetField) {
         this.targetField = targetField;
         return this;
     }
     
+    public FieldResult(){}
 }

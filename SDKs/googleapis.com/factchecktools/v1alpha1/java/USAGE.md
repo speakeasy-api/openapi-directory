@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.FactchecktoolsClaimsSearchRequest;
 import org.openapis.openapi.models.operations.FactchecktoolsClaimsSearchResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -16,17 +15,17 @@ public class Application {
                 .build();
 
             FactchecktoolsClaimsSearchRequest req = new FactchecktoolsClaimsSearchRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 accessToken = "provident";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "quibusdam";
                 fields = "unde";
                 key = "nulla";
                 languageCode = "corrupti";
-                maxAgeDays = 847252;
+                maxAgeDays = 847252L;
                 oauthToken = "vel";
-                offset = 623564;
-                pageSize = 645894;
+                offset = 623564L;
+                pageSize = 645894L;
                 pageToken = "suscipit";
                 prettyPrint = false;
                 query = "iure";
@@ -34,15 +33,17 @@ public class Application {
                 reviewPublisherSiteFilter = "debitis";
                 uploadType = "ipsa";
                 uploadProtocol = "delectus";
-            }}            
+            }};            
 
             FactchecktoolsClaimsSearchResponse res = sdk.claims.factchecktoolsClaimsSearch(req);
 
-            if (res.googleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse.isPresent()) {
+            if (res.googleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

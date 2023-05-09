@@ -59,10 +59,8 @@ public class Entitlements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseEntitlementsDeleteResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseEntitlementsDeleteResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseEntitlementsDeleteResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseEntitlementsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Entitlements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseEntitlementsGetResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseEntitlementsGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseEntitlementsGetResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseEntitlementsGetResponse(contentType, httpRes.statusCode()) {{
             entitlement = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,11 +141,9 @@ public class Entitlements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseEntitlementsListResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseEntitlementsListResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseEntitlementsListResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseEntitlementsListResponse(contentType, httpRes.statusCode()) {{
             entitlementsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Entitlements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseEntitlementsUpdateResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseEntitlementsUpdateResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseEntitlementsUpdateResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseEntitlementsUpdateResponse(contentType, httpRes.statusCode()) {{
             entitlement = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

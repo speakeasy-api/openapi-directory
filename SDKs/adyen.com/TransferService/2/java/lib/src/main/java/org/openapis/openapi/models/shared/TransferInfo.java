@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransferInfo {
     @JsonProperty("amount")
     public Amount amount;
+
     public TransferInfo withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -22,6 +23,7 @@ public class TransferInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balanceAccountId")
     public String balanceAccountId;
+
     public TransferInfo withBalanceAccountId(String balanceAccountId) {
         this.balanceAccountId = balanceAccountId;
         return this;
@@ -30,6 +32,7 @@ public class TransferInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank")
     public Bank bank;
+
     public TransferInfo withBank(Bank bank) {
         this.bank = bank;
         return this;
@@ -37,17 +40,23 @@ public class TransferInfo {
     
     @JsonProperty("counterparty")
     public CounterpartyInfo counterparty;
+
     public TransferInfo withCounterparty(CounterpartyInfo counterparty) {
         this.counterparty = counterparty;
         return this;
     }
     
     /**
-     * A human-readable description for the transfer. You can use alphanumeric characters and hyphens. We recommend sending a maximum of 140 characters, otherwise the description may be truncated.
+     * Your description for the transfer. It is used by most banks as the transfer description. We recommend sending a maximum of 140 characters, otherwise the description may be truncated.
+     * 
+     * Supported characters: **[a-z] [A-Z] [0-9] / - ?** **: ( ) . , ' + Space**
+     * 
+     * Supported characters for **regular** and **fast** transfers to a US counterparty: **[a-z] [A-Z] [0-9] &amp; $ % # @** **~ = + - _ ' " ! ?**
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TransferInfo withDescription(String description) {
         this.description = description;
         return this;
@@ -59,6 +68,7 @@ public class TransferInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TransferInfo withId(String id) {
         this.id = id;
         return this;
@@ -70,6 +80,7 @@ public class TransferInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentInstrumentId")
     public String paymentInstrumentId;
+
     public TransferInfo withPaymentInstrumentId(String paymentInstrumentId) {
         this.paymentInstrumentId = paymentInstrumentId;
         return this;
@@ -81,6 +92,7 @@ public class TransferInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public TransferInfo withReference(String reference) {
         this.reference = reference;
         return this;
@@ -94,9 +106,14 @@ public class TransferInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceForBeneficiary")
     public String referenceForBeneficiary;
+
     public TransferInfo withReferenceForBeneficiary(String referenceForBeneficiary) {
         this.referenceForBeneficiary = referenceForBeneficiary;
         return this;
     }
     
+    public TransferInfo(@JsonProperty("amount") Amount amount, @JsonProperty("counterparty") CounterpartyInfo counterparty) {
+        this.amount = amount;
+        this.counterparty = counterparty;
+  }
 }

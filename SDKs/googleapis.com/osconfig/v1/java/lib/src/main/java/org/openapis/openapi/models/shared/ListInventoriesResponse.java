@@ -18,6 +18,7 @@ public class ListInventoriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventories")
     public Inventory[] inventories;
+
     public ListInventoriesResponse withInventories(Inventory[] inventories) {
         this.inventories = inventories;
         return this;
@@ -29,9 +30,11 @@ public class ListInventoriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListInventoriesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListInventoriesResponse(){}
 }

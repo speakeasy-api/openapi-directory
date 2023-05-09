@@ -12,6 +12,7 @@ public class PostNetworksIdActionsChangeIpRangeActionResponseAction {
      */
     @JsonProperty("command")
     public String command;
+
     public PostNetworksIdActionsChangeIpRangeActionResponseAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class PostNetworksIdActionsChangeIpRangeActionResponseAction {
      */
     @JsonProperty("error")
     public PostNetworksIdActionsChangeIpRangeActionResponseActionError error;
+
     public PostNetworksIdActionsChangeIpRangeActionResponseAction withError(PostNetworksIdActionsChangeIpRangeActionResponseActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class PostNetworksIdActionsChangeIpRangeActionResponseAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public PostNetworksIdActionsChangeIpRangeActionResponseAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class PostNetworksIdActionsChangeIpRangeActionResponseAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostNetworksIdActionsChangeIpRangeActionResponseAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostNetworksIdActionsChangeIpRangeActionResponseAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public PostNetworksIdActionsChangeIpRangeActionResponseAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class PostNetworksIdActionsChangeIpRangeActionResponseAction {
      */
     @JsonProperty("resources")
     public PostNetworksIdActionsChangeIpRangeActionResponseActionResources[] resources;
+
     public PostNetworksIdActionsChangeIpRangeActionResponseAction withResources(PostNetworksIdActionsChangeIpRangeActionResponseActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class PostNetworksIdActionsChangeIpRangeActionResponseAction {
      */
     @JsonProperty("started")
     public String started;
+
     public PostNetworksIdActionsChangeIpRangeActionResponseAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class PostNetworksIdActionsChangeIpRangeActionResponseAction {
      */
     @JsonProperty("status")
     public PostNetworksIdActionsChangeIpRangeActionResponseActionStatusEnum status;
+
     public PostNetworksIdActionsChangeIpRangeActionResponseAction withStatus(PostNetworksIdActionsChangeIpRangeActionResponseActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostNetworksIdActionsChangeIpRangeActionResponseAction(@JsonProperty("command") String command, @JsonProperty("error") PostNetworksIdActionsChangeIpRangeActionResponseActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") PostNetworksIdActionsChangeIpRangeActionResponseActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") PostNetworksIdActionsChangeIpRangeActionResponseActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

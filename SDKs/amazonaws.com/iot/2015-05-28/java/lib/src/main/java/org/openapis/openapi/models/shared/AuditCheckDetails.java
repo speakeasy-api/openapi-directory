@@ -15,6 +15,7 @@ public class AuditCheckDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkCompliant")
     public Boolean checkCompliant;
+
     public AuditCheckDetails withCheckCompliant(Boolean checkCompliant) {
         this.checkCompliant = checkCompliant;
         return this;
@@ -23,6 +24,7 @@ public class AuditCheckDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkRunStatus")
     public AuditCheckRunStatusEnum checkRunStatus;
+
     public AuditCheckDetails withCheckRunStatus(AuditCheckRunStatusEnum checkRunStatus) {
         this.checkRunStatus = checkRunStatus;
         return this;
@@ -31,6 +33,7 @@ public class AuditCheckDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public String errorCode;
+
     public AuditCheckDetails withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -39,6 +42,7 @@ public class AuditCheckDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AuditCheckDetails withMessage(String message) {
         this.message = message;
         return this;
@@ -47,6 +51,7 @@ public class AuditCheckDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonCompliantResourcesCount")
     public Long nonCompliantResourcesCount;
+
     public AuditCheckDetails withNonCompliantResourcesCount(Long nonCompliantResourcesCount) {
         this.nonCompliantResourcesCount = nonCompliantResourcesCount;
         return this;
@@ -55,6 +60,7 @@ public class AuditCheckDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suppressedNonCompliantResourcesCount")
     public Long suppressedNonCompliantResourcesCount;
+
     public AuditCheckDetails withSuppressedNonCompliantResourcesCount(Long suppressedNonCompliantResourcesCount) {
         this.suppressedNonCompliantResourcesCount = suppressedNonCompliantResourcesCount;
         return this;
@@ -63,9 +69,11 @@ public class AuditCheckDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalResourcesCount")
     public Long totalResourcesCount;
+
     public AuditCheckDetails withTotalResourcesCount(Long totalResourcesCount) {
         this.totalResourcesCount = totalResourcesCount;
         return this;
     }
     
+    public AuditCheckDetails(){}
 }

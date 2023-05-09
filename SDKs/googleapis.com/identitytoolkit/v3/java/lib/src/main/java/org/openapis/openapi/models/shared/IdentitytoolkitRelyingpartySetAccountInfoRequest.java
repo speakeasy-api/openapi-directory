@@ -18,6 +18,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("captchaChallenge")
     public String captchaChallenge;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withCaptchaChallenge(String captchaChallenge) {
         this.captchaChallenge = captchaChallenge;
         return this;
@@ -29,6 +30,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("captchaResponse")
     public String captchaResponse;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withCaptchaResponse(String captchaResponse) {
         this.captchaResponse = captchaResponse;
         return this;
@@ -40,6 +42,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdAt")
     public String createdAt;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -51,6 +54,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customAttributes")
     public String customAttributes;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withCustomAttributes(String customAttributes) {
         this.customAttributes = customAttributes;
         return this;
@@ -62,6 +66,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegatedProjectNumber")
     public String delegatedProjectNumber;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withDelegatedProjectNumber(String delegatedProjectNumber) {
         this.delegatedProjectNumber = delegatedProjectNumber;
         return this;
@@ -73,6 +78,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteAttribute")
     public String[] deleteAttribute;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withDeleteAttribute(String[] deleteAttribute) {
         this.deleteAttribute = deleteAttribute;
         return this;
@@ -84,6 +90,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteProvider")
     public String[] deleteProvider;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withDeleteProvider(String[] deleteProvider) {
         this.deleteProvider = deleteProvider;
         return this;
@@ -95,6 +102,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableUser")
     public Boolean disableUser;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withDisableUser(Boolean disableUser) {
         this.disableUser = disableUser;
         return this;
@@ -106,6 +114,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -117,6 +126,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -128,6 +138,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailVerified")
     public Boolean emailVerified;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withEmailVerified(Boolean emailVerified) {
         this.emailVerified = emailVerified;
         return this;
@@ -139,6 +150,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idToken")
     public String idToken;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withIdToken(String idToken) {
         this.idToken = idToken;
         return this;
@@ -150,6 +162,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceId")
     public String instanceId;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -161,6 +174,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastLoginAt")
     public String lastLoginAt;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withLastLoginAt(String lastLoginAt) {
         this.lastLoginAt = lastLoginAt;
         return this;
@@ -172,6 +186,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localId")
     public String localId;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withLocalId(String localId) {
         this.localId = localId;
         return this;
@@ -183,6 +198,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oobCode")
     public String oobCode;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withOobCode(String oobCode) {
         this.oobCode = oobCode;
         return this;
@@ -194,6 +210,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -205,6 +222,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -216,6 +234,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photoUrl")
     public String photoUrl;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withPhotoUrl(String photoUrl) {
         this.photoUrl = photoUrl;
         return this;
@@ -227,6 +246,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provider")
     public String[] provider;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withProvider(String[] provider) {
         this.provider = provider;
         return this;
@@ -238,6 +258,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnSecureToken")
     public Boolean returnSecureToken;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withReturnSecureToken(Boolean returnSecureToken) {
         this.returnSecureToken = returnSecureToken;
         return this;
@@ -249,6 +270,7 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upgradeToFederatedLogin")
     public Boolean upgradeToFederatedLogin;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withUpgradeToFederatedLogin(Boolean upgradeToFederatedLogin) {
         this.upgradeToFederatedLogin = upgradeToFederatedLogin;
         return this;
@@ -260,9 +282,11 @@ public class IdentitytoolkitRelyingpartySetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validSince")
     public String validSince;
+
     public IdentitytoolkitRelyingpartySetAccountInfoRequest withValidSince(String validSince) {
         this.validSince = validSince;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartySetAccountInfoRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAlertResponse {
@@ -12,6 +13,7 @@ public class DescribeAlertResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeAlertResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAlertResponse {
     
     
     public String contentType;
+
     public DescribeAlertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAlertResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAlertResponse describeAlertResponse;
+
     public DescribeAlertResponse withDescribeAlertResponse(org.openapis.openapi.models.shared.DescribeAlertResponse describeAlertResponse) {
         this.describeAlertResponse = describeAlertResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAlertResponse {
      */
     
     public Object internalServerException;
+
     public DescribeAlertResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAlertResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAlertResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeAlertResponse {
     
     
     public Integer statusCode;
+
     public DescribeAlertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeAlertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAlertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeAlertResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeAlertResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeAlertResponse {
      */
     
     public Object validationException;
+
     public DescribeAlertResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeAlertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

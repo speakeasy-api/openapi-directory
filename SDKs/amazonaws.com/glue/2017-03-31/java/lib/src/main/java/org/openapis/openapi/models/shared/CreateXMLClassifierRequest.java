@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateXMLClassifierRequest {
     @JsonProperty("Classification")
     public String classification;
+
     public CreateXMLClassifierRequest withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -21,6 +22,7 @@ public class CreateXMLClassifierRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateXMLClassifierRequest withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +31,14 @@ public class CreateXMLClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RowTag")
     public String rowTag;
+
     public CreateXMLClassifierRequest withRowTag(String rowTag) {
         this.rowTag = rowTag;
         return this;
     }
     
+    public CreateXMLClassifierRequest(@JsonProperty("Classification") String classification, @JsonProperty("Name") String name) {
+        this.classification = classification;
+        this.name = name;
+  }
 }

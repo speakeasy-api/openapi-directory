@@ -16,28 +16,25 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetSearchVersionNumberAdditionalDataExtExtEnum;
 import org.openapis.openapi.models.operations.GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum;
 import org.openapis.openapi.models.operations.GetSearchVersionNumberAdditionalDataExtRequest;
 import org.openapis.openapi.models.operations.GetSearchVersionNumberAdditionalDataExtResponse;
+import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.shared.VersionNumberEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     apiKey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            GetSearchVersionNumberAdditionalDataExtRequest req = new GetSearchVersionNumberAdditionalDataExtRequest() {{
-                ext = "json";
-                geometries = "corrupti";
-                geometriesZoom = "13";
-                versionNumber = "2";
-            }}            
+            GetSearchVersionNumberAdditionalDataExtRequest req = new GetSearchVersionNumberAdditionalDataExtRequest(GetSearchVersionNumberAdditionalDataExtExtEnum.JSON, "provident", VersionNumberEnum.TWO) {{
+                geometriesZoom = GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum.SIXTEEN;
+            }};            
 
             GetSearchVersionNumberAdditionalDataExtResponse res = sdk.additionalData.getSearchVersionNumberAdditionalDataExt(req);
 
@@ -47,6 +44,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -54,39 +53,39 @@ public class Application {
 ## Available Resources and Operations
 
 
-### additionalData
+### [additionalData](docs/additionaldata/README.md)
 
-* `getSearchVersionNumberAdditionalDataExt` - Additional Data
+* [getSearchVersionNumberAdditionalDataExt](docs/additionaldata/README.md#getsearchversionnumberadditionaldataext) - Additional Data
 
-### filters
+### [filters](docs/filters/README.md)
 
-* `getSearchVersionNumberGeometryFilterExt` - Geometry Filter
-* `getSearchVersionNumberRoutedFilterPositionHeadingExt` - Routed Filter
-* `postSearchVersionNumberGeometryFilterExt` - Geometry Filter
-* `postSearchVersionNumberRoutedFilterPositionHeadingExt` - Routed Filter
+* [getSearchVersionNumberGeometryFilterExt](docs/filters/README.md#getsearchversionnumbergeometryfilterext) - Geometry Filter
+* [~~getSearchVersionNumberRoutedFilterPositionHeadingExt~~](docs/filters/README.md#getsearchversionnumberroutedfilterpositionheadingext) - Routed Filter :warning: **Deprecated**
+* [postSearchVersionNumberGeometryFilterExt](docs/filters/README.md#postsearchversionnumbergeometryfilterext) - Geometry Filter
+* [~~postSearchVersionNumberRoutedFilterPositionHeadingExt~~](docs/filters/README.md#postsearchversionnumberroutedfilterpositionheadingext) - Routed Filter :warning: **Deprecated**
 
-### geocoding
+### [geocoding](docs/geocoding/README.md)
 
-* `getSearchVersionNumberGeocodeQueryExt` - Geocode
-* `getSearchVersionNumberStructuredGeocodeExt` - Structured Geocode
+* [getSearchVersionNumberGeocodeQueryExt](docs/geocoding/README.md#getsearchversionnumbergeocodequeryext) - Geocode
+* [getSearchVersionNumberStructuredGeocodeExt](docs/geocoding/README.md#getsearchversionnumberstructuredgeocodeext) - Structured Geocode
 
-### reverseGeocoding
+### [reverseGeocoding](docs/reversegeocoding/README.md)
 
-* `getSearchVersionNumberReverseGeocodeCrossStreetPositionExt` - Cross Street lookup
-* `getSearchVersionNumberReverseGeocodePositionExt` - Reverse Geocode
+* [getSearchVersionNumberReverseGeocodeCrossStreetPositionExt](docs/reversegeocoding/README.md#getsearchversionnumberreversegeocodecrossstreetpositionext) - Cross Street lookup
+* [getSearchVersionNumberReverseGeocodePositionExt](docs/reversegeocoding/README.md#getsearchversionnumberreversegeocodepositionext) - Reverse Geocode
 
-### search
+### [search](docs/search/README.md)
 
-* `getSearchVersionNumberCSCategoryExt` - Low Bandwith Category Search
-* `getSearchVersionNumberCategorySearchQueryExt` - Category Search
-* `getSearchVersionNumberGeometrySearchQueryExt` - Geometry Search
-* `getSearchVersionNumberNearbySearchExt` - Nearby Search
-* `getSearchVersionNumberPoiSearchQueryExt` - Points of Interest Search
-* `getSearchVersionNumberRoutedSearchQueryPositionHeadingExt` - Routed Search
-* `getSearchVersionNumberSQueryExt` - Low bandwith Search
-* `getSearchVersionNumberSearchQueryExt` - Fuzzy Search
-* `postSearchVersionNumberGeometrySearchQueryExt` - Geometry Search
-* `postSearchVersionNumberSearchAlongRouteQueryExt` - Along Route Search
+* [~~getSearchVersionNumberCSCategoryExt~~](docs/search/README.md#getsearchversionnumbercscategoryext) - Low Bandwith Category Search :warning: **Deprecated**
+* [getSearchVersionNumberCategorySearchQueryExt](docs/search/README.md#getsearchversionnumbercategorysearchqueryext) - Category Search
+* [getSearchVersionNumberGeometrySearchQueryExt](docs/search/README.md#getsearchversionnumbergeometrysearchqueryext) - Geometry Search
+* [getSearchVersionNumberNearbySearchExt](docs/search/README.md#getsearchversionnumbernearbysearchext) - Nearby Search
+* [getSearchVersionNumberPoiSearchQueryExt](docs/search/README.md#getsearchversionnumberpoisearchqueryext) - Points of Interest Search
+* [~~getSearchVersionNumberRoutedSearchQueryPositionHeadingExt~~](docs/search/README.md#getsearchversionnumberroutedsearchquerypositionheadingext) - Routed Search :warning: **Deprecated**
+* [~~getSearchVersionNumberSQueryExt~~](docs/search/README.md#getsearchversionnumbersqueryext) - Low bandwith Search :warning: **Deprecated**
+* [getSearchVersionNumberSearchQueryExt](docs/search/README.md#getsearchversionnumbersearchqueryext) - Fuzzy Search
+* [postSearchVersionNumberGeometrySearchQueryExt](docs/search/README.md#postsearchversionnumbergeometrysearchqueryext) - Geometry Search
+* [postSearchVersionNumberSearchAlongRouteQueryExt](docs/search/README.md#postsearchversionnumbersearchalongroutequeryext) - Along Route Search
 <!-- End SDK Available Operations -->
 
 ### Maturity

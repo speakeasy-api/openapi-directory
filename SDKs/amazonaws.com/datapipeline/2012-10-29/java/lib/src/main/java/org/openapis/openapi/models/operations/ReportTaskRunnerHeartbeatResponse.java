@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReportTaskRunnerHeartbeatResponse {
     
     public String contentType;
+
     public ReportTaskRunnerHeartbeatResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ReportTaskRunnerHeartbeatResponse {
      */
     
     public Object internalServiceError;
+
     public ReportTaskRunnerHeartbeatResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class ReportTaskRunnerHeartbeatResponse {
      */
     
     public Object invalidRequestException;
+
     public ReportTaskRunnerHeartbeatResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ReportTaskRunnerHeartbeatResponse {
      */
     
     public org.openapis.openapi.models.shared.ReportTaskRunnerHeartbeatOutput reportTaskRunnerHeartbeatOutput;
+
     public ReportTaskRunnerHeartbeatResponse withReportTaskRunnerHeartbeatOutput(org.openapis.openapi.models.shared.ReportTaskRunnerHeartbeatOutput reportTaskRunnerHeartbeatOutput) {
         this.reportTaskRunnerHeartbeatOutput = reportTaskRunnerHeartbeatOutput;
         return this;
@@ -46,6 +51,7 @@ public class ReportTaskRunnerHeartbeatResponse {
     
     
     public Integer statusCode;
+
     public ReportTaskRunnerHeartbeatResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ReportTaskRunnerHeartbeatResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReportTaskRunnerHeartbeatResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ReportTaskRunnerHeartbeatResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

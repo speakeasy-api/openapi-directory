@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetpaymentaccountsRequest {
@@ -12,6 +13,7 @@ public class GetpaymentaccountsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetpaymentaccountsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetpaymentaccountsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetpaymentaccountsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class GetpaymentaccountsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=recurrenceid")
     public String recurrenceid;
+
     public GetpaymentaccountsRequest withRecurrenceid(String recurrenceid) {
         this.recurrenceid = recurrenceid;
         return this;
     }
     
+    public GetpaymentaccountsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("recurrenceid") String recurrenceid) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.recurrenceid = recurrenceid;
+  }
 }

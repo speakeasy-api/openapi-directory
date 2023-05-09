@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAgentStatusResponse {
     
     public String contentType;
+
     public UpdateAgentStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAgentStatusResponse {
      */
     
     public Object dependencyException;
+
     public UpdateAgentStatusResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAgentStatusResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateAgentStatusResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAgentStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAgentStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateAgentStatusResponse {
     
     
     public Integer statusCode;
+
     public UpdateAgentStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAgentStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAgentStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateAgentStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAgentStatusResponse updateAgentStatusResponse;
+
     public UpdateAgentStatusResponse withUpdateAgentStatusResponse(org.openapis.openapi.models.shared.UpdateAgentStatusResponse updateAgentStatusResponse) {
         this.updateAgentStatusResponse = updateAgentStatusResponse;
         return this;
     }
     
+    public UpdateAgentStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

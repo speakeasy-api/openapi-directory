@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListDeploymentGroupsInput {
     @JsonProperty("applicationName")
     public String applicationName;
+
     public ListDeploymentGroupsInput withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -22,9 +23,13 @@ public class ListDeploymentGroupsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDeploymentGroupsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDeploymentGroupsInput(@JsonProperty("applicationName") String applicationName) {
+        this.applicationName = applicationName;
+  }
 }

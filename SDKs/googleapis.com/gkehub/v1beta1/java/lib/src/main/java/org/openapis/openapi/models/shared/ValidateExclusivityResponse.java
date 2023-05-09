@@ -18,9 +18,11 @@ public class ValidateExclusivityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GoogleRpcStatus status;
+
     public ValidateExclusivityResponse withStatus(GoogleRpcStatus status) {
         this.status = status;
         return this;
     }
     
+    public ValidateExclusivityResponse(){}
 }

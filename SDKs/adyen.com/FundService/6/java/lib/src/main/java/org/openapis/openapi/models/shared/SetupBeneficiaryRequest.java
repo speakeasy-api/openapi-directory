@@ -14,6 +14,7 @@ public class SetupBeneficiaryRequest {
      */
     @JsonProperty("destinationAccountCode")
     public String destinationAccountCode;
+
     public SetupBeneficiaryRequest withDestinationAccountCode(String destinationAccountCode) {
         this.destinationAccountCode = destinationAccountCode;
         return this;
@@ -25,6 +26,7 @@ public class SetupBeneficiaryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantReference")
     public String merchantReference;
+
     public SetupBeneficiaryRequest withMerchantReference(String merchantReference) {
         this.merchantReference = merchantReference;
         return this;
@@ -35,9 +37,14 @@ public class SetupBeneficiaryRequest {
      */
     @JsonProperty("sourceAccountCode")
     public String sourceAccountCode;
+
     public SetupBeneficiaryRequest withSourceAccountCode(String sourceAccountCode) {
         this.sourceAccountCode = sourceAccountCode;
         return this;
     }
     
+    public SetupBeneficiaryRequest(@JsonProperty("destinationAccountCode") String destinationAccountCode, @JsonProperty("sourceAccountCode") String sourceAccountCode) {
+        this.destinationAccountCode = destinationAccountCode;
+        this.sourceAccountCode = sourceAccountCode;
+  }
 }

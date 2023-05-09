@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TagDescription {
     
     public String loadBalancerName;
+
     public TagDescription withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -19,9 +20,11 @@ public class TagDescription {
     
     
     public Tag[] tags;
+
     public TagDescription withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagDescription(){}
 }

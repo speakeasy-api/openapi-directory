@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResetConfigPropertyRequest {
@@ -12,9 +13,13 @@ public class ResetConfigPropertyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=propertyName")
     public String propertyName;
+
     public ResetConfigPropertyRequest withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
     }
     
+    public ResetConfigPropertyRequest(@JsonProperty("propertyName") String propertyName) {
+        this.propertyName = propertyName;
+  }
 }

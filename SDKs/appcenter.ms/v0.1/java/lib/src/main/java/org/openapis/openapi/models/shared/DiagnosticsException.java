@@ -17,6 +17,7 @@ public class DiagnosticsException {
      */
     @JsonProperty("frames")
     public DiagnosticsExceptionFrames[] frames;
+
     public DiagnosticsException withFrames(DiagnosticsExceptionFrames[] frames) {
         this.frames = frames;
         return this;
@@ -25,6 +26,7 @@ public class DiagnosticsException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inner_exceptions")
     public DiagnosticsException[] innerExceptions;
+
     public DiagnosticsException withInnerExceptions(DiagnosticsException[] innerExceptions) {
         this.innerExceptions = innerExceptions;
         return this;
@@ -36,6 +38,7 @@ public class DiagnosticsException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public DiagnosticsExceptionPlatformEnum platform;
+
     public DiagnosticsException withPlatform(DiagnosticsExceptionPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -47,6 +50,7 @@ public class DiagnosticsException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public DiagnosticsException withReason(String reason) {
         this.reason = reason;
         return this;
@@ -58,6 +62,7 @@ public class DiagnosticsException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relevant")
     public Boolean relevant;
+
     public DiagnosticsException withRelevant(Boolean relevant) {
         this.relevant = relevant;
         return this;
@@ -69,9 +74,13 @@ public class DiagnosticsException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public DiagnosticsException withType(String type) {
         this.type = type;
         return this;
     }
     
+    public DiagnosticsException(@JsonProperty("frames") DiagnosticsExceptionFrames[] frames) {
+        this.frames = frames;
+  }
 }

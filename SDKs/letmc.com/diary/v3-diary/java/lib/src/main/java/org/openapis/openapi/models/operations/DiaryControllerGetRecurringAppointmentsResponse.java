@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DiaryControllerGetRecurringAppointmentsResponse {
     
     public byte[] body;
+
     public DiaryControllerGetRecurringAppointmentsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class DiaryControllerGetRecurringAppointmentsResponse {
     
     
     public String contentType;
+
     public DiaryControllerGetRecurringAppointmentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DiaryControllerGetRecurringAppointmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.DiaryAppointmentModelResults diaryAppointmentModelResults;
+
     public DiaryControllerGetRecurringAppointmentsResponse withDiaryAppointmentModelResults(org.openapis.openapi.models.shared.DiaryAppointmentModelResults diaryAppointmentModelResults) {
         this.diaryAppointmentModelResults = diaryAppointmentModelResults;
         return this;
@@ -33,6 +37,7 @@ public class DiaryControllerGetRecurringAppointmentsResponse {
     
     
     public Integer statusCode;
+
     public DiaryControllerGetRecurringAppointmentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class DiaryControllerGetRecurringAppointmentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DiaryControllerGetRecurringAppointmentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DiaryControllerGetRecurringAppointmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

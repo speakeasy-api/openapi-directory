@@ -58,11 +58,9 @@ public class VLANs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateNetworkVlanResponse res = new org.openapis.openapi.models.operations.CreateNetworkVlanResponse() {{
+        org.openapis.openapi.models.operations.CreateNetworkVlanResponse res = new org.openapis.openapi.models.operations.CreateNetworkVlanResponse(contentType, httpRes.statusCode()) {{
             createNetworkVlan201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -98,10 +96,8 @@ public class VLANs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteNetworkVlanResponse res = new org.openapis.openapi.models.operations.DeleteNetworkVlanResponse() {{
+        org.openapis.openapi.models.operations.DeleteNetworkVlanResponse res = new org.openapis.openapi.models.operations.DeleteNetworkVlanResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -132,11 +128,9 @@ public class VLANs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkVlanResponse res = new org.openapis.openapi.models.operations.GetNetworkVlanResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkVlanResponse res = new org.openapis.openapi.models.operations.GetNetworkVlanResponse(contentType, httpRes.statusCode()) {{
             getNetworkVlan200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -172,11 +166,9 @@ public class VLANs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkVlansResponse res = new org.openapis.openapi.models.operations.GetNetworkVlansResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkVlansResponse res = new org.openapis.openapi.models.operations.GetNetworkVlansResponse(contentType, httpRes.statusCode()) {{
             getNetworkVlans200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -212,11 +204,9 @@ public class VLANs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkVlansEnabledStateResponse res = new org.openapis.openapi.models.operations.GetNetworkVlansEnabledStateResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkVlansEnabledStateResponse res = new org.openapis.openapi.models.operations.GetNetworkVlansEnabledStateResponse(contentType, httpRes.statusCode()) {{
             getNetworkVlansEnabledState200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -254,11 +244,9 @@ public class VLANs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkVlanResponse res = new org.openapis.openapi.models.operations.UpdateNetworkVlanResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkVlanResponse res = new org.openapis.openapi.models.operations.UpdateNetworkVlanResponse(contentType, httpRes.statusCode()) {{
             updateNetworkVlan200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -299,11 +287,9 @@ public class VLANs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkVlansEnabledStateResponse res = new org.openapis.openapi.models.operations.UpdateNetworkVlansEnabledStateResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkVlansEnabledStateResponse res = new org.openapis.openapi.models.operations.UpdateNetworkVlansEnabledStateResponse(contentType, httpRes.statusCode()) {{
             updateNetworkVlansEnabledState200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

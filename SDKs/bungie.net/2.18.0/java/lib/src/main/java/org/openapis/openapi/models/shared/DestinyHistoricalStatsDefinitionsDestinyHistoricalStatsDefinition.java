@@ -12,6 +12,7 @@ public class DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition {
      */
     
     public Integer category;
+
     public DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition withCategory(Integer category) {
         this.category = category;
         return this;
@@ -22,6 +23,7 @@ public class DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition {
      */
     
     public Integer group;
+
     public DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition withGroup(Integer group) {
         this.group = group;
         return this;
@@ -32,6 +34,7 @@ public class DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition {
      */
     
     public String iconImage;
+
     public DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition withIconImage(String iconImage) {
         this.iconImage = iconImage;
         return this;
@@ -42,6 +45,7 @@ public class DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition {
      */
     
     public Long medalTierHash;
+
     public DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition withMedalTierHash(Long medalTierHash) {
         this.medalTierHash = medalTierHash;
         return this;
@@ -52,6 +56,7 @@ public class DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition {
      */
     
     public DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum mergeMethod;
+
     public DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition withMergeMethod(DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum mergeMethod) {
         this.mergeMethod = mergeMethod;
         return this;
@@ -62,6 +67,7 @@ public class DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition {
      */
     
     public Integer[] modes;
+
     public DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition withModes(Integer[] modes) {
         this.modes = modes;
         return this;
@@ -72,6 +78,7 @@ public class DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition {
      */
     
     public Integer[] periodTypes;
+
     public DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition withPeriodTypes(Integer[] periodTypes) {
         this.periodTypes = periodTypes;
         return this;
@@ -82,6 +89,7 @@ public class DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition {
      */
     
     public String statDescription;
+
     public DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition withStatDescription(String statDescription) {
         this.statDescription = statDescription;
         return this;
@@ -92,6 +100,7 @@ public class DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition {
      */
     
     public String statId;
+
     public DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition withStatId(String statId) {
         this.statId = statId;
         return this;
@@ -102,6 +111,7 @@ public class DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition {
      */
     
     public String statName;
+
     public DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition withStatName(String statName) {
         this.statName = statName;
         return this;
@@ -112,6 +122,7 @@ public class DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition {
      */
     
     public String statNameAbbr;
+
     public DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition withStatNameAbbr(String statNameAbbr) {
         this.statNameAbbr = statNameAbbr;
         return this;
@@ -122,6 +133,7 @@ public class DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition {
      */
     
     public String unitLabel;
+
     public DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition withUnitLabel(String unitLabel) {
         this.unitLabel = unitLabel;
         return this;
@@ -132,6 +144,7 @@ public class DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition {
      */
     
     public Integer unitType;
+
     public DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition withUnitType(Integer unitType) {
         this.unitType = unitType;
         return this;
@@ -142,9 +155,11 @@ public class DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition {
      */
     
     public Integer weight;
+
     public DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition withWeight(Integer weight) {
         this.weight = weight;
         return this;
     }
     
+    public DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition(){}
 }

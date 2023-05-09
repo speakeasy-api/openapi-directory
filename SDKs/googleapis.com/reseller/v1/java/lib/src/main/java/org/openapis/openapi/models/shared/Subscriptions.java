@@ -18,6 +18,7 @@ public class Subscriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Subscriptions withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class Subscriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public Subscriptions withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class Subscriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptions")
     public Subscription[] subscriptions;
+
     public Subscriptions withSubscriptions(Subscription[] subscriptions) {
         this.subscriptions = subscriptions;
         return this;
     }
     
+    public Subscriptions(){}
 }

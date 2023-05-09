@@ -12,6 +12,7 @@ public class Sla {
      */
     @JsonProperty("deliveryChannel")
     public String deliveryChannel;
+
     public Sla withDeliveryChannel(String deliveryChannel) {
         this.deliveryChannel = deliveryChannel;
         return this;
@@ -22,6 +23,7 @@ public class Sla {
      */
     @JsonProperty("deliveryWindow")
     public String deliveryWindow;
+
     public Sla withDeliveryWindow(String deliveryWindow) {
         this.deliveryWindow = deliveryWindow;
         return this;
@@ -32,6 +34,7 @@ public class Sla {
      */
     @JsonProperty("id")
     public String id;
+
     public Sla withId(String id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class Sla {
      */
     @JsonProperty("name")
     public String name;
+
     public Sla withName(String name) {
         this.name = name;
         return this;
@@ -49,6 +53,7 @@ public class Sla {
     
     @JsonProperty("pickupStoreInfo")
     public PickupStoreInfo pickupStoreInfo;
+
     public Sla withPickupStoreInfo(PickupStoreInfo pickupStoreInfo) {
         this.pickupStoreInfo = pickupStoreInfo;
         return this;
@@ -59,6 +64,7 @@ public class Sla {
      */
     @JsonProperty("polygonName")
     public String polygonName;
+
     public Sla withPolygonName(String polygonName) {
         this.polygonName = polygonName;
         return this;
@@ -69,6 +75,7 @@ public class Sla {
      */
     @JsonProperty("price")
     public Integer price;
+
     public Sla withPrice(Integer price) {
         this.price = price;
         return this;
@@ -79,9 +86,20 @@ public class Sla {
      */
     @JsonProperty("shippingEstimate")
     public String shippingEstimate;
+
     public Sla withShippingEstimate(String shippingEstimate) {
         this.shippingEstimate = shippingEstimate;
         return this;
     }
     
+    public Sla(@JsonProperty("deliveryChannel") String deliveryChannel, @JsonProperty("deliveryWindow") String deliveryWindow, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("pickupStoreInfo") PickupStoreInfo pickupStoreInfo, @JsonProperty("polygonName") String polygonName, @JsonProperty("price") Integer price, @JsonProperty("shippingEstimate") String shippingEstimate) {
+        this.deliveryChannel = deliveryChannel;
+        this.deliveryWindow = deliveryWindow;
+        this.id = id;
+        this.name = name;
+        this.pickupStoreInfo = pickupStoreInfo;
+        this.polygonName = polygonName;
+        this.price = price;
+        this.shippingEstimate = shippingEstimate;
+  }
 }

@@ -15,6 +15,7 @@ public class GetTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public Expression filter;
+
     public GetTagsRequest withFilter(Expression filter) {
         this.filter = filter;
         return this;
@@ -23,6 +24,7 @@ public class GetTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetTagsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -31,6 +33,7 @@ public class GetTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetTagsRequest withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -39,6 +42,7 @@ public class GetTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SearchString")
     public String searchString;
+
     public GetTagsRequest withSearchString(String searchString) {
         this.searchString = searchString;
         return this;
@@ -47,6 +51,7 @@ public class GetTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public SortDefinition[] sortBy;
+
     public GetTagsRequest withSortBy(SortDefinition[] sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -55,6 +60,7 @@ public class GetTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagKey")
     public String tagKey;
+
     public GetTagsRequest withTagKey(String tagKey) {
         this.tagKey = tagKey;
         return this;
@@ -62,9 +68,13 @@ public class GetTagsRequest {
     
     @JsonProperty("TimePeriod")
     public DateInterval timePeriod;
+
     public GetTagsRequest withTimePeriod(DateInterval timePeriod) {
         this.timePeriod = timePeriod;
         return this;
     }
     
+    public GetTagsRequest(@JsonProperty("TimePeriod") DateInterval timePeriod) {
+        this.timePeriod = timePeriod;
+  }
 }

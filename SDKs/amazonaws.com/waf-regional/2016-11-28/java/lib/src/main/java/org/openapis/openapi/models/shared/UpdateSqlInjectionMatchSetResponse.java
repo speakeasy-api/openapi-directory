@@ -15,9 +15,11 @@ public class UpdateSqlInjectionMatchSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public UpdateSqlInjectionMatchSetResponse withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
     }
     
+    public UpdateSqlInjectionMatchSetResponse(){}
 }

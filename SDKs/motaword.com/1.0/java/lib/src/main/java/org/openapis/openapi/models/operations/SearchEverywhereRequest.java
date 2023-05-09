@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchEverywhereRequest {
@@ -12,6 +13,7 @@ public class SearchEverywhereRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include[]")
     public SearchEverywhereIncludeEnum[] include;
+
     public SearchEverywhereRequest withInclude(SearchEverywhereIncludeEnum[] include) {
         this.include = include;
         return this;
@@ -19,6 +21,7 @@ public class SearchEverywhereRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public SearchEverywhereRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -26,6 +29,7 @@ public class SearchEverywhereRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public SearchEverywhereRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -36,9 +40,13 @@ public class SearchEverywhereRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public SearchEverywhereRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public SearchEverywhereRequest(@JsonProperty("query") String query) {
+        this.query = query;
+  }
 }

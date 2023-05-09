@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateOpenZFSOriginSnapshotConfiguration {
     @JsonProperty("CopyStrategy")
     public OpenZFSCopyStrategyEnum copyStrategy;
+
     public CreateOpenZFSOriginSnapshotConfiguration withCopyStrategy(OpenZFSCopyStrategyEnum copyStrategy) {
         this.copyStrategy = copyStrategy;
         return this;
@@ -22,9 +23,14 @@ public class CreateOpenZFSOriginSnapshotConfiguration {
      */
     @JsonProperty("SnapshotARN")
     public String snapshotARN;
+
     public CreateOpenZFSOriginSnapshotConfiguration withSnapshotARN(String snapshotARN) {
         this.snapshotARN = snapshotARN;
         return this;
     }
     
+    public CreateOpenZFSOriginSnapshotConfiguration(@JsonProperty("CopyStrategy") OpenZFSCopyStrategyEnum copyStrategy, @JsonProperty("SnapshotARN") String snapshotARN) {
+        this.copyStrategy = copyStrategy;
+        this.snapshotARN = snapshotARN;
+  }
 }

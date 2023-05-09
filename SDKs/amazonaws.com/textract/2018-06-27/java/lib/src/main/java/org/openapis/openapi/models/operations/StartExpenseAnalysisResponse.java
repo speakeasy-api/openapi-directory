@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartExpenseAnalysisResponse {
@@ -12,6 +13,7 @@ public class StartExpenseAnalysisResponse {
      */
     
     public Object accessDeniedException;
+
     public StartExpenseAnalysisResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartExpenseAnalysisResponse {
      */
     
     public Object badDocumentException;
+
     public StartExpenseAnalysisResponse withBadDocumentException(Object badDocumentException) {
         this.badDocumentException = badDocumentException;
         return this;
@@ -29,6 +32,7 @@ public class StartExpenseAnalysisResponse {
     
     
     public String contentType;
+
     public StartExpenseAnalysisResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartExpenseAnalysisResponse {
      */
     
     public Object documentTooLargeException;
+
     public StartExpenseAnalysisResponse withDocumentTooLargeException(Object documentTooLargeException) {
         this.documentTooLargeException = documentTooLargeException;
         return this;
@@ -49,6 +54,7 @@ public class StartExpenseAnalysisResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public StartExpenseAnalysisResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -59,6 +65,7 @@ public class StartExpenseAnalysisResponse {
      */
     
     public Object internalServerError;
+
     public StartExpenseAnalysisResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -69,6 +76,7 @@ public class StartExpenseAnalysisResponse {
      */
     
     public Object invalidKMSKeyException;
+
     public StartExpenseAnalysisResponse withInvalidKMSKeyException(Object invalidKMSKeyException) {
         this.invalidKMSKeyException = invalidKMSKeyException;
         return this;
@@ -79,6 +87,7 @@ public class StartExpenseAnalysisResponse {
      */
     
     public Object invalidParameterException;
+
     public StartExpenseAnalysisResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -89,6 +98,7 @@ public class StartExpenseAnalysisResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public StartExpenseAnalysisResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -99,6 +109,7 @@ public class StartExpenseAnalysisResponse {
      */
     
     public Object limitExceededException;
+
     public StartExpenseAnalysisResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -109,6 +120,7 @@ public class StartExpenseAnalysisResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public StartExpenseAnalysisResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -119,6 +131,7 @@ public class StartExpenseAnalysisResponse {
      */
     
     public org.openapis.openapi.models.shared.StartExpenseAnalysisResponse startExpenseAnalysisResponse;
+
     public StartExpenseAnalysisResponse withStartExpenseAnalysisResponse(org.openapis.openapi.models.shared.StartExpenseAnalysisResponse startExpenseAnalysisResponse) {
         this.startExpenseAnalysisResponse = startExpenseAnalysisResponse;
         return this;
@@ -126,6 +139,7 @@ public class StartExpenseAnalysisResponse {
     
     
     public Integer statusCode;
+
     public StartExpenseAnalysisResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class StartExpenseAnalysisResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartExpenseAnalysisResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,6 +158,7 @@ public class StartExpenseAnalysisResponse {
      */
     
     public Object throttlingException;
+
     public StartExpenseAnalysisResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -153,9 +169,14 @@ public class StartExpenseAnalysisResponse {
      */
     
     public Object unsupportedDocumentException;
+
     public StartExpenseAnalysisResponse withUnsupportedDocumentException(Object unsupportedDocumentException) {
         this.unsupportedDocumentException = unsupportedDocumentException;
         return this;
     }
     
+    public StartExpenseAnalysisResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

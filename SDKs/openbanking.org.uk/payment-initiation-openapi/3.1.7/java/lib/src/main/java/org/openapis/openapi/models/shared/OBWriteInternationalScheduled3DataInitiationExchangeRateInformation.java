@@ -18,6 +18,7 @@ public class OBWriteInternationalScheduled3DataInitiationExchangeRateInformation
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContractIdentification")
     public String contractIdentification;
+
     public OBWriteInternationalScheduled3DataInitiationExchangeRateInformation withContractIdentification(String contractIdentification) {
         this.contractIdentification = contractIdentification;
         return this;
@@ -29,6 +30,7 @@ public class OBWriteInternationalScheduled3DataInitiationExchangeRateInformation
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExchangeRate")
     public Double exchangeRate;
+
     public OBWriteInternationalScheduled3DataInitiationExchangeRateInformation withExchangeRate(Double exchangeRate) {
         this.exchangeRate = exchangeRate;
         return this;
@@ -39,6 +41,7 @@ public class OBWriteInternationalScheduled3DataInitiationExchangeRateInformation
      */
     @JsonProperty("RateType")
     public OBWriteInternationalScheduled3DataInitiationExchangeRateInformationRateTypeEnum rateType;
+
     public OBWriteInternationalScheduled3DataInitiationExchangeRateInformation withRateType(OBWriteInternationalScheduled3DataInitiationExchangeRateInformationRateTypeEnum rateType) {
         this.rateType = rateType;
         return this;
@@ -49,9 +52,14 @@ public class OBWriteInternationalScheduled3DataInitiationExchangeRateInformation
      */
     @JsonProperty("UnitCurrency")
     public String unitCurrency;
+
     public OBWriteInternationalScheduled3DataInitiationExchangeRateInformation withUnitCurrency(String unitCurrency) {
         this.unitCurrency = unitCurrency;
         return this;
     }
     
+    public OBWriteInternationalScheduled3DataInitiationExchangeRateInformation(@JsonProperty("RateType") OBWriteInternationalScheduled3DataInitiationExchangeRateInformationRateTypeEnum rateType, @JsonProperty("UnitCurrency") String unitCurrency) {
+        this.rateType = rateType;
+        this.unitCurrency = unitCurrency;
+  }
 }

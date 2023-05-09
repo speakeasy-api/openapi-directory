@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDetectorModelsResponse {
     
     public String contentType;
+
     public ListDetectorModelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDetectorModelsResponse {
      */
     
     public Object internalFailureException;
+
     public ListDetectorModelsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListDetectorModelsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListDetectorModelsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListDetectorModelsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDetectorModelsResponse listDetectorModelsResponse;
+
     public ListDetectorModelsResponse withListDetectorModelsResponse(org.openapis.openapi.models.shared.ListDetectorModelsResponse listDetectorModelsResponse) {
         this.listDetectorModelsResponse = listDetectorModelsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListDetectorModelsResponse {
     
     
     public Integer statusCode;
+
     public ListDetectorModelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListDetectorModelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDetectorModelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListDetectorModelsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListDetectorModelsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,9 +81,14 @@ public class ListDetectorModelsResponse {
      */
     
     public Object throttlingException;
+
     public ListDetectorModelsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListDetectorModelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

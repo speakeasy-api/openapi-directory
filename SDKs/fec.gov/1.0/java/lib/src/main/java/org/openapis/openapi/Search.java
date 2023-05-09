@@ -60,11 +60,9 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamesCandidatesResponse res = new org.openapis.openapi.models.operations.GetNamesCandidatesResponse() {{
+        org.openapis.openapi.models.operations.GetNamesCandidatesResponse res = new org.openapis.openapi.models.operations.GetNamesCandidatesResponse(contentType, httpRes.statusCode()) {{
             candidateSearchList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -105,11 +103,9 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamesCommitteesResponse res = new org.openapis.openapi.models.operations.GetNamesCommitteesResponse() {{
+        org.openapis.openapi.models.operations.GetNamesCommitteesResponse res = new org.openapis.openapi.models.operations.GetNamesCommitteesResponse(contentType, httpRes.statusCode()) {{
             committeeSearchList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

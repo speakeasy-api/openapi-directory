@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BeyondcorpProjectsLocationsAppConnectorsListResponse {
     
     public String contentType;
+
     public BeyondcorpProjectsLocationsAppConnectorsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BeyondcorpProjectsLocationsAppConnectorsListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudBeyondcorpAppconnectorsV1ListAppConnectorsResponse googleCloudBeyondcorpAppconnectorsV1ListAppConnectorsResponse;
+
     public BeyondcorpProjectsLocationsAppConnectorsListResponse withGoogleCloudBeyondcorpAppconnectorsV1ListAppConnectorsResponse(org.openapis.openapi.models.shared.GoogleCloudBeyondcorpAppconnectorsV1ListAppConnectorsResponse googleCloudBeyondcorpAppconnectorsV1ListAppConnectorsResponse) {
         this.googleCloudBeyondcorpAppconnectorsV1ListAppConnectorsResponse = googleCloudBeyondcorpAppconnectorsV1ListAppConnectorsResponse;
         return this;
@@ -26,6 +29,7 @@ public class BeyondcorpProjectsLocationsAppConnectorsListResponse {
     
     
     public Integer statusCode;
+
     public BeyondcorpProjectsLocationsAppConnectorsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BeyondcorpProjectsLocationsAppConnectorsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BeyondcorpProjectsLocationsAppConnectorsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BeyondcorpProjectsLocationsAppConnectorsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

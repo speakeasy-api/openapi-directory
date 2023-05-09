@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RedirectActionConfig - &lt;p&gt;Information about a redirect action.&lt;/p&gt; &lt;p&gt;A URI consists of the following components: protocol://hostname:port/path?query. You must modify at least one of the following components to avoid a redirect loop: protocol, hostname, port, or path. Any components that you do not modify retain their original values.&lt;/p&gt; &lt;p&gt;You can reuse URI components using the following reserved keywords:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;#{protocol}&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;#{host}&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;#{port}&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;#{path} (the leading "/" is removed)&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;#{query}&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For example, you can change the path to "/new/#{path}", the hostname to "example.#{host}", or the query to "#{query}&amp;amp;value=xyz".&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RedirectActionConfig {
     
     public String host;
+
     public RedirectActionConfig withHost(String host) {
         this.host = host;
         return this;
@@ -19,6 +20,7 @@ public class RedirectActionConfig {
     
     
     public String path;
+
     public RedirectActionConfig withPath(String path) {
         this.path = path;
         return this;
@@ -26,6 +28,7 @@ public class RedirectActionConfig {
     
     
     public String port;
+
     public RedirectActionConfig withPort(String port) {
         this.port = port;
         return this;
@@ -33,6 +36,7 @@ public class RedirectActionConfig {
     
     
     public String protocol;
+
     public RedirectActionConfig withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -40,6 +44,7 @@ public class RedirectActionConfig {
     
     
     public String query;
+
     public RedirectActionConfig withQuery(String query) {
         this.query = query;
         return this;
@@ -47,9 +52,13 @@ public class RedirectActionConfig {
     
     
     public RedirectActionStatusCodeEnumEnum statusCode;
+
     public RedirectActionConfig withStatusCode(RedirectActionStatusCodeEnumEnum statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public RedirectActionConfig(@JsonProperty("StatusCode") RedirectActionStatusCodeEnumEnum statusCode) {
+        this.statusCode = statusCode;
+  }
 }

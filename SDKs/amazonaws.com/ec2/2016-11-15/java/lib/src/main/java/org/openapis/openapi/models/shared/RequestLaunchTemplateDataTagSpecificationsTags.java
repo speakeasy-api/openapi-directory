@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestLaunchTemplateDataTagSpecificationsTags {
     
     public String key;
+
     public RequestLaunchTemplateDataTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class RequestLaunchTemplateDataTagSpecificationsTags {
     
     
     public String value;
+
     public RequestLaunchTemplateDataTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public RequestLaunchTemplateDataTagSpecificationsTags(){}
 }

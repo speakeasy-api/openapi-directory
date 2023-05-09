@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFleetResponse {
@@ -12,6 +13,7 @@ public class CreateFleetResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateFleetResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class CreateFleetResponse {
     
     
     public String contentType;
+
     public CreateFleetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateFleetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFleetResult createFleetResult;
+
     public CreateFleetResponse withCreateFleetResult(org.openapis.openapi.models.shared.CreateFleetResult createFleetResult) {
         this.createFleetResult = createFleetResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateFleetResponse {
      */
     
     public Object incompatibleImageException;
+
     public CreateFleetResponse withIncompatibleImageException(Object incompatibleImageException) {
         this.incompatibleImageException = incompatibleImageException;
         return this;
@@ -49,6 +54,7 @@ public class CreateFleetResponse {
      */
     
     public Object invalidAccountStatusException;
+
     public CreateFleetResponse withInvalidAccountStatusException(Object invalidAccountStatusException) {
         this.invalidAccountStatusException = invalidAccountStatusException;
         return this;
@@ -59,6 +65,7 @@ public class CreateFleetResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public CreateFleetResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -69,6 +76,7 @@ public class CreateFleetResponse {
      */
     
     public Object invalidRoleException;
+
     public CreateFleetResponse withInvalidRoleException(Object invalidRoleException) {
         this.invalidRoleException = invalidRoleException;
         return this;
@@ -79,6 +87,7 @@ public class CreateFleetResponse {
      */
     
     public Object limitExceededException;
+
     public CreateFleetResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -89,6 +98,7 @@ public class CreateFleetResponse {
      */
     
     public Object operationNotPermittedException;
+
     public CreateFleetResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -99,6 +109,7 @@ public class CreateFleetResponse {
      */
     
     public Object requestLimitExceededException;
+
     public CreateFleetResponse withRequestLimitExceededException(Object requestLimitExceededException) {
         this.requestLimitExceededException = requestLimitExceededException;
         return this;
@@ -109,6 +120,7 @@ public class CreateFleetResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateFleetResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -119,6 +131,7 @@ public class CreateFleetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateFleetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -126,6 +139,7 @@ public class CreateFleetResponse {
     
     
     public Integer statusCode;
+
     public CreateFleetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class CreateFleetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFleetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,9 +158,14 @@ public class CreateFleetResponse {
      */
     
     public Object resourceNotAvailableException;
+
     public CreateFleetResponse withResourceNotAvailableException(Object resourceNotAvailableException) {
         this.resourceNotAvailableException = resourceNotAvailableException;
         return this;
     }
     
+    public CreateFleetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

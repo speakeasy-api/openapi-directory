@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteNetworkProfileResponse {
@@ -12,6 +13,7 @@ public class DeleteNetworkProfileResponse {
      */
     
     public Object argumentException;
+
     public DeleteNetworkProfileResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteNetworkProfileResponse {
     
     
     public String contentType;
+
     public DeleteNetworkProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteNetworkProfileResponse {
      */
     
     public java.util.Map<String, Object> deleteNetworkProfileResult;
+
     public DeleteNetworkProfileResponse withDeleteNetworkProfileResult(java.util.Map<String, Object> deleteNetworkProfileResult) {
         this.deleteNetworkProfileResult = deleteNetworkProfileResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteNetworkProfileResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteNetworkProfileResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteNetworkProfileResponse {
      */
     
     public Object notFoundException;
+
     public DeleteNetworkProfileResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteNetworkProfileResponse {
      */
     
     public Object serviceAccountException;
+
     public DeleteNetworkProfileResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteNetworkProfileResponse {
     
     
     public Integer statusCode;
+
     public DeleteNetworkProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteNetworkProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteNetworkProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteNetworkProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

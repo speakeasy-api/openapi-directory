@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetUserAttributeVerificationCodeRequest {
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public GetUserAttributeVerificationCodeRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -21,6 +22,7 @@ public class GetUserAttributeVerificationCodeRequest {
     
     @JsonProperty("AttributeName")
     public String attributeName;
+
     public GetUserAttributeVerificationCodeRequest withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -29,9 +31,14 @@ public class GetUserAttributeVerificationCodeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientMetadata")
     public java.util.Map<String, String> clientMetadata;
+
     public GetUserAttributeVerificationCodeRequest withClientMetadata(java.util.Map<String, String> clientMetadata) {
         this.clientMetadata = clientMetadata;
         return this;
     }
     
+    public GetUserAttributeVerificationCodeRequest(@JsonProperty("AccessToken") String accessToken, @JsonProperty("AttributeName") String attributeName) {
+        this.accessToken = accessToken;
+        this.attributeName = attributeName;
+  }
 }

@@ -43,4 +43,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/AllStatsExampleParamete
 lib/src/main/java/org/openapis/openapi/models/operations/AllStatsExampleParametersResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/AllTeamsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/SpecificTeamResponse.java
+docs/sdk/README.md
+docs/games/README.md
+docs/players/README.md
+docs/stats/README.md
+docs/teams/README.md
 USAGE.md

@@ -23,6 +23,7 @@ public class LandlordAccountingModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountBalance")
     public Double accountBalance;
+
     public LandlordAccountingModel withAccountBalance(Double accountBalance) {
         this.accountBalance = accountBalance;
         return this;
@@ -36,6 +37,7 @@ public class LandlordAccountingModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastPayment")
     public OffsetDateTime lastPayment;
+
     public LandlordAccountingModel withLastPayment(OffsetDateTime lastPayment) {
         this.lastPayment = lastPayment;
         return this;
@@ -47,6 +49,7 @@ public class LandlordAccountingModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaymentHistory")
     public LandlordAccountingEntryModel[] paymentHistory;
+
     public LandlordAccountingModel withPaymentHistory(LandlordAccountingEntryModel[] paymentHistory) {
         this.paymentHistory = paymentHistory;
         return this;
@@ -58,9 +61,11 @@ public class LandlordAccountingModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Statements")
     public LandlordAccountingInvoiceModel[] statements;
+
     public LandlordAccountingModel withStatements(LandlordAccountingInvoiceModel[] statements) {
         this.statements = statements;
         return this;
     }
     
+    public LandlordAccountingModel(){}
 }

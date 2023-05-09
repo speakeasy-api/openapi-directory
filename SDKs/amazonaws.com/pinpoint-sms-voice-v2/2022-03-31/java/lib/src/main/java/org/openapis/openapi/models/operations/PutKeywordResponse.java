@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutKeywordResponse {
@@ -12,6 +13,7 @@ public class PutKeywordResponse {
      */
     
     public Object accessDeniedException;
+
     public PutKeywordResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class PutKeywordResponse {
      */
     
     public Object conflictException;
+
     public PutKeywordResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class PutKeywordResponse {
     
     
     public String contentType;
+
     public PutKeywordResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutKeywordResponse {
      */
     
     public Object internalServerException;
+
     public PutKeywordResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class PutKeywordResponse {
      */
     
     public org.openapis.openapi.models.shared.PutKeywordResult putKeywordResult;
+
     public PutKeywordResponse withPutKeywordResult(org.openapis.openapi.models.shared.PutKeywordResult putKeywordResult) {
         this.putKeywordResult = putKeywordResult;
         return this;
@@ -59,6 +65,7 @@ public class PutKeywordResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutKeywordResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class PutKeywordResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public PutKeywordResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class PutKeywordResponse {
     
     
     public Integer statusCode;
+
     public PutKeywordResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class PutKeywordResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutKeywordResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class PutKeywordResponse {
      */
     
     public Object throttlingException;
+
     public PutKeywordResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class PutKeywordResponse {
      */
     
     public Object validationException;
+
     public PutKeywordResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutKeywordResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

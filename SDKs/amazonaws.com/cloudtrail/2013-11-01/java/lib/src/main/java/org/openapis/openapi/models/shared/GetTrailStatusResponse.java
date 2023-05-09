@@ -20,6 +20,7 @@ public class GetTrailStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsLogging")
     public Boolean isLogging;
+
     public GetTrailStatusResponse withIsLogging(Boolean isLogging) {
         this.isLogging = isLogging;
         return this;
@@ -28,6 +29,7 @@ public class GetTrailStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestCloudWatchLogsDeliveryError")
     public String latestCloudWatchLogsDeliveryError;
+
     public GetTrailStatusResponse withLatestCloudWatchLogsDeliveryError(String latestCloudWatchLogsDeliveryError) {
         this.latestCloudWatchLogsDeliveryError = latestCloudWatchLogsDeliveryError;
         return this;
@@ -38,6 +40,7 @@ public class GetTrailStatusResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LatestCloudWatchLogsDeliveryTime")
     public OffsetDateTime latestCloudWatchLogsDeliveryTime;
+
     public GetTrailStatusResponse withLatestCloudWatchLogsDeliveryTime(OffsetDateTime latestCloudWatchLogsDeliveryTime) {
         this.latestCloudWatchLogsDeliveryTime = latestCloudWatchLogsDeliveryTime;
         return this;
@@ -46,6 +49,7 @@ public class GetTrailStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestDeliveryAttemptSucceeded")
     public String latestDeliveryAttemptSucceeded;
+
     public GetTrailStatusResponse withLatestDeliveryAttemptSucceeded(String latestDeliveryAttemptSucceeded) {
         this.latestDeliveryAttemptSucceeded = latestDeliveryAttemptSucceeded;
         return this;
@@ -54,6 +58,7 @@ public class GetTrailStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestDeliveryAttemptTime")
     public String latestDeliveryAttemptTime;
+
     public GetTrailStatusResponse withLatestDeliveryAttemptTime(String latestDeliveryAttemptTime) {
         this.latestDeliveryAttemptTime = latestDeliveryAttemptTime;
         return this;
@@ -62,6 +67,7 @@ public class GetTrailStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestDeliveryError")
     public String latestDeliveryError;
+
     public GetTrailStatusResponse withLatestDeliveryError(String latestDeliveryError) {
         this.latestDeliveryError = latestDeliveryError;
         return this;
@@ -72,6 +78,7 @@ public class GetTrailStatusResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LatestDeliveryTime")
     public OffsetDateTime latestDeliveryTime;
+
     public GetTrailStatusResponse withLatestDeliveryTime(OffsetDateTime latestDeliveryTime) {
         this.latestDeliveryTime = latestDeliveryTime;
         return this;
@@ -80,6 +87,7 @@ public class GetTrailStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestDigestDeliveryError")
     public String latestDigestDeliveryError;
+
     public GetTrailStatusResponse withLatestDigestDeliveryError(String latestDigestDeliveryError) {
         this.latestDigestDeliveryError = latestDigestDeliveryError;
         return this;
@@ -90,6 +98,7 @@ public class GetTrailStatusResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LatestDigestDeliveryTime")
     public OffsetDateTime latestDigestDeliveryTime;
+
     public GetTrailStatusResponse withLatestDigestDeliveryTime(OffsetDateTime latestDigestDeliveryTime) {
         this.latestDigestDeliveryTime = latestDigestDeliveryTime;
         return this;
@@ -98,6 +107,7 @@ public class GetTrailStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestNotificationAttemptSucceeded")
     public String latestNotificationAttemptSucceeded;
+
     public GetTrailStatusResponse withLatestNotificationAttemptSucceeded(String latestNotificationAttemptSucceeded) {
         this.latestNotificationAttemptSucceeded = latestNotificationAttemptSucceeded;
         return this;
@@ -106,6 +116,7 @@ public class GetTrailStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestNotificationAttemptTime")
     public String latestNotificationAttemptTime;
+
     public GetTrailStatusResponse withLatestNotificationAttemptTime(String latestNotificationAttemptTime) {
         this.latestNotificationAttemptTime = latestNotificationAttemptTime;
         return this;
@@ -114,6 +125,7 @@ public class GetTrailStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestNotificationError")
     public String latestNotificationError;
+
     public GetTrailStatusResponse withLatestNotificationError(String latestNotificationError) {
         this.latestNotificationError = latestNotificationError;
         return this;
@@ -124,6 +136,7 @@ public class GetTrailStatusResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LatestNotificationTime")
     public OffsetDateTime latestNotificationTime;
+
     public GetTrailStatusResponse withLatestNotificationTime(OffsetDateTime latestNotificationTime) {
         this.latestNotificationTime = latestNotificationTime;
         return this;
@@ -134,6 +147,7 @@ public class GetTrailStatusResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartLoggingTime")
     public OffsetDateTime startLoggingTime;
+
     public GetTrailStatusResponse withStartLoggingTime(OffsetDateTime startLoggingTime) {
         this.startLoggingTime = startLoggingTime;
         return this;
@@ -144,6 +158,7 @@ public class GetTrailStatusResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StopLoggingTime")
     public OffsetDateTime stopLoggingTime;
+
     public GetTrailStatusResponse withStopLoggingTime(OffsetDateTime stopLoggingTime) {
         this.stopLoggingTime = stopLoggingTime;
         return this;
@@ -152,6 +167,7 @@ public class GetTrailStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeLoggingStarted")
     public String timeLoggingStarted;
+
     public GetTrailStatusResponse withTimeLoggingStarted(String timeLoggingStarted) {
         this.timeLoggingStarted = timeLoggingStarted;
         return this;
@@ -160,9 +176,11 @@ public class GetTrailStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeLoggingStopped")
     public String timeLoggingStopped;
+
     public GetTrailStatusResponse withTimeLoggingStopped(String timeLoggingStopped) {
         this.timeLoggingStopped = timeLoggingStopped;
         return this;
     }
     
+    public GetTrailStatusResponse(){}
 }

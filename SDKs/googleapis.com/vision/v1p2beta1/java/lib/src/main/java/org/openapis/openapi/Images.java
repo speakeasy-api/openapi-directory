@@ -61,11 +61,9 @@ public class Images {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VisionImagesAnnotateResponse res = new org.openapis.openapi.models.operations.VisionImagesAnnotateResponse() {{
+        org.openapis.openapi.models.operations.VisionImagesAnnotateResponse res = new org.openapis.openapi.models.operations.VisionImagesAnnotateResponse(contentType, httpRes.statusCode()) {{
             googleCloudVisionV1p2beta1BatchAnnotateImagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Images {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VisionImagesAsyncBatchAnnotateResponse res = new org.openapis.openapi.models.operations.VisionImagesAsyncBatchAnnotateResponse() {{
+        org.openapis.openapi.models.operations.VisionImagesAsyncBatchAnnotateResponse res = new org.openapis.openapi.models.operations.VisionImagesAsyncBatchAnnotateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

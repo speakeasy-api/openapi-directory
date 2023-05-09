@@ -14,6 +14,7 @@ public class ReleasesGetLatestPublicRelease200ApplicationJSONDistributionGroups 
      */
     @JsonProperty("id")
     public String id;
+
     public ReleasesGetLatestPublicRelease200ApplicationJSONDistributionGroups withId(String id) {
         this.id = id;
         return this;
@@ -25,9 +26,13 @@ public class ReleasesGetLatestPublicRelease200ApplicationJSONDistributionGroups 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReleasesGetLatestPublicRelease200ApplicationJSONDistributionGroups withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ReleasesGetLatestPublicRelease200ApplicationJSONDistributionGroups(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SetIpAddressTypeInput {
     
     public IpAddressTypeEnum ipAddressType;
+
     public SetIpAddressTypeInput withIpAddressType(IpAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -16,9 +17,14 @@ public class SetIpAddressTypeInput {
     
     
     public String loadBalancerArn;
+
     public SetIpAddressTypeInput withLoadBalancerArn(String loadBalancerArn) {
         this.loadBalancerArn = loadBalancerArn;
         return this;
     }
     
+    public SetIpAddressTypeInput(@JsonProperty("IpAddressType") IpAddressTypeEnum ipAddressType, @JsonProperty("LoadBalancerArn") String loadBalancerArn) {
+        this.ipAddressType = ipAddressType;
+        this.loadBalancerArn = loadBalancerArn;
+  }
 }

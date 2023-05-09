@@ -12,6 +12,7 @@ public class PhoneViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessPhone")
     public String businessPhone;
+
     public PhoneViewModel withBusinessPhone(String businessPhone) {
         this.businessPhone = businessPhone;
         return this;
@@ -20,6 +21,7 @@ public class PhoneViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessPhoneExt")
     public String businessPhoneExt;
+
     public PhoneViewModel withBusinessPhoneExt(String businessPhoneExt) {
         this.businessPhoneExt = businessPhoneExt;
         return this;
@@ -28,6 +30,7 @@ public class PhoneViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homePhone")
     public String homePhone;
+
     public PhoneViewModel withHomePhone(String homePhone) {
         this.homePhone = homePhone;
         return this;
@@ -36,6 +39,7 @@ public class PhoneViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobilePhone")
     public String mobilePhone;
+
     public PhoneViewModel withMobilePhone(String mobilePhone) {
         this.mobilePhone = mobilePhone;
         return this;
@@ -44,9 +48,11 @@ public class PhoneViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneType")
     public String phoneType;
+
     public PhoneViewModel withPhoneType(String phoneType) {
         this.phoneType = phoneType;
         return this;
     }
     
+    public PhoneViewModel(){}
 }

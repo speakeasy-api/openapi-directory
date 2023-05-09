@@ -15,6 +15,7 @@ public class GdgAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public GdgAttributes withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -23,9 +24,11 @@ public class GdgAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollDisposition")
     public String rollDisposition;
+
     public GdgAttributes withRollDisposition(String rollDisposition) {
         this.rollDisposition = rollDisposition;
         return this;
     }
     
+    public GdgAttributes(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PostApiV1MediaRequestBody {
     /**
@@ -12,6 +12,7 @@ public class PostApiV1MediaRequestBody {
      */
     
     public String description;
+
     public PostApiV1MediaRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class PostApiV1MediaRequestBody {
      */
     
     public byte[] file;
+
     public PostApiV1MediaRequestBody withFile(byte[] file) {
         this.file = file;
         return this;
@@ -32,6 +34,7 @@ public class PostApiV1MediaRequestBody {
      */
     
     public String focus;
+
     public PostApiV1MediaRequestBody withFocus(String focus) {
         this.focus = focus;
         return this;
@@ -42,9 +45,13 @@ public class PostApiV1MediaRequestBody {
      */
     
     public byte[] thumbnail;
+
     public PostApiV1MediaRequestBody withThumbnail(byte[] thumbnail) {
         this.thumbnail = thumbnail;
         return this;
     }
     
+    public PostApiV1MediaRequestBody(@JsonProperty("file") byte[] file) {
+        this.file = file;
+  }
 }

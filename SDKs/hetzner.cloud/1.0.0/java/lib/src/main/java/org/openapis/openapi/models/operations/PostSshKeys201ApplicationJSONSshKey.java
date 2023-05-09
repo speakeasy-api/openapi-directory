@@ -12,6 +12,7 @@ public class PostSshKeys201ApplicationJSONSshKey {
      */
     @JsonProperty("created")
     public String created;
+
     public PostSshKeys201ApplicationJSONSshKey withCreated(String created) {
         this.created = created;
         return this;
@@ -22,6 +23,7 @@ public class PostSshKeys201ApplicationJSONSshKey {
      */
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public PostSshKeys201ApplicationJSONSshKey withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -32,6 +34,7 @@ public class PostSshKeys201ApplicationJSONSshKey {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostSshKeys201ApplicationJSONSshKey withId(Long id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class PostSshKeys201ApplicationJSONSshKey {
      */
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public PostSshKeys201ApplicationJSONSshKey withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -52,6 +56,7 @@ public class PostSshKeys201ApplicationJSONSshKey {
      */
     @JsonProperty("name")
     public String name;
+
     public PostSshKeys201ApplicationJSONSshKey withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +67,18 @@ public class PostSshKeys201ApplicationJSONSshKey {
      */
     @JsonProperty("public_key")
     public String publicKey;
+
     public PostSshKeys201ApplicationJSONSshKey withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
     }
     
+    public PostSshKeys201ApplicationJSONSshKey(@JsonProperty("created") String created, @JsonProperty("fingerprint") String fingerprint, @JsonProperty("id") Long id, @JsonProperty("labels") java.util.Map<String, String> labels, @JsonProperty("name") String name, @JsonProperty("public_key") String publicKey) {
+        this.created = created;
+        this.fingerprint = fingerprint;
+        this.id = id;
+        this.labels = labels;
+        this.name = name;
+        this.publicKey = publicKey;
+  }
 }

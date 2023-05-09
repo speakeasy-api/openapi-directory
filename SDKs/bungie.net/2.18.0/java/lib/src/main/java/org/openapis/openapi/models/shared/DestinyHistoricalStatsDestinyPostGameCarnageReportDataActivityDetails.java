@@ -15,6 +15,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportDataActivityDetai
      */
     
     public Long directorActivityHash;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportDataActivityDetails withDirectorActivityHash(Long directorActivityHash) {
         this.directorActivityHash = directorActivityHash;
         return this;
@@ -26,6 +27,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportDataActivityDetai
      */
     
     public Long instanceId;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportDataActivityDetails withInstanceId(Long instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -36,6 +38,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportDataActivityDetai
      */
     
     public Boolean isPrivate;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportDataActivityDetails withIsPrivate(Boolean isPrivate) {
         this.isPrivate = isPrivate;
         return this;
@@ -46,6 +49,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportDataActivityDetai
      */
     
     public Integer membershipType;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportDataActivityDetails withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
@@ -56,6 +60,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportDataActivityDetai
      */
     
     public Integer mode;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportDataActivityDetails withMode(Integer mode) {
         this.mode = mode;
         return this;
@@ -66,6 +71,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportDataActivityDetai
      */
     
     public Integer[] modes;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportDataActivityDetails withModes(Integer[] modes) {
         this.modes = modes;
         return this;
@@ -76,9 +82,11 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportDataActivityDetai
      */
     
     public Long referenceId;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportDataActivityDetails withReferenceId(Long referenceId) {
         this.referenceId = referenceId;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyPostGameCarnageReportDataActivityDetails(){}
 }

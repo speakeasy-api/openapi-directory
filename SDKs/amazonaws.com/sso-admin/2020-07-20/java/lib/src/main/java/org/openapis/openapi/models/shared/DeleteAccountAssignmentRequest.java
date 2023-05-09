@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAccountAssignmentRequest {
     @JsonProperty("InstanceArn")
     public String instanceArn;
+
     public DeleteAccountAssignmentRequest withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
@@ -16,6 +17,7 @@ public class DeleteAccountAssignmentRequest {
     
     @JsonProperty("PermissionSetArn")
     public String permissionSetArn;
+
     public DeleteAccountAssignmentRequest withPermissionSetArn(String permissionSetArn) {
         this.permissionSetArn = permissionSetArn;
         return this;
@@ -23,6 +25,7 @@ public class DeleteAccountAssignmentRequest {
     
     @JsonProperty("PrincipalId")
     public String principalId;
+
     public DeleteAccountAssignmentRequest withPrincipalId(String principalId) {
         this.principalId = principalId;
         return this;
@@ -30,6 +33,7 @@ public class DeleteAccountAssignmentRequest {
     
     @JsonProperty("PrincipalType")
     public PrincipalTypeEnum principalType;
+
     public DeleteAccountAssignmentRequest withPrincipalType(PrincipalTypeEnum principalType) {
         this.principalType = principalType;
         return this;
@@ -37,6 +41,7 @@ public class DeleteAccountAssignmentRequest {
     
     @JsonProperty("TargetId")
     public String targetId;
+
     public DeleteAccountAssignmentRequest withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
@@ -44,9 +49,18 @@ public class DeleteAccountAssignmentRequest {
     
     @JsonProperty("TargetType")
     public TargetTypeEnum targetType;
+
     public DeleteAccountAssignmentRequest withTargetType(TargetTypeEnum targetType) {
         this.targetType = targetType;
         return this;
     }
     
+    public DeleteAccountAssignmentRequest(@JsonProperty("InstanceArn") String instanceArn, @JsonProperty("PermissionSetArn") String permissionSetArn, @JsonProperty("PrincipalId") String principalId, @JsonProperty("PrincipalType") PrincipalTypeEnum principalType, @JsonProperty("TargetId") String targetId, @JsonProperty("TargetType") TargetTypeEnum targetType) {
+        this.instanceArn = instanceArn;
+        this.permissionSetArn = permissionSetArn;
+        this.principalId = principalId;
+        this.principalType = principalType;
+        this.targetId = targetId;
+        this.targetType = targetType;
+  }
 }

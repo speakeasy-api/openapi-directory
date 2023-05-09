@@ -15,6 +15,7 @@ public class BookDepreciationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averagingMethod")
     public BookDepreciationSettingAveragingMethodEnum averagingMethod;
+
     public BookDepreciationSetting withAveragingMethod(BookDepreciationSettingAveragingMethodEnum averagingMethod) {
         this.averagingMethod = averagingMethod;
         return this;
@@ -26,6 +27,7 @@ public class BookDepreciationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookEffectiveDateOfChangeId")
     public String bookEffectiveDateOfChangeId;
+
     public BookDepreciationSetting withBookEffectiveDateOfChangeId(String bookEffectiveDateOfChangeId) {
         this.bookEffectiveDateOfChangeId = bookEffectiveDateOfChangeId;
         return this;
@@ -37,6 +39,7 @@ public class BookDepreciationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("depreciableObjectId")
     public String depreciableObjectId;
+
     public BookDepreciationSetting withDepreciableObjectId(String depreciableObjectId) {
         this.depreciableObjectId = depreciableObjectId;
         return this;
@@ -48,6 +51,7 @@ public class BookDepreciationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("depreciableObjectType")
     public String depreciableObjectType;
+
     public BookDepreciationSetting withDepreciableObjectType(String depreciableObjectType) {
         this.depreciableObjectType = depreciableObjectType;
         return this;
@@ -59,6 +63,7 @@ public class BookDepreciationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("depreciationCalculationMethod")
     public BookDepreciationSettingDepreciationCalculationMethodEnum depreciationCalculationMethod;
+
     public BookDepreciationSetting withDepreciationCalculationMethod(BookDepreciationSettingDepreciationCalculationMethodEnum depreciationCalculationMethod) {
         this.depreciationCalculationMethod = depreciationCalculationMethod;
         return this;
@@ -70,6 +75,7 @@ public class BookDepreciationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("depreciationMethod")
     public BookDepreciationSettingDepreciationMethodEnum depreciationMethod;
+
     public BookDepreciationSetting withDepreciationMethod(BookDepreciationSettingDepreciationMethodEnum depreciationMethod) {
         this.depreciationMethod = depreciationMethod;
         return this;
@@ -81,6 +87,7 @@ public class BookDepreciationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("depreciationRate")
     public Double depreciationRate;
+
     public BookDepreciationSetting withDepreciationRate(Double depreciationRate) {
         this.depreciationRate = depreciationRate;
         return this;
@@ -92,9 +99,11 @@ public class BookDepreciationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveLifeYears")
     public Long effectiveLifeYears;
+
     public BookDepreciationSetting withEffectiveLifeYears(Long effectiveLifeYears) {
         this.effectiveLifeYears = effectiveLifeYears;
         return this;
     }
     
+    public BookDepreciationSetting(){}
 }

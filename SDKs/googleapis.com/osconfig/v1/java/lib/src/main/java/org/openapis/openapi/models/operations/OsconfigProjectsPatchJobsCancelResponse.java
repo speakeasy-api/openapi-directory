@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OsconfigProjectsPatchJobsCancelResponse {
     
     public String contentType;
+
     public OsconfigProjectsPatchJobsCancelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class OsconfigProjectsPatchJobsCancelResponse {
      */
     
     public org.openapis.openapi.models.shared.PatchJob patchJob;
+
     public OsconfigProjectsPatchJobsCancelResponse withPatchJob(org.openapis.openapi.models.shared.PatchJob patchJob) {
         this.patchJob = patchJob;
         return this;
@@ -26,6 +29,7 @@ public class OsconfigProjectsPatchJobsCancelResponse {
     
     
     public Integer statusCode;
+
     public OsconfigProjectsPatchJobsCancelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class OsconfigProjectsPatchJobsCancelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OsconfigProjectsPatchJobsCancelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OsconfigProjectsPatchJobsCancelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

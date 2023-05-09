@@ -15,6 +15,7 @@ public class Settings {
      */
     @JsonProperty("defaultSla")
     public String defaultSla;
+
     public Settings withDefaultSla(String defaultSla) {
         this.defaultSla = defaultSla;
         return this;
@@ -25,6 +26,7 @@ public class Settings {
      */
     @JsonProperty("deliveryChannels")
     public String[] deliveryChannels;
+
     public Settings withDeliveryChannels(String[] deliveryChannels) {
         this.deliveryChannels = deliveryChannels;
         return this;
@@ -35,6 +37,7 @@ public class Settings {
      */
     @JsonProperty("executionHourInUtc")
     public Long executionHourInUtc;
+
     public Settings withExecutionHourInUtc(Long executionHourInUtc) {
         this.executionHourInUtc = executionHourInUtc;
         return this;
@@ -45,6 +48,7 @@ public class Settings {
      */
     @JsonProperty("isMultipleInstallmentsEnabledOnCreation")
     public Boolean isMultipleInstallmentsEnabledOnCreation;
+
     public Settings withIsMultipleInstallmentsEnabledOnCreation(Boolean isMultipleInstallmentsEnabledOnCreation) {
         this.isMultipleInstallmentsEnabledOnCreation = isMultipleInstallmentsEnabledOnCreation;
         return this;
@@ -55,6 +59,7 @@ public class Settings {
      */
     @JsonProperty("isMultipleInstallmentsEnabledOnUpdate")
     public Boolean isMultipleInstallmentsEnabledOnUpdate;
+
     public Settings withIsMultipleInstallmentsEnabledOnUpdate(Boolean isMultipleInstallmentsEnabledOnUpdate) {
         this.isMultipleInstallmentsEnabledOnUpdate = isMultipleInstallmentsEnabledOnUpdate;
         return this;
@@ -65,6 +70,7 @@ public class Settings {
      */
     @JsonProperty("isUsingV3")
     public Boolean isUsingV3;
+
     public Settings withIsUsingV3(Boolean isUsingV3) {
         this.isUsingV3 = isUsingV3;
         return this;
@@ -75,6 +81,7 @@ public class Settings {
      */
     @JsonProperty("manualPriceAllowed")
     public Boolean manualPriceAllowed;
+
     public Settings withManualPriceAllowed(Boolean manualPriceAllowed) {
         this.manualPriceAllowed = manualPriceAllowed;
         return this;
@@ -85,6 +92,7 @@ public class Settings {
      */
     @JsonProperty("onMigrationProcess")
     public Boolean onMigrationProcess;
+
     public Settings withOnMigrationProcess(Boolean onMigrationProcess) {
         this.onMigrationProcess = onMigrationProcess;
         return this;
@@ -95,6 +103,7 @@ public class Settings {
      */
     @JsonProperty("orderCustomDataAppId")
     public String orderCustomDataAppId;
+
     public Settings withOrderCustomDataAppId(String orderCustomDataAppId) {
         this.orderCustomDataAppId = orderCustomDataAppId;
         return this;
@@ -105,6 +114,7 @@ public class Settings {
      */
     @JsonProperty("postponeExpiration")
     public Boolean postponeExpiration;
+
     public Settings withPostponeExpiration(Boolean postponeExpiration) {
         this.postponeExpiration = postponeExpiration;
         return this;
@@ -115,6 +125,7 @@ public class Settings {
      */
     @JsonProperty("randomIdGeneration")
     public Boolean randomIdGeneration;
+
     public Settings withRandomIdGeneration(Boolean randomIdGeneration) {
         this.randomIdGeneration = randomIdGeneration;
         return this;
@@ -125,6 +136,7 @@ public class Settings {
      */
     @JsonProperty("slaOption")
     public String slaOption;
+
     public Settings withSlaOption(String slaOption) {
         this.slaOption = slaOption;
         return this;
@@ -135,6 +147,7 @@ public class Settings {
      */
     @JsonProperty("useItemPriceFromOriginalOrder")
     public Boolean useItemPriceFromOriginalOrder;
+
     public Settings withUseItemPriceFromOriginalOrder(Boolean useItemPriceFromOriginalOrder) {
         this.useItemPriceFromOriginalOrder = useItemPriceFromOriginalOrder;
         return this;
@@ -145,9 +158,26 @@ public class Settings {
      */
     @JsonProperty("workflowVersion")
     public String workflowVersion;
+
     public Settings withWorkflowVersion(String workflowVersion) {
         this.workflowVersion = workflowVersion;
         return this;
     }
     
+    public Settings(@JsonProperty("defaultSla") String defaultSla, @JsonProperty("deliveryChannels") String[] deliveryChannels, @JsonProperty("executionHourInUtc") Long executionHourInUtc, @JsonProperty("isMultipleInstallmentsEnabledOnCreation") Boolean isMultipleInstallmentsEnabledOnCreation, @JsonProperty("isMultipleInstallmentsEnabledOnUpdate") Boolean isMultipleInstallmentsEnabledOnUpdate, @JsonProperty("isUsingV3") Boolean isUsingV3, @JsonProperty("manualPriceAllowed") Boolean manualPriceAllowed, @JsonProperty("onMigrationProcess") Boolean onMigrationProcess, @JsonProperty("orderCustomDataAppId") String orderCustomDataAppId, @JsonProperty("postponeExpiration") Boolean postponeExpiration, @JsonProperty("randomIdGeneration") Boolean randomIdGeneration, @JsonProperty("slaOption") String slaOption, @JsonProperty("useItemPriceFromOriginalOrder") Boolean useItemPriceFromOriginalOrder, @JsonProperty("workflowVersion") String workflowVersion) {
+        this.defaultSla = defaultSla;
+        this.deliveryChannels = deliveryChannels;
+        this.executionHourInUtc = executionHourInUtc;
+        this.isMultipleInstallmentsEnabledOnCreation = isMultipleInstallmentsEnabledOnCreation;
+        this.isMultipleInstallmentsEnabledOnUpdate = isMultipleInstallmentsEnabledOnUpdate;
+        this.isUsingV3 = isUsingV3;
+        this.manualPriceAllowed = manualPriceAllowed;
+        this.onMigrationProcess = onMigrationProcess;
+        this.orderCustomDataAppId = orderCustomDataAppId;
+        this.postponeExpiration = postponeExpiration;
+        this.randomIdGeneration = randomIdGeneration;
+        this.slaOption = slaOption;
+        this.useItemPriceFromOriginalOrder = useItemPriceFromOriginalOrder;
+        this.workflowVersion = workflowVersion;
+  }
 }

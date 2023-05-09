@@ -12,6 +12,7 @@ public class DestinyComponentsRecordsDestinyRecordComponent {
      */
     
     public Integer completedCount;
+
     public DestinyComponentsRecordsDestinyRecordComponent withCompletedCount(Integer completedCount) {
         this.completedCount = completedCount;
         return this;
@@ -19,6 +20,7 @@ public class DestinyComponentsRecordsDestinyRecordComponent {
     
     
     public DestinyQuestsDestinyObjectiveProgress[] intervalObjectives;
+
     public DestinyComponentsRecordsDestinyRecordComponent withIntervalObjectives(DestinyQuestsDestinyObjectiveProgress[] intervalObjectives) {
         this.intervalObjectives = intervalObjectives;
         return this;
@@ -26,6 +28,7 @@ public class DestinyComponentsRecordsDestinyRecordComponent {
     
     
     public Integer intervalsRedeemedCount;
+
     public DestinyComponentsRecordsDestinyRecordComponent withIntervalsRedeemedCount(Integer intervalsRedeemedCount) {
         this.intervalsRedeemedCount = intervalsRedeemedCount;
         return this;
@@ -33,6 +36,7 @@ public class DestinyComponentsRecordsDestinyRecordComponent {
     
     
     public DestinyQuestsDestinyObjectiveProgress[] objectives;
+
     public DestinyComponentsRecordsDestinyRecordComponent withObjectives(DestinyQuestsDestinyObjectiveProgress[] objectives) {
         this.objectives = objectives;
         return this;
@@ -43,6 +47,7 @@ public class DestinyComponentsRecordsDestinyRecordComponent {
      */
     
     public Boolean[] rewardVisibilty;
+
     public DestinyComponentsRecordsDestinyRecordComponent withRewardVisibilty(Boolean[] rewardVisibilty) {
         this.rewardVisibilty = rewardVisibilty;
         return this;
@@ -50,9 +55,11 @@ public class DestinyComponentsRecordsDestinyRecordComponent {
     
     
     public Integer state;
+
     public DestinyComponentsRecordsDestinyRecordComponent withState(Integer state) {
         this.state = state;
         return this;
     }
     
+    public DestinyComponentsRecordsDestinyRecordComponent(){}
 }

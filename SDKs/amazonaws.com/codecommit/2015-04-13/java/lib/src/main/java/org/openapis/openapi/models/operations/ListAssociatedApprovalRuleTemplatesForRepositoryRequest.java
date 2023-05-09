@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAssociatedApprovalRuleTemplatesForRepositoryRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ListAssociatedApprovalRuleTemplatesForRepositoryInput listAssociatedApprovalRuleTemplatesForRepositoryInput;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withListAssociatedApprovalRuleTemplatesForRepositoryInput(org.openapis.openapi.models.shared.ListAssociatedApprovalRuleTemplatesForRepositoryInput listAssociatedApprovalRuleTemplatesForRepositoryInput) {
         this.listAssociatedApprovalRuleTemplatesForRepositoryInput = listAssociatedApprovalRuleTemplatesForRepositoryInput;
         return this;
@@ -16,6 +18,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,6 +74,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ListAssociatedApprovalRuleTemplatesForRepositoryXAmzTargetEnum xAmzTarget;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withXAmzTarget(ListAssociatedApprovalRuleTemplatesForRepositoryXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
@@ -75,6 +85,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public String maxResults;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -85,9 +96,14 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAssociatedApprovalRuleTemplatesForRepositoryRequest(@JsonProperty("ListAssociatedApprovalRuleTemplatesForRepositoryInput") org.openapis.openapi.models.shared.ListAssociatedApprovalRuleTemplatesForRepositoryInput listAssociatedApprovalRuleTemplatesForRepositoryInput, @JsonProperty("X-Amz-Target") ListAssociatedApprovalRuleTemplatesForRepositoryXAmzTargetEnum xAmzTarget) {
+        this.listAssociatedApprovalRuleTemplatesForRepositoryInput = listAssociatedApprovalRuleTemplatesForRepositoryInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

@@ -15,6 +15,7 @@ public class DescribeFileSystemAliasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Aliases")
     public Alias[] aliases;
+
     public DescribeFileSystemAliasesResponse withAliases(Alias[] aliases) {
         this.aliases = aliases;
         return this;
@@ -23,9 +24,11 @@ public class DescribeFileSystemAliasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeFileSystemAliasesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFileSystemAliasesResponse(){}
 }

@@ -15,6 +15,7 @@ public class StartSegmentDetectionFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShotFilter")
     public StartShotDetectionFilter shotFilter;
+
     public StartSegmentDetectionFilters withShotFilter(StartShotDetectionFilter shotFilter) {
         this.shotFilter = shotFilter;
         return this;
@@ -23,9 +24,11 @@ public class StartSegmentDetectionFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TechnicalCueFilter")
     public StartTechnicalCueDetectionFilter technicalCueFilter;
+
     public StartSegmentDetectionFilters withTechnicalCueFilter(StartTechnicalCueDetectionFilter technicalCueFilter) {
         this.technicalCueFilter = technicalCueFilter;
         return this;
     }
     
+    public StartSegmentDetectionFilters(){}
 }

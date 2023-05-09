@@ -12,6 +12,7 @@ public class CreateApiVersionRequestBodyVersionSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateApiVersionRequestBodyVersionSource withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class CreateApiVersionRequestBodyVersionSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relations")
     public CreateApiVersionRequestBodyVersionSourceRelations relations;
+
     public CreateApiVersionRequestBodyVersionSource withRelations(CreateApiVersionRequestBodyVersionSourceRelations relations) {
         this.relations = relations;
         return this;
@@ -28,9 +30,11 @@ public class CreateApiVersionRequestBodyVersionSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public Boolean schema;
+
     public CreateApiVersionRequestBodyVersionSource withSchema(Boolean schema) {
         this.schema = schema;
         return this;
     }
     
+    public CreateApiVersionRequestBodyVersionSource(){}
 }

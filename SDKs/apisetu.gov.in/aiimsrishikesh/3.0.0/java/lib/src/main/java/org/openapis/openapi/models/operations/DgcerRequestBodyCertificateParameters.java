@@ -12,6 +12,7 @@ public class DgcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public DgcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,9 +23,14 @@ public class DgcerRequestBodyCertificateParameters {
      */
     @JsonProperty("RROLL")
     public String rroll;
+
     public DgcerRequestBodyCertificateParameters withRroll(String rroll) {
         this.rroll = rroll;
         return this;
     }
     
+    public DgcerRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("RROLL") String rroll) {
+        this.fullName = fullName;
+        this.rroll = rroll;
+  }
 }

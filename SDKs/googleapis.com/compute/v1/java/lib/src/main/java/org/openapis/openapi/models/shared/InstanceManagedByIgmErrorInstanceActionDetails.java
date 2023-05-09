@@ -15,6 +15,7 @@ public class InstanceManagedByIgmErrorInstanceActionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public InstanceManagedByIgmErrorInstanceActionDetailsActionEnum action;
+
     public InstanceManagedByIgmErrorInstanceActionDetails withAction(InstanceManagedByIgmErrorInstanceActionDetailsActionEnum action) {
         this.action = action;
         return this;
@@ -26,6 +27,7 @@ public class InstanceManagedByIgmErrorInstanceActionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public InstanceManagedByIgmErrorInstanceActionDetails withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -34,9 +36,11 @@ public class InstanceManagedByIgmErrorInstanceActionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public ManagedInstanceVersion version;
+
     public InstanceManagedByIgmErrorInstanceActionDetails withVersion(ManagedInstanceVersion version) {
         this.version = version;
         return this;
     }
     
+    public InstanceManagedByIgmErrorInstanceActionDetails(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateBotResponse {
@@ -12,6 +13,7 @@ public class CreateBotResponse {
      */
     
     public Object conflictException;
+
     public CreateBotResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateBotResponse {
     
     
     public String contentType;
+
     public CreateBotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateBotResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateBotResponse createBotResponse;
+
     public CreateBotResponse withCreateBotResponse(org.openapis.openapi.models.shared.CreateBotResponse createBotResponse) {
         this.createBotResponse = createBotResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateBotResponse {
      */
     
     public Object internalServerException;
+
     public CreateBotResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateBotResponse {
      */
     
     public Object preconditionFailedException;
+
     public CreateBotResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -59,6 +65,7 @@ public class CreateBotResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateBotResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateBotResponse {
     
     
     public Integer statusCode;
+
     public CreateBotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateBotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateBotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateBotResponse {
      */
     
     public Object throttlingException;
+
     public CreateBotResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateBotResponse {
      */
     
     public Object validationException;
+
     public CreateBotResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateBotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

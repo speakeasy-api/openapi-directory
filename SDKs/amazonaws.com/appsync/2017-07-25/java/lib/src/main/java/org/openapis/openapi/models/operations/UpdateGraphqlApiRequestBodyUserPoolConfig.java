@@ -15,6 +15,7 @@ public class UpdateGraphqlApiRequestBodyUserPoolConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appIdClientRegex")
     public String appIdClientRegex;
+
     public UpdateGraphqlApiRequestBodyUserPoolConfig withAppIdClientRegex(String appIdClientRegex) {
         this.appIdClientRegex = appIdClientRegex;
         return this;
@@ -23,6 +24,7 @@ public class UpdateGraphqlApiRequestBodyUserPoolConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsRegion")
     public String awsRegion;
+
     public UpdateGraphqlApiRequestBodyUserPoolConfig withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -31,6 +33,7 @@ public class UpdateGraphqlApiRequestBodyUserPoolConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultAction")
     public org.openapis.openapi.models.shared.DefaultActionEnum defaultAction;
+
     public UpdateGraphqlApiRequestBodyUserPoolConfig withDefaultAction(org.openapis.openapi.models.shared.DefaultActionEnum defaultAction) {
         this.defaultAction = defaultAction;
         return this;
@@ -39,9 +42,11 @@ public class UpdateGraphqlApiRequestBodyUserPoolConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userPoolId")
     public String userPoolId;
+
     public UpdateGraphqlApiRequestBodyUserPoolConfig withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public UpdateGraphqlApiRequestBodyUserPoolConfig(){}
 }

@@ -15,6 +15,7 @@ public class GeoLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lat")
     public Double lat;
+
     public GeoLocation withLat(Double lat) {
         this.lat = lat;
         return this;
@@ -23,9 +24,11 @@ public class GeoLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lon")
     public Double lon;
+
     public GeoLocation withLon(Double lon) {
         this.lon = lon;
         return this;
     }
     
+    public GeoLocation(){}
 }

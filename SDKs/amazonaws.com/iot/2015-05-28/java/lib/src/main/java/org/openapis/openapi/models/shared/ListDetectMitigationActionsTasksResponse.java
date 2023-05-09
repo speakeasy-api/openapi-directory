@@ -15,6 +15,7 @@ public class ListDetectMitigationActionsTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDetectMitigationActionsTasksResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListDetectMitigationActionsTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tasks")
     public DetectMitigationActionsTaskSummary[] tasks;
+
     public ListDetectMitigationActionsTasksResponse withTasks(DetectMitigationActionsTaskSummary[] tasks) {
         this.tasks = tasks;
         return this;
     }
     
+    public ListDetectMitigationActionsTasksResponse(){}
 }

@@ -18,6 +18,7 @@ public class EventPeriodUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public EventPeriodUpdate withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class EventPeriodUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timePeriod")
     public EventPeriodRange timePeriod;
+
     public EventPeriodUpdate withTimePeriod(EventPeriodRange timePeriod) {
         this.timePeriod = timePeriod;
         return this;
@@ -40,9 +42,11 @@ public class EventPeriodUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updates")
     public EventUpdateRequest[] updates;
+
     public EventPeriodUpdate withUpdates(EventUpdateRequest[] updates) {
         this.updates = updates;
         return this;
     }
     
+    public EventPeriodUpdate(){}
 }

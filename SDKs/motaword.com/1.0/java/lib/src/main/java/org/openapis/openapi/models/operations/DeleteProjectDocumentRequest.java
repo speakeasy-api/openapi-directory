@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteProjectDocumentRequest {
@@ -12,6 +13,7 @@ public class DeleteProjectDocumentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
     public Long documentId;
+
     public DeleteProjectDocumentRequest withDocumentId(Long documentId) {
         this.documentId = documentId;
         return this;
@@ -22,9 +24,14 @@ public class DeleteProjectDocumentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public Long projectId;
+
     public DeleteProjectDocumentRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public DeleteProjectDocumentRequest(@JsonProperty("documentId") Long documentId, @JsonProperty("projectId") Long projectId) {
+        this.documentId = documentId;
+        this.projectId = projectId;
+  }
 }

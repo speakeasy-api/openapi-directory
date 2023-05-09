@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GroundhogRequest;
 import org.openapis.openapi.models.operations.GroundhogResponse;
 
@@ -26,18 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GroundhogRequest req = new GroundhogRequest() {{
-                slug = "corrupti";
-            }}            
+            GroundhogRequest req = new GroundhogRequest("corrupti");            
 
             GroundhogResponse res = sdk.groundhogs.groundhog(req);
 
-            if (res.groundhog200ApplicationJSONObject.isPresent()) {
+            if (res.groundhog200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -45,19 +44,19 @@ public class Application {
 ## Available Resources and Operations
 
 
-### groundhogs
+### [groundhogs](docs/groundhogs/README.md)
 
-* `groundhog` - Get a groundhog by slug
-* `groundhogs` - Get all groundhogs
+* [groundhog](docs/groundhogs/README.md#groundhog) - Get a groundhog by slug
+* [groundhogs](docs/groundhogs/README.md#groundhogs) - Get all groundhogs
 
-### info
+### [info](docs/info/README.md)
 
-* `root` - Root
-* `spec` - Get JSON schema
+* [root](docs/info/README.md#root) - Root
+* [spec](docs/info/README.md#spec) - Get JSON schema
 
-### predictions
+### [predictions](docs/predictions/README.md)
 
-* `predictions` - Get predictions for a given year
+* [predictions](docs/predictions/README.md#predictions) - Get predictions for a given year
 <!-- End SDK Available Operations -->
 
 ### Maturity

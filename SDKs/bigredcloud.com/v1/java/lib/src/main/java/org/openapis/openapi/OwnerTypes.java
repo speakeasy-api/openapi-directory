@@ -48,11 +48,9 @@ public class OwnerTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OwnerTypesGetResponse res = new org.openapis.openapi.models.operations.OwnerTypesGetResponse() {{
+        org.openapis.openapi.models.operations.OwnerTypesGetResponse res = new org.openapis.openapi.models.operations.OwnerTypesGetResponse(contentType, httpRes.statusCode()) {{
             pageResultOwnerTypeDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

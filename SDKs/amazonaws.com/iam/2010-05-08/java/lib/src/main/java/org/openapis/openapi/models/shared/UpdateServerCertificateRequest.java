@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateServerCertificateRequest {
     
     public String newPath;
+
     public UpdateServerCertificateRequest withNewPath(String newPath) {
         this.newPath = newPath;
         return this;
@@ -16,6 +17,7 @@ public class UpdateServerCertificateRequest {
     
     
     public String newServerCertificateName;
+
     public UpdateServerCertificateRequest withNewServerCertificateName(String newServerCertificateName) {
         this.newServerCertificateName = newServerCertificateName;
         return this;
@@ -23,9 +25,13 @@ public class UpdateServerCertificateRequest {
     
     
     public String serverCertificateName;
+
     public UpdateServerCertificateRequest withServerCertificateName(String serverCertificateName) {
         this.serverCertificateName = serverCertificateName;
         return this;
     }
     
+    public UpdateServerCertificateRequest(@JsonProperty("ServerCertificateName") String serverCertificateName) {
+        this.serverCertificateName = serverCertificateName;
+  }
 }

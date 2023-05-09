@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OpenZFSUserOrGroupQuota {
     @JsonProperty("Id")
     public Long id;
+
     public OpenZFSUserOrGroupQuota withId(Long id) {
         this.id = id;
         return this;
@@ -19,6 +20,7 @@ public class OpenZFSUserOrGroupQuota {
     
     @JsonProperty("StorageCapacityQuotaGiB")
     public Long storageCapacityQuotaGiB;
+
     public OpenZFSUserOrGroupQuota withStorageCapacityQuotaGiB(Long storageCapacityQuotaGiB) {
         this.storageCapacityQuotaGiB = storageCapacityQuotaGiB;
         return this;
@@ -26,9 +28,15 @@ public class OpenZFSUserOrGroupQuota {
     
     @JsonProperty("Type")
     public OpenZFSQuotaTypeEnum type;
+
     public OpenZFSUserOrGroupQuota withType(OpenZFSQuotaTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public OpenZFSUserOrGroupQuota(@JsonProperty("Id") Long id, @JsonProperty("StorageCapacityQuotaGiB") Long storageCapacityQuotaGiB, @JsonProperty("Type") OpenZFSQuotaTypeEnum type) {
+        this.id = id;
+        this.storageCapacityQuotaGiB = storageCapacityQuotaGiB;
+        this.type = type;
+  }
 }

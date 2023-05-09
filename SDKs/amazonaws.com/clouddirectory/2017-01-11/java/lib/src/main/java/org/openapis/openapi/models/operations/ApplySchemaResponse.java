@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ApplySchemaResponse {
@@ -12,6 +13,7 @@ public class ApplySchemaResponse {
      */
     
     public Object accessDeniedException;
+
     public ApplySchemaResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ApplySchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.ApplySchemaResponse applySchemaResponse;
+
     public ApplySchemaResponse withApplySchemaResponse(org.openapis.openapi.models.shared.ApplySchemaResponse applySchemaResponse) {
         this.applySchemaResponse = applySchemaResponse;
         return this;
@@ -29,6 +32,7 @@ public class ApplySchemaResponse {
     
     
     public String contentType;
+
     public ApplySchemaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ApplySchemaResponse {
      */
     
     public Object internalServiceException;
+
     public ApplySchemaResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class ApplySchemaResponse {
      */
     
     public Object invalidArnException;
+
     public ApplySchemaResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -59,6 +65,7 @@ public class ApplySchemaResponse {
      */
     
     public Object invalidAttachmentException;
+
     public ApplySchemaResponse withInvalidAttachmentException(Object invalidAttachmentException) {
         this.invalidAttachmentException = invalidAttachmentException;
         return this;
@@ -69,6 +76,7 @@ public class ApplySchemaResponse {
      */
     
     public Object limitExceededException;
+
     public ApplySchemaResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ApplySchemaResponse {
     
     
     public Integer statusCode;
+
     public ApplySchemaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ApplySchemaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ApplySchemaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ApplySchemaResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ApplySchemaResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class ApplySchemaResponse {
      */
     
     public Object retryableConflictException;
+
     public ApplySchemaResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -113,6 +125,7 @@ public class ApplySchemaResponse {
      */
     
     public Object schemaAlreadyExistsException;
+
     public ApplySchemaResponse withSchemaAlreadyExistsException(Object schemaAlreadyExistsException) {
         this.schemaAlreadyExistsException = schemaAlreadyExistsException;
         return this;
@@ -123,9 +136,14 @@ public class ApplySchemaResponse {
      */
     
     public Object validationException;
+
     public ApplySchemaResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ApplySchemaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -106,10 +106,8 @@ public class Canvas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CanvasDataAnalyticsSummaryResponse res = new org.openapis.openapi.models.operations.CanvasDataAnalyticsSummaryResponse() {{
+        org.openapis.openapi.models.operations.CanvasDataAnalyticsSummaryResponse res = new org.openapis.openapi.models.operations.CanvasDataAnalyticsSummaryResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,10 +201,8 @@ public class Canvas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CanvasDataSeriesAnalyticsResponse res = new org.openapis.openapi.models.operations.CanvasDataSeriesAnalyticsResponse() {{
+        org.openapis.openapi.models.operations.CanvasDataSeriesAnalyticsResponse res = new org.openapis.openapi.models.operations.CanvasDataSeriesAnalyticsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -290,10 +286,8 @@ public class Canvas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CanvasDetailsResponse res = new org.openapis.openapi.models.operations.CanvasDetailsResponse() {{
+        org.openapis.openapi.models.operations.CanvasDetailsResponse res = new org.openapis.openapi.models.operations.CanvasDetailsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -351,10 +345,8 @@ public class Canvas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CanvasListResponse res = new org.openapis.openapi.models.operations.CanvasListResponse() {{
+        org.openapis.openapi.models.operations.CanvasListResponse res = new org.openapis.openapi.models.operations.CanvasListResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class FirstLastNameGenderIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public FirstLastNameGenderIn withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -23,6 +24,7 @@ public class FirstLastNameGenderIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public String gender;
+
     public FirstLastNameGenderIn withGender(String gender) {
         this.gender = gender;
         return this;
@@ -31,6 +33,7 @@ public class FirstLastNameGenderIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FirstLastNameGenderIn withId(String id) {
         this.id = id;
         return this;
@@ -39,9 +42,11 @@ public class FirstLastNameGenderIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public FirstLastNameGenderIn withLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
     
+    public FirstLastNameGenderIn(){}
 }

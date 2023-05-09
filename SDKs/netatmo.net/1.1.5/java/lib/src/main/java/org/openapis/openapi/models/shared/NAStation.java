@@ -12,6 +12,7 @@ public class NAStation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lag_down")
     public Integer lagDown;
+
     public NAStation withLagDown(Integer lagDown) {
         this.lagDown = lagDown;
         return this;
@@ -20,6 +21,7 @@ public class NAStation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lag_up")
     public Integer lagUp;
+
     public NAStation withLagUp(Integer lagUp) {
         this.lagUp = lagUp;
         return this;
@@ -28,6 +30,7 @@ public class NAStation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("off_overshoot")
     public Float offOvershoot;
+
     public NAStation withOffOvershoot(Float offOvershoot) {
         this.offOvershoot = offOvershoot;
         return this;
@@ -36,6 +39,7 @@ public class NAStation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("on_overshoot")
     public Float onOvershoot;
+
     public NAStation withOnOvershoot(Float onOvershoot) {
         this.onOvershoot = onOvershoot;
         return this;
@@ -44,6 +48,7 @@ public class NAStation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pk")
     public Integer pk;
+
     public NAStation withPk(Integer pk) {
         this.pk = pk;
         return this;
@@ -52,9 +57,11 @@ public class NAStation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tau")
     public Integer tau;
+
     public NAStation withTau(Integer tau) {
         this.tau = tau;
         return this;
     }
     
+    public NAStation(){}
 }

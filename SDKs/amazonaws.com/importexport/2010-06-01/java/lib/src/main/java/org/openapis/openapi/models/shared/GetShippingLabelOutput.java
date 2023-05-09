@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetShippingLabelOutput {
     
     public String shippingLabelURL;
+
     public GetShippingLabelOutput withShippingLabelURL(String shippingLabelURL) {
         this.shippingLabelURL = shippingLabelURL;
         return this;
@@ -19,9 +20,11 @@ public class GetShippingLabelOutput {
     
     
     public String warning;
+
     public GetShippingLabelOutput withWarning(String warning) {
         this.warning = warning;
         return this;
     }
     
+    public GetShippingLabelOutput(){}
 }

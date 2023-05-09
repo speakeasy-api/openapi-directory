@@ -57,14 +57,12 @@ public class Author {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAuthorIfNotExistsForUsingGETResponse res = new org.openapis.openapi.models.operations.CreateAuthorIfNotExistsForUsingGETResponse() {{
+        org.openapis.openapi.models.operations.CreateAuthorIfNotExistsForUsingGETResponse res = new org.openapis.openapi.models.operations.CreateAuthorIfNotExistsForUsingGETResponse(contentType, httpRes.statusCode()) {{
             createAuthorIfNotExistsForUsingGET200ApplicationJSONObject = null;
             createAuthorIfNotExistsForUsingGET400ApplicationJSONObject = null;
             createAuthorIfNotExistsForUsingGET401ApplicationJSONObject = null;
             createAuthorIfNotExistsForUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -126,14 +124,12 @@ public class Author {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAuthorIfNotExistsForUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateAuthorIfNotExistsForUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.CreateAuthorIfNotExistsForUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateAuthorIfNotExistsForUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             createAuthorIfNotExistsForUsingPOST200ApplicationJSONObject = null;
             createAuthorIfNotExistsForUsingPOST400ApplicationJSONObject = null;
             createAuthorIfNotExistsForUsingPOST401ApplicationJSONObject = null;
             createAuthorIfNotExistsForUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,14 +191,12 @@ public class Author {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAuthorUsingGETResponse res = new org.openapis.openapi.models.operations.CreateAuthorUsingGETResponse() {{
+        org.openapis.openapi.models.operations.CreateAuthorUsingGETResponse res = new org.openapis.openapi.models.operations.CreateAuthorUsingGETResponse(contentType, httpRes.statusCode()) {{
             createAuthorUsingGET200ApplicationJSONObject = null;
             createAuthorUsingGET400ApplicationJSONObject = null;
             createAuthorUsingGET401ApplicationJSONObject = null;
             createAuthorUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -264,14 +258,12 @@ public class Author {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAuthorUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateAuthorUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.CreateAuthorUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateAuthorUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             createAuthorUsingPOST200ApplicationJSONObject = null;
             createAuthorUsingPOST400ApplicationJSONObject = null;
             createAuthorUsingPOST401ApplicationJSONObject = null;
             createAuthorUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -333,14 +325,12 @@ public class Author {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETAuthorNameUsingGETResponse res = new org.openapis.openapi.models.operations.GETAuthorNameUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETAuthorNameUsingGETResponse res = new org.openapis.openapi.models.operations.GETAuthorNameUsingGETResponse(contentType, httpRes.statusCode()) {{
             getAuthorNameUsingGET200ApplicationJSONObject = null;
             getAuthorNameUsingGET400ApplicationJSONObject = null;
             getAuthorNameUsingGET401ApplicationJSONObject = null;
             getAuthorNameUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -402,14 +392,12 @@ public class Author {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAuthorNameUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetAuthorNameUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetAuthorNameUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetAuthorNameUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             getAuthorNameUsingPOST200ApplicationJSONObject = null;
             getAuthorNameUsingPOST400ApplicationJSONObject = null;
             getAuthorNameUsingPOST401ApplicationJSONObject = null;
             getAuthorNameUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -471,14 +459,12 @@ public class Author {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPadsOfAuthorUsingGETResponse res = new org.openapis.openapi.models.operations.ListPadsOfAuthorUsingGETResponse() {{
+        org.openapis.openapi.models.operations.ListPadsOfAuthorUsingGETResponse res = new org.openapis.openapi.models.operations.ListPadsOfAuthorUsingGETResponse(contentType, httpRes.statusCode()) {{
             listPadsOfAuthorUsingGET200ApplicationJSONObject = null;
             listPadsOfAuthorUsingGET400ApplicationJSONObject = null;
             listPadsOfAuthorUsingGET401ApplicationJSONObject = null;
             listPadsOfAuthorUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -540,14 +526,12 @@ public class Author {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPadsOfAuthorUsingPOSTResponse res = new org.openapis.openapi.models.operations.ListPadsOfAuthorUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.ListPadsOfAuthorUsingPOSTResponse res = new org.openapis.openapi.models.operations.ListPadsOfAuthorUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             listPadsOfAuthorUsingPOST200ApplicationJSONObject = null;
             listPadsOfAuthorUsingPOST400ApplicationJSONObject = null;
             listPadsOfAuthorUsingPOST401ApplicationJSONObject = null;
             listPadsOfAuthorUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -609,14 +593,12 @@ public class Author {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSessionsOfAuthorUsingGETResponse res = new org.openapis.openapi.models.operations.ListSessionsOfAuthorUsingGETResponse() {{
+        org.openapis.openapi.models.operations.ListSessionsOfAuthorUsingGETResponse res = new org.openapis.openapi.models.operations.ListSessionsOfAuthorUsingGETResponse(contentType, httpRes.statusCode()) {{
             listSessionsOfAuthorUsingGET200ApplicationJSONObject = null;
             listSessionsOfAuthorUsingGET400ApplicationJSONObject = null;
             listSessionsOfAuthorUsingGET401ApplicationJSONObject = null;
             listSessionsOfAuthorUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -678,14 +660,12 @@ public class Author {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSessionsOfAuthorUsingPOSTResponse res = new org.openapis.openapi.models.operations.ListSessionsOfAuthorUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.ListSessionsOfAuthorUsingPOSTResponse res = new org.openapis.openapi.models.operations.ListSessionsOfAuthorUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             listSessionsOfAuthorUsingPOST200ApplicationJSONObject = null;
             listSessionsOfAuthorUsingPOST400ApplicationJSONObject = null;
             listSessionsOfAuthorUsingPOST401ApplicationJSONObject = null;
             listSessionsOfAuthorUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDatabaseResponse {
@@ -12,6 +13,7 @@ public class CreateDatabaseResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateDatabaseResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -22,6 +24,7 @@ public class CreateDatabaseResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateDatabaseResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class CreateDatabaseResponse {
     
     
     public String contentType;
+
     public CreateDatabaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,8 +43,20 @@ public class CreateDatabaseResponse {
      */
     
     public java.util.Map<String, Object> createDatabaseResponse;
+
     public CreateDatabaseResponse withCreateDatabaseResponse(java.util.Map<String, Object> createDatabaseResponse) {
         this.createDatabaseResponse = createDatabaseResponse;
+        return this;
+    }
+    
+    /**
+     * FederatedResourceAlreadyExistsException
+     */
+    
+    public Object federatedResourceAlreadyExistsException;
+
+    public CreateDatabaseResponse withFederatedResourceAlreadyExistsException(Object federatedResourceAlreadyExistsException) {
+        this.federatedResourceAlreadyExistsException = federatedResourceAlreadyExistsException;
         return this;
     }
     
@@ -49,6 +65,7 @@ public class CreateDatabaseResponse {
      */
     
     public Object glueEncryptionException;
+
     public CreateDatabaseResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -59,6 +76,7 @@ public class CreateDatabaseResponse {
      */
     
     public Object internalServiceException;
+
     public CreateDatabaseResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +87,7 @@ public class CreateDatabaseResponse {
      */
     
     public Object invalidInputException;
+
     public CreateDatabaseResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +98,7 @@ public class CreateDatabaseResponse {
      */
     
     public Object operationTimeoutException;
+
     public CreateDatabaseResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -86,6 +106,7 @@ public class CreateDatabaseResponse {
     
     
     public Integer statusCode;
+
     public CreateDatabaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +114,7 @@ public class CreateDatabaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDatabaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +125,14 @@ public class CreateDatabaseResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public CreateDatabaseResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
     }
     
+    public CreateDatabaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

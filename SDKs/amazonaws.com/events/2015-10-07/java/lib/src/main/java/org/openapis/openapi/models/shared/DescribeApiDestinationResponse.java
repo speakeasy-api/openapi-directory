@@ -20,6 +20,7 @@ public class DescribeApiDestinationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiDestinationArn")
     public String apiDestinationArn;
+
     public DescribeApiDestinationResponse withApiDestinationArn(String apiDestinationArn) {
         this.apiDestinationArn = apiDestinationArn;
         return this;
@@ -28,6 +29,7 @@ public class DescribeApiDestinationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiDestinationState")
     public ApiDestinationStateEnum apiDestinationState;
+
     public DescribeApiDestinationResponse withApiDestinationState(ApiDestinationStateEnum apiDestinationState) {
         this.apiDestinationState = apiDestinationState;
         return this;
@@ -36,6 +38,7 @@ public class DescribeApiDestinationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionArn")
     public String connectionArn;
+
     public DescribeApiDestinationResponse withConnectionArn(String connectionArn) {
         this.connectionArn = connectionArn;
         return this;
@@ -46,6 +49,7 @@ public class DescribeApiDestinationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeApiDestinationResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -54,6 +58,7 @@ public class DescribeApiDestinationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeApiDestinationResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +67,7 @@ public class DescribeApiDestinationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpMethod")
     public ApiDestinationHttpMethodEnum httpMethod;
+
     public DescribeApiDestinationResponse withHttpMethod(ApiDestinationHttpMethodEnum httpMethod) {
         this.httpMethod = httpMethod;
         return this;
@@ -70,6 +76,7 @@ public class DescribeApiDestinationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvocationEndpoint")
     public String invocationEndpoint;
+
     public DescribeApiDestinationResponse withInvocationEndpoint(String invocationEndpoint) {
         this.invocationEndpoint = invocationEndpoint;
         return this;
@@ -78,6 +85,7 @@ public class DescribeApiDestinationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvocationRateLimitPerSecond")
     public Long invocationRateLimitPerSecond;
+
     public DescribeApiDestinationResponse withInvocationRateLimitPerSecond(Long invocationRateLimitPerSecond) {
         this.invocationRateLimitPerSecond = invocationRateLimitPerSecond;
         return this;
@@ -88,6 +96,7 @@ public class DescribeApiDestinationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeApiDestinationResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -96,9 +105,11 @@ public class DescribeApiDestinationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribeApiDestinationResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DescribeApiDestinationResponse(){}
 }

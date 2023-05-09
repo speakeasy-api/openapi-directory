@@ -56,13 +56,11 @@ public class PriceMetrics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetItineraryPriceMetricsResponse res = new org.openapis.openapi.models.operations.GetItineraryPriceMetricsResponse() {{
+        org.openapis.openapi.models.operations.GetItineraryPriceMetricsResponse res = new org.openapis.openapi.models.operations.GetItineraryPriceMetricsResponse(contentType, httpRes.statusCode()) {{
             getItineraryPriceMetrics200ApplicationVndAmadeusPlusJsonObject = null;
             error400 = null;
             error500 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetObjectAttributesResponse {
@@ -12,6 +13,7 @@ public class GetObjectAttributesResponse {
      */
     
     public Object accessDeniedException;
+
     public GetObjectAttributesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetObjectAttributesResponse {
     
     
     public String contentType;
+
     public GetObjectAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetObjectAttributesResponse {
      */
     
     public Object directoryNotEnabledException;
+
     public GetObjectAttributesResponse withDirectoryNotEnabledException(Object directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -39,6 +43,7 @@ public class GetObjectAttributesResponse {
      */
     
     public Object facetValidationException;
+
     public GetObjectAttributesResponse withFacetValidationException(Object facetValidationException) {
         this.facetValidationException = facetValidationException;
         return this;
@@ -49,6 +54,7 @@ public class GetObjectAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetObjectAttributesResponse getObjectAttributesResponse;
+
     public GetObjectAttributesResponse withGetObjectAttributesResponse(org.openapis.openapi.models.shared.GetObjectAttributesResponse getObjectAttributesResponse) {
         this.getObjectAttributesResponse = getObjectAttributesResponse;
         return this;
@@ -59,6 +65,7 @@ public class GetObjectAttributesResponse {
      */
     
     public Object internalServiceException;
+
     public GetObjectAttributesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class GetObjectAttributesResponse {
      */
     
     public Object invalidArnException;
+
     public GetObjectAttributesResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -79,6 +87,7 @@ public class GetObjectAttributesResponse {
      */
     
     public Object limitExceededException;
+
     public GetObjectAttributesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -86,6 +95,7 @@ public class GetObjectAttributesResponse {
     
     
     public Integer statusCode;
+
     public GetObjectAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetObjectAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetObjectAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class GetObjectAttributesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetObjectAttributesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class GetObjectAttributesResponse {
      */
     
     public Object retryableConflictException;
+
     public GetObjectAttributesResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -123,9 +136,14 @@ public class GetObjectAttributesResponse {
      */
     
     public Object validationException;
+
     public GetObjectAttributesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetObjectAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

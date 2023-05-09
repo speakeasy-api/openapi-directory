@@ -15,6 +15,7 @@ public class Ec2AssociateRouteTableAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Ec2AssociateRouteTableAction withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class Ec2AssociateRouteTableAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatewayId")
     public ActionTarget gatewayId;
+
     public Ec2AssociateRouteTableAction withGatewayId(ActionTarget gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -30,6 +32,7 @@ public class Ec2AssociateRouteTableAction {
     
     @JsonProperty("RouteTableId")
     public ActionTarget routeTableId;
+
     public Ec2AssociateRouteTableAction withRouteTableId(ActionTarget routeTableId) {
         this.routeTableId = routeTableId;
         return this;
@@ -38,9 +41,13 @@ public class Ec2AssociateRouteTableAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public ActionTarget subnetId;
+
     public Ec2AssociateRouteTableAction withSubnetId(ActionTarget subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public Ec2AssociateRouteTableAction(@JsonProperty("RouteTableId") ActionTarget routeTableId) {
+        this.routeTableId = routeTableId;
+  }
 }

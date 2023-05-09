@@ -67,11 +67,9 @@ public class Roles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetListRolesResponse res = new org.openapis.openapi.models.operations.GetListRolesResponse() {{
+        org.openapis.openapi.models.operations.GetListRolesResponse res = new org.openapis.openapi.models.operations.GetListRolesResponse(contentType, httpRes.statusCode()) {{
             listRolesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,11 +113,9 @@ public class Roles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRolesbyUserResponse res = new org.openapis.openapi.models.operations.GetRolesbyUserResponse() {{
+        org.openapis.openapi.models.operations.GetRolesbyUserResponse res = new org.openapis.openapi.models.operations.GetRolesbyUserResponse(contentType, httpRes.statusCode()) {{
             getRolesbyUser200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -160,12 +156,10 @@ public class Roles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutRolesinUserResponse res = new org.openapis.openapi.models.operations.PutRolesinUserResponse() {{
+        org.openapis.openapi.models.operations.PutRolesinUserResponse res = new org.openapis.openapi.models.operations.PutRolesinUserResponse(contentType, httpRes.statusCode()) {{
             putRolesinUser400ApplicationJSONObject = null;
             putRolesinUser500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -220,11 +214,9 @@ public class Roles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveRolefromUserResponse res = new org.openapis.openapi.models.operations.RemoveRolefromUserResponse() {{
+        org.openapis.openapi.models.operations.RemoveRolefromUserResponse res = new org.openapis.openapi.models.operations.RemoveRolefromUserResponse(contentType, httpRes.statusCode()) {{
             removeRolefromUser400ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 405) {

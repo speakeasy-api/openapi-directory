@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteSAMLProviderRequest {
     
     public String samlProviderArn;
+
     public DeleteSAMLProviderRequest withSAMLProviderArn(String samlProviderArn) {
         this.samlProviderArn = samlProviderArn;
         return this;
     }
     
+    public DeleteSAMLProviderRequest(@JsonProperty("SAMLProviderArn") String samlProviderArn) {
+        this.samlProviderArn = samlProviderArn;
+  }
 }

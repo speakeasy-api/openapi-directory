@@ -12,6 +12,7 @@ public class TravelViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distance")
     public String distance;
+
     public TravelViewModel withDistance(String distance) {
         this.distance = distance;
         return this;
@@ -20,6 +21,7 @@ public class TravelViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proximity")
     public String proximity;
+
     public TravelViewModel withProximity(String proximity) {
         this.proximity = proximity;
         return this;
@@ -28,6 +30,7 @@ public class TravelViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startAddress")
     public String startAddress;
+
     public TravelViewModel withStartAddress(String startAddress) {
         this.startAddress = startAddress;
         return this;
@@ -36,6 +39,7 @@ public class TravelViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startLat")
     public String startLat;
+
     public TravelViewModel withStartLat(String startLat) {
         this.startLat = startLat;
         return this;
@@ -44,6 +48,7 @@ public class TravelViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startLon")
     public String startLon;
+
     public TravelViewModel withStartLon(String startLon) {
         this.startLon = startLon;
         return this;
@@ -52,9 +57,11 @@ public class TravelViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("units")
     public String units;
+
     public TravelViewModel withUnits(String units) {
         this.units = units;
         return this;
     }
     
+    public TravelViewModel(){}
 }

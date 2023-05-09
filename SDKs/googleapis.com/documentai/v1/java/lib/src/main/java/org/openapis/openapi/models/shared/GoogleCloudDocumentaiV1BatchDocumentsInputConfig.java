@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1BatchDocumentsInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsDocuments")
     public GoogleCloudDocumentaiV1GcsDocuments gcsDocuments;
+
     public GoogleCloudDocumentaiV1BatchDocumentsInputConfig withGcsDocuments(GoogleCloudDocumentaiV1GcsDocuments gcsDocuments) {
         this.gcsDocuments = gcsDocuments;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1BatchDocumentsInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsPrefix")
     public GoogleCloudDocumentaiV1GcsPrefix gcsPrefix;
+
     public GoogleCloudDocumentaiV1BatchDocumentsInputConfig withGcsPrefix(GoogleCloudDocumentaiV1GcsPrefix gcsPrefix) {
         this.gcsPrefix = gcsPrefix;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1BatchDocumentsInputConfig(){}
 }

@@ -15,6 +15,7 @@ public class KmsGrantConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public KmsGrantConstraints constraints;
+
     public KmsGrantConfiguration withConstraints(KmsGrantConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -22,6 +23,7 @@ public class KmsGrantConfiguration {
     
     @JsonProperty("granteePrincipal")
     public String granteePrincipal;
+
     public KmsGrantConfiguration withGranteePrincipal(String granteePrincipal) {
         this.granteePrincipal = granteePrincipal;
         return this;
@@ -29,6 +31,7 @@ public class KmsGrantConfiguration {
     
     @JsonProperty("issuingAccount")
     public String issuingAccount;
+
     public KmsGrantConfiguration withIssuingAccount(String issuingAccount) {
         this.issuingAccount = issuingAccount;
         return this;
@@ -36,6 +39,7 @@ public class KmsGrantConfiguration {
     
     @JsonProperty("operations")
     public KmsGrantOperationEnum[] operations;
+
     public KmsGrantConfiguration withOperations(KmsGrantOperationEnum[] operations) {
         this.operations = operations;
         return this;
@@ -44,9 +48,15 @@ public class KmsGrantConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retiringPrincipal")
     public String retiringPrincipal;
+
     public KmsGrantConfiguration withRetiringPrincipal(String retiringPrincipal) {
         this.retiringPrincipal = retiringPrincipal;
         return this;
     }
     
+    public KmsGrantConfiguration(@JsonProperty("granteePrincipal") String granteePrincipal, @JsonProperty("issuingAccount") String issuingAccount, @JsonProperty("operations") KmsGrantOperationEnum[] operations) {
+        this.granteePrincipal = granteePrincipal;
+        this.issuingAccount = issuingAccount;
+        this.operations = operations;
+  }
 }

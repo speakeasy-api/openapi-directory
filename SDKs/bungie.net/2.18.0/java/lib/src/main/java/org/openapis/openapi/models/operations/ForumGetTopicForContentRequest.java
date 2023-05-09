@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ForumGetTopicForContentRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contentId")
     public Long contentId;
+
     public ForumGetTopicForContentRequest withContentId(Long contentId) {
         this.contentId = contentId;
         return this;
     }
     
+    public ForumGetTopicForContentRequest(@JsonProperty("contentId") Long contentId) {
+        this.contentId = contentId;
+  }
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class EntitiesEntityActionResult {
     
     public Long entityId;
+
     public EntitiesEntityActionResult withEntityId(Long entityId) {
         this.entityId = entityId;
         return this;
@@ -16,9 +17,11 @@ public class EntitiesEntityActionResult {
     
     
     public Integer result;
+
     public EntitiesEntityActionResult withResult(Integer result) {
         this.result = result;
         return this;
     }
     
+    public EntitiesEntityActionResult(){}
 }

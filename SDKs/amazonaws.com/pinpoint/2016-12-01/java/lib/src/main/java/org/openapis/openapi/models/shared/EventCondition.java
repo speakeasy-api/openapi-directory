@@ -15,6 +15,7 @@ public class EventCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public EventDimensions dimensions;
+
     public EventCondition withDimensions(EventDimensions dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -23,9 +24,11 @@ public class EventCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageActivity")
     public String messageActivity;
+
     public EventCondition withMessageActivity(String messageActivity) {
         this.messageActivity = messageActivity;
         return this;
     }
     
+    public EventCondition(){}
 }

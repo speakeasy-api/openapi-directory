@@ -15,6 +15,7 @@ public class StoreReleasesGet200ApplicationJSONDistributionStores {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public StoreReleasesGet200ApplicationJSONDistributionStores withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class StoreReleasesGet200ApplicationJSONDistributionStores {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StoreReleasesGet200ApplicationJSONDistributionStores withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class StoreReleasesGet200ApplicationJSONDistributionStores {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishing_status")
     public String publishingStatus;
+
     public StoreReleasesGet200ApplicationJSONDistributionStores withPublishingStatus(String publishingStatus) {
         this.publishingStatus = publishingStatus;
         return this;
@@ -48,9 +51,11 @@ public class StoreReleasesGet200ApplicationJSONDistributionStores {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public StoreReleasesGet200ApplicationJSONDistributionStoresTypeEnum type;
+
     public StoreReleasesGet200ApplicationJSONDistributionStores withType(StoreReleasesGet200ApplicationJSONDistributionStoresTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public StoreReleasesGet200ApplicationJSONDistributionStores(){}
 }

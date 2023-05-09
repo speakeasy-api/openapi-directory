@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTDescribeNetworkInterfacePermissionsResponse {
     
     public byte[] body;
+
     public POSTDescribeNetworkInterfacePermissionsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTDescribeNetworkInterfacePermissionsResponse {
     
     
     public String contentType;
+
     public POSTDescribeNetworkInterfacePermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTDescribeNetworkInterfacePermissionsResponse {
     
     
     public Integer statusCode;
+
     public POSTDescribeNetworkInterfacePermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTDescribeNetworkInterfacePermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTDescribeNetworkInterfacePermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTDescribeNetworkInterfacePermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class LayAutocomplete {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highlight")
     public String highlight;
+
     public LayAutocomplete withHighlight(String highlight) {
         this.highlight = highlight;
         return this;
@@ -26,6 +27,7 @@ public class LayAutocomplete {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public LayAutocomplete withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class LayAutocomplete {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public LayAutocomplete withLabel(String label) {
         this.label = label;
         return this;
@@ -48,9 +51,11 @@ public class LayAutocomplete {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matched_synonym")
     public String matchedSynonym;
+
     public LayAutocomplete withMatchedSynonym(String matchedSynonym) {
         this.matchedSynonym = matchedSynonym;
         return this;
     }
     
+    public LayAutocomplete(){}
 }

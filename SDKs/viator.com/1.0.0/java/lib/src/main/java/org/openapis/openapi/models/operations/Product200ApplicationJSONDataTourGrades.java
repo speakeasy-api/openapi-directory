@@ -15,6 +15,7 @@ public class Product200ApplicationJSONDataTourGrades {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public Product200ApplicationJSONDataTourGrades withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -26,6 +27,7 @@ public class Product200ApplicationJSONDataTourGrades {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultLanguageCode")
     public String defaultLanguageCode;
+
     public Product200ApplicationJSONDataTourGrades withDefaultLanguageCode(String defaultLanguageCode) {
         this.defaultLanguageCode = defaultLanguageCode;
         return this;
@@ -37,6 +39,7 @@ public class Product200ApplicationJSONDataTourGrades {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gradeCode")
     public String gradeCode;
+
     public Product200ApplicationJSONDataTourGrades withGradeCode(String gradeCode) {
         this.gradeCode = gradeCode;
         return this;
@@ -48,6 +51,7 @@ public class Product200ApplicationJSONDataTourGrades {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gradeDepartureTime")
     public String gradeDepartureTime;
+
     public Product200ApplicationJSONDataTourGrades withGradeDepartureTime(String gradeDepartureTime) {
         this.gradeDepartureTime = gradeDepartureTime;
         return this;
@@ -59,6 +63,7 @@ public class Product200ApplicationJSONDataTourGrades {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gradeDescription")
     public String gradeDescription;
+
     public Product200ApplicationJSONDataTourGrades withGradeDescription(String gradeDescription) {
         this.gradeDescription = gradeDescription;
         return this;
@@ -70,6 +75,7 @@ public class Product200ApplicationJSONDataTourGrades {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gradeTitle")
     public String gradeTitle;
+
     public Product200ApplicationJSONDataTourGrades withGradeTitle(String gradeTitle) {
         this.gradeTitle = gradeTitle;
         return this;
@@ -81,6 +87,7 @@ public class Product200ApplicationJSONDataTourGrades {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("langServices")
     public java.util.Map<String, String> langServices;
+
     public Product200ApplicationJSONDataTourGrades withLangServices(java.util.Map<String, String> langServices) {
         this.langServices = langServices;
         return this;
@@ -95,6 +102,7 @@ public class Product200ApplicationJSONDataTourGrades {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantNetPriceFrom")
     public Double merchantNetPriceFrom;
+
     public Product200ApplicationJSONDataTourGrades withMerchantNetPriceFrom(Double merchantNetPriceFrom) {
         this.merchantNetPriceFrom = merchantNetPriceFrom;
         return this;
@@ -109,6 +117,7 @@ public class Product200ApplicationJSONDataTourGrades {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantNetPriceFromFormatted")
     public String merchantNetPriceFromFormatted;
+
     public Product200ApplicationJSONDataTourGrades withMerchantNetPriceFromFormatted(String merchantNetPriceFromFormatted) {
         this.merchantNetPriceFromFormatted = merchantNetPriceFromFormatted;
         return this;
@@ -122,6 +131,7 @@ public class Product200ApplicationJSONDataTourGrades {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceFrom")
     public Double priceFrom;
+
     public Product200ApplicationJSONDataTourGrades withPriceFrom(Double priceFrom) {
         this.priceFrom = priceFrom;
         return this;
@@ -135,6 +145,7 @@ public class Product200ApplicationJSONDataTourGrades {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceFromFormatted")
     public String priceFromFormatted;
+
     public Product200ApplicationJSONDataTourGrades withPriceFromFormatted(String priceFromFormatted) {
         this.priceFromFormatted = priceFromFormatted;
         return this;
@@ -146,9 +157,11 @@ public class Product200ApplicationJSONDataTourGrades {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public Long sortOrder;
+
     public Product200ApplicationJSONDataTourGrades withSortOrder(Long sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public Product200ApplicationJSONDataTourGrades(){}
 }

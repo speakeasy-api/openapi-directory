@@ -69,10 +69,8 @@ public class EmailTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAvailableEmailTemplatesResponse res = new org.openapis.openapi.models.operations.ListAvailableEmailTemplatesResponse() {{
+        org.openapis.openapi.models.operations.ListAvailableEmailTemplatesResponse res = new org.openapis.openapi.models.operations.ListAvailableEmailTemplatesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -113,10 +111,8 @@ public class EmailTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SeeEmailTemplateInformationResponse res = new org.openapis.openapi.models.operations.SeeEmailTemplateInformationResponse() {{
+        org.openapis.openapi.models.operations.SeeEmailTemplateInformationResponse res = new org.openapis.openapi.models.operations.SeeEmailTemplateInformationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

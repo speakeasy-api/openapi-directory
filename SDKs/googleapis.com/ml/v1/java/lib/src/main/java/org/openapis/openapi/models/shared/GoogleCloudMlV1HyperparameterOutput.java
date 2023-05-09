@@ -18,6 +18,7 @@ public class GoogleCloudMlV1HyperparameterOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allMetrics")
     public GoogleCloudMlV1HyperparameterOutputHyperparameterMetric[] allMetrics;
+
     public GoogleCloudMlV1HyperparameterOutput withAllMetrics(GoogleCloudMlV1HyperparameterOutputHyperparameterMetric[] allMetrics) {
         this.allMetrics = allMetrics;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1HyperparameterOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("builtInAlgorithmOutput")
     public GoogleCloudMlV1BuiltInAlgorithmOutput builtInAlgorithmOutput;
+
     public GoogleCloudMlV1HyperparameterOutput withBuiltInAlgorithmOutput(GoogleCloudMlV1BuiltInAlgorithmOutput builtInAlgorithmOutput) {
         this.builtInAlgorithmOutput = builtInAlgorithmOutput;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudMlV1HyperparameterOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GoogleCloudMlV1HyperparameterOutput withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudMlV1HyperparameterOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalMetric")
     public GoogleCloudMlV1HyperparameterOutputHyperparameterMetric finalMetric;
+
     public GoogleCloudMlV1HyperparameterOutput withFinalMetric(GoogleCloudMlV1HyperparameterOutputHyperparameterMetric finalMetric) {
         this.finalMetric = finalMetric;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudMlV1HyperparameterOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hyperparameters")
     public java.util.Map<String, String> hyperparameters;
+
     public GoogleCloudMlV1HyperparameterOutput withHyperparameters(java.util.Map<String, String> hyperparameters) {
         this.hyperparameters = hyperparameters;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudMlV1HyperparameterOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isTrialStoppedEarly")
     public Boolean isTrialStoppedEarly;
+
     public GoogleCloudMlV1HyperparameterOutput withIsTrialStoppedEarly(Boolean isTrialStoppedEarly) {
         this.isTrialStoppedEarly = isTrialStoppedEarly;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudMlV1HyperparameterOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudMlV1HyperparameterOutput withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudMlV1HyperparameterOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudMlV1HyperparameterOutputStateEnum state;
+
     public GoogleCloudMlV1HyperparameterOutput withState(GoogleCloudMlV1HyperparameterOutputStateEnum state) {
         this.state = state;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudMlV1HyperparameterOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trialId")
     public String trialId;
+
     public GoogleCloudMlV1HyperparameterOutput withTrialId(String trialId) {
         this.trialId = trialId;
         return this;
@@ -117,9 +126,11 @@ public class GoogleCloudMlV1HyperparameterOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webAccessUris")
     public java.util.Map<String, String> webAccessUris;
+
     public GoogleCloudMlV1HyperparameterOutput withWebAccessUris(java.util.Map<String, String> webAccessUris) {
         this.webAccessUris = webAccessUris;
         return this;
     }
     
+    public GoogleCloudMlV1HyperparameterOutput(){}
 }

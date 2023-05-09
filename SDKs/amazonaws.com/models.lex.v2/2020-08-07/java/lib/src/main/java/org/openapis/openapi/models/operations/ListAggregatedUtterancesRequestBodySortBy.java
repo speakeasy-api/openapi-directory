@@ -15,6 +15,7 @@ public class ListAggregatedUtterancesRequestBodySortBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribute")
     public org.openapis.openapi.models.shared.AggregatedUtterancesSortAttributeEnum attribute;
+
     public ListAggregatedUtterancesRequestBodySortBy withAttribute(org.openapis.openapi.models.shared.AggregatedUtterancesSortAttributeEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -23,9 +24,11 @@ public class ListAggregatedUtterancesRequestBodySortBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public org.openapis.openapi.models.shared.SortOrderEnum order;
+
     public ListAggregatedUtterancesRequestBodySortBy withOrder(org.openapis.openapi.models.shared.SortOrderEnum order) {
         this.order = order;
         return this;
     }
     
+    public ListAggregatedUtterancesRequestBodySortBy(){}
 }

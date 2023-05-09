@@ -15,6 +15,7 @@ public class CustomAuthConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authParameters")
     public AuthParameter[] authParameters;
+
     public CustomAuthConfig withAuthParameters(AuthParameter[] authParameters) {
         this.authParameters = authParameters;
         return this;
@@ -23,9 +24,11 @@ public class CustomAuthConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customAuthenticationType")
     public String customAuthenticationType;
+
     public CustomAuthConfig withCustomAuthenticationType(String customAuthenticationType) {
         this.customAuthenticationType = customAuthenticationType;
         return this;
     }
     
+    public CustomAuthConfig(){}
 }

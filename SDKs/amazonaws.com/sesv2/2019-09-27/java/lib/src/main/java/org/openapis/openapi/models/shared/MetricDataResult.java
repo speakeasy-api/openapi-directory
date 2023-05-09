@@ -16,6 +16,7 @@ public class MetricDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public MetricDataResult withId(String id) {
         this.id = id;
         return this;
@@ -24,6 +25,7 @@ public class MetricDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timestamps")
     public OffsetDateTime[] timestamps;
+
     public MetricDataResult withTimestamps(OffsetDateTime[] timestamps) {
         this.timestamps = timestamps;
         return this;
@@ -32,9 +34,11 @@ public class MetricDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public Long[] values;
+
     public MetricDataResult withValues(Long[] values) {
         this.values = values;
         return this;
     }
     
+    public MetricDataResult(){}
 }

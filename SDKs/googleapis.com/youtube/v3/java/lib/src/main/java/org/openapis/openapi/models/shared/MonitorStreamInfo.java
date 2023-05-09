@@ -18,6 +18,7 @@ public class MonitorStreamInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("broadcastStreamDelayMs")
     public Long broadcastStreamDelayMs;
+
     public MonitorStreamInfo withBroadcastStreamDelayMs(Long broadcastStreamDelayMs) {
         this.broadcastStreamDelayMs = broadcastStreamDelayMs;
         return this;
@@ -29,6 +30,7 @@ public class MonitorStreamInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embedHtml")
     public String embedHtml;
+
     public MonitorStreamInfo withEmbedHtml(String embedHtml) {
         this.embedHtml = embedHtml;
         return this;
@@ -40,9 +42,11 @@ public class MonitorStreamInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableMonitorStream")
     public Boolean enableMonitorStream;
+
     public MonitorStreamInfo withEnableMonitorStream(Boolean enableMonitorStream) {
         this.enableMonitorStream = enableMonitorStream;
         return this;
     }
     
+    public MonitorStreamInfo(){}
 }

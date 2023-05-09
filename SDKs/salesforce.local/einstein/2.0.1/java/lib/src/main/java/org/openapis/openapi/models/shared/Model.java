@@ -20,6 +20,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithm")
     public String algorithm;
+
     public Model withAlgorithm(String algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -33,6 +34,7 @@ public class Model {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Model withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -43,6 +45,7 @@ public class Model {
      */
     @JsonProperty("datasetId")
     public Long datasetId;
+
     public Model withDatasetId(Long datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -53,6 +56,7 @@ public class Model {
      */
     @JsonProperty("datasetVersionId")
     public Long datasetVersionId;
+
     public Model withDatasetVersionId(Long datasetVersionId) {
         this.datasetVersionId = datasetVersionId;
         return this;
@@ -64,6 +68,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureMsg")
     public String failureMsg;
+
     public Model withFailureMsg(String failureMsg) {
         this.failureMsg = failureMsg;
         return this;
@@ -75,6 +80,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public Model withLanguage(String language) {
         this.language = language;
         return this;
@@ -85,6 +91,7 @@ public class Model {
      */
     @JsonProperty("modelId")
     public String modelId;
+
     public Model withModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -96,6 +103,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelType")
     public String modelType;
+
     public Model withModelType(String modelType) {
         this.modelType = modelType;
         return this;
@@ -106,6 +114,7 @@ public class Model {
      */
     @JsonProperty("name")
     public String name;
+
     public Model withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +126,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public Model withObject(String object) {
         this.object = object;
         return this;
@@ -127,6 +137,7 @@ public class Model {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public Model withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -137,6 +148,7 @@ public class Model {
      */
     @JsonProperty("status")
     public ModelStatusEnum status;
+
     public Model withStatus(ModelStatusEnum status) {
         this.status = status;
         return this;
@@ -150,9 +162,18 @@ public class Model {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public Model withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Model(@JsonProperty("datasetId") Long datasetId, @JsonProperty("datasetVersionId") Long datasetVersionId, @JsonProperty("modelId") String modelId, @JsonProperty("name") String name, @JsonProperty("progress") Double progress, @JsonProperty("status") ModelStatusEnum status) {
+        this.datasetId = datasetId;
+        this.datasetVersionId = datasetVersionId;
+        this.modelId = modelId;
+        this.name = name;
+        this.progress = progress;
+        this.status = status;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RateItemRequest {
@@ -32,6 +33,7 @@ public class RateItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public RateItemRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -42,6 +44,7 @@ public class RateItemRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
     public String itemId;
+
     public RateItemRequest withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -62,6 +65,7 @@ public class RateItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public RateItemRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -72,9 +76,14 @@ public class RateItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rating")
     public Integer rating;
+
     public RateItemRequest withRating(Integer rating) {
         this.rating = rating;
         return this;
     }
     
+    public RateItemRequest(@JsonProperty("itemId") String itemId, @JsonProperty("rating") Integer rating) {
+        this.itemId = itemId;
+        this.rating = rating;
+  }
 }

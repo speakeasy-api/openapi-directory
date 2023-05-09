@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ReviewComment {
     @JsonProperty("_links")
     public ReviewCommentLinks links;
+
     public ReviewComment withLinks(ReviewCommentLinks links) {
         this.links = links;
         return this;
@@ -29,6 +30,7 @@ public class ReviewComment {
      */
     @JsonProperty("author_association")
     public AuthorAssociationEnum authorAssociation;
+
     public ReviewComment withAuthorAssociation(AuthorAssociationEnum authorAssociation) {
         this.authorAssociation = authorAssociation;
         return this;
@@ -36,6 +38,7 @@ public class ReviewComment {
     
     @JsonProperty("body")
     public String body;
+
     public ReviewComment withBody(String body) {
         this.body = body;
         return this;
@@ -44,6 +47,7 @@ public class ReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_html")
     public String bodyHtml;
+
     public ReviewComment withBodyHtml(String bodyHtml) {
         this.bodyHtml = bodyHtml;
         return this;
@@ -52,6 +56,7 @@ public class ReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_text")
     public String bodyText;
+
     public ReviewComment withBodyText(String bodyText) {
         this.bodyText = bodyText;
         return this;
@@ -59,6 +64,7 @@ public class ReviewComment {
     
     @JsonProperty("commit_id")
     public String commitId;
+
     public ReviewComment withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -68,6 +74,7 @@ public class ReviewComment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public ReviewComment withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -75,6 +82,7 @@ public class ReviewComment {
     
     @JsonProperty("diff_hunk")
     public String diffHunk;
+
     public ReviewComment withDiffHunk(String diffHunk) {
         this.diffHunk = diffHunk;
         return this;
@@ -82,6 +90,7 @@ public class ReviewComment {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public ReviewComment withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -89,6 +98,7 @@ public class ReviewComment {
     
     @JsonProperty("id")
     public Long id;
+
     public ReviewComment withId(Long id) {
         this.id = id;
         return this;
@@ -97,6 +107,7 @@ public class ReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in_reply_to_id")
     public Long inReplyToId;
+
     public ReviewComment withInReplyToId(Long inReplyToId) {
         this.inReplyToId = inReplyToId;
         return this;
@@ -108,6 +119,7 @@ public class ReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line")
     public Long line;
+
     public ReviewComment withLine(Long line) {
         this.line = line;
         return this;
@@ -115,6 +127,7 @@ public class ReviewComment {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public ReviewComment withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -122,6 +135,7 @@ public class ReviewComment {
     
     @JsonProperty("original_commit_id")
     public String originalCommitId;
+
     public ReviewComment withOriginalCommitId(String originalCommitId) {
         this.originalCommitId = originalCommitId;
         return this;
@@ -133,6 +147,7 @@ public class ReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_line")
     public Long originalLine;
+
     public ReviewComment withOriginalLine(Long originalLine) {
         this.originalLine = originalLine;
         return this;
@@ -140,6 +155,7 @@ public class ReviewComment {
     
     @JsonProperty("original_position")
     public Long originalPosition;
+
     public ReviewComment withOriginalPosition(Long originalPosition) {
         this.originalPosition = originalPosition;
         return this;
@@ -151,6 +167,7 @@ public class ReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_start_line")
     public Long originalStartLine;
+
     public ReviewComment withOriginalStartLine(Long originalStartLine) {
         this.originalStartLine = originalStartLine;
         return this;
@@ -158,6 +175,7 @@ public class ReviewComment {
     
     @JsonProperty("path")
     public String path;
+
     public ReviewComment withPath(String path) {
         this.path = path;
         return this;
@@ -165,6 +183,7 @@ public class ReviewComment {
     
     @JsonProperty("position")
     public Long position;
+
     public ReviewComment withPosition(Long position) {
         this.position = position;
         return this;
@@ -172,6 +191,7 @@ public class ReviewComment {
     
     @JsonProperty("pull_request_review_id")
     public Long pullRequestReviewId;
+
     public ReviewComment withPullRequestReviewId(Long pullRequestReviewId) {
         this.pullRequestReviewId = pullRequestReviewId;
         return this;
@@ -179,6 +199,7 @@ public class ReviewComment {
     
     @JsonProperty("pull_request_url")
     public String pullRequestUrl;
+
     public ReviewComment withPullRequestUrl(String pullRequestUrl) {
         this.pullRequestUrl = pullRequestUrl;
         return this;
@@ -187,6 +208,7 @@ public class ReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reactions")
     public ReactionRollup reactions;
+
     public ReviewComment withReactions(ReactionRollup reactions) {
         this.reactions = reactions;
         return this;
@@ -198,6 +220,7 @@ public class ReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("side")
     public ReviewCommentSideEnum side;
+
     public ReviewComment withSide(ReviewCommentSideEnum side) {
         this.side = side;
         return this;
@@ -209,6 +232,7 @@ public class ReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_line")
     public Long startLine;
+
     public ReviewComment withStartLine(Long startLine) {
         this.startLine = startLine;
         return this;
@@ -220,6 +244,7 @@ public class ReviewComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_side")
     public ReviewCommentStartSideEnum startSide;
+
     public ReviewComment withStartSide(ReviewCommentStartSideEnum startSide) {
         this.startSide = startSide;
         return this;
@@ -229,6 +254,7 @@ public class ReviewComment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public ReviewComment withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -236,6 +262,7 @@ public class ReviewComment {
     
     @JsonProperty("url")
     public String url;
+
     public ReviewComment withUrl(String url) {
         this.url = url;
         return this;
@@ -246,9 +273,30 @@ public class ReviewComment {
      */
     @JsonProperty("user")
     public NullableSimpleUser user;
+
     public ReviewComment withUser(NullableSimpleUser user) {
         this.user = user;
         return this;
     }
     
+    public ReviewComment(@JsonProperty("_links") ReviewCommentLinks links, @JsonProperty("author_association") AuthorAssociationEnum authorAssociation, @JsonProperty("body") String body, @JsonProperty("commit_id") String commitId, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("diff_hunk") String diffHunk, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("node_id") String nodeId, @JsonProperty("original_commit_id") String originalCommitId, @JsonProperty("original_position") Long originalPosition, @JsonProperty("path") String path, @JsonProperty("position") Long position, @JsonProperty("pull_request_review_id") Long pullRequestReviewId, @JsonProperty("pull_request_url") String pullRequestUrl, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url, @JsonProperty("user") NullableSimpleUser user) {
+        this.links = links;
+        this.authorAssociation = authorAssociation;
+        this.body = body;
+        this.commitId = commitId;
+        this.createdAt = createdAt;
+        this.diffHunk = diffHunk;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.nodeId = nodeId;
+        this.originalCommitId = originalCommitId;
+        this.originalPosition = originalPosition;
+        this.path = path;
+        this.position = position;
+        this.pullRequestReviewId = pullRequestReviewId;
+        this.pullRequestUrl = pullRequestUrl;
+        this.updatedAt = updatedAt;
+        this.url = url;
+        this.user = user;
+  }
 }

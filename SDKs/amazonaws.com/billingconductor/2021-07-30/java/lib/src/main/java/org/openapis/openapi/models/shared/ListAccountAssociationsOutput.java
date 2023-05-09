@@ -15,6 +15,7 @@ public class ListAccountAssociationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LinkedAccounts")
     public AccountAssociationsListElement[] linkedAccounts;
+
     public ListAccountAssociationsOutput withLinkedAccounts(AccountAssociationsListElement[] linkedAccounts) {
         this.linkedAccounts = linkedAccounts;
         return this;
@@ -23,9 +24,11 @@ public class ListAccountAssociationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAccountAssociationsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAccountAssociationsOutput(){}
 }

@@ -11,8 +11,7 @@ public enum WorkflowStatusEnum {
     ACTIVE("ACTIVE"),
     UPDATING("UPDATING"),
     DELETED("DELETED"),
-    FAILED("FAILED"),
-    INACTIVE("INACTIVE");
+    FAILED("FAILED");
 
     @JsonValue
     public final String value;

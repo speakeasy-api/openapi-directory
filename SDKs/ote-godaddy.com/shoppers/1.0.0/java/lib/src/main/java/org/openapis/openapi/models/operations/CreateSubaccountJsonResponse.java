@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSubaccountJsonResponse {
     
     public byte[] body;
+
     public CreateSubaccountJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CreateSubaccountJsonResponse {
     
     
     public String contentType;
+
     public CreateSubaccountJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CreateSubaccountJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public CreateSubaccountJsonResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class CreateSubaccountJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorLimit errorLimit;
+
     public CreateSubaccountJsonResponse withErrorLimit(org.openapis.openapi.models.shared.ErrorLimit errorLimit) {
         this.errorLimit = errorLimit;
         return this;
@@ -46,6 +51,7 @@ public class CreateSubaccountJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.ShopperId shopperId;
+
     public CreateSubaccountJsonResponse withShopperId(org.openapis.openapi.models.shared.ShopperId shopperId) {
         this.shopperId = shopperId;
         return this;
@@ -53,6 +59,7 @@ public class CreateSubaccountJsonResponse {
     
     
     public Integer statusCode;
+
     public CreateSubaccountJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -60,9 +67,14 @@ public class CreateSubaccountJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSubaccountJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateSubaccountJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

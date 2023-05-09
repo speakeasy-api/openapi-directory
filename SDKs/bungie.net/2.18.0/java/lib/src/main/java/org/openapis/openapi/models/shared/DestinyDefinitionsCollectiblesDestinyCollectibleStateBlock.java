@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsCollectiblesDestinyCollectibleStateBlock {
     
     public Long obscuredOverrideItemHash;
+
     public DestinyDefinitionsCollectiblesDestinyCollectibleStateBlock withObscuredOverrideItemHash(Long obscuredOverrideItemHash) {
         this.obscuredOverrideItemHash = obscuredOverrideItemHash;
         return this;
@@ -19,9 +20,11 @@ public class DestinyDefinitionsCollectiblesDestinyCollectibleStateBlock {
      */
     
     public DestinyDefinitionsPresentationDestinyPresentationNodeRequirementsBlock requirements;
+
     public DestinyDefinitionsCollectiblesDestinyCollectibleStateBlock withRequirements(DestinyDefinitionsPresentationDestinyPresentationNodeRequirementsBlock requirements) {
         this.requirements = requirements;
         return this;
     }
     
+    public DestinyDefinitionsCollectiblesDestinyCollectibleStateBlock(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IotEventsAction {
     @JsonProperty("inputName")
     public String inputName;
+
     public IotEventsAction withInputName(String inputName) {
         this.inputName = inputName;
         return this;
@@ -22,9 +23,13 @@ public class IotEventsAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public Payload payload;
+
     public IotEventsAction withPayload(Payload payload) {
         this.payload = payload;
         return this;
     }
     
+    public IotEventsAction(@JsonProperty("inputName") String inputName) {
+        this.inputName = inputName;
+  }
 }

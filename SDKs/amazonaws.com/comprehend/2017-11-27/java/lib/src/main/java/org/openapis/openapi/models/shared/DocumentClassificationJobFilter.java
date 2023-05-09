@@ -20,6 +20,7 @@ public class DocumentClassificationJobFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public DocumentClassificationJobFilter withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -28,6 +29,7 @@ public class DocumentClassificationJobFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public DocumentClassificationJobFilter withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -38,6 +40,7 @@ public class DocumentClassificationJobFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTimeAfter")
     public OffsetDateTime submitTimeAfter;
+
     public DocumentClassificationJobFilter withSubmitTimeAfter(OffsetDateTime submitTimeAfter) {
         this.submitTimeAfter = submitTimeAfter;
         return this;
@@ -48,9 +51,11 @@ public class DocumentClassificationJobFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTimeBefore")
     public OffsetDateTime submitTimeBefore;
+
     public DocumentClassificationJobFilter withSubmitTimeBefore(OffsetDateTime submitTimeBefore) {
         this.submitTimeBefore = submitTimeBefore;
         return this;
     }
     
+    public DocumentClassificationJobFilter(){}
 }

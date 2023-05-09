@@ -12,6 +12,7 @@ public class CreateTagModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public CreateTagModel withColor(String color) {
         this.color = color;
         return this;
@@ -19,9 +20,13 @@ public class CreateTagModel {
     
     @JsonProperty("name")
     public String name;
+
     public CreateTagModel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateTagModel(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

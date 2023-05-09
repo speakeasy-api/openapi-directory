@@ -15,6 +15,7 @@ public class CustomFieldDefinitionListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public CustomFieldDefinitionViewModel[] customFields;
+
     public CustomFieldDefinitionListViewModel withCustomFields(CustomFieldDefinitionViewModel[] customFields) {
         this.customFields = customFields;
         return this;
@@ -23,6 +24,7 @@ public class CustomFieldDefinitionListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public CustomFieldDefinitionListViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -31,9 +33,11 @@ public class CustomFieldDefinitionListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Integer total;
+
     public CustomFieldDefinitionListViewModel withTotal(Integer total) {
         this.total = total;
         return this;
     }
     
+    public CustomFieldDefinitionListViewModel(){}
 }

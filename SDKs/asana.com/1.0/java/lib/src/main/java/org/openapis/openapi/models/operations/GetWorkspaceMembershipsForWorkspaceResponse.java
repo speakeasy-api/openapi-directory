@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorkspaceMembershipsForWorkspaceResponse {
     
     public String contentType;
+
     public GetWorkspaceMembershipsForWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetWorkspaceMembershipsForWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public GetWorkspaceMembershipsForWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetWorkspaceMembershipsForWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorkspaceMembershipsForWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetWorkspaceMembershipsForWorkspaceResponse {
      */
     
     public GetWorkspaceMembershipsForWorkspace200ApplicationJSON getWorkspaceMembershipsForWorkspace200ApplicationJSONObject;
+
     public GetWorkspaceMembershipsForWorkspaceResponse withGetWorkspaceMembershipsForWorkspace200ApplicationJSONObject(GetWorkspaceMembershipsForWorkspace200ApplicationJSON getWorkspaceMembershipsForWorkspace200ApplicationJSONObject) {
         this.getWorkspaceMembershipsForWorkspace200ApplicationJSONObject = getWorkspaceMembershipsForWorkspace200ApplicationJSONObject;
         return this;
     }
     
+    public GetWorkspaceMembershipsForWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

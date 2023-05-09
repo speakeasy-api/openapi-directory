@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DescribeCodeRepositoryOutput {
     @JsonProperty("CodeRepositoryArn")
     public String codeRepositoryArn;
+
     public DescribeCodeRepositoryOutput withCodeRepositoryArn(String codeRepositoryArn) {
         this.codeRepositoryArn = codeRepositoryArn;
         return this;
@@ -26,6 +27,7 @@ public class DescribeCodeRepositoryOutput {
     
     @JsonProperty("CodeRepositoryName")
     public String codeRepositoryName;
+
     public DescribeCodeRepositoryOutput withCodeRepositoryName(String codeRepositoryName) {
         this.codeRepositoryName = codeRepositoryName;
         return this;
@@ -35,6 +37,7 @@ public class DescribeCodeRepositoryOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeCodeRepositoryOutput withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -43,6 +46,7 @@ public class DescribeCodeRepositoryOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GitConfig")
     public GitConfig gitConfig;
+
     public DescribeCodeRepositoryOutput withGitConfig(GitConfig gitConfig) {
         this.gitConfig = gitConfig;
         return this;
@@ -52,9 +56,16 @@ public class DescribeCodeRepositoryOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeCodeRepositoryOutput withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
     }
     
+    public DescribeCodeRepositoryOutput(@JsonProperty("CodeRepositoryArn") String codeRepositoryArn, @JsonProperty("CodeRepositoryName") String codeRepositoryName, @JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime) {
+        this.codeRepositoryArn = codeRepositoryArn;
+        this.codeRepositoryName = codeRepositoryName;
+        this.creationTime = creationTime;
+        this.lastModifiedTime = lastModifiedTime;
+  }
 }

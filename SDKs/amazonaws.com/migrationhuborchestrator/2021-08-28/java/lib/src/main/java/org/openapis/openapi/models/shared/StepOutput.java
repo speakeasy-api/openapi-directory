@@ -15,6 +15,7 @@ public class StepOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public DataTypeEnum dataType;
+
     public StepOutput withDataType(DataTypeEnum dataType) {
         this.dataType = dataType;
         return this;
@@ -23,6 +24,7 @@ public class StepOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StepOutput withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class StepOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public StepOutput withRequired(Boolean required) {
         this.required = required;
         return this;
     }
     
+    public StepOutput(){}
 }

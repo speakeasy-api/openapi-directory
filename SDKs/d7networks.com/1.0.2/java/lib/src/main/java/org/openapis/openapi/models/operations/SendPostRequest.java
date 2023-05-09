@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendPostRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public SendPostRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -16,6 +18,7 @@ public class SendPostRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public SendPostRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,9 +29,15 @@ public class SendPostRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SendSMSRequest sendSMSRequest;
+
     public SendPostRequest withSendSMSRequest(org.openapis.openapi.models.shared.SendSMSRequest sendSMSRequest) {
         this.sendSMSRequest = sendSMSRequest;
         return this;
     }
     
+    public SendPostRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("SendSMSRequest") org.openapis.openapi.models.shared.SendSMSRequest sendSMSRequest) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.sendSMSRequest = sendSMSRequest;
+  }
 }

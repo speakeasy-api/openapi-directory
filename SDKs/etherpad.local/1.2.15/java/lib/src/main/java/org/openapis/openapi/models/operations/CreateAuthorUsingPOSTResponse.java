@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAuthorUsingPOSTResponse {
     
     public String contentType;
+
     public CreateAuthorUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateAuthorUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public CreateAuthorUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreateAuthorUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAuthorUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreateAuthorUsingPOSTResponse {
      */
     
     public CreateAuthorUsingPOST200ApplicationJSON createAuthorUsingPOST200ApplicationJSONObject;
+
     public CreateAuthorUsingPOSTResponse withCreateAuthorUsingPOST200ApplicationJSONObject(CreateAuthorUsingPOST200ApplicationJSON createAuthorUsingPOST200ApplicationJSONObject) {
         this.createAuthorUsingPOST200ApplicationJSONObject = createAuthorUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CreateAuthorUsingPOSTResponse {
      */
     
     public CreateAuthorUsingPOST400ApplicationJSON createAuthorUsingPOST400ApplicationJSONObject;
+
     public CreateAuthorUsingPOSTResponse withCreateAuthorUsingPOST400ApplicationJSONObject(CreateAuthorUsingPOST400ApplicationJSON createAuthorUsingPOST400ApplicationJSONObject) {
         this.createAuthorUsingPOST400ApplicationJSONObject = createAuthorUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreateAuthorUsingPOSTResponse {
      */
     
     public CreateAuthorUsingPOST401ApplicationJSON createAuthorUsingPOST401ApplicationJSONObject;
+
     public CreateAuthorUsingPOSTResponse withCreateAuthorUsingPOST401ApplicationJSONObject(CreateAuthorUsingPOST401ApplicationJSON createAuthorUsingPOST401ApplicationJSONObject) {
         this.createAuthorUsingPOST401ApplicationJSONObject = createAuthorUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CreateAuthorUsingPOSTResponse {
      */
     
     public CreateAuthorUsingPOST500ApplicationJSON createAuthorUsingPOST500ApplicationJSONObject;
+
     public CreateAuthorUsingPOSTResponse withCreateAuthorUsingPOST500ApplicationJSONObject(CreateAuthorUsingPOST500ApplicationJSON createAuthorUsingPOST500ApplicationJSONObject) {
         this.createAuthorUsingPOST500ApplicationJSONObject = createAuthorUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public CreateAuthorUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

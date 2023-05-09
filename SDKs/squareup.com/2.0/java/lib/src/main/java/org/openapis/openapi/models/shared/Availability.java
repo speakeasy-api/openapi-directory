@@ -18,6 +18,7 @@ public class Availability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appointment_segments")
     public AppointmentSegment[] appointmentSegments;
+
     public Availability withAppointmentSegments(AppointmentSegment[] appointmentSegments) {
         this.appointmentSegments = appointmentSegments;
         return this;
@@ -29,6 +30,7 @@ public class Availability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public Availability withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -40,9 +42,11 @@ public class Availability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     public String startAt;
+
     public Availability withStartAt(String startAt) {
         this.startAt = startAt;
         return this;
     }
     
+    public Availability(){}
 }

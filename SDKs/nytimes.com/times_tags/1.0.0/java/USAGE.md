@@ -3,33 +3,34 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetTimestagsFilterEnum;
 import org.openapis.openapi.models.operations.GetTimestagsRequest;
 import org.openapis.openapi.models.operations.GetTimestagsResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     apikey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            GetTimestagsRequest req = new GetTimestagsRequest() {{
-                filter = "Org";
-                max = 592845;
-                query = "distinctio";
-            }}            
+            GetTimestagsRequest req = new GetTimestagsRequest("provident") {{
+                filter = GetTimestagsFilterEnum.ORG;
+                max = 844266L;
+            }};            
 
             GetTimestagsResponse res = sdk.getTimestags(req);
 
-            if (res.getTimestags200ApplicationJSONArrays.isPresent()) {
+            if (res.getTimestags200ApplicationJSONArrays != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

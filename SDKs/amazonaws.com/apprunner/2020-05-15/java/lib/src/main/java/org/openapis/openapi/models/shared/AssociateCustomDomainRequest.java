@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateCustomDomainRequest {
     @JsonProperty("DomainName")
     public String domainName;
+
     public AssociateCustomDomainRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -19,6 +20,7 @@ public class AssociateCustomDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableWWWSubdomain")
     public Boolean enableWWWSubdomain;
+
     public AssociateCustomDomainRequest withEnableWWWSubdomain(Boolean enableWWWSubdomain) {
         this.enableWWWSubdomain = enableWWWSubdomain;
         return this;
@@ -26,9 +28,14 @@ public class AssociateCustomDomainRequest {
     
     @JsonProperty("ServiceArn")
     public String serviceArn;
+
     public AssociateCustomDomainRequest withServiceArn(String serviceArn) {
         this.serviceArn = serviceArn;
         return this;
     }
     
+    public AssociateCustomDomainRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("ServiceArn") String serviceArn) {
+        this.domainName = domainName;
+        this.serviceArn = serviceArn;
+  }
 }

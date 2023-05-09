@@ -15,6 +15,7 @@ public class TestHarnessScenarioModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scenarioJson")
     public java.util.Map<String, Object> scenarioJson;
+
     public TestHarnessScenarioModel withScenarioJson(java.util.Map<String, Object> scenarioJson) {
         this.scenarioJson = scenarioJson;
         return this;
@@ -23,9 +24,11 @@ public class TestHarnessScenarioModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scenarioName")
     public String scenarioName;
+
     public TestHarnessScenarioModel withScenarioName(String scenarioName) {
         this.scenarioName = scenarioName;
         return this;
     }
     
+    public TestHarnessScenarioModel(){}
 }

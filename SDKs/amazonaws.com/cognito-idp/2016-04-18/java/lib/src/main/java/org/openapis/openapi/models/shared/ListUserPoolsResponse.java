@@ -15,6 +15,7 @@ public class ListUserPoolsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListUserPoolsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListUserPoolsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserPools")
     public UserPoolDescriptionType[] userPools;
+
     public ListUserPoolsResponse withUserPools(UserPoolDescriptionType[] userPools) {
         this.userPools = userPools;
         return this;
     }
     
+    public ListUserPoolsResponse(){}
 }

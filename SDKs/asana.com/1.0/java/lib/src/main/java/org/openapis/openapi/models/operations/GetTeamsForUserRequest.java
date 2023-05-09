@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeamsForUserRequest {
@@ -13,6 +14,7 @@ public class GetTeamsForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetTeamsForUserRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -25,6 +27,7 @@ public class GetTeamsForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetTeamsForUserRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -37,6 +40,7 @@ public class GetTeamsForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetTeamsForUserRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -48,6 +52,7 @@ public class GetTeamsForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetTeamsForUserRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -58,6 +63,7 @@ public class GetTeamsForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=organization")
     public String organization;
+
     public GetTeamsForUserRequest withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -68,9 +74,14 @@ public class GetTeamsForUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_gid")
     public String userGid;
+
     public GetTeamsForUserRequest withUserGid(String userGid) {
         this.userGid = userGid;
         return this;
     }
     
+    public GetTeamsForUserRequest(@JsonProperty("organization") String organization, @JsonProperty("user_gid") String userGid) {
+        this.organization = organization;
+        this.userGid = userGid;
+  }
 }

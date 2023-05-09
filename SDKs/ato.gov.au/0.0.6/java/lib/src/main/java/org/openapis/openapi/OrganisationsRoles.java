@@ -80,12 +80,10 @@ public class OrganisationsRoles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteOrganisationsPartyIdRolesRoleIdResponse res = new org.openapis.openapi.models.operations.DeleteOrganisationsPartyIdRolesRoleIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteOrganisationsPartyIdRolesRoleIdResponse res = new org.openapis.openapi.models.operations.DeleteOrganisationsPartyIdRolesRoleIdResponse(contentType, httpRes.statusCode()) {{
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -136,13 +134,11 @@ public class OrganisationsRoles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganisationsPartyIdRolesResponse res = new org.openapis.openapi.models.operations.GetOrganisationsPartyIdRolesResponse() {{
+        org.openapis.openapi.models.operations.GetOrganisationsPartyIdRolesResponse res = new org.openapis.openapi.models.operations.GetOrganisationsPartyIdRolesResponse(contentType, httpRes.statusCode()) {{
             partyRoles = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,13 +198,11 @@ public class OrganisationsRoles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganisationsPartyIdRolesRoleIdResponse res = new org.openapis.openapi.models.operations.GetOrganisationsPartyIdRolesRoleIdResponse() {{
+        org.openapis.openapi.models.operations.GetOrganisationsPartyIdRolesRoleIdResponse res = new org.openapis.openapi.models.operations.GetOrganisationsPartyIdRolesRoleIdResponse(contentType, httpRes.statusCode()) {{
             partyRole = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -271,13 +265,11 @@ public class OrganisationsRoles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostOrganisationsPartyIdRolesResponse res = new org.openapis.openapi.models.operations.PostOrganisationsPartyIdRolesResponse() {{
+        org.openapis.openapi.models.operations.PostOrganisationsPartyIdRolesResponse res = new org.openapis.openapi.models.operations.PostOrganisationsPartyIdRolesResponse(contentType, httpRes.statusCode()) {{
             partyRole = null;
             invalidArgument = null;
             unauthenticated = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -342,14 +334,12 @@ public class OrganisationsRoles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutOrganisationsPartyIdRolesRoleIdResponse res = new org.openapis.openapi.models.operations.PutOrganisationsPartyIdRolesRoleIdResponse() {{
+        org.openapis.openapi.models.operations.PutOrganisationsPartyIdRolesRoleIdResponse res = new org.openapis.openapi.models.operations.PutOrganisationsPartyIdRolesRoleIdResponse(contentType, httpRes.statusCode()) {{
             partyRole = null;
             invalidArgument = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

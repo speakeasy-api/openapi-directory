@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateLocationHdfsRequest {
     @JsonProperty("AgentArns")
     public String[] agentArns;
+
     public CreateLocationHdfsRequest withAgentArns(String[] agentArns) {
         this.agentArns = agentArns;
         return this;
@@ -18,6 +19,7 @@ public class CreateLocationHdfsRequest {
     
     @JsonProperty("AuthenticationType")
     public HdfsAuthenticationTypeEnum authenticationType;
+
     public CreateLocationHdfsRequest withAuthenticationType(HdfsAuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -26,6 +28,7 @@ public class CreateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockSize")
     public Long blockSize;
+
     public CreateLocationHdfsRequest withBlockSize(Long blockSize) {
         this.blockSize = blockSize;
         return this;
@@ -34,6 +37,7 @@ public class CreateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KerberosKeytab")
     public String kerberosKeytab;
+
     public CreateLocationHdfsRequest withKerberosKeytab(String kerberosKeytab) {
         this.kerberosKeytab = kerberosKeytab;
         return this;
@@ -42,6 +46,7 @@ public class CreateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KerberosKrb5Conf")
     public String kerberosKrb5Conf;
+
     public CreateLocationHdfsRequest withKerberosKrb5Conf(String kerberosKrb5Conf) {
         this.kerberosKrb5Conf = kerberosKrb5Conf;
         return this;
@@ -50,6 +55,7 @@ public class CreateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KerberosPrincipal")
     public String kerberosPrincipal;
+
     public CreateLocationHdfsRequest withKerberosPrincipal(String kerberosPrincipal) {
         this.kerberosPrincipal = kerberosPrincipal;
         return this;
@@ -58,6 +64,7 @@ public class CreateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyProviderUri")
     public String kmsKeyProviderUri;
+
     public CreateLocationHdfsRequest withKmsKeyProviderUri(String kmsKeyProviderUri) {
         this.kmsKeyProviderUri = kmsKeyProviderUri;
         return this;
@@ -65,6 +72,7 @@ public class CreateLocationHdfsRequest {
     
     @JsonProperty("NameNodes")
     public HdfsNameNode[] nameNodes;
+
     public CreateLocationHdfsRequest withNameNodes(HdfsNameNode[] nameNodes) {
         this.nameNodes = nameNodes;
         return this;
@@ -73,6 +81,7 @@ public class CreateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QopConfiguration")
     public QopConfiguration qopConfiguration;
+
     public CreateLocationHdfsRequest withQopConfiguration(QopConfiguration qopConfiguration) {
         this.qopConfiguration = qopConfiguration;
         return this;
@@ -81,6 +90,7 @@ public class CreateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationFactor")
     public Long replicationFactor;
+
     public CreateLocationHdfsRequest withReplicationFactor(Long replicationFactor) {
         this.replicationFactor = replicationFactor;
         return this;
@@ -89,6 +99,7 @@ public class CreateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SimpleUser")
     public String simpleUser;
+
     public CreateLocationHdfsRequest withSimpleUser(String simpleUser) {
         this.simpleUser = simpleUser;
         return this;
@@ -97,6 +108,7 @@ public class CreateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subdirectory")
     public String subdirectory;
+
     public CreateLocationHdfsRequest withSubdirectory(String subdirectory) {
         this.subdirectory = subdirectory;
         return this;
@@ -105,9 +117,15 @@ public class CreateLocationHdfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public TagListEntry[] tags;
+
     public CreateLocationHdfsRequest withTags(TagListEntry[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLocationHdfsRequest(@JsonProperty("AgentArns") String[] agentArns, @JsonProperty("AuthenticationType") HdfsAuthenticationTypeEnum authenticationType, @JsonProperty("NameNodes") HdfsNameNode[] nameNodes) {
+        this.agentArns = agentArns;
+        this.authenticationType = authenticationType;
+        this.nameNodes = nameNodes;
+  }
 }

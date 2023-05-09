@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppengineAppsAuthorizedCertificatesDeleteRequest {
@@ -12,6 +13,7 @@ public class AppengineAppsAuthorizedCertificatesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AppengineAppsAuthorizedCertificatesDeleteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class AppengineAppsAuthorizedCertificatesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AppengineAppsAuthorizedCertificatesDeleteRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class AppengineAppsAuthorizedCertificatesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AppengineAppsAuthorizedCertificatesDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class AppengineAppsAuthorizedCertificatesDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appsId")
     public String appsId;
+
     public AppengineAppsAuthorizedCertificatesDeleteRequest withAppsId(String appsId) {
         this.appsId = appsId;
         return this;
@@ -52,6 +57,7 @@ public class AppengineAppsAuthorizedCertificatesDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=authorizedCertificatesId")
     public String authorizedCertificatesId;
+
     public AppengineAppsAuthorizedCertificatesDeleteRequest withAuthorizedCertificatesId(String authorizedCertificatesId) {
         this.authorizedCertificatesId = authorizedCertificatesId;
         return this;
@@ -62,6 +68,7 @@ public class AppengineAppsAuthorizedCertificatesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AppengineAppsAuthorizedCertificatesDeleteRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -72,6 +79,7 @@ public class AppengineAppsAuthorizedCertificatesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AppengineAppsAuthorizedCertificatesDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class AppengineAppsAuthorizedCertificatesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AppengineAppsAuthorizedCertificatesDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class AppengineAppsAuthorizedCertificatesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AppengineAppsAuthorizedCertificatesDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class AppengineAppsAuthorizedCertificatesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AppengineAppsAuthorizedCertificatesDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class AppengineAppsAuthorizedCertificatesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AppengineAppsAuthorizedCertificatesDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class AppengineAppsAuthorizedCertificatesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AppengineAppsAuthorizedCertificatesDeleteRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -132,9 +145,14 @@ public class AppengineAppsAuthorizedCertificatesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AppengineAppsAuthorizedCertificatesDeleteRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public AppengineAppsAuthorizedCertificatesDeleteRequest(@JsonProperty("appsId") String appsId, @JsonProperty("authorizedCertificatesId") String authorizedCertificatesId) {
+        this.appsId = appsId;
+        this.authorizedCertificatesId = authorizedCertificatesId;
+  }
 }

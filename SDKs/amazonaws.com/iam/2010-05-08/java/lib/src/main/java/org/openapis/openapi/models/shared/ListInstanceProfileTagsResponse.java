@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ListInstanceProfileTagsResponse - Success
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListInstanceProfileTagsResponse {
     
     public Boolean isTruncated;
+
     public ListInstanceProfileTagsResponse withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -19,6 +20,7 @@ public class ListInstanceProfileTagsResponse {
     
     
     public String marker;
+
     public ListInstanceProfileTagsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,9 +28,13 @@ public class ListInstanceProfileTagsResponse {
     
     
     public Tag[] tags;
+
     public ListInstanceProfileTagsResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ListInstanceProfileTagsResponse(@JsonProperty("Tags") Tag[] tags) {
+        this.tags = tags;
+  }
 }

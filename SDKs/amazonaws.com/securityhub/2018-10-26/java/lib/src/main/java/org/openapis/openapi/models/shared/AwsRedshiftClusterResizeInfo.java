@@ -15,6 +15,7 @@ public class AwsRedshiftClusterResizeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowCancelResize")
     public Boolean allowCancelResize;
+
     public AwsRedshiftClusterResizeInfo withAllowCancelResize(Boolean allowCancelResize) {
         this.allowCancelResize = allowCancelResize;
         return this;
@@ -23,9 +24,11 @@ public class AwsRedshiftClusterResizeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResizeType")
     public String resizeType;
+
     public AwsRedshiftClusterResizeInfo withResizeType(String resizeType) {
         this.resizeType = resizeType;
         return this;
     }
     
+    public AwsRedshiftClusterResizeInfo(){}
 }

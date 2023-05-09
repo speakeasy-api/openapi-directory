@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostUsersUserEmailPermissionsPermissionNameResponse {
     
     public String contentType;
+
     public PostUsersUserEmailPermissionsPermissionNameResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostUsersUserEmailPermissionsPermissionNameResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PostUsersUserEmailPermissionsPermissionNameResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class PostUsersUserEmailPermissionsPermissionNameResponse {
     
     
     public Integer statusCode;
+
     public PostUsersUserEmailPermissionsPermissionNameResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class PostUsersUserEmailPermissionsPermissionNameResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostUsersUserEmailPermissionsPermissionNameResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class PostUsersUserEmailPermissionsPermissionNameResponse {
      */
     
     public org.openapis.openapi.models.shared.UserResponse userResponse;
+
     public PostUsersUserEmailPermissionsPermissionNameResponse withUserResponse(org.openapis.openapi.models.shared.UserResponse userResponse) {
         this.userResponse = userResponse;
         return this;
     }
     
+    public PostUsersUserEmailPermissionsPermissionNameResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RequestCancelWorkflowExecutionInput {
     @JsonProperty("domain")
     public String domain;
+
     public RequestCancelWorkflowExecutionInput withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -19,6 +20,7 @@ public class RequestCancelWorkflowExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runId")
     public String runId;
+
     public RequestCancelWorkflowExecutionInput withRunId(String runId) {
         this.runId = runId;
         return this;
@@ -26,9 +28,14 @@ public class RequestCancelWorkflowExecutionInput {
     
     @JsonProperty("workflowId")
     public String workflowId;
+
     public RequestCancelWorkflowExecutionInput withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public RequestCancelWorkflowExecutionInput(@JsonProperty("domain") String domain, @JsonProperty("workflowId") String workflowId) {
+        this.domain = domain;
+        this.workflowId = workflowId;
+  }
 }

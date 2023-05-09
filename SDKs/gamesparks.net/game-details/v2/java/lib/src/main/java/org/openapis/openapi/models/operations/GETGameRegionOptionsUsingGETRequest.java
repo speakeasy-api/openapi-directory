@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGameRegionOptionsUsingGETRequest {
@@ -12,9 +13,13 @@ public class GETGameRegionOptionsUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gameApiKey")
     public String gameApiKey;
+
     public GETGameRegionOptionsUsingGETRequest withGameApiKey(String gameApiKey) {
         this.gameApiKey = gameApiKey;
         return this;
     }
     
+    public GETGameRegionOptionsUsingGETRequest(@JsonProperty("gameApiKey") String gameApiKey) {
+        this.gameApiKey = gameApiKey;
+  }
 }

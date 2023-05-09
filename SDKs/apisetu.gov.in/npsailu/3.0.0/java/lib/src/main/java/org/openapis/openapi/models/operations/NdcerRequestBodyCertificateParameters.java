@@ -12,9 +12,13 @@ public class NdcerRequestBodyCertificateParameters {
      */
     @JsonProperty("appid")
     public String appid;
+
     public NdcerRequestBodyCertificateParameters withAppid(String appid) {
         this.appid = appid;
         return this;
     }
     
+    public NdcerRequestBodyCertificateParameters(@JsonProperty("appid") String appid) {
+        this.appid = appid;
+  }
 }

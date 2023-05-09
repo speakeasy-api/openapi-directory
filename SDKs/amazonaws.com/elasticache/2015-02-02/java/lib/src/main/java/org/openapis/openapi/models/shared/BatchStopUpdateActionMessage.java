@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class BatchStopUpdateActionMessage {
     
     public String[] cacheClusterIds;
+
     public BatchStopUpdateActionMessage withCacheClusterIds(String[] cacheClusterIds) {
         this.cacheClusterIds = cacheClusterIds;
         return this;
@@ -16,6 +17,7 @@ public class BatchStopUpdateActionMessage {
     
     
     public String[] replicationGroupIds;
+
     public BatchStopUpdateActionMessage withReplicationGroupIds(String[] replicationGroupIds) {
         this.replicationGroupIds = replicationGroupIds;
         return this;
@@ -23,9 +25,13 @@ public class BatchStopUpdateActionMessage {
     
     
     public String serviceUpdateName;
+
     public BatchStopUpdateActionMessage withServiceUpdateName(String serviceUpdateName) {
         this.serviceUpdateName = serviceUpdateName;
         return this;
     }
     
+    public BatchStopUpdateActionMessage(@JsonProperty("ServiceUpdateName") String serviceUpdateName) {
+        this.serviceUpdateName = serviceUpdateName;
+  }
 }

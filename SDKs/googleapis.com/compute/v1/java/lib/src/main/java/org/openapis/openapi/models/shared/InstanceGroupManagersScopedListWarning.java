@@ -18,6 +18,7 @@ public class InstanceGroupManagersScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public InstanceGroupManagersScopedListWarningCodeEnum code;
+
     public InstanceGroupManagersScopedListWarning withCode(InstanceGroupManagersScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class InstanceGroupManagersScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public InstanceGroupManagersScopedListWarningData[] data;
+
     public InstanceGroupManagersScopedListWarning withData(InstanceGroupManagersScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class InstanceGroupManagersScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public InstanceGroupManagersScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InstanceGroupManagersScopedListWarning(){}
 }

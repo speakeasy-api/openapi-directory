@@ -16,6 +16,7 @@ public class ReportByDayResponse {
      */
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public ReportByDayResponse withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -23,6 +24,7 @@ public class ReportByDayResponse {
     
     @JsonProperty("days")
     public ReportByDay[] days;
+
     public ReportByDayResponse withDays(ReportByDay[] days) {
         this.days = days;
         return this;
@@ -30,9 +32,15 @@ public class ReportByDayResponse {
     
     @JsonProperty("globalPerformanceIndicators")
     public ReportByDayGlobal globalPerformanceIndicators;
+
     public ReportByDayResponse withGlobalPerformanceIndicators(ReportByDayGlobal globalPerformanceIndicators) {
         this.globalPerformanceIndicators = globalPerformanceIndicators;
         return this;
     }
     
+    public ReportByDayResponse(@JsonProperty("currencyCode") String currencyCode, @JsonProperty("days") ReportByDay[] days, @JsonProperty("globalPerformanceIndicators") ReportByDayGlobal globalPerformanceIndicators) {
+        this.currencyCode = currencyCode;
+        this.days = days;
+        this.globalPerformanceIndicators = globalPerformanceIndicators;
+  }
 }

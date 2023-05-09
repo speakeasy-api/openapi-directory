@@ -15,9 +15,13 @@ public class VideoPreviewUrl {
      */
     @JsonProperty("url")
     public String url;
+
     public VideoPreviewUrl withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public VideoPreviewUrl(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFreeBetsRequest {
@@ -12,6 +13,7 @@ public class GetFreeBetsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public GetFreeBetsRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class GetFreeBetsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiSecret")
     public String apiSecret;
+
     public GetFreeBetsRequest withApiSecret(String apiSecret) {
         this.apiSecret = apiSecret;
         return this;
@@ -32,6 +35,7 @@ public class GetFreeBetsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiTicket")
     public String apiTicket;
+
     public GetFreeBetsRequest withApiTicket(String apiTicket) {
         this.apiTicket = apiTicket;
         return this;
@@ -42,6 +46,7 @@ public class GetFreeBetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=exclude")
     public String[] exclude;
+
     public GetFreeBetsRequest withExclude(String[] exclude) {
         this.exclude = exclude;
         return this;
@@ -52,6 +57,7 @@ public class GetFreeBetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=fields")
     public String[] fields;
+
     public GetFreeBetsRequest withFields(String[] fields) {
         this.fields = fields;
         return this;
@@ -62,9 +68,15 @@ public class GetFreeBetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=include")
     public String[] include;
+
     public GetFreeBetsRequest withInclude(String[] include) {
         this.include = include;
         return this;
     }
     
+    public GetFreeBetsRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("apiSecret") String apiSecret, @JsonProperty("apiTicket") String apiTicket) {
+        this.apiKey = apiKey;
+        this.apiSecret = apiSecret;
+        this.apiTicket = apiTicket;
+  }
 }

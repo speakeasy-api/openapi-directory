@@ -15,6 +15,7 @@ public class TargetedSentimentEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DescriptiveMentionIndex")
     public Long[] descriptiveMentionIndex;
+
     public TargetedSentimentEntity withDescriptiveMentionIndex(Long[] descriptiveMentionIndex) {
         this.descriptiveMentionIndex = descriptiveMentionIndex;
         return this;
@@ -23,9 +24,11 @@ public class TargetedSentimentEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mentions")
     public TargetedSentimentMention[] mentions;
+
     public TargetedSentimentEntity withMentions(TargetedSentimentMention[] mentions) {
         this.mentions = mentions;
         return this;
     }
     
+    public TargetedSentimentEntity(){}
 }

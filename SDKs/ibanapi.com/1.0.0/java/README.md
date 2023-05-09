@@ -16,8 +16,8 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetBalanceResponse;
+import org.openapis.openapi.models.operations.GetBalanceSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -25,14 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetBalanceResponse res = sdk.ibanapi.getBalance();
+            GetBalanceResponse res = sdk.ibanapi.getBalance(new GetBalanceSecurity("corrupti") {{
+                apiKeySecurity = "YOUR_API_KEY_HERE";
+            }});
 
-            if (res.balanceResponse.isPresent()) {
+            if (res.balanceResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -40,11 +44,11 @@ public class Application {
 ## Available Resources and Operations
 
 
-### ibanapi
+### [ibanapi](docs/ibanapi/README.md)
 
-* `getBalance` - Get Account Balance
-* `validateIBAN` - Validate IBAN
-* `validateIBANBasic` - Validate IBAN Basic
+* [getBalance](docs/ibanapi/README.md#getbalance) - Get Account Balance
+* [validateIBAN](docs/ibanapi/README.md#validateiban) - Validate IBAN
+* [validateIBANBasic](docs/ibanapi/README.md#validateibanbasic) - Validate IBAN Basic
 <!-- End SDK Available Operations -->
 
 ### Maturity

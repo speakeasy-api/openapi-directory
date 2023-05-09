@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MultipleOperatingModes {
     @JsonProperty("Status")
     public StatisticalIssueStatusEnum status;
+
     public MultipleOperatingModes withStatus(StatisticalIssueStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public MultipleOperatingModes(@JsonProperty("Status") StatisticalIssueStatusEnum status) {
+        this.status = status;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateUploadRequest {
     @JsonProperty("arn")
     public String arn;
+
     public UpdateUploadRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class UpdateUploadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public UpdateUploadRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -27,6 +29,7 @@ public class UpdateUploadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("editContent")
     public Boolean editContent;
+
     public UpdateUploadRequest withEditContent(Boolean editContent) {
         this.editContent = editContent;
         return this;
@@ -35,9 +38,13 @@ public class UpdateUploadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateUploadRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateUploadRequest(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

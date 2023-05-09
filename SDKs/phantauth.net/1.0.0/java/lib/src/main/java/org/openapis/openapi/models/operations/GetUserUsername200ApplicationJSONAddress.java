@@ -18,6 +18,7 @@ public class GetUserUsername200ApplicationJSONAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public GetUserUsername200ApplicationJSONAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -29,6 +30,7 @@ public class GetUserUsername200ApplicationJSONAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formatted")
     public String formatted;
+
     public GetUserUsername200ApplicationJSONAddress withFormatted(String formatted) {
         this.formatted = formatted;
         return this;
@@ -40,6 +42,7 @@ public class GetUserUsername200ApplicationJSONAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locality")
     public String locality;
+
     public GetUserUsername200ApplicationJSONAddress withLocality(String locality) {
         this.locality = locality;
         return this;
@@ -51,6 +54,7 @@ public class GetUserUsername200ApplicationJSONAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal_code")
     public String postalCode;
+
     public GetUserUsername200ApplicationJSONAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -62,6 +66,7 @@ public class GetUserUsername200ApplicationJSONAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public GetUserUsername200ApplicationJSONAddress withRegion(String region) {
         this.region = region;
         return this;
@@ -73,9 +78,11 @@ public class GetUserUsername200ApplicationJSONAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street_address")
     public String streetAddress;
+
     public GetUserUsername200ApplicationJSONAddress withStreetAddress(String streetAddress) {
         this.streetAddress = streetAddress;
         return this;
     }
     
+    public GetUserUsername200ApplicationJSONAddress(){}
 }

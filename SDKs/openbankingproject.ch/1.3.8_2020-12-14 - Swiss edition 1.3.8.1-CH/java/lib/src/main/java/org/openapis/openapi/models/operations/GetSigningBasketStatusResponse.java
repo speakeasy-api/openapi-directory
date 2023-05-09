@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSigningBasketStatusResponse {
     
     public String contentType;
+
     public GetSigningBasketStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSigningBasketStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error400NGSBS error400NGSBS;
+
     public GetSigningBasketStatusResponse withError400NGSBS(org.openapis.openapi.models.shared.Error400NGSBS error400NGSBS) {
         this.error400NGSBS = error400NGSBS;
         return this;
@@ -29,6 +32,7 @@ public class GetSigningBasketStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error400SBS error400SBS;
+
     public GetSigningBasketStatusResponse withError400SBS(org.openapis.openapi.models.shared.Error400SBS error400SBS) {
         this.error400SBS = error400SBS;
         return this;
@@ -39,6 +43,7 @@ public class GetSigningBasketStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error401NGSBS error401NGSBS;
+
     public GetSigningBasketStatusResponse withError401NGSBS(org.openapis.openapi.models.shared.Error401NGSBS error401NGSBS) {
         this.error401NGSBS = error401NGSBS;
         return this;
@@ -49,6 +54,7 @@ public class GetSigningBasketStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error401SBS error401SBS;
+
     public GetSigningBasketStatusResponse withError401SBS(org.openapis.openapi.models.shared.Error401SBS error401SBS) {
         this.error401SBS = error401SBS;
         return this;
@@ -59,6 +65,7 @@ public class GetSigningBasketStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error403NGSBS error403NGSBS;
+
     public GetSigningBasketStatusResponse withError403NGSBS(org.openapis.openapi.models.shared.Error403NGSBS error403NGSBS) {
         this.error403NGSBS = error403NGSBS;
         return this;
@@ -69,6 +76,7 @@ public class GetSigningBasketStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error403SBS error403SBS;
+
     public GetSigningBasketStatusResponse withError403SBS(org.openapis.openapi.models.shared.Error403SBS error403SBS) {
         this.error403SBS = error403SBS;
         return this;
@@ -79,6 +87,7 @@ public class GetSigningBasketStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error404NGSBS error404NGSBS;
+
     public GetSigningBasketStatusResponse withError404NGSBS(org.openapis.openapi.models.shared.Error404NGSBS error404NGSBS) {
         this.error404NGSBS = error404NGSBS;
         return this;
@@ -89,6 +98,7 @@ public class GetSigningBasketStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error404SBS error404SBS;
+
     public GetSigningBasketStatusResponse withError404SBS(org.openapis.openapi.models.shared.Error404SBS error404SBS) {
         this.error404SBS = error404SBS;
         return this;
@@ -99,6 +109,7 @@ public class GetSigningBasketStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error405NGSBS error405NGSBS;
+
     public GetSigningBasketStatusResponse withError405NGSBS(org.openapis.openapi.models.shared.Error405NGSBS error405NGSBS) {
         this.error405NGSBS = error405NGSBS;
         return this;
@@ -109,6 +120,7 @@ public class GetSigningBasketStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error405SBS error405SBS;
+
     public GetSigningBasketStatusResponse withError405SBS(org.openapis.openapi.models.shared.Error405SBS error405SBS) {
         this.error405SBS = error405SBS;
         return this;
@@ -119,6 +131,7 @@ public class GetSigningBasketStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error409NGSBS error409NGSBS;
+
     public GetSigningBasketStatusResponse withError409NGSBS(org.openapis.openapi.models.shared.Error409NGSBS error409NGSBS) {
         this.error409NGSBS = error409NGSBS;
         return this;
@@ -129,6 +142,7 @@ public class GetSigningBasketStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error409SBS error409SBS;
+
     public GetSigningBasketStatusResponse withError409SBS(org.openapis.openapi.models.shared.Error409SBS error409SBS) {
         this.error409SBS = error409SBS;
         return this;
@@ -136,6 +150,7 @@ public class GetSigningBasketStatusResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetSigningBasketStatusResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -143,6 +158,7 @@ public class GetSigningBasketStatusResponse {
     
     
     public Integer statusCode;
+
     public GetSigningBasketStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -150,6 +166,7 @@ public class GetSigningBasketStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSigningBasketStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -160,9 +177,14 @@ public class GetSigningBasketStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.SigningBasketStatusResponse200 signingBasketStatusResponse200;
+
     public GetSigningBasketStatusResponse withSigningBasketStatusResponse200(org.openapis.openapi.models.shared.SigningBasketStatusResponse200 signingBasketStatusResponse200) {
         this.signingBasketStatusResponse200 = signingBasketStatusResponse200;
         return this;
     }
     
+    public GetSigningBasketStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

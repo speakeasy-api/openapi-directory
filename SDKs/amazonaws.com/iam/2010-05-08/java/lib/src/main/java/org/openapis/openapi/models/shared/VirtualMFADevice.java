@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class VirtualMFADevice {
     
     public String base32StringSeed;
+
     public VirtualMFADevice withBase32StringSeed(String base32StringSeed) {
         this.base32StringSeed = base32StringSeed;
         return this;
@@ -19,6 +21,7 @@ public class VirtualMFADevice {
     
     
     public OffsetDateTime enableDate;
+
     public VirtualMFADevice withEnableDate(OffsetDateTime enableDate) {
         this.enableDate = enableDate;
         return this;
@@ -26,6 +29,7 @@ public class VirtualMFADevice {
     
     
     public String qrCodePNG;
+
     public VirtualMFADevice withQRCodePNG(String qrCodePNG) {
         this.qrCodePNG = qrCodePNG;
         return this;
@@ -33,6 +37,7 @@ public class VirtualMFADevice {
     
     
     public String serialNumber;
+
     public VirtualMFADevice withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -40,6 +45,7 @@ public class VirtualMFADevice {
     
     
     public Tag[] tags;
+
     public VirtualMFADevice withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -47,9 +53,13 @@ public class VirtualMFADevice {
     
     
     public User user;
+
     public VirtualMFADevice withUser(User user) {
         this.user = user;
         return this;
     }
     
+    public VirtualMFADevice(@JsonProperty("SerialNumber") String serialNumber) {
+        this.serialNumber = serialNumber;
+  }
 }

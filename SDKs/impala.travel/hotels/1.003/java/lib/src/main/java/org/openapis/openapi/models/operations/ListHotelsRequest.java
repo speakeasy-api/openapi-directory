@@ -12,6 +12,7 @@ public class ListHotelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=country")
     public java.util.Map<String, Object> country;
+
     public ListHotelsRequest withCountry(java.util.Map<String, Object> country) {
         this.country = country;
         return this;
@@ -22,6 +23,7 @@ public class ListHotelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=created")
     public java.util.Map<String, Object> created;
+
     public ListHotelsRequest withCreated(java.util.Map<String, Object> created) {
         this.created = created;
         return this;
@@ -32,6 +34,7 @@ public class ListHotelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public String end;
+
     public ListHotelsRequest withEnd(String end) {
         this.end = end;
         return this;
@@ -42,6 +45,7 @@ public class ListHotelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=hotelIds")
     public String[] hotelIds;
+
     public ListHotelsRequest withHotelIds(String[] hotelIds) {
         this.hotelIds = hotelIds;
         return this;
@@ -52,6 +56,7 @@ public class ListHotelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latitude")
     public Double latitude;
+
     public ListHotelsRequest withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -62,6 +67,7 @@ public class ListHotelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longitude")
     public Double longitude;
+
     public ListHotelsRequest withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -72,6 +78,7 @@ public class ListHotelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=name")
     public java.util.Map<String, Object> name;
+
     public ListHotelsRequest withName(java.util.Map<String, Object> name) {
         this.name = name;
         return this;
@@ -82,6 +89,7 @@ public class ListHotelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Double offset;
+
     public ListHotelsRequest withOffset(Double offset) {
         this.offset = offset;
         return this;
@@ -92,6 +100,7 @@ public class ListHotelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
     public Integer radius;
+
     public ListHotelsRequest withRadius(Integer radius) {
         this.radius = radius;
         return this;
@@ -102,6 +111,7 @@ public class ListHotelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Double size;
+
     public ListHotelsRequest withSize(Double size) {
         this.size = size;
         return this;
@@ -112,6 +122,7 @@ public class ListHotelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
     public String sortBy;
+
     public ListHotelsRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -122,6 +133,7 @@ public class ListHotelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=starRating")
     public java.util.Map<String, Object> starRating;
+
     public ListHotelsRequest withStarRating(java.util.Map<String, Object> starRating) {
         this.starRating = starRating;
         return this;
@@ -132,6 +144,7 @@ public class ListHotelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public String start;
+
     public ListHotelsRequest withStart(String start) {
         this.start = start;
         return this;
@@ -142,9 +155,11 @@ public class ListHotelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=updated")
     public java.util.Map<String, Object> updated;
+
     public ListHotelsRequest withUpdated(java.util.Map<String, Object> updated) {
         this.updated = updated;
         return this;
     }
     
+    public ListHotelsRequest(){}
 }

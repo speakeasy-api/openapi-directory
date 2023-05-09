@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MncerResponse {
     
     public String contentType;
+
     public MncerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MncerResponse {
     
     
     public Integer statusCode;
+
     public MncerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class MncerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MncerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class MncerResponse {
      */
     
     public Mncer400ApplicationJSON mncer400ApplicationJSONObject;
+
     public MncerResponse withMncer400ApplicationJSONObject(Mncer400ApplicationJSON mncer400ApplicationJSONObject) {
         this.mncer400ApplicationJSONObject = mncer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class MncerResponse {
      */
     
     public Mncer401ApplicationJSON mncer401ApplicationJSONObject;
+
     public MncerResponse withMncer401ApplicationJSONObject(Mncer401ApplicationJSON mncer401ApplicationJSONObject) {
         this.mncer401ApplicationJSONObject = mncer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class MncerResponse {
      */
     
     public Mncer404ApplicationJSON mncer404ApplicationJSONObject;
+
     public MncerResponse withMncer404ApplicationJSONObject(Mncer404ApplicationJSON mncer404ApplicationJSONObject) {
         this.mncer404ApplicationJSONObject = mncer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class MncerResponse {
      */
     
     public Mncer500ApplicationJSON mncer500ApplicationJSONObject;
+
     public MncerResponse withMncer500ApplicationJSONObject(Mncer500ApplicationJSON mncer500ApplicationJSONObject) {
         this.mncer500ApplicationJSONObject = mncer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class MncerResponse {
      */
     
     public Mncer502ApplicationJSON mncer502ApplicationJSONObject;
+
     public MncerResponse withMncer502ApplicationJSONObject(Mncer502ApplicationJSON mncer502ApplicationJSONObject) {
         this.mncer502ApplicationJSONObject = mncer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class MncerResponse {
      */
     
     public Mncer503ApplicationJSON mncer503ApplicationJSONObject;
+
     public MncerResponse withMncer503ApplicationJSONObject(Mncer503ApplicationJSON mncer503ApplicationJSONObject) {
         this.mncer503ApplicationJSONObject = mncer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class MncerResponse {
      */
     
     public Mncer504ApplicationJSON mncer504ApplicationJSONObject;
+
     public MncerResponse withMncer504ApplicationJSONObject(Mncer504ApplicationJSON mncer504ApplicationJSONObject) {
         this.mncer504ApplicationJSONObject = mncer504ApplicationJSONObject;
         return this;
     }
     
+    public MncerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

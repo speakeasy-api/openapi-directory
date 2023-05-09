@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeStatusRequest {
@@ -12,6 +13,7 @@ public class ChangeStatusRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.JobStatusDTO jobStatusDTO;
+
     public ChangeStatusRequest withJobStatusDTO(org.openapis.openapi.models.shared.JobStatusDTO jobStatusDTO) {
         this.jobStatusDTO = jobStatusDTO;
         return this;
@@ -22,9 +24,14 @@ public class ChangeStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public ChangeStatusRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public ChangeStatusRequest(@JsonProperty("JobStatusDTO") org.openapis.openapi.models.shared.JobStatusDTO jobStatusDTO, @JsonProperty("jobId") String jobId) {
+        this.jobStatusDTO = jobStatusDTO;
+        this.jobId = jobId;
+  }
 }

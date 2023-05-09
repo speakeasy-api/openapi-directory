@@ -23,6 +23,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accuracy")
     public Double accuracy;
+
     public Location withAccuracy(Double accuracy) {
         this.accuracy = accuracy;
         return this;
@@ -34,6 +35,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public Location withAddress(String address) {
         this.address = address;
         return this;
@@ -45,6 +47,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Location withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -56,6 +59,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Location withId(String id) {
         this.id = id;
         return this;
@@ -67,6 +71,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Location withKind(String kind) {
         this.kind = kind;
         return this;
@@ -78,6 +83,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public Location withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -89,6 +95,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public Location withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -102,9 +109,11 @@ public class Location {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public Location withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public Location(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateDataSourceResponse {
     @JsonProperty("Id")
     public String id;
+
     public CreateDataSourceResponse withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CreateDataSourceResponse(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

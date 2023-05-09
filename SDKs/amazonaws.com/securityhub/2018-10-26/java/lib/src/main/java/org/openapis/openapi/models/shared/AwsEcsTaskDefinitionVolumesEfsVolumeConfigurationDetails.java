@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizationConfig")
     public AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationAuthorizationConfigDetails authorizationConfig;
+
     public AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationDetails withAuthorizationConfig(AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationAuthorizationConfigDetails authorizationConfig) {
         this.authorizationConfig = authorizationConfig;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilesystemId")
     public String filesystemId;
+
     public AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationDetails withFilesystemId(String filesystemId) {
         this.filesystemId = filesystemId;
         return this;
@@ -31,6 +33,7 @@ public class AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootDirectory")
     public String rootDirectory;
+
     public AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationDetails withRootDirectory(String rootDirectory) {
         this.rootDirectory = rootDirectory;
         return this;
@@ -39,6 +42,7 @@ public class AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransitEncryption")
     public String transitEncryption;
+
     public AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationDetails withTransitEncryption(String transitEncryption) {
         this.transitEncryption = transitEncryption;
         return this;
@@ -47,9 +51,11 @@ public class AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransitEncryptionPort")
     public Long transitEncryptionPort;
+
     public AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationDetails withTransitEncryptionPort(Long transitEncryptionPort) {
         this.transitEncryptionPort = transitEncryptionPort;
         return this;
     }
     
+    public AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationDetails(){}
 }

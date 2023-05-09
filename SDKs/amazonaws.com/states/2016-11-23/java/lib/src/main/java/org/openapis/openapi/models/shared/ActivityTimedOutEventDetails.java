@@ -15,6 +15,7 @@ public class ActivityTimedOutEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cause")
     public String cause;
+
     public ActivityTimedOutEventDetails withCause(String cause) {
         this.cause = cause;
         return this;
@@ -23,9 +24,11 @@ public class ActivityTimedOutEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public ActivityTimedOutEventDetails withError(String error) {
         this.error = error;
         return this;
     }
     
+    public ActivityTimedOutEventDetails(){}
 }

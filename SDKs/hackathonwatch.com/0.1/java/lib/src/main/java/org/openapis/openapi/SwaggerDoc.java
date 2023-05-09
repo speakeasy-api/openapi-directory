@@ -48,10 +48,8 @@ public class SwaggerDoc {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETSwaggerDocFormatResponse res = new org.openapis.openapi.models.operations.GETSwaggerDocFormatResponse() {{
+        org.openapis.openapi.models.operations.GETSwaggerDocFormatResponse res = new org.openapis.openapi.models.operations.GETSwaggerDocFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -80,10 +78,8 @@ public class SwaggerDoc {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETSwaggerDocNameFormatResponse res = new org.openapis.openapi.models.operations.GETSwaggerDocNameFormatResponse() {{
+        org.openapis.openapi.models.operations.GETSwaggerDocNameFormatResponse res = new org.openapis.openapi.models.operations.GETSwaggerDocNameFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,9 +15,11 @@ public class InputFormatOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Csv")
     public CsvOptions csv;
+
     public InputFormatOptions withCsv(CsvOptions csv) {
         this.csv = csv;
         return this;
     }
     
+    public InputFormatOptions(){}
 }

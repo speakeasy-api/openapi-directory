@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyVpnTunnelCertificateResultVpnConnection {
     
     public String category;
+
     public ModifyVpnTunnelCertificateResultVpnConnection withCategory(String category) {
         this.category = category;
         return this;
@@ -19,6 +20,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnection {
     
     
     public String coreNetworkArn;
+
     public ModifyVpnTunnelCertificateResultVpnConnection withCoreNetworkArn(String coreNetworkArn) {
         this.coreNetworkArn = coreNetworkArn;
         return this;
@@ -26,6 +28,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnection {
     
     
     public String coreNetworkAttachmentArn;
+
     public ModifyVpnTunnelCertificateResultVpnConnection withCoreNetworkAttachmentArn(String coreNetworkAttachmentArn) {
         this.coreNetworkAttachmentArn = coreNetworkAttachmentArn;
         return this;
@@ -33,6 +36,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnection {
     
     
     public String customerGatewayConfiguration;
+
     public ModifyVpnTunnelCertificateResultVpnConnection withCustomerGatewayConfiguration(String customerGatewayConfiguration) {
         this.customerGatewayConfiguration = customerGatewayConfiguration;
         return this;
@@ -40,6 +44,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnection {
     
     
     public String customerGatewayId;
+
     public ModifyVpnTunnelCertificateResultVpnConnection withCustomerGatewayId(String customerGatewayId) {
         this.customerGatewayId = customerGatewayId;
         return this;
@@ -47,6 +52,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnection {
     
     
     public ModifyVpnTunnelCertificateResultVpnConnectionGatewayAssociationStateEnum gatewayAssociationState;
+
     public ModifyVpnTunnelCertificateResultVpnConnection withGatewayAssociationState(ModifyVpnTunnelCertificateResultVpnConnectionGatewayAssociationStateEnum gatewayAssociationState) {
         this.gatewayAssociationState = gatewayAssociationState;
         return this;
@@ -54,6 +60,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnection {
     
     
     public ModifyVpnTunnelCertificateResultVpnConnectionOptions options;
+
     public ModifyVpnTunnelCertificateResultVpnConnection withOptions(ModifyVpnTunnelCertificateResultVpnConnectionOptions options) {
         this.options = options;
         return this;
@@ -61,6 +68,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnection {
     
     
     public ModifyVpnTunnelCertificateResultVpnConnectionRoutes[] routes;
+
     public ModifyVpnTunnelCertificateResultVpnConnection withRoutes(ModifyVpnTunnelCertificateResultVpnConnectionRoutes[] routes) {
         this.routes = routes;
         return this;
@@ -68,6 +76,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnection {
     
     
     public ModifyVpnTunnelCertificateResultVpnConnectionStateEnum state;
+
     public ModifyVpnTunnelCertificateResultVpnConnection withState(ModifyVpnTunnelCertificateResultVpnConnectionStateEnum state) {
         this.state = state;
         return this;
@@ -75,6 +84,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnection {
     
     
     public ModifyVpnTunnelCertificateResultVpnConnectionTags[] tags;
+
     public ModifyVpnTunnelCertificateResultVpnConnection withTags(ModifyVpnTunnelCertificateResultVpnConnectionTags[] tags) {
         this.tags = tags;
         return this;
@@ -82,6 +92,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnection {
     
     
     public String transitGatewayId;
+
     public ModifyVpnTunnelCertificateResultVpnConnection withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -89,6 +100,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnection {
     
     
     public ModifyVpnTunnelCertificateResultVpnConnectionTypeEnum type;
+
     public ModifyVpnTunnelCertificateResultVpnConnection withType(ModifyVpnTunnelCertificateResultVpnConnectionTypeEnum type) {
         this.type = type;
         return this;
@@ -96,6 +108,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnection {
     
     
     public ModifyVpnTunnelCertificateResultVpnConnectionVgwTelemetry[] vgwTelemetry;
+
     public ModifyVpnTunnelCertificateResultVpnConnection withVgwTelemetry(ModifyVpnTunnelCertificateResultVpnConnectionVgwTelemetry[] vgwTelemetry) {
         this.vgwTelemetry = vgwTelemetry;
         return this;
@@ -103,6 +116,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnection {
     
     
     public String vpnConnectionId;
+
     public ModifyVpnTunnelCertificateResultVpnConnection withVpnConnectionId(String vpnConnectionId) {
         this.vpnConnectionId = vpnConnectionId;
         return this;
@@ -110,9 +124,11 @@ public class ModifyVpnTunnelCertificateResultVpnConnection {
     
     
     public String vpnGatewayId;
+
     public ModifyVpnTunnelCertificateResultVpnConnection withVpnGatewayId(String vpnGatewayId) {
         this.vpnGatewayId = vpnGatewayId;
         return this;
     }
     
+    public ModifyVpnTunnelCertificateResultVpnConnection(){}
 }

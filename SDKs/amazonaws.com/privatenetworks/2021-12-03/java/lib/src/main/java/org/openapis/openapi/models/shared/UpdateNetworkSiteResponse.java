@@ -15,6 +15,7 @@ public class UpdateNetworkSiteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkSite")
     public NetworkSite networkSite;
+
     public UpdateNetworkSiteResponse withNetworkSite(NetworkSite networkSite) {
         this.networkSite = networkSite;
         return this;
@@ -23,9 +24,11 @@ public class UpdateNetworkSiteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public UpdateNetworkSiteResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public UpdateNetworkSiteResponse(){}
 }

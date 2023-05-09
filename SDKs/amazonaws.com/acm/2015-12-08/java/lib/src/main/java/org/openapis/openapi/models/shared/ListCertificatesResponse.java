@@ -15,6 +15,7 @@ public class ListCertificatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateSummaryList")
     public CertificateSummary[] certificateSummaryList;
+
     public ListCertificatesResponse withCertificateSummaryList(CertificateSummary[] certificateSummaryList) {
         this.certificateSummaryList = certificateSummaryList;
         return this;
@@ -23,9 +24,11 @@ public class ListCertificatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCertificatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCertificatesResponse(){}
 }

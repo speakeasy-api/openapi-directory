@@ -15,6 +15,7 @@ public class UpdateDeviceCellularGatewaySettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedIpAssignments")
     public UpdateDeviceCellularGatewaySettingsRequestBodyFixedIpAssignments[] fixedIpAssignments;
+
     public UpdateDeviceCellularGatewaySettingsRequestBody withFixedIpAssignments(UpdateDeviceCellularGatewaySettingsRequestBodyFixedIpAssignments[] fixedIpAssignments) {
         this.fixedIpAssignments = fixedIpAssignments;
         return this;
@@ -26,9 +27,11 @@ public class UpdateDeviceCellularGatewaySettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservedIpRanges")
     public UpdateDeviceCellularGatewaySettingsRequestBodyReservedIpRanges[] reservedIpRanges;
+
     public UpdateDeviceCellularGatewaySettingsRequestBody withReservedIpRanges(UpdateDeviceCellularGatewaySettingsRequestBodyReservedIpRanges[] reservedIpRanges) {
         this.reservedIpRanges = reservedIpRanges;
         return this;
     }
     
+    public UpdateDeviceCellularGatewaySettingsRequestBody(){}
 }

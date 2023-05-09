@@ -62,4 +62,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/AnalyticsManagementWebp
 lib/src/main/java/org/openapis/openapi/models/operations/AnalyticsManagementWebpropertiesListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AnalyticsManagementWebpropertiesListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
+docs/sdk/README.md
+docs/data/README.md
+docs/management/README.md
 USAGE.md

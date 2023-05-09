@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateLaunchTemplateRequest {
     
     public String clientToken;
+
     public CreateLaunchTemplateRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateLaunchTemplateRequest {
     
     
     public Boolean dryRun;
+
     public CreateLaunchTemplateRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class CreateLaunchTemplateRequest {
     
     
     public RequestLaunchTemplateData launchTemplateData;
+
     public CreateLaunchTemplateRequest withLaunchTemplateData(RequestLaunchTemplateData launchTemplateData) {
         this.launchTemplateData = launchTemplateData;
         return this;
@@ -30,6 +33,7 @@ public class CreateLaunchTemplateRequest {
     
     
     public String launchTemplateName;
+
     public CreateLaunchTemplateRequest withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
@@ -37,6 +41,7 @@ public class CreateLaunchTemplateRequest {
     
     
     public CreateLaunchTemplateRequestTagSpecifications[] tagSpecifications;
+
     public CreateLaunchTemplateRequest withTagSpecifications(CreateLaunchTemplateRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -44,9 +49,14 @@ public class CreateLaunchTemplateRequest {
     
     
     public String versionDescription;
+
     public CreateLaunchTemplateRequest withVersionDescription(String versionDescription) {
         this.versionDescription = versionDescription;
         return this;
     }
     
+    public CreateLaunchTemplateRequest(@JsonProperty("LaunchTemplateData") RequestLaunchTemplateData launchTemplateData, @JsonProperty("LaunchTemplateName") String launchTemplateName) {
+        this.launchTemplateData = launchTemplateData;
+        this.launchTemplateName = launchTemplateName;
+  }
 }

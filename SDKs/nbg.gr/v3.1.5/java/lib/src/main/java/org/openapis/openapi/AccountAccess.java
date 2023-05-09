@@ -61,12 +61,10 @@ public class AccountAccess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAccountAccessConsentsConsentIdResponse res = new org.openapis.openapi.models.operations.DeleteAccountAccessConsentsConsentIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteAccountAccessConsentsConsentIdResponse res = new org.openapis.openapi.models.operations.DeleteAccountAccessConsentsConsentIdResponse(contentType, httpRes.statusCode()) {{
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 406) {
@@ -118,14 +116,12 @@ public class AccountAccess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountAccessConsentsConsentIdResponse res = new org.openapis.openapi.models.operations.GetAccountAccessConsentsConsentIdResponse() {{
+        org.openapis.openapi.models.operations.GetAccountAccessConsentsConsentIdResponse res = new org.openapis.openapi.models.operations.GetAccountAccessConsentsConsentIdResponse(contentType, httpRes.statusCode()) {{
             obReadConsentResponse1 = null;
             obReadConsentResponse1 = null;
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -191,14 +187,12 @@ public class AccountAccess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAccountAccessConsentsResponse res = new org.openapis.openapi.models.operations.PostAccountAccessConsentsResponse() {{
+        org.openapis.openapi.models.operations.PostAccountAccessConsentsResponse res = new org.openapis.openapi.models.operations.PostAccountAccessConsentsResponse(contentType, httpRes.statusCode()) {{
             obReadConsentResponse1 = null;
             obReadConsentResponse1 = null;
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

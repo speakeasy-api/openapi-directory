@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRunGroupResponse {
@@ -12,6 +13,7 @@ public class DeleteRunGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteRunGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteRunGroupResponse {
      */
     
     public Object conflictException;
+
     public DeleteRunGroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRunGroupResponse {
     
     
     public String contentType;
+
     public DeleteRunGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRunGroupResponse {
      */
     
     public Object internalServerException;
+
     public DeleteRunGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteRunGroupResponse {
      */
     
     public Object requestTimeoutException;
+
     public DeleteRunGroupResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteRunGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteRunGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteRunGroupResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DeleteRunGroupResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteRunGroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteRunGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteRunGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRunGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteRunGroupResponse {
      */
     
     public Object throttlingException;
+
     public DeleteRunGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteRunGroupResponse {
      */
     
     public Object validationException;
+
     public DeleteRunGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteRunGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

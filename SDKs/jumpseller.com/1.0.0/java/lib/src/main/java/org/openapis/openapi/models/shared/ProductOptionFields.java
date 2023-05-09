@@ -15,6 +15,7 @@ public class ProductOptionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public ProductOptionFields withId(Integer id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class ProductOptionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProductOptionFields withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class ProductOptionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("option_type")
     public ProductOptionFieldsOptionTypeEnum optionType;
+
     public ProductOptionFields withOptionType(ProductOptionFieldsOptionTypeEnum optionType) {
         this.optionType = optionType;
         return this;
@@ -48,6 +51,7 @@ public class ProductOptionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Integer position;
+
     public ProductOptionFields withPosition(Integer position) {
         this.position = position;
         return this;
@@ -56,9 +60,11 @@ public class ProductOptionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public ProductOptionValueFields[] values;
+
     public ProductOptionFields withValues(ProductOptionValueFields[] values) {
         this.values = values;
         return this;
     }
     
+    public ProductOptionFields(){}
 }

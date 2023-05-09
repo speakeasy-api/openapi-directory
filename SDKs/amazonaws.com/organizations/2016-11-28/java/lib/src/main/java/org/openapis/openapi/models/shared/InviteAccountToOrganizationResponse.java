@@ -15,9 +15,11 @@ public class InviteAccountToOrganizationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Handshake")
     public Handshake handshake;
+
     public InviteAccountToOrganizationResponse withHandshake(Handshake handshake) {
         this.handshake = handshake;
         return this;
     }
     
+    public InviteAccountToOrganizationResponse(){}
 }

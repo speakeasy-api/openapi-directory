@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImportKeyPairResultTags {
     
     public String key;
+
     public ImportKeyPairResultTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class ImportKeyPairResultTags {
     
     
     public String value;
+
     public ImportKeyPairResultTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ImportKeyPairResultTags(){}
 }

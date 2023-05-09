@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePortfolioSharesResponse {
     
     public String contentType;
+
     public DescribePortfolioSharesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribePortfolioSharesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePortfolioSharesOutput describePortfolioSharesOutput;
+
     public DescribePortfolioSharesResponse withDescribePortfolioSharesOutput(org.openapis.openapi.models.shared.DescribePortfolioSharesOutput describePortfolioSharesOutput) {
         this.describePortfolioSharesOutput = describePortfolioSharesOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribePortfolioSharesResponse {
      */
     
     public Object invalidParametersException;
+
     public DescribePortfolioSharesResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -39,6 +43,7 @@ public class DescribePortfolioSharesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribePortfolioSharesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribePortfolioSharesResponse {
     
     
     public Integer statusCode;
+
     public DescribePortfolioSharesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribePortfolioSharesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePortfolioSharesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribePortfolioSharesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

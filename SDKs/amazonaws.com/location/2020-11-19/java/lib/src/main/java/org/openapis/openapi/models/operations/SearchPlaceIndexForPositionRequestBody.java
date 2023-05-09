@@ -15,6 +15,7 @@ public class SearchPlaceIndexForPositionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Language")
     public String language;
+
     public SearchPlaceIndexForPositionRequestBody withLanguage(String language) {
         this.language = language;
         return this;
@@ -26,6 +27,7 @@ public class SearchPlaceIndexForPositionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public SearchPlaceIndexForPositionRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class SearchPlaceIndexForPositionRequestBody {
      */
     @JsonProperty("Position")
     public Double[] position;
+
     public SearchPlaceIndexForPositionRequestBody withPosition(Double[] position) {
         this.position = position;
         return this;
     }
     
+    public SearchPlaceIndexForPositionRequestBody(@JsonProperty("Position") Double[] position) {
+        this.position = position;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchMerchantsMerchantIdUsersUserIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateMerchantUserRequest updateMerchantUserRequest;
+
     public PatchMerchantsMerchantIdUsersUserIdRequest withUpdateMerchantUserRequest(org.openapis.openapi.models.shared.UpdateMerchantUserRequest updateMerchantUserRequest) {
         this.updateMerchantUserRequest = updateMerchantUserRequest;
         return this;
@@ -19,6 +21,7 @@ public class PatchMerchantsMerchantIdUsersUserIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public PatchMerchantsMerchantIdUsersUserIdRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -29,9 +32,14 @@ public class PatchMerchantsMerchantIdUsersUserIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public PatchMerchantsMerchantIdUsersUserIdRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public PatchMerchantsMerchantIdUsersUserIdRequest(@JsonProperty("merchantId") String merchantId, @JsonProperty("userId") String userId) {
+        this.merchantId = merchantId;
+        this.userId = userId;
+  }
 }

@@ -15,9 +15,11 @@ public class UpdateSettingsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public UpdateSettingsResult withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
     }
     
+    public UpdateSettingsResult(){}
 }

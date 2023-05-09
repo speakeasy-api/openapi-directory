@@ -15,9 +15,11 @@ public class PurchaseOfferingResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offeringTransaction")
     public OfferingTransaction offeringTransaction;
+
     public PurchaseOfferingResult withOfferingTransaction(OfferingTransaction offeringTransaction) {
         this.offeringTransaction = offeringTransaction;
         return this;
     }
     
+    public PurchaseOfferingResult(){}
 }

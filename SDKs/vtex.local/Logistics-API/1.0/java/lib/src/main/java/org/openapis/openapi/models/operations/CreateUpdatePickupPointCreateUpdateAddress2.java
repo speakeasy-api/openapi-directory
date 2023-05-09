@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateUpdatePickupPointCreateUpdateAddress2 {
     @JsonProperty("city")
     public String city;
+
     public CreateUpdatePickupPointCreateUpdateAddress2 withCity(String city) {
         this.city = city;
         return this;
@@ -16,6 +17,7 @@ public class CreateUpdatePickupPointCreateUpdateAddress2 {
     
     @JsonProperty("complement")
     public String complement;
+
     public CreateUpdatePickupPointCreateUpdateAddress2 withComplement(String complement) {
         this.complement = complement;
         return this;
@@ -23,6 +25,7 @@ public class CreateUpdatePickupPointCreateUpdateAddress2 {
     
     @JsonProperty("country")
     public CreateUpdatePickupPointCreateUpdateAddress2Country country;
+
     public CreateUpdatePickupPointCreateUpdateAddress2 withCountry(CreateUpdatePickupPointCreateUpdateAddress2Country country) {
         this.country = country;
         return this;
@@ -30,6 +33,7 @@ public class CreateUpdatePickupPointCreateUpdateAddress2 {
     
     @JsonProperty("location")
     public CreateUpdatePickupPointCreateUpdateAddress2Location5 location;
+
     public CreateUpdatePickupPointCreateUpdateAddress2 withLocation(CreateUpdatePickupPointCreateUpdateAddress2Location5 location) {
         this.location = location;
         return this;
@@ -37,6 +41,7 @@ public class CreateUpdatePickupPointCreateUpdateAddress2 {
     
     @JsonProperty("neighborhood")
     public String neighborhood;
+
     public CreateUpdatePickupPointCreateUpdateAddress2 withNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
         return this;
@@ -44,6 +49,7 @@ public class CreateUpdatePickupPointCreateUpdateAddress2 {
     
     @JsonProperty("number")
     public String number;
+
     public CreateUpdatePickupPointCreateUpdateAddress2 withNumber(String number) {
         this.number = number;
         return this;
@@ -51,6 +57,7 @@ public class CreateUpdatePickupPointCreateUpdateAddress2 {
     
     @JsonProperty("postalCode")
     public String postalCode;
+
     public CreateUpdatePickupPointCreateUpdateAddress2 withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -58,6 +65,7 @@ public class CreateUpdatePickupPointCreateUpdateAddress2 {
     
     @JsonProperty("reference")
     public String reference;
+
     public CreateUpdatePickupPointCreateUpdateAddress2 withReference(String reference) {
         this.reference = reference;
         return this;
@@ -65,6 +73,7 @@ public class CreateUpdatePickupPointCreateUpdateAddress2 {
     
     @JsonProperty("state")
     public String state;
+
     public CreateUpdatePickupPointCreateUpdateAddress2 withState(String state) {
         this.state = state;
         return this;
@@ -72,9 +81,22 @@ public class CreateUpdatePickupPointCreateUpdateAddress2 {
     
     @JsonProperty("street")
     public String street;
+
     public CreateUpdatePickupPointCreateUpdateAddress2 withStreet(String street) {
         this.street = street;
         return this;
     }
     
+    public CreateUpdatePickupPointCreateUpdateAddress2(@JsonProperty("city") String city, @JsonProperty("complement") String complement, @JsonProperty("country") CreateUpdatePickupPointCreateUpdateAddress2Country country, @JsonProperty("location") CreateUpdatePickupPointCreateUpdateAddress2Location5 location, @JsonProperty("neighborhood") String neighborhood, @JsonProperty("number") String number, @JsonProperty("postalCode") String postalCode, @JsonProperty("reference") String reference, @JsonProperty("state") String state, @JsonProperty("street") String street) {
+        this.city = city;
+        this.complement = complement;
+        this.country = country;
+        this.location = location;
+        this.neighborhood = neighborhood;
+        this.number = number;
+        this.postalCode = postalCode;
+        this.reference = reference;
+        this.state = state;
+        this.street = street;
+  }
 }

@@ -22,6 +22,7 @@ public class WorkerConfigurationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public WorkerConfigurationSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class WorkerConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public WorkerConfigurationSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class WorkerConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestRevision")
     public WorkerConfigurationRevisionSummary latestRevision;
+
     public WorkerConfigurationSummary withLatestRevision(WorkerConfigurationRevisionSummary latestRevision) {
         this.latestRevision = latestRevision;
         return this;
@@ -46,6 +49,7 @@ public class WorkerConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WorkerConfigurationSummary withName(String name) {
         this.name = name;
         return this;
@@ -54,9 +58,11 @@ public class WorkerConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerConfigurationArn")
     public String workerConfigurationArn;
+
     public WorkerConfigurationSummary withWorkerConfigurationArn(String workerConfigurationArn) {
         this.workerConfigurationArn = workerConfigurationArn;
         return this;
     }
     
+    public WorkerConfigurationSummary(){}
 }

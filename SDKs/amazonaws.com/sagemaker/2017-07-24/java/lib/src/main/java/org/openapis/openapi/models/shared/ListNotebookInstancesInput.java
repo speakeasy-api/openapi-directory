@@ -17,6 +17,7 @@ public class ListNotebookInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalCodeRepositoryEquals")
     public String additionalCodeRepositoryEquals;
+
     public ListNotebookInstancesInput withAdditionalCodeRepositoryEquals(String additionalCodeRepositoryEquals) {
         this.additionalCodeRepositoryEquals = additionalCodeRepositoryEquals;
         return this;
@@ -27,6 +28,7 @@ public class ListNotebookInstancesInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListNotebookInstancesInput withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -37,6 +39,7 @@ public class ListNotebookInstancesInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListNotebookInstancesInput withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -45,6 +48,7 @@ public class ListNotebookInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultCodeRepositoryContains")
     public String defaultCodeRepositoryContains;
+
     public ListNotebookInstancesInput withDefaultCodeRepositoryContains(String defaultCodeRepositoryContains) {
         this.defaultCodeRepositoryContains = defaultCodeRepositoryContains;
         return this;
@@ -55,6 +59,7 @@ public class ListNotebookInstancesInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimeAfter")
     public OffsetDateTime lastModifiedTimeAfter;
+
     public ListNotebookInstancesInput withLastModifiedTimeAfter(OffsetDateTime lastModifiedTimeAfter) {
         this.lastModifiedTimeAfter = lastModifiedTimeAfter;
         return this;
@@ -65,6 +70,7 @@ public class ListNotebookInstancesInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimeBefore")
     public OffsetDateTime lastModifiedTimeBefore;
+
     public ListNotebookInstancesInput withLastModifiedTimeBefore(OffsetDateTime lastModifiedTimeBefore) {
         this.lastModifiedTimeBefore = lastModifiedTimeBefore;
         return this;
@@ -73,6 +79,7 @@ public class ListNotebookInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListNotebookInstancesInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -81,6 +88,7 @@ public class ListNotebookInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameContains")
     public String nameContains;
+
     public ListNotebookInstancesInput withNameContains(String nameContains) {
         this.nameContains = nameContains;
         return this;
@@ -89,6 +97,7 @@ public class ListNotebookInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListNotebookInstancesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -97,6 +106,7 @@ public class ListNotebookInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookInstanceLifecycleConfigNameContains")
     public String notebookInstanceLifecycleConfigNameContains;
+
     public ListNotebookInstancesInput withNotebookInstanceLifecycleConfigNameContains(String notebookInstanceLifecycleConfigNameContains) {
         this.notebookInstanceLifecycleConfigNameContains = notebookInstanceLifecycleConfigNameContains;
         return this;
@@ -105,6 +115,7 @@ public class ListNotebookInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public NotebookInstanceSortKeyEnum sortBy;
+
     public ListNotebookInstancesInput withSortBy(NotebookInstanceSortKeyEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -113,6 +124,7 @@ public class ListNotebookInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public NotebookInstanceSortOrderEnum sortOrder;
+
     public ListNotebookInstancesInput withSortOrder(NotebookInstanceSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -121,9 +133,11 @@ public class ListNotebookInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusEquals")
     public NotebookInstanceStatusEnum statusEquals;
+
     public ListNotebookInstancesInput withStatusEquals(NotebookInstanceStatusEnum statusEquals) {
         this.statusEquals = statusEquals;
         return this;
     }
     
+    public ListNotebookInstancesInput(){}
 }

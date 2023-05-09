@@ -57,12 +57,10 @@ public class AnalyticsRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRuleResponse res = new org.openapis.openapi.models.operations.CreateRuleResponse() {{
+        org.openapis.openapi.models.operations.CreateRuleResponse res = new org.openapis.openapi.models.operations.CreateRuleResponse(contentType, httpRes.statusCode()) {{
             body = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -104,11 +102,9 @@ public class AnalyticsRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRuleResponse res = new org.openapis.openapi.models.operations.DeleteRuleResponse() {{
+        org.openapis.openapi.models.operations.DeleteRuleResponse res = new org.openapis.openapi.models.operations.DeleteRuleResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -144,11 +140,9 @@ public class AnalyticsRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisableRuleResponse res = new org.openapis.openapi.models.operations.DisableRuleResponse() {{
+        org.openapis.openapi.models.operations.DisableRuleResponse res = new org.openapis.openapi.models.operations.DisableRuleResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -184,11 +178,9 @@ public class AnalyticsRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableRuleResponse res = new org.openapis.openapi.models.operations.EnableRuleResponse() {{
+        org.openapis.openapi.models.operations.EnableRuleResponse res = new org.openapis.openapi.models.operations.EnableRuleResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -224,12 +216,10 @@ public class AnalyticsRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRuleResponse res = new org.openapis.openapi.models.operations.GetRuleResponse() {{
+        org.openapis.openapi.models.operations.GetRuleResponse res = new org.openapis.openapi.models.operations.GetRuleResponse(contentType, httpRes.statusCode()) {{
             rule = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -270,12 +260,10 @@ public class AnalyticsRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRulesResponse res = new org.openapis.openapi.models.operations.GetRulesResponse() {{
+        org.openapis.openapi.models.operations.GetRulesResponse res = new org.openapis.openapi.models.operations.GetRulesResponse(contentType, httpRes.statusCode()) {{
             ruleList = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -322,12 +310,10 @@ public class AnalyticsRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRulesExecutionsResponse res = new org.openapis.openapi.models.operations.GetRulesExecutionsResponse() {{
+        org.openapis.openapi.models.operations.GetRulesExecutionsResponse res = new org.openapis.openapi.models.operations.GetRulesExecutionsResponse(contentType, httpRes.statusCode()) {{
             ruleExecutionReportings = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -368,11 +354,9 @@ public class AnalyticsRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MoveDownRuleResponse res = new org.openapis.openapi.models.operations.MoveDownRuleResponse() {{
+        org.openapis.openapi.models.operations.MoveDownRuleResponse res = new org.openapis.openapi.models.operations.MoveDownRuleResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -408,11 +392,9 @@ public class AnalyticsRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MoveUpRuleResponse res = new org.openapis.openapi.models.operations.MoveUpRuleResponse() {{
+        org.openapis.openapi.models.operations.MoveUpRuleResponse res = new org.openapis.openapi.models.operations.MoveUpRuleResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -448,11 +430,9 @@ public class AnalyticsRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RunRuleResponse res = new org.openapis.openapi.models.operations.RunRuleResponse() {{
+        org.openapis.openapi.models.operations.RunRuleResponse res = new org.openapis.openapi.models.operations.RunRuleResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -488,11 +468,9 @@ public class AnalyticsRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RunRulesResponse res = new org.openapis.openapi.models.operations.RunRulesResponse() {{
+        org.openapis.openapi.models.operations.RunRulesResponse res = new org.openapis.openapi.models.operations.RunRulesResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -533,11 +511,9 @@ public class AnalyticsRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRuleResponse res = new org.openapis.openapi.models.operations.UpdateRuleResponse() {{
+        org.openapis.openapi.models.operations.UpdateRuleResponse res = new org.openapis.openapi.models.operations.UpdateRuleResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

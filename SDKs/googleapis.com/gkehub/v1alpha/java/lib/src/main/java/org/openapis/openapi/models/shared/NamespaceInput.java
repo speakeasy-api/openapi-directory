@@ -18,6 +18,7 @@ public class NamespaceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NamespaceInput withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class NamespaceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public NamespaceInput withScope(String scope) {
         this.scope = scope;
         return this;
     }
     
+    public NamespaceInput(){}
 }

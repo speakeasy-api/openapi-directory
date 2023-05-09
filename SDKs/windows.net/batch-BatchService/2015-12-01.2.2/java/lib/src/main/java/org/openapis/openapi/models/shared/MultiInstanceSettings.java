@@ -18,6 +18,7 @@ public class MultiInstanceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonResourceFiles")
     public ResourceFile[] commonResourceFiles;
+
     public MultiInstanceSettings withCommonResourceFiles(ResourceFile[] commonResourceFiles) {
         this.commonResourceFiles = commonResourceFiles;
         return this;
@@ -29,6 +30,7 @@ public class MultiInstanceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coordinationCommandLine")
     public String coordinationCommandLine;
+
     public MultiInstanceSettings withCoordinationCommandLine(String coordinationCommandLine) {
         this.coordinationCommandLine = coordinationCommandLine;
         return this;
@@ -39,9 +41,13 @@ public class MultiInstanceSettings {
      */
     @JsonProperty("numberOfInstances")
     public Integer numberOfInstances;
+
     public MultiInstanceSettings withNumberOfInstances(Integer numberOfInstances) {
         this.numberOfInstances = numberOfInstances;
         return this;
     }
     
+    public MultiInstanceSettings(@JsonProperty("numberOfInstances") Integer numberOfInstances) {
+        this.numberOfInstances = numberOfInstances;
+  }
 }

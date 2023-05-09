@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EvaluateExpressionInput {
     @JsonProperty("expression")
     public String expression;
+
     public EvaluateExpressionInput withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -19,6 +20,7 @@ public class EvaluateExpressionInput {
     
     @JsonProperty("objectId")
     public String objectId;
+
     public EvaluateExpressionInput withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -26,9 +28,15 @@ public class EvaluateExpressionInput {
     
     @JsonProperty("pipelineId")
     public String pipelineId;
+
     public EvaluateExpressionInput withPipelineId(String pipelineId) {
         this.pipelineId = pipelineId;
         return this;
     }
     
+    public EvaluateExpressionInput(@JsonProperty("expression") String expression, @JsonProperty("objectId") String objectId, @JsonProperty("pipelineId") String pipelineId) {
+        this.expression = expression;
+        this.objectId = objectId;
+        this.pipelineId = pipelineId;
+  }
 }

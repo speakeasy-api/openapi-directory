@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateThingTypeResponse {
     
     public String contentType;
+
     public CreateThingTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateThingTypeResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateThingTypeResponse createThingTypeResponse;
+
     public CreateThingTypeResponse withCreateThingTypeResponse(org.openapis.openapi.models.shared.CreateThingTypeResponse createThingTypeResponse) {
         this.createThingTypeResponse = createThingTypeResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateThingTypeResponse {
      */
     
     public Object internalFailureException;
+
     public CreateThingTypeResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateThingTypeResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateThingTypeResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateThingTypeResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateThingTypeResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -59,6 +65,7 @@ public class CreateThingTypeResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateThingTypeResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class CreateThingTypeResponse {
     
     
     public Integer statusCode;
+
     public CreateThingTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateThingTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateThingTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateThingTypeResponse {
      */
     
     public Object throttlingException;
+
     public CreateThingTypeResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateThingTypeResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateThingTypeResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateThingTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

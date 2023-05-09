@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteStackInput - The input for &lt;a&gt;DeleteStack&lt;/a&gt; action.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteStackInput {
     
     public String clientRequestToken;
+
     public DeleteStackInput withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class DeleteStackInput {
     
     
     public String[] retainResources;
+
     public DeleteStackInput withRetainResources(String[] retainResources) {
         this.retainResources = retainResources;
         return this;
@@ -26,6 +28,7 @@ public class DeleteStackInput {
     
     
     public String roleARN;
+
     public DeleteStackInput withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -33,9 +36,13 @@ public class DeleteStackInput {
     
     
     public String stackName;
+
     public DeleteStackInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public DeleteStackInput(@JsonProperty("StackName") String stackName) {
+        this.stackName = stackName;
+  }
 }

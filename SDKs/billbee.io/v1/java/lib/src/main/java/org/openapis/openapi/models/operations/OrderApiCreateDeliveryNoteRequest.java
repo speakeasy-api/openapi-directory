@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiCreateDeliveryNoteRequest {
@@ -12,6 +13,7 @@ public class OrderApiCreateDeliveryNoteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public OrderApiCreateDeliveryNoteRequest withId(Long id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class OrderApiCreateDeliveryNoteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includePdf")
     public Boolean includePdf;
+
     public OrderApiCreateDeliveryNoteRequest withIncludePdf(Boolean includePdf) {
         this.includePdf = includePdf;
         return this;
@@ -32,9 +35,13 @@ public class OrderApiCreateDeliveryNoteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sendToCloudId")
     public Long sendToCloudId;
+
     public OrderApiCreateDeliveryNoteRequest withSendToCloudId(Long sendToCloudId) {
         this.sendToCloudId = sendToCloudId;
         return this;
     }
     
+    public OrderApiCreateDeliveryNoteRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

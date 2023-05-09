@@ -18,6 +18,7 @@ public class DownloadAccesses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadAccessList")
     public DownloadAccessRestriction[] downloadAccessList;
+
     public DownloadAccesses withDownloadAccessList(DownloadAccessRestriction[] downloadAccessList) {
         this.downloadAccessList = downloadAccessList;
         return this;
@@ -29,9 +30,11 @@ public class DownloadAccesses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DownloadAccesses withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public DownloadAccesses(){}
 }

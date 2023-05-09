@@ -15,9 +15,11 @@ public class PayItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PayItems")
     public PayItem payItems;
+
     public PayItems withPayItems(PayItem payItems) {
         this.payItems = payItems;
         return this;
     }
     
+    public PayItems(){}
 }

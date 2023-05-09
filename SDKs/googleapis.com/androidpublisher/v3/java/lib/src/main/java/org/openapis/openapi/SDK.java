@@ -21,6 +21,7 @@ public class SDK {
   	
     public Applications applications;
     public Edits edits;
+    public Externaltransactions externaltransactions;
     public Generatedapks generatedapks;
     public Grants grants;
     public Inappproducts inappproducts;
@@ -119,6 +120,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.applications = new Applications(
@@ -131,6 +137,15 @@ public class SDK {
 		);
 		
 		this.edits = new Edits(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.externaltransactions = new Externaltransactions(
 			this._defaultClient,
 			this._securityClient,
 			this._serverUrl,

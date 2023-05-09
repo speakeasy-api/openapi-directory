@@ -18,6 +18,7 @@ public class AdBlockingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickThroughUrl")
     public String clickThroughUrl;
+
     public AdBlockingConfiguration withClickThroughUrl(String clickThroughUrl) {
         this.clickThroughUrl = clickThroughUrl;
         return this;
@@ -29,6 +30,7 @@ public class AdBlockingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeBundleId")
     public String creativeBundleId;
+
     public AdBlockingConfiguration withCreativeBundleId(String creativeBundleId) {
         this.creativeBundleId = creativeBundleId;
         return this;
@@ -40,6 +42,7 @@ public class AdBlockingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AdBlockingConfiguration withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -51,9 +54,11 @@ public class AdBlockingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrideClickThroughUrl")
     public Boolean overrideClickThroughUrl;
+
     public AdBlockingConfiguration withOverrideClickThroughUrl(Boolean overrideClickThroughUrl) {
         this.overrideClickThroughUrl = overrideClickThroughUrl;
         return this;
     }
     
+    public AdBlockingConfiguration(){}
 }

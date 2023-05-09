@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1ListTelemetryDevicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public GoogleChromeManagementV1TelemetryDevice[] devices;
+
     public GoogleChromeManagementV1ListTelemetryDevicesResponse withDevices(GoogleChromeManagementV1TelemetryDevice[] devices) {
         this.devices = devices;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromeManagementV1ListTelemetryDevicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleChromeManagementV1ListTelemetryDevicesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleChromeManagementV1ListTelemetryDevicesResponse(){}
 }

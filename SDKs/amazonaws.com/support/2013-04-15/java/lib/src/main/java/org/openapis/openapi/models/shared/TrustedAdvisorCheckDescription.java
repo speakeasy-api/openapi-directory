@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TrustedAdvisorCheckDescription {
     @JsonProperty("category")
     public String category;
+
     public TrustedAdvisorCheckDescription withCategory(String category) {
         this.category = category;
         return this;
@@ -19,6 +20,7 @@ public class TrustedAdvisorCheckDescription {
     
     @JsonProperty("description")
     public String description;
+
     public TrustedAdvisorCheckDescription withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class TrustedAdvisorCheckDescription {
     
     @JsonProperty("id")
     public String id;
+
     public TrustedAdvisorCheckDescription withId(String id) {
         this.id = id;
         return this;
@@ -33,6 +36,7 @@ public class TrustedAdvisorCheckDescription {
     
     @JsonProperty("metadata")
     public String[] metadata;
+
     public TrustedAdvisorCheckDescription withMetadata(String[] metadata) {
         this.metadata = metadata;
         return this;
@@ -40,9 +44,17 @@ public class TrustedAdvisorCheckDescription {
     
     @JsonProperty("name")
     public String name;
+
     public TrustedAdvisorCheckDescription withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TrustedAdvisorCheckDescription(@JsonProperty("category") String category, @JsonProperty("description") String description, @JsonProperty("id") String id, @JsonProperty("metadata") String[] metadata, @JsonProperty("name") String name) {
+        this.category = category;
+        this.description = description;
+        this.id = id;
+        this.metadata = metadata;
+        this.name = name;
+  }
 }

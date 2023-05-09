@@ -15,6 +15,7 @@ public class ListExecutorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutorsSummary")
     public ExecutorsSummary[] executorsSummary;
+
     public ListExecutorsResponse withExecutorsSummary(ExecutorsSummary[] executorsSummary) {
         this.executorsSummary = executorsSummary;
         return this;
@@ -23,6 +24,7 @@ public class ListExecutorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListExecutorsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,9 +32,13 @@ public class ListExecutorsResponse {
     
     @JsonProperty("SessionId")
     public String sessionId;
+
     public ListExecutorsResponse withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     
+    public ListExecutorsResponse(@JsonProperty("SessionId") String sessionId) {
+        this.sessionId = sessionId;
+  }
 }

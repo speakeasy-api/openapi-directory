@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QualityGetOverallDataQualityForSitesRequest {
@@ -12,6 +13,7 @@ public class QualityGetOverallDataQualityForSitesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public String endDate;
+
     public QualityGetOverallDataQualityForSitesRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -22,6 +24,7 @@ public class QualityGetOverallDataQualityForSitesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sites")
     public String sites;
+
     public QualityGetOverallDataQualityForSitesRequest withSites(String sites) {
         this.sites = sites;
         return this;
@@ -32,6 +35,7 @@ public class QualityGetOverallDataQualityForSitesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public String startDate;
+
     public QualityGetOverallDataQualityForSitesRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -39,9 +43,16 @@ public class QualityGetOverallDataQualityForSitesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public String version;
+
     public QualityGetOverallDataQualityForSitesRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public QualityGetOverallDataQualityForSitesRequest(@JsonProperty("end_date") String endDate, @JsonProperty("sites") String sites, @JsonProperty("start_date") String startDate, @JsonProperty("version") String version) {
+        this.endDate = endDate;
+        this.sites = sites;
+        this.startDate = startDate;
+        this.version = version;
+  }
 }

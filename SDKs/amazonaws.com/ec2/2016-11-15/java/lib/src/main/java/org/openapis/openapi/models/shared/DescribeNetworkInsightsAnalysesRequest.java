@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class DescribeNetworkInsightsAnalysesRequest {
     
     public OffsetDateTime analysisEndTime;
+
     public DescribeNetworkInsightsAnalysesRequest withAnalysisEndTime(OffsetDateTime analysisEndTime) {
         this.analysisEndTime = analysisEndTime;
         return this;
@@ -16,6 +17,7 @@ public class DescribeNetworkInsightsAnalysesRequest {
     
     
     public OffsetDateTime analysisStartTime;
+
     public DescribeNetworkInsightsAnalysesRequest withAnalysisStartTime(OffsetDateTime analysisStartTime) {
         this.analysisStartTime = analysisStartTime;
         return this;
@@ -23,6 +25,7 @@ public class DescribeNetworkInsightsAnalysesRequest {
     
     
     public Boolean dryRun;
+
     public DescribeNetworkInsightsAnalysesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class DescribeNetworkInsightsAnalysesRequest {
     
     
     public DescribeNetworkInsightsAnalysesRequestFilters[] filters;
+
     public DescribeNetworkInsightsAnalysesRequest withFilters(DescribeNetworkInsightsAnalysesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -37,6 +41,7 @@ public class DescribeNetworkInsightsAnalysesRequest {
     
     
     public Long maxResults;
+
     public DescribeNetworkInsightsAnalysesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -44,6 +49,7 @@ public class DescribeNetworkInsightsAnalysesRequest {
     
     
     public String[] networkInsightsAnalysisIds;
+
     public DescribeNetworkInsightsAnalysesRequest withNetworkInsightsAnalysisIds(String[] networkInsightsAnalysisIds) {
         this.networkInsightsAnalysisIds = networkInsightsAnalysisIds;
         return this;
@@ -51,6 +57,7 @@ public class DescribeNetworkInsightsAnalysesRequest {
     
     
     public String networkInsightsPathId;
+
     public DescribeNetworkInsightsAnalysesRequest withNetworkInsightsPathId(String networkInsightsPathId) {
         this.networkInsightsPathId = networkInsightsPathId;
         return this;
@@ -58,9 +65,11 @@ public class DescribeNetworkInsightsAnalysesRequest {
     
     
     public String nextToken;
+
     public DescribeNetworkInsightsAnalysesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeNetworkInsightsAnalysesRequest(){}
 }

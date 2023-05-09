@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Listener - &lt;p&gt;Information about a listener.&lt;/p&gt; &lt;p&gt;For information about the protocols and the ports supported by Elastic Load Balancing, see &lt;a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-listener-config.html"&gt;Listeners for Your Classic Load Balancer&lt;/a&gt; in the &lt;i&gt;Classic Load Balancers Guide&lt;/i&gt;.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Listener {
     
     public Long instancePort;
+
     public Listener withInstancePort(Long instancePort) {
         this.instancePort = instancePort;
         return this;
@@ -19,6 +20,7 @@ public class Listener {
     
     
     public String instanceProtocol;
+
     public Listener withInstanceProtocol(String instanceProtocol) {
         this.instanceProtocol = instanceProtocol;
         return this;
@@ -26,6 +28,7 @@ public class Listener {
     
     
     public Long loadBalancerPort;
+
     public Listener withLoadBalancerPort(Long loadBalancerPort) {
         this.loadBalancerPort = loadBalancerPort;
         return this;
@@ -33,6 +36,7 @@ public class Listener {
     
     
     public String protocol;
+
     public Listener withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -40,9 +44,15 @@ public class Listener {
     
     
     public String sslCertificateId;
+
     public Listener withSSLCertificateId(String sslCertificateId) {
         this.sslCertificateId = sslCertificateId;
         return this;
     }
     
+    public Listener(@JsonProperty("InstancePort") Long instancePort, @JsonProperty("LoadBalancerPort") Long loadBalancerPort, @JsonProperty("Protocol") String protocol) {
+        this.instancePort = instancePort;
+        this.loadBalancerPort = loadBalancerPort;
+        this.protocol = protocol;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EinVerificationLookupResponse {
     
     public String contentType;
+
     public EinVerificationLookupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EinVerificationLookupResponse {
      */
     
     public EinVerificationLookup200ApplicationJSON einVerificationLookup200ApplicationJSONObject;
+
     public EinVerificationLookupResponse withEinVerificationLookup200ApplicationJSONObject(EinVerificationLookup200ApplicationJSON einVerificationLookup200ApplicationJSONObject) {
         this.einVerificationLookup200ApplicationJSONObject = einVerificationLookup200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class EinVerificationLookupResponse {
      */
     
     public EinVerificationLookupDefaultApplicationJSON einVerificationLookupDefaultApplicationJSONObject;
+
     public EinVerificationLookupResponse withEinVerificationLookupDefaultApplicationJSONObject(EinVerificationLookupDefaultApplicationJSON einVerificationLookupDefaultApplicationJSONObject) {
         this.einVerificationLookupDefaultApplicationJSONObject = einVerificationLookupDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class EinVerificationLookupResponse {
     
     
     public Integer statusCode;
+
     public EinVerificationLookupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class EinVerificationLookupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EinVerificationLookupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EinVerificationLookupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

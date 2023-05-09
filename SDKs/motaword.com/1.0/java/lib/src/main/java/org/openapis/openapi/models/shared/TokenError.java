@@ -15,6 +15,7 @@ public class TokenError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_status")
     public TokenErrorAccountStatusEnum accountStatus;
+
     public TokenError withAccountStatus(TokenErrorAccountStatusEnum accountStatus) {
         this.accountStatus = accountStatus;
         return this;
@@ -23,6 +24,7 @@ public class TokenError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public TokenError withCode(String code) {
         this.code = code;
         return this;
@@ -31,6 +33,7 @@ public class TokenError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("help")
     public String help;
+
     public TokenError withHelp(String help) {
         this.help = help;
         return this;
@@ -39,6 +42,7 @@ public class TokenError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http_code")
     public Integer httpCode;
+
     public TokenError withHttpCode(Integer httpCode) {
         this.httpCode = httpCode;
         return this;
@@ -47,9 +51,11 @@ public class TokenError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public TokenError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public TokenError(){}
 }

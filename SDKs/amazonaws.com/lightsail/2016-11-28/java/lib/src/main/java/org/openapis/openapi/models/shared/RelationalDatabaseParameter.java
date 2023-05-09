@@ -15,6 +15,7 @@ public class RelationalDatabaseParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedValues")
     public String allowedValues;
+
     public RelationalDatabaseParameter withAllowedValues(String allowedValues) {
         this.allowedValues = allowedValues;
         return this;
@@ -23,6 +24,7 @@ public class RelationalDatabaseParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applyMethod")
     public String applyMethod;
+
     public RelationalDatabaseParameter withApplyMethod(String applyMethod) {
         this.applyMethod = applyMethod;
         return this;
@@ -31,6 +33,7 @@ public class RelationalDatabaseParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applyType")
     public String applyType;
+
     public RelationalDatabaseParameter withApplyType(String applyType) {
         this.applyType = applyType;
         return this;
@@ -39,6 +42,7 @@ public class RelationalDatabaseParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public String dataType;
+
     public RelationalDatabaseParameter withDataType(String dataType) {
         this.dataType = dataType;
         return this;
@@ -47,6 +51,7 @@ public class RelationalDatabaseParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RelationalDatabaseParameter withDescription(String description) {
         this.description = description;
         return this;
@@ -55,6 +60,7 @@ public class RelationalDatabaseParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isModifiable")
     public Boolean isModifiable;
+
     public RelationalDatabaseParameter withIsModifiable(Boolean isModifiable) {
         this.isModifiable = isModifiable;
         return this;
@@ -63,6 +69,7 @@ public class RelationalDatabaseParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterName")
     public String parameterName;
+
     public RelationalDatabaseParameter withParameterName(String parameterName) {
         this.parameterName = parameterName;
         return this;
@@ -71,9 +78,11 @@ public class RelationalDatabaseParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterValue")
     public String parameterValue;
+
     public RelationalDatabaseParameter withParameterValue(String parameterValue) {
         this.parameterValue = parameterValue;
         return this;
     }
     
+    public RelationalDatabaseParameter(){}
 }

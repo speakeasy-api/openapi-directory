@@ -18,6 +18,7 @@ public class UserDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public Object address;
+
     public UserDetailsVO withAddress(Object address) {
         this.address = address;
         return this;
@@ -26,6 +27,7 @@ public class UserDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     public String companyName;
+
     public UserDetailsVO withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -34,6 +36,7 @@ public class UserDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UserDetailsVO withEmail(String email) {
         this.email = email;
         return this;
@@ -42,6 +45,7 @@ public class UserDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fax_number")
     public String faxNumber;
+
     public UserDetailsVO withFaxNumber(String faxNumber) {
         this.faxNumber = faxNumber;
         return this;
@@ -50,6 +54,7 @@ public class UserDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public UserDetailsVO withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -58,6 +63,7 @@ public class UserDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public UserDetailsVO withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -66,6 +72,7 @@ public class UserDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public UserDetailsVO withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -74,6 +81,7 @@ public class UserDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("middle_name")
     public String middleName;
+
     public UserDetailsVO withMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
@@ -82,6 +90,7 @@ public class UserDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public String organization;
+
     public UserDetailsVO withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -90,6 +99,7 @@ public class UserDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_number")
     public String phoneNumber;
+
     public UserDetailsVO withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -98,6 +108,7 @@ public class UserDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_zone")
     public String timeZone;
+
     public UserDetailsVO withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -106,6 +117,7 @@ public class UserDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public UserDetailsVO withTitle(String title) {
         this.title = title;
         return this;
@@ -114,9 +126,11 @@ public class UserDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public Long userId;
+
     public UserDetailsVO withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public UserDetailsVO(){}
 }

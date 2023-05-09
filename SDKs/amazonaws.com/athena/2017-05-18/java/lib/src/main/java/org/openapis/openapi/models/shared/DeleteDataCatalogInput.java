@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteDataCatalogInput {
     @JsonProperty("Name")
     public String name;
+
     public DeleteDataCatalogInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeleteDataCatalogInput(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

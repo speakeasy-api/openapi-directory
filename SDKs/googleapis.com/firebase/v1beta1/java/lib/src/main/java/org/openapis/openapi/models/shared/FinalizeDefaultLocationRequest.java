@@ -15,9 +15,11 @@ public class FinalizeDefaultLocationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public FinalizeDefaultLocationRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
     }
     
+    public FinalizeDefaultLocationRequest(){}
 }

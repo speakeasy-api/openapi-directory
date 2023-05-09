@@ -15,6 +15,7 @@ public class DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroupActivityDeta
      */
     
     public Long directorActivityHash;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroupActivityDetails withDirectorActivityHash(Long directorActivityHash) {
         this.directorActivityHash = directorActivityHash;
         return this;
@@ -26,6 +27,7 @@ public class DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroupActivityDeta
      */
     
     public Long instanceId;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroupActivityDetails withInstanceId(Long instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -36,6 +38,7 @@ public class DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroupActivityDeta
      */
     
     public Boolean isPrivate;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroupActivityDetails withIsPrivate(Boolean isPrivate) {
         this.isPrivate = isPrivate;
         return this;
@@ -46,6 +49,7 @@ public class DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroupActivityDeta
      */
     
     public Integer membershipType;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroupActivityDetails withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
@@ -56,6 +60,7 @@ public class DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroupActivityDeta
      */
     
     public Integer mode;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroupActivityDetails withMode(Integer mode) {
         this.mode = mode;
         return this;
@@ -66,6 +71,7 @@ public class DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroupActivityDeta
      */
     
     public Integer[] modes;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroupActivityDetails withModes(Integer[] modes) {
         this.modes = modes;
         return this;
@@ -76,9 +82,11 @@ public class DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroupActivityDeta
      */
     
     public Long referenceId;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroupActivityDetails withReferenceId(Long referenceId) {
         this.referenceId = referenceId;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroupActivityDetails(){}
 }

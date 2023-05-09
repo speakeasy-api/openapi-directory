@@ -15,6 +15,7 @@ public class QuoteCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public Long clientId;
+
     public QuoteCreateDTO withClientId(Long clientId) {
         this.clientId = clientId;
         return this;
@@ -23,6 +24,7 @@ public class QuoteCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public QuoteCreateDTO withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class QuoteCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opportunityOfferId")
     public Long opportunityOfferId;
+
     public QuoteCreateDTO withOpportunityOfferId(Long opportunityOfferId) {
         this.opportunityOfferId = opportunityOfferId;
         return this;
@@ -39,9 +42,11 @@ public class QuoteCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceId")
     public Long serviceId;
+
     public QuoteCreateDTO withServiceId(Long serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     
+    public QuoteCreateDTO(){}
 }

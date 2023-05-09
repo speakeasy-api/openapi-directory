@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBInstanceStatusInfoList {
     
     public String message;
+
     public DBInstanceStatusInfoList withMessage(String message) {
         this.message = message;
         return this;
@@ -19,6 +20,7 @@ public class DBInstanceStatusInfoList {
     
     
     public Boolean normal;
+
     public DBInstanceStatusInfoList withNormal(Boolean normal) {
         this.normal = normal;
         return this;
@@ -26,6 +28,7 @@ public class DBInstanceStatusInfoList {
     
     
     public String status;
+
     public DBInstanceStatusInfoList withStatus(String status) {
         this.status = status;
         return this;
@@ -33,9 +36,11 @@ public class DBInstanceStatusInfoList {
     
     
     public String statusType;
+
     public DBInstanceStatusInfoList withStatusType(String statusType) {
         this.statusType = statusType;
         return this;
     }
     
+    public DBInstanceStatusInfoList(){}
 }

@@ -18,6 +18,7 @@ public class ExecutionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parallelism")
     public Integer parallelism;
+
     public ExecutionSpec withParallelism(Integer parallelism) {
         this.parallelism = parallelism;
         return this;
@@ -29,6 +30,7 @@ public class ExecutionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskCount")
     public Integer taskCount;
+
     public ExecutionSpec withTaskCount(Integer taskCount) {
         this.taskCount = taskCount;
         return this;
@@ -40,9 +42,11 @@ public class ExecutionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public TaskTemplateSpec template;
+
     public ExecutionSpec withTemplate(TaskTemplateSpec template) {
         this.template = template;
         return this;
     }
     
+    public ExecutionSpec(){}
 }

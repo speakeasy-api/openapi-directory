@@ -18,6 +18,7 @@ public class DetachLunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lun")
     public String lun;
+
     public DetachLunRequest withLun(String lun) {
         this.lun = lun;
         return this;
@@ -29,9 +30,11 @@ public class DetachLunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipReboot")
     public Boolean skipReboot;
+
     public DetachLunRequest withSkipReboot(Boolean skipReboot) {
         this.skipReboot = skipReboot;
         return this;
     }
     
+    public DetachLunRequest(){}
 }

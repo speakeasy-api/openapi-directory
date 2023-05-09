@@ -48,4 +48,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetSessionMatchesRespon
 lib/src/main/java/org/openapis/openapi/models/operations/GetStattopResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostBulkmd5Response.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostBulksha1Response.java
+docs/sdk/README.md
+docs/default/README.md
 USAGE.md

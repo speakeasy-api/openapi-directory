@@ -15,6 +15,7 @@ public class UpdatePipeSourceActiveMQBrokerParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchSize")
     public Long batchSize;
+
     public UpdatePipeSourceActiveMQBrokerParameters withBatchSize(Long batchSize) {
         this.batchSize = batchSize;
         return this;
@@ -22,6 +23,7 @@ public class UpdatePipeSourceActiveMQBrokerParameters {
     
     @JsonProperty("Credentials")
     public MQBrokerAccessCredentials credentials;
+
     public UpdatePipeSourceActiveMQBrokerParameters withCredentials(MQBrokerAccessCredentials credentials) {
         this.credentials = credentials;
         return this;
@@ -30,9 +32,13 @@ public class UpdatePipeSourceActiveMQBrokerParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumBatchingWindowInSeconds")
     public Long maximumBatchingWindowInSeconds;
+
     public UpdatePipeSourceActiveMQBrokerParameters withMaximumBatchingWindowInSeconds(Long maximumBatchingWindowInSeconds) {
         this.maximumBatchingWindowInSeconds = maximumBatchingWindowInSeconds;
         return this;
     }
     
+    public UpdatePipeSourceActiveMQBrokerParameters(@JsonProperty("Credentials") MQBrokerAccessCredentials credentials) {
+        this.credentials = credentials;
+  }
 }

@@ -3,34 +3,32 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GETAbortEnvironmentUpdateActionEnum;
-import org.openapis.openapi.models.operations.GETAbortEnvironmentUpdateVersionEnum;
 import org.openapis.openapi.models.operations.GETAbortEnvironmentUpdateRequest;
 import org.openapis.openapi.models.operations.GETAbortEnvironmentUpdateResponse;
+import org.openapis.openapi.models.operations.GETAbortEnvironmentUpdateVersionEnum;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            GETAbortEnvironmentUpdateRequest req = new GETAbortEnvironmentUpdateRequest() {{
-                action = "AbortEnvironmentUpdate";
-                environmentId = "corrupti";
-                environmentName = "provident";
-                version = "2010-12-01";
-                xAmzAlgorithm = "distinctio";
-                xAmzContentSha256 = "quibusdam";
-                xAmzCredential = "unde";
-                xAmzDate = "nulla";
-                xAmzSecurityToken = "corrupti";
-                xAmzSignature = "illum";
-                xAmzSignedHeaders = "vel";
-            }}            
+            GETAbortEnvironmentUpdateRequest req = new GETAbortEnvironmentUpdateRequest(GETAbortEnvironmentUpdateActionEnum.ABORT_ENVIRONMENT_UPDATE, GETAbortEnvironmentUpdateVersionEnum.TWO_THOUSAND_AND_TEN1201) {{
+                environmentId = "provident";
+                environmentName = "distinctio";
+                xAmzAlgorithm = "quibusdam";
+                xAmzContentSha256 = "unde";
+                xAmzCredential = "nulla";
+                xAmzDate = "corrupti";
+                xAmzSecurityToken = "illum";
+                xAmzSignature = "vel";
+                xAmzSignedHeaders = "error";
+            }};            
 
             GETAbortEnvironmentUpdateResponse res = sdk.getAbortEnvironmentUpdate(req);
 
@@ -40,5 +38,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -18,6 +18,7 @@ public class InstanceOSPoliciesCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailedState")
     public String detailedState;
+
     public InstanceOSPoliciesCompliance withDetailedState(String detailedState) {
         this.detailedState = detailedState;
         return this;
@@ -29,6 +30,7 @@ public class InstanceOSPoliciesCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailedStateReason")
     public String detailedStateReason;
+
     public InstanceOSPoliciesCompliance withDetailedStateReason(String detailedStateReason) {
         this.detailedStateReason = detailedStateReason;
         return this;
@@ -40,6 +42,7 @@ public class InstanceOSPoliciesCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public InstanceOSPoliciesCompliance withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -51,6 +54,7 @@ public class InstanceOSPoliciesCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastComplianceCheckTime")
     public String lastComplianceCheckTime;
+
     public InstanceOSPoliciesCompliance withLastComplianceCheckTime(String lastComplianceCheckTime) {
         this.lastComplianceCheckTime = lastComplianceCheckTime;
         return this;
@@ -62,6 +66,7 @@ public class InstanceOSPoliciesCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastComplianceRunId")
     public String lastComplianceRunId;
+
     public InstanceOSPoliciesCompliance withLastComplianceRunId(String lastComplianceRunId) {
         this.lastComplianceRunId = lastComplianceRunId;
         return this;
@@ -73,6 +78,7 @@ public class InstanceOSPoliciesCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InstanceOSPoliciesCompliance withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class InstanceOSPoliciesCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osPolicyCompliances")
     public InstanceOSPoliciesComplianceOSPolicyCompliance[] osPolicyCompliances;
+
     public InstanceOSPoliciesCompliance withOsPolicyCompliances(InstanceOSPoliciesComplianceOSPolicyCompliance[] osPolicyCompliances) {
         this.osPolicyCompliances = osPolicyCompliances;
         return this;
@@ -95,9 +102,11 @@ public class InstanceOSPoliciesCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public InstanceOSPoliciesComplianceStateEnum state;
+
     public InstanceOSPoliciesCompliance withState(InstanceOSPoliciesComplianceStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public InstanceOSPoliciesCompliance(){}
 }

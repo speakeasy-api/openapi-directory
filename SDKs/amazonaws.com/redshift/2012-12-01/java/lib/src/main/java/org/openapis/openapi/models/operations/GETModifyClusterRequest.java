@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyClusterRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyClusterActionEnum action;
+
     public GETModifyClusterRequest withAction(GETModifyClusterActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllowVersionUpgrade")
     public Boolean allowVersionUpgrade;
+
     public GETModifyClusterRequest withAllowVersionUpgrade(Boolean allowVersionUpgrade) {
         this.allowVersionUpgrade = allowVersionUpgrade;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutomatedSnapshotRetentionPeriod")
     public Long automatedSnapshotRetentionPeriod;
+
     public GETModifyClusterRequest withAutomatedSnapshotRetentionPeriod(Long automatedSnapshotRetentionPeriod) {
         this.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AvailabilityZone")
     public String availabilityZone;
+
     public GETModifyClusterRequest withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AvailabilityZoneRelocation")
     public Boolean availabilityZoneRelocation;
+
     public GETModifyClusterRequest withAvailabilityZoneRelocation(Boolean availabilityZoneRelocation) {
         this.availabilityZoneRelocation = availabilityZoneRelocation;
         return this;
@@ -59,6 +65,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
     public String clusterIdentifier;
+
     public GETModifyClusterRequest withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -69,6 +76,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterParameterGroupName")
     public String clusterParameterGroupName;
+
     public GETModifyClusterRequest withClusterParameterGroupName(String clusterParameterGroupName) {
         this.clusterParameterGroupName = clusterParameterGroupName;
         return this;
@@ -79,6 +87,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterSecurityGroups")
     public String[] clusterSecurityGroups;
+
     public GETModifyClusterRequest withClusterSecurityGroups(String[] clusterSecurityGroups) {
         this.clusterSecurityGroups = clusterSecurityGroups;
         return this;
@@ -89,6 +98,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterType")
     public String clusterType;
+
     public GETModifyClusterRequest withClusterType(String clusterType) {
         this.clusterType = clusterType;
         return this;
@@ -99,6 +109,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterVersion")
     public String clusterVersion;
+
     public GETModifyClusterRequest withClusterVersion(String clusterVersion) {
         this.clusterVersion = clusterVersion;
         return this;
@@ -109,6 +120,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ElasticIp")
     public String elasticIp;
+
     public GETModifyClusterRequest withElasticIp(String elasticIp) {
         this.elasticIp = elasticIp;
         return this;
@@ -119,6 +131,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Encrypted")
     public Boolean encrypted;
+
     public GETModifyClusterRequest withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -129,6 +142,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnhancedVpcRouting")
     public Boolean enhancedVpcRouting;
+
     public GETModifyClusterRequest withEnhancedVpcRouting(Boolean enhancedVpcRouting) {
         this.enhancedVpcRouting = enhancedVpcRouting;
         return this;
@@ -139,6 +153,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HsmClientCertificateIdentifier")
     public String hsmClientCertificateIdentifier;
+
     public GETModifyClusterRequest withHsmClientCertificateIdentifier(String hsmClientCertificateIdentifier) {
         this.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
         return this;
@@ -149,6 +164,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HsmConfigurationIdentifier")
     public String hsmConfigurationIdentifier;
+
     public GETModifyClusterRequest withHsmConfigurationIdentifier(String hsmConfigurationIdentifier) {
         this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
         return this;
@@ -159,6 +175,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=KmsKeyId")
     public String kmsKeyId;
+
     public GETModifyClusterRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -169,6 +186,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaintenanceTrackName")
     public String maintenanceTrackName;
+
     public GETModifyClusterRequest withMaintenanceTrackName(String maintenanceTrackName) {
         this.maintenanceTrackName = maintenanceTrackName;
         return this;
@@ -179,6 +197,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ManualSnapshotRetentionPeriod")
     public Long manualSnapshotRetentionPeriod;
+
     public GETModifyClusterRequest withManualSnapshotRetentionPeriod(Long manualSnapshotRetentionPeriod) {
         this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
         return this;
@@ -189,6 +208,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MasterUserPassword")
     public String masterUserPassword;
+
     public GETModifyClusterRequest withMasterUserPassword(String masterUserPassword) {
         this.masterUserPassword = masterUserPassword;
         return this;
@@ -199,6 +219,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NewClusterIdentifier")
     public String newClusterIdentifier;
+
     public GETModifyClusterRequest withNewClusterIdentifier(String newClusterIdentifier) {
         this.newClusterIdentifier = newClusterIdentifier;
         return this;
@@ -209,6 +230,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NodeType")
     public String nodeType;
+
     public GETModifyClusterRequest withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -219,6 +241,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NumberOfNodes")
     public Long numberOfNodes;
+
     public GETModifyClusterRequest withNumberOfNodes(Long numberOfNodes) {
         this.numberOfNodes = numberOfNodes;
         return this;
@@ -229,6 +252,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Port")
     public Long port;
+
     public GETModifyClusterRequest withPort(Long port) {
         this.port = port;
         return this;
@@ -239,6 +263,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PreferredMaintenanceWindow")
     public String preferredMaintenanceWindow;
+
     public GETModifyClusterRequest withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -249,6 +274,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PubliclyAccessible")
     public Boolean publiclyAccessible;
+
     public GETModifyClusterRequest withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -256,6 +282,7 @@ public class GETModifyClusterRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyClusterVersionEnum version;
+
     public GETModifyClusterRequest withVersion(GETModifyClusterVersionEnum version) {
         this.version = version;
         return this;
@@ -266,6 +293,7 @@ public class GETModifyClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcSecurityGroupIds")
     public String[] vpcSecurityGroupIds;
+
     public GETModifyClusterRequest withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
@@ -273,6 +301,7 @@ public class GETModifyClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -280,6 +309,7 @@ public class GETModifyClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -287,6 +317,7 @@ public class GETModifyClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyClusterRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -294,6 +325,7 @@ public class GETModifyClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyClusterRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -301,6 +333,7 @@ public class GETModifyClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -308,6 +341,7 @@ public class GETModifyClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyClusterRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -315,9 +349,15 @@ public class GETModifyClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyClusterRequest(@JsonProperty("Action") GETModifyClusterActionEnum action, @JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("Version") GETModifyClusterVersionEnum version) {
+        this.action = action;
+        this.clusterIdentifier = clusterIdentifier;
+        this.version = version;
+  }
 }

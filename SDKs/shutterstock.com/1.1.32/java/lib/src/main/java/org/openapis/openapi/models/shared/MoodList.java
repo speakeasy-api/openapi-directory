@@ -15,9 +15,13 @@ public class MoodList {
      */
     @JsonProperty("data")
     public String[] data;
+
     public MoodList withData(String[] data) {
         this.data = data;
         return this;
     }
     
+    public MoodList(@JsonProperty("data") String[] data) {
+        this.data = data;
+  }
 }

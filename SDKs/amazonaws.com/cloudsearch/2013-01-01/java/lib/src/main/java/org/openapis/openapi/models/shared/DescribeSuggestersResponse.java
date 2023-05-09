@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeSuggestersResponse - The result of a &lt;code&gt;DescribeSuggesters&lt;/code&gt; request.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DescribeSuggestersResponse {
     
     public SuggesterStatus[] suggesters;
+
     public DescribeSuggestersResponse withSuggesters(SuggesterStatus[] suggesters) {
         this.suggesters = suggesters;
         return this;
     }
     
+    public DescribeSuggestersResponse(@JsonProperty("Suggesters") SuggesterStatus[] suggesters) {
+        this.suggesters = suggesters;
+  }
 }

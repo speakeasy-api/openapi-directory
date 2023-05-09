@@ -15,6 +15,7 @@ public class SessionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeContexts")
     public ActiveContext[] activeContexts;
+
     public SessionState withActiveContexts(ActiveContext[] activeContexts) {
         this.activeContexts = activeContexts;
         return this;
@@ -23,6 +24,7 @@ public class SessionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialogAction")
     public DialogAction dialogAction;
+
     public SessionState withDialogAction(DialogAction dialogAction) {
         this.dialogAction = dialogAction;
         return this;
@@ -31,6 +33,7 @@ public class SessionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intent")
     public Intent intent;
+
     public SessionState withIntent(Intent intent) {
         this.intent = intent;
         return this;
@@ -39,6 +42,7 @@ public class SessionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originatingRequestId")
     public String originatingRequestId;
+
     public SessionState withOriginatingRequestId(String originatingRequestId) {
         this.originatingRequestId = originatingRequestId;
         return this;
@@ -47,6 +51,7 @@ public class SessionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeHints")
     public RuntimeHints runtimeHints;
+
     public SessionState withRuntimeHints(RuntimeHints runtimeHints) {
         this.runtimeHints = runtimeHints;
         return this;
@@ -55,9 +60,11 @@ public class SessionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionAttributes")
     public java.util.Map<String, String> sessionAttributes;
+
     public SessionState withSessionAttributes(java.util.Map<String, String> sessionAttributes) {
         this.sessionAttributes = sessionAttributes;
         return this;
     }
     
+    public SessionState(){}
 }

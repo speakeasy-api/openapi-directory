@@ -18,6 +18,7 @@ public class ArticleFlareTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bg_color_hex")
     public String bgColorHex;
+
     public ArticleFlareTag withBgColorHex(String bgColorHex) {
         this.bgColorHex = bgColorHex;
         return this;
@@ -26,6 +27,7 @@ public class ArticleFlareTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ArticleFlareTag withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class ArticleFlareTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text_color_hex")
     public String textColorHex;
+
     public ArticleFlareTag withTextColorHex(String textColorHex) {
         this.textColorHex = textColorHex;
         return this;
     }
     
+    public ArticleFlareTag(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BooksVolumesGetRequest {
@@ -12,6 +13,7 @@ public class BooksVolumesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public BooksVolumesGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class BooksVolumesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public BooksVolumesGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class BooksVolumesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BooksVolumesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class BooksVolumesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public BooksVolumesGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class BooksVolumesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public BooksVolumesGetRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -62,6 +68,7 @@ public class BooksVolumesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BooksVolumesGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class BooksVolumesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeNonComicsSeries")
     public Boolean includeNonComicsSeries;
+
     public BooksVolumesGetRequest withIncludeNonComicsSeries(Boolean includeNonComicsSeries) {
         this.includeNonComicsSeries = includeNonComicsSeries;
         return this;
@@ -82,6 +90,7 @@ public class BooksVolumesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BooksVolumesGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class BooksVolumesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BooksVolumesGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class BooksVolumesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partner")
     public String partner;
+
     public BooksVolumesGetRequest withPartner(String partner) {
         this.partner = partner;
         return this;
@@ -112,6 +123,7 @@ public class BooksVolumesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BooksVolumesGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class BooksVolumesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
     public BooksVolumesGetProjectionEnum projection;
+
     public BooksVolumesGetRequest withProjection(BooksVolumesGetProjectionEnum projection) {
         this.projection = projection;
         return this;
@@ -132,6 +145,7 @@ public class BooksVolumesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BooksVolumesGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -142,6 +156,7 @@ public class BooksVolumesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public String source;
+
     public BooksVolumesGetRequest withSource(String source) {
         this.source = source;
         return this;
@@ -152,6 +167,7 @@ public class BooksVolumesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public BooksVolumesGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -162,6 +178,7 @@ public class BooksVolumesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public BooksVolumesGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -169,6 +186,7 @@ public class BooksVolumesGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_library_consistent_read")
     public Boolean userLibraryConsistentRead;
+
     public BooksVolumesGetRequest withUserLibraryConsistentRead(Boolean userLibraryConsistentRead) {
         this.userLibraryConsistentRead = userLibraryConsistentRead;
         return this;
@@ -179,9 +197,13 @@ public class BooksVolumesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=volumeId")
     public String volumeId;
+
     public BooksVolumesGetRequest withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public BooksVolumesGetRequest(@JsonProperty("volumeId") String volumeId) {
+        this.volumeId = volumeId;
+  }
 }

@@ -18,6 +18,7 @@ public class GetNamespaceRepositoryImagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public GetNamespaceRepositoryImagesResponse withCount(Long count) {
         this.count = count;
         return this;
@@ -29,6 +30,7 @@ public class GetNamespaceRepositoryImagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public GetNamespaceRepositoryImagesResponse withNext(String next) {
         this.next = next;
         return this;
@@ -40,6 +42,7 @@ public class GetNamespaceRepositoryImagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public GetNamespaceRepositoryImagesResponse withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -51,9 +54,11 @@ public class GetNamespaceRepositoryImagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public GetNamespaceRepositoryImagesResponseResults[] results;
+
     public GetNamespaceRepositoryImagesResponse withResults(GetNamespaceRepositoryImagesResponseResults[] results) {
         this.results = results;
         return this;
     }
     
+    public GetNamespaceRepositoryImagesResponse(){}
 }

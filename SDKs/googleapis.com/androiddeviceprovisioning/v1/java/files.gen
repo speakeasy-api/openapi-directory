@@ -127,4 +127,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateDeviceMetadataInBatch
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateMetadataArguments.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListVendorCustomersResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListVendorsResponse.java
+docs/sdk/README.md
+docs/customers/README.md
+docs/partners/README.md
 USAGE.md

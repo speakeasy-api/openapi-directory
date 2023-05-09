@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class IncidentRecord {
     @JsonProperty("arn")
     public String arn;
+
     public IncidentRecord withArn(String arn) {
         this.arn = arn;
         return this;
@@ -27,6 +28,7 @@ public class IncidentRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automationExecutions")
     public AutomationExecution[] automationExecutions;
+
     public IncidentRecord withAutomationExecutions(AutomationExecution[] automationExecutions) {
         this.automationExecutions = automationExecutions;
         return this;
@@ -35,6 +37,7 @@ public class IncidentRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chatChannel")
     public ChatChannel chatChannel;
+
     public IncidentRecord withChatChannel(ChatChannel chatChannel) {
         this.chatChannel = chatChannel;
         return this;
@@ -44,6 +47,7 @@ public class IncidentRecord {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public IncidentRecord withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -51,6 +55,7 @@ public class IncidentRecord {
     
     @JsonProperty("dedupeString")
     public String dedupeString;
+
     public IncidentRecord withDedupeString(String dedupeString) {
         this.dedupeString = dedupeString;
         return this;
@@ -58,6 +63,7 @@ public class IncidentRecord {
     
     @JsonProperty("impact")
     public Long impact;
+
     public IncidentRecord withImpact(Long impact) {
         this.impact = impact;
         return this;
@@ -65,6 +71,7 @@ public class IncidentRecord {
     
     @JsonProperty("incidentRecordSource")
     public IncidentRecordSource incidentRecordSource;
+
     public IncidentRecord withIncidentRecordSource(IncidentRecordSource incidentRecordSource) {
         this.incidentRecordSource = incidentRecordSource;
         return this;
@@ -72,6 +79,7 @@ public class IncidentRecord {
     
     @JsonProperty("lastModifiedBy")
     public String lastModifiedBy;
+
     public IncidentRecord withLastModifiedBy(String lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -81,6 +89,7 @@ public class IncidentRecord {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public IncidentRecord withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -89,6 +98,7 @@ public class IncidentRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationTargets")
     public NotificationTargetItem[] notificationTargets;
+
     public IncidentRecord withNotificationTargets(NotificationTargetItem[] notificationTargets) {
         this.notificationTargets = notificationTargets;
         return this;
@@ -99,6 +109,7 @@ public class IncidentRecord {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("resolvedTime")
     public OffsetDateTime resolvedTime;
+
     public IncidentRecord withResolvedTime(OffsetDateTime resolvedTime) {
         this.resolvedTime = resolvedTime;
         return this;
@@ -106,6 +117,7 @@ public class IncidentRecord {
     
     @JsonProperty("status")
     public IncidentRecordStatusEnum status;
+
     public IncidentRecord withStatus(IncidentRecordStatusEnum status) {
         this.status = status;
         return this;
@@ -114,6 +126,7 @@ public class IncidentRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public IncidentRecord withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -121,9 +134,21 @@ public class IncidentRecord {
     
     @JsonProperty("title")
     public String title;
+
     public IncidentRecord withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public IncidentRecord(@JsonProperty("arn") String arn, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("dedupeString") String dedupeString, @JsonProperty("impact") Long impact, @JsonProperty("incidentRecordSource") IncidentRecordSource incidentRecordSource, @JsonProperty("lastModifiedBy") String lastModifiedBy, @JsonProperty("lastModifiedTime") OffsetDateTime lastModifiedTime, @JsonProperty("status") IncidentRecordStatusEnum status, @JsonProperty("title") String title) {
+        this.arn = arn;
+        this.creationTime = creationTime;
+        this.dedupeString = dedupeString;
+        this.impact = impact;
+        this.incidentRecordSource = incidentRecordSource;
+        this.lastModifiedBy = lastModifiedBy;
+        this.lastModifiedTime = lastModifiedTime;
+        this.status = status;
+        this.title = title;
+  }
 }

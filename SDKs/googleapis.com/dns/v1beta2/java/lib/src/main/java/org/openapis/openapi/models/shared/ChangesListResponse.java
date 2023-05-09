@@ -18,6 +18,7 @@ public class ChangesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changes")
     public Change[] changes;
+
     public ChangesListResponse withChanges(Change[] changes) {
         this.changes = changes;
         return this;
@@ -29,6 +30,7 @@ public class ChangesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public ResponseHeader header;
+
     public ChangesListResponse withHeader(ResponseHeader header) {
         this.header = header;
         return this;
@@ -40,6 +42,7 @@ public class ChangesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ChangesListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class ChangesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ChangesListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ChangesListResponse(){}
 }

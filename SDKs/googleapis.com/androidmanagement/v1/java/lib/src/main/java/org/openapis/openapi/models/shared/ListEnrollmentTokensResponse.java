@@ -18,6 +18,7 @@ public class ListEnrollmentTokensResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enrollmentTokens")
     public EnrollmentToken[] enrollmentTokens;
+
     public ListEnrollmentTokensResponse withEnrollmentTokens(EnrollmentToken[] enrollmentTokens) {
         this.enrollmentTokens = enrollmentTokens;
         return this;
@@ -29,9 +30,11 @@ public class ListEnrollmentTokensResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListEnrollmentTokensResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListEnrollmentTokensResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApplicationVersionResponse {
@@ -12,6 +13,7 @@ public class GetApplicationVersionResponse {
      */
     
     public Object accessDeniedException;
+
     public GetApplicationVersionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetApplicationVersionResponse {
     
     
     public String contentType;
+
     public GetApplicationVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetApplicationVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetApplicationVersionResponse getApplicationVersionResponse;
+
     public GetApplicationVersionResponse withGetApplicationVersionResponse(org.openapis.openapi.models.shared.GetApplicationVersionResponse getApplicationVersionResponse) {
         this.getApplicationVersionResponse = getApplicationVersionResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetApplicationVersionResponse {
      */
     
     public Object internalServerException;
+
     public GetApplicationVersionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetApplicationVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetApplicationVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetApplicationVersionResponse {
     
     
     public Integer statusCode;
+
     public GetApplicationVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetApplicationVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApplicationVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetApplicationVersionResponse {
      */
     
     public Object throttlingException;
+
     public GetApplicationVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetApplicationVersionResponse {
      */
     
     public Object validationException;
+
     public GetApplicationVersionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetApplicationVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

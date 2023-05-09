@@ -18,6 +18,7 @@ public class EncryptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionEntityId")
     public String encryptionEntityId;
+
     public EncryptionInfo withEncryptionEntityId(String encryptionEntityId) {
         this.encryptionEntityId = encryptionEntityId;
         return this;
@@ -29,6 +30,7 @@ public class EncryptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionEntityType")
     public EncryptionInfoEncryptionEntityTypeEnum encryptionEntityType;
+
     public EncryptionInfo withEncryptionEntityType(EncryptionInfoEncryptionEntityTypeEnum encryptionEntityType) {
         this.encryptionEntityType = encryptionEntityType;
         return this;
@@ -40,6 +42,7 @@ public class EncryptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionSource")
     public EncryptionInfoEncryptionSourceEnum encryptionSource;
+
     public EncryptionInfo withEncryptionSource(EncryptionInfoEncryptionSourceEnum encryptionSource) {
         this.encryptionSource = encryptionSource;
         return this;
@@ -51,9 +54,11 @@ public class EncryptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public EncryptionInfo withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public EncryptionInfo(){}
 }

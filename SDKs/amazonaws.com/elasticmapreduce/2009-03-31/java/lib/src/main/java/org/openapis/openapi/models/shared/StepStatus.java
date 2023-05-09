@@ -15,6 +15,7 @@ public class StepStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureDetails")
     public FailureDetails failureDetails;
+
     public StepStatus withFailureDetails(FailureDetails failureDetails) {
         this.failureDetails = failureDetails;
         return this;
@@ -23,6 +24,7 @@ public class StepStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public StepStateEnum state;
+
     public StepStatus withState(StepStateEnum state) {
         this.state = state;
         return this;
@@ -31,6 +33,7 @@ public class StepStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateChangeReason")
     public StepStateChangeReason stateChangeReason;
+
     public StepStatus withStateChangeReason(StepStateChangeReason stateChangeReason) {
         this.stateChangeReason = stateChangeReason;
         return this;
@@ -39,9 +42,11 @@ public class StepStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeline")
     public StepTimeline timeline;
+
     public StepStatus withTimeline(StepTimeline timeline) {
         this.timeline = timeline;
         return this;
     }
     
+    public StepStatus(){}
 }

@@ -298,4 +298,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateConnectorProfileRespo
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateConnectorRegistrationResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateFlowResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

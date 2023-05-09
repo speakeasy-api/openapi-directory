@@ -22,6 +22,7 @@ public class GetDevicePositionHistoryRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTimeExclusive")
     public OffsetDateTime endTimeExclusive;
+
     public GetDevicePositionHistoryRequestBody withEndTimeExclusive(OffsetDateTime endTimeExclusive) {
         this.endTimeExclusive = endTimeExclusive;
         return this;
@@ -33,6 +34,7 @@ public class GetDevicePositionHistoryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetDevicePositionHistoryRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -44,6 +46,7 @@ public class GetDevicePositionHistoryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetDevicePositionHistoryRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -57,9 +60,11 @@ public class GetDevicePositionHistoryRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTimeInclusive")
     public OffsetDateTime startTimeInclusive;
+
     public GetDevicePositionHistoryRequestBody withStartTimeInclusive(OffsetDateTime startTimeInclusive) {
         this.startTimeInclusive = startTimeInclusive;
         return this;
     }
     
+    public GetDevicePositionHistoryRequestBody(){}
 }

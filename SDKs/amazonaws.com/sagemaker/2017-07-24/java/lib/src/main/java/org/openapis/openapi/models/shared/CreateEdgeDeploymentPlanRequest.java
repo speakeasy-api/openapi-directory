@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateEdgeDeploymentPlanRequest {
     @JsonProperty("DeviceFleetName")
     public String deviceFleetName;
+
     public CreateEdgeDeploymentPlanRequest withDeviceFleetName(String deviceFleetName) {
         this.deviceFleetName = deviceFleetName;
         return this;
@@ -18,6 +19,7 @@ public class CreateEdgeDeploymentPlanRequest {
     
     @JsonProperty("EdgeDeploymentPlanName")
     public String edgeDeploymentPlanName;
+
     public CreateEdgeDeploymentPlanRequest withEdgeDeploymentPlanName(String edgeDeploymentPlanName) {
         this.edgeDeploymentPlanName = edgeDeploymentPlanName;
         return this;
@@ -25,6 +27,7 @@ public class CreateEdgeDeploymentPlanRequest {
     
     @JsonProperty("ModelConfigs")
     public EdgeDeploymentModelConfig[] modelConfigs;
+
     public CreateEdgeDeploymentPlanRequest withModelConfigs(EdgeDeploymentModelConfig[] modelConfigs) {
         this.modelConfigs = modelConfigs;
         return this;
@@ -33,6 +36,7 @@ public class CreateEdgeDeploymentPlanRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Stages")
     public DeploymentStage[] stages;
+
     public CreateEdgeDeploymentPlanRequest withStages(DeploymentStage[] stages) {
         this.stages = stages;
         return this;
@@ -41,9 +45,15 @@ public class CreateEdgeDeploymentPlanRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateEdgeDeploymentPlanRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateEdgeDeploymentPlanRequest(@JsonProperty("DeviceFleetName") String deviceFleetName, @JsonProperty("EdgeDeploymentPlanName") String edgeDeploymentPlanName, @JsonProperty("ModelConfigs") EdgeDeploymentModelConfig[] modelConfigs) {
+        this.deviceFleetName = deviceFleetName;
+        this.edgeDeploymentPlanName = edgeDeploymentPlanName;
+        this.modelConfigs = modelConfigs;
+  }
 }

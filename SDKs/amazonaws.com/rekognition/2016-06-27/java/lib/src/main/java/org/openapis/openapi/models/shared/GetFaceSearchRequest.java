@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetFaceSearchRequest {
     @JsonProperty("JobId")
     public String jobId;
+
     public GetFaceSearchRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -19,6 +20,7 @@ public class GetFaceSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetFaceSearchRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,6 +29,7 @@ public class GetFaceSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetFaceSearchRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class GetFaceSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public FaceSearchSortByEnum sortBy;
+
     public GetFaceSearchRequest withSortBy(FaceSearchSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public GetFaceSearchRequest(@JsonProperty("JobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

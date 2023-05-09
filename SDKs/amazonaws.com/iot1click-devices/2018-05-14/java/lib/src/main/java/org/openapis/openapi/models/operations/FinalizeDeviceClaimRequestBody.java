@@ -19,9 +19,11 @@ public class FinalizeDeviceClaimRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public FinalizeDeviceClaimRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public FinalizeDeviceClaimRequestBody(){}
 }

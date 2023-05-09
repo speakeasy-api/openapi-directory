@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2ExportDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportFullContent")
     public Boolean exportFullContent;
+
     public GoogleCloudDialogflowV2ExportDocumentRequest withExportFullContent(Boolean exportFullContent) {
         this.exportFullContent = exportFullContent;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2ExportDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsDestination")
     public GoogleCloudDialogflowV2GcsDestination gcsDestination;
+
     public GoogleCloudDialogflowV2ExportDocumentRequest withGcsDestination(GoogleCloudDialogflowV2GcsDestination gcsDestination) {
         this.gcsDestination = gcsDestination;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2ExportDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smartMessagingPartialUpdate")
     public Boolean smartMessagingPartialUpdate;
+
     public GoogleCloudDialogflowV2ExportDocumentRequest withSmartMessagingPartialUpdate(Boolean smartMessagingPartialUpdate) {
         this.smartMessagingPartialUpdate = smartMessagingPartialUpdate;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ExportDocumentRequest(){}
 }

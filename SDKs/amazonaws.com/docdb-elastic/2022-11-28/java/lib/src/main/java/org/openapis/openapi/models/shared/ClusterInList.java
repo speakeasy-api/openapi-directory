@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ClusterInList {
     @JsonProperty("clusterArn")
     public String clusterArn;
+
     public ClusterInList withClusterArn(String clusterArn) {
         this.clusterArn = clusterArn;
         return this;
@@ -19,6 +20,7 @@ public class ClusterInList {
     
     @JsonProperty("clusterName")
     public String clusterName;
+
     public ClusterInList withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -26,9 +28,15 @@ public class ClusterInList {
     
     @JsonProperty("status")
     public StatusEnum status;
+
     public ClusterInList withStatus(StatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ClusterInList(@JsonProperty("clusterArn") String clusterArn, @JsonProperty("clusterName") String clusterName, @JsonProperty("status") StatusEnum status) {
+        this.clusterArn = clusterArn;
+        this.clusterName = clusterName;
+        this.status = status;
+  }
 }

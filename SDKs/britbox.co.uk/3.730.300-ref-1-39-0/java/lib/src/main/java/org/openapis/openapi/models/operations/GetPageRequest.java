@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPageRequest {
@@ -12,6 +13,7 @@ public class GetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
     public String device;
+
     public GetPageRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -42,6 +44,7 @@ public class GetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetPageRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -70,6 +73,7 @@ public class GetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_detail_expand")
     public GetPageItemDetailExpandEnum itemDetailExpand;
+
     public GetPageRequest withItemDetailExpand(GetPageItemDetailExpandEnum itemDetailExpand) {
         this.itemDetailExpand = itemDetailExpand;
         return this;
@@ -95,6 +99,7 @@ public class GetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_detail_select_season")
     public GetPageItemDetailSelectSeasonEnum itemDetailSelectSeason;
+
     public GetPageRequest withItemDetailSelectSeason(GetPageItemDetailSelectSeasonEnum itemDetailSelectSeason) {
         this.itemDetailSelectSeason = itemDetailSelectSeason;
         return this;
@@ -115,6 +120,7 @@ public class GetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetPageRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -125,6 +131,7 @@ public class GetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=list_page_size")
     public Integer listPageSize;
+
     public GetPageRequest withListPageSize(Integer listPageSize) {
         this.listPageSize = listPageSize;
         return this;
@@ -139,6 +146,7 @@ public class GetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=list_page_size_large")
     public Integer listPageSizeLarge;
+
     public GetPageRequest withListPageSizeLarge(Integer listPageSizeLarge) {
         this.listPageSizeLarge = listPageSizeLarge;
         return this;
@@ -149,6 +157,7 @@ public class GetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_list_prefetch")
     public Integer maxListPrefetch;
+
     public GetPageRequest withMaxListPrefetch(Integer maxListPrefetch) {
         this.maxListPrefetch = maxListPrefetch;
         return this;
@@ -159,6 +168,7 @@ public class GetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_rating")
     public String maxRating;
+
     public GetPageRequest withMaxRating(String maxRating) {
         this.maxRating = maxRating;
         return this;
@@ -169,6 +179,7 @@ public class GetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
     public String path;
+
     public GetPageRequest withPath(String path) {
         this.path = path;
         return this;
@@ -179,6 +190,7 @@ public class GetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
     public String[] segments;
+
     public GetPageRequest withSegments(String[] segments) {
         this.segments = segments;
         return this;
@@ -189,6 +201,7 @@ public class GetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub")
     public String sub;
+
     public GetPageRequest withSub(String sub) {
         this.sub = sub;
         return this;
@@ -202,9 +215,13 @@ public class GetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text_entry_format")
     public GetPageTextEntryFormatEnum textEntryFormat;
+
     public GetPageRequest withTextEntryFormat(GetPageTextEntryFormatEnum textEntryFormat) {
         this.textEntryFormat = textEntryFormat;
         return this;
     }
     
+    public GetPageRequest(@JsonProperty("path") String path) {
+        this.path = path;
+  }
 }

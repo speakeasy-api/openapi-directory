@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateApplicationLayerAutomaticResponseRequest {
     @JsonProperty("Action")
     public ResponseAction action;
+
     public UpdateApplicationLayerAutomaticResponseRequest withAction(ResponseAction action) {
         this.action = action;
         return this;
@@ -16,9 +17,14 @@ public class UpdateApplicationLayerAutomaticResponseRequest {
     
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public UpdateApplicationLayerAutomaticResponseRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public UpdateApplicationLayerAutomaticResponseRequest(@JsonProperty("Action") ResponseAction action, @JsonProperty("ResourceArn") String resourceArn) {
+        this.action = action;
+        this.resourceArn = resourceArn;
+  }
 }

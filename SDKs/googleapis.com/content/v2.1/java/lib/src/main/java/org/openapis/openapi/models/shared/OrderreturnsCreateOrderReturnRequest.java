@@ -15,6 +15,7 @@ public class OrderreturnsCreateOrderReturnRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItems")
     public OrderreturnsLineItem[] lineItems;
+
     public OrderreturnsCreateOrderReturnRequest withLineItems(OrderreturnsLineItem[] lineItems) {
         this.lineItems = lineItems;
         return this;
@@ -26,6 +27,7 @@ public class OrderreturnsCreateOrderReturnRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationId")
     public String operationId;
+
     public OrderreturnsCreateOrderReturnRequest withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -37,6 +39,7 @@ public class OrderreturnsCreateOrderReturnRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderId")
     public String orderId;
+
     public OrderreturnsCreateOrderReturnRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -48,9 +51,11 @@ public class OrderreturnsCreateOrderReturnRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnMethodType")
     public String returnMethodType;
+
     public OrderreturnsCreateOrderReturnRequest withReturnMethodType(String returnMethodType) {
         this.returnMethodType = returnMethodType;
         return this;
     }
     
+    public OrderreturnsCreateOrderReturnRequest(){}
 }

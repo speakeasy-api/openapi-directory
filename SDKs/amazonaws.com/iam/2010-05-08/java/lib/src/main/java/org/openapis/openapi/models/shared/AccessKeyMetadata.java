@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class AccessKeyMetadata {
     
     public String accessKeyId;
+
     public AccessKeyMetadata withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -19,6 +20,7 @@ public class AccessKeyMetadata {
     
     
     public OffsetDateTime createDate;
+
     public AccessKeyMetadata withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -26,6 +28,7 @@ public class AccessKeyMetadata {
     
     
     public StatusTypeEnum status;
+
     public AccessKeyMetadata withStatus(StatusTypeEnum status) {
         this.status = status;
         return this;
@@ -33,9 +36,11 @@ public class AccessKeyMetadata {
     
     
     public String userName;
+
     public AccessKeyMetadata withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public AccessKeyMetadata(){}
 }

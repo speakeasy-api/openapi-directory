@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSinkResponse {
@@ -12,6 +13,7 @@ public class CreateSinkResponse {
      */
     
     public Object conflictException;
+
     public CreateSinkResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateSinkResponse {
     
     
     public String contentType;
+
     public CreateSinkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateSinkResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSinkOutput createSinkOutput;
+
     public CreateSinkResponse withCreateSinkOutput(org.openapis.openapi.models.shared.CreateSinkOutput createSinkOutput) {
         this.createSinkOutput = createSinkOutput;
         return this;
@@ -39,6 +43,7 @@ public class CreateSinkResponse {
      */
     
     public Object internalServiceFault;
+
     public CreateSinkResponse withInternalServiceFault(Object internalServiceFault) {
         this.internalServiceFault = internalServiceFault;
         return this;
@@ -49,6 +54,7 @@ public class CreateSinkResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateSinkResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateSinkResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public CreateSinkResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -69,6 +76,7 @@ public class CreateSinkResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateSinkResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateSinkResponse {
     
     
     public Integer statusCode;
+
     public CreateSinkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateSinkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSinkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateSinkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

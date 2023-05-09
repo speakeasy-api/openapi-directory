@@ -18,6 +18,7 @@ public class ListDocumentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public Document[] documents;
+
     public ListDocumentsResponse withDocuments(Document[] documents) {
         this.documents = documents;
         return this;
@@ -29,9 +30,11 @@ public class ListDocumentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListDocumentsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListDocumentsResponse(){}
 }

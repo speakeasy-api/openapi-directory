@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutscoresRequest {
@@ -12,6 +13,7 @@ public class PutscoresRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public PutscoresRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -19,6 +21,7 @@ public class PutscoresRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PutscoresRequest[] requestBody;
+
     public PutscoresRequest withRequestBody(org.openapis.openapi.models.shared.PutscoresRequest[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -29,6 +32,7 @@ public class PutscoresRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=acronym")
     public String acronym;
+
     public PutscoresRequest withAcronym(String acronym) {
         this.acronym = acronym;
         return this;
@@ -39,9 +43,16 @@ public class PutscoresRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutscoresRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PutscoresRequest(@JsonProperty("Accept") String accept, @JsonProperty("RequestBody") org.openapis.openapi.models.shared.PutscoresRequest[] requestBody, @JsonProperty("acronym") String acronym, @JsonProperty("id") String id) {
+        this.accept = accept;
+        this.requestBody = requestBody;
+        this.acronym = acronym;
+        this.id = id;
+  }
 }

@@ -15,6 +15,7 @@ public class GetPeopleId200ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.Person data;
+
     public GetPeopleId200ApplicationVndApiPlusJson withData(org.openapis.openapi.models.shared.Person data) {
         this.data = data;
         return this;
@@ -26,9 +27,11 @@ public class GetPeopleId200ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public org.openapis.openapi.models.shared.ResourceLink links;
+
     public GetPeopleId200ApplicationVndApiPlusJson withLinks(org.openapis.openapi.models.shared.ResourceLink links) {
         this.links = links;
         return this;
     }
     
+    public GetPeopleId200ApplicationVndApiPlusJson(){}
 }

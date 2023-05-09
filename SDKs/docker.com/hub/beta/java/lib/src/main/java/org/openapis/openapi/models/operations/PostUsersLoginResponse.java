@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostUsersLoginResponse {
     
     public String contentType;
+
     public PostUsersLoginResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostUsersLoginResponse {
      */
     
     public org.openapis.openapi.models.shared.PostUsersLoginErrorResponse postUsersLoginErrorResponse;
+
     public PostUsersLoginResponse withPostUsersLoginErrorResponse(org.openapis.openapi.models.shared.PostUsersLoginErrorResponse postUsersLoginErrorResponse) {
         this.postUsersLoginErrorResponse = postUsersLoginErrorResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostUsersLoginResponse {
      */
     
     public org.openapis.openapi.models.shared.PostUsersLoginSuccessResponse postUsersLoginSuccessResponse;
+
     public PostUsersLoginResponse withPostUsersLoginSuccessResponse(org.openapis.openapi.models.shared.PostUsersLoginSuccessResponse postUsersLoginSuccessResponse) {
         this.postUsersLoginSuccessResponse = postUsersLoginSuccessResponse;
         return this;
@@ -36,6 +40,7 @@ public class PostUsersLoginResponse {
     
     
     public Integer statusCode;
+
     public PostUsersLoginResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostUsersLoginResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostUsersLoginResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostUsersLoginResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

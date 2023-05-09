@@ -18,6 +18,7 @@ public class CalloutStatusRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calloutStatusId")
     public Integer calloutStatusId;
+
     public CalloutStatusRow withCalloutStatusId(Integer calloutStatusId) {
         this.calloutStatusId = calloutStatusId;
         return this;
@@ -29,6 +30,7 @@ public class CalloutStatusRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impressionCount")
     public MetricValue impressionCount;
+
     public CalloutStatusRow withImpressionCount(MetricValue impressionCount) {
         this.impressionCount = impressionCount;
         return this;
@@ -40,9 +42,11 @@ public class CalloutStatusRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowDimensions")
     public RowDimensions rowDimensions;
+
     public CalloutStatusRow withRowDimensions(RowDimensions rowDimensions) {
         this.rowDimensions = rowDimensions;
         return this;
     }
     
+    public CalloutStatusRow(){}
 }

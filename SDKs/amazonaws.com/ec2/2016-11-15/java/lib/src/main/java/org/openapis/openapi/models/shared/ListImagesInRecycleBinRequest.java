@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListImagesInRecycleBinRequest {
     
     public Boolean dryRun;
+
     public ListImagesInRecycleBinRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class ListImagesInRecycleBinRequest {
     
     
     public String[] imageIds;
+
     public ListImagesInRecycleBinRequest withImageIds(String[] imageIds) {
         this.imageIds = imageIds;
         return this;
@@ -23,6 +25,7 @@ public class ListImagesInRecycleBinRequest {
     
     
     public Long maxResults;
+
     public ListImagesInRecycleBinRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,9 +33,11 @@ public class ListImagesInRecycleBinRequest {
     
     
     public String nextToken;
+
     public ListImagesInRecycleBinRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListImagesInRecycleBinRequest(){}
 }

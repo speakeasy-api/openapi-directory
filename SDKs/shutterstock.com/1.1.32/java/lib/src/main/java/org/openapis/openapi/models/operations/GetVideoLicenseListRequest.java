@@ -13,6 +13,7 @@ public class GetVideoLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=download_availability")
     public GetVideoLicenseListDownloadAvailabilityEnum downloadAvailability;
+
     public GetVideoLicenseListRequest withDownloadAvailability(GetVideoLicenseListDownloadAvailabilityEnum downloadAvailability) {
         this.downloadAvailability = downloadAvailability;
         return this;
@@ -23,6 +24,7 @@ public class GetVideoLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public OffsetDateTime endDate;
+
     public GetVideoLicenseListRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -33,6 +35,7 @@ public class GetVideoLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
     public String license;
+
     public GetVideoLicenseListRequest withLicense(String license) {
         this.license = license;
         return this;
@@ -43,6 +46,7 @@ public class GetVideoLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetVideoLicenseListRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -53,6 +57,7 @@ public class GetVideoLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetVideoLicenseListRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -63,6 +68,7 @@ public class GetVideoLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetVideoLicenseListSortEnum sort;
+
     public GetVideoLicenseListRequest withSort(GetVideoLicenseListSortEnum sort) {
         this.sort = sort;
         return this;
@@ -73,6 +79,7 @@ public class GetVideoLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public OffsetDateTime startDate;
+
     public GetVideoLicenseListRequest withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -83,6 +90,7 @@ public class GetVideoLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team_history")
     public Boolean teamHistory;
+
     public GetVideoLicenseListRequest withTeamHistory(Boolean teamHistory) {
         this.teamHistory = teamHistory;
         return this;
@@ -93,6 +101,7 @@ public class GetVideoLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public GetVideoLicenseListRequest withUsername(String username) {
         this.username = username;
         return this;
@@ -103,9 +112,11 @@ public class GetVideoLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=video_id")
     public String videoId;
+
     public GetVideoLicenseListRequest withVideoId(String videoId) {
         this.videoId = videoId;
         return this;
     }
     
+    public GetVideoLicenseListRequest(){}
 }

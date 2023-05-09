@@ -18,9 +18,11 @@ public class GoogleCloudVisionV1p1beta1ImageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dominantColors")
     public GoogleCloudVisionV1p1beta1DominantColorsAnnotation dominantColors;
+
     public GoogleCloudVisionV1p1beta1ImageProperties withDominantColors(GoogleCloudVisionV1p1beta1DominantColorsAnnotation dominantColors) {
         this.dominantColors = dominantColors;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1ImageProperties(){}
 }

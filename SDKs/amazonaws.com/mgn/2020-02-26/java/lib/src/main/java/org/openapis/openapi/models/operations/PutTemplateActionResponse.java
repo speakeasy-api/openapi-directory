@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutTemplateActionResponse {
@@ -12,6 +13,7 @@ public class PutTemplateActionResponse {
      */
     
     public Object conflictException;
+
     public PutTemplateActionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class PutTemplateActionResponse {
     
     
     public String contentType;
+
     public PutTemplateActionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PutTemplateActionResponse {
     
     
     public Integer statusCode;
+
     public PutTemplateActionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class PutTemplateActionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutTemplateActionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class PutTemplateActionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutTemplateActionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,6 +59,7 @@ public class PutTemplateActionResponse {
      */
     
     public org.openapis.openapi.models.shared.TemplateActionDocument templateActionDocument;
+
     public PutTemplateActionResponse withTemplateActionDocument(org.openapis.openapi.models.shared.TemplateActionDocument templateActionDocument) {
         this.templateActionDocument = templateActionDocument;
         return this;
@@ -63,6 +70,7 @@ public class PutTemplateActionResponse {
      */
     
     public Object uninitializedAccountException;
+
     public PutTemplateActionResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -73,9 +81,14 @@ public class PutTemplateActionResponse {
      */
     
     public Object validationException;
+
     public PutTemplateActionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutTemplateActionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

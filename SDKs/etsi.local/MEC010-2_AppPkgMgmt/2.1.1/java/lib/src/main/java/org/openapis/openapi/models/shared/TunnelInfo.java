@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TunnelInfo {
     /**
@@ -12,6 +12,7 @@ public class TunnelInfo {
      */
     
     public String tunnelDstAddress;
+
     public TunnelInfo withTunnelDstAddress(String tunnelDstAddress) {
         this.tunnelDstAddress = tunnelDstAddress;
         return this;
@@ -19,6 +20,7 @@ public class TunnelInfo {
     
     
     public String tunnelSpecificData;
+
     public TunnelInfo withTunnelSpecificData(String tunnelSpecificData) {
         this.tunnelSpecificData = tunnelSpecificData;
         return this;
@@ -29,6 +31,7 @@ public class TunnelInfo {
      */
     
     public String tunnelSrcAddress;
+
     public TunnelInfo withTunnelSrcAddress(String tunnelSrcAddress) {
         this.tunnelSrcAddress = tunnelSrcAddress;
         return this;
@@ -39,9 +42,15 @@ public class TunnelInfo {
      */
     
     public TunnelTypeEnum tunnelType;
+
     public TunnelInfo withTunnelType(TunnelTypeEnum tunnelType) {
         this.tunnelType = tunnelType;
         return this;
     }
     
+    public TunnelInfo(@JsonProperty("tunnelDstAddress") String tunnelDstAddress, @JsonProperty("tunnelSrcAddress") String tunnelSrcAddress, @JsonProperty("tunnelType") TunnelTypeEnum tunnelType) {
+        this.tunnelDstAddress = tunnelDstAddress;
+        this.tunnelSrcAddress = tunnelSrcAddress;
+        this.tunnelType = tunnelType;
+  }
 }

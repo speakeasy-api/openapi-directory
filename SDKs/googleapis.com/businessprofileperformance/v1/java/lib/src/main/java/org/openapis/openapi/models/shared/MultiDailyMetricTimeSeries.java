@@ -18,9 +18,11 @@ public class MultiDailyMetricTimeSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dailyMetricTimeSeries")
     public DailyMetricTimeSeries[] dailyMetricTimeSeries;
+
     public MultiDailyMetricTimeSeries withDailyMetricTimeSeries(DailyMetricTimeSeries[] dailyMetricTimeSeries) {
         this.dailyMetricTimeSeries = dailyMetricTimeSeries;
         return this;
     }
     
+    public MultiDailyMetricTimeSeries(){}
 }

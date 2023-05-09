@@ -20,6 +20,7 @@ public class Archive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArchiveName")
     public String archiveName;
+
     public Archive withArchiveName(String archiveName) {
         this.archiveName = archiveName;
         return this;
@@ -30,6 +31,7 @@ public class Archive {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Archive withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class Archive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventCount")
     public Long eventCount;
+
     public Archive withEventCount(Long eventCount) {
         this.eventCount = eventCount;
         return this;
@@ -46,6 +49,7 @@ public class Archive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSourceArn")
     public String eventSourceArn;
+
     public Archive withEventSourceArn(String eventSourceArn) {
         this.eventSourceArn = eventSourceArn;
         return this;
@@ -54,6 +58,7 @@ public class Archive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetentionDays")
     public Long retentionDays;
+
     public Archive withRetentionDays(Long retentionDays) {
         this.retentionDays = retentionDays;
         return this;
@@ -62,6 +67,7 @@ public class Archive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeBytes")
     public Long sizeBytes;
+
     public Archive withSizeBytes(Long sizeBytes) {
         this.sizeBytes = sizeBytes;
         return this;
@@ -70,6 +76,7 @@ public class Archive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public ArchiveStateEnum state;
+
     public Archive withState(ArchiveStateEnum state) {
         this.state = state;
         return this;
@@ -78,9 +85,11 @@ public class Archive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateReason")
     public String stateReason;
+
     public Archive withStateReason(String stateReason) {
         this.stateReason = stateReason;
         return this;
     }
     
+    public Archive(){}
 }

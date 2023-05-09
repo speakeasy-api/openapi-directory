@@ -15,6 +15,7 @@ public class DataflowEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public SocketAddress address;
+
     public DataflowEndpoint withAddress(SocketAddress address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class DataflowEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mtu")
     public Long mtu;
+
     public DataflowEndpoint withMtu(Long mtu) {
         this.mtu = mtu;
         return this;
@@ -31,6 +33,7 @@ public class DataflowEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DataflowEndpoint withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class DataflowEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public EndpointStatusEnum status;
+
     public DataflowEndpoint withStatus(EndpointStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DataflowEndpoint(){}
 }

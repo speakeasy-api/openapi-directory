@@ -15,6 +15,7 @@ public class Getweatherzipcode200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("City")
     public String city;
+
     public Getweatherzipcode200ApplicationJSON withCity(String city) {
         this.city = city;
         return this;
@@ -23,6 +24,7 @@ public class Getweatherzipcode200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public Getweatherzipcode200ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -31,6 +33,7 @@ public class Getweatherzipcode200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credits")
     public String credits;
+
     public Getweatherzipcode200ApplicationJSON withCredits(String credits) {
         this.credits = credits;
         return this;
@@ -39,6 +42,7 @@ public class Getweatherzipcode200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelativeHumidity")
     public String relativeHumidity;
+
     public Getweatherzipcode200ApplicationJSON withRelativeHumidity(String relativeHumidity) {
         this.relativeHumidity = relativeHumidity;
         return this;
@@ -47,6 +51,7 @@ public class Getweatherzipcode200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public Getweatherzipcode200ApplicationJSON withState(String state) {
         this.state = state;
         return this;
@@ -55,6 +60,7 @@ public class Getweatherzipcode200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TempC")
     public String tempC;
+
     public Getweatherzipcode200ApplicationJSON withTempC(String tempC) {
         this.tempC = tempC;
         return this;
@@ -63,6 +69,7 @@ public class Getweatherzipcode200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TempF")
     public String tempF;
+
     public Getweatherzipcode200ApplicationJSON withTempF(String tempF) {
         this.tempF = tempF;
         return this;
@@ -71,6 +78,7 @@ public class Getweatherzipcode200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VisibilityMiles")
     public String visibilityMiles;
+
     public Getweatherzipcode200ApplicationJSON withVisibilityMiles(String visibilityMiles) {
         this.visibilityMiles = visibilityMiles;
         return this;
@@ -79,6 +87,7 @@ public class Getweatherzipcode200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Weather")
     public String weather;
+
     public Getweatherzipcode200ApplicationJSON withWeather(String weather) {
         this.weather = weather;
         return this;
@@ -87,6 +96,7 @@ public class Getweatherzipcode200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindDir")
     public String windDir;
+
     public Getweatherzipcode200ApplicationJSON withWindDir(String windDir) {
         this.windDir = windDir;
         return this;
@@ -95,9 +105,11 @@ public class Getweatherzipcode200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindMPH")
     public String windMPH;
+
     public Getweatherzipcode200ApplicationJSON withWindMPH(String windMPH) {
         this.windMPH = windMPH;
         return this;
     }
     
+    public Getweatherzipcode200ApplicationJSON(){}
 }

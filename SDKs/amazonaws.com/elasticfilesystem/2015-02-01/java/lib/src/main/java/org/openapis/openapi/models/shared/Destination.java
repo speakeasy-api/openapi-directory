@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Destination {
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public Destination withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -29,6 +30,7 @@ public class Destination {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastReplicatedTimestamp")
     public OffsetDateTime lastReplicatedTimestamp;
+
     public Destination withLastReplicatedTimestamp(OffsetDateTime lastReplicatedTimestamp) {
         this.lastReplicatedTimestamp = lastReplicatedTimestamp;
         return this;
@@ -36,6 +38,7 @@ public class Destination {
     
     @JsonProperty("Region")
     public String region;
+
     public Destination withRegion(String region) {
         this.region = region;
         return this;
@@ -43,9 +46,15 @@ public class Destination {
     
     @JsonProperty("Status")
     public ReplicationStatusEnum status;
+
     public Destination withStatus(ReplicationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Destination(@JsonProperty("FileSystemId") String fileSystemId, @JsonProperty("Region") String region, @JsonProperty("Status") ReplicationStatusEnum status) {
+        this.fileSystemId = fileSystemId;
+        this.region = region;
+        this.status = status;
+  }
 }

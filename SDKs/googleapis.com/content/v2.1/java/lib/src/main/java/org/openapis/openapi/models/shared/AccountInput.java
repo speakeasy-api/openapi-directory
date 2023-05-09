@@ -18,6 +18,7 @@ public class AccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adsLinks")
     public AccountAdsLink[] adsLinks;
+
     public AccountInput withAdsLinks(AccountAdsLink[] adsLinks) {
         this.adsLinks = adsLinks;
         return this;
@@ -29,6 +30,7 @@ public class AccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adultContent")
     public Boolean adultContent;
+
     public AccountInput withAdultContent(Boolean adultContent) {
         this.adultContent = adultContent;
         return this;
@@ -40,6 +42,7 @@ public class AccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automaticImprovements")
     public AccountAutomaticImprovementsInput automaticImprovements;
+
     public AccountInput withAutomaticImprovements(AccountAutomaticImprovementsInput automaticImprovements) {
         this.automaticImprovements = automaticImprovements;
         return this;
@@ -51,6 +54,7 @@ public class AccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automaticLabelIds")
     public String[] automaticLabelIds;
+
     public AccountInput withAutomaticLabelIds(String[] automaticLabelIds) {
         this.automaticLabelIds = automaticLabelIds;
         return this;
@@ -59,6 +63,7 @@ public class AccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessInformation")
     public AccountBusinessInformation businessInformation;
+
     public AccountInput withBusinessInformation(AccountBusinessInformation businessInformation) {
         this.businessInformation = businessInformation;
         return this;
@@ -70,6 +75,7 @@ public class AccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionSettings")
     public AccountConversionSettings conversionSettings;
+
     public AccountInput withConversionSettings(AccountConversionSettings conversionSettings) {
         this.conversionSettings = conversionSettings;
         return this;
@@ -81,6 +87,7 @@ public class AccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cssId")
     public String cssId;
+
     public AccountInput withCssId(String cssId) {
         this.cssId = cssId;
         return this;
@@ -89,6 +96,7 @@ public class AccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleMyBusinessLink")
     public AccountGoogleMyBusinessLink googleMyBusinessLink;
+
     public AccountInput withGoogleMyBusinessLink(AccountGoogleMyBusinessLink googleMyBusinessLink) {
         this.googleMyBusinessLink = googleMyBusinessLink;
         return this;
@@ -100,6 +108,7 @@ public class AccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AccountInput withId(String id) {
         this.id = id;
         return this;
@@ -111,6 +120,7 @@ public class AccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccountInput withKind(String kind) {
         this.kind = kind;
         return this;
@@ -122,6 +132,7 @@ public class AccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelIds")
     public String[] labelIds;
+
     public AccountInput withLabelIds(String[] labelIds) {
         this.labelIds = labelIds;
         return this;
@@ -133,6 +144,7 @@ public class AccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AccountInput withName(String name) {
         this.name = name;
         return this;
@@ -144,6 +156,7 @@ public class AccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerId")
     public String sellerId;
+
     public AccountInput withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -155,6 +168,7 @@ public class AccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("users")
     public AccountUser[] users;
+
     public AccountInput withUsers(AccountUser[] users) {
         this.users = users;
         return this;
@@ -166,6 +180,7 @@ public class AccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("websiteUrl")
     public String websiteUrl;
+
     public AccountInput withWebsiteUrl(String websiteUrl) {
         this.websiteUrl = websiteUrl;
         return this;
@@ -177,9 +192,11 @@ public class AccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("youtubeChannelLinks")
     public AccountYouTubeChannelLink[] youtubeChannelLinks;
+
     public AccountInput withYoutubeChannelLinks(AccountYouTubeChannelLink[] youtubeChannelLinks) {
         this.youtubeChannelLinks = youtubeChannelLinks;
         return this;
     }
     
+    public AccountInput(){}
 }

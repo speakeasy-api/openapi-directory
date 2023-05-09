@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceStatusRequestFilters {
     
     public String name;
+
     public DescribeInstanceStatusRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInstanceStatusRequestFilters {
     
     
     public String[] values;
+
     public DescribeInstanceStatusRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeInstanceStatusRequestFilters(){}
 }

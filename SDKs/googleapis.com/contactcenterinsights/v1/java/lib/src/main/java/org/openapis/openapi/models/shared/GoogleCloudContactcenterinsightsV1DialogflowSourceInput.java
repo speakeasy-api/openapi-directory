@@ -18,9 +18,11 @@ public class GoogleCloudContactcenterinsightsV1DialogflowSourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioUri")
     public String audioUri;
+
     public GoogleCloudContactcenterinsightsV1DialogflowSourceInput withAudioUri(String audioUri) {
         this.audioUri = audioUri;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1DialogflowSourceInput(){}
 }

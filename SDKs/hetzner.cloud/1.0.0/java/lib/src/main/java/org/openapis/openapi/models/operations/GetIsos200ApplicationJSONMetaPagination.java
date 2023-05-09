@@ -12,6 +12,7 @@ public class GetIsos200ApplicationJSONMetaPagination {
      */
     @JsonProperty("last_page")
     public Double lastPage;
+
     public GetIsos200ApplicationJSONMetaPagination withLastPage(Double lastPage) {
         this.lastPage = lastPage;
         return this;
@@ -22,6 +23,7 @@ public class GetIsos200ApplicationJSONMetaPagination {
      */
     @JsonProperty("next_page")
     public Double nextPage;
+
     public GetIsos200ApplicationJSONMetaPagination withNextPage(Double nextPage) {
         this.nextPage = nextPage;
         return this;
@@ -32,6 +34,7 @@ public class GetIsos200ApplicationJSONMetaPagination {
      */
     @JsonProperty("page")
     public Double page;
+
     public GetIsos200ApplicationJSONMetaPagination withPage(Double page) {
         this.page = page;
         return this;
@@ -42,6 +45,7 @@ public class GetIsos200ApplicationJSONMetaPagination {
      */
     @JsonProperty("per_page")
     public Double perPage;
+
     public GetIsos200ApplicationJSONMetaPagination withPerPage(Double perPage) {
         this.perPage = perPage;
         return this;
@@ -52,6 +56,7 @@ public class GetIsos200ApplicationJSONMetaPagination {
      */
     @JsonProperty("previous_page")
     public Double previousPage;
+
     public GetIsos200ApplicationJSONMetaPagination withPreviousPage(Double previousPage) {
         this.previousPage = previousPage;
         return this;
@@ -62,9 +67,18 @@ public class GetIsos200ApplicationJSONMetaPagination {
      */
     @JsonProperty("total_entries")
     public Double totalEntries;
+
     public GetIsos200ApplicationJSONMetaPagination withTotalEntries(Double totalEntries) {
         this.totalEntries = totalEntries;
         return this;
     }
     
+    public GetIsos200ApplicationJSONMetaPagination(@JsonProperty("last_page") Double lastPage, @JsonProperty("next_page") Double nextPage, @JsonProperty("page") Double page, @JsonProperty("per_page") Double perPage, @JsonProperty("previous_page") Double previousPage, @JsonProperty("total_entries") Double totalEntries) {
+        this.lastPage = lastPage;
+        this.nextPage = nextPage;
+        this.page = page;
+        this.perPage = perPage;
+        this.previousPage = previousPage;
+        this.totalEntries = totalEntries;
+  }
 }

@@ -63,12 +63,10 @@ public class PermissionGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePermissionGroupResponse res = new org.openapis.openapi.models.operations.CreatePermissionGroupResponse() {{
+        org.openapis.openapi.models.operations.CreatePermissionGroupResponse res = new org.openapis.openapi.models.operations.CreatePermissionGroupResponse(contentType, httpRes.statusCode()) {{
             permissionGroupModelHaljson = null;
             permissionGroupModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -111,10 +109,8 @@ public class PermissionGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePermissionGroupResponse res = new org.openapis.openapi.models.operations.DeletePermissionGroupResponse() {{
+        org.openapis.openapi.models.operations.DeletePermissionGroupResponse res = new org.openapis.openapi.models.operations.DeletePermissionGroupResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
@@ -146,12 +142,10 @@ public class PermissionGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPermissionGroupResponse res = new org.openapis.openapi.models.operations.GetPermissionGroupResponse() {{
+        org.openapis.openapi.models.operations.GetPermissionGroupResponse res = new org.openapis.openapi.models.operations.GetPermissionGroupResponse(contentType, httpRes.statusCode()) {{
             permissionGroupModelHaljson = null;
             permissionGroupModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,12 +189,10 @@ public class PermissionGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPermissionGroupsResponse res = new org.openapis.openapi.models.operations.GetPermissionGroupsResponse() {{
+        org.openapis.openapi.models.operations.GetPermissionGroupsResponse res = new org.openapis.openapi.models.operations.GetPermissionGroupsResponse(contentType, httpRes.statusCode()) {{
             permissionGroupModelHaljsons = null;
             permissionGroupModels = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,12 +240,10 @@ public class PermissionGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePermissionGroupResponse res = new org.openapis.openapi.models.operations.UpdatePermissionGroupResponse() {{
+        org.openapis.openapi.models.operations.UpdatePermissionGroupResponse res = new org.openapis.openapi.models.operations.UpdatePermissionGroupResponse(contentType, httpRes.statusCode()) {{
             permissionGroupModelHaljson = null;
             permissionGroupModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

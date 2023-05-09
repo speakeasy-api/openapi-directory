@@ -18,6 +18,7 @@ public class RepositoryError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public RepositoryError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -29,6 +30,7 @@ public class RepositoryError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpStatusCode")
     public Integer httpStatusCode;
+
     public RepositoryError withHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
@@ -40,9 +42,11 @@ public class RepositoryError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public RepositoryErrorTypeEnum type;
+
     public RepositoryError withType(RepositoryErrorTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RepositoryError(){}
 }

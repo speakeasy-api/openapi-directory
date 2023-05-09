@@ -12,6 +12,7 @@ public class CompanyGeneralDetaisViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyAddresses")
     public String[] companyAddresses;
+
     public CompanyGeneralDetaisViewModel withCompanyAddresses(String[] companyAddresses) {
         this.companyAddresses = companyAddresses;
         return this;
@@ -20,6 +21,7 @@ public class CompanyGeneralDetaisViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyName")
     public String companyName;
+
     public CompanyGeneralDetaisViewModel withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -28,6 +30,7 @@ public class CompanyGeneralDetaisViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public CompanyGeneralDetaisViewModel withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -36,6 +39,7 @@ public class CompanyGeneralDetaisViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyDescription")
     public String currencyDescription;
+
     public CompanyGeneralDetaisViewModel withCurrencyDescription(String currencyDescription) {
         this.currencyDescription = currencyDescription;
         return this;
@@ -44,6 +48,7 @@ public class CompanyGeneralDetaisViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyId")
     public Long currencyId;
+
     public CompanyGeneralDetaisViewModel withCurrencyId(Long currencyId) {
         this.currencyId = currencyId;
         return this;
@@ -52,6 +57,7 @@ public class CompanyGeneralDetaisViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentcySymbol")
     public String currentcySymbol;
+
     public CompanyGeneralDetaisViewModel withCurrentcySymbol(String currentcySymbol) {
         this.currentcySymbol = currentcySymbol;
         return this;
@@ -60,6 +66,7 @@ public class CompanyGeneralDetaisViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     public String[] emails;
+
     public CompanyGeneralDetaisViewModel withEmails(String[] emails) {
         this.emails = emails;
         return this;
@@ -68,6 +75,7 @@ public class CompanyGeneralDetaisViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("faxes")
     public String[] faxes;
+
     public CompanyGeneralDetaisViewModel withFaxes(String[] faxes) {
         this.faxes = faxes;
         return this;
@@ -76,6 +84,7 @@ public class CompanyGeneralDetaisViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phones")
     public String[] phones;
+
     public CompanyGeneralDetaisViewModel withPhones(String[] phones) {
         this.phones = phones;
         return this;
@@ -84,6 +93,7 @@ public class CompanyGeneralDetaisViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionDescription")
     public String regionDescription;
+
     public CompanyGeneralDetaisViewModel withRegionDescription(String regionDescription) {
         this.regionDescription = regionDescription;
         return this;
@@ -92,6 +102,7 @@ public class CompanyGeneralDetaisViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionId")
     public Long regionId;
+
     public CompanyGeneralDetaisViewModel withRegionId(Long regionId) {
         this.regionId = regionId;
         return this;
@@ -100,9 +111,11 @@ public class CompanyGeneralDetaisViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatReg")
     public String vatReg;
+
     public CompanyGeneralDetaisViewModel withVatReg(String vatReg) {
         this.vatReg = vatReg;
         return this;
     }
     
+    public CompanyGeneralDetaisViewModel(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostAssetsSkewnessRequestBody {
     @JsonProperty("assets")
     public PostAssetsSkewnessRequestBodyAssets[] assets;
+
     public PostAssetsSkewnessRequestBody withAssets(PostAssetsSkewnessRequestBodyAssets[] assets) {
         this.assets = assets;
         return this;
     }
     
+    public PostAssetsSkewnessRequestBody(@JsonProperty("assets") PostAssetsSkewnessRequestBodyAssets[] assets) {
+        this.assets = assets;
+  }
 }

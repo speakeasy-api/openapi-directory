@@ -18,6 +18,7 @@ public class ListPatchJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListPatchJobsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListPatchJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patchJobs")
     public PatchJob[] patchJobs;
+
     public ListPatchJobsResponse withPatchJobs(PatchJob[] patchJobs) {
         this.patchJobs = patchJobs;
         return this;
     }
     
+    public ListPatchJobsResponse(){}
 }

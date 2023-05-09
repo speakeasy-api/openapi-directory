@@ -15,6 +15,7 @@ public class GetResourcePoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GetResourcePoliciesResponseList")
     public GluePolicy[] getResourcePoliciesResponseList;
+
     public GetResourcePoliciesResponse withGetResourcePoliciesResponseList(GluePolicy[] getResourcePoliciesResponseList) {
         this.getResourcePoliciesResponseList = getResourcePoliciesResponseList;
         return this;
@@ -23,9 +24,11 @@ public class GetResourcePoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetResourcePoliciesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetResourcePoliciesResponse(){}
 }

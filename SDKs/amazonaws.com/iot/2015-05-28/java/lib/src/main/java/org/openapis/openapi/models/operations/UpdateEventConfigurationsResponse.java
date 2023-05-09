@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateEventConfigurationsResponse {
     
     public String contentType;
+
     public UpdateEventConfigurationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateEventConfigurationsResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateEventConfigurationsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateEventConfigurationsResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateEventConfigurationsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateEventConfigurationsResponse {
     
     
     public Integer statusCode;
+
     public UpdateEventConfigurationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateEventConfigurationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateEventConfigurationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateEventConfigurationsResponse {
      */
     
     public Object throttlingException;
+
     public UpdateEventConfigurationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,9 +70,14 @@ public class UpdateEventConfigurationsResponse {
      */
     
     public java.util.Map<String, Object> updateEventConfigurationsResponse;
+
     public UpdateEventConfigurationsResponse withUpdateEventConfigurationsResponse(java.util.Map<String, Object> updateEventConfigurationsResponse) {
         this.updateEventConfigurationsResponse = updateEventConfigurationsResponse;
         return this;
     }
     
+    public UpdateEventConfigurationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

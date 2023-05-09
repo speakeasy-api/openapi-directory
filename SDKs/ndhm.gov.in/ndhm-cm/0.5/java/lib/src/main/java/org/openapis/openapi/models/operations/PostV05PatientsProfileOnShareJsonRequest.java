@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05PatientsProfileOnShareJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05PatientsProfileOnShareJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05PatientsProfileOnShareJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,9 +21,14 @@ public class PostV05PatientsProfileOnShareJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ShareProfileResult shareProfileResult;
+
     public PostV05PatientsProfileOnShareJsonRequest withShareProfileResult(org.openapis.openapi.models.shared.ShareProfileResult shareProfileResult) {
         this.shareProfileResult = shareProfileResult;
         return this;
     }
     
+    public PostV05PatientsProfileOnShareJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("ShareProfileResult") org.openapis.openapi.models.shared.ShareProfileResult shareProfileResult) {
+        this.authorization = authorization;
+        this.shareProfileResult = shareProfileResult;
+  }
 }

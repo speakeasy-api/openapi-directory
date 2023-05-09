@@ -14,6 +14,7 @@ public class ListExportErrorsRequestBody {
      */
     @JsonProperty("exportID")
     public String exportID;
+
     public ListExportErrorsRequestBody withExportID(String exportID) {
         this.exportID = exportID;
         return this;
@@ -25,6 +26,7 @@ public class ListExportErrorsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListExportErrorsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class ListExportErrorsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListExportErrorsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListExportErrorsRequestBody(@JsonProperty("exportID") String exportID) {
+        this.exportID = exportID;
+  }
 }

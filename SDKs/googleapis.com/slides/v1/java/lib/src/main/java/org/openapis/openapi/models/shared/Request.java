@@ -18,6 +18,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createImage")
     public CreateImageRequest createImage;
+
     public Request withCreateImage(CreateImageRequest createImage) {
         this.createImage = createImage;
         return this;
@@ -29,6 +30,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createLine")
     public CreateLineRequest createLine;
+
     public Request withCreateLine(CreateLineRequest createLine) {
         this.createLine = createLine;
         return this;
@@ -40,6 +42,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createParagraphBullets")
     public CreateParagraphBulletsRequest createParagraphBullets;
+
     public Request withCreateParagraphBullets(CreateParagraphBulletsRequest createParagraphBullets) {
         this.createParagraphBullets = createParagraphBullets;
         return this;
@@ -51,6 +54,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createShape")
     public CreateShapeRequest createShape;
+
     public Request withCreateShape(CreateShapeRequest createShape) {
         this.createShape = createShape;
         return this;
@@ -62,6 +66,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createSheetsChart")
     public CreateSheetsChartRequest createSheetsChart;
+
     public Request withCreateSheetsChart(CreateSheetsChartRequest createSheetsChart) {
         this.createSheetsChart = createSheetsChart;
         return this;
@@ -73,6 +78,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createSlide")
     public CreateSlideRequest createSlide;
+
     public Request withCreateSlide(CreateSlideRequest createSlide) {
         this.createSlide = createSlide;
         return this;
@@ -84,6 +90,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTable")
     public CreateTableRequest createTable;
+
     public Request withCreateTable(CreateTableRequest createTable) {
         this.createTable = createTable;
         return this;
@@ -95,6 +102,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createVideo")
     public CreateVideoRequest createVideo;
+
     public Request withCreateVideo(CreateVideoRequest createVideo) {
         this.createVideo = createVideo;
         return this;
@@ -106,6 +114,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteObject")
     public DeleteObjectRequest deleteObject;
+
     public Request withDeleteObject(DeleteObjectRequest deleteObject) {
         this.deleteObject = deleteObject;
         return this;
@@ -117,6 +126,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteParagraphBullets")
     public DeleteParagraphBulletsRequest deleteParagraphBullets;
+
     public Request withDeleteParagraphBullets(DeleteParagraphBulletsRequest deleteParagraphBullets) {
         this.deleteParagraphBullets = deleteParagraphBullets;
         return this;
@@ -128,6 +138,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteTableColumn")
     public DeleteTableColumnRequest deleteTableColumn;
+
     public Request withDeleteTableColumn(DeleteTableColumnRequest deleteTableColumn) {
         this.deleteTableColumn = deleteTableColumn;
         return this;
@@ -139,6 +150,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteTableRow")
     public DeleteTableRowRequest deleteTableRow;
+
     public Request withDeleteTableRow(DeleteTableRowRequest deleteTableRow) {
         this.deleteTableRow = deleteTableRow;
         return this;
@@ -150,6 +162,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteText")
     public DeleteTextRequest deleteText;
+
     public Request withDeleteText(DeleteTextRequest deleteText) {
         this.deleteText = deleteText;
         return this;
@@ -161,6 +174,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duplicateObject")
     public DuplicateObjectRequest duplicateObject;
+
     public Request withDuplicateObject(DuplicateObjectRequest duplicateObject) {
         this.duplicateObject = duplicateObject;
         return this;
@@ -172,6 +186,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupObjects")
     public GroupObjectsRequest groupObjects;
+
     public Request withGroupObjects(GroupObjectsRequest groupObjects) {
         this.groupObjects = groupObjects;
         return this;
@@ -183,6 +198,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertTableColumns")
     public InsertTableColumnsRequest insertTableColumns;
+
     public Request withInsertTableColumns(InsertTableColumnsRequest insertTableColumns) {
         this.insertTableColumns = insertTableColumns;
         return this;
@@ -194,6 +210,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertTableRows")
     public InsertTableRowsRequest insertTableRows;
+
     public Request withInsertTableRows(InsertTableRowsRequest insertTableRows) {
         this.insertTableRows = insertTableRows;
         return this;
@@ -205,6 +222,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertText")
     public InsertTextRequest insertText;
+
     public Request withInsertText(InsertTextRequest insertText) {
         this.insertText = insertText;
         return this;
@@ -216,6 +234,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mergeTableCells")
     public MergeTableCellsRequest mergeTableCells;
+
     public Request withMergeTableCells(MergeTableCellsRequest mergeTableCells) {
         this.mergeTableCells = mergeTableCells;
         return this;
@@ -227,6 +246,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refreshSheetsChart")
     public RefreshSheetsChartRequest refreshSheetsChart;
+
     public Request withRefreshSheetsChart(RefreshSheetsChartRequest refreshSheetsChart) {
         this.refreshSheetsChart = refreshSheetsChart;
         return this;
@@ -238,6 +258,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replaceAllShapesWithImage")
     public ReplaceAllShapesWithImageRequest replaceAllShapesWithImage;
+
     public Request withReplaceAllShapesWithImage(ReplaceAllShapesWithImageRequest replaceAllShapesWithImage) {
         this.replaceAllShapesWithImage = replaceAllShapesWithImage;
         return this;
@@ -249,6 +270,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replaceAllShapesWithSheetsChart")
     public ReplaceAllShapesWithSheetsChartRequest replaceAllShapesWithSheetsChart;
+
     public Request withReplaceAllShapesWithSheetsChart(ReplaceAllShapesWithSheetsChartRequest replaceAllShapesWithSheetsChart) {
         this.replaceAllShapesWithSheetsChart = replaceAllShapesWithSheetsChart;
         return this;
@@ -260,6 +282,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replaceAllText")
     public ReplaceAllTextRequest replaceAllText;
+
     public Request withReplaceAllText(ReplaceAllTextRequest replaceAllText) {
         this.replaceAllText = replaceAllText;
         return this;
@@ -271,6 +294,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replaceImage")
     public ReplaceImageRequest replaceImage;
+
     public Request withReplaceImage(ReplaceImageRequest replaceImage) {
         this.replaceImage = replaceImage;
         return this;
@@ -282,6 +306,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rerouteLine")
     public RerouteLineRequest rerouteLine;
+
     public Request withRerouteLine(RerouteLineRequest rerouteLine) {
         this.rerouteLine = rerouteLine;
         return this;
@@ -293,6 +318,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ungroupObjects")
     public UngroupObjectsRequest ungroupObjects;
+
     public Request withUngroupObjects(UngroupObjectsRequest ungroupObjects) {
         this.ungroupObjects = ungroupObjects;
         return this;
@@ -304,6 +330,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unmergeTableCells")
     public UnmergeTableCellsRequest unmergeTableCells;
+
     public Request withUnmergeTableCells(UnmergeTableCellsRequest unmergeTableCells) {
         this.unmergeTableCells = unmergeTableCells;
         return this;
@@ -315,6 +342,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateImageProperties")
     public UpdateImagePropertiesRequest updateImageProperties;
+
     public Request withUpdateImageProperties(UpdateImagePropertiesRequest updateImageProperties) {
         this.updateImageProperties = updateImageProperties;
         return this;
@@ -326,6 +354,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateLineCategory")
     public UpdateLineCategoryRequest updateLineCategory;
+
     public Request withUpdateLineCategory(UpdateLineCategoryRequest updateLineCategory) {
         this.updateLineCategory = updateLineCategory;
         return this;
@@ -337,6 +366,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateLineProperties")
     public UpdateLinePropertiesRequest updateLineProperties;
+
     public Request withUpdateLineProperties(UpdateLinePropertiesRequest updateLineProperties) {
         this.updateLineProperties = updateLineProperties;
         return this;
@@ -348,6 +378,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatePageElementAltText")
     public UpdatePageElementAltTextRequest updatePageElementAltText;
+
     public Request withUpdatePageElementAltText(UpdatePageElementAltTextRequest updatePageElementAltText) {
         this.updatePageElementAltText = updatePageElementAltText;
         return this;
@@ -359,6 +390,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatePageElementTransform")
     public UpdatePageElementTransformRequest updatePageElementTransform;
+
     public Request withUpdatePageElementTransform(UpdatePageElementTransformRequest updatePageElementTransform) {
         this.updatePageElementTransform = updatePageElementTransform;
         return this;
@@ -370,6 +402,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatePageElementsZOrder")
     public UpdatePageElementsZOrderRequest updatePageElementsZOrder;
+
     public Request withUpdatePageElementsZOrder(UpdatePageElementsZOrderRequest updatePageElementsZOrder) {
         this.updatePageElementsZOrder = updatePageElementsZOrder;
         return this;
@@ -381,6 +414,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatePageProperties")
     public UpdatePagePropertiesRequest updatePageProperties;
+
     public Request withUpdatePageProperties(UpdatePagePropertiesRequest updatePageProperties) {
         this.updatePageProperties = updatePageProperties;
         return this;
@@ -392,6 +426,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateParagraphStyle")
     public UpdateParagraphStyleRequest updateParagraphStyle;
+
     public Request withUpdateParagraphStyle(UpdateParagraphStyleRequest updateParagraphStyle) {
         this.updateParagraphStyle = updateParagraphStyle;
         return this;
@@ -403,6 +438,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateShapeProperties")
     public UpdateShapePropertiesRequest updateShapeProperties;
+
     public Request withUpdateShapeProperties(UpdateShapePropertiesRequest updateShapeProperties) {
         this.updateShapeProperties = updateShapeProperties;
         return this;
@@ -414,6 +450,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateSlideProperties")
     public UpdateSlidePropertiesRequest updateSlideProperties;
+
     public Request withUpdateSlideProperties(UpdateSlidePropertiesRequest updateSlideProperties) {
         this.updateSlideProperties = updateSlideProperties;
         return this;
@@ -425,6 +462,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateSlidesPosition")
     public UpdateSlidesPositionRequest updateSlidesPosition;
+
     public Request withUpdateSlidesPosition(UpdateSlidesPositionRequest updateSlidesPosition) {
         this.updateSlidesPosition = updateSlidesPosition;
         return this;
@@ -436,6 +474,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTableBorderProperties")
     public UpdateTableBorderPropertiesRequest updateTableBorderProperties;
+
     public Request withUpdateTableBorderProperties(UpdateTableBorderPropertiesRequest updateTableBorderProperties) {
         this.updateTableBorderProperties = updateTableBorderProperties;
         return this;
@@ -447,6 +486,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTableCellProperties")
     public UpdateTableCellPropertiesRequest updateTableCellProperties;
+
     public Request withUpdateTableCellProperties(UpdateTableCellPropertiesRequest updateTableCellProperties) {
         this.updateTableCellProperties = updateTableCellProperties;
         return this;
@@ -458,6 +498,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTableColumnProperties")
     public UpdateTableColumnPropertiesRequest updateTableColumnProperties;
+
     public Request withUpdateTableColumnProperties(UpdateTableColumnPropertiesRequest updateTableColumnProperties) {
         this.updateTableColumnProperties = updateTableColumnProperties;
         return this;
@@ -469,6 +510,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTableRowProperties")
     public UpdateTableRowPropertiesRequest updateTableRowProperties;
+
     public Request withUpdateTableRowProperties(UpdateTableRowPropertiesRequest updateTableRowProperties) {
         this.updateTableRowProperties = updateTableRowProperties;
         return this;
@@ -480,6 +522,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTextStyle")
     public UpdateTextStyleRequest updateTextStyle;
+
     public Request withUpdateTextStyle(UpdateTextStyleRequest updateTextStyle) {
         this.updateTextStyle = updateTextStyle;
         return this;
@@ -491,9 +534,11 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateVideoProperties")
     public UpdateVideoPropertiesRequest updateVideoProperties;
+
     public Request withUpdateVideoProperties(UpdateVideoPropertiesRequest updateVideoProperties) {
         this.updateVideoProperties = updateVideoProperties;
         return this;
     }
     
+    public Request(){}
 }

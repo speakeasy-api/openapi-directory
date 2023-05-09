@@ -18,6 +18,7 @@ public class NamespacedGkeDeploymentTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterNamespace")
     public String clusterNamespace;
+
     public NamespacedGkeDeploymentTarget withClusterNamespace(String clusterNamespace) {
         this.clusterNamespace = clusterNamespace;
         return this;
@@ -29,9 +30,11 @@ public class NamespacedGkeDeploymentTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetGkeCluster")
     public String targetGkeCluster;
+
     public NamespacedGkeDeploymentTarget withTargetGkeCluster(String targetGkeCluster) {
         this.targetGkeCluster = targetGkeCluster;
         return this;
     }
     
+    public NamespacedGkeDeploymentTarget(){}
 }

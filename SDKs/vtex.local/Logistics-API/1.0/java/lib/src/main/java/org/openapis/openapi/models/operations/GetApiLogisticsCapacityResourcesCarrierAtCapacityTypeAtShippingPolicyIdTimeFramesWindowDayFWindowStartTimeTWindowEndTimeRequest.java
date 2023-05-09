@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest {
@@ -12,6 +13,7 @@ public class GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPoli
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPoli
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPoli
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=capacityType")
     public String capacityType;
+
     public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest withCapacityType(String capacityType) {
         this.capacityType = capacityType;
         return this;
@@ -42,6 +46,7 @@ public class GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPoli
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shippingPolicyId")
     public String shippingPolicyId;
+
     public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest withShippingPolicyId(String shippingPolicyId) {
         this.shippingPolicyId = shippingPolicyId;
         return this;
@@ -52,6 +57,7 @@ public class GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPoli
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=windowDay")
     public String windowDay;
+
     public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest withWindowDay(String windowDay) {
         this.windowDay = windowDay;
         return this;
@@ -62,6 +68,7 @@ public class GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPoli
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=windowEndTime")
     public String windowEndTime;
+
     public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest withWindowEndTime(String windowEndTime) {
         this.windowEndTime = windowEndTime;
         return this;
@@ -72,9 +79,19 @@ public class GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPoli
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=windowStartTime")
     public String windowStartTime;
+
     public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest withWindowStartTime(String windowStartTime) {
         this.windowStartTime = windowStartTime;
         return this;
     }
     
+    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("capacityType") String capacityType, @JsonProperty("shippingPolicyId") String shippingPolicyId, @JsonProperty("windowDay") String windowDay, @JsonProperty("windowEndTime") String windowEndTime, @JsonProperty("windowStartTime") String windowStartTime) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.capacityType = capacityType;
+        this.shippingPolicyId = shippingPolicyId;
+        this.windowDay = windowDay;
+        this.windowEndTime = windowEndTime;
+        this.windowStartTime = windowStartTime;
+  }
 }

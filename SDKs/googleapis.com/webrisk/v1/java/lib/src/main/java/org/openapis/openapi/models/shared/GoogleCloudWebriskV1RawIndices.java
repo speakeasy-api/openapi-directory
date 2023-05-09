@@ -18,9 +18,11 @@ public class GoogleCloudWebriskV1RawIndices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indices")
     public Integer[] indices;
+
     public GoogleCloudWebriskV1RawIndices withIndices(Integer[] indices) {
         this.indices = indices;
         return this;
     }
     
+    public GoogleCloudWebriskV1RawIndices(){}
 }

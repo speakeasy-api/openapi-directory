@@ -18,6 +18,7 @@ public class AppGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allocatedConnections")
     public AllocatedConnection[] allocatedConnections;
+
     public AppGateway withAllocatedConnections(AllocatedConnection[] allocatedConnections) {
         this.allocatedConnections = allocatedConnections;
         return this;
@@ -29,6 +30,7 @@ public class AppGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public AppGateway withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class AppGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public AppGateway withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class AppGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostType")
     public AppGatewayHostTypeEnum hostType;
+
     public AppGateway withHostType(AppGatewayHostTypeEnum hostType) {
         this.hostType = hostType;
         return this;
@@ -62,6 +66,7 @@ public class AppGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public AppGateway withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class AppGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AppGateway withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class AppGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public AppGatewayStateEnum state;
+
     public AppGateway withState(AppGatewayStateEnum state) {
         this.state = state;
         return this;
@@ -95,6 +102,7 @@ public class AppGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AppGatewayTypeEnum type;
+
     public AppGateway withType(AppGatewayTypeEnum type) {
         this.type = type;
         return this;
@@ -106,6 +114,7 @@ public class AppGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public AppGateway withUid(String uid) {
         this.uid = uid;
         return this;
@@ -117,6 +126,7 @@ public class AppGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public AppGateway withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -128,9 +138,11 @@ public class AppGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public AppGateway withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public AppGateway(){}
 }

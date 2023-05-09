@@ -15,6 +15,7 @@ public class GetDraftRegistrationsDraftIdDraftRegistrationRelationships {
      */
     
     public String branchedFrom;
+
     public GetDraftRegistrationsDraftIdDraftRegistrationRelationships withBranchedFrom(String branchedFrom) {
         this.branchedFrom = branchedFrom;
         return this;
@@ -25,6 +26,7 @@ public class GetDraftRegistrationsDraftIdDraftRegistrationRelationships {
      */
     
     public String initiator;
+
     public GetDraftRegistrationsDraftIdDraftRegistrationRelationships withInitiator(String initiator) {
         this.initiator = initiator;
         return this;
@@ -35,9 +37,11 @@ public class GetDraftRegistrationsDraftIdDraftRegistrationRelationships {
      */
     
     public String registrationSchema;
+
     public GetDraftRegistrationsDraftIdDraftRegistrationRelationships withRegistrationSchema(String registrationSchema) {
         this.registrationSchema = registrationSchema;
         return this;
     }
     
+    public GetDraftRegistrationsDraftIdDraftRegistrationRelationships(){}
 }

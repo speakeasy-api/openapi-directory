@@ -15,6 +15,7 @@ public class S3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bucket")
     public String bucket;
+
     public S3Location withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -23,6 +24,7 @@ public class S3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public S3Location withKey(String key) {
         this.key = key;
         return this;
@@ -31,6 +33,7 @@ public class S3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectVersion")
     public String objectVersion;
+
     public S3Location withObjectVersion(String objectVersion) {
         this.objectVersion = objectVersion;
         return this;
@@ -39,9 +42,11 @@ public class S3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public S3Location withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public S3Location(){}
 }

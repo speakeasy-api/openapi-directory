@@ -19,6 +19,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accepted_payment_methods")
     public InvoiceAcceptedPaymentMethods acceptedPaymentMethods;
+
     public Invoice withAcceptedPaymentMethods(InvoiceAcceptedPaymentMethods acceptedPaymentMethods) {
         this.acceptedPaymentMethods = acceptedPaymentMethods;
         return this;
@@ -30,6 +31,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public Invoice withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -48,6 +50,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public InvoiceCustomField[] customFields;
+
     public Invoice withCustomFields(InvoiceCustomField[] customFields) {
         this.customFields = customFields;
         return this;
@@ -56,6 +59,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delivery_method")
     public Object deliveryMethod;
+
     public Invoice withDeliveryMethod(Object deliveryMethod) {
         this.deliveryMethod = deliveryMethod;
         return this;
@@ -67,6 +71,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Invoice withDescription(String description) {
         this.description = description;
         return this;
@@ -78,6 +83,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Invoice withId(String id) {
         this.id = id;
         return this;
@@ -92,6 +98,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_number")
     public String invoiceNumber;
+
     public Invoice withInvoiceNumber(String invoiceNumber) {
         this.invoiceNumber = invoiceNumber;
         return this;
@@ -105,6 +112,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public Invoice withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -121,6 +129,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next_payment_amount_money")
     public Money nextPaymentAmountMoney;
+
     public Invoice withNextPaymentAmountMoney(Money nextPaymentAmountMoney) {
         this.nextPaymentAmountMoney = nextPaymentAmountMoney;
         return this;
@@ -136,6 +145,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     public String orderId;
+
     public Invoice withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -159,6 +169,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_requests")
     public InvoicePaymentRequest[] paymentRequests;
+
     public Invoice withPaymentRequests(InvoicePaymentRequest[] paymentRequests) {
         this.paymentRequests = paymentRequests;
         return this;
@@ -170,6 +181,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_recipient")
     public InvoiceRecipient primaryRecipient;
+
     public Invoice withPrimaryRecipient(InvoiceRecipient primaryRecipient) {
         this.primaryRecipient = primaryRecipient;
         return this;
@@ -183,6 +195,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_url")
     public String publicUrl;
+
     public Invoice withPublicUrl(String publicUrl) {
         this.publicUrl = publicUrl;
         return this;
@@ -198,6 +211,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduled_at")
     public String scheduledAt;
+
     public Invoice withScheduledAt(String scheduledAt) {
         this.scheduledAt = scheduledAt;
         return this;
@@ -209,6 +223,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Invoice withStatus(String status) {
         this.status = status;
         return this;
@@ -221,6 +236,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription_id")
     public String subscriptionId;
+
     public Invoice withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
@@ -238,6 +254,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public Invoice withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -249,6 +266,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Invoice withTitle(String title) {
         this.title = title;
         return this;
@@ -260,6 +278,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public Invoice withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -271,9 +290,11 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public Invoice withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public Invoice(){}
 }

@@ -52,12 +52,10 @@ public class CourseMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCourseMappingsOfferingIdExternalCourseIdResponse res = new org.openapis.openapi.models.operations.DeleteCourseMappingsOfferingIdExternalCourseIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteCourseMappingsOfferingIdExternalCourseIdResponse res = new org.openapis.openapi.models.operations.DeleteCourseMappingsOfferingIdExternalCourseIdResponse(contentType, httpRes.statusCode()) {{
             deleteCourseMappingsOfferingIdExternalCourseId200ApplicationJSONStrings = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,12 +97,10 @@ public class CourseMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCourseMappingsResponse res = new org.openapis.openapi.models.operations.GetCourseMappingsResponse() {{
+        org.openapis.openapi.models.operations.GetCourseMappingsResponse res = new org.openapis.openapi.models.operations.GetCourseMappingsResponse(contentType, httpRes.statusCode()) {{
             courseMappings = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,12 +143,10 @@ public class CourseMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCourseMappingsExternalcourseExternalCourseIdResponse res = new org.openapis.openapi.models.operations.GetCourseMappingsExternalcourseExternalCourseIdResponse() {{
+        org.openapis.openapi.models.operations.GetCourseMappingsExternalcourseExternalCourseIdResponse res = new org.openapis.openapi.models.operations.GetCourseMappingsExternalcourseExternalCourseIdResponse(contentType, httpRes.statusCode()) {{
             getCourseMappingsExternalcourseExternalCourseId200ApplicationJSONStrings = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,12 +189,10 @@ public class CourseMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCourseMappingsOfferingIdResponse res = new org.openapis.openapi.models.operations.GetCourseMappingsOfferingIdResponse() {{
+        org.openapis.openapi.models.operations.GetCourseMappingsOfferingIdResponse res = new org.openapis.openapi.models.operations.GetCourseMappingsOfferingIdResponse(contentType, httpRes.statusCode()) {{
             getCourseMappingsOfferingId200ApplicationJSONStrings = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,12 +235,10 @@ public class CourseMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutCourseMappingsOfferingIdExternalCourseIdResponse res = new org.openapis.openapi.models.operations.PutCourseMappingsOfferingIdExternalCourseIdResponse() {{
+        org.openapis.openapi.models.operations.PutCourseMappingsOfferingIdExternalCourseIdResponse res = new org.openapis.openapi.models.operations.PutCourseMappingsOfferingIdExternalCourseIdResponse(contentType, httpRes.statusCode()) {{
             putCourseMappingsOfferingIdExternalCourseId200ApplicationJSONStrings = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

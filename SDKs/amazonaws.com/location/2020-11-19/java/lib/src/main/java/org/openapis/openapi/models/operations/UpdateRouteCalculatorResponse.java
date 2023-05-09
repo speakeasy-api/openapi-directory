@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRouteCalculatorResponse {
@@ -12,6 +13,7 @@ public class UpdateRouteCalculatorResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateRouteCalculatorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateRouteCalculatorResponse {
     
     
     public String contentType;
+
     public UpdateRouteCalculatorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRouteCalculatorResponse {
      */
     
     public Object internalServerException;
+
     public UpdateRouteCalculatorResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateRouteCalculatorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateRouteCalculatorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateRouteCalculatorResponse {
     
     
     public Integer statusCode;
+
     public UpdateRouteCalculatorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateRouteCalculatorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRouteCalculatorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateRouteCalculatorResponse {
      */
     
     public Object throttlingException;
+
     public UpdateRouteCalculatorResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateRouteCalculatorResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateRouteCalculatorResponse updateRouteCalculatorResponse;
+
     public UpdateRouteCalculatorResponse withUpdateRouteCalculatorResponse(org.openapis.openapi.models.shared.UpdateRouteCalculatorResponse updateRouteCalculatorResponse) {
         this.updateRouteCalculatorResponse = updateRouteCalculatorResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateRouteCalculatorResponse {
      */
     
     public Object validationException;
+
     public UpdateRouteCalculatorResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateRouteCalculatorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

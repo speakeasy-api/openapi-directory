@@ -15,6 +15,7 @@ public class TwipcRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public TwipcRequestBodyCertificateParameters certificateParameters;
+
     public TwipcRequestBody withCertificateParameters(TwipcRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class TwipcRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public TwipcRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class TwipcRequestBody {
      */
     @JsonProperty("format")
     public TwipcRequestBodyFormatEnum format;
+
     public TwipcRequestBody withFormat(TwipcRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class TwipcRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public TwipcRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public TwipcRequestBody(@JsonProperty("format") TwipcRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

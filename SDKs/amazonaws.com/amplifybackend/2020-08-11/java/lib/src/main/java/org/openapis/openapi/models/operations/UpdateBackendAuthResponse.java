@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateBackendAuthResponse {
@@ -12,6 +13,7 @@ public class UpdateBackendAuthResponse {
      */
     
     public Object badRequestException;
+
     public UpdateBackendAuthResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateBackendAuthResponse {
     
     
     public String contentType;
+
     public UpdateBackendAuthResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateBackendAuthResponse {
      */
     
     public Object gatewayTimeoutException;
+
     public UpdateBackendAuthResponse withGatewayTimeoutException(Object gatewayTimeoutException) {
         this.gatewayTimeoutException = gatewayTimeoutException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateBackendAuthResponse {
      */
     
     public Object notFoundException;
+
     public UpdateBackendAuthResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateBackendAuthResponse {
     
     
     public Integer statusCode;
+
     public UpdateBackendAuthResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateBackendAuthResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateBackendAuthResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateBackendAuthResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateBackendAuthResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateBackendAuthResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateBackendAuthResponse updateBackendAuthResponse;
+
     public UpdateBackendAuthResponse withUpdateBackendAuthResponse(org.openapis.openapi.models.shared.UpdateBackendAuthResponse updateBackendAuthResponse) {
         this.updateBackendAuthResponse = updateBackendAuthResponse;
         return this;
     }
     
+    public UpdateBackendAuthResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

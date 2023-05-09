@@ -15,6 +15,7 @@ public class BucketBundle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleId")
     public String bundleId;
+
     public BucketBundle withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -23,6 +24,7 @@ public class BucketBundle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public BucketBundle withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -31,6 +33,7 @@ public class BucketBundle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BucketBundle withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class BucketBundle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Float price;
+
     public BucketBundle withPrice(Float price) {
         this.price = price;
         return this;
@@ -47,6 +51,7 @@ public class BucketBundle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storagePerMonthInGb")
     public Long storagePerMonthInGb;
+
     public BucketBundle withStoragePerMonthInGb(Long storagePerMonthInGb) {
         this.storagePerMonthInGb = storagePerMonthInGb;
         return this;
@@ -55,9 +60,11 @@ public class BucketBundle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferPerMonthInGb")
     public Long transferPerMonthInGb;
+
     public BucketBundle withTransferPerMonthInGb(Long transferPerMonthInGb) {
         this.transferPerMonthInGb = transferPerMonthInGb;
         return this;
     }
     
+    public BucketBundle(){}
 }

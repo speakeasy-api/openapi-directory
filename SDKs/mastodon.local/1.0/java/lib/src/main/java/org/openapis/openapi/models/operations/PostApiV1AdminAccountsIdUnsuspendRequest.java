@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV1AdminAccountsIdUnsuspendRequest {
@@ -12,9 +13,13 @@ public class PostApiV1AdminAccountsIdUnsuspendRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PostApiV1AdminAccountsIdUnsuspendRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PostApiV1AdminAccountsIdUnsuspendRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

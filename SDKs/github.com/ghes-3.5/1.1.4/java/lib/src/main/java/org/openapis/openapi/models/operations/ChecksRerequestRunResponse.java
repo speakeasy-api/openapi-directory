@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChecksRerequestRunResponse {
     
     public String contentType;
+
     public ChecksRerequestRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ChecksRerequestRunResponse {
     
     
     public Integer statusCode;
+
     public ChecksRerequestRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ChecksRerequestRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChecksRerequestRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ChecksRerequestRunResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ChecksRerequestRunResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class ChecksRerequestRunResponse {
      */
     
     public java.util.Map<String, Object> emptyObject;
+
     public ChecksRerequestRunResponse withEmptyObject(java.util.Map<String, Object> emptyObject) {
         this.emptyObject = emptyObject;
         return this;
     }
     
+    public ChecksRerequestRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

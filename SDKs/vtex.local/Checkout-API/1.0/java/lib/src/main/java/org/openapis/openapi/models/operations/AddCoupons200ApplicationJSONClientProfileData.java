@@ -18,6 +18,7 @@ public class AddCoupons200ApplicationJSONClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corporateDocument")
     public String corporateDocument;
+
     public AddCoupons200ApplicationJSONClientProfileData withCorporateDocument(String corporateDocument) {
         this.corporateDocument = corporateDocument;
         return this;
@@ -29,6 +30,7 @@ public class AddCoupons200ApplicationJSONClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corporateName")
     public String corporateName;
+
     public AddCoupons200ApplicationJSONClientProfileData withCorporateName(String corporateName) {
         this.corporateName = corporateName;
         return this;
@@ -40,6 +42,7 @@ public class AddCoupons200ApplicationJSONClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corporatePhone")
     public String corporatePhone;
+
     public AddCoupons200ApplicationJSONClientProfileData withCorporatePhone(String corporatePhone) {
         this.corporatePhone = corporatePhone;
         return this;
@@ -51,6 +54,7 @@ public class AddCoupons200ApplicationJSONClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerClass")
     public String customerClass;
+
     public AddCoupons200ApplicationJSONClientProfileData withCustomerClass(String customerClass) {
         this.customerClass = customerClass;
         return this;
@@ -62,6 +66,7 @@ public class AddCoupons200ApplicationJSONClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public String document;
+
     public AddCoupons200ApplicationJSONClientProfileData withDocument(String document) {
         this.document = document;
         return this;
@@ -73,6 +78,7 @@ public class AddCoupons200ApplicationJSONClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentType")
     public String documentType;
+
     public AddCoupons200ApplicationJSONClientProfileData withDocumentType(String documentType) {
         this.documentType = documentType;
         return this;
@@ -84,6 +90,7 @@ public class AddCoupons200ApplicationJSONClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public AddCoupons200ApplicationJSONClientProfileData withEmail(String email) {
         this.email = email;
         return this;
@@ -95,6 +102,7 @@ public class AddCoupons200ApplicationJSONClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public AddCoupons200ApplicationJSONClientProfileData withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -106,6 +114,7 @@ public class AddCoupons200ApplicationJSONClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCorporate")
     public Boolean isCorporate;
+
     public AddCoupons200ApplicationJSONClientProfileData withIsCorporate(Boolean isCorporate) {
         this.isCorporate = isCorporate;
         return this;
@@ -117,6 +126,7 @@ public class AddCoupons200ApplicationJSONClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public AddCoupons200ApplicationJSONClientProfileData withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -128,6 +138,7 @@ public class AddCoupons200ApplicationJSONClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public AddCoupons200ApplicationJSONClientProfileData withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -139,6 +150,7 @@ public class AddCoupons200ApplicationJSONClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileCompleteOnLoading")
     public Boolean profileCompleteOnLoading;
+
     public AddCoupons200ApplicationJSONClientProfileData withProfileCompleteOnLoading(Boolean profileCompleteOnLoading) {
         this.profileCompleteOnLoading = profileCompleteOnLoading;
         return this;
@@ -150,6 +162,7 @@ public class AddCoupons200ApplicationJSONClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileErrorOnLoading")
     public Boolean profileErrorOnLoading;
+
     public AddCoupons200ApplicationJSONClientProfileData withProfileErrorOnLoading(Boolean profileErrorOnLoading) {
         this.profileErrorOnLoading = profileErrorOnLoading;
         return this;
@@ -161,6 +174,7 @@ public class AddCoupons200ApplicationJSONClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateInscription")
     public String stateInscription;
+
     public AddCoupons200ApplicationJSONClientProfileData withStateInscription(String stateInscription) {
         this.stateInscription = stateInscription;
         return this;
@@ -172,9 +186,11 @@ public class AddCoupons200ApplicationJSONClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tradeName")
     public String tradeName;
+
     public AddCoupons200ApplicationJSONClientProfileData withTradeName(String tradeName) {
         this.tradeName = tradeName;
         return this;
     }
     
+    public AddCoupons200ApplicationJSONClientProfileData(){}
 }

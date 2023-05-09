@@ -18,9 +18,11 @@ public class FirstAndThirdPartyAudienceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public FirstAndThirdPartyAudienceTargetingSetting[] settings;
+
     public FirstAndThirdPartyAudienceGroup withSettings(FirstAndThirdPartyAudienceTargetingSetting[] settings) {
         this.settings = settings;
         return this;
     }
     
+    public FirstAndThirdPartyAudienceGroup(){}
 }

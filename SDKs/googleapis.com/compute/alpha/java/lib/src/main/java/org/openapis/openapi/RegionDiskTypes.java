@@ -58,11 +58,9 @@ public class RegionDiskTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionDiskTypesGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionDiskTypesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionDiskTypesGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionDiskTypesGetResponse(contentType, httpRes.statusCode()) {{
             diskType = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class RegionDiskTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionDiskTypesListResponse res = new org.openapis.openapi.models.operations.ComputeRegionDiskTypesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionDiskTypesListResponse res = new org.openapis.openapi.models.operations.ComputeRegionDiskTypesListResponse(contentType, httpRes.statusCode()) {{
             regionDiskTypeList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

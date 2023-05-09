@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSubtaskForTaskResponse {
     
     public String contentType;
+
     public CreateSubtaskForTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateSubtaskForTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public CreateSubtaskForTaskResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class CreateSubtaskForTaskResponse {
     
     
     public Integer statusCode;
+
     public CreateSubtaskForTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateSubtaskForTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSubtaskForTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class CreateSubtaskForTaskResponse {
      */
     
     public CreateSubtaskForTask201ApplicationJSON createSubtaskForTask201ApplicationJSONObject;
+
     public CreateSubtaskForTaskResponse withCreateSubtaskForTask201ApplicationJSONObject(CreateSubtaskForTask201ApplicationJSON createSubtaskForTask201ApplicationJSONObject) {
         this.createSubtaskForTask201ApplicationJSONObject = createSubtaskForTask201ApplicationJSONObject;
         return this;
     }
     
+    public CreateSubtaskForTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

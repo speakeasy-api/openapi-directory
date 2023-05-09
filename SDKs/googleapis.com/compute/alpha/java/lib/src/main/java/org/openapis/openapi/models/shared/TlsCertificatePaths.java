@@ -18,6 +18,7 @@ public class TlsCertificatePaths {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificatePath")
     public String certificatePath;
+
     public TlsCertificatePaths withCertificatePath(String certificatePath) {
         this.certificatePath = certificatePath;
         return this;
@@ -29,9 +30,11 @@ public class TlsCertificatePaths {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateKeyPath")
     public String privateKeyPath;
+
     public TlsCertificatePaths withPrivateKeyPath(String privateKeyPath) {
         this.privateKeyPath = privateKeyPath;
         return this;
     }
     
+    public TlsCertificatePaths(){}
 }

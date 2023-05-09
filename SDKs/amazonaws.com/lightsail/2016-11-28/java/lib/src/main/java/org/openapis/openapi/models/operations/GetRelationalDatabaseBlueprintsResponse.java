@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRelationalDatabaseBlueprintsResponse {
@@ -12,6 +13,7 @@ public class GetRelationalDatabaseBlueprintsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetRelationalDatabaseBlueprintsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetRelationalDatabaseBlueprintsResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetRelationalDatabaseBlueprintsResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetRelationalDatabaseBlueprintsResponse {
     
     
     public String contentType;
+
     public GetRelationalDatabaseBlueprintsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetRelationalDatabaseBlueprintsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRelationalDatabaseBlueprintsResult getRelationalDatabaseBlueprintsResult;
+
     public GetRelationalDatabaseBlueprintsResponse withGetRelationalDatabaseBlueprintsResult(org.openapis.openapi.models.shared.GetRelationalDatabaseBlueprintsResult getRelationalDatabaseBlueprintsResult) {
         this.getRelationalDatabaseBlueprintsResult = getRelationalDatabaseBlueprintsResult;
         return this;
@@ -49,6 +54,7 @@ public class GetRelationalDatabaseBlueprintsResponse {
      */
     
     public Object invalidInputException;
+
     public GetRelationalDatabaseBlueprintsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetRelationalDatabaseBlueprintsResponse {
      */
     
     public Object notFoundException;
+
     public GetRelationalDatabaseBlueprintsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetRelationalDatabaseBlueprintsResponse {
      */
     
     public Object operationFailureException;
+
     public GetRelationalDatabaseBlueprintsResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetRelationalDatabaseBlueprintsResponse {
      */
     
     public Object serviceException;
+
     public GetRelationalDatabaseBlueprintsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetRelationalDatabaseBlueprintsResponse {
     
     
     public Integer statusCode;
+
     public GetRelationalDatabaseBlueprintsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetRelationalDatabaseBlueprintsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRelationalDatabaseBlueprintsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetRelationalDatabaseBlueprintsResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetRelationalDatabaseBlueprintsResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetRelationalDatabaseBlueprintsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

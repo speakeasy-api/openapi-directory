@@ -15,9 +15,13 @@ public class CollectionUpdateRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public CollectionUpdateRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CollectionUpdateRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

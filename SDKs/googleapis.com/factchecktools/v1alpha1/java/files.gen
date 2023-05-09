@@ -60,4 +60,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleFactcheckingFactcheck
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleFactcheckingFactchecktoolsV1alpha1ClaimAuthor.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewAuthor.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleFactcheckingFactchecktoolsV1alpha1ListClaimReviewMarkupPagesResponse.java
+docs/sdk/README.md
+docs/claims/README.md
+docs/pages/README.md
 USAGE.md

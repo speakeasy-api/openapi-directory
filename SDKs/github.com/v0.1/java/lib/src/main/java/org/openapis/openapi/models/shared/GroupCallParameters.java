@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class GroupCallParameters {
      */
     @SpeakeasyMetadata("form:name=AnswerUrl")
     public String answerUrl;
+
     public GroupCallParameters withAnswerUrl(String answerUrl) {
         this.answerUrl = answerUrl;
         return this;
@@ -25,6 +27,7 @@ public class GroupCallParameters {
      */
     @SpeakeasyMetadata("form:name=CallerName")
     public String callerName;
+
     public GroupCallParameters withCallerName(String callerName) {
         this.callerName = callerName;
         return this;
@@ -35,6 +38,7 @@ public class GroupCallParameters {
      */
     @SpeakeasyMetadata("form:name=ConfirmKey")
     public String confirmKey;
+
     public GroupCallParameters withConfirmKey(String confirmKey) {
         this.confirmKey = confirmKey;
         return this;
@@ -45,6 +49,7 @@ public class GroupCallParameters {
      */
     @SpeakeasyMetadata("form:name=ConfirmSound")
     public String confirmSound;
+
     public GroupCallParameters withConfirmSound(String confirmSound) {
         this.confirmSound = confirmSound;
         return this;
@@ -55,6 +60,7 @@ public class GroupCallParameters {
      */
     @SpeakeasyMetadata("form:name=CoreUUID")
     public String coreUUID;
+
     public GroupCallParameters withCoreUUID(String coreUUID) {
         this.coreUUID = coreUUID;
         return this;
@@ -65,6 +71,7 @@ public class GroupCallParameters {
      */
     @SpeakeasyMetadata("form:name=Delimiter")
     public String delimiter;
+
     public GroupCallParameters withDelimiter(String delimiter) {
         this.delimiter = delimiter;
         return this;
@@ -75,6 +82,7 @@ public class GroupCallParameters {
      */
     @SpeakeasyMetadata("form:name=ExtraDialString")
     public String extraDialString;
+
     public GroupCallParameters withExtraDialString(String extraDialString) {
         this.extraDialString = extraDialString;
         return this;
@@ -85,6 +93,7 @@ public class GroupCallParameters {
      */
     @SpeakeasyMetadata("form:name=From")
     public String from;
+
     public GroupCallParameters withFrom(String from) {
         this.from = from;
         return this;
@@ -95,6 +104,7 @@ public class GroupCallParameters {
      */
     @SpeakeasyMetadata("form:name=GatewayCodecs")
     public String gatewayCodecs;
+
     public GroupCallParameters withGatewayCodecs(String gatewayCodecs) {
         this.gatewayCodecs = gatewayCodecs;
         return this;
@@ -105,6 +115,7 @@ public class GroupCallParameters {
      */
     @SpeakeasyMetadata("form:name=GatewayRetries")
     public String gatewayRetries;
+
     public GroupCallParameters withGatewayRetries(String gatewayRetries) {
         this.gatewayRetries = gatewayRetries;
         return this;
@@ -115,6 +126,7 @@ public class GroupCallParameters {
      */
     @SpeakeasyMetadata("form:name=GatewayTimeouts")
     public String gatewayTimeouts;
+
     public GroupCallParameters withGatewayTimeouts(String gatewayTimeouts) {
         this.gatewayTimeouts = gatewayTimeouts;
         return this;
@@ -125,6 +137,7 @@ public class GroupCallParameters {
      */
     @SpeakeasyMetadata("form:name=Gateways")
     public String gateways;
+
     public GroupCallParameters withGateways(String gateways) {
         this.gateways = gateways;
         return this;
@@ -135,6 +148,7 @@ public class GroupCallParameters {
      */
     @SpeakeasyMetadata("form:name=HangupOnRing")
     public Long hangupOnRing;
+
     public GroupCallParameters withHangupOnRing(Long hangupOnRing) {
         this.hangupOnRing = hangupOnRing;
         return this;
@@ -145,6 +159,7 @@ public class GroupCallParameters {
      */
     @SpeakeasyMetadata("form:name=HangupUrl")
     public String hangupUrl;
+
     public GroupCallParameters withHangupUrl(String hangupUrl) {
         this.hangupUrl = hangupUrl;
         return this;
@@ -155,6 +170,7 @@ public class GroupCallParameters {
      */
     @SpeakeasyMetadata("form:name=RejectCauses")
     public String rejectCauses;
+
     public GroupCallParameters withRejectCauses(String rejectCauses) {
         this.rejectCauses = rejectCauses;
         return this;
@@ -165,6 +181,7 @@ public class GroupCallParameters {
      */
     @SpeakeasyMetadata("form:name=RingUrl")
     public String ringUrl;
+
     public GroupCallParameters withRingUrl(String ringUrl) {
         this.ringUrl = ringUrl;
         return this;
@@ -175,6 +192,7 @@ public class GroupCallParameters {
      */
     @SpeakeasyMetadata("form:name=SendDigits")
     public String sendDigits;
+
     public GroupCallParameters withSendDigits(String sendDigits) {
         this.sendDigits = sendDigits;
         return this;
@@ -185,6 +203,7 @@ public class GroupCallParameters {
      */
     @SpeakeasyMetadata("form:name=SendOnPreanswer")
     public Boolean sendOnPreanswer;
+
     public GroupCallParameters withSendOnPreanswer(Boolean sendOnPreanswer) {
         this.sendOnPreanswer = sendOnPreanswer;
         return this;
@@ -195,6 +214,7 @@ public class GroupCallParameters {
      */
     @SpeakeasyMetadata("form:name=TimeLimit")
     public Long timeLimit;
+
     public GroupCallParameters withTimeLimit(Long timeLimit) {
         this.timeLimit = timeLimit;
         return this;
@@ -205,9 +225,17 @@ public class GroupCallParameters {
      */
     @SpeakeasyMetadata("form:name=To")
     public String to;
+
     public GroupCallParameters withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public GroupCallParameters(@JsonProperty("AnswerUrl") String answerUrl, @JsonProperty("Delimiter") String delimiter, @JsonProperty("From") String from, @JsonProperty("Gateways") String gateways, @JsonProperty("To") String to) {
+        this.answerUrl = answerUrl;
+        this.delimiter = delimiter;
+        this.from = from;
+        this.gateways = gateways;
+        this.to = to;
+  }
 }

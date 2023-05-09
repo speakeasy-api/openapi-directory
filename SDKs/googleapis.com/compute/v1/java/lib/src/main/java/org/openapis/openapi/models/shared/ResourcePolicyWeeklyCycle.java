@@ -18,9 +18,11 @@ public class ResourcePolicyWeeklyCycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfWeeks")
     public ResourcePolicyWeeklyCycleDayOfWeek[] dayOfWeeks;
+
     public ResourcePolicyWeeklyCycle withDayOfWeeks(ResourcePolicyWeeklyCycleDayOfWeek[] dayOfWeeks) {
         this.dayOfWeeks = dayOfWeeks;
         return this;
     }
     
+    public ResourcePolicyWeeklyCycle(){}
 }

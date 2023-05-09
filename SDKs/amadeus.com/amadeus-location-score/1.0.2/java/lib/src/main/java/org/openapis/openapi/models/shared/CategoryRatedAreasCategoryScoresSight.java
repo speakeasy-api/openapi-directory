@@ -18,6 +18,7 @@ public class CategoryRatedAreasCategoryScoresSight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beachAndPark")
     public Long beachAndPark;
+
     public CategoryRatedAreasCategoryScoresSight withBeachAndPark(Long beachAndPark) {
         this.beachAndPark = beachAndPark;
         return this;
@@ -29,6 +30,7 @@ public class CategoryRatedAreasCategoryScoresSight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("historical")
     public Long historical;
+
     public CategoryRatedAreasCategoryScoresSight withHistorical(Long historical) {
         this.historical = historical;
         return this;
@@ -40,9 +42,11 @@ public class CategoryRatedAreasCategoryScoresSight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overall")
     public Long overall;
+
     public CategoryRatedAreasCategoryScoresSight withOverall(Long overall) {
         this.overall = overall;
         return this;
     }
     
+    public CategoryRatedAreasCategoryScoresSight(){}
 }

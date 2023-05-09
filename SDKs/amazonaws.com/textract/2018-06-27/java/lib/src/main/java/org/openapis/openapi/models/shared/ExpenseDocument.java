@@ -15,6 +15,7 @@ public class ExpenseDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Blocks")
     public Block[] blocks;
+
     public ExpenseDocument withBlocks(Block[] blocks) {
         this.blocks = blocks;
         return this;
@@ -23,6 +24,7 @@ public class ExpenseDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpenseIndex")
     public Long expenseIndex;
+
     public ExpenseDocument withExpenseIndex(Long expenseIndex) {
         this.expenseIndex = expenseIndex;
         return this;
@@ -31,6 +33,7 @@ public class ExpenseDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineItemGroups")
     public LineItemGroup[] lineItemGroups;
+
     public ExpenseDocument withLineItemGroups(LineItemGroup[] lineItemGroups) {
         this.lineItemGroups = lineItemGroups;
         return this;
@@ -39,9 +42,11 @@ public class ExpenseDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SummaryFields")
     public ExpenseField[] summaryFields;
+
     public ExpenseDocument withSummaryFields(ExpenseField[] summaryFields) {
         this.summaryFields = summaryFields;
         return this;
     }
     
+    public ExpenseDocument(){}
 }

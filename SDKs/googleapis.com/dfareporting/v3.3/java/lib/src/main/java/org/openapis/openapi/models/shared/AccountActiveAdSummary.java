@@ -18,6 +18,7 @@ public class AccountActiveAdSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public AccountActiveAdSummary withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class AccountActiveAdSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeAds")
     public String activeAds;
+
     public AccountActiveAdSummary withActiveAds(String activeAds) {
         this.activeAds = activeAds;
         return this;
@@ -40,6 +42,7 @@ public class AccountActiveAdSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeAdsLimitTier")
     public AccountActiveAdSummaryActiveAdsLimitTierEnum activeAdsLimitTier;
+
     public AccountActiveAdSummary withActiveAdsLimitTier(AccountActiveAdSummaryActiveAdsLimitTierEnum activeAdsLimitTier) {
         this.activeAdsLimitTier = activeAdsLimitTier;
         return this;
@@ -51,6 +54,7 @@ public class AccountActiveAdSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableAds")
     public String availableAds;
+
     public AccountActiveAdSummary withAvailableAds(String availableAds) {
         this.availableAds = availableAds;
         return this;
@@ -62,9 +66,11 @@ public class AccountActiveAdSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccountActiveAdSummary withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public AccountActiveAdSummary(){}
 }

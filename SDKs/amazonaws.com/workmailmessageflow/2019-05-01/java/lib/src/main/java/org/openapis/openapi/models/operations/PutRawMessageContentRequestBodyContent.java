@@ -15,9 +15,11 @@ public class PutRawMessageContentRequestBodyContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Reference")
     public org.openapis.openapi.models.shared.S3Reference s3Reference;
+
     public PutRawMessageContentRequestBodyContent withS3Reference(org.openapis.openapi.models.shared.S3Reference s3Reference) {
         this.s3Reference = s3Reference;
         return this;
     }
     
+    public PutRawMessageContentRequestBodyContent(){}
 }

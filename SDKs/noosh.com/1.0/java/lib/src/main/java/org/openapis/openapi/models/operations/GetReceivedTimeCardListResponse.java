@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetReceivedTimeCardListResponse {
     
     public byte[] body;
+
     public GetReceivedTimeCardListResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetReceivedTimeCardListResponse {
     
     
     public String contentType;
+
     public GetReceivedTimeCardListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetReceivedTimeCardListResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetReceivedTimeCardListResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -33,6 +37,7 @@ public class GetReceivedTimeCardListResponse {
     
     
     public Integer statusCode;
+
     public GetReceivedTimeCardListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetReceivedTimeCardListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetReceivedTimeCardListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetReceivedTimeCardListResponse {
      */
     
     public org.openapis.openapi.models.shared.TimeCardListVO timeCardListVO;
+
     public GetReceivedTimeCardListResponse withTimeCardListVO(org.openapis.openapi.models.shared.TimeCardListVO timeCardListVO) {
         this.timeCardListVO = timeCardListVO;
         return this;
     }
     
+    public GetReceivedTimeCardListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

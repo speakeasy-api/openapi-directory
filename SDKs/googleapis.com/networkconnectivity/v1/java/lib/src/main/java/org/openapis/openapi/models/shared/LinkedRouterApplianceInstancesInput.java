@@ -18,6 +18,7 @@ public class LinkedRouterApplianceInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public RouterApplianceInstance[] instances;
+
     public LinkedRouterApplianceInstancesInput withInstances(RouterApplianceInstance[] instances) {
         this.instances = instances;
         return this;
@@ -29,9 +30,11 @@ public class LinkedRouterApplianceInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("siteToSiteDataTransfer")
     public Boolean siteToSiteDataTransfer;
+
     public LinkedRouterApplianceInstancesInput withSiteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
         this.siteToSiteDataTransfer = siteToSiteDataTransfer;
         return this;
     }
     
+    public LinkedRouterApplianceInstancesInput(){}
 }

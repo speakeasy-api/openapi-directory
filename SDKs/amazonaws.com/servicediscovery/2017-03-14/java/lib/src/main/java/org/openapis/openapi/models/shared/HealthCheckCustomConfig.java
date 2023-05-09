@@ -15,9 +15,11 @@ public class HealthCheckCustomConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureThreshold")
     public Long failureThreshold;
+
     public HealthCheckCustomConfig withFailureThreshold(Long failureThreshold) {
         this.failureThreshold = failureThreshold;
         return this;
     }
     
+    public HealthCheckCustomConfig(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RedshiftSource {
     @JsonProperty("Database")
     public String database;
+
     public RedshiftSource withDatabase(String database) {
         this.database = database;
         return this;
@@ -21,6 +22,7 @@ public class RedshiftSource {
     
     @JsonProperty("Name")
     public String name;
+
     public RedshiftSource withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +31,7 @@ public class RedshiftSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedshiftTmpDir")
     public String redshiftTmpDir;
+
     public RedshiftSource withRedshiftTmpDir(String redshiftTmpDir) {
         this.redshiftTmpDir = redshiftTmpDir;
         return this;
@@ -36,6 +39,7 @@ public class RedshiftSource {
     
     @JsonProperty("Table")
     public String table;
+
     public RedshiftSource withTable(String table) {
         this.table = table;
         return this;
@@ -44,9 +48,15 @@ public class RedshiftSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TmpDirIAMRole")
     public String tmpDirIAMRole;
+
     public RedshiftSource withTmpDirIAMRole(String tmpDirIAMRole) {
         this.tmpDirIAMRole = tmpDirIAMRole;
         return this;
     }
     
+    public RedshiftSource(@JsonProperty("Database") String database, @JsonProperty("Name") String name, @JsonProperty("Table") String table) {
+        this.database = database;
+        this.name = name;
+        this.table = table;
+  }
 }

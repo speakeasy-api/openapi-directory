@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PricebycontextRequest {
@@ -12,6 +13,7 @@ public class PricebycontextRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public PricebycontextRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class PricebycontextRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public PricebycontextRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PricebycontextRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PricebycontextRequest pricebycontextRequest;
+
     public PricebycontextRequest withPricebycontextRequest(org.openapis.openapi.models.shared.PricebycontextRequest pricebycontextRequest) {
         this.pricebycontextRequest = pricebycontextRequest;
         return this;
@@ -36,9 +40,16 @@ public class PricebycontextRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=an")
     public String an;
+
     public PricebycontextRequest withAn(String an) {
         this.an = an;
         return this;
     }
     
+    public PricebycontextRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("PricebycontextRequest") org.openapis.openapi.models.shared.PricebycontextRequest pricebycontextRequest, @JsonProperty("an") String an) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.pricebycontextRequest = pricebycontextRequest;
+        this.an = an;
+  }
 }

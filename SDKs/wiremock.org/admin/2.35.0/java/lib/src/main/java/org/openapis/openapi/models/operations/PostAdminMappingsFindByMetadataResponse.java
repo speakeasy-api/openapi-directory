@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostAdminMappingsFindByMetadataResponse {
     
     public String contentType;
+
     public PostAdminMappingsFindByMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostAdminMappingsFindByMetadataResponse {
     
     
     public Integer statusCode;
+
     public PostAdminMappingsFindByMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostAdminMappingsFindByMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostAdminMappingsFindByMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostAdminMappingsFindByMetadataResponse {
      */
     
     public PostAdminMappingsFindByMetadata200ApplicationJSON postAdminMappingsFindByMetadata200ApplicationJSONObject;
+
     public PostAdminMappingsFindByMetadataResponse withPostAdminMappingsFindByMetadata200ApplicationJSONObject(PostAdminMappingsFindByMetadata200ApplicationJSON postAdminMappingsFindByMetadata200ApplicationJSONObject) {
         this.postAdminMappingsFindByMetadata200ApplicationJSONObject = postAdminMappingsFindByMetadata200ApplicationJSONObject;
         return this;
     }
     
+    public PostAdminMappingsFindByMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

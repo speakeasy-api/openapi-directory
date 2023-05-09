@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppsResetTokenResponse {
     
     public String contentType;
+
     public AppsResetTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppsResetTokenResponse {
     
     
     public Integer statusCode;
+
     public AppsResetTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AppsResetTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppsResetTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AppsResetTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.Authorization authorization;
+
     public AppsResetTokenResponse withAuthorization(org.openapis.openapi.models.shared.Authorization authorization) {
         this.authorization = authorization;
         return this;
@@ -43,9 +48,14 @@ public class AppsResetTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public AppsResetTokenResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public AppsResetTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

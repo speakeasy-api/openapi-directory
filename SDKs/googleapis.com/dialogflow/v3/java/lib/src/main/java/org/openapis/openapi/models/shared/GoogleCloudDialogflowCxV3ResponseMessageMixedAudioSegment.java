@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowPlaybackInterruption")
     public Boolean allowPlaybackInterruption;
+
     public GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment withAllowPlaybackInterruption(Boolean allowPlaybackInterruption) {
         this.allowPlaybackInterruption = allowPlaybackInterruption;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audio")
     public String audio;
+
     public GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment withAudio(String audio) {
         this.audio = audio;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment(){}
 }

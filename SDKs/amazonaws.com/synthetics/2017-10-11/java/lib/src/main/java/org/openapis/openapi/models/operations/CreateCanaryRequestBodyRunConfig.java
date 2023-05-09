@@ -15,6 +15,7 @@ public class CreateCanaryRequestBodyRunConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveTracing")
     public Boolean activeTracing;
+
     public CreateCanaryRequestBodyRunConfig withActiveTracing(Boolean activeTracing) {
         this.activeTracing = activeTracing;
         return this;
@@ -23,6 +24,7 @@ public class CreateCanaryRequestBodyRunConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnvironmentVariables")
     public java.util.Map<String, String> environmentVariables;
+
     public CreateCanaryRequestBodyRunConfig withEnvironmentVariables(java.util.Map<String, String> environmentVariables) {
         this.environmentVariables = environmentVariables;
         return this;
@@ -31,6 +33,7 @@ public class CreateCanaryRequestBodyRunConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemoryInMB")
     public Long memoryInMB;
+
     public CreateCanaryRequestBodyRunConfig withMemoryInMB(Long memoryInMB) {
         this.memoryInMB = memoryInMB;
         return this;
@@ -39,9 +42,11 @@ public class CreateCanaryRequestBodyRunConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeoutInSeconds")
     public Long timeoutInSeconds;
+
     public CreateCanaryRequestBodyRunConfig withTimeoutInSeconds(Long timeoutInSeconds) {
         this.timeoutInSeconds = timeoutInSeconds;
         return this;
     }
     
+    public CreateCanaryRequestBodyRunConfig(){}
 }

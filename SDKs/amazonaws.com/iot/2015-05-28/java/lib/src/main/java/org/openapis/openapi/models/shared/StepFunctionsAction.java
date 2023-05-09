@@ -15,6 +15,7 @@ public class StepFunctionsAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionNamePrefix")
     public String executionNamePrefix;
+
     public StepFunctionsAction withExecutionNamePrefix(String executionNamePrefix) {
         this.executionNamePrefix = executionNamePrefix;
         return this;
@@ -22,6 +23,7 @@ public class StepFunctionsAction {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public StepFunctionsAction withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -29,9 +31,14 @@ public class StepFunctionsAction {
     
     @JsonProperty("stateMachineName")
     public String stateMachineName;
+
     public StepFunctionsAction withStateMachineName(String stateMachineName) {
         this.stateMachineName = stateMachineName;
         return this;
     }
     
+    public StepFunctionsAction(@JsonProperty("roleArn") String roleArn, @JsonProperty("stateMachineName") String stateMachineName) {
+        this.roleArn = roleArn;
+        this.stateMachineName = stateMachineName;
+  }
 }

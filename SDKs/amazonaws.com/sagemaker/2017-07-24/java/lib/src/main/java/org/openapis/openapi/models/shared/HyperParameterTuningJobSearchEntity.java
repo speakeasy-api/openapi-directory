@@ -23,6 +23,7 @@ public class HyperParameterTuningJobSearchEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BestTrainingJob")
     public HyperParameterTrainingJobSummary bestTrainingJob;
+
     public HyperParameterTuningJobSearchEntity withBestTrainingJob(HyperParameterTrainingJobSummary bestTrainingJob) {
         this.bestTrainingJob = bestTrainingJob;
         return this;
@@ -31,6 +32,7 @@ public class HyperParameterTuningJobSearchEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedResources")
     public HyperParameterTuningJobConsumedResources consumedResources;
+
     public HyperParameterTuningJobSearchEntity withConsumedResources(HyperParameterTuningJobConsumedResources consumedResources) {
         this.consumedResources = consumedResources;
         return this;
@@ -41,6 +43,7 @@ public class HyperParameterTuningJobSearchEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public HyperParameterTuningJobSearchEntity withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -49,6 +52,7 @@ public class HyperParameterTuningJobSearchEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public HyperParameterTuningJobSearchEntity withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -59,6 +63,7 @@ public class HyperParameterTuningJobSearchEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("HyperParameterTuningEndTime")
     public OffsetDateTime hyperParameterTuningEndTime;
+
     public HyperParameterTuningJobSearchEntity withHyperParameterTuningEndTime(OffsetDateTime hyperParameterTuningEndTime) {
         this.hyperParameterTuningEndTime = hyperParameterTuningEndTime;
         return this;
@@ -67,6 +72,7 @@ public class HyperParameterTuningJobSearchEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HyperParameterTuningJobArn")
     public String hyperParameterTuningJobArn;
+
     public HyperParameterTuningJobSearchEntity withHyperParameterTuningJobArn(String hyperParameterTuningJobArn) {
         this.hyperParameterTuningJobArn = hyperParameterTuningJobArn;
         return this;
@@ -78,6 +84,7 @@ public class HyperParameterTuningJobSearchEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HyperParameterTuningJobConfig")
     public HyperParameterTuningJobConfig hyperParameterTuningJobConfig;
+
     public HyperParameterTuningJobSearchEntity withHyperParameterTuningJobConfig(HyperParameterTuningJobConfig hyperParameterTuningJobConfig) {
         this.hyperParameterTuningJobConfig = hyperParameterTuningJobConfig;
         return this;
@@ -86,6 +93,7 @@ public class HyperParameterTuningJobSearchEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HyperParameterTuningJobName")
     public String hyperParameterTuningJobName;
+
     public HyperParameterTuningJobSearchEntity withHyperParameterTuningJobName(String hyperParameterTuningJobName) {
         this.hyperParameterTuningJobName = hyperParameterTuningJobName;
         return this;
@@ -94,6 +102,7 @@ public class HyperParameterTuningJobSearchEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HyperParameterTuningJobStatus")
     public HyperParameterTuningJobStatusEnum hyperParameterTuningJobStatus;
+
     public HyperParameterTuningJobSearchEntity withHyperParameterTuningJobStatus(HyperParameterTuningJobStatusEnum hyperParameterTuningJobStatus) {
         this.hyperParameterTuningJobStatus = hyperParameterTuningJobStatus;
         return this;
@@ -104,6 +113,7 @@ public class HyperParameterTuningJobSearchEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public HyperParameterTuningJobSearchEntity withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -115,6 +125,7 @@ public class HyperParameterTuningJobSearchEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectiveStatusCounters")
     public ObjectiveStatusCounters objectiveStatusCounters;
+
     public HyperParameterTuningJobSearchEntity withObjectiveStatusCounters(ObjectiveStatusCounters objectiveStatusCounters) {
         this.objectiveStatusCounters = objectiveStatusCounters;
         return this;
@@ -126,6 +137,7 @@ public class HyperParameterTuningJobSearchEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OverallBestTrainingJob")
     public HyperParameterTrainingJobSummary overallBestTrainingJob;
+
     public HyperParameterTuningJobSearchEntity withOverallBestTrainingJob(HyperParameterTrainingJobSummary overallBestTrainingJob) {
         this.overallBestTrainingJob = overallBestTrainingJob;
         return this;
@@ -134,6 +146,7 @@ public class HyperParameterTuningJobSearchEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public HyperParameterTuningJobSearchEntity withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -145,6 +158,7 @@ public class HyperParameterTuningJobSearchEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingJobDefinition")
     public HyperParameterTrainingJobDefinition trainingJobDefinition;
+
     public HyperParameterTuningJobSearchEntity withTrainingJobDefinition(HyperParameterTrainingJobDefinition trainingJobDefinition) {
         this.trainingJobDefinition = trainingJobDefinition;
         return this;
@@ -153,6 +167,7 @@ public class HyperParameterTuningJobSearchEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingJobDefinitions")
     public HyperParameterTrainingJobDefinition[] trainingJobDefinitions;
+
     public HyperParameterTuningJobSearchEntity withTrainingJobDefinitions(HyperParameterTrainingJobDefinition[] trainingJobDefinitions) {
         this.trainingJobDefinitions = trainingJobDefinitions;
         return this;
@@ -164,6 +179,7 @@ public class HyperParameterTuningJobSearchEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingJobStatusCounters")
     public TrainingJobStatusCounters trainingJobStatusCounters;
+
     public HyperParameterTuningJobSearchEntity withTrainingJobStatusCounters(TrainingJobStatusCounters trainingJobStatusCounters) {
         this.trainingJobStatusCounters = trainingJobStatusCounters;
         return this;
@@ -172,6 +188,7 @@ public class HyperParameterTuningJobSearchEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TuningJobCompletionDetails")
     public HyperParameterTuningJobCompletionDetails tuningJobCompletionDetails;
+
     public HyperParameterTuningJobSearchEntity withTuningJobCompletionDetails(HyperParameterTuningJobCompletionDetails tuningJobCompletionDetails) {
         this.tuningJobCompletionDetails = tuningJobCompletionDetails;
         return this;
@@ -183,9 +200,11 @@ public class HyperParameterTuningJobSearchEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WarmStartConfig")
     public HyperParameterTuningJobWarmStartConfig warmStartConfig;
+
     public HyperParameterTuningJobSearchEntity withWarmStartConfig(HyperParameterTuningJobWarmStartConfig warmStartConfig) {
         this.warmStartConfig = warmStartConfig;
         return this;
     }
     
+    public HyperParameterTuningJobSearchEntity(){}
 }

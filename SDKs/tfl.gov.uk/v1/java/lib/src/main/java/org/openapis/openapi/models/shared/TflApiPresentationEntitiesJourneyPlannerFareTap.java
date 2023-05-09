@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesJourneyPlannerFareTap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("atcoCode")
     public String atcoCode;
+
     public TflApiPresentationEntitiesJourneyPlannerFareTap withAtcoCode(String atcoCode) {
         this.atcoCode = atcoCode;
         return this;
@@ -20,9 +21,11 @@ public class TflApiPresentationEntitiesJourneyPlannerFareTap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tapDetails")
     public TflApiPresentationEntitiesJourneyPlannerFareTapDetails tapDetails;
+
     public TflApiPresentationEntitiesJourneyPlannerFareTap withTapDetails(TflApiPresentationEntitiesJourneyPlannerFareTapDetails tapDetails) {
         this.tapDetails = tapDetails;
         return this;
     }
     
+    public TflApiPresentationEntitiesJourneyPlannerFareTap(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FetchFieldByIdResponse {
     
     public String contentType;
+
     public FetchFieldByIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FetchFieldByIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public FetchFieldByIdResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class FetchFieldByIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Field field;
+
     public FetchFieldByIdResponse withField(org.openapis.openapi.models.shared.Field field) {
         this.field = field;
         return this;
@@ -36,6 +40,7 @@ public class FetchFieldByIdResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public FetchFieldByIdResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -43,6 +48,7 @@ public class FetchFieldByIdResponse {
     
     
     public Integer statusCode;
+
     public FetchFieldByIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class FetchFieldByIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FetchFieldByIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FetchFieldByIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

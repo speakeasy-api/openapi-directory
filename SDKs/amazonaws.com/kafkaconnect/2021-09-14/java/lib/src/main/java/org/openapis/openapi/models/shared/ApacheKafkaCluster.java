@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApacheKafkaCluster {
     @JsonProperty("bootstrapServers")
     public String bootstrapServers;
+
     public ApacheKafkaCluster withBootstrapServers(String bootstrapServers) {
         this.bootstrapServers = bootstrapServers;
         return this;
@@ -19,9 +20,14 @@ public class ApacheKafkaCluster {
     
     @JsonProperty("vpc")
     public Vpc vpc;
+
     public ApacheKafkaCluster withVpc(Vpc vpc) {
         this.vpc = vpc;
         return this;
     }
     
+    public ApacheKafkaCluster(@JsonProperty("bootstrapServers") String bootstrapServers, @JsonProperty("vpc") Vpc vpc) {
+        this.bootstrapServers = bootstrapServers;
+        this.vpc = vpc;
+  }
 }

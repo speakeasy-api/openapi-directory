@@ -15,6 +15,7 @@ public class AwsEcsTaskDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterArn")
     public String clusterArn;
+
     public AwsEcsTaskDetails withClusterArn(String clusterArn) {
         this.clusterArn = clusterArn;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsTaskDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Containers")
     public AwsEcsContainerDetails[] containers;
+
     public AwsEcsTaskDetails withContainers(AwsEcsContainerDetails[] containers) {
         this.containers = containers;
         return this;
@@ -31,6 +33,7 @@ public class AwsEcsTaskDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedAt")
     public String createdAt;
+
     public AwsEcsTaskDetails withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -39,6 +42,7 @@ public class AwsEcsTaskDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Group")
     public String group;
+
     public AwsEcsTaskDetails withGroup(String group) {
         this.group = group;
         return this;
@@ -47,6 +51,7 @@ public class AwsEcsTaskDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartedAt")
     public String startedAt;
+
     public AwsEcsTaskDetails withStartedAt(String startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -55,6 +60,7 @@ public class AwsEcsTaskDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartedBy")
     public String startedBy;
+
     public AwsEcsTaskDetails withStartedBy(String startedBy) {
         this.startedBy = startedBy;
         return this;
@@ -63,6 +69,7 @@ public class AwsEcsTaskDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskDefinitionArn")
     public String taskDefinitionArn;
+
     public AwsEcsTaskDetails withTaskDefinitionArn(String taskDefinitionArn) {
         this.taskDefinitionArn = taskDefinitionArn;
         return this;
@@ -71,6 +78,7 @@ public class AwsEcsTaskDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public AwsEcsTaskDetails withVersion(String version) {
         this.version = version;
         return this;
@@ -79,9 +87,11 @@ public class AwsEcsTaskDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Volumes")
     public AwsEcsTaskVolumeDetails[] volumes;
+
     public AwsEcsTaskDetails withVolumes(AwsEcsTaskVolumeDetails[] volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public AwsEcsTaskDetails(){}
 }

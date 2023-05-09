@@ -18,9 +18,11 @@ public class ExportDataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputConfig")
     public OutputConfig outputConfig;
+
     public ExportDataRequest withOutputConfig(OutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
     }
     
+    public ExportDataRequest(){}
 }

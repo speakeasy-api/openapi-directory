@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUserHostedPropertyValueRequest {
@@ -12,6 +13,7 @@ public class DeleteUserHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_key")
     public String appKey;
+
     public DeleteUserHostedPropertyValueRequest withAppKey(String appKey) {
         this.appKey = appKey;
         return this;
@@ -22,6 +24,7 @@ public class DeleteUserHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=property_name")
     public String propertyName;
+
     public DeleteUserHostedPropertyValueRequest withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
@@ -32,9 +35,15 @@ public class DeleteUserHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=selected_user")
     public String selectedUser;
+
     public DeleteUserHostedPropertyValueRequest withSelectedUser(String selectedUser) {
         this.selectedUser = selectedUser;
         return this;
     }
     
+    public DeleteUserHostedPropertyValueRequest(@JsonProperty("app_key") String appKey, @JsonProperty("property_name") String propertyName, @JsonProperty("selected_user") String selectedUser) {
+        this.appKey = appKey;
+        this.propertyName = propertyName;
+        this.selectedUser = selectedUser;
+  }
 }

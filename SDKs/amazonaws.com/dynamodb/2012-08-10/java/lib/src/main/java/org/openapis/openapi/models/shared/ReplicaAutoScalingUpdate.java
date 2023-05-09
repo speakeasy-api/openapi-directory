@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReplicaAutoScalingUpdate {
     @JsonProperty("RegionName")
     public String regionName;
+
     public ReplicaAutoScalingUpdate withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
@@ -22,6 +23,7 @@ public class ReplicaAutoScalingUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaGlobalSecondaryIndexUpdates")
     public ReplicaGlobalSecondaryIndexAutoScalingUpdate[] replicaGlobalSecondaryIndexUpdates;
+
     public ReplicaAutoScalingUpdate withReplicaGlobalSecondaryIndexUpdates(ReplicaGlobalSecondaryIndexAutoScalingUpdate[] replicaGlobalSecondaryIndexUpdates) {
         this.replicaGlobalSecondaryIndexUpdates = replicaGlobalSecondaryIndexUpdates;
         return this;
@@ -33,9 +35,13 @@ public class ReplicaAutoScalingUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaProvisionedReadCapacityAutoScalingUpdate")
     public AutoScalingSettingsUpdate replicaProvisionedReadCapacityAutoScalingUpdate;
+
     public ReplicaAutoScalingUpdate withReplicaProvisionedReadCapacityAutoScalingUpdate(AutoScalingSettingsUpdate replicaProvisionedReadCapacityAutoScalingUpdate) {
         this.replicaProvisionedReadCapacityAutoScalingUpdate = replicaProvisionedReadCapacityAutoScalingUpdate;
         return this;
     }
     
+    public ReplicaAutoScalingUpdate(@JsonProperty("RegionName") String regionName) {
+        this.regionName = regionName;
+  }
 }

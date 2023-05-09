@@ -56,11 +56,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClaimIntoOrganizationResponse res = new org.openapis.openapi.models.operations.ClaimIntoOrganizationResponse() {{
+        org.openapis.openapi.models.operations.ClaimIntoOrganizationResponse res = new org.openapis.openapi.models.operations.ClaimIntoOrganizationResponse(contentType, httpRes.statusCode()) {{
             claimIntoOrganization200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloneOrganizationResponse res = new org.openapis.openapi.models.operations.CloneOrganizationResponse() {{
+        org.openapis.openapi.models.operations.CloneOrganizationResponse res = new org.openapis.openapi.models.operations.CloneOrganizationResponse(contentType, httpRes.statusCode()) {{
             cloneOrganization201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -141,11 +137,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganizationResponse res = new org.openapis.openapi.models.operations.GetOrganizationResponse() {{
+        org.openapis.openapi.models.operations.GetOrganizationResponse res = new org.openapis.openapi.models.operations.GetOrganizationResponse(contentType, httpRes.statusCode()) {{
             getOrganization200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -181,11 +175,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganizationDeviceStatusesResponse res = new org.openapis.openapi.models.operations.GetOrganizationDeviceStatusesResponse() {{
+        org.openapis.openapi.models.operations.GetOrganizationDeviceStatusesResponse res = new org.openapis.openapi.models.operations.GetOrganizationDeviceStatusesResponse(contentType, httpRes.statusCode()) {{
             getOrganizationDeviceStatuses200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -227,11 +219,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganizationInventoryResponse res = new org.openapis.openapi.models.operations.GetOrganizationInventoryResponse() {{
+        org.openapis.openapi.models.operations.GetOrganizationInventoryResponse res = new org.openapis.openapi.models.operations.GetOrganizationInventoryResponse(contentType, httpRes.statusCode()) {{
             getOrganizationInventory200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -267,11 +257,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganizationThirdPartyVPNPeersResponse res = new org.openapis.openapi.models.operations.GetOrganizationThirdPartyVPNPeersResponse() {{
+        org.openapis.openapi.models.operations.GetOrganizationThirdPartyVPNPeersResponse res = new org.openapis.openapi.models.operations.GetOrganizationThirdPartyVPNPeersResponse(contentType, httpRes.statusCode()) {{
             getOrganizationThirdPartyVPNPeers200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -313,11 +301,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganizationUplinksLossAndLatencyResponse res = new org.openapis.openapi.models.operations.GetOrganizationUplinksLossAndLatencyResponse() {{
+        org.openapis.openapi.models.operations.GetOrganizationUplinksLossAndLatencyResponse res = new org.openapis.openapi.models.operations.GetOrganizationUplinksLossAndLatencyResponse(contentType, httpRes.statusCode()) {{
             getOrganizationUplinksLossAndLatency200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -352,11 +338,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganizationsResponse res = new org.openapis.openapi.models.operations.GetOrganizationsResponse() {{
+        org.openapis.openapi.models.operations.GetOrganizationsResponse res = new org.openapis.openapi.models.operations.GetOrganizationsResponse(contentType, httpRes.statusCode()) {{
             getOrganizations200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -397,11 +381,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateOrganizationThirdPartyVPNPeersResponse res = new org.openapis.openapi.models.operations.UpdateOrganizationThirdPartyVPNPeersResponse() {{
+        org.openapis.openapi.models.operations.UpdateOrganizationThirdPartyVPNPeersResponse res = new org.openapis.openapi.models.operations.UpdateOrganizationThirdPartyVPNPeersResponse(contentType, httpRes.statusCode()) {{
             updateOrganizationThirdPartyVPNPeers200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

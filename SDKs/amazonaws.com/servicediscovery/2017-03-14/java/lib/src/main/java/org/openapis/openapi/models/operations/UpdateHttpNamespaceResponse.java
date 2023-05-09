@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateHttpNamespaceResponse {
     
     public String contentType;
+
     public UpdateHttpNamespaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateHttpNamespaceResponse {
      */
     
     public Object duplicateRequest;
+
     public UpdateHttpNamespaceResponse withDuplicateRequest(Object duplicateRequest) {
         this.duplicateRequest = duplicateRequest;
         return this;
@@ -29,6 +32,7 @@ public class UpdateHttpNamespaceResponse {
      */
     
     public Object invalidInput;
+
     public UpdateHttpNamespaceResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -39,6 +43,7 @@ public class UpdateHttpNamespaceResponse {
      */
     
     public Object namespaceNotFound;
+
     public UpdateHttpNamespaceResponse withNamespaceNotFound(Object namespaceNotFound) {
         this.namespaceNotFound = namespaceNotFound;
         return this;
@@ -49,6 +54,7 @@ public class UpdateHttpNamespaceResponse {
      */
     
     public Object resourceInUse;
+
     public UpdateHttpNamespaceResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -56,6 +62,7 @@ public class UpdateHttpNamespaceResponse {
     
     
     public Integer statusCode;
+
     public UpdateHttpNamespaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateHttpNamespaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateHttpNamespaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateHttpNamespaceResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateHttpNamespaceResponse updateHttpNamespaceResponse;
+
     public UpdateHttpNamespaceResponse withUpdateHttpNamespaceResponse(org.openapis.openapi.models.shared.UpdateHttpNamespaceResponse updateHttpNamespaceResponse) {
         this.updateHttpNamespaceResponse = updateHttpNamespaceResponse;
         return this;
     }
     
+    public UpdateHttpNamespaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

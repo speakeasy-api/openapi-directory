@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSecretVersionStageResponse {
     
     public String contentType;
+
     public UpdateSecretVersionStageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSecretVersionStageResponse {
      */
     
     public Object internalServiceError;
+
     public UpdateSecretVersionStageResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSecretVersionStageResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateSecretVersionStageResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateSecretVersionStageResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateSecretVersionStageResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateSecretVersionStageResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateSecretVersionStageResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateSecretVersionStageResponse {
     
     
     public Integer statusCode;
+
     public UpdateSecretVersionStageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateSecretVersionStageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSecretVersionStageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateSecretVersionStageResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateSecretVersionStageResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateSecretVersionStageResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSecretVersionStageResponse updateSecretVersionStageResponse;
+
     public UpdateSecretVersionStageResponse withUpdateSecretVersionStageResponse(org.openapis.openapi.models.shared.UpdateSecretVersionStageResponse updateSecretVersionStageResponse) {
         this.updateSecretVersionStageResponse = updateSecretVersionStageResponse;
         return this;
     }
     
+    public UpdateSecretVersionStageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

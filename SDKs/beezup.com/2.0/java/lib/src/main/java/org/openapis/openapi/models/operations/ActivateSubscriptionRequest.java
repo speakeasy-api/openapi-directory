@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivateSubscriptionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ActivateSubscriptionRequest activateSubscriptionRequest;
+
     public ActivateSubscriptionRequest withActivateSubscriptionRequest(org.openapis.openapi.models.shared.ActivateSubscriptionRequest activateSubscriptionRequest) {
         this.activateSubscriptionRequest = activateSubscriptionRequest;
         return this;
@@ -16,9 +18,13 @@ public class ActivateSubscriptionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public ActivateSubscriptionRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ActivateSubscriptionRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

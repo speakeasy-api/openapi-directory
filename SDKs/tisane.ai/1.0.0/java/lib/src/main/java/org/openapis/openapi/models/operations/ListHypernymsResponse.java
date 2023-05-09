@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListHypernymsResponse {
     
     public String contentType;
+
     public ListHypernymsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ListHypernymsResponse {
     
     
     public Integer statusCode;
+
     public ListHypernymsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ListHypernymsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListHypernymsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ListHypernymsResponse {
      */
     
     public Object[][] listHypernyms200ApplicationJSONArrays;
+
     public ListHypernymsResponse withListHypernyms200ApplicationJSONArrays(Object[][] listHypernyms200ApplicationJSONArrays) {
         this.listHypernyms200ApplicationJSONArrays = listHypernyms200ApplicationJSONArrays;
         return this;
     }
     
+    public ListHypernymsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

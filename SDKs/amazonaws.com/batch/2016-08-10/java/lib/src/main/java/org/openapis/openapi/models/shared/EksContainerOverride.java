@@ -15,6 +15,7 @@ public class EksContainerOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("args")
     public String[] args;
+
     public EksContainerOverride withArgs(String[] args) {
         this.args = args;
         return this;
@@ -23,6 +24,7 @@ public class EksContainerOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("command")
     public String[] command;
+
     public EksContainerOverride withCommand(String[] command) {
         this.command = command;
         return this;
@@ -31,6 +33,7 @@ public class EksContainerOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("env")
     public EksContainerEnvironmentVariable[] env;
+
     public EksContainerOverride withEnv(EksContainerEnvironmentVariable[] env) {
         this.env = env;
         return this;
@@ -39,6 +42,7 @@ public class EksContainerOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public EksContainerOverride withImage(String image) {
         this.image = image;
         return this;
@@ -47,9 +51,11 @@ public class EksContainerOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public EksContainerResourceRequirements resources;
+
     public EksContainerOverride withResources(EksContainerResourceRequirements resources) {
         this.resources = resources;
         return this;
     }
     
+    public EksContainerOverride(){}
 }

@@ -15,6 +15,7 @@ public class GetOrganizationAdminAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminAccountId")
     public String adminAccountId;
+
     public GetOrganizationAdminAccountResponse withAdminAccountId(String adminAccountId) {
         this.adminAccountId = adminAccountId;
         return this;
@@ -23,9 +24,11 @@ public class GetOrganizationAdminAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationId")
     public String organizationId;
+
     public GetOrganizationAdminAccountResponse withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public GetOrganizationAdminAccountResponse(){}
 }

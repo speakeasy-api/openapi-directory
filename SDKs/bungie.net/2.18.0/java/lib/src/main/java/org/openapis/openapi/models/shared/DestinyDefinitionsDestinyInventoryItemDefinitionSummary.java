@@ -15,9 +15,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionSummary {
      */
     
     public Integer sortPriority;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionSummary withSortPriority(Integer sortPriority) {
         this.sortPriority = sortPriority;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionSummary(){}
 }

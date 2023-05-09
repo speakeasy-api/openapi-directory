@@ -15,9 +15,13 @@ public class Artist {
      */
     @JsonProperty("name")
     public String name;
+
     public Artist withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Artist(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

@@ -15,6 +15,7 @@ public class OpsEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public java.util.Map<String, OpsEntityItem> data;
+
     public OpsEntity withData(java.util.Map<String, OpsEntityItem> data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class OpsEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public OpsEntity withId(String id) {
         this.id = id;
         return this;
     }
     
+    public OpsEntity(){}
 }

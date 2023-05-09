@@ -20,6 +20,7 @@ public class DescribeOrganizationOverviewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountIds")
     public String[] accountIds;
+
     public DescribeOrganizationOverviewRequestBody withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -32,6 +33,7 @@ public class DescribeOrganizationOverviewRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FromTime")
     public OffsetDateTime fromTime;
+
     public DescribeOrganizationOverviewRequestBody withFromTime(OffsetDateTime fromTime) {
         this.fromTime = fromTime;
         return this;
@@ -43,6 +45,7 @@ public class DescribeOrganizationOverviewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationalUnitIds")
     public String[] organizationalUnitIds;
+
     public DescribeOrganizationOverviewRequestBody withOrganizationalUnitIds(String[] organizationalUnitIds) {
         this.organizationalUnitIds = organizationalUnitIds;
         return this;
@@ -56,9 +59,13 @@ public class DescribeOrganizationOverviewRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ToTime")
     public OffsetDateTime toTime;
+
     public DescribeOrganizationOverviewRequestBody withToTime(OffsetDateTime toTime) {
         this.toTime = toTime;
         return this;
     }
     
+    public DescribeOrganizationOverviewRequestBody(@JsonProperty("FromTime") OffsetDateTime fromTime) {
+        this.fromTime = fromTime;
+  }
 }

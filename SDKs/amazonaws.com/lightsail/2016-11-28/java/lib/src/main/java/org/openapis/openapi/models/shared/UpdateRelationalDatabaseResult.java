@@ -15,9 +15,11 @@ public class UpdateRelationalDatabaseResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public UpdateRelationalDatabaseResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public UpdateRelationalDatabaseResult(){}
 }

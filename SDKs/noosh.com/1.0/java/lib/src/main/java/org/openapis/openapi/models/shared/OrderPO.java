@@ -17,6 +17,7 @@ public class OrderPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyer_user_id")
     public Long buyerUserId;
+
     public OrderPO withBuyerUserId(Long buyerUserId) {
         this.buyerUserId = buyerUserId;
         return this;
@@ -25,6 +26,7 @@ public class OrderPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public OrderPO withComments(String comments) {
         this.comments = comments;
         return this;
@@ -33,6 +35,7 @@ public class OrderPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public CustomFieldPersistVO[] customFields;
+
     public OrderPO withCustomFields(CustomFieldPersistVO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -41,6 +44,7 @@ public class OrderPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_or_billing_recipient")
     public Long invoiceOrBillingRecipient;
+
     public OrderPO withInvoiceOrBillingRecipient(Long invoiceOrBillingRecipient) {
         this.invoiceOrBillingRecipient = invoiceOrBillingRecipient;
         return this;
@@ -50,6 +54,7 @@ public class OrderPO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("order_completion_date")
     public LocalDate orderCompletionDate;
+
     public OrderPO withOrderCompletionDate(LocalDate orderCompletionDate) {
         this.orderCompletionDate = orderCompletionDate;
         return this;
@@ -58,6 +63,7 @@ public class OrderPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_items")
     public OrderItemPersistVO[] orderItems;
+
     public OrderPO withOrderItems(OrderItemPersistVO[] orderItems) {
         this.orderItems = orderItems;
         return this;
@@ -66,6 +72,7 @@ public class OrderPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("other_selection_reason")
     public String otherSelectionReason;
+
     public OrderPO withOtherSelectionReason(String otherSelectionReason) {
         this.otherSelectionReason = otherSelectionReason;
         return this;
@@ -74,6 +81,7 @@ public class OrderPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_method_id")
     public Long paymentMethodId;
+
     public OrderPO withPaymentMethodId(Long paymentMethodId) {
         this.paymentMethodId = paymentMethodId;
         return this;
@@ -82,6 +90,7 @@ public class OrderPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_reference_no")
     public String paymentReferenceNo;
+
     public OrderPO withPaymentReferenceNo(String paymentReferenceNo) {
         this.paymentReferenceNo = paymentReferenceNo;
         return this;
@@ -90,6 +99,7 @@ public class OrderPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellOrder")
     public Boolean sellOrder;
+
     public OrderPO withSellOrder(Boolean sellOrder) {
         this.sellOrder = sellOrder;
         return this;
@@ -101,6 +111,7 @@ public class OrderPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping")
     public Object shipping;
+
     public OrderPO withShipping(Object shipping) {
         this.shipping = shipping;
         return this;
@@ -109,6 +120,7 @@ public class OrderPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_reference")
     public String supplierReference;
+
     public OrderPO withSupplierReference(String supplierReference) {
         this.supplierReference = supplierReference;
         return this;
@@ -117,6 +129,7 @@ public class OrderPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_selection_reason_id")
     public Long supplierSelectionReasonId;
+
     public OrderPO withSupplierSelectionReasonId(Long supplierSelectionReasonId) {
         this.supplierSelectionReasonId = supplierSelectionReasonId;
         return this;
@@ -125,6 +138,7 @@ public class OrderPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_user_id")
     public Long supplierUserId;
+
     public OrderPO withSupplierUserId(Long supplierUserId) {
         this.supplierUserId = supplierUserId;
         return this;
@@ -133,6 +147,7 @@ public class OrderPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public String tax;
+
     public OrderPO withTax(String tax) {
         this.tax = tax;
         return this;
@@ -141,9 +156,11 @@ public class OrderPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public OrderPO withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public OrderPO(){}
 }

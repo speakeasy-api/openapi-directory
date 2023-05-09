@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ApplePayInfo applePayInfo;
+
     public PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsRequest withApplePayInfo(org.openapis.openapi.models.shared.ApplePayInfo applePayInfo) {
         this.applePayInfo = applePayInfo;
         return this;
@@ -19,6 +21,7 @@ public class PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApple
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -29,9 +32,14 @@ public class PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApple
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentMethodId")
     public String paymentMethodId;
+
     public PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsRequest withPaymentMethodId(String paymentMethodId) {
         this.paymentMethodId = paymentMethodId;
         return this;
     }
     
+    public PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsRequest(@JsonProperty("merchantId") String merchantId, @JsonProperty("paymentMethodId") String paymentMethodId) {
+        this.merchantId = merchantId;
+        this.paymentMethodId = paymentMethodId;
+  }
 }

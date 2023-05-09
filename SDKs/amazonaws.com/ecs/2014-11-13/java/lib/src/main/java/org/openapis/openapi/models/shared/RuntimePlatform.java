@@ -15,6 +15,7 @@ public class RuntimePlatform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuArchitecture")
     public CPUArchitectureEnum cpuArchitecture;
+
     public RuntimePlatform withCpuArchitecture(CPUArchitectureEnum cpuArchitecture) {
         this.cpuArchitecture = cpuArchitecture;
         return this;
@@ -23,9 +24,11 @@ public class RuntimePlatform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatingSystemFamily")
     public OSFamilyEnum operatingSystemFamily;
+
     public RuntimePlatform withOperatingSystemFamily(OSFamilyEnum operatingSystemFamily) {
         this.operatingSystemFamily = operatingSystemFamily;
         return this;
     }
     
+    public RuntimePlatform(){}
 }

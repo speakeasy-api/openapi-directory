@@ -15,9 +15,11 @@ public class BatchStartRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorEntries")
     public BatchStartRecommendationsErrorEntry[] errorEntries;
+
     public BatchStartRecommendationsResponse withErrorEntries(BatchStartRecommendationsErrorEntry[] errorEntries) {
         this.errorEntries = errorEntries;
         return this;
     }
     
+    public BatchStartRecommendationsResponse(){}
 }

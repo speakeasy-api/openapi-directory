@@ -15,9 +15,11 @@ public class PostContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioStream")
     public String audioStream;
+
     public PostContentResponse withAudioStream(String audioStream) {
         this.audioStream = audioStream;
         return this;
     }
     
+    public PostContentResponse(){}
 }

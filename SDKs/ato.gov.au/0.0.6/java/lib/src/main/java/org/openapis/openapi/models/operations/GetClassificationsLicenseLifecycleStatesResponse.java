@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetClassificationsLicenseLifecycleStatesResponse {
     
     public String contentType;
+
     public GetClassificationsLicenseLifecycleStatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetClassificationsLicenseLifecycleStatesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetClassificationsLicenseLifecycleStatesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetClassificationsLicenseLifecycleStatesResponse {
     
     
     public Integer statusCode;
+
     public GetClassificationsLicenseLifecycleStatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetClassificationsLicenseLifecycleStatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetClassificationsLicenseLifecycleStatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetClassificationsLicenseLifecycleStatesResponse {
      */
     
     public org.openapis.openapi.models.shared.LicenseLifecycleState[] licenseLifecycleStates;
+
     public GetClassificationsLicenseLifecycleStatesResponse withLicenseLifecycleStates(org.openapis.openapi.models.shared.LicenseLifecycleState[] licenseLifecycleStates) {
         this.licenseLifecycleStates = licenseLifecycleStates;
         return this;
@@ -50,6 +56,7 @@ public class GetClassificationsLicenseLifecycleStatesResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetClassificationsLicenseLifecycleStatesResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -60,9 +67,14 @@ public class GetClassificationsLicenseLifecycleStatesResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public GetClassificationsLicenseLifecycleStatesResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public GetClassificationsLicenseLifecycleStatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

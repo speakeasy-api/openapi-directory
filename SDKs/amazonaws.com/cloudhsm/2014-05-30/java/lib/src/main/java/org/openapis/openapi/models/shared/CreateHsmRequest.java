@@ -15,6 +15,7 @@ public class CreateHsmRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateHsmRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +24,7 @@ public class CreateHsmRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EniIp")
     public String eniIp;
+
     public CreateHsmRequest withEniIp(String eniIp) {
         this.eniIp = eniIp;
         return this;
@@ -31,6 +33,7 @@ public class CreateHsmRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalId")
     public String externalId;
+
     public CreateHsmRequest withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -38,6 +41,7 @@ public class CreateHsmRequest {
     
     @JsonProperty("IamRoleArn")
     public String iamRoleArn;
+
     public CreateHsmRequest withIamRoleArn(String iamRoleArn) {
         this.iamRoleArn = iamRoleArn;
         return this;
@@ -45,6 +49,7 @@ public class CreateHsmRequest {
     
     @JsonProperty("SshKey")
     public String sshKey;
+
     public CreateHsmRequest withSshKey(String sshKey) {
         this.sshKey = sshKey;
         return this;
@@ -52,6 +57,7 @@ public class CreateHsmRequest {
     
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public CreateHsmRequest withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -62,6 +68,7 @@ public class CreateHsmRequest {
      */
     @JsonProperty("SubscriptionType")
     public SubscriptionTypeEnum subscriptionType;
+
     public CreateHsmRequest withSubscriptionType(SubscriptionTypeEnum subscriptionType) {
         this.subscriptionType = subscriptionType;
         return this;
@@ -70,9 +77,16 @@ public class CreateHsmRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SyslogIp")
     public String syslogIp;
+
     public CreateHsmRequest withSyslogIp(String syslogIp) {
         this.syslogIp = syslogIp;
         return this;
     }
     
+    public CreateHsmRequest(@JsonProperty("IamRoleArn") String iamRoleArn, @JsonProperty("SshKey") String sshKey, @JsonProperty("SubnetId") String subnetId, @JsonProperty("SubscriptionType") SubscriptionTypeEnum subscriptionType) {
+        this.iamRoleArn = iamRoleArn;
+        this.sshKey = sshKey;
+        this.subnetId = subnetId;
+        this.subscriptionType = subscriptionType;
+  }
 }

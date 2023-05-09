@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAuthorizeSnapshotAccessRequest {
@@ -12,6 +13,7 @@ public class GETAuthorizeSnapshotAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AccountWithRestoreAccess")
     public String accountWithRestoreAccess;
+
     public GETAuthorizeSnapshotAccessRequest withAccountWithRestoreAccess(String accountWithRestoreAccess) {
         this.accountWithRestoreAccess = accountWithRestoreAccess;
         return this;
@@ -19,6 +21,7 @@ public class GETAuthorizeSnapshotAccessRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETAuthorizeSnapshotAccessActionEnum action;
+
     public GETAuthorizeSnapshotAccessRequest withAction(GETAuthorizeSnapshotAccessActionEnum action) {
         this.action = action;
         return this;
@@ -29,6 +32,7 @@ public class GETAuthorizeSnapshotAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotArn")
     public String snapshotArn;
+
     public GETAuthorizeSnapshotAccessRequest withSnapshotArn(String snapshotArn) {
         this.snapshotArn = snapshotArn;
         return this;
@@ -39,6 +43,7 @@ public class GETAuthorizeSnapshotAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotClusterIdentifier")
     public String snapshotClusterIdentifier;
+
     public GETAuthorizeSnapshotAccessRequest withSnapshotClusterIdentifier(String snapshotClusterIdentifier) {
         this.snapshotClusterIdentifier = snapshotClusterIdentifier;
         return this;
@@ -49,6 +54,7 @@ public class GETAuthorizeSnapshotAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotIdentifier")
     public String snapshotIdentifier;
+
     public GETAuthorizeSnapshotAccessRequest withSnapshotIdentifier(String snapshotIdentifier) {
         this.snapshotIdentifier = snapshotIdentifier;
         return this;
@@ -56,6 +62,7 @@ public class GETAuthorizeSnapshotAccessRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETAuthorizeSnapshotAccessVersionEnum version;
+
     public GETAuthorizeSnapshotAccessRequest withVersion(GETAuthorizeSnapshotAccessVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETAuthorizeSnapshotAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETAuthorizeSnapshotAccessRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETAuthorizeSnapshotAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETAuthorizeSnapshotAccessRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETAuthorizeSnapshotAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETAuthorizeSnapshotAccessRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETAuthorizeSnapshotAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETAuthorizeSnapshotAccessRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETAuthorizeSnapshotAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETAuthorizeSnapshotAccessRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETAuthorizeSnapshotAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETAuthorizeSnapshotAccessRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,15 @@ public class GETAuthorizeSnapshotAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETAuthorizeSnapshotAccessRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETAuthorizeSnapshotAccessRequest(@JsonProperty("AccountWithRestoreAccess") String accountWithRestoreAccess, @JsonProperty("Action") GETAuthorizeSnapshotAccessActionEnum action, @JsonProperty("Version") GETAuthorizeSnapshotAccessVersionEnum version) {
+        this.accountWithRestoreAccess = accountWithRestoreAccess;
+        this.action = action;
+        this.version = version;
+  }
 }

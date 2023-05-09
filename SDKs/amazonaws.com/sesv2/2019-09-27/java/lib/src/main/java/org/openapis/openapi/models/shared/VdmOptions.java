@@ -15,6 +15,7 @@ public class VdmOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DashboardOptions")
     public DashboardOptions dashboardOptions;
+
     public VdmOptions withDashboardOptions(DashboardOptions dashboardOptions) {
         this.dashboardOptions = dashboardOptions;
         return this;
@@ -23,9 +24,11 @@ public class VdmOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GuardianOptions")
     public GuardianOptions guardianOptions;
+
     public VdmOptions withGuardianOptions(GuardianOptions guardianOptions) {
         this.guardianOptions = guardianOptions;
         return this;
     }
     
+    public VdmOptions(){}
 }

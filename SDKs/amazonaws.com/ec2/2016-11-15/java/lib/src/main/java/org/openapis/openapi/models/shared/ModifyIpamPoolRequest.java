@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyIpamPoolRequest {
     
     public ModifyIpamPoolRequestAddAllocationResourceTags[] addAllocationResourceTags;
+
     public ModifyIpamPoolRequest withAddAllocationResourceTags(ModifyIpamPoolRequestAddAllocationResourceTags[] addAllocationResourceTags) {
         this.addAllocationResourceTags = addAllocationResourceTags;
         return this;
@@ -16,6 +17,7 @@ public class ModifyIpamPoolRequest {
     
     
     public Long allocationDefaultNetmaskLength;
+
     public ModifyIpamPoolRequest withAllocationDefaultNetmaskLength(Long allocationDefaultNetmaskLength) {
         this.allocationDefaultNetmaskLength = allocationDefaultNetmaskLength;
         return this;
@@ -23,6 +25,7 @@ public class ModifyIpamPoolRequest {
     
     
     public Long allocationMaxNetmaskLength;
+
     public ModifyIpamPoolRequest withAllocationMaxNetmaskLength(Long allocationMaxNetmaskLength) {
         this.allocationMaxNetmaskLength = allocationMaxNetmaskLength;
         return this;
@@ -30,6 +33,7 @@ public class ModifyIpamPoolRequest {
     
     
     public Long allocationMinNetmaskLength;
+
     public ModifyIpamPoolRequest withAllocationMinNetmaskLength(Long allocationMinNetmaskLength) {
         this.allocationMinNetmaskLength = allocationMinNetmaskLength;
         return this;
@@ -37,6 +41,7 @@ public class ModifyIpamPoolRequest {
     
     
     public Boolean autoImport;
+
     public ModifyIpamPoolRequest withAutoImport(Boolean autoImport) {
         this.autoImport = autoImport;
         return this;
@@ -44,6 +49,7 @@ public class ModifyIpamPoolRequest {
     
     
     public Boolean clearAllocationDefaultNetmaskLength;
+
     public ModifyIpamPoolRequest withClearAllocationDefaultNetmaskLength(Boolean clearAllocationDefaultNetmaskLength) {
         this.clearAllocationDefaultNetmaskLength = clearAllocationDefaultNetmaskLength;
         return this;
@@ -51,6 +57,7 @@ public class ModifyIpamPoolRequest {
     
     
     public String description;
+
     public ModifyIpamPoolRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -58,6 +65,7 @@ public class ModifyIpamPoolRequest {
     
     
     public Boolean dryRun;
+
     public ModifyIpamPoolRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -65,6 +73,7 @@ public class ModifyIpamPoolRequest {
     
     
     public String ipamPoolId;
+
     public ModifyIpamPoolRequest withIpamPoolId(String ipamPoolId) {
         this.ipamPoolId = ipamPoolId;
         return this;
@@ -72,9 +81,13 @@ public class ModifyIpamPoolRequest {
     
     
     public ModifyIpamPoolRequestRemoveAllocationResourceTags[] removeAllocationResourceTags;
+
     public ModifyIpamPoolRequest withRemoveAllocationResourceTags(ModifyIpamPoolRequestRemoveAllocationResourceTags[] removeAllocationResourceTags) {
         this.removeAllocationResourceTags = removeAllocationResourceTags;
         return this;
     }
     
+    public ModifyIpamPoolRequest(@JsonProperty("IpamPoolId") String ipamPoolId) {
+        this.ipamPoolId = ipamPoolId;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAppsResponse {
     @JsonProperty("appSummaries")
     public AppSummary[] appSummaries;
+
     public ListAppsResponse withAppSummaries(AppSummary[] appSummaries) {
         this.appSummaries = appSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListAppsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAppsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAppsResponse(@JsonProperty("appSummaries") AppSummary[] appSummaries) {
+        this.appSummaries = appSummaries;
+  }
 }

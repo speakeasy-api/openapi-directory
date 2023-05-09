@@ -22,6 +22,7 @@ public class CheckRun {
      */
     @JsonProperty("app")
     public NullableIntegration app;
+
     public CheckRun withApp(NullableIntegration app) {
         this.app = app;
         return this;
@@ -29,6 +30,7 @@ public class CheckRun {
     
     @JsonProperty("check_suite")
     public CheckRunCheckSuite checkSuite;
+
     public CheckRun withCheckSuite(CheckRunCheckSuite checkSuite) {
         this.checkSuite = checkSuite;
         return this;
@@ -38,6 +40,7 @@ public class CheckRun {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completed_at")
     public OffsetDateTime completedAt;
+
     public CheckRun withCompletedAt(OffsetDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -45,6 +48,7 @@ public class CheckRun {
     
     @JsonProperty("conclusion")
     public CheckRunConclusionEnum conclusion;
+
     public CheckRun withConclusion(CheckRunConclusionEnum conclusion) {
         this.conclusion = conclusion;
         return this;
@@ -56,6 +60,7 @@ public class CheckRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deployment")
     public DeploymentSimple deployment;
+
     public CheckRun withDeployment(DeploymentSimple deployment) {
         this.deployment = deployment;
         return this;
@@ -63,6 +68,7 @@ public class CheckRun {
     
     @JsonProperty("details_url")
     public String detailsUrl;
+
     public CheckRun withDetailsUrl(String detailsUrl) {
         this.detailsUrl = detailsUrl;
         return this;
@@ -70,6 +76,7 @@ public class CheckRun {
     
     @JsonProperty("external_id")
     public String externalId;
+
     public CheckRun withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -80,6 +87,7 @@ public class CheckRun {
      */
     @JsonProperty("head_sha")
     public String headSha;
+
     public CheckRun withHeadSha(String headSha) {
         this.headSha = headSha;
         return this;
@@ -87,6 +95,7 @@ public class CheckRun {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public CheckRun withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -97,6 +106,7 @@ public class CheckRun {
      */
     @JsonProperty("id")
     public Long id;
+
     public CheckRun withId(Long id) {
         this.id = id;
         return this;
@@ -107,6 +117,7 @@ public class CheckRun {
      */
     @JsonProperty("name")
     public String name;
+
     public CheckRun withName(String name) {
         this.name = name;
         return this;
@@ -114,6 +125,7 @@ public class CheckRun {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public CheckRun withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -121,6 +133,7 @@ public class CheckRun {
     
     @JsonProperty("output")
     public CheckRunOutput output;
+
     public CheckRun withOutput(CheckRunOutput output) {
         this.output = output;
         return this;
@@ -128,6 +141,7 @@ public class CheckRun {
     
     @JsonProperty("pull_requests")
     public PullRequestMinimal[] pullRequests;
+
     public CheckRun withPullRequests(PullRequestMinimal[] pullRequests) {
         this.pullRequests = pullRequests;
         return this;
@@ -137,6 +151,7 @@ public class CheckRun {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("started_at")
     public OffsetDateTime startedAt;
+
     public CheckRun withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -147,6 +162,7 @@ public class CheckRun {
      */
     @JsonProperty("status")
     public CheckRunStatusEnum status;
+
     public CheckRun withStatus(CheckRunStatusEnum status) {
         this.status = status;
         return this;
@@ -154,9 +170,28 @@ public class CheckRun {
     
     @JsonProperty("url")
     public String url;
+
     public CheckRun withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CheckRun(@JsonProperty("app") NullableIntegration app, @JsonProperty("check_suite") CheckRunCheckSuite checkSuite, @JsonProperty("completed_at") OffsetDateTime completedAt, @JsonProperty("conclusion") CheckRunConclusionEnum conclusion, @JsonProperty("details_url") String detailsUrl, @JsonProperty("external_id") String externalId, @JsonProperty("head_sha") String headSha, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("output") CheckRunOutput output, @JsonProperty("pull_requests") PullRequestMinimal[] pullRequests, @JsonProperty("started_at") OffsetDateTime startedAt, @JsonProperty("status") CheckRunStatusEnum status, @JsonProperty("url") String url) {
+        this.app = app;
+        this.checkSuite = checkSuite;
+        this.completedAt = completedAt;
+        this.conclusion = conclusion;
+        this.detailsUrl = detailsUrl;
+        this.externalId = externalId;
+        this.headSha = headSha;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.output = output;
+        this.pullRequests = pullRequests;
+        this.startedAt = startedAt;
+        this.status = status;
+        this.url = url;
+  }
 }

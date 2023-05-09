@@ -18,6 +18,7 @@ public class ScorecardChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregateType")
     public ScorecardChartSpecAggregateTypeEnum aggregateType;
+
     public ScorecardChartSpec withAggregateType(ScorecardChartSpecAggregateTypeEnum aggregateType) {
         this.aggregateType = aggregateType;
         return this;
@@ -29,6 +30,7 @@ public class ScorecardChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baselineValueData")
     public ChartData baselineValueData;
+
     public ScorecardChartSpec withBaselineValueData(ChartData baselineValueData) {
         this.baselineValueData = baselineValueData;
         return this;
@@ -40,6 +42,7 @@ public class ScorecardChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baselineValueFormat")
     public BaselineValueFormat baselineValueFormat;
+
     public ScorecardChartSpec withBaselineValueFormat(BaselineValueFormat baselineValueFormat) {
         this.baselineValueFormat = baselineValueFormat;
         return this;
@@ -51,6 +54,7 @@ public class ScorecardChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFormatOptions")
     public ChartCustomNumberFormatOptions customFormatOptions;
+
     public ScorecardChartSpec withCustomFormatOptions(ChartCustomNumberFormatOptions customFormatOptions) {
         this.customFormatOptions = customFormatOptions;
         return this;
@@ -62,6 +66,7 @@ public class ScorecardChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyValueData")
     public ChartData keyValueData;
+
     public ScorecardChartSpec withKeyValueData(ChartData keyValueData) {
         this.keyValueData = keyValueData;
         return this;
@@ -73,6 +78,7 @@ public class ScorecardChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyValueFormat")
     public KeyValueFormat keyValueFormat;
+
     public ScorecardChartSpec withKeyValueFormat(KeyValueFormat keyValueFormat) {
         this.keyValueFormat = keyValueFormat;
         return this;
@@ -84,6 +90,7 @@ public class ScorecardChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberFormatSource")
     public ScorecardChartSpecNumberFormatSourceEnum numberFormatSource;
+
     public ScorecardChartSpec withNumberFormatSource(ScorecardChartSpecNumberFormatSourceEnum numberFormatSource) {
         this.numberFormatSource = numberFormatSource;
         return this;
@@ -95,9 +102,11 @@ public class ScorecardChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaleFactor")
     public Double scaleFactor;
+
     public ScorecardChartSpec withScaleFactor(Double scaleFactor) {
         this.scaleFactor = scaleFactor;
         return this;
     }
     
+    public ScorecardChartSpec(){}
 }

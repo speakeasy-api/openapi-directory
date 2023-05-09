@@ -15,9 +15,13 @@ public class CertificateIdentifier {
      */
     @JsonProperty("certificateId")
     public String certificateId;
+
     public CertificateIdentifier withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
     }
     
+    public CertificateIdentifier(@JsonProperty("certificateId") String certificateId) {
+        this.certificateId = certificateId;
+  }
 }

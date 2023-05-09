@@ -15,6 +15,7 @@ public class ActivityTaskCanceledEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public ActivityTaskCanceledEventAttributes withDetails(String details) {
         this.details = details;
         return this;
@@ -23,6 +24,7 @@ public class ActivityTaskCanceledEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestCancelRequestedEventId")
     public Long latestCancelRequestedEventId;
+
     public ActivityTaskCanceledEventAttributes withLatestCancelRequestedEventId(Long latestCancelRequestedEventId) {
         this.latestCancelRequestedEventId = latestCancelRequestedEventId;
         return this;
@@ -30,6 +32,7 @@ public class ActivityTaskCanceledEventAttributes {
     
     @JsonProperty("scheduledEventId")
     public Long scheduledEventId;
+
     public ActivityTaskCanceledEventAttributes withScheduledEventId(Long scheduledEventId) {
         this.scheduledEventId = scheduledEventId;
         return this;
@@ -37,9 +40,14 @@ public class ActivityTaskCanceledEventAttributes {
     
     @JsonProperty("startedEventId")
     public Long startedEventId;
+
     public ActivityTaskCanceledEventAttributes withStartedEventId(Long startedEventId) {
         this.startedEventId = startedEventId;
         return this;
     }
     
+    public ActivityTaskCanceledEventAttributes(@JsonProperty("scheduledEventId") Long scheduledEventId, @JsonProperty("startedEventId") Long startedEventId) {
+        this.scheduledEventId = scheduledEventId;
+        this.startedEventId = startedEventId;
+  }
 }

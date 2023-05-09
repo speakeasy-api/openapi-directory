@@ -18,6 +18,7 @@ public class ListFinalizedDealsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalizedDeals")
     public FinalizedDeal[] finalizedDeals;
+
     public ListFinalizedDealsResponse withFinalizedDeals(FinalizedDeal[] finalizedDeals) {
         this.finalizedDeals = finalizedDeals;
         return this;
@@ -29,9 +30,11 @@ public class ListFinalizedDealsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListFinalizedDealsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListFinalizedDealsResponse(){}
 }

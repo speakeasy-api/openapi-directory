@@ -15,9 +15,11 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesFilterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Predicate")
     public AwsS3BucketBucketLifecycleConfigurationRulesFilterPredicateDetails predicate;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesFilterDetails withPredicate(AwsS3BucketBucketLifecycleConfigurationRulesFilterPredicateDetails predicate) {
         this.predicate = predicate;
         return this;
     }
     
+    public AwsS3BucketBucketLifecycleConfigurationRulesFilterDetails(){}
 }

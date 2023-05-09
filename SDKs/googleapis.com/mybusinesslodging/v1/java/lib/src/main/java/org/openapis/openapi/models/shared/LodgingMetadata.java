@@ -18,9 +18,11 @@ public class LodgingMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public LodgingMetadata withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public LodgingMetadata(){}
 }

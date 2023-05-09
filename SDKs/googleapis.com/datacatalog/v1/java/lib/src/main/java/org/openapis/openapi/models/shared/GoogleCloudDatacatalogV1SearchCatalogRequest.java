@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1SearchCatalogRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderBy")
     public String orderBy;
+
     public GoogleCloudDatacatalogV1SearchCatalogRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1SearchCatalogRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public GoogleCloudDatacatalogV1SearchCatalogRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1SearchCatalogRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GoogleCloudDatacatalogV1SearchCatalogRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatacatalogV1SearchCatalogRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public GoogleCloudDatacatalogV1SearchCatalogRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDatacatalogV1SearchCatalogRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public GoogleCloudDatacatalogV1SearchCatalogRequestScope scope;
+
     public GoogleCloudDatacatalogV1SearchCatalogRequest withScope(GoogleCloudDatacatalogV1SearchCatalogRequestScope scope) {
         this.scope = scope;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1SearchCatalogRequest(){}
 }

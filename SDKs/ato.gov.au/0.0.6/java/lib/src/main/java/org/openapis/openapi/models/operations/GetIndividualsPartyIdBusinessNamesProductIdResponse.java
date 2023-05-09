@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetIndividualsPartyIdBusinessNamesProductIdResponse {
     
     public String contentType;
+
     public GetIndividualsPartyIdBusinessNamesProductIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetIndividualsPartyIdBusinessNamesProductIdResponse {
     
     
     public Integer statusCode;
+
     public GetIndividualsPartyIdBusinessNamesProductIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetIndividualsPartyIdBusinessNamesProductIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetIndividualsPartyIdBusinessNamesProductIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetIndividualsPartyIdBusinessNamesProductIdResponse {
      */
     
     public org.openapis.openapi.models.shared.BusinessName businessName;
+
     public GetIndividualsPartyIdBusinessNamesProductIdResponse withBusinessName(org.openapis.openapi.models.shared.BusinessName businessName) {
         this.businessName = businessName;
         return this;
@@ -43,6 +48,7 @@ public class GetIndividualsPartyIdBusinessNamesProductIdResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetIndividualsPartyIdBusinessNamesProductIdResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -53,9 +59,14 @@ public class GetIndividualsPartyIdBusinessNamesProductIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public GetIndividualsPartyIdBusinessNamesProductIdResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public GetIndividualsPartyIdBusinessNamesProductIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

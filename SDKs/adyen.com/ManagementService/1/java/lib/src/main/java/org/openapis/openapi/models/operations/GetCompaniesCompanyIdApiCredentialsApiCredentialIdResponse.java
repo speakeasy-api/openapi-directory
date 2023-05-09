@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCompaniesCompanyIdApiCredentialsApiCredentialIdResponse {
@@ -12,6 +13,7 @@ public class GetCompaniesCompanyIdApiCredentialsApiCredentialIdResponse {
      */
     
     public org.openapis.openapi.models.shared.CompanyApiCredential companyApiCredential;
+
     public GetCompaniesCompanyIdApiCredentialsApiCredentialIdResponse withCompanyApiCredential(org.openapis.openapi.models.shared.CompanyApiCredential companyApiCredential) {
         this.companyApiCredential = companyApiCredential;
         return this;
@@ -19,6 +21,7 @@ public class GetCompaniesCompanyIdApiCredentialsApiCredentialIdResponse {
     
     
     public String contentType;
+
     public GetCompaniesCompanyIdApiCredentialsApiCredentialIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCompaniesCompanyIdApiCredentialsApiCredentialIdResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public GetCompaniesCompanyIdApiCredentialsApiCredentialIdResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class GetCompaniesCompanyIdApiCredentialsApiCredentialIdResponse {
     
     
     public Integer statusCode;
+
     public GetCompaniesCompanyIdApiCredentialsApiCredentialIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetCompaniesCompanyIdApiCredentialsApiCredentialIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCompaniesCompanyIdApiCredentialsApiCredentialIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCompaniesCompanyIdApiCredentialsApiCredentialIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

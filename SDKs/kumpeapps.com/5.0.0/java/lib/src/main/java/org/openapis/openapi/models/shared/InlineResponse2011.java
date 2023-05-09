@@ -15,6 +15,7 @@ public class InlineResponse2011 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth_key")
     public String authKey;
+
     public InlineResponse2011 withAuthKey(String authKey) {
         this.authKey = authKey;
         return this;
@@ -23,9 +24,11 @@ public class InlineResponse2011 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public InlineResponse2011 withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public InlineResponse2011(){}
 }

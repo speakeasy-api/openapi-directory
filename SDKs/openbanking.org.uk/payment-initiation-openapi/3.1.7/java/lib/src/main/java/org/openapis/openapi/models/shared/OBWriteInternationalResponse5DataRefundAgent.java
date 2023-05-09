@@ -18,6 +18,7 @@ public class OBWriteInternationalResponse5DataRefundAgent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Identification")
     public String identification;
+
     public OBWriteInternationalResponse5DataRefundAgent withIdentification(String identification) {
         this.identification = identification;
         return this;
@@ -29,6 +30,7 @@ public class OBWriteInternationalResponse5DataRefundAgent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public OBWriteInternationalResponse5DataRefundAgent withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class OBWriteInternationalResponse5DataRefundAgent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostalAddress")
     public OBPostalAddress6 postalAddress;
+
     public OBWriteInternationalResponse5DataRefundAgent withPostalAddress(OBPostalAddress6 postalAddress) {
         this.postalAddress = postalAddress;
         return this;
@@ -51,9 +54,11 @@ public class OBWriteInternationalResponse5DataRefundAgent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemeName")
     public String schemeName;
+
     public OBWriteInternationalResponse5DataRefundAgent withSchemeName(String schemeName) {
         this.schemeName = schemeName;
         return this;
     }
     
+    public OBWriteInternationalResponse5DataRefundAgent(){}
 }

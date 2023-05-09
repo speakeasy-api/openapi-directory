@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PeopleSearchReadRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user")
     public String user;
+
     public PeopleSearchReadRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public PeopleSearchReadRequest(@JsonProperty("user") String user) {
+        this.user = user;
+  }
 }

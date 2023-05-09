@@ -15,6 +15,7 @@ public class CreateOrdersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proposals")
     public Proposal[] proposals;
+
     public CreateOrdersRequest withProposals(Proposal[] proposals) {
         this.proposals = proposals;
         return this;
@@ -26,9 +27,11 @@ public class CreateOrdersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webPropertyCode")
     public String webPropertyCode;
+
     public CreateOrdersRequest withWebPropertyCode(String webPropertyCode) {
         this.webPropertyCode = webPropertyCode;
         return this;
     }
     
+    public CreateOrdersRequest(){}
 }

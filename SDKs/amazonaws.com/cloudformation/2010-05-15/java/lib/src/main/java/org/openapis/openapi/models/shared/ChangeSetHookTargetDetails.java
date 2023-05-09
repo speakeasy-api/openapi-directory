@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ChangeSetHookTargetDetails {
     
     public ChangeSetHookResourceTargetDetails resourceTargetDetails;
+
     public ChangeSetHookTargetDetails withResourceTargetDetails(ChangeSetHookResourceTargetDetails resourceTargetDetails) {
         this.resourceTargetDetails = resourceTargetDetails;
         return this;
@@ -19,9 +20,11 @@ public class ChangeSetHookTargetDetails {
     
     
     public HookTargetTypeEnum targetType;
+
     public ChangeSetHookTargetDetails withTargetType(HookTargetTypeEnum targetType) {
         this.targetType = targetType;
         return this;
     }
     
+    public ChangeSetHookTargetDetails(){}
 }

@@ -18,6 +18,7 @@ public class LiveStreamContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closedCaptionsIngestionUrl")
     public String closedCaptionsIngestionUrl;
+
     public LiveStreamContentDetails withClosedCaptionsIngestionUrl(String closedCaptionsIngestionUrl) {
         this.closedCaptionsIngestionUrl = closedCaptionsIngestionUrl;
         return this;
@@ -29,9 +30,11 @@ public class LiveStreamContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isReusable")
     public Boolean isReusable;
+
     public LiveStreamContentDetails withIsReusable(Boolean isReusable) {
         this.isReusable = isReusable;
         return this;
     }
     
+    public LiveStreamContentDetails(){}
 }

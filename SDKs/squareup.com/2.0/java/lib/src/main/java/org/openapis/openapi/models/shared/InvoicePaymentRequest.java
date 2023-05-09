@@ -25,6 +25,7 @@ public class InvoicePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automatic_payment_source")
     public String automaticPaymentSource;
+
     public InvoicePaymentRequest withAutomaticPaymentSource(String automaticPaymentSource) {
         this.automaticPaymentSource = automaticPaymentSource;
         return this;
@@ -37,6 +38,7 @@ public class InvoicePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card_id")
     public String cardId;
+
     public InvoicePaymentRequest withCardId(String cardId) {
         this.cardId = cardId;
         return this;
@@ -53,6 +55,7 @@ public class InvoicePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computed_amount_money")
     public Money computedAmountMoney;
+
     public InvoicePaymentRequest withComputedAmountMoney(Money computedAmountMoney) {
         this.computedAmountMoney = computedAmountMoney;
         return this;
@@ -69,6 +72,7 @@ public class InvoicePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("due_date")
     public String dueDate;
+
     public InvoicePaymentRequest withDueDate(String dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -85,6 +89,7 @@ public class InvoicePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixed_amount_requested_money")
     public Money fixedAmountRequestedMoney;
+
     public InvoicePaymentRequest withFixedAmountRequestedMoney(Money fixedAmountRequestedMoney) {
         this.fixedAmountRequestedMoney = fixedAmountRequestedMoney;
         return this;
@@ -104,6 +109,7 @@ public class InvoicePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage_requested")
     public String percentageRequested;
+
     public InvoicePaymentRequest withPercentageRequested(String percentageRequested) {
         this.percentageRequested = percentageRequested;
         return this;
@@ -115,6 +121,7 @@ public class InvoicePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reminders")
     public InvoicePaymentReminder[] reminders;
+
     public InvoicePaymentRequest withReminders(InvoicePaymentReminder[] reminders) {
         this.reminders = reminders;
         return this;
@@ -132,6 +139,7 @@ public class InvoicePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request_method")
     public String requestMethod;
+
     public InvoicePaymentRequest withRequestMethod(String requestMethod) {
         this.requestMethod = requestMethod;
         return this;
@@ -144,6 +152,7 @@ public class InvoicePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request_type")
     public String requestType;
+
     public InvoicePaymentRequest withRequestType(String requestType) {
         this.requestType = requestType;
         return this;
@@ -160,6 +169,7 @@ public class InvoicePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rounding_adjustment_included_money")
     public Money roundingAdjustmentIncludedMoney;
+
     public InvoicePaymentRequest withRoundingAdjustmentIncludedMoney(Money roundingAdjustmentIncludedMoney) {
         this.roundingAdjustmentIncludedMoney = roundingAdjustmentIncludedMoney;
         return this;
@@ -175,6 +185,7 @@ public class InvoicePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tipping_enabled")
     public Boolean tippingEnabled;
+
     public InvoicePaymentRequest withTippingEnabled(Boolean tippingEnabled) {
         this.tippingEnabled = tippingEnabled;
         return this;
@@ -191,6 +202,7 @@ public class InvoicePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_completed_amount_money")
     public Money totalCompletedAmountMoney;
+
     public InvoicePaymentRequest withTotalCompletedAmountMoney(Money totalCompletedAmountMoney) {
         this.totalCompletedAmountMoney = totalCompletedAmountMoney;
         return this;
@@ -202,9 +214,11 @@ public class InvoicePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public InvoicePaymentRequest withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public InvoicePaymentRequest(){}
 }

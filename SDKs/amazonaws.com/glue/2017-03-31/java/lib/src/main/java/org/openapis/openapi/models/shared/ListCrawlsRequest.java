@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListCrawlsRequest {
     @JsonProperty("CrawlerName")
     public String crawlerName;
+
     public ListCrawlsRequest withCrawlerName(String crawlerName) {
         this.crawlerName = crawlerName;
         return this;
@@ -19,6 +20,7 @@ public class ListCrawlsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public CrawlsFilter[] filters;
+
     public ListCrawlsRequest withFilters(CrawlsFilter[] filters) {
         this.filters = filters;
         return this;
@@ -27,6 +29,7 @@ public class ListCrawlsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListCrawlsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,9 +38,13 @@ public class ListCrawlsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCrawlsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCrawlsRequest(@JsonProperty("CrawlerName") String crawlerName) {
+        this.crawlerName = crawlerName;
+  }
 }

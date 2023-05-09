@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class TestTypeOutput {
     
     public String typeVersionArn;
+
     public TestTypeOutput withTypeVersionArn(String typeVersionArn) {
         this.typeVersionArn = typeVersionArn;
         return this;
     }
     
+    public TestTypeOutput(){}
 }

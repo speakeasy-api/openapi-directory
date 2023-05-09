@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.HomegraphAgentUsersDeleteSecurity;
 import org.openapis.openapi.models.operations.HomegraphAgentUsersDeleteRequest;
 import org.openapis.openapi.models.operations.HomegraphAgentUsersDeleteResponse;
+import org.openapis.openapi.models.operations.HomegraphAgentUsersDeleteSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -29,11 +28,10 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            HomegraphAgentUsersDeleteRequest req = new HomegraphAgentUsersDeleteRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                agentUserId = "distinctio";
-                alt = "proto";
+            HomegraphAgentUsersDeleteRequest req = new HomegraphAgentUsersDeleteRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
                 callback = "unde";
                 fields = "nulla";
                 key = "corrupti";
@@ -43,19 +41,21 @@ public class Application {
                 requestId = "error";
                 uploadType = "deserunt";
                 uploadProtocol = "suscipit";
-            }}            
+            }};            
 
-            HomegraphAgentUsersDeleteResponse res = sdk.agentUsers.homegraphAgentUsersDelete(req, new HomegraphAgentUsersDeleteSecurity() {{
+            HomegraphAgentUsersDeleteResponse res = sdk.agentUsers.homegraphAgentUsersDelete(req, new HomegraphAgentUsersDeleteSecurity("iure", "magnam") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.empty.isPresent()) {
+            if (res.empty != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -63,16 +63,16 @@ public class Application {
 ## Available Resources and Operations
 
 
-### agentUsers
+### [agentUsers](docs/agentusers/README.md)
 
-* `homegraphAgentUsersDelete` - Unlinks the given third-party user from your smart home Action. All data related to this user will be deleted. For more details on how users link their accounts, see [fulfillment and authentication](https://developers.home.google.com/cloud-to-cloud/primer/fulfillment). The third-party user's identity is passed in via the `agent_user_id` (see DeleteAgentUserRequest). This request must be authorized using service account credentials from your Actions console project.
+* [homegraphAgentUsersDelete](docs/agentusers/README.md#homegraphagentusersdelete) - Unlinks the given third-party user from your smart home Action. All data related to this user will be deleted. For more details on how users link their accounts, see [fulfillment and authentication](https://developers.home.google.com/cloud-to-cloud/primer/fulfillment). The third-party user's identity is passed in via the `agent_user_id` (see DeleteAgentUserRequest). This request must be authorized using service account credentials from your Actions console project.
 
-### devices
+### [devices](docs/devices/README.md)
 
-* `homegraphDevicesQuery` - Gets the current states in Home Graph for the given set of the third-party user's devices. The third-party user's identity is passed in via the `agent_user_id` (see QueryRequest). This request must be authorized using service account credentials from your Actions console project.
-* `homegraphDevicesReportStateAndNotification` - Reports device state and optionally sends device notifications. Called by your smart home Action when the state of a third-party device changes or you need to send a notification about the device. See [Implement Report State](https://developers.home.google.com/cloud-to-cloud/integration/report-state) for more information. This method updates the device state according to its declared [traits](https://developers.home.google.com/cloud-to-cloud/primer/device-types-and-traits). Publishing a new state value outside of these traits will result in an `INVALID_ARGUMENT` error response. The third-party user's identity is passed in via the `agent_user_id` (see ReportStateAndNotificationRequest). This request must be authorized using service account credentials from your Actions console project.
-* `homegraphDevicesRequestSync` - Requests Google to send an `action.devices.SYNC` [intent](https://developers.home.google.com/cloud-to-cloud/intents/sync) to your smart home Action to update device metadata for the given user. The third-party user's identity is passed via the `agent_user_id` (see RequestSyncDevicesRequest). This request must be authorized using service account credentials from your Actions console project.
-* `homegraphDevicesSync` - Gets all the devices associated with the given third-party user. The third-party user's identity is passed in via the `agent_user_id` (see SyncRequest). This request must be authorized using service account credentials from your Actions console project.
+* [homegraphDevicesQuery](docs/devices/README.md#homegraphdevicesquery) - Gets the current states in Home Graph for the given set of the third-party user's devices. The third-party user's identity is passed in via the `agent_user_id` (see QueryRequest). This request must be authorized using service account credentials from your Actions console project.
+* [homegraphDevicesReportStateAndNotification](docs/devices/README.md#homegraphdevicesreportstateandnotification) - Reports device state and optionally sends device notifications. Called by your smart home Action when the state of a third-party device changes or you need to send a notification about the device. See [Implement Report State](https://developers.home.google.com/cloud-to-cloud/integration/report-state) for more information. This method updates the device state according to its declared [traits](https://developers.home.google.com/cloud-to-cloud/primer/device-types-and-traits). Publishing a new state value outside of these traits will result in an `INVALID_ARGUMENT` error response. The third-party user's identity is passed in via the `agent_user_id` (see ReportStateAndNotificationRequest). This request must be authorized using service account credentials from your Actions console project.
+* [homegraphDevicesRequestSync](docs/devices/README.md#homegraphdevicesrequestsync) - Requests Google to send an `action.devices.SYNC` [intent](https://developers.home.google.com/cloud-to-cloud/intents/sync) to your smart home Action to update device metadata for the given user. The third-party user's identity is passed via the `agent_user_id` (see RequestSyncDevicesRequest). This request must be authorized using service account credentials from your Actions console project.
+* [homegraphDevicesSync](docs/devices/README.md#homegraphdevicessync) - Gets all the devices associated with the given third-party user. The third-party user's identity is passed in via the `agent_user_id` (see SyncRequest). This request must be authorized using service account credentials from your Actions console project.
 <!-- End SDK Available Operations -->
 
 ### Maturity

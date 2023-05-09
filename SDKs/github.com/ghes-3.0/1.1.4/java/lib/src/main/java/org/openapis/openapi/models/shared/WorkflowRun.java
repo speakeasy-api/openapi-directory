@@ -22,6 +22,7 @@ public class WorkflowRun {
      */
     @JsonProperty("artifacts_url")
     public String artifactsUrl;
+
     public WorkflowRun withArtifactsUrl(String artifactsUrl) {
         this.artifactsUrl = artifactsUrl;
         return this;
@@ -32,6 +33,7 @@ public class WorkflowRun {
      */
     @JsonProperty("cancel_url")
     public String cancelUrl;
+
     public WorkflowRun withCancelUrl(String cancelUrl) {
         this.cancelUrl = cancelUrl;
         return this;
@@ -43,6 +45,7 @@ public class WorkflowRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("check_suite_id")
     public Long checkSuiteId;
+
     public WorkflowRun withCheckSuiteId(Long checkSuiteId) {
         this.checkSuiteId = checkSuiteId;
         return this;
@@ -54,6 +57,7 @@ public class WorkflowRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("check_suite_node_id")
     public String checkSuiteNodeId;
+
     public WorkflowRun withCheckSuiteNodeId(String checkSuiteNodeId) {
         this.checkSuiteNodeId = checkSuiteNodeId;
         return this;
@@ -64,6 +68,7 @@ public class WorkflowRun {
      */
     @JsonProperty("check_suite_url")
     public String checkSuiteUrl;
+
     public WorkflowRun withCheckSuiteUrl(String checkSuiteUrl) {
         this.checkSuiteUrl = checkSuiteUrl;
         return this;
@@ -71,6 +76,7 @@ public class WorkflowRun {
     
     @JsonProperty("conclusion")
     public String conclusion;
+
     public WorkflowRun withConclusion(String conclusion) {
         this.conclusion = conclusion;
         return this;
@@ -80,6 +86,7 @@ public class WorkflowRun {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public WorkflowRun withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -87,6 +94,7 @@ public class WorkflowRun {
     
     @JsonProperty("event")
     public String event;
+
     public WorkflowRun withEvent(String event) {
         this.event = event;
         return this;
@@ -94,6 +102,7 @@ public class WorkflowRun {
     
     @JsonProperty("head_branch")
     public String headBranch;
+
     public WorkflowRun withHeadBranch(String headBranch) {
         this.headBranch = headBranch;
         return this;
@@ -104,6 +113,7 @@ public class WorkflowRun {
      */
     @JsonProperty("head_commit")
     public NullableSimpleCommit headCommit;
+
     public WorkflowRun withHeadCommit(NullableSimpleCommit headCommit) {
         this.headCommit = headCommit;
         return this;
@@ -114,6 +124,7 @@ public class WorkflowRun {
      */
     @JsonProperty("head_repository")
     public MinimalRepository headRepository;
+
     public WorkflowRun withHeadRepository(MinimalRepository headRepository) {
         this.headRepository = headRepository;
         return this;
@@ -122,6 +133,7 @@ public class WorkflowRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("head_repository_id")
     public Long headRepositoryId;
+
     public WorkflowRun withHeadRepositoryId(Long headRepositoryId) {
         this.headRepositoryId = headRepositoryId;
         return this;
@@ -132,6 +144,7 @@ public class WorkflowRun {
      */
     @JsonProperty("head_sha")
     public String headSha;
+
     public WorkflowRun withHeadSha(String headSha) {
         this.headSha = headSha;
         return this;
@@ -139,6 +152,7 @@ public class WorkflowRun {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public WorkflowRun withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -149,6 +163,7 @@ public class WorkflowRun {
      */
     @JsonProperty("id")
     public Long id;
+
     public WorkflowRun withId(Long id) {
         this.id = id;
         return this;
@@ -159,6 +174,7 @@ public class WorkflowRun {
      */
     @JsonProperty("jobs_url")
     public String jobsUrl;
+
     public WorkflowRun withJobsUrl(String jobsUrl) {
         this.jobsUrl = jobsUrl;
         return this;
@@ -169,6 +185,7 @@ public class WorkflowRun {
      */
     @JsonProperty("logs_url")
     public String logsUrl;
+
     public WorkflowRun withLogsUrl(String logsUrl) {
         this.logsUrl = logsUrl;
         return this;
@@ -180,6 +197,7 @@ public class WorkflowRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WorkflowRun withName(String name) {
         this.name = name;
         return this;
@@ -187,6 +205,7 @@ public class WorkflowRun {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public WorkflowRun withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -198,6 +217,7 @@ public class WorkflowRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous_attempt_url")
     public String previousAttemptUrl;
+
     public WorkflowRun withPreviousAttemptUrl(String previousAttemptUrl) {
         this.previousAttemptUrl = previousAttemptUrl;
         return this;
@@ -205,6 +225,7 @@ public class WorkflowRun {
     
     @JsonProperty("pull_requests")
     public PullRequestMinimal[] pullRequests;
+
     public WorkflowRun withPullRequests(PullRequestMinimal[] pullRequests) {
         this.pullRequests = pullRequests;
         return this;
@@ -215,6 +236,7 @@ public class WorkflowRun {
      */
     @JsonProperty("repository")
     public MinimalRepository repository;
+
     public WorkflowRun withRepository(MinimalRepository repository) {
         this.repository = repository;
         return this;
@@ -225,6 +247,7 @@ public class WorkflowRun {
      */
     @JsonProperty("rerun_url")
     public String rerunUrl;
+
     public WorkflowRun withRerunUrl(String rerunUrl) {
         this.rerunUrl = rerunUrl;
         return this;
@@ -236,6 +259,7 @@ public class WorkflowRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("run_attempt")
     public Long runAttempt;
+
     public WorkflowRun withRunAttempt(Long runAttempt) {
         this.runAttempt = runAttempt;
         return this;
@@ -246,6 +270,7 @@ public class WorkflowRun {
      */
     @JsonProperty("run_number")
     public Long runNumber;
+
     public WorkflowRun withRunNumber(Long runNumber) {
         this.runNumber = runNumber;
         return this;
@@ -259,6 +284,7 @@ public class WorkflowRun {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("run_started_at")
     public OffsetDateTime runStartedAt;
+
     public WorkflowRun withRunStartedAt(OffsetDateTime runStartedAt) {
         this.runStartedAt = runStartedAt;
         return this;
@@ -266,6 +292,7 @@ public class WorkflowRun {
     
     @JsonProperty("status")
     public String status;
+
     public WorkflowRun withStatus(String status) {
         this.status = status;
         return this;
@@ -275,6 +302,7 @@ public class WorkflowRun {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public WorkflowRun withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -285,6 +313,7 @@ public class WorkflowRun {
      */
     @JsonProperty("url")
     public String url;
+
     public WorkflowRun withUrl(String url) {
         this.url = url;
         return this;
@@ -295,6 +324,7 @@ public class WorkflowRun {
      */
     @JsonProperty("workflow_id")
     public Long workflowId;
+
     public WorkflowRun withWorkflowId(Long workflowId) {
         this.workflowId = workflowId;
         return this;
@@ -305,9 +335,36 @@ public class WorkflowRun {
      */
     @JsonProperty("workflow_url")
     public String workflowUrl;
+
     public WorkflowRun withWorkflowUrl(String workflowUrl) {
         this.workflowUrl = workflowUrl;
         return this;
     }
     
+    public WorkflowRun(@JsonProperty("artifacts_url") String artifactsUrl, @JsonProperty("cancel_url") String cancelUrl, @JsonProperty("check_suite_url") String checkSuiteUrl, @JsonProperty("conclusion") String conclusion, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("event") String event, @JsonProperty("head_branch") String headBranch, @JsonProperty("head_commit") NullableSimpleCommit headCommit, @JsonProperty("head_repository") MinimalRepository headRepository, @JsonProperty("head_sha") String headSha, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("jobs_url") String jobsUrl, @JsonProperty("logs_url") String logsUrl, @JsonProperty("node_id") String nodeId, @JsonProperty("pull_requests") PullRequestMinimal[] pullRequests, @JsonProperty("repository") MinimalRepository repository, @JsonProperty("rerun_url") String rerunUrl, @JsonProperty("run_number") Long runNumber, @JsonProperty("status") String status, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url, @JsonProperty("workflow_id") Long workflowId, @JsonProperty("workflow_url") String workflowUrl) {
+        this.artifactsUrl = artifactsUrl;
+        this.cancelUrl = cancelUrl;
+        this.checkSuiteUrl = checkSuiteUrl;
+        this.conclusion = conclusion;
+        this.createdAt = createdAt;
+        this.event = event;
+        this.headBranch = headBranch;
+        this.headCommit = headCommit;
+        this.headRepository = headRepository;
+        this.headSha = headSha;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.jobsUrl = jobsUrl;
+        this.logsUrl = logsUrl;
+        this.nodeId = nodeId;
+        this.pullRequests = pullRequests;
+        this.repository = repository;
+        this.rerunUrl = rerunUrl;
+        this.runNumber = runNumber;
+        this.status = status;
+        this.updatedAt = updatedAt;
+        this.url = url;
+        this.workflowId = workflowId;
+        this.workflowUrl = workflowUrl;
+  }
 }

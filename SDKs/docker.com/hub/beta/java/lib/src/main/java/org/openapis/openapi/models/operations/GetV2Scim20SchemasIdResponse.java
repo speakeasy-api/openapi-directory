@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV2Scim20SchemasIdResponse {
     
     public String contentType;
+
     public GetV2Scim20SchemasIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetV2Scim20SchemasIdResponse {
     
     
     public Integer statusCode;
+
     public GetV2Scim20SchemasIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetV2Scim20SchemasIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV2Scim20SchemasIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetV2Scim20SchemasIdResponse {
      */
     
     public GetV2Scim20SchemasId401ApplicationScimPlusJson getV2Scim20SchemasId401ApplicationScimPlusJsonObject;
+
     public GetV2Scim20SchemasIdResponse withGetV2Scim20SchemasId401ApplicationScimPlusJsonObject(GetV2Scim20SchemasId401ApplicationScimPlusJson getV2Scim20SchemasId401ApplicationScimPlusJsonObject) {
         this.getV2Scim20SchemasId401ApplicationScimPlusJsonObject = getV2Scim20SchemasId401ApplicationScimPlusJsonObject;
         return this;
@@ -43,6 +48,7 @@ public class GetV2Scim20SchemasIdResponse {
      */
     
     public GetV2Scim20SchemasId404ApplicationScimPlusJson getV2Scim20SchemasId404ApplicationScimPlusJsonObject;
+
     public GetV2Scim20SchemasIdResponse withGetV2Scim20SchemasId404ApplicationScimPlusJsonObject(GetV2Scim20SchemasId404ApplicationScimPlusJson getV2Scim20SchemasId404ApplicationScimPlusJsonObject) {
         this.getV2Scim20SchemasId404ApplicationScimPlusJsonObject = getV2Scim20SchemasId404ApplicationScimPlusJsonObject;
         return this;
@@ -53,6 +59,7 @@ public class GetV2Scim20SchemasIdResponse {
      */
     
     public GetV2Scim20SchemasId500ApplicationScimPlusJson getV2Scim20SchemasId500ApplicationScimPlusJsonObject;
+
     public GetV2Scim20SchemasIdResponse withGetV2Scim20SchemasId500ApplicationScimPlusJsonObject(GetV2Scim20SchemasId500ApplicationScimPlusJson getV2Scim20SchemasId500ApplicationScimPlusJsonObject) {
         this.getV2Scim20SchemasId500ApplicationScimPlusJsonObject = getV2Scim20SchemasId500ApplicationScimPlusJsonObject;
         return this;
@@ -60,9 +67,14 @@ public class GetV2Scim20SchemasIdResponse {
     
     
     public org.openapis.openapi.models.shared.ScimSchema scimSchema;
+
     public GetV2Scim20SchemasIdResponse withScimSchema(org.openapis.openapi.models.shared.ScimSchema scimSchema) {
         this.scimSchema = scimSchema;
         return this;
     }
     
+    public GetV2Scim20SchemasIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class StackTrace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elements")
     public StackTraceElement[] elements;
+
     public StackTrace withElements(StackTraceElement[] elements) {
         this.elements = elements;
         return this;
     }
     
+    public StackTrace(){}
 }

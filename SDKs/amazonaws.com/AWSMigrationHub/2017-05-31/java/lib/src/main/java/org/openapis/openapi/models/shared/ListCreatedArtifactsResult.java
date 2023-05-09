@@ -15,6 +15,7 @@ public class ListCreatedArtifactsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedArtifactList")
     public CreatedArtifact[] createdArtifactList;
+
     public ListCreatedArtifactsResult withCreatedArtifactList(CreatedArtifact[] createdArtifactList) {
         this.createdArtifactList = createdArtifactList;
         return this;
@@ -23,9 +24,11 @@ public class ListCreatedArtifactsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCreatedArtifactsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCreatedArtifactsResult(){}
 }

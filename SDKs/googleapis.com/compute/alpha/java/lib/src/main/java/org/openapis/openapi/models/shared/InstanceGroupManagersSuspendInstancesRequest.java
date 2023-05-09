@@ -15,6 +15,7 @@ public class InstanceGroupManagersSuspendInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceSuspend")
     public Boolean forceSuspend;
+
     public InstanceGroupManagersSuspendInstancesRequest withForceSuspend(Boolean forceSuspend) {
         this.forceSuspend = forceSuspend;
         return this;
@@ -26,9 +27,11 @@ public class InstanceGroupManagersSuspendInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public String[] instances;
+
     public InstanceGroupManagersSuspendInstancesRequest withInstances(String[] instances) {
         this.instances = instances;
         return this;
     }
     
+    public InstanceGroupManagersSuspendInstancesRequest(){}
 }

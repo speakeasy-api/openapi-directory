@@ -15,6 +15,7 @@ public class Taxon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Taxon withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class Taxon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public Taxon withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public Taxon(){}
 }

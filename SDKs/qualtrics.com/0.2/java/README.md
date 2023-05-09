@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CreateContactInMailinglistRequest;
 import org.openapis.openapi.models.operations.CreateContactInMailinglistResponse;
 import org.openapis.openapi.models.shared.CreateContactInMailingList;
@@ -27,16 +26,12 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateContactInMailinglistRequest req = new CreateContactInMailinglistRequest() {{
-                createContactInMailingList = new CreateContactInMailingList() {{
-                    email = "Larue_Rau85@yahoo.com";
-                    firstName = "Karley";
-                    lastName = "Stamm";
-                    unsubscribed = false;
-                }};
-                directoryId = "vel";
-                mailingListId = "error";
-            }}            
+            CreateContactInMailinglistRequest req = new CreateContactInMailinglistRequest(                new CreateContactInMailingList() {{
+                                email = "Larue_Rau85@yahoo.com";
+                                firstName = "Karley";
+                                lastName = "Stamm";
+                                unsubscribed = false;
+                            }};, "vel", "error");            
 
             CreateContactInMailinglistResponse res = sdk.createContactInMailinglist(req);
 
@@ -46,22 +41,24 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `createContactInMailinglist` - Create contact in mailing list
-* `generateDistributionLinks` - Generate distribution links
-* `getDistributions` - Get distributions for survey
-* `getEventSubscriptions` - Get event subscriptions
-* `getSurvey` - Get survey
-* `retrievedistributionlinks` - Retrieve distribution links
-* `webhookDelete` - Remove subscription to response event
-* `whenAResponseIsReceived` - Triggers when a response is submitted to a qualtrics survey
+* [createContactInMailinglist](docs/sdk/README.md#createcontactinmailinglist) - Create contact in mailing list
+* [generateDistributionLinks](docs/sdk/README.md#generatedistributionlinks) - Generate distribution links
+* [getDistributions](docs/sdk/README.md#getdistributions) - Get distributions for survey
+* [getEventSubscriptions](docs/sdk/README.md#geteventsubscriptions) - Get event subscriptions
+* [getSurvey](docs/sdk/README.md#getsurvey) - Get survey
+* [retrievedistributionlinks](docs/sdk/README.md#retrievedistributionlinks) - Retrieve distribution links
+* [webhookDelete](docs/sdk/README.md#webhookdelete) - Remove subscription to response event
+* [whenAResponseIsReceived](docs/sdk/README.md#whenaresponseisreceived) - Triggers when a response is submitted to a qualtrics survey
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -18,6 +18,7 @@ public class PeeredDnsDomain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsSuffix")
     public String dnsSuffix;
+
     public PeeredDnsDomain withDnsSuffix(String dnsSuffix) {
         this.dnsSuffix = dnsSuffix;
         return this;
@@ -29,9 +30,11 @@ public class PeeredDnsDomain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PeeredDnsDomain withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PeeredDnsDomain(){}
 }

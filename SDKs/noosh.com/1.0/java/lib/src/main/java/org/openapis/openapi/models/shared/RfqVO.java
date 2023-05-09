@@ -15,6 +15,7 @@ public class RfqVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfq_id")
     public Long rfqId;
+
     public RfqVO withRfqId(Long rfqId) {
         this.rfqId = rfqId;
         return this;
@@ -23,6 +24,7 @@ public class RfqVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public RfqVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class RfqVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public RfqVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public RfqVO(){}
 }

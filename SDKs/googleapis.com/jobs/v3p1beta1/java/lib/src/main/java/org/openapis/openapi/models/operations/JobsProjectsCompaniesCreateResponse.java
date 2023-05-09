@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class JobsProjectsCompaniesCreateResponse {
@@ -12,6 +13,7 @@ public class JobsProjectsCompaniesCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.Company company;
+
     public JobsProjectsCompaniesCreateResponse withCompany(org.openapis.openapi.models.shared.Company company) {
         this.company = company;
         return this;
@@ -19,6 +21,7 @@ public class JobsProjectsCompaniesCreateResponse {
     
     
     public String contentType;
+
     public JobsProjectsCompaniesCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class JobsProjectsCompaniesCreateResponse {
     
     
     public Integer statusCode;
+
     public JobsProjectsCompaniesCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class JobsProjectsCompaniesCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public JobsProjectsCompaniesCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public JobsProjectsCompaniesCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

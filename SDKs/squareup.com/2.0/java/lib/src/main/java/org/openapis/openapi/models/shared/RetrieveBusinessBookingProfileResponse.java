@@ -15,6 +15,7 @@ public class RetrieveBusinessBookingProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("business_booking_profile")
     public BusinessBookingProfile businessBookingProfile;
+
     public RetrieveBusinessBookingProfileResponse withBusinessBookingProfile(BusinessBookingProfile businessBookingProfile) {
         this.businessBookingProfile = businessBookingProfile;
         return this;
@@ -26,9 +27,11 @@ public class RetrieveBusinessBookingProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RetrieveBusinessBookingProfileResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public RetrieveBusinessBookingProfileResponse(){}
 }

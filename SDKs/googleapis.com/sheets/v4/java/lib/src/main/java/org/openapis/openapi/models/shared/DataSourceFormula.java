@@ -18,6 +18,7 @@ public class DataSourceFormula {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataExecutionStatus")
     public DataExecutionStatus dataExecutionStatus;
+
     public DataSourceFormula withDataExecutionStatus(DataExecutionStatus dataExecutionStatus) {
         this.dataExecutionStatus = dataExecutionStatus;
         return this;
@@ -29,9 +30,11 @@ public class DataSourceFormula {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceId")
     public String dataSourceId;
+
     public DataSourceFormula withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
     }
     
+    public DataSourceFormula(){}
 }

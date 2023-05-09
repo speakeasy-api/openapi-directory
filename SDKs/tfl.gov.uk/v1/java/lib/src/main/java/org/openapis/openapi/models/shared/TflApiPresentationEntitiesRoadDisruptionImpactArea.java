@@ -19,6 +19,7 @@ public class TflApiPresentationEntitiesRoadDisruptionImpactArea {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDate")
     public OffsetDateTime endDate;
+
     public TflApiPresentationEntitiesRoadDisruptionImpactArea withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -27,6 +28,7 @@ public class TflApiPresentationEntitiesRoadDisruptionImpactArea {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public TflApiPresentationEntitiesRoadDisruptionImpactArea withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -35,6 +37,7 @@ public class TflApiPresentationEntitiesRoadDisruptionImpactArea {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public TflApiPresentationEntitiesRoadDisruptionImpactArea withId(Integer id) {
         this.id = id;
         return this;
@@ -43,6 +46,7 @@ public class TflApiPresentationEntitiesRoadDisruptionImpactArea {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("polygon")
     public SystemDataSpatialDbGeography polygon;
+
     public TflApiPresentationEntitiesRoadDisruptionImpactArea withPolygon(SystemDataSpatialDbGeography polygon) {
         this.polygon = polygon;
         return this;
@@ -51,6 +55,7 @@ public class TflApiPresentationEntitiesRoadDisruptionImpactArea {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roadDisruptionId")
     public String roadDisruptionId;
+
     public TflApiPresentationEntitiesRoadDisruptionImpactArea withRoadDisruptionId(String roadDisruptionId) {
         this.roadDisruptionId = roadDisruptionId;
         return this;
@@ -61,6 +66,7 @@ public class TflApiPresentationEntitiesRoadDisruptionImpactArea {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDate")
     public OffsetDateTime startDate;
+
     public TflApiPresentationEntitiesRoadDisruptionImpactArea withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -69,9 +75,11 @@ public class TflApiPresentationEntitiesRoadDisruptionImpactArea {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public TflApiPresentationEntitiesRoadDisruptionImpactArea withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public TflApiPresentationEntitiesRoadDisruptionImpactArea(){}
 }

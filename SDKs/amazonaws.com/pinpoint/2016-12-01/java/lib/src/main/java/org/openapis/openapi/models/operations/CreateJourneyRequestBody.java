@@ -12,9 +12,13 @@ public class CreateJourneyRequestBody {
      */
     @JsonProperty("WriteJourneyRequest")
     public CreateJourneyRequestBodyWriteJourneyRequest writeJourneyRequest;
+
     public CreateJourneyRequestBody withWriteJourneyRequest(CreateJourneyRequestBodyWriteJourneyRequest writeJourneyRequest) {
         this.writeJourneyRequest = writeJourneyRequest;
         return this;
     }
     
+    public CreateJourneyRequestBody(@JsonProperty("WriteJourneyRequest") CreateJourneyRequestBodyWriteJourneyRequest writeJourneyRequest) {
+        this.writeJourneyRequest = writeJourneyRequest;
+  }
 }

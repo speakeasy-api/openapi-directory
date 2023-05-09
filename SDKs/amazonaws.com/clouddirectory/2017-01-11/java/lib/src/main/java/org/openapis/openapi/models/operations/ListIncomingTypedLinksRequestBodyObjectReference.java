@@ -15,9 +15,11 @@ public class ListIncomingTypedLinksRequestBodyObjectReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Selector")
     public String selector;
+
     public ListIncomingTypedLinksRequestBodyObjectReference withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public ListIncomingTypedLinksRequestBodyObjectReference(){}
 }

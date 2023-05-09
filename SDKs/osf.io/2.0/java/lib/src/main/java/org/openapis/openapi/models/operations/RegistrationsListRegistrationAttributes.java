@@ -15,6 +15,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public RegistrationsListRegistrationAttributesCategoryEnum category;
+
     public RegistrationsListRegistrationAttributes withCategory(RegistrationsListRegistrationAttributesCategoryEnum category) {
         this.category = category;
         return this;
@@ -25,6 +26,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public Boolean collection;
+
     public RegistrationsListRegistrationAttributes withCollection(Boolean collection) {
         this.collection = collection;
         return this;
@@ -35,6 +37,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public Boolean currentUserCanComment;
+
     public RegistrationsListRegistrationAttributes withCurrentUserCanComment(Boolean currentUserCanComment) {
         this.currentUserCanComment = currentUserCanComment;
         return this;
@@ -45,6 +48,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public String[] currentUserPermissions;
+
     public RegistrationsListRegistrationAttributes withCurrentUserPermissions(String[] currentUserPermissions) {
         this.currentUserPermissions = currentUserPermissions;
         return this;
@@ -55,6 +59,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public RegistrationsListRegistrationAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -65,6 +70,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public OffsetDateTime dateModified;
+
     public RegistrationsListRegistrationAttributes withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -75,6 +81,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public OffsetDateTime dateRegistered;
+
     public RegistrationsListRegistrationAttributes withDateRegistered(OffsetDateTime dateRegistered) {
         this.dateRegistered = dateRegistered;
         return this;
@@ -85,6 +92,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public OffsetDateTime dateWithdrawn;
+
     public RegistrationsListRegistrationAttributes withDateWithdrawn(OffsetDateTime dateWithdrawn) {
         this.dateWithdrawn = dateWithdrawn;
         return this;
@@ -95,6 +103,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public String description;
+
     public RegistrationsListRegistrationAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -105,6 +114,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public OffsetDateTime embargoEndDate;
+
     public RegistrationsListRegistrationAttributes withEmbargoEndDate(OffsetDateTime embargoEndDate) {
         this.embargoEndDate = embargoEndDate;
         return this;
@@ -115,6 +125,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public Boolean fork;
+
     public RegistrationsListRegistrationAttributes withFork(Boolean fork) {
         this.fork = fork;
         return this;
@@ -125,6 +136,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public String nodeLicense;
+
     public RegistrationsListRegistrationAttributes withNodeLicense(String nodeLicense) {
         this.nodeLicense = nodeLicense;
         return this;
@@ -135,6 +147,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public Boolean pendingEmbargoApproval;
+
     public RegistrationsListRegistrationAttributes withPendingEmbargoApproval(Boolean pendingEmbargoApproval) {
         this.pendingEmbargoApproval = pendingEmbargoApproval;
         return this;
@@ -145,6 +158,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public Boolean pendingRegistrationApproval;
+
     public RegistrationsListRegistrationAttributes withPendingRegistrationApproval(Boolean pendingRegistrationApproval) {
         this.pendingRegistrationApproval = pendingRegistrationApproval;
         return this;
@@ -155,6 +169,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public Boolean pendingWithdrawal;
+
     public RegistrationsListRegistrationAttributes withPendingWithdrawal(Boolean pendingWithdrawal) {
         this.pendingWithdrawal = pendingWithdrawal;
         return this;
@@ -165,6 +180,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public Boolean preprint;
+
     public RegistrationsListRegistrationAttributes withPreprint(Boolean preprint) {
         this.preprint = preprint;
         return this;
@@ -175,6 +191,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public Boolean public_;
+
     public RegistrationsListRegistrationAttributes withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -185,6 +202,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public String registeredMeta;
+
     public RegistrationsListRegistrationAttributes withRegisteredMeta(String registeredMeta) {
         this.registeredMeta = registeredMeta;
         return this;
@@ -195,6 +213,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public Boolean registration;
+
     public RegistrationsListRegistrationAttributes withRegistration(Boolean registration) {
         this.registration = registration;
         return this;
@@ -205,6 +224,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public String registrationSupplement;
+
     public RegistrationsListRegistrationAttributes withRegistrationSupplement(String registrationSupplement) {
         this.registrationSupplement = registrationSupplement;
         return this;
@@ -215,6 +235,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public String[] tags;
+
     public RegistrationsListRegistrationAttributes withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -225,6 +246,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public String templateFrom;
+
     public RegistrationsListRegistrationAttributes withTemplateFrom(String templateFrom) {
         this.templateFrom = templateFrom;
         return this;
@@ -235,6 +257,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public String title;
+
     public RegistrationsListRegistrationAttributes withTitle(String title) {
         this.title = title;
         return this;
@@ -245,6 +268,7 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public String withdrawalJustification;
+
     public RegistrationsListRegistrationAttributes withWithdrawalJustification(String withdrawalJustification) {
         this.withdrawalJustification = withdrawalJustification;
         return this;
@@ -255,9 +279,11 @@ public class RegistrationsListRegistrationAttributes {
      */
     
     public Boolean withdrawn;
+
     public RegistrationsListRegistrationAttributes withWithdrawn(Boolean withdrawn) {
         this.withdrawn = withdrawn;
         return this;
     }
     
+    public RegistrationsListRegistrationAttributes(){}
 }

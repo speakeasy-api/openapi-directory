@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RecommendationMetrics {
     @JsonProperty("CostPerHour")
     public Float costPerHour;
+
     public RecommendationMetrics withCostPerHour(Float costPerHour) {
         this.costPerHour = costPerHour;
         return this;
@@ -21,6 +22,7 @@ public class RecommendationMetrics {
     
     @JsonProperty("CostPerInference")
     public Float costPerInference;
+
     public RecommendationMetrics withCostPerInference(Float costPerInference) {
         this.costPerInference = costPerInference;
         return this;
@@ -29,6 +31,7 @@ public class RecommendationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CpuUtilization")
     public Float cpuUtilization;
+
     public RecommendationMetrics withCpuUtilization(Float cpuUtilization) {
         this.cpuUtilization = cpuUtilization;
         return this;
@@ -36,6 +39,7 @@ public class RecommendationMetrics {
     
     @JsonProperty("MaxInvocations")
     public Long maxInvocations;
+
     public RecommendationMetrics withMaxInvocations(Long maxInvocations) {
         this.maxInvocations = maxInvocations;
         return this;
@@ -44,6 +48,7 @@ public class RecommendationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemoryUtilization")
     public Float memoryUtilization;
+
     public RecommendationMetrics withMemoryUtilization(Float memoryUtilization) {
         this.memoryUtilization = memoryUtilization;
         return this;
@@ -51,9 +56,16 @@ public class RecommendationMetrics {
     
     @JsonProperty("ModelLatency")
     public Long modelLatency;
+
     public RecommendationMetrics withModelLatency(Long modelLatency) {
         this.modelLatency = modelLatency;
         return this;
     }
     
+    public RecommendationMetrics(@JsonProperty("CostPerHour") Float costPerHour, @JsonProperty("CostPerInference") Float costPerInference, @JsonProperty("MaxInvocations") Long maxInvocations, @JsonProperty("ModelLatency") Long modelLatency) {
+        this.costPerHour = costPerHour;
+        this.costPerInference = costPerInference;
+        this.maxInvocations = maxInvocations;
+        this.modelLatency = modelLatency;
+  }
 }

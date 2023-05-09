@@ -15,6 +15,7 @@ public class GetPendingJobExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inProgressJobs")
     public JobExecutionSummary[] inProgressJobs;
+
     public GetPendingJobExecutionsResponse withInProgressJobs(JobExecutionSummary[] inProgressJobs) {
         this.inProgressJobs = inProgressJobs;
         return this;
@@ -23,9 +24,11 @@ public class GetPendingJobExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queuedJobs")
     public JobExecutionSummary[] queuedJobs;
+
     public GetPendingJobExecutionsResponse withQueuedJobs(JobExecutionSummary[] queuedJobs) {
         this.queuedJobs = queuedJobs;
         return this;
     }
     
+    public GetPendingJobExecutionsResponse(){}
 }

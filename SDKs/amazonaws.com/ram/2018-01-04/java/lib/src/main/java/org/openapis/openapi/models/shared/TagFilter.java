@@ -15,6 +15,7 @@ public class TagFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagKey")
     public String tagKey;
+
     public TagFilter withTagKey(String tagKey) {
         this.tagKey = tagKey;
         return this;
@@ -23,9 +24,11 @@ public class TagFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagValues")
     public String[] tagValues;
+
     public TagFilter withTagValues(String[] tagValues) {
         this.tagValues = tagValues;
         return this;
     }
     
+    public TagFilter(){}
 }

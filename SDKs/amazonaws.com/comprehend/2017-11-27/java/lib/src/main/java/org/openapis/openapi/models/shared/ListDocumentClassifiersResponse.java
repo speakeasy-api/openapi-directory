@@ -15,6 +15,7 @@ public class ListDocumentClassifiersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentClassifierPropertiesList")
     public DocumentClassifierProperties[] documentClassifierPropertiesList;
+
     public ListDocumentClassifiersResponse withDocumentClassifierPropertiesList(DocumentClassifierProperties[] documentClassifierPropertiesList) {
         this.documentClassifierPropertiesList = documentClassifierPropertiesList;
         return this;
@@ -23,9 +24,11 @@ public class ListDocumentClassifiersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDocumentClassifiersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDocumentClassifiersResponse(){}
 }

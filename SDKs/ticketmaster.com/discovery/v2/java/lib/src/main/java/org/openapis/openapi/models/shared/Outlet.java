@@ -15,6 +15,7 @@ public class Outlet {
      */
     
     public String type;
+
     public Outlet withType(String type) {
         this.type = type;
         return this;
@@ -25,9 +26,11 @@ public class Outlet {
      */
     
     public String url;
+
     public Outlet withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Outlet(){}
 }

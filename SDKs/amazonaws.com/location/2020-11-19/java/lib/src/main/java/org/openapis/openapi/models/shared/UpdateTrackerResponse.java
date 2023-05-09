@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class UpdateTrackerResponse {
     @JsonProperty("TrackerArn")
     public String trackerArn;
+
     public UpdateTrackerResponse withTrackerArn(String trackerArn) {
         this.trackerArn = trackerArn;
         return this;
@@ -24,6 +25,7 @@ public class UpdateTrackerResponse {
     
     @JsonProperty("TrackerName")
     public String trackerName;
+
     public UpdateTrackerResponse withTrackerName(String trackerName) {
         this.trackerName = trackerName;
         return this;
@@ -33,9 +35,15 @@ public class UpdateTrackerResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public UpdateTrackerResponse withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public UpdateTrackerResponse(@JsonProperty("TrackerArn") String trackerArn, @JsonProperty("TrackerName") String trackerName, @JsonProperty("UpdateTime") OffsetDateTime updateTime) {
+        this.trackerArn = trackerArn;
+        this.trackerName = trackerName;
+        this.updateTime = updateTime;
+  }
 }

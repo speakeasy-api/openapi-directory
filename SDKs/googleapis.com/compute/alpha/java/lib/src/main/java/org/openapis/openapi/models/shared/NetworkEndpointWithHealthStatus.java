@@ -15,6 +15,7 @@ public class NetworkEndpointWithHealthStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healths")
     public HealthStatusForNetworkEndpoint[] healths;
+
     public NetworkEndpointWithHealthStatus withHealths(HealthStatusForNetworkEndpoint[] healths) {
         this.healths = healths;
         return this;
@@ -26,9 +27,11 @@ public class NetworkEndpointWithHealthStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkEndpoint")
     public NetworkEndpoint networkEndpoint;
+
     public NetworkEndpointWithHealthStatus withNetworkEndpoint(NetworkEndpoint networkEndpoint) {
         this.networkEndpoint = networkEndpoint;
         return this;
     }
     
+    public NetworkEndpointWithHealthStatus(){}
 }

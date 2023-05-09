@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDeploymentTargetsResponse {
     
     public String contentType;
+
     public ListDeploymentTargetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDeploymentTargetsResponse {
      */
     
     public Object deploymentDoesNotExistException;
+
     public ListDeploymentTargetsResponse withDeploymentDoesNotExistException(Object deploymentDoesNotExistException) {
         this.deploymentDoesNotExistException = deploymentDoesNotExistException;
         return this;
@@ -29,6 +32,7 @@ public class ListDeploymentTargetsResponse {
      */
     
     public Object deploymentIdRequiredException;
+
     public ListDeploymentTargetsResponse withDeploymentIdRequiredException(Object deploymentIdRequiredException) {
         this.deploymentIdRequiredException = deploymentIdRequiredException;
         return this;
@@ -39,6 +43,7 @@ public class ListDeploymentTargetsResponse {
      */
     
     public Object deploymentNotStartedException;
+
     public ListDeploymentTargetsResponse withDeploymentNotStartedException(Object deploymentNotStartedException) {
         this.deploymentNotStartedException = deploymentNotStartedException;
         return this;
@@ -49,6 +54,7 @@ public class ListDeploymentTargetsResponse {
      */
     
     public Object invalidDeploymentIdException;
+
     public ListDeploymentTargetsResponse withInvalidDeploymentIdException(Object invalidDeploymentIdException) {
         this.invalidDeploymentIdException = invalidDeploymentIdException;
         return this;
@@ -59,6 +65,7 @@ public class ListDeploymentTargetsResponse {
      */
     
     public Object invalidDeploymentInstanceTypeException;
+
     public ListDeploymentTargetsResponse withInvalidDeploymentInstanceTypeException(Object invalidDeploymentInstanceTypeException) {
         this.invalidDeploymentInstanceTypeException = invalidDeploymentInstanceTypeException;
         return this;
@@ -69,6 +76,7 @@ public class ListDeploymentTargetsResponse {
      */
     
     public Object invalidInstanceStatusException;
+
     public ListDeploymentTargetsResponse withInvalidInstanceStatusException(Object invalidInstanceStatusException) {
         this.invalidInstanceStatusException = invalidInstanceStatusException;
         return this;
@@ -79,6 +87,7 @@ public class ListDeploymentTargetsResponse {
      */
     
     public Object invalidInstanceTypeException;
+
     public ListDeploymentTargetsResponse withInvalidInstanceTypeException(Object invalidInstanceTypeException) {
         this.invalidInstanceTypeException = invalidInstanceTypeException;
         return this;
@@ -89,6 +98,7 @@ public class ListDeploymentTargetsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListDeploymentTargetsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -99,6 +109,7 @@ public class ListDeploymentTargetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDeploymentTargetsOutput listDeploymentTargetsOutput;
+
     public ListDeploymentTargetsResponse withListDeploymentTargetsOutput(org.openapis.openapi.models.shared.ListDeploymentTargetsOutput listDeploymentTargetsOutput) {
         this.listDeploymentTargetsOutput = listDeploymentTargetsOutput;
         return this;
@@ -106,6 +117,7 @@ public class ListDeploymentTargetsResponse {
     
     
     public Integer statusCode;
+
     public ListDeploymentTargetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class ListDeploymentTargetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDeploymentTargetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDeploymentTargetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

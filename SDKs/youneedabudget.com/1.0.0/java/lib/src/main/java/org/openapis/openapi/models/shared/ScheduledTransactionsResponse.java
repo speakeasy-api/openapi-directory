@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScheduledTransactionsResponse {
     @JsonProperty("data")
     public ScheduledTransactionsResponseData data;
+
     public ScheduledTransactionsResponse withData(ScheduledTransactionsResponseData data) {
         this.data = data;
         return this;
     }
     
+    public ScheduledTransactionsResponse(@JsonProperty("data") ScheduledTransactionsResponseData data) {
+        this.data = data;
+  }
 }

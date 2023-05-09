@@ -25,6 +25,7 @@ public class Group {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public Group withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -36,6 +37,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Group withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +49,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Group withName(String name) {
         this.name = name;
         return this;
@@ -60,6 +63,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public String organization;
+
     public Group withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -72,6 +76,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readOnly")
     public Boolean readOnly;
+
     public Group withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -89,6 +94,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GroupTypeEnum type;
+
     public Group withType(GroupTypeEnum type) {
         this.type = type;
         return this;
@@ -100,9 +106,11 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usersCount")
     public Double usersCount;
+
     public Group withUsersCount(Double usersCount) {
         this.usersCount = usersCount;
         return this;
     }
     
+    public Group(){}
 }

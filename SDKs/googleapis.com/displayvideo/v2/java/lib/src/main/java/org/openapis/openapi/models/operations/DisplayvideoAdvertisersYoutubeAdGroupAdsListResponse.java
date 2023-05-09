@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoAdvertisersYoutubeAdGroupAdsListResponse {
     
     public String contentType;
+
     public DisplayvideoAdvertisersYoutubeAdGroupAdsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupAdsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListYoutubeAdGroupAdsResponse listYoutubeAdGroupAdsResponse;
+
     public DisplayvideoAdvertisersYoutubeAdGroupAdsListResponse withListYoutubeAdGroupAdsResponse(org.openapis.openapi.models.shared.ListYoutubeAdGroupAdsResponse listYoutubeAdGroupAdsResponse) {
         this.listYoutubeAdGroupAdsResponse = listYoutubeAdGroupAdsResponse;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupAdsListResponse {
     
     
     public Integer statusCode;
+
     public DisplayvideoAdvertisersYoutubeAdGroupAdsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoAdvertisersYoutubeAdGroupAdsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoAdvertisersYoutubeAdGroupAdsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoAdvertisersYoutubeAdGroupAdsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

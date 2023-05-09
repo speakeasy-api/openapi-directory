@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterIdentityProviderResponse {
@@ -12,6 +13,7 @@ public class DeregisterIdentityProviderResponse {
      */
     
     public Object accessDeniedException;
+
     public DeregisterIdentityProviderResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeregisterIdentityProviderResponse {
      */
     
     public Object conflictException;
+
     public DeregisterIdentityProviderResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeregisterIdentityProviderResponse {
     
     
     public String contentType;
+
     public DeregisterIdentityProviderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeregisterIdentityProviderResponse {
      */
     
     public org.openapis.openapi.models.shared.DeregisterIdentityProviderResponse deregisterIdentityProviderResponse;
+
     public DeregisterIdentityProviderResponse withDeregisterIdentityProviderResponse(org.openapis.openapi.models.shared.DeregisterIdentityProviderResponse deregisterIdentityProviderResponse) {
         this.deregisterIdentityProviderResponse = deregisterIdentityProviderResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeregisterIdentityProviderResponse {
      */
     
     public Object internalServerException;
+
     public DeregisterIdentityProviderResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeregisterIdentityProviderResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeregisterIdentityProviderResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeregisterIdentityProviderResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DeregisterIdentityProviderResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class DeregisterIdentityProviderResponse {
     
     
     public Integer statusCode;
+
     public DeregisterIdentityProviderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeregisterIdentityProviderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterIdentityProviderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeregisterIdentityProviderResponse {
      */
     
     public Object throttlingException;
+
     public DeregisterIdentityProviderResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DeregisterIdentityProviderResponse {
      */
     
     public Object validationException;
+
     public DeregisterIdentityProviderResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeregisterIdentityProviderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

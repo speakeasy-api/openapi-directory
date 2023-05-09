@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPricingRulesResponse {
@@ -12,6 +13,7 @@ public class ListPricingRulesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListPricingRulesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListPricingRulesResponse {
     
     
     public String contentType;
+
     public ListPricingRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListPricingRulesResponse {
      */
     
     public Object internalServerException;
+
     public ListPricingRulesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListPricingRulesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPricingRulesOutput listPricingRulesOutput;
+
     public ListPricingRulesResponse withListPricingRulesOutput(org.openapis.openapi.models.shared.ListPricingRulesOutput listPricingRulesOutput) {
         this.listPricingRulesOutput = listPricingRulesOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListPricingRulesResponse {
     
     
     public Integer statusCode;
+
     public ListPricingRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListPricingRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPricingRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListPricingRulesResponse {
      */
     
     public Object throttlingException;
+
     public ListPricingRulesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListPricingRulesResponse {
      */
     
     public Object validationException;
+
     public ListPricingRulesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListPricingRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

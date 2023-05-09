@@ -20,6 +20,7 @@ public class DomainNameConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiGatewayDomainName")
     public String apiGatewayDomainName;
+
     public DomainNameConfiguration withApiGatewayDomainName(String apiGatewayDomainName) {
         this.apiGatewayDomainName = apiGatewayDomainName;
         return this;
@@ -28,6 +29,7 @@ public class DomainNameConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateArn")
     public String certificateArn;
+
     public DomainNameConfiguration withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -36,6 +38,7 @@ public class DomainNameConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateName")
     public String certificateName;
+
     public DomainNameConfiguration withCertificateName(String certificateName) {
         this.certificateName = certificateName;
         return this;
@@ -46,6 +49,7 @@ public class DomainNameConfiguration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CertificateUploadDate")
     public OffsetDateTime certificateUploadDate;
+
     public DomainNameConfiguration withCertificateUploadDate(OffsetDateTime certificateUploadDate) {
         this.certificateUploadDate = certificateUploadDate;
         return this;
@@ -54,6 +58,7 @@ public class DomainNameConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainNameStatus")
     public DomainNameConfigurationDomainNameStatusEnum domainNameStatus;
+
     public DomainNameConfiguration withDomainNameStatus(DomainNameConfigurationDomainNameStatusEnum domainNameStatus) {
         this.domainNameStatus = domainNameStatus;
         return this;
@@ -62,6 +67,7 @@ public class DomainNameConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainNameStatusMessage")
     public String domainNameStatusMessage;
+
     public DomainNameConfiguration withDomainNameStatusMessage(String domainNameStatusMessage) {
         this.domainNameStatusMessage = domainNameStatusMessage;
         return this;
@@ -70,6 +76,7 @@ public class DomainNameConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointType")
     public DomainNameConfigurationEndpointTypeEnum endpointType;
+
     public DomainNameConfiguration withEndpointType(DomainNameConfigurationEndpointTypeEnum endpointType) {
         this.endpointType = endpointType;
         return this;
@@ -78,6 +85,7 @@ public class DomainNameConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostedZoneId")
     public String hostedZoneId;
+
     public DomainNameConfiguration withHostedZoneId(String hostedZoneId) {
         this.hostedZoneId = hostedZoneId;
         return this;
@@ -86,6 +94,7 @@ public class DomainNameConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnershipVerificationCertificateArn")
     public String ownershipVerificationCertificateArn;
+
     public DomainNameConfiguration withOwnershipVerificationCertificateArn(String ownershipVerificationCertificateArn) {
         this.ownershipVerificationCertificateArn = ownershipVerificationCertificateArn;
         return this;
@@ -94,9 +103,11 @@ public class DomainNameConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityPolicy")
     public DomainNameConfigurationSecurityPolicyEnum securityPolicy;
+
     public DomainNameConfiguration withSecurityPolicy(DomainNameConfigurationSecurityPolicyEnum securityPolicy) {
         this.securityPolicy = securityPolicy;
         return this;
     }
     
+    public DomainNameConfiguration(){}
 }

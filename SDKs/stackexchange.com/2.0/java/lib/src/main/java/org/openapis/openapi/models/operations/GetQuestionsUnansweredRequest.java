@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuestionsUnansweredRequest {
@@ -13,6 +14,7 @@ public class GetQuestionsUnansweredRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetQuestionsUnansweredRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -53,6 +55,7 @@ public class GetQuestionsUnansweredRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetQuestionsUnansweredRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -63,6 +66,7 @@ public class GetQuestionsUnansweredRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public Long fromdate;
+
     public GetQuestionsUnansweredRequest withFromdate(Long fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -76,6 +80,7 @@ public class GetQuestionsUnansweredRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public String max;
+
     public GetQuestionsUnansweredRequest withMax(String max) {
         this.max = max;
         return this;
@@ -89,6 +94,7 @@ public class GetQuestionsUnansweredRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min")
     public String min;
+
     public GetQuestionsUnansweredRequest withMin(String min) {
         this.min = min;
         return this;
@@ -96,6 +102,7 @@ public class GetQuestionsUnansweredRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public GetQuestionsUnansweredOrderEnum order;
+
     public GetQuestionsUnansweredRequest withOrder(GetQuestionsUnansweredOrderEnum order) {
         this.order = order;
         return this;
@@ -103,6 +110,7 @@ public class GetQuestionsUnansweredRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetQuestionsUnansweredRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -110,6 +118,7 @@ public class GetQuestionsUnansweredRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetQuestionsUnansweredRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
@@ -121,6 +130,7 @@ public class GetQuestionsUnansweredRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
     public String site;
+
     public GetQuestionsUnansweredRequest withSite(String site) {
         this.site = site;
         return this;
@@ -128,6 +138,7 @@ public class GetQuestionsUnansweredRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetQuestionsUnansweredSortEnum sort;
+
     public GetQuestionsUnansweredRequest withSort(GetQuestionsUnansweredSortEnum sort) {
         this.sort = sort;
         return this;
@@ -138,6 +149,7 @@ public class GetQuestionsUnansweredRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagged")
     public String tagged;
+
     public GetQuestionsUnansweredRequest withTagged(String tagged) {
         this.tagged = tagged;
         return this;
@@ -148,9 +160,13 @@ public class GetQuestionsUnansweredRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public Long todate;
+
     public GetQuestionsUnansweredRequest withTodate(Long todate) {
         this.todate = todate;
         return this;
     }
     
+    public GetQuestionsUnansweredRequest(@JsonProperty("site") String site) {
+        this.site = site;
+  }
 }

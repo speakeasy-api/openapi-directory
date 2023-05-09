@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class TimeRangeFilter {
     
     public OffsetDateTime endTime;
+
     public TimeRangeFilter withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -19,9 +20,11 @@ public class TimeRangeFilter {
     
     
     public OffsetDateTime startTime;
+
     public TimeRangeFilter withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public TimeRangeFilter(){}
 }

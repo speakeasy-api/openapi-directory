@@ -15,6 +15,7 @@ public class ListEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entitySummaries")
     public EntitySummary[] entitySummaries;
+
     public ListEntitiesResponse withEntitySummaries(EntitySummary[] entitySummaries) {
         this.entitySummaries = entitySummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListEntitiesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEntitiesResponse(){}
 }

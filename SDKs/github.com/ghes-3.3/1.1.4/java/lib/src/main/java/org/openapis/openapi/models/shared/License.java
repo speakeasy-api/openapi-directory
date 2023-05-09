@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class License {
     @JsonProperty("body")
     public String body;
+
     public License withBody(String body) {
         this.body = body;
         return this;
@@ -19,6 +20,7 @@ public class License {
     
     @JsonProperty("conditions")
     public String[] conditions;
+
     public License withConditions(String[] conditions) {
         this.conditions = conditions;
         return this;
@@ -26,6 +28,7 @@ public class License {
     
     @JsonProperty("description")
     public String description;
+
     public License withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class License {
     
     @JsonProperty("featured")
     public Boolean featured;
+
     public License withFeatured(Boolean featured) {
         this.featured = featured;
         return this;
@@ -40,6 +44,7 @@ public class License {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public License withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -47,6 +52,7 @@ public class License {
     
     @JsonProperty("implementation")
     public String implementation;
+
     public License withImplementation(String implementation) {
         this.implementation = implementation;
         return this;
@@ -54,6 +60,7 @@ public class License {
     
     @JsonProperty("key")
     public String key;
+
     public License withKey(String key) {
         this.key = key;
         return this;
@@ -61,6 +68,7 @@ public class License {
     
     @JsonProperty("limitations")
     public String[] limitations;
+
     public License withLimitations(String[] limitations) {
         this.limitations = limitations;
         return this;
@@ -68,6 +76,7 @@ public class License {
     
     @JsonProperty("name")
     public String name;
+
     public License withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +84,7 @@ public class License {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public License withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -82,6 +92,7 @@ public class License {
     
     @JsonProperty("permissions")
     public String[] permissions;
+
     public License withPermissions(String[] permissions) {
         this.permissions = permissions;
         return this;
@@ -89,6 +100,7 @@ public class License {
     
     @JsonProperty("spdx_id")
     public String spdxId;
+
     public License withSpdxId(String spdxId) {
         this.spdxId = spdxId;
         return this;
@@ -96,9 +108,25 @@ public class License {
     
     @JsonProperty("url")
     public String url;
+
     public License withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public License(@JsonProperty("body") String body, @JsonProperty("conditions") String[] conditions, @JsonProperty("description") String description, @JsonProperty("featured") Boolean featured, @JsonProperty("html_url") String htmlUrl, @JsonProperty("implementation") String implementation, @JsonProperty("key") String key, @JsonProperty("limitations") String[] limitations, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("permissions") String[] permissions, @JsonProperty("spdx_id") String spdxId, @JsonProperty("url") String url) {
+        this.body = body;
+        this.conditions = conditions;
+        this.description = description;
+        this.featured = featured;
+        this.htmlUrl = htmlUrl;
+        this.implementation = implementation;
+        this.key = key;
+        this.limitations = limitations;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.permissions = permissions;
+        this.spdxId = spdxId;
+        this.url = url;
+  }
 }

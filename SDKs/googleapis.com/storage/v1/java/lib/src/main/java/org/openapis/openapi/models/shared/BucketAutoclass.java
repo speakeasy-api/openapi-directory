@@ -23,6 +23,7 @@ public class BucketAutoclass {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public BucketAutoclass withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -36,9 +37,11 @@ public class BucketAutoclass {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("toggleTime")
     public OffsetDateTime toggleTime;
+
     public BucketAutoclass withToggleTime(OffsetDateTime toggleTime) {
         this.toggleTime = toggleTime;
         return this;
     }
     
+    public BucketAutoclass(){}
 }

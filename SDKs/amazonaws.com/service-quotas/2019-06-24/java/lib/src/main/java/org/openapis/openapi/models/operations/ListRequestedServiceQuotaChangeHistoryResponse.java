@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRequestedServiceQuotaChangeHistoryResponse {
@@ -12,6 +13,7 @@ public class ListRequestedServiceQuotaChangeHistoryResponse {
      */
     
     public Object accessDeniedException;
+
     public ListRequestedServiceQuotaChangeHistoryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListRequestedServiceQuotaChangeHistoryResponse {
     
     
     public String contentType;
+
     public ListRequestedServiceQuotaChangeHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListRequestedServiceQuotaChangeHistoryResponse {
      */
     
     public Object illegalArgumentException;
+
     public ListRequestedServiceQuotaChangeHistoryResponse withIllegalArgumentException(Object illegalArgumentException) {
         this.illegalArgumentException = illegalArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class ListRequestedServiceQuotaChangeHistoryResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public ListRequestedServiceQuotaChangeHistoryResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -49,6 +54,7 @@ public class ListRequestedServiceQuotaChangeHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRequestedServiceQuotaChangeHistoryResponse listRequestedServiceQuotaChangeHistoryResponse;
+
     public ListRequestedServiceQuotaChangeHistoryResponse withListRequestedServiceQuotaChangeHistoryResponse(org.openapis.openapi.models.shared.ListRequestedServiceQuotaChangeHistoryResponse listRequestedServiceQuotaChangeHistoryResponse) {
         this.listRequestedServiceQuotaChangeHistoryResponse = listRequestedServiceQuotaChangeHistoryResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListRequestedServiceQuotaChangeHistoryResponse {
      */
     
     public Object noSuchResourceException;
+
     public ListRequestedServiceQuotaChangeHistoryResponse withNoSuchResourceException(Object noSuchResourceException) {
         this.noSuchResourceException = noSuchResourceException;
         return this;
@@ -69,6 +76,7 @@ public class ListRequestedServiceQuotaChangeHistoryResponse {
      */
     
     public Object serviceException;
+
     public ListRequestedServiceQuotaChangeHistoryResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class ListRequestedServiceQuotaChangeHistoryResponse {
     
     
     public Integer statusCode;
+
     public ListRequestedServiceQuotaChangeHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListRequestedServiceQuotaChangeHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRequestedServiceQuotaChangeHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ListRequestedServiceQuotaChangeHistoryResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListRequestedServiceQuotaChangeHistoryResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListRequestedServiceQuotaChangeHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

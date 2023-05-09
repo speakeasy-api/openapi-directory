@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.CloudassetIamPoliciesSearchAllSecurity;
 import org.openapis.openapi.models.operations.CloudassetIamPoliciesSearchAllRequest;
 import org.openapis.openapi.models.operations.CloudassetIamPoliciesSearchAllResponse;
+import org.openapis.openapi.models.operations.CloudassetIamPoliciesSearchAllSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -29,35 +28,36 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CloudassetIamPoliciesSearchAllRequest req = new CloudassetIamPoliciesSearchAllRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                key = "nulla";
-                oauthToken = "corrupti";
-                pageSize = 847252;
-                pageToken = "vel";
+            CloudassetIamPoliciesSearchAllRequest req = new CloudassetIamPoliciesSearchAllRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                key = "corrupti";
+                oauthToken = "illum";
+                pageSize = 423655L;
+                pageToken = "error";
                 prettyPrint = false;
-                query = "error";
-                quotaUser = "deserunt";
-                scope = "suscipit";
+                query = "deserunt";
+                quotaUser = "suscipit";
                 uploadType = "iure";
                 uploadProtocol = "magnam";
-            }}            
+            }};            
 
-            CloudassetIamPoliciesSearchAllResponse res = sdk.iamPolicies.cloudassetIamPoliciesSearchAll(req, new CloudassetIamPoliciesSearchAllSecurity() {{
+            CloudassetIamPoliciesSearchAllResponse res = sdk.iamPolicies.cloudassetIamPoliciesSearchAll(req, new CloudassetIamPoliciesSearchAllSecurity("debitis", "ipsa") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.searchAllIamPoliciesResponse.isPresent()) {
+            if (res.searchAllIamPoliciesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -65,13 +65,13 @@ public class Application {
 ## Available Resources and Operations
 
 
-### iamPolicies
+### [iamPolicies](docs/iampolicies/README.md)
 
-* `cloudassetIamPoliciesSearchAll` - Searches all the IAM policies within a given accessible Resource Manager scope (project/folder/organization). This RPC gives callers especially administrators the ability to search all the IAM policies within a scope, even if they don't have `.getIamPolicy` permission of all the IAM policies. Callers should have `cloud.assets.SearchAllIamPolicies` permission on the requested scope, otherwise the request will be rejected.
+* [cloudassetIamPoliciesSearchAll](docs/iampolicies/README.md#cloudassetiampoliciessearchall) - Searches all the IAM policies within a given accessible Resource Manager scope (project/folder/organization). This RPC gives callers especially administrators the ability to search all the IAM policies within a scope, even if they don't have `.getIamPolicy` permission of all the IAM policies. Callers should have `cloud.assets.SearchAllIamPolicies` permission on the requested scope, otherwise the request will be rejected.
 
-### resources
+### [resources](docs/resources/README.md)
 
-* `cloudassetResourcesSearchAll` - Searches all the resources within a given accessible Resource Manager scope (project/folder/organization). This RPC gives callers especially administrators the ability to search all the resources within a scope, even if they don't have `.get` permission of all the resources. Callers should have `cloud.assets.SearchAllResources` permission on the requested scope, otherwise the request will be rejected.
+* [cloudassetResourcesSearchAll](docs/resources/README.md#cloudassetresourcessearchall) - Searches all the resources within a given accessible Resource Manager scope (project/folder/organization). This RPC gives callers especially administrators the ability to search all the resources within a scope, even if they don't have `.get` permission of all the resources. Callers should have `cloud.assets.SearchAllResources` permission on the requested scope, otherwise the request will be rejected.
 <!-- End SDK Available Operations -->
 
 ### Maturity

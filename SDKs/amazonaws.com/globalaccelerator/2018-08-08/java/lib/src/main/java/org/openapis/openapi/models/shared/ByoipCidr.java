@@ -15,6 +15,7 @@ public class ByoipCidr {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cidr")
     public String cidr;
+
     public ByoipCidr withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -23,6 +24,7 @@ public class ByoipCidr {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Events")
     public ByoipCidrEvent[] events;
+
     public ByoipCidr withEvents(ByoipCidrEvent[] events) {
         this.events = events;
         return this;
@@ -31,9 +33,11 @@ public class ByoipCidr {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public ByoipCidrStateEnum state;
+
     public ByoipCidr withState(ByoipCidrStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ByoipCidr(){}
 }

@@ -15,6 +15,7 @@ public class ConfusionMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumFalseNegatives")
     public Long numFalseNegatives;
+
     public ConfusionMatrix withNumFalseNegatives(Long numFalseNegatives) {
         this.numFalseNegatives = numFalseNegatives;
         return this;
@@ -23,6 +24,7 @@ public class ConfusionMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumFalsePositives")
     public Long numFalsePositives;
+
     public ConfusionMatrix withNumFalsePositives(Long numFalsePositives) {
         this.numFalsePositives = numFalsePositives;
         return this;
@@ -31,6 +33,7 @@ public class ConfusionMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumTrueNegatives")
     public Long numTrueNegatives;
+
     public ConfusionMatrix withNumTrueNegatives(Long numTrueNegatives) {
         this.numTrueNegatives = numTrueNegatives;
         return this;
@@ -39,9 +42,11 @@ public class ConfusionMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumTruePositives")
     public Long numTruePositives;
+
     public ConfusionMatrix withNumTruePositives(Long numTruePositives) {
         this.numTruePositives = numTruePositives;
         return this;
     }
     
+    public ConfusionMatrix(){}
 }

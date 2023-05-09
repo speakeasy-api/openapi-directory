@@ -15,6 +15,7 @@ public class VariantEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_id")
     public Integer imageId;
+
     public VariantEditFields withImageId(Integer imageId) {
         this.imageId = imageId;
         return this;
@@ -23,6 +24,7 @@ public class VariantEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public ProductOptionVariantEdit[] options;
+
     public VariantEditFields withOptions(ProductOptionVariantEdit[] options) {
         this.options = options;
         return this;
@@ -34,6 +36,7 @@ public class VariantEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Float price;
+
     public VariantEditFields withPrice(Float price) {
         this.price = price;
         return this;
@@ -45,6 +48,7 @@ public class VariantEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public VariantEditFields withSku(String sku) {
         this.sku = sku;
         return this;
@@ -56,6 +60,7 @@ public class VariantEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stock")
     public Integer stock;
+
     public VariantEditFields withStock(Integer stock) {
         this.stock = stock;
         return this;
@@ -67,9 +72,11 @@ public class VariantEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stock_unlimited")
     public Boolean stockUnlimited;
+
     public VariantEditFields withStockUnlimited(Boolean stockUnlimited) {
         this.stockUnlimited = stockUnlimited;
         return this;
     }
     
+    public VariantEditFields(){}
 }

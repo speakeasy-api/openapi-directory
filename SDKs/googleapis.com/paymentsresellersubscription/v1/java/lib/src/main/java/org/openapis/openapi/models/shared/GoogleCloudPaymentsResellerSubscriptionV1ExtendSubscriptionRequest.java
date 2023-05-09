@@ -18,6 +18,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extension")
     public GoogleCloudPaymentsResellerSubscriptionV1Extension extension;
+
     public GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest withExtension(GoogleCloudPaymentsResellerSubscriptionV1Extension extension) {
         this.extension = extension;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest(){}
 }

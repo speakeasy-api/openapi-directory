@@ -12,6 +12,7 @@ public class ErrorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Integer code;
+
     public ErrorDetail withCode(Integer code) {
         this.code = code;
         return this;
@@ -20,6 +21,7 @@ public class ErrorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ErrorDetail withMessage(String message) {
         this.message = message;
         return this;
@@ -28,9 +30,11 @@ public class ErrorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public String[] target;
+
     public ErrorDetail withTarget(String[] target) {
         this.target = target;
         return this;
     }
     
+    public ErrorDetail(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateVolumeRequest {
     
     public String availabilityZone;
+
     public CreateVolumeRequest withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -16,6 +17,7 @@ public class CreateVolumeRequest {
     
     
     public String clientToken;
+
     public CreateVolumeRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +25,7 @@ public class CreateVolumeRequest {
     
     
     public Boolean dryRun;
+
     public CreateVolumeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class CreateVolumeRequest {
     
     
     public Boolean encrypted;
+
     public CreateVolumeRequest withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -37,6 +41,7 @@ public class CreateVolumeRequest {
     
     
     public Long iops;
+
     public CreateVolumeRequest withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -44,6 +49,7 @@ public class CreateVolumeRequest {
     
     
     public String kmsKeyId;
+
     public CreateVolumeRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -51,6 +57,7 @@ public class CreateVolumeRequest {
     
     
     public Boolean multiAttachEnabled;
+
     public CreateVolumeRequest withMultiAttachEnabled(Boolean multiAttachEnabled) {
         this.multiAttachEnabled = multiAttachEnabled;
         return this;
@@ -58,6 +65,7 @@ public class CreateVolumeRequest {
     
     
     public String outpostArn;
+
     public CreateVolumeRequest withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -65,6 +73,7 @@ public class CreateVolumeRequest {
     
     
     public Long size;
+
     public CreateVolumeRequest withSize(Long size) {
         this.size = size;
         return this;
@@ -72,6 +81,7 @@ public class CreateVolumeRequest {
     
     
     public String snapshotId;
+
     public CreateVolumeRequest withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -79,6 +89,7 @@ public class CreateVolumeRequest {
     
     
     public CreateVolumeRequestTagSpecifications[] tagSpecifications;
+
     public CreateVolumeRequest withTagSpecifications(CreateVolumeRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -86,6 +97,7 @@ public class CreateVolumeRequest {
     
     
     public Long throughput;
+
     public CreateVolumeRequest withThroughput(Long throughput) {
         this.throughput = throughput;
         return this;
@@ -93,9 +105,13 @@ public class CreateVolumeRequest {
     
     
     public VolumeTypeEnum volumeType;
+
     public CreateVolumeRequest withVolumeType(VolumeTypeEnum volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public CreateVolumeRequest(@JsonProperty("AvailabilityZone") String availabilityZone) {
+        this.availabilityZone = availabilityZone;
+  }
 }

@@ -12,6 +12,7 @@ public class CalendarHourViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public Integer endTime;
+
     public CalendarHourViewModel withEndTime(Integer endTime) {
         this.endTime = endTime;
         return this;
@@ -20,9 +21,11 @@ public class CalendarHourViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public Integer startTime;
+
     public CalendarHourViewModel withStartTime(Integer startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public CalendarHourViewModel(){}
 }

@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class AssetModelSummary {
     @JsonProperty("arn")
     public String arn;
+
     public AssetModelSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class AssetModelSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public AssetModelSummary withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -33,6 +35,7 @@ public class AssetModelSummary {
     
     @JsonProperty("description")
     public String description;
+
     public AssetModelSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +43,7 @@ public class AssetModelSummary {
     
     @JsonProperty("id")
     public String id;
+
     public AssetModelSummary withId(String id) {
         this.id = id;
         return this;
@@ -49,6 +53,7 @@ public class AssetModelSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateDate")
     public OffsetDateTime lastUpdateDate;
+
     public AssetModelSummary withLastUpdateDate(OffsetDateTime lastUpdateDate) {
         this.lastUpdateDate = lastUpdateDate;
         return this;
@@ -56,6 +61,7 @@ public class AssetModelSummary {
     
     @JsonProperty("name")
     public String name;
+
     public AssetModelSummary withName(String name) {
         this.name = name;
         return this;
@@ -63,9 +69,19 @@ public class AssetModelSummary {
     
     @JsonProperty("status")
     public AssetModelStatus status;
+
     public AssetModelSummary withStatus(AssetModelStatus status) {
         this.status = status;
         return this;
     }
     
+    public AssetModelSummary(@JsonProperty("arn") String arn, @JsonProperty("creationDate") OffsetDateTime creationDate, @JsonProperty("description") String description, @JsonProperty("id") String id, @JsonProperty("lastUpdateDate") OffsetDateTime lastUpdateDate, @JsonProperty("name") String name, @JsonProperty("status") AssetModelStatus status) {
+        this.arn = arn;
+        this.creationDate = creationDate;
+        this.description = description;
+        this.id = id;
+        this.lastUpdateDate = lastUpdateDate;
+        this.name = name;
+        this.status = status;
+  }
 }

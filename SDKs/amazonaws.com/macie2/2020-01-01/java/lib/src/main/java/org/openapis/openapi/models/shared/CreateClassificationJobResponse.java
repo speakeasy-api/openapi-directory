@@ -15,6 +15,7 @@ public class CreateClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobArn")
     public String jobArn;
+
     public CreateClassificationJobResponse withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public CreateClassificationJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public CreateClassificationJobResponse(){}
 }

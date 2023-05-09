@@ -18,6 +18,7 @@ public class PersonCover {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverInfo")
     public PersonCoverCoverInfo coverInfo;
+
     public PersonCover withCoverInfo(PersonCoverCoverInfo coverInfo) {
         this.coverInfo = coverInfo;
         return this;
@@ -29,6 +30,7 @@ public class PersonCover {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverPhoto")
     public PersonCoverCoverPhoto coverPhoto;
+
     public PersonCover withCoverPhoto(PersonCoverCoverPhoto coverPhoto) {
         this.coverPhoto = coverPhoto;
         return this;
@@ -41,9 +43,11 @@ public class PersonCover {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public String layout;
+
     public PersonCover withLayout(String layout) {
         this.layout = layout;
         return this;
     }
     
+    public PersonCover(){}
 }

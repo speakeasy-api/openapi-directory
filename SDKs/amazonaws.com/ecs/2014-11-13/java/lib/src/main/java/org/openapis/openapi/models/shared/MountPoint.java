@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * MountPoint - Details for a volume mount point that's used in a container definition.
+ * MountPoint - The details for a volume mount point that's used in a container definition.
  */
 public class MountPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerPath")
     public String containerPath;
+
     public MountPoint withContainerPath(String containerPath) {
         this.containerPath = containerPath;
         return this;
@@ -23,6 +24,7 @@ public class MountPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readOnly")
     public Boolean readOnly;
+
     public MountPoint withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -31,9 +33,11 @@ public class MountPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceVolume")
     public String sourceVolume;
+
     public MountPoint withSourceVolume(String sourceVolume) {
         this.sourceVolume = sourceVolume;
         return this;
     }
     
+    public MountPoint(){}
 }

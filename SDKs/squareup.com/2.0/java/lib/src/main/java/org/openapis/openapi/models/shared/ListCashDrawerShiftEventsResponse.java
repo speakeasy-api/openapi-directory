@@ -19,6 +19,7 @@ public class ListCashDrawerShiftEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public ListCashDrawerShiftEventsResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -30,6 +31,7 @@ public class ListCashDrawerShiftEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public ListCashDrawerShiftEventsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -42,9 +44,11 @@ public class ListCashDrawerShiftEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public CashDrawerShiftEvent[] events;
+
     public ListCashDrawerShiftEventsResponse withEvents(CashDrawerShiftEvent[] events) {
         this.events = events;
         return this;
     }
     
+    public ListCashDrawerShiftEventsResponse(){}
 }

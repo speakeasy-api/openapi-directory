@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTokenRequest {
@@ -12,6 +13,7 @@ public class GetTokenRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetTokenRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class GetTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_driver")
     public Boolean includeDriver;
+
     public GetTokenRequest withIncludeDriver(Boolean includeDriver) {
         this.includeDriver = includeDriver;
         return this;
@@ -32,9 +35,13 @@ public class GetTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_organization")
     public Boolean includeOrganization;
+
     public GetTokenRequest withIncludeOrganization(Boolean includeOrganization) {
         this.includeOrganization = includeOrganization;
         return this;
     }
     
+    public GetTokenRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

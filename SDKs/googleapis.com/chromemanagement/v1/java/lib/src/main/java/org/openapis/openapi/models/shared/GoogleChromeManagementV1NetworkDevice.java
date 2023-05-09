@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1NetworkDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iccid")
     public String iccid;
+
     public GoogleChromeManagementV1NetworkDevice withIccid(String iccid) {
         this.iccid = iccid;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromeManagementV1NetworkDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imei")
     public String imei;
+
     public GoogleChromeManagementV1NetworkDevice withImei(String imei) {
         this.imei = imei;
         return this;
@@ -40,6 +42,7 @@ public class GoogleChromeManagementV1NetworkDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("macAddress")
     public String macAddress;
+
     public GoogleChromeManagementV1NetworkDevice withMacAddress(String macAddress) {
         this.macAddress = macAddress;
         return this;
@@ -51,6 +54,7 @@ public class GoogleChromeManagementV1NetworkDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mdn")
     public String mdn;
+
     public GoogleChromeManagementV1NetworkDevice withMdn(String mdn) {
         this.mdn = mdn;
         return this;
@@ -62,6 +66,7 @@ public class GoogleChromeManagementV1NetworkDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meid")
     public String meid;
+
     public GoogleChromeManagementV1NetworkDevice withMeid(String meid) {
         this.meid = meid;
         return this;
@@ -73,9 +78,11 @@ public class GoogleChromeManagementV1NetworkDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleChromeManagementV1NetworkDeviceTypeEnum type;
+
     public GoogleChromeManagementV1NetworkDevice withType(GoogleChromeManagementV1NetworkDeviceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleChromeManagementV1NetworkDevice(){}
 }

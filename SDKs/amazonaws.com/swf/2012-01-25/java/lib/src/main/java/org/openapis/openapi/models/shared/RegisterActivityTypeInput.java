@@ -12,6 +12,7 @@ public class RegisterActivityTypeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultTaskHeartbeatTimeout")
     public String defaultTaskHeartbeatTimeout;
+
     public RegisterActivityTypeInput withDefaultTaskHeartbeatTimeout(String defaultTaskHeartbeatTimeout) {
         this.defaultTaskHeartbeatTimeout = defaultTaskHeartbeatTimeout;
         return this;
@@ -20,6 +21,7 @@ public class RegisterActivityTypeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultTaskList")
     public TaskList defaultTaskList;
+
     public RegisterActivityTypeInput withDefaultTaskList(TaskList defaultTaskList) {
         this.defaultTaskList = defaultTaskList;
         return this;
@@ -28,6 +30,7 @@ public class RegisterActivityTypeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultTaskPriority")
     public String defaultTaskPriority;
+
     public RegisterActivityTypeInput withDefaultTaskPriority(String defaultTaskPriority) {
         this.defaultTaskPriority = defaultTaskPriority;
         return this;
@@ -36,6 +39,7 @@ public class RegisterActivityTypeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultTaskScheduleToCloseTimeout")
     public String defaultTaskScheduleToCloseTimeout;
+
     public RegisterActivityTypeInput withDefaultTaskScheduleToCloseTimeout(String defaultTaskScheduleToCloseTimeout) {
         this.defaultTaskScheduleToCloseTimeout = defaultTaskScheduleToCloseTimeout;
         return this;
@@ -44,6 +48,7 @@ public class RegisterActivityTypeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultTaskScheduleToStartTimeout")
     public String defaultTaskScheduleToStartTimeout;
+
     public RegisterActivityTypeInput withDefaultTaskScheduleToStartTimeout(String defaultTaskScheduleToStartTimeout) {
         this.defaultTaskScheduleToStartTimeout = defaultTaskScheduleToStartTimeout;
         return this;
@@ -52,6 +57,7 @@ public class RegisterActivityTypeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultTaskStartToCloseTimeout")
     public String defaultTaskStartToCloseTimeout;
+
     public RegisterActivityTypeInput withDefaultTaskStartToCloseTimeout(String defaultTaskStartToCloseTimeout) {
         this.defaultTaskStartToCloseTimeout = defaultTaskStartToCloseTimeout;
         return this;
@@ -60,6 +66,7 @@ public class RegisterActivityTypeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RegisterActivityTypeInput withDescription(String description) {
         this.description = description;
         return this;
@@ -67,6 +74,7 @@ public class RegisterActivityTypeInput {
     
     @JsonProperty("domain")
     public String domain;
+
     public RegisterActivityTypeInput withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -74,6 +82,7 @@ public class RegisterActivityTypeInput {
     
     @JsonProperty("name")
     public String name;
+
     public RegisterActivityTypeInput withName(String name) {
         this.name = name;
         return this;
@@ -81,9 +90,15 @@ public class RegisterActivityTypeInput {
     
     @JsonProperty("version")
     public String version;
+
     public RegisterActivityTypeInput withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public RegisterActivityTypeInput(@JsonProperty("domain") String domain, @JsonProperty("name") String name, @JsonProperty("version") String version) {
+        this.domain = domain;
+        this.name = name;
+        this.version = version;
+  }
 }

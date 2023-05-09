@@ -12,6 +12,7 @@ public class DistributionsResponseResultElementsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("libraryId")
     public Object libraryId;
+
     public DistributionsResponseResultElementsMessage withLibraryId(Object libraryId) {
         this.libraryId = libraryId;
         return this;
@@ -20,6 +21,7 @@ public class DistributionsResponseResultElementsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageId")
     public Object messageId;
+
     public DistributionsResponseResultElementsMessage withMessageId(Object messageId) {
         this.messageId = messageId;
         return this;
@@ -28,9 +30,11 @@ public class DistributionsResponseResultElementsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageText")
     public Object messageText;
+
     public DistributionsResponseResultElementsMessage withMessageText(Object messageText) {
         this.messageText = messageText;
         return this;
     }
     
+    public DistributionsResponseResultElementsMessage(){}
 }

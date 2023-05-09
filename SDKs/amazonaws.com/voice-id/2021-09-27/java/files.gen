@@ -211,4 +211,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateDomainRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateWatchlistResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateWatchlistRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

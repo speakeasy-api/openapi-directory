@@ -12,6 +12,7 @@ public class DeleteWorkGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecursiveDeleteOption")
     public Boolean recursiveDeleteOption;
+
     public DeleteWorkGroupInput withRecursiveDeleteOption(Boolean recursiveDeleteOption) {
         this.recursiveDeleteOption = recursiveDeleteOption;
         return this;
@@ -19,9 +20,13 @@ public class DeleteWorkGroupInput {
     
     @JsonProperty("WorkGroup")
     public String workGroup;
+
     public DeleteWorkGroupInput withWorkGroup(String workGroup) {
         this.workGroup = workGroup;
         return this;
     }
     
+    public DeleteWorkGroupInput(@JsonProperty("WorkGroup") String workGroup) {
+        this.workGroup = workGroup;
+  }
 }

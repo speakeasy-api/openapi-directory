@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListExclusionsResponse {
     @JsonProperty("exclusionArns")
     public String[] exclusionArns;
+
     public ListExclusionsResponse withExclusionArns(String[] exclusionArns) {
         this.exclusionArns = exclusionArns;
         return this;
@@ -22,9 +23,13 @@ public class ListExclusionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListExclusionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListExclusionsResponse(@JsonProperty("exclusionArns") String[] exclusionArns) {
+        this.exclusionArns = exclusionArns;
+  }
 }

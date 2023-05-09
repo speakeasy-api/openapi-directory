@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise200ApplicationJSON {
     @JsonProperty("organizations")
     public org.openapis.openapi.models.shared.OrganizationSimple[] organizations;
+
     public EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise200ApplicationJSON withOrganizations(org.openapis.openapi.models.shared.OrganizationSimple[] organizations) {
         this.organizations = organizations;
         return this;
@@ -19,9 +20,14 @@ public class EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpr
     
     @JsonProperty("total_count")
     public Double totalCount;
+
     public EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise200ApplicationJSON withTotalCount(Double totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise200ApplicationJSON(@JsonProperty("organizations") org.openapis.openapi.models.shared.OrganizationSimple[] organizations, @JsonProperty("total_count") Double totalCount) {
+        this.organizations = organizations;
+        this.totalCount = totalCount;
+  }
 }

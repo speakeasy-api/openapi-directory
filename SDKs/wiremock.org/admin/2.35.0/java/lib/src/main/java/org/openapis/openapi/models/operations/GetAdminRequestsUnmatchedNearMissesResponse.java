@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAdminRequestsUnmatchedNearMissesResponse {
     
     public String contentType;
+
     public GetAdminRequestsUnmatchedNearMissesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetAdminRequestsUnmatchedNearMissesResponse {
     
     
     public Integer statusCode;
+
     public GetAdminRequestsUnmatchedNearMissesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetAdminRequestsUnmatchedNearMissesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAdminRequestsUnmatchedNearMissesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetAdminRequestsUnmatchedNearMissesResponse {
      */
     
     public GetAdminRequestsUnmatchedNearMisses200ApplicationJSON getAdminRequestsUnmatchedNearMisses200ApplicationJSONObject;
+
     public GetAdminRequestsUnmatchedNearMissesResponse withGetAdminRequestsUnmatchedNearMisses200ApplicationJSONObject(GetAdminRequestsUnmatchedNearMisses200ApplicationJSON getAdminRequestsUnmatchedNearMisses200ApplicationJSONObject) {
         this.getAdminRequestsUnmatchedNearMisses200ApplicationJSONObject = getAdminRequestsUnmatchedNearMisses200ApplicationJSONObject;
         return this;
     }
     
+    public GetAdminRequestsUnmatchedNearMissesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

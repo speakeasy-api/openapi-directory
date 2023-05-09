@@ -15,6 +15,7 @@ public class UpdateFileSystemOntapConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddRouteTableIds")
     public String[] addRouteTableIds;
+
     public UpdateFileSystemOntapConfiguration withAddRouteTableIds(String[] addRouteTableIds) {
         this.addRouteTableIds = addRouteTableIds;
         return this;
@@ -26,6 +27,7 @@ public class UpdateFileSystemOntapConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomaticBackupRetentionDays")
     public Long automaticBackupRetentionDays;
+
     public UpdateFileSystemOntapConfiguration withAutomaticBackupRetentionDays(Long automaticBackupRetentionDays) {
         this.automaticBackupRetentionDays = automaticBackupRetentionDays;
         return this;
@@ -37,6 +39,7 @@ public class UpdateFileSystemOntapConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DailyAutomaticBackupStartTime")
     public String dailyAutomaticBackupStartTime;
+
     public UpdateFileSystemOntapConfiguration withDailyAutomaticBackupStartTime(String dailyAutomaticBackupStartTime) {
         this.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
         return this;
@@ -45,6 +48,7 @@ public class UpdateFileSystemOntapConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiskIopsConfiguration")
     public DiskIopsConfiguration diskIopsConfiguration;
+
     public UpdateFileSystemOntapConfiguration withDiskIopsConfiguration(DiskIopsConfiguration diskIopsConfiguration) {
         this.diskIopsConfiguration = diskIopsConfiguration;
         return this;
@@ -53,6 +57,7 @@ public class UpdateFileSystemOntapConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FsxAdminPassword")
     public String fsxAdminPassword;
+
     public UpdateFileSystemOntapConfiguration withFsxAdminPassword(String fsxAdminPassword) {
         this.fsxAdminPassword = fsxAdminPassword;
         return this;
@@ -61,6 +66,7 @@ public class UpdateFileSystemOntapConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoveRouteTableIds")
     public String[] removeRouteTableIds;
+
     public UpdateFileSystemOntapConfiguration withRemoveRouteTableIds(String[] removeRouteTableIds) {
         this.removeRouteTableIds = removeRouteTableIds;
         return this;
@@ -69,6 +75,7 @@ public class UpdateFileSystemOntapConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThroughputCapacity")
     public Long throughputCapacity;
+
     public UpdateFileSystemOntapConfiguration withThroughputCapacity(Long throughputCapacity) {
         this.throughputCapacity = throughputCapacity;
         return this;
@@ -80,9 +87,11 @@ public class UpdateFileSystemOntapConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeeklyMaintenanceStartTime")
     public String weeklyMaintenanceStartTime;
+
     public UpdateFileSystemOntapConfiguration withWeeklyMaintenanceStartTime(String weeklyMaintenanceStartTime) {
         this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
         return this;
     }
     
+    public UpdateFileSystemOntapConfiguration(){}
 }

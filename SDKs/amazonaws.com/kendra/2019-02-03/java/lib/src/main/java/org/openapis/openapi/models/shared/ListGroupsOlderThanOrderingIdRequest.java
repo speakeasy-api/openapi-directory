@@ -12,6 +12,7 @@ public class ListGroupsOlderThanOrderingIdRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceId")
     public String dataSourceId;
+
     public ListGroupsOlderThanOrderingIdRequest withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -19,6 +20,7 @@ public class ListGroupsOlderThanOrderingIdRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public ListGroupsOlderThanOrderingIdRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -27,6 +29,7 @@ public class ListGroupsOlderThanOrderingIdRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListGroupsOlderThanOrderingIdRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,6 +38,7 @@ public class ListGroupsOlderThanOrderingIdRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListGroupsOlderThanOrderingIdRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -42,9 +46,14 @@ public class ListGroupsOlderThanOrderingIdRequest {
     
     @JsonProperty("OrderingId")
     public Long orderingId;
+
     public ListGroupsOlderThanOrderingIdRequest withOrderingId(Long orderingId) {
         this.orderingId = orderingId;
         return this;
     }
     
+    public ListGroupsOlderThanOrderingIdRequest(@JsonProperty("IndexId") String indexId, @JsonProperty("OrderingId") Long orderingId) {
+        this.indexId = indexId;
+        this.orderingId = orderingId;
+  }
 }

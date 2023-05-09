@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyLoadBalancerAttributesOutput {
     
     public LoadBalancerAttributes loadBalancerAttributes;
+
     public ModifyLoadBalancerAttributesOutput withLoadBalancerAttributes(LoadBalancerAttributes loadBalancerAttributes) {
         this.loadBalancerAttributes = loadBalancerAttributes;
         return this;
@@ -19,9 +20,11 @@ public class ModifyLoadBalancerAttributesOutput {
     
     
     public String loadBalancerName;
+
     public ModifyLoadBalancerAttributesOutput withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
     }
     
+    public ModifyLoadBalancerAttributesOutput(){}
 }

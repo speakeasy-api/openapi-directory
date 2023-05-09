@@ -19,6 +19,7 @@ public class NewPaymentRequestNewPaymentRequestResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public NewPaymentRequestNewPaymentRequestResponse withCode(String code) {
         this.code = code;
         return this;
@@ -30,9 +31,11 @@ public class NewPaymentRequestNewPaymentRequestResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public NewPaymentRequestNewPaymentRequestResponseTypeEnum type;
+
     public NewPaymentRequestNewPaymentRequestResponse withType(NewPaymentRequestNewPaymentRequestResponseTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public NewPaymentRequestNewPaymentRequestResponse(){}
 }

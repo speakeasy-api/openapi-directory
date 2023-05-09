@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AggregateResourceIdentifier {
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public AggregateResourceIdentifier withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -22,6 +23,7 @@ public class AggregateResourceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceName")
     public String resourceName;
+
     public AggregateResourceIdentifier withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -29,6 +31,7 @@ public class AggregateResourceIdentifier {
     
     @JsonProperty("ResourceType")
     public ResourceTypeEnum resourceType;
+
     public AggregateResourceIdentifier withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -36,6 +39,7 @@ public class AggregateResourceIdentifier {
     
     @JsonProperty("SourceAccountId")
     public String sourceAccountId;
+
     public AggregateResourceIdentifier withSourceAccountId(String sourceAccountId) {
         this.sourceAccountId = sourceAccountId;
         return this;
@@ -43,9 +47,16 @@ public class AggregateResourceIdentifier {
     
     @JsonProperty("SourceRegion")
     public String sourceRegion;
+
     public AggregateResourceIdentifier withSourceRegion(String sourceRegion) {
         this.sourceRegion = sourceRegion;
         return this;
     }
     
+    public AggregateResourceIdentifier(@JsonProperty("ResourceId") String resourceId, @JsonProperty("ResourceType") ResourceTypeEnum resourceType, @JsonProperty("SourceAccountId") String sourceAccountId, @JsonProperty("SourceRegion") String sourceRegion) {
+        this.resourceId = resourceId;
+        this.resourceType = resourceType;
+        this.sourceAccountId = sourceAccountId;
+        this.sourceRegion = sourceRegion;
+  }
 }

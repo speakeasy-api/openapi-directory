@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListReceivedGrantsResponse {
@@ -12,6 +13,7 @@ public class ListReceivedGrantsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListReceivedGrantsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListReceivedGrantsResponse {
      */
     
     public Object authorizationException;
+
     public ListReceivedGrantsResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class ListReceivedGrantsResponse {
     
     
     public String contentType;
+
     public ListReceivedGrantsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListReceivedGrantsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListReceivedGrantsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class ListReceivedGrantsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListReceivedGrantsResponse listReceivedGrantsResponse;
+
     public ListReceivedGrantsResponse withListReceivedGrantsResponse(org.openapis.openapi.models.shared.ListReceivedGrantsResponse listReceivedGrantsResponse) {
         this.listReceivedGrantsResponse = listReceivedGrantsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListReceivedGrantsResponse {
      */
     
     public Object rateLimitExceededException;
+
     public ListReceivedGrantsResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ListReceivedGrantsResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public ListReceivedGrantsResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ListReceivedGrantsResponse {
     
     
     public Integer statusCode;
+
     public ListReceivedGrantsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListReceivedGrantsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListReceivedGrantsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListReceivedGrantsResponse {
      */
     
     public Object serverInternalException;
+
     public ListReceivedGrantsResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -103,9 +114,14 @@ public class ListReceivedGrantsResponse {
      */
     
     public Object validationException;
+
     public ListReceivedGrantsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListReceivedGrantsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

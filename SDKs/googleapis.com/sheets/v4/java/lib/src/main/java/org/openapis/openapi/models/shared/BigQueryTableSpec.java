@@ -18,6 +18,7 @@ public class BigQueryTableSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetId")
     public String datasetId;
+
     public BigQueryTableSpec withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -29,6 +30,7 @@ public class BigQueryTableSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableId")
     public String tableId;
+
     public BigQueryTableSpec withTableId(String tableId) {
         this.tableId = tableId;
         return this;
@@ -40,9 +42,11 @@ public class BigQueryTableSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableProjectId")
     public String tableProjectId;
+
     public BigQueryTableSpec withTableProjectId(String tableProjectId) {
         this.tableProjectId = tableProjectId;
         return this;
     }
     
+    public BigQueryTableSpec(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListModelMetadataResponse {
     @JsonProperty("ModelMetadataSummaries")
     public ModelMetadataSummary[] modelMetadataSummaries;
+
     public ListModelMetadataResponse withModelMetadataSummaries(ModelMetadataSummary[] modelMetadataSummaries) {
         this.modelMetadataSummaries = modelMetadataSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListModelMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListModelMetadataResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListModelMetadataResponse(@JsonProperty("ModelMetadataSummaries") ModelMetadataSummary[] modelMetadataSummaries) {
+        this.modelMetadataSummaries = modelMetadataSummaries;
+  }
 }

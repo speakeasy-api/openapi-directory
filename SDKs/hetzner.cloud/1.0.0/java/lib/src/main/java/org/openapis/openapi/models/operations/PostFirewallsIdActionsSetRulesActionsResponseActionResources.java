@@ -12,6 +12,7 @@ public class PostFirewallsIdActionsSetRulesActionsResponseActionResources {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostFirewallsIdActionsSetRulesActionsResponseActionResources withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +23,14 @@ public class PostFirewallsIdActionsSetRulesActionsResponseActionResources {
      */
     @JsonProperty("type")
     public String type;
+
     public PostFirewallsIdActionsSetRulesActionsResponseActionResources withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PostFirewallsIdActionsSetRulesActionsResponseActionResources(@JsonProperty("id") Long id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

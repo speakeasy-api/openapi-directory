@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssociationsToRequest {
@@ -12,6 +13,7 @@ public class GetAssociationsToRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
     public String evidence;
+
     public GetAssociationsToRequest withEvidence(String evidence) {
         this.evidence = evidence;
         return this;
@@ -22,6 +24,7 @@ public class GetAssociationsToRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_automatic_assertions")
     public Boolean excludeAutomaticAssertions;
+
     public GetAssociationsToRequest withExcludeAutomaticAssertions(Boolean excludeAutomaticAssertions) {
         this.excludeAutomaticAssertions = excludeAutomaticAssertions;
         return this;
@@ -32,6 +35,7 @@ public class GetAssociationsToRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object")
     public String object;
+
     public GetAssociationsToRequest withObject(String object) {
         this.object = object;
         return this;
@@ -42,6 +46,7 @@ public class GetAssociationsToRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
     public Long rows;
+
     public GetAssociationsToRequest withRows(Long rows) {
         this.rows = rows;
         return this;
@@ -52,6 +57,7 @@ public class GetAssociationsToRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public Long start;
+
     public GetAssociationsToRequest withStart(Long start) {
         this.start = start;
         return this;
@@ -62,6 +68,7 @@ public class GetAssociationsToRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unselect_evidence")
     public Boolean unselectEvidence;
+
     public GetAssociationsToRequest withUnselectEvidence(Boolean unselectEvidence) {
         this.unselectEvidence = unselectEvidence;
         return this;
@@ -72,9 +79,13 @@ public class GetAssociationsToRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=use_compact_associations")
     public Boolean useCompactAssociations;
+
     public GetAssociationsToRequest withUseCompactAssociations(Boolean useCompactAssociations) {
         this.useCompactAssociations = useCompactAssociations;
         return this;
     }
     
+    public GetAssociationsToRequest(@JsonProperty("object") String object) {
+        this.object = object;
+  }
 }

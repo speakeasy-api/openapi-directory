@@ -15,6 +15,7 @@ public class AwsS3BucketServerSideEncryptionByDefault {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSMasterKeyID")
     public String kmsMasterKeyID;
+
     public AwsS3BucketServerSideEncryptionByDefault withKMSMasterKeyID(String kmsMasterKeyID) {
         this.kmsMasterKeyID = kmsMasterKeyID;
         return this;
@@ -23,9 +24,11 @@ public class AwsS3BucketServerSideEncryptionByDefault {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SSEAlgorithm")
     public String sseAlgorithm;
+
     public AwsS3BucketServerSideEncryptionByDefault withSSEAlgorithm(String sseAlgorithm) {
         this.sseAlgorithm = sseAlgorithm;
         return this;
     }
     
+    public AwsS3BucketServerSideEncryptionByDefault(){}
 }

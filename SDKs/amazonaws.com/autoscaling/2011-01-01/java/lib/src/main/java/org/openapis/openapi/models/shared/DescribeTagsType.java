@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTagsType {
     
     public Filter[] filters;
+
     public DescribeTagsType withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -16,6 +17,7 @@ public class DescribeTagsType {
     
     
     public Long maxRecords;
+
     public DescribeTagsType withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -23,9 +25,11 @@ public class DescribeTagsType {
     
     
     public String nextToken;
+
     public DescribeTagsType withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeTagsType(){}
 }

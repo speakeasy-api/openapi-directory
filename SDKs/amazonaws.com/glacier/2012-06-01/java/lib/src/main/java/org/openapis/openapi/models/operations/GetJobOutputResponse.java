@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetJobOutputResponse {
     
     public String contentType;
+
     public GetJobOutputResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetJobOutputResponse {
      */
     
     public org.openapis.openapi.models.shared.GetJobOutputOutput getJobOutputOutput;
+
     public GetJobOutputResponse withGetJobOutputOutput(org.openapis.openapi.models.shared.GetJobOutputOutput getJobOutputOutput) {
         this.getJobOutputOutput = getJobOutputOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetJobOutputResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetJobOutputResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class GetJobOutputResponse {
      */
     
     public Object missingParameterValueException;
+
     public GetJobOutputResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class GetJobOutputResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetJobOutputResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetJobOutputResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetJobOutputResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class GetJobOutputResponse {
     
     
     public Integer statusCode;
+
     public GetJobOutputResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetJobOutputResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetJobOutputResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetJobOutputResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

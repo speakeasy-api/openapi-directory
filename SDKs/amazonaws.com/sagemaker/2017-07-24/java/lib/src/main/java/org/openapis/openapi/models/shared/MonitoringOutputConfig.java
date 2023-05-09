@@ -15,6 +15,7 @@ public class MonitoringOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public MonitoringOutputConfig withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -22,9 +23,13 @@ public class MonitoringOutputConfig {
     
     @JsonProperty("MonitoringOutputs")
     public MonitoringOutput[] monitoringOutputs;
+
     public MonitoringOutputConfig withMonitoringOutputs(MonitoringOutput[] monitoringOutputs) {
         this.monitoringOutputs = monitoringOutputs;
         return this;
     }
     
+    public MonitoringOutputConfig(@JsonProperty("MonitoringOutputs") MonitoringOutput[] monitoringOutputs) {
+        this.monitoringOutputs = monitoringOutputs;
+  }
 }

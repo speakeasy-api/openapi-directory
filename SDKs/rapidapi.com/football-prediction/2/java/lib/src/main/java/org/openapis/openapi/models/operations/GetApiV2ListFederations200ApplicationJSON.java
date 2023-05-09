@@ -15,9 +15,11 @@ public class GetApiV2ListFederations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String[] data;
+
     public GetApiV2ListFederations200ApplicationJSON withData(String[] data) {
         this.data = data;
         return this;
     }
     
+    public GetApiV2ListFederations200ApplicationJSON(){}
 }

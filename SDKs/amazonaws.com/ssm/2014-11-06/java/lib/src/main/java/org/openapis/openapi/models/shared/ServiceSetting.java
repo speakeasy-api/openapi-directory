@@ -20,6 +20,7 @@ public class ServiceSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public ServiceSetting withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class ServiceSetting {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public ServiceSetting withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -38,6 +40,7 @@ public class ServiceSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedUser")
     public String lastModifiedUser;
+
     public ServiceSetting withLastModifiedUser(String lastModifiedUser) {
         this.lastModifiedUser = lastModifiedUser;
         return this;
@@ -46,6 +49,7 @@ public class ServiceSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SettingId")
     public String settingId;
+
     public ServiceSetting withSettingId(String settingId) {
         this.settingId = settingId;
         return this;
@@ -54,6 +58,7 @@ public class ServiceSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SettingValue")
     public String settingValue;
+
     public ServiceSetting withSettingValue(String settingValue) {
         this.settingValue = settingValue;
         return this;
@@ -62,9 +67,11 @@ public class ServiceSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public ServiceSetting withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ServiceSetting(){}
 }

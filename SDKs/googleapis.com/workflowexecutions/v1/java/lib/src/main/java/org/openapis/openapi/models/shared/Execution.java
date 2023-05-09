@@ -18,6 +18,7 @@ public class Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("argument")
     public String argument;
+
     public Execution withArgument(String argument) {
         this.argument = argument;
         return this;
@@ -29,6 +30,7 @@ public class Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callLogLevel")
     public ExecutionCallLogLevelEnum callLogLevel;
+
     public Execution withCallLogLevel(ExecutionCallLogLevelEnum callLogLevel) {
         this.callLogLevel = callLogLevel;
         return this;
@@ -40,6 +42,7 @@ public class Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public Execution withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -51,6 +54,7 @@ public class Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public Execution withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -62,6 +66,7 @@ public class Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public Execution withError(Error error) {
         this.error = error;
         return this;
@@ -73,6 +78,7 @@ public class Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Execution withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -84,6 +90,7 @@ public class Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Execution withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public String result;
+
     public Execution withResult(String result) {
         this.result = result;
         return this;
@@ -106,6 +114,7 @@ public class Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public Execution withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -117,8 +126,21 @@ public class Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ExecutionStateEnum state;
+
     public Execution withState(ExecutionStateEnum state) {
         this.state = state;
+        return this;
+    }
+    
+    /**
+     * Describes an error related to the current state of the Execution resource.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("stateError")
+    public StateError stateError;
+
+    public Execution withStateError(StateError stateError) {
+        this.stateError = stateError;
         return this;
     }
     
@@ -128,6 +150,7 @@ public class Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Status status;
+
     public Execution withStatus(Status status) {
         this.status = status;
         return this;
@@ -139,9 +162,11 @@ public class Execution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowRevisionId")
     public String workflowRevisionId;
+
     public Execution withWorkflowRevisionId(String workflowRevisionId) {
         this.workflowRevisionId = workflowRevisionId;
         return this;
     }
     
+    public Execution(){}
 }

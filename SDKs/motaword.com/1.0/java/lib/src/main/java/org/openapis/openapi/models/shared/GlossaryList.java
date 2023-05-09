@@ -15,6 +15,7 @@ public class GlossaryList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glossaries")
     public Glossary[] glossaries;
+
     public GlossaryList withGlossaries(Glossary[] glossaries) {
         this.glossaries = glossaries;
         return this;
@@ -23,9 +24,11 @@ public class GlossaryList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PagingMeta meta;
+
     public GlossaryList withMeta(PagingMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public GlossaryList(){}
 }

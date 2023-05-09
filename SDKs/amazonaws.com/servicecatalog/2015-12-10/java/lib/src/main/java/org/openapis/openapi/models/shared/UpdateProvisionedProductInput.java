@@ -12,6 +12,7 @@ public class UpdateProvisionedProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public UpdateProvisionedProductInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class UpdateProvisionedProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PathId")
     public String pathId;
+
     public UpdateProvisionedProductInput withPathId(String pathId) {
         this.pathId = pathId;
         return this;
@@ -28,6 +30,7 @@ public class UpdateProvisionedProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PathName")
     public String pathName;
+
     public UpdateProvisionedProductInput withPathName(String pathName) {
         this.pathName = pathName;
         return this;
@@ -36,6 +39,7 @@ public class UpdateProvisionedProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductId")
     public String productId;
+
     public UpdateProvisionedProductInput withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -44,6 +48,7 @@ public class UpdateProvisionedProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductName")
     public String productName;
+
     public UpdateProvisionedProductInput withProductName(String productName) {
         this.productName = productName;
         return this;
@@ -52,6 +57,7 @@ public class UpdateProvisionedProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedProductId")
     public String provisionedProductId;
+
     public UpdateProvisionedProductInput withProvisionedProductId(String provisionedProductId) {
         this.provisionedProductId = provisionedProductId;
         return this;
@@ -60,6 +66,7 @@ public class UpdateProvisionedProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedProductName")
     public String provisionedProductName;
+
     public UpdateProvisionedProductInput withProvisionedProductName(String provisionedProductName) {
         this.provisionedProductName = provisionedProductName;
         return this;
@@ -68,6 +75,7 @@ public class UpdateProvisionedProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactId")
     public String provisioningArtifactId;
+
     public UpdateProvisionedProductInput withProvisioningArtifactId(String provisioningArtifactId) {
         this.provisioningArtifactId = provisioningArtifactId;
         return this;
@@ -76,6 +84,7 @@ public class UpdateProvisionedProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactName")
     public String provisioningArtifactName;
+
     public UpdateProvisionedProductInput withProvisioningArtifactName(String provisioningArtifactName) {
         this.provisioningArtifactName = provisioningArtifactName;
         return this;
@@ -84,6 +93,7 @@ public class UpdateProvisionedProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningParameters")
     public UpdateProvisioningParameter[] provisioningParameters;
+
     public UpdateProvisionedProductInput withProvisioningParameters(UpdateProvisioningParameter[] provisioningParameters) {
         this.provisioningParameters = provisioningParameters;
         return this;
@@ -92,6 +102,7 @@ public class UpdateProvisionedProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningPreferences")
     public UpdateProvisioningPreferences provisioningPreferences;
+
     public UpdateProvisionedProductInput withProvisioningPreferences(UpdateProvisioningPreferences provisioningPreferences) {
         this.provisioningPreferences = provisioningPreferences;
         return this;
@@ -100,6 +111,7 @@ public class UpdateProvisionedProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public UpdateProvisionedProductInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -107,9 +119,13 @@ public class UpdateProvisionedProductInput {
     
     @JsonProperty("UpdateToken")
     public String updateToken;
+
     public UpdateProvisionedProductInput withUpdateToken(String updateToken) {
         this.updateToken = updateToken;
         return this;
     }
     
+    public UpdateProvisionedProductInput(@JsonProperty("UpdateToken") String updateToken) {
+        this.updateToken = updateToken;
+  }
 }

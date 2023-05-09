@@ -12,9 +12,11 @@ public class CurrentKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current")
     public Boolean current;
+
     public CurrentKey withCurrent(Boolean current) {
         this.current = current;
         return this;
     }
     
+    public CurrentKey(){}
 }

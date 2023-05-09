@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommitteeCommitteeIdCandidatesRequest {
@@ -13,6 +14,7 @@ public class GetCommitteeCommitteeIdCandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetCommitteeCommitteeIdCandidatesRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -28,6 +30,7 @@ public class GetCommitteeCommitteeIdCandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_status")
     public GetCommitteeCommitteeIdCandidatesCandidateStatusEnum[] candidateStatus;
+
     public GetCommitteeCommitteeIdCandidatesRequest withCandidateStatus(GetCommitteeCommitteeIdCandidatesCandidateStatusEnum[] candidateStatus) {
         this.candidateStatus = candidateStatus;
         return this;
@@ -39,6 +42,7 @@ public class GetCommitteeCommitteeIdCandidatesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=committee_id")
     public String committeeId;
+
     public GetCommitteeCommitteeIdCandidatesRequest withCommitteeId(String committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -56,6 +60,7 @@ public class GetCommitteeCommitteeIdCandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
     public Integer[] cycle;
+
     public GetCommitteeCommitteeIdCandidatesRequest withCycle(Integer[] cycle) {
         this.cycle = cycle;
         return this;
@@ -66,6 +71,7 @@ public class GetCommitteeCommitteeIdCandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=district")
     public String[] district;
+
     public GetCommitteeCommitteeIdCandidatesRequest withDistrict(String[] district) {
         this.district = district;
         return this;
@@ -76,6 +82,7 @@ public class GetCommitteeCommitteeIdCandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_year")
     public Integer[] electionYear;
+
     public GetCommitteeCommitteeIdCandidatesRequest withElectionYear(Integer[] electionYear) {
         this.electionYear = electionYear;
         return this;
@@ -86,6 +93,7 @@ public class GetCommitteeCommitteeIdCandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=federal_funds_flag")
     public Boolean federalFundsFlag;
+
     public GetCommitteeCommitteeIdCandidatesRequest withFederalFundsFlag(Boolean federalFundsFlag) {
         this.federalFundsFlag = federalFundsFlag;
         return this;
@@ -96,6 +104,7 @@ public class GetCommitteeCommitteeIdCandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=has_raised_funds")
     public Boolean hasRaisedFunds;
+
     public GetCommitteeCommitteeIdCandidatesRequest withHasRaisedFunds(Boolean hasRaisedFunds) {
         this.hasRaisedFunds = hasRaisedFunds;
         return this;
@@ -106,6 +115,7 @@ public class GetCommitteeCommitteeIdCandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=incumbent_challenge")
     public GetCommitteeCommitteeIdCandidatesIncumbentChallengeEnum[] incumbentChallenge;
+
     public GetCommitteeCommitteeIdCandidatesRequest withIncumbentChallenge(GetCommitteeCommitteeIdCandidatesIncumbentChallengeEnum[] incumbentChallenge) {
         this.incumbentChallenge = incumbentChallenge;
         return this;
@@ -116,6 +126,7 @@ public class GetCommitteeCommitteeIdCandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String[] name;
+
     public GetCommitteeCommitteeIdCandidatesRequest withName(String[] name) {
         this.name = name;
         return this;
@@ -126,6 +137,7 @@ public class GetCommitteeCommitteeIdCandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
     public GetCommitteeCommitteeIdCandidatesOfficeEnum[] office;
+
     public GetCommitteeCommitteeIdCandidatesRequest withOffice(GetCommitteeCommitteeIdCandidatesOfficeEnum[] office) {
         this.office = office;
         return this;
@@ -136,6 +148,7 @@ public class GetCommitteeCommitteeIdCandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetCommitteeCommitteeIdCandidatesRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -146,6 +159,7 @@ public class GetCommitteeCommitteeIdCandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=party")
     public String[] party;
+
     public GetCommitteeCommitteeIdCandidatesRequest withParty(String[] party) {
         this.party = party;
         return this;
@@ -156,6 +170,7 @@ public class GetCommitteeCommitteeIdCandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetCommitteeCommitteeIdCandidatesRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -167,6 +182,7 @@ public class GetCommitteeCommitteeIdCandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetCommitteeCommitteeIdCandidatesRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -177,6 +193,7 @@ public class GetCommitteeCommitteeIdCandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetCommitteeCommitteeIdCandidatesRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -187,6 +204,7 @@ public class GetCommitteeCommitteeIdCandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetCommitteeCommitteeIdCandidatesRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -197,6 +215,7 @@ public class GetCommitteeCommitteeIdCandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetCommitteeCommitteeIdCandidatesRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
@@ -207,6 +226,7 @@ public class GetCommitteeCommitteeIdCandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public String[] state;
+
     public GetCommitteeCommitteeIdCandidatesRequest withState(String[] state) {
         this.state = state;
         return this;
@@ -217,9 +237,14 @@ public class GetCommitteeCommitteeIdCandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public String year;
+
     public GetCommitteeCommitteeIdCandidatesRequest withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public GetCommitteeCommitteeIdCandidatesRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("committee_id") String committeeId) {
+        this.apiKey = apiKey;
+        this.committeeId = committeeId;
+  }
 }

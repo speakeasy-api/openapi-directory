@@ -18,6 +18,7 @@ public class HttpRouteQueryParameterMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exactMatch")
     public String exactMatch;
+
     public HttpRouteQueryParameterMatch withExactMatch(String exactMatch) {
         this.exactMatch = exactMatch;
         return this;
@@ -29,6 +30,7 @@ public class HttpRouteQueryParameterMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("presentMatch")
     public Boolean presentMatch;
+
     public HttpRouteQueryParameterMatch withPresentMatch(Boolean presentMatch) {
         this.presentMatch = presentMatch;
         return this;
@@ -40,6 +42,7 @@ public class HttpRouteQueryParameterMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryParameter")
     public String queryParameter;
+
     public HttpRouteQueryParameterMatch withQueryParameter(String queryParameter) {
         this.queryParameter = queryParameter;
         return this;
@@ -51,9 +54,11 @@ public class HttpRouteQueryParameterMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regexMatch")
     public String regexMatch;
+
     public HttpRouteQueryParameterMatch withRegexMatch(String regexMatch) {
         this.regexMatch = regexMatch;
         return this;
     }
     
+    public HttpRouteQueryParameterMatch(){}
 }

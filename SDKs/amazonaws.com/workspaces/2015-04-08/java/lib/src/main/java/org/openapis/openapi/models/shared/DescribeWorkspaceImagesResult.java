@@ -15,6 +15,7 @@ public class DescribeWorkspaceImagesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Images")
     public WorkspaceImage[] images;
+
     public DescribeWorkspaceImagesResult withImages(WorkspaceImage[] images) {
         this.images = images;
         return this;
@@ -23,9 +24,11 @@ public class DescribeWorkspaceImagesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeWorkspaceImagesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeWorkspaceImagesResult(){}
 }

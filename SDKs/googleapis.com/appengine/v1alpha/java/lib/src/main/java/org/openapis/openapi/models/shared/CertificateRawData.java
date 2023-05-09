@@ -18,6 +18,7 @@ public class CertificateRawData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateKey")
     public String privateKey;
+
     public CertificateRawData withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -29,9 +30,11 @@ public class CertificateRawData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicCertificate")
     public String publicCertificate;
+
     public CertificateRawData withPublicCertificate(String publicCertificate) {
         this.publicCertificate = publicCertificate;
         return this;
     }
     
+    public CertificateRawData(){}
 }

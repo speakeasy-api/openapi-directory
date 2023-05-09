@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UnpeerVpcResponse {
@@ -12,6 +13,7 @@ public class UnpeerVpcResponse {
      */
     
     public Object accessDeniedException;
+
     public UnpeerVpcResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UnpeerVpcResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public UnpeerVpcResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class UnpeerVpcResponse {
     
     
     public String contentType;
+
     public UnpeerVpcResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UnpeerVpcResponse {
      */
     
     public Object invalidInputException;
+
     public UnpeerVpcResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class UnpeerVpcResponse {
      */
     
     public Object notFoundException;
+
     public UnpeerVpcResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class UnpeerVpcResponse {
      */
     
     public Object operationFailureException;
+
     public UnpeerVpcResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -66,6 +73,7 @@ public class UnpeerVpcResponse {
     
     
     public Integer statusCode;
+
     public UnpeerVpcResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UnpeerVpcResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UnpeerVpcResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UnpeerVpcResponse {
      */
     
     public Object serviceException;
+
     public UnpeerVpcResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -93,6 +103,7 @@ public class UnpeerVpcResponse {
      */
     
     public Object unauthenticatedException;
+
     public UnpeerVpcResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
@@ -103,9 +114,14 @@ public class UnpeerVpcResponse {
      */
     
     public org.openapis.openapi.models.shared.UnpeerVpcResult unpeerVpcResult;
+
     public UnpeerVpcResponse withUnpeerVpcResult(org.openapis.openapi.models.shared.UnpeerVpcResult unpeerVpcResult) {
         this.unpeerVpcResult = unpeerVpcResult;
         return this;
     }
     
+    public UnpeerVpcResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

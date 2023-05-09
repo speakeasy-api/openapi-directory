@@ -47,4 +47,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudPrivatecatalogV1
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudPrivatecatalogV1beta1Product.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudPrivatecatalogV1beta1SearchVersionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudPrivatecatalogV1beta1Version.java
+docs/sdk/README.md
+docs/organizations/README.md
 USAGE.md

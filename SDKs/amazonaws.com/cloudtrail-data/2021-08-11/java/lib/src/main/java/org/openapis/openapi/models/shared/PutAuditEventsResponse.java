@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutAuditEventsResponse {
     @JsonProperty("failed")
     public ResultErrorEntry[] failed;
+
     public PutAuditEventsResponse withFailed(ResultErrorEntry[] failed) {
         this.failed = failed;
         return this;
@@ -19,9 +20,14 @@ public class PutAuditEventsResponse {
     
     @JsonProperty("successful")
     public AuditEventResultEntry[] successful;
+
     public PutAuditEventsResponse withSuccessful(AuditEventResultEntry[] successful) {
         this.successful = successful;
         return this;
     }
     
+    public PutAuditEventsResponse(@JsonProperty("failed") ResultErrorEntry[] failed, @JsonProperty("successful") AuditEventResultEntry[] successful) {
+        this.failed = failed;
+        this.successful = successful;
+  }
 }

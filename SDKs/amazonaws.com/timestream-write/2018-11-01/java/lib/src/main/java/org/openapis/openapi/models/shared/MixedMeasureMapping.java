@@ -15,6 +15,7 @@ public class MixedMeasureMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MeasureName")
     public String measureName;
+
     public MixedMeasureMapping withMeasureName(String measureName) {
         this.measureName = measureName;
         return this;
@@ -22,6 +23,7 @@ public class MixedMeasureMapping {
     
     @JsonProperty("MeasureValueType")
     public MeasureValueTypeEnum measureValueType;
+
     public MixedMeasureMapping withMeasureValueType(MeasureValueTypeEnum measureValueType) {
         this.measureValueType = measureValueType;
         return this;
@@ -30,6 +32,7 @@ public class MixedMeasureMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MultiMeasureAttributeMappings")
     public MultiMeasureAttributeMapping[] multiMeasureAttributeMappings;
+
     public MixedMeasureMapping withMultiMeasureAttributeMappings(MultiMeasureAttributeMapping[] multiMeasureAttributeMappings) {
         this.multiMeasureAttributeMappings = multiMeasureAttributeMappings;
         return this;
@@ -38,6 +41,7 @@ public class MixedMeasureMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceColumn")
     public String sourceColumn;
+
     public MixedMeasureMapping withSourceColumn(String sourceColumn) {
         this.sourceColumn = sourceColumn;
         return this;
@@ -46,9 +50,13 @@ public class MixedMeasureMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetMeasureName")
     public String targetMeasureName;
+
     public MixedMeasureMapping withTargetMeasureName(String targetMeasureName) {
         this.targetMeasureName = targetMeasureName;
         return this;
     }
     
+    public MixedMeasureMapping(@JsonProperty("MeasureValueType") MeasureValueTypeEnum measureValueType) {
+        this.measureValueType = measureValueType;
+  }
 }

@@ -18,6 +18,7 @@ public class CatalogInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CatalogInfoResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -26,6 +27,7 @@ public class CatalogInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limits")
     public CatalogInfoResponseLimits limits;
+
     public CatalogInfoResponse withLimits(CatalogInfoResponseLimits limits) {
         this.limits = limits;
         return this;
@@ -37,9 +39,11 @@ public class CatalogInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standard_unit_description_group")
     public StandardUnitDescriptionGroup standardUnitDescriptionGroup;
+
     public CatalogInfoResponse withStandardUnitDescriptionGroup(StandardUnitDescriptionGroup standardUnitDescriptionGroup) {
         this.standardUnitDescriptionGroup = standardUnitDescriptionGroup;
         return this;
     }
     
+    public CatalogInfoResponse(){}
 }

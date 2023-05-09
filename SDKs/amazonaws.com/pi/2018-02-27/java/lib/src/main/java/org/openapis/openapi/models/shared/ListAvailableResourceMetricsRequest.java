@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAvailableResourceMetricsRequest {
     @JsonProperty("Identifier")
     public String identifier;
+
     public ListAvailableResourceMetricsRequest withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -19,6 +20,7 @@ public class ListAvailableResourceMetricsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAvailableResourceMetricsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +28,7 @@ public class ListAvailableResourceMetricsRequest {
     
     @JsonProperty("MetricTypes")
     public String[] metricTypes;
+
     public ListAvailableResourceMetricsRequest withMetricTypes(String[] metricTypes) {
         this.metricTypes = metricTypes;
         return this;
@@ -34,6 +37,7 @@ public class ListAvailableResourceMetricsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAvailableResourceMetricsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -41,9 +45,15 @@ public class ListAvailableResourceMetricsRequest {
     
     @JsonProperty("ServiceType")
     public ServiceTypeEnum serviceType;
+
     public ListAvailableResourceMetricsRequest withServiceType(ServiceTypeEnum serviceType) {
         this.serviceType = serviceType;
         return this;
     }
     
+    public ListAvailableResourceMetricsRequest(@JsonProperty("Identifier") String identifier, @JsonProperty("MetricTypes") String[] metricTypes, @JsonProperty("ServiceType") ServiceTypeEnum serviceType) {
+        this.identifier = identifier;
+        this.metricTypes = metricTypes;
+        this.serviceType = serviceType;
+  }
 }

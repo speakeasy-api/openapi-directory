@@ -12,9 +12,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifySubnetAttributeEnableResourceNameDNSAaaaRecordOnLaunch {
     @SpeakeasyMetadata("queryParam:name=Value")
     public Boolean value;
+
     public GETModifySubnetAttributeEnableResourceNameDNSAaaaRecordOnLaunch withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public GETModifySubnetAttributeEnableResourceNameDNSAaaaRecordOnLaunch(){}
 }

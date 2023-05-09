@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class Datapoint {
     
     public Double average;
+
     public Datapoint withAverage(Double average) {
         this.average = average;
         return this;
@@ -19,6 +20,7 @@ public class Datapoint {
     
     
     public java.util.Map<String, Double> extendedStatistics;
+
     public Datapoint withExtendedStatistics(java.util.Map<String, Double> extendedStatistics) {
         this.extendedStatistics = extendedStatistics;
         return this;
@@ -26,6 +28,7 @@ public class Datapoint {
     
     
     public Double maximum;
+
     public Datapoint withMaximum(Double maximum) {
         this.maximum = maximum;
         return this;
@@ -33,6 +36,7 @@ public class Datapoint {
     
     
     public Double minimum;
+
     public Datapoint withMinimum(Double minimum) {
         this.minimum = minimum;
         return this;
@@ -40,6 +44,7 @@ public class Datapoint {
     
     
     public Double sampleCount;
+
     public Datapoint withSampleCount(Double sampleCount) {
         this.sampleCount = sampleCount;
         return this;
@@ -47,6 +52,7 @@ public class Datapoint {
     
     
     public Double sum;
+
     public Datapoint withSum(Double sum) {
         this.sum = sum;
         return this;
@@ -54,6 +60,7 @@ public class Datapoint {
     
     
     public OffsetDateTime timestamp;
+
     public Datapoint withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -61,9 +68,11 @@ public class Datapoint {
     
     
     public StandardUnitEnum unit;
+
     public Datapoint withUnit(StandardUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public Datapoint(){}
 }

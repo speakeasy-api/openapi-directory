@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeDBSnapshotAttributesMessage - &lt;p/&gt;
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DescribeDBSnapshotAttributesMessage {
     
     public String dbSnapshotIdentifier;
+
     public DescribeDBSnapshotAttributesMessage withDBSnapshotIdentifier(String dbSnapshotIdentifier) {
         this.dbSnapshotIdentifier = dbSnapshotIdentifier;
         return this;
     }
     
+    public DescribeDBSnapshotAttributesMessage(@JsonProperty("DBSnapshotIdentifier") String dbSnapshotIdentifier) {
+        this.dbSnapshotIdentifier = dbSnapshotIdentifier;
+  }
 }

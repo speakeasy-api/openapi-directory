@@ -18,6 +18,7 @@ public class ValidationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileValidations")
     public FileValidationReport[] fileValidations;
+
     public ValidationReport withFileValidations(FileValidationReport[] fileValidations) {
         this.fileValidations = fileValidations;
         return this;
@@ -29,9 +30,11 @@ public class ValidationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobErrors")
     public ImportError[] jobErrors;
+
     public ValidationReport withJobErrors(ImportError[] jobErrors) {
         this.jobErrors = jobErrors;
         return this;
     }
     
+    public ValidationReport(){}
 }

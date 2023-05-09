@@ -18,9 +18,11 @@ public class TimestampPropertyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorOptions")
     public TimestampOperatorOptions operatorOptions;
+
     public TimestampPropertyOptions withOperatorOptions(TimestampOperatorOptions operatorOptions) {
         this.operatorOptions = operatorOptions;
         return this;
     }
     
+    public TimestampPropertyOptions(){}
 }

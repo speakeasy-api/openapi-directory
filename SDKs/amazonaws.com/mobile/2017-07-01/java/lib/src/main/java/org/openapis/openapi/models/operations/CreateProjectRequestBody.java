@@ -15,9 +15,11 @@ public class CreateProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contents")
     public String contents;
+
     public CreateProjectRequestBody withContents(String contents) {
         this.contents = contents;
         return this;
     }
     
+    public CreateProjectRequestBody(){}
 }

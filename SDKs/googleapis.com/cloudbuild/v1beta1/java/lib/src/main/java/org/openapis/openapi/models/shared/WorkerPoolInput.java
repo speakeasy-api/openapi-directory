@@ -18,6 +18,7 @@ public class WorkerPoolInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public WorkerPoolInput withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class WorkerPoolInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public WorkerPoolInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class WorkerPoolInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkConfig")
     public NetworkConfig networkConfig;
+
     public WorkerPoolInput withNetworkConfig(NetworkConfig networkConfig) {
         this.networkConfig = networkConfig;
         return this;
@@ -51,9 +54,11 @@ public class WorkerPoolInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerConfig")
     public WorkerConfig workerConfig;
+
     public WorkerPoolInput withWorkerConfig(WorkerConfig workerConfig) {
         this.workerConfig = workerConfig;
         return this;
     }
     
+    public WorkerPoolInput(){}
 }

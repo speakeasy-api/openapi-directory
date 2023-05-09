@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetInstanceProfileResponse - Contains the response to a successful &lt;a&gt;GetInstanceProfile&lt;/a&gt; request. 
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class GetInstanceProfileResponse {
     
     public InstanceProfile instanceProfile;
+
     public GetInstanceProfileResponse withInstanceProfile(InstanceProfile instanceProfile) {
         this.instanceProfile = instanceProfile;
         return this;
     }
     
+    public GetInstanceProfileResponse(@JsonProperty("InstanceProfile") InstanceProfile instanceProfile) {
+        this.instanceProfile = instanceProfile;
+  }
 }

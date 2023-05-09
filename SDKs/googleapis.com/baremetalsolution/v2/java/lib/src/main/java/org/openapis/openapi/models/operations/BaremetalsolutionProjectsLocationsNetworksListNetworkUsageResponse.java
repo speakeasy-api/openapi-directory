@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BaremetalsolutionProjectsLocationsNetworksListNetworkUsageResponse {
     
     public String contentType;
+
     public BaremetalsolutionProjectsLocationsNetworksListNetworkUsageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BaremetalsolutionProjectsLocationsNetworksListNetworkUsageResponse 
      */
     
     public org.openapis.openapi.models.shared.ListNetworkUsageResponse listNetworkUsageResponse;
+
     public BaremetalsolutionProjectsLocationsNetworksListNetworkUsageResponse withListNetworkUsageResponse(org.openapis.openapi.models.shared.ListNetworkUsageResponse listNetworkUsageResponse) {
         this.listNetworkUsageResponse = listNetworkUsageResponse;
         return this;
@@ -26,6 +29,7 @@ public class BaremetalsolutionProjectsLocationsNetworksListNetworkUsageResponse 
     
     
     public Integer statusCode;
+
     public BaremetalsolutionProjectsLocationsNetworksListNetworkUsageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BaremetalsolutionProjectsLocationsNetworksListNetworkUsageResponse 
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BaremetalsolutionProjectsLocationsNetworksListNetworkUsageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BaremetalsolutionProjectsLocationsNetworksListNetworkUsageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

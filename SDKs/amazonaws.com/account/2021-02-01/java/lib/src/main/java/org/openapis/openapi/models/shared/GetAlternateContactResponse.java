@@ -15,9 +15,11 @@ public class GetAlternateContactResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlternateContact")
     public AlternateContact alternateContact;
+
     public GetAlternateContactResponse withAlternateContact(AlternateContact alternateContact) {
         this.alternateContact = alternateContact;
         return this;
     }
     
+    public GetAlternateContactResponse(){}
 }

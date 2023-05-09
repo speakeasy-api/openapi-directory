@@ -15,9 +15,11 @@ public class ResultRuleGroups {
      */
     
     public Integer score;
+
     public ResultRuleGroups withScore(Integer score) {
         this.score = score;
         return this;
     }
     
+    public ResultRuleGroups(){}
 }

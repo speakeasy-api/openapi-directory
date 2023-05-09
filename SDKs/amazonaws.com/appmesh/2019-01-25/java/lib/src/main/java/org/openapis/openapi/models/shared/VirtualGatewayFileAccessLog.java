@@ -15,6 +15,7 @@ public class VirtualGatewayFileAccessLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public LoggingFormat format;
+
     public VirtualGatewayFileAccessLog withFormat(LoggingFormat format) {
         this.format = format;
         return this;
@@ -22,9 +23,13 @@ public class VirtualGatewayFileAccessLog {
     
     @JsonProperty("path")
     public String path;
+
     public VirtualGatewayFileAccessLog withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public VirtualGatewayFileAccessLog(@JsonProperty("path") String path) {
+        this.path = path;
+  }
 }

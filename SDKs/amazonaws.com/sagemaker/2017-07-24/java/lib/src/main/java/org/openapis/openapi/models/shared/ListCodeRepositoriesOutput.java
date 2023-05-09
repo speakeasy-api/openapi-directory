@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListCodeRepositoriesOutput {
     @JsonProperty("CodeRepositorySummaryList")
     public CodeRepositorySummary[] codeRepositorySummaryList;
+
     public ListCodeRepositoriesOutput withCodeRepositorySummaryList(CodeRepositorySummary[] codeRepositorySummaryList) {
         this.codeRepositorySummaryList = codeRepositorySummaryList;
         return this;
@@ -22,9 +23,13 @@ public class ListCodeRepositoriesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCodeRepositoriesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCodeRepositoriesOutput(@JsonProperty("CodeRepositorySummaryList") CodeRepositorySummary[] codeRepositorySummaryList) {
+        this.codeRepositorySummaryList = codeRepositorySummaryList;
+  }
 }

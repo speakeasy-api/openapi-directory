@@ -15,6 +15,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoItemMetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assemblyOptions")
     public Object[] assemblyOptions;
+
     public CartSimulation200ApplicationJSONLogisticsInfoItemMetadataItems withAssemblyOptions(Object[] assemblyOptions) {
         this.assemblyOptions = assemblyOptions;
         return this;
@@ -26,6 +27,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoItemMetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CartSimulation200ApplicationJSONLogisticsInfoItemMetadataItems withId(String id) {
         this.id = id;
         return this;
@@ -37,9 +39,11 @@ public class CartSimulation200ApplicationJSONLogisticsInfoItemMetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seller")
     public String seller;
+
     public CartSimulation200ApplicationJSONLogisticsInfoItemMetadataItems withSeller(String seller) {
         this.seller = seller;
         return this;
     }
     
+    public CartSimulation200ApplicationJSONLogisticsInfoItemMetadataItems(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMapRequest {
@@ -13,6 +14,7 @@ public class GetMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bbox")
     public String bbox;
+
     public GetMapRequest withBbox(String bbox) {
         this.bbox = bbox;
         return this;
@@ -23,6 +25,7 @@ public class GetMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetMapFormatEnum format;
+
     public GetMapRequest withFormat(GetMapFormatEnum format) {
         this.format = format;
         return this;
@@ -33,6 +36,7 @@ public class GetMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height")
     public Long height;
+
     public GetMapRequest withHeight(Long height) {
         this.height = height;
         return this;
@@ -43,6 +47,7 @@ public class GetMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=layers")
     public GetMapLayersEnum layers;
+
     public GetMapRequest withLayers(GetMapLayersEnum layers) {
         this.layers = layers;
         return this;
@@ -53,6 +58,7 @@ public class GetMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=request")
     public GetMapRequestEnum request;
+
     public GetMapRequest withRequest(GetMapRequestEnum request) {
         this.request = request;
         return this;
@@ -63,6 +69,7 @@ public class GetMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service")
     public GetMapServiceEnum service;
+
     public GetMapRequest withService(GetMapServiceEnum service) {
         this.service = service;
         return this;
@@ -75,6 +82,7 @@ public class GetMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=srs")
     public GetMapSrsEnum srs;
+
     public GetMapRequest withSrs(GetMapSrsEnum srs) {
         this.srs = srs;
         return this;
@@ -87,6 +95,7 @@ public class GetMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=styles")
     public GetMapStylesEnum styles;
+
     public GetMapRequest withStyles(GetMapStylesEnum styles) {
         this.styles = styles;
         return this;
@@ -97,6 +106,7 @@ public class GetMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
     public GetMapVersionEnum version;
+
     public GetMapRequest withVersion(GetMapVersionEnum version) {
         this.version = version;
         return this;
@@ -107,6 +117,7 @@ public class GetMapRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public GetMapVersionNumberEnum versionNumber;
+
     public GetMapRequest withVersionNumber(GetMapVersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
@@ -117,9 +128,21 @@ public class GetMapRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
     public Long width;
+
     public GetMapRequest withWidth(Long width) {
         this.width = width;
         return this;
     }
     
+    public GetMapRequest(@JsonProperty("bbox") String bbox, @JsonProperty("format") GetMapFormatEnum format, @JsonProperty("height") Long height, @JsonProperty("layers") GetMapLayersEnum layers, @JsonProperty("request") GetMapRequestEnum request, @JsonProperty("srs") GetMapSrsEnum srs, @JsonProperty("version") GetMapVersionEnum version, @JsonProperty("versionNumber") GetMapVersionNumberEnum versionNumber, @JsonProperty("width") Long width) {
+        this.bbox = bbox;
+        this.format = format;
+        this.height = height;
+        this.layers = layers;
+        this.request = request;
+        this.srs = srs;
+        this.version = version;
+        this.versionNumber = versionNumber;
+        this.width = width;
+  }
 }

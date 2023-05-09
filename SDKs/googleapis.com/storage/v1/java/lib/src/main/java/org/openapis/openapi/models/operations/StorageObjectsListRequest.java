@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageObjectsListRequest {
@@ -12,6 +13,7 @@ public class StorageObjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public StorageObjectsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class StorageObjectsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket")
     public String bucket;
+
     public StorageObjectsListRequest withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -32,6 +35,7 @@ public class StorageObjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=delimiter")
     public String delimiter;
+
     public StorageObjectsListRequest withDelimiter(String delimiter) {
         this.delimiter = delimiter;
         return this;
@@ -42,6 +46,7 @@ public class StorageObjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endOffset")
     public String endOffset;
+
     public StorageObjectsListRequest withEndOffset(String endOffset) {
         this.endOffset = endOffset;
         return this;
@@ -52,6 +57,7 @@ public class StorageObjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public StorageObjectsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class StorageObjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeTrailingDelimiter")
     public Boolean includeTrailingDelimiter;
+
     public StorageObjectsListRequest withIncludeTrailingDelimiter(Boolean includeTrailingDelimiter) {
         this.includeTrailingDelimiter = includeTrailingDelimiter;
         return this;
@@ -72,6 +79,7 @@ public class StorageObjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public StorageObjectsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class StorageObjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=matchGlob")
     public String matchGlob;
+
     public StorageObjectsListRequest withMatchGlob(String matchGlob) {
         this.matchGlob = matchGlob;
         return this;
@@ -92,6 +101,7 @@ public class StorageObjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public StorageObjectsListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -102,6 +112,7 @@ public class StorageObjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public StorageObjectsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class StorageObjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public StorageObjectsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -122,6 +134,7 @@ public class StorageObjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prefix")
     public String prefix;
+
     public StorageObjectsListRequest withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -132,6 +145,7 @@ public class StorageObjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public StorageObjectsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -142,6 +156,7 @@ public class StorageObjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
     public StorageObjectsListProjectionEnum projection;
+
     public StorageObjectsListRequest withProjection(StorageObjectsListProjectionEnum projection) {
         this.projection = projection;
         return this;
@@ -152,6 +167,7 @@ public class StorageObjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public StorageObjectsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -162,6 +178,7 @@ public class StorageObjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startOffset")
     public String startOffset;
+
     public StorageObjectsListRequest withStartOffset(String startOffset) {
         this.startOffset = startOffset;
         return this;
@@ -172,6 +189,7 @@ public class StorageObjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public StorageObjectsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -182,6 +200,7 @@ public class StorageObjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public StorageObjectsListRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -192,6 +211,7 @@ public class StorageObjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userProject")
     public String userProject;
+
     public StorageObjectsListRequest withUserProject(String userProject) {
         this.userProject = userProject;
         return this;
@@ -202,9 +222,13 @@ public class StorageObjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=versions")
     public Boolean versions;
+
     public StorageObjectsListRequest withVersions(Boolean versions) {
         this.versions = versions;
         return this;
     }
     
+    public StorageObjectsListRequest(@JsonProperty("bucket") String bucket) {
+        this.bucket = bucket;
+  }
 }

@@ -18,6 +18,7 @@ public class ProjectList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public ProjectList withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class ProjectList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ProjectList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class ProjectList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ProjectList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -51,6 +54,7 @@ public class ProjectList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projects")
     public ProjectListProjects[] projects;
+
     public ProjectList withProjects(ProjectListProjects[] projects) {
         this.projects = projects;
         return this;
@@ -62,9 +66,11 @@ public class ProjectList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalItems")
     public Integer totalItems;
+
     public ProjectList withTotalItems(Integer totalItems) {
         this.totalItems = totalItems;
         return this;
     }
     
+    public ProjectList(){}
 }

@@ -15,6 +15,7 @@ public class DeviceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceId")
     public String deviceId;
+
     public DeviceSummary withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -23,9 +24,11 @@ public class DeviceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceStatus")
     public DeviceStatusEnum deviceStatus;
+
     public DeviceSummary withDeviceStatus(DeviceStatusEnum deviceStatus) {
         this.deviceStatus = deviceStatus;
         return this;
     }
     
+    public DeviceSummary(){}
 }

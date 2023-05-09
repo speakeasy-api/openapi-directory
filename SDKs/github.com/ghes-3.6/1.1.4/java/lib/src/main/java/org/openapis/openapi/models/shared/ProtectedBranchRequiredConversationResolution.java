@@ -12,9 +12,11 @@ public class ProtectedBranchRequiredConversationResolution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ProtectedBranchRequiredConversationResolution withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public ProtectedBranchRequiredConversationResolution(){}
 }

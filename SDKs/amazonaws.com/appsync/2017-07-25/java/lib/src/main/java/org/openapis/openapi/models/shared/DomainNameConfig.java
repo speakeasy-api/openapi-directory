@@ -15,6 +15,7 @@ public class DomainNameConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appsyncDomainName")
     public String appsyncDomainName;
+
     public DomainNameConfig withAppsyncDomainName(String appsyncDomainName) {
         this.appsyncDomainName = appsyncDomainName;
         return this;
@@ -23,6 +24,7 @@ public class DomainNameConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateArn")
     public String certificateArn;
+
     public DomainNameConfig withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -31,6 +33,7 @@ public class DomainNameConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DomainNameConfig withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class DomainNameConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public DomainNameConfig withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -47,9 +51,11 @@ public class DomainNameConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostedZoneId")
     public String hostedZoneId;
+
     public DomainNameConfig withHostedZoneId(String hostedZoneId) {
         this.hostedZoneId = hostedZoneId;
         return this;
     }
     
+    public DomainNameConfig(){}
 }

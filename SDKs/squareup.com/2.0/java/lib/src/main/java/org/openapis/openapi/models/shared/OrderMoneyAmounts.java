@@ -23,6 +23,7 @@ public class OrderMoneyAmounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount_money")
     public Money discountMoney;
+
     public OrderMoneyAmounts withDiscountMoney(Money discountMoney) {
         this.discountMoney = discountMoney;
         return this;
@@ -39,6 +40,7 @@ public class OrderMoneyAmounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_charge_money")
     public Money serviceChargeMoney;
+
     public OrderMoneyAmounts withServiceChargeMoney(Money serviceChargeMoney) {
         this.serviceChargeMoney = serviceChargeMoney;
         return this;
@@ -55,6 +57,7 @@ public class OrderMoneyAmounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_money")
     public Money taxMoney;
+
     public OrderMoneyAmounts withTaxMoney(Money taxMoney) {
         this.taxMoney = taxMoney;
         return this;
@@ -71,6 +74,7 @@ public class OrderMoneyAmounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tip_money")
     public Money tipMoney;
+
     public OrderMoneyAmounts withTipMoney(Money tipMoney) {
         this.tipMoney = tipMoney;
         return this;
@@ -87,9 +91,11 @@ public class OrderMoneyAmounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_money")
     public Money totalMoney;
+
     public OrderMoneyAmounts withTotalMoney(Money totalMoney) {
         this.totalMoney = totalMoney;
         return this;
     }
     
+    public OrderMoneyAmounts(){}
 }

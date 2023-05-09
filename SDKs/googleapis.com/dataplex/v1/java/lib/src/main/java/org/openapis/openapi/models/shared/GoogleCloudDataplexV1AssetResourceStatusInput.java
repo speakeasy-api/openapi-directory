@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1AssetResourceStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GoogleCloudDataplexV1AssetResourceStatusInput withMessage(String message) {
         this.message = message;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1AssetResourceStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDataplexV1AssetResourceStatusStateEnum state;
+
     public GoogleCloudDataplexV1AssetResourceStatusInput withState(GoogleCloudDataplexV1AssetResourceStatusStateEnum state) {
         this.state = state;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDataplexV1AssetResourceStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDataplexV1AssetResourceStatusInput withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudDataplexV1AssetResourceStatusInput(){}
 }

@@ -18,6 +18,7 @@ public class NormalizationDestinationDefinitionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("normalizationIntegrationType")
     public String normalizationIntegrationType;
+
     public NormalizationDestinationDefinitionConfig withNormalizationIntegrationType(String normalizationIntegrationType) {
         this.normalizationIntegrationType = normalizationIntegrationType;
         return this;
@@ -29,6 +30,7 @@ public class NormalizationDestinationDefinitionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("normalizationRepository")
     public String normalizationRepository;
+
     public NormalizationDestinationDefinitionConfig withNormalizationRepository(String normalizationRepository) {
         this.normalizationRepository = normalizationRepository;
         return this;
@@ -40,6 +42,7 @@ public class NormalizationDestinationDefinitionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("normalizationTag")
     public String normalizationTag;
+
     public NormalizationDestinationDefinitionConfig withNormalizationTag(String normalizationTag) {
         this.normalizationTag = normalizationTag;
         return this;
@@ -50,9 +53,13 @@ public class NormalizationDestinationDefinitionConfig {
      */
     @JsonProperty("supported")
     public Boolean supported;
+
     public NormalizationDestinationDefinitionConfig withSupported(Boolean supported) {
         this.supported = supported;
         return this;
     }
     
+    public NormalizationDestinationDefinitionConfig(@JsonProperty("supported") Boolean supported) {
+        this.supported = supported;
+  }
 }

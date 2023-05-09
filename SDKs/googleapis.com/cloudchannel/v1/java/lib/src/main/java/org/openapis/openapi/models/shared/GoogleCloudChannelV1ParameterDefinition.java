@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1ParameterDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedValues")
     public GoogleCloudChannelV1Value[] allowedValues;
+
     public GoogleCloudChannelV1ParameterDefinition withAllowedValues(GoogleCloudChannelV1Value[] allowedValues) {
         this.allowedValues = allowedValues;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1ParameterDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValue")
     public GoogleCloudChannelV1Value maxValue;
+
     public GoogleCloudChannelV1ParameterDefinition withMaxValue(GoogleCloudChannelV1Value maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudChannelV1ParameterDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minValue")
     public GoogleCloudChannelV1Value minValue;
+
     public GoogleCloudChannelV1ParameterDefinition withMinValue(GoogleCloudChannelV1Value minValue) {
         this.minValue = minValue;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudChannelV1ParameterDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudChannelV1ParameterDefinition withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudChannelV1ParameterDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optional")
     public Boolean optional;
+
     public GoogleCloudChannelV1ParameterDefinition withOptional(Boolean optional) {
         this.optional = optional;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudChannelV1ParameterDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterType")
     public GoogleCloudChannelV1ParameterDefinitionParameterTypeEnum parameterType;
+
     public GoogleCloudChannelV1ParameterDefinition withParameterType(GoogleCloudChannelV1ParameterDefinitionParameterTypeEnum parameterType) {
         this.parameterType = parameterType;
         return this;
     }
     
+    public GoogleCloudChannelV1ParameterDefinition(){}
 }

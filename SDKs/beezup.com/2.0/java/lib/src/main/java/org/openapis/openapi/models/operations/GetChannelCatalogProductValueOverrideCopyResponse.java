@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetChannelCatalogProductValueOverrideCopyResponse {
@@ -12,6 +13,7 @@ public class GetChannelCatalogProductValueOverrideCopyResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetChannelCatalogProductValueOverrideCopyResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetChannelCatalogProductValueOverrideCopyResponse {
     
     
     public String contentType;
+
     public GetChannelCatalogProductValueOverrideCopyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetChannelCatalogProductValueOverrideCopyResponse {
     
     
     public Integer statusCode;
+
     public GetChannelCatalogProductValueOverrideCopyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetChannelCatalogProductValueOverrideCopyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetChannelCatalogProductValueOverrideCopyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetChannelCatalogProductValueOverrideCopyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

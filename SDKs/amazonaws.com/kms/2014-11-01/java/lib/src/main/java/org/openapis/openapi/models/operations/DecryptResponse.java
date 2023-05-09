@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DecryptResponse {
     
     public String contentType;
+
     public DecryptResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DecryptResponse {
      */
     
     public org.openapis.openapi.models.shared.DecryptResponse decryptResponse;
+
     public DecryptResponse withDecryptResponse(org.openapis.openapi.models.shared.DecryptResponse decryptResponse) {
         this.decryptResponse = decryptResponse;
         return this;
@@ -29,6 +32,7 @@ public class DecryptResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public DecryptResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -39,6 +43,7 @@ public class DecryptResponse {
      */
     
     public Object disabledException;
+
     public DecryptResponse withDisabledException(Object disabledException) {
         this.disabledException = disabledException;
         return this;
@@ -49,6 +54,7 @@ public class DecryptResponse {
      */
     
     public Object incorrectKeyException;
+
     public DecryptResponse withIncorrectKeyException(Object incorrectKeyException) {
         this.incorrectKeyException = incorrectKeyException;
         return this;
@@ -59,6 +65,7 @@ public class DecryptResponse {
      */
     
     public Object invalidCiphertextException;
+
     public DecryptResponse withInvalidCiphertextException(Object invalidCiphertextException) {
         this.invalidCiphertextException = invalidCiphertextException;
         return this;
@@ -69,6 +76,7 @@ public class DecryptResponse {
      */
     
     public Object invalidGrantTokenException;
+
     public DecryptResponse withInvalidGrantTokenException(Object invalidGrantTokenException) {
         this.invalidGrantTokenException = invalidGrantTokenException;
         return this;
@@ -79,6 +87,7 @@ public class DecryptResponse {
      */
     
     public Object invalidKeyUsageException;
+
     public DecryptResponse withInvalidKeyUsageException(Object invalidKeyUsageException) {
         this.invalidKeyUsageException = invalidKeyUsageException;
         return this;
@@ -89,6 +98,7 @@ public class DecryptResponse {
      */
     
     public Object kmsInternalException;
+
     public DecryptResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -99,6 +109,7 @@ public class DecryptResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public DecryptResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -109,6 +120,7 @@ public class DecryptResponse {
      */
     
     public Object keyUnavailableException;
+
     public DecryptResponse withKeyUnavailableException(Object keyUnavailableException) {
         this.keyUnavailableException = keyUnavailableException;
         return this;
@@ -119,6 +131,7 @@ public class DecryptResponse {
      */
     
     public Object notFoundException;
+
     public DecryptResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -126,6 +139,7 @@ public class DecryptResponse {
     
     
     public Integer statusCode;
+
     public DecryptResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,9 +147,14 @@ public class DecryptResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DecryptResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DecryptResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

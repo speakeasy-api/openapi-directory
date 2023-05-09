@@ -12,6 +12,7 @@ public class DestinyResponsesDestinyItemChangeResponse {
      */
     
     public DestinyEntitiesItemsDestinyItemComponent[] addedInventoryItems;
+
     public DestinyResponsesDestinyItemChangeResponse withAddedInventoryItems(DestinyEntitiesItemsDestinyItemComponent[] addedInventoryItems) {
         this.addedInventoryItems = addedInventoryItems;
         return this;
@@ -22,6 +23,7 @@ public class DestinyResponsesDestinyItemChangeResponse {
      */
     
     public DestinyResponsesDestinyItemResponse item;
+
     public DestinyResponsesDestinyItemChangeResponse withItem(DestinyResponsesDestinyItemResponse item) {
         this.item = item;
         return this;
@@ -32,9 +34,11 @@ public class DestinyResponsesDestinyItemChangeResponse {
      */
     
     public DestinyEntitiesItemsDestinyItemComponent[] removedInventoryItems;
+
     public DestinyResponsesDestinyItemChangeResponse withRemovedInventoryItems(DestinyEntitiesItemsDestinyItemComponent[] removedInventoryItems) {
         this.removedInventoryItems = removedInventoryItems;
         return this;
     }
     
+    public DestinyResponsesDestinyItemChangeResponse(){}
 }

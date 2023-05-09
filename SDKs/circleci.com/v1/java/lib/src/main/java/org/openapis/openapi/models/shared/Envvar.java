@@ -15,6 +15,7 @@ public class Envvar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Envvar withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class Envvar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Envvar withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Envvar(){}
 }

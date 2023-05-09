@@ -15,6 +15,7 @@ public class PackageAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public PackageAggregationResponse withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +23,7 @@ public class PackageAggregationResponse {
     
     @JsonProperty("packageName")
     public String packageName;
+
     public PackageAggregationResponse withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -30,9 +32,13 @@ public class PackageAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severityCounts")
     public SeverityCounts severityCounts;
+
     public PackageAggregationResponse withSeverityCounts(SeverityCounts severityCounts) {
         this.severityCounts = severityCounts;
         return this;
     }
     
+    public PackageAggregationResponse(@JsonProperty("packageName") String packageName) {
+        this.packageName = packageName;
+  }
 }

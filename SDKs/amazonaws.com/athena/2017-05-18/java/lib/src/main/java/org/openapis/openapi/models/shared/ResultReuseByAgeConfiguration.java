@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResultReuseByAgeConfiguration {
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public ResultReuseByAgeConfiguration withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -22,9 +23,13 @@ public class ResultReuseByAgeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxAgeInMinutes")
     public Long maxAgeInMinutes;
+
     public ResultReuseByAgeConfiguration withMaxAgeInMinutes(Long maxAgeInMinutes) {
         this.maxAgeInMinutes = maxAgeInMinutes;
         return this;
     }
     
+    public ResultReuseByAgeConfiguration(@JsonProperty("Enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

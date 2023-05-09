@@ -12,6 +12,7 @@ public class ChangePasswordRequest {
      */
     @JsonProperty("newPassword")
     public String newPassword;
+
     public ChangePasswordRequest withNewPassword(String newPassword) {
         this.newPassword = newPassword;
         return this;
@@ -22,9 +23,14 @@ public class ChangePasswordRequest {
      */
     @JsonProperty("oldPassword")
     public String oldPassword;
+
     public ChangePasswordRequest withOldPassword(String oldPassword) {
         this.oldPassword = oldPassword;
         return this;
     }
     
+    public ChangePasswordRequest(@JsonProperty("newPassword") String newPassword, @JsonProperty("oldPassword") String oldPassword) {
+        this.newPassword = newPassword;
+        this.oldPassword = oldPassword;
+  }
 }

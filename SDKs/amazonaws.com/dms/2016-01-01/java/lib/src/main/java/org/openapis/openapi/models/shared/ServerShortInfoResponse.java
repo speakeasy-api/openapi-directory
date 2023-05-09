@@ -15,6 +15,7 @@ public class ServerShortInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddress")
     public String ipAddress;
+
     public ServerShortInfoResponse withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -23,6 +24,7 @@ public class ServerShortInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerId")
     public String serverId;
+
     public ServerShortInfoResponse withServerId(String serverId) {
         this.serverId = serverId;
         return this;
@@ -31,9 +33,11 @@ public class ServerShortInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerName")
     public String serverName;
+
     public ServerShortInfoResponse withServerName(String serverName) {
         this.serverName = serverName;
         return this;
     }
     
+    public ServerShortInfoResponse(){}
 }

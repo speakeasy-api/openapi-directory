@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeSpotFleetInstancesRequest - Contains the parameters for DescribeSpotFleetInstances.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotFleetInstancesRequest {
     
     public Boolean dryRun;
+
     public DescribeSpotFleetInstancesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSpotFleetInstancesRequest {
     
     
     public Long maxResults;
+
     public DescribeSpotFleetInstancesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSpotFleetInstancesRequest {
     
     
     public String nextToken;
+
     public DescribeSpotFleetInstancesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -33,9 +36,13 @@ public class DescribeSpotFleetInstancesRequest {
     
     
     public String spotFleetRequestId;
+
     public DescribeSpotFleetInstancesRequest withSpotFleetRequestId(String spotFleetRequestId) {
         this.spotFleetRequestId = spotFleetRequestId;
         return this;
     }
     
+    public DescribeSpotFleetInstancesRequest(@JsonProperty("SpotFleetRequestId") String spotFleetRequestId) {
+        this.spotFleetRequestId = spotFleetRequestId;
+  }
 }

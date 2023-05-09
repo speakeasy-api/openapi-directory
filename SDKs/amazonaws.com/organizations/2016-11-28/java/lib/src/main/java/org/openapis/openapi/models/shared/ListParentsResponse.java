@@ -15,6 +15,7 @@ public class ListParentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListParentsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListParentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parents")
     public Parent[] parents;
+
     public ListParentsResponse withParents(Parent[] parents) {
         this.parents = parents;
         return this;
     }
     
+    public ListParentsResponse(){}
 }

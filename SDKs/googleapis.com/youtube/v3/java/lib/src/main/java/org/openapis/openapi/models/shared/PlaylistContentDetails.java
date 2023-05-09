@@ -15,9 +15,11 @@ public class PlaylistContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemCount")
     public Long itemCount;
+
     public PlaylistContentDetails withItemCount(Long itemCount) {
         this.itemCount = itemCount;
         return this;
     }
     
+    public PlaylistContentDetails(){}
 }

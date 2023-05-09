@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ImageAttributeRamdiskId {
     
     public String value;
+
     public ImageAttributeRamdiskId withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ImageAttributeRamdiskId(){}
 }

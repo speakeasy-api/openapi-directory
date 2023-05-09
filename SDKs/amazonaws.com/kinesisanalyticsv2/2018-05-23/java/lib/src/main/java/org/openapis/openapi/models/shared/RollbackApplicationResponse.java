@@ -15,9 +15,13 @@ public class RollbackApplicationResponse {
      */
     @JsonProperty("ApplicationDetail")
     public ApplicationDetail applicationDetail;
+
     public RollbackApplicationResponse withApplicationDetail(ApplicationDetail applicationDetail) {
         this.applicationDetail = applicationDetail;
         return this;
     }
     
+    public RollbackApplicationResponse(@JsonProperty("ApplicationDetail") ApplicationDetail applicationDetail) {
+        this.applicationDetail = applicationDetail;
+  }
 }

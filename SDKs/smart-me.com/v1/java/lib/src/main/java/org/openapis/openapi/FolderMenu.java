@@ -57,14 +57,12 @@ public class FolderMenu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FolderMenuGetResponse res = new org.openapis.openapi.models.operations.FolderMenuGetResponse() {{
+        org.openapis.openapi.models.operations.FolderMenuGetResponse res = new org.openapis.openapi.models.operations.FolderMenuGetResponse(contentType, httpRes.statusCode()) {{
             folderMenuConfiguration = null;
             folderMenuConfiguration = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,10 +114,8 @@ public class FolderMenu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FolderMenuPostFormResponse res = new org.openapis.openapi.models.operations.FolderMenuPostFormResponse() {{
+        org.openapis.openapi.models.operations.FolderMenuPostFormResponse res = new org.openapis.openapi.models.operations.FolderMenuPostFormResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -153,10 +149,8 @@ public class FolderMenu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FolderMenuPostJsonResponse res = new org.openapis.openapi.models.operations.FolderMenuPostJsonResponse() {{
+        org.openapis.openapi.models.operations.FolderMenuPostJsonResponse res = new org.openapis.openapi.models.operations.FolderMenuPostJsonResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -190,10 +184,8 @@ public class FolderMenu {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FolderMenuPostRawResponse res = new org.openapis.openapi.models.operations.FolderMenuPostRawResponse() {{
+        org.openapis.openapi.models.operations.FolderMenuPostRawResponse res = new org.openapis.openapi.models.operations.FolderMenuPostRawResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSNOMEDCTInferenceJobsResponse {
     
     public String contentType;
+
     public ListSNOMEDCTInferenceJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSNOMEDCTInferenceJobsResponse {
      */
     
     public Object internalServerException;
+
     public ListSNOMEDCTInferenceJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListSNOMEDCTInferenceJobsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListSNOMEDCTInferenceJobsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListSNOMEDCTInferenceJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSNOMEDCTInferenceJobsResponse listSNOMEDCTInferenceJobsResponse;
+
     public ListSNOMEDCTInferenceJobsResponse withListSNOMEDCTInferenceJobsResponse(org.openapis.openapi.models.shared.ListSNOMEDCTInferenceJobsResponse listSNOMEDCTInferenceJobsResponse) {
         this.listSNOMEDCTInferenceJobsResponse = listSNOMEDCTInferenceJobsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListSNOMEDCTInferenceJobsResponse {
     
     
     public Integer statusCode;
+
     public ListSNOMEDCTInferenceJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListSNOMEDCTInferenceJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSNOMEDCTInferenceJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListSNOMEDCTInferenceJobsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListSNOMEDCTInferenceJobsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,9 +81,14 @@ public class ListSNOMEDCTInferenceJobsResponse {
      */
     
     public Object validationException;
+
     public ListSNOMEDCTInferenceJobsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListSNOMEDCTInferenceJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

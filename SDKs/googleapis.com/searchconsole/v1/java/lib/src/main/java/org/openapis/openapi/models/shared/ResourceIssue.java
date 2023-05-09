@@ -18,9 +18,11 @@ public class ResourceIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockedResource")
     public BlockedResource blockedResource;
+
     public ResourceIssue withBlockedResource(BlockedResource blockedResource) {
         this.blockedResource = blockedResource;
         return this;
     }
     
+    public ResourceIssue(){}
 }

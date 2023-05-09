@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RetrieveDistributionLinksResponseResultElements {
     @JsonProperty("contactId")
     public String contactId;
+
     public RetrieveDistributionLinksResponseResultElements withContactId(String contactId) {
         this.contactId = contactId;
         return this;
@@ -16,6 +17,7 @@ public class RetrieveDistributionLinksResponseResultElements {
     
     @JsonProperty("email")
     public String email;
+
     public RetrieveDistributionLinksResponseResultElements withEmail(String email) {
         this.email = email;
         return this;
@@ -23,6 +25,7 @@ public class RetrieveDistributionLinksResponseResultElements {
     
     @JsonProperty("exceededContactFrequency")
     public Boolean exceededContactFrequency;
+
     public RetrieveDistributionLinksResponseResultElements withExceededContactFrequency(Boolean exceededContactFrequency) {
         this.exceededContactFrequency = exceededContactFrequency;
         return this;
@@ -30,6 +33,7 @@ public class RetrieveDistributionLinksResponseResultElements {
     
     @JsonProperty("externalDataReference")
     public Object externalDataReference;
+
     public RetrieveDistributionLinksResponseResultElements withExternalDataReference(Object externalDataReference) {
         this.externalDataReference = externalDataReference;
         return this;
@@ -37,6 +41,7 @@ public class RetrieveDistributionLinksResponseResultElements {
     
     @JsonProperty("firstName")
     public String firstName;
+
     public RetrieveDistributionLinksResponseResultElements withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -44,6 +49,7 @@ public class RetrieveDistributionLinksResponseResultElements {
     
     @JsonProperty("lastName")
     public String lastName;
+
     public RetrieveDistributionLinksResponseResultElements withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -51,6 +57,7 @@ public class RetrieveDistributionLinksResponseResultElements {
     
     @JsonProperty("link")
     public String link;
+
     public RetrieveDistributionLinksResponseResultElements withLink(String link) {
         this.link = link;
         return this;
@@ -58,6 +65,7 @@ public class RetrieveDistributionLinksResponseResultElements {
     
     @JsonProperty("linkExpiration")
     public String linkExpiration;
+
     public RetrieveDistributionLinksResponseResultElements withLinkExpiration(String linkExpiration) {
         this.linkExpiration = linkExpiration;
         return this;
@@ -65,6 +73,7 @@ public class RetrieveDistributionLinksResponseResultElements {
     
     @JsonProperty("status")
     public String status;
+
     public RetrieveDistributionLinksResponseResultElements withStatus(String status) {
         this.status = status;
         return this;
@@ -72,6 +81,7 @@ public class RetrieveDistributionLinksResponseResultElements {
     
     @JsonProperty("transactionId")
     public Object transactionId;
+
     public RetrieveDistributionLinksResponseResultElements withTransactionId(Object transactionId) {
         this.transactionId = transactionId;
         return this;
@@ -79,9 +89,23 @@ public class RetrieveDistributionLinksResponseResultElements {
     
     @JsonProperty("unsubscribed")
     public Boolean unsubscribed;
+
     public RetrieveDistributionLinksResponseResultElements withUnsubscribed(Boolean unsubscribed) {
         this.unsubscribed = unsubscribed;
         return this;
     }
     
+    public RetrieveDistributionLinksResponseResultElements(@JsonProperty("contactId") String contactId, @JsonProperty("email") String email, @JsonProperty("exceededContactFrequency") Boolean exceededContactFrequency, @JsonProperty("externalDataReference") Object externalDataReference, @JsonProperty("firstName") String firstName, @JsonProperty("lastName") String lastName, @JsonProperty("link") String link, @JsonProperty("linkExpiration") String linkExpiration, @JsonProperty("status") String status, @JsonProperty("transactionId") Object transactionId, @JsonProperty("unsubscribed") Boolean unsubscribed) {
+        this.contactId = contactId;
+        this.email = email;
+        this.exceededContactFrequency = exceededContactFrequency;
+        this.externalDataReference = externalDataReference;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.link = link;
+        this.linkExpiration = linkExpiration;
+        this.status = status;
+        this.transactionId = transactionId;
+        this.unsubscribed = unsubscribed;
+  }
 }

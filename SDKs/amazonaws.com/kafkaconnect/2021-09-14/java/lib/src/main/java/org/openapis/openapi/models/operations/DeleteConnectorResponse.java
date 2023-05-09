@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteConnectorResponse {
@@ -12,6 +13,7 @@ public class DeleteConnectorResponse {
      */
     
     public Object badRequestException;
+
     public DeleteConnectorResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteConnectorResponse {
     
     
     public String contentType;
+
     public DeleteConnectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteConnectorResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteConnectorResponse deleteConnectorResponse;
+
     public DeleteConnectorResponse withDeleteConnectorResponse(org.openapis.openapi.models.shared.DeleteConnectorResponse deleteConnectorResponse) {
         this.deleteConnectorResponse = deleteConnectorResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteConnectorResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteConnectorResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteConnectorResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteConnectorResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteConnectorResponse {
      */
     
     public Object notFoundException;
+
     public DeleteConnectorResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteConnectorResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteConnectorResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteConnectorResponse {
     
     
     public Integer statusCode;
+
     public DeleteConnectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteConnectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteConnectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteConnectorResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteConnectorResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteConnectorResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteConnectorResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteConnectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

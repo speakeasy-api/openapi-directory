@@ -18,6 +18,7 @@ public class GoogleCloudPolicyanalyzerV1ObservationPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GoogleCloudPolicyanalyzerV1ObservationPeriod withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudPolicyanalyzerV1ObservationPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudPolicyanalyzerV1ObservationPeriod withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GoogleCloudPolicyanalyzerV1ObservationPeriod(){}
 }

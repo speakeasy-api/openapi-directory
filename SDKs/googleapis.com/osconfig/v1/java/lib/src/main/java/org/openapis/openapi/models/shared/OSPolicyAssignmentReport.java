@@ -18,6 +18,7 @@ public class OSPolicyAssignmentReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public OSPolicyAssignmentReport withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -29,6 +30,7 @@ public class OSPolicyAssignmentReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastRunId")
     public String lastRunId;
+
     public OSPolicyAssignmentReport withLastRunId(String lastRunId) {
         this.lastRunId = lastRunId;
         return this;
@@ -40,6 +42,7 @@ public class OSPolicyAssignmentReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OSPolicyAssignmentReport withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class OSPolicyAssignmentReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osPolicyAssignment")
     public String osPolicyAssignment;
+
     public OSPolicyAssignmentReport withOsPolicyAssignment(String osPolicyAssignment) {
         this.osPolicyAssignment = osPolicyAssignment;
         return this;
@@ -62,6 +66,7 @@ public class OSPolicyAssignmentReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osPolicyCompliances")
     public OSPolicyAssignmentReportOSPolicyCompliance[] osPolicyCompliances;
+
     public OSPolicyAssignmentReport withOsPolicyCompliances(OSPolicyAssignmentReportOSPolicyCompliance[] osPolicyCompliances) {
         this.osPolicyCompliances = osPolicyCompliances;
         return this;
@@ -73,9 +78,11 @@ public class OSPolicyAssignmentReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public OSPolicyAssignmentReport withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public OSPolicyAssignmentReport(){}
 }

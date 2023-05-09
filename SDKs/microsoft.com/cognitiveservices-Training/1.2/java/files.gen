@@ -189,4 +189,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/TagPerformance.java
 lib/src/main/java/org/openapis/openapi/models/shared/TagInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Tag.java
 lib/src/main/java/org/openapis/openapi/models/shared/TagList.java
+docs/sdk/README.md
+docs/accountapi/README.md
+docs/domainsapi/README.md
+docs/imageapi/README.md
+docs/predictionsapi/README.md
+docs/projectapi/README.md
+docs/tagsapi/README.md
 USAGE.md

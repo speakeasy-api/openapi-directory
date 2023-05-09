@@ -15,6 +15,7 @@ public class AwsBackupRecoveryPointCalculatedLifecycleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteAt")
     public String deleteAt;
+
     public AwsBackupRecoveryPointCalculatedLifecycleDetails withDeleteAt(String deleteAt) {
         this.deleteAt = deleteAt;
         return this;
@@ -23,9 +24,11 @@ public class AwsBackupRecoveryPointCalculatedLifecycleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MoveToColdStorageAt")
     public String moveToColdStorageAt;
+
     public AwsBackupRecoveryPointCalculatedLifecycleDetails withMoveToColdStorageAt(String moveToColdStorageAt) {
         this.moveToColdStorageAt = moveToColdStorageAt;
         return this;
     }
     
+    public AwsBackupRecoveryPointCalculatedLifecycleDetails(){}
 }

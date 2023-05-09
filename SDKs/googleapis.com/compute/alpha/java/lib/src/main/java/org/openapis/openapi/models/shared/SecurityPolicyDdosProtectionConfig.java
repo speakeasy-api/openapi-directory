@@ -12,9 +12,11 @@ public class SecurityPolicyDdosProtectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ddosProtection")
     public SecurityPolicyDdosProtectionConfigDdosProtectionEnum ddosProtection;
+
     public SecurityPolicyDdosProtectionConfig withDdosProtection(SecurityPolicyDdosProtectionConfigDdosProtectionEnum ddosProtection) {
         this.ddosProtection = ddosProtection;
         return this;
     }
     
+    public SecurityPolicyDdosProtectionConfig(){}
 }

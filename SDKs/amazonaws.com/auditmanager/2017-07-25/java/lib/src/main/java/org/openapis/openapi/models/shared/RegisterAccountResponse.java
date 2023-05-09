@@ -15,9 +15,11 @@ public class RegisterAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AccountStatusEnum status;
+
     public RegisterAccountResponse withStatus(AccountStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public RegisterAccountResponse(){}
 }

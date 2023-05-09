@@ -12,6 +12,7 @@ public class MripcRequestBodyCertificateParameters {
      */
     @JsonProperty("customer_Id")
     public String customerId;
+
     public MripcRequestBodyCertificateParameters withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -22,6 +23,7 @@ public class MripcRequestBodyCertificateParameters {
      */
     @JsonProperty("policy_Number")
     public String policyNumber;
+
     public MripcRequestBodyCertificateParameters withPolicyNumber(String policyNumber) {
         this.policyNumber = policyNumber;
         return this;
@@ -32,9 +34,15 @@ public class MripcRequestBodyCertificateParameters {
      */
     @JsonProperty("policy_StartDate")
     public String policyStartDate;
+
     public MripcRequestBodyCertificateParameters withPolicyStartDate(String policyStartDate) {
         this.policyStartDate = policyStartDate;
         return this;
     }
     
+    public MripcRequestBodyCertificateParameters(@JsonProperty("customer_Id") String customerId, @JsonProperty("policy_Number") String policyNumber, @JsonProperty("policy_StartDate") String policyStartDate) {
+        this.customerId = customerId;
+        this.policyNumber = policyNumber;
+        this.policyStartDate = policyStartDate;
+  }
 }

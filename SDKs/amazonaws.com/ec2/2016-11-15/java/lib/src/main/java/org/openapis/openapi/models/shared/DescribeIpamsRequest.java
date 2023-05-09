@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeIpamsRequest {
     
     public Boolean dryRun;
+
     public DescribeIpamsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeIpamsRequest {
     
     
     public DescribeIpamsRequestFilters[] filters;
+
     public DescribeIpamsRequest withFilters(DescribeIpamsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeIpamsRequest {
     
     
     public String[] ipamIds;
+
     public DescribeIpamsRequest withIpamIds(String[] ipamIds) {
         this.ipamIds = ipamIds;
         return this;
@@ -30,6 +33,7 @@ public class DescribeIpamsRequest {
     
     
     public Long maxResults;
+
     public DescribeIpamsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,11 @@ public class DescribeIpamsRequest {
     
     
     public String nextToken;
+
     public DescribeIpamsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeIpamsRequest(){}
 }

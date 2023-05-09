@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Address {
     @JsonProperty("address1")
     public String address1;
+
     public Address withAddress1(String address1) {
         this.address1 = address1;
         return this;
@@ -19,6 +20,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address2")
     public String address2;
+
     public Address withAddress2(String address2) {
         this.address2 = address2;
         return this;
@@ -26,6 +28,7 @@ public class Address {
     
     @JsonProperty("city")
     public String city;
+
     public Address withCity(String city) {
         this.city = city;
         return this;
@@ -38,6 +41,7 @@ public class Address {
      */
     @JsonProperty("country")
     public AddressCountryEnum country;
+
     public Address withCountry(AddressCountryEnum country) {
         this.country = country;
         return this;
@@ -48,6 +52,7 @@ public class Address {
      */
     @JsonProperty("postalCode")
     public String postalCode;
+
     public Address withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -58,9 +63,17 @@ public class Address {
      */
     @JsonProperty("state")
     public String state;
+
     public Address withState(String state) {
         this.state = state;
         return this;
     }
     
+    public Address(@JsonProperty("address1") String address1, @JsonProperty("city") String city, @JsonProperty("country") AddressCountryEnum country, @JsonProperty("postalCode") String postalCode, @JsonProperty("state") String state) {
+        this.address1 = address1;
+        this.city = city;
+        this.country = country;
+        this.postalCode = postalCode;
+        this.state = state;
+  }
 }

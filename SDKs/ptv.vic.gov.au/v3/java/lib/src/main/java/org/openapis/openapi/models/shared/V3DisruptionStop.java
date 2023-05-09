@@ -12,6 +12,7 @@ public class V3DisruptionStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stop_id")
     public Integer stopId;
+
     public V3DisruptionStop withStopId(Integer stopId) {
         this.stopId = stopId;
         return this;
@@ -20,9 +21,11 @@ public class V3DisruptionStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stop_name")
     public String stopName;
+
     public V3DisruptionStop withStopName(String stopName) {
         this.stopName = stopName;
         return this;
     }
     
+    public V3DisruptionStop(){}
 }

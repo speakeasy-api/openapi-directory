@@ -12,9 +12,11 @@ public class EnterpriseCrmEventbusProtoDoubleArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public Double[] values;
+
     public EnterpriseCrmEventbusProtoDoubleArray withValues(Double[] values) {
         this.values = values;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoDoubleArray(){}
 }

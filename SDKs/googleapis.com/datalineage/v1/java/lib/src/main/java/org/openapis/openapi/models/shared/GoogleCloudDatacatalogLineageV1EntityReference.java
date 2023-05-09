@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogLineageV1EntityReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullyQualifiedName")
     public String fullyQualifiedName;
+
     public GoogleCloudDatacatalogLineageV1EntityReference withFullyQualifiedName(String fullyQualifiedName) {
         this.fullyQualifiedName = fullyQualifiedName;
         return this;
     }
     
+    public GoogleCloudDatacatalogLineageV1EntityReference(){}
 }

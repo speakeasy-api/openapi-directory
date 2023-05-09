@@ -15,6 +15,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_id")
     public String entityId;
+
     public Group withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -23,6 +24,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public EntityTypeEnum entityType;
+
     public Group withEntityType(EntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -31,6 +33,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public Reference[] members;
+
     public Group withMembers(Reference[] members) {
         this.members = members;
         return this;
@@ -39,9 +42,11 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Group withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Group(){}
 }

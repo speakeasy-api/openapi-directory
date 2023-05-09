@@ -15,6 +15,7 @@ public class AuthenticationMode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Passwords")
     public String[] passwords;
+
     public AuthenticationMode withPasswords(String[] passwords) {
         this.passwords = passwords;
         return this;
@@ -23,9 +24,11 @@ public class AuthenticationMode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public InputAuthenticationTypeEnum type;
+
     public AuthenticationMode withType(InputAuthenticationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AuthenticationMode(){}
 }

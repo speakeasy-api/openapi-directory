@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1AssetDiscoveryStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastRunDuration")
     public String lastRunDuration;
+
     public GoogleCloudDataplexV1AssetDiscoveryStatus withLastRunDuration(String lastRunDuration) {
         this.lastRunDuration = lastRunDuration;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1AssetDiscoveryStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastRunTime")
     public String lastRunTime;
+
     public GoogleCloudDataplexV1AssetDiscoveryStatus withLastRunTime(String lastRunTime) {
         this.lastRunTime = lastRunTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1AssetDiscoveryStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GoogleCloudDataplexV1AssetDiscoveryStatus withMessage(String message) {
         this.message = message;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1AssetDiscoveryStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDataplexV1AssetDiscoveryStatusStateEnum state;
+
     public GoogleCloudDataplexV1AssetDiscoveryStatus withState(GoogleCloudDataplexV1AssetDiscoveryStatusStateEnum state) {
         this.state = state;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1AssetDiscoveryStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public GoogleCloudDataplexV1AssetDiscoveryStatusStats stats;
+
     public GoogleCloudDataplexV1AssetDiscoveryStatus withStats(GoogleCloudDataplexV1AssetDiscoveryStatusStats stats) {
         this.stats = stats;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDataplexV1AssetDiscoveryStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDataplexV1AssetDiscoveryStatus withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudDataplexV1AssetDiscoveryStatus(){}
 }

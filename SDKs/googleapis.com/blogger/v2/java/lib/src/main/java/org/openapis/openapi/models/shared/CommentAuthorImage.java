@@ -18,9 +18,11 @@ public class CommentAuthorImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public CommentAuthorImage withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CommentAuthorImage(){}
 }

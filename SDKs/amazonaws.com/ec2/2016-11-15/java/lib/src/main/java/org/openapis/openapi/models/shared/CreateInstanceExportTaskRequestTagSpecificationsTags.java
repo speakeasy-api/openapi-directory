@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateInstanceExportTaskRequestTagSpecificationsTags {
     
     public String key;
+
     public CreateInstanceExportTaskRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateInstanceExportTaskRequestTagSpecificationsTags {
     
     
     public String value;
+
     public CreateInstanceExportTaskRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateInstanceExportTaskRequestTagSpecificationsTags(){}
 }

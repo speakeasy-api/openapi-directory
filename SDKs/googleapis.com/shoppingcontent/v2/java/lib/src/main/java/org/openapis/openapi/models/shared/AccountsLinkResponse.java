@@ -18,9 +18,11 @@ public class AccountsLinkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccountsLinkResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public AccountsLinkResponse(){}
 }

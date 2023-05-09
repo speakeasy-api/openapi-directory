@@ -15,9 +15,11 @@ public class Timeouts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromActiveToSleep")
     public Integer fromActiveToSleep;
+
     public Timeouts withFromActiveToSleep(Integer fromActiveToSleep) {
         this.fromActiveToSleep = fromActiveToSleep;
         return this;
     }
     
+    public Timeouts(){}
 }

@@ -14,6 +14,7 @@ public class CreateUpdatePriceOrFixedPriceRequestBody {
      */
     @JsonProperty("basePrice")
     public Double basePrice;
+
     public CreateUpdatePriceOrFixedPriceRequestBody withBasePrice(Double basePrice) {
         this.basePrice = basePrice;
         return this;
@@ -25,6 +26,7 @@ public class CreateUpdatePriceOrFixedPriceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costPrice")
     public Double costPrice;
+
     public CreateUpdatePriceOrFixedPriceRequestBody withCostPrice(Double costPrice) {
         this.costPrice = costPrice;
         return this;
@@ -33,6 +35,7 @@ public class CreateUpdatePriceOrFixedPriceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedPrices")
     public CreateUpdatePriceOrFixedPriceRequestBodyFixedPrices[] fixedPrices;
+
     public CreateUpdatePriceOrFixedPriceRequestBody withFixedPrices(CreateUpdatePriceOrFixedPriceRequestBodyFixedPrices[] fixedPrices) {
         this.fixedPrices = fixedPrices;
         return this;
@@ -43,6 +46,7 @@ public class CreateUpdatePriceOrFixedPriceRequestBody {
      */
     @JsonProperty("listPrice")
     public Double listPrice;
+
     public CreateUpdatePriceOrFixedPriceRequestBody withListPrice(Double listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -53,9 +57,15 @@ public class CreateUpdatePriceOrFixedPriceRequestBody {
      */
     @JsonProperty("markup")
     public Long markup;
+
     public CreateUpdatePriceOrFixedPriceRequestBody withMarkup(Long markup) {
         this.markup = markup;
         return this;
     }
     
+    public CreateUpdatePriceOrFixedPriceRequestBody(@JsonProperty("basePrice") Double basePrice, @JsonProperty("listPrice") Double listPrice, @JsonProperty("markup") Long markup) {
+        this.basePrice = basePrice;
+        this.listPrice = listPrice;
+        this.markup = markup;
+  }
 }

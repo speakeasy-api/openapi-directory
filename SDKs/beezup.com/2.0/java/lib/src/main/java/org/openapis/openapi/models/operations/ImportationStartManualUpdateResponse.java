@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportationStartManualUpdateResponse {
@@ -14,6 +15,7 @@ public class ImportationStartManualUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public ImportationStartManualUpdateResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -21,6 +23,7 @@ public class ImportationStartManualUpdateResponse {
     
     
     public String contentType;
+
     public ImportationStartManualUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -28,6 +31,7 @@ public class ImportationStartManualUpdateResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ImportationStartManualUpdateResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -35,6 +39,7 @@ public class ImportationStartManualUpdateResponse {
     
     
     public Integer statusCode;
+
     public ImportationStartManualUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -42,6 +47,7 @@ public class ImportationStartManualUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportationStartManualUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -52,6 +58,7 @@ public class ImportationStartManualUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportAlreadyInProgressResponse importAlreadyInProgressResponse;
+
     public ImportationStartManualUpdateResponse withImportAlreadyInProgressResponse(org.openapis.openapi.models.shared.ImportAlreadyInProgressResponse importAlreadyInProgressResponse) {
         this.importAlreadyInProgressResponse = importAlreadyInProgressResponse;
         return this;
@@ -62,9 +69,14 @@ public class ImportationStartManualUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.LinksImportationGetImportationMonitoringLink linksImportationGetImportationMonitoringLink;
+
     public ImportationStartManualUpdateResponse withLinksImportationGetImportationMonitoringLink(org.openapis.openapi.models.shared.LinksImportationGetImportationMonitoringLink linksImportationGetImportationMonitoringLink) {
         this.linksImportationGetImportationMonitoringLink = linksImportationGetImportationMonitoringLink;
         return this;
     }
     
+    public ImportationStartManualUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

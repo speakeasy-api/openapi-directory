@@ -12,6 +12,7 @@ public class CreatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApprovalRules")
     public PatchRuleGroup approvalRules;
+
     public CreatePatchBaselineRequest withApprovalRules(PatchRuleGroup approvalRules) {
         this.approvalRules = approvalRules;
         return this;
@@ -20,6 +21,7 @@ public class CreatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApprovedPatches")
     public String[] approvedPatches;
+
     public CreatePatchBaselineRequest withApprovedPatches(String[] approvedPatches) {
         this.approvedPatches = approvedPatches;
         return this;
@@ -28,6 +30,7 @@ public class CreatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApprovedPatchesComplianceLevel")
     public PatchComplianceLevelEnum approvedPatchesComplianceLevel;
+
     public CreatePatchBaselineRequest withApprovedPatchesComplianceLevel(PatchComplianceLevelEnum approvedPatchesComplianceLevel) {
         this.approvedPatchesComplianceLevel = approvedPatchesComplianceLevel;
         return this;
@@ -36,6 +39,7 @@ public class CreatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApprovedPatchesEnableNonSecurity")
     public Boolean approvedPatchesEnableNonSecurity;
+
     public CreatePatchBaselineRequest withApprovedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
         this.approvedPatchesEnableNonSecurity = approvedPatchesEnableNonSecurity;
         return this;
@@ -44,6 +48,7 @@ public class CreatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreatePatchBaselineRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -52,6 +57,7 @@ public class CreatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreatePatchBaselineRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -60,6 +66,7 @@ public class CreatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalFilters")
     public PatchFilterGroup globalFilters;
+
     public CreatePatchBaselineRequest withGlobalFilters(PatchFilterGroup globalFilters) {
         this.globalFilters = globalFilters;
         return this;
@@ -67,6 +74,7 @@ public class CreatePatchBaselineRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreatePatchBaselineRequest withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +83,7 @@ public class CreatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatingSystem")
     public OperatingSystemEnum operatingSystem;
+
     public CreatePatchBaselineRequest withOperatingSystem(OperatingSystemEnum operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
@@ -83,6 +92,7 @@ public class CreatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RejectedPatches")
     public String[] rejectedPatches;
+
     public CreatePatchBaselineRequest withRejectedPatches(String[] rejectedPatches) {
         this.rejectedPatches = rejectedPatches;
         return this;
@@ -91,6 +101,7 @@ public class CreatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RejectedPatchesAction")
     public PatchActionEnum rejectedPatchesAction;
+
     public CreatePatchBaselineRequest withRejectedPatchesAction(PatchActionEnum rejectedPatchesAction) {
         this.rejectedPatchesAction = rejectedPatchesAction;
         return this;
@@ -99,6 +110,7 @@ public class CreatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sources")
     public PatchSource[] sources;
+
     public CreatePatchBaselineRequest withSources(PatchSource[] sources) {
         this.sources = sources;
         return this;
@@ -107,9 +119,13 @@ public class CreatePatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreatePatchBaselineRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreatePatchBaselineRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

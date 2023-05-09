@@ -15,6 +15,7 @@ public class PublicFile {
      */
     @JsonProperty("computed_md5")
     public String computedMd5;
+
     public PublicFile withComputedMd5(String computedMd5) {
         this.computedMd5 = computedMd5;
         return this;
@@ -25,6 +26,7 @@ public class PublicFile {
      */
     @JsonProperty("download_url")
     public String downloadUrl;
+
     public PublicFile withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -35,6 +37,7 @@ public class PublicFile {
      */
     @JsonProperty("id")
     public Long id;
+
     public PublicFile withId(Long id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class PublicFile {
      */
     @JsonProperty("is_link_only")
     public Boolean isLinkOnly;
+
     public PublicFile withIsLinkOnly(Boolean isLinkOnly) {
         this.isLinkOnly = isLinkOnly;
         return this;
@@ -55,6 +59,7 @@ public class PublicFile {
      */
     @JsonProperty("name")
     public String name;
+
     public PublicFile withName(String name) {
         this.name = name;
         return this;
@@ -65,6 +70,7 @@ public class PublicFile {
      */
     @JsonProperty("size")
     public Long size;
+
     public PublicFile withSize(Long size) {
         this.size = size;
         return this;
@@ -75,9 +81,19 @@ public class PublicFile {
      */
     @JsonProperty("supplied_md5")
     public String suppliedMd5;
+
     public PublicFile withSuppliedMd5(String suppliedMd5) {
         this.suppliedMd5 = suppliedMd5;
         return this;
     }
     
+    public PublicFile(@JsonProperty("computed_md5") String computedMd5, @JsonProperty("download_url") String downloadUrl, @JsonProperty("id") Long id, @JsonProperty("is_link_only") Boolean isLinkOnly, @JsonProperty("name") String name, @JsonProperty("size") Long size, @JsonProperty("supplied_md5") String suppliedMd5) {
+        this.computedMd5 = computedMd5;
+        this.downloadUrl = downloadUrl;
+        this.id = id;
+        this.isLinkOnly = isLinkOnly;
+        this.name = name;
+        this.size = size;
+        this.suppliedMd5 = suppliedMd5;
+  }
 }

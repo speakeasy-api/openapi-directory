@@ -16,16 +16,15 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
+import org.openapis.openapi.models.operations.Area120tablesTablesListRequest;
+import org.openapis.openapi.models.operations.Area120tablesTablesListResponse;
+import org.openapis.openapi.models.operations.Area120tablesTablesListSecurity;
 import org.openapis.openapi.models.operations.Area120tablesTablesListSecurityOption1;
 import org.openapis.openapi.models.operations.Area120tablesTablesListSecurityOption2;
 import org.openapis.openapi.models.operations.Area120tablesTablesListSecurityOption3;
 import org.openapis.openapi.models.operations.Area120tablesTablesListSecurityOption4;
 import org.openapis.openapi.models.operations.Area120tablesTablesListSecurityOption5;
 import org.openapis.openapi.models.operations.Area120tablesTablesListSecurityOption6;
-import org.openapis.openapi.models.operations.Area120tablesTablesListSecurity;
-import org.openapis.openapi.models.operations.Area120tablesTablesListRequest;
-import org.openapis.openapi.models.operations.Area120tablesTablesListResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -36,35 +35,37 @@ public class Application {
                 .build();
 
             Area120tablesTablesListRequest req = new Area120tablesTablesListRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 accessToken = "provident";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "quibusdam";
                 fields = "unde";
                 key = "nulla";
                 oauthToken = "corrupti";
                 orderBy = "illum";
-                pageSize = 423655;
+                pageSize = 423655L;
                 pageToken = "error";
                 prettyPrint = false;
                 quotaUser = "deserunt";
                 uploadType = "suscipit";
                 uploadProtocol = "iure";
-            }}            
+            }};            
 
             Area120tablesTablesListResponse res = sdk.tables.area120tablesTablesList(req, new Area120tablesTablesListSecurity() {{
-                option1 = new Area120tablesTablesListSecurityOption1() {{
+                option1 = new Area120tablesTablesListSecurityOption1("magnam", "debitis") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.listTablesResponse.isPresent()) {
+            if (res.listTablesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -72,21 +73,21 @@ public class Application {
 ## Available Resources and Operations
 
 
-### tables
+### [tables](docs/tables/README.md)
 
-* `area120tablesTablesList` - Lists tables for the user.
-* `area120tablesTablesRowsBatchCreate` - Creates multiple rows.
-* `area120tablesTablesRowsBatchDelete` - Deletes multiple rows.
-* `area120tablesTablesRowsBatchUpdate` - Updates multiple rows.
-* `area120tablesTablesRowsCreate` - Creates a row.
-* `area120tablesTablesRowsDelete` - Deletes a row.
-* `area120tablesTablesRowsList` - Lists rows in a table. Returns NOT_FOUND if the table does not exist.
-* `area120tablesTablesRowsPatch` - Updates a row.
+* [area120tablesTablesList](docs/tables/README.md#area120tablestableslist) - Lists tables for the user.
+* [area120tablesTablesRowsBatchCreate](docs/tables/README.md#area120tablestablesrowsbatchcreate) - Creates multiple rows.
+* [area120tablesTablesRowsBatchDelete](docs/tables/README.md#area120tablestablesrowsbatchdelete) - Deletes multiple rows.
+* [area120tablesTablesRowsBatchUpdate](docs/tables/README.md#area120tablestablesrowsbatchupdate) - Updates multiple rows.
+* [area120tablesTablesRowsCreate](docs/tables/README.md#area120tablestablesrowscreate) - Creates a row.
+* [area120tablesTablesRowsDelete](docs/tables/README.md#area120tablestablesrowsdelete) - Deletes a row.
+* [area120tablesTablesRowsList](docs/tables/README.md#area120tablestablesrowslist) - Lists rows in a table. Returns NOT_FOUND if the table does not exist.
+* [area120tablesTablesRowsPatch](docs/tables/README.md#area120tablestablesrowspatch) - Updates a row.
 
-### workspaces
+### [workspaces](docs/workspaces/README.md)
 
-* `area120tablesWorkspacesGet` - Gets a workspace. Returns NOT_FOUND if the workspace does not exist.
-* `area120tablesWorkspacesList` - Lists workspaces for the user.
+* [area120tablesWorkspacesGet](docs/workspaces/README.md#area120tablesworkspacesget) - Gets a workspace. Returns NOT_FOUND if the workspace does not exist.
+* [area120tablesWorkspacesList](docs/workspaces/README.md#area120tablesworkspaceslist) - Lists workspaces for the user.
 <!-- End SDK Available Operations -->
 
 ### Maturity

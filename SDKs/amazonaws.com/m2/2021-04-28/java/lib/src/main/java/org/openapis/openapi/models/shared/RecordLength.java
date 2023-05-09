@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RecordLength {
     @JsonProperty("max")
     public Long max;
+
     public RecordLength withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,14 @@ public class RecordLength {
     
     @JsonProperty("min")
     public Long min;
+
     public RecordLength withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public RecordLength(@JsonProperty("max") Long max, @JsonProperty("min") Long min) {
+        this.max = max;
+        this.min = min;
+  }
 }

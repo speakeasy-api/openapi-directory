@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PublishMetricsResponse {
     
     public String contentType;
+
     public PublishMetricsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PublishMetricsResponse {
      */
     
     public Object internalServerException;
+
     public PublishMetricsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class PublishMetricsResponse {
      */
     
     public java.util.Map<String, Object> publishMetricsOutput;
+
     public PublishMetricsResponse withPublishMetricsOutput(java.util.Map<String, Object> publishMetricsOutput) {
         this.publishMetricsOutput = publishMetricsOutput;
         return this;
@@ -36,6 +40,7 @@ public class PublishMetricsResponse {
     
     
     public Integer statusCode;
+
     public PublishMetricsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class PublishMetricsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PublishMetricsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class PublishMetricsResponse {
      */
     
     public Object validationException;
+
     public PublishMetricsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PublishMetricsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

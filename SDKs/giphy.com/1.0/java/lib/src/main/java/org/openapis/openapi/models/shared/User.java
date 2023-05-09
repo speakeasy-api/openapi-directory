@@ -18,6 +18,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public User withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -29,6 +30,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("banner_url")
     public String bannerUrl;
+
     public User withBannerUrl(String bannerUrl) {
         this.bannerUrl = bannerUrl;
         return this;
@@ -40,6 +42,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public User withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_url")
     public String profileUrl;
+
     public User withProfileUrl(String profileUrl) {
         this.profileUrl = profileUrl;
         return this;
@@ -62,6 +66,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter")
     public String twitter;
+
     public User withTwitter(String twitter) {
         this.twitter = twitter;
         return this;
@@ -73,9 +78,11 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public User withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public User(){}
 }

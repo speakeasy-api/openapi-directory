@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApiV2CddriveFoldersFolderIdResponse {
     
     public String contentType;
+
     public DeleteApiV2CddriveFoldersFolderIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteApiV2CddriveFoldersFolderIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteApiV2CddriveFoldersFolderIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class DeleteApiV2CddriveFoldersFolderIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApiV2CddriveFoldersFolderIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteApiV2CddriveFoldersFolderIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

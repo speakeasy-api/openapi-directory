@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SavePatientManagementRequest {
@@ -12,6 +13,7 @@ public class SavePatientManagementRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PatientManagement patientManagement;
+
     public SavePatientManagementRequest withPatientManagement(org.openapis.openapi.models.shared.PatientManagement patientManagement) {
         this.patientManagement = patientManagement;
         return this;
@@ -22,6 +24,7 @@ public class SavePatientManagementRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public Long groupId;
+
     public SavePatientManagementRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -32,6 +35,7 @@ public class SavePatientManagementRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=identifierId")
     public Long identifierId;
+
     public SavePatientManagementRequest withIdentifierId(Long identifierId) {
         this.identifierId = identifierId;
         return this;
@@ -42,9 +46,15 @@ public class SavePatientManagementRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public Long userId;
+
     public SavePatientManagementRequest withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public SavePatientManagementRequest(@JsonProperty("groupId") Long groupId, @JsonProperty("identifierId") Long identifierId, @JsonProperty("userId") Long userId) {
+        this.groupId = groupId;
+        this.identifierId = identifierId;
+        this.userId = userId;
+  }
 }

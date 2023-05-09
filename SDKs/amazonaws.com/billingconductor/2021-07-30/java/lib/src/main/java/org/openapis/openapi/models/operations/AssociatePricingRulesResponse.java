@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociatePricingRulesResponse {
@@ -12,6 +13,7 @@ public class AssociatePricingRulesResponse {
      */
     
     public Object accessDeniedException;
+
     public AssociatePricingRulesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AssociatePricingRulesResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociatePricingRulesOutput associatePricingRulesOutput;
+
     public AssociatePricingRulesResponse withAssociatePricingRulesOutput(org.openapis.openapi.models.shared.AssociatePricingRulesOutput associatePricingRulesOutput) {
         this.associatePricingRulesOutput = associatePricingRulesOutput;
         return this;
@@ -32,6 +35,7 @@ public class AssociatePricingRulesResponse {
      */
     
     public Object conflictException;
+
     public AssociatePricingRulesResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class AssociatePricingRulesResponse {
     
     
     public String contentType;
+
     public AssociatePricingRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AssociatePricingRulesResponse {
      */
     
     public Object internalServerException;
+
     public AssociatePricingRulesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class AssociatePricingRulesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociatePricingRulesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class AssociatePricingRulesResponse {
      */
     
     public Object serviceLimitExceededException;
+
     public AssociatePricingRulesResponse withServiceLimitExceededException(Object serviceLimitExceededException) {
         this.serviceLimitExceededException = serviceLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class AssociatePricingRulesResponse {
     
     
     public Integer statusCode;
+
     public AssociatePricingRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class AssociatePricingRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociatePricingRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class AssociatePricingRulesResponse {
      */
     
     public Object throttlingException;
+
     public AssociatePricingRulesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class AssociatePricingRulesResponse {
      */
     
     public Object validationException;
+
     public AssociatePricingRulesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AssociatePricingRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

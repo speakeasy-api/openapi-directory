@@ -15,6 +15,7 @@ public class DescribeSettingsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public DescribeSettingsResult withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -23,6 +24,7 @@ public class DescribeSettingsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeSettingsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class DescribeSettingsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SettingEntries")
     public SettingEntry[] settingEntries;
+
     public DescribeSettingsResult withSettingEntries(SettingEntry[] settingEntries) {
         this.settingEntries = settingEntries;
         return this;
     }
     
+    public DescribeSettingsResult(){}
 }

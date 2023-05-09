@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PublishedOralQuestionTimeGetResponse {
@@ -12,6 +13,7 @@ public class PublishedOralQuestionTimeGetResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiResponseListPublishedWrittenQuestion apiResponseListPublishedWrittenQuestion;
+
     public PublishedOralQuestionTimeGetResponse withApiResponseListPublishedWrittenQuestion(org.openapis.openapi.models.shared.ApiResponseListPublishedWrittenQuestion apiResponseListPublishedWrittenQuestion) {
         this.apiResponseListPublishedWrittenQuestion = apiResponseListPublishedWrittenQuestion;
         return this;
@@ -22,6 +24,7 @@ public class PublishedOralQuestionTimeGetResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiResponseObject apiResponseObject;
+
     public PublishedOralQuestionTimeGetResponse withApiResponseObject(org.openapis.openapi.models.shared.ApiResponseObject apiResponseObject) {
         this.apiResponseObject = apiResponseObject;
         return this;
@@ -29,6 +32,7 @@ public class PublishedOralQuestionTimeGetResponse {
     
     
     public byte[] body;
+
     public PublishedOralQuestionTimeGetResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -36,6 +40,7 @@ public class PublishedOralQuestionTimeGetResponse {
     
     
     public String contentType;
+
     public PublishedOralQuestionTimeGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -43,6 +48,7 @@ public class PublishedOralQuestionTimeGetResponse {
     
     
     public Integer statusCode;
+
     public PublishedOralQuestionTimeGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class PublishedOralQuestionTimeGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PublishedOralQuestionTimeGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PublishedOralQuestionTimeGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TaskUpdateResponse {
@@ -12,6 +13,7 @@ public class TaskUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public TaskUpdateResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -19,6 +21,7 @@ public class TaskUpdateResponse {
     
     
     public String contentType;
+
     public TaskUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class TaskUpdateResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public TaskUpdateResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class TaskUpdateResponse {
     
     
     public Integer statusCode;
+
     public TaskUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class TaskUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TaskUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TaskUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

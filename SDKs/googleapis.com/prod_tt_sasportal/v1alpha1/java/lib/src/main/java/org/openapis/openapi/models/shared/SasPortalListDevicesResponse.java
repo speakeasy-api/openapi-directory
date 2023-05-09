@@ -18,6 +18,7 @@ public class SasPortalListDevicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public SasPortalDevice[] devices;
+
     public SasPortalListDevicesResponse withDevices(SasPortalDevice[] devices) {
         this.devices = devices;
         return this;
@@ -29,9 +30,11 @@ public class SasPortalListDevicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SasPortalListDevicesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public SasPortalListDevicesResponse(){}
 }

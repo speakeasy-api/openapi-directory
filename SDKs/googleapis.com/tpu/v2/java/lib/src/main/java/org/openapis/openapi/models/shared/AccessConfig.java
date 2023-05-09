@@ -18,9 +18,11 @@ public class AccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalIp")
     public String externalIp;
+
     public AccessConfig withExternalIp(String externalIp) {
         this.externalIp = externalIp;
         return this;
     }
     
+    public AccessConfig(){}
 }

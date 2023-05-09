@@ -20,6 +20,7 @@ public class DescribeModelPackageOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalInferenceSpecifications")
     public AdditionalInferenceSpecificationDefinition[] additionalInferenceSpecifications;
+
     public DescribeModelPackageOutput withAdditionalInferenceSpecifications(AdditionalInferenceSpecificationDefinition[] additionalInferenceSpecifications) {
         this.additionalInferenceSpecifications = additionalInferenceSpecifications;
         return this;
@@ -28,6 +29,7 @@ public class DescribeModelPackageOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApprovalDescription")
     public String approvalDescription;
+
     public DescribeModelPackageOutput withApprovalDescription(String approvalDescription) {
         this.approvalDescription = approvalDescription;
         return this;
@@ -36,6 +38,7 @@ public class DescribeModelPackageOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertifyForMarketplace")
     public Boolean certifyForMarketplace;
+
     public DescribeModelPackageOutput withCertifyForMarketplace(Boolean certifyForMarketplace) {
         this.certifyForMarketplace = certifyForMarketplace;
         return this;
@@ -47,6 +50,7 @@ public class DescribeModelPackageOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public DescribeModelPackageOutput withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -56,6 +60,7 @@ public class DescribeModelPackageOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeModelPackageOutput withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -64,6 +69,7 @@ public class DescribeModelPackageOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomerMetadataProperties")
     public java.util.Map<String, String> customerMetadataProperties;
+
     public DescribeModelPackageOutput withCustomerMetadataProperties(java.util.Map<String, String> customerMetadataProperties) {
         this.customerMetadataProperties = customerMetadataProperties;
         return this;
@@ -72,6 +78,7 @@ public class DescribeModelPackageOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public String domain;
+
     public DescribeModelPackageOutput withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -80,6 +87,7 @@ public class DescribeModelPackageOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DriftCheckBaselines")
     public DriftCheckBaselines driftCheckBaselines;
+
     public DescribeModelPackageOutput withDriftCheckBaselines(DriftCheckBaselines driftCheckBaselines) {
         this.driftCheckBaselines = driftCheckBaselines;
         return this;
@@ -88,6 +96,7 @@ public class DescribeModelPackageOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceSpecification")
     public InferenceSpecification inferenceSpecification;
+
     public DescribeModelPackageOutput withInferenceSpecification(InferenceSpecification inferenceSpecification) {
         this.inferenceSpecification = inferenceSpecification;
         return this;
@@ -99,6 +108,7 @@ public class DescribeModelPackageOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public UserContext lastModifiedBy;
+
     public DescribeModelPackageOutput withLastModifiedBy(UserContext lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -109,6 +119,7 @@ public class DescribeModelPackageOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeModelPackageOutput withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -120,6 +131,7 @@ public class DescribeModelPackageOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataProperties")
     public MetadataProperties metadataProperties;
+
     public DescribeModelPackageOutput withMetadataProperties(MetadataProperties metadataProperties) {
         this.metadataProperties = metadataProperties;
         return this;
@@ -128,6 +140,7 @@ public class DescribeModelPackageOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelApprovalStatus")
     public ModelApprovalStatusEnum modelApprovalStatus;
+
     public DescribeModelPackageOutput withModelApprovalStatus(ModelApprovalStatusEnum modelApprovalStatus) {
         this.modelApprovalStatus = modelApprovalStatus;
         return this;
@@ -136,6 +149,7 @@ public class DescribeModelPackageOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelMetrics")
     public ModelMetrics modelMetrics;
+
     public DescribeModelPackageOutput withModelMetrics(ModelMetrics modelMetrics) {
         this.modelMetrics = modelMetrics;
         return this;
@@ -143,6 +157,7 @@ public class DescribeModelPackageOutput {
     
     @JsonProperty("ModelPackageArn")
     public String modelPackageArn;
+
     public DescribeModelPackageOutput withModelPackageArn(String modelPackageArn) {
         this.modelPackageArn = modelPackageArn;
         return this;
@@ -151,6 +166,7 @@ public class DescribeModelPackageOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageDescription")
     public String modelPackageDescription;
+
     public DescribeModelPackageOutput withModelPackageDescription(String modelPackageDescription) {
         this.modelPackageDescription = modelPackageDescription;
         return this;
@@ -159,6 +175,7 @@ public class DescribeModelPackageOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageGroupName")
     public String modelPackageGroupName;
+
     public DescribeModelPackageOutput withModelPackageGroupName(String modelPackageGroupName) {
         this.modelPackageGroupName = modelPackageGroupName;
         return this;
@@ -166,6 +183,7 @@ public class DescribeModelPackageOutput {
     
     @JsonProperty("ModelPackageName")
     public String modelPackageName;
+
     public DescribeModelPackageOutput withModelPackageName(String modelPackageName) {
         this.modelPackageName = modelPackageName;
         return this;
@@ -173,6 +191,7 @@ public class DescribeModelPackageOutput {
     
     @JsonProperty("ModelPackageStatus")
     public ModelPackageStatusEnum modelPackageStatus;
+
     public DescribeModelPackageOutput withModelPackageStatus(ModelPackageStatusEnum modelPackageStatus) {
         this.modelPackageStatus = modelPackageStatus;
         return this;
@@ -180,6 +199,7 @@ public class DescribeModelPackageOutput {
     
     @JsonProperty("ModelPackageStatusDetails")
     public ModelPackageStatusDetails modelPackageStatusDetails;
+
     public DescribeModelPackageOutput withModelPackageStatusDetails(ModelPackageStatusDetails modelPackageStatusDetails) {
         this.modelPackageStatusDetails = modelPackageStatusDetails;
         return this;
@@ -188,6 +208,7 @@ public class DescribeModelPackageOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageVersion")
     public Long modelPackageVersion;
+
     public DescribeModelPackageOutput withModelPackageVersion(Long modelPackageVersion) {
         this.modelPackageVersion = modelPackageVersion;
         return this;
@@ -196,6 +217,7 @@ public class DescribeModelPackageOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SamplePayloadUrl")
     public String samplePayloadUrl;
+
     public DescribeModelPackageOutput withSamplePayloadUrl(String samplePayloadUrl) {
         this.samplePayloadUrl = samplePayloadUrl;
         return this;
@@ -204,6 +226,7 @@ public class DescribeModelPackageOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceAlgorithmSpecification")
     public SourceAlgorithmSpecification sourceAlgorithmSpecification;
+
     public DescribeModelPackageOutput withSourceAlgorithmSpecification(SourceAlgorithmSpecification sourceAlgorithmSpecification) {
         this.sourceAlgorithmSpecification = sourceAlgorithmSpecification;
         return this;
@@ -212,6 +235,7 @@ public class DescribeModelPackageOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Task")
     public String task;
+
     public DescribeModelPackageOutput withTask(String task) {
         this.task = task;
         return this;
@@ -220,9 +244,17 @@ public class DescribeModelPackageOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationSpecification")
     public ModelPackageValidationSpecification validationSpecification;
+
     public DescribeModelPackageOutput withValidationSpecification(ModelPackageValidationSpecification validationSpecification) {
         this.validationSpecification = validationSpecification;
         return this;
     }
     
+    public DescribeModelPackageOutput(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("ModelPackageArn") String modelPackageArn, @JsonProperty("ModelPackageName") String modelPackageName, @JsonProperty("ModelPackageStatus") ModelPackageStatusEnum modelPackageStatus, @JsonProperty("ModelPackageStatusDetails") ModelPackageStatusDetails modelPackageStatusDetails) {
+        this.creationTime = creationTime;
+        this.modelPackageArn = modelPackageArn;
+        this.modelPackageName = modelPackageName;
+        this.modelPackageStatus = modelPackageStatus;
+        this.modelPackageStatusDetails = modelPackageStatusDetails;
+  }
 }

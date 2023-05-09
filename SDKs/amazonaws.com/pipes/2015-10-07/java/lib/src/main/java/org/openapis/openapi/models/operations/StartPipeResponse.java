@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartPipeResponse {
@@ -12,6 +13,7 @@ public class StartPipeResponse {
      */
     
     public Object conflictException;
+
     public StartPipeResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class StartPipeResponse {
     
     
     public String contentType;
+
     public StartPipeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartPipeResponse {
      */
     
     public Object internalException;
+
     public StartPipeResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class StartPipeResponse {
      */
     
     public Object notFoundException;
+
     public StartPipeResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartPipeResponse {
      */
     
     public org.openapis.openapi.models.shared.StartPipeResponse startPipeResponse;
+
     public StartPipeResponse withStartPipeResponse(org.openapis.openapi.models.shared.StartPipeResponse startPipeResponse) {
         this.startPipeResponse = startPipeResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartPipeResponse {
     
     
     public Integer statusCode;
+
     public StartPipeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartPipeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartPipeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class StartPipeResponse {
      */
     
     public Object throttlingException;
+
     public StartPipeResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class StartPipeResponse {
      */
     
     public Object validationException;
+
     public StartPipeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartPipeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

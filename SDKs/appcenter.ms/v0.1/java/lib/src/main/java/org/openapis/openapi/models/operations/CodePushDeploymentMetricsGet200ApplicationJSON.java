@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CodePushDeploymentMetricsGet200ApplicationJSON {
     @JsonProperty("active")
     public Long active;
+
     public CodePushDeploymentMetricsGet200ApplicationJSON withActive(Long active) {
         this.active = active;
         return this;
@@ -19,6 +20,7 @@ public class CodePushDeploymentMetricsGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloaded")
     public Long downloaded;
+
     public CodePushDeploymentMetricsGet200ApplicationJSON withDownloaded(Long downloaded) {
         this.downloaded = downloaded;
         return this;
@@ -27,6 +29,7 @@ public class CodePushDeploymentMetricsGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failed")
     public Long failed;
+
     public CodePushDeploymentMetricsGet200ApplicationJSON withFailed(Long failed) {
         this.failed = failed;
         return this;
@@ -35,6 +38,7 @@ public class CodePushDeploymentMetricsGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installed")
     public Long installed;
+
     public CodePushDeploymentMetricsGet200ApplicationJSON withInstalled(Long installed) {
         this.installed = installed;
         return this;
@@ -42,9 +46,14 @@ public class CodePushDeploymentMetricsGet200ApplicationJSON {
     
     @JsonProperty("label")
     public String label;
+
     public CodePushDeploymentMetricsGet200ApplicationJSON withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public CodePushDeploymentMetricsGet200ApplicationJSON(@JsonProperty("active") Long active, @JsonProperty("label") String label) {
+        this.active = active;
+        this.label = label;
+  }
 }

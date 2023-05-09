@@ -59,11 +59,9 @@ public class MarketplacesOrdersExports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportOrdersResponse res = new org.openapis.openapi.models.operations.ExportOrdersResponse() {{
+        org.openapis.openapi.models.operations.ExportOrdersResponse res = new org.openapis.openapi.models.operations.ExportOrdersResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -113,12 +111,10 @@ public class MarketplacesOrdersExports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrderExportationsResponse res = new org.openapis.openapi.models.operations.GetOrderExportationsResponse() {{
+        org.openapis.openapi.models.operations.GetOrderExportationsResponse res = new org.openapis.openapi.models.operations.GetOrderExportationsResponse(contentType, httpRes.statusCode()) {{
             orderExportations = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

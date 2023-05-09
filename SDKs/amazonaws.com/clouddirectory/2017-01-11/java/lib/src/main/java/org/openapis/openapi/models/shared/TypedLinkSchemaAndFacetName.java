@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TypedLinkSchemaAndFacetName {
     @JsonProperty("SchemaArn")
     public String schemaArn;
+
     public TypedLinkSchemaAndFacetName withSchemaArn(String schemaArn) {
         this.schemaArn = schemaArn;
         return this;
@@ -19,9 +20,14 @@ public class TypedLinkSchemaAndFacetName {
     
     @JsonProperty("TypedLinkName")
     public String typedLinkName;
+
     public TypedLinkSchemaAndFacetName withTypedLinkName(String typedLinkName) {
         this.typedLinkName = typedLinkName;
         return this;
     }
     
+    public TypedLinkSchemaAndFacetName(@JsonProperty("SchemaArn") String schemaArn, @JsonProperty("TypedLinkName") String typedLinkName) {
+        this.schemaArn = schemaArn;
+        this.typedLinkName = typedLinkName;
+  }
 }

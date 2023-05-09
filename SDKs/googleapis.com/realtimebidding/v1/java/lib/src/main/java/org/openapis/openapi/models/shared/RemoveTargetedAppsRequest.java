@@ -18,9 +18,11 @@ public class RemoveTargetedAppsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appIds")
     public String[] appIds;
+
     public RemoveTargetedAppsRequest withAppIds(String[] appIds) {
         this.appIds = appIds;
         return this;
     }
     
+    public RemoveTargetedAppsRequest(){}
 }

@@ -15,6 +15,7 @@ public class RouterBgp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiseMode")
     public RouterBgpAdvertiseModeEnum advertiseMode;
+
     public RouterBgp withAdvertiseMode(RouterBgpAdvertiseModeEnum advertiseMode) {
         this.advertiseMode = advertiseMode;
         return this;
@@ -26,6 +27,7 @@ public class RouterBgp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertisedGroups")
     public RouterBgpAdvertisedGroupsEnum[] advertisedGroups;
+
     public RouterBgp withAdvertisedGroups(RouterBgpAdvertisedGroupsEnum[] advertisedGroups) {
         this.advertisedGroups = advertisedGroups;
         return this;
@@ -37,6 +39,7 @@ public class RouterBgp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertisedIpRanges")
     public RouterAdvertisedIpRange[] advertisedIpRanges;
+
     public RouterBgp withAdvertisedIpRanges(RouterAdvertisedIpRange[] advertisedIpRanges) {
         this.advertisedIpRanges = advertisedIpRanges;
         return this;
@@ -48,6 +51,7 @@ public class RouterBgp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asn")
     public Long asn;
+
     public RouterBgp withAsn(Long asn) {
         this.asn = asn;
         return this;
@@ -59,9 +63,11 @@ public class RouterBgp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keepaliveInterval")
     public Long keepaliveInterval;
+
     public RouterBgp withKeepaliveInterval(Long keepaliveInterval) {
         this.keepaliveInterval = keepaliveInterval;
         return this;
     }
     
+    public RouterBgp(){}
 }

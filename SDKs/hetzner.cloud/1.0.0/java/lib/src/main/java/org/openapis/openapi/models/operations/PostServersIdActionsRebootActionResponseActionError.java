@@ -15,6 +15,7 @@ public class PostServersIdActionsRebootActionResponseActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public PostServersIdActionsRebootActionResponseActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class PostServersIdActionsRebootActionResponseActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public PostServersIdActionsRebootActionResponseActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostServersIdActionsRebootActionResponseActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

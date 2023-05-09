@@ -13,6 +13,7 @@ public class GetErrorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetErrorsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -53,6 +54,7 @@ public class GetErrorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetErrorsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -60,6 +62,7 @@ public class GetErrorsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetErrorsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -67,9 +70,11 @@ public class GetErrorsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetErrorsRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
     }
     
+    public GetErrorsRequest(){}
 }

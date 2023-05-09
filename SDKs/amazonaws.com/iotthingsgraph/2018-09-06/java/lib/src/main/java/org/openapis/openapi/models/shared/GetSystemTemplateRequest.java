@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetSystemTemplateRequest {
     @JsonProperty("id")
     public String id;
+
     public GetSystemTemplateRequest withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,13 @@ public class GetSystemTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionNumber")
     public Long revisionNumber;
+
     public GetSystemTemplateRequest withRevisionNumber(Long revisionNumber) {
         this.revisionNumber = revisionNumber;
         return this;
     }
     
+    public GetSystemTemplateRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

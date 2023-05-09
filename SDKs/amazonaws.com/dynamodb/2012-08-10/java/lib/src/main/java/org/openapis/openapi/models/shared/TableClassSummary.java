@@ -22,6 +22,7 @@ public class TableClassSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateDateTime")
     public OffsetDateTime lastUpdateDateTime;
+
     public TableClassSummary withLastUpdateDateTime(OffsetDateTime lastUpdateDateTime) {
         this.lastUpdateDateTime = lastUpdateDateTime;
         return this;
@@ -30,9 +31,11 @@ public class TableClassSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableClass")
     public TableClassEnum tableClass;
+
     public TableClassSummary withTableClass(TableClassEnum tableClass) {
         this.tableClass = tableClass;
         return this;
     }
     
+    public TableClassSummary(){}
 }

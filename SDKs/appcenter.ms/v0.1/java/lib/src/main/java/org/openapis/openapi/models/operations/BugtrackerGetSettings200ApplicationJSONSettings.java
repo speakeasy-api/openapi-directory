@@ -15,6 +15,7 @@ public class BugtrackerGetSettings200ApplicationJSONSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callback_url")
     public String callbackUrl;
+
     public BugtrackerGetSettings200ApplicationJSONSettings withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
@@ -22,6 +23,7 @@ public class BugtrackerGetSettings200ApplicationJSONSettings {
     
     @JsonProperty("owner_name")
     public String ownerName;
+
     public BugtrackerGetSettings200ApplicationJSONSettings withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -32,9 +34,14 @@ public class BugtrackerGetSettings200ApplicationJSONSettings {
      */
     @JsonProperty("type")
     public BugtrackerGetSettings200ApplicationJSONSettingsTypeEnum type;
+
     public BugtrackerGetSettings200ApplicationJSONSettings withType(BugtrackerGetSettings200ApplicationJSONSettingsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public BugtrackerGetSettings200ApplicationJSONSettings(@JsonProperty("owner_name") String ownerName, @JsonProperty("type") BugtrackerGetSettings200ApplicationJSONSettingsTypeEnum type) {
+        this.ownerName = ownerName;
+        this.type = type;
+  }
 }

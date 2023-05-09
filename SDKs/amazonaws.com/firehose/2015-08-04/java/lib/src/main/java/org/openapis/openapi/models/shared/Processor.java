@@ -15,6 +15,7 @@ public class Processor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public ProcessorParameter[] parameters;
+
     public Processor withParameters(ProcessorParameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -22,9 +23,13 @@ public class Processor {
     
     @JsonProperty("Type")
     public ProcessorTypeEnum type;
+
     public Processor withType(ProcessorTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Processor(@JsonProperty("Type") ProcessorTypeEnum type) {
+        this.type = type;
+  }
 }

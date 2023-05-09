@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposSetStatusCheckContextsResponse {
     
     public String contentType;
+
     public ReposSetStatusCheckContextsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposSetStatusCheckContextsResponse {
     
     
     public Integer statusCode;
+
     public ReposSetStatusCheckContextsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposSetStatusCheckContextsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposSetStatusCheckContextsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposSetStatusCheckContextsResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposSetStatusCheckContextsResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class ReposSetStatusCheckContextsResponse {
      */
     
     public String[] reposSetStatusCheckContexts200ApplicationJSONStrings;
+
     public ReposSetStatusCheckContextsResponse withReposSetStatusCheckContexts200ApplicationJSONStrings(String[] reposSetStatusCheckContexts200ApplicationJSONStrings) {
         this.reposSetStatusCheckContexts200ApplicationJSONStrings = reposSetStatusCheckContexts200ApplicationJSONStrings;
         return this;
@@ -53,9 +59,14 @@ public class ReposSetStatusCheckContextsResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposSetStatusCheckContextsResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposSetStatusCheckContextsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

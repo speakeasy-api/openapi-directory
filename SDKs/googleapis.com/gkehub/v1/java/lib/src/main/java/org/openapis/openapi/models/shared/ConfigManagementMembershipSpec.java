@@ -18,6 +18,7 @@ public class ConfigManagementMembershipSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configSync")
     public ConfigManagementConfigSync configSync;
+
     public ConfigManagementMembershipSpec withConfigSync(ConfigManagementConfigSync configSync) {
         this.configSync = configSync;
         return this;
@@ -29,6 +30,7 @@ public class ConfigManagementMembershipSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hierarchyController")
     public ConfigManagementHierarchyControllerConfig hierarchyController;
+
     public ConfigManagementMembershipSpec withHierarchyController(ConfigManagementHierarchyControllerConfig hierarchyController) {
         this.hierarchyController = hierarchyController;
         return this;
@@ -40,6 +42,7 @@ public class ConfigManagementMembershipSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyController")
     public ConfigManagementPolicyController policyController;
+
     public ConfigManagementMembershipSpec withPolicyController(ConfigManagementPolicyController policyController) {
         this.policyController = policyController;
         return this;
@@ -51,9 +54,11 @@ public class ConfigManagementMembershipSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public ConfigManagementMembershipSpec withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ConfigManagementMembershipSpec(){}
 }

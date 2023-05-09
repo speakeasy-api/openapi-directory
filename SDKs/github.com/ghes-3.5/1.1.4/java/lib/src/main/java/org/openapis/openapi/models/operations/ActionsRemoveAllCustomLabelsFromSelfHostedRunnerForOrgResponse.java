@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgResponse {
     
     public String contentType;
+
     public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgResponse {
     
     
     public Integer statusCode;
+
     public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgResponse {
      */
     
     public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrg200ApplicationJSON actionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrg200ApplicationJSONObject;
+
     public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgResponse withActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrg200ApplicationJSONObject(ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrg200ApplicationJSON actionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrg200ApplicationJSONObject) {
         this.actionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrg200ApplicationJSONObject = actionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrg200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
     }
     
+    public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

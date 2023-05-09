@@ -15,9 +15,11 @@ public class SasPortalSignDeviceRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device")
     public SasPortalDeviceInput device;
+
     public SasPortalSignDeviceRequestInput withDevice(SasPortalDeviceInput device) {
         this.device = device;
         return this;
     }
     
+    public SasPortalSignDeviceRequestInput(){}
 }

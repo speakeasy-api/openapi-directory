@@ -15,6 +15,7 @@ public class BaseService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_id")
     public String entityId;
+
     public BaseService withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -23,6 +24,7 @@ public class BaseService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public EntityTypeEnum entityType;
+
     public BaseService withEntityType(EntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -31,6 +33,7 @@ public class BaseService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BaseService withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class BaseService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port_ranges")
     public PortRange[] portRanges;
+
     public BaseService withPortRanges(PortRange[] portRanges) {
         this.portRanges = portRanges;
         return this;
@@ -47,9 +51,11 @@ public class BaseService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public String protocol;
+
     public BaseService withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public BaseService(){}
 }

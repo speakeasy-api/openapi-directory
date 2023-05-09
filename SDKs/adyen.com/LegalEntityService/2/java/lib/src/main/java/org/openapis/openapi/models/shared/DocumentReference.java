@@ -20,6 +20,7 @@ public class DocumentReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public DocumentReference withActive(Boolean active) {
         this.active = active;
         return this;
@@ -31,6 +32,7 @@ public class DocumentReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DocumentReference withDescription(String description) {
         this.description = description;
         return this;
@@ -42,6 +44,7 @@ public class DocumentReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public DocumentReference withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -53,6 +56,7 @@ public class DocumentReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DocumentReference withId(String id) {
         this.id = id;
         return this;
@@ -66,6 +70,7 @@ public class DocumentReference {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modificationDate")
     public OffsetDateTime modificationDate;
+
     public DocumentReference withModificationDate(OffsetDateTime modificationDate) {
         this.modificationDate = modificationDate;
         return this;
@@ -77,9 +82,11 @@ public class DocumentReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public DocumentReference withType(String type) {
         this.type = type;
         return this;
     }
     
+    public DocumentReference(){}
 }

@@ -18,9 +18,11 @@ public class EnterpriseCrmFrontendsEventbusProtoWorkflowParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry[] parameters;
+
     public EnterpriseCrmFrontendsEventbusProtoWorkflowParameters withParameters(EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public EnterpriseCrmFrontendsEventbusProtoWorkflowParameters(){}
 }

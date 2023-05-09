@@ -331,4 +331,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/InstanceVmLivenessEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Instance.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListInstancesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListVersionsResponse.java
+docs/sdk/README.md
+docs/apps/README.md
+docs/projects/README.md
 USAGE.md

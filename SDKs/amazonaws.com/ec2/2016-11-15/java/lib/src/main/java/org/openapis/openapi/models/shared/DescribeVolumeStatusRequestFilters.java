@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVolumeStatusRequestFilters {
     
     public String name;
+
     public DescribeVolumeStatusRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVolumeStatusRequestFilters {
     
     
     public String[] values;
+
     public DescribeVolumeStatusRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeVolumeStatusRequestFilters(){}
 }

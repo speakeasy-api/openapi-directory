@@ -16,6 +16,7 @@ public class GetQuery200ApplicationJSONResultAst {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package")
     public GetQuery200ApplicationJSONResultAstPackage package_;
+
     public GetQuery200ApplicationJSONResultAst withPackage(GetQuery200ApplicationJSONResultAstPackage package_) {
         this.package_ = package_;
         return this;
@@ -28,9 +29,11 @@ public class GetQuery200ApplicationJSONResultAst {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public GetQuery200ApplicationJSONResultAstRules[] rules;
+
     public GetQuery200ApplicationJSONResultAst withRules(GetQuery200ApplicationJSONResultAstRules[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public GetQuery200ApplicationJSONResultAst(){}
 }

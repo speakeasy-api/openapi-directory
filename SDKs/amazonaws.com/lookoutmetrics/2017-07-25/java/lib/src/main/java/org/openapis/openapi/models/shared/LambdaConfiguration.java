@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LambdaConfiguration {
     @JsonProperty("LambdaArn")
     public String lambdaArn;
+
     public LambdaConfiguration withLambdaArn(String lambdaArn) {
         this.lambdaArn = lambdaArn;
         return this;
@@ -19,9 +20,14 @@ public class LambdaConfiguration {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public LambdaConfiguration withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public LambdaConfiguration(@JsonProperty("LambdaArn") String lambdaArn, @JsonProperty("RoleArn") String roleArn) {
+        this.lambdaArn = lambdaArn;
+        this.roleArn = roleArn;
+  }
 }

@@ -18,9 +18,11 @@ public class ReplicationSync {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastSyncTime")
     public String lastSyncTime;
+
     public ReplicationSync withLastSyncTime(String lastSyncTime) {
         this.lastSyncTime = lastSyncTime;
         return this;
     }
     
+    public ReplicationSync(){}
 }

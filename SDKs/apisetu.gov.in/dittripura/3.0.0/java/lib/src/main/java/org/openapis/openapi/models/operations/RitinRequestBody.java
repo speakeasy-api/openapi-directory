@@ -15,6 +15,7 @@ public class RitinRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public RitinRequestBodyCertificateParameters certificateParameters;
+
     public RitinRequestBody withCertificateParameters(RitinRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class RitinRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public RitinRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class RitinRequestBody {
      */
     @JsonProperty("format")
     public RitinRequestBodyFormatEnum format;
+
     public RitinRequestBody withFormat(RitinRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class RitinRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public RitinRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public RitinRequestBody(@JsonProperty("format") RitinRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

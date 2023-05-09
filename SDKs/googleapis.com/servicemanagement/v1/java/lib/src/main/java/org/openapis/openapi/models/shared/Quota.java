@@ -18,6 +18,7 @@ public class Quota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limits")
     public QuotaLimit[] limits;
+
     public Quota withLimits(QuotaLimit[] limits) {
         this.limits = limits;
         return this;
@@ -29,9 +30,11 @@ public class Quota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricRules")
     public MetricRule[] metricRules;
+
     public Quota withMetricRules(MetricRule[] metricRules) {
         this.metricRules = metricRules;
         return this;
     }
     
+    public Quota(){}
 }

@@ -12,9 +12,11 @@ public class ImageRelationshipsAllMediaAssetsAvailableForThisImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ResourceIdentifier[] data;
+
     public ImageRelationshipsAllMediaAssetsAvailableForThisImage withData(ResourceIdentifier[] data) {
         this.data = data;
         return this;
     }
     
+    public ImageRelationshipsAllMediaAssetsAvailableForThisImage(){}
 }

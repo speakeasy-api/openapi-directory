@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAcceleratorAttributesResponse {
@@ -12,6 +13,7 @@ public class UpdateAcceleratorAttributesResponse {
      */
     
     public Object acceleratorNotFoundException;
+
     public UpdateAcceleratorAttributesResponse withAcceleratorNotFoundException(Object acceleratorNotFoundException) {
         this.acceleratorNotFoundException = acceleratorNotFoundException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateAcceleratorAttributesResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateAcceleratorAttributesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAcceleratorAttributesResponse {
     
     
     public String contentType;
+
     public UpdateAcceleratorAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAcceleratorAttributesResponse {
      */
     
     public Object internalServiceErrorException;
+
     public UpdateAcceleratorAttributesResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateAcceleratorAttributesResponse {
      */
     
     public Object invalidArgumentException;
+
     public UpdateAcceleratorAttributesResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateAcceleratorAttributesResponse {
     
     
     public Integer statusCode;
+
     public UpdateAcceleratorAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAcceleratorAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAcceleratorAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateAcceleratorAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAcceleratorAttributesResponse updateAcceleratorAttributesResponse;
+
     public UpdateAcceleratorAttributesResponse withUpdateAcceleratorAttributesResponse(org.openapis.openapi.models.shared.UpdateAcceleratorAttributesResponse updateAcceleratorAttributesResponse) {
         this.updateAcceleratorAttributesResponse = updateAcceleratorAttributesResponse;
         return this;
     }
     
+    public UpdateAcceleratorAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

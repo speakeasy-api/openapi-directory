@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumberLeaseConfigRequest {
@@ -12,6 +13,7 @@ public class GetNumberLeaseConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public GetNumberLeaseConfigRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -22,9 +24,13 @@ public class GetNumberLeaseConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
     public String number;
+
     public GetNumberLeaseConfigRequest withNumber(String number) {
         this.number = number;
         return this;
     }
     
+    public GetNumberLeaseConfigRequest(@JsonProperty("number") String number) {
+        this.number = number;
+  }
 }

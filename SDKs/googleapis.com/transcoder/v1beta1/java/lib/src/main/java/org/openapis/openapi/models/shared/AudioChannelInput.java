@@ -18,6 +18,7 @@ public class AudioChannelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public Integer channel;
+
     public AudioChannelInput withChannel(Integer channel) {
         this.channel = channel;
         return this;
@@ -29,6 +30,7 @@ public class AudioChannelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gainDb")
     public Double gainDb;
+
     public AudioChannelInput withGainDb(Double gainDb) {
         this.gainDb = gainDb;
         return this;
@@ -40,6 +42,7 @@ public class AudioChannelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public AudioChannelInput withKey(String key) {
         this.key = key;
         return this;
@@ -51,9 +54,11 @@ public class AudioChannelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("track")
     public Integer track;
+
     public AudioChannelInput withTrack(Integer track) {
         this.track = track;
         return this;
     }
     
+    public AudioChannelInput(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class YoutubeCommentsSetModerationStatusRequest {
@@ -12,6 +13,7 @@ public class YoutubeCommentsSetModerationStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public YoutubeCommentsSetModerationStatusRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class YoutubeCommentsSetModerationStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public YoutubeCommentsSetModerationStatusRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class YoutubeCommentsSetModerationStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public YoutubeCommentsSetModerationStatusRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class YoutubeCommentsSetModerationStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=banAuthor")
     public Boolean banAuthor;
+
     public YoutubeCommentsSetModerationStatusRequest withBanAuthor(Boolean banAuthor) {
         this.banAuthor = banAuthor;
         return this;
@@ -52,6 +57,7 @@ public class YoutubeCommentsSetModerationStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public YoutubeCommentsSetModerationStatusRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class YoutubeCommentsSetModerationStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public YoutubeCommentsSetModerationStatusRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class YoutubeCommentsSetModerationStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String[] id;
+
     public YoutubeCommentsSetModerationStatusRequest withId(String[] id) {
         this.id = id;
         return this;
@@ -82,16 +90,18 @@ public class YoutubeCommentsSetModerationStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public YoutubeCommentsSetModerationStatusRequest withKey(String key) {
         this.key = key;
         return this;
     }
     
     /**
-     * Specifies the requested moderation status. Note, comments can be in statuses, which are not available through this call. For example, this call does not allow to mark a comment as 'likely spam'. Valid values: MODERATION_STATUS_PUBLISHED, MODERATION_STATUS_HELD_FOR_REVIEW, MODERATION_STATUS_REJECTED.
+     * Specifies the requested moderation status. Note, comments can be in statuses, which are not available through this call. For example, this call does not allow to mark a comment as 'likely spam'. Valid values: 'heldForReview', 'published' or 'rejected'.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=moderationStatus")
     public YoutubeCommentsSetModerationStatusModerationStatusEnum moderationStatus;
+
     public YoutubeCommentsSetModerationStatusRequest withModerationStatus(YoutubeCommentsSetModerationStatusModerationStatusEnum moderationStatus) {
         this.moderationStatus = moderationStatus;
         return this;
@@ -102,6 +112,7 @@ public class YoutubeCommentsSetModerationStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public YoutubeCommentsSetModerationStatusRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class YoutubeCommentsSetModerationStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public YoutubeCommentsSetModerationStatusRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class YoutubeCommentsSetModerationStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public YoutubeCommentsSetModerationStatusRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class YoutubeCommentsSetModerationStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public YoutubeCommentsSetModerationStatusRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,14 @@ public class YoutubeCommentsSetModerationStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public YoutubeCommentsSetModerationStatusRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public YoutubeCommentsSetModerationStatusRequest(@JsonProperty("id") String[] id, @JsonProperty("moderationStatus") YoutubeCommentsSetModerationStatusModerationStatusEnum moderationStatus) {
+        this.id = id;
+        this.moderationStatus = moderationStatus;
+  }
 }

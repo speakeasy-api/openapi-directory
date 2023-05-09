@@ -12,6 +12,7 @@ public class UpdatePrice200ApplicationJSONErrorsCauses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public UpdatePrice200ApplicationJSONErrorsCauses withCode(String code) {
         this.code = code;
         return this;
@@ -20,6 +21,7 @@ public class UpdatePrice200ApplicationJSONErrorsCauses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdatePrice200ApplicationJSONErrorsCauses withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class UpdatePrice200ApplicationJSONErrorsCauses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public UpdatePrice200ApplicationJSONErrorsCauses withField(String field) {
         this.field = field;
         return this;
@@ -36,9 +39,11 @@ public class UpdatePrice200ApplicationJSONErrorsCauses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public UpdatePrice200ApplicationJSONErrorsCauses withType(String type) {
         this.type = type;
         return this;
     }
     
+    public UpdatePrice200ApplicationJSONErrorsCauses(){}
 }

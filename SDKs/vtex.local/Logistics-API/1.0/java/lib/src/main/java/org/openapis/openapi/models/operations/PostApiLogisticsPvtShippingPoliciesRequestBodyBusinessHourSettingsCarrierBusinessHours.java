@@ -15,6 +15,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyBusinessHourSettingsC
      */
     @JsonProperty("closingTime")
     public String closingTime;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyBusinessHourSettingsCarrierBusinessHours withClosingTime(String closingTime) {
         this.closingTime = closingTime;
         return this;
@@ -25,6 +26,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyBusinessHourSettingsC
      */
     @JsonProperty("dayOfWeek")
     public Long dayOfWeek;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyBusinessHourSettingsCarrierBusinessHours withDayOfWeek(Long dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -35,9 +37,15 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyBusinessHourSettingsC
      */
     @JsonProperty("openingTime")
     public String openingTime;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyBusinessHourSettingsCarrierBusinessHours withOpeningTime(String openingTime) {
         this.openingTime = openingTime;
         return this;
     }
     
+    public PostApiLogisticsPvtShippingPoliciesRequestBodyBusinessHourSettingsCarrierBusinessHours(@JsonProperty("closingTime") String closingTime, @JsonProperty("dayOfWeek") Long dayOfWeek, @JsonProperty("openingTime") String openingTime) {
+        this.closingTime = closingTime;
+        this.dayOfWeek = dayOfWeek;
+        this.openingTime = openingTime;
+  }
 }

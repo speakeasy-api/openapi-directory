@@ -20,6 +20,7 @@ public class ApiDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiDestinationArn")
     public String apiDestinationArn;
+
     public ApiDestination withApiDestinationArn(String apiDestinationArn) {
         this.apiDestinationArn = apiDestinationArn;
         return this;
@@ -28,6 +29,7 @@ public class ApiDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiDestinationState")
     public ApiDestinationStateEnum apiDestinationState;
+
     public ApiDestination withApiDestinationState(ApiDestinationStateEnum apiDestinationState) {
         this.apiDestinationState = apiDestinationState;
         return this;
@@ -36,6 +38,7 @@ public class ApiDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionArn")
     public String connectionArn;
+
     public ApiDestination withConnectionArn(String connectionArn) {
         this.connectionArn = connectionArn;
         return this;
@@ -46,6 +49,7 @@ public class ApiDestination {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ApiDestination withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -54,6 +58,7 @@ public class ApiDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpMethod")
     public ApiDestinationHttpMethodEnum httpMethod;
+
     public ApiDestination withHttpMethod(ApiDestinationHttpMethodEnum httpMethod) {
         this.httpMethod = httpMethod;
         return this;
@@ -62,6 +67,7 @@ public class ApiDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvocationEndpoint")
     public String invocationEndpoint;
+
     public ApiDestination withInvocationEndpoint(String invocationEndpoint) {
         this.invocationEndpoint = invocationEndpoint;
         return this;
@@ -70,6 +76,7 @@ public class ApiDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvocationRateLimitPerSecond")
     public Long invocationRateLimitPerSecond;
+
     public ApiDestination withInvocationRateLimitPerSecond(Long invocationRateLimitPerSecond) {
         this.invocationRateLimitPerSecond = invocationRateLimitPerSecond;
         return this;
@@ -80,6 +87,7 @@ public class ApiDestination {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public ApiDestination withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -88,9 +96,11 @@ public class ApiDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ApiDestination withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ApiDestination(){}
 }

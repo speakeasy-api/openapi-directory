@@ -50,10 +50,8 @@ public class Utils {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDataMetricsResponse res = new org.openapis.openapi.models.operations.GetDataMetricsResponse() {{
+        org.openapis.openapi.models.operations.GetDataMetricsResponse res = new org.openapis.openapi.models.operations.GetDataMetricsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -83,10 +81,8 @@ public class Utils {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDataStatsResponse res = new org.openapis.openapi.models.operations.GetDataStatsResponse() {{
+        org.openapis.openapi.models.operations.GetDataStatsResponse res = new org.openapis.openapi.models.operations.GetDataStatsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,10 +112,8 @@ public class Utils {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPingResponse res = new org.openapis.openapi.models.operations.GetPingResponse() {{
+        org.openapis.openapi.models.operations.GetPingResponse res = new org.openapis.openapi.models.operations.GetPingResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -149,10 +143,8 @@ public class Utils {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTherapeuticAreasResponse res = new org.openapis.openapi.models.operations.GetTherapeuticAreasResponse() {{
+        org.openapis.openapi.models.operations.GetTherapeuticAreasResponse res = new org.openapis.openapi.models.operations.GetTherapeuticAreasResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -182,10 +174,8 @@ public class Utils {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVersionResponse res = new org.openapis.openapi.models.operations.GetVersionResponse() {{
+        org.openapis.openapi.models.operations.GetVersionResponse res = new org.openapis.openapi.models.operations.GetVersionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

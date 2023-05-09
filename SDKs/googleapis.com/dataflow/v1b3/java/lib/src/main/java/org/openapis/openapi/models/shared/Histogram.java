@@ -18,6 +18,7 @@ public class Histogram {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketCounts")
     public String[] bucketCounts;
+
     public Histogram withBucketCounts(String[] bucketCounts) {
         this.bucketCounts = bucketCounts;
         return this;
@@ -29,9 +30,11 @@ public class Histogram {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstBucketOffset")
     public Integer firstBucketOffset;
+
     public Histogram withFirstBucketOffset(Integer firstBucketOffset) {
         this.firstBucketOffset = firstBucketOffset;
         return this;
     }
     
+    public Histogram(){}
 }

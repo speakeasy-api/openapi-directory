@@ -12,6 +12,7 @@ public class UpdateStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public UpdatableAddress address;
+
     public UpdateStoreRequest withAddress(UpdatableAddress address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class UpdateStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessLineIds")
     public String[] businessLineIds;
+
     public UpdateStoreRequest withBusinessLineIds(String[] businessLineIds) {
         this.businessLineIds = businessLineIds;
         return this;
@@ -34,6 +36,7 @@ public class UpdateStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateStoreRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class UpdateStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalReferenceId")
     public String externalReferenceId;
+
     public UpdateStoreRequest withExternalReferenceId(String externalReferenceId) {
         this.externalReferenceId = externalReferenceId;
         return this;
@@ -53,6 +57,7 @@ public class UpdateStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("splitConfiguration")
     public StoreSplitConfiguration splitConfiguration;
+
     public UpdateStoreRequest withSplitConfiguration(StoreSplitConfiguration splitConfiguration) {
         this.splitConfiguration = splitConfiguration;
         return this;
@@ -71,9 +76,11 @@ public class UpdateStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public UpdateStoreRequestStatusEnum status;
+
     public UpdateStoreRequest withStatus(UpdateStoreRequestStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateStoreRequest(){}
 }

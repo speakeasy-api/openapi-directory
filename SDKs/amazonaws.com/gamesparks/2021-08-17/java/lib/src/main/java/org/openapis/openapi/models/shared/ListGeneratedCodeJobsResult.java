@@ -15,6 +15,7 @@ public class ListGeneratedCodeJobsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeneratedCodeJobs")
     public GeneratedCodeJobDetails[] generatedCodeJobs;
+
     public ListGeneratedCodeJobsResult withGeneratedCodeJobs(GeneratedCodeJobDetails[] generatedCodeJobs) {
         this.generatedCodeJobs = generatedCodeJobs;
         return this;
@@ -23,9 +24,11 @@ public class ListGeneratedCodeJobsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListGeneratedCodeJobsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListGeneratedCodeJobsResult(){}
 }

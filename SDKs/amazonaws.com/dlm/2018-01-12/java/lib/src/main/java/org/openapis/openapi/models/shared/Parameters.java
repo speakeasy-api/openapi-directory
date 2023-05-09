@@ -15,6 +15,7 @@ public class Parameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludeBootVolume")
     public Boolean excludeBootVolume;
+
     public Parameters withExcludeBootVolume(Boolean excludeBootVolume) {
         this.excludeBootVolume = excludeBootVolume;
         return this;
@@ -23,6 +24,7 @@ public class Parameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludeDataVolumeTags")
     public Tag[] excludeDataVolumeTags;
+
     public Parameters withExcludeDataVolumeTags(Tag[] excludeDataVolumeTags) {
         this.excludeDataVolumeTags = excludeDataVolumeTags;
         return this;
@@ -31,9 +33,11 @@ public class Parameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NoReboot")
     public Boolean noReboot;
+
     public Parameters withNoReboot(Boolean noReboot) {
         this.noReboot = noReboot;
         return this;
     }
     
+    public Parameters(){}
 }

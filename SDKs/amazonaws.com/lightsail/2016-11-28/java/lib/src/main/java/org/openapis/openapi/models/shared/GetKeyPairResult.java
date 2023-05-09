@@ -15,9 +15,11 @@ public class GetKeyPairResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyPair")
     public KeyPair keyPair;
+
     public GetKeyPairResult withKeyPair(KeyPair keyPair) {
         this.keyPair = keyPair;
         return this;
     }
     
+    public GetKeyPairResult(){}
 }

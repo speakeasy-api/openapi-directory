@@ -15,6 +15,7 @@ public class ObjectTypeKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldNames")
     public String[] fieldNames;
+
     public ObjectTypeKey withFieldNames(String[] fieldNames) {
         this.fieldNames = fieldNames;
         return this;
@@ -23,9 +24,11 @@ public class ObjectTypeKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardIdentifiers")
     public StandardIdentifierEnum[] standardIdentifiers;
+
     public ObjectTypeKey withStandardIdentifiers(StandardIdentifierEnum[] standardIdentifiers) {
         this.standardIdentifiers = standardIdentifiers;
         return this;
     }
     
+    public ObjectTypeKey(){}
 }

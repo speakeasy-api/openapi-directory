@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1AssetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDataplexV1AssetInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1AssetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discoverySpec")
     public GoogleCloudDataplexV1AssetDiscoverySpec discoverySpec;
+
     public GoogleCloudDataplexV1AssetInput withDiscoverySpec(GoogleCloudDataplexV1AssetDiscoverySpec discoverySpec) {
         this.discoverySpec = discoverySpec;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1AssetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discoveryStatus")
     public GoogleCloudDataplexV1AssetDiscoveryStatus discoveryStatus;
+
     public GoogleCloudDataplexV1AssetInput withDiscoveryStatus(GoogleCloudDataplexV1AssetDiscoveryStatus discoveryStatus) {
         this.discoveryStatus = discoveryStatus;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1AssetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDataplexV1AssetInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1AssetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudDataplexV1AssetInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDataplexV1AssetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceSpec")
     public GoogleCloudDataplexV1AssetResourceSpec resourceSpec;
+
     public GoogleCloudDataplexV1AssetInput withResourceSpec(GoogleCloudDataplexV1AssetResourceSpec resourceSpec) {
         this.resourceSpec = resourceSpec;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDataplexV1AssetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceStatus")
     public GoogleCloudDataplexV1AssetResourceStatusInput resourceStatus;
+
     public GoogleCloudDataplexV1AssetInput withResourceStatus(GoogleCloudDataplexV1AssetResourceStatusInput resourceStatus) {
         this.resourceStatus = resourceStatus;
         return this;
@@ -95,9 +102,11 @@ public class GoogleCloudDataplexV1AssetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityStatus")
     public GoogleCloudDataplexV1AssetSecurityStatus securityStatus;
+
     public GoogleCloudDataplexV1AssetInput withSecurityStatus(GoogleCloudDataplexV1AssetSecurityStatus securityStatus) {
         this.securityStatus = securityStatus;
         return this;
     }
     
+    public GoogleCloudDataplexV1AssetInput(){}
 }

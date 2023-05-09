@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostNamespacesDeleteImagesRequest {
@@ -12,6 +13,7 @@ public class PostNamespacesDeleteImagesRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PostNamespacesDeleteImagesRequest postNamespacesDeleteImagesRequest;
+
     public PostNamespacesDeleteImagesRequest withPostNamespacesDeleteImagesRequest(org.openapis.openapi.models.shared.PostNamespacesDeleteImagesRequest postNamespacesDeleteImagesRequest) {
         this.postNamespacesDeleteImagesRequest = postNamespacesDeleteImagesRequest;
         return this;
@@ -22,9 +24,14 @@ public class PostNamespacesDeleteImagesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
     public String namespace;
+
     public PostNamespacesDeleteImagesRequest withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public PostNamespacesDeleteImagesRequest(@JsonProperty("PostNamespacesDeleteImagesRequest") org.openapis.openapi.models.shared.PostNamespacesDeleteImagesRequest postNamespacesDeleteImagesRequest, @JsonProperty("namespace") String namespace) {
+        this.postNamespacesDeleteImagesRequest = postNamespacesDeleteImagesRequest;
+        this.namespace = namespace;
+  }
 }

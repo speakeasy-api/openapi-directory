@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsCreateResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsCreateResponse() {{
+        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsCreateResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsCreateResponse(contentType, httpRes.statusCode()) {{
             runtimeConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsListResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsListResponse() {{
+        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsListResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsListResponse(contentType, httpRes.statusCode()) {{
             listConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesCreateResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesCreateResponse() {{
+        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesCreateResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesCreateResponse(contentType, httpRes.statusCode()) {{
             variable = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesListResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesListResponse() {{
+        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesListResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesListResponse(contentType, httpRes.statusCode()) {{
             listVariablesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesUpdateResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesUpdateResponse() {{
+        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesUpdateResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesUpdateResponse(contentType, httpRes.statusCode()) {{
             variable = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,11 +378,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesWatchResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesWatchResponse() {{
+        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesWatchResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesWatchResponse(contentType, httpRes.statusCode()) {{
             variable = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -440,11 +424,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersCreateResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersCreateResponse() {{
+        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersCreateResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,11 +468,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersDeleteResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersDeleteResponse() {{
+        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersDeleteResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -532,11 +512,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersGetResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersGetResponse() {{
+        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersGetResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersGetResponse(contentType, httpRes.statusCode()) {{
             waiter = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -578,11 +556,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersListResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersListResponse() {{
+        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersListResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersListResponse(contentType, httpRes.statusCode()) {{
             listWaitersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -626,11 +602,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

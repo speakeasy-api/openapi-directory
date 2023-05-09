@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CopySnapshotResponse {
@@ -12,6 +13,7 @@ public class CopySnapshotResponse {
      */
     
     public Object accessDeniedException;
+
     public CopySnapshotResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CopySnapshotResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public CopySnapshotResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class CopySnapshotResponse {
     
     
     public String contentType;
+
     public CopySnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CopySnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.CopySnapshotResult copySnapshotResult;
+
     public CopySnapshotResponse withCopySnapshotResult(org.openapis.openapi.models.shared.CopySnapshotResult copySnapshotResult) {
         this.copySnapshotResult = copySnapshotResult;
         return this;
@@ -49,6 +54,7 @@ public class CopySnapshotResponse {
      */
     
     public Object invalidInputException;
+
     public CopySnapshotResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class CopySnapshotResponse {
      */
     
     public Object notFoundException;
+
     public CopySnapshotResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CopySnapshotResponse {
      */
     
     public Object operationFailureException;
+
     public CopySnapshotResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class CopySnapshotResponse {
      */
     
     public Object serviceException;
+
     public CopySnapshotResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class CopySnapshotResponse {
     
     
     public Integer statusCode;
+
     public CopySnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CopySnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CopySnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CopySnapshotResponse {
      */
     
     public Object unauthenticatedException;
+
     public CopySnapshotResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public CopySnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

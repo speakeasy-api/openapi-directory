@@ -14,6 +14,7 @@ public class CreateAccessTokenApplicationJSON {
      */
     @JsonProperty("client_id")
     public String clientId;
+
     public CreateAccessTokenApplicationJSON withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -25,6 +26,7 @@ public class CreateAccessTokenApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_secret")
     public String clientSecret;
+
     public CreateAccessTokenApplicationJSON withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -36,6 +38,7 @@ public class CreateAccessTokenApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public CreateAccessTokenApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -47,6 +50,7 @@ public class CreateAccessTokenApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires")
     public Boolean expires;
+
     public CreateAccessTokenApplicationJSON withExpires(Boolean expires) {
         this.expires = expires;
         return this;
@@ -57,6 +61,7 @@ public class CreateAccessTokenApplicationJSON {
      */
     @JsonProperty("grant_type")
     public CreateAccessTokenApplicationJSONGrantTypeEnum grantType;
+
     public CreateAccessTokenApplicationJSON withGrantType(CreateAccessTokenApplicationJSONGrantTypeEnum grantType) {
         this.grantType = grantType;
         return this;
@@ -68,6 +73,7 @@ public class CreateAccessTokenApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("realm")
     public CreateAccessTokenApplicationJSONRealmEnum realm;
+
     public CreateAccessTokenApplicationJSON withRealm(CreateAccessTokenApplicationJSONRealmEnum realm) {
         this.realm = realm;
         return this;
@@ -79,9 +85,14 @@ public class CreateAccessTokenApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refresh_token")
     public String refreshToken;
+
     public CreateAccessTokenApplicationJSON withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
     }
     
+    public CreateAccessTokenApplicationJSON(@JsonProperty("client_id") String clientId, @JsonProperty("grant_type") CreateAccessTokenApplicationJSONGrantTypeEnum grantType) {
+        this.clientId = clientId;
+        this.grantType = grantType;
+  }
 }

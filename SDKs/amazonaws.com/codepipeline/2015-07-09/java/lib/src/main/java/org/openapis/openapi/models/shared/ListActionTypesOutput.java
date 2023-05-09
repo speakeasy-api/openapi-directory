@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListActionTypesOutput {
     @JsonProperty("actionTypes")
     public ActionType[] actionTypes;
+
     public ListActionTypesOutput withActionTypes(ActionType[] actionTypes) {
         this.actionTypes = actionTypes;
         return this;
@@ -22,9 +23,13 @@ public class ListActionTypesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListActionTypesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListActionTypesOutput(@JsonProperty("actionTypes") ActionType[] actionTypes) {
+        this.actionTypes = actionTypes;
+  }
 }

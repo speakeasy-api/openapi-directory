@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CacheNodeUpdateStatusList {
     
     public String cacheNodeId;
+
     public CacheNodeUpdateStatusList withCacheNodeId(String cacheNodeId) {
         this.cacheNodeId = cacheNodeId;
         return this;
@@ -19,6 +20,7 @@ public class CacheNodeUpdateStatusList {
     
     
     public OffsetDateTime nodeDeletionDate;
+
     public CacheNodeUpdateStatusList withNodeDeletionDate(OffsetDateTime nodeDeletionDate) {
         this.nodeDeletionDate = nodeDeletionDate;
         return this;
@@ -26,6 +28,7 @@ public class CacheNodeUpdateStatusList {
     
     
     public OffsetDateTime nodeUpdateEndDate;
+
     public CacheNodeUpdateStatusList withNodeUpdateEndDate(OffsetDateTime nodeUpdateEndDate) {
         this.nodeUpdateEndDate = nodeUpdateEndDate;
         return this;
@@ -33,6 +36,7 @@ public class CacheNodeUpdateStatusList {
     
     
     public NodeUpdateInitiatedByEnum nodeUpdateInitiatedBy;
+
     public CacheNodeUpdateStatusList withNodeUpdateInitiatedBy(NodeUpdateInitiatedByEnum nodeUpdateInitiatedBy) {
         this.nodeUpdateInitiatedBy = nodeUpdateInitiatedBy;
         return this;
@@ -40,6 +44,7 @@ public class CacheNodeUpdateStatusList {
     
     
     public OffsetDateTime nodeUpdateInitiatedDate;
+
     public CacheNodeUpdateStatusList withNodeUpdateInitiatedDate(OffsetDateTime nodeUpdateInitiatedDate) {
         this.nodeUpdateInitiatedDate = nodeUpdateInitiatedDate;
         return this;
@@ -47,6 +52,7 @@ public class CacheNodeUpdateStatusList {
     
     
     public OffsetDateTime nodeUpdateStartDate;
+
     public CacheNodeUpdateStatusList withNodeUpdateStartDate(OffsetDateTime nodeUpdateStartDate) {
         this.nodeUpdateStartDate = nodeUpdateStartDate;
         return this;
@@ -54,6 +60,7 @@ public class CacheNodeUpdateStatusList {
     
     
     public NodeUpdateStatusEnum nodeUpdateStatus;
+
     public CacheNodeUpdateStatusList withNodeUpdateStatus(NodeUpdateStatusEnum nodeUpdateStatus) {
         this.nodeUpdateStatus = nodeUpdateStatus;
         return this;
@@ -61,9 +68,11 @@ public class CacheNodeUpdateStatusList {
     
     
     public OffsetDateTime nodeUpdateStatusModifiedDate;
+
     public CacheNodeUpdateStatusList withNodeUpdateStatusModifiedDate(OffsetDateTime nodeUpdateStatusModifiedDate) {
         this.nodeUpdateStatusModifiedDate = nodeUpdateStatusModifiedDate;
         return this;
     }
     
+    public CacheNodeUpdateStatusList(){}
 }

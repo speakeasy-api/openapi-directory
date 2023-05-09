@@ -15,6 +15,7 @@ public class ActivitiesCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public ActivitiesCollection withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -26,6 +27,7 @@ public class ActivitiesCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public Object origin;
+
     public ActivitiesCollection withOrigin(Object origin) {
         this.origin = origin;
         return this;
@@ -37,9 +39,11 @@ public class ActivitiesCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ActivitiesCollection withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ActivitiesCollection(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ValidateResourcePolicyResponse {
     
     public String contentType;
+
     public ValidateResourcePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ValidateResourcePolicyResponse {
      */
     
     public Object internalServiceError;
+
     public ValidateResourcePolicyResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class ValidateResourcePolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public ValidateResourcePolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ValidateResourcePolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public ValidateResourcePolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ValidateResourcePolicyResponse {
      */
     
     public Object malformedPolicyDocumentException;
+
     public ValidateResourcePolicyResponse withMalformedPolicyDocumentException(Object malformedPolicyDocumentException) {
         this.malformedPolicyDocumentException = malformedPolicyDocumentException;
         return this;
@@ -59,6 +65,7 @@ public class ValidateResourcePolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ValidateResourcePolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ValidateResourcePolicyResponse {
     
     
     public Integer statusCode;
+
     public ValidateResourcePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ValidateResourcePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ValidateResourcePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ValidateResourcePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidateResourcePolicyResponse validateResourcePolicyResponse;
+
     public ValidateResourcePolicyResponse withValidateResourcePolicyResponse(org.openapis.openapi.models.shared.ValidateResourcePolicyResponse validateResourcePolicyResponse) {
         this.validateResourcePolicyResponse = validateResourcePolicyResponse;
         return this;
     }
     
+    public ValidateResourcePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

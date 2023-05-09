@@ -15,6 +15,7 @@ public class NetworkFirewallPolicyModifiedViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentPolicyDescription")
     public NetworkFirewallPolicyDescription currentPolicyDescription;
+
     public NetworkFirewallPolicyModifiedViolation withCurrentPolicyDescription(NetworkFirewallPolicyDescription currentPolicyDescription) {
         this.currentPolicyDescription = currentPolicyDescription;
         return this;
@@ -23,6 +24,7 @@ public class NetworkFirewallPolicyModifiedViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpectedPolicyDescription")
     public NetworkFirewallPolicyDescription expectedPolicyDescription;
+
     public NetworkFirewallPolicyModifiedViolation withExpectedPolicyDescription(NetworkFirewallPolicyDescription expectedPolicyDescription) {
         this.expectedPolicyDescription = expectedPolicyDescription;
         return this;
@@ -31,9 +33,11 @@ public class NetworkFirewallPolicyModifiedViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViolationTarget")
     public String violationTarget;
+
     public NetworkFirewallPolicyModifiedViolation withViolationTarget(String violationTarget) {
         this.violationTarget = violationTarget;
         return this;
     }
     
+    public NetworkFirewallPolicyModifiedViolation(){}
 }

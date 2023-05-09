@@ -18,6 +18,7 @@ public class AdministrationRegion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("electionAdministrationBody")
     public AdministrativeBody electionAdministrationBody;
+
     public AdministrationRegion withElectionAdministrationBody(AdministrativeBody electionAdministrationBody) {
         this.electionAdministrationBody = electionAdministrationBody;
         return this;
@@ -29,6 +30,7 @@ public class AdministrationRegion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("local_jurisdiction")
     public AdministrationRegion localJurisdiction;
+
     public AdministrationRegion withLocalJurisdiction(AdministrationRegion localJurisdiction) {
         this.localJurisdiction = localJurisdiction;
         return this;
@@ -40,6 +42,7 @@ public class AdministrationRegion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AdministrationRegion withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class AdministrationRegion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public Source[] sources;
+
     public AdministrationRegion withSources(Source[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public AdministrationRegion(){}
 }

@@ -15,9 +15,11 @@ public class AdvertiseByoipCidrResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ByoipCidr")
     public ByoipCidr byoipCidr;
+
     public AdvertiseByoipCidrResponse withByoipCidr(ByoipCidr byoipCidr) {
         this.byoipCidr = byoipCidr;
         return this;
     }
     
+    public AdvertiseByoipCidrResponse(){}
 }

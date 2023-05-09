@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAssetsResponse {
     
     public String contentType;
+
     public ListAssetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAssetsResponse {
      */
     
     public Object internalFailureException;
+
     public ListAssetsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListAssetsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListAssetsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListAssetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAssetsResponse listAssetsResponse;
+
     public ListAssetsResponse withListAssetsResponse(org.openapis.openapi.models.shared.ListAssetsResponse listAssetsResponse) {
         this.listAssetsResponse = listAssetsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListAssetsResponse {
     
     
     public Integer statusCode;
+
     public ListAssetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListAssetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAssetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListAssetsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAssetsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class ListAssetsResponse {
      */
     
     public Object throttlingException;
+
     public ListAssetsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListAssetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

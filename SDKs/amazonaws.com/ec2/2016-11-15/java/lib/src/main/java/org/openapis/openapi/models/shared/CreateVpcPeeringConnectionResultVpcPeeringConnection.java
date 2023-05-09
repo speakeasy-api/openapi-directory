@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CreateVpcPeeringConnectionResultVpcPeeringConnection {
     
     public CreateVpcPeeringConnectionResultVpcPeeringConnectionAccepterVpcInfo accepterVpcInfo;
+
     public CreateVpcPeeringConnectionResultVpcPeeringConnection withAccepterVpcInfo(CreateVpcPeeringConnectionResultVpcPeeringConnectionAccepterVpcInfo accepterVpcInfo) {
         this.accepterVpcInfo = accepterVpcInfo;
         return this;
@@ -19,6 +20,7 @@ public class CreateVpcPeeringConnectionResultVpcPeeringConnection {
     
     
     public OffsetDateTime expirationTime;
+
     public CreateVpcPeeringConnectionResultVpcPeeringConnection withExpirationTime(OffsetDateTime expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -26,6 +28,7 @@ public class CreateVpcPeeringConnectionResultVpcPeeringConnection {
     
     
     public CreateVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfo requesterVpcInfo;
+
     public CreateVpcPeeringConnectionResultVpcPeeringConnection withRequesterVpcInfo(CreateVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfo requesterVpcInfo) {
         this.requesterVpcInfo = requesterVpcInfo;
         return this;
@@ -33,6 +36,7 @@ public class CreateVpcPeeringConnectionResultVpcPeeringConnection {
     
     
     public CreateVpcPeeringConnectionResultVpcPeeringConnectionStatus status;
+
     public CreateVpcPeeringConnectionResultVpcPeeringConnection withStatus(CreateVpcPeeringConnectionResultVpcPeeringConnectionStatus status) {
         this.status = status;
         return this;
@@ -40,6 +44,7 @@ public class CreateVpcPeeringConnectionResultVpcPeeringConnection {
     
     
     public CreateVpcPeeringConnectionResultVpcPeeringConnectionTags[] tags;
+
     public CreateVpcPeeringConnectionResultVpcPeeringConnection withTags(CreateVpcPeeringConnectionResultVpcPeeringConnectionTags[] tags) {
         this.tags = tags;
         return this;
@@ -47,9 +52,11 @@ public class CreateVpcPeeringConnectionResultVpcPeeringConnection {
     
     
     public String vpcPeeringConnectionId;
+
     public CreateVpcPeeringConnectionResultVpcPeeringConnection withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public CreateVpcPeeringConnectionResultVpcPeeringConnection(){}
 }

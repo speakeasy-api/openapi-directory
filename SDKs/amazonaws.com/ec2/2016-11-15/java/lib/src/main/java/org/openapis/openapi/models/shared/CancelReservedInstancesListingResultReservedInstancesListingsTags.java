@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CancelReservedInstancesListingResultReservedInstancesListingsTags {
     
     public String key;
+
     public CancelReservedInstancesListingResultReservedInstancesListingsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CancelReservedInstancesListingResultReservedInstancesListingsTags {
     
     
     public String value;
+
     public CancelReservedInstancesListingResultReservedInstancesListingsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CancelReservedInstancesListingResultReservedInstancesListingsTags(){}
 }

@@ -15,6 +15,7 @@ public class ListResourceRequestsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResourceRequestsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListResourceRequestsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceRequestStatusSummaries")
     public ProgressEvent[] resourceRequestStatusSummaries;
+
     public ListResourceRequestsOutput withResourceRequestStatusSummaries(ProgressEvent[] resourceRequestStatusSummaries) {
         this.resourceRequestStatusSummaries = resourceRequestStatusSummaries;
         return this;
     }
     
+    public ListResourceRequestsOutput(){}
 }

@@ -18,6 +18,7 @@ public class BatchRetrieveCatalogObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public BatchRetrieveCatalogObjectsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -29,6 +30,7 @@ public class BatchRetrieveCatalogObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objects")
     public CatalogObject[] objects;
+
     public BatchRetrieveCatalogObjectsResponse withObjects(CatalogObject[] objects) {
         this.objects = objects;
         return this;
@@ -40,9 +42,11 @@ public class BatchRetrieveCatalogObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("related_objects")
     public CatalogObject[] relatedObjects;
+
     public BatchRetrieveCatalogObjectsResponse withRelatedObjects(CatalogObject[] relatedObjects) {
         this.relatedObjects = relatedObjects;
         return this;
     }
     
+    public BatchRetrieveCatalogObjectsResponse(){}
 }

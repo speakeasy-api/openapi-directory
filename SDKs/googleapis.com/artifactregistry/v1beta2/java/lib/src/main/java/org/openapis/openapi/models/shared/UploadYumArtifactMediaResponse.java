@@ -18,9 +18,11 @@ public class UploadYumArtifactMediaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public Operation operation;
+
     public UploadYumArtifactMediaResponse withOperation(Operation operation) {
         this.operation = operation;
         return this;
     }
     
+    public UploadYumArtifactMediaResponse(){}
 }

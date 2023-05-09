@@ -18,6 +18,7 @@ public class LineItemAssignedTargetingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignedTargetingOption")
     public AssignedTargetingOption assignedTargetingOption;
+
     public LineItemAssignedTargetingOption withAssignedTargetingOption(AssignedTargetingOption assignedTargetingOption) {
         this.assignedTargetingOption = assignedTargetingOption;
         return this;
@@ -29,9 +30,11 @@ public class LineItemAssignedTargetingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemId")
     public String lineItemId;
+
     public LineItemAssignedTargetingOption withLineItemId(String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
     
+    public LineItemAssignedTargetingOption(){}
 }

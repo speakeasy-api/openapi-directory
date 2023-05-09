@@ -15,9 +15,11 @@ public class SelectedFieldInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldPath")
     public String[] fieldPath;
+
     public SelectedFieldInfo withFieldPath(String[] fieldPath) {
         this.fieldPath = fieldPath;
         return this;
     }
     
+    public SelectedFieldInfo(){}
 }

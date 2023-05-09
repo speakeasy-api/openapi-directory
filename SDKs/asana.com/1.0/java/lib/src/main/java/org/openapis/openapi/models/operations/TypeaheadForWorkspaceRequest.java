@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TypeaheadForWorkspaceRequest {
@@ -12,6 +13,7 @@ public class TypeaheadForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public Long count;
+
     public TypeaheadForWorkspaceRequest withCount(Long count) {
         this.count = count;
         return this;
@@ -24,6 +26,7 @@ public class TypeaheadForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public TypeaheadForWorkspaceRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,6 +38,7 @@ public class TypeaheadForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public TypeaheadForWorkspaceRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -45,6 +49,7 @@ public class TypeaheadForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public TypeaheadForWorkspaceRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -55,6 +60,7 @@ public class TypeaheadForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resource_type")
     public TypeaheadForWorkspaceResourceTypeEnum resourceType;
+
     public TypeaheadForWorkspaceRequest withResourceType(TypeaheadForWorkspaceResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -65,6 +71,7 @@ public class TypeaheadForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public TypeaheadForWorkspaceTypeEnum type;
+
     public TypeaheadForWorkspaceRequest withType(TypeaheadForWorkspaceTypeEnum type) {
         this.type = type;
         return this;
@@ -75,9 +82,14 @@ public class TypeaheadForWorkspaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_gid")
     public String workspaceGid;
+
     public TypeaheadForWorkspaceRequest withWorkspaceGid(String workspaceGid) {
         this.workspaceGid = workspaceGid;
         return this;
     }
     
+    public TypeaheadForWorkspaceRequest(@JsonProperty("resource_type") TypeaheadForWorkspaceResourceTypeEnum resourceType, @JsonProperty("workspace_gid") String workspaceGid) {
+        this.resourceType = resourceType;
+        this.workspaceGid = workspaceGid;
+  }
 }

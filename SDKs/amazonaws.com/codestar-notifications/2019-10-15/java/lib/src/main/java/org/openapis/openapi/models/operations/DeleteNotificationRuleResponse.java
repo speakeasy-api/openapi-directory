@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteNotificationRuleResponse {
@@ -12,6 +13,7 @@ public class DeleteNotificationRuleResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteNotificationRuleResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteNotificationRuleResponse {
     
     
     public String contentType;
+
     public DeleteNotificationRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteNotificationRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteNotificationRuleResult deleteNotificationRuleResult;
+
     public DeleteNotificationRuleResponse withDeleteNotificationRuleResult(org.openapis.openapi.models.shared.DeleteNotificationRuleResult deleteNotificationRuleResult) {
         this.deleteNotificationRuleResult = deleteNotificationRuleResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteNotificationRuleResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteNotificationRuleResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteNotificationRuleResponse {
     
     
     public Integer statusCode;
+
     public DeleteNotificationRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteNotificationRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteNotificationRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteNotificationRuleResponse {
      */
     
     public Object validationException;
+
     public DeleteNotificationRuleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteNotificationRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

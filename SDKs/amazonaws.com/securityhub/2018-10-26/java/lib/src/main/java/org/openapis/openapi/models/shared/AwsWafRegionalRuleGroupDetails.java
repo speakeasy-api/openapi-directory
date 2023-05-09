@@ -15,6 +15,7 @@ public class AwsWafRegionalRuleGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public AwsWafRegionalRuleGroupDetails withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -23,6 +24,7 @@ public class AwsWafRegionalRuleGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsWafRegionalRuleGroupDetails withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class AwsWafRegionalRuleGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleGroupId")
     public String ruleGroupId;
+
     public AwsWafRegionalRuleGroupDetails withRuleGroupId(String ruleGroupId) {
         this.ruleGroupId = ruleGroupId;
         return this;
@@ -39,9 +42,11 @@ public class AwsWafRegionalRuleGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rules")
     public AwsWafRegionalRuleGroupRulesDetails[] rules;
+
     public AwsWafRegionalRuleGroupDetails withRules(AwsWafRegionalRuleGroupRulesDetails[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public AwsWafRegionalRuleGroupDetails(){}
 }

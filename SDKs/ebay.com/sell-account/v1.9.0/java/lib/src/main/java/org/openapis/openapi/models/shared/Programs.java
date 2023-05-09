@@ -18,9 +18,11 @@ public class Programs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("programs")
     public Program[] programs;
+
     public Programs withPrograms(Program[] programs) {
         this.programs = programs;
         return this;
     }
     
+    public Programs(){}
 }

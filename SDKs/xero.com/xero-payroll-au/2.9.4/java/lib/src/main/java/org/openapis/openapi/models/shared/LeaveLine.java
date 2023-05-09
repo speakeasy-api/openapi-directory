@@ -15,6 +15,7 @@ public class LeaveLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnnualNumberOfUnits")
     public Double annualNumberOfUnits;
+
     public LeaveLine withAnnualNumberOfUnits(Double annualNumberOfUnits) {
         this.annualNumberOfUnits = annualNumberOfUnits;
         return this;
@@ -26,6 +27,7 @@ public class LeaveLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CalculationType")
     public LeaveLineCalculationTypeEnum calculationType;
+
     public LeaveLine withCalculationType(LeaveLineCalculationTypeEnum calculationType) {
         this.calculationType = calculationType;
         return this;
@@ -34,6 +36,7 @@ public class LeaveLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmploymentTerminationPaymentType")
     public EmploymentTerminationPaymentTypeEnum employmentTerminationPaymentType;
+
     public LeaveLine withEmploymentTerminationPaymentType(EmploymentTerminationPaymentTypeEnum employmentTerminationPaymentType) {
         this.employmentTerminationPaymentType = employmentTerminationPaymentType;
         return this;
@@ -42,6 +45,7 @@ public class LeaveLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntitlementFinalPayPayoutType")
     public EntitlementFinalPayPayoutTypeEnum entitlementFinalPayPayoutType;
+
     public LeaveLine withEntitlementFinalPayPayoutType(EntitlementFinalPayPayoutTypeEnum entitlementFinalPayPayoutType) {
         this.entitlementFinalPayPayoutType = entitlementFinalPayPayoutType;
         return this;
@@ -53,6 +57,7 @@ public class LeaveLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FullTimeNumberOfUnitsPerPeriod")
     public Double fullTimeNumberOfUnitsPerPeriod;
+
     public LeaveLine withFullTimeNumberOfUnitsPerPeriod(Double fullTimeNumberOfUnitsPerPeriod) {
         this.fullTimeNumberOfUnitsPerPeriod = fullTimeNumberOfUnitsPerPeriod;
         return this;
@@ -64,6 +69,7 @@ public class LeaveLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeSuperannuationGuaranteeContribution")
     public Boolean includeSuperannuationGuaranteeContribution;
+
     public LeaveLine withIncludeSuperannuationGuaranteeContribution(Boolean includeSuperannuationGuaranteeContribution) {
         this.includeSuperannuationGuaranteeContribution = includeSuperannuationGuaranteeContribution;
         return this;
@@ -75,6 +81,7 @@ public class LeaveLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LeaveTypeID")
     public String leaveTypeID;
+
     public LeaveLine withLeaveTypeID(String leaveTypeID) {
         this.leaveTypeID = leaveTypeID;
         return this;
@@ -86,9 +93,11 @@ public class LeaveLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfUnits")
     public Double numberOfUnits;
+
     public LeaveLine withNumberOfUnits(Double numberOfUnits) {
         this.numberOfUnits = numberOfUnits;
         return this;
     }
     
+    public LeaveLine(){}
 }

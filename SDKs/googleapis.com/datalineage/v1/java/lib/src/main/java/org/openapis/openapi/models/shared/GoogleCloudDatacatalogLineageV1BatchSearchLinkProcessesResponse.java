@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processLinks")
     public GoogleCloudDatacatalogLineageV1ProcessLinks[] processLinks;
+
     public GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse withProcessLinks(GoogleCloudDatacatalogLineageV1ProcessLinks[] processLinks) {
         this.processLinks = processLinks;
         return this;
     }
     
+    public GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse(){}
 }

@@ -20,6 +20,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlarmConfiguration")
     public AlarmConfiguration alarmConfiguration;
+
     public AutomationExecution withAlarmConfiguration(AlarmConfiguration alarmConfiguration) {
         this.alarmConfiguration = alarmConfiguration;
         return this;
@@ -28,6 +29,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationId")
     public String associationId;
+
     public AutomationExecution withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -36,6 +38,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomationExecutionId")
     public String automationExecutionId;
+
     public AutomationExecution withAutomationExecutionId(String automationExecutionId) {
         this.automationExecutionId = automationExecutionId;
         return this;
@@ -44,6 +47,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomationExecutionStatus")
     public AutomationExecutionStatusEnum automationExecutionStatus;
+
     public AutomationExecution withAutomationExecutionStatus(AutomationExecutionStatusEnum automationExecutionStatus) {
         this.automationExecutionStatus = automationExecutionStatus;
         return this;
@@ -52,6 +56,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomationSubtype")
     public AutomationSubtypeEnum automationSubtype;
+
     public AutomationExecution withAutomationSubtype(AutomationSubtypeEnum automationSubtype) {
         this.automationSubtype = automationSubtype;
         return this;
@@ -60,6 +65,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeRequestName")
     public String changeRequestName;
+
     public AutomationExecution withChangeRequestName(String changeRequestName) {
         this.changeRequestName = changeRequestName;
         return this;
@@ -68,6 +74,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentAction")
     public String currentAction;
+
     public AutomationExecution withCurrentAction(String currentAction) {
         this.currentAction = currentAction;
         return this;
@@ -76,6 +83,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentStepName")
     public String currentStepName;
+
     public AutomationExecution withCurrentStepName(String currentStepName) {
         this.currentStepName = currentStepName;
         return this;
@@ -84,6 +92,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentName")
     public String documentName;
+
     public AutomationExecution withDocumentName(String documentName) {
         this.documentName = documentName;
         return this;
@@ -92,6 +101,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public AutomationExecution withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -100,6 +110,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutedBy")
     public String executedBy;
+
     public AutomationExecution withExecutedBy(String executedBy) {
         this.executedBy = executedBy;
         return this;
@@ -110,6 +121,7 @@ public class AutomationExecution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExecutionEndTime")
     public OffsetDateTime executionEndTime;
+
     public AutomationExecution withExecutionEndTime(OffsetDateTime executionEndTime) {
         this.executionEndTime = executionEndTime;
         return this;
@@ -120,6 +132,7 @@ public class AutomationExecution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExecutionStartTime")
     public OffsetDateTime executionStartTime;
+
     public AutomationExecution withExecutionStartTime(OffsetDateTime executionStartTime) {
         this.executionStartTime = executionStartTime;
         return this;
@@ -128,6 +141,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureMessage")
     public String failureMessage;
+
     public AutomationExecution withFailureMessage(String failureMessage) {
         this.failureMessage = failureMessage;
         return this;
@@ -136,6 +150,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrency")
     public String maxConcurrency;
+
     public AutomationExecution withMaxConcurrency(String maxConcurrency) {
         this.maxConcurrency = maxConcurrency;
         return this;
@@ -144,6 +159,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxErrors")
     public String maxErrors;
+
     public AutomationExecution withMaxErrors(String maxErrors) {
         this.maxErrors = maxErrors;
         return this;
@@ -152,6 +168,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mode")
     public ExecutionModeEnum mode;
+
     public AutomationExecution withMode(ExecutionModeEnum mode) {
         this.mode = mode;
         return this;
@@ -160,6 +177,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsItemId")
     public String opsItemId;
+
     public AutomationExecution withOpsItemId(String opsItemId) {
         this.opsItemId = opsItemId;
         return this;
@@ -168,6 +186,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Outputs")
     public java.util.Map<String, String[]> outputs;
+
     public AutomationExecution withOutputs(java.util.Map<String, String[]> outputs) {
         this.outputs = outputs;
         return this;
@@ -176,6 +195,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String[]> parameters;
+
     public AutomationExecution withParameters(java.util.Map<String, String[]> parameters) {
         this.parameters = parameters;
         return this;
@@ -184,6 +204,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParentAutomationExecutionId")
     public String parentAutomationExecutionId;
+
     public AutomationExecution withParentAutomationExecutionId(String parentAutomationExecutionId) {
         this.parentAutomationExecutionId = parentAutomationExecutionId;
         return this;
@@ -192,6 +213,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProgressCounters")
     public ProgressCounters progressCounters;
+
     public AutomationExecution withProgressCounters(ProgressCounters progressCounters) {
         this.progressCounters = progressCounters;
         return this;
@@ -200,6 +222,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolvedTargets")
     public ResolvedTargets resolvedTargets;
+
     public AutomationExecution withResolvedTargets(ResolvedTargets resolvedTargets) {
         this.resolvedTargets = resolvedTargets;
         return this;
@@ -208,6 +231,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Runbooks")
     public Runbook[] runbooks;
+
     public AutomationExecution withRunbooks(Runbook[] runbooks) {
         this.runbooks = runbooks;
         return this;
@@ -218,6 +242,7 @@ public class AutomationExecution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ScheduledTime")
     public OffsetDateTime scheduledTime;
+
     public AutomationExecution withScheduledTime(OffsetDateTime scheduledTime) {
         this.scheduledTime = scheduledTime;
         return this;
@@ -226,6 +251,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepExecutions")
     public StepExecution[] stepExecutions;
+
     public AutomationExecution withStepExecutions(StepExecution[] stepExecutions) {
         this.stepExecutions = stepExecutions;
         return this;
@@ -234,6 +260,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepExecutionsTruncated")
     public Boolean stepExecutionsTruncated;
+
     public AutomationExecution withStepExecutionsTruncated(Boolean stepExecutionsTruncated) {
         this.stepExecutionsTruncated = stepExecutionsTruncated;
         return this;
@@ -242,6 +269,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Target")
     public String target;
+
     public AutomationExecution withTarget(String target) {
         this.target = target;
         return this;
@@ -250,6 +278,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetLocations")
     public TargetLocation[] targetLocations;
+
     public AutomationExecution withTargetLocations(TargetLocation[] targetLocations) {
         this.targetLocations = targetLocations;
         return this;
@@ -258,6 +287,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetMaps")
     public java.util.Map<String, String[]>[] targetMaps;
+
     public AutomationExecution withTargetMaps(java.util.Map<String, String[]>[] targetMaps) {
         this.targetMaps = targetMaps;
         return this;
@@ -266,6 +296,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetParameterName")
     public String targetParameterName;
+
     public AutomationExecution withTargetParameterName(String targetParameterName) {
         this.targetParameterName = targetParameterName;
         return this;
@@ -274,6 +305,7 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public Target[] targets;
+
     public AutomationExecution withTargets(Target[] targets) {
         this.targets = targets;
         return this;
@@ -282,9 +314,11 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TriggeredAlarms")
     public AlarmStateInformation[] triggeredAlarms;
+
     public AutomationExecution withTriggeredAlarms(AlarmStateInformation[] triggeredAlarms) {
         this.triggeredAlarms = triggeredAlarms;
         return this;
     }
     
+    public AutomationExecution(){}
 }

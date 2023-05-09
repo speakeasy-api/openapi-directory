@@ -15,9 +15,11 @@ public class AnalysisCompleted {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisType")
     public String[] analysisType;
+
     public AnalysisCompleted withAnalysisType(String[] analysisType) {
         this.analysisType = analysisType;
         return this;
     }
     
+    public AnalysisCompleted(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSessionStatusResponse {
     
     public String contentType;
+
     public GetSessionStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSessionStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSessionStatusResponse getSessionStatusResponse;
+
     public GetSessionStatusResponse withGetSessionStatusResponse(org.openapis.openapi.models.shared.GetSessionStatusResponse getSessionStatusResponse) {
         this.getSessionStatusResponse = getSessionStatusResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetSessionStatusResponse {
      */
     
     public Object internalServerException;
+
     public GetSessionStatusResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetSessionStatusResponse {
      */
     
     public Object invalidRequestException;
+
     public GetSessionStatusResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetSessionStatusResponse {
     
     
     public Integer statusCode;
+
     public GetSessionStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetSessionStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSessionStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetSessionStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSessionStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetSessionStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

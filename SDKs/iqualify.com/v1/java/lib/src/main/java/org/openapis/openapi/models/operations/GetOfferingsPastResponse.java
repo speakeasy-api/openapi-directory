@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOfferingsPastResponse {
     
     public String contentType;
+
     public GetOfferingsPastResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetOfferingsPastResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetOfferingsPastResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class GetOfferingsPastResponse {
      */
     
     public org.openapis.openapi.models.shared.OfferingMetadataResponse[] offeringMetadataResponses;
+
     public GetOfferingsPastResponse withOfferingMetadataResponses(org.openapis.openapi.models.shared.OfferingMetadataResponse[] offeringMetadataResponses) {
         this.offeringMetadataResponses = offeringMetadataResponses;
         return this;
@@ -36,6 +40,7 @@ public class GetOfferingsPastResponse {
     
     
     public Integer statusCode;
+
     public GetOfferingsPastResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetOfferingsPastResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOfferingsPastResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetOfferingsPastResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

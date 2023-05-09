@@ -18,9 +18,11 @@ public class TaskFinanceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceable")
     public Boolean invoiceable;
+
     public TaskFinanceDTO withInvoiceable(Boolean invoiceable) {
         this.invoiceable = invoiceable;
         return this;
     }
     
+    public TaskFinanceDTO(){}
 }

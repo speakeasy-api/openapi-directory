@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAddonResponse {
@@ -12,6 +13,7 @@ public class DescribeAddonResponse {
      */
     
     public Object clientException;
+
     public DescribeAddonResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAddonResponse {
     
     
     public String contentType;
+
     public DescribeAddonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAddonResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAddonResponse describeAddonResponse;
+
     public DescribeAddonResponse withDescribeAddonResponse(org.openapis.openapi.models.shared.DescribeAddonResponse describeAddonResponse) {
         this.describeAddonResponse = describeAddonResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAddonResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeAddonResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAddonResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeAddonResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeAddonResponse {
     
     
     public Integer statusCode;
+
     public DescribeAddonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeAddonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAddonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeAddonResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAddonResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeAddonResponse {
      */
     
     public Object serverException;
+
     public DescribeAddonResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public DescribeAddonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

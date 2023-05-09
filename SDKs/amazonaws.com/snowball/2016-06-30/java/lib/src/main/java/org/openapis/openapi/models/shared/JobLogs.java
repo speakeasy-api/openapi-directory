@@ -15,6 +15,7 @@ public class JobLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobCompletionReportURI")
     public String jobCompletionReportURI;
+
     public JobLogs withJobCompletionReportURI(String jobCompletionReportURI) {
         this.jobCompletionReportURI = jobCompletionReportURI;
         return this;
@@ -23,6 +24,7 @@ public class JobLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobFailureLogURI")
     public String jobFailureLogURI;
+
     public JobLogs withJobFailureLogURI(String jobFailureLogURI) {
         this.jobFailureLogURI = jobFailureLogURI;
         return this;
@@ -31,9 +33,11 @@ public class JobLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobSuccessLogURI")
     public String jobSuccessLogURI;
+
     public JobLogs withJobSuccessLogURI(String jobSuccessLogURI) {
         this.jobSuccessLogURI = jobSuccessLogURI;
         return this;
     }
     
+    public JobLogs(){}
 }

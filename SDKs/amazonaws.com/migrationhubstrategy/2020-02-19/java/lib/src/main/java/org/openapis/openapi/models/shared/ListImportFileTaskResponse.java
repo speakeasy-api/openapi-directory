@@ -15,6 +15,7 @@ public class ListImportFileTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListImportFileTaskResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListImportFileTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskInfos")
     public ImportFileTaskInformation[] taskInfos;
+
     public ListImportFileTaskResponse withTaskInfos(ImportFileTaskInformation[] taskInfos) {
         this.taskInfos = taskInfos;
         return this;
     }
     
+    public ListImportFileTaskResponse(){}
 }

@@ -80,4 +80,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/SpinLinks.java
 lib/src/main/java/org/openapis/openapi/models/shared/Spin.java
 lib/src/main/java/org/openapis/openapi/models/shared/ValidationError.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/persona/README.md
+docs/playlist/README.md
+docs/show/README.md
+docs/spin/README.md
 USAGE.md

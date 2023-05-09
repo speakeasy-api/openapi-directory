@@ -57,13 +57,11 @@ public class Language {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TranslateResponse res = new org.openapis.openapi.models.operations.TranslateResponse() {{
+        org.openapis.openapi.models.operations.TranslateResponse res = new org.openapis.openapi.models.operations.TranslateResponse(contentType, httpRes.statusCode()) {{
             translateResponse = null;
             translate400ApplicationJSONObject = null;
             translate500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

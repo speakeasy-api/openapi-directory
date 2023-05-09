@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class EnableAwsNetworkPerformanceMetricSubscriptionResult {
     
     public Boolean output;
+
     public EnableAwsNetworkPerformanceMetricSubscriptionResult withOutput(Boolean output) {
         this.output = output;
         return this;
     }
     
+    public EnableAwsNetworkPerformanceMetricSubscriptionResult(){}
 }

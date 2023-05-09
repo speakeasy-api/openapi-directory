@@ -34,6 +34,7 @@ public class MenuItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public MenuItem withAction(String action) {
         this.action = action;
         return this;
@@ -45,6 +46,7 @@ public class MenuItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contextual_command")
     public String contextualCommand;
+
     public MenuItem withContextualCommand(String contextualCommand) {
         this.contextualCommand = contextualCommand;
         return this;
@@ -56,6 +58,7 @@ public class MenuItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public MenuItem withId(String id) {
         this.id = id;
         return this;
@@ -70,6 +73,7 @@ public class MenuItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public String payload;
+
     public MenuItem withPayload(String payload) {
         this.payload = payload;
         return this;
@@ -81,6 +85,7 @@ public class MenuItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeWhenSelected")
     public Boolean removeWhenSelected;
+
     public MenuItem withRemoveWhenSelected(Boolean removeWhenSelected) {
         this.removeWhenSelected = removeWhenSelected;
         return this;
@@ -92,9 +97,11 @@ public class MenuItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public MenuValue[] values;
+
     public MenuItem withValues(MenuValue[] values) {
         this.values = values;
         return this;
     }
     
+    public MenuItem(){}
 }

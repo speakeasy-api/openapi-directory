@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSigmaRsvPriceResponse {
     
     public byte[] body;
+
     public GetSigmaRsvPriceResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetSigmaRsvPriceResponse {
     
     
     public String contentType;
+
     public GetSigmaRsvPriceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetSigmaRsvPriceResponse {
     
     
     public Integer statusCode;
+
     public GetSigmaRsvPriceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetSigmaRsvPriceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSigmaRsvPriceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetSigmaRsvPriceResponse {
      */
     
     public String getSigmaRsvPrice400WildcardString;
+
     public GetSigmaRsvPriceResponse withGetSigmaRsvPrice400WildcardString(String getSigmaRsvPrice400WildcardString) {
         this.getSigmaRsvPrice400WildcardString = getSigmaRsvPrice400WildcardString;
         return this;
@@ -50,6 +56,7 @@ public class GetSigmaRsvPriceResponse {
      */
     
     public String getSigmaRsvPrice401WildcardString;
+
     public GetSigmaRsvPriceResponse withGetSigmaRsvPrice401WildcardString(String getSigmaRsvPrice401WildcardString) {
         this.getSigmaRsvPrice401WildcardString = getSigmaRsvPrice401WildcardString;
         return this;
@@ -60,6 +67,7 @@ public class GetSigmaRsvPriceResponse {
      */
     
     public String getSigmaRsvPrice404WildcardString;
+
     public GetSigmaRsvPriceResponse withGetSigmaRsvPrice404WildcardString(String getSigmaRsvPrice404WildcardString) {
         this.getSigmaRsvPrice404WildcardString = getSigmaRsvPrice404WildcardString;
         return this;
@@ -70,9 +78,14 @@ public class GetSigmaRsvPriceResponse {
      */
     
     public String getSigmaRsvPrice409WildcardString;
+
     public GetSigmaRsvPriceResponse withGetSigmaRsvPrice409WildcardString(String getSigmaRsvPrice409WildcardString) {
         this.getSigmaRsvPrice409WildcardString = getSigmaRsvPrice409WildcardString;
         return this;
     }
     
+    public GetSigmaRsvPriceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

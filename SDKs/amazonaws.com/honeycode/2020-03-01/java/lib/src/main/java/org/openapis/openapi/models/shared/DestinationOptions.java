@@ -15,9 +15,11 @@ public class DestinationOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnMap")
     public java.util.Map<String, SourceDataColumnProperties> columnMap;
+
     public DestinationOptions withColumnMap(java.util.Map<String, SourceDataColumnProperties> columnMap) {
         this.columnMap = columnMap;
         return this;
     }
     
+    public DestinationOptions(){}
 }

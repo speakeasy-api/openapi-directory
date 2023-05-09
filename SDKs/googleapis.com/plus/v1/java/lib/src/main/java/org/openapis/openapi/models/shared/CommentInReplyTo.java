@@ -15,6 +15,7 @@ public class CommentInReplyTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CommentInReplyTo withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class CommentInReplyTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public CommentInReplyTo withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CommentInReplyTo(){}
 }

@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AcademicCertificateSchemaIssuedBy {
     
     public AcademicCertificateSchemaIssuedByOrganization organization;
+
     public AcademicCertificateSchemaIssuedBy withOrganization(AcademicCertificateSchemaIssuedByOrganization organization) {
         this.organization = organization;
         return this;
     }
     
+    public AcademicCertificateSchemaIssuedBy(@JsonProperty("Organization") AcademicCertificateSchemaIssuedByOrganization organization) {
+        this.organization = organization;
+  }
 }

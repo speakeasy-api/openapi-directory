@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BotFilter {
     @JsonProperty("name")
     public BotFilterNameEnum name;
+
     public BotFilter withName(BotFilterNameEnum name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class BotFilter {
     
     @JsonProperty("operator")
     public BotFilterOperatorEnum operator;
+
     public BotFilter withOperator(BotFilterOperatorEnum operator) {
         this.operator = operator;
         return this;
@@ -26,9 +28,15 @@ public class BotFilter {
     
     @JsonProperty("values")
     public String[] values;
+
     public BotFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public BotFilter(@JsonProperty("name") BotFilterNameEnum name, @JsonProperty("operator") BotFilterOperatorEnum operator, @JsonProperty("values") String[] values) {
+        this.name = name;
+        this.operator = operator;
+        this.values = values;
+  }
 }

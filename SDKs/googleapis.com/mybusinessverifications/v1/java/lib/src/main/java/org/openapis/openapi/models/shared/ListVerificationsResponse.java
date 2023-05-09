@@ -18,6 +18,7 @@ public class ListVerificationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListVerificationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListVerificationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verifications")
     public Verification[] verifications;
+
     public ListVerificationsResponse withVerifications(Verification[] verifications) {
         this.verifications = verifications;
         return this;
     }
     
+    public ListVerificationsResponse(){}
 }

@@ -58,11 +58,9 @@ public class BankAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BankAccountsDeleteResponse res = new org.openapis.openapi.models.operations.BankAccountsDeleteResponse() {{
+        org.openapis.openapi.models.operations.BankAccountsDeleteResponse res = new org.openapis.openapi.models.operations.BankAccountsDeleteResponse(contentType, httpRes.statusCode()) {{
             bankAccountsDelete200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,11 +93,9 @@ public class BankAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BankAccountsGetResponse res = new org.openapis.openapi.models.operations.BankAccountsGetResponse() {{
+        org.openapis.openapi.models.operations.BankAccountsGetResponse res = new org.openapis.openapi.models.operations.BankAccountsGetResponse(contentType, httpRes.statusCode()) {{
             pageResultBankAccountQueryDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,11 +134,9 @@ public class BankAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BankAccountsPostResponse res = new org.openapis.openapi.models.operations.BankAccountsPostResponse() {{
+        org.openapis.openapi.models.operations.BankAccountsPostResponse res = new org.openapis.openapi.models.operations.BankAccountsPostResponse(contentType, httpRes.statusCode()) {{
             bankAccountsPost200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -181,11 +175,9 @@ public class BankAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BankAccountsProcessBatchResponse res = new org.openapis.openapi.models.operations.BankAccountsProcessBatchResponse() {{
+        org.openapis.openapi.models.operations.BankAccountsProcessBatchResponse res = new org.openapis.openapi.models.operations.BankAccountsProcessBatchResponse(contentType, httpRes.statusCode()) {{
             bankAccountsProcessBatch200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -224,11 +216,9 @@ public class BankAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BankAccountsPutResponse res = new org.openapis.openapi.models.operations.BankAccountsPutResponse() {{
+        org.openapis.openapi.models.operations.BankAccountsPutResponse res = new org.openapis.openapi.models.operations.BankAccountsPutResponse(contentType, httpRes.statusCode()) {{
             bankAccountsPut200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -262,11 +252,9 @@ public class BankAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV1BankAccountsIdResponse res = new org.openapis.openapi.models.operations.GetV1BankAccountsIdResponse() {{
+        org.openapis.openapi.models.operations.GetV1BankAccountsIdResponse res = new org.openapis.openapi.models.operations.GetV1BankAccountsIdResponse(contentType, httpRes.statusCode()) {{
             bankAccountDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class MysqlProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostname")
     public String hostname;
+
     public MysqlProfileInput withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -29,6 +30,7 @@ public class MysqlProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public MysqlProfileInput withPassword(String password) {
         this.password = password;
         return this;
@@ -40,6 +42,7 @@ public class MysqlProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public MysqlProfileInput withPort(Integer port) {
         this.port = port;
         return this;
@@ -51,6 +54,7 @@ public class MysqlProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslConfig")
     public MysqlSslConfigInput sslConfig;
+
     public MysqlProfileInput withSslConfig(MysqlSslConfigInput sslConfig) {
         this.sslConfig = sslConfig;
         return this;
@@ -62,9 +66,11 @@ public class MysqlProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public MysqlProfileInput withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public MysqlProfileInput(){}
 }

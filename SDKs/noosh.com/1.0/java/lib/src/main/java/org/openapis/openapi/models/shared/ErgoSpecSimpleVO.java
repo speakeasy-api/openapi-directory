@@ -15,6 +15,7 @@ public class ErgoSpecSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     public Integer isActive;
+
     public ErgoSpecSimpleVO withIsActive(Integer isActive) {
         this.isActive = isActive;
         return this;
@@ -23,6 +24,7 @@ public class ErgoSpecSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_template")
     public Integer isTemplate;
+
     public ErgoSpecSimpleVO withIsTemplate(Integer isTemplate) {
         this.isTemplate = isTemplate;
         return this;
@@ -31,6 +33,7 @@ public class ErgoSpecSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_1")
     public Double quantity1;
+
     public ErgoSpecSimpleVO withQuantity1(Double quantity1) {
         this.quantity1 = quantity1;
         return this;
@@ -39,6 +42,7 @@ public class ErgoSpecSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_2")
     public Double quantity2;
+
     public ErgoSpecSimpleVO withQuantity2(Double quantity2) {
         this.quantity2 = quantity2;
         return this;
@@ -47,6 +51,7 @@ public class ErgoSpecSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_3")
     public Double quantity3;
+
     public ErgoSpecSimpleVO withQuantity3(Double quantity3) {
         this.quantity3 = quantity3;
         return this;
@@ -55,6 +60,7 @@ public class ErgoSpecSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_4")
     public Double quantity4;
+
     public ErgoSpecSimpleVO withQuantity4(Double quantity4) {
         this.quantity4 = quantity4;
         return this;
@@ -63,6 +69,7 @@ public class ErgoSpecSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_5")
     public Double quantity5;
+
     public ErgoSpecSimpleVO withQuantity5(Double quantity5) {
         this.quantity5 = quantity5;
         return this;
@@ -71,6 +78,7 @@ public class ErgoSpecSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_number")
     public String referenceNumber;
+
     public ErgoSpecSimpleVO withReferenceNumber(String referenceNumber) {
         this.referenceNumber = referenceNumber;
         return this;
@@ -79,6 +87,7 @@ public class ErgoSpecSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_id")
     public Long specId;
+
     public ErgoSpecSimpleVO withSpecId(Long specId) {
         this.specId = specId;
         return this;
@@ -87,9 +96,11 @@ public class ErgoSpecSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_name")
     public String specName;
+
     public ErgoSpecSimpleVO withSpecName(String specName) {
         this.specName = specName;
         return this;
     }
     
+    public ErgoSpecSimpleVO(){}
 }

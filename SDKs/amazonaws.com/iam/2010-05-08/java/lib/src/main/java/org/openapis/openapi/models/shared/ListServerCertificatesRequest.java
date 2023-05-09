@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListServerCertificatesRequest {
     
     public String marker;
+
     public ListServerCertificatesRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -16,6 +17,7 @@ public class ListServerCertificatesRequest {
     
     
     public Long maxItems;
+
     public ListServerCertificatesRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -23,9 +25,11 @@ public class ListServerCertificatesRequest {
     
     
     public String pathPrefix;
+
     public ListServerCertificatesRequest withPathPrefix(String pathPrefix) {
         this.pathPrefix = pathPrefix;
         return this;
     }
     
+    public ListServerCertificatesRequest(){}
 }

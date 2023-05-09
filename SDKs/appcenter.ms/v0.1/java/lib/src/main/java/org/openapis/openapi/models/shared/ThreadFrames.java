@@ -18,6 +18,7 @@ public class ThreadFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public ThreadFrames withAddress(String address) {
         this.address = address;
         return this;
@@ -28,6 +29,7 @@ public class ThreadFrames {
      */
     @JsonProperty("app_code")
     public Boolean appCode;
+
     public ThreadFrames withAppCode(Boolean appCode) {
         this.appCode = appCode;
         return this;
@@ -39,6 +41,7 @@ public class ThreadFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("class_method")
     public Boolean classMethod;
+
     public ThreadFrames withClassMethod(Boolean classMethod) {
         this.classMethod = classMethod;
         return this;
@@ -50,6 +53,7 @@ public class ThreadFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("class_name")
     public String className;
+
     public ThreadFrames withClassName(String className) {
         this.className = className;
         return this;
@@ -60,6 +64,7 @@ public class ThreadFrames {
      */
     @JsonProperty("code_formatted")
     public String codeFormatted;
+
     public ThreadFrames withCodeFormatted(String codeFormatted) {
         this.codeFormatted = codeFormatted;
         return this;
@@ -70,6 +75,7 @@ public class ThreadFrames {
      */
     @JsonProperty("code_raw")
     public String codeRaw;
+
     public ThreadFrames withCodeRaw(String codeRaw) {
         this.codeRaw = codeRaw;
         return this;
@@ -81,6 +87,7 @@ public class ThreadFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public String file;
+
     public ThreadFrames withFile(String file) {
         this.file = file;
         return this;
@@ -92,6 +99,7 @@ public class ThreadFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("framework_name")
     public String frameworkName;
+
     public ThreadFrames withFrameworkName(String frameworkName) {
         this.frameworkName = frameworkName;
         return this;
@@ -103,6 +111,7 @@ public class ThreadFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public ThreadFramesLanguageEnum language;
+
     public ThreadFrames withLanguage(ThreadFramesLanguageEnum language) {
         this.language = language;
         return this;
@@ -114,6 +123,7 @@ public class ThreadFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line")
     public Long line;
+
     public ThreadFrames withLine(Long line) {
         this.line = line;
         return this;
@@ -125,6 +135,7 @@ public class ThreadFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public String method;
+
     public ThreadFrames withMethod(String method) {
         this.method = method;
         return this;
@@ -136,6 +147,7 @@ public class ThreadFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method_params")
     public String methodParams;
+
     public ThreadFrames withMethodParams(String methodParams) {
         this.methodParams = methodParams;
         return this;
@@ -147,9 +159,15 @@ public class ThreadFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relevant")
     public Boolean relevant;
+
     public ThreadFrames withRelevant(Boolean relevant) {
         this.relevant = relevant;
         return this;
     }
     
+    public ThreadFrames(@JsonProperty("app_code") Boolean appCode, @JsonProperty("code_formatted") String codeFormatted, @JsonProperty("code_raw") String codeRaw) {
+        this.appCode = appCode;
+        this.codeFormatted = codeFormatted;
+        this.codeRaw = codeRaw;
+  }
 }

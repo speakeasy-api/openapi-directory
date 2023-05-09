@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDataRepositoryAssociationResponse {
@@ -12,6 +13,7 @@ public class DeleteDataRepositoryAssociationResponse {
      */
     
     public Object badRequest;
+
     public DeleteDataRepositoryAssociationResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDataRepositoryAssociationResponse {
     
     
     public String contentType;
+
     public DeleteDataRepositoryAssociationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDataRepositoryAssociationResponse {
      */
     
     public Object dataRepositoryAssociationNotFound;
+
     public DeleteDataRepositoryAssociationResponse withDataRepositoryAssociationNotFound(Object dataRepositoryAssociationNotFound) {
         this.dataRepositoryAssociationNotFound = dataRepositoryAssociationNotFound;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDataRepositoryAssociationResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteDataRepositoryAssociationResponse deleteDataRepositoryAssociationResponse;
+
     public DeleteDataRepositoryAssociationResponse withDeleteDataRepositoryAssociationResponse(org.openapis.openapi.models.shared.DeleteDataRepositoryAssociationResponse deleteDataRepositoryAssociationResponse) {
         this.deleteDataRepositoryAssociationResponse = deleteDataRepositoryAssociationResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDataRepositoryAssociationResponse {
      */
     
     public Object incompatibleParameterError;
+
     public DeleteDataRepositoryAssociationResponse withIncompatibleParameterError(Object incompatibleParameterError) {
         this.incompatibleParameterError = incompatibleParameterError;
         return this;
@@ -59,6 +65,7 @@ public class DeleteDataRepositoryAssociationResponse {
      */
     
     public Object internalServerError;
+
     public DeleteDataRepositoryAssociationResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -69,6 +76,7 @@ public class DeleteDataRepositoryAssociationResponse {
      */
     
     public Object serviceLimitExceeded;
+
     public DeleteDataRepositoryAssociationResponse withServiceLimitExceeded(Object serviceLimitExceeded) {
         this.serviceLimitExceeded = serviceLimitExceeded;
         return this;
@@ -76,6 +84,7 @@ public class DeleteDataRepositoryAssociationResponse {
     
     
     public Integer statusCode;
+
     public DeleteDataRepositoryAssociationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteDataRepositoryAssociationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDataRepositoryAssociationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteDataRepositoryAssociationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

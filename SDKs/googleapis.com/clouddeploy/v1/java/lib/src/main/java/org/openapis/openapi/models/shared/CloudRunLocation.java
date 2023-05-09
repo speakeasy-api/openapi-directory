@@ -18,9 +18,11 @@ public class CloudRunLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public CloudRunLocation withLocation(String location) {
         this.location = location;
         return this;
     }
     
+    public CloudRunLocation(){}
 }

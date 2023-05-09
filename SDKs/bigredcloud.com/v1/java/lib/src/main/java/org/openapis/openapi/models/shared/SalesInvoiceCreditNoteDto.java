@@ -20,6 +20,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acCode")
     public String acCode;
+
     public SalesInvoiceCreditNoteDto withAcCode(String acCode) {
         this.acCode = acCode;
         return this;
@@ -28,6 +29,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookTranTypeId")
     public Long bookTranTypeId;
+
     public SalesInvoiceCreditNoteDto withBookTranTypeId(Long bookTranTypeId) {
         this.bookTranTypeId = bookTranTypeId;
         return this;
@@ -36,6 +38,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public AcudfValueDto[] customFields;
+
     public SalesInvoiceCreditNoteDto withCustomFields(AcudfValueDto[] customFields) {
         this.customFields = customFields;
         return this;
@@ -44,6 +47,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public Long customerId;
+
     public SalesInvoiceCreditNoteDto withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
@@ -52,6 +56,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryTo")
     public String[] deliveryTo;
+
     public SalesInvoiceCreditNoteDto withDeliveryTo(String[] deliveryTo) {
         this.deliveryTo = deliveryTo;
         return this;
@@ -60,6 +65,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public SalesInvoiceCreditNoteDto withDetails(String details) {
         this.details = details;
         return this;
@@ -70,6 +76,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("entryDate")
     public OffsetDateTime entryDate;
+
     public SalesInvoiceCreditNoteDto withEntryDate(OffsetDateTime entryDate) {
         this.entryDate = entryDate;
         return this;
@@ -78,6 +85,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public SalesInvoiceCreditNoteDto withId(Long id) {
         this.id = id;
         return this;
@@ -86,6 +94,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loType")
     public String loType;
+
     public SalesInvoiceCreditNoteDto withLoType(String loType) {
         this.loType = loType;
         return this;
@@ -94,6 +103,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("netGoods")
     public Double netGoods;
+
     public SalesInvoiceCreditNoteDto withNetGoods(Double netGoods) {
         this.netGoods = netGoods;
         return this;
@@ -102,6 +112,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("netServices")
     public Double netServices;
+
     public SalesInvoiceCreditNoteDto withNetServices(Double netServices) {
         this.netServices = netServices;
         return this;
@@ -110,6 +121,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public SalesInvoiceCreditNoteDto withNote(String note) {
         this.note = note;
         return this;
@@ -118,6 +130,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ourReference")
     public String ourReference;
+
     public SalesInvoiceCreditNoteDto withOurReference(String ourReference) {
         this.ourReference = ourReference;
         return this;
@@ -128,6 +141,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("procDate")
     public OffsetDateTime procDate;
+
     public SalesInvoiceCreditNoteDto withProcDate(OffsetDateTime procDate) {
         this.procDate = procDate;
         return this;
@@ -136,6 +150,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productTrans")
     public ProductTranDto[] productTrans;
+
     public SalesInvoiceCreditNoteDto withProductTrans(ProductTranDto[] productTrans) {
         this.productTrans = productTrans;
         return this;
@@ -144,6 +159,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quoteId")
     public Long quoteId;
+
     public SalesInvoiceCreditNoteDto withQuoteId(Long quoteId) {
         this.quoteId = quoteId;
         return this;
@@ -152,6 +168,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public SalesInvoiceCreditNoteDto withReference(String reference) {
         this.reference = reference;
         return this;
@@ -160,6 +177,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("saleRepCode")
     public String saleRepCode;
+
     public SalesInvoiceCreditNoteDto withSaleRepCode(String saleRepCode) {
         this.saleRepCode = saleRepCode;
         return this;
@@ -168,6 +186,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("saleRepId")
     public Long saleRepId;
+
     public SalesInvoiceCreditNoteDto withSaleRepId(Long saleRepId) {
         this.saleRepId = saleRepId;
         return this;
@@ -176,6 +195,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public SalesInvoiceCreditNoteDto withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -184,6 +204,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public SalesInvoiceCreditNoteDto withTotal(Double total) {
         this.total = total;
         return this;
@@ -192,6 +213,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalNet")
     public Double totalNet;
+
     public SalesInvoiceCreditNoteDto withTotalNet(Double totalNet) {
         this.totalNet = totalNet;
         return this;
@@ -200,6 +222,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalVAT")
     public Double totalVAT;
+
     public SalesInvoiceCreditNoteDto withTotalVAT(Double totalVAT) {
         this.totalVAT = totalVAT;
         return this;
@@ -208,6 +231,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unpaid")
     public Double unpaid;
+
     public SalesInvoiceCreditNoteDto withUnpaid(Double unpaid) {
         this.unpaid = unpaid;
         return this;
@@ -216,6 +240,7 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatTypeId")
     public Long vatTypeId;
+
     public SalesInvoiceCreditNoteDto withVatTypeId(Long vatTypeId) {
         this.vatTypeId = vatTypeId;
         return this;
@@ -224,9 +249,11 @@ public class SalesInvoiceCreditNoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yourReference")
     public String yourReference;
+
     public SalesInvoiceCreditNoteDto withYourReference(String yourReference) {
         this.yourReference = yourReference;
         return this;
     }
     
+    public SalesInvoiceCreditNoteDto(){}
 }

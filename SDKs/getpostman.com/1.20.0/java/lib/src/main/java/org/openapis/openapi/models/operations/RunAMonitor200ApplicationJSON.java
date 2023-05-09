@@ -15,9 +15,11 @@ public class RunAMonitor200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("run")
     public RunAMonitor200ApplicationJSONRun run;
+
     public RunAMonitor200ApplicationJSON withRun(RunAMonitor200ApplicationJSONRun run) {
         this.run = run;
         return this;
     }
     
+    public RunAMonitor200ApplicationJSON(){}
 }

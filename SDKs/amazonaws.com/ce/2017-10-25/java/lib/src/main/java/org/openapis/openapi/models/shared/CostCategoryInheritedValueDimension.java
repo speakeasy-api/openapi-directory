@@ -15,6 +15,7 @@ public class CostCategoryInheritedValueDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DimensionKey")
     public String dimensionKey;
+
     public CostCategoryInheritedValueDimension withDimensionKey(String dimensionKey) {
         this.dimensionKey = dimensionKey;
         return this;
@@ -23,9 +24,11 @@ public class CostCategoryInheritedValueDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DimensionName")
     public CostCategoryInheritedValueDimensionNameEnum dimensionName;
+
     public CostCategoryInheritedValueDimension withDimensionName(CostCategoryInheritedValueDimensionNameEnum dimensionName) {
         this.dimensionName = dimensionName;
         return this;
     }
     
+    public CostCategoryInheritedValueDimension(){}
 }

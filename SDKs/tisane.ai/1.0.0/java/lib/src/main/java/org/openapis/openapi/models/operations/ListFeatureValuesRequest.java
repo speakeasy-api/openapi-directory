@@ -12,6 +12,7 @@ public class ListFeatureValuesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Ocp-Apim-Subscription-Key")
     public String ocpApimSubscriptionKey;
+
     public ListFeatureValuesRequest withOcpApimSubscriptionKey(String ocpApimSubscriptionKey) {
         this.ocpApimSubscriptionKey = ocpApimSubscriptionKey;
         return this;
@@ -22,6 +23,7 @@ public class ListFeatureValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public ListFeatureValuesRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -32,6 +34,7 @@ public class ListFeatureValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
+
     public ListFeatureValuesRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -42,9 +45,11 @@ public class ListFeatureValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public ListFeatureValuesRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ListFeatureValuesRequest(){}
 }

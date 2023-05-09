@@ -15,6 +15,7 @@ public class AttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("B")
     public String b;
+
     public AttributeValue withB(String b) {
         this.b = b;
         return this;
@@ -23,6 +24,7 @@ public class AttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BS")
     public String[] bs;
+
     public AttributeValue withBs(String[] bs) {
         this.bs = bs;
         return this;
@@ -31,6 +33,7 @@ public class AttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("N")
     public String n;
+
     public AttributeValue withN(String n) {
         this.n = n;
         return this;
@@ -39,6 +42,7 @@ public class AttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NS")
     public String[] ns;
+
     public AttributeValue withNs(String[] ns) {
         this.ns = ns;
         return this;
@@ -47,6 +51,7 @@ public class AttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S")
     public String s;
+
     public AttributeValue withS(String s) {
         this.s = s;
         return this;
@@ -55,9 +60,11 @@ public class AttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SS")
     public String[] ss;
+
     public AttributeValue withSs(String[] ss) {
         this.ss = ss;
         return this;
     }
     
+    public AttributeValue(){}
 }

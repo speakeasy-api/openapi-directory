@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutCourseMappingsOfferingIdExternalCourseIdResponse {
     
     public String contentType;
+
     public PutCourseMappingsOfferingIdExternalCourseIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutCourseMappingsOfferingIdExternalCourseIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PutCourseMappingsOfferingIdExternalCourseIdResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class PutCourseMappingsOfferingIdExternalCourseIdResponse {
     
     
     public Integer statusCode;
+
     public PutCourseMappingsOfferingIdExternalCourseIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class PutCourseMappingsOfferingIdExternalCourseIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutCourseMappingsOfferingIdExternalCourseIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class PutCourseMappingsOfferingIdExternalCourseIdResponse {
      */
     
     public String[] putCourseMappingsOfferingIdExternalCourseId200ApplicationJSONStrings;
+
     public PutCourseMappingsOfferingIdExternalCourseIdResponse withPutCourseMappingsOfferingIdExternalCourseId200ApplicationJSONStrings(String[] putCourseMappingsOfferingIdExternalCourseId200ApplicationJSONStrings) {
         this.putCourseMappingsOfferingIdExternalCourseId200ApplicationJSONStrings = putCourseMappingsOfferingIdExternalCourseId200ApplicationJSONStrings;
         return this;
     }
     
+    public PutCourseMappingsOfferingIdExternalCourseIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

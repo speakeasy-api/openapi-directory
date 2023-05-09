@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSubnetGroupResponse {
     
     public String contentType;
+
     public CreateSubnetGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateSubnetGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSubnetGroupResponse createSubnetGroupResponse;
+
     public CreateSubnetGroupResponse withCreateSubnetGroupResponse(org.openapis.openapi.models.shared.CreateSubnetGroupResponse createSubnetGroupResponse) {
         this.createSubnetGroupResponse = createSubnetGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateSubnetGroupResponse {
      */
     
     public Object invalidSubnet;
+
     public CreateSubnetGroupResponse withInvalidSubnet(Object invalidSubnet) {
         this.invalidSubnet = invalidSubnet;
         return this;
@@ -36,6 +40,7 @@ public class CreateSubnetGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateSubnetGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CreateSubnetGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSubnetGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class CreateSubnetGroupResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public CreateSubnetGroupResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
@@ -63,6 +70,7 @@ public class CreateSubnetGroupResponse {
      */
     
     public Object subnetGroupAlreadyExistsFault;
+
     public CreateSubnetGroupResponse withSubnetGroupAlreadyExistsFault(Object subnetGroupAlreadyExistsFault) {
         this.subnetGroupAlreadyExistsFault = subnetGroupAlreadyExistsFault;
         return this;
@@ -73,6 +81,7 @@ public class CreateSubnetGroupResponse {
      */
     
     public Object subnetGroupQuotaExceededFault;
+
     public CreateSubnetGroupResponse withSubnetGroupQuotaExceededFault(Object subnetGroupQuotaExceededFault) {
         this.subnetGroupQuotaExceededFault = subnetGroupQuotaExceededFault;
         return this;
@@ -83,6 +92,7 @@ public class CreateSubnetGroupResponse {
      */
     
     public Object subnetNotAllowedFault;
+
     public CreateSubnetGroupResponse withSubnetNotAllowedFault(Object subnetNotAllowedFault) {
         this.subnetNotAllowedFault = subnetNotAllowedFault;
         return this;
@@ -93,6 +103,7 @@ public class CreateSubnetGroupResponse {
      */
     
     public Object subnetQuotaExceededFault;
+
     public CreateSubnetGroupResponse withSubnetQuotaExceededFault(Object subnetQuotaExceededFault) {
         this.subnetQuotaExceededFault = subnetQuotaExceededFault;
         return this;
@@ -103,9 +114,14 @@ public class CreateSubnetGroupResponse {
      */
     
     public Object tagQuotaPerResourceExceeded;
+
     public CreateSubnetGroupResponse withTagQuotaPerResourceExceeded(Object tagQuotaPerResourceExceeded) {
         this.tagQuotaPerResourceExceeded = tagQuotaPerResourceExceeded;
         return this;
     }
     
+    public CreateSubnetGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

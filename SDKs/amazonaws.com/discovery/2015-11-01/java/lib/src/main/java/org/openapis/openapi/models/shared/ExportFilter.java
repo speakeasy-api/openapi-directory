@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExportFilter {
     @JsonProperty("condition")
     public String condition;
+
     public ExportFilter withCondition(String condition) {
         this.condition = condition;
         return this;
@@ -19,6 +20,7 @@ public class ExportFilter {
     
     @JsonProperty("name")
     public String name;
+
     public ExportFilter withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class ExportFilter {
     
     @JsonProperty("values")
     public String[] values;
+
     public ExportFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public ExportFilter(@JsonProperty("condition") String condition, @JsonProperty("name") String name, @JsonProperty("values") String[] values) {
+        this.condition = condition;
+        this.name = name;
+        this.values = values;
+  }
 }

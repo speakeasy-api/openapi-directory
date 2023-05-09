@@ -15,6 +15,7 @@ public class AppPkgSubscriptionInfo {
      */
     @JsonProperty("_links")
     public AppPkgSubscriptionInfoLinks links;
+
     public AppPkgSubscriptionInfo withLinks(AppPkgSubscriptionInfoLinks links) {
         this.links = links;
         return this;
@@ -25,6 +26,7 @@ public class AppPkgSubscriptionInfo {
      */
     @JsonProperty("callbackUri")
     public String callbackUri;
+
     public AppPkgSubscriptionInfo withCallbackUri(String callbackUri) {
         this.callbackUri = callbackUri;
         return this;
@@ -35,6 +37,7 @@ public class AppPkgSubscriptionInfo {
      */
     @JsonProperty("id")
     public String id;
+
     public AppPkgSubscriptionInfo withId(String id) {
         this.id = id;
         return this;
@@ -45,9 +48,16 @@ public class AppPkgSubscriptionInfo {
      */
     @JsonProperty("subscriptionType")
     public AppPkgSubscriptionTypeEnum subscriptionType;
+
     public AppPkgSubscriptionInfo withSubscriptionType(AppPkgSubscriptionTypeEnum subscriptionType) {
         this.subscriptionType = subscriptionType;
         return this;
     }
     
+    public AppPkgSubscriptionInfo(@JsonProperty("_links") AppPkgSubscriptionInfoLinks links, @JsonProperty("callbackUri") String callbackUri, @JsonProperty("id") String id, @JsonProperty("subscriptionType") AppPkgSubscriptionTypeEnum subscriptionType) {
+        this.links = links;
+        this.callbackUri = callbackUri;
+        this.id = id;
+        this.subscriptionType = subscriptionType;
+  }
 }

@@ -15,9 +15,11 @@ public class DescribeAcceleratorAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceleratorAttributes")
     public AcceleratorAttributes acceleratorAttributes;
+
     public DescribeAcceleratorAttributesResponse withAcceleratorAttributes(AcceleratorAttributes acceleratorAttributes) {
         this.acceleratorAttributes = acceleratorAttributes;
         return this;
     }
     
+    public DescribeAcceleratorAttributesResponse(){}
 }

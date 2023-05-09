@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETInsightRuleReportRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETInsightRuleReportActionEnum action;
+
     public GETGETInsightRuleReportRequest withAction(GETGETInsightRuleReportActionEnum action) {
         this.action = action;
         return this;
@@ -20,6 +22,7 @@ public class GETGETInsightRuleReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndTime")
     public OffsetDateTime endTime;
+
     public GETGETInsightRuleReportRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -30,6 +33,7 @@ public class GETGETInsightRuleReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxContributorCount")
     public Long maxContributorCount;
+
     public GETGETInsightRuleReportRequest withMaxContributorCount(Long maxContributorCount) {
         this.maxContributorCount = maxContributorCount;
         return this;
@@ -40,6 +44,7 @@ public class GETGETInsightRuleReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Metrics")
     public String[] metrics;
+
     public GETGETInsightRuleReportRequest withMetrics(String[] metrics) {
         this.metrics = metrics;
         return this;
@@ -50,6 +55,7 @@ public class GETGETInsightRuleReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OrderBy")
     public String orderBy;
+
     public GETGETInsightRuleReportRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -60,6 +66,7 @@ public class GETGETInsightRuleReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Period")
     public Long period;
+
     public GETGETInsightRuleReportRequest withPeriod(Long period) {
         this.period = period;
         return this;
@@ -70,6 +77,7 @@ public class GETGETInsightRuleReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleName")
     public String ruleName;
+
     public GETGETInsightRuleReportRequest withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
@@ -80,6 +88,7 @@ public class GETGETInsightRuleReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartTime")
     public OffsetDateTime startTime;
+
     public GETGETInsightRuleReportRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -87,6 +96,7 @@ public class GETGETInsightRuleReportRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETInsightRuleReportVersionEnum version;
+
     public GETGETInsightRuleReportRequest withVersion(GETGETInsightRuleReportVersionEnum version) {
         this.version = version;
         return this;
@@ -94,6 +104,7 @@ public class GETGETInsightRuleReportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGETInsightRuleReportRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -101,6 +112,7 @@ public class GETGETInsightRuleReportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGETInsightRuleReportRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -108,6 +120,7 @@ public class GETGETInsightRuleReportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGETInsightRuleReportRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -115,6 +128,7 @@ public class GETGETInsightRuleReportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGETInsightRuleReportRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -122,6 +136,7 @@ public class GETGETInsightRuleReportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGETInsightRuleReportRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -129,6 +144,7 @@ public class GETGETInsightRuleReportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGETInsightRuleReportRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -136,9 +152,18 @@ public class GETGETInsightRuleReportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGETInsightRuleReportRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGETInsightRuleReportRequest(@JsonProperty("Action") GETGETInsightRuleReportActionEnum action, @JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("Period") Long period, @JsonProperty("RuleName") String ruleName, @JsonProperty("StartTime") OffsetDateTime startTime, @JsonProperty("Version") GETGETInsightRuleReportVersionEnum version) {
+        this.action = action;
+        this.endTime = endTime;
+        this.period = period;
+        this.ruleName = ruleName;
+        this.startTime = startTime;
+        this.version = version;
+  }
 }

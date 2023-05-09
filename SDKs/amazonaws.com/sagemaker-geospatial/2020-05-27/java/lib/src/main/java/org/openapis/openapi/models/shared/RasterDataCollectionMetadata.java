@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RasterDataCollectionMetadata {
     @JsonProperty("Arn")
     public String arn;
+
     public RasterDataCollectionMetadata withArn(String arn) {
         this.arn = arn;
         return this;
@@ -21,6 +22,7 @@ public class RasterDataCollectionMetadata {
     
     @JsonProperty("Description")
     public String description;
+
     public RasterDataCollectionMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +31,7 @@ public class RasterDataCollectionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DescriptionPageUrl")
     public String descriptionPageUrl;
+
     public RasterDataCollectionMetadata withDescriptionPageUrl(String descriptionPageUrl) {
         this.descriptionPageUrl = descriptionPageUrl;
         return this;
@@ -36,6 +39,7 @@ public class RasterDataCollectionMetadata {
     
     @JsonProperty("Name")
     public String name;
+
     public RasterDataCollectionMetadata withName(String name) {
         this.name = name;
         return this;
@@ -43,6 +47,7 @@ public class RasterDataCollectionMetadata {
     
     @JsonProperty("SupportedFilters")
     public Filter[] supportedFilters;
+
     public RasterDataCollectionMetadata withSupportedFilters(Filter[] supportedFilters) {
         this.supportedFilters = supportedFilters;
         return this;
@@ -51,6 +56,7 @@ public class RasterDataCollectionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public RasterDataCollectionMetadata withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -58,9 +64,17 @@ public class RasterDataCollectionMetadata {
     
     @JsonProperty("Type")
     public DataCollectionTypeEnum type;
+
     public RasterDataCollectionMetadata withType(DataCollectionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RasterDataCollectionMetadata(@JsonProperty("Arn") String arn, @JsonProperty("Description") String description, @JsonProperty("Name") String name, @JsonProperty("SupportedFilters") Filter[] supportedFilters, @JsonProperty("Type") DataCollectionTypeEnum type) {
+        this.arn = arn;
+        this.description = description;
+        this.name = name;
+        this.supportedFilters = supportedFilters;
+        this.type = type;
+  }
 }

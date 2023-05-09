@@ -20,6 +20,7 @@ public class StartPipelineReprocessingRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelMessages")
     public StartPipelineReprocessingRequestBodyChannelMessages channelMessages;
+
     public StartPipelineReprocessingRequestBody withChannelMessages(StartPipelineReprocessingRequestBodyChannelMessages channelMessages) {
         this.channelMessages = channelMessages;
         return this;
@@ -33,6 +34,7 @@ public class StartPipelineReprocessingRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public StartPipelineReprocessingRequestBody withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -46,9 +48,11 @@ public class StartPipelineReprocessingRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public StartPipelineReprocessingRequestBody withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public StartPipelineReprocessingRequestBody(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1beta1TagTemplateField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDatacatalogV1beta1TagTemplateField withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1beta1TagTemplateField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDatacatalogV1beta1TagTemplateField withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1beta1TagTemplateField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isRequired")
     public Boolean isRequired;
+
     public GoogleCloudDatacatalogV1beta1TagTemplateField withIsRequired(Boolean isRequired) {
         this.isRequired = isRequired;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatacatalogV1beta1TagTemplateField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDatacatalogV1beta1TagTemplateField withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDatacatalogV1beta1TagTemplateField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Integer order;
+
     public GoogleCloudDatacatalogV1beta1TagTemplateField withOrder(Integer order) {
         this.order = order;
         return this;
@@ -70,9 +75,11 @@ public class GoogleCloudDatacatalogV1beta1TagTemplateField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDatacatalogV1beta1FieldType type;
+
     public GoogleCloudDatacatalogV1beta1TagTemplateField withType(GoogleCloudDatacatalogV1beta1FieldType type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1TagTemplateField(){}
 }

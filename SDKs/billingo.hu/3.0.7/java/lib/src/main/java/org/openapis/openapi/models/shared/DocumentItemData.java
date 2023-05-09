@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DocumentItemData {
     @JsonProperty("product_id")
     public Long productId;
+
     public DocumentItemData withProductId(Long productId) {
         this.productId = productId;
         return this;
@@ -16,9 +17,14 @@ public class DocumentItemData {
     
     @JsonProperty("quantity")
     public Float quantity;
+
     public DocumentItemData withQuantity(Float quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public DocumentItemData(@JsonProperty("product_id") Long productId, @JsonProperty("quantity") Float quantity) {
+        this.productId = productId;
+        this.quantity = quantity;
+  }
 }

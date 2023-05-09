@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DocumentaiProjectsLocationsProcessorsProcessorVersionsListResponse {
     
     public String contentType;
+
     public DocumentaiProjectsLocationsProcessorsProcessorVersionsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DocumentaiProjectsLocationsProcessorsProcessorVersionsListResponse 
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta3ListProcessorVersionsResponse googleCloudDocumentaiV1beta3ListProcessorVersionsResponse;
+
     public DocumentaiProjectsLocationsProcessorsProcessorVersionsListResponse withGoogleCloudDocumentaiV1beta3ListProcessorVersionsResponse(org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta3ListProcessorVersionsResponse googleCloudDocumentaiV1beta3ListProcessorVersionsResponse) {
         this.googleCloudDocumentaiV1beta3ListProcessorVersionsResponse = googleCloudDocumentaiV1beta3ListProcessorVersionsResponse;
         return this;
@@ -26,6 +29,7 @@ public class DocumentaiProjectsLocationsProcessorsProcessorVersionsListResponse 
     
     
     public Integer statusCode;
+
     public DocumentaiProjectsLocationsProcessorsProcessorVersionsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DocumentaiProjectsLocationsProcessorsProcessorVersionsListResponse 
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DocumentaiProjectsLocationsProcessorsProcessorVersionsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DocumentaiProjectsLocationsProcessorsProcessorVersionsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

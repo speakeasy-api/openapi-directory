@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReplicationGroupsMessage {
     
     public String marker;
+
     public DescribeReplicationGroupsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,6 +20,7 @@ public class DescribeReplicationGroupsMessage {
     
     
     public Long maxRecords;
+
     public DescribeReplicationGroupsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -26,9 +28,11 @@ public class DescribeReplicationGroupsMessage {
     
     
     public String replicationGroupId;
+
     public DescribeReplicationGroupsMessage withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
     }
     
+    public DescribeReplicationGroupsMessage(){}
 }

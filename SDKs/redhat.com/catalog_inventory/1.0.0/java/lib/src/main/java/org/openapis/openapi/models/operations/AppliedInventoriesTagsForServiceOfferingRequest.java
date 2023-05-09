@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppliedInventoriesTagsForServiceOfferingRequest {
@@ -12,6 +13,7 @@ public class AppliedInventoriesTagsForServiceOfferingRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AppliedInventoriesParametersServicePlan appliedInventoriesParametersServicePlan;
+
     public AppliedInventoriesTagsForServiceOfferingRequest withAppliedInventoriesParametersServicePlan(org.openapis.openapi.models.shared.AppliedInventoriesParametersServicePlan appliedInventoriesParametersServicePlan) {
         this.appliedInventoriesParametersServicePlan = appliedInventoriesParametersServicePlan;
         return this;
@@ -22,9 +24,14 @@ public class AppliedInventoriesTagsForServiceOfferingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public AppliedInventoriesTagsForServiceOfferingRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public AppliedInventoriesTagsForServiceOfferingRequest(@JsonProperty("AppliedInventoriesParametersServicePlan") org.openapis.openapi.models.shared.AppliedInventoriesParametersServicePlan appliedInventoriesParametersServicePlan, @JsonProperty("id") String id) {
+        this.appliedInventoriesParametersServicePlan = appliedInventoriesParametersServicePlan;
+        this.id = id;
+  }
 }

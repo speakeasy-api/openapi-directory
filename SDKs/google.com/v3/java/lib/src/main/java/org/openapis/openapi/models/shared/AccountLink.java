@@ -18,6 +18,7 @@ public class AccountLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountLinkTarget")
     public AccountLinkTarget accountLinkTarget;
+
     public AccountLink withAccountLinkTarget(AccountLinkTarget accountLinkTarget) {
         this.accountLinkTarget = accountLinkTarget;
         return this;
@@ -29,6 +30,7 @@ public class AccountLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleAdsCustomerName")
     public String googleAdsCustomerName;
+
     public AccountLink withGoogleAdsCustomerName(String googleAdsCustomerName) {
         this.googleAdsCustomerName = googleAdsCustomerName;
         return this;
@@ -40,6 +42,7 @@ public class AccountLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AccountLink withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class AccountLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AccountLinkStatusEnum status;
+
     public AccountLink withStatus(AccountLinkStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AccountLink(){}
 }

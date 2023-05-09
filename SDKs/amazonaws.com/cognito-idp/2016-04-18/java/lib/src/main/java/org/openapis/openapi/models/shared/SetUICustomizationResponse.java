@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SetUICustomizationResponse {
     @JsonProperty("UICustomization")
     public UICustomizationType uiCustomization;
+
     public SetUICustomizationResponse withUICustomization(UICustomizationType uiCustomization) {
         this.uiCustomization = uiCustomization;
         return this;
     }
     
+    public SetUICustomizationResponse(@JsonProperty("UICustomization") UICustomizationType uiCustomization) {
+        this.uiCustomization = uiCustomization;
+  }
 }

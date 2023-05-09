@@ -12,6 +12,7 @@ public class SvcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public SvcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class SvcerRequestBodyCertificateParameters {
      */
     @JsonProperty("RROLL")
     public String rroll;
+
     public SvcerRequestBodyCertificateParameters withRroll(String rroll) {
         this.rroll = rroll;
         return this;
@@ -32,9 +34,15 @@ public class SvcerRequestBodyCertificateParameters {
      */
     @JsonProperty("YEAR")
     public String year;
+
     public SvcerRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public SvcerRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("RROLL") String rroll, @JsonProperty("YEAR") String year) {
+        this.fullName = fullName;
+        this.rroll = rroll;
+        this.year = year;
+  }
 }

@@ -12,6 +12,7 @@ public class GetFloatingIpsIdActionsActionIdActionResponseAction {
      */
     @JsonProperty("command")
     public String command;
+
     public GetFloatingIpsIdActionsActionIdActionResponseAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class GetFloatingIpsIdActionsActionIdActionResponseAction {
      */
     @JsonProperty("error")
     public GetFloatingIpsIdActionsActionIdActionResponseActionError error;
+
     public GetFloatingIpsIdActionsActionIdActionResponseAction withError(GetFloatingIpsIdActionsActionIdActionResponseActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class GetFloatingIpsIdActionsActionIdActionResponseAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public GetFloatingIpsIdActionsActionIdActionResponseAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class GetFloatingIpsIdActionsActionIdActionResponseAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public GetFloatingIpsIdActionsActionIdActionResponseAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class GetFloatingIpsIdActionsActionIdActionResponseAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public GetFloatingIpsIdActionsActionIdActionResponseAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class GetFloatingIpsIdActionsActionIdActionResponseAction {
      */
     @JsonProperty("resources")
     public GetFloatingIpsIdActionsActionIdActionResponseActionResources[] resources;
+
     public GetFloatingIpsIdActionsActionIdActionResponseAction withResources(GetFloatingIpsIdActionsActionIdActionResponseActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class GetFloatingIpsIdActionsActionIdActionResponseAction {
      */
     @JsonProperty("started")
     public String started;
+
     public GetFloatingIpsIdActionsActionIdActionResponseAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class GetFloatingIpsIdActionsActionIdActionResponseAction {
      */
     @JsonProperty("status")
     public GetFloatingIpsIdActionsActionIdActionResponseActionStatusEnum status;
+
     public GetFloatingIpsIdActionsActionIdActionResponseAction withStatus(GetFloatingIpsIdActionsActionIdActionResponseActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetFloatingIpsIdActionsActionIdActionResponseAction(@JsonProperty("command") String command, @JsonProperty("error") GetFloatingIpsIdActionsActionIdActionResponseActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") GetFloatingIpsIdActionsActionIdActionResponseActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") GetFloatingIpsIdActionsActionIdActionResponseActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

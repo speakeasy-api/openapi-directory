@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FailurePolicy {
     @JsonProperty("rpoInSecs")
     public Long rpoInSecs;
+
     public FailurePolicy withRpoInSecs(Long rpoInSecs) {
         this.rpoInSecs = rpoInSecs;
         return this;
@@ -19,9 +20,14 @@ public class FailurePolicy {
     
     @JsonProperty("rtoInSecs")
     public Long rtoInSecs;
+
     public FailurePolicy withRtoInSecs(Long rtoInSecs) {
         this.rtoInSecs = rtoInSecs;
         return this;
     }
     
+    public FailurePolicy(@JsonProperty("rpoInSecs") Long rpoInSecs, @JsonProperty("rtoInSecs") Long rtoInSecs) {
+        this.rpoInSecs = rpoInSecs;
+        this.rtoInSecs = rtoInSecs;
+  }
 }

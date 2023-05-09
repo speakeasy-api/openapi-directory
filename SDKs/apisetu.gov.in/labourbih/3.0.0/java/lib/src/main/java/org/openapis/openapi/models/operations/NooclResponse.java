@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class NooclResponse {
     
     public String contentType;
+
     public NooclResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class NooclResponse {
     
     
     public Integer statusCode;
+
     public NooclResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class NooclResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public NooclResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class NooclResponse {
      */
     
     public Noocl400ApplicationJSON noocl400ApplicationJSONObject;
+
     public NooclResponse withNoocl400ApplicationJSONObject(Noocl400ApplicationJSON noocl400ApplicationJSONObject) {
         this.noocl400ApplicationJSONObject = noocl400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class NooclResponse {
      */
     
     public Noocl401ApplicationJSON noocl401ApplicationJSONObject;
+
     public NooclResponse withNoocl401ApplicationJSONObject(Noocl401ApplicationJSON noocl401ApplicationJSONObject) {
         this.noocl401ApplicationJSONObject = noocl401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class NooclResponse {
      */
     
     public Noocl404ApplicationJSON noocl404ApplicationJSONObject;
+
     public NooclResponse withNoocl404ApplicationJSONObject(Noocl404ApplicationJSON noocl404ApplicationJSONObject) {
         this.noocl404ApplicationJSONObject = noocl404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class NooclResponse {
      */
     
     public Noocl500ApplicationJSON noocl500ApplicationJSONObject;
+
     public NooclResponse withNoocl500ApplicationJSONObject(Noocl500ApplicationJSON noocl500ApplicationJSONObject) {
         this.noocl500ApplicationJSONObject = noocl500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class NooclResponse {
      */
     
     public Noocl502ApplicationJSON noocl502ApplicationJSONObject;
+
     public NooclResponse withNoocl502ApplicationJSONObject(Noocl502ApplicationJSON noocl502ApplicationJSONObject) {
         this.noocl502ApplicationJSONObject = noocl502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class NooclResponse {
      */
     
     public Noocl503ApplicationJSON noocl503ApplicationJSONObject;
+
     public NooclResponse withNoocl503ApplicationJSONObject(Noocl503ApplicationJSON noocl503ApplicationJSONObject) {
         this.noocl503ApplicationJSONObject = noocl503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class NooclResponse {
      */
     
     public Noocl504ApplicationJSON noocl504ApplicationJSONObject;
+
     public NooclResponse withNoocl504ApplicationJSONObject(Noocl504ApplicationJSON noocl504ApplicationJSONObject) {
         this.noocl504ApplicationJSONObject = noocl504ApplicationJSONObject;
         return this;
     }
     
+    public NooclResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

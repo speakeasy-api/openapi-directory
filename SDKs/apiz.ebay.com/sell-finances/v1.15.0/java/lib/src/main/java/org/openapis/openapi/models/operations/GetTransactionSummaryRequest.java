@@ -12,6 +12,7 @@ public class GetTransactionSummaryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public GetTransactionSummaryRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
@@ -22,9 +23,11 @@ public class GetTransactionSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetTransactionSummaryRequest withFilter(String filter) {
         this.filter = filter;
         return this;
     }
     
+    public GetTransactionSummaryRequest(){}
 }

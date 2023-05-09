@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateModelBiasJobDefinitionResponse {
     @JsonProperty("JobDefinitionArn")
     public String jobDefinitionArn;
+
     public CreateModelBiasJobDefinitionResponse withJobDefinitionArn(String jobDefinitionArn) {
         this.jobDefinitionArn = jobDefinitionArn;
         return this;
     }
     
+    public CreateModelBiasJobDefinitionResponse(@JsonProperty("JobDefinitionArn") String jobDefinitionArn) {
+        this.jobDefinitionArn = jobDefinitionArn;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RotoballerArticlesResponse {
     
     public org.openapis.openapi.models.shared.Article[] articles;
+
     public RotoballerArticlesResponse withArticles(org.openapis.openapi.models.shared.Article[] articles) {
         this.articles = articles;
         return this;
@@ -16,6 +18,7 @@ public class RotoballerArticlesResponse {
     
     
     public String contentType;
+
     public RotoballerArticlesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class RotoballerArticlesResponse {
     
     
     public Integer statusCode;
+
     public RotoballerArticlesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class RotoballerArticlesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RotoballerArticlesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RotoballerArticlesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

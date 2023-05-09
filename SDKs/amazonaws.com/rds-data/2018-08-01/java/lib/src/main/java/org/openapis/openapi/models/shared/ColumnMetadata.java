@@ -15,6 +15,7 @@ public class ColumnMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arrayBaseColumnType")
     public Long arrayBaseColumnType;
+
     public ColumnMetadata withArrayBaseColumnType(Long arrayBaseColumnType) {
         this.arrayBaseColumnType = arrayBaseColumnType;
         return this;
@@ -23,6 +24,7 @@ public class ColumnMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAutoIncrement")
     public Boolean isAutoIncrement;
+
     public ColumnMetadata withIsAutoIncrement(Boolean isAutoIncrement) {
         this.isAutoIncrement = isAutoIncrement;
         return this;
@@ -31,6 +33,7 @@ public class ColumnMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCaseSensitive")
     public Boolean isCaseSensitive;
+
     public ColumnMetadata withIsCaseSensitive(Boolean isCaseSensitive) {
         this.isCaseSensitive = isCaseSensitive;
         return this;
@@ -39,6 +42,7 @@ public class ColumnMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCurrency")
     public Boolean isCurrency;
+
     public ColumnMetadata withIsCurrency(Boolean isCurrency) {
         this.isCurrency = isCurrency;
         return this;
@@ -47,6 +51,7 @@ public class ColumnMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSigned")
     public Boolean isSigned;
+
     public ColumnMetadata withIsSigned(Boolean isSigned) {
         this.isSigned = isSigned;
         return this;
@@ -55,6 +60,7 @@ public class ColumnMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public ColumnMetadata withLabel(String label) {
         this.label = label;
         return this;
@@ -63,6 +69,7 @@ public class ColumnMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ColumnMetadata withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class ColumnMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nullable")
     public Long nullable;
+
     public ColumnMetadata withNullable(Long nullable) {
         this.nullable = nullable;
         return this;
@@ -79,6 +87,7 @@ public class ColumnMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precision")
     public Long precision;
+
     public ColumnMetadata withPrecision(Long precision) {
         this.precision = precision;
         return this;
@@ -87,6 +96,7 @@ public class ColumnMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scale")
     public Long scale;
+
     public ColumnMetadata withScale(Long scale) {
         this.scale = scale;
         return this;
@@ -95,6 +105,7 @@ public class ColumnMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaName")
     public String schemaName;
+
     public ColumnMetadata withSchemaName(String schemaName) {
         this.schemaName = schemaName;
         return this;
@@ -103,6 +114,7 @@ public class ColumnMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableName")
     public String tableName;
+
     public ColumnMetadata withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -111,6 +123,7 @@ public class ColumnMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public Long type;
+
     public ColumnMetadata withType(Long type) {
         this.type = type;
         return this;
@@ -119,9 +132,11 @@ public class ColumnMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("typeName")
     public String typeName;
+
     public ColumnMetadata withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public ColumnMetadata(){}
 }

@@ -18,6 +18,7 @@ public class VideoAdSequenceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumDuration")
     public VideoAdSequenceSettingsMinimumDurationEnum minimumDuration;
+
     public VideoAdSequenceSettings withMinimumDuration(VideoAdSequenceSettingsMinimumDurationEnum minimumDuration) {
         this.minimumDuration = minimumDuration;
         return this;
@@ -29,9 +30,11 @@ public class VideoAdSequenceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("steps")
     public VideoAdSequenceStep[] steps;
+
     public VideoAdSequenceSettings withSteps(VideoAdSequenceStep[] steps) {
         this.steps = steps;
         return this;
     }
     
+    public VideoAdSequenceSettings(){}
 }

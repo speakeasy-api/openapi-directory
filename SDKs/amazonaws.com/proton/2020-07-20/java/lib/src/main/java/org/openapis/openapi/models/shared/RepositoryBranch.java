@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RepositoryBranch {
     @JsonProperty("arn")
     public String arn;
+
     public RepositoryBranch withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class RepositoryBranch {
     
     @JsonProperty("branch")
     public String branch;
+
     public RepositoryBranch withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -26,6 +28,7 @@ public class RepositoryBranch {
     
     @JsonProperty("name")
     public String name;
+
     public RepositoryBranch withName(String name) {
         this.name = name;
         return this;
@@ -33,9 +36,16 @@ public class RepositoryBranch {
     
     @JsonProperty("provider")
     public RepositoryProviderEnum provider;
+
     public RepositoryBranch withProvider(RepositoryProviderEnum provider) {
         this.provider = provider;
         return this;
     }
     
+    public RepositoryBranch(@JsonProperty("arn") String arn, @JsonProperty("branch") String branch, @JsonProperty("name") String name, @JsonProperty("provider") RepositoryProviderEnum provider) {
+        this.arn = arn;
+        this.branch = branch;
+        this.name = name;
+        this.provider = provider;
+  }
 }

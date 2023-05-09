@@ -12,6 +12,7 @@ public class SummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Summary data;
+
     public SummaryResponse withData(Summary data) {
         this.data = data;
         return this;
@@ -20,6 +21,7 @@ public class SummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public SummaryResponse withError(String error) {
         this.error = error;
         return this;
@@ -28,6 +30,7 @@ public class SummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedCurrency")
     public String requestedCurrency;
+
     public SummaryResponse withRequestedCurrency(String requestedCurrency) {
         this.requestedCurrency = requestedCurrency;
         return this;
@@ -36,6 +39,7 @@ public class SummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedSymbol")
     public String requestedSymbol;
+
     public SummaryResponse withRequestedSymbol(String requestedSymbol) {
         this.requestedSymbol = requestedSymbol;
         return this;
@@ -44,6 +48,7 @@ public class SummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedUnitOfMeasure")
     public String requestedUnitOfMeasure;
+
     public SummaryResponse withRequestedUnitOfMeasure(String requestedUnitOfMeasure) {
         this.requestedUnitOfMeasure = requestedUnitOfMeasure;
         return this;
@@ -52,9 +57,11 @@ public class SummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public SummaryResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public SummaryResponse(){}
 }

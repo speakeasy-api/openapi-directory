@@ -17,6 +17,7 @@ public class InputFieldDefinition {
      */
     @JsonProperty("isRequired")
     public Boolean isRequired;
+
     public InputFieldDefinition withIsRequired(Boolean isRequired) {
         this.isRequired = isRequired;
         return this;
@@ -28,6 +29,7 @@ public class InputFieldDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedValueTypes")
     public InputFieldDefinitionSupportedValueTypesEnum[] supportedValueTypes;
+
     public InputFieldDefinition withSupportedValueTypes(InputFieldDefinitionSupportedValueTypesEnum[] supportedValueTypes) {
         this.supportedValueTypes = supportedValueTypes;
         return this;
@@ -38,9 +40,14 @@ public class InputFieldDefinition {
      */
     @JsonProperty("typeDefinition")
     public FieldTypeDefinition typeDefinition;
+
     public InputFieldDefinition withTypeDefinition(FieldTypeDefinition typeDefinition) {
         this.typeDefinition = typeDefinition;
         return this;
     }
     
+    public InputFieldDefinition(@JsonProperty("isRequired") Boolean isRequired, @JsonProperty("typeDefinition") FieldTypeDefinition typeDefinition) {
+        this.isRequired = isRequired;
+        this.typeDefinition = typeDefinition;
+  }
 }

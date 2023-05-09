@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2AnswerRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentAssistantRecord")
     public GoogleCloudDialogflowV2AgentAssistantRecord agentAssistantRecord;
+
     public GoogleCloudDialogflowV2AnswerRecord withAgentAssistantRecord(GoogleCloudDialogflowV2AgentAssistantRecord agentAssistantRecord) {
         this.agentAssistantRecord = agentAssistantRecord;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2AnswerRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answerFeedback")
     public GoogleCloudDialogflowV2AnswerFeedback answerFeedback;
+
     public GoogleCloudDialogflowV2AnswerRecord withAnswerFeedback(GoogleCloudDialogflowV2AnswerFeedback answerFeedback) {
         this.answerFeedback = answerFeedback;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2AnswerRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2AnswerRecord withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudDialogflowV2AnswerRecord(){}
 }

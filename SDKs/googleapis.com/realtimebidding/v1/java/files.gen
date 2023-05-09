@@ -206,4 +206,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/UrlRestriction.java
 lib/src/main/java/org/openapis/openapi/models/shared/Date.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetRemarketingTagResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListUserListsResponse.java
+docs/sdk/README.md
+docs/bidders/README.md
+docs/buyers/README.md
 USAGE.md

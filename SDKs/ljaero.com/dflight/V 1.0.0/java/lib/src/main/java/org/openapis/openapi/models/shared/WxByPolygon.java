@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WxByPolygon {
     @JsonProperty("hours")
     public Long hours;
+
     public WxByPolygon withHours(Long hours) {
         this.hours = hours;
         return this;
@@ -19,6 +20,7 @@ public class WxByPolygon {
     
     @JsonProperty("poly")
     public java.util.Map<String, Object> poly;
+
     public WxByPolygon withPoly(java.util.Map<String, Object> poly) {
         this.poly = poly;
         return this;
@@ -26,9 +28,15 @@ public class WxByPolygon {
     
     @JsonProperty("wxtypes")
     public String[] wxtypes;
+
     public WxByPolygon withWxtypes(String[] wxtypes) {
         this.wxtypes = wxtypes;
         return this;
     }
     
+    public WxByPolygon(@JsonProperty("hours") Long hours, @JsonProperty("poly") java.util.Map<String, Object> poly, @JsonProperty("wxtypes") String[] wxtypes) {
+        this.hours = hours;
+        this.poly = poly;
+        this.wxtypes = wxtypes;
+  }
 }

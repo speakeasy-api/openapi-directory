@@ -18,6 +18,7 @@ public class Announcement {
      */
     @JsonProperty("all_day")
     public Boolean allDay;
+
     public Announcement withAllDay(Boolean allDay) {
         this.allDay = allDay;
         return this;
@@ -28,6 +29,7 @@ public class Announcement {
      */
     @JsonProperty("created_at")
     public String createdAt;
+
     public Announcement withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -39,6 +41,7 @@ public class Announcement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ends_at")
     public String endsAt;
+
     public Announcement withEndsAt(String endsAt) {
         this.endsAt = endsAt;
         return this;
@@ -49,6 +52,7 @@ public class Announcement {
      */
     @JsonProperty("id")
     public String id;
+
     public Announcement withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class Announcement {
      */
     @JsonProperty("published")
     public Boolean published;
+
     public Announcement withPublished(Boolean published) {
         this.published = published;
         return this;
@@ -69,6 +74,7 @@ public class Announcement {
      */
     @JsonProperty("read")
     public Boolean read;
+
     public Announcement withRead(Boolean read) {
         this.read = read;
         return this;
@@ -80,6 +86,7 @@ public class Announcement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduled_at")
     public String scheduledAt;
+
     public Announcement withScheduledAt(String scheduledAt) {
         this.scheduledAt = scheduledAt;
         return this;
@@ -91,6 +98,7 @@ public class Announcement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("starts_at")
     public String startsAt;
+
     public Announcement withStartsAt(String startsAt) {
         this.startsAt = startsAt;
         return this;
@@ -101,6 +109,7 @@ public class Announcement {
      */
     @JsonProperty("text")
     public String text;
+
     public Announcement withText(String text) {
         this.text = text;
         return this;
@@ -111,9 +120,19 @@ public class Announcement {
      */
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public Announcement withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Announcement(@JsonProperty("all_day") Boolean allDay, @JsonProperty("created_at") String createdAt, @JsonProperty("id") String id, @JsonProperty("published") Boolean published, @JsonProperty("read") Boolean read, @JsonProperty("text") String text, @JsonProperty("updated_at") String updatedAt) {
+        this.allDay = allDay;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.published = published;
+        this.read = read;
+        this.text = text;
+        this.updatedAt = updatedAt;
+  }
 }

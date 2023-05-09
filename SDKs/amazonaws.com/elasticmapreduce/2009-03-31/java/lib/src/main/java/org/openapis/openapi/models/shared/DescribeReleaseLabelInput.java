@@ -12,6 +12,7 @@ public class DescribeReleaseLabelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeReleaseLabelInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class DescribeReleaseLabelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeReleaseLabelInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class DescribeReleaseLabelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReleaseLabel")
     public String releaseLabel;
+
     public DescribeReleaseLabelInput withReleaseLabel(String releaseLabel) {
         this.releaseLabel = releaseLabel;
         return this;
     }
     
+    public DescribeReleaseLabelInput(){}
 }

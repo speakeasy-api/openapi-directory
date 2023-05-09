@@ -15,9 +15,11 @@ public class DeleteUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("User")
     public User user;
+
     public DeleteUserResponse withUser(User user) {
         this.user = user;
         return this;
     }
     
+    public DeleteUserResponse(){}
 }

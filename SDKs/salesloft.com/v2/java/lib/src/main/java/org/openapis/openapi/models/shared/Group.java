@@ -15,6 +15,7 @@ public class Group {
      */
     
     public EmbeddedResource[] accessibleGroups;
+
     public Group withAccessibleGroups(EmbeddedResource[] accessibleGroups) {
         this.accessibleGroups = accessibleGroups;
         return this;
@@ -25,6 +26,7 @@ public class Group {
      */
     
     public Long id;
+
     public Group withId(Long id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class Group {
      */
     
     public String name;
+
     public Group withName(String name) {
         this.name = name;
         return this;
@@ -45,9 +48,11 @@ public class Group {
      */
     
     public Long parentId;
+
     public Group withParentId(Long parentId) {
         this.parentId = parentId;
         return this;
     }
     
+    public Group(){}
 }

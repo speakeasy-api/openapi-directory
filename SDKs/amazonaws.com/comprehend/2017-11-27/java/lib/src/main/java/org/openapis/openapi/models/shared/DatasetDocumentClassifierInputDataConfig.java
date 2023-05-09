@@ -15,6 +15,7 @@ public class DatasetDocumentClassifierInputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelDelimiter")
     public String labelDelimiter;
+
     public DatasetDocumentClassifierInputDataConfig withLabelDelimiter(String labelDelimiter) {
         this.labelDelimiter = labelDelimiter;
         return this;
@@ -22,9 +23,13 @@ public class DatasetDocumentClassifierInputDataConfig {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public DatasetDocumentClassifierInputDataConfig withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public DatasetDocumentClassifierInputDataConfig(@JsonProperty("S3Uri") String s3Uri) {
+        this.s3Uri = s3Uri;
+  }
 }

@@ -15,6 +15,7 @@ public class FormButton {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("children")
     public String children;
+
     public FormButton withChildren(String children) {
         this.children = children;
         return this;
@@ -23,6 +24,7 @@ public class FormButton {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excluded")
     public Boolean excluded;
+
     public FormButton withExcluded(Boolean excluded) {
         this.excluded = excluded;
         return this;
@@ -31,9 +33,11 @@ public class FormButton {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public FieldPosition position;
+
     public FormButton withPosition(FieldPosition position) {
         this.position = position;
         return this;
     }
     
+    public FormButton(){}
 }

@@ -15,9 +15,11 @@ public class MetadataValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public MetadataValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public MetadataValue(){}
 }

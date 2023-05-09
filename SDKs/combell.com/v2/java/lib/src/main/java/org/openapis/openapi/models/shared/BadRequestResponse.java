@@ -18,9 +18,11 @@ public class BadRequestResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validation_errors")
     public ValidationErrorMessage[] validationErrors;
+
     public BadRequestResponse withValidationErrors(ValidationErrorMessage[] validationErrors) {
         this.validationErrors = validationErrors;
         return this;
     }
     
+    public BadRequestResponse(){}
 }

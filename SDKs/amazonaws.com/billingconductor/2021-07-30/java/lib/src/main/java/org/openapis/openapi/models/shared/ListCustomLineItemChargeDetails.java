@@ -15,6 +15,7 @@ public class ListCustomLineItemChargeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Flat")
     public ListCustomLineItemFlatChargeDetails flat;
+
     public ListCustomLineItemChargeDetails withFlat(ListCustomLineItemFlatChargeDetails flat) {
         this.flat = flat;
         return this;
@@ -23,6 +24,7 @@ public class ListCustomLineItemChargeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Percentage")
     public ListCustomLineItemPercentageChargeDetails percentage;
+
     public ListCustomLineItemChargeDetails withPercentage(ListCustomLineItemPercentageChargeDetails percentage) {
         this.percentage = percentage;
         return this;
@@ -30,9 +32,13 @@ public class ListCustomLineItemChargeDetails {
     
     @JsonProperty("Type")
     public CustomLineItemTypeEnum type;
+
     public ListCustomLineItemChargeDetails withType(CustomLineItemTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ListCustomLineItemChargeDetails(@JsonProperty("Type") CustomLineItemTypeEnum type) {
+        this.type = type;
+  }
 }

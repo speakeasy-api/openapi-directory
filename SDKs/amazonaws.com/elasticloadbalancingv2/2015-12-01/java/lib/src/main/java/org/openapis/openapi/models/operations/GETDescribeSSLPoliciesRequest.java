@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeSSLPoliciesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeSSLPoliciesActionEnum action;
+
     public GETDescribeSSLPoliciesRequest withAction(GETDescribeSSLPoliciesActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeSSLPoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoadBalancerType")
     public GETDescribeSSLPoliciesLoadBalancerTypeEnum loadBalancerType;
+
     public GETDescribeSSLPoliciesRequest withLoadBalancerType(GETDescribeSSLPoliciesLoadBalancerTypeEnum loadBalancerType) {
         this.loadBalancerType = loadBalancerType;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeSSLPoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETDescribeSSLPoliciesRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeSSLPoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Names")
     public String[] names;
+
     public GETDescribeSSLPoliciesRequest withNames(String[] names) {
         this.names = names;
         return this;
@@ -49,6 +54,7 @@ public class GETDescribeSSLPoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
     public Long pageSize;
+
     public GETDescribeSSLPoliciesRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -56,6 +62,7 @@ public class GETDescribeSSLPoliciesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeSSLPoliciesVersionEnum version;
+
     public GETDescribeSSLPoliciesRequest withVersion(GETDescribeSSLPoliciesVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETDescribeSSLPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeSSLPoliciesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETDescribeSSLPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeSSLPoliciesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETDescribeSSLPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeSSLPoliciesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETDescribeSSLPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeSSLPoliciesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETDescribeSSLPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeSSLPoliciesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETDescribeSSLPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeSSLPoliciesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,14 @@ public class GETDescribeSSLPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeSSLPoliciesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeSSLPoliciesRequest(@JsonProperty("Action") GETDescribeSSLPoliciesActionEnum action, @JsonProperty("Version") GETDescribeSSLPoliciesVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

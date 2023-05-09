@@ -15,6 +15,7 @@ public class ImportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationDateTime")
     public String creationDateTime;
+
     public ImportTask withCreationDateTime(String creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -23,6 +24,7 @@ public class ImportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDateTime")
     public String endDateTime;
+
     public ImportTask withEndDateTime(String endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -31,6 +33,7 @@ public class ImportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importID")
     public String importID;
+
     public ImportTask withImportID(String importID) {
         this.importID = importID;
         return this;
@@ -39,6 +42,7 @@ public class ImportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progressPercentage")
     public Float progressPercentage;
+
     public ImportTask withProgressPercentage(Float progressPercentage) {
         this.progressPercentage = progressPercentage;
         return this;
@@ -47,6 +51,7 @@ public class ImportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3BucketSource")
     public S3BucketSource s3BucketSource;
+
     public ImportTask withS3BucketSource(S3BucketSource s3BucketSource) {
         this.s3BucketSource = s3BucketSource;
         return this;
@@ -55,6 +60,7 @@ public class ImportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ImportStatusEnum status;
+
     public ImportTask withStatus(ImportStatusEnum status) {
         this.status = status;
         return this;
@@ -63,9 +69,11 @@ public class ImportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public ImportTaskSummary summary;
+
     public ImportTask withSummary(ImportTaskSummary summary) {
         this.summary = summary;
         return this;
     }
     
+    public ImportTask(){}
 }

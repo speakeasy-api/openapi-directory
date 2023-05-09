@@ -12,6 +12,7 @@ public class GetRelationalDatabaseEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationInMinutes")
     public Long durationInMinutes;
+
     public GetRelationalDatabaseEventsRequest withDurationInMinutes(Long durationInMinutes) {
         this.durationInMinutes = durationInMinutes;
         return this;
@@ -20,6 +21,7 @@ public class GetRelationalDatabaseEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GetRelationalDatabaseEventsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -27,9 +29,13 @@ public class GetRelationalDatabaseEventsRequest {
     
     @JsonProperty("relationalDatabaseName")
     public String relationalDatabaseName;
+
     public GetRelationalDatabaseEventsRequest withRelationalDatabaseName(String relationalDatabaseName) {
         this.relationalDatabaseName = relationalDatabaseName;
         return this;
     }
     
+    public GetRelationalDatabaseEventsRequest(@JsonProperty("relationalDatabaseName") String relationalDatabaseName) {
+        this.relationalDatabaseName = relationalDatabaseName;
+  }
 }

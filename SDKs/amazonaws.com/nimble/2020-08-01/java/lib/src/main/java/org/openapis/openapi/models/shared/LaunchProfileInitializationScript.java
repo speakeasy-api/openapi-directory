@@ -15,6 +15,7 @@ public class LaunchProfileInitializationScript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeRoleArn")
     public String runtimeRoleArn;
+
     public LaunchProfileInitializationScript withRuntimeRoleArn(String runtimeRoleArn) {
         this.runtimeRoleArn = runtimeRoleArn;
         return this;
@@ -23,6 +24,7 @@ public class LaunchProfileInitializationScript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public LaunchProfileInitializationScript withScript(String script) {
         this.script = script;
         return this;
@@ -31,6 +33,7 @@ public class LaunchProfileInitializationScript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secureInitializationRoleArn")
     public String secureInitializationRoleArn;
+
     public LaunchProfileInitializationScript withSecureInitializationRoleArn(String secureInitializationRoleArn) {
         this.secureInitializationRoleArn = secureInitializationRoleArn;
         return this;
@@ -39,6 +42,7 @@ public class LaunchProfileInitializationScript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("studioComponentId")
     public String studioComponentId;
+
     public LaunchProfileInitializationScript withStudioComponentId(String studioComponentId) {
         this.studioComponentId = studioComponentId;
         return this;
@@ -47,9 +51,11 @@ public class LaunchProfileInitializationScript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("studioComponentName")
     public String studioComponentName;
+
     public LaunchProfileInitializationScript withStudioComponentName(String studioComponentName) {
         this.studioComponentName = studioComponentName;
         return this;
     }
     
+    public LaunchProfileInitializationScript(){}
 }

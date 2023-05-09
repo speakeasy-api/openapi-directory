@@ -15,9 +15,11 @@ public class Workflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public WorkflowStatusEnum status;
+
     public Workflow withStatus(WorkflowStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Workflow(){}
 }

@@ -12,6 +12,7 @@ public class KeyLineSelection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hc")
     public Double hc;
+
     public KeyLineSelection withHc(Double hc) {
         this.hc = hc;
         return this;
@@ -20,9 +21,11 @@ public class KeyLineSelection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public KeyLineSelection withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public KeyLineSelection(){}
 }

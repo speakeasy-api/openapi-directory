@@ -15,6 +15,7 @@ public class JobOutputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public JobOutputDataConfig withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -22,9 +23,13 @@ public class JobOutputDataConfig {
     
     @JsonProperty("s3Path")
     public String s3Path;
+
     public JobOutputDataConfig withS3Path(String s3Path) {
         this.s3Path = s3Path;
         return this;
     }
     
+    public JobOutputDataConfig(@JsonProperty("s3Path") String s3Path) {
+        this.s3Path = s3Path;
+  }
 }

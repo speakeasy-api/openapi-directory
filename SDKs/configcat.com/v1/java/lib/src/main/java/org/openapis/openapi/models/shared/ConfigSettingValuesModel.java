@@ -15,6 +15,7 @@ public class ConfigSettingValuesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public ConfigModel config;
+
     public ConfigSettingValuesModel withConfig(ConfigModel config) {
         this.config = config;
         return this;
@@ -23,6 +24,7 @@ public class ConfigSettingValuesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public EnvironmentModel environment;
+
     public ConfigSettingValuesModel withEnvironment(EnvironmentModel environment) {
         this.environment = environment;
         return this;
@@ -31,6 +33,7 @@ public class ConfigSettingValuesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readOnly")
     public Boolean readOnly;
+
     public ConfigSettingValuesModel withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -39,9 +42,11 @@ public class ConfigSettingValuesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settingValues")
     public ConfigSettingValueModel[] settingValues;
+
     public ConfigSettingValuesModel withSettingValues(ConfigSettingValueModel[] settingValues) {
         this.settingValues = settingValues;
         return this;
     }
     
+    public ConfigSettingValuesModel(){}
 }

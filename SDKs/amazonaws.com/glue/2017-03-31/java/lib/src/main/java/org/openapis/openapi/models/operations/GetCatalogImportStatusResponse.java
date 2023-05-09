@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCatalogImportStatusResponse {
     
     public String contentType;
+
     public GetCatalogImportStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCatalogImportStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCatalogImportStatusResponse getCatalogImportStatusResponse;
+
     public GetCatalogImportStatusResponse withGetCatalogImportStatusResponse(org.openapis.openapi.models.shared.GetCatalogImportStatusResponse getCatalogImportStatusResponse) {
         this.getCatalogImportStatusResponse = getCatalogImportStatusResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetCatalogImportStatusResponse {
      */
     
     public Object internalServiceException;
+
     public GetCatalogImportStatusResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class GetCatalogImportStatusResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetCatalogImportStatusResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -46,6 +51,7 @@ public class GetCatalogImportStatusResponse {
     
     
     public Integer statusCode;
+
     public GetCatalogImportStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetCatalogImportStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCatalogImportStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCatalogImportStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

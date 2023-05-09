@@ -15,9 +15,11 @@ public class CartSimulation200ApplicationJSONLogisticsInfoDeliveryChannels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CartSimulation200ApplicationJSONLogisticsInfoDeliveryChannels withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CartSimulation200ApplicationJSONLogisticsInfoDeliveryChannels(){}
 }

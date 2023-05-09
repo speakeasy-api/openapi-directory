@@ -16,51 +16,52 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DeleteHumanLoopRequest;
 import org.openapis.openapi.models.operations.DeleteHumanLoopResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            DeleteHumanLoopRequest req = new DeleteHumanLoopRequest() {{
-                humanLoopName = "corrupti";
-                xAmzAlgorithm = "provident";
-                xAmzContentSha256 = "distinctio";
-                xAmzCredential = "quibusdam";
-                xAmzDate = "unde";
-                xAmzSecurityToken = "nulla";
-                xAmzSignature = "corrupti";
-                xAmzSignedHeaders = "illum";
-            }}            
+            DeleteHumanLoopRequest req = new DeleteHumanLoopRequest("provident") {{
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+            }};            
 
             DeleteHumanLoopResponse res = sdk.deleteHumanLoop(req);
 
-            if (res.deleteHumanLoopResponse.isPresent()) {
+            if (res.deleteHumanLoopResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `deleteHumanLoop` - <p>Deletes the specified human loop for a flow definition.</p> <p>If the human loop was deleted, this operation will return a <code>ResourceNotFoundException</code>. </p>
-* `describeHumanLoop` - Returns information about the specified human loop. If the human loop was deleted, this operation will return a <code>ResourceNotFoundException</code> error. 
-* `listHumanLoops` - Returns information about human loops, given the specified parameters. If a human loop was deleted, it will not be included.
-* `startHumanLoop` - Starts a human loop, provided that at least one activation condition is met.
-* `stopHumanLoop` - Stops the specified human loop.
+* [deleteHumanLoop](docs/sdk/README.md#deletehumanloop) - <p>Deletes the specified human loop for a flow definition.</p> <p>If the human loop was deleted, this operation will return a <code>ResourceNotFoundException</code>. </p>
+* [describeHumanLoop](docs/sdk/README.md#describehumanloop) - Returns information about the specified human loop. If the human loop was deleted, this operation will return a <code>ResourceNotFoundException</code> error. 
+* [listHumanLoops](docs/sdk/README.md#listhumanloops) - Returns information about human loops, given the specified parameters. If a human loop was deleted, it will not be included.
+* [startHumanLoop](docs/sdk/README.md#starthumanloop) - Starts a human loop, provided that at least one activation condition is met.
+* [stopHumanLoop](docs/sdk/README.md#stophumanloop) - Stops the specified human loop.
 <!-- End SDK Available Operations -->
 
 ### Maturity

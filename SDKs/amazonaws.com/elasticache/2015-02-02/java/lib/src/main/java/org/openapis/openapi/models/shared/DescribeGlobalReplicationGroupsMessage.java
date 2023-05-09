@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeGlobalReplicationGroupsMessage {
     
     public String globalReplicationGroupId;
+
     public DescribeGlobalReplicationGroupsMessage withGlobalReplicationGroupId(String globalReplicationGroupId) {
         this.globalReplicationGroupId = globalReplicationGroupId;
         return this;
@@ -16,6 +17,7 @@ public class DescribeGlobalReplicationGroupsMessage {
     
     
     public String marker;
+
     public DescribeGlobalReplicationGroupsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,6 +25,7 @@ public class DescribeGlobalReplicationGroupsMessage {
     
     
     public Long maxRecords;
+
     public DescribeGlobalReplicationGroupsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -30,9 +33,11 @@ public class DescribeGlobalReplicationGroupsMessage {
     
     
     public Boolean showMemberInfo;
+
     public DescribeGlobalReplicationGroupsMessage withShowMemberInfo(Boolean showMemberInfo) {
         this.showMemberInfo = showMemberInfo;
         return this;
     }
     
+    public DescribeGlobalReplicationGroupsMessage(){}
 }

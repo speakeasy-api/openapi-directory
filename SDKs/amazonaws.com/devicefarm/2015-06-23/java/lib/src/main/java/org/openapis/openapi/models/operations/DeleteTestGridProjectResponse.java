@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTestGridProjectResponse {
@@ -12,6 +13,7 @@ public class DeleteTestGridProjectResponse {
      */
     
     public Object argumentException;
+
     public DeleteTestGridProjectResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteTestGridProjectResponse {
      */
     
     public Object cannotDeleteException;
+
     public DeleteTestGridProjectResponse withCannotDeleteException(Object cannotDeleteException) {
         this.cannotDeleteException = cannotDeleteException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTestGridProjectResponse {
     
     
     public String contentType;
+
     public DeleteTestGridProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTestGridProjectResponse {
      */
     
     public java.util.Map<String, Object> deleteTestGridProjectResult;
+
     public DeleteTestGridProjectResponse withDeleteTestGridProjectResult(java.util.Map<String, Object> deleteTestGridProjectResult) {
         this.deleteTestGridProjectResult = deleteTestGridProjectResult;
         return this;
@@ -49,6 +54,7 @@ public class DeleteTestGridProjectResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteTestGridProjectResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteTestGridProjectResponse {
      */
     
     public Object notFoundException;
+
     public DeleteTestGridProjectResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteTestGridProjectResponse {
     
     
     public Integer statusCode;
+
     public DeleteTestGridProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteTestGridProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTestGridProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteTestGridProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

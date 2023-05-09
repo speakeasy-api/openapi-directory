@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreatePortalResponse {
     @JsonProperty("portalArn")
     public String portalArn;
+
     public CreatePortalResponse withPortalArn(String portalArn) {
         this.portalArn = portalArn;
         return this;
@@ -19,9 +20,14 @@ public class CreatePortalResponse {
     
     @JsonProperty("portalEndpoint")
     public String portalEndpoint;
+
     public CreatePortalResponse withPortalEndpoint(String portalEndpoint) {
         this.portalEndpoint = portalEndpoint;
         return this;
     }
     
+    public CreatePortalResponse(@JsonProperty("portalArn") String portalArn, @JsonProperty("portalEndpoint") String portalEndpoint) {
+        this.portalArn = portalArn;
+        this.portalEndpoint = portalEndpoint;
+  }
 }

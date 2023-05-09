@@ -18,6 +18,7 @@ public class ProvidedSoftwareCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidxOrchestratorVersion")
     public String androidxOrchestratorVersion;
+
     public ProvidedSoftwareCatalog withAndroidxOrchestratorVersion(String androidxOrchestratorVersion) {
         this.androidxOrchestratorVersion = androidxOrchestratorVersion;
         return this;
@@ -29,9 +30,11 @@ public class ProvidedSoftwareCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orchestratorVersion")
     public String orchestratorVersion;
+
     public ProvidedSoftwareCatalog withOrchestratorVersion(String orchestratorVersion) {
         this.orchestratorVersion = orchestratorVersion;
         return this;
     }
     
+    public ProvidedSoftwareCatalog(){}
 }

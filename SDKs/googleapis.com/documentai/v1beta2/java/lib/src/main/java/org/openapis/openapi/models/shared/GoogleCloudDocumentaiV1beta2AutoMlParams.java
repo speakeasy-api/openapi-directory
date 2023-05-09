@@ -18,9 +18,11 @@ public class GoogleCloudDocumentaiV1beta2AutoMlParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public GoogleCloudDocumentaiV1beta2AutoMlParams withModel(String model) {
         this.model = model;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2AutoMlParams(){}
 }

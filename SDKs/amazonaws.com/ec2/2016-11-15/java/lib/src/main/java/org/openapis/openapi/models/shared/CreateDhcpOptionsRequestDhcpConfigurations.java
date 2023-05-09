@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class CreateDhcpOptionsRequestDhcpConfigurations {
     
     public String key;
+
     public CreateDhcpOptionsRequestDhcpConfigurations withKey(String key) {
         this.key = key;
         return this;
@@ -16,9 +17,11 @@ public class CreateDhcpOptionsRequestDhcpConfigurations {
     
     
     public String[] values;
+
     public CreateDhcpOptionsRequestDhcpConfigurations withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public CreateDhcpOptionsRequestDhcpConfigurations(){}
 }

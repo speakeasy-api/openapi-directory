@@ -18,6 +18,7 @@ public class AllocatedConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingressPort")
     public Integer ingressPort;
+
     public AllocatedConnection withIngressPort(Integer ingressPort) {
         this.ingressPort = ingressPort;
         return this;
@@ -29,9 +30,11 @@ public class AllocatedConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pscUri")
     public String pscUri;
+
     public AllocatedConnection withPscUri(String pscUri) {
         this.pscUri = pscUri;
         return this;
     }
     
+    public AllocatedConnection(){}
 }

@@ -18,6 +18,7 @@ public class BlogPosts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Post[] items;
+
     public BlogPosts withItems(Post[] items) {
         this.items = items;
         return this;
@@ -29,6 +30,7 @@ public class BlogPosts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public BlogPosts withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -40,9 +42,11 @@ public class BlogPosts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalItems")
     public Integer totalItems;
+
     public BlogPosts withTotalItems(Integer totalItems) {
         this.totalItems = totalItems;
         return this;
     }
     
+    public BlogPosts(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFastSnapshotRestoresRequestFilters {
     
     public String name;
+
     public DescribeFastSnapshotRestoresRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeFastSnapshotRestoresRequestFilters {
     
     
     public String[] values;
+
     public DescribeFastSnapshotRestoresRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeFastSnapshotRestoresRequestFilters(){}
 }

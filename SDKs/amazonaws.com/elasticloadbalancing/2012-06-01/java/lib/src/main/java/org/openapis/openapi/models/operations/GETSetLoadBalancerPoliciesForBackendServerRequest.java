@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetLoadBalancerPoliciesForBackendServerRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETSetLoadBalancerPoliciesForBackendServerActionEnum action;
+
     public GETSetLoadBalancerPoliciesForBackendServerRequest withAction(GETSetLoadBalancerPoliciesForBackendServerActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETSetLoadBalancerPoliciesForBackendServerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstancePort")
     public Long instancePort;
+
     public GETSetLoadBalancerPoliciesForBackendServerRequest withInstancePort(Long instancePort) {
         this.instancePort = instancePort;
         return this;
@@ -29,6 +32,7 @@ public class GETSetLoadBalancerPoliciesForBackendServerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoadBalancerName")
     public String loadBalancerName;
+
     public GETSetLoadBalancerPoliciesForBackendServerRequest withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -39,6 +43,7 @@ public class GETSetLoadBalancerPoliciesForBackendServerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyNames")
     public String[] policyNames;
+
     public GETSetLoadBalancerPoliciesForBackendServerRequest withPolicyNames(String[] policyNames) {
         this.policyNames = policyNames;
         return this;
@@ -46,6 +51,7 @@ public class GETSetLoadBalancerPoliciesForBackendServerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETSetLoadBalancerPoliciesForBackendServerVersionEnum version;
+
     public GETSetLoadBalancerPoliciesForBackendServerRequest withVersion(GETSetLoadBalancerPoliciesForBackendServerVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETSetLoadBalancerPoliciesForBackendServerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETSetLoadBalancerPoliciesForBackendServerRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETSetLoadBalancerPoliciesForBackendServerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETSetLoadBalancerPoliciesForBackendServerRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETSetLoadBalancerPoliciesForBackendServerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETSetLoadBalancerPoliciesForBackendServerRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETSetLoadBalancerPoliciesForBackendServerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETSetLoadBalancerPoliciesForBackendServerRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETSetLoadBalancerPoliciesForBackendServerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETSetLoadBalancerPoliciesForBackendServerRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETSetLoadBalancerPoliciesForBackendServerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETSetLoadBalancerPoliciesForBackendServerRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,17 @@ public class GETSetLoadBalancerPoliciesForBackendServerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETSetLoadBalancerPoliciesForBackendServerRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETSetLoadBalancerPoliciesForBackendServerRequest(@JsonProperty("Action") GETSetLoadBalancerPoliciesForBackendServerActionEnum action, @JsonProperty("InstancePort") Long instancePort, @JsonProperty("LoadBalancerName") String loadBalancerName, @JsonProperty("PolicyNames") String[] policyNames, @JsonProperty("Version") GETSetLoadBalancerPoliciesForBackendServerVersionEnum version) {
+        this.action = action;
+        this.instancePort = instancePort;
+        this.loadBalancerName = loadBalancerName;
+        this.policyNames = policyNames;
+        this.version = version;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class Adexchangebuyer2BiddersFilterSetsFilteredBidsListResponse {
     
     public String contentType;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class Adexchangebuyer2BiddersFilterSetsFilteredBidsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFilteredBidsResponse listFilteredBidsResponse;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsListResponse withListFilteredBidsResponse(org.openapis.openapi.models.shared.ListFilteredBidsResponse listFilteredBidsResponse) {
         this.listFilteredBidsResponse = listFilteredBidsResponse;
         return this;
@@ -26,6 +29,7 @@ public class Adexchangebuyer2BiddersFilterSetsFilteredBidsListResponse {
     
     
     public Integer statusCode;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class Adexchangebuyer2BiddersFilterSetsFilteredBidsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public Adexchangebuyer2BiddersFilterSetsFilteredBidsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

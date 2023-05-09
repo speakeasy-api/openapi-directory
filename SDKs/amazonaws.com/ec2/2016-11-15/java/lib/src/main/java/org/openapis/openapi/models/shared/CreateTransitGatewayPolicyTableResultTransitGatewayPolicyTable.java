@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CreateTransitGatewayPolicyTableResultTransitGatewayPolicyTable {
     
     public OffsetDateTime creationTime;
+
     public CreateTransitGatewayPolicyTableResultTransitGatewayPolicyTable withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +20,7 @@ public class CreateTransitGatewayPolicyTableResultTransitGatewayPolicyTable {
     
     
     public CreateTransitGatewayPolicyTableResultTransitGatewayPolicyTableStateEnum state;
+
     public CreateTransitGatewayPolicyTableResultTransitGatewayPolicyTable withState(CreateTransitGatewayPolicyTableResultTransitGatewayPolicyTableStateEnum state) {
         this.state = state;
         return this;
@@ -26,6 +28,7 @@ public class CreateTransitGatewayPolicyTableResultTransitGatewayPolicyTable {
     
     
     public CreateTransitGatewayPolicyTableResultTransitGatewayPolicyTableTags[] tags;
+
     public CreateTransitGatewayPolicyTableResultTransitGatewayPolicyTable withTags(CreateTransitGatewayPolicyTableResultTransitGatewayPolicyTableTags[] tags) {
         this.tags = tags;
         return this;
@@ -33,6 +36,7 @@ public class CreateTransitGatewayPolicyTableResultTransitGatewayPolicyTable {
     
     
     public String transitGatewayId;
+
     public CreateTransitGatewayPolicyTableResultTransitGatewayPolicyTable withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -40,9 +44,11 @@ public class CreateTransitGatewayPolicyTableResultTransitGatewayPolicyTable {
     
     
     public String transitGatewayPolicyTableId;
+
     public CreateTransitGatewayPolicyTableResultTransitGatewayPolicyTable withTransitGatewayPolicyTableId(String transitGatewayPolicyTableId) {
         this.transitGatewayPolicyTableId = transitGatewayPolicyTableId;
         return this;
     }
     
+    public CreateTransitGatewayPolicyTableResultTransitGatewayPolicyTable(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostAssetsCorrelationMatrixEffectiveRankResponse {
     
     public String contentType;
+
     public PostAssetsCorrelationMatrixEffectiveRankResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostAssetsCorrelationMatrixEffectiveRankResponse {
     
     
     public Integer statusCode;
+
     public PostAssetsCorrelationMatrixEffectiveRankResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostAssetsCorrelationMatrixEffectiveRankResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostAssetsCorrelationMatrixEffectiveRankResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostAssetsCorrelationMatrixEffectiveRankResponse {
      */
     
     public PostAssetsCorrelationMatrixEffectiveRank200ApplicationJSON postAssetsCorrelationMatrixEffectiveRank200ApplicationJSONObject;
+
     public PostAssetsCorrelationMatrixEffectiveRankResponse withPostAssetsCorrelationMatrixEffectiveRank200ApplicationJSONObject(PostAssetsCorrelationMatrixEffectiveRank200ApplicationJSON postAssetsCorrelationMatrixEffectiveRank200ApplicationJSONObject) {
         this.postAssetsCorrelationMatrixEffectiveRank200ApplicationJSONObject = postAssetsCorrelationMatrixEffectiveRank200ApplicationJSONObject;
         return this;
     }
     
+    public PostAssetsCorrelationMatrixEffectiveRankResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

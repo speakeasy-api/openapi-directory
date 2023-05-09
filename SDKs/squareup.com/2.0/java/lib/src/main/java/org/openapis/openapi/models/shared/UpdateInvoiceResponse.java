@@ -18,6 +18,7 @@ public class UpdateInvoiceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public UpdateInvoiceResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -30,9 +31,11 @@ public class UpdateInvoiceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice")
     public Invoice invoice;
+
     public UpdateInvoiceResponse withInvoice(Invoice invoice) {
         this.invoice = invoice;
         return this;
     }
     
+    public UpdateInvoiceResponse(){}
 }

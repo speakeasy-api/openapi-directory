@@ -15,6 +15,7 @@ public class GetTableObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetTableObjectsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetTableObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Objects")
     public PartitionObjects[] objects;
+
     public GetTableObjectsResponse withObjects(PartitionObjects[] objects) {
         this.objects = objects;
         return this;
     }
     
+    public GetTableObjectsResponse(){}
 }

@@ -15,6 +15,7 @@ public class ProductStatusItemLevelIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicableCountries")
     public String[] applicableCountries;
+
     public ProductStatusItemLevelIssue withApplicableCountries(String[] applicableCountries) {
         this.applicableCountries = applicableCountries;
         return this;
@@ -26,6 +27,7 @@ public class ProductStatusItemLevelIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeName")
     public String attributeName;
+
     public ProductStatusItemLevelIssue withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -37,6 +39,7 @@ public class ProductStatusItemLevelIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public ProductStatusItemLevelIssue withCode(String code) {
         this.code = code;
         return this;
@@ -48,6 +51,7 @@ public class ProductStatusItemLevelIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ProductStatusItemLevelIssue withDescription(String description) {
         this.description = description;
         return this;
@@ -59,6 +63,7 @@ public class ProductStatusItemLevelIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public ProductStatusItemLevelIssue withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -70,6 +75,7 @@ public class ProductStatusItemLevelIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public ProductStatusItemLevelIssue withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -81,6 +87,7 @@ public class ProductStatusItemLevelIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentation")
     public String documentation;
+
     public ProductStatusItemLevelIssue withDocumentation(String documentation) {
         this.documentation = documentation;
         return this;
@@ -92,6 +99,7 @@ public class ProductStatusItemLevelIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolution")
     public String resolution;
+
     public ProductStatusItemLevelIssue withResolution(String resolution) {
         this.resolution = resolution;
         return this;
@@ -103,9 +111,11 @@ public class ProductStatusItemLevelIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servability")
     public String servability;
+
     public ProductStatusItemLevelIssue withServability(String servability) {
         this.servability = servability;
         return this;
     }
     
+    public ProductStatusItemLevelIssue(){}
 }

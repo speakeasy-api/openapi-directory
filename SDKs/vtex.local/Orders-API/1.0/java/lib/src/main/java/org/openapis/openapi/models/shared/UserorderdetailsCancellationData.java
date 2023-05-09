@@ -15,6 +15,7 @@ public class UserorderdetailsCancellationData {
      */
     @JsonProperty("CancellationDate")
     public String cancellationDate;
+
     public UserorderdetailsCancellationData withCancellationDate(String cancellationDate) {
         this.cancellationDate = cancellationDate;
         return this;
@@ -25,6 +26,7 @@ public class UserorderdetailsCancellationData {
      */
     @JsonProperty("Reason")
     public String reason;
+
     public UserorderdetailsCancellationData withReason(String reason) {
         this.reason = reason;
         return this;
@@ -35,6 +37,7 @@ public class UserorderdetailsCancellationData {
      */
     @JsonProperty("RequestedByPaymentNotification")
     public Boolean requestedByPaymentNotification;
+
     public UserorderdetailsCancellationData withRequestedByPaymentNotification(Boolean requestedByPaymentNotification) {
         this.requestedByPaymentNotification = requestedByPaymentNotification;
         return this;
@@ -45,6 +48,7 @@ public class UserorderdetailsCancellationData {
      */
     @JsonProperty("RequestedBySellerNotification")
     public Boolean requestedBySellerNotification;
+
     public UserorderdetailsCancellationData withRequestedBySellerNotification(Boolean requestedBySellerNotification) {
         this.requestedBySellerNotification = requestedBySellerNotification;
         return this;
@@ -55,6 +59,7 @@ public class UserorderdetailsCancellationData {
      */
     @JsonProperty("RequestedBySystem")
     public Boolean requestedBySystem;
+
     public UserorderdetailsCancellationData withRequestedBySystem(Boolean requestedBySystem) {
         this.requestedBySystem = requestedBySystem;
         return this;
@@ -65,9 +70,18 @@ public class UserorderdetailsCancellationData {
      */
     @JsonProperty("RequestedByUser")
     public Boolean requestedByUser;
+
     public UserorderdetailsCancellationData withRequestedByUser(Boolean requestedByUser) {
         this.requestedByUser = requestedByUser;
         return this;
     }
     
+    public UserorderdetailsCancellationData(@JsonProperty("CancellationDate") String cancellationDate, @JsonProperty("Reason") String reason, @JsonProperty("RequestedByPaymentNotification") Boolean requestedByPaymentNotification, @JsonProperty("RequestedBySellerNotification") Boolean requestedBySellerNotification, @JsonProperty("RequestedBySystem") Boolean requestedBySystem, @JsonProperty("RequestedByUser") Boolean requestedByUser) {
+        this.cancellationDate = cancellationDate;
+        this.reason = reason;
+        this.requestedByPaymentNotification = requestedByPaymentNotification;
+        this.requestedBySellerNotification = requestedBySellerNotification;
+        this.requestedBySystem = requestedBySystem;
+        this.requestedByUser = requestedByUser;
+  }
 }

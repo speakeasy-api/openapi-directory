@@ -18,6 +18,7 @@ public class TextStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backgroundColor")
     public OptionalColor backgroundColor;
+
     public TextStyle withBackgroundColor(OptionalColor backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
@@ -29,6 +30,7 @@ public class TextStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baselineOffset")
     public TextStyleBaselineOffsetEnum baselineOffset;
+
     public TextStyle withBaselineOffset(TextStyleBaselineOffsetEnum baselineOffset) {
         this.baselineOffset = baselineOffset;
         return this;
@@ -40,6 +42,7 @@ public class TextStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bold")
     public Boolean bold;
+
     public TextStyle withBold(Boolean bold) {
         this.bold = bold;
         return this;
@@ -51,6 +54,7 @@ public class TextStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fontFamily")
     public String fontFamily;
+
     public TextStyle withFontFamily(String fontFamily) {
         this.fontFamily = fontFamily;
         return this;
@@ -62,6 +66,7 @@ public class TextStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fontSize")
     public Dimension fontSize;
+
     public TextStyle withFontSize(Dimension fontSize) {
         this.fontSize = fontSize;
         return this;
@@ -73,6 +78,7 @@ public class TextStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("foregroundColor")
     public OptionalColor foregroundColor;
+
     public TextStyle withForegroundColor(OptionalColor foregroundColor) {
         this.foregroundColor = foregroundColor;
         return this;
@@ -84,6 +90,7 @@ public class TextStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("italic")
     public Boolean italic;
+
     public TextStyle withItalic(Boolean italic) {
         this.italic = italic;
         return this;
@@ -95,6 +102,7 @@ public class TextStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public Link link;
+
     public TextStyle withLink(Link link) {
         this.link = link;
         return this;
@@ -106,6 +114,7 @@ public class TextStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smallCaps")
     public Boolean smallCaps;
+
     public TextStyle withSmallCaps(Boolean smallCaps) {
         this.smallCaps = smallCaps;
         return this;
@@ -117,6 +126,7 @@ public class TextStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strikethrough")
     public Boolean strikethrough;
+
     public TextStyle withStrikethrough(Boolean strikethrough) {
         this.strikethrough = strikethrough;
         return this;
@@ -128,6 +138,7 @@ public class TextStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("underline")
     public Boolean underline;
+
     public TextStyle withUnderline(Boolean underline) {
         this.underline = underline;
         return this;
@@ -139,9 +150,11 @@ public class TextStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weightedFontFamily")
     public WeightedFontFamily weightedFontFamily;
+
     public TextStyle withWeightedFontFamily(WeightedFontFamily weightedFontFamily) {
         this.weightedFontFamily = weightedFontFamily;
         return this;
     }
     
+    public TextStyle(){}
 }

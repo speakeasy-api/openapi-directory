@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetReadSetActivationJobResponse {
@@ -12,6 +13,7 @@ public class GetReadSetActivationJobResponse {
      */
     
     public Object accessDeniedException;
+
     public GetReadSetActivationJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetReadSetActivationJobResponse {
     
     
     public String contentType;
+
     public GetReadSetActivationJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetReadSetActivationJobResponse {
      */
     
     public org.openapis.openapi.models.shared.GetReadSetActivationJobResponse getReadSetActivationJobResponse;
+
     public GetReadSetActivationJobResponse withGetReadSetActivationJobResponse(org.openapis.openapi.models.shared.GetReadSetActivationJobResponse getReadSetActivationJobResponse) {
         this.getReadSetActivationJobResponse = getReadSetActivationJobResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetReadSetActivationJobResponse {
      */
     
     public Object internalServerException;
+
     public GetReadSetActivationJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetReadSetActivationJobResponse {
      */
     
     public Object requestTimeoutException;
+
     public GetReadSetActivationJobResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -59,6 +65,7 @@ public class GetReadSetActivationJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetReadSetActivationJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetReadSetActivationJobResponse {
     
     
     public Integer statusCode;
+
     public GetReadSetActivationJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetReadSetActivationJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetReadSetActivationJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetReadSetActivationJobResponse {
      */
     
     public Object throttlingException;
+
     public GetReadSetActivationJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class GetReadSetActivationJobResponse {
      */
     
     public Object validationException;
+
     public GetReadSetActivationJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetReadSetActivationJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

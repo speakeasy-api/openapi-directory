@@ -12,6 +12,7 @@ public class UpdateDestinationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmazonOpenSearchServerlessDestinationUpdate")
     public AmazonOpenSearchServerlessDestinationUpdate amazonOpenSearchServerlessDestinationUpdate;
+
     public UpdateDestinationInput withAmazonOpenSearchServerlessDestinationUpdate(AmazonOpenSearchServerlessDestinationUpdate amazonOpenSearchServerlessDestinationUpdate) {
         this.amazonOpenSearchServerlessDestinationUpdate = amazonOpenSearchServerlessDestinationUpdate;
         return this;
@@ -20,6 +21,7 @@ public class UpdateDestinationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmazonopensearchserviceDestinationUpdate")
     public AmazonopensearchserviceDestinationUpdate amazonopensearchserviceDestinationUpdate;
+
     public UpdateDestinationInput withAmazonopensearchserviceDestinationUpdate(AmazonopensearchserviceDestinationUpdate amazonopensearchserviceDestinationUpdate) {
         this.amazonopensearchserviceDestinationUpdate = amazonopensearchserviceDestinationUpdate;
         return this;
@@ -27,6 +29,7 @@ public class UpdateDestinationInput {
     
     @JsonProperty("CurrentDeliveryStreamVersionId")
     public String currentDeliveryStreamVersionId;
+
     public UpdateDestinationInput withCurrentDeliveryStreamVersionId(String currentDeliveryStreamVersionId) {
         this.currentDeliveryStreamVersionId = currentDeliveryStreamVersionId;
         return this;
@@ -34,6 +37,7 @@ public class UpdateDestinationInput {
     
     @JsonProperty("DeliveryStreamName")
     public String deliveryStreamName;
+
     public UpdateDestinationInput withDeliveryStreamName(String deliveryStreamName) {
         this.deliveryStreamName = deliveryStreamName;
         return this;
@@ -41,6 +45,7 @@ public class UpdateDestinationInput {
     
     @JsonProperty("DestinationId")
     public String destinationId;
+
     public UpdateDestinationInput withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDestinationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ElasticsearchDestinationUpdate")
     public ElasticsearchDestinationUpdate elasticsearchDestinationUpdate;
+
     public UpdateDestinationInput withElasticsearchDestinationUpdate(ElasticsearchDestinationUpdate elasticsearchDestinationUpdate) {
         this.elasticsearchDestinationUpdate = elasticsearchDestinationUpdate;
         return this;
@@ -57,6 +63,7 @@ public class UpdateDestinationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtendedS3DestinationUpdate")
     public ExtendedS3DestinationUpdate extendedS3DestinationUpdate;
+
     public UpdateDestinationInput withExtendedS3DestinationUpdate(ExtendedS3DestinationUpdate extendedS3DestinationUpdate) {
         this.extendedS3DestinationUpdate = extendedS3DestinationUpdate;
         return this;
@@ -65,6 +72,7 @@ public class UpdateDestinationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpEndpointDestinationUpdate")
     public HttpEndpointDestinationUpdate httpEndpointDestinationUpdate;
+
     public UpdateDestinationInput withHttpEndpointDestinationUpdate(HttpEndpointDestinationUpdate httpEndpointDestinationUpdate) {
         this.httpEndpointDestinationUpdate = httpEndpointDestinationUpdate;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDestinationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedshiftDestinationUpdate")
     public RedshiftDestinationUpdate redshiftDestinationUpdate;
+
     public UpdateDestinationInput withRedshiftDestinationUpdate(RedshiftDestinationUpdate redshiftDestinationUpdate) {
         this.redshiftDestinationUpdate = redshiftDestinationUpdate;
         return this;
@@ -81,6 +90,7 @@ public class UpdateDestinationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3DestinationUpdate")
     public UpdateDestinationInputS3DestinationUpdate s3DestinationUpdate;
+
     public UpdateDestinationInput withS3DestinationUpdate(UpdateDestinationInputS3DestinationUpdate s3DestinationUpdate) {
         this.s3DestinationUpdate = s3DestinationUpdate;
         return this;
@@ -89,9 +99,15 @@ public class UpdateDestinationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SplunkDestinationUpdate")
     public SplunkDestinationUpdate splunkDestinationUpdate;
+
     public UpdateDestinationInput withSplunkDestinationUpdate(SplunkDestinationUpdate splunkDestinationUpdate) {
         this.splunkDestinationUpdate = splunkDestinationUpdate;
         return this;
     }
     
+    public UpdateDestinationInput(@JsonProperty("CurrentDeliveryStreamVersionId") String currentDeliveryStreamVersionId, @JsonProperty("DeliveryStreamName") String deliveryStreamName, @JsonProperty("DestinationId") String destinationId) {
+        this.currentDeliveryStreamVersionId = currentDeliveryStreamVersionId;
+        this.deliveryStreamName = deliveryStreamName;
+        this.destinationId = destinationId;
+  }
 }

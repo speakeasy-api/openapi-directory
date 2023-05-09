@@ -15,6 +15,7 @@ public class Users2FALoginRequest {
      */
     @JsonProperty("code")
     public String code;
+
     public Users2FALoginRequest withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class Users2FALoginRequest {
      */
     @JsonProperty("login_2fa_token")
     public String login2faToken;
+
     public Users2FALoginRequest withLogin2faToken(String login2faToken) {
         this.login2faToken = login2faToken;
         return this;
     }
     
+    public Users2FALoginRequest(@JsonProperty("code") String code, @JsonProperty("login_2fa_token") String login2faToken) {
+        this.code = code;
+        this.login2faToken = login2faToken;
+  }
 }

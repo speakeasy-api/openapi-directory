@@ -15,9 +15,11 @@ public class GetListofCardsCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cards")
     public GetListofCardsCardsCard[] cards;
+
     public GetListofCardsCards withCards(GetListofCardsCardsCard[] cards) {
         this.cards = cards;
         return this;
     }
     
+    public GetListofCardsCards(){}
 }

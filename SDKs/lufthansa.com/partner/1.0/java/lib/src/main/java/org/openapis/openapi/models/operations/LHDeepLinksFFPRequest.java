@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LHDeepLinksFFPRequest {
@@ -12,6 +13,7 @@ public class LHDeepLinksFFPRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public LHDeepLinksFFPRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class LHDeepLinksFFPRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cabin-class")
     public String cabinClass;
+
     public LHDeepLinksFFPRequest withCabinClass(String cabinClass) {
         this.cabinClass = cabinClass;
         return this;
@@ -32,6 +35,7 @@ public class LHDeepLinksFFPRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=catalogues")
     public String catalogues;
+
     public LHDeepLinksFFPRequest withCatalogues(String catalogues) {
         this.catalogues = catalogues;
         return this;
@@ -42,6 +46,7 @@ public class LHDeepLinksFFPRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public LHDeepLinksFFPRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -52,6 +57,7 @@ public class LHDeepLinksFFPRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination")
     public String destination;
+
     public LHDeepLinksFFPRequest withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -62,6 +68,7 @@ public class LHDeepLinksFFPRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=encryption-key")
     public String encryptionKey;
+
     public LHDeepLinksFFPRequest withEncryptionKey(String encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -72,6 +79,7 @@ public class LHDeepLinksFFPRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public LHDeepLinksFFPRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -82,6 +90,7 @@ public class LHDeepLinksFFPRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=origin")
     public String origin;
+
     public LHDeepLinksFFPRequest withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -92,6 +101,7 @@ public class LHDeepLinksFFPRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partnerid")
     public String partnerid;
+
     public LHDeepLinksFFPRequest withPartnerid(String partnerid) {
         this.partnerid = partnerid;
         return this;
@@ -102,6 +112,7 @@ public class LHDeepLinksFFPRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=return-date")
     public String returnDate;
+
     public LHDeepLinksFFPRequest withReturnDate(String returnDate) {
         this.returnDate = returnDate;
         return this;
@@ -112,6 +123,7 @@ public class LHDeepLinksFFPRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trackingid")
     public String trackingid;
+
     public LHDeepLinksFFPRequest withTrackingid(String trackingid) {
         this.trackingid = trackingid;
         return this;
@@ -122,6 +134,7 @@ public class LHDeepLinksFFPRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travel-date")
     public String travelDate;
+
     public LHDeepLinksFFPRequest withTravelDate(String travelDate) {
         this.travelDate = travelDate;
         return this;
@@ -132,9 +145,20 @@ public class LHDeepLinksFFPRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelers")
     public String travelers;
+
     public LHDeepLinksFFPRequest withTravelers(String travelers) {
         this.travelers = travelers;
         return this;
     }
     
+    public LHDeepLinksFFPRequest(@JsonProperty("Accept") String accept, @JsonProperty("catalogues") String catalogues, @JsonProperty("country") String country, @JsonProperty("destination") String destination, @JsonProperty("lang") String lang, @JsonProperty("origin") String origin, @JsonProperty("trackingid") String trackingid, @JsonProperty("travel-date") String travelDate) {
+        this.accept = accept;
+        this.catalogues = catalogues;
+        this.country = country;
+        this.destination = destination;
+        this.lang = lang;
+        this.origin = origin;
+        this.trackingid = trackingid;
+        this.travelDate = travelDate;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProductOrderUboResponse {
     
     public String contentType;
+
     public ProductOrderUboResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ProductOrderUboResponse {
      */
     
     public ProductOrderUbo200ApplicationJSON productOrderUbo200ApplicationJSONObject;
+
     public ProductOrderUboResponse withProductOrderUbo200ApplicationJSONObject(ProductOrderUbo200ApplicationJSON productOrderUbo200ApplicationJSONObject) {
         this.productOrderUbo200ApplicationJSONObject = productOrderUbo200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class ProductOrderUboResponse {
      */
     
     public ProductOrderUboDefaultApplicationJSON productOrderUboDefaultApplicationJSONObject;
+
     public ProductOrderUboResponse withProductOrderUboDefaultApplicationJSONObject(ProductOrderUboDefaultApplicationJSON productOrderUboDefaultApplicationJSONObject) {
         this.productOrderUboDefaultApplicationJSONObject = productOrderUboDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class ProductOrderUboResponse {
     
     
     public Integer statusCode;
+
     public ProductOrderUboResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ProductOrderUboResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProductOrderUboResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ProductOrderUboResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

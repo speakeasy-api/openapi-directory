@@ -12,9 +12,13 @@ public class BatchUpdateDetectorRequestBody {
      */
     @JsonProperty("detectors")
     public org.openapis.openapi.models.shared.UpdateDetectorRequest[] detectors;
+
     public BatchUpdateDetectorRequestBody withDetectors(org.openapis.openapi.models.shared.UpdateDetectorRequest[] detectors) {
         this.detectors = detectors;
         return this;
     }
     
+    public BatchUpdateDetectorRequestBody(@JsonProperty("detectors") org.openapis.openapi.models.shared.UpdateDetectorRequest[] detectors) {
+        this.detectors = detectors;
+  }
 }

@@ -18,6 +18,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturer")
     public String manufacturer;
+
     public Device withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
@@ -29,6 +30,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public Device withModel(String model) {
         this.model = model;
         return this;
@@ -40,6 +42,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DeviceTypeEnum type;
+
     public Device withType(DeviceTypeEnum type) {
         this.type = type;
         return this;
@@ -51,6 +54,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public Device withUid(String uid) {
         this.uid = uid;
         return this;
@@ -62,9 +66,11 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public Device withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Device(){}
 }

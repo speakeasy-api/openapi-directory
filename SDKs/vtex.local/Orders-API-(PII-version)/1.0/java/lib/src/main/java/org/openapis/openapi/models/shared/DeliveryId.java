@@ -12,6 +12,7 @@ public class DeliveryId {
      */
     @JsonProperty("courierId")
     public String courierId;
+
     public DeliveryId withCourierId(String courierId) {
         this.courierId = courierId;
         return this;
@@ -22,6 +23,7 @@ public class DeliveryId {
      */
     @JsonProperty("courierName")
     public String courierName;
+
     public DeliveryId withCourierName(String courierName) {
         this.courierName = courierName;
         return this;
@@ -32,6 +34,7 @@ public class DeliveryId {
      */
     @JsonProperty("dockId")
     public String dockId;
+
     public DeliveryId withDockId(String dockId) {
         this.dockId = dockId;
         return this;
@@ -42,6 +45,7 @@ public class DeliveryId {
      */
     @JsonProperty("quantity")
     public Integer quantity;
+
     public DeliveryId withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -52,9 +56,17 @@ public class DeliveryId {
      */
     @JsonProperty("warehouseId")
     public String warehouseId;
+
     public DeliveryId withWarehouseId(String warehouseId) {
         this.warehouseId = warehouseId;
         return this;
     }
     
+    public DeliveryId(@JsonProperty("courierId") String courierId, @JsonProperty("courierName") String courierName, @JsonProperty("dockId") String dockId, @JsonProperty("quantity") Integer quantity, @JsonProperty("warehouseId") String warehouseId) {
+        this.courierId = courierId;
+        this.courierName = courierName;
+        this.dockId = dockId;
+        this.quantity = quantity;
+        this.warehouseId = warehouseId;
+  }
 }

@@ -12,6 +12,7 @@ public class StagedEmployeeCustomDateFields {
      */
     @JsonProperty("category")
     public StagedEmployeeCustomDateFieldsCategoryEnum category;
+
     public StagedEmployeeCustomDateFields withCategory(StagedEmployeeCustomDateFieldsCategoryEnum category) {
         this.category = category;
         return this;
@@ -22,6 +23,7 @@ public class StagedEmployeeCustomDateFields {
      */
     @JsonProperty("label")
     public String label;
+
     public StagedEmployeeCustomDateFields withLabel(String label) {
         this.label = label;
         return this;
@@ -32,9 +34,15 @@ public class StagedEmployeeCustomDateFields {
      */
     @JsonProperty("value")
     public String value;
+
     public StagedEmployeeCustomDateFields withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public StagedEmployeeCustomDateFields(@JsonProperty("category") StagedEmployeeCustomDateFieldsCategoryEnum category, @JsonProperty("label") String label, @JsonProperty("value") String value) {
+        this.category = category;
+        this.label = label;
+        this.value = value;
+  }
 }

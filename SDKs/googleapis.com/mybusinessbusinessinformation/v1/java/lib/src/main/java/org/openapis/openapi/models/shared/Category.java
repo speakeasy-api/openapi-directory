@@ -18,6 +18,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Category withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moreHoursTypes")
     public MoreHoursType[] moreHoursTypes;
+
     public Category withMoreHoursTypes(MoreHoursType[] moreHoursTypes) {
         this.moreHoursTypes = moreHoursTypes;
         return this;
@@ -40,6 +42,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Category withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceTypes")
     public ServiceType[] serviceTypes;
+
     public Category withServiceTypes(ServiceType[] serviceTypes) {
         this.serviceTypes = serviceTypes;
         return this;
     }
     
+    public Category(){}
 }

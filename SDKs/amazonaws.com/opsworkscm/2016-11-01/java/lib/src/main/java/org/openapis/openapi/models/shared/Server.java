@@ -20,6 +20,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociatePublicIpAddress")
     public Boolean associatePublicIpAddress;
+
     public Server withAssociatePublicIpAddress(Boolean associatePublicIpAddress) {
         this.associatePublicIpAddress = associatePublicIpAddress;
         return this;
@@ -28,6 +29,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupRetentionCount")
     public Long backupRetentionCount;
+
     public Server withBackupRetentionCount(Long backupRetentionCount) {
         this.backupRetentionCount = backupRetentionCount;
         return this;
@@ -36,6 +38,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudFormationStackArn")
     public String cloudFormationStackArn;
+
     public Server withCloudFormationStackArn(String cloudFormationStackArn) {
         this.cloudFormationStackArn = cloudFormationStackArn;
         return this;
@@ -46,6 +49,7 @@ public class Server {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public Server withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -54,6 +58,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomDomain")
     public String customDomain;
+
     public Server withCustomDomain(String customDomain) {
         this.customDomain = customDomain;
         return this;
@@ -62,6 +67,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisableAutomatedBackup")
     public Boolean disableAutomatedBackup;
+
     public Server withDisableAutomatedBackup(Boolean disableAutomatedBackup) {
         this.disableAutomatedBackup = disableAutomatedBackup;
         return this;
@@ -70,6 +76,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Endpoint")
     public String endpoint;
+
     public Server withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -78,6 +85,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Engine")
     public String engine;
+
     public Server withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -86,6 +94,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineAttributes")
     public EngineAttribute[] engineAttributes;
+
     public Server withEngineAttributes(EngineAttribute[] engineAttributes) {
         this.engineAttributes = engineAttributes;
         return this;
@@ -94,6 +103,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineModel")
     public String engineModel;
+
     public Server withEngineModel(String engineModel) {
         this.engineModel = engineModel;
         return this;
@@ -102,6 +112,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineVersion")
     public String engineVersion;
+
     public Server withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -110,6 +121,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceProfileArn")
     public String instanceProfileArn;
+
     public Server withInstanceProfileArn(String instanceProfileArn) {
         this.instanceProfileArn = instanceProfileArn;
         return this;
@@ -118,6 +130,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public Server withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -126,6 +139,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyPair")
     public String keyPair;
+
     public Server withKeyPair(String keyPair) {
         this.keyPair = keyPair;
         return this;
@@ -134,6 +148,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaintenanceStatus")
     public MaintenanceStatusEnum maintenanceStatus;
+
     public Server withMaintenanceStatus(MaintenanceStatusEnum maintenanceStatus) {
         this.maintenanceStatus = maintenanceStatus;
         return this;
@@ -142,6 +157,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreferredBackupWindow")
     public String preferredBackupWindow;
+
     public Server withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
@@ -150,6 +166,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreferredMaintenanceWindow")
     public String preferredMaintenanceWindow;
+
     public Server withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -158,6 +175,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public Server withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -166,6 +184,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerArn")
     public String serverArn;
+
     public Server withServerArn(String serverArn) {
         this.serverArn = serverArn;
         return this;
@@ -174,6 +193,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerName")
     public String serverName;
+
     public Server withServerName(String serverName) {
         this.serverName = serverName;
         return this;
@@ -182,6 +202,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceRoleArn")
     public String serviceRoleArn;
+
     public Server withServiceRoleArn(String serviceRoleArn) {
         this.serviceRoleArn = serviceRoleArn;
         return this;
@@ -190,6 +211,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ServerStatusEnum status;
+
     public Server withStatus(ServerStatusEnum status) {
         this.status = status;
         return this;
@@ -198,6 +220,7 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusReason")
     public String statusReason;
+
     public Server withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -206,9 +229,11 @@ public class Server {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public Server withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public Server(){}
 }

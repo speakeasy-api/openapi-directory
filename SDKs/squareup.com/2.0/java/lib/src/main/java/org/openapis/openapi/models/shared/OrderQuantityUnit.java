@@ -21,6 +21,7 @@ public class OrderQuantityUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_version")
     public Long catalogVersion;
+
     public OrderQuantityUnit withCatalogVersion(Long catalogVersion) {
         this.catalogVersion = catalogVersion;
         return this;
@@ -34,6 +35,7 @@ public class OrderQuantityUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurement_unit")
     public MeasurementUnit measurementUnit;
+
     public OrderQuantityUnit withMeasurementUnit(MeasurementUnit measurementUnit) {
         this.measurementUnit = measurementUnit;
         return this;
@@ -50,9 +52,11 @@ public class OrderQuantityUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precision")
     public Long precision;
+
     public OrderQuantityUnit withPrecision(Long precision) {
         this.precision = precision;
         return this;
     }
     
+    public OrderQuantityUnit(){}
 }

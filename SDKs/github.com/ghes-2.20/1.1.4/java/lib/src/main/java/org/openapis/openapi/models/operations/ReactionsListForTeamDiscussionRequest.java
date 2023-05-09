@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsListForTeamDiscussionRequest {
@@ -12,6 +13,7 @@ public class ReactionsListForTeamDiscussionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
     public String accept;
+
     public ReactionsListForTeamDiscussionRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ReactionsListForTeamDiscussionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content")
     public ReactionsListForTeamDiscussionContentEnum content;
+
     public ReactionsListForTeamDiscussionRequest withContent(ReactionsListForTeamDiscussionContentEnum content) {
         this.content = content;
         return this;
@@ -29,6 +32,7 @@ public class ReactionsListForTeamDiscussionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
     public Long discussionNumber;
+
     public ReactionsListForTeamDiscussionRequest withDiscussionNumber(Long discussionNumber) {
         this.discussionNumber = discussionNumber;
         return this;
@@ -39,6 +43,7 @@ public class ReactionsListForTeamDiscussionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ReactionsListForTeamDiscussionRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -49,6 +54,7 @@ public class ReactionsListForTeamDiscussionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ReactionsListForTeamDiscussionRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -56,9 +62,15 @@ public class ReactionsListForTeamDiscussionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
     public Long teamId;
+
     public ReactionsListForTeamDiscussionRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public ReactionsListForTeamDiscussionRequest(@JsonProperty("accept") String accept, @JsonProperty("discussion_number") Long discussionNumber, @JsonProperty("team_id") Long teamId) {
+        this.accept = accept;
+        this.discussionNumber = discussionNumber;
+        this.teamId = teamId;
+  }
 }

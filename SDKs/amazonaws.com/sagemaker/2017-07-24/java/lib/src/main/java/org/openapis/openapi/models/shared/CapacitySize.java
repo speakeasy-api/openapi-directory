@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CapacitySize {
     @JsonProperty("Type")
     public CapacitySizeTypeEnum type;
+
     public CapacitySize withType(CapacitySizeTypeEnum type) {
         this.type = type;
         return this;
@@ -19,9 +20,14 @@ public class CapacitySize {
     
     @JsonProperty("Value")
     public Long value;
+
     public CapacitySize withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public CapacitySize(@JsonProperty("Type") CapacitySizeTypeEnum type, @JsonProperty("Value") Long value) {
+        this.type = type;
+        this.value = value;
+  }
 }

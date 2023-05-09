@@ -18,6 +18,7 @@ public class DocumentInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public DocumentInputConfig withContent(String content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class DocumentInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsSource")
     public GcsSource gcsSource;
+
     public DocumentInputConfig withGcsSource(GcsSource gcsSource) {
         this.gcsSource = gcsSource;
         return this;
@@ -40,9 +42,11 @@ public class DocumentInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public DocumentInputConfig withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
     
+    public DocumentInputConfig(){}
 }

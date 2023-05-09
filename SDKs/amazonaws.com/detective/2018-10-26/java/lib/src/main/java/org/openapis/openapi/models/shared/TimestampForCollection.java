@@ -22,9 +22,11 @@ public class TimestampForCollection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Timestamp")
     public OffsetDateTime timestamp;
+
     public TimestampForCollection withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public TimestampForCollection(){}
 }

@@ -18,9 +18,11 @@ public class EdgeCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceLink")
     public String resourceLink;
+
     public EdgeCluster withResourceLink(String resourceLink) {
         this.resourceLink = resourceLink;
         return this;
     }
     
+    public EdgeCluster(){}
 }

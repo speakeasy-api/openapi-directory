@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class TransformInput3RequestBody {
     @SpeakeasyMetadata("form:name=json,json")
     public org.openapis.openapi.models.shared.SeldonMessage json;
+
     public TransformInput3RequestBody withJson(org.openapis.openapi.models.shared.SeldonMessage json) {
         this.json = json;
         return this;
     }
     
+    public TransformInput3RequestBody(){}
 }

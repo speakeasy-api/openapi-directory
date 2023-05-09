@@ -12,6 +12,7 @@ public class UntagResourceRequestBody {
      */
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public UntagResourceRequestBody withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
@@ -22,9 +23,14 @@ public class UntagResourceRequestBody {
      */
     @JsonProperty("TagKeys")
     public String[] tagKeys;
+
     public UntagResourceRequestBody withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
     }
     
+    public UntagResourceRequestBody(@JsonProperty("ResourceARN") String resourceARN, @JsonProperty("TagKeys") String[] tagKeys) {
+        this.resourceARN = resourceARN;
+        this.tagKeys = tagKeys;
+  }
 }

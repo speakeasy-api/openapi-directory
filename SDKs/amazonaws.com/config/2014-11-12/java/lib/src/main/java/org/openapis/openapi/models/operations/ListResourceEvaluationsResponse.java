@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResourceEvaluationsResponse {
     
     public String contentType;
+
     public ListResourceEvaluationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListResourceEvaluationsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListResourceEvaluationsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListResourceEvaluationsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListResourceEvaluationsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class ListResourceEvaluationsResponse {
      */
     
     public Object invalidTimeRangeException;
+
     public ListResourceEvaluationsResponse withInvalidTimeRangeException(Object invalidTimeRangeException) {
         this.invalidTimeRangeException = invalidTimeRangeException;
         return this;
@@ -49,6 +54,7 @@ public class ListResourceEvaluationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResourceEvaluationsResponse listResourceEvaluationsResponse;
+
     public ListResourceEvaluationsResponse withListResourceEvaluationsResponse(org.openapis.openapi.models.shared.ListResourceEvaluationsResponse listResourceEvaluationsResponse) {
         this.listResourceEvaluationsResponse = listResourceEvaluationsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListResourceEvaluationsResponse {
     
     
     public Integer statusCode;
+
     public ListResourceEvaluationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListResourceEvaluationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResourceEvaluationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListResourceEvaluationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

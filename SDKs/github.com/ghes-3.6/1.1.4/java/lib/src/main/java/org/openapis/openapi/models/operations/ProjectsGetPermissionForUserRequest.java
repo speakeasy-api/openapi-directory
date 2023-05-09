@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsGetPermissionForUserRequest {
@@ -12,6 +13,7 @@ public class ProjectsGetPermissionForUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public Long projectId;
+
     public ProjectsGetPermissionForUserRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
@@ -22,9 +24,14 @@ public class ProjectsGetPermissionForUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public ProjectsGetPermissionForUserRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public ProjectsGetPermissionForUserRequest(@JsonProperty("project_id") Long projectId, @JsonProperty("username") String username) {
+        this.projectId = projectId;
+        this.username = username;
+  }
 }

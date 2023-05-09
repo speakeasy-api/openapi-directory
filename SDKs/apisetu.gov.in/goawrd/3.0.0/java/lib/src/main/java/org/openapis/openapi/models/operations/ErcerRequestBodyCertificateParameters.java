@@ -12,6 +12,7 @@ public class ErcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public ErcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,9 +23,14 @@ public class ErcerRequestBodyCertificateParameters {
      */
     @JsonProperty("Registration")
     public String registration;
+
     public ErcerRequestBodyCertificateParameters withRegistration(String registration) {
         this.registration = registration;
         return this;
     }
     
+    public ErcerRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("Registration") String registration) {
+        this.fullName = fullName;
+        this.registration = registration;
+  }
 }

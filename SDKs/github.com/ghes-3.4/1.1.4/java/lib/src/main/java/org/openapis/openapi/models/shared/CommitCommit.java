@@ -14,6 +14,7 @@ public class CommitCommit {
      */
     @JsonProperty("author")
     public NullableGitUser author;
+
     public CommitCommit withAuthor(NullableGitUser author) {
         this.author = author;
         return this;
@@ -21,6 +22,7 @@ public class CommitCommit {
     
     @JsonProperty("comment_count")
     public Long commentCount;
+
     public CommitCommit withCommentCount(Long commentCount) {
         this.commentCount = commentCount;
         return this;
@@ -31,6 +33,7 @@ public class CommitCommit {
      */
     @JsonProperty("committer")
     public NullableGitUser committer;
+
     public CommitCommit withCommitter(NullableGitUser committer) {
         this.committer = committer;
         return this;
@@ -38,6 +41,7 @@ public class CommitCommit {
     
     @JsonProperty("message")
     public String message;
+
     public CommitCommit withMessage(String message) {
         this.message = message;
         return this;
@@ -45,6 +49,7 @@ public class CommitCommit {
     
     @JsonProperty("tree")
     public CommitCommitTree tree;
+
     public CommitCommit withTree(CommitCommitTree tree) {
         this.tree = tree;
         return this;
@@ -52,6 +57,7 @@ public class CommitCommit {
     
     @JsonProperty("url")
     public String url;
+
     public CommitCommit withUrl(String url) {
         this.url = url;
         return this;
@@ -60,9 +66,18 @@ public class CommitCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verification")
     public Verification verification;
+
     public CommitCommit withVerification(Verification verification) {
         this.verification = verification;
         return this;
     }
     
+    public CommitCommit(@JsonProperty("author") NullableGitUser author, @JsonProperty("comment_count") Long commentCount, @JsonProperty("committer") NullableGitUser committer, @JsonProperty("message") String message, @JsonProperty("tree") CommitCommitTree tree, @JsonProperty("url") String url) {
+        this.author = author;
+        this.commentCount = commentCount;
+        this.committer = committer;
+        this.message = message;
+        this.tree = tree;
+        this.url = url;
+  }
 }

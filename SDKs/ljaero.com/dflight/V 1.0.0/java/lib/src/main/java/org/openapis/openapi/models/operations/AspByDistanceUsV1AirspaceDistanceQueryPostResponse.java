@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AspByDistanceUsV1AirspaceDistanceQueryPostResponse {
@@ -12,6 +13,7 @@ public class AspByDistanceUsV1AirspaceDistanceQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.AirspaceDistanceResponse airspaceDistanceResponse;
+
     public AspByDistanceUsV1AirspaceDistanceQueryPostResponse withAirspaceDistanceResponse(org.openapis.openapi.models.shared.AirspaceDistanceResponse airspaceDistanceResponse) {
         this.airspaceDistanceResponse = airspaceDistanceResponse;
         return this;
@@ -19,6 +21,7 @@ public class AspByDistanceUsV1AirspaceDistanceQueryPostResponse {
     
     
     public String contentType;
+
     public AspByDistanceUsV1AirspaceDistanceQueryPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AspByDistanceUsV1AirspaceDistanceQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public AspByDistanceUsV1AirspaceDistanceQueryPostResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -36,6 +40,7 @@ public class AspByDistanceUsV1AirspaceDistanceQueryPostResponse {
     
     
     public Integer statusCode;
+
     public AspByDistanceUsV1AirspaceDistanceQueryPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AspByDistanceUsV1AirspaceDistanceQueryPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AspByDistanceUsV1AirspaceDistanceQueryPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AspByDistanceUsV1AirspaceDistanceQueryPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

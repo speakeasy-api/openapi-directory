@@ -15,6 +15,7 @@ public class UpdateFormRequestBodyUpdatedForm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cta")
     public org.openapis.openapi.models.shared.FormCTA cta;
+
     public UpdateFormRequestBodyUpdatedForm withCta(org.openapis.openapi.models.shared.FormCTA cta) {
         this.cta = cta;
         return this;
@@ -23,6 +24,7 @@ public class UpdateFormRequestBodyUpdatedForm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public org.openapis.openapi.models.shared.FormDataTypeConfig dataType;
+
     public UpdateFormRequestBodyUpdatedForm withDataType(org.openapis.openapi.models.shared.FormDataTypeConfig dataType) {
         this.dataType = dataType;
         return this;
@@ -31,6 +33,7 @@ public class UpdateFormRequestBodyUpdatedForm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public java.util.Map<String, org.openapis.openapi.models.shared.FieldConfig> fields;
+
     public UpdateFormRequestBodyUpdatedForm withFields(java.util.Map<String, org.openapis.openapi.models.shared.FieldConfig> fields) {
         this.fields = fields;
         return this;
@@ -39,14 +42,25 @@ public class UpdateFormRequestBodyUpdatedForm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formActionType")
     public org.openapis.openapi.models.shared.FormActionTypeEnum formActionType;
+
     public UpdateFormRequestBodyUpdatedForm withFormActionType(org.openapis.openapi.models.shared.FormActionTypeEnum formActionType) {
         this.formActionType = formActionType;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("labelDecorator")
+    public org.openapis.openapi.models.shared.LabelDecoratorEnum labelDecorator;
+
+    public UpdateFormRequestBodyUpdatedForm withLabelDecorator(org.openapis.openapi.models.shared.LabelDecoratorEnum labelDecorator) {
+        this.labelDecorator = labelDecorator;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateFormRequestBodyUpdatedForm withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +69,7 @@ public class UpdateFormRequestBodyUpdatedForm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaVersion")
     public String schemaVersion;
+
     public UpdateFormRequestBodyUpdatedForm withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
@@ -63,6 +78,7 @@ public class UpdateFormRequestBodyUpdatedForm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sectionalElements")
     public java.util.Map<String, org.openapis.openapi.models.shared.SectionalElement> sectionalElements;
+
     public UpdateFormRequestBodyUpdatedForm withSectionalElements(java.util.Map<String, org.openapis.openapi.models.shared.SectionalElement> sectionalElements) {
         this.sectionalElements = sectionalElements;
         return this;
@@ -71,9 +87,11 @@ public class UpdateFormRequestBodyUpdatedForm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("style")
     public org.openapis.openapi.models.shared.FormStyle style;
+
     public UpdateFormRequestBodyUpdatedForm withStyle(org.openapis.openapi.models.shared.FormStyle style) {
         this.style = style;
         return this;
     }
     
+    public UpdateFormRequestBodyUpdatedForm(){}
 }

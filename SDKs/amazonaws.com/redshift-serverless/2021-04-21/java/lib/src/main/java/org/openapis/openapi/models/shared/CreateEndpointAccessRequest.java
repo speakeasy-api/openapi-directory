@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateEndpointAccessRequest {
     @JsonProperty("endpointName")
     public String endpointName;
+
     public CreateEndpointAccessRequest withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -18,6 +19,7 @@ public class CreateEndpointAccessRequest {
     
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public CreateEndpointAccessRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -26,6 +28,7 @@ public class CreateEndpointAccessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcSecurityGroupIds")
     public String[] vpcSecurityGroupIds;
+
     public CreateEndpointAccessRequest withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
@@ -33,9 +36,15 @@ public class CreateEndpointAccessRequest {
     
     @JsonProperty("workgroupName")
     public String workgroupName;
+
     public CreateEndpointAccessRequest withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public CreateEndpointAccessRequest(@JsonProperty("endpointName") String endpointName, @JsonProperty("subnetIds") String[] subnetIds, @JsonProperty("workgroupName") String workgroupName) {
+        this.endpointName = endpointName;
+        this.subnetIds = subnetIds;
+        this.workgroupName = workgroupName;
+  }
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListStackSetsInput {
     
     public CallAsEnum callAs;
+
     public ListStackSetsInput withCallAs(CallAsEnum callAs) {
         this.callAs = callAs;
         return this;
@@ -16,6 +17,7 @@ public class ListStackSetsInput {
     
     
     public Long maxResults;
+
     public ListStackSetsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -23,6 +25,7 @@ public class ListStackSetsInput {
     
     
     public String nextToken;
+
     public ListStackSetsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,9 +33,11 @@ public class ListStackSetsInput {
     
     
     public StackSetStatusEnum status;
+
     public ListStackSetsInput withStatus(StackSetStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ListStackSetsInput(){}
 }

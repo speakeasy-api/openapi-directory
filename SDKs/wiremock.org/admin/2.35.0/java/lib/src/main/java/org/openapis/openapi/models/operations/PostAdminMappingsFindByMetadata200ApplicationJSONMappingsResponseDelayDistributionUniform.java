@@ -15,6 +15,7 @@ public class PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lower")
     public Long lower;
+
     public PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionUniform withLower(Long lower) {
         this.lower = lower;
         return this;
@@ -23,6 +24,7 @@ public class PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum type;
+
     public PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionUniform withType(PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum type) {
         this.type = type;
         return this;
@@ -31,9 +33,11 @@ public class PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upper")
     public Long upper;
+
     public PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionUniform withUpper(Long upper) {
         this.upper = upper;
         return this;
     }
     
+    public PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionUniform(){}
 }

@@ -15,6 +15,7 @@ public class Promoter {
      */
     
     public String description;
+
     public Promoter withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class Promoter {
      */
     
     public String id;
+
     public Promoter withId(String id) {
         this.id = id;
         return this;
@@ -35,9 +37,11 @@ public class Promoter {
      */
     
     public String name;
+
     public Promoter withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Promoter(){}
 }

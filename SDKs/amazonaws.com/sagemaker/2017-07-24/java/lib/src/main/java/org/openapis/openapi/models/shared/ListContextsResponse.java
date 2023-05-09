@@ -15,6 +15,7 @@ public class ListContextsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContextSummaries")
     public ContextSummary[] contextSummaries;
+
     public ListContextsResponse withContextSummaries(ContextSummary[] contextSummaries) {
         this.contextSummaries = contextSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListContextsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListContextsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListContextsResponse(){}
 }

@@ -15,6 +15,7 @@ public class GetVehicles200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GetVehicles200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -23,6 +24,7 @@ public class GetVehicles200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ok")
     public Boolean ok;
+
     public GetVehicles200ApplicationJSON withOk(Boolean ok) {
         this.ok = ok;
         return this;
@@ -31,9 +33,11 @@ public class GetVehicles200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public Object[] result;
+
     public GetVehicles200ApplicationJSON withResult(Object[] result) {
         this.result = result;
         return this;
     }
     
+    public GetVehicles200ApplicationJSON(){}
 }

@@ -15,9 +15,11 @@ public class ReposUpdateInvitationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public ReposUpdateInvitationRequestBodyPermissionsEnum permissions;
+
     public ReposUpdateInvitationRequestBody withPermissions(ReposUpdateInvitationRequestBodyPermissionsEnum permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public ReposUpdateInvitationRequestBody(){}
 }

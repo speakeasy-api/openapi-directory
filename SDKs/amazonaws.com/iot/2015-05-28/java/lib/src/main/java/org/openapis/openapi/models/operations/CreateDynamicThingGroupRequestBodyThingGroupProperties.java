@@ -15,6 +15,7 @@ public class CreateDynamicThingGroupRequestBodyThingGroupProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributePayload")
     public org.openapis.openapi.models.shared.AttributePayload attributePayload;
+
     public CreateDynamicThingGroupRequestBodyThingGroupProperties withAttributePayload(org.openapis.openapi.models.shared.AttributePayload attributePayload) {
         this.attributePayload = attributePayload;
         return this;
@@ -23,9 +24,11 @@ public class CreateDynamicThingGroupRequestBodyThingGroupProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingGroupDescription")
     public String thingGroupDescription;
+
     public CreateDynamicThingGroupRequestBodyThingGroupProperties withThingGroupDescription(String thingGroupDescription) {
         this.thingGroupDescription = thingGroupDescription;
         return this;
     }
     
+    public CreateDynamicThingGroupRequestBodyThingGroupProperties(){}
 }

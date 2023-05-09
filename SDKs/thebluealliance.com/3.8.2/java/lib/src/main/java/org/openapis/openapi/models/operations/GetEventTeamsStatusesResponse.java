@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEventTeamsStatusesResponse {
     
     public String contentType;
+
     public GetEventTeamsStatusesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetEventTeamsStatusesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetEventTeamsStatusesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetEventTeamsStatusesResponse {
     
     
     public Integer statusCode;
+
     public GetEventTeamsStatusesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetEventTeamsStatusesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEventTeamsStatusesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetEventTeamsStatusesResponse {
      */
     
     public java.util.Map<String, org.openapis.openapi.models.shared.TeamEventStatus> getEventTeamsStatuses200ApplicationJSONObject;
+
     public GetEventTeamsStatusesResponse withGetEventTeamsStatuses200ApplicationJSONObject(java.util.Map<String, org.openapis.openapi.models.shared.TeamEventStatus> getEventTeamsStatuses200ApplicationJSONObject) {
         this.getEventTeamsStatuses200ApplicationJSONObject = getEventTeamsStatuses200ApplicationJSONObject;
         return this;
     }
     
+    public GetEventTeamsStatusesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

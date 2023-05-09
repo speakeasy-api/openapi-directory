@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsS3 {
     
     public String bucketName;
+
     public DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsS3 withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingCon
     
     
     public String bucketOwner;
+
     public DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsS3 withBucketOwner(String bucketOwner) {
         this.bucketOwner = bucketOwner;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingCon
     
     
     public DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsS3DeliveryStatus deliveryStatus;
+
     public DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsS3 withDeliveryStatus(DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsS3DeliveryStatus deliveryStatus) {
         this.deliveryStatus = deliveryStatus;
         return this;
@@ -33,6 +36,7 @@ public class DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingCon
     
     
     public Boolean enabled;
+
     public DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsS3 withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -40,9 +44,11 @@ public class DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingCon
     
     
     public String prefix;
+
     public DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsS3 withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsS3(){}
 }

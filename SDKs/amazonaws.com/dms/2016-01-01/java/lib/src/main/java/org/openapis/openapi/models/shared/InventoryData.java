@@ -15,6 +15,7 @@ public class InventoryData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfDatabases")
     public Long numberOfDatabases;
+
     public InventoryData withNumberOfDatabases(Long numberOfDatabases) {
         this.numberOfDatabases = numberOfDatabases;
         return this;
@@ -23,9 +24,11 @@ public class InventoryData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfSchemas")
     public Long numberOfSchemas;
+
     public InventoryData withNumberOfSchemas(Long numberOfSchemas) {
         this.numberOfSchemas = numberOfSchemas;
         return this;
     }
     
+    public InventoryData(){}
 }

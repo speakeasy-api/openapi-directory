@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDevEndpointResponse {
     
     public String contentType;
+
     public UpdateDevEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDevEndpointResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateDevEndpointResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDevEndpointResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateDevEndpointResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDevEndpointResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateDevEndpointResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDevEndpointResponse {
      */
     
     public Object operationTimeoutException;
+
     public UpdateDevEndpointResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateDevEndpointResponse {
     
     
     public Integer statusCode;
+
     public UpdateDevEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDevEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDevEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDevEndpointResponse {
      */
     
     public java.util.Map<String, Object> updateDevEndpointResponse;
+
     public UpdateDevEndpointResponse withUpdateDevEndpointResponse(java.util.Map<String, Object> updateDevEndpointResponse) {
         this.updateDevEndpointResponse = updateDevEndpointResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateDevEndpointResponse {
      */
     
     public Object validationException;
+
     public UpdateDevEndpointResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateDevEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

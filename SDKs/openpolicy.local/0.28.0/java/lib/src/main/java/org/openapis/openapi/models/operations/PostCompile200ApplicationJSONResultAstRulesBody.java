@@ -15,6 +15,7 @@ public class PostCompile200ApplicationJSONResultAstRulesBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Double index;
+
     public PostCompile200ApplicationJSONResultAstRulesBody withIndex(Double index) {
         this.index = index;
         return this;
@@ -26,9 +27,11 @@ public class PostCompile200ApplicationJSONResultAstRulesBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terms")
     public PostCompile200ApplicationJSONResultAstRulesBodyTerms[] terms;
+
     public PostCompile200ApplicationJSONResultAstRulesBody withTerms(PostCompile200ApplicationJSONResultAstRulesBodyTerms[] terms) {
         this.terms = terms;
         return this;
     }
     
+    public PostCompile200ApplicationJSONResultAstRulesBody(){}
 }

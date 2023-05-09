@@ -11,13 +11,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * 
  */
 public enum SearchUniquePodcastsEnum {
-    ZERO("0"),
-    ONE("1");
+    ZERO(0L),
+    ONE(1L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private SearchUniquePodcastsEnum(String value) {
+    private SearchUniquePodcastsEnum(Long value) {
         this.value = value;
     }
 }

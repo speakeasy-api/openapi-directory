@@ -12,6 +12,7 @@ public class ListWorkforcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListWorkforcesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListWorkforcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameContains")
     public String nameContains;
+
     public ListWorkforcesRequest withNameContains(String nameContains) {
         this.nameContains = nameContains;
         return this;
@@ -28,6 +30,7 @@ public class ListWorkforcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListWorkforcesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class ListWorkforcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public ListWorkforcesSortByOptionsEnum sortBy;
+
     public ListWorkforcesRequest withSortBy(ListWorkforcesSortByOptionsEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -44,9 +48,11 @@ public class ListWorkforcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListWorkforcesRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListWorkforcesRequest(){}
 }

@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.ActionHelpRequest;
 import org.openapis.openapi.models.operations.ActionHelpResponse;
 
@@ -26,19 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ActionHelpRequest req = new ActionHelpRequest() {{
-                actionId = "corrupti";
-                serviceId = "provident";
-            }}            
+            ActionHelpRequest req = new ActionHelpRequest("corrupti", "provident");            
 
             ActionHelpResponse res = sdk.osdb.actionHelp(req);
 
-            if (res.actionHelpResponse.isPresent()) {
+            if (res.actionHelpResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -46,18 +44,18 @@ public class Application {
 ## Available Resources and Operations
 
 
-### osdb
+### [osdb](docs/osdb/README.md)
 
-* `actionHelp` - Action help
-* `describeAction` - Describe action
-* `describeService` - Describe service
-* `executeAction` - Execute action
-* `listActions` - List actions
-* `listServices` - List services
-* `loadService` - Load service
-* `login` - Login
-* `logout` - Logout
-* `unloadService` - Unload service
+* [actionHelp](docs/osdb/README.md#actionhelp) - Action help
+* [describeAction](docs/osdb/README.md#describeaction) - Describe action
+* [describeService](docs/osdb/README.md#describeservice) - Describe service
+* [executeAction](docs/osdb/README.md#executeaction) - Execute action
+* [listActions](docs/osdb/README.md#listactions) - List actions
+* [listServices](docs/osdb/README.md#listservices) - List services
+* [loadService](docs/osdb/README.md#loadservice) - Load service
+* [login](docs/osdb/README.md#login) - Login
+* [logout](docs/osdb/README.md#logout) - Logout
+* [unloadService](docs/osdb/README.md#unloadservice) - Unload service
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -15,6 +15,7 @@ public class GoogleCloudServicebrokerV1beta1ListBrokersResponse {
      */
     
     public GoogleCloudServicebrokerV1beta1Broker[] brokers;
+
     public GoogleCloudServicebrokerV1beta1ListBrokersResponse withBrokers(GoogleCloudServicebrokerV1beta1Broker[] brokers) {
         this.brokers = brokers;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudServicebrokerV1beta1ListBrokersResponse {
      */
     
     public String nextPageToken;
+
     public GoogleCloudServicebrokerV1beta1ListBrokersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudServicebrokerV1beta1ListBrokersResponse(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListImagesInRecycleBinResult {
     
     public ListImagesInRecycleBinResultImages[] images;
+
     public ListImagesInRecycleBinResult withImages(ListImagesInRecycleBinResultImages[] images) {
         this.images = images;
         return this;
@@ -19,9 +20,11 @@ public class ListImagesInRecycleBinResult {
     
     
     public String nextToken;
+
     public ListImagesInRecycleBinResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListImagesInRecycleBinResult(){}
 }

@@ -60,11 +60,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileResponse res = new org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileResponse() {{
+        org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileResponse res = new org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileResponse(contentType, httpRes.statusCode()) {{
             loginProfile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OsloginUsersImportSshPublicKeyResponse res = new org.openapis.openapi.models.operations.OsloginUsersImportSshPublicKeyResponse() {{
+        org.openapis.openapi.models.operations.OsloginUsersImportSshPublicKeyResponse res = new org.openapis.openapi.models.operations.OsloginUsersImportSshPublicKeyResponse(contentType, httpRes.statusCode()) {{
             importSshPublicKeyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysCreateResponse res = new org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysCreateResponse() {{
+        org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysCreateResponse res = new org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysCreateResponse(contentType, httpRes.statusCode()) {{
             sshPublicKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysDeleteResponse res = new org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysDeleteResponse() {{
+        org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysDeleteResponse res = new org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysGetResponse res = new org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysGetResponse() {{
+        org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysGetResponse res = new org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysGetResponse(contentType, httpRes.statusCode()) {{
             sshPublicKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysPatchResponse res = new org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysPatchResponse() {{
+        org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysPatchResponse res = new org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysPatchResponse(contentType, httpRes.statusCode()) {{
             sshPublicKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

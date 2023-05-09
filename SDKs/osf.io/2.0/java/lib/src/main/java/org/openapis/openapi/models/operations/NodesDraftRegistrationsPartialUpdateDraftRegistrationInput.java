@@ -12,9 +12,13 @@ public class NodesDraftRegistrationsPartialUpdateDraftRegistrationInput {
      */
     @JsonProperty("attributes")
     public NodesDraftRegistrationsPartialUpdateDraftRegistrationAttributesInput attributes;
+
     public NodesDraftRegistrationsPartialUpdateDraftRegistrationInput withAttributes(NodesDraftRegistrationsPartialUpdateDraftRegistrationAttributesInput attributes) {
         this.attributes = attributes;
         return this;
     }
     
+    public NodesDraftRegistrationsPartialUpdateDraftRegistrationInput(@JsonProperty("attributes") NodesDraftRegistrationsPartialUpdateDraftRegistrationAttributesInput attributes) {
+        this.attributes = attributes;
+  }
 }

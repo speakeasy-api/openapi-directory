@@ -15,6 +15,7 @@ public class BotRecommendationResultStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intents")
     public IntentStatistics intents;
+
     public BotRecommendationResultStatistics withIntents(IntentStatistics intents) {
         this.intents = intents;
         return this;
@@ -23,9 +24,11 @@ public class BotRecommendationResultStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotTypes")
     public SlotTypeStatistics slotTypes;
+
     public BotRecommendationResultStatistics withSlotTypes(SlotTypeStatistics slotTypes) {
         this.slotTypes = slotTypes;
         return this;
     }
     
+    public BotRecommendationResultStatistics(){}
 }

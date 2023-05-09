@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteInstitutionsIdRequest {
@@ -12,6 +13,7 @@ public class DeleteInstitutionsIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public DeleteInstitutionsIdRequest withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +24,13 @@ public class DeleteInstitutionsIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=merge_into_institution_id")
     public Long mergeIntoInstitutionId;
+
     public DeleteInstitutionsIdRequest withMergeIntoInstitutionId(Long mergeIntoInstitutionId) {
         this.mergeIntoInstitutionId = mergeIntoInstitutionId;
         return this;
     }
     
+    public DeleteInstitutionsIdRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateFlowDefinitionRequest {
     @JsonProperty("FlowDefinitionName")
     public String flowDefinitionName;
+
     public CreateFlowDefinitionRequest withFlowDefinitionName(String flowDefinitionName) {
         this.flowDefinitionName = flowDefinitionName;
         return this;
@@ -19,6 +20,7 @@ public class CreateFlowDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HumanLoopActivationConfig")
     public HumanLoopActivationConfig humanLoopActivationConfig;
+
     public CreateFlowDefinitionRequest withHumanLoopActivationConfig(HumanLoopActivationConfig humanLoopActivationConfig) {
         this.humanLoopActivationConfig = humanLoopActivationConfig;
         return this;
@@ -26,6 +28,7 @@ public class CreateFlowDefinitionRequest {
     
     @JsonProperty("HumanLoopConfig")
     public HumanLoopConfig humanLoopConfig;
+
     public CreateFlowDefinitionRequest withHumanLoopConfig(HumanLoopConfig humanLoopConfig) {
         this.humanLoopConfig = humanLoopConfig;
         return this;
@@ -34,6 +37,7 @@ public class CreateFlowDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HumanLoopRequestSource")
     public HumanLoopRequestSource humanLoopRequestSource;
+
     public CreateFlowDefinitionRequest withHumanLoopRequestSource(HumanLoopRequestSource humanLoopRequestSource) {
         this.humanLoopRequestSource = humanLoopRequestSource;
         return this;
@@ -41,6 +45,7 @@ public class CreateFlowDefinitionRequest {
     
     @JsonProperty("OutputConfig")
     public FlowDefinitionOutputConfig outputConfig;
+
     public CreateFlowDefinitionRequest withOutputConfig(FlowDefinitionOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -48,6 +53,7 @@ public class CreateFlowDefinitionRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateFlowDefinitionRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -56,9 +62,16 @@ public class CreateFlowDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateFlowDefinitionRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateFlowDefinitionRequest(@JsonProperty("FlowDefinitionName") String flowDefinitionName, @JsonProperty("HumanLoopConfig") HumanLoopConfig humanLoopConfig, @JsonProperty("OutputConfig") FlowDefinitionOutputConfig outputConfig, @JsonProperty("RoleArn") String roleArn) {
+        this.flowDefinitionName = flowDefinitionName;
+        this.humanLoopConfig = humanLoopConfig;
+        this.outputConfig = outputConfig;
+        this.roleArn = roleArn;
+  }
 }

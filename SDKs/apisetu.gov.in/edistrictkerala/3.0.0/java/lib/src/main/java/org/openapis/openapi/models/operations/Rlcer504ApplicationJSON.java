@@ -15,6 +15,7 @@ public class Rlcer504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Rlcer504ApplicationJSONErrorEnum error;
+
     public Rlcer504ApplicationJSON withError(Rlcer504ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Rlcer504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Rlcer504ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Rlcer504ApplicationJSON withErrorDescription(Rlcer504ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Rlcer504ApplicationJSON(){}
 }

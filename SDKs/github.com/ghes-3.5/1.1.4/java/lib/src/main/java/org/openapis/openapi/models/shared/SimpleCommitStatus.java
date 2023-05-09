@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class SimpleCommitStatus {
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public SimpleCommitStatus withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -23,6 +24,7 @@ public class SimpleCommitStatus {
     
     @JsonProperty("context")
     public String context;
+
     public SimpleCommitStatus withContext(String context) {
         this.context = context;
         return this;
@@ -32,6 +34,7 @@ public class SimpleCommitStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public SimpleCommitStatus withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -39,6 +42,7 @@ public class SimpleCommitStatus {
     
     @JsonProperty("description")
     public String description;
+
     public SimpleCommitStatus withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +50,7 @@ public class SimpleCommitStatus {
     
     @JsonProperty("id")
     public Long id;
+
     public SimpleCommitStatus withId(Long id) {
         this.id = id;
         return this;
@@ -53,6 +58,7 @@ public class SimpleCommitStatus {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public SimpleCommitStatus withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -61,6 +67,7 @@ public class SimpleCommitStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public SimpleCommitStatus withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -68,6 +75,7 @@ public class SimpleCommitStatus {
     
     @JsonProperty("state")
     public String state;
+
     public SimpleCommitStatus withState(String state) {
         this.state = state;
         return this;
@@ -75,6 +83,7 @@ public class SimpleCommitStatus {
     
     @JsonProperty("target_url")
     public String targetUrl;
+
     public SimpleCommitStatus withTargetUrl(String targetUrl) {
         this.targetUrl = targetUrl;
         return this;
@@ -84,6 +93,7 @@ public class SimpleCommitStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public SimpleCommitStatus withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -91,9 +101,22 @@ public class SimpleCommitStatus {
     
     @JsonProperty("url")
     public String url;
+
     public SimpleCommitStatus withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public SimpleCommitStatus(@JsonProperty("avatar_url") String avatarUrl, @JsonProperty("context") String context, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("description") String description, @JsonProperty("id") Long id, @JsonProperty("node_id") String nodeId, @JsonProperty("state") String state, @JsonProperty("target_url") String targetUrl, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
+        this.avatarUrl = avatarUrl;
+        this.context = context;
+        this.createdAt = createdAt;
+        this.description = description;
+        this.id = id;
+        this.nodeId = nodeId;
+        this.state = state;
+        this.targetUrl = targetUrl;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

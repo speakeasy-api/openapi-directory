@@ -12,6 +12,7 @@ public class CreateIdentityProviderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeMapping")
     public java.util.Map<String, String> attributeMapping;
+
     public CreateIdentityProviderRequest withAttributeMapping(java.util.Map<String, String> attributeMapping) {
         this.attributeMapping = attributeMapping;
         return this;
@@ -20,6 +21,7 @@ public class CreateIdentityProviderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdpIdentifiers")
     public String[] idpIdentifiers;
+
     public CreateIdentityProviderRequest withIdpIdentifiers(String[] idpIdentifiers) {
         this.idpIdentifiers = idpIdentifiers;
         return this;
@@ -27,6 +29,7 @@ public class CreateIdentityProviderRequest {
     
     @JsonProperty("ProviderDetails")
     public java.util.Map<String, String> providerDetails;
+
     public CreateIdentityProviderRequest withProviderDetails(java.util.Map<String, String> providerDetails) {
         this.providerDetails = providerDetails;
         return this;
@@ -34,6 +37,7 @@ public class CreateIdentityProviderRequest {
     
     @JsonProperty("ProviderName")
     public String providerName;
+
     public CreateIdentityProviderRequest withProviderName(String providerName) {
         this.providerName = providerName;
         return this;
@@ -41,6 +45,7 @@ public class CreateIdentityProviderRequest {
     
     @JsonProperty("ProviderType")
     public IdentityProviderTypeTypeEnum providerType;
+
     public CreateIdentityProviderRequest withProviderType(IdentityProviderTypeTypeEnum providerType) {
         this.providerType = providerType;
         return this;
@@ -48,9 +53,16 @@ public class CreateIdentityProviderRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public CreateIdentityProviderRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public CreateIdentityProviderRequest(@JsonProperty("ProviderDetails") java.util.Map<String, String> providerDetails, @JsonProperty("ProviderName") String providerName, @JsonProperty("ProviderType") IdentityProviderTypeTypeEnum providerType, @JsonProperty("UserPoolId") String userPoolId) {
+        this.providerDetails = providerDetails;
+        this.providerName = providerName;
+        this.providerType = providerType;
+        this.userPoolId = userPoolId;
+  }
 }

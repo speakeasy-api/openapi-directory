@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnterpriseOrganizationOverview {
     @JsonProperty("disabled_orgs")
     public Long disabledOrgs;
+
     public EnterpriseOrganizationOverview withDisabledOrgs(Long disabledOrgs) {
         this.disabledOrgs = disabledOrgs;
         return this;
@@ -19,6 +20,7 @@ public class EnterpriseOrganizationOverview {
     
     @JsonProperty("total_orgs")
     public Long totalOrgs;
+
     public EnterpriseOrganizationOverview withTotalOrgs(Long totalOrgs) {
         this.totalOrgs = totalOrgs;
         return this;
@@ -26,6 +28,7 @@ public class EnterpriseOrganizationOverview {
     
     @JsonProperty("total_team_members")
     public Long totalTeamMembers;
+
     public EnterpriseOrganizationOverview withTotalTeamMembers(Long totalTeamMembers) {
         this.totalTeamMembers = totalTeamMembers;
         return this;
@@ -33,9 +36,16 @@ public class EnterpriseOrganizationOverview {
     
     @JsonProperty("total_teams")
     public Long totalTeams;
+
     public EnterpriseOrganizationOverview withTotalTeams(Long totalTeams) {
         this.totalTeams = totalTeams;
         return this;
     }
     
+    public EnterpriseOrganizationOverview(@JsonProperty("disabled_orgs") Long disabledOrgs, @JsonProperty("total_orgs") Long totalOrgs, @JsonProperty("total_team_members") Long totalTeamMembers, @JsonProperty("total_teams") Long totalTeams) {
+        this.disabledOrgs = disabledOrgs;
+        this.totalOrgs = totalOrgs;
+        this.totalTeamMembers = totalTeamMembers;
+        this.totalTeams = totalTeams;
+  }
 }

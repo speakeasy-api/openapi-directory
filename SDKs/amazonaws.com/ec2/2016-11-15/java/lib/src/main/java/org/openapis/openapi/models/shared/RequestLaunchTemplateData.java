@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestLaunchTemplateData {
     
     public RequestLaunchTemplateDataBlockDeviceMappings[] blockDeviceMappings;
+
     public RequestLaunchTemplateData withBlockDeviceMappings(RequestLaunchTemplateDataBlockDeviceMappings[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -19,6 +20,7 @@ public class RequestLaunchTemplateData {
     
     
     public LaunchTemplateCapacityReservationSpecificationRequest capacityReservationSpecification;
+
     public RequestLaunchTemplateData withCapacityReservationSpecification(LaunchTemplateCapacityReservationSpecificationRequest capacityReservationSpecification) {
         this.capacityReservationSpecification = capacityReservationSpecification;
         return this;
@@ -26,6 +28,7 @@ public class RequestLaunchTemplateData {
     
     
     public LaunchTemplateCpuOptionsRequest cpuOptions;
+
     public RequestLaunchTemplateData withCpuOptions(LaunchTemplateCpuOptionsRequest cpuOptions) {
         this.cpuOptions = cpuOptions;
         return this;
@@ -33,6 +36,7 @@ public class RequestLaunchTemplateData {
     
     
     public CreditSpecificationRequest creditSpecification;
+
     public RequestLaunchTemplateData withCreditSpecification(CreditSpecificationRequest creditSpecification) {
         this.creditSpecification = creditSpecification;
         return this;
@@ -40,6 +44,7 @@ public class RequestLaunchTemplateData {
     
     
     public Boolean disableApiStop;
+
     public RequestLaunchTemplateData withDisableApiStop(Boolean disableApiStop) {
         this.disableApiStop = disableApiStop;
         return this;
@@ -47,6 +52,7 @@ public class RequestLaunchTemplateData {
     
     
     public Boolean disableApiTermination;
+
     public RequestLaunchTemplateData withDisableApiTermination(Boolean disableApiTermination) {
         this.disableApiTermination = disableApiTermination;
         return this;
@@ -54,6 +60,7 @@ public class RequestLaunchTemplateData {
     
     
     public Boolean ebsOptimized;
+
     public RequestLaunchTemplateData withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -61,6 +68,7 @@ public class RequestLaunchTemplateData {
     
     
     public RequestLaunchTemplateDataElasticGpuSpecifications[] elasticGpuSpecifications;
+
     public RequestLaunchTemplateData withElasticGpuSpecifications(RequestLaunchTemplateDataElasticGpuSpecifications[] elasticGpuSpecifications) {
         this.elasticGpuSpecifications = elasticGpuSpecifications;
         return this;
@@ -68,6 +76,7 @@ public class RequestLaunchTemplateData {
     
     
     public RequestLaunchTemplateDataElasticInferenceAccelerators[] elasticInferenceAccelerators;
+
     public RequestLaunchTemplateData withElasticInferenceAccelerators(RequestLaunchTemplateDataElasticInferenceAccelerators[] elasticInferenceAccelerators) {
         this.elasticInferenceAccelerators = elasticInferenceAccelerators;
         return this;
@@ -75,6 +84,7 @@ public class RequestLaunchTemplateData {
     
     
     public LaunchTemplateEnclaveOptionsRequest enclaveOptions;
+
     public RequestLaunchTemplateData withEnclaveOptions(LaunchTemplateEnclaveOptionsRequest enclaveOptions) {
         this.enclaveOptions = enclaveOptions;
         return this;
@@ -82,6 +92,7 @@ public class RequestLaunchTemplateData {
     
     
     public LaunchTemplateHibernationOptionsRequest hibernationOptions;
+
     public RequestLaunchTemplateData withHibernationOptions(LaunchTemplateHibernationOptionsRequest hibernationOptions) {
         this.hibernationOptions = hibernationOptions;
         return this;
@@ -89,6 +100,7 @@ public class RequestLaunchTemplateData {
     
     
     public LaunchTemplateIamInstanceProfileSpecificationRequest iamInstanceProfile;
+
     public RequestLaunchTemplateData withIamInstanceProfile(LaunchTemplateIamInstanceProfileSpecificationRequest iamInstanceProfile) {
         this.iamInstanceProfile = iamInstanceProfile;
         return this;
@@ -96,6 +108,7 @@ public class RequestLaunchTemplateData {
     
     
     public String imageId;
+
     public RequestLaunchTemplateData withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -103,6 +116,7 @@ public class RequestLaunchTemplateData {
     
     
     public ShutdownBehaviorEnum instanceInitiatedShutdownBehavior;
+
     public RequestLaunchTemplateData withInstanceInitiatedShutdownBehavior(ShutdownBehaviorEnum instanceInitiatedShutdownBehavior) {
         this.instanceInitiatedShutdownBehavior = instanceInitiatedShutdownBehavior;
         return this;
@@ -110,6 +124,7 @@ public class RequestLaunchTemplateData {
     
     
     public LaunchTemplateInstanceMarketOptionsRequest instanceMarketOptions;
+
     public RequestLaunchTemplateData withInstanceMarketOptions(LaunchTemplateInstanceMarketOptionsRequest instanceMarketOptions) {
         this.instanceMarketOptions = instanceMarketOptions;
         return this;
@@ -117,6 +132,7 @@ public class RequestLaunchTemplateData {
     
     
     public InstanceRequirementsRequest instanceRequirements;
+
     public RequestLaunchTemplateData withInstanceRequirements(InstanceRequirementsRequest instanceRequirements) {
         this.instanceRequirements = instanceRequirements;
         return this;
@@ -124,6 +140,7 @@ public class RequestLaunchTemplateData {
     
     
     public InstanceTypeEnum instanceType;
+
     public RequestLaunchTemplateData withInstanceType(InstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -131,6 +148,7 @@ public class RequestLaunchTemplateData {
     
     
     public String kernelId;
+
     public RequestLaunchTemplateData withKernelId(String kernelId) {
         this.kernelId = kernelId;
         return this;
@@ -138,6 +156,7 @@ public class RequestLaunchTemplateData {
     
     
     public String keyName;
+
     public RequestLaunchTemplateData withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -145,6 +164,7 @@ public class RequestLaunchTemplateData {
     
     
     public RequestLaunchTemplateDataLicenseSpecifications[] licenseSpecifications;
+
     public RequestLaunchTemplateData withLicenseSpecifications(RequestLaunchTemplateDataLicenseSpecifications[] licenseSpecifications) {
         this.licenseSpecifications = licenseSpecifications;
         return this;
@@ -152,6 +172,7 @@ public class RequestLaunchTemplateData {
     
     
     public LaunchTemplateInstanceMaintenanceOptionsRequest maintenanceOptions;
+
     public RequestLaunchTemplateData withMaintenanceOptions(LaunchTemplateInstanceMaintenanceOptionsRequest maintenanceOptions) {
         this.maintenanceOptions = maintenanceOptions;
         return this;
@@ -159,6 +180,7 @@ public class RequestLaunchTemplateData {
     
     
     public LaunchTemplateInstanceMetadataOptionsRequest metadataOptions;
+
     public RequestLaunchTemplateData withMetadataOptions(LaunchTemplateInstanceMetadataOptionsRequest metadataOptions) {
         this.metadataOptions = metadataOptions;
         return this;
@@ -166,6 +188,7 @@ public class RequestLaunchTemplateData {
     
     
     public LaunchTemplatesMonitoringRequest monitoring;
+
     public RequestLaunchTemplateData withMonitoring(LaunchTemplatesMonitoringRequest monitoring) {
         this.monitoring = monitoring;
         return this;
@@ -173,6 +196,7 @@ public class RequestLaunchTemplateData {
     
     
     public RequestLaunchTemplateDataNetworkInterfaces[] networkInterfaces;
+
     public RequestLaunchTemplateData withNetworkInterfaces(RequestLaunchTemplateDataNetworkInterfaces[] networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
@@ -180,6 +204,7 @@ public class RequestLaunchTemplateData {
     
     
     public LaunchTemplatePlacementRequest placement;
+
     public RequestLaunchTemplateData withPlacement(LaunchTemplatePlacementRequest placement) {
         this.placement = placement;
         return this;
@@ -187,6 +212,7 @@ public class RequestLaunchTemplateData {
     
     
     public LaunchTemplatePrivateDnsNameOptionsRequest privateDnsNameOptions;
+
     public RequestLaunchTemplateData withPrivateDnsNameOptions(LaunchTemplatePrivateDnsNameOptionsRequest privateDnsNameOptions) {
         this.privateDnsNameOptions = privateDnsNameOptions;
         return this;
@@ -194,6 +220,7 @@ public class RequestLaunchTemplateData {
     
     
     public String ramDiskId;
+
     public RequestLaunchTemplateData withRamDiskId(String ramDiskId) {
         this.ramDiskId = ramDiskId;
         return this;
@@ -201,6 +228,7 @@ public class RequestLaunchTemplateData {
     
     
     public String[] securityGroupIds;
+
     public RequestLaunchTemplateData withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -208,6 +236,7 @@ public class RequestLaunchTemplateData {
     
     
     public String[] securityGroups;
+
     public RequestLaunchTemplateData withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -215,6 +244,7 @@ public class RequestLaunchTemplateData {
     
     
     public RequestLaunchTemplateDataTagSpecifications[] tagSpecifications;
+
     public RequestLaunchTemplateData withTagSpecifications(RequestLaunchTemplateDataTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -222,9 +252,11 @@ public class RequestLaunchTemplateData {
     
     
     public String userData;
+
     public RequestLaunchTemplateData withUserData(String userData) {
         this.userData = userData;
         return this;
     }
     
+    public RequestLaunchTemplateData(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * File - The file ids of the uploaded file
@@ -15,6 +15,7 @@ public class File {
      */
     
     public String contentType;
+
     public File withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -25,6 +26,7 @@ public class File {
      */
     
     public String fileId;
+
     public File withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -35,6 +37,7 @@ public class File {
      */
     
     public String fileUrl;
+
     public File withFileUrl(String fileUrl) {
         this.fileUrl = fileUrl;
         return this;
@@ -45,6 +48,7 @@ public class File {
      */
     
     public Hash hash;
+
     public File withHash(Hash hash) {
         this.hash = hash;
         return this;
@@ -55,6 +59,7 @@ public class File {
      */
     
     public FileMimeCheckEnum mimeCheck;
+
     public File withMimeCheck(FileMimeCheckEnum mimeCheck) {
         this.mimeCheck = mimeCheck;
         return this;
@@ -65,6 +70,7 @@ public class File {
      */
     
     public String name;
+
     public File withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +81,7 @@ public class File {
      */
     
     public Long size;
+
     public File withSize(Long size) {
         this.size = size;
         return this;
@@ -85,6 +92,7 @@ public class File {
      */
     
     public Long uploadDate;
+
     public File withUploadDate(Long uploadDate) {
         this.uploadDate = uploadDate;
         return this;
@@ -95,9 +103,16 @@ public class File {
      */
     
     public VirusScan virusScan;
+
     public File withVirusScan(VirusScan virusScan) {
         this.virusScan = virusScan;
         return this;
     }
     
+    public File(@JsonProperty("fileId") String fileId, @JsonProperty("name") String name, @JsonProperty("size") Long size, @JsonProperty("uploadDate") Long uploadDate) {
+        this.fileId = fileId;
+        this.name = name;
+        this.size = size;
+        this.uploadDate = uploadDate;
+  }
 }

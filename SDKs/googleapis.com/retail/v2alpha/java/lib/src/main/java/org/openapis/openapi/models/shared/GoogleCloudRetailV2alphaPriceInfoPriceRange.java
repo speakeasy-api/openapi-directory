@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaPriceInfoPriceRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalPrice")
     public GoogleCloudRetailV2alphaInterval originalPrice;
+
     public GoogleCloudRetailV2alphaPriceInfoPriceRange withOriginalPrice(GoogleCloudRetailV2alphaInterval originalPrice) {
         this.originalPrice = originalPrice;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2alphaPriceInfoPriceRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public GoogleCloudRetailV2alphaInterval price;
+
     public GoogleCloudRetailV2alphaPriceInfoPriceRange withPrice(GoogleCloudRetailV2alphaInterval price) {
         this.price = price;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaPriceInfoPriceRange(){}
 }

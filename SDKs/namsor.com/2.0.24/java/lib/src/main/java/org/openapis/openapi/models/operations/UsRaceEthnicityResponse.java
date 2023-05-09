@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UsRaceEthnicityResponse {
     
     public String contentType;
+
     public UsRaceEthnicityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UsRaceEthnicityResponse {
      */
     
     public org.openapis.openapi.models.shared.FirstLastNameUSRaceEthnicityOut firstLastNameUSRaceEthnicityOut;
+
     public UsRaceEthnicityResponse withFirstLastNameUSRaceEthnicityOut(org.openapis.openapi.models.shared.FirstLastNameUSRaceEthnicityOut firstLastNameUSRaceEthnicityOut) {
         this.firstLastNameUSRaceEthnicityOut = firstLastNameUSRaceEthnicityOut;
         return this;
@@ -26,6 +29,7 @@ public class UsRaceEthnicityResponse {
     
     
     public Integer statusCode;
+
     public UsRaceEthnicityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class UsRaceEthnicityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UsRaceEthnicityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UsRaceEthnicityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

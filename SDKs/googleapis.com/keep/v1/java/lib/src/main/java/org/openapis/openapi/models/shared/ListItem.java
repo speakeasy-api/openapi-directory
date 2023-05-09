@@ -18,6 +18,7 @@ public class ListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checked")
     public Boolean checked;
+
     public ListItem withChecked(Boolean checked) {
         this.checked = checked;
         return this;
@@ -29,6 +30,7 @@ public class ListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childListItems")
     public ListItem[] childListItems;
+
     public ListItem withChildListItems(ListItem[] childListItems) {
         this.childListItems = childListItems;
         return this;
@@ -40,9 +42,11 @@ public class ListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public TextContent text;
+
     public ListItem withText(TextContent text) {
         this.text = text;
         return this;
     }
     
+    public ListItem(){}
 }

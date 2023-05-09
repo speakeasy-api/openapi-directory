@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetUuidSecurity;
 import org.openapis.openapi.models.operations.GetUuidRequest;
 import org.openapis.openapi.models.operations.GetUuidResponse;
+import org.openapis.openapi.models.operations.GetUuidSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -28,10 +27,10 @@ public class Application {
                 .build();
 
             GetUuidRequest req = new GetUuidRequest() {{
-                count = 548814;
-            }}            
+                count = 548814L;
+            }};            
 
-            GetUuidResponse res = sdk.uuidGeneration.getUuid(req, new GetUuidSecurity() {{
+            GetUuidResponse res = sdk.uuidGeneration.getUuid(req, new GetUuidSecurity("provident") {{
                 xFungeneratorsApiSecret = "YOUR_API_KEY_HERE";
             }});
 
@@ -41,6 +40,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -48,14 +49,14 @@ public class Application {
 ## Available Resources and Operations
 
 
-### uuidGeneration
+### [uuidGeneration](docs/uuidgeneration/README.md)
 
-* `getUuid` - Generate a random UUID (v4).
-* `getUuidVersionVersion` - Generate a random UUID (v4).
+* [getUuid](docs/uuidgeneration/README.md#getuuid) - Generate a random UUID (v4).
+* [getUuidVersionVersion](docs/uuidgeneration/README.md#getuuidversionversion) - Generate a random UUID (v4).
 
-### uuidParsing
+### [uuidParsing](docs/uuidparsing/README.md)
 
-* `postUuid` - Parse a UUID string and return its version and check whether it is valid.
+* [postUuid](docs/uuidparsing/README.md#postuuid) - Parse a UUID string and return its version and check whether it is valid.
 <!-- End SDK Available Operations -->
 
 ### Maturity

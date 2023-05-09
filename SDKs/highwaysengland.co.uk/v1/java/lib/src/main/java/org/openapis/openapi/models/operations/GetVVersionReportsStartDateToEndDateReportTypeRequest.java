@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVVersionReportsStartDateToEndDateReportTypeRequest {
@@ -12,6 +13,7 @@ public class GetVVersionReportsStartDateToEndDateReportTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=end_date")
     public String endDate;
+
     public GetVVersionReportsStartDateToEndDateReportTypeRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -22,6 +24,7 @@ public class GetVVersionReportsStartDateToEndDateReportTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetVVersionReportsStartDateToEndDateReportTypeRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class GetVVersionReportsStartDateToEndDateReportTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Integer pageSize;
+
     public GetVVersionReportsStartDateToEndDateReportTypeRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -39,6 +43,7 @@ public class GetVVersionReportsStartDateToEndDateReportTypeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reportSubTypeId")
     public Integer reportSubTypeId;
+
     public GetVVersionReportsStartDateToEndDateReportTypeRequest withReportSubTypeId(Integer reportSubTypeId) {
         this.reportSubTypeId = reportSubTypeId;
         return this;
@@ -49,6 +54,7 @@ public class GetVVersionReportsStartDateToEndDateReportTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=report_type")
     public String reportType;
+
     public GetVVersionReportsStartDateToEndDateReportTypeRequest withReportType(String reportType) {
         this.reportType = reportType;
         return this;
@@ -59,6 +65,7 @@ public class GetVVersionReportsStartDateToEndDateReportTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sites")
     public String sites;
+
     public GetVVersionReportsStartDateToEndDateReportTypeRequest withSites(String sites) {
         this.sites = sites;
         return this;
@@ -69,6 +76,7 @@ public class GetVVersionReportsStartDateToEndDateReportTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=start_date")
     public String startDate;
+
     public GetVVersionReportsStartDateToEndDateReportTypeRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -76,9 +84,19 @@ public class GetVVersionReportsStartDateToEndDateReportTypeRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public String version;
+
     public GetVVersionReportsStartDateToEndDateReportTypeRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GetVVersionReportsStartDateToEndDateReportTypeRequest(@JsonProperty("end_date") String endDate, @JsonProperty("page") Integer page, @JsonProperty("page_size") Integer pageSize, @JsonProperty("report_type") String reportType, @JsonProperty("sites") String sites, @JsonProperty("start_date") String startDate, @JsonProperty("version") String version) {
+        this.endDate = endDate;
+        this.page = page;
+        this.pageSize = pageSize;
+        this.reportType = reportType;
+        this.sites = sites;
+        this.startDate = startDate;
+        this.version = version;
+  }
 }

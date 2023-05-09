@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTeamEventAwardsResponse {
@@ -12,6 +13,7 @@ public class GetTeamEventAwardsResponse {
      */
     
     public org.openapis.openapi.models.shared.Award[] awards;
+
     public GetTeamEventAwardsResponse withAwards(org.openapis.openapi.models.shared.Award[] awards) {
         this.awards = awards;
         return this;
@@ -19,6 +21,7 @@ public class GetTeamEventAwardsResponse {
     
     
     public String contentType;
+
     public GetTeamEventAwardsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetTeamEventAwardsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetTeamEventAwardsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetTeamEventAwardsResponse {
     
     
     public Integer statusCode;
+
     public GetTeamEventAwardsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetTeamEventAwardsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTeamEventAwardsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTeamEventAwardsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

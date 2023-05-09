@@ -60,11 +60,9 @@ public class Queues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayMediaOnQueueResponse res = new org.openapis.openapi.models.operations.PlayMediaOnQueueResponse() {{
+        org.openapis.openapi.models.operations.PlayMediaOnQueueResponse res = new org.openapis.openapi.models.operations.PlayMediaOnQueueResponse(contentType, httpRes.statusCode()) {{
             queue = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Queues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateActivityOnQueueResponse res = new org.openapis.openapi.models.operations.UpdateActivityOnQueueResponse() {{
+        org.openapis.openapi.models.operations.UpdateActivityOnQueueResponse res = new org.openapis.openapi.models.operations.UpdateActivityOnQueueResponse(contentType, httpRes.statusCode()) {{
             updateActivityResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

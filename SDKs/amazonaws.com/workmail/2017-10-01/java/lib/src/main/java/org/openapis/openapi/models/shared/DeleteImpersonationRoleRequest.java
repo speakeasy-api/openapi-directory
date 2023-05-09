@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteImpersonationRoleRequest {
     @JsonProperty("ImpersonationRoleId")
     public String impersonationRoleId;
+
     public DeleteImpersonationRoleRequest withImpersonationRoleId(String impersonationRoleId) {
         this.impersonationRoleId = impersonationRoleId;
         return this;
@@ -16,9 +17,14 @@ public class DeleteImpersonationRoleRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public DeleteImpersonationRoleRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public DeleteImpersonationRoleRequest(@JsonProperty("ImpersonationRoleId") String impersonationRoleId, @JsonProperty("OrganizationId") String organizationId) {
+        this.impersonationRoleId = impersonationRoleId;
+        this.organizationId = organizationId;
+  }
 }

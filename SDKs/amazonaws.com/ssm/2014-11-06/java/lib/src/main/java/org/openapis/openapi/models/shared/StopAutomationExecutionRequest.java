@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopAutomationExecutionRequest {
     @JsonProperty("AutomationExecutionId")
     public String automationExecutionId;
+
     public StopAutomationExecutionRequest withAutomationExecutionId(String automationExecutionId) {
         this.automationExecutionId = automationExecutionId;
         return this;
@@ -19,9 +20,13 @@ public class StopAutomationExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public StopTypeEnum type;
+
     public StopAutomationExecutionRequest withType(StopTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public StopAutomationExecutionRequest(@JsonProperty("AutomationExecutionId") String automationExecutionId) {
+        this.automationExecutionId = automationExecutionId;
+  }
 }

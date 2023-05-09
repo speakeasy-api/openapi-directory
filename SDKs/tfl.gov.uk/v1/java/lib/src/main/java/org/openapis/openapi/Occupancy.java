@@ -49,14 +49,12 @@ public class Occupancy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OccupancyGetResponse res = new org.openapis.openapi.models.operations.OccupancyGetResponse() {{
+        org.openapis.openapi.models.operations.OccupancyGetResponse res = new org.openapis.openapi.models.operations.OccupancyGetResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesCarParkOccupancy = null;
             tflApiPresentationEntitiesCarParkOccupancy = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,14 +100,12 @@ public class Occupancy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OccupancyGetAllChargeConnectorStatusResponse res = new org.openapis.openapi.models.operations.OccupancyGetAllChargeConnectorStatusResponse() {{
+        org.openapis.openapi.models.operations.OccupancyGetAllChargeConnectorStatusResponse res = new org.openapis.openapi.models.operations.OccupancyGetAllChargeConnectorStatusResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesChargeConnectorOccupancies = null;
             tflApiPresentationEntitiesChargeConnectorOccupancies = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,14 +152,12 @@ public class Occupancy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OccupancyGetBikePointsOccupanciesResponse res = new org.openapis.openapi.models.operations.OccupancyGetBikePointsOccupanciesResponse() {{
+        org.openapis.openapi.models.operations.OccupancyGetBikePointsOccupanciesResponse res = new org.openapis.openapi.models.operations.OccupancyGetBikePointsOccupanciesResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesBikePointOccupancies = null;
             tflApiPresentationEntitiesBikePointOccupancies = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -210,14 +204,12 @@ public class Occupancy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OccupancyGetChargeConnectorStatusResponse res = new org.openapis.openapi.models.operations.OccupancyGetChargeConnectorStatusResponse() {{
+        org.openapis.openapi.models.operations.OccupancyGetChargeConnectorStatusResponse res = new org.openapis.openapi.models.operations.OccupancyGetChargeConnectorStatusResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesChargeConnectorOccupancies = null;
             tflApiPresentationEntitiesChargeConnectorOccupancies = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -263,14 +255,12 @@ public class Occupancy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOccupancyCarParkResponse res = new org.openapis.openapi.models.operations.GetOccupancyCarParkResponse() {{
+        org.openapis.openapi.models.operations.GetOccupancyCarParkResponse res = new org.openapis.openapi.models.operations.GetOccupancyCarParkResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesCarParkOccupancies = null;
             tflApiPresentationEntitiesCarParkOccupancies = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

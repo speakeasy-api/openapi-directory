@@ -15,6 +15,7 @@ public class AutoScalingGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hook")
     public String hook;
+
     public AutoScalingGroup withHook(String hook) {
         this.hook = hook;
         return this;
@@ -23,9 +24,11 @@ public class AutoScalingGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AutoScalingGroup withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AutoScalingGroup(){}
 }

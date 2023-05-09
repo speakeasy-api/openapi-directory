@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeVolumesModificationsResultVolumesModifications {
     
     public OffsetDateTime endTime;
+
     public DescribeVolumesModificationsResultVolumesModifications withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVolumesModificationsResultVolumesModifications {
     
     
     public DescribeVolumesModificationsResultVolumesModificationsModificationStateEnum modificationState;
+
     public DescribeVolumesModificationsResultVolumesModifications withModificationState(DescribeVolumesModificationsResultVolumesModificationsModificationStateEnum modificationState) {
         this.modificationState = modificationState;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVolumesModificationsResultVolumesModifications {
     
     
     public Long originalIops;
+
     public DescribeVolumesModificationsResultVolumesModifications withOriginalIops(Long originalIops) {
         this.originalIops = originalIops;
         return this;
@@ -33,6 +36,7 @@ public class DescribeVolumesModificationsResultVolumesModifications {
     
     
     public Boolean originalMultiAttachEnabled;
+
     public DescribeVolumesModificationsResultVolumesModifications withOriginalMultiAttachEnabled(Boolean originalMultiAttachEnabled) {
         this.originalMultiAttachEnabled = originalMultiAttachEnabled;
         return this;
@@ -40,6 +44,7 @@ public class DescribeVolumesModificationsResultVolumesModifications {
     
     
     public Long originalSize;
+
     public DescribeVolumesModificationsResultVolumesModifications withOriginalSize(Long originalSize) {
         this.originalSize = originalSize;
         return this;
@@ -47,6 +52,7 @@ public class DescribeVolumesModificationsResultVolumesModifications {
     
     
     public Long originalThroughput;
+
     public DescribeVolumesModificationsResultVolumesModifications withOriginalThroughput(Long originalThroughput) {
         this.originalThroughput = originalThroughput;
         return this;
@@ -54,6 +60,7 @@ public class DescribeVolumesModificationsResultVolumesModifications {
     
     
     public DescribeVolumesModificationsResultVolumesModificationsOriginalVolumeTypeEnum originalVolumeType;
+
     public DescribeVolumesModificationsResultVolumesModifications withOriginalVolumeType(DescribeVolumesModificationsResultVolumesModificationsOriginalVolumeTypeEnum originalVolumeType) {
         this.originalVolumeType = originalVolumeType;
         return this;
@@ -61,6 +68,7 @@ public class DescribeVolumesModificationsResultVolumesModifications {
     
     
     public Long progress;
+
     public DescribeVolumesModificationsResultVolumesModifications withProgress(Long progress) {
         this.progress = progress;
         return this;
@@ -68,6 +76,7 @@ public class DescribeVolumesModificationsResultVolumesModifications {
     
     
     public OffsetDateTime startTime;
+
     public DescribeVolumesModificationsResultVolumesModifications withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -75,6 +84,7 @@ public class DescribeVolumesModificationsResultVolumesModifications {
     
     
     public String statusMessage;
+
     public DescribeVolumesModificationsResultVolumesModifications withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -82,6 +92,7 @@ public class DescribeVolumesModificationsResultVolumesModifications {
     
     
     public Long targetIops;
+
     public DescribeVolumesModificationsResultVolumesModifications withTargetIops(Long targetIops) {
         this.targetIops = targetIops;
         return this;
@@ -89,6 +100,7 @@ public class DescribeVolumesModificationsResultVolumesModifications {
     
     
     public Boolean targetMultiAttachEnabled;
+
     public DescribeVolumesModificationsResultVolumesModifications withTargetMultiAttachEnabled(Boolean targetMultiAttachEnabled) {
         this.targetMultiAttachEnabled = targetMultiAttachEnabled;
         return this;
@@ -96,6 +108,7 @@ public class DescribeVolumesModificationsResultVolumesModifications {
     
     
     public Long targetSize;
+
     public DescribeVolumesModificationsResultVolumesModifications withTargetSize(Long targetSize) {
         this.targetSize = targetSize;
         return this;
@@ -103,6 +116,7 @@ public class DescribeVolumesModificationsResultVolumesModifications {
     
     
     public Long targetThroughput;
+
     public DescribeVolumesModificationsResultVolumesModifications withTargetThroughput(Long targetThroughput) {
         this.targetThroughput = targetThroughput;
         return this;
@@ -110,6 +124,7 @@ public class DescribeVolumesModificationsResultVolumesModifications {
     
     
     public DescribeVolumesModificationsResultVolumesModificationsTargetVolumeTypeEnum targetVolumeType;
+
     public DescribeVolumesModificationsResultVolumesModifications withTargetVolumeType(DescribeVolumesModificationsResultVolumesModificationsTargetVolumeTypeEnum targetVolumeType) {
         this.targetVolumeType = targetVolumeType;
         return this;
@@ -117,9 +132,11 @@ public class DescribeVolumesModificationsResultVolumesModifications {
     
     
     public String volumeId;
+
     public DescribeVolumesModificationsResultVolumesModifications withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public DescribeVolumesModificationsResultVolumesModifications(){}
 }

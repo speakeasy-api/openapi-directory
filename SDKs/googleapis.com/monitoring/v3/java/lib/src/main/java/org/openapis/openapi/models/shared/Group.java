@@ -18,6 +18,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Group withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public Group withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -40,6 +42,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCluster")
     public Boolean isCluster;
+
     public Group withIsCluster(Boolean isCluster) {
         this.isCluster = isCluster;
         return this;
@@ -51,6 +54,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Group withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentName")
     public String parentName;
+
     public Group withParentName(String parentName) {
         this.parentName = parentName;
         return this;
     }
     
+    public Group(){}
 }

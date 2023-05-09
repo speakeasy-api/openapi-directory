@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TypeaheadForWorkspaceResponse {
     
     public String contentType;
+
     public TypeaheadForWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TypeaheadForWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public TypeaheadForWorkspaceResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class TypeaheadForWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public TypeaheadForWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class TypeaheadForWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TypeaheadForWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class TypeaheadForWorkspaceResponse {
      */
     
     public TypeaheadForWorkspace200ApplicationJSON typeaheadForWorkspace200ApplicationJSONObject;
+
     public TypeaheadForWorkspaceResponse withTypeaheadForWorkspace200ApplicationJSONObject(TypeaheadForWorkspace200ApplicationJSON typeaheadForWorkspace200ApplicationJSONObject) {
         this.typeaheadForWorkspace200ApplicationJSONObject = typeaheadForWorkspace200ApplicationJSONObject;
         return this;
     }
     
+    public TypeaheadForWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

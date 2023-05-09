@@ -18,6 +18,7 @@ public class GoogleSearchIdeahubV1betaListAvailableLocalesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableLocales")
     public GoogleSearchIdeahubV1betaAvailableLocale[] availableLocales;
+
     public GoogleSearchIdeahubV1betaListAvailableLocalesResponse withAvailableLocales(GoogleSearchIdeahubV1betaAvailableLocale[] availableLocales) {
         this.availableLocales = availableLocales;
         return this;
@@ -29,9 +30,11 @@ public class GoogleSearchIdeahubV1betaListAvailableLocalesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleSearchIdeahubV1betaListAvailableLocalesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleSearchIdeahubV1betaListAvailableLocalesResponse(){}
 }

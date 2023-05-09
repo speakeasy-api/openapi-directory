@@ -15,6 +15,7 @@ public class PlaceOrderRequestBodyMarketingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coupon")
     public String coupon;
+
     public PlaceOrderRequestBodyMarketingData withCoupon(String coupon) {
         this.coupon = coupon;
         return this;
@@ -26,6 +27,7 @@ public class PlaceOrderRequestBodyMarketingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmCampaign")
     public String utmCampaign;
+
     public PlaceOrderRequestBodyMarketingData withUtmCampaign(String utmCampaign) {
         this.utmCampaign = utmCampaign;
         return this;
@@ -37,6 +39,7 @@ public class PlaceOrderRequestBodyMarketingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmMedium")
     public String utmMedium;
+
     public PlaceOrderRequestBodyMarketingData withUtmMedium(String utmMedium) {
         this.utmMedium = utmMedium;
         return this;
@@ -48,6 +51,7 @@ public class PlaceOrderRequestBodyMarketingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmSource")
     public String utmSource;
+
     public PlaceOrderRequestBodyMarketingData withUtmSource(String utmSource) {
         this.utmSource = utmSource;
         return this;
@@ -59,6 +63,7 @@ public class PlaceOrderRequestBodyMarketingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmiCampaign")
     public String utmiCampaign;
+
     public PlaceOrderRequestBodyMarketingData withUtmiCampaign(String utmiCampaign) {
         this.utmiCampaign = utmiCampaign;
         return this;
@@ -70,6 +75,7 @@ public class PlaceOrderRequestBodyMarketingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmiPage")
     public String utmiPage;
+
     public PlaceOrderRequestBodyMarketingData withUtmiPage(String utmiPage) {
         this.utmiPage = utmiPage;
         return this;
@@ -81,9 +87,11 @@ public class PlaceOrderRequestBodyMarketingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmiPart")
     public String utmiPart;
+
     public PlaceOrderRequestBodyMarketingData withUtmiPart(String utmiPart) {
         this.utmiPart = utmiPart;
         return this;
     }
     
+    public PlaceOrderRequestBodyMarketingData(){}
 }

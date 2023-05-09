@@ -18,6 +18,7 @@ public class SourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aws")
     public AwsSourceDetailsInput aws;
+
     public SourceInput withAws(AwsSourceDetailsInput aws) {
         this.aws = aws;
         return this;
@@ -29,6 +30,7 @@ public class SourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SourceInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class SourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public SourceInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,9 +54,11 @@ public class SourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmware")
     public VmwareSourceDetails vmware;
+
     public SourceInput withVmware(VmwareSourceDetails vmware) {
         this.vmware = vmware;
         return this;
     }
     
+    public SourceInput(){}
 }

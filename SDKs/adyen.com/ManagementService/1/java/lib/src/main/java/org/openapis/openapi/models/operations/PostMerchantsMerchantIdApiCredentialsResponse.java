@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostMerchantsMerchantIdApiCredentialsResponse {
     
     public String contentType;
+
     public PostMerchantsMerchantIdApiCredentialsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostMerchantsMerchantIdApiCredentialsResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateApiCredentialResponse createApiCredentialResponse;
+
     public PostMerchantsMerchantIdApiCredentialsResponse withCreateApiCredentialResponse(org.openapis.openapi.models.shared.CreateApiCredentialResponse createApiCredentialResponse) {
         this.createApiCredentialResponse = createApiCredentialResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostMerchantsMerchantIdApiCredentialsResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public PostMerchantsMerchantIdApiCredentialsResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class PostMerchantsMerchantIdApiCredentialsResponse {
     
     
     public Integer statusCode;
+
     public PostMerchantsMerchantIdApiCredentialsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostMerchantsMerchantIdApiCredentialsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostMerchantsMerchantIdApiCredentialsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostMerchantsMerchantIdApiCredentialsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

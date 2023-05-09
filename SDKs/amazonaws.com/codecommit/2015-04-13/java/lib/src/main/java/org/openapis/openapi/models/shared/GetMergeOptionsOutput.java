@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetMergeOptionsOutput {
     @JsonProperty("baseCommitId")
     public String baseCommitId;
+
     public GetMergeOptionsOutput withBaseCommitId(String baseCommitId) {
         this.baseCommitId = baseCommitId;
         return this;
@@ -19,6 +20,7 @@ public class GetMergeOptionsOutput {
     
     @JsonProperty("destinationCommitId")
     public String destinationCommitId;
+
     public GetMergeOptionsOutput withDestinationCommitId(String destinationCommitId) {
         this.destinationCommitId = destinationCommitId;
         return this;
@@ -26,6 +28,7 @@ public class GetMergeOptionsOutput {
     
     @JsonProperty("mergeOptions")
     public MergeOptionTypeEnumEnum[] mergeOptions;
+
     public GetMergeOptionsOutput withMergeOptions(MergeOptionTypeEnumEnum[] mergeOptions) {
         this.mergeOptions = mergeOptions;
         return this;
@@ -33,9 +36,16 @@ public class GetMergeOptionsOutput {
     
     @JsonProperty("sourceCommitId")
     public String sourceCommitId;
+
     public GetMergeOptionsOutput withSourceCommitId(String sourceCommitId) {
         this.sourceCommitId = sourceCommitId;
         return this;
     }
     
+    public GetMergeOptionsOutput(@JsonProperty("baseCommitId") String baseCommitId, @JsonProperty("destinationCommitId") String destinationCommitId, @JsonProperty("mergeOptions") MergeOptionTypeEnumEnum[] mergeOptions, @JsonProperty("sourceCommitId") String sourceCommitId) {
+        this.baseCommitId = baseCommitId;
+        this.destinationCommitId = destinationCommitId;
+        this.mergeOptions = mergeOptions;
+        this.sourceCommitId = sourceCommitId;
+  }
 }

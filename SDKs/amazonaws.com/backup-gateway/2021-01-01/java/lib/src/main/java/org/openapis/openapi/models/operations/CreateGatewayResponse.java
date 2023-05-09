@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGatewayResponse {
     
     public String contentType;
+
     public CreateGatewayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateGatewayResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateGatewayOutput createGatewayOutput;
+
     public CreateGatewayResponse withCreateGatewayOutput(org.openapis.openapi.models.shared.CreateGatewayOutput createGatewayOutput) {
         this.createGatewayOutput = createGatewayOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateGatewayResponse {
      */
     
     public Object internalServerException;
+
     public CreateGatewayResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class CreateGatewayResponse {
     
     
     public Integer statusCode;
+
     public CreateGatewayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CreateGatewayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGatewayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class CreateGatewayResponse {
      */
     
     public Object throttlingException;
+
     public CreateGatewayResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,9 +70,14 @@ public class CreateGatewayResponse {
      */
     
     public Object validationException;
+
     public CreateGatewayResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateGatewayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

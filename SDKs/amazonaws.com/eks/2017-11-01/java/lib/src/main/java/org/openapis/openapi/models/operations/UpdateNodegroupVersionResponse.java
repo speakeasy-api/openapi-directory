@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateNodegroupVersionResponse {
@@ -12,6 +13,7 @@ public class UpdateNodegroupVersionResponse {
      */
     
     public Object clientException;
+
     public UpdateNodegroupVersionResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateNodegroupVersionResponse {
     
     
     public String contentType;
+
     public UpdateNodegroupVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateNodegroupVersionResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateNodegroupVersionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateNodegroupVersionResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateNodegroupVersionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateNodegroupVersionResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateNodegroupVersionResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateNodegroupVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateNodegroupVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateNodegroupVersionResponse {
      */
     
     public Object serverException;
+
     public UpdateNodegroupVersionResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateNodegroupVersionResponse {
     
     
     public Integer statusCode;
+
     public UpdateNodegroupVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateNodegroupVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateNodegroupVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateNodegroupVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateNodegroupVersionResponse updateNodegroupVersionResponse;
+
     public UpdateNodegroupVersionResponse withUpdateNodegroupVersionResponse(org.openapis.openapi.models.shared.UpdateNodegroupVersionResponse updateNodegroupVersionResponse) {
         this.updateNodegroupVersionResponse = updateNodegroupVersionResponse;
         return this;
     }
     
+    public UpdateNodegroupVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

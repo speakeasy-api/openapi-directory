@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateFromAdministratorAccountResponse {
@@ -12,6 +13,7 @@ public class DisassociateFromAdministratorAccountResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateFromAdministratorAccountResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DisassociateFromAdministratorAccountResponse {
      */
     
     public Object conflictException;
+
     public DisassociateFromAdministratorAccountResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateFromAdministratorAccountResponse {
     
     
     public String contentType;
+
     public DisassociateFromAdministratorAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateFromAdministratorAccountResponse {
      */
     
     public java.util.Map<String, Object> disassociateFromAdministratorAccountResponse;
+
     public DisassociateFromAdministratorAccountResponse withDisassociateFromAdministratorAccountResponse(java.util.Map<String, Object> disassociateFromAdministratorAccountResponse) {
         this.disassociateFromAdministratorAccountResponse = disassociateFromAdministratorAccountResponse;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateFromAdministratorAccountResponse {
      */
     
     public Object internalServerException;
+
     public DisassociateFromAdministratorAccountResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateFromAdministratorAccountResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateFromAdministratorAccountResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DisassociateFromAdministratorAccountResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DisassociateFromAdministratorAccountResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class DisassociateFromAdministratorAccountResponse {
     
     
     public Integer statusCode;
+
     public DisassociateFromAdministratorAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DisassociateFromAdministratorAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateFromAdministratorAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DisassociateFromAdministratorAccountResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateFromAdministratorAccountResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DisassociateFromAdministratorAccountResponse {
      */
     
     public Object validationException;
+
     public DisassociateFromAdministratorAccountResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateFromAdministratorAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

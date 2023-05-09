@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteBotVersionResponse {
@@ -12,6 +13,7 @@ public class DeleteBotVersionResponse {
      */
     
     public Object conflictException;
+
     public DeleteBotVersionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteBotVersionResponse {
     
     
     public String contentType;
+
     public DeleteBotVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteBotVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteBotVersionResponse deleteBotVersionResponse;
+
     public DeleteBotVersionResponse withDeleteBotVersionResponse(org.openapis.openapi.models.shared.DeleteBotVersionResponse deleteBotVersionResponse) {
         this.deleteBotVersionResponse = deleteBotVersionResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteBotVersionResponse {
      */
     
     public Object internalServerException;
+
     public DeleteBotVersionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteBotVersionResponse {
      */
     
     public Object preconditionFailedException;
+
     public DeleteBotVersionResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteBotVersionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DeleteBotVersionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteBotVersionResponse {
     
     
     public Integer statusCode;
+
     public DeleteBotVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteBotVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteBotVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteBotVersionResponse {
      */
     
     public Object throttlingException;
+
     public DeleteBotVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteBotVersionResponse {
      */
     
     public Object validationException;
+
     public DeleteBotVersionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteBotVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

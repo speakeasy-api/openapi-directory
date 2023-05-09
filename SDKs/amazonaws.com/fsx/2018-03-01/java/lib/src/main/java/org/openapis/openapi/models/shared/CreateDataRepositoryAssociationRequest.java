@@ -12,17 +12,19 @@ public class CreateDataRepositoryAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchImportMetaDataOnCreate")
     public Boolean batchImportMetaDataOnCreate;
+
     public CreateDataRepositoryAssociationRequest withBatchImportMetaDataOnCreate(Boolean batchImportMetaDataOnCreate) {
         this.batchImportMetaDataOnCreate = batchImportMetaDataOnCreate;
         return this;
     }
     
     /**
-     * (Optional) An idempotency token for resource creation, in a string of up to 64 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
+     * (Optional) An idempotency token for resource creation, in a string of up to 63 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CreateDataRepositoryAssociationRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -30,6 +32,7 @@ public class CreateDataRepositoryAssociationRequest {
     
     @JsonProperty("DataRepositoryPath")
     public String dataRepositoryPath;
+
     public CreateDataRepositoryAssociationRequest withDataRepositoryPath(String dataRepositoryPath) {
         this.dataRepositoryPath = dataRepositoryPath;
         return this;
@@ -40,6 +43,7 @@ public class CreateDataRepositoryAssociationRequest {
      */
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public CreateDataRepositoryAssociationRequest withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -48,6 +52,7 @@ public class CreateDataRepositoryAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemPath")
     public String fileSystemPath;
+
     public CreateDataRepositoryAssociationRequest withFileSystemPath(String fileSystemPath) {
         this.fileSystemPath = fileSystemPath;
         return this;
@@ -56,6 +61,7 @@ public class CreateDataRepositoryAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportedFileChunkSize")
     public Long importedFileChunkSize;
+
     public CreateDataRepositoryAssociationRequest withImportedFileChunkSize(Long importedFileChunkSize) {
         this.importedFileChunkSize = importedFileChunkSize;
         return this;
@@ -64,6 +70,7 @@ public class CreateDataRepositoryAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3")
     public S3DataRepositoryConfiguration s3;
+
     public CreateDataRepositoryAssociationRequest withS3(S3DataRepositoryConfiguration s3) {
         this.s3 = s3;
         return this;
@@ -75,9 +82,14 @@ public class CreateDataRepositoryAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateDataRepositoryAssociationRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDataRepositoryAssociationRequest(@JsonProperty("DataRepositoryPath") String dataRepositoryPath, @JsonProperty("FileSystemId") String fileSystemId) {
+        this.dataRepositoryPath = dataRepositoryPath;
+        this.fileSystemId = fileSystemId;
+  }
 }

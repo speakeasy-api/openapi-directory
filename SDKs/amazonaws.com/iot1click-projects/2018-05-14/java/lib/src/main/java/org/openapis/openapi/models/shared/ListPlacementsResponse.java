@@ -15,6 +15,7 @@ public class ListPlacementsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListPlacementsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListPlacementsResponse {
     
     @JsonProperty("placements")
     public PlacementSummary[] placements;
+
     public ListPlacementsResponse withPlacements(PlacementSummary[] placements) {
         this.placements = placements;
         return this;
     }
     
+    public ListPlacementsResponse(@JsonProperty("placements") PlacementSummary[] placements) {
+        this.placements = placements;
+  }
 }

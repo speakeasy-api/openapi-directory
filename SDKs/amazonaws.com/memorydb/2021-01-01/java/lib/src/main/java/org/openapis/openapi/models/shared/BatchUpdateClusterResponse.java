@@ -15,6 +15,7 @@ public class BatchUpdateClusterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessedClusters")
     public Cluster[] processedClusters;
+
     public BatchUpdateClusterResponse withProcessedClusters(Cluster[] processedClusters) {
         this.processedClusters = processedClusters;
         return this;
@@ -23,9 +24,11 @@ public class BatchUpdateClusterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnprocessedClusters")
     public UnprocessedCluster[] unprocessedClusters;
+
     public BatchUpdateClusterResponse withUnprocessedClusters(UnprocessedCluster[] unprocessedClusters) {
         this.unprocessedClusters = unprocessedClusters;
         return this;
     }
     
+    public BatchUpdateClusterResponse(){}
 }

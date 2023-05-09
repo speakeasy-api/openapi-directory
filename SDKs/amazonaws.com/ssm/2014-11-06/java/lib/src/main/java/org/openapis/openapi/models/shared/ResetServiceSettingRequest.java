@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResetServiceSettingRequest {
     @JsonProperty("SettingId")
     public String settingId;
+
     public ResetServiceSettingRequest withSettingId(String settingId) {
         this.settingId = settingId;
         return this;
     }
     
+    public ResetServiceSettingRequest(@JsonProperty("SettingId") String settingId) {
+        this.settingId = settingId;
+  }
 }

@@ -14,6 +14,7 @@ public class CreateExperimentTemplateRequestBody {
      */
     @JsonProperty("actions")
     public java.util.Map<String, org.openapis.openapi.models.shared.CreateExperimentTemplateActionInput> actions;
+
     public CreateExperimentTemplateRequestBody withActions(java.util.Map<String, org.openapis.openapi.models.shared.CreateExperimentTemplateActionInput> actions) {
         this.actions = actions;
         return this;
@@ -24,6 +25,7 @@ public class CreateExperimentTemplateRequestBody {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateExperimentTemplateRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -34,6 +36,7 @@ public class CreateExperimentTemplateRequestBody {
      */
     @JsonProperty("description")
     public String description;
+
     public CreateExperimentTemplateRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class CreateExperimentTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logConfiguration")
     public CreateExperimentTemplateRequestBodyLogConfiguration logConfiguration;
+
     public CreateExperimentTemplateRequestBody withLogConfiguration(CreateExperimentTemplateRequestBodyLogConfiguration logConfiguration) {
         this.logConfiguration = logConfiguration;
         return this;
@@ -55,6 +59,7 @@ public class CreateExperimentTemplateRequestBody {
      */
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateExperimentTemplateRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -65,6 +70,7 @@ public class CreateExperimentTemplateRequestBody {
      */
     @JsonProperty("stopConditions")
     public org.openapis.openapi.models.shared.CreateExperimentTemplateStopConditionInput[] stopConditions;
+
     public CreateExperimentTemplateRequestBody withStopConditions(org.openapis.openapi.models.shared.CreateExperimentTemplateStopConditionInput[] stopConditions) {
         this.stopConditions = stopConditions;
         return this;
@@ -76,6 +82,7 @@ public class CreateExperimentTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateExperimentTemplateRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -87,9 +94,17 @@ public class CreateExperimentTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targets")
     public java.util.Map<String, org.openapis.openapi.models.shared.CreateExperimentTemplateTargetInput> targets;
+
     public CreateExperimentTemplateRequestBody withTargets(java.util.Map<String, org.openapis.openapi.models.shared.CreateExperimentTemplateTargetInput> targets) {
         this.targets = targets;
         return this;
     }
     
+    public CreateExperimentTemplateRequestBody(@JsonProperty("actions") java.util.Map<String, org.openapis.openapi.models.shared.CreateExperimentTemplateActionInput> actions, @JsonProperty("clientToken") String clientToken, @JsonProperty("description") String description, @JsonProperty("roleArn") String roleArn, @JsonProperty("stopConditions") org.openapis.openapi.models.shared.CreateExperimentTemplateStopConditionInput[] stopConditions) {
+        this.actions = actions;
+        this.clientToken = clientToken;
+        this.description = description;
+        this.roleArn = roleArn;
+        this.stopConditions = stopConditions;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoryPolicyResponse {
     
     public String contentType;
+
     public GetRepositoryPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRepositoryPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRepositoryPolicyResponse getRepositoryPolicyResponse;
+
     public GetRepositoryPolicyResponse withGetRepositoryPolicyResponse(org.openapis.openapi.models.shared.GetRepositoryPolicyResponse getRepositoryPolicyResponse) {
         this.getRepositoryPolicyResponse = getRepositoryPolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetRepositoryPolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public GetRepositoryPolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class GetRepositoryPolicyResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public GetRepositoryPolicyResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class GetRepositoryPolicyResponse {
      */
     
     public Object repositoryPolicyNotFoundException;
+
     public GetRepositoryPolicyResponse withRepositoryPolicyNotFoundException(Object repositoryPolicyNotFoundException) {
         this.repositoryPolicyNotFoundException = repositoryPolicyNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetRepositoryPolicyResponse {
      */
     
     public Object serverException;
+
     public GetRepositoryPolicyResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -66,6 +73,7 @@ public class GetRepositoryPolicyResponse {
     
     
     public Integer statusCode;
+
     public GetRepositoryPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetRepositoryPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoryPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetRepositoryPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

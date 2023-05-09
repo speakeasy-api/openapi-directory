@@ -15,9 +15,11 @@ public class CreateProjectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public ProjectDetails details;
+
     public CreateProjectResult withDetails(ProjectDetails details) {
         this.details = details;
         return this;
     }
     
+    public CreateProjectResult(){}
 }

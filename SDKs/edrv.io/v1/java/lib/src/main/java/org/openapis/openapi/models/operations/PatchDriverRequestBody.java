@@ -15,6 +15,7 @@ public class PatchDriverRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public PatchDriverRequestBody withActive(Boolean active) {
         this.active = active;
         return this;
@@ -23,6 +24,7 @@ public class PatchDriverRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public PatchDriverRequestBodyAddress address;
+
     public PatchDriverRequestBody withAddress(PatchDriverRequestBodyAddress address) {
         this.address = address;
         return this;
@@ -31,6 +33,7 @@ public class PatchDriverRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public PatchDriverRequestBody withEmail(String email) {
         this.email = email;
         return this;
@@ -39,6 +42,7 @@ public class PatchDriverRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstname")
     public String firstname;
+
     public PatchDriverRequestBody withFirstname(String firstname) {
         this.firstname = firstname;
         return this;
@@ -47,6 +51,7 @@ public class PatchDriverRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastname")
     public String lastname;
+
     public PatchDriverRequestBody withLastname(String lastname) {
         this.lastname = lastname;
         return this;
@@ -55,6 +60,7 @@ public class PatchDriverRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public PatchDriverRequestBodyPhone phone;
+
     public PatchDriverRequestBody withPhone(PatchDriverRequestBodyPhone phone) {
         this.phone = phone;
         return this;
@@ -63,6 +69,7 @@ public class PatchDriverRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public PatchDriverRequestBody withSource(String source) {
         this.source = source;
         return this;
@@ -71,9 +78,11 @@ public class PatchDriverRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokens")
     public Object[] tokens;
+
     public PatchDriverRequestBody withTokens(Object[] tokens) {
         this.tokens = tokens;
         return this;
     }
     
+    public PatchDriverRequestBody(){}
 }

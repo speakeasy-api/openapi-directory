@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeactivateContactChannelResponse {
@@ -12,6 +13,7 @@ public class DeactivateContactChannelResponse {
      */
     
     public Object accessDeniedException;
+
     public DeactivateContactChannelResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeactivateContactChannelResponse {
     
     
     public String contentType;
+
     public DeactivateContactChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeactivateContactChannelResponse {
      */
     
     public java.util.Map<String, Object> deactivateContactChannelResult;
+
     public DeactivateContactChannelResponse withDeactivateContactChannelResult(java.util.Map<String, Object> deactivateContactChannelResult) {
         this.deactivateContactChannelResult = deactivateContactChannelResult;
         return this;
@@ -39,6 +43,7 @@ public class DeactivateContactChannelResponse {
      */
     
     public Object internalServerException;
+
     public DeactivateContactChannelResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeactivateContactChannelResponse {
     
     
     public Integer statusCode;
+
     public DeactivateContactChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeactivateContactChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeactivateContactChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeactivateContactChannelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeactivateContactChannelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DeactivateContactChannelResponse {
      */
     
     public Object throttlingException;
+
     public DeactivateContactChannelResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeactivateContactChannelResponse {
      */
     
     public Object validationException;
+
     public DeactivateContactChannelResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeactivateContactChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class Area {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AreaId")
     public Long areaId;
+
     public Area withAreaId(Long areaId) {
         this.areaId = areaId;
         return this;
@@ -20,6 +21,7 @@ public class Area {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CountryCode")
     public String countryCode;
+
     public Area withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -28,9 +30,11 @@ public class Area {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Area withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Area(){}
 }

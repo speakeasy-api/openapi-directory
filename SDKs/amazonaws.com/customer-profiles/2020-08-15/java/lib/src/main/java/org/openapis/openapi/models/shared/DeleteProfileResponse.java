@@ -15,9 +15,11 @@ public class DeleteProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public DeleteProfileResponse withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DeleteProfileResponse(){}
 }

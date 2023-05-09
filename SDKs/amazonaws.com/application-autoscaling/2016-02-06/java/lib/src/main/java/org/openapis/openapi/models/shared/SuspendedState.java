@@ -15,6 +15,7 @@ public class SuspendedState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DynamicScalingInSuspended")
     public Boolean dynamicScalingInSuspended;
+
     public SuspendedState withDynamicScalingInSuspended(Boolean dynamicScalingInSuspended) {
         this.dynamicScalingInSuspended = dynamicScalingInSuspended;
         return this;
@@ -23,6 +24,7 @@ public class SuspendedState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DynamicScalingOutSuspended")
     public Boolean dynamicScalingOutSuspended;
+
     public SuspendedState withDynamicScalingOutSuspended(Boolean dynamicScalingOutSuspended) {
         this.dynamicScalingOutSuspended = dynamicScalingOutSuspended;
         return this;
@@ -31,9 +33,11 @@ public class SuspendedState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduledScalingSuspended")
     public Boolean scheduledScalingSuspended;
+
     public SuspendedState withScheduledScalingSuspended(Boolean scheduledScalingSuspended) {
         this.scheduledScalingSuspended = scheduledScalingSuspended;
         return this;
     }
     
+    public SuspendedState(){}
 }

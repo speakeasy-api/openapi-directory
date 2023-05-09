@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGUISessionAccessDetailsResponse {
@@ -12,6 +13,7 @@ public class CreateGUISessionAccessDetailsResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateGUISessionAccessDetailsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateGUISessionAccessDetailsResponse {
     
     
     public String contentType;
+
     public CreateGUISessionAccessDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateGUISessionAccessDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateGUISessionAccessDetailsResult createGUISessionAccessDetailsResult;
+
     public CreateGUISessionAccessDetailsResponse withCreateGUISessionAccessDetailsResult(org.openapis.openapi.models.shared.CreateGUISessionAccessDetailsResult createGUISessionAccessDetailsResult) {
         this.createGUISessionAccessDetailsResult = createGUISessionAccessDetailsResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateGUISessionAccessDetailsResponse {
      */
     
     public Object invalidInputException;
+
     public CreateGUISessionAccessDetailsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class CreateGUISessionAccessDetailsResponse {
      */
     
     public Object notFoundException;
+
     public CreateGUISessionAccessDetailsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateGUISessionAccessDetailsResponse {
      */
     
     public Object serviceException;
+
     public CreateGUISessionAccessDetailsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class CreateGUISessionAccessDetailsResponse {
     
     
     public Integer statusCode;
+
     public CreateGUISessionAccessDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateGUISessionAccessDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGUISessionAccessDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateGUISessionAccessDetailsResponse {
      */
     
     public Object unauthenticatedException;
+
     public CreateGUISessionAccessDetailsResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public CreateGUISessionAccessDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class VpcEndpointFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public VpcEndpointStatusEnum status;
+
     public VpcEndpointFilters withStatus(VpcEndpointStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public VpcEndpointFilters(){}
 }

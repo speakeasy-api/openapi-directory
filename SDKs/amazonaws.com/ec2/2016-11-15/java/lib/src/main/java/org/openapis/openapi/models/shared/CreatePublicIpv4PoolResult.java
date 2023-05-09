@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreatePublicIpv4PoolResult {
     
     public String poolId;
+
     public CreatePublicIpv4PoolResult withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
     }
     
+    public CreatePublicIpv4PoolResult(){}
 }

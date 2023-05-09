@@ -18,6 +18,7 @@ public class RepricingRuleCostOfGoodsSaleRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentageDelta")
     public Integer percentageDelta;
+
     public RepricingRuleCostOfGoodsSaleRule withPercentageDelta(Integer percentageDelta) {
         this.percentageDelta = percentageDelta;
         return this;
@@ -29,9 +30,11 @@ public class RepricingRuleCostOfGoodsSaleRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceDelta")
     public String priceDelta;
+
     public RepricingRuleCostOfGoodsSaleRule withPriceDelta(String priceDelta) {
         this.priceDelta = priceDelta;
         return this;
     }
     
+    public RepricingRuleCostOfGoodsSaleRule(){}
 }

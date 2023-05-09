@@ -15,6 +15,7 @@ public class VideoConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avcLevel")
     public String avcLevel;
+
     public VideoConfiguration withAvcLevel(String avcLevel) {
         this.avcLevel = avcLevel;
         return this;
@@ -23,6 +24,7 @@ public class VideoConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avcProfile")
     public String avcProfile;
+
     public VideoConfiguration withAvcProfile(String avcProfile) {
         this.avcProfile = avcProfile;
         return this;
@@ -31,6 +33,7 @@ public class VideoConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codec")
     public String codec;
+
     public VideoConfiguration withCodec(String codec) {
         this.codec = codec;
         return this;
@@ -39,6 +42,7 @@ public class VideoConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encoder")
     public String encoder;
+
     public VideoConfiguration withEncoder(String encoder) {
         this.encoder = encoder;
         return this;
@@ -47,6 +51,7 @@ public class VideoConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetBitrate")
     public Long targetBitrate;
+
     public VideoConfiguration withTargetBitrate(Long targetBitrate) {
         this.targetBitrate = targetBitrate;
         return this;
@@ -55,6 +60,7 @@ public class VideoConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetFramerate")
     public Long targetFramerate;
+
     public VideoConfiguration withTargetFramerate(Long targetFramerate) {
         this.targetFramerate = targetFramerate;
         return this;
@@ -63,6 +69,7 @@ public class VideoConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoHeight")
     public Long videoHeight;
+
     public VideoConfiguration withVideoHeight(Long videoHeight) {
         this.videoHeight = videoHeight;
         return this;
@@ -71,9 +78,11 @@ public class VideoConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoWidth")
     public Long videoWidth;
+
     public VideoConfiguration withVideoWidth(Long videoWidth) {
         this.videoWidth = videoWidth;
         return this;
     }
     
+    public VideoConfiguration(){}
 }

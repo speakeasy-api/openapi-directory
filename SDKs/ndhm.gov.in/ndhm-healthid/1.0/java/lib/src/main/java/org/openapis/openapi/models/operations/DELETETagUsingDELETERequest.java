@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DELETETagUsingDELETERequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public DELETETagUsingDELETERequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +21,13 @@ public class DELETETagUsingDELETERequest {
      */
     @SpeakeasyMetadata("request:mediaType=*/*")
     public byte[] requestBody;
+
     public DELETETagUsingDELETERequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
     }
     
+    public DELETETagUsingDELETERequest(@JsonProperty("RequestBody") byte[] requestBody) {
+        this.requestBody = requestBody;
+  }
 }

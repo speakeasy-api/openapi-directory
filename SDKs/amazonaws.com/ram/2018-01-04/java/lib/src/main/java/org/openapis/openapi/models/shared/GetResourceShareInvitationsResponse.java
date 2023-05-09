@@ -15,6 +15,7 @@ public class GetResourceShareInvitationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetResourceShareInvitationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetResourceShareInvitationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceShareInvitations")
     public ResourceShareInvitation[] resourceShareInvitations;
+
     public GetResourceShareInvitationsResponse withResourceShareInvitations(ResourceShareInvitation[] resourceShareInvitations) {
         this.resourceShareInvitations = resourceShareInvitations;
         return this;
     }
     
+    public GetResourceShareInvitationsResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBranchesResponse {
@@ -12,6 +13,7 @@ public class GetBranchesResponse {
      */
     
     public GetBranches400ErrorObject fourHundredErrorObject;
+
     public GetBranchesResponse withFourHundredErrorObject(GetBranches400ErrorObject fourHundredErrorObject) {
         this.fourHundredErrorObject = fourHundredErrorObject;
         return this;
@@ -22,6 +24,7 @@ public class GetBranchesResponse {
      */
     
     public GetBranches408ErrorObject fourHundredAndEightErrorObject;
+
     public GetBranchesResponse withFourHundredAndEightErrorObject(GetBranches408ErrorObject fourHundredAndEightErrorObject) {
         this.fourHundredAndEightErrorObject = fourHundredAndEightErrorObject;
         return this;
@@ -32,6 +35,7 @@ public class GetBranchesResponse {
      */
     
     public GetBranches429ErrorObject fourHundredAndTwentyNineErrorObject;
+
     public GetBranchesResponse withFourHundredAndTwentyNineErrorObject(GetBranches429ErrorObject fourHundredAndTwentyNineErrorObject) {
         this.fourHundredAndTwentyNineErrorObject = fourHundredAndTwentyNineErrorObject;
         return this;
@@ -42,6 +46,7 @@ public class GetBranchesResponse {
      */
     
     public GetBranches500ErrorObject fiveHundredErrorObject;
+
     public GetBranchesResponse withFiveHundredErrorObject(GetBranches500ErrorObject fiveHundredErrorObject) {
         this.fiveHundredErrorObject = fiveHundredErrorObject;
         return this;
@@ -52,6 +57,7 @@ public class GetBranchesResponse {
      */
     
     public GetBranches503ErrorObject fiveHundredAndThreeErrorObject;
+
     public GetBranchesResponse withFiveHundredAndThreeErrorObject(GetBranches503ErrorObject fiveHundredAndThreeErrorObject) {
         this.fiveHundredAndThreeErrorObject = fiveHundredAndThreeErrorObject;
         return this;
@@ -59,6 +65,7 @@ public class GetBranchesResponse {
     
     
     public String contentType;
+
     public GetBranchesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class GetBranchesResponse {
      */
     
     public GetBranchesErrorObject errorObject;
+
     public GetBranchesResponse withErrorObject(GetBranchesErrorObject errorObject) {
         this.errorObject = errorObject;
         return this;
@@ -76,6 +84,7 @@ public class GetBranchesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetBranchesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -83,6 +92,7 @@ public class GetBranchesResponse {
     
     
     public Integer statusCode;
+
     public GetBranchesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -90,6 +100,7 @@ public class GetBranchesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBranchesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -100,9 +111,14 @@ public class GetBranchesResponse {
      */
     
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJson getBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonObject;
+
     public GetBranchesResponse withGetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonObject(GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJson getBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonObject) {
         this.getBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonObject = getBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonObject;
         return this;
     }
     
+    public GetBranchesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class AddApplicationReferenceDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationARN")
     public String applicationARN;
+
     public AddApplicationReferenceDataSourceResponse withApplicationARN(String applicationARN) {
         this.applicationARN = applicationARN;
         return this;
@@ -23,6 +24,7 @@ public class AddApplicationReferenceDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationVersionId")
     public Long applicationVersionId;
+
     public AddApplicationReferenceDataSourceResponse withApplicationVersionId(Long applicationVersionId) {
         this.applicationVersionId = applicationVersionId;
         return this;
@@ -31,9 +33,11 @@ public class AddApplicationReferenceDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferenceDataSourceDescriptions")
     public ReferenceDataSourceDescription[] referenceDataSourceDescriptions;
+
     public AddApplicationReferenceDataSourceResponse withReferenceDataSourceDescriptions(ReferenceDataSourceDescription[] referenceDataSourceDescriptions) {
         this.referenceDataSourceDescriptions = referenceDataSourceDescriptions;
         return this;
     }
     
+    public AddApplicationReferenceDataSourceResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartOnDemandAppReplicationResponse {
     
     public String contentType;
+
     public StartOnDemandAppReplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartOnDemandAppReplicationResponse {
      */
     
     public Object internalError;
+
     public StartOnDemandAppReplicationResponse withInternalError(Object internalError) {
         this.internalError = internalError;
         return this;
@@ -29,6 +32,7 @@ public class StartOnDemandAppReplicationResponse {
      */
     
     public Object invalidParameterException;
+
     public StartOnDemandAppReplicationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class StartOnDemandAppReplicationResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public StartOnDemandAppReplicationResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -49,6 +54,7 @@ public class StartOnDemandAppReplicationResponse {
      */
     
     public Object operationNotPermittedException;
+
     public StartOnDemandAppReplicationResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -59,6 +65,7 @@ public class StartOnDemandAppReplicationResponse {
      */
     
     public java.util.Map<String, Object> startOnDemandAppReplicationResponse;
+
     public StartOnDemandAppReplicationResponse withStartOnDemandAppReplicationResponse(java.util.Map<String, Object> startOnDemandAppReplicationResponse) {
         this.startOnDemandAppReplicationResponse = startOnDemandAppReplicationResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartOnDemandAppReplicationResponse {
     
     
     public Integer statusCode;
+
     public StartOnDemandAppReplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartOnDemandAppReplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartOnDemandAppReplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class StartOnDemandAppReplicationResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public StartOnDemandAppReplicationResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public StartOnDemandAppReplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

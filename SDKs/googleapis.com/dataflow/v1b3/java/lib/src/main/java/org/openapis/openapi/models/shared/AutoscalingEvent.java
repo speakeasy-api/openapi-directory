@@ -18,6 +18,7 @@ public class AutoscalingEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentNumWorkers")
     public String currentNumWorkers;
+
     public AutoscalingEvent withCurrentNumWorkers(String currentNumWorkers) {
         this.currentNumWorkers = currentNumWorkers;
         return this;
@@ -29,6 +30,7 @@ public class AutoscalingEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public StructuredMessage description;
+
     public AutoscalingEvent withDescription(StructuredMessage description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class AutoscalingEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public AutoscalingEventEventTypeEnum eventType;
+
     public AutoscalingEvent withEventType(AutoscalingEventEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -51,6 +54,7 @@ public class AutoscalingEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetNumWorkers")
     public String targetNumWorkers;
+
     public AutoscalingEvent withTargetNumWorkers(String targetNumWorkers) {
         this.targetNumWorkers = targetNumWorkers;
         return this;
@@ -62,6 +66,7 @@ public class AutoscalingEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public String time;
+
     public AutoscalingEvent withTime(String time) {
         this.time = time;
         return this;
@@ -73,9 +78,11 @@ public class AutoscalingEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerPool")
     public String workerPool;
+
     public AutoscalingEvent withWorkerPool(String workerPool) {
         this.workerPool = workerPool;
         return this;
     }
     
+    public AutoscalingEvent(){}
 }

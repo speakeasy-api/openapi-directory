@@ -15,6 +15,7 @@ public class ListEnvironmentTemplatesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListEnvironmentTemplatesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListEnvironmentTemplatesOutput {
     
     @JsonProperty("templates")
     public EnvironmentTemplateSummary[] templates;
+
     public ListEnvironmentTemplatesOutput withTemplates(EnvironmentTemplateSummary[] templates) {
         this.templates = templates;
         return this;
     }
     
+    public ListEnvironmentTemplatesOutput(@JsonProperty("templates") EnvironmentTemplateSummary[] templates) {
+        this.templates = templates;
+  }
 }

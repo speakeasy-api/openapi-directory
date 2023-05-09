@@ -12,6 +12,7 @@ public class RedactTransaction {
      */
     @JsonProperty("id")
     public String id;
+
     public RedactTransaction withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class RedactTransaction {
      */
     @JsonProperty("product")
     public RedactTransactionProductEnum product;
+
     public RedactTransaction withProduct(RedactTransactionProductEnum product) {
         this.product = product;
         return this;
@@ -32,9 +34,15 @@ public class RedactTransaction {
      */
     @JsonProperty("type")
     public RedactTransactionTypeEnum type;
+
     public RedactTransaction withType(RedactTransactionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RedactTransaction(@JsonProperty("id") String id, @JsonProperty("product") RedactTransactionProductEnum product, @JsonProperty("type") RedactTransactionTypeEnum type) {
+        this.id = id;
+        this.product = product;
+        this.type = type;
+  }
 }

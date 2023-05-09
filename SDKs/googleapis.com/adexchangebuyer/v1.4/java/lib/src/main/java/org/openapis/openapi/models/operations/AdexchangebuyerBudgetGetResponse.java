@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdexchangebuyerBudgetGetResponse {
@@ -12,6 +13,7 @@ public class AdexchangebuyerBudgetGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Budget budget;
+
     public AdexchangebuyerBudgetGetResponse withBudget(org.openapis.openapi.models.shared.Budget budget) {
         this.budget = budget;
         return this;
@@ -19,6 +21,7 @@ public class AdexchangebuyerBudgetGetResponse {
     
     
     public String contentType;
+
     public AdexchangebuyerBudgetGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AdexchangebuyerBudgetGetResponse {
     
     
     public Integer statusCode;
+
     public AdexchangebuyerBudgetGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AdexchangebuyerBudgetGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdexchangebuyerBudgetGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AdexchangebuyerBudgetGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

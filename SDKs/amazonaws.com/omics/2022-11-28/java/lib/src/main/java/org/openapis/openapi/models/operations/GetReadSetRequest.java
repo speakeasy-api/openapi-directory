@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReadSetRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetReadSetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class GetReadSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetReadSetRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class GetReadSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetReadSetRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class GetReadSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetReadSetRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class GetReadSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetReadSetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class GetReadSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetReadSetRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class GetReadSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetReadSetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class GetReadSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=file")
     public GetReadSetFileEnum file;
+
     public GetReadSetRequest withFile(GetReadSetFileEnum file) {
         this.file = file;
         return this;
@@ -71,6 +80,7 @@ public class GetReadSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetReadSetRequest withId(String id) {
         this.id = id;
         return this;
@@ -81,6 +91,7 @@ public class GetReadSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partNumber")
     public Long partNumber;
+
     public GetReadSetRequest withPartNumber(Long partNumber) {
         this.partNumber = partNumber;
         return this;
@@ -91,9 +102,15 @@ public class GetReadSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sequenceStoreId")
     public String sequenceStoreId;
+
     public GetReadSetRequest withSequenceStoreId(String sequenceStoreId) {
         this.sequenceStoreId = sequenceStoreId;
         return this;
     }
     
+    public GetReadSetRequest(@JsonProperty("id") String id, @JsonProperty("partNumber") Long partNumber, @JsonProperty("sequenceStoreId") String sequenceStoreId) {
+        this.id = id;
+        this.partNumber = partNumber;
+        this.sequenceStoreId = sequenceStoreId;
+  }
 }

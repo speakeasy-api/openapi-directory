@@ -18,9 +18,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionCancellationDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionCancellationDetailsReasonEnum reason;
+
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionCancellationDetails withReason(GoogleCloudPaymentsResellerSubscriptionV1SubscriptionCancellationDetailsReasonEnum reason) {
         this.reason = reason;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionCancellationDetails(){}
 }

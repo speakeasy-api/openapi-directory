@@ -57,14 +57,12 @@ public class VirtualBillingMeterDeactivate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VirtualBillingMeterDeactivatePostFormResponse res = new org.openapis.openapi.models.operations.VirtualBillingMeterDeactivatePostFormResponse() {{
+        org.openapis.openapi.models.operations.VirtualBillingMeterDeactivatePostFormResponse res = new org.openapis.openapi.models.operations.VirtualBillingMeterDeactivatePostFormResponse(contentType, httpRes.statusCode()) {{
             object = null;
             object = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -119,14 +117,12 @@ public class VirtualBillingMeterDeactivate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VirtualBillingMeterDeactivatePostJsonResponse res = new org.openapis.openapi.models.operations.VirtualBillingMeterDeactivatePostJsonResponse() {{
+        org.openapis.openapi.models.operations.VirtualBillingMeterDeactivatePostJsonResponse res = new org.openapis.openapi.models.operations.VirtualBillingMeterDeactivatePostJsonResponse(contentType, httpRes.statusCode()) {{
             object = null;
             object = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -181,14 +177,12 @@ public class VirtualBillingMeterDeactivate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VirtualBillingMeterDeactivatePostRawResponse res = new org.openapis.openapi.models.operations.VirtualBillingMeterDeactivatePostRawResponse() {{
+        org.openapis.openapi.models.operations.VirtualBillingMeterDeactivatePostRawResponse res = new org.openapis.openapi.models.operations.VirtualBillingMeterDeactivatePostRawResponse(contentType, httpRes.statusCode()) {{
             object = null;
             object = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

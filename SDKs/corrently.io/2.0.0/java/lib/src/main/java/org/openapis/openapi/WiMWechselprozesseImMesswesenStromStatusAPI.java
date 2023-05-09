@@ -61,11 +61,9 @@ public class WiMWechselprozesseImMesswesenStromStatusAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WimstatusResponse res = new org.openapis.openapi.models.operations.WimstatusResponse() {{
+        org.openapis.openapi.models.operations.WimstatusResponse res = new org.openapis.openapi.models.operations.WimstatusResponse(contentType, httpRes.statusCode()) {{
             wimstatus200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

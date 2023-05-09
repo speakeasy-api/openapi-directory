@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTeamMemberOfProjectRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public String projectId;
+
     public DeleteTeamMemberOfProjectRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -16,6 +18,7 @@ public class DeleteTeamMemberOfProjectRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=teammember_id")
     public String teammemberId;
+
     public DeleteTeamMemberOfProjectRequest withTeammemberId(String teammemberId) {
         this.teammemberId = teammemberId;
         return this;
@@ -23,9 +26,15 @@ public class DeleteTeamMemberOfProjectRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
     public String workgroupId;
+
     public DeleteTeamMemberOfProjectRequest withWorkgroupId(String workgroupId) {
         this.workgroupId = workgroupId;
         return this;
     }
     
+    public DeleteTeamMemberOfProjectRequest(@JsonProperty("project_id") String projectId, @JsonProperty("teammember_id") String teammemberId, @JsonProperty("workgroup_id") String workgroupId) {
+        this.projectId = projectId;
+        this.teammemberId = teammemberId;
+        this.workgroupId = workgroupId;
+  }
 }

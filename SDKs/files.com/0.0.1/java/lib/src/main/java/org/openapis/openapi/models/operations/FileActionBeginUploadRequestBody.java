@@ -12,6 +12,7 @@ public class FileActionBeginUploadRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=mkdir_parents")
     public Boolean mkdirParents;
+
     public FileActionBeginUploadRequestBody withMkdirParents(Boolean mkdirParents) {
         this.mkdirParents = mkdirParents;
         return this;
@@ -22,6 +23,7 @@ public class FileActionBeginUploadRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=part")
     public Integer part;
+
     public FileActionBeginUploadRequestBody withPart(Integer part) {
         this.part = part;
         return this;
@@ -32,6 +34,7 @@ public class FileActionBeginUploadRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=parts")
     public Integer parts;
+
     public FileActionBeginUploadRequestBody withParts(Integer parts) {
         this.parts = parts;
         return this;
@@ -39,6 +42,7 @@ public class FileActionBeginUploadRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=ref")
     public String ref;
+
     public FileActionBeginUploadRequestBody withRef(String ref) {
         this.ref = ref;
         return this;
@@ -49,6 +53,7 @@ public class FileActionBeginUploadRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=restart")
     public Integer restart;
+
     public FileActionBeginUploadRequestBody withRestart(Integer restart) {
         this.restart = restart;
         return this;
@@ -59,6 +64,7 @@ public class FileActionBeginUploadRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=size")
     public Integer size;
+
     public FileActionBeginUploadRequestBody withSize(Integer size) {
         this.size = size;
         return this;
@@ -69,9 +75,11 @@ public class FileActionBeginUploadRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=with_rename")
     public Boolean withRename;
+
     public FileActionBeginUploadRequestBody withWithRename(Boolean withRename) {
         this.withRename = withRename;
         return this;
     }
     
+    public FileActionBeginUploadRequestBody(){}
 }

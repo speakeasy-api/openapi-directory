@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRuntimeConfigurationResponse {
     
     public String contentType;
+
     public UpdateRuntimeConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateRuntimeConfigurationResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateRuntimeConfigurationResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRuntimeConfigurationResponse {
      */
     
     public Object invalidFleetStatusException;
+
     public UpdateRuntimeConfigurationResponse withInvalidFleetStatusException(Object invalidFleetStatusException) {
         this.invalidFleetStatusException = invalidFleetStatusException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateRuntimeConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateRuntimeConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateRuntimeConfigurationResponse {
      */
     
     public Object notFoundException;
+
     public UpdateRuntimeConfigurationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateRuntimeConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateRuntimeConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateRuntimeConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRuntimeConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateRuntimeConfigurationResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateRuntimeConfigurationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateRuntimeConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateRuntimeConfigurationOutput updateRuntimeConfigurationOutput;
+
     public UpdateRuntimeConfigurationResponse withUpdateRuntimeConfigurationOutput(org.openapis.openapi.models.shared.UpdateRuntimeConfigurationOutput updateRuntimeConfigurationOutput) {
         this.updateRuntimeConfigurationOutput = updateRuntimeConfigurationOutput;
         return this;
     }
     
+    public UpdateRuntimeConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

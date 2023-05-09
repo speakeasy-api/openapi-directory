@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInvestorRequest {
@@ -12,6 +13,7 @@ public class GetInvestorRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=investor_id")
     public String investorId;
+
     public GetInvestorRequest withInvestorId(String investorId) {
         this.investorId = investorId;
         return this;
@@ -22,9 +24,14 @@ public class GetInvestorRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public GetInvestorRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public GetInvestorRequest(@JsonProperty("investor_id") String investorId, @JsonProperty("x-api-key") String xApiKey) {
+        this.investorId = investorId;
+        this.xApiKey = xApiKey;
+  }
 }

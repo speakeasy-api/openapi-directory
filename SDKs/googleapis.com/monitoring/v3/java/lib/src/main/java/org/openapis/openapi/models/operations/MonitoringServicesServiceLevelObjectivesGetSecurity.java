@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class MonitoringServicesServiceLevelObjectivesGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public MonitoringServicesServiceLevelObjectivesGetSecurityOption1 option1;
+
     public MonitoringServicesServiceLevelObjectivesGetSecurity withOption1(MonitoringServicesServiceLevelObjectivesGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class MonitoringServicesServiceLevelObjectivesGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public MonitoringServicesServiceLevelObjectivesGetSecurityOption2 option2;
+
     public MonitoringServicesServiceLevelObjectivesGetSecurity withOption2(MonitoringServicesServiceLevelObjectivesGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class MonitoringServicesServiceLevelObjectivesGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public MonitoringServicesServiceLevelObjectivesGetSecurityOption3 option3;
+
     public MonitoringServicesServiceLevelObjectivesGetSecurity withOption3(MonitoringServicesServiceLevelObjectivesGetSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,9 +33,11 @@ public class MonitoringServicesServiceLevelObjectivesGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public MonitoringServicesServiceLevelObjectivesGetSecurityOption4 option4;
+
     public MonitoringServicesServiceLevelObjectivesGetSecurity withOption4(MonitoringServicesServiceLevelObjectivesGetSecurityOption4 option4) {
         this.option4 = option4;
         return this;
     }
     
+    public MonitoringServicesServiceLevelObjectivesGetSecurity(){}
 }

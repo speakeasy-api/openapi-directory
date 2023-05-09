@@ -15,6 +15,7 @@ public class DocumentParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DocumentParameter withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class DocumentParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("example")
     public String example;
+
     public DocumentParameter withExample(String example) {
         this.example = example;
         return this;
@@ -31,6 +33,7 @@ public class DocumentParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public DocumentParameter withKey(String key) {
         this.key = key;
         return this;
@@ -39,6 +42,7 @@ public class DocumentParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optional")
     public Boolean optional;
+
     public DocumentParameter withOptional(Boolean optional) {
         this.optional = optional;
         return this;
@@ -47,9 +51,11 @@ public class DocumentParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regex")
     public String regex;
+
     public DocumentParameter withRegex(String regex) {
         this.regex = regex;
         return this;
     }
     
+    public DocumentParameter(){}
 }

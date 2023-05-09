@@ -15,9 +15,13 @@ public class PutPrimaryIpsIdPrimaryIPResponsePrimaryIPProtection {
      */
     @JsonProperty("delete")
     public Boolean delete;
+
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIPProtection withDelete(Boolean delete) {
         this.delete = delete;
         return this;
     }
     
+    public PutPrimaryIpsIdPrimaryIPResponsePrimaryIPProtection(@JsonProperty("delete") Boolean delete) {
+        this.delete = delete;
+  }
 }

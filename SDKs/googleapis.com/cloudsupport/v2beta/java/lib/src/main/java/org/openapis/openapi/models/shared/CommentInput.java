@@ -18,6 +18,7 @@ public class CommentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public CommentInput withBody(String body) {
         this.body = body;
         return this;
@@ -29,9 +30,11 @@ public class CommentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator")
     public ActorInput creator;
+
     public CommentInput withCreator(ActorInput creator) {
         this.creator = creator;
         return this;
     }
     
+    public CommentInput(){}
 }

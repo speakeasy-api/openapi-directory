@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VpcConfiguration {
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public VpcConfiguration withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -21,6 +22,7 @@ public class VpcConfiguration {
     
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public VpcConfiguration withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -29,6 +31,7 @@ public class VpcConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TlsCertificate")
     public String tlsCertificate;
+
     public VpcConfiguration withTlsCertificate(String tlsCertificate) {
         this.tlsCertificate = tlsCertificate;
         return this;
@@ -36,9 +39,15 @@ public class VpcConfiguration {
     
     @JsonProperty("VpcId")
     public String vpcId;
+
     public VpcConfiguration withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public VpcConfiguration(@JsonProperty("SecurityGroupIds") String[] securityGroupIds, @JsonProperty("SubnetIds") String[] subnetIds, @JsonProperty("VpcId") String vpcId) {
+        this.securityGroupIds = securityGroupIds;
+        this.subnetIds = subnetIds;
+        this.vpcId = vpcId;
+  }
 }

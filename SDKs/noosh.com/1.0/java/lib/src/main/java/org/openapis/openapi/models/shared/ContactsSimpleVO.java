@@ -15,6 +15,7 @@ public class ContactsSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public ContactsSimpleVO withAddress(String address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class ContactsSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     public String companyName;
+
     public ContactsSimpleVO withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -31,6 +33,7 @@ public class ContactsSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ContactsSimpleVO withEmail(String email) {
         this.email = email;
         return this;
@@ -39,6 +42,7 @@ public class ContactsSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public ContactsSimpleVO withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -47,6 +51,7 @@ public class ContactsSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public ContactsSimpleVO withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -55,6 +60,7 @@ public class ContactsSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_phone")
     public String primaryPhone;
+
     public ContactsSimpleVO withPrimaryPhone(String primaryPhone) {
         this.primaryPhone = primaryPhone;
         return this;
@@ -63,6 +69,7 @@ public class ContactsSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public Long userId;
+
     public ContactsSimpleVO withUserId(Long userId) {
         this.userId = userId;
         return this;
@@ -71,9 +78,11 @@ public class ContactsSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workgroup_name")
     public String workgroupName;
+
     public ContactsSimpleVO withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public ContactsSimpleVO(){}
 }

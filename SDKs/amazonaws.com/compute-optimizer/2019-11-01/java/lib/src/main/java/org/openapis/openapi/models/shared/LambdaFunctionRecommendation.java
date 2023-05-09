@@ -20,6 +20,7 @@ public class LambdaFunctionRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public LambdaFunctionRecommendation withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -28,6 +29,7 @@ public class LambdaFunctionRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentMemorySize")
     public Long currentMemorySize;
+
     public LambdaFunctionRecommendation withCurrentMemorySize(Long currentMemorySize) {
         this.currentMemorySize = currentMemorySize;
         return this;
@@ -36,6 +38,7 @@ public class LambdaFunctionRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentPerformanceRisk")
     public CurrentPerformanceRiskEnum currentPerformanceRisk;
+
     public LambdaFunctionRecommendation withCurrentPerformanceRisk(CurrentPerformanceRiskEnum currentPerformanceRisk) {
         this.currentPerformanceRisk = currentPerformanceRisk;
         return this;
@@ -44,6 +47,7 @@ public class LambdaFunctionRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finding")
     public LambdaFunctionRecommendationFindingEnum finding;
+
     public LambdaFunctionRecommendation withFinding(LambdaFunctionRecommendationFindingEnum finding) {
         this.finding = finding;
         return this;
@@ -52,6 +56,7 @@ public class LambdaFunctionRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingReasonCodes")
     public LambdaFunctionRecommendationFindingReasonCodeEnum[] findingReasonCodes;
+
     public LambdaFunctionRecommendation withFindingReasonCodes(LambdaFunctionRecommendationFindingReasonCodeEnum[] findingReasonCodes) {
         this.findingReasonCodes = findingReasonCodes;
         return this;
@@ -60,6 +65,7 @@ public class LambdaFunctionRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functionArn")
     public String functionArn;
+
     public LambdaFunctionRecommendation withFunctionArn(String functionArn) {
         this.functionArn = functionArn;
         return this;
@@ -68,6 +74,7 @@ public class LambdaFunctionRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functionVersion")
     public String functionVersion;
+
     public LambdaFunctionRecommendation withFunctionVersion(String functionVersion) {
         this.functionVersion = functionVersion;
         return this;
@@ -78,6 +85,7 @@ public class LambdaFunctionRecommendation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastRefreshTimestamp")
     public OffsetDateTime lastRefreshTimestamp;
+
     public LambdaFunctionRecommendation withLastRefreshTimestamp(OffsetDateTime lastRefreshTimestamp) {
         this.lastRefreshTimestamp = lastRefreshTimestamp;
         return this;
@@ -86,6 +94,7 @@ public class LambdaFunctionRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lookbackPeriodInDays")
     public Double lookbackPeriodInDays;
+
     public LambdaFunctionRecommendation withLookbackPeriodInDays(Double lookbackPeriodInDays) {
         this.lookbackPeriodInDays = lookbackPeriodInDays;
         return this;
@@ -94,6 +103,7 @@ public class LambdaFunctionRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memorySizeRecommendationOptions")
     public LambdaFunctionMemoryRecommendationOption[] memorySizeRecommendationOptions;
+
     public LambdaFunctionRecommendation withMemorySizeRecommendationOptions(LambdaFunctionMemoryRecommendationOption[] memorySizeRecommendationOptions) {
         this.memorySizeRecommendationOptions = memorySizeRecommendationOptions;
         return this;
@@ -102,6 +112,7 @@ public class LambdaFunctionRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfInvocations")
     public Long numberOfInvocations;
+
     public LambdaFunctionRecommendation withNumberOfInvocations(Long numberOfInvocations) {
         this.numberOfInvocations = numberOfInvocations;
         return this;
@@ -110,9 +121,11 @@ public class LambdaFunctionRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utilizationMetrics")
     public LambdaFunctionUtilizationMetric[] utilizationMetrics;
+
     public LambdaFunctionRecommendation withUtilizationMetrics(LambdaFunctionUtilizationMetric[] utilizationMetrics) {
         this.utilizationMetrics = utilizationMetrics;
         return this;
     }
     
+    public LambdaFunctionRecommendation(){}
 }

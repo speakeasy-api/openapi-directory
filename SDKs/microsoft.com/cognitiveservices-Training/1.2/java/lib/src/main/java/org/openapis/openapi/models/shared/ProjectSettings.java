@@ -18,9 +18,11 @@ public class ProjectSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainId")
     public String domainId;
+
     public ProjectSettings withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
     }
     
+    public ProjectSettings(){}
 }

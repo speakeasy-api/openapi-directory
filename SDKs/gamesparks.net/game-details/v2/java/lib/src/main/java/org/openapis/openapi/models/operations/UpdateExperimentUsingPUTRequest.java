@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateExperimentUsingPUTRequest {
@@ -12,6 +13,7 @@ public class UpdateExperimentUsingPUTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ExperimentModel experimentModel;
+
     public UpdateExperimentUsingPUTRequest withExperimentModel(org.openapis.openapi.models.shared.ExperimentModel experimentModel) {
         this.experimentModel = experimentModel;
         return this;
@@ -22,6 +24,7 @@ public class UpdateExperimentUsingPUTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public UpdateExperimentUsingPUTRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -32,9 +35,15 @@ public class UpdateExperimentUsingPUTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public UpdateExperimentUsingPUTRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public UpdateExperimentUsingPUTRequest(@JsonProperty("ExperimentModel") org.openapis.openapi.models.shared.ExperimentModel experimentModel, @JsonProperty("apiKey") String apiKey, @JsonProperty("id") Long id) {
+        this.experimentModel = experimentModel;
+        this.apiKey = apiKey;
+        this.id = id;
+  }
 }

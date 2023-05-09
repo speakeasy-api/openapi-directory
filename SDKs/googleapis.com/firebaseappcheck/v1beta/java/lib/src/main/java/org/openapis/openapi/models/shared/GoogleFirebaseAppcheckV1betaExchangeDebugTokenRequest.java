@@ -18,9 +18,11 @@ public class GoogleFirebaseAppcheckV1betaExchangeDebugTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debugToken")
     public String debugToken;
+
     public GoogleFirebaseAppcheckV1betaExchangeDebugTokenRequest withDebugToken(String debugToken) {
         this.debugToken = debugToken;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1betaExchangeDebugTokenRequest(){}
 }

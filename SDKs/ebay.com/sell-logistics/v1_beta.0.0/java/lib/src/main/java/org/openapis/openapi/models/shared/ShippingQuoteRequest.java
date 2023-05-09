@@ -18,6 +18,7 @@ public class ShippingQuoteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orders")
     public Order[] orders;
+
     public ShippingQuoteRequest withOrders(Order[] orders) {
         this.orders = orders;
         return this;
@@ -29,6 +30,7 @@ public class ShippingQuoteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageSpecification")
     public PackageSpecification packageSpecification;
+
     public ShippingQuoteRequest withPackageSpecification(PackageSpecification packageSpecification) {
         this.packageSpecification = packageSpecification;
         return this;
@@ -40,6 +42,7 @@ public class ShippingQuoteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipFrom")
     public Contact shipFrom;
+
     public ShippingQuoteRequest withShipFrom(Contact shipFrom) {
         this.shipFrom = shipFrom;
         return this;
@@ -51,9 +54,11 @@ public class ShippingQuoteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipTo")
     public Contact shipTo;
+
     public ShippingQuoteRequest withShipTo(Contact shipTo) {
         this.shipTo = shipTo;
         return this;
     }
     
+    public ShippingQuoteRequest(){}
 }

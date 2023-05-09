@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DisassociateGlobalReplicationGroupMessage {
     
     public String globalReplicationGroupId;
+
     public DisassociateGlobalReplicationGroupMessage withGlobalReplicationGroupId(String globalReplicationGroupId) {
         this.globalReplicationGroupId = globalReplicationGroupId;
         return this;
@@ -16,6 +17,7 @@ public class DisassociateGlobalReplicationGroupMessage {
     
     
     public String replicationGroupId;
+
     public DisassociateGlobalReplicationGroupMessage withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
@@ -23,9 +25,15 @@ public class DisassociateGlobalReplicationGroupMessage {
     
     
     public String replicationGroupRegion;
+
     public DisassociateGlobalReplicationGroupMessage withReplicationGroupRegion(String replicationGroupRegion) {
         this.replicationGroupRegion = replicationGroupRegion;
         return this;
     }
     
+    public DisassociateGlobalReplicationGroupMessage(@JsonProperty("GlobalReplicationGroupId") String globalReplicationGroupId, @JsonProperty("ReplicationGroupId") String replicationGroupId, @JsonProperty("ReplicationGroupRegion") String replicationGroupRegion) {
+        this.globalReplicationGroupId = globalReplicationGroupId;
+        this.replicationGroupId = replicationGroupId;
+        this.replicationGroupRegion = replicationGroupRegion;
+  }
 }

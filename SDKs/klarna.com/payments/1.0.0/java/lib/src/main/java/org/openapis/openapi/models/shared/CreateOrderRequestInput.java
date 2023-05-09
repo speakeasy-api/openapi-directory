@@ -15,6 +15,7 @@ public class CreateOrderRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auto_capture")
     public Boolean autoCapture;
+
     public CreateOrderRequestInput withAutoCapture(Boolean autoCapture) {
         this.autoCapture = autoCapture;
         return this;
@@ -23,6 +24,7 @@ public class CreateOrderRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_address")
     public Address billingAddress;
+
     public CreateOrderRequestInput withBillingAddress(Address billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -34,6 +36,7 @@ public class CreateOrderRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_payment_method_ids")
     public String[] customPaymentMethodIds;
+
     public CreateOrderRequestInput withCustomPaymentMethodIds(String[] customPaymentMethodIds) {
         this.customPaymentMethodIds = customPaymentMethodIds;
         return this;
@@ -42,6 +45,7 @@ public class CreateOrderRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer")
     public Customer customer;
+
     public CreateOrderRequestInput withCustomer(Customer customer) {
         this.customer = customer;
         return this;
@@ -69,6 +73,7 @@ public class CreateOrderRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public CreateOrderRequestInput withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -80,6 +85,7 @@ public class CreateOrderRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_data")
     public String merchantData;
+
     public CreateOrderRequestInput withMerchantData(String merchantData) {
         this.merchantData = merchantData;
         return this;
@@ -91,6 +97,7 @@ public class CreateOrderRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_reference1")
     public String merchantReference1;
+
     public CreateOrderRequestInput withMerchantReference1(String merchantReference1) {
         this.merchantReference1 = merchantReference1;
         return this;
@@ -102,6 +109,7 @@ public class CreateOrderRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_reference2")
     public String merchantReference2;
+
     public CreateOrderRequestInput withMerchantReference2(String merchantReference2) {
         this.merchantReference2 = merchantReference2;
         return this;
@@ -110,6 +118,7 @@ public class CreateOrderRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_urls")
     public MerchantUrls merchantUrls;
+
     public CreateOrderRequestInput withMerchantUrls(MerchantUrls merchantUrls) {
         this.merchantUrls = merchantUrls;
         return this;
@@ -120,6 +129,7 @@ public class CreateOrderRequestInput {
      */
     @JsonProperty("order_amount")
     public Long orderAmount;
+
     public CreateOrderRequestInput withOrderAmount(Long orderAmount) {
         this.orderAmount = orderAmount;
         return this;
@@ -130,6 +140,7 @@ public class CreateOrderRequestInput {
      */
     @JsonProperty("order_lines")
     public OrderLine[] orderLines;
+
     public CreateOrderRequestInput withOrderLines(OrderLine[] orderLines) {
         this.orderLines = orderLines;
         return this;
@@ -141,6 +152,7 @@ public class CreateOrderRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_tax_amount")
     public Long orderTaxAmount;
+
     public CreateOrderRequestInput withOrderTaxAmount(Long orderTaxAmount) {
         this.orderTaxAmount = orderTaxAmount;
         return this;
@@ -151,6 +163,7 @@ public class CreateOrderRequestInput {
      */
     @JsonProperty("purchase_country")
     public String purchaseCountry;
+
     public CreateOrderRequestInput withPurchaseCountry(String purchaseCountry) {
         this.purchaseCountry = purchaseCountry;
         return this;
@@ -161,6 +174,7 @@ public class CreateOrderRequestInput {
      */
     @JsonProperty("purchase_currency")
     public String purchaseCurrency;
+
     public CreateOrderRequestInput withPurchaseCurrency(String purchaseCurrency) {
         this.purchaseCurrency = purchaseCurrency;
         return this;
@@ -169,9 +183,16 @@ public class CreateOrderRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_address")
     public Address shippingAddress;
+
     public CreateOrderRequestInput withShippingAddress(Address shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
     }
     
+    public CreateOrderRequestInput(@JsonProperty("order_amount") Long orderAmount, @JsonProperty("order_lines") OrderLine[] orderLines, @JsonProperty("purchase_country") String purchaseCountry, @JsonProperty("purchase_currency") String purchaseCurrency) {
+        this.orderAmount = orderAmount;
+        this.orderLines = orderLines;
+        this.purchaseCountry = purchaseCountry;
+        this.purchaseCurrency = purchaseCurrency;
+  }
 }

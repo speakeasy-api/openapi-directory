@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EventBridgeDataSourceConfig {
     @JsonProperty("eventBusArn")
     public String eventBusArn;
+
     public EventBridgeDataSourceConfig withEventBusArn(String eventBusArn) {
         this.eventBusArn = eventBusArn;
         return this;
     }
     
+    public EventBridgeDataSourceConfig(@JsonProperty("eventBusArn") String eventBusArn) {
+        this.eventBusArn = eventBusArn;
+  }
 }

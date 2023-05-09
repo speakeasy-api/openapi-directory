@@ -18,9 +18,11 @@ public class GroupLicenseUsersListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public User[] user;
+
     public GroupLicenseUsersListResponse withUser(User[] user) {
         this.user = user;
         return this;
     }
     
+    public GroupLicenseUsersListResponse(){}
 }

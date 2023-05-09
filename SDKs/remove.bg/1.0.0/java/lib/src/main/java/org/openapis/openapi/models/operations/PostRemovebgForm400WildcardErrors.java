@@ -12,6 +12,7 @@ public class PostRemovebgForm400WildcardErrors {
      */
     
     public String code;
+
     public PostRemovebgForm400WildcardErrors withCode(String code) {
         this.code = code;
         return this;
@@ -22,6 +23,7 @@ public class PostRemovebgForm400WildcardErrors {
      */
     
     public String detail;
+
     public PostRemovebgForm400WildcardErrors withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -32,9 +34,11 @@ public class PostRemovebgForm400WildcardErrors {
      */
     
     public String title;
+
     public PostRemovebgForm400WildcardErrors withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PostRemovebgForm400WildcardErrors(){}
 }

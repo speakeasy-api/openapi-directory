@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TerminateInstanceInAutoScalingGroupType {
     
     public String instanceId;
+
     public TerminateInstanceInAutoScalingGroupType withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -16,9 +17,14 @@ public class TerminateInstanceInAutoScalingGroupType {
     
     
     public Boolean shouldDecrementDesiredCapacity;
+
     public TerminateInstanceInAutoScalingGroupType withShouldDecrementDesiredCapacity(Boolean shouldDecrementDesiredCapacity) {
         this.shouldDecrementDesiredCapacity = shouldDecrementDesiredCapacity;
         return this;
     }
     
+    public TerminateInstanceInAutoScalingGroupType(@JsonProperty("InstanceId") String instanceId, @JsonProperty("ShouldDecrementDesiredCapacity") Boolean shouldDecrementDesiredCapacity) {
+        this.instanceId = instanceId;
+        this.shouldDecrementDesiredCapacity = shouldDecrementDesiredCapacity;
+  }
 }

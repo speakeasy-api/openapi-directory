@@ -12,6 +12,7 @@ public class CreateLogGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public CreateLogGroupRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -19,6 +20,7 @@ public class CreateLogGroupRequest {
     
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public CreateLogGroupRequest withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -27,9 +29,13 @@ public class CreateLogGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateLogGroupRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLogGroupRequest(@JsonProperty("logGroupName") String logGroupName) {
+        this.logGroupName = logGroupName;
+  }
 }

@@ -15,6 +15,7 @@ public class ChannelDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelId")
     public Long channelId;
+
     public ChannelDefinition withChannelId(Long channelId) {
         this.channelId = channelId;
         return this;
@@ -23,9 +24,11 @@ public class ChannelDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParticipantRole")
     public ParticipantRoleEnum participantRole;
+
     public ChannelDefinition withParticipantRole(ParticipantRoleEnum participantRole) {
         this.participantRole = participantRole;
         return this;
     }
     
+    public ChannelDefinition(){}
 }

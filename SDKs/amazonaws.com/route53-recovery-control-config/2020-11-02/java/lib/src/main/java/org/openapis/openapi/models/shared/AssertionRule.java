@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssertionRule {
     @JsonProperty("AssertedControls")
     public String[] assertedControls;
+
     public AssertionRule withAssertedControls(String[] assertedControls) {
         this.assertedControls = assertedControls;
         return this;
@@ -19,6 +20,7 @@ public class AssertionRule {
     
     @JsonProperty("ControlPanelArn")
     public String controlPanelArn;
+
     public AssertionRule withControlPanelArn(String controlPanelArn) {
         this.controlPanelArn = controlPanelArn;
         return this;
@@ -26,6 +28,7 @@ public class AssertionRule {
     
     @JsonProperty("Name")
     public String name;
+
     public AssertionRule withName(String name) {
         this.name = name;
         return this;
@@ -33,6 +36,7 @@ public class AssertionRule {
     
     @JsonProperty("RuleConfig")
     public RuleConfig ruleConfig;
+
     public AssertionRule withRuleConfig(RuleConfig ruleConfig) {
         this.ruleConfig = ruleConfig;
         return this;
@@ -40,6 +44,7 @@ public class AssertionRule {
     
     @JsonProperty("SafetyRuleArn")
     public String safetyRuleArn;
+
     public AssertionRule withSafetyRuleArn(String safetyRuleArn) {
         this.safetyRuleArn = safetyRuleArn;
         return this;
@@ -47,6 +52,7 @@ public class AssertionRule {
     
     @JsonProperty("Status")
     public StatusEnum status;
+
     public AssertionRule withStatus(StatusEnum status) {
         this.status = status;
         return this;
@@ -54,9 +60,19 @@ public class AssertionRule {
     
     @JsonProperty("WaitPeriodMs")
     public Long waitPeriodMs;
+
     public AssertionRule withWaitPeriodMs(Long waitPeriodMs) {
         this.waitPeriodMs = waitPeriodMs;
         return this;
     }
     
+    public AssertionRule(@JsonProperty("AssertedControls") String[] assertedControls, @JsonProperty("ControlPanelArn") String controlPanelArn, @JsonProperty("Name") String name, @JsonProperty("RuleConfig") RuleConfig ruleConfig, @JsonProperty("SafetyRuleArn") String safetyRuleArn, @JsonProperty("Status") StatusEnum status, @JsonProperty("WaitPeriodMs") Long waitPeriodMs) {
+        this.assertedControls = assertedControls;
+        this.controlPanelArn = controlPanelArn;
+        this.name = name;
+        this.ruleConfig = ruleConfig;
+        this.safetyRuleArn = safetyRuleArn;
+        this.status = status;
+        this.waitPeriodMs = waitPeriodMs;
+  }
 }

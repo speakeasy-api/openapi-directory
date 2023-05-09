@@ -18,6 +18,7 @@ public class Getallpricetablesandrules200ApplicationJSONRulesContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brands")
     public java.util.Map<String, String> brands;
+
     public Getallpricetablesandrules200ApplicationJSONRulesContext withBrands(java.util.Map<String, String> brands) {
         this.brands = brands;
         return this;
@@ -29,6 +30,7 @@ public class Getallpricetablesandrules200ApplicationJSONRulesContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public java.util.Map<String, String> categories;
+
     public Getallpricetablesandrules200ApplicationJSONRulesContext withCategories(java.util.Map<String, String> categories) {
         this.categories = categories;
         return this;
@@ -40,6 +42,7 @@ public class Getallpricetablesandrules200ApplicationJSONRulesContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateRange")
     public Getallpricetablesandrules200ApplicationJSONRulesContextDateRange dateRange;
+
     public Getallpricetablesandrules200ApplicationJSONRulesContext withDateRange(Getallpricetablesandrules200ApplicationJSONRulesContextDateRange dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -51,6 +54,7 @@ public class Getallpricetablesandrules200ApplicationJSONRulesContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalCategories")
     public java.util.Map<String, Object> internalCategories;
+
     public Getallpricetablesandrules200ApplicationJSONRulesContext withInternalCategories(java.util.Map<String, Object> internalCategories) {
         this.internalCategories = internalCategories;
         return this;
@@ -62,6 +66,7 @@ public class Getallpricetablesandrules200ApplicationJSONRulesContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("markupRange")
     public Getallpricetablesandrules200ApplicationJSONRulesContextMarkupRange markupRange;
+
     public Getallpricetablesandrules200ApplicationJSONRulesContext withMarkupRange(Getallpricetablesandrules200ApplicationJSONRulesContextMarkupRange markupRange) {
         this.markupRange = markupRange;
         return this;
@@ -73,9 +78,11 @@ public class Getallpricetablesandrules200ApplicationJSONRulesContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stockStatuses")
     public java.util.Map<String, Object> stockStatuses;
+
     public Getallpricetablesandrules200ApplicationJSONRulesContext withStockStatuses(java.util.Map<String, Object> stockStatuses) {
         this.stockStatuses = stockStatuses;
         return this;
     }
     
+    public Getallpricetablesandrules200ApplicationJSONRulesContext(){}
 }

@@ -12,6 +12,7 @@ public class GistsGet403ApplicationJSONBlock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public GistsGet403ApplicationJSONBlock withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -20,6 +21,7 @@ public class GistsGet403ApplicationJSONBlock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public GistsGet403ApplicationJSONBlock withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -28,9 +30,11 @@ public class GistsGet403ApplicationJSONBlock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public GistsGet403ApplicationJSONBlock withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public GistsGet403ApplicationJSONBlock(){}
 }

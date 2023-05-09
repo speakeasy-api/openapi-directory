@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SetSecurityTokenServicePreferencesRequest {
     
     public GlobalEndpointTokenVersionEnum globalEndpointTokenVersion;
+
     public SetSecurityTokenServicePreferencesRequest withGlobalEndpointTokenVersion(GlobalEndpointTokenVersionEnum globalEndpointTokenVersion) {
         this.globalEndpointTokenVersion = globalEndpointTokenVersion;
         return this;
     }
     
+    public SetSecurityTokenServicePreferencesRequest(@JsonProperty("GlobalEndpointTokenVersion") GlobalEndpointTokenVersionEnum globalEndpointTokenVersion) {
+        this.globalEndpointTokenVersion = globalEndpointTokenVersion;
+  }
 }

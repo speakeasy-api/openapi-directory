@@ -15,6 +15,7 @@ public class ListGraphqlApisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("graphqlApis")
     public GraphqlApi[] graphqlApis;
+
     public ListGraphqlApisResponse withGraphqlApis(GraphqlApi[] graphqlApis) {
         this.graphqlApis = graphqlApis;
         return this;
@@ -23,9 +24,11 @@ public class ListGraphqlApisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListGraphqlApisResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListGraphqlApisResponse(){}
 }

@@ -15,6 +15,7 @@ public class UpdateThingRequestBodyAttributePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public UpdateThingRequestBodyAttributePayload withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,9 +24,11 @@ public class UpdateThingRequestBodyAttributePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merge")
     public Boolean merge;
+
     public UpdateThingRequestBodyAttributePayload withMerge(Boolean merge) {
         this.merge = merge;
         return this;
     }
     
+    public UpdateThingRequestBodyAttributePayload(){}
 }

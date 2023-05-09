@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class OrganizationFull {
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public OrganizationFull withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -27,6 +28,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_email")
     public String billingEmail;
+
     public OrganizationFull withBillingEmail(String billingEmail) {
         this.billingEmail = billingEmail;
         return this;
@@ -35,6 +37,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blog")
     public String blog;
+
     public OrganizationFull withBlog(String blog) {
         this.blog = blog;
         return this;
@@ -43,6 +46,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collaborators")
     public Long collaborators;
+
     public OrganizationFull withCollaborators(Long collaborators) {
         this.collaborators = collaborators;
         return this;
@@ -51,6 +55,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     public String company;
+
     public OrganizationFull withCompany(String company) {
         this.company = company;
         return this;
@@ -60,6 +65,7 @@ public class OrganizationFull {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public OrganizationFull withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -68,6 +74,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_repository_permission")
     public String defaultRepositoryPermission;
+
     public OrganizationFull withDefaultRepositoryPermission(String defaultRepositoryPermission) {
         this.defaultRepositoryPermission = defaultRepositoryPermission;
         return this;
@@ -75,6 +82,7 @@ public class OrganizationFull {
     
     @JsonProperty("description")
     public String description;
+
     public OrganizationFull withDescription(String description) {
         this.description = description;
         return this;
@@ -83,6 +91,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disk_usage")
     public Long diskUsage;
+
     public OrganizationFull withDiskUsage(Long diskUsage) {
         this.diskUsage = diskUsage;
         return this;
@@ -91,6 +100,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public OrganizationFull withEmail(String email) {
         this.email = email;
         return this;
@@ -98,6 +108,7 @@ public class OrganizationFull {
     
     @JsonProperty("events_url")
     public String eventsUrl;
+
     public OrganizationFull withEventsUrl(String eventsUrl) {
         this.eventsUrl = eventsUrl;
         return this;
@@ -105,6 +116,7 @@ public class OrganizationFull {
     
     @JsonProperty("followers")
     public Long followers;
+
     public OrganizationFull withFollowers(Long followers) {
         this.followers = followers;
         return this;
@@ -112,6 +124,7 @@ public class OrganizationFull {
     
     @JsonProperty("following")
     public Long following;
+
     public OrganizationFull withFollowing(Long following) {
         this.following = following;
         return this;
@@ -119,6 +132,7 @@ public class OrganizationFull {
     
     @JsonProperty("has_organization_projects")
     public Boolean hasOrganizationProjects;
+
     public OrganizationFull withHasOrganizationProjects(Boolean hasOrganizationProjects) {
         this.hasOrganizationProjects = hasOrganizationProjects;
         return this;
@@ -126,6 +140,7 @@ public class OrganizationFull {
     
     @JsonProperty("has_repository_projects")
     public Boolean hasRepositoryProjects;
+
     public OrganizationFull withHasRepositoryProjects(Boolean hasRepositoryProjects) {
         this.hasRepositoryProjects = hasRepositoryProjects;
         return this;
@@ -133,6 +148,7 @@ public class OrganizationFull {
     
     @JsonProperty("hooks_url")
     public String hooksUrl;
+
     public OrganizationFull withHooksUrl(String hooksUrl) {
         this.hooksUrl = hooksUrl;
         return this;
@@ -140,6 +156,7 @@ public class OrganizationFull {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public OrganizationFull withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -147,6 +164,7 @@ public class OrganizationFull {
     
     @JsonProperty("id")
     public Long id;
+
     public OrganizationFull withId(Long id) {
         this.id = id;
         return this;
@@ -155,6 +173,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_verified")
     public Boolean isVerified;
+
     public OrganizationFull withIsVerified(Boolean isVerified) {
         this.isVerified = isVerified;
         return this;
@@ -162,6 +181,7 @@ public class OrganizationFull {
     
     @JsonProperty("issues_url")
     public String issuesUrl;
+
     public OrganizationFull withIssuesUrl(String issuesUrl) {
         this.issuesUrl = issuesUrl;
         return this;
@@ -170,6 +190,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public OrganizationFull withLocation(String location) {
         this.location = location;
         return this;
@@ -177,6 +198,7 @@ public class OrganizationFull {
     
     @JsonProperty("login")
     public String login;
+
     public OrganizationFull withLogin(String login) {
         this.login = login;
         return this;
@@ -185,6 +207,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members_allowed_repository_creation_type")
     public String membersAllowedRepositoryCreationType;
+
     public OrganizationFull withMembersAllowedRepositoryCreationType(String membersAllowedRepositoryCreationType) {
         this.membersAllowedRepositoryCreationType = membersAllowedRepositoryCreationType;
         return this;
@@ -193,6 +216,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members_can_create_internal_repositories")
     public Boolean membersCanCreateInternalRepositories;
+
     public OrganizationFull withMembersCanCreateInternalRepositories(Boolean membersCanCreateInternalRepositories) {
         this.membersCanCreateInternalRepositories = membersCanCreateInternalRepositories;
         return this;
@@ -201,6 +225,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members_can_create_pages")
     public Boolean membersCanCreatePages;
+
     public OrganizationFull withMembersCanCreatePages(Boolean membersCanCreatePages) {
         this.membersCanCreatePages = membersCanCreatePages;
         return this;
@@ -209,6 +234,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members_can_create_private_pages")
     public Boolean membersCanCreatePrivatePages;
+
     public OrganizationFull withMembersCanCreatePrivatePages(Boolean membersCanCreatePrivatePages) {
         this.membersCanCreatePrivatePages = membersCanCreatePrivatePages;
         return this;
@@ -217,6 +243,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members_can_create_private_repositories")
     public Boolean membersCanCreatePrivateRepositories;
+
     public OrganizationFull withMembersCanCreatePrivateRepositories(Boolean membersCanCreatePrivateRepositories) {
         this.membersCanCreatePrivateRepositories = membersCanCreatePrivateRepositories;
         return this;
@@ -225,6 +252,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members_can_create_public_pages")
     public Boolean membersCanCreatePublicPages;
+
     public OrganizationFull withMembersCanCreatePublicPages(Boolean membersCanCreatePublicPages) {
         this.membersCanCreatePublicPages = membersCanCreatePublicPages;
         return this;
@@ -233,6 +261,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members_can_create_public_repositories")
     public Boolean membersCanCreatePublicRepositories;
+
     public OrganizationFull withMembersCanCreatePublicRepositories(Boolean membersCanCreatePublicRepositories) {
         this.membersCanCreatePublicRepositories = membersCanCreatePublicRepositories;
         return this;
@@ -241,6 +270,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members_can_create_repositories")
     public Boolean membersCanCreateRepositories;
+
     public OrganizationFull withMembersCanCreateRepositories(Boolean membersCanCreateRepositories) {
         this.membersCanCreateRepositories = membersCanCreateRepositories;
         return this;
@@ -248,6 +278,7 @@ public class OrganizationFull {
     
     @JsonProperty("members_url")
     public String membersUrl;
+
     public OrganizationFull withMembersUrl(String membersUrl) {
         this.membersUrl = membersUrl;
         return this;
@@ -256,6 +287,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrganizationFull withName(String name) {
         this.name = name;
         return this;
@@ -263,6 +295,7 @@ public class OrganizationFull {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public OrganizationFull withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -271,6 +304,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owned_private_repos")
     public Long ownedPrivateRepos;
+
     public OrganizationFull withOwnedPrivateRepos(Long ownedPrivateRepos) {
         this.ownedPrivateRepos = ownedPrivateRepos;
         return this;
@@ -279,6 +313,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan")
     public OrganizationFullPlan plan;
+
     public OrganizationFull withPlan(OrganizationFullPlan plan) {
         this.plan = plan;
         return this;
@@ -287,6 +322,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("private_gists")
     public Long privateGists;
+
     public OrganizationFull withPrivateGists(Long privateGists) {
         this.privateGists = privateGists;
         return this;
@@ -294,6 +330,7 @@ public class OrganizationFull {
     
     @JsonProperty("public_gists")
     public Long publicGists;
+
     public OrganizationFull withPublicGists(Long publicGists) {
         this.publicGists = publicGists;
         return this;
@@ -301,6 +338,7 @@ public class OrganizationFull {
     
     @JsonProperty("public_members_url")
     public String publicMembersUrl;
+
     public OrganizationFull withPublicMembersUrl(String publicMembersUrl) {
         this.publicMembersUrl = publicMembersUrl;
         return this;
@@ -308,6 +346,7 @@ public class OrganizationFull {
     
     @JsonProperty("public_repos")
     public Long publicRepos;
+
     public OrganizationFull withPublicRepos(Long publicRepos) {
         this.publicRepos = publicRepos;
         return this;
@@ -315,6 +354,7 @@ public class OrganizationFull {
     
     @JsonProperty("repos_url")
     public String reposUrl;
+
     public OrganizationFull withReposUrl(String reposUrl) {
         this.reposUrl = reposUrl;
         return this;
@@ -323,6 +363,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_private_repos")
     public Long totalPrivateRepos;
+
     public OrganizationFull withTotalPrivateRepos(Long totalPrivateRepos) {
         this.totalPrivateRepos = totalPrivateRepos;
         return this;
@@ -331,6 +372,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter_username")
     public String twitterUsername;
+
     public OrganizationFull withTwitterUsername(String twitterUsername) {
         this.twitterUsername = twitterUsername;
         return this;
@@ -339,6 +381,7 @@ public class OrganizationFull {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("two_factor_requirement_enabled")
     public Boolean twoFactorRequirementEnabled;
+
     public OrganizationFull withTwoFactorRequirementEnabled(Boolean twoFactorRequirementEnabled) {
         this.twoFactorRequirementEnabled = twoFactorRequirementEnabled;
         return this;
@@ -346,6 +389,7 @@ public class OrganizationFull {
     
     @JsonProperty("type")
     public String type;
+
     public OrganizationFull withType(String type) {
         this.type = type;
         return this;
@@ -355,6 +399,7 @@ public class OrganizationFull {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public OrganizationFull withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -362,9 +407,34 @@ public class OrganizationFull {
     
     @JsonProperty("url")
     public String url;
+
     public OrganizationFull withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public OrganizationFull(@JsonProperty("avatar_url") String avatarUrl, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("description") String description, @JsonProperty("events_url") String eventsUrl, @JsonProperty("followers") Long followers, @JsonProperty("following") Long following, @JsonProperty("has_organization_projects") Boolean hasOrganizationProjects, @JsonProperty("has_repository_projects") Boolean hasRepositoryProjects, @JsonProperty("hooks_url") String hooksUrl, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("issues_url") String issuesUrl, @JsonProperty("login") String login, @JsonProperty("members_url") String membersUrl, @JsonProperty("node_id") String nodeId, @JsonProperty("public_gists") Long publicGists, @JsonProperty("public_members_url") String publicMembersUrl, @JsonProperty("public_repos") Long publicRepos, @JsonProperty("repos_url") String reposUrl, @JsonProperty("type") String type, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
+        this.avatarUrl = avatarUrl;
+        this.createdAt = createdAt;
+        this.description = description;
+        this.eventsUrl = eventsUrl;
+        this.followers = followers;
+        this.following = following;
+        this.hasOrganizationProjects = hasOrganizationProjects;
+        this.hasRepositoryProjects = hasRepositoryProjects;
+        this.hooksUrl = hooksUrl;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.issuesUrl = issuesUrl;
+        this.login = login;
+        this.membersUrl = membersUrl;
+        this.nodeId = nodeId;
+        this.publicGists = publicGists;
+        this.publicMembersUrl = publicMembersUrl;
+        this.publicRepos = publicRepos;
+        this.reposUrl = reposUrl;
+        this.type = type;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

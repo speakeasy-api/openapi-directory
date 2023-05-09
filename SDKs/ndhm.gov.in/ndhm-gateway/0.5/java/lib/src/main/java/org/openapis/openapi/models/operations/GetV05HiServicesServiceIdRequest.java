@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV05HiServicesServiceIdRequest {
@@ -12,6 +13,7 @@ public class GetV05HiServicesServiceIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public GetV05HiServicesServiceIdRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,9 +21,14 @@ public class GetV05HiServicesServiceIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=service-id")
     public String serviceId;
+
     public GetV05HiServicesServiceIdRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     
+    public GetV05HiServicesServiceIdRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("service-id") String serviceId) {
+        this.authorization = authorization;
+        this.serviceId = serviceId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteVoiceMessageSpendLimitOverrideResponse {
@@ -12,6 +13,7 @@ public class DeleteVoiceMessageSpendLimitOverrideResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteVoiceMessageSpendLimitOverrideResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteVoiceMessageSpendLimitOverrideResponse {
     
     
     public String contentType;
+
     public DeleteVoiceMessageSpendLimitOverrideResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteVoiceMessageSpendLimitOverrideResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteVoiceMessageSpendLimitOverrideResult deleteVoiceMessageSpendLimitOverrideResult;
+
     public DeleteVoiceMessageSpendLimitOverrideResponse withDeleteVoiceMessageSpendLimitOverrideResult(org.openapis.openapi.models.shared.DeleteVoiceMessageSpendLimitOverrideResult deleteVoiceMessageSpendLimitOverrideResult) {
         this.deleteVoiceMessageSpendLimitOverrideResult = deleteVoiceMessageSpendLimitOverrideResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteVoiceMessageSpendLimitOverrideResponse {
      */
     
     public Object internalServerException;
+
     public DeleteVoiceMessageSpendLimitOverrideResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteVoiceMessageSpendLimitOverrideResponse {
     
     
     public Integer statusCode;
+
     public DeleteVoiceMessageSpendLimitOverrideResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteVoiceMessageSpendLimitOverrideResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteVoiceMessageSpendLimitOverrideResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteVoiceMessageSpendLimitOverrideResponse {
      */
     
     public Object throttlingException;
+
     public DeleteVoiceMessageSpendLimitOverrideResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteVoiceMessageSpendLimitOverrideResponse {
      */
     
     public Object validationException;
+
     public DeleteVoiceMessageSpendLimitOverrideResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteVoiceMessageSpendLimitOverrideResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

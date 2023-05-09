@@ -13,6 +13,7 @@ public class PostExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignment")
     public String assignment;
+
     public PostExportRequest withAssignment(String assignment) {
         this.assignment = assignment;
         return this;
@@ -23,6 +24,7 @@ public class PostExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=combined")
     public Boolean combined;
+
     public PostExportRequest withCombined(Boolean combined) {
         this.combined = combined;
         return this;
@@ -33,6 +35,7 @@ public class PostExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public PostExportRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -43,6 +46,7 @@ public class PostExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
     public OffsetDateTime createdAfter;
+
     public PostExportRequest withCreatedAfter(OffsetDateTime createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -53,6 +57,7 @@ public class PostExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
     public OffsetDateTime createdBefore;
+
     public PostExportRequest withCreatedBefore(OffsetDateTime createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -63,6 +68,7 @@ public class PostExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public String format;
+
     public PostExportRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -73,6 +79,7 @@ public class PostExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geohash")
     public String geohash;
+
     public PostExportRequest withGeohash(String geohash) {
         this.geohash = geohash;
         return this;
@@ -83,6 +90,7 @@ public class PostExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hasLocation")
     public Boolean hasLocation;
+
     public PostExportRequest withHasLocation(Boolean hasLocation) {
         this.hasLocation = hasLocation;
         return this;
@@ -93,6 +101,7 @@ public class PostExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=individual")
     public Boolean individual;
+
     public PostExportRequest withIndividual(Boolean individual) {
         this.individual = individual;
         return this;
@@ -103,6 +112,7 @@ public class PostExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=json")
     public Boolean json;
+
     public PostExportRequest withJson(Boolean json) {
         this.json = json;
         return this;
@@ -113,6 +123,7 @@ public class PostExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latLong")
     public String latLong;
+
     public PostExportRequest withLatLong(String latLong) {
         this.latLong = latLong;
         return this;
@@ -123,6 +134,7 @@ public class PostExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mediaType")
     public String mediaType;
+
     public PostExportRequest withMediaType(String mediaType) {
         this.mediaType = mediaType;
         return this;
@@ -133,6 +145,7 @@ public class PostExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ownedBy")
     public String ownedBy;
+
     public PostExportRequest withOwnedBy(String ownedBy) {
         this.ownedBy = ownedBy;
         return this;
@@ -143,6 +156,7 @@ public class PostExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public PostExportRequest withQ(String q) {
         this.q = q;
         return this;
@@ -153,6 +167,7 @@ public class PostExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
     public Double radius;
+
     public PostExportRequest withRadius(Double radius) {
         this.radius = radius;
         return this;
@@ -163,6 +178,7 @@ public class PostExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagged")
     public Boolean tagged;
+
     public PostExportRequest withTagged(Boolean tagged) {
         this.tagged = tagged;
         return this;
@@ -173,6 +189,7 @@ public class PostExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=urlWords")
     public String urlWords;
+
     public PostExportRequest withUrlWords(String urlWords) {
         this.urlWords = urlWords;
         return this;
@@ -183,9 +200,11 @@ public class PostExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
     public String user;
+
     public PostExportRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public PostExportRequest(){}
 }

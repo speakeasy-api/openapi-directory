@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDirectoriesResponse {
@@ -12,6 +13,7 @@ public class ListDirectoriesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListDirectoriesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListDirectoriesResponse {
     
     
     public String contentType;
+
     public ListDirectoriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListDirectoriesResponse {
      */
     
     public Object internalServiceException;
+
     public ListDirectoriesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ListDirectoriesResponse {
      */
     
     public Object invalidArnException;
+
     public ListDirectoriesResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class ListDirectoriesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListDirectoriesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListDirectoriesResponse {
      */
     
     public Object limitExceededException;
+
     public ListDirectoriesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ListDirectoriesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDirectoriesResponse listDirectoriesResponse;
+
     public ListDirectoriesResponse withListDirectoriesResponse(org.openapis.openapi.models.shared.ListDirectoriesResponse listDirectoriesResponse) {
         this.listDirectoriesResponse = listDirectoriesResponse;
         return this;
@@ -76,6 +84,7 @@ public class ListDirectoriesResponse {
     
     
     public Integer statusCode;
+
     public ListDirectoriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListDirectoriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDirectoriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListDirectoriesResponse {
      */
     
     public Object retryableConflictException;
+
     public ListDirectoriesResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -103,9 +114,14 @@ public class ListDirectoriesResponse {
      */
     
     public Object validationException;
+
     public ListDirectoriesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListDirectoriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

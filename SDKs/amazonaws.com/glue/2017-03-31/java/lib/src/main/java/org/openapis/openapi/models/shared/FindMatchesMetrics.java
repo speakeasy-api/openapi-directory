@@ -15,6 +15,7 @@ public class FindMatchesMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AreaUnderPRCurve")
     public Double areaUnderPRCurve;
+
     public FindMatchesMetrics withAreaUnderPRCurve(Double areaUnderPRCurve) {
         this.areaUnderPRCurve = areaUnderPRCurve;
         return this;
@@ -23,6 +24,7 @@ public class FindMatchesMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnImportances")
     public ColumnImportance[] columnImportances;
+
     public FindMatchesMetrics withColumnImportances(ColumnImportance[] columnImportances) {
         this.columnImportances = columnImportances;
         return this;
@@ -31,6 +33,7 @@ public class FindMatchesMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfusionMatrix")
     public ConfusionMatrix confusionMatrix;
+
     public FindMatchesMetrics withConfusionMatrix(ConfusionMatrix confusionMatrix) {
         this.confusionMatrix = confusionMatrix;
         return this;
@@ -39,6 +42,7 @@ public class FindMatchesMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("F1")
     public Double f1;
+
     public FindMatchesMetrics withF1(Double f1) {
         this.f1 = f1;
         return this;
@@ -47,6 +51,7 @@ public class FindMatchesMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Precision")
     public Double precision;
+
     public FindMatchesMetrics withPrecision(Double precision) {
         this.precision = precision;
         return this;
@@ -55,9 +60,11 @@ public class FindMatchesMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Recall")
     public Double recall;
+
     public FindMatchesMetrics withRecall(Double recall) {
         this.recall = recall;
         return this;
     }
     
+    public FindMatchesMetrics(){}
 }

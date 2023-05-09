@@ -12,6 +12,7 @@ public class UpdatePermissionSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdatePermissionSetRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class UpdatePermissionSetRequest {
     
     @JsonProperty("InstanceArn")
     public String instanceArn;
+
     public UpdatePermissionSetRequest withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
@@ -26,6 +28,7 @@ public class UpdatePermissionSetRequest {
     
     @JsonProperty("PermissionSetArn")
     public String permissionSetArn;
+
     public UpdatePermissionSetRequest withPermissionSetArn(String permissionSetArn) {
         this.permissionSetArn = permissionSetArn;
         return this;
@@ -34,6 +37,7 @@ public class UpdatePermissionSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelayState")
     public String relayState;
+
     public UpdatePermissionSetRequest withRelayState(String relayState) {
         this.relayState = relayState;
         return this;
@@ -42,9 +46,14 @@ public class UpdatePermissionSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionDuration")
     public String sessionDuration;
+
     public UpdatePermissionSetRequest withSessionDuration(String sessionDuration) {
         this.sessionDuration = sessionDuration;
         return this;
     }
     
+    public UpdatePermissionSetRequest(@JsonProperty("InstanceArn") String instanceArn, @JsonProperty("PermissionSetArn") String permissionSetArn) {
+        this.instanceArn = instanceArn;
+        this.permissionSetArn = permissionSetArn;
+  }
 }

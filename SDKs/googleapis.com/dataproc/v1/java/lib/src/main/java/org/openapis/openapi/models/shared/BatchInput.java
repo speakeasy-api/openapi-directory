@@ -18,6 +18,7 @@ public class BatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentConfig")
     public EnvironmentConfig environmentConfig;
+
     public BatchInput withEnvironmentConfig(EnvironmentConfig environmentConfig) {
         this.environmentConfig = environmentConfig;
         return this;
@@ -29,6 +30,7 @@ public class BatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public BatchInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class BatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pysparkBatch")
     public PySparkBatch pysparkBatch;
+
     public BatchInput withPysparkBatch(PySparkBatch pysparkBatch) {
         this.pysparkBatch = pysparkBatch;
         return this;
@@ -51,6 +54,7 @@ public class BatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeConfig")
     public RuntimeConfig runtimeConfig;
+
     public BatchInput withRuntimeConfig(RuntimeConfig runtimeConfig) {
         this.runtimeConfig = runtimeConfig;
         return this;
@@ -62,6 +66,7 @@ public class BatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeInfo")
     public RuntimeInfoInput runtimeInfo;
+
     public BatchInput withRuntimeInfo(RuntimeInfoInput runtimeInfo) {
         this.runtimeInfo = runtimeInfo;
         return this;
@@ -73,6 +78,7 @@ public class BatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkBatch")
     public SparkBatch sparkBatch;
+
     public BatchInput withSparkBatch(SparkBatch sparkBatch) {
         this.sparkBatch = sparkBatch;
         return this;
@@ -84,6 +90,7 @@ public class BatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkRBatch")
     public SparkRBatch sparkRBatch;
+
     public BatchInput withSparkRBatch(SparkRBatch sparkRBatch) {
         this.sparkRBatch = sparkRBatch;
         return this;
@@ -95,9 +102,11 @@ public class BatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkSqlBatch")
     public SparkSqlBatch sparkSqlBatch;
+
     public BatchInput withSparkSqlBatch(SparkSqlBatch sparkSqlBatch) {
         this.sparkSqlBatch = sparkSqlBatch;
         return this;
     }
     
+    public BatchInput(){}
 }

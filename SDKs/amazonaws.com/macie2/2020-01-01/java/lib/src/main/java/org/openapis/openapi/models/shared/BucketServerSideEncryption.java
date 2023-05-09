@@ -15,6 +15,7 @@ public class BucketServerSideEncryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsMasterKeyId")
     public String kmsMasterKeyId;
+
     public BucketServerSideEncryption withKmsMasterKeyId(String kmsMasterKeyId) {
         this.kmsMasterKeyId = kmsMasterKeyId;
         return this;
@@ -23,9 +24,11 @@ public class BucketServerSideEncryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TypeEnum type;
+
     public BucketServerSideEncryption withType(TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public BucketServerSideEncryption(){}
 }

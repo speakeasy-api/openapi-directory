@@ -17,6 +17,7 @@ public class DestinyResponsesDestinyCharacterResponseRenderData {
      */
     
     public DestinyEntitiesCharactersDestinyCharacterRenderComponent data;
+
     public DestinyResponsesDestinyCharacterResponseRenderData withData(DestinyEntitiesCharactersDestinyCharacterRenderComponent data) {
         this.data = data;
         return this;
@@ -27,6 +28,7 @@ public class DestinyResponsesDestinyCharacterResponseRenderData {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyCharacterResponseRenderData withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -34,9 +36,11 @@ public class DestinyResponsesDestinyCharacterResponseRenderData {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyCharacterResponseRenderData withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyCharacterResponseRenderData(){}
 }

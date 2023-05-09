@@ -265,4 +265,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateBackendConfigResponse
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateBackendJobResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateBackendStorageResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

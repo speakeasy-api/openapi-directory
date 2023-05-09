@@ -18,6 +18,7 @@ public class VolumeSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public VolumeSnapshot withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class VolumeSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public VolumeSnapshot withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class VolumeSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public VolumeSnapshot withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class VolumeSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public VolumeSnapshot withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class VolumeSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageVolume")
     public String storageVolume;
+
     public VolumeSnapshot withStorageVolume(String storageVolume) {
         this.storageVolume = storageVolume;
         return this;
@@ -73,9 +78,11 @@ public class VolumeSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public VolumeSnapshotTypeEnum type;
+
     public VolumeSnapshot withType(VolumeSnapshotTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public VolumeSnapshot(){}
 }

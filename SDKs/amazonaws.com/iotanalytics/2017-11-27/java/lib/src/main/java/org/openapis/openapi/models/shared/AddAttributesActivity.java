@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddAttributesActivity {
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public AddAttributesActivity withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -21,6 +22,7 @@ public class AddAttributesActivity {
     
     @JsonProperty("name")
     public String name;
+
     public AddAttributesActivity withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +31,14 @@ public class AddAttributesActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public AddAttributesActivity withNext(String next) {
         this.next = next;
         return this;
     }
     
+    public AddAttributesActivity(@JsonProperty("attributes") java.util.Map<String, String> attributes, @JsonProperty("name") String name) {
+        this.attributes = attributes;
+        this.name = name;
+  }
 }

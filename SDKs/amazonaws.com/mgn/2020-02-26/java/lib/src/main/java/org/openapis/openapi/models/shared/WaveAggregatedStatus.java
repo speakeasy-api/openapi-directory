@@ -15,6 +15,7 @@ public class WaveAggregatedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthStatus")
     public WaveHealthStatusEnum healthStatus;
+
     public WaveAggregatedStatus withHealthStatus(WaveHealthStatusEnum healthStatus) {
         this.healthStatus = healthStatus;
         return this;
@@ -23,6 +24,7 @@ public class WaveAggregatedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdateDateTime")
     public String lastUpdateDateTime;
+
     public WaveAggregatedStatus withLastUpdateDateTime(String lastUpdateDateTime) {
         this.lastUpdateDateTime = lastUpdateDateTime;
         return this;
@@ -31,6 +33,7 @@ public class WaveAggregatedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progressStatus")
     public WaveProgressStatusEnum progressStatus;
+
     public WaveAggregatedStatus withProgressStatus(WaveProgressStatusEnum progressStatus) {
         this.progressStatus = progressStatus;
         return this;
@@ -39,6 +42,7 @@ public class WaveAggregatedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationStartedDateTime")
     public String replicationStartedDateTime;
+
     public WaveAggregatedStatus withReplicationStartedDateTime(String replicationStartedDateTime) {
         this.replicationStartedDateTime = replicationStartedDateTime;
         return this;
@@ -47,9 +51,11 @@ public class WaveAggregatedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalApplications")
     public Long totalApplications;
+
     public WaveAggregatedStatus withTotalApplications(Long totalApplications) {
         this.totalApplications = totalApplications;
         return this;
     }
     
+    public WaveAggregatedStatus(){}
 }

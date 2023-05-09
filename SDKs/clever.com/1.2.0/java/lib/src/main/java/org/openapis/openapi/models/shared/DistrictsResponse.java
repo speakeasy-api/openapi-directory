@@ -15,9 +15,11 @@ public class DistrictsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public DistrictResponse[] data;
+
     public DistrictsResponse withData(DistrictResponse[] data) {
         this.data = data;
         return this;
     }
     
+    public DistrictsResponse(){}
 }

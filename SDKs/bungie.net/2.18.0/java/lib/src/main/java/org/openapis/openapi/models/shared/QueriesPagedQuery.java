@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class QueriesPagedQuery {
     
     public Integer currentPage;
+
     public QueriesPagedQuery withCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
@@ -16,6 +17,7 @@ public class QueriesPagedQuery {
     
     
     public Integer itemsPerPage;
+
     public QueriesPagedQuery withItemsPerPage(Integer itemsPerPage) {
         this.itemsPerPage = itemsPerPage;
         return this;
@@ -23,9 +25,11 @@ public class QueriesPagedQuery {
     
     
     public String requestContinuationToken;
+
     public QueriesPagedQuery withRequestContinuationToken(String requestContinuationToken) {
         this.requestContinuationToken = requestContinuationToken;
         return this;
     }
     
+    public QueriesPagedQuery(){}
 }

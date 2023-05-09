@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetAuditLogEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=actor_gid")
     public String actorGid;
+
     public GetAuditLogEventsRequest withActorGid(String actorGid) {
         this.actorGid = actorGid;
         return this;
@@ -24,6 +26,7 @@ public class GetAuditLogEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=actor_type")
     public org.openapis.openapi.models.shared.AuditLogActorTypeEnum actorType;
+
     public GetAuditLogEventsRequest withActorType(org.openapis.openapi.models.shared.AuditLogActorTypeEnum actorType) {
         this.actorType = actorType;
         return this;
@@ -34,6 +37,7 @@ public class GetAuditLogEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_at")
     public OffsetDateTime endAt;
+
     public GetAuditLogEventsRequest withEndAt(OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -45,6 +49,7 @@ public class GetAuditLogEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event_type")
     public String eventType;
+
     public GetAuditLogEventsRequest withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -56,6 +61,7 @@ public class GetAuditLogEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetAuditLogEventsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -68,6 +74,7 @@ public class GetAuditLogEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetAuditLogEventsRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -78,6 +85,7 @@ public class GetAuditLogEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resource_gid")
     public String resourceGid;
+
     public GetAuditLogEventsRequest withResourceGid(String resourceGid) {
         this.resourceGid = resourceGid;
         return this;
@@ -88,6 +96,7 @@ public class GetAuditLogEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_at")
     public OffsetDateTime startAt;
+
     public GetAuditLogEventsRequest withStartAt(OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -98,9 +107,13 @@ public class GetAuditLogEventsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_gid")
     public String workspaceGid;
+
     public GetAuditLogEventsRequest withWorkspaceGid(String workspaceGid) {
         this.workspaceGid = workspaceGid;
         return this;
     }
     
+    public GetAuditLogEventsRequest(@JsonProperty("workspace_gid") String workspaceGid) {
+        this.workspaceGid = workspaceGid;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3DestinationDescription {
     @JsonProperty("BucketARN")
     public String bucketARN;
+
     public S3DestinationDescription withBucketARN(String bucketARN) {
         this.bucketARN = bucketARN;
         return this;
@@ -21,6 +22,7 @@ public class S3DestinationDescription {
     
     @JsonProperty("BufferingHints")
     public BufferingHints bufferingHints;
+
     public S3DestinationDescription withBufferingHints(BufferingHints bufferingHints) {
         this.bufferingHints = bufferingHints;
         return this;
@@ -29,6 +31,7 @@ public class S3DestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLoggingOptions")
     public CloudWatchLoggingOptions cloudWatchLoggingOptions;
+
     public S3DestinationDescription withCloudWatchLoggingOptions(CloudWatchLoggingOptions cloudWatchLoggingOptions) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         return this;
@@ -36,6 +39,7 @@ public class S3DestinationDescription {
     
     @JsonProperty("CompressionFormat")
     public CompressionFormatEnum compressionFormat;
+
     public S3DestinationDescription withCompressionFormat(CompressionFormatEnum compressionFormat) {
         this.compressionFormat = compressionFormat;
         return this;
@@ -43,6 +47,7 @@ public class S3DestinationDescription {
     
     @JsonProperty("EncryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public S3DestinationDescription withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -51,6 +56,7 @@ public class S3DestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorOutputPrefix")
     public String errorOutputPrefix;
+
     public S3DestinationDescription withErrorOutputPrefix(String errorOutputPrefix) {
         this.errorOutputPrefix = errorOutputPrefix;
         return this;
@@ -59,6 +65,7 @@ public class S3DestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Prefix")
     public String prefix;
+
     public S3DestinationDescription withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -66,9 +73,17 @@ public class S3DestinationDescription {
     
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public S3DestinationDescription withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
     }
     
+    public S3DestinationDescription(@JsonProperty("BucketARN") String bucketARN, @JsonProperty("BufferingHints") BufferingHints bufferingHints, @JsonProperty("CompressionFormat") CompressionFormatEnum compressionFormat, @JsonProperty("EncryptionConfiguration") EncryptionConfiguration encryptionConfiguration, @JsonProperty("RoleARN") String roleARN) {
+        this.bucketARN = bucketARN;
+        this.bufferingHints = bufferingHints;
+        this.compressionFormat = compressionFormat;
+        this.encryptionConfiguration = encryptionConfiguration;
+        this.roleARN = roleARN;
+  }
 }

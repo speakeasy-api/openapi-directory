@@ -22,6 +22,7 @@ public class DescribeJobFlowsInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAfter")
     public OffsetDateTime createdAfter;
+
     public DescribeJobFlowsInput withCreatedAfter(OffsetDateTime createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -32,6 +33,7 @@ public class DescribeJobFlowsInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedBefore")
     public OffsetDateTime createdBefore;
+
     public DescribeJobFlowsInput withCreatedBefore(OffsetDateTime createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -40,6 +42,7 @@ public class DescribeJobFlowsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobFlowIds")
     public String[] jobFlowIds;
+
     public DescribeJobFlowsInput withJobFlowIds(String[] jobFlowIds) {
         this.jobFlowIds = jobFlowIds;
         return this;
@@ -48,9 +51,11 @@ public class DescribeJobFlowsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobFlowStates")
     public JobFlowExecutionStateEnum[] jobFlowStates;
+
     public DescribeJobFlowsInput withJobFlowStates(JobFlowExecutionStateEnum[] jobFlowStates) {
         this.jobFlowStates = jobFlowStates;
         return this;
     }
     
+    public DescribeJobFlowsInput(){}
 }

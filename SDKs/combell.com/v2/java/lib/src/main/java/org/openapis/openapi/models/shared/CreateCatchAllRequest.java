@@ -18,9 +18,11 @@ public class CreateCatchAllRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_address")
     public String emailAddress;
+
     public CreateCatchAllRequest withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
     }
     
+    public CreateCatchAllRequest(){}
 }

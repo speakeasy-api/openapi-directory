@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UsersGetGpgKeyForAuthenticatedUserResponse {
     
     public String contentType;
+
     public UsersGetGpgKeyForAuthenticatedUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UsersGetGpgKeyForAuthenticatedUserResponse {
     
     
     public Integer statusCode;
+
     public UsersGetGpgKeyForAuthenticatedUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UsersGetGpgKeyForAuthenticatedUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UsersGetGpgKeyForAuthenticatedUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UsersGetGpgKeyForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public UsersGetGpgKeyForAuthenticatedUserResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class UsersGetGpgKeyForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.GpgKey gpgKey;
+
     public UsersGetGpgKeyForAuthenticatedUserResponse withGpgKey(org.openapis.openapi.models.shared.GpgKey gpgKey) {
         this.gpgKey = gpgKey;
         return this;
     }
     
+    public UsersGetGpgKeyForAuthenticatedUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

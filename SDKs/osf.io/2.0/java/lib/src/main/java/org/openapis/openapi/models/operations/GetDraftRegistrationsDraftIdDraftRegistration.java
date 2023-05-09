@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetDraftRegistrationsDraftIdDraftRegistration - OK
@@ -15,6 +15,7 @@ public class GetDraftRegistrationsDraftIdDraftRegistration {
      */
     
     public GetDraftRegistrationsDraftIdDraftRegistrationAttributes attributes;
+
     public GetDraftRegistrationsDraftIdDraftRegistration withAttributes(GetDraftRegistrationsDraftIdDraftRegistrationAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class GetDraftRegistrationsDraftIdDraftRegistration {
      */
     
     public String id;
+
     public GetDraftRegistrationsDraftIdDraftRegistration withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class GetDraftRegistrationsDraftIdDraftRegistration {
      */
     
     public GetDraftRegistrationsDraftIdDraftRegistrationLinks links;
+
     public GetDraftRegistrationsDraftIdDraftRegistration withLinks(GetDraftRegistrationsDraftIdDraftRegistrationLinks links) {
         this.links = links;
         return this;
@@ -45,6 +48,7 @@ public class GetDraftRegistrationsDraftIdDraftRegistration {
      */
     
     public GetDraftRegistrationsDraftIdDraftRegistrationRelationships relationships;
+
     public GetDraftRegistrationsDraftIdDraftRegistration withRelationships(GetDraftRegistrationsDraftIdDraftRegistrationRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -55,9 +59,17 @@ public class GetDraftRegistrationsDraftIdDraftRegistration {
      */
     
     public String type;
+
     public GetDraftRegistrationsDraftIdDraftRegistration withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetDraftRegistrationsDraftIdDraftRegistration(@JsonProperty("attributes") GetDraftRegistrationsDraftIdDraftRegistrationAttributes attributes, @JsonProperty("id") String id, @JsonProperty("links") GetDraftRegistrationsDraftIdDraftRegistrationLinks links, @JsonProperty("relationships") GetDraftRegistrationsDraftIdDraftRegistrationRelationships relationships, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.links = links;
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

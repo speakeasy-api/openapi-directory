@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpcEndpointServiceConfigurationResultServiceConfiguration {
     
     public Boolean acceptanceRequired;
+
     public CreateVpcEndpointServiceConfigurationResultServiceConfiguration withAcceptanceRequired(Boolean acceptanceRequired) {
         this.acceptanceRequired = acceptanceRequired;
         return this;
@@ -19,6 +20,7 @@ public class CreateVpcEndpointServiceConfigurationResultServiceConfiguration {
     
     
     public String[] availabilityZones;
+
     public CreateVpcEndpointServiceConfigurationResultServiceConfiguration withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -26,6 +28,7 @@ public class CreateVpcEndpointServiceConfigurationResultServiceConfiguration {
     
     
     public String[] baseEndpointDnsNames;
+
     public CreateVpcEndpointServiceConfigurationResultServiceConfiguration withBaseEndpointDnsNames(String[] baseEndpointDnsNames) {
         this.baseEndpointDnsNames = baseEndpointDnsNames;
         return this;
@@ -33,6 +36,7 @@ public class CreateVpcEndpointServiceConfigurationResultServiceConfiguration {
     
     
     public String[] gatewayLoadBalancerArns;
+
     public CreateVpcEndpointServiceConfigurationResultServiceConfiguration withGatewayLoadBalancerArns(String[] gatewayLoadBalancerArns) {
         this.gatewayLoadBalancerArns = gatewayLoadBalancerArns;
         return this;
@@ -40,6 +44,7 @@ public class CreateVpcEndpointServiceConfigurationResultServiceConfiguration {
     
     
     public Boolean managesVpcEndpoints;
+
     public CreateVpcEndpointServiceConfigurationResultServiceConfiguration withManagesVpcEndpoints(Boolean managesVpcEndpoints) {
         this.managesVpcEndpoints = managesVpcEndpoints;
         return this;
@@ -47,6 +52,7 @@ public class CreateVpcEndpointServiceConfigurationResultServiceConfiguration {
     
     
     public String[] networkLoadBalancerArns;
+
     public CreateVpcEndpointServiceConfigurationResultServiceConfiguration withNetworkLoadBalancerArns(String[] networkLoadBalancerArns) {
         this.networkLoadBalancerArns = networkLoadBalancerArns;
         return this;
@@ -54,6 +60,7 @@ public class CreateVpcEndpointServiceConfigurationResultServiceConfiguration {
     
     
     public CreateVpcEndpointServiceConfigurationResultServiceConfigurationPayerResponsibilityEnum payerResponsibility;
+
     public CreateVpcEndpointServiceConfigurationResultServiceConfiguration withPayerResponsibility(CreateVpcEndpointServiceConfigurationResultServiceConfigurationPayerResponsibilityEnum payerResponsibility) {
         this.payerResponsibility = payerResponsibility;
         return this;
@@ -61,6 +68,7 @@ public class CreateVpcEndpointServiceConfigurationResultServiceConfiguration {
     
     
     public String privateDnsName;
+
     public CreateVpcEndpointServiceConfigurationResultServiceConfiguration withPrivateDnsName(String privateDnsName) {
         this.privateDnsName = privateDnsName;
         return this;
@@ -68,6 +76,7 @@ public class CreateVpcEndpointServiceConfigurationResultServiceConfiguration {
     
     
     public CreateVpcEndpointServiceConfigurationResultServiceConfigurationPrivateDnsNameConfiguration privateDnsNameConfiguration;
+
     public CreateVpcEndpointServiceConfigurationResultServiceConfiguration withPrivateDnsNameConfiguration(CreateVpcEndpointServiceConfigurationResultServiceConfigurationPrivateDnsNameConfiguration privateDnsNameConfiguration) {
         this.privateDnsNameConfiguration = privateDnsNameConfiguration;
         return this;
@@ -75,6 +84,7 @@ public class CreateVpcEndpointServiceConfigurationResultServiceConfiguration {
     
     
     public String serviceId;
+
     public CreateVpcEndpointServiceConfigurationResultServiceConfiguration withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -82,6 +92,7 @@ public class CreateVpcEndpointServiceConfigurationResultServiceConfiguration {
     
     
     public String serviceName;
+
     public CreateVpcEndpointServiceConfigurationResultServiceConfiguration withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -89,6 +100,7 @@ public class CreateVpcEndpointServiceConfigurationResultServiceConfiguration {
     
     
     public CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceStateEnum serviceState;
+
     public CreateVpcEndpointServiceConfigurationResultServiceConfiguration withServiceState(CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceStateEnum serviceState) {
         this.serviceState = serviceState;
         return this;
@@ -96,6 +108,7 @@ public class CreateVpcEndpointServiceConfigurationResultServiceConfiguration {
     
     
     public CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceType[] serviceType;
+
     public CreateVpcEndpointServiceConfigurationResultServiceConfiguration withServiceType(CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceType[] serviceType) {
         this.serviceType = serviceType;
         return this;
@@ -103,6 +116,7 @@ public class CreateVpcEndpointServiceConfigurationResultServiceConfiguration {
     
     
     public CreateVpcEndpointServiceConfigurationResultServiceConfigurationSupportedIpAddressTypesEnum[] supportedIpAddressTypes;
+
     public CreateVpcEndpointServiceConfigurationResultServiceConfiguration withSupportedIpAddressTypes(CreateVpcEndpointServiceConfigurationResultServiceConfigurationSupportedIpAddressTypesEnum[] supportedIpAddressTypes) {
         this.supportedIpAddressTypes = supportedIpAddressTypes;
         return this;
@@ -110,9 +124,11 @@ public class CreateVpcEndpointServiceConfigurationResultServiceConfiguration {
     
     
     public CreateVpcEndpointServiceConfigurationResultServiceConfigurationTags[] tags;
+
     public CreateVpcEndpointServiceConfigurationResultServiceConfiguration withTags(CreateVpcEndpointServiceConfigurationResultServiceConfigurationTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateVpcEndpointServiceConfigurationResultServiceConfiguration(){}
 }

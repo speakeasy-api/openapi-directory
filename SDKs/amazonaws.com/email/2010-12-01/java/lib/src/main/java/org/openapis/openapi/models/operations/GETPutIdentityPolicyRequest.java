@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPutIdentityPolicyRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETPutIdentityPolicyActionEnum action;
+
     public GETPutIdentityPolicyRequest withAction(GETPutIdentityPolicyActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETPutIdentityPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Identity")
     public String identity;
+
     public GETPutIdentityPolicyRequest withIdentity(String identity) {
         this.identity = identity;
         return this;
@@ -29,6 +32,7 @@ public class GETPutIdentityPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Policy")
     public String policy;
+
     public GETPutIdentityPolicyRequest withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -39,6 +43,7 @@ public class GETPutIdentityPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyName")
     public String policyName;
+
     public GETPutIdentityPolicyRequest withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -46,6 +51,7 @@ public class GETPutIdentityPolicyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETPutIdentityPolicyVersionEnum version;
+
     public GETPutIdentityPolicyRequest withVersion(GETPutIdentityPolicyVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETPutIdentityPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETPutIdentityPolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETPutIdentityPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETPutIdentityPolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETPutIdentityPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETPutIdentityPolicyRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETPutIdentityPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETPutIdentityPolicyRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETPutIdentityPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETPutIdentityPolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETPutIdentityPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETPutIdentityPolicyRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,17 @@ public class GETPutIdentityPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETPutIdentityPolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETPutIdentityPolicyRequest(@JsonProperty("Action") GETPutIdentityPolicyActionEnum action, @JsonProperty("Identity") String identity, @JsonProperty("Policy") String policy, @JsonProperty("PolicyName") String policyName, @JsonProperty("Version") GETPutIdentityPolicyVersionEnum version) {
+        this.action = action;
+        this.identity = identity;
+        this.policy = policy;
+        this.policyName = policyName;
+        this.version = version;
+  }
 }

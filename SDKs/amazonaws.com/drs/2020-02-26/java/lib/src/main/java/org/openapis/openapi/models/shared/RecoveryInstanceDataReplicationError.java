@@ -15,6 +15,7 @@ public class RecoveryInstanceDataReplicationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public FailbackReplicationErrorEnum error;
+
     public RecoveryInstanceDataReplicationError withError(FailbackReplicationErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class RecoveryInstanceDataReplicationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawError")
     public String rawError;
+
     public RecoveryInstanceDataReplicationError withRawError(String rawError) {
         this.rawError = rawError;
         return this;
     }
     
+    public RecoveryInstanceDataReplicationError(){}
 }

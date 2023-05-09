@@ -18,6 +18,7 @@ public class IntentFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionNames")
     public String[] actionNames;
+
     public IntentFilter withActionNames(String[] actionNames) {
         this.actionNames = actionNames;
         return this;
@@ -29,6 +30,7 @@ public class IntentFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryNames")
     public String[] categoryNames;
+
     public IntentFilter withCategoryNames(String[] categoryNames) {
         this.categoryNames = categoryNames;
         return this;
@@ -40,9 +42,11 @@ public class IntentFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public IntentFilter withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
     
+    public IntentFilter(){}
 }

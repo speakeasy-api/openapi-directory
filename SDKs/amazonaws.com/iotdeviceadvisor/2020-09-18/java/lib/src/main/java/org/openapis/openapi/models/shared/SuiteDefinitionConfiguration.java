@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SuiteDefinitionConfiguration {
     @JsonProperty("devicePermissionRoleArn")
     public String devicePermissionRoleArn;
+
     public SuiteDefinitionConfiguration withDevicePermissionRoleArn(String devicePermissionRoleArn) {
         this.devicePermissionRoleArn = devicePermissionRoleArn;
         return this;
@@ -22,6 +23,7 @@ public class SuiteDefinitionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public DeviceUnderTest[] devices;
+
     public SuiteDefinitionConfiguration withDevices(DeviceUnderTest[] devices) {
         this.devices = devices;
         return this;
@@ -30,6 +32,7 @@ public class SuiteDefinitionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intendedForQualification")
     public Boolean intendedForQualification;
+
     public SuiteDefinitionConfiguration withIntendedForQualification(Boolean intendedForQualification) {
         this.intendedForQualification = intendedForQualification;
         return this;
@@ -38,6 +41,7 @@ public class SuiteDefinitionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isLongDurationTest")
     public Boolean isLongDurationTest;
+
     public SuiteDefinitionConfiguration withIsLongDurationTest(Boolean isLongDurationTest) {
         this.isLongDurationTest = isLongDurationTest;
         return this;
@@ -46,6 +50,7 @@ public class SuiteDefinitionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public ProtocolEnum protocol;
+
     public SuiteDefinitionConfiguration withProtocol(ProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -53,6 +58,7 @@ public class SuiteDefinitionConfiguration {
     
     @JsonProperty("rootGroup")
     public String rootGroup;
+
     public SuiteDefinitionConfiguration withRootGroup(String rootGroup) {
         this.rootGroup = rootGroup;
         return this;
@@ -60,9 +66,15 @@ public class SuiteDefinitionConfiguration {
     
     @JsonProperty("suiteDefinitionName")
     public String suiteDefinitionName;
+
     public SuiteDefinitionConfiguration withSuiteDefinitionName(String suiteDefinitionName) {
         this.suiteDefinitionName = suiteDefinitionName;
         return this;
     }
     
+    public SuiteDefinitionConfiguration(@JsonProperty("devicePermissionRoleArn") String devicePermissionRoleArn, @JsonProperty("rootGroup") String rootGroup, @JsonProperty("suiteDefinitionName") String suiteDefinitionName) {
+        this.devicePermissionRoleArn = devicePermissionRoleArn;
+        this.rootGroup = rootGroup;
+        this.suiteDefinitionName = suiteDefinitionName;
+  }
 }

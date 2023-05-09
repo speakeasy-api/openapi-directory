@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateEventDestinationResponse {
@@ -12,6 +13,7 @@ public class UpdateEventDestinationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateEventDestinationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateEventDestinationResponse {
      */
     
     public Object conflictException;
+
     public UpdateEventDestinationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateEventDestinationResponse {
     
     
     public String contentType;
+
     public UpdateEventDestinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateEventDestinationResponse {
      */
     
     public Object internalServerException;
+
     public UpdateEventDestinationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateEventDestinationResponse {
     
     
     public Integer statusCode;
+
     public UpdateEventDestinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateEventDestinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateEventDestinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateEventDestinationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateEventDestinationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateEventDestinationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateEventDestinationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateEventDestinationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateEventDestinationResult updateEventDestinationResult;
+
     public UpdateEventDestinationResponse withUpdateEventDestinationResult(org.openapis.openapi.models.shared.UpdateEventDestinationResult updateEventDestinationResult) {
         this.updateEventDestinationResult = updateEventDestinationResult;
         return this;
@@ -93,9 +103,14 @@ public class UpdateEventDestinationResponse {
      */
     
     public Object validationException;
+
     public UpdateEventDestinationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateEventDestinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

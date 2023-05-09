@@ -7,13 +7,13 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum GroundhogActiveEnum {
-    ZERO("0"),
-    ONE("1");
+    ZERO(0L),
+    ONE(1L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private GroundhogActiveEnum(String value) {
+    private GroundhogActiveEnum(Long value) {
         this.value = value;
     }
 }

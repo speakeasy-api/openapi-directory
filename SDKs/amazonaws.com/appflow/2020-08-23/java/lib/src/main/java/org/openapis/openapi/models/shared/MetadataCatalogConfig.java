@@ -15,9 +15,11 @@ public class MetadataCatalogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glueDataCatalog")
     public GlueDataCatalogConfig glueDataCatalog;
+
     public MetadataCatalogConfig withGlueDataCatalog(GlueDataCatalogConfig glueDataCatalog) {
         this.glueDataCatalog = glueDataCatalog;
         return this;
     }
     
+    public MetadataCatalogConfig(){}
 }

@@ -15,6 +15,7 @@ public class ConnectionCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionToken")
     public String connectionToken;
+
     public ConnectionCredentials withConnectionToken(String connectionToken) {
         this.connectionToken = connectionToken;
         return this;
@@ -23,9 +24,11 @@ public class ConnectionCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Expiry")
     public String expiry;
+
     public ConnectionCredentials withExpiry(String expiry) {
         this.expiry = expiry;
         return this;
     }
     
+    public ConnectionCredentials(){}
 }

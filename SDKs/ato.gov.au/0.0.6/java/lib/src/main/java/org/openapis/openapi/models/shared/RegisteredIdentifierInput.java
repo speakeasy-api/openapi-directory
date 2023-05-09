@@ -18,6 +18,7 @@ public class RegisteredIdentifierInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public RegisteredIdentifierInput withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -29,9 +30,11 @@ public class RegisteredIdentifierInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifierType")
     public RegisteredIdentifierIdentifierTypeEnum identifierType;
+
     public RegisteredIdentifierInput withIdentifierType(RegisteredIdentifierIdentifierTypeEnum identifierType) {
         this.identifierType = identifierType;
         return this;
     }
     
+    public RegisteredIdentifierInput(){}
 }

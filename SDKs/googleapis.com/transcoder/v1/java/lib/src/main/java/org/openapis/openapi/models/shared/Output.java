@@ -18,9 +18,11 @@ public class Output {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public Output withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public Output(){}
 }

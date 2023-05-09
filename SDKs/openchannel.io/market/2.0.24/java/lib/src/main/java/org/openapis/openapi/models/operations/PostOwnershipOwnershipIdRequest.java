@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOwnershipOwnershipIdRequest {
@@ -12,6 +13,7 @@ public class PostOwnershipOwnershipIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
     public String customData;
+
     public PostOwnershipOwnershipIdRequest withCustomData(String customData) {
         this.customData = customData;
         return this;
@@ -22,6 +24,7 @@ public class PostOwnershipOwnershipIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expires")
     public Long expires;
+
     public PostOwnershipOwnershipIdRequest withExpires(Long expires) {
         this.expires = expires;
         return this;
@@ -32,9 +35,13 @@ public class PostOwnershipOwnershipIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ownershipId")
     public String ownershipId;
+
     public PostOwnershipOwnershipIdRequest withOwnershipId(String ownershipId) {
         this.ownershipId = ownershipId;
         return this;
     }
     
+    public PostOwnershipOwnershipIdRequest(@JsonProperty("ownershipId") String ownershipId) {
+        this.ownershipId = ownershipId;
+  }
 }

@@ -14,6 +14,7 @@ public class ListWebhooksResponseLinks {
      */
     @JsonProperty("next")
     public String next;
+
     public ListWebhooksResponseLinks withNext(String next) {
         this.next = next;
         return this;
@@ -26,9 +27,14 @@ public class ListWebhooksResponseLinks {
      */
     @JsonProperty("prev")
     public String prev;
+
     public ListWebhooksResponseLinks withPrev(String prev) {
         this.prev = prev;
         return this;
     }
     
+    public ListWebhooksResponseLinks(@JsonProperty("next") String next, @JsonProperty("prev") String prev) {
+        this.next = next;
+        this.prev = prev;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteNatGatewayResult {
     
     public String natGatewayId;
+
     public DeleteNatGatewayResult withNatGatewayId(String natGatewayId) {
         this.natGatewayId = natGatewayId;
         return this;
     }
     
+    public DeleteNatGatewayResult(){}
 }

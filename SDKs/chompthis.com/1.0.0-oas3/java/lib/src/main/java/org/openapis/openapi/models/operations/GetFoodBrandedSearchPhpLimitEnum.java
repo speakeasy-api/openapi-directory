@@ -14,21 +14,21 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * 
  */
 public enum GetFoodBrandedSearchPhpLimitEnum {
-    ONE("1"),
-    TWO("2"),
-    THREE("3"),
-    FOUR("4"),
-    FIVE("5"),
-    SIX("6"),
-    SEVEN("7"),
-    EIGHT("8"),
-    NINE("9"),
-    TEN("10");
+    ONE(1L),
+    TWO(2L),
+    THREE(3L),
+    FOUR(4L),
+    FIVE(5L),
+    SIX(6L),
+    SEVEN(7L),
+    EIGHT(8L),
+    NINE(9L),
+    TEN(10L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private GetFoodBrandedSearchPhpLimitEnum(String value) {
+    private GetFoodBrandedSearchPhpLimitEnum(Long value) {
         this.value = value;
     }
 }

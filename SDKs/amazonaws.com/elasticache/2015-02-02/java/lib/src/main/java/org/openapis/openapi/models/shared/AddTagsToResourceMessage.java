@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AddTagsToResourceMessage - Represents the input of an AddTagsToResource operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AddTagsToResourceMessage {
     
     public String resourceName;
+
     public AddTagsToResourceMessage withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -19,9 +20,14 @@ public class AddTagsToResourceMessage {
     
     
     public TagList[] tags;
+
     public AddTagsToResourceMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public AddTagsToResourceMessage(@JsonProperty("ResourceName") String resourceName, @JsonProperty("Tags") TagList[] tags) {
+        this.resourceName = resourceName;
+        this.tags = tags;
+  }
 }

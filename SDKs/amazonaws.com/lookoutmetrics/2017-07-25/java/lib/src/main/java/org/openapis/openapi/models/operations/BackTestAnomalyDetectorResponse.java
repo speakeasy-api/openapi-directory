@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BackTestAnomalyDetectorResponse {
@@ -12,6 +13,7 @@ public class BackTestAnomalyDetectorResponse {
      */
     
     public Object accessDeniedException;
+
     public BackTestAnomalyDetectorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BackTestAnomalyDetectorResponse {
      */
     
     public java.util.Map<String, Object> backTestAnomalyDetectorResponse;
+
     public BackTestAnomalyDetectorResponse withBackTestAnomalyDetectorResponse(java.util.Map<String, Object> backTestAnomalyDetectorResponse) {
         this.backTestAnomalyDetectorResponse = backTestAnomalyDetectorResponse;
         return this;
@@ -29,6 +32,7 @@ public class BackTestAnomalyDetectorResponse {
     
     
     public String contentType;
+
     public BackTestAnomalyDetectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BackTestAnomalyDetectorResponse {
      */
     
     public Object internalServerException;
+
     public BackTestAnomalyDetectorResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class BackTestAnomalyDetectorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BackTestAnomalyDetectorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class BackTestAnomalyDetectorResponse {
     
     
     public Integer statusCode;
+
     public BackTestAnomalyDetectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BackTestAnomalyDetectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BackTestAnomalyDetectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class BackTestAnomalyDetectorResponse {
      */
     
     public Object tooManyRequestsException;
+
     public BackTestAnomalyDetectorResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class BackTestAnomalyDetectorResponse {
      */
     
     public Object validationException;
+
     public BackTestAnomalyDetectorResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BackTestAnomalyDetectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

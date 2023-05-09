@@ -15,6 +15,7 @@ public class ServiceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceCode")
     public String serviceCode;
+
     public ServiceInfo withServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
@@ -23,9 +24,11 @@ public class ServiceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceName")
     public String serviceName;
+
     public ServiceInfo withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public ServiceInfo(){}
 }

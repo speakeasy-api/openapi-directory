@@ -19,6 +19,7 @@ public class ListWebhooksResponse {
      */
     @JsonProperty("data")
     public WebhookResource[] data;
+
     public ListWebhooksResponse withData(WebhookResource[] data) {
         this.data = data;
         return this;
@@ -26,9 +27,14 @@ public class ListWebhooksResponse {
     
     @JsonProperty("links")
     public ListWebhooksResponseLinks links;
+
     public ListWebhooksResponse withLinks(ListWebhooksResponseLinks links) {
         this.links = links;
         return this;
     }
     
+    public ListWebhooksResponse(@JsonProperty("data") WebhookResource[] data, @JsonProperty("links") ListWebhooksResponseLinks links) {
+        this.data = data;
+        this.links = links;
+  }
 }

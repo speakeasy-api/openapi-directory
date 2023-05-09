@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSizeConstraintSetResponse {
     
     public String contentType;
+
     public DeleteSizeConstraintSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSizeConstraintSetResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteSizeConstraintSetResponse deleteSizeConstraintSetResponse;
+
     public DeleteSizeConstraintSetResponse withDeleteSizeConstraintSetResponse(org.openapis.openapi.models.shared.DeleteSizeConstraintSetResponse deleteSizeConstraintSetResponse) {
         this.deleteSizeConstraintSetResponse = deleteSizeConstraintSetResponse;
         return this;
@@ -26,6 +29,7 @@ public class DeleteSizeConstraintSetResponse {
     
     
     public Integer statusCode;
+
     public DeleteSizeConstraintSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteSizeConstraintSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSizeConstraintSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class DeleteSizeConstraintSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public DeleteSizeConstraintSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class DeleteSizeConstraintSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public DeleteSizeConstraintSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class DeleteSizeConstraintSetResponse {
      */
     
     public Object wafNonEmptyEntityException;
+
     public DeleteSizeConstraintSetResponse withWAFNonEmptyEntityException(Object wafNonEmptyEntityException) {
         this.wafNonEmptyEntityException = wafNonEmptyEntityException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteSizeConstraintSetResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public DeleteSizeConstraintSetResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteSizeConstraintSetResponse {
      */
     
     public Object wafReferencedItemException;
+
     public DeleteSizeConstraintSetResponse withWAFReferencedItemException(Object wafReferencedItemException) {
         this.wafReferencedItemException = wafReferencedItemException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteSizeConstraintSetResponse {
      */
     
     public Object wafStaleDataException;
+
     public DeleteSizeConstraintSetResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public DeleteSizeConstraintSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

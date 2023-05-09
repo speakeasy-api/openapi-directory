@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetTrailRequest {
     @JsonProperty("Name")
     public String name;
+
     public GetTrailRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetTrailRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

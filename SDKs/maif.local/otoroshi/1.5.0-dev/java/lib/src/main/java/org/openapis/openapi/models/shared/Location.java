@@ -12,6 +12,7 @@ public class Location {
      */
     @JsonProperty("teams")
     public java.util.Map<String, String>[] teams;
+
     public Location withTeams(java.util.Map<String, String>[] teams) {
         this.teams = teams;
         return this;
@@ -22,9 +23,14 @@ public class Location {
      */
     @JsonProperty("tenant")
     public String tenant;
+
     public Location withTenant(String tenant) {
         this.tenant = tenant;
         return this;
     }
     
+    public Location(@JsonProperty("teams") java.util.Map<String, String>[] teams, @JsonProperty("tenant") String tenant) {
+        this.teams = teams;
+        this.tenant = tenant;
+  }
 }

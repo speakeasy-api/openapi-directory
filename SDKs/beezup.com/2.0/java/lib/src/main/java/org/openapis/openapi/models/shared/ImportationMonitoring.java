@@ -24,6 +24,7 @@ public class ImportationMonitoring {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("beginUtcDate")
     public OffsetDateTime beginUtcDate;
+
     public ImportationMonitoring withBeginUtcDate(OffsetDateTime beginUtcDate) {
         this.beginUtcDate = beginUtcDate;
         return this;
@@ -35,6 +36,7 @@ public class ImportationMonitoring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public BeezUPCommonUserErrorMessage[] errors;
+
     public ImportationMonitoring withErrors(BeezUPCommonUserErrorMessage[] errors) {
         this.errors = errors;
         return this;
@@ -45,6 +47,7 @@ public class ImportationMonitoring {
      */
     @JsonProperty("executionId")
     public String executionId;
+
     public ImportationMonitoring withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -57,6 +60,7 @@ public class ImportationMonitoring {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateUtcDate")
     public OffsetDateTime lastUpdateUtcDate;
+
     public ImportationMonitoring withLastUpdateUtcDate(OffsetDateTime lastUpdateUtcDate) {
         this.lastUpdateUtcDate = lastUpdateUtcDate;
         return this;
@@ -68,6 +72,7 @@ public class ImportationMonitoring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public ImportationMonitoringLinks links;
+
     public ImportationMonitoring withLinks(ImportationMonitoringLinks links) {
         this.links = links;
         return this;
@@ -78,6 +83,7 @@ public class ImportationMonitoring {
      */
     @JsonProperty("steps")
     public java.util.Map<String, Boolean> steps;
+
     public ImportationMonitoring withSteps(java.util.Map<String, Boolean> steps) {
         this.steps = steps;
         return this;
@@ -88,6 +94,7 @@ public class ImportationMonitoring {
      */
     @JsonProperty("success")
     public Boolean success;
+
     public ImportationMonitoring withSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -99,9 +106,17 @@ public class ImportationMonitoring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public ImportationMonitoring withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public ImportationMonitoring(@JsonProperty("beginUtcDate") OffsetDateTime beginUtcDate, @JsonProperty("executionId") String executionId, @JsonProperty("lastUpdateUtcDate") OffsetDateTime lastUpdateUtcDate, @JsonProperty("steps") java.util.Map<String, Boolean> steps, @JsonProperty("success") Boolean success) {
+        this.beginUtcDate = beginUtcDate;
+        this.executionId = executionId;
+        this.lastUpdateUtcDate = lastUpdateUtcDate;
+        this.steps = steps;
+        this.success = success;
+  }
 }

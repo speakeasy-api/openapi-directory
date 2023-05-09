@@ -18,9 +18,11 @@ public class GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictionType")
     public GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequestRestrictionTypeEnum restrictionType;
+
     public GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequest withRestrictionType(GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequestRestrictionTypeEnum restrictionType) {
         this.restrictionType = restrictionType;
         return this;
     }
     
+    public GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequest(){}
 }

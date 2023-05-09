@@ -61,11 +61,9 @@ public class ManagedZones {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsManagedZonesCreateResponse res = new org.openapis.openapi.models.operations.DnsManagedZonesCreateResponse() {{
+        org.openapis.openapi.models.operations.DnsManagedZonesCreateResponse res = new org.openapis.openapi.models.operations.DnsManagedZonesCreateResponse(contentType, httpRes.statusCode()) {{
             managedZone = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,10 +105,8 @@ public class ManagedZones {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsManagedZonesDeleteResponse res = new org.openapis.openapi.models.operations.DnsManagedZonesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DnsManagedZonesDeleteResponse res = new org.openapis.openapi.models.operations.DnsManagedZonesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class ManagedZones {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsManagedZonesGetResponse res = new org.openapis.openapi.models.operations.DnsManagedZonesGetResponse() {{
+        org.openapis.openapi.models.operations.DnsManagedZonesGetResponse res = new org.openapis.openapi.models.operations.DnsManagedZonesGetResponse(contentType, httpRes.statusCode()) {{
             managedZone = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,11 +189,9 @@ public class ManagedZones {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsManagedZonesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.DnsManagedZonesGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.DnsManagedZonesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.DnsManagedZonesGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             googleIamV1Policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class ManagedZones {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsManagedZonesListResponse res = new org.openapis.openapi.models.operations.DnsManagedZonesListResponse() {{
+        org.openapis.openapi.models.operations.DnsManagedZonesListResponse res = new org.openapis.openapi.models.operations.DnsManagedZonesListResponse(contentType, httpRes.statusCode()) {{
             managedZonesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class ManagedZones {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsManagedZonesPatchResponse res = new org.openapis.openapi.models.operations.DnsManagedZonesPatchResponse() {{
+        org.openapis.openapi.models.operations.DnsManagedZonesPatchResponse res = new org.openapis.openapi.models.operations.DnsManagedZonesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -337,11 +325,9 @@ public class ManagedZones {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsManagedZonesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.DnsManagedZonesSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.DnsManagedZonesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.DnsManagedZonesSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             googleIamV1Policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -385,11 +371,9 @@ public class ManagedZones {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsManagedZonesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.DnsManagedZonesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.DnsManagedZonesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.DnsManagedZonesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             googleIamV1TestIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -433,11 +417,9 @@ public class ManagedZones {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DnsManagedZonesUpdateResponse res = new org.openapis.openapi.models.operations.DnsManagedZonesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DnsManagedZonesUpdateResponse res = new org.openapis.openapi.models.operations.DnsManagedZonesUpdateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

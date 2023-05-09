@@ -12,6 +12,7 @@ public class ListIcd10CMInferenceJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public ComprehendMedicalAsyncJobFilter filter;
+
     public ListIcd10CMInferenceJobsRequest withFilter(ComprehendMedicalAsyncJobFilter filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class ListIcd10CMInferenceJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListIcd10CMInferenceJobsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListIcd10CMInferenceJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListIcd10CMInferenceJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListIcd10CMInferenceJobsRequest(){}
 }

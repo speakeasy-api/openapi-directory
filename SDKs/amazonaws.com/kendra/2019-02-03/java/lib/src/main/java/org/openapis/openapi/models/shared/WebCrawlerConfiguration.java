@@ -15,6 +15,7 @@ public class WebCrawlerConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthenticationConfiguration")
     public AuthenticationConfiguration authenticationConfiguration;
+
     public WebCrawlerConfiguration withAuthenticationConfiguration(AuthenticationConfiguration authenticationConfiguration) {
         this.authenticationConfiguration = authenticationConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class WebCrawlerConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlDepth")
     public Long crawlDepth;
+
     public WebCrawlerConfiguration withCrawlDepth(Long crawlDepth) {
         this.crawlDepth = crawlDepth;
         return this;
@@ -31,6 +33,7 @@ public class WebCrawlerConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxContentSizePerPageInMegaBytes")
     public Float maxContentSizePerPageInMegaBytes;
+
     public WebCrawlerConfiguration withMaxContentSizePerPageInMegaBytes(Float maxContentSizePerPageInMegaBytes) {
         this.maxContentSizePerPageInMegaBytes = maxContentSizePerPageInMegaBytes;
         return this;
@@ -39,6 +42,7 @@ public class WebCrawlerConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxLinksPerPage")
     public Long maxLinksPerPage;
+
     public WebCrawlerConfiguration withMaxLinksPerPage(Long maxLinksPerPage) {
         this.maxLinksPerPage = maxLinksPerPage;
         return this;
@@ -47,6 +51,7 @@ public class WebCrawlerConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxUrlsPerMinuteCrawlRate")
     public Long maxUrlsPerMinuteCrawlRate;
+
     public WebCrawlerConfiguration withMaxUrlsPerMinuteCrawlRate(Long maxUrlsPerMinuteCrawlRate) {
         this.maxUrlsPerMinuteCrawlRate = maxUrlsPerMinuteCrawlRate;
         return this;
@@ -55,6 +60,7 @@ public class WebCrawlerConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProxyConfiguration")
     public ProxyConfiguration proxyConfiguration;
+
     public WebCrawlerConfiguration withProxyConfiguration(ProxyConfiguration proxyConfiguration) {
         this.proxyConfiguration = proxyConfiguration;
         return this;
@@ -63,6 +69,7 @@ public class WebCrawlerConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UrlExclusionPatterns")
     public String[] urlExclusionPatterns;
+
     public WebCrawlerConfiguration withUrlExclusionPatterns(String[] urlExclusionPatterns) {
         this.urlExclusionPatterns = urlExclusionPatterns;
         return this;
@@ -71,6 +78,7 @@ public class WebCrawlerConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UrlInclusionPatterns")
     public String[] urlInclusionPatterns;
+
     public WebCrawlerConfiguration withUrlInclusionPatterns(String[] urlInclusionPatterns) {
         this.urlInclusionPatterns = urlInclusionPatterns;
         return this;
@@ -78,9 +86,13 @@ public class WebCrawlerConfiguration {
     
     @JsonProperty("Urls")
     public Urls urls;
+
     public WebCrawlerConfiguration withUrls(Urls urls) {
         this.urls = urls;
         return this;
     }
     
+    public WebCrawlerConfiguration(@JsonProperty("Urls") Urls urls) {
+        this.urls = urls;
+  }
 }

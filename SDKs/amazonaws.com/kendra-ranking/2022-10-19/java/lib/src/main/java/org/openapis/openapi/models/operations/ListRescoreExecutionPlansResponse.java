@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRescoreExecutionPlansResponse {
@@ -12,6 +13,7 @@ public class ListRescoreExecutionPlansResponse {
      */
     
     public Object accessDeniedException;
+
     public ListRescoreExecutionPlansResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListRescoreExecutionPlansResponse {
     
     
     public String contentType;
+
     public ListRescoreExecutionPlansResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListRescoreExecutionPlansResponse {
      */
     
     public Object internalServerException;
+
     public ListRescoreExecutionPlansResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListRescoreExecutionPlansResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRescoreExecutionPlansResponse listRescoreExecutionPlansResponse;
+
     public ListRescoreExecutionPlansResponse withListRescoreExecutionPlansResponse(org.openapis.openapi.models.shared.ListRescoreExecutionPlansResponse listRescoreExecutionPlansResponse) {
         this.listRescoreExecutionPlansResponse = listRescoreExecutionPlansResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListRescoreExecutionPlansResponse {
     
     
     public Integer statusCode;
+
     public ListRescoreExecutionPlansResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListRescoreExecutionPlansResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRescoreExecutionPlansResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListRescoreExecutionPlansResponse {
      */
     
     public Object throttlingException;
+
     public ListRescoreExecutionPlansResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListRescoreExecutionPlansResponse {
      */
     
     public Object validationException;
+
     public ListRescoreExecutionPlansResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListRescoreExecutionPlansResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class OSPolicyResourcePackageResourceAPT {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OSPolicyResourcePackageResourceAPT withName(String name) {
         this.name = name;
         return this;
     }
     
+    public OSPolicyResourcePackageResourceAPT(){}
 }

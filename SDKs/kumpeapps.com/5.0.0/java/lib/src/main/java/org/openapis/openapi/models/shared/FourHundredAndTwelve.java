@@ -15,6 +15,7 @@ public class FourHundredAndTwelve {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public FourHundredAndTwelve withError(String error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class FourHundredAndTwelve {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Long success;
+
     public FourHundredAndTwelve withSuccess(Long success) {
         this.success = success;
         return this;
     }
     
+    public FourHundredAndTwelve(){}
 }

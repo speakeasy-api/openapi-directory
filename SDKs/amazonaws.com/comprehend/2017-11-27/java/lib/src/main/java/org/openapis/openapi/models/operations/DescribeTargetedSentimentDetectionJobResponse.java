@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeTargetedSentimentDetectionJobResponse {
     
     public String contentType;
+
     public DescribeTargetedSentimentDetectionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeTargetedSentimentDetectionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeTargetedSentimentDetectionJobResponse describeTargetedSentimentDetectionJobResponse;
+
     public DescribeTargetedSentimentDetectionJobResponse withDescribeTargetedSentimentDetectionJobResponse(org.openapis.openapi.models.shared.DescribeTargetedSentimentDetectionJobResponse describeTargetedSentimentDetectionJobResponse) {
         this.describeTargetedSentimentDetectionJobResponse = describeTargetedSentimentDetectionJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeTargetedSentimentDetectionJobResponse {
      */
     
     public Object internalServerException;
+
     public DescribeTargetedSentimentDetectionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeTargetedSentimentDetectionJobResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeTargetedSentimentDetectionJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeTargetedSentimentDetectionJobResponse {
      */
     
     public Object jobNotFoundException;
+
     public DescribeTargetedSentimentDetectionJobResponse withJobNotFoundException(Object jobNotFoundException) {
         this.jobNotFoundException = jobNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeTargetedSentimentDetectionJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeTargetedSentimentDetectionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeTargetedSentimentDetectionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeTargetedSentimentDetectionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeTargetedSentimentDetectionJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeTargetedSentimentDetectionJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeTargetedSentimentDetectionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

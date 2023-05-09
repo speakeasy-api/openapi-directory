@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CampaignDateRangeKpiResponse {
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public CampaignDateRangeKpiResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -26,6 +27,7 @@ public class CampaignDateRangeKpiResponse {
     
     @JsonProperty("CampaignId")
     public String campaignId;
+
     public CampaignDateRangeKpiResponse withCampaignId(String campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -35,6 +37,7 @@ public class CampaignDateRangeKpiResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public CampaignDateRangeKpiResponse withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -42,6 +45,7 @@ public class CampaignDateRangeKpiResponse {
     
     @JsonProperty("KpiName")
     public String kpiName;
+
     public CampaignDateRangeKpiResponse withKpiName(String kpiName) {
         this.kpiName = kpiName;
         return this;
@@ -49,6 +53,7 @@ public class CampaignDateRangeKpiResponse {
     
     @JsonProperty("KpiResult")
     public BaseKpiResult kpiResult;
+
     public CampaignDateRangeKpiResponse withKpiResult(BaseKpiResult kpiResult) {
         this.kpiResult = kpiResult;
         return this;
@@ -57,6 +62,7 @@ public class CampaignDateRangeKpiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public CampaignDateRangeKpiResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -66,9 +72,18 @@ public class CampaignDateRangeKpiResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public CampaignDateRangeKpiResponse withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public CampaignDateRangeKpiResponse(@JsonProperty("ApplicationId") String applicationId, @JsonProperty("CampaignId") String campaignId, @JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("KpiName") String kpiName, @JsonProperty("KpiResult") BaseKpiResult kpiResult, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.applicationId = applicationId;
+        this.campaignId = campaignId;
+        this.endTime = endTime;
+        this.kpiName = kpiName;
+        this.kpiResult = kpiResult;
+        this.startTime = startTime;
+  }
 }

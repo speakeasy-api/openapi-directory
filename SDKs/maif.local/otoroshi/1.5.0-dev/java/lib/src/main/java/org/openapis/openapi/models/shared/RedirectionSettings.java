@@ -15,6 +15,7 @@ public class RedirectionSettings {
      */
     @JsonProperty("code")
     public Integer code;
+
     public RedirectionSettings withCode(Integer code) {
         this.code = code;
         return this;
@@ -25,6 +26,7 @@ public class RedirectionSettings {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public RedirectionSettings withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -35,9 +37,15 @@ public class RedirectionSettings {
      */
     @JsonProperty("to")
     public String to;
+
     public RedirectionSettings withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public RedirectionSettings(@JsonProperty("code") Integer code, @JsonProperty("enabled") Boolean enabled, @JsonProperty("to") String to) {
+        this.code = code;
+        this.enabled = enabled;
+        this.to = to;
+  }
 }

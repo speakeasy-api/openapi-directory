@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VmwareToAwsTagMapping {
     @JsonProperty("AwsTagKey")
     public String awsTagKey;
+
     public VmwareToAwsTagMapping withAwsTagKey(String awsTagKey) {
         this.awsTagKey = awsTagKey;
         return this;
@@ -19,6 +20,7 @@ public class VmwareToAwsTagMapping {
     
     @JsonProperty("AwsTagValue")
     public String awsTagValue;
+
     public VmwareToAwsTagMapping withAwsTagValue(String awsTagValue) {
         this.awsTagValue = awsTagValue;
         return this;
@@ -26,6 +28,7 @@ public class VmwareToAwsTagMapping {
     
     @JsonProperty("VmwareCategory")
     public String vmwareCategory;
+
     public VmwareToAwsTagMapping withVmwareCategory(String vmwareCategory) {
         this.vmwareCategory = vmwareCategory;
         return this;
@@ -33,9 +36,16 @@ public class VmwareToAwsTagMapping {
     
     @JsonProperty("VmwareTagName")
     public String vmwareTagName;
+
     public VmwareToAwsTagMapping withVmwareTagName(String vmwareTagName) {
         this.vmwareTagName = vmwareTagName;
         return this;
     }
     
+    public VmwareToAwsTagMapping(@JsonProperty("AwsTagKey") String awsTagKey, @JsonProperty("AwsTagValue") String awsTagValue, @JsonProperty("VmwareCategory") String vmwareCategory, @JsonProperty("VmwareTagName") String vmwareTagName) {
+        this.awsTagKey = awsTagKey;
+        this.awsTagValue = awsTagValue;
+        this.vmwareCategory = vmwareCategory;
+        this.vmwareTagName = vmwareTagName;
+  }
 }

@@ -18,8 +18,21 @@ public class GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, GoogleCloudRetailV2alphaCustomAttribute> attributes;
+
     public GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult withAttributes(java.util.Map<String, GoogleCloudRetailV2alphaCustomAttribute> attributes) {
         this.attributes = attributes;
+        return this;
+    }
+    
+    /**
+     * Facet information for the suggestion term. Gives the number of items resulting from a search with this suggestion term for each facet. This is an experimental feature for limited customers. If you want to receive this facet information, reach out to the Retail support team.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("facets")
+    public GoogleCloudRetailV2alphaSearchResponseFacet[] facets;
+
+    public GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult withFacets(GoogleCloudRetailV2alphaSearchResponseFacet[] facets) {
+        this.facets = facets;
         return this;
     }
     
@@ -29,9 +42,23 @@ public class GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestion")
     public String suggestion;
+
     public GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult withSuggestion(String suggestion) {
         this.suggestion = suggestion;
         return this;
     }
     
+    /**
+     * Total number of products associated with a search with this suggestion. This is an experimental feature for limited customers. If you want to receive this product count information, reach out to the Retail support team.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("totalProductCount")
+    public Integer totalProductCount;
+
+    public GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult withTotalProductCount(Integer totalProductCount) {
+        this.totalProductCount = totalProductCount;
+        return this;
+    }
+    
+    public GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult(){}
 }

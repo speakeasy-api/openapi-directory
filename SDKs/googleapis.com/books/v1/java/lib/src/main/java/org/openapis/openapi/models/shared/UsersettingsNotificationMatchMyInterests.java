@@ -12,9 +12,11 @@ public class UsersettingsNotificationMatchMyInterests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opted_state")
     public String optedState;
+
     public UsersettingsNotificationMatchMyInterests withOptedState(String optedState) {
         this.optedState = optedState;
         return this;
     }
     
+    public UsersettingsNotificationMatchMyInterests(){}
 }

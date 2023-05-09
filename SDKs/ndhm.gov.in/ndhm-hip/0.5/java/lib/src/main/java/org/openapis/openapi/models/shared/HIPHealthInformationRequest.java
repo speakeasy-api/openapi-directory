@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class HIPHealthInformationRequest {
     @JsonProperty("hiRequest")
     public HIPHealthInformationRequestHiRequest hiRequest;
+
     public HIPHealthInformationRequest withHiRequest(HIPHealthInformationRequestHiRequest hiRequest) {
         this.hiRequest = hiRequest;
         return this;
@@ -21,6 +22,7 @@ public class HIPHealthInformationRequest {
     
     @JsonProperty("requestId")
     public String requestId;
+
     public HIPHealthInformationRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -33,6 +35,7 @@ public class HIPHealthInformationRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public HIPHealthInformationRequest withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -40,9 +43,16 @@ public class HIPHealthInformationRequest {
     
     @JsonProperty("transactionId")
     public String transactionId;
+
     public HIPHealthInformationRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public HIPHealthInformationRequest(@JsonProperty("hiRequest") HIPHealthInformationRequestHiRequest hiRequest, @JsonProperty("requestId") String requestId, @JsonProperty("timestamp") OffsetDateTime timestamp, @JsonProperty("transactionId") String transactionId) {
+        this.hiRequest = hiRequest;
+        this.requestId = requestId;
+        this.timestamp = timestamp;
+        this.transactionId = transactionId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeProjectResponse {
@@ -12,6 +13,7 @@ public class DescribeProjectResponse {
      */
     
     public Object concurrentModificationException;
+
     public DescribeProjectResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeProjectResponse {
     
     
     public String contentType;
+
     public DescribeProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeProjectResult describeProjectResult;
+
     public DescribeProjectResponse withDescribeProjectResult(org.openapis.openapi.models.shared.DescribeProjectResult describeProjectResult) {
         this.describeProjectResult = describeProjectResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeProjectResponse {
      */
     
     public Object invalidServiceRoleException;
+
     public DescribeProjectResponse withInvalidServiceRoleException(Object invalidServiceRoleException) {
         this.invalidServiceRoleException = invalidServiceRoleException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeProjectResponse {
      */
     
     public Object projectConfigurationException;
+
     public DescribeProjectResponse withProjectConfigurationException(Object projectConfigurationException) {
         this.projectConfigurationException = projectConfigurationException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeProjectResponse {
      */
     
     public Object projectNotFoundException;
+
     public DescribeProjectResponse withProjectNotFoundException(Object projectNotFoundException) {
         this.projectNotFoundException = projectNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeProjectResponse {
     
     
     public Integer statusCode;
+
     public DescribeProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DescribeProjectResponse {
      */
     
     public Object validationException;
+
     public DescribeProjectResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

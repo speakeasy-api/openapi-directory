@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApiMappingResponse {
@@ -12,6 +13,7 @@ public class DeleteApiMappingResponse {
      */
     
     public Object badRequestException;
+
     public DeleteApiMappingResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteApiMappingResponse {
     
     
     public String contentType;
+
     public DeleteApiMappingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteApiMappingResponse {
      */
     
     public Object notFoundException;
+
     public DeleteApiMappingResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DeleteApiMappingResponse {
     
     
     public Integer statusCode;
+
     public DeleteApiMappingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DeleteApiMappingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApiMappingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DeleteApiMappingResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteApiMappingResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteApiMappingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

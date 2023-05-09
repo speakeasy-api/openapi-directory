@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GatewayRouteVirtualService {
     @JsonProperty("virtualServiceName")
     public String virtualServiceName;
+
     public GatewayRouteVirtualService withVirtualServiceName(String virtualServiceName) {
         this.virtualServiceName = virtualServiceName;
         return this;
     }
     
+    public GatewayRouteVirtualService(@JsonProperty("virtualServiceName") String virtualServiceName) {
+        this.virtualServiceName = virtualServiceName;
+  }
 }

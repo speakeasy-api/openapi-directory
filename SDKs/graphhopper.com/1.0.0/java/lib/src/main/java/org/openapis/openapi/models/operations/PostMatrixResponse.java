@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostMatrixResponse {
     
     public String contentType;
+
     public PostMatrixResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostMatrixResponse {
      */
     
     public org.openapis.openapi.models.shared.GHError ghError;
+
     public PostMatrixResponse withGHError(org.openapis.openapi.models.shared.GHError ghError) {
         this.ghError = ghError;
         return this;
@@ -26,6 +29,7 @@ public class PostMatrixResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PostMatrixResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -36,6 +40,7 @@ public class PostMatrixResponse {
      */
     
     public org.openapis.openapi.models.shared.MatrixResponse matrixResponse;
+
     public PostMatrixResponse withMatrixResponse(org.openapis.openapi.models.shared.MatrixResponse matrixResponse) {
         this.matrixResponse = matrixResponse;
         return this;
@@ -43,6 +48,7 @@ public class PostMatrixResponse {
     
     
     public Integer statusCode;
+
     public PostMatrixResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class PostMatrixResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostMatrixResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostMatrixResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

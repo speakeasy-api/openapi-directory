@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrgsListForUserResponse {
     
     public String contentType;
+
     public OrgsListForUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OrgsListForUserResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public OrgsListForUserResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class OrgsListForUserResponse {
     
     
     public Integer statusCode;
+
     public OrgsListForUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class OrgsListForUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrgsListForUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class OrgsListForUserResponse {
      */
     
     public org.openapis.openapi.models.shared.OrganizationSimple[] organizationSimples;
+
     public OrgsListForUserResponse withOrganizationSimples(org.openapis.openapi.models.shared.OrganizationSimple[] organizationSimples) {
         this.organizationSimples = organizationSimples;
         return this;
     }
     
+    public OrgsListForUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

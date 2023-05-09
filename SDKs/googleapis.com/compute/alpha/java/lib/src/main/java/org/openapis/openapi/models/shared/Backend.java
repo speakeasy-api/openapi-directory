@@ -18,6 +18,7 @@ public class Backend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balancingMode")
     public BackendBalancingModeEnum balancingMode;
+
     public Backend withBalancingMode(BackendBalancingModeEnum balancingMode) {
         this.balancingMode = balancingMode;
         return this;
@@ -29,6 +30,7 @@ public class Backend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityScaler")
     public Float capacityScaler;
+
     public Backend withCapacityScaler(Float capacityScaler) {
         this.capacityScaler = capacityScaler;
         return this;
@@ -40,6 +42,7 @@ public class Backend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Backend withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class Backend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failover")
     public Boolean failover;
+
     public Backend withFailover(Boolean failover) {
         this.failover = failover;
         return this;
@@ -62,6 +66,7 @@ public class Backend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
+
     public Backend withGroup(String group) {
         this.group = group;
         return this;
@@ -73,6 +78,7 @@ public class Backend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxConnections")
     public Integer maxConnections;
+
     public Backend withMaxConnections(Integer maxConnections) {
         this.maxConnections = maxConnections;
         return this;
@@ -84,6 +90,7 @@ public class Backend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxConnectionsPerEndpoint")
     public Integer maxConnectionsPerEndpoint;
+
     public Backend withMaxConnectionsPerEndpoint(Integer maxConnectionsPerEndpoint) {
         this.maxConnectionsPerEndpoint = maxConnectionsPerEndpoint;
         return this;
@@ -95,6 +102,7 @@ public class Backend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxConnectionsPerInstance")
     public Integer maxConnectionsPerInstance;
+
     public Backend withMaxConnectionsPerInstance(Integer maxConnectionsPerInstance) {
         this.maxConnectionsPerInstance = maxConnectionsPerInstance;
         return this;
@@ -106,6 +114,7 @@ public class Backend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRate")
     public Integer maxRate;
+
     public Backend withMaxRate(Integer maxRate) {
         this.maxRate = maxRate;
         return this;
@@ -117,6 +126,7 @@ public class Backend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRatePerEndpoint")
     public Float maxRatePerEndpoint;
+
     public Backend withMaxRatePerEndpoint(Float maxRatePerEndpoint) {
         this.maxRatePerEndpoint = maxRatePerEndpoint;
         return this;
@@ -128,6 +138,7 @@ public class Backend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRatePerInstance")
     public Float maxRatePerInstance;
+
     public Backend withMaxRatePerInstance(Float maxRatePerInstance) {
         this.maxRatePerInstance = maxRatePerInstance;
         return this;
@@ -139,9 +150,11 @@ public class Backend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxUtilization")
     public Float maxUtilization;
+
     public Backend withMaxUtilization(Float maxUtilization) {
         this.maxUtilization = maxUtilization;
         return this;
     }
     
+    public Backend(){}
 }

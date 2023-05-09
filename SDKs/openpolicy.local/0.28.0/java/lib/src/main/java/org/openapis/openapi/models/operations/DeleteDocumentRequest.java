@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDocumentRequest {
@@ -12,9 +13,13 @@ public class DeleteDocumentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public DeleteDocumentRequest withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public DeleteDocumentRequest(@JsonProperty("path") String path) {
+        this.path = path;
+  }
 }

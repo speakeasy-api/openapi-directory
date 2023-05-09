@@ -18,6 +18,7 @@ public class GrpcServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callCredentials")
     public CallCredentials callCredentials;
+
     public GrpcServiceConfig withCallCredentials(CallCredentials callCredentials) {
         this.callCredentials = callCredentials;
         return this;
@@ -29,6 +30,7 @@ public class GrpcServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelCredentials")
     public ChannelCredentials channelCredentials;
+
     public GrpcServiceConfig withChannelCredentials(ChannelCredentials channelCredentials) {
         this.channelCredentials = channelCredentials;
         return this;
@@ -40,9 +42,11 @@ public class GrpcServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetUri")
     public String targetUri;
+
     public GrpcServiceConfig withTargetUri(String targetUri) {
         this.targetUri = targetUri;
         return this;
     }
     
+    public GrpcServiceConfig(){}
 }

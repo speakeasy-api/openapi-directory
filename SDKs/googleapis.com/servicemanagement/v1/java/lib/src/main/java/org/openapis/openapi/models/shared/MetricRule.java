@@ -18,6 +18,7 @@ public class MetricRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricCosts")
     public java.util.Map<String, String> metricCosts;
+
     public MetricRule withMetricCosts(java.util.Map<String, String> metricCosts) {
         this.metricCosts = metricCosts;
         return this;
@@ -29,9 +30,11 @@ public class MetricRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selector")
     public String selector;
+
     public MetricRule withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public MetricRule(){}
 }

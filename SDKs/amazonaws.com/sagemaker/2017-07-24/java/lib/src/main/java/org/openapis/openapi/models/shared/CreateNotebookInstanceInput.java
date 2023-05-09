@@ -12,6 +12,7 @@ public class CreateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceleratorTypes")
     public NotebookInstanceAcceleratorTypeEnum[] acceleratorTypes;
+
     public CreateNotebookInstanceInput withAcceleratorTypes(NotebookInstanceAcceleratorTypeEnum[] acceleratorTypes) {
         this.acceleratorTypes = acceleratorTypes;
         return this;
@@ -20,6 +21,7 @@ public class CreateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalCodeRepositories")
     public String[] additionalCodeRepositories;
+
     public CreateNotebookInstanceInput withAdditionalCodeRepositories(String[] additionalCodeRepositories) {
         this.additionalCodeRepositories = additionalCodeRepositories;
         return this;
@@ -28,6 +30,7 @@ public class CreateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultCodeRepository")
     public String defaultCodeRepository;
+
     public CreateNotebookInstanceInput withDefaultCodeRepository(String defaultCodeRepository) {
         this.defaultCodeRepository = defaultCodeRepository;
         return this;
@@ -36,6 +39,7 @@ public class CreateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectInternetAccess")
     public DirectInternetAccessEnum directInternetAccess;
+
     public CreateNotebookInstanceInput withDirectInternetAccess(DirectInternetAccessEnum directInternetAccess) {
         this.directInternetAccess = directInternetAccess;
         return this;
@@ -44,6 +48,7 @@ public class CreateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceMetadataServiceConfiguration")
     public InstanceMetadataServiceConfiguration instanceMetadataServiceConfiguration;
+
     public CreateNotebookInstanceInput withInstanceMetadataServiceConfiguration(InstanceMetadataServiceConfiguration instanceMetadataServiceConfiguration) {
         this.instanceMetadataServiceConfiguration = instanceMetadataServiceConfiguration;
         return this;
@@ -51,6 +56,7 @@ public class CreateNotebookInstanceInput {
     
     @JsonProperty("InstanceType")
     public InstanceTypeEnum instanceType;
+
     public CreateNotebookInstanceInput withInstanceType(InstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -59,6 +65,7 @@ public class CreateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public CreateNotebookInstanceInput withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -67,6 +74,7 @@ public class CreateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LifecycleConfigName")
     public String lifecycleConfigName;
+
     public CreateNotebookInstanceInput withLifecycleConfigName(String lifecycleConfigName) {
         this.lifecycleConfigName = lifecycleConfigName;
         return this;
@@ -74,6 +82,7 @@ public class CreateNotebookInstanceInput {
     
     @JsonProperty("NotebookInstanceName")
     public String notebookInstanceName;
+
     public CreateNotebookInstanceInput withNotebookInstanceName(String notebookInstanceName) {
         this.notebookInstanceName = notebookInstanceName;
         return this;
@@ -82,6 +91,7 @@ public class CreateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlatformIdentifier")
     public String platformIdentifier;
+
     public CreateNotebookInstanceInput withPlatformIdentifier(String platformIdentifier) {
         this.platformIdentifier = platformIdentifier;
         return this;
@@ -89,6 +99,7 @@ public class CreateNotebookInstanceInput {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateNotebookInstanceInput withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -97,6 +108,7 @@ public class CreateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootAccess")
     public RootAccessEnum rootAccess;
+
     public CreateNotebookInstanceInput withRootAccess(RootAccessEnum rootAccess) {
         this.rootAccess = rootAccess;
         return this;
@@ -105,6 +117,7 @@ public class CreateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public CreateNotebookInstanceInput withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -113,6 +126,7 @@ public class CreateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public CreateNotebookInstanceInput withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -121,6 +135,7 @@ public class CreateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateNotebookInstanceInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -129,9 +144,15 @@ public class CreateNotebookInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeSizeInGB")
     public Long volumeSizeInGB;
+
     public CreateNotebookInstanceInput withVolumeSizeInGB(Long volumeSizeInGB) {
         this.volumeSizeInGB = volumeSizeInGB;
         return this;
     }
     
+    public CreateNotebookInstanceInput(@JsonProperty("InstanceType") InstanceTypeEnum instanceType, @JsonProperty("NotebookInstanceName") String notebookInstanceName, @JsonProperty("RoleArn") String roleArn) {
+        this.instanceType = instanceType;
+        this.notebookInstanceName = notebookInstanceName;
+        this.roleArn = roleArn;
+  }
 }

@@ -13,6 +13,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyResponsesDestinyCharacterResponseItemComponents {
     
     public DictionaryComponentResponseOfint64AndDestinyItemInstanceComponent instances;
+
     public DestinyResponsesDestinyCharacterResponseItemComponents withInstances(DictionaryComponentResponseOfint64AndDestinyItemInstanceComponent instances) {
         this.instances = instances;
         return this;
@@ -20,6 +21,7 @@ public class DestinyResponsesDestinyCharacterResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent objectives;
+
     public DestinyResponsesDestinyCharacterResponseItemComponents withObjectives(DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent objectives) {
         this.objectives = objectives;
         return this;
@@ -27,6 +29,7 @@ public class DestinyResponsesDestinyCharacterResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint64AndDestinyItemPerksComponent perks;
+
     public DestinyResponsesDestinyCharacterResponseItemComponents withPerks(DictionaryComponentResponseOfint64AndDestinyItemPerksComponent perks) {
         this.perks = perks;
         return this;
@@ -34,6 +37,7 @@ public class DestinyResponsesDestinyCharacterResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint64AndDestinyItemPlugObjectivesComponent plugObjectives;
+
     public DestinyResponsesDestinyCharacterResponseItemComponents withPlugObjectives(DictionaryComponentResponseOfint64AndDestinyItemPlugObjectivesComponent plugObjectives) {
         this.plugObjectives = plugObjectives;
         return this;
@@ -41,6 +45,7 @@ public class DestinyResponsesDestinyCharacterResponseItemComponents {
     
     
     public DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent plugStates;
+
     public DestinyResponsesDestinyCharacterResponseItemComponents withPlugStates(DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent plugStates) {
         this.plugStates = plugStates;
         return this;
@@ -48,6 +53,7 @@ public class DestinyResponsesDestinyCharacterResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint64AndDestinyItemRenderComponent renderData;
+
     public DestinyResponsesDestinyCharacterResponseItemComponents withRenderData(DictionaryComponentResponseOfint64AndDestinyItemRenderComponent renderData) {
         this.renderData = renderData;
         return this;
@@ -55,6 +61,7 @@ public class DestinyResponsesDestinyCharacterResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint64AndDestinyItemReusablePlugsComponent reusablePlugs;
+
     public DestinyResponsesDestinyCharacterResponseItemComponents withReusablePlugs(DictionaryComponentResponseOfint64AndDestinyItemReusablePlugsComponent reusablePlugs) {
         this.reusablePlugs = reusablePlugs;
         return this;
@@ -62,6 +69,7 @@ public class DestinyResponsesDestinyCharacterResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint64AndDestinyItemSocketsComponent sockets;
+
     public DestinyResponsesDestinyCharacterResponseItemComponents withSockets(DictionaryComponentResponseOfint64AndDestinyItemSocketsComponent sockets) {
         this.sockets = sockets;
         return this;
@@ -69,6 +77,7 @@ public class DestinyResponsesDestinyCharacterResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint64AndDestinyItemStatsComponent stats;
+
     public DestinyResponsesDestinyCharacterResponseItemComponents withStats(DictionaryComponentResponseOfint64AndDestinyItemStatsComponent stats) {
         this.stats = stats;
         return this;
@@ -76,9 +85,11 @@ public class DestinyResponsesDestinyCharacterResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint64AndDestinyItemTalentGridComponent talentGrids;
+
     public DestinyResponsesDestinyCharacterResponseItemComponents withTalentGrids(DictionaryComponentResponseOfint64AndDestinyItemTalentGridComponent talentGrids) {
         this.talentGrids = talentGrids;
         return this;
     }
     
+    public DestinyResponsesDestinyCharacterResponseItemComponents(){}
 }

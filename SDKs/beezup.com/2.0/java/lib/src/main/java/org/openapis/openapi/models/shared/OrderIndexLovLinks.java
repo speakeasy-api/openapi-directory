@@ -15,6 +15,7 @@ public class OrderIndexLovLinks {
      */
     @JsonProperty("orderChangeBusinessOperationType")
     public BeezUPCommonLOVLink3 orderChangeBusinessOperationType;
+
     public OrderIndexLovLinks withOrderChangeBusinessOperationType(BeezUPCommonLOVLink3 orderChangeBusinessOperationType) {
         this.orderChangeBusinessOperationType = orderChangeBusinessOperationType;
         return this;
@@ -25,6 +26,7 @@ public class OrderIndexLovLinks {
      */
     @JsonProperty("orderProperty")
     public BeezUPCommonLOVLink3 orderProperty;
+
     public OrderIndexLovLinks withOrderProperty(BeezUPCommonLOVLink3 orderProperty) {
         this.orderProperty = orderProperty;
         return this;
@@ -35,6 +37,7 @@ public class OrderIndexLovLinks {
      */
     @JsonProperty("orderPropertyPosted")
     public BeezUPCommonLOVLink3 orderPropertyPosted;
+
     public OrderIndexLovLinks withOrderPropertyPosted(BeezUPCommonLOVLink3 orderPropertyPosted) {
         this.orderPropertyPosted = orderPropertyPosted;
         return this;
@@ -45,9 +48,16 @@ public class OrderIndexLovLinks {
      */
     @JsonProperty("orderState")
     public BeezUPCommonLOVLink3 orderState;
+
     public OrderIndexLovLinks withOrderState(BeezUPCommonLOVLink3 orderState) {
         this.orderState = orderState;
         return this;
     }
     
+    public OrderIndexLovLinks(@JsonProperty("orderChangeBusinessOperationType") BeezUPCommonLOVLink3 orderChangeBusinessOperationType, @JsonProperty("orderProperty") BeezUPCommonLOVLink3 orderProperty, @JsonProperty("orderPropertyPosted") BeezUPCommonLOVLink3 orderPropertyPosted, @JsonProperty("orderState") BeezUPCommonLOVLink3 orderState) {
+        this.orderChangeBusinessOperationType = orderChangeBusinessOperationType;
+        this.orderProperty = orderProperty;
+        this.orderPropertyPosted = orderPropertyPosted;
+        this.orderState = orderState;
+  }
 }

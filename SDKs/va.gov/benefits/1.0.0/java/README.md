@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadSecurity;
 import org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadRequest;
 import org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadResponse;
+import org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,20 +26,20 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetBenefitsDocumentUploadDownloadRequest req = new GetBenefitsDocumentUploadDownloadRequest() {{
-                id = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
-            }}            
+            GetBenefitsDocumentUploadDownloadRequest req = new GetBenefitsDocumentUploadDownloadRequest("89bd9d8d-69a6-474e-8f46-7cc8796ed151");            
 
-            GetBenefitsDocumentUploadDownloadResponse res = sdk.vbaDocuments.getBenefitsDocumentUploadDownload(req, new GetBenefitsDocumentUploadDownloadSecurity() {{
+            GetBenefitsDocumentUploadDownloadResponse res = sdk.vbaDocuments.getBenefitsDocumentUploadDownload(req, new GetBenefitsDocumentUploadDownloadSecurity("deserunt") {{
                 apikey = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.getBenefitsDocumentUploadDownload200ApplicationZipBinaryString.isPresent()) {
+            if (res.getBenefitsDocumentUploadDownload200ApplicationZipBinaryString != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -48,14 +47,14 @@ public class Application {
 ## Available Resources and Operations
 
 
-### vbaDocuments
+### [vbaDocuments](docs/vbadocuments/README.md)
 
-* `getBenefitsDocumentUploadDownload` - Download zip of "what the server sees"
-* `getBenefitsDocumentUploadStatus` - Get status for a previous benefits document upload
-* `getBenefitsDocumentUploadStatusReport` - Get a bulk status report for a list of previous uploads
-* `postBenefitsDocumentUpload` - Get a location for subsequent document upload PUT request
-* `postBenefitsDocumentUploadValidateDocument` - Validate an individual document against system file requirements
-* `putBenefitsDocumentUpload` - Accepts document upload.
+* [getBenefitsDocumentUploadDownload](docs/vbadocuments/README.md#getbenefitsdocumentuploaddownload) - Download zip of "what the server sees"
+* [getBenefitsDocumentUploadStatus](docs/vbadocuments/README.md#getbenefitsdocumentuploadstatus) - Get status for a previous benefits document upload
+* [getBenefitsDocumentUploadStatusReport](docs/vbadocuments/README.md#getbenefitsdocumentuploadstatusreport) - Get a bulk status report for a list of previous uploads
+* [postBenefitsDocumentUpload](docs/vbadocuments/README.md#postbenefitsdocumentupload) - Get a location for subsequent document upload PUT request
+* [postBenefitsDocumentUploadValidateDocument](docs/vbadocuments/README.md#postbenefitsdocumentuploadvalidatedocument) - Validate an individual document against system file requirements
+* [putBenefitsDocumentUpload](docs/vbadocuments/README.md#putbenefitsdocumentupload) - Accepts document upload.
 <!-- End SDK Available Operations -->
 
 ### Maturity

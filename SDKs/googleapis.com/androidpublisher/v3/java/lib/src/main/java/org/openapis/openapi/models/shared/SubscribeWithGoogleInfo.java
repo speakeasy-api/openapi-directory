@@ -18,6 +18,7 @@ public class SubscribeWithGoogleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public SubscribeWithGoogleInfo withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -29,6 +30,7 @@ public class SubscribeWithGoogleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("familyName")
     public String familyName;
+
     public SubscribeWithGoogleInfo withFamilyName(String familyName) {
         this.familyName = familyName;
         return this;
@@ -40,6 +42,7 @@ public class SubscribeWithGoogleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("givenName")
     public String givenName;
+
     public SubscribeWithGoogleInfo withGivenName(String givenName) {
         this.givenName = givenName;
         return this;
@@ -51,6 +54,7 @@ public class SubscribeWithGoogleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileId")
     public String profileId;
+
     public SubscribeWithGoogleInfo withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -62,9 +66,11 @@ public class SubscribeWithGoogleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileName")
     public String profileName;
+
     public SubscribeWithGoogleInfo withProfileName(String profileName) {
         this.profileName = profileName;
         return this;
     }
     
+    public SubscribeWithGoogleInfo(){}
 }

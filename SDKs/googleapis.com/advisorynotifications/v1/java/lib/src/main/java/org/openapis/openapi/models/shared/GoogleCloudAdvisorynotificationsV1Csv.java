@@ -18,6 +18,7 @@ public class GoogleCloudAdvisorynotificationsV1Csv {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataRows")
     public GoogleCloudAdvisorynotificationsV1CsvCsvRow[] dataRows;
+
     public GoogleCloudAdvisorynotificationsV1Csv withDataRows(GoogleCloudAdvisorynotificationsV1CsvCsvRow[] dataRows) {
         this.dataRows = dataRows;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudAdvisorynotificationsV1Csv {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public String[] headers;
+
     public GoogleCloudAdvisorynotificationsV1Csv withHeaders(String[] headers) {
         this.headers = headers;
         return this;
     }
     
+    public GoogleCloudAdvisorynotificationsV1Csv(){}
 }

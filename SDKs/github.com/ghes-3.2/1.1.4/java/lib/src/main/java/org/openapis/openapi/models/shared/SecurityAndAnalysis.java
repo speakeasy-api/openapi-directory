@@ -12,6 +12,7 @@ public class SecurityAndAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advanced_security")
     public SecurityAndAnalysisAdvancedSecurity advancedSecurity;
+
     public SecurityAndAnalysis withAdvancedSecurity(SecurityAndAnalysisAdvancedSecurity advancedSecurity) {
         this.advancedSecurity = advancedSecurity;
         return this;
@@ -20,6 +21,7 @@ public class SecurityAndAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret_scanning")
     public SecurityAndAnalysisSecretScanning secretScanning;
+
     public SecurityAndAnalysis withSecretScanning(SecurityAndAnalysisSecretScanning secretScanning) {
         this.secretScanning = secretScanning;
         return this;
@@ -28,9 +30,11 @@ public class SecurityAndAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret_scanning_push_protection")
     public SecurityAndAnalysisSecretScanningPushProtection secretScanningPushProtection;
+
     public SecurityAndAnalysis withSecretScanningPushProtection(SecurityAndAnalysisSecretScanningPushProtection secretScanningPushProtection) {
         this.secretScanningPushProtection = secretScanningPushProtection;
         return this;
     }
     
+    public SecurityAndAnalysis(){}
 }

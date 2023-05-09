@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeWorkspaceConfigurationResponse {
@@ -12,6 +13,7 @@ public class DescribeWorkspaceConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeWorkspaceConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeWorkspaceConfigurationResponse {
     
     
     public String contentType;
+
     public DescribeWorkspaceConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeWorkspaceConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeWorkspaceConfigurationResponse describeWorkspaceConfigurationResponse;
+
     public DescribeWorkspaceConfigurationResponse withDescribeWorkspaceConfigurationResponse(org.openapis.openapi.models.shared.DescribeWorkspaceConfigurationResponse describeWorkspaceConfigurationResponse) {
         this.describeWorkspaceConfigurationResponse = describeWorkspaceConfigurationResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeWorkspaceConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public DescribeWorkspaceConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeWorkspaceConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeWorkspaceConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeWorkspaceConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeWorkspaceConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeWorkspaceConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeWorkspaceConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeWorkspaceConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public DescribeWorkspaceConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeWorkspaceConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

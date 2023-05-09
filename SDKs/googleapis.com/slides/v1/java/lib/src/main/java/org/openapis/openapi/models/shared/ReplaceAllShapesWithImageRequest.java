@@ -18,6 +18,7 @@ public class ReplaceAllShapesWithImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containsText")
     public SubstringMatchCriteria containsText;
+
     public ReplaceAllShapesWithImageRequest withContainsText(SubstringMatchCriteria containsText) {
         this.containsText = containsText;
         return this;
@@ -29,6 +30,7 @@ public class ReplaceAllShapesWithImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageReplaceMethod")
     public ReplaceAllShapesWithImageRequestImageReplaceMethodEnum imageReplaceMethod;
+
     public ReplaceAllShapesWithImageRequest withImageReplaceMethod(ReplaceAllShapesWithImageRequestImageReplaceMethodEnum imageReplaceMethod) {
         this.imageReplaceMethod = imageReplaceMethod;
         return this;
@@ -40,6 +42,7 @@ public class ReplaceAllShapesWithImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public ReplaceAllShapesWithImageRequest withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -51,6 +54,7 @@ public class ReplaceAllShapesWithImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageObjectIds")
     public String[] pageObjectIds;
+
     public ReplaceAllShapesWithImageRequest withPageObjectIds(String[] pageObjectIds) {
         this.pageObjectIds = pageObjectIds;
         return this;
@@ -62,9 +66,11 @@ public class ReplaceAllShapesWithImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replaceMethod")
     public ReplaceAllShapesWithImageRequestReplaceMethodEnum replaceMethod;
+
     public ReplaceAllShapesWithImageRequest withReplaceMethod(ReplaceAllShapesWithImageRequestReplaceMethodEnum replaceMethod) {
         this.replaceMethod = replaceMethod;
         return this;
     }
     
+    public ReplaceAllShapesWithImageRequest(){}
 }

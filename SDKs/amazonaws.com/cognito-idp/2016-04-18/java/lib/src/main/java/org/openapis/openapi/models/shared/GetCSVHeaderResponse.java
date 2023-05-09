@@ -15,6 +15,7 @@ public class GetCSVHeaderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CSVHeader")
     public String[] csvHeader;
+
     public GetCSVHeaderResponse withCSVHeader(String[] csvHeader) {
         this.csvHeader = csvHeader;
         return this;
@@ -23,9 +24,11 @@ public class GetCSVHeaderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public GetCSVHeaderResponse withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public GetCSVHeaderResponse(){}
 }

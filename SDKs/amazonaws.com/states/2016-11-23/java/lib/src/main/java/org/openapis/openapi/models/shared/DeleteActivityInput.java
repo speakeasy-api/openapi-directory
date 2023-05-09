@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteActivityInput {
     @JsonProperty("activityArn")
     public String activityArn;
+
     public DeleteActivityInput withActivityArn(String activityArn) {
         this.activityArn = activityArn;
         return this;
     }
     
+    public DeleteActivityInput(@JsonProperty("activityArn") String activityArn) {
+        this.activityArn = activityArn;
+  }
 }

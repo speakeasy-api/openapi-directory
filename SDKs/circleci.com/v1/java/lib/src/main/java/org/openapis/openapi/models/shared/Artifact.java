@@ -12,6 +12,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node_index")
     public Long nodeIndex;
+
     public Artifact withNodeIndex(Long nodeIndex) {
         this.nodeIndex = nodeIndex;
         return this;
@@ -20,6 +21,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public Artifact withPath(String path) {
         this.path = path;
         return this;
@@ -28,6 +30,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pretty_path")
     public String prettyPath;
+
     public Artifact withPrettyPath(String prettyPath) {
         this.prettyPath = prettyPath;
         return this;
@@ -36,9 +39,11 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Artifact withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Artifact(){}
 }

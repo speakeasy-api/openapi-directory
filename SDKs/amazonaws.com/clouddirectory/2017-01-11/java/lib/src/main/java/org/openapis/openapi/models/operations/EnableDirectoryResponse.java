@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnableDirectoryResponse {
@@ -12,6 +13,7 @@ public class EnableDirectoryResponse {
      */
     
     public Object accessDeniedException;
+
     public EnableDirectoryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class EnableDirectoryResponse {
     
     
     public String contentType;
+
     public EnableDirectoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class EnableDirectoryResponse {
      */
     
     public Object directoryDeletedException;
+
     public EnableDirectoryResponse withDirectoryDeletedException(Object directoryDeletedException) {
         this.directoryDeletedException = directoryDeletedException;
         return this;
@@ -39,6 +43,7 @@ public class EnableDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.EnableDirectoryResponse enableDirectoryResponse;
+
     public EnableDirectoryResponse withEnableDirectoryResponse(org.openapis.openapi.models.shared.EnableDirectoryResponse enableDirectoryResponse) {
         this.enableDirectoryResponse = enableDirectoryResponse;
         return this;
@@ -49,6 +54,7 @@ public class EnableDirectoryResponse {
      */
     
     public Object internalServiceException;
+
     public EnableDirectoryResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class EnableDirectoryResponse {
      */
     
     public Object invalidArnException;
+
     public EnableDirectoryResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class EnableDirectoryResponse {
      */
     
     public Object limitExceededException;
+
     public EnableDirectoryResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class EnableDirectoryResponse {
      */
     
     public Object resourceNotFoundException;
+
     public EnableDirectoryResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class EnableDirectoryResponse {
     
     
     public Integer statusCode;
+
     public EnableDirectoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class EnableDirectoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnableDirectoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class EnableDirectoryResponse {
      */
     
     public Object retryableConflictException;
+
     public EnableDirectoryResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -113,9 +125,14 @@ public class EnableDirectoryResponse {
      */
     
     public Object validationException;
+
     public EnableDirectoryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public EnableDirectoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdatePullRequestApprovalRuleContentInput {
     @JsonProperty("approvalRuleName")
     public String approvalRuleName;
+
     public UpdatePullRequestApprovalRuleContentInput withApprovalRuleName(String approvalRuleName) {
         this.approvalRuleName = approvalRuleName;
         return this;
@@ -19,6 +20,7 @@ public class UpdatePullRequestApprovalRuleContentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("existingRuleContentSha256")
     public String existingRuleContentSha256;
+
     public UpdatePullRequestApprovalRuleContentInput withExistingRuleContentSha256(String existingRuleContentSha256) {
         this.existingRuleContentSha256 = existingRuleContentSha256;
         return this;
@@ -26,6 +28,7 @@ public class UpdatePullRequestApprovalRuleContentInput {
     
     @JsonProperty("newRuleContent")
     public String newRuleContent;
+
     public UpdatePullRequestApprovalRuleContentInput withNewRuleContent(String newRuleContent) {
         this.newRuleContent = newRuleContent;
         return this;
@@ -33,9 +36,15 @@ public class UpdatePullRequestApprovalRuleContentInput {
     
     @JsonProperty("pullRequestId")
     public String pullRequestId;
+
     public UpdatePullRequestApprovalRuleContentInput withPullRequestId(String pullRequestId) {
         this.pullRequestId = pullRequestId;
         return this;
     }
     
+    public UpdatePullRequestApprovalRuleContentInput(@JsonProperty("approvalRuleName") String approvalRuleName, @JsonProperty("newRuleContent") String newRuleContent, @JsonProperty("pullRequestId") String pullRequestId) {
+        this.approvalRuleName = approvalRuleName;
+        this.newRuleContent = newRuleContent;
+        this.pullRequestId = pullRequestId;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RemovePermissionRequest - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RemovePermissionRequest {
     
     public String label;
+
     public RemovePermissionRequest withLabel(String label) {
         this.label = label;
         return this;
@@ -19,9 +20,14 @@ public class RemovePermissionRequest {
     
     
     public String queueUrl;
+
     public RemovePermissionRequest withQueueUrl(String queueUrl) {
         this.queueUrl = queueUrl;
         return this;
     }
     
+    public RemovePermissionRequest(@JsonProperty("Label") String label, @JsonProperty("QueueUrl") String queueUrl) {
+        this.label = label;
+        this.queueUrl = queueUrl;
+  }
 }

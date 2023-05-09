@@ -15,9 +15,11 @@ public class Timesheets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timesheets")
     public Timesheet[] timesheets;
+
     public Timesheets withTimesheets(Timesheet[] timesheets) {
         this.timesheets = timesheets;
         return this;
     }
     
+    public Timesheets(){}
 }

@@ -15,6 +15,7 @@ public class ResourceImageInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageFileData")
     public String imageFileData;
+
     public ResourceImageInputModel withImageFileData(String imageFileData) {
         this.imageFileData = imageFileData;
         return this;
@@ -23,9 +24,11 @@ public class ResourceImageInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageFileName")
     public String imageFileName;
+
     public ResourceImageInputModel withImageFileName(String imageFileName) {
         this.imageFileName = imageFileName;
         return this;
     }
     
+    public ResourceImageInputModel(){}
 }

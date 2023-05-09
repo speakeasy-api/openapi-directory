@@ -15,6 +15,7 @@ public class InitialValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentId")
     public String environmentId;
+
     public InitialValue withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -26,9 +27,11 @@ public class InitialValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Object value;
+
     public InitialValue withValue(Object value) {
         this.value = value;
         return this;
     }
     
+    public InitialValue(){}
 }

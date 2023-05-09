@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartJobRunResponse {
@@ -12,6 +13,7 @@ public class StartJobRunResponse {
      */
     
     public Object concurrentRunsExceededException;
+
     public StartJobRunResponse withConcurrentRunsExceededException(Object concurrentRunsExceededException) {
         this.concurrentRunsExceededException = concurrentRunsExceededException;
         return this;
@@ -19,6 +21,7 @@ public class StartJobRunResponse {
     
     
     public String contentType;
+
     public StartJobRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartJobRunResponse {
      */
     
     public Object entityNotFoundException;
+
     public StartJobRunResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class StartJobRunResponse {
      */
     
     public Object internalServiceException;
+
     public StartJobRunResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class StartJobRunResponse {
      */
     
     public Object invalidInputException;
+
     public StartJobRunResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class StartJobRunResponse {
      */
     
     public Object operationTimeoutException;
+
     public StartJobRunResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -69,6 +76,7 @@ public class StartJobRunResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public StartJobRunResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class StartJobRunResponse {
      */
     
     public org.openapis.openapi.models.shared.StartJobRunResponse startJobRunResponse;
+
     public StartJobRunResponse withStartJobRunResponse(org.openapis.openapi.models.shared.StartJobRunResponse startJobRunResponse) {
         this.startJobRunResponse = startJobRunResponse;
         return this;
@@ -86,6 +95,7 @@ public class StartJobRunResponse {
     
     
     public Integer statusCode;
+
     public StartJobRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class StartJobRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartJobRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartJobRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

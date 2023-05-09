@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETGTEXMappingUsingGETResponse {
     
     public byte[] body;
+
     public GETGTEXMappingUsingGETResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETGTEXMappingUsingGETResponse {
     
     
     public String contentType;
+
     public GETGTEXMappingUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETGTEXMappingUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETGTEXMappingUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETGTEXMappingUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETGTEXMappingUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETGTEXMappingUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

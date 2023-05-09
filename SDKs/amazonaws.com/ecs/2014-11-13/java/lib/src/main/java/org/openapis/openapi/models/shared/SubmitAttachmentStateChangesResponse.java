@@ -15,9 +15,11 @@ public class SubmitAttachmentStateChangesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acknowledgment")
     public String acknowledgment;
+
     public SubmitAttachmentStateChangesResponse withAcknowledgment(String acknowledgment) {
         this.acknowledgment = acknowledgment;
         return this;
     }
     
+    public SubmitAttachmentStateChangesResponse(){}
 }

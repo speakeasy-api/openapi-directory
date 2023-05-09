@@ -14,6 +14,7 @@ public class CreateAccessPreviewRequestBody {
      */
     @JsonProperty("analyzerArn")
     public String analyzerArn;
+
     public CreateAccessPreviewRequestBody withAnalyzerArn(String analyzerArn) {
         this.analyzerArn = analyzerArn;
         return this;
@@ -25,6 +26,7 @@ public class CreateAccessPreviewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateAccessPreviewRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -35,9 +37,14 @@ public class CreateAccessPreviewRequestBody {
      */
     @JsonProperty("configurations")
     public java.util.Map<String, org.openapis.openapi.models.shared.Configuration> configurations;
+
     public CreateAccessPreviewRequestBody withConfigurations(java.util.Map<String, org.openapis.openapi.models.shared.Configuration> configurations) {
         this.configurations = configurations;
         return this;
     }
     
+    public CreateAccessPreviewRequestBody(@JsonProperty("analyzerArn") String analyzerArn, @JsonProperty("configurations") java.util.Map<String, org.openapis.openapi.models.shared.Configuration> configurations) {
+        this.analyzerArn = analyzerArn;
+        this.configurations = configurations;
+  }
 }

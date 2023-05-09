@@ -15,6 +15,7 @@ public class ListNotificationRulesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public org.openapis.openapi.models.shared.ListNotificationRulesFilter[] filters;
+
     public ListNotificationRulesRequestBody withFilters(org.openapis.openapi.models.shared.ListNotificationRulesFilter[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class ListNotificationRulesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListNotificationRulesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +39,11 @@ public class ListNotificationRulesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListNotificationRulesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListNotificationRulesRequestBody(){}
 }

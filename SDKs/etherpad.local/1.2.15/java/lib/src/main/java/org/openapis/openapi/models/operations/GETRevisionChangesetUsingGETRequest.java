@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETRevisionChangesetUsingGETRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padID")
     public String padID;
+
     public GETRevisionChangesetUsingGETRequest withPadID(String padID) {
         this.padID = padID;
         return this;
@@ -16,9 +17,11 @@ public class GETRevisionChangesetUsingGETRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rev")
     public String rev;
+
     public GETRevisionChangesetUsingGETRequest withRev(String rev) {
         this.rev = rev;
         return this;
     }
     
+    public GETRevisionChangesetUsingGETRequest(){}
 }

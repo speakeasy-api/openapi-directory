@@ -15,6 +15,7 @@ public class ListVirtualRoutersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListVirtualRoutersOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListVirtualRoutersOutput {
     
     @JsonProperty("virtualRouters")
     public VirtualRouterRef[] virtualRouters;
+
     public ListVirtualRoutersOutput withVirtualRouters(VirtualRouterRef[] virtualRouters) {
         this.virtualRouters = virtualRouters;
         return this;
     }
     
+    public ListVirtualRoutersOutput(@JsonProperty("virtualRouters") VirtualRouterRef[] virtualRouters) {
+        this.virtualRouters = virtualRouters;
+  }
 }

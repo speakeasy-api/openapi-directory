@@ -12,6 +12,7 @@ public class UpdateConnectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthParameters")
     public UpdateConnectionAuthRequestParameters authParameters;
+
     public UpdateConnectionRequest withAuthParameters(UpdateConnectionAuthRequestParameters authParameters) {
         this.authParameters = authParameters;
         return this;
@@ -20,6 +21,7 @@ public class UpdateConnectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizationType")
     public ConnectionAuthorizationTypeEnum authorizationType;
+
     public UpdateConnectionRequest withAuthorizationType(ConnectionAuthorizationTypeEnum authorizationType) {
         this.authorizationType = authorizationType;
         return this;
@@ -28,6 +30,7 @@ public class UpdateConnectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateConnectionRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -35,9 +38,13 @@ public class UpdateConnectionRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateConnectionRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateConnectionRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateConnectClientAddInRequest {
     @JsonProperty("Name")
     public String name;
+
     public CreateConnectClientAddInRequest withName(String name) {
         this.name = name;
         return this;
@@ -16,6 +17,7 @@ public class CreateConnectClientAddInRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public CreateConnectClientAddInRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -23,9 +25,15 @@ public class CreateConnectClientAddInRequest {
     
     @JsonProperty("URL")
     public String url;
+
     public CreateConnectClientAddInRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CreateConnectClientAddInRequest(@JsonProperty("Name") String name, @JsonProperty("ResourceId") String resourceId, @JsonProperty("URL") String url) {
+        this.name = name;
+        this.resourceId = resourceId;
+        this.url = url;
+  }
 }

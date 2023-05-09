@@ -18,6 +18,7 @@ public class VideoOffset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsetPercentage")
     public Integer offsetPercentage;
+
     public VideoOffset withOffsetPercentage(Integer offsetPercentage) {
         this.offsetPercentage = offsetPercentage;
         return this;
@@ -29,9 +30,11 @@ public class VideoOffset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsetSeconds")
     public Integer offsetSeconds;
+
     public VideoOffset withOffsetSeconds(Integer offsetSeconds) {
         this.offsetSeconds = offsetSeconds;
         return this;
     }
     
+    public VideoOffset(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ChangePasswordRequest {
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public ChangePasswordRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -19,6 +20,7 @@ public class ChangePasswordRequest {
     
     @JsonProperty("PreviousPassword")
     public String previousPassword;
+
     public ChangePasswordRequest withPreviousPassword(String previousPassword) {
         this.previousPassword = previousPassword;
         return this;
@@ -26,9 +28,15 @@ public class ChangePasswordRequest {
     
     @JsonProperty("ProposedPassword")
     public String proposedPassword;
+
     public ChangePasswordRequest withProposedPassword(String proposedPassword) {
         this.proposedPassword = proposedPassword;
         return this;
     }
     
+    public ChangePasswordRequest(@JsonProperty("AccessToken") String accessToken, @JsonProperty("PreviousPassword") String previousPassword, @JsonProperty("ProposedPassword") String proposedPassword) {
+        this.accessToken = accessToken;
+        this.previousPassword = previousPassword;
+        this.proposedPassword = proposedPassword;
+  }
 }

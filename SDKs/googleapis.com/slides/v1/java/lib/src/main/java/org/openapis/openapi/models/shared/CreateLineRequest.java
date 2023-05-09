@@ -18,6 +18,7 @@ public class CreateLineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public CreateLineRequestCategoryEnum category;
+
     public CreateLineRequest withCategory(CreateLineRequestCategoryEnum category) {
         this.category = category;
         return this;
@@ -29,6 +30,7 @@ public class CreateLineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elementProperties")
     public PageElementProperties elementProperties;
+
     public CreateLineRequest withElementProperties(PageElementProperties elementProperties) {
         this.elementProperties = elementProperties;
         return this;
@@ -40,6 +42,7 @@ public class CreateLineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineCategory")
     public CreateLineRequestLineCategoryEnum lineCategory;
+
     public CreateLineRequest withLineCategory(CreateLineRequestLineCategoryEnum lineCategory) {
         this.lineCategory = lineCategory;
         return this;
@@ -51,9 +54,11 @@ public class CreateLineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public CreateLineRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public CreateLineRequest(){}
 }

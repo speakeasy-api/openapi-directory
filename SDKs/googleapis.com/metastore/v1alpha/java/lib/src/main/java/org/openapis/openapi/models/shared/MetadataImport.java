@@ -18,6 +18,7 @@ public class MetadataImport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public MetadataImport withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class MetadataImport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseDump")
     public DatabaseDump databaseDump;
+
     public MetadataImport withDatabaseDump(DatabaseDump databaseDump) {
         this.databaseDump = databaseDump;
         return this;
@@ -40,6 +42,7 @@ public class MetadataImport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public MetadataImport withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class MetadataImport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public MetadataImport withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -62,6 +66,7 @@ public class MetadataImport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MetadataImport withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class MetadataImport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public MetadataImportStateEnum state;
+
     public MetadataImport withState(MetadataImportStateEnum state) {
         this.state = state;
         return this;
@@ -84,9 +90,11 @@ public class MetadataImport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public MetadataImport withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public MetadataImport(){}
 }

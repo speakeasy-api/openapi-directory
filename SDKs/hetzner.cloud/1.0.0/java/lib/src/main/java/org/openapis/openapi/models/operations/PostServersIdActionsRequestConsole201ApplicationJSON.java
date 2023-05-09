@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostServersIdActionsRequestConsole201ApplicationJSON {
     @JsonProperty("action")
     public PostServersIdActionsRequestConsole201ApplicationJSONAction action;
+
     public PostServersIdActionsRequestConsole201ApplicationJSON withAction(PostServersIdActionsRequestConsole201ApplicationJSONAction action) {
         this.action = action;
         return this;
@@ -22,6 +23,7 @@ public class PostServersIdActionsRequestConsole201ApplicationJSON {
      */
     @JsonProperty("password")
     public String password;
+
     public PostServersIdActionsRequestConsole201ApplicationJSON withPassword(String password) {
         this.password = password;
         return this;
@@ -32,9 +34,15 @@ public class PostServersIdActionsRequestConsole201ApplicationJSON {
      */
     @JsonProperty("wss_url")
     public String wssUrl;
+
     public PostServersIdActionsRequestConsole201ApplicationJSON withWssUrl(String wssUrl) {
         this.wssUrl = wssUrl;
         return this;
     }
     
+    public PostServersIdActionsRequestConsole201ApplicationJSON(@JsonProperty("action") PostServersIdActionsRequestConsole201ApplicationJSONAction action, @JsonProperty("password") String password, @JsonProperty("wss_url") String wssUrl) {
+        this.action = action;
+        this.password = password;
+        this.wssUrl = wssUrl;
+  }
 }

@@ -15,6 +15,7 @@ public class ListVpcConnectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListVpcConnectorsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListVpcConnectorsResponse {
     
     @JsonProperty("VpcConnectors")
     public VpcConnector[] vpcConnectors;
+
     public ListVpcConnectorsResponse withVpcConnectors(VpcConnector[] vpcConnectors) {
         this.vpcConnectors = vpcConnectors;
         return this;
     }
     
+    public ListVpcConnectorsResponse(@JsonProperty("VpcConnectors") VpcConnector[] vpcConnectors) {
+        this.vpcConnectors = vpcConnectors;
+  }
 }

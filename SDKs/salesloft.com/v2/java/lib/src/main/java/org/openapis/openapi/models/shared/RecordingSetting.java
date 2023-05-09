@@ -15,9 +15,11 @@ public class RecordingSetting {
      */
     
     public Boolean recordingDefault;
+
     public RecordingSetting withRecordingDefault(Boolean recordingDefault) {
         this.recordingDefault = recordingDefault;
         return this;
     }
     
+    public RecordingSetting(){}
 }

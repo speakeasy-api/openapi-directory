@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataprocProjectsRegionsClustersPatchRequest {
@@ -12,6 +13,7 @@ public class DataprocProjectsRegionsClustersPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DataprocProjectsRegionsClustersPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DataprocProjectsRegionsClustersPatchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ClusterInput clusterInput;
+
     public DataprocProjectsRegionsClustersPatchRequest withClusterInput(org.openapis.openapi.models.shared.ClusterInput clusterInput) {
         this.clusterInput = clusterInput;
         return this;
@@ -29,6 +32,7 @@ public class DataprocProjectsRegionsClustersPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DataprocProjectsRegionsClustersPatchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DataprocProjectsRegionsClustersPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DataprocProjectsRegionsClustersPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class DataprocProjectsRegionsClustersPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DataprocProjectsRegionsClustersPatchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class DataprocProjectsRegionsClustersPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clusterName")
     public String clusterName;
+
     public DataprocProjectsRegionsClustersPatchRequest withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -69,6 +76,7 @@ public class DataprocProjectsRegionsClustersPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DataprocProjectsRegionsClustersPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class DataprocProjectsRegionsClustersPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gracefulDecommissionTimeout")
     public String gracefulDecommissionTimeout;
+
     public DataprocProjectsRegionsClustersPatchRequest withGracefulDecommissionTimeout(String gracefulDecommissionTimeout) {
         this.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
         return this;
@@ -89,6 +98,7 @@ public class DataprocProjectsRegionsClustersPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DataprocProjectsRegionsClustersPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -99,6 +109,7 @@ public class DataprocProjectsRegionsClustersPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DataprocProjectsRegionsClustersPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -109,6 +120,7 @@ public class DataprocProjectsRegionsClustersPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DataprocProjectsRegionsClustersPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class DataprocProjectsRegionsClustersPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public DataprocProjectsRegionsClustersPatchRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -129,6 +142,7 @@ public class DataprocProjectsRegionsClustersPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DataprocProjectsRegionsClustersPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -139,6 +153,7 @@ public class DataprocProjectsRegionsClustersPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=region")
     public String region;
+
     public DataprocProjectsRegionsClustersPatchRequest withRegion(String region) {
         this.region = region;
         return this;
@@ -149,6 +164,7 @@ public class DataprocProjectsRegionsClustersPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public DataprocProjectsRegionsClustersPatchRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -159,6 +175,7 @@ public class DataprocProjectsRegionsClustersPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
     public String updateMask;
+
     public DataprocProjectsRegionsClustersPatchRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -169,6 +186,7 @@ public class DataprocProjectsRegionsClustersPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DataprocProjectsRegionsClustersPatchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -179,9 +197,15 @@ public class DataprocProjectsRegionsClustersPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DataprocProjectsRegionsClustersPatchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DataprocProjectsRegionsClustersPatchRequest(@JsonProperty("clusterName") String clusterName, @JsonProperty("projectId") String projectId, @JsonProperty("region") String region) {
+        this.clusterName = clusterName;
+        this.projectId = projectId;
+        this.region = region;
+  }
 }

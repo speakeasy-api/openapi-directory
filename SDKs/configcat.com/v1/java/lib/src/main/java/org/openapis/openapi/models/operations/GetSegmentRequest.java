@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSegmentRequest {
@@ -12,9 +13,13 @@ public class GetSegmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=segmentId")
     public String segmentId;
+
     public GetSegmentRequest withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
     }
     
+    public GetSegmentRequest(@JsonProperty("segmentId") String segmentId) {
+        this.segmentId = segmentId;
+  }
 }

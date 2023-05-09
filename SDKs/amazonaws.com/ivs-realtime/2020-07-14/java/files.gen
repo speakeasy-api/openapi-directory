@@ -69,4 +69,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/StageSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListTagsForResourceResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateStageResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

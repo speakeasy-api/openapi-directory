@@ -12,6 +12,7 @@ public class UpdateMaintenanceWindowTargetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateMaintenanceWindowTargetRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class UpdateMaintenanceWindowTargetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateMaintenanceWindowTargetRequest withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class UpdateMaintenanceWindowTargetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerInformation")
     public String ownerInformation;
+
     public UpdateMaintenanceWindowTargetRequest withOwnerInformation(String ownerInformation) {
         this.ownerInformation = ownerInformation;
         return this;
@@ -36,6 +39,7 @@ public class UpdateMaintenanceWindowTargetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Replace")
     public Boolean replace;
+
     public UpdateMaintenanceWindowTargetRequest withReplace(Boolean replace) {
         this.replace = replace;
         return this;
@@ -44,6 +48,7 @@ public class UpdateMaintenanceWindowTargetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public Target[] targets;
+
     public UpdateMaintenanceWindowTargetRequest withTargets(Target[] targets) {
         this.targets = targets;
         return this;
@@ -51,6 +56,7 @@ public class UpdateMaintenanceWindowTargetRequest {
     
     @JsonProperty("WindowId")
     public String windowId;
+
     public UpdateMaintenanceWindowTargetRequest withWindowId(String windowId) {
         this.windowId = windowId;
         return this;
@@ -58,9 +64,14 @@ public class UpdateMaintenanceWindowTargetRequest {
     
     @JsonProperty("WindowTargetId")
     public String windowTargetId;
+
     public UpdateMaintenanceWindowTargetRequest withWindowTargetId(String windowTargetId) {
         this.windowTargetId = windowTargetId;
         return this;
     }
     
+    public UpdateMaintenanceWindowTargetRequest(@JsonProperty("WindowId") String windowId, @JsonProperty("WindowTargetId") String windowTargetId) {
+        this.windowId = windowId;
+        this.windowTargetId = windowTargetId;
+  }
 }

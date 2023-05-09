@@ -15,6 +15,7 @@ public class IssueTokenRequestMetadataRulesHolders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public IssueTokenRequestMetadataRulesHolders withAddress(String address) {
         this.address = address;
         return this;
@@ -26,9 +27,11 @@ public class IssueTokenRequestMetadataRulesHolders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locked")
     public Boolean locked;
+
     public IssueTokenRequestMetadataRulesHolders withLocked(Boolean locked) {
         this.locked = locked;
         return this;
     }
     
+    public IssueTokenRequestMetadataRulesHolders(){}
 }

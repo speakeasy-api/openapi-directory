@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScalingPolicy {
     @JsonProperty("PolicyName")
     public String policyName;
+
     public ScalingPolicy withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -21,6 +22,7 @@ public class ScalingPolicy {
     
     @JsonProperty("PolicyType")
     public PolicyTypeEnum policyType;
+
     public ScalingPolicy withPolicyType(PolicyTypeEnum policyType) {
         this.policyType = policyType;
         return this;
@@ -29,9 +31,14 @@ public class ScalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetTrackingConfiguration")
     public TargetTrackingConfiguration targetTrackingConfiguration;
+
     public ScalingPolicy withTargetTrackingConfiguration(TargetTrackingConfiguration targetTrackingConfiguration) {
         this.targetTrackingConfiguration = targetTrackingConfiguration;
         return this;
     }
     
+    public ScalingPolicy(@JsonProperty("PolicyName") String policyName, @JsonProperty("PolicyType") PolicyTypeEnum policyType) {
+        this.policyName = policyName;
+        this.policyType = policyType;
+  }
 }

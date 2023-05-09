@@ -15,6 +15,7 @@ public class ListRotationsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRotationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListRotationsResult {
     
     @JsonProperty("Rotations")
     public Rotation[] rotations;
+
     public ListRotationsResult withRotations(Rotation[] rotations) {
         this.rotations = rotations;
         return this;
     }
     
+    public ListRotationsResult(@JsonProperty("Rotations") Rotation[] rotations) {
+        this.rotations = rotations;
+  }
 }

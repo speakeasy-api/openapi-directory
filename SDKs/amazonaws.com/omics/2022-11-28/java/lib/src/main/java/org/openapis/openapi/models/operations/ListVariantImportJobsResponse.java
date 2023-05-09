@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListVariantImportJobsResponse {
@@ -12,6 +13,7 @@ public class ListVariantImportJobsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListVariantImportJobsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListVariantImportJobsResponse {
     
     
     public String contentType;
+
     public ListVariantImportJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListVariantImportJobsResponse {
      */
     
     public Object internalServerException;
+
     public ListVariantImportJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListVariantImportJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListVariantImportJobsResponse listVariantImportJobsResponse;
+
     public ListVariantImportJobsResponse withListVariantImportJobsResponse(org.openapis.openapi.models.shared.ListVariantImportJobsResponse listVariantImportJobsResponse) {
         this.listVariantImportJobsResponse = listVariantImportJobsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListVariantImportJobsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListVariantImportJobsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListVariantImportJobsResponse {
     
     
     public Integer statusCode;
+
     public ListVariantImportJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListVariantImportJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListVariantImportJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListVariantImportJobsResponse {
      */
     
     public Object throttlingException;
+
     public ListVariantImportJobsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListVariantImportJobsResponse {
      */
     
     public Object validationException;
+
     public ListVariantImportJobsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListVariantImportJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

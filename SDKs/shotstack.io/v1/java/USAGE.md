@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetRenderSecurity;
 import org.openapis.openapi.models.operations.GetRenderRequest;
 import org.openapis.openapi.models.operations.GetRenderResponse;
+import org.openapis.openapi.models.operations.GetRenderSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -14,19 +13,19 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetRenderRequest req = new GetRenderRequest() {{
-                id = "corrupti";
-            }}            
+            GetRenderRequest req = new GetRenderRequest("corrupti");            
 
-            GetRenderResponse res = sdk.edit.getRender(req, new GetRenderSecurity() {{
+            GetRenderResponse res = sdk.edit.getRender(req, new GetRenderSecurity("provident") {{
                 developerKey = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.renderResponse.isPresent()) {
+            if (res.renderResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

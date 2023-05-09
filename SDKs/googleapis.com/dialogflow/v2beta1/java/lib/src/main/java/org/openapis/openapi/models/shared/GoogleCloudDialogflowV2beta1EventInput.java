@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1EventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDialogflowV2beta1EventInput withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1EventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2beta1EventInput withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2beta1EventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, Object> parameters;
+
     public GoogleCloudDialogflowV2beta1EventInput withParameters(java.util.Map<String, Object> parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1EventInput(){}
 }

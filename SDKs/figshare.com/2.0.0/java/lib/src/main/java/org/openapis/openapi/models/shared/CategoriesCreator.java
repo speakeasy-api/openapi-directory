@@ -15,9 +15,13 @@ public class CategoriesCreator {
      */
     @JsonProperty("categories")
     public Long[] categories;
+
     public CategoriesCreator withCategories(Long[] categories) {
         this.categories = categories;
         return this;
     }
     
+    public CategoriesCreator(@JsonProperty("categories") Long[] categories) {
+        this.categories = categories;
+  }
 }

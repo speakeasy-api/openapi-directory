@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutImageResponse {
     
     public String contentType;
+
     public PutImageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutImageResponse {
      */
     
     public Object imageAlreadyExistsException;
+
     public PutImageResponse withImageAlreadyExistsException(Object imageAlreadyExistsException) {
         this.imageAlreadyExistsException = imageAlreadyExistsException;
         return this;
@@ -29,6 +32,7 @@ public class PutImageResponse {
      */
     
     public Object imageDigestDoesNotMatchException;
+
     public PutImageResponse withImageDigestDoesNotMatchException(Object imageDigestDoesNotMatchException) {
         this.imageDigestDoesNotMatchException = imageDigestDoesNotMatchException;
         return this;
@@ -39,6 +43,7 @@ public class PutImageResponse {
      */
     
     public Object imageTagAlreadyExistsException;
+
     public PutImageResponse withImageTagAlreadyExistsException(Object imageTagAlreadyExistsException) {
         this.imageTagAlreadyExistsException = imageTagAlreadyExistsException;
         return this;
@@ -49,6 +54,7 @@ public class PutImageResponse {
      */
     
     public Object invalidParameterException;
+
     public PutImageResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class PutImageResponse {
      */
     
     public Object layersNotFoundException;
+
     public PutImageResponse withLayersNotFoundException(Object layersNotFoundException) {
         this.layersNotFoundException = layersNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class PutImageResponse {
      */
     
     public Object limitExceededException;
+
     public PutImageResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class PutImageResponse {
      */
     
     public org.openapis.openapi.models.shared.PutImageResponse putImageResponse;
+
     public PutImageResponse withPutImageResponse(org.openapis.openapi.models.shared.PutImageResponse putImageResponse) {
         this.putImageResponse = putImageResponse;
         return this;
@@ -89,6 +98,7 @@ public class PutImageResponse {
      */
     
     public Object referencedImagesNotFoundException;
+
     public PutImageResponse withReferencedImagesNotFoundException(Object referencedImagesNotFoundException) {
         this.referencedImagesNotFoundException = referencedImagesNotFoundException;
         return this;
@@ -99,6 +109,7 @@ public class PutImageResponse {
      */
     
     public Object registryNotFoundException;
+
     public PutImageResponse withRegistryNotFoundException(Object registryNotFoundException) {
         this.registryNotFoundException = registryNotFoundException;
         return this;
@@ -109,6 +120,7 @@ public class PutImageResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public PutImageResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -119,6 +131,7 @@ public class PutImageResponse {
      */
     
     public Object serverException;
+
     public PutImageResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -126,6 +139,7 @@ public class PutImageResponse {
     
     
     public Integer statusCode;
+
     public PutImageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class PutImageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutImageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,9 +158,14 @@ public class PutImageResponse {
      */
     
     public Object unsupportedCommandException;
+
     public PutImageResponse withUnsupportedCommandException(Object unsupportedCommandException) {
         this.unsupportedCommandException = unsupportedCommandException;
         return this;
     }
     
+    public PutImageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

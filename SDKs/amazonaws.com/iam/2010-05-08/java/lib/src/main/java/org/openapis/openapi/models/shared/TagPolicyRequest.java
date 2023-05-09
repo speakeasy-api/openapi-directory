@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TagPolicyRequest {
     
     public String policyArn;
+
     public TagPolicyRequest withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
@@ -16,9 +17,14 @@ public class TagPolicyRequest {
     
     
     public Tag[] tags;
+
     public TagPolicyRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagPolicyRequest(@JsonProperty("PolicyArn") String policyArn, @JsonProperty("Tags") Tag[] tags) {
+        this.policyArn = policyArn;
+        this.tags = tags;
+  }
 }

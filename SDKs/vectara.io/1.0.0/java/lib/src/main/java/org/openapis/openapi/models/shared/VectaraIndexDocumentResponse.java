@@ -15,6 +15,7 @@ public class VectaraIndexDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quotaConsumed")
     public VectaraStorageQuota quotaConsumed;
+
     public VectaraIndexDocumentResponse withQuotaConsumed(VectaraStorageQuota quotaConsumed) {
         this.quotaConsumed = quotaConsumed;
         return this;
@@ -23,9 +24,11 @@ public class VectaraIndexDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ComvectaraStatus status;
+
     public VectaraIndexDocumentResponse withStatus(ComvectaraStatus status) {
         this.status = status;
         return this;
     }
     
+    public VectaraIndexDocumentResponse(){}
 }

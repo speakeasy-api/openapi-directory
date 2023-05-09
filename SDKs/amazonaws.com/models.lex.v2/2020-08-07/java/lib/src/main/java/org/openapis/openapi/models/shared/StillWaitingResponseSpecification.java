@@ -15,6 +15,7 @@ public class StillWaitingResponseSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowInterrupt")
     public Boolean allowInterrupt;
+
     public StillWaitingResponseSpecification withAllowInterrupt(Boolean allowInterrupt) {
         this.allowInterrupt = allowInterrupt;
         return this;
@@ -22,6 +23,7 @@ public class StillWaitingResponseSpecification {
     
     @JsonProperty("frequencyInSeconds")
     public Long frequencyInSeconds;
+
     public StillWaitingResponseSpecification withFrequencyInSeconds(Long frequencyInSeconds) {
         this.frequencyInSeconds = frequencyInSeconds;
         return this;
@@ -29,6 +31,7 @@ public class StillWaitingResponseSpecification {
     
     @JsonProperty("messageGroups")
     public MessageGroup[] messageGroups;
+
     public StillWaitingResponseSpecification withMessageGroups(MessageGroup[] messageGroups) {
         this.messageGroups = messageGroups;
         return this;
@@ -36,9 +39,15 @@ public class StillWaitingResponseSpecification {
     
     @JsonProperty("timeoutInSeconds")
     public Long timeoutInSeconds;
+
     public StillWaitingResponseSpecification withTimeoutInSeconds(Long timeoutInSeconds) {
         this.timeoutInSeconds = timeoutInSeconds;
         return this;
     }
     
+    public StillWaitingResponseSpecification(@JsonProperty("frequencyInSeconds") Long frequencyInSeconds, @JsonProperty("messageGroups") MessageGroup[] messageGroups, @JsonProperty("timeoutInSeconds") Long timeoutInSeconds) {
+        this.frequencyInSeconds = frequencyInSeconds;
+        this.messageGroups = messageGroups;
+        this.timeoutInSeconds = timeoutInSeconds;
+  }
 }

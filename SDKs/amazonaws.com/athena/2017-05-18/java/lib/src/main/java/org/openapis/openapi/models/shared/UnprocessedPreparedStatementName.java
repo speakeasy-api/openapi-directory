@@ -15,6 +15,7 @@ public class UnprocessedPreparedStatementName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public UnprocessedPreparedStatementName withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class UnprocessedPreparedStatementName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public UnprocessedPreparedStatementName withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class UnprocessedPreparedStatementName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatementName")
     public String statementName;
+
     public UnprocessedPreparedStatementName withStatementName(String statementName) {
         this.statementName = statementName;
         return this;
     }
     
+    public UnprocessedPreparedStatementName(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DirectoryAspsListResponse {
@@ -12,6 +13,7 @@ public class DirectoryAspsListResponse {
      */
     
     public org.openapis.openapi.models.shared.Asps asps;
+
     public DirectoryAspsListResponse withAsps(org.openapis.openapi.models.shared.Asps asps) {
         this.asps = asps;
         return this;
@@ -19,6 +21,7 @@ public class DirectoryAspsListResponse {
     
     
     public String contentType;
+
     public DirectoryAspsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DirectoryAspsListResponse {
     
     
     public Integer statusCode;
+
     public DirectoryAspsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DirectoryAspsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DirectoryAspsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DirectoryAspsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

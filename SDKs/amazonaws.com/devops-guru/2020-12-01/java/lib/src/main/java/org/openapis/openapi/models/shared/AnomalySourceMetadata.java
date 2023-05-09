@@ -15,6 +15,7 @@ public class AnomalySourceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public AnomalySourceMetadata withSource(String source) {
         this.source = source;
         return this;
@@ -23,6 +24,7 @@ public class AnomalySourceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceResourceName")
     public String sourceResourceName;
+
     public AnomalySourceMetadata withSourceResourceName(String sourceResourceName) {
         this.sourceResourceName = sourceResourceName;
         return this;
@@ -31,9 +33,11 @@ public class AnomalySourceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceResourceType")
     public String sourceResourceType;
+
     public AnomalySourceMetadata withSourceResourceType(String sourceResourceType) {
         this.sourceResourceType = sourceResourceType;
         return this;
     }
     
+    public AnomalySourceMetadata(){}
 }

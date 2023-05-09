@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ListAppAssessmentsRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListAppAssessmentsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +17,7 @@ public class ListAppAssessmentsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListAppAssessmentsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +25,7 @@ public class ListAppAssessmentsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListAppAssessmentsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +33,7 @@ public class ListAppAssessmentsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListAppAssessmentsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +41,7 @@ public class ListAppAssessmentsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListAppAssessmentsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +49,7 @@ public class ListAppAssessmentsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListAppAssessmentsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,16 +57,18 @@ public class ListAppAssessmentsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListAppAssessmentsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
     /**
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appArn")
     public String appArn;
+
     public ListAppAssessmentsRequest withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -71,6 +79,7 @@ public class ListAppAssessmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assessmentName")
     public String assessmentName;
+
     public ListAppAssessmentsRequest withAssessmentName(String assessmentName) {
         this.assessmentName = assessmentName;
         return this;
@@ -81,6 +90,7 @@ public class ListAppAssessmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assessmentStatus")
     public org.openapis.openapi.models.shared.AssessmentStatusEnum[] assessmentStatus;
+
     public ListAppAssessmentsRequest withAssessmentStatus(org.openapis.openapi.models.shared.AssessmentStatusEnum[] assessmentStatus) {
         this.assessmentStatus = assessmentStatus;
         return this;
@@ -91,6 +101,7 @@ public class ListAppAssessmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=complianceStatus")
     public ListAppAssessmentsComplianceStatusEnum complianceStatus;
+
     public ListAppAssessmentsRequest withComplianceStatus(ListAppAssessmentsComplianceStatusEnum complianceStatus) {
         this.complianceStatus = complianceStatus;
         return this;
@@ -101,6 +112,7 @@ public class ListAppAssessmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=invoker")
     public ListAppAssessmentsInvokerEnum invoker;
+
     public ListAppAssessmentsRequest withInvoker(ListAppAssessmentsInvokerEnum invoker) {
         this.invoker = invoker;
         return this;
@@ -111,6 +123,7 @@ public class ListAppAssessmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public ListAppAssessmentsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -121,6 +134,7 @@ public class ListAppAssessmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListAppAssessmentsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -131,9 +145,11 @@ public class ListAppAssessmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reverseOrder")
     public Boolean reverseOrder;
+
     public ListAppAssessmentsRequest withReverseOrder(Boolean reverseOrder) {
         this.reverseOrder = reverseOrder;
         return this;
     }
     
+    public ListAppAssessmentsRequest(){}
 }

@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2DeltaPresenceEstimationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auxiliaryTables")
     public GooglePrivacyDlpV2StatisticalTable[] auxiliaryTables;
+
     public GooglePrivacyDlpV2DeltaPresenceEstimationConfig withAuxiliaryTables(GooglePrivacyDlpV2StatisticalTable[] auxiliaryTables) {
         this.auxiliaryTables = auxiliaryTables;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2DeltaPresenceEstimationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quasiIds")
     public GooglePrivacyDlpV2QuasiId[] quasiIds;
+
     public GooglePrivacyDlpV2DeltaPresenceEstimationConfig withQuasiIds(GooglePrivacyDlpV2QuasiId[] quasiIds) {
         this.quasiIds = quasiIds;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2DeltaPresenceEstimationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public GooglePrivacyDlpV2DeltaPresenceEstimationConfig withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
     
+    public GooglePrivacyDlpV2DeltaPresenceEstimationConfig(){}
 }

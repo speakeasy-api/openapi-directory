@@ -15,9 +15,11 @@ public class SendEmailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageId")
     public String messageId;
+
     public SendEmailResponse withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
     }
     
+    public SendEmailResponse(){}
 }

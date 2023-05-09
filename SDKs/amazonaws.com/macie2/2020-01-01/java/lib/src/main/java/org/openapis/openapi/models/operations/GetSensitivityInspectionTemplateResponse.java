@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSensitivityInspectionTemplateResponse {
@@ -12,6 +13,7 @@ public class GetSensitivityInspectionTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public GetSensitivityInspectionTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetSensitivityInspectionTemplateResponse {
     
     
     public String contentType;
+
     public GetSensitivityInspectionTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSensitivityInspectionTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSensitivityInspectionTemplateResponse getSensitivityInspectionTemplateResponse;
+
     public GetSensitivityInspectionTemplateResponse withGetSensitivityInspectionTemplateResponse(org.openapis.openapi.models.shared.GetSensitivityInspectionTemplateResponse getSensitivityInspectionTemplateResponse) {
         this.getSensitivityInspectionTemplateResponse = getSensitivityInspectionTemplateResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetSensitivityInspectionTemplateResponse {
      */
     
     public Object internalServerException;
+
     public GetSensitivityInspectionTemplateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetSensitivityInspectionTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSensitivityInspectionTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetSensitivityInspectionTemplateResponse {
     
     
     public Integer statusCode;
+
     public GetSensitivityInspectionTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetSensitivityInspectionTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSensitivityInspectionTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetSensitivityInspectionTemplateResponse {
      */
     
     public Object throttlingException;
+
     public GetSensitivityInspectionTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetSensitivityInspectionTemplateResponse {
      */
     
     public Object validationException;
+
     public GetSensitivityInspectionTemplateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetSensitivityInspectionTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

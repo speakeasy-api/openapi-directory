@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateRequest {
@@ -12,6 +13,7 @@ public class GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentType")
     public String contentType;
+
     public GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -22,6 +24,7 @@ public class GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
     public String include;
+
     public GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateRequest withInclude(String include) {
         this.include = include;
         return this;
@@ -29,6 +32,7 @@ public class GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateRe
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -39,6 +43,7 @@ public class GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -46,6 +51,7 @@ public class GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateRe
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -53,6 +59,7 @@ public class GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateRe
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=startdate")
     public String startdate;
+
     public GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateRequest withStartdate(String startdate) {
         this.startdate = startdate;
         return this;
@@ -60,9 +67,15 @@ public class GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateRe
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unitGroup")
     public String unitGroup;
+
     public GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateRequest withUnitGroup(String unitGroup) {
         this.unitGroup = unitGroup;
         return this;
     }
     
+    public GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateRequest(@JsonProperty("key") String key, @JsonProperty("location") String location, @JsonProperty("startdate") String startdate) {
+        this.key = key;
+        this.location = location;
+        this.startdate = startdate;
+  }
 }

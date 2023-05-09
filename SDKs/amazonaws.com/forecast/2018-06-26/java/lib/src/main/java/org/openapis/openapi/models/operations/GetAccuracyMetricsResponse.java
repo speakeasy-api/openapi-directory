@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAccuracyMetricsResponse {
     
     public String contentType;
+
     public GetAccuracyMetricsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAccuracyMetricsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAccuracyMetricsResponse getAccuracyMetricsResponse;
+
     public GetAccuracyMetricsResponse withGetAccuracyMetricsResponse(org.openapis.openapi.models.shared.GetAccuracyMetricsResponse getAccuracyMetricsResponse) {
         this.getAccuracyMetricsResponse = getAccuracyMetricsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetAccuracyMetricsResponse {
      */
     
     public Object invalidInputException;
+
     public GetAccuracyMetricsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class GetAccuracyMetricsResponse {
      */
     
     public Object resourceInUseException;
+
     public GetAccuracyMetricsResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -46,6 +51,7 @@ public class GetAccuracyMetricsResponse {
     
     
     public Integer statusCode;
+
     public GetAccuracyMetricsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetAccuracyMetricsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAccuracyMetricsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetAccuracyMetricsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAccuracyMetricsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetAccuracyMetricsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

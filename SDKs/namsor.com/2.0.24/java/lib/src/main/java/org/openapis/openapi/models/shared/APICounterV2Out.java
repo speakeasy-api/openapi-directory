@@ -15,6 +15,7 @@ public class APICounterV2Out {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiKey")
     public APIKeyOut apiKey;
+
     public APICounterV2Out withApiKey(APIKeyOut apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -26,6 +27,7 @@ public class APICounterV2Out {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiService")
     public String apiService;
+
     public APICounterV2Out withApiService(String apiService) {
         this.apiService = apiService;
         return this;
@@ -37,6 +39,7 @@ public class APICounterV2Out {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdDateTime")
     public Long createdDateTime;
+
     public APICounterV2Out withCreatedDateTime(Long createdDateTime) {
         this.createdDateTime = createdDateTime;
         return this;
@@ -48,6 +51,7 @@ public class APICounterV2Out {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostAddress")
     public String hostAddress;
+
     public APICounterV2Out withHostAddress(String hostAddress) {
         this.hostAddress = hostAddress;
         return this;
@@ -59,6 +63,7 @@ public class APICounterV2Out {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastFlushedDateTime")
     public Long lastFlushedDateTime;
+
     public APICounterV2Out withLastFlushedDateTime(Long lastFlushedDateTime) {
         this.lastFlushedDateTime = lastFlushedDateTime;
         return this;
@@ -70,6 +75,7 @@ public class APICounterV2Out {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUsedDateTime")
     public Long lastUsedDateTime;
+
     public APICounterV2Out withLastUsedDateTime(Long lastUsedDateTime) {
         this.lastUsedDateTime = lastUsedDateTime;
         return this;
@@ -81,6 +87,7 @@ public class APICounterV2Out {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceFeaturesUsage")
     public java.util.Map<String, Long> serviceFeaturesUsage;
+
     public APICounterV2Out withServiceFeaturesUsage(java.util.Map<String, Long> serviceFeaturesUsage) {
         this.serviceFeaturesUsage = serviceFeaturesUsage;
         return this;
@@ -92,9 +99,11 @@ public class APICounterV2Out {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalUsage")
     public Long totalUsage;
+
     public APICounterV2Out withTotalUsage(Long totalUsage) {
         this.totalUsage = totalUsage;
         return this;
     }
     
+    public APICounterV2Out(){}
 }

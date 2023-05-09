@@ -18,6 +18,7 @@ public class Timeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("background")
     public String background;
+
     public Timeline withBackground(String background) {
         this.background = background;
         return this;
@@ -29,6 +30,7 @@ public class Timeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cache")
     public Boolean cache;
+
     public Timeline withCache(Boolean cache) {
         this.cache = cache;
         return this;
@@ -40,6 +42,7 @@ public class Timeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fonts")
     public Font[] fonts;
+
     public Timeline withFonts(Font[] fonts) {
         this.fonts = fonts;
         return this;
@@ -51,6 +54,7 @@ public class Timeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("soundtrack")
     public Soundtrack soundtrack;
+
     public Timeline withSoundtrack(Soundtrack soundtrack) {
         this.soundtrack = soundtrack;
         return this;
@@ -61,9 +65,13 @@ public class Timeline {
      */
     @JsonProperty("tracks")
     public Track[] tracks;
+
     public Timeline withTracks(Track[] tracks) {
         this.tracks = tracks;
         return this;
     }
     
+    public Timeline(@JsonProperty("tracks") Track[] tracks) {
+        this.tracks = tracks;
+  }
 }

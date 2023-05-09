@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IntentMultipartResponse {
     
     public String contentType;
+
     public IntentMultipartResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IntentMultipartResponse {
      */
     
     public org.openapis.openapi.models.shared.IntentPredictResponse intentPredictResponse;
+
     public IntentMultipartResponse withIntentPredictResponse(org.openapis.openapi.models.shared.IntentPredictResponse intentPredictResponse) {
         this.intentPredictResponse = intentPredictResponse;
         return this;
@@ -29,6 +32,7 @@ public class IntentMultipartResponse {
      */
     
     public org.openapis.openapi.models.shared.PredictionErrorResponse predictionErrorResponse;
+
     public IntentMultipartResponse withPredictionErrorResponse(org.openapis.openapi.models.shared.PredictionErrorResponse predictionErrorResponse) {
         this.predictionErrorResponse = predictionErrorResponse;
         return this;
@@ -36,6 +40,7 @@ public class IntentMultipartResponse {
     
     
     public Integer statusCode;
+
     public IntentMultipartResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class IntentMultipartResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IntentMultipartResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IntentMultipartResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

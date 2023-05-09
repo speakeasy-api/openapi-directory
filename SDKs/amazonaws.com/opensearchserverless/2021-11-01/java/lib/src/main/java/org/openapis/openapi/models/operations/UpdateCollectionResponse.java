@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCollectionResponse {
@@ -12,6 +13,7 @@ public class UpdateCollectionResponse {
      */
     
     public Object conflictException;
+
     public UpdateCollectionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateCollectionResponse {
     
     
     public String contentType;
+
     public UpdateCollectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCollectionResponse {
      */
     
     public Object internalServerException;
+
     public UpdateCollectionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateCollectionResponse {
     
     
     public Integer statusCode;
+
     public UpdateCollectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateCollectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCollectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateCollectionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateCollectionResponse updateCollectionResponse;
+
     public UpdateCollectionResponse withUpdateCollectionResponse(org.openapis.openapi.models.shared.UpdateCollectionResponse updateCollectionResponse) {
         this.updateCollectionResponse = updateCollectionResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateCollectionResponse {
      */
     
     public Object validationException;
+
     public UpdateCollectionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateCollectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

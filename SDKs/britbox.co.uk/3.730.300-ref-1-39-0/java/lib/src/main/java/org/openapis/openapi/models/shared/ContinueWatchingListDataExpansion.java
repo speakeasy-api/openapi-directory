@@ -12,6 +12,7 @@ public class ContinueWatchingListDataExpansion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("episode")
     public ItemSummary episode;
+
     public ContinueWatchingListDataExpansion withEpisode(ItemSummary episode) {
         this.episode = episode;
         return this;
@@ -20,6 +21,7 @@ public class ContinueWatchingListDataExpansion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("season")
     public ItemSummary season;
+
     public ContinueWatchingListDataExpansion withSeason(ItemSummary season) {
         this.season = season;
         return this;
@@ -28,9 +30,11 @@ public class ContinueWatchingListDataExpansion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show")
     public ItemSummary show;
+
     public ContinueWatchingListDataExpansion withShow(ItemSummary show) {
         this.show = show;
         return this;
     }
     
+    public ContinueWatchingListDataExpansion(){}
 }

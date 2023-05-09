@@ -151,6 +151,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -188,13 +193,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateMemberAccountResponse res = new org.openapis.openapi.models.operations.AssociateMemberAccountResponse() {{
+        org.openapis.openapi.models.operations.AssociateMemberAccountResponse res = new org.openapis.openapi.models.operations.AssociateMemberAccountResponse(contentType, httpRes.statusCode()) {{
             invalidInputException = null;
             limitExceededException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -258,15 +261,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateS3ResourcesResponse res = new org.openapis.openapi.models.operations.AssociateS3ResourcesResponse() {{
+        org.openapis.openapi.models.operations.AssociateS3ResourcesResponse res = new org.openapis.openapi.models.operations.AssociateS3ResourcesResponse(contentType, httpRes.statusCode()) {{
             associateS3ResourcesResult = null;
             invalidInputException = null;
             accessDeniedException = null;
             limitExceededException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,12 +343,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisassociateMemberAccountResponse res = new org.openapis.openapi.models.operations.DisassociateMemberAccountResponse() {{
+        org.openapis.openapi.models.operations.DisassociateMemberAccountResponse res = new org.openapis.openapi.models.operations.DisassociateMemberAccountResponse(contentType, httpRes.statusCode()) {{
             invalidInputException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -404,14 +403,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisassociateS3ResourcesResponse res = new org.openapis.openapi.models.operations.DisassociateS3ResourcesResponse() {{
+        org.openapis.openapi.models.operations.DisassociateS3ResourcesResponse res = new org.openapis.openapi.models.operations.DisassociateS3ResourcesResponse(contentType, httpRes.statusCode()) {{
             disassociateS3ResourcesResult = null;
             invalidInputException = null;
             accessDeniedException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,13 +483,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListMemberAccountsResponse res = new org.openapis.openapi.models.operations.ListMemberAccountsResponse() {{
+        org.openapis.openapi.models.operations.ListMemberAccountsResponse res = new org.openapis.openapi.models.operations.ListMemberAccountsResponse(contentType, httpRes.statusCode()) {{
             listMemberAccountsResult = null;
             internalException = null;
             invalidInputException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -560,14 +555,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListS3ResourcesResponse res = new org.openapis.openapi.models.operations.ListS3ResourcesResponse() {{
+        org.openapis.openapi.models.operations.ListS3ResourcesResponse res = new org.openapis.openapi.models.operations.ListS3ResourcesResponse(contentType, httpRes.statusCode()) {{
             listS3ResourcesResult = null;
             invalidInputException = null;
             accessDeniedException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -636,14 +629,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateS3ResourcesResponse res = new org.openapis.openapi.models.operations.UpdateS3ResourcesResponse() {{
+        org.openapis.openapi.models.operations.UpdateS3ResourcesResponse res = new org.openapis.openapi.models.operations.UpdateS3ResourcesResponse(contentType, httpRes.statusCode()) {{
             updateS3ResourcesResult = null;
             invalidInputException = null;
             accessDeniedException = null;
             internalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

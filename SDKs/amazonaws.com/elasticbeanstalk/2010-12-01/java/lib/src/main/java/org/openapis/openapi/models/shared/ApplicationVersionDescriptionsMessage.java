@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ApplicationVersionDescriptionsMessage {
     
     public ApplicationVersionDescription[] applicationVersions;
+
     public ApplicationVersionDescriptionsMessage withApplicationVersions(ApplicationVersionDescription[] applicationVersions) {
         this.applicationVersions = applicationVersions;
         return this;
@@ -19,9 +20,11 @@ public class ApplicationVersionDescriptionsMessage {
     
     
     public String nextToken;
+
     public ApplicationVersionDescriptionsMessage withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ApplicationVersionDescriptionsMessage(){}
 }

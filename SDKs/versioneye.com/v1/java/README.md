@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetApiV1ScansSecurity;
 import org.openapis.openapi.models.operations.GetApiV1ScansRequest;
 import org.openapis.openapi.models.operations.GetApiV1ScansResponse;
+import org.openapis.openapi.models.operations.GetApiV1ScansSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -28,11 +27,11 @@ public class Application {
                 .build();
 
             GetApiV1ScansRequest req = new GetApiV1ScansRequest() {{
-                name = "corrupti";
-                perPage = "provident";
-            }}            
+                name = "Terrence Rau";
+                perPage = "nulla";
+            }};            
 
-            GetApiV1ScansResponse res = sdk.scans.getApiV1Scans(req, new GetApiV1ScansSecurity() {{
+            GetApiV1ScansResponse res = sdk.scans.getApiV1Scans(req, new GetApiV1ScansSecurity("corrupti") {{
                 apiKey = "YOUR_API_KEY_HERE";
             }});
 
@@ -42,6 +41,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -49,11 +50,11 @@ public class Application {
 ## Available Resources and Operations
 
 
-### scans
+### [scans](docs/scans/README.md)
 
-* `getApiV1Scans` - Retrieves all scans
-* `getApiV1ScansId` - Retrieves a project scan result
-* `getApiV1ScansIdFilesFileId` - Retrieves a file object, containing information about dependencies in the file
+* [getApiV1Scans](docs/scans/README.md#getapiv1scans) - Retrieves all scans
+* [getApiV1ScansId](docs/scans/README.md#getapiv1scansid) - Retrieves a project scan result
+* [getApiV1ScansIdFilesFileId](docs/scans/README.md#getapiv1scansidfilesfileid) - Retrieves a file object, containing information about dependencies in the file
 <!-- End SDK Available Operations -->
 
 ### Maturity

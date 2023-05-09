@@ -12,6 +12,7 @@ public class StartDocumentTextDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartDocumentTextDetectionRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class StartDocumentTextDetectionRequest {
     
     @JsonProperty("DocumentLocation")
     public DocumentLocation documentLocation;
+
     public StartDocumentTextDetectionRequest withDocumentLocation(DocumentLocation documentLocation) {
         this.documentLocation = documentLocation;
         return this;
@@ -27,6 +29,7 @@ public class StartDocumentTextDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobTag")
     public String jobTag;
+
     public StartDocumentTextDetectionRequest withJobTag(String jobTag) {
         this.jobTag = jobTag;
         return this;
@@ -35,6 +38,7 @@ public class StartDocumentTextDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSKeyId")
     public String kmsKeyId;
+
     public StartDocumentTextDetectionRequest withKMSKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -43,6 +47,7 @@ public class StartDocumentTextDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationChannel")
     public NotificationChannel notificationChannel;
+
     public StartDocumentTextDetectionRequest withNotificationChannel(NotificationChannel notificationChannel) {
         this.notificationChannel = notificationChannel;
         return this;
@@ -51,9 +56,13 @@ public class StartDocumentTextDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputConfig")
     public OutputConfig outputConfig;
+
     public StartDocumentTextDetectionRequest withOutputConfig(OutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
     }
     
+    public StartDocumentTextDetectionRequest(@JsonProperty("DocumentLocation") DocumentLocation documentLocation) {
+        this.documentLocation = documentLocation;
+  }
 }

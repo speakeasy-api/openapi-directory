@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveBgMultipartBgImageFile {
     @SpeakeasyMetadata("multipartForm:name=bg_image_file")
     public String bgImageFile;
+
     public RemoveBgMultipartBgImageFile withBgImageFile(String bgImageFile) {
         this.bgImageFile = bgImageFile;
         return this;
@@ -16,9 +18,14 @@ public class RemoveBgMultipartBgImageFile {
     
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public RemoveBgMultipartBgImageFile withContent(byte[] content) {
         this.content = content;
         return this;
     }
     
+    public RemoveBgMultipartBgImageFile(@JsonProperty("bg_image_file") String bgImageFile, @JsonProperty("content") byte[] content) {
+        this.bgImageFile = bgImageFile;
+        this.content = content;
+  }
 }

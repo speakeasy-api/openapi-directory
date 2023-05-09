@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AnalyticsIndexLinks {
     @JsonProperty("self")
     public LinksAnalyticsIndexLink self;
+
     public AnalyticsIndexLinks withSelf(LinksAnalyticsIndexLink self) {
         this.self = self;
         return this;
@@ -19,9 +20,13 @@ public class AnalyticsIndexLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingStatus")
     public LinksGetTrackingStatusLink trackingStatus;
+
     public AnalyticsIndexLinks withTrackingStatus(LinksGetTrackingStatusLink trackingStatus) {
         this.trackingStatus = trackingStatus;
         return this;
     }
     
+    public AnalyticsIndexLinks(@JsonProperty("self") LinksAnalyticsIndexLink self) {
+        this.self = self;
+  }
 }

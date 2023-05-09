@@ -15,6 +15,7 @@ public class UserorderdetailsTaxData {
      */
     @JsonProperty("areTaxesDesignatedByMarketplace")
     public Boolean areTaxesDesignatedByMarketplace;
+
     public UserorderdetailsTaxData withAreTaxesDesignatedByMarketplace(Boolean areTaxesDesignatedByMarketplace) {
         this.areTaxesDesignatedByMarketplace = areTaxesDesignatedByMarketplace;
         return this;
@@ -25,9 +26,14 @@ public class UserorderdetailsTaxData {
      */
     @JsonProperty("taxInfoCollection")
     public UserorderdetailsTaxDataTaxInfoCollection[] taxInfoCollection;
+
     public UserorderdetailsTaxData withTaxInfoCollection(UserorderdetailsTaxDataTaxInfoCollection[] taxInfoCollection) {
         this.taxInfoCollection = taxInfoCollection;
         return this;
     }
     
+    public UserorderdetailsTaxData(@JsonProperty("areTaxesDesignatedByMarketplace") Boolean areTaxesDesignatedByMarketplace, @JsonProperty("taxInfoCollection") UserorderdetailsTaxDataTaxInfoCollection[] taxInfoCollection) {
+        this.areTaxesDesignatedByMarketplace = areTaxesDesignatedByMarketplace;
+        this.taxInfoCollection = taxInfoCollection;
+  }
 }

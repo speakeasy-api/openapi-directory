@@ -15,6 +15,7 @@ public class TimestampResConversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public String created;
+
     public TimestampResConversation withCreated(String created) {
         this.created = created;
         return this;
@@ -26,6 +27,7 @@ public class TimestampResConversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destroyed")
     public String destroyed;
+
     public TimestampResConversation withDestroyed(String destroyed) {
         this.destroyed = destroyed;
         return this;
@@ -37,9 +39,11 @@ public class TimestampResConversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated")
     public String updated;
+
     public TimestampResConversation withUpdated(String updated) {
         this.updated = updated;
         return this;
     }
     
+    public TimestampResConversation(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLocalTaxByTaxCodeRequest {
@@ -12,6 +13,7 @@ public class GetLocalTaxByTaxCodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public GetLocalTaxByTaxCodeRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -22,6 +24,7 @@ public class GetLocalTaxByTaxCodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
     public String employeeId;
+
     public GetLocalTaxByTaxCodeRequest withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
@@ -32,9 +35,15 @@ public class GetLocalTaxByTaxCodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxCode")
     public String taxCode;
+
     public GetLocalTaxByTaxCodeRequest withTaxCode(String taxCode) {
         this.taxCode = taxCode;
         return this;
     }
     
+    public GetLocalTaxByTaxCodeRequest(@JsonProperty("companyId") String companyId, @JsonProperty("employeeId") String employeeId, @JsonProperty("taxCode") String taxCode) {
+        this.companyId = companyId;
+        this.employeeId = employeeId;
+        this.taxCode = taxCode;
+  }
 }

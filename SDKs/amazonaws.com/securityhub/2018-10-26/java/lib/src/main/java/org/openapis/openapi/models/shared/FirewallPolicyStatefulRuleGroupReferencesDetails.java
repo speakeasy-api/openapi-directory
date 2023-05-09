@@ -15,9 +15,11 @@ public class FirewallPolicyStatefulRuleGroupReferencesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public FirewallPolicyStatefulRuleGroupReferencesDetails withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public FirewallPolicyStatefulRuleGroupReferencesDetails(){}
 }

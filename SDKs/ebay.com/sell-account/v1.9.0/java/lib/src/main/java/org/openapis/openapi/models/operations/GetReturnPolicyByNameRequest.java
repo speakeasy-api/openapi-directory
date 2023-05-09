@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReturnPolicyByNameRequest {
@@ -12,6 +13,7 @@ public class GetReturnPolicyByNameRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=marketplace_id")
     public String marketplaceId;
+
     public GetReturnPolicyByNameRequest withMarketplaceId(String marketplaceId) {
         this.marketplaceId = marketplaceId;
         return this;
@@ -22,9 +24,14 @@ public class GetReturnPolicyByNameRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetReturnPolicyByNameRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetReturnPolicyByNameRequest(@JsonProperty("marketplace_id") String marketplaceId, @JsonProperty("name") String name) {
+        this.marketplaceId = marketplaceId;
+        this.name = name;
+  }
 }

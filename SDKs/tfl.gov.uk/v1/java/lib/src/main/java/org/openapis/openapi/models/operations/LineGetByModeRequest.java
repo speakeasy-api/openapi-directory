@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineGetByModeRequest {
@@ -12,9 +13,13 @@ public class LineGetByModeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modes")
     public String[] modes;
+
     public LineGetByModeRequest withModes(String[] modes) {
         this.modes = modes;
         return this;
     }
     
+    public LineGetByModeRequest(@JsonProperty("modes") String[] modes) {
+        this.modes = modes;
+  }
 }

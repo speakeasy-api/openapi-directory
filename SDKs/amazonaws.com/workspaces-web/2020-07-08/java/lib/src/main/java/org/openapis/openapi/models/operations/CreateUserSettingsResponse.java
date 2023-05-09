@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateUserSettingsResponse {
@@ -12,6 +13,7 @@ public class CreateUserSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateUserSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateUserSettingsResponse {
      */
     
     public Object conflictException;
+
     public CreateUserSettingsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateUserSettingsResponse {
     
     
     public String contentType;
+
     public CreateUserSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateUserSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateUserSettingsResponse createUserSettingsResponse;
+
     public CreateUserSettingsResponse withCreateUserSettingsResponse(org.openapis.openapi.models.shared.CreateUserSettingsResponse createUserSettingsResponse) {
         this.createUserSettingsResponse = createUserSettingsResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateUserSettingsResponse {
      */
     
     public Object internalServerException;
+
     public CreateUserSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CreateUserSettingsResponse {
     
     
     public Integer statusCode;
+
     public CreateUserSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateUserSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateUserSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateUserSettingsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateUserSettingsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class CreateUserSettingsResponse {
      */
     
     public Object throttlingException;
+
     public CreateUserSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateUserSettingsResponse {
      */
     
     public Object validationException;
+
     public CreateUserSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateUserSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

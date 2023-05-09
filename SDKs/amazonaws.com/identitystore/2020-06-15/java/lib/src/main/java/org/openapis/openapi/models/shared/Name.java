@@ -15,6 +15,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FamilyName")
     public String familyName;
+
     public Name withFamilyName(String familyName) {
         this.familyName = familyName;
         return this;
@@ -23,6 +24,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Formatted")
     public String formatted;
+
     public Name withFormatted(String formatted) {
         this.formatted = formatted;
         return this;
@@ -31,6 +33,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GivenName")
     public String givenName;
+
     public Name withGivenName(String givenName) {
         this.givenName = givenName;
         return this;
@@ -39,6 +42,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HonorificPrefix")
     public String honorificPrefix;
+
     public Name withHonorificPrefix(String honorificPrefix) {
         this.honorificPrefix = honorificPrefix;
         return this;
@@ -47,6 +51,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HonorificSuffix")
     public String honorificSuffix;
+
     public Name withHonorificSuffix(String honorificSuffix) {
         this.honorificSuffix = honorificSuffix;
         return this;
@@ -55,9 +60,11 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MiddleName")
     public String middleName;
+
     public Name withMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
     }
     
+    public Name(){}
 }

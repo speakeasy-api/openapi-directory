@@ -15,9 +15,11 @@ public class CreateExportTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public CreateExportTaskResponse withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public CreateExportTaskResponse(){}
 }

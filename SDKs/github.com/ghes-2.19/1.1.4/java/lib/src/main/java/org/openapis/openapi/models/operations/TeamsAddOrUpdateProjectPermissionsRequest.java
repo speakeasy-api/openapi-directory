@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsAddOrUpdateProjectPermissionsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public TeamsAddOrUpdateProjectPermissionsRequestBody requestBody;
+
     public TeamsAddOrUpdateProjectPermissionsRequest withRequestBody(TeamsAddOrUpdateProjectPermissionsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class TeamsAddOrUpdateProjectPermissionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
     public String accept;
+
     public TeamsAddOrUpdateProjectPermissionsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -26,6 +29,7 @@ public class TeamsAddOrUpdateProjectPermissionsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public Long projectId;
+
     public TeamsAddOrUpdateProjectPermissionsRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
@@ -33,9 +37,15 @@ public class TeamsAddOrUpdateProjectPermissionsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
     public Long teamId;
+
     public TeamsAddOrUpdateProjectPermissionsRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public TeamsAddOrUpdateProjectPermissionsRequest(@JsonProperty("accept") String accept, @JsonProperty("project_id") Long projectId, @JsonProperty("team_id") Long teamId) {
+        this.accept = accept;
+        this.projectId = projectId;
+        this.teamId = teamId;
+  }
 }

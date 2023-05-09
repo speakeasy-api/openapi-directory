@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AttributeKey {
     @JsonProperty("FacetName")
     public String facetName;
+
     public AttributeKey withFacetName(String facetName) {
         this.facetName = facetName;
         return this;
@@ -19,6 +20,7 @@ public class AttributeKey {
     
     @JsonProperty("Name")
     public String name;
+
     public AttributeKey withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class AttributeKey {
     
     @JsonProperty("SchemaArn")
     public String schemaArn;
+
     public AttributeKey withSchemaArn(String schemaArn) {
         this.schemaArn = schemaArn;
         return this;
     }
     
+    public AttributeKey(@JsonProperty("FacetName") String facetName, @JsonProperty("Name") String name, @JsonProperty("SchemaArn") String schemaArn) {
+        this.facetName = facetName;
+        this.name = name;
+        this.schemaArn = schemaArn;
+  }
 }

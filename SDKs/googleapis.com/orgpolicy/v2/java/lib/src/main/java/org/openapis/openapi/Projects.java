@@ -60,11 +60,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OrgpolicyProjectsConstraintsListResponse res = new org.openapis.openapi.models.operations.OrgpolicyProjectsConstraintsListResponse() {{
+        org.openapis.openapi.models.operations.OrgpolicyProjectsConstraintsListResponse res = new org.openapis.openapi.models.operations.OrgpolicyProjectsConstraintsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudOrgpolicyV2ListConstraintsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesCreateResponse res = new org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesCreateResponse() {{
+        org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesCreateResponse res = new org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudOrgpolicyV2Policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesDeleteResponse res = new org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesDeleteResponse() {{
+        org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesDeleteResponse res = new org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesGetResponse res = new org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesGetResponse() {{
+        org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesGetResponse res = new org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesGetResponse(contentType, httpRes.statusCode()) {{
             googleCloudOrgpolicyV2Policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -246,11 +238,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesGetEffectivePolicyResponse res = new org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesGetEffectivePolicyResponse() {{
+        org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesGetEffectivePolicyResponse res = new org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesGetEffectivePolicyResponse(contentType, httpRes.statusCode()) {{
             googleCloudOrgpolicyV2Policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -292,11 +282,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesListResponse res = new org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesListResponse() {{
+        org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesListResponse res = new org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesListResponse(contentType, httpRes.statusCode()) {{
             googleCloudOrgpolicyV2ListPoliciesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -340,11 +328,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesPatchResponse res = new org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesPatchResponse() {{
+        org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesPatchResponse res = new org.openapis.openapi.models.operations.OrgpolicyProjectsPoliciesPatchResponse(contentType, httpRes.statusCode()) {{
             googleCloudOrgpolicyV2Policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

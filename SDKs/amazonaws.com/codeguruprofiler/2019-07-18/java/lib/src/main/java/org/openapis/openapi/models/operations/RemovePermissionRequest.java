@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemovePermissionRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public RemovePermissionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class RemovePermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public RemovePermissionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class RemovePermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public RemovePermissionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class RemovePermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public RemovePermissionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class RemovePermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public RemovePermissionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class RemovePermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public RemovePermissionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class RemovePermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public RemovePermissionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class RemovePermissionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=actionGroup")
     public RemovePermissionActionGroupEnum actionGroup;
+
     public RemovePermissionRequest withActionGroup(RemovePermissionActionGroupEnum actionGroup) {
         this.actionGroup = actionGroup;
         return this;
@@ -71,6 +80,7 @@ public class RemovePermissionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profilingGroupName")
     public String profilingGroupName;
+
     public RemovePermissionRequest withProfilingGroupName(String profilingGroupName) {
         this.profilingGroupName = profilingGroupName;
         return this;
@@ -81,9 +91,15 @@ public class RemovePermissionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=revisionId")
     public String revisionId;
+
     public RemovePermissionRequest withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
     }
     
+    public RemovePermissionRequest(@JsonProperty("actionGroup") RemovePermissionActionGroupEnum actionGroup, @JsonProperty("profilingGroupName") String profilingGroupName, @JsonProperty("revisionId") String revisionId) {
+        this.actionGroup = actionGroup;
+        this.profilingGroupName = profilingGroupName;
+        this.revisionId = revisionId;
+  }
 }

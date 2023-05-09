@@ -18,6 +18,7 @@ public class ContactHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calls")
     public Call[] calls;
+
     public ContactHistory withCalls(Call[] calls) {
         this.calls = calls;
         return this;
@@ -29,6 +30,7 @@ public class ContactHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ContactHistory withId(Long id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class ContactHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("texts")
     public Text[] texts;
+
     public ContactHistory withTexts(Text[] texts) {
         this.texts = texts;
         return this;
     }
     
+    public ContactHistory(){}
 }

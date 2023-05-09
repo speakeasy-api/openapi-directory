@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceCreditSpecificationsResult {
     
     public DescribeInstanceCreditSpecificationsResultInstanceCreditSpecifications[] instanceCreditSpecifications;
+
     public DescribeInstanceCreditSpecificationsResult withInstanceCreditSpecifications(DescribeInstanceCreditSpecificationsResultInstanceCreditSpecifications[] instanceCreditSpecifications) {
         this.instanceCreditSpecifications = instanceCreditSpecifications;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInstanceCreditSpecificationsResult {
     
     
     public String nextToken;
+
     public DescribeInstanceCreditSpecificationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInstanceCreditSpecificationsResult(){}
 }

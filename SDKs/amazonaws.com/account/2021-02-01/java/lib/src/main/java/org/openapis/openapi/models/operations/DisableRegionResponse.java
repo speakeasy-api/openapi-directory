@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisableRegionResponse {
@@ -12,6 +13,7 @@ public class DisableRegionResponse {
      */
     
     public Object accessDeniedException;
+
     public DisableRegionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DisableRegionResponse {
      */
     
     public Object conflictException;
+
     public DisableRegionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DisableRegionResponse {
     
     
     public String contentType;
+
     public DisableRegionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DisableRegionResponse {
      */
     
     public Object internalServerException;
+
     public DisableRegionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DisableRegionResponse {
     
     
     public Integer statusCode;
+
     public DisableRegionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DisableRegionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisableRegionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DisableRegionResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DisableRegionResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,9 +81,14 @@ public class DisableRegionResponse {
      */
     
     public Object validationException;
+
     public DisableRegionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisableRegionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

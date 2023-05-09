@@ -15,6 +15,7 @@ public class AwsBackupBackupPlanRuleCopyActionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationBackupVaultArn")
     public String destinationBackupVaultArn;
+
     public AwsBackupBackupPlanRuleCopyActionsDetails withDestinationBackupVaultArn(String destinationBackupVaultArn) {
         this.destinationBackupVaultArn = destinationBackupVaultArn;
         return this;
@@ -23,9 +24,11 @@ public class AwsBackupBackupPlanRuleCopyActionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lifecycle")
     public AwsBackupBackupPlanLifecycleDetails lifecycle;
+
     public AwsBackupBackupPlanRuleCopyActionsDetails withLifecycle(AwsBackupBackupPlanLifecycleDetails lifecycle) {
         this.lifecycle = lifecycle;
         return this;
     }
     
+    public AwsBackupBackupPlanRuleCopyActionsDetails(){}
 }

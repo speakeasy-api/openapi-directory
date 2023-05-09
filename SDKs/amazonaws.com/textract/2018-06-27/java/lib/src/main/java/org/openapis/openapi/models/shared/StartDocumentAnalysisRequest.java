@@ -12,6 +12,7 @@ public class StartDocumentAnalysisRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartDocumentAnalysisRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class StartDocumentAnalysisRequest {
     
     @JsonProperty("DocumentLocation")
     public DocumentLocation documentLocation;
+
     public StartDocumentAnalysisRequest withDocumentLocation(DocumentLocation documentLocation) {
         this.documentLocation = documentLocation;
         return this;
@@ -26,6 +28,7 @@ public class StartDocumentAnalysisRequest {
     
     @JsonProperty("FeatureTypes")
     public FeatureTypeEnum[] featureTypes;
+
     public StartDocumentAnalysisRequest withFeatureTypes(FeatureTypeEnum[] featureTypes) {
         this.featureTypes = featureTypes;
         return this;
@@ -34,6 +37,7 @@ public class StartDocumentAnalysisRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobTag")
     public String jobTag;
+
     public StartDocumentAnalysisRequest withJobTag(String jobTag) {
         this.jobTag = jobTag;
         return this;
@@ -42,6 +46,7 @@ public class StartDocumentAnalysisRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSKeyId")
     public String kmsKeyId;
+
     public StartDocumentAnalysisRequest withKMSKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -50,6 +55,7 @@ public class StartDocumentAnalysisRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationChannel")
     public NotificationChannel notificationChannel;
+
     public StartDocumentAnalysisRequest withNotificationChannel(NotificationChannel notificationChannel) {
         this.notificationChannel = notificationChannel;
         return this;
@@ -58,6 +64,7 @@ public class StartDocumentAnalysisRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputConfig")
     public OutputConfig outputConfig;
+
     public StartDocumentAnalysisRequest withOutputConfig(OutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -69,9 +76,14 @@ public class StartDocumentAnalysisRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueriesConfig")
     public QueriesConfig queriesConfig;
+
     public StartDocumentAnalysisRequest withQueriesConfig(QueriesConfig queriesConfig) {
         this.queriesConfig = queriesConfig;
         return this;
     }
     
+    public StartDocumentAnalysisRequest(@JsonProperty("DocumentLocation") DocumentLocation documentLocation, @JsonProperty("FeatureTypes") FeatureTypeEnum[] featureTypes) {
+        this.documentLocation = documentLocation;
+        this.featureTypes = featureTypes;
+  }
 }

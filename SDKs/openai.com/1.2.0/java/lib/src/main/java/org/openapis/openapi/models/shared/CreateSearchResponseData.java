@@ -12,6 +12,7 @@ public class CreateSearchResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public Long document;
+
     public CreateSearchResponseData withDocument(Long document) {
         this.document = document;
         return this;
@@ -20,6 +21,7 @@ public class CreateSearchResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public CreateSearchResponseData withObject(String object) {
         this.object = object;
         return this;
@@ -28,9 +30,11 @@ public class CreateSearchResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Double score;
+
     public CreateSearchResponseData withScore(Double score) {
         this.score = score;
         return this;
     }
     
+    public CreateSearchResponseData(){}
 }

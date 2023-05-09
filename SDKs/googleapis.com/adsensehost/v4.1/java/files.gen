@@ -135,4 +135,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/CustomChannel.java
 lib/src/main/java/org/openapis/openapi/models/shared/CustomChannels.java
 lib/src/main/java/org/openapis/openapi/models/shared/UrlChannel.java
 lib/src/main/java/org/openapis/openapi/models/shared/UrlChannels.java
+docs/sdk/README.md
+docs/accounts/README.md
+docs/adclients/README.md
+docs/associationsessions/README.md
+docs/customchannels/README.md
+docs/reports/README.md
+docs/urlchannels/README.md
 USAGE.md

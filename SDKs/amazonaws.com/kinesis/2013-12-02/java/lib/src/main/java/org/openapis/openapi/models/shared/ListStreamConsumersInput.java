@@ -17,6 +17,7 @@ public class ListStreamConsumersInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListStreamConsumersInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -25,6 +26,7 @@ public class ListStreamConsumersInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListStreamConsumersInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -32,6 +34,7 @@ public class ListStreamConsumersInput {
     
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public ListStreamConsumersInput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -42,9 +45,13 @@ public class ListStreamConsumersInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StreamCreationTimestamp")
     public OffsetDateTime streamCreationTimestamp;
+
     public ListStreamConsumersInput withStreamCreationTimestamp(OffsetDateTime streamCreationTimestamp) {
         this.streamCreationTimestamp = streamCreationTimestamp;
         return this;
     }
     
+    public ListStreamConsumersInput(@JsonProperty("StreamARN") String streamARN) {
+        this.streamARN = streamARN;
+  }
 }

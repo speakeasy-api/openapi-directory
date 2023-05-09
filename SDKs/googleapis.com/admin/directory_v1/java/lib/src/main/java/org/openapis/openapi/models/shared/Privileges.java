@@ -18,6 +18,7 @@ public class Privileges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Privileges withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class Privileges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Privilege[] items;
+
     public Privileges withItems(Privilege[] items) {
         this.items = items;
         return this;
@@ -40,9 +42,11 @@ public class Privileges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Privileges withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public Privileges(){}
 }

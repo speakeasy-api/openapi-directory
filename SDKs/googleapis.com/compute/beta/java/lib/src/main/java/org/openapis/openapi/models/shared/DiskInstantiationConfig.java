@@ -18,6 +18,7 @@ public class DiskInstantiationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoDelete")
     public Boolean autoDelete;
+
     public DiskInstantiationConfig withAutoDelete(Boolean autoDelete) {
         this.autoDelete = autoDelete;
         return this;
@@ -29,6 +30,7 @@ public class DiskInstantiationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customImage")
     public String customImage;
+
     public DiskInstantiationConfig withCustomImage(String customImage) {
         this.customImage = customImage;
         return this;
@@ -40,6 +42,7 @@ public class DiskInstantiationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceName")
     public String deviceName;
+
     public DiskInstantiationConfig withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -51,9 +54,11 @@ public class DiskInstantiationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instantiateFrom")
     public DiskInstantiationConfigInstantiateFromEnum instantiateFrom;
+
     public DiskInstantiationConfig withInstantiateFrom(DiskInstantiationConfigInstantiateFromEnum instantiateFrom) {
         this.instantiateFrom = instantiateFrom;
         return this;
     }
     
+    public DiskInstantiationConfig(){}
 }

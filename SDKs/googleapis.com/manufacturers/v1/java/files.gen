@@ -82,4 +82,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/FeatureDescription.java
 lib/src/main/java/org/openapis/openapi/models/shared/Count.java
 lib/src/main/java/org/openapis/openapi/models/shared/Capacity.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListProductsResponse.java
+docs/sdk/README.md
+docs/accounts/README.md
 USAGE.md

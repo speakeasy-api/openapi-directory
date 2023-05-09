@@ -15,6 +15,7 @@ public class ListSecretVersionIdsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public ListSecretVersionIdsResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ListSecretVersionIdsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ListSecretVersionIdsResponse withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class ListSecretVersionIdsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSecretVersionIdsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -39,9 +42,11 @@ public class ListSecretVersionIdsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Versions")
     public SecretVersionsListEntry[] versions;
+
     public ListSecretVersionIdsResponse withVersions(SecretVersionsListEntry[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public ListSecretVersionIdsResponse(){}
 }

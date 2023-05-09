@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSet
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributionModel")
     public GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsAttributionModelEnum attributionModel;
+
     public GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettings withAttributionModel(GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsAttributionModelEnum attributionModel) {
         this.attributionModel = attributionModel;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSet
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataDrivenModelStatus")
     public GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsDataDrivenModelStatusEnum dataDrivenModelStatus;
+
     public GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettings withDataDrivenModelStatus(GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsDataDrivenModelStatusEnum dataDrivenModelStatus) {
         this.dataDrivenModelStatus = dataDrivenModelStatus;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettings(){}
 }

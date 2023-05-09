@@ -12,9 +12,13 @@ public class UpdateThemeRequestBody {
      */
     @JsonProperty("updatedTheme")
     public UpdateThemeRequestBodyUpdatedTheme updatedTheme;
+
     public UpdateThemeRequestBody withUpdatedTheme(UpdateThemeRequestBodyUpdatedTheme updatedTheme) {
         this.updatedTheme = updatedTheme;
         return this;
     }
     
+    public UpdateThemeRequestBody(@JsonProperty("updatedTheme") UpdateThemeRequestBodyUpdatedTheme updatedTheme) {
+        this.updatedTheme = updatedTheme;
+  }
 }

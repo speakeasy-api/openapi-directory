@@ -12,6 +12,7 @@ public class FindMediaRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public FindMediaRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -22,6 +23,7 @@ public class FindMediaRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public FindMediaRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -32,6 +34,7 @@ public class FindMediaRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public FindMediaRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -42,9 +45,11 @@ public class FindMediaRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public FindMediaRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public FindMediaRequest(){}
 }

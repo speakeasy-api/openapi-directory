@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteV2CustomFieldsIdJsonRequest {
@@ -12,9 +13,13 @@ public class DeleteV2CustomFieldsIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public DeleteV2CustomFieldsIdJsonRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeleteV2CustomFieldsIdJsonRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

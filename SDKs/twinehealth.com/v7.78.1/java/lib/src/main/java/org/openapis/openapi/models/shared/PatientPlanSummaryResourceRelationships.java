@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatientPlanSummaryResourceRelationships {
     @JsonProperty("actions")
     public PatientPlanSummaryResourceRelationshipsActions actions;
+
     public PatientPlanSummaryResourceRelationships withActions(PatientPlanSummaryResourceRelationshipsActions actions) {
         this.actions = actions;
         return this;
@@ -18,6 +19,7 @@ public class PatientPlanSummaryResourceRelationships {
     
     @JsonProperty("bundles")
     public PatientPlanSummaryResourceRelationshipsBundles bundles;
+
     public PatientPlanSummaryResourceRelationships withBundles(PatientPlanSummaryResourceRelationshipsBundles bundles) {
         this.bundles = bundles;
         return this;
@@ -26,6 +28,7 @@ public class PatientPlanSummaryResourceRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_results")
     public PatientPlanSummaryResourceRelationshipsCurrentResults currentResults;
+
     public PatientPlanSummaryResourceRelationships withCurrentResults(PatientPlanSummaryResourceRelationshipsCurrentResults currentResults) {
         this.currentResults = currentResults;
         return this;
@@ -33,9 +36,15 @@ public class PatientPlanSummaryResourceRelationships {
     
     @JsonProperty("patient")
     public PatientPlanSummaryResourceRelationshipsPatient patient;
+
     public PatientPlanSummaryResourceRelationships withPatient(PatientPlanSummaryResourceRelationshipsPatient patient) {
         this.patient = patient;
         return this;
     }
     
+    public PatientPlanSummaryResourceRelationships(@JsonProperty("actions") PatientPlanSummaryResourceRelationshipsActions actions, @JsonProperty("bundles") PatientPlanSummaryResourceRelationshipsBundles bundles, @JsonProperty("patient") PatientPlanSummaryResourceRelationshipsPatient patient) {
+        this.actions = actions;
+        this.bundles = bundles;
+        this.patient = patient;
+  }
 }

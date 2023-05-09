@@ -18,9 +18,11 @@ public class OAuthSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loginHint")
     public String loginHint;
+
     public OAuthSettings withLoginHint(String loginHint) {
         this.loginHint = loginHint;
         return this;
     }
     
+    public OAuthSettings(){}
 }

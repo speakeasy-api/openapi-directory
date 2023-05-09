@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetemailinfoRequest;
 import org.openapis.openapi.models.operations.GetemailinfoResponse;
 
@@ -13,18 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetemailinfoRequest req = new GetemailinfoRequest() {{
-                email = "Larue_Rau85@yahoo.com";
-                license = "corrupti";
-            }}            
+            GetemailinfoRequest req = new GetemailinfoRequest("corrupti", "provident");            
 
             GetemailinfoResponse res = sdk.emailAddressInformation.getemailinfo(req);
 
-            if (res.getemailinfo200ApplicationJSONObject.isPresent()) {
+            if (res.getemailinfo200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -18,6 +18,7 @@ public class DeviceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device_id")
     public String deviceId;
+
     public DeviceDetails withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -29,6 +30,7 @@ public class DeviceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device_installation_id")
     public String deviceInstallationId;
+
     public DeviceDetails withDeviceInstallationId(String deviceInstallationId) {
         this.deviceInstallationId = deviceInstallationId;
         return this;
@@ -40,9 +42,11 @@ public class DeviceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device_name")
     public String deviceName;
+
     public DeviceDetails withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
     }
     
+    public DeviceDetails(){}
 }

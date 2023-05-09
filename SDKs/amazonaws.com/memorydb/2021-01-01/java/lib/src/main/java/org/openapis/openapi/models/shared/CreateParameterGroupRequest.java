@@ -12,6 +12,7 @@ public class CreateParameterGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateParameterGroupRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class CreateParameterGroupRequest {
     
     @JsonProperty("Family")
     public String family;
+
     public CreateParameterGroupRequest withFamily(String family) {
         this.family = family;
         return this;
@@ -26,6 +28,7 @@ public class CreateParameterGroupRequest {
     
     @JsonProperty("ParameterGroupName")
     public String parameterGroupName;
+
     public CreateParameterGroupRequest withParameterGroupName(String parameterGroupName) {
         this.parameterGroupName = parameterGroupName;
         return this;
@@ -34,9 +37,14 @@ public class CreateParameterGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateParameterGroupRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateParameterGroupRequest(@JsonProperty("Family") String family, @JsonProperty("ParameterGroupName") String parameterGroupName) {
+        this.family = family;
+        this.parameterGroupName = parameterGroupName;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateDistributionRequest {
     @JsonProperty("bundleId")
     public String bundleId;
+
     public CreateDistributionRequest withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -19,6 +20,7 @@ public class CreateDistributionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheBehaviorSettings")
     public CacheSettings cacheBehaviorSettings;
+
     public CreateDistributionRequest withCacheBehaviorSettings(CacheSettings cacheBehaviorSettings) {
         this.cacheBehaviorSettings = cacheBehaviorSettings;
         return this;
@@ -27,6 +29,7 @@ public class CreateDistributionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheBehaviors")
     public CacheBehaviorPerPath[] cacheBehaviors;
+
     public CreateDistributionRequest withCacheBehaviors(CacheBehaviorPerPath[] cacheBehaviors) {
         this.cacheBehaviors = cacheBehaviors;
         return this;
@@ -34,6 +37,7 @@ public class CreateDistributionRequest {
     
     @JsonProperty("defaultCacheBehavior")
     public CacheBehavior defaultCacheBehavior;
+
     public CreateDistributionRequest withDefaultCacheBehavior(CacheBehavior defaultCacheBehavior) {
         this.defaultCacheBehavior = defaultCacheBehavior;
         return this;
@@ -41,6 +45,7 @@ public class CreateDistributionRequest {
     
     @JsonProperty("distributionName")
     public String distributionName;
+
     public CreateDistributionRequest withDistributionName(String distributionName) {
         this.distributionName = distributionName;
         return this;
@@ -49,6 +54,7 @@ public class CreateDistributionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddressType")
     public IpAddressTypeEnum ipAddressType;
+
     public CreateDistributionRequest withIpAddressType(IpAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -56,6 +62,7 @@ public class CreateDistributionRequest {
     
     @JsonProperty("origin")
     public InputOrigin origin;
+
     public CreateDistributionRequest withOrigin(InputOrigin origin) {
         this.origin = origin;
         return this;
@@ -64,9 +71,16 @@ public class CreateDistributionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateDistributionRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDistributionRequest(@JsonProperty("bundleId") String bundleId, @JsonProperty("defaultCacheBehavior") CacheBehavior defaultCacheBehavior, @JsonProperty("distributionName") String distributionName, @JsonProperty("origin") InputOrigin origin) {
+        this.bundleId = bundleId;
+        this.defaultCacheBehavior = defaultCacheBehavior;
+        this.distributionName = distributionName;
+        this.origin = origin;
+  }
 }

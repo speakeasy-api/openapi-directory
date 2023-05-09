@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CodePushAcquisitionGetAcquisitionStatusResponse {
     
     public String contentType;
+
     public CodePushAcquisitionGetAcquisitionStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CodePushAcquisitionGetAcquisitionStatusResponse {
     
     
     public Integer statusCode;
+
     public CodePushAcquisitionGetAcquisitionStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CodePushAcquisitionGetAcquisitionStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CodePushAcquisitionGetAcquisitionStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CodePushAcquisitionGetAcquisitionStatusResponse {
      */
     
     public CodePushAcquisitionGetAcquisitionStatus200ApplicationJSON codePushAcquisitionGetAcquisitionStatus200ApplicationJSONObject;
+
     public CodePushAcquisitionGetAcquisitionStatusResponse withCodePushAcquisitionGetAcquisitionStatus200ApplicationJSONObject(CodePushAcquisitionGetAcquisitionStatus200ApplicationJSON codePushAcquisitionGetAcquisitionStatus200ApplicationJSONObject) {
         this.codePushAcquisitionGetAcquisitionStatus200ApplicationJSONObject = codePushAcquisitionGetAcquisitionStatus200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class CodePushAcquisitionGetAcquisitionStatusResponse {
      */
     
     public CodePushAcquisitionGetAcquisitionStatusDefaultApplicationJSON codePushAcquisitionGetAcquisitionStatusDefaultApplicationJSONObject;
+
     public CodePushAcquisitionGetAcquisitionStatusResponse withCodePushAcquisitionGetAcquisitionStatusDefaultApplicationJSONObject(CodePushAcquisitionGetAcquisitionStatusDefaultApplicationJSON codePushAcquisitionGetAcquisitionStatusDefaultApplicationJSONObject) {
         this.codePushAcquisitionGetAcquisitionStatusDefaultApplicationJSONObject = codePushAcquisitionGetAcquisitionStatusDefaultApplicationJSONObject;
         return this;
     }
     
+    public CodePushAcquisitionGetAcquisitionStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetTransitGatewayRouteTableAssociationsResultAssociations {
     
     public String resourceId;
+
     public GetTransitGatewayRouteTableAssociationsResultAssociations withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -19,6 +20,7 @@ public class GetTransitGatewayRouteTableAssociationsResultAssociations {
     
     
     public GetTransitGatewayRouteTableAssociationsResultAssociationsResourceTypeEnum resourceType;
+
     public GetTransitGatewayRouteTableAssociationsResultAssociations withResourceType(GetTransitGatewayRouteTableAssociationsResultAssociationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -26,6 +28,7 @@ public class GetTransitGatewayRouteTableAssociationsResultAssociations {
     
     
     public GetTransitGatewayRouteTableAssociationsResultAssociationsStateEnum state;
+
     public GetTransitGatewayRouteTableAssociationsResultAssociations withState(GetTransitGatewayRouteTableAssociationsResultAssociationsStateEnum state) {
         this.state = state;
         return this;
@@ -33,9 +36,11 @@ public class GetTransitGatewayRouteTableAssociationsResultAssociations {
     
     
     public String transitGatewayAttachmentId;
+
     public GetTransitGatewayRouteTableAssociationsResultAssociations withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
     }
     
+    public GetTransitGatewayRouteTableAssociationsResultAssociations(){}
 }

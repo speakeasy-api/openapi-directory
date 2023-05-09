@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeIpamResourceDiscoveryAssociationsRequestFilters {
     
     public String name;
+
     public DescribeIpamResourceDiscoveryAssociationsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeIpamResourceDiscoveryAssociationsRequestFilters {
     
     
     public String[] values;
+
     public DescribeIpamResourceDiscoveryAssociationsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeIpamResourceDiscoveryAssociationsRequestFilters(){}
 }

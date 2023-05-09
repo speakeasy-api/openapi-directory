@@ -15,6 +15,7 @@ public class OrderSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clk")
     public String clk;
+
     public OrderSubscriptionMessage withClk(String clk) {
         this.clk = clk;
         return this;
@@ -26,6 +27,7 @@ public class OrderSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflateMs")
     public Long conflateMs;
+
     public OrderSubscriptionMessage withConflateMs(Long conflateMs) {
         this.conflateMs = conflateMs;
         return this;
@@ -37,6 +39,7 @@ public class OrderSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heartbeatMs")
     public Long heartbeatMs;
+
     public OrderSubscriptionMessage withHeartbeatMs(Long heartbeatMs) {
         this.heartbeatMs = heartbeatMs;
         return this;
@@ -48,6 +51,7 @@ public class OrderSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public OrderSubscriptionMessage withId(Integer id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class OrderSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialClk")
     public String initialClk;
+
     public OrderSubscriptionMessage withInitialClk(String initialClk) {
         this.initialClk = initialClk;
         return this;
@@ -70,6 +75,7 @@ public class OrderSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("op")
     public String op;
+
     public OrderSubscriptionMessage withOp(String op) {
         this.op = op;
         return this;
@@ -78,6 +84,7 @@ public class OrderSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderFilter")
     public OrderFilter orderFilter;
+
     public OrderSubscriptionMessage withOrderFilter(OrderFilter orderFilter) {
         this.orderFilter = orderFilter;
         return this;
@@ -89,9 +96,11 @@ public class OrderSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentationEnabled")
     public Boolean segmentationEnabled;
+
     public OrderSubscriptionMessage withSegmentationEnabled(Boolean segmentationEnabled) {
         this.segmentationEnabled = segmentationEnabled;
         return this;
     }
     
+    public OrderSubscriptionMessage(){}
 }

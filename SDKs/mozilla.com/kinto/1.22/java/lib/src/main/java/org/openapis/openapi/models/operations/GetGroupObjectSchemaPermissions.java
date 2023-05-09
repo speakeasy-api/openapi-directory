@@ -12,6 +12,7 @@ public class GetGroupObjectSchemaPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("read")
     public String[] read;
+
     public GetGroupObjectSchemaPermissions withRead(String[] read) {
         this.read = read;
         return this;
@@ -20,9 +21,11 @@ public class GetGroupObjectSchemaPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("write")
     public String[] write;
+
     public GetGroupObjectSchemaPermissions withWrite(String[] write) {
         this.write = write;
         return this;
     }
     
+    public GetGroupObjectSchemaPermissions(){}
 }

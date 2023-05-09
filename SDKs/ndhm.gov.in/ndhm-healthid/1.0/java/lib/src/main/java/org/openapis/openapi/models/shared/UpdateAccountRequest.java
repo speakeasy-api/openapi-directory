@@ -15,6 +15,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public UpdateAccountRequest withAddress(String address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfBirth")
     public String dayOfBirth;
+
     public UpdateAccountRequest withDayOfBirth(String dayOfBirth) {
         this.dayOfBirth = dayOfBirth;
         return this;
@@ -31,6 +33,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("districtCode")
     public String districtCode;
+
     public UpdateAccountRequest withDistrictCode(String districtCode) {
         this.districtCode = districtCode;
         return this;
@@ -39,6 +42,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UpdateAccountRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -47,6 +51,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public UpdateAccountRequest withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -55,6 +60,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthId")
     public String healthId;
+
     public UpdateAccountRequest withHealthId(String healthId) {
         this.healthId = healthId;
         return this;
@@ -63,6 +69,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public UpdateAccountRequest withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -71,6 +78,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("middleName")
     public String middleName;
+
     public UpdateAccountRequest withMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
@@ -79,6 +87,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monthOfBirth")
     public String monthOfBirth;
+
     public UpdateAccountRequest withMonthOfBirth(String monthOfBirth) {
         this.monthOfBirth = monthOfBirth;
         return this;
@@ -87,6 +96,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public UpdateAccountRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -95,6 +105,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pincode")
     public Integer pincode;
+
     public UpdateAccountRequest withPincode(Integer pincode) {
         this.pincode = pincode;
         return this;
@@ -103,6 +114,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profilePhoto")
     public String profilePhoto;
+
     public UpdateAccountRequest withProfilePhoto(String profilePhoto) {
         this.profilePhoto = profilePhoto;
         return this;
@@ -111,6 +123,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateCode")
     public String stateCode;
+
     public UpdateAccountRequest withStateCode(String stateCode) {
         this.stateCode = stateCode;
         return this;
@@ -119,6 +132,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subdistrictCode")
     public String subdistrictCode;
+
     public UpdateAccountRequest withSubdistrictCode(String subdistrictCode) {
         this.subdistrictCode = subdistrictCode;
         return this;
@@ -127,6 +141,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("townCode")
     public String townCode;
+
     public UpdateAccountRequest withTownCode(String townCode) {
         this.townCode = townCode;
         return this;
@@ -135,6 +150,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("villageCode")
     public String villageCode;
+
     public UpdateAccountRequest withVillageCode(String villageCode) {
         this.villageCode = villageCode;
         return this;
@@ -143,6 +159,7 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wardCode")
     public String wardCode;
+
     public UpdateAccountRequest withWardCode(String wardCode) {
         this.wardCode = wardCode;
         return this;
@@ -151,9 +168,11 @@ public class UpdateAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yearOfBirth")
     public String yearOfBirth;
+
     public UpdateAccountRequest withYearOfBirth(String yearOfBirth) {
         this.yearOfBirth = yearOfBirth;
         return this;
     }
     
+    public UpdateAccountRequest(){}
 }

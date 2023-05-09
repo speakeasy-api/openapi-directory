@@ -23,6 +23,7 @@ public class DescribeAuditSuppressionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkName")
     public String checkName;
+
     public DescribeAuditSuppressionResponse withCheckName(String checkName) {
         this.checkName = checkName;
         return this;
@@ -31,6 +32,7 @@ public class DescribeAuditSuppressionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DescribeAuditSuppressionResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -41,6 +43,7 @@ public class DescribeAuditSuppressionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expirationDate")
     public OffsetDateTime expirationDate;
+
     public DescribeAuditSuppressionResponse withExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -52,6 +55,7 @@ public class DescribeAuditSuppressionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceIdentifier")
     public ResourceIdentifier resourceIdentifier;
+
     public DescribeAuditSuppressionResponse withResourceIdentifier(ResourceIdentifier resourceIdentifier) {
         this.resourceIdentifier = resourceIdentifier;
         return this;
@@ -60,9 +64,11 @@ public class DescribeAuditSuppressionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suppressIndefinitely")
     public Boolean suppressIndefinitely;
+
     public DescribeAuditSuppressionResponse withSuppressIndefinitely(Boolean suppressIndefinitely) {
         this.suppressIndefinitely = suppressIndefinitely;
         return this;
     }
     
+    public DescribeAuditSuppressionResponse(){}
 }

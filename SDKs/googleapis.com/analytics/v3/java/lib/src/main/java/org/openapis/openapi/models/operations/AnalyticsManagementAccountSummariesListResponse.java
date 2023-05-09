@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsManagementAccountSummariesListResponse {
@@ -12,6 +13,7 @@ public class AnalyticsManagementAccountSummariesListResponse {
      */
     
     public org.openapis.openapi.models.shared.AccountSummaries accountSummaries;
+
     public AnalyticsManagementAccountSummariesListResponse withAccountSummaries(org.openapis.openapi.models.shared.AccountSummaries accountSummaries) {
         this.accountSummaries = accountSummaries;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsManagementAccountSummariesListResponse {
     
     
     public String contentType;
+
     public AnalyticsManagementAccountSummariesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsManagementAccountSummariesListResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsManagementAccountSummariesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsManagementAccountSummariesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsManagementAccountSummariesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsManagementAccountSummariesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

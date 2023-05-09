@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeImagesResultImages {
     
     public DescribeImagesResultImagesArchitectureEnum architecture;
+
     public DescribeImagesResultImages withArchitecture(DescribeImagesResultImagesArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -19,6 +20,7 @@ public class DescribeImagesResultImages {
     
     
     public DescribeImagesResultImagesBlockDeviceMappings[] blockDeviceMappings;
+
     public DescribeImagesResultImages withBlockDeviceMappings(DescribeImagesResultImagesBlockDeviceMappings[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -26,6 +28,7 @@ public class DescribeImagesResultImages {
     
     
     public DescribeImagesResultImagesBootModeEnum bootMode;
+
     public DescribeImagesResultImages withBootMode(DescribeImagesResultImagesBootModeEnum bootMode) {
         this.bootMode = bootMode;
         return this;
@@ -33,6 +36,7 @@ public class DescribeImagesResultImages {
     
     
     public String creationDate;
+
     public DescribeImagesResultImages withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -40,6 +44,7 @@ public class DescribeImagesResultImages {
     
     
     public String deprecationTime;
+
     public DescribeImagesResultImages withDeprecationTime(String deprecationTime) {
         this.deprecationTime = deprecationTime;
         return this;
@@ -47,6 +52,7 @@ public class DescribeImagesResultImages {
     
     
     public String description;
+
     public DescribeImagesResultImages withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +60,7 @@ public class DescribeImagesResultImages {
     
     
     public Boolean enaSupport;
+
     public DescribeImagesResultImages withEnaSupport(Boolean enaSupport) {
         this.enaSupport = enaSupport;
         return this;
@@ -61,6 +68,7 @@ public class DescribeImagesResultImages {
     
     
     public DescribeImagesResultImagesHypervisorEnum hypervisor;
+
     public DescribeImagesResultImages withHypervisor(DescribeImagesResultImagesHypervisorEnum hypervisor) {
         this.hypervisor = hypervisor;
         return this;
@@ -68,6 +76,7 @@ public class DescribeImagesResultImages {
     
     
     public String imageId;
+
     public DescribeImagesResultImages withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -75,6 +84,7 @@ public class DescribeImagesResultImages {
     
     
     public String imageLocation;
+
     public DescribeImagesResultImages withImageLocation(String imageLocation) {
         this.imageLocation = imageLocation;
         return this;
@@ -82,6 +92,7 @@ public class DescribeImagesResultImages {
     
     
     public String imageOwnerAlias;
+
     public DescribeImagesResultImages withImageOwnerAlias(String imageOwnerAlias) {
         this.imageOwnerAlias = imageOwnerAlias;
         return this;
@@ -89,6 +100,7 @@ public class DescribeImagesResultImages {
     
     
     public DescribeImagesResultImagesImageTypeEnum imageType;
+
     public DescribeImagesResultImages withImageType(DescribeImagesResultImagesImageTypeEnum imageType) {
         this.imageType = imageType;
         return this;
@@ -96,6 +108,7 @@ public class DescribeImagesResultImages {
     
     
     public DescribeImagesResultImagesImdsSupportEnum imdsSupport;
+
     public DescribeImagesResultImages withImdsSupport(DescribeImagesResultImagesImdsSupportEnum imdsSupport) {
         this.imdsSupport = imdsSupport;
         return this;
@@ -103,6 +116,7 @@ public class DescribeImagesResultImages {
     
     
     public String kernelId;
+
     public DescribeImagesResultImages withKernelId(String kernelId) {
         this.kernelId = kernelId;
         return this;
@@ -110,6 +124,7 @@ public class DescribeImagesResultImages {
     
     
     public String name;
+
     public DescribeImagesResultImages withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +132,7 @@ public class DescribeImagesResultImages {
     
     
     public String ownerId;
+
     public DescribeImagesResultImages withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -124,6 +140,7 @@ public class DescribeImagesResultImages {
     
     
     public DescribeImagesResultImagesPlatformEnum platform;
+
     public DescribeImagesResultImages withPlatform(DescribeImagesResultImagesPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -131,6 +148,7 @@ public class DescribeImagesResultImages {
     
     
     public String platformDetails;
+
     public DescribeImagesResultImages withPlatformDetails(String platformDetails) {
         this.platformDetails = platformDetails;
         return this;
@@ -138,6 +156,7 @@ public class DescribeImagesResultImages {
     
     
     public DescribeImagesResultImagesProductCodes[] productCodes;
+
     public DescribeImagesResultImages withProductCodes(DescribeImagesResultImagesProductCodes[] productCodes) {
         this.productCodes = productCodes;
         return this;
@@ -145,6 +164,7 @@ public class DescribeImagesResultImages {
     
     
     public Boolean public_;
+
     public DescribeImagesResultImages withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -152,6 +172,7 @@ public class DescribeImagesResultImages {
     
     
     public String ramdiskId;
+
     public DescribeImagesResultImages withRamdiskId(String ramdiskId) {
         this.ramdiskId = ramdiskId;
         return this;
@@ -159,6 +180,7 @@ public class DescribeImagesResultImages {
     
     
     public String rootDeviceName;
+
     public DescribeImagesResultImages withRootDeviceName(String rootDeviceName) {
         this.rootDeviceName = rootDeviceName;
         return this;
@@ -166,6 +188,7 @@ public class DescribeImagesResultImages {
     
     
     public DescribeImagesResultImagesRootDeviceTypeEnum rootDeviceType;
+
     public DescribeImagesResultImages withRootDeviceType(DescribeImagesResultImagesRootDeviceTypeEnum rootDeviceType) {
         this.rootDeviceType = rootDeviceType;
         return this;
@@ -173,6 +196,7 @@ public class DescribeImagesResultImages {
     
     
     public String sriovNetSupport;
+
     public DescribeImagesResultImages withSriovNetSupport(String sriovNetSupport) {
         this.sriovNetSupport = sriovNetSupport;
         return this;
@@ -180,6 +204,7 @@ public class DescribeImagesResultImages {
     
     
     public DescribeImagesResultImagesStateEnum state;
+
     public DescribeImagesResultImages withState(DescribeImagesResultImagesStateEnum state) {
         this.state = state;
         return this;
@@ -187,6 +212,7 @@ public class DescribeImagesResultImages {
     
     
     public DescribeImagesResultImagesStateReason stateReason;
+
     public DescribeImagesResultImages withStateReason(DescribeImagesResultImagesStateReason stateReason) {
         this.stateReason = stateReason;
         return this;
@@ -194,6 +220,7 @@ public class DescribeImagesResultImages {
     
     
     public DescribeImagesResultImagesTags[] tags;
+
     public DescribeImagesResultImages withTags(DescribeImagesResultImagesTags[] tags) {
         this.tags = tags;
         return this;
@@ -201,6 +228,7 @@ public class DescribeImagesResultImages {
     
     
     public DescribeImagesResultImagesTpmSupportEnum tpmSupport;
+
     public DescribeImagesResultImages withTpmSupport(DescribeImagesResultImagesTpmSupportEnum tpmSupport) {
         this.tpmSupport = tpmSupport;
         return this;
@@ -208,6 +236,7 @@ public class DescribeImagesResultImages {
     
     
     public String usageOperation;
+
     public DescribeImagesResultImages withUsageOperation(String usageOperation) {
         this.usageOperation = usageOperation;
         return this;
@@ -215,9 +244,11 @@ public class DescribeImagesResultImages {
     
     
     public DescribeImagesResultImagesVirtualizationTypeEnum virtualizationType;
+
     public DescribeImagesResultImages withVirtualizationType(DescribeImagesResultImagesVirtualizationTypeEnum virtualizationType) {
         this.virtualizationType = virtualizationType;
         return this;
     }
     
+    public DescribeImagesResultImages(){}
 }

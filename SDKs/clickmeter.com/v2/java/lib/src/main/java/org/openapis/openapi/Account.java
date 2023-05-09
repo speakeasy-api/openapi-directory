@@ -52,14 +52,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountDeleteDomainWhitelistResponse res = new org.openapis.openapi.models.operations.AccountDeleteDomainWhitelistResponse() {{
+        org.openapis.openapi.models.operations.AccountDeleteDomainWhitelistResponse res = new org.openapis.openapi.models.operations.AccountDeleteDomainWhitelistResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingDomainWhitelistEntry = null;
             apiCoreDtoAccountingDomainWhitelistEntry = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,14 +107,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountDeleteGuestResponse res = new org.openapis.openapi.models.operations.AccountDeleteGuestResponse() {{
+        org.openapis.openapi.models.operations.AccountDeleteGuestResponse res = new org.openapis.openapi.models.operations.AccountDeleteGuestResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -166,14 +162,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountDeleteIpBlacklistResponse res = new org.openapis.openapi.models.operations.AccountDeleteIpBlacklistResponse() {{
+        org.openapis.openapi.models.operations.AccountDeleteIpBlacklistResponse res = new org.openapis.openapi.models.operations.AccountDeleteIpBlacklistResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingIpBlacklistEntry = null;
             apiCoreDtoAccountingIpBlacklistEntry = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -222,14 +216,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountGetResponse res = new org.openapis.openapi.models.operations.AccountGetResponse() {{
+        org.openapis.openapi.models.operations.AccountGetResponse res = new org.openapis.openapi.models.operations.AccountGetResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingUser = null;
             apiCoreDtoAccountingUser = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -285,12 +277,10 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountGetDomainWhitelistResponse res = new org.openapis.openapi.models.operations.AccountGetDomainWhitelistResponse() {{
+        org.openapis.openapi.models.operations.AccountGetDomainWhitelistResponse res = new org.openapis.openapi.models.operations.AccountGetDomainWhitelistResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntitiesResponseApiCoreDtoAccountingDomainWhitelistEntry = null;
             apiCoreResponsesEntitiesResponseApiCoreDtoAccountingDomainWhitelistEntry = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -332,14 +322,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountGetGuestResponse res = new org.openapis.openapi.models.operations.AccountGetGuestResponse() {{
+        org.openapis.openapi.models.operations.AccountGetGuestResponse res = new org.openapis.openapi.models.operations.AccountGetGuestResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingGuest = null;
             apiCoreDtoAccountingGuest = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -395,12 +383,10 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountGetGuestsResponse res = new org.openapis.openapi.models.operations.AccountGetGuestsResponse() {{
+        org.openapis.openapi.models.operations.AccountGetGuestsResponse res = new org.openapis.openapi.models.operations.AccountGetGuestsResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntitiesResponseApiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntitiesResponseApiCoreResponsesEntityUriSystemInt64 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -448,14 +434,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountGetGuestsCountResponse res = new org.openapis.openapi.models.operations.AccountGetGuestsCountResponse() {{
+        org.openapis.openapi.models.operations.AccountGetGuestsCountResponse res = new org.openapis.openapi.models.operations.AccountGetGuestsCountResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesCountResponce = null;
             apiCoreResponsesCountResponce = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -511,12 +495,10 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountGetIpBlacklistResponse res = new org.openapis.openapi.models.operations.AccountGetIpBlacklistResponse() {{
+        org.openapis.openapi.models.operations.AccountGetIpBlacklistResponse res = new org.openapis.openapi.models.operations.AccountGetIpBlacklistResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntitiesResponseApiCoreDtoAccountingIpBlacklistEntry = null;
             apiCoreResponsesEntitiesResponseApiCoreDtoAccountingIpBlacklistEntry = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -564,12 +546,10 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountGetPermissionsResponse res = new org.openapis.openapi.models.operations.AccountGetPermissionsResponse() {{
+        org.openapis.openapi.models.operations.AccountGetPermissionsResponse res = new org.openapis.openapi.models.operations.AccountGetPermissionsResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntitiesResponseApiCoreDtoGrantsGrant = null;
             apiCoreResponsesEntitiesResponseApiCoreDtoGrantsGrant = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -617,14 +597,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountGetPermissionsCountResponse res = new org.openapis.openapi.models.operations.AccountGetPermissionsCountResponse() {{
+        org.openapis.openapi.models.operations.AccountGetPermissionsCountResponse res = new org.openapis.openapi.models.operations.AccountGetPermissionsCountResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesCountResponce = null;
             apiCoreResponsesCountResponce = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -673,14 +651,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountGetPlanResponse res = new org.openapis.openapi.models.operations.AccountGetPlanResponse() {{
+        org.openapis.openapi.models.operations.AccountGetPlanResponse res = new org.openapis.openapi.models.operations.AccountGetPlanResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingPlan = null;
             apiCoreDtoAccountingPlan = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -735,14 +711,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountPatchPermissionsFormResponse res = new org.openapis.openapi.models.operations.AccountPatchPermissionsFormResponse() {{
+        org.openapis.openapi.models.operations.AccountPatchPermissionsFormResponse res = new org.openapis.openapi.models.operations.AccountPatchPermissionsFormResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -797,14 +771,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountPatchPermissionsJsonResponse res = new org.openapis.openapi.models.operations.AccountPatchPermissionsJsonResponse() {{
+        org.openapis.openapi.models.operations.AccountPatchPermissionsJsonResponse res = new org.openapis.openapi.models.operations.AccountPatchPermissionsJsonResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -859,14 +831,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountPatchPermissionsRawResponse res = new org.openapis.openapi.models.operations.AccountPatchPermissionsRawResponse() {{
+        org.openapis.openapi.models.operations.AccountPatchPermissionsRawResponse res = new org.openapis.openapi.models.operations.AccountPatchPermissionsRawResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -921,14 +891,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountPostGuestFormResponse res = new org.openapis.openapi.models.operations.AccountPostGuestFormResponse() {{
+        org.openapis.openapi.models.operations.AccountPostGuestFormResponse res = new org.openapis.openapi.models.operations.AccountPostGuestFormResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingGuest = null;
             apiCoreDtoAccountingGuest = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -983,14 +951,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountPostGuestJsonResponse res = new org.openapis.openapi.models.operations.AccountPostGuestJsonResponse() {{
+        org.openapis.openapi.models.operations.AccountPostGuestJsonResponse res = new org.openapis.openapi.models.operations.AccountPostGuestJsonResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingGuest = null;
             apiCoreDtoAccountingGuest = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1045,14 +1011,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountPostGuestRawResponse res = new org.openapis.openapi.models.operations.AccountPostGuestRawResponse() {{
+        org.openapis.openapi.models.operations.AccountPostGuestRawResponse res = new org.openapis.openapi.models.operations.AccountPostGuestRawResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingGuest = null;
             apiCoreDtoAccountingGuest = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1107,14 +1071,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountPostFormResponse res = new org.openapis.openapi.models.operations.AccountPostFormResponse() {{
+        org.openapis.openapi.models.operations.AccountPostFormResponse res = new org.openapis.openapi.models.operations.AccountPostFormResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingUser = null;
             apiCoreDtoAccountingUser = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1169,14 +1131,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountPostJsonResponse res = new org.openapis.openapi.models.operations.AccountPostJsonResponse() {{
+        org.openapis.openapi.models.operations.AccountPostJsonResponse res = new org.openapis.openapi.models.operations.AccountPostJsonResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingUser = null;
             apiCoreDtoAccountingUser = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1231,14 +1191,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountPostRawResponse res = new org.openapis.openapi.models.operations.AccountPostRawResponse() {{
+        org.openapis.openapi.models.operations.AccountPostRawResponse res = new org.openapis.openapi.models.operations.AccountPostRawResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingUser = null;
             apiCoreDtoAccountingUser = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1293,14 +1251,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountPutDomainWhitelistFormResponse res = new org.openapis.openapi.models.operations.AccountPutDomainWhitelistFormResponse() {{
+        org.openapis.openapi.models.operations.AccountPutDomainWhitelistFormResponse res = new org.openapis.openapi.models.operations.AccountPutDomainWhitelistFormResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingDomainWhitelistEntry = null;
             apiCoreDtoAccountingDomainWhitelistEntry = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1355,14 +1311,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountPutDomainWhitelistJsonResponse res = new org.openapis.openapi.models.operations.AccountPutDomainWhitelistJsonResponse() {{
+        org.openapis.openapi.models.operations.AccountPutDomainWhitelistJsonResponse res = new org.openapis.openapi.models.operations.AccountPutDomainWhitelistJsonResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingDomainWhitelistEntry = null;
             apiCoreDtoAccountingDomainWhitelistEntry = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1417,14 +1371,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountPutDomainWhitelistRawResponse res = new org.openapis.openapi.models.operations.AccountPutDomainWhitelistRawResponse() {{
+        org.openapis.openapi.models.operations.AccountPutDomainWhitelistRawResponse res = new org.openapis.openapi.models.operations.AccountPutDomainWhitelistRawResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingDomainWhitelistEntry = null;
             apiCoreDtoAccountingDomainWhitelistEntry = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1479,14 +1431,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountPutGuestFormResponse res = new org.openapis.openapi.models.operations.AccountPutGuestFormResponse() {{
+        org.openapis.openapi.models.operations.AccountPutGuestFormResponse res = new org.openapis.openapi.models.operations.AccountPutGuestFormResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingGuest = null;
             apiCoreDtoAccountingGuest = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1541,14 +1491,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountPutGuestJsonResponse res = new org.openapis.openapi.models.operations.AccountPutGuestJsonResponse() {{
+        org.openapis.openapi.models.operations.AccountPutGuestJsonResponse res = new org.openapis.openapi.models.operations.AccountPutGuestJsonResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingGuest = null;
             apiCoreDtoAccountingGuest = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1603,14 +1551,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountPutGuestRawResponse res = new org.openapis.openapi.models.operations.AccountPutGuestRawResponse() {{
+        org.openapis.openapi.models.operations.AccountPutGuestRawResponse res = new org.openapis.openapi.models.operations.AccountPutGuestRawResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingGuest = null;
             apiCoreDtoAccountingGuest = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1665,14 +1611,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountPutIpBlacklistFormResponse res = new org.openapis.openapi.models.operations.AccountPutIpBlacklistFormResponse() {{
+        org.openapis.openapi.models.operations.AccountPutIpBlacklistFormResponse res = new org.openapis.openapi.models.operations.AccountPutIpBlacklistFormResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingIpBlacklistEntry = null;
             apiCoreDtoAccountingIpBlacklistEntry = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1727,14 +1671,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountPutIpBlacklistJsonResponse res = new org.openapis.openapi.models.operations.AccountPutIpBlacklistJsonResponse() {{
+        org.openapis.openapi.models.operations.AccountPutIpBlacklistJsonResponse res = new org.openapis.openapi.models.operations.AccountPutIpBlacklistJsonResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingIpBlacklistEntry = null;
             apiCoreDtoAccountingIpBlacklistEntry = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1789,14 +1731,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountPutIpBlacklistRawResponse res = new org.openapis.openapi.models.operations.AccountPutIpBlacklistRawResponse() {{
+        org.openapis.openapi.models.operations.AccountPutIpBlacklistRawResponse res = new org.openapis.openapi.models.operations.AccountPutIpBlacklistRawResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoAccountingIpBlacklistEntry = null;
             apiCoreDtoAccountingIpBlacklistEntry = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1851,14 +1791,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchFormResponse res = new org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchFormResponse() {{
+        org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchFormResponse res = new org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchFormResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1913,14 +1851,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchJsonResponse res = new org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchJsonResponse() {{
+        org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchJsonResponse res = new org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchJsonResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1975,14 +1911,12 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchRawResponse res = new org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchRawResponse() {{
+        org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchRawResponse res = new org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchRawResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class DescribeExportConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportsInfo")
     public ExportInfo[] exportsInfo;
+
     public DescribeExportConfigurationsResponse withExportsInfo(ExportInfo[] exportsInfo) {
         this.exportsInfo = exportsInfo;
         return this;
@@ -23,9 +24,11 @@ public class DescribeExportConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeExportConfigurationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeExportConfigurationsResponse(){}
 }

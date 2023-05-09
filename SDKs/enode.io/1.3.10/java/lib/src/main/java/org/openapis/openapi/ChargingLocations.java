@@ -56,10 +56,8 @@ public class ChargingLocations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCharginglocationsCharginglocationidResponse res = new org.openapis.openapi.models.operations.DeleteCharginglocationsCharginglocationidResponse() {{
+        org.openapis.openapi.models.operations.DeleteCharginglocationsCharginglocationidResponse res = new org.openapis.openapi.models.operations.DeleteCharginglocationsCharginglocationidResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -71,10 +69,11 @@ public class ChargingLocations {
     /**
      * List Charging Locations
      * Returns a list of Charging Locations registered to the User
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCharginglocationsResponse getCharginglocations() throws Exception {
+    public org.openapis.openapi.models.operations.GetCharginglocationsResponse getCharginglocations(org.openapis.openapi.models.operations.GetCharginglocationsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/charging-locations");
         
@@ -83,16 +82,15 @@ public class ChargingLocations {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCharginglocationsResponse res = new org.openapis.openapi.models.operations.GetCharginglocationsResponse() {{
+        org.openapis.openapi.models.operations.GetCharginglocationsResponse res = new org.openapis.openapi.models.operations.GetCharginglocationsResponse(contentType, httpRes.statusCode()) {{
             onechargingLocationsPostRequestBodyContentApplication1jsonSchemas = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -128,11 +126,9 @@ public class ChargingLocations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCharginglocationsCharginglocationidResponse res = new org.openapis.openapi.models.operations.GetCharginglocationsCharginglocationidResponse() {{
+        org.openapis.openapi.models.operations.GetCharginglocationsCharginglocationidResponse res = new org.openapis.openapi.models.operations.GetCharginglocationsCharginglocationidResponse(contentType, httpRes.statusCode()) {{
             onechargingLocationsPostRequestBodyContentApplication1jsonSchema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -170,11 +166,9 @@ public class ChargingLocations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCharginglocationsResponse res = new org.openapis.openapi.models.operations.PostCharginglocationsResponse() {{
+        org.openapis.openapi.models.operations.PostCharginglocationsResponse res = new org.openapis.openapi.models.operations.PostCharginglocationsResponse(contentType, httpRes.statusCode()) {{
             onechargingLocationsPostRequestBodyContentApplication1jsonSchema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -213,11 +207,9 @@ public class ChargingLocations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutCharginglocationsCharginglocationidResponse res = new org.openapis.openapi.models.operations.PutCharginglocationsCharginglocationidResponse() {{
+        org.openapis.openapi.models.operations.PutCharginglocationsCharginglocationidResponse res = new org.openapis.openapi.models.operations.PutCharginglocationsCharginglocationidResponse(contentType, httpRes.statusCode()) {{
             onechargingLocationsPostRequestBodyContentApplication1jsonSchema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

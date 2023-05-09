@@ -59,11 +59,9 @@ public class SslPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSslPoliciesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeSslPoliciesAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeSslPoliciesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeSslPoliciesAggregatedListResponse(contentType, httpRes.statusCode()) {{
             sslPoliciesAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class SslPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSslPoliciesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeSslPoliciesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeSslPoliciesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeSslPoliciesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class SslPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSslPoliciesGetResponse res = new org.openapis.openapi.models.operations.ComputeSslPoliciesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeSslPoliciesGetResponse res = new org.openapis.openapi.models.operations.ComputeSslPoliciesGetResponse(contentType, httpRes.statusCode()) {{
             sslPolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class SslPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSslPoliciesInsertResponse res = new org.openapis.openapi.models.operations.ComputeSslPoliciesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeSslPoliciesInsertResponse res = new org.openapis.openapi.models.operations.ComputeSslPoliciesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class SslPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSslPoliciesListResponse res = new org.openapis.openapi.models.operations.ComputeSslPoliciesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeSslPoliciesListResponse res = new org.openapis.openapi.models.operations.ComputeSslPoliciesListResponse(contentType, httpRes.statusCode()) {{
             sslPoliciesList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,11 +281,9 @@ public class SslPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSslPoliciesListAvailableFeaturesResponse res = new org.openapis.openapi.models.operations.ComputeSslPoliciesListAvailableFeaturesResponse() {{
+        org.openapis.openapi.models.operations.ComputeSslPoliciesListAvailableFeaturesResponse res = new org.openapis.openapi.models.operations.ComputeSslPoliciesListAvailableFeaturesResponse(contentType, httpRes.statusCode()) {{
             sslPoliciesListAvailableFeaturesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,11 +327,9 @@ public class SslPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSslPoliciesPatchResponse res = new org.openapis.openapi.models.operations.ComputeSslPoliciesPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeSslPoliciesPatchResponse res = new org.openapis.openapi.models.operations.ComputeSslPoliciesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class Policy {
      */
     
     public String arn;
+
     public Policy withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class Policy {
     
     
     public Long attachmentCount;
+
     public Policy withAttachmentCount(Long attachmentCount) {
         this.attachmentCount = attachmentCount;
         return this;
@@ -29,6 +31,7 @@ public class Policy {
     
     
     public OffsetDateTime createDate;
+
     public Policy withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -36,6 +39,7 @@ public class Policy {
     
     
     public String defaultVersionId;
+
     public Policy withDefaultVersionId(String defaultVersionId) {
         this.defaultVersionId = defaultVersionId;
         return this;
@@ -43,6 +47,7 @@ public class Policy {
     
     
     public String description;
+
     public Policy withDescription(String description) {
         this.description = description;
         return this;
@@ -50,6 +55,7 @@ public class Policy {
     
     
     public Boolean isAttachable;
+
     public Policy withIsAttachable(Boolean isAttachable) {
         this.isAttachable = isAttachable;
         return this;
@@ -57,6 +63,7 @@ public class Policy {
     
     
     public String path;
+
     public Policy withPath(String path) {
         this.path = path;
         return this;
@@ -64,6 +71,7 @@ public class Policy {
     
     
     public Long permissionsBoundaryUsageCount;
+
     public Policy withPermissionsBoundaryUsageCount(Long permissionsBoundaryUsageCount) {
         this.permissionsBoundaryUsageCount = permissionsBoundaryUsageCount;
         return this;
@@ -71,6 +79,7 @@ public class Policy {
     
     
     public String policyId;
+
     public Policy withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
@@ -78,6 +87,7 @@ public class Policy {
     
     
     public String policyName;
+
     public Policy withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -85,6 +95,7 @@ public class Policy {
     
     
     public Tag[] tags;
+
     public Policy withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -92,9 +103,11 @@ public class Policy {
     
     
     public OffsetDateTime updateDate;
+
     public Policy withUpdateDate(OffsetDateTime updateDate) {
         this.updateDate = updateDate;
         return this;
     }
     
+    public Policy(){}
 }

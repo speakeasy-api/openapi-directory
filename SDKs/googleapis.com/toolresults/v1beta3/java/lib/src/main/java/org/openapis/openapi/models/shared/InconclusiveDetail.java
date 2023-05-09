@@ -18,6 +18,7 @@ public class InconclusiveDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abortedByUser")
     public Boolean abortedByUser;
+
     public InconclusiveDetail withAbortedByUser(Boolean abortedByUser) {
         this.abortedByUser = abortedByUser;
         return this;
@@ -29,6 +30,7 @@ public class InconclusiveDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasErrorLogs")
     public Boolean hasErrorLogs;
+
     public InconclusiveDetail withHasErrorLogs(Boolean hasErrorLogs) {
         this.hasErrorLogs = hasErrorLogs;
         return this;
@@ -40,9 +42,11 @@ public class InconclusiveDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infrastructureFailure")
     public Boolean infrastructureFailure;
+
     public InconclusiveDetail withInfrastructureFailure(Boolean infrastructureFailure) {
         this.infrastructureFailure = infrastructureFailure;
         return this;
     }
     
+    public InconclusiveDetail(){}
 }

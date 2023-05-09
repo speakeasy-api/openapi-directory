@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApplyYaraRulesRequestBody {
@@ -12,6 +13,7 @@ public class ApplyYaraRulesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public ApplyYaraRulesRequestBodyFile file;
+
     public ApplyYaraRulesRequestBody withFile(ApplyYaraRulesRequestBodyFile file) {
         this.file = file;
         return this;
@@ -19,6 +21,7 @@ public class ApplyYaraRulesRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=is_unpacking_required")
     public ApplyYaraRulesRequestBodyIsUnpackingRequiredEnum isUnpackingRequired;
+
     public ApplyYaraRulesRequestBody withIsUnpackingRequired(ApplyYaraRulesRequestBodyIsUnpackingRequiredEnum isUnpackingRequired) {
         this.isUnpackingRequired = isUnpackingRequired;
         return this;
@@ -26,9 +29,14 @@ public class ApplyYaraRulesRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=rules")
     public String[] rules;
+
     public ApplyYaraRulesRequestBody withRules(String[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public ApplyYaraRulesRequestBody(@JsonProperty("file") ApplyYaraRulesRequestBodyFile file, @JsonProperty("rules") String[] rules) {
+        this.file = file;
+        this.rules = rules;
+  }
 }

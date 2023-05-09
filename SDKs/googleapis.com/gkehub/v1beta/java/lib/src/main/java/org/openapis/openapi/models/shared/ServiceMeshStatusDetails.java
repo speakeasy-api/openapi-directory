@@ -18,6 +18,7 @@ public class ServiceMeshStatusDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public ServiceMeshStatusDetails withCode(String code) {
         this.code = code;
         return this;
@@ -29,9 +30,11 @@ public class ServiceMeshStatusDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public ServiceMeshStatusDetails withDetails(String details) {
         this.details = details;
         return this;
     }
     
+    public ServiceMeshStatusDetails(){}
 }

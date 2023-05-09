@@ -15,6 +15,7 @@ public class PutAdminMappingsStubMappingId200ApplicationJSONResponseDelayDistrib
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("median")
     public Long median;
+
     public PutAdminMappingsStubMappingId200ApplicationJSONResponseDelayDistributionLogNormal withMedian(Long median) {
         this.median = median;
         return this;
@@ -23,6 +24,7 @@ public class PutAdminMappingsStubMappingId200ApplicationJSONResponseDelayDistrib
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sigma")
     public Double sigma;
+
     public PutAdminMappingsStubMappingId200ApplicationJSONResponseDelayDistributionLogNormal withSigma(Double sigma) {
         this.sigma = sigma;
         return this;
@@ -31,9 +33,11 @@ public class PutAdminMappingsStubMappingId200ApplicationJSONResponseDelayDistrib
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PutAdminMappingsStubMappingId200ApplicationJSONResponseDelayDistributionLogNormalTypeEnum type;
+
     public PutAdminMappingsStubMappingId200ApplicationJSONResponseDelayDistributionLogNormal withType(PutAdminMappingsStubMappingId200ApplicationJSONResponseDelayDistributionLogNormalTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PutAdminMappingsStubMappingId200ApplicationJSONResponseDelayDistributionLogNormal(){}
 }

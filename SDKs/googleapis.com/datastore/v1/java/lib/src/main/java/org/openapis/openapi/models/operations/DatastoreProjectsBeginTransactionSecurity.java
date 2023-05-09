@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DatastoreProjectsBeginTransactionSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DatastoreProjectsBeginTransactionSecurityOption1 option1;
+
     public DatastoreProjectsBeginTransactionSecurity withOption1(DatastoreProjectsBeginTransactionSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class DatastoreProjectsBeginTransactionSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DatastoreProjectsBeginTransactionSecurityOption2 option2;
+
     public DatastoreProjectsBeginTransactionSecurity withOption2(DatastoreProjectsBeginTransactionSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public DatastoreProjectsBeginTransactionSecurity(){}
 }

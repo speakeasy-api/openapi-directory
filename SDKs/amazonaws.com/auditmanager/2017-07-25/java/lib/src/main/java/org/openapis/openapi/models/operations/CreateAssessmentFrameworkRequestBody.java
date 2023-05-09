@@ -15,6 +15,7 @@ public class CreateAssessmentFrameworkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceType")
     public String complianceType;
+
     public CreateAssessmentFrameworkRequestBody withComplianceType(String complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -25,6 +26,7 @@ public class CreateAssessmentFrameworkRequestBody {
      */
     @JsonProperty("controlSets")
     public org.openapis.openapi.models.shared.CreateAssessmentFrameworkControlSet[] controlSets;
+
     public CreateAssessmentFrameworkRequestBody withControlSets(org.openapis.openapi.models.shared.CreateAssessmentFrameworkControlSet[] controlSets) {
         this.controlSets = controlSets;
         return this;
@@ -36,6 +38,7 @@ public class CreateAssessmentFrameworkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateAssessmentFrameworkRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class CreateAssessmentFrameworkRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateAssessmentFrameworkRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -57,9 +61,14 @@ public class CreateAssessmentFrameworkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateAssessmentFrameworkRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAssessmentFrameworkRequestBody(@JsonProperty("controlSets") org.openapis.openapi.models.shared.CreateAssessmentFrameworkControlSet[] controlSets, @JsonProperty("name") String name) {
+        this.controlSets = controlSets;
+        this.name = name;
+  }
 }

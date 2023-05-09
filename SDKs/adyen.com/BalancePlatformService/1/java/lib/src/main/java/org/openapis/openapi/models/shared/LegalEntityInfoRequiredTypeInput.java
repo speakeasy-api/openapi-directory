@@ -16,6 +16,7 @@ public class LegalEntityInfoRequiredTypeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityAssociations")
     public LegalEntityAssociationInput[] entityAssociations;
+
     public LegalEntityInfoRequiredTypeInput withEntityAssociations(LegalEntityAssociationInput[] entityAssociations) {
         this.entityAssociations = entityAssociations;
         return this;
@@ -24,6 +25,7 @@ public class LegalEntityInfoRequiredTypeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("individual")
     public IndividualInput individual;
+
     public LegalEntityInfoRequiredTypeInput withIndividual(IndividualInput individual) {
         this.individual = individual;
         return this;
@@ -32,6 +34,7 @@ public class LegalEntityInfoRequiredTypeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public OrganizationInput organization;
+
     public LegalEntityInfoRequiredTypeInput withOrganization(OrganizationInput organization) {
         this.organization = organization;
         return this;
@@ -43,6 +46,7 @@ public class LegalEntityInfoRequiredTypeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public LegalEntityInfoRequiredTypeInput withReference(String reference) {
         this.reference = reference;
         return this;
@@ -55,9 +59,13 @@ public class LegalEntityInfoRequiredTypeInput {
      */
     @JsonProperty("type")
     public LegalEntityInfoRequiredTypeTypeEnum type;
+
     public LegalEntityInfoRequiredTypeInput withType(LegalEntityInfoRequiredTypeTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public LegalEntityInfoRequiredTypeInput(@JsonProperty("type") LegalEntityInfoRequiredTypeTypeEnum type) {
+        this.type = type;
+  }
 }

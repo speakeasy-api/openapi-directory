@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TfrByRouteUsV1RestrictionsRouteQueryPostResponse {
     
     public String contentType;
+
     public TfrByRouteUsV1RestrictionsRouteQueryPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TfrByRouteUsV1RestrictionsRouteQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public TfrByRouteUsV1RestrictionsRouteQueryPostResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -29,6 +32,7 @@ public class TfrByRouteUsV1RestrictionsRouteQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.NOTAMsRouteResponse notaMsRouteResponse;
+
     public TfrByRouteUsV1RestrictionsRouteQueryPostResponse withNOTAMsRouteResponse(org.openapis.openapi.models.shared.NOTAMsRouteResponse notaMsRouteResponse) {
         this.notaMsRouteResponse = notaMsRouteResponse;
         return this;
@@ -36,6 +40,7 @@ public class TfrByRouteUsV1RestrictionsRouteQueryPostResponse {
     
     
     public Integer statusCode;
+
     public TfrByRouteUsV1RestrictionsRouteQueryPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class TfrByRouteUsV1RestrictionsRouteQueryPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TfrByRouteUsV1RestrictionsRouteQueryPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TfrByRouteUsV1RestrictionsRouteQueryPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

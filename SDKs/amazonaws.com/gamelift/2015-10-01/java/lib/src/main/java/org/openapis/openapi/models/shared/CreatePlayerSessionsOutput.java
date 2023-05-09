@@ -15,9 +15,11 @@ public class CreatePlayerSessionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerSessions")
     public PlayerSession[] playerSessions;
+
     public CreatePlayerSessionsOutput withPlayerSessions(PlayerSession[] playerSessions) {
         this.playerSessions = playerSessions;
         return this;
     }
     
+    public CreatePlayerSessionsOutput(){}
 }

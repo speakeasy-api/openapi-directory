@@ -12,6 +12,7 @@ public class AppsListWebhookDeliveriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public AppsListWebhookDeliveriesRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +23,7 @@ public class AppsListWebhookDeliveriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public AppsListWebhookDeliveriesRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -29,9 +31,11 @@ public class AppsListWebhookDeliveriesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redelivery")
     public Boolean redelivery;
+
     public AppsListWebhookDeliveriesRequest withRedelivery(Boolean redelivery) {
         this.redelivery = redelivery;
         return this;
     }
     
+    public AppsListWebhookDeliveriesRequest(){}
 }

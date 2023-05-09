@@ -18,6 +18,7 @@ public class TextPropertyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorOptions")
     public TextOperatorOptions operatorOptions;
+
     public TextPropertyOptions withOperatorOptions(TextOperatorOptions operatorOptions) {
         this.operatorOptions = operatorOptions;
         return this;
@@ -26,9 +27,11 @@ public class TextPropertyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retrievalImportance")
     public RetrievalImportance retrievalImportance;
+
     public TextPropertyOptions withRetrievalImportance(RetrievalImportance retrievalImportance) {
         this.retrievalImportance = retrievalImportance;
         return this;
     }
     
+    public TextPropertyOptions(){}
 }

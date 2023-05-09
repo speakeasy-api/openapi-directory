@@ -16,6 +16,7 @@ public class StartDates {
      */
     
     public Boolean dateTBA;
+
     public StartDates withDateTBA(Boolean dateTBA) {
         this.dateTBA = dateTBA;
         return this;
@@ -26,6 +27,7 @@ public class StartDates {
      */
     
     public Boolean dateTBD;
+
     public StartDates withDateTBD(Boolean dateTBD) {
         this.dateTBD = dateTBD;
         return this;
@@ -36,6 +38,7 @@ public class StartDates {
      */
     
     public OffsetDateTime dateTime;
+
     public StartDates withDateTime(OffsetDateTime dateTime) {
         this.dateTime = dateTime;
         return this;
@@ -46,6 +49,7 @@ public class StartDates {
      */
     
     public LocalDate localDate;
+
     public StartDates withLocalDate(LocalDate localDate) {
         this.localDate = localDate;
         return this;
@@ -53,6 +57,7 @@ public class StartDates {
     
     
     public LocalTime localTime;
+
     public StartDates withLocalTime(LocalTime localTime) {
         this.localTime = localTime;
         return this;
@@ -63,6 +68,7 @@ public class StartDates {
      */
     
     public Boolean noSpecificTime;
+
     public StartDates withNoSpecificTime(Boolean noSpecificTime) {
         this.noSpecificTime = noSpecificTime;
         return this;
@@ -73,9 +79,11 @@ public class StartDates {
      */
     
     public Boolean timeTBA;
+
     public StartDates withTimeTBA(Boolean timeTBA) {
         this.timeTBA = timeTBA;
         return this;
     }
     
+    public StartDates(){}
 }

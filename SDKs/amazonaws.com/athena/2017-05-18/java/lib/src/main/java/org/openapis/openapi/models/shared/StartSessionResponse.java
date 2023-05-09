@@ -15,6 +15,7 @@ public class StartSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionId")
     public String sessionId;
+
     public StartSessionResponse withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -23,9 +24,11 @@ public class StartSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public SessionStateEnum state;
+
     public StartSessionResponse withState(SessionStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public StartSessionResponse(){}
 }

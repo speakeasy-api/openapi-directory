@@ -18,9 +18,11 @@ public class CreateNamedRangeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedRangeId")
     public String namedRangeId;
+
     public CreateNamedRangeResponse withNamedRangeId(String namedRangeId) {
         this.namedRangeId = namedRangeId;
         return this;
     }
     
+    public CreateNamedRangeResponse(){}
 }

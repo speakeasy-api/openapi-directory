@@ -59,11 +59,9 @@ public class Bioentityset {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEntitySetAssociationsResponse res = new org.openapis.openapi.models.operations.GetEntitySetAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetEntitySetAssociationsResponse res = new org.openapis.openapi.models.operations.GetEntitySetAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,10 +101,8 @@ public class Bioentityset {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEntitySetGraphResourceResponse res = new org.openapis.openapi.models.operations.GetEntitySetGraphResourceResponse() {{
+        org.openapis.openapi.models.operations.GetEntitySetGraphResourceResponse res = new org.openapis.openapi.models.operations.GetEntitySetGraphResourceResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -141,10 +137,8 @@ public class Bioentityset {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEntitySetSummaryResponse res = new org.openapis.openapi.models.operations.GetEntitySetSummaryResponse() {{
+        org.openapis.openapi.models.operations.GetEntitySetSummaryResponse res = new org.openapis.openapi.models.operations.GetEntitySetSummaryResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -179,10 +173,8 @@ public class Bioentityset {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOverRepresentationResponse res = new org.openapis.openapi.models.operations.GetOverRepresentationResponse() {{
+        org.openapis.openapi.models.operations.GetOverRepresentationResponse res = new org.openapis.openapi.models.operations.GetOverRepresentationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

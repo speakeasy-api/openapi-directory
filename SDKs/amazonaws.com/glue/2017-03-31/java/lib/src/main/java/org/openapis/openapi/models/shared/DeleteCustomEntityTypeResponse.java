@@ -15,9 +15,11 @@ public class DeleteCustomEntityTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DeleteCustomEntityTypeResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeleteCustomEntityTypeResponse(){}
 }

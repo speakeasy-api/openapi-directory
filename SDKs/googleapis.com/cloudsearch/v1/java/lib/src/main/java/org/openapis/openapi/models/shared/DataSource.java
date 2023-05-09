@@ -18,6 +18,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableModifications")
     public Boolean disableModifications;
+
     public DataSource withDisableModifications(Boolean disableModifications) {
         this.disableModifications = disableModifications;
         return this;
@@ -29,6 +30,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableServing")
     public Boolean disableServing;
+
     public DataSource withDisableServing(Boolean disableServing) {
         this.disableServing = disableServing;
         return this;
@@ -40,6 +42,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public DataSource withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexingServiceAccounts")
     public String[] indexingServiceAccounts;
+
     public DataSource withIndexingServiceAccounts(String[] indexingServiceAccounts) {
         this.indexingServiceAccounts = indexingServiceAccounts;
         return this;
@@ -62,6 +66,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemsVisibility")
     public GSuitePrincipal[] itemsVisibility;
+
     public DataSource withItemsVisibility(GSuitePrincipal[] itemsVisibility) {
         this.itemsVisibility = itemsVisibility;
         return this;
@@ -73,6 +78,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DataSource withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationIds")
     public String[] operationIds;
+
     public DataSource withOperationIds(String[] operationIds) {
         this.operationIds = operationIds;
         return this;
@@ -95,6 +102,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnThumbnailUrls")
     public Boolean returnThumbnailUrls;
+
     public DataSource withReturnThumbnailUrls(Boolean returnThumbnailUrls) {
         this.returnThumbnailUrls = returnThumbnailUrls;
         return this;
@@ -106,9 +114,11 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortName")
     public String shortName;
+
     public DataSource withShortName(String shortName) {
         this.shortName = shortName;
         return this;
     }
     
+    public DataSource(){}
 }

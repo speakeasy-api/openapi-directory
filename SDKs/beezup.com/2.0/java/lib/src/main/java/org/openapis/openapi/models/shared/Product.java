@@ -15,6 +15,7 @@ public class Product {
      */
     @JsonProperty("categoryId")
     public String categoryId;
+
     public Product withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -25,6 +26,7 @@ public class Product {
      */
     @JsonProperty("exists")
     public Boolean exists;
+
     public Product withExists(Boolean exists) {
         this.exists = exists;
         return this;
@@ -35,6 +37,7 @@ public class Product {
      */
     @JsonProperty("productId")
     public String productId;
+
     public Product withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -45,9 +48,16 @@ public class Product {
      */
     @JsonProperty("values")
     public java.util.Map<String, String> values;
+
     public Product withValues(java.util.Map<String, String> values) {
         this.values = values;
         return this;
     }
     
+    public Product(@JsonProperty("categoryId") String categoryId, @JsonProperty("exists") Boolean exists, @JsonProperty("productId") String productId, @JsonProperty("values") java.util.Map<String, String> values) {
+        this.categoryId = categoryId;
+        this.exists = exists;
+        this.productId = productId;
+        this.values = values;
+  }
 }

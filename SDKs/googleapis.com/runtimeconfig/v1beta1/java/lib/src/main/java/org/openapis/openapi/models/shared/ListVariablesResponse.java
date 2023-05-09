@@ -18,6 +18,7 @@ public class ListVariablesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListVariablesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListVariablesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variables")
     public Variable[] variables;
+
     public ListVariablesResponse withVariables(Variable[] variables) {
         this.variables = variables;
         return this;
     }
     
+    public ListVariablesResponse(){}
 }

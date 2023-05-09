@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StageExecution {
     @JsonProperty("pipelineExecutionId")
     public String pipelineExecutionId;
+
     public StageExecution withPipelineExecutionId(String pipelineExecutionId) {
         this.pipelineExecutionId = pipelineExecutionId;
         return this;
@@ -19,9 +20,14 @@ public class StageExecution {
     
     @JsonProperty("status")
     public StageExecutionStatusEnum status;
+
     public StageExecution withStatus(StageExecutionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public StageExecution(@JsonProperty("pipelineExecutionId") String pipelineExecutionId, @JsonProperty("status") StageExecutionStatusEnum status) {
+        this.pipelineExecutionId = pipelineExecutionId;
+        this.status = status;
+  }
 }

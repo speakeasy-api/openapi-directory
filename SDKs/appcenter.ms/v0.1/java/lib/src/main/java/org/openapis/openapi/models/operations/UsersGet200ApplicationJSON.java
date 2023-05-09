@@ -18,6 +18,7 @@ public class UsersGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public UsersGet200ApplicationJSON withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -29,6 +30,7 @@ public class UsersGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("can_change_password")
     public Boolean canChangePassword;
+
     public UsersGet200ApplicationJSON withCanChangePassword(Boolean canChangePassword) {
         this.canChangePassword = canChangePassword;
         return this;
@@ -39,6 +41,7 @@ public class UsersGet200ApplicationJSON {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public UsersGet200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -49,6 +52,7 @@ public class UsersGet200ApplicationJSON {
      */
     @JsonProperty("email")
     public String email;
+
     public UsersGet200ApplicationJSON withEmail(String email) {
         this.email = email;
         return this;
@@ -59,6 +63,7 @@ public class UsersGet200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public UsersGet200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -69,6 +74,7 @@ public class UsersGet200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public UsersGet200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -79,6 +85,7 @@ public class UsersGet200ApplicationJSON {
      */
     @JsonProperty("origin")
     public UsersGet200ApplicationJSONOriginEnum origin;
+
     public UsersGet200ApplicationJSON withOrigin(UsersGet200ApplicationJSONOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -90,9 +97,17 @@ public class UsersGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public UsersGet200ApplicationJSONPermissionsEnum[] permissions;
+
     public UsersGet200ApplicationJSON withPermissions(UsersGet200ApplicationJSONPermissionsEnum[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public UsersGet200ApplicationJSON(@JsonProperty("display_name") String displayName, @JsonProperty("email") String email, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("origin") UsersGet200ApplicationJSONOriginEnum origin) {
+        this.displayName = displayName;
+        this.email = email;
+        this.id = id;
+        this.name = name;
+        this.origin = origin;
+  }
 }

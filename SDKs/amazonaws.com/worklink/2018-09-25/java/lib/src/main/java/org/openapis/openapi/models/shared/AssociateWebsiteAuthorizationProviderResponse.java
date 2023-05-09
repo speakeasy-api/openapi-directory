@@ -15,9 +15,11 @@ public class AssociateWebsiteAuthorizationProviderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizationProviderId")
     public String authorizationProviderId;
+
     public AssociateWebsiteAuthorizationProviderResponse withAuthorizationProviderId(String authorizationProviderId) {
         this.authorizationProviderId = authorizationProviderId;
         return this;
     }
     
+    public AssociateWebsiteAuthorizationProviderResponse(){}
 }

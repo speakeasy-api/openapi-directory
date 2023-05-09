@@ -12,9 +12,13 @@ public class BatchDeleteWorldsRequestBody {
      */
     @JsonProperty("worlds")
     public String[] worlds;
+
     public BatchDeleteWorldsRequestBody withWorlds(String[] worlds) {
         this.worlds = worlds;
         return this;
     }
     
+    public BatchDeleteWorldsRequestBody(@JsonProperty("worlds") String[] worlds) {
+        this.worlds = worlds;
+  }
 }

@@ -62,11 +62,9 @@ public class Relyingparty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriResponse(contentType, httpRes.statusCode()) {{
             createAuthUriResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Relyingparty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDeleteAccountResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDeleteAccountResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDeleteAccountResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDeleteAccountResponse(contentType, httpRes.statusCode()) {{
             deleteAccountResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,11 +154,9 @@ public class Relyingparty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDownloadAccountResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDownloadAccountResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDownloadAccountResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDownloadAccountResponse(contentType, httpRes.statusCode()) {{
             downloadAccountResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -206,11 +200,9 @@ public class Relyingparty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyEmailLinkSigninResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyEmailLinkSigninResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyEmailLinkSigninResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyEmailLinkSigninResponse(contentType, httpRes.statusCode()) {{
             emailLinkSigninResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -254,11 +246,9 @@ public class Relyingparty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetAccountInfoResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetAccountInfoResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetAccountInfoResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetAccountInfoResponse(contentType, httpRes.statusCode()) {{
             getAccountInfoResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -302,11 +292,9 @@ public class Relyingparty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetOobConfirmationCodeResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetOobConfirmationCodeResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetOobConfirmationCodeResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetOobConfirmationCodeResponse(contentType, httpRes.statusCode()) {{
             getOobConfirmationCodeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -348,11 +336,9 @@ public class Relyingparty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetProjectConfigResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetProjectConfigResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetProjectConfigResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetProjectConfigResponse(contentType, httpRes.statusCode()) {{
             identitytoolkitRelyingpartyGetProjectConfigResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -394,11 +380,9 @@ public class Relyingparty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetPublicKeysResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetPublicKeysResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetPublicKeysResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetPublicKeysResponse(contentType, httpRes.statusCode()) {{
             identitytoolkitRelyingpartyGetPublicKeysResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -440,11 +424,9 @@ public class Relyingparty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetRecaptchaParamResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetRecaptchaParamResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetRecaptchaParamResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetRecaptchaParamResponse(contentType, httpRes.statusCode()) {{
             getRecaptchaParamResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -488,11 +470,9 @@ public class Relyingparty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyResetPasswordResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyResetPasswordResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyResetPasswordResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyResetPasswordResponse(contentType, httpRes.statusCode()) {{
             resetPasswordResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -536,11 +516,9 @@ public class Relyingparty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySendVerificationCodeResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySendVerificationCodeResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySendVerificationCodeResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySendVerificationCodeResponse(contentType, httpRes.statusCode()) {{
             identitytoolkitRelyingpartySendVerificationCodeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -584,11 +562,9 @@ public class Relyingparty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetAccountInfoResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetAccountInfoResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetAccountInfoResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetAccountInfoResponse(contentType, httpRes.statusCode()) {{
             setAccountInfoResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -632,11 +608,9 @@ public class Relyingparty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetProjectConfigResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetProjectConfigResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetProjectConfigResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetProjectConfigResponse(contentType, httpRes.statusCode()) {{
             identitytoolkitRelyingpartySetProjectConfigResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -680,11 +654,9 @@ public class Relyingparty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignOutUserResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignOutUserResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignOutUserResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignOutUserResponse(contentType, httpRes.statusCode()) {{
             identitytoolkitRelyingpartySignOutUserResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -728,11 +700,9 @@ public class Relyingparty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignupNewUserResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignupNewUserResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignupNewUserResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignupNewUserResponse(contentType, httpRes.statusCode()) {{
             signupNewUserResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -776,11 +746,9 @@ public class Relyingparty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyUploadAccountResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyUploadAccountResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyUploadAccountResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyUploadAccountResponse(contentType, httpRes.statusCode()) {{
             uploadAccountResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -824,11 +792,9 @@ public class Relyingparty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyAssertionResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyAssertionResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyAssertionResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyAssertionResponse(contentType, httpRes.statusCode()) {{
             verifyAssertionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -872,11 +838,9 @@ public class Relyingparty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyCustomTokenResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyCustomTokenResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyCustomTokenResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyCustomTokenResponse(contentType, httpRes.statusCode()) {{
             verifyCustomTokenResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -920,11 +884,9 @@ public class Relyingparty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPasswordResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPasswordResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPasswordResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPasswordResponse(contentType, httpRes.statusCode()) {{
             verifyPasswordResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -968,11 +930,9 @@ public class Relyingparty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse() {{
+        org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse res = new org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse(contentType, httpRes.statusCode()) {{
             identitytoolkitRelyingpartyVerifyPhoneNumberResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

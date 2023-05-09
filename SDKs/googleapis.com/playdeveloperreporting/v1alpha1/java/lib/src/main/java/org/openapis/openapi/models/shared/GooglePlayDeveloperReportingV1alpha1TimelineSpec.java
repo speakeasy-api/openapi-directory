@@ -18,6 +18,7 @@ public class GooglePlayDeveloperReportingV1alpha1TimelineSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationPeriod")
     public GooglePlayDeveloperReportingV1alpha1TimelineSpecAggregationPeriodEnum aggregationPeriod;
+
     public GooglePlayDeveloperReportingV1alpha1TimelineSpec withAggregationPeriod(GooglePlayDeveloperReportingV1alpha1TimelineSpecAggregationPeriodEnum aggregationPeriod) {
         this.aggregationPeriod = aggregationPeriod;
         return this;
@@ -29,6 +30,7 @@ public class GooglePlayDeveloperReportingV1alpha1TimelineSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public GoogleTypeDateTime endTime;
+
     public GooglePlayDeveloperReportingV1alpha1TimelineSpec withEndTime(GoogleTypeDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -40,9 +42,11 @@ public class GooglePlayDeveloperReportingV1alpha1TimelineSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public GoogleTypeDateTime startTime;
+
     public GooglePlayDeveloperReportingV1alpha1TimelineSpec withStartTime(GoogleTypeDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GooglePlayDeveloperReportingV1alpha1TimelineSpec(){}
 }

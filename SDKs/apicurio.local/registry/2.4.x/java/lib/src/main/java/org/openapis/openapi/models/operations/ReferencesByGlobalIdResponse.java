@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReferencesByGlobalIdResponse {
@@ -12,6 +13,7 @@ public class ReferencesByGlobalIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ArtifactReference[] artifactReferences;
+
     public ReferencesByGlobalIdResponse withArtifactReferences(org.openapis.openapi.models.shared.ArtifactReference[] artifactReferences) {
         this.artifactReferences = artifactReferences;
         return this;
@@ -19,6 +21,7 @@ public class ReferencesByGlobalIdResponse {
     
     
     public String contentType;
+
     public ReferencesByGlobalIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ReferencesByGlobalIdResponse {
     
     
     public Integer statusCode;
+
     public ReferencesByGlobalIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ReferencesByGlobalIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReferencesByGlobalIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ReferencesByGlobalIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class SendMessageRequestBody4TextMessenger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public SendMessageRequestBody4TextMessengerCategoryEnum category;
+
     public SendMessageRequestBody4TextMessenger withCategory(SendMessageRequestBody4TextMessengerCategoryEnum category) {
         this.category = category;
         return this;
@@ -26,9 +27,11 @@ public class SendMessageRequestBody4TextMessenger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public SendMessageRequestBody4TextMessenger withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public SendMessageRequestBody4TextMessenger(){}
 }

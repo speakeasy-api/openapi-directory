@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FindForms200ApplicationJSON {
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.FormsIndex[] data;
+
     public FindForms200ApplicationJSON withData(org.openapis.openapi.models.shared.FormsIndex[] data) {
         this.data = data;
         return this;
     }
     
+    public FindForms200ApplicationJSON(@JsonProperty("data") org.openapis.openapi.models.shared.FormsIndex[] data) {
+        this.data = data;
+  }
 }

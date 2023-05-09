@@ -12,6 +12,7 @@ public class ListResourcesInProtectionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListResourcesInProtectionGroupRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListResourcesInProtectionGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResourcesInProtectionGroupRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListResourcesInProtectionGroupRequest {
     
     @JsonProperty("ProtectionGroupId")
     public String protectionGroupId;
+
     public ListResourcesInProtectionGroupRequest withProtectionGroupId(String protectionGroupId) {
         this.protectionGroupId = protectionGroupId;
         return this;
     }
     
+    public ListResourcesInProtectionGroupRequest(@JsonProperty("ProtectionGroupId") String protectionGroupId) {
+        this.protectionGroupId = protectionGroupId;
+  }
 }

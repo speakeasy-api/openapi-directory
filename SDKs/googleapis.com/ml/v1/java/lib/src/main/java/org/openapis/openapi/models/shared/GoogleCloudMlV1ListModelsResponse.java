@@ -18,6 +18,7 @@ public class GoogleCloudMlV1ListModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("models")
     public GoogleCloudMlV1Model[] models;
+
     public GoogleCloudMlV1ListModelsResponse withModels(GoogleCloudMlV1Model[] models) {
         this.models = models;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudMlV1ListModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudMlV1ListModelsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudMlV1ListModelsResponse(){}
 }

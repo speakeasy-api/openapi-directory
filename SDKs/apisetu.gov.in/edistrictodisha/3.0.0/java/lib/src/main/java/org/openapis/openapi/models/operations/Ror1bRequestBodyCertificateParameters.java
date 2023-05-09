@@ -12,6 +12,7 @@ public class Ror1bRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public Ror1bRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
@@ -22,9 +23,14 @@ public class Ror1bRequestBodyCertificateParameters {
      */
     @JsonProperty("refno")
     public String refno;
+
     public Ror1bRequestBodyCertificateParameters withRefno(String refno) {
         this.refno = refno;
         return this;
     }
     
+    public Ror1bRequestBodyCertificateParameters(@JsonProperty("UID") String uid, @JsonProperty("refno") String refno) {
+        this.uid = uid;
+        this.refno = refno;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateServiceResponse {
@@ -12,6 +13,7 @@ public class CreateServiceResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateServiceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateServiceResponse {
      */
     
     public Object clientException;
+
     public CreateServiceResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -32,6 +35,7 @@ public class CreateServiceResponse {
      */
     
     public Object clusterNotFoundException;
+
     public CreateServiceResponse withClusterNotFoundException(Object clusterNotFoundException) {
         this.clusterNotFoundException = clusterNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class CreateServiceResponse {
     
     
     public String contentType;
+
     public CreateServiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateServiceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateServiceResponse createServiceResponse;
+
     public CreateServiceResponse withCreateServiceResponse(org.openapis.openapi.models.shared.CreateServiceResponse createServiceResponse) {
         this.createServiceResponse = createServiceResponse;
         return this;
@@ -59,6 +65,7 @@ public class CreateServiceResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateServiceResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class CreateServiceResponse {
      */
     
     public Object namespaceNotFoundException;
+
     public CreateServiceResponse withNamespaceNotFoundException(Object namespaceNotFoundException) {
         this.namespaceNotFoundException = namespaceNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class CreateServiceResponse {
      */
     
     public Object platformTaskDefinitionIncompatibilityException;
+
     public CreateServiceResponse withPlatformTaskDefinitionIncompatibilityException(Object platformTaskDefinitionIncompatibilityException) {
         this.platformTaskDefinitionIncompatibilityException = platformTaskDefinitionIncompatibilityException;
         return this;
@@ -89,6 +98,7 @@ public class CreateServiceResponse {
      */
     
     public Object platformUnknownException;
+
     public CreateServiceResponse withPlatformUnknownException(Object platformUnknownException) {
         this.platformUnknownException = platformUnknownException;
         return this;
@@ -99,6 +109,7 @@ public class CreateServiceResponse {
      */
     
     public Object serverException;
+
     public CreateServiceResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -106,6 +117,7 @@ public class CreateServiceResponse {
     
     
     public Integer statusCode;
+
     public CreateServiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class CreateServiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateServiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,9 +136,14 @@ public class CreateServiceResponse {
      */
     
     public Object unsupportedFeatureException;
+
     public CreateServiceResponse withUnsupportedFeatureException(Object unsupportedFeatureException) {
         this.unsupportedFeatureException = unsupportedFeatureException;
         return this;
     }
     
+    public CreateServiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class PricingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockAccount")
     public Boolean blockAccount;
+
     public PricingConfiguration withBlockAccount(Boolean blockAccount) {
         this.blockAccount = blockAccount;
         return this;
@@ -29,6 +30,7 @@ public class PricingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockedRoutes")
     public String[] blockedRoutes;
+
     public PricingConfiguration withBlockedRoutes(String[] blockedRoutes) {
         this.blockedRoutes = blockedRoutes;
         return this;
@@ -39,6 +41,7 @@ public class PricingConfiguration {
      */
     @JsonProperty("defaultMarkup")
     public Integer defaultMarkup;
+
     public PricingConfiguration withDefaultMarkup(Integer defaultMarkup) {
         this.defaultMarkup = defaultMarkup;
         return this;
@@ -49,6 +52,7 @@ public class PricingConfiguration {
      */
     @JsonProperty("hasMigrated")
     public Boolean hasMigrated;
+
     public PricingConfiguration withHasMigrated(Boolean hasMigrated) {
         this.hasMigrated = hasMigrated;
         return this;
@@ -60,6 +64,7 @@ public class PricingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasOptionalBasePrice")
     public Boolean hasOptionalBasePrice;
+
     public PricingConfiguration withHasOptionalBasePrice(Boolean hasOptionalBasePrice) {
         this.hasOptionalBasePrice = hasOptionalBasePrice;
         return this;
@@ -71,6 +76,7 @@ public class PricingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasPriceInheritance")
     public Boolean hasPriceInheritance;
+
     public PricingConfiguration withHasPriceInheritance(Boolean hasPriceInheritance) {
         this.hasPriceInheritance = hasPriceInheritance;
         return this;
@@ -82,6 +88,7 @@ public class PricingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("migrationStatus")
     public String migrationStatus;
+
     public PricingConfiguration withMigrationStatus(String migrationStatus) {
         this.migrationStatus = migrationStatus;
         return this;
@@ -92,6 +99,7 @@ public class PricingConfiguration {
      */
     @JsonProperty("minimumMarkups")
     public java.util.Map<String, Integer> minimumMarkups;
+
     public PricingConfiguration withMinimumMarkups(java.util.Map<String, Integer> minimumMarkups) {
         this.minimumMarkups = minimumMarkups;
         return this;
@@ -103,6 +111,7 @@ public class PricingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceInheritance")
     public String priceInheritance;
+
     public PricingConfiguration withPriceInheritance(String priceInheritance) {
         this.priceInheritance = priceInheritance;
         return this;
@@ -114,6 +123,7 @@ public class PricingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceTableLimit")
     public Long priceTableLimit;
+
     public PricingConfiguration withPriceTableLimit(Long priceTableLimit) {
         this.priceTableLimit = priceTableLimit;
         return this;
@@ -125,6 +135,7 @@ public class PricingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceTableSelectionStrategy")
     public String priceTableSelectionStrategy;
+
     public PricingConfiguration withPriceTableSelectionStrategy(String priceTableSelectionStrategy) {
         this.priceTableSelectionStrategy = priceTableSelectionStrategy;
         return this;
@@ -136,6 +147,7 @@ public class PricingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceVariation")
     public PricingConfigurationPriceVariation priceVariation;
+
     public PricingConfiguration withPriceVariation(PricingConfigurationPriceVariation priceVariation) {
         this.priceVariation = priceVariation;
         return this;
@@ -147,6 +159,7 @@ public class PricingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellersToOverride")
     public Object[] sellersToOverride;
+
     public PricingConfiguration withSellersToOverride(Object[] sellersToOverride) {
         this.sellersToOverride = sellersToOverride;
         return this;
@@ -158,9 +171,15 @@ public class PricingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tradePolicyConfigs")
     public PricingConfigurationTradePolicyConfigs[] tradePolicyConfigs;
+
     public PricingConfiguration withTradePolicyConfigs(PricingConfigurationTradePolicyConfigs[] tradePolicyConfigs) {
         this.tradePolicyConfigs = tradePolicyConfigs;
         return this;
     }
     
+    public PricingConfiguration(@JsonProperty("defaultMarkup") Integer defaultMarkup, @JsonProperty("hasMigrated") Boolean hasMigrated, @JsonProperty("minimumMarkups") java.util.Map<String, Integer> minimumMarkups) {
+        this.defaultMarkup = defaultMarkup;
+        this.hasMigrated = hasMigrated;
+        this.minimumMarkups = minimumMarkups;
+  }
 }

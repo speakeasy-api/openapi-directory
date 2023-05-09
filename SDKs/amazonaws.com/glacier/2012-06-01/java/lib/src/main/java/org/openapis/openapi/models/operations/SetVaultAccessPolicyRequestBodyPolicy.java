@@ -15,9 +15,11 @@ public class SetVaultAccessPolicyRequestBodyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policy")
     public String policy;
+
     public SetVaultAccessPolicyRequestBodyPolicy withPolicy(String policy) {
         this.policy = policy;
         return this;
     }
     
+    public SetVaultAccessPolicyRequestBodyPolicy(){}
 }

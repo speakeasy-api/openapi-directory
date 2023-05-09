@@ -12,6 +12,7 @@ public class FfcerRequestBodyCertificateParameters {
      */
     @JsonProperty("Name")
     public String name;
+
     public FfcerRequestBodyCertificateParameters withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,14 @@ public class FfcerRequestBodyCertificateParameters {
      */
     @JsonProperty("RefNo")
     public String refNo;
+
     public FfcerRequestBodyCertificateParameters withRefNo(String refNo) {
         this.refNo = refNo;
         return this;
     }
     
+    public FfcerRequestBodyCertificateParameters(@JsonProperty("Name") String name, @JsonProperty("RefNo") String refNo) {
+        this.name = name;
+        this.refNo = refNo;
+  }
 }

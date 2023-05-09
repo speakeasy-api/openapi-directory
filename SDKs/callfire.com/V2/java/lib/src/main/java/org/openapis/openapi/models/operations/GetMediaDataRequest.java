@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMediaDataRequest {
@@ -12,6 +13,7 @@ public class GetMediaDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=extension")
     public String extension;
+
     public GetMediaDataRequest withExtension(String extension) {
         this.extension = extension;
         return this;
@@ -22,9 +24,14 @@ public class GetMediaDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetMediaDataRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public GetMediaDataRequest(@JsonProperty("extension") String extension, @JsonProperty("id") Long id) {
+        this.extension = extension;
+        this.id = id;
+  }
 }

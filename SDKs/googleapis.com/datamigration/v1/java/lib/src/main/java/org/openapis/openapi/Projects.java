@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesListResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesListResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesListResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesListResponse(contentType, httpRes.statusCode()) {{
             listConnectionProfilesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesApplyResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesApplyResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesApplyResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesApplyResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesCommitResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesCommitResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesCommitResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesCommitResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,11 +244,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesConvertResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesConvertResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesConvertResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesConvertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,11 +290,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesCreateResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesCreateResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesCreateResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,11 +334,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesDescribeConversionWorkspaceRevisionsResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesDescribeConversionWorkspaceRevisionsResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesDescribeConversionWorkspaceRevisionsResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesDescribeConversionWorkspaceRevisionsResponse(contentType, httpRes.statusCode()) {{
             describeConversionWorkspaceRevisionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,11 +378,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesResponse(contentType, httpRes.statusCode()) {{
             describeDatabaseEntitiesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,11 +422,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesListResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesListResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesListResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesListResponse(contentType, httpRes.statusCode()) {{
             listConversionWorkspacesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,11 +468,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesMappingRulesImportResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesMappingRulesImportResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesMappingRulesImportResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesMappingRulesImportResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -534,11 +514,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesRollbackResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesRollbackResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesRollbackResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesRollbackResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -580,11 +558,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsResponse(contentType, httpRes.statusCode()) {{
             searchBackgroundJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -628,11 +604,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesSeedResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesSeedResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesSeedResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConversionWorkspacesSeedResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -674,11 +648,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsFetchStaticIpsResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsFetchStaticIpsResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsFetchStaticIpsResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsFetchStaticIpsResponse(contentType, httpRes.statusCode()) {{
             fetchStaticIpsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -720,11 +692,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -768,11 +738,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsCreateResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsCreateResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsCreateResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -816,11 +784,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptResponse(contentType, httpRes.statusCode()) {{
             sshScript = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -828,52 +794,6 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.SshScript out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.SshScript.class);
                 res.sshScript = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyResponse datamigrationProjectsLocationsMigrationJobsGetIamPolicy(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicySecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyRequest.class, baseUrl, "/v1/{resource}:getIamPolicy", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyResponse() {{
-            policy = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.Policy out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Policy.class);
-                res.policy = out;
             }
         }
 
@@ -908,11 +828,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsListResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsListResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsListResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsListResponse(contentType, httpRes.statusCode()) {{
             listMigrationJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -956,11 +874,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPatchResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPatchResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPatchResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1004,11 +920,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPromoteResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPromoteResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPromoteResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPromoteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1052,11 +966,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsRestartResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsRestartResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsRestartResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsRestartResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1100,11 +1012,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsResumeResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsResumeResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsResumeResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsResumeResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1112,54 +1022,6 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
                 res.operation = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyResponse datamigrationProjectsLocationsMigrationJobsSetIamPolicy(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicySecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyRequest.class, baseUrl, "/v1/{resource}:setIamPolicy", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setIamPolicyRequest", "json");
-        req.setBody(serializedRequestBody);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyResponse() {{
-            policy = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.Policy out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Policy.class);
-                res.policy = out;
             }
         }
 
@@ -1196,11 +1058,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStartResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStartResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStartResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStartResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1244,11 +1104,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStopResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStopResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStopResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStopResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1256,54 +1114,6 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
                 res.operation = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsResponse datamigrationProjectsLocationsMigrationJobsTestIamPermissions(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsRequest.class, baseUrl, "/v1/{resource}:testIamPermissions", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testIamPermissionsRequest", "json");
-        req.setBody(serializedRequestBody);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsResponse() {{
-            testIamPermissionsResponse = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.TestIamPermissionsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.TestIamPermissionsResponse.class);
-                res.testIamPermissionsResponse = out;
             }
         }
 
@@ -1340,11 +1150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsVerifyResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsVerifyResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsVerifyResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsVerifyResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1388,11 +1196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1434,11 +1240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1482,11 +1286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsCreateResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsCreateResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsCreateResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1528,11 +1330,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsDeleteResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsDeleteResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1574,11 +1374,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsGetResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsGetResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsGetResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsGetResponse(contentType, httpRes.statusCode()) {{
             privateConnection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1586,6 +1384,50 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.PrivateConnection out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.PrivateConnection.class);
                 res.privateConnection = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicyResponse datamigrationProjectsLocationsPrivateConnectionsGetIamPolicy(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicyRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicySecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicyRequest.class, baseUrl, "/v1/{resource}:getIamPolicy", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicyRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
+            policy = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Policy out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Policy.class);
+                res.policy = out;
             }
         }
 
@@ -1620,11 +1462,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsListResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsListResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsListResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsListResponse(contentType, httpRes.statusCode()) {{
             listPrivateConnectionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1632,6 +1472,98 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.ListPrivateConnectionsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListPrivateConnectionsResponse.class);
                 res.listPrivateConnectionsResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicyResponse datamigrationProjectsLocationsPrivateConnectionsSetIamPolicy(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicyRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicySecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicyRequest.class, baseUrl, "/v1/{resource}:setIamPolicy", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setIamPolicyRequest", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicyRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
+            policy = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Policy out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Policy.class);
+                res.policy = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissionsResponse datamigrationProjectsLocationsPrivateConnectionsTestIamPermissions(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissionsRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissionsSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissionsRequest.class, baseUrl, "/v1/{resource}:testIamPermissions", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testIamPermissionsRequest", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissionsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
+            testIamPermissionsResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.TestIamPermissionsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.TestIamPermissionsResponse.class);
+                res.testIamPermissionsResponse = out;
             }
         }
 

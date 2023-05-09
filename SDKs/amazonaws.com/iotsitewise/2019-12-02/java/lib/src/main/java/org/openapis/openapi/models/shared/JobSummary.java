@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class JobSummary {
     @JsonProperty("id")
     public String id;
+
     public JobSummary withId(String id) {
         this.id = id;
         return this;
@@ -19,6 +20,7 @@ public class JobSummary {
     
     @JsonProperty("name")
     public String name;
+
     public JobSummary withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class JobSummary {
     
     @JsonProperty("status")
     public JobStatusEnum status;
+
     public JobSummary withStatus(JobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public JobSummary(@JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("status") JobStatusEnum status) {
+        this.id = id;
+        this.name = name;
+        this.status = status;
+  }
 }

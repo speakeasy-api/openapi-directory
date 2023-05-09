@@ -15,6 +15,7 @@ public class ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecatedInFavorOf")
     public String[] deprecatedInFavorOf;
+
     public ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle withDeprecatedInFavorOf(String[] deprecatedInFavorOf) {
         this.deprecatedInFavorOf = deprecatedInFavorOf;
         return this;
@@ -26,6 +27,7 @@ public class ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endSupport")
     public GoogleTypeDate endSupport;
+
     public ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle withEndSupport(GoogleTypeDate endSupport) {
         this.endSupport = endSupport;
         return this;
@@ -48,9 +51,11 @@ public class ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyApiLifecycleStage")
     public ChromeCrosDpanelAutosettingsProtoPolicyApiLifecyclePolicyApiLifecycleStageEnum policyApiLifecycleStage;
+
     public ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle withPolicyApiLifecycleStage(ChromeCrosDpanelAutosettingsProtoPolicyApiLifecyclePolicyApiLifecycleStageEnum policyApiLifecycleStage) {
         this.policyApiLifecycleStage = policyApiLifecycleStage;
         return this;
     }
     
+    public ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle(){}
 }

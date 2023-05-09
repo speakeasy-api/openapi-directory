@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FullItemUrls {
     @JsonProperty("href")
     public String href;
+
     public FullItemUrls withHref(String href) {
         this.href = href;
         return this;
@@ -19,6 +20,7 @@ public class FullItemUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public FullItemUrls withLabel(String label) {
         this.label = label;
         return this;
@@ -27,9 +29,13 @@ public class FullItemUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
     public Boolean primary;
+
     public FullItemUrls withPrimary(Boolean primary) {
         this.primary = primary;
         return this;
     }
     
+    public FullItemUrls(@JsonProperty("href") String href) {
+        this.href = href;
+  }
 }

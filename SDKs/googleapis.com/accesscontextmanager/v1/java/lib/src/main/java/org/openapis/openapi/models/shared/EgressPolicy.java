@@ -18,6 +18,7 @@ public class EgressPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("egressFrom")
     public EgressFrom egressFrom;
+
     public EgressPolicy withEgressFrom(EgressFrom egressFrom) {
         this.egressFrom = egressFrom;
         return this;
@@ -29,9 +30,11 @@ public class EgressPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("egressTo")
     public EgressTo egressTo;
+
     public EgressPolicy withEgressTo(EgressTo egressTo) {
         this.egressTo = egressTo;
         return this;
     }
     
+    public EgressPolicy(){}
 }

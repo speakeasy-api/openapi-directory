@@ -15,6 +15,7 @@ public class EvaluationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public EvaluationStatus withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -22,9 +23,13 @@ public class EvaluationStatus {
     
     @JsonProperty("Status")
     public ResourceEvaluationStatusEnum status;
+
     public EvaluationStatus withStatus(ResourceEvaluationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public EvaluationStatus(@JsonProperty("Status") ResourceEvaluationStatusEnum status) {
+        this.status = status;
+  }
 }

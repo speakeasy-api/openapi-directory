@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class SearchUserPostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_max")
     public OffsetDateTime dateMax;
+
     public SearchUserPostsRequest withDateMax(OffsetDateTime dateMax) {
         this.dateMax = dateMax;
         return this;
@@ -24,6 +26,7 @@ public class SearchUserPostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_min")
     public OffsetDateTime dateMin;
+
     public SearchUserPostsRequest withDateMin(OffsetDateTime dateMin) {
         this.dateMin = dateMin;
         return this;
@@ -34,6 +37,7 @@ public class SearchUserPostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_pixel_ratio")
     public Double devicePixelRatio;
+
     public SearchUserPostsRequest withDevicePixelRatio(Double devicePixelRatio) {
         this.devicePixelRatio = devicePixelRatio;
         return this;
@@ -45,6 +49,7 @@ public class SearchUserPostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_ids")
     public String groupIds;
+
     public SearchUserPostsRequest withGroupIds(String groupIds) {
         this.groupIds = groupIds;
         return this;
@@ -56,6 +61,7 @@ public class SearchUserPostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_reposts")
     public Long includeReposts;
+
     public SearchUserPostsRequest withIncludeReposts(Long includeReposts) {
         this.includeReposts = includeReposts;
         return this;
@@ -67,6 +73,7 @@ public class SearchUserPostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latitude")
     public Double latitude;
+
     public SearchUserPostsRequest withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -78,6 +85,7 @@ public class SearchUserPostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longitude")
     public Double longitude;
+
     public SearchUserPostsRequest withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -89,6 +97,7 @@ public class SearchUserPostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outcomes")
     public String outcomes;
+
     public SearchUserPostsRequest withOutcomes(String outcomes) {
         this.outcomes = outcomes;
         return this;
@@ -99,6 +108,7 @@ public class SearchUserPostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public SearchUserPostsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -109,6 +119,7 @@ public class SearchUserPostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public SearchUserPostsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -120,6 +131,7 @@ public class SearchUserPostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
     public Double radius;
+
     public SearchUserPostsRequest withRadius(Double radius) {
         this.radius = radius;
         return this;
@@ -130,6 +142,7 @@ public class SearchUserPostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public SearchUserPostsRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -141,6 +154,7 @@ public class SearchUserPostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public SearchUserPostsRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -152,6 +166,7 @@ public class SearchUserPostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sources")
     public String sources;
+
     public SearchUserPostsRequest withSources(String sources) {
         this.sources = sources;
         return this;
@@ -163,6 +178,7 @@ public class SearchUserPostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=types")
     public String types;
+
     public SearchUserPostsRequest withTypes(String types) {
         this.types = types;
         return this;
@@ -174,9 +190,16 @@ public class SearchUserPostsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
     public String userId;
+
     public SearchUserPostsRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public SearchUserPostsRequest(@JsonProperty("search") String search, @JsonProperty("sources") String sources, @JsonProperty("types") String types, @JsonProperty("user_id") String userId) {
+        this.search = search;
+        this.sources = sources;
+        this.types = types;
+        this.userId = userId;
+  }
 }

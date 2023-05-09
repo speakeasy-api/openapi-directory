@@ -15,6 +15,7 @@ public class CreateAlarmModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmCapabilities")
     public CreateAlarmModelRequestBodyAlarmCapabilities alarmCapabilities;
+
     public CreateAlarmModelRequestBody withAlarmCapabilities(CreateAlarmModelRequestBodyAlarmCapabilities alarmCapabilities) {
         this.alarmCapabilities = alarmCapabilities;
         return this;
@@ -26,6 +27,7 @@ public class CreateAlarmModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmEventActions")
     public CreateAlarmModelRequestBodyAlarmEventActions alarmEventActions;
+
     public CreateAlarmModelRequestBody withAlarmEventActions(CreateAlarmModelRequestBodyAlarmEventActions alarmEventActions) {
         this.alarmEventActions = alarmEventActions;
         return this;
@@ -37,6 +39,7 @@ public class CreateAlarmModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmModelDescription")
     public String alarmModelDescription;
+
     public CreateAlarmModelRequestBody withAlarmModelDescription(String alarmModelDescription) {
         this.alarmModelDescription = alarmModelDescription;
         return this;
@@ -47,6 +50,7 @@ public class CreateAlarmModelRequestBody {
      */
     @JsonProperty("alarmModelName")
     public String alarmModelName;
+
     public CreateAlarmModelRequestBody withAlarmModelName(String alarmModelName) {
         this.alarmModelName = alarmModelName;
         return this;
@@ -58,6 +62,7 @@ public class CreateAlarmModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmNotification")
     public CreateAlarmModelRequestBodyAlarmNotification alarmNotification;
+
     public CreateAlarmModelRequestBody withAlarmNotification(CreateAlarmModelRequestBodyAlarmNotification alarmNotification) {
         this.alarmNotification = alarmNotification;
         return this;
@@ -68,6 +73,7 @@ public class CreateAlarmModelRequestBody {
      */
     @JsonProperty("alarmRule")
     public CreateAlarmModelRequestBodyAlarmRule alarmRule;
+
     public CreateAlarmModelRequestBody withAlarmRule(CreateAlarmModelRequestBodyAlarmRule alarmRule) {
         this.alarmRule = alarmRule;
         return this;
@@ -79,6 +85,7 @@ public class CreateAlarmModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public CreateAlarmModelRequestBody withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +96,7 @@ public class CreateAlarmModelRequestBody {
      */
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateAlarmModelRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -100,6 +108,7 @@ public class CreateAlarmModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public Long severity;
+
     public CreateAlarmModelRequestBody withSeverity(Long severity) {
         this.severity = severity;
         return this;
@@ -111,9 +120,15 @@ public class CreateAlarmModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateAlarmModelRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAlarmModelRequestBody(@JsonProperty("alarmModelName") String alarmModelName, @JsonProperty("alarmRule") CreateAlarmModelRequestBodyAlarmRule alarmRule, @JsonProperty("roleArn") String roleArn) {
+        this.alarmModelName = alarmModelName;
+        this.alarmRule = alarmRule;
+        this.roleArn = roleArn;
+  }
 }

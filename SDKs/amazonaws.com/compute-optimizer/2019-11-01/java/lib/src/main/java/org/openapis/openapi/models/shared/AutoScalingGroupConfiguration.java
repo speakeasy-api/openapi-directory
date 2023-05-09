@@ -15,6 +15,7 @@ public class AutoScalingGroupConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredCapacity")
     public Long desiredCapacity;
+
     public AutoScalingGroupConfiguration withDesiredCapacity(Long desiredCapacity) {
         this.desiredCapacity = desiredCapacity;
         return this;
@@ -23,6 +24,7 @@ public class AutoScalingGroupConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceType")
     public String instanceType;
+
     public AutoScalingGroupConfiguration withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -31,6 +33,7 @@ public class AutoScalingGroupConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxSize")
     public Long maxSize;
+
     public AutoScalingGroupConfiguration withMaxSize(Long maxSize) {
         this.maxSize = maxSize;
         return this;
@@ -39,9 +42,11 @@ public class AutoScalingGroupConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minSize")
     public Long minSize;
+
     public AutoScalingGroupConfiguration withMinSize(Long minSize) {
         this.minSize = minSize;
         return this;
     }
     
+    public AutoScalingGroupConfiguration(){}
 }

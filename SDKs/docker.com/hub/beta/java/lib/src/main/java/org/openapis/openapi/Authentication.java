@@ -74,12 +74,10 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostUsers2FALoginResponse res = new org.openapis.openapi.models.operations.PostUsers2FALoginResponse() {{
+        org.openapis.openapi.models.operations.PostUsers2FALoginResponse res = new org.openapis.openapi.models.operations.PostUsers2FALoginResponse(contentType, httpRes.statusCode()) {{
             postUsersLoginSuccessResponse = null;
             postUsers2FALoginErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -132,12 +130,10 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostUsersLoginResponse res = new org.openapis.openapi.models.operations.PostUsersLoginResponse() {{
+        org.openapis.openapi.models.operations.PostUsersLoginResponse res = new org.openapis.openapi.models.operations.PostUsersLoginResponse(contentType, httpRes.statusCode()) {{
             postUsersLoginSuccessResponse = null;
             postUsersLoginErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

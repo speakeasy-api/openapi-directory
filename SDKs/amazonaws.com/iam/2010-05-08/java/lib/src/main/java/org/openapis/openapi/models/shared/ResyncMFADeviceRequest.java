@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ResyncMFADeviceRequest {
     
     public String authenticationCode1;
+
     public ResyncMFADeviceRequest withAuthenticationCode1(String authenticationCode1) {
         this.authenticationCode1 = authenticationCode1;
         return this;
@@ -16,6 +17,7 @@ public class ResyncMFADeviceRequest {
     
     
     public String authenticationCode2;
+
     public ResyncMFADeviceRequest withAuthenticationCode2(String authenticationCode2) {
         this.authenticationCode2 = authenticationCode2;
         return this;
@@ -23,6 +25,7 @@ public class ResyncMFADeviceRequest {
     
     
     public String serialNumber;
+
     public ResyncMFADeviceRequest withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -30,9 +33,16 @@ public class ResyncMFADeviceRequest {
     
     
     public String userName;
+
     public ResyncMFADeviceRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public ResyncMFADeviceRequest(@JsonProperty("AuthenticationCode1") String authenticationCode1, @JsonProperty("AuthenticationCode2") String authenticationCode2, @JsonProperty("SerialNumber") String serialNumber, @JsonProperty("UserName") String userName) {
+        this.authenticationCode1 = authenticationCode1;
+        this.authenticationCode2 = authenticationCode2;
+        this.serialNumber = serialNumber;
+        this.userName = userName;
+  }
 }

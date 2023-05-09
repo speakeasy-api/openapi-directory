@@ -15,9 +15,13 @@ public class UsersDeleteEmailForAuthenticatedRequestBody1 {
      */
     @JsonProperty("emails")
     public String[] emails;
+
     public UsersDeleteEmailForAuthenticatedRequestBody1 withEmails(String[] emails) {
         this.emails = emails;
         return this;
     }
     
+    public UsersDeleteEmailForAuthenticatedRequestBody1(@JsonProperty("emails") String[] emails) {
+        this.emails = emails;
+  }
 }

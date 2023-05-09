@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceEventWindowsResultInstanceEventWindowsTags {
     
     public String key;
+
     public DescribeInstanceEventWindowsResultInstanceEventWindowsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInstanceEventWindowsResultInstanceEventWindowsTags {
     
     
     public String value;
+
     public DescribeInstanceEventWindowsResultInstanceEventWindowsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeInstanceEventWindowsResultInstanceEventWindowsTags(){}
 }

@@ -15,6 +15,7 @@ public class CreateIdentityProviderRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateIdentityProviderRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateIdentityProviderRequestBody {
      */
     @JsonProperty("identityProviderDetails")
     public java.util.Map<String, String> identityProviderDetails;
+
     public CreateIdentityProviderRequestBody withIdentityProviderDetails(java.util.Map<String, String> identityProviderDetails) {
         this.identityProviderDetails = identityProviderDetails;
         return this;
@@ -35,6 +37,7 @@ public class CreateIdentityProviderRequestBody {
      */
     @JsonProperty("identityProviderName")
     public String identityProviderName;
+
     public CreateIdentityProviderRequestBody withIdentityProviderName(String identityProviderName) {
         this.identityProviderName = identityProviderName;
         return this;
@@ -45,6 +48,7 @@ public class CreateIdentityProviderRequestBody {
      */
     @JsonProperty("identityProviderType")
     public CreateIdentityProviderRequestBodyIdentityProviderTypeEnum identityProviderType;
+
     public CreateIdentityProviderRequestBody withIdentityProviderType(CreateIdentityProviderRequestBodyIdentityProviderTypeEnum identityProviderType) {
         this.identityProviderType = identityProviderType;
         return this;
@@ -55,9 +59,16 @@ public class CreateIdentityProviderRequestBody {
      */
     @JsonProperty("portalArn")
     public String portalArn;
+
     public CreateIdentityProviderRequestBody withPortalArn(String portalArn) {
         this.portalArn = portalArn;
         return this;
     }
     
+    public CreateIdentityProviderRequestBody(@JsonProperty("identityProviderDetails") java.util.Map<String, String> identityProviderDetails, @JsonProperty("identityProviderName") String identityProviderName, @JsonProperty("identityProviderType") CreateIdentityProviderRequestBodyIdentityProviderTypeEnum identityProviderType, @JsonProperty("portalArn") String portalArn) {
+        this.identityProviderDetails = identityProviderDetails;
+        this.identityProviderName = identityProviderName;
+        this.identityProviderType = identityProviderType;
+        this.portalArn = portalArn;
+  }
 }

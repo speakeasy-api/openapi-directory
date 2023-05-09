@@ -15,6 +15,7 @@ public class LabelsInputConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelGroupName")
     public String labelGroupName;
+
     public LabelsInputConfiguration withLabelGroupName(String labelGroupName) {
         this.labelGroupName = labelGroupName;
         return this;
@@ -23,9 +24,11 @@ public class LabelsInputConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3InputConfiguration")
     public LabelsS3InputConfiguration s3InputConfiguration;
+
     public LabelsInputConfiguration withS3InputConfiguration(LabelsS3InputConfiguration s3InputConfiguration) {
         this.s3InputConfiguration = s3InputConfiguration;
         return this;
     }
     
+    public LabelsInputConfiguration(){}
 }

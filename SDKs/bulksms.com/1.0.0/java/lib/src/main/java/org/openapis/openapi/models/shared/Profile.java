@@ -20,6 +20,7 @@ public class Profile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commerce")
     public ProfileCommerce commerce;
+
     public Profile withCommerce(ProfileCommerce commerce) {
         this.commerce = commerce;
         return this;
@@ -28,6 +29,7 @@ public class Profile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     public ProfileCompany company;
+
     public Profile withCompany(ProfileCompany company) {
         this.company = company;
         return this;
@@ -37,6 +39,7 @@ public class Profile {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Profile withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -44,6 +47,7 @@ public class Profile {
     
     @JsonProperty("credits")
     public ProfileCredits credits;
+
     public Profile withCredits(ProfileCredits credits) {
         this.credits = credits;
         return this;
@@ -51,6 +55,7 @@ public class Profile {
     
     @JsonProperty("id")
     public String id;
+
     public Profile withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +64,7 @@ public class Profile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originAddresses")
     public ProfileOriginAddresses originAddresses;
+
     public Profile withOriginAddresses(ProfileOriginAddresses originAddresses) {
         this.originAddresses = originAddresses;
         return this;
@@ -66,6 +72,7 @@ public class Profile {
     
     @JsonProperty("quota")
     public ProfileQuota quota;
+
     public Profile withQuota(ProfileQuota quota) {
         this.quota = quota;
         return this;
@@ -73,9 +80,17 @@ public class Profile {
     
     @JsonProperty("username")
     public String username;
+
     public Profile withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public Profile(@JsonProperty("created") OffsetDateTime created, @JsonProperty("credits") ProfileCredits credits, @JsonProperty("id") String id, @JsonProperty("quota") ProfileQuota quota, @JsonProperty("username") String username) {
+        this.created = created;
+        this.credits = credits;
+        this.id = id;
+        this.quota = quota;
+        this.username = username;
+  }
 }

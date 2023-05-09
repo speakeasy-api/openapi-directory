@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListenerTls {
     @JsonProperty("certificate")
     public ListenerTlsCertificate certificate;
+
     public ListenerTls withCertificate(ListenerTlsCertificate certificate) {
         this.certificate = certificate;
         return this;
@@ -21,6 +22,7 @@ public class ListenerTls {
     
     @JsonProperty("mode")
     public ListenerTlsModeEnum mode;
+
     public ListenerTls withMode(ListenerTlsModeEnum mode) {
         this.mode = mode;
         return this;
@@ -29,9 +31,14 @@ public class ListenerTls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validation")
     public ListenerTlsValidationContext validation;
+
     public ListenerTls withValidation(ListenerTlsValidationContext validation) {
         this.validation = validation;
         return this;
     }
     
+    public ListenerTls(@JsonProperty("certificate") ListenerTlsCertificate certificate, @JsonProperty("mode") ListenerTlsModeEnum mode) {
+        this.certificate = certificate;
+        this.mode = mode;
+  }
 }

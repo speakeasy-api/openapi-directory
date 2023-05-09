@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class StorageObjectsTestIamPermissionsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public StorageObjectsTestIamPermissionsSecurityOption1 option1;
+
     public StorageObjectsTestIamPermissionsSecurity withOption1(StorageObjectsTestIamPermissionsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class StorageObjectsTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public StorageObjectsTestIamPermissionsSecurityOption2 option2;
+
     public StorageObjectsTestIamPermissionsSecurity withOption2(StorageObjectsTestIamPermissionsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class StorageObjectsTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public StorageObjectsTestIamPermissionsSecurityOption3 option3;
+
     public StorageObjectsTestIamPermissionsSecurity withOption3(StorageObjectsTestIamPermissionsSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class StorageObjectsTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public StorageObjectsTestIamPermissionsSecurityOption4 option4;
+
     public StorageObjectsTestIamPermissionsSecurity withOption4(StorageObjectsTestIamPermissionsSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,9 +41,11 @@ public class StorageObjectsTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public StorageObjectsTestIamPermissionsSecurityOption5 option5;
+
     public StorageObjectsTestIamPermissionsSecurity withOption5(StorageObjectsTestIamPermissionsSecurityOption5 option5) {
         this.option5 = option5;
         return this;
     }
     
+    public StorageObjectsTestIamPermissionsSecurity(){}
 }

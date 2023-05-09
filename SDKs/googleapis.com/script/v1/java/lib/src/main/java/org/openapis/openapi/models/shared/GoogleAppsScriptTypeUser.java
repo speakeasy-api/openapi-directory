@@ -18,6 +18,7 @@ public class GoogleAppsScriptTypeUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public GoogleAppsScriptTypeUser withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsScriptTypeUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public GoogleAppsScriptTypeUser withEmail(String email) {
         this.email = email;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsScriptTypeUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAppsScriptTypeUser withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class GoogleAppsScriptTypeUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photoUrl")
     public String photoUrl;
+
     public GoogleAppsScriptTypeUser withPhotoUrl(String photoUrl) {
         this.photoUrl = photoUrl;
         return this;
     }
     
+    public GoogleAppsScriptTypeUser(){}
 }

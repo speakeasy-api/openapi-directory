@@ -15,6 +15,7 @@ public class CustomDataExporterConfig {
      */
     @JsonProperty("config")
     public java.util.Map<String, String> config;
+
     public CustomDataExporterConfig withConfig(java.util.Map<String, String> config) {
         this.config = config;
         return this;
@@ -25,9 +26,14 @@ public class CustomDataExporterConfig {
      */
     @JsonProperty("ref")
     public String ref;
+
     public CustomDataExporterConfig withRef(String ref) {
         this.ref = ref;
         return this;
     }
     
+    public CustomDataExporterConfig(@JsonProperty("config") java.util.Map<String, String> config, @JsonProperty("ref") String ref) {
+        this.config = config;
+        this.ref = ref;
+  }
 }

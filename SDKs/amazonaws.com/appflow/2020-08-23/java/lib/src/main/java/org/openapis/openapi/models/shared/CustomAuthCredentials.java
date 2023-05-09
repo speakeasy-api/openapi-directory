@@ -15,6 +15,7 @@ public class CustomAuthCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credentialsMap")
     public java.util.Map<String, String> credentialsMap;
+
     public CustomAuthCredentials withCredentialsMap(java.util.Map<String, String> credentialsMap) {
         this.credentialsMap = credentialsMap;
         return this;
@@ -22,9 +23,13 @@ public class CustomAuthCredentials {
     
     @JsonProperty("customAuthenticationType")
     public String customAuthenticationType;
+
     public CustomAuthCredentials withCustomAuthenticationType(String customAuthenticationType) {
         this.customAuthenticationType = customAuthenticationType;
         return this;
     }
     
+    public CustomAuthCredentials(@JsonProperty("customAuthenticationType") String customAuthenticationType) {
+        this.customAuthenticationType = customAuthenticationType;
+  }
 }

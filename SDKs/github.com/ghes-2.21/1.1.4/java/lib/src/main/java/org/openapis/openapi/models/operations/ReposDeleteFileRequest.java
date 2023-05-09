@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposDeleteFileRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ReposDeleteFileRequestBody requestBody;
+
     public ReposDeleteFileRequest withRequestBody(ReposDeleteFileRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class ReposDeleteFileRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposDeleteFileRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -26,6 +29,7 @@ public class ReposDeleteFileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public ReposDeleteFileRequest withPath(String path) {
         this.path = path;
         return this;
@@ -33,9 +37,16 @@ public class ReposDeleteFileRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposDeleteFileRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposDeleteFileRequest(@JsonProperty("RequestBody") ReposDeleteFileRequestBody requestBody, @JsonProperty("owner") String owner, @JsonProperty("path") String path, @JsonProperty("repo") String repo) {
+        this.requestBody = requestBody;
+        this.owner = owner;
+        this.path = path;
+        this.repo = repo;
+  }
 }

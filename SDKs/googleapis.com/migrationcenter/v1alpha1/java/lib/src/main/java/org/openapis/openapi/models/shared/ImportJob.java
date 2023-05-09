@@ -18,6 +18,7 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetSource")
     public String assetSource;
+
     public ImportJob withAssetSource(String assetSource) {
         this.assetSource = assetSource;
         return this;
@@ -29,6 +30,7 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completeTime")
     public String completeTime;
+
     public ImportJob withCompleteTime(String completeTime) {
         this.completeTime = completeTime;
         return this;
@@ -40,6 +42,7 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public ImportJob withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +54,7 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ImportJob withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionReport")
     public ExecutionReport executionReport;
+
     public ImportJob withExecutionReport(ExecutionReport executionReport) {
         this.executionReport = executionReport;
         return this;
@@ -73,6 +78,7 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsPayload")
     public GCSPayloadInfo gcsPayload;
+
     public ImportJob withGcsPayload(GCSPayloadInfo gcsPayload) {
         this.gcsPayload = gcsPayload;
         return this;
@@ -84,6 +90,7 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlinePayload")
     public InlinePayloadInfo inlinePayload;
+
     public ImportJob withInlinePayload(InlinePayloadInfo inlinePayload) {
         this.inlinePayload = inlinePayload;
         return this;
@@ -95,6 +102,7 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ImportJob withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -106,6 +114,7 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ImportJob withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +126,7 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ImportJobStateEnum state;
+
     public ImportJob withState(ImportJobStateEnum state) {
         this.state = state;
         return this;
@@ -128,6 +138,7 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public ImportJob withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -139,9 +150,11 @@ public class ImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationReport")
     public ValidationReport validationReport;
+
     public ImportJob withValidationReport(ValidationReport validationReport) {
         this.validationReport = validationReport;
         return this;
     }
     
+    public ImportJob(){}
 }

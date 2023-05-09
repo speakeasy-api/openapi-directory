@@ -15,6 +15,7 @@ public class RecommenderConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public RecommenderConfigurationResponse withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class RecommenderConfigurationResponse {
     
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public RecommenderConfigurationResponse withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -30,6 +32,7 @@ public class RecommenderConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public RecommenderConfigurationResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +40,7 @@ public class RecommenderConfigurationResponse {
     
     @JsonProperty("Id")
     public String id;
+
     public RecommenderConfigurationResponse withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +48,7 @@ public class RecommenderConfigurationResponse {
     
     @JsonProperty("LastModifiedDate")
     public String lastModifiedDate;
+
     public RecommenderConfigurationResponse withLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -52,6 +57,7 @@ public class RecommenderConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public RecommenderConfigurationResponse withName(String name) {
         this.name = name;
         return this;
@@ -60,6 +66,7 @@ public class RecommenderConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationProviderIdType")
     public String recommendationProviderIdType;
+
     public RecommenderConfigurationResponse withRecommendationProviderIdType(String recommendationProviderIdType) {
         this.recommendationProviderIdType = recommendationProviderIdType;
         return this;
@@ -67,6 +74,7 @@ public class RecommenderConfigurationResponse {
     
     @JsonProperty("RecommendationProviderRoleArn")
     public String recommendationProviderRoleArn;
+
     public RecommenderConfigurationResponse withRecommendationProviderRoleArn(String recommendationProviderRoleArn) {
         this.recommendationProviderRoleArn = recommendationProviderRoleArn;
         return this;
@@ -74,6 +82,7 @@ public class RecommenderConfigurationResponse {
     
     @JsonProperty("RecommendationProviderUri")
     public String recommendationProviderUri;
+
     public RecommenderConfigurationResponse withRecommendationProviderUri(String recommendationProviderUri) {
         this.recommendationProviderUri = recommendationProviderUri;
         return this;
@@ -82,6 +91,7 @@ public class RecommenderConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationTransformerUri")
     public String recommendationTransformerUri;
+
     public RecommenderConfigurationResponse withRecommendationTransformerUri(String recommendationTransformerUri) {
         this.recommendationTransformerUri = recommendationTransformerUri;
         return this;
@@ -90,6 +100,7 @@ public class RecommenderConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationsDisplayName")
     public String recommendationsDisplayName;
+
     public RecommenderConfigurationResponse withRecommendationsDisplayName(String recommendationsDisplayName) {
         this.recommendationsDisplayName = recommendationsDisplayName;
         return this;
@@ -98,9 +109,17 @@ public class RecommenderConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationsPerMessage")
     public Long recommendationsPerMessage;
+
     public RecommenderConfigurationResponse withRecommendationsPerMessage(Long recommendationsPerMessage) {
         this.recommendationsPerMessage = recommendationsPerMessage;
         return this;
     }
     
+    public RecommenderConfigurationResponse(@JsonProperty("CreationDate") String creationDate, @JsonProperty("Id") String id, @JsonProperty("LastModifiedDate") String lastModifiedDate, @JsonProperty("RecommendationProviderRoleArn") String recommendationProviderRoleArn, @JsonProperty("RecommendationProviderUri") String recommendationProviderUri) {
+        this.creationDate = creationDate;
+        this.id = id;
+        this.lastModifiedDate = lastModifiedDate;
+        this.recommendationProviderRoleArn = recommendationProviderRoleArn;
+        this.recommendationProviderUri = recommendationProviderUri;
+  }
 }

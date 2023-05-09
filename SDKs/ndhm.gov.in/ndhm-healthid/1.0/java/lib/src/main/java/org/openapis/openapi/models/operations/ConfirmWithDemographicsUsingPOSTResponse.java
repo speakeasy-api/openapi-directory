@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ConfirmWithDemographicsUsingPOSTResponse {
     
     public String contentType;
+
     public ConfirmWithDemographicsUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ConfirmWithDemographicsUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public ConfirmWithDemographicsUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ConfirmWithDemographicsUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ConfirmWithDemographicsUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ConfirmWithDemographicsUsingPOSTResponse {
      */
     
     public String confirmWithDemographicsUsingPOST200WildcardString;
+
     public ConfirmWithDemographicsUsingPOSTResponse withConfirmWithDemographicsUsingPOST200WildcardString(String confirmWithDemographicsUsingPOST200WildcardString) {
         this.confirmWithDemographicsUsingPOST200WildcardString = confirmWithDemographicsUsingPOST200WildcardString;
         return this;
     }
     
+    public ConfirmWithDemographicsUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

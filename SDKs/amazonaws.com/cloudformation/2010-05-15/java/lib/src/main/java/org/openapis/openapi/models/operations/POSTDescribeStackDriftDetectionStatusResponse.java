@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTDescribeStackDriftDetectionStatusResponse {
     
     public byte[] body;
+
     public POSTDescribeStackDriftDetectionStatusResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTDescribeStackDriftDetectionStatusResponse {
     
     
     public String contentType;
+
     public POSTDescribeStackDriftDetectionStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTDescribeStackDriftDetectionStatusResponse {
     
     
     public Integer statusCode;
+
     public POSTDescribeStackDriftDetectionStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTDescribeStackDriftDetectionStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTDescribeStackDriftDetectionStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTDescribeStackDriftDetectionStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

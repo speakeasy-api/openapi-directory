@@ -15,6 +15,7 @@ public class CompanyUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressLine1")
     public String addressLine1;
+
     public CompanyUpdateModel withAddressLine1(String addressLine1) {
         this.addressLine1 = addressLine1;
         return this;
@@ -23,6 +24,7 @@ public class CompanyUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressLine2")
     public String addressLine2;
+
     public CompanyUpdateModel withAddressLine2(String addressLine2) {
         this.addressLine2 = addressLine2;
         return this;
@@ -31,6 +33,7 @@ public class CompanyUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingWebhookUrl")
     public String bookingWebhookUrl;
+
     public CompanyUpdateModel withBookingWebhookUrl(String bookingWebhookUrl) {
         this.bookingWebhookUrl = bookingWebhookUrl;
         return this;
@@ -39,6 +42,7 @@ public class CompanyUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public CompanyUpdateModel withCity(String city) {
         this.city = city;
         return this;
@@ -47,6 +51,7 @@ public class CompanyUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public CompanyUpdateModel withCountry(String country) {
         this.country = country;
         return this;
@@ -55,6 +60,7 @@ public class CompanyUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerWebhookUrl")
     public String customerWebhookUrl;
+
     public CompanyUpdateModel withCustomerWebhookUrl(String customerWebhookUrl) {
         this.customerWebhookUrl = customerWebhookUrl;
         return this;
@@ -63,6 +69,7 @@ public class CompanyUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableEmailAndSmsNotifications")
     public Boolean disableEmailAndSmsNotifications;
+
     public CompanyUpdateModel withDisableEmailAndSmsNotifications(Boolean disableEmailAndSmsNotifications) {
         this.disableEmailAndSmsNotifications = disableEmailAndSmsNotifications;
         return this;
@@ -71,6 +78,7 @@ public class CompanyUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public CompanyUpdateModel withEmail(String email) {
         this.email = email;
         return this;
@@ -79,6 +87,7 @@ public class CompanyUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fax")
     public String fax;
+
     public CompanyUpdateModel withFax(String fax) {
         this.fax = fax;
         return this;
@@ -87,6 +96,7 @@ public class CompanyUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CompanyUpdateModel withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +105,7 @@ public class CompanyUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationFromEmailAddress")
     public String notificationFromEmailAddress;
+
     public CompanyUpdateModel withNotificationFromEmailAddress(String notificationFromEmailAddress) {
         this.notificationFromEmailAddress = notificationFromEmailAddress;
         return this;
@@ -103,6 +114,7 @@ public class CompanyUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationFromName")
     public String notificationFromName;
+
     public CompanyUpdateModel withNotificationFromName(String notificationFromName) {
         this.notificationFromName = notificationFromName;
         return this;
@@ -111,6 +123,7 @@ public class CompanyUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public CompanyUpdateModel withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -119,6 +132,7 @@ public class CompanyUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public CompanyUpdateModel withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -127,6 +141,7 @@ public class CompanyUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationEmail")
     public String registrationEmail;
+
     public CompanyUpdateModel withRegistrationEmail(String registrationEmail) {
         this.registrationEmail = registrationEmail;
         return this;
@@ -135,6 +150,7 @@ public class CompanyUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reminderWebhookUrl")
     public String reminderWebhookUrl;
+
     public CompanyUpdateModel withReminderWebhookUrl(String reminderWebhookUrl) {
         this.reminderWebhookUrl = reminderWebhookUrl;
         return this;
@@ -143,6 +159,7 @@ public class CompanyUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceWebhookUrl")
     public String resourceWebhookUrl;
+
     public CompanyUpdateModel withResourceWebhookUrl(String resourceWebhookUrl) {
         this.resourceWebhookUrl = resourceWebhookUrl;
         return this;
@@ -151,6 +168,7 @@ public class CompanyUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public CompanyUpdateModel withState(String state) {
         this.state = state;
         return this;
@@ -159,6 +177,7 @@ public class CompanyUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezoneName")
     public String timezoneName;
+
     public CompanyUpdateModel withTimezoneName(String timezoneName) {
         this.timezoneName = timezoneName;
         return this;
@@ -167,6 +186,7 @@ public class CompanyUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhookSignatureHash")
     public String webhookSignatureHash;
+
     public CompanyUpdateModel withWebhookSignatureHash(String webhookSignatureHash) {
         this.webhookSignatureHash = webhookSignatureHash;
         return this;
@@ -175,9 +195,11 @@ public class CompanyUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website")
     public String website;
+
     public CompanyUpdateModel withWebsite(String website) {
         this.website = website;
         return this;
     }
     
+    public CompanyUpdateModel(){}
 }

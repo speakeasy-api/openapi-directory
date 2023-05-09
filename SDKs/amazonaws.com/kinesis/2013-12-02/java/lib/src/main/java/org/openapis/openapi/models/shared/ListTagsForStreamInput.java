@@ -15,6 +15,7 @@ public class ListTagsForStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusiveStartTagKey")
     public String exclusiveStartTagKey;
+
     public ListTagsForStreamInput withExclusiveStartTagKey(String exclusiveStartTagKey) {
         this.exclusiveStartTagKey = exclusiveStartTagKey;
         return this;
@@ -23,6 +24,7 @@ public class ListTagsForStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListTagsForStreamInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -31,6 +33,7 @@ public class ListTagsForStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public ListTagsForStreamInput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -39,9 +42,11 @@ public class ListTagsForStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public ListTagsForStreamInput withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public ListTagsForStreamInput(){}
 }

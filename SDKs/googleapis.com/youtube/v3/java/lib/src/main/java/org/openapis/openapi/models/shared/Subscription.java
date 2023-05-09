@@ -18,6 +18,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentDetails")
     public SubscriptionContentDetails contentDetails;
+
     public Subscription withContentDetails(SubscriptionContentDetails contentDetails) {
         this.contentDetails = contentDetails;
         return this;
@@ -29,6 +30,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Subscription withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,6 +42,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Subscription withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Subscription withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public SubscriptionSnippet snippet;
+
     public Subscription withSnippet(SubscriptionSnippet snippet) {
         this.snippet = snippet;
         return this;
@@ -73,9 +78,11 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriberSnippet")
     public SubscriptionSubscriberSnippet subscriberSnippet;
+
     public Subscription withSubscriberSnippet(SubscriptionSubscriberSnippet subscriberSnippet) {
         this.subscriberSnippet = subscriberSnippet;
         return this;
     }
     
+    public Subscription(){}
 }

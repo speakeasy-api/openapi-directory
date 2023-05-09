@@ -22,6 +22,7 @@ public class JsonClassifier {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public JsonClassifier withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class JsonClassifier {
     
     @JsonProperty("JsonPath")
     public String jsonPath;
+
     public JsonClassifier withJsonPath(String jsonPath) {
         this.jsonPath = jsonPath;
         return this;
@@ -39,6 +41,7 @@ public class JsonClassifier {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdated")
     public OffsetDateTime lastUpdated;
+
     public JsonClassifier withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -46,6 +49,7 @@ public class JsonClassifier {
     
     @JsonProperty("Name")
     public String name;
+
     public JsonClassifier withName(String name) {
         this.name = name;
         return this;
@@ -54,9 +58,14 @@ public class JsonClassifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public JsonClassifier withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public JsonClassifier(@JsonProperty("JsonPath") String jsonPath, @JsonProperty("Name") String name) {
+        this.jsonPath = jsonPath;
+        this.name = name;
+  }
 }

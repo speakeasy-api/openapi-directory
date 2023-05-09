@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateGatewayFromServerResponse {
@@ -12,6 +13,7 @@ public class DisassociateGatewayFromServerResponse {
      */
     
     public Object conflictException;
+
     public DisassociateGatewayFromServerResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateGatewayFromServerResponse {
     
     
     public String contentType;
+
     public DisassociateGatewayFromServerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateGatewayFromServerResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociateGatewayFromServerOutput disassociateGatewayFromServerOutput;
+
     public DisassociateGatewayFromServerResponse withDisassociateGatewayFromServerOutput(org.openapis.openapi.models.shared.DisassociateGatewayFromServerOutput disassociateGatewayFromServerOutput) {
         this.disassociateGatewayFromServerOutput = disassociateGatewayFromServerOutput;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateGatewayFromServerResponse {
      */
     
     public Object internalServerException;
+
     public DisassociateGatewayFromServerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DisassociateGatewayFromServerResponse {
     
     
     public Integer statusCode;
+
     public DisassociateGatewayFromServerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DisassociateGatewayFromServerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateGatewayFromServerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateGatewayFromServerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateGatewayFromServerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DisassociateGatewayFromServerResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateGatewayFromServerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DisassociateGatewayFromServerResponse {
      */
     
     public Object validationException;
+
     public DisassociateGatewayFromServerResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateGatewayFromServerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

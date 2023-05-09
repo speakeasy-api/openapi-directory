@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutProtocolsListResponse {
     
     public String contentType;
+
     public PutProtocolsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutProtocolsListResponse {
      */
     
     public Object internalErrorException;
+
     public PutProtocolsListResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class PutProtocolsListResponse {
      */
     
     public Object invalidInputException;
+
     public PutProtocolsListResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class PutProtocolsListResponse {
      */
     
     public Object invalidOperationException;
+
     public PutProtocolsListResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -49,6 +54,7 @@ public class PutProtocolsListResponse {
      */
     
     public Object limitExceededException;
+
     public PutProtocolsListResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class PutProtocolsListResponse {
      */
     
     public org.openapis.openapi.models.shared.PutProtocolsListResponse putProtocolsListResponse;
+
     public PutProtocolsListResponse withPutProtocolsListResponse(org.openapis.openapi.models.shared.PutProtocolsListResponse putProtocolsListResponse) {
         this.putProtocolsListResponse = putProtocolsListResponse;
         return this;
@@ -69,6 +76,7 @@ public class PutProtocolsListResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutProtocolsListResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class PutProtocolsListResponse {
     
     
     public Integer statusCode;
+
     public PutProtocolsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class PutProtocolsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutProtocolsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutProtocolsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

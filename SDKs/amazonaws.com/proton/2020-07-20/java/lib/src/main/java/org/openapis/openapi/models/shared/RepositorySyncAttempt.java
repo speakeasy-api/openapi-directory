@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class RepositorySyncAttempt {
     @JsonProperty("events")
     public RepositorySyncEvent[] events;
+
     public RepositorySyncAttempt withEvents(RepositorySyncEvent[] events) {
         this.events = events;
         return this;
@@ -26,6 +27,7 @@ public class RepositorySyncAttempt {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startedAt")
     public OffsetDateTime startedAt;
+
     public RepositorySyncAttempt withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -33,9 +35,15 @@ public class RepositorySyncAttempt {
     
     @JsonProperty("status")
     public RepositorySyncStatusEnum status;
+
     public RepositorySyncAttempt withStatus(RepositorySyncStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public RepositorySyncAttempt(@JsonProperty("events") RepositorySyncEvent[] events, @JsonProperty("startedAt") OffsetDateTime startedAt, @JsonProperty("status") RepositorySyncStatusEnum status) {
+        this.events = events;
+        this.startedAt = startedAt;
+        this.status = status;
+  }
 }

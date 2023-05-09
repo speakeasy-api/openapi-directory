@@ -18,6 +18,7 @@ public class GoogleSearchIdeahubV1betaAvailableLocale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public GoogleSearchIdeahubV1betaAvailableLocale withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -29,9 +30,11 @@ public class GoogleSearchIdeahubV1betaAvailableLocale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleSearchIdeahubV1betaAvailableLocale withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleSearchIdeahubV1betaAvailableLocale(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Topic {
     @JsonProperty("names")
     public String[] names;
+
     public Topic withNames(String[] names) {
         this.names = names;
         return this;
     }
     
+    public Topic(@JsonProperty("names") String[] names) {
+        this.names = names;
+  }
 }

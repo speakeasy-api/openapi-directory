@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetRolePolicyResponse - Contains the response to a successful &lt;a&gt;GetRolePolicy&lt;/a&gt; request. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetRolePolicyResponse {
     
     public String policyDocument;
+
     public GetRolePolicyResponse withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -19,6 +20,7 @@ public class GetRolePolicyResponse {
     
     
     public String policyName;
+
     public GetRolePolicyResponse withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -26,9 +28,15 @@ public class GetRolePolicyResponse {
     
     
     public String roleName;
+
     public GetRolePolicyResponse withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
     }
     
+    public GetRolePolicyResponse(@JsonProperty("PolicyDocument") String policyDocument, @JsonProperty("PolicyName") String policyName, @JsonProperty("RoleName") String roleName) {
+        this.policyDocument = policyDocument;
+        this.policyName = policyName;
+        this.roleName = roleName;
+  }
 }

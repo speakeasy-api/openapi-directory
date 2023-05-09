@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class NumberDetailsUpdate {
      */
     @SpeakeasyMetadata("form:name=app_id")
     public String appId;
+
     public NumberDetailsUpdate withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -25,6 +27,7 @@ public class NumberDetailsUpdate {
      */
     @SpeakeasyMetadata("form:name=country")
     public String country;
+
     public NumberDetailsUpdate withCountry(String country) {
         this.country = country;
         return this;
@@ -39,6 +42,7 @@ public class NumberDetailsUpdate {
      */
     @SpeakeasyMetadata("form:name=messagesCallbackType")
     public NumberDetailsUpdateMessagesCallbackTypeEnum messagesCallbackType;
+
     public NumberDetailsUpdate withMessagesCallbackType(NumberDetailsUpdateMessagesCallbackTypeEnum messagesCallbackType) {
         this.messagesCallbackType = messagesCallbackType;
         return this;
@@ -53,6 +57,7 @@ public class NumberDetailsUpdate {
      */
     @SpeakeasyMetadata("form:name=messagesCallbackValue")
     public String messagesCallbackValue;
+
     public NumberDetailsUpdate withMessagesCallbackValue(String messagesCallbackValue) {
         this.messagesCallbackValue = messagesCallbackValue;
         return this;
@@ -63,6 +68,7 @@ public class NumberDetailsUpdate {
      */
     @SpeakeasyMetadata("form:name=moHttpUrl")
     public String moHttpUrl;
+
     public NumberDetailsUpdate withMoHttpUrl(String moHttpUrl) {
         this.moHttpUrl = moHttpUrl;
         return this;
@@ -73,6 +79,7 @@ public class NumberDetailsUpdate {
      */
     @SpeakeasyMetadata("form:name=moSmppSysType")
     public String moSmppSysType;
+
     public NumberDetailsUpdate withMoSmppSysType(String moSmppSysType) {
         this.moSmppSysType = moSmppSysType;
         return this;
@@ -83,6 +90,7 @@ public class NumberDetailsUpdate {
      */
     @SpeakeasyMetadata("form:name=msisdn")
     public String msisdn;
+
     public NumberDetailsUpdate withMsisdn(String msisdn) {
         this.msisdn = msisdn;
         return this;
@@ -99,6 +107,7 @@ public class NumberDetailsUpdate {
      */
     @SpeakeasyMetadata("form:name=voiceCallbackType")
     public NumberDetailsUpdateVoiceCallbackTypeEnum voiceCallbackType;
+
     public NumberDetailsUpdate withVoiceCallbackType(NumberDetailsUpdateVoiceCallbackTypeEnum voiceCallbackType) {
         this.voiceCallbackType = voiceCallbackType;
         return this;
@@ -109,6 +118,7 @@ public class NumberDetailsUpdate {
      */
     @SpeakeasyMetadata("form:name=voiceCallbackValue")
     public String voiceCallbackValue;
+
     public NumberDetailsUpdate withVoiceCallbackValue(String voiceCallbackValue) {
         this.voiceCallbackValue = voiceCallbackValue;
         return this;
@@ -119,9 +129,14 @@ public class NumberDetailsUpdate {
      */
     @SpeakeasyMetadata("form:name=voiceStatusCallback")
     public String voiceStatusCallback;
+
     public NumberDetailsUpdate withVoiceStatusCallback(String voiceStatusCallback) {
         this.voiceStatusCallback = voiceStatusCallback;
         return this;
     }
     
+    public NumberDetailsUpdate(@JsonProperty("country") String country, @JsonProperty("msisdn") String msisdn) {
+        this.country = country;
+        this.msisdn = msisdn;
+  }
 }

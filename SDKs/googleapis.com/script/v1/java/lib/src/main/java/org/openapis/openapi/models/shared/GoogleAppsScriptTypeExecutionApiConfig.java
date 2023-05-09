@@ -18,9 +18,11 @@ public class GoogleAppsScriptTypeExecutionApiConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access")
     public GoogleAppsScriptTypeExecutionApiConfigAccessEnum access;
+
     public GoogleAppsScriptTypeExecutionApiConfig withAccess(GoogleAppsScriptTypeExecutionApiConfigAccessEnum access) {
         this.access = access;
         return this;
     }
     
+    public GoogleAppsScriptTypeExecutionApiConfig(){}
 }

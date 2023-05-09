@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TokenResourceRelationshipsGroups {
     @JsonProperty("data")
     public TokenResourceRelationshipsGroupsData[] data;
+
     public TokenResourceRelationshipsGroups withData(TokenResourceRelationshipsGroupsData[] data) {
         this.data = data;
         return this;
@@ -16,9 +17,14 @@ public class TokenResourceRelationshipsGroups {
     
     @JsonProperty("links")
     public TokenResourceRelationshipsGroupsLinks links;
+
     public TokenResourceRelationshipsGroups withLinks(TokenResourceRelationshipsGroupsLinks links) {
         this.links = links;
         return this;
     }
     
+    public TokenResourceRelationshipsGroups(@JsonProperty("data") TokenResourceRelationshipsGroupsData[] data, @JsonProperty("links") TokenResourceRelationshipsGroupsLinks links) {
+        this.data = data;
+        this.links = links;
+  }
 }

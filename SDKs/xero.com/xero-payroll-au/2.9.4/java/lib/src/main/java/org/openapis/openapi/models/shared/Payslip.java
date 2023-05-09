@@ -12,6 +12,7 @@ public class Payslip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeductionLines")
     public DeductionLine[] deductionLines;
+
     public Payslip withDeductionLines(DeductionLine[] deductionLines) {
         this.deductionLines = deductionLines;
         return this;
@@ -23,6 +24,7 @@ public class Payslip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Deductions")
     public Double deductions;
+
     public Payslip withDeductions(Double deductions) {
         this.deductions = deductions;
         return this;
@@ -31,6 +33,7 @@ public class Payslip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EarningsLines")
     public EarningsLine[] earningsLines;
+
     public Payslip withEarningsLines(EarningsLine[] earningsLines) {
         this.earningsLines = earningsLines;
         return this;
@@ -42,6 +45,7 @@ public class Payslip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmployeeID")
     public String employeeID;
+
     public Payslip withEmployeeID(String employeeID) {
         this.employeeID = employeeID;
         return this;
@@ -53,6 +57,7 @@ public class Payslip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstName")
     public String firstName;
+
     public Payslip withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -64,6 +69,7 @@ public class Payslip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastName")
     public String lastName;
+
     public Payslip withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -72,6 +78,7 @@ public class Payslip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LeaveAccrualLines")
     public LeaveAccrualLine[] leaveAccrualLines;
+
     public Payslip withLeaveAccrualLines(LeaveAccrualLine[] leaveAccrualLines) {
         this.leaveAccrualLines = leaveAccrualLines;
         return this;
@@ -80,6 +87,7 @@ public class Payslip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LeaveEarningsLines")
     public LeaveEarningsLine[] leaveEarningsLines;
+
     public Payslip withLeaveEarningsLines(LeaveEarningsLine[] leaveEarningsLines) {
         this.leaveEarningsLines = leaveEarningsLines;
         return this;
@@ -91,6 +99,7 @@ public class Payslip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetPay")
     public Double netPay;
+
     public Payslip withNetPay(Double netPay) {
         this.netPay = netPay;
         return this;
@@ -102,6 +111,7 @@ public class Payslip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PayslipID")
     public String payslipID;
+
     public Payslip withPayslipID(String payslipID) {
         this.payslipID = payslipID;
         return this;
@@ -110,6 +120,7 @@ public class Payslip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReimbursementLines")
     public ReimbursementLine[] reimbursementLines;
+
     public Payslip withReimbursementLines(ReimbursementLine[] reimbursementLines) {
         this.reimbursementLines = reimbursementLines;
         return this;
@@ -121,6 +132,7 @@ public class Payslip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reimbursements")
     public Double reimbursements;
+
     public Payslip withReimbursements(Double reimbursements) {
         this.reimbursements = reimbursements;
         return this;
@@ -132,6 +144,7 @@ public class Payslip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Super")
     public Double super_;
+
     public Payslip withSuper(Double super_) {
         this.super_ = super_;
         return this;
@@ -140,6 +153,7 @@ public class Payslip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuperannuationLines")
     public SuperannuationLine[] superannuationLines;
+
     public Payslip withSuperannuationLines(SuperannuationLine[] superannuationLines) {
         this.superannuationLines = superannuationLines;
         return this;
@@ -151,6 +165,7 @@ public class Payslip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tax")
     public Double tax;
+
     public Payslip withTax(Double tax) {
         this.tax = tax;
         return this;
@@ -159,6 +174,7 @@ public class Payslip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxLines")
     public TaxLine[] taxLines;
+
     public Payslip withTaxLines(TaxLine[] taxLines) {
         this.taxLines = taxLines;
         return this;
@@ -167,6 +183,7 @@ public class Payslip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimesheetEarningsLines")
     public EarningsLine[] timesheetEarningsLines;
+
     public Payslip withTimesheetEarningsLines(EarningsLine[] timesheetEarningsLines) {
         this.timesheetEarningsLines = timesheetEarningsLines;
         return this;
@@ -178,6 +195,7 @@ public class Payslip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdatedDateUTC")
     public String updatedDateUTC;
+
     public Payslip withUpdatedDateUTC(String updatedDateUTC) {
         this.updatedDateUTC = updatedDateUTC;
         return this;
@@ -189,9 +207,11 @@ public class Payslip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Wages")
     public Double wages;
+
     public Payslip withWages(Double wages) {
         this.wages = wages;
         return this;
     }
     
+    public Payslip(){}
 }

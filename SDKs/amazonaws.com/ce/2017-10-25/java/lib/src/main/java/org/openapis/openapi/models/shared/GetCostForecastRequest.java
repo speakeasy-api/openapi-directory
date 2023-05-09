@@ -12,6 +12,7 @@ public class GetCostForecastRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public Expression filter;
+
     public GetCostForecastRequest withFilter(Expression filter) {
         this.filter = filter;
         return this;
@@ -19,6 +20,7 @@ public class GetCostForecastRequest {
     
     @JsonProperty("Granularity")
     public GranularityEnum granularity;
+
     public GetCostForecastRequest withGranularity(GranularityEnum granularity) {
         this.granularity = granularity;
         return this;
@@ -26,6 +28,7 @@ public class GetCostForecastRequest {
     
     @JsonProperty("Metric")
     public MetricEnum metric;
+
     public GetCostForecastRequest withMetric(MetricEnum metric) {
         this.metric = metric;
         return this;
@@ -34,6 +37,7 @@ public class GetCostForecastRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictionIntervalLevel")
     public Long predictionIntervalLevel;
+
     public GetCostForecastRequest withPredictionIntervalLevel(Long predictionIntervalLevel) {
         this.predictionIntervalLevel = predictionIntervalLevel;
         return this;
@@ -41,9 +45,15 @@ public class GetCostForecastRequest {
     
     @JsonProperty("TimePeriod")
     public DateInterval timePeriod;
+
     public GetCostForecastRequest withTimePeriod(DateInterval timePeriod) {
         this.timePeriod = timePeriod;
         return this;
     }
     
+    public GetCostForecastRequest(@JsonProperty("Granularity") GranularityEnum granularity, @JsonProperty("Metric") MetricEnum metric, @JsonProperty("TimePeriod") DateInterval timePeriod) {
+        this.granularity = granularity;
+        this.metric = metric;
+        this.timePeriod = timePeriod;
+  }
 }

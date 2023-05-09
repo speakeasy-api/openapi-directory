@@ -15,6 +15,7 @@ public class CreatePipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreatePipeRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class CreatePipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredState")
     public CreatePipeRequestBodyDesiredStateEnum desiredState;
+
     public CreatePipeRequestBody withDesiredState(CreatePipeRequestBodyDesiredStateEnum desiredState) {
         this.desiredState = desiredState;
         return this;
@@ -37,6 +39,7 @@ public class CreatePipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enrichment")
     public String enrichment;
+
     public CreatePipeRequestBody withEnrichment(String enrichment) {
         this.enrichment = enrichment;
         return this;
@@ -48,6 +51,7 @@ public class CreatePipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnrichmentParameters")
     public CreatePipeRequestBodyEnrichmentParameters enrichmentParameters;
+
     public CreatePipeRequestBody withEnrichmentParameters(CreatePipeRequestBodyEnrichmentParameters enrichmentParameters) {
         this.enrichmentParameters = enrichmentParameters;
         return this;
@@ -58,6 +62,7 @@ public class CreatePipeRequestBody {
      */
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreatePipeRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -68,6 +73,7 @@ public class CreatePipeRequestBody {
      */
     @JsonProperty("Source")
     public String source;
+
     public CreatePipeRequestBody withSource(String source) {
         this.source = source;
         return this;
@@ -79,6 +85,7 @@ public class CreatePipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceParameters")
     public CreatePipeRequestBodySourceParameters sourceParameters;
+
     public CreatePipeRequestBody withSourceParameters(CreatePipeRequestBodySourceParameters sourceParameters) {
         this.sourceParameters = sourceParameters;
         return this;
@@ -90,6 +97,7 @@ public class CreatePipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreatePipeRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -100,6 +108,7 @@ public class CreatePipeRequestBody {
      */
     @JsonProperty("Target")
     public String target;
+
     public CreatePipeRequestBody withTarget(String target) {
         this.target = target;
         return this;
@@ -111,9 +120,15 @@ public class CreatePipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetParameters")
     public CreatePipeRequestBodyTargetParameters targetParameters;
+
     public CreatePipeRequestBody withTargetParameters(CreatePipeRequestBodyTargetParameters targetParameters) {
         this.targetParameters = targetParameters;
         return this;
     }
     
+    public CreatePipeRequestBody(@JsonProperty("RoleArn") String roleArn, @JsonProperty("Source") String source, @JsonProperty("Target") String target) {
+        this.roleArn = roleArn;
+        this.source = source;
+        this.target = target;
+  }
 }

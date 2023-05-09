@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdRequest {
@@ -12,6 +13,7 @@ public class DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
     public Long commentId;
+
     public DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdRequest withCommentId(Long commentId) {
         this.commentId = commentId;
         return this;
@@ -22,6 +24,7 @@ public class DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=encoded_id")
     public String encodedId;
+
     public DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdRequest withEncodedId(String encodedId) {
         this.encodedId = encodedId;
         return this;
@@ -34,9 +37,15 @@ public class DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdRequest(@JsonProperty("comment_id") Long commentId, @JsonProperty("encoded_id") String encodedId, @JsonProperty("workspace") String workspace) {
+        this.commentId = commentId;
+        this.encodedId = encodedId;
+        this.workspace = workspace;
+  }
 }

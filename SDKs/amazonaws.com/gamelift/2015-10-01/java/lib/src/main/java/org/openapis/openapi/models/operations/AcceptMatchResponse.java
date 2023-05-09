@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AcceptMatchResponse {
@@ -12,6 +13,7 @@ public class AcceptMatchResponse {
      */
     
     public java.util.Map<String, Object> acceptMatchOutput;
+
     public AcceptMatchResponse withAcceptMatchOutput(java.util.Map<String, Object> acceptMatchOutput) {
         this.acceptMatchOutput = acceptMatchOutput;
         return this;
@@ -19,6 +21,7 @@ public class AcceptMatchResponse {
     
     
     public String contentType;
+
     public AcceptMatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AcceptMatchResponse {
      */
     
     public Object internalServiceException;
+
     public AcceptMatchResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class AcceptMatchResponse {
      */
     
     public Object invalidRequestException;
+
     public AcceptMatchResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class AcceptMatchResponse {
      */
     
     public Object notFoundException;
+
     public AcceptMatchResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class AcceptMatchResponse {
     
     
     public Integer statusCode;
+
     public AcceptMatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AcceptMatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AcceptMatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class AcceptMatchResponse {
      */
     
     public Object unsupportedRegionException;
+
     public AcceptMatchResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public AcceptMatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetryStageExecutionResponse {
@@ -12,6 +13,7 @@ public class RetryStageExecutionResponse {
      */
     
     public Object conflictException;
+
     public RetryStageExecutionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class RetryStageExecutionResponse {
     
     
     public String contentType;
+
     public RetryStageExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RetryStageExecutionResponse {
      */
     
     public Object notLatestPipelineExecutionException;
+
     public RetryStageExecutionResponse withNotLatestPipelineExecutionException(Object notLatestPipelineExecutionException) {
         this.notLatestPipelineExecutionException = notLatestPipelineExecutionException;
         return this;
@@ -39,6 +43,7 @@ public class RetryStageExecutionResponse {
      */
     
     public Object pipelineNotFoundException;
+
     public RetryStageExecutionResponse withPipelineNotFoundException(Object pipelineNotFoundException) {
         this.pipelineNotFoundException = pipelineNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class RetryStageExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryStageExecutionOutput retryStageExecutionOutput;
+
     public RetryStageExecutionResponse withRetryStageExecutionOutput(org.openapis.openapi.models.shared.RetryStageExecutionOutput retryStageExecutionOutput) {
         this.retryStageExecutionOutput = retryStageExecutionOutput;
         return this;
@@ -59,6 +65,7 @@ public class RetryStageExecutionResponse {
      */
     
     public Object stageNotRetryableException;
+
     public RetryStageExecutionResponse withStageNotRetryableException(Object stageNotRetryableException) {
         this.stageNotRetryableException = stageNotRetryableException;
         return this;
@@ -66,6 +73,7 @@ public class RetryStageExecutionResponse {
     
     
     public Integer statusCode;
+
     public RetryStageExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class RetryStageExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetryStageExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class RetryStageExecutionResponse {
      */
     
     public Object stageNotFoundException;
+
     public RetryStageExecutionResponse withStageNotFoundException(Object stageNotFoundException) {
         this.stageNotFoundException = stageNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class RetryStageExecutionResponse {
      */
     
     public Object validationException;
+
     public RetryStageExecutionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RetryStageExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

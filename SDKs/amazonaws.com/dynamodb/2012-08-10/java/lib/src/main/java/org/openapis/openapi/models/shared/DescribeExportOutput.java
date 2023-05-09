@@ -15,9 +15,11 @@ public class DescribeExportOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportDescription")
     public ExportDescription exportDescription;
+
     public DescribeExportOutput withExportDescription(ExportDescription exportDescription) {
         this.exportDescription = exportDescription;
         return this;
     }
     
+    public DescribeExportOutput(){}
 }

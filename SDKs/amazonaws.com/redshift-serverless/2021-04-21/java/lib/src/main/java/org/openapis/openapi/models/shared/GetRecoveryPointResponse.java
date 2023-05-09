@@ -15,9 +15,11 @@ public class GetRecoveryPointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recoveryPoint")
     public RecoveryPoint recoveryPoint;
+
     public GetRecoveryPointResponse withRecoveryPoint(RecoveryPoint recoveryPoint) {
         this.recoveryPoint = recoveryPoint;
         return this;
     }
     
+    public GetRecoveryPointResponse(){}
 }

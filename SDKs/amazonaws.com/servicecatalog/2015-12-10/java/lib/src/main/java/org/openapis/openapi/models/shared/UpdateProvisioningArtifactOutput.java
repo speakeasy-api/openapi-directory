@@ -15,6 +15,7 @@ public class UpdateProvisioningArtifactOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Info")
     public java.util.Map<String, String> info;
+
     public UpdateProvisioningArtifactOutput withInfo(java.util.Map<String, String> info) {
         this.info = info;
         return this;
@@ -23,6 +24,7 @@ public class UpdateProvisioningArtifactOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactDetail")
     public ProvisioningArtifactDetail provisioningArtifactDetail;
+
     public UpdateProvisioningArtifactOutput withProvisioningArtifactDetail(ProvisioningArtifactDetail provisioningArtifactDetail) {
         this.provisioningArtifactDetail = provisioningArtifactDetail;
         return this;
@@ -31,9 +33,11 @@ public class UpdateProvisioningArtifactOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatusEnum status;
+
     public UpdateProvisioningArtifactOutput withStatus(StatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateProvisioningArtifactOutput(){}
 }

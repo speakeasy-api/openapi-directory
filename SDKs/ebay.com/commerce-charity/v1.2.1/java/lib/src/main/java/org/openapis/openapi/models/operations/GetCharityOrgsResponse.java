@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCharityOrgsResponse {
@@ -12,6 +13,7 @@ public class GetCharityOrgsResponse {
      */
     
     public org.openapis.openapi.models.shared.CharitySearchResponse charitySearchResponse;
+
     public GetCharityOrgsResponse withCharitySearchResponse(org.openapis.openapi.models.shared.CharitySearchResponse charitySearchResponse) {
         this.charitySearchResponse = charitySearchResponse;
         return this;
@@ -19,6 +21,7 @@ public class GetCharityOrgsResponse {
     
     
     public String contentType;
+
     public GetCharityOrgsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetCharityOrgsResponse {
     
     
     public Integer statusCode;
+
     public GetCharityOrgsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetCharityOrgsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCharityOrgsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCharityOrgsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

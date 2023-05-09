@@ -18,6 +18,7 @@ public class Metric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Metric withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class Metric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Metric withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Metric(){}
 }

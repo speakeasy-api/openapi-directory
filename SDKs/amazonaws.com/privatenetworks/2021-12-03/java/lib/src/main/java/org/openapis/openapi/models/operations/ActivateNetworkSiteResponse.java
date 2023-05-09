@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActivateNetworkSiteResponse {
@@ -12,6 +13,7 @@ public class ActivateNetworkSiteResponse {
      */
     
     public org.openapis.openapi.models.shared.ActivateNetworkSiteResponse activateNetworkSiteResponse;
+
     public ActivateNetworkSiteResponse withActivateNetworkSiteResponse(org.openapis.openapi.models.shared.ActivateNetworkSiteResponse activateNetworkSiteResponse) {
         this.activateNetworkSiteResponse = activateNetworkSiteResponse;
         return this;
@@ -19,6 +21,7 @@ public class ActivateNetworkSiteResponse {
     
     
     public String contentType;
+
     public ActivateNetworkSiteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ActivateNetworkSiteResponse {
      */
     
     public Object internalServerException;
+
     public ActivateNetworkSiteResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ActivateNetworkSiteResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ActivateNetworkSiteResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ActivateNetworkSiteResponse {
     
     
     public Integer statusCode;
+
     public ActivateNetworkSiteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ActivateNetworkSiteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActivateNetworkSiteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ActivateNetworkSiteResponse {
      */
     
     public Object validationException;
+
     public ActivateNetworkSiteResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ActivateNetworkSiteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

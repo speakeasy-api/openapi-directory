@@ -59,11 +59,9 @@ public class Colors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarColorsGetResponse res = new org.openapis.openapi.models.operations.CalendarColorsGetResponse() {{
+        org.openapis.openapi.models.operations.CalendarColorsGetResponse res = new org.openapis.openapi.models.operations.CalendarColorsGetResponse(contentType, httpRes.statusCode()) {{
             colors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

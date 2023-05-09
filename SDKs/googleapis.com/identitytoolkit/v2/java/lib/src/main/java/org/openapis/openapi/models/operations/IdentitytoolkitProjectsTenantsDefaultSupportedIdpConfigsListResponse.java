@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListResponse {
     
     public String contentType;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListRespons
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpConfigsResponse googleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpConfigsResponse;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListResponse withGoogleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpConfigsResponse(org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpConfigsResponse googleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpConfigsResponse) {
         this.googleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpConfigsResponse = googleCloudIdentitytoolkitAdminV2ListDefaultSupportedIdpConfigsResponse;
         return this;
@@ -26,6 +29,7 @@ public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListRespons
     
     
     public Integer statusCode;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListRespons
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

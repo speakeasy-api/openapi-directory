@@ -15,6 +15,7 @@ public class Cfmst401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Cfmst401ApplicationJSONErrorEnum error;
+
     public Cfmst401ApplicationJSON withError(Cfmst401ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Cfmst401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Cfmst401ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Cfmst401ApplicationJSON withErrorDescription(Cfmst401ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Cfmst401ApplicationJSON(){}
 }

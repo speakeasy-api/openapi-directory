@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAggregateComplianceDetailsByConfigRuleRequest {
     @JsonProperty("AccountId")
     public String accountId;
+
     public GetAggregateComplianceDetailsByConfigRuleRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -18,6 +19,7 @@ public class GetAggregateComplianceDetailsByConfigRuleRequest {
     
     @JsonProperty("AwsRegion")
     public String awsRegion;
+
     public GetAggregateComplianceDetailsByConfigRuleRequest withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -26,6 +28,7 @@ public class GetAggregateComplianceDetailsByConfigRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceType")
     public ComplianceTypeEnum complianceType;
+
     public GetAggregateComplianceDetailsByConfigRuleRequest withComplianceType(ComplianceTypeEnum complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -33,6 +36,7 @@ public class GetAggregateComplianceDetailsByConfigRuleRequest {
     
     @JsonProperty("ConfigRuleName")
     public String configRuleName;
+
     public GetAggregateComplianceDetailsByConfigRuleRequest withConfigRuleName(String configRuleName) {
         this.configRuleName = configRuleName;
         return this;
@@ -40,6 +44,7 @@ public class GetAggregateComplianceDetailsByConfigRuleRequest {
     
     @JsonProperty("ConfigurationAggregatorName")
     public String configurationAggregatorName;
+
     public GetAggregateComplianceDetailsByConfigRuleRequest withConfigurationAggregatorName(String configurationAggregatorName) {
         this.configurationAggregatorName = configurationAggregatorName;
         return this;
@@ -48,6 +53,7 @@ public class GetAggregateComplianceDetailsByConfigRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public GetAggregateComplianceDetailsByConfigRuleRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -56,9 +62,16 @@ public class GetAggregateComplianceDetailsByConfigRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetAggregateComplianceDetailsByConfigRuleRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetAggregateComplianceDetailsByConfigRuleRequest(@JsonProperty("AccountId") String accountId, @JsonProperty("AwsRegion") String awsRegion, @JsonProperty("ConfigRuleName") String configRuleName, @JsonProperty("ConfigurationAggregatorName") String configurationAggregatorName) {
+        this.accountId = accountId;
+        this.awsRegion = awsRegion;
+        this.configRuleName = configRuleName;
+        this.configurationAggregatorName = configurationAggregatorName;
+  }
 }

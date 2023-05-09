@@ -15,6 +15,7 @@ public class AwsCertificateManagerCertificateRenewalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainValidationOptions")
     public AwsCertificateManagerCertificateDomainValidationOption[] domainValidationOptions;
+
     public AwsCertificateManagerCertificateRenewalSummary withDomainValidationOptions(AwsCertificateManagerCertificateDomainValidationOption[] domainValidationOptions) {
         this.domainValidationOptions = domainValidationOptions;
         return this;
@@ -23,6 +24,7 @@ public class AwsCertificateManagerCertificateRenewalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RenewalStatus")
     public String renewalStatus;
+
     public AwsCertificateManagerCertificateRenewalSummary withRenewalStatus(String renewalStatus) {
         this.renewalStatus = renewalStatus;
         return this;
@@ -31,6 +33,7 @@ public class AwsCertificateManagerCertificateRenewalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RenewalStatusReason")
     public String renewalStatusReason;
+
     public AwsCertificateManagerCertificateRenewalSummary withRenewalStatusReason(String renewalStatusReason) {
         this.renewalStatusReason = renewalStatusReason;
         return this;
@@ -39,9 +42,11 @@ public class AwsCertificateManagerCertificateRenewalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdatedAt")
     public String updatedAt;
+
     public AwsCertificateManagerCertificateRenewalSummary withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public AwsCertificateManagerCertificateRenewalSummary(){}
 }

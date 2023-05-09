@@ -18,6 +18,7 @@ public class SynthesisInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssml")
     public String ssml;
+
     public SynthesisInput withSsml(String ssml) {
         this.ssml = ssml;
         return this;
@@ -29,9 +30,11 @@ public class SynthesisInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public SynthesisInput withText(String text) {
         this.text = text;
         return this;
     }
     
+    public SynthesisInput(){}
 }

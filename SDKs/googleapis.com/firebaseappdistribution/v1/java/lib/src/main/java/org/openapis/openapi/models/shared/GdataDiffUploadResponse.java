@@ -15,6 +15,7 @@ public class GdataDiffUploadResponse {
      */
     
     public String objectVersion;
+
     public GdataDiffUploadResponse withObjectVersion(String objectVersion) {
         this.objectVersion = objectVersion;
         return this;
@@ -25,9 +26,11 @@ public class GdataDiffUploadResponse {
      */
     
     public GdataCompositeMedia originalObject;
+
     public GdataDiffUploadResponse withOriginalObject(GdataCompositeMedia originalObject) {
         this.originalObject = originalObject;
         return this;
     }
     
+    public GdataDiffUploadResponse(){}
 }

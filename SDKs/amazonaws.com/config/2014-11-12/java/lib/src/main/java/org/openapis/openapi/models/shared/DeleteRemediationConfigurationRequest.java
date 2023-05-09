@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteRemediationConfigurationRequest {
     @JsonProperty("ConfigRuleName")
     public String configRuleName;
+
     public DeleteRemediationConfigurationRequest withConfigRuleName(String configRuleName) {
         this.configRuleName = configRuleName;
         return this;
@@ -19,9 +20,13 @@ public class DeleteRemediationConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public DeleteRemediationConfigurationRequest withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public DeleteRemediationConfigurationRequest(@JsonProperty("ConfigRuleName") String configRuleName) {
+        this.configRuleName = configRuleName;
+  }
 }

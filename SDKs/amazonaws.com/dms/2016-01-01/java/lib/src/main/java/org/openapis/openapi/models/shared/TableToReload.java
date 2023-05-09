@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TableToReload {
     @JsonProperty("SchemaName")
     public String schemaName;
+
     public TableToReload withSchemaName(String schemaName) {
         this.schemaName = schemaName;
         return this;
@@ -19,9 +20,14 @@ public class TableToReload {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public TableToReload withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public TableToReload(@JsonProperty("SchemaName") String schemaName, @JsonProperty("TableName") String tableName) {
+        this.schemaName = schemaName;
+        this.tableName = tableName;
+  }
 }

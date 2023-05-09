@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartDataSourceSyncJobRequest {
     @JsonProperty("Id")
     public String id;
+
     public StartDataSourceSyncJobRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class StartDataSourceSyncJobRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public StartDataSourceSyncJobRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
     }
     
+    public StartDataSourceSyncJobRequest(@JsonProperty("Id") String id, @JsonProperty("IndexId") String indexId) {
+        this.id = id;
+        this.indexId = indexId;
+  }
 }

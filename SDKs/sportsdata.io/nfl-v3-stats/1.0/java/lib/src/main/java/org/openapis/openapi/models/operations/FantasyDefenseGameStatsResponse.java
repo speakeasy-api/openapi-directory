@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FantasyDefenseGameStatsResponse {
     
     public String contentType;
+
     public FantasyDefenseGameStatsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class FantasyDefenseGameStatsResponse {
     
     
     public org.openapis.openapi.models.shared.FantasyDefenseGame[] fantasyDefenseGames;
+
     public FantasyDefenseGameStatsResponse withFantasyDefenseGames(org.openapis.openapi.models.shared.FantasyDefenseGame[] fantasyDefenseGames) {
         this.fantasyDefenseGames = fantasyDefenseGames;
         return this;
@@ -23,6 +26,7 @@ public class FantasyDefenseGameStatsResponse {
     
     
     public Integer statusCode;
+
     public FantasyDefenseGameStatsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class FantasyDefenseGameStatsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FantasyDefenseGameStatsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FantasyDefenseGameStatsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

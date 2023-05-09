@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PullRequestHeadRepoLicense {
     @JsonProperty("key")
     public String key;
+
     public PullRequestHeadRepoLicense withKey(String key) {
         this.key = key;
         return this;
@@ -16,6 +17,7 @@ public class PullRequestHeadRepoLicense {
     
     @JsonProperty("name")
     public String name;
+
     public PullRequestHeadRepoLicense withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +25,7 @@ public class PullRequestHeadRepoLicense {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public PullRequestHeadRepoLicense withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -30,6 +33,7 @@ public class PullRequestHeadRepoLicense {
     
     @JsonProperty("spdx_id")
     public String spdxId;
+
     public PullRequestHeadRepoLicense withSpdxId(String spdxId) {
         this.spdxId = spdxId;
         return this;
@@ -37,9 +41,17 @@ public class PullRequestHeadRepoLicense {
     
     @JsonProperty("url")
     public String url;
+
     public PullRequestHeadRepoLicense withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PullRequestHeadRepoLicense(@JsonProperty("key") String key, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("spdx_id") String spdxId, @JsonProperty("url") String url) {
+        this.key = key;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.spdxId = spdxId;
+        this.url = url;
+  }
 }

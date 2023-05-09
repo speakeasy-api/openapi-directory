@@ -15,6 +15,7 @@ public class RequestAccessData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concurrentAccess")
     public ConcurrentAccessRestriction concurrentAccess;
+
     public RequestAccessData withConcurrentAccess(ConcurrentAccessRestriction concurrentAccess) {
         this.concurrentAccess = concurrentAccess;
         return this;
@@ -23,6 +24,7 @@ public class RequestAccessData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadAccess")
     public DownloadAccessRestriction downloadAccess;
+
     public RequestAccessData withDownloadAccess(DownloadAccessRestriction downloadAccess) {
         this.downloadAccess = downloadAccess;
         return this;
@@ -34,9 +36,11 @@ public class RequestAccessData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RequestAccessData withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public RequestAccessData(){}
 }

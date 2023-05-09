@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScrobbleShowsShowIdRequest {
@@ -12,6 +13,7 @@ public class GetScrobbleShowsShowIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
     public GetScrobbleShowsShowIdEmbedEnum embed;
+
     public GetScrobbleShowsShowIdRequest withEmbed(GetScrobbleShowsShowIdEmbedEnum embed) {
         this.embed = embed;
         return this;
@@ -22,9 +24,13 @@ public class GetScrobbleShowsShowIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=show_id")
     public Long showId;
+
     public GetScrobbleShowsShowIdRequest withShowId(Long showId) {
         this.showId = showId;
         return this;
     }
     
+    public GetScrobbleShowsShowIdRequest(@JsonProperty("show_id") Long showId) {
+        this.showId = showId;
+  }
 }

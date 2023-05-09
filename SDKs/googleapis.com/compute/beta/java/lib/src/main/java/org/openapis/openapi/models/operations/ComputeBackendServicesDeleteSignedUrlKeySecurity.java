@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeBackendServicesDeleteSignedUrlKeySecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeBackendServicesDeleteSignedUrlKeySecurityOption1 option1;
+
     public ComputeBackendServicesDeleteSignedUrlKeySecurity withOption1(ComputeBackendServicesDeleteSignedUrlKeySecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeBackendServicesDeleteSignedUrlKeySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeBackendServicesDeleteSignedUrlKeySecurityOption2 option2;
+
     public ComputeBackendServicesDeleteSignedUrlKeySecurity withOption2(ComputeBackendServicesDeleteSignedUrlKeySecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeBackendServicesDeleteSignedUrlKeySecurity(){}
 }

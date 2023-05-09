@@ -18,6 +18,7 @@ public class QueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheHit")
     public Boolean cacheHit;
+
     public QueryResponse withCacheHit(Boolean cacheHit) {
         this.cacheHit = cacheHit;
         return this;
@@ -26,6 +27,7 @@ public class QueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dmlStats")
     public DmlStatistics dmlStats;
+
     public QueryResponse withDmlStats(DmlStatistics dmlStats) {
         this.dmlStats = dmlStats;
         return this;
@@ -37,6 +39,7 @@ public class QueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ErrorProto[] errors;
+
     public QueryResponse withErrors(ErrorProto[] errors) {
         this.errors = errors;
         return this;
@@ -48,6 +51,7 @@ public class QueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobComplete")
     public Boolean jobComplete;
+
     public QueryResponse withJobComplete(Boolean jobComplete) {
         this.jobComplete = jobComplete;
         return this;
@@ -56,6 +60,7 @@ public class QueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobReference")
     public JobReference jobReference;
+
     public QueryResponse withJobReference(JobReference jobReference) {
         this.jobReference = jobReference;
         return this;
@@ -67,6 +72,7 @@ public class QueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public QueryResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -78,6 +84,7 @@ public class QueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numDmlAffectedRows")
     public String numDmlAffectedRows;
+
     public QueryResponse withNumDmlAffectedRows(String numDmlAffectedRows) {
         this.numDmlAffectedRows = numDmlAffectedRows;
         return this;
@@ -89,6 +96,7 @@ public class QueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public QueryResponse withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -100,6 +108,7 @@ public class QueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public TableRow[] rows;
+
     public QueryResponse withRows(TableRow[] rows) {
         this.rows = rows;
         return this;
@@ -108,6 +117,7 @@ public class QueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public TableSchema schema;
+
     public QueryResponse withSchema(TableSchema schema) {
         this.schema = schema;
         return this;
@@ -116,6 +126,7 @@ public class QueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionInfo")
     public SessionInfo sessionInfo;
+
     public QueryResponse withSessionInfo(SessionInfo sessionInfo) {
         this.sessionInfo = sessionInfo;
         return this;
@@ -127,6 +138,7 @@ public class QueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalBytesProcessed")
     public String totalBytesProcessed;
+
     public QueryResponse withTotalBytesProcessed(String totalBytesProcessed) {
         this.totalBytesProcessed = totalBytesProcessed;
         return this;
@@ -138,9 +150,11 @@ public class QueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalRows")
     public String totalRows;
+
     public QueryResponse withTotalRows(String totalRows) {
         this.totalRows = totalRows;
         return this;
     }
     
+    public QueryResponse(){}
 }

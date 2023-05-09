@@ -18,6 +18,7 @@ public class CustomerListCustomersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customers")
     public Company[] customers;
+
     public CustomerListCustomersResponse withCustomers(Company[] customers) {
         this.customers = customers;
         return this;
@@ -29,9 +30,11 @@ public class CustomerListCustomersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public CustomerListCustomersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public CustomerListCustomersResponse(){}
 }

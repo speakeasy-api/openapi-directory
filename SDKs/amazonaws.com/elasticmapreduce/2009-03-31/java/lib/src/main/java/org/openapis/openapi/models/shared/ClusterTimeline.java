@@ -22,6 +22,7 @@ public class ClusterTimeline {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public ClusterTimeline withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -32,6 +33,7 @@ public class ClusterTimeline {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndDateTime")
     public OffsetDateTime endDateTime;
+
     public ClusterTimeline withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -42,9 +44,11 @@ public class ClusterTimeline {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReadyDateTime")
     public OffsetDateTime readyDateTime;
+
     public ClusterTimeline withReadyDateTime(OffsetDateTime readyDateTime) {
         this.readyDateTime = readyDateTime;
         return this;
     }
     
+    public ClusterTimeline(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateScalingPlanRequest {
     @JsonProperty("ApplicationSource")
     public ApplicationSource applicationSource;
+
     public CreateScalingPlanRequest withApplicationSource(ApplicationSource applicationSource) {
         this.applicationSource = applicationSource;
         return this;
@@ -16,6 +17,7 @@ public class CreateScalingPlanRequest {
     
     @JsonProperty("ScalingInstructions")
     public ScalingInstruction[] scalingInstructions;
+
     public CreateScalingPlanRequest withScalingInstructions(ScalingInstruction[] scalingInstructions) {
         this.scalingInstructions = scalingInstructions;
         return this;
@@ -23,9 +25,15 @@ public class CreateScalingPlanRequest {
     
     @JsonProperty("ScalingPlanName")
     public String scalingPlanName;
+
     public CreateScalingPlanRequest withScalingPlanName(String scalingPlanName) {
         this.scalingPlanName = scalingPlanName;
         return this;
     }
     
+    public CreateScalingPlanRequest(@JsonProperty("ApplicationSource") ApplicationSource applicationSource, @JsonProperty("ScalingInstructions") ScalingInstruction[] scalingInstructions, @JsonProperty("ScalingPlanName") String scalingPlanName) {
+        this.applicationSource = applicationSource;
+        this.scalingInstructions = scalingInstructions;
+        this.scalingPlanName = scalingPlanName;
+  }
 }

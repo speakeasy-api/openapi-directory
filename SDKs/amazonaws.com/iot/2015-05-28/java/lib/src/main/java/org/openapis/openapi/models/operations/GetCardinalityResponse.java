@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCardinalityResponse {
     
     public String contentType;
+
     public GetCardinalityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCardinalityResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCardinalityResponse getCardinalityResponse;
+
     public GetCardinalityResponse withGetCardinalityResponse(org.openapis.openapi.models.shared.GetCardinalityResponse getCardinalityResponse) {
         this.getCardinalityResponse = getCardinalityResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetCardinalityResponse {
      */
     
     public Object indexNotReadyException;
+
     public GetCardinalityResponse withIndexNotReadyException(Object indexNotReadyException) {
         this.indexNotReadyException = indexNotReadyException;
         return this;
@@ -39,6 +43,7 @@ public class GetCardinalityResponse {
      */
     
     public Object internalFailureException;
+
     public GetCardinalityResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class GetCardinalityResponse {
      */
     
     public Object invalidAggregationException;
+
     public GetCardinalityResponse withInvalidAggregationException(Object invalidAggregationException) {
         this.invalidAggregationException = invalidAggregationException;
         return this;
@@ -59,6 +65,7 @@ public class GetCardinalityResponse {
      */
     
     public Object invalidQueryException;
+
     public GetCardinalityResponse withInvalidQueryException(Object invalidQueryException) {
         this.invalidQueryException = invalidQueryException;
         return this;
@@ -69,6 +76,7 @@ public class GetCardinalityResponse {
      */
     
     public Object invalidRequestException;
+
     public GetCardinalityResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -79,6 +87,7 @@ public class GetCardinalityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetCardinalityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class GetCardinalityResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetCardinalityResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -96,6 +106,7 @@ public class GetCardinalityResponse {
     
     
     public Integer statusCode;
+
     public GetCardinalityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class GetCardinalityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCardinalityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class GetCardinalityResponse {
      */
     
     public Object throttlingException;
+
     public GetCardinalityResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -123,9 +136,14 @@ public class GetCardinalityResponse {
      */
     
     public Object unauthorizedException;
+
     public GetCardinalityResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetCardinalityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

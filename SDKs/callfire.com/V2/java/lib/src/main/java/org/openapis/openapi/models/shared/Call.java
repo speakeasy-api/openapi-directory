@@ -18,6 +18,7 @@ public class Call {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentCall")
     public Boolean agentCall;
+
     public Call withAgentCall(Boolean agentCall) {
         this.agentCall = agentCall;
         return this;
@@ -29,6 +30,7 @@ public class Call {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public Call withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -40,6 +42,7 @@ public class Call {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchId")
     public Long batchId;
+
     public Call withBatchId(Long batchId) {
         this.batchId = batchId;
         return this;
@@ -51,6 +54,7 @@ public class Call {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignId")
     public Long campaignId;
+
     public Call withCampaignId(Long campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -62,6 +66,7 @@ public class Call {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact")
     public Contact contact;
+
     public Call withContact(Contact contact) {
         this.contact = contact;
         return this;
@@ -73,6 +78,7 @@ public class Call {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public Long created;
+
     public Call withCreated(Long created) {
         this.created = created;
         return this;
@@ -84,6 +90,7 @@ public class Call {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalCallResult")
     public CallFinalCallResultEnum finalCallResult;
+
     public Call withFinalCallResult(CallFinalCallResultEnum finalCallResult) {
         this.finalCallResult = finalCallResult;
         return this;
@@ -95,6 +102,7 @@ public class Call {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromNumber")
     public String fromNumber;
+
     public Call withFromNumber(String fromNumber) {
         this.fromNumber = fromNumber;
         return this;
@@ -106,6 +114,7 @@ public class Call {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Call withId(Long id) {
         this.id = id;
         return this;
@@ -117,6 +126,7 @@ public class Call {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inbound")
     public Boolean inbound;
+
     public Call withInbound(Boolean inbound) {
         this.inbound = inbound;
         return this;
@@ -128,6 +138,7 @@ public class Call {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String[] labels;
+
     public Call withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -139,6 +150,7 @@ public class Call {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modified")
     public Long modified;
+
     public Call withModified(Long modified) {
         this.modified = modified;
         return this;
@@ -150,6 +162,7 @@ public class Call {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public Note[] notes;
+
     public Call withNotes(Note[] notes) {
         this.notes = notes;
         return this;
@@ -161,6 +174,7 @@ public class Call {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("records")
     public CallRecord[] records;
+
     public Call withRecords(CallRecord[] records) {
         this.records = records;
         return this;
@@ -172,6 +186,7 @@ public class Call {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public CallStateEnum state;
+
     public Call withState(CallStateEnum state) {
         this.state = state;
         return this;
@@ -183,9 +198,11 @@ public class Call {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toNumber")
     public String toNumber;
+
     public Call withToNumber(String toNumber) {
         this.toNumber = toNumber;
         return this;
     }
     
+    public Call(){}
 }

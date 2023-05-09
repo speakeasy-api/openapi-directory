@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOrganizationThirdPartyVPNPeersRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateOrganizationThirdPartyVPNPeersRequestBody requestBody;
+
     public UpdateOrganizationThirdPartyVPNPeersRequest withRequestBody(UpdateOrganizationThirdPartyVPNPeersRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,14 @@ public class UpdateOrganizationThirdPartyVPNPeersRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public String organizationId;
+
     public UpdateOrganizationThirdPartyVPNPeersRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public UpdateOrganizationThirdPartyVPNPeersRequest(@JsonProperty("RequestBody") UpdateOrganizationThirdPartyVPNPeersRequestBody requestBody, @JsonProperty("organizationId") String organizationId) {
+        this.requestBody = requestBody;
+        this.organizationId = organizationId;
+  }
 }

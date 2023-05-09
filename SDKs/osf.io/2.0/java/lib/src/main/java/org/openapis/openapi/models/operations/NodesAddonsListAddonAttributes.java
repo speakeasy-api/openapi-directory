@@ -15,6 +15,7 @@ public class NodesAddonsListAddonAttributes {
      */
     
     public NodesAddonsListAddonAttributesCategoriesEnum[] categories;
+
     public NodesAddonsListAddonAttributes withCategories(NodesAddonsListAddonAttributesCategoriesEnum[] categories) {
         this.categories = categories;
         return this;
@@ -25,6 +26,7 @@ public class NodesAddonsListAddonAttributes {
      */
     
     public String description;
+
     public NodesAddonsListAddonAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class NodesAddonsListAddonAttributes {
      */
     
     public String name;
+
     public NodesAddonsListAddonAttributes withName(String name) {
         this.name = name;
         return this;
@@ -45,9 +48,11 @@ public class NodesAddonsListAddonAttributes {
      */
     
     public String url;
+
     public NodesAddonsListAddonAttributes withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public NodesAddonsListAddonAttributes(){}
 }

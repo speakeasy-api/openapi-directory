@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateInternationalStandingOrdersJsonResponse {
     
     public byte[] body;
+
     public CreateInternationalStandingOrdersJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CreateInternationalStandingOrdersJsonResponse {
     
     
     public String contentType;
+
     public CreateInternationalStandingOrdersJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class CreateInternationalStandingOrdersJsonResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CreateInternationalStandingOrdersJsonResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class CreateInternationalStandingOrdersJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public CreateInternationalStandingOrdersJsonResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -43,6 +48,7 @@ public class CreateInternationalStandingOrdersJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.OBWriteInternationalStandingOrderResponse7 obWriteInternationalStandingOrderResponse7;
+
     public CreateInternationalStandingOrdersJsonResponse withOBWriteInternationalStandingOrderResponse7(org.openapis.openapi.models.shared.OBWriteInternationalStandingOrderResponse7 obWriteInternationalStandingOrderResponse7) {
         this.obWriteInternationalStandingOrderResponse7 = obWriteInternationalStandingOrderResponse7;
         return this;
@@ -50,6 +56,7 @@ public class CreateInternationalStandingOrdersJsonResponse {
     
     
     public Integer statusCode;
+
     public CreateInternationalStandingOrdersJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -57,9 +64,14 @@ public class CreateInternationalStandingOrdersJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateInternationalStandingOrdersJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateInternationalStandingOrdersJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

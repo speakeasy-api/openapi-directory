@@ -15,9 +15,11 @@ public class DeleteVirtualInterfaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualInterfaceState")
     public VirtualInterfaceStateEnum virtualInterfaceState;
+
     public DeleteVirtualInterfaceResponse withVirtualInterfaceState(VirtualInterfaceStateEnum virtualInterfaceState) {
         this.virtualInterfaceState = virtualInterfaceState;
         return this;
     }
     
+    public DeleteVirtualInterfaceResponse(){}
 }

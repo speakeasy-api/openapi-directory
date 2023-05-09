@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppInvitationsUpdatePermissionsResponse {
     
     public String contentType;
+
     public AppInvitationsUpdatePermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppInvitationsUpdatePermissionsResponse {
     
     
     public Integer statusCode;
+
     public AppInvitationsUpdatePermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AppInvitationsUpdatePermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppInvitationsUpdatePermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class AppInvitationsUpdatePermissionsResponse {
      */
     
     public AppInvitationsUpdatePermissionsDefaultApplicationJSON appInvitationsUpdatePermissionsDefaultApplicationJSONObject;
+
     public AppInvitationsUpdatePermissionsResponse withAppInvitationsUpdatePermissionsDefaultApplicationJSONObject(AppInvitationsUpdatePermissionsDefaultApplicationJSON appInvitationsUpdatePermissionsDefaultApplicationJSONObject) {
         this.appInvitationsUpdatePermissionsDefaultApplicationJSONObject = appInvitationsUpdatePermissionsDefaultApplicationJSONObject;
         return this;
     }
     
+    public AppInvitationsUpdatePermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

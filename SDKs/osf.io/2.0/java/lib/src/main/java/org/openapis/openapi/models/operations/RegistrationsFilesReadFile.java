@@ -15,6 +15,7 @@ public class RegistrationsFilesReadFile {
      */
     
     public RegistrationsFilesReadFileAttributes attributes;
+
     public RegistrationsFilesReadFile withAttributes(RegistrationsFilesReadFileAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class RegistrationsFilesReadFile {
      */
     
     public String id;
+
     public RegistrationsFilesReadFile withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class RegistrationsFilesReadFile {
      */
     
     public RegistrationsFilesReadFileLinks links;
+
     public RegistrationsFilesReadFile withLinks(RegistrationsFilesReadFileLinks links) {
         this.links = links;
         return this;
@@ -45,6 +48,7 @@ public class RegistrationsFilesReadFile {
      */
     
     public RegistrationsFilesReadFileRelationships relationships;
+
     public RegistrationsFilesReadFile withRelationships(RegistrationsFilesReadFileRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -55,9 +59,11 @@ public class RegistrationsFilesReadFile {
      */
     
     public String type;
+
     public RegistrationsFilesReadFile withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RegistrationsFilesReadFile(){}
 }

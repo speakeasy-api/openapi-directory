@@ -18,9 +18,11 @@ public class AutoscalingPolicyLoadBalancingUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utilizationTarget")
     public Double utilizationTarget;
+
     public AutoscalingPolicyLoadBalancingUtilization withUtilizationTarget(Double utilizationTarget) {
         this.utilizationTarget = utilizationTarget;
         return this;
     }
     
+    public AutoscalingPolicyLoadBalancingUtilization(){}
 }

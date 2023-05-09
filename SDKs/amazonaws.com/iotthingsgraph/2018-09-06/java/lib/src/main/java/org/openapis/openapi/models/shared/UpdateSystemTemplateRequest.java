@@ -12,6 +12,7 @@ public class UpdateSystemTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compatibleNamespaceVersion")
     public Long compatibleNamespaceVersion;
+
     public UpdateSystemTemplateRequest withCompatibleNamespaceVersion(Long compatibleNamespaceVersion) {
         this.compatibleNamespaceVersion = compatibleNamespaceVersion;
         return this;
@@ -19,6 +20,7 @@ public class UpdateSystemTemplateRequest {
     
     @JsonProperty("definition")
     public DefinitionDocument definition;
+
     public UpdateSystemTemplateRequest withDefinition(DefinitionDocument definition) {
         this.definition = definition;
         return this;
@@ -26,9 +28,14 @@ public class UpdateSystemTemplateRequest {
     
     @JsonProperty("id")
     public String id;
+
     public UpdateSystemTemplateRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateSystemTemplateRequest(@JsonProperty("definition") DefinitionDocument definition, @JsonProperty("id") String id) {
+        this.definition = definition;
+        this.id = id;
+  }
 }

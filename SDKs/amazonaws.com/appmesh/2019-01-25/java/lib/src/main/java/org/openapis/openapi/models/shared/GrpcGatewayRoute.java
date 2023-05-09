@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GrpcGatewayRoute {
     @JsonProperty("action")
     public GrpcGatewayRouteAction action;
+
     public GrpcGatewayRoute withAction(GrpcGatewayRouteAction action) {
         this.action = action;
         return this;
@@ -19,9 +20,14 @@ public class GrpcGatewayRoute {
     
     @JsonProperty("match")
     public GrpcGatewayRouteMatch match;
+
     public GrpcGatewayRoute withMatch(GrpcGatewayRouteMatch match) {
         this.match = match;
         return this;
     }
     
+    public GrpcGatewayRoute(@JsonProperty("action") GrpcGatewayRouteAction action, @JsonProperty("match") GrpcGatewayRouteMatch match) {
+        this.action = action;
+        this.match = match;
+  }
 }

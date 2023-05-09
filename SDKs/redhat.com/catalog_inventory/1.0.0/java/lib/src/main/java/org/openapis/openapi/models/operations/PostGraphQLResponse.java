@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostGraphQLResponse {
     
     public String contentType;
+
     public PostGraphQLResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostGraphQLResponse {
      */
     
     public org.openapis.openapi.models.shared.GraphQLResponse graphQLResponse;
+
     public PostGraphQLResponse withGraphQLResponse(org.openapis.openapi.models.shared.GraphQLResponse graphQLResponse) {
         this.graphQLResponse = graphQLResponse;
         return this;
@@ -26,6 +29,7 @@ public class PostGraphQLResponse {
     
     
     public Integer statusCode;
+
     public PostGraphQLResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostGraphQLResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostGraphQLResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostGraphQLResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

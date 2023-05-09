@@ -15,6 +15,7 @@ public class ListRetainedMessagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRetainedMessagesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListRetainedMessagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retainedTopics")
     public RetainedMessageSummary[] retainedTopics;
+
     public ListRetainedMessagesResponse withRetainedTopics(RetainedMessageSummary[] retainedTopics) {
         this.retainedTopics = retainedTopics;
         return this;
     }
     
+    public ListRetainedMessagesResponse(){}
 }

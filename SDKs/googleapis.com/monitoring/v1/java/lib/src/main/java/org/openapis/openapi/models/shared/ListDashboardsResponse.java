@@ -18,6 +18,7 @@ public class ListDashboardsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dashboards")
     public Dashboard[] dashboards;
+
     public ListDashboardsResponse withDashboards(Dashboard[] dashboards) {
         this.dashboards = dashboards;
         return this;
@@ -29,9 +30,11 @@ public class ListDashboardsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListDashboardsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListDashboardsResponse(){}
 }

@@ -15,6 +15,7 @@ public class ContentReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentArn")
     public String contentArn;
+
     public ContentReference withContentArn(String contentArn) {
         this.contentArn = contentArn;
         return this;
@@ -23,6 +24,7 @@ public class ContentReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentId")
     public String contentId;
+
     public ContentReference withContentId(String contentId) {
         this.contentId = contentId;
         return this;
@@ -31,6 +33,7 @@ public class ContentReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("knowledgeBaseArn")
     public String knowledgeBaseArn;
+
     public ContentReference withKnowledgeBaseArn(String knowledgeBaseArn) {
         this.knowledgeBaseArn = knowledgeBaseArn;
         return this;
@@ -39,9 +42,11 @@ public class ContentReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("knowledgeBaseId")
     public String knowledgeBaseId;
+
     public ContentReference withKnowledgeBaseId(String knowledgeBaseId) {
         this.knowledgeBaseId = knowledgeBaseId;
         return this;
     }
     
+    public ContentReference(){}
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class InstallationGhes2 {
     @JsonProperty("access_tokens_url")
     public String accessTokensUrl;
+
     public InstallationGhes2 withAccessTokensUrl(String accessTokensUrl) {
         this.accessTokensUrl = accessTokensUrl;
         return this;
@@ -26,6 +27,7 @@ public class InstallationGhes2 {
     
     @JsonProperty("account")
     public Object account;
+
     public InstallationGhes2 withAccount(Object account) {
         this.account = account;
         return this;
@@ -33,6 +35,7 @@ public class InstallationGhes2 {
     
     @JsonProperty("app_id")
     public Long appId;
+
     public InstallationGhes2 withAppId(Long appId) {
         this.appId = appId;
         return this;
@@ -40,6 +43,7 @@ public class InstallationGhes2 {
     
     @JsonProperty("app_slug")
     public String appSlug;
+
     public InstallationGhes2 withAppSlug(String appSlug) {
         this.appSlug = appSlug;
         return this;
@@ -48,6 +52,7 @@ public class InstallationGhes2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_email")
     public String contactEmail;
+
     public InstallationGhes2 withContactEmail(String contactEmail) {
         this.contactEmail = contactEmail;
         return this;
@@ -57,6 +62,7 @@ public class InstallationGhes2 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public InstallationGhes2 withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -64,6 +70,7 @@ public class InstallationGhes2 {
     
     @JsonProperty("events")
     public String[] events;
+
     public InstallationGhes2 withEvents(String[] events) {
         this.events = events;
         return this;
@@ -71,6 +78,7 @@ public class InstallationGhes2 {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public InstallationGhes2 withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -81,6 +89,7 @@ public class InstallationGhes2 {
      */
     @JsonProperty("id")
     public Long id;
+
     public InstallationGhes2 withId(Long id) {
         this.id = id;
         return this;
@@ -88,6 +97,7 @@ public class InstallationGhes2 {
     
     @JsonProperty("permissions")
     public InstallationGhes2Permissions permissions;
+
     public InstallationGhes2 withPermissions(InstallationGhes2Permissions permissions) {
         this.permissions = permissions;
         return this;
@@ -95,6 +105,7 @@ public class InstallationGhes2 {
     
     @JsonProperty("repositories_url")
     public String repositoriesUrl;
+
     public InstallationGhes2 withRepositoriesUrl(String repositoriesUrl) {
         this.repositoriesUrl = repositoriesUrl;
         return this;
@@ -105,6 +116,7 @@ public class InstallationGhes2 {
      */
     @JsonProperty("repository_selection")
     public InstallationGhes2RepositorySelectionEnum repositorySelection;
+
     public InstallationGhes2 withRepositorySelection(InstallationGhes2RepositorySelectionEnum repositorySelection) {
         this.repositorySelection = repositorySelection;
         return this;
@@ -112,6 +124,7 @@ public class InstallationGhes2 {
     
     @JsonProperty("single_file_name")
     public String singleFileName;
+
     public InstallationGhes2 withSingleFileName(String singleFileName) {
         this.singleFileName = singleFileName;
         return this;
@@ -122,6 +135,7 @@ public class InstallationGhes2 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("suspended_at")
     public OffsetDateTime suspendedAt;
+
     public InstallationGhes2 withSuspendedAt(OffsetDateTime suspendedAt) {
         this.suspendedAt = suspendedAt;
         return this;
@@ -133,6 +147,7 @@ public class InstallationGhes2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspended_by")
     public NullableSimpleUser suspendedBy;
+
     public InstallationGhes2 withSuspendedBy(NullableSimpleUser suspendedBy) {
         this.suspendedBy = suspendedBy;
         return this;
@@ -143,6 +158,7 @@ public class InstallationGhes2 {
      */
     @JsonProperty("target_id")
     public Long targetId;
+
     public InstallationGhes2 withTargetId(Long targetId) {
         this.targetId = targetId;
         return this;
@@ -150,6 +166,7 @@ public class InstallationGhes2 {
     
     @JsonProperty("target_type")
     public String targetType;
+
     public InstallationGhes2 withTargetType(String targetType) {
         this.targetType = targetType;
         return this;
@@ -159,9 +176,27 @@ public class InstallationGhes2 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public InstallationGhes2 withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public InstallationGhes2(@JsonProperty("access_tokens_url") String accessTokensUrl, @JsonProperty("account") Object account, @JsonProperty("app_id") Long appId, @JsonProperty("app_slug") String appSlug, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("events") String[] events, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("permissions") InstallationGhes2Permissions permissions, @JsonProperty("repositories_url") String repositoriesUrl, @JsonProperty("repository_selection") InstallationGhes2RepositorySelectionEnum repositorySelection, @JsonProperty("single_file_name") String singleFileName, @JsonProperty("target_id") Long targetId, @JsonProperty("target_type") String targetType, @JsonProperty("updated_at") OffsetDateTime updatedAt) {
+        this.accessTokensUrl = accessTokensUrl;
+        this.account = account;
+        this.appId = appId;
+        this.appSlug = appSlug;
+        this.createdAt = createdAt;
+        this.events = events;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.permissions = permissions;
+        this.repositoriesUrl = repositoriesUrl;
+        this.repositorySelection = repositorySelection;
+        this.singleFileName = singleFileName;
+        this.targetId = targetId;
+        this.targetType = targetType;
+        this.updatedAt = updatedAt;
+  }
 }

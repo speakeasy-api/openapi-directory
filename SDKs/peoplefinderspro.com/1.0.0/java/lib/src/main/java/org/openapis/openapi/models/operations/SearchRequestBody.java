@@ -12,6 +12,7 @@ public class SearchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address")
     public SearchRequestBodyAddress address;
+
     public SearchRequestBody withAddress(SearchRequestBodyAddress address) {
         this.address = address;
         return this;
@@ -20,6 +21,7 @@ public class SearchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Age")
     public Double age;
+
     public SearchRequestBody withAge(Double age) {
         this.age = age;
         return this;
@@ -28,6 +30,7 @@ public class SearchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dob")
     public String dob;
+
     public SearchRequestBody withDob(String dob) {
         this.dob = dob;
         return this;
@@ -36,6 +39,7 @@ public class SearchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public SearchRequestBody withEmail(String email) {
         this.email = email;
         return this;
@@ -44,6 +48,7 @@ public class SearchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstName")
     public String firstName;
+
     public SearchRequestBody withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -52,6 +57,7 @@ public class SearchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastName")
     public String lastName;
+
     public SearchRequestBody withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -60,6 +66,7 @@ public class SearchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MiddleName")
     public String middleName;
+
     public SearchRequestBody withMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
@@ -68,9 +75,11 @@ public class SearchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneNumber")
     public String phoneNumber;
+
     public SearchRequestBody withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public SearchRequestBody(){}
 }

@@ -18,6 +18,7 @@ public class TaskAddParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affinityInfo")
     public AffinityInformation affinityInfo;
+
     public TaskAddParameter withAffinityInfo(AffinityInformation affinityInfo) {
         this.affinityInfo = affinityInfo;
         return this;
@@ -28,6 +29,7 @@ public class TaskAddParameter {
      */
     @JsonProperty("commandLine")
     public String commandLine;
+
     public TaskAddParameter withCommandLine(String commandLine) {
         this.commandLine = commandLine;
         return this;
@@ -39,6 +41,7 @@ public class TaskAddParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public TaskConstraints constraints;
+
     public TaskAddParameter withConstraints(TaskConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -50,6 +53,7 @@ public class TaskAddParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dependsOn")
     public TaskDependencies dependsOn;
+
     public TaskAddParameter withDependsOn(TaskDependencies dependsOn) {
         this.dependsOn = dependsOn;
         return this;
@@ -61,6 +65,7 @@ public class TaskAddParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public TaskAddParameter withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -72,6 +77,7 @@ public class TaskAddParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentSettings")
     public EnvironmentSetting[] environmentSettings;
+
     public TaskAddParameter withEnvironmentSettings(EnvironmentSetting[] environmentSettings) {
         this.environmentSettings = environmentSettings;
         return this;
@@ -82,6 +88,7 @@ public class TaskAddParameter {
      */
     @JsonProperty("id")
     public String id;
+
     public TaskAddParameter withId(String id) {
         this.id = id;
         return this;
@@ -93,6 +100,7 @@ public class TaskAddParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiInstanceSettings")
     public MultiInstanceSettings multiInstanceSettings;
+
     public TaskAddParameter withMultiInstanceSettings(MultiInstanceSettings multiInstanceSettings) {
         this.multiInstanceSettings = multiInstanceSettings;
         return this;
@@ -104,6 +112,7 @@ public class TaskAddParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceFiles")
     public ResourceFile[] resourceFiles;
+
     public TaskAddParameter withResourceFiles(ResourceFile[] resourceFiles) {
         this.resourceFiles = resourceFiles;
         return this;
@@ -115,9 +124,14 @@ public class TaskAddParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runElevated")
     public Boolean runElevated;
+
     public TaskAddParameter withRunElevated(Boolean runElevated) {
         this.runElevated = runElevated;
         return this;
     }
     
+    public TaskAddParameter(@JsonProperty("commandLine") String commandLine, @JsonProperty("id") String id) {
+        this.commandLine = commandLine;
+        this.id = id;
+  }
 }

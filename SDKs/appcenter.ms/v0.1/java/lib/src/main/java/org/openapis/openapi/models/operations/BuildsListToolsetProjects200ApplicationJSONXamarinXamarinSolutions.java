@@ -14,6 +14,7 @@ public class BuildsListToolsetProjects200ApplicationJSONXamarinXamarinSolutions 
      */
     @JsonProperty("configurations")
     public String[] configurations;
+
     public BuildsListToolsetProjects200ApplicationJSONXamarinXamarinSolutions withConfigurations(String[] configurations) {
         this.configurations = configurations;
         return this;
@@ -25,6 +26,7 @@ public class BuildsListToolsetProjects200ApplicationJSONXamarinXamarinSolutions 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultConfiguration")
     public String defaultConfiguration;
+
     public BuildsListToolsetProjects200ApplicationJSONXamarinXamarinSolutions withDefaultConfiguration(String defaultConfiguration) {
         this.defaultConfiguration = defaultConfiguration;
         return this;
@@ -35,9 +37,14 @@ public class BuildsListToolsetProjects200ApplicationJSONXamarinXamarinSolutions 
      */
     @JsonProperty("path")
     public String path;
+
     public BuildsListToolsetProjects200ApplicationJSONXamarinXamarinSolutions withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public BuildsListToolsetProjects200ApplicationJSONXamarinXamarinSolutions(@JsonProperty("configurations") String[] configurations, @JsonProperty("path") String path) {
+        this.configurations = configurations;
+        this.path = path;
+  }
 }

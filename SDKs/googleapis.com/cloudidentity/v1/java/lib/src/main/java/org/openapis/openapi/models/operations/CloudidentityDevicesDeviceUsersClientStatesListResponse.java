@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudidentityDevicesDeviceUsersClientStatesListResponse {
     
     public String contentType;
+
     public CloudidentityDevicesDeviceUsersClientStatesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudidentityDevicesDeviceUsersClientStatesListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleAppsCloudidentityDevicesV1ListClientStatesResponse googleAppsCloudidentityDevicesV1ListClientStatesResponse;
+
     public CloudidentityDevicesDeviceUsersClientStatesListResponse withGoogleAppsCloudidentityDevicesV1ListClientStatesResponse(org.openapis.openapi.models.shared.GoogleAppsCloudidentityDevicesV1ListClientStatesResponse googleAppsCloudidentityDevicesV1ListClientStatesResponse) {
         this.googleAppsCloudidentityDevicesV1ListClientStatesResponse = googleAppsCloudidentityDevicesV1ListClientStatesResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudidentityDevicesDeviceUsersClientStatesListResponse {
     
     
     public Integer statusCode;
+
     public CloudidentityDevicesDeviceUsersClientStatesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudidentityDevicesDeviceUsersClientStatesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudidentityDevicesDeviceUsersClientStatesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudidentityDevicesDeviceUsersClientStatesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

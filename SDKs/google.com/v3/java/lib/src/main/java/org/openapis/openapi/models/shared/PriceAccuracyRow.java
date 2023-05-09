@@ -18,6 +18,7 @@ public class PriceAccuracyRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adultOccupancy")
     public Integer adultOccupancy;
+
     public PriceAccuracyRow withAdultOccupancy(Integer adultOccupancy) {
         this.adultOccupancy = adultOccupancy;
         return this;
@@ -29,6 +30,7 @@ public class PriceAccuracyRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affectsScore")
     public Boolean affectsScore;
+
     public PriceAccuracyRow withAffectsScore(Boolean affectsScore) {
         this.affectsScore = affectsScore;
         return this;
@@ -40,6 +42,7 @@ public class PriceAccuracyRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cachedPriceRecord")
     public PriceRecord cachedPriceRecord;
+
     public PriceAccuracyRow withCachedPriceRecord(PriceRecord cachedPriceRecord) {
         this.cachedPriceRecord = cachedPriceRecord;
         return this;
@@ -51,6 +54,7 @@ public class PriceAccuracyRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkinDate")
     public Date checkinDate;
+
     public PriceAccuracyRow withCheckinDate(Date checkinDate) {
         this.checkinDate = checkinDate;
         return this;
@@ -62,6 +66,7 @@ public class PriceAccuracyRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childOccupancy")
     public Integer childOccupancy;
+
     public PriceAccuracyRow withChildOccupancy(Integer childOccupancy) {
         this.childOccupancy = childOccupancy;
         return this;
@@ -73,6 +78,7 @@ public class PriceAccuracyRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("correctionTime")
     public String correctionTime;
+
     public PriceAccuracyRow withCorrectionTime(String correctionTime) {
         this.correctionTime = correctionTime;
         return this;
@@ -84,6 +90,7 @@ public class PriceAccuracyRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceType")
     public PriceAccuracyRowDeviceTypeEnum deviceType;
+
     public PriceAccuracyRow withDeviceType(PriceAccuracyRowDeviceTypeEnum deviceType) {
         this.deviceType = deviceType;
         return this;
@@ -95,6 +102,7 @@ public class PriceAccuracyRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fetchedPriceRecord")
     public PriceRecord fetchedPriceRecord;
+
     public PriceAccuracyRow withFetchedPriceRecord(PriceRecord fetchedPriceRecord) {
         this.fetchedPriceRecord = fetchedPriceRecord;
         return this;
@@ -106,6 +114,7 @@ public class PriceAccuracyRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalDomain")
     public String finalDomain;
+
     public PriceAccuracyRow withFinalDomain(String finalDomain) {
         this.finalDomain = finalDomain;
         return this;
@@ -117,6 +126,7 @@ public class PriceAccuracyRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hotel")
     public String hotel;
+
     public PriceAccuracyRow withHotel(String hotel) {
         this.hotel = hotel;
         return this;
@@ -128,6 +138,7 @@ public class PriceAccuracyRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hotelCountryCode")
     public String hotelCountryCode;
+
     public PriceAccuracyRow withHotelCountryCode(String hotelCountryCode) {
         this.hotelCountryCode = hotelCountryCode;
         return this;
@@ -139,6 +150,7 @@ public class PriceAccuracyRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lengthOfStayDays")
     public Integer lengthOfStayDays;
+
     public PriceAccuracyRow withLengthOfStayDays(Integer lengthOfStayDays) {
         this.lengthOfStayDays = lengthOfStayDays;
         return this;
@@ -150,6 +162,7 @@ public class PriceAccuracyRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mismatchReason")
     public PriceAccuracyRowMismatchReasonEnum mismatchReason;
+
     public PriceAccuracyRow withMismatchReason(PriceAccuracyRowMismatchReasonEnum mismatchReason) {
         this.mismatchReason = mismatchReason;
         return this;
@@ -161,6 +174,7 @@ public class PriceAccuracyRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rateRuleId")
     public String rateRuleId;
+
     public PriceAccuracyRow withRateRuleId(String rateRuleId) {
         this.rateRuleId = rateRuleId;
         return this;
@@ -172,6 +186,7 @@ public class PriceAccuracyRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signalSource")
     public PriceAccuracyRowSignalSourceEnum signalSource;
+
     public PriceAccuracyRow withSignalSource(PriceAccuracyRowSignalSourceEnum signalSource) {
         this.signalSource = signalSource;
         return this;
@@ -183,6 +198,7 @@ public class PriceAccuracyRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public PriceAccuracyRow withUrl(String url) {
         this.url = url;
         return this;
@@ -194,9 +210,11 @@ public class PriceAccuracyRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userRegionCode")
     public String userRegionCode;
+
     public PriceAccuracyRow withUserRegionCode(String userRegionCode) {
         this.userRegionCode = userRegionCode;
         return this;
     }
     
+    public PriceAccuracyRow(){}
 }

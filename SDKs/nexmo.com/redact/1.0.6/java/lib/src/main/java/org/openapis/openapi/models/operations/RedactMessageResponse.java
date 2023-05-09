@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RedactMessageResponse {
     
     public String contentType;
+
     public RedactMessageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RedactMessageResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorInvalidId errorInvalidId;
+
     public RedactMessageResponse withErrorInvalidId(org.openapis.openapi.models.shared.ErrorInvalidId errorInvalidId) {
         this.errorInvalidId = errorInvalidId;
         return this;
@@ -29,6 +32,7 @@ public class RedactMessageResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorThrottled errorThrottled;
+
     public RedactMessageResponse withErrorThrottled(org.openapis.openapi.models.shared.ErrorThrottled errorThrottled) {
         this.errorThrottled = errorThrottled;
         return this;
@@ -39,6 +43,7 @@ public class RedactMessageResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorUnauthorized errorUnauthorized;
+
     public RedactMessageResponse withErrorUnauthorized(org.openapis.openapi.models.shared.ErrorUnauthorized errorUnauthorized) {
         this.errorUnauthorized = errorUnauthorized;
         return this;
@@ -46,6 +51,7 @@ public class RedactMessageResponse {
     
     
     public Integer statusCode;
+
     public RedactMessageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class RedactMessageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RedactMessageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class RedactMessageResponse {
      */
     
     public Object redactMessage403ApplicationJSONOneOf;
+
     public RedactMessageResponse withRedactMessage403ApplicationJSONOneOf(Object redactMessage403ApplicationJSONOneOf) {
         this.redactMessage403ApplicationJSONOneOf = redactMessage403ApplicationJSONOneOf;
         return this;
@@ -73,9 +81,14 @@ public class RedactMessageResponse {
      */
     
     public Object redactMessage422ApplicationJSONOneOf;
+
     public RedactMessageResponse withRedactMessage422ApplicationJSONOneOf(Object redactMessage422ApplicationJSONOneOf) {
         this.redactMessage422ApplicationJSONOneOf = redactMessage422ApplicationJSONOneOf;
         return this;
     }
     
+    public RedactMessageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

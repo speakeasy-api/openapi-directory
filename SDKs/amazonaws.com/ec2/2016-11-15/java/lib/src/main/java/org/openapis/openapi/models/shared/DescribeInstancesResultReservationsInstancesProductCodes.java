@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstancesResultReservationsInstancesProductCodes {
     
     public String productCodeId;
+
     public DescribeInstancesResultReservationsInstancesProductCodes withProductCodeId(String productCodeId) {
         this.productCodeId = productCodeId;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInstancesResultReservationsInstancesProductCodes {
     
     
     public DescribeInstancesResultReservationsInstancesProductCodesProductCodeTypeEnum productCodeType;
+
     public DescribeInstancesResultReservationsInstancesProductCodes withProductCodeType(DescribeInstancesResultReservationsInstancesProductCodesProductCodeTypeEnum productCodeType) {
         this.productCodeType = productCodeType;
         return this;
     }
     
+    public DescribeInstancesResultReservationsInstancesProductCodes(){}
 }

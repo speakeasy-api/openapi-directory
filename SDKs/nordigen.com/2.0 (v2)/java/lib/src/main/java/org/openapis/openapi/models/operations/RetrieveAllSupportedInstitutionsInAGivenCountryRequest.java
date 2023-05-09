@@ -12,6 +12,7 @@ public class RetrieveAllSupportedInstitutionsInAGivenCountryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public RetrieveAllSupportedInstitutionsInAGivenCountryRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -22,9 +23,11 @@ public class RetrieveAllSupportedInstitutionsInAGivenCountryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payments_enabled")
     public String paymentsEnabled;
+
     public RetrieveAllSupportedInstitutionsInAGivenCountryRequest withPaymentsEnabled(String paymentsEnabled) {
         this.paymentsEnabled = paymentsEnabled;
         return this;
     }
     
+    public RetrieveAllSupportedInstitutionsInAGivenCountryRequest(){}
 }

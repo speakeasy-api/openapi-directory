@@ -61,11 +61,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerProjectsCreateResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerProjectsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerProjectsCreateResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerProjectsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerProjectsListResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerProjectsListResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerProjectsListResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerProjectsListResponse(contentType, httpRes.statusCode()) {{
             listProjectsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerProjectsMoveResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerProjectsMoveResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerProjectsMoveResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerProjectsMoveResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerProjectsSearchResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerProjectsSearchResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerProjectsSearchResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerProjectsSearchResponse(contentType, httpRes.statusCode()) {{
             searchProjectsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +241,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerProjectsUndeleteResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerProjectsUndeleteResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerProjectsUndeleteResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerProjectsUndeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class ListDataQualityRulesetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public DataQualityRulesetFilterCriteria filter;
+
     public ListDataQualityRulesetsRequest withFilter(DataQualityRulesetFilterCriteria filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class ListDataQualityRulesetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDataQualityRulesetsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListDataQualityRulesetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDataQualityRulesetsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class ListDataQualityRulesetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public ListDataQualityRulesetsRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public ListDataQualityRulesetsRequest(){}
 }

@@ -15,9 +15,11 @@ public class CreateOrderOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Order")
     public Order order;
+
     public CreateOrderOutput withOrder(Order order) {
         this.order = order;
         return this;
     }
     
+    public CreateOrderOutput(){}
 }

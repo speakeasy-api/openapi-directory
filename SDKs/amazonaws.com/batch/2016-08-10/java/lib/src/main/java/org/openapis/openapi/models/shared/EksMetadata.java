@@ -8,13 +8,18 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * EksMetadata - Describes and uniquely identifies Kubernetes resources. For example, the compute environment that a pod runs in or the &lt;code&gt;jobID&lt;/code&gt; for a job running in the pod. For more information, see &lt;a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/"&gt;Understanding Kubernetes Objects&lt;/a&gt; in the &lt;i&gt;Kubernetes documentation&lt;/i&gt;.
+ */
 public class EksMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public EksMetadata withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
     }
     
+    public EksMetadata(){}
 }

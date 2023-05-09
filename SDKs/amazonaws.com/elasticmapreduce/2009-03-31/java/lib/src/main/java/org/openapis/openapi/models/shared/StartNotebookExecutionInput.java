@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartNotebookExecutionInput {
     @JsonProperty("EditorId")
     public String editorId;
+
     public StartNotebookExecutionInput withEditorId(String editorId) {
         this.editorId = editorId;
         return this;
@@ -18,6 +19,7 @@ public class StartNotebookExecutionInput {
     
     @JsonProperty("ExecutionEngine")
     public ExecutionEngineConfig executionEngine;
+
     public StartNotebookExecutionInput withExecutionEngine(ExecutionEngineConfig executionEngine) {
         this.executionEngine = executionEngine;
         return this;
@@ -26,6 +28,7 @@ public class StartNotebookExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookExecutionName")
     public String notebookExecutionName;
+
     public StartNotebookExecutionInput withNotebookExecutionName(String notebookExecutionName) {
         this.notebookExecutionName = notebookExecutionName;
         return this;
@@ -34,6 +37,7 @@ public class StartNotebookExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookInstanceSecurityGroupId")
     public String notebookInstanceSecurityGroupId;
+
     public StartNotebookExecutionInput withNotebookInstanceSecurityGroupId(String notebookInstanceSecurityGroupId) {
         this.notebookInstanceSecurityGroupId = notebookInstanceSecurityGroupId;
         return this;
@@ -42,6 +46,7 @@ public class StartNotebookExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookParams")
     public String notebookParams;
+
     public StartNotebookExecutionInput withNotebookParams(String notebookParams) {
         this.notebookParams = notebookParams;
         return this;
@@ -49,6 +54,7 @@ public class StartNotebookExecutionInput {
     
     @JsonProperty("RelativePath")
     public String relativePath;
+
     public StartNotebookExecutionInput withRelativePath(String relativePath) {
         this.relativePath = relativePath;
         return this;
@@ -56,6 +62,7 @@ public class StartNotebookExecutionInput {
     
     @JsonProperty("ServiceRole")
     public String serviceRole;
+
     public StartNotebookExecutionInput withServiceRole(String serviceRole) {
         this.serviceRole = serviceRole;
         return this;
@@ -64,9 +71,16 @@ public class StartNotebookExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public StartNotebookExecutionInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public StartNotebookExecutionInput(@JsonProperty("EditorId") String editorId, @JsonProperty("ExecutionEngine") ExecutionEngineConfig executionEngine, @JsonProperty("RelativePath") String relativePath, @JsonProperty("ServiceRole") String serviceRole) {
+        this.editorId = editorId;
+        this.executionEngine = executionEngine;
+        this.relativePath = relativePath;
+        this.serviceRole = serviceRole;
+  }
 }

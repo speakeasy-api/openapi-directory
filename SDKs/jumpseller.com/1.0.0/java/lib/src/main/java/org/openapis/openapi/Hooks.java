@@ -57,12 +57,10 @@ public class Hooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteHooksIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteHooksIdJsonResponse() {{
+        org.openapis.openapi.models.operations.DeleteHooksIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteHooksIdJsonResponse(contentType, httpRes.statusCode()) {{
             deleteHooksIdJSON200ApplicationJSONString = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Hooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetHooksJsonResponse res = new org.openapis.openapi.models.operations.GetHooksJsonResponse() {{
+        org.openapis.openapi.models.operations.GetHooksJsonResponse res = new org.openapis.openapi.models.operations.GetHooksJsonResponse(contentType, httpRes.statusCode()) {{
             hooks = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,12 +148,10 @@ public class Hooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetHooksIdJsonResponse res = new org.openapis.openapi.models.operations.GetHooksIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetHooksIdJsonResponse res = new org.openapis.openapi.models.operations.GetHooksIdJsonResponse(contentType, httpRes.statusCode()) {{
             hook = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -209,12 +203,10 @@ public class Hooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostHooksJsonResponse res = new org.openapis.openapi.models.operations.PostHooksJsonResponse() {{
+        org.openapis.openapi.models.operations.PostHooksJsonResponse res = new org.openapis.openapi.models.operations.PostHooksJsonResponse(contentType, httpRes.statusCode()) {{
             hook = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -266,12 +258,10 @@ public class Hooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutHooksIdJsonResponse res = new org.openapis.openapi.models.operations.PutHooksIdJsonResponse() {{
+        org.openapis.openapi.models.operations.PutHooksIdJsonResponse res = new org.openapis.openapi.models.operations.PutHooksIdJsonResponse(contentType, httpRes.statusCode()) {{
             hook = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,9 +18,11 @@ public class ObjectId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectIdPath")
     public Integer[] objectIdPath;
+
     public ObjectId withObjectIdPath(Integer[] objectIdPath) {
         this.objectIdPath = objectIdPath;
         return this;
     }
     
+    public ObjectId(){}
 }

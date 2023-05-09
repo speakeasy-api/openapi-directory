@@ -15,6 +15,7 @@ public class PrefixConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathPrefixHierarchy")
     public PathPrefixEnum[] pathPrefixHierarchy;
+
     public PrefixConfig withPathPrefixHierarchy(PathPrefixEnum[] pathPrefixHierarchy) {
         this.pathPrefixHierarchy = pathPrefixHierarchy;
         return this;
@@ -23,6 +24,7 @@ public class PrefixConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefixFormat")
     public PrefixFormatEnum prefixFormat;
+
     public PrefixConfig withPrefixFormat(PrefixFormatEnum prefixFormat) {
         this.prefixFormat = prefixFormat;
         return this;
@@ -31,9 +33,11 @@ public class PrefixConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefixType")
     public PrefixTypeEnum prefixType;
+
     public PrefixConfig withPrefixType(PrefixTypeEnum prefixType) {
         this.prefixType = prefixType;
         return this;
     }
     
+    public PrefixConfig(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceEventWindowsResult {
     
     public DescribeInstanceEventWindowsResultInstanceEventWindows[] instanceEventWindows;
+
     public DescribeInstanceEventWindowsResult withInstanceEventWindows(DescribeInstanceEventWindowsResultInstanceEventWindows[] instanceEventWindows) {
         this.instanceEventWindows = instanceEventWindows;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInstanceEventWindowsResult {
     
     
     public String nextToken;
+
     public DescribeInstanceEventWindowsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInstanceEventWindowsResult(){}
 }

@@ -17,6 +17,7 @@ public class Error405PISCANCAdditionalErrors {
      */
     @JsonProperty("code")
     public MessageCode405PISCANCEnum code;
+
     public Error405PISCANCAdditionalErrors withCode(MessageCode405PISCANCEnum code) {
         this.code = code;
         return this;
@@ -31,6 +32,7 @@ public class Error405PISCANCAdditionalErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error405PISCANCAdditionalErrors withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -45,9 +47,13 @@ public class Error405PISCANCAdditionalErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Error405PISCANCAdditionalErrors withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Error405PISCANCAdditionalErrors(@JsonProperty("code") MessageCode405PISCANCEnum code) {
+        this.code = code;
+  }
 }

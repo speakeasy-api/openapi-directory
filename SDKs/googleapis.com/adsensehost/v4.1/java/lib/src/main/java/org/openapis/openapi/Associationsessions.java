@@ -58,11 +58,9 @@ public class Associationsessions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsensehostAssociationsessionsStartResponse res = new org.openapis.openapi.models.operations.AdsensehostAssociationsessionsStartResponse() {{
+        org.openapis.openapi.models.operations.AdsensehostAssociationsessionsStartResponse res = new org.openapis.openapi.models.operations.AdsensehostAssociationsessionsStartResponse(contentType, httpRes.statusCode()) {{
             associationSession = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Associationsessions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsensehostAssociationsessionsVerifyResponse res = new org.openapis.openapi.models.operations.AdsensehostAssociationsessionsVerifyResponse() {{
+        org.openapis.openapi.models.operations.AdsensehostAssociationsessionsVerifyResponse res = new org.openapis.openapi.models.operations.AdsensehostAssociationsessionsVerifyResponse(contentType, httpRes.statusCode()) {{
             associationSession = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

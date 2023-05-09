@@ -53,11 +53,9 @@ public class ChannelCatalogsProductsOptimisation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisableChannelCatalogProductResponse res = new org.openapis.openapi.models.operations.DisableChannelCatalogProductResponse() {{
+        org.openapis.openapi.models.operations.DisableChannelCatalogProductResponse res = new org.openapis.openapi.models.operations.DisableChannelCatalogProductResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -97,11 +95,9 @@ public class ChannelCatalogsProductsOptimisation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReenableChannelCatalogProductResponse res = new org.openapis.openapi.models.operations.ReenableChannelCatalogProductResponse() {{
+        org.openapis.openapi.models.operations.ReenableChannelCatalogProductResponse res = new org.openapis.openapi.models.operations.ReenableChannelCatalogProductResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

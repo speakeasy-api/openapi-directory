@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 
 
 /**
- * CreateVerifiedAccessEndpointEniOptions - Options for a network interface-type endpoint.
+ * CreateVerifiedAccessEndpointEniOptions - Describes the network interface options when creating an Amazon Web Services Verified Access endpoint using the &lt;code&gt;network-interface&lt;/code&gt; type.
  */
 public class CreateVerifiedAccessEndpointEniOptions {
     
     public String networkInterfaceId;
+
     public CreateVerifiedAccessEndpointEniOptions withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -19,6 +20,7 @@ public class CreateVerifiedAccessEndpointEniOptions {
     
     
     public Long port;
+
     public CreateVerifiedAccessEndpointEniOptions withPort(Long port) {
         this.port = port;
         return this;
@@ -26,9 +28,11 @@ public class CreateVerifiedAccessEndpointEniOptions {
     
     
     public VerifiedAccessEndpointProtocolEnum protocol;
+
     public CreateVerifiedAccessEndpointEniOptions withProtocol(VerifiedAccessEndpointProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public CreateVerifiedAccessEndpointEniOptions(){}
 }

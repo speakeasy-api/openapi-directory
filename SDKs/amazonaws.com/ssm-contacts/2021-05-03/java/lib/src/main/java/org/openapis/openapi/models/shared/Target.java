@@ -15,6 +15,7 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelTargetInfo")
     public ChannelTargetInfo channelTargetInfo;
+
     public Target withChannelTargetInfo(ChannelTargetInfo channelTargetInfo) {
         this.channelTargetInfo = channelTargetInfo;
         return this;
@@ -23,9 +24,11 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactTargetInfo")
     public ContactTargetInfo contactTargetInfo;
+
     public Target withContactTargetInfo(ContactTargetInfo contactTargetInfo) {
         this.contactTargetInfo = contactTargetInfo;
         return this;
     }
     
+    public Target(){}
 }

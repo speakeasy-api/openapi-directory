@@ -62,4 +62,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ApplicationsListResponse.ja
 lib/src/main/java/org/openapis/openapi/models/shared/DataTransfer.java
 lib/src/main/java/org/openapis/openapi/models/shared/ApplicationDataTransfer.java
 lib/src/main/java/org/openapis/openapi/models/shared/DataTransfersListResponse.java
+docs/sdk/README.md
+docs/applications/README.md
+docs/transfers/README.md
 USAGE.md

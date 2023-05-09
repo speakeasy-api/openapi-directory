@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Transform {
     @JsonProperty("expression")
     public String expression;
+
     public Transform withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -22,6 +23,7 @@ public class Transform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processingConfig")
     public TransformProcessingConfig processingConfig;
+
     public Transform withProcessingConfig(TransformProcessingConfig processingConfig) {
         this.processingConfig = processingConfig;
         return this;
@@ -29,9 +31,14 @@ public class Transform {
     
     @JsonProperty("variables")
     public ExpressionVariable[] variables;
+
     public Transform withVariables(ExpressionVariable[] variables) {
         this.variables = variables;
         return this;
     }
     
+    public Transform(@JsonProperty("expression") String expression, @JsonProperty("variables") ExpressionVariable[] variables) {
+        this.expression = expression;
+        this.variables = variables;
+  }
 }

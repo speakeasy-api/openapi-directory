@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutThirdPartyJobSuccessResultInput {
     @JsonProperty("clientToken")
     public String clientToken;
+
     public PutThirdPartyJobSuccessResultInput withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -22,6 +23,7 @@ public class PutThirdPartyJobSuccessResultInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continuationToken")
     public String continuationToken;
+
     public PutThirdPartyJobSuccessResultInput withContinuationToken(String continuationToken) {
         this.continuationToken = continuationToken;
         return this;
@@ -30,6 +32,7 @@ public class PutThirdPartyJobSuccessResultInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentRevision")
     public CurrentRevision currentRevision;
+
     public PutThirdPartyJobSuccessResultInput withCurrentRevision(CurrentRevision currentRevision) {
         this.currentRevision = currentRevision;
         return this;
@@ -38,6 +41,7 @@ public class PutThirdPartyJobSuccessResultInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionDetails")
     public ExecutionDetails executionDetails;
+
     public PutThirdPartyJobSuccessResultInput withExecutionDetails(ExecutionDetails executionDetails) {
         this.executionDetails = executionDetails;
         return this;
@@ -45,9 +49,14 @@ public class PutThirdPartyJobSuccessResultInput {
     
     @JsonProperty("jobId")
     public String jobId;
+
     public PutThirdPartyJobSuccessResultInput withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public PutThirdPartyJobSuccessResultInput(@JsonProperty("clientToken") String clientToken, @JsonProperty("jobId") String jobId) {
+        this.clientToken = clientToken;
+        this.jobId = jobId;
+  }
 }

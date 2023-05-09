@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class MFADevice {
     
     public OffsetDateTime enableDate;
+
     public MFADevice withEnableDate(OffsetDateTime enableDate) {
         this.enableDate = enableDate;
         return this;
@@ -19,6 +21,7 @@ public class MFADevice {
     
     
     public String serialNumber;
+
     public MFADevice withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -26,9 +29,15 @@ public class MFADevice {
     
     
     public String userName;
+
     public MFADevice withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public MFADevice(@JsonProperty("EnableDate") OffsetDateTime enableDate, @JsonProperty("SerialNumber") String serialNumber, @JsonProperty("UserName") String userName) {
+        this.enableDate = enableDate;
+        this.serialNumber = serialNumber;
+        this.userName = userName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPredictorBacktestExportJobsResponse {
     
     public String contentType;
+
     public ListPredictorBacktestExportJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListPredictorBacktestExportJobsResponse {
      */
     
     public Object invalidInputException;
+
     public ListPredictorBacktestExportJobsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class ListPredictorBacktestExportJobsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListPredictorBacktestExportJobsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListPredictorBacktestExportJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPredictorBacktestExportJobsResponse listPredictorBacktestExportJobsResponse;
+
     public ListPredictorBacktestExportJobsResponse withListPredictorBacktestExportJobsResponse(org.openapis.openapi.models.shared.ListPredictorBacktestExportJobsResponse listPredictorBacktestExportJobsResponse) {
         this.listPredictorBacktestExportJobsResponse = listPredictorBacktestExportJobsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListPredictorBacktestExportJobsResponse {
     
     
     public Integer statusCode;
+
     public ListPredictorBacktestExportJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListPredictorBacktestExportJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPredictorBacktestExportJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListPredictorBacktestExportJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

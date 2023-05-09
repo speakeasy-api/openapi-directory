@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudtraceProjectsTracesListResponse {
     
     public String contentType;
+
     public CloudtraceProjectsTracesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudtraceProjectsTracesListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTracesResponse listTracesResponse;
+
     public CloudtraceProjectsTracesListResponse withListTracesResponse(org.openapis.openapi.models.shared.ListTracesResponse listTracesResponse) {
         this.listTracesResponse = listTracesResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudtraceProjectsTracesListResponse {
     
     
     public Integer statusCode;
+
     public CloudtraceProjectsTracesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudtraceProjectsTracesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudtraceProjectsTracesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudtraceProjectsTracesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

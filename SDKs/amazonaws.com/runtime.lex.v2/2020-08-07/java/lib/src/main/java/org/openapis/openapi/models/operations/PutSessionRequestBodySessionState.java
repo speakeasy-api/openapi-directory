@@ -15,6 +15,7 @@ public class PutSessionRequestBodySessionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeContexts")
     public org.openapis.openapi.models.shared.ActiveContext[] activeContexts;
+
     public PutSessionRequestBodySessionState withActiveContexts(org.openapis.openapi.models.shared.ActiveContext[] activeContexts) {
         this.activeContexts = activeContexts;
         return this;
@@ -23,6 +24,7 @@ public class PutSessionRequestBodySessionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialogAction")
     public org.openapis.openapi.models.shared.DialogAction dialogAction;
+
     public PutSessionRequestBodySessionState withDialogAction(org.openapis.openapi.models.shared.DialogAction dialogAction) {
         this.dialogAction = dialogAction;
         return this;
@@ -31,6 +33,7 @@ public class PutSessionRequestBodySessionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intent")
     public org.openapis.openapi.models.shared.Intent intent;
+
     public PutSessionRequestBodySessionState withIntent(org.openapis.openapi.models.shared.Intent intent) {
         this.intent = intent;
         return this;
@@ -39,6 +42,7 @@ public class PutSessionRequestBodySessionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originatingRequestId")
     public String originatingRequestId;
+
     public PutSessionRequestBodySessionState withOriginatingRequestId(String originatingRequestId) {
         this.originatingRequestId = originatingRequestId;
         return this;
@@ -47,6 +51,7 @@ public class PutSessionRequestBodySessionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeHints")
     public org.openapis.openapi.models.shared.RuntimeHints runtimeHints;
+
     public PutSessionRequestBodySessionState withRuntimeHints(org.openapis.openapi.models.shared.RuntimeHints runtimeHints) {
         this.runtimeHints = runtimeHints;
         return this;
@@ -55,9 +60,11 @@ public class PutSessionRequestBodySessionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionAttributes")
     public java.util.Map<String, String> sessionAttributes;
+
     public PutSessionRequestBodySessionState withSessionAttributes(java.util.Map<String, String> sessionAttributes) {
         this.sessionAttributes = sessionAttributes;
         return this;
     }
     
+    public PutSessionRequestBodySessionState(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeStaleSecurityGroupsRequest {
     
     public Boolean dryRun;
+
     public DescribeStaleSecurityGroupsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeStaleSecurityGroupsRequest {
     
     
     public Long maxResults;
+
     public DescribeStaleSecurityGroupsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -23,6 +25,7 @@ public class DescribeStaleSecurityGroupsRequest {
     
     
     public String nextToken;
+
     public DescribeStaleSecurityGroupsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,9 +33,13 @@ public class DescribeStaleSecurityGroupsRequest {
     
     
     public String vpcId;
+
     public DescribeStaleSecurityGroupsRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DescribeStaleSecurityGroupsRequest(@JsonProperty("VpcId") String vpcId) {
+        this.vpcId = vpcId;
+  }
 }

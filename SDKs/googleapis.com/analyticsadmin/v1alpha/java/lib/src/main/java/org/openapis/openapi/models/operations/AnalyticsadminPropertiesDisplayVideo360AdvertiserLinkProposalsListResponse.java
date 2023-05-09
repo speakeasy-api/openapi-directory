@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListResponse {
     
     public String contentType;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListR
      */
     
     public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaListDisplayVideo360AdvertiserLinkProposalsResponse googleAnalyticsAdminV1alphaListDisplayVideo360AdvertiserLinkProposalsResponse;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListResponse withGoogleAnalyticsAdminV1alphaListDisplayVideo360AdvertiserLinkProposalsResponse(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaListDisplayVideo360AdvertiserLinkProposalsResponse googleAnalyticsAdminV1alphaListDisplayVideo360AdvertiserLinkProposalsResponse) {
         this.googleAnalyticsAdminV1alphaListDisplayVideo360AdvertiserLinkProposalsResponse = googleAnalyticsAdminV1alphaListDisplayVideo360AdvertiserLinkProposalsResponse;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListR
     
     
     public Integer statusCode;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListR
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class Xxe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payloadLocation")
     public XxePayloadLocationEnum payloadLocation;
+
     public Xxe withPayloadLocation(XxePayloadLocationEnum payloadLocation) {
         this.payloadLocation = payloadLocation;
         return this;
@@ -29,9 +30,11 @@ public class Xxe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payloadValue")
     public String payloadValue;
+
     public Xxe withPayloadValue(String payloadValue) {
         this.payloadValue = payloadValue;
         return this;
     }
     
+    public Xxe(){}
 }

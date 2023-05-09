@@ -18,9 +18,11 @@ public class DynamicLinkStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkEventStats")
     public DynamicLinkEventStat[] linkEventStats;
+
     public DynamicLinkStats withLinkEventStats(DynamicLinkEventStat[] linkEventStats) {
         this.linkEventStats = linkEventStats;
         return this;
     }
     
+    public DynamicLinkStats(){}
 }

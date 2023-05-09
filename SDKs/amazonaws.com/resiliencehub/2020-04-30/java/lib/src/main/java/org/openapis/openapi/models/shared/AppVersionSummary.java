@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AppVersionSummary {
     @JsonProperty("appVersion")
     public String appVersion;
+
     public AppVersionSummary withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
     }
     
+    public AppVersionSummary(@JsonProperty("appVersion") String appVersion) {
+        this.appVersion = appVersion;
+  }
 }

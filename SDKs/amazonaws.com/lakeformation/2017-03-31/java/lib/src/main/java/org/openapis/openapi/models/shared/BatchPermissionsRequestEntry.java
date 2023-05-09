@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchPermissionsRequestEntry {
     @JsonProperty("Id")
     public String id;
+
     public BatchPermissionsRequestEntry withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class BatchPermissionsRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Permissions")
     public PermissionEnum[] permissions;
+
     public BatchPermissionsRequestEntry withPermissions(PermissionEnum[] permissions) {
         this.permissions = permissions;
         return this;
@@ -30,6 +32,7 @@ public class BatchPermissionsRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PermissionsWithGrantOption")
     public PermissionEnum[] permissionsWithGrantOption;
+
     public BatchPermissionsRequestEntry withPermissionsWithGrantOption(PermissionEnum[] permissionsWithGrantOption) {
         this.permissionsWithGrantOption = permissionsWithGrantOption;
         return this;
@@ -38,6 +41,7 @@ public class BatchPermissionsRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Principal")
     public DataLakePrincipal principal;
+
     public BatchPermissionsRequestEntry withPrincipal(DataLakePrincipal principal) {
         this.principal = principal;
         return this;
@@ -46,9 +50,13 @@ public class BatchPermissionsRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resource")
     public Resource resource;
+
     public BatchPermissionsRequestEntry withResource(Resource resource) {
         this.resource = resource;
         return this;
     }
     
+    public BatchPermissionsRequestEntry(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

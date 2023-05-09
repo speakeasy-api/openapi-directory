@@ -15,6 +15,7 @@ public class GetOpsMetadataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metadata")
     public java.util.Map<String, MetadataValue> metadata;
+
     public GetOpsMetadataResult withMetadata(java.util.Map<String, MetadataValue> metadata) {
         this.metadata = metadata;
         return this;
@@ -23,6 +24,7 @@ public class GetOpsMetadataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetOpsMetadataResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class GetOpsMetadataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public GetOpsMetadataResult withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public GetOpsMetadataResult(){}
 }

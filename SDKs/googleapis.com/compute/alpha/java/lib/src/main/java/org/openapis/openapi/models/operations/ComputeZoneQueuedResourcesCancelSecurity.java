@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeZoneQueuedResourcesCancelSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeZoneQueuedResourcesCancelSecurityOption1 option1;
+
     public ComputeZoneQueuedResourcesCancelSecurity withOption1(ComputeZoneQueuedResourcesCancelSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeZoneQueuedResourcesCancelSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeZoneQueuedResourcesCancelSecurityOption2 option2;
+
     public ComputeZoneQueuedResourcesCancelSecurity withOption2(ComputeZoneQueuedResourcesCancelSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeZoneQueuedResourcesCancelSecurity(){}
 }

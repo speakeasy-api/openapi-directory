@@ -82,4 +82,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/GetIosPostInstallAttributio
 lib/src/main/java/org/openapis/openapi/models/shared/DeviceInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetIosReopenAttributionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetIosReopenAttributionRequest.java
+docs/sdk/README.md
+docs/managedshortlinks/README.md
+docs/shortlinks/README.md
+docs/v1/README.md
 USAGE.md

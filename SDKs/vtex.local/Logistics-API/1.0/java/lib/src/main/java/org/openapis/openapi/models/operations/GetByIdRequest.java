@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetByIdRequest {
@@ -12,6 +13,7 @@ public class GetByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetByIdRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetByIdRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class GetByIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pickupPointId")
     public String pickupPointId;
+
     public GetByIdRequest withPickupPointId(String pickupPointId) {
         this.pickupPointId = pickupPointId;
         return this;
     }
     
+    public GetByIdRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("pickupPointId") String pickupPointId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.pickupPointId = pickupPointId;
+  }
 }

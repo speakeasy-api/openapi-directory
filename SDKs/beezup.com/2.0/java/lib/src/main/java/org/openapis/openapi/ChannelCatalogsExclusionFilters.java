@@ -55,11 +55,9 @@ public class ChannelCatalogsExclusionFilters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfigureChannelCatalogExclusionFiltersResponse res = new org.openapis.openapi.models.operations.ConfigureChannelCatalogExclusionFiltersResponse() {{
+        org.openapis.openapi.models.operations.ConfigureChannelCatalogExclusionFiltersResponse res = new org.openapis.openapi.models.operations.ConfigureChannelCatalogExclusionFiltersResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -95,12 +93,10 @@ public class ChannelCatalogsExclusionFilters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChannelCatalogExclusionFiltersResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogExclusionFiltersResponse() {{
+        org.openapis.openapi.models.operations.GetChannelCatalogExclusionFiltersResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogExclusionFiltersResponse(contentType, httpRes.statusCode()) {{
             exclusionFiltersResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -17,6 +17,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public InvoiceSimpleVO withComments(String comments) {
         this.comments = comments;
         return this;
@@ -25,6 +26,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public InvoiceSimpleVO withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -33,6 +35,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public PropertyPaAndAttVO[] customFields;
+
     public InvoiceSimpleVO withCustomFields(PropertyPaAndAttVO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -44,6 +47,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grand_total")
     public Object grandTotal;
+
     public InvoiceSimpleVO withGrandTotal(Object grandTotal) {
         this.grandTotal = grandTotal;
         return this;
@@ -53,6 +57,7 @@ public class InvoiceSimpleVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("invoice_date")
     public LocalDate invoiceDate;
+
     public InvoiceSimpleVO withInvoiceDate(LocalDate invoiceDate) {
         this.invoiceDate = invoiceDate;
         return this;
@@ -62,6 +67,7 @@ public class InvoiceSimpleVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("invoice_due_date")
     public LocalDate invoiceDueDate;
+
     public InvoiceSimpleVO withInvoiceDueDate(LocalDate invoiceDueDate) {
         this.invoiceDueDate = invoiceDueDate;
         return this;
@@ -70,6 +76,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_id")
     public Long invoiceId;
+
     public InvoiceSimpleVO withInvoiceId(Long invoiceId) {
         this.invoiceId = invoiceId;
         return this;
@@ -78,6 +85,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_number")
     public String invoiceNumber;
+
     public InvoiceSimpleVO withInvoiceNumber(String invoiceNumber) {
         this.invoiceNumber = invoiceNumber;
         return this;
@@ -86,6 +94,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_to")
     public String invoiceTo;
+
     public InvoiceSimpleVO withInvoiceTo(String invoiceTo) {
         this.invoiceTo = invoiceTo;
         return this;
@@ -94,6 +103,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_final")
     public Integer isFinal;
+
     public InvoiceSimpleVO withIsFinal(Integer isFinal) {
         this.isFinal = isFinal;
         return this;
@@ -102,6 +112,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_nonBillable")
     public Integer isNonBillable;
+
     public InvoiceSimpleVO withIsNonBillable(Integer isNonBillable) {
         this.isNonBillable = isNonBillable;
         return this;
@@ -110,6 +121,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public InvoiceItemSimpleVO[] items;
+
     public InvoiceSimpleVO withItems(InvoiceItemSimpleVO[] items) {
         this.items = items;
         return this;
@@ -118,6 +130,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_reference")
     public String orderReference;
+
     public InvoiceSimpleVO withOrderReference(String orderReference) {
         this.orderReference = orderReference;
         return this;
@@ -126,6 +139,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_title")
     public String orderTitle;
+
     public InvoiceSimpleVO withOrderTitle(String orderTitle) {
         this.orderTitle = orderTitle;
         return this;
@@ -134,6 +148,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_method")
     public String paymentMethod;
+
     public InvoiceSimpleVO withPaymentMethod(String paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
@@ -142,6 +157,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prepared_by")
     public String preparedBy;
+
     public InvoiceSimpleVO withPreparedBy(String preparedBy) {
         this.preparedBy = preparedBy;
         return this;
@@ -150,6 +166,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_number")
     public Long projectNumber;
+
     public InvoiceSimpleVO withProjectNumber(Long projectNumber) {
         this.projectNumber = projectNumber;
         return this;
@@ -158,6 +175,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_number")
     public String referenceNumber;
+
     public InvoiceSimpleVO withReferenceNumber(String referenceNumber) {
         this.referenceNumber = referenceNumber;
         return this;
@@ -169,6 +187,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping")
     public Object shipping;
+
     public InvoiceSimpleVO withShipping(Object shipping) {
         this.shipping = shipping;
         return this;
@@ -177,6 +196,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public InvoiceSimpleVO withStatus(String status) {
         this.status = status;
         return this;
@@ -188,6 +208,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_total")
     public Object subTotal;
+
     public InvoiceSimpleVO withSubTotal(Object subTotal) {
         this.subTotal = subTotal;
         return this;
@@ -199,6 +220,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public Object tax;
+
     public InvoiceSimpleVO withTax(Object tax) {
         this.tax = tax;
         return this;
@@ -207,6 +229,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_currency")
     public String transactionalCurrency;
+
     public InvoiceSimpleVO withTransactionalCurrency(String transactionalCurrency) {
         this.transactionalCurrency = transactionalCurrency;
         return this;
@@ -218,6 +241,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_grand_total")
     public Object transactionalGrandTotal;
+
     public InvoiceSimpleVO withTransactionalGrandTotal(Object transactionalGrandTotal) {
         this.transactionalGrandTotal = transactionalGrandTotal;
         return this;
@@ -229,6 +253,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_shipping")
     public Object transactionalShipping;
+
     public InvoiceSimpleVO withTransactionalShipping(Object transactionalShipping) {
         this.transactionalShipping = transactionalShipping;
         return this;
@@ -240,6 +265,7 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_sub_total")
     public Object transactionalSubTotal;
+
     public InvoiceSimpleVO withTransactionalSubTotal(Object transactionalSubTotal) {
         this.transactionalSubTotal = transactionalSubTotal;
         return this;
@@ -251,9 +277,11 @@ public class InvoiceSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_tax")
     public Object transactionalTax;
+
     public InvoiceSimpleVO withTransactionalTax(Object transactionalTax) {
         this.transactionalTax = transactionalTax;
         return this;
     }
     
+    public InvoiceSimpleVO(){}
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ContentModelsContentTypeDescription {
     
     public Boolean allowComments;
+
     public ContentModelsContentTypeDescription withAllowComments(Boolean allowComments) {
         this.allowComments = allowComments;
         return this;
@@ -16,6 +17,7 @@ public class ContentModelsContentTypeDescription {
     
     
     public Boolean autoEnglishPropertyFallback;
+
     public ContentModelsContentTypeDescription withAutoEnglishPropertyFallback(Boolean autoEnglishPropertyFallback) {
         this.autoEnglishPropertyFallback = autoEnglishPropertyFallback;
         return this;
@@ -23,6 +25,7 @@ public class ContentModelsContentTypeDescription {
     
     
     public String bindIdentifierToProperty;
+
     public ContentModelsContentTypeDescription withBindIdentifierToProperty(String bindIdentifierToProperty) {
         this.bindIdentifierToProperty = bindIdentifierToProperty;
         return this;
@@ -30,6 +33,7 @@ public class ContentModelsContentTypeDescription {
     
     
     public String boundRegex;
+
     public ContentModelsContentTypeDescription withBoundRegex(String boundRegex) {
         this.boundRegex = boundRegex;
         return this;
@@ -37,6 +41,7 @@ public class ContentModelsContentTypeDescription {
     
     
     public Boolean bulkUploadable;
+
     public ContentModelsContentTypeDescription withBulkUploadable(Boolean bulkUploadable) {
         this.bulkUploadable = bulkUploadable;
         return this;
@@ -44,6 +49,7 @@ public class ContentModelsContentTypeDescription {
     
     
     public String cType;
+
     public ContentModelsContentTypeDescription withCType(String cType) {
         this.cType = cType;
         return this;
@@ -51,6 +57,7 @@ public class ContentModelsContentTypeDescription {
     
     
     public String contentDescription;
+
     public ContentModelsContentTypeDescription withContentDescription(String contentDescription) {
         this.contentDescription = contentDescription;
         return this;
@@ -58,6 +65,7 @@ public class ContentModelsContentTypeDescription {
     
     
     public Boolean forceIdentifierBinding;
+
     public ContentModelsContentTypeDescription withForceIdentifierBinding(Boolean forceIdentifierBinding) {
         this.forceIdentifierBinding = forceIdentifierBinding;
         return this;
@@ -65,6 +73,7 @@ public class ContentModelsContentTypeDescription {
     
     
     public String name;
+
     public ContentModelsContentTypeDescription withName(String name) {
         this.name = name;
         return this;
@@ -72,6 +81,7 @@ public class ContentModelsContentTypeDescription {
     
     
     public String previewImage;
+
     public ContentModelsContentTypeDescription withPreviewImage(String previewImage) {
         this.previewImage = previewImage;
         return this;
@@ -79,6 +89,7 @@ public class ContentModelsContentTypeDescription {
     
     
     public ContentModelsContentPreview[] previews;
+
     public ContentModelsContentTypeDescription withPreviews(ContentModelsContentPreview[] previews) {
         this.previews = previews;
         return this;
@@ -86,6 +97,7 @@ public class ContentModelsContentTypeDescription {
     
     
     public Integer priority;
+
     public ContentModelsContentTypeDescription withPriority(Integer priority) {
         this.priority = priority;
         return this;
@@ -93,6 +105,7 @@ public class ContentModelsContentTypeDescription {
     
     
     public ContentModelsContentTypeProperty[] properties;
+
     public ContentModelsContentTypeDescription withProperties(ContentModelsContentTypeProperty[] properties) {
         this.properties = properties;
         return this;
@@ -100,6 +113,7 @@ public class ContentModelsContentTypeDescription {
     
     
     public ContentModelsContentTypePropertySection[] propertySections;
+
     public ContentModelsContentTypeDescription withPropertySections(ContentModelsContentTypePropertySection[] propertySections) {
         this.propertySections = propertySections;
         return this;
@@ -107,6 +121,7 @@ public class ContentModelsContentTypeDescription {
     
     
     public String reminder;
+
     public ContentModelsContentTypeDescription withReminder(String reminder) {
         this.reminder = reminder;
         return this;
@@ -114,6 +129,7 @@ public class ContentModelsContentTypeDescription {
     
     
     public Boolean showInContentEditor;
+
     public ContentModelsContentTypeDescription withShowInContentEditor(Boolean showInContentEditor) {
         this.showInContentEditor = showInContentEditor;
         return this;
@@ -121,6 +137,7 @@ public class ContentModelsContentTypeDescription {
     
     
     public Boolean suppressCmsPath;
+
     public ContentModelsContentTypeDescription withSuppressCmsPath(Boolean suppressCmsPath) {
         this.suppressCmsPath = suppressCmsPath;
         return this;
@@ -128,6 +145,7 @@ public class ContentModelsContentTypeDescription {
     
     
     public ContentModelsTagMetadataDefinition[] tagMetadata;
+
     public ContentModelsContentTypeDescription withTagMetadata(ContentModelsTagMetadataDefinition[] tagMetadata) {
         this.tagMetadata = tagMetadata;
         return this;
@@ -135,6 +153,7 @@ public class ContentModelsContentTypeDescription {
     
     
     public java.util.Map<String, ContentModelsTagMetadataItem> tagMetadataItems;
+
     public ContentModelsContentTypeDescription withTagMetadataItems(java.util.Map<String, ContentModelsTagMetadataItem> tagMetadataItems) {
         this.tagMetadataItems = tagMetadataItems;
         return this;
@@ -142,6 +161,7 @@ public class ContentModelsContentTypeDescription {
     
     
     public String typeOf;
+
     public ContentModelsContentTypeDescription withTypeOf(String typeOf) {
         this.typeOf = typeOf;
         return this;
@@ -149,9 +169,11 @@ public class ContentModelsContentTypeDescription {
     
     
     public String[] usageExamples;
+
     public ContentModelsContentTypeDescription withUsageExamples(String[] usageExamples) {
         this.usageExamples = usageExamples;
         return this;
     }
     
+    public ContentModelsContentTypeDescription(){}
 }

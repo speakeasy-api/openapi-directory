@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateDelegationSignerToDomainRequest {
     @JsonProperty("DomainName")
     public String domainName;
+
     public AssociateDelegationSignerToDomainRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -16,9 +17,14 @@ public class AssociateDelegationSignerToDomainRequest {
     
     @JsonProperty("SigningAttributes")
     public DnssecSigningAttributes signingAttributes;
+
     public AssociateDelegationSignerToDomainRequest withSigningAttributes(DnssecSigningAttributes signingAttributes) {
         this.signingAttributes = signingAttributes;
         return this;
     }
     
+    public AssociateDelegationSignerToDomainRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("SigningAttributes") DnssecSigningAttributes signingAttributes) {
+        this.domainName = domainName;
+        this.signingAttributes = signingAttributes;
+  }
 }

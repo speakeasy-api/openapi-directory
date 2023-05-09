@@ -15,6 +15,7 @@ public class NodeGroupsPerformMaintenanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodes")
     public String[] nodes;
+
     public NodeGroupsPerformMaintenanceRequest withNodes(String[] nodes) {
         this.nodes = nodes;
         return this;
@@ -26,9 +27,11 @@ public class NodeGroupsPerformMaintenanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public NodeGroupsPerformMaintenanceRequest withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public NodeGroupsPerformMaintenanceRequest(){}
 }

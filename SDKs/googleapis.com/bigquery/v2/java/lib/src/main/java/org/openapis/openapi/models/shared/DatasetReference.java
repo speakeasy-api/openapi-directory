@@ -15,6 +15,7 @@ public class DatasetReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetId")
     public String datasetId;
+
     public DatasetReference withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -26,9 +27,11 @@ public class DatasetReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public DatasetReference withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public DatasetReference(){}
 }

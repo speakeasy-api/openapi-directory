@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BigqueryRoutinesUpdateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RoutineInput routineInput;
+
     public BigqueryRoutinesUpdateRequest withRoutineInput(org.openapis.openapi.models.shared.RoutineInput routineInput) {
         this.routineInput = routineInput;
         return this;
@@ -19,6 +21,7 @@ public class BigqueryRoutinesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BigqueryRoutinesUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class BigqueryRoutinesUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=datasetId")
     public String datasetId;
+
     public BigqueryRoutinesUpdateRequest withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -39,6 +43,7 @@ public class BigqueryRoutinesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BigqueryRoutinesUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -49,6 +54,7 @@ public class BigqueryRoutinesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BigqueryRoutinesUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -59,6 +65,7 @@ public class BigqueryRoutinesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BigqueryRoutinesUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -69,6 +76,7 @@ public class BigqueryRoutinesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BigqueryRoutinesUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -79,6 +87,7 @@ public class BigqueryRoutinesUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public BigqueryRoutinesUpdateRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -89,6 +98,7 @@ public class BigqueryRoutinesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BigqueryRoutinesUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -99,6 +109,7 @@ public class BigqueryRoutinesUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=routineId")
     public String routineId;
+
     public BigqueryRoutinesUpdateRequest withRoutineId(String routineId) {
         this.routineId = routineId;
         return this;
@@ -109,9 +120,15 @@ public class BigqueryRoutinesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public BigqueryRoutinesUpdateRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public BigqueryRoutinesUpdateRequest(@JsonProperty("datasetId") String datasetId, @JsonProperty("projectId") String projectId, @JsonProperty("routineId") String routineId) {
+        this.datasetId = datasetId;
+        this.projectId = projectId;
+        this.routineId = routineId;
+  }
 }

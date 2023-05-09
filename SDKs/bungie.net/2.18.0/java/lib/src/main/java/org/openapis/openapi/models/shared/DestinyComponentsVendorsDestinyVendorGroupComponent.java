@@ -15,9 +15,11 @@ public class DestinyComponentsVendorsDestinyVendorGroupComponent {
      */
     
     public DestinyComponentsVendorsDestinyVendorGroup[] groups;
+
     public DestinyComponentsVendorsDestinyVendorGroupComponent withGroups(DestinyComponentsVendorsDestinyVendorGroup[] groups) {
         this.groups = groups;
         return this;
     }
     
+    public DestinyComponentsVendorsDestinyVendorGroupComponent(){}
 }

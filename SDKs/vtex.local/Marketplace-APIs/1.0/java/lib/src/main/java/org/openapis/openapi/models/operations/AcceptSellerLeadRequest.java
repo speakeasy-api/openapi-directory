@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AcceptSellerLeadRequest {
@@ -12,6 +13,7 @@ public class AcceptSellerLeadRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public AcceptSellerLeadRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -19,6 +21,7 @@ public class AcceptSellerLeadRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AcceptSellerLeadRequest acceptSellerLeadRequest;
+
     public AcceptSellerLeadRequest withAcceptSellerLeadRequest(org.openapis.openapi.models.shared.AcceptSellerLeadRequest acceptSellerLeadRequest) {
         this.acceptSellerLeadRequest = acceptSellerLeadRequest;
         return this;
@@ -29,6 +32,7 @@ public class AcceptSellerLeadRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public AcceptSellerLeadRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AcceptSellerLeadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public AcceptSellerLeadRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -49,6 +54,7 @@ public class AcceptSellerLeadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
     public String environment;
+
     public AcceptSellerLeadRequest withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -59,9 +65,18 @@ public class AcceptSellerLeadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerLeadId")
     public String sellerLeadId;
+
     public AcceptSellerLeadRequest withSellerLeadId(String sellerLeadId) {
         this.sellerLeadId = sellerLeadId;
         return this;
     }
     
+    public AcceptSellerLeadRequest(@JsonProperty("Accept") String accept, @JsonProperty("AcceptSellerLeadRequest") org.openapis.openapi.models.shared.AcceptSellerLeadRequest acceptSellerLeadRequest, @JsonProperty("Content-Type") String contentType, @JsonProperty("accountName") String accountName, @JsonProperty("environment") String environment, @JsonProperty("sellerLeadId") String sellerLeadId) {
+        this.accept = accept;
+        this.acceptSellerLeadRequest = acceptSellerLeadRequest;
+        this.contentType = contentType;
+        this.accountName = accountName;
+        this.environment = environment;
+        this.sellerLeadId = sellerLeadId;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatchSource {
     @JsonProperty("Configuration")
     public String configuration;
+
     public PatchSource withConfiguration(String configuration) {
         this.configuration = configuration;
         return this;
@@ -19,6 +20,7 @@ public class PatchSource {
     
     @JsonProperty("Name")
     public String name;
+
     public PatchSource withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class PatchSource {
     
     @JsonProperty("Products")
     public String[] products;
+
     public PatchSource withProducts(String[] products) {
         this.products = products;
         return this;
     }
     
+    public PatchSource(@JsonProperty("Configuration") String configuration, @JsonProperty("Name") String name, @JsonProperty("Products") String[] products) {
+        this.configuration = configuration;
+        this.name = name;
+        this.products = products;
+  }
 }

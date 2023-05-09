@@ -12,9 +12,11 @@ public class UpdateSwaggerRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public UpdateSwaggerRequestBodySwagger swagger;
+
     public UpdateSwaggerRequestBody withSwagger(UpdateSwaggerRequestBodySwagger swagger) {
         this.swagger = swagger;
         return this;
     }
     
+    public UpdateSwaggerRequestBody(){}
 }

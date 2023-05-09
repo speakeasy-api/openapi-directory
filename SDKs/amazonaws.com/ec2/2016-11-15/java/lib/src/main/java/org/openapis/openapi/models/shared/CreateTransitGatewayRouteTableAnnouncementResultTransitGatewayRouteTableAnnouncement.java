@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncement {
     
     public CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementAnnouncementDirectionEnum announcementDirection;
+
     public CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncement withAnnouncementDirection(CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementAnnouncementDirectionEnum announcementDirection) {
         this.announcementDirection = announcementDirection;
         return this;
@@ -19,6 +20,7 @@ public class CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRoute
     
     
     public String coreNetworkId;
+
     public CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncement withCoreNetworkId(String coreNetworkId) {
         this.coreNetworkId = coreNetworkId;
         return this;
@@ -26,6 +28,7 @@ public class CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRoute
     
     
     public OffsetDateTime creationTime;
+
     public CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncement withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -33,6 +36,7 @@ public class CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRoute
     
     
     public String peerCoreNetworkId;
+
     public CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncement withPeerCoreNetworkId(String peerCoreNetworkId) {
         this.peerCoreNetworkId = peerCoreNetworkId;
         return this;
@@ -40,6 +44,7 @@ public class CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRoute
     
     
     public String peerTransitGatewayId;
+
     public CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncement withPeerTransitGatewayId(String peerTransitGatewayId) {
         this.peerTransitGatewayId = peerTransitGatewayId;
         return this;
@@ -47,6 +52,7 @@ public class CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRoute
     
     
     public String peeringAttachmentId;
+
     public CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncement withPeeringAttachmentId(String peeringAttachmentId) {
         this.peeringAttachmentId = peeringAttachmentId;
         return this;
@@ -54,6 +60,7 @@ public class CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRoute
     
     
     public CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementStateEnum state;
+
     public CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncement withState(CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementStateEnum state) {
         this.state = state;
         return this;
@@ -61,6 +68,7 @@ public class CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRoute
     
     
     public CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementTags[] tags;
+
     public CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncement withTags(CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementTags[] tags) {
         this.tags = tags;
         return this;
@@ -68,6 +76,7 @@ public class CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRoute
     
     
     public String transitGatewayId;
+
     public CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncement withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -75,6 +84,7 @@ public class CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRoute
     
     
     public String transitGatewayRouteTableAnnouncementId;
+
     public CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncement withTransitGatewayRouteTableAnnouncementId(String transitGatewayRouteTableAnnouncementId) {
         this.transitGatewayRouteTableAnnouncementId = transitGatewayRouteTableAnnouncementId;
         return this;
@@ -82,9 +92,11 @@ public class CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRoute
     
     
     public String transitGatewayRouteTableId;
+
     public CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncement withTransitGatewayRouteTableId(String transitGatewayRouteTableId) {
         this.transitGatewayRouteTableId = transitGatewayRouteTableId;
         return this;
     }
     
+    public CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncement(){}
 }

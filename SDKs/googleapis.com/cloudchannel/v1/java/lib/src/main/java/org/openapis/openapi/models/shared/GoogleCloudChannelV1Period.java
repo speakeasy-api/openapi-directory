@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1Period {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Integer duration;
+
     public GoogleCloudChannelV1Period withDuration(Integer duration) {
         this.duration = duration;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudChannelV1Period {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periodType")
     public GoogleCloudChannelV1PeriodPeriodTypeEnum periodType;
+
     public GoogleCloudChannelV1Period withPeriodType(GoogleCloudChannelV1PeriodPeriodTypeEnum periodType) {
         this.periodType = periodType;
         return this;
     }
     
+    public GoogleCloudChannelV1Period(){}
 }

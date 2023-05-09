@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListExplainabilityExportsResponse {
     
     public String contentType;
+
     public ListExplainabilityExportsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListExplainabilityExportsResponse {
      */
     
     public Object invalidInputException;
+
     public ListExplainabilityExportsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class ListExplainabilityExportsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListExplainabilityExportsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListExplainabilityExportsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListExplainabilityExportsResponse listExplainabilityExportsResponse;
+
     public ListExplainabilityExportsResponse withListExplainabilityExportsResponse(org.openapis.openapi.models.shared.ListExplainabilityExportsResponse listExplainabilityExportsResponse) {
         this.listExplainabilityExportsResponse = listExplainabilityExportsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListExplainabilityExportsResponse {
     
     
     public Integer statusCode;
+
     public ListExplainabilityExportsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListExplainabilityExportsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListExplainabilityExportsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListExplainabilityExportsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

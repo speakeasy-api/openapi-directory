@@ -14,6 +14,7 @@ public class BuildsListByBranch200ApplicationJSON {
      */
     @JsonProperty("buildNumber")
     public String buildNumber;
+
     public BuildsListByBranch200ApplicationJSON withBuildNumber(String buildNumber) {
         this.buildNumber = buildNumber;
         return this;
@@ -25,6 +26,7 @@ public class BuildsListByBranch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finishTime")
     public String finishTime;
+
     public BuildsListByBranch200ApplicationJSON withFinishTime(String finishTime) {
         this.finishTime = finishTime;
         return this;
@@ -35,6 +37,7 @@ public class BuildsListByBranch200ApplicationJSON {
      */
     @JsonProperty("id")
     public Long id;
+
     public BuildsListByBranch200ApplicationJSON withId(Long id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class BuildsListByBranch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastChangedDate")
     public String lastChangedDate;
+
     public BuildsListByBranch200ApplicationJSON withLastChangedDate(String lastChangedDate) {
         this.lastChangedDate = lastChangedDate;
         return this;
@@ -56,6 +60,7 @@ public class BuildsListByBranch200ApplicationJSON {
      */
     @JsonProperty("queueTime")
     public String queueTime;
+
     public BuildsListByBranch200ApplicationJSON withQueueTime(String queueTime) {
         this.queueTime = queueTime;
         return this;
@@ -66,6 +71,7 @@ public class BuildsListByBranch200ApplicationJSON {
      */
     @JsonProperty("result")
     public String result;
+
     public BuildsListByBranch200ApplicationJSON withResult(String result) {
         this.result = result;
         return this;
@@ -76,6 +82,7 @@ public class BuildsListByBranch200ApplicationJSON {
      */
     @JsonProperty("sourceBranch")
     public String sourceBranch;
+
     public BuildsListByBranch200ApplicationJSON withSourceBranch(String sourceBranch) {
         this.sourceBranch = sourceBranch;
         return this;
@@ -86,6 +93,7 @@ public class BuildsListByBranch200ApplicationJSON {
      */
     @JsonProperty("sourceVersion")
     public String sourceVersion;
+
     public BuildsListByBranch200ApplicationJSON withSourceVersion(String sourceVersion) {
         this.sourceVersion = sourceVersion;
         return this;
@@ -97,6 +105,7 @@ public class BuildsListByBranch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public BuildsListByBranch200ApplicationJSON withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -107,9 +116,19 @@ public class BuildsListByBranch200ApplicationJSON {
      */
     @JsonProperty("status")
     public String status;
+
     public BuildsListByBranch200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public BuildsListByBranch200ApplicationJSON(@JsonProperty("buildNumber") String buildNumber, @JsonProperty("id") Long id, @JsonProperty("queueTime") String queueTime, @JsonProperty("result") String result, @JsonProperty("sourceBranch") String sourceBranch, @JsonProperty("sourceVersion") String sourceVersion, @JsonProperty("status") String status) {
+        this.buildNumber = buildNumber;
+        this.id = id;
+        this.queueTime = queueTime;
+        this.result = result;
+        this.sourceBranch = sourceBranch;
+        this.sourceVersion = sourceVersion;
+        this.status = status;
+  }
 }

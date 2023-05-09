@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Location {
     @JsonProperty("path")
     public PathElement[] path;
+
     public Location withPath(PathElement[] path) {
         this.path = path;
         return this;
@@ -19,9 +20,14 @@ public class Location {
     
     @JsonProperty("span")
     public Span span;
+
     public Location withSpan(Span span) {
         this.span = span;
         return this;
     }
     
+    public Location(@JsonProperty("path") PathElement[] path, @JsonProperty("span") Span span) {
+        this.path = path;
+        this.span = span;
+  }
 }

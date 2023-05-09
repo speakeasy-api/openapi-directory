@@ -12,6 +12,7 @@ public class DfsSlatePlayerOwnershipProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDefensePlayerID")
     public Long fantasyDefensePlayerID;
+
     public DfsSlatePlayerOwnershipProjection withFantasyDefensePlayerID(Long fantasyDefensePlayerID) {
         this.fantasyDefensePlayerID = fantasyDefensePlayerID;
         return this;
@@ -20,6 +21,7 @@ public class DfsSlatePlayerOwnershipProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsCaptain")
     public Boolean isCaptain;
+
     public DfsSlatePlayerOwnershipProjection withIsCaptain(Boolean isCaptain) {
         this.isCaptain = isCaptain;
         return this;
@@ -28,6 +30,7 @@ public class DfsSlatePlayerOwnershipProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public DfsSlatePlayerOwnershipProjection withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -36,6 +39,7 @@ public class DfsSlatePlayerOwnershipProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectedOwnershipPercentage")
     public Double projectedOwnershipPercentage;
+
     public DfsSlatePlayerOwnershipProjection withProjectedOwnershipPercentage(Double projectedOwnershipPercentage) {
         this.projectedOwnershipPercentage = projectedOwnershipPercentage;
         return this;
@@ -44,9 +48,11 @@ public class DfsSlatePlayerOwnershipProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SlateID")
     public Long slateID;
+
     public DfsSlatePlayerOwnershipProjection withSlateID(Long slateID) {
         this.slateID = slateID;
         return this;
     }
     
+    public DfsSlatePlayerOwnershipProjection(){}
 }

@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ConfiguredTableAssociationSummary {
     @JsonProperty("arn")
     public String arn;
+
     public ConfiguredTableAssociationSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -24,6 +25,7 @@ public class ConfiguredTableAssociationSummary {
     
     @JsonProperty("configuredTableId")
     public String configuredTableId;
+
     public ConfiguredTableAssociationSummary withConfiguredTableId(String configuredTableId) {
         this.configuredTableId = configuredTableId;
         return this;
@@ -33,6 +35,7 @@ public class ConfiguredTableAssociationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public ConfiguredTableAssociationSummary withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +43,7 @@ public class ConfiguredTableAssociationSummary {
     
     @JsonProperty("id")
     public String id;
+
     public ConfiguredTableAssociationSummary withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class ConfiguredTableAssociationSummary {
     
     @JsonProperty("membershipArn")
     public String membershipArn;
+
     public ConfiguredTableAssociationSummary withMembershipArn(String membershipArn) {
         this.membershipArn = membershipArn;
         return this;
@@ -54,6 +59,7 @@ public class ConfiguredTableAssociationSummary {
     
     @JsonProperty("membershipId")
     public String membershipId;
+
     public ConfiguredTableAssociationSummary withMembershipId(String membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -61,6 +67,7 @@ public class ConfiguredTableAssociationSummary {
     
     @JsonProperty("name")
     public String name;
+
     public ConfiguredTableAssociationSummary withName(String name) {
         this.name = name;
         return this;
@@ -70,9 +77,20 @@ public class ConfiguredTableAssociationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public ConfiguredTableAssociationSummary withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ConfiguredTableAssociationSummary(@JsonProperty("arn") String arn, @JsonProperty("configuredTableId") String configuredTableId, @JsonProperty("createTime") OffsetDateTime createTime, @JsonProperty("id") String id, @JsonProperty("membershipArn") String membershipArn, @JsonProperty("membershipId") String membershipId, @JsonProperty("name") String name, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.arn = arn;
+        this.configuredTableId = configuredTableId;
+        this.createTime = createTime;
+        this.id = id;
+        this.membershipArn = membershipArn;
+        this.membershipId = membershipId;
+        this.name = name;
+        this.updateTime = updateTime;
+  }
 }

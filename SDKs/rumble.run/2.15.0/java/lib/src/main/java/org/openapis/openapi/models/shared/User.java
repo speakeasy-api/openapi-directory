@@ -15,6 +15,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_admin")
     public Boolean clientAdmin;
+
     public User withClientAdmin(Boolean clientAdmin) {
         this.clientAdmin = clientAdmin;
         return this;
@@ -23,6 +24,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_id")
     public String clientId;
+
     public User withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -31,6 +33,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public Long createdAt;
+
     public User withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -39,6 +42,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public User withEmail(String email) {
         this.email = email;
         return this;
@@ -47,6 +51,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public User withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -54,6 +59,7 @@ public class User {
     
     @JsonProperty("id")
     public String id;
+
     public User withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +68,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invite_token_expiration")
     public Long inviteTokenExpiration;
+
     public User withInviteTokenExpiration(Long inviteTokenExpiration) {
         this.inviteTokenExpiration = inviteTokenExpiration;
         return this;
@@ -70,6 +77,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_login_at")
     public Long lastLoginAt;
+
     public User withLastLoginAt(Long lastLoginAt) {
         this.lastLoginAt = lastLoginAt;
         return this;
@@ -78,6 +86,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_login_ip")
     public String lastLoginIp;
+
     public User withLastLoginIp(String lastLoginIp) {
         this.lastLoginIp = lastLoginIp;
         return this;
@@ -86,6 +95,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_login_ua")
     public String lastLoginUa;
+
     public User withLastLoginUa(String lastLoginUa) {
         this.lastLoginUa = lastLoginUa;
         return this;
@@ -94,6 +104,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public User withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -102,6 +113,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("login_failures")
     public Long loginFailures;
+
     public User withLoginFailures(Long loginFailures) {
         this.loginFailures = loginFailures;
         return this;
@@ -110,6 +122,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org_default_role")
     public String orgDefaultRole;
+
     public User withOrgDefaultRole(String orgDefaultRole) {
         this.orgDefaultRole = orgDefaultRole;
         return this;
@@ -118,6 +131,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org_roles")
     public java.util.Map<String, Object> orgRoles;
+
     public User withOrgRoles(java.util.Map<String, Object> orgRoles) {
         this.orgRoles = orgRoles;
         return this;
@@ -126,6 +140,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reset_token_expiration")
     public Long resetTokenExpiration;
+
     public User withResetTokenExpiration(Long resetTokenExpiration) {
         this.resetTokenExpiration = resetTokenExpiration;
         return this;
@@ -134,6 +149,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sso_only")
     public Boolean ssoOnly;
+
     public User withSsoOnly(Boolean ssoOnly) {
         this.ssoOnly = ssoOnly;
         return this;
@@ -142,9 +158,13 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public Long updatedAt;
+
     public User withUpdatedAt(Long updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public User(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

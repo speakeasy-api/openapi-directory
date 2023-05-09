@@ -15,9 +15,13 @@ public class ConfigureCatalogColumnCatalogRequest {
      */
     @JsonProperty("catalogColumn")
     public CatalogColumn catalogColumn;
+
     public ConfigureCatalogColumnCatalogRequest withCatalogColumn(CatalogColumn catalogColumn) {
         this.catalogColumn = catalogColumn;
         return this;
     }
     
+    public ConfigureCatalogColumnCatalogRequest(@JsonProperty("catalogColumn") CatalogColumn catalogColumn) {
+        this.catalogColumn = catalogColumn;
+  }
 }

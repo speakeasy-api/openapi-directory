@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSavedRevisionsUsingGETResponse {
     
     public String contentType;
+
     public ListSavedRevisionsUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ListSavedRevisionsUsingGETResponse {
     
     
     public Integer statusCode;
+
     public ListSavedRevisionsUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ListSavedRevisionsUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSavedRevisionsUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ListSavedRevisionsUsingGETResponse {
      */
     
     public ListSavedRevisionsUsingGET200ApplicationJSON listSavedRevisionsUsingGET200ApplicationJSONObject;
+
     public ListSavedRevisionsUsingGETResponse withListSavedRevisionsUsingGET200ApplicationJSONObject(ListSavedRevisionsUsingGET200ApplicationJSON listSavedRevisionsUsingGET200ApplicationJSONObject) {
         this.listSavedRevisionsUsingGET200ApplicationJSONObject = listSavedRevisionsUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ListSavedRevisionsUsingGETResponse {
      */
     
     public ListSavedRevisionsUsingGET400ApplicationJSON listSavedRevisionsUsingGET400ApplicationJSONObject;
+
     public ListSavedRevisionsUsingGETResponse withListSavedRevisionsUsingGET400ApplicationJSONObject(ListSavedRevisionsUsingGET400ApplicationJSON listSavedRevisionsUsingGET400ApplicationJSONObject) {
         this.listSavedRevisionsUsingGET400ApplicationJSONObject = listSavedRevisionsUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ListSavedRevisionsUsingGETResponse {
      */
     
     public ListSavedRevisionsUsingGET401ApplicationJSON listSavedRevisionsUsingGET401ApplicationJSONObject;
+
     public ListSavedRevisionsUsingGETResponse withListSavedRevisionsUsingGET401ApplicationJSONObject(ListSavedRevisionsUsingGET401ApplicationJSON listSavedRevisionsUsingGET401ApplicationJSONObject) {
         this.listSavedRevisionsUsingGET401ApplicationJSONObject = listSavedRevisionsUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class ListSavedRevisionsUsingGETResponse {
      */
     
     public ListSavedRevisionsUsingGET500ApplicationJSON listSavedRevisionsUsingGET500ApplicationJSONObject;
+
     public ListSavedRevisionsUsingGETResponse withListSavedRevisionsUsingGET500ApplicationJSONObject(ListSavedRevisionsUsingGET500ApplicationJSON listSavedRevisionsUsingGET500ApplicationJSONObject) {
         this.listSavedRevisionsUsingGET500ApplicationJSONObject = listSavedRevisionsUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public ListSavedRevisionsUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

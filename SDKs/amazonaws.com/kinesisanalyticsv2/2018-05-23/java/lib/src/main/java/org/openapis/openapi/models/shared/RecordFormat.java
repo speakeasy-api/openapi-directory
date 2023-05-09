@@ -15,6 +15,7 @@ public class RecordFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MappingParameters")
     public MappingParameters mappingParameters;
+
     public RecordFormat withMappingParameters(MappingParameters mappingParameters) {
         this.mappingParameters = mappingParameters;
         return this;
@@ -22,9 +23,13 @@ public class RecordFormat {
     
     @JsonProperty("RecordFormatType")
     public RecordFormatTypeEnum recordFormatType;
+
     public RecordFormat withRecordFormatType(RecordFormatTypeEnum recordFormatType) {
         this.recordFormatType = recordFormatType;
         return this;
     }
     
+    public RecordFormat(@JsonProperty("RecordFormatType") RecordFormatTypeEnum recordFormatType) {
+        this.recordFormatType = recordFormatType;
+  }
 }

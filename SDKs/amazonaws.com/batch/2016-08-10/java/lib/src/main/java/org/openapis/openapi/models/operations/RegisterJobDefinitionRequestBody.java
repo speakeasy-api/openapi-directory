@@ -15,6 +15,7 @@ public class RegisterJobDefinitionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerProperties")
     public RegisterJobDefinitionRequestBodyContainerProperties containerProperties;
+
     public RegisterJobDefinitionRequestBody withContainerProperties(RegisterJobDefinitionRequestBodyContainerProperties containerProperties) {
         this.containerProperties = containerProperties;
         return this;
@@ -26,6 +27,7 @@ public class RegisterJobDefinitionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eksProperties")
     public RegisterJobDefinitionRequestBodyEksProperties eksProperties;
+
     public RegisterJobDefinitionRequestBody withEksProperties(RegisterJobDefinitionRequestBodyEksProperties eksProperties) {
         this.eksProperties = eksProperties;
         return this;
@@ -36,6 +38,7 @@ public class RegisterJobDefinitionRequestBody {
      */
     @JsonProperty("jobDefinitionName")
     public String jobDefinitionName;
+
     public RegisterJobDefinitionRequestBody withJobDefinitionName(String jobDefinitionName) {
         this.jobDefinitionName = jobDefinitionName;
         return this;
@@ -47,6 +50,7 @@ public class RegisterJobDefinitionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeProperties")
     public RegisterJobDefinitionRequestBodyNodeProperties nodeProperties;
+
     public RegisterJobDefinitionRequestBody withNodeProperties(RegisterJobDefinitionRequestBodyNodeProperties nodeProperties) {
         this.nodeProperties = nodeProperties;
         return this;
@@ -58,6 +62,7 @@ public class RegisterJobDefinitionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, String> parameters;
+
     public RegisterJobDefinitionRequestBody withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -69,6 +74,7 @@ public class RegisterJobDefinitionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformCapabilities")
     public org.openapis.openapi.models.shared.PlatformCapabilityEnum[] platformCapabilities;
+
     public RegisterJobDefinitionRequestBody withPlatformCapabilities(org.openapis.openapi.models.shared.PlatformCapabilityEnum[] platformCapabilities) {
         this.platformCapabilities = platformCapabilities;
         return this;
@@ -80,6 +86,7 @@ public class RegisterJobDefinitionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propagateTags")
     public Boolean propagateTags;
+
     public RegisterJobDefinitionRequestBody withPropagateTags(Boolean propagateTags) {
         this.propagateTags = propagateTags;
         return this;
@@ -91,6 +98,7 @@ public class RegisterJobDefinitionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryStrategy")
     public RegisterJobDefinitionRequestBodyRetryStrategy retryStrategy;
+
     public RegisterJobDefinitionRequestBody withRetryStrategy(RegisterJobDefinitionRequestBodyRetryStrategy retryStrategy) {
         this.retryStrategy = retryStrategy;
         return this;
@@ -102,6 +110,7 @@ public class RegisterJobDefinitionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulingPriority")
     public Long schedulingPriority;
+
     public RegisterJobDefinitionRequestBody withSchedulingPriority(Long schedulingPriority) {
         this.schedulingPriority = schedulingPriority;
         return this;
@@ -113,6 +122,7 @@ public class RegisterJobDefinitionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public RegisterJobDefinitionRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -124,6 +134,7 @@ public class RegisterJobDefinitionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public RegisterJobDefinitionRequestBodyTimeout timeout;
+
     public RegisterJobDefinitionRequestBody withTimeout(RegisterJobDefinitionRequestBodyTimeout timeout) {
         this.timeout = timeout;
         return this;
@@ -134,9 +145,14 @@ public class RegisterJobDefinitionRequestBody {
      */
     @JsonProperty("type")
     public RegisterJobDefinitionRequestBodyTypeEnum type;
+
     public RegisterJobDefinitionRequestBody withType(RegisterJobDefinitionRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RegisterJobDefinitionRequestBody(@JsonProperty("jobDefinitionName") String jobDefinitionName, @JsonProperty("type") RegisterJobDefinitionRequestBodyTypeEnum type) {
+        this.jobDefinitionName = jobDefinitionName;
+        this.type = type;
+  }
 }

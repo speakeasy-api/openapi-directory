@@ -12,6 +12,7 @@ public class NodesDraftRegistrationsReadDraftRegistrationAttributesNodeLicense {
      */
     
     public String[] copyrightHolders;
+
     public NodesDraftRegistrationsReadDraftRegistrationAttributesNodeLicense withCopyrightHolders(String[] copyrightHolders) {
         this.copyrightHolders = copyrightHolders;
         return this;
@@ -22,9 +23,11 @@ public class NodesDraftRegistrationsReadDraftRegistrationAttributesNodeLicense {
      */
     
     public Long year;
+
     public NodesDraftRegistrationsReadDraftRegistrationAttributesNodeLicense withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public NodesDraftRegistrationsReadDraftRegistrationAttributesNodeLicense(){}
 }

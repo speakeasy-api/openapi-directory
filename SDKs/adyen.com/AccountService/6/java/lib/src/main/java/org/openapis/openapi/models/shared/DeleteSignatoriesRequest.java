@@ -12,6 +12,7 @@ public class DeleteSignatoriesRequest {
      */
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public DeleteSignatoriesRequest withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -22,9 +23,14 @@ public class DeleteSignatoriesRequest {
      */
     @JsonProperty("signatoryCodes")
     public String[] signatoryCodes;
+
     public DeleteSignatoriesRequest withSignatoryCodes(String[] signatoryCodes) {
         this.signatoryCodes = signatoryCodes;
         return this;
     }
     
+    public DeleteSignatoriesRequest(@JsonProperty("accountHolderCode") String accountHolderCode, @JsonProperty("signatoryCodes") String[] signatoryCodes) {
+        this.accountHolderCode = accountHolderCode;
+        this.signatoryCodes = signatoryCodes;
+  }
 }

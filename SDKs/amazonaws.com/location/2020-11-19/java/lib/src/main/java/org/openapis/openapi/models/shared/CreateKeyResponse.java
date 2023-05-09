@@ -19,6 +19,7 @@ public class CreateKeyResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public CreateKeyResponse withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -26,6 +27,7 @@ public class CreateKeyResponse {
     
     @JsonProperty("Key")
     public String key;
+
     public CreateKeyResponse withKey(String key) {
         this.key = key;
         return this;
@@ -33,6 +35,7 @@ public class CreateKeyResponse {
     
     @JsonProperty("KeyArn")
     public String keyArn;
+
     public CreateKeyResponse withKeyArn(String keyArn) {
         this.keyArn = keyArn;
         return this;
@@ -40,9 +43,16 @@ public class CreateKeyResponse {
     
     @JsonProperty("KeyName")
     public String keyName;
+
     public CreateKeyResponse withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
     }
     
+    public CreateKeyResponse(@JsonProperty("CreateTime") OffsetDateTime createTime, @JsonProperty("Key") String key, @JsonProperty("KeyArn") String keyArn, @JsonProperty("KeyName") String keyName) {
+        this.createTime = createTime;
+        this.key = key;
+        this.keyArn = keyArn;
+        this.keyName = keyName;
+  }
 }

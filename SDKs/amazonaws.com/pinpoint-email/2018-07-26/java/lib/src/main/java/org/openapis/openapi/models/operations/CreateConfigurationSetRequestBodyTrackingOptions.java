@@ -15,9 +15,11 @@ public class CreateConfigurationSetRequestBodyTrackingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomRedirectDomain")
     public String customRedirectDomain;
+
     public CreateConfigurationSetRequestBodyTrackingOptions withCustomRedirectDomain(String customRedirectDomain) {
         this.customRedirectDomain = customRedirectDomain;
         return this;
     }
     
+    public CreateConfigurationSetRequestBodyTrackingOptions(){}
 }

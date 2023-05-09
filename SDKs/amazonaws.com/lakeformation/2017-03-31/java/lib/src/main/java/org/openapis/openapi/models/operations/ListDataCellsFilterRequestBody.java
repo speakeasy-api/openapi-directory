@@ -15,6 +15,7 @@ public class ListDataCellsFilterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDataCellsFilterRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class ListDataCellsFilterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDataCellsFilterRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +39,11 @@ public class ListDataCellsFilterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Table")
     public ListDataCellsFilterRequestBodyTable table;
+
     public ListDataCellsFilterRequestBody withTable(ListDataCellsFilterRequestBodyTable table) {
         this.table = table;
         return this;
     }
     
+    public ListDataCellsFilterRequestBody(){}
 }

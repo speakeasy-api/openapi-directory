@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSimilarVideosRequest {
@@ -12,6 +13,7 @@ public class GetSimilarVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_id")
     public String assetId;
+
     public GetSimilarVideosRequest withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
@@ -22,6 +24,7 @@ public class GetSimilarVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public org.openapis.openapi.models.shared.LanguageEnum language;
+
     public GetSimilarVideosRequest withLanguage(org.openapis.openapi.models.shared.LanguageEnum language) {
         this.language = language;
         return this;
@@ -32,6 +35,7 @@ public class GetSimilarVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
     public GetSimilarVideosLicenseEnum[] license;
+
     public GetSimilarVideosRequest withLicense(GetSimilarVideosLicenseEnum[] license) {
         this.license = license;
         return this;
@@ -42,6 +46,7 @@ public class GetSimilarVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetSimilarVideosRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -52,6 +57,7 @@ public class GetSimilarVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetSimilarVideosRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -62,6 +68,7 @@ public class GetSimilarVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=safe")
     public Boolean safe;
+
     public GetSimilarVideosRequest withSafe(Boolean safe) {
         this.safe = safe;
         return this;
@@ -72,9 +79,13 @@ public class GetSimilarVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public GetSimilarVideosViewEnum view;
+
     public GetSimilarVideosRequest withView(GetSimilarVideosViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public GetSimilarVideosRequest(@JsonProperty("asset_id") String assetId) {
+        this.assetId = assetId;
+  }
 }

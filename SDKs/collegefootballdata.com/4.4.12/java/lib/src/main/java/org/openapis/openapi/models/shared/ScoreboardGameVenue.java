@@ -12,6 +12,7 @@ public class ScoreboardGameVenue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public ScoreboardGameVenue withCity(String city) {
         this.city = city;
         return this;
@@ -20,6 +21,7 @@ public class ScoreboardGameVenue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ScoreboardGameVenue withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class ScoreboardGameVenue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public ScoreboardGameVenue withState(String state) {
         this.state = state;
         return this;
     }
     
+    public ScoreboardGameVenue(){}
 }

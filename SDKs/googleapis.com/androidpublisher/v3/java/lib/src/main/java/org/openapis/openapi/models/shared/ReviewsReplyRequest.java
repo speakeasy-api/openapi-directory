@@ -18,9 +18,11 @@ public class ReviewsReplyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replyText")
     public String replyText;
+
     public ReviewsReplyRequest withReplyText(String replyText) {
         this.replyText = replyText;
         return this;
     }
     
+    public ReviewsReplyRequest(){}
 }

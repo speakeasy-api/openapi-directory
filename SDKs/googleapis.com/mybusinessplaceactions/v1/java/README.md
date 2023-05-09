@@ -16,12 +16,11 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest;
 import org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateResponse;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.PlaceActionLinkPlaceActionTypeEnum;
 import org.openapis.openapi.models.shared.PlaceActionLinkInput;
+import org.openapis.openapi.models.shared.PlaceActionLinkPlaceActionTypeEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -30,35 +29,36 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest req = new MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest() {{
-                dollarXgafv = "2";
+            MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest req = new MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 placeActionLinkInput = new PlaceActionLinkInput() {{
                     isPreferred = false;
-                    name = "provident";
-                    placeActionType = "FOOD_DELIVERY";
-                    uri = "https://outstanding-strait.name";
-                }};
-                accessToken = "illum";
-                alt = "media";
-                callback = "error";
-                fields = "deserunt";
-                key = "suscipit";
-                oauthToken = "iure";
-                parent = "magnam";
+                    name = "Ellis Mitchell";
+                    placeActionType = PlaceActionLinkPlaceActionTypeEnum.FOOD_TAKEOUT;
+                    uri = "http://physical-pegboard.info";
+                }};;
+                accessToken = "iure";
+                alt = AltEnum.JSON;
+                callback = "debitis";
+                fields = "ipsa";
+                key = "delectus";
+                oauthToken = "tempora";
                 prettyPrint = false;
-                quotaUser = "debitis";
-                uploadType = "ipsa";
-                uploadProtocol = "delectus";
-            }}            
+                quotaUser = "suscipit";
+                uploadType = "molestiae";
+                uploadProtocol = "minus";
+            }};            
 
             MybusinessplaceactionsLocationsPlaceActionLinksCreateResponse res = sdk.locations.mybusinessplaceactionsLocationsPlaceActionLinksCreate(req);
 
-            if (res.placeActionLink.isPresent()) {
+            if (res.placeActionLink != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -66,17 +66,17 @@ public class Application {
 ## Available Resources and Operations
 
 
-### locations
+### [locations](docs/locations/README.md)
 
-* `mybusinessplaceactionsLocationsPlaceActionLinksCreate` - Creates a place action link associated with the specified location, and returns it. The request is considered duplicate if the `parent`, `place_action_link.uri` and `place_action_link.place_action_type` are the same as a previous request.
-* `mybusinessplaceactionsLocationsPlaceActionLinksDelete` - Deletes a place action link from the specified location.
-* `mybusinessplaceactionsLocationsPlaceActionLinksGet` - Gets the specified place action link.
-* `mybusinessplaceactionsLocationsPlaceActionLinksList` - Lists the place action links for the specified location.
-* `mybusinessplaceactionsLocationsPlaceActionLinksPatch` - Updates the specified place action link and returns it.
+* [mybusinessplaceactionsLocationsPlaceActionLinksCreate](docs/locations/README.md#mybusinessplaceactionslocationsplaceactionlinkscreate) - Creates a place action link associated with the specified location, and returns it. The request is considered duplicate if the `parent`, `place_action_link.uri` and `place_action_link.place_action_type` are the same as a previous request.
+* [mybusinessplaceactionsLocationsPlaceActionLinksDelete](docs/locations/README.md#mybusinessplaceactionslocationsplaceactionlinksdelete) - Deletes a place action link from the specified location.
+* [mybusinessplaceactionsLocationsPlaceActionLinksGet](docs/locations/README.md#mybusinessplaceactionslocationsplaceactionlinksget) - Gets the specified place action link.
+* [mybusinessplaceactionsLocationsPlaceActionLinksList](docs/locations/README.md#mybusinessplaceactionslocationsplaceactionlinkslist) - Lists the place action links for the specified location.
+* [mybusinessplaceactionsLocationsPlaceActionLinksPatch](docs/locations/README.md#mybusinessplaceactionslocationsplaceactionlinkspatch) - Updates the specified place action link and returns it.
 
-### placeActionTypeMetadata
+### [placeActionTypeMetadata](docs/placeactiontypemetadata/README.md)
 
-* `mybusinessplaceactionsPlaceActionTypeMetadataList` - Returns the list of available place action types for a location or country.
+* [mybusinessplaceactionsPlaceActionTypeMetadataList](docs/placeactiontypemetadata/README.md#mybusinessplaceactionsplaceactiontypemetadatalist) - Returns the list of available place action types for a location or country.
 <!-- End SDK Available Operations -->
 
 ### Maturity

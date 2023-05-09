@@ -15,6 +15,7 @@ public class GetUsersUserMobileApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OS")
     public GetUsersUserMobileApplicationOSEnum os;
+
     public GetUsersUserMobileApplication withOs(GetUsersUserMobileApplicationOSEnum os) {
         this.os = os;
         return this;
@@ -26,6 +27,7 @@ public class GetUsersUserMobileApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessUserId")
     public Long businessUserId;
+
     public GetUsersUserMobileApplication withBusinessUserId(Long businessUserId) {
         this.businessUserId = businessUserId;
         return this;
@@ -37,6 +39,7 @@ public class GetUsersUserMobileApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientID")
     public String clientID;
+
     public GetUsersUserMobileApplication withClientID(String clientID) {
         this.clientID = clientID;
         return this;
@@ -48,6 +51,7 @@ public class GetUsersUserMobileApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceName")
     public GetUsersUserMobileApplicationDeviceNameEnum deviceName;
+
     public GetUsersUserMobileApplication withDeviceName(GetUsersUserMobileApplicationDeviceNameEnum deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -59,6 +63,7 @@ public class GetUsersUserMobileApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceOSVersion")
     public String deviceOSVersion;
+
     public GetUsersUserMobileApplication withDeviceOSVersion(String deviceOSVersion) {
         this.deviceOSVersion = deviceOSVersion;
         return this;
@@ -70,6 +75,7 @@ public class GetUsersUserMobileApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobileApplicationId")
     public Long mobileApplicationId;
+
     public GetUsersUserMobileApplication withMobileApplicationId(Long mobileApplicationId) {
         this.mobileApplicationId = mobileApplicationId;
         return this;
@@ -81,9 +87,11 @@ public class GetUsersUserMobileApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GetUsersUserMobileApplicationStatusEnum status;
+
     public GetUsersUserMobileApplication withStatus(GetUsersUserMobileApplicationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetUsersUserMobileApplication(){}
 }

@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutResp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optOut")
     public Boolean optOut;
+
     public GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutResponse withOptOut(Boolean optOut) {
         this.optOut = optOut;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutResponse(){}
 }

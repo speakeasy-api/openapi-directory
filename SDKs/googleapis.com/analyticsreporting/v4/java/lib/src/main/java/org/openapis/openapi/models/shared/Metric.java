@@ -18,6 +18,7 @@ public class Metric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public Metric withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -29,6 +30,7 @@ public class Metric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public Metric withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -40,9 +42,11 @@ public class Metric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formattingType")
     public MetricFormattingTypeEnum formattingType;
+
     public Metric withFormattingType(MetricFormattingTypeEnum formattingType) {
         this.formattingType = formattingType;
         return this;
     }
     
+    public Metric(){}
 }

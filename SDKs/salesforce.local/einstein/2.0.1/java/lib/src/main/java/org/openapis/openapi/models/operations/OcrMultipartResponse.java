@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OcrMultipartResponse {
     
     public String contentType;
+
     public OcrMultipartResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class OcrMultipartResponse {
      */
     
     public org.openapis.openapi.models.shared.OCRPredictResponse ocrPredictResponse;
+
     public OcrMultipartResponse withOCRPredictResponse(org.openapis.openapi.models.shared.OCRPredictResponse ocrPredictResponse) {
         this.ocrPredictResponse = ocrPredictResponse;
         return this;
@@ -26,6 +29,7 @@ public class OcrMultipartResponse {
     
     
     public Integer statusCode;
+
     public OcrMultipartResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class OcrMultipartResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OcrMultipartResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OcrMultipartResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

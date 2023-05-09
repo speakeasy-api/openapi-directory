@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBClusterSnapshotMessage {
     
     public DBClusterSnapshotList[] dbClusterSnapshots;
+
     public DBClusterSnapshotMessage withDBClusterSnapshots(DBClusterSnapshotList[] dbClusterSnapshots) {
         this.dbClusterSnapshots = dbClusterSnapshots;
         return this;
@@ -19,9 +20,11 @@ public class DBClusterSnapshotMessage {
     
     
     public String marker;
+
     public DBClusterSnapshotMessage withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public DBClusterSnapshotMessage(){}
 }

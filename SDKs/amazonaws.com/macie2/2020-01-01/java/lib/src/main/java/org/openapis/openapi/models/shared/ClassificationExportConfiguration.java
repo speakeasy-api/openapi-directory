@@ -15,9 +15,11 @@ public class ClassificationExportConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Destination")
     public S3Destination s3Destination;
+
     public ClassificationExportConfiguration withS3Destination(S3Destination s3Destination) {
         this.s3Destination = s3Destination;
         return this;
     }
     
+    public ClassificationExportConfiguration(){}
 }

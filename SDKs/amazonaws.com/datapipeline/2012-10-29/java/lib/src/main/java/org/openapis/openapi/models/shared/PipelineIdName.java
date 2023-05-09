@@ -15,6 +15,7 @@ public class PipelineIdName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PipelineIdName withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class PipelineIdName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PipelineIdName withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PipelineIdName(){}
 }

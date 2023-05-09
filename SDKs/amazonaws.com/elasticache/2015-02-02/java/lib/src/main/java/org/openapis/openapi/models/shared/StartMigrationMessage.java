@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StartMigrationMessage {
     
     public CustomerNodeEndpoint[] customerNodeEndpointList;
+
     public StartMigrationMessage withCustomerNodeEndpointList(CustomerNodeEndpoint[] customerNodeEndpointList) {
         this.customerNodeEndpointList = customerNodeEndpointList;
         return this;
@@ -16,9 +17,14 @@ public class StartMigrationMessage {
     
     
     public String replicationGroupId;
+
     public StartMigrationMessage withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
     }
     
+    public StartMigrationMessage(@JsonProperty("CustomerNodeEndpointList") CustomerNodeEndpoint[] customerNodeEndpointList, @JsonProperty("ReplicationGroupId") String replicationGroupId) {
+        this.customerNodeEndpointList = customerNodeEndpointList;
+        this.replicationGroupId = replicationGroupId;
+  }
 }

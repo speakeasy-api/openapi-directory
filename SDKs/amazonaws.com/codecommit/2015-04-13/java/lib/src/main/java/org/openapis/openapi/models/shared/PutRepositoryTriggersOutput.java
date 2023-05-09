@@ -15,9 +15,11 @@ public class PutRepositoryTriggersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationId")
     public String configurationId;
+
     public PutRepositoryTriggersOutput withConfigurationId(String configurationId) {
         this.configurationId = configurationId;
         return this;
     }
     
+    public PutRepositoryTriggersOutput(){}
 }

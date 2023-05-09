@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2beta1SuggestionFeature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDialogflowV2beta1SuggestionFeatureTypeEnum type;
+
     public GoogleCloudDialogflowV2beta1SuggestionFeature withType(GoogleCloudDialogflowV2beta1SuggestionFeatureTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1SuggestionFeature(){}
 }

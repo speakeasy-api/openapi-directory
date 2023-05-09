@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountCredentialRequest {
@@ -12,9 +13,13 @@ public class GetAccountCredentialRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=credential_id")
     public String credentialId;
+
     public GetAccountCredentialRequest withCredentialId(String credentialId) {
         this.credentialId = credentialId;
         return this;
     }
     
+    public GetAccountCredentialRequest(@JsonProperty("credential_id") String credentialId) {
+        this.credentialId = credentialId;
+  }
 }

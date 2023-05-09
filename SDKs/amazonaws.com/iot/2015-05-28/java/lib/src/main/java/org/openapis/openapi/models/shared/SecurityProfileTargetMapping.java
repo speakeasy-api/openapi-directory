@@ -15,6 +15,7 @@ public class SecurityProfileTargetMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityProfileIdentifier")
     public SecurityProfileIdentifier securityProfileIdentifier;
+
     public SecurityProfileTargetMapping withSecurityProfileIdentifier(SecurityProfileIdentifier securityProfileIdentifier) {
         this.securityProfileIdentifier = securityProfileIdentifier;
         return this;
@@ -23,9 +24,11 @@ public class SecurityProfileTargetMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public SecurityProfileTarget target;
+
     public SecurityProfileTargetMapping withTarget(SecurityProfileTarget target) {
         this.target = target;
         return this;
     }
     
+    public SecurityProfileTargetMapping(){}
 }

@@ -12,6 +12,7 @@ public class StartQueryPlanningRequestBody {
      */
     @JsonProperty("QueryPlanningContext")
     public StartQueryPlanningRequestBodyQueryPlanningContext queryPlanningContext;
+
     public StartQueryPlanningRequestBody withQueryPlanningContext(StartQueryPlanningRequestBodyQueryPlanningContext queryPlanningContext) {
         this.queryPlanningContext = queryPlanningContext;
         return this;
@@ -22,9 +23,14 @@ public class StartQueryPlanningRequestBody {
      */
     @JsonProperty("QueryString")
     public String queryString;
+
     public StartQueryPlanningRequestBody withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
     }
     
+    public StartQueryPlanningRequestBody(@JsonProperty("QueryPlanningContext") StartQueryPlanningRequestBodyQueryPlanningContext queryPlanningContext, @JsonProperty("QueryString") String queryString) {
+        this.queryPlanningContext = queryPlanningContext;
+        this.queryString = queryString;
+  }
 }

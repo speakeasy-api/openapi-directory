@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsRequest {
@@ -14,6 +15,7 @@ public class GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsReque
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_key")
     public String projectKey;
+
     public GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsRequest withProjectKey(String projectKey) {
         this.projectKey = projectKey;
         return this;
@@ -26,9 +28,14 @@ public class GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsReque
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsRequest(@JsonProperty("project_key") String projectKey, @JsonProperty("workspace") String workspace) {
+        this.projectKey = projectKey;
+        this.workspace = workspace;
+  }
 }

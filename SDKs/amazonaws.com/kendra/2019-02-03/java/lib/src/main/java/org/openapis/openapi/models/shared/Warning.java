@@ -15,6 +15,7 @@ public class Warning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public WarningCodeEnum code;
+
     public Warning withCode(WarningCodeEnum code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class Warning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public Warning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public Warning(){}
 }

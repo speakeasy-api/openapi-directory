@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpsertAccount201ApplicationJSONMeta {
     @JsonProperty("requestId")
     public String requestId;
+
     public UpsertAccount201ApplicationJSONMeta withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -16,9 +17,14 @@ public class UpsertAccount201ApplicationJSONMeta {
     
     @JsonProperty("status")
     public Double status;
+
     public UpsertAccount201ApplicationJSONMeta withStatus(Double status) {
         this.status = status;
         return this;
     }
     
+    public UpsertAccount201ApplicationJSONMeta(@JsonProperty("requestId") String requestId, @JsonProperty("status") Double status) {
+        this.requestId = requestId;
+        this.status = status;
+  }
 }

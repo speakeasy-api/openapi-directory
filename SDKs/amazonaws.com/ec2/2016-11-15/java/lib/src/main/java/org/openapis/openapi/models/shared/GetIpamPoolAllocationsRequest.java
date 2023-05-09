@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetIpamPoolAllocationsRequest {
     
     public Boolean dryRun;
+
     public GetIpamPoolAllocationsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class GetIpamPoolAllocationsRequest {
     
     
     public GetIpamPoolAllocationsRequestFilters[] filters;
+
     public GetIpamPoolAllocationsRequest withFilters(GetIpamPoolAllocationsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class GetIpamPoolAllocationsRequest {
     
     
     public String ipamPoolAllocationId;
+
     public GetIpamPoolAllocationsRequest withIpamPoolAllocationId(String ipamPoolAllocationId) {
         this.ipamPoolAllocationId = ipamPoolAllocationId;
         return this;
@@ -30,6 +33,7 @@ public class GetIpamPoolAllocationsRequest {
     
     
     public String ipamPoolId;
+
     public GetIpamPoolAllocationsRequest withIpamPoolId(String ipamPoolId) {
         this.ipamPoolId = ipamPoolId;
         return this;
@@ -37,6 +41,7 @@ public class GetIpamPoolAllocationsRequest {
     
     
     public Long maxResults;
+
     public GetIpamPoolAllocationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -44,9 +49,13 @@ public class GetIpamPoolAllocationsRequest {
     
     
     public String nextToken;
+
     public GetIpamPoolAllocationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetIpamPoolAllocationsRequest(@JsonProperty("IpamPoolId") String ipamPoolId) {
+        this.ipamPoolId = ipamPoolId;
+  }
 }

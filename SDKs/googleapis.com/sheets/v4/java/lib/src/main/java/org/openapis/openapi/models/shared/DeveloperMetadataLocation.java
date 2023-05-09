@@ -18,6 +18,7 @@ public class DeveloperMetadataLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionRange")
     public DimensionRange dimensionRange;
+
     public DeveloperMetadataLocation withDimensionRange(DimensionRange dimensionRange) {
         this.dimensionRange = dimensionRange;
         return this;
@@ -29,6 +30,7 @@ public class DeveloperMetadataLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationType")
     public DeveloperMetadataLocationLocationTypeEnum locationType;
+
     public DeveloperMetadataLocation withLocationType(DeveloperMetadataLocationLocationTypeEnum locationType) {
         this.locationType = locationType;
         return this;
@@ -40,6 +42,7 @@ public class DeveloperMetadataLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sheetId")
     public Integer sheetId;
+
     public DeveloperMetadataLocation withSheetId(Integer sheetId) {
         this.sheetId = sheetId;
         return this;
@@ -51,9 +54,11 @@ public class DeveloperMetadataLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spreadsheet")
     public Boolean spreadsheet;
+
     public DeveloperMetadataLocation withSpreadsheet(Boolean spreadsheet) {
         this.spreadsheet = spreadsheet;
         return this;
     }
     
+    public DeveloperMetadataLocation(){}
 }

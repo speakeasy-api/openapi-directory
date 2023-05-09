@@ -18,9 +18,11 @@ public class GetAuditActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public java.util.Map<String, AuditLogActions> actions;
+
     public GetAuditActionsResponse withActions(java.util.Map<String, AuditLogActions> actions) {
         this.actions = actions;
         return this;
     }
     
+    public GetAuditActionsResponse(){}
 }

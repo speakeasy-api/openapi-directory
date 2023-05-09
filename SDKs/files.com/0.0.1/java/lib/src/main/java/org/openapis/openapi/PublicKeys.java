@@ -56,10 +56,8 @@ public class PublicKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePublicKeysIdResponse res = new org.openapis.openapi.models.operations.DeletePublicKeysIdResponse() {{
+        org.openapis.openapi.models.operations.DeletePublicKeysIdResponse res = new org.openapis.openapi.models.operations.DeletePublicKeysIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 409 || httpRes.statusCode() == 412 || httpRes.statusCode() == 422 || httpRes.statusCode() == 423 || httpRes.statusCode() == 429) {
@@ -95,11 +93,9 @@ public class PublicKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPublicKeysResponse res = new org.openapis.openapi.models.operations.GetPublicKeysResponse() {{
+        org.openapis.openapi.models.operations.GetPublicKeysResponse res = new org.openapis.openapi.models.operations.GetPublicKeysResponse(contentType, httpRes.statusCode()) {{
             publicKeyEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,11 +132,9 @@ public class PublicKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPublicKeysIdResponse res = new org.openapis.openapi.models.operations.GetPublicKeysIdResponse() {{
+        org.openapis.openapi.models.operations.GetPublicKeysIdResponse res = new org.openapis.openapi.models.operations.GetPublicKeysIdResponse(contentType, httpRes.statusCode()) {{
             publicKeyEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -182,11 +176,9 @@ public class PublicKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchPublicKeysIdResponse res = new org.openapis.openapi.models.operations.PatchPublicKeysIdResponse() {{
+        org.openapis.openapi.models.operations.PatchPublicKeysIdResponse res = new org.openapis.openapi.models.operations.PatchPublicKeysIdResponse(contentType, httpRes.statusCode()) {{
             publicKeyEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -225,11 +217,9 @@ public class PublicKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPublicKeysResponse res = new org.openapis.openapi.models.operations.PostPublicKeysResponse() {{
+        org.openapis.openapi.models.operations.PostPublicKeysResponse res = new org.openapis.openapi.models.operations.PostPublicKeysResponse(contentType, httpRes.statusCode()) {{
             publicKeyEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

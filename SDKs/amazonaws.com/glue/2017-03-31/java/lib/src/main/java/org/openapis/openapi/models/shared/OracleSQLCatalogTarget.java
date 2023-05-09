@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OracleSQLCatalogTarget {
     @JsonProperty("Database")
     public String database;
+
     public OracleSQLCatalogTarget withDatabase(String database) {
         this.database = database;
         return this;
@@ -19,6 +20,7 @@ public class OracleSQLCatalogTarget {
     
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public OracleSQLCatalogTarget withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -26,6 +28,7 @@ public class OracleSQLCatalogTarget {
     
     @JsonProperty("Name")
     public String name;
+
     public OracleSQLCatalogTarget withName(String name) {
         this.name = name;
         return this;
@@ -33,9 +36,16 @@ public class OracleSQLCatalogTarget {
     
     @JsonProperty("Table")
     public String table;
+
     public OracleSQLCatalogTarget withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public OracleSQLCatalogTarget(@JsonProperty("Database") String database, @JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name, @JsonProperty("Table") String table) {
+        this.database = database;
+        this.inputs = inputs;
+        this.name = name;
+        this.table = table;
+  }
 }

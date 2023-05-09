@@ -15,6 +15,7 @@ public class CreateEmailIdentityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSetName")
     public String configurationSetName;
+
     public CreateEmailIdentityRequestBody withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -26,6 +27,7 @@ public class CreateEmailIdentityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DkimSigningAttributes")
     public CreateEmailIdentityRequestBodyDkimSigningAttributes dkimSigningAttributes;
+
     public CreateEmailIdentityRequestBody withDkimSigningAttributes(CreateEmailIdentityRequestBodyDkimSigningAttributes dkimSigningAttributes) {
         this.dkimSigningAttributes = dkimSigningAttributes;
         return this;
@@ -36,6 +38,7 @@ public class CreateEmailIdentityRequestBody {
      */
     @JsonProperty("EmailIdentity")
     public String emailIdentity;
+
     public CreateEmailIdentityRequestBody withEmailIdentity(String emailIdentity) {
         this.emailIdentity = emailIdentity;
         return this;
@@ -47,9 +50,13 @@ public class CreateEmailIdentityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateEmailIdentityRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateEmailIdentityRequestBody(@JsonProperty("EmailIdentity") String emailIdentity) {
+        this.emailIdentity = emailIdentity;
+  }
 }

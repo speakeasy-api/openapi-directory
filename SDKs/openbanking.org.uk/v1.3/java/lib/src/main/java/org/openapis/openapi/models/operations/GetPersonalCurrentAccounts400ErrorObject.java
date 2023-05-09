@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetPersonalCurrentAccounts400ErrorObject {
     @JsonProperty("description")
     public GetPersonalCurrentAccounts400ErrorObjectDescriptionEnum description;
+
     public GetPersonalCurrentAccounts400ErrorObject withDescription(GetPersonalCurrentAccounts400ErrorObjectDescriptionEnum description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class GetPersonalCurrentAccounts400ErrorObject {
     
     @JsonProperty("status")
     public GetPersonalCurrentAccounts400ErrorObjectStatusEnum status;
+
     public GetPersonalCurrentAccounts400ErrorObject withStatus(GetPersonalCurrentAccounts400ErrorObjectStatusEnum status) {
         this.status = status;
         return this;
@@ -26,9 +28,15 @@ public class GetPersonalCurrentAccounts400ErrorObject {
     
     @JsonProperty("title")
     public GetPersonalCurrentAccounts400ErrorObjectTitleEnum title;
+
     public GetPersonalCurrentAccounts400ErrorObject withTitle(GetPersonalCurrentAccounts400ErrorObjectTitleEnum title) {
         this.title = title;
         return this;
     }
     
+    public GetPersonalCurrentAccounts400ErrorObject(@JsonProperty("description") GetPersonalCurrentAccounts400ErrorObjectDescriptionEnum description, @JsonProperty("status") GetPersonalCurrentAccounts400ErrorObjectStatusEnum status, @JsonProperty("title") GetPersonalCurrentAccounts400ErrorObjectTitleEnum title) {
+        this.description = description;
+        this.status = status;
+        this.title = title;
+  }
 }

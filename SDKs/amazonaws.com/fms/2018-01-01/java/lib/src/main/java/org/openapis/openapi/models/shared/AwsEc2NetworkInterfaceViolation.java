@@ -15,6 +15,7 @@ public class AwsEc2NetworkInterfaceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViolatingSecurityGroups")
     public String[] violatingSecurityGroups;
+
     public AwsEc2NetworkInterfaceViolation withViolatingSecurityGroups(String[] violatingSecurityGroups) {
         this.violatingSecurityGroups = violatingSecurityGroups;
         return this;
@@ -23,9 +24,11 @@ public class AwsEc2NetworkInterfaceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViolationTarget")
     public String violationTarget;
+
     public AwsEc2NetworkInterfaceViolation withViolationTarget(String violationTarget) {
         this.violationTarget = violationTarget;
         return this;
     }
     
+    public AwsEc2NetworkInterfaceViolation(){}
 }

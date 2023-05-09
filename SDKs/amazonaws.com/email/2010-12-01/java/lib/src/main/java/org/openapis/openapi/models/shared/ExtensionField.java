@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ExtensionField - &lt;p&gt;Additional X-headers to include in the Delivery Status Notification (DSN) when an email that Amazon SES receives on your behalf bounces.&lt;/p&gt; &lt;p&gt;For information about receiving email through Amazon SES, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ExtensionField {
     
     public String name;
+
     public ExtensionField withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class ExtensionField {
     
     
     public String value;
+
     public ExtensionField withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ExtensionField(@JsonProperty("Name") String name, @JsonProperty("Value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

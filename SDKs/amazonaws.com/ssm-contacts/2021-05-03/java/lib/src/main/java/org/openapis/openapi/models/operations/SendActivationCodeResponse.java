@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendActivationCodeResponse {
@@ -12,6 +13,7 @@ public class SendActivationCodeResponse {
      */
     
     public Object accessDeniedException;
+
     public SendActivationCodeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class SendActivationCodeResponse {
     
     
     public String contentType;
+
     public SendActivationCodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SendActivationCodeResponse {
      */
     
     public Object dataEncryptionException;
+
     public SendActivationCodeResponse withDataEncryptionException(Object dataEncryptionException) {
         this.dataEncryptionException = dataEncryptionException;
         return this;
@@ -39,6 +43,7 @@ public class SendActivationCodeResponse {
      */
     
     public Object internalServerException;
+
     public SendActivationCodeResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class SendActivationCodeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SendActivationCodeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class SendActivationCodeResponse {
      */
     
     public java.util.Map<String, Object> sendActivationCodeResult;
+
     public SendActivationCodeResponse withSendActivationCodeResult(java.util.Map<String, Object> sendActivationCodeResult) {
         this.sendActivationCodeResult = sendActivationCodeResult;
         return this;
@@ -69,6 +76,7 @@ public class SendActivationCodeResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public SendActivationCodeResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class SendActivationCodeResponse {
     
     
     public Integer statusCode;
+
     public SendActivationCodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class SendActivationCodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendActivationCodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class SendActivationCodeResponse {
      */
     
     public Object throttlingException;
+
     public SendActivationCodeResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class SendActivationCodeResponse {
      */
     
     public Object validationException;
+
     public SendActivationCodeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public SendActivationCodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

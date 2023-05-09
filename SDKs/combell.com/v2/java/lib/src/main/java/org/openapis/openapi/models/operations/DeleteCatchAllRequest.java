@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCatchAllRequest {
@@ -12,6 +13,7 @@ public class DeleteCatchAllRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
     public String domainNamePathParameter;
+
     public DeleteCatchAllRequest withDomainNamePathParameter(String domainNamePathParameter) {
         this.domainNamePathParameter = domainNamePathParameter;
         return this;
@@ -22,6 +24,7 @@ public class DeleteCatchAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
     public String domainNameQueryParameter;
+
     public DeleteCatchAllRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
         this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
@@ -32,6 +35,7 @@ public class DeleteCatchAllRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=emailAddress")
     public String emailAddressPathParameter;
+
     public DeleteCatchAllRequest withEmailAddressPathParameter(String emailAddressPathParameter) {
         this.emailAddressPathParameter = emailAddressPathParameter;
         return this;
@@ -42,9 +46,16 @@ public class DeleteCatchAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email_address")
     public String emailAddressQueryParameter;
+
     public DeleteCatchAllRequest withEmailAddressQueryParameter(String emailAddressQueryParameter) {
         this.emailAddressQueryParameter = emailAddressQueryParameter;
         return this;
     }
     
+    public DeleteCatchAllRequest(@JsonProperty("domainNamePathParameter") String domainNamePathParameter, @JsonProperty("domain_nameQueryParameter") String domainNameQueryParameter, @JsonProperty("emailAddressPathParameter") String emailAddressPathParameter, @JsonProperty("email_addressQueryParameter") String emailAddressQueryParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        this.emailAddressPathParameter = emailAddressPathParameter;
+        this.emailAddressQueryParameter = emailAddressQueryParameter;
+  }
 }

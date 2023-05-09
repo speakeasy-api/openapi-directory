@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AzureUsernamePasswordCredentialFields {
     @JsonProperty("client_id")
     public String clientId;
+
     public AzureUsernamePasswordCredentialFields withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -16,6 +17,7 @@ public class AzureUsernamePasswordCredentialFields {
     
     @JsonProperty("password")
     public String password;
+
     public AzureUsernamePasswordCredentialFields withPassword(String password) {
         this.password = password;
         return this;
@@ -23,6 +25,7 @@ public class AzureUsernamePasswordCredentialFields {
     
     @JsonProperty("tenant_id")
     public String tenantId;
+
     public AzureUsernamePasswordCredentialFields withTenantId(String tenantId) {
         this.tenantId = tenantId;
         return this;
@@ -30,9 +33,16 @@ public class AzureUsernamePasswordCredentialFields {
     
     @JsonProperty("username")
     public String username;
+
     public AzureUsernamePasswordCredentialFields withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public AzureUsernamePasswordCredentialFields(@JsonProperty("username") String username, @JsonProperty("password") String password, @JsonProperty("client_id") String clientId, @JsonProperty("tenant_id") String tenantId) {
+        this.username = username;
+        this.password = password;
+        this.clientId = clientId;
+        this.tenantId = tenantId;
+  }
 }

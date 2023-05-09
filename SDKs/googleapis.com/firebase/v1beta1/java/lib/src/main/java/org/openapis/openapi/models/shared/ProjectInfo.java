@@ -18,6 +18,7 @@ public class ProjectInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ProjectInfo withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class ProjectInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public ProjectInfo withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -40,9 +42,11 @@ public class ProjectInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public ProjectInfo withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public ProjectInfo(){}
 }

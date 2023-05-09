@@ -15,6 +15,7 @@ public class ListFiltersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public ListFiltersRequestBodyActionEnum action;
+
     public ListFiltersRequestBody withAction(ListFiltersRequestBodyActionEnum action) {
         this.action = action;
         return this;
@@ -26,6 +27,7 @@ public class ListFiltersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arns")
     public String[] arns;
+
     public ListFiltersRequestBody withArns(String[] arns) {
         this.arns = arns;
         return this;
@@ -37,6 +39,7 @@ public class ListFiltersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListFiltersRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -48,9 +51,11 @@ public class ListFiltersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListFiltersRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFiltersRequestBody(){}
 }

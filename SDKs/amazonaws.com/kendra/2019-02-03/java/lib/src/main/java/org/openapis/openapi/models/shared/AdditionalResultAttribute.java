@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AdditionalResultAttribute {
     @JsonProperty("Key")
     public String key;
+
     public AdditionalResultAttribute withKey(String key) {
         this.key = key;
         return this;
@@ -19,6 +20,7 @@ public class AdditionalResultAttribute {
     
     @JsonProperty("Value")
     public AdditionalResultAttributeValue value;
+
     public AdditionalResultAttribute withValue(AdditionalResultAttributeValue value) {
         this.value = value;
         return this;
@@ -26,9 +28,15 @@ public class AdditionalResultAttribute {
     
     @JsonProperty("ValueType")
     public AdditionalResultAttributeValueTypeEnum valueType;
+
     public AdditionalResultAttribute withValueType(AdditionalResultAttributeValueTypeEnum valueType) {
         this.valueType = valueType;
         return this;
     }
     
+    public AdditionalResultAttribute(@JsonProperty("Key") String key, @JsonProperty("Value") AdditionalResultAttributeValue value, @JsonProperty("ValueType") AdditionalResultAttributeValueTypeEnum valueType) {
+        this.key = key;
+        this.value = value;
+        this.valueType = valueType;
+  }
 }

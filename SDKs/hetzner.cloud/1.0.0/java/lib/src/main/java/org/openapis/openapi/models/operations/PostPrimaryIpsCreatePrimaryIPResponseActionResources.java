@@ -12,6 +12,7 @@ public class PostPrimaryIpsCreatePrimaryIPResponseActionResources {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostPrimaryIpsCreatePrimaryIPResponseActionResources withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +23,14 @@ public class PostPrimaryIpsCreatePrimaryIPResponseActionResources {
      */
     @JsonProperty("type")
     public String type;
+
     public PostPrimaryIpsCreatePrimaryIPResponseActionResources withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PostPrimaryIpsCreatePrimaryIPResponseActionResources(@JsonProperty("id") Long id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

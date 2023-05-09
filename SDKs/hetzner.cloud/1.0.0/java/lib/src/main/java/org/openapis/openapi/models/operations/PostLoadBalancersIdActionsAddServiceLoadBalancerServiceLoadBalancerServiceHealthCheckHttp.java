@@ -17,6 +17,7 @@ public class PostLoadBalancersIdActionsAddServiceLoadBalancerServiceLoadBalancer
      */
     @JsonProperty("domain")
     public String domain;
+
     public PostLoadBalancersIdActionsAddServiceLoadBalancerServiceLoadBalancerServiceHealthCheckHttp withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -27,6 +28,7 @@ public class PostLoadBalancersIdActionsAddServiceLoadBalancerServiceLoadBalancer
      */
     @JsonProperty("path")
     public String path;
+
     public PostLoadBalancersIdActionsAddServiceLoadBalancerServiceLoadBalancerServiceHealthCheckHttp withPath(String path) {
         this.path = path;
         return this;
@@ -38,6 +40,7 @@ public class PostLoadBalancersIdActionsAddServiceLoadBalancerServiceLoadBalancer
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public String response;
+
     public PostLoadBalancersIdActionsAddServiceLoadBalancerServiceLoadBalancerServiceHealthCheckHttp withResponse(String response) {
         this.response = response;
         return this;
@@ -49,6 +52,7 @@ public class PostLoadBalancersIdActionsAddServiceLoadBalancerServiceLoadBalancer
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_codes")
     public String[] statusCodes;
+
     public PostLoadBalancersIdActionsAddServiceLoadBalancerServiceLoadBalancerServiceHealthCheckHttp withStatusCodes(String[] statusCodes) {
         this.statusCodes = statusCodes;
         return this;
@@ -60,9 +64,14 @@ public class PostLoadBalancersIdActionsAddServiceLoadBalancerServiceLoadBalancer
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tls")
     public Boolean tls;
+
     public PostLoadBalancersIdActionsAddServiceLoadBalancerServiceLoadBalancerServiceHealthCheckHttp withTls(Boolean tls) {
         this.tls = tls;
         return this;
     }
     
+    public PostLoadBalancersIdActionsAddServiceLoadBalancerServiceLoadBalancerServiceHealthCheckHttp(@JsonProperty("domain") String domain, @JsonProperty("path") String path) {
+        this.domain = domain;
+        this.path = path;
+  }
 }

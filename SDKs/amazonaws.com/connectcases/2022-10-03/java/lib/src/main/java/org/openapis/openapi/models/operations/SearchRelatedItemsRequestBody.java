@@ -15,6 +15,7 @@ public class SearchRelatedItemsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.RelatedItemTypeFilter[] filters;
+
     public SearchRelatedItemsRequestBody withFilters(org.openapis.openapi.models.shared.RelatedItemTypeFilter[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class SearchRelatedItemsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public SearchRelatedItemsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +39,11 @@ public class SearchRelatedItemsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public SearchRelatedItemsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public SearchRelatedItemsRequestBody(){}
 }

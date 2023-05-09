@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2LocationsLocationIdRefundsRequest {
@@ -16,6 +17,7 @@ public class GetV2LocationsLocationIdRefundsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_time")
     public String beginTime;
+
     public GetV2LocationsLocationIdRefundsRequest withBeginTime(String beginTime) {
         this.beginTime = beginTime;
         return this;
@@ -29,6 +31,7 @@ public class GetV2LocationsLocationIdRefundsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetV2LocationsLocationIdRefundsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -43,6 +46,7 @@ public class GetV2LocationsLocationIdRefundsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
     public String endTime;
+
     public GetV2LocationsLocationIdRefundsRequest withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -53,6 +57,7 @@ public class GetV2LocationsLocationIdRefundsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
     public String locationId;
+
     public GetV2LocationsLocationIdRefundsRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -66,9 +71,13 @@ public class GetV2LocationsLocationIdRefundsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
     public String sortOrder;
+
     public GetV2LocationsLocationIdRefundsRequest withSortOrder(String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public GetV2LocationsLocationIdRefundsRequest(@JsonProperty("location_id") String locationId) {
+        this.locationId = locationId;
+  }
 }

@@ -19,6 +19,7 @@ public class HumanTaskUiSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public HumanTaskUiSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -26,6 +27,7 @@ public class HumanTaskUiSummary {
     
     @JsonProperty("HumanTaskUiArn")
     public String humanTaskUiArn;
+
     public HumanTaskUiSummary withHumanTaskUiArn(String humanTaskUiArn) {
         this.humanTaskUiArn = humanTaskUiArn;
         return this;
@@ -33,9 +35,15 @@ public class HumanTaskUiSummary {
     
     @JsonProperty("HumanTaskUiName")
     public String humanTaskUiName;
+
     public HumanTaskUiSummary withHumanTaskUiName(String humanTaskUiName) {
         this.humanTaskUiName = humanTaskUiName;
         return this;
     }
     
+    public HumanTaskUiSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("HumanTaskUiArn") String humanTaskUiArn, @JsonProperty("HumanTaskUiName") String humanTaskUiName) {
+        this.creationTime = creationTime;
+        this.humanTaskUiArn = humanTaskUiArn;
+        this.humanTaskUiName = humanTaskUiName;
+  }
 }

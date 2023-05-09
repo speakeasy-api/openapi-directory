@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1UsageStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCancellations")
     public Float totalCancellations;
+
     public GoogleCloudDatacatalogV1UsageStats withTotalCancellations(Float totalCancellations) {
         this.totalCancellations = totalCancellations;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1UsageStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCompletions")
     public Float totalCompletions;
+
     public GoogleCloudDatacatalogV1UsageStats withTotalCompletions(Float totalCompletions) {
         this.totalCompletions = totalCompletions;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1UsageStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalExecutionTimeForCompletionsMillis")
     public Float totalExecutionTimeForCompletionsMillis;
+
     public GoogleCloudDatacatalogV1UsageStats withTotalExecutionTimeForCompletionsMillis(Float totalExecutionTimeForCompletionsMillis) {
         this.totalExecutionTimeForCompletionsMillis = totalExecutionTimeForCompletionsMillis;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDatacatalogV1UsageStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalFailures")
     public Float totalFailures;
+
     public GoogleCloudDatacatalogV1UsageStats withTotalFailures(Float totalFailures) {
         this.totalFailures = totalFailures;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1UsageStats(){}
 }

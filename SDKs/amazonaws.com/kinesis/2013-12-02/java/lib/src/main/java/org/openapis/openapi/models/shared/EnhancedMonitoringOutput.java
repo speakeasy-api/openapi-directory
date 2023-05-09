@@ -15,6 +15,7 @@ public class EnhancedMonitoringOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentShardLevelMetrics")
     public MetricsNameEnum[] currentShardLevelMetrics;
+
     public EnhancedMonitoringOutput withCurrentShardLevelMetrics(MetricsNameEnum[] currentShardLevelMetrics) {
         this.currentShardLevelMetrics = currentShardLevelMetrics;
         return this;
@@ -23,6 +24,7 @@ public class EnhancedMonitoringOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredShardLevelMetrics")
     public MetricsNameEnum[] desiredShardLevelMetrics;
+
     public EnhancedMonitoringOutput withDesiredShardLevelMetrics(MetricsNameEnum[] desiredShardLevelMetrics) {
         this.desiredShardLevelMetrics = desiredShardLevelMetrics;
         return this;
@@ -31,6 +33,7 @@ public class EnhancedMonitoringOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public EnhancedMonitoringOutput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -39,9 +42,11 @@ public class EnhancedMonitoringOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public EnhancedMonitoringOutput withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public EnhancedMonitoringOutput(){}
 }

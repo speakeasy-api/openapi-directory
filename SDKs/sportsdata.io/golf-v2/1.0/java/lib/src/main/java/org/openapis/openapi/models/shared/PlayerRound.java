@@ -12,6 +12,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackNineStart")
     public Boolean backNineStart;
+
     public PlayerRound withBackNineStart(Boolean backNineStart) {
         this.backNineStart = backNineStart;
         return this;
@@ -20,6 +21,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Birdies")
     public Long birdies;
+
     public PlayerRound withBirdies(Long birdies) {
         this.birdies = birdies;
         return this;
@@ -28,6 +30,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BogeyFree")
     public Boolean bogeyFree;
+
     public PlayerRound withBogeyFree(Boolean bogeyFree) {
         this.bogeyFree = bogeyFree;
         return this;
@@ -36,6 +39,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bogeys")
     public Long bogeys;
+
     public PlayerRound withBogeys(Long bogeys) {
         this.bogeys = bogeys;
         return this;
@@ -44,6 +48,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BounceBackCount")
     public Double bounceBackCount;
+
     public PlayerRound withBounceBackCount(Double bounceBackCount) {
         this.bounceBackCount = bounceBackCount;
         return this;
@@ -52,6 +57,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsecutiveBirdieOrBetterCount")
     public Double consecutiveBirdieOrBetterCount;
+
     public PlayerRound withConsecutiveBirdieOrBetterCount(Double consecutiveBirdieOrBetterCount) {
         this.consecutiveBirdieOrBetterCount = consecutiveBirdieOrBetterCount;
         return this;
@@ -60,6 +66,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Day")
     public String day;
+
     public PlayerRound withDay(String day) {
         this.day = day;
         return this;
@@ -68,6 +75,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DoubleBogeys")
     public Long doubleBogeys;
+
     public PlayerRound withDoubleBogeys(Long doubleBogeys) {
         this.doubleBogeys = doubleBogeys;
         return this;
@@ -76,6 +84,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DoubleEagles")
     public Long doubleEagles;
+
     public PlayerRound withDoubleEagles(Long doubleEagles) {
         this.doubleEagles = doubleEagles;
         return this;
@@ -84,6 +93,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Eagles")
     public Long eagles;
+
     public PlayerRound withEagles(Long eagles) {
         this.eagles = eagles;
         return this;
@@ -92,6 +102,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HoleInOnes")
     public Long holeInOnes;
+
     public PlayerRound withHoleInOnes(Long holeInOnes) {
         this.holeInOnes = holeInOnes;
         return this;
@@ -100,6 +111,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Holes")
     public PlayerHole[] holes;
+
     public PlayerRound withHoles(PlayerHole[] holes) {
         this.holes = holes;
         return this;
@@ -108,6 +120,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludesFiveOrMoreBirdiesOrBetter")
     public Boolean includesFiveOrMoreBirdiesOrBetter;
+
     public PlayerRound withIncludesFiveOrMoreBirdiesOrBetter(Boolean includesFiveOrMoreBirdiesOrBetter) {
         this.includesFiveOrMoreBirdiesOrBetter = includesFiveOrMoreBirdiesOrBetter;
         return this;
@@ -116,6 +129,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludesStreakOfFiveBirdiesOrBetter")
     public Boolean includesStreakOfFiveBirdiesOrBetter;
+
     public PlayerRound withIncludesStreakOfFiveBirdiesOrBetter(Boolean includesStreakOfFiveBirdiesOrBetter) {
         this.includesStreakOfFiveBirdiesOrBetter = includesStreakOfFiveBirdiesOrBetter;
         return this;
@@ -124,6 +138,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludesStreakOfFourBirdiesOrBetter")
     public Boolean includesStreakOfFourBirdiesOrBetter;
+
     public PlayerRound withIncludesStreakOfFourBirdiesOrBetter(Boolean includesStreakOfFourBirdiesOrBetter) {
         this.includesStreakOfFourBirdiesOrBetter = includesStreakOfFourBirdiesOrBetter;
         return this;
@@ -132,6 +147,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludesStreakOfSixBirdiesOrBetter")
     public Boolean includesStreakOfSixBirdiesOrBetter;
+
     public PlayerRound withIncludesStreakOfSixBirdiesOrBetter(Boolean includesStreakOfSixBirdiesOrBetter) {
         this.includesStreakOfSixBirdiesOrBetter = includesStreakOfSixBirdiesOrBetter;
         return this;
@@ -140,6 +156,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludesStreakOfThreeBirdiesOrBetter")
     public Boolean includesStreakOfThreeBirdiesOrBetter;
+
     public PlayerRound withIncludesStreakOfThreeBirdiesOrBetter(Boolean includesStreakOfThreeBirdiesOrBetter) {
         this.includesStreakOfThreeBirdiesOrBetter = includesStreakOfThreeBirdiesOrBetter;
         return this;
@@ -148,6 +165,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LongestBirdieOrBetterStreak")
     public Double longestBirdieOrBetterStreak;
+
     public PlayerRound withLongestBirdieOrBetterStreak(Double longestBirdieOrBetterStreak) {
         this.longestBirdieOrBetterStreak = longestBirdieOrBetterStreak;
         return this;
@@ -156,6 +174,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Long number;
+
     public PlayerRound withNumber(Long number) {
         this.number = number;
         return this;
@@ -164,6 +183,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Par")
     public Long par;
+
     public PlayerRound withPar(Long par) {
         this.par = par;
         return this;
@@ -172,6 +192,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pars")
     public Long pars;
+
     public PlayerRound withPars(Long pars) {
         this.pars = pars;
         return this;
@@ -180,6 +201,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerRoundID")
     public Long playerRoundID;
+
     public PlayerRound withPlayerRoundID(Long playerRoundID) {
         this.playerRoundID = playerRoundID;
         return this;
@@ -188,6 +210,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerTournamentID")
     public Long playerTournamentID;
+
     public PlayerRound withPlayerTournamentID(Long playerTournamentID) {
         this.playerTournamentID = playerTournamentID;
         return this;
@@ -196,6 +219,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Long score;
+
     public PlayerRound withScore(Long score) {
         this.score = score;
         return this;
@@ -204,6 +228,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeeTime")
     public String teeTime;
+
     public PlayerRound withTeeTime(String teeTime) {
         this.teeTime = teeTime;
         return this;
@@ -212,6 +237,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TripleBogeys")
     public Long tripleBogeys;
+
     public PlayerRound withTripleBogeys(Long tripleBogeys) {
         this.tripleBogeys = tripleBogeys;
         return this;
@@ -220,6 +246,7 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorseThanDoubleBogey")
     public Long worseThanDoubleBogey;
+
     public PlayerRound withWorseThanDoubleBogey(Long worseThanDoubleBogey) {
         this.worseThanDoubleBogey = worseThanDoubleBogey;
         return this;
@@ -228,9 +255,11 @@ public class PlayerRound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorseThanTripleBogey")
     public Long worseThanTripleBogey;
+
     public PlayerRound withWorseThanTripleBogey(Long worseThanTripleBogey) {
         this.worseThanTripleBogey = worseThanTripleBogey;
         return this;
     }
     
+    public PlayerRound(){}
 }

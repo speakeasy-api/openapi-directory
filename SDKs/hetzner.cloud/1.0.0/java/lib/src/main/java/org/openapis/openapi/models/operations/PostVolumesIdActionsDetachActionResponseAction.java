@@ -12,6 +12,7 @@ public class PostVolumesIdActionsDetachActionResponseAction {
      */
     @JsonProperty("command")
     public String command;
+
     public PostVolumesIdActionsDetachActionResponseAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class PostVolumesIdActionsDetachActionResponseAction {
      */
     @JsonProperty("error")
     public PostVolumesIdActionsDetachActionResponseActionError error;
+
     public PostVolumesIdActionsDetachActionResponseAction withError(PostVolumesIdActionsDetachActionResponseActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class PostVolumesIdActionsDetachActionResponseAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public PostVolumesIdActionsDetachActionResponseAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class PostVolumesIdActionsDetachActionResponseAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostVolumesIdActionsDetachActionResponseAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostVolumesIdActionsDetachActionResponseAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public PostVolumesIdActionsDetachActionResponseAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class PostVolumesIdActionsDetachActionResponseAction {
      */
     @JsonProperty("resources")
     public PostVolumesIdActionsDetachActionResponseActionResources[] resources;
+
     public PostVolumesIdActionsDetachActionResponseAction withResources(PostVolumesIdActionsDetachActionResponseActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class PostVolumesIdActionsDetachActionResponseAction {
      */
     @JsonProperty("started")
     public String started;
+
     public PostVolumesIdActionsDetachActionResponseAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class PostVolumesIdActionsDetachActionResponseAction {
      */
     @JsonProperty("status")
     public PostVolumesIdActionsDetachActionResponseActionStatusEnum status;
+
     public PostVolumesIdActionsDetachActionResponseAction withStatus(PostVolumesIdActionsDetachActionResponseActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostVolumesIdActionsDetachActionResponseAction(@JsonProperty("command") String command, @JsonProperty("error") PostVolumesIdActionsDetachActionResponseActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") PostVolumesIdActionsDetachActionResponseActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") PostVolumesIdActionsDetachActionResponseActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

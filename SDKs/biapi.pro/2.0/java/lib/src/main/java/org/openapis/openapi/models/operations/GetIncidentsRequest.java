@@ -12,6 +12,7 @@ public class GetIncidentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public String endDate;
+
     public GetIncidentsRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -22,6 +23,7 @@ public class GetIncidentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public Long id;
+
     public GetIncidentsRequest withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class GetIncidentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetIncidentsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +45,7 @@ public class GetIncidentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Long size;
+
     public GetIncidentsRequest withSize(Long size) {
         this.size = size;
         return this;
@@ -52,6 +56,7 @@ public class GetIncidentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public String startDate;
+
     public GetIncidentsRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -62,6 +67,7 @@ public class GetIncidentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public String state;
+
     public GetIncidentsRequest withState(String state) {
         this.state = state;
         return this;
@@ -72,9 +78,11 @@ public class GetIncidentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=weboob_id")
     public String weboobId;
+
     public GetIncidentsRequest withWeboobId(String weboobId) {
         this.weboobId = weboobId;
         return this;
     }
     
+    public GetIncidentsRequest(){}
 }

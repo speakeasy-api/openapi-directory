@@ -18,9 +18,11 @@ public class GetConnectInstanceConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectInstanceConfig")
     public InstanceConfig connectInstanceConfig;
+
     public GetConnectInstanceConfigResponse withConnectInstanceConfig(InstanceConfig connectInstanceConfig) {
         this.connectInstanceConfig = connectInstanceConfig;
         return this;
     }
     
+    public GetConnectInstanceConfigResponse(){}
 }

@@ -15,6 +15,7 @@ public class HTTPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientIP")
     public String clientIP;
+
     public HTTPRequest withClientIP(String clientIP) {
         this.clientIP = clientIP;
         return this;
@@ -23,6 +24,7 @@ public class HTTPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Country")
     public String country;
+
     public HTTPRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -31,6 +33,7 @@ public class HTTPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HTTPVersion")
     public String httpVersion;
+
     public HTTPRequest withHTTPVersion(String httpVersion) {
         this.httpVersion = httpVersion;
         return this;
@@ -39,6 +42,7 @@ public class HTTPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Headers")
     public HTTPHeader[] headers;
+
     public HTTPRequest withHeaders(HTTPHeader[] headers) {
         this.headers = headers;
         return this;
@@ -47,6 +51,7 @@ public class HTTPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Method")
     public String method;
+
     public HTTPRequest withMethod(String method) {
         this.method = method;
         return this;
@@ -55,9 +60,11 @@ public class HTTPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("URI")
     public String uri;
+
     public HTTPRequest withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public HTTPRequest(){}
 }

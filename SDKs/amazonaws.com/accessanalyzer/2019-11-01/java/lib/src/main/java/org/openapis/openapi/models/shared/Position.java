@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Position {
     @JsonProperty("column")
     public Long column;
+
     public Position withColumn(Long column) {
         this.column = column;
         return this;
@@ -19,6 +20,7 @@ public class Position {
     
     @JsonProperty("line")
     public Long line;
+
     public Position withLine(Long line) {
         this.line = line;
         return this;
@@ -26,9 +28,15 @@ public class Position {
     
     @JsonProperty("offset")
     public Long offset;
+
     public Position withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public Position(@JsonProperty("column") Long column, @JsonProperty("line") Long line, @JsonProperty("offset") Long offset) {
+        this.column = column;
+        this.line = line;
+        this.offset = offset;
+  }
 }

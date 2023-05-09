@@ -15,6 +15,7 @@ public class ReplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associateDefaultSecurityGroup")
     public Boolean associateDefaultSecurityGroup;
+
     public ReplicationConfiguration withAssociateDefaultSecurityGroup(Boolean associateDefaultSecurityGroup) {
         this.associateDefaultSecurityGroup = associateDefaultSecurityGroup;
         return this;
@@ -23,6 +24,7 @@ public class ReplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandwidthThrottling")
     public Long bandwidthThrottling;
+
     public ReplicationConfiguration withBandwidthThrottling(Long bandwidthThrottling) {
         this.bandwidthThrottling = bandwidthThrottling;
         return this;
@@ -31,6 +33,7 @@ public class ReplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createPublicIP")
     public Boolean createPublicIP;
+
     public ReplicationConfiguration withCreatePublicIP(Boolean createPublicIP) {
         this.createPublicIP = createPublicIP;
         return this;
@@ -39,6 +42,7 @@ public class ReplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataPlaneRouting")
     public ReplicationConfigurationDataPlaneRoutingEnum dataPlaneRouting;
+
     public ReplicationConfiguration withDataPlaneRouting(ReplicationConfigurationDataPlaneRoutingEnum dataPlaneRouting) {
         this.dataPlaneRouting = dataPlaneRouting;
         return this;
@@ -47,6 +51,7 @@ public class ReplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultLargeStagingDiskType")
     public ReplicationConfigurationDefaultLargeStagingDiskTypeEnum defaultLargeStagingDiskType;
+
     public ReplicationConfiguration withDefaultLargeStagingDiskType(ReplicationConfigurationDefaultLargeStagingDiskTypeEnum defaultLargeStagingDiskType) {
         this.defaultLargeStagingDiskType = defaultLargeStagingDiskType;
         return this;
@@ -55,6 +60,7 @@ public class ReplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ebsEncryption")
     public ReplicationConfigurationEbsEncryptionEnum ebsEncryption;
+
     public ReplicationConfiguration withEbsEncryption(ReplicationConfigurationEbsEncryptionEnum ebsEncryption) {
         this.ebsEncryption = ebsEncryption;
         return this;
@@ -63,6 +69,7 @@ public class ReplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ebsEncryptionKeyArn")
     public String ebsEncryptionKeyArn;
+
     public ReplicationConfiguration withEbsEncryptionKeyArn(String ebsEncryptionKeyArn) {
         this.ebsEncryptionKeyArn = ebsEncryptionKeyArn;
         return this;
@@ -71,6 +78,7 @@ public class ReplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReplicationConfiguration withName(String name) {
         this.name = name;
         return this;
@@ -79,6 +87,7 @@ public class ReplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicatedDisks")
     public ReplicationConfigurationReplicatedDisk[] replicatedDisks;
+
     public ReplicationConfiguration withReplicatedDisks(ReplicationConfigurationReplicatedDisk[] replicatedDisks) {
         this.replicatedDisks = replicatedDisks;
         return this;
@@ -87,6 +96,7 @@ public class ReplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationServerInstanceType")
     public String replicationServerInstanceType;
+
     public ReplicationConfiguration withReplicationServerInstanceType(String replicationServerInstanceType) {
         this.replicationServerInstanceType = replicationServerInstanceType;
         return this;
@@ -95,6 +105,7 @@ public class ReplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationServersSecurityGroupsIDs")
     public String[] replicationServersSecurityGroupsIDs;
+
     public ReplicationConfiguration withReplicationServersSecurityGroupsIDs(String[] replicationServersSecurityGroupsIDs) {
         this.replicationServersSecurityGroupsIDs = replicationServersSecurityGroupsIDs;
         return this;
@@ -103,6 +114,7 @@ public class ReplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public ReplicationConfiguration withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
@@ -111,6 +123,7 @@ public class ReplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stagingAreaSubnetId")
     public String stagingAreaSubnetId;
+
     public ReplicationConfiguration withStagingAreaSubnetId(String stagingAreaSubnetId) {
         this.stagingAreaSubnetId = stagingAreaSubnetId;
         return this;
@@ -119,6 +132,7 @@ public class ReplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stagingAreaTags")
     public java.util.Map<String, String> stagingAreaTags;
+
     public ReplicationConfiguration withStagingAreaTags(java.util.Map<String, String> stagingAreaTags) {
         this.stagingAreaTags = stagingAreaTags;
         return this;
@@ -127,9 +141,11 @@ public class ReplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useDedicatedReplicationServer")
     public Boolean useDedicatedReplicationServer;
+
     public ReplicationConfiguration withUseDedicatedReplicationServer(Boolean useDedicatedReplicationServer) {
         this.useDedicatedReplicationServer = useDedicatedReplicationServer;
         return this;
     }
     
+    public ReplicationConfiguration(){}
 }

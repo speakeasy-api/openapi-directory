@@ -15,6 +15,7 @@ public class CreateComputerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputerAttributes")
     public Attribute[] computerAttributes;
+
     public CreateComputerRequest withComputerAttributes(Attribute[] computerAttributes) {
         this.computerAttributes = computerAttributes;
         return this;
@@ -22,6 +23,7 @@ public class CreateComputerRequest {
     
     @JsonProperty("ComputerName")
     public String computerName;
+
     public CreateComputerRequest withComputerName(String computerName) {
         this.computerName = computerName;
         return this;
@@ -29,6 +31,7 @@ public class CreateComputerRequest {
     
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public CreateComputerRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -37,6 +40,7 @@ public class CreateComputerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationalUnitDistinguishedName")
     public String organizationalUnitDistinguishedName;
+
     public CreateComputerRequest withOrganizationalUnitDistinguishedName(String organizationalUnitDistinguishedName) {
         this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
         return this;
@@ -44,9 +48,15 @@ public class CreateComputerRequest {
     
     @JsonProperty("Password")
     public String password;
+
     public CreateComputerRequest withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public CreateComputerRequest(@JsonProperty("ComputerName") String computerName, @JsonProperty("DirectoryId") String directoryId, @JsonProperty("Password") String password) {
+        this.computerName = computerName;
+        this.directoryId = directoryId;
+        this.password = password;
+  }
 }

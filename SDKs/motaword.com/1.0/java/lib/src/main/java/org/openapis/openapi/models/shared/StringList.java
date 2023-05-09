@@ -15,6 +15,7 @@ public class StringList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PagingMeta meta;
+
     public StringList withMeta(PagingMeta meta) {
         this.meta = meta;
         return this;
@@ -23,9 +24,11 @@ public class StringList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translations")
     public StringWithTranslations[] translations;
+
     public StringList withTranslations(StringWithTranslations[] translations) {
         this.translations = translations;
         return this;
     }
     
+    public StringList(){}
 }

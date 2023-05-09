@@ -12,9 +12,13 @@ public class SendMessageRequestBody2ImageImage {
      */
     @JsonProperty("url")
     public String url;
+
     public SendMessageRequestBody2ImageImage withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public SendMessageRequestBody2ImageImage(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartStreamingSessionResponse {
@@ -12,6 +13,7 @@ public class StartStreamingSessionResponse {
      */
     
     public Object accessDeniedException;
+
     public StartStreamingSessionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartStreamingSessionResponse {
      */
     
     public Object conflictException;
+
     public StartStreamingSessionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartStreamingSessionResponse {
     
     
     public String contentType;
+
     public StartStreamingSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartStreamingSessionResponse {
      */
     
     public Object internalServerErrorException;
+
     public StartStreamingSessionResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class StartStreamingSessionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartStreamingSessionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartStreamingSessionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartStreamingSessionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -69,6 +76,7 @@ public class StartStreamingSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.StartStreamingSessionResponse startStreamingSessionResponse;
+
     public StartStreamingSessionResponse withStartStreamingSessionResponse(org.openapis.openapi.models.shared.StartStreamingSessionResponse startStreamingSessionResponse) {
         this.startStreamingSessionResponse = startStreamingSessionResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartStreamingSessionResponse {
     
     
     public Integer statusCode;
+
     public StartStreamingSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class StartStreamingSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartStreamingSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class StartStreamingSessionResponse {
      */
     
     public Object throttlingException;
+
     public StartStreamingSessionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class StartStreamingSessionResponse {
      */
     
     public Object validationException;
+
     public StartStreamingSessionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartStreamingSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

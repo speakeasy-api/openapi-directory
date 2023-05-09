@@ -12,6 +12,7 @@ public class MybusinessbusinessinformationAttributesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public MybusinessbusinessinformationAttributesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class MybusinessbusinessinformationAttributesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public MybusinessbusinessinformationAttributesListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class MybusinessbusinessinformationAttributesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public MybusinessbusinessinformationAttributesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class MybusinessbusinessinformationAttributesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public MybusinessbusinessinformationAttributesListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +56,7 @@ public class MybusinessbusinessinformationAttributesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categoryName")
     public String categoryName;
+
     public MybusinessbusinessinformationAttributesListRequest withCategoryName(String categoryName) {
         this.categoryName = categoryName;
         return this;
@@ -62,6 +67,7 @@ public class MybusinessbusinessinformationAttributesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public MybusinessbusinessinformationAttributesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +78,7 @@ public class MybusinessbusinessinformationAttributesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public MybusinessbusinessinformationAttributesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +89,7 @@ public class MybusinessbusinessinformationAttributesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=languageCode")
     public String languageCode;
+
     public MybusinessbusinessinformationAttributesListRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -92,6 +100,7 @@ public class MybusinessbusinessinformationAttributesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public MybusinessbusinessinformationAttributesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +111,7 @@ public class MybusinessbusinessinformationAttributesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public MybusinessbusinessinformationAttributesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -112,6 +122,7 @@ public class MybusinessbusinessinformationAttributesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public MybusinessbusinessinformationAttributesListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -122,6 +133,7 @@ public class MybusinessbusinessinformationAttributesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent")
     public String parent;
+
     public MybusinessbusinessinformationAttributesListRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -132,6 +144,7 @@ public class MybusinessbusinessinformationAttributesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public MybusinessbusinessinformationAttributesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -142,6 +155,7 @@ public class MybusinessbusinessinformationAttributesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public MybusinessbusinessinformationAttributesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +166,7 @@ public class MybusinessbusinessinformationAttributesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=regionCode")
     public String regionCode;
+
     public MybusinessbusinessinformationAttributesListRequest withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
@@ -162,6 +177,7 @@ public class MybusinessbusinessinformationAttributesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showAll")
     public Boolean showAll;
+
     public MybusinessbusinessinformationAttributesListRequest withShowAll(Boolean showAll) {
         this.showAll = showAll;
         return this;
@@ -172,6 +188,7 @@ public class MybusinessbusinessinformationAttributesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public MybusinessbusinessinformationAttributesListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -182,9 +199,11 @@ public class MybusinessbusinessinformationAttributesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public MybusinessbusinessinformationAttributesListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public MybusinessbusinessinformationAttributesListRequest(){}
 }

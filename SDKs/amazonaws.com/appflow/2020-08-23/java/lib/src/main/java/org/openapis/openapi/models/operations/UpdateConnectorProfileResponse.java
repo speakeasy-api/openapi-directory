@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateConnectorProfileResponse {
@@ -12,6 +13,7 @@ public class UpdateConnectorProfileResponse {
      */
     
     public Object conflictException;
+
     public UpdateConnectorProfileResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateConnectorProfileResponse {
      */
     
     public Object connectorAuthenticationException;
+
     public UpdateConnectorProfileResponse withConnectorAuthenticationException(Object connectorAuthenticationException) {
         this.connectorAuthenticationException = connectorAuthenticationException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateConnectorProfileResponse {
     
     
     public String contentType;
+
     public UpdateConnectorProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateConnectorProfileResponse {
      */
     
     public Object internalServerException;
+
     public UpdateConnectorProfileResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateConnectorProfileResponse {
     
     
     public Integer statusCode;
+
     public UpdateConnectorProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateConnectorProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateConnectorProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateConnectorProfileResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateConnectorProfileResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateConnectorProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateConnectorProfileResponse updateConnectorProfileResponse;
+
     public UpdateConnectorProfileResponse withUpdateConnectorProfileResponse(org.openapis.openapi.models.shared.UpdateConnectorProfileResponse updateConnectorProfileResponse) {
         this.updateConnectorProfileResponse = updateConnectorProfileResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateConnectorProfileResponse {
      */
     
     public Object validationException;
+
     public UpdateConnectorProfileResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateConnectorProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class AwsVmsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public AwsVmDetails[] details;
+
     public AwsVmsDetails withDetails(AwsVmDetails[] details) {
         this.details = details;
         return this;
     }
     
+    public AwsVmsDetails(){}
 }

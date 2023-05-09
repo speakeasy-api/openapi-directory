@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NewStudioMember {
     @JsonProperty("persona")
     public StudioPersonaEnum persona;
+
     public NewStudioMember withPersona(StudioPersonaEnum persona) {
         this.persona = persona;
         return this;
@@ -19,9 +20,14 @@ public class NewStudioMember {
     
     @JsonProperty("principalId")
     public String principalId;
+
     public NewStudioMember withPrincipalId(String principalId) {
         this.principalId = principalId;
         return this;
     }
     
+    public NewStudioMember(@JsonProperty("persona") StudioPersonaEnum persona, @JsonProperty("principalId") String principalId) {
+        this.persona = persona;
+        this.principalId = principalId;
+  }
 }

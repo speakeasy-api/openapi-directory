@@ -18,6 +18,7 @@ public class FileCommentEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public FileCommentEntity withBody(String body) {
         this.body = body;
         return this;
@@ -29,6 +30,7 @@ public class FileCommentEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public FileCommentEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class FileCommentEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reactions")
     public FileCommentReactionEntity[] reactions;
+
     public FileCommentEntity withReactions(FileCommentReactionEntity[] reactions) {
         this.reactions = reactions;
         return this;
     }
     
+    public FileCommentEntity(){}
 }

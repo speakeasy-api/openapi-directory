@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AccesscontextmanagerAccessPoliciesServicePerimetersListResponse {
     
     public String contentType;
+
     public AccesscontextmanagerAccessPoliciesServicePerimetersListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AccesscontextmanagerAccessPoliciesServicePerimetersListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListServicePerimetersResponse listServicePerimetersResponse;
+
     public AccesscontextmanagerAccessPoliciesServicePerimetersListResponse withListServicePerimetersResponse(org.openapis.openapi.models.shared.ListServicePerimetersResponse listServicePerimetersResponse) {
         this.listServicePerimetersResponse = listServicePerimetersResponse;
         return this;
@@ -26,6 +29,7 @@ public class AccesscontextmanagerAccessPoliciesServicePerimetersListResponse {
     
     
     public Integer statusCode;
+
     public AccesscontextmanagerAccessPoliciesServicePerimetersListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AccesscontextmanagerAccessPoliciesServicePerimetersListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AccesscontextmanagerAccessPoliciesServicePerimetersListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AccesscontextmanagerAccessPoliciesServicePerimetersListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

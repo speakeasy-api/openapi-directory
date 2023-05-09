@@ -15,9 +15,13 @@ public class LicenseVideoRequest {
      */
     @JsonProperty("videos")
     public LicenseVideo[] videos;
+
     public LicenseVideoRequest withVideos(LicenseVideo[] videos) {
         this.videos = videos;
         return this;
     }
     
+    public LicenseVideoRequest(@JsonProperty("videos") LicenseVideo[] videos) {
+        this.videos = videos;
+  }
 }

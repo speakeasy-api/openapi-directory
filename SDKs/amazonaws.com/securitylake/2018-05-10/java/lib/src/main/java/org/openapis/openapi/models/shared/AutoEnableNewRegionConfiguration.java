@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AutoEnableNewRegionConfiguration {
     @JsonProperty("region")
     public RegionEnum region;
+
     public AutoEnableNewRegionConfiguration withRegion(RegionEnum region) {
         this.region = region;
         return this;
@@ -19,9 +20,14 @@ public class AutoEnableNewRegionConfiguration {
     
     @JsonProperty("sources")
     public AwsLogSourceTypeEnum[] sources;
+
     public AutoEnableNewRegionConfiguration withSources(AwsLogSourceTypeEnum[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public AutoEnableNewRegionConfiguration(@JsonProperty("region") RegionEnum region, @JsonProperty("sources") AwsLogSourceTypeEnum[] sources) {
+        this.region = region;
+        this.sources = sources;
+  }
 }

@@ -15,6 +15,7 @@ public class EnterpriseCrmEventbusProtoSuspensionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customMessage")
     public String customMessage;
+
     public EnterpriseCrmEventbusProtoSuspensionConfig withCustomMessage(String customMessage) {
         this.customMessage = customMessage;
         return this;
@@ -23,6 +24,7 @@ public class EnterpriseCrmEventbusProtoSuspensionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifications")
     public EnterpriseCrmEventbusProtoNotification[] notifications;
+
     public EnterpriseCrmEventbusProtoSuspensionConfig withNotifications(EnterpriseCrmEventbusProtoNotification[] notifications) {
         this.notifications = notifications;
         return this;
@@ -31,6 +33,7 @@ public class EnterpriseCrmEventbusProtoSuspensionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspensionExpiration")
     public EnterpriseCrmEventbusProtoSuspensionExpiration suspensionExpiration;
+
     public EnterpriseCrmEventbusProtoSuspensionConfig withSuspensionExpiration(EnterpriseCrmEventbusProtoSuspensionExpiration suspensionExpiration) {
         this.suspensionExpiration = suspensionExpiration;
         return this;
@@ -42,9 +45,11 @@ public class EnterpriseCrmEventbusProtoSuspensionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("whoMayResolve")
     public EnterpriseCrmEventbusProtoSuspensionAuthPermissions[] whoMayResolve;
+
     public EnterpriseCrmEventbusProtoSuspensionConfig withWhoMayResolve(EnterpriseCrmEventbusProtoSuspensionAuthPermissions[] whoMayResolve) {
         this.whoMayResolve = whoMayResolve;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoSuspensionConfig(){}
 }

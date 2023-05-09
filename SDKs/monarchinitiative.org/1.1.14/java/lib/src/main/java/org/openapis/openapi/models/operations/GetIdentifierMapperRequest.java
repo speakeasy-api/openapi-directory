@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIdentifierMapperRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=source")
     public String source;
+
     public GetIdentifierMapperRequest withSource(String source) {
         this.source = source;
         return this;
@@ -16,9 +18,14 @@ public class GetIdentifierMapperRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target")
     public String target;
+
     public GetIdentifierMapperRequest withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public GetIdentifierMapperRequest(@JsonProperty("source") String source, @JsonProperty("target") String target) {
+        this.source = source;
+        this.target = target;
+  }
 }

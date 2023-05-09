@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest {
@@ -12,6 +13,7 @@ public class PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -24,6 +26,7 @@ public class PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -36,9 +39,15 @@ public class PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.requestBody = requestBody;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

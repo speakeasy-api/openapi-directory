@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteProjectStatusRequest {
@@ -14,6 +15,7 @@ public class DeleteProjectStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public DeleteProjectStatusRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -25,6 +27,7 @@ public class DeleteProjectStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public DeleteProjectStatusRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -35,9 +38,13 @@ public class DeleteProjectStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_status_gid")
     public String projectStatusGid;
+
     public DeleteProjectStatusRequest withProjectStatusGid(String projectStatusGid) {
         this.projectStatusGid = projectStatusGid;
         return this;
     }
     
+    public DeleteProjectStatusRequest(@JsonProperty("project_status_gid") String projectStatusGid) {
+        this.projectStatusGid = projectStatusGid;
+  }
 }

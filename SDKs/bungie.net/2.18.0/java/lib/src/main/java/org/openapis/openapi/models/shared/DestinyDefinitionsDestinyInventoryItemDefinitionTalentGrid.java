@@ -16,6 +16,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionTalentGrid {
      */
     
     public String buildName;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionTalentGrid withBuildName(String buildName) {
         this.buildName = buildName;
         return this;
@@ -26,6 +27,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionTalentGrid {
      */
     
     public Integer hudDamageType;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionTalentGrid withHudDamageType(Integer hudDamageType) {
         this.hudDamageType = hudDamageType;
         return this;
@@ -36,6 +38,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionTalentGrid {
      */
     
     public String hudIcon;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionTalentGrid withHudIcon(String hudIcon) {
         this.hudIcon = hudIcon;
         return this;
@@ -46,6 +49,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionTalentGrid {
      */
     
     public String itemDetailString;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionTalentGrid withItemDetailString(String itemDetailString) {
         this.itemDetailString = itemDetailString;
         return this;
@@ -56,9 +60,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionTalentGrid {
      */
     
     public Long talentGridHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionTalentGrid withTalentGridHash(Long talentGridHash) {
         this.talentGridHash = talentGridHash;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionTalentGrid(){}
 }

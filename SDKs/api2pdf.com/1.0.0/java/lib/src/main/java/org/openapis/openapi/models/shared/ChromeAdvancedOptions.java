@@ -12,6 +12,7 @@ public class ChromeAdvancedOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("landscape")
     public String landscape;
+
     public ChromeAdvancedOptions withLandscape(String landscape) {
         this.landscape = landscape;
         return this;
@@ -20,9 +21,11 @@ public class ChromeAdvancedOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("printBackground")
     public Boolean printBackground;
+
     public ChromeAdvancedOptions withPrintBackground(Boolean printBackground) {
         this.printBackground = printBackground;
         return this;
     }
     
+    public ChromeAdvancedOptions(){}
 }

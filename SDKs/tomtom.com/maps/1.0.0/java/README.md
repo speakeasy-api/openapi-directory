@@ -16,26 +16,24 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsFormatFormatEnum;
-import org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsFormatVersionNumberEnum;
 import org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsFormatRequest;
 import org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsFormatResponse;
+import org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsFormatVersionNumberEnum;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     apiKey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            GetMapVersionNumberCopyrightsFormatRequest req = new GetMapVersionNumberCopyrightsFormatRequest() {{
-                callback = "corrupti";
-                format = "jsonp";
-                versionNumber = "1";
-            }}            
+            GetMapVersionNumberCopyrightsFormatRequest req = new GetMapVersionNumberCopyrightsFormatRequest(GetMapVersionNumberCopyrightsFormatFormatEnum.JSONP, GetMapVersionNumberCopyrightsFormatVersionNumberEnum.ONE) {{
+                callback = "distinctio";
+            }};            
 
             GetMapVersionNumberCopyrightsFormatResponse res = sdk.copyrights.getMapVersionNumberCopyrightsFormat(req);
 
@@ -45,6 +43,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -52,27 +52,27 @@ public class Application {
 ## Available Resources and Operations
 
 
-### copyrights
+### [copyrights](docs/copyrights/README.md)
 
-* `getMapVersionNumberCopyrightsFormat` - Copyrights whole world
-* `getMapVersionNumberCopyrightsCaptionFormat` - Captions
-* `getMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormat` - Copyrights bounding box
-* `getMapVersionNumberCopyrightsZoomXYFormat` - Copyrights tile
+* [getMapVersionNumberCopyrightsFormat](docs/copyrights/README.md#getmapversionnumbercopyrightsformat) - Copyrights whole world
+* [getMapVersionNumberCopyrightsCaptionFormat](docs/copyrights/README.md#getmapversionnumbercopyrightscaptionformat) - Captions
+* [getMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormat](docs/copyrights/README.md#getmapversionnumbercopyrightsminlonminlatmaxlonmaxlatformat) - Copyrights bounding box
+* [getMapVersionNumberCopyrightsZoomXYFormat](docs/copyrights/README.md#getmapversionnumbercopyrightszoomxyformat) - Copyrights tile
 
-### raster
+### [raster](docs/raster/README.md)
 
-* `getMapVersionNumberStaticimage` - Static Image
-* `getMapVersionNumberTileLayerStyleZoomXYFormat` - Tile
+* [getMapVersionNumberStaticimage](docs/raster/README.md#getmapversionnumberstaticimage) - Static Image
+* [getMapVersionNumberTileLayerStyleZoomXYFormat](docs/raster/README.md#getmapversionnumbertilelayerstylezoomxyformat) - Tile
 
-### vector
+### [vector](docs/vector/README.md)
 
-* `getMapVersionNumberTileLayerStyleZoomXYPbf` - Tile
+* [getMapVersionNumberTileLayerStyleZoomXYPbf](docs/vector/README.md#getmapversionnumbertilelayerstylezoomxypbf) - Tile
 
-### wmsWmts
+### [wmsWmts](docs/wmswmts/README.md)
 
-* `getCapabilities` - GetCapabilities
-* `getMap` - GetMap
-* `getMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXml` - WMTS
+* [getCapabilities](docs/wmswmts/README.md#getcapabilities) - GetCapabilities
+* [getMap](docs/wmswmts/README.md#getmap) - GetMap
+* [getMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXml](docs/wmswmts/README.md#getmapversionnumberwmtskeywmtsversionwmtscapabilitiesxml) - WMTS
 <!-- End SDK Available Operations -->
 
 ### Maturity

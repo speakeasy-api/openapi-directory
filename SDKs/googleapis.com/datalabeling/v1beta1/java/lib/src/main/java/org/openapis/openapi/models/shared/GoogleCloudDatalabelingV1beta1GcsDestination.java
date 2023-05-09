@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1GcsDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public GoogleCloudDatalabelingV1beta1GcsDestination withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1GcsDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputUri")
     public String outputUri;
+
     public GoogleCloudDatalabelingV1beta1GcsDestination withOutputUri(String outputUri) {
         this.outputUri = outputUri;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1GcsDestination(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartPolicyGenerationResponse {
@@ -12,6 +13,7 @@ public class StartPolicyGenerationResponse {
      */
     
     public Object accessDeniedException;
+
     public StartPolicyGenerationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartPolicyGenerationResponse {
      */
     
     public Object conflictException;
+
     public StartPolicyGenerationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartPolicyGenerationResponse {
     
     
     public String contentType;
+
     public StartPolicyGenerationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartPolicyGenerationResponse {
      */
     
     public Object internalServerException;
+
     public StartPolicyGenerationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class StartPolicyGenerationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartPolicyGenerationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -59,6 +65,7 @@ public class StartPolicyGenerationResponse {
      */
     
     public org.openapis.openapi.models.shared.StartPolicyGenerationResponse startPolicyGenerationResponse;
+
     public StartPolicyGenerationResponse withStartPolicyGenerationResponse(org.openapis.openapi.models.shared.StartPolicyGenerationResponse startPolicyGenerationResponse) {
         this.startPolicyGenerationResponse = startPolicyGenerationResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartPolicyGenerationResponse {
     
     
     public Integer statusCode;
+
     public StartPolicyGenerationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartPolicyGenerationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartPolicyGenerationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class StartPolicyGenerationResponse {
      */
     
     public Object throttlingException;
+
     public StartPolicyGenerationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class StartPolicyGenerationResponse {
      */
     
     public Object validationException;
+
     public StartPolicyGenerationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartPolicyGenerationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

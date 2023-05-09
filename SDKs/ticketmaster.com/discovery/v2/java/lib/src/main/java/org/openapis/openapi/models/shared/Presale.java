@@ -15,6 +15,7 @@ public class Presale {
      */
     
     public String description;
+
     public Presale withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class Presale {
      */
     
     public OffsetDateTime endDateTime;
+
     public Presale withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -35,6 +37,7 @@ public class Presale {
      */
     
     public String name;
+
     public Presale withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +48,7 @@ public class Presale {
      */
     
     public OffsetDateTime startDateTime;
+
     public Presale withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -55,9 +59,11 @@ public class Presale {
      */
     
     public String url;
+
     public Presale withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Presale(){}
 }

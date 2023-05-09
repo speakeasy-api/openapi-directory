@@ -15,6 +15,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compositeFilter")
     public CompositeFilter compositeFilter;
+
     public Filter withCompositeFilter(CompositeFilter compositeFilter) {
         this.compositeFilter = compositeFilter;
         return this;
@@ -23,9 +24,11 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueFilter")
     public ValueFilter valueFilter;
+
     public Filter withValueFilter(ValueFilter valueFilter) {
         this.valueFilter = valueFilter;
         return this;
     }
     
+    public Filter(){}
 }

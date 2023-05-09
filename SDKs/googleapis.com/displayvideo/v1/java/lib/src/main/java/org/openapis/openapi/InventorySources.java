@@ -61,11 +61,9 @@ public class InventorySources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoInventorySourcesCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourcesCreateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoInventorySourcesCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourcesCreateResponse(contentType, httpRes.statusCode()) {{
             inventorySource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class InventorySources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessorsResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessorsResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessorsResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessorsResponse(contentType, httpRes.statusCode()) {{
             inventorySourceAccessors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class InventorySources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoInventorySourcesGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourcesGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoInventorySourcesGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourcesGetResponse(contentType, httpRes.statusCode()) {{
             inventorySource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class InventorySources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoInventorySourcesListResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourcesListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoInventorySourcesListResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourcesListResponse(contentType, httpRes.statusCode()) {{
             listInventorySourcesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +241,9 @@ public class InventorySources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoInventorySourcesPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourcesPatchResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoInventorySourcesPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoInventorySourcesPatchResponse(contentType, httpRes.statusCode()) {{
             inventorySource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

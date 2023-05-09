@@ -15,6 +15,7 @@ public class FailureException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExceptionDescription")
     public String exceptionDescription;
+
     public FailureException withExceptionDescription(String exceptionDescription) {
         this.exceptionDescription = exceptionDescription;
         return this;
@@ -23,9 +24,11 @@ public class FailureException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExceptionName")
     public String exceptionName;
+
     public FailureException withExceptionName(String exceptionName) {
         this.exceptionName = exceptionName;
         return this;
     }
     
+    public FailureException(){}
 }

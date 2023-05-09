@@ -18,6 +18,7 @@ public class WorkstationConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public WorkstationConfigInput withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class WorkstationConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("container")
     public Container container;
+
     public WorkstationConfigInput withContainer(Container container) {
         this.container = container;
         return this;
@@ -40,8 +42,21 @@ public class WorkstationConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public WorkstationConfigInput withDisplayName(String displayName) {
         this.displayName = displayName;
+        return this;
+    }
+    
+    /**
+     * Whether to enable linux auditd logging on the workstation. When enabled, a service account must also be specified that has logging.buckets.write permission on the project. Operating system audit logging is distinct from [Cloud Audit Logs](https://cloud.google.com/workstations/docs/audit-logging).
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("enableAuditAgent")
+    public Boolean enableAuditAgent;
+
+    public WorkstationConfigInput withEnableAuditAgent(Boolean enableAuditAgent) {
+        this.enableAuditAgent = enableAuditAgent;
         return this;
     }
     
@@ -51,17 +66,19 @@ public class WorkstationConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionKey")
     public CustomerEncryptionKey encryptionKey;
+
     public WorkstationConfigInput withEncryptionKey(CustomerEncryptionKey encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
     }
     
     /**
-     * Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.
+     * Checksum computed by the server. May be sent on update and delete requests to make sure that the client has an up-to-date value before proceeding.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public WorkstationConfigInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -72,8 +89,9 @@ public class WorkstationConfigInput {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
-    public Host host;
-    public WorkstationConfigInput withHost(Host host) {
+    public HostInput host;
+
+    public WorkstationConfigInput withHost(HostInput host) {
         this.host = host;
         return this;
     }
@@ -84,6 +102,7 @@ public class WorkstationConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idleTimeout")
     public String idleTimeout;
+
     public WorkstationConfigInput withIdleTimeout(String idleTimeout) {
         this.idleTimeout = idleTimeout;
         return this;
@@ -95,6 +114,7 @@ public class WorkstationConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public WorkstationConfigInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -106,6 +126,7 @@ public class WorkstationConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WorkstationConfigInput withName(String name) {
         this.name = name;
         return this;
@@ -117,8 +138,21 @@ public class WorkstationConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persistentDirectories")
     public PersistentDirectory[] persistentDirectories;
+
     public WorkstationConfigInput withPersistentDirectories(PersistentDirectory[] persistentDirectories) {
         this.persistentDirectories = persistentDirectories;
+        return this;
+    }
+    
+    /**
+     * Readiness checks to perform when starting a workstation using this workstation configuration. Mark a workstation as running only after all specified readiness checks return 200 status codes.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("readinessChecks")
+    public ReadinessCheck[] readinessChecks;
+
+    public WorkstationConfigInput withReadinessChecks(ReadinessCheck[] readinessChecks) {
+        this.readinessChecks = readinessChecks;
         return this;
     }
     
@@ -128,9 +162,11 @@ public class WorkstationConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runningTimeout")
     public String runningTimeout;
+
     public WorkstationConfigInput withRunningTimeout(String runningTimeout) {
         this.runningTimeout = runningTimeout;
         return this;
     }
     
+    public WorkstationConfigInput(){}
 }

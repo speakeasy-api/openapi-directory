@@ -20,6 +20,7 @@ public class DateVariableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public DateVariableRequest withGid(String gid) {
         this.gid = gid;
         return this;
@@ -33,9 +34,11 @@ public class DateVariableRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("value")
     public OffsetDateTime value;
+
     public DateVariableRequest withValue(OffsetDateTime value) {
         this.value = value;
         return this;
     }
     
+    public DateVariableRequest(){}
 }

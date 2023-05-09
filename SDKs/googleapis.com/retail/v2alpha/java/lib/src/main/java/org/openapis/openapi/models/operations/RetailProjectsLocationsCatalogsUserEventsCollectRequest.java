@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetailProjectsLocationsCatalogsUserEventsCollectRequest {
@@ -12,6 +13,7 @@ public class RetailProjectsLocationsCatalogsUserEventsCollectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public RetailProjectsLocationsCatalogsUserEventsCollectRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class RetailProjectsLocationsCatalogsUserEventsCollectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public RetailProjectsLocationsCatalogsUserEventsCollectRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class RetailProjectsLocationsCatalogsUserEventsCollectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public RetailProjectsLocationsCatalogsUserEventsCollectRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class RetailProjectsLocationsCatalogsUserEventsCollectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public RetailProjectsLocationsCatalogsUserEventsCollectRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class RetailProjectsLocationsCatalogsUserEventsCollectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ets")
     public String ets;
+
     public RetailProjectsLocationsCatalogsUserEventsCollectRequest withEts(String ets) {
         this.ets = ets;
         return this;
@@ -62,6 +68,7 @@ public class RetailProjectsLocationsCatalogsUserEventsCollectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public RetailProjectsLocationsCatalogsUserEventsCollectRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class RetailProjectsLocationsCatalogsUserEventsCollectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public RetailProjectsLocationsCatalogsUserEventsCollectRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class RetailProjectsLocationsCatalogsUserEventsCollectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public RetailProjectsLocationsCatalogsUserEventsCollectRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class RetailProjectsLocationsCatalogsUserEventsCollectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public RetailProjectsLocationsCatalogsUserEventsCollectRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -102,6 +112,7 @@ public class RetailProjectsLocationsCatalogsUserEventsCollectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prebuiltRule")
     public String prebuiltRule;
+
     public RetailProjectsLocationsCatalogsUserEventsCollectRequest withPrebuiltRule(String prebuiltRule) {
         this.prebuiltRule = prebuiltRule;
         return this;
@@ -112,6 +123,7 @@ public class RetailProjectsLocationsCatalogsUserEventsCollectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public RetailProjectsLocationsCatalogsUserEventsCollectRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class RetailProjectsLocationsCatalogsUserEventsCollectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public RetailProjectsLocationsCatalogsUserEventsCollectRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class RetailProjectsLocationsCatalogsUserEventsCollectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rawJson")
     public String rawJson;
+
     public RetailProjectsLocationsCatalogsUserEventsCollectRequest withRawJson(String rawJson) {
         this.rawJson = rawJson;
         return this;
@@ -142,6 +156,7 @@ public class RetailProjectsLocationsCatalogsUserEventsCollectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public RetailProjectsLocationsCatalogsUserEventsCollectRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,6 +167,7 @@ public class RetailProjectsLocationsCatalogsUserEventsCollectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public RetailProjectsLocationsCatalogsUserEventsCollectRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -162,6 +178,7 @@ public class RetailProjectsLocationsCatalogsUserEventsCollectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uri")
     public String uri;
+
     public RetailProjectsLocationsCatalogsUserEventsCollectRequest withUri(String uri) {
         this.uri = uri;
         return this;
@@ -172,9 +189,13 @@ public class RetailProjectsLocationsCatalogsUserEventsCollectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userEvent")
     public String userEvent;
+
     public RetailProjectsLocationsCatalogsUserEventsCollectRequest withUserEvent(String userEvent) {
         this.userEvent = userEvent;
         return this;
     }
     
+    public RetailProjectsLocationsCatalogsUserEventsCollectRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

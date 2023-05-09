@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEnabledStandardsResponse {
     
     public String contentType;
+
     public GetEnabledStandardsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetEnabledStandardsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEnabledStandardsResponse getEnabledStandardsResponse;
+
     public GetEnabledStandardsResponse withGetEnabledStandardsResponse(org.openapis.openapi.models.shared.GetEnabledStandardsResponse getEnabledStandardsResponse) {
         this.getEnabledStandardsResponse = getEnabledStandardsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetEnabledStandardsResponse {
      */
     
     public Object internalException;
+
     public GetEnabledStandardsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class GetEnabledStandardsResponse {
      */
     
     public Object invalidAccessException;
+
     public GetEnabledStandardsResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class GetEnabledStandardsResponse {
      */
     
     public Object invalidInputException;
+
     public GetEnabledStandardsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetEnabledStandardsResponse {
      */
     
     public Object limitExceededException;
+
     public GetEnabledStandardsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class GetEnabledStandardsResponse {
     
     
     public Integer statusCode;
+
     public GetEnabledStandardsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetEnabledStandardsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEnabledStandardsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetEnabledStandardsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

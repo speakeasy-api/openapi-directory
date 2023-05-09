@@ -12,6 +12,7 @@ public class UserComment {
      */
     
     public Integer androidOsVersion;
+
     public UserComment withAndroidOsVersion(Integer androidOsVersion) {
         this.androidOsVersion = androidOsVersion;
         return this;
@@ -22,6 +23,7 @@ public class UserComment {
      */
     
     public Integer appVersionCode;
+
     public UserComment withAppVersionCode(Integer appVersionCode) {
         this.appVersionCode = appVersionCode;
         return this;
@@ -32,6 +34,7 @@ public class UserComment {
      */
     
     public String appVersionName;
+
     public UserComment withAppVersionName(String appVersionName) {
         this.appVersionName = appVersionName;
         return this;
@@ -42,6 +45,7 @@ public class UserComment {
      */
     
     public String device;
+
     public UserComment withDevice(String device) {
         this.device = device;
         return this;
@@ -49,6 +53,7 @@ public class UserComment {
     
     
     public DeviceMetadata deviceMetadata;
+
     public UserComment withDeviceMetadata(DeviceMetadata deviceMetadata) {
         this.deviceMetadata = deviceMetadata;
         return this;
@@ -56,6 +61,7 @@ public class UserComment {
     
     
     public Timestamp lastModified;
+
     public UserComment withLastModified(Timestamp lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -66,6 +72,7 @@ public class UserComment {
      */
     
     public String originalText;
+
     public UserComment withOriginalText(String originalText) {
         this.originalText = originalText;
         return this;
@@ -76,6 +83,7 @@ public class UserComment {
      */
     
     public String reviewerLanguage;
+
     public UserComment withReviewerLanguage(String reviewerLanguage) {
         this.reviewerLanguage = reviewerLanguage;
         return this;
@@ -86,6 +94,7 @@ public class UserComment {
      */
     
     public Integer starRating;
+
     public UserComment withStarRating(Integer starRating) {
         this.starRating = starRating;
         return this;
@@ -96,6 +105,7 @@ public class UserComment {
      */
     
     public String text;
+
     public UserComment withText(String text) {
         this.text = text;
         return this;
@@ -106,6 +116,7 @@ public class UserComment {
      */
     
     public Integer thumbsDownCount;
+
     public UserComment withThumbsDownCount(Integer thumbsDownCount) {
         this.thumbsDownCount = thumbsDownCount;
         return this;
@@ -116,9 +127,11 @@ public class UserComment {
      */
     
     public Integer thumbsUpCount;
+
     public UserComment withThumbsUpCount(Integer thumbsUpCount) {
         this.thumbsUpCount = thumbsUpCount;
         return this;
     }
     
+    public UserComment(){}
 }

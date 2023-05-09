@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AttachObjectResponse {
@@ -12,6 +13,7 @@ public class AttachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException;
+
     public AttachObjectResponse withAccessDeniedException(org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AttachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.AttachObjectResponse attachObjectResponse;
+
     public AttachObjectResponse withAttachObjectResponse(org.openapis.openapi.models.shared.AttachObjectResponse attachObjectResponse) {
         this.attachObjectResponse = attachObjectResponse;
         return this;
@@ -29,6 +32,7 @@ public class AttachObjectResponse {
     
     
     public String contentType;
+
     public AttachObjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AttachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.DirectoryNotEnabledException directoryNotEnabledException;
+
     public AttachObjectResponse withDirectoryNotEnabledException(org.openapis.openapi.models.shared.DirectoryNotEnabledException directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -49,6 +54,7 @@ public class AttachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.FacetValidationException facetValidationException;
+
     public AttachObjectResponse withFacetValidationException(org.openapis.openapi.models.shared.FacetValidationException facetValidationException) {
         this.facetValidationException = facetValidationException;
         return this;
@@ -59,6 +65,7 @@ public class AttachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceException internalServiceException;
+
     public AttachObjectResponse withInternalServiceException(org.openapis.openapi.models.shared.InternalServiceException internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class AttachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArnException invalidArnException;
+
     public AttachObjectResponse withInvalidArnException(org.openapis.openapi.models.shared.InvalidArnException invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -79,6 +87,7 @@ public class AttachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidAttachmentException invalidAttachmentException;
+
     public AttachObjectResponse withInvalidAttachmentException(org.openapis.openapi.models.shared.InvalidAttachmentException invalidAttachmentException) {
         this.invalidAttachmentException = invalidAttachmentException;
         return this;
@@ -89,6 +98,7 @@ public class AttachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public AttachObjectResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -99,6 +109,7 @@ public class AttachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.LinkNameAlreadyInUseException linkNameAlreadyInUseException;
+
     public AttachObjectResponse withLinkNameAlreadyInUseException(org.openapis.openapi.models.shared.LinkNameAlreadyInUseException linkNameAlreadyInUseException) {
         this.linkNameAlreadyInUseException = linkNameAlreadyInUseException;
         return this;
@@ -106,6 +117,7 @@ public class AttachObjectResponse {
     
     
     public Integer statusCode;
+
     public AttachObjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class AttachObjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AttachObjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class AttachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public AttachObjectResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -133,6 +147,7 @@ public class AttachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException;
+
     public AttachObjectResponse withRetryableConflictException(org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -143,9 +158,14 @@ public class AttachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationException validationException;
+
     public AttachObjectResponse withValidationException(org.openapis.openapi.models.shared.ValidationException validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AttachObjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

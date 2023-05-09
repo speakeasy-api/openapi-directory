@@ -14,6 +14,7 @@ public class SignedTokenRequest {
      */
     @JsonProperty("capability")
     public java.util.Map<String, Object> capability;
+
     public SignedTokenRequest withCapability(java.util.Map<String, Object> capability) {
         this.capability = capability;
         return this;
@@ -25,6 +26,7 @@ public class SignedTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public SignedTokenRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -35,6 +37,7 @@ public class SignedTokenRequest {
      */
     @JsonProperty("keyName")
     public String keyName;
+
     public SignedTokenRequest withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -45,6 +48,7 @@ public class SignedTokenRequest {
      */
     @JsonProperty("mac")
     public String mac;
+
     public SignedTokenRequest withMac(String mac) {
         this.mac = mac;
         return this;
@@ -55,6 +59,7 @@ public class SignedTokenRequest {
      */
     @JsonProperty("nonce")
     public String nonce;
+
     public SignedTokenRequest withNonce(String nonce) {
         this.nonce = nonce;
         return this;
@@ -65,9 +70,17 @@ public class SignedTokenRequest {
      */
     @JsonProperty("timestamp")
     public Long timestamp;
+
     public SignedTokenRequest withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public SignedTokenRequest(@JsonProperty("capability") java.util.Map<String, Object> capability, @JsonProperty("keyName") String keyName, @JsonProperty("mac") String mac, @JsonProperty("nonce") String nonce, @JsonProperty("timestamp") Long timestamp) {
+        this.capability = capability;
+        this.keyName = keyName;
+        this.mac = mac;
+        this.nonce = nonce;
+        this.timestamp = timestamp;
+  }
 }

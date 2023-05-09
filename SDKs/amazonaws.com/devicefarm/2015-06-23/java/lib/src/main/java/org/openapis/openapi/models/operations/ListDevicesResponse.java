@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDevicesResponse {
@@ -12,6 +13,7 @@ public class ListDevicesResponse {
      */
     
     public Object argumentException;
+
     public ListDevicesResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class ListDevicesResponse {
     
     
     public String contentType;
+
     public ListDevicesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListDevicesResponse {
      */
     
     public Object limitExceededException;
+
     public ListDevicesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class ListDevicesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDevicesResult listDevicesResult;
+
     public ListDevicesResponse withListDevicesResult(org.openapis.openapi.models.shared.ListDevicesResult listDevicesResult) {
         this.listDevicesResult = listDevicesResult;
         return this;
@@ -49,6 +54,7 @@ public class ListDevicesResponse {
      */
     
     public Object notFoundException;
+
     public ListDevicesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListDevicesResponse {
      */
     
     public Object serviceAccountException;
+
     public ListDevicesResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class ListDevicesResponse {
     
     
     public Integer statusCode;
+
     public ListDevicesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListDevicesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDevicesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDevicesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

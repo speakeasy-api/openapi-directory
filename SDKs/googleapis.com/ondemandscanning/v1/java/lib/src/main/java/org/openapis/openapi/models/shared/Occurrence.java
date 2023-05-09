@@ -18,6 +18,7 @@ public class Occurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attestation")
     public AttestationOccurrence attestation;
+
     public Occurrence withAttestation(AttestationOccurrence attestation) {
         this.attestation = attestation;
         return this;
@@ -29,6 +30,7 @@ public class Occurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build")
     public BuildOccurrence build;
+
     public Occurrence withBuild(BuildOccurrence build) {
         this.build = build;
         return this;
@@ -40,6 +42,7 @@ public class Occurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compliance")
     public ComplianceOccurrence compliance;
+
     public Occurrence withCompliance(ComplianceOccurrence compliance) {
         this.compliance = compliance;
         return this;
@@ -51,6 +54,7 @@ public class Occurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Occurrence withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -62,6 +66,7 @@ public class Occurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deployment")
     public DeploymentOccurrence deployment;
+
     public Occurrence withDeployment(DeploymentOccurrence deployment) {
         this.deployment = deployment;
         return this;
@@ -73,6 +78,7 @@ public class Occurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discovery")
     public DiscoveryOccurrence discovery;
+
     public Occurrence withDiscovery(DiscoveryOccurrence discovery) {
         this.discovery = discovery;
         return this;
@@ -84,6 +90,7 @@ public class Occurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dsseAttestation")
     public DSSEAttestationOccurrence dsseAttestation;
+
     public Occurrence withDsseAttestation(DSSEAttestationOccurrence dsseAttestation) {
         this.dsseAttestation = dsseAttestation;
         return this;
@@ -95,6 +102,7 @@ public class Occurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("envelope")
     public Envelope envelope;
+
     public Occurrence withEnvelope(Envelope envelope) {
         this.envelope = envelope;
         return this;
@@ -106,6 +114,7 @@ public class Occurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public ImageOccurrence image;
+
     public Occurrence withImage(ImageOccurrence image) {
         this.image = image;
         return this;
@@ -117,6 +126,7 @@ public class Occurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public OccurrenceKindEnum kind;
+
     public Occurrence withKind(OccurrenceKindEnum kind) {
         this.kind = kind;
         return this;
@@ -128,6 +138,7 @@ public class Occurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Occurrence withName(String name) {
         this.name = name;
         return this;
@@ -139,6 +150,7 @@ public class Occurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noteName")
     public String noteName;
+
     public Occurrence withNoteName(String noteName) {
         this.noteName = noteName;
         return this;
@@ -150,6 +162,7 @@ public class Occurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package")
     public PackageOccurrence package_;
+
     public Occurrence withPackage(PackageOccurrence package_) {
         this.package_ = package_;
         return this;
@@ -161,6 +174,7 @@ public class Occurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remediation")
     public String remediation;
+
     public Occurrence withRemediation(String remediation) {
         this.remediation = remediation;
         return this;
@@ -172,8 +186,21 @@ public class Occurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceUri")
     public String resourceUri;
+
     public Occurrence withResourceUri(String resourceUri) {
         this.resourceUri = resourceUri;
+        return this;
+    }
+    
+    /**
+     * The occurrence representing an SBOM reference as applied to a specific resource. The occurrence follows the DSSE specification. See https://github.com/secure-systems-lab/dsse/blob/master/envelope.md for more details.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sbomReference")
+    public SBOMReferenceOccurrence sbomReference;
+
+    public Occurrence withSbomReference(SBOMReferenceOccurrence sbomReference) {
+        this.sbomReference = sbomReference;
         return this;
     }
     
@@ -183,6 +210,7 @@ public class Occurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Occurrence withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -194,6 +222,7 @@ public class Occurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upgrade")
     public UpgradeOccurrence upgrade;
+
     public Occurrence withUpgrade(UpgradeOccurrence upgrade) {
         this.upgrade = upgrade;
         return this;
@@ -205,9 +234,11 @@ public class Occurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vulnerability")
     public VulnerabilityOccurrence vulnerability;
+
     public Occurrence withVulnerability(VulnerabilityOccurrence vulnerability) {
         this.vulnerability = vulnerability;
         return this;
     }
     
+    public Occurrence(){}
 }

@@ -12,6 +12,7 @@ public class StorageUpdateFileRequestBody {
      */
     @JsonProperty("read")
     public String[] read;
+
     public StorageUpdateFileRequestBody withRead(String[] read) {
         this.read = read;
         return this;
@@ -22,9 +23,14 @@ public class StorageUpdateFileRequestBody {
      */
     @JsonProperty("write")
     public String[] write;
+
     public StorageUpdateFileRequestBody withWrite(String[] write) {
         this.write = write;
         return this;
     }
     
+    public StorageUpdateFileRequestBody(@JsonProperty("read") String[] read, @JsonProperty("write") String[] write) {
+        this.read = read;
+        this.write = write;
+  }
 }

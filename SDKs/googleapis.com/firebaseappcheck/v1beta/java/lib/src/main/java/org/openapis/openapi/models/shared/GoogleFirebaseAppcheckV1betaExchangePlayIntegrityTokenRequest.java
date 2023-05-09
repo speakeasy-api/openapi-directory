@@ -18,9 +18,11 @@ public class GoogleFirebaseAppcheckV1betaExchangePlayIntegrityTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playIntegrityToken")
     public String playIntegrityToken;
+
     public GoogleFirebaseAppcheckV1betaExchangePlayIntegrityTokenRequest withPlayIntegrityToken(String playIntegrityToken) {
         this.playIntegrityToken = playIntegrityToken;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1betaExchangePlayIntegrityTokenRequest(){}
 }

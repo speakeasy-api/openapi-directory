@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RelevanceFeedback {
     @JsonProperty("RelevanceValue")
     public RelevanceTypeEnum relevanceValue;
+
     public RelevanceFeedback withRelevanceValue(RelevanceTypeEnum relevanceValue) {
         this.relevanceValue = relevanceValue;
         return this;
@@ -19,9 +20,14 @@ public class RelevanceFeedback {
     
     @JsonProperty("ResultId")
     public String resultId;
+
     public RelevanceFeedback withResultId(String resultId) {
         this.resultId = resultId;
         return this;
     }
     
+    public RelevanceFeedback(@JsonProperty("RelevanceValue") RelevanceTypeEnum relevanceValue, @JsonProperty("ResultId") String resultId) {
+        this.relevanceValue = relevanceValue;
+        this.resultId = resultId;
+  }
 }

@@ -18,6 +18,7 @@ public class ListSavedReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListSavedReportsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListSavedReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savedReports")
     public SavedReport[] savedReports;
+
     public ListSavedReportsResponse withSavedReports(SavedReport[] savedReports) {
         this.savedReports = savedReports;
         return this;
     }
     
+    public ListSavedReportsResponse(){}
 }

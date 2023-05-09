@@ -15,6 +15,7 @@ public class NodesWikisListWikiLinks {
      */
     
     public String download;
+
     public NodesWikisListWikiLinks withDownload(String download) {
         this.download = download;
         return this;
@@ -25,6 +26,7 @@ public class NodesWikisListWikiLinks {
      */
     
     public String info;
+
     public NodesWikisListWikiLinks withInfo(String info) {
         this.info = info;
         return this;
@@ -35,9 +37,11 @@ public class NodesWikisListWikiLinks {
      */
     
     public String self;
+
     public NodesWikisListWikiLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public NodesWikisListWikiLinks(){}
 }

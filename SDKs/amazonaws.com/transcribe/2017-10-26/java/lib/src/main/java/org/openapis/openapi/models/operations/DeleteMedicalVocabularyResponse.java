@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMedicalVocabularyResponse {
@@ -12,6 +13,7 @@ public class DeleteMedicalVocabularyResponse {
      */
     
     public Object badRequestException;
+
     public DeleteMedicalVocabularyResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteMedicalVocabularyResponse {
     
     
     public String contentType;
+
     public DeleteMedicalVocabularyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteMedicalVocabularyResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteMedicalVocabularyResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteMedicalVocabularyResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteMedicalVocabularyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteMedicalVocabularyResponse {
      */
     
     public Object notFoundException;
+
     public DeleteMedicalVocabularyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteMedicalVocabularyResponse {
     
     
     public Integer statusCode;
+
     public DeleteMedicalVocabularyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteMedicalVocabularyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMedicalVocabularyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteMedicalVocabularyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

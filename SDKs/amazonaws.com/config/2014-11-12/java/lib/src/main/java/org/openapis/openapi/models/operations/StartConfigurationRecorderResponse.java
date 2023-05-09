@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartConfigurationRecorderResponse {
     
     public String contentType;
+
     public StartConfigurationRecorderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartConfigurationRecorderResponse {
      */
     
     public Object noAvailableDeliveryChannelException;
+
     public StartConfigurationRecorderResponse withNoAvailableDeliveryChannelException(Object noAvailableDeliveryChannelException) {
         this.noAvailableDeliveryChannelException = noAvailableDeliveryChannelException;
         return this;
@@ -29,6 +32,7 @@ public class StartConfigurationRecorderResponse {
      */
     
     public Object noSuchConfigurationRecorderException;
+
     public StartConfigurationRecorderResponse withNoSuchConfigurationRecorderException(Object noSuchConfigurationRecorderException) {
         this.noSuchConfigurationRecorderException = noSuchConfigurationRecorderException;
         return this;
@@ -36,6 +40,7 @@ public class StartConfigurationRecorderResponse {
     
     
     public Integer statusCode;
+
     public StartConfigurationRecorderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class StartConfigurationRecorderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartConfigurationRecorderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartConfigurationRecorderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

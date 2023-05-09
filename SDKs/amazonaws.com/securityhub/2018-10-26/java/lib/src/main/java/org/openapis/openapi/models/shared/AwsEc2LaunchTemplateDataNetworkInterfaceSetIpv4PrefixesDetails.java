@@ -15,9 +15,11 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetIpv4PrefixesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ipv4Prefix")
     public String ipv4Prefix;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetIpv4PrefixesDetails withIpv4Prefix(String ipv4Prefix) {
         this.ipv4Prefix = ipv4Prefix;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataNetworkInterfaceSetIpv4PrefixesDetails(){}
 }

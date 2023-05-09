@@ -60,11 +60,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListResponse() {{
+        org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListResponse(contentType, httpRes.statusCode()) {{
             listInstanceOSPoliciesCompliancesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,11 +104,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesInventoriesListResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesInventoriesListResponse() {{
+        org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesInventoriesListResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesInventoriesListResponse(contentType, httpRes.statusCode()) {{
             listInventoriesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,11 +148,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListResponse() {{
+        org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListResponse(contentType, httpRes.statusCode()) {{
             listOSPolicyAssignmentReportsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -198,11 +192,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListResponse() {{
+        org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListResponse(contentType, httpRes.statusCode()) {{
             listVulnerabilityReportsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -246,11 +238,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateResponse() {{
+        org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -292,11 +282,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsDeleteResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsDeleteResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -338,11 +326,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListResponse() {{
+        org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListResponse(contentType, httpRes.statusCode()) {{
             listOSPolicyAssignmentsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -384,11 +370,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsResponse() {{
+        org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsResponse(contentType, httpRes.statusCode()) {{
             listOSPolicyAssignmentRevisionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -432,11 +416,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancelResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancelResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -478,11 +460,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGetResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGetResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -526,11 +506,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsPatchResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsPatchResponse() {{
+        org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsPatchResponse res = new org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

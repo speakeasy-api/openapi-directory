@@ -16,98 +16,96 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BatchPutMessageRequestBody;
 import org.openapis.openapi.models.operations.BatchPutMessageRequest;
+import org.openapis.openapi.models.operations.BatchPutMessageRequestBody;
 import org.openapis.openapi.models.operations.BatchPutMessageResponse;
 import org.openapis.openapi.models.shared.Message;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            BatchPutMessageRequest req = new BatchPutMessageRequest() {{
-                requestBody = new BatchPutMessageRequestBody() {{
-                    channelName = "corrupti";
-                    messages = new org.openapis.openapi.models.shared.Message[]{{
-                        add(new Message() {{
-                            messageId = "distinctio";
-                            payload = "quibusdam";
-                        }}),
-                        add(new Message() {{
-                            messageId = "unde";
-                            payload = "nulla";
-                        }}),
-                        add(new Message() {{
-                            messageId = "corrupti";
-                            payload = "illum";
-                        }}),
-                    }};
-                }};
-                xAmzAlgorithm = "vel";
-                xAmzContentSha256 = "error";
-                xAmzCredential = "deserunt";
+            BatchPutMessageRequest req = new BatchPutMessageRequest(                new BatchPutMessageRequestBody("provident",                 new org.openapis.openapi.models.shared.Message[]{{
+                                                add(new Message("nulla", "corrupti") {{
+                                                    messageId = "quibusdam";
+                                                    payload = "unde";
+                                                }}),
+                                                add(new Message("error", "deserunt") {{
+                                                    messageId = "illum";
+                                                    payload = "vel";
+                                                }}),
+                                                add(new Message("magnam", "debitis") {{
+                                                    messageId = "suscipit";
+                                                    payload = "iure";
+                                                }}),
+                                            }});) {{
+                xAmzAlgorithm = "ipsa";
+                xAmzContentSha256 = "delectus";
+                xAmzCredential = "tempora";
                 xAmzDate = "suscipit";
-                xAmzSecurityToken = "iure";
-                xAmzSignature = "magnam";
-                xAmzSignedHeaders = "debitis";
-            }}            
+                xAmzSecurityToken = "molestiae";
+                xAmzSignature = "minus";
+                xAmzSignedHeaders = "placeat";
+            }};            
 
             BatchPutMessageResponse res = sdk.batchPutMessage(req);
 
-            if (res.batchPutMessageResponse.isPresent()) {
+            if (res.batchPutMessageResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `batchPutMessage` - Sends messages to a channel.
-* `cancelPipelineReprocessing` - Cancels the reprocessing of data through the pipeline.
-* `createChannel` - Used to create a channel. A channel collects data from an MQTT topic and archives the raw, unprocessed messages before publishing the data to a pipeline.
-* `createDataset` - Used to create a dataset. A dataset stores data retrieved from a data store by applying a <code>queryAction</code> (a SQL query) or a <code>containerAction</code> (executing a containerized application). This operation creates the skeleton of a dataset. The dataset can be populated manually by calling <code>CreateDatasetContent</code> or automatically according to a trigger you specify.
-* `createDatasetContent` - Creates the content of a dataset by applying a <code>queryAction</code> (a SQL query) or a <code>containerAction</code> (executing a containerized application).
-* `createDatastore` - Creates a data store, which is a repository for messages.
-* `createPipeline` - Creates a pipeline. A pipeline consumes messages from a channel and allows you to process the messages before storing them in a data store. You must specify both a <code>channel</code> and a <code>datastore</code> activity and, optionally, as many as 23 additional activities in the <code>pipelineActivities</code> array.
-* `deleteChannel` - Deletes the specified channel.
-* `deleteDataset` - <p>Deletes the specified dataset.</p> <p>You do not have to delete the content of the dataset before you perform this operation.</p>
-* `deleteDatasetContent` - Deletes the content of the specified dataset.
-* `deleteDatastore` - Deletes the specified data store.
-* `deletePipeline` - Deletes the specified pipeline.
-* `describeChannel` - Retrieves information about a channel.
-* `describeDataset` - Retrieves information about a dataset.
-* `describeDatastore` - Retrieves information about a data store.
-* `describeLoggingOptions` - Retrieves the current settings of the IoT Analytics logging options.
-* `describePipeline` - Retrieves information about a pipeline.
-* `getDatasetContent` - Retrieves the contents of a dataset as presigned URIs.
-* `listChannels` - Retrieves a list of channels.
-* `listDatasetContents` - Lists information about dataset contents that have been created.
-* `listDatasets` - Retrieves information about datasets.
-* `listDatastores` - Retrieves a list of data stores.
-* `listPipelines` - Retrieves a list of pipelines.
-* `listTagsForResource` - Lists the tags (metadata) that you have assigned to the resource.
-* `putLoggingOptions` - <p>Sets or updates the IoT Analytics logging options.</p> <p>If you update the value of any <code>loggingOptions</code> field, it takes up to one minute for the change to take effect. Also, if you change the policy attached to the role you specified in the <code>roleArn</code> field (for example, to correct an invalid policy), it takes up to five minutes for that change to take effect. </p>
-* `runPipelineActivity` - Simulates the results of running a pipeline activity on a message payload.
-* `sampleChannelData` - Retrieves a sample of messages from the specified channel ingested during the specified timeframe. Up to 10 messages can be retrieved.
-* `startPipelineReprocessing` - Starts the reprocessing of raw message data through the pipeline.
-* `tagResource` - Adds to or modifies the tags of the given resource. Tags are metadata that can be used to manage a resource.
-* `untagResource` - Removes the given tags (metadata) from the resource.
-* `updateChannel` - Used to update the settings of a channel.
-* `updateDataset` - Updates the settings of a dataset.
-* `updateDatastore` - Used to update the settings of a data store.
-* `updatePipeline` - Updates the settings of a pipeline. You must specify both a <code>channel</code> and a <code>datastore</code> activity and, optionally, as many as 23 additional activities in the <code>pipelineActivities</code> array.
+* [batchPutMessage](docs/sdk/README.md#batchputmessage) - Sends messages to a channel.
+* [cancelPipelineReprocessing](docs/sdk/README.md#cancelpipelinereprocessing) - Cancels the reprocessing of data through the pipeline.
+* [createChannel](docs/sdk/README.md#createchannel) - Used to create a channel. A channel collects data from an MQTT topic and archives the raw, unprocessed messages before publishing the data to a pipeline.
+* [createDataset](docs/sdk/README.md#createdataset) - Used to create a dataset. A dataset stores data retrieved from a data store by applying a <code>queryAction</code> (a SQL query) or a <code>containerAction</code> (executing a containerized application). This operation creates the skeleton of a dataset. The dataset can be populated manually by calling <code>CreateDatasetContent</code> or automatically according to a trigger you specify.
+* [createDatasetContent](docs/sdk/README.md#createdatasetcontent) - Creates the content of a dataset by applying a <code>queryAction</code> (a SQL query) or a <code>containerAction</code> (executing a containerized application).
+* [createDatastore](docs/sdk/README.md#createdatastore) - Creates a data store, which is a repository for messages.
+* [createPipeline](docs/sdk/README.md#createpipeline) - Creates a pipeline. A pipeline consumes messages from a channel and allows you to process the messages before storing them in a data store. You must specify both a <code>channel</code> and a <code>datastore</code> activity and, optionally, as many as 23 additional activities in the <code>pipelineActivities</code> array.
+* [deleteChannel](docs/sdk/README.md#deletechannel) - Deletes the specified channel.
+* [deleteDataset](docs/sdk/README.md#deletedataset) - <p>Deletes the specified dataset.</p> <p>You do not have to delete the content of the dataset before you perform this operation.</p>
+* [deleteDatasetContent](docs/sdk/README.md#deletedatasetcontent) - Deletes the content of the specified dataset.
+* [deleteDatastore](docs/sdk/README.md#deletedatastore) - Deletes the specified data store.
+* [deletePipeline](docs/sdk/README.md#deletepipeline) - Deletes the specified pipeline.
+* [describeChannel](docs/sdk/README.md#describechannel) - Retrieves information about a channel.
+* [describeDataset](docs/sdk/README.md#describedataset) - Retrieves information about a dataset.
+* [describeDatastore](docs/sdk/README.md#describedatastore) - Retrieves information about a data store.
+* [describeLoggingOptions](docs/sdk/README.md#describeloggingoptions) - Retrieves the current settings of the IoT Analytics logging options.
+* [describePipeline](docs/sdk/README.md#describepipeline) - Retrieves information about a pipeline.
+* [getDatasetContent](docs/sdk/README.md#getdatasetcontent) - Retrieves the contents of a dataset as presigned URIs.
+* [listChannels](docs/sdk/README.md#listchannels) - Retrieves a list of channels.
+* [listDatasetContents](docs/sdk/README.md#listdatasetcontents) - Lists information about dataset contents that have been created.
+* [listDatasets](docs/sdk/README.md#listdatasets) - Retrieves information about datasets.
+* [listDatastores](docs/sdk/README.md#listdatastores) - Retrieves a list of data stores.
+* [listPipelines](docs/sdk/README.md#listpipelines) - Retrieves a list of pipelines.
+* [listTagsForResource](docs/sdk/README.md#listtagsforresource) - Lists the tags (metadata) that you have assigned to the resource.
+* [putLoggingOptions](docs/sdk/README.md#putloggingoptions) - <p>Sets or updates the IoT Analytics logging options.</p> <p>If you update the value of any <code>loggingOptions</code> field, it takes up to one minute for the change to take effect. Also, if you change the policy attached to the role you specified in the <code>roleArn</code> field (for example, to correct an invalid policy), it takes up to five minutes for that change to take effect. </p>
+* [runPipelineActivity](docs/sdk/README.md#runpipelineactivity) - Simulates the results of running a pipeline activity on a message payload.
+* [sampleChannelData](docs/sdk/README.md#samplechanneldata) - Retrieves a sample of messages from the specified channel ingested during the specified timeframe. Up to 10 messages can be retrieved.
+* [startPipelineReprocessing](docs/sdk/README.md#startpipelinereprocessing) - Starts the reprocessing of raw message data through the pipeline.
+* [tagResource](docs/sdk/README.md#tagresource) - Adds to or modifies the tags of the given resource. Tags are metadata that can be used to manage a resource.
+* [untagResource](docs/sdk/README.md#untagresource) - Removes the given tags (metadata) from the resource.
+* [updateChannel](docs/sdk/README.md#updatechannel) - Used to update the settings of a channel.
+* [updateDataset](docs/sdk/README.md#updatedataset) - Updates the settings of a dataset.
+* [updateDatastore](docs/sdk/README.md#updatedatastore) - Used to update the settings of a data store.
+* [updatePipeline](docs/sdk/README.md#updatepipeline) - Updates the settings of a pipeline. You must specify both a <code>channel</code> and a <code>datastore</code> activity and, optionally, as many as 23 additional activities in the <code>pipelineActivities</code> array.
 <!-- End SDK Available Operations -->
 
 ### Maturity

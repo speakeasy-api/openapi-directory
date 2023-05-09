@@ -12,6 +12,7 @@ public class DistrictRankingEventPoints {
      */
     @JsonProperty("alliance_points")
     public Long alliancePoints;
+
     public DistrictRankingEventPoints withAlliancePoints(Long alliancePoints) {
         this.alliancePoints = alliancePoints;
         return this;
@@ -22,6 +23,7 @@ public class DistrictRankingEventPoints {
      */
     @JsonProperty("award_points")
     public Long awardPoints;
+
     public DistrictRankingEventPoints withAwardPoints(Long awardPoints) {
         this.awardPoints = awardPoints;
         return this;
@@ -32,6 +34,7 @@ public class DistrictRankingEventPoints {
      */
     @JsonProperty("district_cmp")
     public Boolean districtCmp;
+
     public DistrictRankingEventPoints withDistrictCmp(Boolean districtCmp) {
         this.districtCmp = districtCmp;
         return this;
@@ -42,6 +45,7 @@ public class DistrictRankingEventPoints {
      */
     @JsonProperty("elim_points")
     public Long elimPoints;
+
     public DistrictRankingEventPoints withElimPoints(Long elimPoints) {
         this.elimPoints = elimPoints;
         return this;
@@ -52,6 +56,7 @@ public class DistrictRankingEventPoints {
      */
     @JsonProperty("event_key")
     public String eventKey;
+
     public DistrictRankingEventPoints withEventKey(String eventKey) {
         this.eventKey = eventKey;
         return this;
@@ -62,6 +67,7 @@ public class DistrictRankingEventPoints {
      */
     @JsonProperty("qual_points")
     public Long qualPoints;
+
     public DistrictRankingEventPoints withQualPoints(Long qualPoints) {
         this.qualPoints = qualPoints;
         return this;
@@ -72,9 +78,19 @@ public class DistrictRankingEventPoints {
      */
     @JsonProperty("total")
     public Long total;
+
     public DistrictRankingEventPoints withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public DistrictRankingEventPoints(@JsonProperty("alliance_points") Long alliancePoints, @JsonProperty("award_points") Long awardPoints, @JsonProperty("district_cmp") Boolean districtCmp, @JsonProperty("elim_points") Long elimPoints, @JsonProperty("event_key") String eventKey, @JsonProperty("qual_points") Long qualPoints, @JsonProperty("total") Long total) {
+        this.alliancePoints = alliancePoints;
+        this.awardPoints = awardPoints;
+        this.districtCmp = districtCmp;
+        this.elimPoints = elimPoints;
+        this.eventKey = eventKey;
+        this.qualPoints = qualPoints;
+        this.total = total;
+  }
 }

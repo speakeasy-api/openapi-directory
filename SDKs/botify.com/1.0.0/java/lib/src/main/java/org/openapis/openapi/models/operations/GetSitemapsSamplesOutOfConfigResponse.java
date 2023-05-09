@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSitemapsSamplesOutOfConfigResponse {
     
     public String contentType;
+
     public GetSitemapsSamplesOutOfConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSitemapsSamplesOutOfConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.DefaultPayload defaultPayload;
+
     public GetSitemapsSamplesOutOfConfigResponse withDefaultPayload(org.openapis.openapi.models.shared.DefaultPayload defaultPayload) {
         this.defaultPayload = defaultPayload;
         return this;
@@ -26,6 +29,7 @@ public class GetSitemapsSamplesOutOfConfigResponse {
     
     
     public Integer statusCode;
+
     public GetSitemapsSamplesOutOfConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetSitemapsSamplesOutOfConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSitemapsSamplesOutOfConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetSitemapsSamplesOutOfConfigResponse {
      */
     
     public GetSitemapsSamplesOutOfConfig200ApplicationJSON getSitemapsSamplesOutOfConfig200ApplicationJSONObject;
+
     public GetSitemapsSamplesOutOfConfigResponse withGetSitemapsSamplesOutOfConfig200ApplicationJSONObject(GetSitemapsSamplesOutOfConfig200ApplicationJSON getSitemapsSamplesOutOfConfig200ApplicationJSONObject) {
         this.getSitemapsSamplesOutOfConfig200ApplicationJSONObject = getSitemapsSamplesOutOfConfig200ApplicationJSONObject;
         return this;
     }
     
+    public GetSitemapsSamplesOutOfConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

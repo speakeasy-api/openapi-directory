@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DataCaptureConfigSummary {
     @JsonProperty("CaptureStatus")
     public CaptureStatusEnum captureStatus;
+
     public DataCaptureConfigSummary withCaptureStatus(CaptureStatusEnum captureStatus) {
         this.captureStatus = captureStatus;
         return this;
@@ -19,6 +20,7 @@ public class DataCaptureConfigSummary {
     
     @JsonProperty("CurrentSamplingPercentage")
     public Long currentSamplingPercentage;
+
     public DataCaptureConfigSummary withCurrentSamplingPercentage(Long currentSamplingPercentage) {
         this.currentSamplingPercentage = currentSamplingPercentage;
         return this;
@@ -26,6 +28,7 @@ public class DataCaptureConfigSummary {
     
     @JsonProperty("DestinationS3Uri")
     public String destinationS3Uri;
+
     public DataCaptureConfigSummary withDestinationS3Uri(String destinationS3Uri) {
         this.destinationS3Uri = destinationS3Uri;
         return this;
@@ -33,6 +36,7 @@ public class DataCaptureConfigSummary {
     
     @JsonProperty("EnableCapture")
     public Boolean enableCapture;
+
     public DataCaptureConfigSummary withEnableCapture(Boolean enableCapture) {
         this.enableCapture = enableCapture;
         return this;
@@ -40,9 +44,17 @@ public class DataCaptureConfigSummary {
     
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public DataCaptureConfigSummary withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
     }
     
+    public DataCaptureConfigSummary(@JsonProperty("CaptureStatus") CaptureStatusEnum captureStatus, @JsonProperty("CurrentSamplingPercentage") Long currentSamplingPercentage, @JsonProperty("DestinationS3Uri") String destinationS3Uri, @JsonProperty("EnableCapture") Boolean enableCapture, @JsonProperty("KmsKeyId") String kmsKeyId) {
+        this.captureStatus = captureStatus;
+        this.currentSamplingPercentage = currentSamplingPercentage;
+        this.destinationS3Uri = destinationS3Uri;
+        this.enableCapture = enableCapture;
+        this.kmsKeyId = kmsKeyId;
+  }
 }

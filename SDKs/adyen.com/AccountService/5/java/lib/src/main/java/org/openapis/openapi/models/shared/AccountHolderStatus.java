@@ -15,6 +15,7 @@ public class AccountHolderStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public AccountEvent[] events;
+
     public AccountHolderStatus withEvents(AccountEvent[] events) {
         this.events = events;
         return this;
@@ -23,6 +24,7 @@ public class AccountHolderStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutState")
     public AccountPayoutState payoutState;
+
     public AccountHolderStatus withPayoutState(AccountPayoutState payoutState) {
         this.payoutState = payoutState;
         return this;
@@ -31,6 +33,7 @@ public class AccountHolderStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processingState")
     public AccountProcessingState processingState;
+
     public AccountHolderStatus withProcessingState(AccountProcessingState processingState) {
         this.processingState = processingState;
         return this;
@@ -42,6 +45,7 @@ public class AccountHolderStatus {
      */
     @JsonProperty("status")
     public AccountHolderStatusStatusEnum status;
+
     public AccountHolderStatus withStatus(AccountHolderStatusStatusEnum status) {
         this.status = status;
         return this;
@@ -53,9 +57,13 @@ public class AccountHolderStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public AccountHolderStatus withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public AccountHolderStatus(@JsonProperty("status") AccountHolderStatusStatusEnum status) {
+        this.status = status;
+  }
 }

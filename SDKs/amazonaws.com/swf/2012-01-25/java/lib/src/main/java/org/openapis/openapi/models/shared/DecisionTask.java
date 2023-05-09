@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DecisionTask {
     @JsonProperty("events")
     public HistoryEvent[] events;
+
     public DecisionTask withEvents(HistoryEvent[] events) {
         this.events = events;
         return this;
@@ -22,6 +23,7 @@ public class DecisionTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public DecisionTask withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -30,6 +32,7 @@ public class DecisionTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousStartedEventId")
     public Long previousStartedEventId;
+
     public DecisionTask withPreviousStartedEventId(Long previousStartedEventId) {
         this.previousStartedEventId = previousStartedEventId;
         return this;
@@ -37,6 +40,7 @@ public class DecisionTask {
     
     @JsonProperty("startedEventId")
     public Long startedEventId;
+
     public DecisionTask withStartedEventId(Long startedEventId) {
         this.startedEventId = startedEventId;
         return this;
@@ -44,6 +48,7 @@ public class DecisionTask {
     
     @JsonProperty("taskToken")
     public String taskToken;
+
     public DecisionTask withTaskToken(String taskToken) {
         this.taskToken = taskToken;
         return this;
@@ -51,6 +56,7 @@ public class DecisionTask {
     
     @JsonProperty("workflowExecution")
     public WorkflowExecution workflowExecution;
+
     public DecisionTask withWorkflowExecution(WorkflowExecution workflowExecution) {
         this.workflowExecution = workflowExecution;
         return this;
@@ -58,9 +64,17 @@ public class DecisionTask {
     
     @JsonProperty("workflowType")
     public WorkflowType workflowType;
+
     public DecisionTask withWorkflowType(WorkflowType workflowType) {
         this.workflowType = workflowType;
         return this;
     }
     
+    public DecisionTask(@JsonProperty("events") HistoryEvent[] events, @JsonProperty("startedEventId") Long startedEventId, @JsonProperty("taskToken") String taskToken, @JsonProperty("workflowExecution") WorkflowExecution workflowExecution, @JsonProperty("workflowType") WorkflowType workflowType) {
+        this.events = events;
+        this.startedEventId = startedEventId;
+        this.taskToken = taskToken;
+        this.workflowExecution = workflowExecution;
+        this.workflowType = workflowType;
+  }
 }

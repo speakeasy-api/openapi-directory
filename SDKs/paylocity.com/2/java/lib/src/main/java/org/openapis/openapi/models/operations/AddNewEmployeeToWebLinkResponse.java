@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddNewEmployeeToWebLinkResponse {
     
     public String contentType;
+
     public AddNewEmployeeToWebLinkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AddNewEmployeeToWebLinkResponse {
     
     
     public Integer statusCode;
+
     public AddNewEmployeeToWebLinkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AddNewEmployeeToWebLinkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddNewEmployeeToWebLinkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AddNewEmployeeToWebLinkResponse {
      */
     
     public org.openapis.openapi.models.shared.Error[] errors;
+
     public AddNewEmployeeToWebLinkResponse withErrors(org.openapis.openapi.models.shared.Error[] errors) {
         this.errors = errors;
         return this;
@@ -43,9 +48,14 @@ public class AddNewEmployeeToWebLinkResponse {
      */
     
     public org.openapis.openapi.models.shared.TrackingNumberResponse[] trackingNumberResponses;
+
     public AddNewEmployeeToWebLinkResponse withTrackingNumberResponses(org.openapis.openapi.models.shared.TrackingNumberResponse[] trackingNumberResponses) {
         this.trackingNumberResponses = trackingNumberResponses;
         return this;
     }
     
+    public AddNewEmployeeToWebLinkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

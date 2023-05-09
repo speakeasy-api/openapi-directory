@@ -53,13 +53,11 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFilesFileIdResponse res = new org.openapis.openapi.models.operations.GetFilesFileIdResponse() {{
+        org.openapis.openapi.models.operations.GetFilesFileIdResponse res = new org.openapis.openapi.models.operations.GetFilesFileIdResponse(contentType, httpRes.statusCode()) {{
             getFilesFileId200ApplicationJSONObject = null;
             getFilesFileId400ApplicationJSONObject = null;
             getFilesFileId404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,14 +114,12 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostFilesFileIdGetTemporaryLinkResponse res = new org.openapis.openapi.models.operations.PostFilesFileIdGetTemporaryLinkResponse() {{
+        org.openapis.openapi.models.operations.PostFilesFileIdGetTemporaryLinkResponse res = new org.openapis.openapi.models.operations.PostFilesFileIdGetTemporaryLinkResponse(contentType, httpRes.statusCode()) {{
             postFilesFileIdGetTemporaryLink200ApplicationJSONObject = null;
             postFilesFileIdGetTemporaryLink400ApplicationJSONObject = null;
             body = null;
             postFilesFileIdGetTemporaryLink404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

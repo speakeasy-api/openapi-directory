@@ -21,6 +21,7 @@ public class ListDomainItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public ListDomainItem withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -28,6 +29,7 @@ public class ListDomainItem {
     
     @JsonProperty("DomainName")
     public String domainName;
+
     public ListDomainItem withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -37,6 +39,7 @@ public class ListDomainItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public ListDomainItem withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -45,9 +48,15 @@ public class ListDomainItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public ListDomainItem withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public ListDomainItem(@JsonProperty("CreatedAt") OffsetDateTime createdAt, @JsonProperty("DomainName") String domainName, @JsonProperty("LastUpdatedAt") OffsetDateTime lastUpdatedAt) {
+        this.createdAt = createdAt;
+        this.domainName = domainName;
+        this.lastUpdatedAt = lastUpdatedAt;
+  }
 }

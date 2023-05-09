@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceSwitchPortStatusesPacketsRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
     public String serial;
+
     public GetDeviceSwitchPortStatusesPacketsRequest withSerial(String serial) {
         this.serial = serial;
         return this;
@@ -19,6 +21,7 @@ public class GetDeviceSwitchPortStatusesPacketsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
     public String t0;
+
     public GetDeviceSwitchPortStatusesPacketsRequest withT0(String t0) {
         this.t0 = t0;
         return this;
@@ -29,9 +32,13 @@ public class GetDeviceSwitchPortStatusesPacketsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
     public Float timespan;
+
     public GetDeviceSwitchPortStatusesPacketsRequest withTimespan(Float timespan) {
         this.timespan = timespan;
         return this;
     }
     
+    public GetDeviceSwitchPortStatusesPacketsRequest(@JsonProperty("serial") String serial) {
+        this.serial = serial;
+  }
 }

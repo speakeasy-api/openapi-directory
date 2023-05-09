@@ -15,6 +15,7 @@ public class StartLambdaFunctionFailedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cause")
     public StartLambdaFunctionFailedCauseEnum cause;
+
     public StartLambdaFunctionFailedEventAttributes withCause(StartLambdaFunctionFailedCauseEnum cause) {
         this.cause = cause;
         return this;
@@ -23,6 +24,7 @@ public class StartLambdaFunctionFailedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public StartLambdaFunctionFailedEventAttributes withMessage(String message) {
         this.message = message;
         return this;
@@ -31,9 +33,11 @@ public class StartLambdaFunctionFailedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduledEventId")
     public Long scheduledEventId;
+
     public StartLambdaFunctionFailedEventAttributes withScheduledEventId(Long scheduledEventId) {
         this.scheduledEventId = scheduledEventId;
         return this;
     }
     
+    public StartLambdaFunctionFailedEventAttributes(){}
 }

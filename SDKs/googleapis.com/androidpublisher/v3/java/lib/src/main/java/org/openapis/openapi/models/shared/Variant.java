@@ -18,6 +18,7 @@ public class Variant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceSpec")
     public DeviceSpec deviceSpec;
+
     public Variant withDeviceSpec(DeviceSpec deviceSpec) {
         this.deviceSpec = deviceSpec;
         return this;
@@ -29,9 +30,11 @@ public class Variant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variantId")
     public Long variantId;
+
     public Variant withVariantId(Long variantId) {
         this.variantId = variantId;
         return this;
     }
     
+    public Variant(){}
 }

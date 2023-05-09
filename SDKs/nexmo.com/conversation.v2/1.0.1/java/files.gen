@@ -109,4 +109,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/MemberList.java
 lib/src/main/java/org/openapis/openapi/models/shared/UserList.java
 lib/src/main/java/org/openapis/openapi/models/shared/UserLinksSelf.java
 lib/src/main/java/org/openapis/openapi/models/shared/UserLinks.java
+docs/sdk/README.md
+docs/conversation/README.md
+docs/event/README.md
+docs/member/README.md
 USAGE.md

@@ -42,4 +42,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/BuyRecommendationResponse.j
 lib/src/main/java/org/openapis/openapi/models/shared/ProductDetailsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SortOptionResponseSortOptions.java
 lib/src/main/java/org/openapis/openapi/models/shared/SortOptionResponse.java
+docs/sdk/README.md
+docs/amz/README.md
 USAGE.md

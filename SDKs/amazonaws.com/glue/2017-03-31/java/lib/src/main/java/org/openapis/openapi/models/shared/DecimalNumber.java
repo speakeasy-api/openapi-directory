@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DecimalNumber {
     @JsonProperty("Scale")
     public Long scale;
+
     public DecimalNumber withScale(Long scale) {
         this.scale = scale;
         return this;
@@ -19,9 +20,14 @@ public class DecimalNumber {
     
     @JsonProperty("UnscaledValue")
     public String unscaledValue;
+
     public DecimalNumber withUnscaledValue(String unscaledValue) {
         this.unscaledValue = unscaledValue;
         return this;
     }
     
+    public DecimalNumber(@JsonProperty("Scale") Long scale, @JsonProperty("UnscaledValue") String unscaledValue) {
+        this.scale = scale;
+        this.unscaledValue = unscaledValue;
+  }
 }

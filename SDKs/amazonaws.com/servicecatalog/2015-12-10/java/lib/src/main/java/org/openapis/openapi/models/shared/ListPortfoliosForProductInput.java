@@ -12,6 +12,7 @@ public class ListPortfoliosForProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public ListPortfoliosForProductInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class ListPortfoliosForProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public ListPortfoliosForProductInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -28,6 +30,7 @@ public class ListPortfoliosForProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageToken")
     public String pageToken;
+
     public ListPortfoliosForProductInput withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -35,9 +38,13 @@ public class ListPortfoliosForProductInput {
     
     @JsonProperty("ProductId")
     public String productId;
+
     public ListPortfoliosForProductInput withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public ListPortfoliosForProductInput(@JsonProperty("ProductId") String productId) {
+        this.productId = productId;
+  }
 }

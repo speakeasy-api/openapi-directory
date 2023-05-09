@@ -12,6 +12,7 @@ public class DeletePartitionIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public DeletePartitionIndexRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class DeletePartitionIndexRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public DeletePartitionIndexRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -26,6 +28,7 @@ public class DeletePartitionIndexRequest {
     
     @JsonProperty("IndexName")
     public String indexName;
+
     public DeletePartitionIndexRequest withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -33,9 +36,15 @@ public class DeletePartitionIndexRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public DeletePartitionIndexRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public DeletePartitionIndexRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("IndexName") String indexName, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.indexName = indexName;
+        this.tableName = tableName;
+  }
 }

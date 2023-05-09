@@ -23,6 +23,7 @@ public class VideoLiveStreamingDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeLiveChatId")
     public String activeLiveChatId;
+
     public VideoLiveStreamingDetails withActiveLiveChatId(String activeLiveChatId) {
         this.activeLiveChatId = activeLiveChatId;
         return this;
@@ -36,6 +37,7 @@ public class VideoLiveStreamingDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("actualEndTime")
     public OffsetDateTime actualEndTime;
+
     public VideoLiveStreamingDetails withActualEndTime(OffsetDateTime actualEndTime) {
         this.actualEndTime = actualEndTime;
         return this;
@@ -49,6 +51,7 @@ public class VideoLiveStreamingDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("actualStartTime")
     public OffsetDateTime actualStartTime;
+
     public VideoLiveStreamingDetails withActualStartTime(OffsetDateTime actualStartTime) {
         this.actualStartTime = actualStartTime;
         return this;
@@ -60,6 +63,7 @@ public class VideoLiveStreamingDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concurrentViewers")
     public String concurrentViewers;
+
     public VideoLiveStreamingDetails withConcurrentViewers(String concurrentViewers) {
         this.concurrentViewers = concurrentViewers;
         return this;
@@ -73,6 +77,7 @@ public class VideoLiveStreamingDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("scheduledEndTime")
     public OffsetDateTime scheduledEndTime;
+
     public VideoLiveStreamingDetails withScheduledEndTime(OffsetDateTime scheduledEndTime) {
         this.scheduledEndTime = scheduledEndTime;
         return this;
@@ -86,9 +91,11 @@ public class VideoLiveStreamingDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("scheduledStartTime")
     public OffsetDateTime scheduledStartTime;
+
     public VideoLiveStreamingDetails withScheduledStartTime(OffsetDateTime scheduledStartTime) {
         this.scheduledStartTime = scheduledStartTime;
         return this;
     }
     
+    public VideoLiveStreamingDetails(){}
 }

@@ -20,6 +20,7 @@ public class Stream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelArn")
     public String channelArn;
+
     public Stream withChannelArn(String channelArn) {
         this.channelArn = channelArn;
         return this;
@@ -28,6 +29,7 @@ public class Stream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("health")
     public StreamHealthEnum health;
+
     public Stream withHealth(StreamHealthEnum health) {
         this.health = health;
         return this;
@@ -36,6 +38,7 @@ public class Stream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playbackUrl")
     public String playbackUrl;
+
     public Stream withPlaybackUrl(String playbackUrl) {
         this.playbackUrl = playbackUrl;
         return this;
@@ -46,6 +49,7 @@ public class Stream {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public Stream withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -54,6 +58,7 @@ public class Stream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public StreamStateEnum state;
+
     public Stream withState(StreamStateEnum state) {
         this.state = state;
         return this;
@@ -62,6 +67,7 @@ public class Stream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamId")
     public String streamId;
+
     public Stream withStreamId(String streamId) {
         this.streamId = streamId;
         return this;
@@ -70,9 +76,11 @@ public class Stream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewerCount")
     public Long viewerCount;
+
     public Stream withViewerCount(Long viewerCount) {
         this.viewerCount = viewerCount;
         return this;
     }
     
+    public Stream(){}
 }

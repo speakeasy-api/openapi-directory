@@ -55,11 +55,9 @@ public class Inapppurchases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherInapppurchasesGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInapppurchasesGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherInapppurchasesGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInapppurchasesGetResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

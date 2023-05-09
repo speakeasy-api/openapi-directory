@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MetricPolicyRule {
     @JsonProperty("ObjectGroup")
     public String objectGroup;
+
     public MetricPolicyRule withObjectGroup(String objectGroup) {
         this.objectGroup = objectGroup;
         return this;
@@ -19,9 +20,14 @@ public class MetricPolicyRule {
     
     @JsonProperty("ObjectGroupName")
     public String objectGroupName;
+
     public MetricPolicyRule withObjectGroupName(String objectGroupName) {
         this.objectGroupName = objectGroupName;
         return this;
     }
     
+    public MetricPolicyRule(@JsonProperty("ObjectGroup") String objectGroup, @JsonProperty("ObjectGroupName") String objectGroupName) {
+        this.objectGroup = objectGroup;
+        this.objectGroupName = objectGroupName;
+  }
 }

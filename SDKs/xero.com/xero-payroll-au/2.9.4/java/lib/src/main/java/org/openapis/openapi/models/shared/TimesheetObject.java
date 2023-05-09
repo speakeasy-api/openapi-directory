@@ -15,9 +15,11 @@ public class TimesheetObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timesheet")
     public Timesheet timesheet;
+
     public TimesheetObject withTimesheet(Timesheet timesheet) {
         this.timesheet = timesheet;
         return this;
     }
     
+    public TimesheetObject(){}
 }

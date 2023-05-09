@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NeighborConnectionDetail {
     @JsonProperty("connectionsCount")
     public Long connectionsCount;
+
     public NeighborConnectionDetail withConnectionsCount(Long connectionsCount) {
         this.connectionsCount = connectionsCount;
         return this;
@@ -22,6 +23,7 @@ public class NeighborConnectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationPort")
     public Long destinationPort;
+
     public NeighborConnectionDetail withDestinationPort(Long destinationPort) {
         this.destinationPort = destinationPort;
         return this;
@@ -29,6 +31,7 @@ public class NeighborConnectionDetail {
     
     @JsonProperty("destinationServerId")
     public String destinationServerId;
+
     public NeighborConnectionDetail withDestinationServerId(String destinationServerId) {
         this.destinationServerId = destinationServerId;
         return this;
@@ -36,6 +39,7 @@ public class NeighborConnectionDetail {
     
     @JsonProperty("sourceServerId")
     public String sourceServerId;
+
     public NeighborConnectionDetail withSourceServerId(String sourceServerId) {
         this.sourceServerId = sourceServerId;
         return this;
@@ -44,9 +48,15 @@ public class NeighborConnectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transportProtocol")
     public String transportProtocol;
+
     public NeighborConnectionDetail withTransportProtocol(String transportProtocol) {
         this.transportProtocol = transportProtocol;
         return this;
     }
     
+    public NeighborConnectionDetail(@JsonProperty("connectionsCount") Long connectionsCount, @JsonProperty("destinationServerId") String destinationServerId, @JsonProperty("sourceServerId") String sourceServerId) {
+        this.connectionsCount = connectionsCount;
+        this.destinationServerId = destinationServerId;
+        this.sourceServerId = sourceServerId;
+  }
 }

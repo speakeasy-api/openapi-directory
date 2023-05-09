@@ -15,6 +15,7 @@ public class PatchGroupPatchBaselineMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaselineIdentity")
     public PatchBaselineIdentity baselineIdentity;
+
     public PatchGroupPatchBaselineMapping withBaselineIdentity(PatchBaselineIdentity baselineIdentity) {
         this.baselineIdentity = baselineIdentity;
         return this;
@@ -23,9 +24,11 @@ public class PatchGroupPatchBaselineMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PatchGroup")
     public String patchGroup;
+
     public PatchGroupPatchBaselineMapping withPatchGroup(String patchGroup) {
         this.patchGroup = patchGroup;
         return this;
     }
     
+    public PatchGroupPatchBaselineMapping(){}
 }

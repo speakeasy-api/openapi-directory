@@ -54,4 +54,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/CategoryResults.java
 lib/src/main/java/org/openapis/openapi/models/shared/FullCategory.java
 lib/src/main/java/org/openapis/openapi/models/shared/LawResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/PocResults.java
+docs/sdk/README.md
 USAGE.md

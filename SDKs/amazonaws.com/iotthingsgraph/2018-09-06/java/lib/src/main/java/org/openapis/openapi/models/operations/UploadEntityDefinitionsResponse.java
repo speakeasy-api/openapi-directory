@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UploadEntityDefinitionsResponse {
     
     public String contentType;
+
     public UploadEntityDefinitionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UploadEntityDefinitionsResponse {
      */
     
     public Object internalFailureException;
+
     public UploadEntityDefinitionsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UploadEntityDefinitionsResponse {
      */
     
     public Object invalidRequestException;
+
     public UploadEntityDefinitionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class UploadEntityDefinitionsResponse {
     
     
     public Integer statusCode;
+
     public UploadEntityDefinitionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UploadEntityDefinitionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UploadEntityDefinitionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UploadEntityDefinitionsResponse {
      */
     
     public Object throttlingException;
+
     public UploadEntityDefinitionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,9 +70,14 @@ public class UploadEntityDefinitionsResponse {
      */
     
     public org.openapis.openapi.models.shared.UploadEntityDefinitionsResponse uploadEntityDefinitionsResponse;
+
     public UploadEntityDefinitionsResponse withUploadEntityDefinitionsResponse(org.openapis.openapi.models.shared.UploadEntityDefinitionsResponse uploadEntityDefinitionsResponse) {
         this.uploadEntityDefinitionsResponse = uploadEntityDefinitionsResponse;
         return this;
     }
     
+    public UploadEntityDefinitionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

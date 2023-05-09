@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostMarketingV3MarketingEventsEventsUpsertDoUpsertResponse {
@@ -12,6 +13,7 @@ public class PostMarketingV3MarketingEventsEventsUpsertDoUpsertResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchResponseMarketingEventPublicDefaultResponse batchResponseMarketingEventPublicDefaultResponse;
+
     public PostMarketingV3MarketingEventsEventsUpsertDoUpsertResponse withBatchResponseMarketingEventPublicDefaultResponse(org.openapis.openapi.models.shared.BatchResponseMarketingEventPublicDefaultResponse batchResponseMarketingEventPublicDefaultResponse) {
         this.batchResponseMarketingEventPublicDefaultResponse = batchResponseMarketingEventPublicDefaultResponse;
         return this;
@@ -19,6 +21,7 @@ public class PostMarketingV3MarketingEventsEventsUpsertDoUpsertResponse {
     
     
     public byte[] body;
+
     public PostMarketingV3MarketingEventsEventsUpsertDoUpsertResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -26,6 +29,7 @@ public class PostMarketingV3MarketingEventsEventsUpsertDoUpsertResponse {
     
     
     public String contentType;
+
     public PostMarketingV3MarketingEventsEventsUpsertDoUpsertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class PostMarketingV3MarketingEventsEventsUpsertDoUpsertResponse {
     
     
     public Integer statusCode;
+
     public PostMarketingV3MarketingEventsEventsUpsertDoUpsertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class PostMarketingV3MarketingEventsEventsUpsertDoUpsertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostMarketingV3MarketingEventsEventsUpsertDoUpsertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostMarketingV3MarketingEventsEventsUpsertDoUpsertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

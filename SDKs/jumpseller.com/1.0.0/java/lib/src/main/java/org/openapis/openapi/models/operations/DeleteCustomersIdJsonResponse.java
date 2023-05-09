@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCustomersIdJsonResponse {
     
     public String contentType;
+
     public DeleteCustomersIdJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCustomersIdJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public DeleteCustomersIdJsonResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -26,6 +29,7 @@ public class DeleteCustomersIdJsonResponse {
     
     
     public Integer statusCode;
+
     public DeleteCustomersIdJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteCustomersIdJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCustomersIdJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DeleteCustomersIdJsonResponse {
      */
     
     public String deleteCustomersIdJSON200ApplicationJSONString;
+
     public DeleteCustomersIdJsonResponse withDeleteCustomersIdJSON200ApplicationJSONString(String deleteCustomersIdJSON200ApplicationJSONString) {
         this.deleteCustomersIdJSON200ApplicationJSONString = deleteCustomersIdJSON200ApplicationJSONString;
         return this;
     }
     
+    public DeleteCustomersIdJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

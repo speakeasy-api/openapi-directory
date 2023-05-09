@@ -61,11 +61,9 @@ public class Presentations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SlidesPresentationsBatchUpdateResponse res = new org.openapis.openapi.models.operations.SlidesPresentationsBatchUpdateResponse() {{
+        org.openapis.openapi.models.operations.SlidesPresentationsBatchUpdateResponse res = new org.openapis.openapi.models.operations.SlidesPresentationsBatchUpdateResponse(contentType, httpRes.statusCode()) {{
             batchUpdatePresentationResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Presentations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SlidesPresentationsCreateResponse res = new org.openapis.openapi.models.operations.SlidesPresentationsCreateResponse() {{
+        org.openapis.openapi.models.operations.SlidesPresentationsCreateResponse res = new org.openapis.openapi.models.operations.SlidesPresentationsCreateResponse(contentType, httpRes.statusCode()) {{
             presentation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Presentations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SlidesPresentationsGetResponse res = new org.openapis.openapi.models.operations.SlidesPresentationsGetResponse() {{
+        org.openapis.openapi.models.operations.SlidesPresentationsGetResponse res = new org.openapis.openapi.models.operations.SlidesPresentationsGetResponse(contentType, httpRes.statusCode()) {{
             presentation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class Presentations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SlidesPresentationsPagesGetResponse res = new org.openapis.openapi.models.operations.SlidesPresentationsPagesGetResponse() {{
+        org.openapis.openapi.models.operations.SlidesPresentationsPagesGetResponse res = new org.openapis.openapi.models.operations.SlidesPresentationsPagesGetResponse(contentType, httpRes.statusCode()) {{
             page = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class Presentations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SlidesPresentationsPagesGetThumbnailResponse res = new org.openapis.openapi.models.operations.SlidesPresentationsPagesGetThumbnailResponse() {{
+        org.openapis.openapi.models.operations.SlidesPresentationsPagesGetThumbnailResponse res = new org.openapis.openapi.models.operations.SlidesPresentationsPagesGetThumbnailResponse(contentType, httpRes.statusCode()) {{
             thumbnail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

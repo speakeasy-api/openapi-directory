@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InferSNOMEDCTRequest {
     @JsonProperty("Text")
     public String text;
+
     public InferSNOMEDCTRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public InferSNOMEDCTRequest(@JsonProperty("Text") String text) {
+        this.text = text;
+  }
 }

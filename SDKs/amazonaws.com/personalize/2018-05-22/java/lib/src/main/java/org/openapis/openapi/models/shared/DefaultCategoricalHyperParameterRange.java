@@ -15,6 +15,7 @@ public class DefaultCategoricalHyperParameterRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isTunable")
     public Boolean isTunable;
+
     public DefaultCategoricalHyperParameterRange withIsTunable(Boolean isTunable) {
         this.isTunable = isTunable;
         return this;
@@ -23,6 +24,7 @@ public class DefaultCategoricalHyperParameterRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DefaultCategoricalHyperParameterRange withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class DefaultCategoricalHyperParameterRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public DefaultCategoricalHyperParameterRange withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DefaultCategoricalHyperParameterRange(){}
 }

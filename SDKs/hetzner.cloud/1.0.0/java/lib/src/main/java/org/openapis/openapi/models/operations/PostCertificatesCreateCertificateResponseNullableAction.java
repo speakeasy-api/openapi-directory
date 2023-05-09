@@ -12,6 +12,7 @@ public class PostCertificatesCreateCertificateResponseNullableAction {
      */
     @JsonProperty("command")
     public String command;
+
     public PostCertificatesCreateCertificateResponseNullableAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class PostCertificatesCreateCertificateResponseNullableAction {
      */
     @JsonProperty("error")
     public PostCertificatesCreateCertificateResponseNullableActionError error;
+
     public PostCertificatesCreateCertificateResponseNullableAction withError(PostCertificatesCreateCertificateResponseNullableActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class PostCertificatesCreateCertificateResponseNullableAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public PostCertificatesCreateCertificateResponseNullableAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class PostCertificatesCreateCertificateResponseNullableAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostCertificatesCreateCertificateResponseNullableAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostCertificatesCreateCertificateResponseNullableAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public PostCertificatesCreateCertificateResponseNullableAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class PostCertificatesCreateCertificateResponseNullableAction {
      */
     @JsonProperty("resources")
     public PostCertificatesCreateCertificateResponseNullableActionResources[] resources;
+
     public PostCertificatesCreateCertificateResponseNullableAction withResources(PostCertificatesCreateCertificateResponseNullableActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class PostCertificatesCreateCertificateResponseNullableAction {
      */
     @JsonProperty("started")
     public String started;
+
     public PostCertificatesCreateCertificateResponseNullableAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class PostCertificatesCreateCertificateResponseNullableAction {
      */
     @JsonProperty("status")
     public PostCertificatesCreateCertificateResponseNullableActionStatusEnum status;
+
     public PostCertificatesCreateCertificateResponseNullableAction withStatus(PostCertificatesCreateCertificateResponseNullableActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostCertificatesCreateCertificateResponseNullableAction(@JsonProperty("command") String command, @JsonProperty("error") PostCertificatesCreateCertificateResponseNullableActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") PostCertificatesCreateCertificateResponseNullableActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") PostCertificatesCreateCertificateResponseNullableActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

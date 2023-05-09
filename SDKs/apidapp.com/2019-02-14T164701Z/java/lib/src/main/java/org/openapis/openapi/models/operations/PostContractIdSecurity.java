@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostContractIdSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Api-Key")
     public String key2;
+
     public PostContractIdSecurity withKey2(String key2) {
         this.key2 = key2;
         return this;
     }
     
+    public PostContractIdSecurity(@JsonProperty("Key2") String key2) {
+        this.key2 = key2;
+  }
 }

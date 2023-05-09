@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class OptionGroupMembership {
     
     public String optionGroupName;
+
     public OptionGroupMembership withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -16,9 +17,11 @@ public class OptionGroupMembership {
     
     
     public String status;
+
     public OptionGroupMembership withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public OptionGroupMembership(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeProfileResponse {
     
     public String contentType;
+
     public DescribeProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeProfileResponse describeProfileResponse;
+
     public DescribeProfileResponse withDescribeProfileResponse(org.openapis.openapi.models.shared.DescribeProfileResponse describeProfileResponse) {
         this.describeProfileResponse = describeProfileResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeProfileResponse {
      */
     
     public Object internalServiceError;
+
     public DescribeProfileResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeProfileResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeProfileResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeProfileResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeProfileResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeProfileResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeProfileResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeProfileResponse {
     
     
     public Integer statusCode;
+
     public DescribeProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

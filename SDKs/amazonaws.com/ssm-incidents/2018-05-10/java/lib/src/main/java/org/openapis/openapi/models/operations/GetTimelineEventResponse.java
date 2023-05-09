@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTimelineEventResponse {
@@ -12,6 +13,7 @@ public class GetTimelineEventResponse {
      */
     
     public Object accessDeniedException;
+
     public GetTimelineEventResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetTimelineEventResponse {
     
     
     public String contentType;
+
     public GetTimelineEventResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetTimelineEventResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTimelineEventOutput getTimelineEventOutput;
+
     public GetTimelineEventResponse withGetTimelineEventOutput(org.openapis.openapi.models.shared.GetTimelineEventOutput getTimelineEventOutput) {
         this.getTimelineEventOutput = getTimelineEventOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetTimelineEventResponse {
      */
     
     public Object internalServerException;
+
     public GetTimelineEventResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetTimelineEventResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetTimelineEventResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetTimelineEventResponse {
     
     
     public Integer statusCode;
+
     public GetTimelineEventResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetTimelineEventResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTimelineEventResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetTimelineEventResponse {
      */
     
     public Object throttlingException;
+
     public GetTimelineEventResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetTimelineEventResponse {
      */
     
     public Object validationException;
+
     public GetTimelineEventResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetTimelineEventResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

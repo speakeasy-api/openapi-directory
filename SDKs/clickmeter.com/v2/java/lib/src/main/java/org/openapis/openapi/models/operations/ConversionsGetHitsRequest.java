@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversionsGetHitsRequest {
@@ -12,6 +13,7 @@ public class ConversionsGetHitsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionId")
     public Long conversionId;
+
     public ConversionsGetHitsRequest withConversionId(Long conversionId) {
         this.conversionId = conversionId;
         return this;
@@ -22,6 +24,7 @@ public class ConversionsGetHitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public ConversionsGetHitsFilterEnum filter;
+
     public ConversionsGetHitsRequest withFilter(ConversionsGetHitsFilterEnum filter) {
         this.filter = filter;
         return this;
@@ -32,6 +35,7 @@ public class ConversionsGetHitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
     public String fromDay;
+
     public ConversionsGetHitsRequest withFromDay(String fromDay) {
         this.fromDay = fromDay;
         return this;
@@ -42,6 +46,7 @@ public class ConversionsGetHitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public ConversionsGetHitsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -52,6 +57,7 @@ public class ConversionsGetHitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public ConversionsGetHitsRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -62,6 +68,7 @@ public class ConversionsGetHitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeframe")
     public ConversionsGetHitsTimeframeEnum timeframe;
+
     public ConversionsGetHitsRequest withTimeframe(ConversionsGetHitsTimeframeEnum timeframe) {
         this.timeframe = timeframe;
         return this;
@@ -72,9 +79,14 @@ public class ConversionsGetHitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
     public String toDay;
+
     public ConversionsGetHitsRequest withToDay(String toDay) {
         this.toDay = toDay;
         return this;
     }
     
+    public ConversionsGetHitsRequest(@JsonProperty("conversionId") Long conversionId, @JsonProperty("timeframe") ConversionsGetHitsTimeframeEnum timeframe) {
+        this.conversionId = conversionId;
+        this.timeframe = timeframe;
+  }
 }

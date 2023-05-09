@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddCustomAttributesResponse {
@@ -12,6 +13,7 @@ public class AddCustomAttributesResponse {
      */
     
     public java.util.Map<String, Object> addCustomAttributesResponse;
+
     public AddCustomAttributesResponse withAddCustomAttributesResponse(java.util.Map<String, Object> addCustomAttributesResponse) {
         this.addCustomAttributesResponse = addCustomAttributesResponse;
         return this;
@@ -19,6 +21,7 @@ public class AddCustomAttributesResponse {
     
     
     public String contentType;
+
     public AddCustomAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AddCustomAttributesResponse {
      */
     
     public Object internalErrorException;
+
     public AddCustomAttributesResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class AddCustomAttributesResponse {
      */
     
     public Object invalidParameterException;
+
     public AddCustomAttributesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class AddCustomAttributesResponse {
      */
     
     public Object notAuthorizedException;
+
     public AddCustomAttributesResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class AddCustomAttributesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AddCustomAttributesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class AddCustomAttributesResponse {
     
     
     public Integer statusCode;
+
     public AddCustomAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AddCustomAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddCustomAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class AddCustomAttributesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AddCustomAttributesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,9 +103,14 @@ public class AddCustomAttributesResponse {
      */
     
     public Object userImportInProgressException;
+
     public AddCustomAttributesResponse withUserImportInProgressException(Object userImportInProgressException) {
         this.userImportInProgressException = userImportInProgressException;
         return this;
     }
     
+    public AddCustomAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

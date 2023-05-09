@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GroupsSettingsGroupsGetSecurity;
 import org.openapis.openapi.models.operations.GroupsSettingsGroupsGetRequest;
 import org.openapis.openapi.models.operations.GroupsSettingsGroupsGetResponse;
+import org.openapis.openapi.models.operations.GroupsSettingsGroupsGetSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 
 public class Application {
@@ -28,28 +27,29 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GroupsSettingsGroupsGetRequest req = new GroupsSettingsGroupsGetRequest() {{
-                alt = "json";
-                fields = "provident";
-                groupUniqueId = "distinctio";
+            GroupsSettingsGroupsGetRequest req = new GroupsSettingsGroupsGetRequest("corrupti") {{
+                alt = AltEnum.JSON;
+                fields = "distinctio";
                 key = "quibusdam";
                 oauthToken = "unde";
                 prettyPrint = false;
                 quotaUser = "nulla";
                 userIp = "corrupti";
-            }}            
+            }};            
 
-            GroupsSettingsGroupsGetResponse res = sdk.groups.groupsSettingsGroupsGet(req, new GroupsSettingsGroupsGetSecurity() {{
+            GroupsSettingsGroupsGetResponse res = sdk.groups.groupsSettingsGroupsGet(req, new GroupsSettingsGroupsGetSecurity("illum", "vel") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.groups.isPresent()) {
+            if (res.groups != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -57,11 +57,11 @@ public class Application {
 ## Available Resources and Operations
 
 
-### groups
+### [groups](docs/groups/README.md)
 
-* `groupsSettingsGroupsGet` - Gets one resource by id.
-* `groupsSettingsGroupsPatch` - Updates an existing resource. This method supports patch semantics.
-* `groupsSettingsGroupsUpdate` - Updates an existing resource.
+* [groupsSettingsGroupsGet](docs/groups/README.md#groupssettingsgroupsget) - Gets one resource by id.
+* [groupsSettingsGroupsPatch](docs/groups/README.md#groupssettingsgroupspatch) - Updates an existing resource. This method supports patch semantics.
+* [groupsSettingsGroupsUpdate](docs/groups/README.md#groupssettingsgroupsupdate) - Updates an existing resource.
 <!-- End SDK Available Operations -->
 
 ### Maturity

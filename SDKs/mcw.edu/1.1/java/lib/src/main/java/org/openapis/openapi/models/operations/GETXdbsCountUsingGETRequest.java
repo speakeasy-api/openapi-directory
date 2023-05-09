@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETXdbsCountUsingGETRequest {
@@ -12,6 +13,7 @@ public class GETXdbsCountUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dateYYYYMMDD")
     public String dateYYYYMMDD;
+
     public GETXdbsCountUsingGETRequest withDateYYYYMMDD(String dateYYYYMMDD) {
         this.dateYYYYMMDD = dateYYYYMMDD;
         return this;
@@ -22,9 +24,14 @@ public class GETXdbsCountUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
     public Integer speciesTypeKey;
+
     public GETXdbsCountUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
         this.speciesTypeKey = speciesTypeKey;
         return this;
     }
     
+    public GETXdbsCountUsingGETRequest(@JsonProperty("dateYYYYMMDD") String dateYYYYMMDD, @JsonProperty("speciesTypeKey") Integer speciesTypeKey) {
+        this.dateYYYYMMDD = dateYYYYMMDD;
+        this.speciesTypeKey = speciesTypeKey;
+  }
 }

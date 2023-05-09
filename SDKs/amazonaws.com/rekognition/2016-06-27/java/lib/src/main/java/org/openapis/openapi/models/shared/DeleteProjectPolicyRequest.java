@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteProjectPolicyRequest {
     @JsonProperty("PolicyName")
     public String policyName;
+
     public DeleteProjectPolicyRequest withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -19,6 +20,7 @@ public class DeleteProjectPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyRevisionId")
     public String policyRevisionId;
+
     public DeleteProjectPolicyRequest withPolicyRevisionId(String policyRevisionId) {
         this.policyRevisionId = policyRevisionId;
         return this;
@@ -26,9 +28,14 @@ public class DeleteProjectPolicyRequest {
     
     @JsonProperty("ProjectArn")
     public String projectArn;
+
     public DeleteProjectPolicyRequest withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
     }
     
+    public DeleteProjectPolicyRequest(@JsonProperty("PolicyName") String policyName, @JsonProperty("ProjectArn") String projectArn) {
+        this.policyName = policyName;
+        this.projectArn = projectArn;
+  }
 }

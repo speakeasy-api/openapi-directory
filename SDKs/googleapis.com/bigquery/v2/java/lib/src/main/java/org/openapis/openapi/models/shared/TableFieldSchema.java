@@ -15,6 +15,7 @@ public class TableFieldSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public TableFieldSchemaCategories categories;
+
     public TableFieldSchema withCategories(TableFieldSchemaCategories categories) {
         this.categories = categories;
         return this;
@@ -26,6 +27,7 @@ public class TableFieldSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collation")
     public String collation;
+
     public TableFieldSchema withCollation(String collation) {
         this.collation = collation;
         return this;
@@ -37,6 +39,7 @@ public class TableFieldSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValueExpression")
     public String defaultValueExpression;
+
     public TableFieldSchema withDefaultValueExpression(String defaultValueExpression) {
         this.defaultValueExpression = defaultValueExpression;
         return this;
@@ -48,6 +51,7 @@ public class TableFieldSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TableFieldSchema withDescription(String description) {
         this.description = description;
         return this;
@@ -59,6 +63,7 @@ public class TableFieldSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public TableFieldSchema[] fields;
+
     public TableFieldSchema withFields(TableFieldSchema[] fields) {
         this.fields = fields;
         return this;
@@ -70,6 +75,7 @@ public class TableFieldSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxLength")
     public String maxLength;
+
     public TableFieldSchema withMaxLength(String maxLength) {
         this.maxLength = maxLength;
         return this;
@@ -81,6 +87,7 @@ public class TableFieldSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public String mode;
+
     public TableFieldSchema withMode(String mode) {
         this.mode = mode;
         return this;
@@ -92,6 +99,7 @@ public class TableFieldSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TableFieldSchema withName(String name) {
         this.name = name;
         return this;
@@ -100,6 +108,7 @@ public class TableFieldSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyTags")
     public TableFieldSchemaPolicyTags policyTags;
+
     public TableFieldSchema withPolicyTags(TableFieldSchemaPolicyTags policyTags) {
         this.policyTags = policyTags;
         return this;
@@ -111,6 +120,7 @@ public class TableFieldSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precision")
     public String precision;
+
     public TableFieldSchema withPrecision(String precision) {
         this.precision = precision;
         return this;
@@ -122,6 +132,7 @@ public class TableFieldSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roundingMode")
     public String roundingMode;
+
     public TableFieldSchema withRoundingMode(String roundingMode) {
         this.roundingMode = roundingMode;
         return this;
@@ -133,6 +144,7 @@ public class TableFieldSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scale")
     public String scale;
+
     public TableFieldSchema withScale(String scale) {
         this.scale = scale;
         return this;
@@ -144,9 +156,11 @@ public class TableFieldSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public TableFieldSchema withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TableFieldSchema(){}
 }

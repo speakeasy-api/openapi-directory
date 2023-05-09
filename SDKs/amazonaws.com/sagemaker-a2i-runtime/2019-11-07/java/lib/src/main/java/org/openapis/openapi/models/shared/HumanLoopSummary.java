@@ -22,6 +22,7 @@ public class HumanLoopSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public HumanLoopSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class HumanLoopSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public HumanLoopSummary withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -38,6 +40,7 @@ public class HumanLoopSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlowDefinitionArn")
     public String flowDefinitionArn;
+
     public HumanLoopSummary withFlowDefinitionArn(String flowDefinitionArn) {
         this.flowDefinitionArn = flowDefinitionArn;
         return this;
@@ -46,6 +49,7 @@ public class HumanLoopSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HumanLoopName")
     public String humanLoopName;
+
     public HumanLoopSummary withHumanLoopName(String humanLoopName) {
         this.humanLoopName = humanLoopName;
         return this;
@@ -54,9 +58,11 @@ public class HumanLoopSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HumanLoopStatus")
     public HumanLoopStatusEnum humanLoopStatus;
+
     public HumanLoopSummary withHumanLoopStatus(HumanLoopStatusEnum humanLoopStatus) {
         this.humanLoopStatus = humanLoopStatus;
         return this;
     }
     
+    public HumanLoopSummary(){}
 }

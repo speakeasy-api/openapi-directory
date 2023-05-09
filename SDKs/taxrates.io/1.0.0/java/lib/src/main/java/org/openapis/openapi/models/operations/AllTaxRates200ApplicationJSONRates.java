@@ -12,6 +12,7 @@ public class AllTaxRates200ApplicationJSONRates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data_name")
     public String dataName;
+
     public AllTaxRates200ApplicationJSONRates withDataName(String dataName) {
         this.dataName = dataName;
         return this;
@@ -20,6 +21,7 @@ public class AllTaxRates200ApplicationJSONRates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data_value")
     public String dataValue;
+
     public AllTaxRates200ApplicationJSONRates withDataValue(String dataValue) {
         this.dataValue = dataValue;
         return this;
@@ -28,6 +30,7 @@ public class AllTaxRates200ApplicationJSONRates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_code")
     public String productCode;
+
     public AllTaxRates200ApplicationJSONRates withProductCode(String productCode) {
         this.productCode = productCode;
         return this;
@@ -36,9 +39,11 @@ public class AllTaxRates200ApplicationJSONRates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public AllTaxRates200ApplicationJSONRates withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AllTaxRates200ApplicationJSONRates(){}
 }

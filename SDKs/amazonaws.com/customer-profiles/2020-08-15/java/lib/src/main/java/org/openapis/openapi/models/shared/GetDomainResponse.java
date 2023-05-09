@@ -21,6 +21,7 @@ public class GetDomainResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public GetDomainResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,6 +30,7 @@ public class GetDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeadLetterQueueUrl")
     public String deadLetterQueueUrl;
+
     public GetDomainResponse withDeadLetterQueueUrl(String deadLetterQueueUrl) {
         this.deadLetterQueueUrl = deadLetterQueueUrl;
         return this;
@@ -37,6 +39,7 @@ public class GetDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultEncryptionKey")
     public String defaultEncryptionKey;
+
     public GetDomainResponse withDefaultEncryptionKey(String defaultEncryptionKey) {
         this.defaultEncryptionKey = defaultEncryptionKey;
         return this;
@@ -45,6 +48,7 @@ public class GetDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultExpirationDays")
     public Long defaultExpirationDays;
+
     public GetDomainResponse withDefaultExpirationDays(Long defaultExpirationDays) {
         this.defaultExpirationDays = defaultExpirationDays;
         return this;
@@ -52,6 +56,7 @@ public class GetDomainResponse {
     
     @JsonProperty("DomainName")
     public String domainName;
+
     public GetDomainResponse withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -61,6 +66,7 @@ public class GetDomainResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public GetDomainResponse withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -69,6 +75,7 @@ public class GetDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Matching")
     public MatchingResponse matching;
+
     public GetDomainResponse withMatching(MatchingResponse matching) {
         this.matching = matching;
         return this;
@@ -77,6 +84,7 @@ public class GetDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Stats")
     public DomainStats stats;
+
     public GetDomainResponse withStats(DomainStats stats) {
         this.stats = stats;
         return this;
@@ -85,9 +93,15 @@ public class GetDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public GetDomainResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetDomainResponse(@JsonProperty("CreatedAt") OffsetDateTime createdAt, @JsonProperty("DomainName") String domainName, @JsonProperty("LastUpdatedAt") OffsetDateTime lastUpdatedAt) {
+        this.createdAt = createdAt;
+        this.domainName = domainName;
+        this.lastUpdatedAt = lastUpdatedAt;
+  }
 }

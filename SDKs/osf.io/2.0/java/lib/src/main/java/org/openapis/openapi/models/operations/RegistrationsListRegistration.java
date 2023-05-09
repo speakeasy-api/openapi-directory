@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RegistrationsListRegistration {
     /**
@@ -12,6 +12,7 @@ public class RegistrationsListRegistration {
      */
     
     public RegistrationsListRegistrationAttributes attributes;
+
     public RegistrationsListRegistration withAttributes(RegistrationsListRegistrationAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class RegistrationsListRegistration {
      */
     
     public String id;
+
     public RegistrationsListRegistration withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class RegistrationsListRegistration {
      */
     
     public RegistrationsListRegistrationLinks links;
+
     public RegistrationsListRegistration withLinks(RegistrationsListRegistrationLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class RegistrationsListRegistration {
      */
     
     public RegistrationsListRegistrationRelationships relationships;
+
     public RegistrationsListRegistration withRelationships(RegistrationsListRegistrationRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,17 @@ public class RegistrationsListRegistration {
      */
     
     public String type;
+
     public RegistrationsListRegistration withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RegistrationsListRegistration(@JsonProperty("attributes") RegistrationsListRegistrationAttributes attributes, @JsonProperty("id") String id, @JsonProperty("links") RegistrationsListRegistrationLinks links, @JsonProperty("relationships") RegistrationsListRegistrationRelationships relationships, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.links = links;
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

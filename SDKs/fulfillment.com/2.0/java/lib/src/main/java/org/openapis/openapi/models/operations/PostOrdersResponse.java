@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostOrdersResponse {
     
     public String contentType;
+
     public PostOrdersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostOrdersResponse {
      */
     
     public PostOrdersErrorStandardWithContextV2 errorStandardWithContextV2;
+
     public PostOrdersResponse withErrorStandardWithContextV2(PostOrdersErrorStandardWithContextV2 errorStandardWithContextV2) {
         this.errorStandardWithContextV2 = errorStandardWithContextV2;
         return this;
@@ -29,6 +32,7 @@ public class PostOrdersResponse {
      */
     
     public PostOrdersOrderResponseV2 orderResponseV2;
+
     public PostOrdersResponse withOrderResponseV2(PostOrdersOrderResponseV2 orderResponseV2) {
         this.orderResponseV2 = orderResponseV2;
         return this;
@@ -36,6 +40,7 @@ public class PostOrdersResponse {
     
     
     public Integer statusCode;
+
     public PostOrdersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class PostOrdersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostOrdersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class PostOrdersResponse {
      */
     
     public org.openapis.openapi.models.shared.OneordersGetResponses404ContentApplication1jsonSchema oneordersGetResponses404ContentApplication1jsonSchema;
+
     public PostOrdersResponse withOneordersGetResponses404ContentApplication1jsonSchema(org.openapis.openapi.models.shared.OneordersGetResponses404ContentApplication1jsonSchema oneordersGetResponses404ContentApplication1jsonSchema) {
         this.oneordersGetResponses404ContentApplication1jsonSchema = oneordersGetResponses404ContentApplication1jsonSchema;
         return this;
     }
     
+    public PostOrdersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

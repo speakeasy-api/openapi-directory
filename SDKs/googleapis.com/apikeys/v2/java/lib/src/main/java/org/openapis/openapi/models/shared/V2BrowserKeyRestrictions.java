@@ -18,9 +18,11 @@ public class V2BrowserKeyRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedReferrers")
     public String[] allowedReferrers;
+
     public V2BrowserKeyRestrictions withAllowedReferrers(String[] allowedReferrers) {
         this.allowedReferrers = allowedReferrers;
         return this;
     }
     
+    public V2BrowserKeyRestrictions(){}
 }

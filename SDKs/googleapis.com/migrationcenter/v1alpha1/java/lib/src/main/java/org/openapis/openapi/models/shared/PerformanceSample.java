@@ -18,6 +18,7 @@ public class PerformanceSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpu")
     public CpuUsageSample cpu;
+
     public PerformanceSample withCpu(CpuUsageSample cpu) {
         this.cpu = cpu;
         return this;
@@ -29,6 +30,7 @@ public class PerformanceSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disk")
     public DiskUsageSample disk;
+
     public PerformanceSample withDisk(DiskUsageSample disk) {
         this.disk = disk;
         return this;
@@ -40,6 +42,7 @@ public class PerformanceSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public MemoryUsageSample memory;
+
     public PerformanceSample withMemory(MemoryUsageSample memory) {
         this.memory = memory;
         return this;
@@ -51,6 +54,7 @@ public class PerformanceSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public NetworkUsageSample network;
+
     public PerformanceSample withNetwork(NetworkUsageSample network) {
         this.network = network;
         return this;
@@ -62,9 +66,11 @@ public class PerformanceSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleTime")
     public String sampleTime;
+
     public PerformanceSample withSampleTime(String sampleTime) {
         this.sampleTime = sampleTime;
         return this;
     }
     
+    public PerformanceSample(){}
 }

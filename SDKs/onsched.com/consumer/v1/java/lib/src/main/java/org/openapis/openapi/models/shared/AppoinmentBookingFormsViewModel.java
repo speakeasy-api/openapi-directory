@@ -12,6 +12,7 @@ public class AppoinmentBookingFormsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingConfirmationPage")
     public String bookingConfirmationPage;
+
     public AppoinmentBookingFormsViewModel withBookingConfirmationPage(String bookingConfirmationPage) {
         this.bookingConfirmationPage = bookingConfirmationPage;
         return this;
@@ -20,9 +21,11 @@ public class AppoinmentBookingFormsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingForm")
     public String bookingForm;
+
     public AppoinmentBookingFormsViewModel withBookingForm(String bookingForm) {
         this.bookingForm = bookingForm;
         return this;
     }
     
+    public AppoinmentBookingFormsViewModel(){}
 }

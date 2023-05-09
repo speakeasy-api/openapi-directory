@@ -15,6 +15,7 @@ public class DisconnectUserRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public DisconnectUserRequestBody withReason(String reason) {
         this.reason = reason;
         return this;
@@ -25,6 +26,7 @@ public class DisconnectUserRequestBody {
      */
     @JsonProperty("roomIdentifier")
     public String roomIdentifier;
+
     public DisconnectUserRequestBody withRoomIdentifier(String roomIdentifier) {
         this.roomIdentifier = roomIdentifier;
         return this;
@@ -35,9 +37,14 @@ public class DisconnectUserRequestBody {
      */
     @JsonProperty("userId")
     public String userId;
+
     public DisconnectUserRequestBody withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public DisconnectUserRequestBody(@JsonProperty("roomIdentifier") String roomIdentifier, @JsonProperty("userId") String userId) {
+        this.roomIdentifier = roomIdentifier;
+        this.userId = userId;
+  }
 }

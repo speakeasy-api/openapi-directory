@@ -18,6 +18,7 @@ public class GamesPlayerLevelResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public Integer level;
+
     public GamesPlayerLevelResource withLevel(Integer level) {
         this.level = level;
         return this;
@@ -29,6 +30,7 @@ public class GamesPlayerLevelResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxExperiencePoints")
     public String maxExperiencePoints;
+
     public GamesPlayerLevelResource withMaxExperiencePoints(String maxExperiencePoints) {
         this.maxExperiencePoints = maxExperiencePoints;
         return this;
@@ -40,9 +42,11 @@ public class GamesPlayerLevelResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minExperiencePoints")
     public String minExperiencePoints;
+
     public GamesPlayerLevelResource withMinExperiencePoints(String minExperiencePoints) {
         this.minExperiencePoints = minExperiencePoints;
         return this;
     }
     
+    public GamesPlayerLevelResource(){}
 }

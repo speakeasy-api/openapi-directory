@@ -15,6 +15,7 @@ public class CodeContentUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3ContentLocationUpdate")
     public S3ContentLocationUpdate s3ContentLocationUpdate;
+
     public CodeContentUpdate withS3ContentLocationUpdate(S3ContentLocationUpdate s3ContentLocationUpdate) {
         this.s3ContentLocationUpdate = s3ContentLocationUpdate;
         return this;
@@ -23,6 +24,7 @@ public class CodeContentUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TextContentUpdate")
     public String textContentUpdate;
+
     public CodeContentUpdate withTextContentUpdate(String textContentUpdate) {
         this.textContentUpdate = textContentUpdate;
         return this;
@@ -31,9 +33,11 @@ public class CodeContentUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ZipFileContentUpdate")
     public String zipFileContentUpdate;
+
     public CodeContentUpdate withZipFileContentUpdate(String zipFileContentUpdate) {
         this.zipFileContentUpdate = zipFileContentUpdate;
         return this;
     }
     
+    public CodeContentUpdate(){}
 }

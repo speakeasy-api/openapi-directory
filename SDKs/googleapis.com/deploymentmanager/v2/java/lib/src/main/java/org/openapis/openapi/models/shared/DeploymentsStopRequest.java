@@ -15,9 +15,11 @@ public class DeploymentsStopRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public DeploymentsStopRequest withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
     }
     
+    public DeploymentsStopRequest(){}
 }

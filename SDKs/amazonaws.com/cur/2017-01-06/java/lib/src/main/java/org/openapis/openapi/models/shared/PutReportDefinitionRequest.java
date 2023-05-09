@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutReportDefinitionRequest {
     @JsonProperty("ReportDefinition")
     public ReportDefinition reportDefinition;
+
     public PutReportDefinitionRequest withReportDefinition(ReportDefinition reportDefinition) {
         this.reportDefinition = reportDefinition;
         return this;
     }
     
+    public PutReportDefinitionRequest(@JsonProperty("ReportDefinition") ReportDefinition reportDefinition) {
+        this.reportDefinition = reportDefinition;
+  }
 }

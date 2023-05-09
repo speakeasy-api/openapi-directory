@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAttributesRequest {
     @JsonProperty("attributes")
     public Attribute[] attributes;
+
     public DeleteAttributesRequest withAttributes(Attribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -19,9 +20,13 @@ public class DeleteAttributesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public DeleteAttributesRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
     }
     
+    public DeleteAttributesRequest(@JsonProperty("attributes") Attribute[] attributes) {
+        this.attributes = attributes;
+  }
 }

@@ -12,6 +12,7 @@ public class GetLambdaFunctionRecommendationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountIds")
     public String[] accountIds;
+
     public GetLambdaFunctionRecommendationsRequest withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -20,6 +21,7 @@ public class GetLambdaFunctionRecommendationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public LambdaFunctionRecommendationFilter[] filters;
+
     public GetLambdaFunctionRecommendationsRequest withFilters(LambdaFunctionRecommendationFilter[] filters) {
         this.filters = filters;
         return this;
@@ -28,6 +30,7 @@ public class GetLambdaFunctionRecommendationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functionArns")
     public String[] functionArns;
+
     public GetLambdaFunctionRecommendationsRequest withFunctionArns(String[] functionArns) {
         this.functionArns = functionArns;
         return this;
@@ -36,6 +39,7 @@ public class GetLambdaFunctionRecommendationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public GetLambdaFunctionRecommendationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -44,9 +48,11 @@ public class GetLambdaFunctionRecommendationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetLambdaFunctionRecommendationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetLambdaFunctionRecommendationsRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCommentContentResponse {
@@ -12,6 +13,7 @@ public class DeleteCommentContentResponse {
      */
     
     public Object commentDeletedException;
+
     public DeleteCommentContentResponse withCommentDeletedException(Object commentDeletedException) {
         this.commentDeletedException = commentDeletedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteCommentContentResponse {
      */
     
     public Object commentDoesNotExistException;
+
     public DeleteCommentContentResponse withCommentDoesNotExistException(Object commentDoesNotExistException) {
         this.commentDoesNotExistException = commentDoesNotExistException;
         return this;
@@ -32,6 +35,7 @@ public class DeleteCommentContentResponse {
      */
     
     public Object commentIdRequiredException;
+
     public DeleteCommentContentResponse withCommentIdRequiredException(Object commentIdRequiredException) {
         this.commentIdRequiredException = commentIdRequiredException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCommentContentResponse {
     
     
     public String contentType;
+
     public DeleteCommentContentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class DeleteCommentContentResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteCommentContentOutput deleteCommentContentOutput;
+
     public DeleteCommentContentResponse withDeleteCommentContentOutput(org.openapis.openapi.models.shared.DeleteCommentContentOutput deleteCommentContentOutput) {
         this.deleteCommentContentOutput = deleteCommentContentOutput;
         return this;
@@ -59,6 +65,7 @@ public class DeleteCommentContentResponse {
      */
     
     public Object invalidCommentIdException;
+
     public DeleteCommentContentResponse withInvalidCommentIdException(Object invalidCommentIdException) {
         this.invalidCommentIdException = invalidCommentIdException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteCommentContentResponse {
     
     
     public Integer statusCode;
+
     public DeleteCommentContentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteCommentContentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCommentContentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteCommentContentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

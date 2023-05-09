@@ -15,6 +15,7 @@ public class ReactiveInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociatedResourceArns")
     public String[] associatedResourceArns;
+
     public ReactiveInsightSummary withAssociatedResourceArns(String[] associatedResourceArns) {
         this.associatedResourceArns = associatedResourceArns;
         return this;
@@ -23,6 +24,7 @@ public class ReactiveInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ReactiveInsightSummary withId(String id) {
         this.id = id;
         return this;
@@ -34,6 +36,7 @@ public class ReactiveInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InsightTimeRange")
     public InsightTimeRange insightTimeRange;
+
     public ReactiveInsightSummary withInsightTimeRange(InsightTimeRange insightTimeRange) {
         this.insightTimeRange = insightTimeRange;
         return this;
@@ -42,6 +45,7 @@ public class ReactiveInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ReactiveInsightSummary withName(String name) {
         this.name = name;
         return this;
@@ -53,6 +57,7 @@ public class ReactiveInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceCollection")
     public ResourceCollection resourceCollection;
+
     public ReactiveInsightSummary withResourceCollection(ResourceCollection resourceCollection) {
         this.resourceCollection = resourceCollection;
         return this;
@@ -61,6 +66,7 @@ public class ReactiveInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceCollection")
     public ServiceCollection serviceCollection;
+
     public ReactiveInsightSummary withServiceCollection(ServiceCollection serviceCollection) {
         this.serviceCollection = serviceCollection;
         return this;
@@ -69,6 +75,7 @@ public class ReactiveInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Severity")
     public InsightSeverityEnum severity;
+
     public ReactiveInsightSummary withSeverity(InsightSeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -77,9 +84,11 @@ public class ReactiveInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public InsightStatusEnum status;
+
     public ReactiveInsightSummary withStatus(InsightStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ReactiveInsightSummary(){}
 }

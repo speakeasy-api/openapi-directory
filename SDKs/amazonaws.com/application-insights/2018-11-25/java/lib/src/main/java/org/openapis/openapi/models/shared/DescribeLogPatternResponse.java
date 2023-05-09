@@ -15,6 +15,7 @@ public class DescribeLogPatternResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogPattern")
     public LogPattern logPattern;
+
     public DescribeLogPatternResponse withLogPattern(LogPattern logPattern) {
         this.logPattern = logPattern;
         return this;
@@ -23,9 +24,11 @@ public class DescribeLogPatternResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceGroupName")
     public String resourceGroupName;
+
     public DescribeLogPatternResponse withResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
         return this;
     }
     
+    public DescribeLogPatternResponse(){}
 }

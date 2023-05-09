@@ -15,6 +15,7 @@ public class ImagePermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowFleet")
     public Boolean allowFleet;
+
     public ImagePermissions withAllowFleet(Boolean allowFleet) {
         this.allowFleet = allowFleet;
         return this;
@@ -23,9 +24,11 @@ public class ImagePermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowImageBuilder")
     public Boolean allowImageBuilder;
+
     public ImagePermissions withAllowImageBuilder(Boolean allowImageBuilder) {
         this.allowImageBuilder = allowImageBuilder;
         return this;
     }
     
+    public ImagePermissions(){}
 }

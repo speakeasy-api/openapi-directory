@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeTaskExecutionRequest {
     @JsonProperty("TaskExecutionArn")
     public String taskExecutionArn;
+
     public DescribeTaskExecutionRequest withTaskExecutionArn(String taskExecutionArn) {
         this.taskExecutionArn = taskExecutionArn;
         return this;
     }
     
+    public DescribeTaskExecutionRequest(@JsonProperty("TaskExecutionArn") String taskExecutionArn) {
+        this.taskExecutionArn = taskExecutionArn;
+  }
 }

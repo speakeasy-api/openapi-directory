@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ValidateTemplateOutput {
     
     public CapabilityEnum[] capabilities;
+
     public ValidateTemplateOutput withCapabilities(CapabilityEnum[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -19,6 +20,7 @@ public class ValidateTemplateOutput {
     
     
     public String capabilitiesReason;
+
     public ValidateTemplateOutput withCapabilitiesReason(String capabilitiesReason) {
         this.capabilitiesReason = capabilitiesReason;
         return this;
@@ -26,6 +28,7 @@ public class ValidateTemplateOutput {
     
     
     public String[] declaredTransforms;
+
     public ValidateTemplateOutput withDeclaredTransforms(String[] declaredTransforms) {
         this.declaredTransforms = declaredTransforms;
         return this;
@@ -33,6 +36,7 @@ public class ValidateTemplateOutput {
     
     
     public String description;
+
     public ValidateTemplateOutput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,9 +44,11 @@ public class ValidateTemplateOutput {
     
     
     public TemplateParameter[] parameters;
+
     public ValidateTemplateOutput withParameters(TemplateParameter[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public ValidateTemplateOutput(){}
 }

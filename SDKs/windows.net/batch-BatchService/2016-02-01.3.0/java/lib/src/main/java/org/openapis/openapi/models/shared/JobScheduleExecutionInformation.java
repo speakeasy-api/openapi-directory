@@ -25,6 +25,7 @@ public class JobScheduleExecutionInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public JobScheduleExecutionInformation withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -38,6 +39,7 @@ public class JobScheduleExecutionInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("nextRunTime")
     public OffsetDateTime nextRunTime;
+
     public JobScheduleExecutionInformation withNextRunTime(OffsetDateTime nextRunTime) {
         this.nextRunTime = nextRunTime;
         return this;
@@ -49,9 +51,11 @@ public class JobScheduleExecutionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recentJob")
     public RecentJob recentJob;
+
     public JobScheduleExecutionInformation withRecentJob(RecentJob recentJob) {
         this.recentJob = recentJob;
         return this;
     }
     
+    public JobScheduleExecutionInformation(){}
 }

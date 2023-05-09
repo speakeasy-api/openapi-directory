@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1DeviceHardwareCountReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public String bucket;
+
     public GoogleChromeManagementV1DeviceHardwareCountReport withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromeManagementV1DeviceHardwareCountReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public GoogleChromeManagementV1DeviceHardwareCountReport withCount(String count) {
         this.count = count;
         return this;
     }
     
+    public GoogleChromeManagementV1DeviceHardwareCountReport(){}
 }

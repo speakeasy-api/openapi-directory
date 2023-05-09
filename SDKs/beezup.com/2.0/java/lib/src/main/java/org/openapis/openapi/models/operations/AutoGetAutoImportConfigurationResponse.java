@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AutoGetAutoImportConfigurationResponse {
@@ -12,6 +13,7 @@ public class AutoGetAutoImportConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public AutoGetAutoImportConfigurationResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class AutoGetAutoImportConfigurationResponse {
     
     
     public String contentType;
+
     public AutoGetAutoImportConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AutoGetAutoImportConfigurationResponse {
     
     
     public Integer statusCode;
+
     public AutoGetAutoImportConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class AutoGetAutoImportConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AutoGetAutoImportConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class AutoGetAutoImportConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.AutoImportConfiguration autoImportConfiguration;
+
     public AutoGetAutoImportConfigurationResponse withAutoImportConfiguration(org.openapis.openapi.models.shared.AutoImportConfiguration autoImportConfiguration) {
         this.autoImportConfiguration = autoImportConfiguration;
         return this;
     }
     
+    public AutoGetAutoImportConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

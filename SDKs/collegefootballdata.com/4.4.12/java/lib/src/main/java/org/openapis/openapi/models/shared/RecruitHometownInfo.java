@@ -12,6 +12,7 @@ public class RecruitHometownInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countyFips")
     public String countyFips;
+
     public RecruitHometownInfo withCountyFips(String countyFips) {
         this.countyFips = countyFips;
         return this;
@@ -20,6 +21,7 @@ public class RecruitHometownInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public RecruitHometownInfo withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -28,9 +30,11 @@ public class RecruitHometownInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public RecruitHometownInfo withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public RecruitHometownInfo(){}
 }

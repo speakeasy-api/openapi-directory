@@ -18,6 +18,7 @@ public class Setting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Setting withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class Setting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Setting withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class Setting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Setting withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class Setting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Setting withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Setting(){}
 }

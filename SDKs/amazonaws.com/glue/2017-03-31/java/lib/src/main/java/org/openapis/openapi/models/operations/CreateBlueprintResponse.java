@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateBlueprintResponse {
@@ -12,6 +13,7 @@ public class CreateBlueprintResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateBlueprintResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -19,6 +21,7 @@ public class CreateBlueprintResponse {
     
     
     public String contentType;
+
     public CreateBlueprintResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateBlueprintResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateBlueprintResponse createBlueprintResponse;
+
     public CreateBlueprintResponse withCreateBlueprintResponse(org.openapis.openapi.models.shared.CreateBlueprintResponse createBlueprintResponse) {
         this.createBlueprintResponse = createBlueprintResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateBlueprintResponse {
      */
     
     public Object internalServiceException;
+
     public CreateBlueprintResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class CreateBlueprintResponse {
      */
     
     public Object invalidInputException;
+
     public CreateBlueprintResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class CreateBlueprintResponse {
      */
     
     public Object operationTimeoutException;
+
     public CreateBlueprintResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -69,6 +76,7 @@ public class CreateBlueprintResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public CreateBlueprintResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateBlueprintResponse {
     
     
     public Integer statusCode;
+
     public CreateBlueprintResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateBlueprintResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateBlueprintResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateBlueprintResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AppTotal - The totals for the app
@@ -15,9 +15,13 @@ public class AppTotal {
      */
     
     public DataTotal dollarAppId;
+
     public AppTotal withDollarAppId(DataTotal dollarAppId) {
         this.dollarAppId = dollarAppId;
         return this;
     }
     
+    public AppTotal(@JsonProperty("$appId") DataTotal dollarAppId) {
+        this.dollarAppId = dollarAppId;
+  }
 }

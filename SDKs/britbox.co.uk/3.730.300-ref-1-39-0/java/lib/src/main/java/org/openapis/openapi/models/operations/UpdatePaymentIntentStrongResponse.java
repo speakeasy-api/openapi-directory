@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePaymentIntentStrongResponse {
     
     public String contentType;
+
     public UpdatePaymentIntentStrongResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdatePaymentIntentStrongResponse {
     
     
     public org.openapis.openapi.models.shared.ItvUpdateIntentStrongResponse itvUpdateIntentStrongResponse;
+
     public UpdatePaymentIntentStrongResponse withItvUpdateIntentStrongResponse(org.openapis.openapi.models.shared.ItvUpdateIntentStrongResponse itvUpdateIntentStrongResponse) {
         this.itvUpdateIntentStrongResponse = itvUpdateIntentStrongResponse;
         return this;
@@ -26,6 +29,7 @@ public class UpdatePaymentIntentStrongResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public UpdatePaymentIntentStrongResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -33,6 +37,7 @@ public class UpdatePaymentIntentStrongResponse {
     
     
     public Integer statusCode;
+
     public UpdatePaymentIntentStrongResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class UpdatePaymentIntentStrongResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePaymentIntentStrongResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdatePaymentIntentStrongResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJobResponse {
     
     public String contentType;
+
     public ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnore
      */
     
     public java.util.Map<String, Object> ignoreJobResponse;
+
     public ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJobResponse withIgnoreJobResponse(java.util.Map<String, Object> ignoreJobResponse) {
         this.ignoreJobResponse = ignoreJobResponse;
         return this;
@@ -26,6 +29,7 @@ public class ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnore
     
     
     public Integer statusCode;
+
     public ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnore
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPartnerEventSourcesResponse {
     
     public String contentType;
+
     public ListPartnerEventSourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListPartnerEventSourcesResponse {
      */
     
     public Object internalException;
+
     public ListPartnerEventSourcesResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -29,6 +32,7 @@ public class ListPartnerEventSourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPartnerEventSourcesResponse listPartnerEventSourcesResponse;
+
     public ListPartnerEventSourcesResponse withListPartnerEventSourcesResponse(org.openapis.openapi.models.shared.ListPartnerEventSourcesResponse listPartnerEventSourcesResponse) {
         this.listPartnerEventSourcesResponse = listPartnerEventSourcesResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListPartnerEventSourcesResponse {
      */
     
     public Object operationDisabledException;
+
     public ListPartnerEventSourcesResponse withOperationDisabledException(Object operationDisabledException) {
         this.operationDisabledException = operationDisabledException;
         return this;
@@ -46,6 +51,7 @@ public class ListPartnerEventSourcesResponse {
     
     
     public Integer statusCode;
+
     public ListPartnerEventSourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListPartnerEventSourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPartnerEventSourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListPartnerEventSourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

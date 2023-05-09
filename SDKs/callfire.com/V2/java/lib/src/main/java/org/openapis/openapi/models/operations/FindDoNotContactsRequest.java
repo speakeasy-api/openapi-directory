@@ -12,6 +12,7 @@ public class FindDoNotContactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=call")
     public Boolean call;
+
     public FindDoNotContactsRequest withCall(Boolean call) {
         this.call = call;
         return this;
@@ -22,6 +23,7 @@ public class FindDoNotContactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaignId")
     public Long campaignId;
+
     public FindDoNotContactsRequest withCampaignId(Long campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -32,6 +34,7 @@ public class FindDoNotContactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public FindDoNotContactsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +45,7 @@ public class FindDoNotContactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inboundCall")
     public Boolean inboundCall;
+
     public FindDoNotContactsRequest withInboundCall(Boolean inboundCall) {
         this.inboundCall = inboundCall;
         return this;
@@ -52,6 +56,7 @@ public class FindDoNotContactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inboundText")
     public Boolean inboundText;
+
     public FindDoNotContactsRequest withInboundText(Boolean inboundText) {
         this.inboundText = inboundText;
         return this;
@@ -62,6 +67,7 @@ public class FindDoNotContactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public FindDoNotContactsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -72,6 +78,7 @@ public class FindDoNotContactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
     public String[] number;
+
     public FindDoNotContactsRequest withNumber(String[] number) {
         this.number = number;
         return this;
@@ -82,6 +89,7 @@ public class FindDoNotContactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public FindDoNotContactsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -92,6 +100,7 @@ public class FindDoNotContactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prefix")
     public String prefix;
+
     public FindDoNotContactsRequest withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -102,6 +111,7 @@ public class FindDoNotContactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public String source;
+
     public FindDoNotContactsRequest withSource(String source) {
         this.source = source;
         return this;
@@ -112,9 +122,11 @@ public class FindDoNotContactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public Boolean text;
+
     public FindDoNotContactsRequest withText(Boolean text) {
         this.text = text;
         return this;
     }
     
+    public FindDoNotContactsRequest(){}
 }

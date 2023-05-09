@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsCommonDestinyIconSequenceDefinition {
     
     public String[] frames;
+
     public DestinyDefinitionsCommonDestinyIconSequenceDefinition withFrames(String[] frames) {
         this.frames = frames;
         return this;
     }
     
+    public DestinyDefinitionsCommonDestinyIconSequenceDefinition(){}
 }

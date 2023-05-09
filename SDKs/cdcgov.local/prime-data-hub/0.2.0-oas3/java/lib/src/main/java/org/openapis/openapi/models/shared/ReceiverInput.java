@@ -17,6 +17,7 @@ public class ReceiverInput {
      */
     @JsonProperty("description")
     public String description;
+
     public ReceiverInput withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +29,7 @@ public class ReceiverInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jurisdictionalFilters")
     public ReceiverJurisdictionalFilters[] jurisdictionalFilters;
+
     public ReceiverInput withJurisdictionalFilters(ReceiverJurisdictionalFilters[] jurisdictionalFilters) {
         this.jurisdictionalFilters = jurisdictionalFilters;
         return this;
@@ -38,6 +40,7 @@ public class ReceiverInput {
      */
     @JsonProperty("name")
     public String name;
+
     public ReceiverInput withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class ReceiverInput {
      */
     @JsonProperty("timing")
     public ReceiverTiming timing;
+
     public ReceiverInput withTiming(ReceiverTiming timing) {
         this.timing = timing;
         return this;
@@ -58,6 +62,7 @@ public class ReceiverInput {
      */
     @JsonProperty("topic")
     public String topic;
+
     public ReceiverInput withTopic(String topic) {
         this.topic = topic;
         return this;
@@ -69,9 +74,16 @@ public class ReceiverInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translations")
     public Object[] translations;
+
     public ReceiverInput withTranslations(Object[] translations) {
         this.translations = translations;
         return this;
     }
     
+    public ReceiverInput(@JsonProperty("description") String description, @JsonProperty("name") String name, @JsonProperty("timing") ReceiverTiming timing, @JsonProperty("topic") String topic) {
+        this.description = description;
+        this.name = name;
+        this.timing = timing;
+        this.topic = topic;
+  }
 }

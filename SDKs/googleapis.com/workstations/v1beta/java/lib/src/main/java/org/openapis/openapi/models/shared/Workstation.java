@@ -18,6 +18,7 @@ public class Workstation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public Workstation withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class Workstation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Workstation withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class Workstation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteTime")
     public String deleteTime;
+
     public Workstation withDeleteTime(String deleteTime) {
         this.deleteTime = deleteTime;
         return this;
@@ -51,17 +54,31 @@ public class Workstation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Workstation withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
     /**
-     * Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.
+     * Environment variables passed to the workstation container's entrypoint.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("env")
+    public java.util.Map<String, String> env;
+
+    public Workstation withEnv(java.util.Map<String, String> env) {
+        this.env = env;
+        return this;
+    }
+    
+    /**
+     * Checksum computed by the server. May be sent on update and delete requests to make sure that the client has an up-to-date value before proceeding.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Workstation withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -73,6 +90,7 @@ public class Workstation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public Workstation withHost(String host) {
         this.host = host;
         return this;
@@ -84,6 +102,7 @@ public class Workstation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Workstation withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -95,6 +114,7 @@ public class Workstation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Workstation withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +126,7 @@ public class Workstation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reconciling")
     public Boolean reconciling;
+
     public Workstation withReconciling(Boolean reconciling) {
         this.reconciling = reconciling;
         return this;
@@ -117,6 +138,7 @@ public class Workstation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public WorkstationStateEnum state;
+
     public Workstation withState(WorkstationStateEnum state) {
         this.state = state;
         return this;
@@ -128,6 +150,7 @@ public class Workstation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public Workstation withUid(String uid) {
         this.uid = uid;
         return this;
@@ -139,9 +162,11 @@ public class Workstation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Workstation withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Workstation(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadAPISpecificationRequestBodySpec {
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public UploadAPISpecificationRequestBodySpec withContent(byte[] content) {
         this.content = content;
         return this;
@@ -16,9 +18,14 @@ public class UploadAPISpecificationRequestBodySpec {
     
     @SpeakeasyMetadata("multipartForm:name=spec")
     public String spec;
+
     public UploadAPISpecificationRequestBodySpec withSpec(String spec) {
         this.spec = spec;
         return this;
     }
     
+    public UploadAPISpecificationRequestBodySpec(@JsonProperty("content") byte[] content, @JsonProperty("spec") String spec) {
+        this.content = content;
+        this.spec = spec;
+  }
 }

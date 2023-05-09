@@ -14,6 +14,7 @@ public class UpdateNetworkSsidRequestBodyRadiusServers {
      */
     @JsonProperty("host")
     public String host;
+
     public UpdateNetworkSsidRequestBodyRadiusServers withHost(String host) {
         this.host = host;
         return this;
@@ -25,6 +26,7 @@ public class UpdateNetworkSsidRequestBodyRadiusServers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Long port;
+
     public UpdateNetworkSsidRequestBodyRadiusServers withPort(Long port) {
         this.port = port;
         return this;
@@ -36,9 +38,13 @@ public class UpdateNetworkSsidRequestBodyRadiusServers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public UpdateNetworkSsidRequestBodyRadiusServers withSecret(String secret) {
         this.secret = secret;
         return this;
     }
     
+    public UpdateNetworkSsidRequestBodyRadiusServers(@JsonProperty("host") String host) {
+        this.host = host;
+  }
 }

@@ -12,6 +12,7 @@ public class ClientProjectStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languages")
     public String[] languages;
+
     public ClientProjectStat withLanguages(String[] languages) {
         this.languages = languages;
         return this;
@@ -20,6 +21,7 @@ public class ClientProjectStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("month")
     public String month;
+
     public ClientProjectStat withMonth(String month) {
         this.month = month;
         return this;
@@ -28,6 +30,7 @@ public class ClientProjectStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number_of_projects")
     public Long numberOfProjects;
+
     public ClientProjectStat withNumberOfProjects(Long numberOfProjects) {
         this.numberOfProjects = numberOfProjects;
         return this;
@@ -36,6 +39,7 @@ public class ClientProjectStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_spending")
     public Float totalSpending;
+
     public ClientProjectStat withTotalSpending(Float totalSpending) {
         this.totalSpending = totalSpending;
         return this;
@@ -44,9 +48,11 @@ public class ClientProjectStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("week")
     public String week;
+
     public ClientProjectStat withWeek(String week) {
         this.week = week;
         return this;
     }
     
+    public ClientProjectStat(){}
 }

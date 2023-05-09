@@ -18,9 +18,11 @@ public class BatchGetEffectiveIamPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyResults")
     public EffectiveIamPolicy[] policyResults;
+
     public BatchGetEffectiveIamPoliciesResponse withPolicyResults(EffectiveIamPolicy[] policyResults) {
         this.policyResults = policyResults;
         return this;
     }
     
+    public BatchGetEffectiveIamPoliciesResponse(){}
 }

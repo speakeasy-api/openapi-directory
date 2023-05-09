@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolNetflowChangeAttrRequest {
@@ -12,6 +13,7 @@ public class ProtocolNetflowChangeAttrRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolNetflowChangeAttrRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -19,6 +21,7 @@ public class ProtocolNetflowChangeAttrRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attr")
     public String attr;
+
     public ProtocolNetflowChangeAttrRequest withAttr(String attr) {
         this.attr = attr;
         return this;
@@ -26,6 +29,7 @@ public class ProtocolNetflowChangeAttrRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=field-num")
     public Integer fieldNum;
+
     public ProtocolNetflowChangeAttrRequest withFieldNum(Integer fieldNum) {
         this.fieldNum = fieldNum;
         return this;
@@ -33,6 +37,7 @@ public class ProtocolNetflowChangeAttrRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=flowset-uid")
     public Integer flowsetUid;
+
     public ProtocolNetflowChangeAttrRequest withFlowsetUid(Integer flowsetUid) {
         this.flowsetUid = flowsetUid;
         return this;
@@ -40,9 +45,17 @@ public class ProtocolNetflowChangeAttrRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=value")
     public String value;
+
     public ProtocolNetflowChangeAttrRequest withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ProtocolNetflowChangeAttrRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("attr") String attr, @JsonProperty("field-num") Integer fieldNum, @JsonProperty("flowset-uid") Integer flowsetUid, @JsonProperty("value") String value) {
+        this.agentNum = agentNum;
+        this.attr = attr;
+        this.fieldNum = fieldNum;
+        this.flowsetUid = flowsetUid;
+        this.value = value;
+  }
 }

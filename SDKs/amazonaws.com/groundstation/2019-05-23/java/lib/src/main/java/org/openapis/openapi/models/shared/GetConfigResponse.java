@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetConfigResponse {
     @JsonProperty("configArn")
     public String configArn;
+
     public GetConfigResponse withConfigArn(String configArn) {
         this.configArn = configArn;
         return this;
@@ -21,6 +22,7 @@ public class GetConfigResponse {
     
     @JsonProperty("configData")
     public ConfigTypeData configData;
+
     public GetConfigResponse withConfigData(ConfigTypeData configData) {
         this.configData = configData;
         return this;
@@ -28,6 +30,7 @@ public class GetConfigResponse {
     
     @JsonProperty("configId")
     public String configId;
+
     public GetConfigResponse withConfigId(String configId) {
         this.configId = configId;
         return this;
@@ -36,6 +39,7 @@ public class GetConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configType")
     public ConfigCapabilityTypeEnum configType;
+
     public GetConfigResponse withConfigType(ConfigCapabilityTypeEnum configType) {
         this.configType = configType;
         return this;
@@ -43,6 +47,7 @@ public class GetConfigResponse {
     
     @JsonProperty("name")
     public String name;
+
     public GetConfigResponse withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +56,16 @@ public class GetConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetConfigResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetConfigResponse(@JsonProperty("configArn") String configArn, @JsonProperty("configData") ConfigTypeData configData, @JsonProperty("configId") String configId, @JsonProperty("name") String name) {
+        this.configArn = configArn;
+        this.configData = configData;
+        this.configId = configId;
+        this.name = name;
+  }
 }

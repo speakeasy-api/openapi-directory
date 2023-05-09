@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMilestoneResponse {
@@ -12,6 +13,7 @@ public class GetMilestoneResponse {
      */
     
     public Object accessDeniedException;
+
     public GetMilestoneResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetMilestoneResponse {
     
     
     public String contentType;
+
     public GetMilestoneResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetMilestoneResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMilestoneOutput getMilestoneOutput;
+
     public GetMilestoneResponse withGetMilestoneOutput(org.openapis.openapi.models.shared.GetMilestoneOutput getMilestoneOutput) {
         this.getMilestoneOutput = getMilestoneOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetMilestoneResponse {
      */
     
     public Object internalServerException;
+
     public GetMilestoneResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetMilestoneResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetMilestoneResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetMilestoneResponse {
     
     
     public Integer statusCode;
+
     public GetMilestoneResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetMilestoneResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMilestoneResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetMilestoneResponse {
      */
     
     public Object throttlingException;
+
     public GetMilestoneResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetMilestoneResponse {
      */
     
     public Object validationException;
+
     public GetMilestoneResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetMilestoneResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

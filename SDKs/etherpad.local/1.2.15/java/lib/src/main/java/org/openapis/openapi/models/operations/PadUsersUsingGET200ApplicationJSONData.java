@@ -12,9 +12,11 @@ public class PadUsersUsingGET200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("padUsers")
     public PadUsersUsingGET200ApplicationJSONDataPadUsers[] padUsers;
+
     public PadUsersUsingGET200ApplicationJSONData withPadUsers(PadUsersUsingGET200ApplicationJSONDataPadUsers[] padUsers) {
         this.padUsers = padUsers;
         return this;
     }
     
+    public PadUsersUsingGET200ApplicationJSONData(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAssetModelResponse {
@@ -12,6 +13,7 @@ public class DeleteAssetModelResponse {
      */
     
     public Object conflictingOperationException;
+
     public DeleteAssetModelResponse withConflictingOperationException(Object conflictingOperationException) {
         this.conflictingOperationException = conflictingOperationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAssetModelResponse {
     
     
     public String contentType;
+
     public DeleteAssetModelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAssetModelResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteAssetModelResponse deleteAssetModelResponse;
+
     public DeleteAssetModelResponse withDeleteAssetModelResponse(org.openapis.openapi.models.shared.DeleteAssetModelResponse deleteAssetModelResponse) {
         this.deleteAssetModelResponse = deleteAssetModelResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAssetModelResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteAssetModelResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAssetModelResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteAssetModelResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteAssetModelResponse {
     
     
     public Integer statusCode;
+
     public DeleteAssetModelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteAssetModelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAssetModelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteAssetModelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAssetModelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteAssetModelResponse {
      */
     
     public Object throttlingException;
+
     public DeleteAssetModelResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteAssetModelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

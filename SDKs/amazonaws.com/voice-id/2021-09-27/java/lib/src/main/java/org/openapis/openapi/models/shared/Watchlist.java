@@ -22,6 +22,7 @@ public class Watchlist {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public Watchlist withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class Watchlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultWatchlist")
     public Boolean defaultWatchlist;
+
     public Watchlist withDefaultWatchlist(Boolean defaultWatchlist) {
         this.defaultWatchlist = defaultWatchlist;
         return this;
@@ -38,6 +40,7 @@ public class Watchlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Watchlist withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class Watchlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainId")
     public String domainId;
+
     public Watchlist withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -54,6 +58,7 @@ public class Watchlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Watchlist withName(String name) {
         this.name = name;
         return this;
@@ -64,6 +69,7 @@ public class Watchlist {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public Watchlist withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -72,9 +78,11 @@ public class Watchlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WatchlistId")
     public String watchlistId;
+
     public Watchlist withWatchlistId(String watchlistId) {
         this.watchlistId = watchlistId;
         return this;
     }
     
+    public Watchlist(){}
 }

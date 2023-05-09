@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodesOfConductGetConductCodeRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
     public String key;
+
     public CodesOfConductGetConductCodeRequest withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public CodesOfConductGetConductCodeRequest(@JsonProperty("key") String key) {
+        this.key = key;
+  }
 }

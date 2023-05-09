@@ -18,6 +18,7 @@ public class DistributionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public SplitInt64 count;
+
     public DistributionUpdate withCount(SplitInt64 count) {
         this.count = count;
         return this;
@@ -29,6 +30,7 @@ public class DistributionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("histogram")
     public Histogram histogram;
+
     public DistributionUpdate withHistogram(Histogram histogram) {
         this.histogram = histogram;
         return this;
@@ -40,6 +42,7 @@ public class DistributionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max")
     public SplitInt64 max;
+
     public DistributionUpdate withMax(SplitInt64 max) {
         this.max = max;
         return this;
@@ -51,6 +54,7 @@ public class DistributionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min")
     public SplitInt64 min;
+
     public DistributionUpdate withMin(SplitInt64 min) {
         this.min = min;
         return this;
@@ -62,6 +66,7 @@ public class DistributionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sum")
     public SplitInt64 sum;
+
     public DistributionUpdate withSum(SplitInt64 sum) {
         this.sum = sum;
         return this;
@@ -73,9 +78,11 @@ public class DistributionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sumOfSquares")
     public Double sumOfSquares;
+
     public DistributionUpdate withSumOfSquares(Double sumOfSquares) {
         this.sumOfSquares = sumOfSquares;
         return this;
     }
     
+    public DistributionUpdate(){}
 }

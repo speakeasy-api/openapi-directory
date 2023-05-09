@@ -20,6 +20,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentId")
     public String assessmentId;
+
     public Notification withAssessmentId(String assessmentId) {
         this.assessmentId = assessmentId;
         return this;
@@ -28,6 +29,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentName")
     public String assessmentName;
+
     public Notification withAssessmentName(String assessmentName) {
         this.assessmentName = assessmentName;
         return this;
@@ -36,6 +38,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlSetId")
     public String controlSetId;
+
     public Notification withControlSetId(String controlSetId) {
         this.controlSetId = controlSetId;
         return this;
@@ -44,6 +47,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlSetName")
     public String controlSetName;
+
     public Notification withControlSetName(String controlSetName) {
         this.controlSetName = controlSetName;
         return this;
@@ -52,6 +56,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Notification withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +67,7 @@ public class Notification {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("eventTime")
     public OffsetDateTime eventTime;
+
     public Notification withEventTime(OffsetDateTime eventTime) {
         this.eventTime = eventTime;
         return this;
@@ -70,6 +76,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Notification withId(String id) {
         this.id = id;
         return this;
@@ -78,9 +85,11 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public Notification withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public Notification(){}
 }

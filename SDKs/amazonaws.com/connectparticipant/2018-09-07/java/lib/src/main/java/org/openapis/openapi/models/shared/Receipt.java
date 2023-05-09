@@ -15,6 +15,7 @@ public class Receipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveredTimestamp")
     public String deliveredTimestamp;
+
     public Receipt withDeliveredTimestamp(String deliveredTimestamp) {
         this.deliveredTimestamp = deliveredTimestamp;
         return this;
@@ -23,6 +24,7 @@ public class Receipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadTimestamp")
     public String readTimestamp;
+
     public Receipt withReadTimestamp(String readTimestamp) {
         this.readTimestamp = readTimestamp;
         return this;
@@ -31,9 +33,11 @@ public class Receipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecipientParticipantId")
     public String recipientParticipantId;
+
     public Receipt withRecipientParticipantId(String recipientParticipantId) {
         this.recipientParticipantId = recipientParticipantId;
         return this;
     }
     
+    public Receipt(){}
 }

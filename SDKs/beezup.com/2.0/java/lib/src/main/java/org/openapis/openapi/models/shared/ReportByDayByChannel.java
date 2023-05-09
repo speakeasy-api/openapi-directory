@@ -12,6 +12,7 @@ public class ReportByDayByChannel {
      */
     @JsonProperty("channel")
     public BeezUPCommonChannelBasicInfo channel;
+
     public ReportByDayByChannel withChannel(BeezUPCommonChannelBasicInfo channel) {
         this.channel = channel;
         return this;
@@ -22,6 +23,7 @@ public class ReportByDayByChannel {
      */
     @JsonProperty("clickCount")
     public Long clickCount;
+
     public ReportByDayByChannel withClickCount(Long clickCount) {
         this.clickCount = clickCount;
         return this;
@@ -32,6 +34,7 @@ public class ReportByDayByChannel {
      */
     @JsonProperty("cost")
     public Double cost;
+
     public ReportByDayByChannel withCost(Double cost) {
         this.cost = cost;
         return this;
@@ -42,6 +45,7 @@ public class ReportByDayByChannel {
      */
     @JsonProperty("margin")
     public Double margin;
+
     public ReportByDayByChannel withMargin(Double margin) {
         this.margin = margin;
         return this;
@@ -52,6 +56,7 @@ public class ReportByDayByChannel {
      */
     @JsonProperty("orderCount")
     public Long orderCount;
+
     public ReportByDayByChannel withOrderCount(Long orderCount) {
         this.orderCount = orderCount;
         return this;
@@ -62,6 +67,7 @@ public class ReportByDayByChannel {
      */
     @JsonProperty("performanceIndicator")
     public Double performanceIndicator;
+
     public ReportByDayByChannel withPerformanceIndicator(Double performanceIndicator) {
         this.performanceIndicator = performanceIndicator;
         return this;
@@ -72,6 +78,7 @@ public class ReportByDayByChannel {
      */
     @JsonProperty("roi")
     public Double roi;
+
     public ReportByDayByChannel withRoi(Double roi) {
         this.roi = roi;
         return this;
@@ -82,6 +89,7 @@ public class ReportByDayByChannel {
      */
     @JsonProperty("soldProductCount")
     public Long soldProductCount;
+
     public ReportByDayByChannel withSoldProductCount(Long soldProductCount) {
         this.soldProductCount = soldProductCount;
         return this;
@@ -92,9 +100,21 @@ public class ReportByDayByChannel {
      */
     @JsonProperty("totalSales")
     public Double totalSales;
+
     public ReportByDayByChannel withTotalSales(Double totalSales) {
         this.totalSales = totalSales;
         return this;
     }
     
+    public ReportByDayByChannel(@JsonProperty("channel") BeezUPCommonChannelBasicInfo channel, @JsonProperty("clickCount") Long clickCount, @JsonProperty("cost") Double cost, @JsonProperty("margin") Double margin, @JsonProperty("orderCount") Long orderCount, @JsonProperty("performanceIndicator") Double performanceIndicator, @JsonProperty("roi") Double roi, @JsonProperty("soldProductCount") Long soldProductCount, @JsonProperty("totalSales") Double totalSales) {
+        this.channel = channel;
+        this.clickCount = clickCount;
+        this.cost = cost;
+        this.margin = margin;
+        this.orderCount = orderCount;
+        this.performanceIndicator = performanceIndicator;
+        this.roi = roi;
+        this.soldProductCount = soldProductCount;
+        this.totalSales = totalSales;
+  }
 }

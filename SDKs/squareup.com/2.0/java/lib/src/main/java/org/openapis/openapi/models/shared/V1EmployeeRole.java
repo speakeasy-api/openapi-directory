@@ -18,6 +18,7 @@ public class V1EmployeeRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public V1EmployeeRole withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,6 +30,7 @@ public class V1EmployeeRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public V1EmployeeRole withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class V1EmployeeRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_owner")
     public Boolean isOwner;
+
     public V1EmployeeRole withIsOwner(Boolean isOwner) {
         this.isOwner = isOwner;
         return this;
@@ -50,6 +53,7 @@ public class V1EmployeeRole {
      */
     @JsonProperty("name")
     public String name;
+
     public V1EmployeeRole withName(String name) {
         this.name = name;
         return this;
@@ -60,6 +64,7 @@ public class V1EmployeeRole {
      */
     @JsonProperty("permissions")
     public String[] permissions;
+
     public V1EmployeeRole withPermissions(String[] permissions) {
         this.permissions = permissions;
         return this;
@@ -71,9 +76,14 @@ public class V1EmployeeRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public V1EmployeeRole withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public V1EmployeeRole(@JsonProperty("name") String name, @JsonProperty("permissions") String[] permissions) {
+        this.name = name;
+        this.permissions = permissions;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateProjectCollaboratorsInviteRequest {
@@ -12,6 +13,7 @@ public class PrivateProjectCollaboratorsInviteRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ProjectCollaboratorInvite projectCollaboratorInvite;
+
     public PrivateProjectCollaboratorsInviteRequest withProjectCollaboratorInvite(org.openapis.openapi.models.shared.ProjectCollaboratorInvite projectCollaboratorInvite) {
         this.projectCollaboratorInvite = projectCollaboratorInvite;
         return this;
@@ -22,9 +24,14 @@ public class PrivateProjectCollaboratorsInviteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public Long projectId;
+
     public PrivateProjectCollaboratorsInviteRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public PrivateProjectCollaboratorsInviteRequest(@JsonProperty("ProjectCollaboratorInvite") org.openapis.openapi.models.shared.ProjectCollaboratorInvite projectCollaboratorInvite, @JsonProperty("project_id") Long projectId) {
+        this.projectCollaboratorInvite = projectCollaboratorInvite;
+        this.projectId = projectId;
+  }
 }

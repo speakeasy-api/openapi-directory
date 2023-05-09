@@ -14,6 +14,7 @@ public class GistsUpdateRequestBody1 {
      */
     @JsonProperty("description")
     public String description;
+
     public GistsUpdateRequestBody1 withDescription(String description) {
         this.description = description;
         return this;
@@ -28,9 +29,13 @@ public class GistsUpdateRequestBody1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public java.util.Map<String, Object> files;
+
     public GistsUpdateRequestBody1 withFiles(java.util.Map<String, Object> files) {
         this.files = files;
         return this;
     }
     
+    public GistsUpdateRequestBody1(@JsonProperty("description") String description) {
+        this.description = description;
+  }
 }

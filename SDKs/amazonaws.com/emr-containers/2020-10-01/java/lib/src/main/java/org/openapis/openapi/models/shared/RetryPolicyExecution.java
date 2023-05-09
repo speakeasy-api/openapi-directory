@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RetryPolicyExecution {
     @JsonProperty("currentAttemptCount")
     public Long currentAttemptCount;
+
     public RetryPolicyExecution withCurrentAttemptCount(Long currentAttemptCount) {
         this.currentAttemptCount = currentAttemptCount;
         return this;
     }
     
+    public RetryPolicyExecution(@JsonProperty("currentAttemptCount") Long currentAttemptCount) {
+        this.currentAttemptCount = currentAttemptCount;
+  }
 }

@@ -62,11 +62,9 @@ public class BillingAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsCreateResponse res = new org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsCreateResponse() {{
+        org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsCreateResponse res = new org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudBillingBudgetsV1Budget = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class BillingAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsDeleteResponse res = new org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsDeleteResponse() {{
+        org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsDeleteResponse res = new org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class BillingAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsGetResponse res = new org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsGetResponse() {{
+        org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsGetResponse res = new org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsGetResponse(contentType, httpRes.statusCode()) {{
             googleCloudBillingBudgetsV1Budget = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class BillingAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsListResponse res = new org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsListResponse() {{
+        org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsListResponse res = new org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudBillingBudgetsV1ListBudgetsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class BillingAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsPatchResponse res = new org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsPatchResponse() {{
+        org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsPatchResponse res = new org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsPatchResponse(contentType, httpRes.statusCode()) {{
             googleCloudBillingBudgetsV1Budget = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

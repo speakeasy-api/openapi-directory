@@ -15,9 +15,11 @@ public class GitConfigForUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretArn")
     public String secretArn;
+
     public GitConfigForUpdate withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
     }
     
+    public GitConfigForUpdate(){}
 }

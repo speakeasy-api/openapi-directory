@@ -148,4 +148,12 @@ lib/src/main/java/org/openapis/openapi/models/shared/RouteRequestCurbsidesEnum.j
 lib/src/main/java/org/openapis/openapi/models/shared/RouteRequestVehicleEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/RouteRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/clusterapi/README.md
+docs/geocodingapi/README.md
+docs/isochroneapi/README.md
+docs/mapmatchingapi/README.md
+docs/matrixapi/README.md
+docs/routeoptimizationapi/README.md
+docs/routingapi/README.md
 USAGE.md

@@ -12,6 +12,7 @@ public class CreateEnvironmentTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateEnvironmentTemplateInput withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class CreateEnvironmentTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public CreateEnvironmentTemplateInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -28,6 +30,7 @@ public class CreateEnvironmentTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionKey")
     public String encryptionKey;
+
     public CreateEnvironmentTemplateInput withEncryptionKey(String encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -35,6 +38,7 @@ public class CreateEnvironmentTemplateInput {
     
     @JsonProperty("name")
     public String name;
+
     public CreateEnvironmentTemplateInput withName(String name) {
         this.name = name;
         return this;
@@ -43,6 +47,7 @@ public class CreateEnvironmentTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioning")
     public ProvisioningEnum provisioning;
+
     public CreateEnvironmentTemplateInput withProvisioning(ProvisioningEnum provisioning) {
         this.provisioning = provisioning;
         return this;
@@ -51,9 +56,13 @@ public class CreateEnvironmentTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateEnvironmentTemplateInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateEnvironmentTemplateInput(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

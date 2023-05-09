@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateGroupMembershipResponse {
     @JsonProperty("IdentityStoreId")
     public String identityStoreId;
+
     public CreateGroupMembershipResponse withIdentityStoreId(String identityStoreId) {
         this.identityStoreId = identityStoreId;
         return this;
@@ -19,9 +20,14 @@ public class CreateGroupMembershipResponse {
     
     @JsonProperty("MembershipId")
     public String membershipId;
+
     public CreateGroupMembershipResponse withMembershipId(String membershipId) {
         this.membershipId = membershipId;
         return this;
     }
     
+    public CreateGroupMembershipResponse(@JsonProperty("IdentityStoreId") String identityStoreId, @JsonProperty("MembershipId") String membershipId) {
+        this.identityStoreId = identityStoreId;
+        this.membershipId = membershipId;
+  }
 }

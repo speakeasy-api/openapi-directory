@@ -15,6 +15,7 @@ public class SpecVersionPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SpecVersionPersistVO withDescription(String description) {
         this.description = description;
         return this;
@@ -23,9 +24,11 @@ public class SpecVersionPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qty")
     public Long qty;
+
     public SpecVersionPersistVO withQty(Long qty) {
         this.qty = qty;
         return this;
     }
     
+    public SpecVersionPersistVO(){}
 }

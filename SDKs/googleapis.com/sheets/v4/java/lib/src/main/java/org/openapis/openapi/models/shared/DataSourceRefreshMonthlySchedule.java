@@ -18,6 +18,7 @@ public class DataSourceRefreshMonthlySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("daysOfMonth")
     public Integer[] daysOfMonth;
+
     public DataSourceRefreshMonthlySchedule withDaysOfMonth(Integer[] daysOfMonth) {
         this.daysOfMonth = daysOfMonth;
         return this;
@@ -29,9 +30,11 @@ public class DataSourceRefreshMonthlySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public TimeOfDay startTime;
+
     public DataSourceRefreshMonthlySchedule withStartTime(TimeOfDay startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public DataSourceRefreshMonthlySchedule(){}
 }

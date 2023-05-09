@@ -15,6 +15,7 @@ public class AwsS3BucketObjectLockConfigurationRuleDefaultRetentionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Days")
     public Long days;
+
     public AwsS3BucketObjectLockConfigurationRuleDefaultRetentionDetails withDays(Long days) {
         this.days = days;
         return this;
@@ -23,6 +24,7 @@ public class AwsS3BucketObjectLockConfigurationRuleDefaultRetentionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mode")
     public String mode;
+
     public AwsS3BucketObjectLockConfigurationRuleDefaultRetentionDetails withMode(String mode) {
         this.mode = mode;
         return this;
@@ -31,9 +33,11 @@ public class AwsS3BucketObjectLockConfigurationRuleDefaultRetentionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Years")
     public Long years;
+
     public AwsS3BucketObjectLockConfigurationRuleDefaultRetentionDetails withYears(Long years) {
         this.years = years;
         return this;
     }
     
+    public AwsS3BucketObjectLockConfigurationRuleDefaultRetentionDetails(){}
 }

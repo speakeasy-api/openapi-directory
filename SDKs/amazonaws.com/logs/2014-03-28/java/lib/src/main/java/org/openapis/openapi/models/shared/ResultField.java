@@ -15,6 +15,7 @@ public class ResultField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public ResultField withField(String field) {
         this.field = field;
         return this;
@@ -23,9 +24,11 @@ public class ResultField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ResultField withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ResultField(){}
 }

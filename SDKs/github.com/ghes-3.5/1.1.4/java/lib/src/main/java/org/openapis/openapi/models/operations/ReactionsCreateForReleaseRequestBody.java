@@ -12,9 +12,13 @@ public class ReactionsCreateForReleaseRequestBody {
      */
     @JsonProperty("content")
     public ReactionsCreateForReleaseRequestBodyContentEnum content;
+
     public ReactionsCreateForReleaseRequestBody withContent(ReactionsCreateForReleaseRequestBodyContentEnum content) {
         this.content = content;
         return this;
     }
     
+    public ReactionsCreateForReleaseRequestBody(@JsonProperty("content") ReactionsCreateForReleaseRequestBodyContentEnum content) {
+        this.content = content;
+  }
 }

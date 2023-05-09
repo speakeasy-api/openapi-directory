@@ -89,4 +89,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/PricingConfigurationPriceVa
 lib/src/main/java/org/openapis/openapi/models/shared/PricingConfigurationTradePolicyConfigs.java
 lib/src/main/java/org/openapis/openapi/models/shared/PricingConfiguration.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/pricetables/README.md
+docs/pricesandfixedprices/README.md
+docs/pricingconfiguration/README.md
 USAGE.md

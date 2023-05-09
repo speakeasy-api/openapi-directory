@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CheckRunOutput {
     @JsonProperty("annotations_count")
     public Long annotationsCount;
+
     public CheckRunOutput withAnnotationsCount(Long annotationsCount) {
         this.annotationsCount = annotationsCount;
         return this;
@@ -16,6 +17,7 @@ public class CheckRunOutput {
     
     @JsonProperty("annotations_url")
     public String annotationsUrl;
+
     public CheckRunOutput withAnnotationsUrl(String annotationsUrl) {
         this.annotationsUrl = annotationsUrl;
         return this;
@@ -23,6 +25,7 @@ public class CheckRunOutput {
     
     @JsonProperty("summary")
     public String summary;
+
     public CheckRunOutput withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -30,6 +33,7 @@ public class CheckRunOutput {
     
     @JsonProperty("text")
     public String text;
+
     public CheckRunOutput withText(String text) {
         this.text = text;
         return this;
@@ -37,9 +41,17 @@ public class CheckRunOutput {
     
     @JsonProperty("title")
     public String title;
+
     public CheckRunOutput withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CheckRunOutput(@JsonProperty("annotations_count") Long annotationsCount, @JsonProperty("annotations_url") String annotationsUrl, @JsonProperty("summary") String summary, @JsonProperty("text") String text, @JsonProperty("title") String title) {
+        this.annotationsCount = annotationsCount;
+        this.annotationsUrl = annotationsUrl;
+        this.summary = summary;
+        this.text = text;
+        this.title = title;
+  }
 }

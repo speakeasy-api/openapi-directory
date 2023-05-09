@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DetectPHIResponse {
     @JsonProperty("Entities")
     public Entity[] entities;
+
     public DetectPHIResponse withEntities(Entity[] entities) {
         this.entities = entities;
         return this;
@@ -21,6 +22,7 @@ public class DetectPHIResponse {
     
     @JsonProperty("ModelVersion")
     public String modelVersion;
+
     public DetectPHIResponse withModelVersion(String modelVersion) {
         this.modelVersion = modelVersion;
         return this;
@@ -29,9 +31,14 @@ public class DetectPHIResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaginationToken")
     public String paginationToken;
+
     public DetectPHIResponse withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
     }
     
+    public DetectPHIResponse(@JsonProperty("Entities") Entity[] entities, @JsonProperty("ModelVersion") String modelVersion) {
+        this.entities = entities;
+        this.modelVersion = modelVersion;
+  }
 }

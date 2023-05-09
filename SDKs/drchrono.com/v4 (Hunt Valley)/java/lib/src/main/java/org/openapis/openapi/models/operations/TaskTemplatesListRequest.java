@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class TaskTemplatesListRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee_group")
     public Long assigneeGroup;
+
     public TaskTemplatesListRequest withAssigneeGroup(Long assigneeGroup) {
         this.assigneeGroup = assigneeGroup;
         return this;
@@ -16,6 +17,7 @@ public class TaskTemplatesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee_user")
     public Long assigneeUser;
+
     public TaskTemplatesListRequest withAssigneeUser(Long assigneeUser) {
         this.assigneeUser = assigneeUser;
         return this;
@@ -23,6 +25,7 @@ public class TaskTemplatesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
     public Long category;
+
     public TaskTemplatesListRequest withCategory(Long category) {
         this.category = category;
         return this;
@@ -30,6 +33,7 @@ public class TaskTemplatesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public TaskTemplatesListRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -37,6 +41,7 @@ public class TaskTemplatesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public TaskTemplatesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -44,6 +49,7 @@ public class TaskTemplatesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public TaskTemplatesListRequest withSince(String since) {
         this.since = since;
         return this;
@@ -51,9 +57,11 @@ public class TaskTemplatesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public Long status;
+
     public TaskTemplatesListRequest withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public TaskTemplatesListRequest(){}
 }

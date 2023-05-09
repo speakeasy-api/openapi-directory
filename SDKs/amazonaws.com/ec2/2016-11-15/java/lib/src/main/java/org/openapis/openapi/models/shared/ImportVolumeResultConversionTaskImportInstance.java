@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImportVolumeResultConversionTaskImportInstance {
     
     public String description;
+
     public ImportVolumeResultConversionTaskImportInstance withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class ImportVolumeResultConversionTaskImportInstance {
     
     
     public String instanceId;
+
     public ImportVolumeResultConversionTaskImportInstance withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -26,6 +28,7 @@ public class ImportVolumeResultConversionTaskImportInstance {
     
     
     public ImportVolumeResultConversionTaskImportInstancePlatformEnum platform;
+
     public ImportVolumeResultConversionTaskImportInstance withPlatform(ImportVolumeResultConversionTaskImportInstancePlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -33,9 +36,11 @@ public class ImportVolumeResultConversionTaskImportInstance {
     
     
     public ImportVolumeResultConversionTaskImportInstanceVolumes[] volumes;
+
     public ImportVolumeResultConversionTaskImportInstance withVolumes(ImportVolumeResultConversionTaskImportInstanceVolumes[] volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public ImportVolumeResultConversionTaskImportInstance(){}
 }

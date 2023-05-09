@@ -12,6 +12,7 @@ public class ShortCustomField {
      */
     @JsonProperty("field_type")
     public ShortCustomFieldFieldTypeEnum fieldType;
+
     public ShortCustomField withFieldType(ShortCustomFieldFieldTypeEnum fieldType) {
         this.fieldType = fieldType;
         return this;
@@ -22,6 +23,7 @@ public class ShortCustomField {
      */
     @JsonProperty("id")
     public Long id;
+
     public ShortCustomField withId(Long id) {
         this.id = id;
         return this;
@@ -32,9 +34,15 @@ public class ShortCustomField {
      */
     @JsonProperty("name")
     public String name;
+
     public ShortCustomField withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ShortCustomField(@JsonProperty("field_type") ShortCustomFieldFieldTypeEnum fieldType, @JsonProperty("id") Long id, @JsonProperty("name") String name) {
+        this.fieldType = fieldType;
+        this.id = id;
+        this.name = name;
+  }
 }

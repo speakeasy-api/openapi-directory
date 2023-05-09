@@ -15,9 +15,13 @@ public class LogList {
      */
     @JsonProperty("logs")
     public Log[] logs;
+
     public LogList withLogs(Log[] logs) {
         this.logs = logs;
         return this;
     }
     
+    public LogList(@JsonProperty("logs") Log[] logs) {
+        this.logs = logs;
+  }
 }

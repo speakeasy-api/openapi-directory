@@ -15,6 +15,7 @@ public class CreateIPSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public CreateIPSetResponse withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -23,9 +24,11 @@ public class CreateIPSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IPSet")
     public IPSet ipSet;
+
     public CreateIPSetResponse withIPSet(IPSet ipSet) {
         this.ipSet = ipSet;
         return this;
     }
     
+    public CreateIPSetResponse(){}
 }

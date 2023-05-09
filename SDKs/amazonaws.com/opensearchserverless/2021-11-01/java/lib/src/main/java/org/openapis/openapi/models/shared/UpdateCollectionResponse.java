@@ -15,9 +15,11 @@ public class UpdateCollectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateCollectionDetail")
     public UpdateCollectionDetail updateCollectionDetail;
+
     public UpdateCollectionResponse withUpdateCollectionDetail(UpdateCollectionDetail updateCollectionDetail) {
         this.updateCollectionDetail = updateCollectionDetail;
         return this;
     }
     
+    public UpdateCollectionResponse(){}
 }

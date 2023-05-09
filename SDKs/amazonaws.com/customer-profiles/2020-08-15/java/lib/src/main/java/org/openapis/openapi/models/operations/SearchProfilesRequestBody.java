@@ -15,6 +15,7 @@ public class SearchProfilesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalSearchKeys")
     public org.openapis.openapi.models.shared.AdditionalSearchKey[] additionalSearchKeys;
+
     public SearchProfilesRequestBody withAdditionalSearchKeys(org.openapis.openapi.models.shared.AdditionalSearchKey[] additionalSearchKeys) {
         this.additionalSearchKeys = additionalSearchKeys;
         return this;
@@ -25,6 +26,7 @@ public class SearchProfilesRequestBody {
      */
     @JsonProperty("KeyName")
     public String keyName;
+
     public SearchProfilesRequestBody withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -36,6 +38,7 @@ public class SearchProfilesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogicalOperator")
     public SearchProfilesRequestBodyLogicalOperatorEnum logicalOperator;
+
     public SearchProfilesRequestBody withLogicalOperator(SearchProfilesRequestBodyLogicalOperatorEnum logicalOperator) {
         this.logicalOperator = logicalOperator;
         return this;
@@ -46,9 +49,14 @@ public class SearchProfilesRequestBody {
      */
     @JsonProperty("Values")
     public String[] values;
+
     public SearchProfilesRequestBody withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public SearchProfilesRequestBody(@JsonProperty("KeyName") String keyName, @JsonProperty("Values") String[] values) {
+        this.keyName = keyName;
+        this.values = values;
+  }
 }

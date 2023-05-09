@@ -15,6 +15,7 @@ public class CreateExperimentTemplateRequestBodyLogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudWatchLogsConfiguration")
     public org.openapis.openapi.models.shared.ExperimentTemplateCloudWatchLogsLogConfigurationInput cloudWatchLogsConfiguration;
+
     public CreateExperimentTemplateRequestBodyLogConfiguration withCloudWatchLogsConfiguration(org.openapis.openapi.models.shared.ExperimentTemplateCloudWatchLogsLogConfigurationInput cloudWatchLogsConfiguration) {
         this.cloudWatchLogsConfiguration = cloudWatchLogsConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class CreateExperimentTemplateRequestBodyLogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logSchemaVersion")
     public Long logSchemaVersion;
+
     public CreateExperimentTemplateRequestBodyLogConfiguration withLogSchemaVersion(Long logSchemaVersion) {
         this.logSchemaVersion = logSchemaVersion;
         return this;
@@ -31,9 +33,11 @@ public class CreateExperimentTemplateRequestBodyLogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Configuration")
     public org.openapis.openapi.models.shared.ExperimentTemplateS3LogConfigurationInput s3Configuration;
+
     public CreateExperimentTemplateRequestBodyLogConfiguration withS3Configuration(org.openapis.openapi.models.shared.ExperimentTemplateS3LogConfigurationInput s3Configuration) {
         this.s3Configuration = s3Configuration;
         return this;
     }
     
+    public CreateExperimentTemplateRequestBodyLogConfiguration(){}
 }

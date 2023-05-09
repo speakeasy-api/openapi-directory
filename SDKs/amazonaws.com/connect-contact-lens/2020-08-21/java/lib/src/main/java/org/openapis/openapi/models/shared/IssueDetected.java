@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IssueDetected {
     @JsonProperty("CharacterOffsets")
     public CharacterOffsets characterOffsets;
+
     public IssueDetected withCharacterOffsets(CharacterOffsets characterOffsets) {
         this.characterOffsets = characterOffsets;
         return this;
     }
     
+    public IssueDetected(@JsonProperty("CharacterOffsets") CharacterOffsets characterOffsets) {
+        this.characterOffsets = characterOffsets;
+  }
 }

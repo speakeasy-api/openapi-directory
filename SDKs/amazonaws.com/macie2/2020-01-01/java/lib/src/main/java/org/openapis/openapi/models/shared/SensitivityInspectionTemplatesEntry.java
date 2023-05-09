@@ -15,6 +15,7 @@ public class SensitivityInspectionTemplatesEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SensitivityInspectionTemplatesEntry withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class SensitivityInspectionTemplatesEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SensitivityInspectionTemplatesEntry withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SensitivityInspectionTemplatesEntry(){}
 }

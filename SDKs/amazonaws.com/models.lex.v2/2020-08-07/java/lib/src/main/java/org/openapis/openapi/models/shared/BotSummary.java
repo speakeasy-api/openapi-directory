@@ -20,6 +20,7 @@ public class BotSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public BotSummary withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -28,6 +29,7 @@ public class BotSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botName")
     public String botName;
+
     public BotSummary withBotName(String botName) {
         this.botName = botName;
         return this;
@@ -36,6 +38,7 @@ public class BotSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botStatus")
     public BotStatusEnum botStatus;
+
     public BotSummary withBotStatus(BotStatusEnum botStatus) {
         this.botStatus = botStatus;
         return this;
@@ -44,6 +47,7 @@ public class BotSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botType")
     public BotTypeEnum botType;
+
     public BotSummary withBotType(BotTypeEnum botType) {
         this.botType = botType;
         return this;
@@ -52,6 +56,7 @@ public class BotSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BotSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +67,7 @@ public class BotSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public BotSummary withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -70,9 +76,11 @@ public class BotSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestBotVersion")
     public String latestBotVersion;
+
     public BotSummary withLatestBotVersion(String latestBotVersion) {
         this.latestBotVersion = latestBotVersion;
         return this;
     }
     
+    public BotSummary(){}
 }

@@ -12,6 +12,7 @@ public class CreateWhatIfForecastRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateWhatIfForecastRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -20,6 +21,7 @@ public class CreateWhatIfForecastRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeSeriesReplacementsDataSource")
     public TimeSeriesReplacementsDataSource timeSeriesReplacementsDataSource;
+
     public CreateWhatIfForecastRequest withTimeSeriesReplacementsDataSource(TimeSeriesReplacementsDataSource timeSeriesReplacementsDataSource) {
         this.timeSeriesReplacementsDataSource = timeSeriesReplacementsDataSource;
         return this;
@@ -28,6 +30,7 @@ public class CreateWhatIfForecastRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeSeriesTransformations")
     public TimeSeriesTransformation[] timeSeriesTransformations;
+
     public CreateWhatIfForecastRequest withTimeSeriesTransformations(TimeSeriesTransformation[] timeSeriesTransformations) {
         this.timeSeriesTransformations = timeSeriesTransformations;
         return this;
@@ -35,6 +38,7 @@ public class CreateWhatIfForecastRequest {
     
     @JsonProperty("WhatIfAnalysisArn")
     public String whatIfAnalysisArn;
+
     public CreateWhatIfForecastRequest withWhatIfAnalysisArn(String whatIfAnalysisArn) {
         this.whatIfAnalysisArn = whatIfAnalysisArn;
         return this;
@@ -42,9 +46,14 @@ public class CreateWhatIfForecastRequest {
     
     @JsonProperty("WhatIfForecastName")
     public String whatIfForecastName;
+
     public CreateWhatIfForecastRequest withWhatIfForecastName(String whatIfForecastName) {
         this.whatIfForecastName = whatIfForecastName;
         return this;
     }
     
+    public CreateWhatIfForecastRequest(@JsonProperty("WhatIfAnalysisArn") String whatIfAnalysisArn, @JsonProperty("WhatIfForecastName") String whatIfForecastName) {
+        this.whatIfAnalysisArn = whatIfAnalysisArn;
+        this.whatIfForecastName = whatIfForecastName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGeofenceCollectionResponse {
@@ -12,6 +13,7 @@ public class CreateGeofenceCollectionResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateGeofenceCollectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateGeofenceCollectionResponse {
      */
     
     public Object conflictException;
+
     public CreateGeofenceCollectionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateGeofenceCollectionResponse {
     
     
     public String contentType;
+
     public CreateGeofenceCollectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateGeofenceCollectionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateGeofenceCollectionResponse createGeofenceCollectionResponse;
+
     public CreateGeofenceCollectionResponse withCreateGeofenceCollectionResponse(org.openapis.openapi.models.shared.CreateGeofenceCollectionResponse createGeofenceCollectionResponse) {
         this.createGeofenceCollectionResponse = createGeofenceCollectionResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateGeofenceCollectionResponse {
      */
     
     public Object internalServerException;
+
     public CreateGeofenceCollectionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CreateGeofenceCollectionResponse {
     
     
     public Integer statusCode;
+
     public CreateGeofenceCollectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateGeofenceCollectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGeofenceCollectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateGeofenceCollectionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateGeofenceCollectionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class CreateGeofenceCollectionResponse {
      */
     
     public Object throttlingException;
+
     public CreateGeofenceCollectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateGeofenceCollectionResponse {
      */
     
     public Object validationException;
+
     public CreateGeofenceCollectionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateGeofenceCollectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

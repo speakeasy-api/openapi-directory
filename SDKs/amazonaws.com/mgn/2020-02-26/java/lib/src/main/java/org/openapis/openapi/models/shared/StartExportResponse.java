@@ -15,9 +15,11 @@ public class StartExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportTask")
     public ExportTask exportTask;
+
     public StartExportResponse withExportTask(ExportTask exportTask) {
         this.exportTask = exportTask;
         return this;
     }
     
+    public StartExportResponse(){}
 }

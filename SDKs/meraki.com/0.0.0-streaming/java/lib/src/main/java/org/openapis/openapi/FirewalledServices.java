@@ -11,7 +11,6 @@ import java.nio.charset.StandardCharsets;
 import org.openapis.openapi.utils.HTTPClient;
 import org.openapis.openapi.utils.HTTPRequest;
 import org.openapis.openapi.utils.JSON;
-import org.openapis.openapi.utils.SerializedBody;
 
 public class FirewalledServices {
 	
@@ -53,11 +52,9 @@ public class FirewalledServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkFirewalledServiceResponse res = new org.openapis.openapi.models.operations.GetNetworkFirewalledServiceResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkFirewalledServiceResponse res = new org.openapis.openapi.models.operations.GetNetworkFirewalledServiceResponse(contentType, httpRes.statusCode()) {{
             getNetworkFirewalledService200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -93,11 +90,9 @@ public class FirewalledServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkFirewalledServicesResponse res = new org.openapis.openapi.models.operations.GetNetworkFirewalledServicesResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkFirewalledServicesResponse res = new org.openapis.openapi.models.operations.GetNetworkFirewalledServicesResponse(contentType, httpRes.statusCode()) {{
             getNetworkFirewalledServices200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,51 +100,6 @@ public class FirewalledServices {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object>[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>[]>() {});
                 res.getNetworkFirewalledServices200ApplicationJSONObjects = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Updates the accessibility settings for the given service ('ICMP', 'web', or 'SNMP')
-     * Updates the accessibility settings for the given service ('ICMP', 'web', or 'SNMP')
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.UpdateNetworkFirewalledServiceResponse updateNetworkFirewalledService(org.openapis.openapi.models.operations.UpdateNetworkFirewalledServiceRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkFirewalledServiceRequest.class, baseUrl, "/networks/{networkId}/firewalledServices/{service}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PUT");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
-        if (serializedRequestBody == null) {
-            throw new Exception("Request body is required");
-        }
-        req.setBody(serializedRequestBody);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.UpdateNetworkFirewalledServiceResponse res = new org.openapis.openapi.models.operations.UpdateNetworkFirewalledServiceResponse() {{
-            updateNetworkFirewalledService200ApplicationJSONObject = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.updateNetworkFirewalledService200ApplicationJSONObject = out;
             }
         }
 

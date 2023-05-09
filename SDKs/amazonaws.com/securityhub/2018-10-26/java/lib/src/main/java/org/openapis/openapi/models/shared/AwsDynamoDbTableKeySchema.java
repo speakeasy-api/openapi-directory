@@ -15,6 +15,7 @@ public class AwsDynamoDbTableKeySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeName")
     public String attributeName;
+
     public AwsDynamoDbTableKeySchema withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -23,9 +24,11 @@ public class AwsDynamoDbTableKeySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyType")
     public String keyType;
+
     public AwsDynamoDbTableKeySchema withKeyType(String keyType) {
         this.keyType = keyType;
         return this;
     }
     
+    public AwsDynamoDbTableKeySchema(){}
 }

@@ -15,9 +15,11 @@ public class TrainingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Assets")
     public Asset[] assets;
+
     public TrainingData withAssets(Asset[] assets) {
         this.assets = assets;
         return this;
     }
     
+    public TrainingData(){}
 }

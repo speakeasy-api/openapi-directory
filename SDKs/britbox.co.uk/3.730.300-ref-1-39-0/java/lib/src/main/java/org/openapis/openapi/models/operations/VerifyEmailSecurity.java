@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyEmailSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=authorization")
     public String verifyEmailAuth;
+
     public VerifyEmailSecurity withVerifyEmailAuth(String verifyEmailAuth) {
         this.verifyEmailAuth = verifyEmailAuth;
         return this;
     }
     
+    public VerifyEmailSecurity(@JsonProperty("verifyEmailAuth") String verifyEmailAuth) {
+        this.verifyEmailAuth = verifyEmailAuth;
+  }
 }

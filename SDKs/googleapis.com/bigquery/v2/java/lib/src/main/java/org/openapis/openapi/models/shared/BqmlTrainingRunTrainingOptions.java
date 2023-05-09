@@ -15,6 +15,7 @@ public class BqmlTrainingRunTrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("earlyStop")
     public Boolean earlyStop;
+
     public BqmlTrainingRunTrainingOptions withEarlyStop(Boolean earlyStop) {
         this.earlyStop = earlyStop;
         return this;
@@ -23,6 +24,7 @@ public class BqmlTrainingRunTrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("l1Reg")
     public Double l1Reg;
+
     public BqmlTrainingRunTrainingOptions withL1Reg(Double l1Reg) {
         this.l1Reg = l1Reg;
         return this;
@@ -31,6 +33,7 @@ public class BqmlTrainingRunTrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("l2Reg")
     public Double l2Reg;
+
     public BqmlTrainingRunTrainingOptions withL2Reg(Double l2Reg) {
         this.l2Reg = l2Reg;
         return this;
@@ -39,6 +42,7 @@ public class BqmlTrainingRunTrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learnRate")
     public Double learnRate;
+
     public BqmlTrainingRunTrainingOptions withLearnRate(Double learnRate) {
         this.learnRate = learnRate;
         return this;
@@ -47,6 +51,7 @@ public class BqmlTrainingRunTrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learnRateStrategy")
     public String learnRateStrategy;
+
     public BqmlTrainingRunTrainingOptions withLearnRateStrategy(String learnRateStrategy) {
         this.learnRateStrategy = learnRateStrategy;
         return this;
@@ -55,6 +60,7 @@ public class BqmlTrainingRunTrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineSearchInitLearnRate")
     public Double lineSearchInitLearnRate;
+
     public BqmlTrainingRunTrainingOptions withLineSearchInitLearnRate(Double lineSearchInitLearnRate) {
         this.lineSearchInitLearnRate = lineSearchInitLearnRate;
         return this;
@@ -63,6 +69,7 @@ public class BqmlTrainingRunTrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxIteration")
     public String maxIteration;
+
     public BqmlTrainingRunTrainingOptions withMaxIteration(String maxIteration) {
         this.maxIteration = maxIteration;
         return this;
@@ -71,6 +78,7 @@ public class BqmlTrainingRunTrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minRelProgress")
     public Double minRelProgress;
+
     public BqmlTrainingRunTrainingOptions withMinRelProgress(Double minRelProgress) {
         this.minRelProgress = minRelProgress;
         return this;
@@ -79,9 +87,11 @@ public class BqmlTrainingRunTrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warmStart")
     public Boolean warmStart;
+
     public BqmlTrainingRunTrainingOptions withWarmStart(Boolean warmStart) {
         this.warmStart = warmStart;
         return this;
     }
     
+    public BqmlTrainingRunTrainingOptions(){}
 }

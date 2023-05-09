@@ -15,9 +15,11 @@ public class PollForTaskOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskObject")
     public TaskObject taskObject;
+
     public PollForTaskOutput withTaskObject(TaskObject taskObject) {
         this.taskObject = taskObject;
         return this;
     }
     
+    public PollForTaskOutput(){}
 }

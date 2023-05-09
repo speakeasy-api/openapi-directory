@@ -18,9 +18,11 @@ public class AggregationResultHistogram {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buckets")
     public AggregationResultHistogramBucket[] buckets;
+
     public AggregationResultHistogram withBuckets(AggregationResultHistogramBucket[] buckets) {
         this.buckets = buckets;
         return this;
     }
     
+    public AggregationResultHistogram(){}
 }

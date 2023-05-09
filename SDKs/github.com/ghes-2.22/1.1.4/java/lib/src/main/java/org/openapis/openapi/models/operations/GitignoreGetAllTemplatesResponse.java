@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GitignoreGetAllTemplatesResponse {
     
     public String contentType;
+
     public GitignoreGetAllTemplatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GitignoreGetAllTemplatesResponse {
     
     
     public Integer statusCode;
+
     public GitignoreGetAllTemplatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GitignoreGetAllTemplatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GitignoreGetAllTemplatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GitignoreGetAllTemplatesResponse {
      */
     
     public String[] gitignoreGetAllTemplates200ApplicationJSONStrings;
+
     public GitignoreGetAllTemplatesResponse withGitignoreGetAllTemplates200ApplicationJSONStrings(String[] gitignoreGetAllTemplates200ApplicationJSONStrings) {
         this.gitignoreGetAllTemplates200ApplicationJSONStrings = gitignoreGetAllTemplates200ApplicationJSONStrings;
         return this;
     }
     
+    public GitignoreGetAllTemplatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

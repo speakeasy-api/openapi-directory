@@ -18,6 +18,7 @@ public class AccountItemUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountItemUpdatesSettings")
     public AccountItemUpdatesSettings accountItemUpdatesSettings;
+
     public AccountItemUpdates withAccountItemUpdatesSettings(AccountItemUpdatesSettings accountItemUpdatesSettings) {
         this.accountItemUpdatesSettings = accountItemUpdatesSettings;
         return this;
@@ -29,6 +30,7 @@ public class AccountItemUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveAllowAvailabilityUpdates")
     public Boolean effectiveAllowAvailabilityUpdates;
+
     public AccountItemUpdates withEffectiveAllowAvailabilityUpdates(Boolean effectiveAllowAvailabilityUpdates) {
         this.effectiveAllowAvailabilityUpdates = effectiveAllowAvailabilityUpdates;
         return this;
@@ -40,6 +42,7 @@ public class AccountItemUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveAllowConditionUpdates")
     public Boolean effectiveAllowConditionUpdates;
+
     public AccountItemUpdates withEffectiveAllowConditionUpdates(Boolean effectiveAllowConditionUpdates) {
         this.effectiveAllowConditionUpdates = effectiveAllowConditionUpdates;
         return this;
@@ -51,6 +54,7 @@ public class AccountItemUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveAllowPriceUpdates")
     public Boolean effectiveAllowPriceUpdates;
+
     public AccountItemUpdates withEffectiveAllowPriceUpdates(Boolean effectiveAllowPriceUpdates) {
         this.effectiveAllowPriceUpdates = effectiveAllowPriceUpdates;
         return this;
@@ -62,9 +66,11 @@ public class AccountItemUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveAllowStrictAvailabilityUpdates")
     public Boolean effectiveAllowStrictAvailabilityUpdates;
+
     public AccountItemUpdates withEffectiveAllowStrictAvailabilityUpdates(Boolean effectiveAllowStrictAvailabilityUpdates) {
         this.effectiveAllowStrictAvailabilityUpdates = effectiveAllowStrictAvailabilityUpdates;
         return this;
     }
     
+    public AccountItemUpdates(){}
 }

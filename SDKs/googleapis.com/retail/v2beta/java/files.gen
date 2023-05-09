@@ -234,6 +234,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2betaMode
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2betaModelTrainingStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2betaModel.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2betaModelInput.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2betaModelModelFeaturesConfig.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2betaModelFrequentlyBoughtTogetherFeaturesConfigContextProductsTypeEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2betaModelFrequentlyBoughtTogetherFeaturesConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2betaListModelsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2betaModelServingConfigList.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2betaServingConfigDiversityTypeEnum.java
@@ -280,4 +283,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2betaPurg
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2betaRejoinUserEventsRequestUserEventRejoinScopeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRetailV2betaRejoinUserEventsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleLongrunningListOperationsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

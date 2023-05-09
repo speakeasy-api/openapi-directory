@@ -18,6 +18,7 @@ public class UpdateFileSystemOpenZFSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomaticBackupRetentionDays")
     public Long automaticBackupRetentionDays;
+
     public UpdateFileSystemOpenZFSConfiguration withAutomaticBackupRetentionDays(Long automaticBackupRetentionDays) {
         this.automaticBackupRetentionDays = automaticBackupRetentionDays;
         return this;
@@ -26,6 +27,7 @@ public class UpdateFileSystemOpenZFSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyTagsToBackups")
     public Boolean copyTagsToBackups;
+
     public UpdateFileSystemOpenZFSConfiguration withCopyTagsToBackups(Boolean copyTagsToBackups) {
         this.copyTagsToBackups = copyTagsToBackups;
         return this;
@@ -34,6 +36,7 @@ public class UpdateFileSystemOpenZFSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyTagsToVolumes")
     public Boolean copyTagsToVolumes;
+
     public UpdateFileSystemOpenZFSConfiguration withCopyTagsToVolumes(Boolean copyTagsToVolumes) {
         this.copyTagsToVolumes = copyTagsToVolumes;
         return this;
@@ -45,6 +48,7 @@ public class UpdateFileSystemOpenZFSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DailyAutomaticBackupStartTime")
     public String dailyAutomaticBackupStartTime;
+
     public UpdateFileSystemOpenZFSConfiguration withDailyAutomaticBackupStartTime(String dailyAutomaticBackupStartTime) {
         this.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
         return this;
@@ -56,6 +60,7 @@ public class UpdateFileSystemOpenZFSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiskIopsConfiguration")
     public DiskIopsConfiguration diskIopsConfiguration;
+
     public UpdateFileSystemOpenZFSConfiguration withDiskIopsConfiguration(DiskIopsConfiguration diskIopsConfiguration) {
         this.diskIopsConfiguration = diskIopsConfiguration;
         return this;
@@ -64,6 +69,7 @@ public class UpdateFileSystemOpenZFSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThroughputCapacity")
     public Long throughputCapacity;
+
     public UpdateFileSystemOpenZFSConfiguration withThroughputCapacity(Long throughputCapacity) {
         this.throughputCapacity = throughputCapacity;
         return this;
@@ -75,9 +81,11 @@ public class UpdateFileSystemOpenZFSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeeklyMaintenanceStartTime")
     public String weeklyMaintenanceStartTime;
+
     public UpdateFileSystemOpenZFSConfiguration withWeeklyMaintenanceStartTime(String weeklyMaintenanceStartTime) {
         this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
         return this;
     }
     
+    public UpdateFileSystemOpenZFSConfiguration(){}
 }

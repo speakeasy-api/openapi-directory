@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartRxNormInferenceJobResponse {
     
     public String contentType;
+
     public StartRxNormInferenceJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartRxNormInferenceJobResponse {
      */
     
     public Object internalServerException;
+
     public StartRxNormInferenceJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StartRxNormInferenceJobResponse {
      */
     
     public Object invalidRequestException;
+
     public StartRxNormInferenceJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StartRxNormInferenceJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartRxNormInferenceJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartRxNormInferenceJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartRxNormInferenceJobResponse startRxNormInferenceJobResponse;
+
     public StartRxNormInferenceJobResponse withStartRxNormInferenceJobResponse(org.openapis.openapi.models.shared.StartRxNormInferenceJobResponse startRxNormInferenceJobResponse) {
         this.startRxNormInferenceJobResponse = startRxNormInferenceJobResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartRxNormInferenceJobResponse {
     
     
     public Integer statusCode;
+
     public StartRxNormInferenceJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartRxNormInferenceJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartRxNormInferenceJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class StartRxNormInferenceJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public StartRxNormInferenceJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public StartRxNormInferenceJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

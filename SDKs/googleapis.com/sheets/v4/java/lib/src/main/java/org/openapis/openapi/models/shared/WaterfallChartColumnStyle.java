@@ -18,6 +18,7 @@ public class WaterfallChartColumnStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public Color color;
+
     public WaterfallChartColumnStyle withColor(Color color) {
         this.color = color;
         return this;
@@ -29,6 +30,7 @@ public class WaterfallChartColumnStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colorStyle")
     public ColorStyle colorStyle;
+
     public WaterfallChartColumnStyle withColorStyle(ColorStyle colorStyle) {
         this.colorStyle = colorStyle;
         return this;
@@ -40,9 +42,11 @@ public class WaterfallChartColumnStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public WaterfallChartColumnStyle withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public WaterfallChartColumnStyle(){}
 }

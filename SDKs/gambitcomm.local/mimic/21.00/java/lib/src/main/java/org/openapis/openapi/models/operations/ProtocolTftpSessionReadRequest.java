@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolTftpSessionReadRequest {
@@ -12,6 +13,7 @@ public class ProtocolTftpSessionReadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolTftpSessionReadRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class ProtocolTftpSessionReadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=srcfile")
     public String srcfile;
+
     public ProtocolTftpSessionReadRequest withSrcfile(String srcfile) {
         this.srcfile = srcfile;
         return this;
     }
     
+    public ProtocolTftpSessionReadRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("srcfile") String srcfile) {
+        this.agentNum = agentNum;
+        this.srcfile = srcfile;
+  }
 }

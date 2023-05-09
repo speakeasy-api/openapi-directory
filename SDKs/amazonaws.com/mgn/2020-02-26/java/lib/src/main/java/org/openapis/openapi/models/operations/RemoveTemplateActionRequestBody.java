@@ -12,6 +12,7 @@ public class RemoveTemplateActionRequestBody {
      */
     @JsonProperty("actionID")
     public String actionID;
+
     public RemoveTemplateActionRequestBody withActionID(String actionID) {
         this.actionID = actionID;
         return this;
@@ -22,9 +23,14 @@ public class RemoveTemplateActionRequestBody {
      */
     @JsonProperty("launchConfigurationTemplateID")
     public String launchConfigurationTemplateID;
+
     public RemoveTemplateActionRequestBody withLaunchConfigurationTemplateID(String launchConfigurationTemplateID) {
         this.launchConfigurationTemplateID = launchConfigurationTemplateID;
         return this;
     }
     
+    public RemoveTemplateActionRequestBody(@JsonProperty("actionID") String actionID, @JsonProperty("launchConfigurationTemplateID") String launchConfigurationTemplateID) {
+        this.actionID = actionID;
+        this.launchConfigurationTemplateID = launchConfigurationTemplateID;
+  }
 }

@@ -15,6 +15,7 @@ public class QueryExecutionStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataManifestLocation")
     public String dataManifestLocation;
+
     public QueryExecutionStatistics withDataManifestLocation(String dataManifestLocation) {
         this.dataManifestLocation = dataManifestLocation;
         return this;
@@ -23,6 +24,7 @@ public class QueryExecutionStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataScannedInBytes")
     public Long dataScannedInBytes;
+
     public QueryExecutionStatistics withDataScannedInBytes(Long dataScannedInBytes) {
         this.dataScannedInBytes = dataScannedInBytes;
         return this;
@@ -31,6 +33,7 @@ public class QueryExecutionStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineExecutionTimeInMillis")
     public Long engineExecutionTimeInMillis;
+
     public QueryExecutionStatistics withEngineExecutionTimeInMillis(Long engineExecutionTimeInMillis) {
         this.engineExecutionTimeInMillis = engineExecutionTimeInMillis;
         return this;
@@ -39,6 +42,7 @@ public class QueryExecutionStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryPlanningTimeInMillis")
     public Long queryPlanningTimeInMillis;
+
     public QueryExecutionStatistics withQueryPlanningTimeInMillis(Long queryPlanningTimeInMillis) {
         this.queryPlanningTimeInMillis = queryPlanningTimeInMillis;
         return this;
@@ -47,6 +51,7 @@ public class QueryExecutionStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryQueueTimeInMillis")
     public Long queryQueueTimeInMillis;
+
     public QueryExecutionStatistics withQueryQueueTimeInMillis(Long queryQueueTimeInMillis) {
         this.queryQueueTimeInMillis = queryQueueTimeInMillis;
         return this;
@@ -55,6 +60,7 @@ public class QueryExecutionStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultReuseInformation")
     public ResultReuseInformation resultReuseInformation;
+
     public QueryExecutionStatistics withResultReuseInformation(ResultReuseInformation resultReuseInformation) {
         this.resultReuseInformation = resultReuseInformation;
         return this;
@@ -63,6 +69,7 @@ public class QueryExecutionStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceProcessingTimeInMillis")
     public Long serviceProcessingTimeInMillis;
+
     public QueryExecutionStatistics withServiceProcessingTimeInMillis(Long serviceProcessingTimeInMillis) {
         this.serviceProcessingTimeInMillis = serviceProcessingTimeInMillis;
         return this;
@@ -71,9 +78,11 @@ public class QueryExecutionStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalExecutionTimeInMillis")
     public Long totalExecutionTimeInMillis;
+
     public QueryExecutionStatistics withTotalExecutionTimeInMillis(Long totalExecutionTimeInMillis) {
         this.totalExecutionTimeInMillis = totalExecutionTimeInMillis;
         return this;
     }
     
+    public QueryExecutionStatistics(){}
 }

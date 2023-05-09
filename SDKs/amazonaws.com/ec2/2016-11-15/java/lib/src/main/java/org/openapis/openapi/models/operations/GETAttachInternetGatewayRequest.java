@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAttachInternetGatewayRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETAttachInternetGatewayActionEnum action;
+
     public GETAttachInternetGatewayRequest withAction(GETAttachInternetGatewayActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETAttachInternetGatewayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETAttachInternetGatewayRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETAttachInternetGatewayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InternetGatewayId")
     public String internetGatewayId;
+
     public GETAttachInternetGatewayRequest withInternetGatewayId(String internetGatewayId) {
         this.internetGatewayId = internetGatewayId;
         return this;
@@ -36,6 +40,7 @@ public class GETAttachInternetGatewayRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETAttachInternetGatewayVersionEnum version;
+
     public GETAttachInternetGatewayRequest withVersion(GETAttachInternetGatewayVersionEnum version) {
         this.version = version;
         return this;
@@ -46,6 +51,7 @@ public class GETAttachInternetGatewayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcId")
     public String vpcId;
+
     public GETAttachInternetGatewayRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -53,6 +59,7 @@ public class GETAttachInternetGatewayRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETAttachInternetGatewayRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETAttachInternetGatewayRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETAttachInternetGatewayRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETAttachInternetGatewayRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETAttachInternetGatewayRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETAttachInternetGatewayRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETAttachInternetGatewayRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETAttachInternetGatewayRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETAttachInternetGatewayRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETAttachInternetGatewayRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETAttachInternetGatewayRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETAttachInternetGatewayRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETAttachInternetGatewayRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETAttachInternetGatewayRequest(@JsonProperty("Action") GETAttachInternetGatewayActionEnum action, @JsonProperty("InternetGatewayId") String internetGatewayId, @JsonProperty("Version") GETAttachInternetGatewayVersionEnum version, @JsonProperty("VpcId") String vpcId) {
+        this.action = action;
+        this.internetGatewayId = internetGatewayId;
+        this.version = version;
+        this.vpcId = vpcId;
+  }
 }

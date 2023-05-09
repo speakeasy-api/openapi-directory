@@ -18,9 +18,11 @@ public class Dma {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public Dma withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public Dma(){}
 }

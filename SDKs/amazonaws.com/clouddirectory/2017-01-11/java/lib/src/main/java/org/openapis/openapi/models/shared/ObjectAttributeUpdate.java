@@ -15,6 +15,7 @@ public class ObjectAttributeUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectAttributeAction")
     public ObjectAttributeAction objectAttributeAction;
+
     public ObjectAttributeUpdate withObjectAttributeAction(ObjectAttributeAction objectAttributeAction) {
         this.objectAttributeAction = objectAttributeAction;
         return this;
@@ -23,9 +24,11 @@ public class ObjectAttributeUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectAttributeKey")
     public AttributeKey objectAttributeKey;
+
     public ObjectAttributeUpdate withObjectAttributeKey(AttributeKey objectAttributeKey) {
         this.objectAttributeKey = objectAttributeKey;
         return this;
     }
     
+    public ObjectAttributeUpdate(){}
 }

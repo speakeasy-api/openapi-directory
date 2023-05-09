@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Session {
     @JsonProperty("constraints")
     public Constraints constraints;
+
     public Session withConstraints(Constraints constraints) {
         this.constraints = constraints;
         return this;
@@ -25,6 +26,7 @@ public class Session {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("deadline")
     public OffsetDateTime deadline;
+
     public Session withDeadline(OffsetDateTime deadline) {
         this.deadline = deadline;
         return this;
@@ -32,6 +34,7 @@ public class Session {
     
     @JsonProperty("identifier")
     public String identifier;
+
     public Session withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -40,6 +43,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playerContext")
     public PlayerContext playerContext;
+
     public Session withPlayerContext(PlayerContext playerContext) {
         this.playerContext = playerContext;
         return this;
@@ -49,6 +53,7 @@ public class Session {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("requested")
     public OffsetDateTime requested;
+
     public Session withRequested(OffsetDateTime requested) {
         this.requested = requested;
         return this;
@@ -56,9 +61,17 @@ public class Session {
     
     @JsonProperty("version")
     public String version;
+
     public Session withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Session(@JsonProperty("constraints") Constraints constraints, @JsonProperty("deadline") OffsetDateTime deadline, @JsonProperty("identifier") String identifier, @JsonProperty("requested") OffsetDateTime requested, @JsonProperty("version") String version) {
+        this.constraints = constraints;
+        this.deadline = deadline;
+        this.identifier = identifier;
+        this.requested = requested;
+        this.version = version;
+  }
 }

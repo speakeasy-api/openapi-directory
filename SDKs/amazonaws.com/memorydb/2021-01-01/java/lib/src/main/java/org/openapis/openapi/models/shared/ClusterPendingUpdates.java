@@ -15,6 +15,7 @@ public class ClusterPendingUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ACLs")
     public ACLsUpdateStatus acLs;
+
     public ClusterPendingUpdates withACLs(ACLsUpdateStatus acLs) {
         this.acLs = acLs;
         return this;
@@ -23,6 +24,7 @@ public class ClusterPendingUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resharding")
     public ReshardingStatus resharding;
+
     public ClusterPendingUpdates withResharding(ReshardingStatus resharding) {
         this.resharding = resharding;
         return this;
@@ -31,9 +33,11 @@ public class ClusterPendingUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceUpdates")
     public PendingModifiedServiceUpdate[] serviceUpdates;
+
     public ClusterPendingUpdates withServiceUpdates(PendingModifiedServiceUpdate[] serviceUpdates) {
         this.serviceUpdates = serviceUpdates;
         return this;
     }
     
+    public ClusterPendingUpdates(){}
 }

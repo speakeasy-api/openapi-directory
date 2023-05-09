@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateEndpointAccessRequest {
     @JsonProperty("endpointName")
     public String endpointName;
+
     public UpdateEndpointAccessRequest withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -19,9 +20,13 @@ public class UpdateEndpointAccessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcSecurityGroupIds")
     public String[] vpcSecurityGroupIds;
+
     public UpdateEndpointAccessRequest withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public UpdateEndpointAccessRequest(@JsonProperty("endpointName") String endpointName) {
+        this.endpointName = endpointName;
+  }
 }

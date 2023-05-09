@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAutoScalingInstancesType {
     
     public String[] instanceIds;
+
     public DescribeAutoScalingInstancesType withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
@@ -16,6 +17,7 @@ public class DescribeAutoScalingInstancesType {
     
     
     public Long maxRecords;
+
     public DescribeAutoScalingInstancesType withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -23,9 +25,11 @@ public class DescribeAutoScalingInstancesType {
     
     
     public String nextToken;
+
     public DescribeAutoScalingInstancesType withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAutoScalingInstancesType(){}
 }

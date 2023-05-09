@@ -15,9 +15,11 @@ public class CreateTemplateSyncConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateSyncConfig")
     public TemplateSyncConfig templateSyncConfig;
+
     public CreateTemplateSyncConfigOutput withTemplateSyncConfig(TemplateSyncConfig templateSyncConfig) {
         this.templateSyncConfig = templateSyncConfig;
         return this;
     }
     
+    public CreateTemplateSyncConfigOutput(){}
 }

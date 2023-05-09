@@ -15,6 +15,7 @@ public class GetApiCatalogSystemPubFacetsCategoryCategoryId200ApplicationJSON {
      */
     @JsonProperty("Id")
     public Long id;
+
     public GetApiCatalogSystemPubFacetsCategoryCategoryId200ApplicationJSON withId(Long id) {
         this.id = id;
         return this;
@@ -25,9 +26,14 @@ public class GetApiCatalogSystemPubFacetsCategoryCategoryId200ApplicationJSON {
      */
     @JsonProperty("Name")
     public String name;
+
     public GetApiCatalogSystemPubFacetsCategoryCategoryId200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetApiCatalogSystemPubFacetsCategoryCategoryId200ApplicationJSON(@JsonProperty("Id") Long id, @JsonProperty("Name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

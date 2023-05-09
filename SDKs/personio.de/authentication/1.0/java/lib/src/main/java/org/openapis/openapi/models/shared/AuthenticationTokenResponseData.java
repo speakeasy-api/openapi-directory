@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AuthenticationTokenResponseData {
     @JsonProperty("token")
     public String token;
+
     public AuthenticationTokenResponseData withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public AuthenticationTokenResponseData(@JsonProperty("token") String token) {
+        this.token = token;
+  }
 }

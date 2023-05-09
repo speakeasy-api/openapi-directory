@@ -15,6 +15,7 @@ public class ConnectorEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasNestedEntities")
     public Boolean hasNestedEntities;
+
     public ConnectorEntity withHasNestedEntities(Boolean hasNestedEntities) {
         this.hasNestedEntities = hasNestedEntities;
         return this;
@@ -23,6 +24,7 @@ public class ConnectorEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public ConnectorEntity withLabel(String label) {
         this.label = label;
         return this;
@@ -30,9 +32,13 @@ public class ConnectorEntity {
     
     @JsonProperty("name")
     public String name;
+
     public ConnectorEntity withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ConnectorEntity(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

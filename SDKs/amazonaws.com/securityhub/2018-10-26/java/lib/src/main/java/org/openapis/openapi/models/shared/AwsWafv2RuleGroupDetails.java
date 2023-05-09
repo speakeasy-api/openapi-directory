@@ -15,6 +15,7 @@ public class AwsWafv2RuleGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public AwsWafv2RuleGroupDetails withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class AwsWafv2RuleGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Capacity")
     public Long capacity;
+
     public AwsWafv2RuleGroupDetails withCapacity(Long capacity) {
         this.capacity = capacity;
         return this;
@@ -31,6 +33,7 @@ public class AwsWafv2RuleGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public AwsWafv2RuleGroupDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class AwsWafv2RuleGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public AwsWafv2RuleGroupDetails withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class AwsWafv2RuleGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsWafv2RuleGroupDetails withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +60,7 @@ public class AwsWafv2RuleGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rules")
     public AwsWafv2RulesDetails[] rules;
+
     public AwsWafv2RuleGroupDetails withRules(AwsWafv2RulesDetails[] rules) {
         this.rules = rules;
         return this;
@@ -63,6 +69,7 @@ public class AwsWafv2RuleGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Scope")
     public String scope;
+
     public AwsWafv2RuleGroupDetails withScope(String scope) {
         this.scope = scope;
         return this;
@@ -71,9 +78,11 @@ public class AwsWafv2RuleGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VisibilityConfig")
     public AwsWafv2VisibilityConfigDetails visibilityConfig;
+
     public AwsWafv2RuleGroupDetails withVisibilityConfig(AwsWafv2VisibilityConfigDetails visibilityConfig) {
         this.visibilityConfig = visibilityConfig;
         return this;
     }
     
+    public AwsWafv2RuleGroupDetails(){}
 }

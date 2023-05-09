@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.IndexingUrlNotificationsGetMetadataSecurity;
 import org.openapis.openapi.models.operations.IndexingUrlNotificationsGetMetadataRequest;
 import org.openapis.openapi.models.operations.IndexingUrlNotificationsGetMetadataResponse;
+import org.openapis.openapi.models.operations.IndexingUrlNotificationsGetMetadataSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -17,9 +16,9 @@ public class Application {
                 .build();
 
             IndexingUrlNotificationsGetMetadataRequest req = new IndexingUrlNotificationsGetMetadataRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 accessToken = "provident";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "quibusdam";
                 fields = "unde";
                 key = "nulla";
@@ -29,18 +28,20 @@ public class Application {
                 uploadType = "vel";
                 uploadProtocol = "error";
                 url = "deserunt";
-            }}            
+            }};            
 
-            IndexingUrlNotificationsGetMetadataResponse res = sdk.urlNotifications.indexingUrlNotificationsGetMetadata(req, new IndexingUrlNotificationsGetMetadataSecurity() {{
+            IndexingUrlNotificationsGetMetadataResponse res = sdk.urlNotifications.indexingUrlNotificationsGetMetadata(req, new IndexingUrlNotificationsGetMetadataSecurity("suscipit", "iure") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.urlNotificationMetadata.isPresent()) {
+            if (res.urlNotificationMetadata != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

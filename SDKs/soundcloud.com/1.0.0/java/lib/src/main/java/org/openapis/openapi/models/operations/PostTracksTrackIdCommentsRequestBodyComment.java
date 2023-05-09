@@ -14,6 +14,7 @@ public class PostTracksTrackIdCommentsRequestBodyComment {
      */
     @JsonProperty("body")
     public String body;
+
     public PostTracksTrackIdCommentsRequestBodyComment withBody(String body) {
         this.body = body;
         return this;
@@ -25,9 +26,13 @@ public class PostTracksTrackIdCommentsRequestBodyComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public Object timestamp;
+
     public PostTracksTrackIdCommentsRequestBodyComment withTimestamp(Object timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public PostTracksTrackIdCommentsRequestBodyComment(@JsonProperty("body") String body) {
+        this.body = body;
+  }
 }

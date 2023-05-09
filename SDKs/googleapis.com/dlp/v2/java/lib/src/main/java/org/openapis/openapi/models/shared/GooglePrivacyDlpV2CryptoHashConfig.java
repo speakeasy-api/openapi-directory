@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2CryptoHashConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cryptoKey")
     public GooglePrivacyDlpV2CryptoKey cryptoKey;
+
     public GooglePrivacyDlpV2CryptoHashConfig withCryptoKey(GooglePrivacyDlpV2CryptoKey cryptoKey) {
         this.cryptoKey = cryptoKey;
         return this;
     }
     
+    public GooglePrivacyDlpV2CryptoHashConfig(){}
 }

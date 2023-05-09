@@ -67,12 +67,10 @@ public class Requests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VerifyRequestResponse res = new org.openapis.openapi.models.operations.VerifyRequestResponse() {{
+        org.openapis.openapi.models.operations.VerifyRequestResponse res = new org.openapis.openapi.models.operations.VerifyRequestResponse(contentType, httpRes.statusCode()) {{
             verifyRequest200ApplicationJSONOneOf = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateAgreementRequest {
     @JsonProperty("AccessRole")
     public String accessRole;
+
     public CreateAgreementRequest withAccessRole(String accessRole) {
         this.accessRole = accessRole;
         return this;
@@ -18,6 +19,7 @@ public class CreateAgreementRequest {
     
     @JsonProperty("BaseDirectory")
     public String baseDirectory;
+
     public CreateAgreementRequest withBaseDirectory(String baseDirectory) {
         this.baseDirectory = baseDirectory;
         return this;
@@ -26,6 +28,7 @@ public class CreateAgreementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateAgreementRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class CreateAgreementRequest {
     
     @JsonProperty("LocalProfileId")
     public String localProfileId;
+
     public CreateAgreementRequest withLocalProfileId(String localProfileId) {
         this.localProfileId = localProfileId;
         return this;
@@ -40,6 +44,7 @@ public class CreateAgreementRequest {
     
     @JsonProperty("PartnerProfileId")
     public String partnerProfileId;
+
     public CreateAgreementRequest withPartnerProfileId(String partnerProfileId) {
         this.partnerProfileId = partnerProfileId;
         return this;
@@ -47,6 +52,7 @@ public class CreateAgreementRequest {
     
     @JsonProperty("ServerId")
     public String serverId;
+
     public CreateAgreementRequest withServerId(String serverId) {
         this.serverId = serverId;
         return this;
@@ -55,6 +61,7 @@ public class CreateAgreementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AgreementStatusTypeEnum status;
+
     public CreateAgreementRequest withStatus(AgreementStatusTypeEnum status) {
         this.status = status;
         return this;
@@ -63,9 +70,17 @@ public class CreateAgreementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateAgreementRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAgreementRequest(@JsonProperty("AccessRole") String accessRole, @JsonProperty("BaseDirectory") String baseDirectory, @JsonProperty("LocalProfileId") String localProfileId, @JsonProperty("PartnerProfileId") String partnerProfileId, @JsonProperty("ServerId") String serverId) {
+        this.accessRole = accessRole;
+        this.baseDirectory = baseDirectory;
+        this.localProfileId = localProfileId;
+        this.partnerProfileId = partnerProfileId;
+        this.serverId = serverId;
+  }
 }

@@ -21,6 +21,7 @@ public class JobFlowExecutionStatusDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public JobFlowExecutionStatusDetail withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -31,6 +32,7 @@ public class JobFlowExecutionStatusDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndDateTime")
     public OffsetDateTime endDateTime;
+
     public JobFlowExecutionStatusDetail withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -39,6 +41,7 @@ public class JobFlowExecutionStatusDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastStateChangeReason")
     public String lastStateChangeReason;
+
     public JobFlowExecutionStatusDetail withLastStateChangeReason(String lastStateChangeReason) {
         this.lastStateChangeReason = lastStateChangeReason;
         return this;
@@ -49,6 +52,7 @@ public class JobFlowExecutionStatusDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReadyDateTime")
     public OffsetDateTime readyDateTime;
+
     public JobFlowExecutionStatusDetail withReadyDateTime(OffsetDateTime readyDateTime) {
         this.readyDateTime = readyDateTime;
         return this;
@@ -59,6 +63,7 @@ public class JobFlowExecutionStatusDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartDateTime")
     public OffsetDateTime startDateTime;
+
     public JobFlowExecutionStatusDetail withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -66,9 +71,14 @@ public class JobFlowExecutionStatusDetail {
     
     @JsonProperty("State")
     public JobFlowExecutionStateEnum state;
+
     public JobFlowExecutionStatusDetail withState(JobFlowExecutionStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public JobFlowExecutionStatusDetail(@JsonProperty("CreationDateTime") OffsetDateTime creationDateTime, @JsonProperty("State") JobFlowExecutionStateEnum state) {
+        this.creationDateTime = creationDateTime;
+        this.state = state;
+  }
 }

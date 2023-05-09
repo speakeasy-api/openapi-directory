@@ -12,6 +12,7 @@ public class ListWorkersWithQualificationTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListWorkersWithQualificationTypeRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListWorkersWithQualificationTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListWorkersWithQualificationTypeRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,6 +29,7 @@ public class ListWorkersWithQualificationTypeRequest {
     
     @JsonProperty("QualificationTypeId")
     public String qualificationTypeId;
+
     public ListWorkersWithQualificationTypeRequest withQualificationTypeId(String qualificationTypeId) {
         this.qualificationTypeId = qualificationTypeId;
         return this;
@@ -35,9 +38,13 @@ public class ListWorkersWithQualificationTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public QualificationStatusEnum status;
+
     public ListWorkersWithQualificationTypeRequest withStatus(QualificationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ListWorkersWithQualificationTypeRequest(@JsonProperty("QualificationTypeId") String qualificationTypeId) {
+        this.qualificationTypeId = qualificationTypeId;
+  }
 }

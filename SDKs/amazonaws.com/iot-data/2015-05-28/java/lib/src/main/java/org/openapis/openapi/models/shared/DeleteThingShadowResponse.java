@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteThingShadowResponse {
     @JsonProperty("payload")
     public String payload;
+
     public DeleteThingShadowResponse withPayload(String payload) {
         this.payload = payload;
         return this;
     }
     
+    public DeleteThingShadowResponse(@JsonProperty("payload") String payload) {
+        this.payload = payload;
+  }
 }

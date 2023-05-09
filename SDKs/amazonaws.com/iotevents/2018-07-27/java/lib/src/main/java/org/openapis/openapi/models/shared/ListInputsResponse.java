@@ -15,6 +15,7 @@ public class ListInputsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputSummaries")
     public InputSummary[] inputSummaries;
+
     public ListInputsResponse withInputSummaries(InputSummary[] inputSummaries) {
         this.inputSummaries = inputSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListInputsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListInputsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListInputsResponse(){}
 }

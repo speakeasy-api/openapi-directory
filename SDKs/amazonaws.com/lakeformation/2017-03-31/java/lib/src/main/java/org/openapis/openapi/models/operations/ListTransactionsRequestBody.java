@@ -15,6 +15,7 @@ public class ListTransactionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public ListTransactionsRequestBody withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -26,6 +27,7 @@ public class ListTransactionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListTransactionsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class ListTransactionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTransactionsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -48,9 +51,11 @@ public class ListTransactionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusFilter")
     public ListTransactionsRequestBodyStatusFilterEnum statusFilter;
+
     public ListTransactionsRequestBody withStatusFilter(ListTransactionsRequestBodyStatusFilterEnum statusFilter) {
         this.statusFilter = statusFilter;
         return this;
     }
     
+    public ListTransactionsRequestBody(){}
 }

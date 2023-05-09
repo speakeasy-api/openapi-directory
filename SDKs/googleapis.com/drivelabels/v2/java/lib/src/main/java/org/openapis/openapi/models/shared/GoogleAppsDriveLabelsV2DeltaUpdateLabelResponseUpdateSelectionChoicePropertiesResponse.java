@@ -18,9 +18,11 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseUpdateSelectionChoic
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseUpdateSelectionChoicePropertiesResponse withPriority(Integer priority) {
         this.priority = priority;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseUpdateSelectionChoicePropertiesResponse(){}
 }

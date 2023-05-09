@@ -15,6 +15,7 @@ public class SettlementTransactionTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postDate")
     public String postDate;
+
     public SettlementTransactionTransaction withPostDate(String postDate) {
         this.postDate = postDate;
         return this;
@@ -26,9 +27,11 @@ public class SettlementTransactionTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public SettlementTransactionTransaction withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SettlementTransactionTransaction(){}
 }

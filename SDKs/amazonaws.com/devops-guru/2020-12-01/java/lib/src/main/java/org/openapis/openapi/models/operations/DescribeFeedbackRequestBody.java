@@ -15,9 +15,11 @@ public class DescribeFeedbackRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InsightId")
     public String insightId;
+
     public DescribeFeedbackRequestBody withInsightId(String insightId) {
         this.insightId = insightId;
         return this;
     }
     
+    public DescribeFeedbackRequestBody(){}
 }

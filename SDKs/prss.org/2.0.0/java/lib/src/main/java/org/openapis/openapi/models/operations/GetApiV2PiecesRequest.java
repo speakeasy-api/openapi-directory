@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2PiecesRequest {
@@ -12,9 +13,13 @@ public class GetApiV2PiecesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=episodeId")
     public Long episodeId;
+
     public GetApiV2PiecesRequest withEpisodeId(Long episodeId) {
         this.episodeId = episodeId;
         return this;
     }
     
+    public GetApiV2PiecesRequest(@JsonProperty("episodeId") Long episodeId) {
+        this.episodeId = episodeId;
+  }
 }

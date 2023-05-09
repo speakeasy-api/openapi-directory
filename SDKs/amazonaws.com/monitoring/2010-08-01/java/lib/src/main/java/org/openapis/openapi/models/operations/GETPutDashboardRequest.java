@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPutDashboardRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETPutDashboardActionEnum action;
+
     public GETPutDashboardRequest withAction(GETPutDashboardActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETPutDashboardRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DashboardBody")
     public String dashboardBody;
+
     public GETPutDashboardRequest withDashboardBody(String dashboardBody) {
         this.dashboardBody = dashboardBody;
         return this;
@@ -29,6 +32,7 @@ public class GETPutDashboardRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DashboardName")
     public String dashboardName;
+
     public GETPutDashboardRequest withDashboardName(String dashboardName) {
         this.dashboardName = dashboardName;
         return this;
@@ -36,6 +40,7 @@ public class GETPutDashboardRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETPutDashboardVersionEnum version;
+
     public GETPutDashboardRequest withVersion(GETPutDashboardVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETPutDashboardRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETPutDashboardRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETPutDashboardRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETPutDashboardRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETPutDashboardRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETPutDashboardRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETPutDashboardRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETPutDashboardRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETPutDashboardRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETPutDashboardRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETPutDashboardRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETPutDashboardRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETPutDashboardRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETPutDashboardRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETPutDashboardRequest(@JsonProperty("Action") GETPutDashboardActionEnum action, @JsonProperty("DashboardBody") String dashboardBody, @JsonProperty("DashboardName") String dashboardName, @JsonProperty("Version") GETPutDashboardVersionEnum version) {
+        this.action = action;
+        this.dashboardBody = dashboardBody;
+        this.dashboardName = dashboardName;
+        this.version = version;
+  }
 }

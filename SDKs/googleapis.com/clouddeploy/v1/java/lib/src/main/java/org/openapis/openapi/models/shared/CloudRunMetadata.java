@@ -18,6 +18,7 @@ public class CloudRunMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revision")
     public String revision;
+
     public CloudRunMetadata withRevision(String revision) {
         this.revision = revision;
         return this;
@@ -29,6 +30,7 @@ public class CloudRunMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public CloudRunMetadata withService(String service) {
         this.service = service;
         return this;
@@ -40,9 +42,11 @@ public class CloudRunMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceUrls")
     public String[] serviceUrls;
+
     public CloudRunMetadata withServiceUrls(String[] serviceUrls) {
         this.serviceUrls = serviceUrls;
         return this;
     }
     
+    public CloudRunMetadata(){}
 }

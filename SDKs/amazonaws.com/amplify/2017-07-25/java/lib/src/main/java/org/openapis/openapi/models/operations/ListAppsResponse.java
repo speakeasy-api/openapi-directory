@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAppsResponse {
@@ -12,6 +13,7 @@ public class ListAppsResponse {
      */
     
     public Object badRequestException;
+
     public ListAppsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListAppsResponse {
     
     
     public String contentType;
+
     public ListAppsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAppsResponse {
      */
     
     public Object internalFailureException;
+
     public ListAppsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class ListAppsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAppsResult listAppsResult;
+
     public ListAppsResponse withListAppsResult(org.openapis.openapi.models.shared.ListAppsResult listAppsResult) {
         this.listAppsResult = listAppsResult;
         return this;
@@ -46,6 +51,7 @@ public class ListAppsResponse {
     
     
     public Integer statusCode;
+
     public ListAppsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListAppsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAppsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListAppsResponse {
      */
     
     public Object unauthorizedException;
+
     public ListAppsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListAppsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

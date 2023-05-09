@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SecretScanningListAlertsForEnterpriseRequest {
@@ -12,6 +13,7 @@ public class SecretScanningListAlertsForEnterpriseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
     public String after;
+
     public SecretScanningListAlertsForEnterpriseRequest withAfter(String after) {
         this.after = after;
         return this;
@@ -22,6 +24,7 @@ public class SecretScanningListAlertsForEnterpriseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
     public String before;
+
     public SecretScanningListAlertsForEnterpriseRequest withBefore(String before) {
         this.before = before;
         return this;
@@ -32,6 +35,7 @@ public class SecretScanningListAlertsForEnterpriseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public org.openapis.openapi.models.shared.DirectionEnum direction;
+
     public SecretScanningListAlertsForEnterpriseRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -42,6 +46,7 @@ public class SecretScanningListAlertsForEnterpriseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
     public String enterprise;
+
     public SecretScanningListAlertsForEnterpriseRequest withEnterprise(String enterprise) {
         this.enterprise = enterprise;
         return this;
@@ -52,6 +57,7 @@ public class SecretScanningListAlertsForEnterpriseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public SecretScanningListAlertsForEnterpriseRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -62,6 +68,7 @@ public class SecretScanningListAlertsForEnterpriseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolution")
     public String resolution;
+
     public SecretScanningListAlertsForEnterpriseRequest withResolution(String resolution) {
         this.resolution = resolution;
         return this;
@@ -74,6 +81,7 @@ public class SecretScanningListAlertsForEnterpriseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=secret_type")
     public String secretType;
+
     public SecretScanningListAlertsForEnterpriseRequest withSecretType(String secretType) {
         this.secretType = secretType;
         return this;
@@ -84,6 +92,7 @@ public class SecretScanningListAlertsForEnterpriseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public org.openapis.openapi.models.shared.SecretScanningAlertSortEnum sort;
+
     public SecretScanningListAlertsForEnterpriseRequest withSort(org.openapis.openapi.models.shared.SecretScanningAlertSortEnum sort) {
         this.sort = sort;
         return this;
@@ -94,9 +103,13 @@ public class SecretScanningListAlertsForEnterpriseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public org.openapis.openapi.models.shared.SecretScanningAlertStateEnum state;
+
     public SecretScanningListAlertsForEnterpriseRequest withState(org.openapis.openapi.models.shared.SecretScanningAlertStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public SecretScanningListAlertsForEnterpriseRequest(@JsonProperty("enterprise") String enterprise) {
+        this.enterprise = enterprise;
+  }
 }

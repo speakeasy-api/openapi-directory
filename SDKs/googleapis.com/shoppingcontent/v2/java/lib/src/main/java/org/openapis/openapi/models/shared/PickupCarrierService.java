@@ -15,6 +15,7 @@ public class PickupCarrierService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrierName")
     public String carrierName;
+
     public PickupCarrierService withCarrierName(String carrierName) {
         this.carrierName = carrierName;
         return this;
@@ -26,9 +27,11 @@ public class PickupCarrierService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public PickupCarrierService withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public PickupCarrierService(){}
 }

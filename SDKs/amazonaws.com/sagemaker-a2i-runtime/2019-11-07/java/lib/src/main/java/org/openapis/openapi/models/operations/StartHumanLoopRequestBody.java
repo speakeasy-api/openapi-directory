@@ -15,6 +15,7 @@ public class StartHumanLoopRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAttributes")
     public StartHumanLoopRequestBodyDataAttributes dataAttributes;
+
     public StartHumanLoopRequestBody withDataAttributes(StartHumanLoopRequestBodyDataAttributes dataAttributes) {
         this.dataAttributes = dataAttributes;
         return this;
@@ -25,6 +26,7 @@ public class StartHumanLoopRequestBody {
      */
     @JsonProperty("FlowDefinitionArn")
     public String flowDefinitionArn;
+
     public StartHumanLoopRequestBody withFlowDefinitionArn(String flowDefinitionArn) {
         this.flowDefinitionArn = flowDefinitionArn;
         return this;
@@ -35,6 +37,7 @@ public class StartHumanLoopRequestBody {
      */
     @JsonProperty("HumanLoopInput")
     public StartHumanLoopRequestBodyHumanLoopInput humanLoopInput;
+
     public StartHumanLoopRequestBody withHumanLoopInput(StartHumanLoopRequestBodyHumanLoopInput humanLoopInput) {
         this.humanLoopInput = humanLoopInput;
         return this;
@@ -45,9 +48,15 @@ public class StartHumanLoopRequestBody {
      */
     @JsonProperty("HumanLoopName")
     public String humanLoopName;
+
     public StartHumanLoopRequestBody withHumanLoopName(String humanLoopName) {
         this.humanLoopName = humanLoopName;
         return this;
     }
     
+    public StartHumanLoopRequestBody(@JsonProperty("FlowDefinitionArn") String flowDefinitionArn, @JsonProperty("HumanLoopInput") StartHumanLoopRequestBodyHumanLoopInput humanLoopInput, @JsonProperty("HumanLoopName") String humanLoopName) {
+        this.flowDefinitionArn = flowDefinitionArn;
+        this.humanLoopInput = humanLoopInput;
+        this.humanLoopName = humanLoopName;
+  }
 }

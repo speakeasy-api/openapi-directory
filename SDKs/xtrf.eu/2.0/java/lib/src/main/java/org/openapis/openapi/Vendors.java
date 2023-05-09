@@ -55,10 +55,8 @@ public class Vendors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Delete10Response res = new org.openapis.openapi.models.operations.Delete10Response() {{
+        org.openapis.openapi.models.operations.Delete10Response res = new org.openapis.openapi.models.operations.Delete10Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -89,10 +87,8 @@ public class Vendors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Delete8Response res = new org.openapis.openapi.models.operations.Delete8Response() {{
+        org.openapis.openapi.models.operations.Delete8Response res = new org.openapis.openapi.models.operations.Delete8Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -123,10 +119,8 @@ public class Vendors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Delete9Response res = new org.openapis.openapi.models.operations.Delete9Response() {{
+        org.openapis.openapi.models.operations.Delete9Response res = new org.openapis.openapi.models.operations.Delete9Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -157,11 +151,9 @@ public class Vendors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAddress1Response res = new org.openapis.openapi.models.operations.GetAddress1Response() {{
+        org.openapis.openapi.models.operations.GetAddress1Response res = new org.openapis.openapi.models.operations.GetAddress1Response(contentType, httpRes.statusCode()) {{
             addressDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -203,11 +195,9 @@ public class Vendors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllIds4Response res = new org.openapis.openapi.models.operations.GetAllIds4Response() {{
+        org.openapis.openapi.models.operations.GetAllIds4Response res = new org.openapis.openapi.models.operations.GetAllIds4Response(contentType, httpRes.statusCode()) {{
             getAllIds4DefaultApplicationVndXtrfV1PlusJsonInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -249,11 +239,9 @@ public class Vendors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllIds5Response res = new org.openapis.openapi.models.operations.GetAllIds5Response() {{
+        org.openapis.openapi.models.operations.GetAllIds5Response res = new org.openapis.openapi.models.operations.GetAllIds5Response(contentType, httpRes.statusCode()) {{
             getAllIds5DefaultApplicationVndXtrfV1PlusJsonInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -289,11 +277,9 @@ public class Vendors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetById4Response res = new org.openapis.openapi.models.operations.GetById4Response() {{
+        org.openapis.openapi.models.operations.GetById4Response res = new org.openapis.openapi.models.operations.GetById4Response(contentType, httpRes.statusCode()) {{
             providerPersonDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -335,11 +321,9 @@ public class Vendors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetById5Response res = new org.openapis.openapi.models.operations.GetById5Response() {{
+        org.openapis.openapi.models.operations.GetById5Response res = new org.openapis.openapi.models.operations.GetById5Response(contentType, httpRes.statusCode()) {{
             providerDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -375,11 +359,9 @@ public class Vendors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompetenciesResponse res = new org.openapis.openapi.models.operations.GetCompetenciesResponse() {{
+        org.openapis.openapi.models.operations.GetCompetenciesResponse res = new org.openapis.openapi.models.operations.GetCompetenciesResponse(contentType, httpRes.statusCode()) {{
             competenciesDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -415,11 +397,9 @@ public class Vendors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContact2Response res = new org.openapis.openapi.models.operations.GetContact2Response() {{
+        org.openapis.openapi.models.operations.GetContact2Response res = new org.openapis.openapi.models.operations.GetContact2Response(contentType, httpRes.statusCode()) {{
             personContactDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -455,11 +435,9 @@ public class Vendors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContact3Response res = new org.openapis.openapi.models.operations.GetContact3Response() {{
+        org.openapis.openapi.models.operations.GetContact3Response res = new org.openapis.openapi.models.operations.GetContact3Response(contentType, httpRes.statusCode()) {{
             contactDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -495,11 +473,9 @@ public class Vendors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCorrespondenceAddress1Response res = new org.openapis.openapi.models.operations.GetCorrespondenceAddress1Response() {{
+        org.openapis.openapi.models.operations.GetCorrespondenceAddress1Response res = new org.openapis.openapi.models.operations.GetCorrespondenceAddress1Response(contentType, httpRes.statusCode()) {{
             addressDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -535,11 +511,9 @@ public class Vendors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomFields2Response res = new org.openapis.openapi.models.operations.GetCustomFields2Response() {{
+        org.openapis.openapi.models.operations.GetCustomFields2Response res = new org.openapis.openapi.models.operations.GetCustomFields2Response(contentType, httpRes.statusCode()) {{
             customFieldsDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -575,11 +549,9 @@ public class Vendors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomFields3Response res = new org.openapis.openapi.models.operations.GetCustomFields3Response() {{
+        org.openapis.openapi.models.operations.GetCustomFields3Response res = new org.openapis.openapi.models.operations.GetCustomFields3Response(contentType, httpRes.statusCode()) {{
             customFieldsDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -615,11 +587,9 @@ public class Vendors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SendInvitationsResponse res = new org.openapis.openapi.models.operations.SendInvitationsResponse() {{
+        org.openapis.openapi.models.operations.SendInvitationsResponse res = new org.openapis.openapi.models.operations.SendInvitationsResponse(contentType, httpRes.statusCode()) {{
             invitationStatisticsDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -655,11 +625,9 @@ public class Vendors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SendInvitations1Response res = new org.openapis.openapi.models.operations.SendInvitations1Response() {{
+        org.openapis.openapi.models.operations.SendInvitations1Response res = new org.openapis.openapi.models.operations.SendInvitations1Response(contentType, httpRes.statusCode()) {{
             invitationStatisticsDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

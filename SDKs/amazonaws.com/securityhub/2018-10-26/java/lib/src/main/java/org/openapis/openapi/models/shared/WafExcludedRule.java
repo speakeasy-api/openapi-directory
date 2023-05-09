@@ -15,9 +15,11 @@ public class WafExcludedRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleId")
     public String ruleId;
+
     public WafExcludedRule withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
     }
     
+    public WafExcludedRule(){}
 }

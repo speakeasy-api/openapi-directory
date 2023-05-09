@@ -14,6 +14,7 @@ public class AuditCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audit_case_id")
     public String auditCaseId;
+
     public AuditCase withAuditCaseId(String auditCaseId) {
         this.auditCaseId = auditCaseId;
         return this;
@@ -22,6 +23,7 @@ public class AuditCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audit_id")
     public Integer auditId;
+
     public AuditCase withAuditId(Integer auditId) {
         this.auditId = auditId;
         return this;
@@ -30,6 +32,7 @@ public class AuditCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
     public String candidateId;
+
     public AuditCase withCandidateId(String candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -38,6 +41,7 @@ public class AuditCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_name")
     public String candidateName;
+
     public AuditCase withCandidateName(String candidateName) {
         this.candidateName = candidateName;
         return this;
@@ -46,6 +50,7 @@ public class AuditCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee_description")
     public String committeeDescription;
+
     public AuditCase withCommitteeDescription(String committeeDescription) {
         this.committeeDescription = committeeDescription;
         return this;
@@ -54,6 +59,7 @@ public class AuditCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee_designation")
     public String committeeDesignation;
+
     public AuditCase withCommitteeDesignation(String committeeDesignation) {
         this.committeeDesignation = committeeDesignation;
         return this;
@@ -62,6 +68,7 @@ public class AuditCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee_id")
     public String committeeId;
+
     public AuditCase withCommitteeId(String committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -70,6 +77,7 @@ public class AuditCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee_name")
     public String committeeName;
+
     public AuditCase withCommitteeName(String committeeName) {
         this.committeeName = committeeName;
         return this;
@@ -78,6 +86,7 @@ public class AuditCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee_type")
     public String committeeType;
+
     public AuditCase withCommitteeType(String committeeType) {
         this.committeeType = committeeType;
         return this;
@@ -86,6 +95,7 @@ public class AuditCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cycle")
     public Integer cycle;
+
     public AuditCase withCycle(Integer cycle) {
         this.cycle = cycle;
         return this;
@@ -95,6 +105,7 @@ public class AuditCase {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("far_release_date")
     public LocalDate farReleaseDate;
+
     public AuditCase withFarReleaseDate(LocalDate farReleaseDate) {
         this.farReleaseDate = farReleaseDate;
         return this;
@@ -107,6 +118,7 @@ public class AuditCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link_to_report")
     public String linkToReport;
+
     public AuditCase withLinkToReport(String linkToReport) {
         this.linkToReport = linkToReport;
         return this;
@@ -115,9 +127,11 @@ public class AuditCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_category_list")
     public AuditCaseCategoryRelation[] primaryCategoryList;
+
     public AuditCase withPrimaryCategoryList(AuditCaseCategoryRelation[] primaryCategoryList) {
         this.primaryCategoryList = primaryCategoryList;
         return this;
     }
     
+    public AuditCase(){}
 }

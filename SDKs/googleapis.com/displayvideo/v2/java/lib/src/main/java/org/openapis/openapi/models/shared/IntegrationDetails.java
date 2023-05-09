@@ -18,6 +18,7 @@ public class IntegrationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public IntegrationDetails withDetails(String details) {
         this.details = details;
         return this;
@@ -29,9 +30,11 @@ public class IntegrationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrationCode")
     public String integrationCode;
+
     public IntegrationDetails withIntegrationCode(String integrationCode) {
         this.integrationCode = integrationCode;
         return this;
     }
     
+    public IntegrationDetails(){}
 }

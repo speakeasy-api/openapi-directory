@@ -15,6 +15,7 @@ public class Detection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Detection withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class Detection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public Detection withCount(Long count) {
         this.count = count;
         return this;
@@ -31,6 +33,7 @@ public class Detection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Detection withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class Detection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Detection withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class Detection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suppressed")
     public Boolean suppressed;
+
     public Detection withSuppressed(Boolean suppressed) {
         this.suppressed = suppressed;
         return this;
@@ -55,9 +60,11 @@ public class Detection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DataIdentifierTypeEnum type;
+
     public Detection withType(DataIdentifierTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Detection(){}
 }

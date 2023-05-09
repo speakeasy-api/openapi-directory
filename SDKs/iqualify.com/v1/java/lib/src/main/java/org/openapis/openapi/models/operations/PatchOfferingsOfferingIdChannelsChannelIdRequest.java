@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchOfferingsOfferingIdChannelsChannelIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Channel channel;
+
     public PatchOfferingsOfferingIdChannelsChannelIdRequest withChannel(org.openapis.openapi.models.shared.Channel channel) {
         this.channel = channel;
         return this;
@@ -19,6 +21,7 @@ public class PatchOfferingsOfferingIdChannelsChannelIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
     public String channelId;
+
     public PatchOfferingsOfferingIdChannelsChannelIdRequest withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -29,9 +32,15 @@ public class PatchOfferingsOfferingIdChannelsChannelIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
     public String offeringId;
+
     public PatchOfferingsOfferingIdChannelsChannelIdRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
     }
     
+    public PatchOfferingsOfferingIdChannelsChannelIdRequest(@JsonProperty("Channel") org.openapis.openapi.models.shared.Channel channel, @JsonProperty("channelId") String channelId, @JsonProperty("offeringId") String offeringId) {
+        this.channel = channel;
+        this.channelId = channelId;
+        this.offeringId = offeringId;
+  }
 }

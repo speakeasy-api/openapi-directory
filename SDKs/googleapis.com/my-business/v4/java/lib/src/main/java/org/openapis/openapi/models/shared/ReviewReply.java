@@ -18,6 +18,7 @@ public class ReviewReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public ReviewReply withComment(String comment) {
         this.comment = comment;
         return this;
@@ -29,9 +30,11 @@ public class ReviewReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public ReviewReply withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ReviewReply(){}
 }

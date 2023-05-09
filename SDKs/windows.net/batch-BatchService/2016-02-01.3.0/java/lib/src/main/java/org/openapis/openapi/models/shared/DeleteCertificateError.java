@@ -18,6 +18,7 @@ public class DeleteCertificateError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public DeleteCertificateError withCode(String code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class DeleteCertificateError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public DeleteCertificateError withMessage(String message) {
         this.message = message;
         return this;
@@ -40,9 +42,11 @@ public class DeleteCertificateError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public NameValuePair[] values;
+
     public DeleteCertificateError withValues(NameValuePair[] values) {
         this.values = values;
         return this;
     }
     
+    public DeleteCertificateError(){}
 }

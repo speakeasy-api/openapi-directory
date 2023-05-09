@@ -20,6 +20,7 @@ public class OpsItemRelatedItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationId")
     public String associationId;
+
     public OpsItemRelatedItemSummary withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -28,6 +29,7 @@ public class OpsItemRelatedItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationType")
     public String associationType;
+
     public OpsItemRelatedItemSummary withAssociationType(String associationType) {
         this.associationType = associationType;
         return this;
@@ -39,6 +41,7 @@ public class OpsItemRelatedItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public OpsItemIdentity createdBy;
+
     public OpsItemRelatedItemSummary withCreatedBy(OpsItemIdentity createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -49,6 +52,7 @@ public class OpsItemRelatedItemSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public OpsItemRelatedItemSummary withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -60,6 +64,7 @@ public class OpsItemRelatedItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public OpsItemIdentity lastModifiedBy;
+
     public OpsItemRelatedItemSummary withLastModifiedBy(OpsItemIdentity lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -70,6 +75,7 @@ public class OpsItemRelatedItemSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public OpsItemRelatedItemSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -78,6 +84,7 @@ public class OpsItemRelatedItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsItemId")
     public String opsItemId;
+
     public OpsItemRelatedItemSummary withOpsItemId(String opsItemId) {
         this.opsItemId = opsItemId;
         return this;
@@ -86,6 +93,7 @@ public class OpsItemRelatedItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public OpsItemRelatedItemSummary withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -94,9 +102,11 @@ public class OpsItemRelatedItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceUri")
     public String resourceUri;
+
     public OpsItemRelatedItemSummary withResourceUri(String resourceUri) {
         this.resourceUri = resourceUri;
         return this;
     }
     
+    public OpsItemRelatedItemSummary(){}
 }

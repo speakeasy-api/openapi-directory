@@ -18,6 +18,7 @@ public class BidPercentages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basis")
     public String basis;
+
     public BidPercentages withBasis(String basis) {
         this.basis = basis;
         return this;
@@ -29,9 +30,11 @@ public class BidPercentages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public BidPercentages withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public BidPercentages(){}
 }

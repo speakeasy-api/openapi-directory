@@ -18,6 +18,7 @@ public class DynamicTargetingKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DynamicTargetingKey withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class DynamicTargetingKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DynamicTargetingKey withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class DynamicTargetingKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public DynamicTargetingKey withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -51,9 +54,11 @@ public class DynamicTargetingKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectType")
     public DynamicTargetingKeyObjectTypeEnum objectType;
+
     public DynamicTargetingKey withObjectType(DynamicTargetingKeyObjectTypeEnum objectType) {
         this.objectType = objectType;
         return this;
     }
     
+    public DynamicTargetingKey(){}
 }

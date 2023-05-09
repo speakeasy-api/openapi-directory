@@ -18,6 +18,7 @@ public class ChannelCatalogColumnMappingWithName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogBeezUPColumnName")
     public String catalogBeezUPColumnName;
+
     public ChannelCatalogColumnMappingWithName withCatalogBeezUPColumnName(String catalogBeezUPColumnName) {
         this.catalogBeezUPColumnName = catalogBeezUPColumnName;
         return this;
@@ -29,6 +30,7 @@ public class ChannelCatalogColumnMappingWithName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogColumnId")
     public String catalogColumnId;
+
     public ChannelCatalogColumnMappingWithName withCatalogColumnId(String catalogColumnId) {
         this.catalogColumnId = catalogColumnId;
         return this;
@@ -40,6 +42,7 @@ public class ChannelCatalogColumnMappingWithName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogColumnName")
     public String catalogColumnName;
+
     public ChannelCatalogColumnMappingWithName withCatalogColumnName(String catalogColumnName) {
         this.catalogColumnName = catalogColumnName;
         return this;
@@ -51,6 +54,7 @@ public class ChannelCatalogColumnMappingWithName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelBeezUPColumnName")
     public String channelBeezUPColumnName;
+
     public ChannelCatalogColumnMappingWithName withChannelBeezUPColumnName(String channelBeezUPColumnName) {
         this.channelBeezUPColumnName = channelBeezUPColumnName;
         return this;
@@ -62,6 +66,7 @@ public class ChannelCatalogColumnMappingWithName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelCategoryPath")
     public String[] channelCategoryPath;
+
     public ChannelCatalogColumnMappingWithName withChannelCategoryPath(String[] channelCategoryPath) {
         this.channelCategoryPath = channelCategoryPath;
         return this;
@@ -72,6 +77,7 @@ public class ChannelCatalogColumnMappingWithName {
      */
     @JsonProperty("channelColumnId")
     public String channelColumnId;
+
     public ChannelCatalogColumnMappingWithName withChannelColumnId(String channelColumnId) {
         this.channelColumnId = channelColumnId;
         return this;
@@ -82,9 +88,14 @@ public class ChannelCatalogColumnMappingWithName {
      */
     @JsonProperty("channelColumnName")
     public String channelColumnName;
+
     public ChannelCatalogColumnMappingWithName withChannelColumnName(String channelColumnName) {
         this.channelColumnName = channelColumnName;
         return this;
     }
     
+    public ChannelCatalogColumnMappingWithName(@JsonProperty("channelColumnId") String channelColumnId, @JsonProperty("channelColumnName") String channelColumnName) {
+        this.channelColumnId = channelColumnId;
+        this.channelColumnName = channelColumnName;
+  }
 }

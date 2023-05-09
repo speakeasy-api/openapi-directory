@@ -20,6 +20,7 @@ public class ShiftWorkday {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_range")
     public DateRange dateRange;
+
     public ShiftWorkday withDateRange(DateRange dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -34,6 +35,7 @@ public class ShiftWorkday {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_timezone")
     public String defaultTimezone;
+
     public ShiftWorkday withDefaultTimezone(String defaultTimezone) {
         this.defaultTimezone = defaultTimezone;
         return this;
@@ -45,9 +47,11 @@ public class ShiftWorkday {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("match_shifts_by")
     public String matchShiftsBy;
+
     public ShiftWorkday withMatchShiftsBy(String matchShiftsBy) {
         this.matchShiftsBy = matchShiftsBy;
         return this;
     }
     
+    public ShiftWorkday(){}
 }

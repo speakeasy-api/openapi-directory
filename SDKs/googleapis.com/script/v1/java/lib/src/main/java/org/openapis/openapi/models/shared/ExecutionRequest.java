@@ -18,6 +18,7 @@ public class ExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devMode")
     public Boolean devMode;
+
     public ExecutionRequest withDevMode(Boolean devMode) {
         this.devMode = devMode;
         return this;
@@ -29,6 +30,7 @@ public class ExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("function")
     public String function;
+
     public ExecutionRequest withFunction(String function) {
         this.function = function;
         return this;
@@ -40,6 +42,7 @@ public class ExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public Object[] parameters;
+
     public ExecutionRequest withParameters(Object[] parameters) {
         this.parameters = parameters;
         return this;
@@ -51,9 +54,11 @@ public class ExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionState")
     public String sessionState;
+
     public ExecutionRequest withSessionState(String sessionState) {
         this.sessionState = sessionState;
         return this;
     }
     
+    public ExecutionRequest(){}
 }

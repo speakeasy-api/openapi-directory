@@ -65,11 +65,9 @@ public class Metadata {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteArtifactVersionMetaDataResponse res = new org.openapis.openapi.models.operations.DeleteArtifactVersionMetaDataResponse() {{
+        org.openapis.openapi.models.operations.DeleteArtifactVersionMetaDataResponse res = new org.openapis.openapi.models.operations.DeleteArtifactVersionMetaDataResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -87,12 +85,11 @@ public class Metadata {
 
     /**
      * Get artifact metadata
-     * Gets the metadata for an artifact in the registry.  The returned metadata includes
-     * both generated (read-only) and editable metadata (such as name and description).
+     * Gets the metadata for an artifact in the registry, based on the latest version. If the latest version of the artifact is marked as `DISABLED`, the next available non-disabled version will be used. The returned metadata includes both generated (read-only) and editable metadata (such as name and description).
      * 
      * This operation can fail for the following reasons:
      * 
-     * * No artifact with this `artifactId` exists (HTTP error `404`)
+     * * No artifact with this `artifactId` exists or all versions are `DISABLED` (HTTP error `404`)
      * * A server error occurred (HTTP error `500`)
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -112,12 +109,10 @@ public class Metadata {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetArtifactMetaDataResponse res = new org.openapis.openapi.models.operations.GetArtifactMetaDataResponse() {{
+        org.openapis.openapi.models.operations.GetArtifactMetaDataResponse res = new org.openapis.openapi.models.operations.GetArtifactMetaDataResponse(contentType, httpRes.statusCode()) {{
             artifactMetaData = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,12 +169,10 @@ public class Metadata {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetArtifactMetaDataByContentResponse res = new org.openapis.openapi.models.operations.GetArtifactMetaDataByContentResponse() {{
+        org.openapis.openapi.models.operations.GetArtifactMetaDataByContentResponse res = new org.openapis.openapi.models.operations.GetArtifactMetaDataByContentResponse(contentType, httpRes.statusCode()) {{
             artifactMetaData = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -229,12 +222,10 @@ public class Metadata {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetArtifactMetaDataByGlobalIdResponse res = new org.openapis.openapi.models.operations.GetArtifactMetaDataByGlobalIdResponse() {{
+        org.openapis.openapi.models.operations.GetArtifactMetaDataByGlobalIdResponse res = new org.openapis.openapi.models.operations.GetArtifactMetaDataByGlobalIdResponse(contentType, httpRes.statusCode()) {{
             artifactMetaData = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -285,12 +276,10 @@ public class Metadata {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetArtifactVersionMetaDataResponse res = new org.openapis.openapi.models.operations.GetArtifactVersionMetaDataResponse() {{
+        org.openapis.openapi.models.operations.GetArtifactVersionMetaDataResponse res = new org.openapis.openapi.models.operations.GetArtifactVersionMetaDataResponse(contentType, httpRes.statusCode()) {{
             versionMetaData = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,11 +332,9 @@ public class Metadata {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateArtifactMetaDataResponse res = new org.openapis.openapi.models.operations.UpdateArtifactMetaDataResponse() {{
+        org.openapis.openapi.models.operations.UpdateArtifactMetaDataResponse res = new org.openapis.openapi.models.operations.UpdateArtifactMetaDataResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -398,11 +385,9 @@ public class Metadata {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateArtifactVersionMetaDataResponse res = new org.openapis.openapi.models.operations.UpdateArtifactVersionMetaDataResponse() {{
+        org.openapis.openapi.models.operations.UpdateArtifactVersionMetaDataResponse res = new org.openapis.openapi.models.operations.UpdateArtifactVersionMetaDataResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

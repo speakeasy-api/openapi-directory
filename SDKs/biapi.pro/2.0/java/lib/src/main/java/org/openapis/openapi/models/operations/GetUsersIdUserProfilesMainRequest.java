@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdUserProfilesMainRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public GetUsersIdUserProfilesMainRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -19,9 +21,13 @@ public class GetUsersIdUserProfilesMainRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
     public String idUser;
+
     public GetUsersIdUserProfilesMainRequest withIdUser(String idUser) {
         this.idUser = idUser;
         return this;
     }
     
+    public GetUsersIdUserProfilesMainRequest(@JsonProperty("id_user") String idUser) {
+        this.idUser = idUser;
+  }
 }

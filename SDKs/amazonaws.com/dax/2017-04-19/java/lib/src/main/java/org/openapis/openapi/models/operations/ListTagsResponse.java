@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTagsResponse {
@@ -12,6 +13,7 @@ public class ListTagsResponse {
      */
     
     public Object clusterNotFoundFault;
+
     public ListTagsResponse withClusterNotFoundFault(Object clusterNotFoundFault) {
         this.clusterNotFoundFault = clusterNotFoundFault;
         return this;
@@ -19,6 +21,7 @@ public class ListTagsResponse {
     
     
     public String contentType;
+
     public ListTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTagsResponse {
      */
     
     public Object invalidARNFault;
+
     public ListTagsResponse withInvalidARNFault(Object invalidARNFault) {
         this.invalidARNFault = invalidARNFault;
         return this;
@@ -39,6 +43,7 @@ public class ListTagsResponse {
      */
     
     public Object invalidClusterStateFault;
+
     public ListTagsResponse withInvalidClusterStateFault(Object invalidClusterStateFault) {
         this.invalidClusterStateFault = invalidClusterStateFault;
         return this;
@@ -49,6 +54,7 @@ public class ListTagsResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public ListTagsResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -59,6 +65,7 @@ public class ListTagsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListTagsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -69,6 +76,7 @@ public class ListTagsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTagsResponse listTagsResponse;
+
     public ListTagsResponse withListTagsResponse(org.openapis.openapi.models.shared.ListTagsResponse listTagsResponse) {
         this.listTagsResponse = listTagsResponse;
         return this;
@@ -79,6 +87,7 @@ public class ListTagsResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public ListTagsResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
@@ -86,6 +95,7 @@ public class ListTagsResponse {
     
     
     public Integer statusCode;
+
     public ListTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class ListTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

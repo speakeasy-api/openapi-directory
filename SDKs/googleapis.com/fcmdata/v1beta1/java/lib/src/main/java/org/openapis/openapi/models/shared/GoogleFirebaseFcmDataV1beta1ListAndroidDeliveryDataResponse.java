@@ -18,6 +18,7 @@ public class GoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidDeliveryData")
     public GoogleFirebaseFcmDataV1beta1AndroidDeliveryData[] androidDeliveryData;
+
     public GoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse withAndroidDeliveryData(GoogleFirebaseFcmDataV1beta1AndroidDeliveryData[] androidDeliveryData) {
         this.androidDeliveryData = androidDeliveryData;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse(){}
 }

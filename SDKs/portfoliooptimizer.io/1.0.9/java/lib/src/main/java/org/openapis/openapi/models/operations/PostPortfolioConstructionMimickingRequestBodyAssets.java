@@ -12,9 +12,13 @@ public class PostPortfolioConstructionMimickingRequestBodyAssets {
      */
     @JsonProperty("assetReturns")
     public Double[] assetReturns;
+
     public PostPortfolioConstructionMimickingRequestBodyAssets withAssetReturns(Double[] assetReturns) {
         this.assetReturns = assetReturns;
         return this;
     }
     
+    public PostPortfolioConstructionMimickingRequestBodyAssets(@JsonProperty("assetReturns") Double[] assetReturns) {
+        this.assetReturns = assetReturns;
+  }
 }

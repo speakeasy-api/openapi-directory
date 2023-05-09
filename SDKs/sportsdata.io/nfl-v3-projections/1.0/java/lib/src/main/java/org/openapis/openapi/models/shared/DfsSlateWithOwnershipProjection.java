@@ -12,6 +12,7 @@ public class DfsSlateWithOwnershipProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Operator")
     public String operator;
+
     public DfsSlateWithOwnershipProjection withOperator(String operator) {
         this.operator = operator;
         return this;
@@ -20,6 +21,7 @@ public class DfsSlateWithOwnershipProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatorDay")
     public String operatorDay;
+
     public DfsSlateWithOwnershipProjection withOperatorDay(String operatorDay) {
         this.operatorDay = operatorDay;
         return this;
@@ -28,6 +30,7 @@ public class DfsSlateWithOwnershipProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatorName")
     public String operatorName;
+
     public DfsSlateWithOwnershipProjection withOperatorName(String operatorName) {
         this.operatorName = operatorName;
         return this;
@@ -36,6 +39,7 @@ public class DfsSlateWithOwnershipProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatorSlateID")
     public Long operatorSlateID;
+
     public DfsSlateWithOwnershipProjection withOperatorSlateID(Long operatorSlateID) {
         this.operatorSlateID = operatorSlateID;
         return this;
@@ -44,6 +48,7 @@ public class DfsSlateWithOwnershipProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatorStartTime")
     public String operatorStartTime;
+
     public DfsSlateWithOwnershipProjection withOperatorStartTime(String operatorStartTime) {
         this.operatorStartTime = operatorStartTime;
         return this;
@@ -52,6 +57,7 @@ public class DfsSlateWithOwnershipProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SlateID")
     public Long slateID;
+
     public DfsSlateWithOwnershipProjection withSlateID(Long slateID) {
         this.slateID = slateID;
         return this;
@@ -60,9 +66,11 @@ public class DfsSlateWithOwnershipProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SlateOwnershipProjections")
     public DfsSlatePlayerOwnershipProjection[] slateOwnershipProjections;
+
     public DfsSlateWithOwnershipProjection withSlateOwnershipProjections(DfsSlatePlayerOwnershipProjection[] slateOwnershipProjections) {
         this.slateOwnershipProjections = slateOwnershipProjections;
         return this;
     }
     
+    public DfsSlateWithOwnershipProjection(){}
 }

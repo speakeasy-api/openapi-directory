@@ -15,6 +15,7 @@ public class RegisterClusterRequestBodyConnectorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provider")
     public org.openapis.openapi.models.shared.ConnectorConfigProviderEnum provider;
+
     public RegisterClusterRequestBodyConnectorConfig withProvider(org.openapis.openapi.models.shared.ConnectorConfigProviderEnum provider) {
         this.provider = provider;
         return this;
@@ -23,9 +24,11 @@ public class RegisterClusterRequestBodyConnectorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public RegisterClusterRequestBodyConnectorConfig withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public RegisterClusterRequestBodyConnectorConfig(){}
 }

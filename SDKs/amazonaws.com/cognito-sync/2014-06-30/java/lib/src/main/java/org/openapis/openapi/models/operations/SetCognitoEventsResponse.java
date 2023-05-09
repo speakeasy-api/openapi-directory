@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetCognitoEventsResponse {
     
     public String contentType;
+
     public SetCognitoEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SetCognitoEventsResponse {
      */
     
     public Object internalErrorException;
+
     public SetCognitoEventsResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class SetCognitoEventsResponse {
      */
     
     public Object invalidParameterException;
+
     public SetCognitoEventsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class SetCognitoEventsResponse {
      */
     
     public Object notAuthorizedException;
+
     public SetCognitoEventsResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -49,6 +54,7 @@ public class SetCognitoEventsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SetCognitoEventsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class SetCognitoEventsResponse {
     
     
     public Integer statusCode;
+
     public SetCognitoEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class SetCognitoEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetCognitoEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class SetCognitoEventsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public SetCognitoEventsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public SetCognitoEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

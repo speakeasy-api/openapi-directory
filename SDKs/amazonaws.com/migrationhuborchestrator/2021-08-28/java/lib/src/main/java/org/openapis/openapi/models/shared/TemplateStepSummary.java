@@ -15,6 +15,7 @@ public class TemplateStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TemplateStepSummary withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class TemplateStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TemplateStepSummary withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class TemplateStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String[] next;
+
     public TemplateStepSummary withNext(String[] next) {
         this.next = next;
         return this;
@@ -39,6 +42,7 @@ public class TemplateStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public OwnerEnum owner;
+
     public TemplateStepSummary withOwner(OwnerEnum owner) {
         this.owner = owner;
         return this;
@@ -47,6 +51,7 @@ public class TemplateStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String[] previous;
+
     public TemplateStepSummary withPrevious(String[] previous) {
         this.previous = previous;
         return this;
@@ -55,6 +60,7 @@ public class TemplateStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepActionType")
     public StepActionTypeEnum stepActionType;
+
     public TemplateStepSummary withStepActionType(StepActionTypeEnum stepActionType) {
         this.stepActionType = stepActionType;
         return this;
@@ -63,6 +69,7 @@ public class TemplateStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepGroupId")
     public String stepGroupId;
+
     public TemplateStepSummary withStepGroupId(String stepGroupId) {
         this.stepGroupId = stepGroupId;
         return this;
@@ -71,6 +78,7 @@ public class TemplateStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetType")
     public TargetTypeEnum targetType;
+
     public TemplateStepSummary withTargetType(TargetTypeEnum targetType) {
         this.targetType = targetType;
         return this;
@@ -79,9 +87,11 @@ public class TemplateStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateId")
     public String templateId;
+
     public TemplateStepSummary withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public TemplateStepSummary(){}
 }

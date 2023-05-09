@@ -71,12 +71,10 @@ public class ProjectBriefs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateProjectBriefResponse res = new org.openapis.openapi.models.operations.CreateProjectBriefResponse() {{
+        org.openapis.openapi.models.operations.CreateProjectBriefResponse res = new org.openapis.openapi.models.operations.CreateProjectBriefResponse(contentType, httpRes.statusCode()) {{
             createProjectBrief201ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -127,12 +125,10 @@ public class ProjectBriefs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteProjectBriefResponse res = new org.openapis.openapi.models.operations.DeleteProjectBriefResponse() {{
+        org.openapis.openapi.models.operations.DeleteProjectBriefResponse res = new org.openapis.openapi.models.operations.DeleteProjectBriefResponse(contentType, httpRes.statusCode()) {{
             deleteProjectBrief200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -181,12 +177,10 @@ public class ProjectBriefs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProjectBriefResponse res = new org.openapis.openapi.models.operations.GetProjectBriefResponse() {{
+        org.openapis.openapi.models.operations.GetProjectBriefResponse res = new org.openapis.openapi.models.operations.GetProjectBriefResponse(contentType, httpRes.statusCode()) {{
             getProjectBrief200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -244,12 +238,10 @@ public class ProjectBriefs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateProjectBriefResponse res = new org.openapis.openapi.models.operations.UpdateProjectBriefResponse() {{
+        org.openapis.openapi.models.operations.UpdateProjectBriefResponse res = new org.openapis.openapi.models.operations.UpdateProjectBriefResponse(contentType, httpRes.statusCode()) {{
             updateProjectBrief200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

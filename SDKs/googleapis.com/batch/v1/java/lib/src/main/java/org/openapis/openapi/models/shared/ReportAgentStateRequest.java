@@ -18,6 +18,7 @@ public class ReportAgentStateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentInfo")
     public AgentInfo agentInfo;
+
     public ReportAgentStateRequest withAgentInfo(AgentInfo agentInfo) {
         this.agentInfo = agentInfo;
         return this;
@@ -29,6 +30,7 @@ public class ReportAgentStateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentTimingInfo")
     public AgentTimingInfo agentTimingInfo;
+
     public ReportAgentStateRequest withAgentTimingInfo(AgentTimingInfo agentTimingInfo) {
         this.agentTimingInfo = agentTimingInfo;
         return this;
@@ -40,9 +42,11 @@ public class ReportAgentStateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public AgentMetadata metadata;
+
     public ReportAgentStateRequest withMetadata(AgentMetadata metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public ReportAgentStateRequest(){}
 }

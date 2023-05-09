@@ -20,6 +20,7 @@ public class ScheduleViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availability")
     public CalendarHoursViewModel availability;
+
     public ScheduleViewModel withAvailability(CalendarHoursViewModel availability) {
         this.availability = availability;
         return this;
@@ -28,6 +29,7 @@ public class ScheduleViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingsPerSlot")
     public Integer bookingsPerSlot;
+
     public ScheduleViewModel withBookingsPerSlot(Integer bookingsPerSlot) {
         this.bookingsPerSlot = bookingsPerSlot;
         return this;
@@ -36,6 +38,7 @@ public class ScheduleViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletedStatus")
     public Boolean deletedStatus;
+
     public ScheduleViewModel withDeletedStatus(Boolean deletedStatus) {
         this.deletedStatus = deletedStatus;
         return this;
@@ -46,6 +49,7 @@ public class ScheduleViewModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("deletedTime")
     public OffsetDateTime deletedTime;
+
     public ScheduleViewModel withDeletedTime(OffsetDateTime deletedTime) {
         this.deletedTime = deletedTime;
         return this;
@@ -54,6 +58,7 @@ public class ScheduleViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ScheduleViewModel withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +67,7 @@ public class ScheduleViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     public Integer interval;
+
     public ScheduleViewModel withInterval(Integer interval) {
         this.interval = interval;
         return this;
@@ -70,6 +76,7 @@ public class ScheduleViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public ScheduleViewModel withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -78,6 +85,7 @@ public class ScheduleViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ScheduleViewModel withName(String name) {
         this.name = name;
         return this;
@@ -86,6 +94,7 @@ public class ScheduleViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public ScheduleViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -94,6 +103,7 @@ public class ScheduleViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
     public Boolean primary;
+
     public ScheduleViewModel withPrimary(Boolean primary) {
         this.primary = primary;
         return this;
@@ -102,6 +112,7 @@ public class ScheduleViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceGroupId")
     public String resourceGroupId;
+
     public ScheduleViewModel withResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -110,9 +121,11 @@ public class ScheduleViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ScheduleViewModel withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ScheduleViewModel(){}
 }

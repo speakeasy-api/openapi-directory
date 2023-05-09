@@ -12,6 +12,7 @@ package org.openapis.openapi.models.operations;
 public class SchemaResponseActionReadSchemaResponseActions {
     
     public SchemaResponseActionReadSchemaResponseActionsAttributes attributes;
+
     public SchemaResponseActionReadSchemaResponseActions withAttributes(SchemaResponseActionReadSchemaResponseActionsAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class SchemaResponseActionReadSchemaResponseActions {
      */
     
     public String id;
+
     public SchemaResponseActionReadSchemaResponseActions withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class SchemaResponseActionReadSchemaResponseActions {
      */
     
     public SchemaResponseActionReadSchemaResponseActionsLinks links;
+
     public SchemaResponseActionReadSchemaResponseActions withLinks(SchemaResponseActionReadSchemaResponseActionsLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class SchemaResponseActionReadSchemaResponseActions {
      */
     
     public SchemaResponseActionReadSchemaResponseActionsRelationships relationships;
+
     public SchemaResponseActionReadSchemaResponseActions withRelationships(SchemaResponseActionReadSchemaResponseActionsRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,11 @@ public class SchemaResponseActionReadSchemaResponseActions {
      */
     
     public String type;
+
     public SchemaResponseActionReadSchemaResponseActions withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SchemaResponseActionReadSchemaResponseActions(){}
 }

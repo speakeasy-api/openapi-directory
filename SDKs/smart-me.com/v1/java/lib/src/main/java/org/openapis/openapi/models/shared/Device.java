@@ -23,6 +23,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActivePower")
     public Double activePower;
+
     public Device withActivePower(Double activePower) {
         this.activePower = activePower;
         return this;
@@ -34,6 +35,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActivePowerL1")
     public Double activePowerL1;
+
     public Device withActivePowerL1(Double activePowerL1) {
         this.activePowerL1 = activePowerL1;
         return this;
@@ -45,6 +47,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActivePowerL2")
     public Double activePowerL2;
+
     public Device withActivePowerL2(Double activePowerL2) {
         this.activePowerL2 = activePowerL2;
         return this;
@@ -56,6 +59,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActivePowerL3")
     public Double activePowerL3;
+
     public Device withActivePowerL3(Double activePowerL3) {
         this.activePowerL3 = activePowerL3;
         return this;
@@ -67,6 +71,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActivePowerUnit")
     public String activePowerUnit;
+
     public Device withActivePowerUnit(String activePowerUnit) {
         this.activePowerUnit = activePowerUnit;
         return this;
@@ -78,6 +83,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveTariff")
     public Integer activeTariff;
+
     public Device withActiveTariff(Integer activeTariff) {
         this.activeTariff = activeTariff;
         return this;
@@ -89,6 +95,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalMeterSerialNumber")
     public String additionalMeterSerialNumber;
+
     public Device withAdditionalMeterSerialNumber(String additionalMeterSerialNumber) {
         this.additionalMeterSerialNumber = additionalMeterSerialNumber;
         return this;
@@ -100,6 +107,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalogOutput1")
     public Integer analogOutput1;
+
     public Device withAnalogOutput1(Integer analogOutput1) {
         this.analogOutput1 = analogOutput1;
         return this;
@@ -111,6 +119,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalogOutput2")
     public Integer analogOutput2;
+
     public Device withAnalogOutput2(Integer analogOutput2) {
         this.analogOutput2 = analogOutput2;
         return this;
@@ -122,6 +131,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChargingStationState")
     public DeviceChargingStationStateEnum chargingStationState;
+
     public Device withChargingStationState(DeviceChargingStationStateEnum chargingStationState) {
         this.chargingStationState = chargingStationState;
         return this;
@@ -133,6 +143,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReading")
     public Double counterReading;
+
     public Device withCounterReading(Double counterReading) {
         this.counterReading = counterReading;
         return this;
@@ -144,6 +155,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingExport")
     public Double counterReadingExport;
+
     public Device withCounterReadingExport(Double counterReadingExport) {
         this.counterReadingExport = counterReadingExport;
         return this;
@@ -155,6 +167,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingImport")
     public Double counterReadingImport;
+
     public Device withCounterReadingImport(Double counterReadingImport) {
         this.counterReadingImport = counterReadingImport;
         return this;
@@ -166,6 +179,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingT1")
     public Double counterReadingT1;
+
     public Device withCounterReadingT1(Double counterReadingT1) {
         this.counterReadingT1 = counterReadingT1;
         return this;
@@ -177,6 +191,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingT2")
     public Double counterReadingT2;
+
     public Device withCounterReadingT2(Double counterReadingT2) {
         this.counterReadingT2 = counterReadingT2;
         return this;
@@ -188,6 +203,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingT3")
     public Double counterReadingT3;
+
     public Device withCounterReadingT3(Double counterReadingT3) {
         this.counterReadingT3 = counterReadingT3;
         return this;
@@ -199,6 +215,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingT4")
     public Double counterReadingT4;
+
     public Device withCounterReadingT4(Double counterReadingT4) {
         this.counterReadingT4 = counterReadingT4;
         return this;
@@ -210,6 +227,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingUnit")
     public String counterReadingUnit;
+
     public Device withCounterReadingUnit(String counterReadingUnit) {
         this.counterReadingUnit = counterReadingUnit;
         return this;
@@ -221,6 +239,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Current")
     public Double current;
+
     public Device withCurrent(Double current) {
         this.current = current;
         return this;
@@ -232,6 +251,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentL1")
     public Double currentL1;
+
     public Device withCurrentL1(Double currentL1) {
         this.currentL1 = currentL1;
         return this;
@@ -243,6 +263,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentL2")
     public Double currentL2;
+
     public Device withCurrentL2(Double currentL2) {
         this.currentL2 = currentL2;
         return this;
@@ -254,6 +275,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentL3")
     public Double currentL3;
+
     public Device withCurrentL3(Double currentL3) {
         this.currentL3 = currentL3;
         return this;
@@ -265,6 +287,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceEnergyType")
     public DeviceDeviceEnergyTypeEnum deviceEnergyType;
+
     public Device withDeviceEnergyType(DeviceDeviceEnergyTypeEnum deviceEnergyType) {
         this.deviceEnergyType = deviceEnergyType;
         return this;
@@ -276,6 +299,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DigitalInput1")
     public Boolean digitalInput1;
+
     public Device withDigitalInput1(Boolean digitalInput1) {
         this.digitalInput1 = digitalInput1;
         return this;
@@ -287,6 +311,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DigitalInput2")
     public Boolean digitalInput2;
+
     public Device withDigitalInput2(Boolean digitalInput2) {
         this.digitalInput2 = digitalInput2;
         return this;
@@ -298,6 +323,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DigitalOutput1")
     public Boolean digitalOutput1;
+
     public Device withDigitalOutput1(Boolean digitalOutput1) {
         this.digitalOutput1 = digitalOutput1;
         return this;
@@ -309,6 +335,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DigitalOutput2")
     public Boolean digitalOutput2;
+
     public Device withDigitalOutput2(Boolean digitalOutput2) {
         this.digitalOutput2 = digitalOutput2;
         return this;
@@ -320,6 +347,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FamilyType")
     public DeviceFamilyTypeEnum familyType;
+
     public Device withFamilyType(DeviceFamilyTypeEnum familyType) {
         this.familyType = familyType;
         return this;
@@ -331,6 +359,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlowRate")
     public Double flowRate;
+
     public Device withFlowRate(Double flowRate) {
         this.flowRate = flowRate;
         return this;
@@ -342,6 +371,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Device withId(String id) {
         this.id = id;
         return this;
@@ -353,6 +383,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MeterSubType")
     public DeviceMeterSubTypeEnum meterSubType;
+
     public Device withMeterSubType(DeviceMeterSubTypeEnum meterSubType) {
         this.meterSubType = meterSubType;
         return this;
@@ -364,6 +395,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Device withName(String name) {
         this.name = name;
         return this;
@@ -375,6 +407,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PowerFactor")
     public Double powerFactor;
+
     public Device withPowerFactor(Double powerFactor) {
         this.powerFactor = powerFactor;
         return this;
@@ -386,6 +419,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PowerFactorL1")
     public Double powerFactorL1;
+
     public Device withPowerFactorL1(Double powerFactorL1) {
         this.powerFactorL1 = powerFactorL1;
         return this;
@@ -397,6 +431,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PowerFactorL2")
     public Double powerFactorL2;
+
     public Device withPowerFactorL2(Double powerFactorL2) {
         this.powerFactorL2 = powerFactorL2;
         return this;
@@ -408,6 +443,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PowerFactorL3")
     public Double powerFactorL3;
+
     public Device withPowerFactorL3(Double powerFactorL3) {
         this.powerFactorL3 = powerFactorL3;
         return this;
@@ -419,6 +455,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Serial")
     public Long serial;
+
     public Device withSerial(Long serial) {
         this.serial = serial;
         return this;
@@ -430,6 +467,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SwitchOn")
     public Boolean switchOn;
+
     public Device withSwitchOn(Boolean switchOn) {
         this.switchOn = switchOn;
         return this;
@@ -441,6 +479,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SwitchPhaseL1On")
     public Boolean switchPhaseL1On;
+
     public Device withSwitchPhaseL1On(Boolean switchPhaseL1On) {
         this.switchPhaseL1On = switchPhaseL1On;
         return this;
@@ -452,6 +491,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SwitchPhaseL2On")
     public Boolean switchPhaseL2On;
+
     public Device withSwitchPhaseL2On(Boolean switchPhaseL2On) {
         this.switchPhaseL2On = switchPhaseL2On;
         return this;
@@ -463,6 +503,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SwitchPhaseL3On")
     public Boolean switchPhaseL3On;
+
     public Device withSwitchPhaseL3On(Boolean switchPhaseL3On) {
         this.switchPhaseL3On = switchPhaseL3On;
         return this;
@@ -474,6 +515,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Temperature")
     public Double temperature;
+
     public Device withTemperature(Double temperature) {
         this.temperature = temperature;
         return this;
@@ -487,6 +529,7 @@ public class Device {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ValueDate")
     public OffsetDateTime valueDate;
+
     public Device withValueDate(OffsetDateTime valueDate) {
         this.valueDate = valueDate;
         return this;
@@ -498,6 +541,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Voltage")
     public Double voltage;
+
     public Device withVoltage(Double voltage) {
         this.voltage = voltage;
         return this;
@@ -509,6 +553,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VoltageL1")
     public Double voltageL1;
+
     public Device withVoltageL1(Double voltageL1) {
         this.voltageL1 = voltageL1;
         return this;
@@ -520,6 +565,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VoltageL2")
     public Double voltageL2;
+
     public Device withVoltageL2(Double voltageL2) {
         this.voltageL2 = voltageL2;
         return this;
@@ -531,9 +577,11 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VoltageL3")
     public Double voltageL3;
+
     public Device withVoltageL3(Double voltageL3) {
         this.voltageL3 = voltageL3;
         return this;
     }
     
+    public Device(){}
 }

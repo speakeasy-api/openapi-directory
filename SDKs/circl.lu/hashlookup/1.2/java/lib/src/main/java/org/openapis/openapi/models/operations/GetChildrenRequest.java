@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChildrenRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=count")
     public Long count;
+
     public GetChildrenRequest withCount(Long count) {
         this.count = count;
         return this;
@@ -16,6 +18,7 @@ public class GetChildrenRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cursor")
     public String cursor;
+
     public GetChildrenRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -23,9 +26,15 @@ public class GetChildrenRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sha1")
     public String sha1;
+
     public GetChildrenRequest withSha1(String sha1) {
         this.sha1 = sha1;
         return this;
     }
     
+    public GetChildrenRequest(@JsonProperty("count") Long count, @JsonProperty("cursor") String cursor, @JsonProperty("sha1") String sha1) {
+        this.count = count;
+        this.cursor = cursor;
+        this.sha1 = sha1;
+  }
 }

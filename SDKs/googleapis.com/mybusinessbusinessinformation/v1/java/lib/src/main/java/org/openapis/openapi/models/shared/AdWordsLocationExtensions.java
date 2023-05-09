@@ -18,9 +18,11 @@ public class AdWordsLocationExtensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adPhone")
     public String adPhone;
+
     public AdWordsLocationExtensions withAdPhone(String adPhone) {
         this.adPhone = adPhone;
         return this;
     }
     
+    public AdWordsLocationExtensions(){}
 }

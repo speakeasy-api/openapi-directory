@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMartParalogAssociationsResourceRequest {
@@ -12,6 +13,7 @@ public class GetMartParalogAssociationsResourceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxon1")
     public String taxon1;
+
     public GetMartParalogAssociationsResourceRequest withTaxon1(String taxon1) {
         this.taxon1 = taxon1;
         return this;
@@ -22,9 +24,14 @@ public class GetMartParalogAssociationsResourceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxon2")
     public String taxon2;
+
     public GetMartParalogAssociationsResourceRequest withTaxon2(String taxon2) {
         this.taxon2 = taxon2;
         return this;
     }
     
+    public GetMartParalogAssociationsResourceRequest(@JsonProperty("taxon1") String taxon1, @JsonProperty("taxon2") String taxon2) {
+        this.taxon1 = taxon1;
+        this.taxon2 = taxon2;
+  }
 }

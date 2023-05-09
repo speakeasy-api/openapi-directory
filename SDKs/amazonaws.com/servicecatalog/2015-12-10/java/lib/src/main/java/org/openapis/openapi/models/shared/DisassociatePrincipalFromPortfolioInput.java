@@ -12,6 +12,7 @@ public class DisassociatePrincipalFromPortfolioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public DisassociatePrincipalFromPortfolioInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,6 +20,7 @@ public class DisassociatePrincipalFromPortfolioInput {
     
     @JsonProperty("PortfolioId")
     public String portfolioId;
+
     public DisassociatePrincipalFromPortfolioInput withPortfolioId(String portfolioId) {
         this.portfolioId = portfolioId;
         return this;
@@ -26,6 +28,7 @@ public class DisassociatePrincipalFromPortfolioInput {
     
     @JsonProperty("PrincipalARN")
     public String principalARN;
+
     public DisassociatePrincipalFromPortfolioInput withPrincipalARN(String principalARN) {
         this.principalARN = principalARN;
         return this;
@@ -34,9 +37,14 @@ public class DisassociatePrincipalFromPortfolioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrincipalType")
     public PrincipalTypeEnum principalType;
+
     public DisassociatePrincipalFromPortfolioInput withPrincipalType(PrincipalTypeEnum principalType) {
         this.principalType = principalType;
         return this;
     }
     
+    public DisassociatePrincipalFromPortfolioInput(@JsonProperty("PortfolioId") String portfolioId, @JsonProperty("PrincipalARN") String principalARN) {
+        this.portfolioId = portfolioId;
+        this.principalARN = principalARN;
+  }
 }

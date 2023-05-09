@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TransportationIncentivesLawsPocsRequest {
@@ -12,6 +13,7 @@ public class TransportationIncentivesLawsPocsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public TransportationIncentivesLawsPocsRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class TransportationIncentivesLawsPocsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jurisdiction")
     public String jurisdiction;
+
     public TransportationIncentivesLawsPocsRequest withJurisdiction(String jurisdiction) {
         this.jurisdiction = jurisdiction;
         return this;
@@ -32,9 +35,15 @@ public class TransportationIncentivesLawsPocsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=output_format")
     public TransportationIncentivesLawsPocsOutputFormatEnum outputFormat;
+
     public TransportationIncentivesLawsPocsRequest withOutputFormat(TransportationIncentivesLawsPocsOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
     }
     
+    public TransportationIncentivesLawsPocsRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("jurisdiction") String jurisdiction, @JsonProperty("output_format") TransportationIncentivesLawsPocsOutputFormatEnum outputFormat) {
+        this.apiKey = apiKey;
+        this.jurisdiction = jurisdiction;
+        this.outputFormat = outputFormat;
+  }
 }

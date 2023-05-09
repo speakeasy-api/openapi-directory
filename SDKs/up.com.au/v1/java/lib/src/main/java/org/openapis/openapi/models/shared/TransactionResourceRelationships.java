@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransactionResourceRelationships {
     @JsonProperty("account")
     public TransactionResourceRelationshipsAccount account;
+
     public TransactionResourceRelationships withAccount(TransactionResourceRelationshipsAccount account) {
         this.account = account;
         return this;
@@ -16,6 +17,7 @@ public class TransactionResourceRelationships {
     
     @JsonProperty("category")
     public TransactionResourceRelationshipsCategory category;
+
     public TransactionResourceRelationships withCategory(TransactionResourceRelationshipsCategory category) {
         this.category = category;
         return this;
@@ -23,6 +25,7 @@ public class TransactionResourceRelationships {
     
     @JsonProperty("parentCategory")
     public TransactionResourceRelationshipsParentCategory parentCategory;
+
     public TransactionResourceRelationships withParentCategory(TransactionResourceRelationshipsParentCategory parentCategory) {
         this.parentCategory = parentCategory;
         return this;
@@ -30,6 +33,7 @@ public class TransactionResourceRelationships {
     
     @JsonProperty("tags")
     public TransactionResourceRelationshipsTags tags;
+
     public TransactionResourceRelationships withTags(TransactionResourceRelationshipsTags tags) {
         this.tags = tags;
         return this;
@@ -43,9 +47,17 @@ public class TransactionResourceRelationships {
      */
     @JsonProperty("transferAccount")
     public TransactionResourceRelationshipsTransferAccount transferAccount;
+
     public TransactionResourceRelationships withTransferAccount(TransactionResourceRelationshipsTransferAccount transferAccount) {
         this.transferAccount = transferAccount;
         return this;
     }
     
+    public TransactionResourceRelationships(@JsonProperty("account") TransactionResourceRelationshipsAccount account, @JsonProperty("category") TransactionResourceRelationshipsCategory category, @JsonProperty("parentCategory") TransactionResourceRelationshipsParentCategory parentCategory, @JsonProperty("tags") TransactionResourceRelationshipsTags tags, @JsonProperty("transferAccount") TransactionResourceRelationshipsTransferAccount transferAccount) {
+        this.account = account;
+        this.category = category;
+        this.parentCategory = parentCategory;
+        this.tags = tags;
+        this.transferAccount = transferAccount;
+  }
 }

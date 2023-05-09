@@ -183,4 +183,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/DocumentDetailDocumentTypeE
 lib/src/main/java/org/openapis/openapi/models/shared/DocumentDetail.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetUploadedDocumentsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UploadDocumentRequest.java
+docs/sdk/README.md
+docs/accountholders/README.md
+docs/accounts/README.md
+docs/verification/README.md
 USAGE.md

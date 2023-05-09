@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InventoryperdockRequest {
@@ -12,6 +13,7 @@ public class InventoryperdockRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public InventoryperdockRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class InventoryperdockRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public InventoryperdockRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class InventoryperdockRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dockId")
     public String dockId;
+
     public InventoryperdockRequest withDockId(String dockId) {
         this.dockId = dockId;
         return this;
@@ -36,9 +40,16 @@ public class InventoryperdockRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
     public String skuId;
+
     public InventoryperdockRequest withSkuId(String skuId) {
         this.skuId = skuId;
         return this;
     }
     
+    public InventoryperdockRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("dockId") String dockId, @JsonProperty("skuId") String skuId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.dockId = dockId;
+        this.skuId = skuId;
+  }
 }

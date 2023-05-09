@@ -15,9 +15,11 @@ public class TeamsAddOrUpdateRepoPermissionsInOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public String permission;
+
     public TeamsAddOrUpdateRepoPermissionsInOrgRequestBody withPermission(String permission) {
         this.permission = permission;
         return this;
     }
     
+    public TeamsAddOrUpdateRepoPermissionsInOrgRequestBody(){}
 }

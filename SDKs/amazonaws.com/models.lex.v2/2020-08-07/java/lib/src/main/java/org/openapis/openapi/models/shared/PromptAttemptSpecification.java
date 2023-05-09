@@ -15,6 +15,7 @@ public class PromptAttemptSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowInterrupt")
     public Boolean allowInterrupt;
+
     public PromptAttemptSpecification withAllowInterrupt(Boolean allowInterrupt) {
         this.allowInterrupt = allowInterrupt;
         return this;
@@ -22,6 +23,7 @@ public class PromptAttemptSpecification {
     
     @JsonProperty("allowedInputTypes")
     public AllowedInputTypes allowedInputTypes;
+
     public PromptAttemptSpecification withAllowedInputTypes(AllowedInputTypes allowedInputTypes) {
         this.allowedInputTypes = allowedInputTypes;
         return this;
@@ -30,6 +32,7 @@ public class PromptAttemptSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioAndDTMFInputSpecification")
     public AudioAndDTMFInputSpecification audioAndDTMFInputSpecification;
+
     public PromptAttemptSpecification withAudioAndDTMFInputSpecification(AudioAndDTMFInputSpecification audioAndDTMFInputSpecification) {
         this.audioAndDTMFInputSpecification = audioAndDTMFInputSpecification;
         return this;
@@ -38,9 +41,13 @@ public class PromptAttemptSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textInputSpecification")
     public TextInputSpecification textInputSpecification;
+
     public PromptAttemptSpecification withTextInputSpecification(TextInputSpecification textInputSpecification) {
         this.textInputSpecification = textInputSpecification;
         return this;
     }
     
+    public PromptAttemptSpecification(@JsonProperty("allowedInputTypes") AllowedInputTypes allowedInputTypes) {
+        this.allowedInputTypes = allowedInputTypes;
+  }
 }

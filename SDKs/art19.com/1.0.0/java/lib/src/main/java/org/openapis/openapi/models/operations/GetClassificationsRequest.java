@@ -15,6 +15,7 @@ public class GetClassificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids[]")
     public String[] ids;
+
     public GetClassificationsRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -28,6 +29,7 @@ public class GetClassificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_country")
     public String isCountry;
+
     public GetClassificationsRequest withIsCountry(String isCountry) {
         this.isCountry = isCountry;
         return this;
@@ -40,6 +42,7 @@ public class GetClassificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[number]")
     public Long pageNumber;
+
     public GetClassificationsRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -52,6 +55,7 @@ public class GetClassificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
     public Long pageSize;
+
     public GetClassificationsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -64,6 +68,7 @@ public class GetClassificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetClassificationsRequest withQ(String q) {
         this.q = q;
         return this;
@@ -76,6 +81,7 @@ public class GetClassificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sort")
     public GetClassificationsSortEnum[] sort;
+
     public GetClassificationsRequest withSort(GetClassificationsSortEnum[] sort) {
         this.sort = sort;
         return this;
@@ -88,9 +94,11 @@ public class GetClassificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public GetClassificationsTypeEnum type;
+
     public GetClassificationsRequest withType(GetClassificationsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetClassificationsRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteServiceResponse {
     
     public String contentType;
+
     public DeleteServiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteServiceResponse {
      */
     
     public java.util.Map<String, Object> deleteServiceResponse;
+
     public DeleteServiceResponse withDeleteServiceResponse(java.util.Map<String, Object> deleteServiceResponse) {
         this.deleteServiceResponse = deleteServiceResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteServiceResponse {
      */
     
     public Object invalidInput;
+
     public DeleteServiceResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -39,6 +43,7 @@ public class DeleteServiceResponse {
      */
     
     public Object resourceInUse;
+
     public DeleteServiceResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -46,6 +51,7 @@ public class DeleteServiceResponse {
     
     
     public Integer statusCode;
+
     public DeleteServiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteServiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteServiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteServiceResponse {
      */
     
     public Object serviceNotFound;
+
     public DeleteServiceResponse withServiceNotFound(Object serviceNotFound) {
         this.serviceNotFound = serviceNotFound;
         return this;
     }
     
+    public DeleteServiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

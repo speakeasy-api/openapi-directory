@@ -12,6 +12,7 @@ public class RegistrationsIdentifiersListIdentifier {
      */
     
     public RegistrationsIdentifiersListIdentifierAttributes attributes;
+
     public RegistrationsIdentifiersListIdentifier withAttributes(RegistrationsIdentifiersListIdentifierAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class RegistrationsIdentifiersListIdentifier {
      */
     
     public String id;
+
     public RegistrationsIdentifiersListIdentifier withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class RegistrationsIdentifiersListIdentifier {
      */
     
     public RegistrationsIdentifiersListIdentifierLinks links;
+
     public RegistrationsIdentifiersListIdentifier withLinks(RegistrationsIdentifiersListIdentifierLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class RegistrationsIdentifiersListIdentifier {
      */
     
     public RegistrationsIdentifiersListIdentifierRelationships relationships;
+
     public RegistrationsIdentifiersListIdentifier withRelationships(RegistrationsIdentifiersListIdentifierRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,11 @@ public class RegistrationsIdentifiersListIdentifier {
      */
     
     public String type;
+
     public RegistrationsIdentifiersListIdentifier withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RegistrationsIdentifiersListIdentifier(){}
 }

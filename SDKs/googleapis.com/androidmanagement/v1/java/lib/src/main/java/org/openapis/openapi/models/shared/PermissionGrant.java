@@ -18,6 +18,7 @@ public class PermissionGrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public String permission;
+
     public PermissionGrant withPermission(String permission) {
         this.permission = permission;
         return this;
@@ -29,9 +30,11 @@ public class PermissionGrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public PermissionGrantPolicyEnum policy;
+
     public PermissionGrant withPolicy(PermissionGrantPolicyEnum policy) {
         this.policy = policy;
         return this;
     }
     
+    public PermissionGrant(){}
 }

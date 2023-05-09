@@ -15,6 +15,7 @@ public class SchemaAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeName")
     public String attributeName;
+
     public SchemaAttribute withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -23,9 +24,11 @@ public class SchemaAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeType")
     public AttributeTypeEnum attributeType;
+
     public SchemaAttribute withAttributeType(AttributeTypeEnum attributeType) {
         this.attributeType = attributeType;
         return this;
     }
     
+    public SchemaAttribute(){}
 }

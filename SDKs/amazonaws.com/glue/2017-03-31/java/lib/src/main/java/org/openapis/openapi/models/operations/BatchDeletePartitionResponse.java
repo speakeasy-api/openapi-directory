@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDeletePartitionResponse {
@@ -12,6 +13,7 @@ public class BatchDeletePartitionResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDeletePartitionResponse batchDeletePartitionResponse;
+
     public BatchDeletePartitionResponse withBatchDeletePartitionResponse(org.openapis.openapi.models.shared.BatchDeletePartitionResponse batchDeletePartitionResponse) {
         this.batchDeletePartitionResponse = batchDeletePartitionResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchDeletePartitionResponse {
     
     
     public String contentType;
+
     public BatchDeletePartitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchDeletePartitionResponse {
      */
     
     public Object entityNotFoundException;
+
     public BatchDeletePartitionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class BatchDeletePartitionResponse {
      */
     
     public Object internalServiceException;
+
     public BatchDeletePartitionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class BatchDeletePartitionResponse {
      */
     
     public Object invalidInputException;
+
     public BatchDeletePartitionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class BatchDeletePartitionResponse {
      */
     
     public Object operationTimeoutException;
+
     public BatchDeletePartitionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class BatchDeletePartitionResponse {
     
     
     public Integer statusCode;
+
     public BatchDeletePartitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class BatchDeletePartitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDeletePartitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchDeletePartitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

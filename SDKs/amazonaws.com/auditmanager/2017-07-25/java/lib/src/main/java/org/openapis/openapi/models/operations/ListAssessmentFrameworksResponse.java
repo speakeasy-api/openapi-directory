@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAssessmentFrameworksResponse {
@@ -12,6 +13,7 @@ public class ListAssessmentFrameworksResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAssessmentFrameworksResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAssessmentFrameworksResponse {
     
     
     public String contentType;
+
     public ListAssessmentFrameworksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAssessmentFrameworksResponse {
      */
     
     public Object internalServerException;
+
     public ListAssessmentFrameworksResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListAssessmentFrameworksResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAssessmentFrameworksResponse listAssessmentFrameworksResponse;
+
     public ListAssessmentFrameworksResponse withListAssessmentFrameworksResponse(org.openapis.openapi.models.shared.ListAssessmentFrameworksResponse listAssessmentFrameworksResponse) {
         this.listAssessmentFrameworksResponse = listAssessmentFrameworksResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListAssessmentFrameworksResponse {
     
     
     public Integer statusCode;
+
     public ListAssessmentFrameworksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListAssessmentFrameworksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAssessmentFrameworksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListAssessmentFrameworksResponse {
      */
     
     public Object validationException;
+
     public ListAssessmentFrameworksResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAssessmentFrameworksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

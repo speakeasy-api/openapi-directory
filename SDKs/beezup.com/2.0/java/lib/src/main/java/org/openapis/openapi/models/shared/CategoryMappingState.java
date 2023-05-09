@@ -15,6 +15,7 @@ public class CategoryMappingState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CategoryMappingStatusEnum status;
+
     public CategoryMappingState withStatus(CategoryMappingStatusEnum status) {
         this.status = status;
         return this;
@@ -26,6 +27,7 @@ public class CategoryMappingState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uncategorizedProductCount")
     public Integer uncategorizedProductCount;
+
     public CategoryMappingState withUncategorizedProductCount(Integer uncategorizedProductCount) {
         this.uncategorizedProductCount = uncategorizedProductCount;
         return this;
@@ -37,9 +39,11 @@ public class CategoryMappingState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("withoutCategoryCostProductCount")
     public Integer withoutCategoryCostProductCount;
+
     public CategoryMappingState withWithoutCategoryCostProductCount(Integer withoutCategoryCostProductCount) {
         this.withoutCategoryCostProductCount = withoutCategoryCostProductCount;
         return this;
     }
     
+    public CategoryMappingState(){}
 }

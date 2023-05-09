@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GitGetTreeRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public GitGetTreeRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -19,6 +21,7 @@ public class GitGetTreeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recursive")
     public String recursive;
+
     public GitGetTreeRequest withRecursive(String recursive) {
         this.recursive = recursive;
         return this;
@@ -26,6 +29,7 @@ public class GitGetTreeRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public GitGetTreeRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -33,9 +37,15 @@ public class GitGetTreeRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tree_sha")
     public String treeSha;
+
     public GitGetTreeRequest withTreeSha(String treeSha) {
         this.treeSha = treeSha;
         return this;
     }
     
+    public GitGetTreeRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("tree_sha") String treeSha) {
+        this.owner = owner;
+        this.repo = repo;
+        this.treeSha = treeSha;
+  }
 }

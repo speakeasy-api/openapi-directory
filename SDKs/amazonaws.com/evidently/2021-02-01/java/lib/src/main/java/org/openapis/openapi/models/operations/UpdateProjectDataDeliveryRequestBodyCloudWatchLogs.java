@@ -15,9 +15,11 @@ public class UpdateProjectDataDeliveryRequestBodyCloudWatchLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroup")
     public String logGroup;
+
     public UpdateProjectDataDeliveryRequestBodyCloudWatchLogs withLogGroup(String logGroup) {
         this.logGroup = logGroup;
         return this;
     }
     
+    public UpdateProjectDataDeliveryRequestBodyCloudWatchLogs(){}
 }

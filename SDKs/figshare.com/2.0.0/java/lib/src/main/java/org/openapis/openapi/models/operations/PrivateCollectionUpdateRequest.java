@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateCollectionUpdateRequest {
@@ -12,6 +13,7 @@ public class PrivateCollectionUpdateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CollectionUpdate collectionUpdate;
+
     public PrivateCollectionUpdateRequest withCollectionUpdate(org.openapis.openapi.models.shared.CollectionUpdate collectionUpdate) {
         this.collectionUpdate = collectionUpdate;
         return this;
@@ -22,9 +24,14 @@ public class PrivateCollectionUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
     public Long collectionId;
+
     public PrivateCollectionUpdateRequest withCollectionId(Long collectionId) {
         this.collectionId = collectionId;
         return this;
     }
     
+    public PrivateCollectionUpdateRequest(@JsonProperty("CollectionUpdate") org.openapis.openapi.models.shared.CollectionUpdate collectionUpdate, @JsonProperty("collection_id") Long collectionId) {
+        this.collectionUpdate = collectionUpdate;
+        this.collectionId = collectionId;
+  }
 }

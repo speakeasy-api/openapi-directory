@@ -18,9 +18,11 @@ public class SamlSsoInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inboundSamlSsoProfile")
     public String inboundSamlSsoProfile;
+
     public SamlSsoInfo withInboundSamlSsoProfile(String inboundSamlSsoProfile) {
         this.inboundSamlSsoProfile = inboundSamlSsoProfile;
         return this;
     }
     
+    public SamlSsoInfo(){}
 }

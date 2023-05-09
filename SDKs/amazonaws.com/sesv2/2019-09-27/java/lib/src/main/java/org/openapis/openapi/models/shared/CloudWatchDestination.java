@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CloudWatchDestination {
     @JsonProperty("DimensionConfigurations")
     public CloudWatchDimensionConfiguration[] dimensionConfigurations;
+
     public CloudWatchDestination withDimensionConfigurations(CloudWatchDimensionConfiguration[] dimensionConfigurations) {
         this.dimensionConfigurations = dimensionConfigurations;
         return this;
     }
     
+    public CloudWatchDestination(@JsonProperty("DimensionConfigurations") CloudWatchDimensionConfiguration[] dimensionConfigurations) {
+        this.dimensionConfigurations = dimensionConfigurations;
+  }
 }

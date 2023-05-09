@@ -59,11 +59,9 @@ public class Cadences {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2CadencesJsonResponse res = new org.openapis.openapi.models.operations.GetV2CadencesJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2CadencesJsonResponse res = new org.openapis.openapi.models.operations.GetV2CadencesJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class Cadences {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2CadencesIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2CadencesIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2CadencesIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2CadencesIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

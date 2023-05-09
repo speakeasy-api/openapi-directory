@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeDatabaseRequest {
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public DescribeDatabaseRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
     }
     
+    public DescribeDatabaseRequest(@JsonProperty("DatabaseName") String databaseName) {
+        this.databaseName = databaseName;
+  }
 }

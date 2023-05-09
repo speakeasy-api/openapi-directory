@@ -18,6 +18,7 @@ public class Preview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content_type")
     public PreviewContentTypeEnum contentType;
+
     public Preview withContentType(PreviewContentTypeEnum contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +30,11 @@ public class Preview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Preview withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Preview(){}
 }

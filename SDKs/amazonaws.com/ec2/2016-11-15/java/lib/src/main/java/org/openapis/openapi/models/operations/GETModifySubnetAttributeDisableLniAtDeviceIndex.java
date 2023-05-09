@@ -12,9 +12,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifySubnetAttributeDisableLniAtDeviceIndex {
     @SpeakeasyMetadata("queryParam:name=Value")
     public Boolean value;
+
     public GETModifySubnetAttributeDisableLniAtDeviceIndex withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public GETModifySubnetAttributeDisableLniAtDeviceIndex(){}
 }

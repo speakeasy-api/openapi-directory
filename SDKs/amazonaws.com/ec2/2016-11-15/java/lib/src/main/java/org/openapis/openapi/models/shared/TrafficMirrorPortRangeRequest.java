@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TrafficMirrorPortRangeRequest {
     
     public Long fromPort;
+
     public TrafficMirrorPortRangeRequest withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -19,9 +20,11 @@ public class TrafficMirrorPortRangeRequest {
     
     
     public Long toPort;
+
     public TrafficMirrorPortRangeRequest withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
     }
     
+    public TrafficMirrorPortRangeRequest(){}
 }

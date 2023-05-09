@@ -18,6 +18,7 @@ public class Context {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("articleAndParentComment")
     public ArticleAndParentComment articleAndParentComment;
+
     public Context withArticleAndParentComment(ArticleAndParentComment articleAndParentComment) {
         this.articleAndParentComment = articleAndParentComment;
         return this;
@@ -29,9 +30,11 @@ public class Context {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public TextEntry[] entries;
+
     public Context withEntries(TextEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public Context(){}
 }

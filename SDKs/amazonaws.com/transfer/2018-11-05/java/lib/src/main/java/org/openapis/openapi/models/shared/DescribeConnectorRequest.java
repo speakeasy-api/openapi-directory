@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeConnectorRequest {
     @JsonProperty("ConnectorId")
     public String connectorId;
+
     public DescribeConnectorRequest withConnectorId(String connectorId) {
         this.connectorId = connectorId;
         return this;
     }
     
+    public DescribeConnectorRequest(@JsonProperty("ConnectorId") String connectorId) {
+        this.connectorId = connectorId;
+  }
 }

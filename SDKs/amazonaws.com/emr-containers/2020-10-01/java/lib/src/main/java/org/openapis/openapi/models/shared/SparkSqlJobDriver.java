@@ -15,6 +15,7 @@ public class SparkSqlJobDriver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryPoint")
     public String entryPoint;
+
     public SparkSqlJobDriver withEntryPoint(String entryPoint) {
         this.entryPoint = entryPoint;
         return this;
@@ -23,9 +24,11 @@ public class SparkSqlJobDriver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkSqlParameters")
     public String sparkSqlParameters;
+
     public SparkSqlJobDriver withSparkSqlParameters(String sparkSqlParameters) {
         this.sparkSqlParameters = sparkSqlParameters;
         return this;
     }
     
+    public SparkSqlJobDriver(){}
 }

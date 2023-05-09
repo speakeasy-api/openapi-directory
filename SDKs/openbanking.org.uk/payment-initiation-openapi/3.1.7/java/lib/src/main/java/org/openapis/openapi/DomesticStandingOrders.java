@@ -67,7 +67,7 @@ public class DomesticStandingOrders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDomesticStandingOrderConsentsJsonResponse res = new org.openapis.openapi.models.operations.CreateDomesticStandingOrderConsentsJsonResponse() {{
+        org.openapis.openapi.models.operations.CreateDomesticStandingOrderConsentsJsonResponse res = new org.openapis.openapi.models.operations.CreateDomesticStandingOrderConsentsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteDomesticStandingOrderConsentResponse6 = null;
             obWriteDomesticStandingOrderConsentResponse6 = null;
@@ -75,8 +75,6 @@ public class DomesticStandingOrders {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -156,7 +154,7 @@ public class DomesticStandingOrders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDomesticStandingOrderConsentsRawResponse res = new org.openapis.openapi.models.operations.CreateDomesticStandingOrderConsentsRawResponse() {{
+        org.openapis.openapi.models.operations.CreateDomesticStandingOrderConsentsRawResponse res = new org.openapis.openapi.models.operations.CreateDomesticStandingOrderConsentsRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteDomesticStandingOrderConsentResponse6 = null;
             obWriteDomesticStandingOrderConsentResponse6 = null;
@@ -164,8 +162,6 @@ public class DomesticStandingOrders {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -245,7 +241,7 @@ public class DomesticStandingOrders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDomesticStandingOrdersJsonResponse res = new org.openapis.openapi.models.operations.CreateDomesticStandingOrdersJsonResponse() {{
+        org.openapis.openapi.models.operations.CreateDomesticStandingOrdersJsonResponse res = new org.openapis.openapi.models.operations.CreateDomesticStandingOrdersJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteDomesticStandingOrderResponse6 = null;
             obWriteDomesticStandingOrderResponse6 = null;
@@ -253,8 +249,6 @@ public class DomesticStandingOrders {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -334,7 +328,7 @@ public class DomesticStandingOrders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDomesticStandingOrdersRawResponse res = new org.openapis.openapi.models.operations.CreateDomesticStandingOrdersRawResponse() {{
+        org.openapis.openapi.models.operations.CreateDomesticStandingOrdersRawResponse res = new org.openapis.openapi.models.operations.CreateDomesticStandingOrdersRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteDomesticStandingOrderResponse6 = null;
             obWriteDomesticStandingOrderResponse6 = null;
@@ -342,8 +336,6 @@ public class DomesticStandingOrders {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -418,7 +410,7 @@ public class DomesticStandingOrders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDomesticStandingOrderConsentsConsentIdResponse res = new org.openapis.openapi.models.operations.GetDomesticStandingOrderConsentsConsentIdResponse() {{
+        org.openapis.openapi.models.operations.GetDomesticStandingOrderConsentsConsentIdResponse res = new org.openapis.openapi.models.operations.GetDomesticStandingOrderConsentsConsentIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteDomesticStandingOrderConsentResponse6 = null;
             obWriteDomesticStandingOrderConsentResponse6 = null;
@@ -426,8 +418,6 @@ public class DomesticStandingOrders {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -502,7 +492,7 @@ public class DomesticStandingOrders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdResponse res = new org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdResponse() {{
+        org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdResponse res = new org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteDomesticStandingOrderResponse6 = null;
             obWriteDomesticStandingOrderResponse6 = null;
@@ -510,8 +500,6 @@ public class DomesticStandingOrders {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

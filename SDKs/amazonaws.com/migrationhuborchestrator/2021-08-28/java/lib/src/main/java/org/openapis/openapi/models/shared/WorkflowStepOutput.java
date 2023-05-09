@@ -15,6 +15,7 @@ public class WorkflowStepOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public DataTypeEnum dataType;
+
     public WorkflowStepOutput withDataType(DataTypeEnum dataType) {
         this.dataType = dataType;
         return this;
@@ -23,6 +24,7 @@ public class WorkflowStepOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WorkflowStepOutput withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class WorkflowStepOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public WorkflowStepOutput withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -39,9 +42,11 @@ public class WorkflowStepOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public WorkflowStepOutputUnion value;
+
     public WorkflowStepOutput withValue(WorkflowStepOutputUnion value) {
         this.value = value;
         return this;
     }
     
+    public WorkflowStepOutput(){}
 }

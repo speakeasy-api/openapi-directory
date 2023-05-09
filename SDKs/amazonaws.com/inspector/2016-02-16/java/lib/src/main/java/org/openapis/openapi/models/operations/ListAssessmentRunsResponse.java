@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAssessmentRunsResponse {
@@ -12,6 +13,7 @@ public class ListAssessmentRunsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAssessmentRunsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAssessmentRunsResponse {
     
     
     public String contentType;
+
     public ListAssessmentRunsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAssessmentRunsResponse {
      */
     
     public Object internalException;
+
     public ListAssessmentRunsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class ListAssessmentRunsResponse {
      */
     
     public Object invalidInputException;
+
     public ListAssessmentRunsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListAssessmentRunsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAssessmentRunsResponse listAssessmentRunsResponse;
+
     public ListAssessmentRunsResponse withListAssessmentRunsResponse(org.openapis.openapi.models.shared.ListAssessmentRunsResponse listAssessmentRunsResponse) {
         this.listAssessmentRunsResponse = listAssessmentRunsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListAssessmentRunsResponse {
      */
     
     public Object noSuchEntityException;
+
     public ListAssessmentRunsResponse withNoSuchEntityException(Object noSuchEntityException) {
         this.noSuchEntityException = noSuchEntityException;
         return this;
@@ -66,6 +73,7 @@ public class ListAssessmentRunsResponse {
     
     
     public Integer statusCode;
+
     public ListAssessmentRunsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListAssessmentRunsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAssessmentRunsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAssessmentRunsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

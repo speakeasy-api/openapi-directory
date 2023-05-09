@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETModifyVpcEndpointServicePayerResponsibilityResponse {
     
     public byte[] body;
+
     public GETModifyVpcEndpointServicePayerResponsibilityResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETModifyVpcEndpointServicePayerResponsibilityResponse {
     
     
     public String contentType;
+
     public GETModifyVpcEndpointServicePayerResponsibilityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETModifyVpcEndpointServicePayerResponsibilityResponse {
     
     
     public Integer statusCode;
+
     public GETModifyVpcEndpointServicePayerResponsibilityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETModifyVpcEndpointServicePayerResponsibilityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETModifyVpcEndpointServicePayerResponsibilityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETModifyVpcEndpointServicePayerResponsibilityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

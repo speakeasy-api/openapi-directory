@@ -12,6 +12,7 @@ public class PrivateLink {
      */
     @JsonProperty("expires_date")
     public String expiresDate;
+
     public PrivateLink withExpiresDate(String expiresDate) {
         this.expiresDate = expiresDate;
         return this;
@@ -22,6 +23,7 @@ public class PrivateLink {
      */
     @JsonProperty("html_location")
     public String htmlLocation;
+
     public PrivateLink withHtmlLocation(String htmlLocation) {
         this.htmlLocation = htmlLocation;
         return this;
@@ -32,6 +34,7 @@ public class PrivateLink {
      */
     @JsonProperty("id")
     public String id;
+
     public PrivateLink withId(String id) {
         this.id = id;
         return this;
@@ -42,9 +45,16 @@ public class PrivateLink {
      */
     @JsonProperty("is_active")
     public Boolean isActive;
+
     public PrivateLink withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
     
+    public PrivateLink(@JsonProperty("expires_date") String expiresDate, @JsonProperty("html_location") String htmlLocation, @JsonProperty("id") String id, @JsonProperty("is_active") Boolean isActive) {
+        this.expiresDate = expiresDate;
+        this.htmlLocation = htmlLocation;
+        this.id = id;
+        this.isActive = isActive;
+  }
 }

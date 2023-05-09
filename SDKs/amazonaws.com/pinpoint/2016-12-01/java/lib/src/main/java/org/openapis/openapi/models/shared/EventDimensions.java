@@ -15,6 +15,7 @@ public class EventDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, AttributeDimension> attributes;
+
     public EventDimensions withAttributes(java.util.Map<String, AttributeDimension> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class EventDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventType")
     public SetDimension eventType;
+
     public EventDimensions withEventType(SetDimension eventType) {
         this.eventType = eventType;
         return this;
@@ -31,9 +33,11 @@ public class EventDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metrics")
     public java.util.Map<String, MetricDimension> metrics;
+
     public EventDimensions withMetrics(java.util.Map<String, MetricDimension> metrics) {
         this.metrics = metrics;
         return this;
     }
     
+    public EventDimensions(){}
 }

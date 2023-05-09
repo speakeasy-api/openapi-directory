@@ -15,6 +15,7 @@ public class BillingProfileHcpcsCodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public BillingProfileHcpcsCodes withCode(String code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class BillingProfileHcpcsCodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diagnosis_pointers_icd10")
     public String[] diagnosisPointersIcd10;
+
     public BillingProfileHcpcsCodes withDiagnosisPointersIcd10(String[] diagnosisPointersIcd10) {
         this.diagnosisPointersIcd10 = diagnosisPointersIcd10;
         return this;
@@ -37,6 +39,7 @@ public class BillingProfileHcpcsCodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diagnosis_pointers_icd9")
     public String[] diagnosisPointersIcd9;
+
     public BillingProfileHcpcsCodes withDiagnosisPointersIcd9(String[] diagnosisPointersIcd9) {
         this.diagnosisPointersIcd9 = diagnosisPointersIcd9;
         return this;
@@ -48,6 +51,7 @@ public class BillingProfileHcpcsCodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifiers")
     public String[] modifiers;
+
     public BillingProfileHcpcsCodes withModifiers(String[] modifiers) {
         this.modifiers = modifiers;
         return this;
@@ -59,6 +63,7 @@ public class BillingProfileHcpcsCodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ndc_code")
     public BillingProfileHcpcsCodesNdcCode[] ndcCode;
+
     public BillingProfileHcpcsCodes withNdcCode(BillingProfileHcpcsCodesNdcCode[] ndcCode) {
         this.ndcCode = ndcCode;
         return this;
@@ -70,6 +75,7 @@ public class BillingProfileHcpcsCodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public String price;
+
     public BillingProfileHcpcsCodes withPrice(String price) {
         this.price = price;
         return this;
@@ -81,9 +87,11 @@ public class BillingProfileHcpcsCodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public String quantity;
+
     public BillingProfileHcpcsCodes withQuantity(String quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public BillingProfileHcpcsCodes(){}
 }

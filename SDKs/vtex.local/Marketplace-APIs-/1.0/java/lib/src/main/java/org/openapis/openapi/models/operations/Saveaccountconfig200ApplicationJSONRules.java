@@ -18,6 +18,7 @@ public class Saveaccountconfig200ApplicationJSONRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Item")
     public Long[] item;
+
     public Saveaccountconfig200ApplicationJSONRules withItem(Long[] item) {
         this.item = item;
         return this;
@@ -29,9 +30,11 @@ public class Saveaccountconfig200ApplicationJSONRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Product")
     public String[] product;
+
     public Saveaccountconfig200ApplicationJSONRules withProduct(String[] product) {
         this.product = product;
         return this;
     }
     
+    public Saveaccountconfig200ApplicationJSONRules(){}
 }

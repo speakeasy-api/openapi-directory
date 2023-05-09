@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeStacksInput {
     
     public String nextToken;
+
     public DescribeStacksInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeStacksInput {
     
     
     public String stackName;
+
     public DescribeStacksInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public DescribeStacksInput(){}
 }

@@ -20,6 +20,7 @@ public class RotationShift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactIds")
     public String[] contactIds;
+
     public RotationShift withContactIds(String[] contactIds) {
         this.contactIds = contactIds;
         return this;
@@ -29,6 +30,7 @@ public class RotationShift {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public RotationShift withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -37,6 +39,7 @@ public class RotationShift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShiftDetails")
     public ShiftDetails shiftDetails;
+
     public RotationShift withShiftDetails(ShiftDetails shiftDetails) {
         this.shiftDetails = shiftDetails;
         return this;
@@ -46,6 +49,7 @@ public class RotationShift {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public RotationShift withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -54,9 +58,14 @@ public class RotationShift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ShiftTypeEnum type;
+
     public RotationShift withType(ShiftTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RotationShift(@JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.startTime = startTime;
+  }
 }

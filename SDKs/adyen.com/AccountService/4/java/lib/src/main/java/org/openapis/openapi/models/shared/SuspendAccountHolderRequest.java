@@ -12,9 +12,13 @@ public class SuspendAccountHolderRequest {
      */
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public SuspendAccountHolderRequest withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
     }
     
+    public SuspendAccountHolderRequest(@JsonProperty("accountHolderCode") String accountHolderCode) {
+        this.accountHolderCode = accountHolderCode;
+  }
 }

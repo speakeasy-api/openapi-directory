@@ -56,14 +56,12 @@ public class MaintenanceController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobFormResponse res = new org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobFormResponse() {{
+        org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobFormResponse res = new org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobFormResponse(contentType, httpRes.statusCode()) {{
             object = null;
             object = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,14 +113,12 @@ public class MaintenanceController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobJsonResponse res = new org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobJsonResponse() {{
+        org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobJsonResponse res = new org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobJsonResponse(contentType, httpRes.statusCode()) {{
             object = null;
             object = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,14 +170,12 @@ public class MaintenanceController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobRawResponse res = new org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobRawResponse() {{
+        org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobRawResponse res = new org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobRawResponse(contentType, httpRes.statusCode()) {{
             object = null;
             object = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

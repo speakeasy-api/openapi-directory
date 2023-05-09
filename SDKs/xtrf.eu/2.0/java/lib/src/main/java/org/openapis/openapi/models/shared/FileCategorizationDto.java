@@ -12,6 +12,7 @@ public class FileCategorizationDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public FileCategorizationDto withCategory(String category) {
         this.category = category;
         return this;
@@ -20,6 +21,7 @@ public class FileCategorizationDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileId")
     public String fileId;
+
     public FileCategorizationDto withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -28,6 +30,7 @@ public class FileCategorizationDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCombinationIds")
     public LanguageCombinationDto[] languageCombinationIds;
+
     public FileCategorizationDto withLanguageCombinationIds(LanguageCombinationDto[] languageCombinationIds) {
         this.languageCombinationIds = languageCombinationIds;
         return this;
@@ -36,9 +39,11 @@ public class FileCategorizationDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageIds")
     public Long[] languageIds;
+
     public FileCategorizationDto withLanguageIds(Long[] languageIds) {
         this.languageIds = languageIds;
         return this;
     }
     
+    public FileCategorizationDto(){}
 }

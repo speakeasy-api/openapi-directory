@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResourceInventoryResponse {
@@ -12,6 +13,7 @@ public class ListResourceInventoryResponse {
      */
     
     public Object accessDeniedException;
+
     public ListResourceInventoryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListResourceInventoryResponse {
      */
     
     public Object authorizationException;
+
     public ListResourceInventoryResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class ListResourceInventoryResponse {
     
     
     public String contentType;
+
     public ListResourceInventoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListResourceInventoryResponse {
      */
     
     public Object failedDependencyException;
+
     public ListResourceInventoryResponse withFailedDependencyException(Object failedDependencyException) {
         this.failedDependencyException = failedDependencyException;
         return this;
@@ -49,6 +54,7 @@ public class ListResourceInventoryResponse {
      */
     
     public Object filterLimitExceededException;
+
     public ListResourceInventoryResponse withFilterLimitExceededException(Object filterLimitExceededException) {
         this.filterLimitExceededException = filterLimitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class ListResourceInventoryResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListResourceInventoryResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -69,6 +76,7 @@ public class ListResourceInventoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResourceInventoryResponse listResourceInventoryResponse;
+
     public ListResourceInventoryResponse withListResourceInventoryResponse(org.openapis.openapi.models.shared.ListResourceInventoryResponse listResourceInventoryResponse) {
         this.listResourceInventoryResponse = listResourceInventoryResponse;
         return this;
@@ -79,6 +87,7 @@ public class ListResourceInventoryResponse {
      */
     
     public Object rateLimitExceededException;
+
     public ListResourceInventoryResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -86,6 +95,7 @@ public class ListResourceInventoryResponse {
     
     
     public Integer statusCode;
+
     public ListResourceInventoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ListResourceInventoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResourceInventoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class ListResourceInventoryResponse {
      */
     
     public Object serverInternalException;
+
     public ListResourceInventoryResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
     }
     
+    public ListResourceInventoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

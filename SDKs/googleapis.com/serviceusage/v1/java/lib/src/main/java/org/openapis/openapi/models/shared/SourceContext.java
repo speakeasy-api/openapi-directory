@@ -18,9 +18,11 @@ public class SourceContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public SourceContext withFileName(String fileName) {
         this.fileName = fileName;
         return this;
     }
     
+    public SourceContext(){}
 }

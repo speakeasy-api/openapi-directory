@@ -18,6 +18,7 @@ public class GooglePlayDeveloperReportingV1beta1MetricsRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationPeriod")
     public GooglePlayDeveloperReportingV1beta1MetricsRowAggregationPeriodEnum aggregationPeriod;
+
     public GooglePlayDeveloperReportingV1beta1MetricsRow withAggregationPeriod(GooglePlayDeveloperReportingV1beta1MetricsRowAggregationPeriodEnum aggregationPeriod) {
         this.aggregationPeriod = aggregationPeriod;
         return this;
@@ -29,6 +30,7 @@ public class GooglePlayDeveloperReportingV1beta1MetricsRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public GooglePlayDeveloperReportingV1beta1DimensionValue[] dimensions;
+
     public GooglePlayDeveloperReportingV1beta1MetricsRow withDimensions(GooglePlayDeveloperReportingV1beta1DimensionValue[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -40,6 +42,7 @@ public class GooglePlayDeveloperReportingV1beta1MetricsRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public GooglePlayDeveloperReportingV1beta1MetricValue[] metrics;
+
     public GooglePlayDeveloperReportingV1beta1MetricsRow withMetrics(GooglePlayDeveloperReportingV1beta1MetricValue[] metrics) {
         this.metrics = metrics;
         return this;
@@ -51,9 +54,11 @@ public class GooglePlayDeveloperReportingV1beta1MetricsRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public GoogleTypeDateTime startTime;
+
     public GooglePlayDeveloperReportingV1beta1MetricsRow withStartTime(GoogleTypeDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GooglePlayDeveloperReportingV1beta1MetricsRow(){}
 }

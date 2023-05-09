@@ -12,6 +12,7 @@ public class InsightsLabelPerformance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InsightsLabelPerformance withName(String name) {
         this.name = name;
         return this;
@@ -20,9 +21,11 @@ public class InsightsLabelPerformance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentile_performance")
     public Double percentilePerformance;
+
     public InsightsLabelPerformance withPercentilePerformance(Double percentilePerformance) {
         this.percentilePerformance = percentilePerformance;
         return this;
     }
     
+    public InsightsLabelPerformance(){}
 }

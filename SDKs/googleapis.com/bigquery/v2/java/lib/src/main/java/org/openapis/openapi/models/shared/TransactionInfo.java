@@ -15,9 +15,11 @@ public class TransactionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionId")
     public String transactionId;
+
     public TransactionInfo withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public TransactionInfo(){}
 }

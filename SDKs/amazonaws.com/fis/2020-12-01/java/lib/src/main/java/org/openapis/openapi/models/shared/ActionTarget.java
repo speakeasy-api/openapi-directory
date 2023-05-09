@@ -15,9 +15,11 @@ public class ActionTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public String resourceType;
+
     public ActionTarget withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ActionTarget(){}
 }

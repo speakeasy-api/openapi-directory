@@ -15,6 +15,7 @@ public class InitialCapacityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerConfiguration")
     public WorkerResourceConfig workerConfiguration;
+
     public InitialCapacityConfig withWorkerConfiguration(WorkerResourceConfig workerConfiguration) {
         this.workerConfiguration = workerConfiguration;
         return this;
@@ -22,9 +23,13 @@ public class InitialCapacityConfig {
     
     @JsonProperty("workerCount")
     public Long workerCount;
+
     public InitialCapacityConfig withWorkerCount(Long workerCount) {
         this.workerCount = workerCount;
         return this;
     }
     
+    public InitialCapacityConfig(@JsonProperty("workerCount") Long workerCount) {
+        this.workerCount = workerCount;
+  }
 }

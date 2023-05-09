@@ -42,6 +42,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public Address address;
+
     public Location withAddress(Address address) {
         this.address = address;
         return this;
@@ -56,6 +57,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("business_email")
     public String businessEmail;
+
     public Location withBusinessEmail(String businessEmail) {
         this.businessEmail = businessEmail;
         return this;
@@ -67,6 +69,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("business_hours")
     public BusinessHours businessHours;
+
     public Location withBusinessHours(BusinessHours businessHours) {
         this.businessHours = businessHours;
         return this;
@@ -80,6 +83,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("business_name")
     public String businessName;
+
     public Location withBusinessName(String businessName) {
         this.businessName = businessName;
         return this;
@@ -92,6 +96,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public String[] capabilities;
+
     public Location withCapabilities(String[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -103,6 +108,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coordinates")
     public Coordinates coordinates;
+
     public Location withCoordinates(Coordinates coordinates) {
         this.coordinates = coordinates;
         return this;
@@ -116,6 +122,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public Location withCountry(String country) {
         this.country = country;
         return this;
@@ -128,6 +135,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public Location withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -141,6 +149,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public Location withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -152,6 +161,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Location withDescription(String description) {
         this.description = description;
         return this;
@@ -163,6 +173,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facebook_url")
     public String facebookUrl;
+
     public Location withFacebookUrl(String facebookUrl) {
         this.facebookUrl = facebookUrl;
         return this;
@@ -177,6 +188,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("full_format_logo_url")
     public String fullFormatLogoUrl;
+
     public Location withFullFormatLogoUrl(String fullFormatLogoUrl) {
         this.fullFormatLogoUrl = fullFormatLogoUrl;
         return this;
@@ -188,6 +200,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Location withId(String id) {
         this.id = id;
         return this;
@@ -199,6 +212,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instagram_username")
     public String instagramUsername;
+
     public Location withInstagramUsername(String instagramUsername) {
         this.instagramUsername = instagramUsername;
         return this;
@@ -212,6 +226,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language_code")
     public String languageCode;
+
     public Location withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -226,6 +241,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo_url")
     public String logoUrl;
+
     public Location withLogoUrl(String logoUrl) {
         this.logoUrl = logoUrl;
         return this;
@@ -238,6 +254,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mcc")
     public String mcc;
+
     public Location withMcc(String mcc) {
         this.mcc = mcc;
         return this;
@@ -249,6 +266,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_id")
     public String merchantId;
+
     public Location withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -262,6 +280,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Location withName(String name) {
         this.name = name;
         return this;
@@ -273,6 +292,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_number")
     public String phoneNumber;
+
     public Location withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -284,6 +304,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pos_background_url")
     public String posBackgroundUrl;
+
     public Location withPosBackgroundUrl(String posBackgroundUrl) {
         this.posBackgroundUrl = posBackgroundUrl;
         return this;
@@ -295,6 +316,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Location withStatus(String status) {
         this.status = status;
         return this;
@@ -306,6 +328,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_ids")
     public TaxIds taxIds;
+
     public Location withTaxIds(TaxIds taxIds) {
         this.taxIds = taxIds;
         return this;
@@ -318,6 +341,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public Location withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -329,6 +353,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter_username")
     public String twitterUsername;
+
     public Location withTwitterUsername(String twitterUsername) {
         this.twitterUsername = twitterUsername;
         return this;
@@ -340,6 +365,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Location withType(String type) {
         this.type = type;
         return this;
@@ -351,9 +377,11 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website_url")
     public String websiteUrl;
+
     public Location withWebsiteUrl(String websiteUrl) {
         this.websiteUrl = websiteUrl;
         return this;
     }
     
+    public Location(){}
 }

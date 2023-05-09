@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class EventCategoriesMapList {
     
     public String[] eventCategories;
+
     public EventCategoriesMapList withEventCategories(String[] eventCategories) {
         this.eventCategories = eventCategories;
         return this;
@@ -16,9 +17,11 @@ public class EventCategoriesMapList {
     
     
     public String sourceType;
+
     public EventCategoriesMapList withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public EventCategoriesMapList(){}
 }

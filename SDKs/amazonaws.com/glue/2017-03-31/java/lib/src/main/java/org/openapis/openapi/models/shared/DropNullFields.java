@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DropNullFields {
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public DropNullFields withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -21,6 +22,7 @@ public class DropNullFields {
     
     @JsonProperty("Name")
     public String name;
+
     public DropNullFields withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +31,7 @@ public class DropNullFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NullCheckBoxList")
     public NullCheckBoxList nullCheckBoxList;
+
     public DropNullFields withNullCheckBoxList(NullCheckBoxList nullCheckBoxList) {
         this.nullCheckBoxList = nullCheckBoxList;
         return this;
@@ -37,9 +40,14 @@ public class DropNullFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NullTextList")
     public NullValueField[] nullTextList;
+
     public DropNullFields withNullTextList(NullValueField[] nullTextList) {
         this.nullTextList = nullTextList;
         return this;
     }
     
+    public DropNullFields(@JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name) {
+        this.inputs = inputs;
+        this.name = name;
+  }
 }

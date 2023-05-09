@@ -15,6 +15,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryId")
     public String categoryId;
+
     public ReturnPolicy withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -26,6 +27,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryTreeId")
     public String categoryTreeId;
+
     public ReturnPolicy withCategoryTreeId(String categoryTreeId) {
         this.categoryTreeId = categoryTreeId;
         return this;
@@ -37,6 +39,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domestic")
     public ReturnPolicyDetails domestic;
+
     public ReturnPolicy withDomestic(ReturnPolicyDetails domestic) {
         this.domestic = domestic;
         return this;
@@ -48,6 +51,7 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("international")
     public ReturnPolicyDetails international;
+
     public ReturnPolicy withInternational(ReturnPolicyDetails international) {
         this.international = international;
         return this;
@@ -59,9 +63,11 @@ public class ReturnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public ReturnPolicy withRequired(Boolean required) {
         this.required = required;
         return this;
     }
     
+    public ReturnPolicy(){}
 }

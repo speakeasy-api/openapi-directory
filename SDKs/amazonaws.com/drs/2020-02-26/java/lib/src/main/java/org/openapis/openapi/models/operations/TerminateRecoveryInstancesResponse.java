@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TerminateRecoveryInstancesResponse {
@@ -12,6 +13,7 @@ public class TerminateRecoveryInstancesResponse {
      */
     
     public Object conflictException;
+
     public TerminateRecoveryInstancesResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class TerminateRecoveryInstancesResponse {
     
     
     public String contentType;
+
     public TerminateRecoveryInstancesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class TerminateRecoveryInstancesResponse {
      */
     
     public Object internalServerException;
+
     public TerminateRecoveryInstancesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class TerminateRecoveryInstancesResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public TerminateRecoveryInstancesResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -46,6 +51,7 @@ public class TerminateRecoveryInstancesResponse {
     
     
     public Integer statusCode;
+
     public TerminateRecoveryInstancesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class TerminateRecoveryInstancesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TerminateRecoveryInstancesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class TerminateRecoveryInstancesResponse {
      */
     
     public org.openapis.openapi.models.shared.TerminateRecoveryInstancesResponse terminateRecoveryInstancesResponse;
+
     public TerminateRecoveryInstancesResponse withTerminateRecoveryInstancesResponse(org.openapis.openapi.models.shared.TerminateRecoveryInstancesResponse terminateRecoveryInstancesResponse) {
         this.terminateRecoveryInstancesResponse = terminateRecoveryInstancesResponse;
         return this;
@@ -73,6 +81,7 @@ public class TerminateRecoveryInstancesResponse {
      */
     
     public Object throttlingException;
+
     public TerminateRecoveryInstancesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class TerminateRecoveryInstancesResponse {
      */
     
     public Object uninitializedAccountException;
+
     public TerminateRecoveryInstancesResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public TerminateRecoveryInstancesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

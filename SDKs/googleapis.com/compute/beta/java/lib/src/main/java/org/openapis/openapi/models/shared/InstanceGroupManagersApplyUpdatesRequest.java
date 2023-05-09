@@ -18,6 +18,7 @@ public class InstanceGroupManagersApplyUpdatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allInstances")
     public Boolean allInstances;
+
     public InstanceGroupManagersApplyUpdatesRequest withAllInstances(Boolean allInstances) {
         this.allInstances = allInstances;
         return this;
@@ -29,6 +30,7 @@ public class InstanceGroupManagersApplyUpdatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public String[] instances;
+
     public InstanceGroupManagersApplyUpdatesRequest withInstances(String[] instances) {
         this.instances = instances;
         return this;
@@ -40,6 +42,7 @@ public class InstanceGroupManagersApplyUpdatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimalAction")
     public InstanceGroupManagersApplyUpdatesRequestMinimalActionEnum minimalAction;
+
     public InstanceGroupManagersApplyUpdatesRequest withMinimalAction(InstanceGroupManagersApplyUpdatesRequestMinimalActionEnum minimalAction) {
         this.minimalAction = minimalAction;
         return this;
@@ -51,9 +54,11 @@ public class InstanceGroupManagersApplyUpdatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mostDisruptiveAllowedAction")
     public InstanceGroupManagersApplyUpdatesRequestMostDisruptiveAllowedActionEnum mostDisruptiveAllowedAction;
+
     public InstanceGroupManagersApplyUpdatesRequest withMostDisruptiveAllowedAction(InstanceGroupManagersApplyUpdatesRequestMostDisruptiveAllowedActionEnum mostDisruptiveAllowedAction) {
         this.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
         return this;
     }
     
+    public InstanceGroupManagersApplyUpdatesRequest(){}
 }

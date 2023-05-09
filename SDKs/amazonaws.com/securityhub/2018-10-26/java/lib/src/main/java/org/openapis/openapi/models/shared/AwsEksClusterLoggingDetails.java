@@ -15,9 +15,11 @@ public class AwsEksClusterLoggingDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterLogging")
     public AwsEksClusterLoggingClusterLoggingDetails[] clusterLogging;
+
     public AwsEksClusterLoggingDetails withClusterLogging(AwsEksClusterLoggingClusterLoggingDetails[] clusterLogging) {
         this.clusterLogging = clusterLogging;
         return this;
     }
     
+    public AwsEksClusterLoggingDetails(){}
 }

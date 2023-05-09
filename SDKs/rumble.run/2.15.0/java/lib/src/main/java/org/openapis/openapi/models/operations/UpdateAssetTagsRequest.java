@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAssetTagsRequest {
@@ -12,6 +13,7 @@ public class UpdateAssetTagsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AssetTags assetTags;
+
     public UpdateAssetTagsRequest withAssetTags(org.openapis.openapi.models.shared.AssetTags assetTags) {
         this.assetTags = assetTags;
         return this;
@@ -22,9 +24,14 @@ public class UpdateAssetTagsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=asset_id")
     public String assetId;
+
     public UpdateAssetTagsRequest withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
     }
     
+    public UpdateAssetTagsRequest(@JsonProperty("AssetTags") org.openapis.openapi.models.shared.AssetTags assetTags, @JsonProperty("asset_id") String assetId) {
+        this.assetTags = assetTags;
+        this.assetId = assetId;
+  }
 }

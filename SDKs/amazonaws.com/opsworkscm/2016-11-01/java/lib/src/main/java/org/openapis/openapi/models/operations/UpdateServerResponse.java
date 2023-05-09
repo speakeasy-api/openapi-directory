@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateServerResponse {
     
     public String contentType;
+
     public UpdateServerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateServerResponse {
      */
     
     public Object invalidStateException;
+
     public UpdateServerResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateServerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateServerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateServerResponse {
     
     
     public Integer statusCode;
+
     public UpdateServerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateServerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateServerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateServerResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateServerResponse updateServerResponse;
+
     public UpdateServerResponse withUpdateServerResponse(org.openapis.openapi.models.shared.UpdateServerResponse updateServerResponse) {
         this.updateServerResponse = updateServerResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateServerResponse {
      */
     
     public Object validationException;
+
     public UpdateServerResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateServerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

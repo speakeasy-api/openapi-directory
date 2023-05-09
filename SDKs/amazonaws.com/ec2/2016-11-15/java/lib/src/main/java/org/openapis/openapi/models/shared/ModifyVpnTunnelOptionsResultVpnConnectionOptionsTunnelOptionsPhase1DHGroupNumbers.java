@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyVpnTunnelOptionsResultVpnConnectionOptionsTunnelOptionsPhase1DHGroupNumbers {
     
     public Long value;
+
     public ModifyVpnTunnelOptionsResultVpnConnectionOptionsTunnelOptionsPhase1DHGroupNumbers withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public ModifyVpnTunnelOptionsResultVpnConnectionOptionsTunnelOptionsPhase1DHGroupNumbers(){}
 }

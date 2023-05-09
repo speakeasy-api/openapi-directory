@@ -14,6 +14,7 @@ public class CreateJobRequestBody {
      */
     @JsonProperty("algorithmSpecification")
     public CreateJobRequestBodyAlgorithmSpecification algorithmSpecification;
+
     public CreateJobRequestBody withAlgorithmSpecification(CreateJobRequestBodyAlgorithmSpecification algorithmSpecification) {
         this.algorithmSpecification = algorithmSpecification;
         return this;
@@ -25,6 +26,7 @@ public class CreateJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkpointConfig")
     public CreateJobRequestBodyCheckpointConfig checkpointConfig;
+
     public CreateJobRequestBody withCheckpointConfig(CreateJobRequestBodyCheckpointConfig checkpointConfig) {
         this.checkpointConfig = checkpointConfig;
         return this;
@@ -35,6 +37,7 @@ public class CreateJobRequestBody {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateJobRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -45,6 +48,7 @@ public class CreateJobRequestBody {
      */
     @JsonProperty("deviceConfig")
     public CreateJobRequestBodyDeviceConfig deviceConfig;
+
     public CreateJobRequestBody withDeviceConfig(CreateJobRequestBodyDeviceConfig deviceConfig) {
         this.deviceConfig = deviceConfig;
         return this;
@@ -56,6 +60,7 @@ public class CreateJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hyperParameters")
     public java.util.Map<String, String> hyperParameters;
+
     public CreateJobRequestBody withHyperParameters(java.util.Map<String, String> hyperParameters) {
         this.hyperParameters = hyperParameters;
         return this;
@@ -67,6 +72,7 @@ public class CreateJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputDataConfig")
     public org.openapis.openapi.models.shared.InputFileConfig[] inputDataConfig;
+
     public CreateJobRequestBody withInputDataConfig(org.openapis.openapi.models.shared.InputFileConfig[] inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -77,6 +83,7 @@ public class CreateJobRequestBody {
      */
     @JsonProperty("instanceConfig")
     public CreateJobRequestBodyInstanceConfig instanceConfig;
+
     public CreateJobRequestBody withInstanceConfig(CreateJobRequestBodyInstanceConfig instanceConfig) {
         this.instanceConfig = instanceConfig;
         return this;
@@ -87,6 +94,7 @@ public class CreateJobRequestBody {
      */
     @JsonProperty("jobName")
     public String jobName;
+
     public CreateJobRequestBody withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -97,6 +105,7 @@ public class CreateJobRequestBody {
      */
     @JsonProperty("outputDataConfig")
     public CreateJobRequestBodyOutputDataConfig outputDataConfig;
+
     public CreateJobRequestBody withOutputDataConfig(CreateJobRequestBodyOutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -107,6 +116,7 @@ public class CreateJobRequestBody {
      */
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateJobRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -118,6 +128,7 @@ public class CreateJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stoppingCondition")
     public CreateJobRequestBodyStoppingCondition stoppingCondition;
+
     public CreateJobRequestBody withStoppingCondition(CreateJobRequestBodyStoppingCondition stoppingCondition) {
         this.stoppingCondition = stoppingCondition;
         return this;
@@ -129,9 +140,19 @@ public class CreateJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateJobRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateJobRequestBody(@JsonProperty("algorithmSpecification") CreateJobRequestBodyAlgorithmSpecification algorithmSpecification, @JsonProperty("clientToken") String clientToken, @JsonProperty("deviceConfig") CreateJobRequestBodyDeviceConfig deviceConfig, @JsonProperty("instanceConfig") CreateJobRequestBodyInstanceConfig instanceConfig, @JsonProperty("jobName") String jobName, @JsonProperty("outputDataConfig") CreateJobRequestBodyOutputDataConfig outputDataConfig, @JsonProperty("roleArn") String roleArn) {
+        this.algorithmSpecification = algorithmSpecification;
+        this.clientToken = clientToken;
+        this.deviceConfig = deviceConfig;
+        this.instanceConfig = instanceConfig;
+        this.jobName = jobName;
+        this.outputDataConfig = outputDataConfig;
+        this.roleArn = roleArn;
+  }
 }

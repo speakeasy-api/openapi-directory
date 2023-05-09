@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SOAChange {
     @JsonProperty("TTL")
     public Long ttl;
+
     public SOAChange withTtl(Long ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public SOAChange(@JsonProperty("TTL") Long ttl) {
+        this.ttl = ttl;
+  }
 }

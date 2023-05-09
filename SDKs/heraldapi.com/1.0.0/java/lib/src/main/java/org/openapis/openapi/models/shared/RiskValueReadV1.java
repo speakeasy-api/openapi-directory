@@ -18,6 +18,7 @@ public class RiskValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affects_conditions")
     public Boolean affectsConditions;
+
     public RiskValueReadV1 withAffectsConditions(Boolean affectsConditions) {
         this.affectsConditions = affectsConditions;
         return this;
@@ -31,6 +32,7 @@ public class RiskValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("child_risk_values")
     public RiskValueReadV1[] childRiskValues;
+
     public RiskValueReadV1 withChildRiskValues(RiskValueReadV1[] childRiskValues) {
         this.childRiskValues = childRiskValues;
         return this;
@@ -42,6 +44,7 @@ public class RiskValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditional_on")
     public RiskValueReadV1ConditionalOn conditionalOn;
+
     public RiskValueReadV1 withConditionalOn(RiskValueReadV1ConditionalOn conditionalOn) {
         this.conditionalOn = conditionalOn;
         return this;
@@ -53,6 +56,7 @@ public class RiskValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creates_array")
     public Boolean createsArray;
+
     public RiskValueReadV1 withCreatesArray(Boolean createsArray) {
         this.createsArray = createsArray;
         return this;
@@ -64,6 +68,7 @@ public class RiskValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input_type")
     public RiskValueReadV1InputTypeEnum inputType;
+
     public RiskValueReadV1 withInputType(RiskValueReadV1InputTypeEnum inputType) {
         this.inputType = inputType;
         return this;
@@ -76,6 +81,7 @@ public class RiskValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public RiskValueReadV1 withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -87,6 +93,7 @@ public class RiskValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter_text")
     public ParameterTextV1 parameterText;
+
     public RiskValueReadV1 withParameterText(ParameterTextV1 parameterText) {
         this.parameterText = parameterText;
         return this;
@@ -98,6 +105,7 @@ public class RiskValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relevant_products")
     public String[] relevantProducts;
+
     public RiskValueReadV1 withRelevantProducts(String[] relevantProducts) {
         this.relevantProducts = relevantProducts;
         return this;
@@ -109,6 +117,7 @@ public class RiskValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required_for")
     public RiskValueReadV1RequiredForEnum[] requiredFor;
+
     public RiskValueReadV1 withRequiredFor(RiskValueReadV1RequiredForEnum[] requiredFor) {
         this.requiredFor = requiredFor;
         return this;
@@ -120,6 +129,7 @@ public class RiskValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("risk_parameter_id")
     public String riskParameterId;
+
     public RiskValueReadV1 withRiskParameterId(String riskParameterId) {
         this.riskParameterId = riskParameterId;
         return this;
@@ -131,6 +141,7 @@ public class RiskValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public java.util.Map<String, Object> schema;
+
     public RiskValueReadV1 withSchema(java.util.Map<String, Object> schema) {
         this.schema = schema;
         return this;
@@ -142,6 +153,7 @@ public class RiskValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public RiskValueReadV1 withText(String text) {
         this.text = text;
         return this;
@@ -153,9 +165,11 @@ public class RiskValueReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Object value;
+
     public RiskValueReadV1 withValue(Object value) {
         this.value = value;
         return this;
     }
     
+    public RiskValueReadV1(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IapProjectsIapTunnelLocationsDestGroupsCreateResponse {
     
     public String contentType;
+
     public IapProjectsIapTunnelLocationsDestGroupsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class IapProjectsIapTunnelLocationsDestGroupsCreateResponse {
     
     
     public Integer statusCode;
+
     public IapProjectsIapTunnelLocationsDestGroupsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class IapProjectsIapTunnelLocationsDestGroupsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IapProjectsIapTunnelLocationsDestGroupsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class IapProjectsIapTunnelLocationsDestGroupsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.TunnelDestGroup tunnelDestGroup;
+
     public IapProjectsIapTunnelLocationsDestGroupsCreateResponse withTunnelDestGroup(org.openapis.openapi.models.shared.TunnelDestGroup tunnelDestGroup) {
         this.tunnelDestGroup = tunnelDestGroup;
         return this;
     }
     
+    public IapProjectsIapTunnelLocationsDestGroupsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

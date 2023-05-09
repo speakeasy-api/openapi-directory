@@ -15,6 +15,7 @@ public class ManagedZoneDnsSecConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultKeySpecs")
     public DnsKeySpec[] defaultKeySpecs;
+
     public ManagedZoneDnsSecConfig withDefaultKeySpecs(DnsKeySpec[] defaultKeySpecs) {
         this.defaultKeySpecs = defaultKeySpecs;
         return this;
@@ -23,6 +24,7 @@ public class ManagedZoneDnsSecConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ManagedZoneDnsSecConfig withKind(String kind) {
         this.kind = kind;
         return this;
@@ -34,6 +36,7 @@ public class ManagedZoneDnsSecConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonExistence")
     public ManagedZoneDnsSecConfigNonExistenceEnum nonExistence;
+
     public ManagedZoneDnsSecConfig withNonExistence(ManagedZoneDnsSecConfigNonExistenceEnum nonExistence) {
         this.nonExistence = nonExistence;
         return this;
@@ -45,9 +48,11 @@ public class ManagedZoneDnsSecConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ManagedZoneDnsSecConfigStateEnum state;
+
     public ManagedZoneDnsSecConfig withState(ManagedZoneDnsSecConfigStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ManagedZoneDnsSecConfig(){}
 }

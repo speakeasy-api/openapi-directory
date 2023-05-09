@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeWorkspaceImagePermissionsResponse {
@@ -12,6 +13,7 @@ public class DescribeWorkspaceImagePermissionsResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeWorkspaceImagePermissionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeWorkspaceImagePermissionsResponse {
     
     
     public String contentType;
+
     public DescribeWorkspaceImagePermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeWorkspaceImagePermissionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeWorkspaceImagePermissionsResult describeWorkspaceImagePermissionsResult;
+
     public DescribeWorkspaceImagePermissionsResponse withDescribeWorkspaceImagePermissionsResult(org.openapis.openapi.models.shared.DescribeWorkspaceImagePermissionsResult describeWorkspaceImagePermissionsResult) {
         this.describeWorkspaceImagePermissionsResult = describeWorkspaceImagePermissionsResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeWorkspaceImagePermissionsResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public DescribeWorkspaceImagePermissionsResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeWorkspaceImagePermissionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeWorkspaceImagePermissionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeWorkspaceImagePermissionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeWorkspaceImagePermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeWorkspaceImagePermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeWorkspaceImagePermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeWorkspaceImagePermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

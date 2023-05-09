@@ -12,6 +12,7 @@ public class GroupsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
     public String createdAfter;
+
     public GroupsGetRequest withCreatedAfter(String createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -22,6 +23,7 @@ public class GroupsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
     public String createdBefore;
+
     public GroupsGetRequest withCreatedBefore(String createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -32,6 +34,7 @@ public class GroupsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GroupsGetRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -42,6 +45,7 @@ public class GroupsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GroupsGetRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -52,6 +56,7 @@ public class GroupsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public GroupsGetStatusEnum status;
+
     public GroupsGetRequest withStatus(GroupsGetStatusEnum status) {
         this.status = status;
         return this;
@@ -62,6 +67,7 @@ public class GroupsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String tags;
+
     public GroupsGetRequest withTags(String tags) {
         this.tags = tags;
         return this;
@@ -72,6 +78,7 @@ public class GroupsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
     public String textSearch;
+
     public GroupsGetRequest withTextSearch(String textSearch) {
         this.textSearch = textSearch;
         return this;
@@ -82,9 +89,11 @@ public class GroupsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=write")
     public Boolean write;
+
     public GroupsGetRequest withWrite(Boolean write) {
         this.write = write;
         return this;
     }
     
+    public GroupsGetRequest(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SsmAutomation {
     @JsonProperty("documentName")
     public String documentName;
+
     public SsmAutomation withDocumentName(String documentName) {
         this.documentName = documentName;
         return this;
@@ -22,6 +23,7 @@ public class SsmAutomation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentVersion")
     public String documentVersion;
+
     public SsmAutomation withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -30,6 +32,7 @@ public class SsmAutomation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamicParameters")
     public java.util.Map<String, DynamicSsmParameterValue> dynamicParameters;
+
     public SsmAutomation withDynamicParameters(java.util.Map<String, DynamicSsmParameterValue> dynamicParameters) {
         this.dynamicParameters = dynamicParameters;
         return this;
@@ -38,6 +41,7 @@ public class SsmAutomation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, String[]> parameters;
+
     public SsmAutomation withParameters(java.util.Map<String, String[]> parameters) {
         this.parameters = parameters;
         return this;
@@ -45,6 +49,7 @@ public class SsmAutomation {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public SsmAutomation withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -53,9 +58,14 @@ public class SsmAutomation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetAccount")
     public SsmTargetAccountEnum targetAccount;
+
     public SsmAutomation withTargetAccount(SsmTargetAccountEnum targetAccount) {
         this.targetAccount = targetAccount;
         return this;
     }
     
+    public SsmAutomation(@JsonProperty("documentName") String documentName, @JsonProperty("roleArn") String roleArn) {
+        this.documentName = documentName;
+        this.roleArn = roleArn;
+  }
 }

@@ -18,6 +18,7 @@ public class V1Settlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank_account_id")
     public String bankAccountId;
+
     public V1Settlement withBankAccountId(String bankAccountId) {
         this.bankAccountId = bankAccountId;
         return this;
@@ -29,6 +30,7 @@ public class V1Settlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public V1SettlementEntry[] entries;
+
     public V1Settlement withEntries(V1SettlementEntry[] entries) {
         this.entries = entries;
         return this;
@@ -40,6 +42,7 @@ public class V1Settlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public V1Settlement withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class V1Settlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initiated_at")
     public String initiatedAt;
+
     public V1Settlement withInitiatedAt(String initiatedAt) {
         this.initiatedAt = initiatedAt;
         return this;
@@ -62,6 +66,7 @@ public class V1Settlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public V1Settlement withStatus(String status) {
         this.status = status;
         return this;
@@ -70,9 +75,11 @@ public class V1Settlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_money")
     public V1Money totalMoney;
+
     public V1Settlement withTotalMoney(V1Money totalMoney) {
         this.totalMoney = totalMoney;
         return this;
     }
     
+    public V1Settlement(){}
 }

@@ -20,6 +20,7 @@ public class AccessPreviewFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String[] action;
+
     public AccessPreviewFinding withAction(String[] action) {
         this.action = action;
         return this;
@@ -27,6 +28,7 @@ public class AccessPreviewFinding {
     
     @JsonProperty("changeType")
     public FindingChangeTypeEnum changeType;
+
     public AccessPreviewFinding withChangeType(FindingChangeTypeEnum changeType) {
         this.changeType = changeType;
         return this;
@@ -35,6 +37,7 @@ public class AccessPreviewFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public java.util.Map<String, String> condition;
+
     public AccessPreviewFinding withCondition(java.util.Map<String, String> condition) {
         this.condition = condition;
         return this;
@@ -44,6 +47,7 @@ public class AccessPreviewFinding {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public AccessPreviewFinding withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -52,6 +56,7 @@ public class AccessPreviewFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public AccessPreviewFinding withError(String error) {
         this.error = error;
         return this;
@@ -60,6 +65,7 @@ public class AccessPreviewFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("existingFindingId")
     public String existingFindingId;
+
     public AccessPreviewFinding withExistingFindingId(String existingFindingId) {
         this.existingFindingId = existingFindingId;
         return this;
@@ -68,6 +74,7 @@ public class AccessPreviewFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("existingFindingStatus")
     public FindingStatusEnum existingFindingStatus;
+
     public AccessPreviewFinding withExistingFindingStatus(FindingStatusEnum existingFindingStatus) {
         this.existingFindingStatus = existingFindingStatus;
         return this;
@@ -75,6 +82,7 @@ public class AccessPreviewFinding {
     
     @JsonProperty("id")
     public String id;
+
     public AccessPreviewFinding withId(String id) {
         this.id = id;
         return this;
@@ -83,6 +91,7 @@ public class AccessPreviewFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPublic")
     public Boolean isPublic;
+
     public AccessPreviewFinding withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -91,6 +100,7 @@ public class AccessPreviewFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principal")
     public java.util.Map<String, String> principal;
+
     public AccessPreviewFinding withPrincipal(java.util.Map<String, String> principal) {
         this.principal = principal;
         return this;
@@ -99,6 +109,7 @@ public class AccessPreviewFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public AccessPreviewFinding withResource(String resource) {
         this.resource = resource;
         return this;
@@ -106,6 +117,7 @@ public class AccessPreviewFinding {
     
     @JsonProperty("resourceOwnerAccount")
     public String resourceOwnerAccount;
+
     public AccessPreviewFinding withResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -113,6 +125,7 @@ public class AccessPreviewFinding {
     
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public AccessPreviewFinding withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -121,6 +134,7 @@ public class AccessPreviewFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public FindingSource[] sources;
+
     public AccessPreviewFinding withSources(FindingSource[] sources) {
         this.sources = sources;
         return this;
@@ -128,9 +142,18 @@ public class AccessPreviewFinding {
     
     @JsonProperty("status")
     public FindingStatusEnum status;
+
     public AccessPreviewFinding withStatus(FindingStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AccessPreviewFinding(@JsonProperty("changeType") FindingChangeTypeEnum changeType, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("resourceOwnerAccount") String resourceOwnerAccount, @JsonProperty("resourceType") ResourceTypeEnum resourceType, @JsonProperty("status") FindingStatusEnum status) {
+        this.changeType = changeType;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        this.resourceType = resourceType;
+        this.status = status;
+  }
 }

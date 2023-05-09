@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTrainingJobResponse {
     
     public String contentType;
+
     public CreateTrainingJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateTrainingJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateTrainingJobResponse createTrainingJobResponse;
+
     public CreateTrainingJobResponse withCreateTrainingJobResponse(org.openapis.openapi.models.shared.CreateTrainingJobResponse createTrainingJobResponse) {
         this.createTrainingJobResponse = createTrainingJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateTrainingJobResponse {
      */
     
     public Object resourceInUse;
+
     public CreateTrainingJobResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -39,6 +43,7 @@ public class CreateTrainingJobResponse {
      */
     
     public Object resourceNotFound;
+
     public CreateTrainingJobResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -46,6 +51,7 @@ public class CreateTrainingJobResponse {
     
     
     public Integer statusCode;
+
     public CreateTrainingJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateTrainingJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTrainingJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateTrainingJobResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateTrainingJobResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
     }
     
+    public CreateTrainingJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

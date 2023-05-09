@@ -18,6 +18,7 @@ public class MembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public MembershipStateCodeEnum code;
+
     public MembershipState withCode(MembershipStateCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class MembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public MembershipState withDescription(String description) {
         this.description = description;
         return this;
@@ -40,9 +42,11 @@ public class MembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public MembershipState withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public MembershipState(){}
 }

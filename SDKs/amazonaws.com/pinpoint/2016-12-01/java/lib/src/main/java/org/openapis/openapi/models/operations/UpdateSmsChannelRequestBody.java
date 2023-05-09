@@ -12,9 +12,13 @@ public class UpdateSmsChannelRequestBody {
      */
     @JsonProperty("SMSChannelRequest")
     public UpdateSMSChannelRequestBodySMSChannelRequest smsChannelRequest;
+
     public UpdateSmsChannelRequestBody withSMSChannelRequest(UpdateSMSChannelRequestBodySMSChannelRequest smsChannelRequest) {
         this.smsChannelRequest = smsChannelRequest;
         return this;
     }
     
+    public UpdateSmsChannelRequestBody(@JsonProperty("SMSChannelRequest") UpdateSMSChannelRequestBodySMSChannelRequest smsChannelRequest) {
+        this.smsChannelRequest = smsChannelRequest;
+  }
 }

@@ -18,6 +18,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public AttachedDiskModeEnum mode;
+
     public AttachedDisk withMode(AttachedDiskModeEnum mode) {
         this.mode = mode;
         return this;
@@ -29,9 +30,11 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceDisk")
     public String sourceDisk;
+
     public AttachedDisk withSourceDisk(String sourceDisk) {
         this.sourceDisk = sourceDisk;
         return this;
     }
     
+    public AttachedDisk(){}
 }

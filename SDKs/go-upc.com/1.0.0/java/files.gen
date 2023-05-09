@@ -37,4 +37,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetProductInfo200Applic
 lib/src/main/java/org/openapis/openapi/models/operations/GetProductInfoResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/product/README.md
 USAGE.md

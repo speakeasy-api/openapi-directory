@@ -15,6 +15,7 @@ public class AwsKinesisStreamDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public AwsKinesisStreamDetails withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class AwsKinesisStreamDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsKinesisStreamDetails withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class AwsKinesisStreamDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetentionPeriodHours")
     public Long retentionPeriodHours;
+
     public AwsKinesisStreamDetails withRetentionPeriodHours(Long retentionPeriodHours) {
         this.retentionPeriodHours = retentionPeriodHours;
         return this;
@@ -39,6 +42,7 @@ public class AwsKinesisStreamDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShardCount")
     public Long shardCount;
+
     public AwsKinesisStreamDetails withShardCount(Long shardCount) {
         this.shardCount = shardCount;
         return this;
@@ -47,9 +51,11 @@ public class AwsKinesisStreamDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamEncryption")
     public AwsKinesisStreamStreamEncryptionDetails streamEncryption;
+
     public AwsKinesisStreamDetails withStreamEncryption(AwsKinesisStreamStreamEncryptionDetails streamEncryption) {
         this.streamEncryption = streamEncryption;
         return this;
     }
     
+    public AwsKinesisStreamDetails(){}
 }

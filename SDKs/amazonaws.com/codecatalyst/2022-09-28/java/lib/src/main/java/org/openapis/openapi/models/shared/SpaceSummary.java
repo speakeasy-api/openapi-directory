@@ -15,6 +15,7 @@ public class SpaceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SpaceSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class SpaceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public SpaceSummary withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -30,6 +32,7 @@ public class SpaceSummary {
     
     @JsonProperty("name")
     public String name;
+
     public SpaceSummary withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +40,14 @@ public class SpaceSummary {
     
     @JsonProperty("regionName")
     public String regionName;
+
     public SpaceSummary withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
     }
     
+    public SpaceSummary(@JsonProperty("name") String name, @JsonProperty("regionName") String regionName) {
+        this.name = name;
+        this.regionName = regionName;
+  }
 }

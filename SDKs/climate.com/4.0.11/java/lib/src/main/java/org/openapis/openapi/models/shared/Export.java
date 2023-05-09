@@ -17,6 +17,7 @@ public class Export {
      */
     @JsonProperty("contentType")
     public ExportContentTypeEnum contentType;
+
     public Export withContentType(ExportContentTypeEnum contentType) {
         this.contentType = contentType;
         return this;
@@ -28,9 +29,13 @@ public class Export {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definition")
     public java.util.Map<String, Object> definition;
+
     public Export withDefinition(java.util.Map<String, Object> definition) {
         this.definition = definition;
         return this;
     }
     
+    public Export(@JsonProperty("contentType") ExportContentTypeEnum contentType) {
+        this.contentType = contentType;
+  }
 }

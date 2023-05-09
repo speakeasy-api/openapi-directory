@@ -12,6 +12,7 @@ public class CreateRegistryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateRegistryInput withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class CreateRegistryInput {
     
     @JsonProperty("RegistryName")
     public String registryName;
+
     public CreateRegistryInput withRegistryName(String registryName) {
         this.registryName = registryName;
         return this;
@@ -27,9 +29,13 @@ public class CreateRegistryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateRegistryInput withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRegistryInput(@JsonProperty("RegistryName") String registryName) {
+        this.registryName = registryName;
+  }
 }

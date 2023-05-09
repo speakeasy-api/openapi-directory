@@ -18,6 +18,7 @@ public class PolicyEnforcementRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockAction")
     public BlockAction blockAction;
+
     public PolicyEnforcementRule withBlockAction(BlockAction blockAction) {
         this.blockAction = blockAction;
         return this;
@@ -29,6 +30,7 @@ public class PolicyEnforcementRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settingName")
     public String settingName;
+
     public PolicyEnforcementRule withSettingName(String settingName) {
         this.settingName = settingName;
         return this;
@@ -40,9 +42,11 @@ public class PolicyEnforcementRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wipeAction")
     public WipeAction wipeAction;
+
     public PolicyEnforcementRule withWipeAction(WipeAction wipeAction) {
         this.wipeAction = wipeAction;
         return this;
     }
     
+    public PolicyEnforcementRule(){}
 }

@@ -18,6 +18,7 @@ public class IdentitytoolkitRelyingpartyDeleteAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegatedProjectNumber")
     public String delegatedProjectNumber;
+
     public IdentitytoolkitRelyingpartyDeleteAccountRequest withDelegatedProjectNumber(String delegatedProjectNumber) {
         this.delegatedProjectNumber = delegatedProjectNumber;
         return this;
@@ -29,6 +30,7 @@ public class IdentitytoolkitRelyingpartyDeleteAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idToken")
     public String idToken;
+
     public IdentitytoolkitRelyingpartyDeleteAccountRequest withIdToken(String idToken) {
         this.idToken = idToken;
         return this;
@@ -40,9 +42,11 @@ public class IdentitytoolkitRelyingpartyDeleteAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localId")
     public String localId;
+
     public IdentitytoolkitRelyingpartyDeleteAccountRequest withLocalId(String localId) {
         this.localId = localId;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartyDeleteAccountRequest(){}
 }

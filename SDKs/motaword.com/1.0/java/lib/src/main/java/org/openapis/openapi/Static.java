@@ -52,19 +52,16 @@ public class Static {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEndpointsResponse res = new org.openapis.openapi.models.operations.GetEndpointsResponse() {{
-            getEndpoints200ApplicationJSONObject = null;
+        org.openapis.openapi.models.operations.GetEndpointsResponse res = new org.openapis.openapi.models.operations.GetEndpointsResponse(contentType, httpRes.statusCode()) {{
+            body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.getEndpoints200ApplicationJSONObject = out;
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "text/yaml")) {
+                byte[] out = httpRes.body();
+                res.body = out;
             }
         }
         else {
@@ -100,11 +97,9 @@ public class Static {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFormatsResponse res = new org.openapis.openapi.models.operations.GetFormatsResponse() {{
+        org.openapis.openapi.models.operations.GetFormatsResponse res = new org.openapis.openapi.models.operations.GetFormatsResponse(contentType, httpRes.statusCode()) {{
             getFormats200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +134,9 @@ public class Static {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLanguagesResponse res = new org.openapis.openapi.models.operations.GetLanguagesResponse() {{
+        org.openapis.openapi.models.operations.GetLanguagesResponse res = new org.openapis.openapi.models.operations.GetLanguagesResponse(contentType, httpRes.statusCode()) {{
             languages = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,11 +171,9 @@ public class Static {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSwaggerYamlResponse res = new org.openapis.openapi.models.operations.GetSwaggerYamlResponse() {{
+        org.openapis.openapi.models.operations.GetSwaggerYamlResponse res = new org.openapis.openapi.models.operations.GetSwaggerYamlResponse(contentType, httpRes.statusCode()) {{
             getSwaggerYaml200TextYamlString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

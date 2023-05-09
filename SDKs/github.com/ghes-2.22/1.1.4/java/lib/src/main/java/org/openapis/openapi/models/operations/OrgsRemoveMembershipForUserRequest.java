@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsRemoveMembershipForUserRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public OrgsRemoveMembershipForUserRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -16,9 +18,14 @@ public class OrgsRemoveMembershipForUserRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public OrgsRemoveMembershipForUserRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public OrgsRemoveMembershipForUserRequest(@JsonProperty("org") String org, @JsonProperty("username") String username) {
+        this.org = org;
+        this.username = username;
+  }
 }

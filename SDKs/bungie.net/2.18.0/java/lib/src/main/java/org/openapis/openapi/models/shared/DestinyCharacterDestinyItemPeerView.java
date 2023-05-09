@@ -15,6 +15,7 @@ public class DestinyCharacterDestinyItemPeerView {
      */
     
     public DestinyDyeReference[] dyes;
+
     public DestinyCharacterDestinyItemPeerView withDyes(DestinyDyeReference[] dyes) {
         this.dyes = dyes;
         return this;
@@ -25,9 +26,11 @@ public class DestinyCharacterDestinyItemPeerView {
      */
     
     public Long itemHash;
+
     public DestinyCharacterDestinyItemPeerView withItemHash(Long itemHash) {
         this.itemHash = itemHash;
         return this;
     }
     
+    public DestinyCharacterDestinyItemPeerView(){}
 }

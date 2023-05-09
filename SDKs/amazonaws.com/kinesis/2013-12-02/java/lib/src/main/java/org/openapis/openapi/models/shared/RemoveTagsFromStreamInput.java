@@ -15,6 +15,7 @@ public class RemoveTagsFromStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public RemoveTagsFromStreamInput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -23,6 +24,7 @@ public class RemoveTagsFromStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public RemoveTagsFromStreamInput withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
@@ -30,9 +32,13 @@ public class RemoveTagsFromStreamInput {
     
     @JsonProperty("TagKeys")
     public String[] tagKeys;
+
     public RemoveTagsFromStreamInput withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
     }
     
+    public RemoveTagsFromStreamInput(@JsonProperty("TagKeys") String[] tagKeys) {
+        this.tagKeys = tagKeys;
+  }
 }

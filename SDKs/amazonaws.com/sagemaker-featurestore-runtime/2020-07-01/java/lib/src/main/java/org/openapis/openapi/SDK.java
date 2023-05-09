@@ -148,6 +148,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -185,15 +190,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchGetRecordResponse res = new org.openapis.openapi.models.operations.BatchGetRecordResponse() {{
+        org.openapis.openapi.models.operations.BatchGetRecordResponse res = new org.openapis.openapi.models.operations.BatchGetRecordResponse(contentType, httpRes.statusCode()) {{
             batchGetRecordResponse = null;
             validationError = null;
             internalFailure = null;
             serviceUnavailable = null;
             accessForbidden = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -236,7 +239,7 @@ public class SDK {
     }
 
     /**
-     * Deletes a &lt;code&gt;Record&lt;/code&gt; from a &lt;code&gt;FeatureGroup&lt;/code&gt;. When the &lt;code&gt;DeleteRecord&lt;/code&gt; API is called a new record will be added to the &lt;code&gt;OfflineStore&lt;/code&gt; and the &lt;code&gt;Record&lt;/code&gt; will be removed from the &lt;code&gt;OnlineStore&lt;/code&gt;. This record will have a value of &lt;code&gt;True&lt;/code&gt; in the &lt;code&gt;is_deleted&lt;/code&gt; column.
+     * &lt;p&gt;Deletes a &lt;code&gt;Record&lt;/code&gt; from a &lt;code&gt;FeatureGroup&lt;/code&gt; in the &lt;code&gt;OnlineStore&lt;/code&gt;. Feature Store supports both &lt;code&gt;SOFT_DELETE&lt;/code&gt; and &lt;code&gt;HARD_DELETE&lt;/code&gt;. For &lt;code&gt;SOFT_DELETE&lt;/code&gt; (default), feature columns are set to &lt;code&gt;null&lt;/code&gt; and the record is no longer retrievable by &lt;code&gt;GetRecord&lt;/code&gt; or &lt;code&gt;BatchGetRecord&lt;/code&gt;. For&lt;code&gt; HARD_DELETE&lt;/code&gt;, the complete &lt;code&gt;Record&lt;/code&gt; is removed from the &lt;code&gt;OnlineStore&lt;/code&gt;. In both cases, Feature Store appends the deleted record marker to the &lt;code&gt;OfflineStore&lt;/code&gt; with feature values set to &lt;code&gt;null&lt;/code&gt;, &lt;code&gt;is_deleted&lt;/code&gt; value set to &lt;code&gt;True&lt;/code&gt;, and &lt;code&gt;EventTime&lt;/code&gt; set to the delete input &lt;code&gt;EventTime&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;Note that the &lt;code&gt;EventTime&lt;/code&gt; specified in &lt;code&gt;DeleteRecord&lt;/code&gt; should be set later than the &lt;code&gt;EventTime&lt;/code&gt; of the existing record in the &lt;code&gt;OnlineStore&lt;/code&gt; for that &lt;code&gt;RecordIdentifer&lt;/code&gt;. If it is not, the deletion does not occur:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;For &lt;code&gt;SOFT_DELETE&lt;/code&gt;, the existing (undeleted) record remains in the &lt;code&gt;OnlineStore&lt;/code&gt;, though the delete record marker is still written to the &lt;code&gt;OfflineStore&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;HARD_DELETE&lt;/code&gt; returns &lt;code&gt;EventTime&lt;/code&gt;: &lt;code&gt;400 ValidationException&lt;/code&gt; to indicate that the delete operation failed. No delete record marker is written to the &lt;code&gt;OfflineStore&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -270,14 +273,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRecordResponse res = new org.openapis.openapi.models.operations.DeleteRecordResponse() {{
+        org.openapis.openapi.models.operations.DeleteRecordResponse res = new org.openapis.openapi.models.operations.DeleteRecordResponse(contentType, httpRes.statusCode()) {{
             validationError = null;
             internalFailure = null;
             serviceUnavailable = null;
             accessForbidden = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -349,7 +350,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRecordResponse res = new org.openapis.openapi.models.operations.GetRecordResponse() {{
+        org.openapis.openapi.models.operations.GetRecordResponse res = new org.openapis.openapi.models.operations.GetRecordResponse(contentType, httpRes.statusCode()) {{
             getRecordResponse = null;
             validationError = null;
             resourceNotFound = null;
@@ -357,8 +358,6 @@ public class SDK {
             serviceUnavailable = null;
             accessForbidden = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -441,14 +440,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutRecordResponse res = new org.openapis.openapi.models.operations.PutRecordResponse() {{
+        org.openapis.openapi.models.operations.PutRecordResponse res = new org.openapis.openapi.models.operations.PutRecordResponse(contentType, httpRes.statusCode()) {{
             validationError = null;
             internalFailure = null;
             serviceUnavailable = null;
             accessForbidden = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

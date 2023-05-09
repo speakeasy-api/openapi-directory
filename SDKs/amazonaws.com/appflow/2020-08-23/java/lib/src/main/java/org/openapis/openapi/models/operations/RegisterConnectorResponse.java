@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterConnectorResponse {
@@ -12,6 +13,7 @@ public class RegisterConnectorResponse {
      */
     
     public Object accessDeniedException;
+
     public RegisterConnectorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class RegisterConnectorResponse {
      */
     
     public Object conflictException;
+
     public RegisterConnectorResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -32,6 +35,7 @@ public class RegisterConnectorResponse {
      */
     
     public Object connectorAuthenticationException;
+
     public RegisterConnectorResponse withConnectorAuthenticationException(Object connectorAuthenticationException) {
         this.connectorAuthenticationException = connectorAuthenticationException;
         return this;
@@ -42,6 +46,7 @@ public class RegisterConnectorResponse {
      */
     
     public Object connectorServerException;
+
     public RegisterConnectorResponse withConnectorServerException(Object connectorServerException) {
         this.connectorServerException = connectorServerException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterConnectorResponse {
     
     
     public String contentType;
+
     public RegisterConnectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class RegisterConnectorResponse {
      */
     
     public Object internalServerException;
+
     public RegisterConnectorResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -69,6 +76,7 @@ public class RegisterConnectorResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterConnectorResponse registerConnectorResponse;
+
     public RegisterConnectorResponse withRegisterConnectorResponse(org.openapis.openapi.models.shared.RegisterConnectorResponse registerConnectorResponse) {
         this.registerConnectorResponse = registerConnectorResponse;
         return this;
@@ -79,6 +87,7 @@ public class RegisterConnectorResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public RegisterConnectorResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -86,6 +95,7 @@ public class RegisterConnectorResponse {
     
     
     public Integer statusCode;
+
     public RegisterConnectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class RegisterConnectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterConnectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class RegisterConnectorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RegisterConnectorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class RegisterConnectorResponse {
      */
     
     public Object throttlingException;
+
     public RegisterConnectorResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -123,9 +136,14 @@ public class RegisterConnectorResponse {
      */
     
     public Object validationException;
+
     public RegisterConnectorResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RegisterConnectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

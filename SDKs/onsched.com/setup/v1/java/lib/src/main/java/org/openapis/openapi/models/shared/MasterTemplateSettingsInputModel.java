@@ -15,6 +15,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("centerEmailContent")
     public Boolean centerEmailContent;
+
     public MasterTemplateSettingsInputModel withCenterEmailContent(Boolean centerEmailContent) {
         this.centerEmailContent = centerEmailContent;
         return this;
@@ -23,6 +24,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("centerEmailContentPanel")
     public Boolean centerEmailContentPanel;
+
     public MasterTemplateSettingsInputModel withCenterEmailContentPanel(Boolean centerEmailContentPanel) {
         this.centerEmailContentPanel = centerEmailContentPanel;
         return this;
@@ -31,6 +33,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("centerEmailFooter")
     public Boolean centerEmailFooter;
+
     public MasterTemplateSettingsInputModel withCenterEmailFooter(Boolean centerEmailFooter) {
         this.centerEmailFooter = centerEmailFooter;
         return this;
@@ -39,6 +42,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentBackgroundColor")
     public String contentBackgroundColor;
+
     public MasterTemplateSettingsInputModel withContentBackgroundColor(String contentBackgroundColor) {
         this.contentBackgroundColor = contentBackgroundColor;
         return this;
@@ -47,6 +51,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentColor")
     public String contentColor;
+
     public MasterTemplateSettingsInputModel withContentColor(String contentColor) {
         this.contentColor = contentColor;
         return this;
@@ -55,6 +60,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentLinkColor")
     public String contentLinkColor;
+
     public MasterTemplateSettingsInputModel withContentLinkColor(String contentLinkColor) {
         this.contentLinkColor = contentLinkColor;
         return this;
@@ -63,6 +69,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailBackgroundColor")
     public String emailBackgroundColor;
+
     public MasterTemplateSettingsInputModel withEmailBackgroundColor(String emailBackgroundColor) {
         this.emailBackgroundColor = emailBackgroundColor;
         return this;
@@ -71,6 +78,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailColor")
     public String emailColor;
+
     public MasterTemplateSettingsInputModel withEmailColor(String emailColor) {
         this.emailColor = emailColor;
         return this;
@@ -79,6 +87,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailLinkColor")
     public String emailLinkColor;
+
     public MasterTemplateSettingsInputModel withEmailLinkColor(String emailLinkColor) {
         this.emailLinkColor = emailLinkColor;
         return this;
@@ -87,6 +96,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footerFontSize")
     public String footerFontSize;
+
     public MasterTemplateSettingsInputModel withFooterFontSize(String footerFontSize) {
         this.footerFontSize = footerFontSize;
         return this;
@@ -95,6 +105,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footerLogoHeight")
     public String footerLogoHeight;
+
     public MasterTemplateSettingsInputModel withFooterLogoHeight(String footerLogoHeight) {
         this.footerLogoHeight = footerLogoHeight;
         return this;
@@ -103,6 +114,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footerLogoPadding")
     public String footerLogoPadding;
+
     public MasterTemplateSettingsInputModel withFooterLogoPadding(String footerLogoPadding) {
         this.footerLogoPadding = footerLogoPadding;
         return this;
@@ -111,6 +123,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footerPanelEmailContact")
     public Boolean footerPanelEmailContact;
+
     public MasterTemplateSettingsInputModel withFooterPanelEmailContact(Boolean footerPanelEmailContact) {
         this.footerPanelEmailContact = footerPanelEmailContact;
         return this;
@@ -119,6 +132,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footerPanelPhoneContact")
     public Boolean footerPanelPhoneContact;
+
     public MasterTemplateSettingsInputModel withFooterPanelPhoneContact(Boolean footerPanelPhoneContact) {
         this.footerPanelPhoneContact = footerPanelPhoneContact;
         return this;
@@ -127,6 +141,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footerPanelWebsiteContact")
     public Boolean footerPanelWebsiteContact;
+
     public MasterTemplateSettingsInputModel withFooterPanelWebsiteContact(Boolean footerPanelWebsiteContact) {
         this.footerPanelWebsiteContact = footerPanelWebsiteContact;
         return this;
@@ -135,6 +150,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerLogoHeight")
     public String headerLogoHeight;
+
     public MasterTemplateSettingsInputModel withHeaderLogoHeight(String headerLogoHeight) {
         this.headerLogoHeight = headerLogoHeight;
         return this;
@@ -143,6 +159,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerLogoPadding")
     public String headerLogoPadding;
+
     public MasterTemplateSettingsInputModel withHeaderLogoPadding(String headerLogoPadding) {
         this.headerLogoPadding = headerLogoPadding;
         return this;
@@ -151,6 +168,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("panelBackgroundColor")
     public String panelBackgroundColor;
+
     public MasterTemplateSettingsInputModel withPanelBackgroundColor(String panelBackgroundColor) {
         this.panelBackgroundColor = panelBackgroundColor;
         return this;
@@ -159,6 +177,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("panelColor")
     public String panelColor;
+
     public MasterTemplateSettingsInputModel withPanelColor(String panelColor) {
         this.panelColor = panelColor;
         return this;
@@ -167,6 +186,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("panelLinkColor")
     public String panelLinkColor;
+
     public MasterTemplateSettingsInputModel withPanelLinkColor(String panelLinkColor) {
         this.panelLinkColor = panelLinkColor;
         return this;
@@ -175,6 +195,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacyPolicyLink")
     public String privacyPolicyLink;
+
     public MasterTemplateSettingsInputModel withPrivacyPolicyLink(String privacyPolicyLink) {
         this.privacyPolicyLink = privacyPolicyLink;
         return this;
@@ -183,6 +204,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showContentPanel")
     public Boolean showContentPanel;
+
     public MasterTemplateSettingsInputModel withShowContentPanel(Boolean showContentPanel) {
         this.showContentPanel = showContentPanel;
         return this;
@@ -191,6 +213,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showFooterLogo")
     public Boolean showFooterLogo;
+
     public MasterTemplateSettingsInputModel withShowFooterLogo(Boolean showFooterLogo) {
         this.showFooterLogo = showFooterLogo;
         return this;
@@ -199,6 +222,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showFooterPanel")
     public Boolean showFooterPanel;
+
     public MasterTemplateSettingsInputModel withShowFooterPanel(Boolean showFooterPanel) {
         this.showFooterPanel = showFooterPanel;
         return this;
@@ -207,6 +231,7 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showHeaderLogo")
     public Boolean showHeaderLogo;
+
     public MasterTemplateSettingsInputModel withShowHeaderLogo(Boolean showHeaderLogo) {
         this.showHeaderLogo = showHeaderLogo;
         return this;
@@ -215,9 +240,11 @@ public class MasterTemplateSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showHeaderPanel")
     public Boolean showHeaderPanel;
+
     public MasterTemplateSettingsInputModel withShowHeaderPanel(Boolean showHeaderPanel) {
         this.showHeaderPanel = showHeaderPanel;
         return this;
     }
     
+    public MasterTemplateSettingsInputModel(){}
 }

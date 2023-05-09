@@ -18,6 +18,7 @@ public class DeviceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceModelName")
     public String deviceModelName;
+
     public DeviceInfo withDeviceModelName(String deviceModelName) {
         this.deviceModelName = deviceModelName;
         return this;
@@ -29,6 +30,7 @@ public class DeviceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public DeviceInfo withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -40,6 +42,7 @@ public class DeviceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCodeFromWebview")
     public String languageCodeFromWebview;
+
     public DeviceInfo withLanguageCodeFromWebview(String languageCodeFromWebview) {
         this.languageCodeFromWebview = languageCodeFromWebview;
         return this;
@@ -51,6 +54,7 @@ public class DeviceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCodeRaw")
     public String languageCodeRaw;
+
     public DeviceInfo withLanguageCodeRaw(String languageCodeRaw) {
         this.languageCodeRaw = languageCodeRaw;
         return this;
@@ -62,6 +66,7 @@ public class DeviceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenResolutionHeight")
     public String screenResolutionHeight;
+
     public DeviceInfo withScreenResolutionHeight(String screenResolutionHeight) {
         this.screenResolutionHeight = screenResolutionHeight;
         return this;
@@ -73,6 +78,7 @@ public class DeviceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenResolutionWidth")
     public String screenResolutionWidth;
+
     public DeviceInfo withScreenResolutionWidth(String screenResolutionWidth) {
         this.screenResolutionWidth = screenResolutionWidth;
         return this;
@@ -84,9 +90,11 @@ public class DeviceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public DeviceInfo withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public DeviceInfo(){}
 }

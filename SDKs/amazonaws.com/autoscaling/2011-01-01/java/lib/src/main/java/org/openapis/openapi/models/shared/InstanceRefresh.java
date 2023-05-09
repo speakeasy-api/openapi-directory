@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class InstanceRefresh {
     
     public String autoScalingGroupName;
+
     public InstanceRefresh withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -19,6 +20,7 @@ public class InstanceRefresh {
     
     
     public DesiredConfiguration desiredConfiguration;
+
     public InstanceRefresh withDesiredConfiguration(DesiredConfiguration desiredConfiguration) {
         this.desiredConfiguration = desiredConfiguration;
         return this;
@@ -26,6 +28,7 @@ public class InstanceRefresh {
     
     
     public OffsetDateTime endTime;
+
     public InstanceRefresh withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -33,6 +36,7 @@ public class InstanceRefresh {
     
     
     public String instanceRefreshId;
+
     public InstanceRefresh withInstanceRefreshId(String instanceRefreshId) {
         this.instanceRefreshId = instanceRefreshId;
         return this;
@@ -40,6 +44,7 @@ public class InstanceRefresh {
     
     
     public Long instancesToUpdate;
+
     public InstanceRefresh withInstancesToUpdate(Long instancesToUpdate) {
         this.instancesToUpdate = instancesToUpdate;
         return this;
@@ -47,16 +52,15 @@ public class InstanceRefresh {
     
     
     public Long percentageComplete;
+
     public InstanceRefresh withPercentageComplete(Long percentageComplete) {
         this.percentageComplete = percentageComplete;
         return this;
     }
     
-    /**
-     * Describes the preferences for an instance refresh.
-     */
     
     public RefreshPreferences preferences;
+
     public InstanceRefresh withPreferences(RefreshPreferences preferences) {
         this.preferences = preferences;
         return this;
@@ -64,6 +68,7 @@ public class InstanceRefresh {
     
     
     public InstanceRefreshProgressDetails progressDetails;
+
     public InstanceRefresh withProgressDetails(InstanceRefreshProgressDetails progressDetails) {
         this.progressDetails = progressDetails;
         return this;
@@ -71,6 +76,7 @@ public class InstanceRefresh {
     
     
     public RollbackDetails rollbackDetails;
+
     public InstanceRefresh withRollbackDetails(RollbackDetails rollbackDetails) {
         this.rollbackDetails = rollbackDetails;
         return this;
@@ -78,6 +84,7 @@ public class InstanceRefresh {
     
     
     public OffsetDateTime startTime;
+
     public InstanceRefresh withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -85,6 +92,7 @@ public class InstanceRefresh {
     
     
     public InstanceRefreshStatusEnum status;
+
     public InstanceRefresh withStatus(InstanceRefreshStatusEnum status) {
         this.status = status;
         return this;
@@ -92,9 +100,11 @@ public class InstanceRefresh {
     
     
     public String statusReason;
+
     public InstanceRefresh withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public InstanceRefresh(){}
 }

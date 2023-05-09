@@ -15,6 +15,7 @@ public class ScheduleBByRecipient {
      */
     @JsonProperty("committee_id")
     public String committeeId;
+
     public ScheduleBByRecipient withCommitteeId(String committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -26,6 +27,7 @@ public class ScheduleBByRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee_total_disbursements")
     public Double committeeTotalDisbursements;
+
     public ScheduleBByRecipient withCommitteeTotalDisbursements(Double committeeTotalDisbursements) {
         this.committeeTotalDisbursements = committeeTotalDisbursements;
         return this;
@@ -38,6 +40,7 @@ public class ScheduleBByRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public ScheduleBByRecipient withCount(Integer count) {
         this.count = count;
         return this;
@@ -51,6 +54,7 @@ public class ScheduleBByRecipient {
      */
     @JsonProperty("cycle")
     public Integer cycle;
+
     public ScheduleBByRecipient withCycle(Integer cycle) {
         this.cycle = cycle;
         return this;
@@ -63,6 +67,7 @@ public class ScheduleBByRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo_count")
     public Integer memoCount;
+
     public ScheduleBByRecipient withMemoCount(Integer memoCount) {
         this.memoCount = memoCount;
         return this;
@@ -75,6 +80,7 @@ public class ScheduleBByRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo_total")
     public Double memoTotal;
+
     public ScheduleBByRecipient withMemoTotal(Double memoTotal) {
         this.memoTotal = memoTotal;
         return this;
@@ -83,6 +89,7 @@ public class ScheduleBByRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipient_disbursement_percent")
     public Double recipientDisbursementPercent;
+
     public ScheduleBByRecipient withRecipientDisbursementPercent(Double recipientDisbursementPercent) {
         this.recipientDisbursementPercent = recipientDisbursementPercent;
         return this;
@@ -93,6 +100,7 @@ public class ScheduleBByRecipient {
      */
     @JsonProperty("recipient_name")
     public String recipientName;
+
     public ScheduleBByRecipient withRecipientName(String recipientName) {
         this.recipientName = recipientName;
         return this;
@@ -105,9 +113,15 @@ public class ScheduleBByRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public ScheduleBByRecipient withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public ScheduleBByRecipient(@JsonProperty("committee_id") String committeeId, @JsonProperty("cycle") Integer cycle, @JsonProperty("recipient_name") String recipientName) {
+        this.committeeId = committeeId;
+        this.cycle = cycle;
+        this.recipientName = recipientName;
+  }
 }

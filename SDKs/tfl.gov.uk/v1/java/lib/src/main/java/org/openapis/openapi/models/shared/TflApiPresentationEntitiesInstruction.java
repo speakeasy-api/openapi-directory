@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailed")
     public String detailed;
+
     public TflApiPresentationEntitiesInstruction withDetailed(String detailed) {
         this.detailed = detailed;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("steps")
     public TflApiPresentationEntitiesInstructionStep[] steps;
+
     public TflApiPresentationEntitiesInstruction withSteps(TflApiPresentationEntitiesInstructionStep[] steps) {
         this.steps = steps;
         return this;
@@ -28,9 +30,11 @@ public class TflApiPresentationEntitiesInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public TflApiPresentationEntitiesInstruction withSummary(String summary) {
         this.summary = summary;
         return this;
     }
     
+    public TflApiPresentationEntitiesInstruction(){}
 }

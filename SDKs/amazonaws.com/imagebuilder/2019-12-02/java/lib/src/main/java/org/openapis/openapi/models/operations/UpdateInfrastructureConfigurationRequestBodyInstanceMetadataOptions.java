@@ -15,6 +15,7 @@ public class UpdateInfrastructureConfigurationRequestBodyInstanceMetadataOptions
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpPutResponseHopLimit")
     public Long httpPutResponseHopLimit;
+
     public UpdateInfrastructureConfigurationRequestBodyInstanceMetadataOptions withHttpPutResponseHopLimit(Long httpPutResponseHopLimit) {
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         return this;
@@ -23,9 +24,11 @@ public class UpdateInfrastructureConfigurationRequestBodyInstanceMetadataOptions
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpTokens")
     public String httpTokens;
+
     public UpdateInfrastructureConfigurationRequestBodyInstanceMetadataOptions withHttpTokens(String httpTokens) {
         this.httpTokens = httpTokens;
         return this;
     }
     
+    public UpdateInfrastructureConfigurationRequestBodyInstanceMetadataOptions(){}
 }

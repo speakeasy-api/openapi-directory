@@ -20,6 +20,7 @@ public class ProgressEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public HandlerErrorCodeEnum errorCode;
+
     public ProgressEvent withErrorCode(HandlerErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -30,6 +31,7 @@ public class ProgressEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EventTime")
     public OffsetDateTime eventTime;
+
     public ProgressEvent withEventTime(OffsetDateTime eventTime) {
         this.eventTime = eventTime;
         return this;
@@ -38,6 +40,7 @@ public class ProgressEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Identifier")
     public String identifier;
+
     public ProgressEvent withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -46,6 +49,7 @@ public class ProgressEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Operation")
     public OperationEnum operation;
+
     public ProgressEvent withOperation(OperationEnum operation) {
         this.operation = operation;
         return this;
@@ -54,6 +58,7 @@ public class ProgressEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationStatus")
     public OperationStatusEnum operationStatus;
+
     public ProgressEvent withOperationStatus(OperationStatusEnum operationStatus) {
         this.operationStatus = operationStatus;
         return this;
@@ -62,6 +67,7 @@ public class ProgressEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestToken")
     public String requestToken;
+
     public ProgressEvent withRequestToken(String requestToken) {
         this.requestToken = requestToken;
         return this;
@@ -70,6 +76,7 @@ public class ProgressEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceModel")
     public String resourceModel;
+
     public ProgressEvent withResourceModel(String resourceModel) {
         this.resourceModel = resourceModel;
         return this;
@@ -80,6 +87,7 @@ public class ProgressEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RetryAfter")
     public OffsetDateTime retryAfter;
+
     public ProgressEvent withRetryAfter(OffsetDateTime retryAfter) {
         this.retryAfter = retryAfter;
         return this;
@@ -88,6 +96,7 @@ public class ProgressEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public ProgressEvent withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -96,9 +105,11 @@ public class ProgressEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypeName")
     public String typeName;
+
     public ProgressEvent withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public ProgressEvent(){}
 }

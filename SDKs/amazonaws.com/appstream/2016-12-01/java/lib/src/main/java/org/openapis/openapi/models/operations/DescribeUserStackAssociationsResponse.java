@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeUserStackAssociationsResponse {
     
     public String contentType;
+
     public DescribeUserStackAssociationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeUserStackAssociationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeUserStackAssociationsResult describeUserStackAssociationsResult;
+
     public DescribeUserStackAssociationsResponse withDescribeUserStackAssociationsResult(org.openapis.openapi.models.shared.DescribeUserStackAssociationsResult describeUserStackAssociationsResult) {
         this.describeUserStackAssociationsResult = describeUserStackAssociationsResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeUserStackAssociationsResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public DescribeUserStackAssociationsResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeUserStackAssociationsResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DescribeUserStackAssociationsResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeUserStackAssociationsResponse {
     
     
     public Integer statusCode;
+
     public DescribeUserStackAssociationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeUserStackAssociationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeUserStackAssociationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeUserStackAssociationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public AttachedDiskInitializeParamsArchitectureEnum architecture;
+
     public AttachedDiskInitializeParams withArchitecture(AttachedDiskInitializeParamsArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -29,6 +30,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AttachedDiskInitializeParams withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskName")
     public String diskName;
+
     public AttachedDiskInitializeParams withDiskName(String diskName) {
         this.diskName = diskName;
         return this;
@@ -51,6 +54,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSizeGb")
     public String diskSizeGb;
+
     public AttachedDiskInitializeParams withDiskSizeGb(String diskSizeGb) {
         this.diskSizeGb = diskSizeGb;
         return this;
@@ -62,6 +66,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskType")
     public String diskType;
+
     public AttachedDiskInitializeParams withDiskType(String diskType) {
         this.diskType = diskType;
         return this;
@@ -73,6 +78,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public AttachedDiskInitializeParams withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -84,6 +90,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenses")
     public String[] licenses;
+
     public AttachedDiskInitializeParams withLicenses(String[] licenses) {
         this.licenses = licenses;
         return this;
@@ -95,6 +102,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onUpdateAction")
     public AttachedDiskInitializeParamsOnUpdateActionEnum onUpdateAction;
+
     public AttachedDiskInitializeParams withOnUpdateAction(AttachedDiskInitializeParamsOnUpdateActionEnum onUpdateAction) {
         this.onUpdateAction = onUpdateAction;
         return this;
@@ -106,8 +114,33 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisionedIops")
     public String provisionedIops;
+
     public AttachedDiskInitializeParams withProvisionedIops(String provisionedIops) {
         this.provisionedIops = provisionedIops;
+        return this;
+    }
+    
+    /**
+     * Indicates how much throughput to provision for the disk. This sets the number of throughput mb per second that the disk can handle. Values must be between 1 and 7,124.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("provisionedThroughput")
+    public String provisionedThroughput;
+
+    public AttachedDiskInitializeParams withProvisionedThroughput(String provisionedThroughput) {
+        this.provisionedThroughput = provisionedThroughput;
+        return this;
+    }
+    
+    /**
+     * Required for each regional disk associated with the instance. Specify the URLs of the zones where the disk should be replicated to. You must provide exactly two replica zones, and one zone must be the same as the instance zone. You can't use this option with boot disks.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("replicaZones")
+    public String[] replicaZones;
+
+    public AttachedDiskInitializeParams withReplicaZones(String[] replicaZones) {
+        this.replicaZones = replicaZones;
         return this;
     }
     
@@ -117,6 +150,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceManagerTags")
     public java.util.Map<String, String> resourceManagerTags;
+
     public AttachedDiskInitializeParams withResourceManagerTags(java.util.Map<String, String> resourceManagerTags) {
         this.resourceManagerTags = resourceManagerTags;
         return this;
@@ -128,6 +162,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourcePolicies")
     public String[] resourcePolicies;
+
     public AttachedDiskInitializeParams withResourcePolicies(String[] resourcePolicies) {
         this.resourcePolicies = resourcePolicies;
         return this;
@@ -139,6 +174,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceImage")
     public String sourceImage;
+
     public AttachedDiskInitializeParams withSourceImage(String sourceImage) {
         this.sourceImage = sourceImage;
         return this;
@@ -147,6 +183,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceImageEncryptionKey")
     public CustomerEncryptionKey sourceImageEncryptionKey;
+
     public AttachedDiskInitializeParams withSourceImageEncryptionKey(CustomerEncryptionKey sourceImageEncryptionKey) {
         this.sourceImageEncryptionKey = sourceImageEncryptionKey;
         return this;
@@ -158,6 +195,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSnapshot")
     public String sourceSnapshot;
+
     public AttachedDiskInitializeParams withSourceSnapshot(String sourceSnapshot) {
         this.sourceSnapshot = sourceSnapshot;
         return this;
@@ -166,9 +204,11 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSnapshotEncryptionKey")
     public CustomerEncryptionKey sourceSnapshotEncryptionKey;
+
     public AttachedDiskInitializeParams withSourceSnapshotEncryptionKey(CustomerEncryptionKey sourceSnapshotEncryptionKey) {
         this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
         return this;
     }
     
+    public AttachedDiskInitializeParams(){}
 }

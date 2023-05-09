@@ -18,6 +18,7 @@ public class SkippedDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("incompatibleAppVersion")
     public Boolean incompatibleAppVersion;
+
     public SkippedDetail withIncompatibleAppVersion(Boolean incompatibleAppVersion) {
         this.incompatibleAppVersion = incompatibleAppVersion;
         return this;
@@ -29,6 +30,7 @@ public class SkippedDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("incompatibleArchitecture")
     public Boolean incompatibleArchitecture;
+
     public SkippedDetail withIncompatibleArchitecture(Boolean incompatibleArchitecture) {
         this.incompatibleArchitecture = incompatibleArchitecture;
         return this;
@@ -40,9 +42,11 @@ public class SkippedDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("incompatibleDevice")
     public Boolean incompatibleDevice;
+
     public SkippedDetail withIncompatibleDevice(Boolean incompatibleDevice) {
         this.incompatibleDevice = incompatibleDevice;
         return this;
     }
     
+    public SkippedDetail(){}
 }

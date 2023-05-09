@@ -12,6 +12,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentVersion")
     public String agentVersion;
+
     public UpdateStackRequest withAgentVersion(String agentVersion) {
         this.agentVersion = agentVersion;
         return this;
@@ -20,6 +21,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public UpdateStackRequest withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -28,6 +30,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChefConfiguration")
     public ChefConfiguration chefConfiguration;
+
     public UpdateStackRequest withChefConfiguration(ChefConfiguration chefConfiguration) {
         this.chefConfiguration = chefConfiguration;
         return this;
@@ -36,6 +39,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationManager")
     public StackConfigurationManager configurationManager;
+
     public UpdateStackRequest withConfigurationManager(StackConfigurationManager configurationManager) {
         this.configurationManager = configurationManager;
         return this;
@@ -44,6 +48,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomCookbooksSource")
     public Source customCookbooksSource;
+
     public UpdateStackRequest withCustomCookbooksSource(Source customCookbooksSource) {
         this.customCookbooksSource = customCookbooksSource;
         return this;
@@ -52,6 +57,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomJson")
     public String customJson;
+
     public UpdateStackRequest withCustomJson(String customJson) {
         this.customJson = customJson;
         return this;
@@ -60,6 +66,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultAvailabilityZone")
     public String defaultAvailabilityZone;
+
     public UpdateStackRequest withDefaultAvailabilityZone(String defaultAvailabilityZone) {
         this.defaultAvailabilityZone = defaultAvailabilityZone;
         return this;
@@ -68,6 +75,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultInstanceProfileArn")
     public String defaultInstanceProfileArn;
+
     public UpdateStackRequest withDefaultInstanceProfileArn(String defaultInstanceProfileArn) {
         this.defaultInstanceProfileArn = defaultInstanceProfileArn;
         return this;
@@ -76,6 +84,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultOs")
     public String defaultOs;
+
     public UpdateStackRequest withDefaultOs(String defaultOs) {
         this.defaultOs = defaultOs;
         return this;
@@ -84,6 +93,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultRootDeviceType")
     public RootDeviceTypeEnum defaultRootDeviceType;
+
     public UpdateStackRequest withDefaultRootDeviceType(RootDeviceTypeEnum defaultRootDeviceType) {
         this.defaultRootDeviceType = defaultRootDeviceType;
         return this;
@@ -92,6 +102,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSshKeyName")
     public String defaultSshKeyName;
+
     public UpdateStackRequest withDefaultSshKeyName(String defaultSshKeyName) {
         this.defaultSshKeyName = defaultSshKeyName;
         return this;
@@ -100,6 +111,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSubnetId")
     public String defaultSubnetId;
+
     public UpdateStackRequest withDefaultSubnetId(String defaultSubnetId) {
         this.defaultSubnetId = defaultSubnetId;
         return this;
@@ -108,6 +120,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostnameTheme")
     public String hostnameTheme;
+
     public UpdateStackRequest withHostnameTheme(String hostnameTheme) {
         this.hostnameTheme = hostnameTheme;
         return this;
@@ -116,6 +129,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateStackRequest withName(String name) {
         this.name = name;
         return this;
@@ -124,6 +138,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceRoleArn")
     public String serviceRoleArn;
+
     public UpdateStackRequest withServiceRoleArn(String serviceRoleArn) {
         this.serviceRoleArn = serviceRoleArn;
         return this;
@@ -131,6 +146,7 @@ public class UpdateStackRequest {
     
     @JsonProperty("StackId")
     public String stackId;
+
     public UpdateStackRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -139,6 +155,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseCustomCookbooks")
     public Boolean useCustomCookbooks;
+
     public UpdateStackRequest withUseCustomCookbooks(Boolean useCustomCookbooks) {
         this.useCustomCookbooks = useCustomCookbooks;
         return this;
@@ -147,9 +164,13 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseOpsworksSecurityGroups")
     public Boolean useOpsworksSecurityGroups;
+
     public UpdateStackRequest withUseOpsworksSecurityGroups(Boolean useOpsworksSecurityGroups) {
         this.useOpsworksSecurityGroups = useOpsworksSecurityGroups;
         return this;
     }
     
+    public UpdateStackRequest(@JsonProperty("StackId") String stackId) {
+        this.stackId = stackId;
+  }
 }

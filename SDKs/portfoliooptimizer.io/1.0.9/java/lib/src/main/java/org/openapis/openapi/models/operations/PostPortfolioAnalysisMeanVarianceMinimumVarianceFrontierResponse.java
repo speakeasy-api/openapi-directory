@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierResponse {
     
     public String contentType;
+
     public PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierResponse {
     
     
     public Integer statusCode;
+
     public PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierResponse {
      */
     
     public PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSON postPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSONObject;
+
     public PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierResponse withPostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSONObject(PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSON postPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSONObject) {
         this.postPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSONObject = postPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSONObject;
         return this;
     }
     
+    public PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontierResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContactcenterinsightsProjectsLocationsViewsPatchResponse {
     
     public String contentType;
+
     public ContactcenterinsightsProjectsLocationsViewsPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContactcenterinsightsProjectsLocationsViewsPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1View googleCloudContactcenterinsightsV1View;
+
     public ContactcenterinsightsProjectsLocationsViewsPatchResponse withGoogleCloudContactcenterinsightsV1View(org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1View googleCloudContactcenterinsightsV1View) {
         this.googleCloudContactcenterinsightsV1View = googleCloudContactcenterinsightsV1View;
         return this;
@@ -26,6 +29,7 @@ public class ContactcenterinsightsProjectsLocationsViewsPatchResponse {
     
     
     public Integer statusCode;
+
     public ContactcenterinsightsProjectsLocationsViewsPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContactcenterinsightsProjectsLocationsViewsPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContactcenterinsightsProjectsLocationsViewsPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContactcenterinsightsProjectsLocationsViewsPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

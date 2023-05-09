@@ -15,6 +15,7 @@ public class MigratedStores {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessLineId")
     public String businessLineId;
+
     public MigratedStores withBusinessLineId(String businessLineId) {
         this.businessLineId = businessLineId;
         return this;
@@ -26,6 +27,7 @@ public class MigratedStores {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeCode")
     public String storeCode;
+
     public MigratedStores withStoreCode(String storeCode) {
         this.storeCode = storeCode;
         return this;
@@ -37,6 +39,7 @@ public class MigratedStores {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeId")
     public String storeId;
+
     public MigratedStores withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
@@ -48,9 +51,11 @@ public class MigratedStores {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeReference")
     public String storeReference;
+
     public MigratedStores withStoreReference(String storeReference) {
         this.storeReference = storeReference;
         return this;
     }
     
+    public MigratedStores(){}
 }

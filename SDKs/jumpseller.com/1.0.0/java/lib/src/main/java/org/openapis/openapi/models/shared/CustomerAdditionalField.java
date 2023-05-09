@@ -15,9 +15,11 @@ public class CustomerAdditionalField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_additional_field")
     public CustomerAdditionalFieldFields customerAdditionalField;
+
     public CustomerAdditionalField withCustomerAdditionalField(CustomerAdditionalFieldFields customerAdditionalField) {
         this.customerAdditionalField = customerAdditionalField;
         return this;
     }
     
+    public CustomerAdditionalField(){}
 }

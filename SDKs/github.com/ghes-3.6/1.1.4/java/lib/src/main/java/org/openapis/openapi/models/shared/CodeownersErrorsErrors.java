@@ -14,6 +14,7 @@ public class CodeownersErrorsErrors {
      */
     @JsonProperty("column")
     public Long column;
+
     public CodeownersErrorsErrors withColumn(Long column) {
         this.column = column;
         return this;
@@ -24,6 +25,7 @@ public class CodeownersErrorsErrors {
      */
     @JsonProperty("kind")
     public String kind;
+
     public CodeownersErrorsErrors withKind(String kind) {
         this.kind = kind;
         return this;
@@ -34,6 +36,7 @@ public class CodeownersErrorsErrors {
      */
     @JsonProperty("line")
     public Long line;
+
     public CodeownersErrorsErrors withLine(Long line) {
         this.line = line;
         return this;
@@ -44,6 +47,7 @@ public class CodeownersErrorsErrors {
      */
     @JsonProperty("message")
     public String message;
+
     public CodeownersErrorsErrors withMessage(String message) {
         this.message = message;
         return this;
@@ -54,6 +58,7 @@ public class CodeownersErrorsErrors {
      */
     @JsonProperty("path")
     public String path;
+
     public CodeownersErrorsErrors withPath(String path) {
         this.path = path;
         return this;
@@ -65,6 +70,7 @@ public class CodeownersErrorsErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public CodeownersErrorsErrors withSource(String source) {
         this.source = source;
         return this;
@@ -76,9 +82,17 @@ public class CodeownersErrorsErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestion")
     public String suggestion;
+
     public CodeownersErrorsErrors withSuggestion(String suggestion) {
         this.suggestion = suggestion;
         return this;
     }
     
+    public CodeownersErrorsErrors(@JsonProperty("column") Long column, @JsonProperty("kind") String kind, @JsonProperty("line") Long line, @JsonProperty("message") String message, @JsonProperty("path") String path) {
+        this.column = column;
+        this.kind = kind;
+        this.line = line;
+        this.message = message;
+        this.path = path;
+  }
 }

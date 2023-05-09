@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class RegisterDBProxyTargetsResponse {
     
     public DBProxyTarget[] dbProxyTargets;
+
     public RegisterDBProxyTargetsResponse withDBProxyTargets(DBProxyTarget[] dbProxyTargets) {
         this.dbProxyTargets = dbProxyTargets;
         return this;
     }
     
+    public RegisterDBProxyTargetsResponse(){}
 }

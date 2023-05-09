@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetClassificationsGendersResponse {
     
     public String contentType;
+
     public GetClassificationsGendersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetClassificationsGendersResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetClassificationsGendersResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetClassificationsGendersResponse {
     
     
     public Integer statusCode;
+
     public GetClassificationsGendersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetClassificationsGendersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetClassificationsGendersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetClassificationsGendersResponse {
      */
     
     public org.openapis.openapi.models.shared.Gender[] genders;
+
     public GetClassificationsGendersResponse withGenders(org.openapis.openapi.models.shared.Gender[] genders) {
         this.genders = genders;
         return this;
@@ -50,6 +56,7 @@ public class GetClassificationsGendersResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetClassificationsGendersResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -60,9 +67,14 @@ public class GetClassificationsGendersResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public GetClassificationsGendersResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public GetClassificationsGendersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GetClusterSolution404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GetClusterSolution404ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -29,9 +30,11 @@ public class GetClusterSolution404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GetClusterSolution404ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GetClusterSolution404ApplicationJSON(){}
 }

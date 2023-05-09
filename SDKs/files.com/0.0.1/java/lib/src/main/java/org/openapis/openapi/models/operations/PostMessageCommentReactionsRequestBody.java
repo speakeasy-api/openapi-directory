@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMessageCommentReactionsRequestBody {
@@ -12,6 +13,7 @@ public class PostMessageCommentReactionsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=emoji")
     public String emoji;
+
     public PostMessageCommentReactionsRequestBody withEmoji(String emoji) {
         this.emoji = emoji;
         return this;
@@ -22,9 +24,13 @@ public class PostMessageCommentReactionsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=user_id")
     public Integer userId;
+
     public PostMessageCommentReactionsRequestBody withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public PostMessageCommentReactionsRequestBody(@JsonProperty("emoji") String emoji) {
+        this.emoji = emoji;
+  }
 }

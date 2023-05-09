@@ -15,6 +15,7 @@ public class LayerVersionsListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompatibleArchitectures")
     public ArchitectureEnum[] compatibleArchitectures;
+
     public LayerVersionsListItem withCompatibleArchitectures(ArchitectureEnum[] compatibleArchitectures) {
         this.compatibleArchitectures = compatibleArchitectures;
         return this;
@@ -23,6 +24,7 @@ public class LayerVersionsListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompatibleRuntimes")
     public RuntimeEnum[] compatibleRuntimes;
+
     public LayerVersionsListItem withCompatibleRuntimes(RuntimeEnum[] compatibleRuntimes) {
         this.compatibleRuntimes = compatibleRuntimes;
         return this;
@@ -31,6 +33,7 @@ public class LayerVersionsListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedDate")
     public String createdDate;
+
     public LayerVersionsListItem withCreatedDate(String createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -39,6 +42,7 @@ public class LayerVersionsListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public LayerVersionsListItem withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +51,7 @@ public class LayerVersionsListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LayerVersionArn")
     public String layerVersionArn;
+
     public LayerVersionsListItem withLayerVersionArn(String layerVersionArn) {
         this.layerVersionArn = layerVersionArn;
         return this;
@@ -55,6 +60,7 @@ public class LayerVersionsListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseInfo")
     public String licenseInfo;
+
     public LayerVersionsListItem withLicenseInfo(String licenseInfo) {
         this.licenseInfo = licenseInfo;
         return this;
@@ -63,9 +69,11 @@ public class LayerVersionsListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public LayerVersionsListItem withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public LayerVersionsListItem(){}
 }

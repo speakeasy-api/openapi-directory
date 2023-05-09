@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomSMSLambdaVersionConfigType {
     @JsonProperty("LambdaArn")
     public String lambdaArn;
+
     public CustomSMSLambdaVersionConfigType withLambdaArn(String lambdaArn) {
         this.lambdaArn = lambdaArn;
         return this;
@@ -19,9 +20,14 @@ public class CustomSMSLambdaVersionConfigType {
     
     @JsonProperty("LambdaVersion")
     public CustomSMSSenderLambdaVersionTypeEnum lambdaVersion;
+
     public CustomSMSLambdaVersionConfigType withLambdaVersion(CustomSMSSenderLambdaVersionTypeEnum lambdaVersion) {
         this.lambdaVersion = lambdaVersion;
         return this;
     }
     
+    public CustomSMSLambdaVersionConfigType(@JsonProperty("LambdaArn") String lambdaArn, @JsonProperty("LambdaVersion") CustomSMSSenderLambdaVersionTypeEnum lambdaVersion) {
+        this.lambdaArn = lambdaArn;
+        this.lambdaVersion = lambdaVersion;
+  }
 }

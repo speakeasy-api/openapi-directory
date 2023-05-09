@@ -12,9 +12,13 @@ public class PutFunctionCodeSigningConfigRequestBody {
      */
     @JsonProperty("CodeSigningConfigArn")
     public String codeSigningConfigArn;
+
     public PutFunctionCodeSigningConfigRequestBody withCodeSigningConfigArn(String codeSigningConfigArn) {
         this.codeSigningConfigArn = codeSigningConfigArn;
         return this;
     }
     
+    public PutFunctionCodeSigningConfigRequestBody(@JsonProperty("CodeSigningConfigArn") String codeSigningConfigArn) {
+        this.codeSigningConfigArn = codeSigningConfigArn;
+  }
 }

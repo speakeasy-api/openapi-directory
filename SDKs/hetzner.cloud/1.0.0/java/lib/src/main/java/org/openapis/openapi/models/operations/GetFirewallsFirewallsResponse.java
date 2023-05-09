@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetFirewallsFirewallsResponse {
     @JsonProperty("firewalls")
     public GetFirewallsFirewallsResponseFirewall[] firewalls;
+
     public GetFirewallsFirewallsResponse withFirewalls(GetFirewallsFirewallsResponseFirewall[] firewalls) {
         this.firewalls = firewalls;
         return this;
@@ -22,9 +23,13 @@ public class GetFirewallsFirewallsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public GetFirewallsFirewallsResponseMeta meta;
+
     public GetFirewallsFirewallsResponse withMeta(GetFirewallsFirewallsResponseMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetFirewallsFirewallsResponse(@JsonProperty("firewalls") GetFirewallsFirewallsResponseFirewall[] firewalls) {
+        this.firewalls = firewalls;
+  }
 }

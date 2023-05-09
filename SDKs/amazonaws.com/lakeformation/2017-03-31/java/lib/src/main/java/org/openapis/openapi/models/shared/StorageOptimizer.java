@@ -15,6 +15,7 @@ public class StorageOptimizer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Config")
     public java.util.Map<String, String> config;
+
     public StorageOptimizer withConfig(java.util.Map<String, String> config) {
         this.config = config;
         return this;
@@ -23,6 +24,7 @@ public class StorageOptimizer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public StorageOptimizer withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,6 +33,7 @@ public class StorageOptimizer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastRunDetails")
     public String lastRunDetails;
+
     public StorageOptimizer withLastRunDetails(String lastRunDetails) {
         this.lastRunDetails = lastRunDetails;
         return this;
@@ -39,6 +42,7 @@ public class StorageOptimizer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageOptimizerType")
     public OptimizerTypeEnum storageOptimizerType;
+
     public StorageOptimizer withStorageOptimizerType(OptimizerTypeEnum storageOptimizerType) {
         this.storageOptimizerType = storageOptimizerType;
         return this;
@@ -47,9 +51,11 @@ public class StorageOptimizer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Warnings")
     public String warnings;
+
     public StorageOptimizer withWarnings(String warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public StorageOptimizer(){}
 }

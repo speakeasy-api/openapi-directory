@@ -22,6 +22,7 @@ public class TransformFilterCriteria {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAfter")
     public OffsetDateTime createdAfter;
+
     public TransformFilterCriteria withCreatedAfter(OffsetDateTime createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -32,6 +33,7 @@ public class TransformFilterCriteria {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedBefore")
     public OffsetDateTime createdBefore;
+
     public TransformFilterCriteria withCreatedBefore(OffsetDateTime createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -40,6 +42,7 @@ public class TransformFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlueVersion")
     public String glueVersion;
+
     public TransformFilterCriteria withGlueVersion(String glueVersion) {
         this.glueVersion = glueVersion;
         return this;
@@ -50,6 +53,7 @@ public class TransformFilterCriteria {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedAfter")
     public OffsetDateTime lastModifiedAfter;
+
     public TransformFilterCriteria withLastModifiedAfter(OffsetDateTime lastModifiedAfter) {
         this.lastModifiedAfter = lastModifiedAfter;
         return this;
@@ -60,6 +64,7 @@ public class TransformFilterCriteria {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedBefore")
     public OffsetDateTime lastModifiedBefore;
+
     public TransformFilterCriteria withLastModifiedBefore(OffsetDateTime lastModifiedBefore) {
         this.lastModifiedBefore = lastModifiedBefore;
         return this;
@@ -68,6 +73,7 @@ public class TransformFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public TransformFilterCriteria withName(String name) {
         this.name = name;
         return this;
@@ -76,6 +82,7 @@ public class TransformFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schema")
     public SchemaColumn[] schema;
+
     public TransformFilterCriteria withSchema(SchemaColumn[] schema) {
         this.schema = schema;
         return this;
@@ -84,6 +91,7 @@ public class TransformFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public TransformStatusTypeEnum status;
+
     public TransformFilterCriteria withStatus(TransformStatusTypeEnum status) {
         this.status = status;
         return this;
@@ -92,9 +100,11 @@ public class TransformFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransformType")
     public TransformTypeEnum transformType;
+
     public TransformFilterCriteria withTransformType(TransformTypeEnum transformType) {
         this.transformType = transformType;
         return this;
     }
     
+    public TransformFilterCriteria(){}
 }

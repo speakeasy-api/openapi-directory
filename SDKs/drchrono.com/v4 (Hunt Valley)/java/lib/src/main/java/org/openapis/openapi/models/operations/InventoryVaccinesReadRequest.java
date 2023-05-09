@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InventoryVaccinesReadRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cvx_code")
     public String cvxCode;
+
     public InventoryVaccinesReadRequest withCvxCode(String cvxCode) {
         this.cvxCode = cvxCode;
         return this;
@@ -16,6 +18,7 @@ public class InventoryVaccinesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public InventoryVaccinesReadRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -23,6 +26,7 @@ public class InventoryVaccinesReadRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public InventoryVaccinesReadRequest withId(String id) {
         this.id = id;
         return this;
@@ -30,6 +34,7 @@ public class InventoryVaccinesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public InventoryVaccinesReadRequest withSince(String since) {
         this.since = since;
         return this;
@@ -37,9 +42,13 @@ public class InventoryVaccinesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public InventoryVaccinesReadRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public InventoryVaccinesReadRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

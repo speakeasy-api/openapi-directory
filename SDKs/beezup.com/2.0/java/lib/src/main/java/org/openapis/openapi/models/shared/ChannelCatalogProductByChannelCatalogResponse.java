@@ -18,9 +18,11 @@ public class ChannelCatalogProductByChannelCatalogResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelCatalogs")
     public java.util.Map<String, ChannelCatalogProductInfo> channelCatalogs;
+
     public ChannelCatalogProductByChannelCatalogResponse withChannelCatalogs(java.util.Map<String, ChannelCatalogProductInfo> channelCatalogs) {
         this.channelCatalogs = channelCatalogs;
         return this;
     }
     
+    public ChannelCatalogProductByChannelCatalogResponse(){}
 }

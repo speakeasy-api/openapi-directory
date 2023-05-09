@@ -60,11 +60,9 @@ public class Passwords {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostChangePasswordResponse res = new org.openapis.openapi.models.operations.PostChangePasswordResponse() {{
+        org.openapis.openapi.models.operations.PostChangePasswordResponse res = new org.openapis.openapi.models.operations.PostChangePasswordResponse(contentType, httpRes.statusCode()) {{
             invalidToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,12 +106,10 @@ public class Passwords {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRequestPasswordResetResponse res = new org.openapis.openapi.models.operations.PostRequestPasswordResetResponse() {{
+        org.openapis.openapi.models.operations.PostRequestPasswordResetResponse res = new org.openapis.openapi.models.operations.PostRequestPasswordResetResponse(contentType, httpRes.statusCode()) {{
             requestPasswordResetResponse = null;
             invalidToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -162,11 +158,9 @@ public class Passwords {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostVerifyPasswordChangeResponse res = new org.openapis.openapi.models.operations.PostVerifyPasswordChangeResponse() {{
+        org.openapis.openapi.models.operations.PostVerifyPasswordChangeResponse res = new org.openapis.openapi.models.operations.PostVerifyPasswordChangeResponse(contentType, httpRes.statusCode()) {{
             invalidToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

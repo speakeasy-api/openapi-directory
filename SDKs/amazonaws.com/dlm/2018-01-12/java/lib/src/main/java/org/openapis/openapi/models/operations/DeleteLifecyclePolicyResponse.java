@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLifecyclePolicyResponse {
     
     public String contentType;
+
     public DeleteLifecyclePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteLifecyclePolicyResponse {
      */
     
     public java.util.Map<String, Object> deleteLifecyclePolicyResponse;
+
     public DeleteLifecyclePolicyResponse withDeleteLifecyclePolicyResponse(java.util.Map<String, Object> deleteLifecyclePolicyResponse) {
         this.deleteLifecyclePolicyResponse = deleteLifecyclePolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteLifecyclePolicyResponse {
      */
     
     public Object internalServerException;
+
     public DeleteLifecyclePolicyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteLifecyclePolicyResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteLifecyclePolicyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteLifecyclePolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteLifecyclePolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteLifecyclePolicyResponse {
     
     
     public Integer statusCode;
+
     public DeleteLifecyclePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteLifecyclePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLifecyclePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteLifecyclePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

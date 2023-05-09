@@ -18,9 +18,11 @@ public class SapValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationDetails")
     public SapValidationValidationDetail[] validationDetails;
+
     public SapValidation withValidationDetails(SapValidationValidationDetail[] validationDetails) {
         this.validationDetails = validationDetails;
         return this;
     }
     
+    public SapValidation(){}
 }

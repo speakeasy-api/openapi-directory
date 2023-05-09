@@ -15,6 +15,7 @@ public class UploadDocumentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adds")
     public Long adds;
+
     public UploadDocumentsResponse withAdds(Long adds) {
         this.adds = adds;
         return this;
@@ -23,6 +24,7 @@ public class UploadDocumentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletes")
     public Long deletes;
+
     public UploadDocumentsResponse withDeletes(Long deletes) {
         this.deletes = deletes;
         return this;
@@ -31,6 +33,7 @@ public class UploadDocumentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public UploadDocumentsResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -39,9 +42,11 @@ public class UploadDocumentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public DocumentServiceWarning[] warnings;
+
     public UploadDocumentsResponse withWarnings(DocumentServiceWarning[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public UploadDocumentsResponse(){}
 }

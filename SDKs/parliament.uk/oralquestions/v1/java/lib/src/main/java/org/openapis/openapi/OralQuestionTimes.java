@@ -57,7 +57,7 @@ public class OralQuestionTimes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PublishedOralQuestionTimeGetResponse res = new org.openapis.openapi.models.operations.PublishedOralQuestionTimeGetResponse() {{
+        org.openapis.openapi.models.operations.PublishedOralQuestionTimeGetResponse res = new org.openapis.openapi.models.operations.PublishedOralQuestionTimeGetResponse(contentType, httpRes.statusCode()) {{
             apiResponseListPublishedWrittenQuestion = null;
             apiResponseListPublishedWrittenQuestion = null;
             body = null;
@@ -67,8 +67,6 @@ public class OralQuestionTimes {
             apiResponseObject = null;
             apiResponseObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

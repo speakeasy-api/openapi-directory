@@ -15,6 +15,7 @@ public class ListFindingAggregationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountIds")
     public org.openapis.openapi.models.shared.StringFilter[] accountIds;
+
     public ListFindingAggregationsRequestBody withAccountIds(org.openapis.openapi.models.shared.StringFilter[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -26,6 +27,7 @@ public class ListFindingAggregationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationRequest")
     public ListFindingAggregationsRequestBodyAggregationRequest aggregationRequest;
+
     public ListFindingAggregationsRequestBody withAggregationRequest(ListFindingAggregationsRequestBodyAggregationRequest aggregationRequest) {
         this.aggregationRequest = aggregationRequest;
         return this;
@@ -36,6 +38,7 @@ public class ListFindingAggregationsRequestBody {
      */
     @JsonProperty("aggregationType")
     public ListFindingAggregationsRequestBodyAggregationTypeEnum aggregationType;
+
     public ListFindingAggregationsRequestBody withAggregationType(ListFindingAggregationsRequestBodyAggregationTypeEnum aggregationType) {
         this.aggregationType = aggregationType;
         return this;
@@ -47,6 +50,7 @@ public class ListFindingAggregationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListFindingAggregationsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -58,9 +62,13 @@ public class ListFindingAggregationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListFindingAggregationsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFindingAggregationsRequestBody(@JsonProperty("aggregationType") ListFindingAggregationsRequestBodyAggregationTypeEnum aggregationType) {
+        this.aggregationType = aggregationType;
+  }
 }

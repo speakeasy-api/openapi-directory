@@ -20,6 +20,7 @@ public class SessionsIdViewsPostRequiredParametersToCreateAView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeMSecs")
     public Long activeMSecs;
+
     public SessionsIdViewsPostRequiredParametersToCreateAView withActiveMSecs(Long activeMSecs) {
         this.activeMSecs = activeMSecs;
         return this;
@@ -28,6 +29,7 @@ public class SessionsIdViewsPostRequiredParametersToCreateAView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additional")
     public String additional;
+
     public SessionsIdViewsPostRequiredParametersToCreateAView withAdditional(String additional) {
         this.additional = additional;
         return this;
@@ -37,6 +39,7 @@ public class SessionsIdViewsPostRequiredParametersToCreateAView {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public SessionsIdViewsPostRequiredParametersToCreateAView withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -44,6 +47,7 @@ public class SessionsIdViewsPostRequiredParametersToCreateAView {
     
     @JsonProperty("pageNumber")
     public Long pageNumber;
+
     public SessionsIdViewsPostRequiredParametersToCreateAView withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -53,9 +57,15 @@ public class SessionsIdViewsPostRequiredParametersToCreateAView {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public SessionsIdViewsPostRequiredParametersToCreateAView withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public SessionsIdViewsPostRequiredParametersToCreateAView(@JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("pageNumber") Long pageNumber, @JsonProperty("startTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.pageNumber = pageNumber;
+        this.startTime = startTime;
+  }
 }

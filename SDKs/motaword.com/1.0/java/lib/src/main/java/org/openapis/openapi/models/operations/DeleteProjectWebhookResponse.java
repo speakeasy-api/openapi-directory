@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteProjectWebhookResponse {
     
     public String contentType;
+
     public DeleteProjectWebhookResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteProjectWebhookResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public DeleteProjectWebhookResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class DeleteProjectWebhookResponse {
      */
     
     public org.openapis.openapi.models.shared.OperationStatus operationStatus;
+
     public DeleteProjectWebhookResponse withOperationStatus(org.openapis.openapi.models.shared.OperationStatus operationStatus) {
         this.operationStatus = operationStatus;
         return this;
@@ -36,6 +40,7 @@ public class DeleteProjectWebhookResponse {
     
     
     public Integer statusCode;
+
     public DeleteProjectWebhookResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DeleteProjectWebhookResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteProjectWebhookResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteProjectWebhookResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

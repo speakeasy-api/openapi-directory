@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PaymentLinkApiDeleteJsonResponse {
     
     public byte[] body;
+
     public PaymentLinkApiDeleteJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PaymentLinkApiDeleteJsonResponse {
     
     
     public String contentType;
+
     public PaymentLinkApiDeleteJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PaymentLinkApiDeleteJsonResponse {
      */
     
     public Integer paymentLinkApiDeleteJSON200ApplicationJSONInt32Integer;
+
     public PaymentLinkApiDeleteJsonResponse withPaymentLinkApiDeleteJSON200ApplicationJSONInt32Integer(Integer paymentLinkApiDeleteJSON200ApplicationJSONInt32Integer) {
         this.paymentLinkApiDeleteJSON200ApplicationJSONInt32Integer = paymentLinkApiDeleteJSON200ApplicationJSONInt32Integer;
         return this;
@@ -36,6 +40,7 @@ public class PaymentLinkApiDeleteJsonResponse {
      */
     
     public Integer paymentLinkApiDeleteJSON200TextJSONInt32Integer;
+
     public PaymentLinkApiDeleteJsonResponse withPaymentLinkApiDeleteJSON200TextJSONInt32Integer(Integer paymentLinkApiDeleteJSON200TextJSONInt32Integer) {
         this.paymentLinkApiDeleteJSON200TextJSONInt32Integer = paymentLinkApiDeleteJSON200TextJSONInt32Integer;
         return this;
@@ -43,6 +48,7 @@ public class PaymentLinkApiDeleteJsonResponse {
     
     
     public Integer statusCode;
+
     public PaymentLinkApiDeleteJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class PaymentLinkApiDeleteJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PaymentLinkApiDeleteJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PaymentLinkApiDeleteJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

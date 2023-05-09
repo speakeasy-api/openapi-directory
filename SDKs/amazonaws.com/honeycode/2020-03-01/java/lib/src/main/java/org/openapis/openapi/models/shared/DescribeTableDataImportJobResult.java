@@ -15,6 +15,7 @@ public class DescribeTableDataImportJobResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public ErrorCodeEnum errorCode;
+
     public DescribeTableDataImportJobResult withErrorCode(ErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -22,6 +23,7 @@ public class DescribeTableDataImportJobResult {
     
     @JsonProperty("jobMetadata")
     public TableDataImportJobMetadata jobMetadata;
+
     public DescribeTableDataImportJobResult withJobMetadata(TableDataImportJobMetadata jobMetadata) {
         this.jobMetadata = jobMetadata;
         return this;
@@ -29,6 +31,7 @@ public class DescribeTableDataImportJobResult {
     
     @JsonProperty("jobStatus")
     public TableDataImportJobStatusEnum jobStatus;
+
     public DescribeTableDataImportJobResult withJobStatus(TableDataImportJobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -36,9 +39,15 @@ public class DescribeTableDataImportJobResult {
     
     @JsonProperty("message")
     public String message;
+
     public DescribeTableDataImportJobResult withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DescribeTableDataImportJobResult(@JsonProperty("jobMetadata") TableDataImportJobMetadata jobMetadata, @JsonProperty("jobStatus") TableDataImportJobStatusEnum jobStatus, @JsonProperty("message") String message) {
+        this.jobMetadata = jobMetadata;
+        this.jobStatus = jobStatus;
+        this.message = message;
+  }
 }

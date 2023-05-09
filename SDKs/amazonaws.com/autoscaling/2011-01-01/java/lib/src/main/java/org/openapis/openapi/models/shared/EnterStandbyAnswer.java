@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class EnterStandbyAnswer {
     
     public Activity[] activities;
+
     public EnterStandbyAnswer withActivities(Activity[] activities) {
         this.activities = activities;
         return this;
     }
     
+    public EnterStandbyAnswer(){}
 }

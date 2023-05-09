@@ -15,6 +15,7 @@ public class GetCategoryRatedAreas200ApplicationVndAmadeusPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.CategoryRatedAreas[] data;
+
     public GetCategoryRatedAreas200ApplicationVndAmadeusPlusJson withData(org.openapis.openapi.models.shared.CategoryRatedAreas[] data) {
         this.data = data;
         return this;
@@ -26,6 +27,7 @@ public class GetCategoryRatedAreas200ApplicationVndAmadeusPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public org.openapis.openapi.models.shared.Meta meta;
+
     public GetCategoryRatedAreas200ApplicationVndAmadeusPlusJson withMeta(org.openapis.openapi.models.shared.Meta meta) {
         this.meta = meta;
         return this;
@@ -34,9 +36,11 @@ public class GetCategoryRatedAreas200ApplicationVndAmadeusPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public org.openapis.openapi.models.shared.Warning[] warnings;
+
     public GetCategoryRatedAreas200ApplicationVndAmadeusPlusJson withWarnings(org.openapis.openapi.models.shared.Warning[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public GetCategoryRatedAreas200ApplicationVndAmadeusPlusJson(){}
 }

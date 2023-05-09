@@ -18,6 +18,7 @@ public class ListSessionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletedSession")
     public Session[] deletedSession;
+
     public ListSessionsResponse withDeletedSession(Session[] deletedSession) {
         this.deletedSession = deletedSession;
         return this;
@@ -29,6 +30,7 @@ public class ListSessionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasMoreData")
     public Boolean hasMoreData;
+
     public ListSessionsResponse withHasMoreData(Boolean hasMoreData) {
         this.hasMoreData = hasMoreData;
         return this;
@@ -40,6 +42,7 @@ public class ListSessionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListSessionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -51,9 +54,11 @@ public class ListSessionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("session")
     public Session[] session;
+
     public ListSessionsResponse withSession(Session[] session) {
         this.session = session;
         return this;
     }
     
+    public ListSessionsResponse(){}
 }

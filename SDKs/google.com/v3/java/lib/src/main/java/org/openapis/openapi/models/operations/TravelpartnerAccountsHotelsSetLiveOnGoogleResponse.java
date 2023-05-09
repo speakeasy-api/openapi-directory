@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TravelpartnerAccountsHotelsSetLiveOnGoogleResponse {
     
     public String contentType;
+
     public TravelpartnerAccountsHotelsSetLiveOnGoogleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TravelpartnerAccountsHotelsSetLiveOnGoogleResponse {
      */
     
     public org.openapis.openapi.models.shared.SetLiveOnGoogleResponse setLiveOnGoogleResponse;
+
     public TravelpartnerAccountsHotelsSetLiveOnGoogleResponse withSetLiveOnGoogleResponse(org.openapis.openapi.models.shared.SetLiveOnGoogleResponse setLiveOnGoogleResponse) {
         this.setLiveOnGoogleResponse = setLiveOnGoogleResponse;
         return this;
@@ -26,6 +29,7 @@ public class TravelpartnerAccountsHotelsSetLiveOnGoogleResponse {
     
     
     public Integer statusCode;
+
     public TravelpartnerAccountsHotelsSetLiveOnGoogleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class TravelpartnerAccountsHotelsSetLiveOnGoogleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TravelpartnerAccountsHotelsSetLiveOnGoogleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TravelpartnerAccountsHotelsSetLiveOnGoogleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsCrashGroupTotalsRequest {
@@ -12,6 +13,7 @@ public class AnalyticsCrashGroupTotalsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public AnalyticsCrashGroupTotalsRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsCrashGroupTotalsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_group_id")
     public String crashGroupId;
+
     public AnalyticsCrashGroupTotalsRequest withCrashGroupId(String crashGroupId) {
         this.crashGroupId = crashGroupId;
         return this;
@@ -32,6 +35,7 @@ public class AnalyticsCrashGroupTotalsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public AnalyticsCrashGroupTotalsRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -39,9 +43,16 @@ public class AnalyticsCrashGroupTotalsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
     public String version;
+
     public AnalyticsCrashGroupTotalsRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public AnalyticsCrashGroupTotalsRequest(@JsonProperty("app_name") String appName, @JsonProperty("crash_group_id") String crashGroupId, @JsonProperty("owner_name") String ownerName, @JsonProperty("version") String version) {
+        this.appName = appName;
+        this.crashGroupId = crashGroupId;
+        this.ownerName = ownerName;
+        this.version = version;
+  }
 }

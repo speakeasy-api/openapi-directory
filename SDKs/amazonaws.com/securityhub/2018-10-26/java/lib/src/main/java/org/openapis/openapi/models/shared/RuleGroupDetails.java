@@ -15,6 +15,7 @@ public class RuleGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleVariables")
     public RuleGroupVariables ruleVariables;
+
     public RuleGroupDetails withRuleVariables(RuleGroupVariables ruleVariables) {
         this.ruleVariables = ruleVariables;
         return this;
@@ -23,9 +24,11 @@ public class RuleGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RulesSource")
     public RuleGroupSource rulesSource;
+
     public RuleGroupDetails withRulesSource(RuleGroupSource rulesSource) {
         this.rulesSource = rulesSource;
         return this;
     }
     
+    public RuleGroupDetails(){}
 }

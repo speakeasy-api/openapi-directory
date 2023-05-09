@@ -15,6 +15,7 @@ public class SendUsersMessagesRequestBodySendUsersMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Context")
     public java.util.Map<String, String> context;
+
     public SendUsersMessagesRequestBodySendUsersMessageRequest withContext(java.util.Map<String, String> context) {
         this.context = context;
         return this;
@@ -23,6 +24,7 @@ public class SendUsersMessagesRequestBodySendUsersMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageConfiguration")
     public org.openapis.openapi.models.shared.DirectMessageConfiguration messageConfiguration;
+
     public SendUsersMessagesRequestBodySendUsersMessageRequest withMessageConfiguration(org.openapis.openapi.models.shared.DirectMessageConfiguration messageConfiguration) {
         this.messageConfiguration = messageConfiguration;
         return this;
@@ -31,6 +33,7 @@ public class SendUsersMessagesRequestBodySendUsersMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateConfiguration")
     public org.openapis.openapi.models.shared.TemplateConfiguration templateConfiguration;
+
     public SendUsersMessagesRequestBodySendUsersMessageRequest withTemplateConfiguration(org.openapis.openapi.models.shared.TemplateConfiguration templateConfiguration) {
         this.templateConfiguration = templateConfiguration;
         return this;
@@ -39,6 +42,7 @@ public class SendUsersMessagesRequestBodySendUsersMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TraceId")
     public String traceId;
+
     public SendUsersMessagesRequestBodySendUsersMessageRequest withTraceId(String traceId) {
         this.traceId = traceId;
         return this;
@@ -47,9 +51,11 @@ public class SendUsersMessagesRequestBodySendUsersMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Users")
     public java.util.Map<String, org.openapis.openapi.models.shared.EndpointSendConfiguration> users;
+
     public SendUsersMessagesRequestBodySendUsersMessageRequest withUsers(java.util.Map<String, org.openapis.openapi.models.shared.EndpointSendConfiguration> users) {
         this.users = users;
         return this;
     }
     
+    public SendUsersMessagesRequestBodySendUsersMessageRequest(){}
 }

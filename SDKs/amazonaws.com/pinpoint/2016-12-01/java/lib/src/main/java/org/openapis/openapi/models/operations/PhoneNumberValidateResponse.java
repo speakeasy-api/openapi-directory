@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PhoneNumberValidateResponse {
@@ -12,6 +13,7 @@ public class PhoneNumberValidateResponse {
      */
     
     public Object badRequestException;
+
     public PhoneNumberValidateResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class PhoneNumberValidateResponse {
     
     
     public String contentType;
+
     public PhoneNumberValidateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PhoneNumberValidateResponse {
      */
     
     public Object forbiddenException;
+
     public PhoneNumberValidateResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class PhoneNumberValidateResponse {
      */
     
     public Object internalServerErrorException;
+
     public PhoneNumberValidateResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class PhoneNumberValidateResponse {
      */
     
     public Object methodNotAllowedException;
+
     public PhoneNumberValidateResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class PhoneNumberValidateResponse {
      */
     
     public Object notFoundException;
+
     public PhoneNumberValidateResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class PhoneNumberValidateResponse {
      */
     
     public Object payloadTooLargeException;
+
     public PhoneNumberValidateResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -79,6 +87,7 @@ public class PhoneNumberValidateResponse {
      */
     
     public org.openapis.openapi.models.shared.PhoneNumberValidateResponse phoneNumberValidateResponse;
+
     public PhoneNumberValidateResponse withPhoneNumberValidateResponse(org.openapis.openapi.models.shared.PhoneNumberValidateResponse phoneNumberValidateResponse) {
         this.phoneNumberValidateResponse = phoneNumberValidateResponse;
         return this;
@@ -86,6 +95,7 @@ public class PhoneNumberValidateResponse {
     
     
     public Integer statusCode;
+
     public PhoneNumberValidateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class PhoneNumberValidateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PhoneNumberValidateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class PhoneNumberValidateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PhoneNumberValidateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PhoneNumberValidateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

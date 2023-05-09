@@ -18,6 +18,7 @@ public class ConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public ConnectionInput withNetwork(String network) {
         this.network = network;
         return this;
@@ -29,9 +30,11 @@ public class ConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservedPeeringRanges")
     public String[] reservedPeeringRanges;
+
     public ConnectionInput withReservedPeeringRanges(String[] reservedPeeringRanges) {
         this.reservedPeeringRanges = reservedPeeringRanges;
         return this;
     }
     
+    public ConnectionInput(){}
 }

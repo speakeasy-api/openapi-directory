@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteInstanceProfileRequest {
     
     public String instanceProfileName;
+
     public DeleteInstanceProfileRequest withInstanceProfileName(String instanceProfileName) {
         this.instanceProfileName = instanceProfileName;
         return this;
     }
     
+    public DeleteInstanceProfileRequest(@JsonProperty("InstanceProfileName") String instanceProfileName) {
+        this.instanceProfileName = instanceProfileName;
+  }
 }

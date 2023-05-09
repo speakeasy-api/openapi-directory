@@ -15,6 +15,7 @@ public class ListTunnelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTunnelsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTunnelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tunnelSummaries")
     public TunnelSummary[] tunnelSummaries;
+
     public ListTunnelsResponse withTunnelSummaries(TunnelSummary[] tunnelSummaries) {
         this.tunnelSummaries = tunnelSummaries;
         return this;
     }
     
+    public ListTunnelsResponse(){}
 }

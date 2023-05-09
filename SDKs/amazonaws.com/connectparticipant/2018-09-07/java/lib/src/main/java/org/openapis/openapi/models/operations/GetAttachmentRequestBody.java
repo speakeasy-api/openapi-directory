@@ -12,9 +12,13 @@ public class GetAttachmentRequestBody {
      */
     @JsonProperty("AttachmentId")
     public String attachmentId;
+
     public GetAttachmentRequestBody withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
     }
     
+    public GetAttachmentRequestBody(@JsonProperty("AttachmentId") String attachmentId) {
+        this.attachmentId = attachmentId;
+  }
 }

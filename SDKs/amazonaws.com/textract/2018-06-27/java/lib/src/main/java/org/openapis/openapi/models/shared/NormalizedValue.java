@@ -15,6 +15,7 @@ public class NormalizedValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public NormalizedValue withValue(String value) {
         this.value = value;
         return this;
@@ -23,9 +24,11 @@ public class NormalizedValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValueType")
     public ValueTypeEnum valueType;
+
     public NormalizedValue withValueType(ValueTypeEnum valueType) {
         this.valueType = valueType;
         return this;
     }
     
+    public NormalizedValue(){}
 }

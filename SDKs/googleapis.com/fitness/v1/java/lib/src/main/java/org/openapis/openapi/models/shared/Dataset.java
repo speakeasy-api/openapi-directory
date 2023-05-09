@@ -18,6 +18,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceId")
     public String dataSourceId;
+
     public Dataset withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -29,6 +30,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxEndTimeNs")
     public String maxEndTimeNs;
+
     public Dataset withMaxEndTimeNs(String maxEndTimeNs) {
         this.maxEndTimeNs = maxEndTimeNs;
         return this;
@@ -40,6 +42,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minStartTimeNs")
     public String minStartTimeNs;
+
     public Dataset withMinStartTimeNs(String minStartTimeNs) {
         this.minStartTimeNs = minStartTimeNs;
         return this;
@@ -51,6 +54,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public Dataset withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -62,9 +66,11 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("point")
     public DataPoint[] point;
+
     public Dataset withPoint(DataPoint[] point) {
         this.point = point;
         return this;
     }
     
+    public Dataset(){}
 }

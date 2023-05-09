@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNetworkSwitchSettingsMtuResponse {
     
     public String contentType;
+
     public GetNetworkSwitchSettingsMtuResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetNetworkSwitchSettingsMtuResponse {
     
     
     public Integer statusCode;
+
     public GetNetworkSwitchSettingsMtuResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetNetworkSwitchSettingsMtuResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNetworkSwitchSettingsMtuResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetNetworkSwitchSettingsMtuResponse {
      */
     
     public java.util.Map<String, Object> getNetworkSwitchSettingsMtu200ApplicationJSONObject;
+
     public GetNetworkSwitchSettingsMtuResponse withGetNetworkSwitchSettingsMtu200ApplicationJSONObject(java.util.Map<String, Object> getNetworkSwitchSettingsMtu200ApplicationJSONObject) {
         this.getNetworkSwitchSettingsMtu200ApplicationJSONObject = getNetworkSwitchSettingsMtu200ApplicationJSONObject;
         return this;
     }
     
+    public GetNetworkSwitchSettingsMtuResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

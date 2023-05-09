@@ -15,6 +15,7 @@ public class OAuth2Specification {
      */
     @JsonProperty("oauthFlowInitParameters")
     public String[][] oauthFlowInitParameters;
+
     public OAuth2Specification withOauthFlowInitParameters(String[][] oauthFlowInitParameters) {
         this.oauthFlowInitParameters = oauthFlowInitParameters;
         return this;
@@ -25,6 +26,7 @@ public class OAuth2Specification {
      */
     @JsonProperty("oauthFlowOutputParameters")
     public String[][] oauthFlowOutputParameters;
+
     public OAuth2Specification withOauthFlowOutputParameters(String[][] oauthFlowOutputParameters) {
         this.oauthFlowOutputParameters = oauthFlowOutputParameters;
         return this;
@@ -37,9 +39,15 @@ public class OAuth2Specification {
      */
     @JsonProperty("rootObject")
     public Object[] rootObject;
+
     public OAuth2Specification withRootObject(Object[] rootObject) {
         this.rootObject = rootObject;
         return this;
     }
     
+    public OAuth2Specification(@JsonProperty("oauthFlowInitParameters") String[][] oauthFlowInitParameters, @JsonProperty("oauthFlowOutputParameters") String[][] oauthFlowOutputParameters, @JsonProperty("rootObject") Object[] rootObject) {
+        this.oauthFlowInitParameters = oauthFlowInitParameters;
+        this.oauthFlowOutputParameters = oauthFlowOutputParameters;
+        this.rootObject = rootObject;
+  }
 }

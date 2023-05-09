@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociatedTranscriptFilter {
     @JsonProperty("name")
     public AssociatedTranscriptFilterNameEnum name;
+
     public AssociatedTranscriptFilter withName(AssociatedTranscriptFilterNameEnum name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class AssociatedTranscriptFilter {
     
     @JsonProperty("values")
     public String[] values;
+
     public AssociatedTranscriptFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public AssociatedTranscriptFilter(@JsonProperty("name") AssociatedTranscriptFilterNameEnum name, @JsonProperty("values") String[] values) {
+        this.name = name;
+        this.values = values;
+  }
 }

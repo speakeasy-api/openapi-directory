@@ -15,6 +15,7 @@ public class Variant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanValue")
     public Boolean booleanValue;
+
     public Variant withBooleanValue(Boolean booleanValue) {
         this.booleanValue = booleanValue;
         return this;
@@ -23,6 +24,7 @@ public class Variant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValue")
     public Double doubleValue;
+
     public Variant withDoubleValue(Double doubleValue) {
         this.doubleValue = doubleValue;
         return this;
@@ -31,6 +33,7 @@ public class Variant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerValue")
     public Long integerValue;
+
     public Variant withIntegerValue(Long integerValue) {
         this.integerValue = integerValue;
         return this;
@@ -39,9 +42,11 @@ public class Variant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public Variant withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public Variant(){}
 }

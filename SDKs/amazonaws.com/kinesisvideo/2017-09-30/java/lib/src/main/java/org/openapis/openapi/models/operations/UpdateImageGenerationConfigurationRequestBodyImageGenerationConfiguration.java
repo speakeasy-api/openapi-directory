@@ -15,6 +15,7 @@ public class UpdateImageGenerationConfigurationRequestBodyImageGenerationConfigu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationConfig")
     public org.openapis.openapi.models.shared.ImageGenerationDestinationConfig destinationConfig;
+
     public UpdateImageGenerationConfigurationRequestBodyImageGenerationConfiguration withDestinationConfig(org.openapis.openapi.models.shared.ImageGenerationDestinationConfig destinationConfig) {
         this.destinationConfig = destinationConfig;
         return this;
@@ -23,6 +24,7 @@ public class UpdateImageGenerationConfigurationRequestBodyImageGenerationConfigu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public org.openapis.openapi.models.shared.FormatEnum format;
+
     public UpdateImageGenerationConfigurationRequestBodyImageGenerationConfiguration withFormat(org.openapis.openapi.models.shared.FormatEnum format) {
         this.format = format;
         return this;
@@ -31,6 +33,7 @@ public class UpdateImageGenerationConfigurationRequestBodyImageGenerationConfigu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FormatConfig")
     public java.util.Map<String, String> formatConfig;
+
     public UpdateImageGenerationConfigurationRequestBodyImageGenerationConfiguration withFormatConfig(java.util.Map<String, String> formatConfig) {
         this.formatConfig = formatConfig;
         return this;
@@ -39,6 +42,7 @@ public class UpdateImageGenerationConfigurationRequestBodyImageGenerationConfigu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HeightPixels")
     public Long heightPixels;
+
     public UpdateImageGenerationConfigurationRequestBodyImageGenerationConfiguration withHeightPixels(Long heightPixels) {
         this.heightPixels = heightPixels;
         return this;
@@ -47,6 +51,7 @@ public class UpdateImageGenerationConfigurationRequestBodyImageGenerationConfigu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageSelectorType")
     public org.openapis.openapi.models.shared.ImageSelectorTypeEnum imageSelectorType;
+
     public UpdateImageGenerationConfigurationRequestBodyImageGenerationConfiguration withImageSelectorType(org.openapis.openapi.models.shared.ImageSelectorTypeEnum imageSelectorType) {
         this.imageSelectorType = imageSelectorType;
         return this;
@@ -55,6 +60,7 @@ public class UpdateImageGenerationConfigurationRequestBodyImageGenerationConfigu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SamplingInterval")
     public Long samplingInterval;
+
     public UpdateImageGenerationConfigurationRequestBodyImageGenerationConfiguration withSamplingInterval(Long samplingInterval) {
         this.samplingInterval = samplingInterval;
         return this;
@@ -63,6 +69,7 @@ public class UpdateImageGenerationConfigurationRequestBodyImageGenerationConfigu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public org.openapis.openapi.models.shared.ConfigurationStatusEnum status;
+
     public UpdateImageGenerationConfigurationRequestBodyImageGenerationConfiguration withStatus(org.openapis.openapi.models.shared.ConfigurationStatusEnum status) {
         this.status = status;
         return this;
@@ -71,9 +78,11 @@ public class UpdateImageGenerationConfigurationRequestBodyImageGenerationConfigu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WidthPixels")
     public Long widthPixels;
+
     public UpdateImageGenerationConfigurationRequestBodyImageGenerationConfiguration withWidthPixels(Long widthPixels) {
         this.widthPixels = widthPixels;
         return this;
     }
     
+    public UpdateImageGenerationConfigurationRequestBodyImageGenerationConfiguration(){}
 }

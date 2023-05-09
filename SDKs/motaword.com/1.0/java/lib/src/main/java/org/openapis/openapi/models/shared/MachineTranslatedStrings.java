@@ -15,6 +15,7 @@ public class MachineTranslatedStrings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost")
     public Monetary cost;
+
     public MachineTranslatedStrings withCost(Monetary cost) {
         this.cost = cost;
         return this;
@@ -23,9 +24,11 @@ public class MachineTranslatedStrings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strings")
     public ClientStringWithTranslations[] strings;
+
     public MachineTranslatedStrings withStrings(ClientStringWithTranslations[] strings) {
         this.strings = strings;
         return this;
     }
     
+    public MachineTranslatedStrings(){}
 }

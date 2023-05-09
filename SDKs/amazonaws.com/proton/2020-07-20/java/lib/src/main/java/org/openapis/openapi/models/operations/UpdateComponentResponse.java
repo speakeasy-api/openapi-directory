@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateComponentResponse {
@@ -12,6 +13,7 @@ public class UpdateComponentResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateComponentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateComponentResponse {
      */
     
     public Object conflictException;
+
     public UpdateComponentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateComponentResponse {
     
     
     public String contentType;
+
     public UpdateComponentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateComponentResponse {
      */
     
     public Object internalServerException;
+
     public UpdateComponentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateComponentResponse {
     
     
     public Integer statusCode;
+
     public UpdateComponentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateComponentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateComponentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateComponentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateComponentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateComponentResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateComponentResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateComponentResponse {
      */
     
     public Object throttlingException;
+
     public UpdateComponentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateComponentResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateComponentOutput updateComponentOutput;
+
     public UpdateComponentResponse withUpdateComponentOutput(org.openapis.openapi.models.shared.UpdateComponentOutput updateComponentOutput) {
         this.updateComponentOutput = updateComponentOutput;
         return this;
@@ -103,9 +114,14 @@ public class UpdateComponentResponse {
      */
     
     public Object validationException;
+
     public UpdateComponentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateComponentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

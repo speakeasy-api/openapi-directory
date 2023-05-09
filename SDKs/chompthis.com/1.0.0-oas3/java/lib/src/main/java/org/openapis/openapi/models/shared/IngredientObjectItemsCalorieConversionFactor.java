@@ -18,6 +18,7 @@ public class IngredientObjectItemsCalorieConversionFactor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carbohydrate_value")
     public Double carbohydrateValue;
+
     public IngredientObjectItemsCalorieConversionFactor withCarbohydrateValue(Double carbohydrateValue) {
         this.carbohydrateValue = carbohydrateValue;
         return this;
@@ -29,6 +30,7 @@ public class IngredientObjectItemsCalorieConversionFactor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fat_value")
     public Double fatValue;
+
     public IngredientObjectItemsCalorieConversionFactor withFatValue(Double fatValue) {
         this.fatValue = fatValue;
         return this;
@@ -40,9 +42,11 @@ public class IngredientObjectItemsCalorieConversionFactor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protein_value")
     public Double proteinValue;
+
     public IngredientObjectItemsCalorieConversionFactor withProteinValue(Double proteinValue) {
         this.proteinValue = proteinValue;
         return this;
     }
     
+    public IngredientObjectItemsCalorieConversionFactor(){}
 }

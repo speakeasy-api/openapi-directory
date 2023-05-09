@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ServicemanagementServicesConfigsSubmitSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ServicemanagementServicesConfigsSubmitSecurityOption1 option1;
+
     public ServicemanagementServicesConfigsSubmitSecurity withOption1(ServicemanagementServicesConfigsSubmitSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ServicemanagementServicesConfigsSubmitSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ServicemanagementServicesConfigsSubmitSecurityOption2 option2;
+
     public ServicemanagementServicesConfigsSubmitSecurity withOption2(ServicemanagementServicesConfigsSubmitSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ServicemanagementServicesConfigsSubmitSecurity(){}
 }

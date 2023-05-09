@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class EnableTransitGatewayRouteTablePropagationResultPropagation {
     
     public String resourceId;
+
     public EnableTransitGatewayRouteTablePropagationResultPropagation withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -19,6 +20,7 @@ public class EnableTransitGatewayRouteTablePropagationResultPropagation {
     
     
     public EnableTransitGatewayRouteTablePropagationResultPropagationResourceTypeEnum resourceType;
+
     public EnableTransitGatewayRouteTablePropagationResultPropagation withResourceType(EnableTransitGatewayRouteTablePropagationResultPropagationResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -26,6 +28,7 @@ public class EnableTransitGatewayRouteTablePropagationResultPropagation {
     
     
     public EnableTransitGatewayRouteTablePropagationResultPropagationStateEnum state;
+
     public EnableTransitGatewayRouteTablePropagationResultPropagation withState(EnableTransitGatewayRouteTablePropagationResultPropagationStateEnum state) {
         this.state = state;
         return this;
@@ -33,6 +36,7 @@ public class EnableTransitGatewayRouteTablePropagationResultPropagation {
     
     
     public String transitGatewayAttachmentId;
+
     public EnableTransitGatewayRouteTablePropagationResultPropagation withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -40,6 +44,7 @@ public class EnableTransitGatewayRouteTablePropagationResultPropagation {
     
     
     public String transitGatewayRouteTableAnnouncementId;
+
     public EnableTransitGatewayRouteTablePropagationResultPropagation withTransitGatewayRouteTableAnnouncementId(String transitGatewayRouteTableAnnouncementId) {
         this.transitGatewayRouteTableAnnouncementId = transitGatewayRouteTableAnnouncementId;
         return this;
@@ -47,9 +52,11 @@ public class EnableTransitGatewayRouteTablePropagationResultPropagation {
     
     
     public String transitGatewayRouteTableId;
+
     public EnableTransitGatewayRouteTablePropagationResultPropagation withTransitGatewayRouteTableId(String transitGatewayRouteTableId) {
         this.transitGatewayRouteTableId = transitGatewayRouteTableId;
         return this;
     }
     
+    public EnableTransitGatewayRouteTablePropagationResultPropagation(){}
 }

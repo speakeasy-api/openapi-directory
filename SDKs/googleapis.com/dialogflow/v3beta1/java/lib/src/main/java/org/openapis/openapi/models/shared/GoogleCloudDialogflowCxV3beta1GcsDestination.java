@@ -13,14 +13,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudDialogflowCxV3beta1GcsDestination {
     /**
-     * Required. The Google Cloud Storage URI for the exported objects. A URI is of the form: gs://bucket/object-name-or-prefix Whether a full object name, or just a prefix, its usage depends on the Dialogflow operation.
+     * Required. The Google Cloud Storage URI for the exported objects. A URI is of the form: `gs://bucket/object-name-or-prefix` Whether a full object name, or just a prefix, its usage depends on the Dialogflow operation.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudDialogflowCxV3beta1GcsDestination withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1GcsDestination(){}
 }

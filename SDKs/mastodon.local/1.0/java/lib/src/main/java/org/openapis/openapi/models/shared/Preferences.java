@@ -19,6 +19,7 @@ public class Preferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posting:default:language")
     public String postingDefaultLanguage;
+
     public Preferences withPostingDefaultLanguage(String postingDefaultLanguage) {
         this.postingDefaultLanguage = postingDefaultLanguage;
         return this;
@@ -30,6 +31,7 @@ public class Preferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posting:default:sensitive")
     public Boolean postingDefaultSensitive;
+
     public Preferences withPostingDefaultSensitive(Boolean postingDefaultSensitive) {
         this.postingDefaultSensitive = postingDefaultSensitive;
         return this;
@@ -41,6 +43,7 @@ public class Preferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posting:default:visibility")
     public PreferencesPostingDefaultVisibilityEnum postingDefaultVisibility;
+
     public Preferences withPostingDefaultVisibility(PreferencesPostingDefaultVisibilityEnum postingDefaultVisibility) {
         this.postingDefaultVisibility = postingDefaultVisibility;
         return this;
@@ -52,6 +55,7 @@ public class Preferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reading:expand:media")
     public PreferencesReadingExpandMediaEnum readingExpandMedia;
+
     public Preferences withReadingExpandMedia(PreferencesReadingExpandMediaEnum readingExpandMedia) {
         this.readingExpandMedia = readingExpandMedia;
         return this;
@@ -63,9 +67,11 @@ public class Preferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reading:expand:spoilers")
     public Boolean readingExpandSpoilers;
+
     public Preferences withReadingExpandSpoilers(Boolean readingExpandSpoilers) {
         this.readingExpandSpoilers = readingExpandSpoilers;
         return this;
     }
     
+    public Preferences(){}
 }

@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ExportErrorDetailsOutput - &lt;p/&gt;
+ * ExportErrorDetailsOutput - The structure representing the errors in an export EarthObservationJob operation.
  */
 public class ExportErrorDetailsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public ExportErrorDetailsOutput withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class ExportErrorDetailsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ExportErrorTypeEnum type;
+
     public ExportErrorDetailsOutput withType(ExportErrorTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ExportErrorDetailsOutput(){}
 }

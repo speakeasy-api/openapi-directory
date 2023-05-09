@@ -15,9 +15,11 @@ public class SqsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageGroupId")
     public String messageGroupId;
+
     public SqsParameters withMessageGroupId(String messageGroupId) {
         this.messageGroupId = messageGroupId;
         return this;
     }
     
+    public SqsParameters(){}
 }

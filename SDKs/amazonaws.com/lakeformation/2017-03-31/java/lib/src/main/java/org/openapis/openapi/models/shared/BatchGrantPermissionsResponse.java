@@ -15,9 +15,11 @@ public class BatchGrantPermissionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Failures")
     public BatchPermissionsFailureEntry[] failures;
+
     public BatchGrantPermissionsResponse withFailures(BatchPermissionsFailureEntry[] failures) {
         this.failures = failures;
         return this;
     }
     
+    public BatchGrantPermissionsResponse(){}
 }

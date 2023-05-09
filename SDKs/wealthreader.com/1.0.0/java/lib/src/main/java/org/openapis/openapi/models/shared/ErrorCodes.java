@@ -10,33 +10,36 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ErrorCodes {
     /**
-     * C\u00f3digo de error
+     * Código de error
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public ErrorCodes withCode(Long code) {
         this.code = code;
         return this;
     }
     
     /**
-     * Descripci\u00f3n del error
+     * Descripción del error
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ErrorCodes withDescription(String description) {
         this.description = description;
         return this;
     }
     
     /**
-     * C\u00f3mo actuar cuando se obtiene este c\u00f3digo de error
+     * Cómo actuar cuando se obtiene este código de error
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("how_to_proceed")
     public String howToProceed;
+
     public ErrorCodes withHowToProceed(String howToProceed) {
         this.howToProceed = howToProceed;
         return this;
@@ -48,9 +51,11 @@ public class ErrorCodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("possible_reasons")
     public String possibleReasons;
+
     public ErrorCodes withPossibleReasons(String possibleReasons) {
         this.possibleReasons = possibleReasons;
         return this;
     }
     
+    public ErrorCodes(){}
 }

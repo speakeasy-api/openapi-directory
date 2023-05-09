@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposUpdateBranchProtectionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ReposUpdateBranchProtectionRequestBody requestBody;
+
     public ReposUpdateBranchProtectionRequest withRequestBody(ReposUpdateBranchProtectionRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ReposUpdateBranchProtectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
     public String branch;
+
     public ReposUpdateBranchProtectionRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -26,6 +29,7 @@ public class ReposUpdateBranchProtectionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposUpdateBranchProtectionRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -33,9 +37,16 @@ public class ReposUpdateBranchProtectionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposUpdateBranchProtectionRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposUpdateBranchProtectionRequest(@JsonProperty("RequestBody") ReposUpdateBranchProtectionRequestBody requestBody, @JsonProperty("branch") String branch, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.requestBody = requestBody;
+        this.branch = branch;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

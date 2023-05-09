@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EmailValidationRequest {
@@ -12,6 +13,7 @@ public class EmailValidationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=USER_EMAIL_HERE")
     public String userEmailHere;
+
     public EmailValidationRequest withUserEmailHere(String userEmailHere) {
         this.userEmailHere = userEmailHere;
         return this;
@@ -22,9 +24,14 @@ public class EmailValidationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=YOUR_API_KEY_HERE")
     public String yourApiKeyHere;
+
     public EmailValidationRequest withYourApiKeyHere(String yourApiKeyHere) {
         this.yourApiKeyHere = yourApiKeyHere;
         return this;
     }
     
+    public EmailValidationRequest(@JsonProperty("USER_EMAIL_HERE") String userEmailHere, @JsonProperty("YOUR_API_KEY_HERE") String yourApiKeyHere) {
+        this.userEmailHere = userEmailHere;
+        this.yourApiKeyHere = yourApiKeyHere;
+  }
 }

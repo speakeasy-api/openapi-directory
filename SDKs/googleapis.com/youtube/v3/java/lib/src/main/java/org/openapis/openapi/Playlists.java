@@ -59,10 +59,8 @@ public class Playlists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubePlaylistsDeleteResponse res = new org.openapis.openapi.models.operations.YoutubePlaylistsDeleteResponse() {{
+        org.openapis.openapi.models.operations.YoutubePlaylistsDeleteResponse res = new org.openapis.openapi.models.operations.YoutubePlaylistsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Playlists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubePlaylistsInsertResponse res = new org.openapis.openapi.models.operations.YoutubePlaylistsInsertResponse() {{
+        org.openapis.openapi.models.operations.YoutubePlaylistsInsertResponse res = new org.openapis.openapi.models.operations.YoutubePlaylistsInsertResponse(contentType, httpRes.statusCode()) {{
             playlist = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Playlists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubePlaylistsListResponse res = new org.openapis.openapi.models.operations.YoutubePlaylistsListResponse() {{
+        org.openapis.openapi.models.operations.YoutubePlaylistsListResponse res = new org.openapis.openapi.models.operations.YoutubePlaylistsListResponse(contentType, httpRes.statusCode()) {{
             playlistListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,11 +189,9 @@ public class Playlists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubePlaylistsUpdateResponse res = new org.openapis.openapi.models.operations.YoutubePlaylistsUpdateResponse() {{
+        org.openapis.openapi.models.operations.YoutubePlaylistsUpdateResponse res = new org.openapis.openapi.models.operations.YoutubePlaylistsUpdateResponse(contentType, httpRes.statusCode()) {{
             playlist = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

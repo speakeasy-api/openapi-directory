@@ -18,9 +18,11 @@ public class CreateClientEventRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientEvent")
     public ClientEvent clientEvent;
+
     public CreateClientEventRequest withClientEvent(ClientEvent clientEvent) {
         this.clientEvent = clientEvent;
         return this;
     }
     
+    public CreateClientEventRequest(){}
 }

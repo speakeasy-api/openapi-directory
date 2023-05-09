@@ -12,6 +12,7 @@ public class SingleCollection200ApplicationJSONCollectionItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public SingleCollection200ApplicationJSONCollectionItemEvent[] event;
+
     public SingleCollection200ApplicationJSONCollectionItem withEvent(SingleCollection200ApplicationJSONCollectionItemEvent[] event) {
         this.event = event;
         return this;
@@ -20,6 +21,7 @@ public class SingleCollection200ApplicationJSONCollectionItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SingleCollection200ApplicationJSONCollectionItem withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class SingleCollection200ApplicationJSONCollectionItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SingleCollection200ApplicationJSONCollectionItem withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class SingleCollection200ApplicationJSONCollectionItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request")
     public SingleCollection200ApplicationJSONCollectionItemRequest request;
+
     public SingleCollection200ApplicationJSONCollectionItem withRequest(SingleCollection200ApplicationJSONCollectionItemRequest request) {
         this.request = request;
         return this;
@@ -44,9 +48,11 @@ public class SingleCollection200ApplicationJSONCollectionItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public Object[] response;
+
     public SingleCollection200ApplicationJSONCollectionItem withResponse(Object[] response) {
         this.response = response;
         return this;
     }
     
+    public SingleCollection200ApplicationJSONCollectionItem(){}
 }

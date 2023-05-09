@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersUserEmailOfferingsRequest {
@@ -12,9 +13,13 @@ public class GetUsersUserEmailOfferingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
     public String userEmail;
+
     public GetUsersUserEmailOfferingsRequest withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public GetUsersUserEmailOfferingsRequest(@JsonProperty("userEmail") String userEmail) {
+        this.userEmail = userEmail;
+  }
 }

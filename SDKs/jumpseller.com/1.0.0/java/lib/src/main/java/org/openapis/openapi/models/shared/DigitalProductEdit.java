@@ -15,9 +15,11 @@ public class DigitalProductEdit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digital_product")
     public DigitalProductEditFields digitalProduct;
+
     public DigitalProductEdit withDigitalProduct(DigitalProductEditFields digitalProduct) {
         this.digitalProduct = digitalProduct;
         return this;
     }
     
+    public DigitalProductEdit(){}
 }

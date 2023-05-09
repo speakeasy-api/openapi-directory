@@ -18,9 +18,11 @@ public class MoveProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationParent")
     public String destinationParent;
+
     public MoveProjectRequest withDestinationParent(String destinationParent) {
         this.destinationParent = destinationParent;
         return this;
     }
     
+    public MoveProjectRequest(){}
 }

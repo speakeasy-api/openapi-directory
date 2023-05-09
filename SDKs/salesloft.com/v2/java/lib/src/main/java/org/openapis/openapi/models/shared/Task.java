@@ -16,6 +16,7 @@ public class Task {
      */
     
     public OffsetDateTime completedAt;
+
     public Task withCompletedAt(OffsetDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -23,6 +24,7 @@ public class Task {
     
     
     public EmbeddedResource completedBy;
+
     public Task withCompletedBy(EmbeddedResource completedBy) {
         this.completedBy = completedBy;
         return this;
@@ -33,6 +35,7 @@ public class Task {
      */
     
     public OffsetDateTime createdAt;
+
     public Task withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -40,6 +43,7 @@ public class Task {
     
     
     public EmbeddedResource createdByUser;
+
     public Task withCreatedByUser(EmbeddedResource createdByUser) {
         this.createdByUser = createdByUser;
         return this;
@@ -50,6 +54,7 @@ public class Task {
      */
     
     public String currentState;
+
     public Task withCurrentState(String currentState) {
         this.currentState = currentState;
         return this;
@@ -60,6 +65,7 @@ public class Task {
      */
     
     public String description;
+
     public Task withDescription(String description) {
         this.description = description;
         return this;
@@ -70,6 +76,7 @@ public class Task {
      */
     
     public OffsetDateTime dueAt;
+
     public Task withDueAt(OffsetDateTime dueAt) {
         this.dueAt = dueAt;
         return this;
@@ -80,6 +87,7 @@ public class Task {
      */
     
     public LocalDate dueDate;
+
     public Task withDueDate(LocalDate dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -90,6 +98,7 @@ public class Task {
      */
     
     public Long id;
+
     public Task withId(Long id) {
         this.id = id;
         return this;
@@ -97,6 +106,7 @@ public class Task {
     
     
     public EmbeddedResource person;
+
     public Task withPerson(EmbeddedResource person) {
         this.person = person;
         return this;
@@ -107,6 +117,7 @@ public class Task {
      */
     
     public OffsetDateTime remindAt;
+
     public Task withRemindAt(OffsetDateTime remindAt) {
         this.remindAt = remindAt;
         return this;
@@ -117,6 +128,7 @@ public class Task {
      */
     
     public String subject;
+
     public Task withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -127,6 +139,7 @@ public class Task {
      */
     
     public String taskType;
+
     public Task withTaskType(String taskType) {
         this.taskType = taskType;
         return this;
@@ -137,6 +150,7 @@ public class Task {
      */
     
     public OffsetDateTime updatedAt;
+
     public Task withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -144,9 +158,11 @@ public class Task {
     
     
     public EmbeddedResource user;
+
     public Task withUser(EmbeddedResource user) {
         this.user = user;
         return this;
     }
     
+    public Task(){}
 }

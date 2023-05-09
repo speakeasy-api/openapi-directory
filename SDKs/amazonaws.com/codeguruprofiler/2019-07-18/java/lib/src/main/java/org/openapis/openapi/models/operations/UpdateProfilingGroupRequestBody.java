@@ -12,9 +12,13 @@ public class UpdateProfilingGroupRequestBody {
      */
     @JsonProperty("agentOrchestrationConfig")
     public UpdateProfilingGroupRequestBodyAgentOrchestrationConfig agentOrchestrationConfig;
+
     public UpdateProfilingGroupRequestBody withAgentOrchestrationConfig(UpdateProfilingGroupRequestBodyAgentOrchestrationConfig agentOrchestrationConfig) {
         this.agentOrchestrationConfig = agentOrchestrationConfig;
         return this;
     }
     
+    public UpdateProfilingGroupRequestBody(@JsonProperty("agentOrchestrationConfig") UpdateProfilingGroupRequestBodyAgentOrchestrationConfig agentOrchestrationConfig) {
+        this.agentOrchestrationConfig = agentOrchestrationConfig;
+  }
 }

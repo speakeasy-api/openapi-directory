@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateProjectDataDeliveryResponse {
@@ -12,6 +13,7 @@ public class UpdateProjectDataDeliveryResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateProjectDataDeliveryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateProjectDataDeliveryResponse {
      */
     
     public Object conflictException;
+
     public UpdateProjectDataDeliveryResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateProjectDataDeliveryResponse {
     
     
     public String contentType;
+
     public UpdateProjectDataDeliveryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class UpdateProjectDataDeliveryResponse {
     
     
     public Integer statusCode;
+
     public UpdateProjectDataDeliveryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateProjectDataDeliveryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateProjectDataDeliveryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateProjectDataDeliveryResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateProjectDataDeliveryResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateProjectDataDeliveryResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateProjectDataDeliveryResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateProjectDataDeliveryResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateProjectDataDeliveryResponse updateProjectDataDeliveryResponse;
+
     public UpdateProjectDataDeliveryResponse withUpdateProjectDataDeliveryResponse(org.openapis.openapi.models.shared.UpdateProjectDataDeliveryResponse updateProjectDataDeliveryResponse) {
         this.updateProjectDataDeliveryResponse = updateProjectDataDeliveryResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateProjectDataDeliveryResponse {
      */
     
     public Object validationException;
+
     public UpdateProjectDataDeliveryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateProjectDataDeliveryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

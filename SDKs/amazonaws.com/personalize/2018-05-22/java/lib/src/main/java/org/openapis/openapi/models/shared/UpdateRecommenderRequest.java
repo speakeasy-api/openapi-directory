@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateRecommenderRequest {
     @JsonProperty("recommenderArn")
     public String recommenderArn;
+
     public UpdateRecommenderRequest withRecommenderArn(String recommenderArn) {
         this.recommenderArn = recommenderArn;
         return this;
@@ -16,9 +17,14 @@ public class UpdateRecommenderRequest {
     
     @JsonProperty("recommenderConfig")
     public RecommenderConfig recommenderConfig;
+
     public UpdateRecommenderRequest withRecommenderConfig(RecommenderConfig recommenderConfig) {
         this.recommenderConfig = recommenderConfig;
         return this;
     }
     
+    public UpdateRecommenderRequest(@JsonProperty("recommenderArn") String recommenderArn, @JsonProperty("recommenderConfig") RecommenderConfig recommenderConfig) {
+        this.recommenderArn = recommenderArn;
+        this.recommenderConfig = recommenderConfig;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateVirtualServiceResponse {
@@ -12,6 +13,7 @@ public class UpdateVirtualServiceResponse {
      */
     
     public Object badRequestException;
+
     public UpdateVirtualServiceResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateVirtualServiceResponse {
      */
     
     public Object conflictException;
+
     public UpdateVirtualServiceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateVirtualServiceResponse {
     
     
     public String contentType;
+
     public UpdateVirtualServiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateVirtualServiceResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateVirtualServiceResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateVirtualServiceResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateVirtualServiceResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateVirtualServiceResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateVirtualServiceResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateVirtualServiceResponse {
      */
     
     public Object notFoundException;
+
     public UpdateVirtualServiceResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateVirtualServiceResponse {
     
     
     public Integer statusCode;
+
     public UpdateVirtualServiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateVirtualServiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateVirtualServiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateVirtualServiceResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateVirtualServiceResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateVirtualServiceResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateVirtualServiceResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -113,9 +125,14 @@ public class UpdateVirtualServiceResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateVirtualServiceOutput updateVirtualServiceOutput;
+
     public UpdateVirtualServiceResponse withUpdateVirtualServiceOutput(org.openapis.openapi.models.shared.UpdateVirtualServiceOutput updateVirtualServiceOutput) {
         this.updateVirtualServiceOutput = updateVirtualServiceOutput;
         return this;
     }
     
+    public UpdateVirtualServiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,11 @@ public class TflApiPresentationEntitiesAccidentStatsVehicle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public TflApiPresentationEntitiesAccidentStatsVehicle withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TflApiPresentationEntitiesAccidentStatsVehicle(){}
 }

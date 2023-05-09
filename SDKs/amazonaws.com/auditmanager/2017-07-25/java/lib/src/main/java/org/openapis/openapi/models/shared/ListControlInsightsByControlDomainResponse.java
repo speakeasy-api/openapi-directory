@@ -15,6 +15,7 @@ public class ListControlInsightsByControlDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlInsightsMetadata")
     public ControlInsightsMetadataItem[] controlInsightsMetadata;
+
     public ListControlInsightsByControlDomainResponse withControlInsightsMetadata(ControlInsightsMetadataItem[] controlInsightsMetadata) {
         this.controlInsightsMetadata = controlInsightsMetadata;
         return this;
@@ -23,9 +24,11 @@ public class ListControlInsightsByControlDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListControlInsightsByControlDomainResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListControlInsightsByControlDomainResponse(){}
 }

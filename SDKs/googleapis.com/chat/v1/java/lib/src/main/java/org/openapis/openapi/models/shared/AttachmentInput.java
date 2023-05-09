@@ -15,6 +15,7 @@ public class AttachmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachmentDataRef")
     public AttachmentDataRef attachmentDataRef;
+
     public AttachmentInput withAttachmentDataRef(AttachmentDataRef attachmentDataRef) {
         this.attachmentDataRef = attachmentDataRef;
         return this;
@@ -26,6 +27,7 @@ public class AttachmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentName")
     public String contentName;
+
     public AttachmentInput withContentName(String contentName) {
         this.contentName = contentName;
         return this;
@@ -37,6 +39,7 @@ public class AttachmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public AttachmentInput withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -48,6 +51,7 @@ public class AttachmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driveDataRef")
     public DriveDataRef driveDataRef;
+
     public AttachmentInput withDriveDataRef(DriveDataRef driveDataRef) {
         this.driveDataRef = driveDataRef;
         return this;
@@ -59,6 +63,7 @@ public class AttachmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AttachmentInput withName(String name) {
         this.name = name;
         return this;
@@ -70,9 +75,11 @@ public class AttachmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public AttachmentSourceEnum source;
+
     public AttachmentInput withSource(AttachmentSourceEnum source) {
         this.source = source;
         return this;
     }
     
+    public AttachmentInput(){}
 }

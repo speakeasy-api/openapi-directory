@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteUserPoolResponse {
     
     public String contentType;
+
     public DeleteUserPoolResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteUserPoolResponse {
      */
     
     public Object internalErrorException;
+
     public DeleteUserPoolResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteUserPoolResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteUserPoolResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteUserPoolResponse {
      */
     
     public Object notAuthorizedException;
+
     public DeleteUserPoolResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteUserPoolResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteUserPoolResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteUserPoolResponse {
     
     
     public Integer statusCode;
+
     public DeleteUserPoolResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteUserPoolResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteUserPoolResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteUserPoolResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteUserPoolResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteUserPoolResponse {
      */
     
     public Object userImportInProgressException;
+
     public DeleteUserPoolResponse withUserImportInProgressException(Object userImportInProgressException) {
         this.userImportInProgressException = userImportInProgressException;
         return this;
     }
     
+    public DeleteUserPoolResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

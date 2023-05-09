@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PublishMessagesToChannelRawResponse {
     
     public byte[] body;
+
     public PublishMessagesToChannelRawResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PublishMessagesToChannelRawResponse {
     
     
     public String contentType;
+
     public PublishMessagesToChannelRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PublishMessagesToChannelRawResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PublishMessagesToChannelRawResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -33,6 +37,7 @@ public class PublishMessagesToChannelRawResponse {
     
     
     public Integer statusCode;
+
     public PublishMessagesToChannelRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class PublishMessagesToChannelRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PublishMessagesToChannelRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class PublishMessagesToChannelRawResponse {
      */
     
     public PublishMessagesToChannelRaw2XXApplicationJSON publishMessagesToChannelRaw2XXApplicationJSONObject;
+
     public PublishMessagesToChannelRawResponse withPublishMessagesToChannelRaw2XXApplicationJSONObject(PublishMessagesToChannelRaw2XXApplicationJSON publishMessagesToChannelRaw2XXApplicationJSONObject) {
         this.publishMessagesToChannelRaw2XXApplicationJSONObject = publishMessagesToChannelRaw2XXApplicationJSONObject;
         return this;
     }
     
+    public PublishMessagesToChannelRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

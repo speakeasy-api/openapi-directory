@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateEnumOptionRequest {
@@ -12,6 +13,7 @@ public class UpdateEnumOptionRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateEnumOptionRequestBodyInput requestBody;
+
     public UpdateEnumOptionRequest withRequestBody(UpdateEnumOptionRequestBodyInput requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class UpdateEnumOptionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enum_option_gid")
     public String enumOptionGid;
+
     public UpdateEnumOptionRequest withEnumOptionGid(String enumOptionGid) {
         this.enumOptionGid = enumOptionGid;
         return this;
@@ -34,6 +37,7 @@ public class UpdateEnumOptionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public UpdateEnumOptionRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -45,9 +49,13 @@ public class UpdateEnumOptionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public UpdateEnumOptionRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
     }
     
+    public UpdateEnumOptionRequest(@JsonProperty("enum_option_gid") String enumOptionGid) {
+        this.enumOptionGid = enumOptionGid;
+  }
 }

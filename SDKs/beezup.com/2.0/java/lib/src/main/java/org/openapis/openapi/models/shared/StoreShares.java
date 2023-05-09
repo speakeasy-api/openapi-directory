@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StoreShares {
     @JsonProperty("links")
     public StoreSharesLinks links;
+
     public StoreShares withLinks(StoreSharesLinks links) {
         this.links = links;
         return this;
@@ -19,9 +20,14 @@ public class StoreShares {
     
     @JsonProperty("shares")
     public StoreShare[] shares;
+
     public StoreShares withShares(StoreShare[] shares) {
         this.shares = shares;
         return this;
     }
     
+    public StoreShares(@JsonProperty("links") StoreSharesLinks links, @JsonProperty("shares") StoreShare[] shares) {
+        this.links = links;
+        this.shares = shares;
+  }
 }

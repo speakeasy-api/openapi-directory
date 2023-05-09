@@ -18,6 +18,7 @@ public class OrgsCreateWebhookRequestBodyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content_type")
     public String contentType;
+
     public OrgsCreateWebhookRequestBodyConfig withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +27,7 @@ public class OrgsCreateWebhookRequestBodyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insecure_ssl")
     public Object insecureSsl;
+
     public OrgsCreateWebhookRequestBodyConfig withInsecureSsl(Object insecureSsl) {
         this.insecureSsl = insecureSsl;
         return this;
@@ -34,6 +36,7 @@ public class OrgsCreateWebhookRequestBodyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public OrgsCreateWebhookRequestBodyConfig withPassword(String password) {
         this.password = password;
         return this;
@@ -45,6 +48,7 @@ public class OrgsCreateWebhookRequestBodyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public OrgsCreateWebhookRequestBodyConfig withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -55,6 +59,7 @@ public class OrgsCreateWebhookRequestBodyConfig {
      */
     @JsonProperty("url")
     public String url;
+
     public OrgsCreateWebhookRequestBodyConfig withUrl(String url) {
         this.url = url;
         return this;
@@ -63,9 +68,13 @@ public class OrgsCreateWebhookRequestBodyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public OrgsCreateWebhookRequestBodyConfig withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public OrgsCreateWebhookRequestBodyConfig(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

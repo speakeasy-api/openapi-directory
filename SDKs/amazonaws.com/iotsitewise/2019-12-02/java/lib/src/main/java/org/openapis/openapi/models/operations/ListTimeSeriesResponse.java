@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTimeSeriesResponse {
     
     public String contentType;
+
     public ListTimeSeriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTimeSeriesResponse {
      */
     
     public Object internalFailureException;
+
     public ListTimeSeriesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListTimeSeriesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListTimeSeriesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListTimeSeriesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTimeSeriesResponse listTimeSeriesResponse;
+
     public ListTimeSeriesResponse withListTimeSeriesResponse(org.openapis.openapi.models.shared.ListTimeSeriesResponse listTimeSeriesResponse) {
         this.listTimeSeriesResponse = listTimeSeriesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListTimeSeriesResponse {
     
     
     public Integer statusCode;
+
     public ListTimeSeriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListTimeSeriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTimeSeriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListTimeSeriesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListTimeSeriesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class ListTimeSeriesResponse {
      */
     
     public Object throttlingException;
+
     public ListTimeSeriesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListTimeSeriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

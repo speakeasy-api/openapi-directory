@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1beta1GcsFilesetSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filePatterns")
     public String[] filePatterns;
+
     public GoogleCloudDatacatalogV1beta1GcsFilesetSpec withFilePatterns(String[] filePatterns) {
         this.filePatterns = filePatterns;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatacatalogV1beta1GcsFilesetSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleGcsFileSpecs")
     public GoogleCloudDatacatalogV1beta1GcsFileSpec[] sampleGcsFileSpecs;
+
     public GoogleCloudDatacatalogV1beta1GcsFilesetSpec withSampleGcsFileSpecs(GoogleCloudDatacatalogV1beta1GcsFileSpec[] sampleGcsFileSpecs) {
         this.sampleGcsFileSpecs = sampleGcsFileSpecs;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1GcsFilesetSpec(){}
 }

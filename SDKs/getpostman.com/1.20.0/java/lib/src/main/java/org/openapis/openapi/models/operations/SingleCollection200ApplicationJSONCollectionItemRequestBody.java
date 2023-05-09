@@ -12,6 +12,7 @@ public class SingleCollection200ApplicationJSONCollectionItemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formdata")
     public Object[] formdata;
+
     public SingleCollection200ApplicationJSONCollectionItemRequestBody withFormdata(Object[] formdata) {
         this.formdata = formdata;
         return this;
@@ -20,9 +21,11 @@ public class SingleCollection200ApplicationJSONCollectionItemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public String mode;
+
     public SingleCollection200ApplicationJSONCollectionItemRequestBody withMode(String mode) {
         this.mode = mode;
         return this;
     }
     
+    public SingleCollection200ApplicationJSONCollectionItemRequestBody(){}
 }

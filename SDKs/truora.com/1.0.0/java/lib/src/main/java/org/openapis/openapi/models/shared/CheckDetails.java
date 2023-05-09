@@ -15,6 +15,7 @@ public class CheckDetails {
      */
     @JsonProperty("check_id")
     public String checkId;
+
     public CheckDetails withCheckId(String checkId) {
         this.checkId = checkId;
         return this;
@@ -25,6 +26,7 @@ public class CheckDetails {
      */
     @JsonProperty("data_set")
     public String dataSet;
+
     public CheckDetails withDataSet(String dataSet) {
         this.dataSet = dataSet;
         return this;
@@ -35,6 +37,7 @@ public class CheckDetails {
      */
     @JsonProperty("database_name")
     public String databaseName;
+
     public CheckDetails withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -45,6 +48,7 @@ public class CheckDetails {
      */
     @JsonProperty("group")
     public CheckDetailsGroupEnum group;
+
     public CheckDetails withGroup(CheckDetailsGroupEnum group) {
         this.group = group;
         return this;
@@ -55,6 +59,7 @@ public class CheckDetails {
      */
     @JsonProperty("id")
     public String id;
+
     public CheckDetails withId(String id) {
         this.id = id;
         return this;
@@ -65,6 +70,7 @@ public class CheckDetails {
      */
     @JsonProperty("result")
     public CheckDetailsResultEnum result;
+
     public CheckDetails withResult(CheckDetailsResultEnum result) {
         this.result = result;
         return this;
@@ -75,6 +81,7 @@ public class CheckDetails {
      */
     @JsonProperty("score")
     public Double score;
+
     public CheckDetails withScore(Double score) {
         this.score = score;
         return this;
@@ -85,9 +92,20 @@ public class CheckDetails {
      */
     @JsonProperty("tables")
     public Table[] tables;
+
     public CheckDetails withTables(Table[] tables) {
         this.tables = tables;
         return this;
     }
     
+    public CheckDetails(@JsonProperty("check_id") String checkId, @JsonProperty("data_set") String dataSet, @JsonProperty("database_name") String databaseName, @JsonProperty("group") CheckDetailsGroupEnum group, @JsonProperty("id") String id, @JsonProperty("result") CheckDetailsResultEnum result, @JsonProperty("score") Double score, @JsonProperty("tables") Table[] tables) {
+        this.checkId = checkId;
+        this.dataSet = dataSet;
+        this.databaseName = databaseName;
+        this.group = group;
+        this.id = id;
+        this.result = result;
+        this.score = score;
+        this.tables = tables;
+  }
 }

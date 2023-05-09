@@ -15,6 +15,7 @@ public class InvoiceItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public PropertyPaAndAttVO[] customFields;
+
     public InvoiceItemSimpleVO withCustomFields(PropertyPaAndAttVO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -23,6 +24,7 @@ public class InvoiceItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_item_id")
     public Long invoiceItemId;
+
     public InvoiceItemSimpleVO withInvoiceItemId(Long invoiceItemId) {
         this.invoiceItemId = invoiceItemId;
         return this;
@@ -34,6 +36,7 @@ public class InvoiceItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_cost")
     public Object itemCost;
+
     public InvoiceItemSimpleVO withItemCost(Object itemCost) {
         this.itemCost = itemCost;
         return this;
@@ -42,6 +45,7 @@ public class InvoiceItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_quantity")
     public Long itemQuantity;
+
     public InvoiceItemSimpleVO withItemQuantity(Long itemQuantity) {
         this.itemQuantity = itemQuantity;
         return this;
@@ -53,6 +57,7 @@ public class InvoiceItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_shipping")
     public Object itemShipping;
+
     public InvoiceItemSimpleVO withItemShipping(Object itemShipping) {
         this.itemShipping = itemShipping;
         return this;
@@ -64,6 +69,7 @@ public class InvoiceItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_sub_total")
     public Object itemSubTotal;
+
     public InvoiceItemSimpleVO withItemSubTotal(Object itemSubTotal) {
         this.itemSubTotal = itemSubTotal;
         return this;
@@ -75,6 +81,7 @@ public class InvoiceItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_tax")
     public Object itemTax;
+
     public InvoiceItemSimpleVO withItemTax(Object itemTax) {
         this.itemTax = itemTax;
         return this;
@@ -83,6 +90,7 @@ public class InvoiceItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_id")
     public Long jobId;
+
     public InvoiceItemSimpleVO withJobId(Long jobId) {
         this.jobId = jobId;
         return this;
@@ -91,6 +99,7 @@ public class InvoiceItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_name")
     public String specName;
+
     public InvoiceItemSimpleVO withSpecName(String specName) {
         this.specName = specName;
         return this;
@@ -102,6 +111,7 @@ public class InvoiceItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_item_cost")
     public Object transactionalItemCost;
+
     public InvoiceItemSimpleVO withTransactionalItemCost(Object transactionalItemCost) {
         this.transactionalItemCost = transactionalItemCost;
         return this;
@@ -113,6 +123,7 @@ public class InvoiceItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_item_shipping")
     public Object transactionalItemShipping;
+
     public InvoiceItemSimpleVO withTransactionalItemShipping(Object transactionalItemShipping) {
         this.transactionalItemShipping = transactionalItemShipping;
         return this;
@@ -124,6 +135,7 @@ public class InvoiceItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_item_sub_total")
     public Object transactionalItemSubTotal;
+
     public InvoiceItemSimpleVO withTransactionalItemSubTotal(Object transactionalItemSubTotal) {
         this.transactionalItemSubTotal = transactionalItemSubTotal;
         return this;
@@ -135,9 +147,11 @@ public class InvoiceItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_item_tax")
     public Object transactionalItemTax;
+
     public InvoiceItemSimpleVO withTransactionalItemTax(Object transactionalItemTax) {
         this.transactionalItemTax = transactionalItemTax;
         return this;
     }
     
+    public InvoiceItemSimpleVO(){}
 }

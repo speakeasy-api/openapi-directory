@@ -15,9 +15,11 @@ public class AbuseTicketId {
      */
     
     public String uNumber;
+
     public AbuseTicketId withUNumber(String uNumber) {
         this.uNumber = uNumber;
         return this;
     }
     
+    public AbuseTicketId(){}
 }

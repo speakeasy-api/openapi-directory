@@ -57,10 +57,8 @@ public class TypeTmdbmovies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTmdbmoviesResponse res = new org.openapis.openapi.models.operations.SearchTmdbmoviesResponse() {{
+        org.openapis.openapi.models.operations.SearchTmdbmoviesResponse res = new org.openapis.openapi.models.operations.SearchTmdbmoviesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

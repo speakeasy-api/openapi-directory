@@ -15,6 +15,7 @@ public class AccountFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportMultipleContainers")
     public Boolean supportMultipleContainers;
+
     public AccountFeatures withSupportMultipleContainers(Boolean supportMultipleContainers) {
         this.supportMultipleContainers = supportMultipleContainers;
         return this;
@@ -26,9 +27,11 @@ public class AccountFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportUserPermissions")
     public Boolean supportUserPermissions;
+
     public AccountFeatures withSupportUserPermissions(Boolean supportUserPermissions) {
         this.supportUserPermissions = supportUserPermissions;
         return this;
     }
     
+    public AccountFeatures(){}
 }

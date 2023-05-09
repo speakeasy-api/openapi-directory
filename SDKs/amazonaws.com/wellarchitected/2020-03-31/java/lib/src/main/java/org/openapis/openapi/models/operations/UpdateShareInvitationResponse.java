@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateShareInvitationResponse {
@@ -12,6 +13,7 @@ public class UpdateShareInvitationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateShareInvitationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateShareInvitationResponse {
      */
     
     public Object conflictException;
+
     public UpdateShareInvitationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateShareInvitationResponse {
     
     
     public String contentType;
+
     public UpdateShareInvitationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateShareInvitationResponse {
      */
     
     public Object internalServerException;
+
     public UpdateShareInvitationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateShareInvitationResponse {
     
     
     public Integer statusCode;
+
     public UpdateShareInvitationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateShareInvitationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateShareInvitationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateShareInvitationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateShareInvitationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateShareInvitationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateShareInvitationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateShareInvitationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateShareInvitationOutput updateShareInvitationOutput;
+
     public UpdateShareInvitationResponse withUpdateShareInvitationOutput(org.openapis.openapi.models.shared.UpdateShareInvitationOutput updateShareInvitationOutput) {
         this.updateShareInvitationOutput = updateShareInvitationOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateShareInvitationResponse {
      */
     
     public Object validationException;
+
     public UpdateShareInvitationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateShareInvitationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

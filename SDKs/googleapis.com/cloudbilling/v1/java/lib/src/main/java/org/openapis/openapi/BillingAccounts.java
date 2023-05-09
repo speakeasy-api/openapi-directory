@@ -61,11 +61,9 @@ public class BillingAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudbillingBillingAccountsCreateResponse res = new org.openapis.openapi.models.operations.CloudbillingBillingAccountsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudbillingBillingAccountsCreateResponse res = new org.openapis.openapi.models.operations.CloudbillingBillingAccountsCreateResponse(contentType, httpRes.statusCode()) {{
             billingAccount = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class BillingAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudbillingBillingAccountsGetResponse res = new org.openapis.openapi.models.operations.CloudbillingBillingAccountsGetResponse() {{
+        org.openapis.openapi.models.operations.CloudbillingBillingAccountsGetResponse res = new org.openapis.openapi.models.operations.CloudbillingBillingAccountsGetResponse(contentType, httpRes.statusCode()) {{
             billingAccount = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class BillingAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudbillingBillingAccountsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudbillingBillingAccountsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.CloudbillingBillingAccountsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudbillingBillingAccountsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class BillingAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudbillingBillingAccountsListResponse res = new org.openapis.openapi.models.operations.CloudbillingBillingAccountsListResponse() {{
+        org.openapis.openapi.models.operations.CloudbillingBillingAccountsListResponse res = new org.openapis.openapi.models.operations.CloudbillingBillingAccountsListResponse(contentType, httpRes.statusCode()) {{
             listBillingAccountsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class BillingAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudbillingBillingAccountsPatchResponse res = new org.openapis.openapi.models.operations.CloudbillingBillingAccountsPatchResponse() {{
+        org.openapis.openapi.models.operations.CloudbillingBillingAccountsPatchResponse res = new org.openapis.openapi.models.operations.CloudbillingBillingAccountsPatchResponse(contentType, httpRes.statusCode()) {{
             billingAccount = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class BillingAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudbillingBillingAccountsProjectsListResponse res = new org.openapis.openapi.models.operations.CloudbillingBillingAccountsProjectsListResponse() {{
+        org.openapis.openapi.models.operations.CloudbillingBillingAccountsProjectsListResponse res = new org.openapis.openapi.models.operations.CloudbillingBillingAccountsProjectsListResponse(contentType, httpRes.statusCode()) {{
             listProjectBillingInfoResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class BillingAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudbillingBillingAccountsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudbillingBillingAccountsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.CloudbillingBillingAccountsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudbillingBillingAccountsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -389,11 +375,9 @@ public class BillingAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudbillingBillingAccountsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.CloudbillingBillingAccountsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.CloudbillingBillingAccountsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.CloudbillingBillingAccountsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

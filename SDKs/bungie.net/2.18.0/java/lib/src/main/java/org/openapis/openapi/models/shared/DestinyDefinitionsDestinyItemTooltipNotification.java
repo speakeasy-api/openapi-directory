@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsDestinyItemTooltipNotification {
     
     public String displayString;
+
     public DestinyDefinitionsDestinyItemTooltipNotification withDisplayString(String displayString) {
         this.displayString = displayString;
         return this;
@@ -16,9 +17,11 @@ public class DestinyDefinitionsDestinyItemTooltipNotification {
     
     
     public String displayStyle;
+
     public DestinyDefinitionsDestinyItemTooltipNotification withDisplayStyle(String displayStyle) {
         this.displayStyle = displayStyle;
         return this;
     }
     
+    public DestinyDefinitionsDestinyItemTooltipNotification(){}
 }

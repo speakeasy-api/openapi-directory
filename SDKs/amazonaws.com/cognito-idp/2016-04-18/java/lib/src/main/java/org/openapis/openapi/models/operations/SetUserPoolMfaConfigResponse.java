@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetUserPoolMfaConfigResponse {
     
     public String contentType;
+
     public SetUserPoolMfaConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SetUserPoolMfaConfigResponse {
      */
     
     public Object internalErrorException;
+
     public SetUserPoolMfaConfigResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class SetUserPoolMfaConfigResponse {
      */
     
     public Object invalidParameterException;
+
     public SetUserPoolMfaConfigResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class SetUserPoolMfaConfigResponse {
      */
     
     public Object invalidSmsRoleAccessPolicyException;
+
     public SetUserPoolMfaConfigResponse withInvalidSmsRoleAccessPolicyException(Object invalidSmsRoleAccessPolicyException) {
         this.invalidSmsRoleAccessPolicyException = invalidSmsRoleAccessPolicyException;
         return this;
@@ -49,6 +54,7 @@ public class SetUserPoolMfaConfigResponse {
      */
     
     public Object invalidSmsRoleTrustRelationshipException;
+
     public SetUserPoolMfaConfigResponse withInvalidSmsRoleTrustRelationshipException(Object invalidSmsRoleTrustRelationshipException) {
         this.invalidSmsRoleTrustRelationshipException = invalidSmsRoleTrustRelationshipException;
         return this;
@@ -59,6 +65,7 @@ public class SetUserPoolMfaConfigResponse {
      */
     
     public Object notAuthorizedException;
+
     public SetUserPoolMfaConfigResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -69,6 +76,7 @@ public class SetUserPoolMfaConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SetUserPoolMfaConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class SetUserPoolMfaConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.SetUserPoolMfaConfigResponse setUserPoolMfaConfigResponse;
+
     public SetUserPoolMfaConfigResponse withSetUserPoolMfaConfigResponse(org.openapis.openapi.models.shared.SetUserPoolMfaConfigResponse setUserPoolMfaConfigResponse) {
         this.setUserPoolMfaConfigResponse = setUserPoolMfaConfigResponse;
         return this;
@@ -86,6 +95,7 @@ public class SetUserPoolMfaConfigResponse {
     
     
     public Integer statusCode;
+
     public SetUserPoolMfaConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class SetUserPoolMfaConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetUserPoolMfaConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class SetUserPoolMfaConfigResponse {
      */
     
     public Object tooManyRequestsException;
+
     public SetUserPoolMfaConfigResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public SetUserPoolMfaConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

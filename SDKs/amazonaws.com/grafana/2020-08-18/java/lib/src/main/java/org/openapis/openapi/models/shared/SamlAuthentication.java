@@ -15,6 +15,7 @@ public class SamlAuthentication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public SamlConfiguration configuration;
+
     public SamlAuthentication withConfiguration(SamlConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -22,9 +23,13 @@ public class SamlAuthentication {
     
     @JsonProperty("status")
     public SamlConfigurationStatusEnum status;
+
     public SamlAuthentication withStatus(SamlConfigurationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public SamlAuthentication(@JsonProperty("status") SamlConfigurationStatusEnum status) {
+        this.status = status;
+  }
 }

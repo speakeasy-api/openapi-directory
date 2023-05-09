@@ -15,6 +15,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public Event withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class Event {
     
     @JsonProperty("eventType")
     public String eventType;
+
     public Event withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -30,6 +32,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public java.util.Map<String, Double> metrics;
+
     public Event withMetrics(java.util.Map<String, Double> metrics) {
         this.metrics = metrics;
         return this;
@@ -38,6 +41,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("session")
     public Session session;
+
     public Event withSession(Session session) {
         this.session = session;
         return this;
@@ -45,6 +49,7 @@ public class Event {
     
     @JsonProperty("timestamp")
     public String timestamp;
+
     public Event withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -53,9 +58,14 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public Event withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Event(@JsonProperty("eventType") String eventType, @JsonProperty("timestamp") String timestamp) {
+        this.eventType = eventType;
+        this.timestamp = timestamp;
+  }
 }

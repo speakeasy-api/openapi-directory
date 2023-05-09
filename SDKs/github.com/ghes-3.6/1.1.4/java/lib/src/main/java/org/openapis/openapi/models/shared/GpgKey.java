@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GpgKey {
     @JsonProperty("can_certify")
     public Boolean canCertify;
+
     public GpgKey withCanCertify(Boolean canCertify) {
         this.canCertify = canCertify;
         return this;
@@ -26,6 +27,7 @@ public class GpgKey {
     
     @JsonProperty("can_encrypt_comms")
     public Boolean canEncryptComms;
+
     public GpgKey withCanEncryptComms(Boolean canEncryptComms) {
         this.canEncryptComms = canEncryptComms;
         return this;
@@ -33,6 +35,7 @@ public class GpgKey {
     
     @JsonProperty("can_encrypt_storage")
     public Boolean canEncryptStorage;
+
     public GpgKey withCanEncryptStorage(Boolean canEncryptStorage) {
         this.canEncryptStorage = canEncryptStorage;
         return this;
@@ -40,6 +43,7 @@ public class GpgKey {
     
     @JsonProperty("can_sign")
     public Boolean canSign;
+
     public GpgKey withCanSign(Boolean canSign) {
         this.canSign = canSign;
         return this;
@@ -49,6 +53,7 @@ public class GpgKey {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public GpgKey withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -56,6 +61,7 @@ public class GpgKey {
     
     @JsonProperty("emails")
     public GpgKeyEmails[] emails;
+
     public GpgKey withEmails(GpgKeyEmails[] emails) {
         this.emails = emails;
         return this;
@@ -65,6 +71,7 @@ public class GpgKey {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expires_at")
     public OffsetDateTime expiresAt;
+
     public GpgKey withExpiresAt(OffsetDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -72,6 +79,7 @@ public class GpgKey {
     
     @JsonProperty("id")
     public Long id;
+
     public GpgKey withId(Long id) {
         this.id = id;
         return this;
@@ -79,6 +87,7 @@ public class GpgKey {
     
     @JsonProperty("key_id")
     public String keyId;
+
     public GpgKey withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -87,6 +96,7 @@ public class GpgKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GpgKey withName(String name) {
         this.name = name;
         return this;
@@ -94,6 +104,7 @@ public class GpgKey {
     
     @JsonProperty("primary_key_id")
     public Long primaryKeyId;
+
     public GpgKey withPrimaryKeyId(Long primaryKeyId) {
         this.primaryKeyId = primaryKeyId;
         return this;
@@ -101,6 +112,7 @@ public class GpgKey {
     
     @JsonProperty("public_key")
     public String publicKey;
+
     public GpgKey withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
@@ -108,6 +120,7 @@ public class GpgKey {
     
     @JsonProperty("raw_key")
     public String rawKey;
+
     public GpgKey withRawKey(String rawKey) {
         this.rawKey = rawKey;
         return this;
@@ -115,6 +128,7 @@ public class GpgKey {
     
     @JsonProperty("revoked")
     public Boolean revoked;
+
     public GpgKey withRevoked(Boolean revoked) {
         this.revoked = revoked;
         return this;
@@ -122,9 +136,26 @@ public class GpgKey {
     
     @JsonProperty("subkeys")
     public GpgKeySubkeys[] subkeys;
+
     public GpgKey withSubkeys(GpgKeySubkeys[] subkeys) {
         this.subkeys = subkeys;
         return this;
     }
     
+    public GpgKey(@JsonProperty("can_certify") Boolean canCertify, @JsonProperty("can_encrypt_comms") Boolean canEncryptComms, @JsonProperty("can_encrypt_storage") Boolean canEncryptStorage, @JsonProperty("can_sign") Boolean canSign, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("emails") GpgKeyEmails[] emails, @JsonProperty("expires_at") OffsetDateTime expiresAt, @JsonProperty("id") Long id, @JsonProperty("key_id") String keyId, @JsonProperty("primary_key_id") Long primaryKeyId, @JsonProperty("public_key") String publicKey, @JsonProperty("raw_key") String rawKey, @JsonProperty("revoked") Boolean revoked, @JsonProperty("subkeys") GpgKeySubkeys[] subkeys) {
+        this.canCertify = canCertify;
+        this.canEncryptComms = canEncryptComms;
+        this.canEncryptStorage = canEncryptStorage;
+        this.canSign = canSign;
+        this.createdAt = createdAt;
+        this.emails = emails;
+        this.expiresAt = expiresAt;
+        this.id = id;
+        this.keyId = keyId;
+        this.primaryKeyId = primaryKeyId;
+        this.publicKey = publicKey;
+        this.rawKey = rawKey;
+        this.revoked = revoked;
+        this.subkeys = subkeys;
+  }
 }

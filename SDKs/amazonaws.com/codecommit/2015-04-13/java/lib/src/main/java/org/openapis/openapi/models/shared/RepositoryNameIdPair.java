@@ -15,6 +15,7 @@ public class RepositoryNameIdPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryId")
     public String repositoryId;
+
     public RepositoryNameIdPair withRepositoryId(String repositoryId) {
         this.repositoryId = repositoryId;
         return this;
@@ -23,9 +24,11 @@ public class RepositoryNameIdPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public RepositoryNameIdPair withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public RepositoryNameIdPair(){}
 }

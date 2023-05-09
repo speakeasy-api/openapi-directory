@@ -15,6 +15,7 @@ public class NodesContributorsReadContributorAttributes {
      */
     
     public Boolean bibliographic;
+
     public NodesContributorsReadContributorAttributes withBibliographic(Boolean bibliographic) {
         this.bibliographic = bibliographic;
         return this;
@@ -25,6 +26,7 @@ public class NodesContributorsReadContributorAttributes {
      */
     
     public Long index;
+
     public NodesContributorsReadContributorAttributes withIndex(Long index) {
         this.index = index;
         return this;
@@ -35,6 +37,7 @@ public class NodesContributorsReadContributorAttributes {
      */
     
     public NodesContributorsReadContributorAttributesPermissionEnum permission;
+
     public NodesContributorsReadContributorAttributes withPermission(NodesContributorsReadContributorAttributesPermissionEnum permission) {
         this.permission = permission;
         return this;
@@ -45,9 +48,11 @@ public class NodesContributorsReadContributorAttributes {
      */
     
     public String unregisteredContributor;
+
     public NodesContributorsReadContributorAttributes withUnregisteredContributor(String unregisteredContributor) {
         this.unregisteredContributor = unregisteredContributor;
         return this;
     }
     
+    public NodesContributorsReadContributorAttributes(){}
 }

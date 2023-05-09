@@ -25,6 +25,7 @@ public class CollectionItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("added_time")
     public OffsetDateTime addedTime;
+
     public CollectionItem withAddedTime(OffsetDateTime addedTime) {
         this.addedTime = addedTime;
         return this;
@@ -35,6 +36,7 @@ public class CollectionItem {
      */
     @JsonProperty("id")
     public String id;
+
     public CollectionItem withId(String id) {
         this.id = id;
         return this;
@@ -46,9 +48,13 @@ public class CollectionItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media_type")
     public String mediaType;
+
     public CollectionItem withMediaType(String mediaType) {
         this.mediaType = mediaType;
         return this;
     }
     
+    public CollectionItem(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

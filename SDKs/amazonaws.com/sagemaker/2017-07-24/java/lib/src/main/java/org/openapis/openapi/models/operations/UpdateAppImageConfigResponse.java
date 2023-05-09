@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAppImageConfigResponse {
     
     public String contentType;
+
     public UpdateAppImageConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateAppImageConfigResponse {
     
     
     public Integer statusCode;
+
     public UpdateAppImageConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateAppImageConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAppImageConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateAppImageConfigResponse {
      */
     
     public Object resourceNotFound;
+
     public UpdateAppImageConfigResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -43,9 +48,14 @@ public class UpdateAppImageConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAppImageConfigResponse updateAppImageConfigResponse;
+
     public UpdateAppImageConfigResponse withUpdateAppImageConfigResponse(org.openapis.openapi.models.shared.UpdateAppImageConfigResponse updateAppImageConfigResponse) {
         this.updateAppImageConfigResponse = updateAppImageConfigResponse;
         return this;
     }
     
+    public UpdateAppImageConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class GetReadOnlyIDUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public GetReadOnlyIDUsingPOST200ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class GetReadOnlyIDUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetReadOnlyIDUsingPOST200ApplicationJSONData data;
+
     public GetReadOnlyIDUsingPOST200ApplicationJSON withData(GetReadOnlyIDUsingPOST200ApplicationJSONData data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class GetReadOnlyIDUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GetReadOnlyIDUsingPOST200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetReadOnlyIDUsingPOST200ApplicationJSON(){}
 }

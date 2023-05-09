@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSchemaVersionsDiffResponse {
@@ -12,6 +13,7 @@ public class GetSchemaVersionsDiffResponse {
      */
     
     public Object accessDeniedException;
+
     public GetSchemaVersionsDiffResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetSchemaVersionsDiffResponse {
     
     
     public String contentType;
+
     public GetSchemaVersionsDiffResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSchemaVersionsDiffResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetSchemaVersionsDiffResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GetSchemaVersionsDiffResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSchemaVersionsDiffResponse getSchemaVersionsDiffResponse;
+
     public GetSchemaVersionsDiffResponse withGetSchemaVersionsDiffResponse(org.openapis.openapi.models.shared.GetSchemaVersionsDiffResponse getSchemaVersionsDiffResponse) {
         this.getSchemaVersionsDiffResponse = getSchemaVersionsDiffResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetSchemaVersionsDiffResponse {
      */
     
     public Object internalServiceException;
+
     public GetSchemaVersionsDiffResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class GetSchemaVersionsDiffResponse {
      */
     
     public Object invalidInputException;
+
     public GetSchemaVersionsDiffResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -66,6 +73,7 @@ public class GetSchemaVersionsDiffResponse {
     
     
     public Integer statusCode;
+
     public GetSchemaVersionsDiffResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetSchemaVersionsDiffResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSchemaVersionsDiffResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSchemaVersionsDiffResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

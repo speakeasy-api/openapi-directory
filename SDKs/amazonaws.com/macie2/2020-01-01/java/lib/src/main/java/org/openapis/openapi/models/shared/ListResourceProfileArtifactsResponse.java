@@ -15,6 +15,7 @@ public class ListResourceProfileArtifactsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifacts")
     public ResourceProfileArtifact[] artifacts;
+
     public ListResourceProfileArtifactsResponse withArtifacts(ResourceProfileArtifact[] artifacts) {
         this.artifacts = artifacts;
         return this;
@@ -23,9 +24,11 @@ public class ListResourceProfileArtifactsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListResourceProfileArtifactsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListResourceProfileArtifactsResponse(){}
 }

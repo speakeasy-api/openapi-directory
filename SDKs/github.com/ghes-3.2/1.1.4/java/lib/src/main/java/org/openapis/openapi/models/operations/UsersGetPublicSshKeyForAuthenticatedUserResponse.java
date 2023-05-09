@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UsersGetPublicSshKeyForAuthenticatedUserResponse {
     
     public String contentType;
+
     public UsersGetPublicSshKeyForAuthenticatedUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UsersGetPublicSshKeyForAuthenticatedUserResponse {
     
     
     public Integer statusCode;
+
     public UsersGetPublicSshKeyForAuthenticatedUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UsersGetPublicSshKeyForAuthenticatedUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UsersGetPublicSshKeyForAuthenticatedUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UsersGetPublicSshKeyForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public UsersGetPublicSshKeyForAuthenticatedUserResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class UsersGetPublicSshKeyForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.Key key;
+
     public UsersGetPublicSshKeyForAuthenticatedUserResponse withKey(org.openapis.openapi.models.shared.Key key) {
         this.key = key;
         return this;
     }
     
+    public UsersGetPublicSshKeyForAuthenticatedUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

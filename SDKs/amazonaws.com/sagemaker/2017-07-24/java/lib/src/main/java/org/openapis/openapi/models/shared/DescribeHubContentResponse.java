@@ -21,6 +21,7 @@ public class DescribeHubContentResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeHubContentResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -28,6 +29,7 @@ public class DescribeHubContentResponse {
     
     @JsonProperty("DocumentSchemaVersion")
     public String documentSchemaVersion;
+
     public DescribeHubContentResponse withDocumentSchemaVersion(String documentSchemaVersion) {
         this.documentSchemaVersion = documentSchemaVersion;
         return this;
@@ -36,6 +38,7 @@ public class DescribeHubContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeHubContentResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -43,6 +46,7 @@ public class DescribeHubContentResponse {
     
     @JsonProperty("HubArn")
     public String hubArn;
+
     public DescribeHubContentResponse withHubArn(String hubArn) {
         this.hubArn = hubArn;
         return this;
@@ -50,6 +54,7 @@ public class DescribeHubContentResponse {
     
     @JsonProperty("HubContentArn")
     public String hubContentArn;
+
     public DescribeHubContentResponse withHubContentArn(String hubContentArn) {
         this.hubContentArn = hubContentArn;
         return this;
@@ -58,6 +63,7 @@ public class DescribeHubContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubContentDependencies")
     public HubContentDependency[] hubContentDependencies;
+
     public DescribeHubContentResponse withHubContentDependencies(HubContentDependency[] hubContentDependencies) {
         this.hubContentDependencies = hubContentDependencies;
         return this;
@@ -66,6 +72,7 @@ public class DescribeHubContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubContentDescription")
     public String hubContentDescription;
+
     public DescribeHubContentResponse withHubContentDescription(String hubContentDescription) {
         this.hubContentDescription = hubContentDescription;
         return this;
@@ -74,6 +81,7 @@ public class DescribeHubContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubContentDisplayName")
     public String hubContentDisplayName;
+
     public DescribeHubContentResponse withHubContentDisplayName(String hubContentDisplayName) {
         this.hubContentDisplayName = hubContentDisplayName;
         return this;
@@ -81,6 +89,7 @@ public class DescribeHubContentResponse {
     
     @JsonProperty("HubContentDocument")
     public String hubContentDocument;
+
     public DescribeHubContentResponse withHubContentDocument(String hubContentDocument) {
         this.hubContentDocument = hubContentDocument;
         return this;
@@ -89,6 +98,7 @@ public class DescribeHubContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubContentMarkdown")
     public String hubContentMarkdown;
+
     public DescribeHubContentResponse withHubContentMarkdown(String hubContentMarkdown) {
         this.hubContentMarkdown = hubContentMarkdown;
         return this;
@@ -96,6 +106,7 @@ public class DescribeHubContentResponse {
     
     @JsonProperty("HubContentName")
     public String hubContentName;
+
     public DescribeHubContentResponse withHubContentName(String hubContentName) {
         this.hubContentName = hubContentName;
         return this;
@@ -104,6 +115,7 @@ public class DescribeHubContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubContentSearchKeywords")
     public String[] hubContentSearchKeywords;
+
     public DescribeHubContentResponse withHubContentSearchKeywords(String[] hubContentSearchKeywords) {
         this.hubContentSearchKeywords = hubContentSearchKeywords;
         return this;
@@ -111,6 +123,7 @@ public class DescribeHubContentResponse {
     
     @JsonProperty("HubContentStatus")
     public HubContentStatusEnum hubContentStatus;
+
     public DescribeHubContentResponse withHubContentStatus(HubContentStatusEnum hubContentStatus) {
         this.hubContentStatus = hubContentStatus;
         return this;
@@ -118,6 +131,7 @@ public class DescribeHubContentResponse {
     
     @JsonProperty("HubContentType")
     public HubContentTypeEnum hubContentType;
+
     public DescribeHubContentResponse withHubContentType(HubContentTypeEnum hubContentType) {
         this.hubContentType = hubContentType;
         return this;
@@ -125,6 +139,7 @@ public class DescribeHubContentResponse {
     
     @JsonProperty("HubContentVersion")
     public String hubContentVersion;
+
     public DescribeHubContentResponse withHubContentVersion(String hubContentVersion) {
         this.hubContentVersion = hubContentVersion;
         return this;
@@ -132,9 +147,22 @@ public class DescribeHubContentResponse {
     
     @JsonProperty("HubName")
     public String hubName;
+
     public DescribeHubContentResponse withHubName(String hubName) {
         this.hubName = hubName;
         return this;
     }
     
+    public DescribeHubContentResponse(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("DocumentSchemaVersion") String documentSchemaVersion, @JsonProperty("HubArn") String hubArn, @JsonProperty("HubContentArn") String hubContentArn, @JsonProperty("HubContentDocument") String hubContentDocument, @JsonProperty("HubContentName") String hubContentName, @JsonProperty("HubContentStatus") HubContentStatusEnum hubContentStatus, @JsonProperty("HubContentType") HubContentTypeEnum hubContentType, @JsonProperty("HubContentVersion") String hubContentVersion, @JsonProperty("HubName") String hubName) {
+        this.creationTime = creationTime;
+        this.documentSchemaVersion = documentSchemaVersion;
+        this.hubArn = hubArn;
+        this.hubContentArn = hubContentArn;
+        this.hubContentDocument = hubContentDocument;
+        this.hubContentName = hubContentName;
+        this.hubContentStatus = hubContentStatus;
+        this.hubContentType = hubContentType;
+        this.hubContentVersion = hubContentVersion;
+        this.hubName = hubName;
+  }
 }

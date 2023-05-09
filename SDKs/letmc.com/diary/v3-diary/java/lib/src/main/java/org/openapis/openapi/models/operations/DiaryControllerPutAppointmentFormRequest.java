@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerPutAppointmentFormRequest {
@@ -12,6 +13,7 @@ public class DiaryControllerPutAppointmentFormRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllowMarketingCorrespondence")
     public Boolean allowMarketingCorrespondence;
+
     public DiaryControllerPutAppointmentFormRequest withAllowMarketingCorrespondence(Boolean allowMarketingCorrespondence) {
         this.allowMarketingCorrespondence = allowMarketingCorrespondence;
         return this;
@@ -22,6 +24,7 @@ public class DiaryControllerPutAppointmentFormRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.DiaryAppointmentDetails diaryAppointmentDetails;
+
     public DiaryControllerPutAppointmentFormRequest withDiaryAppointmentDetails(org.openapis.openapi.models.shared.DiaryAppointmentDetails diaryAppointmentDetails) {
         this.diaryAppointmentDetails = diaryAppointmentDetails;
         return this;
@@ -32,6 +35,7 @@ public class DiaryControllerPutAppointmentFormRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointmentID")
     public String appointmentID;
+
     public DiaryControllerPutAppointmentFormRequest withAppointmentID(String appointmentID) {
         this.appointmentID = appointmentID;
         return this;
@@ -42,6 +46,7 @@ public class DiaryControllerPutAppointmentFormRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lettings")
     public Boolean lettings;
+
     public DiaryControllerPutAppointmentFormRequest withLettings(Boolean lettings) {
         this.lettings = lettings;
         return this;
@@ -52,9 +57,15 @@ public class DiaryControllerPutAppointmentFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public DiaryControllerPutAppointmentFormRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
     }
     
+    public DiaryControllerPutAppointmentFormRequest(@JsonProperty("DiaryAppointmentDetails") org.openapis.openapi.models.shared.DiaryAppointmentDetails diaryAppointmentDetails, @JsonProperty("appointmentID") String appointmentID, @JsonProperty("shortName") String shortName) {
+        this.diaryAppointmentDetails = diaryAppointmentDetails;
+        this.appointmentID = appointmentID;
+        this.shortName = shortName;
+  }
 }

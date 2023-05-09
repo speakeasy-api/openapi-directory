@@ -15,6 +15,7 @@ public class ExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalExecutionId")
     public String externalExecutionId;
+
     public ExecutionDetails withExternalExecutionId(String externalExecutionId) {
         this.externalExecutionId = externalExecutionId;
         return this;
@@ -23,6 +24,7 @@ public class ExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentComplete")
     public Long percentComplete;
+
     public ExecutionDetails withPercentComplete(Long percentComplete) {
         this.percentComplete = percentComplete;
         return this;
@@ -31,9 +33,11 @@ public class ExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public ExecutionDetails withSummary(String summary) {
         this.summary = summary;
         return this;
     }
     
+    public ExecutionDetails(){}
 }

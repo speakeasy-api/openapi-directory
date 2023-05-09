@@ -18,9 +18,11 @@ public class Province200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("province")
     public org.openapis.openapi.models.shared.Province province;
+
     public Province200ApplicationJSON withProvince(org.openapis.openapi.models.shared.Province province) {
         this.province = province;
         return this;
     }
     
+    public Province200ApplicationJSON(){}
 }

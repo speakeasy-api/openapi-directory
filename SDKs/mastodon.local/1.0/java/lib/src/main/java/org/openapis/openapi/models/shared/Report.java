@@ -21,6 +21,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action_taken")
     public Boolean actionTaken;
+
     public Report withActionTaken(Boolean actionTaken) {
         this.actionTaken = actionTaken;
         return this;
@@ -31,6 +32,7 @@ public class Report {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("action_taken_at")
     public OffsetDateTime actionTakenAt;
+
     public Report withActionTakenAt(OffsetDateTime actionTakenAt) {
         this.actionTakenAt = actionTakenAt;
         return this;
@@ -39,6 +41,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public ReportCategoryEnum category;
+
     public Report withCategory(ReportCategoryEnum category) {
         this.category = category;
         return this;
@@ -47,6 +50,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public Report withComment(String comment) {
         this.comment = comment;
         return this;
@@ -57,6 +61,7 @@ public class Report {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Report withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -65,6 +70,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forwarded")
     public Boolean forwarded;
+
     public Report withForwarded(Boolean forwarded) {
         this.forwarded = forwarded;
         return this;
@@ -73,6 +79,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Report withId(String id) {
         this.id = id;
         return this;
@@ -81,6 +88,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule_ids")
     public Long[] ruleIds;
+
     public Report withRuleIds(Long[] ruleIds) {
         this.ruleIds = ruleIds;
         return this;
@@ -89,6 +97,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_ids")
     public Long[] statusIds;
+
     public Report withStatusIds(Long[] statusIds) {
         this.statusIds = statusIds;
         return this;
@@ -101,9 +110,11 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_account")
     public Account targetAccount;
+
     public Report withTargetAccount(Account targetAccount) {
         this.targetAccount = targetAccount;
         return this;
     }
     
+    public Report(){}
 }

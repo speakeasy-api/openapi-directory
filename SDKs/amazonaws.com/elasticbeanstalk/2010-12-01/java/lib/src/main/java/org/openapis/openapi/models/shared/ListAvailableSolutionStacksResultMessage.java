@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListAvailableSolutionStacksResultMessage {
     
     public SolutionStackDescription[] solutionStackDetails;
+
     public ListAvailableSolutionStacksResultMessage withSolutionStackDetails(SolutionStackDescription[] solutionStackDetails) {
         this.solutionStackDetails = solutionStackDetails;
         return this;
@@ -19,9 +20,11 @@ public class ListAvailableSolutionStacksResultMessage {
     
     
     public String[] solutionStacks;
+
     public ListAvailableSolutionStacksResultMessage withSolutionStacks(String[] solutionStacks) {
         this.solutionStacks = solutionStacks;
         return this;
     }
     
+    public ListAvailableSolutionStacksResultMessage(){}
 }

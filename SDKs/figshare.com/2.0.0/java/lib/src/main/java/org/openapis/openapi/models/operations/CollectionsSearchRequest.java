@@ -12,6 +12,7 @@ public class CollectionsSearchRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CollectionSearch collectionSearch;
+
     public CollectionsSearchRequest withCollectionSearch(org.openapis.openapi.models.shared.CollectionSearch collectionSearch) {
         this.collectionSearch = collectionSearch;
         return this;
@@ -22,9 +23,11 @@ public class CollectionsSearchRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Cursor")
     public String xCursor;
+
     public CollectionsSearchRequest withXCursor(String xCursor) {
         this.xCursor = xCursor;
         return this;
     }
     
+    public CollectionsSearchRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContainerProjectsLocationsClustersNodePoolsSetAutoscalingResponse {
     
     public String contentType;
+
     public ContainerProjectsLocationsClustersNodePoolsSetAutoscalingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContainerProjectsLocationsClustersNodePoolsSetAutoscalingResponse {
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public ContainerProjectsLocationsClustersNodePoolsSetAutoscalingResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class ContainerProjectsLocationsClustersNodePoolsSetAutoscalingResponse {
     
     
     public Integer statusCode;
+
     public ContainerProjectsLocationsClustersNodePoolsSetAutoscalingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContainerProjectsLocationsClustersNodePoolsSetAutoscalingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContainerProjectsLocationsClustersNodePoolsSetAutoscalingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContainerProjectsLocationsClustersNodePoolsSetAutoscalingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

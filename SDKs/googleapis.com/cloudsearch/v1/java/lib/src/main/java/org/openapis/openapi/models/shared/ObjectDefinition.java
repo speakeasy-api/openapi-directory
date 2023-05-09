@@ -18,6 +18,7 @@ public class ObjectDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ObjectDefinition withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class ObjectDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public ObjectOptions options;
+
     public ObjectDefinition withOptions(ObjectOptions options) {
         this.options = options;
         return this;
@@ -40,9 +42,11 @@ public class ObjectDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyDefinitions")
     public PropertyDefinition[] propertyDefinitions;
+
     public ObjectDefinition withPropertyDefinitions(PropertyDefinition[] propertyDefinitions) {
         this.propertyDefinitions = propertyDefinitions;
         return this;
     }
     
+    public ObjectDefinition(){}
 }

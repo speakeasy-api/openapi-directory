@@ -15,6 +15,7 @@ public class UpdateCollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public UpdateCollectionDetail withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class UpdateCollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdDate")
     public Long createdDate;
+
     public UpdateCollectionDetail withCreatedDate(Long createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -31,6 +33,7 @@ public class UpdateCollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateCollectionDetail withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class UpdateCollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UpdateCollectionDetail withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class UpdateCollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedDate")
     public Long lastModifiedDate;
+
     public UpdateCollectionDetail withLastModifiedDate(Long lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -55,6 +60,7 @@ public class UpdateCollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateCollectionDetail withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +69,7 @@ public class UpdateCollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CollectionStatusEnum status;
+
     public UpdateCollectionDetail withStatus(CollectionStatusEnum status) {
         this.status = status;
         return this;
@@ -71,9 +78,11 @@ public class UpdateCollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CollectionTypeEnum type;
+
     public UpdateCollectionDetail withType(CollectionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UpdateCollectionDetail(){}
 }

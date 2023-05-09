@@ -15,6 +15,7 @@ public class ContainerServicePower {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuCount")
     public Float cpuCount;
+
     public ContainerServicePower withCpuCount(Float cpuCount) {
         this.cpuCount = cpuCount;
         return this;
@@ -23,6 +24,7 @@ public class ContainerServicePower {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public ContainerServicePower withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -31,6 +33,7 @@ public class ContainerServicePower {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ContainerServicePower withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class ContainerServicePower {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("powerId")
     public String powerId;
+
     public ContainerServicePower withPowerId(String powerId) {
         this.powerId = powerId;
         return this;
@@ -47,6 +51,7 @@ public class ContainerServicePower {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Float price;
+
     public ContainerServicePower withPrice(Float price) {
         this.price = price;
         return this;
@@ -55,9 +60,11 @@ public class ContainerServicePower {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ramSizeInGb")
     public Float ramSizeInGb;
+
     public ContainerServicePower withRamSizeInGb(Float ramSizeInGb) {
         this.ramSizeInGb = ramSizeInGb;
         return this;
     }
     
+    public ContainerServicePower(){}
 }

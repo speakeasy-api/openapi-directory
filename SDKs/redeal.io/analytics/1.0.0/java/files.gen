@@ -34,4 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetEventsTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEventsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEventsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/EventRecord.java
+docs/sdk/README.md
+docs/developers/README.md
 USAGE.md

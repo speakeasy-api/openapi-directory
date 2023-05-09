@@ -15,6 +15,7 @@ public class SmsMfaConfigType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SmsAuthenticationMessage")
     public String smsAuthenticationMessage;
+
     public SmsMfaConfigType withSmsAuthenticationMessage(String smsAuthenticationMessage) {
         this.smsAuthenticationMessage = smsAuthenticationMessage;
         return this;
@@ -23,9 +24,11 @@ public class SmsMfaConfigType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SmsConfiguration")
     public SmsConfigurationType smsConfiguration;
+
     public SmsMfaConfigType withSmsConfiguration(SmsConfigurationType smsConfiguration) {
         this.smsConfiguration = smsConfiguration;
         return this;
     }
     
+    public SmsMfaConfigType(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1beta1SearchCatalogResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDatacatalogV1beta1SearchCatalogResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,8 +30,21 @@ public class GoogleCloudDatacatalogV1beta1SearchCatalogResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public GoogleCloudDatacatalogV1beta1SearchCatalogResult[] results;
+
     public GoogleCloudDatacatalogV1beta1SearchCatalogResponse withResults(GoogleCloudDatacatalogV1beta1SearchCatalogResult[] results) {
         this.results = results;
+        return this;
+    }
+    
+    /**
+     * The approximate total number of entries matched by the query.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("totalSize")
+    public Integer totalSize;
+
+    public GoogleCloudDatacatalogV1beta1SearchCatalogResponse withTotalSize(Integer totalSize) {
+        this.totalSize = totalSize;
         return this;
     }
     
@@ -40,9 +54,11 @@ public class GoogleCloudDatacatalogV1beta1SearchCatalogResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public GoogleCloudDatacatalogV1beta1SearchCatalogResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1SearchCatalogResponse(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteTransitGatewayResultTransitGatewayOptions {
     
     public Long amazonSideAsn;
+
     public DeleteTransitGatewayResultTransitGatewayOptions withAmazonSideAsn(Long amazonSideAsn) {
         this.amazonSideAsn = amazonSideAsn;
         return this;
@@ -19,6 +20,7 @@ public class DeleteTransitGatewayResultTransitGatewayOptions {
     
     
     public String associationDefaultRouteTableId;
+
     public DeleteTransitGatewayResultTransitGatewayOptions withAssociationDefaultRouteTableId(String associationDefaultRouteTableId) {
         this.associationDefaultRouteTableId = associationDefaultRouteTableId;
         return this;
@@ -26,6 +28,7 @@ public class DeleteTransitGatewayResultTransitGatewayOptions {
     
     
     public DeleteTransitGatewayResultTransitGatewayOptionsAutoAcceptSharedAttachmentsEnum autoAcceptSharedAttachments;
+
     public DeleteTransitGatewayResultTransitGatewayOptions withAutoAcceptSharedAttachments(DeleteTransitGatewayResultTransitGatewayOptionsAutoAcceptSharedAttachmentsEnum autoAcceptSharedAttachments) {
         this.autoAcceptSharedAttachments = autoAcceptSharedAttachments;
         return this;
@@ -33,6 +36,7 @@ public class DeleteTransitGatewayResultTransitGatewayOptions {
     
     
     public DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTableAssociationEnum defaultRouteTableAssociation;
+
     public DeleteTransitGatewayResultTransitGatewayOptions withDefaultRouteTableAssociation(DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTableAssociationEnum defaultRouteTableAssociation) {
         this.defaultRouteTableAssociation = defaultRouteTableAssociation;
         return this;
@@ -40,6 +44,7 @@ public class DeleteTransitGatewayResultTransitGatewayOptions {
     
     
     public DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTablePropagationEnum defaultRouteTablePropagation;
+
     public DeleteTransitGatewayResultTransitGatewayOptions withDefaultRouteTablePropagation(DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTablePropagationEnum defaultRouteTablePropagation) {
         this.defaultRouteTablePropagation = defaultRouteTablePropagation;
         return this;
@@ -47,6 +52,7 @@ public class DeleteTransitGatewayResultTransitGatewayOptions {
     
     
     public DeleteTransitGatewayResultTransitGatewayOptionsDnsSupportEnum dnsSupport;
+
     public DeleteTransitGatewayResultTransitGatewayOptions withDnsSupport(DeleteTransitGatewayResultTransitGatewayOptionsDnsSupportEnum dnsSupport) {
         this.dnsSupport = dnsSupport;
         return this;
@@ -54,6 +60,7 @@ public class DeleteTransitGatewayResultTransitGatewayOptions {
     
     
     public DeleteTransitGatewayResultTransitGatewayOptionsMulticastSupportEnum multicastSupport;
+
     public DeleteTransitGatewayResultTransitGatewayOptions withMulticastSupport(DeleteTransitGatewayResultTransitGatewayOptionsMulticastSupportEnum multicastSupport) {
         this.multicastSupport = multicastSupport;
         return this;
@@ -61,6 +68,7 @@ public class DeleteTransitGatewayResultTransitGatewayOptions {
     
     
     public String propagationDefaultRouteTableId;
+
     public DeleteTransitGatewayResultTransitGatewayOptions withPropagationDefaultRouteTableId(String propagationDefaultRouteTableId) {
         this.propagationDefaultRouteTableId = propagationDefaultRouteTableId;
         return this;
@@ -68,6 +76,7 @@ public class DeleteTransitGatewayResultTransitGatewayOptions {
     
     
     public String[] transitGatewayCidrBlocks;
+
     public DeleteTransitGatewayResultTransitGatewayOptions withTransitGatewayCidrBlocks(String[] transitGatewayCidrBlocks) {
         this.transitGatewayCidrBlocks = transitGatewayCidrBlocks;
         return this;
@@ -75,9 +84,11 @@ public class DeleteTransitGatewayResultTransitGatewayOptions {
     
     
     public DeleteTransitGatewayResultTransitGatewayOptionsVpnEcmpSupportEnum vpnEcmpSupport;
+
     public DeleteTransitGatewayResultTransitGatewayOptions withVpnEcmpSupport(DeleteTransitGatewayResultTransitGatewayOptionsVpnEcmpSupportEnum vpnEcmpSupport) {
         this.vpnEcmpSupport = vpnEcmpSupport;
         return this;
     }
     
+    public DeleteTransitGatewayResultTransitGatewayOptions(){}
 }

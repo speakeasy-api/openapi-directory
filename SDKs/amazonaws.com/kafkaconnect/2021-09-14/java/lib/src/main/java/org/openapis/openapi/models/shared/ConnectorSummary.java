@@ -20,6 +20,7 @@ public class ConnectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacity")
     public CapacityDescription capacity;
+
     public ConnectorSummary withCapacity(CapacityDescription capacity) {
         this.capacity = capacity;
         return this;
@@ -28,6 +29,7 @@ public class ConnectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorArn")
     public String connectorArn;
+
     public ConnectorSummary withConnectorArn(String connectorArn) {
         this.connectorArn = connectorArn;
         return this;
@@ -36,6 +38,7 @@ public class ConnectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorDescription")
     public String connectorDescription;
+
     public ConnectorSummary withConnectorDescription(String connectorDescription) {
         this.connectorDescription = connectorDescription;
         return this;
@@ -44,6 +47,7 @@ public class ConnectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorName")
     public String connectorName;
+
     public ConnectorSummary withConnectorName(String connectorName) {
         this.connectorName = connectorName;
         return this;
@@ -52,6 +56,7 @@ public class ConnectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorState")
     public ConnectorStateEnum connectorState;
+
     public ConnectorSummary withConnectorState(ConnectorStateEnum connectorState) {
         this.connectorState = connectorState;
         return this;
@@ -62,6 +67,7 @@ public class ConnectorSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public ConnectorSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -70,6 +76,7 @@ public class ConnectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentVersion")
     public String currentVersion;
+
     public ConnectorSummary withCurrentVersion(String currentVersion) {
         this.currentVersion = currentVersion;
         return this;
@@ -78,6 +85,7 @@ public class ConnectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kafkaCluster")
     public KafkaClusterDescription kafkaCluster;
+
     public ConnectorSummary withKafkaCluster(KafkaClusterDescription kafkaCluster) {
         this.kafkaCluster = kafkaCluster;
         return this;
@@ -86,6 +94,7 @@ public class ConnectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kafkaClusterClientAuthentication")
     public KafkaClusterClientAuthenticationDescription kafkaClusterClientAuthentication;
+
     public ConnectorSummary withKafkaClusterClientAuthentication(KafkaClusterClientAuthenticationDescription kafkaClusterClientAuthentication) {
         this.kafkaClusterClientAuthentication = kafkaClusterClientAuthentication;
         return this;
@@ -94,6 +103,7 @@ public class ConnectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kafkaClusterEncryptionInTransit")
     public KafkaClusterEncryptionInTransitDescription kafkaClusterEncryptionInTransit;
+
     public ConnectorSummary withKafkaClusterEncryptionInTransit(KafkaClusterEncryptionInTransitDescription kafkaClusterEncryptionInTransit) {
         this.kafkaClusterEncryptionInTransit = kafkaClusterEncryptionInTransit;
         return this;
@@ -102,6 +112,7 @@ public class ConnectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kafkaConnectVersion")
     public String kafkaConnectVersion;
+
     public ConnectorSummary withKafkaConnectVersion(String kafkaConnectVersion) {
         this.kafkaConnectVersion = kafkaConnectVersion;
         return this;
@@ -110,6 +121,7 @@ public class ConnectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logDelivery")
     public LogDeliveryDescription logDelivery;
+
     public ConnectorSummary withLogDelivery(LogDeliveryDescription logDelivery) {
         this.logDelivery = logDelivery;
         return this;
@@ -118,6 +130,7 @@ public class ConnectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plugins")
     public PluginDescription[] plugins;
+
     public ConnectorSummary withPlugins(PluginDescription[] plugins) {
         this.plugins = plugins;
         return this;
@@ -126,6 +139,7 @@ public class ConnectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceExecutionRoleArn")
     public String serviceExecutionRoleArn;
+
     public ConnectorSummary withServiceExecutionRoleArn(String serviceExecutionRoleArn) {
         this.serviceExecutionRoleArn = serviceExecutionRoleArn;
         return this;
@@ -134,9 +148,11 @@ public class ConnectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerConfiguration")
     public WorkerConfigurationDescription workerConfiguration;
+
     public ConnectorSummary withWorkerConfiguration(WorkerConfigurationDescription workerConfiguration) {
         this.workerConfiguration = workerConfiguration;
         return this;
     }
     
+    public ConnectorSummary(){}
 }

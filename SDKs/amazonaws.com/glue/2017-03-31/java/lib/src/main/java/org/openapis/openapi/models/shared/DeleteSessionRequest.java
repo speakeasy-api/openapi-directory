@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteSessionRequest {
     @JsonProperty("Id")
     public String id;
+
     public DeleteSessionRequest withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,13 @@ public class DeleteSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestOrigin")
     public String requestOrigin;
+
     public DeleteSessionRequest withRequestOrigin(String requestOrigin) {
         this.requestOrigin = requestOrigin;
         return this;
     }
     
+    public DeleteSessionRequest(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

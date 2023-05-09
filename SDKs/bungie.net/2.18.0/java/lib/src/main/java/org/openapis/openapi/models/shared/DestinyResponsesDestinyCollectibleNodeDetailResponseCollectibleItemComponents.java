@@ -15,6 +15,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItemComponents {
     
     public DictionaryComponentResponseOfuint32AndDestinyItemInstanceComponent instances;
+
     public DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItemComponents withInstances(DictionaryComponentResponseOfuint32AndDestinyItemInstanceComponent instances) {
         this.instances = instances;
         return this;
@@ -22,6 +23,7 @@ public class DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItem
     
     
     public DictionaryComponentResponseOfuint32AndDestinyItemObjectivesComponent objectives;
+
     public DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItemComponents withObjectives(DictionaryComponentResponseOfuint32AndDestinyItemObjectivesComponent objectives) {
         this.objectives = objectives;
         return this;
@@ -29,6 +31,7 @@ public class DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItem
     
     
     public DictionaryComponentResponseOfuint32AndDestinyItemPerksComponent perks;
+
     public DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItemComponents withPerks(DictionaryComponentResponseOfuint32AndDestinyItemPerksComponent perks) {
         this.perks = perks;
         return this;
@@ -36,6 +39,7 @@ public class DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItem
     
     
     public DictionaryComponentResponseOfuint32AndDestinyItemPlugObjectivesComponent plugObjectives;
+
     public DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItemComponents withPlugObjectives(DictionaryComponentResponseOfuint32AndDestinyItemPlugObjectivesComponent plugObjectives) {
         this.plugObjectives = plugObjectives;
         return this;
@@ -43,6 +47,7 @@ public class DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItem
     
     
     public DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent plugStates;
+
     public DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItemComponents withPlugStates(DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent plugStates) {
         this.plugStates = plugStates;
         return this;
@@ -50,6 +55,7 @@ public class DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItem
     
     
     public DictionaryComponentResponseOfuint32AndDestinyItemRenderComponent renderData;
+
     public DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItemComponents withRenderData(DictionaryComponentResponseOfuint32AndDestinyItemRenderComponent renderData) {
         this.renderData = renderData;
         return this;
@@ -57,6 +63,7 @@ public class DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItem
     
     
     public DictionaryComponentResponseOfuint32AndDestinyItemReusablePlugsComponent reusablePlugs;
+
     public DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItemComponents withReusablePlugs(DictionaryComponentResponseOfuint32AndDestinyItemReusablePlugsComponent reusablePlugs) {
         this.reusablePlugs = reusablePlugs;
         return this;
@@ -64,6 +71,7 @@ public class DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItem
     
     
     public DictionaryComponentResponseOfuint32AndDestinyItemSocketsComponent sockets;
+
     public DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItemComponents withSockets(DictionaryComponentResponseOfuint32AndDestinyItemSocketsComponent sockets) {
         this.sockets = sockets;
         return this;
@@ -71,6 +79,7 @@ public class DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItem
     
     
     public DictionaryComponentResponseOfuint32AndDestinyItemStatsComponent stats;
+
     public DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItemComponents withStats(DictionaryComponentResponseOfuint32AndDestinyItemStatsComponent stats) {
         this.stats = stats;
         return this;
@@ -78,9 +87,11 @@ public class DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItem
     
     
     public DictionaryComponentResponseOfuint32AndDestinyItemTalentGridComponent talentGrids;
+
     public DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItemComponents withTalentGrids(DictionaryComponentResponseOfuint32AndDestinyItemTalentGridComponent talentGrids) {
         this.talentGrids = talentGrids;
         return this;
     }
     
+    public DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItemComponents(){}
 }

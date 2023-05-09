@@ -15,9 +15,11 @@ public class ProjectIdListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childProjectIds")
     public Long[] childProjectIds;
+
     public ProjectIdListVO withChildProjectIds(Long[] childProjectIds) {
         this.childProjectIds = childProjectIds;
         return this;
     }
     
+    public ProjectIdListVO(){}
 }

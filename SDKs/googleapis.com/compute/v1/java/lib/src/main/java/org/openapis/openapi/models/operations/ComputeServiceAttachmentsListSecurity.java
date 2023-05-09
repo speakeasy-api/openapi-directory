@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeServiceAttachmentsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeServiceAttachmentsListSecurityOption1 option1;
+
     public ComputeServiceAttachmentsListSecurity withOption1(ComputeServiceAttachmentsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeServiceAttachmentsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeServiceAttachmentsListSecurityOption2 option2;
+
     public ComputeServiceAttachmentsListSecurity withOption2(ComputeServiceAttachmentsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeServiceAttachmentsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeServiceAttachmentsListSecurityOption3 option3;
+
     public ComputeServiceAttachmentsListSecurity withOption3(ComputeServiceAttachmentsListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeServiceAttachmentsListSecurity(){}
 }

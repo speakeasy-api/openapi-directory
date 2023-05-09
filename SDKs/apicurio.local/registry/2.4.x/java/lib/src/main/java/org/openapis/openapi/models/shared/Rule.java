@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Rule {
     @JsonProperty("config")
     public String config;
+
     public Rule withConfig(String config) {
         this.config = config;
         return this;
@@ -22,9 +23,13 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public RuleTypeEnum type;
+
     public Rule withType(RuleTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Rule(@JsonProperty("config") String config) {
+        this.config = config;
+  }
 }

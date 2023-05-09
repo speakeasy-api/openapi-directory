@@ -18,6 +18,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layoutProperties")
     public LayoutProperties layoutProperties;
+
     public Page withLayoutProperties(LayoutProperties layoutProperties) {
         this.layoutProperties = layoutProperties;
         return this;
@@ -29,6 +30,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterProperties")
     public MasterProperties masterProperties;
+
     public Page withMasterProperties(MasterProperties masterProperties) {
         this.masterProperties = masterProperties;
         return this;
@@ -40,6 +42,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notesProperties")
     public NotesProperties notesProperties;
+
     public Page withNotesProperties(NotesProperties notesProperties) {
         this.notesProperties = notesProperties;
         return this;
@@ -51,6 +54,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public Page withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -62,6 +66,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageElements")
     public PageElement[] pageElements;
+
     public Page withPageElements(PageElement[] pageElements) {
         this.pageElements = pageElements;
         return this;
@@ -73,6 +78,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageProperties")
     public PageProperties pageProperties;
+
     public Page withPageProperties(PageProperties pageProperties) {
         this.pageProperties = pageProperties;
         return this;
@@ -84,6 +90,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageType")
     public PagePageTypeEnum pageType;
+
     public Page withPageType(PagePageTypeEnum pageType) {
         this.pageType = pageType;
         return this;
@@ -95,6 +102,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public Page withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -106,9 +114,11 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slideProperties")
     public SlideProperties slideProperties;
+
     public Page withSlideProperties(SlideProperties slideProperties) {
         this.slideProperties = slideProperties;
         return this;
     }
     
+    public Page(){}
 }

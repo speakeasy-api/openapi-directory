@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1ImagePolylineAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSpec")
     public GoogleCloudDatalabelingV1beta1AnnotationSpec annotationSpec;
+
     public GoogleCloudDatalabelingV1beta1ImagePolylineAnnotation withAnnotationSpec(GoogleCloudDatalabelingV1beta1AnnotationSpec annotationSpec) {
         this.annotationSpec = annotationSpec;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatalabelingV1beta1ImagePolylineAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("normalizedPolyline")
     public GoogleCloudDatalabelingV1beta1NormalizedPolyline normalizedPolyline;
+
     public GoogleCloudDatalabelingV1beta1ImagePolylineAnnotation withNormalizedPolyline(GoogleCloudDatalabelingV1beta1NormalizedPolyline normalizedPolyline) {
         this.normalizedPolyline = normalizedPolyline;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatalabelingV1beta1ImagePolylineAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("polyline")
     public GoogleCloudDatalabelingV1beta1Polyline polyline;
+
     public GoogleCloudDatalabelingV1beta1ImagePolylineAnnotation withPolyline(GoogleCloudDatalabelingV1beta1Polyline polyline) {
         this.polyline = polyline;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1ImagePolylineAnnotation(){}
 }

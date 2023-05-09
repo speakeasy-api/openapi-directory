@@ -18,6 +18,7 @@ public class GuestAttributesEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GuestAttributesEntry withKey(String key) {
         this.key = key;
         return this;
@@ -29,6 +30,7 @@ public class GuestAttributesEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     public String namespace;
+
     public GuestAttributesEntry withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -40,9 +42,11 @@ public class GuestAttributesEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GuestAttributesEntry withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GuestAttributesEntry(){}
 }

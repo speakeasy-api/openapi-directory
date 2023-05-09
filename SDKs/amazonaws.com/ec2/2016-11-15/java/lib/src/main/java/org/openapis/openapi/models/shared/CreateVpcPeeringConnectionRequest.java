@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateVpcPeeringConnectionRequest {
     
     public Boolean dryRun;
+
     public CreateVpcPeeringConnectionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class CreateVpcPeeringConnectionRequest {
     
     
     public String peerOwnerId;
+
     public CreateVpcPeeringConnectionRequest withPeerOwnerId(String peerOwnerId) {
         this.peerOwnerId = peerOwnerId;
         return this;
@@ -23,6 +25,7 @@ public class CreateVpcPeeringConnectionRequest {
     
     
     public String peerRegion;
+
     public CreateVpcPeeringConnectionRequest withPeerRegion(String peerRegion) {
         this.peerRegion = peerRegion;
         return this;
@@ -30,6 +33,7 @@ public class CreateVpcPeeringConnectionRequest {
     
     
     public String peerVpcId;
+
     public CreateVpcPeeringConnectionRequest withPeerVpcId(String peerVpcId) {
         this.peerVpcId = peerVpcId;
         return this;
@@ -37,6 +41,7 @@ public class CreateVpcPeeringConnectionRequest {
     
     
     public CreateVpcPeeringConnectionRequestTagSpecifications[] tagSpecifications;
+
     public CreateVpcPeeringConnectionRequest withTagSpecifications(CreateVpcPeeringConnectionRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -44,9 +49,13 @@ public class CreateVpcPeeringConnectionRequest {
     
     
     public String vpcId;
+
     public CreateVpcPeeringConnectionRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateVpcPeeringConnectionRequest(@JsonProperty("VpcId") String vpcId) {
+        this.vpcId = vpcId;
+  }
 }

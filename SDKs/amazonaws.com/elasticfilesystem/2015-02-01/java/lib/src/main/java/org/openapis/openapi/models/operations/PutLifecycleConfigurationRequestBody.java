@@ -12,9 +12,13 @@ public class PutLifecycleConfigurationRequestBody {
      */
     @JsonProperty("LifecyclePolicies")
     public org.openapis.openapi.models.shared.LifecyclePolicy[] lifecyclePolicies;
+
     public PutLifecycleConfigurationRequestBody withLifecyclePolicies(org.openapis.openapi.models.shared.LifecyclePolicy[] lifecyclePolicies) {
         this.lifecyclePolicies = lifecyclePolicies;
         return this;
     }
     
+    public PutLifecycleConfigurationRequestBody(@JsonProperty("LifecyclePolicies") org.openapis.openapi.models.shared.LifecyclePolicy[] lifecyclePolicies) {
+        this.lifecyclePolicies = lifecyclePolicies;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleAppsScriptTypeAddOnEntryPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addOnType")
     public GoogleAppsScriptTypeAddOnEntryPointAddOnTypeEnum addOnType;
+
     public GoogleAppsScriptTypeAddOnEntryPoint withAddOnType(GoogleAppsScriptTypeAddOnEntryPointAddOnTypeEnum addOnType) {
         this.addOnType = addOnType;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsScriptTypeAddOnEntryPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleAppsScriptTypeAddOnEntryPoint withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsScriptTypeAddOnEntryPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("helpUrl")
     public String helpUrl;
+
     public GoogleAppsScriptTypeAddOnEntryPoint withHelpUrl(String helpUrl) {
         this.helpUrl = helpUrl;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsScriptTypeAddOnEntryPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postInstallTipUrl")
     public String postInstallTipUrl;
+
     public GoogleAppsScriptTypeAddOnEntryPoint withPostInstallTipUrl(String postInstallTipUrl) {
         this.postInstallTipUrl = postInstallTipUrl;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAppsScriptTypeAddOnEntryPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportIssueUrl")
     public String reportIssueUrl;
+
     public GoogleAppsScriptTypeAddOnEntryPoint withReportIssueUrl(String reportIssueUrl) {
         this.reportIssueUrl = reportIssueUrl;
         return this;
@@ -73,9 +78,11 @@ public class GoogleAppsScriptTypeAddOnEntryPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleAppsScriptTypeAddOnEntryPoint withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GoogleAppsScriptTypeAddOnEntryPoint(){}
 }

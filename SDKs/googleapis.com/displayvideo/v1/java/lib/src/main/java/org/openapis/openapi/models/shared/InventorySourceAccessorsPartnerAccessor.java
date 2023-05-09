@@ -18,9 +18,11 @@ public class InventorySourceAccessorsPartnerAccessor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerId")
     public String partnerId;
+
     public InventorySourceAccessorsPartnerAccessor withPartnerId(String partnerId) {
         this.partnerId = partnerId;
         return this;
     }
     
+    public InventorySourceAccessorsPartnerAccessor(){}
 }

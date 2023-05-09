@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportHypervisorConfigurationResponse {
@@ -12,6 +13,7 @@ public class ImportHypervisorConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public ImportHypervisorConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ImportHypervisorConfigurationResponse {
      */
     
     public Object conflictException;
+
     public ImportHypervisorConfigurationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ImportHypervisorConfigurationResponse {
     
     
     public String contentType;
+
     public ImportHypervisorConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ImportHypervisorConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportHypervisorConfigurationOutput importHypervisorConfigurationOutput;
+
     public ImportHypervisorConfigurationResponse withImportHypervisorConfigurationOutput(org.openapis.openapi.models.shared.ImportHypervisorConfigurationOutput importHypervisorConfigurationOutput) {
         this.importHypervisorConfigurationOutput = importHypervisorConfigurationOutput;
         return this;
@@ -49,6 +54,7 @@ public class ImportHypervisorConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public ImportHypervisorConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class ImportHypervisorConfigurationResponse {
     
     
     public Integer statusCode;
+
     public ImportHypervisorConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ImportHypervisorConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportHypervisorConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ImportHypervisorConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public ImportHypervisorConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ImportHypervisorConfigurationResponse {
      */
     
     public Object validationException;
+
     public ImportHypervisorConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ImportHypervisorConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

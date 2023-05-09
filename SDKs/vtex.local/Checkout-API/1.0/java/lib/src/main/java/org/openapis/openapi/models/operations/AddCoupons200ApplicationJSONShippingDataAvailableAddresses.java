@@ -15,6 +15,7 @@ public class AddCoupons200ApplicationJSONShippingDataAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressId")
     public String addressId;
+
     public AddCoupons200ApplicationJSONShippingDataAvailableAddresses withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
@@ -26,6 +27,7 @@ public class AddCoupons200ApplicationJSONShippingDataAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressType")
     public String addressType;
+
     public AddCoupons200ApplicationJSONShippingDataAvailableAddresses withAddressType(String addressType) {
         this.addressType = addressType;
         return this;
@@ -37,6 +39,7 @@ public class AddCoupons200ApplicationJSONShippingDataAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public AddCoupons200ApplicationJSONShippingDataAvailableAddresses withCity(String city) {
         this.city = city;
         return this;
@@ -48,6 +51,7 @@ public class AddCoupons200ApplicationJSONShippingDataAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complement")
     public String complement;
+
     public AddCoupons200ApplicationJSONShippingDataAvailableAddresses withComplement(String complement) {
         this.complement = complement;
         return this;
@@ -59,6 +63,7 @@ public class AddCoupons200ApplicationJSONShippingDataAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public AddCoupons200ApplicationJSONShippingDataAvailableAddresses withCountry(String country) {
         this.country = country;
         return this;
@@ -70,6 +75,7 @@ public class AddCoupons200ApplicationJSONShippingDataAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoCoordinates")
     public Double[] geoCoordinates;
+
     public AddCoupons200ApplicationJSONShippingDataAvailableAddresses withGeoCoordinates(Double[] geoCoordinates) {
         this.geoCoordinates = geoCoordinates;
         return this;
@@ -81,6 +87,7 @@ public class AddCoupons200ApplicationJSONShippingDataAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDisposable")
     public Boolean isDisposable;
+
     public AddCoupons200ApplicationJSONShippingDataAvailableAddresses withIsDisposable(Boolean isDisposable) {
         this.isDisposable = isDisposable;
         return this;
@@ -92,6 +99,7 @@ public class AddCoupons200ApplicationJSONShippingDataAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("neighborhood")
     public String neighborhood;
+
     public AddCoupons200ApplicationJSONShippingDataAvailableAddresses withNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
         return this;
@@ -103,6 +111,7 @@ public class AddCoupons200ApplicationJSONShippingDataAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public AddCoupons200ApplicationJSONShippingDataAvailableAddresses withNumber(String number) {
         this.number = number;
         return this;
@@ -114,6 +123,7 @@ public class AddCoupons200ApplicationJSONShippingDataAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public AddCoupons200ApplicationJSONShippingDataAvailableAddresses withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -125,6 +135,7 @@ public class AddCoupons200ApplicationJSONShippingDataAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receiverName")
     public String receiverName;
+
     public AddCoupons200ApplicationJSONShippingDataAvailableAddresses withReceiverName(String receiverName) {
         this.receiverName = receiverName;
         return this;
@@ -136,6 +147,7 @@ public class AddCoupons200ApplicationJSONShippingDataAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public AddCoupons200ApplicationJSONShippingDataAvailableAddresses withReference(String reference) {
         this.reference = reference;
         return this;
@@ -147,6 +159,7 @@ public class AddCoupons200ApplicationJSONShippingDataAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public AddCoupons200ApplicationJSONShippingDataAvailableAddresses withState(String state) {
         this.state = state;
         return this;
@@ -158,9 +171,11 @@ public class AddCoupons200ApplicationJSONShippingDataAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street")
     public String street;
+
     public AddCoupons200ApplicationJSONShippingDataAvailableAddresses withStreet(String street) {
         this.street = street;
         return this;
     }
     
+    public AddCoupons200ApplicationJSONShippingDataAvailableAddresses(){}
 }

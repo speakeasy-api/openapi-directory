@@ -15,6 +15,7 @@ public class DescribePatchGroupStateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Instances")
     public Long instances;
+
     public DescribePatchGroupStateResult withInstances(Long instances) {
         this.instances = instances;
         return this;
@@ -23,6 +24,7 @@ public class DescribePatchGroupStateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstancesWithCriticalNonCompliantPatches")
     public Long instancesWithCriticalNonCompliantPatches;
+
     public DescribePatchGroupStateResult withInstancesWithCriticalNonCompliantPatches(Long instancesWithCriticalNonCompliantPatches) {
         this.instancesWithCriticalNonCompliantPatches = instancesWithCriticalNonCompliantPatches;
         return this;
@@ -31,6 +33,7 @@ public class DescribePatchGroupStateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstancesWithFailedPatches")
     public Long instancesWithFailedPatches;
+
     public DescribePatchGroupStateResult withInstancesWithFailedPatches(Long instancesWithFailedPatches) {
         this.instancesWithFailedPatches = instancesWithFailedPatches;
         return this;
@@ -39,6 +42,7 @@ public class DescribePatchGroupStateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstancesWithInstalledOtherPatches")
     public Long instancesWithInstalledOtherPatches;
+
     public DescribePatchGroupStateResult withInstancesWithInstalledOtherPatches(Long instancesWithInstalledOtherPatches) {
         this.instancesWithInstalledOtherPatches = instancesWithInstalledOtherPatches;
         return this;
@@ -47,6 +51,7 @@ public class DescribePatchGroupStateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstancesWithInstalledPatches")
     public Long instancesWithInstalledPatches;
+
     public DescribePatchGroupStateResult withInstancesWithInstalledPatches(Long instancesWithInstalledPatches) {
         this.instancesWithInstalledPatches = instancesWithInstalledPatches;
         return this;
@@ -55,6 +60,7 @@ public class DescribePatchGroupStateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstancesWithInstalledPendingRebootPatches")
     public Long instancesWithInstalledPendingRebootPatches;
+
     public DescribePatchGroupStateResult withInstancesWithInstalledPendingRebootPatches(Long instancesWithInstalledPendingRebootPatches) {
         this.instancesWithInstalledPendingRebootPatches = instancesWithInstalledPendingRebootPatches;
         return this;
@@ -63,6 +69,7 @@ public class DescribePatchGroupStateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstancesWithInstalledRejectedPatches")
     public Long instancesWithInstalledRejectedPatches;
+
     public DescribePatchGroupStateResult withInstancesWithInstalledRejectedPatches(Long instancesWithInstalledRejectedPatches) {
         this.instancesWithInstalledRejectedPatches = instancesWithInstalledRejectedPatches;
         return this;
@@ -71,6 +78,7 @@ public class DescribePatchGroupStateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstancesWithMissingPatches")
     public Long instancesWithMissingPatches;
+
     public DescribePatchGroupStateResult withInstancesWithMissingPatches(Long instancesWithMissingPatches) {
         this.instancesWithMissingPatches = instancesWithMissingPatches;
         return this;
@@ -79,6 +87,7 @@ public class DescribePatchGroupStateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstancesWithNotApplicablePatches")
     public Long instancesWithNotApplicablePatches;
+
     public DescribePatchGroupStateResult withInstancesWithNotApplicablePatches(Long instancesWithNotApplicablePatches) {
         this.instancesWithNotApplicablePatches = instancesWithNotApplicablePatches;
         return this;
@@ -87,6 +96,7 @@ public class DescribePatchGroupStateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstancesWithOtherNonCompliantPatches")
     public Long instancesWithOtherNonCompliantPatches;
+
     public DescribePatchGroupStateResult withInstancesWithOtherNonCompliantPatches(Long instancesWithOtherNonCompliantPatches) {
         this.instancesWithOtherNonCompliantPatches = instancesWithOtherNonCompliantPatches;
         return this;
@@ -95,6 +105,7 @@ public class DescribePatchGroupStateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstancesWithSecurityNonCompliantPatches")
     public Long instancesWithSecurityNonCompliantPatches;
+
     public DescribePatchGroupStateResult withInstancesWithSecurityNonCompliantPatches(Long instancesWithSecurityNonCompliantPatches) {
         this.instancesWithSecurityNonCompliantPatches = instancesWithSecurityNonCompliantPatches;
         return this;
@@ -103,9 +114,11 @@ public class DescribePatchGroupStateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstancesWithUnreportedNotApplicablePatches")
     public Long instancesWithUnreportedNotApplicablePatches;
+
     public DescribePatchGroupStateResult withInstancesWithUnreportedNotApplicablePatches(Long instancesWithUnreportedNotApplicablePatches) {
         this.instancesWithUnreportedNotApplicablePatches = instancesWithUnreportedNotApplicablePatches;
         return this;
     }
     
+    public DescribePatchGroupStateResult(){}
 }

@@ -15,9 +15,11 @@ public class RegisterInstanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationId")
     public String operationId;
+
     public RegisterInstanceResponse withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public RegisterInstanceResponse(){}
 }

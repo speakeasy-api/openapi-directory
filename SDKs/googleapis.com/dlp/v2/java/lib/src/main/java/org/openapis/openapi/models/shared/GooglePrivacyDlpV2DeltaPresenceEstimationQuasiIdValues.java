@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedProbability")
     public Double estimatedProbability;
+
     public GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues withEstimatedProbability(Double estimatedProbability) {
         this.estimatedProbability = estimatedProbability;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quasiIdsValues")
     public GooglePrivacyDlpV2Value[] quasiIdsValues;
+
     public GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues withQuasiIdsValues(GooglePrivacyDlpV2Value[] quasiIdsValues) {
         this.quasiIdsValues = quasiIdsValues;
         return this;
     }
     
+    public GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues(){}
 }

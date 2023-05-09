@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetrecurrenceaddressesRequest {
@@ -12,6 +13,7 @@ public class GetrecurrenceaddressesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetrecurrenceaddressesRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetrecurrenceaddressesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetrecurrenceaddressesRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class GetrecurrenceaddressesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=recurrenceId")
     public String recurrenceId;
+
     public GetrecurrenceaddressesRequest withRecurrenceId(String recurrenceId) {
         this.recurrenceId = recurrenceId;
         return this;
     }
     
+    public GetrecurrenceaddressesRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("recurrenceId") String recurrenceId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.recurrenceId = recurrenceId;
+  }
 }

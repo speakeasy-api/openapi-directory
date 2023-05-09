@@ -15,6 +15,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableId")
     public String tableId;
+
     public Table withTableId(String tableId) {
         this.tableId = tableId;
         return this;
@@ -23,9 +24,11 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableName")
     public String tableName;
+
     public Table withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public Table(){}
 }

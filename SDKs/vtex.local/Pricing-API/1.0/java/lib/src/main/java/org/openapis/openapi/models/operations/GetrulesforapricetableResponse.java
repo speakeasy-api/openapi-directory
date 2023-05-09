@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetrulesforapricetableResponse {
     
     public String contentType;
+
     public GetrulesforapricetableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetrulesforapricetableResponse {
      */
     
     public Getrulesforapricetable200ApplicationJSON getrulesforapricetable200ApplicationJSONObject;
+
     public GetrulesforapricetableResponse withGetrulesforapricetable200ApplicationJSONObject(Getrulesforapricetable200ApplicationJSON getrulesforapricetable200ApplicationJSONObject) {
         this.getrulesforapricetable200ApplicationJSONObject = getrulesforapricetable200ApplicationJSONObject;
         return this;
@@ -26,6 +29,7 @@ public class GetrulesforapricetableResponse {
     
     
     public Integer statusCode;
+
     public GetrulesforapricetableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetrulesforapricetableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetrulesforapricetableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetrulesforapricetableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

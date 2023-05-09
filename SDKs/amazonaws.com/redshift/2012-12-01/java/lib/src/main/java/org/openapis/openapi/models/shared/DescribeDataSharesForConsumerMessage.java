@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDataSharesForConsumerMessage {
     
     public String consumerArn;
+
     public DescribeDataSharesForConsumerMessage withConsumerArn(String consumerArn) {
         this.consumerArn = consumerArn;
         return this;
@@ -16,6 +17,7 @@ public class DescribeDataSharesForConsumerMessage {
     
     
     public String marker;
+
     public DescribeDataSharesForConsumerMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,6 +25,7 @@ public class DescribeDataSharesForConsumerMessage {
     
     
     public Long maxRecords;
+
     public DescribeDataSharesForConsumerMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -30,9 +33,11 @@ public class DescribeDataSharesForConsumerMessage {
     
     
     public DataShareStatusForConsumerEnum status;
+
     public DescribeDataSharesForConsumerMessage withStatus(DataShareStatusForConsumerEnum status) {
         this.status = status;
         return this;
     }
     
+    public DescribeDataSharesForConsumerMessage(){}
 }

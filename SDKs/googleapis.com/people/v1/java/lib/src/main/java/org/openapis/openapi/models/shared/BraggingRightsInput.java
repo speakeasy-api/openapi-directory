@@ -18,6 +18,7 @@ public class BraggingRightsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public FieldMetadataInput metadata;
+
     public BraggingRightsInput withMetadata(FieldMetadataInput metadata) {
         this.metadata = metadata;
         return this;
@@ -29,9 +30,11 @@ public class BraggingRightsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public BraggingRightsInput withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public BraggingRightsInput(){}
 }

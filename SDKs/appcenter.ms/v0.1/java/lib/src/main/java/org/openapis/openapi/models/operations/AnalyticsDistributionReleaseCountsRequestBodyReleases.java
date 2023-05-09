@@ -16,6 +16,7 @@ public class AnalyticsDistributionReleaseCountsRequestBodyReleases {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distribution_group")
     public String distributionGroup;
+
     public AnalyticsDistributionReleaseCountsRequestBodyReleases withDistributionGroup(String distributionGroup) {
         this.distributionGroup = distributionGroup;
         return this;
@@ -27,9 +28,13 @@ public class AnalyticsDistributionReleaseCountsRequestBodyReleases {
      */
     @JsonProperty("release")
     public String release;
+
     public AnalyticsDistributionReleaseCountsRequestBodyReleases withRelease(String release) {
         this.release = release;
         return this;
     }
     
+    public AnalyticsDistributionReleaseCountsRequestBodyReleases(@JsonProperty("release") String release) {
+        this.release = release;
+  }
 }

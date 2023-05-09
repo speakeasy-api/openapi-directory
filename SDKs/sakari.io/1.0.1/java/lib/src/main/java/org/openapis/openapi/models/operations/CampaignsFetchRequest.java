@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CampaignsFetchRequest {
@@ -12,6 +13,7 @@ public class CampaignsFetchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public CampaignsFetchRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,9 +24,14 @@ public class CampaignsFetchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaignId")
     public String campaignId;
+
     public CampaignsFetchRequest withCampaignId(String campaignId) {
         this.campaignId = campaignId;
         return this;
     }
     
+    public CampaignsFetchRequest(@JsonProperty("accountId") String accountId, @JsonProperty("campaignId") String campaignId) {
+        this.accountId = accountId;
+        this.campaignId = campaignId;
+  }
 }

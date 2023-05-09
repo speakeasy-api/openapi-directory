@@ -18,9 +18,11 @@ public class ClientStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public ClientConfig[] config;
+
     public ClientStatusResponse withConfig(ClientConfig[] config) {
         this.config = config;
         return this;
     }
     
+    public ClientStatusResponse(){}
 }

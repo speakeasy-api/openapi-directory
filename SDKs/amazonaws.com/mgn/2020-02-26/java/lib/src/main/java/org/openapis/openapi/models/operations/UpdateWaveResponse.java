@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateWaveResponse {
@@ -12,6 +13,7 @@ public class UpdateWaveResponse {
      */
     
     public Object conflictException;
+
     public UpdateWaveResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateWaveResponse {
     
     
     public String contentType;
+
     public UpdateWaveResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class UpdateWaveResponse {
     
     
     public Integer statusCode;
+
     public UpdateWaveResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateWaveResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateWaveResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateWaveResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateWaveResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateWaveResponse {
      */
     
     public Object uninitializedAccountException;
+
     public UpdateWaveResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -63,9 +70,14 @@ public class UpdateWaveResponse {
      */
     
     public org.openapis.openapi.models.shared.Wave wave;
+
     public UpdateWaveResponse withWave(org.openapis.openapi.models.shared.Wave wave) {
         this.wave = wave;
         return this;
     }
     
+    public UpdateWaveResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetGroupMembershipIdResponse {
@@ -12,6 +13,7 @@ public class GetGroupMembershipIdResponse {
      */
     
     public Object accessDeniedException;
+
     public GetGroupMembershipIdResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetGroupMembershipIdResponse {
     
     
     public String contentType;
+
     public GetGroupMembershipIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetGroupMembershipIdResponse {
      */
     
     public org.openapis.openapi.models.shared.GetGroupMembershipIdResponse getGroupMembershipIdResponse;
+
     public GetGroupMembershipIdResponse withGetGroupMembershipIdResponse(org.openapis.openapi.models.shared.GetGroupMembershipIdResponse getGroupMembershipIdResponse) {
         this.getGroupMembershipIdResponse = getGroupMembershipIdResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetGroupMembershipIdResponse {
      */
     
     public Object internalServerException;
+
     public GetGroupMembershipIdResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetGroupMembershipIdResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetGroupMembershipIdResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetGroupMembershipIdResponse {
     
     
     public Integer statusCode;
+
     public GetGroupMembershipIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetGroupMembershipIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetGroupMembershipIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetGroupMembershipIdResponse {
      */
     
     public Object throttlingException;
+
     public GetGroupMembershipIdResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetGroupMembershipIdResponse {
      */
     
     public Object validationException;
+
     public GetGroupMembershipIdResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetGroupMembershipIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

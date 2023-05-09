@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetHostReservationPurchasePreviewRequest {
     
     public String[] hostIdSet;
+
     public GetHostReservationPurchasePreviewRequest withHostIdSet(String[] hostIdSet) {
         this.hostIdSet = hostIdSet;
         return this;
@@ -16,9 +17,14 @@ public class GetHostReservationPurchasePreviewRequest {
     
     
     public String offeringId;
+
     public GetHostReservationPurchasePreviewRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
     }
     
+    public GetHostReservationPurchasePreviewRequest(@JsonProperty("HostIdSet") String[] hostIdSet, @JsonProperty("OfferingId") String offeringId) {
+        this.hostIdSet = hostIdSet;
+        this.offeringId = offeringId;
+  }
 }

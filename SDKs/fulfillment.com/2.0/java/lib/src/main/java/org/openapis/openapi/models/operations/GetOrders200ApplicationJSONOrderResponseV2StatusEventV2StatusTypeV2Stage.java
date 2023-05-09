@@ -12,6 +12,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2StatusEventV2StatusTypeV2
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public GetOrders200ApplicationJSONOrderResponseV2StatusEventV2StatusTypeV2Stage withCode(String code) {
         this.code = code;
         return this;
@@ -20,9 +21,11 @@ public class GetOrders200ApplicationJSONOrderResponseV2StatusEventV2StatusTypeV2
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetOrders200ApplicationJSONOrderResponseV2StatusEventV2StatusTypeV2Stage withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetOrders200ApplicationJSONOrderResponseV2StatusEventV2StatusTypeV2Stage(){}
 }

@@ -39,10 +39,11 @@ public class Users {
     /**
      * Get current user
      * Returns the currently logged in user.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUserResponse getUser() throws Exception {
+    public org.openapis.openapi.models.operations.GetUserResponse getUser(org.openapis.openapi.models.operations.GetUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user");
         
@@ -51,17 +52,16 @@ public class Users {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserResponse res = new org.openapis.openapi.models.operations.GetUserResponse() {{
+        org.openapis.openapi.models.operations.GetUserResponse res = new org.openapis.openapi.models.operations.GetUserResponse(contentType, httpRes.statusCode()) {{
             account = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -86,10 +86,11 @@ public class Users {
      * List email addresses for current user
      * Returns all the authenticated user's email addresses. Both
      * confirmed and unconfirmed.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUserEmailsResponse getUserEmails() throws Exception {
+    public org.openapis.openapi.models.operations.GetUserEmailsResponse getUserEmails(org.openapis.openapi.models.operations.GetUserEmailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user/emails");
         
@@ -98,16 +99,15 @@ public class Users {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserEmailsResponse res = new org.openapis.openapi.models.operations.GetUserEmailsResponse() {{
+        org.openapis.openapi.models.operations.GetUserEmailsResponse res = new org.openapis.openapi.models.operations.GetUserEmailsResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -148,11 +148,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserEmailsEmailResponse res = new org.openapis.openapi.models.operations.GetUserEmailsEmailResponse() {{
+        org.openapis.openapi.models.operations.GetUserEmailsEmailResponse res = new org.openapis.openapi.models.operations.GetUserEmailsEmailResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -195,12 +193,10 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersSelectedUserResponse res = new org.openapis.openapi.models.operations.GetUsersSelectedUserResponse() {{
+        org.openapis.openapi.models.operations.GetUsersSelectedUserResponse res = new org.openapis.openapi.models.operations.GetUsersSelectedUserResponse(contentType, httpRes.statusCode()) {{
             account = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

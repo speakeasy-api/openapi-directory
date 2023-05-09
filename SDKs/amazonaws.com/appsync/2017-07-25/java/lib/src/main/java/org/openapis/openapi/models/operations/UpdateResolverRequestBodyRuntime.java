@@ -15,6 +15,7 @@ public class UpdateResolverRequestBodyRuntime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public org.openapis.openapi.models.shared.RuntimeNameEnum name;
+
     public UpdateResolverRequestBodyRuntime withName(org.openapis.openapi.models.shared.RuntimeNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class UpdateResolverRequestBodyRuntime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeVersion")
     public String runtimeVersion;
+
     public UpdateResolverRequestBodyRuntime withRuntimeVersion(String runtimeVersion) {
         this.runtimeVersion = runtimeVersion;
         return this;
     }
     
+    public UpdateResolverRequestBodyRuntime(){}
 }

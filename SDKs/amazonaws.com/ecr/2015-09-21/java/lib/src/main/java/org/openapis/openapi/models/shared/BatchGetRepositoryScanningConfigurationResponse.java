@@ -15,6 +15,7 @@ public class BatchGetRepositoryScanningConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failures")
     public RepositoryScanningConfigurationFailure[] failures;
+
     public BatchGetRepositoryScanningConfigurationResponse withFailures(RepositoryScanningConfigurationFailure[] failures) {
         this.failures = failures;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetRepositoryScanningConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scanningConfigurations")
     public RepositoryScanningConfiguration[] scanningConfigurations;
+
     public BatchGetRepositoryScanningConfigurationResponse withScanningConfigurations(RepositoryScanningConfiguration[] scanningConfigurations) {
         this.scanningConfigurations = scanningConfigurations;
         return this;
     }
     
+    public BatchGetRepositoryScanningConfigurationResponse(){}
 }

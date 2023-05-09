@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateLabelingJobRequest {
     @JsonProperty("HumanTaskConfig")
     public HumanTaskConfig humanTaskConfig;
+
     public CreateLabelingJobRequest withHumanTaskConfig(HumanTaskConfig humanTaskConfig) {
         this.humanTaskConfig = humanTaskConfig;
         return this;
@@ -18,6 +19,7 @@ public class CreateLabelingJobRequest {
     
     @JsonProperty("InputConfig")
     public LabelingJobInputConfig inputConfig;
+
     public CreateLabelingJobRequest withInputConfig(LabelingJobInputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -25,6 +27,7 @@ public class CreateLabelingJobRequest {
     
     @JsonProperty("LabelAttributeName")
     public String labelAttributeName;
+
     public CreateLabelingJobRequest withLabelAttributeName(String labelAttributeName) {
         this.labelAttributeName = labelAttributeName;
         return this;
@@ -33,6 +36,7 @@ public class CreateLabelingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelCategoryConfigS3Uri")
     public String labelCategoryConfigS3Uri;
+
     public CreateLabelingJobRequest withLabelCategoryConfigS3Uri(String labelCategoryConfigS3Uri) {
         this.labelCategoryConfigS3Uri = labelCategoryConfigS3Uri;
         return this;
@@ -41,6 +45,7 @@ public class CreateLabelingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelingJobAlgorithmsConfig")
     public LabelingJobAlgorithmsConfig labelingJobAlgorithmsConfig;
+
     public CreateLabelingJobRequest withLabelingJobAlgorithmsConfig(LabelingJobAlgorithmsConfig labelingJobAlgorithmsConfig) {
         this.labelingJobAlgorithmsConfig = labelingJobAlgorithmsConfig;
         return this;
@@ -48,6 +53,7 @@ public class CreateLabelingJobRequest {
     
     @JsonProperty("LabelingJobName")
     public String labelingJobName;
+
     public CreateLabelingJobRequest withLabelingJobName(String labelingJobName) {
         this.labelingJobName = labelingJobName;
         return this;
@@ -55,6 +61,7 @@ public class CreateLabelingJobRequest {
     
     @JsonProperty("OutputConfig")
     public LabelingJobOutputConfig outputConfig;
+
     public CreateLabelingJobRequest withOutputConfig(LabelingJobOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -62,6 +69,7 @@ public class CreateLabelingJobRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateLabelingJobRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -70,6 +78,7 @@ public class CreateLabelingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoppingConditions")
     public LabelingJobStoppingConditions stoppingConditions;
+
     public CreateLabelingJobRequest withStoppingConditions(LabelingJobStoppingConditions stoppingConditions) {
         this.stoppingConditions = stoppingConditions;
         return this;
@@ -78,9 +87,18 @@ public class CreateLabelingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateLabelingJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLabelingJobRequest(@JsonProperty("HumanTaskConfig") HumanTaskConfig humanTaskConfig, @JsonProperty("InputConfig") LabelingJobInputConfig inputConfig, @JsonProperty("LabelAttributeName") String labelAttributeName, @JsonProperty("LabelingJobName") String labelingJobName, @JsonProperty("OutputConfig") LabelingJobOutputConfig outputConfig, @JsonProperty("RoleArn") String roleArn) {
+        this.humanTaskConfig = humanTaskConfig;
+        this.inputConfig = inputConfig;
+        this.labelAttributeName = labelAttributeName;
+        this.labelingJobName = labelingJobName;
+        this.outputConfig = outputConfig;
+        this.roleArn = roleArn;
+  }
 }

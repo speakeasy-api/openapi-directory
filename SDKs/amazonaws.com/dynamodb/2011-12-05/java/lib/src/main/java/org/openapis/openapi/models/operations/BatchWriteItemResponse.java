@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchWriteItemResponse {
@@ -12,6 +13,7 @@ public class BatchWriteItemResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchWriteItemOutput batchWriteItemOutput;
+
     public BatchWriteItemResponse withBatchWriteItemOutput(org.openapis.openapi.models.shared.BatchWriteItemOutput batchWriteItemOutput) {
         this.batchWriteItemOutput = batchWriteItemOutput;
         return this;
@@ -19,6 +21,7 @@ public class BatchWriteItemResponse {
     
     
     public String contentType;
+
     public BatchWriteItemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchWriteItemResponse {
      */
     
     public Object internalServerError;
+
     public BatchWriteItemResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class BatchWriteItemResponse {
      */
     
     public Object limitExceededException;
+
     public BatchWriteItemResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class BatchWriteItemResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public BatchWriteItemResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -56,6 +62,7 @@ public class BatchWriteItemResponse {
     
     
     public Integer statusCode;
+
     public BatchWriteItemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BatchWriteItemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchWriteItemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class BatchWriteItemResponse {
      */
     
     public Object requestLimitExceeded;
+
     public BatchWriteItemResponse withRequestLimitExceeded(Object requestLimitExceeded) {
         this.requestLimitExceeded = requestLimitExceeded;
         return this;
@@ -83,9 +92,14 @@ public class BatchWriteItemResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchWriteItemResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public BatchWriteItemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

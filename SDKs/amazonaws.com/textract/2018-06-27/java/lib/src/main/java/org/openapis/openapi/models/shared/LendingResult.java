@@ -15,6 +15,7 @@ public class LendingResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Extractions")
     public Extraction[] extractions;
+
     public LendingResult withExtractions(Extraction[] extractions) {
         this.extractions = extractions;
         return this;
@@ -23,6 +24,7 @@ public class LendingResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Page")
     public Long page;
+
     public LendingResult withPage(Long page) {
         this.page = page;
         return this;
@@ -31,9 +33,11 @@ public class LendingResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageClassification")
     public PageClassification pageClassification;
+
     public LendingResult withPageClassification(PageClassification pageClassification) {
         this.pageClassification = pageClassification;
         return this;
     }
     
+    public LendingResult(){}
 }

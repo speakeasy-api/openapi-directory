@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListClosedWorkflowExecutionsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ListClosedWorkflowExecutionsInput listClosedWorkflowExecutionsInput;
+
     public ListClosedWorkflowExecutionsRequest withListClosedWorkflowExecutionsInput(org.openapis.openapi.models.shared.ListClosedWorkflowExecutionsInput listClosedWorkflowExecutionsInput) {
         this.listClosedWorkflowExecutionsInput = listClosedWorkflowExecutionsInput;
         return this;
@@ -16,6 +18,7 @@ public class ListClosedWorkflowExecutionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListClosedWorkflowExecutionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class ListClosedWorkflowExecutionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListClosedWorkflowExecutionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class ListClosedWorkflowExecutionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListClosedWorkflowExecutionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class ListClosedWorkflowExecutionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListClosedWorkflowExecutionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class ListClosedWorkflowExecutionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListClosedWorkflowExecutionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class ListClosedWorkflowExecutionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListClosedWorkflowExecutionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class ListClosedWorkflowExecutionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListClosedWorkflowExecutionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,6 +74,7 @@ public class ListClosedWorkflowExecutionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ListClosedWorkflowExecutionsXAmzTargetEnum xAmzTarget;
+
     public ListClosedWorkflowExecutionsRequest withXAmzTarget(ListClosedWorkflowExecutionsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
@@ -75,6 +85,7 @@ public class ListClosedWorkflowExecutionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maximumPageSize")
     public String maximumPageSize;
+
     public ListClosedWorkflowExecutionsRequest withMaximumPageSize(String maximumPageSize) {
         this.maximumPageSize = maximumPageSize;
         return this;
@@ -85,9 +96,14 @@ public class ListClosedWorkflowExecutionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextPageToken")
     public String nextPageToken;
+
     public ListClosedWorkflowExecutionsRequest withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListClosedWorkflowExecutionsRequest(@JsonProperty("ListClosedWorkflowExecutionsInput") org.openapis.openapi.models.shared.ListClosedWorkflowExecutionsInput listClosedWorkflowExecutionsInput, @JsonProperty("X-Amz-Target") ListClosedWorkflowExecutionsXAmzTargetEnum xAmzTarget) {
+        this.listClosedWorkflowExecutionsInput = listClosedWorkflowExecutionsInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

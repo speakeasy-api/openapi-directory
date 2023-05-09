@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAuthorizerResponse {
     
     public String contentType;
+
     public DeleteAuthorizerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAuthorizerResponse {
      */
     
     public java.util.Map<String, Object> deleteAuthorizerResponse;
+
     public DeleteAuthorizerResponse withDeleteAuthorizerResponse(java.util.Map<String, Object> deleteAuthorizerResponse) {
         this.deleteAuthorizerResponse = deleteAuthorizerResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAuthorizerResponse {
      */
     
     public Object deleteConflictException;
+
     public DeleteAuthorizerResponse withDeleteConflictException(Object deleteConflictException) {
         this.deleteConflictException = deleteConflictException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAuthorizerResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteAuthorizerResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAuthorizerResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteAuthorizerResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteAuthorizerResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteAuthorizerResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteAuthorizerResponse {
     
     
     public Integer statusCode;
+
     public DeleteAuthorizerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteAuthorizerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAuthorizerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteAuthorizerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAuthorizerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class DeleteAuthorizerResponse {
      */
     
     public Object throttlingException;
+
     public DeleteAuthorizerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteAuthorizerResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteAuthorizerResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteAuthorizerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

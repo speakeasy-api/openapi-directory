@@ -61,11 +61,9 @@ public class Returnaddress {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentReturnaddressCustombatchResponse res = new org.openapis.openapi.models.operations.ContentReturnaddressCustombatchResponse() {{
+        org.openapis.openapi.models.operations.ContentReturnaddressCustombatchResponse res = new org.openapis.openapi.models.operations.ContentReturnaddressCustombatchResponse(contentType, httpRes.statusCode()) {{
             returnaddressCustomBatchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,10 +105,8 @@ public class Returnaddress {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentReturnaddressDeleteResponse res = new org.openapis.openapi.models.operations.ContentReturnaddressDeleteResponse() {{
+        org.openapis.openapi.models.operations.ContentReturnaddressDeleteResponse res = new org.openapis.openapi.models.operations.ContentReturnaddressDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Returnaddress {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentReturnaddressGetResponse res = new org.openapis.openapi.models.operations.ContentReturnaddressGetResponse() {{
+        org.openapis.openapi.models.operations.ContentReturnaddressGetResponse res = new org.openapis.openapi.models.operations.ContentReturnaddressGetResponse(contentType, httpRes.statusCode()) {{
             returnAddress = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,11 +189,9 @@ public class Returnaddress {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentReturnaddressInsertResponse res = new org.openapis.openapi.models.operations.ContentReturnaddressInsertResponse() {{
+        org.openapis.openapi.models.operations.ContentReturnaddressInsertResponse res = new org.openapis.openapi.models.operations.ContentReturnaddressInsertResponse(contentType, httpRes.statusCode()) {{
             returnAddress = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class Returnaddress {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentReturnaddressListResponse res = new org.openapis.openapi.models.operations.ContentReturnaddressListResponse() {{
+        org.openapis.openapi.models.operations.ContentReturnaddressListResponse res = new org.openapis.openapi.models.operations.ContentReturnaddressListResponse(contentType, httpRes.statusCode()) {{
             returnaddressListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

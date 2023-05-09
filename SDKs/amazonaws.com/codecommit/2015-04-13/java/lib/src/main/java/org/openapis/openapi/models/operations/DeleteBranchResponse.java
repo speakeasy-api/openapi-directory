@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteBranchResponse {
@@ -12,6 +13,7 @@ public class DeleteBranchResponse {
      */
     
     public Object branchNameRequiredException;
+
     public DeleteBranchResponse withBranchNameRequiredException(Object branchNameRequiredException) {
         this.branchNameRequiredException = branchNameRequiredException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteBranchResponse {
     
     
     public String contentType;
+
     public DeleteBranchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteBranchResponse {
      */
     
     public Object defaultBranchCannotBeDeletedException;
+
     public DeleteBranchResponse withDefaultBranchCannotBeDeletedException(Object defaultBranchCannotBeDeletedException) {
         this.defaultBranchCannotBeDeletedException = defaultBranchCannotBeDeletedException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteBranchResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteBranchOutput deleteBranchOutput;
+
     public DeleteBranchResponse withDeleteBranchOutput(org.openapis.openapi.models.shared.DeleteBranchOutput deleteBranchOutput) {
         this.deleteBranchOutput = deleteBranchOutput;
         return this;
@@ -49,6 +54,7 @@ public class DeleteBranchResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public DeleteBranchResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteBranchResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public DeleteBranchResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteBranchResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public DeleteBranchResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteBranchResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public DeleteBranchResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class DeleteBranchResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public DeleteBranchResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -99,6 +109,7 @@ public class DeleteBranchResponse {
      */
     
     public Object invalidBranchNameException;
+
     public DeleteBranchResponse withInvalidBranchNameException(Object invalidBranchNameException) {
         this.invalidBranchNameException = invalidBranchNameException;
         return this;
@@ -109,6 +120,7 @@ public class DeleteBranchResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public DeleteBranchResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -119,6 +131,7 @@ public class DeleteBranchResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public DeleteBranchResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -129,6 +142,7 @@ public class DeleteBranchResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public DeleteBranchResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -136,6 +150,7 @@ public class DeleteBranchResponse {
     
     
     public Integer statusCode;
+
     public DeleteBranchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -143,9 +158,14 @@ public class DeleteBranchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteBranchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteBranchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

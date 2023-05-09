@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetSendQuotaResponse {
     
     public Double max24HourSend;
+
     public GetSendQuotaResponse withMax24HourSend(Double max24HourSend) {
         this.max24HourSend = max24HourSend;
         return this;
@@ -19,6 +20,7 @@ public class GetSendQuotaResponse {
     
     
     public Double maxSendRate;
+
     public GetSendQuotaResponse withMaxSendRate(Double maxSendRate) {
         this.maxSendRate = maxSendRate;
         return this;
@@ -26,9 +28,11 @@ public class GetSendQuotaResponse {
     
     
     public Double sentLast24Hours;
+
     public GetSendQuotaResponse withSentLast24Hours(Double sentLast24Hours) {
         this.sentLast24Hours = sentLast24Hours;
         return this;
     }
     
+    public GetSendQuotaResponse(){}
 }

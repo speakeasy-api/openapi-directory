@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class ResizeNodeGroupRequest {
     /**
-     * Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/scaling-clusters#graceful_decommissioning) allows the removal of nodes from the Compute Engine node group without interrupting jobs in progress. This timeout specifies how long to wait for jobs in progress to finish before forcefully removing nodes (and potentially interrupting jobs). Default timeout is 0 (for forceful decommission), and the maximum allowed timeout is 1 day. (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).Only supported on Dataproc image versions 1.2 and higher.
+     * Optional. Timeout for graceful YARN decommissioning. Graceful decommissioning (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/scaling-clusters#graceful_decommissioning) allows the removal of nodes from the Compute Engine node group without interrupting jobs in progress. This timeout specifies how long to wait for jobs in progress to finish before forcefully removing nodes (and potentially interrupting jobs). Default timeout is 0 (for forceful decommission), and the maximum allowed timeout is 1 day. (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).Only supported on Dataproc image versions 1.2 and higher.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gracefulDecommissionTimeout")
     public String gracefulDecommissionTimeout;
+
     public ResizeNodeGroupRequest withGracefulDecommissionTimeout(String gracefulDecommissionTimeout) {
         this.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
         return this;
@@ -29,6 +30,7 @@ public class ResizeNodeGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public ResizeNodeGroupRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -40,9 +42,11 @@ public class ResizeNodeGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Integer size;
+
     public ResizeNodeGroupRequest withSize(Integer size) {
         this.size = size;
         return this;
     }
     
+    public ResizeNodeGroupRequest(){}
 }

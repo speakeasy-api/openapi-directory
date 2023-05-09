@@ -18,9 +18,11 @@ public class Count {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upTo")
     public String upTo;
+
     public Count withUpTo(String upTo) {
         this.upTo = upTo;
         return this;
     }
     
+    public Count(){}
 }

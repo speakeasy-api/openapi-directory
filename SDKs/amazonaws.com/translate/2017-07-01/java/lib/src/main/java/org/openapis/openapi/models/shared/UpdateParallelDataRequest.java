@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateParallelDataRequest {
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public UpdateParallelDataRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class UpdateParallelDataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateParallelDataRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class UpdateParallelDataRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateParallelDataRequest withName(String name) {
         this.name = name;
         return this;
@@ -33,9 +36,15 @@ public class UpdateParallelDataRequest {
     
     @JsonProperty("ParallelDataConfig")
     public ParallelDataConfig parallelDataConfig;
+
     public UpdateParallelDataRequest withParallelDataConfig(ParallelDataConfig parallelDataConfig) {
         this.parallelDataConfig = parallelDataConfig;
         return this;
     }
     
+    public UpdateParallelDataRequest(@JsonProperty("ClientToken") String clientToken, @JsonProperty("Name") String name, @JsonProperty("ParallelDataConfig") ParallelDataConfig parallelDataConfig) {
+        this.clientToken = clientToken;
+        this.name = name;
+        this.parallelDataConfig = parallelDataConfig;
+  }
 }

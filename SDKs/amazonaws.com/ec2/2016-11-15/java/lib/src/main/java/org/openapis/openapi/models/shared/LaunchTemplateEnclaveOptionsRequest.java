@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class LaunchTemplateEnclaveOptionsRequest {
     
     public Boolean enabled;
+
     public LaunchTemplateEnclaveOptionsRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public LaunchTemplateEnclaveOptionsRequest(){}
 }

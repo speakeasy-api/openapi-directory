@@ -58,11 +58,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudbillingServicesListResponse res = new org.openapis.openapi.models.operations.CloudbillingServicesListResponse() {{
+        org.openapis.openapi.models.operations.CloudbillingServicesListResponse res = new org.openapis.openapi.models.operations.CloudbillingServicesListResponse(contentType, httpRes.statusCode()) {{
             listServicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudbillingServicesSkusListResponse res = new org.openapis.openapi.models.operations.CloudbillingServicesSkusListResponse() {{
+        org.openapis.openapi.models.operations.CloudbillingServicesSkusListResponse res = new org.openapis.openapi.models.operations.CloudbillingServicesSkusListResponse(contentType, httpRes.statusCode()) {{
             listSkusResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

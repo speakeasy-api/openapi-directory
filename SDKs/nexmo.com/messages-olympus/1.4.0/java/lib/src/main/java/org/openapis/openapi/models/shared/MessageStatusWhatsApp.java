@@ -17,6 +17,7 @@ public class MessageStatusWhatsApp {
      */
     @JsonProperty("channel")
     public MessageStatusWhatsAppChannelEnum channel;
+
     public MessageStatusWhatsApp withChannel(MessageStatusWhatsAppChannelEnum channel) {
         this.channel = channel;
         return this;
@@ -28,6 +29,7 @@ public class MessageStatusWhatsApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_ref")
     public String clientRef;
+
     public MessageStatusWhatsApp withClientRef(String clientRef) {
         this.clientRef = clientRef;
         return this;
@@ -39,6 +41,7 @@ public class MessageStatusWhatsApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public MessageStatusWhatsAppError error;
+
     public MessageStatusWhatsApp withError(MessageStatusWhatsAppError error) {
         this.error = error;
         return this;
@@ -50,6 +53,7 @@ public class MessageStatusWhatsApp {
      */
     @JsonProperty("from")
     public String from;
+
     public MessageStatusWhatsApp withFrom(String from) {
         this.from = from;
         return this;
@@ -60,6 +64,7 @@ public class MessageStatusWhatsApp {
      */
     @JsonProperty("message_uuid")
     public String messageUuid;
+
     public MessageStatusWhatsApp withMessageUuid(String messageUuid) {
         this.messageUuid = messageUuid;
         return this;
@@ -67,6 +72,7 @@ public class MessageStatusWhatsApp {
     
     @JsonProperty("status")
     public MessageStatusWhatsAppStatusEnum status;
+
     public MessageStatusWhatsApp withStatus(MessageStatusWhatsAppStatusEnum status) {
         this.status = status;
         return this;
@@ -77,6 +83,7 @@ public class MessageStatusWhatsApp {
      */
     @JsonProperty("timestamp")
     public String timestamp;
+
     public MessageStatusWhatsApp withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -88,6 +95,7 @@ public class MessageStatusWhatsApp {
      */
     @JsonProperty("to")
     public String to;
+
     public MessageStatusWhatsApp withTo(String to) {
         this.to = to;
         return this;
@@ -96,6 +104,7 @@ public class MessageStatusWhatsApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public MessageStatusWhatsAppUsage usage;
+
     public MessageStatusWhatsApp withUsage(MessageStatusWhatsAppUsage usage) {
         this.usage = usage;
         return this;
@@ -107,9 +116,18 @@ public class MessageStatusWhatsApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("whatsapp")
     public MessageStatusWhatsAppWhatsapp whatsapp;
+
     public MessageStatusWhatsApp withWhatsapp(MessageStatusWhatsAppWhatsapp whatsapp) {
         this.whatsapp = whatsapp;
         return this;
     }
     
+    public MessageStatusWhatsApp(@JsonProperty("channel") MessageStatusWhatsAppChannelEnum channel, @JsonProperty("from") String from, @JsonProperty("message_uuid") String messageUuid, @JsonProperty("status") MessageStatusWhatsAppStatusEnum status, @JsonProperty("timestamp") String timestamp, @JsonProperty("to") String to) {
+        this.channel = channel;
+        this.from = from;
+        this.messageUuid = messageUuid;
+        this.status = status;
+        this.timestamp = timestamp;
+        this.to = to;
+  }
 }

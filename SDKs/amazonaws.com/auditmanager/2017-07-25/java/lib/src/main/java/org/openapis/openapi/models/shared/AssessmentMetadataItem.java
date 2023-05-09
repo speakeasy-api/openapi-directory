@@ -20,6 +20,7 @@ public class AssessmentMetadataItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceType")
     public String complianceType;
+
     public AssessmentMetadataItem withComplianceType(String complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -30,6 +31,7 @@ public class AssessmentMetadataItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public AssessmentMetadataItem withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class AssessmentMetadataItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegations")
     public Delegation[] delegations;
+
     public AssessmentMetadataItem withDelegations(Delegation[] delegations) {
         this.delegations = delegations;
         return this;
@@ -46,6 +49,7 @@ public class AssessmentMetadataItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AssessmentMetadataItem withId(String id) {
         this.id = id;
         return this;
@@ -56,6 +60,7 @@ public class AssessmentMetadataItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdated")
     public OffsetDateTime lastUpdated;
+
     public AssessmentMetadataItem withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -64,6 +69,7 @@ public class AssessmentMetadataItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AssessmentMetadataItem withName(String name) {
         this.name = name;
         return this;
@@ -72,6 +78,7 @@ public class AssessmentMetadataItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public Role[] roles;
+
     public AssessmentMetadataItem withRoles(Role[] roles) {
         this.roles = roles;
         return this;
@@ -80,9 +87,11 @@ public class AssessmentMetadataItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AssessmentStatusEnum status;
+
     public AssessmentMetadataItem withStatus(AssessmentStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AssessmentMetadataItem(){}
 }

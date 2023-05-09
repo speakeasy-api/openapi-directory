@@ -18,6 +18,7 @@ public class ListDnsPeeringsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsPeerings")
     public DnsPeering[] dnsPeerings;
+
     public ListDnsPeeringsResponse withDnsPeerings(DnsPeering[] dnsPeerings) {
         this.dnsPeerings = dnsPeerings;
         return this;
@@ -29,9 +30,11 @@ public class ListDnsPeeringsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListDnsPeeringsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListDnsPeeringsResponse(){}
 }

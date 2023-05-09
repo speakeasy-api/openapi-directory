@@ -15,6 +15,7 @@ public class RouteWarnings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public RouteWarningsCodeEnum code;
+
     public RouteWarnings withCode(RouteWarningsCodeEnum code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class RouteWarnings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public RouteWarningsData[] data;
+
     public RouteWarnings withData(RouteWarningsData[] data) {
         this.data = data;
         return this;
@@ -37,9 +39,11 @@ public class RouteWarnings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public RouteWarnings withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public RouteWarnings(){}
 }

@@ -17,6 +17,7 @@ public class UpdateReplicationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateReplicationJobRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class UpdateReplicationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encrypted")
     public Boolean encrypted;
+
     public UpdateReplicationJobRequest withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -33,6 +35,7 @@ public class UpdateReplicationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
     public Long frequency;
+
     public UpdateReplicationJobRequest withFrequency(Long frequency) {
         this.frequency = frequency;
         return this;
@@ -41,6 +44,7 @@ public class UpdateReplicationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public UpdateReplicationJobRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -49,6 +53,7 @@ public class UpdateReplicationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenseType")
     public LicenseTypeEnum licenseType;
+
     public UpdateReplicationJobRequest withLicenseType(LicenseTypeEnum licenseType) {
         this.licenseType = licenseType;
         return this;
@@ -59,6 +64,7 @@ public class UpdateReplicationJobRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("nextReplicationRunStartTime")
     public OffsetDateTime nextReplicationRunStartTime;
+
     public UpdateReplicationJobRequest withNextReplicationRunStartTime(OffsetDateTime nextReplicationRunStartTime) {
         this.nextReplicationRunStartTime = nextReplicationRunStartTime;
         return this;
@@ -67,6 +73,7 @@ public class UpdateReplicationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfRecentAmisToKeep")
     public Long numberOfRecentAmisToKeep;
+
     public UpdateReplicationJobRequest withNumberOfRecentAmisToKeep(Long numberOfRecentAmisToKeep) {
         this.numberOfRecentAmisToKeep = numberOfRecentAmisToKeep;
         return this;
@@ -74,6 +81,7 @@ public class UpdateReplicationJobRequest {
     
     @JsonProperty("replicationJobId")
     public String replicationJobId;
+
     public UpdateReplicationJobRequest withReplicationJobId(String replicationJobId) {
         this.replicationJobId = replicationJobId;
         return this;
@@ -82,9 +90,13 @@ public class UpdateReplicationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleName")
     public String roleName;
+
     public UpdateReplicationJobRequest withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
     }
     
+    public UpdateReplicationJobRequest(@JsonProperty("replicationJobId") String replicationJobId) {
+        this.replicationJobId = replicationJobId;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consoleInstructions")
     public GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsConsole consoleInstructions;
+
     public GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions withConsoleInstructions(GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsConsole consoleInstructions) {
         this.consoleInstructions = consoleInstructions;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcloudInstructions")
     public GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud gcloudInstructions;
+
     public GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions withGcloudInstructions(GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud gcloudInstructions) {
         this.gcloudInstructions = gcloudInstructions;
         return this;
     }
     
+    public GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions(){}
 }

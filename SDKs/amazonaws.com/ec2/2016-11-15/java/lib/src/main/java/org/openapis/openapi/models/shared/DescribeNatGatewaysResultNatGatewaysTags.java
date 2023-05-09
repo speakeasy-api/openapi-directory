@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNatGatewaysResultNatGatewaysTags {
     
     public String key;
+
     public DescribeNatGatewaysResultNatGatewaysTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeNatGatewaysResultNatGatewaysTags {
     
     
     public String value;
+
     public DescribeNatGatewaysResultNatGatewaysTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeNatGatewaysResultNatGatewaysTags(){}
 }

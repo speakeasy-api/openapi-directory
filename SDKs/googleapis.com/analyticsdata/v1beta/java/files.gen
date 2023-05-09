@@ -135,4 +135,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/RunRealtimeReportResponse.j
 lib/src/main/java/org/openapis/openapi/models/shared/RunRealtimeReportRequestMetricAggregationsEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/RunRealtimeReportRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/MinuteRange.java
+docs/sdk/README.md
+docs/properties/README.md
 USAGE.md

@@ -16,6 +16,7 @@ public class DeviceCheckoutOptions {
      */
     @JsonProperty("device_id")
     public String deviceId;
+
     public DeviceCheckoutOptions withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -27,6 +28,7 @@ public class DeviceCheckoutOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skip_receipt_screen")
     public Boolean skipReceiptScreen;
+
     public DeviceCheckoutOptions withSkipReceiptScreen(Boolean skipReceiptScreen) {
         this.skipReceiptScreen = skipReceiptScreen;
         return this;
@@ -35,9 +37,13 @@ public class DeviceCheckoutOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tip_settings")
     public TipSettings tipSettings;
+
     public DeviceCheckoutOptions withTipSettings(TipSettings tipSettings) {
         this.tipSettings = tipSettings;
         return this;
     }
     
+    public DeviceCheckoutOptions(@JsonProperty("device_id") String deviceId) {
+        this.deviceId = deviceId;
+  }
 }

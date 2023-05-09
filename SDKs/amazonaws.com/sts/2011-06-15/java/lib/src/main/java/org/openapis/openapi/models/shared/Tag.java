@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Tag - You can pass custom key-value pair attributes when you assume a role or federate a user. These are called session tags. You can then use the session tags to control access to resources. For more information, see &lt;a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_session-tags.html"&gt;Tagging Amazon Web Services STS Sessions&lt;/a&gt; in the &lt;i&gt;IAM User Guide&lt;/i&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Tag {
     
     public String key;
+
     public Tag withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class Tag {
     
     
     public String value;
+
     public Tag withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Tag(@JsonProperty("Key") String key, @JsonProperty("Value") String value) {
+        this.key = key;
+        this.value = value;
+  }
 }

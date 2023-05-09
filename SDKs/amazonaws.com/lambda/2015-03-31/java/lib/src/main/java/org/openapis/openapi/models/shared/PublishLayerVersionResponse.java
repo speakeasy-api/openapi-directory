@@ -15,6 +15,7 @@ public class PublishLayerVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompatibleArchitectures")
     public ArchitectureEnum[] compatibleArchitectures;
+
     public PublishLayerVersionResponse withCompatibleArchitectures(ArchitectureEnum[] compatibleArchitectures) {
         this.compatibleArchitectures = compatibleArchitectures;
         return this;
@@ -23,6 +24,7 @@ public class PublishLayerVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompatibleRuntimes")
     public RuntimeEnum[] compatibleRuntimes;
+
     public PublishLayerVersionResponse withCompatibleRuntimes(RuntimeEnum[] compatibleRuntimes) {
         this.compatibleRuntimes = compatibleRuntimes;
         return this;
@@ -31,6 +33,7 @@ public class PublishLayerVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Content")
     public LayerVersionContentOutput content;
+
     public PublishLayerVersionResponse withContent(LayerVersionContentOutput content) {
         this.content = content;
         return this;
@@ -39,6 +42,7 @@ public class PublishLayerVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedDate")
     public String createdDate;
+
     public PublishLayerVersionResponse withCreatedDate(String createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -47,6 +51,7 @@ public class PublishLayerVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public PublishLayerVersionResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -55,6 +60,7 @@ public class PublishLayerVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LayerArn")
     public String layerArn;
+
     public PublishLayerVersionResponse withLayerArn(String layerArn) {
         this.layerArn = layerArn;
         return this;
@@ -63,6 +69,7 @@ public class PublishLayerVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LayerVersionArn")
     public String layerVersionArn;
+
     public PublishLayerVersionResponse withLayerVersionArn(String layerVersionArn) {
         this.layerVersionArn = layerVersionArn;
         return this;
@@ -71,6 +78,7 @@ public class PublishLayerVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseInfo")
     public String licenseInfo;
+
     public PublishLayerVersionResponse withLicenseInfo(String licenseInfo) {
         this.licenseInfo = licenseInfo;
         return this;
@@ -79,9 +87,11 @@ public class PublishLayerVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public PublishLayerVersionResponse withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public PublishLayerVersionResponse(){}
 }

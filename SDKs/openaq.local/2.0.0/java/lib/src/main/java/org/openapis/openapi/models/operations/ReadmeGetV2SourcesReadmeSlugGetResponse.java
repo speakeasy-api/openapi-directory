@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReadmeGetV2SourcesReadmeSlugGetResponse {
     
     public String contentType;
+
     public ReadmeGetV2SourcesReadmeSlugGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ReadmeGetV2SourcesReadmeSlugGetResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public ReadmeGetV2SourcesReadmeSlugGetResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -26,6 +29,7 @@ public class ReadmeGetV2SourcesReadmeSlugGetResponse {
     
     
     public Integer statusCode;
+
     public ReadmeGetV2SourcesReadmeSlugGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ReadmeGetV2SourcesReadmeSlugGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReadmeGetV2SourcesReadmeSlugGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class ReadmeGetV2SourcesReadmeSlugGetResponse {
      */
     
     public Object readmeGetV2SourcesReadmeSlugGet200ApplicationJSONAny;
+
     public ReadmeGetV2SourcesReadmeSlugGetResponse withReadmeGetV2SourcesReadmeSlugGet200ApplicationJSONAny(Object readmeGetV2SourcesReadmeSlugGet200ApplicationJSONAny) {
         this.readmeGetV2SourcesReadmeSlugGet200ApplicationJSONAny = readmeGetV2SourcesReadmeSlugGet200ApplicationJSONAny;
         return this;
     }
     
+    public ReadmeGetV2SourcesReadmeSlugGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

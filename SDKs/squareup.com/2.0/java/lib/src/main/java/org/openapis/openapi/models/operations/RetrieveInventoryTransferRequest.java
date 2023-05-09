@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveInventoryTransferRequest {
@@ -12,9 +13,13 @@ public class RetrieveInventoryTransferRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transfer_id")
     public String transferId;
+
     public RetrieveInventoryTransferRequest withTransferId(String transferId) {
         this.transferId = transferId;
         return this;
     }
     
+    public RetrieveInventoryTransferRequest(@JsonProperty("transfer_id") String transferId) {
+        this.transferId = transferId;
+  }
 }

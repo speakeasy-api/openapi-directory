@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2FieldSelectionOptionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("choices")
     public GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceInput[] choices;
+
     public GoogleAppsDriveLabelsV2FieldSelectionOptionsInput withChoices(GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceInput[] choices) {
         this.choices = choices;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsDriveLabelsV2FieldSelectionOptionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listOptions")
     public GoogleAppsDriveLabelsV2FieldListOptions listOptions;
+
     public GoogleAppsDriveLabelsV2FieldSelectionOptionsInput withListOptions(GoogleAppsDriveLabelsV2FieldListOptions listOptions) {
         this.listOptions = listOptions;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2FieldSelectionOptionsInput(){}
 }

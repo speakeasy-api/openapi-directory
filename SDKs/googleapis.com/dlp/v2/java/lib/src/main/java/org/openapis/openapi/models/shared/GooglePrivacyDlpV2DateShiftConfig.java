@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2DateShiftConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context")
     public GooglePrivacyDlpV2FieldId context;
+
     public GooglePrivacyDlpV2DateShiftConfig withContext(GooglePrivacyDlpV2FieldId context) {
         this.context = context;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2DateShiftConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cryptoKey")
     public GooglePrivacyDlpV2CryptoKey cryptoKey;
+
     public GooglePrivacyDlpV2DateShiftConfig withCryptoKey(GooglePrivacyDlpV2CryptoKey cryptoKey) {
         this.cryptoKey = cryptoKey;
         return this;
@@ -40,6 +42,7 @@ public class GooglePrivacyDlpV2DateShiftConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowerBoundDays")
     public Integer lowerBoundDays;
+
     public GooglePrivacyDlpV2DateShiftConfig withLowerBoundDays(Integer lowerBoundDays) {
         this.lowerBoundDays = lowerBoundDays;
         return this;
@@ -51,9 +54,11 @@ public class GooglePrivacyDlpV2DateShiftConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upperBoundDays")
     public Integer upperBoundDays;
+
     public GooglePrivacyDlpV2DateShiftConfig withUpperBoundDays(Integer upperBoundDays) {
         this.upperBoundDays = upperBoundDays;
         return this;
     }
     
+    public GooglePrivacyDlpV2DateShiftConfig(){}
 }

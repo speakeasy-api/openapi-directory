@@ -15,6 +15,7 @@ public class TextWithHighlights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Highlights")
     public Highlight[] highlights;
+
     public TextWithHighlights withHighlights(Highlight[] highlights) {
         this.highlights = highlights;
         return this;
@@ -23,9 +24,11 @@ public class TextWithHighlights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public TextWithHighlights withText(String text) {
         this.text = text;
         return this;
     }
     
+    public TextWithHighlights(){}
 }

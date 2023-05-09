@@ -22,6 +22,7 @@ public class TeamDiscussion {
      */
     @JsonProperty("author")
     public NullableSimpleUser author;
+
     public TeamDiscussion withAuthor(NullableSimpleUser author) {
         this.author = author;
         return this;
@@ -32,6 +33,7 @@ public class TeamDiscussion {
      */
     @JsonProperty("body")
     public String body;
+
     public TeamDiscussion withBody(String body) {
         this.body = body;
         return this;
@@ -39,6 +41,7 @@ public class TeamDiscussion {
     
     @JsonProperty("body_html")
     public String bodyHtml;
+
     public TeamDiscussion withBodyHtml(String bodyHtml) {
         this.bodyHtml = bodyHtml;
         return this;
@@ -49,6 +52,7 @@ public class TeamDiscussion {
      */
     @JsonProperty("body_version")
     public String bodyVersion;
+
     public TeamDiscussion withBodyVersion(String bodyVersion) {
         this.bodyVersion = bodyVersion;
         return this;
@@ -56,6 +60,7 @@ public class TeamDiscussion {
     
     @JsonProperty("comments_count")
     public Long commentsCount;
+
     public TeamDiscussion withCommentsCount(Long commentsCount) {
         this.commentsCount = commentsCount;
         return this;
@@ -63,6 +68,7 @@ public class TeamDiscussion {
     
     @JsonProperty("comments_url")
     public String commentsUrl;
+
     public TeamDiscussion withCommentsUrl(String commentsUrl) {
         this.commentsUrl = commentsUrl;
         return this;
@@ -72,6 +78,7 @@ public class TeamDiscussion {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public TeamDiscussion withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -79,6 +86,7 @@ public class TeamDiscussion {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public TeamDiscussion withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -88,6 +96,7 @@ public class TeamDiscussion {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_edited_at")
     public OffsetDateTime lastEditedAt;
+
     public TeamDiscussion withLastEditedAt(OffsetDateTime lastEditedAt) {
         this.lastEditedAt = lastEditedAt;
         return this;
@@ -95,6 +104,7 @@ public class TeamDiscussion {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public TeamDiscussion withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -105,6 +115,7 @@ public class TeamDiscussion {
      */
     @JsonProperty("number")
     public Long number;
+
     public TeamDiscussion withNumber(Long number) {
         this.number = number;
         return this;
@@ -115,6 +126,7 @@ public class TeamDiscussion {
      */
     @JsonProperty("pinned")
     public Boolean pinned;
+
     public TeamDiscussion withPinned(Boolean pinned) {
         this.pinned = pinned;
         return this;
@@ -125,6 +137,7 @@ public class TeamDiscussion {
      */
     @JsonProperty("private")
     public Boolean private_;
+
     public TeamDiscussion withPrivate(Boolean private_) {
         this.private_ = private_;
         return this;
@@ -133,6 +146,7 @@ public class TeamDiscussion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reactions")
     public ReactionRollup reactions;
+
     public TeamDiscussion withReactions(ReactionRollup reactions) {
         this.reactions = reactions;
         return this;
@@ -140,6 +154,7 @@ public class TeamDiscussion {
     
     @JsonProperty("team_url")
     public String teamUrl;
+
     public TeamDiscussion withTeamUrl(String teamUrl) {
         this.teamUrl = teamUrl;
         return this;
@@ -150,6 +165,7 @@ public class TeamDiscussion {
      */
     @JsonProperty("title")
     public String title;
+
     public TeamDiscussion withTitle(String title) {
         this.title = title;
         return this;
@@ -159,6 +175,7 @@ public class TeamDiscussion {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public TeamDiscussion withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -166,9 +183,29 @@ public class TeamDiscussion {
     
     @JsonProperty("url")
     public String url;
+
     public TeamDiscussion withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public TeamDiscussion(@JsonProperty("author") NullableSimpleUser author, @JsonProperty("body") String body, @JsonProperty("body_html") String bodyHtml, @JsonProperty("body_version") String bodyVersion, @JsonProperty("comments_count") Long commentsCount, @JsonProperty("comments_url") String commentsUrl, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("html_url") String htmlUrl, @JsonProperty("last_edited_at") OffsetDateTime lastEditedAt, @JsonProperty("node_id") String nodeId, @JsonProperty("number") Long number, @JsonProperty("pinned") Boolean pinned, @JsonProperty("private") Boolean private_, @JsonProperty("team_url") String teamUrl, @JsonProperty("title") String title, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
+        this.author = author;
+        this.body = body;
+        this.bodyHtml = bodyHtml;
+        this.bodyVersion = bodyVersion;
+        this.commentsCount = commentsCount;
+        this.commentsUrl = commentsUrl;
+        this.createdAt = createdAt;
+        this.htmlUrl = htmlUrl;
+        this.lastEditedAt = lastEditedAt;
+        this.nodeId = nodeId;
+        this.number = number;
+        this.pinned = pinned;
+        this.private_ = private_;
+        this.teamUrl = teamUrl;
+        this.title = title;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

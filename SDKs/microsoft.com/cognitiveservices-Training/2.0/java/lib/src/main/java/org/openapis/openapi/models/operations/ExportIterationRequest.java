@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportIterationRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
     public String trainingKey;
+
     public ExportIterationRequest withTrainingKey(String trainingKey) {
         this.trainingKey = trainingKey;
         return this;
@@ -19,6 +21,7 @@ public class ExportIterationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=flavor")
     public String flavor;
+
     public ExportIterationRequest withFlavor(String flavor) {
         this.flavor = flavor;
         return this;
@@ -29,6 +32,7 @@ public class ExportIterationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=iterationId")
     public String iterationId;
+
     public ExportIterationRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -39,6 +43,7 @@ public class ExportIterationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=platform")
     public String platform;
+
     public ExportIterationRequest withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -49,9 +54,16 @@ public class ExportIterationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public ExportIterationRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public ExportIterationRequest(@JsonProperty("Training-Key") String trainingKey, @JsonProperty("iterationId") String iterationId, @JsonProperty("platform") String platform, @JsonProperty("projectId") String projectId) {
+        this.trainingKey = trainingKey;
+        this.iterationId = iterationId;
+        this.platform = platform;
+        this.projectId = projectId;
+  }
 }

@@ -18,6 +18,7 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionPeriod")
     public CollectionPeriod collectionPeriod;
+
     public Record withCollectionPeriod(CollectionPeriod collectionPeriod) {
         this.collectionPeriod = collectionPeriod;
         return this;
@@ -29,6 +30,7 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public Key key;
+
     public Record withKey(Key key) {
         this.key = key;
         return this;
@@ -40,9 +42,11 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public java.util.Map<String, Metric> metrics;
+
     public Record withMetrics(java.util.Map<String, Metric> metrics) {
         this.metrics = metrics;
         return this;
     }
     
+    public Record(){}
 }

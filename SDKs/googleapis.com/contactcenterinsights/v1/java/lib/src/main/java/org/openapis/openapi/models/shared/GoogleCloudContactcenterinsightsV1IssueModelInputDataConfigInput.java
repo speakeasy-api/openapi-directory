@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigInput withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("medium")
     public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum medium;
+
     public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigInput withMedium(GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum medium) {
         this.medium = medium;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigInput(){}
 }

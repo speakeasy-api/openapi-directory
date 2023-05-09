@@ -18,6 +18,7 @@ public class GoogleFirestoreAdminV1Index {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiScope")
     public GoogleFirestoreAdminV1IndexApiScopeEnum apiScope;
+
     public GoogleFirestoreAdminV1Index withApiScope(GoogleFirestoreAdminV1IndexApiScopeEnum apiScope) {
         this.apiScope = apiScope;
         return this;
@@ -29,6 +30,7 @@ public class GoogleFirestoreAdminV1Index {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public GoogleFirestoreAdminV1IndexField[] fields;
+
     public GoogleFirestoreAdminV1Index withFields(GoogleFirestoreAdminV1IndexField[] fields) {
         this.fields = fields;
         return this;
@@ -40,6 +42,7 @@ public class GoogleFirestoreAdminV1Index {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleFirestoreAdminV1Index withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GoogleFirestoreAdminV1Index {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryScope")
     public GoogleFirestoreAdminV1IndexQueryScopeEnum queryScope;
+
     public GoogleFirestoreAdminV1Index withQueryScope(GoogleFirestoreAdminV1IndexQueryScopeEnum queryScope) {
         this.queryScope = queryScope;
         return this;
@@ -62,9 +66,11 @@ public class GoogleFirestoreAdminV1Index {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleFirestoreAdminV1IndexStateEnum state;
+
     public GoogleFirestoreAdminV1Index withState(GoogleFirestoreAdminV1IndexStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleFirestoreAdminV1Index(){}
 }

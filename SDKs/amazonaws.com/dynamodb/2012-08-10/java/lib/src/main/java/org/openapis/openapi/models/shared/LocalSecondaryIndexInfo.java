@@ -15,6 +15,7 @@ public class LocalSecondaryIndexInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexName")
     public String indexName;
+
     public LocalSecondaryIndexInfo withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -23,6 +24,7 @@ public class LocalSecondaryIndexInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeySchema")
     public KeySchemaElement[] keySchema;
+
     public LocalSecondaryIndexInfo withKeySchema(KeySchemaElement[] keySchema) {
         this.keySchema = keySchema;
         return this;
@@ -31,9 +33,11 @@ public class LocalSecondaryIndexInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Projection")
     public Projection projection;
+
     public LocalSecondaryIndexInfo withProjection(Projection projection) {
         this.projection = projection;
         return this;
     }
     
+    public LocalSecondaryIndexInfo(){}
 }

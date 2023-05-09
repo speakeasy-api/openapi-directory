@@ -15,9 +15,11 @@ public class BatchPutMessageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchPutMessageErrorEntries")
     public BatchPutMessageErrorEntry[] batchPutMessageErrorEntries;
+
     public BatchPutMessageResponse withBatchPutMessageErrorEntries(BatchPutMessageErrorEntry[] batchPutMessageErrorEntries) {
         this.batchPutMessageErrorEntries = batchPutMessageErrorEntries;
         return this;
     }
     
+    public BatchPutMessageResponse(){}
 }

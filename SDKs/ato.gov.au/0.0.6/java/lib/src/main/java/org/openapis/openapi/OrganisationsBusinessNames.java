@@ -67,12 +67,10 @@ public class OrganisationsBusinessNames {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteOrganisationsPartyIdBusinessNamesProductIdResponse res = new org.openapis.openapi.models.operations.DeleteOrganisationsPartyIdBusinessNamesProductIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteOrganisationsPartyIdBusinessNamesProductIdResponse res = new org.openapis.openapi.models.operations.DeleteOrganisationsPartyIdBusinessNamesProductIdResponse(contentType, httpRes.statusCode()) {{
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -123,13 +121,11 @@ public class OrganisationsBusinessNames {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganisationsPartyIdBusinessNamesResponse res = new org.openapis.openapi.models.operations.GetOrganisationsPartyIdBusinessNamesResponse() {{
+        org.openapis.openapi.models.operations.GetOrganisationsPartyIdBusinessNamesResponse res = new org.openapis.openapi.models.operations.GetOrganisationsPartyIdBusinessNamesResponse(contentType, httpRes.statusCode()) {{
             businessNames = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -189,13 +185,11 @@ public class OrganisationsBusinessNames {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganisationsPartyIdBusinessNamesProductIdResponse res = new org.openapis.openapi.models.operations.GetOrganisationsPartyIdBusinessNamesProductIdResponse() {{
+        org.openapis.openapi.models.operations.GetOrganisationsPartyIdBusinessNamesProductIdResponse res = new org.openapis.openapi.models.operations.GetOrganisationsPartyIdBusinessNamesProductIdResponse(contentType, httpRes.statusCode()) {{
             businessName = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -258,13 +252,11 @@ public class OrganisationsBusinessNames {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostOrganisationsPartyIdBusinessNamesResponse res = new org.openapis.openapi.models.operations.PostOrganisationsPartyIdBusinessNamesResponse() {{
+        org.openapis.openapi.models.operations.PostOrganisationsPartyIdBusinessNamesResponse res = new org.openapis.openapi.models.operations.PostOrganisationsPartyIdBusinessNamesResponse(contentType, httpRes.statusCode()) {{
             businessName = null;
             invalidArgument = null;
             unauthenticated = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -329,14 +321,12 @@ public class OrganisationsBusinessNames {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutOrganisationsPartyIdBusinessNamesProductIdResponse res = new org.openapis.openapi.models.operations.PutOrganisationsPartyIdBusinessNamesProductIdResponse() {{
+        org.openapis.openapi.models.operations.PutOrganisationsPartyIdBusinessNamesProductIdResponse res = new org.openapis.openapi.models.operations.PutOrganisationsPartyIdBusinessNamesProductIdResponse(contentType, httpRes.statusCode()) {{
             businessName = null;
             invalidArgument = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GlueStudioSchemaColumn {
     @JsonProperty("Name")
     public String name;
+
     public GlueStudioSchemaColumn withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,13 @@ public class GlueStudioSchemaColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public GlueStudioSchemaColumn withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GlueStudioSchemaColumn(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

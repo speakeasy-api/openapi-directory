@@ -58,11 +58,9 @@ public class Quotas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentQuotasListResponse res = new org.openapis.openapi.models.operations.ContentQuotasListResponse() {{
+        org.openapis.openapi.models.operations.ContentQuotasListResponse res = new org.openapis.openapi.models.operations.ContentQuotasListResponse(contentType, httpRes.statusCode()) {{
             listMethodQuotasResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

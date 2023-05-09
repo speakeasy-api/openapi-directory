@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GlobalReplicationGroup {
     
     public String arn;
+
     public GlobalReplicationGroup withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class GlobalReplicationGroup {
     
     
     public Boolean atRestEncryptionEnabled;
+
     public GlobalReplicationGroup withAtRestEncryptionEnabled(Boolean atRestEncryptionEnabled) {
         this.atRestEncryptionEnabled = atRestEncryptionEnabled;
         return this;
@@ -26,6 +28,7 @@ public class GlobalReplicationGroup {
     
     
     public Boolean authTokenEnabled;
+
     public GlobalReplicationGroup withAuthTokenEnabled(Boolean authTokenEnabled) {
         this.authTokenEnabled = authTokenEnabled;
         return this;
@@ -33,6 +36,7 @@ public class GlobalReplicationGroup {
     
     
     public String cacheNodeType;
+
     public GlobalReplicationGroup withCacheNodeType(String cacheNodeType) {
         this.cacheNodeType = cacheNodeType;
         return this;
@@ -40,6 +44,7 @@ public class GlobalReplicationGroup {
     
     
     public Boolean clusterEnabled;
+
     public GlobalReplicationGroup withClusterEnabled(Boolean clusterEnabled) {
         this.clusterEnabled = clusterEnabled;
         return this;
@@ -47,6 +52,7 @@ public class GlobalReplicationGroup {
     
     
     public String engine;
+
     public GlobalReplicationGroup withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -54,6 +60,7 @@ public class GlobalReplicationGroup {
     
     
     public String engineVersion;
+
     public GlobalReplicationGroup withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -61,6 +68,7 @@ public class GlobalReplicationGroup {
     
     
     public GlobalNodeGroupList[] globalNodeGroups;
+
     public GlobalReplicationGroup withGlobalNodeGroups(GlobalNodeGroupList[] globalNodeGroups) {
         this.globalNodeGroups = globalNodeGroups;
         return this;
@@ -68,6 +76,7 @@ public class GlobalReplicationGroup {
     
     
     public String globalReplicationGroupDescription;
+
     public GlobalReplicationGroup withGlobalReplicationGroupDescription(String globalReplicationGroupDescription) {
         this.globalReplicationGroupDescription = globalReplicationGroupDescription;
         return this;
@@ -75,6 +84,7 @@ public class GlobalReplicationGroup {
     
     
     public String globalReplicationGroupId;
+
     public GlobalReplicationGroup withGlobalReplicationGroupId(String globalReplicationGroupId) {
         this.globalReplicationGroupId = globalReplicationGroupId;
         return this;
@@ -82,6 +92,7 @@ public class GlobalReplicationGroup {
     
     
     public GlobalReplicationGroupMemberList[] members;
+
     public GlobalReplicationGroup withMembers(GlobalReplicationGroupMemberList[] members) {
         this.members = members;
         return this;
@@ -89,6 +100,7 @@ public class GlobalReplicationGroup {
     
     
     public String status;
+
     public GlobalReplicationGroup withStatus(String status) {
         this.status = status;
         return this;
@@ -96,9 +108,11 @@ public class GlobalReplicationGroup {
     
     
     public Boolean transitEncryptionEnabled;
+
     public GlobalReplicationGroup withTransitEncryptionEnabled(Boolean transitEncryptionEnabled) {
         this.transitEncryptionEnabled = transitEncryptionEnabled;
         return this;
     }
     
+    public GlobalReplicationGroup(){}
 }

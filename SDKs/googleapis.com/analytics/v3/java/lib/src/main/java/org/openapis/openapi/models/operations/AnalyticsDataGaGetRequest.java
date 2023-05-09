@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsDataGaGetRequest {
@@ -12,6 +13,7 @@ public class AnalyticsDataGaGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AnalyticsDataGaGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsDataGaGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dimensions")
     public String dimensions;
+
     public AnalyticsDataGaGetRequest withDimensions(String dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -32,6 +35,7 @@ public class AnalyticsDataGaGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end-date")
     public String endDate;
+
     public AnalyticsDataGaGetRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -42,6 +46,7 @@ public class AnalyticsDataGaGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AnalyticsDataGaGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -52,6 +57,7 @@ public class AnalyticsDataGaGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filters")
     public String filters;
+
     public AnalyticsDataGaGetRequest withFilters(String filters) {
         this.filters = filters;
         return this;
@@ -62,6 +68,7 @@ public class AnalyticsDataGaGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
     public String ids;
+
     public AnalyticsDataGaGetRequest withIds(String ids) {
         this.ids = ids;
         return this;
@@ -72,6 +79,7 @@ public class AnalyticsDataGaGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include-empty-rows")
     public Boolean includeEmptyRows;
+
     public AnalyticsDataGaGetRequest withIncludeEmptyRows(Boolean includeEmptyRows) {
         this.includeEmptyRows = includeEmptyRows;
         return this;
@@ -82,6 +90,7 @@ public class AnalyticsDataGaGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AnalyticsDataGaGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class AnalyticsDataGaGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max-results")
     public Long maxResults;
+
     public AnalyticsDataGaGetRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -102,6 +112,7 @@ public class AnalyticsDataGaGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metrics")
     public String metrics;
+
     public AnalyticsDataGaGetRequest withMetrics(String metrics) {
         this.metrics = metrics;
         return this;
@@ -112,6 +123,7 @@ public class AnalyticsDataGaGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AnalyticsDataGaGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -122,6 +134,7 @@ public class AnalyticsDataGaGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=output")
     public AnalyticsDataGaGetOutputEnum output;
+
     public AnalyticsDataGaGetRequest withOutput(AnalyticsDataGaGetOutputEnum output) {
         this.output = output;
         return this;
@@ -132,6 +145,7 @@ public class AnalyticsDataGaGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AnalyticsDataGaGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -142,6 +156,7 @@ public class AnalyticsDataGaGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AnalyticsDataGaGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +167,7 @@ public class AnalyticsDataGaGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=samplingLevel")
     public AnalyticsDataGaGetSamplingLevelEnum samplingLevel;
+
     public AnalyticsDataGaGetRequest withSamplingLevel(AnalyticsDataGaGetSamplingLevelEnum samplingLevel) {
         this.samplingLevel = samplingLevel;
         return this;
@@ -162,6 +178,7 @@ public class AnalyticsDataGaGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=segment")
     public String segment;
+
     public AnalyticsDataGaGetRequest withSegment(String segment) {
         this.segment = segment;
         return this;
@@ -172,6 +189,7 @@ public class AnalyticsDataGaGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public AnalyticsDataGaGetRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -182,6 +200,7 @@ public class AnalyticsDataGaGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start-date")
     public String startDate;
+
     public AnalyticsDataGaGetRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -192,6 +211,7 @@ public class AnalyticsDataGaGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start-index")
     public Long startIndex;
+
     public AnalyticsDataGaGetRequest withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -202,9 +222,16 @@ public class AnalyticsDataGaGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AnalyticsDataGaGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AnalyticsDataGaGetRequest(@JsonProperty("end-date") String endDate, @JsonProperty("ids") String ids, @JsonProperty("metrics") String metrics, @JsonProperty("start-date") String startDate) {
+        this.endDate = endDate;
+        this.ids = ids;
+        this.metrics = metrics;
+        this.startDate = startDate;
+  }
 }

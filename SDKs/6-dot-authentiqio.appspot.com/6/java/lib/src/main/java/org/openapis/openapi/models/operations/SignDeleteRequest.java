@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SignDeleteRequest {
@@ -12,9 +13,13 @@ public class SignDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=job")
     public String job;
+
     public SignDeleteRequest withJob(String job) {
         this.job = job;
         return this;
     }
     
+    public SignDeleteRequest(@JsonProperty("job") String job) {
+        this.job = job;
+  }
 }

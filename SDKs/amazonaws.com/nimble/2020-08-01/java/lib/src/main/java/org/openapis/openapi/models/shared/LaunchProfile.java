@@ -20,6 +20,7 @@ public class LaunchProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public LaunchProfile withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class LaunchProfile {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public LaunchProfile withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class LaunchProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdBy")
     public String createdBy;
+
     public LaunchProfile withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -46,6 +49,7 @@ public class LaunchProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public LaunchProfile withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class LaunchProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2SubnetIds")
     public String[] ec2SubnetIds;
+
     public LaunchProfile withEc2SubnetIds(String[] ec2SubnetIds) {
         this.ec2SubnetIds = ec2SubnetIds;
         return this;
@@ -62,6 +67,7 @@ public class LaunchProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchProfileId")
     public String launchProfileId;
+
     public LaunchProfile withLaunchProfileId(String launchProfileId) {
         this.launchProfileId = launchProfileId;
         return this;
@@ -70,6 +76,7 @@ public class LaunchProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchProfileProtocolVersions")
     public String[] launchProfileProtocolVersions;
+
     public LaunchProfile withLaunchProfileProtocolVersions(String[] launchProfileProtocolVersions) {
         this.launchProfileProtocolVersions = launchProfileProtocolVersions;
         return this;
@@ -78,6 +85,7 @@ public class LaunchProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LaunchProfile withName(String name) {
         this.name = name;
         return this;
@@ -86,6 +94,7 @@ public class LaunchProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public LaunchProfileStateEnum state;
+
     public LaunchProfile withState(LaunchProfileStateEnum state) {
         this.state = state;
         return this;
@@ -94,6 +103,7 @@ public class LaunchProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCode")
     public LaunchProfileStatusCodeEnum statusCode;
+
     public LaunchProfile withStatusCode(LaunchProfileStatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -102,6 +112,7 @@ public class LaunchProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public LaunchProfile withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -110,6 +121,7 @@ public class LaunchProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamConfiguration")
     public StreamConfiguration streamConfiguration;
+
     public LaunchProfile withStreamConfiguration(StreamConfiguration streamConfiguration) {
         this.streamConfiguration = streamConfiguration;
         return this;
@@ -118,6 +130,7 @@ public class LaunchProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("studioComponentIds")
     public String[] studioComponentIds;
+
     public LaunchProfile withStudioComponentIds(String[] studioComponentIds) {
         this.studioComponentIds = studioComponentIds;
         return this;
@@ -126,6 +139,7 @@ public class LaunchProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public LaunchProfile withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -136,6 +150,7 @@ public class LaunchProfile {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public LaunchProfile withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -144,6 +159,7 @@ public class LaunchProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedBy")
     public String updatedBy;
+
     public LaunchProfile withUpdatedBy(String updatedBy) {
         this.updatedBy = updatedBy;
         return this;
@@ -152,9 +168,11 @@ public class LaunchProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationResults")
     public ValidationResult[] validationResults;
+
     public LaunchProfile withValidationResults(ValidationResult[] validationResults) {
         this.validationResults = validationResults;
         return this;
     }
     
+    public LaunchProfile(){}
 }

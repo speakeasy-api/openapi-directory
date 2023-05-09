@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StartNetworkInsightsAnalysisRequestTagSpecificationsTags {
     
     public String key;
+
     public StartNetworkInsightsAnalysisRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class StartNetworkInsightsAnalysisRequestTagSpecificationsTags {
     
     
     public String value;
+
     public StartNetworkInsightsAnalysisRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public StartNetworkInsightsAnalysisRequestTagSpecificationsTags(){}
 }

@@ -18,6 +18,7 @@ public class ParagraphBorder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public OptionalColor color;
+
     public ParagraphBorder withColor(OptionalColor color) {
         this.color = color;
         return this;
@@ -29,6 +30,7 @@ public class ParagraphBorder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dashStyle")
     public ParagraphBorderDashStyleEnum dashStyle;
+
     public ParagraphBorder withDashStyle(ParagraphBorderDashStyleEnum dashStyle) {
         this.dashStyle = dashStyle;
         return this;
@@ -40,6 +42,7 @@ public class ParagraphBorder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("padding")
     public Dimension padding;
+
     public ParagraphBorder withPadding(Dimension padding) {
         this.padding = padding;
         return this;
@@ -51,9 +54,11 @@ public class ParagraphBorder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Dimension width;
+
     public ParagraphBorder withWidth(Dimension width) {
         this.width = width;
         return this;
     }
     
+    public ParagraphBorder(){}
 }

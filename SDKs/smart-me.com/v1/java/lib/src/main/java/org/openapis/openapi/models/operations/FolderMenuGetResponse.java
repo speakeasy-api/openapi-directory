@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FolderMenuGetResponse {
     
     public byte[] body;
+
     public FolderMenuGetResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class FolderMenuGetResponse {
     
     
     public String contentType;
+
     public FolderMenuGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class FolderMenuGetResponse {
      */
     
     public org.openapis.openapi.models.shared.FolderMenuConfiguration folderMenuConfiguration;
+
     public FolderMenuGetResponse withFolderMenuConfiguration(org.openapis.openapi.models.shared.FolderMenuConfiguration folderMenuConfiguration) {
         this.folderMenuConfiguration = folderMenuConfiguration;
         return this;
@@ -33,6 +37,7 @@ public class FolderMenuGetResponse {
     
     
     public Integer statusCode;
+
     public FolderMenuGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class FolderMenuGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FolderMenuGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FolderMenuGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

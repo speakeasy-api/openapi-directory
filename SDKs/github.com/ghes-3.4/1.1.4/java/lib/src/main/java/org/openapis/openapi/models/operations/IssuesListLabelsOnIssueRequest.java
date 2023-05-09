@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesListLabelsOnIssueRequest {
@@ -12,6 +13,7 @@ public class IssuesListLabelsOnIssueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_number")
     public Long issueNumber;
+
     public IssuesListLabelsOnIssueRequest withIssueNumber(Long issueNumber) {
         this.issueNumber = issueNumber;
         return this;
@@ -22,6 +24,7 @@ public class IssuesListLabelsOnIssueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public IssuesListLabelsOnIssueRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -32,6 +35,7 @@ public class IssuesListLabelsOnIssueRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public IssuesListLabelsOnIssueRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +46,7 @@ public class IssuesListLabelsOnIssueRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public IssuesListLabelsOnIssueRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -52,9 +57,15 @@ public class IssuesListLabelsOnIssueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public IssuesListLabelsOnIssueRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public IssuesListLabelsOnIssueRequest(@JsonProperty("issue_number") Long issueNumber, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.issueNumber = issueNumber;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCheckDetailsResponse {
@@ -12,6 +13,7 @@ public class ListCheckDetailsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListCheckDetailsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListCheckDetailsResponse {
     
     
     public String contentType;
+
     public ListCheckDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListCheckDetailsResponse {
      */
     
     public Object internalServerException;
+
     public ListCheckDetailsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListCheckDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCheckDetailsOutput listCheckDetailsOutput;
+
     public ListCheckDetailsResponse withListCheckDetailsOutput(org.openapis.openapi.models.shared.ListCheckDetailsOutput listCheckDetailsOutput) {
         this.listCheckDetailsOutput = listCheckDetailsOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListCheckDetailsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListCheckDetailsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListCheckDetailsResponse {
     
     
     public Integer statusCode;
+
     public ListCheckDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListCheckDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCheckDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListCheckDetailsResponse {
      */
     
     public Object throttlingException;
+
     public ListCheckDetailsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListCheckDetailsResponse {
      */
     
     public Object validationException;
+
     public ListCheckDetailsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListCheckDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -20,6 +20,7 @@ public class DescribeAuditMitigationActionsTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionsDefinition")
     public MitigationAction[] actionsDefinition;
+
     public DescribeAuditMitigationActionsTaskResponse withActionsDefinition(MitigationAction[] actionsDefinition) {
         this.actionsDefinition = actionsDefinition;
         return this;
@@ -28,6 +29,7 @@ public class DescribeAuditMitigationActionsTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auditCheckToActionsMapping")
     public java.util.Map<String, String[]> auditCheckToActionsMapping;
+
     public DescribeAuditMitigationActionsTaskResponse withAuditCheckToActionsMapping(java.util.Map<String, String[]> auditCheckToActionsMapping) {
         this.auditCheckToActionsMapping = auditCheckToActionsMapping;
         return this;
@@ -38,6 +40,7 @@ public class DescribeAuditMitigationActionsTaskResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public DescribeAuditMitigationActionsTaskResponse withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -48,6 +51,7 @@ public class DescribeAuditMitigationActionsTaskResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public DescribeAuditMitigationActionsTaskResponse withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -56,6 +60,7 @@ public class DescribeAuditMitigationActionsTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public AuditMitigationActionsTaskTarget target;
+
     public DescribeAuditMitigationActionsTaskResponse withTarget(AuditMitigationActionsTaskTarget target) {
         this.target = target;
         return this;
@@ -64,6 +69,7 @@ public class DescribeAuditMitigationActionsTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskStatistics")
     public java.util.Map<String, TaskStatisticsForAuditCheck> taskStatistics;
+
     public DescribeAuditMitigationActionsTaskResponse withTaskStatistics(java.util.Map<String, TaskStatisticsForAuditCheck> taskStatistics) {
         this.taskStatistics = taskStatistics;
         return this;
@@ -72,9 +78,11 @@ public class DescribeAuditMitigationActionsTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskStatus")
     public AuditMitigationActionsTaskStatusEnum taskStatus;
+
     public DescribeAuditMitigationActionsTaskResponse withTaskStatus(AuditMitigationActionsTaskStatusEnum taskStatus) {
         this.taskStatus = taskStatus;
         return this;
     }
     
+    public DescribeAuditMitigationActionsTaskResponse(){}
 }

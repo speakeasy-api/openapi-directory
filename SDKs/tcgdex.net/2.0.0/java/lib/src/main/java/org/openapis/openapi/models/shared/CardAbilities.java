@@ -12,6 +12,7 @@ public class CardAbilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effect")
     public String effect;
+
     public CardAbilities withEffect(String effect) {
         this.effect = effect;
         return this;
@@ -20,6 +21,7 @@ public class CardAbilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CardAbilities withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class CardAbilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public CardAbilities withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CardAbilities(){}
 }

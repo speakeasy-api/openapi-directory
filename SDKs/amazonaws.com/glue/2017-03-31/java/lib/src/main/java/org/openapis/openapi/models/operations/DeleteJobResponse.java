@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteJobResponse {
     
     public String contentType;
+
     public DeleteJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteJobResponse deleteJobResponse;
+
     public DeleteJobResponse withDeleteJobResponse(org.openapis.openapi.models.shared.DeleteJobResponse deleteJobResponse) {
         this.deleteJobResponse = deleteJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteJobResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteJobResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteJobResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteJobResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteJobResponse {
      */
     
     public Object operationTimeoutException;
+
     public DeleteJobResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteJobResponse {
     
     
     public Integer statusCode;
+
     public DeleteJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class ShortAccount {
      */
     @JsonProperty("active")
     public Long active;
+
     public ShortAccount withActive(Long active) {
         this.active = active;
         return this;
@@ -22,6 +23,7 @@ public class ShortAccount {
      */
     @JsonProperty("email")
     public String email;
+
     public ShortAccount withEmail(String email) {
         this.email = email;
         return this;
@@ -32,6 +34,7 @@ public class ShortAccount {
      */
     @JsonProperty("first_name")
     public String firstName;
+
     public ShortAccount withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -42,6 +45,7 @@ public class ShortAccount {
      */
     @JsonProperty("id")
     public Long id;
+
     public ShortAccount withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class ShortAccount {
      */
     @JsonProperty("institution_id")
     public Long institutionId;
+
     public ShortAccount withInstitutionId(Long institutionId) {
         this.institutionId = institutionId;
         return this;
@@ -62,6 +67,7 @@ public class ShortAccount {
      */
     @JsonProperty("institution_user_id")
     public String institutionUserId;
+
     public ShortAccount withInstitutionUserId(String institutionUserId) {
         this.institutionUserId = institutionUserId;
         return this;
@@ -72,6 +78,7 @@ public class ShortAccount {
      */
     @JsonProperty("last_name")
     public String lastName;
+
     public ShortAccount withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -82,6 +89,7 @@ public class ShortAccount {
      */
     @JsonProperty("orcid_id")
     public String orcidId;
+
     public ShortAccount withOrcidId(String orcidId) {
         this.orcidId = orcidId;
         return this;
@@ -92,6 +100,7 @@ public class ShortAccount {
      */
     @JsonProperty("quota")
     public Long quota;
+
     public ShortAccount withQuota(Long quota) {
         this.quota = quota;
         return this;
@@ -102,6 +111,7 @@ public class ShortAccount {
      */
     @JsonProperty("used_quota")
     public Long usedQuota;
+
     public ShortAccount withUsedQuota(Long usedQuota) {
         this.usedQuota = usedQuota;
         return this;
@@ -112,9 +122,23 @@ public class ShortAccount {
      */
     @JsonProperty("user_id")
     public Long userId;
+
     public ShortAccount withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public ShortAccount(@JsonProperty("active") Long active, @JsonProperty("email") String email, @JsonProperty("first_name") String firstName, @JsonProperty("id") Long id, @JsonProperty("institution_id") Long institutionId, @JsonProperty("institution_user_id") String institutionUserId, @JsonProperty("last_name") String lastName, @JsonProperty("orcid_id") String orcidId, @JsonProperty("quota") Long quota, @JsonProperty("used_quota") Long usedQuota, @JsonProperty("user_id") Long userId) {
+        this.active = active;
+        this.email = email;
+        this.firstName = firstName;
+        this.id = id;
+        this.institutionId = institutionId;
+        this.institutionUserId = institutionUserId;
+        this.lastName = lastName;
+        this.orcidId = orcidId;
+        this.quota = quota;
+        this.usedQuota = usedQuota;
+        this.userId = userId;
+  }
 }

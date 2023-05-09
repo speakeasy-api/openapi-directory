@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCustomerCategoriesJsonRequest {
@@ -12,6 +13,7 @@ public class PostCustomerCategoriesJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CustomerCategoryEdit customerCategoryEdit;
+
     public PostCustomerCategoriesJsonRequest withCustomerCategoryEdit(org.openapis.openapi.models.shared.CustomerCategoryEdit customerCategoryEdit) {
         this.customerCategoryEdit = customerCategoryEdit;
         return this;
@@ -22,6 +24,7 @@ public class PostCustomerCategoriesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PostCustomerCategoriesJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,9 +35,15 @@ public class PostCustomerCategoriesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PostCustomerCategoriesJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PostCustomerCategoriesJsonRequest(@JsonProperty("CustomerCategoryEdit") org.openapis.openapi.models.shared.CustomerCategoryEdit customerCategoryEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("login") String login) {
+        this.customerCategoryEdit = customerCategoryEdit;
+        this.authtoken = authtoken;
+        this.login = login;
+  }
 }

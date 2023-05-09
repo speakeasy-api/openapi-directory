@@ -15,9 +15,11 @@ public class BatchDeleteReadSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ReadSetBatchError[] errors;
+
     public BatchDeleteReadSetResponse withErrors(ReadSetBatchError[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public BatchDeleteReadSetResponse(){}
 }

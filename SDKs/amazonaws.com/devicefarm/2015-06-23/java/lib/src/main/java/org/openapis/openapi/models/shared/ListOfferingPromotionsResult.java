@@ -15,6 +15,7 @@ public class ListOfferingPromotionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListOfferingPromotionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListOfferingPromotionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offeringPromotions")
     public OfferingPromotion[] offeringPromotions;
+
     public ListOfferingPromotionsResult withOfferingPromotions(OfferingPromotion[] offeringPromotions) {
         this.offeringPromotions = offeringPromotions;
         return this;
     }
     
+    public ListOfferingPromotionsResult(){}
 }

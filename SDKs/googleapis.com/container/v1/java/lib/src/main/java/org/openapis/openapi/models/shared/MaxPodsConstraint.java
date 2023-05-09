@@ -18,9 +18,11 @@ public class MaxPodsConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxPodsPerNode")
     public String maxPodsPerNode;
+
     public MaxPodsConstraint withMaxPodsPerNode(String maxPodsPerNode) {
         this.maxPodsPerNode = maxPodsPerNode;
         return this;
     }
     
+    public MaxPodsConstraint(){}
 }

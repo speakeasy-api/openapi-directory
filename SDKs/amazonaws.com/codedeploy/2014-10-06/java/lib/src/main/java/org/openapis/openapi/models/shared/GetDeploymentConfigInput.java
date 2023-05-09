@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDeploymentConfigInput {
     @JsonProperty("deploymentConfigName")
     public String deploymentConfigName;
+
     public GetDeploymentConfigInput withDeploymentConfigName(String deploymentConfigName) {
         this.deploymentConfigName = deploymentConfigName;
         return this;
     }
     
+    public GetDeploymentConfigInput(@JsonProperty("deploymentConfigName") String deploymentConfigName) {
+        this.deploymentConfigName = deploymentConfigName;
+  }
 }

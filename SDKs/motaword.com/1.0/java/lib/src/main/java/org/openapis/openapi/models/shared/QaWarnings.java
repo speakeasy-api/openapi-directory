@@ -15,9 +15,11 @@ public class QaWarnings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report")
     public QaEntry[] report;
+
     public QaWarnings withReport(QaEntry[] report) {
         this.report = report;
         return this;
     }
     
+    public QaWarnings(){}
 }

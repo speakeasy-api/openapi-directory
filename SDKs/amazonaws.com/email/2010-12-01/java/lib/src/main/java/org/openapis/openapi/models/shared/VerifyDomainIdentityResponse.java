@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * VerifyDomainIdentityResponse - Returns a TXT record that you must publish to the DNS server of your domain to complete domain verification with Amazon SES.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class VerifyDomainIdentityResponse {
     
     public String verificationToken;
+
     public VerifyDomainIdentityResponse withVerificationToken(String verificationToken) {
         this.verificationToken = verificationToken;
         return this;
     }
     
+    public VerifyDomainIdentityResponse(@JsonProperty("VerificationToken") String verificationToken) {
+        this.verificationToken = verificationToken;
+  }
 }

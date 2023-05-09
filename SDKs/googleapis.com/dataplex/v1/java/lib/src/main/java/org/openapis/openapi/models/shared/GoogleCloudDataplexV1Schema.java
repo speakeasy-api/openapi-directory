@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1Schema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public GoogleCloudDataplexV1SchemaSchemaField[] fields;
+
     public GoogleCloudDataplexV1Schema withFields(GoogleCloudDataplexV1SchemaSchemaField[] fields) {
         this.fields = fields;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1Schema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitionFields")
     public GoogleCloudDataplexV1SchemaPartitionField[] partitionFields;
+
     public GoogleCloudDataplexV1Schema withPartitionFields(GoogleCloudDataplexV1SchemaPartitionField[] partitionFields) {
         this.partitionFields = partitionFields;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1Schema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitionStyle")
     public GoogleCloudDataplexV1SchemaPartitionStyleEnum partitionStyle;
+
     public GoogleCloudDataplexV1Schema withPartitionStyle(GoogleCloudDataplexV1SchemaPartitionStyleEnum partitionStyle) {
         this.partitionStyle = partitionStyle;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDataplexV1Schema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userManaged")
     public Boolean userManaged;
+
     public GoogleCloudDataplexV1Schema withUserManaged(Boolean userManaged) {
         this.userManaged = userManaged;
         return this;
     }
     
+    public GoogleCloudDataplexV1Schema(){}
 }

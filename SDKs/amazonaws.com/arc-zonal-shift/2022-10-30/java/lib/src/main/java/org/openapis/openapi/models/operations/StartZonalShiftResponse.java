@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartZonalShiftResponse {
@@ -12,6 +13,7 @@ public class StartZonalShiftResponse {
      */
     
     public Object accessDeniedException;
+
     public StartZonalShiftResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartZonalShiftResponse {
      */
     
     public Object conflictException;
+
     public StartZonalShiftResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartZonalShiftResponse {
     
     
     public String contentType;
+
     public StartZonalShiftResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartZonalShiftResponse {
      */
     
     public Object internalServerException;
+
     public StartZonalShiftResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class StartZonalShiftResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartZonalShiftResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class StartZonalShiftResponse {
     
     
     public Integer statusCode;
+
     public StartZonalShiftResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartZonalShiftResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartZonalShiftResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class StartZonalShiftResponse {
      */
     
     public Object throttlingException;
+
     public StartZonalShiftResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class StartZonalShiftResponse {
      */
     
     public Object validationException;
+
     public StartZonalShiftResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
@@ -93,9 +103,14 @@ public class StartZonalShiftResponse {
      */
     
     public org.openapis.openapi.models.shared.ZonalShift zonalShift;
+
     public StartZonalShiftResponse withZonalShift(org.openapis.openapi.models.shared.ZonalShift zonalShift) {
         this.zonalShift = zonalShift;
         return this;
     }
     
+    public StartZonalShiftResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

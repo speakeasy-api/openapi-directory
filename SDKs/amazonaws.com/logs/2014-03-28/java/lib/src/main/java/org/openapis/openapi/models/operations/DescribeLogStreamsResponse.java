@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeLogStreamsResponse {
     
     public String contentType;
+
     public DescribeLogStreamsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeLogStreamsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeLogStreamsResponse describeLogStreamsResponse;
+
     public DescribeLogStreamsResponse withDescribeLogStreamsResponse(org.openapis.openapi.models.shared.DescribeLogStreamsResponse describeLogStreamsResponse) {
         this.describeLogStreamsResponse = describeLogStreamsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeLogStreamsResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeLogStreamsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeLogStreamsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeLogStreamsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeLogStreamsResponse {
     
     
     public Integer statusCode;
+
     public DescribeLogStreamsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeLogStreamsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeLogStreamsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeLogStreamsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeLogStreamsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeLogStreamsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -13,6 +13,7 @@ public class ListFaxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreatedAfter")
     public OffsetDateTime dateCreatedAfter;
+
     public ListFaxRequest withDateCreatedAfter(OffsetDateTime dateCreatedAfter) {
         this.dateCreatedAfter = dateCreatedAfter;
         return this;
@@ -23,6 +24,7 @@ public class ListFaxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreatedOnOrBefore")
     public OffsetDateTime dateCreatedOnOrBefore;
+
     public ListFaxRequest withDateCreatedOnOrBefore(OffsetDateTime dateCreatedOnOrBefore) {
         this.dateCreatedOnOrBefore = dateCreatedOnOrBefore;
         return this;
@@ -33,6 +35,7 @@ public class ListFaxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=From")
     public String from;
+
     public ListFaxRequest withFrom(String from) {
         this.from = from;
         return this;
@@ -43,6 +46,7 @@ public class ListFaxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
     public Long pageSize;
+
     public ListFaxRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -53,9 +57,11 @@ public class ListFaxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=To")
     public String to;
+
     public ListFaxRequest withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public ListFaxRequest(){}
 }

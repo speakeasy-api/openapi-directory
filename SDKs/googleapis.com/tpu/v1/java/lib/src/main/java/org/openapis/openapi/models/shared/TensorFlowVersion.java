@@ -18,6 +18,7 @@ public class TensorFlowVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TensorFlowVersion withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class TensorFlowVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public TensorFlowVersion withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public TensorFlowVersion(){}
 }

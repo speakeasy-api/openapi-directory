@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SignRetrieveResponse {
     
     public byte[] body;
+
     public SignRetrieveResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class SignRetrieveResponse {
     
     
     public String contentType;
+
     public SignRetrieveResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class SignRetrieveResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public SignRetrieveResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class SignRetrieveResponse {
      */
     
     public SignRetrieveJWT jwt;
+
     public SignRetrieveResponse withJwt(SignRetrieveJWT jwt) {
         this.jwt = jwt;
         return this;
@@ -43,6 +48,7 @@ public class SignRetrieveResponse {
     
     
     public Integer statusCode;
+
     public SignRetrieveResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class SignRetrieveResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SignRetrieveResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SignRetrieveResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

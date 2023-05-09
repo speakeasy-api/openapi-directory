@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RestoreSecretResponse {
     
     public String contentType;
+
     public RestoreSecretResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RestoreSecretResponse {
      */
     
     public Object internalServiceError;
+
     public RestoreSecretResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class RestoreSecretResponse {
      */
     
     public Object invalidParameterException;
+
     public RestoreSecretResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class RestoreSecretResponse {
      */
     
     public Object invalidRequestException;
+
     public RestoreSecretResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class RestoreSecretResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RestoreSecretResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class RestoreSecretResponse {
      */
     
     public org.openapis.openapi.models.shared.RestoreSecretResponse restoreSecretResponse;
+
     public RestoreSecretResponse withRestoreSecretResponse(org.openapis.openapi.models.shared.RestoreSecretResponse restoreSecretResponse) {
         this.restoreSecretResponse = restoreSecretResponse;
         return this;
@@ -66,6 +73,7 @@ public class RestoreSecretResponse {
     
     
     public Integer statusCode;
+
     public RestoreSecretResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class RestoreSecretResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RestoreSecretResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RestoreSecretResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

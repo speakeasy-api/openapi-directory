@@ -58,11 +58,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlusPeopleGetResponse res = new org.openapis.openapi.models.operations.PlusPeopleGetResponse() {{
+        org.openapis.openapi.models.operations.PlusPeopleGetResponse res = new org.openapis.openapi.models.operations.PlusPeopleGetResponse(contentType, httpRes.statusCode()) {{
             person = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlusPeopleListResponse res = new org.openapis.openapi.models.operations.PlusPeopleListResponse() {{
+        org.openapis.openapi.models.operations.PlusPeopleListResponse res = new org.openapis.openapi.models.operations.PlusPeopleListResponse(contentType, httpRes.statusCode()) {{
             peopleFeed = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlusPeopleListByActivityResponse res = new org.openapis.openapi.models.operations.PlusPeopleListByActivityResponse() {{
+        org.openapis.openapi.models.operations.PlusPeopleListByActivityResponse res = new org.openapis.openapi.models.operations.PlusPeopleListByActivityResponse(contentType, httpRes.statusCode()) {{
             peopleFeed = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,11 +190,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlusPeopleSearchResponse res = new org.openapis.openapi.models.operations.PlusPeopleSearchResponse() {{
+        org.openapis.openapi.models.operations.PlusPeopleSearchResponse res = new org.openapis.openapi.models.operations.PlusPeopleSearchResponse(contentType, httpRes.statusCode()) {{
             peopleFeed = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

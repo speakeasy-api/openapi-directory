@@ -15,6 +15,7 @@ public class ModelDeployConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoGenerateEndpointName")
     public Boolean autoGenerateEndpointName;
+
     public ModelDeployConfig withAutoGenerateEndpointName(Boolean autoGenerateEndpointName) {
         this.autoGenerateEndpointName = autoGenerateEndpointName;
         return this;
@@ -23,9 +24,11 @@ public class ModelDeployConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public ModelDeployConfig withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
     }
     
+    public ModelDeployConfig(){}
 }

@@ -18,9 +18,11 @@ public class ReplaceNegativeKeywordsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newNegativeKeywords")
     public NegativeKeywordInput[] newNegativeKeywords;
+
     public ReplaceNegativeKeywordsRequestInput withNewNegativeKeywords(NegativeKeywordInput[] newNegativeKeywords) {
         this.newNegativeKeywords = newNegativeKeywords;
         return this;
     }
     
+    public ReplaceNegativeKeywordsRequestInput(){}
 }

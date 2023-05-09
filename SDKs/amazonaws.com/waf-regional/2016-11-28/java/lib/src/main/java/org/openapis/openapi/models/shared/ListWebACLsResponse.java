@@ -15,6 +15,7 @@ public class ListWebACLsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListWebACLsResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
@@ -23,9 +24,11 @@ public class ListWebACLsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebACLs")
     public WebACLSummary[] webACLs;
+
     public ListWebACLsResponse withWebACLs(WebACLSummary[] webACLs) {
         this.webACLs = webACLs;
         return this;
     }
     
+    public ListWebACLsResponse(){}
 }

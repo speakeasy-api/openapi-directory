@@ -12,6 +12,7 @@ public class ListOpsItemEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public OpsItemEventFilter[] filters;
+
     public ListOpsItemEventsRequest withFilters(OpsItemEventFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class ListOpsItemEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListOpsItemEventsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListOpsItemEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListOpsItemEventsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListOpsItemEventsRequest(){}
 }

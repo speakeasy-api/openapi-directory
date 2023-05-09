@@ -15,9 +15,11 @@ public class CancelWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public CancelWorkflowExecutionDecisionAttributes withDetails(String details) {
         this.details = details;
         return this;
     }
     
+    public CancelWorkflowExecutionDecisionAttributes(){}
 }

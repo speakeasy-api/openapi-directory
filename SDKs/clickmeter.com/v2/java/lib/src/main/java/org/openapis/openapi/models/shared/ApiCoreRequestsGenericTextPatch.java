@@ -17,9 +17,11 @@ public class ApiCoreRequestsGenericTextPatch {
     @JsonProperty("Text")
     @SpeakeasyMetadata("form:name=Text")
     public String text;
+
     public ApiCoreRequestsGenericTextPatch withText(String text) {
         this.text = text;
         return this;
     }
     
+    public ApiCoreRequestsGenericTextPatch(){}
 }

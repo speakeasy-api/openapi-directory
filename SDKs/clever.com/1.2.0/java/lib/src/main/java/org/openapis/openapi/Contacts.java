@@ -51,12 +51,10 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContactResponse res = new org.openapis.openapi.models.operations.GetContactResponse() {{
+        org.openapis.openapi.models.operations.GetContactResponse res = new org.openapis.openapi.models.operations.GetContactResponse(contentType, httpRes.statusCode()) {{
             studentContactResponse = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContactsResponse res = new org.openapis.openapi.models.operations.GetContactsResponse() {{
+        org.openapis.openapi.models.operations.GetContactsResponse res = new org.openapis.openapi.models.operations.GetContactsResponse(contentType, httpRes.statusCode()) {{
             studentContactsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -143,12 +139,10 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDistrictForStudentContactResponse res = new org.openapis.openapi.models.operations.GetDistrictForStudentContactResponse() {{
+        org.openapis.openapi.models.operations.GetDistrictForStudentContactResponse res = new org.openapis.openapi.models.operations.GetDistrictForStudentContactResponse(contentType, httpRes.statusCode()) {{
             districtResponse = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -190,12 +184,10 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStudentForContactResponse res = new org.openapis.openapi.models.operations.GetStudentForContactResponse() {{
+        org.openapis.openapi.models.operations.GetStudentForContactResponse res = new org.openapis.openapi.models.operations.GetStudentForContactResponse(contentType, httpRes.statusCode()) {{
             studentResponse = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

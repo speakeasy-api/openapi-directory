@@ -62,10 +62,8 @@ public class Docks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActivateDockResponse res = new org.openapis.openapi.models.operations.ActivateDockResponse() {{
+        org.openapis.openapi.models.operations.ActivateDockResponse res = new org.openapis.openapi.models.operations.ActivateDockResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Docks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllDocksResponse res = new org.openapis.openapi.models.operations.AllDocksResponse() {{
+        org.openapis.openapi.models.operations.AllDocksResponse res = new org.openapis.openapi.models.operations.AllDocksResponse(contentType, httpRes.statusCode()) {{
             allDocks200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -159,10 +155,8 @@ public class Docks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateUpdateDockResponse res = new org.openapis.openapi.models.operations.CreateUpdateDockResponse() {{
+        org.openapis.openapi.models.operations.CreateUpdateDockResponse res = new org.openapis.openapi.models.operations.CreateUpdateDockResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,10 +195,8 @@ public class Docks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeactivateDockResponse res = new org.openapis.openapi.models.operations.DeactivateDockResponse() {{
+        org.openapis.openapi.models.operations.DeactivateDockResponse res = new org.openapis.openapi.models.operations.DeactivateDockResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,10 +235,8 @@ public class Docks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DockResponse res = new org.openapis.openapi.models.operations.DockResponse() {{
+        org.openapis.openapi.models.operations.DockResponse res = new org.openapis.openapi.models.operations.DockResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -285,11 +275,9 @@ public class Docks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DockByIdResponse res = new org.openapis.openapi.models.operations.DockByIdResponse() {{
+        org.openapis.openapi.models.operations.DockByIdResponse res = new org.openapis.openapi.models.operations.DockByIdResponse(contentType, httpRes.statusCode()) {{
             dockById200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

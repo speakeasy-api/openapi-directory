@@ -18,6 +18,7 @@ public class AwsSecurityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AwsSecurityGroup withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class AwsSecurityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AwsSecurityGroup withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AwsSecurityGroup(){}
 }

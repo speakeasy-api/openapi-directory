@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWaybackV1AvailableRequest {
@@ -13,6 +14,7 @@ public class GetWaybackV1AvailableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetWaybackV1AvailableRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -24,6 +26,7 @@ public class GetWaybackV1AvailableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=closest")
     public org.openapis.openapi.models.shared.ClosestEnum closest;
+
     public GetWaybackV1AvailableRequest withClosest(org.openapis.openapi.models.shared.ClosestEnum closest) {
         this.closest = closest;
         return this;
@@ -35,6 +38,7 @@ public class GetWaybackV1AvailableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status_code")
     public org.openapis.openapi.models.shared.StatusCodeEnum statusCode;
+
     public GetWaybackV1AvailableRequest withStatusCode(org.openapis.openapi.models.shared.StatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -46,6 +50,7 @@ public class GetWaybackV1AvailableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
     public String tag;
+
     public GetWaybackV1AvailableRequest withTag(String tag) {
         this.tag = tag;
         return this;
@@ -57,6 +62,7 @@ public class GetWaybackV1AvailableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Double timeout;
+
     public GetWaybackV1AvailableRequest withTimeout(Double timeout) {
         this.timeout = timeout;
         return this;
@@ -73,6 +79,7 @@ public class GetWaybackV1AvailableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timestamp")
     public String timestamp;
+
     public GetWaybackV1AvailableRequest withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -83,9 +90,13 @@ public class GetWaybackV1AvailableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
     public String url;
+
     public GetWaybackV1AvailableRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GetWaybackV1AvailableRequest(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

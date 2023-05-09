@@ -15,6 +15,7 @@ public class NAWelcomeHomeDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public NAWelcomeHomeData body;
+
     public NAWelcomeHomeDataResponse withBody(NAWelcomeHomeData body) {
         this.body = body;
         return this;
@@ -23,6 +24,7 @@ public class NAWelcomeHomeDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public NAWelcomeHomeDataResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -31,6 +33,7 @@ public class NAWelcomeHomeDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_exec")
     public Double timeExec;
+
     public NAWelcomeHomeDataResponse withTimeExec(Double timeExec) {
         this.timeExec = timeExec;
         return this;
@@ -39,9 +42,11 @@ public class NAWelcomeHomeDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_server")
     public Integer timeServer;
+
     public NAWelcomeHomeDataResponse withTimeServer(Integer timeServer) {
         this.timeServer = timeServer;
         return this;
     }
     
+    public NAWelcomeHomeDataResponse(){}
 }

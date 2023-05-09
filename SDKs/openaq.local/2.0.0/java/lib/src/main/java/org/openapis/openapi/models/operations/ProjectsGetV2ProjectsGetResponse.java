@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProjectsGetV2ProjectsGetResponse {
     
     public String contentType;
+
     public ProjectsGetV2ProjectsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ProjectsGetV2ProjectsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public ProjectsGetV2ProjectsGetResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -29,6 +32,7 @@ public class ProjectsGetV2ProjectsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.OpenAQProjectsResult openAQProjectsResult;
+
     public ProjectsGetV2ProjectsGetResponse withOpenAQProjectsResult(org.openapis.openapi.models.shared.OpenAQProjectsResult openAQProjectsResult) {
         this.openAQProjectsResult = openAQProjectsResult;
         return this;
@@ -36,6 +40,7 @@ public class ProjectsGetV2ProjectsGetResponse {
     
     
     public Integer statusCode;
+
     public ProjectsGetV2ProjectsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ProjectsGetV2ProjectsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProjectsGetV2ProjectsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ProjectsGetV2ProjectsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

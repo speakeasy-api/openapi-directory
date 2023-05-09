@@ -15,6 +15,7 @@ public class ScriptCompilationError {
      */
     @JsonProperty("column")
     public String column;
+
     public ScriptCompilationError withColumn(String column) {
         this.column = column;
         return this;
@@ -25,6 +26,7 @@ public class ScriptCompilationError {
      */
     @JsonProperty("file")
     public java.util.Map<String, String> file;
+
     public ScriptCompilationError withFile(java.util.Map<String, String> file) {
         this.file = file;
         return this;
@@ -35,6 +37,7 @@ public class ScriptCompilationError {
      */
     @JsonProperty("line")
     public String line;
+
     public ScriptCompilationError withLine(String line) {
         this.line = line;
         return this;
@@ -45,6 +48,7 @@ public class ScriptCompilationError {
      */
     @JsonProperty("message")
     public java.util.Map<String, String> message;
+
     public ScriptCompilationError withMessage(java.util.Map<String, String> message) {
         this.message = message;
         return this;
@@ -55,9 +59,17 @@ public class ScriptCompilationError {
      */
     @JsonProperty("rawMessage")
     public java.util.Map<String, String> rawMessage;
+
     public ScriptCompilationError withRawMessage(java.util.Map<String, String> rawMessage) {
         this.rawMessage = rawMessage;
         return this;
     }
     
+    public ScriptCompilationError(@JsonProperty("column") String column, @JsonProperty("file") java.util.Map<String, String> file, @JsonProperty("line") String line, @JsonProperty("message") java.util.Map<String, String> message, @JsonProperty("rawMessage") java.util.Map<String, String> rawMessage) {
+        this.column = column;
+        this.file = file;
+        this.line = line;
+        this.message = message;
+        this.rawMessage = rawMessage;
+  }
 }

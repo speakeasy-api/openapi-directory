@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteProjectUsernameProjectBuildCacheRequest {
@@ -13,6 +14,7 @@ public class DeleteProjectUsernameProjectBuildCacheRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public DeleteProjectUsernameProjectBuildCacheRequest withProject(String project) {
         this.project = project;
         return this;
@@ -24,9 +26,14 @@ public class DeleteProjectUsernameProjectBuildCacheRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public DeleteProjectUsernameProjectBuildCacheRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public DeleteProjectUsernameProjectBuildCacheRequest(@JsonProperty("project") String project, @JsonProperty("username") String username) {
+        this.project = project;
+        this.username = username;
+  }
 }

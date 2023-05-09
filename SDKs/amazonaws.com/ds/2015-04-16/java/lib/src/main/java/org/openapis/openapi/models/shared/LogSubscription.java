@@ -20,6 +20,7 @@ public class LogSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public LogSubscription withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -28,6 +29,7 @@ public class LogSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogGroupName")
     public String logGroupName;
+
     public LogSubscription withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -38,9 +40,11 @@ public class LogSubscription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubscriptionCreatedDateTime")
     public OffsetDateTime subscriptionCreatedDateTime;
+
     public LogSubscription withSubscriptionCreatedDateTime(OffsetDateTime subscriptionCreatedDateTime) {
         this.subscriptionCreatedDateTime = subscriptionCreatedDateTime;
         return this;
     }
     
+    public LogSubscription(){}
 }

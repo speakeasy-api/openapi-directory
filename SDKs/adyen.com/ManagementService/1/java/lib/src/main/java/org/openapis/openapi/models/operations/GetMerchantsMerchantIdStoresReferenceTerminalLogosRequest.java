@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdStoresReferenceTerminalLogosRequest {
@@ -12,6 +13,7 @@ public class GetMerchantsMerchantIdStoresReferenceTerminalLogosRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public GetMerchantsMerchantIdStoresReferenceTerminalLogosRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -22,6 +24,7 @@ public class GetMerchantsMerchantIdStoresReferenceTerminalLogosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
     public String model;
+
     public GetMerchantsMerchantIdStoresReferenceTerminalLogosRequest withModel(String model) {
         this.model = model;
         return this;
@@ -32,9 +35,15 @@ public class GetMerchantsMerchantIdStoresReferenceTerminalLogosRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reference")
     public String reference;
+
     public GetMerchantsMerchantIdStoresReferenceTerminalLogosRequest withReference(String reference) {
         this.reference = reference;
         return this;
     }
     
+    public GetMerchantsMerchantIdStoresReferenceTerminalLogosRequest(@JsonProperty("merchantId") String merchantId, @JsonProperty("model") String model, @JsonProperty("reference") String reference) {
+        this.merchantId = merchantId;
+        this.model = model;
+        this.reference = reference;
+  }
 }

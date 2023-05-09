@@ -15,6 +15,7 @@ public class UpdatePriceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definitions")
     public java.util.Map<String, Object> definitions;
+
     public UpdatePriceRequestBody withDefinitions(java.util.Map<String, Object> definitions) {
         this.definitions = definitions;
         return this;
@@ -26,6 +27,7 @@ public class UpdatePriceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerId")
     public String offerId;
+
     public UpdatePriceRequestBody withOfferId(String offerId) {
         this.offerId = offerId;
         return this;
@@ -33,6 +35,7 @@ public class UpdatePriceRequestBody {
     
     @JsonProperty("pricing")
     public UpdatePriceRequestBodyPricing[] pricing;
+
     public UpdatePriceRequestBody withPricing(UpdatePriceRequestBodyPricing[] pricing) {
         this.pricing = pricing;
         return this;
@@ -44,6 +47,7 @@ public class UpdatePriceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replaceAll")
     public UpdatePriceRequestBodyReplaceAllEnum replaceAll;
+
     public UpdatePriceRequestBody withReplaceAll(UpdatePriceRequestBodyReplaceAllEnum replaceAll) {
         this.replaceAll = replaceAll;
         return this;
@@ -51,9 +55,14 @@ public class UpdatePriceRequestBody {
     
     @JsonProperty("sku")
     public String sku;
+
     public UpdatePriceRequestBody withSku(String sku) {
         this.sku = sku;
         return this;
     }
     
+    public UpdatePriceRequestBody(@JsonProperty("pricing") UpdatePriceRequestBodyPricing[] pricing, @JsonProperty("sku") String sku) {
+        this.pricing = pricing;
+        this.sku = sku;
+  }
 }

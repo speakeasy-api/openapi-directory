@@ -15,6 +15,7 @@ public class UpdateRunGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxCpus")
     public Long maxCpus;
+
     public UpdateRunGroupRequestBody withMaxCpus(Long maxCpus) {
         this.maxCpus = maxCpus;
         return this;
@@ -26,6 +27,7 @@ public class UpdateRunGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxDuration")
     public Long maxDuration;
+
     public UpdateRunGroupRequestBody withMaxDuration(Long maxDuration) {
         this.maxDuration = maxDuration;
         return this;
@@ -37,6 +39,7 @@ public class UpdateRunGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRuns")
     public Long maxRuns;
+
     public UpdateRunGroupRequestBody withMaxRuns(Long maxRuns) {
         this.maxRuns = maxRuns;
         return this;
@@ -48,9 +51,11 @@ public class UpdateRunGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateRunGroupRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateRunGroupRequestBody(){}
 }

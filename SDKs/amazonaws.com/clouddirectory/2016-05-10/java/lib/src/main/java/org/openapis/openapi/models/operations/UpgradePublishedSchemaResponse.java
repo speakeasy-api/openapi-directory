@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpgradePublishedSchemaResponse {
@@ -12,6 +13,7 @@ public class UpgradePublishedSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException;
+
     public UpgradePublishedSchemaResponse withAccessDeniedException(org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpgradePublishedSchemaResponse {
     
     
     public String contentType;
+
     public UpgradePublishedSchemaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpgradePublishedSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.IncompatibleSchemaException incompatibleSchemaException;
+
     public UpgradePublishedSchemaResponse withIncompatibleSchemaException(org.openapis.openapi.models.shared.IncompatibleSchemaException incompatibleSchemaException) {
         this.incompatibleSchemaException = incompatibleSchemaException;
         return this;
@@ -39,6 +43,7 @@ public class UpgradePublishedSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceException internalServiceException;
+
     public UpgradePublishedSchemaResponse withInternalServiceException(org.openapis.openapi.models.shared.InternalServiceException internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class UpgradePublishedSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArnException invalidArnException;
+
     public UpgradePublishedSchemaResponse withInvalidArnException(org.openapis.openapi.models.shared.InvalidArnException invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -59,6 +65,7 @@ public class UpgradePublishedSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidAttachmentException invalidAttachmentException;
+
     public UpgradePublishedSchemaResponse withInvalidAttachmentException(org.openapis.openapi.models.shared.InvalidAttachmentException invalidAttachmentException) {
         this.invalidAttachmentException = invalidAttachmentException;
         return this;
@@ -69,6 +76,7 @@ public class UpgradePublishedSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public UpgradePublishedSchemaResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class UpgradePublishedSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public UpgradePublishedSchemaResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class UpgradePublishedSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException;
+
     public UpgradePublishedSchemaResponse withRetryableConflictException(org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -96,6 +106,7 @@ public class UpgradePublishedSchemaResponse {
     
     
     public Integer statusCode;
+
     public UpgradePublishedSchemaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class UpgradePublishedSchemaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpgradePublishedSchemaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class UpgradePublishedSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.UpgradePublishedSchemaResponse upgradePublishedSchemaResponse;
+
     public UpgradePublishedSchemaResponse withUpgradePublishedSchemaResponse(org.openapis.openapi.models.shared.UpgradePublishedSchemaResponse upgradePublishedSchemaResponse) {
         this.upgradePublishedSchemaResponse = upgradePublishedSchemaResponse;
         return this;
@@ -123,9 +136,14 @@ public class UpgradePublishedSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationException validationException;
+
     public UpgradePublishedSchemaResponse withValidationException(org.openapis.openapi.models.shared.ValidationException validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpgradePublishedSchemaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

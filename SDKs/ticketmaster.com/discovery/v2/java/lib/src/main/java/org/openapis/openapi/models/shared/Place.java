@@ -15,6 +15,7 @@ public class Place {
      */
     
     public Address address;
+
     public Place withAddress(Address address) {
         this.address = address;
         return this;
@@ -25,6 +26,7 @@ public class Place {
      */
     
     public Area area;
+
     public Place withArea(Area area) {
         this.area = area;
         return this;
@@ -35,6 +37,7 @@ public class Place {
      */
     
     public City city;
+
     public Place withCity(City city) {
         this.city = city;
         return this;
@@ -45,6 +48,7 @@ public class Place {
      */
     
     public Country country;
+
     public Place withCountry(Country country) {
         this.country = country;
         return this;
@@ -55,6 +59,7 @@ public class Place {
      */
     
     public Location location;
+
     public Place withLocation(Location location) {
         this.location = location;
         return this;
@@ -65,6 +70,7 @@ public class Place {
      */
     
     public String name;
+
     public Place withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +81,7 @@ public class Place {
      */
     
     public String postalCode;
+
     public Place withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -85,9 +92,11 @@ public class Place {
      */
     
     public State state;
+
     public Place withState(State state) {
         this.state = state;
         return this;
     }
     
+    public Place(){}
 }

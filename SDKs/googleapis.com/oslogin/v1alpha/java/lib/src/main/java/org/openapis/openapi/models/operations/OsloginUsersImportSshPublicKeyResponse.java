@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OsloginUsersImportSshPublicKeyResponse {
     
     public String contentType;
+
     public OsloginUsersImportSshPublicKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class OsloginUsersImportSshPublicKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportSshPublicKeyResponse importSshPublicKeyResponse;
+
     public OsloginUsersImportSshPublicKeyResponse withImportSshPublicKeyResponse(org.openapis.openapi.models.shared.ImportSshPublicKeyResponse importSshPublicKeyResponse) {
         this.importSshPublicKeyResponse = importSshPublicKeyResponse;
         return this;
@@ -26,6 +29,7 @@ public class OsloginUsersImportSshPublicKeyResponse {
     
     
     public Integer statusCode;
+
     public OsloginUsersImportSshPublicKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class OsloginUsersImportSshPublicKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OsloginUsersImportSshPublicKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OsloginUsersImportSshPublicKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

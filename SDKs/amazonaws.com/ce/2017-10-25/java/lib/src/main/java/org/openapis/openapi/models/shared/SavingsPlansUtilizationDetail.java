@@ -15,6 +15,7 @@ public class SavingsPlansUtilizationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmortizedCommitment")
     public SavingsPlansAmortizedCommitment amortizedCommitment;
+
     public SavingsPlansUtilizationDetail withAmortizedCommitment(SavingsPlansAmortizedCommitment amortizedCommitment) {
         this.amortizedCommitment = amortizedCommitment;
         return this;
@@ -23,6 +24,7 @@ public class SavingsPlansUtilizationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public SavingsPlansUtilizationDetail withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -31,6 +33,7 @@ public class SavingsPlansUtilizationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Savings")
     public SavingsPlansSavings savings;
+
     public SavingsPlansUtilizationDetail withSavings(SavingsPlansSavings savings) {
         this.savings = savings;
         return this;
@@ -39,6 +42,7 @@ public class SavingsPlansUtilizationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SavingsPlanArn")
     public String savingsPlanArn;
+
     public SavingsPlansUtilizationDetail withSavingsPlanArn(String savingsPlanArn) {
         this.savingsPlanArn = savingsPlanArn;
         return this;
@@ -47,9 +51,11 @@ public class SavingsPlansUtilizationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Utilization")
     public SavingsPlansUtilization utilization;
+
     public SavingsPlansUtilizationDetail withUtilization(SavingsPlansUtilization utilization) {
         this.utilization = utilization;
         return this;
     }
     
+    public SavingsPlansUtilizationDetail(){}
 }

@@ -15,6 +15,7 @@ public class ActionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionName")
     public String actionName;
+
     public ActionState withActionName(String actionName) {
         this.actionName = actionName;
         return this;
@@ -23,6 +24,7 @@ public class ActionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentRevision")
     public ActionRevision currentRevision;
+
     public ActionState withCurrentRevision(ActionRevision currentRevision) {
         this.currentRevision = currentRevision;
         return this;
@@ -31,6 +33,7 @@ public class ActionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityUrl")
     public String entityUrl;
+
     public ActionState withEntityUrl(String entityUrl) {
         this.entityUrl = entityUrl;
         return this;
@@ -39,6 +42,7 @@ public class ActionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestExecution")
     public ActionExecution latestExecution;
+
     public ActionState withLatestExecution(ActionExecution latestExecution) {
         this.latestExecution = latestExecution;
         return this;
@@ -47,9 +51,11 @@ public class ActionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionUrl")
     public String revisionUrl;
+
     public ActionState withRevisionUrl(String revisionUrl) {
         this.revisionUrl = revisionUrl;
         return this;
     }
     
+    public ActionState(){}
 }

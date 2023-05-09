@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1beta1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDatacatalogV1beta1EntryInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1beta1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDatacatalogV1beta1EntryInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1beta1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsFilesetSpec")
     public GoogleCloudDatacatalogV1beta1GcsFilesetSpecInput gcsFilesetSpec;
+
     public GoogleCloudDatacatalogV1beta1EntryInput withGcsFilesetSpec(GoogleCloudDatacatalogV1beta1GcsFilesetSpecInput gcsFilesetSpec) {
         this.gcsFilesetSpec = gcsFilesetSpec;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatacatalogV1beta1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedResource")
     public String linkedResource;
+
     public GoogleCloudDatacatalogV1beta1EntryInput withLinkedResource(String linkedResource) {
         this.linkedResource = linkedResource;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDatacatalogV1beta1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public GoogleCloudDatacatalogV1beta1Schema schema;
+
     public GoogleCloudDatacatalogV1beta1EntryInput withSchema(GoogleCloudDatacatalogV1beta1Schema schema) {
         this.schema = schema;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDatacatalogV1beta1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSystemTimestamps")
     public GoogleCloudDatacatalogV1beta1SystemTimestampsInput sourceSystemTimestamps;
+
     public GoogleCloudDatacatalogV1beta1EntryInput withSourceSystemTimestamps(GoogleCloudDatacatalogV1beta1SystemTimestampsInput sourceSystemTimestamps) {
         this.sourceSystemTimestamps = sourceSystemTimestamps;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDatacatalogV1beta1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDatacatalogV1beta1EntryTypeEnum type;
+
     public GoogleCloudDatacatalogV1beta1EntryInput withType(GoogleCloudDatacatalogV1beta1EntryTypeEnum type) {
         this.type = type;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDatacatalogV1beta1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageSignal")
     public GoogleCloudDatacatalogV1beta1UsageSignal usageSignal;
+
     public GoogleCloudDatacatalogV1beta1EntryInput withUsageSignal(GoogleCloudDatacatalogV1beta1UsageSignal usageSignal) {
         this.usageSignal = usageSignal;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDatacatalogV1beta1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userSpecifiedSystem")
     public String userSpecifiedSystem;
+
     public GoogleCloudDatacatalogV1beta1EntryInput withUserSpecifiedSystem(String userSpecifiedSystem) {
         this.userSpecifiedSystem = userSpecifiedSystem;
         return this;
@@ -117,9 +126,11 @@ public class GoogleCloudDatacatalogV1beta1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userSpecifiedType")
     public String userSpecifiedType;
+
     public GoogleCloudDatacatalogV1beta1EntryInput withUserSpecifiedType(String userSpecifiedType) {
         this.userSpecifiedType = userSpecifiedType;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1EntryInput(){}
 }

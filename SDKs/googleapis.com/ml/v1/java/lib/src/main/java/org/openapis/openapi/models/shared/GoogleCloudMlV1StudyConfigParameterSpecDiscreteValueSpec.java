@@ -15,9 +15,11 @@ public class GoogleCloudMlV1StudyConfigParameterSpecDiscreteValueSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public Double[] values;
+
     public GoogleCloudMlV1StudyConfigParameterSpecDiscreteValueSpec withValues(Double[] values) {
         this.values = values;
         return this;
     }
     
+    public GoogleCloudMlV1StudyConfigParameterSpecDiscreteValueSpec(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3Tag {
     @JsonProperty("Key")
     public String key;
+
     public S3Tag withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class S3Tag {
     
     @JsonProperty("Value")
     public String value;
+
     public S3Tag withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public S3Tag(@JsonProperty("Key") String key, @JsonProperty("Value") String value) {
+        this.key = key;
+        this.value = value;
+  }
 }

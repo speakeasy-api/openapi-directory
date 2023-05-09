@@ -18,6 +18,7 @@ public class UriTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedUris")
     public String[] excludedUris;
+
     public UriTargeting withExcludedUris(String[] excludedUris) {
         this.excludedUris = excludedUris;
         return this;
@@ -29,9 +30,11 @@ public class UriTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetedUris")
     public String[] targetedUris;
+
     public UriTargeting withTargetedUris(String[] targetedUris) {
         this.targetedUris = targetedUris;
         return this;
     }
     
+    public UriTargeting(){}
 }

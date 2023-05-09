@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetPortalServiceProviderMetadataResponse {
     @JsonProperty("portalArn")
     public String portalArn;
+
     public GetPortalServiceProviderMetadataResponse withPortalArn(String portalArn) {
         this.portalArn = portalArn;
         return this;
@@ -22,9 +23,13 @@ public class GetPortalServiceProviderMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceProviderSamlMetadata")
     public String serviceProviderSamlMetadata;
+
     public GetPortalServiceProviderMetadataResponse withServiceProviderSamlMetadata(String serviceProviderSamlMetadata) {
         this.serviceProviderSamlMetadata = serviceProviderSamlMetadata;
         return this;
     }
     
+    public GetPortalServiceProviderMetadataResponse(@JsonProperty("portalArn") String portalArn) {
+        this.portalArn = portalArn;
+  }
 }

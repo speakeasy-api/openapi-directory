@@ -56,7 +56,7 @@ public class FareEstimate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FareEstimateGetFareEstimateByZoneResponse res = new org.openapis.openapi.models.operations.FareEstimateGetFareEstimateByZoneResponse() {{
+        org.openapis.openapi.models.operations.FareEstimateGetFareEstimateByZoneResponse res = new org.openapis.openapi.models.operations.FareEstimateGetFareEstimateByZoneResponse(contentType, httpRes.statusCode()) {{
             v3FareEstimateResponse = null;
             v3FareEstimateResponse = null;
             body = null;
@@ -64,8 +64,6 @@ public class FareEstimate {
             v3ErrorResponse = null;
             v3ErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListGraphsResponse {
@@ -12,6 +13,7 @@ public class ListGraphsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListGraphsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListGraphsResponse {
     
     
     public String contentType;
+
     public ListGraphsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListGraphsResponse {
      */
     
     public Object internalServerException;
+
     public ListGraphsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListGraphsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListGraphsResponse listGraphsResponse;
+
     public ListGraphsResponse withListGraphsResponse(org.openapis.openapi.models.shared.ListGraphsResponse listGraphsResponse) {
         this.listGraphsResponse = listGraphsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListGraphsResponse {
     
     
     public Integer statusCode;
+
     public ListGraphsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListGraphsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListGraphsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListGraphsResponse {
      */
     
     public Object validationException;
+
     public ListGraphsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListGraphsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

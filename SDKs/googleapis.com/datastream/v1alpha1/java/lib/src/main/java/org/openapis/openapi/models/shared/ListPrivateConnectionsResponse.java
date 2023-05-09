@@ -18,6 +18,7 @@ public class ListPrivateConnectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListPrivateConnectionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListPrivateConnectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateConnections")
     public PrivateConnection[] privateConnections;
+
     public ListPrivateConnectionsResponse withPrivateConnections(PrivateConnection[] privateConnections) {
         this.privateConnections = privateConnections;
         return this;
@@ -40,9 +42,11 @@ public class ListPrivateConnectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListPrivateConnectionsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListPrivateConnectionsResponse(){}
 }

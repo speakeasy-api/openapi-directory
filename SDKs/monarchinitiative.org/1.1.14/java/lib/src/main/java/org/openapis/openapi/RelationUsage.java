@@ -59,11 +59,9 @@ public class RelationUsage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRelationUsageBetweenResourceResponse res = new org.openapis.openapi.models.operations.GetRelationUsageBetweenResourceResponse() {{
+        org.openapis.openapi.models.operations.GetRelationUsageBetweenResourceResponse res = new org.openapis.openapi.models.operations.GetRelationUsageBetweenResourceResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class RelationUsage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRelationUsagePivotLabelResourceResponse res = new org.openapis.openapi.models.operations.GetRelationUsagePivotLabelResourceResponse() {{
+        org.openapis.openapi.models.operations.GetRelationUsagePivotLabelResourceResponse res = new org.openapis.openapi.models.operations.GetRelationUsagePivotLabelResourceResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class RelationUsage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRelationUsagePivotResourceResponse res = new org.openapis.openapi.models.operations.GetRelationUsagePivotResourceResponse() {{
+        org.openapis.openapi.models.operations.GetRelationUsagePivotResourceResponse res = new org.openapis.openapi.models.operations.GetRelationUsagePivotResourceResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -191,11 +185,9 @@ public class RelationUsage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRelationUsageResourceResponse res = new org.openapis.openapi.models.operations.GetRelationUsageResourceResponse() {{
+        org.openapis.openapi.models.operations.GetRelationUsageResourceResponse res = new org.openapis.openapi.models.operations.GetRelationUsageResourceResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

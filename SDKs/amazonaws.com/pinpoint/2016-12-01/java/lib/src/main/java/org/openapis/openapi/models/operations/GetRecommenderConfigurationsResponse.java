@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRecommenderConfigurationsResponse {
@@ -12,6 +13,7 @@ public class GetRecommenderConfigurationsResponse {
      */
     
     public Object badRequestException;
+
     public GetRecommenderConfigurationsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetRecommenderConfigurationsResponse {
     
     
     public String contentType;
+
     public GetRecommenderConfigurationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetRecommenderConfigurationsResponse {
      */
     
     public Object forbiddenException;
+
     public GetRecommenderConfigurationsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetRecommenderConfigurationsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRecommenderConfigurationsResponse getRecommenderConfigurationsResponse;
+
     public GetRecommenderConfigurationsResponse withGetRecommenderConfigurationsResponse(org.openapis.openapi.models.shared.GetRecommenderConfigurationsResponse getRecommenderConfigurationsResponse) {
         this.getRecommenderConfigurationsResponse = getRecommenderConfigurationsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetRecommenderConfigurationsResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetRecommenderConfigurationsResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetRecommenderConfigurationsResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetRecommenderConfigurationsResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetRecommenderConfigurationsResponse {
      */
     
     public Object notFoundException;
+
     public GetRecommenderConfigurationsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetRecommenderConfigurationsResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetRecommenderConfigurationsResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetRecommenderConfigurationsResponse {
     
     
     public Integer statusCode;
+
     public GetRecommenderConfigurationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetRecommenderConfigurationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRecommenderConfigurationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetRecommenderConfigurationsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetRecommenderConfigurationsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetRecommenderConfigurationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

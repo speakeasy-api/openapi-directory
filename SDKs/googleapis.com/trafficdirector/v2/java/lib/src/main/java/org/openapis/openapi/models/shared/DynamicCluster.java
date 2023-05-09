@@ -18,6 +18,7 @@ public class DynamicCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public java.util.Map<String, Object> cluster;
+
     public DynamicCluster withCluster(java.util.Map<String, Object> cluster) {
         this.cluster = cluster;
         return this;
@@ -29,6 +30,7 @@ public class DynamicCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdated")
     public String lastUpdated;
+
     public DynamicCluster withLastUpdated(String lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -40,9 +42,11 @@ public class DynamicCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionInfo")
     public String versionInfo;
+
     public DynamicCluster withVersionInfo(String versionInfo) {
         this.versionInfo = versionInfo;
         return this;
     }
     
+    public DynamicCluster(){}
 }

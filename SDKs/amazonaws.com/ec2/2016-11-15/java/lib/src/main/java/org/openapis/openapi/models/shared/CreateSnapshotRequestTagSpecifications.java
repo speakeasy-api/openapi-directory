@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateSnapshotRequestTagSpecifications {
     
     public CreateSnapshotRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateSnapshotRequestTagSpecifications withResourceType(CreateSnapshotRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateSnapshotRequestTagSpecifications {
     
     
     public CreateSnapshotRequestTagSpecificationsTags[] tags;
+
     public CreateSnapshotRequestTagSpecifications withTags(CreateSnapshotRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSnapshotRequestTagSpecifications(){}
 }

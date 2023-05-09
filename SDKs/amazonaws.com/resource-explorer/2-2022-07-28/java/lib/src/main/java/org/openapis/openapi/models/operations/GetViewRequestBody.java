@@ -12,9 +12,13 @@ public class GetViewRequestBody {
      */
     @JsonProperty("ViewArn")
     public String viewArn;
+
     public GetViewRequestBody withViewArn(String viewArn) {
         this.viewArn = viewArn;
         return this;
     }
     
+    public GetViewRequestBody(@JsonProperty("ViewArn") String viewArn) {
+        this.viewArn = viewArn;
+  }
 }

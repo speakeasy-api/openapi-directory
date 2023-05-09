@@ -15,6 +15,7 @@ public class HeartbeatMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public HeartbeatMessage withId(Integer id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class HeartbeatMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("op")
     public String op;
+
     public HeartbeatMessage withOp(String op) {
         this.op = op;
         return this;
     }
     
+    public HeartbeatMessage(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class InstancesDistribution {
     
     public String onDemandAllocationStrategy;
+
     public InstancesDistribution withOnDemandAllocationStrategy(String onDemandAllocationStrategy) {
         this.onDemandAllocationStrategy = onDemandAllocationStrategy;
         return this;
@@ -19,6 +20,7 @@ public class InstancesDistribution {
     
     
     public Long onDemandBaseCapacity;
+
     public InstancesDistribution withOnDemandBaseCapacity(Long onDemandBaseCapacity) {
         this.onDemandBaseCapacity = onDemandBaseCapacity;
         return this;
@@ -26,6 +28,7 @@ public class InstancesDistribution {
     
     
     public Long onDemandPercentageAboveBaseCapacity;
+
     public InstancesDistribution withOnDemandPercentageAboveBaseCapacity(Long onDemandPercentageAboveBaseCapacity) {
         this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
         return this;
@@ -33,6 +36,7 @@ public class InstancesDistribution {
     
     
     public String spotAllocationStrategy;
+
     public InstancesDistribution withSpotAllocationStrategy(String spotAllocationStrategy) {
         this.spotAllocationStrategy = spotAllocationStrategy;
         return this;
@@ -40,6 +44,7 @@ public class InstancesDistribution {
     
     
     public Long spotInstancePools;
+
     public InstancesDistribution withSpotInstancePools(Long spotInstancePools) {
         this.spotInstancePools = spotInstancePools;
         return this;
@@ -47,9 +52,11 @@ public class InstancesDistribution {
     
     
     public String spotMaxPrice;
+
     public InstancesDistribution withSpotMaxPrice(String spotMaxPrice) {
         this.spotMaxPrice = spotMaxPrice;
         return this;
     }
     
+    public InstancesDistribution(){}
 }

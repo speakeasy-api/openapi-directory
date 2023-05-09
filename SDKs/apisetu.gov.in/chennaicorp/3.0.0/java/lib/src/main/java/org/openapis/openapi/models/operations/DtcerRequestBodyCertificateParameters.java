@@ -12,6 +12,7 @@ public class DtcerRequestBodyCertificateParameters {
      */
     @JsonProperty("DATEOFDEATH")
     public String dateofdeath;
+
     public DtcerRequestBodyCertificateParameters withDateofdeath(String dateofdeath) {
         this.dateofdeath = dateofdeath;
         return this;
@@ -22,9 +23,14 @@ public class DtcerRequestBodyCertificateParameters {
      */
     @JsonProperty("REGNO")
     public String regno;
+
     public DtcerRequestBodyCertificateParameters withRegno(String regno) {
         this.regno = regno;
         return this;
     }
     
+    public DtcerRequestBodyCertificateParameters(@JsonProperty("DATEOFDEATH") String dateofdeath, @JsonProperty("REGNO") String regno) {
+        this.dateofdeath = dateofdeath;
+        this.regno = regno;
+  }
 }

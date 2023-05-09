@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteUserSettingsResponse {
@@ -12,6 +13,7 @@ public class DeleteUserSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteUserSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteUserSettingsResponse {
      */
     
     public Object conflictException;
+
     public DeleteUserSettingsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteUserSettingsResponse {
     
     
     public String contentType;
+
     public DeleteUserSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteUserSettingsResponse {
      */
     
     public java.util.Map<String, Object> deleteUserSettingsResponse;
+
     public DeleteUserSettingsResponse withDeleteUserSettingsResponse(java.util.Map<String, Object> deleteUserSettingsResponse) {
         this.deleteUserSettingsResponse = deleteUserSettingsResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteUserSettingsResponse {
      */
     
     public Object internalServerException;
+
     public DeleteUserSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteUserSettingsResponse {
     
     
     public Integer statusCode;
+
     public DeleteUserSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteUserSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteUserSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteUserSettingsResponse {
      */
     
     public Object throttlingException;
+
     public DeleteUserSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteUserSettingsResponse {
      */
     
     public Object validationException;
+
     public DeleteUserSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteUserSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

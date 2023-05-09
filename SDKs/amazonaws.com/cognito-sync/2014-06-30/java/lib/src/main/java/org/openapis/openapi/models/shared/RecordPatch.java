@@ -22,6 +22,7 @@ public class RecordPatch {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeviceLastModifiedDate")
     public OffsetDateTime deviceLastModifiedDate;
+
     public RecordPatch withDeviceLastModifiedDate(OffsetDateTime deviceLastModifiedDate) {
         this.deviceLastModifiedDate = deviceLastModifiedDate;
         return this;
@@ -29,6 +30,7 @@ public class RecordPatch {
     
     @JsonProperty("Key")
     public String key;
+
     public RecordPatch withKey(String key) {
         this.key = key;
         return this;
@@ -36,6 +38,7 @@ public class RecordPatch {
     
     @JsonProperty("Op")
     public OperationEnum op;
+
     public RecordPatch withOp(OperationEnum op) {
         this.op = op;
         return this;
@@ -43,6 +46,7 @@ public class RecordPatch {
     
     @JsonProperty("SyncCount")
     public Long syncCount;
+
     public RecordPatch withSyncCount(Long syncCount) {
         this.syncCount = syncCount;
         return this;
@@ -51,9 +55,15 @@ public class RecordPatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public RecordPatch withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public RecordPatch(@JsonProperty("Key") String key, @JsonProperty("Op") OperationEnum op, @JsonProperty("SyncCount") Long syncCount) {
+        this.key = key;
+        this.op = op;
+        this.syncCount = syncCount;
+  }
 }

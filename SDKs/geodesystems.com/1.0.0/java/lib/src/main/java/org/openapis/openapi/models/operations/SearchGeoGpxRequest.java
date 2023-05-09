@@ -13,6 +13,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchGeoGpxRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchGeoGpxRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchGeoGpxRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchGeoGpxRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchGeoGpxRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchGeoGpxRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchGeoGpxRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchGeoGpxRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchGeoGpxRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchGeoGpxRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchGeoGpxRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchGeoGpxRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchGeoGpxRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchGeoGpxRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.geo_gpx.distance")
     public Double searchGeoGpxDistance;
+
     public SearchGeoGpxRequest withSearchGeoGpxDistance(Double searchGeoGpxDistance) {
         this.searchGeoGpxDistance = searchGeoGpxDistance;
         return this;
@@ -163,6 +178,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.geo_gpx.elevation_gain")
     public Double searchGeoGpxElevationGain;
+
     public SearchGeoGpxRequest withSearchGeoGpxElevationGain(Double searchGeoGpxElevationGain) {
         this.searchGeoGpxElevationGain = searchGeoGpxElevationGain;
         return this;
@@ -173,6 +189,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.geo_gpx.elevation_loss")
     public Double searchGeoGpxElevationLoss;
+
     public SearchGeoGpxRequest withSearchGeoGpxElevationLoss(Double searchGeoGpxElevationLoss) {
         this.searchGeoGpxElevationLoss = searchGeoGpxElevationLoss;
         return this;
@@ -183,6 +200,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.geo_gpx.moving_time")
     public Double searchGeoGpxMovingTime;
+
     public SearchGeoGpxRequest withSearchGeoGpxMovingTime(Double searchGeoGpxMovingTime) {
         this.searchGeoGpxMovingTime = searchGeoGpxMovingTime;
         return this;
@@ -193,6 +211,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.geo_gpx.speed")
     public Double searchGeoGpxSpeed;
+
     public SearchGeoGpxRequest withSearchGeoGpxSpeed(Double searchGeoGpxSpeed) {
         this.searchGeoGpxSpeed = searchGeoGpxSpeed;
         return this;
@@ -203,6 +222,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.geo_gpx.total_time")
     public Double searchGeoGpxTotalTime;
+
     public SearchGeoGpxRequest withSearchGeoGpxTotalTime(Double searchGeoGpxTotalTime) {
         this.searchGeoGpxTotalTime = searchGeoGpxTotalTime;
         return this;
@@ -213,6 +233,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchGeoGpxRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -223,6 +244,7 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchGeoGpxRequest withText(String text) {
         this.text = text;
         return this;
@@ -233,9 +255,11 @@ public class SearchGeoGpxRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchGeoGpxRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchGeoGpxRequest(){}
 }

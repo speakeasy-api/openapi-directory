@@ -18,6 +18,7 @@ public class Oauth2JwtBearer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientKey")
     public Secret clientKey;
+
     public Oauth2JwtBearer withClientKey(Secret clientKey) {
         this.clientKey = clientKey;
         return this;
@@ -29,9 +30,11 @@ public class Oauth2JwtBearer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jwtClaims")
     public JwtClaims jwtClaims;
+
     public Oauth2JwtBearer withJwtClaims(JwtClaims jwtClaims) {
         this.jwtClaims = jwtClaims;
         return this;
     }
     
+    public Oauth2JwtBearer(){}
 }

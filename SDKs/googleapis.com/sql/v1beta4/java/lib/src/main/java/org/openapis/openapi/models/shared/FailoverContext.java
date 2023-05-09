@@ -18,6 +18,7 @@ public class FailoverContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public FailoverContext withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class FailoverContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settingsVersion")
     public String settingsVersion;
+
     public FailoverContext withSettingsVersion(String settingsVersion) {
         this.settingsVersion = settingsVersion;
         return this;
     }
     
+    public FailoverContext(){}
 }

@@ -15,9 +15,13 @@ public class GetApplicationDateRangeKpiResponse {
      */
     @JsonProperty("ApplicationDateRangeKpiResponse")
     public ApplicationDateRangeKpiResponse applicationDateRangeKpiResponse;
+
     public GetApplicationDateRangeKpiResponse withApplicationDateRangeKpiResponse(ApplicationDateRangeKpiResponse applicationDateRangeKpiResponse) {
         this.applicationDateRangeKpiResponse = applicationDateRangeKpiResponse;
         return this;
     }
     
+    public GetApplicationDateRangeKpiResponse(@JsonProperty("ApplicationDateRangeKpiResponse") ApplicationDateRangeKpiResponse applicationDateRangeKpiResponse) {
+        this.applicationDateRangeKpiResponse = applicationDateRangeKpiResponse;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeprovisionPublicIpv4PoolCidrRequest {
     
     public String cidr;
+
     public DeprovisionPublicIpv4PoolCidrRequest withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -16,6 +17,7 @@ public class DeprovisionPublicIpv4PoolCidrRequest {
     
     
     public Boolean dryRun;
+
     public DeprovisionPublicIpv4PoolCidrRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,14 @@ public class DeprovisionPublicIpv4PoolCidrRequest {
     
     
     public String poolId;
+
     public DeprovisionPublicIpv4PoolCidrRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
     }
     
+    public DeprovisionPublicIpv4PoolCidrRequest(@JsonProperty("Cidr") String cidr, @JsonProperty("PoolId") String poolId) {
+        this.cidr = cidr;
+        this.poolId = poolId;
+  }
 }

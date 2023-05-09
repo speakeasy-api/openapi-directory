@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Putversion {
     @JsonProperty("Href")
     public String href;
+
     public Putversion withHref(String href) {
         this.href = href;
         return this;
@@ -16,9 +17,14 @@ public class Putversion {
     
     @JsonProperty("Id")
     public String id;
+
     public Putversion withId(String id) {
         this.id = id;
         return this;
     }
     
+    public Putversion(@JsonProperty("Href") String href, @JsonProperty("Id") String id) {
+        this.href = href;
+        this.id = id;
+  }
 }

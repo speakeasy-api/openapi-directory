@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeUsageLimitsMessage {
     
     public String clusterIdentifier;
+
     public DescribeUsageLimitsMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class DescribeUsageLimitsMessage {
     
     
     public UsageLimitFeatureTypeEnum featureType;
+
     public DescribeUsageLimitsMessage withFeatureType(UsageLimitFeatureTypeEnum featureType) {
         this.featureType = featureType;
         return this;
@@ -23,6 +25,7 @@ public class DescribeUsageLimitsMessage {
     
     
     public String marker;
+
     public DescribeUsageLimitsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,6 +33,7 @@ public class DescribeUsageLimitsMessage {
     
     
     public Long maxRecords;
+
     public DescribeUsageLimitsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -37,6 +41,7 @@ public class DescribeUsageLimitsMessage {
     
     
     public String[] tagKeys;
+
     public DescribeUsageLimitsMessage withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
@@ -44,6 +49,7 @@ public class DescribeUsageLimitsMessage {
     
     
     public String[] tagValues;
+
     public DescribeUsageLimitsMessage withTagValues(String[] tagValues) {
         this.tagValues = tagValues;
         return this;
@@ -51,9 +57,11 @@ public class DescribeUsageLimitsMessage {
     
     
     public String usageLimitId;
+
     public DescribeUsageLimitsMessage withUsageLimitId(String usageLimitId) {
         this.usageLimitId = usageLimitId;
         return this;
     }
     
+    public DescribeUsageLimitsMessage(){}
 }

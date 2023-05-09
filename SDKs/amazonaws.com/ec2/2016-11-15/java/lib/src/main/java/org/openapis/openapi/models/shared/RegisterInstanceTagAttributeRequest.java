@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RegisterInstanceTagAttributeRequest {
     
     public Boolean includeAllTagsOfInstance;
+
     public RegisterInstanceTagAttributeRequest withIncludeAllTagsOfInstance(Boolean includeAllTagsOfInstance) {
         this.includeAllTagsOfInstance = includeAllTagsOfInstance;
         return this;
@@ -19,9 +20,11 @@ public class RegisterInstanceTagAttributeRequest {
     
     
     public String[] instanceTagKeys;
+
     public RegisterInstanceTagAttributeRequest withInstanceTagKeys(String[] instanceTagKeys) {
         this.instanceTagKeys = instanceTagKeys;
         return this;
     }
     
+    public RegisterInstanceTagAttributeRequest(){}
 }

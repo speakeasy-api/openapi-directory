@@ -12,6 +12,7 @@ public class PersonaLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public Link self;
+
     public PersonaLinks withSelf(Link self) {
         this.self = self;
         return this;
@@ -20,9 +21,11 @@ public class PersonaLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shows")
     public Link[] shows;
+
     public PersonaLinks withShows(Link[] shows) {
         this.shows = shows;
         return this;
     }
     
+    public PersonaLinks(){}
 }

@@ -15,6 +15,7 @@ public class GetRouteResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelSelectionExpression")
     public String modelSelectionExpression;
+
     public GetRouteResponseResponse withModelSelectionExpression(String modelSelectionExpression) {
         this.modelSelectionExpression = modelSelectionExpression;
         return this;
@@ -23,6 +24,7 @@ public class GetRouteResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResponseModels")
     public java.util.Map<String, String> responseModels;
+
     public GetRouteResponseResponse withResponseModels(java.util.Map<String, String> responseModels) {
         this.responseModels = responseModels;
         return this;
@@ -31,6 +33,7 @@ public class GetRouteResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResponseParameters")
     public java.util.Map<String, ParameterConstraints> responseParameters;
+
     public GetRouteResponseResponse withResponseParameters(java.util.Map<String, ParameterConstraints> responseParameters) {
         this.responseParameters = responseParameters;
         return this;
@@ -39,6 +42,7 @@ public class GetRouteResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RouteResponseId")
     public String routeResponseId;
+
     public GetRouteResponseResponse withRouteResponseId(String routeResponseId) {
         this.routeResponseId = routeResponseId;
         return this;
@@ -47,9 +51,11 @@ public class GetRouteResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RouteResponseKey")
     public String routeResponseKey;
+
     public GetRouteResponseResponse withRouteResponseKey(String routeResponseKey) {
         this.routeResponseKey = routeResponseKey;
         return this;
     }
     
+    public GetRouteResponseResponse(){}
 }

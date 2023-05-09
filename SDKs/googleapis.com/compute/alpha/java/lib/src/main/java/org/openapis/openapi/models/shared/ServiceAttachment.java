@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ServiceAttachment - Represents a ServiceAttachment resource. A service attachment represents a service that a producer has exposed. It encapsulates the load balancer which fronts the service runs and a list of NAT IP ranges that the producers uses to represent the consumers connecting to the service. next tag = 20
+ * ServiceAttachment - Represents a ServiceAttachment resource. A service attachment represents a service that a producer has exposed. It encapsulates the load balancer which fronts the service runs and a list of NAT IP ranges that the producers uses to represent the consumers connecting to the service.
  */
 public class ServiceAttachment {
     /**
@@ -18,6 +18,7 @@ public class ServiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectedEndpoints")
     public ServiceAttachmentConnectedEndpoint[] connectedEndpoints;
+
     public ServiceAttachment withConnectedEndpoints(ServiceAttachmentConnectedEndpoint[] connectedEndpoints) {
         this.connectedEndpoints = connectedEndpoints;
         return this;
@@ -29,6 +30,7 @@ public class ServiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionPreference")
     public ServiceAttachmentConnectionPreferenceEnum connectionPreference;
+
     public ServiceAttachment withConnectionPreference(ServiceAttachmentConnectionPreferenceEnum connectionPreference) {
         this.connectionPreference = connectionPreference;
         return this;
@@ -40,6 +42,7 @@ public class ServiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerAcceptLists")
     public ServiceAttachmentConsumerProjectLimit[] consumerAcceptLists;
+
     public ServiceAttachment withConsumerAcceptLists(ServiceAttachmentConsumerProjectLimit[] consumerAcceptLists) {
         this.consumerAcceptLists = consumerAcceptLists;
         return this;
@@ -51,6 +54,7 @@ public class ServiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerRejectLists")
     public String[] consumerRejectLists;
+
     public ServiceAttachment withConsumerRejectLists(String[] consumerRejectLists) {
         this.consumerRejectLists = consumerRejectLists;
         return this;
@@ -62,6 +66,7 @@ public class ServiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public ServiceAttachment withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -73,6 +78,7 @@ public class ServiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ServiceAttachment withDescription(String description) {
         this.description = description;
         return this;
@@ -84,6 +90,7 @@ public class ServiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainNames")
     public String[] domainNames;
+
     public ServiceAttachment withDomainNames(String[] domainNames) {
         this.domainNames = domainNames;
         return this;
@@ -95,6 +102,7 @@ public class ServiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableProxyProtocol")
     public Boolean enableProxyProtocol;
+
     public ServiceAttachment withEnableProxyProtocol(Boolean enableProxyProtocol) {
         this.enableProxyProtocol = enableProxyProtocol;
         return this;
@@ -106,6 +114,7 @@ public class ServiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public ServiceAttachment withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -117,6 +126,7 @@ public class ServiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ServiceAttachment withId(String id) {
         this.id = id;
         return this;
@@ -128,6 +138,7 @@ public class ServiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ServiceAttachment withKind(String kind) {
         this.kind = kind;
         return this;
@@ -139,6 +150,7 @@ public class ServiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ServiceAttachment withName(String name) {
         this.name = name;
         return this;
@@ -150,6 +162,7 @@ public class ServiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("natSubnets")
     public String[] natSubnets;
+
     public ServiceAttachment withNatSubnets(String[] natSubnets) {
         this.natSubnets = natSubnets;
         return this;
@@ -161,6 +174,7 @@ public class ServiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producerForwardingRule")
     public String producerForwardingRule;
+
     public ServiceAttachment withProducerForwardingRule(String producerForwardingRule) {
         this.producerForwardingRule = producerForwardingRule;
         return this;
@@ -169,8 +183,21 @@ public class ServiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pscServiceAttachmentId")
     public Uint128 pscServiceAttachmentId;
+
     public ServiceAttachment withPscServiceAttachmentId(Uint128 pscServiceAttachmentId) {
         this.pscServiceAttachmentId = pscServiceAttachmentId;
+        return this;
+    }
+    
+    /**
+     * This flag determines whether a consumer accept/reject list change can reconcile the statuses of existing ACCEPTED or REJECTED PSC endpoints. - If false, connection policy update will only affect existing PENDING PSC endpoints. Existing ACCEPTED/REJECTED endpoints will remain untouched regardless how the connection policy is modified . - If true, update will affect both PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be moved to REJECTED if its project is added to the reject list. For newly created service attachment, this boolean defaults to true.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reconcileConnections")
+    public Boolean reconcileConnections;
+
+    public ServiceAttachment withReconcileConnections(Boolean reconcileConnections) {
+        this.reconcileConnections = reconcileConnections;
         return this;
     }
     
@@ -180,6 +207,7 @@ public class ServiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public ServiceAttachment withRegion(String region) {
         this.region = region;
         return this;
@@ -191,6 +219,7 @@ public class ServiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public ServiceAttachment withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -202,9 +231,11 @@ public class ServiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetService")
     public String targetService;
+
     public ServiceAttachment withTargetService(String targetService) {
         this.targetService = targetService;
         return this;
     }
     
+    public ServiceAttachment(){}
 }

@@ -18,6 +18,7 @@ public class ManagementSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renewalMethod")
     public ManagementSettingsRenewalMethodEnum renewalMethod;
+
     public ManagementSettings withRenewalMethod(ManagementSettingsRenewalMethodEnum renewalMethod) {
         this.renewalMethod = renewalMethod;
         return this;
@@ -29,9 +30,11 @@ public class ManagementSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferLockState")
     public ManagementSettingsTransferLockStateEnum transferLockState;
+
     public ManagementSettings withTransferLockState(ManagementSettingsTransferLockStateEnum transferLockState) {
         this.transferLockState = transferLockState;
         return this;
     }
     
+    public ManagementSettings(){}
 }

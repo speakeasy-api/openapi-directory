@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HyperParameterTrainingJobDefinition {
     @JsonProperty("AlgorithmSpecification")
     public HyperParameterAlgorithmSpecification algorithmSpecification;
+
     public HyperParameterTrainingJobDefinition withAlgorithmSpecification(HyperParameterAlgorithmSpecification algorithmSpecification) {
         this.algorithmSpecification = algorithmSpecification;
         return this;
@@ -25,6 +26,7 @@ public class HyperParameterTrainingJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CheckpointConfig")
     public CheckpointConfig checkpointConfig;
+
     public HyperParameterTrainingJobDefinition withCheckpointConfig(CheckpointConfig checkpointConfig) {
         this.checkpointConfig = checkpointConfig;
         return this;
@@ -33,6 +35,7 @@ public class HyperParameterTrainingJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefinitionName")
     public String definitionName;
+
     public HyperParameterTrainingJobDefinition withDefinitionName(String definitionName) {
         this.definitionName = definitionName;
         return this;
@@ -41,6 +44,7 @@ public class HyperParameterTrainingJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableInterContainerTrafficEncryption")
     public Boolean enableInterContainerTrafficEncryption;
+
     public HyperParameterTrainingJobDefinition withEnableInterContainerTrafficEncryption(Boolean enableInterContainerTrafficEncryption) {
         this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
         return this;
@@ -49,6 +53,7 @@ public class HyperParameterTrainingJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableManagedSpotTraining")
     public Boolean enableManagedSpotTraining;
+
     public HyperParameterTrainingJobDefinition withEnableManagedSpotTraining(Boolean enableManagedSpotTraining) {
         this.enableManagedSpotTraining = enableManagedSpotTraining;
         return this;
@@ -57,6 +62,7 @@ public class HyperParameterTrainingJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableNetworkIsolation")
     public Boolean enableNetworkIsolation;
+
     public HyperParameterTrainingJobDefinition withEnableNetworkIsolation(Boolean enableNetworkIsolation) {
         this.enableNetworkIsolation = enableNetworkIsolation;
         return this;
@@ -65,6 +71,7 @@ public class HyperParameterTrainingJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public java.util.Map<String, String> environment;
+
     public HyperParameterTrainingJobDefinition withEnvironment(java.util.Map<String, String> environment) {
         this.environment = environment;
         return this;
@@ -76,6 +83,7 @@ public class HyperParameterTrainingJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HyperParameterRanges")
     public ParameterRanges hyperParameterRanges;
+
     public HyperParameterTrainingJobDefinition withHyperParameterRanges(ParameterRanges hyperParameterRanges) {
         this.hyperParameterRanges = hyperParameterRanges;
         return this;
@@ -84,6 +92,7 @@ public class HyperParameterTrainingJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HyperParameterTuningResourceConfig")
     public HyperParameterTuningResourceConfig hyperParameterTuningResourceConfig;
+
     public HyperParameterTrainingJobDefinition withHyperParameterTuningResourceConfig(HyperParameterTuningResourceConfig hyperParameterTuningResourceConfig) {
         this.hyperParameterTuningResourceConfig = hyperParameterTuningResourceConfig;
         return this;
@@ -92,6 +101,7 @@ public class HyperParameterTrainingJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDataConfig")
     public Channel[] inputDataConfig;
+
     public HyperParameterTrainingJobDefinition withInputDataConfig(Channel[] inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -99,6 +109,7 @@ public class HyperParameterTrainingJobDefinition {
     
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public HyperParameterTrainingJobDefinition withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -107,6 +118,7 @@ public class HyperParameterTrainingJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceConfig")
     public ResourceConfig resourceConfig;
+
     public HyperParameterTrainingJobDefinition withResourceConfig(ResourceConfig resourceConfig) {
         this.resourceConfig = resourceConfig;
         return this;
@@ -115,6 +127,7 @@ public class HyperParameterTrainingJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryStrategy")
     public RetryStrategy retryStrategy;
+
     public HyperParameterTrainingJobDefinition withRetryStrategy(RetryStrategy retryStrategy) {
         this.retryStrategy = retryStrategy;
         return this;
@@ -122,6 +135,7 @@ public class HyperParameterTrainingJobDefinition {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public HyperParameterTrainingJobDefinition withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -130,6 +144,7 @@ public class HyperParameterTrainingJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StaticHyperParameters")
     public java.util.Map<String, String> staticHyperParameters;
+
     public HyperParameterTrainingJobDefinition withStaticHyperParameters(java.util.Map<String, String> staticHyperParameters) {
         this.staticHyperParameters = staticHyperParameters;
         return this;
@@ -137,6 +152,7 @@ public class HyperParameterTrainingJobDefinition {
     
     @JsonProperty("StoppingCondition")
     public StoppingCondition stoppingCondition;
+
     public HyperParameterTrainingJobDefinition withStoppingCondition(StoppingCondition stoppingCondition) {
         this.stoppingCondition = stoppingCondition;
         return this;
@@ -148,6 +164,7 @@ public class HyperParameterTrainingJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TuningObjective")
     public HyperParameterTuningJobObjective tuningObjective;
+
     public HyperParameterTrainingJobDefinition withTuningObjective(HyperParameterTuningJobObjective tuningObjective) {
         this.tuningObjective = tuningObjective;
         return this;
@@ -156,9 +173,16 @@ public class HyperParameterTrainingJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public HyperParameterTrainingJobDefinition withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public HyperParameterTrainingJobDefinition(@JsonProperty("AlgorithmSpecification") HyperParameterAlgorithmSpecification algorithmSpecification, @JsonProperty("OutputDataConfig") OutputDataConfig outputDataConfig, @JsonProperty("RoleArn") String roleArn, @JsonProperty("StoppingCondition") StoppingCondition stoppingCondition) {
+        this.algorithmSpecification = algorithmSpecification;
+        this.outputDataConfig = outputDataConfig;
+        this.roleArn = roleArn;
+        this.stoppingCondition = stoppingCondition;
+  }
 }

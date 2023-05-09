@@ -15,6 +15,7 @@ public class AssignVendorDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recalculateRates")
     public Boolean recalculateRates;
+
     public AssignVendorDTO withRecalculateRates(Boolean recalculateRates) {
         this.recalculateRates = recalculateRates;
         return this;
@@ -23,9 +24,11 @@ public class AssignVendorDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorPriceProfileId")
     public Long vendorPriceProfileId;
+
     public AssignVendorDTO withVendorPriceProfileId(Long vendorPriceProfileId) {
         this.vendorPriceProfileId = vendorPriceProfileId;
         return this;
     }
     
+    public AssignVendorDTO(){}
 }

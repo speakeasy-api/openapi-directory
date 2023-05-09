@@ -17,6 +17,7 @@ public class AnalyticsLogFlow200ApplicationJSONLogs {
      */
     @JsonProperty("device")
     public AnalyticsLogFlow200ApplicationJSONLogsDevice device;
+
     public AnalyticsLogFlow200ApplicationJSONLogs withDevice(AnalyticsLogFlow200ApplicationJSONLogsDevice device) {
         this.device = device;
         return this;
@@ -28,6 +29,7 @@ public class AnalyticsLogFlow200ApplicationJSONLogs {
      */
     @JsonProperty("install_id")
     public String installId;
+
     public AnalyticsLogFlow200ApplicationJSONLogs withInstallId(String installId) {
         this.installId = installId;
         return this;
@@ -41,6 +43,7 @@ public class AnalyticsLogFlow200ApplicationJSONLogs {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public AnalyticsLogFlow200ApplicationJSONLogs withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -52,9 +55,16 @@ public class AnalyticsLogFlow200ApplicationJSONLogs {
      */
     @JsonProperty("type")
     public AnalyticsLogFlow200ApplicationJSONLogsTypeEnum type;
+
     public AnalyticsLogFlow200ApplicationJSONLogs withType(AnalyticsLogFlow200ApplicationJSONLogsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AnalyticsLogFlow200ApplicationJSONLogs(@JsonProperty("device") AnalyticsLogFlow200ApplicationJSONLogsDevice device, @JsonProperty("install_id") String installId, @JsonProperty("timestamp") OffsetDateTime timestamp, @JsonProperty("type") AnalyticsLogFlow200ApplicationJSONLogsTypeEnum type) {
+        this.device = device;
+        this.installId = installId;
+        this.timestamp = timestamp;
+        this.type = type;
+  }
 }

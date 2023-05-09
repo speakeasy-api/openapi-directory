@@ -18,6 +18,7 @@ public class TransferDomainRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationCode")
     public AuthorizationCode authorizationCode;
+
     public TransferDomainRequestInput withAuthorizationCode(AuthorizationCode authorizationCode) {
         this.authorizationCode = authorizationCode;
         return this;
@@ -29,6 +30,7 @@ public class TransferDomainRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactNotices")
     public TransferDomainRequestContactNoticesEnum[] contactNotices;
+
     public TransferDomainRequestInput withContactNotices(TransferDomainRequestContactNoticesEnum[] contactNotices) {
         this.contactNotices = contactNotices;
         return this;
@@ -40,6 +42,7 @@ public class TransferDomainRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registration")
     public RegistrationInput registration;
+
     public TransferDomainRequestInput withRegistration(RegistrationInput registration) {
         this.registration = registration;
         return this;
@@ -51,6 +54,7 @@ public class TransferDomainRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateOnly")
     public Boolean validateOnly;
+
     public TransferDomainRequestInput withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
@@ -62,9 +66,11 @@ public class TransferDomainRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yearlyPrice")
     public Money yearlyPrice;
+
     public TransferDomainRequestInput withYearlyPrice(Money yearlyPrice) {
         this.yearlyPrice = yearlyPrice;
         return this;
     }
     
+    public TransferDomainRequestInput(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteLaunchTemplateVersionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteLaunchTemplateVersionsActionEnum action;
+
     public GETDeleteLaunchTemplateVersionsRequest withAction(GETDeleteLaunchTemplateVersionsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteLaunchTemplateVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDeleteLaunchTemplateVersionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteLaunchTemplateVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LaunchTemplateId")
     public String launchTemplateId;
+
     public GETDeleteLaunchTemplateVersionsRequest withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -39,6 +43,7 @@ public class GETDeleteLaunchTemplateVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LaunchTemplateName")
     public String launchTemplateName;
+
     public GETDeleteLaunchTemplateVersionsRequest withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
@@ -49,6 +54,7 @@ public class GETDeleteLaunchTemplateVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LaunchTemplateVersion")
     public String[] launchTemplateVersion;
+
     public GETDeleteLaunchTemplateVersionsRequest withLaunchTemplateVersion(String[] launchTemplateVersion) {
         this.launchTemplateVersion = launchTemplateVersion;
         return this;
@@ -56,6 +62,7 @@ public class GETDeleteLaunchTemplateVersionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteLaunchTemplateVersionsVersionEnum version;
+
     public GETDeleteLaunchTemplateVersionsRequest withVersion(GETDeleteLaunchTemplateVersionsVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETDeleteLaunchTemplateVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteLaunchTemplateVersionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETDeleteLaunchTemplateVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteLaunchTemplateVersionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETDeleteLaunchTemplateVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteLaunchTemplateVersionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETDeleteLaunchTemplateVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteLaunchTemplateVersionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETDeleteLaunchTemplateVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteLaunchTemplateVersionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETDeleteLaunchTemplateVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteLaunchTemplateVersionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,15 @@ public class GETDeleteLaunchTemplateVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteLaunchTemplateVersionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteLaunchTemplateVersionsRequest(@JsonProperty("Action") GETDeleteLaunchTemplateVersionsActionEnum action, @JsonProperty("LaunchTemplateVersion") String[] launchTemplateVersion, @JsonProperty("Version") GETDeleteLaunchTemplateVersionsVersionEnum version) {
+        this.action = action;
+        this.launchTemplateVersion = launchTemplateVersion;
+        this.version = version;
+  }
 }

@@ -52,11 +52,9 @@ public class Tod {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTodGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolTodGetArgsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTodGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolTodGetArgsResponse(contentType, httpRes.statusCode()) {{
             protocolTodGetArgs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,11 +92,9 @@ public class Tod {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTodGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolTodGetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTodGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolTodGetConfigResponse(contentType, httpRes.statusCode()) {{
             configTOD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,11 +132,9 @@ public class Tod {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTodGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolTodGetStatisticsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTodGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolTodGetStatisticsResponse(contentType, httpRes.statusCode()) {{
             protocolTodGetStatistics200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,11 +171,9 @@ public class Tod {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTodGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolTodGetStatsHdrResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTodGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolTodGetStatsHdrResponse(contentType, httpRes.statusCode()) {{
             protocolTodGetStatsHdr200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -219,11 +211,9 @@ public class Tod {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTodGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolTodGetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTodGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolTodGetTraceResponse(contentType, httpRes.statusCode()) {{
             configTOD = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -261,11 +251,9 @@ public class Tod {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTodGettimeResponse res = new org.openapis.openapi.models.operations.ProtocolTodGettimeResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTodGettimeResponse res = new org.openapis.openapi.models.operations.ProtocolTodGettimeResponse(contentType, httpRes.statusCode()) {{
             protocolTodGettime200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -303,11 +291,9 @@ public class Tod {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTodSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolTodSetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTodSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolTodSetConfigResponse(contentType, httpRes.statusCode()) {{
             protocolTodSetConfig200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +330,9 @@ public class Tod {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTodSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolTodSetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTodSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolTodSetTraceResponse(contentType, httpRes.statusCode()) {{
             protocolTodSetTrace200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateHITTypeOfHITResponse {
     
     public String contentType;
+
     public UpdateHITTypeOfHITResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateHITTypeOfHITResponse {
     
     
     public Integer statusCode;
+
     public UpdateHITTypeOfHITResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateHITTypeOfHITResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateHITTypeOfHITResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateHITTypeOfHITResponse {
      */
     
     public Object requestError;
+
     public UpdateHITTypeOfHITResponse withRequestError(Object requestError) {
         this.requestError = requestError;
         return this;
@@ -43,6 +48,7 @@ public class UpdateHITTypeOfHITResponse {
      */
     
     public Object serviceFault;
+
     public UpdateHITTypeOfHITResponse withServiceFault(Object serviceFault) {
         this.serviceFault = serviceFault;
         return this;
@@ -53,9 +59,14 @@ public class UpdateHITTypeOfHITResponse {
      */
     
     public java.util.Map<String, Object> updateHITTypeOfHITResponse;
+
     public UpdateHITTypeOfHITResponse withUpdateHITTypeOfHITResponse(java.util.Map<String, Object> updateHITTypeOfHITResponse) {
         this.updateHITTypeOfHITResponse = updateHITTypeOfHITResponse;
         return this;
     }
     
+    public UpdateHITTypeOfHITResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

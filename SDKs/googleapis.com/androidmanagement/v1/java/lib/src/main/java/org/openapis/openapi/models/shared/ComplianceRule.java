@@ -18,6 +18,7 @@ public class ComplianceRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiLevelCondition")
     public ApiLevelCondition apiLevelCondition;
+
     public ComplianceRule withApiLevelCondition(ApiLevelCondition apiLevelCondition) {
         this.apiLevelCondition = apiLevelCondition;
         return this;
@@ -29,6 +30,7 @@ public class ComplianceRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableApps")
     public Boolean disableApps;
+
     public ComplianceRule withDisableApps(Boolean disableApps) {
         this.disableApps = disableApps;
         return this;
@@ -40,6 +42,7 @@ public class ComplianceRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonComplianceDetailCondition")
     public NonComplianceDetailCondition nonComplianceDetailCondition;
+
     public ComplianceRule withNonComplianceDetailCondition(NonComplianceDetailCondition nonComplianceDetailCondition) {
         this.nonComplianceDetailCondition = nonComplianceDetailCondition;
         return this;
@@ -51,9 +54,11 @@ public class ComplianceRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageNamesToDisable")
     public String[] packageNamesToDisable;
+
     public ComplianceRule withPackageNamesToDisable(String[] packageNamesToDisable) {
         this.packageNamesToDisable = packageNamesToDisable;
         return this;
     }
     
+    public ComplianceRule(){}
 }

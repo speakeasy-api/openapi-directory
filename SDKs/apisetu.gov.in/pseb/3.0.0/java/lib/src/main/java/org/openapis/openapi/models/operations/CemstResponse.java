@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CemstResponse {
     
     public String contentType;
+
     public CemstResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CemstResponse {
     
     
     public Integer statusCode;
+
     public CemstResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CemstResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CemstResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CemstResponse {
      */
     
     public Cemst400ApplicationJSON cemst400ApplicationJSONObject;
+
     public CemstResponse withCemst400ApplicationJSONObject(Cemst400ApplicationJSON cemst400ApplicationJSONObject) {
         this.cemst400ApplicationJSONObject = cemst400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CemstResponse {
      */
     
     public Cemst401ApplicationJSON cemst401ApplicationJSONObject;
+
     public CemstResponse withCemst401ApplicationJSONObject(Cemst401ApplicationJSON cemst401ApplicationJSONObject) {
         this.cemst401ApplicationJSONObject = cemst401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CemstResponse {
      */
     
     public Cemst404ApplicationJSON cemst404ApplicationJSONObject;
+
     public CemstResponse withCemst404ApplicationJSONObject(Cemst404ApplicationJSON cemst404ApplicationJSONObject) {
         this.cemst404ApplicationJSONObject = cemst404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class CemstResponse {
      */
     
     public Cemst500ApplicationJSON cemst500ApplicationJSONObject;
+
     public CemstResponse withCemst500ApplicationJSONObject(Cemst500ApplicationJSON cemst500ApplicationJSONObject) {
         this.cemst500ApplicationJSONObject = cemst500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class CemstResponse {
      */
     
     public Cemst502ApplicationJSON cemst502ApplicationJSONObject;
+
     public CemstResponse withCemst502ApplicationJSONObject(Cemst502ApplicationJSON cemst502ApplicationJSONObject) {
         this.cemst502ApplicationJSONObject = cemst502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class CemstResponse {
      */
     
     public Cemst503ApplicationJSON cemst503ApplicationJSONObject;
+
     public CemstResponse withCemst503ApplicationJSONObject(Cemst503ApplicationJSON cemst503ApplicationJSONObject) {
         this.cemst503ApplicationJSONObject = cemst503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class CemstResponse {
      */
     
     public Cemst504ApplicationJSON cemst504ApplicationJSONObject;
+
     public CemstResponse withCemst504ApplicationJSONObject(Cemst504ApplicationJSON cemst504ApplicationJSONObject) {
         this.cemst504ApplicationJSONObject = cemst504ApplicationJSONObject;
         return this;
     }
     
+    public CemstResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

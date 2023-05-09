@@ -15,6 +15,7 @@ public class CustomAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomAttribute withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +27,7 @@ public class CustomAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public CustomAttribute withType(String type) {
         this.type = type;
         return this;
@@ -37,6 +39,7 @@ public class CustomAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public CustomAttribute withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -48,9 +51,11 @@ public class CustomAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public CustomAttribute withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CustomAttribute(){}
 }

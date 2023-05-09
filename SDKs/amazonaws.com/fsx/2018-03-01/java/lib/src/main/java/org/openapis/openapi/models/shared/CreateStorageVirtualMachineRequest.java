@@ -12,17 +12,19 @@ public class CreateStorageVirtualMachineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveDirectoryConfiguration")
     public CreateSvmActiveDirectoryConfiguration activeDirectoryConfiguration;
+
     public CreateStorageVirtualMachineRequest withActiveDirectoryConfiguration(CreateSvmActiveDirectoryConfiguration activeDirectoryConfiguration) {
         this.activeDirectoryConfiguration = activeDirectoryConfiguration;
         return this;
     }
     
     /**
-     * (Optional) An idempotency token for resource creation, in a string of up to 64 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
+     * (Optional) An idempotency token for resource creation, in a string of up to 63 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CreateStorageVirtualMachineRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -33,6 +35,7 @@ public class CreateStorageVirtualMachineRequest {
      */
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public CreateStorageVirtualMachineRequest withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -40,6 +43,7 @@ public class CreateStorageVirtualMachineRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateStorageVirtualMachineRequest withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +52,7 @@ public class CreateStorageVirtualMachineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootVolumeSecurityStyle")
     public StorageVirtualMachineRootVolumeSecurityStyleEnum rootVolumeSecurityStyle;
+
     public CreateStorageVirtualMachineRequest withRootVolumeSecurityStyle(StorageVirtualMachineRootVolumeSecurityStyleEnum rootVolumeSecurityStyle) {
         this.rootVolumeSecurityStyle = rootVolumeSecurityStyle;
         return this;
@@ -56,6 +61,7 @@ public class CreateStorageVirtualMachineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SvmAdminPassword")
     public String svmAdminPassword;
+
     public CreateStorageVirtualMachineRequest withSvmAdminPassword(String svmAdminPassword) {
         this.svmAdminPassword = svmAdminPassword;
         return this;
@@ -67,9 +73,14 @@ public class CreateStorageVirtualMachineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateStorageVirtualMachineRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateStorageVirtualMachineRequest(@JsonProperty("FileSystemId") String fileSystemId, @JsonProperty("Name") String name) {
+        this.fileSystemId = fileSystemId;
+        this.name = name;
+  }
 }

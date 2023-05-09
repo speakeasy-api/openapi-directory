@@ -15,9 +15,11 @@ public class BatchExecuteStatementResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateResults")
     public UpdateResult[] updateResults;
+
     public BatchExecuteStatementResponse withUpdateResults(UpdateResult[] updateResults) {
         this.updateResults = updateResults;
         return this;
     }
     
+    public BatchExecuteStatementResponse(){}
 }

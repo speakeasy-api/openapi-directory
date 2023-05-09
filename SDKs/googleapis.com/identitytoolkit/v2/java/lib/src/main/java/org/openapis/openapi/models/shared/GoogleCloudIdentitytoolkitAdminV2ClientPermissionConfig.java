@@ -18,9 +18,11 @@ public class GoogleCloudIdentitytoolkitAdminV2ClientPermissionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public GoogleCloudIdentitytoolkitAdminV2ClientPermissions permissions;
+
     public GoogleCloudIdentitytoolkitAdminV2ClientPermissionConfig withPermissions(GoogleCloudIdentitytoolkitAdminV2ClientPermissions permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2ClientPermissionConfig(){}
 }

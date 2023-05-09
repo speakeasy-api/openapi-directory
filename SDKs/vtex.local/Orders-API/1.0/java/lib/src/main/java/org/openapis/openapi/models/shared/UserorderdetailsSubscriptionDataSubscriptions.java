@@ -12,6 +12,7 @@ public class UserorderdetailsSubscriptionDataSubscriptions {
      */
     @JsonProperty("ExecutionCount")
     public Long executionCount;
+
     public UserorderdetailsSubscriptionDataSubscriptions withExecutionCount(Long executionCount) {
         this.executionCount = executionCount;
         return this;
@@ -22,6 +23,7 @@ public class UserorderdetailsSubscriptionDataSubscriptions {
      */
     @JsonProperty("ItemIndex")
     public Long itemIndex;
+
     public UserorderdetailsSubscriptionDataSubscriptions withItemIndex(Long itemIndex) {
         this.itemIndex = itemIndex;
         return this;
@@ -32,6 +34,7 @@ public class UserorderdetailsSubscriptionDataSubscriptions {
      */
     @JsonProperty("Plan")
     public UserorderdetailsSubscriptionDataSubscriptionsPlan plan;
+
     public UserorderdetailsSubscriptionDataSubscriptions withPlan(UserorderdetailsSubscriptionDataSubscriptionsPlan plan) {
         this.plan = plan;
         return this;
@@ -42,9 +45,16 @@ public class UserorderdetailsSubscriptionDataSubscriptions {
      */
     @JsonProperty("PriceAtSubscriptionDate")
     public Double priceAtSubscriptionDate;
+
     public UserorderdetailsSubscriptionDataSubscriptions withPriceAtSubscriptionDate(Double priceAtSubscriptionDate) {
         this.priceAtSubscriptionDate = priceAtSubscriptionDate;
         return this;
     }
     
+    public UserorderdetailsSubscriptionDataSubscriptions(@JsonProperty("ExecutionCount") Long executionCount, @JsonProperty("ItemIndex") Long itemIndex, @JsonProperty("Plan") UserorderdetailsSubscriptionDataSubscriptionsPlan plan, @JsonProperty("PriceAtSubscriptionDate") Double priceAtSubscriptionDate) {
+        this.executionCount = executionCount;
+        this.itemIndex = itemIndex;
+        this.plan = plan;
+        this.priceAtSubscriptionDate = priceAtSubscriptionDate;
+  }
 }

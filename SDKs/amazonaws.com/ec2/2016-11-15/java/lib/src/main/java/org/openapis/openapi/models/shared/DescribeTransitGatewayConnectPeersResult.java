@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTransitGatewayConnectPeersResult {
     
     public String nextToken;
+
     public DescribeTransitGatewayConnectPeersResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeTransitGatewayConnectPeersResult {
     
     
     public DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeers[] transitGatewayConnectPeers;
+
     public DescribeTransitGatewayConnectPeersResult withTransitGatewayConnectPeers(DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeers[] transitGatewayConnectPeers) {
         this.transitGatewayConnectPeers = transitGatewayConnectPeers;
         return this;
     }
     
+    public DescribeTransitGatewayConnectPeersResult(){}
 }

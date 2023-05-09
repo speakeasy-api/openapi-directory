@@ -12,6 +12,7 @@ public class DescribeProvisioningParametersInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public DescribeProvisioningParametersInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class DescribeProvisioningParametersInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PathId")
     public String pathId;
+
     public DescribeProvisioningParametersInput withPathId(String pathId) {
         this.pathId = pathId;
         return this;
@@ -28,6 +30,7 @@ public class DescribeProvisioningParametersInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PathName")
     public String pathName;
+
     public DescribeProvisioningParametersInput withPathName(String pathName) {
         this.pathName = pathName;
         return this;
@@ -36,6 +39,7 @@ public class DescribeProvisioningParametersInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductId")
     public String productId;
+
     public DescribeProvisioningParametersInput withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -44,6 +48,7 @@ public class DescribeProvisioningParametersInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductName")
     public String productName;
+
     public DescribeProvisioningParametersInput withProductName(String productName) {
         this.productName = productName;
         return this;
@@ -52,6 +57,7 @@ public class DescribeProvisioningParametersInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactId")
     public String provisioningArtifactId;
+
     public DescribeProvisioningParametersInput withProvisioningArtifactId(String provisioningArtifactId) {
         this.provisioningArtifactId = provisioningArtifactId;
         return this;
@@ -60,9 +66,11 @@ public class DescribeProvisioningParametersInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactName")
     public String provisioningArtifactName;
+
     public DescribeProvisioningParametersInput withProvisioningArtifactName(String provisioningArtifactName) {
         this.provisioningArtifactName = provisioningArtifactName;
         return this;
     }
     
+    public DescribeProvisioningParametersInput(){}
 }

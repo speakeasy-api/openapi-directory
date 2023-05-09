@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class PullRequestReview {
     @JsonProperty("_links")
     public PullRequestReviewLinks links;
+
     public PullRequestReview withLinks(PullRequestReviewLinks links) {
         this.links = links;
         return this;
@@ -29,6 +30,7 @@ public class PullRequestReview {
      */
     @JsonProperty("author_association")
     public AuthorAssociationEnum authorAssociation;
+
     public PullRequestReview withAuthorAssociation(AuthorAssociationEnum authorAssociation) {
         this.authorAssociation = authorAssociation;
         return this;
@@ -39,6 +41,7 @@ public class PullRequestReview {
      */
     @JsonProperty("body")
     public String body;
+
     public PullRequestReview withBody(String body) {
         this.body = body;
         return this;
@@ -47,6 +50,7 @@ public class PullRequestReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_html")
     public String bodyHtml;
+
     public PullRequestReview withBodyHtml(String bodyHtml) {
         this.bodyHtml = bodyHtml;
         return this;
@@ -55,6 +59,7 @@ public class PullRequestReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_text")
     public String bodyText;
+
     public PullRequestReview withBodyText(String bodyText) {
         this.bodyText = bodyText;
         return this;
@@ -65,6 +70,7 @@ public class PullRequestReview {
      */
     @JsonProperty("commit_id")
     public String commitId;
+
     public PullRequestReview withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -72,6 +78,7 @@ public class PullRequestReview {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public PullRequestReview withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -82,6 +89,7 @@ public class PullRequestReview {
      */
     @JsonProperty("id")
     public Long id;
+
     public PullRequestReview withId(Long id) {
         this.id = id;
         return this;
@@ -89,6 +97,7 @@ public class PullRequestReview {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public PullRequestReview withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -96,6 +105,7 @@ public class PullRequestReview {
     
     @JsonProperty("pull_request_url")
     public String pullRequestUrl;
+
     public PullRequestReview withPullRequestUrl(String pullRequestUrl) {
         this.pullRequestUrl = pullRequestUrl;
         return this;
@@ -103,6 +113,7 @@ public class PullRequestReview {
     
     @JsonProperty("state")
     public String state;
+
     public PullRequestReview withState(String state) {
         this.state = state;
         return this;
@@ -113,6 +124,7 @@ public class PullRequestReview {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("submitted_at")
     public OffsetDateTime submittedAt;
+
     public PullRequestReview withSubmittedAt(OffsetDateTime submittedAt) {
         this.submittedAt = submittedAt;
         return this;
@@ -123,9 +135,22 @@ public class PullRequestReview {
      */
     @JsonProperty("user")
     public NullableSimpleUser user;
+
     public PullRequestReview withUser(NullableSimpleUser user) {
         this.user = user;
         return this;
     }
     
+    public PullRequestReview(@JsonProperty("_links") PullRequestReviewLinks links, @JsonProperty("author_association") AuthorAssociationEnum authorAssociation, @JsonProperty("body") String body, @JsonProperty("commit_id") String commitId, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("node_id") String nodeId, @JsonProperty("pull_request_url") String pullRequestUrl, @JsonProperty("state") String state, @JsonProperty("user") NullableSimpleUser user) {
+        this.links = links;
+        this.authorAssociation = authorAssociation;
+        this.body = body;
+        this.commitId = commitId;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.nodeId = nodeId;
+        this.pullRequestUrl = pullRequestUrl;
+        this.state = state;
+        this.user = user;
+  }
 }

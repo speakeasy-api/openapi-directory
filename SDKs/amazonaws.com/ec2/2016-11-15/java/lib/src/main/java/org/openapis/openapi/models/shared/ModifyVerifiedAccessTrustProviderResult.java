@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyVerifiedAccessTrustProviderResult {
     
     public ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider verifiedAccessTrustProvider;
+
     public ModifyVerifiedAccessTrustProviderResult withVerifiedAccessTrustProvider(ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider verifiedAccessTrustProvider) {
         this.verifiedAccessTrustProvider = verifiedAccessTrustProvider;
         return this;
     }
     
+    public ModifyVerifiedAccessTrustProviderResult(){}
 }

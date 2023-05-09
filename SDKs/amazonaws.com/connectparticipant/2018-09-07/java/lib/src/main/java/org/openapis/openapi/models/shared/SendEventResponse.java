@@ -15,6 +15,7 @@ public class SendEventResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AbsoluteTime")
     public String absoluteTime;
+
     public SendEventResponse withAbsoluteTime(String absoluteTime) {
         this.absoluteTime = absoluteTime;
         return this;
@@ -23,9 +24,11 @@ public class SendEventResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public SendEventResponse withId(String id) {
         this.id = id;
         return this;
     }
     
+    public SendEventResponse(){}
 }

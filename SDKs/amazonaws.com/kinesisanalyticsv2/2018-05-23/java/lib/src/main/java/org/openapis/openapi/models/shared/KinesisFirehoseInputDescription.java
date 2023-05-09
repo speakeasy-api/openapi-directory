@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class KinesisFirehoseInputDescription {
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public KinesisFirehoseInputDescription withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
@@ -22,9 +23,13 @@ public class KinesisFirehoseInputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public KinesisFirehoseInputDescription withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
     }
     
+    public KinesisFirehoseInputDescription(@JsonProperty("ResourceARN") String resourceARN) {
+        this.resourceARN = resourceARN;
+  }
 }

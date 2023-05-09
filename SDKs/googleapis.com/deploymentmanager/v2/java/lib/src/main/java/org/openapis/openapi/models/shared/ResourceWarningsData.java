@@ -15,6 +15,7 @@ public class ResourceWarningsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public ResourceWarningsData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class ResourceWarningsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ResourceWarningsData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ResourceWarningsData(){}
 }

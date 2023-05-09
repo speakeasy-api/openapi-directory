@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetListOrganismsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetListOrganismsFormatEnum format;
+
     public GetListOrganismsRequest withFormat(GetListOrganismsFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public GetListOrganismsRequest(){}
 }

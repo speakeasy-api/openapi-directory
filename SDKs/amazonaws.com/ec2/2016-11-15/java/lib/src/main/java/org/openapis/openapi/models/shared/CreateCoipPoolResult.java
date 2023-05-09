@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateCoipPoolResult {
     
     public CreateCoipPoolResultCoipPool coipPool;
+
     public CreateCoipPoolResult withCoipPool(CreateCoipPoolResultCoipPool coipPool) {
         this.coipPool = coipPool;
         return this;
     }
     
+    public CreateCoipPoolResult(){}
 }

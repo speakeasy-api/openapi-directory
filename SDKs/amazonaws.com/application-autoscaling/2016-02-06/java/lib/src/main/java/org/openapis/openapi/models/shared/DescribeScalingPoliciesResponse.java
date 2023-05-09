@@ -15,6 +15,7 @@ public class DescribeScalingPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeScalingPoliciesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeScalingPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalingPolicies")
     public ScalingPolicy[] scalingPolicies;
+
     public DescribeScalingPoliciesResponse withScalingPolicies(ScalingPolicy[] scalingPolicies) {
         this.scalingPolicies = scalingPolicies;
         return this;
     }
     
+    public DescribeScalingPoliciesResponse(){}
 }

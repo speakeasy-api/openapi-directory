@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ShortBranchCommit {
     @JsonProperty("sha")
     public String sha;
+
     public ShortBranchCommit withSha(String sha) {
         this.sha = sha;
         return this;
@@ -16,9 +17,14 @@ public class ShortBranchCommit {
     
     @JsonProperty("url")
     public String url;
+
     public ShortBranchCommit withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ShortBranchCommit(@JsonProperty("sha") String sha, @JsonProperty("url") String url) {
+        this.sha = sha;
+        this.url = url;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeNodeConfigurationOptionsMessage {
     
     public ActionTypeEnum actionType;
+
     public DescribeNodeConfigurationOptionsMessage withActionType(ActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -16,6 +17,7 @@ public class DescribeNodeConfigurationOptionsMessage {
     
     
     public String clusterIdentifier;
+
     public DescribeNodeConfigurationOptionsMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -23,6 +25,7 @@ public class DescribeNodeConfigurationOptionsMessage {
     
     
     public DescribeNodeConfigurationOptionsMessageFilters[] filters;
+
     public DescribeNodeConfigurationOptionsMessage withFilters(DescribeNodeConfigurationOptionsMessageFilters[] filters) {
         this.filters = filters;
         return this;
@@ -30,6 +33,7 @@ public class DescribeNodeConfigurationOptionsMessage {
     
     
     public String marker;
+
     public DescribeNodeConfigurationOptionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -37,6 +41,7 @@ public class DescribeNodeConfigurationOptionsMessage {
     
     
     public Long maxRecords;
+
     public DescribeNodeConfigurationOptionsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -44,6 +49,7 @@ public class DescribeNodeConfigurationOptionsMessage {
     
     
     public String ownerAccount;
+
     public DescribeNodeConfigurationOptionsMessage withOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -51,6 +57,7 @@ public class DescribeNodeConfigurationOptionsMessage {
     
     
     public String snapshotArn;
+
     public DescribeNodeConfigurationOptionsMessage withSnapshotArn(String snapshotArn) {
         this.snapshotArn = snapshotArn;
         return this;
@@ -58,9 +65,13 @@ public class DescribeNodeConfigurationOptionsMessage {
     
     
     public String snapshotIdentifier;
+
     public DescribeNodeConfigurationOptionsMessage withSnapshotIdentifier(String snapshotIdentifier) {
         this.snapshotIdentifier = snapshotIdentifier;
         return this;
     }
     
+    public DescribeNodeConfigurationOptionsMessage(@JsonProperty("ActionType") ActionTypeEnum actionType) {
+        this.actionType = actionType;
+  }
 }

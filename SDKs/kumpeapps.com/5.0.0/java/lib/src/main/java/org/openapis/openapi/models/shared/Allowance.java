@@ -15,6 +15,7 @@ public class Allowance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowanceTransaction")
     public AllowanceAllowanceTransaction[] allowanceTransaction;
+
     public Allowance withAllowanceTransaction(AllowanceAllowanceTransaction[] allowanceTransaction) {
         this.allowanceTransaction = allowanceTransaction;
         return this;
@@ -23,6 +24,7 @@ public class Allowance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance")
     public Long balance;
+
     public Allowance withBalance(Long balance) {
         this.balance = balance;
         return this;
@@ -31,6 +33,7 @@ public class Allowance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Allowance withId(Long id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class Allowance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdated")
     public String lastUpdated;
+
     public Allowance withLastUpdated(String lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -47,9 +51,11 @@ public class Allowance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Long success;
+
     public Allowance withSuccess(Long success) {
         this.success = success;
         return this;
     }
     
+    public Allowance(){}
 }

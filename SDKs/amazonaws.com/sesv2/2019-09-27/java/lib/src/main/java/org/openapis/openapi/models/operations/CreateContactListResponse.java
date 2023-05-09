@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateContactListResponse {
@@ -12,6 +13,7 @@ public class CreateContactListResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateContactListResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -22,6 +24,7 @@ public class CreateContactListResponse {
      */
     
     public Object badRequestException;
+
     public CreateContactListResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class CreateContactListResponse {
     
     
     public String contentType;
+
     public CreateContactListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateContactListResponse {
      */
     
     public java.util.Map<String, Object> createContactListResponse;
+
     public CreateContactListResponse withCreateContactListResponse(java.util.Map<String, Object> createContactListResponse) {
         this.createContactListResponse = createContactListResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateContactListResponse {
      */
     
     public Object limitExceededException;
+
     public CreateContactListResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateContactListResponse {
     
     
     public Integer statusCode;
+
     public CreateContactListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateContactListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateContactListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateContactListResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateContactListResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateContactListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

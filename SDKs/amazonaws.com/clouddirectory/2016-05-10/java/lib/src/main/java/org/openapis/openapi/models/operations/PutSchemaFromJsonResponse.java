@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutSchemaFromJsonResponse {
@@ -12,6 +13,7 @@ public class PutSchemaFromJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException;
+
     public PutSchemaFromJsonResponse withAccessDeniedException(org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class PutSchemaFromJsonResponse {
     
     
     public String contentType;
+
     public PutSchemaFromJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutSchemaFromJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceException internalServiceException;
+
     public PutSchemaFromJsonResponse withInternalServiceException(org.openapis.openapi.models.shared.InternalServiceException internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class PutSchemaFromJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArnException invalidArnException;
+
     public PutSchemaFromJsonResponse withInvalidArnException(org.openapis.openapi.models.shared.InvalidArnException invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class PutSchemaFromJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidRuleException invalidRuleException;
+
     public PutSchemaFromJsonResponse withInvalidRuleException(org.openapis.openapi.models.shared.InvalidRuleException invalidRuleException) {
         this.invalidRuleException = invalidRuleException;
         return this;
@@ -59,6 +65,7 @@ public class PutSchemaFromJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidSchemaDocException invalidSchemaDocException;
+
     public PutSchemaFromJsonResponse withInvalidSchemaDocException(org.openapis.openapi.models.shared.InvalidSchemaDocException invalidSchemaDocException) {
         this.invalidSchemaDocException = invalidSchemaDocException;
         return this;
@@ -69,6 +76,7 @@ public class PutSchemaFromJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public PutSchemaFromJsonResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class PutSchemaFromJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.PutSchemaFromJsonResponse putSchemaFromJsonResponse;
+
     public PutSchemaFromJsonResponse withPutSchemaFromJsonResponse(org.openapis.openapi.models.shared.PutSchemaFromJsonResponse putSchemaFromJsonResponse) {
         this.putSchemaFromJsonResponse = putSchemaFromJsonResponse;
         return this;
@@ -86,6 +95,7 @@ public class PutSchemaFromJsonResponse {
     
     
     public Integer statusCode;
+
     public PutSchemaFromJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class PutSchemaFromJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutSchemaFromJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class PutSchemaFromJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException;
+
     public PutSchemaFromJsonResponse withRetryableConflictException(org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -113,9 +125,14 @@ public class PutSchemaFromJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationException validationException;
+
     public PutSchemaFromJsonResponse withValidationException(org.openapis.openapi.models.shared.ValidationException validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutSchemaFromJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

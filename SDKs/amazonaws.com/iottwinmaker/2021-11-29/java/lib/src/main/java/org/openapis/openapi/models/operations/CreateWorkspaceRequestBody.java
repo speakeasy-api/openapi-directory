@@ -15,6 +15,7 @@ public class CreateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateWorkspaceRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class CreateWorkspaceRequestBody {
      */
     @JsonProperty("role")
     public String role;
+
     public CreateWorkspaceRequestBody withRole(String role) {
         this.role = role;
         return this;
@@ -35,6 +37,7 @@ public class CreateWorkspaceRequestBody {
      */
     @JsonProperty("s3Location")
     public String s3Location;
+
     public CreateWorkspaceRequestBody withS3Location(String s3Location) {
         this.s3Location = s3Location;
         return this;
@@ -46,9 +49,14 @@ public class CreateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateWorkspaceRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateWorkspaceRequestBody(@JsonProperty("role") String role, @JsonProperty("s3Location") String s3Location) {
+        this.role = role;
+        this.s3Location = s3Location;
+  }
 }

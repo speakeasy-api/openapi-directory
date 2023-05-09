@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLayer2NetworkResponse {
@@ -12,6 +13,7 @@ public class GetLayer2NetworkResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiError apiError;
+
     public GetLayer2NetworkResponse withApiError(org.openapis.openapi.models.shared.ApiError apiError) {
         this.apiError = apiError;
         return this;
@@ -22,6 +24,7 @@ public class GetLayer2NetworkResponse {
      */
     
     public org.openapis.openapi.models.shared.BaseL2Network baseL2Network;
+
     public GetLayer2NetworkResponse withBaseL2Network(org.openapis.openapi.models.shared.BaseL2Network baseL2Network) {
         this.baseL2Network = baseL2Network;
         return this;
@@ -29,6 +32,7 @@ public class GetLayer2NetworkResponse {
     
     
     public String contentType;
+
     public GetLayer2NetworkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class GetLayer2NetworkResponse {
     
     
     public Integer statusCode;
+
     public GetLayer2NetworkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetLayer2NetworkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLayer2NetworkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetLayer2NetworkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

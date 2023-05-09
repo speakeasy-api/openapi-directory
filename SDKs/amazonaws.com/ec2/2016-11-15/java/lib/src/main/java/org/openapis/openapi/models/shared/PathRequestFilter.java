@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PathRequestFilter {
     
     public String destinationAddress;
+
     public PathRequestFilter withDestinationAddress(String destinationAddress) {
         this.destinationAddress = destinationAddress;
         return this;
@@ -19,6 +20,7 @@ public class PathRequestFilter {
     
     
     public RequestFilterPortRange destinationPortRange;
+
     public PathRequestFilter withDestinationPortRange(RequestFilterPortRange destinationPortRange) {
         this.destinationPortRange = destinationPortRange;
         return this;
@@ -26,6 +28,7 @@ public class PathRequestFilter {
     
     
     public String sourceAddress;
+
     public PathRequestFilter withSourceAddress(String sourceAddress) {
         this.sourceAddress = sourceAddress;
         return this;
@@ -33,9 +36,11 @@ public class PathRequestFilter {
     
     
     public RequestFilterPortRange sourcePortRange;
+
     public PathRequestFilter withSourcePortRange(RequestFilterPortRange sourcePortRange) {
         this.sourcePortRange = sourcePortRange;
         return this;
     }
     
+    public PathRequestFilter(){}
 }

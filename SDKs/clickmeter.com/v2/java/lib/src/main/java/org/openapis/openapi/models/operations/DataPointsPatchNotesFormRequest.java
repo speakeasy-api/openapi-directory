@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataPointsPatchNotesFormRequest {
@@ -12,6 +13,7 @@ public class DataPointsPatchNotesFormRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.ApiCoreRequestsGenericTextPatch apiCoreRequestsGenericTextPatch;
+
     public DataPointsPatchNotesFormRequest withApiCoreRequestsGenericTextPatch(org.openapis.openapi.models.shared.ApiCoreRequestsGenericTextPatch apiCoreRequestsGenericTextPatch) {
         this.apiCoreRequestsGenericTextPatch = apiCoreRequestsGenericTextPatch;
         return this;
@@ -22,9 +24,14 @@ public class DataPointsPatchNotesFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public DataPointsPatchNotesFormRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public DataPointsPatchNotesFormRequest(@JsonProperty("Api.Core.Requests.GenericTextPatch") org.openapis.openapi.models.shared.ApiCoreRequestsGenericTextPatch apiCoreRequestsGenericTextPatch, @JsonProperty("id") Long id) {
+        this.apiCoreRequestsGenericTextPatch = apiCoreRequestsGenericTextPatch;
+        this.id = id;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataPointsGetStatisticsSingleRequest {
@@ -12,6 +13,7 @@ public class DataPointsGetStatisticsSingleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
     public String fromDay;
+
     public DataPointsGetStatisticsSingleRequest withFromDay(String fromDay) {
         this.fromDay = fromDay;
         return this;
@@ -22,6 +24,7 @@ public class DataPointsGetStatisticsSingleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hourly")
     public Boolean hourly;
+
     public DataPointsGetStatisticsSingleRequest withHourly(Boolean hourly) {
         this.hourly = hourly;
         return this;
@@ -32,6 +35,7 @@ public class DataPointsGetStatisticsSingleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public DataPointsGetStatisticsSingleRequest withId(Long id) {
         this.id = id;
         return this;
@@ -42,6 +46,7 @@ public class DataPointsGetStatisticsSingleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
     public DataPointsGetStatisticsSingleTimeFrameEnum timeFrame;
+
     public DataPointsGetStatisticsSingleRequest withTimeFrame(DataPointsGetStatisticsSingleTimeFrameEnum timeFrame) {
         this.timeFrame = timeFrame;
         return this;
@@ -52,9 +57,14 @@ public class DataPointsGetStatisticsSingleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
     public String toDay;
+
     public DataPointsGetStatisticsSingleRequest withToDay(String toDay) {
         this.toDay = toDay;
         return this;
     }
     
+    public DataPointsGetStatisticsSingleRequest(@JsonProperty("id") Long id, @JsonProperty("timeFrame") DataPointsGetStatisticsSingleTimeFrameEnum timeFrame) {
+        this.id = id;
+        this.timeFrame = timeFrame;
+  }
 }

@@ -13,6 +13,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchBoulderCampaignContributionsRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchBoulderCampaignContributionsRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchBoulderCampaignContributionsRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchBoulderCampaignContributionsRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchBoulderCampaignContributionsRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchBoulderCampaignContributionsRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchBoulderCampaignContributionsRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchBoulderCampaignContributionsRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchBoulderCampaignContributionsRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchBoulderCampaignContributionsRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchBoulderCampaignContributionsRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchBoulderCampaignContributionsRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchBoulderCampaignContributionsRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchBoulderCampaignContributionsRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.amended_date")
     public String searchDbBoulderCampaignContributionsAmendedDate;
+
     public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsAmendedDate(String searchDbBoulderCampaignContributionsAmendedDate) {
         this.searchDbBoulderCampaignContributionsAmendedDate = searchDbBoulderCampaignContributionsAmendedDate;
         return this;
@@ -163,6 +178,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.anonymous")
     public String searchDbBoulderCampaignContributionsAnonymous;
+
     public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsAnonymous(String searchDbBoulderCampaignContributionsAnonymous) {
         this.searchDbBoulderCampaignContributionsAnonymous = searchDbBoulderCampaignContributionsAnonymous;
         return this;
@@ -173,6 +189,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.candidate")
     public String searchDbBoulderCampaignContributionsCandidate;
+
     public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsCandidate(String searchDbBoulderCampaignContributionsCandidate) {
         this.searchDbBoulderCampaignContributionsCandidate = searchDbBoulderCampaignContributionsCandidate;
         return this;
@@ -183,6 +200,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.city")
     public String searchDbBoulderCampaignContributionsCity;
+
     public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsCity(String searchDbBoulderCampaignContributionsCity) {
         this.searchDbBoulderCampaignContributionsCity = searchDbBoulderCampaignContributionsCity;
         return this;
@@ -193,6 +211,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.committee")
     public String searchDbBoulderCampaignContributionsCommittee;
+
     public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsCommittee(String searchDbBoulderCampaignContributionsCommittee) {
         this.searchDbBoulderCampaignContributionsCommittee = searchDbBoulderCampaignContributionsCommittee;
         return this;
@@ -203,6 +222,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.committee_num")
     public String searchDbBoulderCampaignContributionsCommitteeNum;
+
     public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsCommitteeNum(String searchDbBoulderCampaignContributionsCommitteeNum) {
         this.searchDbBoulderCampaignContributionsCommitteeNum = searchDbBoulderCampaignContributionsCommitteeNum;
         return this;
@@ -213,6 +233,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.contribution")
     public Double searchDbBoulderCampaignContributionsContribution;
+
     public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsContribution(Double searchDbBoulderCampaignContributionsContribution) {
         this.searchDbBoulderCampaignContributionsContribution = searchDbBoulderCampaignContributionsContribution;
         return this;
@@ -223,6 +244,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.contribution_type")
     public String searchDbBoulderCampaignContributionsContributionType;
+
     public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsContributionType(String searchDbBoulderCampaignContributionsContributionType) {
         this.searchDbBoulderCampaignContributionsContributionType = searchDbBoulderCampaignContributionsContributionType;
         return this;
@@ -233,6 +255,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.filing_date")
     public String searchDbBoulderCampaignContributionsFilingDate;
+
     public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsFilingDate(String searchDbBoulderCampaignContributionsFilingDate) {
         this.searchDbBoulderCampaignContributionsFilingDate = searchDbBoulderCampaignContributionsFilingDate;
         return this;
@@ -243,6 +266,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.first_name")
     public String searchDbBoulderCampaignContributionsFirstName;
+
     public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsFirstName(String searchDbBoulderCampaignContributionsFirstName) {
         this.searchDbBoulderCampaignContributionsFirstName = searchDbBoulderCampaignContributionsFirstName;
         return this;
@@ -253,6 +277,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.from_candidate")
     public String searchDbBoulderCampaignContributionsFromCandidate;
+
     public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsFromCandidate(String searchDbBoulderCampaignContributionsFromCandidate) {
         this.searchDbBoulderCampaignContributionsFromCandidate = searchDbBoulderCampaignContributionsFromCandidate;
         return this;
@@ -263,6 +288,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.last_name")
     public String searchDbBoulderCampaignContributionsLastName;
+
     public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsLastName(String searchDbBoulderCampaignContributionsLastName) {
         this.searchDbBoulderCampaignContributionsLastName = searchDbBoulderCampaignContributionsLastName;
         return this;
@@ -273,6 +299,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.match")
     public Double searchDbBoulderCampaignContributionsMatch;
+
     public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsMatch(Double searchDbBoulderCampaignContributionsMatch) {
         this.searchDbBoulderCampaignContributionsMatch = searchDbBoulderCampaignContributionsMatch;
         return this;
@@ -283,6 +310,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.official_filing")
     public String searchDbBoulderCampaignContributionsOfficialFiling;
+
     public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsOfficialFiling(String searchDbBoulderCampaignContributionsOfficialFiling) {
         this.searchDbBoulderCampaignContributionsOfficialFiling = searchDbBoulderCampaignContributionsOfficialFiling;
         return this;
@@ -293,6 +321,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.state")
     public String searchDbBoulderCampaignContributionsState;
+
     public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsState(String searchDbBoulderCampaignContributionsState) {
         this.searchDbBoulderCampaignContributionsState = searchDbBoulderCampaignContributionsState;
         return this;
@@ -303,6 +332,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.street")
     public String searchDbBoulderCampaignContributionsStreet;
+
     public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsStreet(String searchDbBoulderCampaignContributionsStreet) {
         this.searchDbBoulderCampaignContributionsStreet = searchDbBoulderCampaignContributionsStreet;
         return this;
@@ -313,6 +343,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.transaction_date")
     public String searchDbBoulderCampaignContributionsTransactionDate;
+
     public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsTransactionDate(String searchDbBoulderCampaignContributionsTransactionDate) {
         this.searchDbBoulderCampaignContributionsTransactionDate = searchDbBoulderCampaignContributionsTransactionDate;
         return this;
@@ -323,6 +354,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.type")
     public String searchDbBoulderCampaignContributionsType;
+
     public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsType(String searchDbBoulderCampaignContributionsType) {
         this.searchDbBoulderCampaignContributionsType = searchDbBoulderCampaignContributionsType;
         return this;
@@ -333,6 +365,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.zip")
     public String searchDbBoulderCampaignContributionsZip;
+
     public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsZip(String searchDbBoulderCampaignContributionsZip) {
         this.searchDbBoulderCampaignContributionsZip = searchDbBoulderCampaignContributionsZip;
         return this;
@@ -343,6 +376,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchBoulderCampaignContributionsRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -353,6 +387,7 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchBoulderCampaignContributionsRequest withText(String text) {
         this.text = text;
         return this;
@@ -363,9 +398,11 @@ public class SearchBoulderCampaignContributionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchBoulderCampaignContributionsRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchBoulderCampaignContributionsRequest(){}
 }

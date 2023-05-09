@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InvoiceApiSendToClientJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SendInvoiceToClientApiModel sendInvoiceToClientApiModel;
+
     public InvoiceApiSendToClientJsonRequest withSendInvoiceToClientApiModel(org.openapis.openapi.models.shared.SendInvoiceToClientApiModel sendInvoiceToClientApiModel) {
         this.sendInvoiceToClientApiModel = sendInvoiceToClientApiModel;
         return this;
@@ -16,6 +18,7 @@ public class InvoiceApiSendToClientJsonRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
     public String xAuthKey;
+
     public InvoiceApiSendToClientJsonRequest withXAuthKey(String xAuthKey) {
         this.xAuthKey = xAuthKey;
         return this;
@@ -23,9 +26,15 @@ public class InvoiceApiSendToClientJsonRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
     public String xAuthSecret;
+
     public InvoiceApiSendToClientJsonRequest withXAuthSecret(String xAuthSecret) {
         this.xAuthSecret = xAuthSecret;
         return this;
     }
     
+    public InvoiceApiSendToClientJsonRequest(@JsonProperty("SendInvoiceToClientApiModel") org.openapis.openapi.models.shared.SendInvoiceToClientApiModel sendInvoiceToClientApiModel, @JsonProperty("x-auth-key") String xAuthKey, @JsonProperty("x-auth-secret") String xAuthSecret) {
+        this.sendInvoiceToClientApiModel = sendInvoiceToClientApiModel;
+        this.xAuthKey = xAuthKey;
+        this.xAuthSecret = xAuthSecret;
+  }
 }

@@ -18,6 +18,7 @@ public class TpuConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public TpuConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,6 +30,7 @@ public class TpuConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv4CidrBlock")
     public String ipv4CidrBlock;
+
     public TpuConfig withIpv4CidrBlock(String ipv4CidrBlock) {
         this.ipv4CidrBlock = ipv4CidrBlock;
         return this;
@@ -40,9 +42,11 @@ public class TpuConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useServiceNetworking")
     public Boolean useServiceNetworking;
+
     public TpuConfig withUseServiceNetworking(Boolean useServiceNetworking) {
         this.useServiceNetworking = useServiceNetworking;
         return this;
     }
     
+    public TpuConfig(){}
 }

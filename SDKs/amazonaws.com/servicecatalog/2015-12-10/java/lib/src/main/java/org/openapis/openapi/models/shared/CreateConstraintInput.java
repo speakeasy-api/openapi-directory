@@ -12,6 +12,7 @@ public class CreateConstraintInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public CreateConstraintInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class CreateConstraintInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateConstraintInput withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class CreateConstraintInput {
     
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public CreateConstraintInput withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -34,6 +37,7 @@ public class CreateConstraintInput {
     
     @JsonProperty("Parameters")
     public String parameters;
+
     public CreateConstraintInput withParameters(String parameters) {
         this.parameters = parameters;
         return this;
@@ -41,6 +45,7 @@ public class CreateConstraintInput {
     
     @JsonProperty("PortfolioId")
     public String portfolioId;
+
     public CreateConstraintInput withPortfolioId(String portfolioId) {
         this.portfolioId = portfolioId;
         return this;
@@ -48,6 +53,7 @@ public class CreateConstraintInput {
     
     @JsonProperty("ProductId")
     public String productId;
+
     public CreateConstraintInput withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -55,9 +61,17 @@ public class CreateConstraintInput {
     
     @JsonProperty("Type")
     public String type;
+
     public CreateConstraintInput withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CreateConstraintInput(@JsonProperty("IdempotencyToken") String idempotencyToken, @JsonProperty("Parameters") String parameters, @JsonProperty("PortfolioId") String portfolioId, @JsonProperty("ProductId") String productId, @JsonProperty("Type") String type) {
+        this.idempotencyToken = idempotencyToken;
+        this.parameters = parameters;
+        this.portfolioId = portfolioId;
+        this.productId = productId;
+        this.type = type;
+  }
 }

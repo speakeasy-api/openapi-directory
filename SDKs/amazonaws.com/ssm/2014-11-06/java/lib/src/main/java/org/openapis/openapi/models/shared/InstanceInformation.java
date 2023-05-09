@@ -20,6 +20,7 @@ public class InstanceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActivationId")
     public String activationId;
+
     public InstanceInformation withActivationId(String activationId) {
         this.activationId = activationId;
         return this;
@@ -28,6 +29,7 @@ public class InstanceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentVersion")
     public String agentVersion;
+
     public InstanceInformation withAgentVersion(String agentVersion) {
         this.agentVersion = agentVersion;
         return this;
@@ -36,6 +38,7 @@ public class InstanceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationOverview")
     public InstanceAggregatedAssociationOverview associationOverview;
+
     public InstanceInformation withAssociationOverview(InstanceAggregatedAssociationOverview associationOverview) {
         this.associationOverview = associationOverview;
         return this;
@@ -44,6 +47,7 @@ public class InstanceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationStatus")
     public String associationStatus;
+
     public InstanceInformation withAssociationStatus(String associationStatus) {
         this.associationStatus = associationStatus;
         return this;
@@ -52,6 +56,7 @@ public class InstanceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputerName")
     public String computerName;
+
     public InstanceInformation withComputerName(String computerName) {
         this.computerName = computerName;
         return this;
@@ -60,6 +65,7 @@ public class InstanceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IPAddress")
     public String ipAddress;
+
     public InstanceInformation withIPAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -68,6 +74,7 @@ public class InstanceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamRole")
     public String iamRole;
+
     public InstanceInformation withIamRole(String iamRole) {
         this.iamRole = iamRole;
         return this;
@@ -76,6 +83,7 @@ public class InstanceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public InstanceInformation withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -84,6 +92,7 @@ public class InstanceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsLatestVersion")
     public Boolean isLatestVersion;
+
     public InstanceInformation withIsLatestVersion(Boolean isLatestVersion) {
         this.isLatestVersion = isLatestVersion;
         return this;
@@ -94,6 +103,7 @@ public class InstanceInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastAssociationExecutionDate")
     public OffsetDateTime lastAssociationExecutionDate;
+
     public InstanceInformation withLastAssociationExecutionDate(OffsetDateTime lastAssociationExecutionDate) {
         this.lastAssociationExecutionDate = lastAssociationExecutionDate;
         return this;
@@ -104,6 +114,7 @@ public class InstanceInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastPingDateTime")
     public OffsetDateTime lastPingDateTime;
+
     public InstanceInformation withLastPingDateTime(OffsetDateTime lastPingDateTime) {
         this.lastPingDateTime = lastPingDateTime;
         return this;
@@ -114,6 +125,7 @@ public class InstanceInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastSuccessfulAssociationExecutionDate")
     public OffsetDateTime lastSuccessfulAssociationExecutionDate;
+
     public InstanceInformation withLastSuccessfulAssociationExecutionDate(OffsetDateTime lastSuccessfulAssociationExecutionDate) {
         this.lastSuccessfulAssociationExecutionDate = lastSuccessfulAssociationExecutionDate;
         return this;
@@ -122,6 +134,7 @@ public class InstanceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public InstanceInformation withName(String name) {
         this.name = name;
         return this;
@@ -130,6 +143,7 @@ public class InstanceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PingStatus")
     public PingStatusEnum pingStatus;
+
     public InstanceInformation withPingStatus(PingStatusEnum pingStatus) {
         this.pingStatus = pingStatus;
         return this;
@@ -138,6 +152,7 @@ public class InstanceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlatformName")
     public String platformName;
+
     public InstanceInformation withPlatformName(String platformName) {
         this.platformName = platformName;
         return this;
@@ -146,6 +161,7 @@ public class InstanceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlatformType")
     public PlatformTypeEnum platformType;
+
     public InstanceInformation withPlatformType(PlatformTypeEnum platformType) {
         this.platformType = platformType;
         return this;
@@ -154,6 +170,7 @@ public class InstanceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlatformVersion")
     public String platformVersion;
+
     public InstanceInformation withPlatformVersion(String platformVersion) {
         this.platformVersion = platformVersion;
         return this;
@@ -164,6 +181,7 @@ public class InstanceInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RegistrationDate")
     public OffsetDateTime registrationDate;
+
     public InstanceInformation withRegistrationDate(OffsetDateTime registrationDate) {
         this.registrationDate = registrationDate;
         return this;
@@ -172,6 +190,7 @@ public class InstanceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public ResourceTypeEnum resourceType;
+
     public InstanceInformation withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -180,6 +199,7 @@ public class InstanceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceId")
     public String sourceId;
+
     public InstanceInformation withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -188,9 +208,11 @@ public class InstanceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceType")
     public SourceTypeEnum sourceType;
+
     public InstanceInformation withSourceType(SourceTypeEnum sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public InstanceInformation(){}
 }

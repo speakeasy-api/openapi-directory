@@ -15,9 +15,11 @@ public class DeleteSourceCredentialsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public DeleteSourceCredentialsOutput withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DeleteSourceCredentialsOutput(){}
 }

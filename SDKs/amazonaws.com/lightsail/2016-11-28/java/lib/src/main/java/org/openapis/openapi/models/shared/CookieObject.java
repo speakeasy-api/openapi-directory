@@ -15,6 +15,7 @@ public class CookieObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cookiesAllowList")
     public String[] cookiesAllowList;
+
     public CookieObject withCookiesAllowList(String[] cookiesAllowList) {
         this.cookiesAllowList = cookiesAllowList;
         return this;
@@ -23,9 +24,11 @@ public class CookieObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("option")
     public ForwardValuesEnum option;
+
     public CookieObject withOption(ForwardValuesEnum option) {
         this.option = option;
         return this;
     }
     
+    public CookieObject(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetInstanceAccessDetailsRequest {
     @JsonProperty("instanceName")
     public String instanceName;
+
     public GetInstanceAccessDetailsRequest withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
@@ -19,9 +20,13 @@ public class GetInstanceAccessDetailsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public InstanceAccessProtocolEnum protocol;
+
     public GetInstanceAccessDetailsRequest withProtocol(InstanceAccessProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public GetInstanceAccessDetailsRequest(@JsonProperty("instanceName") String instanceName) {
+        this.instanceName = instanceName;
+  }
 }

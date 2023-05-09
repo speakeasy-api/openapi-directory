@@ -15,6 +15,7 @@ public class AnalyticsCrashGroupModelCounts200ApplicationJSONModels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crash_count")
     public Long crashCount;
+
     public AnalyticsCrashGroupModelCounts200ApplicationJSONModels withCrashCount(Long crashCount) {
         this.crashCount = crashCount;
         return this;
@@ -26,9 +27,11 @@ public class AnalyticsCrashGroupModelCounts200ApplicationJSONModels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model_name")
     public String modelName;
+
     public AnalyticsCrashGroupModelCounts200ApplicationJSONModels withModelName(String modelName) {
         this.modelName = modelName;
         return this;
     }
     
+    public AnalyticsCrashGroupModelCounts200ApplicationJSONModels(){}
 }

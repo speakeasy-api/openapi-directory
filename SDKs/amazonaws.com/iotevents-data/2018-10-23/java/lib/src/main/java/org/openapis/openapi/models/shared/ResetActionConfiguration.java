@@ -15,9 +15,11 @@ public class ResetActionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public ResetActionConfiguration withNote(String note) {
         this.note = note;
         return this;
     }
     
+    public ResetActionConfiguration(){}
 }

@@ -15,6 +15,7 @@ public class ReplicationSubnetGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationSubnetGroupDescription")
     public String replicationSubnetGroupDescription;
+
     public ReplicationSubnetGroup withReplicationSubnetGroupDescription(String replicationSubnetGroupDescription) {
         this.replicationSubnetGroupDescription = replicationSubnetGroupDescription;
         return this;
@@ -23,6 +24,7 @@ public class ReplicationSubnetGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationSubnetGroupIdentifier")
     public String replicationSubnetGroupIdentifier;
+
     public ReplicationSubnetGroup withReplicationSubnetGroupIdentifier(String replicationSubnetGroupIdentifier) {
         this.replicationSubnetGroupIdentifier = replicationSubnetGroupIdentifier;
         return this;
@@ -31,6 +33,7 @@ public class ReplicationSubnetGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetGroupStatus")
     public String subnetGroupStatus;
+
     public ReplicationSubnetGroup withSubnetGroupStatus(String subnetGroupStatus) {
         this.subnetGroupStatus = subnetGroupStatus;
         return this;
@@ -39,6 +42,7 @@ public class ReplicationSubnetGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subnets")
     public Subnet[] subnets;
+
     public ReplicationSubnetGroup withSubnets(Subnet[] subnets) {
         this.subnets = subnets;
         return this;
@@ -47,6 +51,7 @@ public class ReplicationSubnetGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedNetworkTypes")
     public String[] supportedNetworkTypes;
+
     public ReplicationSubnetGroup withSupportedNetworkTypes(String[] supportedNetworkTypes) {
         this.supportedNetworkTypes = supportedNetworkTypes;
         return this;
@@ -55,9 +60,11 @@ public class ReplicationSubnetGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public ReplicationSubnetGroup withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public ReplicationSubnetGroup(){}
 }

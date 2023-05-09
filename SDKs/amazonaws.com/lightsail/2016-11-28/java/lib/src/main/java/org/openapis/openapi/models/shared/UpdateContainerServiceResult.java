@@ -15,9 +15,11 @@ public class UpdateContainerServiceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerService")
     public ContainerService containerService;
+
     public UpdateContainerServiceResult withContainerService(ContainerService containerService) {
         this.containerService = containerService;
         return this;
     }
     
+    public UpdateContainerServiceResult(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ItemIdentifier {
     @JsonProperty("type")
     public ItemTypeEnum type;
+
     public ItemIdentifier withType(ItemTypeEnum type) {
         this.type = type;
         return this;
@@ -19,9 +20,14 @@ public class ItemIdentifier {
     
     @JsonProperty("value")
     public ItemValue value;
+
     public ItemIdentifier withValue(ItemValue value) {
         this.value = value;
         return this;
     }
     
+    public ItemIdentifier(@JsonProperty("type") ItemTypeEnum type, @JsonProperty("value") ItemValue value) {
+        this.type = type;
+        this.value = value;
+  }
 }

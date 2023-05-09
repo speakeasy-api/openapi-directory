@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeTimeToLiveResponse {
     
     public String contentType;
+
     public DescribeTimeToLiveResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeTimeToLiveResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeTimeToLiveOutput describeTimeToLiveOutput;
+
     public DescribeTimeToLiveResponse withDescribeTimeToLiveOutput(org.openapis.openapi.models.shared.DescribeTimeToLiveOutput describeTimeToLiveOutput) {
         this.describeTimeToLiveOutput = describeTimeToLiveOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeTimeToLiveResponse {
      */
     
     public Object internalServerError;
+
     public DescribeTimeToLiveResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeTimeToLiveResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeTimeToLiveResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeTimeToLiveResponse {
     
     
     public Integer statusCode;
+
     public DescribeTimeToLiveResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeTimeToLiveResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeTimeToLiveResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeTimeToLiveResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

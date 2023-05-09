@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UploadEntityDefinitionsResponse {
     @JsonProperty("uploadId")
     public String uploadId;
+
     public UploadEntityDefinitionsResponse withUploadId(String uploadId) {
         this.uploadId = uploadId;
         return this;
     }
     
+    public UploadEntityDefinitionsResponse(@JsonProperty("uploadId") String uploadId) {
+        this.uploadId = uploadId;
+  }
 }

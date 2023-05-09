@@ -15,6 +15,7 @@ public class PostTextRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeContexts")
     public org.openapis.openapi.models.shared.ActiveContext[] activeContexts;
+
     public PostTextRequestBody withActiveContexts(org.openapis.openapi.models.shared.ActiveContext[] activeContexts) {
         this.activeContexts = activeContexts;
         return this;
@@ -25,6 +26,7 @@ public class PostTextRequestBody {
      */
     @JsonProperty("inputText")
     public String inputText;
+
     public PostTextRequestBody withInputText(String inputText) {
         this.inputText = inputText;
         return this;
@@ -36,6 +38,7 @@ public class PostTextRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestAttributes")
     public java.util.Map<String, String> requestAttributes;
+
     public PostTextRequestBody withRequestAttributes(java.util.Map<String, String> requestAttributes) {
         this.requestAttributes = requestAttributes;
         return this;
@@ -47,9 +50,13 @@ public class PostTextRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionAttributes")
     public java.util.Map<String, String> sessionAttributes;
+
     public PostTextRequestBody withSessionAttributes(java.util.Map<String, String> sessionAttributes) {
         this.sessionAttributes = sessionAttributes;
         return this;
     }
     
+    public PostTextRequestBody(@JsonProperty("inputText") String inputText) {
+        this.inputText = inputText;
+  }
 }

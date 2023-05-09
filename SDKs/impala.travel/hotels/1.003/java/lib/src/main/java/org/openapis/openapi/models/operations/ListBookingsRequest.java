@@ -12,6 +12,7 @@ public class ListBookingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=created")
     public java.util.Map<String, Object> created;
+
     public ListBookingsRequest withCreated(java.util.Map<String, Object> created) {
         this.created = created;
         return this;
@@ -22,6 +23,7 @@ public class ListBookingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=end")
     public java.util.Map<String, Object> end;
+
     public ListBookingsRequest withEnd(java.util.Map<String, Object> end) {
         this.end = end;
         return this;
@@ -32,6 +34,7 @@ public class ListBookingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Double offset;
+
     public ListBookingsRequest withOffset(Double offset) {
         this.offset = offset;
         return this;
@@ -42,6 +45,7 @@ public class ListBookingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Double size;
+
     public ListBookingsRequest withSize(Double size) {
         this.size = size;
         return this;
@@ -52,6 +56,7 @@ public class ListBookingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
     public String sortBy;
+
     public ListBookingsRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -62,6 +67,7 @@ public class ListBookingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=start")
     public java.util.Map<String, Object> start;
+
     public ListBookingsRequest withStart(java.util.Map<String, Object> start) {
         this.start = start;
         return this;
@@ -72,9 +78,11 @@ public class ListBookingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=updated")
     public java.util.Map<String, Object> updated;
+
     public ListBookingsRequest withUpdated(java.util.Map<String, Object> updated) {
         this.updated = updated;
         return this;
     }
     
+    public ListBookingsRequest(){}
 }

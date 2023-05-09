@@ -18,6 +18,7 @@ public class TimeSeriesIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSource")
     public DataSource dataSource;
+
     public TimeSeriesIdentifiers withDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -26,6 +27,7 @@ public class TimeSeriesIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public TimeSeriesIdentifiers withFormat(String format) {
         this.format = format;
         return this;
@@ -37,9 +39,11 @@ public class TimeSeriesIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schema")
     public Schema schema;
+
     public TimeSeriesIdentifiers withSchema(Schema schema) {
         this.schema = schema;
         return this;
     }
     
+    public TimeSeriesIdentifiers(){}
 }

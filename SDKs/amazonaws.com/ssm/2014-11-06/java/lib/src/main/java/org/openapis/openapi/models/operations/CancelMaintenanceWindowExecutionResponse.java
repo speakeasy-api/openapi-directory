@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelMaintenanceWindowExecutionResponse {
@@ -12,6 +13,7 @@ public class CancelMaintenanceWindowExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelMaintenanceWindowExecutionResult cancelMaintenanceWindowExecutionResult;
+
     public CancelMaintenanceWindowExecutionResponse withCancelMaintenanceWindowExecutionResult(org.openapis.openapi.models.shared.CancelMaintenanceWindowExecutionResult cancelMaintenanceWindowExecutionResult) {
         this.cancelMaintenanceWindowExecutionResult = cancelMaintenanceWindowExecutionResult;
         return this;
@@ -19,6 +21,7 @@ public class CancelMaintenanceWindowExecutionResponse {
     
     
     public String contentType;
+
     public CancelMaintenanceWindowExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CancelMaintenanceWindowExecutionResponse {
      */
     
     public Object doesNotExistException;
+
     public CancelMaintenanceWindowExecutionResponse withDoesNotExistException(Object doesNotExistException) {
         this.doesNotExistException = doesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class CancelMaintenanceWindowExecutionResponse {
      */
     
     public Object internalServerError;
+
     public CancelMaintenanceWindowExecutionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class CancelMaintenanceWindowExecutionResponse {
     
     
     public Integer statusCode;
+
     public CancelMaintenanceWindowExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CancelMaintenanceWindowExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelMaintenanceWindowExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CancelMaintenanceWindowExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

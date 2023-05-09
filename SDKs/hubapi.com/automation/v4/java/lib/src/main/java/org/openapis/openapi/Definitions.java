@@ -57,11 +57,9 @@ public class Definitions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAutomationV4ActionsAppIdDefinitionIdArchiveResponse res = new org.openapis.openapi.models.operations.DeleteAutomationV4ActionsAppIdDefinitionIdArchiveResponse() {{
+        org.openapis.openapi.models.operations.DeleteAutomationV4ActionsAppIdDefinitionIdArchiveResponse res = new org.openapis.openapi.models.operations.DeleteAutomationV4ActionsAppIdDefinitionIdArchiveResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -105,12 +103,10 @@ public class Definitions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdGetByIdResponse res = new org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdGetByIdResponse() {{
+        org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdGetByIdResponse res = new org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdGetByIdResponse(contentType, httpRes.statusCode()) {{
             extensionActionDefinition = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -159,12 +155,10 @@ public class Definitions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdGetPageResponse res = new org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdGetPageResponse() {{
+        org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdGetPageResponse res = new org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdGetPageResponse(contentType, httpRes.statusCode()) {{
             collectionResponseExtensionActionDefinitionForwardPaging = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -212,12 +206,10 @@ public class Definitions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchAutomationV4ActionsAppIdDefinitionIdUpdateResponse res = new org.openapis.openapi.models.operations.PatchAutomationV4ActionsAppIdDefinitionIdUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatchAutomationV4ActionsAppIdDefinitionIdUpdateResponse res = new org.openapis.openapi.models.operations.PatchAutomationV4ActionsAppIdDefinitionIdUpdateResponse(contentType, httpRes.statusCode()) {{
             extensionActionDefinition = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -265,12 +257,10 @@ public class Definitions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAutomationV4ActionsAppIdCreateResponse res = new org.openapis.openapi.models.operations.PostAutomationV4ActionsAppIdCreateResponse() {{
+        org.openapis.openapi.models.operations.PostAutomationV4ActionsAppIdCreateResponse res = new org.openapis.openapi.models.operations.PostAutomationV4ActionsAppIdCreateResponse(contentType, httpRes.statusCode()) {{
             extensionActionDefinition = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

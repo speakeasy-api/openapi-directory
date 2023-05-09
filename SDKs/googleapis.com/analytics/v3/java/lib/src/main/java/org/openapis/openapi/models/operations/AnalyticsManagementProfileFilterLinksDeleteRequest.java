@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsManagementProfileFilterLinksDeleteRequest {
@@ -12,6 +13,7 @@ public class AnalyticsManagementProfileFilterLinksDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public AnalyticsManagementProfileFilterLinksDeleteRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsManagementProfileFilterLinksDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AnalyticsManagementProfileFilterLinksDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -32,6 +35,7 @@ public class AnalyticsManagementProfileFilterLinksDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AnalyticsManagementProfileFilterLinksDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +46,7 @@ public class AnalyticsManagementProfileFilterLinksDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AnalyticsManagementProfileFilterLinksDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -52,6 +57,7 @@ public class AnalyticsManagementProfileFilterLinksDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=linkId")
     public String linkId;
+
     public AnalyticsManagementProfileFilterLinksDeleteRequest withLinkId(String linkId) {
         this.linkId = linkId;
         return this;
@@ -62,6 +68,7 @@ public class AnalyticsManagementProfileFilterLinksDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AnalyticsManagementProfileFilterLinksDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -72,6 +79,7 @@ public class AnalyticsManagementProfileFilterLinksDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AnalyticsManagementProfileFilterLinksDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -82,6 +90,7 @@ public class AnalyticsManagementProfileFilterLinksDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public AnalyticsManagementProfileFilterLinksDeleteRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -92,6 +101,7 @@ public class AnalyticsManagementProfileFilterLinksDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AnalyticsManagementProfileFilterLinksDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -102,6 +112,7 @@ public class AnalyticsManagementProfileFilterLinksDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AnalyticsManagementProfileFilterLinksDeleteRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -112,9 +123,16 @@ public class AnalyticsManagementProfileFilterLinksDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webPropertyId")
     public String webPropertyId;
+
     public AnalyticsManagementProfileFilterLinksDeleteRequest withWebPropertyId(String webPropertyId) {
         this.webPropertyId = webPropertyId;
         return this;
     }
     
+    public AnalyticsManagementProfileFilterLinksDeleteRequest(@JsonProperty("accountId") String accountId, @JsonProperty("linkId") String linkId, @JsonProperty("profileId") String profileId, @JsonProperty("webPropertyId") String webPropertyId) {
+        this.accountId = accountId;
+        this.linkId = linkId;
+        this.profileId = profileId;
+        this.webPropertyId = webPropertyId;
+  }
 }

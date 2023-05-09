@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostAlmawsV1TaskListsTestResponse {
     
     public byte[] body;
+
     public PostAlmawsV1TaskListsTestResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostAlmawsV1TaskListsTestResponse {
     
     
     public String contentType;
+
     public PostAlmawsV1TaskListsTestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PostAlmawsV1TaskListsTestResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PostAlmawsV1TaskListsTestResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -30,6 +34,7 @@ public class PostAlmawsV1TaskListsTestResponse {
     
     
     public Integer statusCode;
+
     public PostAlmawsV1TaskListsTestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,6 +42,7 @@ public class PostAlmawsV1TaskListsTestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostAlmawsV1TaskListsTestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -47,9 +53,14 @@ public class PostAlmawsV1TaskListsTestResponse {
      */
     
     public java.util.Map<String, Object> postAlmawsV1TaskListsTest200ApplicationJSONObject;
+
     public PostAlmawsV1TaskListsTestResponse withPostAlmawsV1TaskListsTest200ApplicationJSONObject(java.util.Map<String, Object> postAlmawsV1TaskListsTest200ApplicationJSONObject) {
         this.postAlmawsV1TaskListsTest200ApplicationJSONObject = postAlmawsV1TaskListsTest200ApplicationJSONObject;
         return this;
     }
     
+    public PostAlmawsV1TaskListsTestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

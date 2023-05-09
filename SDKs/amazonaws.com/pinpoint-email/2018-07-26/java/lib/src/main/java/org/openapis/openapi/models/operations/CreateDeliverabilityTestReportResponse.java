@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDeliverabilityTestReportResponse {
@@ -12,6 +13,7 @@ public class CreateDeliverabilityTestReportResponse {
      */
     
     public Object accountSuspendedException;
+
     public CreateDeliverabilityTestReportResponse withAccountSuspendedException(Object accountSuspendedException) {
         this.accountSuspendedException = accountSuspendedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateDeliverabilityTestReportResponse {
      */
     
     public Object badRequestException;
+
     public CreateDeliverabilityTestReportResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -32,6 +35,7 @@ public class CreateDeliverabilityTestReportResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateDeliverabilityTestReportResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class CreateDeliverabilityTestReportResponse {
     
     
     public String contentType;
+
     public CreateDeliverabilityTestReportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateDeliverabilityTestReportResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDeliverabilityTestReportResponse createDeliverabilityTestReportResponse;
+
     public CreateDeliverabilityTestReportResponse withCreateDeliverabilityTestReportResponse(org.openapis.openapi.models.shared.CreateDeliverabilityTestReportResponse createDeliverabilityTestReportResponse) {
         this.createDeliverabilityTestReportResponse = createDeliverabilityTestReportResponse;
         return this;
@@ -59,6 +65,7 @@ public class CreateDeliverabilityTestReportResponse {
      */
     
     public Object limitExceededException;
+
     public CreateDeliverabilityTestReportResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateDeliverabilityTestReportResponse {
      */
     
     public Object mailFromDomainNotVerifiedException;
+
     public CreateDeliverabilityTestReportResponse withMailFromDomainNotVerifiedException(Object mailFromDomainNotVerifiedException) {
         this.mailFromDomainNotVerifiedException = mailFromDomainNotVerifiedException;
         return this;
@@ -79,6 +87,7 @@ public class CreateDeliverabilityTestReportResponse {
      */
     
     public Object messageRejected;
+
     public CreateDeliverabilityTestReportResponse withMessageRejected(Object messageRejected) {
         this.messageRejected = messageRejected;
         return this;
@@ -89,6 +98,7 @@ public class CreateDeliverabilityTestReportResponse {
      */
     
     public Object notFoundException;
+
     public CreateDeliverabilityTestReportResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -96,6 +106,7 @@ public class CreateDeliverabilityTestReportResponse {
     
     
     public Integer statusCode;
+
     public CreateDeliverabilityTestReportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CreateDeliverabilityTestReportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDeliverabilityTestReportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class CreateDeliverabilityTestReportResponse {
      */
     
     public Object sendingPausedException;
+
     public CreateDeliverabilityTestReportResponse withSendingPausedException(Object sendingPausedException) {
         this.sendingPausedException = sendingPausedException;
         return this;
@@ -123,9 +136,14 @@ public class CreateDeliverabilityTestReportResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateDeliverabilityTestReportResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateDeliverabilityTestReportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

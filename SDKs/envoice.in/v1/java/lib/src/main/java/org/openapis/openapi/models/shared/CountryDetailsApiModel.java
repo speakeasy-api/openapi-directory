@@ -15,6 +15,7 @@ public class CountryDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public CountryDetailsApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class CountryDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CountryDetailsApiModel withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class CountryDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public CountryDetailsApiModel withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CountryDetailsApiModel(){}
 }

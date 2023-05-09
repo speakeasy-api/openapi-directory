@@ -12,6 +12,7 @@ public class RollbackTransactionRequestBody {
      */
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public RollbackTransactionRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -22,6 +23,7 @@ public class RollbackTransactionRequestBody {
      */
     @JsonProperty("secretArn")
     public String secretArn;
+
     public RollbackTransactionRequestBody withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -32,9 +34,15 @@ public class RollbackTransactionRequestBody {
      */
     @JsonProperty("transactionId")
     public String transactionId;
+
     public RollbackTransactionRequestBody withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public RollbackTransactionRequestBody(@JsonProperty("resourceArn") String resourceArn, @JsonProperty("secretArn") String secretArn, @JsonProperty("transactionId") String transactionId) {
+        this.resourceArn = resourceArn;
+        this.secretArn = secretArn;
+        this.transactionId = transactionId;
+  }
 }

@@ -12,6 +12,7 @@ public class Quarter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayTeamScore")
     public Long awayTeamScore;
+
     public Quarter withAwayTeamScore(Long awayTeamScore) {
         this.awayTeamScore = awayTeamScore;
         return this;
@@ -20,6 +21,7 @@ public class Quarter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Created")
     public String created;
+
     public Quarter withCreated(String created) {
         this.created = created;
         return this;
@@ -28,6 +30,7 @@ public class Quarter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Quarter withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class Quarter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeTeamScore")
     public Long homeTeamScore;
+
     public Quarter withHomeTeamScore(Long homeTeamScore) {
         this.homeTeamScore = homeTeamScore;
         return this;
@@ -44,6 +48,7 @@ public class Quarter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Quarter withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class Quarter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Long number;
+
     public Quarter withNumber(Long number) {
         this.number = number;
         return this;
@@ -60,6 +66,7 @@ public class Quarter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuarterID")
     public Long quarterID;
+
     public Quarter withQuarterID(Long quarterID) {
         this.quarterID = quarterID;
         return this;
@@ -68,6 +75,7 @@ public class Quarter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoreID")
     public Long scoreID;
+
     public Quarter withScoreID(Long scoreID) {
         this.scoreID = scoreID;
         return this;
@@ -76,9 +84,11 @@ public class Quarter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public Quarter withUpdated(String updated) {
         this.updated = updated;
         return this;
     }
     
+    public Quarter(){}
 }

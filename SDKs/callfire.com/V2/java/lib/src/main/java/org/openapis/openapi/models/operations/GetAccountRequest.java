@@ -12,9 +12,11 @@ public class GetAccountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public GetAccountRequest withFields(String fields) {
         this.fields = fields;
         return this;
     }
     
+    public GetAccountRequest(){}
 }

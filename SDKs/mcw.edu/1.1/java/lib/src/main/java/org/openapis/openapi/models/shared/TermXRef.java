@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class TermXRef {
     
     public Integer key;
+
     public TermXRef withKey(Integer key) {
         this.key = key;
         return this;
@@ -16,6 +17,7 @@ public class TermXRef {
     
     
     public String termAcc;
+
     public TermXRef withTermAcc(String termAcc) {
         this.termAcc = termAcc;
         return this;
@@ -23,6 +25,7 @@ public class TermXRef {
     
     
     public String xrefDescription;
+
     public TermXRef withXrefDescription(String xrefDescription) {
         this.xrefDescription = xrefDescription;
         return this;
@@ -30,9 +33,11 @@ public class TermXRef {
     
     
     public String xrefValue;
+
     public TermXRef withXrefValue(String xrefValue) {
         this.xrefValue = xrefValue;
         return this;
     }
     
+    public TermXRef(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamespaceRequest {
@@ -12,9 +13,13 @@ public class GetNamespaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
     public String namespace;
+
     public GetNamespaceRequest withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public GetNamespaceRequest(@JsonProperty("namespace") String namespace) {
+        this.namespace = namespace;
+  }
 }

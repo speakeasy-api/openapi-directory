@@ -12,6 +12,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Game")
     public Game game;
+
     public BoxScore withGame(Game game) {
         this.game = game;
         return this;
@@ -20,9 +21,11 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Maps")
     public Map[] maps;
+
     public BoxScore withMaps(Map[] maps) {
         this.maps = maps;
         return this;
     }
     
+    public BoxScore(){}
 }

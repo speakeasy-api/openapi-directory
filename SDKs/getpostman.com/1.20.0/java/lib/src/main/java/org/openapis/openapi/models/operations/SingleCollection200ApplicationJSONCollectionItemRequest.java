@@ -12,6 +12,7 @@ public class SingleCollection200ApplicationJSONCollectionItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public SingleCollection200ApplicationJSONCollectionItemRequestBody body;
+
     public SingleCollection200ApplicationJSONCollectionItemRequest withBody(SingleCollection200ApplicationJSONCollectionItemRequestBody body) {
         this.body = body;
         return this;
@@ -20,6 +21,7 @@ public class SingleCollection200ApplicationJSONCollectionItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SingleCollection200ApplicationJSONCollectionItemRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class SingleCollection200ApplicationJSONCollectionItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public SingleCollection200ApplicationJSONCollectionItemRequestHeader[] header;
+
     public SingleCollection200ApplicationJSONCollectionItemRequest withHeader(SingleCollection200ApplicationJSONCollectionItemRequestHeader[] header) {
         this.header = header;
         return this;
@@ -36,6 +39,7 @@ public class SingleCollection200ApplicationJSONCollectionItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public String method;
+
     public SingleCollection200ApplicationJSONCollectionItemRequest withMethod(String method) {
         this.method = method;
         return this;
@@ -44,9 +48,11 @@ public class SingleCollection200ApplicationJSONCollectionItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public SingleCollection200ApplicationJSONCollectionItemRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public SingleCollection200ApplicationJSONCollectionItemRequest(){}
 }

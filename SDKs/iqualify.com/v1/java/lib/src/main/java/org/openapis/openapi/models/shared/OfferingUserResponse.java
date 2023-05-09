@@ -12,6 +12,7 @@ public class OfferingUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatarUrl")
     public String avatarUrl;
+
     public OfferingUserResponse withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -20,6 +21,7 @@ public class OfferingUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public OfferingUserResponse withEmail(String email) {
         this.email = email;
         return this;
@@ -28,6 +30,7 @@ public class OfferingUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluatedBy")
     public String[] evaluatedBy;
+
     public OfferingUserResponse withEvaluatedBy(String[] evaluatedBy) {
         this.evaluatedBy = evaluatedBy;
         return this;
@@ -36,6 +39,7 @@ public class OfferingUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluates")
     public String[] evaluates;
+
     public OfferingUserResponse withEvaluates(String[] evaluates) {
         this.evaluates = evaluates;
         return this;
@@ -44,6 +48,7 @@ public class OfferingUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public OfferingUserResponse withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -52,6 +57,7 @@ public class OfferingUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public OfferingUserResponse withId(String id) {
         this.id = id;
         return this;
@@ -60,6 +66,7 @@ public class OfferingUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isFacilitator")
     public Boolean isFacilitator;
+
     public OfferingUserResponse withIsFacilitator(Boolean isFacilitator) {
         this.isFacilitator = isFacilitator;
         return this;
@@ -68,6 +75,7 @@ public class OfferingUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isMarker")
     public Boolean isMarker;
+
     public OfferingUserResponse withIsMarker(Boolean isMarker) {
         this.isMarker = isMarker;
         return this;
@@ -76,6 +84,7 @@ public class OfferingUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isReadonly")
     public Boolean isReadonly;
+
     public OfferingUserResponse withIsReadonly(Boolean isReadonly) {
         this.isReadonly = isReadonly;
         return this;
@@ -84,6 +93,7 @@ public class OfferingUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public OfferingUserResponse withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -92,6 +102,7 @@ public class OfferingUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("markedBy")
     public String[] markedBy;
+
     public OfferingUserResponse withMarkedBy(String[] markedBy) {
         this.markedBy = markedBy;
         return this;
@@ -100,6 +111,7 @@ public class OfferingUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marks")
     public String[] marks;
+
     public OfferingUserResponse withMarks(String[] marks) {
         this.marks = marks;
         return this;
@@ -108,6 +120,7 @@ public class OfferingUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personId")
     public String personId;
+
     public OfferingUserResponse withPersonId(String personId) {
         this.personId = personId;
         return this;
@@ -116,9 +129,11 @@ public class OfferingUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile")
     public UserProfile profile;
+
     public OfferingUserResponse withProfile(UserProfile profile) {
         this.profile = profile;
         return this;
     }
     
+    public OfferingUserResponse(){}
 }

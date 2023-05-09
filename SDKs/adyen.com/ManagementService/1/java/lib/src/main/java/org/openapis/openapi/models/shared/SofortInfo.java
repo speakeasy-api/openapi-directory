@@ -12,6 +12,7 @@ public class SofortInfo {
      */
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public SofortInfo withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -22,9 +23,14 @@ public class SofortInfo {
      */
     @JsonProperty("logo")
     public String logo;
+
     public SofortInfo withLogo(String logo) {
         this.logo = logo;
         return this;
     }
     
+    public SofortInfo(@JsonProperty("currencyCode") String currencyCode, @JsonProperty("logo") String logo) {
+        this.currencyCode = currencyCode;
+        this.logo = logo;
+  }
 }

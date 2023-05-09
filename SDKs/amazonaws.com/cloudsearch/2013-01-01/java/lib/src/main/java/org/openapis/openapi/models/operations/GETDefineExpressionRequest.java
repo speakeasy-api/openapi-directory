@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDefineExpressionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDefineExpressionActionEnum action;
+
     public GETDefineExpressionRequest withAction(GETDefineExpressionActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class GETDefineExpressionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainName")
     public String domainName;
+
     public GETDefineExpressionRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -26,6 +29,7 @@ public class GETDefineExpressionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Expression")
     public GETDefineExpressionExpression expression;
+
     public GETDefineExpressionRequest withExpression(GETDefineExpressionExpression expression) {
         this.expression = expression;
         return this;
@@ -33,6 +37,7 @@ public class GETDefineExpressionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDefineExpressionVersionEnum version;
+
     public GETDefineExpressionRequest withVersion(GETDefineExpressionVersionEnum version) {
         this.version = version;
         return this;
@@ -40,6 +45,7 @@ public class GETDefineExpressionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDefineExpressionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -47,6 +53,7 @@ public class GETDefineExpressionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDefineExpressionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -54,6 +61,7 @@ public class GETDefineExpressionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDefineExpressionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -61,6 +69,7 @@ public class GETDefineExpressionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDefineExpressionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -68,6 +77,7 @@ public class GETDefineExpressionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDefineExpressionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -75,6 +85,7 @@ public class GETDefineExpressionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDefineExpressionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -82,9 +93,16 @@ public class GETDefineExpressionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDefineExpressionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDefineExpressionRequest(@JsonProperty("Action") GETDefineExpressionActionEnum action, @JsonProperty("DomainName") String domainName, @JsonProperty("Expression") GETDefineExpressionExpression expression, @JsonProperty("Version") GETDefineExpressionVersionEnum version) {
+        this.action = action;
+        this.domainName = domainName;
+        this.expression = expression;
+        this.version = version;
+  }
 }

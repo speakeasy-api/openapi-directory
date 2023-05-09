@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PriceBulkUploadsRequest {
@@ -12,6 +13,7 @@ public class PriceBulkUploadsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PriceBulkUploadsRequestBody requestBody;
+
     public PriceBulkUploadsRequest withRequestBody(PriceBulkUploadsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class PriceBulkUploadsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE")
     public String wmConsumerChannelType;
+
     public PriceBulkUploadsRequest withWmConsumerChannelType(String wmConsumerChannelType) {
         this.wmConsumerChannelType = wmConsumerChannelType;
         return this;
@@ -32,6 +35,7 @@ public class PriceBulkUploadsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_QOS.CORRELATION_ID")
     public String wmQosCorrelationId;
+
     public PriceBulkUploadsRequest withWmQosCorrelationId(String wmQosCorrelationId) {
         this.wmQosCorrelationId = wmQosCorrelationId;
         return this;
@@ -42,6 +46,7 @@ public class PriceBulkUploadsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN")
     public String wmSecAccessToken;
+
     public PriceBulkUploadsRequest withWmSecAccessToken(String wmSecAccessToken) {
         this.wmSecAccessToken = wmSecAccessToken;
         return this;
@@ -52,6 +57,7 @@ public class PriceBulkUploadsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SVC.NAME")
     public String wmSvcName;
+
     public PriceBulkUploadsRequest withWmSvcName(String wmSvcName) {
         this.wmSvcName = wmSvcName;
         return this;
@@ -62,9 +68,17 @@ public class PriceBulkUploadsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=feedType")
     public PriceBulkUploadsFeedTypeEnum feedType;
+
     public PriceBulkUploadsRequest withFeedType(PriceBulkUploadsFeedTypeEnum feedType) {
         this.feedType = feedType;
         return this;
     }
     
+    public PriceBulkUploadsRequest(@JsonProperty("RequestBody") PriceBulkUploadsRequestBody requestBody, @JsonProperty("WM_QOS.CORRELATION_ID") String wmQosCorrelationId, @JsonProperty("WM_SEC.ACCESS_TOKEN") String wmSecAccessToken, @JsonProperty("WM_SVC.NAME") String wmSvcName, @JsonProperty("feedType") PriceBulkUploadsFeedTypeEnum feedType) {
+        this.requestBody = requestBody;
+        this.wmQosCorrelationId = wmQosCorrelationId;
+        this.wmSecAccessToken = wmSecAccessToken;
+        this.wmSvcName = wmSvcName;
+        this.feedType = feedType;
+  }
 }

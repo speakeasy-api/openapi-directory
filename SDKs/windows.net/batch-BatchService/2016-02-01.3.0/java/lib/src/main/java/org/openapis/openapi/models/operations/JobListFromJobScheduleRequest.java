@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JobListFromJobScheduleRequest {
@@ -12,6 +13,7 @@ public class JobListFromJobScheduleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$expand")
     public String dollarExpand;
+
     public JobListFromJobScheduleRequest withDollarExpand(String dollarExpand) {
         this.dollarExpand = dollarExpand;
         return this;
@@ -22,6 +24,7 @@ public class JobListFromJobScheduleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$filter")
     public String dollarFilter;
+
     public JobListFromJobScheduleRequest withDollarFilter(String dollarFilter) {
         this.dollarFilter = dollarFilter;
         return this;
@@ -32,6 +35,7 @@ public class JobListFromJobScheduleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$select")
     public String dollarSelect;
+
     public JobListFromJobScheduleRequest withDollarSelect(String dollarSelect) {
         this.dollarSelect = dollarSelect;
         return this;
@@ -42,6 +46,7 @@ public class JobListFromJobScheduleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public JobListFromJobScheduleRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -52,6 +57,7 @@ public class JobListFromJobScheduleRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public JobListFromJobScheduleRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -62,6 +68,7 @@ public class JobListFromJobScheduleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobScheduleId")
     public String jobScheduleId;
+
     public JobListFromJobScheduleRequest withJobScheduleId(String jobScheduleId) {
         this.jobScheduleId = jobScheduleId;
         return this;
@@ -72,6 +79,7 @@ public class JobListFromJobScheduleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxresults")
     public Integer maxresults;
+
     public JobListFromJobScheduleRequest withMaxresults(Integer maxresults) {
         this.maxresults = maxresults;
         return this;
@@ -82,6 +90,7 @@ public class JobListFromJobScheduleRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public JobListFromJobScheduleRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -92,6 +101,7 @@ public class JobListFromJobScheduleRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public JobListFromJobScheduleRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -102,9 +112,14 @@ public class JobListFromJobScheduleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public JobListFromJobScheduleRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public JobListFromJobScheduleRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("jobScheduleId") String jobScheduleId) {
+        this.apiVersion = apiVersion;
+        this.jobScheduleId = jobScheduleId;
+  }
 }

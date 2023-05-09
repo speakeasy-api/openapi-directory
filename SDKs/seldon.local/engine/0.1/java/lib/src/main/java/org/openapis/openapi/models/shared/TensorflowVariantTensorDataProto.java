@@ -18,6 +18,7 @@ public class TensorflowVariantTensorDataProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public String metadata;
+
     public TensorflowVariantTensorDataProto withMetadata(String metadata) {
         this.metadata = metadata;
         return this;
@@ -29,6 +30,7 @@ public class TensorflowVariantTensorDataProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tensors")
     public TensorflowTensorProto[] tensors;
+
     public TensorflowVariantTensorDataProto withTensors(TensorflowTensorProto[] tensors) {
         this.tensors = tensors;
         return this;
@@ -40,9 +42,11 @@ public class TensorflowVariantTensorDataProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type_name")
     public String typeName;
+
     public TensorflowVariantTensorDataProto withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public TensorflowVariantTensorDataProto(){}
 }

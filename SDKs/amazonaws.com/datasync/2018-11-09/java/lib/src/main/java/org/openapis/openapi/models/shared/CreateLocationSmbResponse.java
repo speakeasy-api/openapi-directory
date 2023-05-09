@@ -15,9 +15,11 @@ public class CreateLocationSmbResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationArn")
     public String locationArn;
+
     public CreateLocationSmbResponse withLocationArn(String locationArn) {
         this.locationArn = locationArn;
         return this;
     }
     
+    public CreateLocationSmbResponse(){}
 }

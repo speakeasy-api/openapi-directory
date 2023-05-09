@@ -18,6 +18,7 @@ public class SecretVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mountPath")
     public String mountPath;
+
     public SecretVolume withMountPath(String mountPath) {
         this.mountPath = mountPath;
         return this;
@@ -29,6 +30,7 @@ public class SecretVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public SecretVolume withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -40,6 +42,7 @@ public class SecretVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public SecretVolume withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -51,9 +54,11 @@ public class SecretVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versions")
     public SecretVersion[] versions;
+
     public SecretVolume withVersions(SecretVersion[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public SecretVolume(){}
 }

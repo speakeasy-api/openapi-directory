@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddPermissionResponse {
@@ -12,6 +13,7 @@ public class AddPermissionResponse {
      */
     
     public org.openapis.openapi.models.shared.AddPermissionResponse addPermissionResponse;
+
     public AddPermissionResponse withAddPermissionResponse(org.openapis.openapi.models.shared.AddPermissionResponse addPermissionResponse) {
         this.addPermissionResponse = addPermissionResponse;
         return this;
@@ -19,6 +21,7 @@ public class AddPermissionResponse {
     
     
     public String contentType;
+
     public AddPermissionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AddPermissionResponse {
      */
     
     public Object invalidParameterValueException;
+
     public AddPermissionResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class AddPermissionResponse {
      */
     
     public Object policyLengthExceededException;
+
     public AddPermissionResponse withPolicyLengthExceededException(Object policyLengthExceededException) {
         this.policyLengthExceededException = policyLengthExceededException;
         return this;
@@ -49,6 +54,7 @@ public class AddPermissionResponse {
      */
     
     public Object preconditionFailedException;
+
     public AddPermissionResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -59,6 +65,7 @@ public class AddPermissionResponse {
      */
     
     public Object resourceConflictException;
+
     public AddPermissionResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -69,6 +76,7 @@ public class AddPermissionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AddPermissionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class AddPermissionResponse {
      */
     
     public Object serviceException;
+
     public AddPermissionResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class AddPermissionResponse {
     
     
     public Integer statusCode;
+
     public AddPermissionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class AddPermissionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddPermissionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class AddPermissionResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AddPermissionResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public AddPermissionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

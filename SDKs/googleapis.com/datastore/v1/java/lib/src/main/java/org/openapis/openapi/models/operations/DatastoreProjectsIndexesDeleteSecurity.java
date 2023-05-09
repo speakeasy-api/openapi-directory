@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DatastoreProjectsIndexesDeleteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DatastoreProjectsIndexesDeleteSecurityOption1 option1;
+
     public DatastoreProjectsIndexesDeleteSecurity withOption1(DatastoreProjectsIndexesDeleteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class DatastoreProjectsIndexesDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DatastoreProjectsIndexesDeleteSecurityOption2 option2;
+
     public DatastoreProjectsIndexesDeleteSecurity withOption2(DatastoreProjectsIndexesDeleteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public DatastoreProjectsIndexesDeleteSecurity(){}
 }

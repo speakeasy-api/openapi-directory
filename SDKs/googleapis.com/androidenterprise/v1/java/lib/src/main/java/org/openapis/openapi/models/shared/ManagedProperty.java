@@ -18,6 +18,7 @@ public class ManagedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public ManagedProperty withKey(String key) {
         this.key = key;
         return this;
@@ -29,6 +30,7 @@ public class ManagedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueBool")
     public Boolean valueBool;
+
     public ManagedProperty withValueBool(Boolean valueBool) {
         this.valueBool = valueBool;
         return this;
@@ -40,6 +42,7 @@ public class ManagedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueBundle")
     public ManagedPropertyBundle valueBundle;
+
     public ManagedProperty withValueBundle(ManagedPropertyBundle valueBundle) {
         this.valueBundle = valueBundle;
         return this;
@@ -51,6 +54,7 @@ public class ManagedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueBundleArray")
     public ManagedPropertyBundle[] valueBundleArray;
+
     public ManagedProperty withValueBundleArray(ManagedPropertyBundle[] valueBundleArray) {
         this.valueBundleArray = valueBundleArray;
         return this;
@@ -62,6 +66,7 @@ public class ManagedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueInteger")
     public Integer valueInteger;
+
     public ManagedProperty withValueInteger(Integer valueInteger) {
         this.valueInteger = valueInteger;
         return this;
@@ -73,6 +78,7 @@ public class ManagedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueString")
     public String valueString;
+
     public ManagedProperty withValueString(String valueString) {
         this.valueString = valueString;
         return this;
@@ -84,9 +90,11 @@ public class ManagedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueStringArray")
     public String[] valueStringArray;
+
     public ManagedProperty withValueStringArray(String[] valueStringArray) {
         this.valueStringArray = valueStringArray;
         return this;
     }
     
+    public ManagedProperty(){}
 }

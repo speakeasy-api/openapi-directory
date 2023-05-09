@@ -15,6 +15,7 @@ public class GetBatchesBatchItemsBatchItemResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public GetBatchesBatchItemsBatchItemResult withCode(Long code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class GetBatchesBatchItemsBatchItemResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GetBatchesBatchItemsBatchItemResult withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetBatchesBatchItemsBatchItemResult(){}
 }

@@ -18,9 +18,11 @@ public class DisassociateIdentityProviderConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update")
     public Update update;
+
     public DisassociateIdentityProviderConfigResponse withUpdate(Update update) {
         this.update = update;
         return this;
     }
     
+    public DisassociateIdentityProviderConfigResponse(){}
 }

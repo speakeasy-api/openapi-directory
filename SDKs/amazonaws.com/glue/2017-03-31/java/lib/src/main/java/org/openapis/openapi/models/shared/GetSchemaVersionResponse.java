@@ -15,6 +15,7 @@ public class GetSchemaVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedTime")
     public String createdTime;
+
     public GetSchemaVersionResponse withCreatedTime(String createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -23,6 +24,7 @@ public class GetSchemaVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataFormat")
     public DataFormatEnum dataFormat;
+
     public GetSchemaVersionResponse withDataFormat(DataFormatEnum dataFormat) {
         this.dataFormat = dataFormat;
         return this;
@@ -31,6 +33,7 @@ public class GetSchemaVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaArn")
     public String schemaArn;
+
     public GetSchemaVersionResponse withSchemaArn(String schemaArn) {
         this.schemaArn = schemaArn;
         return this;
@@ -39,6 +42,7 @@ public class GetSchemaVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaDefinition")
     public String schemaDefinition;
+
     public GetSchemaVersionResponse withSchemaDefinition(String schemaDefinition) {
         this.schemaDefinition = schemaDefinition;
         return this;
@@ -47,6 +51,7 @@ public class GetSchemaVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaVersionId")
     public String schemaVersionId;
+
     public GetSchemaVersionResponse withSchemaVersionId(String schemaVersionId) {
         this.schemaVersionId = schemaVersionId;
         return this;
@@ -55,6 +60,7 @@ public class GetSchemaVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public SchemaVersionStatusEnum status;
+
     public GetSchemaVersionResponse withStatus(SchemaVersionStatusEnum status) {
         this.status = status;
         return this;
@@ -63,9 +69,11 @@ public class GetSchemaVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionNumber")
     public Long versionNumber;
+
     public GetSchemaVersionResponse withVersionNumber(Long versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public GetSchemaVersionResponse(){}
 }

@@ -15,6 +15,7 @@ public class NotificationChannelConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public NotificationFilterConfig filters;
+
     public NotificationChannelConfig withFilters(NotificationFilterConfig filters) {
         this.filters = filters;
         return this;
@@ -22,9 +23,13 @@ public class NotificationChannelConfig {
     
     @JsonProperty("Sns")
     public SnsChannelConfig sns;
+
     public NotificationChannelConfig withSns(SnsChannelConfig sns) {
         this.sns = sns;
         return this;
     }
     
+    public NotificationChannelConfig(@JsonProperty("Sns") SnsChannelConfig sns) {
+        this.sns = sns;
+  }
 }

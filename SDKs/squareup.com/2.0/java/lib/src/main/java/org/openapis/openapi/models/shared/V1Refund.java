@@ -18,6 +18,7 @@ public class V1Refund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public V1Refund withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,6 +30,7 @@ public class V1Refund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_exchange")
     public Boolean isExchange;
+
     public V1Refund withIsExchange(Boolean isExchange) {
         this.isExchange = isExchange;
         return this;
@@ -37,6 +39,7 @@ public class V1Refund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_id")
     public String merchantId;
+
     public V1Refund withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -48,6 +51,7 @@ public class V1Refund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
     public String paymentId;
+
     public V1Refund withPaymentId(String paymentId) {
         this.paymentId = paymentId;
         return this;
@@ -59,6 +63,7 @@ public class V1Refund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processed_at")
     public String processedAt;
+
     public V1Refund withProcessedAt(String processedAt) {
         this.processedAt = processedAt;
         return this;
@@ -70,6 +75,7 @@ public class V1Refund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public V1Refund withReason(String reason) {
         this.reason = reason;
         return this;
@@ -81,6 +87,7 @@ public class V1Refund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_additive_tax")
     public V1PaymentTax[] refundedAdditiveTax;
+
     public V1Refund withRefundedAdditiveTax(V1PaymentTax[] refundedAdditiveTax) {
         this.refundedAdditiveTax = refundedAdditiveTax;
         return this;
@@ -89,6 +96,7 @@ public class V1Refund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_additive_tax_money")
     public V1Money refundedAdditiveTaxMoney;
+
     public V1Refund withRefundedAdditiveTaxMoney(V1Money refundedAdditiveTaxMoney) {
         this.refundedAdditiveTaxMoney = refundedAdditiveTaxMoney;
         return this;
@@ -97,6 +105,7 @@ public class V1Refund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_discount_money")
     public V1Money refundedDiscountMoney;
+
     public V1Refund withRefundedDiscountMoney(V1Money refundedDiscountMoney) {
         this.refundedDiscountMoney = refundedDiscountMoney;
         return this;
@@ -108,6 +117,7 @@ public class V1Refund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_inclusive_tax")
     public V1PaymentTax[] refundedInclusiveTax;
+
     public V1Refund withRefundedInclusiveTax(V1PaymentTax[] refundedInclusiveTax) {
         this.refundedInclusiveTax = refundedInclusiveTax;
         return this;
@@ -116,6 +126,7 @@ public class V1Refund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_inclusive_tax_money")
     public V1Money refundedInclusiveTaxMoney;
+
     public V1Refund withRefundedInclusiveTaxMoney(V1Money refundedInclusiveTaxMoney) {
         this.refundedInclusiveTaxMoney = refundedInclusiveTaxMoney;
         return this;
@@ -124,6 +135,7 @@ public class V1Refund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_money")
     public V1Money refundedMoney;
+
     public V1Refund withRefundedMoney(V1Money refundedMoney) {
         this.refundedMoney = refundedMoney;
         return this;
@@ -132,6 +144,7 @@ public class V1Refund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_processing_fee_money")
     public V1Money refundedProcessingFeeMoney;
+
     public V1Refund withRefundedProcessingFeeMoney(V1Money refundedProcessingFeeMoney) {
         this.refundedProcessingFeeMoney = refundedProcessingFeeMoney;
         return this;
@@ -140,6 +153,7 @@ public class V1Refund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_surcharge_money")
     public V1Money refundedSurchargeMoney;
+
     public V1Refund withRefundedSurchargeMoney(V1Money refundedSurchargeMoney) {
         this.refundedSurchargeMoney = refundedSurchargeMoney;
         return this;
@@ -151,6 +165,7 @@ public class V1Refund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_surcharges")
     public V1PaymentSurcharge[] refundedSurcharges;
+
     public V1Refund withRefundedSurcharges(V1PaymentSurcharge[] refundedSurcharges) {
         this.refundedSurcharges = refundedSurcharges;
         return this;
@@ -159,6 +174,7 @@ public class V1Refund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_tax_money")
     public V1Money refundedTaxMoney;
+
     public V1Refund withRefundedTaxMoney(V1Money refundedTaxMoney) {
         this.refundedTaxMoney = refundedTaxMoney;
         return this;
@@ -167,6 +183,7 @@ public class V1Refund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_tip_money")
     public V1Money refundedTipMoney;
+
     public V1Refund withRefundedTipMoney(V1Money refundedTipMoney) {
         this.refundedTipMoney = refundedTipMoney;
         return this;
@@ -178,9 +195,11 @@ public class V1Refund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public V1Refund withType(String type) {
         this.type = type;
         return this;
     }
     
+    public V1Refund(){}
 }

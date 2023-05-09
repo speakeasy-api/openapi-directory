@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPrincipalsForPortfolioResponse {
     
     public String contentType;
+
     public ListPrincipalsForPortfolioResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListPrincipalsForPortfolioResponse {
      */
     
     public Object invalidParametersException;
+
     public ListPrincipalsForPortfolioResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -29,6 +32,7 @@ public class ListPrincipalsForPortfolioResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPrincipalsForPortfolioOutput listPrincipalsForPortfolioOutput;
+
     public ListPrincipalsForPortfolioResponse withListPrincipalsForPortfolioOutput(org.openapis.openapi.models.shared.ListPrincipalsForPortfolioOutput listPrincipalsForPortfolioOutput) {
         this.listPrincipalsForPortfolioOutput = listPrincipalsForPortfolioOutput;
         return this;
@@ -39,6 +43,7 @@ public class ListPrincipalsForPortfolioResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListPrincipalsForPortfolioResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListPrincipalsForPortfolioResponse {
     
     
     public Integer statusCode;
+
     public ListPrincipalsForPortfolioResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListPrincipalsForPortfolioResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPrincipalsForPortfolioResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListPrincipalsForPortfolioResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

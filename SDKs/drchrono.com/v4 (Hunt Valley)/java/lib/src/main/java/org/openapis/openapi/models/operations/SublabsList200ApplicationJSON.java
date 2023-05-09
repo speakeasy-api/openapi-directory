@@ -18,6 +18,7 @@ public class SublabsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.LabVendorLocation[] data;
+
     public SublabsList200ApplicationJSON withData(org.openapis.openapi.models.shared.LabVendorLocation[] data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class SublabsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public SublabsList200ApplicationJSON withNext(String next) {
         this.next = next;
         return this;
@@ -40,9 +42,11 @@ public class SublabsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public SublabsList200ApplicationJSON withPrevious(String previous) {
         this.previous = previous;
         return this;
     }
     
+    public SublabsList200ApplicationJSON(){}
 }

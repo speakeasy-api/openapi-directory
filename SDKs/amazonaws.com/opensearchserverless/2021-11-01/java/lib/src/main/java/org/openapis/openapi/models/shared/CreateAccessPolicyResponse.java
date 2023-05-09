@@ -15,9 +15,11 @@ public class CreateAccessPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessPolicyDetail")
     public AccessPolicyDetail accessPolicyDetail;
+
     public CreateAccessPolicyResponse withAccessPolicyDetail(AccessPolicyDetail accessPolicyDetail) {
         this.accessPolicyDetail = accessPolicyDetail;
         return this;
     }
     
+    public CreateAccessPolicyResponse(){}
 }

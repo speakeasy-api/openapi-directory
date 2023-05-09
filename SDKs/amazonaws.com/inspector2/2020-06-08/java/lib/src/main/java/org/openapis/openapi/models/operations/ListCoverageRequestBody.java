@@ -15,6 +15,7 @@ public class ListCoverageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterCriteria")
     public ListCoverageRequestBodyFilterCriteria filterCriteria;
+
     public ListCoverageRequestBody withFilterCriteria(ListCoverageRequestBodyFilterCriteria filterCriteria) {
         this.filterCriteria = filterCriteria;
         return this;
@@ -26,6 +27,7 @@ public class ListCoverageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListCoverageRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +39,11 @@ public class ListCoverageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListCoverageRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCoverageRequestBody(){}
 }

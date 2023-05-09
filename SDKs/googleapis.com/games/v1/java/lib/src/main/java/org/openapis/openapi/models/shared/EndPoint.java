@@ -18,9 +18,11 @@ public class EndPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public EndPoint withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public EndPoint(){}
 }

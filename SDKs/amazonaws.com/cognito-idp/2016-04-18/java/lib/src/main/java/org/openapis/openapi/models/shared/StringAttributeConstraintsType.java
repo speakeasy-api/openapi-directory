@@ -15,6 +15,7 @@ public class StringAttributeConstraintsType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxLength")
     public String maxLength;
+
     public StringAttributeConstraintsType withMaxLength(String maxLength) {
         this.maxLength = maxLength;
         return this;
@@ -23,9 +24,11 @@ public class StringAttributeConstraintsType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinLength")
     public String minLength;
+
     public StringAttributeConstraintsType withMinLength(String minLength) {
         this.minLength = minLength;
         return this;
     }
     
+    public StringAttributeConstraintsType(){}
 }

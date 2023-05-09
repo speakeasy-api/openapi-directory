@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTemplatesResponse {
@@ -12,6 +13,7 @@ public class ListTemplatesResponse {
      */
     
     public Object badRequestException;
+
     public ListTemplatesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListTemplatesResponse {
     
     
     public String contentType;
+
     public ListTemplatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTemplatesResponse {
      */
     
     public Object forbiddenException;
+
     public ListTemplatesResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class ListTemplatesResponse {
      */
     
     public Object internalServerErrorException;
+
     public ListTemplatesResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class ListTemplatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTemplatesResponse listTemplatesResponse;
+
     public ListTemplatesResponse withListTemplatesResponse(org.openapis.openapi.models.shared.ListTemplatesResponse listTemplatesResponse) {
         this.listTemplatesResponse = listTemplatesResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListTemplatesResponse {
      */
     
     public Object methodNotAllowedException;
+
     public ListTemplatesResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -66,6 +73,7 @@ public class ListTemplatesResponse {
     
     
     public Integer statusCode;
+
     public ListTemplatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListTemplatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTemplatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ListTemplatesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListTemplatesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListTemplatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

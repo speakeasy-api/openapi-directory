@@ -18,9 +18,11 @@ public class Secret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretVersion")
     public String secretVersion;
+
     public Secret withSecretVersion(String secretVersion) {
         this.secretVersion = secretVersion;
         return this;
     }
     
+    public Secret(){}
 }

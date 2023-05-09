@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateDBInstanceMessage - Represents the input to &lt;a&gt;CreateDBInstance&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateDBInstanceMessage {
     
     public Boolean autoMinorVersionUpgrade;
+
     public CreateDBInstanceMessage withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -19,6 +20,7 @@ public class CreateDBInstanceMessage {
     
     
     public String availabilityZone;
+
     public CreateDBInstanceMessage withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class CreateDBInstanceMessage {
     
     
     public Boolean copyTagsToSnapshot;
+
     public CreateDBInstanceMessage withCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
         this.copyTagsToSnapshot = copyTagsToSnapshot;
         return this;
@@ -33,6 +36,7 @@ public class CreateDBInstanceMessage {
     
     
     public String dbClusterIdentifier;
+
     public CreateDBInstanceMessage withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -40,6 +44,7 @@ public class CreateDBInstanceMessage {
     
     
     public String dbInstanceClass;
+
     public CreateDBInstanceMessage withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -47,6 +52,7 @@ public class CreateDBInstanceMessage {
     
     
     public String dbInstanceIdentifier;
+
     public CreateDBInstanceMessage withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -54,6 +60,7 @@ public class CreateDBInstanceMessage {
     
     
     public Boolean enablePerformanceInsights;
+
     public CreateDBInstanceMessage withEnablePerformanceInsights(Boolean enablePerformanceInsights) {
         this.enablePerformanceInsights = enablePerformanceInsights;
         return this;
@@ -61,6 +68,7 @@ public class CreateDBInstanceMessage {
     
     
     public String engine;
+
     public CreateDBInstanceMessage withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -68,6 +76,7 @@ public class CreateDBInstanceMessage {
     
     
     public String performanceInsightsKMSKeyId;
+
     public CreateDBInstanceMessage withPerformanceInsightsKMSKeyId(String performanceInsightsKMSKeyId) {
         this.performanceInsightsKMSKeyId = performanceInsightsKMSKeyId;
         return this;
@@ -75,6 +84,7 @@ public class CreateDBInstanceMessage {
     
     
     public String preferredMaintenanceWindow;
+
     public CreateDBInstanceMessage withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -82,6 +92,7 @@ public class CreateDBInstanceMessage {
     
     
     public Long promotionTier;
+
     public CreateDBInstanceMessage withPromotionTier(Long promotionTier) {
         this.promotionTier = promotionTier;
         return this;
@@ -89,9 +100,16 @@ public class CreateDBInstanceMessage {
     
     
     public TagList[] tags;
+
     public CreateDBInstanceMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDBInstanceMessage(@JsonProperty("DBClusterIdentifier") String dbClusterIdentifier, @JsonProperty("DBInstanceClass") String dbInstanceClass, @JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier, @JsonProperty("Engine") String engine) {
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        this.dbInstanceClass = dbInstanceClass;
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+        this.engine = engine;
+  }
 }

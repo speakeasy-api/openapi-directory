@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UpdateScalingParametersRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;UpdateScalingParameters&lt;/a&gt;&lt;/code&gt; operation. Specifies the name of the domain you want to update and the scaling parameters you want to configure.
@@ -15,6 +15,7 @@ public class UpdateScalingParametersRequest {
      */
     
     public String domainName;
+
     public UpdateScalingParametersRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -25,9 +26,14 @@ public class UpdateScalingParametersRequest {
      */
     
     public ScalingParameters scalingParameters;
+
     public UpdateScalingParametersRequest withScalingParameters(ScalingParameters scalingParameters) {
         this.scalingParameters = scalingParameters;
         return this;
     }
     
+    public UpdateScalingParametersRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("ScalingParameters") ScalingParameters scalingParameters) {
+        this.domainName = domainName;
+        this.scalingParameters = scalingParameters;
+  }
 }

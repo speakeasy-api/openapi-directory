@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDevEndpointsResponse {
     
     public String contentType;
+
     public ListDevEndpointsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDevEndpointsResponse {
      */
     
     public Object entityNotFoundException;
+
     public ListDevEndpointsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class ListDevEndpointsResponse {
      */
     
     public Object internalServiceException;
+
     public ListDevEndpointsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ListDevEndpointsResponse {
      */
     
     public Object invalidInputException;
+
     public ListDevEndpointsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListDevEndpointsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDevEndpointsResponse listDevEndpointsResponse;
+
     public ListDevEndpointsResponse withListDevEndpointsResponse(org.openapis.openapi.models.shared.ListDevEndpointsResponse listDevEndpointsResponse) {
         this.listDevEndpointsResponse = listDevEndpointsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListDevEndpointsResponse {
      */
     
     public Object operationTimeoutException;
+
     public ListDevEndpointsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class ListDevEndpointsResponse {
     
     
     public Integer statusCode;
+
     public ListDevEndpointsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListDevEndpointsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDevEndpointsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDevEndpointsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

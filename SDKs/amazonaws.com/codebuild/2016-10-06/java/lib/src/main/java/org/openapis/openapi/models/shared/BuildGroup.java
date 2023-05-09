@@ -15,6 +15,7 @@ public class BuildGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentBuildSummary")
     public BuildSummary currentBuildSummary;
+
     public BuildGroup withCurrentBuildSummary(BuildSummary currentBuildSummary) {
         this.currentBuildSummary = currentBuildSummary;
         return this;
@@ -23,6 +24,7 @@ public class BuildGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dependsOn")
     public String[] dependsOn;
+
     public BuildGroup withDependsOn(String[] dependsOn) {
         this.dependsOn = dependsOn;
         return this;
@@ -31,6 +33,7 @@ public class BuildGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public BuildGroup withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -39,6 +42,7 @@ public class BuildGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreFailure")
     public Boolean ignoreFailure;
+
     public BuildGroup withIgnoreFailure(Boolean ignoreFailure) {
         this.ignoreFailure = ignoreFailure;
         return this;
@@ -47,9 +51,11 @@ public class BuildGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priorBuildSummaryList")
     public BuildSummary[] priorBuildSummaryList;
+
     public BuildGroup withPriorBuildSummaryList(BuildSummary[] priorBuildSummaryList) {
         this.priorBuildSummaryList = priorBuildSummaryList;
         return this;
     }
     
+    public BuildGroup(){}
 }

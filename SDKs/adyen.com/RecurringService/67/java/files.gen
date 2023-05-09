@@ -55,6 +55,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/DisableRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/DisablePermitResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/DisablePermitRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/RecurringDetailsResult.java
+lib/src/main/java/org/openapis/openapi/models/shared/RecurringDetailWrapper.java
 lib/src/main/java/org/openapis/openapi/models/shared/RecurringDetail.java
 lib/src/main/java/org/openapis/openapi/models/shared/TokenDetails.java
 lib/src/main/java/org/openapis/openapi/models/shared/Name.java
@@ -69,4 +70,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/NotifyShopperResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/NotifyShopperRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScheduleAccountUpdaterResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScheduleAccountUpdaterRequest.java
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

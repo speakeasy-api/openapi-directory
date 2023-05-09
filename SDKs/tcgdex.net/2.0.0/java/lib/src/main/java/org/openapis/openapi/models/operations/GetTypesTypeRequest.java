@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTypesTypeRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public String type;
+
     public GetTypesTypeRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetTypesTypeRequest(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

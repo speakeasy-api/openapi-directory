@@ -15,9 +15,11 @@ public class ListPermissionsRequestBodyPrincipal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataLakePrincipalIdentifier")
     public String dataLakePrincipalIdentifier;
+
     public ListPermissionsRequestBodyPrincipal withDataLakePrincipalIdentifier(String dataLakePrincipalIdentifier) {
         this.dataLakePrincipalIdentifier = dataLakePrincipalIdentifier;
         return this;
     }
     
+    public ListPermissionsRequestBodyPrincipal(){}
 }

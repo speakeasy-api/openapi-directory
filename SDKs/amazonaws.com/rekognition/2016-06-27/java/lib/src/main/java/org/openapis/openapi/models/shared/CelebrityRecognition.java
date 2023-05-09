@@ -15,6 +15,7 @@ public class CelebrityRecognition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Celebrity")
     public CelebrityDetail celebrity;
+
     public CelebrityRecognition withCelebrity(CelebrityDetail celebrity) {
         this.celebrity = celebrity;
         return this;
@@ -23,9 +24,11 @@ public class CelebrityRecognition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timestamp")
     public Long timestamp;
+
     public CelebrityRecognition withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public CelebrityRecognition(){}
 }

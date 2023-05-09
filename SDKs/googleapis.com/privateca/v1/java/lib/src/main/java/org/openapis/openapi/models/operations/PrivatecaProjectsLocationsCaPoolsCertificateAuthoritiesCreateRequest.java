@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateRequest {
@@ -12,6 +13,7 @@ public class PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateReques
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CertificateAuthorityInput certificateAuthorityInput;
+
     public PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateRequest withCertificateAuthorityInput(org.openapis.openapi.models.shared.CertificateAuthorityInput certificateAuthorityInput) {
         this.certificateAuthorityInput = certificateAuthorityInput;
         return this;
@@ -29,6 +32,7 @@ public class PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=certificateAuthorityId")
     public String certificateAuthorityId;
+
     public PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateRequest withCertificateAuthorityId(String certificateAuthorityId) {
         this.certificateAuthorityId = certificateAuthorityId;
         return this;
@@ -69,6 +76,7 @@ public class PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateReques
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -109,6 +120,7 @@ public class PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -139,6 +153,7 @@ public class PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,9 +164,13 @@ public class PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

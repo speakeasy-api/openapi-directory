@@ -15,6 +15,7 @@ public class DescribeCommunicationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("communications")
     public Communication[] communications;
+
     public DescribeCommunicationsResponse withCommunications(Communication[] communications) {
         this.communications = communications;
         return this;
@@ -23,9 +24,11 @@ public class DescribeCommunicationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeCommunicationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeCommunicationsResponse(){}
 }

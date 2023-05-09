@@ -15,6 +15,7 @@ public class DmlStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletedRowCount")
     public String deletedRowCount;
+
     public DmlStatistics withDeletedRowCount(String deletedRowCount) {
         this.deletedRowCount = deletedRowCount;
         return this;
@@ -26,6 +27,7 @@ public class DmlStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertedRowCount")
     public String insertedRowCount;
+
     public DmlStatistics withInsertedRowCount(String insertedRowCount) {
         this.insertedRowCount = insertedRowCount;
         return this;
@@ -37,9 +39,11 @@ public class DmlStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedRowCount")
     public String updatedRowCount;
+
     public DmlStatistics withUpdatedRowCount(String updatedRowCount) {
         this.updatedRowCount = updatedRowCount;
         return this;
     }
     
+    public DmlStatistics(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VerifyOTPMessageResponse {
@@ -12,6 +13,7 @@ public class VerifyOTPMessageResponse {
      */
     
     public Object badRequestException;
+
     public VerifyOTPMessageResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class VerifyOTPMessageResponse {
     
     
     public String contentType;
+
     public VerifyOTPMessageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class VerifyOTPMessageResponse {
      */
     
     public Object forbiddenException;
+
     public VerifyOTPMessageResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class VerifyOTPMessageResponse {
      */
     
     public Object internalServerErrorException;
+
     public VerifyOTPMessageResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class VerifyOTPMessageResponse {
      */
     
     public Object methodNotAllowedException;
+
     public VerifyOTPMessageResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class VerifyOTPMessageResponse {
      */
     
     public Object notFoundException;
+
     public VerifyOTPMessageResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class VerifyOTPMessageResponse {
      */
     
     public Object payloadTooLargeException;
+
     public VerifyOTPMessageResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -76,6 +84,7 @@ public class VerifyOTPMessageResponse {
     
     
     public Integer statusCode;
+
     public VerifyOTPMessageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class VerifyOTPMessageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VerifyOTPMessageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class VerifyOTPMessageResponse {
      */
     
     public Object tooManyRequestsException;
+
     public VerifyOTPMessageResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class VerifyOTPMessageResponse {
      */
     
     public org.openapis.openapi.models.shared.VerifyOTPMessageResponse verifyOTPMessageResponse;
+
     public VerifyOTPMessageResponse withVerifyOTPMessageResponse(org.openapis.openapi.models.shared.VerifyOTPMessageResponse verifyOTPMessageResponse) {
         this.verifyOTPMessageResponse = verifyOTPMessageResponse;
         return this;
     }
     
+    public VerifyOTPMessageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

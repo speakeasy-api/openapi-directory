@@ -15,9 +15,11 @@ public class StreamProcessorSettingsForUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectedHomeForUpdate")
     public ConnectedHomeSettingsForUpdate connectedHomeForUpdate;
+
     public StreamProcessorSettingsForUpdate withConnectedHomeForUpdate(ConnectedHomeSettingsForUpdate connectedHomeForUpdate) {
         this.connectedHomeForUpdate = connectedHomeForUpdate;
         return this;
     }
     
+    public StreamProcessorSettingsForUpdate(){}
 }

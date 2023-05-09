@@ -23,6 +23,7 @@ public class CrashesListSessionLogs200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceeded_max_limit")
     public Boolean exceededMaxLimit;
+
     public CrashesListSessionLogs200ApplicationJSON withExceededMaxLimit(Boolean exceededMaxLimit) {
         this.exceededMaxLimit = exceededMaxLimit;
         return this;
@@ -36,6 +37,7 @@ public class CrashesListSessionLogs200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_received_log_timestamp")
     public OffsetDateTime lastReceivedLogTimestamp;
+
     public CrashesListSessionLogs200ApplicationJSON withLastReceivedLogTimestamp(OffsetDateTime lastReceivedLogTimestamp) {
         this.lastReceivedLogTimestamp = lastReceivedLogTimestamp;
         return this;
@@ -46,9 +48,13 @@ public class CrashesListSessionLogs200ApplicationJSON {
      */
     @JsonProperty("logs")
     public CrashesListSessionLogs200ApplicationJSONLogs[] logs;
+
     public CrashesListSessionLogs200ApplicationJSON withLogs(CrashesListSessionLogs200ApplicationJSONLogs[] logs) {
         this.logs = logs;
         return this;
     }
     
+    public CrashesListSessionLogs200ApplicationJSON(@JsonProperty("logs") CrashesListSessionLogs200ApplicationJSONLogs[] logs) {
+        this.logs = logs;
+  }
 }

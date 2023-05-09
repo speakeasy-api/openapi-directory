@@ -12,9 +12,13 @@ public class CreateEmailIdentityPolicyRequestBody {
      */
     @JsonProperty("Policy")
     public String policy;
+
     public CreateEmailIdentityPolicyRequestBody withPolicy(String policy) {
         this.policy = policy;
         return this;
     }
     
+    public CreateEmailIdentityPolicyRequestBody(@JsonProperty("Policy") String policy) {
+        this.policy = policy;
+  }
 }

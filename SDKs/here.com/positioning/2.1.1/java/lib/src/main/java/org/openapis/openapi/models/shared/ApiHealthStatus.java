@@ -18,9 +18,11 @@ public class ApiHealthStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ApiHealthStatus withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ApiHealthStatus(){}
 }

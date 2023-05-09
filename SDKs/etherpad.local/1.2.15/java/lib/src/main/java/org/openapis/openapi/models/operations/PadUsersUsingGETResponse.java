@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PadUsersUsingGETResponse {
     
     public String contentType;
+
     public PadUsersUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PadUsersUsingGETResponse {
     
     
     public Integer statusCode;
+
     public PadUsersUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PadUsersUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PadUsersUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PadUsersUsingGETResponse {
      */
     
     public PadUsersUsingGET200ApplicationJSON padUsersUsingGET200ApplicationJSONObject;
+
     public PadUsersUsingGETResponse withPadUsersUsingGET200ApplicationJSONObject(PadUsersUsingGET200ApplicationJSON padUsersUsingGET200ApplicationJSONObject) {
         this.padUsersUsingGET200ApplicationJSONObject = padUsersUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class PadUsersUsingGETResponse {
      */
     
     public PadUsersUsingGET400ApplicationJSON padUsersUsingGET400ApplicationJSONObject;
+
     public PadUsersUsingGETResponse withPadUsersUsingGET400ApplicationJSONObject(PadUsersUsingGET400ApplicationJSON padUsersUsingGET400ApplicationJSONObject) {
         this.padUsersUsingGET400ApplicationJSONObject = padUsersUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class PadUsersUsingGETResponse {
      */
     
     public PadUsersUsingGET401ApplicationJSON padUsersUsingGET401ApplicationJSONObject;
+
     public PadUsersUsingGETResponse withPadUsersUsingGET401ApplicationJSONObject(PadUsersUsingGET401ApplicationJSON padUsersUsingGET401ApplicationJSONObject) {
         this.padUsersUsingGET401ApplicationJSONObject = padUsersUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class PadUsersUsingGETResponse {
      */
     
     public PadUsersUsingGET500ApplicationJSON padUsersUsingGET500ApplicationJSONObject;
+
     public PadUsersUsingGETResponse withPadUsersUsingGET500ApplicationJSONObject(PadUsersUsingGET500ApplicationJSON padUsersUsingGET500ApplicationJSONObject) {
         this.padUsersUsingGET500ApplicationJSONObject = padUsersUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public PadUsersUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

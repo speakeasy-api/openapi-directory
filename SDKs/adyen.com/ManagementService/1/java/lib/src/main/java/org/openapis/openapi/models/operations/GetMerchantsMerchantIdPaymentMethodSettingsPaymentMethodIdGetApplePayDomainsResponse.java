@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsResponse {
@@ -12,6 +13,7 @@ public class GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetAppleP
      */
     
     public org.openapis.openapi.models.shared.ApplePayInfo applePayInfo;
+
     public GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsResponse withApplePayInfo(org.openapis.openapi.models.shared.ApplePayInfo applePayInfo) {
         this.applePayInfo = applePayInfo;
         return this;
@@ -19,6 +21,7 @@ public class GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetAppleP
     
     
     public String contentType;
+
     public GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetAppleP
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetAppleP
     
     
     public Integer statusCode;
+
     public GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetAppleP
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

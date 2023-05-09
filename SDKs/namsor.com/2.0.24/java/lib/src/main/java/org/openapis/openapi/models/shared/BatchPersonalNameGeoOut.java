@@ -18,9 +18,11 @@ public class BatchPersonalNameGeoOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalNames")
     public PersonalNameGeoOut[] personalNames;
+
     public BatchPersonalNameGeoOut withPersonalNames(PersonalNameGeoOut[] personalNames) {
         this.personalNames = personalNames;
         return this;
     }
     
+    public BatchPersonalNameGeoOut(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportHubContentResponse {
     
     public String contentType;
+
     public ImportHubContentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ImportHubContentResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportHubContentResponse importHubContentResponse;
+
     public ImportHubContentResponse withImportHubContentResponse(org.openapis.openapi.models.shared.ImportHubContentResponse importHubContentResponse) {
         this.importHubContentResponse = importHubContentResponse;
         return this;
@@ -29,6 +32,7 @@ public class ImportHubContentResponse {
      */
     
     public Object resourceInUse;
+
     public ImportHubContentResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -39,6 +43,7 @@ public class ImportHubContentResponse {
      */
     
     public Object resourceNotFound;
+
     public ImportHubContentResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -46,6 +51,7 @@ public class ImportHubContentResponse {
     
     
     public Integer statusCode;
+
     public ImportHubContentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ImportHubContentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportHubContentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ImportHubContentResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public ImportHubContentResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
     }
     
+    public ImportHubContentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateVpcConnectorResponse {
     
     public String contentType;
+
     public CreateVpcConnectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateVpcConnectorResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateVpcConnectorResponse createVpcConnectorResponse;
+
     public CreateVpcConnectorResponse withCreateVpcConnectorResponse(org.openapis.openapi.models.shared.CreateVpcConnectorResponse createVpcConnectorResponse) {
         this.createVpcConnectorResponse = createVpcConnectorResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateVpcConnectorResponse {
      */
     
     public Object internalServiceErrorException;
+
     public CreateVpcConnectorResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class CreateVpcConnectorResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateVpcConnectorResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class CreateVpcConnectorResponse {
     
     
     public Integer statusCode;
+
     public CreateVpcConnectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateVpcConnectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateVpcConnectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateVpcConnectorResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateVpcConnectorResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
     }
     
+    public CreateVpcConnectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

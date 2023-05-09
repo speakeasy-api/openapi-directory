@@ -15,9 +15,11 @@ public class StopExperimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("experiment")
     public Experiment experiment;
+
     public StopExperimentResponse withExperiment(Experiment experiment) {
         this.experiment = experiment;
         return this;
     }
     
+    public StopExperimentResponse(){}
 }

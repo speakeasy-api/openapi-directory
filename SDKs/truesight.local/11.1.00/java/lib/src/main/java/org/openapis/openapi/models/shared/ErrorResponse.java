@@ -15,6 +15,7 @@ public class ErrorResponse {
      */
     
     public String code;
+
     public ErrorResponse withCode(String code) {
         this.code = code;
         return this;
@@ -25,6 +26,7 @@ public class ErrorResponse {
      */
     
     public OffsetDateTime date;
+
     public ErrorResponse withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -35,9 +37,11 @@ public class ErrorResponse {
      */
     
     public String message;
+
     public ErrorResponse withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ErrorResponse(){}
 }

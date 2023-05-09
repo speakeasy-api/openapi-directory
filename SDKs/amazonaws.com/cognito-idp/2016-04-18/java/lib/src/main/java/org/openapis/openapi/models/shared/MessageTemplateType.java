@@ -15,6 +15,7 @@ public class MessageTemplateType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailMessage")
     public String emailMessage;
+
     public MessageTemplateType withEmailMessage(String emailMessage) {
         this.emailMessage = emailMessage;
         return this;
@@ -23,6 +24,7 @@ public class MessageTemplateType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailSubject")
     public String emailSubject;
+
     public MessageTemplateType withEmailSubject(String emailSubject) {
         this.emailSubject = emailSubject;
         return this;
@@ -31,9 +33,11 @@ public class MessageTemplateType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SMSMessage")
     public String smsMessage;
+
     public MessageTemplateType withSMSMessage(String smsMessage) {
         this.smsMessage = smsMessage;
         return this;
     }
     
+    public MessageTemplateType(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EtcerResponse {
     
     public String contentType;
+
     public EtcerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EtcerResponse {
     
     
     public Integer statusCode;
+
     public EtcerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EtcerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EtcerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class EtcerResponse {
      */
     
     public Etcer400ApplicationJSON etcer400ApplicationJSONObject;
+
     public EtcerResponse withEtcer400ApplicationJSONObject(Etcer400ApplicationJSON etcer400ApplicationJSONObject) {
         this.etcer400ApplicationJSONObject = etcer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class EtcerResponse {
      */
     
     public Etcer401ApplicationJSON etcer401ApplicationJSONObject;
+
     public EtcerResponse withEtcer401ApplicationJSONObject(Etcer401ApplicationJSON etcer401ApplicationJSONObject) {
         this.etcer401ApplicationJSONObject = etcer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class EtcerResponse {
      */
     
     public Etcer404ApplicationJSON etcer404ApplicationJSONObject;
+
     public EtcerResponse withEtcer404ApplicationJSONObject(Etcer404ApplicationJSON etcer404ApplicationJSONObject) {
         this.etcer404ApplicationJSONObject = etcer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class EtcerResponse {
      */
     
     public Etcer500ApplicationJSON etcer500ApplicationJSONObject;
+
     public EtcerResponse withEtcer500ApplicationJSONObject(Etcer500ApplicationJSON etcer500ApplicationJSONObject) {
         this.etcer500ApplicationJSONObject = etcer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class EtcerResponse {
      */
     
     public Etcer502ApplicationJSON etcer502ApplicationJSONObject;
+
     public EtcerResponse withEtcer502ApplicationJSONObject(Etcer502ApplicationJSON etcer502ApplicationJSONObject) {
         this.etcer502ApplicationJSONObject = etcer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class EtcerResponse {
      */
     
     public Etcer503ApplicationJSON etcer503ApplicationJSONObject;
+
     public EtcerResponse withEtcer503ApplicationJSONObject(Etcer503ApplicationJSON etcer503ApplicationJSONObject) {
         this.etcer503ApplicationJSONObject = etcer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class EtcerResponse {
      */
     
     public Etcer504ApplicationJSON etcer504ApplicationJSONObject;
+
     public EtcerResponse withEtcer504ApplicationJSONObject(Etcer504ApplicationJSON etcer504ApplicationJSONObject) {
         this.etcer504ApplicationJSONObject = etcer504ApplicationJSONObject;
         return this;
     }
     
+    public EtcerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

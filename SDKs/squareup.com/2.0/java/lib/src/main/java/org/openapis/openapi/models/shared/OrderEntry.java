@@ -19,6 +19,7 @@ public class OrderEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public OrderEntry withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -30,6 +31,7 @@ public class OrderEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     public String orderId;
+
     public OrderEntry withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -45,9 +47,11 @@ public class OrderEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public OrderEntry withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public OrderEntry(){}
 }

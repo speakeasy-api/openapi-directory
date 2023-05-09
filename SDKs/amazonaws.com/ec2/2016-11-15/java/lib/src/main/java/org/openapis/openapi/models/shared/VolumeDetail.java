@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * VolumeDetail - Describes an EBS volume.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class VolumeDetail {
     
     public Long size;
+
     public VolumeDetail withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public VolumeDetail(@JsonProperty("Size") Long size) {
+        this.size = size;
+  }
 }

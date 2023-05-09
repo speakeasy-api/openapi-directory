@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutMaintenanceIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Maintenance maintenance;
+
     public PutMaintenanceIdRequest withMaintenance(org.openapis.openapi.models.shared.Maintenance maintenance) {
         this.maintenance = maintenance;
         return this;
@@ -16,9 +18,14 @@ public class PutMaintenanceIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public PutMaintenanceIdRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public PutMaintenanceIdRequest(@JsonProperty("Maintenance") org.openapis.openapi.models.shared.Maintenance maintenance, @JsonProperty("id") Long id) {
+        this.maintenance = maintenance;
+        this.id = id;
+  }
 }

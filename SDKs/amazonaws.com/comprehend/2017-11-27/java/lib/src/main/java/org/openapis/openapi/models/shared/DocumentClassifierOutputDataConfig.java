@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * DocumentClassifierOutputDataConfig - Provides output results configuration parameters for custom classifier jobs. 
+ * DocumentClassifierOutputDataConfig - Provide the location for output data from a custom classifier job. This field is mandatory if you are training a native classifier model.
  */
 public class DocumentClassifierOutputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlywheelStatsS3Prefix")
     public String flywheelStatsS3Prefix;
+
     public DocumentClassifierOutputDataConfig withFlywheelStatsS3Prefix(String flywheelStatsS3Prefix) {
         this.flywheelStatsS3Prefix = flywheelStatsS3Prefix;
         return this;
@@ -23,6 +24,7 @@ public class DocumentClassifierOutputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public DocumentClassifierOutputDataConfig withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -31,9 +33,11 @@ public class DocumentClassifierOutputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public DocumentClassifierOutputDataConfig withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public DocumentClassifierOutputDataConfig(){}
 }

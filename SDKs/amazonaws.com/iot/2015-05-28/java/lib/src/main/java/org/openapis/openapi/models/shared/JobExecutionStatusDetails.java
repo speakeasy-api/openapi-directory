@@ -15,9 +15,11 @@ public class JobExecutionStatusDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailsMap")
     public java.util.Map<String, String> detailsMap;
+
     public JobExecutionStatusDetails withDetailsMap(java.util.Map<String, String> detailsMap) {
         this.detailsMap = detailsMap;
         return this;
     }
     
+    public JobExecutionStatusDetails(){}
 }

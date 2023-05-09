@@ -18,6 +18,7 @@ public class ReconfigureTrustRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetDnsIpAddresses")
     public String[] targetDnsIpAddresses;
+
     public ReconfigureTrustRequest withTargetDnsIpAddresses(String[] targetDnsIpAddresses) {
         this.targetDnsIpAddresses = targetDnsIpAddresses;
         return this;
@@ -29,9 +30,11 @@ public class ReconfigureTrustRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetDomainName")
     public String targetDomainName;
+
     public ReconfigureTrustRequest withTargetDomainName(String targetDomainName) {
         this.targetDomainName = targetDomainName;
         return this;
     }
     
+    public ReconfigureTrustRequest(){}
 }

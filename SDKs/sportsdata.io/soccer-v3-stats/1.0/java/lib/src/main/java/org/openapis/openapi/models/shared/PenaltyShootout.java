@@ -12,6 +12,7 @@ public class PenaltyShootout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameId")
     public Long gameId;
+
     public PenaltyShootout withGameId(Long gameId) {
         this.gameId = gameId;
         return this;
@@ -20,6 +21,7 @@ public class PenaltyShootout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PenaltyShootout withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class PenaltyShootout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Order")
     public Long order;
+
     public PenaltyShootout withOrder(Long order) {
         this.order = order;
         return this;
@@ -36,6 +39,7 @@ public class PenaltyShootout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PenaltyShootoutId")
     public Long penaltyShootoutId;
+
     public PenaltyShootout withPenaltyShootoutId(Long penaltyShootoutId) {
         this.penaltyShootoutId = penaltyShootoutId;
         return this;
@@ -44,6 +48,7 @@ public class PenaltyShootout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerId")
     public Long playerId;
+
     public PenaltyShootout withPlayerId(Long playerId) {
         this.playerId = playerId;
         return this;
@@ -52,6 +57,7 @@ public class PenaltyShootout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public PenaltyShootout withPosition(String position) {
         this.position = position;
         return this;
@@ -60,6 +66,7 @@ public class PenaltyShootout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamId")
     public Long teamId;
+
     public PenaltyShootout withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
@@ -68,9 +75,11 @@ public class PenaltyShootout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public PenaltyShootout withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PenaltyShootout(){}
 }

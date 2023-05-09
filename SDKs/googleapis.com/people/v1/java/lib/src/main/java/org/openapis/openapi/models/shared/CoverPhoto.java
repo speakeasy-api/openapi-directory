@@ -18,6 +18,7 @@ public class CoverPhoto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public FieldMetadata metadata;
+
     public CoverPhoto withMetadata(FieldMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -29,9 +30,11 @@ public class CoverPhoto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public CoverPhoto withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CoverPhoto(){}
 }

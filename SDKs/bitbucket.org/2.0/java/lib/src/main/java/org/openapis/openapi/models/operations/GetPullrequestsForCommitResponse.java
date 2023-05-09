@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPullrequestsForCommitResponse {
     
     public String contentType;
+
     public GetPullrequestsForCommitResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetPullrequestsForCommitResponse {
     
     
     public Integer statusCode;
+
     public GetPullrequestsForCommitResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetPullrequestsForCommitResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPullrequestsForCommitResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetPullrequestsForCommitResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetPullrequestsForCommitResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetPullrequestsForCommitResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedPullrequests paginatedPullrequests;
+
     public GetPullrequestsForCommitResponse withPaginatedPullrequests(org.openapis.openapi.models.shared.PaginatedPullrequests paginatedPullrequests) {
         this.paginatedPullrequests = paginatedPullrequests;
         return this;
     }
     
+    public GetPullrequestsForCommitResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

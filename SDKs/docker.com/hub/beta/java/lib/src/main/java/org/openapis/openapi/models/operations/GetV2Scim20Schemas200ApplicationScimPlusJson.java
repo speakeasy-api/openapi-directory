@@ -12,6 +12,7 @@ public class GetV2Scim20Schemas200ApplicationScimPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public org.openapis.openapi.models.shared.ScimSchema[] resources;
+
     public GetV2Scim20Schemas200ApplicationScimPlusJson withResources(org.openapis.openapi.models.shared.ScimSchema[] resources) {
         this.resources = resources;
         return this;
@@ -20,6 +21,7 @@ public class GetV2Scim20Schemas200ApplicationScimPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemas")
     public String[] schemas;
+
     public GetV2Scim20Schemas200ApplicationScimPlusJson withSchemas(String[] schemas) {
         this.schemas = schemas;
         return this;
@@ -28,9 +30,11 @@ public class GetV2Scim20Schemas200ApplicationScimPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalResults")
     public Long totalResults;
+
     public GetV2Scim20Schemas200ApplicationScimPlusJson withTotalResults(Long totalResults) {
         this.totalResults = totalResults;
         return this;
     }
     
+    public GetV2Scim20Schemas200ApplicationScimPlusJson(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetJourneyDateRangeKpiResponse {
@@ -12,6 +13,7 @@ public class GetJourneyDateRangeKpiResponse {
      */
     
     public Object badRequestException;
+
     public GetJourneyDateRangeKpiResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetJourneyDateRangeKpiResponse {
     
     
     public String contentType;
+
     public GetJourneyDateRangeKpiResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetJourneyDateRangeKpiResponse {
      */
     
     public Object forbiddenException;
+
     public GetJourneyDateRangeKpiResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetJourneyDateRangeKpiResponse {
      */
     
     public org.openapis.openapi.models.shared.GetJourneyDateRangeKpiResponse getJourneyDateRangeKpiResponse;
+
     public GetJourneyDateRangeKpiResponse withGetJourneyDateRangeKpiResponse(org.openapis.openapi.models.shared.GetJourneyDateRangeKpiResponse getJourneyDateRangeKpiResponse) {
         this.getJourneyDateRangeKpiResponse = getJourneyDateRangeKpiResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetJourneyDateRangeKpiResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetJourneyDateRangeKpiResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetJourneyDateRangeKpiResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetJourneyDateRangeKpiResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetJourneyDateRangeKpiResponse {
      */
     
     public Object notFoundException;
+
     public GetJourneyDateRangeKpiResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetJourneyDateRangeKpiResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetJourneyDateRangeKpiResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetJourneyDateRangeKpiResponse {
     
     
     public Integer statusCode;
+
     public GetJourneyDateRangeKpiResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetJourneyDateRangeKpiResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetJourneyDateRangeKpiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetJourneyDateRangeKpiResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetJourneyDateRangeKpiResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetJourneyDateRangeKpiResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

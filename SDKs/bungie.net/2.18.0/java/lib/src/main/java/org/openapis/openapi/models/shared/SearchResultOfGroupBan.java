@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class SearchResultOfGroupBan {
     
     public Boolean hasMore;
+
     public SearchResultOfGroupBan withHasMore(Boolean hasMore) {
         this.hasMore = hasMore;
         return this;
@@ -16,6 +17,7 @@ public class SearchResultOfGroupBan {
     
     
     public QueriesPagedQuery query;
+
     public SearchResultOfGroupBan withQuery(QueriesPagedQuery query) {
         this.query = query;
         return this;
@@ -23,6 +25,7 @@ public class SearchResultOfGroupBan {
     
     
     public String replacementContinuationToken;
+
     public SearchResultOfGroupBan withReplacementContinuationToken(String replacementContinuationToken) {
         this.replacementContinuationToken = replacementContinuationToken;
         return this;
@@ -30,6 +33,7 @@ public class SearchResultOfGroupBan {
     
     
     public GroupsV2GroupBan[] results;
+
     public SearchResultOfGroupBan withResults(GroupsV2GroupBan[] results) {
         this.results = results;
         return this;
@@ -37,6 +41,7 @@ public class SearchResultOfGroupBan {
     
     
     public Integer totalResults;
+
     public SearchResultOfGroupBan withTotalResults(Integer totalResults) {
         this.totalResults = totalResults;
         return this;
@@ -50,9 +55,11 @@ public class SearchResultOfGroupBan {
      */
     
     public Boolean useTotalResults;
+
     public SearchResultOfGroupBan withUseTotalResults(Boolean useTotalResults) {
         this.useTotalResults = useTotalResults;
         return this;
     }
     
+    public SearchResultOfGroupBan(){}
 }

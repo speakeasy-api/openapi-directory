@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApiV1StatusesIdFavouritedByResponse {
@@ -12,6 +13,7 @@ public class GetApiV1StatusesIdFavouritedByResponse {
      */
     
     public org.openapis.openapi.models.shared.Account account;
+
     public GetApiV1StatusesIdFavouritedByResponse withAccount(org.openapis.openapi.models.shared.Account account) {
         this.account = account;
         return this;
@@ -19,6 +21,7 @@ public class GetApiV1StatusesIdFavouritedByResponse {
     
     
     public String contentType;
+
     public GetApiV1StatusesIdFavouritedByResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetApiV1StatusesIdFavouritedByResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetApiV1StatusesIdFavouritedByResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetApiV1StatusesIdFavouritedByResponse {
     
     
     public Integer statusCode;
+
     public GetApiV1StatusesIdFavouritedByResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetApiV1StatusesIdFavouritedByResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApiV1StatusesIdFavouritedByResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetApiV1StatusesIdFavouritedByResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

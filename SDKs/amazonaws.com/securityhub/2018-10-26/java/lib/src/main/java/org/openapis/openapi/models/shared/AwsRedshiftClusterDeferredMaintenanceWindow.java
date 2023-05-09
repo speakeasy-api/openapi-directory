@@ -15,6 +15,7 @@ public class AwsRedshiftClusterDeferredMaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeferMaintenanceEndTime")
     public String deferMaintenanceEndTime;
+
     public AwsRedshiftClusterDeferredMaintenanceWindow withDeferMaintenanceEndTime(String deferMaintenanceEndTime) {
         this.deferMaintenanceEndTime = deferMaintenanceEndTime;
         return this;
@@ -23,6 +24,7 @@ public class AwsRedshiftClusterDeferredMaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeferMaintenanceIdentifier")
     public String deferMaintenanceIdentifier;
+
     public AwsRedshiftClusterDeferredMaintenanceWindow withDeferMaintenanceIdentifier(String deferMaintenanceIdentifier) {
         this.deferMaintenanceIdentifier = deferMaintenanceIdentifier;
         return this;
@@ -31,9 +33,11 @@ public class AwsRedshiftClusterDeferredMaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeferMaintenanceStartTime")
     public String deferMaintenanceStartTime;
+
     public AwsRedshiftClusterDeferredMaintenanceWindow withDeferMaintenanceStartTime(String deferMaintenanceStartTime) {
         this.deferMaintenanceStartTime = deferMaintenanceStartTime;
         return this;
     }
     
+    public AwsRedshiftClusterDeferredMaintenanceWindow(){}
 }

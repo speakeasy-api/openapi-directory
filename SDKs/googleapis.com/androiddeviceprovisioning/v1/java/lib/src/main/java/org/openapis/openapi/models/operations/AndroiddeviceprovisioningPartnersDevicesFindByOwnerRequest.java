@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest {
@@ -12,6 +13,7 @@ public class AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.FindDevicesByOwnerRequest findDevicesByOwnerRequest;
+
     public AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest withFindDevicesByOwnerRequest(org.openapis.openapi.models.shared.FindDevicesByOwnerRequest findDevicesByOwnerRequest) {
         this.findDevicesByOwnerRequest = findDevicesByOwnerRequest;
         return this;
@@ -29,6 +32,7 @@ public class AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partnerId")
     public String partnerId;
+
     public AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest withPartnerId(String partnerId) {
         this.partnerId = partnerId;
         return this;
@@ -99,6 +109,7 @@ public class AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest(@JsonProperty("partnerId") String partnerId) {
+        this.partnerId = partnerId;
+  }
 }

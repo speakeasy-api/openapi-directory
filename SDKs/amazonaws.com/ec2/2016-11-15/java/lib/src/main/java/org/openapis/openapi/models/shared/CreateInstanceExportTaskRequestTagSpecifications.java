@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateInstanceExportTaskRequestTagSpecifications {
     
     public CreateInstanceExportTaskRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateInstanceExportTaskRequestTagSpecifications withResourceType(CreateInstanceExportTaskRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateInstanceExportTaskRequestTagSpecifications {
     
     
     public CreateInstanceExportTaskRequestTagSpecificationsTags[] tags;
+
     public CreateInstanceExportTaskRequestTagSpecifications withTags(CreateInstanceExportTaskRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateInstanceExportTaskRequestTagSpecifications(){}
 }

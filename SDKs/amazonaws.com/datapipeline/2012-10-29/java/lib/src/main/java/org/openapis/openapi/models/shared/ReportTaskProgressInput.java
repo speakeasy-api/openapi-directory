@@ -15,6 +15,7 @@ public class ReportTaskProgressInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public Field[] fields;
+
     public ReportTaskProgressInput withFields(Field[] fields) {
         this.fields = fields;
         return this;
@@ -22,9 +23,13 @@ public class ReportTaskProgressInput {
     
     @JsonProperty("taskId")
     public String taskId;
+
     public ReportTaskProgressInput withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public ReportTaskProgressInput(@JsonProperty("taskId") String taskId) {
+        this.taskId = taskId;
+  }
 }

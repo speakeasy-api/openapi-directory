@@ -20,6 +20,7 @@ public class NetworkSite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityZone")
     public String availabilityZone;
+
     public NetworkSite withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -28,6 +29,7 @@ public class NetworkSite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityZoneId")
     public String availabilityZoneId;
+
     public NetworkSite withAvailabilityZoneId(String availabilityZoneId) {
         this.availabilityZoneId = availabilityZoneId;
         return this;
@@ -38,6 +40,7 @@ public class NetworkSite {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public NetworkSite withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class NetworkSite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentPlan")
     public SitePlan currentPlan;
+
     public NetworkSite withCurrentPlan(SitePlan currentPlan) {
         this.currentPlan = currentPlan;
         return this;
@@ -54,6 +58,7 @@ public class NetworkSite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public NetworkSite withDescription(String description) {
         this.description = description;
         return this;
@@ -61,6 +66,7 @@ public class NetworkSite {
     
     @JsonProperty("networkArn")
     public String networkArn;
+
     public NetworkSite withNetworkArn(String networkArn) {
         this.networkArn = networkArn;
         return this;
@@ -68,6 +74,7 @@ public class NetworkSite {
     
     @JsonProperty("networkSiteArn")
     public String networkSiteArn;
+
     public NetworkSite withNetworkSiteArn(String networkSiteArn) {
         this.networkSiteArn = networkSiteArn;
         return this;
@@ -75,6 +82,7 @@ public class NetworkSite {
     
     @JsonProperty("networkSiteName")
     public String networkSiteName;
+
     public NetworkSite withNetworkSiteName(String networkSiteName) {
         this.networkSiteName = networkSiteName;
         return this;
@@ -83,6 +91,7 @@ public class NetworkSite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingPlan")
     public SitePlan pendingPlan;
+
     public NetworkSite withPendingPlan(SitePlan pendingPlan) {
         this.pendingPlan = pendingPlan;
         return this;
@@ -90,6 +99,7 @@ public class NetworkSite {
     
     @JsonProperty("status")
     public NetworkSiteStatusEnum status;
+
     public NetworkSite withStatus(NetworkSiteStatusEnum status) {
         this.status = status;
         return this;
@@ -98,9 +108,16 @@ public class NetworkSite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public NetworkSite withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public NetworkSite(@JsonProperty("networkArn") String networkArn, @JsonProperty("networkSiteArn") String networkSiteArn, @JsonProperty("networkSiteName") String networkSiteName, @JsonProperty("status") NetworkSiteStatusEnum status) {
+        this.networkArn = networkArn;
+        this.networkSiteArn = networkSiteArn;
+        this.networkSiteName = networkSiteName;
+        this.status = status;
+  }
 }

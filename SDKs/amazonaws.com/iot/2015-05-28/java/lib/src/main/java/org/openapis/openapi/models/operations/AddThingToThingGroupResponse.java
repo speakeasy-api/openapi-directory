@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddThingToThingGroupResponse {
@@ -12,6 +13,7 @@ public class AddThingToThingGroupResponse {
      */
     
     public java.util.Map<String, Object> addThingToThingGroupResponse;
+
     public AddThingToThingGroupResponse withAddThingToThingGroupResponse(java.util.Map<String, Object> addThingToThingGroupResponse) {
         this.addThingToThingGroupResponse = addThingToThingGroupResponse;
         return this;
@@ -19,6 +21,7 @@ public class AddThingToThingGroupResponse {
     
     
     public String contentType;
+
     public AddThingToThingGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AddThingToThingGroupResponse {
      */
     
     public Object internalFailureException;
+
     public AddThingToThingGroupResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class AddThingToThingGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public AddThingToThingGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class AddThingToThingGroupResponse {
     
     
     public Integer statusCode;
+
     public AddThingToThingGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class AddThingToThingGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddThingToThingGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class AddThingToThingGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AddThingToThingGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class AddThingToThingGroupResponse {
      */
     
     public Object throttlingException;
+
     public AddThingToThingGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public AddThingToThingGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNetworkSwitchSettingsQosRulesOrderResponse {
     
     public String contentType;
+
     public GetNetworkSwitchSettingsQosRulesOrderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetNetworkSwitchSettingsQosRulesOrderResponse {
     
     
     public Integer statusCode;
+
     public GetNetworkSwitchSettingsQosRulesOrderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetNetworkSwitchSettingsQosRulesOrderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNetworkSwitchSettingsQosRulesOrderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetNetworkSwitchSettingsQosRulesOrderResponse {
      */
     
     public java.util.Map<String, Object> getNetworkSwitchSettingsQosRulesOrder200ApplicationJSONObject;
+
     public GetNetworkSwitchSettingsQosRulesOrderResponse withGetNetworkSwitchSettingsQosRulesOrder200ApplicationJSONObject(java.util.Map<String, Object> getNetworkSwitchSettingsQosRulesOrder200ApplicationJSONObject) {
         this.getNetworkSwitchSettingsQosRulesOrder200ApplicationJSONObject = getNetworkSwitchSettingsQosRulesOrder200ApplicationJSONObject;
         return this;
     }
     
+    public GetNetworkSwitchSettingsQosRulesOrderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class OrganizationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public OrganizationInput withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class OrganizationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doingBusinessAs")
     public String doingBusinessAs;
+
     public OrganizationInput withDoingBusinessAs(String doingBusinessAs) {
         this.doingBusinessAs = doingBusinessAs;
         return this;
@@ -37,6 +39,7 @@ public class OrganizationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public OrganizationInput withEmail(String email) {
         this.email = email;
         return this;
@@ -47,6 +50,7 @@ public class OrganizationInput {
      */
     @JsonProperty("legalName")
     public String legalName;
+
     public OrganizationInput withLegalName(String legalName) {
         this.legalName = legalName;
         return this;
@@ -55,6 +59,7 @@ public class OrganizationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public PhoneNumber phone;
+
     public OrganizationInput withPhone(PhoneNumber phone) {
         this.phone = phone;
         return this;
@@ -63,6 +68,7 @@ public class OrganizationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalPlaceOfBusiness")
     public Address principalPlaceOfBusiness;
+
     public OrganizationInput withPrincipalPlaceOfBusiness(Address principalPlaceOfBusiness) {
         this.principalPlaceOfBusiness = principalPlaceOfBusiness;
         return this;
@@ -70,6 +76,7 @@ public class OrganizationInput {
     
     @JsonProperty("registeredAddress")
     public Address registeredAddress;
+
     public OrganizationInput withRegisteredAddress(Address registeredAddress) {
         this.registeredAddress = registeredAddress;
         return this;
@@ -81,6 +88,7 @@ public class OrganizationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationNumber")
     public String registrationNumber;
+
     public OrganizationInput withRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
         return this;
@@ -89,6 +97,7 @@ public class OrganizationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stockData")
     public StockData stockData;
+
     public OrganizationInput withStockData(StockData stockData) {
         this.stockData = stockData;
         return this;
@@ -102,6 +111,7 @@ public class OrganizationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxExempt")
     public Boolean taxExempt;
+
     public OrganizationInput withTaxExempt(Boolean taxExempt) {
         this.taxExempt = taxExempt;
         return this;
@@ -113,6 +123,7 @@ public class OrganizationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxId")
     public String taxId;
+
     public OrganizationInput withTaxId(String taxId) {
         this.taxId = taxId;
         return this;
@@ -126,6 +137,7 @@ public class OrganizationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxIdAbsenceReason")
     public OrganizationTaxIdAbsenceReasonEnum taxIdAbsenceReason;
+
     public OrganizationInput withTaxIdAbsenceReason(OrganizationTaxIdAbsenceReasonEnum taxIdAbsenceReason) {
         this.taxIdAbsenceReason = taxIdAbsenceReason;
         return this;
@@ -139,6 +151,7 @@ public class OrganizationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public OrganizationTypeEnum type;
+
     public OrganizationInput withType(OrganizationTypeEnum type) {
         this.type = type;
         return this;
@@ -147,9 +160,14 @@ public class OrganizationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webData")
     public WebDataInput webData;
+
     public OrganizationInput withWebData(WebDataInput webData) {
         this.webData = webData;
         return this;
     }
     
+    public OrganizationInput(@JsonProperty("legalName") String legalName, @JsonProperty("registeredAddress") Address registeredAddress) {
+        this.legalName = legalName;
+        this.registeredAddress = registeredAddress;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateSegmentRequestBodyWriteSegmentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public org.openapis.openapi.models.shared.SegmentDimensions dimensions;
+
     public CreateSegmentRequestBodyWriteSegmentRequest withDimensions(org.openapis.openapi.models.shared.SegmentDimensions dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -23,6 +24,7 @@ public class CreateSegmentRequestBodyWriteSegmentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateSegmentRequestBodyWriteSegmentRequest withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class CreateSegmentRequestBodyWriteSegmentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SegmentGroups")
     public org.openapis.openapi.models.shared.SegmentGroupList segmentGroups;
+
     public CreateSegmentRequestBodyWriteSegmentRequest withSegmentGroups(org.openapis.openapi.models.shared.SegmentGroupList segmentGroups) {
         this.segmentGroups = segmentGroups;
         return this;
@@ -39,9 +42,11 @@ public class CreateSegmentRequestBodyWriteSegmentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateSegmentRequestBodyWriteSegmentRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSegmentRequestBodyWriteSegmentRequest(){}
 }

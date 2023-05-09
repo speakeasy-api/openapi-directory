@@ -11,17 +11,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteDataRepositoryAssociationRequest {
     @JsonProperty("AssociationId")
     public String associationId;
+
     public DeleteDataRepositoryAssociationRequest withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
     }
     
     /**
-     * (Optional) An idempotency token for resource creation, in a string of up to 64 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
+     * (Optional) An idempotency token for resource creation, in a string of up to 63 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public DeleteDataRepositoryAssociationRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -30,9 +32,13 @@ public class DeleteDataRepositoryAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteDataInFileSystem")
     public Boolean deleteDataInFileSystem;
+
     public DeleteDataRepositoryAssociationRequest withDeleteDataInFileSystem(Boolean deleteDataInFileSystem) {
         this.deleteDataInFileSystem = deleteDataInFileSystem;
         return this;
     }
     
+    public DeleteDataRepositoryAssociationRequest(@JsonProperty("AssociationId") String associationId) {
+        this.associationId = associationId;
+  }
 }

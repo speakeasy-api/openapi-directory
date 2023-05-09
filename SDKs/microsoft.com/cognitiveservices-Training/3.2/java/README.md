@@ -16,31 +16,31 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetDomainRequest;
 import org.openapis.openapi.models.operations.GetDomainResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     apimKey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            GetDomainRequest req = new GetDomainRequest() {{
-                domainId = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
-            }}            
+            GetDomainRequest req = new GetDomainRequest("9bd9d8d6-9a67-44e0-b467-cc8796ed151a");            
 
             GetDomainResponse res = sdk.domainsApi.getDomain(req);
 
-            if (res.domain.isPresent()) {
+            if (res.domain != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -48,101 +48,101 @@ public class Application {
 ## Available Resources and Operations
 
 
-### domainsApi
+### [domainsApi](docs/domainsapi/README.md)
 
-* `getDomain` - Get information about a specific domain.
-* `getDomains` - Get a list of the available domains.
+* [getDomain](docs/domainsapi/README.md#getdomain) - Get information about a specific domain.
+* [getDomains](docs/domainsapi/README.md#getdomains) - Get a list of the available domains.
 
-### imageApi
+### [imageApi](docs/imageapi/README.md)
 
-* `createImageRegionsForm` - Create a set of image regions.
-* `createImageRegionsJson` - Create a set of image regions.
-* `createImageRegionsRaw` - Create a set of image regions.
-* `createImageTagsForm` - Associate a set of images with a set of tags.
-* `createImageTagsJson` - Associate a set of images with a set of tags.
-* `createImageTagsRaw` - Associate a set of images with a set of tags.
-* `createImagesFromData` - Add the provided images to the set of training images.
-* `createImagesFromFilesForm` - Add the provided batch of images to the set of training images.
-* `createImagesFromFilesJson` - Add the provided batch of images to the set of training images.
-* `createImagesFromFilesRaw` - Add the provided batch of images to the set of training images.
-* `createImagesFromPredictionsForm` - Add the specified predicted images to the set of training images.
-* `createImagesFromPredictionsJson` - Add the specified predicted images to the set of training images.
-* `createImagesFromPredictionsRaw` - Add the specified predicted images to the set of training images.
-* `createImagesFromUrlsForm` - Add the provided images urls to the set of training images.
-* `createImagesFromUrlsJson` - Add the provided images urls to the set of training images.
-* `createImagesFromUrlsRaw` - Add the provided images urls to the set of training images.
-* `deleteImageRegions` - Delete a set of image regions.
-* `deleteImageTags` - Remove a set of tags from a set of images.
-* `deleteImages` - Delete images from the set of training images.
-* `getImagesByIds` - Get images by id for a given project iteration.
-* `getTaggedImageCount` - Gets the number of images tagged with the provided {tagIds}.
-* `getTaggedImages` - Get tagged images for a given project iteration.
-* `getUntaggedImageCount` - Gets the number of untagged images.
-* `getUntaggedImages` - Get untagged images for a given project iteration.
-* `querySuggestedImageCountForm` - Get count of images whose suggested tags match given tags and their probabilities are greater than or equal to the given threshold. Returns count as 0 if none found.
-* `querySuggestedImageCountJson` - Get count of images whose suggested tags match given tags and their probabilities are greater than or equal to the given threshold. Returns count as 0 if none found.
-* `querySuggestedImageCountRaw` - Get count of images whose suggested tags match given tags and their probabilities are greater than or equal to the given threshold. Returns count as 0 if none found.
-* `querySuggestedImagesForm` - Get untagged images whose suggested tags match given tags. Returns empty array if no images are found.
-* `querySuggestedImagesJson` - Get untagged images whose suggested tags match given tags. Returns empty array if no images are found.
-* `querySuggestedImagesRaw` - Get untagged images whose suggested tags match given tags. Returns empty array if no images are found.
+* [createImageRegionsForm](docs/imageapi/README.md#createimageregionsform) - Create a set of image regions.
+* [createImageRegionsJson](docs/imageapi/README.md#createimageregionsjson) - Create a set of image regions.
+* [createImageRegionsRaw](docs/imageapi/README.md#createimageregionsraw) - Create a set of image regions.
+* [createImageTagsForm](docs/imageapi/README.md#createimagetagsform) - Associate a set of images with a set of tags.
+* [createImageTagsJson](docs/imageapi/README.md#createimagetagsjson) - Associate a set of images with a set of tags.
+* [createImageTagsRaw](docs/imageapi/README.md#createimagetagsraw) - Associate a set of images with a set of tags.
+* [createImagesFromData](docs/imageapi/README.md#createimagesfromdata) - Add the provided images to the set of training images.
+* [createImagesFromFilesForm](docs/imageapi/README.md#createimagesfromfilesform) - Add the provided batch of images to the set of training images.
+* [createImagesFromFilesJson](docs/imageapi/README.md#createimagesfromfilesjson) - Add the provided batch of images to the set of training images.
+* [createImagesFromFilesRaw](docs/imageapi/README.md#createimagesfromfilesraw) - Add the provided batch of images to the set of training images.
+* [createImagesFromPredictionsForm](docs/imageapi/README.md#createimagesfrompredictionsform) - Add the specified predicted images to the set of training images.
+* [createImagesFromPredictionsJson](docs/imageapi/README.md#createimagesfrompredictionsjson) - Add the specified predicted images to the set of training images.
+* [createImagesFromPredictionsRaw](docs/imageapi/README.md#createimagesfrompredictionsraw) - Add the specified predicted images to the set of training images.
+* [createImagesFromUrlsForm](docs/imageapi/README.md#createimagesfromurlsform) - Add the provided images urls to the set of training images.
+* [createImagesFromUrlsJson](docs/imageapi/README.md#createimagesfromurlsjson) - Add the provided images urls to the set of training images.
+* [createImagesFromUrlsRaw](docs/imageapi/README.md#createimagesfromurlsraw) - Add the provided images urls to the set of training images.
+* [deleteImageRegions](docs/imageapi/README.md#deleteimageregions) - Delete a set of image regions.
+* [deleteImageTags](docs/imageapi/README.md#deleteimagetags) - Remove a set of tags from a set of images.
+* [deleteImages](docs/imageapi/README.md#deleteimages) - Delete images from the set of training images.
+* [getImagesByIds](docs/imageapi/README.md#getimagesbyids) - Get images by id for a given project iteration.
+* [getTaggedImageCount](docs/imageapi/README.md#gettaggedimagecount) - Gets the number of images tagged with the provided {tagIds}.
+* [getTaggedImages](docs/imageapi/README.md#gettaggedimages) - Get tagged images for a given project iteration.
+* [getUntaggedImageCount](docs/imageapi/README.md#getuntaggedimagecount) - Gets the number of untagged images.
+* [getUntaggedImages](docs/imageapi/README.md#getuntaggedimages) - Get untagged images for a given project iteration.
+* [querySuggestedImageCountForm](docs/imageapi/README.md#querysuggestedimagecountform) - Get count of images whose suggested tags match given tags and their probabilities are greater than or equal to the given threshold. Returns count as 0 if none found.
+* [querySuggestedImageCountJson](docs/imageapi/README.md#querysuggestedimagecountjson) - Get count of images whose suggested tags match given tags and their probabilities are greater than or equal to the given threshold. Returns count as 0 if none found.
+* [querySuggestedImageCountRaw](docs/imageapi/README.md#querysuggestedimagecountraw) - Get count of images whose suggested tags match given tags and their probabilities are greater than or equal to the given threshold. Returns count as 0 if none found.
+* [querySuggestedImagesForm](docs/imageapi/README.md#querysuggestedimagesform) - Get untagged images whose suggested tags match given tags. Returns empty array if no images are found.
+* [querySuggestedImagesJson](docs/imageapi/README.md#querysuggestedimagesjson) - Get untagged images whose suggested tags match given tags. Returns empty array if no images are found.
+* [querySuggestedImagesRaw](docs/imageapi/README.md#querysuggestedimagesraw) - Get untagged images whose suggested tags match given tags. Returns empty array if no images are found.
 
-### imageRegionProposalApi
+### [imageRegionProposalApi](docs/imageregionproposalapi/README.md)
 
-* `getImageRegionProposals` - Get region proposals for an image. Returns empty array if no proposals are found.
+* [getImageRegionProposals](docs/imageregionproposalapi/README.md#getimageregionproposals) - Get region proposals for an image. Returns empty array if no proposals are found.
 
-### predictionsApi
+### [predictionsApi](docs/predictionsapi/README.md)
 
-* `deletePrediction` - Delete a set of predicted images and their associated prediction results.
-* `queryPredictionsForm` - Get images that were sent to your prediction endpoint.
-* `queryPredictionsJson` - Get images that were sent to your prediction endpoint.
-* `queryPredictionsRaw` - Get images that were sent to your prediction endpoint.
-* `quickTestImage` - Quick test an image.
-* `quickTestImageUrlForm` - Quick test an image url.
-* `quickTestImageUrlJson` - Quick test an image url.
-* `quickTestImageUrlRaw` - Quick test an image url.
+* [deletePrediction](docs/predictionsapi/README.md#deleteprediction) - Delete a set of predicted images and their associated prediction results.
+* [queryPredictionsForm](docs/predictionsapi/README.md#querypredictionsform) - Get images that were sent to your prediction endpoint.
+* [queryPredictionsJson](docs/predictionsapi/README.md#querypredictionsjson) - Get images that were sent to your prediction endpoint.
+* [queryPredictionsRaw](docs/predictionsapi/README.md#querypredictionsraw) - Get images that were sent to your prediction endpoint.
+* [quickTestImage](docs/predictionsapi/README.md#quicktestimage) - Quick test an image.
+* [quickTestImageUrlForm](docs/predictionsapi/README.md#quicktestimageurlform) - Quick test an image url.
+* [quickTestImageUrlJson](docs/predictionsapi/README.md#quicktestimageurljson) - Quick test an image url.
+* [quickTestImageUrlRaw](docs/predictionsapi/README.md#quicktestimageurlraw) - Quick test an image url.
 
-### projectApi
+### [projectApi](docs/projectapi/README.md)
 
-* `createProject` - Create a project.
-* `deleteIteration` - Delete a specific iteration of a project.
-* `deleteProject` - Delete a specific project.
-* `exportIteration` - Export a trained iteration.
-* `exportProject` - Exports a project.
-* `getExports` - Get the list of exports for a specific iteration.
-* `getImagePerformanceCount` - Gets the number of images tagged with the provided {tagIds} that have prediction results from
+* [createProject](docs/projectapi/README.md#createproject) - Create a project.
+* [deleteIteration](docs/projectapi/README.md#deleteiteration) - Delete a specific iteration of a project.
+* [deleteProject](docs/projectapi/README.md#deleteproject) - Delete a specific project.
+* [exportIteration](docs/projectapi/README.md#exportiteration) - Export a trained iteration.
+* [exportProject](docs/projectapi/README.md#exportproject) - Exports a project.
+* [getExports](docs/projectapi/README.md#getexports) - Get the list of exports for a specific iteration.
+* [getImagePerformanceCount](docs/projectapi/README.md#getimageperformancecount) - Gets the number of images tagged with the provided {tagIds} that have prediction results from
 training for the provided iteration {iterationId}.
-* `getImagePerformances` - Get image with its prediction for a given project iteration.
-* `getIteration` - Get a specific iteration.
-* `getIterationPerformance` - Get detailed performance information about an iteration.
-* `getIterations` - Get iterations for the project.
-* `getProject` - Get a specific project.
-* `getProjects` - Get your projects.
-* `importProject` - Imports a project.
-* `publishIteration` - Publish a specific iteration.
-* `trainProjectForm` - Queues project for training.
-* `trainProjectJson` - Queues project for training.
-* `trainProjectRaw` - Queues project for training.
-* `unpublishIteration` - Unpublish a specific iteration.
-* `updateIterationForm` - Update a specific iteration.
-* `updateIterationJson` - Update a specific iteration.
-* `updateIterationRaw` - Update a specific iteration.
-* `updateProjectForm` - Update a specific project.
-* `updateProjectJson` - Update a specific project.
-* `updateProjectRaw` - Update a specific project.
+* [getImagePerformances](docs/projectapi/README.md#getimageperformances) - Get image with its prediction for a given project iteration.
+* [getIteration](docs/projectapi/README.md#getiteration) - Get a specific iteration.
+* [getIterationPerformance](docs/projectapi/README.md#getiterationperformance) - Get detailed performance information about an iteration.
+* [getIterations](docs/projectapi/README.md#getiterations) - Get iterations for the project.
+* [getProject](docs/projectapi/README.md#getproject) - Get a specific project.
+* [getProjects](docs/projectapi/README.md#getprojects) - Get your projects.
+* [importProject](docs/projectapi/README.md#importproject) - Imports a project.
+* [publishIteration](docs/projectapi/README.md#publishiteration) - Publish a specific iteration.
+* [trainProjectForm](docs/projectapi/README.md#trainprojectform) - Queues project for training.
+* [trainProjectJson](docs/projectapi/README.md#trainprojectjson) - Queues project for training.
+* [trainProjectRaw](docs/projectapi/README.md#trainprojectraw) - Queues project for training.
+* [unpublishIteration](docs/projectapi/README.md#unpublishiteration) - Unpublish a specific iteration.
+* [updateIterationForm](docs/projectapi/README.md#updateiterationform) - Update a specific iteration.
+* [updateIterationJson](docs/projectapi/README.md#updateiterationjson) - Update a specific iteration.
+* [updateIterationRaw](docs/projectapi/README.md#updateiterationraw) - Update a specific iteration.
+* [updateProjectForm](docs/projectapi/README.md#updateprojectform) - Update a specific project.
+* [updateProjectJson](docs/projectapi/README.md#updateprojectjson) - Update a specific project.
+* [updateProjectRaw](docs/projectapi/README.md#updateprojectraw) - Update a specific project.
 
-### suggestTagsAndRegionsApi
+### [suggestTagsAndRegionsApi](docs/suggesttagsandregionsapi/README.md)
 
-* `suggestTagsAndRegions` - Suggest tags and regions for an array/batch of untagged images. Returns empty array if no tags are found.
+* [suggestTagsAndRegions](docs/suggesttagsandregionsapi/README.md#suggesttagsandregions) - Suggest tags and regions for an array/batch of untagged images. Returns empty array if no tags are found.
 
-### tagsApi
+### [tagsApi](docs/tagsapi/README.md)
 
-* `createTag` - Create a tag for the project.
-* `deleteTag` - Delete a tag from the project.
-* `getTag` - Get information about a specific tag.
-* `getTags` - Get the tags for a given project and iteration.
-* `updateTagForm` - Update a tag.
-* `updateTagJson` - Update a tag.
-* `updateTagRaw` - Update a tag.
+* [createTag](docs/tagsapi/README.md#createtag) - Create a tag for the project.
+* [deleteTag](docs/tagsapi/README.md#deletetag) - Delete a tag from the project.
+* [getTag](docs/tagsapi/README.md#gettag) - Get information about a specific tag.
+* [getTags](docs/tagsapi/README.md#gettags) - Get the tags for a given project and iteration.
+* [updateTagForm](docs/tagsapi/README.md#updatetagform) - Update a tag.
+* [updateTagJson](docs/tagsapi/README.md#updatetagjson) - Update a tag.
+* [updateTagRaw](docs/tagsapi/README.md#updatetagraw) - Update a tag.
 <!-- End SDK Available Operations -->
 
 ### Maturity

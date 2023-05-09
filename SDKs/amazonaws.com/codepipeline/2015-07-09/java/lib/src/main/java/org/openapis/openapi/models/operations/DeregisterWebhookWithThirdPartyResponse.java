@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterWebhookWithThirdPartyResponse {
     
     public String contentType;
+
     public DeregisterWebhookWithThirdPartyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeregisterWebhookWithThirdPartyResponse {
      */
     
     public java.util.Map<String, Object> deregisterWebhookWithThirdPartyOutput;
+
     public DeregisterWebhookWithThirdPartyResponse withDeregisterWebhookWithThirdPartyOutput(java.util.Map<String, Object> deregisterWebhookWithThirdPartyOutput) {
         this.deregisterWebhookWithThirdPartyOutput = deregisterWebhookWithThirdPartyOutput;
         return this;
@@ -26,6 +29,7 @@ public class DeregisterWebhookWithThirdPartyResponse {
     
     
     public Integer statusCode;
+
     public DeregisterWebhookWithThirdPartyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeregisterWebhookWithThirdPartyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterWebhookWithThirdPartyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class DeregisterWebhookWithThirdPartyResponse {
      */
     
     public Object validationException;
+
     public DeregisterWebhookWithThirdPartyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
@@ -53,9 +59,14 @@ public class DeregisterWebhookWithThirdPartyResponse {
      */
     
     public Object webhookNotFoundException;
+
     public DeregisterWebhookWithThirdPartyResponse withWebhookNotFoundException(Object webhookNotFoundException) {
         this.webhookNotFoundException = webhookNotFoundException;
         return this;
     }
     
+    public DeregisterWebhookWithThirdPartyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

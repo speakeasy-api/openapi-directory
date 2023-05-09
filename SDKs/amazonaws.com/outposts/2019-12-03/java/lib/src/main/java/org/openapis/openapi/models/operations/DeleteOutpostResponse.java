@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteOutpostResponse {
@@ -12,6 +13,7 @@ public class DeleteOutpostResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteOutpostResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteOutpostResponse {
      */
     
     public Object conflictException;
+
     public DeleteOutpostResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteOutpostResponse {
     
     
     public String contentType;
+
     public DeleteOutpostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteOutpostResponse {
      */
     
     public java.util.Map<String, Object> deleteOutpostOutput;
+
     public DeleteOutpostResponse withDeleteOutpostOutput(java.util.Map<String, Object> deleteOutpostOutput) {
         this.deleteOutpostOutput = deleteOutpostOutput;
         return this;
@@ -49,6 +54,7 @@ public class DeleteOutpostResponse {
      */
     
     public Object internalServerException;
+
     public DeleteOutpostResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteOutpostResponse {
      */
     
     public Object notFoundException;
+
     public DeleteOutpostResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteOutpostResponse {
     
     
     public Integer statusCode;
+
     public DeleteOutpostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteOutpostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteOutpostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteOutpostResponse {
      */
     
     public Object validationException;
+
     public DeleteOutpostResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteOutpostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

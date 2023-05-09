@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOrReplaceSalesTaxRequest {
@@ -12,6 +13,7 @@ public class CreateOrReplaceSalesTaxRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SalesTaxBase salesTaxBase;
+
     public CreateOrReplaceSalesTaxRequest withSalesTaxBase(org.openapis.openapi.models.shared.SalesTaxBase salesTaxBase) {
         this.salesTaxBase = salesTaxBase;
         return this;
@@ -22,6 +24,7 @@ public class CreateOrReplaceSalesTaxRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryCode")
     public String countryCode;
+
     public CreateOrReplaceSalesTaxRequest withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -32,9 +35,15 @@ public class CreateOrReplaceSalesTaxRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jurisdictionId")
     public String jurisdictionId;
+
     public CreateOrReplaceSalesTaxRequest withJurisdictionId(String jurisdictionId) {
         this.jurisdictionId = jurisdictionId;
         return this;
     }
     
+    public CreateOrReplaceSalesTaxRequest(@JsonProperty("SalesTaxBase") org.openapis.openapi.models.shared.SalesTaxBase salesTaxBase, @JsonProperty("countryCode") String countryCode, @JsonProperty("jurisdictionId") String jurisdictionId) {
+        this.salesTaxBase = salesTaxBase;
+        this.countryCode = countryCode;
+        this.jurisdictionId = jurisdictionId;
+  }
 }

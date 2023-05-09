@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoff {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, Object> metadata;
+
     public GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoff withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoff(){}
 }

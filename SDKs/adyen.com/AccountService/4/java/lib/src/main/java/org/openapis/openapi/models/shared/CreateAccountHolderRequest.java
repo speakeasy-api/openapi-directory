@@ -15,6 +15,7 @@ public class CreateAccountHolderRequest {
      */
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public CreateAccountHolderRequest withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -22,6 +23,7 @@ public class CreateAccountHolderRequest {
     
     @JsonProperty("accountHolderDetails")
     public AccountHolderDetails accountHolderDetails;
+
     public CreateAccountHolderRequest withAccountHolderDetails(AccountHolderDetails accountHolderDetails) {
         this.accountHolderDetails = accountHolderDetails;
         return this;
@@ -34,6 +36,7 @@ public class CreateAccountHolderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createDefaultAccount")
     public Boolean createDefaultAccount;
+
     public CreateAccountHolderRequest withCreateDefaultAccount(Boolean createDefaultAccount) {
         this.createDefaultAccount = createDefaultAccount;
         return this;
@@ -45,6 +48,7 @@ public class CreateAccountHolderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateAccountHolderRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -61,6 +65,7 @@ public class CreateAccountHolderRequest {
      */
     @JsonProperty("legalEntity")
     public CreateAccountHolderRequestLegalEntityEnum legalEntity;
+
     public CreateAccountHolderRequest withLegalEntity(CreateAccountHolderRequestLegalEntityEnum legalEntity) {
         this.legalEntity = legalEntity;
         return this;
@@ -72,6 +77,7 @@ public class CreateAccountHolderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryCurrency")
     public String primaryCurrency;
+
     public CreateAccountHolderRequest withPrimaryCurrency(String primaryCurrency) {
         this.primaryCurrency = primaryCurrency;
         return this;
@@ -83,9 +89,15 @@ public class CreateAccountHolderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processingTier")
     public Integer processingTier;
+
     public CreateAccountHolderRequest withProcessingTier(Integer processingTier) {
         this.processingTier = processingTier;
         return this;
     }
     
+    public CreateAccountHolderRequest(@JsonProperty("accountHolderCode") String accountHolderCode, @JsonProperty("accountHolderDetails") AccountHolderDetails accountHolderDetails, @JsonProperty("legalEntity") CreateAccountHolderRequestLegalEntityEnum legalEntity) {
+        this.accountHolderCode = accountHolderCode;
+        this.accountHolderDetails = accountHolderDetails;
+        this.legalEntity = legalEntity;
+  }
 }

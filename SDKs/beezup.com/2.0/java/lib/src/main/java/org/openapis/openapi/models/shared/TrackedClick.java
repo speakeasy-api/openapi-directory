@@ -17,6 +17,7 @@ public class TrackedClick {
      */
     @JsonProperty("channel")
     public BeezUPCommonChannelBasicInfo channel;
+
     public TrackedClick withChannel(BeezUPCommonChannelBasicInfo channel) {
         this.channel = channel;
         return this;
@@ -27,6 +28,7 @@ public class TrackedClick {
      */
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public TrackedClick withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -37,6 +39,7 @@ public class TrackedClick {
      */
     @JsonProperty("product")
     public BeezUPCommonProductBasicInfo product;
+
     public TrackedClick withProduct(BeezUPCommonProductBasicInfo product) {
         this.product = product;
         return this;
@@ -49,9 +52,16 @@ public class TrackedClick {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("utcDate")
     public OffsetDateTime utcDate;
+
     public TrackedClick withUtcDate(OffsetDateTime utcDate) {
         this.utcDate = utcDate;
         return this;
     }
     
+    public TrackedClick(@JsonProperty("channel") BeezUPCommonChannelBasicInfo channel, @JsonProperty("ipAddress") String ipAddress, @JsonProperty("product") BeezUPCommonProductBasicInfo product, @JsonProperty("utcDate") OffsetDateTime utcDate) {
+        this.channel = channel;
+        this.ipAddress = ipAddress;
+        this.product = product;
+        this.utcDate = utcDate;
+  }
 }

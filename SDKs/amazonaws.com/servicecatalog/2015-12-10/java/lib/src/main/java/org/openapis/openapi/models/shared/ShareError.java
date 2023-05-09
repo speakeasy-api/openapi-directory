@@ -15,6 +15,7 @@ public class ShareError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Accounts")
     public String[] accounts;
+
     public ShareError withAccounts(String[] accounts) {
         this.accounts = accounts;
         return this;
@@ -23,6 +24,7 @@ public class ShareError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public String error;
+
     public ShareError withError(String error) {
         this.error = error;
         return this;
@@ -31,9 +33,11 @@ public class ShareError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public ShareError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ShareError(){}
 }

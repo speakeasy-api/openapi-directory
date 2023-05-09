@@ -15,9 +15,11 @@ public class FindForms401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public FindForms401ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public FindForms401ApplicationJSON(){}
 }

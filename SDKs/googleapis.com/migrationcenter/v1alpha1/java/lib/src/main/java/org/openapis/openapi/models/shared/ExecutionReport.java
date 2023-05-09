@@ -18,6 +18,7 @@ public class ExecutionReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionErrors")
     public ValidationReport executionErrors;
+
     public ExecutionReport withExecutionErrors(ValidationReport executionErrors) {
         this.executionErrors = executionErrors;
         return this;
@@ -29,6 +30,7 @@ public class ExecutionReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("framesReported")
     public Integer framesReported;
+
     public ExecutionReport withFramesReported(Integer framesReported) {
         this.framesReported = framesReported;
         return this;
@@ -40,6 +42,7 @@ public class ExecutionReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobErrors")
     public ImportError[] jobErrors;
+
     public ExecutionReport withJobErrors(ImportError[] jobErrors) {
         this.jobErrors = jobErrors;
         return this;
@@ -51,9 +54,11 @@ public class ExecutionReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalRowsCount")
     public Integer totalRowsCount;
+
     public ExecutionReport withTotalRowsCount(Integer totalRowsCount) {
         this.totalRowsCount = totalRowsCount;
         return this;
     }
     
+    public ExecutionReport(){}
 }

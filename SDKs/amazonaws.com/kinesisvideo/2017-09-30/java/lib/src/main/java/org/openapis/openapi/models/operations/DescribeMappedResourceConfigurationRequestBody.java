@@ -15,6 +15,7 @@ public class DescribeMappedResourceConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeMappedResourceConfigurationRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class DescribeMappedResourceConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeMappedResourceConfigurationRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,6 +39,7 @@ public class DescribeMappedResourceConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public DescribeMappedResourceConfigurationRequestBody withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -48,9 +51,11 @@ public class DescribeMappedResourceConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public DescribeMappedResourceConfigurationRequestBody withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public DescribeMappedResourceConfigurationRequestBody(){}
 }

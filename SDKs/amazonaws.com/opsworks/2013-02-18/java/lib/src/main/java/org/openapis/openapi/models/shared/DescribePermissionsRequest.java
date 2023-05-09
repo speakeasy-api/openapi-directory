@@ -12,6 +12,7 @@ public class DescribePermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamUserArn")
     public String iamUserArn;
+
     public DescribePermissionsRequest withIamUserArn(String iamUserArn) {
         this.iamUserArn = iamUserArn;
         return this;
@@ -20,9 +21,11 @@ public class DescribePermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackId")
     public String stackId;
+
     public DescribePermissionsRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public DescribePermissionsRequest(){}
 }

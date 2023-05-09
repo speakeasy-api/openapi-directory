@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TestRenderEmailTemplateResponse {
     @JsonProperty("RenderedTemplate")
     public String renderedTemplate;
+
     public TestRenderEmailTemplateResponse withRenderedTemplate(String renderedTemplate) {
         this.renderedTemplate = renderedTemplate;
         return this;
     }
     
+    public TestRenderEmailTemplateResponse(@JsonProperty("RenderedTemplate") String renderedTemplate) {
+        this.renderedTemplate = renderedTemplate;
+  }
 }

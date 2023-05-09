@@ -15,6 +15,7 @@ public class BookingCalculatepriceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public BookingCalculatepriceRequestBody withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -26,9 +27,11 @@ public class BookingCalculatepriceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public BookingCalculatepriceRequestBodyItems[] items;
+
     public BookingCalculatepriceRequestBody withItems(BookingCalculatepriceRequestBodyItems[] items) {
         this.items = items;
         return this;
     }
     
+    public BookingCalculatepriceRequestBody(){}
 }

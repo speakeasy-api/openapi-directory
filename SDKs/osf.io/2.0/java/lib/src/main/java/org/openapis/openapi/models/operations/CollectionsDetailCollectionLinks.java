@@ -15,9 +15,11 @@ public class CollectionsDetailCollectionLinks {
      */
     
     public String self;
+
     public CollectionsDetailCollectionLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public CollectionsDetailCollectionLinks(){}
 }

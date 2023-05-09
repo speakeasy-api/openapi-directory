@@ -13,11 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment {
     /**
+     * Information about behavioral trust of the transaction.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("behavioralTrustVerdict")
+    public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentBehavioralTrustVerdict behavioralTrustVerdict;
+
+    public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment withBehavioralTrustVerdict(GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentBehavioralTrustVerdict behavioralTrustVerdict) {
+        this.behavioralTrustVerdict = behavioralTrustVerdict;
+        return this;
+    }
+    
+    /**
      * Information about card testing fraud, where an adversary is testing fraudulently obtained cards or brute forcing their details.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardTestingVerdict")
     public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentCardTestingVerdict cardTestingVerdict;
+
     public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment withCardTestingVerdict(GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentCardTestingVerdict cardTestingVerdict) {
         this.cardTestingVerdict = cardTestingVerdict;
         return this;
@@ -29,6 +42,7 @@ public class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stolenInstrumentVerdict")
     public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentStolenInstrumentVerdict stolenInstrumentVerdict;
+
     public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment withStolenInstrumentVerdict(GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentStolenInstrumentVerdict stolenInstrumentVerdict) {
         this.stolenInstrumentVerdict = stolenInstrumentVerdict;
         return this;
@@ -40,9 +54,11 @@ public class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionRisk")
     public Float transactionRisk;
+
     public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment withTransactionRisk(Float transactionRisk) {
         this.transactionRisk = transactionRisk;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment(){}
 }

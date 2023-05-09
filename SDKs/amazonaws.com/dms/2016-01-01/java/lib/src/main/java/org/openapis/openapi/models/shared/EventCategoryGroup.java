@@ -15,6 +15,7 @@ public class EventCategoryGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventCategories")
     public String[] eventCategories;
+
     public EventCategoryGroup withEventCategories(String[] eventCategories) {
         this.eventCategories = eventCategories;
         return this;
@@ -23,9 +24,11 @@ public class EventCategoryGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceType")
     public String sourceType;
+
     public EventCategoryGroup withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public EventCategoryGroup(){}
 }

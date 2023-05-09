@@ -15,6 +15,7 @@ public class BatchWriteItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Responses")
     public java.util.Map<String, BatchWriteResponse> responses;
+
     public BatchWriteItemOutput withResponses(java.util.Map<String, BatchWriteResponse> responses) {
         this.responses = responses;
         return this;
@@ -23,9 +24,11 @@ public class BatchWriteItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnprocessedItems")
     public java.util.Map<String, WriteRequest[]> unprocessedItems;
+
     public BatchWriteItemOutput withUnprocessedItems(java.util.Map<String, WriteRequest[]> unprocessedItems) {
         this.unprocessedItems = unprocessedItems;
         return this;
     }
     
+    public BatchWriteItemOutput(){}
 }

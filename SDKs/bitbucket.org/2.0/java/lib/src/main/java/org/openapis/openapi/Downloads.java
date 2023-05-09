@@ -56,11 +56,9 @@ public class Downloads {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse res = new org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse() {{
+        org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse res = new org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -99,11 +97,9 @@ public class Downloads {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class Downloads {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 302) {
@@ -200,11 +194,9 @@ public class Downloads {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDownloadsResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDownloadsResponse() {{
+        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDownloadsResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDownloadsResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

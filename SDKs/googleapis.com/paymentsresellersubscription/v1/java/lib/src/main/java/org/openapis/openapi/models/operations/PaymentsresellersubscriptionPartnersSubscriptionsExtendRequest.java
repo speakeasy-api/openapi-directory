@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest {
@@ -12,6 +13,7 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest googleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest withGoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest(org.openapis.openapi.models.shared.GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest googleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest) {
         this.googleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest = googleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest;
         return this;
@@ -29,6 +32,7 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest withName(String name) {
         this.name = name;
         return this;
@@ -89,6 +98,7 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

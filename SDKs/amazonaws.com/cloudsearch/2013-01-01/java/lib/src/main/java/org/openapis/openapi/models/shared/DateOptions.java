@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DateOptions {
     
     public String defaultValue;
+
     public DateOptions withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -19,6 +20,7 @@ public class DateOptions {
     
     
     public Boolean facetEnabled;
+
     public DateOptions withFacetEnabled(Boolean facetEnabled) {
         this.facetEnabled = facetEnabled;
         return this;
@@ -26,6 +28,7 @@ public class DateOptions {
     
     
     public Boolean returnEnabled;
+
     public DateOptions withReturnEnabled(Boolean returnEnabled) {
         this.returnEnabled = returnEnabled;
         return this;
@@ -33,6 +36,7 @@ public class DateOptions {
     
     
     public Boolean searchEnabled;
+
     public DateOptions withSearchEnabled(Boolean searchEnabled) {
         this.searchEnabled = searchEnabled;
         return this;
@@ -40,6 +44,7 @@ public class DateOptions {
     
     
     public Boolean sortEnabled;
+
     public DateOptions withSortEnabled(Boolean sortEnabled) {
         this.sortEnabled = sortEnabled;
         return this;
@@ -50,9 +55,11 @@ public class DateOptions {
      */
     
     public String sourceField;
+
     public DateOptions withSourceField(String sourceField) {
         this.sourceField = sourceField;
         return this;
     }
     
+    public DateOptions(){}
 }

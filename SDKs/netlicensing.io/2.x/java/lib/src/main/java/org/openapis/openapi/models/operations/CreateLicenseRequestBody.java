@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateLicenseRequestBody {
     @SpeakeasyMetadata("form:name=active")
     public Boolean active;
+
     public CreateLicenseRequestBody withActive(Boolean active) {
         this.active = active;
         return this;
@@ -20,6 +22,7 @@ public class CreateLicenseRequestBody {
      */
     @SpeakeasyMetadata("form:name=currency")
     public String currency;
+
     public CreateLicenseRequestBody withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -30,6 +33,7 @@ public class CreateLicenseRequestBody {
      */
     @SpeakeasyMetadata("form:name=hidden")
     public Boolean hidden;
+
     public CreateLicenseRequestBody withHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
@@ -37,6 +41,7 @@ public class CreateLicenseRequestBody {
     
     @SpeakeasyMetadata("form:name=licenseTemplateNumber")
     public String licenseTemplateNumber;
+
     public CreateLicenseRequestBody withLicenseTemplateNumber(String licenseTemplateNumber) {
         this.licenseTemplateNumber = licenseTemplateNumber;
         return this;
@@ -44,6 +49,7 @@ public class CreateLicenseRequestBody {
     
     @SpeakeasyMetadata("form:name=licenseeNumber")
     public String licenseeNumber;
+
     public CreateLicenseRequestBody withLicenseeNumber(String licenseeNumber) {
         this.licenseeNumber = licenseeNumber;
         return this;
@@ -54,6 +60,7 @@ public class CreateLicenseRequestBody {
      */
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public CreateLicenseRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -61,6 +68,7 @@ public class CreateLicenseRequestBody {
     
     @SpeakeasyMetadata("form:name=number")
     public String number;
+
     public CreateLicenseRequestBody withNumber(String number) {
         this.number = number;
         return this;
@@ -71,6 +79,7 @@ public class CreateLicenseRequestBody {
      */
     @SpeakeasyMetadata("form:name=parentfeature")
     public String parentfeature;
+
     public CreateLicenseRequestBody withParentfeature(String parentfeature) {
         this.parentfeature = parentfeature;
         return this;
@@ -81,6 +90,7 @@ public class CreateLicenseRequestBody {
      */
     @SpeakeasyMetadata("form:name=price")
     public Double price;
+
     public CreateLicenseRequestBody withPrice(Double price) {
         this.price = price;
         return this;
@@ -91,6 +101,7 @@ public class CreateLicenseRequestBody {
      */
     @SpeakeasyMetadata("form:name=quantity")
     public String quantity;
+
     public CreateLicenseRequestBody withQuantity(String quantity) {
         this.quantity = quantity;
         return this;
@@ -101,6 +112,7 @@ public class CreateLicenseRequestBody {
      */
     @SpeakeasyMetadata("form:name=startDate")
     public OffsetDateTime startDate;
+
     public CreateLicenseRequestBody withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -111,6 +123,7 @@ public class CreateLicenseRequestBody {
      */
     @SpeakeasyMetadata("form:name=timeVolume")
     public String timeVolume;
+
     public CreateLicenseRequestBody withTimeVolume(String timeVolume) {
         this.timeVolume = timeVolume;
         return this;
@@ -121,6 +134,7 @@ public class CreateLicenseRequestBody {
      */
     @SpeakeasyMetadata("form:name=timeVolumePeriod")
     public String timeVolumePeriod;
+
     public CreateLicenseRequestBody withTimeVolumePeriod(String timeVolumePeriod) {
         this.timeVolumePeriod = timeVolumePeriod;
         return this;
@@ -131,9 +145,15 @@ public class CreateLicenseRequestBody {
      */
     @SpeakeasyMetadata("form:name=usedQuantity")
     public String usedQuantity;
+
     public CreateLicenseRequestBody withUsedQuantity(String usedQuantity) {
         this.usedQuantity = usedQuantity;
         return this;
     }
     
+    public CreateLicenseRequestBody(@JsonProperty("active") Boolean active, @JsonProperty("licenseTemplateNumber") String licenseTemplateNumber, @JsonProperty("licenseeNumber") String licenseeNumber) {
+        this.active = active;
+        this.licenseTemplateNumber = licenseTemplateNumber;
+        this.licenseeNumber = licenseeNumber;
+  }
 }

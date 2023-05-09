@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResourceSharePermissionsResponse {
     
     public String contentType;
+
     public ListResourceSharePermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListResourceSharePermissionsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListResourceSharePermissionsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListResourceSharePermissionsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListResourceSharePermissionsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListResourceSharePermissionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResourceSharePermissionsResponse listResourceSharePermissionsResponse;
+
     public ListResourceSharePermissionsResponse withListResourceSharePermissionsResponse(org.openapis.openapi.models.shared.ListResourceSharePermissionsResponse listResourceSharePermissionsResponse) {
         this.listResourceSharePermissionsResponse = listResourceSharePermissionsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListResourceSharePermissionsResponse {
      */
     
     public Object malformedArnException;
+
     public ListResourceSharePermissionsResponse withMalformedArnException(Object malformedArnException) {
         this.malformedArnException = malformedArnException;
         return this;
@@ -59,6 +65,7 @@ public class ListResourceSharePermissionsResponse {
      */
     
     public Object operationNotPermittedException;
+
     public ListResourceSharePermissionsResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -66,6 +73,7 @@ public class ListResourceSharePermissionsResponse {
     
     
     public Integer statusCode;
+
     public ListResourceSharePermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListResourceSharePermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResourceSharePermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListResourceSharePermissionsResponse {
      */
     
     public Object serverInternalException;
+
     public ListResourceSharePermissionsResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -93,6 +103,7 @@ public class ListResourceSharePermissionsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListResourceSharePermissionsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,9 +114,14 @@ public class ListResourceSharePermissionsResponse {
      */
     
     public Object unknownResourceException;
+
     public ListResourceSharePermissionsResponse withUnknownResourceException(Object unknownResourceException) {
         this.unknownResourceException = unknownResourceException;
         return this;
     }
     
+    public ListResourceSharePermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

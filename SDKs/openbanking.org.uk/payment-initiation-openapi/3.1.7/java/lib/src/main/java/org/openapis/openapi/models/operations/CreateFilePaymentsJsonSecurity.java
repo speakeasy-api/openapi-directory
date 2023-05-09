@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateFilePaymentsJsonSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String psuoAuth2Security;
+
     public CreateFilePaymentsJsonSecurity withPSUOAuth2Security(String psuoAuth2Security) {
         this.psuoAuth2Security = psuoAuth2Security;
         return this;
     }
     
+    public CreateFilePaymentsJsonSecurity(@JsonProperty("PSUOAuth2Security") String psuoAuth2Security) {
+        this.psuoAuth2Security = psuoAuth2Security;
+  }
 }

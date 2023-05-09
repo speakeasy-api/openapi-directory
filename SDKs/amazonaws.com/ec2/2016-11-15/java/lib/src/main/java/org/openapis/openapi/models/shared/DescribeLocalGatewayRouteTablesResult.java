@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLocalGatewayRouteTablesResult {
     
     public DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTables[] localGatewayRouteTables;
+
     public DescribeLocalGatewayRouteTablesResult withLocalGatewayRouteTables(DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTables[] localGatewayRouteTables) {
         this.localGatewayRouteTables = localGatewayRouteTables;
         return this;
@@ -19,9 +20,11 @@ public class DescribeLocalGatewayRouteTablesResult {
     
     
     public String nextToken;
+
     public DescribeLocalGatewayRouteTablesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeLocalGatewayRouteTablesResult(){}
 }

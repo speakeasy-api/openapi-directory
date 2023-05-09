@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListCasesForContactResponse {
     @JsonProperty("cases")
     public CaseSummary[] cases;
+
     public ListCasesForContactResponse withCases(CaseSummary[] cases) {
         this.cases = cases;
         return this;
@@ -22,9 +23,13 @@ public class ListCasesForContactResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListCasesForContactResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCasesForContactResponse(@JsonProperty("cases") CaseSummary[] cases) {
+        this.cases = cases;
+  }
 }

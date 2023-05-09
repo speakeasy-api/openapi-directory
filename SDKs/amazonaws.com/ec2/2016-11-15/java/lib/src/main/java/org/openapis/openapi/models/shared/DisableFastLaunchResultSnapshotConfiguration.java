@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DisableFastLaunchResultSnapshotConfiguration {
     
     public Long targetResourceCount;
+
     public DisableFastLaunchResultSnapshotConfiguration withTargetResourceCount(Long targetResourceCount) {
         this.targetResourceCount = targetResourceCount;
         return this;
     }
     
+    public DisableFastLaunchResultSnapshotConfiguration(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RunRulesRequest {
@@ -12,9 +13,13 @@ public class RunRulesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public RunRulesRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public RunRulesRequest(@JsonProperty("storeId") String storeId) {
+        this.storeId = storeId;
+  }
 }

@@ -18,9 +18,11 @@ public class AccountConversionSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freeListingsAutoTaggingEnabled")
     public Boolean freeListingsAutoTaggingEnabled;
+
     public AccountConversionSettings withFreeListingsAutoTaggingEnabled(Boolean freeListingsAutoTaggingEnabled) {
         this.freeListingsAutoTaggingEnabled = freeListingsAutoTaggingEnabled;
         return this;
     }
     
+    public AccountConversionSettings(){}
 }

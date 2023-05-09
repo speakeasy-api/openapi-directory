@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2LargeCustomDictionaryStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approxNumPhrases")
     public String approxNumPhrases;
+
     public GooglePrivacyDlpV2LargeCustomDictionaryStats withApproxNumPhrases(String approxNumPhrases) {
         this.approxNumPhrases = approxNumPhrases;
         return this;
     }
     
+    public GooglePrivacyDlpV2LargeCustomDictionaryStats(){}
 }

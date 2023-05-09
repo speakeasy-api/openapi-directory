@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PatchAccountHoldersIdResponse {
@@ -12,6 +13,7 @@ public class PatchAccountHoldersIdResponse {
      */
     
     public org.openapis.openapi.models.shared.AccountHolder accountHolder;
+
     public PatchAccountHoldersIdResponse withAccountHolder(org.openapis.openapi.models.shared.AccountHolder accountHolder) {
         this.accountHolder = accountHolder;
         return this;
@@ -19,6 +21,7 @@ public class PatchAccountHoldersIdResponse {
     
     
     public String contentType;
+
     public PatchAccountHoldersIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PatchAccountHoldersIdResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public PatchAccountHoldersIdResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class PatchAccountHoldersIdResponse {
     
     
     public Integer statusCode;
+
     public PatchAccountHoldersIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PatchAccountHoldersIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PatchAccountHoldersIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PatchAccountHoldersIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

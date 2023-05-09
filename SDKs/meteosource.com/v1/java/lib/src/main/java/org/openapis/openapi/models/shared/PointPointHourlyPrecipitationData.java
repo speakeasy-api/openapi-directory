@@ -16,6 +16,7 @@ public class PointPointHourlyPrecipitationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("convective")
     public Double convective;
+
     public PointPointHourlyPrecipitationData withConvective(Double convective) {
         this.convective = convective;
         return this;
@@ -28,6 +29,7 @@ public class PointPointHourlyPrecipitationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rainspot")
     public byte[] rainspot;
+
     public PointPointHourlyPrecipitationData withRainspot(byte[] rainspot) {
         this.rainspot = rainspot;
         return this;
@@ -40,6 +42,7 @@ public class PointPointHourlyPrecipitationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public PointPointHourlyPrecipitationData withTotal(Double total) {
         this.total = total;
         return this;
@@ -60,9 +63,11 @@ public class PointPointHourlyPrecipitationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public byte[] type;
+
     public PointPointHourlyPrecipitationData withType(byte[] type) {
         this.type = type;
         return this;
     }
     
+    public PointPointHourlyPrecipitationData(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DatadogConnectorProfileCredentials {
     @JsonProperty("apiKey")
     public String apiKey;
+
     public DatadogConnectorProfileCredentials withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -19,9 +20,14 @@ public class DatadogConnectorProfileCredentials {
     
     @JsonProperty("applicationKey")
     public String applicationKey;
+
     public DatadogConnectorProfileCredentials withApplicationKey(String applicationKey) {
         this.applicationKey = applicationKey;
         return this;
     }
     
+    public DatadogConnectorProfileCredentials(@JsonProperty("apiKey") String apiKey, @JsonProperty("applicationKey") String applicationKey) {
+        this.apiKey = apiKey;
+        this.applicationKey = applicationKey;
+  }
 }

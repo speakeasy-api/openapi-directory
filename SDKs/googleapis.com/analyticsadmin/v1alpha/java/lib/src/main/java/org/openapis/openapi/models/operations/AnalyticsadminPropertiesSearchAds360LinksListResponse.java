@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsadminPropertiesSearchAds360LinksListResponse {
     
     public String contentType;
+
     public AnalyticsadminPropertiesSearchAds360LinksListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsadminPropertiesSearchAds360LinksListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaListSearchAds360LinksResponse googleAnalyticsAdminV1alphaListSearchAds360LinksResponse;
+
     public AnalyticsadminPropertiesSearchAds360LinksListResponse withGoogleAnalyticsAdminV1alphaListSearchAds360LinksResponse(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaListSearchAds360LinksResponse googleAnalyticsAdminV1alphaListSearchAds360LinksResponse) {
         this.googleAnalyticsAdminV1alphaListSearchAds360LinksResponse = googleAnalyticsAdminV1alphaListSearchAds360LinksResponse;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsadminPropertiesSearchAds360LinksListResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsadminPropertiesSearchAds360LinksListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsadminPropertiesSearchAds360LinksListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsadminPropertiesSearchAds360LinksListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsadminPropertiesSearchAds360LinksListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

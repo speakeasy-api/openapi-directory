@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSecurityHubConfigurationResponse {
     
     public String contentType;
+
     public UpdateSecurityHubConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSecurityHubConfigurationResponse {
      */
     
     public Object internalException;
+
     public UpdateSecurityHubConfigurationResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSecurityHubConfigurationResponse {
      */
     
     public Object invalidAccessException;
+
     public UpdateSecurityHubConfigurationResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateSecurityHubConfigurationResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateSecurityHubConfigurationResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateSecurityHubConfigurationResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateSecurityHubConfigurationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateSecurityHubConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateSecurityHubConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateSecurityHubConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSecurityHubConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateSecurityHubConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateSecurityHubConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateSecurityHubConfigurationResponse {
      */
     
     public java.util.Map<String, Object> updateSecurityHubConfigurationResponse;
+
     public UpdateSecurityHubConfigurationResponse withUpdateSecurityHubConfigurationResponse(java.util.Map<String, Object> updateSecurityHubConfigurationResponse) {
         this.updateSecurityHubConfigurationResponse = updateSecurityHubConfigurationResponse;
         return this;
     }
     
+    public UpdateSecurityHubConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

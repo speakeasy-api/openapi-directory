@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRegexPatternSetResponse {
     
     public String contentType;
+
     public CreateRegexPatternSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateRegexPatternSetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRegexPatternSetResponse createRegexPatternSetResponse;
+
     public CreateRegexPatternSetResponse withCreateRegexPatternSetResponse(org.openapis.openapi.models.shared.CreateRegexPatternSetResponse createRegexPatternSetResponse) {
         this.createRegexPatternSetResponse = createRegexPatternSetResponse;
         return this;
@@ -26,6 +29,7 @@ public class CreateRegexPatternSetResponse {
     
     
     public Integer statusCode;
+
     public CreateRegexPatternSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateRegexPatternSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRegexPatternSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class CreateRegexPatternSetResponse {
      */
     
     public Object wafDisallowedNameException;
+
     public CreateRegexPatternSetResponse withWAFDisallowedNameException(Object wafDisallowedNameException) {
         this.wafDisallowedNameException = wafDisallowedNameException;
         return this;
@@ -53,6 +59,7 @@ public class CreateRegexPatternSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public CreateRegexPatternSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -63,6 +70,7 @@ public class CreateRegexPatternSetResponse {
      */
     
     public Object wafLimitsExceededException;
+
     public CreateRegexPatternSetResponse withWAFLimitsExceededException(Object wafLimitsExceededException) {
         this.wafLimitsExceededException = wafLimitsExceededException;
         return this;
@@ -73,9 +81,14 @@ public class CreateRegexPatternSetResponse {
      */
     
     public Object wafStaleDataException;
+
     public CreateRegexPatternSetResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public CreateRegexPatternSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

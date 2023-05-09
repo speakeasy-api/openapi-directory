@@ -15,6 +15,7 @@ public class CreateWorkflowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definitionUri")
     public String definitionUri;
+
     public CreateWorkflowRequestBody withDefinitionUri(String definitionUri) {
         this.definitionUri = definitionUri;
         return this;
@@ -26,6 +27,7 @@ public class CreateWorkflowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definitionZip")
     public String definitionZip;
+
     public CreateWorkflowRequestBody withDefinitionZip(String definitionZip) {
         this.definitionZip = definitionZip;
         return this;
@@ -37,6 +39,7 @@ public class CreateWorkflowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateWorkflowRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -48,6 +51,7 @@ public class CreateWorkflowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("engine")
     public CreateWorkflowRequestBodyEngineEnum engine;
+
     public CreateWorkflowRequestBody withEngine(CreateWorkflowRequestBodyEngineEnum engine) {
         this.engine = engine;
         return this;
@@ -59,6 +63,7 @@ public class CreateWorkflowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("main")
     public String main;
+
     public CreateWorkflowRequestBody withMain(String main) {
         this.main = main;
         return this;
@@ -70,6 +75,7 @@ public class CreateWorkflowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateWorkflowRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -81,6 +87,7 @@ public class CreateWorkflowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterTemplate")
     public java.util.Map<String, org.openapis.openapi.models.shared.WorkflowParameter> parameterTemplate;
+
     public CreateWorkflowRequestBody withParameterTemplate(java.util.Map<String, org.openapis.openapi.models.shared.WorkflowParameter> parameterTemplate) {
         this.parameterTemplate = parameterTemplate;
         return this;
@@ -91,6 +98,7 @@ public class CreateWorkflowRequestBody {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public CreateWorkflowRequestBody withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -102,6 +110,7 @@ public class CreateWorkflowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageCapacity")
     public Long storageCapacity;
+
     public CreateWorkflowRequestBody withStorageCapacity(Long storageCapacity) {
         this.storageCapacity = storageCapacity;
         return this;
@@ -113,9 +122,13 @@ public class CreateWorkflowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateWorkflowRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateWorkflowRequestBody(@JsonProperty("requestId") String requestId) {
+        this.requestId = requestId;
+  }
 }

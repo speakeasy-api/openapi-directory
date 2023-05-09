@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeStackInstanceOutput {
     
     public StackInstance stackInstance;
+
     public DescribeStackInstanceOutput withStackInstance(StackInstance stackInstance) {
         this.stackInstance = stackInstance;
         return this;
     }
     
+    public DescribeStackInstanceOutput(){}
 }

@@ -15,6 +15,7 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyrights")
     public String[] copyrights;
+
     public Response withCopyrights(String[] copyrights) {
         this.copyrights = copyrights;
         return this;
@@ -26,6 +27,7 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processing_time")
     public Long processingTime;
+
     public Response withProcessingTime(Long processingTime) {
         this.processingTime = processingTime;
         return this;
@@ -37,6 +39,7 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solution")
     public Solution solution;
+
     public Response withSolution(Solution solution) {
         this.solution = solution;
         return this;
@@ -48,6 +51,7 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ResponseStatusEnum status;
+
     public Response withStatus(ResponseStatusEnum status) {
         this.status = status;
         return this;
@@ -59,9 +63,11 @@ public class Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waiting_time_in_queue")
     public Long waitingTimeInQueue;
+
     public Response withWaitingTimeInQueue(Long waitingTimeInQueue) {
         this.waitingTimeInQueue = waitingTimeInQueue;
         return this;
     }
     
+    public Response(){}
 }

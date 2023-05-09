@@ -14,6 +14,7 @@ public class UpdateCustomLineItemRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public UpdateCustomLineItemRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -25,6 +26,7 @@ public class UpdateCustomLineItemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingPeriodRange")
     public UpdateCustomLineItemRequestBodyBillingPeriodRange billingPeriodRange;
+
     public UpdateCustomLineItemRequestBody withBillingPeriodRange(UpdateCustomLineItemRequestBodyBillingPeriodRange billingPeriodRange) {
         this.billingPeriodRange = billingPeriodRange;
         return this;
@@ -36,6 +38,7 @@ public class UpdateCustomLineItemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChargeDetails")
     public UpdateCustomLineItemRequestBodyChargeDetails chargeDetails;
+
     public UpdateCustomLineItemRequestBody withChargeDetails(UpdateCustomLineItemRequestBodyChargeDetails chargeDetails) {
         this.chargeDetails = chargeDetails;
         return this;
@@ -47,6 +50,7 @@ public class UpdateCustomLineItemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateCustomLineItemRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -58,9 +62,13 @@ public class UpdateCustomLineItemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateCustomLineItemRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateCustomLineItemRequestBody(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

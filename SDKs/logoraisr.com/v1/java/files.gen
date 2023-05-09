@@ -64,4 +64,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/Report.java
 lib/src/main/java/org/openapis/openapi/models/shared/ResultResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/FileResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/previews/README.md
+docs/processes/README.md
+docs/projects/README.md
+docs/reports/README.md
+docs/results/README.md
+docs/uploads/README.md
 USAGE.md

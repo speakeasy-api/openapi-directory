@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterTaskDefinitionResponse {
@@ -12,6 +13,7 @@ public class DeregisterTaskDefinitionResponse {
      */
     
     public Object clientException;
+
     public DeregisterTaskDefinitionResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DeregisterTaskDefinitionResponse {
     
     
     public String contentType;
+
     public DeregisterTaskDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeregisterTaskDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.DeregisterTaskDefinitionResponse deregisterTaskDefinitionResponse;
+
     public DeregisterTaskDefinitionResponse withDeregisterTaskDefinitionResponse(org.openapis.openapi.models.shared.DeregisterTaskDefinitionResponse deregisterTaskDefinitionResponse) {
         this.deregisterTaskDefinitionResponse = deregisterTaskDefinitionResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeregisterTaskDefinitionResponse {
      */
     
     public Object invalidParameterException;
+
     public DeregisterTaskDefinitionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DeregisterTaskDefinitionResponse {
      */
     
     public Object serverException;
+
     public DeregisterTaskDefinitionResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class DeregisterTaskDefinitionResponse {
     
     
     public Integer statusCode;
+
     public DeregisterTaskDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeregisterTaskDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterTaskDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeregisterTaskDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

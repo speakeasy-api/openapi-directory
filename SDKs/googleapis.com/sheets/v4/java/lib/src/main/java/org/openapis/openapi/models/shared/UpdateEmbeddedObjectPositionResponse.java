@@ -18,9 +18,11 @@ public class UpdateEmbeddedObjectPositionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public EmbeddedObjectPosition position;
+
     public UpdateEmbeddedObjectPositionResponse withPosition(EmbeddedObjectPosition position) {
         this.position = position;
         return this;
     }
     
+    public UpdateEmbeddedObjectPositionResponse(){}
 }

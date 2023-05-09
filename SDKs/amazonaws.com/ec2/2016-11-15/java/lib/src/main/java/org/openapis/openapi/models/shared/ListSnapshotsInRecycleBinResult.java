@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListSnapshotsInRecycleBinResult {
     
     public String nextToken;
+
     public ListSnapshotsInRecycleBinResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class ListSnapshotsInRecycleBinResult {
     
     
     public ListSnapshotsInRecycleBinResultSnapshots[] snapshots;
+
     public ListSnapshotsInRecycleBinResult withSnapshots(ListSnapshotsInRecycleBinResultSnapshots[] snapshots) {
         this.snapshots = snapshots;
         return this;
     }
     
+    public ListSnapshotsInRecycleBinResult(){}
 }

@@ -12,6 +12,7 @@ public class GroupMembers {
      */
     @JsonProperty("displayName")
     public String displayName;
+
     public GroupMembers withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -22,9 +23,14 @@ public class GroupMembers {
      */
     @JsonProperty("value")
     public String value;
+
     public GroupMembers withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GroupMembers(@JsonProperty("displayName") String displayName, @JsonProperty("value") String value) {
+        this.displayName = displayName;
+        this.value = value;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDimensionKeyDetailsRequest {
     @JsonProperty("Group")
     public String group;
+
     public GetDimensionKeyDetailsRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -18,6 +19,7 @@ public class GetDimensionKeyDetailsRequest {
     
     @JsonProperty("GroupIdentifier")
     public String groupIdentifier;
+
     public GetDimensionKeyDetailsRequest withGroupIdentifier(String groupIdentifier) {
         this.groupIdentifier = groupIdentifier;
         return this;
@@ -25,6 +27,7 @@ public class GetDimensionKeyDetailsRequest {
     
     @JsonProperty("Identifier")
     public String identifier;
+
     public GetDimensionKeyDetailsRequest withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -33,6 +36,7 @@ public class GetDimensionKeyDetailsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestedDimensions")
     public String[] requestedDimensions;
+
     public GetDimensionKeyDetailsRequest withRequestedDimensions(String[] requestedDimensions) {
         this.requestedDimensions = requestedDimensions;
         return this;
@@ -40,9 +44,16 @@ public class GetDimensionKeyDetailsRequest {
     
     @JsonProperty("ServiceType")
     public ServiceTypeEnum serviceType;
+
     public GetDimensionKeyDetailsRequest withServiceType(ServiceTypeEnum serviceType) {
         this.serviceType = serviceType;
         return this;
     }
     
+    public GetDimensionKeyDetailsRequest(@JsonProperty("Group") String group, @JsonProperty("GroupIdentifier") String groupIdentifier, @JsonProperty("Identifier") String identifier, @JsonProperty("ServiceType") ServiceTypeEnum serviceType) {
+        this.group = group;
+        this.groupIdentifier = groupIdentifier;
+        this.identifier = identifier;
+        this.serviceType = serviceType;
+  }
 }

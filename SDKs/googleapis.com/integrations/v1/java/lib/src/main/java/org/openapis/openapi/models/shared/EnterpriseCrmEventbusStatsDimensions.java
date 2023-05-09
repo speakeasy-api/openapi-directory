@@ -12,6 +12,7 @@ public class EnterpriseCrmEventbusStatsDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public EnterpriseCrmEventbusStatsDimensions withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -23,6 +24,7 @@ public class EnterpriseCrmEventbusStatsDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enumFilterType")
     public EnterpriseCrmEventbusStatsDimensionsEnumFilterTypeEnum enumFilterType;
+
     public EnterpriseCrmEventbusStatsDimensions withEnumFilterType(EnterpriseCrmEventbusStatsDimensionsEnumFilterTypeEnum enumFilterType) {
         this.enumFilterType = enumFilterType;
         return this;
@@ -31,6 +33,7 @@ public class EnterpriseCrmEventbusStatsDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorEnumString")
     public String errorEnumString;
+
     public EnterpriseCrmEventbusStatsDimensions withErrorEnumString(String errorEnumString) {
         this.errorEnumString = errorEnumString;
         return this;
@@ -39,6 +42,7 @@ public class EnterpriseCrmEventbusStatsDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryAttempt")
     public EnterpriseCrmEventbusStatsDimensionsRetryAttemptEnum retryAttempt;
+
     public EnterpriseCrmEventbusStatsDimensions withRetryAttempt(EnterpriseCrmEventbusStatsDimensionsRetryAttemptEnum retryAttempt) {
         this.retryAttempt = retryAttempt;
         return this;
@@ -47,6 +51,7 @@ public class EnterpriseCrmEventbusStatsDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskName")
     public String taskName;
+
     public EnterpriseCrmEventbusStatsDimensions withTaskName(String taskName) {
         this.taskName = taskName;
         return this;
@@ -55,6 +60,7 @@ public class EnterpriseCrmEventbusStatsDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskNumber")
     public String taskNumber;
+
     public EnterpriseCrmEventbusStatsDimensions withTaskNumber(String taskNumber) {
         this.taskNumber = taskNumber;
         return this;
@@ -66,6 +72,7 @@ public class EnterpriseCrmEventbusStatsDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerId")
     public String triggerId;
+
     public EnterpriseCrmEventbusStatsDimensions withTriggerId(String triggerId) {
         this.triggerId = triggerId;
         return this;
@@ -74,6 +81,7 @@ public class EnterpriseCrmEventbusStatsDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warningEnumString")
     public String warningEnumString;
+
     public EnterpriseCrmEventbusStatsDimensions withWarningEnumString(String warningEnumString) {
         this.warningEnumString = warningEnumString;
         return this;
@@ -82,6 +90,7 @@ public class EnterpriseCrmEventbusStatsDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowId")
     public String workflowId;
+
     public EnterpriseCrmEventbusStatsDimensions withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
@@ -90,9 +99,11 @@ public class EnterpriseCrmEventbusStatsDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowName")
     public String workflowName;
+
     public EnterpriseCrmEventbusStatsDimensions withWorkflowName(String workflowName) {
         this.workflowName = workflowName;
         return this;
     }
     
+    public EnterpriseCrmEventbusStatsDimensions(){}
 }

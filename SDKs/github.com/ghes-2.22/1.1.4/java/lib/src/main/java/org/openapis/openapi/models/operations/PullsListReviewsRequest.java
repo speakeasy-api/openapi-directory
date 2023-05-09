@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsListReviewsRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public PullsListReviewsRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -19,6 +21,7 @@ public class PullsListReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public PullsListReviewsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -29,6 +32,7 @@ public class PullsListReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public PullsListReviewsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -36,6 +40,7 @@ public class PullsListReviewsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_number")
     public Long pullNumber;
+
     public PullsListReviewsRequest withPullNumber(Long pullNumber) {
         this.pullNumber = pullNumber;
         return this;
@@ -43,9 +48,15 @@ public class PullsListReviewsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public PullsListReviewsRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public PullsListReviewsRequest(@JsonProperty("owner") String owner, @JsonProperty("pull_number") Long pullNumber, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.pullNumber = pullNumber;
+        this.repo = repo;
+  }
 }

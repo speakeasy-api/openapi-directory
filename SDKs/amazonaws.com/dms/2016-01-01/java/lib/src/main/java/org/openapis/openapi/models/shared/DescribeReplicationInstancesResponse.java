@@ -15,6 +15,7 @@ public class DescribeReplicationInstancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeReplicationInstancesResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +24,11 @@ public class DescribeReplicationInstancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationInstances")
     public ReplicationInstance[] replicationInstances;
+
     public DescribeReplicationInstancesResponse withReplicationInstances(ReplicationInstance[] replicationInstances) {
         this.replicationInstances = replicationInstances;
         return this;
     }
     
+    public DescribeReplicationInstancesResponse(){}
 }

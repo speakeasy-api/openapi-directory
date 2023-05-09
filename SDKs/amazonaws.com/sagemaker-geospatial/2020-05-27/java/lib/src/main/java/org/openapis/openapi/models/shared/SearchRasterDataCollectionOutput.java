@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SearchRasterDataCollectionOutput {
     @JsonProperty("ApproximateResultCount")
     public Long approximateResultCount;
+
     public SearchRasterDataCollectionOutput withApproximateResultCount(Long approximateResultCount) {
         this.approximateResultCount = approximateResultCount;
         return this;
@@ -22,6 +23,7 @@ public class SearchRasterDataCollectionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public ItemSource[] items;
+
     public SearchRasterDataCollectionOutput withItems(ItemSource[] items) {
         this.items = items;
         return this;
@@ -30,9 +32,13 @@ public class SearchRasterDataCollectionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public SearchRasterDataCollectionOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public SearchRasterDataCollectionOutput(@JsonProperty("ApproximateResultCount") Long approximateResultCount) {
+        this.approximateResultCount = approximateResultCount;
+  }
 }

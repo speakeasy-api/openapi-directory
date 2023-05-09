@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStreamSessionResponse {
@@ -12,6 +13,7 @@ public class GetStreamSessionResponse {
      */
     
     public Object accessDeniedException;
+
     public GetStreamSessionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetStreamSessionResponse {
     
     
     public String contentType;
+
     public GetStreamSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetStreamSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetStreamSessionResponse getStreamSessionResponse;
+
     public GetStreamSessionResponse withGetStreamSessionResponse(org.openapis.openapi.models.shared.GetStreamSessionResponse getStreamSessionResponse) {
         this.getStreamSessionResponse = getStreamSessionResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetStreamSessionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetStreamSessionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetStreamSessionResponse {
     
     
     public Integer statusCode;
+
     public GetStreamSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetStreamSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStreamSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetStreamSessionResponse {
      */
     
     public Object validationException;
+
     public GetStreamSessionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetStreamSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

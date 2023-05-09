@@ -18,9 +18,11 @@ public class DisjunctiveMatchStatement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventFilters")
     public EventFilter[] eventFilters;
+
     public DisjunctiveMatchStatement withEventFilters(EventFilter[] eventFilters) {
         this.eventFilters = eventFilters;
         return this;
     }
     
+    public DisjunctiveMatchStatement(){}
 }

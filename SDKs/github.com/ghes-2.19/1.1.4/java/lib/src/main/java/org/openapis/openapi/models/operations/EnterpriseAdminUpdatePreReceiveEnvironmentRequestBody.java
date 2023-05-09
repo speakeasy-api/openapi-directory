@@ -15,6 +15,7 @@ public class EnterpriseAdminUpdatePreReceiveEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
     public String imageUrl;
+
     public EnterpriseAdminUpdatePreReceiveEnvironmentRequestBody withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -26,9 +27,11 @@ public class EnterpriseAdminUpdatePreReceiveEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EnterpriseAdminUpdatePreReceiveEnvironmentRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public EnterpriseAdminUpdatePreReceiveEnvironmentRequestBody(){}
 }

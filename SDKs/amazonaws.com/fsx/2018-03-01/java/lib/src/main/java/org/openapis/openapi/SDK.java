@@ -186,6 +186,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -223,14 +228,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateFileSystemAliasesResponse res = new org.openapis.openapi.models.operations.AssociateFileSystemAliasesResponse() {{
+        org.openapis.openapi.models.operations.AssociateFileSystemAliasesResponse res = new org.openapis.openapi.models.operations.AssociateFileSystemAliasesResponse(contentType, httpRes.statusCode()) {{
             associateFileSystemAliasesResponse = null;
             badRequest = null;
             fileSystemNotFound = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -299,7 +302,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelDataRepositoryTaskResponse res = new org.openapis.openapi.models.operations.CancelDataRepositoryTaskResponse() {{
+        org.openapis.openapi.models.operations.CancelDataRepositoryTaskResponse res = new org.openapis.openapi.models.operations.CancelDataRepositoryTaskResponse(contentType, httpRes.statusCode()) {{
             cancelDataRepositoryTaskResponse = null;
             badRequest = null;
             unsupportedOperation = null;
@@ -307,8 +310,6 @@ public class SDK {
             dataRepositoryTaskEnded = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -391,7 +392,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CopyBackupResponse res = new org.openapis.openapi.models.operations.CopyBackupResponse() {{
+        org.openapis.openapi.models.operations.CopyBackupResponse res = new org.openapis.openapi.models.operations.CopyBackupResponse(contentType, httpRes.statusCode()) {{
             copyBackupResponse = null;
             badRequest = null;
             backupNotFound = null;
@@ -405,8 +406,6 @@ public class SDK {
             sourceBackupUnavailable = null;
             incompatibleRegionForMultiAZ = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -531,7 +530,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateBackupResponse res = new org.openapis.openapi.models.operations.CreateBackupResponse() {{
+        org.openapis.openapi.models.operations.CreateBackupResponse res = new org.openapis.openapi.models.operations.CreateBackupResponse(contentType, httpRes.statusCode()) {{
             createBackupResponse = null;
             badRequest = null;
             unsupportedOperation = null;
@@ -542,8 +541,6 @@ public class SDK {
             serviceLimitExceeded = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -614,7 +611,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Creates an Amazon FSx for Lustre data repository association (DRA). A data repository association is a link between a directory on the file system and an Amazon S3 bucket or prefix. You can have a maximum of 8 data repository associations on a file system. Data repository associations are supported only for file systems with the &lt;code&gt;Persistent_2&lt;/code&gt; deployment type.&lt;/p&gt; &lt;p&gt;Each data repository association must have a unique Amazon FSx file system directory and a unique S3 bucket or prefix associated with it. You can configure a data repository association for automatic import only, for automatic export only, or for both. To learn more about linking a data repository to your file system, see &lt;a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/create-dra-linked-data-repo.html"&gt;Linking your file system to an S3 bucket&lt;/a&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt; &lt;code&gt;CreateDataRepositoryAssociation&lt;/code&gt; isn't supported on Amazon File Cache resources. To create a DRA on Amazon File Cache, use the &lt;code&gt;CreateFileCache&lt;/code&gt; operation.&lt;/p&gt; &lt;/note&gt;
+     * &lt;p&gt;Creates an Amazon FSx for Lustre data repository association (DRA). A data repository association is a link between a directory on the file system and an Amazon S3 bucket or prefix. You can have a maximum of 8 data repository associations on a file system. Data repository associations are supported for all file systems except for &lt;code&gt;Scratch_1&lt;/code&gt; deployment type.&lt;/p&gt; &lt;p&gt;Each data repository association must have a unique Amazon FSx file system directory and a unique S3 bucket or prefix associated with it. You can configure a data repository association for automatic import only, for automatic export only, or for both. To learn more about linking a data repository to your file system, see &lt;a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/create-dra-linked-data-repo.html"&gt;Linking your file system to an S3 bucket&lt;/a&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt; &lt;code&gt;CreateDataRepositoryAssociation&lt;/code&gt; isn't supported on Amazon File Cache resources. To create a DRA on Amazon File Cache, use the &lt;code&gt;CreateFileCache&lt;/code&gt; operation.&lt;/p&gt; &lt;/note&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -647,7 +644,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDataRepositoryAssociationResponse res = new org.openapis.openapi.models.operations.CreateDataRepositoryAssociationResponse() {{
+        org.openapis.openapi.models.operations.CreateDataRepositoryAssociationResponse res = new org.openapis.openapi.models.operations.CreateDataRepositoryAssociationResponse(contentType, httpRes.statusCode()) {{
             createDataRepositoryAssociationResponse = null;
             badRequest = null;
             unsupportedOperation = null;
@@ -656,8 +653,6 @@ public class SDK {
             serviceLimitExceeded = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -747,7 +742,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDataRepositoryTaskResponse res = new org.openapis.openapi.models.operations.CreateDataRepositoryTaskResponse() {{
+        org.openapis.openapi.models.operations.CreateDataRepositoryTaskResponse res = new org.openapis.openapi.models.operations.CreateDataRepositoryTaskResponse(contentType, httpRes.statusCode()) {{
             createDataRepositoryTaskResponse = null;
             badRequest = null;
             unsupportedOperation = null;
@@ -757,8 +752,6 @@ public class SDK {
             internalServerError = null;
             dataRepositoryTaskExecuting = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -855,7 +848,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFileCacheResponse res = new org.openapis.openapi.models.operations.CreateFileCacheResponse() {{
+        org.openapis.openapi.models.operations.CreateFileCacheResponse res = new org.openapis.openapi.models.operations.CreateFileCacheResponse(contentType, httpRes.statusCode()) {{
             createFileCacheResponse = null;
             badRequest = null;
             incompatibleParameterError = null;
@@ -865,8 +858,6 @@ public class SDK {
             internalServerError = null;
             missingFileCacheConfiguration = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -963,7 +954,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFileSystemResponse res = new org.openapis.openapi.models.operations.CreateFileSystemResponse() {{
+        org.openapis.openapi.models.operations.CreateFileSystemResponse res = new org.openapis.openapi.models.operations.CreateFileSystemResponse(contentType, httpRes.statusCode()) {{
             createFileSystemResponse = null;
             badRequest = null;
             activeDirectoryError = null;
@@ -976,8 +967,6 @@ public class SDK {
             internalServerError = null;
             missingFileSystemConfiguration = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1095,7 +1084,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFileSystemFromBackupResponse res = new org.openapis.openapi.models.operations.CreateFileSystemFromBackupResponse() {{
+        org.openapis.openapi.models.operations.CreateFileSystemFromBackupResponse res = new org.openapis.openapi.models.operations.CreateFileSystemFromBackupResponse(contentType, httpRes.statusCode()) {{
             createFileSystemFromBackupResponse = null;
             badRequest = null;
             activeDirectoryError = null;
@@ -1107,8 +1096,6 @@ public class SDK {
             internalServerError = null;
             missingFileSystemConfiguration = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1219,15 +1206,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSnapshotResponse res = new org.openapis.openapi.models.operations.CreateSnapshotResponse() {{
+        org.openapis.openapi.models.operations.CreateSnapshotResponse res = new org.openapis.openapi.models.operations.CreateSnapshotResponse(contentType, httpRes.statusCode()) {{
             createSnapshotResponse = null;
             badRequest = null;
             volumeNotFound = null;
             serviceLimitExceeded = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1303,7 +1288,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateStorageVirtualMachineResponse res = new org.openapis.openapi.models.operations.CreateStorageVirtualMachineResponse() {{
+        org.openapis.openapi.models.operations.CreateStorageVirtualMachineResponse res = new org.openapis.openapi.models.operations.CreateStorageVirtualMachineResponse(contentType, httpRes.statusCode()) {{
             createStorageVirtualMachineResponse = null;
             activeDirectoryError = null;
             badRequest = null;
@@ -1313,8 +1298,6 @@ public class SDK {
             serviceLimitExceeded = null;
             unsupportedOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1411,7 +1394,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateVolumeResponse res = new org.openapis.openapi.models.operations.CreateVolumeResponse() {{
+        org.openapis.openapi.models.operations.CreateVolumeResponse res = new org.openapis.openapi.models.operations.CreateVolumeResponse(contentType, httpRes.statusCode()) {{
             createVolumeResponse = null;
             badRequest = null;
             fileSystemNotFound = null;
@@ -1422,8 +1405,6 @@ public class SDK {
             storageVirtualMachineNotFound = null;
             unsupportedOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1527,7 +1508,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateVolumeFromBackupResponse res = new org.openapis.openapi.models.operations.CreateVolumeFromBackupResponse() {{
+        org.openapis.openapi.models.operations.CreateVolumeFromBackupResponse res = new org.openapis.openapi.models.operations.CreateVolumeFromBackupResponse(contentType, httpRes.statusCode()) {{
             createVolumeFromBackupResponse = null;
             backupNotFound = null;
             badRequest = null;
@@ -1538,8 +1519,6 @@ public class SDK {
             serviceLimitExceeded = null;
             storageVirtualMachineNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1643,7 +1622,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteBackupResponse res = new org.openapis.openapi.models.operations.DeleteBackupResponse() {{
+        org.openapis.openapi.models.operations.DeleteBackupResponse res = new org.openapis.openapi.models.operations.DeleteBackupResponse(contentType, httpRes.statusCode()) {{
             deleteBackupResponse = null;
             badRequest = null;
             backupInProgress = null;
@@ -1653,8 +1632,6 @@ public class SDK {
             internalServerError = null;
             backupBeingCopied = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1718,7 +1695,7 @@ public class SDK {
     }
 
     /**
-     * Deletes a data repository association on an Amazon FSx for Lustre file system. Deleting the data repository association unlinks the file system from the Amazon S3 bucket. When deleting a data repository association, you have the option of deleting the data in the file system that corresponds to the data repository association. Data repository associations are supported only for file systems with the &lt;code&gt;Persistent_2&lt;/code&gt; deployment type.
+     * Deletes a data repository association on an Amazon FSx for Lustre file system. Deleting the data repository association unlinks the file system from the Amazon S3 bucket. When deleting a data repository association, you have the option of deleting the data in the file system that corresponds to the data repository association. Data repository associations are supported for all file systems except for &lt;code&gt;Scratch_1&lt;/code&gt; deployment type.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1751,7 +1728,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDataRepositoryAssociationResponse res = new org.openapis.openapi.models.operations.DeleteDataRepositoryAssociationResponse() {{
+        org.openapis.openapi.models.operations.DeleteDataRepositoryAssociationResponse res = new org.openapis.openapi.models.operations.DeleteDataRepositoryAssociationResponse(contentType, httpRes.statusCode()) {{
             deleteDataRepositoryAssociationResponse = null;
             badRequest = null;
             incompatibleParameterError = null;
@@ -1759,8 +1736,6 @@ public class SDK {
             serviceLimitExceeded = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1843,7 +1818,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFileCacheResponse res = new org.openapis.openapi.models.operations.DeleteFileCacheResponse() {{
+        org.openapis.openapi.models.operations.DeleteFileCacheResponse res = new org.openapis.openapi.models.operations.DeleteFileCacheResponse(contentType, httpRes.statusCode()) {{
             deleteFileCacheResponse = null;
             badRequest = null;
             incompatibleParameterError = null;
@@ -1851,8 +1826,6 @@ public class SDK {
             serviceLimitExceeded = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1935,7 +1908,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFileSystemResponse res = new org.openapis.openapi.models.operations.DeleteFileSystemResponse() {{
+        org.openapis.openapi.models.operations.DeleteFileSystemResponse res = new org.openapis.openapi.models.operations.DeleteFileSystemResponse(contentType, httpRes.statusCode()) {{
             deleteFileSystemResponse = null;
             badRequest = null;
             incompatibleParameterError = null;
@@ -1943,8 +1916,6 @@ public class SDK {
             serviceLimitExceeded = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2027,14 +1998,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSnapshotResponse res = new org.openapis.openapi.models.operations.DeleteSnapshotResponse() {{
+        org.openapis.openapi.models.operations.DeleteSnapshotResponse res = new org.openapis.openapi.models.operations.DeleteSnapshotResponse(contentType, httpRes.statusCode()) {{
             deleteSnapshotResponse = null;
             badRequest = null;
             internalServerError = null;
             snapshotNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2103,15 +2072,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteStorageVirtualMachineResponse res = new org.openapis.openapi.models.operations.DeleteStorageVirtualMachineResponse() {{
+        org.openapis.openapi.models.operations.DeleteStorageVirtualMachineResponse res = new org.openapis.openapi.models.operations.DeleteStorageVirtualMachineResponse(contentType, httpRes.statusCode()) {{
             deleteStorageVirtualMachineResponse = null;
             badRequest = null;
             incompatibleParameterError = null;
             internalServerError = null;
             storageVirtualMachineNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2187,15 +2154,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteVolumeResponse res = new org.openapis.openapi.models.operations.DeleteVolumeResponse() {{
+        org.openapis.openapi.models.operations.DeleteVolumeResponse res = new org.openapis.openapi.models.operations.DeleteVolumeResponse(contentType, httpRes.statusCode()) {{
             deleteVolumeResponse = null;
             badRequest = null;
             incompatibleParameterError = null;
             internalServerError = null;
             volumeNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2277,7 +2242,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeBackupsResponse res = new org.openapis.openapi.models.operations.DescribeBackupsResponse() {{
+        org.openapis.openapi.models.operations.DescribeBackupsResponse res = new org.openapis.openapi.models.operations.DescribeBackupsResponse(contentType, httpRes.statusCode()) {{
             describeBackupsResponse = null;
             badRequest = null;
             fileSystemNotFound = null;
@@ -2285,8 +2250,6 @@ public class SDK {
             backupNotFound = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2336,7 +2299,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Returns the description of specific Amazon FSx for Lustre or Amazon File Cache data repository associations, if one or more &lt;code&gt;AssociationIds&lt;/code&gt; values are provided in the request, or if filters are used in the request. Data repository associations are supported only for Amazon FSx for Lustre file systems with the &lt;code&gt;Persistent_2&lt;/code&gt; deployment type and for Amazon File Cache resources.&lt;/p&gt; &lt;p&gt;You can use filters to narrow the response to include just data repository associations for specific file systems (use the &lt;code&gt;file-system-id&lt;/code&gt; filter with the ID of the file system) or caches (use the &lt;code&gt;file-cache-id&lt;/code&gt; filter with the ID of the cache), or data repository associations for a specific repository type (use the &lt;code&gt;data-repository-type&lt;/code&gt; filter with a value of &lt;code&gt;S3&lt;/code&gt; or &lt;code&gt;NFS&lt;/code&gt;). If you don't use filters, the response returns all data repository associations owned by your Amazon Web Services account in the Amazon Web Services Region of the endpoint that you're calling.&lt;/p&gt; &lt;p&gt;When retrieving all data repository associations, you can paginate the response by using the optional &lt;code&gt;MaxResults&lt;/code&gt; parameter to limit the number of data repository associations returned in a response. If more data repository associations remain, a &lt;code&gt;NextToken&lt;/code&gt; value is returned in the response. In this case, send a later request with the &lt;code&gt;NextToken&lt;/code&gt; request parameter set to the value of &lt;code&gt;NextToken&lt;/code&gt; from the last response.&lt;/p&gt;
+     * &lt;p&gt;Returns the description of specific Amazon FSx for Lustre or Amazon File Cache data repository associations, if one or more &lt;code&gt;AssociationIds&lt;/code&gt; values are provided in the request, or if filters are used in the request. Data repository associations are supported on Amazon File Cache resources and all Amazon FSx for Lustre file systems excluding &lt;code&gt;Scratch_1&lt;/code&gt; deployment types.&lt;/p&gt; &lt;p&gt;You can use filters to narrow the response to include just data repository associations for specific file systems (use the &lt;code&gt;file-system-id&lt;/code&gt; filter with the ID of the file system) or caches (use the &lt;code&gt;file-cache-id&lt;/code&gt; filter with the ID of the cache), or data repository associations for a specific repository type (use the &lt;code&gt;data-repository-type&lt;/code&gt; filter with a value of &lt;code&gt;S3&lt;/code&gt; or &lt;code&gt;NFS&lt;/code&gt;). If you don't use filters, the response returns all data repository associations owned by your Amazon Web Services account in the Amazon Web Services Region of the endpoint that you're calling.&lt;/p&gt; &lt;p&gt;When retrieving all data repository associations, you can paginate the response by using the optional &lt;code&gt;MaxResults&lt;/code&gt; parameter to limit the number of data repository associations returned in a response. If more data repository associations remain, a &lt;code&gt;NextToken&lt;/code&gt; value is returned in the response. In this case, send a later request with the &lt;code&gt;NextToken&lt;/code&gt; request parameter set to the value of &lt;code&gt;NextToken&lt;/code&gt; from the last response.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2375,7 +2338,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeDataRepositoryAssociationsResponse res = new org.openapis.openapi.models.operations.DescribeDataRepositoryAssociationsResponse() {{
+        org.openapis.openapi.models.operations.DescribeDataRepositoryAssociationsResponse res = new org.openapis.openapi.models.operations.DescribeDataRepositoryAssociationsResponse(contentType, httpRes.statusCode()) {{
             describeDataRepositoryAssociationsResponse = null;
             badRequest = null;
             fileSystemNotFound = null;
@@ -2383,8 +2346,6 @@ public class SDK {
             invalidDataRepositoryType = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2473,15 +2434,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeDataRepositoryTasksResponse res = new org.openapis.openapi.models.operations.DescribeDataRepositoryTasksResponse() {{
+        org.openapis.openapi.models.operations.DescribeDataRepositoryTasksResponse res = new org.openapis.openapi.models.operations.DescribeDataRepositoryTasksResponse(contentType, httpRes.statusCode()) {{
             describeDataRepositoryTasksResponse = null;
             badRequest = null;
             fileSystemNotFound = null;
             dataRepositoryTaskNotFound = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2563,14 +2522,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeFileCachesResponse res = new org.openapis.openapi.models.operations.DescribeFileCachesResponse() {{
+        org.openapis.openapi.models.operations.DescribeFileCachesResponse res = new org.openapis.openapi.models.operations.DescribeFileCachesResponse(contentType, httpRes.statusCode()) {{
             describeFileCachesResponse = null;
             badRequest = null;
             fileCacheNotFound = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2645,14 +2602,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeFileSystemAliasesResponse res = new org.openapis.openapi.models.operations.DescribeFileSystemAliasesResponse() {{
+        org.openapis.openapi.models.operations.DescribeFileSystemAliasesResponse res = new org.openapis.openapi.models.operations.DescribeFileSystemAliasesResponse(contentType, httpRes.statusCode()) {{
             describeFileSystemAliasesResponse = null;
             badRequest = null;
             fileSystemNotFound = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2727,14 +2682,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeFileSystemsResponse res = new org.openapis.openapi.models.operations.DescribeFileSystemsResponse() {{
+        org.openapis.openapi.models.operations.DescribeFileSystemsResponse res = new org.openapis.openapi.models.operations.DescribeFileSystemsResponse(contentType, httpRes.statusCode()) {{
             describeFileSystemsResponse = null;
             badRequest = null;
             fileSystemNotFound = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2809,14 +2762,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeSnapshotsResponse res = new org.openapis.openapi.models.operations.DescribeSnapshotsResponse() {{
+        org.openapis.openapi.models.operations.DescribeSnapshotsResponse res = new org.openapis.openapi.models.operations.DescribeSnapshotsResponse(contentType, httpRes.statusCode()) {{
             describeSnapshotsResponse = null;
             badRequest = null;
             internalServerError = null;
             snapshotNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2891,14 +2842,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeStorageVirtualMachinesResponse res = new org.openapis.openapi.models.operations.DescribeStorageVirtualMachinesResponse() {{
+        org.openapis.openapi.models.operations.DescribeStorageVirtualMachinesResponse res = new org.openapis.openapi.models.operations.DescribeStorageVirtualMachinesResponse(contentType, httpRes.statusCode()) {{
             describeStorageVirtualMachinesResponse = null;
             badRequest = null;
             internalServerError = null;
             storageVirtualMachineNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2973,14 +2922,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeVolumesResponse res = new org.openapis.openapi.models.operations.DescribeVolumesResponse() {{
+        org.openapis.openapi.models.operations.DescribeVolumesResponse res = new org.openapis.openapi.models.operations.DescribeVolumesResponse(contentType, httpRes.statusCode()) {{
             describeVolumesResponse = null;
             badRequest = null;
             internalServerError = null;
             volumeNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3049,14 +2996,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisassociateFileSystemAliasesResponse res = new org.openapis.openapi.models.operations.DisassociateFileSystemAliasesResponse() {{
+        org.openapis.openapi.models.operations.DisassociateFileSystemAliasesResponse res = new org.openapis.openapi.models.operations.DisassociateFileSystemAliasesResponse(contentType, httpRes.statusCode()) {{
             disassociateFileSystemAliasesResponse = null;
             badRequest = null;
             fileSystemNotFound = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3131,7 +3076,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceResponse = null;
             badRequest = null;
             internalServerError = null;
@@ -3139,8 +3084,6 @@ public class SDK {
             notServiceResourceError = null;
             resourceDoesNotSupportTagging = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3223,7 +3166,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReleaseFileSystemNfsV3LocksResponse res = new org.openapis.openapi.models.operations.ReleaseFileSystemNfsV3LocksResponse() {{
+        org.openapis.openapi.models.operations.ReleaseFileSystemNfsV3LocksResponse res = new org.openapis.openapi.models.operations.ReleaseFileSystemNfsV3LocksResponse(contentType, httpRes.statusCode()) {{
             releaseFileSystemNfsV3LocksResponse = null;
             badRequest = null;
             incompatibleParameterError = null;
@@ -3231,8 +3174,6 @@ public class SDK {
             serviceLimitExceeded = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3315,14 +3256,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RestoreVolumeFromSnapshotResponse res = new org.openapis.openapi.models.operations.RestoreVolumeFromSnapshotResponse() {{
+        org.openapis.openapi.models.operations.RestoreVolumeFromSnapshotResponse res = new org.openapis.openapi.models.operations.RestoreVolumeFromSnapshotResponse(contentType, httpRes.statusCode()) {{
             restoreVolumeFromSnapshotResponse = null;
             badRequest = null;
             internalServerError = null;
             volumeNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3391,7 +3330,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             badRequest = null;
             internalServerError = null;
@@ -3399,8 +3338,6 @@ public class SDK {
             notServiceResourceError = null;
             resourceDoesNotSupportTagging = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3483,7 +3420,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
             badRequest = null;
             internalServerError = null;
@@ -3491,8 +3428,6 @@ public class SDK {
             notServiceResourceError = null;
             resourceDoesNotSupportTagging = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3542,7 +3477,7 @@ public class SDK {
     }
 
     /**
-     * Updates the configuration of an existing data repository association on an Amazon FSx for Lustre file system. Data repository associations are supported only for file systems with the &lt;code&gt;Persistent_2&lt;/code&gt; deployment type.
+     * Updates the configuration of an existing data repository association on an Amazon FSx for Lustre file system. Data repository associations are supported for all file systems except for &lt;code&gt;Scratch_1&lt;/code&gt; deployment type.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3575,7 +3510,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDataRepositoryAssociationResponse res = new org.openapis.openapi.models.operations.UpdateDataRepositoryAssociationResponse() {{
+        org.openapis.openapi.models.operations.UpdateDataRepositoryAssociationResponse res = new org.openapis.openapi.models.operations.UpdateDataRepositoryAssociationResponse(contentType, httpRes.statusCode()) {{
             updateDataRepositoryAssociationResponse = null;
             badRequest = null;
             incompatibleParameterError = null;
@@ -3583,8 +3518,6 @@ public class SDK {
             serviceLimitExceeded = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3667,7 +3600,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateFileCacheResponse res = new org.openapis.openapi.models.operations.UpdateFileCacheResponse() {{
+        org.openapis.openapi.models.operations.UpdateFileCacheResponse res = new org.openapis.openapi.models.operations.UpdateFileCacheResponse(contentType, httpRes.statusCode()) {{
             updateFileCacheResponse = null;
             badRequest = null;
             unsupportedOperation = null;
@@ -3677,8 +3610,6 @@ public class SDK {
             missingFileCacheConfiguration = null;
             serviceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3742,7 +3673,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Use this operation to update the configuration of an existing Amazon FSx file system. You can update multiple properties in a single request.&lt;/p&gt; &lt;p&gt;For Amazon FSx for Windows File Server file systems, you can update the following properties:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;AuditLogConfiguration&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;AutomaticBackupRetentionDays&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DailyAutomaticBackupStartTime&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;SelfManagedActiveDirectoryConfiguration&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;StorageCapacity&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ThroughputCapacity&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;WeeklyMaintenanceStartTime&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For Amazon FSx for Lustre file systems, you can update the following properties:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;AutoImportPolicy&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;AutomaticBackupRetentionDays&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DailyAutomaticBackupStartTime&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DataCompressionType&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;LustreRootSquashConfiguration&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;StorageCapacity&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;WeeklyMaintenanceStartTime&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For Amazon FSx for NetApp ONTAP file systems, you can update the following properties:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;AutomaticBackupRetentionDays&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DailyAutomaticBackupStartTime&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DiskIopsConfiguration&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;FsxAdminPassword&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;StorageCapacity&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ThroughputCapacity&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;WeeklyMaintenanceStartTime&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For the Amazon FSx for OpenZFS file systems, you can update the following properties:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;AutomaticBackupRetentionDays&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;CopyTagsToBackups&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;CopyTagsToVolumes&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DailyAutomaticBackupStartTime&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ThroughputCapacity&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;WeeklyMaintenanceStartTime&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     * &lt;p&gt;Use this operation to update the configuration of an existing Amazon FSx file system. You can update multiple properties in a single request.&lt;/p&gt; &lt;p&gt;For FSx for Windows File Server file systems, you can update the following properties:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;AuditLogConfiguration&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;AutomaticBackupRetentionDays&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DailyAutomaticBackupStartTime&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;SelfManagedActiveDirectoryConfiguration&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;StorageCapacity&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ThroughputCapacity&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;WeeklyMaintenanceStartTime&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For FSx for Lustre file systems, you can update the following properties:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;AutoImportPolicy&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;AutomaticBackupRetentionDays&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DailyAutomaticBackupStartTime&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DataCompressionType&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;LustreRootSquashConfiguration&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;StorageCapacity&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;WeeklyMaintenanceStartTime&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For FSx for ONTAP file systems, you can update the following properties:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;AddRouteTableIds&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;AutomaticBackupRetentionDays&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DailyAutomaticBackupStartTime&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DiskIopsConfiguration&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;FsxAdminPassword&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;RemoveRouteTableIds&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;StorageCapacity&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ThroughputCapacity&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;WeeklyMaintenanceStartTime&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For FSx for OpenZFS file systems, you can update the following properties:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;AutomaticBackupRetentionDays&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;CopyTagsToBackups&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;CopyTagsToVolumes&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DailyAutomaticBackupStartTime&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DiskIopsConfiguration&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;StorageCapacity&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ThroughputCapacity&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;WeeklyMaintenanceStartTime&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3775,7 +3706,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateFileSystemResponse res = new org.openapis.openapi.models.operations.UpdateFileSystemResponse() {{
+        org.openapis.openapi.models.operations.UpdateFileSystemResponse res = new org.openapis.openapi.models.operations.UpdateFileSystemResponse(contentType, httpRes.statusCode()) {{
             updateFileSystemResponse = null;
             badRequest = null;
             unsupportedOperation = null;
@@ -3786,8 +3717,6 @@ public class SDK {
             missingFileSystemConfiguration = null;
             serviceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3891,14 +3820,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSnapshotResponse res = new org.openapis.openapi.models.operations.UpdateSnapshotResponse() {{
+        org.openapis.openapi.models.operations.UpdateSnapshotResponse res = new org.openapis.openapi.models.operations.UpdateSnapshotResponse(contentType, httpRes.statusCode()) {{
             updateSnapshotResponse = null;
             badRequest = null;
             snapshotNotFound = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3967,7 +3894,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateStorageVirtualMachineResponse res = new org.openapis.openapi.models.operations.UpdateStorageVirtualMachineResponse() {{
+        org.openapis.openapi.models.operations.UpdateStorageVirtualMachineResponse res = new org.openapis.openapi.models.operations.UpdateStorageVirtualMachineResponse(contentType, httpRes.statusCode()) {{
             updateStorageVirtualMachineResponse = null;
             badRequest = null;
             incompatibleParameterError = null;
@@ -3975,8 +3902,6 @@ public class SDK {
             storageVirtualMachineNotFound = null;
             unsupportedOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4059,7 +3984,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateVolumeResponse res = new org.openapis.openapi.models.operations.UpdateVolumeResponse() {{
+        org.openapis.openapi.models.operations.UpdateVolumeResponse res = new org.openapis.openapi.models.operations.UpdateVolumeResponse(contentType, httpRes.statusCode()) {{
             updateVolumeResponse = null;
             badRequest = null;
             incompatibleParameterError = null;
@@ -4067,8 +3992,6 @@ public class SDK {
             missingVolumeConfiguration = null;
             volumeNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

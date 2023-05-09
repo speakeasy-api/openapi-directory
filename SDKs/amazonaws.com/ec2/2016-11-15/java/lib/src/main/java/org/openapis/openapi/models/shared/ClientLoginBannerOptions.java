@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ClientLoginBannerOptions {
     
     public String bannerText;
+
     public ClientLoginBannerOptions withBannerText(String bannerText) {
         this.bannerText = bannerText;
         return this;
@@ -19,9 +20,11 @@ public class ClientLoginBannerOptions {
     
     
     public Boolean enabled;
+
     public ClientLoginBannerOptions withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public ClientLoginBannerOptions(){}
 }

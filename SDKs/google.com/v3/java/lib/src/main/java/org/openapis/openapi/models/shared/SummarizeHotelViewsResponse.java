@@ -18,6 +18,7 @@ public class SummarizeHotelViewsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastFeedSubmissionTime")
     public String lastFeedSubmissionTime;
+
     public SummarizeHotelViewsResponse withLastFeedSubmissionTime(String lastFeedSubmissionTime) {
         this.lastFeedSubmissionTime = lastFeedSubmissionTime;
         return this;
@@ -29,6 +30,7 @@ public class SummarizeHotelViewsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastManifestUpdateTime")
     public String lastManifestUpdateTime;
+
     public SummarizeHotelViewsResponse withLastManifestUpdateTime(String lastManifestUpdateTime) {
         this.lastManifestUpdateTime = lastManifestUpdateTime;
         return this;
@@ -40,6 +42,7 @@ public class SummarizeHotelViewsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liveOnGooglePropertyCount")
     public String liveOnGooglePropertyCount;
+
     public SummarizeHotelViewsResponse withLiveOnGooglePropertyCount(String liveOnGooglePropertyCount) {
         this.liveOnGooglePropertyCount = liveOnGooglePropertyCount;
         return this;
@@ -51,6 +54,7 @@ public class SummarizeHotelViewsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchedPropertyCount")
     public String matchedPropertyCount;
+
     public SummarizeHotelViewsResponse withMatchedPropertyCount(String matchedPropertyCount) {
         this.matchedPropertyCount = matchedPropertyCount;
         return this;
@@ -62,6 +66,7 @@ public class SummarizeHotelViewsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overclusteredPropertyCount")
     public String overclusteredPropertyCount;
+
     public SummarizeHotelViewsResponse withOverclusteredPropertyCount(String overclusteredPropertyCount) {
         this.overclusteredPropertyCount = overclusteredPropertyCount;
         return this;
@@ -73,6 +78,7 @@ public class SummarizeHotelViewsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overclusteredPropertyWithErrorsCount")
     public String overclusteredPropertyWithErrorsCount;
+
     public SummarizeHotelViewsResponse withOverclusteredPropertyWithErrorsCount(String overclusteredPropertyWithErrorsCount) {
         this.overclusteredPropertyWithErrorsCount = overclusteredPropertyWithErrorsCount;
         return this;
@@ -84,6 +90,7 @@ public class SummarizeHotelViewsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unmatchedPropertyCount")
     public String unmatchedPropertyCount;
+
     public SummarizeHotelViewsResponse withUnmatchedPropertyCount(String unmatchedPropertyCount) {
         this.unmatchedPropertyCount = unmatchedPropertyCount;
         return this;
@@ -95,9 +102,11 @@ public class SummarizeHotelViewsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unmatchedPropertyWithErrorsCount")
     public String unmatchedPropertyWithErrorsCount;
+
     public SummarizeHotelViewsResponse withUnmatchedPropertyWithErrorsCount(String unmatchedPropertyWithErrorsCount) {
         this.unmatchedPropertyWithErrorsCount = unmatchedPropertyWithErrorsCount;
         return this;
     }
     
+    public SummarizeHotelViewsResponse(){}
 }

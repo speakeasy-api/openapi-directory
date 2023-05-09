@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudsearchDebugDatasourcesItemsSearchByViewUrlResponse {
     
     public String contentType;
+
     public CloudsearchDebugDatasourcesItemsSearchByViewUrlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudsearchDebugDatasourcesItemsSearchByViewUrlResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchItemsByViewUrlResponse searchItemsByViewUrlResponse;
+
     public CloudsearchDebugDatasourcesItemsSearchByViewUrlResponse withSearchItemsByViewUrlResponse(org.openapis.openapi.models.shared.SearchItemsByViewUrlResponse searchItemsByViewUrlResponse) {
         this.searchItemsByViewUrlResponse = searchItemsByViewUrlResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudsearchDebugDatasourcesItemsSearchByViewUrlResponse {
     
     
     public Integer statusCode;
+
     public CloudsearchDebugDatasourcesItemsSearchByViewUrlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudsearchDebugDatasourcesItemsSearchByViewUrlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudsearchDebugDatasourcesItemsSearchByViewUrlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudsearchDebugDatasourcesItemsSearchByViewUrlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

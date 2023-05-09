@@ -18,6 +18,7 @@ public class OmnitureSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("omnitureCostDataEnabled")
     public Boolean omnitureCostDataEnabled;
+
     public OmnitureSettings withOmnitureCostDataEnabled(Boolean omnitureCostDataEnabled) {
         this.omnitureCostDataEnabled = omnitureCostDataEnabled;
         return this;
@@ -29,9 +30,11 @@ public class OmnitureSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("omnitureIntegrationEnabled")
     public Boolean omnitureIntegrationEnabled;
+
     public OmnitureSettings withOmnitureIntegrationEnabled(Boolean omnitureIntegrationEnabled) {
         this.omnitureIntegrationEnabled = omnitureIntegrationEnabled;
         return this;
     }
     
+    public OmnitureSettings(){}
 }

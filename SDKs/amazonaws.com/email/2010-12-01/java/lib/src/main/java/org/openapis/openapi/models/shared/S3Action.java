@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * S3Action - &lt;p&gt;When included in a receipt rule, this action saves the received message to an Amazon Simple Storage Service (Amazon S3) bucket and, optionally, publishes a notification to Amazon Simple Notification Service (Amazon SNS).&lt;/p&gt; &lt;p&gt;To enable Amazon SES to write emails to your Amazon S3 bucket, use an AWS KMS key to encrypt your emails, or publish to an Amazon SNS topic of another account, Amazon SES must have permission to access those resources. For information about giving permissions, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-permissions.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;When you save your emails to an Amazon S3 bucket, the maximum email size (including headers) is 30 MB. Emails larger than that will bounce.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;For information about specifying Amazon S3 actions in receipt rules, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-action-s3.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class S3Action {
     
     public String bucketName;
+
     public S3Action withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -19,6 +20,7 @@ public class S3Action {
     
     
     public String kmsKeyArn;
+
     public S3Action withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -26,6 +28,7 @@ public class S3Action {
     
     
     public String objectKeyPrefix;
+
     public S3Action withObjectKeyPrefix(String objectKeyPrefix) {
         this.objectKeyPrefix = objectKeyPrefix;
         return this;
@@ -33,9 +36,13 @@ public class S3Action {
     
     
     public String topicArn;
+
     public S3Action withTopicArn(String topicArn) {
         this.topicArn = topicArn;
         return this;
     }
     
+    public S3Action(@JsonProperty("BucketName") String bucketName) {
+        this.bucketName = bucketName;
+  }
 }

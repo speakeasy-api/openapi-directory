@@ -18,6 +18,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bestTrialId")
     public String bestTrialId;
+
     public Model withBestTrialId(String bestTrialId) {
         this.bestTrialId = bestTrialId;
         return this;
@@ -29,6 +30,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public String creationTime;
+
     public Model withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -40,6 +42,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultTrialId")
     public String defaultTrialId;
+
     public Model withDefaultTrialId(String defaultTrialId) {
         this.defaultTrialId = defaultTrialId;
         return this;
@@ -51,6 +54,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Model withDescription(String description) {
         this.description = description;
         return this;
@@ -59,6 +63,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public Model withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -70,6 +75,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Model withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -81,6 +87,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expirationTime")
     public String expirationTime;
+
     public Model withExpirationTime(String expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -92,6 +99,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featureColumns")
     public StandardSqlField[] featureColumns;
+
     public Model withFeatureColumns(StandardSqlField[] featureColumns) {
         this.featureColumns = featureColumns;
         return this;
@@ -103,6 +111,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("friendlyName")
     public String friendlyName;
+
     public Model withFriendlyName(String friendlyName) {
         this.friendlyName = friendlyName;
         return this;
@@ -114,6 +123,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hparamSearchSpaces")
     public HparamSearchSpaces hparamSearchSpaces;
+
     public Model withHparamSearchSpaces(HparamSearchSpaces hparamSearchSpaces) {
         this.hparamSearchSpaces = hparamSearchSpaces;
         return this;
@@ -125,6 +135,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hparamTrials")
     public HparamTuningTrial[] hparamTrials;
+
     public Model withHparamTrials(HparamTuningTrial[] hparamTrials) {
         this.hparamTrials = hparamTrials;
         return this;
@@ -136,6 +147,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelColumns")
     public StandardSqlField[] labelColumns;
+
     public Model withLabelColumns(StandardSqlField[] labelColumns) {
         this.labelColumns = labelColumns;
         return this;
@@ -147,6 +159,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Model withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -158,6 +171,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedTime")
     public String lastModifiedTime;
+
     public Model withLastModifiedTime(String lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -169,6 +183,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public Model withLocation(String location) {
         this.location = location;
         return this;
@@ -177,6 +192,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelReference")
     public ModelReference modelReference;
+
     public Model withModelReference(ModelReference modelReference) {
         this.modelReference = modelReference;
         return this;
@@ -188,6 +204,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelType")
     public ModelModelTypeEnum modelType;
+
     public Model withModelType(ModelModelTypeEnum modelType) {
         this.modelType = modelType;
         return this;
@@ -199,8 +216,21 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optimalTrialIds")
     public String[] optimalTrialIds;
+
     public Model withOptimalTrialIds(String[] optimalTrialIds) {
         this.optimalTrialIds = optimalTrialIds;
+        return this;
+    }
+    
+    /**
+     * Remote Model Info
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("remoteModelInfo")
+    public RemoteModelInfo remoteModelInfo;
+
+    public Model withRemoteModelInfo(RemoteModelInfo remoteModelInfo) {
+        this.remoteModelInfo = remoteModelInfo;
         return this;
     }
     
@@ -210,9 +240,11 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingRuns")
     public TrainingRun[] trainingRuns;
+
     public Model withTrainingRuns(TrainingRun[] trainingRuns) {
         this.trainingRuns = trainingRuns;
         return this;
     }
     
+    public Model(){}
 }

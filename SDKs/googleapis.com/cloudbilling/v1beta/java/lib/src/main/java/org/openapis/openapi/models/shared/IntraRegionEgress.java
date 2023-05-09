@@ -18,9 +18,11 @@ public class IntraRegionEgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("egressRate")
     public Usage egressRate;
+
     public IntraRegionEgress withEgressRate(Usage egressRate) {
         this.egressRate = egressRate;
         return this;
     }
     
+    public IntraRegionEgress(){}
 }

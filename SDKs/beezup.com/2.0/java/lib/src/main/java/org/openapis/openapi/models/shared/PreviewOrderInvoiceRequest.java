@@ -15,9 +15,11 @@ public class PreviewOrderInvoiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceSequenceNumber")
     public Long invoiceSequenceNumber;
+
     public PreviewOrderInvoiceRequest withInvoiceSequenceNumber(Long invoiceSequenceNumber) {
         this.invoiceSequenceNumber = invoiceSequenceNumber;
         return this;
     }
     
+    public PreviewOrderInvoiceRequest(){}
 }

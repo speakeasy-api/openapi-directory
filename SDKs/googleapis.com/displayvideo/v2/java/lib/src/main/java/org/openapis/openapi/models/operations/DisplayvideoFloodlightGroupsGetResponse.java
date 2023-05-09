@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoFloodlightGroupsGetResponse {
     
     public String contentType;
+
     public DisplayvideoFloodlightGroupsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoFloodlightGroupsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.FloodlightGroup floodlightGroup;
+
     public DisplayvideoFloodlightGroupsGetResponse withFloodlightGroup(org.openapis.openapi.models.shared.FloodlightGroup floodlightGroup) {
         this.floodlightGroup = floodlightGroup;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoFloodlightGroupsGetResponse {
     
     
     public Integer statusCode;
+
     public DisplayvideoFloodlightGroupsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoFloodlightGroupsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoFloodlightGroupsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoFloodlightGroupsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

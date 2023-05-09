@@ -15,6 +15,7 @@ public class DetectionsResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Float confidence;
+
     public DetectionsResource withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -26,6 +27,7 @@ public class DetectionsResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isReliable")
     public Boolean isReliable;
+
     public DetectionsResource withIsReliable(Boolean isReliable) {
         this.isReliable = isReliable;
         return this;
@@ -37,9 +39,11 @@ public class DetectionsResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public DetectionsResource withLanguage(String language) {
         this.language = language;
         return this;
     }
     
+    public DetectionsResource(){}
 }

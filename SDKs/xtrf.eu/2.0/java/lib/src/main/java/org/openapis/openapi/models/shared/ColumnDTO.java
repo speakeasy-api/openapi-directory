@@ -12,6 +12,7 @@ public class ColumnDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ColumnDTO withName(String name) {
         this.name = name;
         return this;
@@ -20,9 +21,11 @@ public class ColumnDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public java.util.Map<String, Object> settings;
+
     public ColumnDTO withSettings(java.util.Map<String, Object> settings) {
         this.settings = settings;
         return this;
     }
     
+    public ColumnDTO(){}
 }

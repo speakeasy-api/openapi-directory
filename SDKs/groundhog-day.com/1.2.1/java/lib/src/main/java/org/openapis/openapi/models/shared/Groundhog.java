@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Groundhog {
     @JsonProperty("active")
     public GroundhogActiveEnum active;
+
     public Groundhog withActive(GroundhogActiveEnum active) {
         this.active = active;
         return this;
@@ -21,6 +22,7 @@ public class Groundhog {
     
     @JsonProperty("city")
     public String city;
+
     public Groundhog withCity(String city) {
         this.city = city;
         return this;
@@ -28,6 +30,7 @@ public class Groundhog {
     
     @JsonProperty("contact")
     public String contact;
+
     public Groundhog withContact(String contact) {
         this.contact = contact;
         return this;
@@ -35,6 +38,7 @@ public class Groundhog {
     
     @JsonProperty("coordinates")
     public String coordinates;
+
     public Groundhog withCoordinates(String coordinates) {
         this.coordinates = coordinates;
         return this;
@@ -42,6 +46,7 @@ public class Groundhog {
     
     @JsonProperty("country")
     public String country;
+
     public Groundhog withCountry(String country) {
         this.country = country;
         return this;
@@ -49,6 +54,7 @@ public class Groundhog {
     
     @JsonProperty("currentPrediction")
     public String currentPrediction;
+
     public Groundhog withCurrentPrediction(String currentPrediction) {
         this.currentPrediction = currentPrediction;
         return this;
@@ -56,6 +62,7 @@ public class Groundhog {
     
     @JsonProperty("description")
     public String description;
+
     public Groundhog withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +70,7 @@ public class Groundhog {
     
     @JsonProperty("id")
     public Long id;
+
     public Groundhog withId(Long id) {
         this.id = id;
         return this;
@@ -70,6 +78,7 @@ public class Groundhog {
     
     @JsonProperty("image")
     public String image;
+
     public Groundhog withImage(String image) {
         this.image = image;
         return this;
@@ -77,6 +86,7 @@ public class Groundhog {
     
     @JsonProperty("isGroundhog")
     public Long isGroundhog;
+
     public Groundhog withIsGroundhog(Long isGroundhog) {
         this.isGroundhog = isGroundhog;
         return this;
@@ -84,6 +94,7 @@ public class Groundhog {
     
     @JsonProperty("name")
     public String name;
+
     public Groundhog withName(String name) {
         this.name = name;
         return this;
@@ -92,6 +103,7 @@ public class Groundhog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictions")
     public Prediction[] predictions;
+
     public Groundhog withPredictions(Prediction[] predictions) {
         this.predictions = predictions;
         return this;
@@ -103,6 +115,7 @@ public class Groundhog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictionsCount")
     public Long predictionsCount;
+
     public Groundhog withPredictionsCount(Long predictionsCount) {
         this.predictionsCount = predictionsCount;
         return this;
@@ -110,6 +123,7 @@ public class Groundhog {
     
     @JsonProperty("region")
     public String region;
+
     public Groundhog withRegion(String region) {
         this.region = region;
         return this;
@@ -117,6 +131,7 @@ public class Groundhog {
     
     @JsonProperty("shortname")
     public String shortname;
+
     public Groundhog withShortname(String shortname) {
         this.shortname = shortname;
         return this;
@@ -124,6 +139,7 @@ public class Groundhog {
     
     @JsonProperty("slug")
     public String slug;
+
     public Groundhog withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -131,6 +147,7 @@ public class Groundhog {
     
     @JsonProperty("source")
     public String source;
+
     public Groundhog withSource(String source) {
         this.source = source;
         return this;
@@ -138,9 +155,28 @@ public class Groundhog {
     
     @JsonProperty("type")
     public String type;
+
     public Groundhog withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Groundhog(@JsonProperty("active") GroundhogActiveEnum active, @JsonProperty("city") String city, @JsonProperty("contact") String contact, @JsonProperty("coordinates") String coordinates, @JsonProperty("country") String country, @JsonProperty("currentPrediction") String currentPrediction, @JsonProperty("description") String description, @JsonProperty("id") Long id, @JsonProperty("image") String image, @JsonProperty("isGroundhog") Long isGroundhog, @JsonProperty("name") String name, @JsonProperty("region") String region, @JsonProperty("shortname") String shortname, @JsonProperty("slug") String slug, @JsonProperty("source") String source, @JsonProperty("type") String type) {
+        this.active = active;
+        this.city = city;
+        this.contact = contact;
+        this.coordinates = coordinates;
+        this.country = country;
+        this.currentPrediction = currentPrediction;
+        this.description = description;
+        this.id = id;
+        this.image = image;
+        this.isGroundhog = isGroundhog;
+        this.name = name;
+        this.region = region;
+        this.shortname = shortname;
+        this.slug = slug;
+        this.source = source;
+        this.type = type;
+  }
 }

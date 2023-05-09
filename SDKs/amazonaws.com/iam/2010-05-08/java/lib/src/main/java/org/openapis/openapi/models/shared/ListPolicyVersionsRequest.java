@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ListPolicyVersionsRequest {
     
     public String marker;
+
     public ListPolicyVersionsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -16,6 +17,7 @@ public class ListPolicyVersionsRequest {
     
     
     public Long maxItems;
+
     public ListPolicyVersionsRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -23,9 +25,13 @@ public class ListPolicyVersionsRequest {
     
     
     public String policyArn;
+
     public ListPolicyVersionsRequest withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
     }
     
+    public ListPolicyVersionsRequest(@JsonProperty("PolicyArn") String policyArn) {
+        this.policyArn = policyArn;
+  }
 }

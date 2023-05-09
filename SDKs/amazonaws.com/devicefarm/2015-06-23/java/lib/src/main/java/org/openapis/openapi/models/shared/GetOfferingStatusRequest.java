@@ -15,9 +15,11 @@ public class GetOfferingStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetOfferingStatusRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetOfferingStatusRequest(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifySnapshotScheduleMessage {
     
     public String[] scheduleDefinitions;
+
     public ModifySnapshotScheduleMessage withScheduleDefinitions(String[] scheduleDefinitions) {
         this.scheduleDefinitions = scheduleDefinitions;
         return this;
@@ -16,9 +17,14 @@ public class ModifySnapshotScheduleMessage {
     
     
     public String scheduleIdentifier;
+
     public ModifySnapshotScheduleMessage withScheduleIdentifier(String scheduleIdentifier) {
         this.scheduleIdentifier = scheduleIdentifier;
         return this;
     }
     
+    public ModifySnapshotScheduleMessage(@JsonProperty("ScheduleDefinitions") String[] scheduleDefinitions, @JsonProperty("ScheduleIdentifier") String scheduleIdentifier) {
+        this.scheduleDefinitions = scheduleDefinitions;
+        this.scheduleIdentifier = scheduleIdentifier;
+  }
 }

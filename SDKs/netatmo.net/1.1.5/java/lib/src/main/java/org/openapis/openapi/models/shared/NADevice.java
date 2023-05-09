@@ -12,6 +12,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_id")
     public String id;
+
     public NADevice withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("behavior")
     public Integer behavior;
+
     public NADevice withBehavior(Integer behavior) {
         this.behavior = behavior;
         return this;
@@ -28,6 +30,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cipher_id")
     public String cipherId;
+
     public NADevice withCipherId(String cipherId) {
         this.cipherId = cipherId;
         return this;
@@ -36,6 +39,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dashboard_data")
     public NADashboardData dashboardData;
+
     public NADevice withDashboardData(NADashboardData dashboardData) {
         this.dashboardData = dashboardData;
         return this;
@@ -44,6 +48,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data_type")
     public String[] dataType;
+
     public NADevice withDataType(String[] dataType) {
         this.dataType = dataType;
         return this;
@@ -52,6 +57,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_setup")
     public NADate dateSetup;
+
     public NADevice withDateSetup(NADate dateSetup) {
         this.dateSetup = dateSetup;
         return this;
@@ -60,6 +66,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firmware")
     public Integer firmware;
+
     public NADevice withFirmware(Integer firmware) {
         this.firmware = firmware;
         return this;
@@ -68,6 +75,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_pid_avail")
     public Boolean firstPidAvail;
+
     public NADevice withFirstPidAvail(Boolean firstPidAvail) {
         this.firstPidAvail = firstPidAvail;
         return this;
@@ -76,6 +84,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heating_system")
     public NAHeatingSystem heatingSystem;
+
     public NADevice withHeatingSystem(NAHeatingSystem heatingSystem) {
         this.heatingSystem = heatingSystem;
         return this;
@@ -84,6 +93,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("house_model")
     public NAHouseModel houseModel;
+
     public NADevice withHouseModel(NAHouseModel houseModel) {
         this.houseModel = houseModel;
         return this;
@@ -92,6 +102,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hw_version")
     public Integer hwVersion;
+
     public NADevice withHwVersion(Integer hwVersion) {
         this.hwVersion = hwVersion;
         return this;
@@ -100,6 +111,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip")
     public String ip;
+
     public NADevice withIp(String ip) {
         this.ip = ip;
         return this;
@@ -108,6 +120,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_fw_update")
     public Integer lastFwUpdate;
+
     public NADevice withLastFwUpdate(Integer lastFwUpdate) {
         this.lastFwUpdate = lastFwUpdate;
         return this;
@@ -116,6 +129,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_radio_store")
     public Integer lastRadioStore;
+
     public NADevice withLastRadioStore(Integer lastRadioStore) {
         this.lastRadioStore = lastRadioStore;
         return this;
@@ -124,6 +138,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_status_store")
     public Integer lastStatusStore;
+
     public NADevice withLastStatusStore(Integer lastStatusStore) {
         this.lastStatusStore = lastStatusStore;
         return this;
@@ -132,6 +147,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_upgrade")
     public Integer lastUpgrade;
+
     public NADevice withLastUpgrade(Integer lastUpgrade) {
         this.lastUpgrade = lastUpgrade;
         return this;
@@ -140,6 +156,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("module_name")
     public String moduleName;
+
     public NADevice withModuleName(String moduleName) {
         this.moduleName = moduleName;
         return this;
@@ -151,6 +168,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modules")
     public String[] modules;
+
     public NADevice withModules(String[] modules) {
         this.modules = modules;
         return this;
@@ -159,6 +177,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("new_feature_avail")
     public Boolean newFeatureAvail;
+
     public NADevice withNewFeatureAvail(Boolean newFeatureAvail) {
         this.newFeatureAvail = newFeatureAvail;
         return this;
@@ -167,6 +186,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("place")
     public NAPlace place;
+
     public NADevice withPlace(NAPlace place) {
         this.place = place;
         return this;
@@ -175,6 +195,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_ext_data")
     public Boolean publicExtData;
+
     public NADevice withPublicExtData(Boolean publicExtData) {
         this.publicExtData = publicExtData;
         return this;
@@ -183,6 +204,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setpoint")
     public java.util.Map<String, Object> setpoint;
+
     public NADevice withSetpoint(java.util.Map<String, Object> setpoint) {
         this.setpoint = setpoint;
         return this;
@@ -191,6 +213,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setpoint_default_duration")
     public Integer setpointDefaultDuration;
+
     public NADevice withSetpointDefaultDuration(Integer setpointDefaultDuration) {
         this.setpointDefaultDuration = setpointDefaultDuration;
         return this;
@@ -199,6 +222,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setpoint_order")
     public java.util.Map<String, NAObject[]> setpointOrder;
+
     public NADevice withSetpointOrder(java.util.Map<String, NAObject[]> setpointOrder) {
         this.setpointOrder = setpointOrder;
         return this;
@@ -207,6 +231,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("station_name")
     public String stationName;
+
     public NADevice withStationName(String stationName) {
         this.stationName = stationName;
         return this;
@@ -215,6 +240,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("therm_program")
     public java.util.Map<String, NAThermProgram> thermProgram;
+
     public NADevice withThermProgram(java.util.Map<String, NAThermProgram> thermProgram) {
         this.thermProgram = thermProgram;
         return this;
@@ -223,6 +249,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("therm_program_backup")
     public java.util.Map<String, NAThermProgram[]> thermProgramBackup;
+
     public NADevice withThermProgramBackup(java.util.Map<String, NAThermProgram[]> thermProgramBackup) {
         this.thermProgramBackup = thermProgramBackup;
         return this;
@@ -231,6 +258,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("therm_program_order")
     public java.util.Map<String, NAObject[]> thermProgramOrder;
+
     public NADevice withThermProgramOrder(java.util.Map<String, NAObject[]> thermProgramOrder) {
         this.thermProgramOrder = thermProgramOrder;
         return this;
@@ -249,6 +277,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public NADevice withType(String type) {
         this.type = type;
         return this;
@@ -257,6 +286,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("udp_conn")
     public Boolean udpConn;
+
     public NADevice withUdpConn(Boolean udpConn) {
         this.udpConn = udpConn;
         return this;
@@ -265,6 +295,7 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_owner")
     public String[] userOwner;
+
     public NADevice withUserOwner(String[] userOwner) {
         this.userOwner = userOwner;
         return this;
@@ -280,9 +311,11 @@ public class NADevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wifi_status")
     public Integer wifiStatus;
+
     public NADevice withWifiStatus(Integer wifiStatus) {
         this.wifiStatus = wifiStatus;
         return this;
     }
     
+    public NADevice(){}
 }

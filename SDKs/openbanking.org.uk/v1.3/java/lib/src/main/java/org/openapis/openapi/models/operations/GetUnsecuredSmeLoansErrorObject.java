@@ -15,6 +15,7 @@ public class GetUnsecuredSmeLoansErrorObject {
      */
     @JsonProperty("description")
     public String description;
+
     public GetUnsecuredSmeLoansErrorObject withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class GetUnsecuredSmeLoansErrorObject {
      */
     @JsonProperty("status")
     public String status;
+
     public GetUnsecuredSmeLoansErrorObject withStatus(String status) {
         this.status = status;
         return this;
@@ -35,9 +37,15 @@ public class GetUnsecuredSmeLoansErrorObject {
      */
     @JsonProperty("title")
     public String title;
+
     public GetUnsecuredSmeLoansErrorObject withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GetUnsecuredSmeLoansErrorObject(@JsonProperty("description") String description, @JsonProperty("status") String status, @JsonProperty("title") String title) {
+        this.description = description;
+        this.status = status;
+        this.title = title;
+  }
 }

@@ -12,6 +12,7 @@ public class DetectTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public DetectTextFilters filters;
+
     public DetectTextRequest withFilters(DetectTextFilters filters) {
         this.filters = filters;
         return this;
@@ -19,9 +20,13 @@ public class DetectTextRequest {
     
     @JsonProperty("Image")
     public Image image;
+
     public DetectTextRequest withImage(Image image) {
         this.image = image;
         return this;
     }
     
+    public DetectTextRequest(@JsonProperty("Image") Image image) {
+        this.image = image;
+  }
 }

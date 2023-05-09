@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeMapResponse {
@@ -12,6 +13,7 @@ public class DescribeMapResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeMapResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeMapResponse {
     
     
     public String contentType;
+
     public DescribeMapResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeMapResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeMapResponse describeMapResponse;
+
     public DescribeMapResponse withDescribeMapResponse(org.openapis.openapi.models.shared.DescribeMapResponse describeMapResponse) {
         this.describeMapResponse = describeMapResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeMapResponse {
      */
     
     public Object internalServerException;
+
     public DescribeMapResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeMapResponse {
     
     
     public Integer statusCode;
+
     public DescribeMapResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeMapResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeMapResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeMapResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeMapResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeMapResponse {
      */
     
     public Object throttlingException;
+
     public DescribeMapResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeMapResponse {
      */
     
     public Object validationException;
+
     public DescribeMapResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeMapResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

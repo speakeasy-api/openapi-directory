@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVerifiedAccessInstancesResult {
     
     public String nextToken;
+
     public DescribeVerifiedAccessInstancesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVerifiedAccessInstancesResult {
     
     
     public DescribeVerifiedAccessInstancesResultVerifiedAccessInstances[] verifiedAccessInstances;
+
     public DescribeVerifiedAccessInstancesResult withVerifiedAccessInstances(DescribeVerifiedAccessInstancesResultVerifiedAccessInstances[] verifiedAccessInstances) {
         this.verifiedAccessInstances = verifiedAccessInstances;
         return this;
     }
     
+    public DescribeVerifiedAccessInstancesResult(){}
 }

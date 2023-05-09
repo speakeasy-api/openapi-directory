@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DomainsrdapEntityGetResponse {
     
     public String contentType;
+
     public DomainsrdapEntityGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DomainsrdapEntityGetResponse {
      */
     
     public org.openapis.openapi.models.shared.RdapResponse rdapResponse;
+
     public DomainsrdapEntityGetResponse withRdapResponse(org.openapis.openapi.models.shared.RdapResponse rdapResponse) {
         this.rdapResponse = rdapResponse;
         return this;
@@ -26,6 +29,7 @@ public class DomainsrdapEntityGetResponse {
     
     
     public Integer statusCode;
+
     public DomainsrdapEntityGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DomainsrdapEntityGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DomainsrdapEntityGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DomainsrdapEntityGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

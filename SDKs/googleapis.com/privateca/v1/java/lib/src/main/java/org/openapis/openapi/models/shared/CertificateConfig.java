@@ -18,6 +18,7 @@ public class CertificateConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicKey")
     public PublicKey publicKey;
+
     public CertificateConfig withPublicKey(PublicKey publicKey) {
         this.publicKey = publicKey;
         return this;
@@ -29,6 +30,7 @@ public class CertificateConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectConfig")
     public SubjectConfig subjectConfig;
+
     public CertificateConfig withSubjectConfig(SubjectConfig subjectConfig) {
         this.subjectConfig = subjectConfig;
         return this;
@@ -40,9 +42,11 @@ public class CertificateConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x509Config")
     public X509Parameters x509Config;
+
     public CertificateConfig withX509Config(X509Parameters x509Config) {
         this.x509Config = x509Config;
         return this;
     }
     
+    public CertificateConfig(){}
 }

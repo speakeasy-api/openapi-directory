@@ -18,6 +18,7 @@ public class CompanyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("careerSiteUri")
     public String careerSiteUri;
+
     public CompanyInput withCareerSiteUri(String careerSiteUri) {
         this.careerSiteUri = careerSiteUri;
         return this;
@@ -29,6 +30,7 @@ public class CompanyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("derivedInfo")
     public CompanyDerivedInfo derivedInfo;
+
     public CompanyInput withDerivedInfo(CompanyDerivedInfo derivedInfo) {
         this.derivedInfo = derivedInfo;
         return this;
@@ -40,6 +42,7 @@ public class CompanyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public CompanyInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class CompanyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eeoText")
     public String eeoText;
+
     public CompanyInput withEeoText(String eeoText) {
         this.eeoText = eeoText;
         return this;
@@ -62,6 +66,7 @@ public class CompanyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public String externalId;
+
     public CompanyInput withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -73,6 +78,7 @@ public class CompanyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headquartersAddress")
     public String headquartersAddress;
+
     public CompanyInput withHeadquartersAddress(String headquartersAddress) {
         this.headquartersAddress = headquartersAddress;
         return this;
@@ -84,6 +90,7 @@ public class CompanyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hiringAgency")
     public Boolean hiringAgency;
+
     public CompanyInput withHiringAgency(Boolean hiringAgency) {
         this.hiringAgency = hiringAgency;
         return this;
@@ -95,6 +102,7 @@ public class CompanyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUri")
     public String imageUri;
+
     public CompanyInput withImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
@@ -106,6 +114,7 @@ public class CompanyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywordSearchableJobCustomAttributes")
     public String[] keywordSearchableJobCustomAttributes;
+
     public CompanyInput withKeywordSearchableJobCustomAttributes(String[] keywordSearchableJobCustomAttributes) {
         this.keywordSearchableJobCustomAttributes = keywordSearchableJobCustomAttributes;
         return this;
@@ -117,6 +126,7 @@ public class CompanyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CompanyInput withName(String name) {
         this.name = name;
         return this;
@@ -128,6 +138,7 @@ public class CompanyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public CompanySizeEnum size;
+
     public CompanyInput withSize(CompanySizeEnum size) {
         this.size = size;
         return this;
@@ -139,9 +150,11 @@ public class CompanyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("websiteUri")
     public String websiteUri;
+
     public CompanyInput withWebsiteUri(String websiteUri) {
         this.websiteUri = websiteUri;
         return this;
     }
     
+    public CompanyInput(){}
 }

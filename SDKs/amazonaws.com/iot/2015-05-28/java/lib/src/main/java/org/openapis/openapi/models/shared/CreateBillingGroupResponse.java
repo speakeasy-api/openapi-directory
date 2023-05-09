@@ -15,6 +15,7 @@ public class CreateBillingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingGroupArn")
     public String billingGroupArn;
+
     public CreateBillingGroupResponse withBillingGroupArn(String billingGroupArn) {
         this.billingGroupArn = billingGroupArn;
         return this;
@@ -23,6 +24,7 @@ public class CreateBillingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingGroupId")
     public String billingGroupId;
+
     public CreateBillingGroupResponse withBillingGroupId(String billingGroupId) {
         this.billingGroupId = billingGroupId;
         return this;
@@ -31,9 +33,11 @@ public class CreateBillingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingGroupName")
     public String billingGroupName;
+
     public CreateBillingGroupResponse withBillingGroupName(String billingGroupName) {
         this.billingGroupName = billingGroupName;
         return this;
     }
     
+    public CreateBillingGroupResponse(){}
 }

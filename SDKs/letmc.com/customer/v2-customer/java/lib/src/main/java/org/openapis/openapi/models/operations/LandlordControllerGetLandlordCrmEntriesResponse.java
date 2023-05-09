@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LandlordControllerGetLandlordCrmEntriesResponse {
     
     public byte[] body;
+
     public LandlordControllerGetLandlordCrmEntriesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class LandlordControllerGetLandlordCrmEntriesResponse {
     
     
     public String contentType;
+
     public LandlordControllerGetLandlordCrmEntriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class LandlordControllerGetLandlordCrmEntriesResponse {
      */
     
     public org.openapis.openapi.models.shared.LandlordCrmEntry[] landlordCrmEntries;
+
     public LandlordControllerGetLandlordCrmEntriesResponse withLandlordCrmEntries(org.openapis.openapi.models.shared.LandlordCrmEntry[] landlordCrmEntries) {
         this.landlordCrmEntries = landlordCrmEntries;
         return this;
@@ -33,6 +37,7 @@ public class LandlordControllerGetLandlordCrmEntriesResponse {
     
     
     public Integer statusCode;
+
     public LandlordControllerGetLandlordCrmEntriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class LandlordControllerGetLandlordCrmEntriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LandlordControllerGetLandlordCrmEntriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public LandlordControllerGetLandlordCrmEntriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

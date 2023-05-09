@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CinemaScheduleSearchallReadRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=param")
     public String param;
+
     public CinemaScheduleSearchallReadRequest withParam(String param) {
         this.param = param;
         return this;
     }
     
+    public CinemaScheduleSearchallReadRequest(@JsonProperty("param") String param) {
+        this.param = param;
+  }
 }

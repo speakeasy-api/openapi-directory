@@ -18,6 +18,7 @@ public class OfferedItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discountPercentage")
     public String discountPercentage;
+
     public OfferedItem withDiscountPercentage(String discountPercentage) {
         this.discountPercentage = discountPercentage;
         return this;
@@ -29,6 +30,7 @@ public class OfferedItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listingId")
     public String listingId;
+
     public OfferedItem withListingId(String listingId) {
         this.listingId = listingId;
         return this;
@@ -40,6 +42,7 @@ public class OfferedItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Amount price;
+
     public OfferedItem withPrice(Amount price) {
         this.price = price;
         return this;
@@ -51,9 +54,11 @@ public class OfferedItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Integer quantity;
+
     public OfferedItem withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public OfferedItem(){}
 }

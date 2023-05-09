@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification {
     
     public String addressingType;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification withAddressingType(String addressingType) {
         this.addressingType = addressingType;
         return this;
@@ -19,6 +20,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification {
     
     
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationBlockDeviceMappings[] blockDeviceMappings;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification withBlockDeviceMappings(RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationBlockDeviceMappings[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -26,6 +28,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification {
     
     
     public Boolean ebsOptimized;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -33,6 +36,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification {
     
     
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationIamInstanceProfile iamInstanceProfile;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification withIamInstanceProfile(RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationIamInstanceProfile iamInstanceProfile) {
         this.iamInstanceProfile = iamInstanceProfile;
         return this;
@@ -40,6 +44,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification {
     
     
     public String imageId;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -47,6 +52,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification {
     
     
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnum instanceType;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification withInstanceType(RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -54,6 +60,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification {
     
     
     public String kernelId;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification withKernelId(String kernelId) {
         this.kernelId = kernelId;
         return this;
@@ -61,6 +68,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification {
     
     
     public String keyName;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -68,6 +76,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification {
     
     
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationMonitoring monitoring;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification withMonitoring(RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationMonitoring monitoring) {
         this.monitoring = monitoring;
         return this;
@@ -75,6 +84,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification {
     
     
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces[] networkInterfaces;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification withNetworkInterfaces(RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationNetworkInterfaces[] networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
@@ -82,6 +92,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification {
     
     
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationPlacement placement;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification withPlacement(RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationPlacement placement) {
         this.placement = placement;
         return this;
@@ -89,6 +100,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification {
     
     
     public String ramdiskId;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification withRamdiskId(String ramdiskId) {
         this.ramdiskId = ramdiskId;
         return this;
@@ -96,6 +108,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification {
     
     
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationSecurityGroups[] securityGroups;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification withSecurityGroups(RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationSecurityGroups[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -103,6 +116,7 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification {
     
     
     public String subnetId;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -110,9 +124,11 @@ public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification {
     
     
     public String userData;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification withUserData(String userData) {
         this.userData = userData;
         return this;
     }
     
+    public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAddressesAttributeResult {
     
     public DescribeAddressesAttributeResultAddresses[] addresses;
+
     public DescribeAddressesAttributeResult withAddresses(DescribeAddressesAttributeResultAddresses[] addresses) {
         this.addresses = addresses;
         return this;
@@ -19,9 +20,11 @@ public class DescribeAddressesAttributeResult {
     
     
     public String nextToken;
+
     public DescribeAddressesAttributeResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAddressesAttributeResult(){}
 }

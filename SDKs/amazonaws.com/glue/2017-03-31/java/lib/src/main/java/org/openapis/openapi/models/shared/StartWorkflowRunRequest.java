@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartWorkflowRunRequest {
     @JsonProperty("Name")
     public String name;
+
     public StartWorkflowRunRequest withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,13 @@ public class StartWorkflowRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunProperties")
     public java.util.Map<String, String> runProperties;
+
     public StartWorkflowRunRequest withRunProperties(java.util.Map<String, String> runProperties) {
         this.runProperties = runProperties;
         return this;
     }
     
+    public StartWorkflowRunRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTrustStoreCertificateResponse {
@@ -12,6 +13,7 @@ public class GetTrustStoreCertificateResponse {
      */
     
     public Object accessDeniedException;
+
     public GetTrustStoreCertificateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetTrustStoreCertificateResponse {
     
     
     public String contentType;
+
     public GetTrustStoreCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetTrustStoreCertificateResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTrustStoreCertificateResponse getTrustStoreCertificateResponse;
+
     public GetTrustStoreCertificateResponse withGetTrustStoreCertificateResponse(org.openapis.openapi.models.shared.GetTrustStoreCertificateResponse getTrustStoreCertificateResponse) {
         this.getTrustStoreCertificateResponse = getTrustStoreCertificateResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetTrustStoreCertificateResponse {
      */
     
     public Object internalServerException;
+
     public GetTrustStoreCertificateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetTrustStoreCertificateResponse {
     
     
     public Integer statusCode;
+
     public GetTrustStoreCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetTrustStoreCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTrustStoreCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetTrustStoreCertificateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetTrustStoreCertificateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetTrustStoreCertificateResponse {
      */
     
     public Object throttlingException;
+
     public GetTrustStoreCertificateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetTrustStoreCertificateResponse {
      */
     
     public Object validationException;
+
     public GetTrustStoreCertificateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetTrustStoreCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

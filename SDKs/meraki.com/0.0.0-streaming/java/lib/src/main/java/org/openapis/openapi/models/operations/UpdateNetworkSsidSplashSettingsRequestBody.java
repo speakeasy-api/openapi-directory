@@ -15,6 +15,7 @@ public class UpdateNetworkSsidSplashSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("splashUrl")
     public String splashUrl;
+
     public UpdateNetworkSsidSplashSettingsRequestBody withSplashUrl(String splashUrl) {
         this.splashUrl = splashUrl;
         return this;
@@ -26,9 +27,11 @@ public class UpdateNetworkSsidSplashSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useSplashUrl")
     public Boolean useSplashUrl;
+
     public UpdateNetworkSsidSplashSettingsRequestBody withUseSplashUrl(Boolean useSplashUrl) {
         this.useSplashUrl = useSplashUrl;
         return this;
     }
     
+    public UpdateNetworkSsidSplashSettingsRequestBody(){}
 }

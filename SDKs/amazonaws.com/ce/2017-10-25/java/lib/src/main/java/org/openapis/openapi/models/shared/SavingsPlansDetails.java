@@ -15,6 +15,7 @@ public class SavingsPlansDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceFamily")
     public String instanceFamily;
+
     public SavingsPlansDetails withInstanceFamily(String instanceFamily) {
         this.instanceFamily = instanceFamily;
         return this;
@@ -23,6 +24,7 @@ public class SavingsPlansDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OfferingId")
     public String offeringId;
+
     public SavingsPlansDetails withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
@@ -31,9 +33,11 @@ public class SavingsPlansDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public SavingsPlansDetails withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public SavingsPlansDetails(){}
 }

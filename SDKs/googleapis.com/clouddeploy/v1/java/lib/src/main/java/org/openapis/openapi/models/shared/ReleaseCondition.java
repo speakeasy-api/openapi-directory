@@ -18,6 +18,7 @@ public class ReleaseCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseReadyCondition")
     public ReleaseReadyCondition releaseReadyCondition;
+
     public ReleaseCondition withReleaseReadyCondition(ReleaseReadyCondition releaseReadyCondition) {
         this.releaseReadyCondition = releaseReadyCondition;
         return this;
@@ -29,9 +30,11 @@ public class ReleaseCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skaffoldSupportedCondition")
     public SkaffoldSupportedCondition skaffoldSupportedCondition;
+
     public ReleaseCondition withSkaffoldSupportedCondition(SkaffoldSupportedCondition skaffoldSupportedCondition) {
         this.skaffoldSupportedCondition = skaffoldSupportedCondition;
         return this;
     }
     
+    public ReleaseCondition(){}
 }

@@ -15,6 +15,7 @@ public class FieldConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excluded")
     public Boolean excluded;
+
     public FieldConfig withExcluded(Boolean excluded) {
         this.excluded = excluded;
         return this;
@@ -23,6 +24,7 @@ public class FieldConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputType")
     public FieldInputConfig inputType;
+
     public FieldConfig withInputType(FieldInputConfig inputType) {
         this.inputType = inputType;
         return this;
@@ -31,6 +33,7 @@ public class FieldConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public FieldConfig withLabel(String label) {
         this.label = label;
         return this;
@@ -39,6 +42,7 @@ public class FieldConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public FieldPosition position;
+
     public FieldConfig withPosition(FieldPosition position) {
         this.position = position;
         return this;
@@ -47,9 +51,11 @@ public class FieldConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validations")
     public FieldValidationConfiguration[] validations;
+
     public FieldConfig withValidations(FieldValidationConfiguration[] validations) {
         this.validations = validations;
         return this;
     }
     
+    public FieldConfig(){}
 }

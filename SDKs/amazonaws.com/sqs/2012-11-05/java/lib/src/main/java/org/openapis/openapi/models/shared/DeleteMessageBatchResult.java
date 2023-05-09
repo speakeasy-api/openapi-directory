@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteMessageBatchResult - For each message in the batch, the response contains a &lt;code&gt; &lt;a&gt;DeleteMessageBatchResultEntry&lt;/a&gt; &lt;/code&gt; tag if the message is deleted or a &lt;code&gt; &lt;a&gt;BatchResultErrorEntry&lt;/a&gt; &lt;/code&gt; tag if the message can't be deleted.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteMessageBatchResult {
     
     public BatchResultErrorEntryList[] failed;
+
     public DeleteMessageBatchResult withFailed(BatchResultErrorEntryList[] failed) {
         this.failed = failed;
         return this;
@@ -19,9 +20,14 @@ public class DeleteMessageBatchResult {
     
     
     public DeleteMessageBatchResultEntryList[] successful;
+
     public DeleteMessageBatchResult withSuccessful(DeleteMessageBatchResultEntryList[] successful) {
         this.successful = successful;
         return this;
     }
     
+    public DeleteMessageBatchResult(@JsonProperty("Failed") BatchResultErrorEntryList[] failed, @JsonProperty("Successful") DeleteMessageBatchResultEntryList[] successful) {
+        this.failed = failed;
+        this.successful = successful;
+  }
 }

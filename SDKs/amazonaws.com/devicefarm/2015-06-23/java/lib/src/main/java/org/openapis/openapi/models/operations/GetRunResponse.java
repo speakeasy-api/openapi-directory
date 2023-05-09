@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRunResponse {
@@ -12,6 +13,7 @@ public class GetRunResponse {
      */
     
     public Object argumentException;
+
     public GetRunResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class GetRunResponse {
     
     
     public String contentType;
+
     public GetRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetRunResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRunResult getRunResult;
+
     public GetRunResponse withGetRunResult(org.openapis.openapi.models.shared.GetRunResult getRunResult) {
         this.getRunResult = getRunResult;
         return this;
@@ -39,6 +43,7 @@ public class GetRunResponse {
      */
     
     public Object limitExceededException;
+
     public GetRunResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class GetRunResponse {
      */
     
     public Object notFoundException;
+
     public GetRunResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetRunResponse {
      */
     
     public Object serviceAccountException;
+
     public GetRunResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class GetRunResponse {
     
     
     public Integer statusCode;
+
     public GetRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

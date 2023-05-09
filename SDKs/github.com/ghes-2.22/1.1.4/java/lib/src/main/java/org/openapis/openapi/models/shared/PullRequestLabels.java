@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PullRequestLabels {
     @JsonProperty("color")
     public String color;
+
     public PullRequestLabels withColor(String color) {
         this.color = color;
         return this;
@@ -16,6 +17,7 @@ public class PullRequestLabels {
     
     @JsonProperty("default")
     public Boolean default_;
+
     public PullRequestLabels withDefault(Boolean default_) {
         this.default_ = default_;
         return this;
@@ -23,6 +25,7 @@ public class PullRequestLabels {
     
     @JsonProperty("description")
     public String description;
+
     public PullRequestLabels withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +33,7 @@ public class PullRequestLabels {
     
     @JsonProperty("id")
     public Long id;
+
     public PullRequestLabels withId(Long id) {
         this.id = id;
         return this;
@@ -37,6 +41,7 @@ public class PullRequestLabels {
     
     @JsonProperty("name")
     public String name;
+
     public PullRequestLabels withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +49,7 @@ public class PullRequestLabels {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public PullRequestLabels withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -51,9 +57,19 @@ public class PullRequestLabels {
     
     @JsonProperty("url")
     public String url;
+
     public PullRequestLabels withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PullRequestLabels(@JsonProperty("color") String color, @JsonProperty("default") Boolean default_, @JsonProperty("description") String description, @JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("url") String url) {
+        this.color = color;
+        this.default_ = default_;
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.url = url;
+  }
 }

@@ -13,11 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GceInstance {
     /**
-     * Size of the boot disk in GB.
+     * A list of the type and count of accelerator cards attached to the instance.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("accelerators")
+    public Accelerator[] accelerators;
+
+    public GceInstance withAccelerators(Accelerator[] accelerators) {
+        this.accelerators = accelerators;
+        return this;
+    }
+    
+    /**
+     * Size of the boot disk in GB. Defaults to 50.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootDiskSizeGb")
     public Integer bootDiskSizeGb;
+
     public GceInstance withBootDiskSizeGb(Integer bootDiskSizeGb) {
         this.bootDiskSizeGb = bootDiskSizeGb;
         return this;
@@ -29,6 +42,7 @@ public class GceInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidentialInstanceConfig")
     public GceConfidentialInstanceConfig confidentialInstanceConfig;
+
     public GceInstance withConfidentialInstanceConfig(GceConfidentialInstanceConfig confidentialInstanceConfig) {
         this.confidentialInstanceConfig = confidentialInstanceConfig;
         return this;
@@ -40,6 +54,7 @@ public class GceInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disablePublicIpAddresses")
     public Boolean disablePublicIpAddresses;
+
     public GceInstance withDisablePublicIpAddresses(Boolean disablePublicIpAddresses) {
         this.disablePublicIpAddresses = disablePublicIpAddresses;
         return this;
@@ -51,28 +66,43 @@ public class GceInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public String machineType;
+
     public GceInstance withMachineType(String machineType) {
         this.machineType = machineType;
         return this;
     }
     
     /**
-     * Number of instances to pool for faster workstation starup.
+     * Number of instances to pool for faster workstation startup.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("poolSize")
     public Integer poolSize;
+
     public GceInstance withPoolSize(Integer poolSize) {
         this.poolSize = poolSize;
         return this;
     }
     
     /**
-     * Email address of the service account that will be used on VM instances used to support this config. This service account must have permission to pull the specified container image. If not set, VMs will run without a service account, in which case the image must be publicly accessible.
+     * Output only. Number of instances currently available in the pool for faster workstation startup.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pooledInstances")
+    public Integer pooledInstances;
+
+    public GceInstance withPooledInstances(Integer pooledInstances) {
+        this.pooledInstances = pooledInstances;
+        return this;
+    }
+    
+    /**
+     * Email address of the service account used on VM instances used to support this configuration. If not set, VMs run with a Google-managed service account. This service account must have permission to pull the specified container image; otherwise, the image must be publicly accessible.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public GceInstance withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
@@ -84,6 +114,7 @@ public class GceInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shieldedInstanceConfig")
     public GceShieldedInstanceConfig shieldedInstanceConfig;
+
     public GceInstance withShieldedInstanceConfig(GceShieldedInstanceConfig shieldedInstanceConfig) {
         this.shieldedInstanceConfig = shieldedInstanceConfig;
         return this;
@@ -95,9 +126,11 @@ public class GceInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public GceInstance withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public GceInstance(){}
 }

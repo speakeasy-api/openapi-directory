@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetSuiteRequest {
     @JsonProperty("arn")
     public String arn;
+
     public GetSuiteRequest withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public GetSuiteRequest(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

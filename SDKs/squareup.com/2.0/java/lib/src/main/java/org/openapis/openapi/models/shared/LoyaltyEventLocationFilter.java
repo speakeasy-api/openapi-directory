@@ -17,9 +17,13 @@ public class LoyaltyEventLocationFilter {
      */
     @JsonProperty("location_ids")
     public String[] locationIds;
+
     public LoyaltyEventLocationFilter withLocationIds(String[] locationIds) {
         this.locationIds = locationIds;
         return this;
     }
     
+    public LoyaltyEventLocationFilter(@JsonProperty("location_ids") String[] locationIds) {
+        this.locationIds = locationIds;
+  }
 }

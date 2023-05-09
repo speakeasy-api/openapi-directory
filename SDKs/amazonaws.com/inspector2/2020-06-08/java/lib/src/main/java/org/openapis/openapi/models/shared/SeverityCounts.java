@@ -15,6 +15,7 @@ public class SeverityCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("all")
     public Long all;
+
     public SeverityCounts withAll(Long all) {
         this.all = all;
         return this;
@@ -23,6 +24,7 @@ public class SeverityCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("critical")
     public Long critical;
+
     public SeverityCounts withCritical(Long critical) {
         this.critical = critical;
         return this;
@@ -31,6 +33,7 @@ public class SeverityCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("high")
     public Long high;
+
     public SeverityCounts withHigh(Long high) {
         this.high = high;
         return this;
@@ -39,9 +42,11 @@ public class SeverityCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("medium")
     public Long medium;
+
     public SeverityCounts withMedium(Long medium) {
         this.medium = medium;
         return this;
     }
     
+    public SeverityCounts(){}
 }

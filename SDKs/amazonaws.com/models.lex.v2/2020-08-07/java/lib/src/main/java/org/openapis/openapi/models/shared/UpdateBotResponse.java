@@ -20,6 +20,7 @@ public class UpdateBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public UpdateBotResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -28,6 +29,7 @@ public class UpdateBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botMembers")
     public BotMember[] botMembers;
+
     public UpdateBotResponse withBotMembers(BotMember[] botMembers) {
         this.botMembers = botMembers;
         return this;
@@ -36,6 +38,7 @@ public class UpdateBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botName")
     public String botName;
+
     public UpdateBotResponse withBotName(String botName) {
         this.botName = botName;
         return this;
@@ -44,6 +47,7 @@ public class UpdateBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botStatus")
     public BotStatusEnum botStatus;
+
     public UpdateBotResponse withBotStatus(BotStatusEnum botStatus) {
         this.botStatus = botStatus;
         return this;
@@ -52,6 +56,7 @@ public class UpdateBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botType")
     public BotTypeEnum botType;
+
     public UpdateBotResponse withBotType(BotTypeEnum botType) {
         this.botType = botType;
         return this;
@@ -62,6 +67,7 @@ public class UpdateBotResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public UpdateBotResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -70,6 +76,7 @@ public class UpdateBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataPrivacy")
     public DataPrivacy dataPrivacy;
+
     public UpdateBotResponse withDataPrivacy(DataPrivacy dataPrivacy) {
         this.dataPrivacy = dataPrivacy;
         return this;
@@ -78,6 +85,7 @@ public class UpdateBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateBotResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -86,6 +94,7 @@ public class UpdateBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idleSessionTTLInSeconds")
     public Long idleSessionTTLInSeconds;
+
     public UpdateBotResponse withIdleSessionTTLInSeconds(Long idleSessionTTLInSeconds) {
         this.idleSessionTTLInSeconds = idleSessionTTLInSeconds;
         return this;
@@ -96,6 +105,7 @@ public class UpdateBotResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public UpdateBotResponse withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -104,9 +114,11 @@ public class UpdateBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public UpdateBotResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public UpdateBotResponse(){}
 }

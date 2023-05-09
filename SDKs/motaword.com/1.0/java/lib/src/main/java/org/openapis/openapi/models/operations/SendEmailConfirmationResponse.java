@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendEmailConfirmationResponse {
     
     public String contentType;
+
     public SendEmailConfirmationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SendEmailConfirmationResponse {
     
     
     public Integer statusCode;
+
     public SendEmailConfirmationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SendEmailConfirmationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendEmailConfirmationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class SendEmailConfirmationResponse {
      */
     
     public SendEmailConfirmation200ApplicationJSON sendEmailConfirmation200ApplicationJSONObject;
+
     public SendEmailConfirmationResponse withSendEmailConfirmation200ApplicationJSONObject(SendEmailConfirmation200ApplicationJSON sendEmailConfirmation200ApplicationJSONObject) {
         this.sendEmailConfirmation200ApplicationJSONObject = sendEmailConfirmation200ApplicationJSONObject;
         return this;
     }
     
+    public SendEmailConfirmationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

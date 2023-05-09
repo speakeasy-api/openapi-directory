@@ -12,6 +12,7 @@ public class CreateIpGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupDesc")
     public String groupDesc;
+
     public CreateIpGroupRequest withGroupDesc(String groupDesc) {
         this.groupDesc = groupDesc;
         return this;
@@ -19,6 +20,7 @@ public class CreateIpGroupRequest {
     
     @JsonProperty("GroupName")
     public String groupName;
+
     public CreateIpGroupRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -27,6 +29,7 @@ public class CreateIpGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateIpGroupRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -35,9 +38,13 @@ public class CreateIpGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserRules")
     public IpRuleItem[] userRules;
+
     public CreateIpGroupRequest withUserRules(IpRuleItem[] userRules) {
         this.userRules = userRules;
         return this;
     }
     
+    public CreateIpGroupRequest(@JsonProperty("GroupName") String groupName) {
+        this.groupName = groupName;
+  }
 }

@@ -57,11 +57,9 @@ public class CountryMatchSimilarityKey {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetcountrymatchResponse res = new org.openapis.openapi.models.operations.GetcountrymatchResponse() {{
+        org.openapis.openapi.models.operations.GetcountrymatchResponse res = new org.openapis.openapi.models.operations.GetcountrymatchResponse(contentType, httpRes.statusCode()) {{
             getcountrymatch200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

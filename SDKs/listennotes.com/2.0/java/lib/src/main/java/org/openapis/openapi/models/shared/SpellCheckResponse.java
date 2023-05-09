@@ -15,6 +15,7 @@ public class SpellCheckResponse {
      */
     @JsonProperty("corrected_text_html")
     public String correctedTextHtml;
+
     public SpellCheckResponse withCorrectedTextHtml(String correctedTextHtml) {
         this.correctedTextHtml = correctedTextHtml;
         return this;
@@ -25,9 +26,14 @@ public class SpellCheckResponse {
      */
     @JsonProperty("tokens")
     public SpellCheckResponseTokens[] tokens;
+
     public SpellCheckResponse withTokens(SpellCheckResponseTokens[] tokens) {
         this.tokens = tokens;
         return this;
     }
     
+    public SpellCheckResponse(@JsonProperty("corrected_text_html") String correctedTextHtml, @JsonProperty("tokens") SpellCheckResponseTokens[] tokens) {
+        this.correctedTextHtml = correctedTextHtml;
+        this.tokens = tokens;
+  }
 }

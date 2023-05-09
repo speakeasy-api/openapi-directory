@@ -59,11 +59,9 @@ public class GlobalForwardingRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class GlobalForwardingRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesGetResponse res = new org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesGetResponse res = new org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesGetResponse(contentType, httpRes.statusCode()) {{
             forwardingRule = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class GlobalForwardingRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesInsertResponse res = new org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesInsertResponse res = new org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class GlobalForwardingRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesListResponse res = new org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesListResponse res = new org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesListResponse(contentType, httpRes.statusCode()) {{
             forwardingRuleList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class GlobalForwardingRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesPatchResponse res = new org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesPatchResponse res = new org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class GlobalForwardingRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesSetLabelsResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesSetLabelsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,11 +331,9 @@ public class GlobalForwardingRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesSetTargetResponse res = new org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesSetTargetResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesSetTargetResponse res = new org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesSetTargetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -391,11 +377,9 @@ public class GlobalForwardingRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeGlobalForwardingRulesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

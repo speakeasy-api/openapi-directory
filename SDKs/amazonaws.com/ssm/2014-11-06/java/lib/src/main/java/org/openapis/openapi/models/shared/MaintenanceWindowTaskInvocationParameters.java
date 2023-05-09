@@ -15,6 +15,7 @@ public class MaintenanceWindowTaskInvocationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Automation")
     public MaintenanceWindowAutomationParameters automation;
+
     public MaintenanceWindowTaskInvocationParameters withAutomation(MaintenanceWindowAutomationParameters automation) {
         this.automation = automation;
         return this;
@@ -23,6 +24,7 @@ public class MaintenanceWindowTaskInvocationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lambda")
     public MaintenanceWindowLambdaParameters lambda;
+
     public MaintenanceWindowTaskInvocationParameters withLambda(MaintenanceWindowLambdaParameters lambda) {
         this.lambda = lambda;
         return this;
@@ -31,6 +33,7 @@ public class MaintenanceWindowTaskInvocationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunCommand")
     public MaintenanceWindowRunCommandParameters runCommand;
+
     public MaintenanceWindowTaskInvocationParameters withRunCommand(MaintenanceWindowRunCommandParameters runCommand) {
         this.runCommand = runCommand;
         return this;
@@ -39,9 +42,11 @@ public class MaintenanceWindowTaskInvocationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepFunctions")
     public MaintenanceWindowStepFunctionsParameters stepFunctions;
+
     public MaintenanceWindowTaskInvocationParameters withStepFunctions(MaintenanceWindowStepFunctionsParameters stepFunctions) {
         this.stepFunctions = stepFunctions;
         return this;
     }
     
+    public MaintenanceWindowTaskInvocationParameters(){}
 }

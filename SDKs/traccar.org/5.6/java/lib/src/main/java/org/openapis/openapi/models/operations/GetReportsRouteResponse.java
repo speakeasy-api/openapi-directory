@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetReportsRouteResponse {
     
     public byte[] body;
+
     public GetReportsRouteResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetReportsRouteResponse {
     
     
     public String contentType;
+
     public GetReportsRouteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetReportsRouteResponse {
      */
     
     public org.openapis.openapi.models.shared.Position[] positions;
+
     public GetReportsRouteResponse withPositions(org.openapis.openapi.models.shared.Position[] positions) {
         this.positions = positions;
         return this;
@@ -33,6 +37,7 @@ public class GetReportsRouteResponse {
     
     
     public Integer statusCode;
+
     public GetReportsRouteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetReportsRouteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetReportsRouteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetReportsRouteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

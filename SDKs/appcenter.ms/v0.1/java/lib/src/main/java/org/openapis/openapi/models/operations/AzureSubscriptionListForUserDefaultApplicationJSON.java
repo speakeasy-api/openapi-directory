@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AzureSubscriptionListForUserDefaultApplicationJSON {
     @JsonProperty("error")
     public AzureSubscriptionListForUserDefaultApplicationJSONError error;
+
     public AzureSubscriptionListForUserDefaultApplicationJSON withError(AzureSubscriptionListForUserDefaultApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public AzureSubscriptionListForUserDefaultApplicationJSON(@JsonProperty("error") AzureSubscriptionListForUserDefaultApplicationJSONError error) {
+        this.error = error;
+  }
 }

@@ -15,9 +15,11 @@ public class StatelessCustomPublishMetricAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public StatelessCustomPublishMetricActionDimension[] dimensions;
+
     public StatelessCustomPublishMetricAction withDimensions(StatelessCustomPublishMetricActionDimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
     }
     
+    public StatelessCustomPublishMetricAction(){}
 }

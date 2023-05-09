@@ -18,6 +18,7 @@ public class TagKeyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TagKeyInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class TagKeyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public TagKeyInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,17 +42,19 @@ public class TagKeyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TagKeyInput withName(String name) {
         this.name = name;
         return this;
     }
     
     /**
-     * Immutable. The resource name of the new TagKey's parent. Must be of the form `organizations/{org_id}`.
+     * Immutable. The resource name of the TagKey's parent. A TagKey can be parented by an Organization or a Project. For a TagKey parented by an Organization, its parent must be in the form `organizations/{org_id}`. For a TagKey parented by a Project, its parent can be in the form `projects/{project_id}` or `projects/{project_number}`.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public TagKeyInput withParent(String parent) {
         this.parent = parent;
         return this;
@@ -62,6 +66,7 @@ public class TagKeyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purpose")
     public TagKeyPurposeEnum purpose;
+
     public TagKeyInput withPurpose(TagKeyPurposeEnum purpose) {
         this.purpose = purpose;
         return this;
@@ -73,6 +78,7 @@ public class TagKeyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purposeData")
     public java.util.Map<String, String> purposeData;
+
     public TagKeyInput withPurposeData(java.util.Map<String, String> purposeData) {
         this.purposeData = purposeData;
         return this;
@@ -84,9 +90,11 @@ public class TagKeyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortName")
     public String shortName;
+
     public TagKeyInput withShortName(String shortName) {
         this.shortName = shortName;
         return this;
     }
     
+    public TagKeyInput(){}
 }

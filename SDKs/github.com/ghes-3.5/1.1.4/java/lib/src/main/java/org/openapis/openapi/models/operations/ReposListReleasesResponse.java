@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposListReleasesResponse {
     
     public String contentType;
+
     public ReposListReleasesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposListReleasesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ReposListReleasesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ReposListReleasesResponse {
     
     
     public Integer statusCode;
+
     public ReposListReleasesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ReposListReleasesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposListReleasesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ReposListReleasesResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposListReleasesResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,9 +56,14 @@ public class ReposListReleasesResponse {
      */
     
     public org.openapis.openapi.models.shared.Release[] releases;
+
     public ReposListReleasesResponse withReleases(org.openapis.openapi.models.shared.Release[] releases) {
         this.releases = releases;
         return this;
     }
     
+    public ReposListReleasesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

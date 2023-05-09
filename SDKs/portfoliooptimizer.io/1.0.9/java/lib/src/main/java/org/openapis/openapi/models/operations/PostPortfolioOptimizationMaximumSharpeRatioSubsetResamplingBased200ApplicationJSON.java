@@ -15,9 +15,13 @@ public class PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBased200
      */
     @JsonProperty("assetsWeights")
     public Double[] assetsWeights;
+
     public PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBased200ApplicationJSON withAssetsWeights(Double[] assetsWeights) {
         this.assetsWeights = assetsWeights;
         return this;
     }
     
+    public PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBased200ApplicationJSON(@JsonProperty("assetsWeights") Double[] assetsWeights) {
+        this.assetsWeights = assetsWeights;
+  }
 }

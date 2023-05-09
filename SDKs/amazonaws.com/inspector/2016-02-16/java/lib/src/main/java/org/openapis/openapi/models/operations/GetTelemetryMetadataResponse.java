@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTelemetryMetadataResponse {
@@ -12,6 +13,7 @@ public class GetTelemetryMetadataResponse {
      */
     
     public Object accessDeniedException;
+
     public GetTelemetryMetadataResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetTelemetryMetadataResponse {
     
     
     public String contentType;
+
     public GetTelemetryMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetTelemetryMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTelemetryMetadataResponse getTelemetryMetadataResponse;
+
     public GetTelemetryMetadataResponse withGetTelemetryMetadataResponse(org.openapis.openapi.models.shared.GetTelemetryMetadataResponse getTelemetryMetadataResponse) {
         this.getTelemetryMetadataResponse = getTelemetryMetadataResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetTelemetryMetadataResponse {
      */
     
     public Object internalException;
+
     public GetTelemetryMetadataResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -49,6 +54,7 @@ public class GetTelemetryMetadataResponse {
      */
     
     public Object invalidInputException;
+
     public GetTelemetryMetadataResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetTelemetryMetadataResponse {
      */
     
     public Object noSuchEntityException;
+
     public GetTelemetryMetadataResponse withNoSuchEntityException(Object noSuchEntityException) {
         this.noSuchEntityException = noSuchEntityException;
         return this;
@@ -66,6 +73,7 @@ public class GetTelemetryMetadataResponse {
     
     
     public Integer statusCode;
+
     public GetTelemetryMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetTelemetryMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTelemetryMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTelemetryMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

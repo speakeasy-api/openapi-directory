@@ -15,6 +15,7 @@ public class ServiceQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Adjustable")
     public Boolean adjustable;
+
     public ServiceQuota withAdjustable(Boolean adjustable) {
         this.adjustable = adjustable;
         return this;
@@ -23,6 +24,7 @@ public class ServiceQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorReason")
     public ErrorReason errorReason;
+
     public ServiceQuota withErrorReason(ErrorReason errorReason) {
         this.errorReason = errorReason;
         return this;
@@ -31,6 +33,7 @@ public class ServiceQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalQuota")
     public Boolean globalQuota;
+
     public ServiceQuota withGlobalQuota(Boolean globalQuota) {
         this.globalQuota = globalQuota;
         return this;
@@ -39,6 +42,7 @@ public class ServiceQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Period")
     public QuotaPeriod period;
+
     public ServiceQuota withPeriod(QuotaPeriod period) {
         this.period = period;
         return this;
@@ -47,6 +51,7 @@ public class ServiceQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuotaArn")
     public String quotaArn;
+
     public ServiceQuota withQuotaArn(String quotaArn) {
         this.quotaArn = quotaArn;
         return this;
@@ -55,6 +60,7 @@ public class ServiceQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuotaCode")
     public String quotaCode;
+
     public ServiceQuota withQuotaCode(String quotaCode) {
         this.quotaCode = quotaCode;
         return this;
@@ -63,6 +69,7 @@ public class ServiceQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuotaName")
     public String quotaName;
+
     public ServiceQuota withQuotaName(String quotaName) {
         this.quotaName = quotaName;
         return this;
@@ -71,6 +78,7 @@ public class ServiceQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceCode")
     public String serviceCode;
+
     public ServiceQuota withServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
@@ -79,6 +87,7 @@ public class ServiceQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceName")
     public String serviceName;
+
     public ServiceQuota withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -87,6 +96,7 @@ public class ServiceQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unit")
     public String unit;
+
     public ServiceQuota withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -95,6 +105,7 @@ public class ServiceQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsageMetric")
     public MetricInfo usageMetric;
+
     public ServiceQuota withUsageMetric(MetricInfo usageMetric) {
         this.usageMetric = usageMetric;
         return this;
@@ -103,9 +114,11 @@ public class ServiceQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public Double value;
+
     public ServiceQuota withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public ServiceQuota(){}
 }

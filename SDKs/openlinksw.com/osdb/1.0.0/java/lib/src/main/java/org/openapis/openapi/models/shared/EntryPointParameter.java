@@ -12,6 +12,7 @@ public class EntryPointParameter {
      */
     @JsonProperty("description")
     public String description;
+
     public EntryPointParameter withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class EntryPointParameter {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public EntryPointParameter withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -32,6 +34,7 @@ public class EntryPointParameter {
      */
     @JsonProperty("parameter_name")
     public String parameterName;
+
     public EntryPointParameter withParameterName(String parameterName) {
         this.parameterName = parameterName;
         return this;
@@ -42,6 +45,7 @@ public class EntryPointParameter {
      */
     @JsonProperty("permitted_values")
     public String[] permittedValues;
+
     public EntryPointParameter withPermittedValues(String[] permittedValues) {
         this.permittedValues = permittedValues;
         return this;
@@ -52,6 +56,7 @@ public class EntryPointParameter {
      */
     @JsonProperty("required")
     public Integer required;
+
     public EntryPointParameter withRequired(Integer required) {
         this.required = required;
         return this;
@@ -62,9 +67,18 @@ public class EntryPointParameter {
      */
     @JsonProperty("type")
     public EntryPointParameterTypeEnum type;
+
     public EntryPointParameter withType(EntryPointParameterTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public EntryPointParameter(@JsonProperty("description") String description, @JsonProperty("display_name") String displayName, @JsonProperty("parameter_name") String parameterName, @JsonProperty("permitted_values") String[] permittedValues, @JsonProperty("required") Integer required, @JsonProperty("type") EntryPointParameterTypeEnum type) {
+        this.description = description;
+        this.displayName = displayName;
+        this.parameterName = parameterName;
+        this.permittedValues = permittedValues;
+        this.required = required;
+        this.type = type;
+  }
 }

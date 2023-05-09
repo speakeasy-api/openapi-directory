@@ -15,9 +15,11 @@ public class PutEmailIdentityConfigurationSetAttributesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSetName")
     public String configurationSetName;
+
     public PutEmailIdentityConfigurationSetAttributesRequestBody withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
     }
     
+    public PutEmailIdentityConfigurationSetAttributesRequestBody(){}
 }

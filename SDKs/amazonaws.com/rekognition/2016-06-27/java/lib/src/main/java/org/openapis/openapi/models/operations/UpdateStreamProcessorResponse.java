@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateStreamProcessorResponse {
@@ -12,6 +13,7 @@ public class UpdateStreamProcessorResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateStreamProcessorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateStreamProcessorResponse {
     
     
     public String contentType;
+
     public UpdateStreamProcessorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateStreamProcessorResponse {
      */
     
     public Object internalServerError;
+
     public UpdateStreamProcessorResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class UpdateStreamProcessorResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateStreamProcessorResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,8 +54,20 @@ public class UpdateStreamProcessorResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public UpdateStreamProcessorResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
+        return this;
+    }
+    
+    /**
+     * ResourceInUseException
+     */
+    
+    public Object resourceInUseException;
+
+    public UpdateStreamProcessorResponse withResourceInUseException(Object resourceInUseException) {
+        this.resourceInUseException = resourceInUseException;
         return this;
     }
     
@@ -59,6 +76,7 @@ public class UpdateStreamProcessorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateStreamProcessorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +84,7 @@ public class UpdateStreamProcessorResponse {
     
     
     public Integer statusCode;
+
     public UpdateStreamProcessorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +92,7 @@ public class UpdateStreamProcessorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateStreamProcessorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +103,7 @@ public class UpdateStreamProcessorResponse {
      */
     
     public Object throttlingException;
+
     public UpdateStreamProcessorResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +114,14 @@ public class UpdateStreamProcessorResponse {
      */
     
     public java.util.Map<String, Object> updateStreamProcessorResponse;
+
     public UpdateStreamProcessorResponse withUpdateStreamProcessorResponse(java.util.Map<String, Object> updateStreamProcessorResponse) {
         this.updateStreamProcessorResponse = updateStreamProcessorResponse;
         return this;
     }
     
+    public UpdateStreamProcessorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

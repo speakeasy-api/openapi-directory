@@ -12,9 +12,11 @@ public class CancelreservationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservation")
     public String reservation;
+
     public CancelreservationRequestBody withReservation(String reservation) {
         this.reservation = reservation;
         return this;
     }
     
+    public CancelreservationRequestBody(){}
 }

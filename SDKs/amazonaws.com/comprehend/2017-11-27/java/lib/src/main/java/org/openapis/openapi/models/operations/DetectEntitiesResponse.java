@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetectEntitiesResponse {
     
     public String contentType;
+
     public DetectEntitiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DetectEntitiesResponse {
      */
     
     public org.openapis.openapi.models.shared.DetectEntitiesResponse detectEntitiesResponse;
+
     public DetectEntitiesResponse withDetectEntitiesResponse(org.openapis.openapi.models.shared.DetectEntitiesResponse detectEntitiesResponse) {
         this.detectEntitiesResponse = detectEntitiesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DetectEntitiesResponse {
      */
     
     public Object internalServerException;
+
     public DetectEntitiesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DetectEntitiesResponse {
      */
     
     public Object invalidRequestException;
+
     public DetectEntitiesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DetectEntitiesResponse {
     
     
     public Integer statusCode;
+
     public DetectEntitiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DetectEntitiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetectEntitiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DetectEntitiesResponse {
      */
     
     public Object resourceUnavailableException;
+
     public DetectEntitiesResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
@@ -73,6 +81,7 @@ public class DetectEntitiesResponse {
      */
     
     public Object textSizeLimitExceededException;
+
     public DetectEntitiesResponse withTextSizeLimitExceededException(Object textSizeLimitExceededException) {
         this.textSizeLimitExceededException = textSizeLimitExceededException;
         return this;
@@ -83,9 +92,14 @@ public class DetectEntitiesResponse {
      */
     
     public Object unsupportedLanguageException;
+
     public DetectEntitiesResponse withUnsupportedLanguageException(Object unsupportedLanguageException) {
         this.unsupportedLanguageException = unsupportedLanguageException;
         return this;
     }
     
+    public DetectEntitiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

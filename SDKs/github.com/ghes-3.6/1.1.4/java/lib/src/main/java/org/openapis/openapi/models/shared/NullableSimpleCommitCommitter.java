@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NullableSimpleCommitCommitter {
     @JsonProperty("email")
     public String email;
+
     public NullableSimpleCommitCommitter withEmail(String email) {
         this.email = email;
         return this;
@@ -16,9 +17,14 @@ public class NullableSimpleCommitCommitter {
     
     @JsonProperty("name")
     public String name;
+
     public NullableSimpleCommitCommitter withName(String name) {
         this.name = name;
         return this;
     }
     
+    public NullableSimpleCommitCommitter(@JsonProperty("email") String email, @JsonProperty("name") String name) {
+        this.email = email;
+        this.name = name;
+  }
 }

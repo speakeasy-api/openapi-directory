@@ -18,6 +18,7 @@ public class Componentsh0 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("components")
     public Componentsh0[] components;
+
     public Componentsh0 withComponents(Componentsh0[] components) {
         this.components = components;
         return this;
@@ -29,6 +30,7 @@ public class Componentsh0 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("describtion")
     public String describtion;
+
     public Componentsh0 withDescribtion(String describtion) {
         this.describtion = describtion;
         return this;
@@ -40,6 +42,7 @@ public class Componentsh0 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mutlityplier")
     public String mutlityplier;
+
     public Componentsh0 withMutlityplier(String mutlityplier) {
         this.mutlityplier = mutlityplier;
         return this;
@@ -51,6 +54,7 @@ public class Componentsh0 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per")
     public Double per;
+
     public Componentsh0 withPer(Double per) {
         this.per = per;
         return this;
@@ -62,9 +66,11 @@ public class Componentsh0 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sum")
     public Double sum;
+
     public Componentsh0 withSum(Double sum) {
         this.sum = sum;
         return this;
     }
     
+    public Componentsh0(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WriteRecordsResponse {
@@ -12,6 +13,7 @@ public class WriteRecordsResponse {
      */
     
     public Object accessDeniedException;
+
     public WriteRecordsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class WriteRecordsResponse {
     
     
     public String contentType;
+
     public WriteRecordsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class WriteRecordsResponse {
      */
     
     public Object internalServerException;
+
     public WriteRecordsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class WriteRecordsResponse {
      */
     
     public Object invalidEndpointException;
+
     public WriteRecordsResponse withInvalidEndpointException(Object invalidEndpointException) {
         this.invalidEndpointException = invalidEndpointException;
         return this;
@@ -46,6 +51,7 @@ public class WriteRecordsResponse {
     
     
     public Integer statusCode;
+
     public WriteRecordsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class WriteRecordsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WriteRecordsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class WriteRecordsResponse {
      */
     
     public Object rejectedRecordsException;
+
     public WriteRecordsResponse withRejectedRecordsException(Object rejectedRecordsException) {
         this.rejectedRecordsException = rejectedRecordsException;
         return this;
@@ -73,6 +81,7 @@ public class WriteRecordsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public WriteRecordsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class WriteRecordsResponse {
      */
     
     public Object throttlingException;
+
     public WriteRecordsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class WriteRecordsResponse {
      */
     
     public Object validationException;
+
     public WriteRecordsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
@@ -103,9 +114,14 @@ public class WriteRecordsResponse {
      */
     
     public org.openapis.openapi.models.shared.WriteRecordsResponse writeRecordsResponse;
+
     public WriteRecordsResponse withWriteRecordsResponse(org.openapis.openapi.models.shared.WriteRecordsResponse writeRecordsResponse) {
         this.writeRecordsResponse = writeRecordsResponse;
         return this;
     }
     
+    public WriteRecordsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

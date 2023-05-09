@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AnnotationImportItemDetail {
     @JsonProperty("jobStatus")
     public JobStatusEnum jobStatus;
+
     public AnnotationImportItemDetail withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -19,9 +20,14 @@ public class AnnotationImportItemDetail {
     
     @JsonProperty("source")
     public String source;
+
     public AnnotationImportItemDetail withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public AnnotationImportItemDetail(@JsonProperty("jobStatus") JobStatusEnum jobStatus, @JsonProperty("source") String source) {
+        this.jobStatus = jobStatus;
+        this.source = source;
+  }
 }

@@ -15,6 +15,7 @@ public class S3DirectTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Compression")
     public String compression;
+
     public S3DirectTarget withCompression(String compression) {
         this.compression = compression;
         return this;
@@ -22,6 +23,7 @@ public class S3DirectTarget {
     
     @JsonProperty("Format")
     public TargetFormatEnum format;
+
     public S3DirectTarget withFormat(TargetFormatEnum format) {
         this.format = format;
         return this;
@@ -29,6 +31,7 @@ public class S3DirectTarget {
     
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public S3DirectTarget withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -36,6 +39,7 @@ public class S3DirectTarget {
     
     @JsonProperty("Name")
     public String name;
+
     public S3DirectTarget withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class S3DirectTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionKeys")
     public String[][] partitionKeys;
+
     public S3DirectTarget withPartitionKeys(String[][] partitionKeys) {
         this.partitionKeys = partitionKeys;
         return this;
@@ -51,6 +56,7 @@ public class S3DirectTarget {
     
     @JsonProperty("Path")
     public String path;
+
     public S3DirectTarget withPath(String path) {
         this.path = path;
         return this;
@@ -59,9 +65,16 @@ public class S3DirectTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaChangePolicy")
     public DirectSchemaChangePolicy schemaChangePolicy;
+
     public S3DirectTarget withSchemaChangePolicy(DirectSchemaChangePolicy schemaChangePolicy) {
         this.schemaChangePolicy = schemaChangePolicy;
         return this;
     }
     
+    public S3DirectTarget(@JsonProperty("Format") TargetFormatEnum format, @JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name, @JsonProperty("Path") String path) {
+        this.format = format;
+        this.inputs = inputs;
+        this.name = name;
+        this.path = path;
+  }
 }

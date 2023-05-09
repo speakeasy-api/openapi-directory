@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEarningsByEarningCodeRequest {
@@ -12,6 +13,7 @@ public class GetEarningsByEarningCodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public GetEarningsByEarningCodeRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -22,6 +24,7 @@ public class GetEarningsByEarningCodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=earningCode")
     public String earningCode;
+
     public GetEarningsByEarningCodeRequest withEarningCode(String earningCode) {
         this.earningCode = earningCode;
         return this;
@@ -32,9 +35,15 @@ public class GetEarningsByEarningCodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
     public String employeeId;
+
     public GetEarningsByEarningCodeRequest withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
     }
     
+    public GetEarningsByEarningCodeRequest(@JsonProperty("companyId") String companyId, @JsonProperty("earningCode") String earningCode, @JsonProperty("employeeId") String employeeId) {
+        this.companyId = companyId;
+        this.earningCode = earningCode;
+        this.employeeId = employeeId;
+  }
 }

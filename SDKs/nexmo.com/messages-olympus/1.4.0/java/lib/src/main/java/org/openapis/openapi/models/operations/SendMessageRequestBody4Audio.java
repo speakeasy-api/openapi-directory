@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SendMessageRequestBody4Audio {
     @JsonProperty("audio")
     public SendMessageRequestBody4AudioAudio audio;
+
     public SendMessageRequestBody4Audio withAudio(SendMessageRequestBody4AudioAudio audio) {
         this.audio = audio;
         return this;
@@ -21,6 +22,7 @@ public class SendMessageRequestBody4Audio {
      */
     @JsonProperty("channel")
     public SendMessageRequestBody4AudioChannelEnum channel;
+
     public SendMessageRequestBody4Audio withChannel(SendMessageRequestBody4AudioChannelEnum channel) {
         this.channel = channel;
         return this;
@@ -32,6 +34,7 @@ public class SendMessageRequestBody4Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_ref")
     public String clientRef;
+
     public SendMessageRequestBody4Audio withClientRef(String clientRef) {
         this.clientRef = clientRef;
         return this;
@@ -43,6 +46,7 @@ public class SendMessageRequestBody4Audio {
      */
     @JsonProperty("from")
     public String from;
+
     public SendMessageRequestBody4Audio withFrom(String from) {
         this.from = from;
         return this;
@@ -53,6 +57,7 @@ public class SendMessageRequestBody4Audio {
      */
     @JsonProperty("message_type")
     public SendMessageRequestBody4AudioMessageTypeEnum messageType;
+
     public SendMessageRequestBody4Audio withMessageType(SendMessageRequestBody4AudioMessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -61,6 +66,7 @@ public class SendMessageRequestBody4Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messenger")
     public SendMessageRequestBody4AudioMessenger messenger;
+
     public SendMessageRequestBody4Audio withMessenger(SendMessageRequestBody4AudioMessenger messenger) {
         this.messenger = messenger;
         return this;
@@ -72,9 +78,17 @@ public class SendMessageRequestBody4Audio {
      */
     @JsonProperty("to")
     public String to;
+
     public SendMessageRequestBody4Audio withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public SendMessageRequestBody4Audio(@JsonProperty("audio") SendMessageRequestBody4AudioAudio audio, @JsonProperty("channel") SendMessageRequestBody4AudioChannelEnum channel, @JsonProperty("from") String from, @JsonProperty("message_type") SendMessageRequestBody4AudioMessageTypeEnum messageType, @JsonProperty("to") String to) {
+        this.audio = audio;
+        this.channel = channel;
+        this.from = from;
+        this.messageType = messageType;
+        this.to = to;
+  }
 }

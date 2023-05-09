@@ -18,6 +18,7 @@ public class CreateInventoryTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedType")
     public String feedType;
+
     public CreateInventoryTaskRequest withFeedType(String feedType) {
         this.feedType = feedType;
         return this;
@@ -29,6 +30,7 @@ public class CreateInventoryTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterCriteria")
     public InventoryFilterCriteria filterCriteria;
+
     public CreateInventoryTaskRequest withFilterCriteria(InventoryFilterCriteria filterCriteria) {
         this.filterCriteria = filterCriteria;
         return this;
@@ -40,9 +42,11 @@ public class CreateInventoryTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaVersion")
     public String schemaVersion;
+
     public CreateInventoryTaskRequest withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
     }
     
+    public CreateInventoryTaskRequest(){}
 }

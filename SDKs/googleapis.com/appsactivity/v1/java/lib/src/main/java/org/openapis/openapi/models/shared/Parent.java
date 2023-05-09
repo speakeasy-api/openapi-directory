@@ -18,6 +18,7 @@ public class Parent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Parent withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class Parent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isRoot")
     public Boolean isRoot;
+
     public Parent withIsRoot(Boolean isRoot) {
         this.isRoot = isRoot;
         return this;
@@ -40,9 +42,11 @@ public class Parent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Parent withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Parent(){}
 }

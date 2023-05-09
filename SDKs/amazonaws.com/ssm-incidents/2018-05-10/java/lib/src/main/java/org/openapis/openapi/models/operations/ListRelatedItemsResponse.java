@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRelatedItemsResponse {
@@ -12,6 +13,7 @@ public class ListRelatedItemsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListRelatedItemsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListRelatedItemsResponse {
     
     
     public String contentType;
+
     public ListRelatedItemsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListRelatedItemsResponse {
      */
     
     public Object internalServerException;
+
     public ListRelatedItemsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListRelatedItemsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRelatedItemsOutput listRelatedItemsOutput;
+
     public ListRelatedItemsResponse withListRelatedItemsOutput(org.openapis.openapi.models.shared.ListRelatedItemsOutput listRelatedItemsOutput) {
         this.listRelatedItemsOutput = listRelatedItemsOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListRelatedItemsResponse {
     
     
     public Integer statusCode;
+
     public ListRelatedItemsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListRelatedItemsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRelatedItemsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListRelatedItemsResponse {
      */
     
     public Object throttlingException;
+
     public ListRelatedItemsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListRelatedItemsResponse {
      */
     
     public Object validationException;
+
     public ListRelatedItemsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListRelatedItemsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

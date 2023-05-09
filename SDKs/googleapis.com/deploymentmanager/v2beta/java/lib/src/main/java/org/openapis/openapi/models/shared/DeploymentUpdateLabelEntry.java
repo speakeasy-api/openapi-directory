@@ -18,6 +18,7 @@ public class DeploymentUpdateLabelEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public DeploymentUpdateLabelEntry withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class DeploymentUpdateLabelEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public DeploymentUpdateLabelEntry withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DeploymentUpdateLabelEntry(){}
 }

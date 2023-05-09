@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTypedLinkFacetResponse {
@@ -12,6 +13,7 @@ public class UpdateTypedLinkFacetResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException;
+
     public UpdateTypedLinkFacetResponse withAccessDeniedException(org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateTypedLinkFacetResponse {
     
     
     public String contentType;
+
     public UpdateTypedLinkFacetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateTypedLinkFacetResponse {
      */
     
     public org.openapis.openapi.models.shared.FacetNotFoundException facetNotFoundException;
+
     public UpdateTypedLinkFacetResponse withFacetNotFoundException(org.openapis.openapi.models.shared.FacetNotFoundException facetNotFoundException) {
         this.facetNotFoundException = facetNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateTypedLinkFacetResponse {
      */
     
     public org.openapis.openapi.models.shared.FacetValidationException facetValidationException;
+
     public UpdateTypedLinkFacetResponse withFacetValidationException(org.openapis.openapi.models.shared.FacetValidationException facetValidationException) {
         this.facetValidationException = facetValidationException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateTypedLinkFacetResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceException internalServiceException;
+
     public UpdateTypedLinkFacetResponse withInternalServiceException(org.openapis.openapi.models.shared.InternalServiceException internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateTypedLinkFacetResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArnException invalidArnException;
+
     public UpdateTypedLinkFacetResponse withInvalidArnException(org.openapis.openapi.models.shared.InvalidArnException invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateTypedLinkFacetResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidFacetUpdateException invalidFacetUpdateException;
+
     public UpdateTypedLinkFacetResponse withInvalidFacetUpdateException(org.openapis.openapi.models.shared.InvalidFacetUpdateException invalidFacetUpdateException) {
         this.invalidFacetUpdateException = invalidFacetUpdateException;
         return this;
@@ -79,6 +87,7 @@ public class UpdateTypedLinkFacetResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidRuleException invalidRuleException;
+
     public UpdateTypedLinkFacetResponse withInvalidRuleException(org.openapis.openapi.models.shared.InvalidRuleException invalidRuleException) {
         this.invalidRuleException = invalidRuleException;
         return this;
@@ -89,6 +98,7 @@ public class UpdateTypedLinkFacetResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public UpdateTypedLinkFacetResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -99,6 +109,7 @@ public class UpdateTypedLinkFacetResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException;
+
     public UpdateTypedLinkFacetResponse withRetryableConflictException(org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -106,6 +117,7 @@ public class UpdateTypedLinkFacetResponse {
     
     
     public Integer statusCode;
+
     public UpdateTypedLinkFacetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class UpdateTypedLinkFacetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTypedLinkFacetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class UpdateTypedLinkFacetResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public UpdateTypedLinkFacetResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -133,6 +147,7 @@ public class UpdateTypedLinkFacetResponse {
      */
     
     public java.util.Map<String, Object> updateTypedLinkFacetResponse;
+
     public UpdateTypedLinkFacetResponse withUpdateTypedLinkFacetResponse(java.util.Map<String, Object> updateTypedLinkFacetResponse) {
         this.updateTypedLinkFacetResponse = updateTypedLinkFacetResponse;
         return this;
@@ -143,9 +158,14 @@ public class UpdateTypedLinkFacetResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationException validationException;
+
     public UpdateTypedLinkFacetResponse withValidationException(org.openapis.openapi.models.shared.ValidationException validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateTypedLinkFacetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

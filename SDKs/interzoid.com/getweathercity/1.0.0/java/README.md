@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetweatherRequest;
 import org.openapis.openapi.models.operations.GetweatherResponse;
 
@@ -26,20 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetweatherRequest req = new GetweatherRequest() {{
-                city = "Laruecester";
-                license = "quibusdam";
-                state = "unde";
-            }}            
+            GetweatherRequest req = new GetweatherRequest("corrupti", "provident", "distinctio");            
 
             GetweatherResponse res = sdk.weatherByCityAndState.getweather(req);
 
-            if (res.getweather200ApplicationJSONObject.isPresent()) {
+            if (res.getweather200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -47,9 +44,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### weatherByCityAndState
+### [weatherByCityAndState](docs/weatherbycityandstate/README.md)
 
-* `getweather` - Gets current weather information for a US city and state
+* [getweather](docs/weatherbycityandstate/README.md#getweather) - Gets current weather information for a US city and state
 <!-- End SDK Available Operations -->
 
 ### Maturity

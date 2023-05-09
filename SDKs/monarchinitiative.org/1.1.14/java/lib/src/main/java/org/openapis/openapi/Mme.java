@@ -55,10 +55,8 @@ public class Mme {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostDiseaseMmeResponse res = new org.openapis.openapi.models.operations.PostDiseaseMmeResponse() {{
+        org.openapis.openapi.models.operations.PostDiseaseMmeResponse res = new org.openapis.openapi.models.operations.PostDiseaseMmeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -92,10 +90,8 @@ public class Mme {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostFlyMmeResponse res = new org.openapis.openapi.models.operations.PostFlyMmeResponse() {{
+        org.openapis.openapi.models.operations.PostFlyMmeResponse res = new org.openapis.openapi.models.operations.PostFlyMmeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,10 +125,8 @@ public class Mme {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMouseMmeResponse res = new org.openapis.openapi.models.operations.PostMouseMmeResponse() {{
+        org.openapis.openapi.models.operations.PostMouseMmeResponse res = new org.openapis.openapi.models.operations.PostMouseMmeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -166,10 +160,8 @@ public class Mme {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostNematodeMmeResponse res = new org.openapis.openapi.models.operations.PostNematodeMmeResponse() {{
+        org.openapis.openapi.models.operations.PostNematodeMmeResponse res = new org.openapis.openapi.models.operations.PostNematodeMmeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,10 +195,8 @@ public class Mme {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostZebrafishMmeResponse res = new org.openapis.openapi.models.operations.PostZebrafishMmeResponse() {{
+        org.openapis.openapi.models.operations.PostZebrafishMmeResponse res = new org.openapis.openapi.models.operations.PostZebrafishMmeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

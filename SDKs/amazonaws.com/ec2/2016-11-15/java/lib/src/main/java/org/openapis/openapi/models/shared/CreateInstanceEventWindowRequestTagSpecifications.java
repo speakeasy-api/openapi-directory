@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateInstanceEventWindowRequestTagSpecifications {
     
     public CreateInstanceEventWindowRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateInstanceEventWindowRequestTagSpecifications withResourceType(CreateInstanceEventWindowRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateInstanceEventWindowRequestTagSpecifications {
     
     
     public CreateInstanceEventWindowRequestTagSpecificationsTags[] tags;
+
     public CreateInstanceEventWindowRequestTagSpecifications withTags(CreateInstanceEventWindowRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateInstanceEventWindowRequestTagSpecifications(){}
 }

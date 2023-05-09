@@ -59,11 +59,9 @@ public class V1p4beta1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyResponse(contentType, httpRes.statusCode()) {{
             analyzeIamPolicyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class V1p4beta1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetExportIamPolicyAnalysisResponse res = new org.openapis.openapi.models.operations.CloudassetExportIamPolicyAnalysisResponse() {{
+        org.openapis.openapi.models.operations.CloudassetExportIamPolicyAnalysisResponse res = new org.openapis.openapi.models.operations.CloudassetExportIamPolicyAnalysisResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

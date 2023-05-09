@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 
 
 /**
- * DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersOidcOptions - The OpenID Connect details for an &lt;code&gt;oidc&lt;/code&gt;-type, user-identity based trust provider.
+ * DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersOidcOptions - The options for an OpenID Connect-compatible user-identity trust provider.
  */
 public class DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersOidcOptions {
     
     public String authorizationEndpoint;
+
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersOidcOptions withAuthorizationEndpoint(String authorizationEndpoint) {
         this.authorizationEndpoint = authorizationEndpoint;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvid
     
     
     public String clientId;
+
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersOidcOptions withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvid
     
     
     public String clientSecret;
+
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersOidcOptions withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -33,6 +36,7 @@ public class DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvid
     
     
     public String issuer;
+
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersOidcOptions withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -40,6 +44,7 @@ public class DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvid
     
     
     public String scope;
+
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersOidcOptions withScope(String scope) {
         this.scope = scope;
         return this;
@@ -47,6 +52,7 @@ public class DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvid
     
     
     public String tokenEndpoint;
+
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersOidcOptions withTokenEndpoint(String tokenEndpoint) {
         this.tokenEndpoint = tokenEndpoint;
         return this;
@@ -54,9 +60,11 @@ public class DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvid
     
     
     public String userInfoEndpoint;
+
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersOidcOptions withUserInfoEndpoint(String userInfoEndpoint) {
         this.userInfoEndpoint = userInfoEndpoint;
         return this;
     }
     
+    public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersOidcOptions(){}
 }

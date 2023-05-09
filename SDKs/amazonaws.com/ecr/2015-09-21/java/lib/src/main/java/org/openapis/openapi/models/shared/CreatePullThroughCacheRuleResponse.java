@@ -22,6 +22,7 @@ public class CreatePullThroughCacheRuleResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public CreatePullThroughCacheRuleResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class CreatePullThroughCacheRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecrRepositoryPrefix")
     public String ecrRepositoryPrefix;
+
     public CreatePullThroughCacheRuleResponse withEcrRepositoryPrefix(String ecrRepositoryPrefix) {
         this.ecrRepositoryPrefix = ecrRepositoryPrefix;
         return this;
@@ -38,6 +40,7 @@ public class CreatePullThroughCacheRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public CreatePullThroughCacheRuleResponse withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -46,9 +49,11 @@ public class CreatePullThroughCacheRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upstreamRegistryUrl")
     public String upstreamRegistryUrl;
+
     public CreatePullThroughCacheRuleResponse withUpstreamRegistryUrl(String upstreamRegistryUrl) {
         this.upstreamRegistryUrl = upstreamRegistryUrl;
         return this;
     }
     
+    public CreatePullThroughCacheRuleResponse(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bodyRows")
     public GoogleCloudDocumentaiV1beta3DocumentPageTableTableRow[] bodyRows;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageTable withBodyRows(GoogleCloudDocumentaiV1beta3DocumentPageTableTableRow[] bodyRows) {
         this.bodyRows = bodyRows;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedLanguages")
     public GoogleCloudDocumentaiV1beta3DocumentPageDetectedLanguage[] detectedLanguages;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageTable withDetectedLanguages(GoogleCloudDocumentaiV1beta3DocumentPageDetectedLanguage[] detectedLanguages) {
         this.detectedLanguages = detectedLanguages;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerRows")
     public GoogleCloudDocumentaiV1beta3DocumentPageTableTableRow[] headerRows;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageTable withHeaderRows(GoogleCloudDocumentaiV1beta3DocumentPageTableTableRow[] headerRows) {
         this.headerRows = headerRows;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public GoogleCloudDocumentaiV1beta3DocumentPageLayout layout;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageTable withLayout(GoogleCloudDocumentaiV1beta3DocumentPageLayout layout) {
         this.layout = layout;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provenance")
     public GoogleCloudDocumentaiV1beta3DocumentProvenance provenance;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageTable withProvenance(GoogleCloudDocumentaiV1beta3DocumentProvenance provenance) {
         this.provenance = provenance;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3DocumentPageTable(){}
 }

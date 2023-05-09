@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class ScheduleHangupParameters {
      */
     @SpeakeasyMetadata("form:name=CallUUID")
     public String callUUID;
+
     public ScheduleHangupParameters withCallUUID(String callUUID) {
         this.callUUID = callUUID;
         return this;
@@ -25,9 +27,14 @@ public class ScheduleHangupParameters {
      */
     @SpeakeasyMetadata("form:name=Time")
     public Long time;
+
     public ScheduleHangupParameters withTime(Long time) {
         this.time = time;
         return this;
     }
     
+    public ScheduleHangupParameters(@JsonProperty("CallUUID") String callUUID, @JsonProperty("Time") Long time) {
+        this.callUUID = callUUID;
+        this.time = time;
+  }
 }

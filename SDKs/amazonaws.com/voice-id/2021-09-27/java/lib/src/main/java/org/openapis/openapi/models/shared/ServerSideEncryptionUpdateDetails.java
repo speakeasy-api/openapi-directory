@@ -15,6 +15,7 @@ public class ServerSideEncryptionUpdateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public ServerSideEncryptionUpdateDetails withMessage(String message) {
         this.message = message;
         return this;
@@ -23,6 +24,7 @@ public class ServerSideEncryptionUpdateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OldKmsKeyId")
     public String oldKmsKeyId;
+
     public ServerSideEncryptionUpdateDetails withOldKmsKeyId(String oldKmsKeyId) {
         this.oldKmsKeyId = oldKmsKeyId;
         return this;
@@ -31,9 +33,11 @@ public class ServerSideEncryptionUpdateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateStatus")
     public ServerSideEncryptionUpdateStatusEnum updateStatus;
+
     public ServerSideEncryptionUpdateDetails withUpdateStatus(ServerSideEncryptionUpdateStatusEnum updateStatus) {
         this.updateStatus = updateStatus;
         return this;
     }
     
+    public ServerSideEncryptionUpdateDetails(){}
 }

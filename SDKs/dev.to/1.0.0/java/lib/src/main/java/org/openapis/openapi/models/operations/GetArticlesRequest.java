@@ -13,6 +13,7 @@ public class GetArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=collection_id")
     public Integer collectionId;
+
     public GetArticlesRequest withCollectionId(Integer collectionId) {
         this.collectionId = collectionId;
         return this;
@@ -23,6 +24,7 @@ public class GetArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetArticlesRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -33,6 +35,7 @@ public class GetArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetArticlesRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -46,6 +49,7 @@ public class GetArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public GetArticlesStateEnum state;
+
     public GetArticlesRequest withState(GetArticlesStateEnum state) {
         this.state = state;
         return this;
@@ -57,6 +61,7 @@ public class GetArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
     public String tag;
+
     public GetArticlesRequest withTag(String tag) {
         this.tag = tag;
         return this;
@@ -68,6 +73,7 @@ public class GetArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String tags;
+
     public GetArticlesRequest withTags(String tags) {
         this.tags = tags;
         return this;
@@ -79,6 +85,7 @@ public class GetArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags_exclude")
     public String tagsExclude;
+
     public GetArticlesRequest withTagsExclude(String tagsExclude) {
         this.tagsExclude = tagsExclude;
         return this;
@@ -92,6 +99,7 @@ public class GetArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=top")
     public Integer top;
+
     public GetArticlesRequest withTop(Integer top) {
         this.top = top;
         return this;
@@ -105,9 +113,11 @@ public class GetArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public GetArticlesRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetArticlesRequest(){}
 }

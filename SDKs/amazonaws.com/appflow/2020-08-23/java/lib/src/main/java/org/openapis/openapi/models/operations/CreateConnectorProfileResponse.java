@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateConnectorProfileResponse {
@@ -12,6 +13,7 @@ public class CreateConnectorProfileResponse {
      */
     
     public Object conflictException;
+
     public CreateConnectorProfileResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -22,6 +24,7 @@ public class CreateConnectorProfileResponse {
      */
     
     public Object connectorAuthenticationException;
+
     public CreateConnectorProfileResponse withConnectorAuthenticationException(Object connectorAuthenticationException) {
         this.connectorAuthenticationException = connectorAuthenticationException;
         return this;
@@ -29,6 +32,7 @@ public class CreateConnectorProfileResponse {
     
     
     public String contentType;
+
     public CreateConnectorProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateConnectorProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateConnectorProfileResponse createConnectorProfileResponse;
+
     public CreateConnectorProfileResponse withCreateConnectorProfileResponse(org.openapis.openapi.models.shared.CreateConnectorProfileResponse createConnectorProfileResponse) {
         this.createConnectorProfileResponse = createConnectorProfileResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateConnectorProfileResponse {
      */
     
     public Object internalServerException;
+
     public CreateConnectorProfileResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateConnectorProfileResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateConnectorProfileResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateConnectorProfileResponse {
     
     
     public Integer statusCode;
+
     public CreateConnectorProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateConnectorProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateConnectorProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateConnectorProfileResponse {
      */
     
     public Object validationException;
+
     public CreateConnectorProfileResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateConnectorProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

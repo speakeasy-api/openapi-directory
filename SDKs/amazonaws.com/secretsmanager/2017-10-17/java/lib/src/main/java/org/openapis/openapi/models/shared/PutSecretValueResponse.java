@@ -15,6 +15,7 @@ public class PutSecretValueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public PutSecretValueResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class PutSecretValueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PutSecretValueResponse withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class PutSecretValueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionId")
     public String versionId;
+
     public PutSecretValueResponse withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
@@ -39,9 +42,11 @@ public class PutSecretValueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionStages")
     public String[] versionStages;
+
     public PutSecretValueResponse withVersionStages(String[] versionStages) {
         this.versionStages = versionStages;
         return this;
     }
     
+    public PutSecretValueResponse(){}
 }

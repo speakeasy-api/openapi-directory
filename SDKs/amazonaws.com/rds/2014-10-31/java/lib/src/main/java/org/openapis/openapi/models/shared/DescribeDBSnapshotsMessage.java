@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDBSnapshotsMessage {
     
     public String dbInstanceIdentifier;
+
     public DescribeDBSnapshotsMessage withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class DescribeDBSnapshotsMessage {
     
     
     public String dbSnapshotIdentifier;
+
     public DescribeDBSnapshotsMessage withDBSnapshotIdentifier(String dbSnapshotIdentifier) {
         this.dbSnapshotIdentifier = dbSnapshotIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class DescribeDBSnapshotsMessage {
     
     
     public String dbiResourceId;
+
     public DescribeDBSnapshotsMessage withDbiResourceId(String dbiResourceId) {
         this.dbiResourceId = dbiResourceId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeDBSnapshotsMessage {
     
     
     public FilterList[] filters;
+
     public DescribeDBSnapshotsMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -40,6 +44,7 @@ public class DescribeDBSnapshotsMessage {
     
     
     public Boolean includePublic;
+
     public DescribeDBSnapshotsMessage withIncludePublic(Boolean includePublic) {
         this.includePublic = includePublic;
         return this;
@@ -47,6 +52,7 @@ public class DescribeDBSnapshotsMessage {
     
     
     public Boolean includeShared;
+
     public DescribeDBSnapshotsMessage withIncludeShared(Boolean includeShared) {
         this.includeShared = includeShared;
         return this;
@@ -54,6 +60,7 @@ public class DescribeDBSnapshotsMessage {
     
     
     public String marker;
+
     public DescribeDBSnapshotsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -61,6 +68,7 @@ public class DescribeDBSnapshotsMessage {
     
     
     public Long maxRecords;
+
     public DescribeDBSnapshotsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -68,9 +76,11 @@ public class DescribeDBSnapshotsMessage {
     
     
     public String snapshotType;
+
     public DescribeDBSnapshotsMessage withSnapshotType(String snapshotType) {
         this.snapshotType = snapshotType;
         return this;
     }
     
+    public DescribeDBSnapshotsMessage(){}
 }

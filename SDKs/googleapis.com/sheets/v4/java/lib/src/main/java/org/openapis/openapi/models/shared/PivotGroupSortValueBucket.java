@@ -18,6 +18,7 @@ public class PivotGroupSortValueBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buckets")
     public ExtendedValue[] buckets;
+
     public PivotGroupSortValueBucket withBuckets(ExtendedValue[] buckets) {
         this.buckets = buckets;
         return this;
@@ -29,9 +30,11 @@ public class PivotGroupSortValueBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valuesIndex")
     public Integer valuesIndex;
+
     public PivotGroupSortValueBucket withValuesIndex(Integer valuesIndex) {
         this.valuesIndex = valuesIndex;
         return this;
     }
     
+    public PivotGroupSortValueBucket(){}
 }

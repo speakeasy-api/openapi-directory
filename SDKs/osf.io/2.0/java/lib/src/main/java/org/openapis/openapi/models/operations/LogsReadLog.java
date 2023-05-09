@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class LogsReadLog {
     /**
@@ -12,6 +12,7 @@ public class LogsReadLog {
      */
     
     public LogsReadLogAttributes attributes;
+
     public LogsReadLog withAttributes(LogsReadLogAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class LogsReadLog {
      */
     
     public String id;
+
     public LogsReadLog withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class LogsReadLog {
      */
     
     public LogsReadLogLinks links;
+
     public LogsReadLog withLinks(LogsReadLogLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class LogsReadLog {
      */
     
     public LogsReadLogRelationships relationships;
+
     public LogsReadLog withRelationships(LogsReadLogRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,17 @@ public class LogsReadLog {
      */
     
     public String type;
+
     public LogsReadLog withType(String type) {
         this.type = type;
         return this;
     }
     
+    public LogsReadLog(@JsonProperty("attributes") LogsReadLogAttributes attributes, @JsonProperty("id") String id, @JsonProperty("links") LogsReadLogLinks links, @JsonProperty("relationships") LogsReadLogRelationships relationships, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.links = links;
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

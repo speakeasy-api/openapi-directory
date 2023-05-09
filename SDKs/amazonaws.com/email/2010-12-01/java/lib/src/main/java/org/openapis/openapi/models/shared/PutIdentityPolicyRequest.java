@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * PutIdentityPolicyRequest - Represents a request to add or update a sending authorization policy for an identity. Sending authorization is an Amazon SES feature that enables you to authorize other senders to use your identities. For information, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PutIdentityPolicyRequest {
     
     public String identity;
+
     public PutIdentityPolicyRequest withIdentity(String identity) {
         this.identity = identity;
         return this;
@@ -19,6 +20,7 @@ public class PutIdentityPolicyRequest {
     
     
     public String policy;
+
     public PutIdentityPolicyRequest withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -26,9 +28,15 @@ public class PutIdentityPolicyRequest {
     
     
     public String policyName;
+
     public PutIdentityPolicyRequest withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public PutIdentityPolicyRequest(@JsonProperty("Identity") String identity, @JsonProperty("Policy") String policy, @JsonProperty("PolicyName") String policyName) {
+        this.identity = identity;
+        this.policy = policy;
+        this.policyName = policyName;
+  }
 }

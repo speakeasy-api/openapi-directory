@@ -15,6 +15,7 @@ public class CreateJobRequestBodyCheckpointConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localPath")
     public String localPath;
+
     public CreateJobRequestBodyCheckpointConfig withLocalPath(String localPath) {
         this.localPath = localPath;
         return this;
@@ -23,9 +24,11 @@ public class CreateJobRequestBodyCheckpointConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Uri")
     public String s3Uri;
+
     public CreateJobRequestBodyCheckpointConfig withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public CreateJobRequestBodyCheckpointConfig(){}
 }

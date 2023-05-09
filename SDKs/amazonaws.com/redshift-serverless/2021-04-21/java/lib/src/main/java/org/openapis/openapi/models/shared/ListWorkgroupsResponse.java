@@ -15,6 +15,7 @@ public class ListWorkgroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListWorkgroupsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListWorkgroupsResponse {
     
     @JsonProperty("workgroups")
     public Workgroup[] workgroups;
+
     public ListWorkgroupsResponse withWorkgroups(Workgroup[] workgroups) {
         this.workgroups = workgroups;
         return this;
     }
     
+    public ListWorkgroupsResponse(@JsonProperty("workgroups") Workgroup[] workgroups) {
+        this.workgroups = workgroups;
+  }
 }

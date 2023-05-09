@@ -18,6 +18,7 @@ public class UserListInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UserListInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class UserListInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public UserListInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class UserListInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membershipDurationDays")
     public String membershipDurationDays;
+
     public UserListInput withMembershipDurationDays(String membershipDurationDays) {
         this.membershipDurationDays = membershipDurationDays;
         return this;
@@ -51,9 +54,11 @@ public class UserListInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlRestriction")
     public UrlRestriction urlRestriction;
+
     public UserListInput withUrlRestriction(UrlRestriction urlRestriction) {
         this.urlRestriction = urlRestriction;
         return this;
     }
     
+    public UserListInput(){}
 }

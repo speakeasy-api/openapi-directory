@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LanguageDetectionResponse {
     
     public String contentType;
+
     public LanguageDetectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class LanguageDetectionResponse {
      */
     
     public org.openapis.openapi.models.shared.LanguagePredicted[] languageDetectionResponse;
+
     public LanguageDetectionResponse withLanguageDetectionResponse(org.openapis.openapi.models.shared.LanguagePredicted[] languageDetectionResponse) {
         this.languageDetectionResponse = languageDetectionResponse;
         return this;
@@ -26,6 +29,7 @@ public class LanguageDetectionResponse {
     
     
     public Integer statusCode;
+
     public LanguageDetectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class LanguageDetectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LanguageDetectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class LanguageDetectionResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrors validationErrors;
+
     public LanguageDetectionResponse withValidationErrors(org.openapis.openapi.models.shared.ValidationErrors validationErrors) {
         this.validationErrors = validationErrors;
         return this;
     }
     
+    public LanguageDetectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

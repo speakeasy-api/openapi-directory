@@ -15,6 +15,7 @@ public class ListSchemaVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSchemaVersionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListSchemaVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schemas")
     public SchemaVersionListItem[] schemas;
+
     public ListSchemaVersionsResponse withSchemas(SchemaVersionListItem[] schemas) {
         this.schemas = schemas;
         return this;
     }
     
+    public ListSchemaVersionsResponse(){}
 }

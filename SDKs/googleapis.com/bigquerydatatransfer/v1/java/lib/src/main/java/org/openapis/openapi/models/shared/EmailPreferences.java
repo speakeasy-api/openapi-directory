@@ -18,9 +18,11 @@ public class EmailPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableFailureEmail")
     public Boolean enableFailureEmail;
+
     public EmailPreferences withEnableFailureEmail(Boolean enableFailureEmail) {
         this.enableFailureEmail = enableFailureEmail;
         return this;
     }
     
+    public EmailPreferences(){}
 }

@@ -15,6 +15,7 @@ public class TaggedDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Database")
     public DatabaseResource database;
+
     public TaggedDatabase withDatabase(DatabaseResource database) {
         this.database = database;
         return this;
@@ -23,9 +24,11 @@ public class TaggedDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LFTags")
     public LFTagPair[] lfTags;
+
     public TaggedDatabase withLFTags(LFTagPair[] lfTags) {
         this.lfTags = lfTags;
         return this;
     }
     
+    public TaggedDatabase(){}
 }

@@ -12,9 +12,11 @@ public class ArtifactTypeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ArtifactTypeInfo withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ArtifactTypeInfo(){}
 }

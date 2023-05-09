@@ -22,6 +22,7 @@ public class TeamDiscussionComment {
      */
     @JsonProperty("author")
     public NullableSimpleUser author;
+
     public TeamDiscussionComment withAuthor(NullableSimpleUser author) {
         this.author = author;
         return this;
@@ -32,6 +33,7 @@ public class TeamDiscussionComment {
      */
     @JsonProperty("body")
     public String body;
+
     public TeamDiscussionComment withBody(String body) {
         this.body = body;
         return this;
@@ -39,6 +41,7 @@ public class TeamDiscussionComment {
     
     @JsonProperty("body_html")
     public String bodyHtml;
+
     public TeamDiscussionComment withBodyHtml(String bodyHtml) {
         this.bodyHtml = bodyHtml;
         return this;
@@ -49,6 +52,7 @@ public class TeamDiscussionComment {
      */
     @JsonProperty("body_version")
     public String bodyVersion;
+
     public TeamDiscussionComment withBodyVersion(String bodyVersion) {
         this.bodyVersion = bodyVersion;
         return this;
@@ -58,6 +62,7 @@ public class TeamDiscussionComment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public TeamDiscussionComment withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -65,6 +70,7 @@ public class TeamDiscussionComment {
     
     @JsonProperty("discussion_url")
     public String discussionUrl;
+
     public TeamDiscussionComment withDiscussionUrl(String discussionUrl) {
         this.discussionUrl = discussionUrl;
         return this;
@@ -72,6 +78,7 @@ public class TeamDiscussionComment {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public TeamDiscussionComment withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -81,6 +88,7 @@ public class TeamDiscussionComment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_edited_at")
     public OffsetDateTime lastEditedAt;
+
     public TeamDiscussionComment withLastEditedAt(OffsetDateTime lastEditedAt) {
         this.lastEditedAt = lastEditedAt;
         return this;
@@ -88,6 +96,7 @@ public class TeamDiscussionComment {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public TeamDiscussionComment withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -98,6 +107,7 @@ public class TeamDiscussionComment {
      */
     @JsonProperty("number")
     public Long number;
+
     public TeamDiscussionComment withNumber(Long number) {
         this.number = number;
         return this;
@@ -106,6 +116,7 @@ public class TeamDiscussionComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reactions")
     public ReactionRollup reactions;
+
     public TeamDiscussionComment withReactions(ReactionRollup reactions) {
         this.reactions = reactions;
         return this;
@@ -115,6 +126,7 @@ public class TeamDiscussionComment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public TeamDiscussionComment withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -122,9 +134,24 @@ public class TeamDiscussionComment {
     
     @JsonProperty("url")
     public String url;
+
     public TeamDiscussionComment withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public TeamDiscussionComment(@JsonProperty("author") NullableSimpleUser author, @JsonProperty("body") String body, @JsonProperty("body_html") String bodyHtml, @JsonProperty("body_version") String bodyVersion, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("discussion_url") String discussionUrl, @JsonProperty("html_url") String htmlUrl, @JsonProperty("last_edited_at") OffsetDateTime lastEditedAt, @JsonProperty("node_id") String nodeId, @JsonProperty("number") Long number, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
+        this.author = author;
+        this.body = body;
+        this.bodyHtml = bodyHtml;
+        this.bodyVersion = bodyVersion;
+        this.createdAt = createdAt;
+        this.discussionUrl = discussionUrl;
+        this.htmlUrl = htmlUrl;
+        this.lastEditedAt = lastEditedAt;
+        this.nodeId = nodeId;
+        this.number = number;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

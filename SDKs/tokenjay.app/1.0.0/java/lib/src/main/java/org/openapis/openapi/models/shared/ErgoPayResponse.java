@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ErgoPayResponse {
     
     public String address;
+
     public ErgoPayResponse withAddress(String address) {
         this.address = address;
         return this;
@@ -19,6 +20,7 @@ public class ErgoPayResponse {
     
     
     public String[] addresses;
+
     public ErgoPayResponse withAddresses(String[] addresses) {
         this.addresses = addresses;
         return this;
@@ -26,6 +28,7 @@ public class ErgoPayResponse {
     
     
     public String message;
+
     public ErgoPayResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -33,6 +36,7 @@ public class ErgoPayResponse {
     
     
     public ErgoPayResponseMessageSeverityEnum messageSeverity;
+
     public ErgoPayResponse withMessageSeverity(ErgoPayResponseMessageSeverityEnum messageSeverity) {
         this.messageSeverity = messageSeverity;
         return this;
@@ -40,6 +44,7 @@ public class ErgoPayResponse {
     
     
     public String reducedTx;
+
     public ErgoPayResponse withReducedTx(String reducedTx) {
         this.reducedTx = reducedTx;
         return this;
@@ -47,6 +52,7 @@ public class ErgoPayResponse {
     
     
     public String[] reducedTxList;
+
     public ErgoPayResponse withReducedTxList(String[] reducedTxList) {
         this.reducedTxList = reducedTxList;
         return this;
@@ -54,9 +60,11 @@ public class ErgoPayResponse {
     
     
     public String replyTo;
+
     public ErgoPayResponse withReplyTo(String replyTo) {
         this.replyTo = replyTo;
         return this;
     }
     
+    public ErgoPayResponse(){}
 }

@@ -15,6 +15,7 @@ public class OrderWorkgroupLevelListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public OrderWorkgroupLevelSimpleVO[] results;
+
     public OrderWorkgroupLevelListVO withResults(OrderWorkgroupLevelSimpleVO[] results) {
         this.results = results;
         return this;
@@ -23,6 +24,7 @@ public class OrderWorkgroupLevelListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public OrderWorkgroupLevelListVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class OrderWorkgroupLevelListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public OrderWorkgroupLevelListVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public OrderWorkgroupLevelListVO(){}
 }

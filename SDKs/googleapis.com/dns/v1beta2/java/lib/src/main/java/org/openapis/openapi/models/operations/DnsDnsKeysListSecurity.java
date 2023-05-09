@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DnsDnsKeysListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DnsDnsKeysListSecurityOption1 option1;
+
     public DnsDnsKeysListSecurity withOption1(DnsDnsKeysListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DnsDnsKeysListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DnsDnsKeysListSecurityOption2 option2;
+
     public DnsDnsKeysListSecurity withOption2(DnsDnsKeysListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class DnsDnsKeysListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DnsDnsKeysListSecurityOption3 option3;
+
     public DnsDnsKeysListSecurity withOption3(DnsDnsKeysListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,9 +33,11 @@ public class DnsDnsKeysListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DnsDnsKeysListSecurityOption4 option4;
+
     public DnsDnsKeysListSecurity withOption4(DnsDnsKeysListSecurityOption4 option4) {
         this.option4 = option4;
         return this;
     }
     
+    public DnsDnsKeysListSecurity(){}
 }

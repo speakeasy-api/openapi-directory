@@ -20,6 +20,7 @@ public class ReplicationJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ReplicationJob withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +29,7 @@ public class ReplicationJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encrypted")
     public Boolean encrypted;
+
     public ReplicationJob withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -36,6 +38,7 @@ public class ReplicationJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
     public Long frequency;
+
     public ReplicationJob withFrequency(Long frequency) {
         this.frequency = frequency;
         return this;
@@ -44,6 +47,7 @@ public class ReplicationJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public ReplicationJob withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -52,6 +56,7 @@ public class ReplicationJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestAmiId")
     public String latestAmiId;
+
     public ReplicationJob withLatestAmiId(String latestAmiId) {
         this.latestAmiId = latestAmiId;
         return this;
@@ -60,6 +65,7 @@ public class ReplicationJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenseType")
     public LicenseTypeEnum licenseType;
+
     public ReplicationJob withLicenseType(LicenseTypeEnum licenseType) {
         this.licenseType = licenseType;
         return this;
@@ -70,6 +76,7 @@ public class ReplicationJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("nextReplicationRunStartTime")
     public OffsetDateTime nextReplicationRunStartTime;
+
     public ReplicationJob withNextReplicationRunStartTime(OffsetDateTime nextReplicationRunStartTime) {
         this.nextReplicationRunStartTime = nextReplicationRunStartTime;
         return this;
@@ -78,6 +85,7 @@ public class ReplicationJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfRecentAmisToKeep")
     public Long numberOfRecentAmisToKeep;
+
     public ReplicationJob withNumberOfRecentAmisToKeep(Long numberOfRecentAmisToKeep) {
         this.numberOfRecentAmisToKeep = numberOfRecentAmisToKeep;
         return this;
@@ -86,6 +94,7 @@ public class ReplicationJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationJobId")
     public String replicationJobId;
+
     public ReplicationJob withReplicationJobId(String replicationJobId) {
         this.replicationJobId = replicationJobId;
         return this;
@@ -94,6 +103,7 @@ public class ReplicationJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationRunList")
     public ReplicationRun[] replicationRunList;
+
     public ReplicationJob withReplicationRunList(ReplicationRun[] replicationRunList) {
         this.replicationRunList = replicationRunList;
         return this;
@@ -102,6 +112,7 @@ public class ReplicationJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleName")
     public String roleName;
+
     public ReplicationJob withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
@@ -110,6 +121,7 @@ public class ReplicationJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runOnce")
     public Boolean runOnce;
+
     public ReplicationJob withRunOnce(Boolean runOnce) {
         this.runOnce = runOnce;
         return this;
@@ -120,6 +132,7 @@ public class ReplicationJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("seedReplicationTime")
     public OffsetDateTime seedReplicationTime;
+
     public ReplicationJob withSeedReplicationTime(OffsetDateTime seedReplicationTime) {
         this.seedReplicationTime = seedReplicationTime;
         return this;
@@ -128,6 +141,7 @@ public class ReplicationJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverId")
     public String serverId;
+
     public ReplicationJob withServerId(String serverId) {
         this.serverId = serverId;
         return this;
@@ -136,6 +150,7 @@ public class ReplicationJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverType")
     public ServerTypeEnum serverType;
+
     public ReplicationJob withServerType(ServerTypeEnum serverType) {
         this.serverType = serverType;
         return this;
@@ -144,6 +159,7 @@ public class ReplicationJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ReplicationJobStateEnum state;
+
     public ReplicationJob withState(ReplicationJobStateEnum state) {
         this.state = state;
         return this;
@@ -152,6 +168,7 @@ public class ReplicationJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public ReplicationJob withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -160,9 +177,11 @@ public class ReplicationJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmServer")
     public VmServer vmServer;
+
     public ReplicationJob withVmServer(VmServer vmServer) {
         this.vmServer = vmServer;
         return this;
     }
     
+    public ReplicationJob(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SheetsSpreadsheetsValuesBatchGetByDataFilterSecurity {
     @SpeakeasyMetadata("security:option=true")
     public SheetsSpreadsheetsValuesBatchGetByDataFilterSecurityOption1 option1;
+
     public SheetsSpreadsheetsValuesBatchGetByDataFilterSecurity withOption1(SheetsSpreadsheetsValuesBatchGetByDataFilterSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class SheetsSpreadsheetsValuesBatchGetByDataFilterSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SheetsSpreadsheetsValuesBatchGetByDataFilterSecurityOption2 option2;
+
     public SheetsSpreadsheetsValuesBatchGetByDataFilterSecurity withOption2(SheetsSpreadsheetsValuesBatchGetByDataFilterSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class SheetsSpreadsheetsValuesBatchGetByDataFilterSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SheetsSpreadsheetsValuesBatchGetByDataFilterSecurityOption3 option3;
+
     public SheetsSpreadsheetsValuesBatchGetByDataFilterSecurity withOption3(SheetsSpreadsheetsValuesBatchGetByDataFilterSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public SheetsSpreadsheetsValuesBatchGetByDataFilterSecurity(){}
 }

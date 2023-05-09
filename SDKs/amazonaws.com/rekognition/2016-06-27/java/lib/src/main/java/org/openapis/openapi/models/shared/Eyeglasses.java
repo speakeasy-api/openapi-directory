@@ -15,6 +15,7 @@ public class Eyeglasses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public Eyeglasses withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -23,9 +24,11 @@ public class Eyeglasses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public Boolean value;
+
     public Eyeglasses withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public Eyeglasses(){}
 }

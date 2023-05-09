@@ -15,9 +15,11 @@ public class DeleteSubnetGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetGroup")
     public SubnetGroup subnetGroup;
+
     public DeleteSubnetGroupResponse withSubnetGroup(SubnetGroup subnetGroup) {
         this.subnetGroup = subnetGroup;
         return this;
     }
     
+    public DeleteSubnetGroupResponse(){}
 }

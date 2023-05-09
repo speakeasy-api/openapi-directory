@@ -18,6 +18,7 @@ public class OperatingSystemTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatingSystemCriteria")
     public CriteriaTargeting operatingSystemCriteria;
+
     public OperatingSystemTargeting withOperatingSystemCriteria(CriteriaTargeting operatingSystemCriteria) {
         this.operatingSystemCriteria = operatingSystemCriteria;
         return this;
@@ -29,9 +30,11 @@ public class OperatingSystemTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatingSystemVersionCriteria")
     public CriteriaTargeting operatingSystemVersionCriteria;
+
     public OperatingSystemTargeting withOperatingSystemVersionCriteria(CriteriaTargeting operatingSystemVersionCriteria) {
         this.operatingSystemVersionCriteria = operatingSystemVersionCriteria;
         return this;
     }
     
+    public OperatingSystemTargeting(){}
 }

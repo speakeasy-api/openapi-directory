@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest {
@@ -12,6 +13,7 @@ public class ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Breakpoint breakpoint;
+
     public ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest withBreakpoint(org.openapis.openapi.models.shared.Breakpoint breakpoint) {
         this.breakpoint = breakpoint;
         return this;
@@ -29,6 +32,7 @@ public class ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=canaryOption")
     public ClouddebuggerDebuggerDebuggeesBreakpointsSetCanaryOptionEnum canaryOption;
+
     public ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest withCanaryOption(ClouddebuggerDebuggerDebuggeesBreakpointsSetCanaryOptionEnum canaryOption) {
         this.canaryOption = canaryOption;
         return this;
@@ -69,6 +76,7 @@ public class ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientVersion")
     public String clientVersion;
+
     public ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest withClientVersion(String clientVersion) {
         this.clientVersion = clientVersion;
         return this;
@@ -79,6 +87,7 @@ public class ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=debuggeeId")
     public String debuggeeId;
+
     public ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest withDebuggeeId(String debuggeeId) {
         this.debuggeeId = debuggeeId;
         return this;
@@ -89,6 +98,7 @@ public class ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -99,6 +109,7 @@ public class ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -109,6 +120,7 @@ public class ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -119,6 +131,7 @@ public class ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -129,6 +142,7 @@ public class ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -139,6 +153,7 @@ public class ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,9 +164,13 @@ public class ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest(@JsonProperty("debuggeeId") String debuggeeId) {
+        this.debuggeeId = debuggeeId;
+  }
 }

@@ -18,6 +18,7 @@ public class EndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EndpointInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class EndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public EndpointInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class EndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public EndpointInput withNetwork(String network) {
         this.network = network;
         return this;
@@ -51,6 +54,7 @@ public class EndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public EndpointSeverityEnum severity;
+
     public EndpointInput withSeverity(EndpointSeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -62,6 +66,7 @@ public class EndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threatExceptions")
     public String[] threatExceptions;
+
     public EndpointInput withThreatExceptions(String[] threatExceptions) {
         this.threatExceptions = threatExceptions;
         return this;
@@ -73,9 +78,11 @@ public class EndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trafficLogs")
     public Boolean trafficLogs;
+
     public EndpointInput withTrafficLogs(Boolean trafficLogs) {
         this.trafficLogs = trafficLogs;
         return this;
     }
     
+    public EndpointInput(){}
 }

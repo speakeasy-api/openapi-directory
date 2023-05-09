@@ -12,9 +12,11 @@ public class CreateApiVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public CreateApiVersionRequestBodyVersion version;
+
     public CreateApiVersionRequestBody withVersion(CreateApiVersionRequestBodyVersion version) {
         this.version = version;
         return this;
     }
     
+    public CreateApiVersionRequestBody(){}
 }

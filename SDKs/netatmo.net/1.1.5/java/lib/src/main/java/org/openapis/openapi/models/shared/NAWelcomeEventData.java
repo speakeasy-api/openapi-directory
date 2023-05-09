@@ -12,9 +12,11 @@ public class NAWelcomeEventData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events_list")
     public NAWelcomeEvent[] eventsList;
+
     public NAWelcomeEventData withEventsList(NAWelcomeEvent[] eventsList) {
         this.eventsList = eventsList;
         return this;
     }
     
+    public NAWelcomeEventData(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Tmpfs {
     @JsonProperty("containerPath")
     public String containerPath;
+
     public Tmpfs withContainerPath(String containerPath) {
         this.containerPath = containerPath;
         return this;
@@ -22,6 +23,7 @@ public class Tmpfs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mountOptions")
     public String[] mountOptions;
+
     public Tmpfs withMountOptions(String[] mountOptions) {
         this.mountOptions = mountOptions;
         return this;
@@ -29,9 +31,14 @@ public class Tmpfs {
     
     @JsonProperty("size")
     public Long size;
+
     public Tmpfs withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public Tmpfs(@JsonProperty("containerPath") String containerPath, @JsonProperty("size") Long size) {
+        this.containerPath = containerPath;
+        this.size = size;
+  }
 }

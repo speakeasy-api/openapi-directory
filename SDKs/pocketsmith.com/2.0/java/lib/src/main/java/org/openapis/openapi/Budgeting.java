@@ -52,11 +52,9 @@ public class Budgeting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteUsersIdForecastCacheResponse res = new org.openapis.openapi.models.operations.DeleteUsersIdForecastCacheResponse() {{
+        org.openapis.openapi.models.operations.DeleteUsersIdForecastCacheResponse res = new org.openapis.openapi.models.operations.DeleteUsersIdForecastCacheResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -100,11 +98,9 @@ public class Budgeting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersIdBudgetResponse res = new org.openapis.openapi.models.operations.GetUsersIdBudgetResponse() {{
+        org.openapis.openapi.models.operations.GetUsersIdBudgetResponse res = new org.openapis.openapi.models.operations.GetUsersIdBudgetResponse(contentType, httpRes.statusCode()) {{
             budgetAnalysisPackages = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -146,12 +142,10 @@ public class Budgeting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersIdBudgetSummaryResponse res = new org.openapis.openapi.models.operations.GetUsersIdBudgetSummaryResponse() {{
+        org.openapis.openapi.models.operations.GetUsersIdBudgetSummaryResponse res = new org.openapis.openapi.models.operations.GetUsersIdBudgetSummaryResponse(contentType, httpRes.statusCode()) {{
             budgetAnalysisPackages = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,12 +194,10 @@ public class Budgeting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersIdTrendAnalysisResponse res = new org.openapis.openapi.models.operations.GetUsersIdTrendAnalysisResponse() {{
+        org.openapis.openapi.models.operations.GetUsersIdTrendAnalysisResponse res = new org.openapis.openapi.models.operations.GetUsersIdTrendAnalysisResponse(contentType, httpRes.statusCode()) {{
             budgetAnalysisPackages = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

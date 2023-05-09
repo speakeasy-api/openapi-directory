@@ -15,9 +15,11 @@ public class UpdateAnApi200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api")
     public UpdateAnApi200ApplicationJSONApi api;
+
     public UpdateAnApi200ApplicationJSON withApi(UpdateAnApi200ApplicationJSONApi api) {
         this.api = api;
         return this;
     }
     
+    public UpdateAnApi200ApplicationJSON(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelAnnotationImportJobResponse {
@@ -12,6 +13,7 @@ public class CancelAnnotationImportJobResponse {
      */
     
     public Object accessDeniedException;
+
     public CancelAnnotationImportJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CancelAnnotationImportJobResponse {
      */
     
     public java.util.Map<String, Object> cancelAnnotationImportResponse;
+
     public CancelAnnotationImportJobResponse withCancelAnnotationImportResponse(java.util.Map<String, Object> cancelAnnotationImportResponse) {
         this.cancelAnnotationImportResponse = cancelAnnotationImportResponse;
         return this;
@@ -29,6 +32,7 @@ public class CancelAnnotationImportJobResponse {
     
     
     public String contentType;
+
     public CancelAnnotationImportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CancelAnnotationImportJobResponse {
      */
     
     public Object internalServerException;
+
     public CancelAnnotationImportJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CancelAnnotationImportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelAnnotationImportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CancelAnnotationImportJobResponse {
     
     
     public Integer statusCode;
+
     public CancelAnnotationImportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CancelAnnotationImportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelAnnotationImportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CancelAnnotationImportJobResponse {
      */
     
     public Object throttlingException;
+
     public CancelAnnotationImportJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class CancelAnnotationImportJobResponse {
      */
     
     public Object validationException;
+
     public CancelAnnotationImportJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CancelAnnotationImportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

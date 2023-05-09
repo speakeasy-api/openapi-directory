@@ -18,6 +18,7 @@ public class ChromeOsDeviceTpmVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("family")
     public String family;
+
     public ChromeOsDeviceTpmVersionInfo withFamily(String family) {
         this.family = family;
         return this;
@@ -29,6 +30,7 @@ public class ChromeOsDeviceTpmVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firmwareVersion")
     public String firmwareVersion;
+
     public ChromeOsDeviceTpmVersionInfo withFirmwareVersion(String firmwareVersion) {
         this.firmwareVersion = firmwareVersion;
         return this;
@@ -40,6 +42,7 @@ public class ChromeOsDeviceTpmVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturer")
     public String manufacturer;
+
     public ChromeOsDeviceTpmVersionInfo withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
@@ -51,6 +54,7 @@ public class ChromeOsDeviceTpmVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specLevel")
     public String specLevel;
+
     public ChromeOsDeviceTpmVersionInfo withSpecLevel(String specLevel) {
         this.specLevel = specLevel;
         return this;
@@ -62,6 +66,7 @@ public class ChromeOsDeviceTpmVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tpmModel")
     public String tpmModel;
+
     public ChromeOsDeviceTpmVersionInfo withTpmModel(String tpmModel) {
         this.tpmModel = tpmModel;
         return this;
@@ -73,9 +78,11 @@ public class ChromeOsDeviceTpmVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorSpecific")
     public String vendorSpecific;
+
     public ChromeOsDeviceTpmVersionInfo withVendorSpecific(String vendorSpecific) {
         this.vendorSpecific = vendorSpecific;
         return this;
     }
     
+    public ChromeOsDeviceTpmVersionInfo(){}
 }

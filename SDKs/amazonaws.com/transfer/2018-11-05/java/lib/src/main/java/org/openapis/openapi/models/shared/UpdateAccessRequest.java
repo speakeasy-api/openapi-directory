@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateAccessRequest {
     @JsonProperty("ExternalId")
     public String externalId;
+
     public UpdateAccessRequest withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -19,6 +20,7 @@ public class UpdateAccessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeDirectory")
     public String homeDirectory;
+
     public UpdateAccessRequest withHomeDirectory(String homeDirectory) {
         this.homeDirectory = homeDirectory;
         return this;
@@ -27,6 +29,7 @@ public class UpdateAccessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeDirectoryMappings")
     public HomeDirectoryMapEntry[] homeDirectoryMappings;
+
     public UpdateAccessRequest withHomeDirectoryMappings(HomeDirectoryMapEntry[] homeDirectoryMappings) {
         this.homeDirectoryMappings = homeDirectoryMappings;
         return this;
@@ -35,6 +38,7 @@ public class UpdateAccessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeDirectoryType")
     public HomeDirectoryTypeEnum homeDirectoryType;
+
     public UpdateAccessRequest withHomeDirectoryType(HomeDirectoryTypeEnum homeDirectoryType) {
         this.homeDirectoryType = homeDirectoryType;
         return this;
@@ -43,6 +47,7 @@ public class UpdateAccessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policy")
     public String policy;
+
     public UpdateAccessRequest withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -54,6 +59,7 @@ public class UpdateAccessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PosixProfile")
     public PosixProfile posixProfile;
+
     public UpdateAccessRequest withPosixProfile(PosixProfile posixProfile) {
         this.posixProfile = posixProfile;
         return this;
@@ -62,6 +68,7 @@ public class UpdateAccessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Role")
     public String role;
+
     public UpdateAccessRequest withRole(String role) {
         this.role = role;
         return this;
@@ -69,9 +76,14 @@ public class UpdateAccessRequest {
     
     @JsonProperty("ServerId")
     public String serverId;
+
     public UpdateAccessRequest withServerId(String serverId) {
         this.serverId = serverId;
         return this;
     }
     
+    public UpdateAccessRequest(@JsonProperty("ExternalId") String externalId, @JsonProperty("ServerId") String serverId) {
+        this.externalId = externalId;
+        this.serverId = serverId;
+  }
 }

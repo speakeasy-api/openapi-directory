@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteAnalysisSchemeResponse - The result of a &lt;code&gt;DeleteAnalysisScheme&lt;/code&gt; request. Contains the status of the deleted analysis scheme.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteAnalysisSchemeResponse {
     
     public AnalysisSchemeStatus analysisScheme;
+
     public DeleteAnalysisSchemeResponse withAnalysisScheme(AnalysisSchemeStatus analysisScheme) {
         this.analysisScheme = analysisScheme;
         return this;
     }
     
+    public DeleteAnalysisSchemeResponse(@JsonProperty("AnalysisScheme") AnalysisSchemeStatus analysisScheme) {
+        this.analysisScheme = analysisScheme;
+  }
 }

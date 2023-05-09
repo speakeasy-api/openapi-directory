@@ -18,6 +18,7 @@ public class FilterSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("absoluteDateRange")
     public AbsoluteDateRange absoluteDateRange;
+
     public FilterSet withAbsoluteDateRange(AbsoluteDateRange absoluteDateRange) {
         this.absoluteDateRange = absoluteDateRange;
         return this;
@@ -29,6 +30,7 @@ public class FilterSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("breakdownDimensions")
     public FilterSetBreakdownDimensionsEnum[] breakdownDimensions;
+
     public FilterSet withBreakdownDimensions(FilterSetBreakdownDimensionsEnum[] breakdownDimensions) {
         this.breakdownDimensions = breakdownDimensions;
         return this;
@@ -40,6 +42,7 @@ public class FilterSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeId")
     public String creativeId;
+
     public FilterSet withCreativeId(String creativeId) {
         this.creativeId = creativeId;
         return this;
@@ -51,6 +54,7 @@ public class FilterSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dealId")
     public String dealId;
+
     public FilterSet withDealId(String dealId) {
         this.dealId = dealId;
         return this;
@@ -62,6 +66,7 @@ public class FilterSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public FilterSetEnvironmentEnum environment;
+
     public FilterSet withEnvironment(FilterSetEnvironmentEnum environment) {
         this.environment = environment;
         return this;
@@ -73,6 +78,7 @@ public class FilterSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public FilterSetFormatEnum format;
+
     public FilterSet withFormat(FilterSetFormatEnum format) {
         this.format = format;
         return this;
@@ -84,6 +90,7 @@ public class FilterSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formats")
     public FilterSetFormatsEnum[] formats;
+
     public FilterSet withFormats(FilterSetFormatsEnum[] formats) {
         this.formats = formats;
         return this;
@@ -95,6 +102,7 @@ public class FilterSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FilterSet withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class FilterSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platforms")
     public FilterSetPlatformsEnum[] platforms;
+
     public FilterSet withPlatforms(FilterSetPlatformsEnum[] platforms) {
         this.platforms = platforms;
         return this;
@@ -117,6 +126,7 @@ public class FilterSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisherIdentifiers")
     public String[] publisherIdentifiers;
+
     public FilterSet withPublisherIdentifiers(String[] publisherIdentifiers) {
         this.publisherIdentifiers = publisherIdentifiers;
         return this;
@@ -128,6 +138,7 @@ public class FilterSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("realtimeTimeRange")
     public RealtimeTimeRange realtimeTimeRange;
+
     public FilterSet withRealtimeTimeRange(RealtimeTimeRange realtimeTimeRange) {
         this.realtimeTimeRange = realtimeTimeRange;
         return this;
@@ -139,6 +150,7 @@ public class FilterSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relativeDateRange")
     public RelativeDateRange relativeDateRange;
+
     public FilterSet withRelativeDateRange(RelativeDateRange relativeDateRange) {
         this.relativeDateRange = relativeDateRange;
         return this;
@@ -150,6 +162,7 @@ public class FilterSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerNetworkIds")
     public Integer[] sellerNetworkIds;
+
     public FilterSet withSellerNetworkIds(Integer[] sellerNetworkIds) {
         this.sellerNetworkIds = sellerNetworkIds;
         return this;
@@ -161,9 +174,11 @@ public class FilterSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSeriesGranularity")
     public FilterSetTimeSeriesGranularityEnum timeSeriesGranularity;
+
     public FilterSet withTimeSeriesGranularity(FilterSetTimeSeriesGranularityEnum timeSeriesGranularity) {
         this.timeSeriesGranularity = timeSeriesGranularity;
         return this;
     }
     
+    public FilterSet(){}
 }

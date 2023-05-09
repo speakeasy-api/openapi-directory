@@ -18,6 +18,7 @@ public class Autofit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autofitType")
     public AutofitAutofitTypeEnum autofitType;
+
     public Autofit withAutofitType(AutofitAutofitTypeEnum autofitType) {
         this.autofitType = autofitType;
         return this;
@@ -29,6 +30,7 @@ public class Autofit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fontScale")
     public Float fontScale;
+
     public Autofit withFontScale(Float fontScale) {
         this.fontScale = fontScale;
         return this;
@@ -40,9 +42,11 @@ public class Autofit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineSpacingReduction")
     public Float lineSpacingReduction;
+
     public Autofit withLineSpacingReduction(Float lineSpacingReduction) {
         this.lineSpacingReduction = lineSpacingReduction;
         return this;
     }
     
+    public Autofit(){}
 }

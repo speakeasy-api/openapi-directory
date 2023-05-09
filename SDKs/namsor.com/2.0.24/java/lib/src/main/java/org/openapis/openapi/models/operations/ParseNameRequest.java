@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ParseNameRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=nameFull")
     public String nameFull;
+
     public ParseNameRequest withNameFull(String nameFull) {
         this.nameFull = nameFull;
         return this;
     }
     
+    public ParseNameRequest(@JsonProperty("nameFull") String nameFull) {
+        this.nameFull = nameFull;
+  }
 }

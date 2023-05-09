@@ -19,6 +19,7 @@ public class ObservationHeadingGroup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public ObservationHeadingGroup withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -27,6 +28,7 @@ public class ObservationHeadingGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public Group group;
+
     public ObservationHeadingGroup withGroup(Group group) {
         this.group = group;
         return this;
@@ -35,6 +37,7 @@ public class ObservationHeadingGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ObservationHeadingGroup withId(Long id) {
         this.id = id;
         return this;
@@ -43,6 +46,7 @@ public class ObservationHeadingGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("panel")
     public Long panel;
+
     public ObservationHeadingGroup withPanel(Long panel) {
         this.panel = panel;
         return this;
@@ -51,9 +55,11 @@ public class ObservationHeadingGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("panelOrder")
     public Long panelOrder;
+
     public ObservationHeadingGroup withPanelOrder(Long panelOrder) {
         this.panelOrder = panelOrder;
         return this;
     }
     
+    public ObservationHeadingGroup(){}
 }

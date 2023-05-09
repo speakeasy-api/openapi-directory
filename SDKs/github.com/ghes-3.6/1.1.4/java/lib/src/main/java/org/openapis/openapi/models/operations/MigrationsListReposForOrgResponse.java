@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MigrationsListReposForOrgResponse {
     
     public String contentType;
+
     public MigrationsListReposForOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MigrationsListReposForOrgResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public MigrationsListReposForOrgResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class MigrationsListReposForOrgResponse {
     
     
     public Integer statusCode;
+
     public MigrationsListReposForOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class MigrationsListReposForOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MigrationsListReposForOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class MigrationsListReposForOrgResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public MigrationsListReposForOrgResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,9 +56,14 @@ public class MigrationsListReposForOrgResponse {
      */
     
     public org.openapis.openapi.models.shared.MinimalRepository[] minimalRepositories;
+
     public MigrationsListReposForOrgResponse withMinimalRepositories(org.openapis.openapi.models.shared.MinimalRepository[] minimalRepositories) {
         this.minimalRepositories = minimalRepositories;
         return this;
     }
     
+    public MigrationsListReposForOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

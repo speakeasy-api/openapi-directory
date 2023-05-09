@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteResourcesByExternalIdResponse {
     
     public String contentType;
+
     public DeleteResourcesByExternalIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteResourcesByExternalIdResponse {
      */
     
     public java.util.Map<String, Object> deleteResourcesByExternalIdOutput;
+
     public DeleteResourcesByExternalIdResponse withDeleteResourcesByExternalIdOutput(java.util.Map<String, Object> deleteResourcesByExternalIdOutput) {
         this.deleteResourcesByExternalIdOutput = deleteResourcesByExternalIdOutput;
         return this;
@@ -26,6 +29,7 @@ public class DeleteResourcesByExternalIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteResourcesByExternalIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteResourcesByExternalIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteResourcesByExternalIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteResourcesByExternalIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

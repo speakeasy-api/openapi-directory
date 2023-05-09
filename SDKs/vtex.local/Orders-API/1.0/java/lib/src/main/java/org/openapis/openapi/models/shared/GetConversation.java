@@ -12,6 +12,7 @@ public class GetConversation {
      */
     @JsonProperty("attachmentNames")
     public String[] attachmentNames;
+
     public GetConversation withAttachmentNames(String[] attachmentNames) {
         this.attachmentNames = attachmentNames;
         return this;
@@ -22,6 +23,7 @@ public class GetConversation {
      */
     @JsonProperty("body")
     public String body;
+
     public GetConversation withBody(String body) {
         this.body = body;
         return this;
@@ -32,6 +34,7 @@ public class GetConversation {
      */
     @JsonProperty("date")
     public String date;
+
     public GetConversation withDate(String date) {
         this.date = date;
         return this;
@@ -42,6 +45,7 @@ public class GetConversation {
      */
     @JsonProperty("firstWords")
     public String firstWords;
+
     public GetConversation withFirstWords(String firstWords) {
         this.firstWords = firstWords;
         return this;
@@ -52,6 +56,7 @@ public class GetConversation {
      */
     @JsonProperty("from")
     public From from;
+
     public GetConversation withFrom(From from) {
         this.from = from;
         return this;
@@ -62,6 +67,7 @@ public class GetConversation {
      */
     @JsonProperty("hasAttachment")
     public Boolean hasAttachment;
+
     public GetConversation withHasAttachment(Boolean hasAttachment) {
         this.hasAttachment = hasAttachment;
         return this;
@@ -72,6 +78,7 @@ public class GetConversation {
      */
     @JsonProperty("id")
     public String id;
+
     public GetConversation withId(String id) {
         this.id = id;
         return this;
@@ -82,6 +89,7 @@ public class GetConversation {
      */
     @JsonProperty("subject")
     public String subject;
+
     public GetConversation withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -92,9 +100,21 @@ public class GetConversation {
      */
     @JsonProperty("to")
     public To[] to;
+
     public GetConversation withTo(To[] to) {
         this.to = to;
         return this;
     }
     
+    public GetConversation(@JsonProperty("attachmentNames") String[] attachmentNames, @JsonProperty("body") String body, @JsonProperty("date") String date, @JsonProperty("firstWords") String firstWords, @JsonProperty("from") From from, @JsonProperty("hasAttachment") Boolean hasAttachment, @JsonProperty("id") String id, @JsonProperty("subject") String subject, @JsonProperty("to") To[] to) {
+        this.attachmentNames = attachmentNames;
+        this.body = body;
+        this.date = date;
+        this.firstWords = firstWords;
+        this.from = from;
+        this.hasAttachment = hasAttachment;
+        this.id = id;
+        this.subject = subject;
+        this.to = to;
+  }
 }

@@ -18,6 +18,7 @@ public class InstallAndroidAppDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public InstallAndroidAppDetails withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -29,9 +30,11 @@ public class InstallAndroidAppDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public InstallAndroidAppDetailsTypeEnum type;
+
     public InstallAndroidAppDetails withType(InstallAndroidAppDetailsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public InstallAndroidAppDetails(){}
 }

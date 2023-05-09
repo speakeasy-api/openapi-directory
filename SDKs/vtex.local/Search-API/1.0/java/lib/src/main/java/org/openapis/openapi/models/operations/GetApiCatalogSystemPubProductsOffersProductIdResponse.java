@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApiCatalogSystemPubProductsOffersProductIdResponse {
     
     public String contentType;
+
     public GetApiCatalogSystemPubProductsOffersProductIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdResponse {
     
     
     public Integer statusCode;
+
     public GetApiCatalogSystemPubProductsOffersProductIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApiCatalogSystemPubProductsOffersProductIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetApiCatalogSystemPubProductsOffersProductIdResponse {
      */
     
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON[] getApiCatalogSystemPubProductsOffersProductId200ApplicationJSONObjects;
+
     public GetApiCatalogSystemPubProductsOffersProductIdResponse withGetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONObjects(GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSON[] getApiCatalogSystemPubProductsOffersProductId200ApplicationJSONObjects) {
         this.getApiCatalogSystemPubProductsOffersProductId200ApplicationJSONObjects = getApiCatalogSystemPubProductsOffersProductId200ApplicationJSONObjects;
         return this;
     }
     
+    public GetApiCatalogSystemPubProductsOffersProductIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

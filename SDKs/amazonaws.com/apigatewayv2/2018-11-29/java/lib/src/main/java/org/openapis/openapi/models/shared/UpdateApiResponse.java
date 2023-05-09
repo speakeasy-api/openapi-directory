@@ -20,6 +20,7 @@ public class UpdateApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiEndpoint")
     public String apiEndpoint;
+
     public UpdateApiResponse withApiEndpoint(String apiEndpoint) {
         this.apiEndpoint = apiEndpoint;
         return this;
@@ -28,6 +29,7 @@ public class UpdateApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiGatewayManaged")
     public Boolean apiGatewayManaged;
+
     public UpdateApiResponse withApiGatewayManaged(Boolean apiGatewayManaged) {
         this.apiGatewayManaged = apiGatewayManaged;
         return this;
@@ -36,6 +38,7 @@ public class UpdateApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiId")
     public String apiId;
+
     public UpdateApiResponse withApiId(String apiId) {
         this.apiId = apiId;
         return this;
@@ -44,6 +47,7 @@ public class UpdateApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiKeySelectionExpression")
     public String apiKeySelectionExpression;
+
     public UpdateApiResponse withApiKeySelectionExpression(String apiKeySelectionExpression) {
         this.apiKeySelectionExpression = apiKeySelectionExpression;
         return this;
@@ -52,6 +56,7 @@ public class UpdateApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CorsConfiguration")
     public UpdateApiResponseCorsConfiguration corsConfiguration;
+
     public UpdateApiResponse withCorsConfiguration(UpdateApiResponseCorsConfiguration corsConfiguration) {
         this.corsConfiguration = corsConfiguration;
         return this;
@@ -62,6 +67,7 @@ public class UpdateApiResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public UpdateApiResponse withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -70,6 +76,7 @@ public class UpdateApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateApiResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -78,6 +85,7 @@ public class UpdateApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisableExecuteApiEndpoint")
     public Boolean disableExecuteApiEndpoint;
+
     public UpdateApiResponse withDisableExecuteApiEndpoint(Boolean disableExecuteApiEndpoint) {
         this.disableExecuteApiEndpoint = disableExecuteApiEndpoint;
         return this;
@@ -86,6 +94,7 @@ public class UpdateApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisableSchemaValidation")
     public Boolean disableSchemaValidation;
+
     public UpdateApiResponse withDisableSchemaValidation(Boolean disableSchemaValidation) {
         this.disableSchemaValidation = disableSchemaValidation;
         return this;
@@ -94,6 +103,7 @@ public class UpdateApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportInfo")
     public String[] importInfo;
+
     public UpdateApiResponse withImportInfo(String[] importInfo) {
         this.importInfo = importInfo;
         return this;
@@ -102,6 +112,7 @@ public class UpdateApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateApiResponse withName(String name) {
         this.name = name;
         return this;
@@ -110,6 +121,7 @@ public class UpdateApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProtocolType")
     public UpdateApiResponseProtocolTypeEnum protocolType;
+
     public UpdateApiResponse withProtocolType(UpdateApiResponseProtocolTypeEnum protocolType) {
         this.protocolType = protocolType;
         return this;
@@ -118,6 +130,7 @@ public class UpdateApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RouteSelectionExpression")
     public String routeSelectionExpression;
+
     public UpdateApiResponse withRouteSelectionExpression(String routeSelectionExpression) {
         this.routeSelectionExpression = routeSelectionExpression;
         return this;
@@ -126,6 +139,7 @@ public class UpdateApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public UpdateApiResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -134,6 +148,7 @@ public class UpdateApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public UpdateApiResponse withVersion(String version) {
         this.version = version;
         return this;
@@ -142,9 +157,11 @@ public class UpdateApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Warnings")
     public String[] warnings;
+
     public UpdateApiResponse withWarnings(String[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public UpdateApiResponse(){}
 }

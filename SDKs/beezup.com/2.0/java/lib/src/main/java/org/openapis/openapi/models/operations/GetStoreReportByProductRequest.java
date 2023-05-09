@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStoreReportByProductRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ReportByProductRequest reportByProductRequest;
+
     public GetStoreReportByProductRequest withReportByProductRequest(org.openapis.openapi.models.shared.ReportByProductRequest reportByProductRequest) {
         this.reportByProductRequest = reportByProductRequest;
         return this;
@@ -19,9 +21,14 @@ public class GetStoreReportByProductRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public GetStoreReportByProductRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public GetStoreReportByProductRequest(@JsonProperty("reportByProductRequest") org.openapis.openapi.models.shared.ReportByProductRequest reportByProductRequest, @JsonProperty("storeId") String storeId) {
+        this.reportByProductRequest = reportByProductRequest;
+        this.storeId = storeId;
+  }
 }

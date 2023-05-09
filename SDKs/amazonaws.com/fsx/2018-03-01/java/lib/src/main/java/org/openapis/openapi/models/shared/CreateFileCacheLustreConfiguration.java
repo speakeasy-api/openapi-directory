@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateFileCacheLustreConfiguration {
     @JsonProperty("DeploymentType")
     public FileCacheLustreDeploymentTypeEnum deploymentType;
+
     public CreateFileCacheLustreConfiguration withDeploymentType(FileCacheLustreDeploymentTypeEnum deploymentType) {
         this.deploymentType = deploymentType;
         return this;
@@ -21,6 +22,7 @@ public class CreateFileCacheLustreConfiguration {
     
     @JsonProperty("MetadataConfiguration")
     public FileCacheLustreMetadataConfiguration metadataConfiguration;
+
     public CreateFileCacheLustreConfiguration withMetadataConfiguration(FileCacheLustreMetadataConfiguration metadataConfiguration) {
         this.metadataConfiguration = metadataConfiguration;
         return this;
@@ -28,6 +30,7 @@ public class CreateFileCacheLustreConfiguration {
     
     @JsonProperty("PerUnitStorageThroughput")
     public Long perUnitStorageThroughput;
+
     public CreateFileCacheLustreConfiguration withPerUnitStorageThroughput(Long perUnitStorageThroughput) {
         this.perUnitStorageThroughput = perUnitStorageThroughput;
         return this;
@@ -39,9 +42,15 @@ public class CreateFileCacheLustreConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeeklyMaintenanceStartTime")
     public String weeklyMaintenanceStartTime;
+
     public CreateFileCacheLustreConfiguration withWeeklyMaintenanceStartTime(String weeklyMaintenanceStartTime) {
         this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
         return this;
     }
     
+    public CreateFileCacheLustreConfiguration(@JsonProperty("DeploymentType") FileCacheLustreDeploymentTypeEnum deploymentType, @JsonProperty("MetadataConfiguration") FileCacheLustreMetadataConfiguration metadataConfiguration, @JsonProperty("PerUnitStorageThroughput") Long perUnitStorageThroughput) {
+        this.deploymentType = deploymentType;
+        this.metadataConfiguration = metadataConfiguration;
+        this.perUnitStorageThroughput = perUnitStorageThroughput;
+  }
 }

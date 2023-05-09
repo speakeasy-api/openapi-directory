@@ -15,6 +15,7 @@ public class AggregateConformancePackComplianceSummaryFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public AggregateConformancePackComplianceSummaryFilters withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,9 +24,11 @@ public class AggregateConformancePackComplianceSummaryFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsRegion")
     public String awsRegion;
+
     public AggregateConformancePackComplianceSummaryFilters withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
     }
     
+    public AggregateConformancePackComplianceSummaryFilters(){}
 }

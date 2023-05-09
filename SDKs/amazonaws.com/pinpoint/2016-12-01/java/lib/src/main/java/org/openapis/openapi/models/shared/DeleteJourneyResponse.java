@@ -15,9 +15,13 @@ public class DeleteJourneyResponse {
      */
     @JsonProperty("JourneyResponse")
     public JourneyResponse journeyResponse;
+
     public DeleteJourneyResponse withJourneyResponse(JourneyResponse journeyResponse) {
         this.journeyResponse = journeyResponse;
         return this;
     }
     
+    public DeleteJourneyResponse(@JsonProperty("JourneyResponse") JourneyResponse journeyResponse) {
+        this.journeyResponse = journeyResponse;
+  }
 }

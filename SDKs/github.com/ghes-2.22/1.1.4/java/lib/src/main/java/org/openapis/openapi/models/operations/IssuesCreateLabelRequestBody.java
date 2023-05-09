@@ -15,6 +15,7 @@ public class IssuesCreateLabelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public IssuesCreateLabelRequestBody withColor(String color) {
         this.color = color;
         return this;
@@ -26,6 +27,7 @@ public class IssuesCreateLabelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public IssuesCreateLabelRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -36,9 +38,13 @@ public class IssuesCreateLabelRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public IssuesCreateLabelRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public IssuesCreateLabelRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

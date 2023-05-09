@@ -52,10 +52,8 @@ public class WebhookSubscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteV2WebhookSubscriptionsIdResponse res = new org.openapis.openapi.models.operations.DeleteV2WebhookSubscriptionsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteV2WebhookSubscriptionsIdResponse res = new org.openapis.openapi.models.operations.DeleteV2WebhookSubscriptionsIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -91,11 +89,9 @@ public class WebhookSubscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2WebhookSubscriptionsResponse res = new org.openapis.openapi.models.operations.GetV2WebhookSubscriptionsResponse() {{
+        org.openapis.openapi.models.operations.GetV2WebhookSubscriptionsResponse res = new org.openapis.openapi.models.operations.GetV2WebhookSubscriptionsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,11 +125,9 @@ public class WebhookSubscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2WebhookSubscriptionsIdResponse res = new org.openapis.openapi.models.operations.GetV2WebhookSubscriptionsIdResponse() {{
+        org.openapis.openapi.models.operations.GetV2WebhookSubscriptionsIdResponse res = new org.openapis.openapi.models.operations.GetV2WebhookSubscriptionsIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -173,11 +167,9 @@ public class WebhookSubscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV2WebhookSubscriptionsResponse res = new org.openapis.openapi.models.operations.PostV2WebhookSubscriptionsResponse() {{
+        org.openapis.openapi.models.operations.PostV2WebhookSubscriptionsResponse res = new org.openapis.openapi.models.operations.PostV2WebhookSubscriptionsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -214,11 +206,9 @@ public class WebhookSubscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutV2WebhookSubscriptionsIdResponse res = new org.openapis.openapi.models.operations.PutV2WebhookSubscriptionsIdResponse() {{
+        org.openapis.openapi.models.operations.PutV2WebhookSubscriptionsIdResponse res = new org.openapis.openapi.models.operations.PutV2WebhookSubscriptionsIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

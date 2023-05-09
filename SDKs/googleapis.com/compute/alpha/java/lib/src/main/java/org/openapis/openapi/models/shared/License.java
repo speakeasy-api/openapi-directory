@@ -18,6 +18,7 @@ public class License {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargesUseFee")
     public Boolean chargesUseFee;
+
     public License withChargesUseFee(Boolean chargesUseFee) {
         this.chargesUseFee = chargesUseFee;
         return this;
@@ -29,6 +30,7 @@ public class License {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public License withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -40,6 +42,7 @@ public class License {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public License withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class License {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public License withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class License {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public License withKind(String kind) {
         this.kind = kind;
         return this;
@@ -73,6 +78,7 @@ public class License {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenseCode")
     public String licenseCode;
+
     public License withLicenseCode(String licenseCode) {
         this.licenseCode = licenseCode;
         return this;
@@ -84,6 +90,7 @@ public class License {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public License withName(String name) {
         this.name = name;
         return this;
@@ -92,6 +99,7 @@ public class License {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRequirements")
     public LicenseResourceRequirements resourceRequirements;
+
     public License withResourceRequirements(LicenseResourceRequirements resourceRequirements) {
         this.resourceRequirements = resourceRequirements;
         return this;
@@ -103,6 +111,7 @@ public class License {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public License withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -114,6 +123,7 @@ public class License {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public License withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -125,9 +135,11 @@ public class License {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferable")
     public Boolean transferable;
+
     public License withTransferable(Boolean transferable) {
         this.transferable = transferable;
         return this;
     }
     
+    public License(){}
 }

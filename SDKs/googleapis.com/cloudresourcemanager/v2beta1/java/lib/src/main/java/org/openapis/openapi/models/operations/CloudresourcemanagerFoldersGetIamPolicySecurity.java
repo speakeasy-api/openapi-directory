@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CloudresourcemanagerFoldersGetIamPolicySecurity {
     @SpeakeasyMetadata("security:option=true")
     public CloudresourcemanagerFoldersGetIamPolicySecurityOption1 option1;
+
     public CloudresourcemanagerFoldersGetIamPolicySecurity withOption1(CloudresourcemanagerFoldersGetIamPolicySecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class CloudresourcemanagerFoldersGetIamPolicySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudresourcemanagerFoldersGetIamPolicySecurityOption2 option2;
+
     public CloudresourcemanagerFoldersGetIamPolicySecurity withOption2(CloudresourcemanagerFoldersGetIamPolicySecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public CloudresourcemanagerFoldersGetIamPolicySecurity(){}
 }

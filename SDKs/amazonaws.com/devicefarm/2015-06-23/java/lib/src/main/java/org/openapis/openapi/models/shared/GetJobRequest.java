@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetJobRequest {
     @JsonProperty("arn")
     public String arn;
+
     public GetJobRequest withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public GetJobRequest(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

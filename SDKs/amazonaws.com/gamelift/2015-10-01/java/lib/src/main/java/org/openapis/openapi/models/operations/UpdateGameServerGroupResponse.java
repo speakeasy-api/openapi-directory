@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateGameServerGroupResponse {
     
     public String contentType;
+
     public UpdateGameServerGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateGameServerGroupResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateGameServerGroupResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateGameServerGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateGameServerGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateGameServerGroupResponse {
      */
     
     public Object notFoundException;
+
     public UpdateGameServerGroupResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateGameServerGroupResponse {
     
     
     public Integer statusCode;
+
     public UpdateGameServerGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateGameServerGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateGameServerGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateGameServerGroupResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateGameServerGroupResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateGameServerGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateGameServerGroupOutput updateGameServerGroupOutput;
+
     public UpdateGameServerGroupResponse withUpdateGameServerGroupOutput(org.openapis.openapi.models.shared.UpdateGameServerGroupOutput updateGameServerGroupOutput) {
         this.updateGameServerGroupOutput = updateGameServerGroupOutput;
         return this;
     }
     
+    public UpdateGameServerGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBatchSegmentJobsResponse {
     
     public String contentType;
+
     public ListBatchSegmentJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListBatchSegmentJobsResponse {
      */
     
     public Object invalidInputException;
+
     public ListBatchSegmentJobsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class ListBatchSegmentJobsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListBatchSegmentJobsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListBatchSegmentJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBatchSegmentJobsResponse listBatchSegmentJobsResponse;
+
     public ListBatchSegmentJobsResponse withListBatchSegmentJobsResponse(org.openapis.openapi.models.shared.ListBatchSegmentJobsResponse listBatchSegmentJobsResponse) {
         this.listBatchSegmentJobsResponse = listBatchSegmentJobsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListBatchSegmentJobsResponse {
     
     
     public Integer statusCode;
+
     public ListBatchSegmentJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListBatchSegmentJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBatchSegmentJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListBatchSegmentJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -20,6 +20,7 @@ public class CreateEventDataStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdvancedEventSelectors")
     public AdvancedEventSelector[] advancedEventSelectors;
+
     public CreateEventDataStoreResponse withAdvancedEventSelectors(AdvancedEventSelector[] advancedEventSelectors) {
         this.advancedEventSelectors = advancedEventSelectors;
         return this;
@@ -30,6 +31,7 @@ public class CreateEventDataStoreResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public CreateEventDataStoreResponse withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -38,6 +40,7 @@ public class CreateEventDataStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventDataStoreArn")
     public String eventDataStoreArn;
+
     public CreateEventDataStoreResponse withEventDataStoreArn(String eventDataStoreArn) {
         this.eventDataStoreArn = eventDataStoreArn;
         return this;
@@ -46,6 +49,7 @@ public class CreateEventDataStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public CreateEventDataStoreResponse withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -54,6 +58,7 @@ public class CreateEventDataStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MultiRegionEnabled")
     public Boolean multiRegionEnabled;
+
     public CreateEventDataStoreResponse withMultiRegionEnabled(Boolean multiRegionEnabled) {
         this.multiRegionEnabled = multiRegionEnabled;
         return this;
@@ -62,6 +67,7 @@ public class CreateEventDataStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateEventDataStoreResponse withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +76,7 @@ public class CreateEventDataStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationEnabled")
     public Boolean organizationEnabled;
+
     public CreateEventDataStoreResponse withOrganizationEnabled(Boolean organizationEnabled) {
         this.organizationEnabled = organizationEnabled;
         return this;
@@ -78,6 +85,7 @@ public class CreateEventDataStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetentionPeriod")
     public Long retentionPeriod;
+
     public CreateEventDataStoreResponse withRetentionPeriod(Long retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
@@ -86,6 +94,7 @@ public class CreateEventDataStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public EventDataStoreStatusEnum status;
+
     public CreateEventDataStoreResponse withStatus(EventDataStoreStatusEnum status) {
         this.status = status;
         return this;
@@ -97,6 +106,7 @@ public class CreateEventDataStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagsList")
     public Tag[] tagsList;
+
     public CreateEventDataStoreResponse withTagsList(Tag[] tagsList) {
         this.tagsList = tagsList;
         return this;
@@ -105,6 +115,7 @@ public class CreateEventDataStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TerminationProtectionEnabled")
     public Boolean terminationProtectionEnabled;
+
     public CreateEventDataStoreResponse withTerminationProtectionEnabled(Boolean terminationProtectionEnabled) {
         this.terminationProtectionEnabled = terminationProtectionEnabled;
         return this;
@@ -115,9 +126,11 @@ public class CreateEventDataStoreResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedTimestamp")
     public OffsetDateTime updatedTimestamp;
+
     public CreateEventDataStoreResponse withUpdatedTimestamp(OffsetDateTime updatedTimestamp) {
         this.updatedTimestamp = updatedTimestamp;
         return this;
     }
     
+    public CreateEventDataStoreResponse(){}
 }

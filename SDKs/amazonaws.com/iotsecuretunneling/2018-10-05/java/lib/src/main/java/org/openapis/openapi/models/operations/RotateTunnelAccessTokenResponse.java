@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RotateTunnelAccessTokenResponse {
     
     public String contentType;
+
     public RotateTunnelAccessTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RotateTunnelAccessTokenResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RotateTunnelAccessTokenResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class RotateTunnelAccessTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.RotateTunnelAccessTokenResponse rotateTunnelAccessTokenResponse;
+
     public RotateTunnelAccessTokenResponse withRotateTunnelAccessTokenResponse(org.openapis.openapi.models.shared.RotateTunnelAccessTokenResponse rotateTunnelAccessTokenResponse) {
         this.rotateTunnelAccessTokenResponse = rotateTunnelAccessTokenResponse;
         return this;
@@ -36,6 +40,7 @@ public class RotateTunnelAccessTokenResponse {
     
     
     public Integer statusCode;
+
     public RotateTunnelAccessTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class RotateTunnelAccessTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RotateTunnelAccessTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RotateTunnelAccessTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

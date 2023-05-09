@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TinVerificationNameLookupRequest {
@@ -12,9 +13,13 @@ public class TinVerificationNameLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tin")
     public String tin;
+
     public TinVerificationNameLookupRequest withTin(String tin) {
         this.tin = tin;
         return this;
     }
     
+    public TinVerificationNameLookupRequest(@JsonProperty("tin") String tin) {
+        this.tin = tin;
+  }
 }

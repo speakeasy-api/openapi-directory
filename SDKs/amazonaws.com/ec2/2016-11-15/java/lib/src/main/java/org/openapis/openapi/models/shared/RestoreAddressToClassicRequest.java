@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RestoreAddressToClassicRequest {
     
     public Boolean dryRun;
+
     public RestoreAddressToClassicRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class RestoreAddressToClassicRequest {
     
     
     public String publicIp;
+
     public RestoreAddressToClassicRequest withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
     }
     
+    public RestoreAddressToClassicRequest(@JsonProperty("PublicIp") String publicIp) {
+        this.publicIp = publicIp;
+  }
 }

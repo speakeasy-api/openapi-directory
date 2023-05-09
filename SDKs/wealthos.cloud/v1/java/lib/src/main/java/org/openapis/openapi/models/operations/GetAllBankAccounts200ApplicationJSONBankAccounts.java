@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetAllBankAccounts200ApplicationJSONBankAccounts {
     @JsonProperty("account_name")
     public String accountName;
+
     public GetAllBankAccounts200ApplicationJSONBankAccounts withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -27,6 +28,7 @@ public class GetAllBankAccounts200ApplicationJSONBankAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_status")
     public GetAllBankAccounts200ApplicationJSONBankAccountsAccountStatusEnum accountStatus;
+
     public GetAllBankAccounts200ApplicationJSONBankAccounts withAccountStatus(GetAllBankAccounts200ApplicationJSONBankAccountsAccountStatusEnum accountStatus) {
         this.accountStatus = accountStatus;
         return this;
@@ -38,6 +40,7 @@ public class GetAllBankAccounts200ApplicationJSONBankAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank_account_id")
     public String bankAccountId;
+
     public GetAllBankAccounts200ApplicationJSONBankAccounts withBankAccountId(String bankAccountId) {
         this.bankAccountId = bankAccountId;
         return this;
@@ -48,6 +51,7 @@ public class GetAllBankAccounts200ApplicationJSONBankAccounts {
      */
     @JsonProperty("bank_account_number")
     public String bankAccountNumber;
+
     public GetAllBankAccounts200ApplicationJSONBankAccounts withBankAccountNumber(String bankAccountNumber) {
         this.bankAccountNumber = bankAccountNumber;
         return this;
@@ -56,6 +60,7 @@ public class GetAllBankAccounts200ApplicationJSONBankAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("building_society_roll_number")
     public String buildingSocietyRollNumber;
+
     public GetAllBankAccounts200ApplicationJSONBankAccounts withBuildingSocietyRollNumber(String buildingSocietyRollNumber) {
         this.buildingSocietyRollNumber = buildingSocietyRollNumber;
         return this;
@@ -66,6 +71,7 @@ public class GetAllBankAccounts200ApplicationJSONBankAccounts {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public GetAllBankAccounts200ApplicationJSONBankAccounts withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -76,6 +82,7 @@ public class GetAllBankAccounts200ApplicationJSONBankAccounts {
      */
     @JsonProperty("default_account")
     public GetAllBankAccounts200ApplicationJSONBankAccountsDefaultAccountEnum defaultAccount;
+
     public GetAllBankAccounts200ApplicationJSONBankAccounts withDefaultAccount(GetAllBankAccounts200ApplicationJSONBankAccountsDefaultAccountEnum defaultAccount) {
         this.defaultAccount = defaultAccount;
         return this;
@@ -83,6 +90,7 @@ public class GetAllBankAccounts200ApplicationJSONBankAccounts {
     
     @JsonProperty("investor_id")
     public String investorId;
+
     public GetAllBankAccounts200ApplicationJSONBankAccounts withInvestorId(String investorId) {
         this.investorId = investorId;
         return this;
@@ -91,6 +99,7 @@ public class GetAllBankAccounts200ApplicationJSONBankAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_version")
     public Long referenceVersion;
+
     public GetAllBankAccounts200ApplicationJSONBankAccounts withReferenceVersion(Long referenceVersion) {
         this.referenceVersion = referenceVersion;
         return this;
@@ -99,6 +108,7 @@ public class GetAllBankAccounts200ApplicationJSONBankAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort_code")
     public String sortCode;
+
     public GetAllBankAccounts200ApplicationJSONBankAccounts withSortCode(String sortCode) {
         this.sortCode = sortCode;
         return this;
@@ -109,9 +119,16 @@ public class GetAllBankAccounts200ApplicationJSONBankAccounts {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public GetAllBankAccounts200ApplicationJSONBankAccounts withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetAllBankAccounts200ApplicationJSONBankAccounts(@JsonProperty("account_name") String accountName, @JsonProperty("bank_account_number") String bankAccountNumber, @JsonProperty("default_account") GetAllBankAccounts200ApplicationJSONBankAccountsDefaultAccountEnum defaultAccount, @JsonProperty("investor_id") String investorId) {
+        this.accountName = accountName;
+        this.bankAccountNumber = bankAccountNumber;
+        this.defaultAccount = defaultAccount;
+        this.investorId = investorId;
+  }
 }

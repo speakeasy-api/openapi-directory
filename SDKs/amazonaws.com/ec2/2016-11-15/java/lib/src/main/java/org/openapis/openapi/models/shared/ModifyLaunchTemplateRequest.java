@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyLaunchTemplateRequest {
     
     public String clientToken;
+
     public ModifyLaunchTemplateRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class ModifyLaunchTemplateRequest {
     
     
     public String defaultVersion;
+
     public ModifyLaunchTemplateRequest withDefaultVersion(String defaultVersion) {
         this.defaultVersion = defaultVersion;
         return this;
@@ -23,6 +25,7 @@ public class ModifyLaunchTemplateRequest {
     
     
     public Boolean dryRun;
+
     public ModifyLaunchTemplateRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class ModifyLaunchTemplateRequest {
     
     
     public String launchTemplateId;
+
     public ModifyLaunchTemplateRequest withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -37,9 +41,11 @@ public class ModifyLaunchTemplateRequest {
     
     
     public String launchTemplateName;
+
     public ModifyLaunchTemplateRequest withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
     }
     
+    public ModifyLaunchTemplateRequest(){}
 }

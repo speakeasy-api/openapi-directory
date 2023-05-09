@@ -15,6 +15,7 @@ public class CustomerArtifactPaths {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidPaths")
     public String[] androidPaths;
+
     public CustomerArtifactPaths withAndroidPaths(String[] androidPaths) {
         this.androidPaths = androidPaths;
         return this;
@@ -23,6 +24,7 @@ public class CustomerArtifactPaths {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceHostPaths")
     public String[] deviceHostPaths;
+
     public CustomerArtifactPaths withDeviceHostPaths(String[] deviceHostPaths) {
         this.deviceHostPaths = deviceHostPaths;
         return this;
@@ -31,9 +33,11 @@ public class CustomerArtifactPaths {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iosPaths")
     public String[] iosPaths;
+
     public CustomerArtifactPaths withIosPaths(String[] iosPaths) {
         this.iosPaths = iosPaths;
         return this;
     }
     
+    public CustomerArtifactPaths(){}
 }

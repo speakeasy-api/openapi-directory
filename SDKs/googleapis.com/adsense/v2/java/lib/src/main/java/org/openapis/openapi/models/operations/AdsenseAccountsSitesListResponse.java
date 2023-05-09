@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdsenseAccountsSitesListResponse {
     
     public String contentType;
+
     public AdsenseAccountsSitesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AdsenseAccountsSitesListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSitesResponse listSitesResponse;
+
     public AdsenseAccountsSitesListResponse withListSitesResponse(org.openapis.openapi.models.shared.ListSitesResponse listSitesResponse) {
         this.listSitesResponse = listSitesResponse;
         return this;
@@ -26,6 +29,7 @@ public class AdsenseAccountsSitesListResponse {
     
     
     public Integer statusCode;
+
     public AdsenseAccountsSitesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AdsenseAccountsSitesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdsenseAccountsSitesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AdsenseAccountsSitesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

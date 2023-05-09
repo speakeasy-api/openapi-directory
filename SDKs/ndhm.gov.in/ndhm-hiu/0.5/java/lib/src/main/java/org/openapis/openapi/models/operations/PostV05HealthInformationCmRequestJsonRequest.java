@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05HealthInformationCmRequestJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05HealthInformationCmRequestJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05HealthInformationCmRequestJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05HealthInformationCmRequestJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.HIRequest hiRequest;
+
     public PostV05HealthInformationCmRequestJsonRequest withHIRequest(org.openapis.openapi.models.shared.HIRequest hiRequest) {
         this.hiRequest = hiRequest;
         return this;
@@ -29,9 +32,15 @@ public class PostV05HealthInformationCmRequestJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CM-ID")
     public String xCmId;
+
     public PostV05HealthInformationCmRequestJsonRequest withXCmId(String xCmId) {
         this.xCmId = xCmId;
         return this;
     }
     
+    public PostV05HealthInformationCmRequestJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("HIRequest") org.openapis.openapi.models.shared.HIRequest hiRequest, @JsonProperty("X-CM-ID") String xCmId) {
+        this.authorization = authorization;
+        this.hiRequest = hiRequest;
+        this.xCmId = xCmId;
+  }
 }

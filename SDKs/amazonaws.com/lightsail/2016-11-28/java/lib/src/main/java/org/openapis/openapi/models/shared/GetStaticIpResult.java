@@ -15,9 +15,11 @@ public class GetStaticIpResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("staticIp")
     public StaticIp staticIp;
+
     public GetStaticIpResult withStaticIp(StaticIp staticIp) {
         this.staticIp = staticIp;
         return this;
     }
     
+    public GetStaticIpResult(){}
 }

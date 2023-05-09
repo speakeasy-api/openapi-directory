@@ -12,6 +12,7 @@ public class PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3 {
      */
     @JsonProperty("client_id")
     public String clientId;
+
     public PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3 withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -19,6 +20,7 @@ public class PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3 {
     
     @JsonProperty("client_secret")
     public String clientSecret;
+
     public PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3 withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -29,6 +31,7 @@ public class PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3 {
      */
     @JsonProperty("grant_type")
     public PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2GrantTypeEnum grantType;
+
     public PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3 withGrantType(PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2GrantTypeEnum grantType) {
         this.grantType = grantType;
         return this;
@@ -39,6 +42,7 @@ public class PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3 {
      */
     @JsonProperty("refresh_token")
     public String refreshToken;
+
     public PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3 withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
@@ -49,9 +53,17 @@ public class PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3 {
      */
     @JsonProperty("scope")
     public PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2ScopeEnum scope;
+
     public PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3 withScope(PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2ScopeEnum scope) {
         this.scope = scope;
         return this;
     }
     
+    public PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV3(@JsonProperty("client_id") String clientId, @JsonProperty("client_secret") String clientSecret, @JsonProperty("grant_type") PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2GrantTypeEnum grantType, @JsonProperty("refresh_token") String refreshToken, @JsonProperty("scope") PostOauthAccessTokenRequestBodyAccessTokenRequestBaseV2ScopeEnum scope) {
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+        this.grantType = grantType;
+        this.refreshToken = refreshToken;
+        this.scope = scope;
+  }
 }

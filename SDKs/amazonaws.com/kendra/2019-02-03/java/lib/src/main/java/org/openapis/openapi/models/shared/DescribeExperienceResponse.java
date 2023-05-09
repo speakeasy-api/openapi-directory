@@ -20,6 +20,7 @@ public class DescribeExperienceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configuration")
     public ExperienceConfiguration configuration;
+
     public DescribeExperienceResponse withConfiguration(ExperienceConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -30,6 +31,7 @@ public class DescribeExperienceResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public DescribeExperienceResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class DescribeExperienceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeExperienceResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class DescribeExperienceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Endpoints")
     public ExperienceEndpoint[] endpoints;
+
     public DescribeExperienceResponse withEndpoints(ExperienceEndpoint[] endpoints) {
         this.endpoints = endpoints;
         return this;
@@ -54,6 +58,7 @@ public class DescribeExperienceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public DescribeExperienceResponse withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -62,6 +67,7 @@ public class DescribeExperienceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public DescribeExperienceResponse withId(String id) {
         this.id = id;
         return this;
@@ -70,6 +76,7 @@ public class DescribeExperienceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexId")
     public String indexId;
+
     public DescribeExperienceResponse withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -78,6 +85,7 @@ public class DescribeExperienceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribeExperienceResponse withName(String name) {
         this.name = name;
         return this;
@@ -86,6 +94,7 @@ public class DescribeExperienceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeExperienceResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -94,6 +103,7 @@ public class DescribeExperienceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ExperienceStatusEnum status;
+
     public DescribeExperienceResponse withStatus(ExperienceStatusEnum status) {
         this.status = status;
         return this;
@@ -104,9 +114,11 @@ public class DescribeExperienceResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public DescribeExperienceResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public DescribeExperienceResponse(){}
 }

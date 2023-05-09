@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetNotificationConfigurationResponse {
     @JsonProperty("notificationConfiguration")
     public NotificationConfiguration notificationConfiguration;
+
     public GetNotificationConfigurationResponse withNotificationConfiguration(NotificationConfiguration notificationConfiguration) {
         this.notificationConfiguration = notificationConfiguration;
         return this;
     }
     
+    public GetNotificationConfigurationResponse(@JsonProperty("notificationConfiguration") NotificationConfiguration notificationConfiguration) {
+        this.notificationConfiguration = notificationConfiguration;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ApplySecurityGroupsToClientVpnTargetNetworkRequest {
     
     public String clientVpnEndpointId;
+
     public ApplySecurityGroupsToClientVpnTargetNetworkRequest withClientVpnEndpointId(String clientVpnEndpointId) {
         this.clientVpnEndpointId = clientVpnEndpointId;
         return this;
@@ -16,6 +17,7 @@ public class ApplySecurityGroupsToClientVpnTargetNetworkRequest {
     
     
     public Boolean dryRun;
+
     public ApplySecurityGroupsToClientVpnTargetNetworkRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class ApplySecurityGroupsToClientVpnTargetNetworkRequest {
     
     
     public String[] securityGroupIds;
+
     public ApplySecurityGroupsToClientVpnTargetNetworkRequest withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -30,9 +33,15 @@ public class ApplySecurityGroupsToClientVpnTargetNetworkRequest {
     
     
     public String vpcId;
+
     public ApplySecurityGroupsToClientVpnTargetNetworkRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public ApplySecurityGroupsToClientVpnTargetNetworkRequest(@JsonProperty("ClientVpnEndpointId") String clientVpnEndpointId, @JsonProperty("SecurityGroupIds") String[] securityGroupIds, @JsonProperty("VpcId") String vpcId) {
+        this.clientVpnEndpointId = clientVpnEndpointId;
+        this.securityGroupIds = securityGroupIds;
+        this.vpcId = vpcId;
+  }
 }

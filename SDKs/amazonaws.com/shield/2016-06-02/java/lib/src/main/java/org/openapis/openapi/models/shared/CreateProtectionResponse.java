@@ -15,9 +15,11 @@ public class CreateProtectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProtectionId")
     public String protectionId;
+
     public CreateProtectionResponse withProtectionId(String protectionId) {
         this.protectionId = protectionId;
         return this;
     }
     
+    public CreateProtectionResponse(){}
 }

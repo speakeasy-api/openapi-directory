@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetConnectionStatusRequest {
     @JsonProperty("Target")
     public String target;
+
     public GetConnectionStatusRequest withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public GetConnectionStatusRequest(@JsonProperty("Target") String target) {
+        this.target = target;
+  }
 }

@@ -18,6 +18,7 @@ public class SlsaMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildFinishedOn")
     public String buildFinishedOn;
+
     public SlsaMetadata withBuildFinishedOn(String buildFinishedOn) {
         this.buildFinishedOn = buildFinishedOn;
         return this;
@@ -29,6 +30,7 @@ public class SlsaMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildInvocationId")
     public String buildInvocationId;
+
     public SlsaMetadata withBuildInvocationId(String buildInvocationId) {
         this.buildInvocationId = buildInvocationId;
         return this;
@@ -40,6 +42,7 @@ public class SlsaMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildStartedOn")
     public String buildStartedOn;
+
     public SlsaMetadata withBuildStartedOn(String buildStartedOn) {
         this.buildStartedOn = buildStartedOn;
         return this;
@@ -51,6 +54,7 @@ public class SlsaMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completeness")
     public SlsaCompleteness completeness;
+
     public SlsaMetadata withCompleteness(SlsaCompleteness completeness) {
         this.completeness = completeness;
         return this;
@@ -62,9 +66,11 @@ public class SlsaMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reproducible")
     public Boolean reproducible;
+
     public SlsaMetadata withReproducible(Boolean reproducible) {
         this.reproducible = reproducible;
         return this;
     }
     
+    public SlsaMetadata(){}
 }

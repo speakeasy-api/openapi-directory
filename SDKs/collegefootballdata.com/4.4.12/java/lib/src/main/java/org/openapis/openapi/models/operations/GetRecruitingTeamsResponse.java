@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRecruitingTeamsResponse {
     
     public String contentType;
+
     public GetRecruitingTeamsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRecruitingTeamsResponse {
     
     
     public Integer statusCode;
+
     public GetRecruitingTeamsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRecruitingTeamsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRecruitingTeamsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetRecruitingTeamsResponse {
      */
     
     public org.openapis.openapi.models.shared.TeamRecruitingRank[] teamRecruitingRanks;
+
     public GetRecruitingTeamsResponse withTeamRecruitingRanks(org.openapis.openapi.models.shared.TeamRecruitingRank[] teamRecruitingRanks) {
         this.teamRecruitingRanks = teamRecruitingRanks;
         return this;
     }
     
+    public GetRecruitingTeamsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

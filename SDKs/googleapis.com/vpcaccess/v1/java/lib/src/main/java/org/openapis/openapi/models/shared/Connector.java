@@ -18,6 +18,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectedProjects")
     public String[] connectedProjects;
+
     public Connector withConnectedProjects(String[] connectedProjects) {
         this.connectedProjects = connectedProjects;
         return this;
@@ -29,6 +30,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipCidrRange")
     public String ipCidrRange;
+
     public Connector withIpCidrRange(String ipCidrRange) {
         this.ipCidrRange = ipCidrRange;
         return this;
@@ -40,6 +42,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public String machineType;
+
     public Connector withMachineType(String machineType) {
         this.machineType = machineType;
         return this;
@@ -51,6 +54,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxInstances")
     public Integer maxInstances;
+
     public Connector withMaxInstances(Integer maxInstances) {
         this.maxInstances = maxInstances;
         return this;
@@ -62,6 +66,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxThroughput")
     public Integer maxThroughput;
+
     public Connector withMaxThroughput(Integer maxThroughput) {
         this.maxThroughput = maxThroughput;
         return this;
@@ -73,6 +78,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minInstances")
     public Integer minInstances;
+
     public Connector withMinInstances(Integer minInstances) {
         this.minInstances = minInstances;
         return this;
@@ -84,6 +90,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minThroughput")
     public Integer minThroughput;
+
     public Connector withMinThroughput(Integer minThroughput) {
         this.minThroughput = minThroughput;
         return this;
@@ -95,6 +102,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Connector withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public Connector withNetwork(String network) {
         this.network = network;
         return this;
@@ -117,6 +126,7 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ConnectorStateEnum state;
+
     public Connector withState(ConnectorStateEnum state) {
         this.state = state;
         return this;
@@ -128,9 +138,11 @@ public class Connector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnet")
     public Subnet subnet;
+
     public Connector withSubnet(Subnet subnet) {
         this.subnet = subnet;
         return this;
     }
     
+    public Connector(){}
 }

@@ -18,6 +18,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public InstanceGroup withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public InstanceGroup withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public InstanceGroup withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -51,6 +54,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public InstanceGroup withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public InstanceGroup withKind(String kind) {
         this.kind = kind;
         return this;
@@ -73,6 +78,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InstanceGroup withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedPorts")
     public NamedPort[] namedPorts;
+
     public InstanceGroup withNamedPorts(NamedPort[] namedPorts) {
         this.namedPorts = namedPorts;
         return this;
@@ -95,6 +102,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public InstanceGroup withNetwork(String network) {
         this.network = network;
         return this;
@@ -106,6 +114,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public InstanceGroup withRegion(String region) {
         this.region = region;
         return this;
@@ -117,6 +126,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public InstanceGroup withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -128,6 +138,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Integer size;
+
     public InstanceGroup withSize(Integer size) {
         this.size = size;
         return this;
@@ -139,6 +150,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public InstanceGroup withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
@@ -150,9 +162,11 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public InstanceGroup withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public InstanceGroup(){}
 }

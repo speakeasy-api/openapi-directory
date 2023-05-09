@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientsSummaryPartialUpdateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_of_birth")
     public String dateOfBirth;
+
     public PatientsSummaryPartialUpdateRequest withDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -16,6 +18,7 @@ public class PatientsSummaryPartialUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public PatientsSummaryPartialUpdateRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -23,6 +26,7 @@ public class PatientsSummaryPartialUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_name")
     public String firstName;
+
     public PatientsSummaryPartialUpdateRequest withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -30,6 +34,7 @@ public class PatientsSummaryPartialUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gender")
     public String gender;
+
     public PatientsSummaryPartialUpdateRequest withGender(String gender) {
         this.gender = gender;
         return this;
@@ -37,6 +42,7 @@ public class PatientsSummaryPartialUpdateRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PatientsSummaryPartialUpdateRequest withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +50,7 @@ public class PatientsSummaryPartialUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_name")
     public String lastName;
+
     public PatientsSummaryPartialUpdateRequest withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -51,9 +58,13 @@ public class PatientsSummaryPartialUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public PatientsSummaryPartialUpdateRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public PatientsSummaryPartialUpdateRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

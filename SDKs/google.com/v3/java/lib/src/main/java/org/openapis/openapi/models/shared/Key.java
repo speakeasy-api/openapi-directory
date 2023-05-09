@@ -18,6 +18,7 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advanceBookingWindow")
     public Integer advanceBookingWindow;
+
     public Key withAdvanceBookingWindow(Integer advanceBookingWindow) {
         this.advanceBookingWindow = advanceBookingWindow;
         return this;
@@ -29,6 +30,7 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkinDate")
     public Date checkinDate;
+
     public Key withCheckinDate(Date checkinDate) {
         this.checkinDate = checkinDate;
         return this;
@@ -40,6 +42,7 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public Date date;
+
     public Key withDate(Date date) {
         this.date = date;
         return this;
@@ -51,6 +54,7 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceType")
     public KeyDeviceTypeEnum deviceType;
+
     public Key withDeviceType(KeyDeviceTypeEnum deviceType) {
         this.deviceType = deviceType;
         return this;
@@ -62,6 +66,7 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hotelRegionCode")
     public String hotelRegionCode;
+
     public Key withHotelRegionCode(String hotelRegionCode) {
         this.hotelRegionCode = hotelRegionCode;
         return this;
@@ -73,6 +78,7 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lengthOfStayDays")
     public Integer lengthOfStayDays;
+
     public Key withLengthOfStayDays(Integer lengthOfStayDays) {
         this.lengthOfStayDays = lengthOfStayDays;
         return this;
@@ -84,6 +90,7 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occupancy")
     public Integer occupancy;
+
     public Key withOccupancy(Integer occupancy) {
         this.occupancy = occupancy;
         return this;
@@ -95,6 +102,7 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerHotelId")
     public String partnerHotelId;
+
     public Key withPartnerHotelId(String partnerHotelId) {
         this.partnerHotelId = partnerHotelId;
         return this;
@@ -106,9 +114,11 @@ public class Key {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userRegionCode")
     public String userRegionCode;
+
     public Key withUserRegionCode(String userRegionCode) {
         this.userRegionCode = userRegionCode;
         return this;
     }
     
+    public Key(){}
 }

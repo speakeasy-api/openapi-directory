@@ -12,9 +12,11 @@ public class CustomGenerateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upload_hash")
     public String uploadHash;
+
     public CustomGenerateResponse withUploadHash(String uploadHash) {
         this.uploadHash = uploadHash;
         return this;
     }
     
+    public CustomGenerateResponse(){}
 }

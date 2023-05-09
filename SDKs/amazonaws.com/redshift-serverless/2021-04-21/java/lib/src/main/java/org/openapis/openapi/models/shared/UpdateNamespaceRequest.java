@@ -12,6 +12,7 @@ public class UpdateNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminUserPassword")
     public String adminUserPassword;
+
     public UpdateNamespaceRequest withAdminUserPassword(String adminUserPassword) {
         this.adminUserPassword = adminUserPassword;
         return this;
@@ -20,6 +21,7 @@ public class UpdateNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminUsername")
     public String adminUsername;
+
     public UpdateNamespaceRequest withAdminUsername(String adminUsername) {
         this.adminUsername = adminUsername;
         return this;
@@ -28,6 +30,7 @@ public class UpdateNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultIamRoleArn")
     public String defaultIamRoleArn;
+
     public UpdateNamespaceRequest withDefaultIamRoleArn(String defaultIamRoleArn) {
         this.defaultIamRoleArn = defaultIamRoleArn;
         return this;
@@ -36,6 +39,7 @@ public class UpdateNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamRoles")
     public String[] iamRoles;
+
     public UpdateNamespaceRequest withIamRoles(String[] iamRoles) {
         this.iamRoles = iamRoles;
         return this;
@@ -44,6 +48,7 @@ public class UpdateNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public UpdateNamespaceRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -52,6 +57,7 @@ public class UpdateNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logExports")
     public LogExportEnum[] logExports;
+
     public UpdateNamespaceRequest withLogExports(LogExportEnum[] logExports) {
         this.logExports = logExports;
         return this;
@@ -59,9 +65,13 @@ public class UpdateNamespaceRequest {
     
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public UpdateNamespaceRequest withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
     }
     
+    public UpdateNamespaceRequest(@JsonProperty("namespaceName") String namespaceName) {
+        this.namespaceName = namespaceName;
+  }
 }

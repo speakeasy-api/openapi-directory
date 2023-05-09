@@ -15,6 +15,7 @@ public class ADMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public ActionEnum action;
+
     public ADMMessage withAction(ActionEnum action) {
         this.action = action;
         return this;
@@ -23,6 +24,7 @@ public class ADMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Body")
     public String body;
+
     public ADMMessage withBody(String body) {
         this.body = body;
         return this;
@@ -31,6 +33,7 @@ public class ADMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsolidationKey")
     public String consolidationKey;
+
     public ADMMessage withConsolidationKey(String consolidationKey) {
         this.consolidationKey = consolidationKey;
         return this;
@@ -39,6 +42,7 @@ public class ADMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public java.util.Map<String, String> data;
+
     public ADMMessage withData(java.util.Map<String, String> data) {
         this.data = data;
         return this;
@@ -47,6 +51,7 @@ public class ADMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpiresAfter")
     public String expiresAfter;
+
     public ADMMessage withExpiresAfter(String expiresAfter) {
         this.expiresAfter = expiresAfter;
         return this;
@@ -55,6 +60,7 @@ public class ADMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IconReference")
     public String iconReference;
+
     public ADMMessage withIconReference(String iconReference) {
         this.iconReference = iconReference;
         return this;
@@ -63,6 +69,7 @@ public class ADMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageIconUrl")
     public String imageIconUrl;
+
     public ADMMessage withImageIconUrl(String imageIconUrl) {
         this.imageIconUrl = imageIconUrl;
         return this;
@@ -71,6 +78,7 @@ public class ADMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageUrl")
     public String imageUrl;
+
     public ADMMessage withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -79,6 +87,7 @@ public class ADMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MD5")
     public String md5;
+
     public ADMMessage withMd5(String md5) {
         this.md5 = md5;
         return this;
@@ -87,6 +96,7 @@ public class ADMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RawContent")
     public String rawContent;
+
     public ADMMessage withRawContent(String rawContent) {
         this.rawContent = rawContent;
         return this;
@@ -95,6 +105,7 @@ public class ADMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SilentPush")
     public Boolean silentPush;
+
     public ADMMessage withSilentPush(Boolean silentPush) {
         this.silentPush = silentPush;
         return this;
@@ -103,6 +114,7 @@ public class ADMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SmallImageIconUrl")
     public String smallImageIconUrl;
+
     public ADMMessage withSmallImageIconUrl(String smallImageIconUrl) {
         this.smallImageIconUrl = smallImageIconUrl;
         return this;
@@ -111,6 +123,7 @@ public class ADMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sound")
     public String sound;
+
     public ADMMessage withSound(String sound) {
         this.sound = sound;
         return this;
@@ -119,6 +132,7 @@ public class ADMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Substitutions")
     public java.util.Map<String, String[]> substitutions;
+
     public ADMMessage withSubstitutions(java.util.Map<String, String[]> substitutions) {
         this.substitutions = substitutions;
         return this;
@@ -127,6 +141,7 @@ public class ADMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public ADMMessage withTitle(String title) {
         this.title = title;
         return this;
@@ -135,9 +150,11 @@ public class ADMMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public ADMMessage withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ADMMessage(){}
 }

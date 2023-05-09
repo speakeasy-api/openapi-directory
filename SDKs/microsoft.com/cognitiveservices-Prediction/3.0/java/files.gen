@@ -77,4 +77,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/CustomVisionErrorCodeEnum.j
 lib/src/main/java/org/openapis/openapi/models/shared/CustomVisionError.java
 lib/src/main/java/org/openapis/openapi/models/shared/ImageUrl.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/imagepredictionapi/README.md
 USAGE.md

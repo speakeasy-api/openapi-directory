@@ -18,6 +18,7 @@ public class GoogleIamV1AuditConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auditLogConfigs")
     public GoogleIamV1AuditLogConfig[] auditLogConfigs;
+
     public GoogleIamV1AuditConfig withAuditLogConfigs(GoogleIamV1AuditLogConfig[] auditLogConfigs) {
         this.auditLogConfigs = auditLogConfigs;
         return this;
@@ -29,9 +30,11 @@ public class GoogleIamV1AuditConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public GoogleIamV1AuditConfig withService(String service) {
         this.service = service;
         return this;
     }
     
+    public GoogleIamV1AuditConfig(){}
 }

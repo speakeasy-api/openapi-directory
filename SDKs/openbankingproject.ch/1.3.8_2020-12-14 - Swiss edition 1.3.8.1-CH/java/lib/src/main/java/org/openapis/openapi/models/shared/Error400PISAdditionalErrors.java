@@ -17,6 +17,7 @@ public class Error400PISAdditionalErrors {
      */
     @JsonProperty("code")
     public MessageCode400PISEnum code;
+
     public Error400PISAdditionalErrors withCode(MessageCode400PISEnum code) {
         this.code = code;
         return this;
@@ -31,6 +32,7 @@ public class Error400PISAdditionalErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error400PISAdditionalErrors withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -45,9 +47,13 @@ public class Error400PISAdditionalErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Error400PISAdditionalErrors withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Error400PISAdditionalErrors(@JsonProperty("code") MessageCode400PISEnum code) {
+        this.code = code;
+  }
 }

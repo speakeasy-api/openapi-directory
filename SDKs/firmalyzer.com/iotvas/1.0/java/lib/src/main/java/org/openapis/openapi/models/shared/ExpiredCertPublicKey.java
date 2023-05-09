@@ -12,6 +12,7 @@ public class ExpiredCertPublicKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithm")
     public String algorithm;
+
     public ExpiredCertPublicKey withAlgorithm(String algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -20,9 +21,11 @@ public class ExpiredCertPublicKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bits")
     public Long bits;
+
     public ExpiredCertPublicKey withBits(Long bits) {
         this.bits = bits;
         return this;
     }
     
+    public ExpiredCertPublicKey(){}
 }

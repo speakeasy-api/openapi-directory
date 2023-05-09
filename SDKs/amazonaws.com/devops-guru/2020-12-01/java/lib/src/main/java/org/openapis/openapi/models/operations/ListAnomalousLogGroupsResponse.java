@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAnomalousLogGroupsResponse {
@@ -12,6 +13,7 @@ public class ListAnomalousLogGroupsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAnomalousLogGroupsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAnomalousLogGroupsResponse {
     
     
     public String contentType;
+
     public ListAnomalousLogGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAnomalousLogGroupsResponse {
      */
     
     public Object internalServerException;
+
     public ListAnomalousLogGroupsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListAnomalousLogGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAnomalousLogGroupsResponse listAnomalousLogGroupsResponse;
+
     public ListAnomalousLogGroupsResponse withListAnomalousLogGroupsResponse(org.openapis.openapi.models.shared.ListAnomalousLogGroupsResponse listAnomalousLogGroupsResponse) {
         this.listAnomalousLogGroupsResponse = listAnomalousLogGroupsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListAnomalousLogGroupsResponse {
     
     
     public Integer statusCode;
+
     public ListAnomalousLogGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListAnomalousLogGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAnomalousLogGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListAnomalousLogGroupsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAnomalousLogGroupsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class ListAnomalousLogGroupsResponse {
      */
     
     public Object throttlingException;
+
     public ListAnomalousLogGroupsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListAnomalousLogGroupsResponse {
      */
     
     public Object validationException;
+
     public ListAnomalousLogGroupsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAnomalousLogGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

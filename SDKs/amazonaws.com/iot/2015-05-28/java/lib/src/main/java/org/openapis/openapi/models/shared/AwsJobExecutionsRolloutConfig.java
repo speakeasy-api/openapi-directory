@@ -15,6 +15,7 @@ public class AwsJobExecutionsRolloutConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exponentialRate")
     public AwsJobExponentialRolloutRate exponentialRate;
+
     public AwsJobExecutionsRolloutConfig withExponentialRate(AwsJobExponentialRolloutRate exponentialRate) {
         this.exponentialRate = exponentialRate;
         return this;
@@ -23,9 +24,11 @@ public class AwsJobExecutionsRolloutConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumPerMinute")
     public Long maximumPerMinute;
+
     public AwsJobExecutionsRolloutConfig withMaximumPerMinute(Long maximumPerMinute) {
         this.maximumPerMinute = maximumPerMinute;
         return this;
     }
     
+    public AwsJobExecutionsRolloutConfig(){}
 }

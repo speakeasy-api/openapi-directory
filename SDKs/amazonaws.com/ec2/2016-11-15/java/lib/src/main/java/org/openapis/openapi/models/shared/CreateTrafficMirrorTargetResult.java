@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateTrafficMirrorTargetResult {
     
     public String clientToken;
+
     public CreateTrafficMirrorTargetResult withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,9 +20,11 @@ public class CreateTrafficMirrorTargetResult {
     
     
     public CreateTrafficMirrorTargetResultTrafficMirrorTarget trafficMirrorTarget;
+
     public CreateTrafficMirrorTargetResult withTrafficMirrorTarget(CreateTrafficMirrorTargetResultTrafficMirrorTarget trafficMirrorTarget) {
         this.trafficMirrorTarget = trafficMirrorTarget;
         return this;
     }
     
+    public CreateTrafficMirrorTargetResult(){}
 }

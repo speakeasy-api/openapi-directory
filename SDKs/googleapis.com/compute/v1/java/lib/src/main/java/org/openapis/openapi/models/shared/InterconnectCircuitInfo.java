@@ -18,6 +18,7 @@ public class InterconnectCircuitInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerDemarcId")
     public String customerDemarcId;
+
     public InterconnectCircuitInfo withCustomerDemarcId(String customerDemarcId) {
         this.customerDemarcId = customerDemarcId;
         return this;
@@ -29,6 +30,7 @@ public class InterconnectCircuitInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleCircuitId")
     public String googleCircuitId;
+
     public InterconnectCircuitInfo withGoogleCircuitId(String googleCircuitId) {
         this.googleCircuitId = googleCircuitId;
         return this;
@@ -40,9 +42,11 @@ public class InterconnectCircuitInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleDemarcId")
     public String googleDemarcId;
+
     public InterconnectCircuitInfo withGoogleDemarcId(String googleDemarcId) {
         this.googleDemarcId = googleDemarcId;
         return this;
     }
     
+    public InterconnectCircuitInfo(){}
 }

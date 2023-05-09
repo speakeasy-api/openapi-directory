@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeEffectivePatchesForPatchBaselineRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DescribeEffectivePatchesForPatchBaselineRequest describeEffectivePatchesForPatchBaselineRequest;
+
     public DescribeEffectivePatchesForPatchBaselineRequest withDescribeEffectivePatchesForPatchBaselineRequest(org.openapis.openapi.models.shared.DescribeEffectivePatchesForPatchBaselineRequest describeEffectivePatchesForPatchBaselineRequest) {
         this.describeEffectivePatchesForPatchBaselineRequest = describeEffectivePatchesForPatchBaselineRequest;
         return this;
@@ -19,6 +21,7 @@ public class DescribeEffectivePatchesForPatchBaselineRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public String maxResults;
+
     public DescribeEffectivePatchesForPatchBaselineRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class DescribeEffectivePatchesForPatchBaselineRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public DescribeEffectivePatchesForPatchBaselineRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class DescribeEffectivePatchesForPatchBaselineRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeEffectivePatchesForPatchBaselineRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class DescribeEffectivePatchesForPatchBaselineRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeEffectivePatchesForPatchBaselineRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class DescribeEffectivePatchesForPatchBaselineRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeEffectivePatchesForPatchBaselineRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class DescribeEffectivePatchesForPatchBaselineRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeEffectivePatchesForPatchBaselineRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class DescribeEffectivePatchesForPatchBaselineRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeEffectivePatchesForPatchBaselineRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class DescribeEffectivePatchesForPatchBaselineRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeEffectivePatchesForPatchBaselineRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class DescribeEffectivePatchesForPatchBaselineRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeEffectivePatchesForPatchBaselineRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class DescribeEffectivePatchesForPatchBaselineRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DescribeEffectivePatchesForPatchBaselineXAmzTargetEnum xAmzTarget;
+
     public DescribeEffectivePatchesForPatchBaselineRequest withXAmzTarget(DescribeEffectivePatchesForPatchBaselineXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DescribeEffectivePatchesForPatchBaselineRequest(@JsonProperty("DescribeEffectivePatchesForPatchBaselineRequest") org.openapis.openapi.models.shared.DescribeEffectivePatchesForPatchBaselineRequest describeEffectivePatchesForPatchBaselineRequest, @JsonProperty("X-Amz-Target") DescribeEffectivePatchesForPatchBaselineXAmzTargetEnum xAmzTarget) {
+        this.describeEffectivePatchesForPatchBaselineRequest = describeEffectivePatchesForPatchBaselineRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FailedBatchItem {
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public FailedBatchItem withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -19,9 +20,14 @@ public class FailedBatchItem {
     
     @JsonProperty("id")
     public String id;
+
     public FailedBatchItem withId(String id) {
         this.id = id;
         return this;
     }
     
+    public FailedBatchItem(@JsonProperty("errorMessage") String errorMessage, @JsonProperty("id") String id) {
+        this.errorMessage = errorMessage;
+        this.id = id;
+  }
 }

@@ -12,9 +12,13 @@ public class BatchPutFieldOptionsRequestBody {
      */
     @JsonProperty("options")
     public org.openapis.openapi.models.shared.FieldOption[] options;
+
     public BatchPutFieldOptionsRequestBody withOptions(org.openapis.openapi.models.shared.FieldOption[] options) {
         this.options = options;
         return this;
     }
     
+    public BatchPutFieldOptionsRequestBody(@JsonProperty("options") org.openapis.openapi.models.shared.FieldOption[] options) {
+        this.options = options;
+  }
 }

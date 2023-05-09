@@ -12,9 +12,11 @@ public class LinksElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public LinksElement withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public LinksElement(){}
 }

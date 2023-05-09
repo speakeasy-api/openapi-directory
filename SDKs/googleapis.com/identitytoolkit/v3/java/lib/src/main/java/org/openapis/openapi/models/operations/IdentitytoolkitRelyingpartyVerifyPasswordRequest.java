@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class IdentitytoolkitRelyingpartyVerifyPasswordRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.IdentitytoolkitRelyingpartyVerifyPasswordRequest identitytoolkitRelyingpartyVerifyPasswordRequest;
+
     public IdentitytoolkitRelyingpartyVerifyPasswordRequest withIdentitytoolkitRelyingpartyVerifyPasswordRequest(org.openapis.openapi.models.shared.IdentitytoolkitRelyingpartyVerifyPasswordRequest identitytoolkitRelyingpartyVerifyPasswordRequest) {
         this.identitytoolkitRelyingpartyVerifyPasswordRequest = identitytoolkitRelyingpartyVerifyPasswordRequest;
         return this;
@@ -19,6 +20,7 @@ public class IdentitytoolkitRelyingpartyVerifyPasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public IdentitytoolkitRelyingpartyVerifyPasswordRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +31,7 @@ public class IdentitytoolkitRelyingpartyVerifyPasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public IdentitytoolkitRelyingpartyVerifyPasswordRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -39,6 +42,7 @@ public class IdentitytoolkitRelyingpartyVerifyPasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public IdentitytoolkitRelyingpartyVerifyPasswordRequest withKey(String key) {
         this.key = key;
         return this;
@@ -49,6 +53,7 @@ public class IdentitytoolkitRelyingpartyVerifyPasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public IdentitytoolkitRelyingpartyVerifyPasswordRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -59,6 +64,7 @@ public class IdentitytoolkitRelyingpartyVerifyPasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public IdentitytoolkitRelyingpartyVerifyPasswordRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -69,6 +75,7 @@ public class IdentitytoolkitRelyingpartyVerifyPasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public IdentitytoolkitRelyingpartyVerifyPasswordRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -79,9 +86,11 @@ public class IdentitytoolkitRelyingpartyVerifyPasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public IdentitytoolkitRelyingpartyVerifyPasswordRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartyVerifyPasswordRequest(){}
 }

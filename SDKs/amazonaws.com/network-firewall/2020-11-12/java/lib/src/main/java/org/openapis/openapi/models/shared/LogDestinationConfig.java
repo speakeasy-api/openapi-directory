@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LogDestinationConfig {
     @JsonProperty("LogDestination")
     public java.util.Map<String, String> logDestination;
+
     public LogDestinationConfig withLogDestination(java.util.Map<String, String> logDestination) {
         this.logDestination = logDestination;
         return this;
@@ -19,6 +20,7 @@ public class LogDestinationConfig {
     
     @JsonProperty("LogDestinationType")
     public LogDestinationTypeEnum logDestinationType;
+
     public LogDestinationConfig withLogDestinationType(LogDestinationTypeEnum logDestinationType) {
         this.logDestinationType = logDestinationType;
         return this;
@@ -26,9 +28,15 @@ public class LogDestinationConfig {
     
     @JsonProperty("LogType")
     public LogTypeEnum logType;
+
     public LogDestinationConfig withLogType(LogTypeEnum logType) {
         this.logType = logType;
         return this;
     }
     
+    public LogDestinationConfig(@JsonProperty("LogDestination") java.util.Map<String, String> logDestination, @JsonProperty("LogDestinationType") LogDestinationTypeEnum logDestinationType, @JsonProperty("LogType") LogTypeEnum logType) {
+        this.logDestination = logDestination;
+        this.logDestinationType = logDestinationType;
+        this.logType = logType;
+  }
 }

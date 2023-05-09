@@ -12,9 +12,13 @@ public class UpdateWorkloadShareRequestBody {
      */
     @JsonProperty("PermissionType")
     public UpdateWorkloadShareRequestBodyPermissionTypeEnum permissionType;
+
     public UpdateWorkloadShareRequestBody withPermissionType(UpdateWorkloadShareRequestBodyPermissionTypeEnum permissionType) {
         this.permissionType = permissionType;
         return this;
     }
     
+    public UpdateWorkloadShareRequestBody(@JsonProperty("PermissionType") UpdateWorkloadShareRequestBodyPermissionTypeEnum permissionType) {
+        this.permissionType = permissionType;
+  }
 }

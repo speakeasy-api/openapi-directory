@@ -58,11 +58,9 @@ public class ConnectorPlatformRegions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsConnectorPlatformRegionsEnumerateResponse res = new org.openapis.openapi.models.operations.IntegrationsConnectorPlatformRegionsEnumerateResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsConnectorPlatformRegionsEnumerateResponse res = new org.openapis.openapi.models.operations.IntegrationsConnectorPlatformRegionsEnumerateResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaEnumerateConnectorPlatformRegionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

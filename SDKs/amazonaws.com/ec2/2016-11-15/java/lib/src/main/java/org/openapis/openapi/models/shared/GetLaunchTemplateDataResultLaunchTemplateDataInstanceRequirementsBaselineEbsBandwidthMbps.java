@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbps {
     
     public Long max;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbps withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsBa
     
     
     public Long min;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbps withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbps(){}
 }

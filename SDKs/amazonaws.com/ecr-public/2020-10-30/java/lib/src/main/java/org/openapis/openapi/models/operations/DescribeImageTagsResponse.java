@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeImageTagsResponse {
     
     public String contentType;
+
     public DescribeImageTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeImageTagsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeImageTagsResponse describeImageTagsResponse;
+
     public DescribeImageTagsResponse withDescribeImageTagsResponse(org.openapis.openapi.models.shared.DescribeImageTagsResponse describeImageTagsResponse) {
         this.describeImageTagsResponse = describeImageTagsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeImageTagsResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeImageTagsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeImageTagsResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public DescribeImageTagsResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeImageTagsResponse {
      */
     
     public Object serverException;
+
     public DescribeImageTagsResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeImageTagsResponse {
     
     
     public Integer statusCode;
+
     public DescribeImageTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeImageTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeImageTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeImageTagsResponse {
      */
     
     public Object unsupportedCommandException;
+
     public DescribeImageTagsResponse withUnsupportedCommandException(Object unsupportedCommandException) {
         this.unsupportedCommandException = unsupportedCommandException;
         return this;
     }
     
+    public DescribeImageTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

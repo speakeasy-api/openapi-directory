@@ -18,9 +18,11 @@ public class PartnerAdServerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurementConfig")
     public MeasurementConfig measurementConfig;
+
     public PartnerAdServerConfig withMeasurementConfig(MeasurementConfig measurementConfig) {
         this.measurementConfig = measurementConfig;
         return this;
     }
     
+    public PartnerAdServerConfig(){}
 }

@@ -15,6 +15,7 @@ public class TestIdentityProviderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public TestIdentityProviderResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -23,6 +24,7 @@ public class TestIdentityProviderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Response")
     public String response;
+
     public TestIdentityProviderResponse withResponse(String response) {
         this.response = response;
         return this;
@@ -30,6 +32,7 @@ public class TestIdentityProviderResponse {
     
     @JsonProperty("StatusCode")
     public Long statusCode;
+
     public TestIdentityProviderResponse withStatusCode(Long statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,9 +40,14 @@ public class TestIdentityProviderResponse {
     
     @JsonProperty("Url")
     public String url;
+
     public TestIdentityProviderResponse withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public TestIdentityProviderResponse(@JsonProperty("StatusCode") Long statusCode, @JsonProperty("Url") String url) {
+        this.statusCode = statusCode;
+        this.url = url;
+  }
 }

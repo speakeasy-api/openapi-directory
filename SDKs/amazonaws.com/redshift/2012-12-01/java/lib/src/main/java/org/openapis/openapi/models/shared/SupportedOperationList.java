@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class SupportedOperationList {
     
     public String operationName;
+
     public SupportedOperationList withOperationName(String operationName) {
         this.operationName = operationName;
         return this;
     }
     
+    public SupportedOperationList(){}
 }

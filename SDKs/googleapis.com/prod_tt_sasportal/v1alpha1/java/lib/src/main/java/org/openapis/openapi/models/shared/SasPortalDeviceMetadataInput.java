@@ -18,6 +18,7 @@ public class SasPortalDeviceMetadataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antennaModel")
     public String antennaModel;
+
     public SasPortalDeviceMetadataInput withAntennaModel(String antennaModel) {
         this.antennaModel = antennaModel;
         return this;
@@ -29,6 +30,7 @@ public class SasPortalDeviceMetadataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonChannelGroup")
     public String commonChannelGroup;
+
     public SasPortalDeviceMetadataInput withCommonChannelGroup(String commonChannelGroup) {
         this.commonChannelGroup = commonChannelGroup;
         return this;
@@ -40,6 +42,7 @@ public class SasPortalDeviceMetadataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interferenceCoordinationGroup")
     public String interferenceCoordinationGroup;
+
     public SasPortalDeviceMetadataInput withInterferenceCoordinationGroup(String interferenceCoordinationGroup) {
         this.interferenceCoordinationGroup = interferenceCoordinationGroup;
         return this;
@@ -51,9 +54,11 @@ public class SasPortalDeviceMetadataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nrqzValidation")
     public SasPortalNrqzValidation nrqzValidation;
+
     public SasPortalDeviceMetadataInput withNrqzValidation(SasPortalNrqzValidation nrqzValidation) {
         this.nrqzValidation = nrqzValidation;
         return this;
     }
     
+    public SasPortalDeviceMetadataInput(){}
 }

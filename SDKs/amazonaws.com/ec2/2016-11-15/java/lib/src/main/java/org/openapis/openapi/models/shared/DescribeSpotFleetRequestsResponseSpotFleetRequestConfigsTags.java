@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsTags {
     
     public String key;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsTags {
     
     
     public String value;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsTags(){}
 }

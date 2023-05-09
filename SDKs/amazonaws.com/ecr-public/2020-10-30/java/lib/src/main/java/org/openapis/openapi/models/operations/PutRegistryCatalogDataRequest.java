@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRegistryCatalogDataRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PutRegistryCatalogDataRequest putRegistryCatalogDataRequest;
+
     public PutRegistryCatalogDataRequest withPutRegistryCatalogDataRequest(org.openapis.openapi.models.shared.PutRegistryCatalogDataRequest putRegistryCatalogDataRequest) {
         this.putRegistryCatalogDataRequest = putRegistryCatalogDataRequest;
         return this;
@@ -16,6 +18,7 @@ public class PutRegistryCatalogDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public PutRegistryCatalogDataRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class PutRegistryCatalogDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public PutRegistryCatalogDataRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class PutRegistryCatalogDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public PutRegistryCatalogDataRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class PutRegistryCatalogDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public PutRegistryCatalogDataRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class PutRegistryCatalogDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public PutRegistryCatalogDataRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class PutRegistryCatalogDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public PutRegistryCatalogDataRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class PutRegistryCatalogDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public PutRegistryCatalogDataRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class PutRegistryCatalogDataRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public PutRegistryCatalogDataXAmzTargetEnum xAmzTarget;
+
     public PutRegistryCatalogDataRequest withXAmzTarget(PutRegistryCatalogDataXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public PutRegistryCatalogDataRequest(@JsonProperty("PutRegistryCatalogDataRequest") org.openapis.openapi.models.shared.PutRegistryCatalogDataRequest putRegistryCatalogDataRequest, @JsonProperty("X-Amz-Target") PutRegistryCatalogDataXAmzTargetEnum xAmzTarget) {
+        this.putRegistryCatalogDataRequest = putRegistryCatalogDataRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

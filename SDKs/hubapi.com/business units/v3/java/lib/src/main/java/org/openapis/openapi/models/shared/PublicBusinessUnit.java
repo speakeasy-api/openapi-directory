@@ -17,6 +17,7 @@ public class PublicBusinessUnit {
      */
     @JsonProperty("id")
     public String id;
+
     public PublicBusinessUnit withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +29,7 @@ public class PublicBusinessUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logoMetadata")
     public PublicBusinessUnitLogoMetadata logoMetadata;
+
     public PublicBusinessUnit withLogoMetadata(PublicBusinessUnitLogoMetadata logoMetadata) {
         this.logoMetadata = logoMetadata;
         return this;
@@ -38,9 +40,14 @@ public class PublicBusinessUnit {
      */
     @JsonProperty("name")
     public String name;
+
     public PublicBusinessUnit withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PublicBusinessUnit(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

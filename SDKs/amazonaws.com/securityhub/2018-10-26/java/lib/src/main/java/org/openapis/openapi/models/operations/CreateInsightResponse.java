@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateInsightResponse {
     
     public String contentType;
+
     public CreateInsightResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateInsightResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateInsightResponse createInsightResponse;
+
     public CreateInsightResponse withCreateInsightResponse(org.openapis.openapi.models.shared.CreateInsightResponse createInsightResponse) {
         this.createInsightResponse = createInsightResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateInsightResponse {
      */
     
     public Object internalException;
+
     public CreateInsightResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class CreateInsightResponse {
      */
     
     public Object invalidAccessException;
+
     public CreateInsightResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class CreateInsightResponse {
      */
     
     public Object invalidInputException;
+
     public CreateInsightResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class CreateInsightResponse {
      */
     
     public Object limitExceededException;
+
     public CreateInsightResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateInsightResponse {
      */
     
     public Object resourceConflictException;
+
     public CreateInsightResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -76,6 +84,7 @@ public class CreateInsightResponse {
     
     
     public Integer statusCode;
+
     public CreateInsightResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateInsightResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateInsightResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateInsightResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

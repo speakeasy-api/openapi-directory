@@ -15,9 +15,11 @@ public class PerformanceInsightsReferenceMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricQuery")
     public PerformanceInsightsMetricQuery metricQuery;
+
     public PerformanceInsightsReferenceMetric withMetricQuery(PerformanceInsightsMetricQuery metricQuery) {
         this.metricQuery = metricQuery;
         return this;
     }
     
+    public PerformanceInsightsReferenceMetric(){}
 }

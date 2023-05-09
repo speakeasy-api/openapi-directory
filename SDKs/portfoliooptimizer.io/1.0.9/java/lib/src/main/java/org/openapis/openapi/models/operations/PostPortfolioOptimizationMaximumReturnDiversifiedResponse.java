@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostPortfolioOptimizationMaximumReturnDiversifiedResponse {
     
     public String contentType;
+
     public PostPortfolioOptimizationMaximumReturnDiversifiedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostPortfolioOptimizationMaximumReturnDiversifiedResponse {
     
     
     public Integer statusCode;
+
     public PostPortfolioOptimizationMaximumReturnDiversifiedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostPortfolioOptimizationMaximumReturnDiversifiedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostPortfolioOptimizationMaximumReturnDiversifiedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostPortfolioOptimizationMaximumReturnDiversifiedResponse {
      */
     
     public PostPortfolioOptimizationMaximumReturnDiversified200ApplicationJSON postPortfolioOptimizationMaximumReturnDiversified200ApplicationJSONObject;
+
     public PostPortfolioOptimizationMaximumReturnDiversifiedResponse withPostPortfolioOptimizationMaximumReturnDiversified200ApplicationJSONObject(PostPortfolioOptimizationMaximumReturnDiversified200ApplicationJSON postPortfolioOptimizationMaximumReturnDiversified200ApplicationJSONObject) {
         this.postPortfolioOptimizationMaximumReturnDiversified200ApplicationJSONObject = postPortfolioOptimizationMaximumReturnDiversified200ApplicationJSONObject;
         return this;
     }
     
+    public PostPortfolioOptimizationMaximumReturnDiversifiedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ public class GetSinkPolicyRequestBody {
      */
     @JsonProperty("SinkIdentifier")
     public String sinkIdentifier;
+
     public GetSinkPolicyRequestBody withSinkIdentifier(String sinkIdentifier) {
         this.sinkIdentifier = sinkIdentifier;
         return this;
     }
     
+    public GetSinkPolicyRequestBody(@JsonProperty("SinkIdentifier") String sinkIdentifier) {
+        this.sinkIdentifier = sinkIdentifier;
+  }
 }

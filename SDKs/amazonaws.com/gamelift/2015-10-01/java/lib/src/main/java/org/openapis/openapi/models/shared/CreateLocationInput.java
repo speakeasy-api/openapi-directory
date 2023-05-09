@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateLocationInput {
     @JsonProperty("LocationName")
     public String locationName;
+
     public CreateLocationInput withLocationName(String locationName) {
         this.locationName = locationName;
         return this;
@@ -19,9 +20,13 @@ public class CreateLocationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateLocationInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLocationInput(@JsonProperty("LocationName") String locationName) {
+        this.locationName = locationName;
+  }
 }

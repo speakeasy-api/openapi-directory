@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteServiceResponse {
@@ -12,6 +13,7 @@ public class DeleteServiceResponse {
      */
     
     public Object clientException;
+
     public DeleteServiceResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteServiceResponse {
      */
     
     public Object clusterNotFoundException;
+
     public DeleteServiceResponse withClusterNotFoundException(Object clusterNotFoundException) {
         this.clusterNotFoundException = clusterNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteServiceResponse {
     
     
     public String contentType;
+
     public DeleteServiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteServiceResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteServiceResponse deleteServiceResponse;
+
     public DeleteServiceResponse withDeleteServiceResponse(org.openapis.openapi.models.shared.DeleteServiceResponse deleteServiceResponse) {
         this.deleteServiceResponse = deleteServiceResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteServiceResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteServiceResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteServiceResponse {
      */
     
     public Object serverException;
+
     public DeleteServiceResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteServiceResponse {
      */
     
     public Object serviceNotFoundException;
+
     public DeleteServiceResponse withServiceNotFoundException(Object serviceNotFoundException) {
         this.serviceNotFoundException = serviceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteServiceResponse {
     
     
     public Integer statusCode;
+
     public DeleteServiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteServiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteServiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteServiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

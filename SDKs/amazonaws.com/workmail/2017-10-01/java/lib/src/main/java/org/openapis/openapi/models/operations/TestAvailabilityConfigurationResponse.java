@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestAvailabilityConfigurationResponse {
     
     public String contentType;
+
     public TestAvailabilityConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TestAvailabilityConfigurationResponse {
      */
     
     public Object invalidParameterException;
+
     public TestAvailabilityConfigurationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class TestAvailabilityConfigurationResponse {
      */
     
     public Object organizationNotFoundException;
+
     public TestAvailabilityConfigurationResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class TestAvailabilityConfigurationResponse {
      */
     
     public Object organizationStateException;
+
     public TestAvailabilityConfigurationResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -49,6 +54,7 @@ public class TestAvailabilityConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public TestAvailabilityConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class TestAvailabilityConfigurationResponse {
     
     
     public Integer statusCode;
+
     public TestAvailabilityConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class TestAvailabilityConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestAvailabilityConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class TestAvailabilityConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.TestAvailabilityConfigurationResponse testAvailabilityConfigurationResponse;
+
     public TestAvailabilityConfigurationResponse withTestAvailabilityConfigurationResponse(org.openapis.openapi.models.shared.TestAvailabilityConfigurationResponse testAvailabilityConfigurationResponse) {
         this.testAvailabilityConfigurationResponse = testAvailabilityConfigurationResponse;
         return this;
     }
     
+    public TestAvailabilityConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

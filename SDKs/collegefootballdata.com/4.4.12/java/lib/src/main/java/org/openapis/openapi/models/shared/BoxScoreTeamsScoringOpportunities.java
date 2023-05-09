@@ -12,6 +12,7 @@ public class BoxScoreTeamsScoringOpportunities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opportunities")
     public Long opportunities;
+
     public BoxScoreTeamsScoringOpportunities withOpportunities(Long opportunities) {
         this.opportunities = opportunities;
         return this;
@@ -20,6 +21,7 @@ public class BoxScoreTeamsScoringOpportunities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("points")
     public Long points;
+
     public BoxScoreTeamsScoringOpportunities withPoints(Long points) {
         this.points = points;
         return this;
@@ -28,6 +30,7 @@ public class BoxScoreTeamsScoringOpportunities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointsPerOpportunity")
     public Double pointsPerOpportunity;
+
     public BoxScoreTeamsScoringOpportunities withPointsPerOpportunity(Double pointsPerOpportunity) {
         this.pointsPerOpportunity = pointsPerOpportunity;
         return this;
@@ -36,9 +39,11 @@ public class BoxScoreTeamsScoringOpportunities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public BoxScoreTeamsScoringOpportunities withTeam(String team) {
         this.team = team;
         return this;
     }
     
+    public BoxScoreTeamsScoringOpportunities(){}
 }

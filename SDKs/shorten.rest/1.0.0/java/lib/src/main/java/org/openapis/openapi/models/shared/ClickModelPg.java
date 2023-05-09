@@ -15,6 +15,7 @@ public class ClickModelPg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public ClickModelPg withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class ClickModelPg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public ClickModelPg withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -31,6 +33,7 @@ public class ClickModelPg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aliasId")
     public String aliasId;
+
     public ClickModelPg withAliasId(String aliasId) {
         this.aliasId = aliasId;
         return this;
@@ -39,6 +42,7 @@ public class ClickModelPg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("browser")
     public String browser;
+
     public ClickModelPg withBrowser(String browser) {
         this.browser = browser;
         return this;
@@ -47,6 +51,7 @@ public class ClickModelPg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public ClickModelPg withCountry(String country) {
         this.country = country;
         return this;
@@ -55,6 +60,7 @@ public class ClickModelPg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdAt")
     public Long createdAt;
+
     public ClickModelPg withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -63,6 +69,7 @@ public class ClickModelPg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public ClickModelPg withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -71,6 +78,7 @@ public class ClickModelPg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public ClickModelPg withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -79,6 +87,7 @@ public class ClickModelPg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ClickModelPg withId(Long id) {
         this.id = id;
         return this;
@@ -87,6 +96,7 @@ public class ClickModelPg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os")
     public String os;
+
     public ClickModelPg withOs(String os) {
         this.os = os;
         return this;
@@ -95,6 +105,7 @@ public class ClickModelPg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referrer")
     public String referrer;
+
     public ClickModelPg withReferrer(String referrer) {
         this.referrer = referrer;
         return this;
@@ -103,9 +114,11 @@ public class ClickModelPg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAgent")
     public String userAgent;
+
     public ClickModelPg withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
     }
     
+    public ClickModelPg(){}
 }

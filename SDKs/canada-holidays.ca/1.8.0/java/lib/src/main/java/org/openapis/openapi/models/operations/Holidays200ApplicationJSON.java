@@ -15,9 +15,11 @@ public class Holidays200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("holidays")
     public org.openapis.openapi.models.shared.Holiday[] holidays;
+
     public Holidays200ApplicationJSON withHolidays(org.openapis.openapi.models.shared.Holiday[] holidays) {
         this.holidays = holidays;
         return this;
     }
     
+    public Holidays200ApplicationJSON(){}
 }

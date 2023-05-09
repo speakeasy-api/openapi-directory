@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateChannelResponse {
@@ -12,6 +13,7 @@ public class UpdateChannelResponse {
      */
     
     public Object channelARNInvalidException;
+
     public UpdateChannelResponse withChannelARNInvalidException(Object channelARNInvalidException) {
         this.channelARNInvalidException = channelARNInvalidException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateChannelResponse {
      */
     
     public Object channelAlreadyExistsException;
+
     public UpdateChannelResponse withChannelAlreadyExistsException(Object channelAlreadyExistsException) {
         this.channelAlreadyExistsException = channelAlreadyExistsException;
         return this;
@@ -32,6 +35,7 @@ public class UpdateChannelResponse {
      */
     
     public Object channelNotFoundException;
+
     public UpdateChannelResponse withChannelNotFoundException(Object channelNotFoundException) {
         this.channelNotFoundException = channelNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateChannelResponse {
     
     
     public String contentType;
+
     public UpdateChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class UpdateChannelResponse {
      */
     
     public Object eventDataStoreARNInvalidException;
+
     public UpdateChannelResponse withEventDataStoreARNInvalidException(Object eventDataStoreARNInvalidException) {
         this.eventDataStoreARNInvalidException = eventDataStoreARNInvalidException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateChannelResponse {
      */
     
     public Object eventDataStoreNotFoundException;
+
     public UpdateChannelResponse withEventDataStoreNotFoundException(Object eventDataStoreNotFoundException) {
         this.eventDataStoreNotFoundException = eventDataStoreNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateChannelResponse {
      */
     
     public Object inactiveEventDataStoreException;
+
     public UpdateChannelResponse withInactiveEventDataStoreException(Object inactiveEventDataStoreException) {
         this.inactiveEventDataStoreException = inactiveEventDataStoreException;
         return this;
@@ -79,6 +87,7 @@ public class UpdateChannelResponse {
      */
     
     public Object invalidEventDataStoreCategoryException;
+
     public UpdateChannelResponse withInvalidEventDataStoreCategoryException(Object invalidEventDataStoreCategoryException) {
         this.invalidEventDataStoreCategoryException = invalidEventDataStoreCategoryException;
         return this;
@@ -89,6 +98,7 @@ public class UpdateChannelResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateChannelResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -99,6 +109,7 @@ public class UpdateChannelResponse {
      */
     
     public Object operationNotPermittedException;
+
     public UpdateChannelResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -106,6 +117,7 @@ public class UpdateChannelResponse {
     
     
     public Integer statusCode;
+
     public UpdateChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class UpdateChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class UpdateChannelResponse {
      */
     
     public Object unsupportedOperationException;
+
     public UpdateChannelResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
@@ -133,9 +147,14 @@ public class UpdateChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateChannelResponse updateChannelResponse;
+
     public UpdateChannelResponse withUpdateChannelResponse(org.openapis.openapi.models.shared.UpdateChannelResponse updateChannelResponse) {
         this.updateChannelResponse = updateChannelResponse;
         return this;
     }
     
+    public UpdateChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

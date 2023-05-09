@@ -15,9 +15,13 @@ public class PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequest
      */
     @JsonProperty("selector")
     public String selector;
+
     public PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesLabelSelector withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesLabelSelector(@JsonProperty("selector") String selector) {
+        this.selector = selector;
+  }
 }

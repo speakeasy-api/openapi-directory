@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateConnectionResponse {
@@ -12,6 +13,7 @@ public class UpdateConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.Connection connection;
+
     public UpdateConnectionResponse withConnection(org.openapis.openapi.models.shared.Connection connection) {
         this.connection = connection;
         return this;
@@ -19,6 +21,7 @@ public class UpdateConnectionResponse {
     
     
     public String contentType;
+
     public UpdateConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateConnectionResponse {
      */
     
     public Object directConnectClientException;
+
     public UpdateConnectionResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateConnectionResponse {
      */
     
     public Object directConnectServerException;
+
     public UpdateConnectionResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateConnectionResponse {
     
     
     public Integer statusCode;
+
     public UpdateConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class UpdateConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

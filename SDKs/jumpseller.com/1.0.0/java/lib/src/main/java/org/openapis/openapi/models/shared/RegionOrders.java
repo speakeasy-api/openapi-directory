@@ -12,6 +12,7 @@ public class RegionOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public RegionOrders withCity(String city) {
         this.city = city;
         return this;
@@ -20,6 +21,7 @@ public class RegionOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public RegionOrders withCode(Long code) {
         this.code = code;
         return this;
@@ -28,9 +30,11 @@ public class RegionOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public Long country;
+
     public RegionOrders withCountry(Long country) {
         this.country = country;
         return this;
     }
     
+    public RegionOrders(){}
 }

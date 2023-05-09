@@ -15,9 +15,11 @@ public class CreateIntegrationRequestBodyTlsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerNameToVerify")
     public String serverNameToVerify;
+
     public CreateIntegrationRequestBodyTlsConfig withServerNameToVerify(String serverNameToVerify) {
         this.serverNameToVerify = serverNameToVerify;
         return this;
     }
     
+    public CreateIntegrationRequestBodyTlsConfig(){}
 }

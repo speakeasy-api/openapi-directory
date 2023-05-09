@@ -14,6 +14,7 @@ public class CreateStudioRequestBody {
      */
     @JsonProperty("adminRoleArn")
     public String adminRoleArn;
+
     public CreateStudioRequestBody withAdminRoleArn(String adminRoleArn) {
         this.adminRoleArn = adminRoleArn;
         return this;
@@ -24,6 +25,7 @@ public class CreateStudioRequestBody {
      */
     @JsonProperty("displayName")
     public String displayName;
+
     public CreateStudioRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -35,6 +37,7 @@ public class CreateStudioRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("studioEncryptionConfiguration")
     public CreateStudioRequestBodyStudioEncryptionConfiguration studioEncryptionConfiguration;
+
     public CreateStudioRequestBody withStudioEncryptionConfiguration(CreateStudioRequestBodyStudioEncryptionConfiguration studioEncryptionConfiguration) {
         this.studioEncryptionConfiguration = studioEncryptionConfiguration;
         return this;
@@ -45,6 +48,7 @@ public class CreateStudioRequestBody {
      */
     @JsonProperty("studioName")
     public String studioName;
+
     public CreateStudioRequestBody withStudioName(String studioName) {
         this.studioName = studioName;
         return this;
@@ -56,6 +60,7 @@ public class CreateStudioRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateStudioRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -66,9 +71,16 @@ public class CreateStudioRequestBody {
      */
     @JsonProperty("userRoleArn")
     public String userRoleArn;
+
     public CreateStudioRequestBody withUserRoleArn(String userRoleArn) {
         this.userRoleArn = userRoleArn;
         return this;
     }
     
+    public CreateStudioRequestBody(@JsonProperty("adminRoleArn") String adminRoleArn, @JsonProperty("displayName") String displayName, @JsonProperty("studioName") String studioName, @JsonProperty("userRoleArn") String userRoleArn) {
+        this.adminRoleArn = adminRoleArn;
+        this.displayName = displayName;
+        this.studioName = studioName;
+        this.userRoleArn = userRoleArn;
+  }
 }

@@ -12,9 +12,11 @@ public class GetGroupsSchemaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public String[] members;
+
     public GetGroupsSchemaData withMembers(String[] members) {
         this.members = members;
         return this;
     }
     
+    public GetGroupsSchemaData(){}
 }

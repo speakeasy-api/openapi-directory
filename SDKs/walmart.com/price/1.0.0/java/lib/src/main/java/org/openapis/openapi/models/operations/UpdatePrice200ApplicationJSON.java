@@ -15,6 +15,7 @@ public class UpdatePrice200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public UpdatePrice200ApplicationJSONErrors[] errors;
+
     public UpdatePrice200ApplicationJSON withErrors(UpdatePrice200ApplicationJSONErrors[] errors) {
         this.errors = errors;
         return this;
@@ -26,6 +27,7 @@ public class UpdatePrice200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mart")
     public String mart;
+
     public UpdatePrice200ApplicationJSON withMart(String mart) {
         this.mart = mart;
         return this;
@@ -37,6 +39,7 @@ public class UpdatePrice200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public UpdatePrice200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -48,6 +51,7 @@ public class UpdatePrice200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public UpdatePrice200ApplicationJSON withSku(String sku) {
         this.sku = sku;
         return this;
@@ -56,9 +60,11 @@ public class UpdatePrice200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCode")
     public Integer statusCode;
+
     public UpdatePrice200ApplicationJSON withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public UpdatePrice200ApplicationJSON(){}
 }

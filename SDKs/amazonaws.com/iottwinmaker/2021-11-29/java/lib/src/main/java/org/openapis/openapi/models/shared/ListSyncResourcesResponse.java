@@ -15,6 +15,7 @@ public class ListSyncResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSyncResourcesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListSyncResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncResources")
     public SyncResourceSummary[] syncResources;
+
     public ListSyncResourcesResponse withSyncResources(SyncResourceSummary[] syncResources) {
         this.syncResources = syncResources;
         return this;
     }
     
+    public ListSyncResourcesResponse(){}
 }

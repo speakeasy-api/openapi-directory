@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfsSlatesByWeekRequest {
@@ -12,6 +13,7 @@ public class DfsSlatesByWeekRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public DfsSlatesByWeekFormatEnum format;
+
     public DfsSlatesByWeekRequest withFormat(DfsSlatesByWeekFormatEnum format) {
         this.format = format;
         return this;
@@ -23,6 +25,7 @@ public class DfsSlatesByWeekRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
     public String season;
+
     public DfsSlatesByWeekRequest withSeason(String season) {
         this.season = season;
         return this;
@@ -34,9 +37,15 @@ public class DfsSlatesByWeekRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=week")
     public String week;
+
     public DfsSlatesByWeekRequest withWeek(String week) {
         this.week = week;
         return this;
     }
     
+    public DfsSlatesByWeekRequest(@JsonProperty("format") DfsSlatesByWeekFormatEnum format, @JsonProperty("season") String season, @JsonProperty("week") String week) {
+        this.format = format;
+        this.season = season;
+        this.week = week;
+  }
 }

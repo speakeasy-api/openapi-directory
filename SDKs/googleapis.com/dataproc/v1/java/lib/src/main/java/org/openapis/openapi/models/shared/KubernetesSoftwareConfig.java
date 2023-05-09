@@ -18,6 +18,7 @@ public class KubernetesSoftwareConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentVersion")
     public java.util.Map<String, String> componentVersion;
+
     public KubernetesSoftwareConfig withComponentVersion(java.util.Map<String, String> componentVersion) {
         this.componentVersion = componentVersion;
         return this;
@@ -29,9 +30,11 @@ public class KubernetesSoftwareConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public KubernetesSoftwareConfig withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
     }
     
+    public KubernetesSoftwareConfig(){}
 }

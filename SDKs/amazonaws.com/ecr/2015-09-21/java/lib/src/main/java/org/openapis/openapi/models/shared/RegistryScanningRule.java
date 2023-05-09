@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegistryScanningRule {
     @JsonProperty("repositoryFilters")
     public ScanningRepositoryFilter[] repositoryFilters;
+
     public RegistryScanningRule withRepositoryFilters(ScanningRepositoryFilter[] repositoryFilters) {
         this.repositoryFilters = repositoryFilters;
         return this;
@@ -19,9 +20,14 @@ public class RegistryScanningRule {
     
     @JsonProperty("scanFrequency")
     public ScanFrequencyEnum scanFrequency;
+
     public RegistryScanningRule withScanFrequency(ScanFrequencyEnum scanFrequency) {
         this.scanFrequency = scanFrequency;
         return this;
     }
     
+    public RegistryScanningRule(@JsonProperty("repositoryFilters") ScanningRepositoryFilter[] repositoryFilters, @JsonProperty("scanFrequency") ScanFrequencyEnum scanFrequency) {
+        this.repositoryFilters = repositoryFilters;
+        this.scanFrequency = scanFrequency;
+  }
 }

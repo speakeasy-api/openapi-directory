@@ -15,9 +15,11 @@ public class ResourcePolicyVmMaintenancePolicyConcurrencyControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concurrencyLimit")
     public Integer concurrencyLimit;
+
     public ResourcePolicyVmMaintenancePolicyConcurrencyControl withConcurrencyLimit(Integer concurrencyLimit) {
         this.concurrencyLimit = concurrencyLimit;
         return this;
     }
     
+    public ResourcePolicyVmMaintenancePolicyConcurrencyControl(){}
 }

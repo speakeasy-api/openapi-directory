@@ -18,6 +18,7 @@ public class CustomPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customPolicyId")
     public String customPolicyId;
+
     public CustomPolicy withCustomPolicyId(String customPolicyId) {
         this.customPolicyId = customPolicyId;
         return this;
@@ -29,6 +30,7 @@ public class CustomPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CustomPolicy withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class CustomPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public CustomPolicy withLabel(String label) {
         this.label = label;
         return this;
@@ -51,6 +54,7 @@ public class CustomPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomPolicy withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class CustomPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyType")
     public String policyType;
+
     public CustomPolicy withPolicyType(String policyType) {
         this.policyType = policyType;
         return this;
     }
     
+    public CustomPolicy(){}
 }

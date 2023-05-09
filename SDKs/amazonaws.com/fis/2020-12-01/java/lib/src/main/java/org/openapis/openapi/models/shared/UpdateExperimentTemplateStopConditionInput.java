@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateExperimentTemplateStopConditionInput {
     @JsonProperty("source")
     public String source;
+
     public UpdateExperimentTemplateStopConditionInput withSource(String source) {
         this.source = source;
         return this;
@@ -22,9 +23,13 @@ public class UpdateExperimentTemplateStopConditionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public UpdateExperimentTemplateStopConditionInput withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public UpdateExperimentTemplateStopConditionInput(@JsonProperty("source") String source) {
+        this.source = source;
+  }
 }

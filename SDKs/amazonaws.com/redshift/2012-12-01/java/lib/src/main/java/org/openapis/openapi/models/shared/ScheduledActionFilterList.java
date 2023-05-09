@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ScheduledActionFilterList - A set of elements to filter the returned scheduled actions. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ScheduledActionFilterList {
     
     public ScheduledActionFilterNameEnum name;
+
     public ScheduledActionFilterList withName(ScheduledActionFilterNameEnum name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class ScheduledActionFilterList {
     
     
     public String[] values;
+
     public ScheduledActionFilterList withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public ScheduledActionFilterList(@JsonProperty("Name") ScheduledActionFilterNameEnum name, @JsonProperty("Values") String[] values) {
+        this.name = name;
+        this.values = values;
+  }
 }

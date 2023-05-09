@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItvPageRequest {
@@ -12,6 +13,7 @@ public class GetItvPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
     public String device;
+
     public GetItvPageRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -42,6 +44,7 @@ public class GetItvPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetItvPageRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -70,6 +73,7 @@ public class GetItvPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_detail_expand")
     public GetItvPageItemDetailExpandEnum itemDetailExpand;
+
     public GetItvPageRequest withItemDetailExpand(GetItvPageItemDetailExpandEnum itemDetailExpand) {
         this.itemDetailExpand = itemDetailExpand;
         return this;
@@ -95,6 +99,7 @@ public class GetItvPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_detail_select_season")
     public GetItvPageItemDetailSelectSeasonEnum itemDetailSelectSeason;
+
     public GetItvPageRequest withItemDetailSelectSeason(GetItvPageItemDetailSelectSeasonEnum itemDetailSelectSeason) {
         this.itemDetailSelectSeason = itemDetailSelectSeason;
         return this;
@@ -115,6 +120,7 @@ public class GetItvPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetItvPageRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -125,6 +131,7 @@ public class GetItvPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=list_page_size")
     public Integer listPageSize;
+
     public GetItvPageRequest withListPageSize(Integer listPageSize) {
         this.listPageSize = listPageSize;
         return this;
@@ -139,6 +146,7 @@ public class GetItvPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=list_page_size_large")
     public Integer listPageSizeLarge;
+
     public GetItvPageRequest withListPageSizeLarge(Integer listPageSizeLarge) {
         this.listPageSizeLarge = listPageSizeLarge;
         return this;
@@ -149,6 +157,7 @@ public class GetItvPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_list_prefetch")
     public Integer maxListPrefetch;
+
     public GetItvPageRequest withMaxListPrefetch(Integer maxListPrefetch) {
         this.maxListPrefetch = maxListPrefetch;
         return this;
@@ -159,6 +168,7 @@ public class GetItvPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_rating")
     public String maxRating;
+
     public GetItvPageRequest withMaxRating(String maxRating) {
         this.maxRating = maxRating;
         return this;
@@ -169,6 +179,7 @@ public class GetItvPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
     public String path;
+
     public GetItvPageRequest withPath(String path) {
         this.path = path;
         return this;
@@ -179,6 +190,7 @@ public class GetItvPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
     public String[] segments;
+
     public GetItvPageRequest withSegments(String[] segments) {
         this.segments = segments;
         return this;
@@ -189,6 +201,7 @@ public class GetItvPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub")
     public String sub;
+
     public GetItvPageRequest withSub(String sub) {
         this.sub = sub;
         return this;
@@ -202,9 +215,13 @@ public class GetItvPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text_entry_format")
     public GetItvPageTextEntryFormatEnum textEntryFormat;
+
     public GetItvPageRequest withTextEntryFormat(GetItvPageTextEntryFormatEnum textEntryFormat) {
         this.textEntryFormat = textEntryFormat;
         return this;
     }
     
+    public GetItvPageRequest(@JsonProperty("path") String path) {
+        this.path = path;
+  }
 }

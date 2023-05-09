@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProvisioningjobsJobIdResponse {
     
     public String contentType;
+
     public GetProvisioningjobsJobIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetProvisioningjobsJobIdResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetProvisioningjobsJobIdResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -26,6 +29,7 @@ public class GetProvisioningjobsJobIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ProvisioningJobCompletion provisioningJobCompletion;
+
     public GetProvisioningjobsJobIdResponse withProvisioningJobCompletion(org.openapis.openapi.models.shared.ProvisioningJobCompletion provisioningJobCompletion) {
         this.provisioningJobCompletion = provisioningJobCompletion;
         return this;
@@ -36,6 +40,7 @@ public class GetProvisioningjobsJobIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ProvisioningJobInfo provisioningJobInfo;
+
     public GetProvisioningjobsJobIdResponse withProvisioningJobInfo(org.openapis.openapi.models.shared.ProvisioningJobInfo provisioningJobInfo) {
         this.provisioningJobInfo = provisioningJobInfo;
         return this;
@@ -43,6 +48,7 @@ public class GetProvisioningjobsJobIdResponse {
     
     
     public Integer statusCode;
+
     public GetProvisioningjobsJobIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetProvisioningjobsJobIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProvisioningjobsJobIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetProvisioningjobsJobIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

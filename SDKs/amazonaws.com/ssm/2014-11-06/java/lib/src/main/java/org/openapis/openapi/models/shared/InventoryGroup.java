@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InventoryGroup {
     @JsonProperty("Filters")
     public InventoryFilter[] filters;
+
     public InventoryGroup withFilters(InventoryFilter[] filters) {
         this.filters = filters;
         return this;
@@ -19,9 +20,14 @@ public class InventoryGroup {
     
     @JsonProperty("Name")
     public String name;
+
     public InventoryGroup withName(String name) {
         this.name = name;
         return this;
     }
     
+    public InventoryGroup(@JsonProperty("Filters") InventoryFilter[] filters, @JsonProperty("Name") String name) {
+        this.filters = filters;
+        this.name = name;
+  }
 }

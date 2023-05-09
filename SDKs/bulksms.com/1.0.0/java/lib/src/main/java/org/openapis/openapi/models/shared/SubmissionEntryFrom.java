@@ -29,6 +29,7 @@ public class SubmissionEntryFrom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public SubmissionEntryFrom withAddress(String address) {
         this.address = address;
         return this;
@@ -43,9 +44,13 @@ public class SubmissionEntryFrom {
      */
     @JsonProperty("type")
     public SubmissionEntryFromTypeEnum type;
+
     public SubmissionEntryFrom withType(SubmissionEntryFromTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SubmissionEntryFrom(@JsonProperty("type") SubmissionEntryFromTypeEnum type) {
+        this.type = type;
+  }
 }

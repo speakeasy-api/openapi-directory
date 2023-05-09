@@ -18,9 +18,11 @@ public class ReadWrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryTransaction")
     public String retryTransaction;
+
     public ReadWrite withRetryTransaction(String retryTransaction) {
         this.retryTransaction = retryTransaction;
         return this;
     }
     
+    public ReadWrite(){}
 }

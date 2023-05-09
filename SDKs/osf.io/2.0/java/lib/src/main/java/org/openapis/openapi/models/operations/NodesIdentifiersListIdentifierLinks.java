@@ -15,9 +15,11 @@ public class NodesIdentifiersListIdentifierLinks {
      */
     
     public String self;
+
     public NodesIdentifiersListIdentifierLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public NodesIdentifiersListIdentifierLinks(){}
 }

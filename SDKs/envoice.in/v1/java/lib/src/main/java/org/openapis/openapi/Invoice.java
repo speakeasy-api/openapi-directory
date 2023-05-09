@@ -66,15 +66,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiAllResponse res = new org.openapis.openapi.models.operations.InvoiceApiAllResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiAllResponse res = new org.openapis.openapi.models.operations.InvoiceApiAllResponse(contentType, httpRes.statusCode()) {{
             listResultInvoiceDetailsApiModel = null;
             listResultInvoiceDetailsApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,15 +136,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiChangeStatusFormResponse res = new org.openapis.openapi.models.operations.InvoiceApiChangeStatusFormResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiChangeStatusFormResponse res = new org.openapis.openapi.models.operations.InvoiceApiChangeStatusFormResponse(contentType, httpRes.statusCode()) {{
             invoiceApiChangeStatusForm200ApplicationJSONBoolean = null;
             body = null;
             body = null;
             body = null;
             invoiceApiChangeStatusForm200TextJSONBoolean = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -210,15 +206,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiChangeStatusJsonResponse res = new org.openapis.openapi.models.operations.InvoiceApiChangeStatusJsonResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiChangeStatusJsonResponse res = new org.openapis.openapi.models.operations.InvoiceApiChangeStatusJsonResponse(contentType, httpRes.statusCode()) {{
             invoiceApiChangeStatusJSON200ApplicationJSONBoolean = null;
             body = null;
             body = null;
             body = null;
             invoiceApiChangeStatusJSON200TextJSONBoolean = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -282,15 +276,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiChangeStatusRawResponse res = new org.openapis.openapi.models.operations.InvoiceApiChangeStatusRawResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiChangeStatusRawResponse res = new org.openapis.openapi.models.operations.InvoiceApiChangeStatusRawResponse(contentType, httpRes.statusCode()) {{
             invoiceApiChangeStatusRaw200ApplicationJSONBoolean = null;
             body = null;
             body = null;
             body = null;
             invoiceApiChangeStatusRaw200TextJSONBoolean = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -354,15 +346,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiDeleteFormResponse res = new org.openapis.openapi.models.operations.InvoiceApiDeleteFormResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiDeleteFormResponse res = new org.openapis.openapi.models.operations.InvoiceApiDeleteFormResponse(contentType, httpRes.statusCode()) {{
             invoiceApiDeleteForm200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             invoiceApiDeleteForm200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -426,15 +416,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiDeleteJsonResponse res = new org.openapis.openapi.models.operations.InvoiceApiDeleteJsonResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiDeleteJsonResponse res = new org.openapis.openapi.models.operations.InvoiceApiDeleteJsonResponse(contentType, httpRes.statusCode()) {{
             invoiceApiDeleteJSON200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             invoiceApiDeleteJSON200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -498,15 +486,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiDeleteRawResponse res = new org.openapis.openapi.models.operations.InvoiceApiDeleteRawResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiDeleteRawResponse res = new org.openapis.openapi.models.operations.InvoiceApiDeleteRawResponse(contentType, httpRes.statusCode()) {{
             invoiceApiDeleteRaw200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             invoiceApiDeleteRaw200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -571,15 +557,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiDetailsResponse res = new org.openapis.openapi.models.operations.InvoiceApiDetailsResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiDetailsResponse res = new org.openapis.openapi.models.operations.InvoiceApiDetailsResponse(contentType, httpRes.statusCode()) {{
             invoiceFullDetailsApiModel = null;
             invoiceFullDetailsApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -643,15 +627,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiNewFormResponse res = new org.openapis.openapi.models.operations.InvoiceApiNewFormResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiNewFormResponse res = new org.openapis.openapi.models.operations.InvoiceApiNewFormResponse(contentType, httpRes.statusCode()) {{
             invoiceFullDetailsApiModel = null;
             invoiceFullDetailsApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -715,15 +697,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiNewJsonResponse res = new org.openapis.openapi.models.operations.InvoiceApiNewJsonResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiNewJsonResponse res = new org.openapis.openapi.models.operations.InvoiceApiNewJsonResponse(contentType, httpRes.statusCode()) {{
             invoiceFullDetailsApiModel = null;
             invoiceFullDetailsApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -787,15 +767,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiNewRawResponse res = new org.openapis.openapi.models.operations.InvoiceApiNewRawResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiNewRawResponse res = new org.openapis.openapi.models.operations.InvoiceApiNewRawResponse(contentType, httpRes.statusCode()) {{
             invoiceFullDetailsApiModel = null;
             invoiceFullDetailsApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -860,15 +838,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiPdfResponse res = new org.openapis.openapi.models.operations.InvoiceApiPdfResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiPdfResponse res = new org.openapis.openapi.models.operations.InvoiceApiPdfResponse(contentType, httpRes.statusCode()) {{
             invoiceUriApiModel = null;
             invoiceUriApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -932,15 +908,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiSendToAccountantFormResponse res = new org.openapis.openapi.models.operations.InvoiceApiSendToAccountantFormResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiSendToAccountantFormResponse res = new org.openapis.openapi.models.operations.InvoiceApiSendToAccountantFormResponse(contentType, httpRes.statusCode()) {{
             invoiceApiSendToAccountantForm200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             invoiceApiSendToAccountantForm200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1004,15 +978,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiSendToAccountantJsonResponse res = new org.openapis.openapi.models.operations.InvoiceApiSendToAccountantJsonResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiSendToAccountantJsonResponse res = new org.openapis.openapi.models.operations.InvoiceApiSendToAccountantJsonResponse(contentType, httpRes.statusCode()) {{
             invoiceApiSendToAccountantJSON200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             invoiceApiSendToAccountantJSON200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1076,15 +1048,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiSendToAccountantRawResponse res = new org.openapis.openapi.models.operations.InvoiceApiSendToAccountantRawResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiSendToAccountantRawResponse res = new org.openapis.openapi.models.operations.InvoiceApiSendToAccountantRawResponse(contentType, httpRes.statusCode()) {{
             invoiceApiSendToAccountantRaw200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             invoiceApiSendToAccountantRaw200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1148,15 +1118,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiSendToClientFormResponse res = new org.openapis.openapi.models.operations.InvoiceApiSendToClientFormResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiSendToClientFormResponse res = new org.openapis.openapi.models.operations.InvoiceApiSendToClientFormResponse(contentType, httpRes.statusCode()) {{
             invoiceApiSendToClientForm200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             invoiceApiSendToClientForm200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1220,15 +1188,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiSendToClientJsonResponse res = new org.openapis.openapi.models.operations.InvoiceApiSendToClientJsonResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiSendToClientJsonResponse res = new org.openapis.openapi.models.operations.InvoiceApiSendToClientJsonResponse(contentType, httpRes.statusCode()) {{
             invoiceApiSendToClientJSON200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             invoiceApiSendToClientJSON200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1292,15 +1258,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiSendToClientRawResponse res = new org.openapis.openapi.models.operations.InvoiceApiSendToClientRawResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiSendToClientRawResponse res = new org.openapis.openapi.models.operations.InvoiceApiSendToClientRawResponse(contentType, httpRes.statusCode()) {{
             invoiceApiSendToClientRaw200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             invoiceApiSendToClientRaw200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1365,15 +1329,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiStatusResponse res = new org.openapis.openapi.models.operations.InvoiceApiStatusResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiStatusResponse res = new org.openapis.openapi.models.operations.InvoiceApiStatusResponse(contentType, httpRes.statusCode()) {{
             invoiceApiStatus200ApplicationJSONStringEnum = null;
             body = null;
             body = null;
             body = null;
             invoiceApiStatus200TextJSONStringEnum = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1437,15 +1399,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiUpdateFormResponse res = new org.openapis.openapi.models.operations.InvoiceApiUpdateFormResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiUpdateFormResponse res = new org.openapis.openapi.models.operations.InvoiceApiUpdateFormResponse(contentType, httpRes.statusCode()) {{
             invoiceFullDetailsApiModel = null;
             invoiceFullDetailsApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1509,15 +1469,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiUpdateJsonResponse res = new org.openapis.openapi.models.operations.InvoiceApiUpdateJsonResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiUpdateJsonResponse res = new org.openapis.openapi.models.operations.InvoiceApiUpdateJsonResponse(contentType, httpRes.statusCode()) {{
             invoiceFullDetailsApiModel = null;
             invoiceFullDetailsApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1581,15 +1539,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiUpdateRawResponse res = new org.openapis.openapi.models.operations.InvoiceApiUpdateRawResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiUpdateRawResponse res = new org.openapis.openapi.models.operations.InvoiceApiUpdateRawResponse(contentType, httpRes.statusCode()) {{
             invoiceFullDetailsApiModel = null;
             invoiceFullDetailsApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1654,15 +1610,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InvoiceApiUriResponse res = new org.openapis.openapi.models.operations.InvoiceApiUriResponse() {{
+        org.openapis.openapi.models.operations.InvoiceApiUriResponse res = new org.openapis.openapi.models.operations.InvoiceApiUriResponse(contentType, httpRes.statusCode()) {{
             invoiceUriApiModel = null;
             invoiceUriApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1727,15 +1681,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiInvoiceAllcategoriesResponse res = new org.openapis.openapi.models.operations.GetApiInvoiceAllcategoriesResponse() {{
+        org.openapis.openapi.models.operations.GetApiInvoiceAllcategoriesResponse res = new org.openapis.openapi.models.operations.GetApiInvoiceAllcategoriesResponse(contentType, httpRes.statusCode()) {{
             listResultInvoiceCategoryApiModel = null;
             listResultInvoiceCategoryApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1799,15 +1751,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiInvoiceDeletecategoryFormResponse res = new org.openapis.openapi.models.operations.PostApiInvoiceDeletecategoryFormResponse() {{
+        org.openapis.openapi.models.operations.PostApiInvoiceDeletecategoryFormResponse res = new org.openapis.openapi.models.operations.PostApiInvoiceDeletecategoryFormResponse(contentType, httpRes.statusCode()) {{
             postApiInvoiceDeletecategoryForm200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             postApiInvoiceDeletecategoryForm200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1871,15 +1821,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiInvoiceDeletecategoryJsonResponse res = new org.openapis.openapi.models.operations.PostApiInvoiceDeletecategoryJsonResponse() {{
+        org.openapis.openapi.models.operations.PostApiInvoiceDeletecategoryJsonResponse res = new org.openapis.openapi.models.operations.PostApiInvoiceDeletecategoryJsonResponse(contentType, httpRes.statusCode()) {{
             postApiInvoiceDeletecategoryJSON200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             postApiInvoiceDeletecategoryJSON200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1943,15 +1891,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiInvoiceDeletecategoryRawResponse res = new org.openapis.openapi.models.operations.PostApiInvoiceDeletecategoryRawResponse() {{
+        org.openapis.openapi.models.operations.PostApiInvoiceDeletecategoryRawResponse res = new org.openapis.openapi.models.operations.PostApiInvoiceDeletecategoryRawResponse(contentType, httpRes.statusCode()) {{
             postApiInvoiceDeletecategoryRaw200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             postApiInvoiceDeletecategoryRaw200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2015,15 +1961,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiInvoiceNewcategoryFormResponse res = new org.openapis.openapi.models.operations.PostApiInvoiceNewcategoryFormResponse() {{
+        org.openapis.openapi.models.operations.PostApiInvoiceNewcategoryFormResponse res = new org.openapis.openapi.models.operations.PostApiInvoiceNewcategoryFormResponse(contentType, httpRes.statusCode()) {{
             invoiceCategoryApiModel = null;
             invoiceCategoryApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2087,15 +2031,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiInvoiceNewcategoryJsonResponse res = new org.openapis.openapi.models.operations.PostApiInvoiceNewcategoryJsonResponse() {{
+        org.openapis.openapi.models.operations.PostApiInvoiceNewcategoryJsonResponse res = new org.openapis.openapi.models.operations.PostApiInvoiceNewcategoryJsonResponse(contentType, httpRes.statusCode()) {{
             invoiceCategoryApiModel = null;
             invoiceCategoryApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2159,15 +2101,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiInvoiceNewcategoryRawResponse res = new org.openapis.openapi.models.operations.PostApiInvoiceNewcategoryRawResponse() {{
+        org.openapis.openapi.models.operations.PostApiInvoiceNewcategoryRawResponse res = new org.openapis.openapi.models.operations.PostApiInvoiceNewcategoryRawResponse(contentType, httpRes.statusCode()) {{
             invoiceCategoryApiModel = null;
             invoiceCategoryApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2231,15 +2171,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiInvoiceUpdatecategoryFormResponse res = new org.openapis.openapi.models.operations.PostApiInvoiceUpdatecategoryFormResponse() {{
+        org.openapis.openapi.models.operations.PostApiInvoiceUpdatecategoryFormResponse res = new org.openapis.openapi.models.operations.PostApiInvoiceUpdatecategoryFormResponse(contentType, httpRes.statusCode()) {{
             invoiceCategoryApiModel = null;
             invoiceCategoryApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2303,15 +2241,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiInvoiceUpdatecategoryJsonResponse res = new org.openapis.openapi.models.operations.PostApiInvoiceUpdatecategoryJsonResponse() {{
+        org.openapis.openapi.models.operations.PostApiInvoiceUpdatecategoryJsonResponse res = new org.openapis.openapi.models.operations.PostApiInvoiceUpdatecategoryJsonResponse(contentType, httpRes.statusCode()) {{
             invoiceCategoryApiModel = null;
             invoiceCategoryApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2375,15 +2311,13 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiInvoiceUpdatecategoryRawResponse res = new org.openapis.openapi.models.operations.PostApiInvoiceUpdatecategoryRawResponse() {{
+        org.openapis.openapi.models.operations.PostApiInvoiceUpdatecategoryRawResponse res = new org.openapis.openapi.models.operations.PostApiInvoiceUpdatecategoryRawResponse(contentType, httpRes.statusCode()) {{
             invoiceCategoryApiModel = null;
             invoiceCategoryApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

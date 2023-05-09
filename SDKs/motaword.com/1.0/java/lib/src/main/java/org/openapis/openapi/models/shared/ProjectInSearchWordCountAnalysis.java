@@ -12,6 +12,7 @@ public class ProjectInSearchWordCountAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base")
     public Double base;
+
     public ProjectInSearchWordCountAnalysis withBase(Double base) {
         this.base = base;
         return this;
@@ -20,6 +21,7 @@ public class ProjectInSearchWordCountAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duplicate")
     public Double duplicate;
+
     public ProjectInSearchWordCountAnalysis withDuplicate(Double duplicate) {
         this.duplicate = duplicate;
         return this;
@@ -28,6 +30,7 @@ public class ProjectInSearchWordCountAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclusion")
     public Double exclusion;
+
     public ProjectInSearchWordCountAnalysis withExclusion(Double exclusion) {
         this.exclusion = exclusion;
         return this;
@@ -36,6 +39,7 @@ public class ProjectInSearchWordCountAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("final")
     public Double final_;
+
     public ProjectInSearchWordCountAnalysis withFinal(Double final_) {
         this.final_ = final_;
         return this;
@@ -44,9 +48,11 @@ public class ProjectInSearchWordCountAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tm")
     public Double tm;
+
     public ProjectInSearchWordCountAnalysis withTm(Double tm) {
         this.tm = tm;
         return this;
     }
     
+    public ProjectInSearchWordCountAnalysis(){}
 }

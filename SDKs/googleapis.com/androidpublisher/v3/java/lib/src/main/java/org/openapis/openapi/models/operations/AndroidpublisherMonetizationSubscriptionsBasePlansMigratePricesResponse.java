@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesResponse {
     
     public String contentType;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesResp
      */
     
     public java.util.Map<String, Object> migrateBasePlanPricesResponse;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesResponse withMigrateBasePlanPricesResponse(java.util.Map<String, Object> migrateBasePlanPricesResponse) {
         this.migrateBasePlanPricesResponse = migrateBasePlanPricesResponse;
         return this;
@@ -26,6 +29,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesResp
     
     
     public Integer statusCode;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesResp
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

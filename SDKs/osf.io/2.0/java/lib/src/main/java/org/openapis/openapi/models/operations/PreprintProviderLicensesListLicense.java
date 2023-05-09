@@ -15,6 +15,7 @@ public class PreprintProviderLicensesListLicense {
      */
     
     public PreprintProviderLicensesListLicenseAttributes attributes;
+
     public PreprintProviderLicensesListLicense withAttributes(PreprintProviderLicensesListLicenseAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class PreprintProviderLicensesListLicense {
      */
     
     public String id;
+
     public PreprintProviderLicensesListLicense withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class PreprintProviderLicensesListLicense {
      */
     
     public PreprintProviderLicensesListLicenseLinks links;
+
     public PreprintProviderLicensesListLicense withLinks(PreprintProviderLicensesListLicenseLinks links) {
         this.links = links;
         return this;
@@ -45,9 +48,11 @@ public class PreprintProviderLicensesListLicense {
      */
     
     public String type;
+
     public PreprintProviderLicensesListLicense withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PreprintProviderLicensesListLicense(){}
 }

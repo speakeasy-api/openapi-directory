@@ -12,6 +12,7 @@ public class GETListsOverviewFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bestsellers_date")
     public String bestsellersDate;
+
     public GETListsOverviewFormat200ApplicationJSONResults withBestsellersDate(String bestsellersDate) {
         this.bestsellersDate = bestsellersDate;
         return this;
@@ -20,6 +21,7 @@ public class GETListsOverviewFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lists")
     public GETListsOverviewFormat200ApplicationJSONResultsLists[] lists;
+
     public GETListsOverviewFormat200ApplicationJSONResults withLists(GETListsOverviewFormat200ApplicationJSONResultsLists[] lists) {
         this.lists = lists;
         return this;
@@ -28,9 +30,11 @@ public class GETListsOverviewFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published_date")
     public String publishedDate;
+
     public GETListsOverviewFormat200ApplicationJSONResults withPublishedDate(String publishedDate) {
         this.publishedDate = publishedDate;
         return this;
     }
     
+    public GETListsOverviewFormat200ApplicationJSONResults(){}
 }

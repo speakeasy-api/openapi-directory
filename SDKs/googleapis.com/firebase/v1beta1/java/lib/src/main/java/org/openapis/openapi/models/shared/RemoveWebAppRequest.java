@@ -15,6 +15,7 @@ public class RemoveWebAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowMissing")
     public Boolean allowMissing;
+
     public RemoveWebAppRequest withAllowMissing(Boolean allowMissing) {
         this.allowMissing = allowMissing;
         return this;
@@ -26,6 +27,7 @@ public class RemoveWebAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public RemoveWebAppRequest withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -37,6 +39,7 @@ public class RemoveWebAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("immediate")
     public Boolean immediate;
+
     public RemoveWebAppRequest withImmediate(Boolean immediate) {
         this.immediate = immediate;
         return this;
@@ -48,9 +51,11 @@ public class RemoveWebAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateOnly")
     public Boolean validateOnly;
+
     public RemoveWebAppRequest withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public RemoveWebAppRequest(){}
 }

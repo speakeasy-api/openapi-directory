@@ -19,9 +19,11 @@ public class UpdateUserPasswordRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public UpdateUserPasswordRequest withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public UpdateUserPasswordRequest(){}
 }

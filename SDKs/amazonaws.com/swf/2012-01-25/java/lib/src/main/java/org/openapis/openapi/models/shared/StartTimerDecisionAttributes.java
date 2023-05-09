@@ -15,6 +15,7 @@ public class StartTimerDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("control")
     public String control;
+
     public StartTimerDecisionAttributes withControl(String control) {
         this.control = control;
         return this;
@@ -22,6 +23,7 @@ public class StartTimerDecisionAttributes {
     
     @JsonProperty("startToFireTimeout")
     public String startToFireTimeout;
+
     public StartTimerDecisionAttributes withStartToFireTimeout(String startToFireTimeout) {
         this.startToFireTimeout = startToFireTimeout;
         return this;
@@ -29,9 +31,14 @@ public class StartTimerDecisionAttributes {
     
     @JsonProperty("timerId")
     public String timerId;
+
     public StartTimerDecisionAttributes withTimerId(String timerId) {
         this.timerId = timerId;
         return this;
     }
     
+    public StartTimerDecisionAttributes(@JsonProperty("startToFireTimeout") String startToFireTimeout, @JsonProperty("timerId") String timerId) {
+        this.startToFireTimeout = startToFireTimeout;
+        this.timerId = timerId;
+  }
 }

@@ -12,6 +12,7 @@ public class BranchRestrictionPolicyTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BranchRestrictionPolicyTeams withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class BranchRestrictionPolicyTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public BranchRestrictionPolicyTeams withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -28,6 +30,7 @@ public class BranchRestrictionPolicyTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public BranchRestrictionPolicyTeams withId(Long id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class BranchRestrictionPolicyTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members_url")
     public String membersUrl;
+
     public BranchRestrictionPolicyTeams withMembersUrl(String membersUrl) {
         this.membersUrl = membersUrl;
         return this;
@@ -44,6 +48,7 @@ public class BranchRestrictionPolicyTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BranchRestrictionPolicyTeams withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class BranchRestrictionPolicyTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node_id")
     public String nodeId;
+
     public BranchRestrictionPolicyTeams withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -60,6 +66,7 @@ public class BranchRestrictionPolicyTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public BranchRestrictionPolicyTeams withParent(String parent) {
         this.parent = parent;
         return this;
@@ -68,6 +75,7 @@ public class BranchRestrictionPolicyTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public String permission;
+
     public BranchRestrictionPolicyTeams withPermission(String permission) {
         this.permission = permission;
         return this;
@@ -76,6 +84,7 @@ public class BranchRestrictionPolicyTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacy")
     public String privacy;
+
     public BranchRestrictionPolicyTeams withPrivacy(String privacy) {
         this.privacy = privacy;
         return this;
@@ -84,6 +93,7 @@ public class BranchRestrictionPolicyTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositories_url")
     public String repositoriesUrl;
+
     public BranchRestrictionPolicyTeams withRepositoriesUrl(String repositoriesUrl) {
         this.repositoriesUrl = repositoriesUrl;
         return this;
@@ -92,6 +102,7 @@ public class BranchRestrictionPolicyTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public BranchRestrictionPolicyTeams withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -100,9 +111,11 @@ public class BranchRestrictionPolicyTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public BranchRestrictionPolicyTeams withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public BranchRestrictionPolicyTeams(){}
 }

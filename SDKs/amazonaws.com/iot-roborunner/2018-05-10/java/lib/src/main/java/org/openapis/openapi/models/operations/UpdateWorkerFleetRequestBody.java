@@ -15,6 +15,7 @@ public class UpdateWorkerFleetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalFixedProperties")
     public String additionalFixedProperties;
+
     public UpdateWorkerFleetRequestBody withAdditionalFixedProperties(String additionalFixedProperties) {
         this.additionalFixedProperties = additionalFixedProperties;
         return this;
@@ -25,6 +26,7 @@ public class UpdateWorkerFleetRequestBody {
      */
     @JsonProperty("id")
     public String id;
+
     public UpdateWorkerFleetRequestBody withId(String id) {
         this.id = id;
         return this;
@@ -36,9 +38,13 @@ public class UpdateWorkerFleetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateWorkerFleetRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateWorkerFleetRequestBody(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

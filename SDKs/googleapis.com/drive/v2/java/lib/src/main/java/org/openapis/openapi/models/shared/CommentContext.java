@@ -18,6 +18,7 @@ public class CommentContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public CommentContext withType(String type) {
         this.type = type;
         return this;
@@ -29,9 +30,11 @@ public class CommentContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public CommentContext withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CommentContext(){}
 }

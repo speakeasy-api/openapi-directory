@@ -15,6 +15,7 @@ public class ReplicateKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaKeyMetadata")
     public KeyMetadata replicaKeyMetadata;
+
     public ReplicateKeyResponse withReplicaKeyMetadata(KeyMetadata replicaKeyMetadata) {
         this.replicaKeyMetadata = replicaKeyMetadata;
         return this;
@@ -23,6 +24,7 @@ public class ReplicateKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaPolicy")
     public String replicaPolicy;
+
     public ReplicateKeyResponse withReplicaPolicy(String replicaPolicy) {
         this.replicaPolicy = replicaPolicy;
         return this;
@@ -31,9 +33,11 @@ public class ReplicateKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaTags")
     public Tag[] replicaTags;
+
     public ReplicateKeyResponse withReplicaTags(Tag[] replicaTags) {
         this.replicaTags = replicaTags;
         return this;
     }
     
+    public ReplicateKeyResponse(){}
 }

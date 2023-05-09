@@ -18,9 +18,11 @@ public class GoogleCloudMlV1ListOptimalTrialsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trials")
     public GoogleCloudMlV1Trial[] trials;
+
     public GoogleCloudMlV1ListOptimalTrialsResponse withTrials(GoogleCloudMlV1Trial[] trials) {
         this.trials = trials;
         return this;
     }
     
+    public GoogleCloudMlV1ListOptimalTrialsResponse(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateVerifiedAccessTrustProviderRequest {
     
     public String clientToken;
+
     public CreateVerifiedAccessTrustProviderRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateVerifiedAccessTrustProviderRequest {
     
     
     public String description;
+
     public CreateVerifiedAccessTrustProviderRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class CreateVerifiedAccessTrustProviderRequest {
     
     
     public CreateVerifiedAccessTrustProviderDeviceOptions deviceOptions;
+
     public CreateVerifiedAccessTrustProviderRequest withDeviceOptions(CreateVerifiedAccessTrustProviderDeviceOptions deviceOptions) {
         this.deviceOptions = deviceOptions;
         return this;
@@ -30,6 +33,7 @@ public class CreateVerifiedAccessTrustProviderRequest {
     
     
     public DeviceTrustProviderTypeEnum deviceTrustProviderType;
+
     public CreateVerifiedAccessTrustProviderRequest withDeviceTrustProviderType(DeviceTrustProviderTypeEnum deviceTrustProviderType) {
         this.deviceTrustProviderType = deviceTrustProviderType;
         return this;
@@ -37,6 +41,7 @@ public class CreateVerifiedAccessTrustProviderRequest {
     
     
     public Boolean dryRun;
+
     public CreateVerifiedAccessTrustProviderRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -44,6 +49,7 @@ public class CreateVerifiedAccessTrustProviderRequest {
     
     
     public CreateVerifiedAccessTrustProviderOidcOptions oidcOptions;
+
     public CreateVerifiedAccessTrustProviderRequest withOidcOptions(CreateVerifiedAccessTrustProviderOidcOptions oidcOptions) {
         this.oidcOptions = oidcOptions;
         return this;
@@ -51,6 +57,7 @@ public class CreateVerifiedAccessTrustProviderRequest {
     
     
     public String policyReferenceName;
+
     public CreateVerifiedAccessTrustProviderRequest withPolicyReferenceName(String policyReferenceName) {
         this.policyReferenceName = policyReferenceName;
         return this;
@@ -58,6 +65,7 @@ public class CreateVerifiedAccessTrustProviderRequest {
     
     
     public CreateVerifiedAccessTrustProviderRequestTagSpecifications[] tagSpecifications;
+
     public CreateVerifiedAccessTrustProviderRequest withTagSpecifications(CreateVerifiedAccessTrustProviderRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -65,6 +73,7 @@ public class CreateVerifiedAccessTrustProviderRequest {
     
     
     public TrustProviderTypeEnum trustProviderType;
+
     public CreateVerifiedAccessTrustProviderRequest withTrustProviderType(TrustProviderTypeEnum trustProviderType) {
         this.trustProviderType = trustProviderType;
         return this;
@@ -72,9 +81,14 @@ public class CreateVerifiedAccessTrustProviderRequest {
     
     
     public UserTrustProviderTypeEnum userTrustProviderType;
+
     public CreateVerifiedAccessTrustProviderRequest withUserTrustProviderType(UserTrustProviderTypeEnum userTrustProviderType) {
         this.userTrustProviderType = userTrustProviderType;
         return this;
     }
     
+    public CreateVerifiedAccessTrustProviderRequest(@JsonProperty("PolicyReferenceName") String policyReferenceName, @JsonProperty("TrustProviderType") TrustProviderTypeEnum trustProviderType) {
+        this.policyReferenceName = policyReferenceName;
+        this.trustProviderType = trustProviderType;
+  }
 }

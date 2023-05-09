@@ -18,9 +18,11 @@ public class DescribeFeedbackResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InsightFeedback")
     public InsightFeedback insightFeedback;
+
     public DescribeFeedbackResponse withInsightFeedback(InsightFeedback insightFeedback) {
         this.insightFeedback = insightFeedback;
         return this;
     }
     
+    public DescribeFeedbackResponse(){}
 }

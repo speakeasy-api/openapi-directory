@@ -11,7 +11,16 @@ package org.openapis.openapi.models.shared;
  */
 public class TrafficSourceState {
     
+    public String identifier;
+
+    public TrafficSourceState withIdentifier(String identifier) {
+        this.identifier = identifier;
+        return this;
+    }
+    
+    
     public String state;
+
     public TrafficSourceState withState(String state) {
         this.state = state;
         return this;
@@ -19,9 +28,19 @@ public class TrafficSourceState {
     
     
     public String trafficSource;
+
     public TrafficSourceState withTrafficSource(String trafficSource) {
         this.trafficSource = trafficSource;
         return this;
     }
     
+    
+    public String type;
+
+    public TrafficSourceState withType(String type) {
+        this.type = type;
+        return this;
+    }
+    
+    public TrafficSourceState(){}
 }

@@ -15,6 +15,7 @@ public class CreatePresetRequestBodyVideo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AspectRatio")
     public String aspectRatio;
+
     public CreatePresetRequestBodyVideo withAspectRatio(String aspectRatio) {
         this.aspectRatio = aspectRatio;
         return this;
@@ -23,6 +24,7 @@ public class CreatePresetRequestBodyVideo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BitRate")
     public String bitRate;
+
     public CreatePresetRequestBodyVideo withBitRate(String bitRate) {
         this.bitRate = bitRate;
         return this;
@@ -31,6 +33,7 @@ public class CreatePresetRequestBodyVideo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Codec")
     public String codec;
+
     public CreatePresetRequestBodyVideo withCodec(String codec) {
         this.codec = codec;
         return this;
@@ -39,6 +42,7 @@ public class CreatePresetRequestBodyVideo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodecOptions")
     public java.util.Map<String, String> codecOptions;
+
     public CreatePresetRequestBodyVideo withCodecOptions(java.util.Map<String, String> codecOptions) {
         this.codecOptions = codecOptions;
         return this;
@@ -47,6 +51,7 @@ public class CreatePresetRequestBodyVideo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayAspectRatio")
     public String displayAspectRatio;
+
     public CreatePresetRequestBodyVideo withDisplayAspectRatio(String displayAspectRatio) {
         this.displayAspectRatio = displayAspectRatio;
         return this;
@@ -55,6 +60,7 @@ public class CreatePresetRequestBodyVideo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FixedGOP")
     public String fixedGOP;
+
     public CreatePresetRequestBodyVideo withFixedGOP(String fixedGOP) {
         this.fixedGOP = fixedGOP;
         return this;
@@ -63,6 +69,7 @@ public class CreatePresetRequestBodyVideo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FrameRate")
     public String frameRate;
+
     public CreatePresetRequestBodyVideo withFrameRate(String frameRate) {
         this.frameRate = frameRate;
         return this;
@@ -71,6 +78,7 @@ public class CreatePresetRequestBodyVideo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyframesMaxDist")
     public String keyframesMaxDist;
+
     public CreatePresetRequestBodyVideo withKeyframesMaxDist(String keyframesMaxDist) {
         this.keyframesMaxDist = keyframesMaxDist;
         return this;
@@ -79,6 +87,7 @@ public class CreatePresetRequestBodyVideo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxFrameRate")
     public String maxFrameRate;
+
     public CreatePresetRequestBodyVideo withMaxFrameRate(String maxFrameRate) {
         this.maxFrameRate = maxFrameRate;
         return this;
@@ -87,6 +96,7 @@ public class CreatePresetRequestBodyVideo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxHeight")
     public String maxHeight;
+
     public CreatePresetRequestBodyVideo withMaxHeight(String maxHeight) {
         this.maxHeight = maxHeight;
         return this;
@@ -95,6 +105,7 @@ public class CreatePresetRequestBodyVideo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxWidth")
     public String maxWidth;
+
     public CreatePresetRequestBodyVideo withMaxWidth(String maxWidth) {
         this.maxWidth = maxWidth;
         return this;
@@ -103,6 +114,7 @@ public class CreatePresetRequestBodyVideo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaddingPolicy")
     public String paddingPolicy;
+
     public CreatePresetRequestBodyVideo withPaddingPolicy(String paddingPolicy) {
         this.paddingPolicy = paddingPolicy;
         return this;
@@ -111,6 +123,7 @@ public class CreatePresetRequestBodyVideo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resolution")
     public String resolution;
+
     public CreatePresetRequestBodyVideo withResolution(String resolution) {
         this.resolution = resolution;
         return this;
@@ -119,6 +132,7 @@ public class CreatePresetRequestBodyVideo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizingPolicy")
     public String sizingPolicy;
+
     public CreatePresetRequestBodyVideo withSizingPolicy(String sizingPolicy) {
         this.sizingPolicy = sizingPolicy;
         return this;
@@ -127,9 +141,11 @@ public class CreatePresetRequestBodyVideo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Watermarks")
     public org.openapis.openapi.models.shared.PresetWatermark[] watermarks;
+
     public CreatePresetRequestBodyVideo withWatermarks(org.openapis.openapi.models.shared.PresetWatermark[] watermarks) {
         this.watermarks = watermarks;
         return this;
     }
     
+    public CreatePresetRequestBodyVideo(){}
 }

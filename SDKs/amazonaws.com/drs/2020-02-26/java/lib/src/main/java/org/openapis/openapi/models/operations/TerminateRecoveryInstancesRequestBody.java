@@ -12,9 +12,13 @@ public class TerminateRecoveryInstancesRequestBody {
      */
     @JsonProperty("recoveryInstanceIDs")
     public String[] recoveryInstanceIDs;
+
     public TerminateRecoveryInstancesRequestBody withRecoveryInstanceIDs(String[] recoveryInstanceIDs) {
         this.recoveryInstanceIDs = recoveryInstanceIDs;
         return this;
     }
     
+    public TerminateRecoveryInstancesRequestBody(@JsonProperty("recoveryInstanceIDs") String[] recoveryInstanceIDs) {
+        this.recoveryInstanceIDs = recoveryInstanceIDs;
+  }
 }

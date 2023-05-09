@@ -15,6 +15,7 @@ public class RefundReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RefundReason withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class RefundReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonCode")
     public String reasonCode;
+
     public RefundReason withReasonCode(String reasonCode) {
         this.reasonCode = reasonCode;
         return this;
     }
     
+    public RefundReason(){}
 }

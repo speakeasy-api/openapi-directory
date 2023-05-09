@@ -59,10 +59,8 @@ public class Generation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetShakespeareGenerateInsultResponse res = new org.openapis.openapi.models.operations.GetShakespeareGenerateInsultResponse() {{
+        org.openapis.openapi.models.operations.GetShakespeareGenerateInsultResponse res = new org.openapis.openapi.models.operations.GetShakespeareGenerateInsultResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -99,10 +97,8 @@ public class Generation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetShakespeareGenerateLoremIpsumResponse res = new org.openapis.openapi.models.operations.GetShakespeareGenerateLoremIpsumResponse() {{
+        org.openapis.openapi.models.operations.GetShakespeareGenerateLoremIpsumResponse res = new org.openapis.openapi.models.operations.GetShakespeareGenerateLoremIpsumResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -139,10 +135,8 @@ public class Generation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetShakespeareGenerateNameResponse res = new org.openapis.openapi.models.operations.GetShakespeareGenerateNameResponse() {{
+        org.openapis.openapi.models.operations.GetShakespeareGenerateNameResponse res = new org.openapis.openapi.models.operations.GetShakespeareGenerateNameResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {

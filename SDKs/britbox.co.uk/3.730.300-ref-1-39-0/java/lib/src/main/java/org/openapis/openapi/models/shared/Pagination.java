@@ -12,6 +12,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorization")
     public PaginationAuth authorization;
+
     public Pagination withAuthorization(PaginationAuth authorization) {
         this.authorization = authorization;
         return this;
@@ -23,6 +24,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public Pagination withNext(String next) {
         this.next = next;
         return this;
@@ -31,6 +33,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public PaginationOptions options;
+
     public Pagination withOptions(PaginationOptions options) {
         this.options = options;
         return this;
@@ -46,6 +49,7 @@ public class Pagination {
      */
     @JsonProperty("page")
     public Integer page;
+
     public Pagination withPage(Integer page) {
         this.page = page;
         return this;
@@ -57,6 +61,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public Pagination withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -73,6 +78,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Integer size;
+
     public Pagination withSize(Integer size) {
         this.size = size;
         return this;
@@ -88,9 +94,14 @@ public class Pagination {
      */
     @JsonProperty("total")
     public Integer total;
+
     public Pagination withTotal(Integer total) {
         this.total = total;
         return this;
     }
     
+    public Pagination(@JsonProperty("page") Integer page, @JsonProperty("total") Integer total) {
+        this.page = page;
+        this.total = total;
+  }
 }

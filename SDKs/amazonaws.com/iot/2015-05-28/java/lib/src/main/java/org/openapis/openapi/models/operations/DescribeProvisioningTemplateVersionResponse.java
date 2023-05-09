@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeProvisioningTemplateVersionResponse {
     
     public String contentType;
+
     public DescribeProvisioningTemplateVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeProvisioningTemplateVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeProvisioningTemplateVersionResponse describeProvisioningTemplateVersionResponse;
+
     public DescribeProvisioningTemplateVersionResponse withDescribeProvisioningTemplateVersionResponse(org.openapis.openapi.models.shared.DescribeProvisioningTemplateVersionResponse describeProvisioningTemplateVersionResponse) {
         this.describeProvisioningTemplateVersionResponse = describeProvisioningTemplateVersionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeProvisioningTemplateVersionResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeProvisioningTemplateVersionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeProvisioningTemplateVersionResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeProvisioningTemplateVersionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeProvisioningTemplateVersionResponse {
     
     
     public Integer statusCode;
+
     public DescribeProvisioningTemplateVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeProvisioningTemplateVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeProvisioningTemplateVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeProvisioningTemplateVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeProvisioningTemplateVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeProvisioningTemplateVersionResponse {
      */
     
     public Object throttlingException;
+
     public DescribeProvisioningTemplateVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeProvisioningTemplateVersionResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeProvisioningTemplateVersionResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeProvisioningTemplateVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

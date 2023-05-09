@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Timezone {
     @JsonProperty("display_string")
     public String displayString;
+
     public Timezone withDisplayString(String displayString) {
         this.displayString = displayString;
         return this;
@@ -16,9 +17,14 @@ public class Timezone {
     
     @JsonProperty("offset")
     public Integer offset;
+
     public Timezone withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public Timezone(@JsonProperty("display_string") String displayString, @JsonProperty("offset") Integer offset) {
+        this.displayString = displayString;
+        this.offset = offset;
+  }
 }

@@ -15,6 +15,7 @@ public class TagConsentSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentStatus")
     public TagConsentSettingConsentStatusEnum consentStatus;
+
     public TagConsentSetting withConsentStatus(TagConsentSettingConsentStatusEnum consentStatus) {
         this.consentStatus = consentStatus;
         return this;
@@ -26,9 +27,11 @@ public class TagConsentSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentType")
     public Parameter consentType;
+
     public TagConsentSetting withConsentType(Parameter consentType) {
         this.consentType = consentType;
         return this;
     }
     
+    public TagConsentSetting(){}
 }

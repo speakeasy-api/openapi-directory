@@ -18,9 +18,11 @@ public class NotificationTargetActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaAction")
     public LambdaAction lambdaAction;
+
     public NotificationTargetActions withLambdaAction(LambdaAction lambdaAction) {
         this.lambdaAction = lambdaAction;
         return this;
     }
     
+    public NotificationTargetActions(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerPutAppointmentRawRequest {
@@ -12,6 +13,7 @@ public class DiaryControllerPutAppointmentRawRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllowMarketingCorrespondence")
     public Boolean allowMarketingCorrespondence;
+
     public DiaryControllerPutAppointmentRawRequest withAllowMarketingCorrespondence(Boolean allowMarketingCorrespondence) {
         this.allowMarketingCorrespondence = allowMarketingCorrespondence;
         return this;
@@ -22,6 +24,7 @@ public class DiaryControllerPutAppointmentRawRequest {
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public DiaryControllerPutAppointmentRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -32,6 +35,7 @@ public class DiaryControllerPutAppointmentRawRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointmentID")
     public String appointmentID;
+
     public DiaryControllerPutAppointmentRawRequest withAppointmentID(String appointmentID) {
         this.appointmentID = appointmentID;
         return this;
@@ -42,6 +46,7 @@ public class DiaryControllerPutAppointmentRawRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lettings")
     public Boolean lettings;
+
     public DiaryControllerPutAppointmentRawRequest withLettings(Boolean lettings) {
         this.lettings = lettings;
         return this;
@@ -52,9 +57,15 @@ public class DiaryControllerPutAppointmentRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public DiaryControllerPutAppointmentRawRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
     }
     
+    public DiaryControllerPutAppointmentRawRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("appointmentID") String appointmentID, @JsonProperty("shortName") String shortName) {
+        this.requestBody = requestBody;
+        this.appointmentID = appointmentID;
+        this.shortName = shortName;
+  }
 }

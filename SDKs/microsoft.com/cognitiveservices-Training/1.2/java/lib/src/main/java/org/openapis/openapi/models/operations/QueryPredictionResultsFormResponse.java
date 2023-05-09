@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class QueryPredictionResultsFormResponse {
     
     public byte[] body;
+
     public QueryPredictionResultsFormResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class QueryPredictionResultsFormResponse {
     
     
     public String contentType;
+
     public QueryPredictionResultsFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class QueryPredictionResultsFormResponse {
      */
     
     public org.openapis.openapi.models.shared.PredictionQuery predictionQuery;
+
     public QueryPredictionResultsFormResponse withPredictionQuery(org.openapis.openapi.models.shared.PredictionQuery predictionQuery) {
         this.predictionQuery = predictionQuery;
         return this;
@@ -33,6 +37,7 @@ public class QueryPredictionResultsFormResponse {
     
     
     public Integer statusCode;
+
     public QueryPredictionResultsFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class QueryPredictionResultsFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public QueryPredictionResultsFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public QueryPredictionResultsFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

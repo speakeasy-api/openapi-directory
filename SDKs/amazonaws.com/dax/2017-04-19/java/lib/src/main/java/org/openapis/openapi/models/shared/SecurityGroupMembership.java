@@ -15,6 +15,7 @@ public class SecurityGroupMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIdentifier")
     public String securityGroupIdentifier;
+
     public SecurityGroupMembership withSecurityGroupIdentifier(String securityGroupIdentifier) {
         this.securityGroupIdentifier = securityGroupIdentifier;
         return this;
@@ -23,9 +24,11 @@ public class SecurityGroupMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public SecurityGroupMembership withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public SecurityGroupMembership(){}
 }

@@ -12,6 +12,7 @@ public class NodesCreateNodeInput {
      */
     @JsonProperty("attributes")
     public NodesCreateNodeAttributesInput attributes;
+
     public NodesCreateNodeInput withAttributes(NodesCreateNodeAttributesInput attributes) {
         this.attributes = attributes;
         return this;
@@ -22,9 +23,14 @@ public class NodesCreateNodeInput {
      */
     @JsonProperty("type")
     public String type;
+
     public NodesCreateNodeInput withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NodesCreateNodeInput(@JsonProperty("attributes") NodesCreateNodeAttributesInput attributes, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.type = type;
+  }
 }

@@ -12,9 +12,11 @@ public class RegionInstantSnapshotsExportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportParams")
     public InstantSnapshotExportParams exportParams;
+
     public RegionInstantSnapshotsExportRequest withExportParams(InstantSnapshotExportParams exportParams) {
         this.exportParams = exportParams;
         return this;
     }
     
+    public RegionInstantSnapshotsExportRequest(){}
 }

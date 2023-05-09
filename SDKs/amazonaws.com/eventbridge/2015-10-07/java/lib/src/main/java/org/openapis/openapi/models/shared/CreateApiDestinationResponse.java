@@ -20,6 +20,7 @@ public class CreateApiDestinationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiDestinationArn")
     public String apiDestinationArn;
+
     public CreateApiDestinationResponse withApiDestinationArn(String apiDestinationArn) {
         this.apiDestinationArn = apiDestinationArn;
         return this;
@@ -28,6 +29,7 @@ public class CreateApiDestinationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiDestinationState")
     public ApiDestinationStateEnum apiDestinationState;
+
     public CreateApiDestinationResponse withApiDestinationState(ApiDestinationStateEnum apiDestinationState) {
         this.apiDestinationState = apiDestinationState;
         return this;
@@ -38,6 +40,7 @@ public class CreateApiDestinationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public CreateApiDestinationResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -48,9 +51,11 @@ public class CreateApiDestinationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public CreateApiDestinationResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
     }
     
+    public CreateApiDestinationResponse(){}
 }

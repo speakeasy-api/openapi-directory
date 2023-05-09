@@ -15,6 +15,7 @@ public class ListObjectParentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListObjectParentsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +24,7 @@ public class ListObjectParentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParentLinks")
     public ObjectIdentifierAndLinkNameTuple[] parentLinks;
+
     public ListObjectParentsResponse withParentLinks(ObjectIdentifierAndLinkNameTuple[] parentLinks) {
         this.parentLinks = parentLinks;
         return this;
@@ -31,9 +33,11 @@ public class ListObjectParentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parents")
     public java.util.Map<String, String> parents;
+
     public ListObjectParentsResponse withParents(java.util.Map<String, String> parents) {
         this.parents = parents;
         return this;
     }
     
+    public ListObjectParentsResponse(){}
 }

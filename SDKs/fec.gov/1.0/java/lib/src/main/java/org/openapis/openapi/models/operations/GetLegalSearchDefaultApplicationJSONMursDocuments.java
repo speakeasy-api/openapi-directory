@@ -14,6 +14,7 @@ public class GetLegalSearchDefaultApplicationJSONMursDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public GetLegalSearchDefaultApplicationJSONMursDocuments withCategory(String category) {
         this.category = category;
         return this;
@@ -22,6 +23,7 @@ public class GetLegalSearchDefaultApplicationJSONMursDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetLegalSearchDefaultApplicationJSONMursDocuments withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class GetLegalSearchDefaultApplicationJSONMursDocuments {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("document_date")
     public LocalDate documentDate;
+
     public GetLegalSearchDefaultApplicationJSONMursDocuments withDocumentDate(LocalDate documentDate) {
         this.documentDate = documentDate;
         return this;
@@ -39,6 +42,7 @@ public class GetLegalSearchDefaultApplicationJSONMursDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_id")
     public Long documentId;
+
     public GetLegalSearchDefaultApplicationJSONMursDocuments withDocumentId(Long documentId) {
         this.documentId = documentId;
         return this;
@@ -47,6 +51,7 @@ public class GetLegalSearchDefaultApplicationJSONMursDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("length")
     public Long length;
+
     public GetLegalSearchDefaultApplicationJSONMursDocuments withLength(Long length) {
         this.length = length;
         return this;
@@ -55,9 +60,11 @@ public class GetLegalSearchDefaultApplicationJSONMursDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GetLegalSearchDefaultApplicationJSONMursDocuments withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GetLegalSearchDefaultApplicationJSONMursDocuments(){}
 }

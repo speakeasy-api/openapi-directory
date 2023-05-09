@@ -15,6 +15,7 @@ public class MissionProfileListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missionProfileArn")
     public String missionProfileArn;
+
     public MissionProfileListItem withMissionProfileArn(String missionProfileArn) {
         this.missionProfileArn = missionProfileArn;
         return this;
@@ -23,6 +24,7 @@ public class MissionProfileListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missionProfileId")
     public String missionProfileId;
+
     public MissionProfileListItem withMissionProfileId(String missionProfileId) {
         this.missionProfileId = missionProfileId;
         return this;
@@ -31,6 +33,7 @@ public class MissionProfileListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MissionProfileListItem withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class MissionProfileListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public MissionProfileListItem withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public MissionProfileListItem(){}
 }

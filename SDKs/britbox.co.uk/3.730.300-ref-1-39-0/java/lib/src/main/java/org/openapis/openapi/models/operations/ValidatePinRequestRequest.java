@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ValidatePinRequestRequest {
@@ -12,6 +13,7 @@ public class ValidatePinRequestRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.EeValidatePinRequest eeValidatePinRequest;
+
     public ValidatePinRequestRequest withEeValidatePinRequest(org.openapis.openapi.models.shared.EeValidatePinRequest eeValidatePinRequest) {
         this.eeValidatePinRequest = eeValidatePinRequest;
         return this;
@@ -42,6 +44,7 @@ public class ValidatePinRequestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public ValidatePinRequestRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -62,9 +65,13 @@ public class ValidatePinRequestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public ValidatePinRequestRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public ValidatePinRequestRequest(@JsonProperty("EeValidatePinRequest") org.openapis.openapi.models.shared.EeValidatePinRequest eeValidatePinRequest) {
+        this.eeValidatePinRequest = eeValidatePinRequest;
+  }
 }

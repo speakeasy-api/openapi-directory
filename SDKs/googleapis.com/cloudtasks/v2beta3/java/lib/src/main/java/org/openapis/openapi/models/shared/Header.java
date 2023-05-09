@@ -18,6 +18,7 @@ public class Header {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public Header withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class Header {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Header withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Header(){}
 }

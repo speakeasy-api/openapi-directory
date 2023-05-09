@@ -12,6 +12,7 @@ public class RegisterGameServerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionInfo")
     public String connectionInfo;
+
     public RegisterGameServerInput withConnectionInfo(String connectionInfo) {
         this.connectionInfo = connectionInfo;
         return this;
@@ -20,6 +21,7 @@ public class RegisterGameServerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServerData")
     public String gameServerData;
+
     public RegisterGameServerInput withGameServerData(String gameServerData) {
         this.gameServerData = gameServerData;
         return this;
@@ -27,6 +29,7 @@ public class RegisterGameServerInput {
     
     @JsonProperty("GameServerGroupName")
     public String gameServerGroupName;
+
     public RegisterGameServerInput withGameServerGroupName(String gameServerGroupName) {
         this.gameServerGroupName = gameServerGroupName;
         return this;
@@ -34,6 +37,7 @@ public class RegisterGameServerInput {
     
     @JsonProperty("GameServerId")
     public String gameServerId;
+
     public RegisterGameServerInput withGameServerId(String gameServerId) {
         this.gameServerId = gameServerId;
         return this;
@@ -41,9 +45,15 @@ public class RegisterGameServerInput {
     
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public RegisterGameServerInput withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public RegisterGameServerInput(@JsonProperty("GameServerGroupName") String gameServerGroupName, @JsonProperty("GameServerId") String gameServerId, @JsonProperty("InstanceId") String instanceId) {
+        this.gameServerGroupName = gameServerGroupName;
+        this.gameServerId = gameServerId;
+        this.instanceId = instanceId;
+  }
 }

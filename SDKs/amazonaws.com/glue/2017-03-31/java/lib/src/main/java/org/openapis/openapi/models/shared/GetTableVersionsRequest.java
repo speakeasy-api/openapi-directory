@@ -12,6 +12,7 @@ public class GetTableVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetTableVersionsRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class GetTableVersionsRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public GetTableVersionsRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -27,6 +29,7 @@ public class GetTableVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetTableVersionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,6 +38,7 @@ public class GetTableVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetTableVersionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -42,9 +46,14 @@ public class GetTableVersionsRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public GetTableVersionsRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public GetTableVersionsRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.tableName = tableName;
+  }
 }

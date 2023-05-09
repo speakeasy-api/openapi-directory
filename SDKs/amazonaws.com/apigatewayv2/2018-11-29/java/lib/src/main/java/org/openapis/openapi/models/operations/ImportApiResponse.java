@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportApiResponse {
@@ -12,6 +13,7 @@ public class ImportApiResponse {
      */
     
     public Object badRequestException;
+
     public ImportApiResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class ImportApiResponse {
      */
     
     public Object conflictException;
+
     public ImportApiResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ImportApiResponse {
     
     
     public String contentType;
+
     public ImportApiResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ImportApiResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportApiResponse importApiResponse;
+
     public ImportApiResponse withImportApiResponse(org.openapis.openapi.models.shared.ImportApiResponse importApiResponse) {
         this.importApiResponse = importApiResponse;
         return this;
@@ -49,6 +54,7 @@ public class ImportApiResponse {
      */
     
     public Object notFoundException;
+
     public ImportApiResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ImportApiResponse {
     
     
     public Integer statusCode;
+
     public ImportApiResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ImportApiResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportApiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ImportApiResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ImportApiResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ImportApiResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

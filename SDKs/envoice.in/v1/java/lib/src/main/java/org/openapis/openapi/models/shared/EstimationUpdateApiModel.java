@@ -22,6 +22,7 @@ public class EstimationUpdateApiModel {
     @JsonProperty("Attachments")
     @SpeakeasyMetadata("form:name=Attachments,json")
     public EstimationUpdateAttachmentApiModel[] attachments;
+
     public EstimationUpdateApiModel withAttachments(EstimationUpdateAttachmentApiModel[] attachments) {
         this.attachments = attachments;
         return this;
@@ -34,6 +35,7 @@ public class EstimationUpdateApiModel {
     @JsonProperty("ClientId")
     @SpeakeasyMetadata("form:name=ClientId")
     public Integer clientId;
+
     public EstimationUpdateApiModel withClientId(Integer clientId) {
         this.clientId = clientId;
         return this;
@@ -46,6 +48,7 @@ public class EstimationUpdateApiModel {
     @JsonProperty("ClonedFromId")
     @SpeakeasyMetadata("form:name=ClonedFromId")
     public Integer clonedFromId;
+
     public EstimationUpdateApiModel withClonedFromId(Integer clonedFromId) {
         this.clonedFromId = clonedFromId;
         return this;
@@ -58,6 +61,7 @@ public class EstimationUpdateApiModel {
     @JsonProperty("CurrencyId")
     @SpeakeasyMetadata("form:name=CurrencyId")
     public Integer currencyId;
+
     public EstimationUpdateApiModel withCurrencyId(Integer currencyId) {
         this.currencyId = currencyId;
         return this;
@@ -72,6 +76,7 @@ public class EstimationUpdateApiModel {
     @JsonProperty("ExpiresOn")
     @SpeakeasyMetadata("form:name=ExpiresOn")
     public OffsetDateTime expiresOn;
+
     public EstimationUpdateApiModel withExpiresOn(OffsetDateTime expiresOn) {
         this.expiresOn = expiresOn;
         return this;
@@ -84,6 +89,7 @@ public class EstimationUpdateApiModel {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Integer id;
+
     public EstimationUpdateApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -98,6 +104,7 @@ public class EstimationUpdateApiModel {
     @JsonProperty("IssuedOn")
     @SpeakeasyMetadata("form:name=IssuedOn")
     public OffsetDateTime issuedOn;
+
     public EstimationUpdateApiModel withIssuedOn(OffsetDateTime issuedOn) {
         this.issuedOn = issuedOn;
         return this;
@@ -110,6 +117,7 @@ public class EstimationUpdateApiModel {
     @JsonProperty("Items")
     @SpeakeasyMetadata("form:name=Items,json")
     public EstimationUpdateItemApiModel[] items;
+
     public EstimationUpdateApiModel withItems(EstimationUpdateItemApiModel[] items) {
         this.items = items;
         return this;
@@ -122,6 +130,7 @@ public class EstimationUpdateApiModel {
     @JsonProperty("Notes")
     @SpeakeasyMetadata("form:name=Notes")
     public String notes;
+
     public EstimationUpdateApiModel withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -134,6 +143,7 @@ public class EstimationUpdateApiModel {
     @JsonProperty("Number")
     @SpeakeasyMetadata("form:name=Number")
     public String number;
+
     public EstimationUpdateApiModel withNumber(String number) {
         this.number = number;
         return this;
@@ -146,6 +156,7 @@ public class EstimationUpdateApiModel {
     @JsonProperty("PaymentGateways")
     @SpeakeasyMetadata("form:name=PaymentGateways,json")
     public EstimationGatewayApiModel[] paymentGateways;
+
     public EstimationUpdateApiModel withPaymentGateways(EstimationGatewayApiModel[] paymentGateways) {
         this.paymentGateways = paymentGateways;
         return this;
@@ -158,6 +169,7 @@ public class EstimationUpdateApiModel {
     @JsonProperty("PoNumber")
     @SpeakeasyMetadata("form:name=PoNumber")
     public String poNumber;
+
     public EstimationUpdateApiModel withPoNumber(String poNumber) {
         this.poNumber = poNumber;
         return this;
@@ -170,6 +182,7 @@ public class EstimationUpdateApiModel {
     @JsonProperty("Status")
     @SpeakeasyMetadata("form:name=Status")
     public EstimationUpdateApiModelStatusEnum status;
+
     public EstimationUpdateApiModel withStatus(EstimationUpdateApiModelStatusEnum status) {
         this.status = status;
         return this;
@@ -182,9 +195,11 @@ public class EstimationUpdateApiModel {
     @JsonProperty("Terms")
     @SpeakeasyMetadata("form:name=Terms")
     public String terms;
+
     public EstimationUpdateApiModel withTerms(String terms) {
         this.terms = terms;
         return this;
     }
     
+    public EstimationUpdateApiModel(){}
 }

@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class ImprovementSummary {
     /**
-     * &lt;p&gt;The improvement plan URL for a question.&lt;/p&gt; &lt;p&gt;This value is only available if the question has been answered.&lt;/p&gt;
+     * &lt;p&gt;The improvement plan URL for a question in an Amazon Web Services official lenses.&lt;/p&gt; &lt;p&gt;This value is only available if the question has been answered.&lt;/p&gt; &lt;p&gt;This value does not apply to custom lenses.&lt;/p&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImprovementPlanUrl")
     public String improvementPlanUrl;
+
     public ImprovementSummary withImprovementPlanUrl(String improvementPlanUrl) {
         this.improvementPlanUrl = improvementPlanUrl;
         return this;
@@ -26,6 +27,7 @@ public class ImprovementSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImprovementPlans")
     public ChoiceImprovementPlan[] improvementPlans;
+
     public ImprovementSummary withImprovementPlans(ChoiceImprovementPlan[] improvementPlans) {
         this.improvementPlans = improvementPlans;
         return this;
@@ -37,6 +39,7 @@ public class ImprovementSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PillarId")
     public String pillarId;
+
     public ImprovementSummary withPillarId(String pillarId) {
         this.pillarId = pillarId;
         return this;
@@ -48,6 +51,7 @@ public class ImprovementSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuestionId")
     public String questionId;
+
     public ImprovementSummary withQuestionId(String questionId) {
         this.questionId = questionId;
         return this;
@@ -59,6 +63,7 @@ public class ImprovementSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuestionTitle")
     public String questionTitle;
+
     public ImprovementSummary withQuestionTitle(String questionTitle) {
         this.questionTitle = questionTitle;
         return this;
@@ -70,9 +75,11 @@ public class ImprovementSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Risk")
     public RiskEnum risk;
+
     public ImprovementSummary withRisk(RiskEnum risk) {
         this.risk = risk;
         return this;
     }
     
+    public ImprovementSummary(){}
 }

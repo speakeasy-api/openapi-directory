@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrescriptionMessagesReadRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public PrescriptionMessagesReadRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -16,6 +18,7 @@ public class PrescriptionMessagesReadRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PrescriptionMessagesReadRequest withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +26,7 @@ public class PrescriptionMessagesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_message")
     public Long parentMessage;
+
     public PrescriptionMessagesReadRequest withParentMessage(Long parentMessage) {
         this.parentMessage = parentMessage;
         return this;
@@ -30,6 +34,7 @@ public class PrescriptionMessagesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public PrescriptionMessagesReadRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -37,9 +42,13 @@ public class PrescriptionMessagesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public PrescriptionMessagesReadRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public PrescriptionMessagesReadRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

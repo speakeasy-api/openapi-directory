@@ -18,6 +18,7 @@ public class ChromeOsDeviceLastKnownNetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public ChromeOsDeviceLastKnownNetwork withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -29,9 +30,11 @@ public class ChromeOsDeviceLastKnownNetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wanIpAddress")
     public String wanIpAddress;
+
     public ChromeOsDeviceLastKnownNetwork withWanIpAddress(String wanIpAddress) {
         this.wanIpAddress = wanIpAddress;
         return this;
     }
     
+    public ChromeOsDeviceLastKnownNetwork(){}
 }

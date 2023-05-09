@@ -12,6 +12,7 @@ public class KYCVerificationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolder")
     public KYCCheckResult accountHolder;
+
     public KYCVerificationResult withAccountHolder(KYCCheckResult accountHolder) {
         this.accountHolder = accountHolder;
         return this;
@@ -23,6 +24,7 @@ public class KYCVerificationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalArrangements")
     public KYCLegalArrangementCheckResult[] legalArrangements;
+
     public KYCVerificationResult withLegalArrangements(KYCLegalArrangementCheckResult[] legalArrangements) {
         this.legalArrangements = legalArrangements;
         return this;
@@ -34,6 +36,7 @@ public class KYCVerificationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalArrangementsEntities")
     public KYCLegalArrangementEntityCheckResult[] legalArrangementsEntities;
+
     public KYCVerificationResult withLegalArrangementsEntities(KYCLegalArrangementEntityCheckResult[] legalArrangementsEntities) {
         this.legalArrangementsEntities = legalArrangementsEntities;
         return this;
@@ -45,6 +48,7 @@ public class KYCVerificationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutMethods")
     public KYCPayoutMethodCheckResult[] payoutMethods;
+
     public KYCVerificationResult withPayoutMethods(KYCPayoutMethodCheckResult[] payoutMethods) {
         this.payoutMethods = payoutMethods;
         return this;
@@ -56,6 +60,7 @@ public class KYCVerificationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareholders")
     public KYCShareholderCheckResult[] shareholders;
+
     public KYCVerificationResult withShareholders(KYCShareholderCheckResult[] shareholders) {
         this.shareholders = shareholders;
         return this;
@@ -67,6 +72,7 @@ public class KYCVerificationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatories")
     public KYCSignatoryCheckResult[] signatories;
+
     public KYCVerificationResult withSignatories(KYCSignatoryCheckResult[] signatories) {
         this.signatories = signatories;
         return this;
@@ -78,9 +84,11 @@ public class KYCVerificationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ultimateParentCompany")
     public KYCUltimateParentCompanyCheckResult[] ultimateParentCompany;
+
     public KYCVerificationResult withUltimateParentCompany(KYCUltimateParentCompanyCheckResult[] ultimateParentCompany) {
         this.ultimateParentCompany = ultimateParentCompany;
         return this;
     }
     
+    public KYCVerificationResult(){}
 }

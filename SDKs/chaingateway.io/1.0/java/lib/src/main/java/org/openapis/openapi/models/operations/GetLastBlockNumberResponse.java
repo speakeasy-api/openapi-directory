@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLastBlockNumberResponse {
     
     public String contentType;
+
     public GetLastBlockNumberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetLastBlockNumberResponse {
     
     
     public Integer statusCode;
+
     public GetLastBlockNumberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetLastBlockNumberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLastBlockNumberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -30,9 +34,14 @@ public class GetLastBlockNumberResponse {
     
     
     public org.openapis.openapi.models.shared.GetLastBlockNumber getLastBlockNumber;
+
     public GetLastBlockNumberResponse withGetLastBlockNumber(org.openapis.openapi.models.shared.GetLastBlockNumber getLastBlockNumber) {
         this.getLastBlockNumber = getLastBlockNumber;
         return this;
     }
     
+    public GetLastBlockNumberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

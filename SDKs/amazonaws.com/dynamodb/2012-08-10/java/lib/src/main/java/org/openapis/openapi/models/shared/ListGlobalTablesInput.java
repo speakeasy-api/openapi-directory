@@ -12,6 +12,7 @@ public class ListGlobalTablesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusiveStartGlobalTableName")
     public String exclusiveStartGlobalTableName;
+
     public ListGlobalTablesInput withExclusiveStartGlobalTableName(String exclusiveStartGlobalTableName) {
         this.exclusiveStartGlobalTableName = exclusiveStartGlobalTableName;
         return this;
@@ -20,6 +21,7 @@ public class ListGlobalTablesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListGlobalTablesInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -28,9 +30,11 @@ public class ListGlobalTablesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegionName")
     public String regionName;
+
     public ListGlobalTablesInput withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
     }
     
+    public ListGlobalTablesInput(){}
 }

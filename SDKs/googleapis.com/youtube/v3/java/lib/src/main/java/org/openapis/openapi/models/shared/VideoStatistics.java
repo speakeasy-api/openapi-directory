@@ -18,6 +18,7 @@ public class VideoStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commentCount")
     public String commentCount;
+
     public VideoStatistics withCommentCount(String commentCount) {
         this.commentCount = commentCount;
         return this;
@@ -29,6 +30,7 @@ public class VideoStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dislikeCount")
     public String dislikeCount;
+
     public VideoStatistics withDislikeCount(String dislikeCount) {
         this.dislikeCount = dislikeCount;
         return this;
@@ -40,6 +42,7 @@ public class VideoStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("favoriteCount")
     public String favoriteCount;
+
     public VideoStatistics withFavoriteCount(String favoriteCount) {
         this.favoriteCount = favoriteCount;
         return this;
@@ -51,6 +54,7 @@ public class VideoStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("likeCount")
     public String likeCount;
+
     public VideoStatistics withLikeCount(String likeCount) {
         this.likeCount = likeCount;
         return this;
@@ -62,9 +66,11 @@ public class VideoStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewCount")
     public String viewCount;
+
     public VideoStatistics withViewCount(String viewCount) {
         this.viewCount = viewCount;
         return this;
     }
     
+    public VideoStatistics(){}
 }

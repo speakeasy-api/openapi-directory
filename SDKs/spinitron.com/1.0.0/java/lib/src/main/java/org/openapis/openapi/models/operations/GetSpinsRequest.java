@@ -13,6 +13,7 @@ public class GetSpinsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public Long count;
+
     public GetSpinsRequest withCount(Long count) {
         this.count = count;
         return this;
@@ -24,6 +25,7 @@ public class GetSpinsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public OffsetDateTime end;
+
     public GetSpinsRequest withEnd(OffsetDateTime end) {
         this.end = end;
         return this;
@@ -34,6 +36,7 @@ public class GetSpinsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String[] expand;
+
     public GetSpinsRequest withExpand(String[] expand) {
         this.expand = expand;
         return this;
@@ -44,6 +47,7 @@ public class GetSpinsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String[] fields;
+
     public GetSpinsRequest withFields(String[] fields) {
         this.fields = fields;
         return this;
@@ -54,6 +58,7 @@ public class GetSpinsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetSpinsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -64,6 +69,7 @@ public class GetSpinsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=playlist_id")
     public Long playlistId;
+
     public GetSpinsRequest withPlaylistId(Long playlistId) {
         this.playlistId = playlistId;
         return this;
@@ -74,6 +80,7 @@ public class GetSpinsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=show_id")
     public Long showId;
+
     public GetSpinsRequest withShowId(Long showId) {
         this.showId = showId;
         return this;
@@ -85,9 +92,11 @@ public class GetSpinsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public OffsetDateTime start;
+
     public GetSpinsRequest withStart(OffsetDateTime start) {
         this.start = start;
         return this;
     }
     
+    public GetSpinsRequest(){}
 }

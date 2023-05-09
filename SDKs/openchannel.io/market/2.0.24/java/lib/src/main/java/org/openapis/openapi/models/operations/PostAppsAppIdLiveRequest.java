@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAppsAppIdLiveRequest {
@@ -12,6 +13,7 @@ public class PostAppsAppIdLiveRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public String appId;
+
     public PostAppsAppIdLiveRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -22,6 +24,7 @@ public class PostAppsAppIdLiveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developerId")
     public String developerId;
+
     public PostAppsAppIdLiveRequest withDeveloperId(String developerId) {
         this.developerId = developerId;
         return this;
@@ -32,9 +35,15 @@ public class PostAppsAppIdLiveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
     public String version;
+
     public PostAppsAppIdLiveRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public PostAppsAppIdLiveRequest(@JsonProperty("appId") String appId, @JsonProperty("developerId") String developerId, @JsonProperty("version") String version) {
+        this.appId = appId;
+        this.developerId = developerId;
+        this.version = version;
+  }
 }

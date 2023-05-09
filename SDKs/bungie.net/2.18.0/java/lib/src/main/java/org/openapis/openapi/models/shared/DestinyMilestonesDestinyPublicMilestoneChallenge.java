@@ -15,6 +15,7 @@ public class DestinyMilestonesDestinyPublicMilestoneChallenge {
      */
     
     public Long activityHash;
+
     public DestinyMilestonesDestinyPublicMilestoneChallenge withActivityHash(Long activityHash) {
         this.activityHash = activityHash;
         return this;
@@ -25,9 +26,11 @@ public class DestinyMilestonesDestinyPublicMilestoneChallenge {
      */
     
     public Long objectiveHash;
+
     public DestinyMilestonesDestinyPublicMilestoneChallenge withObjectiveHash(Long objectiveHash) {
         this.objectiveHash = objectiveHash;
         return this;
     }
     
+    public DestinyMilestonesDestinyPublicMilestoneChallenge(){}
 }

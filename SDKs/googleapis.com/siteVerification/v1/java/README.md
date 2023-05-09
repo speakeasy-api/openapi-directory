@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.SiteVerificationWebResourceDeleteSecurity;
 import org.openapis.openapi.models.operations.SiteVerificationWebResourceDeleteRequest;
 import org.openapis.openapi.models.operations.SiteVerificationWebResourceDeleteResponse;
+import org.openapis.openapi.models.operations.SiteVerificationWebResourceDeleteSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 
 public class Application {
@@ -28,18 +27,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            SiteVerificationWebResourceDeleteRequest req = new SiteVerificationWebResourceDeleteRequest() {{
-                alt = "json";
-                fields = "corrupti";
-                id = "provident";
+            SiteVerificationWebResourceDeleteRequest req = new SiteVerificationWebResourceDeleteRequest("corrupti") {{
+                alt = AltEnum.JSON;
+                fields = "provident";
                 key = "distinctio";
                 oauthToken = "quibusdam";
                 prettyPrint = false;
                 quotaUser = "unde";
                 userIp = "nulla";
-            }}            
+            }};            
 
-            SiteVerificationWebResourceDeleteResponse res = sdk.webResource.siteVerificationWebResourceDelete(req, new SiteVerificationWebResourceDeleteSecurity() {{
+            SiteVerificationWebResourceDeleteResponse res = sdk.webResource.siteVerificationWebResourceDelete(req, new SiteVerificationWebResourceDeleteSecurity("corrupti", "illum") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
@@ -50,6 +48,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -57,15 +57,15 @@ public class Application {
 ## Available Resources and Operations
 
 
-### webResource
+### [webResource](docs/webresource/README.md)
 
-* `siteVerificationWebResourceDelete` - Relinquish ownership of a website or domain.
-* `siteVerificationWebResourceGet` - Get the most current data for a website or domain.
-* `siteVerificationWebResourceGetToken` - Get a verification token for placing on a website or domain.
-* `siteVerificationWebResourceInsert` - Attempt verification of a website or domain.
-* `siteVerificationWebResourceList` - Get the list of your verified websites and domains.
-* `siteVerificationWebResourcePatch` - Modify the list of owners for your website or domain. This method supports patch semantics.
-* `siteVerificationWebResourceUpdate` - Modify the list of owners for your website or domain.
+* [siteVerificationWebResourceDelete](docs/webresource/README.md#siteverificationwebresourcedelete) - Relinquish ownership of a website or domain.
+* [siteVerificationWebResourceGet](docs/webresource/README.md#siteverificationwebresourceget) - Get the most current data for a website or domain.
+* [siteVerificationWebResourceGetToken](docs/webresource/README.md#siteverificationwebresourcegettoken) - Get a verification token for placing on a website or domain.
+* [siteVerificationWebResourceInsert](docs/webresource/README.md#siteverificationwebresourceinsert) - Attempt verification of a website or domain.
+* [siteVerificationWebResourceList](docs/webresource/README.md#siteverificationwebresourcelist) - Get the list of your verified websites and domains.
+* [siteVerificationWebResourcePatch](docs/webresource/README.md#siteverificationwebresourcepatch) - Modify the list of owners for your website or domain. This method supports patch semantics.
+* [siteVerificationWebResourceUpdate](docs/webresource/README.md#siteverificationwebresourceupdate) - Modify the list of owners for your website or domain.
 <!-- End SDK Available Operations -->
 
 ### Maturity

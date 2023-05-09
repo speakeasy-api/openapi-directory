@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMobileDeviceAccessEffectResponse {
     
     public String contentType;
+
     public GetMobileDeviceAccessEffectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetMobileDeviceAccessEffectResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMobileDeviceAccessEffectResponse getMobileDeviceAccessEffectResponse;
+
     public GetMobileDeviceAccessEffectResponse withGetMobileDeviceAccessEffectResponse(org.openapis.openapi.models.shared.GetMobileDeviceAccessEffectResponse getMobileDeviceAccessEffectResponse) {
         this.getMobileDeviceAccessEffectResponse = getMobileDeviceAccessEffectResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetMobileDeviceAccessEffectResponse {
      */
     
     public Object invalidParameterException;
+
     public GetMobileDeviceAccessEffectResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class GetMobileDeviceAccessEffectResponse {
      */
     
     public Object organizationNotFoundException;
+
     public GetMobileDeviceAccessEffectResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class GetMobileDeviceAccessEffectResponse {
      */
     
     public Object organizationStateException;
+
     public GetMobileDeviceAccessEffectResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -56,6 +62,7 @@ public class GetMobileDeviceAccessEffectResponse {
     
     
     public Integer statusCode;
+
     public GetMobileDeviceAccessEffectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetMobileDeviceAccessEffectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMobileDeviceAccessEffectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMobileDeviceAccessEffectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

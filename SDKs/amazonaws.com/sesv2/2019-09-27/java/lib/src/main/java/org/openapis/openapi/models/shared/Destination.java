@@ -15,6 +15,7 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BccAddresses")
     public String[] bccAddresses;
+
     public Destination withBccAddresses(String[] bccAddresses) {
         this.bccAddresses = bccAddresses;
         return this;
@@ -23,6 +24,7 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CcAddresses")
     public String[] ccAddresses;
+
     public Destination withCcAddresses(String[] ccAddresses) {
         this.ccAddresses = ccAddresses;
         return this;
@@ -31,9 +33,11 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ToAddresses")
     public String[] toAddresses;
+
     public Destination withToAddresses(String[] toAddresses) {
         this.toAddresses = toAddresses;
         return this;
     }
     
+    public Destination(){}
 }

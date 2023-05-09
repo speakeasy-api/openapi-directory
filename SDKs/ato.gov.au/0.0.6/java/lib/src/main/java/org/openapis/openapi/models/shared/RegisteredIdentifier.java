@@ -25,6 +25,7 @@ public class RegisteredIdentifier {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("fromDate")
     public OffsetDateTime fromDate;
+
     public RegisteredIdentifier withFromDate(OffsetDateTime fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -36,6 +37,7 @@ public class RegisteredIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public RegisteredIdentifier withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +49,7 @@ public class RegisteredIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public RegisteredIdentifier withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -58,6 +61,7 @@ public class RegisteredIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifierType")
     public RegisteredIdentifierIdentifierTypeEnum identifierType;
+
     public RegisteredIdentifier withIdentifierType(RegisteredIdentifierIdentifierTypeEnum identifierType) {
         this.identifierType = identifierType;
         return this;
@@ -71,9 +75,11 @@ public class RegisteredIdentifier {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("toDate")
     public OffsetDateTime toDate;
+
     public RegisteredIdentifier withToDate(OffsetDateTime toDate) {
         this.toDate = toDate;
         return this;
     }
     
+    public RegisteredIdentifier(){}
 }

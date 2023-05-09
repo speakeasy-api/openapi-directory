@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutEmailIdentityDkimSigningAttributesResponse {
@@ -12,6 +13,7 @@ public class PutEmailIdentityDkimSigningAttributesResponse {
      */
     
     public Object badRequestException;
+
     public PutEmailIdentityDkimSigningAttributesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class PutEmailIdentityDkimSigningAttributesResponse {
     
     
     public String contentType;
+
     public PutEmailIdentityDkimSigningAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutEmailIdentityDkimSigningAttributesResponse {
      */
     
     public Object notFoundException;
+
     public PutEmailIdentityDkimSigningAttributesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -39,6 +43,7 @@ public class PutEmailIdentityDkimSigningAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.PutEmailIdentityDkimSigningAttributesResponse putEmailIdentityDkimSigningAttributesResponse;
+
     public PutEmailIdentityDkimSigningAttributesResponse withPutEmailIdentityDkimSigningAttributesResponse(org.openapis.openapi.models.shared.PutEmailIdentityDkimSigningAttributesResponse putEmailIdentityDkimSigningAttributesResponse) {
         this.putEmailIdentityDkimSigningAttributesResponse = putEmailIdentityDkimSigningAttributesResponse;
         return this;
@@ -46,6 +51,7 @@ public class PutEmailIdentityDkimSigningAttributesResponse {
     
     
     public Integer statusCode;
+
     public PutEmailIdentityDkimSigningAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutEmailIdentityDkimSigningAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutEmailIdentityDkimSigningAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PutEmailIdentityDkimSigningAttributesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutEmailIdentityDkimSigningAttributesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PutEmailIdentityDkimSigningAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

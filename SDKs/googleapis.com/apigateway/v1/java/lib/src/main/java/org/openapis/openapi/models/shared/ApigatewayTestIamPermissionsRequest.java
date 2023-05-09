@@ -18,9 +18,11 @@ public class ApigatewayTestIamPermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public String[] permissions;
+
     public ApigatewayTestIamPermissionsRequest withPermissions(String[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public ApigatewayTestIamPermissionsRequest(){}
 }

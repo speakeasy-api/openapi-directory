@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AttributeList {
     
     public String alternateNameEncoding;
+
     public AttributeList withAlternateNameEncoding(String alternateNameEncoding) {
         this.alternateNameEncoding = alternateNameEncoding;
         return this;
@@ -16,6 +17,7 @@ public class AttributeList {
     
     
     public String alternateValueEncoding;
+
     public AttributeList withAlternateValueEncoding(String alternateValueEncoding) {
         this.alternateValueEncoding = alternateValueEncoding;
         return this;
@@ -23,6 +25,7 @@ public class AttributeList {
     
     
     public String name;
+
     public AttributeList withName(String name) {
         this.name = name;
         return this;
@@ -30,9 +33,14 @@ public class AttributeList {
     
     
     public String value;
+
     public AttributeList withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AttributeList(@JsonProperty("Name") String name, @JsonProperty("Value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

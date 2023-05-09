@@ -12,6 +12,7 @@ public class DatasetAccessEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataset")
     public DatasetReference dataset;
+
     public DatasetAccessEntry withDataset(DatasetReference dataset) {
         this.dataset = dataset;
         return this;
@@ -20,9 +21,11 @@ public class DatasetAccessEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetTypes")
     public DatasetAccessEntryTargetTypesEnum[] targetTypes;
+
     public DatasetAccessEntry withTargetTypes(DatasetAccessEntryTargetTypesEnum[] targetTypes) {
         this.targetTypes = targetTypes;
         return this;
     }
     
+    public DatasetAccessEntry(){}
 }

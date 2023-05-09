@@ -15,6 +15,7 @@ public class BillbeeInterfacesBillbeeAPIModelUpdateStockResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentStock")
     public Double currentStock;
+
     public BillbeeInterfacesBillbeeAPIModelUpdateStockResponseData withCurrentStock(Double currentStock) {
         this.currentStock = currentStock;
         return this;
@@ -26,6 +27,7 @@ public class BillbeeInterfacesBillbeeAPIModelUpdateStockResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public BillbeeInterfacesBillbeeAPIModelUpdateStockResponseData withMessage(String message) {
         this.message = message;
         return this;
@@ -37,6 +39,7 @@ public class BillbeeInterfacesBillbeeAPIModelUpdateStockResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OldStock")
     public Double oldStock;
+
     public BillbeeInterfacesBillbeeAPIModelUpdateStockResponseData withOldStock(Double oldStock) {
         this.oldStock = oldStock;
         return this;
@@ -48,6 +51,7 @@ public class BillbeeInterfacesBillbeeAPIModelUpdateStockResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SKU")
     public String sku;
+
     public BillbeeInterfacesBillbeeAPIModelUpdateStockResponseData withSku(String sku) {
         this.sku = sku;
         return this;
@@ -59,9 +63,11 @@ public class BillbeeInterfacesBillbeeAPIModelUpdateStockResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnfulfilledAmount")
     public Double unfulfilledAmount;
+
     public BillbeeInterfacesBillbeeAPIModelUpdateStockResponseData withUnfulfilledAmount(Double unfulfilledAmount) {
         this.unfulfilledAmount = unfulfilledAmount;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelUpdateStockResponseData(){}
 }

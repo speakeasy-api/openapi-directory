@@ -15,9 +15,11 @@ public class TemporaryLinkV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public TemporaryLinkV1 withLink(String link) {
         this.link = link;
         return this;
     }
     
+    public TemporaryLinkV1(){}
 }

@@ -18,9 +18,11 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentSteps")
     public Step[] currentSteps;
+
     public Status withCurrentSteps(Step[] currentSteps) {
         this.currentSteps = currentSteps;
         return this;
     }
     
+    public Status(){}
 }

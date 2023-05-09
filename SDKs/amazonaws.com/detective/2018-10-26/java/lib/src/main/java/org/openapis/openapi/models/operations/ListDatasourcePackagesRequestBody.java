@@ -14,6 +14,7 @@ public class ListDatasourcePackagesRequestBody {
      */
     @JsonProperty("GraphArn")
     public String graphArn;
+
     public ListDatasourcePackagesRequestBody withGraphArn(String graphArn) {
         this.graphArn = graphArn;
         return this;
@@ -25,6 +26,7 @@ public class ListDatasourcePackagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDatasourcePackagesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class ListDatasourcePackagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDatasourcePackagesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDatasourcePackagesRequestBody(@JsonProperty("GraphArn") String graphArn) {
+        this.graphArn = graphArn;
+  }
 }

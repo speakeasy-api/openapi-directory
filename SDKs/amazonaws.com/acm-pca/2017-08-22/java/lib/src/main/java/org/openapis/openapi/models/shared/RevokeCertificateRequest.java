@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RevokeCertificateRequest {
     @JsonProperty("CertificateAuthorityArn")
     public String certificateAuthorityArn;
+
     public RevokeCertificateRequest withCertificateAuthorityArn(String certificateAuthorityArn) {
         this.certificateAuthorityArn = certificateAuthorityArn;
         return this;
@@ -16,6 +17,7 @@ public class RevokeCertificateRequest {
     
     @JsonProperty("CertificateSerial")
     public String certificateSerial;
+
     public RevokeCertificateRequest withCertificateSerial(String certificateSerial) {
         this.certificateSerial = certificateSerial;
         return this;
@@ -23,9 +25,15 @@ public class RevokeCertificateRequest {
     
     @JsonProperty("RevocationReason")
     public RevocationReasonEnum revocationReason;
+
     public RevokeCertificateRequest withRevocationReason(RevocationReasonEnum revocationReason) {
         this.revocationReason = revocationReason;
         return this;
     }
     
+    public RevokeCertificateRequest(@JsonProperty("CertificateAuthorityArn") String certificateAuthorityArn, @JsonProperty("CertificateSerial") String certificateSerial, @JsonProperty("RevocationReason") RevocationReasonEnum revocationReason) {
+        this.certificateAuthorityArn = certificateAuthorityArn;
+        this.certificateSerial = certificateSerial;
+        this.revocationReason = revocationReason;
+  }
 }

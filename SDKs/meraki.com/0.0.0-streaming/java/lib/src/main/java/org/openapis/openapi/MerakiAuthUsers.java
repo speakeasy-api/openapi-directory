@@ -52,11 +52,9 @@ public class MerakiAuthUsers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkMerakiAuthUserResponse res = new org.openapis.openapi.models.operations.GetNetworkMerakiAuthUserResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkMerakiAuthUserResponse res = new org.openapis.openapi.models.operations.GetNetworkMerakiAuthUserResponse(contentType, httpRes.statusCode()) {{
             getNetworkMerakiAuthUser200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -92,11 +90,9 @@ public class MerakiAuthUsers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkMerakiAuthUsersResponse res = new org.openapis.openapi.models.operations.GetNetworkMerakiAuthUsersResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkMerakiAuthUsersResponse res = new org.openapis.openapi.models.operations.GetNetworkMerakiAuthUsersResponse(contentType, httpRes.statusCode()) {{
             getNetworkMerakiAuthUsers200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

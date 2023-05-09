@@ -18,6 +18,7 @@ public class BulkEditAdvertiserAssignedTargetingOptionsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createRequests")
     public CreateAssignedTargetingOptionsRequestInput[] createRequests;
+
     public BulkEditAdvertiserAssignedTargetingOptionsRequestInput withCreateRequests(CreateAssignedTargetingOptionsRequestInput[] createRequests) {
         this.createRequests = createRequests;
         return this;
@@ -29,9 +30,11 @@ public class BulkEditAdvertiserAssignedTargetingOptionsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteRequests")
     public DeleteAssignedTargetingOptionsRequest[] deleteRequests;
+
     public BulkEditAdvertiserAssignedTargetingOptionsRequestInput withDeleteRequests(DeleteAssignedTargetingOptionsRequest[] deleteRequests) {
         this.deleteRequests = deleteRequests;
         return this;
     }
     
+    public BulkEditAdvertiserAssignedTargetingOptionsRequestInput(){}
 }

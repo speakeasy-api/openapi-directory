@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScalingRule {
     @JsonProperty("Action")
     public ScalingAction action;
+
     public ScalingRule withAction(ScalingAction action) {
         this.action = action;
         return this;
@@ -22,6 +23,7 @@ public class ScalingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ScalingRule withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +31,7 @@ public class ScalingRule {
     
     @JsonProperty("Name")
     public String name;
+
     public ScalingRule withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,15 @@ public class ScalingRule {
     
     @JsonProperty("Trigger")
     public ScalingTrigger trigger;
+
     public ScalingRule withTrigger(ScalingTrigger trigger) {
         this.trigger = trigger;
         return this;
     }
     
+    public ScalingRule(@JsonProperty("Action") ScalingAction action, @JsonProperty("Name") String name, @JsonProperty("Trigger") ScalingTrigger trigger) {
+        this.action = action;
+        this.name = name;
+        this.trigger = trigger;
+  }
 }

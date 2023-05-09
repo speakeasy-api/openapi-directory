@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AclConfiguration {
     @JsonProperty("S3AclOption")
     public S3AclOptionEnum s3AclOption;
+
     public AclConfiguration withS3AclOption(S3AclOptionEnum s3AclOption) {
         this.s3AclOption = s3AclOption;
         return this;
     }
     
+    public AclConfiguration(@JsonProperty("S3AclOption") S3AclOptionEnum s3AclOption) {
+        this.s3AclOption = s3AclOption;
+  }
 }

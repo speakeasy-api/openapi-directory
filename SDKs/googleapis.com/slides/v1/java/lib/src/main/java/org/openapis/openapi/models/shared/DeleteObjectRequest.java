@@ -18,9 +18,11 @@ public class DeleteObjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public DeleteObjectRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public DeleteObjectRequest(){}
 }

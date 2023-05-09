@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class EnableFastSnapshotRestoresResultSuccessful {
     
     public String availabilityZone;
+
     public EnableFastSnapshotRestoresResultSuccessful withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class EnableFastSnapshotRestoresResultSuccessful {
     
     
     public OffsetDateTime disabledTime;
+
     public EnableFastSnapshotRestoresResultSuccessful withDisabledTime(OffsetDateTime disabledTime) {
         this.disabledTime = disabledTime;
         return this;
@@ -26,6 +28,7 @@ public class EnableFastSnapshotRestoresResultSuccessful {
     
     
     public OffsetDateTime disablingTime;
+
     public EnableFastSnapshotRestoresResultSuccessful withDisablingTime(OffsetDateTime disablingTime) {
         this.disablingTime = disablingTime;
         return this;
@@ -33,6 +36,7 @@ public class EnableFastSnapshotRestoresResultSuccessful {
     
     
     public OffsetDateTime enabledTime;
+
     public EnableFastSnapshotRestoresResultSuccessful withEnabledTime(OffsetDateTime enabledTime) {
         this.enabledTime = enabledTime;
         return this;
@@ -40,6 +44,7 @@ public class EnableFastSnapshotRestoresResultSuccessful {
     
     
     public OffsetDateTime enablingTime;
+
     public EnableFastSnapshotRestoresResultSuccessful withEnablingTime(OffsetDateTime enablingTime) {
         this.enablingTime = enablingTime;
         return this;
@@ -47,6 +52,7 @@ public class EnableFastSnapshotRestoresResultSuccessful {
     
     
     public OffsetDateTime optimizingTime;
+
     public EnableFastSnapshotRestoresResultSuccessful withOptimizingTime(OffsetDateTime optimizingTime) {
         this.optimizingTime = optimizingTime;
         return this;
@@ -54,6 +60,7 @@ public class EnableFastSnapshotRestoresResultSuccessful {
     
     
     public String ownerAlias;
+
     public EnableFastSnapshotRestoresResultSuccessful withOwnerAlias(String ownerAlias) {
         this.ownerAlias = ownerAlias;
         return this;
@@ -61,6 +68,7 @@ public class EnableFastSnapshotRestoresResultSuccessful {
     
     
     public String ownerId;
+
     public EnableFastSnapshotRestoresResultSuccessful withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -68,6 +76,7 @@ public class EnableFastSnapshotRestoresResultSuccessful {
     
     
     public String snapshotId;
+
     public EnableFastSnapshotRestoresResultSuccessful withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -75,6 +84,7 @@ public class EnableFastSnapshotRestoresResultSuccessful {
     
     
     public EnableFastSnapshotRestoresResultSuccessfulStateEnum state;
+
     public EnableFastSnapshotRestoresResultSuccessful withState(EnableFastSnapshotRestoresResultSuccessfulStateEnum state) {
         this.state = state;
         return this;
@@ -82,9 +92,11 @@ public class EnableFastSnapshotRestoresResultSuccessful {
     
     
     public String stateTransitionReason;
+
     public EnableFastSnapshotRestoresResultSuccessful withStateTransitionReason(String stateTransitionReason) {
         this.stateTransitionReason = stateTransitionReason;
         return this;
     }
     
+    public EnableFastSnapshotRestoresResultSuccessful(){}
 }

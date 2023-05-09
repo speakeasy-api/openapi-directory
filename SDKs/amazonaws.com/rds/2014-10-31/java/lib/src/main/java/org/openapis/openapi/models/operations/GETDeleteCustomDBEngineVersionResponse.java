@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETDeleteCustomDBEngineVersionResponse {
     
     public byte[] body;
+
     public GETDeleteCustomDBEngineVersionResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETDeleteCustomDBEngineVersionResponse {
     
     
     public String contentType;
+
     public GETDeleteCustomDBEngineVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETDeleteCustomDBEngineVersionResponse {
     
     
     public Integer statusCode;
+
     public GETDeleteCustomDBEngineVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETDeleteCustomDBEngineVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETDeleteCustomDBEngineVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETDeleteCustomDBEngineVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteRotationRequest {
     @JsonProperty("RotationId")
     public String rotationId;
+
     public DeleteRotationRequest withRotationId(String rotationId) {
         this.rotationId = rotationId;
         return this;
     }
     
+    public DeleteRotationRequest(@JsonProperty("RotationId") String rotationId) {
+        this.rotationId = rotationId;
+  }
 }

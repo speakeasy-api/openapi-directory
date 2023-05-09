@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TimeSeriesCondition {
     @JsonProperty("AttributeName")
     public String attributeName;
+
     public TimeSeriesCondition withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -19,6 +20,7 @@ public class TimeSeriesCondition {
     
     @JsonProperty("AttributeValue")
     public String attributeValue;
+
     public TimeSeriesCondition withAttributeValue(String attributeValue) {
         this.attributeValue = attributeValue;
         return this;
@@ -26,9 +28,15 @@ public class TimeSeriesCondition {
     
     @JsonProperty("Condition")
     public ConditionEnum condition;
+
     public TimeSeriesCondition withCondition(ConditionEnum condition) {
         this.condition = condition;
         return this;
     }
     
+    public TimeSeriesCondition(@JsonProperty("AttributeName") String attributeName, @JsonProperty("AttributeValue") String attributeValue, @JsonProperty("Condition") ConditionEnum condition) {
+        this.attributeName = attributeName;
+        this.attributeValue = attributeValue;
+        this.condition = condition;
+  }
 }

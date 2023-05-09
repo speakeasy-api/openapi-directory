@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddTierRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TierRequest tierRequest;
+
     public AddTierRequest withTierRequest(org.openapis.openapi.models.shared.TierRequest tierRequest) {
         this.tierRequest = tierRequest;
         return this;
@@ -19,9 +21,14 @@ public class AddTierRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public AddTierRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public AddTierRequest(@JsonProperty("TierRequest") org.openapis.openapi.models.shared.TierRequest tierRequest, @JsonProperty("id") String id) {
+        this.tierRequest = tierRequest;
+        this.id = id;
+  }
 }

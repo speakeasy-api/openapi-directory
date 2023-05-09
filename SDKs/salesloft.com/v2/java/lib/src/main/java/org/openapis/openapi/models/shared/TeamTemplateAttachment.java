@@ -12,6 +12,7 @@ public class TeamTemplateAttachment {
      */
     
     public Long attachmentFileSize;
+
     public TeamTemplateAttachment withAttachmentFileSize(Long attachmentFileSize) {
         this.attachmentFileSize = attachmentFileSize;
         return this;
@@ -22,6 +23,7 @@ public class TeamTemplateAttachment {
      */
     
     public Long attachmentId;
+
     public TeamTemplateAttachment withAttachmentId(Long attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -32,6 +34,7 @@ public class TeamTemplateAttachment {
      */
     
     public String downloadUrl;
+
     public TeamTemplateAttachment withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -42,6 +45,7 @@ public class TeamTemplateAttachment {
      */
     
     public Long id;
+
     public TeamTemplateAttachment withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class TeamTemplateAttachment {
      */
     
     public String name;
+
     public TeamTemplateAttachment withName(String name) {
         this.name = name;
         return this;
@@ -59,9 +64,11 @@ public class TeamTemplateAttachment {
     
     
     public EmbeddedResource teamTemplate;
+
     public TeamTemplateAttachment withTeamTemplate(EmbeddedResource teamTemplate) {
         this.teamTemplate = teamTemplate;
         return this;
     }
     
+    public TeamTemplateAttachment(){}
 }

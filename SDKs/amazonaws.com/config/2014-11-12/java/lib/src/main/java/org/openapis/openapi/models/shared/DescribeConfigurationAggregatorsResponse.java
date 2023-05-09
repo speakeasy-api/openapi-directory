@@ -15,6 +15,7 @@ public class DescribeConfigurationAggregatorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationAggregators")
     public ConfigurationAggregator[] configurationAggregators;
+
     public DescribeConfigurationAggregatorsResponse withConfigurationAggregators(ConfigurationAggregator[] configurationAggregators) {
         this.configurationAggregators = configurationAggregators;
         return this;
@@ -23,9 +24,11 @@ public class DescribeConfigurationAggregatorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeConfigurationAggregatorsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeConfigurationAggregatorsResponse(){}
 }

@@ -12,9 +12,13 @@ public class BatchWriteRequestBody {
      */
     @JsonProperty("Operations")
     public org.openapis.openapi.models.shared.BatchWriteOperation[] operations;
+
     public BatchWriteRequestBody withOperations(org.openapis.openapi.models.shared.BatchWriteOperation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public BatchWriteRequestBody(@JsonProperty("Operations") org.openapis.openapi.models.shared.BatchWriteOperation[] operations) {
+        this.operations = operations;
+  }
 }

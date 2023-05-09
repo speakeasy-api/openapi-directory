@@ -15,6 +15,7 @@ public class MeshSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("egressFilter")
     public EgressFilter egressFilter;
+
     public MeshSpec withEgressFilter(EgressFilter egressFilter) {
         this.egressFilter = egressFilter;
         return this;
@@ -26,9 +27,11 @@ public class MeshSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceDiscovery")
     public MeshServiceDiscovery serviceDiscovery;
+
     public MeshSpec withServiceDiscovery(MeshServiceDiscovery serviceDiscovery) {
         this.serviceDiscovery = serviceDiscovery;
         return this;
     }
     
+    public MeshSpec(){}
 }

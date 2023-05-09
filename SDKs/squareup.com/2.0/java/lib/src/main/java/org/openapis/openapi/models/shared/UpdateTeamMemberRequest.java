@@ -18,9 +18,11 @@ public class UpdateTeamMemberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_member")
     public TeamMember teamMember;
+
     public UpdateTeamMemberRequest withTeamMember(TeamMember teamMember) {
         this.teamMember = teamMember;
         return this;
     }
     
+    public UpdateTeamMemberRequest(){}
 }

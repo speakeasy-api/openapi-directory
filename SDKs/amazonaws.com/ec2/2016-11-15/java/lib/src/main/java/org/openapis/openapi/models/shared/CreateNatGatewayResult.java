@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNatGatewayResult {
     
     public String clientToken;
+
     public CreateNatGatewayResult withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,9 +20,11 @@ public class CreateNatGatewayResult {
     
     
     public CreateNatGatewayResultNatGateway natGateway;
+
     public CreateNatGatewayResult withNatGateway(CreateNatGatewayResultNatGateway natGateway) {
         this.natGateway = natGateway;
         return this;
     }
     
+    public CreateNatGatewayResult(){}
 }

@@ -24,6 +24,7 @@ public class Episode {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("beginAirDate")
     public OffsetDateTime beginAirDate;
+
     public Episode withBeginAirDate(OffsetDateTime beginAirDate) {
         this.beginAirDate = beginAirDate;
         return this;
@@ -37,6 +38,7 @@ public class Episode {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("beginTransmissionDate")
     public OffsetDateTime beginTransmissionDate;
+
     public Episode withBeginTransmissionDate(OffsetDateTime beginTransmissionDate) {
         this.beginTransmissionDate = beginTransmissionDate;
         return this;
@@ -50,6 +52,7 @@ public class Episode {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDate")
     public OffsetDateTime createdDate;
+
     public Episode withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -61,6 +64,7 @@ public class Episode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public Long customerId;
+
     public Episode withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
@@ -73,6 +77,7 @@ public class Episode {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endAirDate")
     public OffsetDateTime endAirDate;
+
     public Episode withEndAirDate(OffsetDateTime endAirDate) {
         this.endAirDate = endAirDate;
         return this;
@@ -86,6 +91,7 @@ public class Episode {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTransmissionDate")
     public OffsetDateTime endTransmissionDate;
+
     public Episode withEndTransmissionDate(OffsetDateTime endTransmissionDate) {
         this.endTransmissionDate = endTransmissionDate;
         return this;
@@ -97,6 +103,7 @@ public class Episode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Episode withId(Long id) {
         this.id = id;
         return this;
@@ -110,6 +117,7 @@ public class Episode {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public Episode withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -120,6 +128,7 @@ public class Episode {
      */
     @JsonProperty("programId")
     public Long programId;
+
     public Episode withProgramId(Long programId) {
         this.programId = programId;
         return this;
@@ -130,9 +139,16 @@ public class Episode {
      */
     @JsonProperty("title")
     public String title;
+
     public Episode withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Episode(@JsonProperty("beginAirDate") OffsetDateTime beginAirDate, @JsonProperty("endAirDate") OffsetDateTime endAirDate, @JsonProperty("programId") Long programId, @JsonProperty("title") String title) {
+        this.beginAirDate = beginAirDate;
+        this.endAirDate = endAirDate;
+        this.programId = programId;
+        this.title = title;
+  }
 }

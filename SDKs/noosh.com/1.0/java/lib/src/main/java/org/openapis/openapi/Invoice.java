@@ -50,7 +50,7 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInvoiceResponse res = new org.openapis.openapi.models.operations.GetInvoiceResponse() {{
+        org.openapis.openapi.models.operations.GetInvoiceResponse res = new org.openapis.openapi.models.operations.GetInvoiceResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -68,8 +68,6 @@ public class Invoice {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -169,7 +167,7 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInvoiceFilesResponse res = new org.openapis.openapi.models.operations.GetInvoiceFilesResponse() {{
+        org.openapis.openapi.models.operations.GetInvoiceFilesResponse res = new org.openapis.openapi.models.operations.GetInvoiceFilesResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -187,8 +185,6 @@ public class Invoice {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -288,7 +284,7 @@ public class Invoice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInvoicesResponse res = new org.openapis.openapi.models.operations.GetInvoicesResponse() {{
+        org.openapis.openapi.models.operations.GetInvoicesResponse res = new org.openapis.openapi.models.operations.GetInvoicesResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -306,8 +302,6 @@ public class Invoice {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

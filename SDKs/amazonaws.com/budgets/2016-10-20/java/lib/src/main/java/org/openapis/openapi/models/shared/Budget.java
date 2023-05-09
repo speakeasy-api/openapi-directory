@@ -20,6 +20,7 @@ public class Budget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoAdjustData")
     public AutoAdjustData autoAdjustData;
+
     public Budget withAutoAdjustData(AutoAdjustData autoAdjustData) {
         this.autoAdjustData = autoAdjustData;
         return this;
@@ -28,6 +29,7 @@ public class Budget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BudgetLimit")
     public Spend budgetLimit;
+
     public Budget withBudgetLimit(Spend budgetLimit) {
         this.budgetLimit = budgetLimit;
         return this;
@@ -35,6 +37,7 @@ public class Budget {
     
     @JsonProperty("BudgetName")
     public String budgetName;
+
     public Budget withBudgetName(String budgetName) {
         this.budgetName = budgetName;
         return this;
@@ -42,6 +45,7 @@ public class Budget {
     
     @JsonProperty("BudgetType")
     public BudgetTypeEnum budgetType;
+
     public Budget withBudgetType(BudgetTypeEnum budgetType) {
         this.budgetType = budgetType;
         return this;
@@ -50,6 +54,7 @@ public class Budget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CalculatedSpend")
     public CalculatedSpend calculatedSpend;
+
     public Budget withCalculatedSpend(CalculatedSpend calculatedSpend) {
         this.calculatedSpend = calculatedSpend;
         return this;
@@ -58,6 +63,7 @@ public class Budget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CostFilters")
     public java.util.Map<String, String[]> costFilters;
+
     public Budget withCostFilters(java.util.Map<String, String[]> costFilters) {
         this.costFilters = costFilters;
         return this;
@@ -66,6 +72,7 @@ public class Budget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CostTypes")
     public CostTypes costTypes;
+
     public Budget withCostTypes(CostTypes costTypes) {
         this.costTypes = costTypes;
         return this;
@@ -76,6 +83,7 @@ public class Budget {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public Budget withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -84,6 +92,7 @@ public class Budget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlannedBudgetLimits")
     public java.util.Map<String, Spend> plannedBudgetLimits;
+
     public Budget withPlannedBudgetLimits(java.util.Map<String, Spend> plannedBudgetLimits) {
         this.plannedBudgetLimits = plannedBudgetLimits;
         return this;
@@ -92,6 +101,7 @@ public class Budget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimePeriod")
     public TimePeriod timePeriod;
+
     public Budget withTimePeriod(TimePeriod timePeriod) {
         this.timePeriod = timePeriod;
         return this;
@@ -99,9 +109,15 @@ public class Budget {
     
     @JsonProperty("TimeUnit")
     public TimeUnitEnum timeUnit;
+
     public Budget withTimeUnit(TimeUnitEnum timeUnit) {
         this.timeUnit = timeUnit;
         return this;
     }
     
+    public Budget(@JsonProperty("BudgetName") String budgetName, @JsonProperty("BudgetType") BudgetTypeEnum budgetType, @JsonProperty("TimeUnit") TimeUnitEnum timeUnit) {
+        this.budgetName = budgetName;
+        this.budgetType = budgetType;
+        this.timeUnit = timeUnit;
+  }
 }

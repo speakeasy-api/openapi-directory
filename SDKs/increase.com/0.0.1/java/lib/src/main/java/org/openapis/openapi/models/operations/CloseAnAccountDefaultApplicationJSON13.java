@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CloseAnAccountDefaultApplicationJSON13 {
     @JsonProperty("detail")
     public String detail;
+
     public CloseAnAccountDefaultApplicationJSON13 withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -19,6 +20,7 @@ public class CloseAnAccountDefaultApplicationJSON13 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retry_after")
     public Long retryAfter;
+
     public CloseAnAccountDefaultApplicationJSON13 withRetryAfter(Long retryAfter) {
         this.retryAfter = retryAfter;
         return this;
@@ -26,6 +28,7 @@ public class CloseAnAccountDefaultApplicationJSON13 {
     
     @JsonProperty("status")
     public CloseAnAccountDefaultApplicationJSON13StatusEnum status;
+
     public CloseAnAccountDefaultApplicationJSON13 withStatus(CloseAnAccountDefaultApplicationJSON13StatusEnum status) {
         this.status = status;
         return this;
@@ -33,6 +36,7 @@ public class CloseAnAccountDefaultApplicationJSON13 {
     
     @JsonProperty("title")
     public String title;
+
     public CloseAnAccountDefaultApplicationJSON13 withTitle(String title) {
         this.title = title;
         return this;
@@ -40,9 +44,16 @@ public class CloseAnAccountDefaultApplicationJSON13 {
     
     @JsonProperty("type")
     public CloseAnAccountDefaultApplicationJSON13TypeEnum type;
+
     public CloseAnAccountDefaultApplicationJSON13 withType(CloseAnAccountDefaultApplicationJSON13TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CloseAnAccountDefaultApplicationJSON13(@JsonProperty("detail") String detail, @JsonProperty("status") CloseAnAccountDefaultApplicationJSON13StatusEnum status, @JsonProperty("title") String title, @JsonProperty("type") CloseAnAccountDefaultApplicationJSON13TypeEnum type) {
+        this.detail = detail;
+        this.status = status;
+        this.title = title;
+        this.type = type;
+  }
 }

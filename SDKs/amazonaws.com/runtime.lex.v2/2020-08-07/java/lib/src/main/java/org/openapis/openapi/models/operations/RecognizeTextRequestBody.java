@@ -15,6 +15,7 @@ public class RecognizeTextRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestAttributes")
     public java.util.Map<String, String> requestAttributes;
+
     public RecognizeTextRequestBody withRequestAttributes(java.util.Map<String, String> requestAttributes) {
         this.requestAttributes = requestAttributes;
         return this;
@@ -26,6 +27,7 @@ public class RecognizeTextRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionState")
     public RecognizeTextRequestBodySessionState sessionState;
+
     public RecognizeTextRequestBody withSessionState(RecognizeTextRequestBodySessionState sessionState) {
         this.sessionState = sessionState;
         return this;
@@ -36,9 +38,13 @@ public class RecognizeTextRequestBody {
      */
     @JsonProperty("text")
     public String text;
+
     public RecognizeTextRequestBody withText(String text) {
         this.text = text;
         return this;
     }
     
+    public RecognizeTextRequestBody(@JsonProperty("text") String text) {
+        this.text = text;
+  }
 }

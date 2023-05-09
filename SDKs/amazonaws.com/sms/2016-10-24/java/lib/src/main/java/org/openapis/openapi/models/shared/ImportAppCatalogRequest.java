@@ -12,9 +12,11 @@ public class ImportAppCatalogRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleName")
     public String roleName;
+
     public ImportAppCatalogRequest withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
     }
     
+    public ImportAppCatalogRequest(){}
 }

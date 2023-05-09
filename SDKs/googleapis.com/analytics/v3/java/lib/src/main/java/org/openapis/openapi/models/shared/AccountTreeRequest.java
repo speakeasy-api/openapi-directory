@@ -15,6 +15,7 @@ public class AccountTreeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountName")
     public String accountName;
+
     public AccountTreeRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -26,6 +27,7 @@ public class AccountTreeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccountTreeRequest withKind(String kind) {
         this.kind = kind;
         return this;
@@ -34,6 +36,7 @@ public class AccountTreeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileName")
     public String profileName;
+
     public AccountTreeRequest withProfileName(String profileName) {
         this.profileName = profileName;
         return this;
@@ -42,6 +45,7 @@ public class AccountTreeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public AccountTreeRequest withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -50,6 +54,7 @@ public class AccountTreeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webpropertyName")
     public String webpropertyName;
+
     public AccountTreeRequest withWebpropertyName(String webpropertyName) {
         this.webpropertyName = webpropertyName;
         return this;
@@ -58,9 +63,11 @@ public class AccountTreeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("websiteUrl")
     public String websiteUrl;
+
     public AccountTreeRequest withWebsiteUrl(String websiteUrl) {
         this.websiteUrl = websiteUrl;
         return this;
     }
     
+    public AccountTreeRequest(){}
 }

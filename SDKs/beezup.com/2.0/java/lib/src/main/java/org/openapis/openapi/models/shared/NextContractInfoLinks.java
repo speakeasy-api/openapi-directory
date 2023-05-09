@@ -12,9 +12,11 @@ public class NextContractInfoLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delete")
     public LinksDeleteNextContractLink delete;
+
     public NextContractInfoLinks withDelete(LinksDeleteNextContractLink delete) {
         this.delete = delete;
         return this;
     }
     
+    public NextContractInfoLinks(){}
 }

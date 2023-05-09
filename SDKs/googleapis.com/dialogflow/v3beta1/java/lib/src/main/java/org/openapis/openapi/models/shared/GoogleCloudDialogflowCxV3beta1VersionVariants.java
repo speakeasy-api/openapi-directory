@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowCxV3beta1VersionVariants {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variants")
     public GoogleCloudDialogflowCxV3beta1VersionVariantsVariant[] variants;
+
     public GoogleCloudDialogflowCxV3beta1VersionVariants withVariants(GoogleCloudDialogflowCxV3beta1VersionVariantsVariant[] variants) {
         this.variants = variants;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1VersionVariants(){}
 }

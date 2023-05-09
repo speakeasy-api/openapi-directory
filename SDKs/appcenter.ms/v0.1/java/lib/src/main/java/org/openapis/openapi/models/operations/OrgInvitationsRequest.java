@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgInvitationsRequest {
@@ -12,6 +13,7 @@ public class OrgInvitationsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public OrgInvitationsRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class OrgInvitationsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=email")
     public String email;
+
     public OrgInvitationsRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -32,9 +35,14 @@ public class OrgInvitationsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
     public String orgName;
+
     public OrgInvitationsRequest withOrgName(String orgName) {
         this.orgName = orgName;
         return this;
     }
     
+    public OrgInvitationsRequest(@JsonProperty("email") String email, @JsonProperty("org_name") String orgName) {
+        this.email = email;
+        this.orgName = orgName;
+  }
 }

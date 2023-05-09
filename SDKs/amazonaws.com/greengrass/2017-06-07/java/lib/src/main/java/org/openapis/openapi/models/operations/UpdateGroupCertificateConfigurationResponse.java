@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateGroupCertificateConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateGroupCertificateConfigurationResponse {
      */
     
     public Object badRequestException;
+
     public UpdateGroupCertificateConfigurationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateGroupCertificateConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateGroupCertificateConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateGroupCertificateConfigurationResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateGroupCertificateConfigurationResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateGroupCertificateConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateGroupCertificateConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateGroupCertificateConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateGroupCertificateConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class UpdateGroupCertificateConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateGroupCertificateConfigurationResponse updateGroupCertificateConfigurationResponse;
+
     public UpdateGroupCertificateConfigurationResponse withUpdateGroupCertificateConfigurationResponse(org.openapis.openapi.models.shared.UpdateGroupCertificateConfigurationResponse updateGroupCertificateConfigurationResponse) {
         this.updateGroupCertificateConfigurationResponse = updateGroupCertificateConfigurationResponse;
         return this;
     }
     
+    public UpdateGroupCertificateConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

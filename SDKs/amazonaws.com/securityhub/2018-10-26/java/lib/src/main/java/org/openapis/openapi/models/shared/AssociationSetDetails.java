@@ -15,6 +15,7 @@ public class AssociationSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationState")
     public AssociationStateDetails associationState;
+
     public AssociationSetDetails withAssociationState(AssociationStateDetails associationState) {
         this.associationState = associationState;
         return this;
@@ -23,6 +24,7 @@ public class AssociationSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatewayId")
     public String gatewayId;
+
     public AssociationSetDetails withGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -31,6 +33,7 @@ public class AssociationSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Main")
     public Boolean main;
+
     public AssociationSetDetails withMain(Boolean main) {
         this.main = main;
         return this;
@@ -39,6 +42,7 @@ public class AssociationSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RouteTableAssociationId")
     public String routeTableAssociationId;
+
     public AssociationSetDetails withRouteTableAssociationId(String routeTableAssociationId) {
         this.routeTableAssociationId = routeTableAssociationId;
         return this;
@@ -47,6 +51,7 @@ public class AssociationSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RouteTableId")
     public String routeTableId;
+
     public AssociationSetDetails withRouteTableId(String routeTableId) {
         this.routeTableId = routeTableId;
         return this;
@@ -55,9 +60,11 @@ public class AssociationSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public AssociationSetDetails withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public AssociationSetDetails(){}
 }

@@ -18,6 +18,7 @@ public class ContentMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public ContentMatcher withContent(String content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class ContentMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonPathMatcher")
     public JsonPathMatcher jsonPathMatcher;
+
     public ContentMatcher withJsonPathMatcher(JsonPathMatcher jsonPathMatcher) {
         this.jsonPathMatcher = jsonPathMatcher;
         return this;
@@ -40,9 +42,11 @@ public class ContentMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matcher")
     public ContentMatcherMatcherEnum matcher;
+
     public ContentMatcher withMatcher(ContentMatcherMatcherEnum matcher) {
         this.matcher = matcher;
         return this;
     }
     
+    public ContentMatcher(){}
 }

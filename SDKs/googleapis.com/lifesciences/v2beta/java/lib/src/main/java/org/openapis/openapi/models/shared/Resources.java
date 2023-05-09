@@ -18,6 +18,7 @@ public class Resources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regions")
     public String[] regions;
+
     public Resources withRegions(String[] regions) {
         this.regions = regions;
         return this;
@@ -29,6 +30,7 @@ public class Resources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualMachine")
     public VirtualMachine virtualMachine;
+
     public Resources withVirtualMachine(VirtualMachine virtualMachine) {
         this.virtualMachine = virtualMachine;
         return this;
@@ -40,9 +42,11 @@ public class Resources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zones")
     public String[] zones;
+
     public Resources withZones(String[] zones) {
         this.zones = zones;
         return this;
     }
     
+    public Resources(){}
 }

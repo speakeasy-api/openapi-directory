@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllinvestorAccountsRequest {
@@ -12,6 +13,7 @@ public class GetAllinvestorAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account_id")
     public String accountId;
+
     public GetAllinvestorAccountsRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class GetAllinvestorAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=financial_product_id")
     public String financialProductId;
+
     public GetAllinvestorAccountsRequest withFinancialProductId(String financialProductId) {
         this.financialProductId = financialProductId;
         return this;
@@ -32,6 +35,7 @@ public class GetAllinvestorAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=investor_id")
     public String investorId;
+
     public GetAllinvestorAccountsRequest withInvestorId(String investorId) {
         this.investorId = investorId;
         return this;
@@ -42,6 +46,7 @@ public class GetAllinvestorAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_number")
     public String pageNumber;
+
     public GetAllinvestorAccountsRequest withPageNumber(String pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -52,6 +57,7 @@ public class GetAllinvestorAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public String pageSize;
+
     public GetAllinvestorAccountsRequest withPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -62,6 +68,7 @@ public class GetAllinvestorAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public GetAllinvestorAccountsRequest withStatus(String status) {
         this.status = status;
         return this;
@@ -72,9 +79,13 @@ public class GetAllinvestorAccountsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public GetAllinvestorAccountsRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public GetAllinvestorAccountsRequest(@JsonProperty("x-api-key") String xApiKey) {
+        this.xApiKey = xApiKey;
+  }
 }

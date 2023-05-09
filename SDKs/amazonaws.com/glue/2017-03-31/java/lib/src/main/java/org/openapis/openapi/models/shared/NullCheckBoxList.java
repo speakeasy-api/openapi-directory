@@ -15,6 +15,7 @@ public class NullCheckBoxList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsEmpty")
     public Boolean isEmpty;
+
     public NullCheckBoxList withIsEmpty(Boolean isEmpty) {
         this.isEmpty = isEmpty;
         return this;
@@ -23,6 +24,7 @@ public class NullCheckBoxList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsNegOne")
     public Boolean isNegOne;
+
     public NullCheckBoxList withIsNegOne(Boolean isNegOne) {
         this.isNegOne = isNegOne;
         return this;
@@ -31,9 +33,11 @@ public class NullCheckBoxList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsNullString")
     public Boolean isNullString;
+
     public NullCheckBoxList withIsNullString(Boolean isNullString) {
         this.isNullString = isNullString;
         return this;
     }
     
+    public NullCheckBoxList(){}
 }

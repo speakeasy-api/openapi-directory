@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSpecJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.V1X1SpecUpdatingPO v1X1SpecUpdatingPO;
+
     public PutSpecJsonRequest withV1X1SpecUpdatingPO(org.openapis.openapi.models.shared.V1X1SpecUpdatingPO v1X1SpecUpdatingPO) {
         this.v1X1SpecUpdatingPO = v1X1SpecUpdatingPO;
         return this;
@@ -16,6 +18,7 @@ public class PutSpecJsonRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public String projectId;
+
     public PutSpecJsonRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -23,6 +26,7 @@ public class PutSpecJsonRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spec_id")
     public String specId;
+
     public PutSpecJsonRequest withSpecId(String specId) {
         this.specId = specId;
         return this;
@@ -30,9 +34,15 @@ public class PutSpecJsonRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
     public String workgroupId;
+
     public PutSpecJsonRequest withWorkgroupId(String workgroupId) {
         this.workgroupId = workgroupId;
         return this;
     }
     
+    public PutSpecJsonRequest(@JsonProperty("project_id") String projectId, @JsonProperty("spec_id") String specId, @JsonProperty("workgroup_id") String workgroupId) {
+        this.projectId = projectId;
+        this.specId = specId;
+        this.workgroupId = workgroupId;
+  }
 }

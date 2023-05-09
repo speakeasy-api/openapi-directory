@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClientApiNewJsonResponse {
     
     public byte[] body;
+
     public ClientApiNewJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -19,6 +21,7 @@ public class ClientApiNewJsonResponse {
      */
     
     public Integer clientApiNewJSON200ApplicationJSONInt32Integer;
+
     public ClientApiNewJsonResponse withClientApiNewJSON200ApplicationJSONInt32Integer(Integer clientApiNewJSON200ApplicationJSONInt32Integer) {
         this.clientApiNewJSON200ApplicationJSONInt32Integer = clientApiNewJSON200ApplicationJSONInt32Integer;
         return this;
@@ -29,6 +32,7 @@ public class ClientApiNewJsonResponse {
      */
     
     public Integer clientApiNewJSON200TextJSONInt32Integer;
+
     public ClientApiNewJsonResponse withClientApiNewJSON200TextJSONInt32Integer(Integer clientApiNewJSON200TextJSONInt32Integer) {
         this.clientApiNewJSON200TextJSONInt32Integer = clientApiNewJSON200TextJSONInt32Integer;
         return this;
@@ -36,6 +40,7 @@ public class ClientApiNewJsonResponse {
     
     
     public String contentType;
+
     public ClientApiNewJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -43,6 +48,7 @@ public class ClientApiNewJsonResponse {
     
     
     public Integer statusCode;
+
     public ClientApiNewJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class ClientApiNewJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClientApiNewJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ClientApiNewJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

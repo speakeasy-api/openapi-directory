@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DirectionsForRouteRequest {
@@ -12,6 +13,7 @@ public class DirectionsForRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
     public String devid;
+
     public DirectionsForRouteRequest withDevid(String devid) {
         this.devid = devid;
         return this;
@@ -22,6 +24,7 @@ public class DirectionsForRouteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_id")
     public Integer routeId;
+
     public DirectionsForRouteRequest withRouteId(Integer routeId) {
         this.routeId = routeId;
         return this;
@@ -32,6 +35,7 @@ public class DirectionsForRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
     public String signature;
+
     public DirectionsForRouteRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -42,9 +46,13 @@ public class DirectionsForRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public DirectionsForRouteRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public DirectionsForRouteRequest(@JsonProperty("route_id") Integer routeId) {
+        this.routeId = routeId;
+  }
 }

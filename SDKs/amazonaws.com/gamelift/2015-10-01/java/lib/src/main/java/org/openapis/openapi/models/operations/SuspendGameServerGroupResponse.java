@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SuspendGameServerGroupResponse {
     
     public String contentType;
+
     public SuspendGameServerGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SuspendGameServerGroupResponse {
      */
     
     public Object internalServiceException;
+
     public SuspendGameServerGroupResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class SuspendGameServerGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public SuspendGameServerGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class SuspendGameServerGroupResponse {
      */
     
     public Object notFoundException;
+
     public SuspendGameServerGroupResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class SuspendGameServerGroupResponse {
     
     
     public Integer statusCode;
+
     public SuspendGameServerGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class SuspendGameServerGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SuspendGameServerGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class SuspendGameServerGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.SuspendGameServerGroupOutput suspendGameServerGroupOutput;
+
     public SuspendGameServerGroupResponse withSuspendGameServerGroupOutput(org.openapis.openapi.models.shared.SuspendGameServerGroupOutput suspendGameServerGroupOutput) {
         this.suspendGameServerGroupOutput = suspendGameServerGroupOutput;
         return this;
@@ -73,9 +81,14 @@ public class SuspendGameServerGroupResponse {
      */
     
     public Object unauthorizedException;
+
     public SuspendGameServerGroupResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public SuspendGameServerGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

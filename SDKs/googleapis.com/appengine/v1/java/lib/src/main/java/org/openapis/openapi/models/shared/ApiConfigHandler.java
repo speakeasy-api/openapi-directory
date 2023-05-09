@@ -18,6 +18,7 @@ public class ApiConfigHandler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authFailAction")
     public ApiConfigHandlerAuthFailActionEnum authFailAction;
+
     public ApiConfigHandler withAuthFailAction(ApiConfigHandlerAuthFailActionEnum authFailAction) {
         this.authFailAction = authFailAction;
         return this;
@@ -29,6 +30,7 @@ public class ApiConfigHandler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("login")
     public ApiConfigHandlerLoginEnum login;
+
     public ApiConfigHandler withLogin(ApiConfigHandlerLoginEnum login) {
         this.login = login;
         return this;
@@ -40,6 +42,7 @@ public class ApiConfigHandler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public ApiConfigHandler withScript(String script) {
         this.script = script;
         return this;
@@ -51,6 +54,7 @@ public class ApiConfigHandler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityLevel")
     public ApiConfigHandlerSecurityLevelEnum securityLevel;
+
     public ApiConfigHandler withSecurityLevel(ApiConfigHandlerSecurityLevelEnum securityLevel) {
         this.securityLevel = securityLevel;
         return this;
@@ -62,9 +66,11 @@ public class ApiConfigHandler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ApiConfigHandler withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ApiConfigHandler(){}
 }

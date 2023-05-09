@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatalineageProjectsLocationsProcessesRunsLineageEventsGetResponse {
     
     public String contentType;
+
     public DatalineageProjectsLocationsProcessesRunsLineageEventsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatalineageProjectsLocationsProcessesRunsLineageEventsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDatacatalogLineageV1LineageEvent googleCloudDatacatalogLineageV1LineageEvent;
+
     public DatalineageProjectsLocationsProcessesRunsLineageEventsGetResponse withGoogleCloudDatacatalogLineageV1LineageEvent(org.openapis.openapi.models.shared.GoogleCloudDatacatalogLineageV1LineageEvent googleCloudDatacatalogLineageV1LineageEvent) {
         this.googleCloudDatacatalogLineageV1LineageEvent = googleCloudDatacatalogLineageV1LineageEvent;
         return this;
@@ -26,6 +29,7 @@ public class DatalineageProjectsLocationsProcessesRunsLineageEventsGetResponse {
     
     
     public Integer statusCode;
+
     public DatalineageProjectsLocationsProcessesRunsLineageEventsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatalineageProjectsLocationsProcessesRunsLineageEventsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatalineageProjectsLocationsProcessesRunsLineageEventsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatalineageProjectsLocationsProcessesRunsLineageEventsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

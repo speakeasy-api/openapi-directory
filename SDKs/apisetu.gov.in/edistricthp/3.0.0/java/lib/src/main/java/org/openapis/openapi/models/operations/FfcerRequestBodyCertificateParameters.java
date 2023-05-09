@@ -12,9 +12,13 @@ public class FfcerRequestBodyCertificateParameters {
      */
     @JsonProperty("UDF1")
     public String udf1;
+
     public FfcerRequestBodyCertificateParameters withUdf1(String udf1) {
         this.udf1 = udf1;
         return this;
     }
     
+    public FfcerRequestBodyCertificateParameters(@JsonProperty("UDF1") String udf1) {
+        this.udf1 = udf1;
+  }
 }

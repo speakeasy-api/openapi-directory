@@ -15,9 +15,11 @@ public class OneGetResponses200ContentApplication1jsonSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public OneGetResponses200ContentApplication1jsonSchemaStatusEnum status;
+
     public OneGetResponses200ContentApplication1jsonSchema withStatus(OneGetResponses200ContentApplication1jsonSchemaStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public OneGetResponses200ContentApplication1jsonSchema(){}
 }

@@ -23,6 +23,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("anchor")
     public String anchor;
+
     public Comment withAnchor(String anchor) {
         this.anchor = anchor;
         return this;
@@ -34,6 +35,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public User author;
+
     public Comment withAuthor(User author) {
         this.author = author;
         return this;
@@ -45,6 +47,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public Comment withContent(String content) {
         this.content = content;
         return this;
@@ -58,6 +61,7 @@ public class Comment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdTime")
     public OffsetDateTime createdTime;
+
     public Comment withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -69,6 +73,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public Comment withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -80,6 +85,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("htmlContent")
     public String htmlContent;
+
     public Comment withHtmlContent(String htmlContent) {
         this.htmlContent = htmlContent;
         return this;
@@ -91,6 +97,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Comment withId(String id) {
         this.id = id;
         return this;
@@ -102,6 +109,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Comment withKind(String kind) {
         this.kind = kind;
         return this;
@@ -115,6 +123,7 @@ public class Comment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedTime")
     public OffsetDateTime modifiedTime;
+
     public Comment withModifiedTime(OffsetDateTime modifiedTime) {
         this.modifiedTime = modifiedTime;
         return this;
@@ -126,6 +135,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quotedFileContent")
     public CommentQuotedFileContent quotedFileContent;
+
     public Comment withQuotedFileContent(CommentQuotedFileContent quotedFileContent) {
         this.quotedFileContent = quotedFileContent;
         return this;
@@ -137,6 +147,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replies")
     public Reply[] replies;
+
     public Comment withReplies(Reply[] replies) {
         this.replies = replies;
         return this;
@@ -148,9 +159,11 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolved")
     public Boolean resolved;
+
     public Comment withResolved(Boolean resolved) {
         this.resolved = resolved;
         return this;
     }
     
+    public Comment(){}
 }

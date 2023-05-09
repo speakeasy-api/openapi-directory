@@ -18,6 +18,7 @@ public class ManagedConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationVariables")
     public java.util.Map<String, String> configurationVariables;
+
     public ManagedConfigurationTemplate withConfigurationVariables(java.util.Map<String, String> configurationVariables) {
         this.configurationVariables = configurationVariables;
         return this;
@@ -29,9 +30,11 @@ public class ManagedConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateId")
     public String templateId;
+
     public ManagedConfigurationTemplate withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public ManagedConfigurationTemplate(){}
 }

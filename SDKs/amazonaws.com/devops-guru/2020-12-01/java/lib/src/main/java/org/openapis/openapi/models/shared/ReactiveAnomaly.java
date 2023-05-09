@@ -15,6 +15,7 @@ public class ReactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyReportedTimeRange")
     public AnomalyReportedTimeRange anomalyReportedTimeRange;
+
     public ReactiveAnomaly withAnomalyReportedTimeRange(AnomalyReportedTimeRange anomalyReportedTimeRange) {
         this.anomalyReportedTimeRange = anomalyReportedTimeRange;
         return this;
@@ -23,6 +24,7 @@ public class ReactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyResources")
     public AnomalyResource[] anomalyResources;
+
     public ReactiveAnomaly withAnomalyResources(AnomalyResource[] anomalyResources) {
         this.anomalyResources = anomalyResources;
         return this;
@@ -34,6 +36,7 @@ public class ReactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyTimeRange")
     public AnomalyTimeRange anomalyTimeRange;
+
     public ReactiveAnomaly withAnomalyTimeRange(AnomalyTimeRange anomalyTimeRange) {
         this.anomalyTimeRange = anomalyTimeRange;
         return this;
@@ -42,6 +45,7 @@ public class ReactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociatedInsightId")
     public String associatedInsightId;
+
     public ReactiveAnomaly withAssociatedInsightId(String associatedInsightId) {
         this.associatedInsightId = associatedInsightId;
         return this;
@@ -50,6 +54,7 @@ public class ReactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CausalAnomalyId")
     public String causalAnomalyId;
+
     public ReactiveAnomaly withCausalAnomalyId(String causalAnomalyId) {
         this.causalAnomalyId = causalAnomalyId;
         return this;
@@ -58,6 +63,7 @@ public class ReactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ReactiveAnomaly withDescription(String description) {
         this.description = description;
         return this;
@@ -66,6 +72,7 @@ public class ReactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ReactiveAnomaly withId(String id) {
         this.id = id;
         return this;
@@ -74,6 +81,7 @@ public class ReactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ReactiveAnomaly withName(String name) {
         this.name = name;
         return this;
@@ -85,6 +93,7 @@ public class ReactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceCollection")
     public ResourceCollection resourceCollection;
+
     public ReactiveAnomaly withResourceCollection(ResourceCollection resourceCollection) {
         this.resourceCollection = resourceCollection;
         return this;
@@ -93,6 +102,7 @@ public class ReactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Severity")
     public AnomalySeverityEnum severity;
+
     public ReactiveAnomaly withSeverity(AnomalySeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -101,6 +111,7 @@ public class ReactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceDetails")
     public AnomalySourceDetails sourceDetails;
+
     public ReactiveAnomaly withSourceDetails(AnomalySourceDetails sourceDetails) {
         this.sourceDetails = sourceDetails;
         return this;
@@ -109,6 +120,7 @@ public class ReactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AnomalyStatusEnum status;
+
     public ReactiveAnomaly withStatus(AnomalyStatusEnum status) {
         this.status = status;
         return this;
@@ -117,9 +129,11 @@ public class ReactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public AnomalyTypeEnum type;
+
     public ReactiveAnomaly withType(AnomalyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ReactiveAnomaly(){}
 }

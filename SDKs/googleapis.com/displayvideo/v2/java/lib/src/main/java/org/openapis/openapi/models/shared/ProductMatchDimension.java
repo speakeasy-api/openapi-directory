@@ -18,6 +18,7 @@ public class ProductMatchDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customLabel")
     public CustomLabel customLabel;
+
     public ProductMatchDimension withCustomLabel(CustomLabel customLabel) {
         this.customLabel = customLabel;
         return this;
@@ -29,9 +30,11 @@ public class ProductMatchDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productOfferId")
     public String productOfferId;
+
     public ProductMatchDimension withProductOfferId(String productOfferId) {
         this.productOfferId = productOfferId;
         return this;
     }
     
+    public ProductMatchDimension(){}
 }

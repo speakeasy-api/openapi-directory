@@ -18,9 +18,11 @@ public class VideoMonetizationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access")
     public AccessPolicy access;
+
     public VideoMonetizationDetails withAccess(AccessPolicy access) {
         this.access = access;
         return this;
     }
     
+    public VideoMonetizationDetails(){}
 }

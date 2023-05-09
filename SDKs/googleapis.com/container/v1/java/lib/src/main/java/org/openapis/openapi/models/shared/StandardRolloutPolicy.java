@@ -18,6 +18,7 @@ public class StandardRolloutPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchNodeCount")
     public Integer batchNodeCount;
+
     public StandardRolloutPolicy withBatchNodeCount(Integer batchNodeCount) {
         this.batchNodeCount = batchNodeCount;
         return this;
@@ -29,6 +30,7 @@ public class StandardRolloutPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchPercentage")
     public Float batchPercentage;
+
     public StandardRolloutPolicy withBatchPercentage(Float batchPercentage) {
         this.batchPercentage = batchPercentage;
         return this;
@@ -40,9 +42,11 @@ public class StandardRolloutPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchSoakDuration")
     public String batchSoakDuration;
+
     public StandardRolloutPolicy withBatchSoakDuration(String batchSoakDuration) {
         this.batchSoakDuration = batchSoakDuration;
         return this;
     }
     
+    public StandardRolloutPolicy(){}
 }

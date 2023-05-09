@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteXssMatchSetRequest {
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public DeleteXssMatchSetRequest withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -19,9 +20,14 @@ public class DeleteXssMatchSetRequest {
     
     @JsonProperty("XssMatchSetId")
     public String xssMatchSetId;
+
     public DeleteXssMatchSetRequest withXssMatchSetId(String xssMatchSetId) {
         this.xssMatchSetId = xssMatchSetId;
         return this;
     }
     
+    public DeleteXssMatchSetRequest(@JsonProperty("ChangeToken") String changeToken, @JsonProperty("XssMatchSetId") String xssMatchSetId) {
+        this.changeToken = changeToken;
+        this.xssMatchSetId = xssMatchSetId;
+  }
 }

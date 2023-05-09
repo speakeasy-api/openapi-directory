@@ -18,6 +18,7 @@ public class ItemAcl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aclInheritanceType")
     public ItemAclAclInheritanceTypeEnum aclInheritanceType;
+
     public ItemAcl withAclInheritanceType(ItemAclAclInheritanceTypeEnum aclInheritanceType) {
         this.aclInheritanceType = aclInheritanceType;
         return this;
@@ -29,6 +30,7 @@ public class ItemAcl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deniedReaders")
     public Principal[] deniedReaders;
+
     public ItemAcl withDeniedReaders(Principal[] deniedReaders) {
         this.deniedReaders = deniedReaders;
         return this;
@@ -40,6 +42,7 @@ public class ItemAcl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inheritAclFrom")
     public String inheritAclFrom;
+
     public ItemAcl withInheritAclFrom(String inheritAclFrom) {
         this.inheritAclFrom = inheritAclFrom;
         return this;
@@ -51,6 +54,7 @@ public class ItemAcl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owners")
     public Principal[] owners;
+
     public ItemAcl withOwners(Principal[] owners) {
         this.owners = owners;
         return this;
@@ -62,9 +66,11 @@ public class ItemAcl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readers")
     public Principal[] readers;
+
     public ItemAcl withReaders(Principal[] readers) {
         this.readers = readers;
         return this;
     }
     
+    public ItemAcl(){}
 }

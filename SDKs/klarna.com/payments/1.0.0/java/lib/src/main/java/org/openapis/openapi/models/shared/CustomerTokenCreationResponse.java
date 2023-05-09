@@ -15,6 +15,7 @@ public class CustomerTokenCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_address")
     public Address billingAddress;
+
     public CustomerTokenCreationResponse withBillingAddress(Address billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -23,6 +24,7 @@ public class CustomerTokenCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer")
     public CustomerReadCreateToken customer;
+
     public CustomerTokenCreationResponse withCustomer(CustomerReadCreateToken customer) {
         this.customer = customer;
         return this;
@@ -34,6 +36,7 @@ public class CustomerTokenCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_method_reference")
     public String paymentMethodReference;
+
     public CustomerTokenCreationResponse withPaymentMethodReference(String paymentMethodReference) {
         this.paymentMethodReference = paymentMethodReference;
         return this;
@@ -45,6 +48,7 @@ public class CustomerTokenCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirect_url")
     public String redirectUrl;
+
     public CustomerTokenCreationResponse withRedirectUrl(String redirectUrl) {
         this.redirectUrl = redirectUrl;
         return this;
@@ -55,9 +59,13 @@ public class CustomerTokenCreationResponse {
      */
     @JsonProperty("token_id")
     public String tokenId;
+
     public CustomerTokenCreationResponse withTokenId(String tokenId) {
         this.tokenId = tokenId;
         return this;
     }
     
+    public CustomerTokenCreationResponse(@JsonProperty("token_id") String tokenId) {
+        this.tokenId = tokenId;
+  }
 }

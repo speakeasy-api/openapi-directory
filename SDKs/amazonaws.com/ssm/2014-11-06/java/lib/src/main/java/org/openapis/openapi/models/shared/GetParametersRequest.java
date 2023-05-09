@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetParametersRequest {
     @JsonProperty("Names")
     public String[] names;
+
     public GetParametersRequest withNames(String[] names) {
         this.names = names;
         return this;
@@ -19,9 +20,13 @@ public class GetParametersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WithDecryption")
     public Boolean withDecryption;
+
     public GetParametersRequest withWithDecryption(Boolean withDecryption) {
         this.withDecryption = withDecryption;
         return this;
     }
     
+    public GetParametersRequest(@JsonProperty("Names") String[] names) {
+        this.names = names;
+  }
 }

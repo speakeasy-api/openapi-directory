@@ -18,6 +18,7 @@ public class V2AndroidApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public V2AndroidApplication withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -29,9 +30,11 @@ public class V2AndroidApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha1Fingerprint")
     public String sha1Fingerprint;
+
     public V2AndroidApplication withSha1Fingerprint(String sha1Fingerprint) {
         this.sha1Fingerprint = sha1Fingerprint;
         return this;
     }
     
+    public V2AndroidApplication(){}
 }

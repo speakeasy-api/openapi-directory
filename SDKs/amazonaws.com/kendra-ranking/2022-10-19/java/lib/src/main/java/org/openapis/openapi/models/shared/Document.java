@@ -15,6 +15,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Body")
     public String body;
+
     public Document withBody(String body) {
         this.body = body;
         return this;
@@ -23,6 +24,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupId")
     public String groupId;
+
     public Document withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -30,6 +32,7 @@ public class Document {
     
     @JsonProperty("Id")
     public String id;
+
     public Document withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +40,7 @@ public class Document {
     
     @JsonProperty("OriginalScore")
     public Float originalScore;
+
     public Document withOriginalScore(Float originalScore) {
         this.originalScore = originalScore;
         return this;
@@ -45,6 +49,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public Document withTitle(String title) {
         this.title = title;
         return this;
@@ -53,6 +58,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TokenizedBody")
     public String[] tokenizedBody;
+
     public Document withTokenizedBody(String[] tokenizedBody) {
         this.tokenizedBody = tokenizedBody;
         return this;
@@ -61,9 +67,14 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TokenizedTitle")
     public String[] tokenizedTitle;
+
     public Document withTokenizedTitle(String[] tokenizedTitle) {
         this.tokenizedTitle = tokenizedTitle;
         return this;
     }
     
+    public Document(@JsonProperty("Id") String id, @JsonProperty("OriginalScore") Float originalScore) {
+        this.id = id;
+        this.originalScore = originalScore;
+  }
 }

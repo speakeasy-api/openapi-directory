@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAutomationV4ActionsAppIdGetPageRequest {
@@ -12,6 +13,7 @@ public class GetAutomationV4ActionsAppIdGetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
     public String after;
+
     public GetAutomationV4ActionsAppIdGetPageRequest withAfter(String after) {
         this.after = after;
         return this;
@@ -19,6 +21,7 @@ public class GetAutomationV4ActionsAppIdGetPageRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public Integer appId;
+
     public GetAutomationV4ActionsAppIdGetPageRequest withAppId(Integer appId) {
         this.appId = appId;
         return this;
@@ -29,6 +32,7 @@ public class GetAutomationV4ActionsAppIdGetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=archived")
     public Boolean archived;
+
     public GetAutomationV4ActionsAppIdGetPageRequest withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -39,9 +43,13 @@ public class GetAutomationV4ActionsAppIdGetPageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetAutomationV4ActionsAppIdGetPageRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
     }
     
+    public GetAutomationV4ActionsAppIdGetPageRequest(@JsonProperty("appId") Integer appId) {
+        this.appId = appId;
+  }
 }

@@ -12,6 +12,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooksIsbns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isbn10")
     public String isbn10;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooksIsbns withIsbn10(String isbn10) {
         this.isbn10 = isbn10;
         return this;
@@ -20,9 +21,11 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooksIsbns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isbn13")
     public String isbn13;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooksIsbns withIsbn13(String isbn13) {
         this.isbn13 = isbn13;
         return this;
     }
     
+    public GETListsDateListJSON200ApplicationJSONResultsBooksIsbns(){}
 }

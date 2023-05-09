@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse {
     
     public String contentType;
+
     public GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRes
     
     
     public Integer statusCode;
+
     public GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRes
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRes
      */
     
     public java.util.Map<String, Object> error;
+
     public GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRes
      */
     
     public java.util.Map<String, Object> repositoryGroupPermission;
+
     public GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse withRepositoryGroupPermission(java.util.Map<String, Object> repositoryGroupPermission) {
         this.repositoryGroupPermission = repositoryGroupPermission;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

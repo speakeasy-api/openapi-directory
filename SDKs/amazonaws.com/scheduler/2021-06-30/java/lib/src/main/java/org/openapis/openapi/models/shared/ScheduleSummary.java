@@ -20,6 +20,7 @@ public class ScheduleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public ScheduleSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class ScheduleSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDate")
     public OffsetDateTime creationDate;
+
     public ScheduleSummary withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -38,6 +40,7 @@ public class ScheduleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupName")
     public String groupName;
+
     public ScheduleSummary withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -48,6 +51,7 @@ public class ScheduleSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationDate")
     public OffsetDateTime lastModificationDate;
+
     public ScheduleSummary withLastModificationDate(OffsetDateTime lastModificationDate) {
         this.lastModificationDate = lastModificationDate;
         return this;
@@ -56,6 +60,7 @@ public class ScheduleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ScheduleSummary withName(String name) {
         this.name = name;
         return this;
@@ -64,6 +69,7 @@ public class ScheduleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public ScheduleStateEnum state;
+
     public ScheduleSummary withState(ScheduleStateEnum state) {
         this.state = state;
         return this;
@@ -72,9 +78,11 @@ public class ScheduleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Target")
     public TargetSummary target;
+
     public ScheduleSummary withTarget(TargetSummary target) {
         this.target = target;
         return this;
     }
     
+    public ScheduleSummary(){}
 }

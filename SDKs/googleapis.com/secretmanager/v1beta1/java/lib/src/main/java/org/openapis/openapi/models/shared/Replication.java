@@ -18,6 +18,7 @@ public class Replication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automatic")
     public java.util.Map<String, Object> automatic;
+
     public Replication withAutomatic(java.util.Map<String, Object> automatic) {
         this.automatic = automatic;
         return this;
@@ -29,9 +30,11 @@ public class Replication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userManaged")
     public UserManaged userManaged;
+
     public Replication withUserManaged(UserManaged userManaged) {
         this.userManaged = userManaged;
         return this;
     }
     
+    public Replication(){}
 }

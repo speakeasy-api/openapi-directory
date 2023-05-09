@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GPSPointDimension {
     @JsonProperty("Coordinates")
     public GPSCoordinates coordinates;
+
     public GPSPointDimension withCoordinates(GPSCoordinates coordinates) {
         this.coordinates = coordinates;
         return this;
@@ -22,9 +23,13 @@ public class GPSPointDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RangeInKilometers")
     public Double rangeInKilometers;
+
     public GPSPointDimension withRangeInKilometers(Double rangeInKilometers) {
         this.rangeInKilometers = rangeInKilometers;
         return this;
     }
     
+    public GPSPointDimension(@JsonProperty("Coordinates") GPSCoordinates coordinates) {
+        this.coordinates = coordinates;
+  }
 }

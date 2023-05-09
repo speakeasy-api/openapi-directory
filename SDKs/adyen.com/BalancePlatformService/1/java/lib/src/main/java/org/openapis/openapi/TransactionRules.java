@@ -53,12 +53,10 @@ public class TransactionRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTransactionRulesTransactionRuleIdResponse res = new org.openapis.openapi.models.operations.DeleteTransactionRulesTransactionRuleIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteTransactionRulesTransactionRuleIdResponse res = new org.openapis.openapi.models.operations.DeleteTransactionRulesTransactionRuleIdResponse(contentType, httpRes.statusCode()) {{
             transactionRule = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,12 +100,10 @@ public class TransactionRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTransactionRulesTransactionRuleIdResponse res = new org.openapis.openapi.models.operations.GetTransactionRulesTransactionRuleIdResponse() {{
+        org.openapis.openapi.models.operations.GetTransactionRulesTransactionRuleIdResponse res = new org.openapis.openapi.models.operations.GetTransactionRulesTransactionRuleIdResponse(contentType, httpRes.statusCode()) {{
             transactionRuleResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,12 +153,10 @@ public class TransactionRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchTransactionRulesTransactionRuleIdResponse res = new org.openapis.openapi.models.operations.PatchTransactionRulesTransactionRuleIdResponse() {{
+        org.openapis.openapi.models.operations.PatchTransactionRulesTransactionRuleIdResponse res = new org.openapis.openapi.models.operations.PatchTransactionRulesTransactionRuleIdResponse(contentType, httpRes.statusCode()) {{
             transactionRule = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -208,12 +202,10 @@ public class TransactionRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTransactionRulesResponse res = new org.openapis.openapi.models.operations.PostTransactionRulesResponse() {{
+        org.openapis.openapi.models.operations.PostTransactionRulesResponse res = new org.openapis.openapi.models.operations.PostTransactionRulesResponse(contentType, httpRes.statusCode()) {{
             transactionRule = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

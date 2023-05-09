@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposCodeownersErrorsRequest {
@@ -12,6 +13,7 @@ public class ReposCodeownersErrorsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposCodeownersErrorsRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -22,6 +24,7 @@ public class ReposCodeownersErrorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref")
     public String ref;
+
     public ReposCodeownersErrorsRequest withRef(String ref) {
         this.ref = ref;
         return this;
@@ -32,9 +35,14 @@ public class ReposCodeownersErrorsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposCodeownersErrorsRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposCodeownersErrorsRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

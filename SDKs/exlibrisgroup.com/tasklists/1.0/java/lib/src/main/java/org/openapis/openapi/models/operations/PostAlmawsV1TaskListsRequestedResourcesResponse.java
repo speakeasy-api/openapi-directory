@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostAlmawsV1TaskListsRequestedResourcesResponse {
     
     public byte[] body;
+
     public PostAlmawsV1TaskListsRequestedResourcesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostAlmawsV1TaskListsRequestedResourcesResponse {
     
     
     public String contentType;
+
     public PostAlmawsV1TaskListsRequestedResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PostAlmawsV1TaskListsRequestedResourcesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PostAlmawsV1TaskListsRequestedResourcesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -30,6 +34,7 @@ public class PostAlmawsV1TaskListsRequestedResourcesResponse {
     
     
     public Integer statusCode;
+
     public PostAlmawsV1TaskListsRequestedResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,6 +42,7 @@ public class PostAlmawsV1TaskListsRequestedResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostAlmawsV1TaskListsRequestedResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -47,9 +53,14 @@ public class PostAlmawsV1TaskListsRequestedResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchema onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchema;
+
     public PostAlmawsV1TaskListsRequestedResourcesResponse withOnealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchema(org.openapis.openapi.models.shared.Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchema onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchema) {
         this.onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchema = onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchema;
         return this;
     }
     
+    public PostAlmawsV1TaskListsRequestedResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

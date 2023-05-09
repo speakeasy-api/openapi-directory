@@ -18,6 +18,7 @@ public class MetricFilterClause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public MetricFilter[] filters;
+
     public MetricFilterClause withFilters(MetricFilter[] filters) {
         this.filters = filters;
         return this;
@@ -29,9 +30,11 @@ public class MetricFilterClause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operator")
     public MetricFilterClauseOperatorEnum operator;
+
     public MetricFilterClause withOperator(MetricFilterClauseOperatorEnum operator) {
         this.operator = operator;
         return this;
     }
     
+    public MetricFilterClause(){}
 }

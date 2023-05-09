@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDownloadUrlForLayerRequest {
     @JsonProperty("layerDigest")
     public String layerDigest;
+
     public GetDownloadUrlForLayerRequest withLayerDigest(String layerDigest) {
         this.layerDigest = layerDigest;
         return this;
@@ -19,6 +20,7 @@ public class GetDownloadUrlForLayerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public GetDownloadUrlForLayerRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -26,9 +28,14 @@ public class GetDownloadUrlForLayerRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public GetDownloadUrlForLayerRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public GetDownloadUrlForLayerRequest(@JsonProperty("layerDigest") String layerDigest, @JsonProperty("repositoryName") String repositoryName) {
+        this.layerDigest = layerDigest;
+        this.repositoryName = repositoryName;
+  }
 }

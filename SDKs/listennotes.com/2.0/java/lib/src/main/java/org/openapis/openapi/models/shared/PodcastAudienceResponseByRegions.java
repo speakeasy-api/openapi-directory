@@ -15,6 +15,7 @@ public class PodcastAudienceResponseByRegions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ratio")
     public String ratio;
+
     public PodcastAudienceResponseByRegions withRatio(String ratio) {
         this.ratio = ratio;
         return this;
@@ -26,9 +27,11 @@ public class PodcastAudienceResponseByRegions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public PodcastAudienceResponseByRegions withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public PodcastAudienceResponseByRegions(){}
 }

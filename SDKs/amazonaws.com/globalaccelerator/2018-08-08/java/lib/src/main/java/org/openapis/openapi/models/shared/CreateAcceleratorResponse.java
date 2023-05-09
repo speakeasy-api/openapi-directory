@@ -15,9 +15,11 @@ public class CreateAcceleratorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Accelerator")
     public Accelerator accelerator;
+
     public CreateAcceleratorResponse withAccelerator(Accelerator accelerator) {
         this.accelerator = accelerator;
         return this;
     }
     
+    public CreateAcceleratorResponse(){}
 }

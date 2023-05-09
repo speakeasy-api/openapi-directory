@@ -79,4 +79,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/BatchInputSubscriptionBatch
 lib/src/main/java/org/openapis/openapi/models/shared/SubscriptionBatchUpdateRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/SubscriptionCreateRequestEventTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/SubscriptionCreateRequest.java
+docs/sdk/README.md
+docs/settings/README.md
+docs/subscriptions/README.md
 USAGE.md

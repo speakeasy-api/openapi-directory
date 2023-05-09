@@ -38,4 +38,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostPostReview400Applic
 lib/src/main/java/org/openapis/openapi/models/operations/PostPostReview200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPostReviewResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

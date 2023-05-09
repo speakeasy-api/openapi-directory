@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLatestAssessmentIdResponse {
@@ -12,6 +13,7 @@ public class GetLatestAssessmentIdResponse {
      */
     
     public Object accessDeniedException;
+
     public GetLatestAssessmentIdResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetLatestAssessmentIdResponse {
     
     
     public String contentType;
+
     public GetLatestAssessmentIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetLatestAssessmentIdResponse {
      */
     
     public Object dependencyException;
+
     public GetLatestAssessmentIdResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -39,6 +43,7 @@ public class GetLatestAssessmentIdResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLatestAssessmentIdResponse getLatestAssessmentIdResponse;
+
     public GetLatestAssessmentIdResponse withGetLatestAssessmentIdResponse(org.openapis.openapi.models.shared.GetLatestAssessmentIdResponse getLatestAssessmentIdResponse) {
         this.getLatestAssessmentIdResponse = getLatestAssessmentIdResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetLatestAssessmentIdResponse {
      */
     
     public Object internalServerException;
+
     public GetLatestAssessmentIdResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class GetLatestAssessmentIdResponse {
     
     
     public Integer statusCode;
+
     public GetLatestAssessmentIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetLatestAssessmentIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLatestAssessmentIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetLatestAssessmentIdResponse {
      */
     
     public Object validationException;
+
     public GetLatestAssessmentIdResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetLatestAssessmentIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

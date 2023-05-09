@@ -15,6 +15,7 @@ public class DescribeOrganizationConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoEnable")
     public AutoEnable autoEnable;
+
     public DescribeOrganizationConfigurationResponse withAutoEnable(AutoEnable autoEnable) {
         this.autoEnable = autoEnable;
         return this;
@@ -23,9 +24,11 @@ public class DescribeOrganizationConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxAccountLimitReached")
     public Boolean maxAccountLimitReached;
+
     public DescribeOrganizationConfigurationResponse withMaxAccountLimitReached(Boolean maxAccountLimitReached) {
         this.maxAccountLimitReached = maxAccountLimitReached;
         return this;
     }
     
+    public DescribeOrganizationConfigurationResponse(){}
 }

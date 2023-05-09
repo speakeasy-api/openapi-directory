@@ -15,6 +15,7 @@ public class ListLFTagsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public ListLFTagsRequestBody withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -26,6 +27,7 @@ public class ListLFTagsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListLFTagsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class ListLFTagsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLFTagsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -48,9 +51,11 @@ public class ListLFTagsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceShareType")
     public ListLFTagsRequestBodyResourceShareTypeEnum resourceShareType;
+
     public ListLFTagsRequestBody withResourceShareType(ListLFTagsRequestBodyResourceShareTypeEnum resourceShareType) {
         this.resourceShareType = resourceShareType;
         return this;
     }
     
+    public ListLFTagsRequestBody(){}
 }

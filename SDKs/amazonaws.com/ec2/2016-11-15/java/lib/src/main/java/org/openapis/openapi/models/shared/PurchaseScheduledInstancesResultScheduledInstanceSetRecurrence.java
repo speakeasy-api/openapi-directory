@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PurchaseScheduledInstancesResultScheduledInstanceSetRecurrence {
     
     public String frequency;
+
     public PurchaseScheduledInstancesResultScheduledInstanceSetRecurrence withFrequency(String frequency) {
         this.frequency = frequency;
         return this;
@@ -19,6 +20,7 @@ public class PurchaseScheduledInstancesResultScheduledInstanceSetRecurrence {
     
     
     public Long interval;
+
     public PurchaseScheduledInstancesResultScheduledInstanceSetRecurrence withInterval(Long interval) {
         this.interval = interval;
         return this;
@@ -26,6 +28,7 @@ public class PurchaseScheduledInstancesResultScheduledInstanceSetRecurrence {
     
     
     public Long[] occurrenceDaySet;
+
     public PurchaseScheduledInstancesResultScheduledInstanceSetRecurrence withOccurrenceDaySet(Long[] occurrenceDaySet) {
         this.occurrenceDaySet = occurrenceDaySet;
         return this;
@@ -33,6 +36,7 @@ public class PurchaseScheduledInstancesResultScheduledInstanceSetRecurrence {
     
     
     public Boolean occurrenceRelativeToEnd;
+
     public PurchaseScheduledInstancesResultScheduledInstanceSetRecurrence withOccurrenceRelativeToEnd(Boolean occurrenceRelativeToEnd) {
         this.occurrenceRelativeToEnd = occurrenceRelativeToEnd;
         return this;
@@ -40,9 +44,11 @@ public class PurchaseScheduledInstancesResultScheduledInstanceSetRecurrence {
     
     
     public String occurrenceUnit;
+
     public PurchaseScheduledInstancesResultScheduledInstanceSetRecurrence withOccurrenceUnit(String occurrenceUnit) {
         this.occurrenceUnit = occurrenceUnit;
         return this;
     }
     
+    public PurchaseScheduledInstancesResultScheduledInstanceSetRecurrence(){}
 }

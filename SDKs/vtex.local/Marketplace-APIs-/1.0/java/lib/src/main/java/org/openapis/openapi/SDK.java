@@ -10,7 +10,7 @@ import org.openapis.openapi.utils.SpeakeasyHTTPClient;
 /**
  * The **Marketplace API** enables marketplaces and sellers hosted on VTEX to perform their collaborative operations.  
  * 
- * &gt;\u26a0\ufe0f The marketplace must [create an appKey and appToken](https://developers.vtex.com/docs/guides/getting-started-authentication) for each non-VTEX seller that will use this API.
+ * &gt;⚠️ The marketplace must [create an appKey and appToken](https://developers.vtex.com/docs/guides/getting-started-authentication) for each non-VTEX seller that will use this API.
  * 
  * ## Index
  * 
@@ -223,6 +223,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.getSuggestions = new GetSuggestions(

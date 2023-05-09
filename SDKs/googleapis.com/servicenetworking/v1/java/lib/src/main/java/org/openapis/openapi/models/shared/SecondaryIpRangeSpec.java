@@ -15,6 +15,7 @@ public class SecondaryIpRangeSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipPrefixLength")
     public Integer ipPrefixLength;
+
     public SecondaryIpRangeSpec withIpPrefixLength(Integer ipPrefixLength) {
         this.ipPrefixLength = ipPrefixLength;
         return this;
@@ -26,6 +27,7 @@ public class SecondaryIpRangeSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outsideAllocationPublicIpRange")
     public String outsideAllocationPublicIpRange;
+
     public SecondaryIpRangeSpec withOutsideAllocationPublicIpRange(String outsideAllocationPublicIpRange) {
         this.outsideAllocationPublicIpRange = outsideAllocationPublicIpRange;
         return this;
@@ -37,6 +39,7 @@ public class SecondaryIpRangeSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rangeName")
     public String rangeName;
+
     public SecondaryIpRangeSpec withRangeName(String rangeName) {
         this.rangeName = rangeName;
         return this;
@@ -48,9 +51,11 @@ public class SecondaryIpRangeSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedAddress")
     public String requestedAddress;
+
     public SecondaryIpRangeSpec withRequestedAddress(String requestedAddress) {
         this.requestedAddress = requestedAddress;
         return this;
     }
     
+    public SecondaryIpRangeSpec(){}
 }

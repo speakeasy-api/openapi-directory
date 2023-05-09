@@ -15,9 +15,11 @@ public class AwsEcsServiceNetworkConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsVpcConfiguration")
     public AwsEcsServiceNetworkConfigurationAwsVpcConfigurationDetails awsVpcConfiguration;
+
     public AwsEcsServiceNetworkConfigurationDetails withAwsVpcConfiguration(AwsEcsServiceNetworkConfigurationAwsVpcConfigurationDetails awsVpcConfiguration) {
         this.awsVpcConfiguration = awsVpcConfiguration;
         return this;
     }
     
+    public AwsEcsServiceNetworkConfigurationDetails(){}
 }

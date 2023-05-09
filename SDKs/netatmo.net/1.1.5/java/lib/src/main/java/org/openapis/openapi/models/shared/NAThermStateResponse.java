@@ -15,6 +15,7 @@ public class NAThermStateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public NAThermStateBody body;
+
     public NAThermStateResponse withBody(NAThermStateBody body) {
         this.body = body;
         return this;
@@ -23,6 +24,7 @@ public class NAThermStateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public NAThermStateResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -31,6 +33,7 @@ public class NAThermStateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_exec")
     public Double timeExec;
+
     public NAThermStateResponse withTimeExec(Double timeExec) {
         this.timeExec = timeExec;
         return this;
@@ -39,9 +42,11 @@ public class NAThermStateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_server")
     public Integer timeServer;
+
     public NAThermStateResponse withTimeServer(Integer timeServer) {
         this.timeServer = timeServer;
         return this;
     }
     
+    public NAThermStateResponse(){}
 }

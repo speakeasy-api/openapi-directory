@@ -15,6 +15,7 @@ public class ConfigWEB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_persistent_connections")
     public Integer isPersistentConnections;
+
     public ConfigWEB withIsPersistentConnections(Integer isPersistentConnections) {
         this.isPersistentConnections = isPersistentConnections;
         return this;
@@ -23,6 +24,7 @@ public class ConfigWEB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public ConfigWEB withPassword(String password) {
         this.password = password;
         return this;
@@ -31,6 +33,7 @@ public class ConfigWEB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public ConfigWEB withPort(Integer port) {
         this.port = port;
         return this;
@@ -39,6 +42,7 @@ public class ConfigWEB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule")
     public String rule;
+
     public ConfigWEB withRule(String rule) {
         this.rule = rule;
         return this;
@@ -47,6 +51,7 @@ public class ConfigWEB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public ConfigWEB withUsername(String username) {
         this.username = username;
         return this;
@@ -55,9 +60,11 @@ public class ConfigWEB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wsdl")
     public String wsdl;
+
     public ConfigWEB withWsdl(String wsdl) {
         this.wsdl = wsdl;
         return this;
     }
     
+    public ConfigWEB(){}
 }

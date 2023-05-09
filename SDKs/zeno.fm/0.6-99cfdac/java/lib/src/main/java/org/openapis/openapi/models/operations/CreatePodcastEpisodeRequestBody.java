@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePodcastEpisodeRequestBody {
@@ -12,6 +13,7 @@ public class CreatePodcastEpisodeRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=episode,json")
     public org.openapis.openapi.models.shared.PodcastEpisode episode;
+
     public CreatePodcastEpisodeRequestBody withEpisode(org.openapis.openapi.models.shared.PodcastEpisode episode) {
         this.episode = episode;
         return this;
@@ -19,6 +21,7 @@ public class CreatePodcastEpisodeRequestBody {
     
     @SpeakeasyMetadata("multipartForm:file")
     public CreatePodcastEpisodeRequestBodyFileLogo fileLogo;
+
     public CreatePodcastEpisodeRequestBody withFileLogo(CreatePodcastEpisodeRequestBodyFileLogo fileLogo) {
         this.fileLogo = fileLogo;
         return this;
@@ -26,9 +29,15 @@ public class CreatePodcastEpisodeRequestBody {
     
     @SpeakeasyMetadata("multipartForm:file")
     public CreatePodcastEpisodeRequestBodyFileMedia fileMedia;
+
     public CreatePodcastEpisodeRequestBody withFileMedia(CreatePodcastEpisodeRequestBodyFileMedia fileMedia) {
         this.fileMedia = fileMedia;
         return this;
     }
     
+    public CreatePodcastEpisodeRequestBody(@JsonProperty("episode") org.openapis.openapi.models.shared.PodcastEpisode episode, @JsonProperty("file_logo") CreatePodcastEpisodeRequestBodyFileLogo fileLogo, @JsonProperty("file_media") CreatePodcastEpisodeRequestBodyFileMedia fileMedia) {
+        this.episode = episode;
+        this.fileLogo = fileLogo;
+        this.fileMedia = fileMedia;
+  }
 }

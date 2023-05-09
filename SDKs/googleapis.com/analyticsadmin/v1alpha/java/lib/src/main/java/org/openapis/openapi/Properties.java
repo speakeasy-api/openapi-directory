@@ -62,11 +62,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchCreateResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchCreateResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaBatchCreateAccessBindingsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchDeleteResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchDeleteResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchDeleteResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchGetResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchGetResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchGetResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchGetResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaBatchGetAccessBindingsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchUpdateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchUpdateResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchUpdateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchUpdateResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaBatchUpdateAccessBindingsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,11 +244,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsCreateResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsCreateResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaAccessBinding = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,11 +288,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsListResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaListAccessBindingsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,11 +334,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesAcknowledgeUserDataCollectionResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesAcknowledgeUserDataCollectionResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesAcknowledgeUserDataCollectionResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesAcknowledgeUserDataCollectionResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaAcknowledgeUserDataCollectionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -394,11 +380,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesCreateResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesCreateResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaAudience = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -440,11 +424,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesListResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaListAudiencesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,11 +468,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesBigQueryLinksListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesBigQueryLinksListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesBigQueryLinksListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesBigQueryLinksListResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaListBigQueryLinksResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -498,6 +478,96 @@ public class Properties {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaListBigQueryLinksResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaListBigQueryLinksResponse.class);
                 res.googleAnalyticsAdminV1alphaListBigQueryLinksResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Creates a ChannelGroup.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesChannelGroupsCreateResponse analyticsadminPropertiesChannelGroupsCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesChannelGroupsCreateRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesChannelGroupsCreateSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesChannelGroupsCreateRequest.class, baseUrl, "/v1alpha/{parent}/channelGroups", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaChannelGroupInput", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesChannelGroupsCreateRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesChannelGroupsCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesChannelGroupsCreateResponse(contentType, httpRes.statusCode()) {{
+            googleAnalyticsAdminV1alphaChannelGroup = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaChannelGroup out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaChannelGroup.class);
+                res.googleAnalyticsAdminV1alphaChannelGroup = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Lists ChannelGroups on a property.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesChannelGroupsListResponse analyticsadminPropertiesChannelGroupsList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesChannelGroupsListRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesChannelGroupsListSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesChannelGroupsListRequest.class, baseUrl, "/v1alpha/{parent}/channelGroups", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesChannelGroupsListRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesChannelGroupsListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesChannelGroupsListResponse(contentType, httpRes.statusCode()) {{
+            googleAnalyticsAdminV1alphaListChannelGroupsResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaListChannelGroupsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaListChannelGroupsResponse.class);
+                res.googleAnalyticsAdminV1alphaListChannelGroupsResponse = out;
             }
         }
 
@@ -534,11 +604,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsCreateResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsCreateResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaConversionEvent = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -580,11 +648,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsListResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaListConversionEventsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -628,11 +694,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaProperty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -676,11 +740,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateConnectedSiteTagResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateConnectedSiteTagResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateConnectedSiteTagResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateConnectedSiteTagResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaCreateConnectedSiteTagResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -724,11 +786,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsCreateResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsCreateResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaCustomDimension = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -770,11 +830,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsListResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaListCustomDimensionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -818,11 +876,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsArchiveResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsArchiveResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsArchiveResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsArchiveResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -866,11 +922,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsCreateResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsCreateResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaCustomMetric = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -912,11 +966,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsListResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaListCustomMetricsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -960,11 +1012,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsCreateResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsCreateResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaDataStream = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -972,6 +1022,96 @@ public class Properties {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaDataStream out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaDataStream.class);
                 res.googleAnalyticsAdminV1alphaDataStream = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Creates an EventCreateRule.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsEventCreateRulesCreateResponse analyticsadminPropertiesDataStreamsEventCreateRulesCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsEventCreateRulesCreateRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsEventCreateRulesCreateSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsEventCreateRulesCreateRequest.class, baseUrl, "/v1alpha/{parent}/eventCreateRules", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaEventCreateRuleInput", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsEventCreateRulesCreateRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsEventCreateRulesCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsEventCreateRulesCreateResponse(contentType, httpRes.statusCode()) {{
+            googleAnalyticsAdminV1alphaEventCreateRule = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaEventCreateRule out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaEventCreateRule.class);
+                res.googleAnalyticsAdminV1alphaEventCreateRule = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Lists EventCreateRules on a web data stream.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsEventCreateRulesListResponse analyticsadminPropertiesDataStreamsEventCreateRulesList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsEventCreateRulesListRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsEventCreateRulesListSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsEventCreateRulesListRequest.class, baseUrl, "/v1alpha/{parent}/eventCreateRules", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsEventCreateRulesListRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsEventCreateRulesListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsEventCreateRulesListResponse(contentType, httpRes.statusCode()) {{
+            googleAnalyticsAdminV1alphaListEventCreateRulesResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaListEventCreateRulesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaListEventCreateRulesResponse.class);
+                res.googleAnalyticsAdminV1alphaListEventCreateRulesResponse = out;
             }
         }
 
@@ -1006,11 +1146,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsListResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaListDataStreamsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1054,11 +1192,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaMeasurementProtocolSecret = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1100,11 +1236,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaListMeasurementProtocolSecretsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1148,11 +1282,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDeleteConnectedSiteTagResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDeleteConnectedSiteTagResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDeleteConnectedSiteTagResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDeleteConnectedSiteTagResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1196,11 +1328,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsApproveResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsApproveResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsApproveResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsApproveResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaApproveDisplayVideo360AdvertiserLinkProposalResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1244,11 +1374,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCancelResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCancelResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCancelResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCancelResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1292,11 +1420,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreateResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreateResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1338,11 +1464,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaListDisplayVideo360AdvertiserLinkProposalsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1386,11 +1510,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1432,11 +1554,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksListResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaListDisplayVideo360AdvertiserLinksResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1480,11 +1600,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsCreateResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsCreateResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaExpandedDataSet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1526,11 +1644,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsListResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaListExpandedDataSetsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1574,11 +1690,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1586,6 +1700,50 @@ public class Properties {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutResponse.class);
                 res.googleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Given a specified UA property, looks up the GA4 property connected to it. Note: this cannot be used with GA4 properties.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesFetchConnectedGa4PropertyResponse analyticsadminPropertiesFetchConnectedGa4Property(org.openapis.openapi.models.operations.AnalyticsadminPropertiesFetchConnectedGa4PropertyRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesFetchConnectedGa4PropertySecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1alpha/properties:fetchConnectedGa4Property");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesFetchConnectedGa4PropertyRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesFetchConnectedGa4PropertyResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesFetchConnectedGa4PropertyResponse(contentType, httpRes.statusCode()) {{
+            googleAnalyticsAdminV1alphaFetchConnectedGa4PropertyResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaFetchConnectedGa4PropertyResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaFetchConnectedGa4PropertyResponse.class);
+                res.googleAnalyticsAdminV1alphaFetchConnectedGa4PropertyResponse = out;
             }
         }
 
@@ -1622,11 +1780,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksCreateResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksCreateResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaFirebaseLink = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1668,11 +1824,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksListResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaListFirebaseLinksResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1716,11 +1870,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksCreateResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksCreateResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaGoogleAdsLink = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1762,11 +1914,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksListResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaListGoogleAdsLinksResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1808,11 +1958,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesListResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaListPropertiesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1856,11 +2004,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesListConnectedSiteTagsResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesListConnectedSiteTagsResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesListConnectedSiteTagsResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesListConnectedSiteTagsResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaListConnectedSiteTagsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1904,11 +2050,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesRunAccessReportResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesRunAccessReportResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesRunAccessReportResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesRunAccessReportResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaRunAccessReportResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1952,11 +2096,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksCreateResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksCreateResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaSearchAds360Link = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1998,11 +2140,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksListResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaListSearchAds360LinksResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2046,11 +2186,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2094,11 +2232,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksAuditResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksAuditResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksAuditResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksAuditResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaAuditUserLinksResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2142,11 +2278,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchCreateResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchCreateResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaBatchCreateUserLinksResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2190,11 +2324,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchDeleteResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchDeleteResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchDeleteResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2236,11 +2368,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchGetResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchGetResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchGetResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchGetResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaBatchGetUserLinksResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2284,11 +2414,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchUpdateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchUpdateResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchUpdateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchUpdateResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaBatchUpdateUserLinksResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2332,11 +2460,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksCreateResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksCreateResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksCreateResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaUserLink = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2378,11 +2504,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksDeleteResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksDeleteResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksDeleteResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2424,11 +2548,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksGetResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksGetResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksGetResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksGetResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaUserLink = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2470,11 +2592,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksListResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksListResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksListResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaListUserLinksResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2518,11 +2638,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksPatchResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksPatchResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksPatchResponse res = new org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksPatchResponse(contentType, httpRes.statusCode()) {{
             googleAnalyticsAdminV1alphaUserLink = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

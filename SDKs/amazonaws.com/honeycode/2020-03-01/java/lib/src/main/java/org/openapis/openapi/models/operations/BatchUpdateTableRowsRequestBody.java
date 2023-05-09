@@ -15,6 +15,7 @@ public class BatchUpdateTableRowsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public BatchUpdateTableRowsRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -25,9 +26,13 @@ public class BatchUpdateTableRowsRequestBody {
      */
     @JsonProperty("rowsToUpdate")
     public org.openapis.openapi.models.shared.UpdateRowData[] rowsToUpdate;
+
     public BatchUpdateTableRowsRequestBody withRowsToUpdate(org.openapis.openapi.models.shared.UpdateRowData[] rowsToUpdate) {
         this.rowsToUpdate = rowsToUpdate;
         return this;
     }
     
+    public BatchUpdateTableRowsRequestBody(@JsonProperty("rowsToUpdate") org.openapis.openapi.models.shared.UpdateRowData[] rowsToUpdate) {
+        this.rowsToUpdate = rowsToUpdate;
+  }
 }

@@ -18,6 +18,7 @@ public class SparkRBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archiveUris")
     public String[] archiveUris;
+
     public SparkRBatch withArchiveUris(String[] archiveUris) {
         this.archiveUris = archiveUris;
         return this;
@@ -29,6 +30,7 @@ public class SparkRBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("args")
     public String[] args;
+
     public SparkRBatch withArgs(String[] args) {
         this.args = args;
         return this;
@@ -40,6 +42,7 @@ public class SparkRBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileUris")
     public String[] fileUris;
+
     public SparkRBatch withFileUris(String[] fileUris) {
         this.fileUris = fileUris;
         return this;
@@ -51,9 +54,11 @@ public class SparkRBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mainRFileUri")
     public String mainRFileUri;
+
     public SparkRBatch withMainRFileUri(String mainRFileUri) {
         this.mainRFileUri = mainRFileUri;
         return this;
     }
     
+    public SparkRBatch(){}
 }

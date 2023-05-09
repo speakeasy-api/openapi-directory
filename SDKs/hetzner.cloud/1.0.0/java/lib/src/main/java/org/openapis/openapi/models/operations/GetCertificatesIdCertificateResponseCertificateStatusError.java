@@ -15,6 +15,7 @@ public class GetCertificatesIdCertificateResponseCertificateStatusError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public GetCertificatesIdCertificateResponseCertificateStatusError withCode(String code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class GetCertificatesIdCertificateResponseCertificateStatusError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GetCertificatesIdCertificateResponseCertificateStatusError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetCertificatesIdCertificateResponseCertificateStatusError(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DistributionGroupsGetAppsResponse {
     
     public String contentType;
+
     public DistributionGroupsGetAppsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DistributionGroupsGetAppsResponse {
     
     
     public Integer statusCode;
+
     public DistributionGroupsGetAppsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DistributionGroupsGetAppsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DistributionGroupsGetAppsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class DistributionGroupsGetAppsResponse {
      */
     
     public DistributionGroupsGetApps200ApplicationJSON[] distributionGroupsGetApps200ApplicationJSONAnies;
+
     public DistributionGroupsGetAppsResponse withDistributionGroupsGetApps200ApplicationJSONAnies(DistributionGroupsGetApps200ApplicationJSON[] distributionGroupsGetApps200ApplicationJSONAnies) {
         this.distributionGroupsGetApps200ApplicationJSONAnies = distributionGroupsGetApps200ApplicationJSONAnies;
         return this;
     }
     
+    public DistributionGroupsGetAppsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

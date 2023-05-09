@@ -12,6 +12,7 @@ public class ListTableRestoreStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListTableRestoreStatusRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListTableRestoreStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public ListTableRestoreStatusRequest withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
@@ -28,6 +30,7 @@ public class ListTableRestoreStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTableRestoreStatusRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class ListTableRestoreStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workgroupName")
     public String workgroupName;
+
     public ListTableRestoreStatusRequest withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public ListTableRestoreStatusRequest(){}
 }

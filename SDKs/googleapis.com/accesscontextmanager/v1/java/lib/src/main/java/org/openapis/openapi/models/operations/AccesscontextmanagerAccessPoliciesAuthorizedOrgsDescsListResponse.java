@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsListResponse {
     
     public String contentType;
+
     public AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAuthorizedOrgsDescsResponse listAuthorizedOrgsDescsResponse;
+
     public AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsListResponse withListAuthorizedOrgsDescsResponse(org.openapis.openapi.models.shared.ListAuthorizedOrgsDescsResponse listAuthorizedOrgsDescsResponse) {
         this.listAuthorizedOrgsDescsResponse = listAuthorizedOrgsDescsResponse;
         return this;
@@ -26,6 +29,7 @@ public class AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsListResponse {
     
     
     public Integer statusCode;
+
     public AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

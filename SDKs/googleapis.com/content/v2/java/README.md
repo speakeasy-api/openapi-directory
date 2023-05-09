@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.ContentAccountsAuthinfoSecurity;
 import org.openapis.openapi.models.operations.ContentAccountsAuthinfoRequest;
 import org.openapis.openapi.models.operations.ContentAccountsAuthinfoResponse;
+import org.openapis.openapi.models.operations.ContentAccountsAuthinfoSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -30,9 +29,9 @@ public class Application {
                 .build();
 
             ContentAccountsAuthinfoRequest req = new ContentAccountsAuthinfoRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 accessToken = "provident";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "quibusdam";
                 fields = "unde";
                 key = "nulla";
@@ -41,19 +40,21 @@ public class Application {
                 quotaUser = "illum";
                 uploadType = "vel";
                 uploadProtocol = "error";
-            }}            
+            }};            
 
-            ContentAccountsAuthinfoResponse res = sdk.accounts.contentAccountsAuthinfo(req, new ContentAccountsAuthinfoSecurity() {{
+            ContentAccountsAuthinfoResponse res = sdk.accounts.contentAccountsAuthinfo(req, new ContentAccountsAuthinfoSecurity("deserunt", "suscipit") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.accountsAuthInfoResponse.isPresent()) {
+            if (res.accountsAuthInfoResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -61,133 +62,133 @@ public class Application {
 ## Available Resources and Operations
 
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `contentAccountsAuthinfo` - Returns information about the authenticated user.
-* `contentAccountsClaimwebsite` - Claims the website of a Merchant Center sub-account.
-* `contentAccountsCustombatch` - Retrieves, inserts, updates, and deletes multiple Merchant Center (sub-)accounts in a single request.
-* `contentAccountsDelete` - Deletes a Merchant Center sub-account.
-* `contentAccountsGet` - Retrieves a Merchant Center account.
-* `contentAccountsInsert` - Creates a Merchant Center sub-account.
-* `contentAccountsLink` - Performs an action on a link between two Merchant Center accounts, namely accountId and linkedAccountId.
-* `contentAccountsList` - Lists the sub-accounts in your Merchant Center account.
-* `contentAccountsUpdate` - Updates a Merchant Center account. Any fields that are not provided are deleted from the resource.
+* [contentAccountsAuthinfo](docs/accounts/README.md#contentaccountsauthinfo) - Returns information about the authenticated user.
+* [contentAccountsClaimwebsite](docs/accounts/README.md#contentaccountsclaimwebsite) - Claims the website of a Merchant Center sub-account.
+* [contentAccountsCustombatch](docs/accounts/README.md#contentaccountscustombatch) - Retrieves, inserts, updates, and deletes multiple Merchant Center (sub-)accounts in a single request.
+* [contentAccountsDelete](docs/accounts/README.md#contentaccountsdelete) - Deletes a Merchant Center sub-account.
+* [contentAccountsGet](docs/accounts/README.md#contentaccountsget) - Retrieves a Merchant Center account.
+* [contentAccountsInsert](docs/accounts/README.md#contentaccountsinsert) - Creates a Merchant Center sub-account.
+* [contentAccountsLink](docs/accounts/README.md#contentaccountslink) - Performs an action on a link between two Merchant Center accounts, namely accountId and linkedAccountId.
+* [contentAccountsList](docs/accounts/README.md#contentaccountslist) - Lists the sub-accounts in your Merchant Center account.
+* [contentAccountsUpdate](docs/accounts/README.md#contentaccountsupdate) - Updates a Merchant Center account. Any fields that are not provided are deleted from the resource.
 
-### accountstatuses
+### [accountstatuses](docs/accountstatuses/README.md)
 
-* `contentAccountstatusesCustombatch` - Retrieves multiple Merchant Center account statuses in a single request.
-* `contentAccountstatusesGet` - Retrieves the status of a Merchant Center account. No itemLevelIssues are returned for multi-client accounts.
-* `contentAccountstatusesList` - Lists the statuses of the sub-accounts in your Merchant Center account.
+* [contentAccountstatusesCustombatch](docs/accountstatuses/README.md#contentaccountstatusescustombatch) - Retrieves multiple Merchant Center account statuses in a single request.
+* [contentAccountstatusesGet](docs/accountstatuses/README.md#contentaccountstatusesget) - Retrieves the status of a Merchant Center account. No itemLevelIssues are returned for multi-client accounts.
+* [contentAccountstatusesList](docs/accountstatuses/README.md#contentaccountstatuseslist) - Lists the statuses of the sub-accounts in your Merchant Center account.
 
-### accounttax
+### [accounttax](docs/accounttax/README.md)
 
-* `contentAccounttaxCustombatch` - Retrieves and updates tax settings of multiple accounts in a single request.
-* `contentAccounttaxGet` - Retrieves the tax settings of the account.
-* `contentAccounttaxList` - Lists the tax settings of the sub-accounts in your Merchant Center account.
-* `contentAccounttaxUpdate` - Updates the tax settings of the account. Any fields that are not provided are deleted from the resource.
+* [contentAccounttaxCustombatch](docs/accounttax/README.md#contentaccounttaxcustombatch) - Retrieves and updates tax settings of multiple accounts in a single request.
+* [contentAccounttaxGet](docs/accounttax/README.md#contentaccounttaxget) - Retrieves the tax settings of the account.
+* [contentAccounttaxList](docs/accounttax/README.md#contentaccounttaxlist) - Lists the tax settings of the sub-accounts in your Merchant Center account.
+* [contentAccounttaxUpdate](docs/accounttax/README.md#contentaccounttaxupdate) - Updates the tax settings of the account. Any fields that are not provided are deleted from the resource.
 
-### datafeeds
+### [datafeeds](docs/datafeeds/README.md)
 
-* `contentDatafeedsCustombatch` - Deletes, fetches, gets, inserts and updates multiple datafeeds in a single request.
-* `contentDatafeedsDelete` - Deletes a datafeed configuration from your Merchant Center account.
-* `contentDatafeedsFetchnow` - Invokes a fetch for the datafeed in your Merchant Center account. If you need to call this method more than once per day, we recommend you use the Products service to update your product data.
-* `contentDatafeedsGet` - Retrieves a datafeed configuration from your Merchant Center account.
-* `contentDatafeedsInsert` - Registers a datafeed configuration with your Merchant Center account.
-* `contentDatafeedsList` - Lists the configurations for datafeeds in your Merchant Center account.
-* `contentDatafeedsUpdate` - Updates a datafeed configuration of your Merchant Center account. Any fields that are not provided are deleted from the resource.
+* [contentDatafeedsCustombatch](docs/datafeeds/README.md#contentdatafeedscustombatch) - Deletes, fetches, gets, inserts and updates multiple datafeeds in a single request.
+* [contentDatafeedsDelete](docs/datafeeds/README.md#contentdatafeedsdelete) - Deletes a datafeed configuration from your Merchant Center account.
+* [contentDatafeedsFetchnow](docs/datafeeds/README.md#contentdatafeedsfetchnow) - Invokes a fetch for the datafeed in your Merchant Center account. If you need to call this method more than once per day, we recommend you use the Products service to update your product data.
+* [contentDatafeedsGet](docs/datafeeds/README.md#contentdatafeedsget) - Retrieves a datafeed configuration from your Merchant Center account.
+* [contentDatafeedsInsert](docs/datafeeds/README.md#contentdatafeedsinsert) - Registers a datafeed configuration with your Merchant Center account.
+* [contentDatafeedsList](docs/datafeeds/README.md#contentdatafeedslist) - Lists the configurations for datafeeds in your Merchant Center account.
+* [contentDatafeedsUpdate](docs/datafeeds/README.md#contentdatafeedsupdate) - Updates a datafeed configuration of your Merchant Center account. Any fields that are not provided are deleted from the resource.
 
-### datafeedstatuses
+### [datafeedstatuses](docs/datafeedstatuses/README.md)
 
-* `contentDatafeedstatusesCustombatch` - Gets multiple Merchant Center datafeed statuses in a single request.
-* `contentDatafeedstatusesGet` - Retrieves the status of a datafeed from your Merchant Center account.
-* `contentDatafeedstatusesList` - Lists the statuses of the datafeeds in your Merchant Center account.
+* [contentDatafeedstatusesCustombatch](docs/datafeedstatuses/README.md#contentdatafeedstatusescustombatch) - Gets multiple Merchant Center datafeed statuses in a single request.
+* [contentDatafeedstatusesGet](docs/datafeedstatuses/README.md#contentdatafeedstatusesget) - Retrieves the status of a datafeed from your Merchant Center account.
+* [contentDatafeedstatusesList](docs/datafeedstatuses/README.md#contentdatafeedstatuseslist) - Lists the statuses of the datafeeds in your Merchant Center account.
 
-### liasettings
+### [liasettings](docs/liasettings/README.md)
 
-* `contentLiasettingsCustombatch` - Retrieves and/or updates the LIA settings of multiple accounts in a single request.
-* `contentLiasettingsGet` - Retrieves the LIA settings of the account.
-* `contentLiasettingsGetaccessiblegmbaccounts` - Retrieves the list of accessible Google My Business accounts.
-* `contentLiasettingsList` - Lists the LIA settings of the sub-accounts in your Merchant Center account.
-* `contentLiasettingsListposdataproviders` - Retrieves the list of POS data providers that have active settings for the all eiligible countries.
-* `contentLiasettingsRequestgmbaccess` - Requests access to a specified Google My Business account.
-* `contentLiasettingsRequestinventoryverification` - Requests inventory validation for the specified country.
-* `contentLiasettingsSetinventoryverificationcontact` - Sets the inventory verification contract for the specified country.
-* `contentLiasettingsSetposdataprovider` - Sets the POS data provider for the specified country.
-* `contentLiasettingsUpdate` - Updates the LIA settings of the account. Any fields that are not provided are deleted from the resource.
+* [contentLiasettingsCustombatch](docs/liasettings/README.md#contentliasettingscustombatch) - Retrieves and/or updates the LIA settings of multiple accounts in a single request.
+* [contentLiasettingsGet](docs/liasettings/README.md#contentliasettingsget) - Retrieves the LIA settings of the account.
+* [contentLiasettingsGetaccessiblegmbaccounts](docs/liasettings/README.md#contentliasettingsgetaccessiblegmbaccounts) - Retrieves the list of accessible Google My Business accounts.
+* [contentLiasettingsList](docs/liasettings/README.md#contentliasettingslist) - Lists the LIA settings of the sub-accounts in your Merchant Center account.
+* [contentLiasettingsListposdataproviders](docs/liasettings/README.md#contentliasettingslistposdataproviders) - Retrieves the list of POS data providers that have active settings for the all eiligible countries.
+* [contentLiasettingsRequestgmbaccess](docs/liasettings/README.md#contentliasettingsrequestgmbaccess) - Requests access to a specified Google My Business account.
+* [contentLiasettingsRequestinventoryverification](docs/liasettings/README.md#contentliasettingsrequestinventoryverification) - Requests inventory validation for the specified country.
+* [contentLiasettingsSetinventoryverificationcontact](docs/liasettings/README.md#contentliasettingssetinventoryverificationcontact) - Sets the inventory verification contract for the specified country.
+* [contentLiasettingsSetposdataprovider](docs/liasettings/README.md#contentliasettingssetposdataprovider) - Sets the POS data provider for the specified country.
+* [contentLiasettingsUpdate](docs/liasettings/README.md#contentliasettingsupdate) - Updates the LIA settings of the account. Any fields that are not provided are deleted from the resource.
 
-### orderinvoices
+### [orderinvoices](docs/orderinvoices/README.md)
 
-* `contentOrderinvoicesCreatechargeinvoice` - Creates a charge invoice for a shipment group, and triggers a charge capture for orderinvoice enabled orders.
-* `contentOrderinvoicesCreaterefundinvoice` - Creates a refund invoice for one or more shipment groups, and triggers a refund for orderinvoice enabled orders. This can only be used for line items that have previously been charged using `createChargeInvoice`. All amounts (except for the summary) are incremental with respect to the previous invoice.
+* [contentOrderinvoicesCreatechargeinvoice](docs/orderinvoices/README.md#contentorderinvoicescreatechargeinvoice) - Creates a charge invoice for a shipment group, and triggers a charge capture for orderinvoice enabled orders.
+* [contentOrderinvoicesCreaterefundinvoice](docs/orderinvoices/README.md#contentorderinvoicescreaterefundinvoice) - Creates a refund invoice for one or more shipment groups, and triggers a refund for orderinvoice enabled orders. This can only be used for line items that have previously been charged using `createChargeInvoice`. All amounts (except for the summary) are incremental with respect to the previous invoice.
 
-### orderreports
+### [orderreports](docs/orderreports/README.md)
 
-* `contentOrderreportsListdisbursements` - Retrieves a report for disbursements from your Merchant Center account.
-* `contentOrderreportsListtransactions` - Retrieves a list of transactions for a disbursement from your Merchant Center account.
+* [contentOrderreportsListdisbursements](docs/orderreports/README.md#contentorderreportslistdisbursements) - Retrieves a report for disbursements from your Merchant Center account.
+* [contentOrderreportsListtransactions](docs/orderreports/README.md#contentorderreportslisttransactions) - Retrieves a list of transactions for a disbursement from your Merchant Center account.
 
-### orderreturns
+### [orderreturns](docs/orderreturns/README.md)
 
-* `contentOrderreturnsGet` - Retrieves an order return from your Merchant Center account.
-* `contentOrderreturnsList` - Lists order returns in your Merchant Center account.
+* [contentOrderreturnsGet](docs/orderreturns/README.md#contentorderreturnsget) - Retrieves an order return from your Merchant Center account.
+* [contentOrderreturnsList](docs/orderreturns/README.md#contentorderreturnslist) - Lists order returns in your Merchant Center account.
 
-### orders
+### [orders](docs/orders/README.md)
 
-* `contentOrdersAcknowledge` - Marks an order as acknowledged.
-* `contentOrdersAdvancetestorder` - Sandbox only. Moves a test order from state "`inProgress`" to state "`pendingShipment`".
-* `contentOrdersCancel` - Cancels all line items in an order, making a full refund.
-* `contentOrdersCancellineitem` - Cancels a line item, making a full refund.
-* `contentOrdersCanceltestorderbycustomer` - Sandbox only. Cancels a test order for customer-initiated cancellation.
-* `contentOrdersCreatetestorder` - Sandbox only. Creates a test order.
-* `contentOrdersCreatetestreturn` - Sandbox only. Creates a test return.
-* `contentOrdersCustombatch` - Retrieves or modifies multiple orders in a single request.
-* `contentOrdersGet` - Retrieves an order from your Merchant Center account.
-* `contentOrdersGetbymerchantorderid` - Retrieves an order using merchant order ID.
-* `contentOrdersGettestordertemplate` - Sandbox only. Retrieves an order template that can be used to quickly create a new order in sandbox.
-* `contentOrdersInstorerefundlineitem` - Deprecated. Notifies that item return and refund was handled directly by merchant outside of Google payments processing (e.g. cash refund done in store). Note: We recommend calling the returnrefundlineitem method to refund in-store returns. We will issue the refund directly to the customer. This helps to prevent possible differences arising between merchant and Google transaction records. We also recommend having the point of sale system communicate with Google to ensure that customers do not receive a double refund by first refunding via Google then via an in-store return.
-* `contentOrdersList` - Lists the orders in your Merchant Center account.
-* `contentOrdersRefund` - Deprecated, please use returnRefundLineItem instead.
-* `contentOrdersRejectreturnlineitem` - Rejects return on an line item.
-* `contentOrdersReturnlineitem` - Returns a line item.
-* `contentOrdersReturnrefundlineitem` - Returns and refunds a line item. Note that this method can only be called on fully shipped orders. Please also note that the Orderreturns API is the preferred way to handle returns after you receive a return from a customer. You can use Orderreturns.list or Orderreturns.get to search for the return, and then use Orderreturns.processreturn to issue the refund. If the return cannot be found, then we recommend using this API to issue a refund.
-* `contentOrdersSetlineitemmetadata` - Sets (or overrides if it already exists) merchant provided annotations in the form of key-value pairs. A common use case would be to supply us with additional structured information about a line item that cannot be provided via other methods. Submitted key-value pairs can be retrieved as part of the orders resource.
-* `contentOrdersShiplineitems` - Marks line item(s) as shipped.
-* `contentOrdersUpdatelineitemshippingdetails` - Updates ship by and delivery by dates for a line item.
-* `contentOrdersUpdatemerchantorderid` - Updates the merchant order ID for a given order.
-* `contentOrdersUpdateshipment` - Updates a shipment's status, carrier, and/or tracking ID.
+* [contentOrdersAcknowledge](docs/orders/README.md#contentordersacknowledge) - Marks an order as acknowledged.
+* [contentOrdersAdvancetestorder](docs/orders/README.md#contentordersadvancetestorder) - Sandbox only. Moves a test order from state "`inProgress`" to state "`pendingShipment`".
+* [contentOrdersCancel](docs/orders/README.md#contentorderscancel) - Cancels all line items in an order, making a full refund.
+* [contentOrdersCancellineitem](docs/orders/README.md#contentorderscancellineitem) - Cancels a line item, making a full refund.
+* [contentOrdersCanceltestorderbycustomer](docs/orders/README.md#contentorderscanceltestorderbycustomer) - Sandbox only. Cancels a test order for customer-initiated cancellation.
+* [contentOrdersCreatetestorder](docs/orders/README.md#contentorderscreatetestorder) - Sandbox only. Creates a test order.
+* [contentOrdersCreatetestreturn](docs/orders/README.md#contentorderscreatetestreturn) - Sandbox only. Creates a test return.
+* [contentOrdersCustombatch](docs/orders/README.md#contentorderscustombatch) - Retrieves or modifies multiple orders in a single request.
+* [contentOrdersGet](docs/orders/README.md#contentordersget) - Retrieves an order from your Merchant Center account.
+* [contentOrdersGetbymerchantorderid](docs/orders/README.md#contentordersgetbymerchantorderid) - Retrieves an order using merchant order ID.
+* [contentOrdersGettestordertemplate](docs/orders/README.md#contentordersgettestordertemplate) - Sandbox only. Retrieves an order template that can be used to quickly create a new order in sandbox.
+* [contentOrdersInstorerefundlineitem](docs/orders/README.md#contentordersinstorerefundlineitem) - Deprecated. Notifies that item return and refund was handled directly by merchant outside of Google payments processing (e.g. cash refund done in store). Note: We recommend calling the returnrefundlineitem method to refund in-store returns. We will issue the refund directly to the customer. This helps to prevent possible differences arising between merchant and Google transaction records. We also recommend having the point of sale system communicate with Google to ensure that customers do not receive a double refund by first refunding via Google then via an in-store return.
+* [contentOrdersList](docs/orders/README.md#contentorderslist) - Lists the orders in your Merchant Center account.
+* [contentOrdersRefund](docs/orders/README.md#contentordersrefund) - Deprecated, please use returnRefundLineItem instead.
+* [contentOrdersRejectreturnlineitem](docs/orders/README.md#contentordersrejectreturnlineitem) - Rejects return on an line item.
+* [contentOrdersReturnlineitem](docs/orders/README.md#contentordersreturnlineitem) - Returns a line item.
+* [contentOrdersReturnrefundlineitem](docs/orders/README.md#contentordersreturnrefundlineitem) - Returns and refunds a line item. Note that this method can only be called on fully shipped orders. Please also note that the Orderreturns API is the preferred way to handle returns after you receive a return from a customer. You can use Orderreturns.list or Orderreturns.get to search for the return, and then use Orderreturns.processreturn to issue the refund. If the return cannot be found, then we recommend using this API to issue a refund.
+* [contentOrdersSetlineitemmetadata](docs/orders/README.md#contentorderssetlineitemmetadata) - Sets (or overrides if it already exists) merchant provided annotations in the form of key-value pairs. A common use case would be to supply us with additional structured information about a line item that cannot be provided via other methods. Submitted key-value pairs can be retrieved as part of the orders resource.
+* [contentOrdersShiplineitems](docs/orders/README.md#contentordersshiplineitems) - Marks line item(s) as shipped.
+* [contentOrdersUpdatelineitemshippingdetails](docs/orders/README.md#contentordersupdatelineitemshippingdetails) - Updates ship by and delivery by dates for a line item.
+* [contentOrdersUpdatemerchantorderid](docs/orders/README.md#contentordersupdatemerchantorderid) - Updates the merchant order ID for a given order.
+* [contentOrdersUpdateshipment](docs/orders/README.md#contentordersupdateshipment) - Updates a shipment's status, carrier, and/or tracking ID.
 
-### pos
+### [pos](docs/pos/README.md)
 
-* `contentPosCustombatch` - Batches multiple POS-related calls in a single request.
-* `contentPosDelete` - Deletes a store for the given merchant.
-* `contentPosGet` - Retrieves information about the given store.
-* `contentPosInsert` - Creates a store for the given merchant.
-* `contentPosInventory` - Submit inventory for the given merchant.
-* `contentPosList` - Lists the stores of the target merchant.
-* `contentPosSale` - Submit a sale event for the given merchant.
+* [contentPosCustombatch](docs/pos/README.md#contentposcustombatch) - Batches multiple POS-related calls in a single request.
+* [contentPosDelete](docs/pos/README.md#contentposdelete) - Deletes a store for the given merchant.
+* [contentPosGet](docs/pos/README.md#contentposget) - Retrieves information about the given store.
+* [contentPosInsert](docs/pos/README.md#contentposinsert) - Creates a store for the given merchant.
+* [contentPosInventory](docs/pos/README.md#contentposinventory) - Submit inventory for the given merchant.
+* [contentPosList](docs/pos/README.md#contentposlist) - Lists the stores of the target merchant.
+* [contentPosSale](docs/pos/README.md#contentpossale) - Submit a sale event for the given merchant.
 
-### products
+### [products](docs/products/README.md)
 
-* `contentProductsCustombatch` - Retrieves, inserts, and deletes multiple products in a single request.
-* `contentProductsDelete` - Deletes a product from your Merchant Center account.
-* `contentProductsGet` - Retrieves a product from your Merchant Center account.
-* `contentProductsInsert` - Uploads a product to your Merchant Center account. If an item with the same channel, contentLanguage, offerId, and targetCountry already exists, this method updates that entry.
-* `contentProductsList` - Lists the products in your Merchant Center account. The response might contain fewer items than specified by maxResults. Rely on nextPageToken to determine if there are more items to be requested.
+* [contentProductsCustombatch](docs/products/README.md#contentproductscustombatch) - Retrieves, inserts, and deletes multiple products in a single request.
+* [contentProductsDelete](docs/products/README.md#contentproductsdelete) - Deletes a product from your Merchant Center account.
+* [contentProductsGet](docs/products/README.md#contentproductsget) - Retrieves a product from your Merchant Center account.
+* [contentProductsInsert](docs/products/README.md#contentproductsinsert) - Uploads a product to your Merchant Center account. If an item with the same channel, contentLanguage, offerId, and targetCountry already exists, this method updates that entry.
+* [contentProductsList](docs/products/README.md#contentproductslist) - Lists the products in your Merchant Center account. The response might contain fewer items than specified by maxResults. Rely on nextPageToken to determine if there are more items to be requested.
 
-### productstatuses
+### [productstatuses](docs/productstatuses/README.md)
 
-* `contentProductstatusesCustombatch` - Gets the statuses of multiple products in a single request.
-* `contentProductstatusesGet` - Gets the status of a product from your Merchant Center account.
-* `contentProductstatusesList` - Lists the statuses of the products in your Merchant Center account.
+* [contentProductstatusesCustombatch](docs/productstatuses/README.md#contentproductstatusescustombatch) - Gets the statuses of multiple products in a single request.
+* [contentProductstatusesGet](docs/productstatuses/README.md#contentproductstatusesget) - Gets the status of a product from your Merchant Center account.
+* [contentProductstatusesList](docs/productstatuses/README.md#contentproductstatuseslist) - Lists the statuses of the products in your Merchant Center account.
 
-### shippingsettings
+### [shippingsettings](docs/shippingsettings/README.md)
 
-* `contentShippingsettingsCustombatch` - Retrieves and updates the shipping settings of multiple accounts in a single request.
-* `contentShippingsettingsGet` - Retrieves the shipping settings of the account.
-* `contentShippingsettingsGetsupportedcarriers` - Retrieves supported carriers and carrier services for an account.
-* `contentShippingsettingsGetsupportedholidays` - Retrieves supported holidays for an account.
-* `contentShippingsettingsGetsupportedpickupservices` - Retrieves supported pickup services for an account.
-* `contentShippingsettingsList` - Lists the shipping settings of the sub-accounts in your Merchant Center account.
-* `contentShippingsettingsUpdate` - Updates the shipping settings of the account. Any fields that are not provided are deleted from the resource.
+* [contentShippingsettingsCustombatch](docs/shippingsettings/README.md#contentshippingsettingscustombatch) - Retrieves and updates the shipping settings of multiple accounts in a single request.
+* [contentShippingsettingsGet](docs/shippingsettings/README.md#contentshippingsettingsget) - Retrieves the shipping settings of the account.
+* [contentShippingsettingsGetsupportedcarriers](docs/shippingsettings/README.md#contentshippingsettingsgetsupportedcarriers) - Retrieves supported carriers and carrier services for an account.
+* [contentShippingsettingsGetsupportedholidays](docs/shippingsettings/README.md#contentshippingsettingsgetsupportedholidays) - Retrieves supported holidays for an account.
+* [contentShippingsettingsGetsupportedpickupservices](docs/shippingsettings/README.md#contentshippingsettingsgetsupportedpickupservices) - Retrieves supported pickup services for an account.
+* [contentShippingsettingsList](docs/shippingsettings/README.md#contentshippingsettingslist) - Lists the shipping settings of the sub-accounts in your Merchant Center account.
+* [contentShippingsettingsUpdate](docs/shippingsettings/README.md#contentshippingsettingsupdate) - Updates the shipping settings of the account. Any fields that are not provided are deleted from the resource.
 <!-- End SDK Available Operations -->
 
 ### Maturity

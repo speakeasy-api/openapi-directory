@@ -60,14 +60,12 @@ public class Parties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountsAccountIdPartiesResponse res = new org.openapis.openapi.models.operations.GetAccountsAccountIdPartiesResponse() {{
+        org.openapis.openapi.models.operations.GetAccountsAccountIdPartiesResponse res = new org.openapis.openapi.models.operations.GetAccountsAccountIdPartiesResponse(contentType, httpRes.statusCode()) {{
             obReadParty3 = null;
             obReadParty3 = null;
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -131,14 +129,12 @@ public class Parties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountsAccountIdPartyResponse res = new org.openapis.openapi.models.operations.GetAccountsAccountIdPartyResponse() {{
+        org.openapis.openapi.models.operations.GetAccountsAccountIdPartyResponse res = new org.openapis.openapi.models.operations.GetAccountsAccountIdPartyResponse(contentType, httpRes.statusCode()) {{
             obReadParty2 = null;
             obReadParty2 = null;
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,14 +198,12 @@ public class Parties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPartyResponse res = new org.openapis.openapi.models.operations.GetPartyResponse() {{
+        org.openapis.openapi.models.operations.GetPartyResponse res = new org.openapis.openapi.models.operations.GetPartyResponse(contentType, httpRes.statusCode()) {{
             obReadParty2 = null;
             obReadParty2 = null;
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

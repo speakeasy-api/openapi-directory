@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAutomationStepExecutionsResponse {
@@ -12,6 +13,7 @@ public class DescribeAutomationStepExecutionsResponse {
      */
     
     public Object automationExecutionNotFoundException;
+
     public DescribeAutomationStepExecutionsResponse withAutomationExecutionNotFoundException(Object automationExecutionNotFoundException) {
         this.automationExecutionNotFoundException = automationExecutionNotFoundException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAutomationStepExecutionsResponse {
     
     
     public String contentType;
+
     public DescribeAutomationStepExecutionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAutomationStepExecutionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAutomationStepExecutionsResult describeAutomationStepExecutionsResult;
+
     public DescribeAutomationStepExecutionsResponse withDescribeAutomationStepExecutionsResult(org.openapis.openapi.models.shared.DescribeAutomationStepExecutionsResult describeAutomationStepExecutionsResult) {
         this.describeAutomationStepExecutionsResult = describeAutomationStepExecutionsResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAutomationStepExecutionsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeAutomationStepExecutionsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAutomationStepExecutionsResponse {
      */
     
     public Object invalidFilterKey;
+
     public DescribeAutomationStepExecutionsResponse withInvalidFilterKey(Object invalidFilterKey) {
         this.invalidFilterKey = invalidFilterKey;
         return this;
@@ -59,6 +65,7 @@ public class DescribeAutomationStepExecutionsResponse {
      */
     
     public Object invalidFilterValue;
+
     public DescribeAutomationStepExecutionsResponse withInvalidFilterValue(Object invalidFilterValue) {
         this.invalidFilterValue = invalidFilterValue;
         return this;
@@ -69,6 +76,7 @@ public class DescribeAutomationStepExecutionsResponse {
      */
     
     public Object invalidNextToken;
+
     public DescribeAutomationStepExecutionsResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -76,6 +84,7 @@ public class DescribeAutomationStepExecutionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeAutomationStepExecutionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DescribeAutomationStepExecutionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAutomationStepExecutionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeAutomationStepExecutionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

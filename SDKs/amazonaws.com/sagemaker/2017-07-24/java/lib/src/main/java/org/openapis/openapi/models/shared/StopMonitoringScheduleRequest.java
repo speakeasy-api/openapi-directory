@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopMonitoringScheduleRequest {
     @JsonProperty("MonitoringScheduleName")
     public String monitoringScheduleName;
+
     public StopMonitoringScheduleRequest withMonitoringScheduleName(String monitoringScheduleName) {
         this.monitoringScheduleName = monitoringScheduleName;
         return this;
     }
     
+    public StopMonitoringScheduleRequest(@JsonProperty("MonitoringScheduleName") String monitoringScheduleName) {
+        this.monitoringScheduleName = monitoringScheduleName;
+  }
 }

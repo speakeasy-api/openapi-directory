@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTUpdateConfigurationSetReputationMetricsEnabledResponse {
     
     public byte[] body;
+
     public POSTUpdateConfigurationSetReputationMetricsEnabledResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTUpdateConfigurationSetReputationMetricsEnabledResponse {
     
     
     public String contentType;
+
     public POSTUpdateConfigurationSetReputationMetricsEnabledResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTUpdateConfigurationSetReputationMetricsEnabledResponse {
     
     
     public Integer statusCode;
+
     public POSTUpdateConfigurationSetReputationMetricsEnabledResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTUpdateConfigurationSetReputationMetricsEnabledResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTUpdateConfigurationSetReputationMetricsEnabledResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTUpdateConfigurationSetReputationMetricsEnabledResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

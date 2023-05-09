@@ -18,6 +18,7 @@ public class SecuritySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientTlsPolicy")
     public String clientTlsPolicy;
+
     public SecuritySettings withClientTlsPolicy(String clientTlsPolicy) {
         this.clientTlsPolicy = clientTlsPolicy;
         return this;
@@ -29,9 +30,11 @@ public class SecuritySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectAltNames")
     public String[] subjectAltNames;
+
     public SecuritySettings withSubjectAltNames(String[] subjectAltNames) {
         this.subjectAltNames = subjectAltNames;
         return this;
     }
     
+    public SecuritySettings(){}
 }

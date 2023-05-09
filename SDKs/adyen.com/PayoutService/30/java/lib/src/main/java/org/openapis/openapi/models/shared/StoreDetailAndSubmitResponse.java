@@ -18,6 +18,7 @@ public class StoreDetailAndSubmitResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalData")
     public java.util.Map<String, String> additionalData;
+
     public StoreDetailAndSubmitResponse withAdditionalData(java.util.Map<String, String> additionalData) {
         this.additionalData = additionalData;
         return this;
@@ -28,6 +29,7 @@ public class StoreDetailAndSubmitResponse {
      */
     @JsonProperty("pspReference")
     public String pspReference;
+
     public StoreDetailAndSubmitResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -39,6 +41,7 @@ public class StoreDetailAndSubmitResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refusalReason")
     public String refusalReason;
+
     public StoreDetailAndSubmitResponse withRefusalReason(String refusalReason) {
         this.refusalReason = refusalReason;
         return this;
@@ -52,9 +55,14 @@ public class StoreDetailAndSubmitResponse {
      */
     @JsonProperty("resultCode")
     public String resultCode;
+
     public StoreDetailAndSubmitResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     
+    public StoreDetailAndSubmitResponse(@JsonProperty("pspReference") String pspReference, @JsonProperty("resultCode") String resultCode) {
+        this.pspReference = pspReference;
+        this.resultCode = resultCode;
+  }
 }

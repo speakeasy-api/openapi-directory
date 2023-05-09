@@ -18,6 +18,7 @@ public class BatchDeletePrintersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedPrinters")
     public FailureInfo[] failedPrinters;
+
     public BatchDeletePrintersResponse withFailedPrinters(FailureInfo[] failedPrinters) {
         this.failedPrinters = failedPrinters;
         return this;
@@ -29,9 +30,11 @@ public class BatchDeletePrintersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("printerIds")
     public String[] printerIds;
+
     public BatchDeletePrintersResponse withPrinterIds(String[] printerIds) {
         this.printerIds = printerIds;
         return this;
     }
     
+    public BatchDeletePrintersResponse(){}
 }

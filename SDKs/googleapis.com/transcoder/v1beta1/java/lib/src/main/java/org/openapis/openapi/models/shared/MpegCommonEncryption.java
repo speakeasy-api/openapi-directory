@@ -18,6 +18,7 @@ public class MpegCommonEncryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyId")
     public String keyId;
+
     public MpegCommonEncryption withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -29,9 +30,11 @@ public class MpegCommonEncryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheme")
     public String scheme;
+
     public MpegCommonEncryption withScheme(String scheme) {
         this.scheme = scheme;
         return this;
     }
     
+    public MpegCommonEncryption(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EvaluateExpressionResponse {
     
     public String contentType;
+
     public EvaluateExpressionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EvaluateExpressionResponse {
      */
     
     public org.openapis.openapi.models.shared.EvaluateExpressionOutput evaluateExpressionOutput;
+
     public EvaluateExpressionResponse withEvaluateExpressionOutput(org.openapis.openapi.models.shared.EvaluateExpressionOutput evaluateExpressionOutput) {
         this.evaluateExpressionOutput = evaluateExpressionOutput;
         return this;
@@ -29,6 +32,7 @@ public class EvaluateExpressionResponse {
      */
     
     public Object internalServiceError;
+
     public EvaluateExpressionResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class EvaluateExpressionResponse {
      */
     
     public Object invalidRequestException;
+
     public EvaluateExpressionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class EvaluateExpressionResponse {
      */
     
     public Object pipelineDeletedException;
+
     public EvaluateExpressionResponse withPipelineDeletedException(Object pipelineDeletedException) {
         this.pipelineDeletedException = pipelineDeletedException;
         return this;
@@ -59,6 +65,7 @@ public class EvaluateExpressionResponse {
      */
     
     public Object pipelineNotFoundException;
+
     public EvaluateExpressionResponse withPipelineNotFoundException(Object pipelineNotFoundException) {
         this.pipelineNotFoundException = pipelineNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class EvaluateExpressionResponse {
     
     
     public Integer statusCode;
+
     public EvaluateExpressionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class EvaluateExpressionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EvaluateExpressionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class EvaluateExpressionResponse {
      */
     
     public Object taskNotFoundException;
+
     public EvaluateExpressionResponse withTaskNotFoundException(Object taskNotFoundException) {
         this.taskNotFoundException = taskNotFoundException;
         return this;
     }
     
+    public EvaluateExpressionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

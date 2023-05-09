@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1beta1BigQueryTableSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableSourceType")
     public GoogleCloudDatacatalogV1beta1BigQueryTableSpecTableSourceTypeEnum tableSourceType;
+
     public GoogleCloudDatacatalogV1beta1BigQueryTableSpec withTableSourceType(GoogleCloudDatacatalogV1beta1BigQueryTableSpecTableSourceTypeEnum tableSourceType) {
         this.tableSourceType = tableSourceType;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1beta1BigQueryTableSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableSpec")
     public GoogleCloudDatacatalogV1beta1TableSpec tableSpec;
+
     public GoogleCloudDatacatalogV1beta1BigQueryTableSpec withTableSpec(GoogleCloudDatacatalogV1beta1TableSpec tableSpec) {
         this.tableSpec = tableSpec;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatacatalogV1beta1BigQueryTableSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewSpec")
     public GoogleCloudDatacatalogV1beta1ViewSpec viewSpec;
+
     public GoogleCloudDatacatalogV1beta1BigQueryTableSpec withViewSpec(GoogleCloudDatacatalogV1beta1ViewSpec viewSpec) {
         this.viewSpec = viewSpec;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1BigQueryTableSpec(){}
 }

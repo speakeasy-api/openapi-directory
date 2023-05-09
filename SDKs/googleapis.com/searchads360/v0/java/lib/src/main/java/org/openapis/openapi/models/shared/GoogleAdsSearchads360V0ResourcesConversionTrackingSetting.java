@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionTrackingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptedCustomerDataTerms")
     public Boolean acceptedCustomerDataTerms;
+
     public GoogleAdsSearchads360V0ResourcesConversionTrackingSetting withAcceptedCustomerDataTerms(Boolean acceptedCustomerDataTerms) {
         this.acceptedCustomerDataTerms = acceptedCustomerDataTerms;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionTrackingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionTrackingId")
     public String conversionTrackingId;
+
     public GoogleAdsSearchads360V0ResourcesConversionTrackingSetting withConversionTrackingId(String conversionTrackingId) {
         this.conversionTrackingId = conversionTrackingId;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionTrackingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionTrackingStatus")
     public GoogleAdsSearchads360V0ResourcesConversionTrackingSettingConversionTrackingStatusEnum conversionTrackingStatus;
+
     public GoogleAdsSearchads360V0ResourcesConversionTrackingSetting withConversionTrackingStatus(GoogleAdsSearchads360V0ResourcesConversionTrackingSettingConversionTrackingStatusEnum conversionTrackingStatus) {
         this.conversionTrackingStatus = conversionTrackingStatus;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionTrackingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crossAccountConversionTrackingId")
     public String crossAccountConversionTrackingId;
+
     public GoogleAdsSearchads360V0ResourcesConversionTrackingSetting withCrossAccountConversionTrackingId(String crossAccountConversionTrackingId) {
         this.crossAccountConversionTrackingId = crossAccountConversionTrackingId;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionTrackingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enhancedConversionsForLeadsEnabled")
     public Boolean enhancedConversionsForLeadsEnabled;
+
     public GoogleAdsSearchads360V0ResourcesConversionTrackingSetting withEnhancedConversionsForLeadsEnabled(Boolean enhancedConversionsForLeadsEnabled) {
         this.enhancedConversionsForLeadsEnabled = enhancedConversionsForLeadsEnabled;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionTrackingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleAdsConversionCustomer")
     public String googleAdsConversionCustomer;
+
     public GoogleAdsSearchads360V0ResourcesConversionTrackingSetting withGoogleAdsConversionCustomer(String googleAdsConversionCustomer) {
         this.googleAdsConversionCustomer = googleAdsConversionCustomer;
         return this;
@@ -84,9 +90,11 @@ public class GoogleAdsSearchads360V0ResourcesConversionTrackingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleAdsCrossAccountConversionTrackingId")
     public String googleAdsCrossAccountConversionTrackingId;
+
     public GoogleAdsSearchads360V0ResourcesConversionTrackingSetting withGoogleAdsCrossAccountConversionTrackingId(String googleAdsCrossAccountConversionTrackingId) {
         this.googleAdsCrossAccountConversionTrackingId = googleAdsCrossAccountConversionTrackingId;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesConversionTrackingSetting(){}
 }

@@ -17,6 +17,7 @@ public class TransactionInformation {
      */
     @JsonProperty("id")
     public Long id;
+
     public TransactionInformation withId(Long id) {
         this.id = id;
         return this;
@@ -27,6 +28,7 @@ public class TransactionInformation {
      */
     @JsonProperty("id_transaction")
     public Long idTransaction;
+
     public TransactionInformation withIdTransaction(Long idTransaction) {
         this.idTransaction = idTransaction;
         return this;
@@ -37,6 +39,7 @@ public class TransactionInformation {
      */
     @JsonProperty("key")
     public String key;
+
     public TransactionInformation withKey(String key) {
         this.key = key;
         return this;
@@ -48,9 +51,15 @@ public class TransactionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public TransactionInformation withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public TransactionInformation(@JsonProperty("id") Long id, @JsonProperty("id_transaction") Long idTransaction, @JsonProperty("key") String key) {
+        this.id = id;
+        this.idTransaction = idTransaction;
+        this.key = key;
+  }
 }

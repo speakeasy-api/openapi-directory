@@ -12,6 +12,7 @@ public class CertificateOrganizationCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public CertificateAddress address;
+
     public CertificateOrganizationCreate withAddress(CertificateAddress address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class CertificateOrganizationCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assumedName")
     public String assumedName;
+
     public CertificateOrganizationCreate withAssumedName(String assumedName) {
         this.assumedName = assumedName;
         return this;
@@ -33,6 +35,7 @@ public class CertificateOrganizationCreate {
      */
     @JsonProperty("name")
     public String name;
+
     public CertificateOrganizationCreate withName(String name) {
         this.name = name;
         return this;
@@ -43,6 +46,7 @@ public class CertificateOrganizationCreate {
      */
     @JsonProperty("phone")
     public String phone;
+
     public CertificateOrganizationCreate withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -54,6 +58,7 @@ public class CertificateOrganizationCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationAgent")
     public String registrationAgent;
+
     public CertificateOrganizationCreate withRegistrationAgent(String registrationAgent) {
         this.registrationAgent = registrationAgent;
         return this;
@@ -65,9 +70,14 @@ public class CertificateOrganizationCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationNumber")
     public String registrationNumber;
+
     public CertificateOrganizationCreate withRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
         return this;
     }
     
+    public CertificateOrganizationCreate(@JsonProperty("name") String name, @JsonProperty("phone") String phone) {
+        this.name = name;
+        this.phone = phone;
+  }
 }

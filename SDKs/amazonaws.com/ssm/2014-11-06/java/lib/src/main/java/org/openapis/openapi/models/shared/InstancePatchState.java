@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class InstancePatchState {
     @JsonProperty("BaselineId")
     public String baselineId;
+
     public InstancePatchState withBaselineId(String baselineId) {
         this.baselineId = baselineId;
         return this;
@@ -27,6 +28,7 @@ public class InstancePatchState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CriticalNonCompliantCount")
     public Long criticalNonCompliantCount;
+
     public InstancePatchState withCriticalNonCompliantCount(Long criticalNonCompliantCount) {
         this.criticalNonCompliantCount = criticalNonCompliantCount;
         return this;
@@ -35,6 +37,7 @@ public class InstancePatchState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedCount")
     public Long failedCount;
+
     public InstancePatchState withFailedCount(Long failedCount) {
         this.failedCount = failedCount;
         return this;
@@ -43,6 +46,7 @@ public class InstancePatchState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstallOverrideList")
     public String installOverrideList;
+
     public InstancePatchState withInstallOverrideList(String installOverrideList) {
         this.installOverrideList = installOverrideList;
         return this;
@@ -51,6 +55,7 @@ public class InstancePatchState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstalledCount")
     public Long installedCount;
+
     public InstancePatchState withInstalledCount(Long installedCount) {
         this.installedCount = installedCount;
         return this;
@@ -59,6 +64,7 @@ public class InstancePatchState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstalledOtherCount")
     public Long installedOtherCount;
+
     public InstancePatchState withInstalledOtherCount(Long installedOtherCount) {
         this.installedOtherCount = installedOtherCount;
         return this;
@@ -67,6 +73,7 @@ public class InstancePatchState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstalledPendingRebootCount")
     public Long installedPendingRebootCount;
+
     public InstancePatchState withInstalledPendingRebootCount(Long installedPendingRebootCount) {
         this.installedPendingRebootCount = installedPendingRebootCount;
         return this;
@@ -75,6 +82,7 @@ public class InstancePatchState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstalledRejectedCount")
     public Long installedRejectedCount;
+
     public InstancePatchState withInstalledRejectedCount(Long installedRejectedCount) {
         this.installedRejectedCount = installedRejectedCount;
         return this;
@@ -82,6 +90,7 @@ public class InstancePatchState {
     
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public InstancePatchState withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -92,6 +101,7 @@ public class InstancePatchState {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastNoRebootInstallOperationTime")
     public OffsetDateTime lastNoRebootInstallOperationTime;
+
     public InstancePatchState withLastNoRebootInstallOperationTime(OffsetDateTime lastNoRebootInstallOperationTime) {
         this.lastNoRebootInstallOperationTime = lastNoRebootInstallOperationTime;
         return this;
@@ -100,6 +110,7 @@ public class InstancePatchState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MissingCount")
     public Long missingCount;
+
     public InstancePatchState withMissingCount(Long missingCount) {
         this.missingCount = missingCount;
         return this;
@@ -108,6 +119,7 @@ public class InstancePatchState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotApplicableCount")
     public Long notApplicableCount;
+
     public InstancePatchState withNotApplicableCount(Long notApplicableCount) {
         this.notApplicableCount = notApplicableCount;
         return this;
@@ -115,6 +127,7 @@ public class InstancePatchState {
     
     @JsonProperty("Operation")
     public PatchOperationTypeEnum operation;
+
     public InstancePatchState withOperation(PatchOperationTypeEnum operation) {
         this.operation = operation;
         return this;
@@ -124,6 +137,7 @@ public class InstancePatchState {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("OperationEndTime")
     public OffsetDateTime operationEndTime;
+
     public InstancePatchState withOperationEndTime(OffsetDateTime operationEndTime) {
         this.operationEndTime = operationEndTime;
         return this;
@@ -133,6 +147,7 @@ public class InstancePatchState {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("OperationStartTime")
     public OffsetDateTime operationStartTime;
+
     public InstancePatchState withOperationStartTime(OffsetDateTime operationStartTime) {
         this.operationStartTime = operationStartTime;
         return this;
@@ -141,6 +156,7 @@ public class InstancePatchState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OtherNonCompliantCount")
     public Long otherNonCompliantCount;
+
     public InstancePatchState withOtherNonCompliantCount(Long otherNonCompliantCount) {
         this.otherNonCompliantCount = otherNonCompliantCount;
         return this;
@@ -149,6 +165,7 @@ public class InstancePatchState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerInformation")
     public String ownerInformation;
+
     public InstancePatchState withOwnerInformation(String ownerInformation) {
         this.ownerInformation = ownerInformation;
         return this;
@@ -156,6 +173,7 @@ public class InstancePatchState {
     
     @JsonProperty("PatchGroup")
     public String patchGroup;
+
     public InstancePatchState withPatchGroup(String patchGroup) {
         this.patchGroup = patchGroup;
         return this;
@@ -164,6 +182,7 @@ public class InstancePatchState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RebootOption")
     public RebootOptionEnum rebootOption;
+
     public InstancePatchState withRebootOption(RebootOptionEnum rebootOption) {
         this.rebootOption = rebootOption;
         return this;
@@ -172,6 +191,7 @@ public class InstancePatchState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityNonCompliantCount")
     public Long securityNonCompliantCount;
+
     public InstancePatchState withSecurityNonCompliantCount(Long securityNonCompliantCount) {
         this.securityNonCompliantCount = securityNonCompliantCount;
         return this;
@@ -180,6 +200,7 @@ public class InstancePatchState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotId")
     public String snapshotId;
+
     public InstancePatchState withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -188,9 +209,18 @@ public class InstancePatchState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnreportedNotApplicableCount")
     public Long unreportedNotApplicableCount;
+
     public InstancePatchState withUnreportedNotApplicableCount(Long unreportedNotApplicableCount) {
         this.unreportedNotApplicableCount = unreportedNotApplicableCount;
         return this;
     }
     
+    public InstancePatchState(@JsonProperty("BaselineId") String baselineId, @JsonProperty("InstanceId") String instanceId, @JsonProperty("Operation") PatchOperationTypeEnum operation, @JsonProperty("OperationEndTime") OffsetDateTime operationEndTime, @JsonProperty("OperationStartTime") OffsetDateTime operationStartTime, @JsonProperty("PatchGroup") String patchGroup) {
+        this.baselineId = baselineId;
+        this.instanceId = instanceId;
+        this.operation = operation;
+        this.operationEndTime = operationEndTime;
+        this.operationStartTime = operationStartTime;
+        this.patchGroup = patchGroup;
+  }
 }

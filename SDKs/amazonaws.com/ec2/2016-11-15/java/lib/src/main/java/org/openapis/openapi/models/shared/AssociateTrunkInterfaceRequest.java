@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AssociateTrunkInterfaceRequest {
     
     public String branchInterfaceId;
+
     public AssociateTrunkInterfaceRequest withBranchInterfaceId(String branchInterfaceId) {
         this.branchInterfaceId = branchInterfaceId;
         return this;
@@ -16,6 +17,7 @@ public class AssociateTrunkInterfaceRequest {
     
     
     public String clientToken;
+
     public AssociateTrunkInterfaceRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +25,7 @@ public class AssociateTrunkInterfaceRequest {
     
     
     public Boolean dryRun;
+
     public AssociateTrunkInterfaceRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class AssociateTrunkInterfaceRequest {
     
     
     public Long greKey;
+
     public AssociateTrunkInterfaceRequest withGreKey(Long greKey) {
         this.greKey = greKey;
         return this;
@@ -37,6 +41,7 @@ public class AssociateTrunkInterfaceRequest {
     
     
     public String trunkInterfaceId;
+
     public AssociateTrunkInterfaceRequest withTrunkInterfaceId(String trunkInterfaceId) {
         this.trunkInterfaceId = trunkInterfaceId;
         return this;
@@ -44,9 +49,14 @@ public class AssociateTrunkInterfaceRequest {
     
     
     public Long vlanId;
+
     public AssociateTrunkInterfaceRequest withVlanId(Long vlanId) {
         this.vlanId = vlanId;
         return this;
     }
     
+    public AssociateTrunkInterfaceRequest(@JsonProperty("BranchInterfaceId") String branchInterfaceId, @JsonProperty("TrunkInterfaceId") String trunkInterfaceId) {
+        this.branchInterfaceId = branchInterfaceId;
+        this.trunkInterfaceId = trunkInterfaceId;
+  }
 }

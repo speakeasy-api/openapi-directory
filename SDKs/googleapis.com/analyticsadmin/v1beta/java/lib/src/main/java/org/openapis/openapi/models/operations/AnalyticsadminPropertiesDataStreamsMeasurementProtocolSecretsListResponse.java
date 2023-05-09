@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListResponse {
     
     public String contentType;
+
     public AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListRe
      */
     
     public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1betaListMeasurementProtocolSecretsResponse googleAnalyticsAdminV1betaListMeasurementProtocolSecretsResponse;
+
     public AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListResponse withGoogleAnalyticsAdminV1betaListMeasurementProtocolSecretsResponse(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1betaListMeasurementProtocolSecretsResponse googleAnalyticsAdminV1betaListMeasurementProtocolSecretsResponse) {
         this.googleAnalyticsAdminV1betaListMeasurementProtocolSecretsResponse = googleAnalyticsAdminV1betaListMeasurementProtocolSecretsResponse;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListRe
     
     
     public Integer statusCode;
+
     public AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListRe
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -49,4 +49,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ItemTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/PutObjectResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/StorageClassEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

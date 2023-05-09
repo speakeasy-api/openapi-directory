@@ -15,9 +15,11 @@ public class TensorBoardAppSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultResourceSpec")
     public ResourceSpec defaultResourceSpec;
+
     public TensorBoardAppSettings withDefaultResourceSpec(ResourceSpec defaultResourceSpec) {
         this.defaultResourceSpec = defaultResourceSpec;
         return this;
     }
     
+    public TensorBoardAppSettings(){}
 }

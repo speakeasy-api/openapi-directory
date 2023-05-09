@@ -12,6 +12,7 @@ public class FieldSchemaUpdate {
      */
     @JsonProperty("newSchema")
     public java.util.Map<String, Object> newSchema;
+
     public FieldSchemaUpdate withNewSchema(java.util.Map<String, Object> newSchema) {
         this.newSchema = newSchema;
         return this;
@@ -22,9 +23,14 @@ public class FieldSchemaUpdate {
      */
     @JsonProperty("oldSchema")
     public java.util.Map<String, Object> oldSchema;
+
     public FieldSchemaUpdate withOldSchema(java.util.Map<String, Object> oldSchema) {
         this.oldSchema = oldSchema;
         return this;
     }
     
+    public FieldSchemaUpdate(@JsonProperty("newSchema") java.util.Map<String, Object> newSchema, @JsonProperty("oldSchema") java.util.Map<String, Object> oldSchema) {
+        this.newSchema = newSchema;
+        this.oldSchema = oldSchema;
+  }
 }

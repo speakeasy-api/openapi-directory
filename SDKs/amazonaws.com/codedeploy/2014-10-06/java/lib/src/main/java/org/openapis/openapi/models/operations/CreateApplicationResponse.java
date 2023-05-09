@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateApplicationResponse {
@@ -12,6 +13,7 @@ public class CreateApplicationResponse {
      */
     
     public Object applicationAlreadyExistsException;
+
     public CreateApplicationResponse withApplicationAlreadyExistsException(Object applicationAlreadyExistsException) {
         this.applicationAlreadyExistsException = applicationAlreadyExistsException;
         return this;
@@ -22,6 +24,7 @@ public class CreateApplicationResponse {
      */
     
     public Object applicationLimitExceededException;
+
     public CreateApplicationResponse withApplicationLimitExceededException(Object applicationLimitExceededException) {
         this.applicationLimitExceededException = applicationLimitExceededException;
         return this;
@@ -32,6 +35,7 @@ public class CreateApplicationResponse {
      */
     
     public Object applicationNameRequiredException;
+
     public CreateApplicationResponse withApplicationNameRequiredException(Object applicationNameRequiredException) {
         this.applicationNameRequiredException = applicationNameRequiredException;
         return this;
@@ -39,6 +43,7 @@ public class CreateApplicationResponse {
     
     
     public String contentType;
+
     public CreateApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateApplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateApplicationOutput createApplicationOutput;
+
     public CreateApplicationResponse withCreateApplicationOutput(org.openapis.openapi.models.shared.CreateApplicationOutput createApplicationOutput) {
         this.createApplicationOutput = createApplicationOutput;
         return this;
@@ -59,6 +65,7 @@ public class CreateApplicationResponse {
      */
     
     public Object invalidApplicationNameException;
+
     public CreateApplicationResponse withInvalidApplicationNameException(Object invalidApplicationNameException) {
         this.invalidApplicationNameException = invalidApplicationNameException;
         return this;
@@ -69,6 +76,7 @@ public class CreateApplicationResponse {
      */
     
     public Object invalidComputePlatformException;
+
     public CreateApplicationResponse withInvalidComputePlatformException(Object invalidComputePlatformException) {
         this.invalidComputePlatformException = invalidComputePlatformException;
         return this;
@@ -79,6 +87,7 @@ public class CreateApplicationResponse {
      */
     
     public Object invalidTagsToAddException;
+
     public CreateApplicationResponse withInvalidTagsToAddException(Object invalidTagsToAddException) {
         this.invalidTagsToAddException = invalidTagsToAddException;
         return this;
@@ -86,6 +95,7 @@ public class CreateApplicationResponse {
     
     
     public Integer statusCode;
+
     public CreateApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class CreateApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

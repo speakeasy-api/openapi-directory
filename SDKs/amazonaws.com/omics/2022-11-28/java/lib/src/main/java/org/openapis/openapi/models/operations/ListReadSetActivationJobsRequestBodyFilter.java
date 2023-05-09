@@ -22,6 +22,7 @@ public class ListReadSetActivationJobsRequestBodyFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAfter")
     public OffsetDateTime createdAfter;
+
     public ListReadSetActivationJobsRequestBodyFilter withCreatedAfter(OffsetDateTime createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -32,6 +33,7 @@ public class ListReadSetActivationJobsRequestBodyFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdBefore")
     public OffsetDateTime createdBefore;
+
     public ListReadSetActivationJobsRequestBodyFilter withCreatedBefore(OffsetDateTime createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -40,9 +42,11 @@ public class ListReadSetActivationJobsRequestBodyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public org.openapis.openapi.models.shared.ReadSetActivationJobStatusEnum status;
+
     public ListReadSetActivationJobsRequestBodyFilter withStatus(org.openapis.openapi.models.shared.ReadSetActivationJobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ListReadSetActivationJobsRequestBodyFilter(){}
 }

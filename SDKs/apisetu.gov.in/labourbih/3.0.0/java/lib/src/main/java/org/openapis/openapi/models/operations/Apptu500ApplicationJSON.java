@@ -15,6 +15,7 @@ public class Apptu500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Apptu500ApplicationJSONErrorEnum error;
+
     public Apptu500ApplicationJSON withError(Apptu500ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Apptu500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Apptu500ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Apptu500ApplicationJSON withErrorDescription(Apptu500ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Apptu500ApplicationJSON(){}
 }

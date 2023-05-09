@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PortMapping {
     @JsonProperty("port")
     public Long port;
+
     public PortMapping withPort(Long port) {
         this.port = port;
         return this;
@@ -19,9 +20,14 @@ public class PortMapping {
     
     @JsonProperty("protocol")
     public PortProtocolEnum protocol;
+
     public PortMapping withProtocol(PortProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public PortMapping(@JsonProperty("port") Long port, @JsonProperty("protocol") PortProtocolEnum protocol) {
+        this.port = port;
+        this.protocol = protocol;
+  }
 }

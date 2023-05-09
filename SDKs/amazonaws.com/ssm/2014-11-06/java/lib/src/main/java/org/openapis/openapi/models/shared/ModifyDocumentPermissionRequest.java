@@ -12,6 +12,7 @@ public class ModifyDocumentPermissionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountIdsToAdd")
     public String[] accountIdsToAdd;
+
     public ModifyDocumentPermissionRequest withAccountIdsToAdd(String[] accountIdsToAdd) {
         this.accountIdsToAdd = accountIdsToAdd;
         return this;
@@ -20,6 +21,7 @@ public class ModifyDocumentPermissionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountIdsToRemove")
     public String[] accountIdsToRemove;
+
     public ModifyDocumentPermissionRequest withAccountIdsToRemove(String[] accountIdsToRemove) {
         this.accountIdsToRemove = accountIdsToRemove;
         return this;
@@ -27,6 +29,7 @@ public class ModifyDocumentPermissionRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public ModifyDocumentPermissionRequest withName(String name) {
         this.name = name;
         return this;
@@ -34,6 +37,7 @@ public class ModifyDocumentPermissionRequest {
     
     @JsonProperty("PermissionType")
     public DocumentPermissionTypeEnum permissionType;
+
     public ModifyDocumentPermissionRequest withPermissionType(DocumentPermissionTypeEnum permissionType) {
         this.permissionType = permissionType;
         return this;
@@ -42,9 +46,14 @@ public class ModifyDocumentPermissionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedDocumentVersion")
     public String sharedDocumentVersion;
+
     public ModifyDocumentPermissionRequest withSharedDocumentVersion(String sharedDocumentVersion) {
         this.sharedDocumentVersion = sharedDocumentVersion;
         return this;
     }
     
+    public ModifyDocumentPermissionRequest(@JsonProperty("Name") String name, @JsonProperty("PermissionType") DocumentPermissionTypeEnum permissionType) {
+        this.name = name;
+        this.permissionType = permissionType;
+  }
 }

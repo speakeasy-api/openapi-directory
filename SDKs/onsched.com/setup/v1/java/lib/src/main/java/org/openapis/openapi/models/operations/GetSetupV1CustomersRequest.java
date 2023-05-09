@@ -12,6 +12,7 @@ public class GetSetupV1CustomersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deleted")
     public Boolean deleted;
+
     public GetSetupV1CustomersRequest withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -22,6 +23,7 @@ public class GetSetupV1CustomersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public GetSetupV1CustomersRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -32,6 +34,7 @@ public class GetSetupV1CustomersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupId")
     public String groupId;
+
     public GetSetupV1CustomersRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -42,6 +45,7 @@ public class GetSetupV1CustomersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastname")
     public String lastname;
+
     public GetSetupV1CustomersRequest withLastname(String lastname) {
         this.lastname = lastname;
         return this;
@@ -52,6 +56,7 @@ public class GetSetupV1CustomersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetSetupV1CustomersRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -62,6 +67,7 @@ public class GetSetupV1CustomersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
     public String locationId;
+
     public GetSetupV1CustomersRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -72,9 +78,11 @@ public class GetSetupV1CustomersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetSetupV1CustomersRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetSetupV1CustomersRequest(){}
 }

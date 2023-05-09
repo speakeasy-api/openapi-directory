@@ -15,6 +15,7 @@ public class AwsCertificateManagerCertificateResourceRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsCertificateManagerCertificateResourceRecord withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class AwsCertificateManagerCertificateResourceRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsCertificateManagerCertificateResourceRecord withType(String type) {
         this.type = type;
         return this;
@@ -31,9 +33,11 @@ public class AwsCertificateManagerCertificateResourceRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public AwsCertificateManagerCertificateResourceRecord withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AwsCertificateManagerCertificateResourceRecord(){}
 }

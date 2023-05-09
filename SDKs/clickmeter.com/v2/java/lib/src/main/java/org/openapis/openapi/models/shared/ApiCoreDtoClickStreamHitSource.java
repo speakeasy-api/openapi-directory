@@ -12,6 +12,7 @@ public class ApiCoreDtoClickStreamHitSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ApiCoreDtoClickStreamHitSource withId(Long id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class ApiCoreDtoClickStreamHitSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ApiCoreDtoClickStreamHitSource withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class ApiCoreDtoClickStreamHitSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("param")
     public String param;
+
     public ApiCoreDtoClickStreamHitSource withParam(String param) {
         this.param = param;
         return this;
     }
     
+    public ApiCoreDtoClickStreamHitSource(){}
 }

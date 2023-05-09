@@ -18,9 +18,11 @@ public class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentStolenInst
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("risk")
     public Float risk;
+
     public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentStolenInstrumentVerdict withRisk(Float risk) {
         this.risk = risk;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentStolenInstrumentVerdict(){}
 }

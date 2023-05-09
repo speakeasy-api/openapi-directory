@@ -69,11 +69,9 @@ public class ArtifactRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateArtifactRuleResponse res = new org.openapis.openapi.models.operations.CreateArtifactRuleResponse() {{
+        org.openapis.openapi.models.operations.CreateArtifactRuleResponse res = new org.openapis.openapi.models.operations.CreateArtifactRuleResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -120,11 +118,9 @@ public class ArtifactRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteArtifactRuleResponse res = new org.openapis.openapi.models.operations.DeleteArtifactRuleResponse() {{
+        org.openapis.openapi.models.operations.DeleteArtifactRuleResponse res = new org.openapis.openapi.models.operations.DeleteArtifactRuleResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -167,11 +163,9 @@ public class ArtifactRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteArtifactRulesResponse res = new org.openapis.openapi.models.operations.DeleteArtifactRulesResponse() {{
+        org.openapis.openapi.models.operations.DeleteArtifactRulesResponse res = new org.openapis.openapi.models.operations.DeleteArtifactRulesResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -216,12 +210,10 @@ public class ArtifactRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetArtifactRuleConfigResponse res = new org.openapis.openapi.models.operations.GetArtifactRuleConfigResponse() {{
+        org.openapis.openapi.models.operations.GetArtifactRuleConfigResponse res = new org.openapis.openapi.models.operations.GetArtifactRuleConfigResponse(contentType, httpRes.statusCode()) {{
             rule = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -271,12 +263,10 @@ public class ArtifactRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListArtifactRulesResponse res = new org.openapis.openapi.models.operations.ListArtifactRulesResponse() {{
+        org.openapis.openapi.models.operations.ListArtifactRulesResponse res = new org.openapis.openapi.models.operations.ListArtifactRulesResponse(contentType, httpRes.statusCode()) {{
             ruleTypes = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,12 +332,10 @@ public class ArtifactRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestUpdateArtifactResponse res = new org.openapis.openapi.models.operations.TestUpdateArtifactResponse() {{
+        org.openapis.openapi.models.operations.TestUpdateArtifactResponse res = new org.openapis.openapi.models.operations.TestUpdateArtifactResponse(contentType, httpRes.statusCode()) {{
             error = null;
             ruleViolationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -406,12 +394,10 @@ public class ArtifactRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateArtifactRuleConfigResponse res = new org.openapis.openapi.models.operations.UpdateArtifactRuleConfigResponse() {{
+        org.openapis.openapi.models.operations.UpdateArtifactRuleConfigResponse res = new org.openapis.openapi.models.operations.UpdateArtifactRuleConfigResponse(contentType, httpRes.statusCode()) {{
             rule = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoRetrievalInfo")
     public GoogleCloudIdentitytoolkitV2AutoRetrievalInfo autoRetrievalInfo;
+
     public GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo withAutoRetrievalInfo(GoogleCloudIdentitytoolkitV2AutoRetrievalInfo autoRetrievalInfo) {
         this.autoRetrievalInfo = autoRetrievalInfo;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iosReceipt")
     public String iosReceipt;
+
     public GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo withIosReceipt(String iosReceipt) {
         this.iosReceipt = iosReceipt;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iosSecret")
     public String iosSecret;
+
     public GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo withIosSecret(String iosSecret) {
         this.iosSecret = iosSecret;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playIntegrityToken")
     public String playIntegrityToken;
+
     public GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo withPlayIntegrityToken(String playIntegrityToken) {
         this.playIntegrityToken = playIntegrityToken;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recaptchaToken")
     public String recaptchaToken;
+
     public GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo withRecaptchaToken(String recaptchaToken) {
         this.recaptchaToken = recaptchaToken;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("safetyNetToken")
     public String safetyNetToken;
+
     public GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo withSafetyNetToken(String safetyNetToken) {
         this.safetyNetToken = safetyNetToken;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo(){}
 }

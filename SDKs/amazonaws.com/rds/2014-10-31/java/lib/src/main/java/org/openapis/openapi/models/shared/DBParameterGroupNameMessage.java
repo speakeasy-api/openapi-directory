@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DBParameterGroupNameMessage {
     
     public String dbParameterGroupName;
+
     public DBParameterGroupNameMessage withDBParameterGroupName(String dbParameterGroupName) {
         this.dbParameterGroupName = dbParameterGroupName;
         return this;
     }
     
+    public DBParameterGroupNameMessage(){}
 }

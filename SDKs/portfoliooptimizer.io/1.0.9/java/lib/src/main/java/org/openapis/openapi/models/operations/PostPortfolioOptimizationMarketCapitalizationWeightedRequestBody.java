@@ -12,6 +12,7 @@ public class PostPortfolioOptimizationMarketCapitalizationWeightedRequestBody {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioOptimizationMarketCapitalizationWeightedRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -22,9 +23,14 @@ public class PostPortfolioOptimizationMarketCapitalizationWeightedRequestBody {
      */
     @JsonProperty("assetsMarketCapitalizations")
     public Double[] assetsMarketCapitalizations;
+
     public PostPortfolioOptimizationMarketCapitalizationWeightedRequestBody withAssetsMarketCapitalizations(Double[] assetsMarketCapitalizations) {
         this.assetsMarketCapitalizations = assetsMarketCapitalizations;
         return this;
     }
     
+    public PostPortfolioOptimizationMarketCapitalizationWeightedRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsMarketCapitalizations") Double[] assetsMarketCapitalizations) {
+        this.assets = assets;
+        this.assetsMarketCapitalizations = assetsMarketCapitalizations;
+  }
 }

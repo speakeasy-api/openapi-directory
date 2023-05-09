@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PullRequestReviewRequest {
     @JsonProperty("teams")
     public Team[] teams;
+
     public PullRequestReviewRequest withTeams(Team[] teams) {
         this.teams = teams;
         return this;
@@ -19,9 +20,14 @@ public class PullRequestReviewRequest {
     
     @JsonProperty("users")
     public SimpleUser[] users;
+
     public PullRequestReviewRequest withUsers(SimpleUser[] users) {
         this.users = users;
         return this;
     }
     
+    public PullRequestReviewRequest(@JsonProperty("teams") Team[] teams, @JsonProperty("users") SimpleUser[] users) {
+        this.teams = teams;
+        this.users = users;
+  }
 }

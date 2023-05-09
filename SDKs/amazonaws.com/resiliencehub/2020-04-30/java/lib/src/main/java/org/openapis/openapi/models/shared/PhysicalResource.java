@@ -15,6 +15,7 @@ public class PhysicalResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInfo")
     public java.util.Map<String, String[]> additionalInfo;
+
     public PhysicalResource withAdditionalInfo(java.util.Map<String, String[]> additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -23,6 +24,7 @@ public class PhysicalResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appComponents")
     public AppComponent[] appComponents;
+
     public PhysicalResource withAppComponents(AppComponent[] appComponents) {
         this.appComponents = appComponents;
         return this;
@@ -31,6 +33,7 @@ public class PhysicalResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excluded")
     public Boolean excluded;
+
     public PhysicalResource withExcluded(Boolean excluded) {
         this.excluded = excluded;
         return this;
@@ -38,6 +41,7 @@ public class PhysicalResource {
     
     @JsonProperty("logicalResourceId")
     public LogicalResourceId logicalResourceId;
+
     public PhysicalResource withLogicalResourceId(LogicalResourceId logicalResourceId) {
         this.logicalResourceId = logicalResourceId;
         return this;
@@ -45,6 +49,7 @@ public class PhysicalResource {
     
     @JsonProperty("physicalResourceId")
     public PhysicalResourceId physicalResourceId;
+
     public PhysicalResource withPhysicalResourceId(PhysicalResourceId physicalResourceId) {
         this.physicalResourceId = physicalResourceId;
         return this;
@@ -53,6 +58,7 @@ public class PhysicalResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public PhysicalResource withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -60,9 +66,15 @@ public class PhysicalResource {
     
     @JsonProperty("resourceType")
     public String resourceType;
+
     public PhysicalResource withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public PhysicalResource(@JsonProperty("logicalResourceId") LogicalResourceId logicalResourceId, @JsonProperty("physicalResourceId") PhysicalResourceId physicalResourceId, @JsonProperty("resourceType") String resourceType) {
+        this.logicalResourceId = logicalResourceId;
+        this.physicalResourceId = physicalResourceId;
+        this.resourceType = resourceType;
+  }
 }

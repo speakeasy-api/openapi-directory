@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateMedicalVocabularyRequest {
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public UpdateMedicalVocabularyRequest withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -16,6 +17,7 @@ public class UpdateMedicalVocabularyRequest {
     
     @JsonProperty("VocabularyFileUri")
     public String vocabularyFileUri;
+
     public UpdateMedicalVocabularyRequest withVocabularyFileUri(String vocabularyFileUri) {
         this.vocabularyFileUri = vocabularyFileUri;
         return this;
@@ -23,9 +25,15 @@ public class UpdateMedicalVocabularyRequest {
     
     @JsonProperty("VocabularyName")
     public String vocabularyName;
+
     public UpdateMedicalVocabularyRequest withVocabularyName(String vocabularyName) {
         this.vocabularyName = vocabularyName;
         return this;
     }
     
+    public UpdateMedicalVocabularyRequest(@JsonProperty("LanguageCode") LanguageCodeEnum languageCode, @JsonProperty("VocabularyFileUri") String vocabularyFileUri, @JsonProperty("VocabularyName") String vocabularyName) {
+        this.languageCode = languageCode;
+        this.vocabularyFileUri = vocabularyFileUri;
+        this.vocabularyName = vocabularyName;
+  }
 }

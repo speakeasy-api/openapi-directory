@@ -62,10 +62,8 @@ public class StromkontoLedger {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrepareTransactionResponse res = new org.openapis.openapi.models.operations.PrepareTransactionResponse() {{
+        org.openapis.openapi.models.operations.PrepareTransactionResponse res = new org.openapis.openapi.models.operations.PrepareTransactionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,11 +100,9 @@ public class StromkontoLedger {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StromkontoBalancesResponse res = new org.openapis.openapi.models.operations.StromkontoBalancesResponse() {{
+        org.openapis.openapi.models.operations.StromkontoBalancesResponse res = new org.openapis.openapi.models.operations.StromkontoBalancesResponse(contentType, httpRes.statusCode()) {{
             balances = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class StromkontoLedger {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StromkontoChoicesResponse res = new org.openapis.openapi.models.operations.StromkontoChoicesResponse() {{
+        org.openapis.openapi.models.operations.StromkontoChoicesResponse res = new org.openapis.openapi.models.operations.StromkontoChoicesResponse(contentType, httpRes.statusCode()) {{
             balances = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class StromkontoLedger {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StromkontoLoginResponse res = new org.openapis.openapi.models.operations.StromkontoLoginResponse() {{
+        org.openapis.openapi.models.operations.StromkontoLoginResponse res = new org.openapis.openapi.models.operations.StromkontoLoginResponse(contentType, httpRes.statusCode()) {{
             stromkontoLogin200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -238,10 +230,8 @@ public class StromkontoLedger {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StromkontoRegisterResponse res = new org.openapis.openapi.models.operations.StromkontoRegisterResponse() {{
+        org.openapis.openapi.models.operations.StromkontoRegisterResponse res = new org.openapis.openapi.models.operations.StromkontoRegisterResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

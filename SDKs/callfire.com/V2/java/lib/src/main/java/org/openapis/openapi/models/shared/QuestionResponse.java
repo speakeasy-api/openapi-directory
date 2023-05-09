@@ -18,6 +18,7 @@ public class QuestionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("question")
     public String question;
+
     public QuestionResponse withQuestion(String question) {
         this.question = question;
         return this;
@@ -29,9 +30,11 @@ public class QuestionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public String response;
+
     public QuestionResponse withResponse(String response) {
         this.response = response;
         return this;
     }
     
+    public QuestionResponse(){}
 }

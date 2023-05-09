@@ -15,6 +15,7 @@ public class GetFirewallsIdActionsActionsResponseActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public GetFirewallsIdActionsActionsResponseActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class GetFirewallsIdActionsActionsResponseActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public GetFirewallsIdActionsActionsResponseActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetFirewallsIdActionsActionsResponseActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

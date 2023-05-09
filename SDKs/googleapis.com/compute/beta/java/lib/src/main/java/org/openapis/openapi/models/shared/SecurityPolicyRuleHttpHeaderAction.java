@@ -15,9 +15,11 @@ public class SecurityPolicyRuleHttpHeaderAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestHeadersToAdds")
     public SecurityPolicyRuleHttpHeaderActionHttpHeaderOption[] requestHeadersToAdds;
+
     public SecurityPolicyRuleHttpHeaderAction withRequestHeadersToAdds(SecurityPolicyRuleHttpHeaderActionHttpHeaderOption[] requestHeadersToAdds) {
         this.requestHeadersToAdds = requestHeadersToAdds;
         return this;
     }
     
+    public SecurityPolicyRuleHttpHeaderAction(){}
 }

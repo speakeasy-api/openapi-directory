@@ -18,6 +18,7 @@ public class EventRecordRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentTimeMillis")
     public String currentTimeMillis;
+
     public EventRecordRequest withCurrentTimeMillis(String currentTimeMillis) {
         this.currentTimeMillis = currentTimeMillis;
         return this;
@@ -29,6 +30,7 @@ public class EventRecordRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public EventRecordRequest withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class EventRecordRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public EventRecordRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -51,9 +54,11 @@ public class EventRecordRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timePeriods")
     public EventPeriodUpdate[] timePeriods;
+
     public EventRecordRequest withTimePeriods(EventPeriodUpdate[] timePeriods) {
         this.timePeriods = timePeriods;
         return this;
     }
     
+    public EventRecordRequest(){}
 }

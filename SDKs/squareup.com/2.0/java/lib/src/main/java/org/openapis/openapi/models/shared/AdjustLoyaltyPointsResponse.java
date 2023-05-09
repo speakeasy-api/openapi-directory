@@ -19,6 +19,7 @@ public class AdjustLoyaltyPointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public AdjustLoyaltyPointsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -31,9 +32,11 @@ public class AdjustLoyaltyPointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public LoyaltyEvent event;
+
     public AdjustLoyaltyPointsResponse withEvent(LoyaltyEvent event) {
         this.event = event;
         return this;
     }
     
+    public AdjustLoyaltyPointsResponse(){}
 }

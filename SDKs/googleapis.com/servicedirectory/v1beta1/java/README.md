@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsListSecurity;
 import org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsListRequest;
 import org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsListResponse;
+import org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsListSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -29,35 +28,36 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ServicedirectoryProjectsLocationsListRequest req = new ServicedirectoryProjectsLocationsListRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                filter = "nulla";
-                key = "corrupti";
-                name = "illum";
+            ServicedirectoryProjectsLocationsListRequest req = new ServicedirectoryProjectsLocationsListRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                filter = "corrupti";
+                key = "illum";
                 oauthToken = "vel";
-                pageSize = 623564;
+                pageSize = 623564L;
                 pageToken = "deserunt";
                 prettyPrint = false;
                 quotaUser = "suscipit";
                 uploadType = "iure";
                 uploadProtocol = "magnam";
-            }}            
+            }};            
 
-            ServicedirectoryProjectsLocationsListResponse res = sdk.projects.servicedirectoryProjectsLocationsList(req, new ServicedirectoryProjectsLocationsListSecurity() {{
+            ServicedirectoryProjectsLocationsListResponse res = sdk.projects.servicedirectoryProjectsLocationsList(req, new ServicedirectoryProjectsLocationsListSecurity("debitis", "ipsa") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.listLocationsResponse.isPresent()) {
+            if (res.listLocationsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -65,22 +65,22 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `servicedirectoryProjectsLocationsList` - Lists information about the supported locations for this service.
-* `servicedirectoryProjectsLocationsNamespacesCreate` - Creates a namespace, and returns the new namespace.
-* `servicedirectoryProjectsLocationsNamespacesList` - Lists all namespaces.
-* `servicedirectoryProjectsLocationsNamespacesServicesCreate` - Creates a service, and returns the new service.
-* `servicedirectoryProjectsLocationsNamespacesServicesEndpointsCreate` - Creates an endpoint, and returns the new endpoint.
-* `servicedirectoryProjectsLocationsNamespacesServicesEndpointsDelete` - Deletes an endpoint.
-* `servicedirectoryProjectsLocationsNamespacesServicesEndpointsGet` - Gets an endpoint.
-* `servicedirectoryProjectsLocationsNamespacesServicesEndpointsList` - Lists all endpoints.
-* `servicedirectoryProjectsLocationsNamespacesServicesEndpointsPatch` - Updates an endpoint.
-* `servicedirectoryProjectsLocationsNamespacesServicesList` - Lists all services belonging to a namespace.
-* `servicedirectoryProjectsLocationsNamespacesServicesResolve` - Returns a service and its associated endpoints. Resolving a service is not considered an active developer method.
-* `servicedirectoryProjectsLocationsRegistrationPoliciesGetIamPolicy` - Gets the IAM Policy for a resource
-* `servicedirectoryProjectsLocationsRegistrationPoliciesSetIamPolicy` - Sets the IAM Policy for a resource
-* `servicedirectoryProjectsLocationsRegistrationPoliciesTestIamPermissions` - Tests IAM permissions for a resource (namespace, service or service workload only).
+* [servicedirectoryProjectsLocationsList](docs/projects/README.md#servicedirectoryprojectslocationslist) - Lists information about the supported locations for this service.
+* [servicedirectoryProjectsLocationsNamespacesCreate](docs/projects/README.md#servicedirectoryprojectslocationsnamespacescreate) - Creates a namespace, and returns the new namespace.
+* [servicedirectoryProjectsLocationsNamespacesList](docs/projects/README.md#servicedirectoryprojectslocationsnamespaceslist) - Lists all namespaces.
+* [servicedirectoryProjectsLocationsNamespacesServicesCreate](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicescreate) - Creates a service, and returns the new service.
+* [servicedirectoryProjectsLocationsNamespacesServicesEndpointsCreate](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicesendpointscreate) - Creates an endpoint, and returns the new endpoint.
+* [servicedirectoryProjectsLocationsNamespacesServicesEndpointsDelete](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicesendpointsdelete) - Deletes an endpoint.
+* [servicedirectoryProjectsLocationsNamespacesServicesEndpointsGet](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicesendpointsget) - Gets an endpoint.
+* [servicedirectoryProjectsLocationsNamespacesServicesEndpointsList](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicesendpointslist) - Lists all endpoints.
+* [servicedirectoryProjectsLocationsNamespacesServicesEndpointsPatch](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicesendpointspatch) - Updates an endpoint.
+* [servicedirectoryProjectsLocationsNamespacesServicesList](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesserviceslist) - Lists all services belonging to a namespace.
+* [servicedirectoryProjectsLocationsNamespacesServicesResolve](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicesresolve) - Returns a service and its associated endpoints. Resolving a service is not considered an active developer method.
+* [servicedirectoryProjectsLocationsRegistrationPoliciesGetIamPolicy](docs/projects/README.md#servicedirectoryprojectslocationsregistrationpoliciesgetiampolicy) - Gets the IAM Policy for a resource
+* [servicedirectoryProjectsLocationsRegistrationPoliciesSetIamPolicy](docs/projects/README.md#servicedirectoryprojectslocationsregistrationpoliciessetiampolicy) - Sets the IAM Policy for a resource
+* [servicedirectoryProjectsLocationsRegistrationPoliciesTestIamPermissions](docs/projects/README.md#servicedirectoryprojectslocationsregistrationpoliciestestiampermissions) - Tests IAM permissions for a resource (namespace, service or service workload only).
 <!-- End SDK Available Operations -->
 
 ### Maturity

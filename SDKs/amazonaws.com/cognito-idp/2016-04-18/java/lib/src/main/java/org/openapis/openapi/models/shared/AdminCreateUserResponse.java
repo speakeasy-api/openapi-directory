@@ -15,9 +15,11 @@ public class AdminCreateUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("User")
     public UserType user;
+
     public AdminCreateUserResponse withUser(UserType user) {
         this.user = user;
         return this;
     }
     
+    public AdminCreateUserResponse(){}
 }

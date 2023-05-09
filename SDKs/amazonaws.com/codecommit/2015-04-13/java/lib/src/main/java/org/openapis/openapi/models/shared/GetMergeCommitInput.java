@@ -12,6 +12,7 @@ public class GetMergeCommitInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictDetailLevel")
     public ConflictDetailLevelTypeEnumEnum conflictDetailLevel;
+
     public GetMergeCommitInput withConflictDetailLevel(ConflictDetailLevelTypeEnumEnum conflictDetailLevel) {
         this.conflictDetailLevel = conflictDetailLevel;
         return this;
@@ -20,6 +21,7 @@ public class GetMergeCommitInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictResolutionStrategy")
     public ConflictResolutionStrategyTypeEnumEnum conflictResolutionStrategy;
+
     public GetMergeCommitInput withConflictResolutionStrategy(ConflictResolutionStrategyTypeEnumEnum conflictResolutionStrategy) {
         this.conflictResolutionStrategy = conflictResolutionStrategy;
         return this;
@@ -27,6 +29,7 @@ public class GetMergeCommitInput {
     
     @JsonProperty("destinationCommitSpecifier")
     public String destinationCommitSpecifier;
+
     public GetMergeCommitInput withDestinationCommitSpecifier(String destinationCommitSpecifier) {
         this.destinationCommitSpecifier = destinationCommitSpecifier;
         return this;
@@ -34,6 +37,7 @@ public class GetMergeCommitInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public GetMergeCommitInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -41,9 +45,15 @@ public class GetMergeCommitInput {
     
     @JsonProperty("sourceCommitSpecifier")
     public String sourceCommitSpecifier;
+
     public GetMergeCommitInput withSourceCommitSpecifier(String sourceCommitSpecifier) {
         this.sourceCommitSpecifier = sourceCommitSpecifier;
         return this;
     }
     
+    public GetMergeCommitInput(@JsonProperty("destinationCommitSpecifier") String destinationCommitSpecifier, @JsonProperty("repositoryName") String repositoryName, @JsonProperty("sourceCommitSpecifier") String sourceCommitSpecifier) {
+        this.destinationCommitSpecifier = destinationCommitSpecifier;
+        this.repositoryName = repositoryName;
+        this.sourceCommitSpecifier = sourceCommitSpecifier;
+  }
 }

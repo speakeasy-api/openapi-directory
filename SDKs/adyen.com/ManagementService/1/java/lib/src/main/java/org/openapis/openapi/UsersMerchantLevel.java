@@ -64,12 +64,10 @@ public class UsersMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersResponse(contentType, httpRes.statusCode()) {{
             listMerchantUsersResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -119,12 +117,10 @@ public class UsersMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersUserIdResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersUserIdResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersUserIdResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersUserIdResponse(contentType, httpRes.statusCode()) {{
             user = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,12 +172,10 @@ public class UsersMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdUsersUserIdResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdUsersUserIdResponse() {{
+        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdUsersUserIdResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdUsersUserIdResponse(contentType, httpRes.statusCode()) {{
             user = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -233,12 +227,10 @@ public class UsersMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMerchantsMerchantIdUsersResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdUsersResponse() {{
+        org.openapis.openapi.models.operations.PostMerchantsMerchantIdUsersResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdUsersResponse(contentType, httpRes.statusCode()) {{
             createUserResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

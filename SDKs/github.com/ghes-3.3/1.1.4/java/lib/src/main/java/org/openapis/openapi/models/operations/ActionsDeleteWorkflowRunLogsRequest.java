@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsDeleteWorkflowRunLogsRequest {
@@ -12,6 +13,7 @@ public class ActionsDeleteWorkflowRunLogsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsDeleteWorkflowRunLogsRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -22,6 +24,7 @@ public class ActionsDeleteWorkflowRunLogsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsDeleteWorkflowRunLogsRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -32,9 +35,15 @@ public class ActionsDeleteWorkflowRunLogsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=run_id")
     public Long runId;
+
     public ActionsDeleteWorkflowRunLogsRequest withRunId(Long runId) {
         this.runId = runId;
         return this;
     }
     
+    public ActionsDeleteWorkflowRunLogsRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("run_id") Long runId) {
+        this.owner = owner;
+        this.repo = repo;
+        this.runId = runId;
+  }
 }

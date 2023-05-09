@@ -12,9 +12,11 @@ public class GetEntitySetHomologsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject")
     public String[] subject;
+
     public GetEntitySetHomologsRequest withSubject(String[] subject) {
         this.subject = subject;
         return this;
     }
     
+    public GetEntitySetHomologsRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNetworkSmPerformanceHistoryResponse {
     
     public String contentType;
+
     public GetNetworkSmPerformanceHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetNetworkSmPerformanceHistoryResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetNetworkSmPerformanceHistoryResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetNetworkSmPerformanceHistoryResponse {
     
     
     public Integer statusCode;
+
     public GetNetworkSmPerformanceHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetNetworkSmPerformanceHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNetworkSmPerformanceHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetNetworkSmPerformanceHistoryResponse {
      */
     
     public java.util.Map<String, Object>[] getNetworkSmPerformanceHistory200ApplicationJSONObjects;
+
     public GetNetworkSmPerformanceHistoryResponse withGetNetworkSmPerformanceHistory200ApplicationJSONObjects(java.util.Map<String, Object>[] getNetworkSmPerformanceHistory200ApplicationJSONObjects) {
         this.getNetworkSmPerformanceHistory200ApplicationJSONObjects = getNetworkSmPerformanceHistory200ApplicationJSONObjects;
         return this;
     }
     
+    public GetNetworkSmPerformanceHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

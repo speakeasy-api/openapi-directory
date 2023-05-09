@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1BargeInConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noBargeInDuration")
     public String noBargeInDuration;
+
     public GoogleCloudDialogflowV2beta1BargeInConfig withNoBargeInDuration(String noBargeInDuration) {
         this.noBargeInDuration = noBargeInDuration;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1BargeInConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalDuration")
     public String totalDuration;
+
     public GoogleCloudDialogflowV2beta1BargeInConfig withTotalDuration(String totalDuration) {
         this.totalDuration = totalDuration;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1BargeInConfig(){}
 }

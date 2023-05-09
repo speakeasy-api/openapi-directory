@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DurationField {
     
     public String name;
+
     public DurationField withName(String name) {
         this.name = name;
         return this;
@@ -16,6 +17,7 @@ public class DurationField {
     
     
     public Boolean precise;
+
     public DurationField withPrecise(Boolean precise) {
         this.precise = precise;
         return this;
@@ -23,6 +25,7 @@ public class DurationField {
     
     
     public Boolean supported;
+
     public DurationField withSupported(Boolean supported) {
         this.supported = supported;
         return this;
@@ -30,6 +33,7 @@ public class DurationField {
     
     
     public DurationFieldType type;
+
     public DurationField withType(DurationFieldType type) {
         this.type = type;
         return this;
@@ -37,9 +41,11 @@ public class DurationField {
     
     
     public Long unitMillis;
+
     public DurationField withUnitMillis(Long unitMillis) {
         this.unitMillis = unitMillis;
         return this;
     }
     
+    public DurationField(){}
 }

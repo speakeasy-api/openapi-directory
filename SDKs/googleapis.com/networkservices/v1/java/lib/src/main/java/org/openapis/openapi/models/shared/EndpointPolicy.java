@@ -18,6 +18,7 @@ public class EndpointPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationPolicy")
     public String authorizationPolicy;
+
     public EndpointPolicy withAuthorizationPolicy(String authorizationPolicy) {
         this.authorizationPolicy = authorizationPolicy;
         return this;
@@ -29,6 +30,7 @@ public class EndpointPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientTlsPolicy")
     public String clientTlsPolicy;
+
     public EndpointPolicy withClientTlsPolicy(String clientTlsPolicy) {
         this.clientTlsPolicy = clientTlsPolicy;
         return this;
@@ -40,6 +42,7 @@ public class EndpointPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public EndpointPolicy withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +54,7 @@ public class EndpointPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EndpointPolicy withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class EndpointPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpointMatcher")
     public EndpointMatcher endpointMatcher;
+
     public EndpointPolicy withEndpointMatcher(EndpointMatcher endpointMatcher) {
         this.endpointMatcher = endpointMatcher;
         return this;
@@ -73,6 +78,7 @@ public class EndpointPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public EndpointPolicy withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -84,6 +90,7 @@ public class EndpointPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EndpointPolicy withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class EndpointPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverTlsPolicy")
     public String serverTlsPolicy;
+
     public EndpointPolicy withServerTlsPolicy(String serverTlsPolicy) {
         this.serverTlsPolicy = serverTlsPolicy;
         return this;
@@ -106,6 +114,7 @@ public class EndpointPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trafficPortSelector")
     public TrafficPortSelector trafficPortSelector;
+
     public EndpointPolicy withTrafficPortSelector(TrafficPortSelector trafficPortSelector) {
         this.trafficPortSelector = trafficPortSelector;
         return this;
@@ -117,6 +126,7 @@ public class EndpointPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public EndpointPolicyTypeEnum type;
+
     public EndpointPolicy withType(EndpointPolicyTypeEnum type) {
         this.type = type;
         return this;
@@ -128,9 +138,11 @@ public class EndpointPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public EndpointPolicy withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public EndpointPolicy(){}
 }

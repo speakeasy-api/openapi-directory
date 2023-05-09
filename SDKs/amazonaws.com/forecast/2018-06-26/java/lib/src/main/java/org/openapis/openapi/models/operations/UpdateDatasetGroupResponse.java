@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDatasetGroupResponse {
     
     public String contentType;
+
     public UpdateDatasetGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDatasetGroupResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateDatasetGroupResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDatasetGroupResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateDatasetGroupResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDatasetGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateDatasetGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateDatasetGroupResponse {
     
     
     public Integer statusCode;
+
     public UpdateDatasetGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateDatasetGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDatasetGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateDatasetGroupResponse {
      */
     
     public java.util.Map<String, Object> updateDatasetGroupResponse;
+
     public UpdateDatasetGroupResponse withUpdateDatasetGroupResponse(java.util.Map<String, Object> updateDatasetGroupResponse) {
         this.updateDatasetGroupResponse = updateDatasetGroupResponse;
         return this;
     }
     
+    public UpdateDatasetGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

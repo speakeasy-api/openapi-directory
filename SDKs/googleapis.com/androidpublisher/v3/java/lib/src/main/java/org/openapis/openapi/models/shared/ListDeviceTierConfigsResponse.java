@@ -18,6 +18,7 @@ public class ListDeviceTierConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceTierConfigs")
     public DeviceTierConfig[] deviceTierConfigs;
+
     public ListDeviceTierConfigsResponse withDeviceTierConfigs(DeviceTierConfig[] deviceTierConfigs) {
         this.deviceTierConfigs = deviceTierConfigs;
         return this;
@@ -29,9 +30,11 @@ public class ListDeviceTierConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListDeviceTierConfigsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListDeviceTierConfigsResponse(){}
 }

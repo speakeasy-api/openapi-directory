@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AutoEnable {
     @JsonProperty("ec2")
     public Boolean ec2;
+
     public AutoEnable withEc2(Boolean ec2) {
         this.ec2 = ec2;
         return this;
@@ -21,6 +22,7 @@ public class AutoEnable {
     
     @JsonProperty("ecr")
     public Boolean ecr;
+
     public AutoEnable withEcr(Boolean ecr) {
         this.ecr = ecr;
         return this;
@@ -29,9 +31,14 @@ public class AutoEnable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambda")
     public Boolean lambda;
+
     public AutoEnable withLambda(Boolean lambda) {
         this.lambda = lambda;
         return this;
     }
     
+    public AutoEnable(@JsonProperty("ec2") Boolean ec2, @JsonProperty("ecr") Boolean ecr) {
+        this.ec2 = ec2;
+        this.ecr = ecr;
+  }
 }

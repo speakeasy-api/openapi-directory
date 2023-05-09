@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDeviceResourcesResponse {
@@ -12,6 +13,7 @@ public class ListDeviceResourcesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListDeviceResourcesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListDeviceResourcesResponse {
     
     
     public String contentType;
+
     public ListDeviceResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListDeviceResourcesResponse {
      */
     
     public Object internalServerException;
+
     public ListDeviceResourcesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListDeviceResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDeviceResourcesOutput listDeviceResourcesOutput;
+
     public ListDeviceResourcesResponse withListDeviceResourcesOutput(org.openapis.openapi.models.shared.ListDeviceResourcesOutput listDeviceResourcesOutput) {
         this.listDeviceResourcesOutput = listDeviceResourcesOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListDeviceResourcesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListDeviceResourcesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListDeviceResourcesResponse {
     
     
     public Integer statusCode;
+
     public ListDeviceResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListDeviceResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDeviceResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListDeviceResourcesResponse {
      */
     
     public Object throttlingException;
+
     public ListDeviceResourcesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListDeviceResourcesResponse {
      */
     
     public Object validationException;
+
     public ListDeviceResourcesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListDeviceResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

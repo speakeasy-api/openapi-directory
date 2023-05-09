@@ -18,6 +18,7 @@ public class IgnoreJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public IgnoreJobRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -29,9 +30,11 @@ public class IgnoreJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phaseId")
     public String phaseId;
+
     public IgnoreJobRequest withPhaseId(String phaseId) {
         this.phaseId = phaseId;
         return this;
     }
     
+    public IgnoreJobRequest(){}
 }

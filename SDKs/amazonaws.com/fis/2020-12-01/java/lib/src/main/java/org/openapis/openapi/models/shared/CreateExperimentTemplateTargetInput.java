@@ -15,6 +15,7 @@ public class CreateExperimentTemplateTargetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public ExperimentTemplateTargetInputFilter[] filters;
+
     public CreateExperimentTemplateTargetInput withFilters(ExperimentTemplateTargetInputFilter[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +24,7 @@ public class CreateExperimentTemplateTargetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, String> parameters;
+
     public CreateExperimentTemplateTargetInput withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -31,6 +33,7 @@ public class CreateExperimentTemplateTargetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceArns")
     public String[] resourceArns;
+
     public CreateExperimentTemplateTargetInput withResourceArns(String[] resourceArns) {
         this.resourceArns = resourceArns;
         return this;
@@ -39,6 +42,7 @@ public class CreateExperimentTemplateTargetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceTags")
     public java.util.Map<String, String> resourceTags;
+
     public CreateExperimentTemplateTargetInput withResourceTags(java.util.Map<String, String> resourceTags) {
         this.resourceTags = resourceTags;
         return this;
@@ -46,6 +50,7 @@ public class CreateExperimentTemplateTargetInput {
     
     @JsonProperty("resourceType")
     public String resourceType;
+
     public CreateExperimentTemplateTargetInput withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -53,9 +58,14 @@ public class CreateExperimentTemplateTargetInput {
     
     @JsonProperty("selectionMode")
     public String selectionMode;
+
     public CreateExperimentTemplateTargetInput withSelectionMode(String selectionMode) {
         this.selectionMode = selectionMode;
         return this;
     }
     
+    public CreateExperimentTemplateTargetInput(@JsonProperty("resourceType") String resourceType, @JsonProperty("selectionMode") String selectionMode) {
+        this.resourceType = resourceType;
+        this.selectionMode = selectionMode;
+  }
 }

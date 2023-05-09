@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAccessControlConfigurationsRequest {
     @JsonProperty("IndexId")
     public String indexId;
+
     public ListAccessControlConfigurationsRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -19,6 +20,7 @@ public class ListAccessControlConfigurationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAccessControlConfigurationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListAccessControlConfigurationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAccessControlConfigurationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAccessControlConfigurationsRequest(@JsonProperty("IndexId") String indexId) {
+        this.indexId = indexId;
+  }
 }

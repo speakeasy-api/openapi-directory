@@ -15,6 +15,7 @@ public class CreateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateClusterRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateClusterRequestBody {
      */
     @JsonProperty("ClusterName")
     public String clusterName;
+
     public CreateClusterRequestBody withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -36,9 +38,13 @@ public class CreateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateClusterRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateClusterRequestBody(@JsonProperty("ClusterName") String clusterName) {
+        this.clusterName = clusterName;
+  }
 }

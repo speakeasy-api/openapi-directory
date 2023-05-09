@@ -15,6 +15,7 @@ public class TargetResourceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TargetResourceType withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class TargetResourceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, TargetResourceTypeParameter> parameters;
+
     public TargetResourceType withParameters(java.util.Map<String, TargetResourceTypeParameter> parameters) {
         this.parameters = parameters;
         return this;
@@ -31,9 +33,11 @@ public class TargetResourceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public String resourceType;
+
     public TargetResourceType withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public TargetResourceType(){}
 }

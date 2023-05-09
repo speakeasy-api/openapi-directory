@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSensitiveDataOccurrencesAvailabilityResponse {
@@ -12,6 +13,7 @@ public class GetSensitiveDataOccurrencesAvailabilityResponse {
      */
     
     public Object accessDeniedException;
+
     public GetSensitiveDataOccurrencesAvailabilityResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetSensitiveDataOccurrencesAvailabilityResponse {
     
     
     public String contentType;
+
     public GetSensitiveDataOccurrencesAvailabilityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSensitiveDataOccurrencesAvailabilityResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSensitiveDataOccurrencesAvailabilityResponse getSensitiveDataOccurrencesAvailabilityResponse;
+
     public GetSensitiveDataOccurrencesAvailabilityResponse withGetSensitiveDataOccurrencesAvailabilityResponse(org.openapis.openapi.models.shared.GetSensitiveDataOccurrencesAvailabilityResponse getSensitiveDataOccurrencesAvailabilityResponse) {
         this.getSensitiveDataOccurrencesAvailabilityResponse = getSensitiveDataOccurrencesAvailabilityResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetSensitiveDataOccurrencesAvailabilityResponse {
      */
     
     public Object internalServerException;
+
     public GetSensitiveDataOccurrencesAvailabilityResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetSensitiveDataOccurrencesAvailabilityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSensitiveDataOccurrencesAvailabilityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetSensitiveDataOccurrencesAvailabilityResponse {
     
     
     public Integer statusCode;
+
     public GetSensitiveDataOccurrencesAvailabilityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetSensitiveDataOccurrencesAvailabilityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSensitiveDataOccurrencesAvailabilityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetSensitiveDataOccurrencesAvailabilityResponse {
      */
     
     public Object throttlingException;
+
     public GetSensitiveDataOccurrencesAvailabilityResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetSensitiveDataOccurrencesAvailabilityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

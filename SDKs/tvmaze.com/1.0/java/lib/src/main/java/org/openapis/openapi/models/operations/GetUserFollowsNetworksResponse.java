@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUserFollowsNetworksResponse {
     
     public String contentType;
+
     public GetUserFollowsNetworksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetUserFollowsNetworksResponse {
      */
     
     public org.openapis.openapi.models.shared.NetworkFollow[] networkFollows;
+
     public GetUserFollowsNetworksResponse withNetworkFollows(org.openapis.openapi.models.shared.NetworkFollow[] networkFollows) {
         this.networkFollows = networkFollows;
         return this;
@@ -26,6 +29,7 @@ public class GetUserFollowsNetworksResponse {
     
     
     public Integer statusCode;
+
     public GetUserFollowsNetworksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetUserFollowsNetworksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUserFollowsNetworksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetUserFollowsNetworksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

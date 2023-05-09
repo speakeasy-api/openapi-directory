@@ -15,6 +15,7 @@ public class Vpc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroups")
     public String[] securityGroups;
+
     public Vpc withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -22,9 +23,13 @@ public class Vpc {
     
     @JsonProperty("subnets")
     public String[] subnets;
+
     public Vpc withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
     }
     
+    public Vpc(@JsonProperty("subnets") String[] subnets) {
+        this.subnets = subnets;
+  }
 }

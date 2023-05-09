@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourceRequestStatusResponse {
     
     public String contentType;
+
     public GetResourceRequestStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetResourceRequestStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetResourceRequestStatusOutput getResourceRequestStatusOutput;
+
     public GetResourceRequestStatusResponse withGetResourceRequestStatusOutput(org.openapis.openapi.models.shared.GetResourceRequestStatusOutput getResourceRequestStatusOutput) {
         this.getResourceRequestStatusOutput = getResourceRequestStatusOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetResourceRequestStatusResponse {
      */
     
     public Object requestTokenNotFoundException;
+
     public GetResourceRequestStatusResponse withRequestTokenNotFoundException(Object requestTokenNotFoundException) {
         this.requestTokenNotFoundException = requestTokenNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class GetResourceRequestStatusResponse {
     
     
     public Integer statusCode;
+
     public GetResourceRequestStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetResourceRequestStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourceRequestStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetResourceRequestStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class VpcInfoPeeringOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowDnsResolutionFromRemoteVpc")
     public Boolean allowDnsResolutionFromRemoteVpc;
+
     public VpcInfoPeeringOptionsDetails withAllowDnsResolutionFromRemoteVpc(Boolean allowDnsResolutionFromRemoteVpc) {
         this.allowDnsResolutionFromRemoteVpc = allowDnsResolutionFromRemoteVpc;
         return this;
@@ -23,6 +24,7 @@ public class VpcInfoPeeringOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowEgressFromLocalClassicLinkToRemoteVpc")
     public Boolean allowEgressFromLocalClassicLinkToRemoteVpc;
+
     public VpcInfoPeeringOptionsDetails withAllowEgressFromLocalClassicLinkToRemoteVpc(Boolean allowEgressFromLocalClassicLinkToRemoteVpc) {
         this.allowEgressFromLocalClassicLinkToRemoteVpc = allowEgressFromLocalClassicLinkToRemoteVpc;
         return this;
@@ -31,9 +33,11 @@ public class VpcInfoPeeringOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowEgressFromLocalVpcToRemoteClassicLink")
     public Boolean allowEgressFromLocalVpcToRemoteClassicLink;
+
     public VpcInfoPeeringOptionsDetails withAllowEgressFromLocalVpcToRemoteClassicLink(Boolean allowEgressFromLocalVpcToRemoteClassicLink) {
         this.allowEgressFromLocalVpcToRemoteClassicLink = allowEgressFromLocalVpcToRemoteClassicLink;
         return this;
     }
     
+    public VpcInfoPeeringOptionsDetails(){}
 }

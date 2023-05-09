@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest {
@@ -12,6 +13,7 @@ public class BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SubmitProvisioningConfigRequest submitProvisioningConfigRequest;
+
     public BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest withSubmitProvisioningConfigRequest(org.openapis.openapi.models.shared.SubmitProvisioningConfigRequest submitProvisioningConfigRequest) {
         this.submitProvisioningConfigRequest = submitProvisioningConfigRequest;
         return this;
@@ -29,6 +32,7 @@ public class BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -89,6 +98,7 @@ public class BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest withProject(String project) {
         this.project = project;
         return this;
@@ -119,6 +131,7 @@ public class BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,14 @@ public class BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest(@JsonProperty("location") String location, @JsonProperty("project") String project) {
+        this.location = location;
+        this.project = project;
+  }
 }

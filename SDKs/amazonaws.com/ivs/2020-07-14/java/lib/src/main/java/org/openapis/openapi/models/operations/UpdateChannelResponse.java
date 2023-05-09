@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateChannelResponse {
@@ -12,6 +13,7 @@ public class UpdateChannelResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateChannelResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateChannelResponse {
      */
     
     public Object conflictException;
+
     public UpdateChannelResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateChannelResponse {
     
     
     public String contentType;
+
     public UpdateChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateChannelResponse {
      */
     
     public Object pendingVerification;
+
     public UpdateChannelResponse withPendingVerification(Object pendingVerification) {
         this.pendingVerification = pendingVerification;
         return this;
@@ -46,6 +51,7 @@ public class UpdateChannelResponse {
     
     
     public Integer statusCode;
+
     public UpdateChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateChannelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateChannelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateChannelResponse updateChannelResponse;
+
     public UpdateChannelResponse withUpdateChannelResponse(org.openapis.openapi.models.shared.UpdateChannelResponse updateChannelResponse) {
         this.updateChannelResponse = updateChannelResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateChannelResponse {
      */
     
     public Object validationException;
+
     public UpdateChannelResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TerminateInstancesResultTerminatingInstances {
     
     public TerminateInstancesResultTerminatingInstancesCurrentState currentState;
+
     public TerminateInstancesResultTerminatingInstances withCurrentState(TerminateInstancesResultTerminatingInstancesCurrentState currentState) {
         this.currentState = currentState;
         return this;
@@ -19,6 +20,7 @@ public class TerminateInstancesResultTerminatingInstances {
     
     
     public String instanceId;
+
     public TerminateInstancesResultTerminatingInstances withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -26,9 +28,11 @@ public class TerminateInstancesResultTerminatingInstances {
     
     
     public TerminateInstancesResultTerminatingInstancesPreviousState previousState;
+
     public TerminateInstancesResultTerminatingInstances withPreviousState(TerminateInstancesResultTerminatingInstancesPreviousState previousState) {
         this.previousState = previousState;
         return this;
     }
     
+    public TerminateInstancesResultTerminatingInstances(){}
 }

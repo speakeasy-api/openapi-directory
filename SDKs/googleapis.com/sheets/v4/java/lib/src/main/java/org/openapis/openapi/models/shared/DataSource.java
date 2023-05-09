@@ -18,6 +18,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calculatedColumns")
     public DataSourceColumn[] calculatedColumns;
+
     public DataSource withCalculatedColumns(DataSourceColumn[] calculatedColumns) {
         this.calculatedColumns = calculatedColumns;
         return this;
@@ -29,6 +30,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceId")
     public String dataSourceId;
+
     public DataSource withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -40,6 +42,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sheetId")
     public Integer sheetId;
+
     public DataSource withSheetId(Integer sheetId) {
         this.sheetId = sheetId;
         return this;
@@ -51,9 +54,11 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public DataSourceSpec spec;
+
     public DataSource withSpec(DataSourceSpec spec) {
         this.spec = spec;
         return this;
     }
     
+    public DataSource(){}
 }

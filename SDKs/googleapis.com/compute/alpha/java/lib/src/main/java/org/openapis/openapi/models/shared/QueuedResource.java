@@ -18,6 +18,7 @@ public class QueuedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bulkInsertInstanceResource")
     public BulkInsertInstanceResource bulkInsertInstanceResource;
+
     public QueuedResource withBulkInsertInstanceResource(BulkInsertInstanceResource bulkInsertInstanceResource) {
         this.bulkInsertInstanceResource = bulkInsertInstanceResource;
         return this;
@@ -29,6 +30,7 @@ public class QueuedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public QueuedResource withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -40,6 +42,7 @@ public class QueuedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public QueuedResource withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class QueuedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public QueuedResource withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class QueuedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public QueuedResource withKind(String kind) {
         this.kind = kind;
         return this;
@@ -73,6 +78,7 @@ public class QueuedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public QueuedResource withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class QueuedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queuingPolicy")
     public QueuingPolicy queuingPolicy;
+
     public QueuedResource withQueuingPolicy(QueuingPolicy queuingPolicy) {
         this.queuingPolicy = queuingPolicy;
         return this;
@@ -95,6 +102,7 @@ public class QueuedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public QueuedResource withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -106,6 +114,7 @@ public class QueuedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public QueuedResource withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -117,6 +126,7 @@ public class QueuedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public QueuedResourceStateEnum state;
+
     public QueuedResource withState(QueuedResourceStateEnum state) {
         this.state = state;
         return this;
@@ -128,6 +138,7 @@ public class QueuedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public QueuedResourceStatus status;
+
     public QueuedResource withStatus(QueuedResourceStatus status) {
         this.status = status;
         return this;
@@ -139,9 +150,11 @@ public class QueuedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public QueuedResource withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public QueuedResource(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRoutingControlStateResponse {
@@ -12,6 +13,7 @@ public class UpdateRoutingControlStateResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateRoutingControlStateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateRoutingControlStateResponse {
      */
     
     public Object conflictException;
+
     public UpdateRoutingControlStateResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRoutingControlStateResponse {
     
     
     public String contentType;
+
     public UpdateRoutingControlStateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateRoutingControlStateResponse {
      */
     
     public Object endpointTemporarilyUnavailableException;
+
     public UpdateRoutingControlStateResponse withEndpointTemporarilyUnavailableException(Object endpointTemporarilyUnavailableException) {
         this.endpointTemporarilyUnavailableException = endpointTemporarilyUnavailableException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateRoutingControlStateResponse {
      */
     
     public Object internalServerException;
+
     public UpdateRoutingControlStateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateRoutingControlStateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateRoutingControlStateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateRoutingControlStateResponse {
     
     
     public Integer statusCode;
+
     public UpdateRoutingControlStateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateRoutingControlStateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRoutingControlStateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateRoutingControlStateResponse {
      */
     
     public Object throttlingException;
+
     public UpdateRoutingControlStateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateRoutingControlStateResponse {
      */
     
     public java.util.Map<String, Object> updateRoutingControlStateResponse;
+
     public UpdateRoutingControlStateResponse withUpdateRoutingControlStateResponse(java.util.Map<String, Object> updateRoutingControlStateResponse) {
         this.updateRoutingControlStateResponse = updateRoutingControlStateResponse;
         return this;
@@ -103,9 +114,14 @@ public class UpdateRoutingControlStateResponse {
      */
     
     public Object validationException;
+
     public UpdateRoutingControlStateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateRoutingControlStateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

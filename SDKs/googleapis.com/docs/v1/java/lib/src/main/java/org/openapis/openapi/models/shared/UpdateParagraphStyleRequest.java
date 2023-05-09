@@ -18,6 +18,7 @@ public class UpdateParagraphStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateParagraphStyleRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -29,6 +30,7 @@ public class UpdateParagraphStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paragraphStyle")
     public ParagraphStyle paragraphStyle;
+
     public UpdateParagraphStyleRequest withParagraphStyle(ParagraphStyle paragraphStyle) {
         this.paragraphStyle = paragraphStyle;
         return this;
@@ -40,9 +42,11 @@ public class UpdateParagraphStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public Range range;
+
     public UpdateParagraphStyleRequest withRange(Range range) {
         this.range = range;
         return this;
     }
     
+    public UpdateParagraphStyleRequest(){}
 }

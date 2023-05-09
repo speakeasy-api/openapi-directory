@@ -20,6 +20,7 @@ public class TransformJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoMLJobArn")
     public String autoMLJobArn;
+
     public TransformJob withAutoMLJobArn(String autoMLJobArn) {
         this.autoMLJobArn = autoMLJobArn;
         return this;
@@ -28,6 +29,7 @@ public class TransformJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchStrategy")
     public BatchStrategyEnum batchStrategy;
+
     public TransformJob withBatchStrategy(BatchStrategyEnum batchStrategy) {
         this.batchStrategy = batchStrategy;
         return this;
@@ -38,6 +40,7 @@ public class TransformJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public TransformJob withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -49,6 +52,7 @@ public class TransformJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataProcessing")
     public DataProcessing dataProcessing;
+
     public TransformJob withDataProcessing(DataProcessing dataProcessing) {
         this.dataProcessing = dataProcessing;
         return this;
@@ -57,17 +61,19 @@ public class TransformJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public java.util.Map<String, String> environment;
+
     public TransformJob withEnvironment(java.util.Map<String, String> environment) {
         this.environment = environment;
         return this;
     }
     
     /**
-     * &lt;p&gt;Associates a SageMaker job as a trial component with an experiment and trial. Specified when you call the following APIs:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateProcessingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateTrainingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateTransformJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     * &lt;p&gt;Associates a SageMaker job as a trial component with an experiment and trial. Specified when you call the following APIs:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateProcessingJob.html"&gt;CreateProcessingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html"&gt;CreateTrainingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTransformJob.html"&gt;CreateTransformJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentConfig")
     public ExperimentConfig experimentConfig;
+
     public TransformJob withExperimentConfig(ExperimentConfig experimentConfig) {
         this.experimentConfig = experimentConfig;
         return this;
@@ -76,6 +82,7 @@ public class TransformJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public TransformJob withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -84,6 +91,7 @@ public class TransformJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelingJobArn")
     public String labelingJobArn;
+
     public TransformJob withLabelingJobArn(String labelingJobArn) {
         this.labelingJobArn = labelingJobArn;
         return this;
@@ -92,6 +100,7 @@ public class TransformJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrentTransforms")
     public Long maxConcurrentTransforms;
+
     public TransformJob withMaxConcurrentTransforms(Long maxConcurrentTransforms) {
         this.maxConcurrentTransforms = maxConcurrentTransforms;
         return this;
@@ -100,6 +109,7 @@ public class TransformJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxPayloadInMB")
     public Long maxPayloadInMB;
+
     public TransformJob withMaxPayloadInMB(Long maxPayloadInMB) {
         this.maxPayloadInMB = maxPayloadInMB;
         return this;
@@ -111,6 +121,7 @@ public class TransformJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelClientConfig")
     public ModelClientConfig modelClientConfig;
+
     public TransformJob withModelClientConfig(ModelClientConfig modelClientConfig) {
         this.modelClientConfig = modelClientConfig;
         return this;
@@ -119,6 +130,7 @@ public class TransformJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelName")
     public String modelName;
+
     public TransformJob withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -127,6 +139,7 @@ public class TransformJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public TransformJob withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -137,6 +150,7 @@ public class TransformJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TransformEndTime")
     public OffsetDateTime transformEndTime;
+
     public TransformJob withTransformEndTime(OffsetDateTime transformEndTime) {
         this.transformEndTime = transformEndTime;
         return this;
@@ -148,6 +162,7 @@ public class TransformJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransformInput")
     public TransformInput transformInput;
+
     public TransformJob withTransformInput(TransformInput transformInput) {
         this.transformInput = transformInput;
         return this;
@@ -156,6 +171,7 @@ public class TransformJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransformJobArn")
     public String transformJobArn;
+
     public TransformJob withTransformJobArn(String transformJobArn) {
         this.transformJobArn = transformJobArn;
         return this;
@@ -164,6 +180,7 @@ public class TransformJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransformJobName")
     public String transformJobName;
+
     public TransformJob withTransformJobName(String transformJobName) {
         this.transformJobName = transformJobName;
         return this;
@@ -172,6 +189,7 @@ public class TransformJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransformJobStatus")
     public TransformJobStatusEnum transformJobStatus;
+
     public TransformJob withTransformJobStatus(TransformJobStatusEnum transformJobStatus) {
         this.transformJobStatus = transformJobStatus;
         return this;
@@ -183,6 +201,7 @@ public class TransformJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransformOutput")
     public TransformOutput transformOutput;
+
     public TransformJob withTransformOutput(TransformOutput transformOutput) {
         this.transformOutput = transformOutput;
         return this;
@@ -194,6 +213,7 @@ public class TransformJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransformResources")
     public TransformResources transformResources;
+
     public TransformJob withTransformResources(TransformResources transformResources) {
         this.transformResources = transformResources;
         return this;
@@ -204,9 +224,11 @@ public class TransformJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TransformStartTime")
     public OffsetDateTime transformStartTime;
+
     public TransformJob withTransformStartTime(OffsetDateTime transformStartTime) {
         this.transformStartTime = transformStartTime;
         return this;
     }
     
+    public TransformJob(){}
 }

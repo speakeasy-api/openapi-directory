@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsUserIdGroupPairs {
     
     public String description;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsUserIdGroupPairs withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsUserIdGroupP
     
     
     public String groupId;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsUserIdGroupPairs withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsUserIdGroupP
     
     
     public String groupName;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsUserIdGroupPairs withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -33,6 +36,7 @@ public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsUserIdGroupP
     
     
     public String peeringStatus;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsUserIdGroupPairs withPeeringStatus(String peeringStatus) {
         this.peeringStatus = peeringStatus;
         return this;
@@ -40,6 +44,7 @@ public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsUserIdGroupP
     
     
     public String userId;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsUserIdGroupPairs withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsUserIdGroupP
     
     
     public String vpcId;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsUserIdGroupPairs withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -54,9 +60,11 @@ public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsUserIdGroupP
     
     
     public String vpcPeeringConnectionId;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsUserIdGroupPairs withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsUserIdGroupPairs(){}
 }

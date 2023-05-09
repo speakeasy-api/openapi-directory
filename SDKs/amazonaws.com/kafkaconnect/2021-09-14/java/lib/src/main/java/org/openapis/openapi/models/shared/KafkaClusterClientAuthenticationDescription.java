@@ -15,9 +15,11 @@ public class KafkaClusterClientAuthenticationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authenticationType")
     public KafkaClusterClientAuthenticationTypeEnum authenticationType;
+
     public KafkaClusterClientAuthenticationDescription withAuthenticationType(KafkaClusterClientAuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
     }
     
+    public KafkaClusterClientAuthenticationDescription(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteSshPublicKeyRequest {
     @JsonProperty("ServerId")
     public String serverId;
+
     public DeleteSshPublicKeyRequest withServerId(String serverId) {
         this.serverId = serverId;
         return this;
@@ -16,6 +17,7 @@ public class DeleteSshPublicKeyRequest {
     
     @JsonProperty("SshPublicKeyId")
     public String sshPublicKeyId;
+
     public DeleteSshPublicKeyRequest withSshPublicKeyId(String sshPublicKeyId) {
         this.sshPublicKeyId = sshPublicKeyId;
         return this;
@@ -23,9 +25,15 @@ public class DeleteSshPublicKeyRequest {
     
     @JsonProperty("UserName")
     public String userName;
+
     public DeleteSshPublicKeyRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public DeleteSshPublicKeyRequest(@JsonProperty("ServerId") String serverId, @JsonProperty("SshPublicKeyId") String sshPublicKeyId, @JsonProperty("UserName") String userName) {
+        this.serverId = serverId;
+        this.sshPublicKeyId = sshPublicKeyId;
+        this.userName = userName;
+  }
 }

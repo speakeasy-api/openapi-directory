@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListApplicationResponse {
@@ -12,6 +13,7 @@ public class ListApplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.ApplicationResponseCollection applicationResponseCollection;
+
     public ListApplicationResponse withApplicationResponseCollection(org.openapis.openapi.models.shared.ApplicationResponseCollection applicationResponseCollection) {
         this.applicationResponseCollection = applicationResponseCollection;
         return this;
@@ -19,6 +21,7 @@ public class ListApplicationResponse {
     
     
     public String contentType;
+
     public ListApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ListApplicationResponse {
     
     
     public Integer statusCode;
+
     public ListApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ListApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class ListApplicationResponse {
      */
     
     public ListApplication400ApplicationJSON listApplication400ApplicationJSONObject;
+
     public ListApplicationResponse withListApplication400ApplicationJSONObject(ListApplication400ApplicationJSON listApplication400ApplicationJSONObject) {
         this.listApplication400ApplicationJSONObject = listApplication400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ListApplicationResponse {
      */
     
     public ListApplication401ApplicationJSON listApplication401ApplicationJSONObject;
+
     public ListApplicationResponse withListApplication401ApplicationJSONObject(ListApplication401ApplicationJSON listApplication401ApplicationJSONObject) {
         this.listApplication401ApplicationJSONObject = listApplication401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class ListApplicationResponse {
      */
     
     public ListApplication405ApplicationJSON listApplication405ApplicationJSONObject;
+
     public ListApplicationResponse withListApplication405ApplicationJSONObject(ListApplication405ApplicationJSON listApplication405ApplicationJSONObject) {
         this.listApplication405ApplicationJSONObject = listApplication405ApplicationJSONObject;
         return this;
@@ -73,9 +81,14 @@ public class ListApplicationResponse {
      */
     
     public ListApplication406ApplicationJSON listApplication406ApplicationJSONObject;
+
     public ListApplicationResponse withListApplication406ApplicationJSONObject(ListApplication406ApplicationJSON listApplication406ApplicationJSONObject) {
         this.listApplication406ApplicationJSONObject = listApplication406ApplicationJSONObject;
         return this;
     }
     
+    public ListApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

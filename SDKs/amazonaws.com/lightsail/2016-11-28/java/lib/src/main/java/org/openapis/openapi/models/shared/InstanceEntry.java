@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InstanceEntry {
     @JsonProperty("availabilityZone")
     public String availabilityZone;
+
     public InstanceEntry withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -21,6 +22,7 @@ public class InstanceEntry {
     
     @JsonProperty("instanceType")
     public String instanceType;
+
     public InstanceEntry withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -28,6 +30,7 @@ public class InstanceEntry {
     
     @JsonProperty("portInfoSource")
     public PortInfoSourceTypeEnum portInfoSource;
+
     public InstanceEntry withPortInfoSource(PortInfoSourceTypeEnum portInfoSource) {
         this.portInfoSource = portInfoSource;
         return this;
@@ -35,6 +38,7 @@ public class InstanceEntry {
     
     @JsonProperty("sourceName")
     public String sourceName;
+
     public InstanceEntry withSourceName(String sourceName) {
         this.sourceName = sourceName;
         return this;
@@ -43,9 +47,16 @@ public class InstanceEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userData")
     public String userData;
+
     public InstanceEntry withUserData(String userData) {
         this.userData = userData;
         return this;
     }
     
+    public InstanceEntry(@JsonProperty("availabilityZone") String availabilityZone, @JsonProperty("instanceType") String instanceType, @JsonProperty("portInfoSource") PortInfoSourceTypeEnum portInfoSource, @JsonProperty("sourceName") String sourceName) {
+        this.availabilityZone = availabilityZone;
+        this.instanceType = instanceType;
+        this.portInfoSource = portInfoSource;
+        this.sourceName = sourceName;
+  }
 }

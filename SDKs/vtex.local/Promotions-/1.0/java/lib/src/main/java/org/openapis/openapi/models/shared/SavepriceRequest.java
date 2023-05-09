@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SavepriceRequest {
     @JsonProperty("itemId")
     public Integer itemId;
+
     public SavepriceRequest withItemId(Integer itemId) {
         this.itemId = itemId;
         return this;
@@ -16,6 +17,7 @@ public class SavepriceRequest {
     
     @JsonProperty("listPrice")
     public Integer listPrice;
+
     public SavepriceRequest withListPrice(Integer listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -23,6 +25,7 @@ public class SavepriceRequest {
     
     @JsonProperty("price")
     public Integer price;
+
     public SavepriceRequest withPrice(Integer price) {
         this.price = price;
         return this;
@@ -30,6 +33,7 @@ public class SavepriceRequest {
     
     @JsonProperty("salesChannel")
     public Integer salesChannel;
+
     public SavepriceRequest withSalesChannel(Integer salesChannel) {
         this.salesChannel = salesChannel;
         return this;
@@ -37,6 +41,7 @@ public class SavepriceRequest {
     
     @JsonProperty("sellerId")
     public Integer sellerId;
+
     public SavepriceRequest withSellerId(Integer sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -44,6 +49,7 @@ public class SavepriceRequest {
     
     @JsonProperty("validFrom")
     public String validFrom;
+
     public SavepriceRequest withValidFrom(String validFrom) {
         this.validFrom = validFrom;
         return this;
@@ -51,9 +57,19 @@ public class SavepriceRequest {
     
     @JsonProperty("validTo")
     public String validTo;
+
     public SavepriceRequest withValidTo(String validTo) {
         this.validTo = validTo;
         return this;
     }
     
+    public SavepriceRequest(@JsonProperty("itemId") Integer itemId, @JsonProperty("listPrice") Integer listPrice, @JsonProperty("price") Integer price, @JsonProperty("salesChannel") Integer salesChannel, @JsonProperty("sellerId") Integer sellerId, @JsonProperty("validFrom") String validFrom, @JsonProperty("validTo") String validTo) {
+        this.itemId = itemId;
+        this.listPrice = listPrice;
+        this.price = price;
+        this.salesChannel = salesChannel;
+        this.sellerId = sellerId;
+        this.validFrom = validFrom;
+        this.validTo = validTo;
+  }
 }

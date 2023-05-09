@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetIpamPoolCidrsResult {
     
     public GetIpamPoolCidrsResultIpamPoolCidrs[] ipamPoolCidrs;
+
     public GetIpamPoolCidrsResult withIpamPoolCidrs(GetIpamPoolCidrsResultIpamPoolCidrs[] ipamPoolCidrs) {
         this.ipamPoolCidrs = ipamPoolCidrs;
         return this;
@@ -19,9 +20,11 @@ public class GetIpamPoolCidrsResult {
     
     
     public String nextToken;
+
     public GetIpamPoolCidrsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetIpamPoolCidrsResult(){}
 }

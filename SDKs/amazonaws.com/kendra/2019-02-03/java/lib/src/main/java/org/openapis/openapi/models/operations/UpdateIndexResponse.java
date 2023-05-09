@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateIndexResponse {
@@ -12,6 +13,7 @@ public class UpdateIndexResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateIndexResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateIndexResponse {
      */
     
     public Object conflictException;
+
     public UpdateIndexResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateIndexResponse {
     
     
     public String contentType;
+
     public UpdateIndexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateIndexResponse {
      */
     
     public Object internalServerException;
+
     public UpdateIndexResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateIndexResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateIndexResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateIndexResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateIndexResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateIndexResponse {
     
     
     public Integer statusCode;
+
     public UpdateIndexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateIndexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateIndexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateIndexResponse {
      */
     
     public Object throttlingException;
+
     public UpdateIndexResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateIndexResponse {
      */
     
     public Object validationException;
+
     public UpdateIndexResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateIndexResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

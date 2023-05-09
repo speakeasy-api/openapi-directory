@@ -15,6 +15,7 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainPrefix")
     public String domainPrefix;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuth withDomainPrefix(String domainPrefix) {
         this.domainPrefix = domainPrefix;
         return this;
@@ -22,6 +23,7 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuth {
     
     @JsonProperty("OAuthGrantType")
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum oAuthGrantType;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuth withOAuthGrantType(CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum oAuthGrantType) {
         this.oAuthGrantType = oAuthGrantType;
         return this;
@@ -29,6 +31,7 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuth {
     
     @JsonProperty("OAuthScopes")
     public org.openapis.openapi.models.shared.OAuthScopesElementEnum[] oAuthScopes;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuth withOAuthScopes(org.openapis.openapi.models.shared.OAuthScopesElementEnum[] oAuthScopes) {
         this.oAuthScopes = oAuthScopes;
         return this;
@@ -36,6 +39,7 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuth {
     
     @JsonProperty("RedirectSignInURIs")
     public String[] redirectSignInURIs;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuth withRedirectSignInURIs(String[] redirectSignInURIs) {
         this.redirectSignInURIs = redirectSignInURIs;
         return this;
@@ -43,6 +47,7 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuth {
     
     @JsonProperty("RedirectSignOutURIs")
     public String[] redirectSignOutURIs;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuth withRedirectSignOutURIs(String[] redirectSignOutURIs) {
         this.redirectSignOutURIs = redirectSignOutURIs;
         return this;
@@ -51,9 +56,16 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SocialProviderSettings")
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthSocialProviderSettings socialProviderSettings;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuth withSocialProviderSettings(CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthSocialProviderSettings socialProviderSettings) {
         this.socialProviderSettings = socialProviderSettings;
         return this;
     }
     
+    public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuth(@JsonProperty("OAuthGrantType") CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum oAuthGrantType, @JsonProperty("OAuthScopes") org.openapis.openapi.models.shared.OAuthScopesElementEnum[] oAuthScopes, @JsonProperty("RedirectSignInURIs") String[] redirectSignInURIs, @JsonProperty("RedirectSignOutURIs") String[] redirectSignOutURIs) {
+        this.oAuthGrantType = oAuthGrantType;
+        this.oAuthScopes = oAuthScopes;
+        this.redirectSignInURIs = redirectSignInURIs;
+        this.redirectSignOutURIs = redirectSignOutURIs;
+  }
 }

@@ -15,6 +15,7 @@ public class FfcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public FfcerRequestBodyCertificateParameters certificateParameters;
+
     public FfcerRequestBody withCertificateParameters(FfcerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class FfcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public FfcerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class FfcerRequestBody {
      */
     @JsonProperty("format")
     public FfcerRequestBodyFormatEnum format;
+
     public FfcerRequestBody withFormat(FfcerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class FfcerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public FfcerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public FfcerRequestBody(@JsonProperty("format") FfcerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

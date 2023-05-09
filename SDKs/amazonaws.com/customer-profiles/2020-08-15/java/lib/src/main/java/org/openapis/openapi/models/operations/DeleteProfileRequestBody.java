@@ -12,9 +12,13 @@ public class DeleteProfileRequestBody {
      */
     @JsonProperty("ProfileId")
     public String profileId;
+
     public DeleteProfileRequestBody withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
     }
     
+    public DeleteProfileRequestBody(@JsonProperty("ProfileId") String profileId) {
+        this.profileId = profileId;
+  }
 }

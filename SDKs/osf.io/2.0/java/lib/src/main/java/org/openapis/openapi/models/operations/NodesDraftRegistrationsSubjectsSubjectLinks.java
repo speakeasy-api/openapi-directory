@@ -15,9 +15,11 @@ public class NodesDraftRegistrationsSubjectsSubjectLinks {
      */
     
     public String self;
+
     public NodesDraftRegistrationsSubjectsSubjectLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public NodesDraftRegistrationsSubjectsSubjectLinks(){}
 }

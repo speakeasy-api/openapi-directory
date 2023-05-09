@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ForumGetPollRequest {
@@ -12,9 +13,13 @@ public class ForumGetPollRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=topicId")
     public Long topicId;
+
     public ForumGetPollRequest withTopicId(Long topicId) {
         this.topicId = topicId;
         return this;
     }
     
+    public ForumGetPollRequest(@JsonProperty("topicId") Long topicId) {
+        this.topicId = topicId;
+  }
 }

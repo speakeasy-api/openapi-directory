@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmpv3ViewDelRequest {
@@ -12,6 +13,7 @@ public class ProtocolSnmpv3ViewDelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolSnmpv3ViewDelRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class ProtocolSnmpv3ViewDelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewName")
     public String viewName;
+
     public ProtocolSnmpv3ViewDelRequest withViewName(String viewName) {
         this.viewName = viewName;
         return this;
     }
     
+    public ProtocolSnmpv3ViewDelRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("viewName") String viewName) {
+        this.agentNum = agentNum;
+        this.viewName = viewName;
+  }
 }

@@ -15,6 +15,7 @@ public class NetworkObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public NetworkObject withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -26,6 +27,7 @@ public class NetworkObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mcc")
     public String mcc;
+
     public NetworkObject withMcc(String mcc) {
         this.mcc = mcc;
         return this;
@@ -37,6 +39,7 @@ public class NetworkObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mnc")
     public String mnc;
+
     public NetworkObject withMnc(String mnc) {
         this.mnc = mnc;
         return this;
@@ -48,6 +51,7 @@ public class NetworkObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkCode")
     public String networkCode;
+
     public NetworkObject withNetworkCode(String networkCode) {
         this.networkCode = networkCode;
         return this;
@@ -59,6 +63,7 @@ public class NetworkObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkName")
     public String networkName;
+
     public NetworkObject withNetworkName(String networkName) {
         this.networkName = networkName;
         return this;
@@ -70,6 +75,7 @@ public class NetworkObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public String price;
+
     public NetworkObject withPrice(String price) {
         this.price = price;
         return this;
@@ -81,9 +87,11 @@ public class NetworkObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public NetworkObject withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NetworkObject(){}
 }

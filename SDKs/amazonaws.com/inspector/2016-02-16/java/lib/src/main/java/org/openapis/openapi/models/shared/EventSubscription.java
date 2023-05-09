@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class EventSubscription {
     @JsonProperty("event")
     public InspectorEventEnum event;
+
     public EventSubscription withEvent(InspectorEventEnum event) {
         this.event = event;
         return this;
@@ -26,9 +27,14 @@ public class EventSubscription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("subscribedAt")
     public OffsetDateTime subscribedAt;
+
     public EventSubscription withSubscribedAt(OffsetDateTime subscribedAt) {
         this.subscribedAt = subscribedAt;
         return this;
     }
     
+    public EventSubscription(@JsonProperty("event") InspectorEventEnum event, @JsonProperty("subscribedAt") OffsetDateTime subscribedAt) {
+        this.event = event;
+        this.subscribedAt = subscribedAt;
+  }
 }

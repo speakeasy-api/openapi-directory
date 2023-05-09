@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetColumnStatisticsForTableResponse {
     
     public String contentType;
+
     public GetColumnStatisticsForTableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetColumnStatisticsForTableResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetColumnStatisticsForTableResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetColumnStatisticsForTableResponse {
      */
     
     public org.openapis.openapi.models.shared.GetColumnStatisticsForTableResponse getColumnStatisticsForTableResponse;
+
     public GetColumnStatisticsForTableResponse withGetColumnStatisticsForTableResponse(org.openapis.openapi.models.shared.GetColumnStatisticsForTableResponse getColumnStatisticsForTableResponse) {
         this.getColumnStatisticsForTableResponse = getColumnStatisticsForTableResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetColumnStatisticsForTableResponse {
      */
     
     public Object glueEncryptionException;
+
     public GetColumnStatisticsForTableResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -49,6 +54,7 @@ public class GetColumnStatisticsForTableResponse {
      */
     
     public Object internalServiceException;
+
     public GetColumnStatisticsForTableResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class GetColumnStatisticsForTableResponse {
      */
     
     public Object invalidInputException;
+
     public GetColumnStatisticsForTableResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class GetColumnStatisticsForTableResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetColumnStatisticsForTableResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class GetColumnStatisticsForTableResponse {
     
     
     public Integer statusCode;
+
     public GetColumnStatisticsForTableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetColumnStatisticsForTableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetColumnStatisticsForTableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetColumnStatisticsForTableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

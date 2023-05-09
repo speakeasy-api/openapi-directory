@@ -60,11 +60,9 @@ public class Controller {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsListResponse res = new org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsListResponse() {{
+        org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsListResponse res = new org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsListResponse(contentType, httpRes.statusCode()) {{
             listActiveBreakpointsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Controller {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsUpdateResponse res = new org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsUpdateResponse() {{
+        org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsUpdateResponse res = new org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsUpdateResponse(contentType, httpRes.statusCode()) {{
             updateActiveBreakpointResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Controller {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesRegisterResponse res = new org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesRegisterResponse() {{
+        org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesRegisterResponse res = new org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesRegisterResponse(contentType, httpRes.statusCode()) {{
             registerDebuggeeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

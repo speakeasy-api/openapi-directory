@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2alphaRuleRedirectAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectUri")
     public String redirectUri;
+
     public GoogleCloudRetailV2alphaRuleRedirectAction withRedirectUri(String redirectUri) {
         this.redirectUri = redirectUri;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaRuleRedirectAction(){}
 }

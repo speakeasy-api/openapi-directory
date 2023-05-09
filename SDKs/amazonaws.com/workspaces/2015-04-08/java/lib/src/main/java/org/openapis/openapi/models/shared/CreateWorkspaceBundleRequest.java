@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateWorkspaceBundleRequest {
     @JsonProperty("BundleDescription")
     public String bundleDescription;
+
     public CreateWorkspaceBundleRequest withBundleDescription(String bundleDescription) {
         this.bundleDescription = bundleDescription;
         return this;
@@ -18,6 +19,7 @@ public class CreateWorkspaceBundleRequest {
     
     @JsonProperty("BundleName")
     public String bundleName;
+
     public CreateWorkspaceBundleRequest withBundleName(String bundleName) {
         this.bundleName = bundleName;
         return this;
@@ -28,6 +30,7 @@ public class CreateWorkspaceBundleRequest {
      */
     @JsonProperty("ComputeType")
     public ComputeType computeType;
+
     public CreateWorkspaceBundleRequest withComputeType(ComputeType computeType) {
         this.computeType = computeType;
         return this;
@@ -35,6 +38,7 @@ public class CreateWorkspaceBundleRequest {
     
     @JsonProperty("ImageId")
     public String imageId;
+
     public CreateWorkspaceBundleRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -46,6 +50,7 @@ public class CreateWorkspaceBundleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootStorage")
     public RootStorage rootStorage;
+
     public CreateWorkspaceBundleRequest withRootStorage(RootStorage rootStorage) {
         this.rootStorage = rootStorage;
         return this;
@@ -54,6 +59,7 @@ public class CreateWorkspaceBundleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateWorkspaceBundleRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -64,9 +70,17 @@ public class CreateWorkspaceBundleRequest {
      */
     @JsonProperty("UserStorage")
     public UserStorage userStorage;
+
     public CreateWorkspaceBundleRequest withUserStorage(UserStorage userStorage) {
         this.userStorage = userStorage;
         return this;
     }
     
+    public CreateWorkspaceBundleRequest(@JsonProperty("BundleDescription") String bundleDescription, @JsonProperty("BundleName") String bundleName, @JsonProperty("ComputeType") ComputeType computeType, @JsonProperty("ImageId") String imageId, @JsonProperty("UserStorage") UserStorage userStorage) {
+        this.bundleDescription = bundleDescription;
+        this.bundleName = bundleName;
+        this.computeType = computeType;
+        this.imageId = imageId;
+        this.userStorage = userStorage;
+  }
 }

@@ -18,9 +18,11 @@ public class PerAppResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clearingResult")
     public PerAppResultClearingResultEnum clearingResult;
+
     public PerAppResult withClearingResult(PerAppResultClearingResultEnum clearingResult) {
         this.clearingResult = clearingResult;
         return this;
     }
     
+    public PerAppResult(){}
 }

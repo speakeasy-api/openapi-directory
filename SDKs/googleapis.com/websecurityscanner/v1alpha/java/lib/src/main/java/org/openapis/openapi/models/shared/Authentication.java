@@ -18,6 +18,7 @@ public class Authentication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customAccount")
     public CustomAccount customAccount;
+
     public Authentication withCustomAccount(CustomAccount customAccount) {
         this.customAccount = customAccount;
         return this;
@@ -29,9 +30,11 @@ public class Authentication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleAccount")
     public GoogleAccount googleAccount;
+
     public Authentication withGoogleAccount(GoogleAccount googleAccount) {
         this.googleAccount = googleAccount;
         return this;
     }
     
+    public Authentication(){}
 }

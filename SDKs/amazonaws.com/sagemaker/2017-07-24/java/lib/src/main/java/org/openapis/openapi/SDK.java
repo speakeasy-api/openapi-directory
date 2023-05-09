@@ -448,6 +448,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -485,13 +490,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddAssociationResponse res = new org.openapis.openapi.models.operations.AddAssociationResponse() {{
+        org.openapis.openapi.models.operations.AddAssociationResponse res = new org.openapis.openapi.models.operations.AddAssociationResponse(contentType, httpRes.statusCode()) {{
             addAssociationResponse = null;
             resourceNotFound = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -520,7 +523,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Adds or overwrites one or more tags for the specified SageMaker resource. You can add tags to notebook instances, training jobs, hyperparameter tuning jobs, batch transform jobs, models, labeling jobs, work teams, endpoint configurations, and endpoints.&lt;/p&gt; &lt;p&gt;Each tag consists of a key and an optional value. Tag keys must be unique per resource. For more information about tags, see For more information, see &lt;a href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/"&gt;Amazon Web Services Tagging Strategies&lt;/a&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Tags that you add to a hyperparameter tuning job by calling this API are also added to any training jobs that the hyperparameter tuning job launches after you call this API, but not to training jobs that the hyperparameter tuning job launched before you called this API. To make sure that the tags associated with a hyperparameter tuning job are also added to all training jobs that the hyperparameter tuning job launches, add the tags when you first create the tuning job by specifying them in the &lt;code&gt;Tags&lt;/code&gt; parameter of &lt;a&gt;CreateHyperParameterTuningJob&lt;/a&gt; &lt;/p&gt; &lt;/note&gt; &lt;note&gt; &lt;p&gt;Tags that you add to a SageMaker Studio Domain or User Profile by calling this API are also added to any Apps that the Domain or User Profile launches after you call this API, but not to Apps that the Domain or User Profile launched before you called this API. To make sure that the tags associated with a Domain or User Profile are also added to all Apps that the Domain or User Profile launches, add the tags when you first create the Domain or User Profile by specifying them in the &lt;code&gt;Tags&lt;/code&gt; parameter of &lt;a&gt;CreateDomain&lt;/a&gt; or &lt;a&gt;CreateUserProfile&lt;/a&gt;.&lt;/p&gt; &lt;/note&gt;
+     * &lt;p&gt;Adds or overwrites one or more tags for the specified SageMaker resource. You can add tags to notebook instances, training jobs, hyperparameter tuning jobs, batch transform jobs, models, labeling jobs, work teams, endpoint configurations, and endpoints.&lt;/p&gt; &lt;p&gt;Each tag consists of a key and an optional value. Tag keys must be unique per resource. For more information about tags, see For more information, see &lt;a href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/"&gt;Amazon Web Services Tagging Strategies&lt;/a&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Tags that you add to a hyperparameter tuning job by calling this API are also added to any training jobs that the hyperparameter tuning job launches after you call this API, but not to training jobs that the hyperparameter tuning job launched before you called this API. To make sure that the tags associated with a hyperparameter tuning job are also added to all training jobs that the hyperparameter tuning job launches, add the tags when you first create the tuning job by specifying them in the &lt;code&gt;Tags&lt;/code&gt; parameter of &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateHyperParameterTuningJob.html"&gt;CreateHyperParameterTuningJob&lt;/a&gt; &lt;/p&gt; &lt;/note&gt; &lt;note&gt; &lt;p&gt;Tags that you add to a SageMaker Studio Domain or User Profile by calling this API are also added to any Apps that the Domain or User Profile launches after you call this API, but not to Apps that the Domain or User Profile launched before you called this API. To make sure that the tags associated with a Domain or User Profile are also added to all Apps that the Domain or User Profile launches, add the tags when you first create the Domain or User Profile by specifying them in the &lt;code&gt;Tags&lt;/code&gt; parameter of &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateDomain.html"&gt;CreateDomain&lt;/a&gt; or &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateUserProfile.html"&gt;CreateUserProfile&lt;/a&gt;.&lt;/p&gt; &lt;/note&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -553,11 +556,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddTagsResponse res = new org.openapis.openapi.models.operations.AddTagsResponse() {{
+        org.openapis.openapi.models.operations.AddTagsResponse res = new org.openapis.openapi.models.operations.AddTagsResponse(contentType, httpRes.statusCode()) {{
             addTagsOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -572,7 +573,7 @@ public class SDK {
     }
 
     /**
-     * Associates a trial component with a trial. A trial component can be associated with multiple trials. To disassociate a trial component from a trial, call the &lt;a&gt;DisassociateTrialComponent&lt;/a&gt; API.
+     * Associates a trial component with a trial. A trial component can be associated with multiple trials. To disassociate a trial component from a trial, call the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DisassociateTrialComponent.html"&gt;DisassociateTrialComponent&lt;/a&gt; API.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -605,13 +606,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateTrialComponentResponse res = new org.openapis.openapi.models.operations.AssociateTrialComponentResponse() {{
+        org.openapis.openapi.models.operations.AssociateTrialComponentResponse res = new org.openapis.openapi.models.operations.AssociateTrialComponentResponse(contentType, httpRes.statusCode()) {{
             associateTrialComponentResponse = null;
             resourceNotFound = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -673,11 +672,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchDescribeModelPackageResponse res = new org.openapis.openapi.models.operations.BatchDescribeModelPackageResponse() {{
+        org.openapis.openapi.models.operations.BatchDescribeModelPackageResponse res = new org.openapis.openapi.models.operations.BatchDescribeModelPackageResponse(contentType, httpRes.statusCode()) {{
             batchDescribeModelPackageOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -725,12 +722,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateActionResponse res = new org.openapis.openapi.models.operations.CreateActionResponse() {{
+        org.openapis.openapi.models.operations.CreateActionResponse res = new org.openapis.openapi.models.operations.CreateActionResponse(contentType, httpRes.statusCode()) {{
             createActionResponse = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -785,11 +780,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAlgorithmResponse res = new org.openapis.openapi.models.operations.CreateAlgorithmResponse() {{
+        org.openapis.openapi.models.operations.CreateAlgorithmResponse res = new org.openapis.openapi.models.operations.CreateAlgorithmResponse(contentType, httpRes.statusCode()) {{
             createAlgorithmOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -837,13 +830,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAppResponse res = new org.openapis.openapi.models.operations.CreateAppResponse() {{
+        org.openapis.openapi.models.operations.CreateAppResponse res = new org.openapis.openapi.models.operations.CreateAppResponse(contentType, httpRes.statusCode()) {{
             createAppResponse = null;
             resourceLimitExceeded = null;
             resourceInUse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -905,12 +896,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAppImageConfigResponse res = new org.openapis.openapi.models.operations.CreateAppImageConfigResponse() {{
+        org.openapis.openapi.models.operations.CreateAppImageConfigResponse res = new org.openapis.openapi.models.operations.CreateAppImageConfigResponse(contentType, httpRes.statusCode()) {{
             createAppImageConfigResponse = null;
             resourceInUse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -965,12 +954,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateArtifactResponse res = new org.openapis.openapi.models.operations.CreateArtifactResponse() {{
+        org.openapis.openapi.models.operations.CreateArtifactResponse res = new org.openapis.openapi.models.operations.CreateArtifactResponse(contentType, httpRes.statusCode()) {{
             createArtifactResponse = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -992,7 +979,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Creates an Autopilot job.&lt;/p&gt; &lt;p&gt;Find the best-performing model after you run an Autopilot job by calling &lt;code&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeAutoMLJob.html"&gt;DescribeAutoMLJob&lt;/a&gt; &lt;/code&gt;.&lt;/p&gt; &lt;p&gt;For information about how to use Autopilot, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development.html"&gt;Automate Model Development with Amazon SageMaker Autopilot&lt;/a&gt;.&lt;/p&gt;
+     * &lt;p&gt;Creates an Autopilot job.&lt;/p&gt; &lt;p&gt;Find the best-performing model after you run an Autopilot job by calling &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeAutoMLJob.html"&gt;DescribeAutoMLJob&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;For information about how to use Autopilot, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development.html"&gt;Automate Model Development with Amazon SageMaker Autopilot&lt;/a&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1025,13 +1012,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAutoMLJobResponse res = new org.openapis.openapi.models.operations.CreateAutoMLJobResponse() {{
+        org.openapis.openapi.models.operations.CreateAutoMLJobResponse res = new org.openapis.openapi.models.operations.CreateAutoMLJobResponse(contentType, httpRes.statusCode()) {{
             createAutoMLJobResponse = null;
             resourceInUse = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1060,7 +1045,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Creates an Amazon SageMaker AutoML job that uses non-tabular data such as images or text for Computer Vision or Natural Language Processing problems.&lt;/p&gt; &lt;p&gt;Find the resulting model after you run an AutoML job V2 by calling &lt;code&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeAutoMLJobV2.html"&gt;DescribeAutoMLJobV2&lt;/a&gt; &lt;/code&gt;.&lt;/p&gt; &lt;p&gt;To create an &lt;code&gt;AutoMLJob&lt;/code&gt; using tabular data, see &lt;code&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html"&gt;CreateAutoMLJob&lt;/a&gt; &lt;/code&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;This API action is callable through SageMaker Canvas only. Calling it directly from the CLI or an SDK results in an error.&lt;/p&gt; &lt;/note&gt;
+     * &lt;p&gt;Creates an Amazon SageMaker AutoML job that uses non-tabular data such as images or text for Computer Vision or Natural Language Processing problems.&lt;/p&gt; &lt;p&gt;Find the resulting model after you run an AutoML job V2 by calling &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeAutoMLJobV2.html"&gt;DescribeAutoMLJobV2&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;To create an &lt;code&gt;AutoMLJob&lt;/code&gt; using tabular data, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJob.html"&gt;CreateAutoMLJob&lt;/a&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;This API action is callable through SageMaker Canvas only. Calling it directly from the CLI or an SDK results in an error.&lt;/p&gt; &lt;/note&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1093,13 +1078,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAutoMLJobV2Response res = new org.openapis.openapi.models.operations.CreateAutoMLJobV2Response() {{
+        org.openapis.openapi.models.operations.CreateAutoMLJobV2Response res = new org.openapis.openapi.models.operations.CreateAutoMLJobV2Response(contentType, httpRes.statusCode()) {{
             createAutoMLJobV2Response = null;
             resourceInUse = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1161,11 +1144,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCodeRepositoryResponse res = new org.openapis.openapi.models.operations.CreateCodeRepositoryResponse() {{
+        org.openapis.openapi.models.operations.CreateCodeRepositoryResponse res = new org.openapis.openapi.models.operations.CreateCodeRepositoryResponse(contentType, httpRes.statusCode()) {{
             createCodeRepositoryOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1180,7 +1161,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Starts a model compilation job. After the model has been compiled, Amazon SageMaker saves the resulting model artifacts to an Amazon Simple Storage Service (Amazon S3) bucket that you specify. &lt;/p&gt; &lt;p&gt;If you choose to host your model using Amazon SageMaker hosting services, you can use the resulting model artifacts as part of the model. You can also use the artifacts with Amazon Web Services IoT Greengrass. In that case, deploy them as an ML resource.&lt;/p&gt; &lt;p&gt;In the request body, you provide the following:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;A name for the compilation job&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; Information about the input model artifacts &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;The output location for the compiled model and the device (target) that the model runs on &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;The Amazon Resource Name (ARN) of the IAM role that Amazon SageMaker assumes to perform the model compilation job. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;You can also provide a &lt;code&gt;Tag&lt;/code&gt; to track the model compilation job's resource use and costs. The response body contains the &lt;code&gt;CompilationJobArn&lt;/code&gt; for the compiled job.&lt;/p&gt; &lt;p&gt;To stop a model compilation job, use &lt;a&gt;StopCompilationJob&lt;/a&gt;. To get information about a particular model compilation job, use &lt;a&gt;DescribeCompilationJob&lt;/a&gt;. To get information about multiple model compilation jobs, use &lt;a&gt;ListCompilationJobs&lt;/a&gt;.&lt;/p&gt;
+     * &lt;p&gt;Starts a model compilation job. After the model has been compiled, Amazon SageMaker saves the resulting model artifacts to an Amazon Simple Storage Service (Amazon S3) bucket that you specify. &lt;/p&gt; &lt;p&gt;If you choose to host your model using Amazon SageMaker hosting services, you can use the resulting model artifacts as part of the model. You can also use the artifacts with Amazon Web Services IoT Greengrass. In that case, deploy them as an ML resource.&lt;/p&gt; &lt;p&gt;In the request body, you provide the following:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;A name for the compilation job&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; Information about the input model artifacts &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;The output location for the compiled model and the device (target) that the model runs on &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;The Amazon Resource Name (ARN) of the IAM role that Amazon SageMaker assumes to perform the model compilation job. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;You can also provide a &lt;code&gt;Tag&lt;/code&gt; to track the model compilation job's resource use and costs. The response body contains the &lt;code&gt;CompilationJobArn&lt;/code&gt; for the compiled job.&lt;/p&gt; &lt;p&gt;To stop a model compilation job, use &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopCompilationJob.html"&gt;StopCompilationJob&lt;/a&gt;. To get information about a particular model compilation job, use &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeCompilationJob.html"&gt;DescribeCompilationJob&lt;/a&gt;. To get information about multiple model compilation jobs, use &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListCompilationJobs.html"&gt;ListCompilationJobs&lt;/a&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1213,13 +1194,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCompilationJobResponse res = new org.openapis.openapi.models.operations.CreateCompilationJobResponse() {{
+        org.openapis.openapi.models.operations.CreateCompilationJobResponse res = new org.openapis.openapi.models.operations.CreateCompilationJobResponse(contentType, httpRes.statusCode()) {{
             createCompilationJobResponse = null;
             resourceInUse = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1281,12 +1260,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateContextResponse res = new org.openapis.openapi.models.operations.CreateContextResponse() {{
+        org.openapis.openapi.models.operations.CreateContextResponse res = new org.openapis.openapi.models.operations.CreateContextResponse(contentType, httpRes.statusCode()) {{
             createContextResponse = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1341,13 +1318,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDataQualityJobDefinitionResponse res = new org.openapis.openapi.models.operations.CreateDataQualityJobDefinitionResponse() {{
+        org.openapis.openapi.models.operations.CreateDataQualityJobDefinitionResponse res = new org.openapis.openapi.models.operations.CreateDataQualityJobDefinitionResponse(contentType, httpRes.statusCode()) {{
             createDataQualityJobDefinitionResponse = null;
             resourceLimitExceeded = null;
             resourceInUse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1409,12 +1384,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDeviceFleetResponse res = new org.openapis.openapi.models.operations.CreateDeviceFleetResponse() {{
+        org.openapis.openapi.models.operations.CreateDeviceFleetResponse res = new org.openapis.openapi.models.operations.CreateDeviceFleetResponse(contentType, httpRes.statusCode()) {{
             resourceInUse = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1471,13 +1444,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDomainResponse res = new org.openapis.openapi.models.operations.CreateDomainResponse() {{
+        org.openapis.openapi.models.operations.CreateDomainResponse res = new org.openapis.openapi.models.operations.CreateDomainResponse(contentType, httpRes.statusCode()) {{
             createDomainResponse = null;
             resourceLimitExceeded = null;
             resourceInUse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1539,12 +1510,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateEdgeDeploymentPlanResponse res = new org.openapis.openapi.models.operations.CreateEdgeDeploymentPlanResponse() {{
+        org.openapis.openapi.models.operations.CreateEdgeDeploymentPlanResponse res = new org.openapis.openapi.models.operations.CreateEdgeDeploymentPlanResponse(contentType, httpRes.statusCode()) {{
             createEdgeDeploymentPlanResponse = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1599,11 +1568,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateEdgeDeploymentStageResponse res = new org.openapis.openapi.models.operations.CreateEdgeDeploymentStageResponse() {{
+        org.openapis.openapi.models.operations.CreateEdgeDeploymentStageResponse res = new org.openapis.openapi.models.operations.CreateEdgeDeploymentStageResponse(contentType, httpRes.statusCode()) {{
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1653,11 +1620,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateEdgePackagingJobResponse res = new org.openapis.openapi.models.operations.CreateEdgePackagingJobResponse() {{
+        org.openapis.openapi.models.operations.CreateEdgePackagingJobResponse res = new org.openapis.openapi.models.operations.CreateEdgePackagingJobResponse(contentType, httpRes.statusCode()) {{
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1674,7 +1639,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Creates an endpoint using the endpoint configuration specified in the request. SageMaker uses the endpoint to provision resources and deploy models. You create the endpoint configuration with the &lt;a&gt;CreateEndpointConfig&lt;/a&gt; API. &lt;/p&gt; &lt;p&gt; Use this API to deploy models using SageMaker hosting services. &lt;/p&gt; &lt;p&gt;For an example that calls this method when deploying a model to SageMaker hosting services, see the &lt;a href="https://github.com/aws/amazon-sagemaker-examples/blob/master/sagemaker-fundamentals/create-endpoint/create_endpoint.ipynb"&gt;Create Endpoint example notebook.&lt;/a&gt; &lt;/p&gt; &lt;note&gt; &lt;p&gt; You must not delete an &lt;code&gt;EndpointConfig&lt;/code&gt; that is in use by an endpoint that is live or while the &lt;code&gt;UpdateEndpoint&lt;/code&gt; or &lt;code&gt;CreateEndpoint&lt;/code&gt; operations are being performed on the endpoint. To update an endpoint, you must create a new &lt;code&gt;EndpointConfig&lt;/code&gt;.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;The endpoint name must be unique within an Amazon Web Services Region in your Amazon Web Services account. &lt;/p&gt; &lt;p&gt;When it receives the request, SageMaker creates the endpoint, launches the resources (ML compute instances), and deploys the model(s) on them. &lt;/p&gt; &lt;note&gt; &lt;p&gt;When you call &lt;a&gt;CreateEndpoint&lt;/a&gt;, a load call is made to DynamoDB to verify that your endpoint configuration exists. When you read data from a DynamoDB table supporting &lt;a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html"&gt; &lt;code&gt;Eventually Consistent Reads&lt;/code&gt; &lt;/a&gt;, the response might not reflect the results of a recently completed write operation. The response might include some stale data. If the dependent entities are not yet in DynamoDB, this causes a validation error. If you repeat your read request after a short time, the response should return the latest data. So retry logic is recommended to handle these possible issues. We also recommend that customers call &lt;a&gt;DescribeEndpointConfig&lt;/a&gt; before calling &lt;a&gt;CreateEndpoint&lt;/a&gt; to minimize the potential impact of a DynamoDB eventually consistent read.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;When SageMaker receives the request, it sets the endpoint status to &lt;code&gt;Creating&lt;/code&gt;. After it creates the endpoint, it sets the status to &lt;code&gt;InService&lt;/code&gt;. SageMaker can then process incoming requests for inferences. To check the status of an endpoint, use the &lt;a&gt;DescribeEndpoint&lt;/a&gt; API.&lt;/p&gt; &lt;p&gt;If any of the models hosted at this endpoint get model data from an Amazon S3 location, SageMaker uses Amazon Web Services Security Token Service to download model artifacts from the S3 path you provided. Amazon Web Services STS is activated in your Amazon Web Services account by default. If you previously deactivated Amazon Web Services STS for a region, you need to reactivate Amazon Web Services STS for that region. For more information, see &lt;a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html"&gt;Activating and Deactivating Amazon Web Services STS in an Amazon Web Services Region&lt;/a&gt; in the &lt;i&gt;Amazon Web Services Identity and Access Management User Guide&lt;/i&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt; To add the IAM role policies for using this API operation, go to the &lt;a href="https://console.aws.amazon.com/iam/"&gt;IAM console&lt;/a&gt;, and choose Roles in the left navigation pane. Search the IAM role that you want to grant access to use the &lt;a&gt;CreateEndpoint&lt;/a&gt; and &lt;a&gt;CreateEndpointConfig&lt;/a&gt; API operations, add the following policies to the role. &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Option 1: For a full SageMaker access, search and attach the &lt;code&gt;AmazonSageMakerFullAccess&lt;/code&gt; policy.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Option 2: For granting a limited access to an IAM role, paste the following Action elements manually into the JSON file of the IAM role: &lt;/p&gt; &lt;p&gt; &lt;code&gt;"Action": ["sagemaker:CreateEndpoint", "sagemaker:CreateEndpointConfig"]&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt;"Resource": [&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt;"arn:aws:sagemaker:region:account-id:endpoint/endpointName"&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt;"arn:aws:sagemaker:region:account-id:endpoint-config/endpointConfigName"&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt;]&lt;/code&gt; &lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/api-permissions-reference.html"&gt;SageMaker API Permissions: Actions, Permissions, and Resources Reference&lt;/a&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/note&gt;
+     * &lt;p&gt;Creates an endpoint using the endpoint configuration specified in the request. SageMaker uses the endpoint to provision resources and deploy models. You create the endpoint configuration with the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html"&gt;CreateEndpointConfig&lt;/a&gt; API. &lt;/p&gt; &lt;p&gt; Use this API to deploy models using SageMaker hosting services. &lt;/p&gt; &lt;p&gt;For an example that calls this method when deploying a model to SageMaker hosting services, see the &lt;a href="https://github.com/aws/amazon-sagemaker-examples/blob/master/sagemaker-fundamentals/create-endpoint/create_endpoint.ipynb"&gt;Create Endpoint example notebook.&lt;/a&gt; &lt;/p&gt; &lt;note&gt; &lt;p&gt; You must not delete an &lt;code&gt;EndpointConfig&lt;/code&gt; that is in use by an endpoint that is live or while the &lt;code&gt;UpdateEndpoint&lt;/code&gt; or &lt;code&gt;CreateEndpoint&lt;/code&gt; operations are being performed on the endpoint. To update an endpoint, you must create a new &lt;code&gt;EndpointConfig&lt;/code&gt;.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;The endpoint name must be unique within an Amazon Web Services Region in your Amazon Web Services account. &lt;/p&gt; &lt;p&gt;When it receives the request, SageMaker creates the endpoint, launches the resources (ML compute instances), and deploys the model(s) on them. &lt;/p&gt; &lt;note&gt; &lt;p&gt;When you call &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpoint.html"&gt;CreateEndpoint&lt;/a&gt;, a load call is made to DynamoDB to verify that your endpoint configuration exists. When you read data from a DynamoDB table supporting &lt;a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html"&gt; &lt;code&gt;Eventually Consistent Reads&lt;/code&gt; &lt;/a&gt;, the response might not reflect the results of a recently completed write operation. The response might include some stale data. If the dependent entities are not yet in DynamoDB, this causes a validation error. If you repeat your read request after a short time, the response should return the latest data. So retry logic is recommended to handle these possible issues. We also recommend that customers call &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeEndpointConfig.html"&gt;DescribeEndpointConfig&lt;/a&gt; before calling &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpoint.html"&gt;CreateEndpoint&lt;/a&gt; to minimize the potential impact of a DynamoDB eventually consistent read.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;When SageMaker receives the request, it sets the endpoint status to &lt;code&gt;Creating&lt;/code&gt;. After it creates the endpoint, it sets the status to &lt;code&gt;InService&lt;/code&gt;. SageMaker can then process incoming requests for inferences. To check the status of an endpoint, use the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeEndpoint.html"&gt;DescribeEndpoint&lt;/a&gt; API.&lt;/p&gt; &lt;p&gt;If any of the models hosted at this endpoint get model data from an Amazon S3 location, SageMaker uses Amazon Web Services Security Token Service to download model artifacts from the S3 path you provided. Amazon Web Services STS is activated in your Amazon Web Services account by default. If you previously deactivated Amazon Web Services STS for a region, you need to reactivate Amazon Web Services STS for that region. For more information, see &lt;a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html"&gt;Activating and Deactivating Amazon Web Services STS in an Amazon Web Services Region&lt;/a&gt; in the &lt;i&gt;Amazon Web Services Identity and Access Management User Guide&lt;/i&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt; To add the IAM role policies for using this API operation, go to the &lt;a href="https://console.aws.amazon.com/iam/"&gt;IAM console&lt;/a&gt;, and choose Roles in the left navigation pane. Search the IAM role that you want to grant access to use the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpoint.html"&gt;CreateEndpoint&lt;/a&gt; and &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html"&gt;CreateEndpointConfig&lt;/a&gt; API operations, add the following policies to the role. &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Option 1: For a full SageMaker access, search and attach the &lt;code&gt;AmazonSageMakerFullAccess&lt;/code&gt; policy.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Option 2: For granting a limited access to an IAM role, paste the following Action elements manually into the JSON file of the IAM role: &lt;/p&gt; &lt;p&gt; &lt;code&gt;"Action": ["sagemaker:CreateEndpoint", "sagemaker:CreateEndpointConfig"]&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt;"Resource": [&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt;"arn:aws:sagemaker:region:account-id:endpoint/endpointName"&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt;"arn:aws:sagemaker:region:account-id:endpoint-config/endpointConfigName"&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt;]&lt;/code&gt; &lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/api-permissions-reference.html"&gt;SageMaker API Permissions: Actions, Permissions, and Resources Reference&lt;/a&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/note&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1707,12 +1672,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateEndpointResponse res = new org.openapis.openapi.models.operations.CreateEndpointResponse() {{
+        org.openapis.openapi.models.operations.CreateEndpointResponse res = new org.openapis.openapi.models.operations.CreateEndpointResponse(contentType, httpRes.statusCode()) {{
             createEndpointOutput = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1734,7 +1697,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Creates an endpoint configuration that SageMaker hosting services uses to deploy models. In the configuration, you identify one or more models, created using the &lt;code&gt;CreateModel&lt;/code&gt; API, to deploy and the resources that you want SageMaker to provision. Then you call the &lt;a&gt;CreateEndpoint&lt;/a&gt; API.&lt;/p&gt; &lt;note&gt; &lt;p&gt; Use this API if you want to use SageMaker hosting services to deploy models into production. &lt;/p&gt; &lt;/note&gt; &lt;p&gt;In the request, you define a &lt;code&gt;ProductionVariant&lt;/code&gt;, for each model that you want to deploy. Each &lt;code&gt;ProductionVariant&lt;/code&gt; parameter also describes the resources that you want SageMaker to provision. This includes the number and type of ML compute instances to deploy. &lt;/p&gt; &lt;p&gt;If you are hosting multiple models, you also assign a &lt;code&gt;VariantWeight&lt;/code&gt; to specify how much traffic you want to allocate to each model. For example, suppose that you want to host two models, A and B, and you assign traffic weight 2 for model A and 1 for model B. SageMaker distributes two-thirds of the traffic to Model A, and one-third to model B. &lt;/p&gt; &lt;note&gt; &lt;p&gt;When you call &lt;a&gt;CreateEndpoint&lt;/a&gt;, a load call is made to DynamoDB to verify that your endpoint configuration exists. When you read data from a DynamoDB table supporting &lt;a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html"&gt; &lt;code&gt;Eventually Consistent Reads&lt;/code&gt; &lt;/a&gt;, the response might not reflect the results of a recently completed write operation. The response might include some stale data. If the dependent entities are not yet in DynamoDB, this causes a validation error. If you repeat your read request after a short time, the response should return the latest data. So retry logic is recommended to handle these possible issues. We also recommend that customers call &lt;a&gt;DescribeEndpointConfig&lt;/a&gt; before calling &lt;a&gt;CreateEndpoint&lt;/a&gt; to minimize the potential impact of a DynamoDB eventually consistent read.&lt;/p&gt; &lt;/note&gt;
+     * &lt;p&gt;Creates an endpoint configuration that SageMaker hosting services uses to deploy models. In the configuration, you identify one or more models, created using the &lt;code&gt;CreateModel&lt;/code&gt; API, to deploy and the resources that you want SageMaker to provision. Then you call the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpoint.html"&gt;CreateEndpoint&lt;/a&gt; API.&lt;/p&gt; &lt;note&gt; &lt;p&gt; Use this API if you want to use SageMaker hosting services to deploy models into production. &lt;/p&gt; &lt;/note&gt; &lt;p&gt;In the request, you define a &lt;code&gt;ProductionVariant&lt;/code&gt;, for each model that you want to deploy. Each &lt;code&gt;ProductionVariant&lt;/code&gt; parameter also describes the resources that you want SageMaker to provision. This includes the number and type of ML compute instances to deploy. &lt;/p&gt; &lt;p&gt;If you are hosting multiple models, you also assign a &lt;code&gt;VariantWeight&lt;/code&gt; to specify how much traffic you want to allocate to each model. For example, suppose that you want to host two models, A and B, and you assign traffic weight 2 for model A and 1 for model B. SageMaker distributes two-thirds of the traffic to Model A, and one-third to model B. &lt;/p&gt; &lt;note&gt; &lt;p&gt;When you call &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpoint.html"&gt;CreateEndpoint&lt;/a&gt;, a load call is made to DynamoDB to verify that your endpoint configuration exists. When you read data from a DynamoDB table supporting &lt;a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html"&gt; &lt;code&gt;Eventually Consistent Reads&lt;/code&gt; &lt;/a&gt;, the response might not reflect the results of a recently completed write operation. The response might include some stale data. If the dependent entities are not yet in DynamoDB, this causes a validation error. If you repeat your read request after a short time, the response should return the latest data. So retry logic is recommended to handle these possible issues. We also recommend that customers call &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeEndpointConfig.html"&gt;DescribeEndpointConfig&lt;/a&gt; before calling &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpoint.html"&gt;CreateEndpoint&lt;/a&gt; to minimize the potential impact of a DynamoDB eventually consistent read.&lt;/p&gt; &lt;/note&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1767,12 +1730,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateEndpointConfigResponse res = new org.openapis.openapi.models.operations.CreateEndpointConfigResponse() {{
+        org.openapis.openapi.models.operations.CreateEndpointConfigResponse res = new org.openapis.openapi.models.operations.CreateEndpointConfigResponse(contentType, httpRes.statusCode()) {{
             createEndpointConfigOutput = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1794,7 +1755,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Creates a SageMaker &lt;i&gt;experiment&lt;/i&gt;. An experiment is a collection of &lt;i&gt;trials&lt;/i&gt; that are observed, compared and evaluated as a group. A trial is a set of steps, called &lt;i&gt;trial components&lt;/i&gt;, that produce a machine learning model.&lt;/p&gt; &lt;note&gt; &lt;p&gt;In the Studio UI, trials are referred to as &lt;i&gt;run groups&lt;/i&gt; and trial components are referred to as &lt;i&gt;runs&lt;/i&gt;.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;The goal of an experiment is to determine the components that produce the best model. Multiple trials are performed, each one isolating and measuring the impact of a change to one or more inputs, while keeping the remaining inputs constant.&lt;/p&gt; &lt;p&gt;When you use SageMaker Studio or the SageMaker Python SDK, all experiments, trials, and trial components are automatically tracked, logged, and indexed. When you use the Amazon Web Services SDK for Python (Boto), you must use the logging APIs provided by the SDK.&lt;/p&gt; &lt;p&gt;You can add tags to experiments, trials, trial components and then use the &lt;a&gt;Search&lt;/a&gt; API to search for the tags.&lt;/p&gt; &lt;p&gt;To add a description to an experiment, specify the optional &lt;code&gt;Description&lt;/code&gt; parameter. To add a description later, or to change the description, call the &lt;a&gt;UpdateExperiment&lt;/a&gt; API.&lt;/p&gt; &lt;p&gt;To get a list of all your experiments, call the &lt;a&gt;ListExperiments&lt;/a&gt; API. To view an experiment's properties, call the &lt;a&gt;DescribeExperiment&lt;/a&gt; API. To get a list of all the trials associated with an experiment, call the &lt;a&gt;ListTrials&lt;/a&gt; API. To create a trial call the &lt;a&gt;CreateTrial&lt;/a&gt; API.&lt;/p&gt;
+     * &lt;p&gt;Creates a SageMaker &lt;i&gt;experiment&lt;/i&gt;. An experiment is a collection of &lt;i&gt;trials&lt;/i&gt; that are observed, compared and evaluated as a group. A trial is a set of steps, called &lt;i&gt;trial components&lt;/i&gt;, that produce a machine learning model.&lt;/p&gt; &lt;note&gt; &lt;p&gt;In the Studio UI, trials are referred to as &lt;i&gt;run groups&lt;/i&gt; and trial components are referred to as &lt;i&gt;runs&lt;/i&gt;.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;The goal of an experiment is to determine the components that produce the best model. Multiple trials are performed, each one isolating and measuring the impact of a change to one or more inputs, while keeping the remaining inputs constant.&lt;/p&gt; &lt;p&gt;When you use SageMaker Studio or the SageMaker Python SDK, all experiments, trials, and trial components are automatically tracked, logged, and indexed. When you use the Amazon Web Services SDK for Python (Boto), you must use the logging APIs provided by the SDK.&lt;/p&gt; &lt;p&gt;You can add tags to experiments, trials, trial components and then use the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html"&gt;Search&lt;/a&gt; API to search for the tags.&lt;/p&gt; &lt;p&gt;To add a description to an experiment, specify the optional &lt;code&gt;Description&lt;/code&gt; parameter. To add a description later, or to change the description, call the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateExperiment.html"&gt;UpdateExperiment&lt;/a&gt; API.&lt;/p&gt; &lt;p&gt;To get a list of all your experiments, call the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListExperiments.html"&gt;ListExperiments&lt;/a&gt; API. To view an experiment's properties, call the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeExperiment.html"&gt;DescribeExperiment&lt;/a&gt; API. To get a list of all the trials associated with an experiment, call the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListTrials.html"&gt;ListTrials&lt;/a&gt; API. To create a trial call the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrial.html"&gt;CreateTrial&lt;/a&gt; API.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1827,12 +1788,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateExperimentResponse res = new org.openapis.openapi.models.operations.CreateExperimentResponse() {{
+        org.openapis.openapi.models.operations.CreateExperimentResponse res = new org.openapis.openapi.models.operations.CreateExperimentResponse(contentType, httpRes.statusCode()) {{
             createExperimentResponse = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1887,13 +1846,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFeatureGroupResponse res = new org.openapis.openapi.models.operations.CreateFeatureGroupResponse() {{
+        org.openapis.openapi.models.operations.CreateFeatureGroupResponse res = new org.openapis.openapi.models.operations.CreateFeatureGroupResponse(contentType, httpRes.statusCode()) {{
             createFeatureGroupResponse = null;
             resourceInUse = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1955,13 +1912,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFlowDefinitionResponse res = new org.openapis.openapi.models.operations.CreateFlowDefinitionResponse() {{
+        org.openapis.openapi.models.operations.CreateFlowDefinitionResponse res = new org.openapis.openapi.models.operations.CreateFlowDefinitionResponse(contentType, httpRes.statusCode()) {{
             createFlowDefinitionResponse = null;
             resourceLimitExceeded = null;
             resourceInUse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2023,13 +1978,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateHubResponse res = new org.openapis.openapi.models.operations.CreateHubResponse() {{
+        org.openapis.openapi.models.operations.CreateHubResponse res = new org.openapis.openapi.models.operations.CreateHubResponse(contentType, httpRes.statusCode()) {{
             createHubResponse = null;
             resourceInUse = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2091,13 +2044,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateHumanTaskUiResponse res = new org.openapis.openapi.models.operations.CreateHumanTaskUiResponse() {{
+        org.openapis.openapi.models.operations.CreateHumanTaskUiResponse res = new org.openapis.openapi.models.operations.CreateHumanTaskUiResponse(contentType, httpRes.statusCode()) {{
             createHumanTaskUiResponse = null;
             resourceLimitExceeded = null;
             resourceInUse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2159,13 +2110,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateHyperParameterTuningJobResponse res = new org.openapis.openapi.models.operations.CreateHyperParameterTuningJobResponse() {{
+        org.openapis.openapi.models.operations.CreateHyperParameterTuningJobResponse res = new org.openapis.openapi.models.operations.CreateHyperParameterTuningJobResponse(contentType, httpRes.statusCode()) {{
             createHyperParameterTuningJobResponse = null;
             resourceInUse = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2227,13 +2176,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateImageResponse res = new org.openapis.openapi.models.operations.CreateImageResponse() {{
+        org.openapis.openapi.models.operations.CreateImageResponse res = new org.openapis.openapi.models.operations.CreateImageResponse(contentType, httpRes.statusCode()) {{
             createImageResponse = null;
             resourceInUse = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2295,14 +2242,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateImageVersionResponse res = new org.openapis.openapi.models.operations.CreateImageVersionResponse() {{
+        org.openapis.openapi.models.operations.CreateImageVersionResponse res = new org.openapis.openapi.models.operations.CreateImageVersionResponse(contentType, httpRes.statusCode()) {{
             createImageVersionResponse = null;
             resourceInUse = null;
             resourceLimitExceeded = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2371,13 +2316,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateInferenceExperimentResponse res = new org.openapis.openapi.models.operations.CreateInferenceExperimentResponse() {{
+        org.openapis.openapi.models.operations.CreateInferenceExperimentResponse res = new org.openapis.openapi.models.operations.CreateInferenceExperimentResponse(contentType, httpRes.statusCode()) {{
             createInferenceExperimentResponse = null;
             resourceInUse = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2439,13 +2382,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateInferenceRecommendationsJobResponse res = new org.openapis.openapi.models.operations.CreateInferenceRecommendationsJobResponse() {{
+        org.openapis.openapi.models.operations.CreateInferenceRecommendationsJobResponse res = new org.openapis.openapi.models.operations.CreateInferenceRecommendationsJobResponse(contentType, httpRes.statusCode()) {{
             createInferenceRecommendationsJobResponse = null;
             resourceInUse = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2507,13 +2448,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLabelingJobResponse res = new org.openapis.openapi.models.operations.CreateLabelingJobResponse() {{
+        org.openapis.openapi.models.operations.CreateLabelingJobResponse res = new org.openapis.openapi.models.operations.CreateLabelingJobResponse(contentType, httpRes.statusCode()) {{
             createLabelingJobResponse = null;
             resourceInUse = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2575,12 +2514,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateModelResponse res = new org.openapis.openapi.models.operations.CreateModelResponse() {{
+        org.openapis.openapi.models.operations.CreateModelResponse res = new org.openapis.openapi.models.operations.CreateModelResponse(contentType, httpRes.statusCode()) {{
             createModelOutput = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2635,13 +2572,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateModelBiasJobDefinitionResponse res = new org.openapis.openapi.models.operations.CreateModelBiasJobDefinitionResponse() {{
+        org.openapis.openapi.models.operations.CreateModelBiasJobDefinitionResponse res = new org.openapis.openapi.models.operations.CreateModelBiasJobDefinitionResponse(contentType, httpRes.statusCode()) {{
             createModelBiasJobDefinitionResponse = null;
             resourceLimitExceeded = null;
             resourceInUse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2703,13 +2638,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateModelCardResponse res = new org.openapis.openapi.models.operations.CreateModelCardResponse() {{
+        org.openapis.openapi.models.operations.CreateModelCardResponse res = new org.openapis.openapi.models.operations.CreateModelCardResponse(contentType, httpRes.statusCode()) {{
             createModelCardResponse = null;
             resourceLimitExceeded = null;
             conflictException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2771,14 +2704,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateModelCardExportJobResponse res = new org.openapis.openapi.models.operations.CreateModelCardExportJobResponse() {{
+        org.openapis.openapi.models.operations.CreateModelCardExportJobResponse res = new org.openapis.openapi.models.operations.CreateModelCardExportJobResponse(contentType, httpRes.statusCode()) {{
             createModelCardExportJobResponse = null;
             resourceNotFound = null;
             resourceLimitExceeded = null;
             conflictException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2847,13 +2778,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateModelExplainabilityJobDefinitionResponse res = new org.openapis.openapi.models.operations.CreateModelExplainabilityJobDefinitionResponse() {{
+        org.openapis.openapi.models.operations.CreateModelExplainabilityJobDefinitionResponse res = new org.openapis.openapi.models.operations.CreateModelExplainabilityJobDefinitionResponse(contentType, httpRes.statusCode()) {{
             createModelExplainabilityJobDefinitionResponse = null;
             resourceLimitExceeded = null;
             resourceInUse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2915,13 +2844,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateModelPackageResponse res = new org.openapis.openapi.models.operations.CreateModelPackageResponse() {{
+        org.openapis.openapi.models.operations.CreateModelPackageResponse res = new org.openapis.openapi.models.operations.CreateModelPackageResponse(contentType, httpRes.statusCode()) {{
             createModelPackageOutput = null;
             conflictException = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2983,12 +2910,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateModelPackageGroupResponse res = new org.openapis.openapi.models.operations.CreateModelPackageGroupResponse() {{
+        org.openapis.openapi.models.operations.CreateModelPackageGroupResponse res = new org.openapis.openapi.models.operations.CreateModelPackageGroupResponse(contentType, httpRes.statusCode()) {{
             createModelPackageGroupOutput = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3043,13 +2968,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateModelQualityJobDefinitionResponse res = new org.openapis.openapi.models.operations.CreateModelQualityJobDefinitionResponse() {{
+        org.openapis.openapi.models.operations.CreateModelQualityJobDefinitionResponse res = new org.openapis.openapi.models.operations.CreateModelQualityJobDefinitionResponse(contentType, httpRes.statusCode()) {{
             createModelQualityJobDefinitionResponse = null;
             resourceLimitExceeded = null;
             resourceInUse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3111,13 +3034,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateMonitoringScheduleResponse res = new org.openapis.openapi.models.operations.CreateMonitoringScheduleResponse() {{
+        org.openapis.openapi.models.operations.CreateMonitoringScheduleResponse res = new org.openapis.openapi.models.operations.CreateMonitoringScheduleResponse(contentType, httpRes.statusCode()) {{
             createMonitoringScheduleResponse = null;
             resourceLimitExceeded = null;
             resourceInUse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3179,12 +3100,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateNotebookInstanceResponse res = new org.openapis.openapi.models.operations.CreateNotebookInstanceResponse() {{
+        org.openapis.openapi.models.operations.CreateNotebookInstanceResponse res = new org.openapis.openapi.models.operations.CreateNotebookInstanceResponse(contentType, httpRes.statusCode()) {{
             createNotebookInstanceOutput = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3239,12 +3158,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateNotebookInstanceLifecycleConfigResponse res = new org.openapis.openapi.models.operations.CreateNotebookInstanceLifecycleConfigResponse() {{
+        org.openapis.openapi.models.operations.CreateNotebookInstanceLifecycleConfigResponse res = new org.openapis.openapi.models.operations.CreateNotebookInstanceLifecycleConfigResponse(contentType, httpRes.statusCode()) {{
             createNotebookInstanceLifecycleConfigOutput = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3299,13 +3216,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePipelineResponse res = new org.openapis.openapi.models.operations.CreatePipelineResponse() {{
+        org.openapis.openapi.models.operations.CreatePipelineResponse res = new org.openapis.openapi.models.operations.CreatePipelineResponse(contentType, httpRes.statusCode()) {{
             createPipelineResponse = null;
             resourceNotFound = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3367,12 +3282,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePresignedDomainUrlResponse res = new org.openapis.openapi.models.operations.CreatePresignedDomainUrlResponse() {{
+        org.openapis.openapi.models.operations.CreatePresignedDomainUrlResponse res = new org.openapis.openapi.models.operations.CreatePresignedDomainUrlResponse(contentType, httpRes.statusCode()) {{
             createPresignedDomainUrlResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3394,7 +3307,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Returns a URL that you can use to connect to the Jupyter server from a notebook instance. In the SageMaker console, when you choose &lt;code&gt;Open&lt;/code&gt; next to a notebook instance, SageMaker opens a new tab showing the Jupyter server home page from the notebook instance. The console uses this API to get the URL and show the page.&lt;/p&gt; &lt;p&gt; The IAM role or user used to call this API defines the permissions to access the notebook instance. Once the presigned URL is created, no additional permission is required to access this URL. IAM authorization policies for this API are also enforced for every HTTP request and WebSocket frame that attempts to connect to the notebook instance.&lt;/p&gt; &lt;p&gt;You can restrict access to this API and to the URL that it returns to a list of IP addresses that you specify. Use the &lt;code&gt;NotIpAddress&lt;/code&gt; condition operator and the &lt;code&gt;aws:SourceIP&lt;/code&gt; condition context key to specify the list of IP addresses that you want to have access to the notebook instance. For more information, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/security_iam_id-based-policy-examples.html#nbi-ip-filter"&gt;Limit Access to a Notebook Instance by IP Address&lt;/a&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;The URL that you get from a call to &lt;a&gt;CreatePresignedNotebookInstanceUrl&lt;/a&gt; is valid only for 5 minutes. If you try to use the URL after the 5-minute limit expires, you are directed to the Amazon Web Services console sign-in page.&lt;/p&gt; &lt;/note&gt;
+     * &lt;p&gt;Returns a URL that you can use to connect to the Jupyter server from a notebook instance. In the SageMaker console, when you choose &lt;code&gt;Open&lt;/code&gt; next to a notebook instance, SageMaker opens a new tab showing the Jupyter server home page from the notebook instance. The console uses this API to get the URL and show the page.&lt;/p&gt; &lt;p&gt; The IAM role or user used to call this API defines the permissions to access the notebook instance. Once the presigned URL is created, no additional permission is required to access this URL. IAM authorization policies for this API are also enforced for every HTTP request and WebSocket frame that attempts to connect to the notebook instance.&lt;/p&gt; &lt;p&gt;You can restrict access to this API and to the URL that it returns to a list of IP addresses that you specify. Use the &lt;code&gt;NotIpAddress&lt;/code&gt; condition operator and the &lt;code&gt;aws:SourceIP&lt;/code&gt; condition context key to specify the list of IP addresses that you want to have access to the notebook instance. For more information, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/security_iam_id-based-policy-examples.html#nbi-ip-filter"&gt;Limit Access to a Notebook Instance by IP Address&lt;/a&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;The URL that you get from a call to &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreatePresignedNotebookInstanceUrl.html"&gt;CreatePresignedNotebookInstanceUrl&lt;/a&gt; is valid only for 5 minutes. If you try to use the URL after the 5-minute limit expires, you are directed to the Amazon Web Services console sign-in page.&lt;/p&gt; &lt;/note&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3427,11 +3340,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePresignedNotebookInstanceUrlResponse res = new org.openapis.openapi.models.operations.CreatePresignedNotebookInstanceUrlResponse() {{
+        org.openapis.openapi.models.operations.CreatePresignedNotebookInstanceUrlResponse res = new org.openapis.openapi.models.operations.CreatePresignedNotebookInstanceUrlResponse(contentType, httpRes.statusCode()) {{
             createPresignedNotebookInstanceUrlOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3479,14 +3390,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateProcessingJobResponse res = new org.openapis.openapi.models.operations.CreateProcessingJobResponse() {{
+        org.openapis.openapi.models.operations.CreateProcessingJobResponse res = new org.openapis.openapi.models.operations.CreateProcessingJobResponse(contentType, httpRes.statusCode()) {{
             createProcessingJobResponse = null;
             resourceInUse = null;
             resourceLimitExceeded = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3555,12 +3464,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateProjectResponse res = new org.openapis.openapi.models.operations.CreateProjectResponse() {{
+        org.openapis.openapi.models.operations.CreateProjectResponse res = new org.openapis.openapi.models.operations.CreateProjectResponse(contentType, httpRes.statusCode()) {{
             createProjectOutput = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3615,13 +3522,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSpaceResponse res = new org.openapis.openapi.models.operations.CreateSpaceResponse() {{
+        org.openapis.openapi.models.operations.CreateSpaceResponse res = new org.openapis.openapi.models.operations.CreateSpaceResponse(contentType, httpRes.statusCode()) {{
             createSpaceResponse = null;
             resourceLimitExceeded = null;
             resourceInUse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3683,12 +3588,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateStudioLifecycleConfigResponse res = new org.openapis.openapi.models.operations.CreateStudioLifecycleConfigResponse() {{
+        org.openapis.openapi.models.operations.CreateStudioLifecycleConfigResponse res = new org.openapis.openapi.models.operations.CreateStudioLifecycleConfigResponse(contentType, httpRes.statusCode()) {{
             createStudioLifecycleConfigResponse = null;
             resourceInUse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3743,14 +3646,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTrainingJobResponse res = new org.openapis.openapi.models.operations.CreateTrainingJobResponse() {{
+        org.openapis.openapi.models.operations.CreateTrainingJobResponse res = new org.openapis.openapi.models.operations.CreateTrainingJobResponse(contentType, httpRes.statusCode()) {{
             createTrainingJobResponse = null;
             resourceInUse = null;
             resourceLimitExceeded = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3819,14 +3720,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTransformJobResponse res = new org.openapis.openapi.models.operations.CreateTransformJobResponse() {{
+        org.openapis.openapi.models.operations.CreateTransformJobResponse res = new org.openapis.openapi.models.operations.CreateTransformJobResponse(contentType, httpRes.statusCode()) {{
             createTransformJobResponse = null;
             resourceInUse = null;
             resourceLimitExceeded = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3862,7 +3761,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Creates an SageMaker &lt;i&gt;trial&lt;/i&gt;. A trial is a set of steps called &lt;i&gt;trial components&lt;/i&gt; that produce a machine learning model. A trial is part of a single SageMaker &lt;i&gt;experiment&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;When you use SageMaker Studio or the SageMaker Python SDK, all experiments, trials, and trial components are automatically tracked, logged, and indexed. When you use the Amazon Web Services SDK for Python (Boto), you must use the logging APIs provided by the SDK.&lt;/p&gt; &lt;p&gt;You can add tags to a trial and then use the &lt;a&gt;Search&lt;/a&gt; API to search for the tags.&lt;/p&gt; &lt;p&gt;To get a list of all your trials, call the &lt;a&gt;ListTrials&lt;/a&gt; API. To view a trial's properties, call the &lt;a&gt;DescribeTrial&lt;/a&gt; API. To create a trial component, call the &lt;a&gt;CreateTrialComponent&lt;/a&gt; API.&lt;/p&gt;
+     * &lt;p&gt;Creates an SageMaker &lt;i&gt;trial&lt;/i&gt;. A trial is a set of steps called &lt;i&gt;trial components&lt;/i&gt; that produce a machine learning model. A trial is part of a single SageMaker &lt;i&gt;experiment&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;When you use SageMaker Studio or the SageMaker Python SDK, all experiments, trials, and trial components are automatically tracked, logged, and indexed. When you use the Amazon Web Services SDK for Python (Boto), you must use the logging APIs provided by the SDK.&lt;/p&gt; &lt;p&gt;You can add tags to a trial and then use the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html"&gt;Search&lt;/a&gt; API to search for the tags.&lt;/p&gt; &lt;p&gt;To get a list of all your trials, call the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListTrials.html"&gt;ListTrials&lt;/a&gt; API. To view a trial's properties, call the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeTrial.html"&gt;DescribeTrial&lt;/a&gt; API. To create a trial component, call the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrialComponent.html"&gt;CreateTrialComponent&lt;/a&gt; API.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3895,13 +3794,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTrialResponse res = new org.openapis.openapi.models.operations.CreateTrialResponse() {{
+        org.openapis.openapi.models.operations.CreateTrialResponse res = new org.openapis.openapi.models.operations.CreateTrialResponse(contentType, httpRes.statusCode()) {{
             createTrialResponse = null;
             resourceNotFound = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3930,7 +3827,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Creates a &lt;i&gt;trial component&lt;/i&gt;, which is a stage of a machine learning &lt;i&gt;trial&lt;/i&gt;. A trial is composed of one or more trial components. A trial component can be used in multiple trials.&lt;/p&gt; &lt;p&gt;Trial components include pre-processing jobs, training jobs, and batch transform jobs.&lt;/p&gt; &lt;p&gt;When you use SageMaker Studio or the SageMaker Python SDK, all experiments, trials, and trial components are automatically tracked, logged, and indexed. When you use the Amazon Web Services SDK for Python (Boto), you must use the logging APIs provided by the SDK.&lt;/p&gt; &lt;p&gt;You can add tags to a trial component and then use the &lt;a&gt;Search&lt;/a&gt; API to search for the tags.&lt;/p&gt;
+     * &lt;p&gt;Creates a &lt;i&gt;trial component&lt;/i&gt;, which is a stage of a machine learning &lt;i&gt;trial&lt;/i&gt;. A trial is composed of one or more trial components. A trial component can be used in multiple trials.&lt;/p&gt; &lt;p&gt;Trial components include pre-processing jobs, training jobs, and batch transform jobs.&lt;/p&gt; &lt;p&gt;When you use SageMaker Studio or the SageMaker Python SDK, all experiments, trials, and trial components are automatically tracked, logged, and indexed. When you use the Amazon Web Services SDK for Python (Boto), you must use the logging APIs provided by the SDK.&lt;/p&gt; &lt;p&gt;You can add tags to a trial component and then use the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html"&gt;Search&lt;/a&gt; API to search for the tags.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3963,12 +3860,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTrialComponentResponse res = new org.openapis.openapi.models.operations.CreateTrialComponentResponse() {{
+        org.openapis.openapi.models.operations.CreateTrialComponentResponse res = new org.openapis.openapi.models.operations.CreateTrialComponentResponse(contentType, httpRes.statusCode()) {{
             createTrialComponentResponse = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4023,13 +3918,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateUserProfileResponse res = new org.openapis.openapi.models.operations.CreateUserProfileResponse() {{
+        org.openapis.openapi.models.operations.CreateUserProfileResponse res = new org.openapis.openapi.models.operations.CreateUserProfileResponse(contentType, httpRes.statusCode()) {{
             createUserProfileResponse = null;
             resourceLimitExceeded = null;
             resourceInUse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4058,7 +3951,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Use this operation to create a workforce. This operation will return an error if a workforce already exists in the Amazon Web Services Region that you specify. You can only create one workforce in each Amazon Web Services Region per Amazon Web Services account.&lt;/p&gt; &lt;p&gt;If you want to create a new workforce in an Amazon Web Services Region where a workforce already exists, use the API operation to delete the existing workforce and then use &lt;code&gt;CreateWorkforce&lt;/code&gt; to create a new workforce.&lt;/p&gt; &lt;p&gt;To create a private workforce using Amazon Cognito, you must specify a Cognito user pool in &lt;code&gt;CognitoConfig&lt;/code&gt;. You can also create an Amazon Cognito workforce using the Amazon SageMaker console. For more information, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-workforce-create-private.html"&gt; Create a Private Workforce (Amazon Cognito)&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;To create a private workforce using your own OIDC Identity Provider (IdP), specify your IdP configuration in &lt;code&gt;OidcConfig&lt;/code&gt;. Your OIDC IdP must support &lt;i&gt;groups&lt;/i&gt; because groups are used by Ground Truth and Amazon A2I to create work teams. For more information, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-workforce-create-private-oidc.html"&gt; Create a Private Workforce (OIDC IdP)&lt;/a&gt;.&lt;/p&gt;
+     * &lt;p&gt;Use this operation to create a workforce. This operation will return an error if a workforce already exists in the Amazon Web Services Region that you specify. You can only create one workforce in each Amazon Web Services Region per Amazon Web Services account.&lt;/p&gt; &lt;p&gt;If you want to create a new workforce in an Amazon Web Services Region where a workforce already exists, use the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteWorkforce.html"&gt;DeleteWorkforce&lt;/a&gt; API operation to delete the existing workforce and then use &lt;code&gt;CreateWorkforce&lt;/code&gt; to create a new workforce.&lt;/p&gt; &lt;p&gt;To create a private workforce using Amazon Cognito, you must specify a Cognito user pool in &lt;code&gt;CognitoConfig&lt;/code&gt;. You can also create an Amazon Cognito workforce using the Amazon SageMaker console. For more information, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-workforce-create-private.html"&gt; Create a Private Workforce (Amazon Cognito)&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;To create a private workforce using your own OIDC Identity Provider (IdP), specify your IdP configuration in &lt;code&gt;OidcConfig&lt;/code&gt;. Your OIDC IdP must support &lt;i&gt;groups&lt;/i&gt; because groups are used by Ground Truth and Amazon A2I to create work teams. For more information, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-workforce-create-private-oidc.html"&gt; Create a Private Workforce (OIDC IdP)&lt;/a&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -4091,11 +3984,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateWorkforceResponse res = new org.openapis.openapi.models.operations.CreateWorkforceResponse() {{
+        org.openapis.openapi.models.operations.CreateWorkforceResponse res = new org.openapis.openapi.models.operations.CreateWorkforceResponse(contentType, httpRes.statusCode()) {{
             createWorkforceResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4143,13 +4034,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateWorkteamResponse res = new org.openapis.openapi.models.operations.CreateWorkteamResponse() {{
+        org.openapis.openapi.models.operations.CreateWorkteamResponse res = new org.openapis.openapi.models.operations.CreateWorkteamResponse(contentType, httpRes.statusCode()) {{
             createWorkteamResponse = null;
             resourceInUse = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4211,12 +4100,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteActionResponse res = new org.openapis.openapi.models.operations.DeleteActionResponse() {{
+        org.openapis.openapi.models.operations.DeleteActionResponse res = new org.openapis.openapi.models.operations.DeleteActionResponse(contentType, httpRes.statusCode()) {{
             deleteActionResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4271,10 +4158,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAlgorithmResponse res = new org.openapis.openapi.models.operations.DeleteAlgorithmResponse() {{
+        org.openapis.openapi.models.operations.DeleteAlgorithmResponse res = new org.openapis.openapi.models.operations.DeleteAlgorithmResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4317,12 +4202,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAppResponse res = new org.openapis.openapi.models.operations.DeleteAppResponse() {{
+        org.openapis.openapi.models.operations.DeleteAppResponse res = new org.openapis.openapi.models.operations.DeleteAppResponse(contentType, httpRes.statusCode()) {{
             resourceInUse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4379,11 +4262,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAppImageConfigResponse res = new org.openapis.openapi.models.operations.DeleteAppImageConfigResponse() {{
+        org.openapis.openapi.models.operations.DeleteAppImageConfigResponse res = new org.openapis.openapi.models.operations.DeleteAppImageConfigResponse(contentType, httpRes.statusCode()) {{
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4433,12 +4314,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteArtifactResponse res = new org.openapis.openapi.models.operations.DeleteArtifactResponse() {{
+        org.openapis.openapi.models.operations.DeleteArtifactResponse res = new org.openapis.openapi.models.operations.DeleteArtifactResponse(contentType, httpRes.statusCode()) {{
             deleteArtifactResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4493,12 +4372,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAssociationResponse res = new org.openapis.openapi.models.operations.DeleteAssociationResponse() {{
+        org.openapis.openapi.models.operations.DeleteAssociationResponse res = new org.openapis.openapi.models.operations.DeleteAssociationResponse(contentType, httpRes.statusCode()) {{
             deleteAssociationResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4553,10 +4430,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCodeRepositoryResponse res = new org.openapis.openapi.models.operations.DeleteCodeRepositoryResponse() {{
+        org.openapis.openapi.models.operations.DeleteCodeRepositoryResponse res = new org.openapis.openapi.models.operations.DeleteCodeRepositoryResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4599,12 +4474,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteContextResponse res = new org.openapis.openapi.models.operations.DeleteContextResponse() {{
+        org.openapis.openapi.models.operations.DeleteContextResponse res = new org.openapis.openapi.models.operations.DeleteContextResponse(contentType, httpRes.statusCode()) {{
             deleteContextResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4659,11 +4532,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDataQualityJobDefinitionResponse res = new org.openapis.openapi.models.operations.DeleteDataQualityJobDefinitionResponse() {{
+        org.openapis.openapi.models.operations.DeleteDataQualityJobDefinitionResponse res = new org.openapis.openapi.models.operations.DeleteDataQualityJobDefinitionResponse(contentType, httpRes.statusCode()) {{
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4713,11 +4584,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDeviceFleetResponse res = new org.openapis.openapi.models.operations.DeleteDeviceFleetResponse() {{
+        org.openapis.openapi.models.operations.DeleteDeviceFleetResponse res = new org.openapis.openapi.models.operations.DeleteDeviceFleetResponse(contentType, httpRes.statusCode()) {{
             resourceInUse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4767,12 +4636,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDomainResponse res = new org.openapis.openapi.models.operations.DeleteDomainResponse() {{
+        org.openapis.openapi.models.operations.DeleteDomainResponse res = new org.openapis.openapi.models.operations.DeleteDomainResponse(contentType, httpRes.statusCode()) {{
             resourceInUse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4829,11 +4696,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteEdgeDeploymentPlanResponse res = new org.openapis.openapi.models.operations.DeleteEdgeDeploymentPlanResponse() {{
+        org.openapis.openapi.models.operations.DeleteEdgeDeploymentPlanResponse res = new org.openapis.openapi.models.operations.DeleteEdgeDeploymentPlanResponse(contentType, httpRes.statusCode()) {{
             resourceInUse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4883,11 +4748,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteEdgeDeploymentStageResponse res = new org.openapis.openapi.models.operations.DeleteEdgeDeploymentStageResponse() {{
+        org.openapis.openapi.models.operations.DeleteEdgeDeploymentStageResponse res = new org.openapis.openapi.models.operations.DeleteEdgeDeploymentStageResponse(contentType, httpRes.statusCode()) {{
             resourceInUse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4937,10 +4800,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteEndpointResponse res = new org.openapis.openapi.models.operations.DeleteEndpointResponse() {{
+        org.openapis.openapi.models.operations.DeleteEndpointResponse res = new org.openapis.openapi.models.operations.DeleteEndpointResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4983,10 +4844,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteEndpointConfigResponse res = new org.openapis.openapi.models.operations.DeleteEndpointConfigResponse() {{
+        org.openapis.openapi.models.operations.DeleteEndpointConfigResponse res = new org.openapis.openapi.models.operations.DeleteEndpointConfigResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4996,7 +4855,7 @@ public class SDK {
     }
 
     /**
-     * Deletes an SageMaker experiment. All trials associated with the experiment must be deleted first. Use the &lt;a&gt;ListTrials&lt;/a&gt; API to get a list of the trials associated with the experiment.
+     * Deletes an SageMaker experiment. All trials associated with the experiment must be deleted first. Use the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListTrials.html"&gt;ListTrials&lt;/a&gt; API to get a list of the trials associated with the experiment.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -5029,12 +4888,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteExperimentResponse res = new org.openapis.openapi.models.operations.DeleteExperimentResponse() {{
+        org.openapis.openapi.models.operations.DeleteExperimentResponse res = new org.openapis.openapi.models.operations.DeleteExperimentResponse(contentType, httpRes.statusCode()) {{
             deleteExperimentResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5089,11 +4946,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFeatureGroupResponse res = new org.openapis.openapi.models.operations.DeleteFeatureGroupResponse() {{
+        org.openapis.openapi.models.operations.DeleteFeatureGroupResponse res = new org.openapis.openapi.models.operations.DeleteFeatureGroupResponse(contentType, httpRes.statusCode()) {{
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5143,13 +4998,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFlowDefinitionResponse res = new org.openapis.openapi.models.operations.DeleteFlowDefinitionResponse() {{
+        org.openapis.openapi.models.operations.DeleteFlowDefinitionResponse res = new org.openapis.openapi.models.operations.DeleteFlowDefinitionResponse(contentType, httpRes.statusCode()) {{
             deleteFlowDefinitionResponse = null;
             resourceInUse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5211,12 +5064,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteHubResponse res = new org.openapis.openapi.models.operations.DeleteHubResponse() {{
+        org.openapis.openapi.models.operations.DeleteHubResponse res = new org.openapis.openapi.models.operations.DeleteHubResponse(contentType, httpRes.statusCode()) {{
             resourceInUse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5273,12 +5124,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteHubContentResponse res = new org.openapis.openapi.models.operations.DeleteHubContentResponse() {{
+        org.openapis.openapi.models.operations.DeleteHubContentResponse res = new org.openapis.openapi.models.operations.DeleteHubContentResponse(contentType, httpRes.statusCode()) {{
             resourceInUse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5302,7 +5151,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Use this operation to delete a human task user interface (worker task template).&lt;/p&gt; &lt;p&gt; To see a list of human task user interfaces (work task templates) in your account, use . When you delete a worker task template, it no longer appears when you call &lt;code&gt;ListHumanTaskUis&lt;/code&gt;.&lt;/p&gt;
+     * &lt;p&gt;Use this operation to delete a human task user interface (worker task template).&lt;/p&gt; &lt;p&gt; To see a list of human task user interfaces (work task templates) in your account, use &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListHumanTaskUis.html"&gt;ListHumanTaskUis&lt;/a&gt;. When you delete a worker task template, it no longer appears when you call &lt;code&gt;ListHumanTaskUis&lt;/code&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -5335,12 +5184,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteHumanTaskUiResponse res = new org.openapis.openapi.models.operations.DeleteHumanTaskUiResponse() {{
+        org.openapis.openapi.models.operations.DeleteHumanTaskUiResponse res = new org.openapis.openapi.models.operations.DeleteHumanTaskUiResponse(contentType, httpRes.statusCode()) {{
             deleteHumanTaskUiResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5395,13 +5242,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteImageResponse res = new org.openapis.openapi.models.operations.DeleteImageResponse() {{
+        org.openapis.openapi.models.operations.DeleteImageResponse res = new org.openapis.openapi.models.operations.DeleteImageResponse(contentType, httpRes.statusCode()) {{
             deleteImageResponse = null;
             resourceInUse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5463,13 +5308,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteImageVersionResponse res = new org.openapis.openapi.models.operations.DeleteImageVersionResponse() {{
+        org.openapis.openapi.models.operations.DeleteImageVersionResponse res = new org.openapis.openapi.models.operations.DeleteImageVersionResponse(contentType, httpRes.statusCode()) {{
             deleteImageVersionResponse = null;
             resourceInUse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5531,13 +5374,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteInferenceExperimentResponse res = new org.openapis.openapi.models.operations.DeleteInferenceExperimentResponse() {{
+        org.openapis.openapi.models.operations.DeleteInferenceExperimentResponse res = new org.openapis.openapi.models.operations.DeleteInferenceExperimentResponse(contentType, httpRes.statusCode()) {{
             deleteInferenceExperimentResponse = null;
             conflictException = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5599,10 +5440,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteModelResponse res = new org.openapis.openapi.models.operations.DeleteModelResponse() {{
+        org.openapis.openapi.models.operations.DeleteModelResponse res = new org.openapis.openapi.models.operations.DeleteModelResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5645,11 +5484,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteModelBiasJobDefinitionResponse res = new org.openapis.openapi.models.operations.DeleteModelBiasJobDefinitionResponse() {{
+        org.openapis.openapi.models.operations.DeleteModelBiasJobDefinitionResponse res = new org.openapis.openapi.models.operations.DeleteModelBiasJobDefinitionResponse(contentType, httpRes.statusCode()) {{
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5699,12 +5536,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteModelCardResponse res = new org.openapis.openapi.models.operations.DeleteModelCardResponse() {{
+        org.openapis.openapi.models.operations.DeleteModelCardResponse res = new org.openapis.openapi.models.operations.DeleteModelCardResponse(contentType, httpRes.statusCode()) {{
             resourceNotFound = null;
             conflictException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5761,11 +5596,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteModelExplainabilityJobDefinitionResponse res = new org.openapis.openapi.models.operations.DeleteModelExplainabilityJobDefinitionResponse() {{
+        org.openapis.openapi.models.operations.DeleteModelExplainabilityJobDefinitionResponse res = new org.openapis.openapi.models.operations.DeleteModelExplainabilityJobDefinitionResponse(contentType, httpRes.statusCode()) {{
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5815,11 +5648,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteModelPackageResponse res = new org.openapis.openapi.models.operations.DeleteModelPackageResponse() {{
+        org.openapis.openapi.models.operations.DeleteModelPackageResponse res = new org.openapis.openapi.models.operations.DeleteModelPackageResponse(contentType, httpRes.statusCode()) {{
             conflictException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5869,11 +5700,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteModelPackageGroupResponse res = new org.openapis.openapi.models.operations.DeleteModelPackageGroupResponse() {{
+        org.openapis.openapi.models.operations.DeleteModelPackageGroupResponse res = new org.openapis.openapi.models.operations.DeleteModelPackageGroupResponse(contentType, httpRes.statusCode()) {{
             conflictException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5923,10 +5752,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteModelPackageGroupPolicyResponse res = new org.openapis.openapi.models.operations.DeleteModelPackageGroupPolicyResponse() {{
+        org.openapis.openapi.models.operations.DeleteModelPackageGroupPolicyResponse res = new org.openapis.openapi.models.operations.DeleteModelPackageGroupPolicyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5969,11 +5796,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteModelQualityJobDefinitionResponse res = new org.openapis.openapi.models.operations.DeleteModelQualityJobDefinitionResponse() {{
+        org.openapis.openapi.models.operations.DeleteModelQualityJobDefinitionResponse res = new org.openapis.openapi.models.operations.DeleteModelQualityJobDefinitionResponse(contentType, httpRes.statusCode()) {{
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6023,11 +5848,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteMonitoringScheduleResponse res = new org.openapis.openapi.models.operations.DeleteMonitoringScheduleResponse() {{
+        org.openapis.openapi.models.operations.DeleteMonitoringScheduleResponse res = new org.openapis.openapi.models.operations.DeleteMonitoringScheduleResponse(contentType, httpRes.statusCode()) {{
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6077,10 +5900,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteNotebookInstanceResponse res = new org.openapis.openapi.models.operations.DeleteNotebookInstanceResponse() {{
+        org.openapis.openapi.models.operations.DeleteNotebookInstanceResponse res = new org.openapis.openapi.models.operations.DeleteNotebookInstanceResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6123,10 +5944,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteNotebookInstanceLifecycleConfigResponse res = new org.openapis.openapi.models.operations.DeleteNotebookInstanceLifecycleConfigResponse() {{
+        org.openapis.openapi.models.operations.DeleteNotebookInstanceLifecycleConfigResponse res = new org.openapis.openapi.models.operations.DeleteNotebookInstanceLifecycleConfigResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6169,12 +5988,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePipelineResponse res = new org.openapis.openapi.models.operations.DeletePipelineResponse() {{
+        org.openapis.openapi.models.operations.DeletePipelineResponse res = new org.openapis.openapi.models.operations.DeletePipelineResponse(contentType, httpRes.statusCode()) {{
             deletePipelineResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6229,11 +6046,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteProjectResponse res = new org.openapis.openapi.models.operations.DeleteProjectResponse() {{
+        org.openapis.openapi.models.operations.DeleteProjectResponse res = new org.openapis.openapi.models.operations.DeleteProjectResponse(contentType, httpRes.statusCode()) {{
             conflictException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6283,12 +6098,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSpaceResponse res = new org.openapis.openapi.models.operations.DeleteSpaceResponse() {{
+        org.openapis.openapi.models.operations.DeleteSpaceResponse res = new org.openapis.openapi.models.operations.DeleteSpaceResponse(contentType, httpRes.statusCode()) {{
             resourceInUse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6345,12 +6158,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteStudioLifecycleConfigResponse res = new org.openapis.openapi.models.operations.DeleteStudioLifecycleConfigResponse() {{
+        org.openapis.openapi.models.operations.DeleteStudioLifecycleConfigResponse res = new org.openapis.openapi.models.operations.DeleteStudioLifecycleConfigResponse(contentType, httpRes.statusCode()) {{
             resourceNotFound = null;
             resourceInUse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6407,11 +6218,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTagsResponse res = new org.openapis.openapi.models.operations.DeleteTagsResponse() {{
+        org.openapis.openapi.models.operations.DeleteTagsResponse res = new org.openapis.openapi.models.operations.DeleteTagsResponse(contentType, httpRes.statusCode()) {{
             deleteTagsOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6426,7 +6235,7 @@ public class SDK {
     }
 
     /**
-     * Deletes the specified trial. All trial components that make up the trial must be deleted first. Use the &lt;a&gt;DescribeTrialComponent&lt;/a&gt; API to get the list of trial components.
+     * Deletes the specified trial. All trial components that make up the trial must be deleted first. Use the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeTrialComponent.html"&gt;DescribeTrialComponent&lt;/a&gt; API to get the list of trial components.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -6459,12 +6268,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTrialResponse res = new org.openapis.openapi.models.operations.DeleteTrialResponse() {{
+        org.openapis.openapi.models.operations.DeleteTrialResponse res = new org.openapis.openapi.models.operations.DeleteTrialResponse(contentType, httpRes.statusCode()) {{
             deleteTrialResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6486,7 +6293,7 @@ public class SDK {
     }
 
     /**
-     * Deletes the specified trial component. A trial component must be disassociated from all trials before the trial component can be deleted. To disassociate a trial component from a trial, call the &lt;a&gt;DisassociateTrialComponent&lt;/a&gt; API.
+     * Deletes the specified trial component. A trial component must be disassociated from all trials before the trial component can be deleted. To disassociate a trial component from a trial, call the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DisassociateTrialComponent.html"&gt;DisassociateTrialComponent&lt;/a&gt; API.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -6519,12 +6326,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTrialComponentResponse res = new org.openapis.openapi.models.operations.DeleteTrialComponentResponse() {{
+        org.openapis.openapi.models.operations.DeleteTrialComponentResponse res = new org.openapis.openapi.models.operations.DeleteTrialComponentResponse(contentType, httpRes.statusCode()) {{
             deleteTrialComponentResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6579,12 +6384,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteUserProfileResponse res = new org.openapis.openapi.models.operations.DeleteUserProfileResponse() {{
+        org.openapis.openapi.models.operations.DeleteUserProfileResponse res = new org.openapis.openapi.models.operations.DeleteUserProfileResponse(contentType, httpRes.statusCode()) {{
             resourceInUse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6608,7 +6411,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Use this operation to delete a workforce.&lt;/p&gt; &lt;p&gt;If you want to create a new workforce in an Amazon Web Services Region where a workforce already exists, use this operation to delete the existing workforce and then use to create a new workforce.&lt;/p&gt; &lt;important&gt; &lt;p&gt;If a private workforce contains one or more work teams, you must use the operation to delete all work teams before you delete the workforce. If you try to delete a workforce that contains one or more work teams, you will recieve a &lt;code&gt;ResourceInUse&lt;/code&gt; error.&lt;/p&gt; &lt;/important&gt;
+     * &lt;p&gt;Use this operation to delete a workforce.&lt;/p&gt; &lt;p&gt;If you want to create a new workforce in an Amazon Web Services Region where a workforce already exists, use this operation to delete the existing workforce and then use &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateWorkforce.html"&gt;CreateWorkforce&lt;/a&gt; to create a new workforce.&lt;/p&gt; &lt;important&gt; &lt;p&gt;If a private workforce contains one or more work teams, you must use the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteWorkteam.html"&gt;DeleteWorkteam&lt;/a&gt; operation to delete all work teams before you delete the workforce. If you try to delete a workforce that contains one or more work teams, you will recieve a &lt;code&gt;ResourceInUse&lt;/code&gt; error.&lt;/p&gt; &lt;/important&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -6641,11 +6444,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteWorkforceResponse res = new org.openapis.openapi.models.operations.DeleteWorkforceResponse() {{
+        org.openapis.openapi.models.operations.DeleteWorkforceResponse res = new org.openapis.openapi.models.operations.DeleteWorkforceResponse(contentType, httpRes.statusCode()) {{
             deleteWorkforceResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6693,12 +6494,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteWorkteamResponse res = new org.openapis.openapi.models.operations.DeleteWorkteamResponse() {{
+        org.openapis.openapi.models.operations.DeleteWorkteamResponse res = new org.openapis.openapi.models.operations.DeleteWorkteamResponse(contentType, httpRes.statusCode()) {{
             deleteWorkteamResponse = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6753,10 +6552,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeregisterDevicesResponse res = new org.openapis.openapi.models.operations.DeregisterDevicesResponse() {{
+        org.openapis.openapi.models.operations.DeregisterDevicesResponse res = new org.openapis.openapi.models.operations.DeregisterDevicesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6799,12 +6596,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeActionResponse res = new org.openapis.openapi.models.operations.DescribeActionResponse() {{
+        org.openapis.openapi.models.operations.DescribeActionResponse res = new org.openapis.openapi.models.operations.DescribeActionResponse(contentType, httpRes.statusCode()) {{
             describeActionResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6859,11 +6654,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeAlgorithmResponse res = new org.openapis.openapi.models.operations.DescribeAlgorithmResponse() {{
+        org.openapis.openapi.models.operations.DescribeAlgorithmResponse res = new org.openapis.openapi.models.operations.DescribeAlgorithmResponse(contentType, httpRes.statusCode()) {{
             describeAlgorithmOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6911,12 +6704,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeAppResponse res = new org.openapis.openapi.models.operations.DescribeAppResponse() {{
+        org.openapis.openapi.models.operations.DescribeAppResponse res = new org.openapis.openapi.models.operations.DescribeAppResponse(contentType, httpRes.statusCode()) {{
             describeAppResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6971,12 +6762,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeAppImageConfigResponse res = new org.openapis.openapi.models.operations.DescribeAppImageConfigResponse() {{
+        org.openapis.openapi.models.operations.DescribeAppImageConfigResponse res = new org.openapis.openapi.models.operations.DescribeAppImageConfigResponse(contentType, httpRes.statusCode()) {{
             describeAppImageConfigResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7031,12 +6820,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeArtifactResponse res = new org.openapis.openapi.models.operations.DescribeArtifactResponse() {{
+        org.openapis.openapi.models.operations.DescribeArtifactResponse res = new org.openapis.openapi.models.operations.DescribeArtifactResponse(contentType, httpRes.statusCode()) {{
             describeArtifactResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7091,12 +6878,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeAutoMLJobResponse res = new org.openapis.openapi.models.operations.DescribeAutoMLJobResponse() {{
+        org.openapis.openapi.models.operations.DescribeAutoMLJobResponse res = new org.openapis.openapi.models.operations.DescribeAutoMLJobResponse(contentType, httpRes.statusCode()) {{
             describeAutoMLJobResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7151,12 +6936,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeAutoMLJobV2Response res = new org.openapis.openapi.models.operations.DescribeAutoMLJobV2Response() {{
+        org.openapis.openapi.models.operations.DescribeAutoMLJobV2Response res = new org.openapis.openapi.models.operations.DescribeAutoMLJobV2Response(contentType, httpRes.statusCode()) {{
             describeAutoMLJobV2Response = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7211,11 +6994,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeCodeRepositoryResponse res = new org.openapis.openapi.models.operations.DescribeCodeRepositoryResponse() {{
+        org.openapis.openapi.models.operations.DescribeCodeRepositoryResponse res = new org.openapis.openapi.models.operations.DescribeCodeRepositoryResponse(contentType, httpRes.statusCode()) {{
             describeCodeRepositoryOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7230,7 +7011,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Returns information about a model compilation job.&lt;/p&gt; &lt;p&gt;To create a model compilation job, use &lt;a&gt;CreateCompilationJob&lt;/a&gt;. To get information about multiple model compilation jobs, use &lt;a&gt;ListCompilationJobs&lt;/a&gt;.&lt;/p&gt;
+     * &lt;p&gt;Returns information about a model compilation job.&lt;/p&gt; &lt;p&gt;To create a model compilation job, use &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateCompilationJob.html"&gt;CreateCompilationJob&lt;/a&gt;. To get information about multiple model compilation jobs, use &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListCompilationJobs.html"&gt;ListCompilationJobs&lt;/a&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -7263,12 +7044,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeCompilationJobResponse res = new org.openapis.openapi.models.operations.DescribeCompilationJobResponse() {{
+        org.openapis.openapi.models.operations.DescribeCompilationJobResponse res = new org.openapis.openapi.models.operations.DescribeCompilationJobResponse(contentType, httpRes.statusCode()) {{
             describeCompilationJobResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7323,12 +7102,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeContextResponse res = new org.openapis.openapi.models.operations.DescribeContextResponse() {{
+        org.openapis.openapi.models.operations.DescribeContextResponse res = new org.openapis.openapi.models.operations.DescribeContextResponse(contentType, httpRes.statusCode()) {{
             describeContextResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7383,12 +7160,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeDataQualityJobDefinitionResponse res = new org.openapis.openapi.models.operations.DescribeDataQualityJobDefinitionResponse() {{
+        org.openapis.openapi.models.operations.DescribeDataQualityJobDefinitionResponse res = new org.openapis.openapi.models.operations.DescribeDataQualityJobDefinitionResponse(contentType, httpRes.statusCode()) {{
             describeDataQualityJobDefinitionResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7443,12 +7218,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeDeviceResponse res = new org.openapis.openapi.models.operations.DescribeDeviceResponse() {{
+        org.openapis.openapi.models.operations.DescribeDeviceResponse res = new org.openapis.openapi.models.operations.DescribeDeviceResponse(contentType, httpRes.statusCode()) {{
             describeDeviceResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7503,12 +7276,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeDeviceFleetResponse res = new org.openapis.openapi.models.operations.DescribeDeviceFleetResponse() {{
+        org.openapis.openapi.models.operations.DescribeDeviceFleetResponse res = new org.openapis.openapi.models.operations.DescribeDeviceFleetResponse(contentType, httpRes.statusCode()) {{
             describeDeviceFleetResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7563,12 +7334,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeDomainResponse res = new org.openapis.openapi.models.operations.DescribeDomainResponse() {{
+        org.openapis.openapi.models.operations.DescribeDomainResponse res = new org.openapis.openapi.models.operations.DescribeDomainResponse(contentType, httpRes.statusCode()) {{
             describeDomainResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7623,12 +7392,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeEdgeDeploymentPlanResponse res = new org.openapis.openapi.models.operations.DescribeEdgeDeploymentPlanResponse() {{
+        org.openapis.openapi.models.operations.DescribeEdgeDeploymentPlanResponse res = new org.openapis.openapi.models.operations.DescribeEdgeDeploymentPlanResponse(contentType, httpRes.statusCode()) {{
             describeEdgeDeploymentPlanResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7683,12 +7450,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeEdgePackagingJobResponse res = new org.openapis.openapi.models.operations.DescribeEdgePackagingJobResponse() {{
+        org.openapis.openapi.models.operations.DescribeEdgePackagingJobResponse res = new org.openapis.openapi.models.operations.DescribeEdgePackagingJobResponse(contentType, httpRes.statusCode()) {{
             describeEdgePackagingJobResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7743,11 +7508,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeEndpointResponse res = new org.openapis.openapi.models.operations.DescribeEndpointResponse() {{
+        org.openapis.openapi.models.operations.DescribeEndpointResponse res = new org.openapis.openapi.models.operations.DescribeEndpointResponse(contentType, httpRes.statusCode()) {{
             describeEndpointOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7795,11 +7558,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeEndpointConfigResponse res = new org.openapis.openapi.models.operations.DescribeEndpointConfigResponse() {{
+        org.openapis.openapi.models.operations.DescribeEndpointConfigResponse res = new org.openapis.openapi.models.operations.DescribeEndpointConfigResponse(contentType, httpRes.statusCode()) {{
             describeEndpointConfigOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7847,12 +7608,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeExperimentResponse res = new org.openapis.openapi.models.operations.DescribeExperimentResponse() {{
+        org.openapis.openapi.models.operations.DescribeExperimentResponse res = new org.openapis.openapi.models.operations.DescribeExperimentResponse(contentType, httpRes.statusCode()) {{
             describeExperimentResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7907,12 +7666,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeFeatureGroupResponse res = new org.openapis.openapi.models.operations.DescribeFeatureGroupResponse() {{
+        org.openapis.openapi.models.operations.DescribeFeatureGroupResponse res = new org.openapis.openapi.models.operations.DescribeFeatureGroupResponse(contentType, httpRes.statusCode()) {{
             describeFeatureGroupResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7967,12 +7724,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeFeatureMetadataResponse res = new org.openapis.openapi.models.operations.DescribeFeatureMetadataResponse() {{
+        org.openapis.openapi.models.operations.DescribeFeatureMetadataResponse res = new org.openapis.openapi.models.operations.DescribeFeatureMetadataResponse(contentType, httpRes.statusCode()) {{
             describeFeatureMetadataResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8027,12 +7782,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeFlowDefinitionResponse res = new org.openapis.openapi.models.operations.DescribeFlowDefinitionResponse() {{
+        org.openapis.openapi.models.operations.DescribeFlowDefinitionResponse res = new org.openapis.openapi.models.operations.DescribeFlowDefinitionResponse(contentType, httpRes.statusCode()) {{
             describeFlowDefinitionResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8087,12 +7840,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeHubResponse res = new org.openapis.openapi.models.operations.DescribeHubResponse() {{
+        org.openapis.openapi.models.operations.DescribeHubResponse res = new org.openapis.openapi.models.operations.DescribeHubResponse(contentType, httpRes.statusCode()) {{
             describeHubResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8147,12 +7898,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeHubContentResponse res = new org.openapis.openapi.models.operations.DescribeHubContentResponse() {{
+        org.openapis.openapi.models.operations.DescribeHubContentResponse res = new org.openapis.openapi.models.operations.DescribeHubContentResponse(contentType, httpRes.statusCode()) {{
             describeHubContentResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8207,12 +7956,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeHumanTaskUiResponse res = new org.openapis.openapi.models.operations.DescribeHumanTaskUiResponse() {{
+        org.openapis.openapi.models.operations.DescribeHumanTaskUiResponse res = new org.openapis.openapi.models.operations.DescribeHumanTaskUiResponse(contentType, httpRes.statusCode()) {{
             describeHumanTaskUiResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8267,12 +8014,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeHyperParameterTuningJobResponse res = new org.openapis.openapi.models.operations.DescribeHyperParameterTuningJobResponse() {{
+        org.openapis.openapi.models.operations.DescribeHyperParameterTuningJobResponse res = new org.openapis.openapi.models.operations.DescribeHyperParameterTuningJobResponse(contentType, httpRes.statusCode()) {{
             describeHyperParameterTuningJobResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8327,12 +8072,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeImageResponse res = new org.openapis.openapi.models.operations.DescribeImageResponse() {{
+        org.openapis.openapi.models.operations.DescribeImageResponse res = new org.openapis.openapi.models.operations.DescribeImageResponse(contentType, httpRes.statusCode()) {{
             describeImageResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8387,12 +8130,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeImageVersionResponse res = new org.openapis.openapi.models.operations.DescribeImageVersionResponse() {{
+        org.openapis.openapi.models.operations.DescribeImageVersionResponse res = new org.openapis.openapi.models.operations.DescribeImageVersionResponse(contentType, httpRes.statusCode()) {{
             describeImageVersionResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8447,12 +8188,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeInferenceExperimentResponse res = new org.openapis.openapi.models.operations.DescribeInferenceExperimentResponse() {{
+        org.openapis.openapi.models.operations.DescribeInferenceExperimentResponse res = new org.openapis.openapi.models.operations.DescribeInferenceExperimentResponse(contentType, httpRes.statusCode()) {{
             describeInferenceExperimentResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8507,12 +8246,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeInferenceRecommendationsJobResponse res = new org.openapis.openapi.models.operations.DescribeInferenceRecommendationsJobResponse() {{
+        org.openapis.openapi.models.operations.DescribeInferenceRecommendationsJobResponse res = new org.openapis.openapi.models.operations.DescribeInferenceRecommendationsJobResponse(contentType, httpRes.statusCode()) {{
             describeInferenceRecommendationsJobResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8567,12 +8304,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeLabelingJobResponse res = new org.openapis.openapi.models.operations.DescribeLabelingJobResponse() {{
+        org.openapis.openapi.models.operations.DescribeLabelingJobResponse res = new org.openapis.openapi.models.operations.DescribeLabelingJobResponse(contentType, httpRes.statusCode()) {{
             describeLabelingJobResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8627,12 +8362,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeLineageGroupResponse res = new org.openapis.openapi.models.operations.DescribeLineageGroupResponse() {{
+        org.openapis.openapi.models.operations.DescribeLineageGroupResponse res = new org.openapis.openapi.models.operations.DescribeLineageGroupResponse(contentType, httpRes.statusCode()) {{
             describeLineageGroupResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8687,11 +8420,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeModelResponse res = new org.openapis.openapi.models.operations.DescribeModelResponse() {{
+        org.openapis.openapi.models.operations.DescribeModelResponse res = new org.openapis.openapi.models.operations.DescribeModelResponse(contentType, httpRes.statusCode()) {{
             describeModelOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8739,12 +8470,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeModelBiasJobDefinitionResponse res = new org.openapis.openapi.models.operations.DescribeModelBiasJobDefinitionResponse() {{
+        org.openapis.openapi.models.operations.DescribeModelBiasJobDefinitionResponse res = new org.openapis.openapi.models.operations.DescribeModelBiasJobDefinitionResponse(contentType, httpRes.statusCode()) {{
             describeModelBiasJobDefinitionResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8799,12 +8528,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeModelCardResponse res = new org.openapis.openapi.models.operations.DescribeModelCardResponse() {{
+        org.openapis.openapi.models.operations.DescribeModelCardResponse res = new org.openapis.openapi.models.operations.DescribeModelCardResponse(contentType, httpRes.statusCode()) {{
             describeModelCardResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8859,12 +8586,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeModelCardExportJobResponse res = new org.openapis.openapi.models.operations.DescribeModelCardExportJobResponse() {{
+        org.openapis.openapi.models.operations.DescribeModelCardExportJobResponse res = new org.openapis.openapi.models.operations.DescribeModelCardExportJobResponse(contentType, httpRes.statusCode()) {{
             describeModelCardExportJobResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8919,12 +8644,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeModelExplainabilityJobDefinitionResponse res = new org.openapis.openapi.models.operations.DescribeModelExplainabilityJobDefinitionResponse() {{
+        org.openapis.openapi.models.operations.DescribeModelExplainabilityJobDefinitionResponse res = new org.openapis.openapi.models.operations.DescribeModelExplainabilityJobDefinitionResponse(contentType, httpRes.statusCode()) {{
             describeModelExplainabilityJobDefinitionResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8979,11 +8702,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeModelPackageResponse res = new org.openapis.openapi.models.operations.DescribeModelPackageResponse() {{
+        org.openapis.openapi.models.operations.DescribeModelPackageResponse res = new org.openapis.openapi.models.operations.DescribeModelPackageResponse(contentType, httpRes.statusCode()) {{
             describeModelPackageOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9031,11 +8752,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeModelPackageGroupResponse res = new org.openapis.openapi.models.operations.DescribeModelPackageGroupResponse() {{
+        org.openapis.openapi.models.operations.DescribeModelPackageGroupResponse res = new org.openapis.openapi.models.operations.DescribeModelPackageGroupResponse(contentType, httpRes.statusCode()) {{
             describeModelPackageGroupOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9083,12 +8802,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeModelQualityJobDefinitionResponse res = new org.openapis.openapi.models.operations.DescribeModelQualityJobDefinitionResponse() {{
+        org.openapis.openapi.models.operations.DescribeModelQualityJobDefinitionResponse res = new org.openapis.openapi.models.operations.DescribeModelQualityJobDefinitionResponse(contentType, httpRes.statusCode()) {{
             describeModelQualityJobDefinitionResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9143,12 +8860,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeMonitoringScheduleResponse res = new org.openapis.openapi.models.operations.DescribeMonitoringScheduleResponse() {{
+        org.openapis.openapi.models.operations.DescribeMonitoringScheduleResponse res = new org.openapis.openapi.models.operations.DescribeMonitoringScheduleResponse(contentType, httpRes.statusCode()) {{
             describeMonitoringScheduleResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9203,11 +8918,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeNotebookInstanceResponse res = new org.openapis.openapi.models.operations.DescribeNotebookInstanceResponse() {{
+        org.openapis.openapi.models.operations.DescribeNotebookInstanceResponse res = new org.openapis.openapi.models.operations.DescribeNotebookInstanceResponse(contentType, httpRes.statusCode()) {{
             describeNotebookInstanceOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9255,11 +8968,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeNotebookInstanceLifecycleConfigResponse res = new org.openapis.openapi.models.operations.DescribeNotebookInstanceLifecycleConfigResponse() {{
+        org.openapis.openapi.models.operations.DescribeNotebookInstanceLifecycleConfigResponse res = new org.openapis.openapi.models.operations.DescribeNotebookInstanceLifecycleConfigResponse(contentType, httpRes.statusCode()) {{
             describeNotebookInstanceLifecycleConfigOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9307,12 +9018,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribePipelineResponse res = new org.openapis.openapi.models.operations.DescribePipelineResponse() {{
+        org.openapis.openapi.models.operations.DescribePipelineResponse res = new org.openapis.openapi.models.operations.DescribePipelineResponse(contentType, httpRes.statusCode()) {{
             describePipelineResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9367,12 +9076,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribePipelineDefinitionForExecutionResponse res = new org.openapis.openapi.models.operations.DescribePipelineDefinitionForExecutionResponse() {{
+        org.openapis.openapi.models.operations.DescribePipelineDefinitionForExecutionResponse res = new org.openapis.openapi.models.operations.DescribePipelineDefinitionForExecutionResponse(contentType, httpRes.statusCode()) {{
             describePipelineDefinitionForExecutionResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9427,12 +9134,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribePipelineExecutionResponse res = new org.openapis.openapi.models.operations.DescribePipelineExecutionResponse() {{
+        org.openapis.openapi.models.operations.DescribePipelineExecutionResponse res = new org.openapis.openapi.models.operations.DescribePipelineExecutionResponse(contentType, httpRes.statusCode()) {{
             describePipelineExecutionResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9487,12 +9192,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeProcessingJobResponse res = new org.openapis.openapi.models.operations.DescribeProcessingJobResponse() {{
+        org.openapis.openapi.models.operations.DescribeProcessingJobResponse res = new org.openapis.openapi.models.operations.DescribeProcessingJobResponse(contentType, httpRes.statusCode()) {{
             describeProcessingJobResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9547,11 +9250,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeProjectResponse res = new org.openapis.openapi.models.operations.DescribeProjectResponse() {{
+        org.openapis.openapi.models.operations.DescribeProjectResponse res = new org.openapis.openapi.models.operations.DescribeProjectResponse(contentType, httpRes.statusCode()) {{
             describeProjectOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9599,12 +9300,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeSpaceResponse res = new org.openapis.openapi.models.operations.DescribeSpaceResponse() {{
+        org.openapis.openapi.models.operations.DescribeSpaceResponse res = new org.openapis.openapi.models.operations.DescribeSpaceResponse(contentType, httpRes.statusCode()) {{
             describeSpaceResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9659,12 +9358,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeStudioLifecycleConfigResponse res = new org.openapis.openapi.models.operations.DescribeStudioLifecycleConfigResponse() {{
+        org.openapis.openapi.models.operations.DescribeStudioLifecycleConfigResponse res = new org.openapis.openapi.models.operations.DescribeStudioLifecycleConfigResponse(contentType, httpRes.statusCode()) {{
             describeStudioLifecycleConfigResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9719,11 +9416,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeSubscribedWorkteamResponse res = new org.openapis.openapi.models.operations.DescribeSubscribedWorkteamResponse() {{
+        org.openapis.openapi.models.operations.DescribeSubscribedWorkteamResponse res = new org.openapis.openapi.models.operations.DescribeSubscribedWorkteamResponse(contentType, httpRes.statusCode()) {{
             describeSubscribedWorkteamResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9771,12 +9466,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeTrainingJobResponse res = new org.openapis.openapi.models.operations.DescribeTrainingJobResponse() {{
+        org.openapis.openapi.models.operations.DescribeTrainingJobResponse res = new org.openapis.openapi.models.operations.DescribeTrainingJobResponse(contentType, httpRes.statusCode()) {{
             describeTrainingJobResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9831,12 +9524,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeTransformJobResponse res = new org.openapis.openapi.models.operations.DescribeTransformJobResponse() {{
+        org.openapis.openapi.models.operations.DescribeTransformJobResponse res = new org.openapis.openapi.models.operations.DescribeTransformJobResponse(contentType, httpRes.statusCode()) {{
             describeTransformJobResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9891,12 +9582,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeTrialResponse res = new org.openapis.openapi.models.operations.DescribeTrialResponse() {{
+        org.openapis.openapi.models.operations.DescribeTrialResponse res = new org.openapis.openapi.models.operations.DescribeTrialResponse(contentType, httpRes.statusCode()) {{
             describeTrialResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9951,12 +9640,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeTrialComponentResponse res = new org.openapis.openapi.models.operations.DescribeTrialComponentResponse() {{
+        org.openapis.openapi.models.operations.DescribeTrialComponentResponse res = new org.openapis.openapi.models.operations.DescribeTrialComponentResponse(contentType, httpRes.statusCode()) {{
             describeTrialComponentResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10011,12 +9698,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeUserProfileResponse res = new org.openapis.openapi.models.operations.DescribeUserProfileResponse() {{
+        org.openapis.openapi.models.operations.DescribeUserProfileResponse res = new org.openapis.openapi.models.operations.DescribeUserProfileResponse(contentType, httpRes.statusCode()) {{
             describeUserProfileResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10071,11 +9756,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeWorkforceResponse res = new org.openapis.openapi.models.operations.DescribeWorkforceResponse() {{
+        org.openapis.openapi.models.operations.DescribeWorkforceResponse res = new org.openapis.openapi.models.operations.DescribeWorkforceResponse(contentType, httpRes.statusCode()) {{
             describeWorkforceResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10123,11 +9806,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeWorkteamResponse res = new org.openapis.openapi.models.operations.DescribeWorkteamResponse() {{
+        org.openapis.openapi.models.operations.DescribeWorkteamResponse res = new org.openapis.openapi.models.operations.DescribeWorkteamResponse(contentType, httpRes.statusCode()) {{
             describeWorkteamResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10175,11 +9856,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisableSagemakerServicecatalogPortfolioResponse res = new org.openapis.openapi.models.operations.DisableSagemakerServicecatalogPortfolioResponse() {{
+        org.openapis.openapi.models.operations.DisableSagemakerServicecatalogPortfolioResponse res = new org.openapis.openapi.models.operations.DisableSagemakerServicecatalogPortfolioResponse(contentType, httpRes.statusCode()) {{
             disableSagemakerServicecatalogPortfolioOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10194,7 +9873,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Disassociates a trial component from a trial. This doesn't effect other trials the component is associated with. Before you can delete a component, you must disassociate the component from all trials it is associated with. To associate a trial component with a trial, call the &lt;a&gt;AssociateTrialComponent&lt;/a&gt; API.&lt;/p&gt; &lt;p&gt;To get a list of the trials a component is associated with, use the &lt;a&gt;Search&lt;/a&gt; API. Specify &lt;code&gt;ExperimentTrialComponent&lt;/code&gt; for the &lt;code&gt;Resource&lt;/code&gt; parameter. The list appears in the response under &lt;code&gt;Results.TrialComponent.Parents&lt;/code&gt;.&lt;/p&gt;
+     * &lt;p&gt;Disassociates a trial component from a trial. This doesn't effect other trials the component is associated with. Before you can delete a component, you must disassociate the component from all trials it is associated with. To associate a trial component with a trial, call the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AssociateTrialComponent.html"&gt;AssociateTrialComponent&lt;/a&gt; API.&lt;/p&gt; &lt;p&gt;To get a list of the trials a component is associated with, use the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html"&gt;Search&lt;/a&gt; API. Specify &lt;code&gt;ExperimentTrialComponent&lt;/code&gt; for the &lt;code&gt;Resource&lt;/code&gt; parameter. The list appears in the response under &lt;code&gt;Results.TrialComponent.Parents&lt;/code&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -10227,12 +9906,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisassociateTrialComponentResponse res = new org.openapis.openapi.models.operations.DisassociateTrialComponentResponse() {{
+        org.openapis.openapi.models.operations.DisassociateTrialComponentResponse res = new org.openapis.openapi.models.operations.DisassociateTrialComponentResponse(contentType, httpRes.statusCode()) {{
             disassociateTrialComponentResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10287,11 +9964,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableSagemakerServicecatalogPortfolioResponse res = new org.openapis.openapi.models.operations.EnableSagemakerServicecatalogPortfolioResponse() {{
+        org.openapis.openapi.models.operations.EnableSagemakerServicecatalogPortfolioResponse res = new org.openapis.openapi.models.operations.EnableSagemakerServicecatalogPortfolioResponse(contentType, httpRes.statusCode()) {{
             enableSagemakerServicecatalogPortfolioOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10339,11 +10014,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeviceFleetReportResponse res = new org.openapis.openapi.models.operations.GetDeviceFleetReportResponse() {{
+        org.openapis.openapi.models.operations.GetDeviceFleetReportResponse res = new org.openapis.openapi.models.operations.GetDeviceFleetReportResponse(contentType, httpRes.statusCode()) {{
             getDeviceFleetReportResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10391,12 +10064,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLineageGroupPolicyResponse res = new org.openapis.openapi.models.operations.GetLineageGroupPolicyResponse() {{
+        org.openapis.openapi.models.operations.GetLineageGroupPolicyResponse res = new org.openapis.openapi.models.operations.GetLineageGroupPolicyResponse(contentType, httpRes.statusCode()) {{
             getLineageGroupPolicyResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10451,11 +10122,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetModelPackageGroupPolicyResponse res = new org.openapis.openapi.models.operations.GetModelPackageGroupPolicyResponse() {{
+        org.openapis.openapi.models.operations.GetModelPackageGroupPolicyResponse res = new org.openapis.openapi.models.operations.GetModelPackageGroupPolicyResponse(contentType, httpRes.statusCode()) {{
             getModelPackageGroupPolicyOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10503,11 +10172,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSagemakerServicecatalogPortfolioStatusResponse res = new org.openapis.openapi.models.operations.GetSagemakerServicecatalogPortfolioStatusResponse() {{
+        org.openapis.openapi.models.operations.GetSagemakerServicecatalogPortfolioStatusResponse res = new org.openapis.openapi.models.operations.GetSagemakerServicecatalogPortfolioStatusResponse(contentType, httpRes.statusCode()) {{
             getSagemakerServicecatalogPortfolioStatusOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10555,11 +10222,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSearchSuggestionsResponse res = new org.openapis.openapi.models.operations.GetSearchSuggestionsResponse() {{
+        org.openapis.openapi.models.operations.GetSearchSuggestionsResponse res = new org.openapis.openapi.models.operations.GetSearchSuggestionsResponse(contentType, httpRes.statusCode()) {{
             getSearchSuggestionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10607,14 +10272,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportHubContentResponse res = new org.openapis.openapi.models.operations.ImportHubContentResponse() {{
+        org.openapis.openapi.models.operations.ImportHubContentResponse res = new org.openapis.openapi.models.operations.ImportHubContentResponse(contentType, httpRes.statusCode()) {{
             importHubContentResponse = null;
             resourceInUse = null;
             resourceLimitExceeded = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10689,12 +10352,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListActionsResponse res = new org.openapis.openapi.models.operations.ListActionsResponse() {{
+        org.openapis.openapi.models.operations.ListActionsResponse res = new org.openapis.openapi.models.operations.ListActionsResponse(contentType, httpRes.statusCode()) {{
             listActionsResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10755,11 +10416,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAlgorithmsResponse res = new org.openapis.openapi.models.operations.ListAlgorithmsResponse() {{
+        org.openapis.openapi.models.operations.ListAlgorithmsResponse res = new org.openapis.openapi.models.operations.ListAlgorithmsResponse(contentType, httpRes.statusCode()) {{
             listAlgorithmsOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10813,12 +10472,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAliasesResponse res = new org.openapis.openapi.models.operations.ListAliasesResponse() {{
+        org.openapis.openapi.models.operations.ListAliasesResponse res = new org.openapis.openapi.models.operations.ListAliasesResponse(contentType, httpRes.statusCode()) {{
             listAliasesResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10879,11 +10536,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAppImageConfigsResponse res = new org.openapis.openapi.models.operations.ListAppImageConfigsResponse() {{
+        org.openapis.openapi.models.operations.ListAppImageConfigsResponse res = new org.openapis.openapi.models.operations.ListAppImageConfigsResponse(contentType, httpRes.statusCode()) {{
             listAppImageConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10937,11 +10592,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAppsResponse res = new org.openapis.openapi.models.operations.ListAppsResponse() {{
+        org.openapis.openapi.models.operations.ListAppsResponse res = new org.openapis.openapi.models.operations.ListAppsResponse(contentType, httpRes.statusCode()) {{
             listAppsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10995,12 +10648,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListArtifactsResponse res = new org.openapis.openapi.models.operations.ListArtifactsResponse() {{
+        org.openapis.openapi.models.operations.ListArtifactsResponse res = new org.openapis.openapi.models.operations.ListArtifactsResponse(contentType, httpRes.statusCode()) {{
             listArtifactsResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11061,12 +10712,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAssociationsResponse res = new org.openapis.openapi.models.operations.ListAssociationsResponse() {{
+        org.openapis.openapi.models.operations.ListAssociationsResponse res = new org.openapis.openapi.models.operations.ListAssociationsResponse(contentType, httpRes.statusCode()) {{
             listAssociationsResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11127,11 +10776,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAutoMLJobsResponse res = new org.openapis.openapi.models.operations.ListAutoMLJobsResponse() {{
+        org.openapis.openapi.models.operations.ListAutoMLJobsResponse res = new org.openapis.openapi.models.operations.ListAutoMLJobsResponse(contentType, httpRes.statusCode()) {{
             listAutoMLJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11185,12 +10832,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCandidatesForAutoMLJobResponse res = new org.openapis.openapi.models.operations.ListCandidatesForAutoMLJobResponse() {{
+        org.openapis.openapi.models.operations.ListCandidatesForAutoMLJobResponse res = new org.openapis.openapi.models.operations.ListCandidatesForAutoMLJobResponse(contentType, httpRes.statusCode()) {{
             listCandidatesForAutoMLJobResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11251,11 +10896,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCodeRepositoriesResponse res = new org.openapis.openapi.models.operations.ListCodeRepositoriesResponse() {{
+        org.openapis.openapi.models.operations.ListCodeRepositoriesResponse res = new org.openapis.openapi.models.operations.ListCodeRepositoriesResponse(contentType, httpRes.statusCode()) {{
             listCodeRepositoriesOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11270,7 +10913,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Lists model compilation jobs that satisfy various filters.&lt;/p&gt; &lt;p&gt;To create a model compilation job, use &lt;a&gt;CreateCompilationJob&lt;/a&gt;. To get information about a particular model compilation job you have created, use &lt;a&gt;DescribeCompilationJob&lt;/a&gt;.&lt;/p&gt;
+     * &lt;p&gt;Lists model compilation jobs that satisfy various filters.&lt;/p&gt; &lt;p&gt;To create a model compilation job, use &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateCompilationJob.html"&gt;CreateCompilationJob&lt;/a&gt;. To get information about a particular model compilation job you have created, use &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeCompilationJob.html"&gt;DescribeCompilationJob&lt;/a&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -11309,11 +10952,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCompilationJobsResponse res = new org.openapis.openapi.models.operations.ListCompilationJobsResponse() {{
+        org.openapis.openapi.models.operations.ListCompilationJobsResponse res = new org.openapis.openapi.models.operations.ListCompilationJobsResponse(contentType, httpRes.statusCode()) {{
             listCompilationJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11367,12 +11008,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListContextsResponse res = new org.openapis.openapi.models.operations.ListContextsResponse() {{
+        org.openapis.openapi.models.operations.ListContextsResponse res = new org.openapis.openapi.models.operations.ListContextsResponse(contentType, httpRes.statusCode()) {{
             listContextsResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11433,11 +11072,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDataQualityJobDefinitionsResponse res = new org.openapis.openapi.models.operations.ListDataQualityJobDefinitionsResponse() {{
+        org.openapis.openapi.models.operations.ListDataQualityJobDefinitionsResponse res = new org.openapis.openapi.models.operations.ListDataQualityJobDefinitionsResponse(contentType, httpRes.statusCode()) {{
             listDataQualityJobDefinitionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11491,11 +11128,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDeviceFleetsResponse res = new org.openapis.openapi.models.operations.ListDeviceFleetsResponse() {{
+        org.openapis.openapi.models.operations.ListDeviceFleetsResponse res = new org.openapis.openapi.models.operations.ListDeviceFleetsResponse(contentType, httpRes.statusCode()) {{
             listDeviceFleetsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11549,11 +11184,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDevicesResponse res = new org.openapis.openapi.models.operations.ListDevicesResponse() {{
+        org.openapis.openapi.models.operations.ListDevicesResponse res = new org.openapis.openapi.models.operations.ListDevicesResponse(contentType, httpRes.statusCode()) {{
             listDevicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11607,11 +11240,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDomainsResponse res = new org.openapis.openapi.models.operations.ListDomainsResponse() {{
+        org.openapis.openapi.models.operations.ListDomainsResponse res = new org.openapis.openapi.models.operations.ListDomainsResponse(contentType, httpRes.statusCode()) {{
             listDomainsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11665,11 +11296,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListEdgeDeploymentPlansResponse res = new org.openapis.openapi.models.operations.ListEdgeDeploymentPlansResponse() {{
+        org.openapis.openapi.models.operations.ListEdgeDeploymentPlansResponse res = new org.openapis.openapi.models.operations.ListEdgeDeploymentPlansResponse(contentType, httpRes.statusCode()) {{
             listEdgeDeploymentPlansResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11723,11 +11352,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListEdgePackagingJobsResponse res = new org.openapis.openapi.models.operations.ListEdgePackagingJobsResponse() {{
+        org.openapis.openapi.models.operations.ListEdgePackagingJobsResponse res = new org.openapis.openapi.models.operations.ListEdgePackagingJobsResponse(contentType, httpRes.statusCode()) {{
             listEdgePackagingJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11781,11 +11408,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListEndpointConfigsResponse res = new org.openapis.openapi.models.operations.ListEndpointConfigsResponse() {{
+        org.openapis.openapi.models.operations.ListEndpointConfigsResponse res = new org.openapis.openapi.models.operations.ListEndpointConfigsResponse(contentType, httpRes.statusCode()) {{
             listEndpointConfigsOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11839,11 +11464,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListEndpointsResponse res = new org.openapis.openapi.models.operations.ListEndpointsResponse() {{
+        org.openapis.openapi.models.operations.ListEndpointsResponse res = new org.openapis.openapi.models.operations.ListEndpointsResponse(contentType, httpRes.statusCode()) {{
             listEndpointsOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11897,11 +11520,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListExperimentsResponse res = new org.openapis.openapi.models.operations.ListExperimentsResponse() {{
+        org.openapis.openapi.models.operations.ListExperimentsResponse res = new org.openapis.openapi.models.operations.ListExperimentsResponse(contentType, httpRes.statusCode()) {{
             listExperimentsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11955,11 +11576,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFeatureGroupsResponse res = new org.openapis.openapi.models.operations.ListFeatureGroupsResponse() {{
+        org.openapis.openapi.models.operations.ListFeatureGroupsResponse res = new org.openapis.openapi.models.operations.ListFeatureGroupsResponse(contentType, httpRes.statusCode()) {{
             listFeatureGroupsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12013,11 +11632,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFlowDefinitionsResponse res = new org.openapis.openapi.models.operations.ListFlowDefinitionsResponse() {{
+        org.openapis.openapi.models.operations.ListFlowDefinitionsResponse res = new org.openapis.openapi.models.operations.ListFlowDefinitionsResponse(contentType, httpRes.statusCode()) {{
             listFlowDefinitionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12065,12 +11682,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListHubContentVersionsResponse res = new org.openapis.openapi.models.operations.ListHubContentVersionsResponse() {{
+        org.openapis.openapi.models.operations.ListHubContentVersionsResponse res = new org.openapis.openapi.models.operations.ListHubContentVersionsResponse(contentType, httpRes.statusCode()) {{
             listHubContentVersionsResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12125,12 +11740,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListHubContentsResponse res = new org.openapis.openapi.models.operations.ListHubContentsResponse() {{
+        org.openapis.openapi.models.operations.ListHubContentsResponse res = new org.openapis.openapi.models.operations.ListHubContentsResponse(contentType, httpRes.statusCode()) {{
             listHubContentsResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12185,11 +11798,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListHubsResponse res = new org.openapis.openapi.models.operations.ListHubsResponse() {{
+        org.openapis.openapi.models.operations.ListHubsResponse res = new org.openapis.openapi.models.operations.ListHubsResponse(contentType, httpRes.statusCode()) {{
             listHubsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12243,11 +11854,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListHumanTaskUisResponse res = new org.openapis.openapi.models.operations.ListHumanTaskUisResponse() {{
+        org.openapis.openapi.models.operations.ListHumanTaskUisResponse res = new org.openapis.openapi.models.operations.ListHumanTaskUisResponse(contentType, httpRes.statusCode()) {{
             listHumanTaskUisResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12262,7 +11871,7 @@ public class SDK {
     }
 
     /**
-     * Gets a list of &lt;a&gt;HyperParameterTuningJobSummary&lt;/a&gt; objects that describe the hyperparameter tuning jobs launched in your account.
+     * Gets a list of &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTuningJobSummary.html"&gt;HyperParameterTuningJobSummary&lt;/a&gt; objects that describe the hyperparameter tuning jobs launched in your account.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -12301,11 +11910,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListHyperParameterTuningJobsResponse res = new org.openapis.openapi.models.operations.ListHyperParameterTuningJobsResponse() {{
+        org.openapis.openapi.models.operations.ListHyperParameterTuningJobsResponse res = new org.openapis.openapi.models.operations.ListHyperParameterTuningJobsResponse(contentType, httpRes.statusCode()) {{
             listHyperParameterTuningJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12359,12 +11966,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListImageVersionsResponse res = new org.openapis.openapi.models.operations.ListImageVersionsResponse() {{
+        org.openapis.openapi.models.operations.ListImageVersionsResponse res = new org.openapis.openapi.models.operations.ListImageVersionsResponse(contentType, httpRes.statusCode()) {{
             listImageVersionsResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12425,11 +12030,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListImagesResponse res = new org.openapis.openapi.models.operations.ListImagesResponse() {{
+        org.openapis.openapi.models.operations.ListImagesResponse res = new org.openapis.openapi.models.operations.ListImagesResponse(contentType, httpRes.statusCode()) {{
             listImagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12483,11 +12086,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListInferenceExperimentsResponse res = new org.openapis.openapi.models.operations.ListInferenceExperimentsResponse() {{
+        org.openapis.openapi.models.operations.ListInferenceExperimentsResponse res = new org.openapis.openapi.models.operations.ListInferenceExperimentsResponse(contentType, httpRes.statusCode()) {{
             listInferenceExperimentsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12541,12 +12142,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListInferenceRecommendationsJobStepsResponse res = new org.openapis.openapi.models.operations.ListInferenceRecommendationsJobStepsResponse() {{
+        org.openapis.openapi.models.operations.ListInferenceRecommendationsJobStepsResponse res = new org.openapis.openapi.models.operations.ListInferenceRecommendationsJobStepsResponse(contentType, httpRes.statusCode()) {{
             listInferenceRecommendationsJobStepsResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12607,11 +12206,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListInferenceRecommendationsJobsResponse res = new org.openapis.openapi.models.operations.ListInferenceRecommendationsJobsResponse() {{
+        org.openapis.openapi.models.operations.ListInferenceRecommendationsJobsResponse res = new org.openapis.openapi.models.operations.ListInferenceRecommendationsJobsResponse(contentType, httpRes.statusCode()) {{
             listInferenceRecommendationsJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12665,11 +12262,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLabelingJobsResponse res = new org.openapis.openapi.models.operations.ListLabelingJobsResponse() {{
+        org.openapis.openapi.models.operations.ListLabelingJobsResponse res = new org.openapis.openapi.models.operations.ListLabelingJobsResponse(contentType, httpRes.statusCode()) {{
             listLabelingJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12723,12 +12318,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLabelingJobsForWorkteamResponse res = new org.openapis.openapi.models.operations.ListLabelingJobsForWorkteamResponse() {{
+        org.openapis.openapi.models.operations.ListLabelingJobsForWorkteamResponse res = new org.openapis.openapi.models.operations.ListLabelingJobsForWorkteamResponse(contentType, httpRes.statusCode()) {{
             listLabelingJobsForWorkteamResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12789,11 +12382,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLineageGroupsResponse res = new org.openapis.openapi.models.operations.ListLineageGroupsResponse() {{
+        org.openapis.openapi.models.operations.ListLineageGroupsResponse res = new org.openapis.openapi.models.operations.ListLineageGroupsResponse(contentType, httpRes.statusCode()) {{
             listLineageGroupsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12847,11 +12438,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListModelBiasJobDefinitionsResponse res = new org.openapis.openapi.models.operations.ListModelBiasJobDefinitionsResponse() {{
+        org.openapis.openapi.models.operations.ListModelBiasJobDefinitionsResponse res = new org.openapis.openapi.models.operations.ListModelBiasJobDefinitionsResponse(contentType, httpRes.statusCode()) {{
             listModelBiasJobDefinitionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12905,11 +12494,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListModelCardExportJobsResponse res = new org.openapis.openapi.models.operations.ListModelCardExportJobsResponse() {{
+        org.openapis.openapi.models.operations.ListModelCardExportJobsResponse res = new org.openapis.openapi.models.operations.ListModelCardExportJobsResponse(contentType, httpRes.statusCode()) {{
             listModelCardExportJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12963,12 +12550,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListModelCardVersionsResponse res = new org.openapis.openapi.models.operations.ListModelCardVersionsResponse() {{
+        org.openapis.openapi.models.operations.ListModelCardVersionsResponse res = new org.openapis.openapi.models.operations.ListModelCardVersionsResponse(contentType, httpRes.statusCode()) {{
             listModelCardVersionsResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -13029,11 +12614,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListModelCardsResponse res = new org.openapis.openapi.models.operations.ListModelCardsResponse() {{
+        org.openapis.openapi.models.operations.ListModelCardsResponse res = new org.openapis.openapi.models.operations.ListModelCardsResponse(contentType, httpRes.statusCode()) {{
             listModelCardsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -13087,11 +12670,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListModelExplainabilityJobDefinitionsResponse res = new org.openapis.openapi.models.operations.ListModelExplainabilityJobDefinitionsResponse() {{
+        org.openapis.openapi.models.operations.ListModelExplainabilityJobDefinitionsResponse res = new org.openapis.openapi.models.operations.ListModelExplainabilityJobDefinitionsResponse(contentType, httpRes.statusCode()) {{
             listModelExplainabilityJobDefinitionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -13145,11 +12726,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListModelMetadataResponse res = new org.openapis.openapi.models.operations.ListModelMetadataResponse() {{
+        org.openapis.openapi.models.operations.ListModelMetadataResponse res = new org.openapis.openapi.models.operations.ListModelMetadataResponse(contentType, httpRes.statusCode()) {{
             listModelMetadataResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -13203,11 +12782,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListModelPackageGroupsResponse res = new org.openapis.openapi.models.operations.ListModelPackageGroupsResponse() {{
+        org.openapis.openapi.models.operations.ListModelPackageGroupsResponse res = new org.openapis.openapi.models.operations.ListModelPackageGroupsResponse(contentType, httpRes.statusCode()) {{
             listModelPackageGroupsOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -13261,11 +12838,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListModelPackagesResponse res = new org.openapis.openapi.models.operations.ListModelPackagesResponse() {{
+        org.openapis.openapi.models.operations.ListModelPackagesResponse res = new org.openapis.openapi.models.operations.ListModelPackagesResponse(contentType, httpRes.statusCode()) {{
             listModelPackagesOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -13319,11 +12894,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListModelQualityJobDefinitionsResponse res = new org.openapis.openapi.models.operations.ListModelQualityJobDefinitionsResponse() {{
+        org.openapis.openapi.models.operations.ListModelQualityJobDefinitionsResponse res = new org.openapis.openapi.models.operations.ListModelQualityJobDefinitionsResponse(contentType, httpRes.statusCode()) {{
             listModelQualityJobDefinitionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -13377,11 +12950,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListModelsResponse res = new org.openapis.openapi.models.operations.ListModelsResponse() {{
+        org.openapis.openapi.models.operations.ListModelsResponse res = new org.openapis.openapi.models.operations.ListModelsResponse(contentType, httpRes.statusCode()) {{
             listModelsOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -13435,12 +13006,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListMonitoringAlertHistoryResponse res = new org.openapis.openapi.models.operations.ListMonitoringAlertHistoryResponse() {{
+        org.openapis.openapi.models.operations.ListMonitoringAlertHistoryResponse res = new org.openapis.openapi.models.operations.ListMonitoringAlertHistoryResponse(contentType, httpRes.statusCode()) {{
             listMonitoringAlertHistoryResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -13501,12 +13070,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListMonitoringAlertsResponse res = new org.openapis.openapi.models.operations.ListMonitoringAlertsResponse() {{
+        org.openapis.openapi.models.operations.ListMonitoringAlertsResponse res = new org.openapis.openapi.models.operations.ListMonitoringAlertsResponse(contentType, httpRes.statusCode()) {{
             listMonitoringAlertsResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -13567,11 +13134,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListMonitoringExecutionsResponse res = new org.openapis.openapi.models.operations.ListMonitoringExecutionsResponse() {{
+        org.openapis.openapi.models.operations.ListMonitoringExecutionsResponse res = new org.openapis.openapi.models.operations.ListMonitoringExecutionsResponse(contentType, httpRes.statusCode()) {{
             listMonitoringExecutionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -13625,11 +13190,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListMonitoringSchedulesResponse res = new org.openapis.openapi.models.operations.ListMonitoringSchedulesResponse() {{
+        org.openapis.openapi.models.operations.ListMonitoringSchedulesResponse res = new org.openapis.openapi.models.operations.ListMonitoringSchedulesResponse(contentType, httpRes.statusCode()) {{
             listMonitoringSchedulesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -13644,7 +13207,7 @@ public class SDK {
     }
 
     /**
-     * Lists notebook instance lifestyle configurations created with the &lt;a&gt;CreateNotebookInstanceLifecycleConfig&lt;/a&gt; API.
+     * Lists notebook instance lifestyle configurations created with the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateNotebookInstanceLifecycleConfig.html"&gt;CreateNotebookInstanceLifecycleConfig&lt;/a&gt; API.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -13683,11 +13246,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListNotebookInstanceLifecycleConfigsResponse res = new org.openapis.openapi.models.operations.ListNotebookInstanceLifecycleConfigsResponse() {{
+        org.openapis.openapi.models.operations.ListNotebookInstanceLifecycleConfigsResponse res = new org.openapis.openapi.models.operations.ListNotebookInstanceLifecycleConfigsResponse(contentType, httpRes.statusCode()) {{
             listNotebookInstanceLifecycleConfigsOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -13741,11 +13302,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListNotebookInstancesResponse res = new org.openapis.openapi.models.operations.ListNotebookInstancesResponse() {{
+        org.openapis.openapi.models.operations.ListNotebookInstancesResponse res = new org.openapis.openapi.models.operations.ListNotebookInstancesResponse(contentType, httpRes.statusCode()) {{
             listNotebookInstancesOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -13799,12 +13358,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPipelineExecutionStepsResponse res = new org.openapis.openapi.models.operations.ListPipelineExecutionStepsResponse() {{
+        org.openapis.openapi.models.operations.ListPipelineExecutionStepsResponse res = new org.openapis.openapi.models.operations.ListPipelineExecutionStepsResponse(contentType, httpRes.statusCode()) {{
             listPipelineExecutionStepsResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -13865,12 +13422,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPipelineExecutionsResponse res = new org.openapis.openapi.models.operations.ListPipelineExecutionsResponse() {{
+        org.openapis.openapi.models.operations.ListPipelineExecutionsResponse res = new org.openapis.openapi.models.operations.ListPipelineExecutionsResponse(contentType, httpRes.statusCode()) {{
             listPipelineExecutionsResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -13931,12 +13486,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPipelineParametersForExecutionResponse res = new org.openapis.openapi.models.operations.ListPipelineParametersForExecutionResponse() {{
+        org.openapis.openapi.models.operations.ListPipelineParametersForExecutionResponse res = new org.openapis.openapi.models.operations.ListPipelineParametersForExecutionResponse(contentType, httpRes.statusCode()) {{
             listPipelineParametersForExecutionResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -13997,11 +13550,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPipelinesResponse res = new org.openapis.openapi.models.operations.ListPipelinesResponse() {{
+        org.openapis.openapi.models.operations.ListPipelinesResponse res = new org.openapis.openapi.models.operations.ListPipelinesResponse(contentType, httpRes.statusCode()) {{
             listPipelinesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -14055,11 +13606,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListProcessingJobsResponse res = new org.openapis.openapi.models.operations.ListProcessingJobsResponse() {{
+        org.openapis.openapi.models.operations.ListProcessingJobsResponse res = new org.openapis.openapi.models.operations.ListProcessingJobsResponse(contentType, httpRes.statusCode()) {{
             listProcessingJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -14113,11 +13662,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListProjectsResponse res = new org.openapis.openapi.models.operations.ListProjectsResponse() {{
+        org.openapis.openapi.models.operations.ListProjectsResponse res = new org.openapis.openapi.models.operations.ListProjectsResponse(contentType, httpRes.statusCode()) {{
             listProjectsOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -14171,11 +13718,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSpacesResponse res = new org.openapis.openapi.models.operations.ListSpacesResponse() {{
+        org.openapis.openapi.models.operations.ListSpacesResponse res = new org.openapis.openapi.models.operations.ListSpacesResponse(contentType, httpRes.statusCode()) {{
             listSpacesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -14229,11 +13774,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListStageDevicesResponse res = new org.openapis.openapi.models.operations.ListStageDevicesResponse() {{
+        org.openapis.openapi.models.operations.ListStageDevicesResponse res = new org.openapis.openapi.models.operations.ListStageDevicesResponse(contentType, httpRes.statusCode()) {{
             listStageDevicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -14287,12 +13830,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListStudioLifecycleConfigsResponse res = new org.openapis.openapi.models.operations.ListStudioLifecycleConfigsResponse() {{
+        org.openapis.openapi.models.operations.ListStudioLifecycleConfigsResponse res = new org.openapis.openapi.models.operations.ListStudioLifecycleConfigsResponse(contentType, httpRes.statusCode()) {{
             listStudioLifecycleConfigsResponse = null;
             resourceInUse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -14353,11 +13894,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSubscribedWorkteamsResponse res = new org.openapis.openapi.models.operations.ListSubscribedWorkteamsResponse() {{
+        org.openapis.openapi.models.operations.ListSubscribedWorkteamsResponse res = new org.openapis.openapi.models.operations.ListSubscribedWorkteamsResponse(contentType, httpRes.statusCode()) {{
             listSubscribedWorkteamsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -14411,11 +13950,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsResponse res = new org.openapis.openapi.models.operations.ListTagsResponse() {{
+        org.openapis.openapi.models.operations.ListTagsResponse res = new org.openapis.openapi.models.operations.ListTagsResponse(contentType, httpRes.statusCode()) {{
             listTagsOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -14469,11 +14006,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTrainingJobsResponse res = new org.openapis.openapi.models.operations.ListTrainingJobsResponse() {{
+        org.openapis.openapi.models.operations.ListTrainingJobsResponse res = new org.openapis.openapi.models.operations.ListTrainingJobsResponse(contentType, httpRes.statusCode()) {{
             listTrainingJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -14488,7 +14023,7 @@ public class SDK {
     }
 
     /**
-     * Gets a list of &lt;a&gt;TrainingJobSummary&lt;/a&gt; objects that describe the training jobs that a hyperparameter tuning job launched.
+     * Gets a list of &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_TrainingJobSummary.html"&gt;TrainingJobSummary&lt;/a&gt; objects that describe the training jobs that a hyperparameter tuning job launched.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -14527,12 +14062,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTrainingJobsForHyperParameterTuningJobResponse res = new org.openapis.openapi.models.operations.ListTrainingJobsForHyperParameterTuningJobResponse() {{
+        org.openapis.openapi.models.operations.ListTrainingJobsForHyperParameterTuningJobResponse res = new org.openapis.openapi.models.operations.ListTrainingJobsForHyperParameterTuningJobResponse(contentType, httpRes.statusCode()) {{
             listTrainingJobsForHyperParameterTuningJobResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -14593,11 +14126,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTransformJobsResponse res = new org.openapis.openapi.models.operations.ListTransformJobsResponse() {{
+        org.openapis.openapi.models.operations.ListTransformJobsResponse res = new org.openapis.openapi.models.operations.ListTransformJobsResponse(contentType, httpRes.statusCode()) {{
             listTransformJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -14651,12 +14182,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTrialComponentsResponse res = new org.openapis.openapi.models.operations.ListTrialComponentsResponse() {{
+        org.openapis.openapi.models.operations.ListTrialComponentsResponse res = new org.openapis.openapi.models.operations.ListTrialComponentsResponse(contentType, httpRes.statusCode()) {{
             listTrialComponentsResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -14717,12 +14246,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTrialsResponse res = new org.openapis.openapi.models.operations.ListTrialsResponse() {{
+        org.openapis.openapi.models.operations.ListTrialsResponse res = new org.openapis.openapi.models.operations.ListTrialsResponse(contentType, httpRes.statusCode()) {{
             listTrialsResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -14783,11 +14310,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListUserProfilesResponse res = new org.openapis.openapi.models.operations.ListUserProfilesResponse() {{
+        org.openapis.openapi.models.operations.ListUserProfilesResponse res = new org.openapis.openapi.models.operations.ListUserProfilesResponse(contentType, httpRes.statusCode()) {{
             listUserProfilesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -14841,11 +14366,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListWorkforcesResponse res = new org.openapis.openapi.models.operations.ListWorkforcesResponse() {{
+        org.openapis.openapi.models.operations.ListWorkforcesResponse res = new org.openapis.openapi.models.operations.ListWorkforcesResponse(contentType, httpRes.statusCode()) {{
             listWorkforcesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -14899,11 +14422,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListWorkteamsResponse res = new org.openapis.openapi.models.operations.ListWorkteamsResponse() {{
+        org.openapis.openapi.models.operations.ListWorkteamsResponse res = new org.openapis.openapi.models.operations.ListWorkteamsResponse(contentType, httpRes.statusCode()) {{
             listWorkteamsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -14951,11 +14472,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutModelPackageGroupPolicyResponse res = new org.openapis.openapi.models.operations.PutModelPackageGroupPolicyResponse() {{
+        org.openapis.openapi.models.operations.PutModelPackageGroupPolicyResponse res = new org.openapis.openapi.models.operations.PutModelPackageGroupPolicyResponse(contentType, httpRes.statusCode()) {{
             putModelPackageGroupPolicyOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -15009,12 +14528,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QueryLineageResponse res = new org.openapis.openapi.models.operations.QueryLineageResponse() {{
+        org.openapis.openapi.models.operations.QueryLineageResponse res = new org.openapis.openapi.models.operations.QueryLineageResponse(contentType, httpRes.statusCode()) {{
             queryLineageResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -15069,11 +14586,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterDevicesResponse res = new org.openapis.openapi.models.operations.RegisterDevicesResponse() {{
+        org.openapis.openapi.models.operations.RegisterDevicesResponse res = new org.openapis.openapi.models.operations.RegisterDevicesResponse(contentType, httpRes.statusCode()) {{
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -15123,12 +14638,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RenderUiTemplateResponse res = new org.openapis.openapi.models.operations.RenderUiTemplateResponse() {{
+        org.openapis.openapi.models.operations.RenderUiTemplateResponse res = new org.openapis.openapi.models.operations.RenderUiTemplateResponse(contentType, httpRes.statusCode()) {{
             renderUiTemplateResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -15183,14 +14696,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetryPipelineExecutionResponse res = new org.openapis.openapi.models.operations.RetryPipelineExecutionResponse() {{
+        org.openapis.openapi.models.operations.RetryPipelineExecutionResponse res = new org.openapis.openapi.models.operations.RetryPipelineExecutionResponse(contentType, httpRes.statusCode()) {{
             retryPipelineExecutionResponse = null;
             resourceNotFound = null;
             resourceLimitExceeded = null;
             conflictException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -15265,11 +14776,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchResponse res = new org.openapis.openapi.models.operations.SearchResponse() {{
+        org.openapis.openapi.models.operations.SearchResponse res = new org.openapis.openapi.models.operations.SearchResponse(contentType, httpRes.statusCode()) {{
             searchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -15317,13 +14826,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SendPipelineExecutionStepFailureResponse res = new org.openapis.openapi.models.operations.SendPipelineExecutionStepFailureResponse() {{
+        org.openapis.openapi.models.operations.SendPipelineExecutionStepFailureResponse res = new org.openapis.openapi.models.operations.SendPipelineExecutionStepFailureResponse(contentType, httpRes.statusCode()) {{
             sendPipelineExecutionStepFailureResponse = null;
             resourceNotFound = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -15385,13 +14892,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SendPipelineExecutionStepSuccessResponse res = new org.openapis.openapi.models.operations.SendPipelineExecutionStepSuccessResponse() {{
+        org.openapis.openapi.models.operations.SendPipelineExecutionStepSuccessResponse res = new org.openapis.openapi.models.operations.SendPipelineExecutionStepSuccessResponse(contentType, httpRes.statusCode()) {{
             sendPipelineExecutionStepSuccessResponse = null;
             resourceNotFound = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -15453,10 +14958,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartEdgeDeploymentStageResponse res = new org.openapis.openapi.models.operations.StartEdgeDeploymentStageResponse() {{
+        org.openapis.openapi.models.operations.StartEdgeDeploymentStageResponse res = new org.openapis.openapi.models.operations.StartEdgeDeploymentStageResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -15499,13 +15002,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartInferenceExperimentResponse res = new org.openapis.openapi.models.operations.StartInferenceExperimentResponse() {{
+        org.openapis.openapi.models.operations.StartInferenceExperimentResponse res = new org.openapis.openapi.models.operations.StartInferenceExperimentResponse(contentType, httpRes.statusCode()) {{
             startInferenceExperimentResponse = null;
             conflictException = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -15567,11 +15068,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartMonitoringScheduleResponse res = new org.openapis.openapi.models.operations.StartMonitoringScheduleResponse() {{
+        org.openapis.openapi.models.operations.StartMonitoringScheduleResponse res = new org.openapis.openapi.models.operations.StartMonitoringScheduleResponse(contentType, httpRes.statusCode()) {{
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -15621,11 +15120,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartNotebookInstanceResponse res = new org.openapis.openapi.models.operations.StartNotebookInstanceResponse() {{
+        org.openapis.openapi.models.operations.StartNotebookInstanceResponse res = new org.openapis.openapi.models.operations.StartNotebookInstanceResponse(contentType, httpRes.statusCode()) {{
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -15675,13 +15172,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartPipelineExecutionResponse res = new org.openapis.openapi.models.operations.StartPipelineExecutionResponse() {{
+        org.openapis.openapi.models.operations.StartPipelineExecutionResponse res = new org.openapis.openapi.models.operations.StartPipelineExecutionResponse(contentType, httpRes.statusCode()) {{
             startPipelineExecutionResponse = null;
             resourceNotFound = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -15743,11 +15238,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopAutoMLJobResponse res = new org.openapis.openapi.models.operations.StopAutoMLJobResponse() {{
+        org.openapis.openapi.models.operations.StopAutoMLJobResponse res = new org.openapis.openapi.models.operations.StopAutoMLJobResponse(contentType, httpRes.statusCode()) {{
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -15764,7 +15257,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Stops a model compilation job.&lt;/p&gt; &lt;p&gt; To stop a job, Amazon SageMaker sends the algorithm the SIGTERM signal. This gracefully shuts the job down. If the job hasn't stopped, it sends the SIGKILL signal.&lt;/p&gt; &lt;p&gt;When it receives a &lt;code&gt;StopCompilationJob&lt;/code&gt; request, Amazon SageMaker changes the &lt;a&gt;CompilationJobSummary$CompilationJobStatus&lt;/a&gt; of the job to &lt;code&gt;Stopping&lt;/code&gt;. After Amazon SageMaker stops the job, it sets the &lt;a&gt;CompilationJobSummary$CompilationJobStatus&lt;/a&gt; to &lt;code&gt;Stopped&lt;/code&gt;. &lt;/p&gt;
+     * &lt;p&gt;Stops a model compilation job.&lt;/p&gt; &lt;p&gt; To stop a job, Amazon SageMaker sends the algorithm the SIGTERM signal. This gracefully shuts the job down. If the job hasn't stopped, it sends the SIGKILL signal.&lt;/p&gt; &lt;p&gt;When it receives a &lt;code&gt;StopCompilationJob&lt;/code&gt; request, Amazon SageMaker changes the &lt;code&gt;CompilationJobStatus&lt;/code&gt; of the job to &lt;code&gt;Stopping&lt;/code&gt;. After Amazon SageMaker stops the job, it sets the &lt;code&gt;CompilationJobStatus&lt;/code&gt; to &lt;code&gt;Stopped&lt;/code&gt;. &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -15797,11 +15290,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopCompilationJobResponse res = new org.openapis.openapi.models.operations.StopCompilationJobResponse() {{
+        org.openapis.openapi.models.operations.StopCompilationJobResponse res = new org.openapis.openapi.models.operations.StopCompilationJobResponse(contentType, httpRes.statusCode()) {{
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -15851,10 +15342,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopEdgeDeploymentStageResponse res = new org.openapis.openapi.models.operations.StopEdgeDeploymentStageResponse() {{
+        org.openapis.openapi.models.operations.StopEdgeDeploymentStageResponse res = new org.openapis.openapi.models.operations.StopEdgeDeploymentStageResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -15897,10 +15386,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopEdgePackagingJobResponse res = new org.openapis.openapi.models.operations.StopEdgePackagingJobResponse() {{
+        org.openapis.openapi.models.operations.StopEdgePackagingJobResponse res = new org.openapis.openapi.models.operations.StopEdgePackagingJobResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -15943,11 +15430,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopHyperParameterTuningJobResponse res = new org.openapis.openapi.models.operations.StopHyperParameterTuningJobResponse() {{
+        org.openapis.openapi.models.operations.StopHyperParameterTuningJobResponse res = new org.openapis.openapi.models.operations.StopHyperParameterTuningJobResponse(contentType, httpRes.statusCode()) {{
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -15997,13 +15482,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopInferenceExperimentResponse res = new org.openapis.openapi.models.operations.StopInferenceExperimentResponse() {{
+        org.openapis.openapi.models.operations.StopInferenceExperimentResponse res = new org.openapis.openapi.models.operations.StopInferenceExperimentResponse(contentType, httpRes.statusCode()) {{
             stopInferenceExperimentResponse = null;
             conflictException = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -16065,11 +15548,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopInferenceRecommendationsJobResponse res = new org.openapis.openapi.models.operations.StopInferenceRecommendationsJobResponse() {{
+        org.openapis.openapi.models.operations.StopInferenceRecommendationsJobResponse res = new org.openapis.openapi.models.operations.StopInferenceRecommendationsJobResponse(contentType, httpRes.statusCode()) {{
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -16119,11 +15600,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopLabelingJobResponse res = new org.openapis.openapi.models.operations.StopLabelingJobResponse() {{
+        org.openapis.openapi.models.operations.StopLabelingJobResponse res = new org.openapis.openapi.models.operations.StopLabelingJobResponse(contentType, httpRes.statusCode()) {{
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -16173,11 +15652,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopMonitoringScheduleResponse res = new org.openapis.openapi.models.operations.StopMonitoringScheduleResponse() {{
+        org.openapis.openapi.models.operations.StopMonitoringScheduleResponse res = new org.openapis.openapi.models.operations.StopMonitoringScheduleResponse(contentType, httpRes.statusCode()) {{
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -16227,10 +15704,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopNotebookInstanceResponse res = new org.openapis.openapi.models.operations.StopNotebookInstanceResponse() {{
+        org.openapis.openapi.models.operations.StopNotebookInstanceResponse res = new org.openapis.openapi.models.operations.StopNotebookInstanceResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -16273,12 +15748,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPipelineExecutionResponse res = new org.openapis.openapi.models.operations.StopPipelineExecutionResponse() {{
+        org.openapis.openapi.models.operations.StopPipelineExecutionResponse res = new org.openapis.openapi.models.operations.StopPipelineExecutionResponse(contentType, httpRes.statusCode()) {{
             stopPipelineExecutionResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -16333,11 +15806,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopProcessingJobResponse res = new org.openapis.openapi.models.operations.StopProcessingJobResponse() {{
+        org.openapis.openapi.models.operations.StopProcessingJobResponse res = new org.openapis.openapi.models.operations.StopProcessingJobResponse(contentType, httpRes.statusCode()) {{
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -16387,11 +15858,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopTrainingJobResponse res = new org.openapis.openapi.models.operations.StopTrainingJobResponse() {{
+        org.openapis.openapi.models.operations.StopTrainingJobResponse res = new org.openapis.openapi.models.operations.StopTrainingJobResponse(contentType, httpRes.statusCode()) {{
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -16441,11 +15910,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopTransformJobResponse res = new org.openapis.openapi.models.operations.StopTransformJobResponse() {{
+        org.openapis.openapi.models.operations.StopTransformJobResponse res = new org.openapis.openapi.models.operations.StopTransformJobResponse(contentType, httpRes.statusCode()) {{
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -16495,13 +15962,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateActionResponse res = new org.openapis.openapi.models.operations.UpdateActionResponse() {{
+        org.openapis.openapi.models.operations.UpdateActionResponse res = new org.openapis.openapi.models.operations.UpdateActionResponse(contentType, httpRes.statusCode()) {{
             updateActionResponse = null;
             conflictException = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -16563,12 +16028,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateAppImageConfigResponse res = new org.openapis.openapi.models.operations.UpdateAppImageConfigResponse() {{
+        org.openapis.openapi.models.operations.UpdateAppImageConfigResponse res = new org.openapis.openapi.models.operations.UpdateAppImageConfigResponse(contentType, httpRes.statusCode()) {{
             updateAppImageConfigResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -16623,13 +16086,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateArtifactResponse res = new org.openapis.openapi.models.operations.UpdateArtifactResponse() {{
+        org.openapis.openapi.models.operations.UpdateArtifactResponse res = new org.openapis.openapi.models.operations.UpdateArtifactResponse(contentType, httpRes.statusCode()) {{
             updateArtifactResponse = null;
             conflictException = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -16691,11 +16152,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCodeRepositoryResponse res = new org.openapis.openapi.models.operations.UpdateCodeRepositoryResponse() {{
+        org.openapis.openapi.models.operations.UpdateCodeRepositoryResponse res = new org.openapis.openapi.models.operations.UpdateCodeRepositoryResponse(contentType, httpRes.statusCode()) {{
             updateCodeRepositoryOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -16743,13 +16202,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateContextResponse res = new org.openapis.openapi.models.operations.UpdateContextResponse() {{
+        org.openapis.openapi.models.operations.UpdateContextResponse res = new org.openapis.openapi.models.operations.UpdateContextResponse(contentType, httpRes.statusCode()) {{
             updateContextResponse = null;
             conflictException = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -16811,11 +16268,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDeviceFleetResponse res = new org.openapis.openapi.models.operations.UpdateDeviceFleetResponse() {{
+        org.openapis.openapi.models.operations.UpdateDeviceFleetResponse res = new org.openapis.openapi.models.operations.UpdateDeviceFleetResponse(contentType, httpRes.statusCode()) {{
             resourceInUse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -16865,10 +16320,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDevicesResponse res = new org.openapis.openapi.models.operations.UpdateDevicesResponse() {{
+        org.openapis.openapi.models.operations.UpdateDevicesResponse res = new org.openapis.openapi.models.operations.UpdateDevicesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -16911,14 +16364,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDomainResponse res = new org.openapis.openapi.models.operations.UpdateDomainResponse() {{
+        org.openapis.openapi.models.operations.UpdateDomainResponse res = new org.openapis.openapi.models.operations.UpdateDomainResponse(contentType, httpRes.statusCode()) {{
             updateDomainResponse = null;
             resourceLimitExceeded = null;
             resourceInUse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -16954,7 +16405,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Deploys the new &lt;code&gt;EndpointConfig&lt;/code&gt; specified in the request, switches to using newly created endpoint, and then deletes resources provisioned for the endpoint using the previous &lt;code&gt;EndpointConfig&lt;/code&gt; (there is no availability loss). &lt;/p&gt; &lt;p&gt;When SageMaker receives the request, it sets the endpoint status to &lt;code&gt;Updating&lt;/code&gt;. After updating the endpoint, it sets the status to &lt;code&gt;InService&lt;/code&gt;. To check the status of an endpoint, use the &lt;a&gt;DescribeEndpoint&lt;/a&gt; API. &lt;/p&gt; &lt;note&gt; &lt;p&gt;You must not delete an &lt;code&gt;EndpointConfig&lt;/code&gt; in use by an endpoint that is live or while the &lt;code&gt;UpdateEndpoint&lt;/code&gt; or &lt;code&gt;CreateEndpoint&lt;/code&gt; operations are being performed on the endpoint. To update an endpoint, you must create a new &lt;code&gt;EndpointConfig&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;If you delete the &lt;code&gt;EndpointConfig&lt;/code&gt; of an endpoint that is active or being created or updated you may lose visibility into the instance type the endpoint is using. The endpoint must be deleted in order to stop incurring charges.&lt;/p&gt; &lt;/note&gt;
+     * &lt;p&gt;Deploys the new &lt;code&gt;EndpointConfig&lt;/code&gt; specified in the request, switches to using newly created endpoint, and then deletes resources provisioned for the endpoint using the previous &lt;code&gt;EndpointConfig&lt;/code&gt; (there is no availability loss). &lt;/p&gt; &lt;p&gt;When SageMaker receives the request, it sets the endpoint status to &lt;code&gt;Updating&lt;/code&gt;. After updating the endpoint, it sets the status to &lt;code&gt;InService&lt;/code&gt;. To check the status of an endpoint, use the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeEndpoint.html"&gt;DescribeEndpoint&lt;/a&gt; API. &lt;/p&gt; &lt;note&gt; &lt;p&gt;You must not delete an &lt;code&gt;EndpointConfig&lt;/code&gt; in use by an endpoint that is live or while the &lt;code&gt;UpdateEndpoint&lt;/code&gt; or &lt;code&gt;CreateEndpoint&lt;/code&gt; operations are being performed on the endpoint. To update an endpoint, you must create a new &lt;code&gt;EndpointConfig&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;If you delete the &lt;code&gt;EndpointConfig&lt;/code&gt; of an endpoint that is active or being created or updated you may lose visibility into the instance type the endpoint is using. The endpoint must be deleted in order to stop incurring charges.&lt;/p&gt; &lt;/note&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -16987,12 +16438,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateEndpointResponse res = new org.openapis.openapi.models.operations.UpdateEndpointResponse() {{
+        org.openapis.openapi.models.operations.UpdateEndpointResponse res = new org.openapis.openapi.models.operations.UpdateEndpointResponse(contentType, httpRes.statusCode()) {{
             updateEndpointOutput = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -17014,7 +16463,7 @@ public class SDK {
     }
 
     /**
-     * Updates variant weight of one or more variants associated with an existing endpoint, or capacity of one variant associated with an existing endpoint. When it receives the request, SageMaker sets the endpoint status to &lt;code&gt;Updating&lt;/code&gt;. After updating the endpoint, it sets the status to &lt;code&gt;InService&lt;/code&gt;. To check the status of an endpoint, use the &lt;a&gt;DescribeEndpoint&lt;/a&gt; API. 
+     * Updates variant weight of one or more variants associated with an existing endpoint, or capacity of one variant associated with an existing endpoint. When it receives the request, SageMaker sets the endpoint status to &lt;code&gt;Updating&lt;/code&gt;. After updating the endpoint, it sets the status to &lt;code&gt;InService&lt;/code&gt;. To check the status of an endpoint, use the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeEndpoint.html"&gt;DescribeEndpoint&lt;/a&gt; API. 
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -17047,12 +16496,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateEndpointWeightsAndCapacitiesResponse res = new org.openapis.openapi.models.operations.UpdateEndpointWeightsAndCapacitiesResponse() {{
+        org.openapis.openapi.models.operations.UpdateEndpointWeightsAndCapacitiesResponse res = new org.openapis.openapi.models.operations.UpdateEndpointWeightsAndCapacitiesResponse(contentType, httpRes.statusCode()) {{
             updateEndpointWeightsAndCapacitiesOutput = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -17107,13 +16554,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateExperimentResponse res = new org.openapis.openapi.models.operations.UpdateExperimentResponse() {{
+        org.openapis.openapi.models.operations.UpdateExperimentResponse res = new org.openapis.openapi.models.operations.UpdateExperimentResponse(contentType, httpRes.statusCode()) {{
             updateExperimentResponse = null;
             conflictException = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -17175,12 +16620,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateFeatureGroupResponse res = new org.openapis.openapi.models.operations.UpdateFeatureGroupResponse() {{
+        org.openapis.openapi.models.operations.UpdateFeatureGroupResponse res = new org.openapis.openapi.models.operations.UpdateFeatureGroupResponse(contentType, httpRes.statusCode()) {{
             updateFeatureGroupResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -17235,11 +16678,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateFeatureMetadataResponse res = new org.openapis.openapi.models.operations.UpdateFeatureMetadataResponse() {{
+        org.openapis.openapi.models.operations.UpdateFeatureMetadataResponse res = new org.openapis.openapi.models.operations.UpdateFeatureMetadataResponse(contentType, httpRes.statusCode()) {{
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -17289,12 +16730,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateHubResponse res = new org.openapis.openapi.models.operations.UpdateHubResponse() {{
+        org.openapis.openapi.models.operations.UpdateHubResponse res = new org.openapis.openapi.models.operations.UpdateHubResponse(contentType, httpRes.statusCode()) {{
             updateHubResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -17316,7 +16755,7 @@ public class SDK {
     }
 
     /**
-     * Updates the properties of a SageMaker image. To change the image's tags, use the &lt;a&gt;AddTags&lt;/a&gt; and &lt;a&gt;DeleteTags&lt;/a&gt; APIs.
+     * Updates the properties of a SageMaker image. To change the image's tags, use the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AddTags.html"&gt;AddTags&lt;/a&gt; and &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteTags.html"&gt;DeleteTags&lt;/a&gt; APIs.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -17349,13 +16788,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateImageResponse res = new org.openapis.openapi.models.operations.UpdateImageResponse() {{
+        org.openapis.openapi.models.operations.UpdateImageResponse res = new org.openapis.openapi.models.operations.UpdateImageResponse(contentType, httpRes.statusCode()) {{
             updateImageResponse = null;
             resourceInUse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -17417,13 +16854,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateImageVersionResponse res = new org.openapis.openapi.models.operations.UpdateImageVersionResponse() {{
+        org.openapis.openapi.models.operations.UpdateImageVersionResponse res = new org.openapis.openapi.models.operations.UpdateImageVersionResponse(contentType, httpRes.statusCode()) {{
             updateImageVersionResponse = null;
             resourceInUse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -17452,7 +16887,7 @@ public class SDK {
     }
 
     /**
-     *  Updates an inference experiment that you created. The status of the inference experiment has to be either &lt;code&gt;Created&lt;/code&gt;, &lt;code&gt;Running&lt;/code&gt;. For more information on the status of an inference experiment, see &lt;a&gt;DescribeInferenceExperimentResponse$Status&lt;/a&gt;. 
+     *  Updates an inference experiment that you created. The status of the inference experiment has to be either &lt;code&gt;Created&lt;/code&gt;, &lt;code&gt;Running&lt;/code&gt;. For more information on the status of an inference experiment, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeInferenceExperiment.html"&gt;DescribeInferenceExperiment&lt;/a&gt;. 
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -17485,13 +16920,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateInferenceExperimentResponse res = new org.openapis.openapi.models.operations.UpdateInferenceExperimentResponse() {{
+        org.openapis.openapi.models.operations.UpdateInferenceExperimentResponse res = new org.openapis.openapi.models.operations.UpdateInferenceExperimentResponse(contentType, httpRes.statusCode()) {{
             updateInferenceExperimentResponse = null;
             conflictException = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -17553,14 +16986,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateModelCardResponse res = new org.openapis.openapi.models.operations.UpdateModelCardResponse() {{
+        org.openapis.openapi.models.operations.UpdateModelCardResponse res = new org.openapis.openapi.models.operations.UpdateModelCardResponse(contentType, httpRes.statusCode()) {{
             updateModelCardResponse = null;
             resourceNotFound = null;
             resourceLimitExceeded = null;
             conflictException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -17629,11 +17060,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateModelPackageResponse res = new org.openapis.openapi.models.operations.UpdateModelPackageResponse() {{
+        org.openapis.openapi.models.operations.UpdateModelPackageResponse res = new org.openapis.openapi.models.operations.UpdateModelPackageResponse(contentType, httpRes.statusCode()) {{
             updateModelPackageOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -17681,13 +17110,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateMonitoringAlertResponse res = new org.openapis.openapi.models.operations.UpdateMonitoringAlertResponse() {{
+        org.openapis.openapi.models.operations.UpdateMonitoringAlertResponse res = new org.openapis.openapi.models.operations.UpdateMonitoringAlertResponse(contentType, httpRes.statusCode()) {{
             updateMonitoringAlertResponse = null;
             resourceLimitExceeded = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -17749,13 +17176,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateMonitoringScheduleResponse res = new org.openapis.openapi.models.operations.UpdateMonitoringScheduleResponse() {{
+        org.openapis.openapi.models.operations.UpdateMonitoringScheduleResponse res = new org.openapis.openapi.models.operations.UpdateMonitoringScheduleResponse(contentType, httpRes.statusCode()) {{
             updateMonitoringScheduleResponse = null;
             resourceLimitExceeded = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -17817,12 +17242,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNotebookInstanceResponse res = new org.openapis.openapi.models.operations.UpdateNotebookInstanceResponse() {{
+        org.openapis.openapi.models.operations.UpdateNotebookInstanceResponse res = new org.openapis.openapi.models.operations.UpdateNotebookInstanceResponse(contentType, httpRes.statusCode()) {{
             updateNotebookInstanceOutput = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -17844,7 +17267,7 @@ public class SDK {
     }
 
     /**
-     * Updates a notebook instance lifecycle configuration created with the &lt;a&gt;CreateNotebookInstanceLifecycleConfig&lt;/a&gt; API.
+     * Updates a notebook instance lifecycle configuration created with the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateNotebookInstanceLifecycleConfig.html"&gt;CreateNotebookInstanceLifecycleConfig&lt;/a&gt; API.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -17877,12 +17300,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNotebookInstanceLifecycleConfigResponse res = new org.openapis.openapi.models.operations.UpdateNotebookInstanceLifecycleConfigResponse() {{
+        org.openapis.openapi.models.operations.UpdateNotebookInstanceLifecycleConfigResponse res = new org.openapis.openapi.models.operations.UpdateNotebookInstanceLifecycleConfigResponse(contentType, httpRes.statusCode()) {{
             updateNotebookInstanceLifecycleConfigOutput = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -17937,12 +17358,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePipelineResponse res = new org.openapis.openapi.models.operations.UpdatePipelineResponse() {{
+        org.openapis.openapi.models.operations.UpdatePipelineResponse res = new org.openapis.openapi.models.operations.UpdatePipelineResponse(contentType, httpRes.statusCode()) {{
             updatePipelineResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -17997,12 +17416,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePipelineExecutionResponse res = new org.openapis.openapi.models.operations.UpdatePipelineExecutionResponse() {{
+        org.openapis.openapi.models.operations.UpdatePipelineExecutionResponse res = new org.openapis.openapi.models.operations.UpdatePipelineExecutionResponse(contentType, httpRes.statusCode()) {{
             updatePipelineExecutionResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -18057,11 +17474,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateProjectResponse res = new org.openapis.openapi.models.operations.UpdateProjectResponse() {{
+        org.openapis.openapi.models.operations.UpdateProjectResponse res = new org.openapis.openapi.models.operations.UpdateProjectResponse(contentType, httpRes.statusCode()) {{
             updateProjectOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -18109,14 +17524,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSpaceResponse res = new org.openapis.openapi.models.operations.UpdateSpaceResponse() {{
+        org.openapis.openapi.models.operations.UpdateSpaceResponse res = new org.openapis.openapi.models.operations.UpdateSpaceResponse(contentType, httpRes.statusCode()) {{
             updateSpaceResponse = null;
             resourceLimitExceeded = null;
             resourceInUse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -18185,12 +17598,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTrainingJobResponse res = new org.openapis.openapi.models.operations.UpdateTrainingJobResponse() {{
+        org.openapis.openapi.models.operations.UpdateTrainingJobResponse res = new org.openapis.openapi.models.operations.UpdateTrainingJobResponse(contentType, httpRes.statusCode()) {{
             updateTrainingJobResponse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -18245,13 +17656,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTrialResponse res = new org.openapis.openapi.models.operations.UpdateTrialResponse() {{
+        org.openapis.openapi.models.operations.UpdateTrialResponse res = new org.openapis.openapi.models.operations.UpdateTrialResponse(contentType, httpRes.statusCode()) {{
             updateTrialResponse = null;
             conflictException = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -18313,13 +17722,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTrialComponentResponse res = new org.openapis.openapi.models.operations.UpdateTrialComponentResponse() {{
+        org.openapis.openapi.models.operations.UpdateTrialComponentResponse res = new org.openapis.openapi.models.operations.UpdateTrialComponentResponse(contentType, httpRes.statusCode()) {{
             updateTrialComponentResponse = null;
             conflictException = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -18381,14 +17788,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateUserProfileResponse res = new org.openapis.openapi.models.operations.UpdateUserProfileResponse() {{
+        org.openapis.openapi.models.operations.UpdateUserProfileResponse res = new org.openapis.openapi.models.operations.UpdateUserProfileResponse(contentType, httpRes.statusCode()) {{
             updateUserProfileResponse = null;
             resourceLimitExceeded = null;
             resourceInUse = null;
             resourceNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -18424,7 +17829,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Use this operation to update your workforce. You can use this operation to require that workers use specific IP addresses to work on tasks and to update your OpenID Connect (OIDC) Identity Provider (IdP) workforce configuration.&lt;/p&gt; &lt;p&gt;The worker portal is now supported in VPC and public internet.&lt;/p&gt; &lt;p&gt; Use &lt;code&gt;SourceIpConfig&lt;/code&gt; to restrict worker access to tasks to a specific range of IP addresses. You specify allowed IP addresses by creating a list of up to ten &lt;a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html"&gt;CIDRs&lt;/a&gt;. By default, a workforce isn't restricted to specific IP addresses. If you specify a range of IP addresses, workers who attempt to access tasks using any IP address outside the specified range are denied and get a &lt;code&gt;Not Found&lt;/code&gt; error message on the worker portal.&lt;/p&gt; &lt;p&gt;To restrict access to all the workers in public internet, add the &lt;code&gt;SourceIpConfig&lt;/code&gt; CIDR value as "10.0.0.0/16".&lt;/p&gt; &lt;important&gt; &lt;p&gt;Amazon SageMaker does not support Source Ip restriction for worker portals in VPC.&lt;/p&gt; &lt;/important&gt; &lt;p&gt;Use &lt;code&gt;OidcConfig&lt;/code&gt; to update the configuration of a workforce created using your own OIDC IdP. &lt;/p&gt; &lt;important&gt; &lt;p&gt;You can only update your OIDC IdP configuration when there are no work teams associated with your workforce. You can delete work teams using the operation.&lt;/p&gt; &lt;/important&gt; &lt;p&gt;After restricting access to a range of IP addresses or updating your OIDC IdP configuration with this operation, you can view details about your update workforce using the operation.&lt;/p&gt; &lt;important&gt; &lt;p&gt;This operation only applies to private workforces.&lt;/p&gt; &lt;/important&gt;
+     * &lt;p&gt;Use this operation to update your workforce. You can use this operation to require that workers use specific IP addresses to work on tasks and to update your OpenID Connect (OIDC) Identity Provider (IdP) workforce configuration.&lt;/p&gt; &lt;p&gt;The worker portal is now supported in VPC and public internet.&lt;/p&gt; &lt;p&gt; Use &lt;code&gt;SourceIpConfig&lt;/code&gt; to restrict worker access to tasks to a specific range of IP addresses. You specify allowed IP addresses by creating a list of up to ten &lt;a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html"&gt;CIDRs&lt;/a&gt;. By default, a workforce isn't restricted to specific IP addresses. If you specify a range of IP addresses, workers who attempt to access tasks using any IP address outside the specified range are denied and get a &lt;code&gt;Not Found&lt;/code&gt; error message on the worker portal.&lt;/p&gt; &lt;p&gt;To restrict access to all the workers in public internet, add the &lt;code&gt;SourceIpConfig&lt;/code&gt; CIDR value as "10.0.0.0/16".&lt;/p&gt; &lt;important&gt; &lt;p&gt;Amazon SageMaker does not support Source Ip restriction for worker portals in VPC.&lt;/p&gt; &lt;/important&gt; &lt;p&gt;Use &lt;code&gt;OidcConfig&lt;/code&gt; to update the configuration of a workforce created using your own OIDC IdP. &lt;/p&gt; &lt;important&gt; &lt;p&gt;You can only update your OIDC IdP configuration when there are no work teams associated with your workforce. You can delete work teams using the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteWorkteam.html"&gt;DeleteWorkteam&lt;/a&gt; operation.&lt;/p&gt; &lt;/important&gt; &lt;p&gt;After restricting access to a range of IP addresses or updating your OIDC IdP configuration with this operation, you can view details about your update workforce using the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeWorkforce.html"&gt;DescribeWorkforce&lt;/a&gt; operation.&lt;/p&gt; &lt;important&gt; &lt;p&gt;This operation only applies to private workforces.&lt;/p&gt; &lt;/important&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -18457,12 +17862,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateWorkforceResponse res = new org.openapis.openapi.models.operations.UpdateWorkforceResponse() {{
+        org.openapis.openapi.models.operations.UpdateWorkforceResponse res = new org.openapis.openapi.models.operations.UpdateWorkforceResponse(contentType, httpRes.statusCode()) {{
             updateWorkforceResponse = null;
             conflictException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -18517,12 +17920,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateWorkteamResponse res = new org.openapis.openapi.models.operations.UpdateWorkteamResponse() {{
+        org.openapis.openapi.models.operations.UpdateWorkteamResponse res = new org.openapis.openapi.models.operations.UpdateWorkteamResponse(contentType, httpRes.statusCode()) {{
             updateWorkteamResponse = null;
             resourceLimitExceeded = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

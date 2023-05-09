@@ -58,11 +58,9 @@ public class JwtVerifiers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGlobalJwtVerifierResponse res = new org.openapis.openapi.models.operations.CreateGlobalJwtVerifierResponse() {{
+        org.openapis.openapi.models.operations.CreateGlobalJwtVerifierResponse res = new org.openapis.openapi.models.operations.CreateGlobalJwtVerifierResponse(contentType, httpRes.statusCode()) {{
             globalJwtVerifier = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class JwtVerifiers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteGlobalJwtVerifierResponse res = new org.openapis.openapi.models.operations.DeleteGlobalJwtVerifierResponse() {{
+        org.openapis.openapi.models.operations.DeleteGlobalJwtVerifierResponse res = new org.openapis.openapi.models.operations.DeleteGlobalJwtVerifierResponse(contentType, httpRes.statusCode()) {{
             deleted = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,10 +120,11 @@ public class JwtVerifiers {
     /**
      * Get all global JWT verifiers
      * Get all global JWT verifiers
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindAllGlobalJwtVerifiersResponse findAllGlobalJwtVerifiers() throws Exception {
+    public org.openapis.openapi.models.operations.FindAllGlobalJwtVerifiersResponse findAllGlobalJwtVerifiers(org.openapis.openapi.models.operations.FindAllGlobalJwtVerifiersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/verifiers");
         
@@ -136,16 +133,15 @@ public class JwtVerifiers {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindAllGlobalJwtVerifiersResponse res = new org.openapis.openapi.models.operations.FindAllGlobalJwtVerifiersResponse() {{
+        org.openapis.openapi.models.operations.FindAllGlobalJwtVerifiersResponse res = new org.openapis.openapi.models.operations.FindAllGlobalJwtVerifiersResponse(contentType, httpRes.statusCode()) {{
             globalJwtVerifiers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -184,11 +180,9 @@ public class JwtVerifiers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindGlobalJwtVerifiersByIdResponse res = new org.openapis.openapi.models.operations.FindGlobalJwtVerifiersByIdResponse() {{
+        org.openapis.openapi.models.operations.FindGlobalJwtVerifiersByIdResponse res = new org.openapis.openapi.models.operations.FindGlobalJwtVerifiersByIdResponse(contentType, httpRes.statusCode()) {{
             globalJwtVerifier = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -229,11 +223,9 @@ public class JwtVerifiers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchGlobalJwtVerifierResponse res = new org.openapis.openapi.models.operations.PatchGlobalJwtVerifierResponse() {{
+        org.openapis.openapi.models.operations.PatchGlobalJwtVerifierResponse res = new org.openapis.openapi.models.operations.PatchGlobalJwtVerifierResponse(contentType, httpRes.statusCode()) {{
             globalJwtVerifier = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -274,11 +266,9 @@ public class JwtVerifiers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGlobalJwtVerifierResponse res = new org.openapis.openapi.models.operations.UpdateGlobalJwtVerifierResponse() {{
+        org.openapis.openapi.models.operations.UpdateGlobalJwtVerifierResponse res = new org.openapis.openapi.models.operations.UpdateGlobalJwtVerifierResponse(contentType, httpRes.statusCode()) {{
             globalJwtVerifier = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

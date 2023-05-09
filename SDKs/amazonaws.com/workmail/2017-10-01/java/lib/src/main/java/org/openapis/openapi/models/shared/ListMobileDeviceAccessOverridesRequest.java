@@ -12,6 +12,7 @@ public class ListMobileDeviceAccessOverridesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceId")
     public String deviceId;
+
     public ListMobileDeviceAccessOverridesRequest withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -20,6 +21,7 @@ public class ListMobileDeviceAccessOverridesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListMobileDeviceAccessOverridesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListMobileDeviceAccessOverridesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMobileDeviceAccessOverridesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,6 +38,7 @@ public class ListMobileDeviceAccessOverridesRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public ListMobileDeviceAccessOverridesRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -43,9 +47,13 @@ public class ListMobileDeviceAccessOverridesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserId")
     public String userId;
+
     public ListMobileDeviceAccessOverridesRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public ListMobileDeviceAccessOverridesRequest(@JsonProperty("OrganizationId") String organizationId) {
+        this.organizationId = organizationId;
+  }
 }

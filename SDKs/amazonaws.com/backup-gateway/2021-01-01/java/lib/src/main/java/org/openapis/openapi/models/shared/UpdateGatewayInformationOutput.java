@@ -15,9 +15,11 @@ public class UpdateGatewayInformationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatewayArn")
     public String gatewayArn;
+
     public UpdateGatewayInformationOutput withGatewayArn(String gatewayArn) {
         this.gatewayArn = gatewayArn;
         return this;
     }
     
+    public UpdateGatewayInformationOutput(){}
 }

@@ -18,9 +18,11 @@ public class FetchInstanceProvisioningSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("images")
     public OSImage[] images;
+
     public FetchInstanceProvisioningSettingsResponse withImages(OSImage[] images) {
         this.images = images;
         return this;
     }
     
+    public FetchInstanceProvisioningSettingsResponse(){}
 }

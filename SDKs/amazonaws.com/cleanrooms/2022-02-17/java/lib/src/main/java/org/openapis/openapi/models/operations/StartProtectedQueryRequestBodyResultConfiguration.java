@@ -15,9 +15,11 @@ public class StartProtectedQueryRequestBodyResultConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputConfiguration")
     public org.openapis.openapi.models.shared.ProtectedQueryOutputConfiguration outputConfiguration;
+
     public StartProtectedQueryRequestBodyResultConfiguration withOutputConfiguration(org.openapis.openapi.models.shared.ProtectedQueryOutputConfiguration outputConfiguration) {
         this.outputConfiguration = outputConfiguration;
         return this;
     }
     
+    public StartProtectedQueryRequestBodyResultConfiguration(){}
 }

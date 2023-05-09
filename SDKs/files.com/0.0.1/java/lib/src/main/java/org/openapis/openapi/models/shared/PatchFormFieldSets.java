@@ -17,6 +17,7 @@ public class PatchFormFieldSets {
     @JsonProperty("form_fields")
     @SpeakeasyMetadata("form:name=form_fields,json multipartForm:name=form_fields,json")
     public PatchFormFieldSetsFormFields[] formFields;
+
     public PatchFormFieldSets withFormFields(PatchFormFieldSetsFormFields[] formFields) {
         this.formFields = formFields;
         return this;
@@ -29,6 +30,7 @@ public class PatchFormFieldSets {
     @JsonProperty("skip_company")
     @SpeakeasyMetadata("form:name=skip_company multipartForm:name=skip_company")
     public Boolean skipCompany;
+
     public PatchFormFieldSets withSkipCompany(Boolean skipCompany) {
         this.skipCompany = skipCompany;
         return this;
@@ -41,6 +43,7 @@ public class PatchFormFieldSets {
     @JsonProperty("skip_email")
     @SpeakeasyMetadata("form:name=skip_email multipartForm:name=skip_email")
     public Boolean skipEmail;
+
     public PatchFormFieldSets withSkipEmail(Boolean skipEmail) {
         this.skipEmail = skipEmail;
         return this;
@@ -53,6 +56,7 @@ public class PatchFormFieldSets {
     @JsonProperty("skip_name")
     @SpeakeasyMetadata("form:name=skip_name multipartForm:name=skip_name")
     public Boolean skipName;
+
     public PatchFormFieldSets withSkipName(Boolean skipName) {
         this.skipName = skipName;
         return this;
@@ -65,9 +69,11 @@ public class PatchFormFieldSets {
     @JsonProperty("title")
     @SpeakeasyMetadata("form:name=title multipartForm:name=title")
     public String title;
+
     public PatchFormFieldSets withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PatchFormFieldSets(){}
 }

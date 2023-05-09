@@ -18,6 +18,7 @@ public class AuxiliaryServicesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metastoreConfig")
     public MetastoreConfig metastoreConfig;
+
     public AuxiliaryServicesConfig withMetastoreConfig(MetastoreConfig metastoreConfig) {
         this.metastoreConfig = metastoreConfig;
         return this;
@@ -29,9 +30,11 @@ public class AuxiliaryServicesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkHistoryServerConfig")
     public SparkHistoryServerConfig sparkHistoryServerConfig;
+
     public AuxiliaryServicesConfig withSparkHistoryServerConfig(SparkHistoryServerConfig sparkHistoryServerConfig) {
         this.sparkHistoryServerConfig = sparkHistoryServerConfig;
         return this;
     }
     
+    public AuxiliaryServicesConfig(){}
 }

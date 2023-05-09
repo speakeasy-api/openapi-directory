@@ -15,6 +15,7 @@ public class RepositoryCatalogDataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aboutText")
     public String aboutText;
+
     public RepositoryCatalogDataInput withAboutText(String aboutText) {
         this.aboutText = aboutText;
         return this;
@@ -23,6 +24,7 @@ public class RepositoryCatalogDataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architectures")
     public String[] architectures;
+
     public RepositoryCatalogDataInput withArchitectures(String[] architectures) {
         this.architectures = architectures;
         return this;
@@ -31,6 +33,7 @@ public class RepositoryCatalogDataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RepositoryCatalogDataInput withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class RepositoryCatalogDataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logoImageBlob")
     public String logoImageBlob;
+
     public RepositoryCatalogDataInput withLogoImageBlob(String logoImageBlob) {
         this.logoImageBlob = logoImageBlob;
         return this;
@@ -47,6 +51,7 @@ public class RepositoryCatalogDataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatingSystems")
     public String[] operatingSystems;
+
     public RepositoryCatalogDataInput withOperatingSystems(String[] operatingSystems) {
         this.operatingSystems = operatingSystems;
         return this;
@@ -55,9 +60,11 @@ public class RepositoryCatalogDataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageText")
     public String usageText;
+
     public RepositoryCatalogDataInput withUsageText(String usageText) {
         this.usageText = usageText;
         return this;
     }
     
+    public RepositoryCatalogDataInput(){}
 }

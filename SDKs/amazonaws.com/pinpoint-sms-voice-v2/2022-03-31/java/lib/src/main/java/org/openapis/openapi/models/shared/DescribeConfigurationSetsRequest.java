@@ -12,6 +12,7 @@ public class DescribeConfigurationSetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSetNames")
     public String[] configurationSetNames;
+
     public DescribeConfigurationSetsRequest withConfigurationSetNames(String[] configurationSetNames) {
         this.configurationSetNames = configurationSetNames;
         return this;
@@ -20,6 +21,7 @@ public class DescribeConfigurationSetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public ConfigurationSetFilter[] filters;
+
     public DescribeConfigurationSetsRequest withFilters(ConfigurationSetFilter[] filters) {
         this.filters = filters;
         return this;
@@ -28,6 +30,7 @@ public class DescribeConfigurationSetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeConfigurationSetsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +39,11 @@ public class DescribeConfigurationSetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeConfigurationSetsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeConfigurationSetsRequest(){}
 }

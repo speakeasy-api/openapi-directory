@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VirtualGatewayListenerTls {
     @JsonProperty("certificate")
     public VirtualGatewayListenerTlsCertificate certificate;
+
     public VirtualGatewayListenerTls withCertificate(VirtualGatewayListenerTlsCertificate certificate) {
         this.certificate = certificate;
         return this;
@@ -21,6 +22,7 @@ public class VirtualGatewayListenerTls {
     
     @JsonProperty("mode")
     public VirtualGatewayListenerTlsModeEnum mode;
+
     public VirtualGatewayListenerTls withMode(VirtualGatewayListenerTlsModeEnum mode) {
         this.mode = mode;
         return this;
@@ -29,9 +31,14 @@ public class VirtualGatewayListenerTls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validation")
     public VirtualGatewayListenerTlsValidationContext validation;
+
     public VirtualGatewayListenerTls withValidation(VirtualGatewayListenerTlsValidationContext validation) {
         this.validation = validation;
         return this;
     }
     
+    public VirtualGatewayListenerTls(@JsonProperty("certificate") VirtualGatewayListenerTlsCertificate certificate, @JsonProperty("mode") VirtualGatewayListenerTlsModeEnum mode) {
+        this.certificate = certificate;
+        this.mode = mode;
+  }
 }

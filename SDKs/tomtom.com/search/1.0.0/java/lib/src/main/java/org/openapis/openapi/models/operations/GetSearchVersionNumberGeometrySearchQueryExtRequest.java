@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchVersionNumberGeometrySearchQueryExtRequest {
@@ -12,6 +13,7 @@ public class GetSearchVersionNumberGeometrySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
     public org.openapis.openapi.models.shared.ExtEnum ext;
+
     public GetSearchVersionNumberGeometrySearchQueryExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
         this.ext = ext;
         return this;
@@ -28,6 +30,7 @@ public class GetSearchVersionNumberGeometrySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=extendedPostalCodesFor")
     public String extendedPostalCodesFor;
+
     public GetSearchVersionNumberGeometrySearchQueryExtRequest withExtendedPostalCodesFor(String extendedPostalCodesFor) {
         this.extendedPostalCodesFor = extendedPostalCodesFor;
         return this;
@@ -38,6 +41,7 @@ public class GetSearchVersionNumberGeometrySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geometryList")
     public String geometryList;
+
     public GetSearchVersionNumberGeometrySearchQueryExtRequest withGeometryList(String geometryList) {
         this.geometryList = geometryList;
         return this;
@@ -54,6 +58,7 @@ public class GetSearchVersionNumberGeometrySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idxSet")
     public String idxSet;
+
     public GetSearchVersionNumberGeometrySearchQueryExtRequest withIdxSet(String idxSet) {
         this.idxSet = idxSet;
         return this;
@@ -64,6 +69,7 @@ public class GetSearchVersionNumberGeometrySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
+
     public GetSearchVersionNumberGeometrySearchQueryExtRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -74,6 +80,7 @@ public class GetSearchVersionNumberGeometrySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetSearchVersionNumberGeometrySearchQueryExtRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -84,6 +91,7 @@ public class GetSearchVersionNumberGeometrySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=query")
     public String query;
+
     public GetSearchVersionNumberGeometrySearchQueryExtRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -94,9 +102,15 @@ public class GetSearchVersionNumberGeometrySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+
     public GetSearchVersionNumberGeometrySearchQueryExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public GetSearchVersionNumberGeometrySearchQueryExtRequest(@JsonProperty("ext") org.openapis.openapi.models.shared.ExtEnum ext, @JsonProperty("query") String query, @JsonProperty("versionNumber") org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.ext = ext;
+        this.query = query;
+        this.versionNumber = versionNumber;
+  }
 }

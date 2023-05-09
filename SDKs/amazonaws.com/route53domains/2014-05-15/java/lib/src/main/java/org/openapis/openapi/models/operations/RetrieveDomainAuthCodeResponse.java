@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetrieveDomainAuthCodeResponse {
     
     public String contentType;
+
     public RetrieveDomainAuthCodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RetrieveDomainAuthCodeResponse {
      */
     
     public Object invalidInput;
+
     public RetrieveDomainAuthCodeResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -29,6 +32,7 @@ public class RetrieveDomainAuthCodeResponse {
      */
     
     public org.openapis.openapi.models.shared.RetrieveDomainAuthCodeResponse retrieveDomainAuthCodeResponse;
+
     public RetrieveDomainAuthCodeResponse withRetrieveDomainAuthCodeResponse(org.openapis.openapi.models.shared.RetrieveDomainAuthCodeResponse retrieveDomainAuthCodeResponse) {
         this.retrieveDomainAuthCodeResponse = retrieveDomainAuthCodeResponse;
         return this;
@@ -36,6 +40,7 @@ public class RetrieveDomainAuthCodeResponse {
     
     
     public Integer statusCode;
+
     public RetrieveDomainAuthCodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class RetrieveDomainAuthCodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetrieveDomainAuthCodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class RetrieveDomainAuthCodeResponse {
      */
     
     public Object unsupportedTLD;
+
     public RetrieveDomainAuthCodeResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
     }
     
+    public RetrieveDomainAuthCodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

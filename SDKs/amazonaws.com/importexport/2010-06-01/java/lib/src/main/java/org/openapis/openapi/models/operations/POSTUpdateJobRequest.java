@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTUpdateJobRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSAccessKeyId")
     public String awsAccessKeyId;
+
     public POSTUpdateJobRequest withAWSAccessKeyId(String awsAccessKeyId) {
         this.awsAccessKeyId = awsAccessKeyId;
         return this;
@@ -16,6 +18,7 @@ public class POSTUpdateJobRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTUpdateJobActionEnum action;
+
     public POSTUpdateJobRequest withAction(POSTUpdateJobActionEnum action) {
         this.action = action;
         return this;
@@ -23,6 +26,7 @@ public class POSTUpdateJobRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Operation")
     public POSTUpdateJobOperationEnum operation;
+
     public POSTUpdateJobRequest withOperation(POSTUpdateJobOperationEnum operation) {
         this.operation = operation;
         return this;
@@ -30,6 +34,7 @@ public class POSTUpdateJobRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTUpdateJobRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -37,6 +42,7 @@ public class POSTUpdateJobRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Signature")
     public String signature;
+
     public POSTUpdateJobRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -44,6 +50,7 @@ public class POSTUpdateJobRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureMethod")
     public String signatureMethod;
+
     public POSTUpdateJobRequest withSignatureMethod(String signatureMethod) {
         this.signatureMethod = signatureMethod;
         return this;
@@ -51,6 +58,7 @@ public class POSTUpdateJobRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureVersion")
     public String signatureVersion;
+
     public POSTUpdateJobRequest withSignatureVersion(String signatureVersion) {
         this.signatureVersion = signatureVersion;
         return this;
@@ -58,6 +66,7 @@ public class POSTUpdateJobRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timestamp")
     public String timestamp;
+
     public POSTUpdateJobRequest withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -65,9 +74,20 @@ public class POSTUpdateJobRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTUpdateJobVersionEnum version;
+
     public POSTUpdateJobRequest withVersion(POSTUpdateJobVersionEnum version) {
         this.version = version;
         return this;
     }
     
+    public POSTUpdateJobRequest(@JsonProperty("AWSAccessKeyId") String awsAccessKeyId, @JsonProperty("Action") POSTUpdateJobActionEnum action, @JsonProperty("Operation") POSTUpdateJobOperationEnum operation, @JsonProperty("Signature") String signature, @JsonProperty("SignatureMethod") String signatureMethod, @JsonProperty("SignatureVersion") String signatureVersion, @JsonProperty("Timestamp") String timestamp, @JsonProperty("Version") POSTUpdateJobVersionEnum version) {
+        this.awsAccessKeyId = awsAccessKeyId;
+        this.action = action;
+        this.operation = operation;
+        this.signature = signature;
+        this.signatureMethod = signatureMethod;
+        this.signatureVersion = signatureVersion;
+        this.timestamp = timestamp;
+        this.version = version;
+  }
 }

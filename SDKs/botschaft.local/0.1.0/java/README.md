@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.ConfigConfigGetRequest;
 import org.openapis.openapi.models.operations.ConfigConfigGetResponse;
 
@@ -28,46 +27,48 @@ public class Application {
 
             ConfigConfigGetRequest req = new ConfigConfigGetRequest() {{
                 authorization = "corrupti";
-            }}            
+            }};            
 
             ConfigConfigGetResponse res = sdk.configConfigGet(req);
 
-            if (res.config.isPresent()) {
+            if (res.config != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `configConfigGet` - Config
-* `topicTopicTopicNameGet` - Topic
+* [configConfigGet](docs/sdk/README.md#configconfigget) - Config
+* [topicTopicTopicNameGet](docs/sdk/README.md#topictopictopicnameget) - Topic
 
-### discord
+### [discord](docs/discord/README.md)
 
-* `discordGetDiscordGet` - Discord Get
-* `discordPostDiscordPost` - Discord Post
+* [discordGetDiscordGet](docs/discord/README.md#discordgetdiscordget) - Discord Get
+* [discordPostDiscordPost](docs/discord/README.md#discordpostdiscordpost) - Discord Post
 
-### slack
+### [slack](docs/slack/README.md)
 
-* `slackGetSlackGet` - Slack Get
-* `slackPostSlackPost` - Slack Post
+* [slackGetSlackGet](docs/slack/README.md#slackgetslackget) - Slack Get
+* [slackPostSlackPost](docs/slack/README.md#slackpostslackpost) - Slack Post
 
-### sns
+### [sns](docs/sns/README.md)
 
-* `snsGetSnsGet` - Sns Get
-* `snsPostSnsPost` - Sns Post
+* [snsGetSnsGet](docs/sns/README.md#snsgetsnsget) - Sns Get
+* [snsPostSnsPost](docs/sns/README.md#snspostsnspost) - Sns Post
 
-### twilio
+### [twilio](docs/twilio/README.md)
 
-* `twilioMessageGetTwilioGet` - Twilio Message Get
-* `twilioMessagePostTwilioPost` - Twilio Message Post
+* [twilioMessageGetTwilioGet](docs/twilio/README.md#twiliomessagegettwilioget) - Twilio Message Get
+* [twilioMessagePostTwilioPost](docs/twilio/README.md#twiliomessageposttwiliopost) - Twilio Message Post
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaAuthToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public GoogleCloudIntegrationsV1alphaAuthToken withToken(String token) {
         this.token = token;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIntegrationsV1alphaAuthToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoogleCloudIntegrationsV1alphaAuthToken withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaAuthToken(){}
 }

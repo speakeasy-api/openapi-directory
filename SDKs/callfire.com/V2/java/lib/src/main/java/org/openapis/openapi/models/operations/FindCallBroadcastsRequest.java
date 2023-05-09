@@ -12,6 +12,7 @@ public class FindCallBroadcastsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public FindCallBroadcastsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -22,6 +23,7 @@ public class FindCallBroadcastsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intervalBegin")
     public Long intervalBegin;
+
     public FindCallBroadcastsRequest withIntervalBegin(Long intervalBegin) {
         this.intervalBegin = intervalBegin;
         return this;
@@ -32,6 +34,7 @@ public class FindCallBroadcastsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intervalEnd")
     public Long intervalEnd;
+
     public FindCallBroadcastsRequest withIntervalEnd(Long intervalEnd) {
         this.intervalEnd = intervalEnd;
         return this;
@@ -42,6 +45,7 @@ public class FindCallBroadcastsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label")
     public String label;
+
     public FindCallBroadcastsRequest withLabel(String label) {
         this.label = label;
         return this;
@@ -52,6 +56,7 @@ public class FindCallBroadcastsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public FindCallBroadcastsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -62,6 +67,7 @@ public class FindCallBroadcastsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public FindCallBroadcastsRequest withName(String name) {
         this.name = name;
         return this;
@@ -72,6 +78,7 @@ public class FindCallBroadcastsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public FindCallBroadcastsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -82,6 +89,7 @@ public class FindCallBroadcastsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=running")
     public Boolean running;
+
     public FindCallBroadcastsRequest withRunning(Boolean running) {
         this.running = running;
         return this;
@@ -92,9 +100,11 @@ public class FindCallBroadcastsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scheduled")
     public Boolean scheduled;
+
     public FindCallBroadcastsRequest withScheduled(Boolean scheduled) {
         this.scheduled = scheduled;
         return this;
     }
     
+    public FindCallBroadcastsRequest(){}
 }

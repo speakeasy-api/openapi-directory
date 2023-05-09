@@ -18,6 +18,7 @@ public class Features {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extractDocumentSentiment")
     public Boolean extractDocumentSentiment;
+
     public Features withExtractDocumentSentiment(Boolean extractDocumentSentiment) {
         this.extractDocumentSentiment = extractDocumentSentiment;
         return this;
@@ -29,6 +30,7 @@ public class Features {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extractEntities")
     public Boolean extractEntities;
+
     public Features withExtractEntities(Boolean extractEntities) {
         this.extractEntities = extractEntities;
         return this;
@@ -40,9 +42,11 @@ public class Features {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extractSyntax")
     public Boolean extractSyntax;
+
     public Features withExtractSyntax(Boolean extractSyntax) {
         this.extractSyntax = extractSyntax;
         return this;
     }
     
+    public Features(){}
 }

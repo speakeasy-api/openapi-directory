@@ -20,6 +20,7 @@ public class CommandInvocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchOutputConfig")
     public CloudWatchOutputConfig cloudWatchOutputConfig;
+
     public CommandInvocation withCloudWatchOutputConfig(CloudWatchOutputConfig cloudWatchOutputConfig) {
         this.cloudWatchOutputConfig = cloudWatchOutputConfig;
         return this;
@@ -28,6 +29,7 @@ public class CommandInvocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CommandId")
     public String commandId;
+
     public CommandInvocation withCommandId(String commandId) {
         this.commandId = commandId;
         return this;
@@ -36,6 +38,7 @@ public class CommandInvocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CommandPlugins")
     public CommandPlugin[] commandPlugins;
+
     public CommandInvocation withCommandPlugins(CommandPlugin[] commandPlugins) {
         this.commandPlugins = commandPlugins;
         return this;
@@ -44,6 +47,7 @@ public class CommandInvocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Comment")
     public String comment;
+
     public CommandInvocation withComment(String comment) {
         this.comment = comment;
         return this;
@@ -52,6 +56,7 @@ public class CommandInvocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentName")
     public String documentName;
+
     public CommandInvocation withDocumentName(String documentName) {
         this.documentName = documentName;
         return this;
@@ -60,6 +65,7 @@ public class CommandInvocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public CommandInvocation withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -68,6 +74,7 @@ public class CommandInvocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public CommandInvocation withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -76,6 +83,7 @@ public class CommandInvocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceName")
     public String instanceName;
+
     public CommandInvocation withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
@@ -84,6 +92,7 @@ public class CommandInvocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationConfig")
     public NotificationConfig notificationConfig;
+
     public CommandInvocation withNotificationConfig(NotificationConfig notificationConfig) {
         this.notificationConfig = notificationConfig;
         return this;
@@ -94,6 +103,7 @@ public class CommandInvocation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RequestedDateTime")
     public OffsetDateTime requestedDateTime;
+
     public CommandInvocation withRequestedDateTime(OffsetDateTime requestedDateTime) {
         this.requestedDateTime = requestedDateTime;
         return this;
@@ -102,6 +112,7 @@ public class CommandInvocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceRole")
     public String serviceRole;
+
     public CommandInvocation withServiceRole(String serviceRole) {
         this.serviceRole = serviceRole;
         return this;
@@ -110,6 +121,7 @@ public class CommandInvocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardErrorUrl")
     public String standardErrorUrl;
+
     public CommandInvocation withStandardErrorUrl(String standardErrorUrl) {
         this.standardErrorUrl = standardErrorUrl;
         return this;
@@ -118,6 +130,7 @@ public class CommandInvocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardOutputUrl")
     public String standardOutputUrl;
+
     public CommandInvocation withStandardOutputUrl(String standardOutputUrl) {
         this.standardOutputUrl = standardOutputUrl;
         return this;
@@ -126,6 +139,7 @@ public class CommandInvocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CommandInvocationStatusEnum status;
+
     public CommandInvocation withStatus(CommandInvocationStatusEnum status) {
         this.status = status;
         return this;
@@ -134,6 +148,7 @@ public class CommandInvocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusDetails")
     public String statusDetails;
+
     public CommandInvocation withStatusDetails(String statusDetails) {
         this.statusDetails = statusDetails;
         return this;
@@ -142,9 +157,11 @@ public class CommandInvocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TraceOutput")
     public String traceOutput;
+
     public CommandInvocation withTraceOutput(String traceOutput) {
         this.traceOutput = traceOutput;
         return this;
     }
     
+    public CommandInvocation(){}
 }

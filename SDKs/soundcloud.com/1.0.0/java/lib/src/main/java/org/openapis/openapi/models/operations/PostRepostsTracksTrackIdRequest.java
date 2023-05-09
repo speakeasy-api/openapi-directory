@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRepostsTracksTrackIdRequest {
@@ -12,9 +13,13 @@ public class PostRepostsTracksTrackIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=track_id")
     public Long trackId;
+
     public PostRepostsTracksTrackIdRequest withTrackId(Long trackId) {
         this.trackId = trackId;
         return this;
     }
     
+    public PostRepostsTracksTrackIdRequest(@JsonProperty("track_id") Long trackId) {
+        this.trackId = trackId;
+  }
 }

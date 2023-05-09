@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutWorkspaceSlugOrganizationsOrganizationIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Organization organization;
+
     public PutWorkspaceSlugOrganizationsOrganizationIdRequest withOrganization(org.openapis.openapi.models.shared.Organization organization) {
         this.organization = organization;
         return this;
@@ -16,6 +18,7 @@ public class PutWorkspaceSlugOrganizationsOrganizationIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organization_id")
     public String organizationId;
+
     public PutWorkspaceSlugOrganizationsOrganizationIdRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -23,9 +26,14 @@ public class PutWorkspaceSlugOrganizationsOrganizationIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
     public String workspaceSlug;
+
     public PutWorkspaceSlugOrganizationsOrganizationIdRequest withWorkspaceSlug(String workspaceSlug) {
         this.workspaceSlug = workspaceSlug;
         return this;
     }
     
+    public PutWorkspaceSlugOrganizationsOrganizationIdRequest(@JsonProperty("organization_id") String organizationId, @JsonProperty("workspace_slug") String workspaceSlug) {
+        this.organizationId = organizationId;
+        this.workspaceSlug = workspaceSlug;
+  }
 }

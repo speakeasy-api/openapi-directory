@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsEventPropertiesResponse {
@@ -12,6 +13,7 @@ public class AnalyticsEventPropertiesResponse {
      */
     
     public AnalyticsEventProperties200ApplicationJSON analyticsEventProperties200ApplicationJSONObject;
+
     public AnalyticsEventPropertiesResponse withAnalyticsEventProperties200ApplicationJSONObject(AnalyticsEventProperties200ApplicationJSON analyticsEventProperties200ApplicationJSONObject) {
         this.analyticsEventProperties200ApplicationJSONObject = analyticsEventProperties200ApplicationJSONObject;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsEventPropertiesResponse {
      */
     
     public AnalyticsEventPropertiesDefaultApplicationJSON analyticsEventPropertiesDefaultApplicationJSONObject;
+
     public AnalyticsEventPropertiesResponse withAnalyticsEventPropertiesDefaultApplicationJSONObject(AnalyticsEventPropertiesDefaultApplicationJSON analyticsEventPropertiesDefaultApplicationJSONObject) {
         this.analyticsEventPropertiesDefaultApplicationJSONObject = analyticsEventPropertiesDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsEventPropertiesResponse {
     
     
     public String contentType;
+
     public AnalyticsEventPropertiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class AnalyticsEventPropertiesResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsEventPropertiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AnalyticsEventPropertiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsEventPropertiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsEventPropertiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

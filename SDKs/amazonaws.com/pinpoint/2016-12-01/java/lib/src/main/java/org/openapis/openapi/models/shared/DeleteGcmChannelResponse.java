@@ -15,9 +15,13 @@ public class DeleteGcmChannelResponse {
      */
     @JsonProperty("GCMChannelResponse")
     public GCMChannelResponse gcmChannelResponse;
+
     public DeleteGcmChannelResponse withGCMChannelResponse(GCMChannelResponse gcmChannelResponse) {
         this.gcmChannelResponse = gcmChannelResponse;
         return this;
     }
     
+    public DeleteGcmChannelResponse(@JsonProperty("GCMChannelResponse") GCMChannelResponse gcmChannelResponse) {
+        this.gcmChannelResponse = gcmChannelResponse;
+  }
 }

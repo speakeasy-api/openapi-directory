@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribePipelineDefinitionForExecutionRequest {
     @JsonProperty("PipelineExecutionArn")
     public String pipelineExecutionArn;
+
     public DescribePipelineDefinitionForExecutionRequest withPipelineExecutionArn(String pipelineExecutionArn) {
         this.pipelineExecutionArn = pipelineExecutionArn;
         return this;
     }
     
+    public DescribePipelineDefinitionForExecutionRequest(@JsonProperty("PipelineExecutionArn") String pipelineExecutionArn) {
+        this.pipelineExecutionArn = pipelineExecutionArn;
+  }
 }

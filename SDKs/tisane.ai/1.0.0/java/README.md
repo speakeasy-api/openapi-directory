@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetFamilyDetailsRequest;
 import org.openapis.openapi.models.operations.GetFamilyDetailsResponse;
 
@@ -29,16 +28,18 @@ public class Application {
             GetFamilyDetailsRequest req = new GetFamilyDetailsRequest() {{
                 ocpApimSubscriptionKey = "{{apiKey}}";
                 id = "{family_id}";
-            }}            
+            }};            
 
             GetFamilyDetailsResponse res = sdk.languageModelDirectAccess.getFamilyDetails(req);
 
-            if (res.getFamilyDetails200ApplicationJSONObject.isPresent()) {
+            if (res.getFamilyDetails200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -46,14 +47,14 @@ public class Application {
 ## Available Resources and Operations
 
 
-### languageModelDirectAccess
+### [languageModelDirectAccess](docs/languagemodeldirectaccess/README.md)
 
-* `getFamilyDetails` - Get family details
-* `listFeatureValues` - List feature values
-* `listHypernyms` - List hypernyms
-* `listHyponyms` - List hyponyms
-* `listInflectedForms` - List inflected forms
-* `listWordSenses` - List word senses
+* [getFamilyDetails](docs/languagemodeldirectaccess/README.md#getfamilydetails) - Get family details
+* [listFeatureValues](docs/languagemodeldirectaccess/README.md#listfeaturevalues) - List feature values
+* [listHypernyms](docs/languagemodeldirectaccess/README.md#listhypernyms) - List hypernyms
+* [listHyponyms](docs/languagemodeldirectaccess/README.md#listhyponyms) - List hyponyms
+* [listInflectedForms](docs/languagemodeldirectaccess/README.md#listinflectedforms) - List inflected forms
+* [listWordSenses](docs/languagemodeldirectaccess/README.md#listwordsenses) - List word senses
 <!-- End SDK Available Operations -->
 
 ### Maturity

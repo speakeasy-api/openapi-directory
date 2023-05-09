@@ -20,6 +20,7 @@ public class AggregatedValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quality")
     public QualityEnum quality;
+
     public AggregatedValue withQuality(QualityEnum quality) {
         this.quality = quality;
         return this;
@@ -29,6 +30,7 @@ public class AggregatedValue {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public AggregatedValue withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -36,9 +38,14 @@ public class AggregatedValue {
     
     @JsonProperty("value")
     public Aggregates value;
+
     public AggregatedValue withValue(Aggregates value) {
         this.value = value;
         return this;
     }
     
+    public AggregatedValue(@JsonProperty("timestamp") OffsetDateTime timestamp, @JsonProperty("value") Aggregates value) {
+        this.timestamp = timestamp;
+        this.value = value;
+  }
 }

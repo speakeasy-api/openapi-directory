@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetImageResponse {
@@ -12,6 +13,7 @@ public class BatchGetImageResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetImageResponse batchGetImageResponse;
+
     public BatchGetImageResponse withBatchGetImageResponse(org.openapis.openapi.models.shared.BatchGetImageResponse batchGetImageResponse) {
         this.batchGetImageResponse = batchGetImageResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetImageResponse {
     
     
     public String contentType;
+
     public BatchGetImageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetImageResponse {
      */
     
     public Object invalidParameterException;
+
     public BatchGetImageResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetImageResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public BatchGetImageResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetImageResponse {
      */
     
     public Object serverException;
+
     public BatchGetImageResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class BatchGetImageResponse {
     
     
     public Integer statusCode;
+
     public BatchGetImageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class BatchGetImageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetImageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchGetImageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

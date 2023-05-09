@@ -15,6 +15,7 @@ public class ChannelCatalogState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiSettingsStatus")
     public BeezUPCommonApiSettingsStatusEnum apiSettingsStatus;
+
     public ChannelCatalogState withApiSettingsStatus(BeezUPCommonApiSettingsStatusEnum apiSettingsStatus) {
         this.apiSettingsStatus = apiSettingsStatus;
         return this;
@@ -25,6 +26,7 @@ public class ChannelCatalogState {
      */
     @JsonProperty("categoryMappingState")
     public CategoryMappingState categoryMappingState;
+
     public ChannelCatalogState withCategoryMappingState(CategoryMappingState categoryMappingState) {
         this.categoryMappingState = categoryMappingState;
         return this;
@@ -32,6 +34,7 @@ public class ChannelCatalogState {
     
     @JsonProperty("columnMappingStatus")
     public ColumnMappingStatusEnum columnMappingStatus;
+
     public ChannelCatalogState withColumnMappingStatus(ColumnMappingStatusEnum columnMappingStatus) {
         this.columnMappingStatus = columnMappingStatus;
         return this;
@@ -39,9 +42,15 @@ public class ChannelCatalogState {
     
     @JsonProperty("exportedProductCount")
     public Integer exportedProductCount;
+
     public ChannelCatalogState withExportedProductCount(Integer exportedProductCount) {
         this.exportedProductCount = exportedProductCount;
         return this;
     }
     
+    public ChannelCatalogState(@JsonProperty("categoryMappingState") CategoryMappingState categoryMappingState, @JsonProperty("columnMappingStatus") ColumnMappingStatusEnum columnMappingStatus, @JsonProperty("exportedProductCount") Integer exportedProductCount) {
+        this.categoryMappingState = categoryMappingState;
+        this.columnMappingStatus = columnMappingStatus;
+        this.exportedProductCount = exportedProductCount;
+  }
 }

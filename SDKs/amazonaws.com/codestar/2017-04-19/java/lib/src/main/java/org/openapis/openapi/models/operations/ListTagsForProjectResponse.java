@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTagsForProjectResponse {
     
     public String contentType;
+
     public ListTagsForProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTagsForProjectResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListTagsForProjectResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListTagsForProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTagsForProjectResult listTagsForProjectResult;
+
     public ListTagsForProjectResponse withListTagsForProjectResult(org.openapis.openapi.models.shared.ListTagsForProjectResult listTagsForProjectResult) {
         this.listTagsForProjectResult = listTagsForProjectResult;
         return this;
@@ -39,6 +43,7 @@ public class ListTagsForProjectResponse {
      */
     
     public Object projectNotFoundException;
+
     public ListTagsForProjectResponse withProjectNotFoundException(Object projectNotFoundException) {
         this.projectNotFoundException = projectNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListTagsForProjectResponse {
     
     
     public Integer statusCode;
+
     public ListTagsForProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListTagsForProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTagsForProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListTagsForProjectResponse {
      */
     
     public Object validationException;
+
     public ListTagsForProjectResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListTagsForProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

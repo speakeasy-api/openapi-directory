@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersUserIdRequest {
@@ -12,6 +13,7 @@ public class PostUsersUserIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
     public String customData;
+
     public PostUsersUserIdRequest withCustomData(String customData) {
         this.customData = customData;
         return this;
@@ -22,6 +24,7 @@ public class PostUsersUserIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public PostUsersUserIdRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -32,6 +35,7 @@ public class PostUsersUserIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public PostUsersUserIdRequest withName(String name) {
         this.name = name;
         return this;
@@ -42,6 +46,7 @@ public class PostUsersUserIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public PostUsersUserIdRequest withType(String type) {
         this.type = type;
         return this;
@@ -52,6 +57,7 @@ public class PostUsersUserIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public PostUsersUserIdRequest withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -62,9 +68,13 @@ public class PostUsersUserIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public PostUsersUserIdRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public PostUsersUserIdRequest(@JsonProperty("userId") String userId) {
+        this.userId = userId;
+  }
 }

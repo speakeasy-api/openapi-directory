@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdsensehostAccountsAdunitsListRequest {
@@ -12,6 +13,7 @@ public class AdsensehostAccountsAdunitsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public AdsensehostAccountsAdunitsListRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class AdsensehostAccountsAdunitsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=adClientId")
     public String adClientId;
+
     public AdsensehostAccountsAdunitsListRequest withAdClientId(String adClientId) {
         this.adClientId = adClientId;
         return this;
@@ -32,6 +35,7 @@ public class AdsensehostAccountsAdunitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AdsensehostAccountsAdunitsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class AdsensehostAccountsAdunitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AdsensehostAccountsAdunitsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -52,6 +57,7 @@ public class AdsensehostAccountsAdunitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeInactive")
     public Boolean includeInactive;
+
     public AdsensehostAccountsAdunitsListRequest withIncludeInactive(Boolean includeInactive) {
         this.includeInactive = includeInactive;
         return this;
@@ -62,6 +68,7 @@ public class AdsensehostAccountsAdunitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AdsensehostAccountsAdunitsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class AdsensehostAccountsAdunitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public AdsensehostAccountsAdunitsListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -82,6 +90,7 @@ public class AdsensehostAccountsAdunitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AdsensehostAccountsAdunitsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class AdsensehostAccountsAdunitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public AdsensehostAccountsAdunitsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -102,6 +112,7 @@ public class AdsensehostAccountsAdunitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AdsensehostAccountsAdunitsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class AdsensehostAccountsAdunitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AdsensehostAccountsAdunitsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,9 +134,14 @@ public class AdsensehostAccountsAdunitsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AdsensehostAccountsAdunitsListRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AdsensehostAccountsAdunitsListRequest(@JsonProperty("accountId") String accountId, @JsonProperty("adClientId") String adClientId) {
+        this.accountId = accountId;
+        this.adClientId = adClientId;
+  }
 }

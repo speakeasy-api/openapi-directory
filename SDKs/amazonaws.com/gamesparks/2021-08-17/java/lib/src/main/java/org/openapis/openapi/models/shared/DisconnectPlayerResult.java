@@ -15,6 +15,7 @@ public class DisconnectPlayerResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisconnectFailures")
     public String[] disconnectFailures;
+
     public DisconnectPlayerResult withDisconnectFailures(String[] disconnectFailures) {
         this.disconnectFailures = disconnectFailures;
         return this;
@@ -23,9 +24,11 @@ public class DisconnectPlayerResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisconnectSuccesses")
     public String[] disconnectSuccesses;
+
     public DisconnectPlayerResult withDisconnectSuccesses(String[] disconnectSuccesses) {
         this.disconnectSuccesses = disconnectSuccesses;
         return this;
     }
     
+    public DisconnectPlayerResult(){}
 }

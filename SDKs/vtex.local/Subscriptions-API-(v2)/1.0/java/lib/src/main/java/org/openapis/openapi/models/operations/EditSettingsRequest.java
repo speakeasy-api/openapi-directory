@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditSettingsRequest {
@@ -12,6 +13,7 @@ public class EditSettingsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public EditSettingsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class EditSettingsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public EditSettingsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,9 +35,15 @@ public class EditSettingsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Settings settings;
+
     public EditSettingsRequest withSettings(org.openapis.openapi.models.shared.Settings settings) {
         this.settings = settings;
         return this;
     }
     
+    public EditSettingsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("settings") org.openapis.openapi.models.shared.Settings settings) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.settings = settings;
+  }
 }

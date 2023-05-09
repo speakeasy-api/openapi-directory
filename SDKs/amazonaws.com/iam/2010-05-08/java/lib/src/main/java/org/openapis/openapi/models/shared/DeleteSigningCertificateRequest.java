@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteSigningCertificateRequest {
     
     public String certificateId;
+
     public DeleteSigningCertificateRequest withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -16,9 +17,13 @@ public class DeleteSigningCertificateRequest {
     
     
     public String userName;
+
     public DeleteSigningCertificateRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public DeleteSigningCertificateRequest(@JsonProperty("CertificateId") String certificateId) {
+        this.certificateId = certificateId;
+  }
 }

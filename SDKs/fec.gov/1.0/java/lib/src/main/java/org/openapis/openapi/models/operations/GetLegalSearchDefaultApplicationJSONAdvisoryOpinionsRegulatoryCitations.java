@@ -12,6 +12,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsRegulatoryCitat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("part")
     public Long part;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsRegulatoryCitations withPart(Long part) {
         this.part = part;
         return this;
@@ -20,6 +21,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsRegulatoryCitat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("section")
     public Long section;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsRegulatoryCitations withSection(Long section) {
         this.section = section;
         return this;
@@ -28,9 +30,11 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsRegulatoryCitat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public Long title;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsRegulatoryCitations withTitle(Long title) {
         this.title = title;
         return this;
     }
     
+    public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsRegulatoryCitations(){}
 }

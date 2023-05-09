@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetVVersionReportsStartDateToEndDateReportTypeResponse {
     
     public String contentType;
+
     public GetVVersionReportsStartDateToEndDateReportTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetVVersionReportsStartDateToEndDateReportTypeResponse {
     
     
     public java.util.Map<String, Object> object;
+
     public GetVVersionReportsStartDateToEndDateReportTypeResponse withObject(java.util.Map<String, Object> object) {
         this.object = object;
         return this;
@@ -23,6 +26,7 @@ public class GetVVersionReportsStartDateToEndDateReportTypeResponse {
     
     
     public Integer statusCode;
+
     public GetVVersionReportsStartDateToEndDateReportTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetVVersionReportsStartDateToEndDateReportTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetVVersionReportsStartDateToEndDateReportTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetVVersionReportsStartDateToEndDateReportTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

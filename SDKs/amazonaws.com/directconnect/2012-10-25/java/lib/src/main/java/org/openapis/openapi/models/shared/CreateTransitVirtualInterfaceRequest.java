@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateTransitVirtualInterfaceRequest {
     @JsonProperty("connectionId")
     public String connectionId;
+
     public CreateTransitVirtualInterfaceRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -16,9 +17,14 @@ public class CreateTransitVirtualInterfaceRequest {
     
     @JsonProperty("newTransitVirtualInterface")
     public NewTransitVirtualInterface newTransitVirtualInterface;
+
     public CreateTransitVirtualInterfaceRequest withNewTransitVirtualInterface(NewTransitVirtualInterface newTransitVirtualInterface) {
         this.newTransitVirtualInterface = newTransitVirtualInterface;
         return this;
     }
     
+    public CreateTransitVirtualInterfaceRequest(@JsonProperty("connectionId") String connectionId, @JsonProperty("newTransitVirtualInterface") NewTransitVirtualInterface newTransitVirtualInterface) {
+        this.connectionId = connectionId;
+        this.newTransitVirtualInterface = newTransitVirtualInterface;
+  }
 }

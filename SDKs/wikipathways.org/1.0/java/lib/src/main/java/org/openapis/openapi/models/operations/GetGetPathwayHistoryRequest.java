@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGetPathwayHistoryRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetGetPathwayHistoryFormatEnum format;
+
     public GetGetPathwayHistoryRequest withFormat(GetGetPathwayHistoryFormatEnum format) {
         this.format = format;
         return this;
@@ -19,6 +21,7 @@ public class GetGetPathwayHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pwId")
     public String pwId;
+
     public GetGetPathwayHistoryRequest withPwId(String pwId) {
         this.pwId = pwId;
         return this;
@@ -29,9 +32,14 @@ public class GetGetPathwayHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timestamp")
     public String timestamp;
+
     public GetGetPathwayHistoryRequest withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public GetGetPathwayHistoryRequest(@JsonProperty("pwId") String pwId, @JsonProperty("timestamp") String timestamp) {
+        this.pwId = pwId;
+        this.timestamp = timestamp;
+  }
 }

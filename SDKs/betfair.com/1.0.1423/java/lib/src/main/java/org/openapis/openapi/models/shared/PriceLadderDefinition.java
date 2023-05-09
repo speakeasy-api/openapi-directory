@@ -12,9 +12,11 @@ public class PriceLadderDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PriceLadderDefinitionTypeEnum type;
+
     public PriceLadderDefinition withType(PriceLadderDefinitionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PriceLadderDefinition(){}
 }

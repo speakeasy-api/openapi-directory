@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResetActiveWidgetTokenRequest {
@@ -12,6 +13,7 @@ public class ResetActiveWidgetTokenRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public Long projectId;
+
     public ResetActiveWidgetTokenRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
@@ -22,9 +24,14 @@ public class ResetActiveWidgetTokenRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=widgetId")
     public Long widgetId;
+
     public ResetActiveWidgetTokenRequest withWidgetId(Long widgetId) {
         this.widgetId = widgetId;
         return this;
     }
     
+    public ResetActiveWidgetTokenRequest(@JsonProperty("projectId") Long projectId, @JsonProperty("widgetId") Long widgetId) {
+        this.projectId = projectId;
+        this.widgetId = widgetId;
+  }
 }

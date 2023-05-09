@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListDataSetImportHistoryResponse {
     @JsonProperty("dataSetImportTasks")
     public DataSetImportTask[] dataSetImportTasks;
+
     public ListDataSetImportHistoryResponse withDataSetImportTasks(DataSetImportTask[] dataSetImportTasks) {
         this.dataSetImportTasks = dataSetImportTasks;
         return this;
@@ -22,9 +23,13 @@ public class ListDataSetImportHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDataSetImportHistoryResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDataSetImportHistoryResponse(@JsonProperty("dataSetImportTasks") DataSetImportTask[] dataSetImportTasks) {
+        this.dataSetImportTasks = dataSetImportTasks;
+  }
 }

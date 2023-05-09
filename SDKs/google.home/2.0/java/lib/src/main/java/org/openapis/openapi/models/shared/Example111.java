@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Example111 {
     @JsonProperty("bond_date")
     public Double bondDate;
+
     public Example111 withBondDate(Double bondDate) {
         this.bondDate = bondDate;
         return this;
@@ -16,6 +17,7 @@ public class Example111 {
     
     @JsonProperty("device_class")
     public Integer deviceClass;
+
     public Example111 withDeviceClass(Integer deviceClass) {
         this.deviceClass = deviceClass;
         return this;
@@ -23,6 +25,7 @@ public class Example111 {
     
     @JsonProperty("device_type")
     public Integer deviceType;
+
     public Example111 withDeviceType(Integer deviceType) {
         this.deviceType = deviceType;
         return this;
@@ -30,6 +33,7 @@ public class Example111 {
     
     @JsonProperty("last_connect_date")
     public Double lastConnectDate;
+
     public Example111 withLastConnectDate(Double lastConnectDate) {
         this.lastConnectDate = lastConnectDate;
         return this;
@@ -37,6 +41,7 @@ public class Example111 {
     
     @JsonProperty("mac_address")
     public String macAddress;
+
     public Example111 withMacAddress(String macAddress) {
         this.macAddress = macAddress;
         return this;
@@ -44,6 +49,7 @@ public class Example111 {
     
     @JsonProperty("name")
     public String name;
+
     public Example111 withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +57,7 @@ public class Example111 {
     
     @JsonProperty("rssi")
     public Integer rssi;
+
     public Example111 withRssi(Integer rssi) {
         this.rssi = rssi;
         return this;
@@ -58,9 +65,20 @@ public class Example111 {
     
     @JsonProperty("service_uuids")
     public String[] serviceUuids;
+
     public Example111 withServiceUuids(String[] serviceUuids) {
         this.serviceUuids = serviceUuids;
         return this;
     }
     
+    public Example111(@JsonProperty("bond_date") Double bondDate, @JsonProperty("device_class") Integer deviceClass, @JsonProperty("device_type") Integer deviceType, @JsonProperty("last_connect_date") Double lastConnectDate, @JsonProperty("mac_address") String macAddress, @JsonProperty("name") String name, @JsonProperty("rssi") Integer rssi, @JsonProperty("service_uuids") String[] serviceUuids) {
+        this.bondDate = bondDate;
+        this.deviceClass = deviceClass;
+        this.deviceType = deviceType;
+        this.lastConnectDate = lastConnectDate;
+        this.macAddress = macAddress;
+        this.name = name;
+        this.rssi = rssi;
+        this.serviceUuids = serviceUuids;
+  }
 }

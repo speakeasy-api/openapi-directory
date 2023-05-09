@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ContentDirectory {
     @JsonProperty("_links")
     public ContentDirectoryLinks links;
+
     public ContentDirectory withLinks(ContentDirectoryLinks links) {
         this.links = links;
         return this;
@@ -19,6 +20,7 @@ public class ContentDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public ContentDirectory withContent(String content) {
         this.content = content;
         return this;
@@ -26,6 +28,7 @@ public class ContentDirectory {
     
     @JsonProperty("download_url")
     public String downloadUrl;
+
     public ContentDirectory withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -33,6 +36,7 @@ public class ContentDirectory {
     
     @JsonProperty("git_url")
     public String gitUrl;
+
     public ContentDirectory withGitUrl(String gitUrl) {
         this.gitUrl = gitUrl;
         return this;
@@ -40,6 +44,7 @@ public class ContentDirectory {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public ContentDirectory withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -47,6 +52,7 @@ public class ContentDirectory {
     
     @JsonProperty("name")
     public String name;
+
     public ContentDirectory withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +60,7 @@ public class ContentDirectory {
     
     @JsonProperty("path")
     public String path;
+
     public ContentDirectory withPath(String path) {
         this.path = path;
         return this;
@@ -61,6 +68,7 @@ public class ContentDirectory {
     
     @JsonProperty("sha")
     public String sha;
+
     public ContentDirectory withSha(String sha) {
         this.sha = sha;
         return this;
@@ -68,6 +76,7 @@ public class ContentDirectory {
     
     @JsonProperty("size")
     public Long size;
+
     public ContentDirectory withSize(Long size) {
         this.size = size;
         return this;
@@ -75,6 +84,7 @@ public class ContentDirectory {
     
     @JsonProperty("type")
     public String type;
+
     public ContentDirectory withType(String type) {
         this.type = type;
         return this;
@@ -82,9 +92,22 @@ public class ContentDirectory {
     
     @JsonProperty("url")
     public String url;
+
     public ContentDirectory withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ContentDirectory(@JsonProperty("_links") ContentDirectoryLinks links, @JsonProperty("download_url") String downloadUrl, @JsonProperty("git_url") String gitUrl, @JsonProperty("html_url") String htmlUrl, @JsonProperty("name") String name, @JsonProperty("path") String path, @JsonProperty("sha") String sha, @JsonProperty("size") Long size, @JsonProperty("type") String type, @JsonProperty("url") String url) {
+        this.links = links;
+        this.downloadUrl = downloadUrl;
+        this.gitUrl = gitUrl;
+        this.htmlUrl = htmlUrl;
+        this.name = name;
+        this.path = path;
+        this.sha = sha;
+        this.size = size;
+        this.type = type;
+        this.url = url;
+  }
 }

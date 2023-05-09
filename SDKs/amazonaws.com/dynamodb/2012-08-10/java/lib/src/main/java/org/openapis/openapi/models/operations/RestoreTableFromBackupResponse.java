@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RestoreTableFromBackupResponse {
@@ -12,6 +13,7 @@ public class RestoreTableFromBackupResponse {
      */
     
     public Object backupInUseException;
+
     public RestoreTableFromBackupResponse withBackupInUseException(Object backupInUseException) {
         this.backupInUseException = backupInUseException;
         return this;
@@ -22,6 +24,7 @@ public class RestoreTableFromBackupResponse {
      */
     
     public Object backupNotFoundException;
+
     public RestoreTableFromBackupResponse withBackupNotFoundException(Object backupNotFoundException) {
         this.backupNotFoundException = backupNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class RestoreTableFromBackupResponse {
     
     
     public String contentType;
+
     public RestoreTableFromBackupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class RestoreTableFromBackupResponse {
      */
     
     public Object internalServerError;
+
     public RestoreTableFromBackupResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class RestoreTableFromBackupResponse {
      */
     
     public Object limitExceededException;
+
     public RestoreTableFromBackupResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class RestoreTableFromBackupResponse {
      */
     
     public org.openapis.openapi.models.shared.RestoreTableFromBackupOutput restoreTableFromBackupOutput;
+
     public RestoreTableFromBackupResponse withRestoreTableFromBackupOutput(org.openapis.openapi.models.shared.RestoreTableFromBackupOutput restoreTableFromBackupOutput) {
         this.restoreTableFromBackupOutput = restoreTableFromBackupOutput;
         return this;
@@ -66,6 +73,7 @@ public class RestoreTableFromBackupResponse {
     
     
     public Integer statusCode;
+
     public RestoreTableFromBackupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class RestoreTableFromBackupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RestoreTableFromBackupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class RestoreTableFromBackupResponse {
      */
     
     public Object tableAlreadyExistsException;
+
     public RestoreTableFromBackupResponse withTableAlreadyExistsException(Object tableAlreadyExistsException) {
         this.tableAlreadyExistsException = tableAlreadyExistsException;
         return this;
@@ -93,9 +103,14 @@ public class RestoreTableFromBackupResponse {
      */
     
     public Object tableInUseException;
+
     public RestoreTableFromBackupResponse withTableInUseException(Object tableInUseException) {
         this.tableInUseException = tableInUseException;
         return this;
     }
     
+    public RestoreTableFromBackupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

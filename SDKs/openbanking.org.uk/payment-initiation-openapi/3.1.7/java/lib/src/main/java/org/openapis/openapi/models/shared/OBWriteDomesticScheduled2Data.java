@@ -12,6 +12,7 @@ public class OBWriteDomesticScheduled2Data {
      */
     @JsonProperty("ConsentId")
     public String consentId;
+
     public OBWriteDomesticScheduled2Data withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -22,9 +23,14 @@ public class OBWriteDomesticScheduled2Data {
      */
     @JsonProperty("Initiation")
     public OBWriteDomesticScheduled2DataInitiation initiation;
+
     public OBWriteDomesticScheduled2Data withInitiation(OBWriteDomesticScheduled2DataInitiation initiation) {
         this.initiation = initiation;
         return this;
     }
     
+    public OBWriteDomesticScheduled2Data(@JsonProperty("ConsentId") String consentId, @JsonProperty("Initiation") OBWriteDomesticScheduled2DataInitiation initiation) {
+        this.consentId = consentId;
+        this.initiation = initiation;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutApiPolicyEnginePoliciesIdRequest {
@@ -12,6 +13,7 @@ public class PutApiPolicyEnginePoliciesIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public PutApiPolicyEnginePoliciesIdRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class PutApiPolicyEnginePoliciesIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public PutApiPolicyEnginePoliciesIdRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutApiPolicyEnginePoliciesIdRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PolicySaveRequest policySaveRequest;
+
     public PutApiPolicyEnginePoliciesIdRequest withPolicySaveRequest(org.openapis.openapi.models.shared.PolicySaveRequest policySaveRequest) {
         this.policySaveRequest = policySaveRequest;
         return this;
@@ -39,9 +43,16 @@ public class PutApiPolicyEnginePoliciesIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutApiPolicyEnginePoliciesIdRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PutApiPolicyEnginePoliciesIdRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("PolicySaveRequest") org.openapis.openapi.models.shared.PolicySaveRequest policySaveRequest, @JsonProperty("id") String id) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.policySaveRequest = policySaveRequest;
+        this.id = id;
+  }
 }

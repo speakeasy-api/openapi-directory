@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DomainEndpointOptions {
     
     public Boolean enforceHTTPS;
+
     public DomainEndpointOptions withEnforceHTTPS(Boolean enforceHTTPS) {
         this.enforceHTTPS = enforceHTTPS;
         return this;
@@ -19,9 +20,11 @@ public class DomainEndpointOptions {
     
     
     public TLSSecurityPolicyEnum tlsSecurityPolicy;
+
     public DomainEndpointOptions withTLSSecurityPolicy(TLSSecurityPolicyEnum tlsSecurityPolicy) {
         this.tlsSecurityPolicy = tlsSecurityPolicy;
         return this;
     }
     
+    public DomainEndpointOptions(){}
 }

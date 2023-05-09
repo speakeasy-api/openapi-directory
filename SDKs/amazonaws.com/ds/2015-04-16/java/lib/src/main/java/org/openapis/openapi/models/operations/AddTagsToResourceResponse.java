@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddTagsToResourceResponse {
@@ -12,6 +13,7 @@ public class AddTagsToResourceResponse {
      */
     
     public java.util.Map<String, Object> addTagsToResourceResult;
+
     public AddTagsToResourceResponse withAddTagsToResourceResult(java.util.Map<String, Object> addTagsToResourceResult) {
         this.addTagsToResourceResult = addTagsToResourceResult;
         return this;
@@ -22,6 +24,7 @@ public class AddTagsToResourceResponse {
      */
     
     public Object clientException;
+
     public AddTagsToResourceResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class AddTagsToResourceResponse {
     
     
     public String contentType;
+
     public AddTagsToResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AddTagsToResourceResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public AddTagsToResourceResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class AddTagsToResourceResponse {
      */
     
     public Object invalidParameterException;
+
     public AddTagsToResourceResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -56,6 +62,7 @@ public class AddTagsToResourceResponse {
     
     
     public Integer statusCode;
+
     public AddTagsToResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AddTagsToResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddTagsToResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AddTagsToResourceResponse {
      */
     
     public Object serviceException;
+
     public AddTagsToResourceResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -83,9 +92,14 @@ public class AddTagsToResourceResponse {
      */
     
     public Object tagLimitExceededException;
+
     public AddTagsToResourceResponse withTagLimitExceededException(Object tagLimitExceededException) {
         this.tagLimitExceededException = tagLimitExceededException;
         return this;
     }
     
+    public AddTagsToResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

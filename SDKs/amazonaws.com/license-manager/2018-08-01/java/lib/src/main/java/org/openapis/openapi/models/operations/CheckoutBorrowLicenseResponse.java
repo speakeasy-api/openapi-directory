@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CheckoutBorrowLicenseResponse {
@@ -12,6 +13,7 @@ public class CheckoutBorrowLicenseResponse {
      */
     
     public Object accessDeniedException;
+
     public CheckoutBorrowLicenseResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CheckoutBorrowLicenseResponse {
      */
     
     public Object authorizationException;
+
     public CheckoutBorrowLicenseResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -32,6 +35,7 @@ public class CheckoutBorrowLicenseResponse {
      */
     
     public org.openapis.openapi.models.shared.CheckoutBorrowLicenseResponse checkoutBorrowLicenseResponse;
+
     public CheckoutBorrowLicenseResponse withCheckoutBorrowLicenseResponse(org.openapis.openapi.models.shared.CheckoutBorrowLicenseResponse checkoutBorrowLicenseResponse) {
         this.checkoutBorrowLicenseResponse = checkoutBorrowLicenseResponse;
         return this;
@@ -39,6 +43,7 @@ public class CheckoutBorrowLicenseResponse {
     
     
     public String contentType;
+
     public CheckoutBorrowLicenseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CheckoutBorrowLicenseResponse {
      */
     
     public Object entitlementNotAllowedException;
+
     public CheckoutBorrowLicenseResponse withEntitlementNotAllowedException(Object entitlementNotAllowedException) {
         this.entitlementNotAllowedException = entitlementNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class CheckoutBorrowLicenseResponse {
      */
     
     public Object invalidParameterValueException;
+
     public CheckoutBorrowLicenseResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -69,6 +76,7 @@ public class CheckoutBorrowLicenseResponse {
      */
     
     public Object noEntitlementsAllowedException;
+
     public CheckoutBorrowLicenseResponse withNoEntitlementsAllowedException(Object noEntitlementsAllowedException) {
         this.noEntitlementsAllowedException = noEntitlementsAllowedException;
         return this;
@@ -79,6 +87,7 @@ public class CheckoutBorrowLicenseResponse {
      */
     
     public Object rateLimitExceededException;
+
     public CheckoutBorrowLicenseResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -89,6 +98,7 @@ public class CheckoutBorrowLicenseResponse {
      */
     
     public Object redirectException;
+
     public CheckoutBorrowLicenseResponse withRedirectException(Object redirectException) {
         this.redirectException = redirectException;
         return this;
@@ -99,6 +109,7 @@ public class CheckoutBorrowLicenseResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CheckoutBorrowLicenseResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -106,6 +117,7 @@ public class CheckoutBorrowLicenseResponse {
     
     
     public Integer statusCode;
+
     public CheckoutBorrowLicenseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class CheckoutBorrowLicenseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CheckoutBorrowLicenseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class CheckoutBorrowLicenseResponse {
      */
     
     public Object serverInternalException;
+
     public CheckoutBorrowLicenseResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -133,6 +147,7 @@ public class CheckoutBorrowLicenseResponse {
      */
     
     public Object unsupportedDigitalSignatureMethodException;
+
     public CheckoutBorrowLicenseResponse withUnsupportedDigitalSignatureMethodException(Object unsupportedDigitalSignatureMethodException) {
         this.unsupportedDigitalSignatureMethodException = unsupportedDigitalSignatureMethodException;
         return this;
@@ -143,9 +158,14 @@ public class CheckoutBorrowLicenseResponse {
      */
     
     public Object validationException;
+
     public CheckoutBorrowLicenseResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CheckoutBorrowLicenseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

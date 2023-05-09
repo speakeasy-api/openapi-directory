@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CodeCommitCodeDestination {
     @JsonProperty("name")
     public String name;
+
     public CodeCommitCodeDestination withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CodeCommitCodeDestination(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

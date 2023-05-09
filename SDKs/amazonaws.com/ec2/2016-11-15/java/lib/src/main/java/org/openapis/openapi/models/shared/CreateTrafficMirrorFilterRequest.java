@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class CreateTrafficMirrorFilterRequest {
     
     public String clientToken;
+
     public CreateTrafficMirrorFilterRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateTrafficMirrorFilterRequest {
     
     
     public String description;
+
     public CreateTrafficMirrorFilterRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class CreateTrafficMirrorFilterRequest {
     
     
     public Boolean dryRun;
+
     public CreateTrafficMirrorFilterRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,9 +33,11 @@ public class CreateTrafficMirrorFilterRequest {
     
     
     public CreateTrafficMirrorFilterRequestTagSpecifications[] tagSpecifications;
+
     public CreateTrafficMirrorFilterRequest withTagSpecifications(CreateTrafficMirrorFilterRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateTrafficMirrorFilterRequest(){}
 }

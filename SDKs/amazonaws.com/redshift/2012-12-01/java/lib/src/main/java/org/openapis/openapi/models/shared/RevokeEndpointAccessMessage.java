@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class RevokeEndpointAccessMessage {
     
     public String account;
+
     public RevokeEndpointAccessMessage withAccount(String account) {
         this.account = account;
         return this;
@@ -16,6 +17,7 @@ public class RevokeEndpointAccessMessage {
     
     
     public String clusterIdentifier;
+
     public RevokeEndpointAccessMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -23,6 +25,7 @@ public class RevokeEndpointAccessMessage {
     
     
     public Boolean force;
+
     public RevokeEndpointAccessMessage withForce(Boolean force) {
         this.force = force;
         return this;
@@ -30,9 +33,11 @@ public class RevokeEndpointAccessMessage {
     
     
     public String[] vpcIds;
+
     public RevokeEndpointAccessMessage withVpcIds(String[] vpcIds) {
         this.vpcIds = vpcIds;
         return this;
     }
     
+    public RevokeEndpointAccessMessage(){}
 }

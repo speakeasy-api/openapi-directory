@@ -17,6 +17,7 @@ public class Category {
      */
     @JsonProperty("color")
     public String color;
+
     public Category withColor(String color) {
         this.color = color;
         return this;
@@ -27,6 +28,7 @@ public class Category {
      */
     @JsonProperty("id")
     public Long id;
+
     public Category withId(Long id) {
         this.id = id;
         return this;
@@ -38,6 +40,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_logo")
     public Long idLogo;
+
     public Category withIdLogo(Long idLogo) {
         this.idLogo = idLogo;
         return this;
@@ -48,6 +51,7 @@ public class Category {
      */
     @JsonProperty("id_parent_category")
     public Long idParentCategory;
+
     public Category withIdParentCategory(Long idParentCategory) {
         this.idParentCategory = idParentCategory;
         return this;
@@ -58,6 +62,7 @@ public class Category {
      */
     @JsonProperty("id_parent_category_in_menu")
     public Long idParentCategoryInMenu;
+
     public Category withIdParentCategoryInMenu(Long idParentCategoryInMenu) {
         this.idParentCategoryInMenu = idParentCategoryInMenu;
         return this;
@@ -69,6 +74,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_user")
     public Long idUser;
+
     public Category withIdUser(Long idUser) {
         this.idUser = idUser;
         return this;
@@ -80,6 +86,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("income")
     public Boolean income;
+
     public Category withIncome(Boolean income) {
         this.income = income;
         return this;
@@ -90,6 +97,7 @@ public class Category {
      */
     @JsonProperty("name")
     public String name;
+
     public Category withName(String name) {
         this.name = name;
         return this;
@@ -101,6 +109,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name_displayed")
     public String nameDisplayed;
+
     public Category withNameDisplayed(String nameDisplayed) {
         this.nameDisplayed = nameDisplayed;
         return this;
@@ -111,9 +120,18 @@ public class Category {
      */
     @JsonProperty("refundable")
     public Boolean refundable;
+
     public Category withRefundable(Boolean refundable) {
         this.refundable = refundable;
         return this;
     }
     
+    public Category(@JsonProperty("color") String color, @JsonProperty("id") Long id, @JsonProperty("id_parent_category") Long idParentCategory, @JsonProperty("id_parent_category_in_menu") Long idParentCategoryInMenu, @JsonProperty("name") String name, @JsonProperty("refundable") Boolean refundable) {
+        this.color = color;
+        this.id = id;
+        this.idParentCategory = idParentCategory;
+        this.idParentCategoryInMenu = idParentCategoryInMenu;
+        this.name = name;
+        this.refundable = refundable;
+  }
 }

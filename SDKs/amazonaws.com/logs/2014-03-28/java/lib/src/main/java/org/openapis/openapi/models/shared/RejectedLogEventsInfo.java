@@ -15,6 +15,7 @@ public class RejectedLogEventsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiredLogEventEndIndex")
     public Long expiredLogEventEndIndex;
+
     public RejectedLogEventsInfo withExpiredLogEventEndIndex(Long expiredLogEventEndIndex) {
         this.expiredLogEventEndIndex = expiredLogEventEndIndex;
         return this;
@@ -23,6 +24,7 @@ public class RejectedLogEventsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tooNewLogEventStartIndex")
     public Long tooNewLogEventStartIndex;
+
     public RejectedLogEventsInfo withTooNewLogEventStartIndex(Long tooNewLogEventStartIndex) {
         this.tooNewLogEventStartIndex = tooNewLogEventStartIndex;
         return this;
@@ -31,9 +33,11 @@ public class RejectedLogEventsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tooOldLogEventEndIndex")
     public Long tooOldLogEventEndIndex;
+
     public RejectedLogEventsInfo withTooOldLogEventEndIndex(Long tooOldLogEventEndIndex) {
         this.tooOldLogEventEndIndex = tooOldLogEventEndIndex;
         return this;
     }
     
+    public RejectedLogEventsInfo(){}
 }

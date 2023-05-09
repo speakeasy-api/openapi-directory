@@ -20,6 +20,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Report withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeCoverageSummary")
     public CodeCoverageReportSummary codeCoverageSummary;
+
     public Report withCodeCoverageSummary(CodeCoverageReportSummary codeCoverageSummary) {
         this.codeCoverageSummary = codeCoverageSummary;
         return this;
@@ -38,6 +40,7 @@ public class Report {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Report withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -46,6 +49,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionId")
     public String executionId;
+
     public Report withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -56,6 +60,7 @@ public class Report {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expired")
     public OffsetDateTime expired;
+
     public Report withExpired(OffsetDateTime expired) {
         this.expired = expired;
         return this;
@@ -64,6 +69,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportConfig")
     public ReportExportConfig exportConfig;
+
     public Report withExportConfig(ReportExportConfig exportConfig) {
         this.exportConfig = exportConfig;
         return this;
@@ -72,6 +78,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Report withName(String name) {
         this.name = name;
         return this;
@@ -80,6 +87,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportGroupArn")
     public String reportGroupArn;
+
     public Report withReportGroupArn(String reportGroupArn) {
         this.reportGroupArn = reportGroupArn;
         return this;
@@ -88,6 +96,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ReportStatusTypeEnum status;
+
     public Report withStatus(ReportStatusTypeEnum status) {
         this.status = status;
         return this;
@@ -96,6 +105,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testSummary")
     public TestReportSummary testSummary;
+
     public Report withTestSummary(TestReportSummary testSummary) {
         this.testSummary = testSummary;
         return this;
@@ -104,6 +114,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("truncated")
     public Boolean truncated;
+
     public Report withTruncated(Boolean truncated) {
         this.truncated = truncated;
         return this;
@@ -112,9 +123,11 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ReportTypeEnum type;
+
     public Report withType(ReportTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Report(){}
 }

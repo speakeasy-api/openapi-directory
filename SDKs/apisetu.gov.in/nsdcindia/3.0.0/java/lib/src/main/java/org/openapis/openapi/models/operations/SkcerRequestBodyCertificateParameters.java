@@ -12,6 +12,7 @@ public class SkcerRequestBodyCertificateParameters {
      */
     @JsonProperty("CentCID")
     public String centCID;
+
     public SkcerRequestBodyCertificateParameters withCentCID(String centCID) {
         this.centCID = centCID;
         return this;
@@ -22,6 +23,7 @@ public class SkcerRequestBodyCertificateParameters {
      */
     @JsonProperty("CertID")
     public String certID;
+
     public SkcerRequestBodyCertificateParameters withCertID(String certID) {
         this.certID = certID;
         return this;
@@ -32,6 +34,7 @@ public class SkcerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public SkcerRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -42,9 +45,16 @@ public class SkcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public SkcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
     }
     
+    public SkcerRequestBodyCertificateParameters(@JsonProperty("CentCID") String centCID, @JsonProperty("CertID") String certID, @JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName) {
+        this.centCID = centCID;
+        this.certID = certID;
+        this.dob = dob;
+        this.fullName = fullName;
+  }
 }

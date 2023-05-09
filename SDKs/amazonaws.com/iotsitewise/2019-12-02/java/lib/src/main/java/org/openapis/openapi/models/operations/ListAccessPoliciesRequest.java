@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ListAccessPoliciesRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListAccessPoliciesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +17,7 @@ public class ListAccessPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListAccessPoliciesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +25,7 @@ public class ListAccessPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListAccessPoliciesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +33,7 @@ public class ListAccessPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListAccessPoliciesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +41,7 @@ public class ListAccessPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListAccessPoliciesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +49,7 @@ public class ListAccessPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListAccessPoliciesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +57,7 @@ public class ListAccessPoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListAccessPoliciesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +68,7 @@ public class ListAccessPoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iamArn")
     public String iamArn;
+
     public ListAccessPoliciesRequest withIamArn(String iamArn) {
         this.iamArn = iamArn;
         return this;
@@ -71,6 +79,7 @@ public class ListAccessPoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=identityId")
     public String identityId;
+
     public ListAccessPoliciesRequest withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
@@ -81,6 +90,7 @@ public class ListAccessPoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=identityType")
     public ListAccessPoliciesIdentityTypeEnum identityType;
+
     public ListAccessPoliciesRequest withIdentityType(ListAccessPoliciesIdentityTypeEnum identityType) {
         this.identityType = identityType;
         return this;
@@ -91,6 +101,7 @@ public class ListAccessPoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public ListAccessPoliciesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -101,6 +112,7 @@ public class ListAccessPoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListAccessPoliciesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -111,6 +123,7 @@ public class ListAccessPoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceId")
     public String resourceId;
+
     public ListAccessPoliciesRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -121,9 +134,11 @@ public class ListAccessPoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceType")
     public ListAccessPoliciesResourceTypeEnum resourceType;
+
     public ListAccessPoliciesRequest withResourceType(ListAccessPoliciesResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ListAccessPoliciesRequest(){}
 }

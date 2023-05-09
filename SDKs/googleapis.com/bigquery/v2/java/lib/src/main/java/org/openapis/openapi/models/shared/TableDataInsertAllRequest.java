@@ -15,6 +15,7 @@ public class TableDataInsertAllRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreUnknownValues")
     public Boolean ignoreUnknownValues;
+
     public TableDataInsertAllRequest withIgnoreUnknownValues(Boolean ignoreUnknownValues) {
         this.ignoreUnknownValues = ignoreUnknownValues;
         return this;
@@ -26,6 +27,7 @@ public class TableDataInsertAllRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TableDataInsertAllRequest withKind(String kind) {
         this.kind = kind;
         return this;
@@ -37,6 +39,7 @@ public class TableDataInsertAllRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public TableDataInsertAllRequestRows[] rows;
+
     public TableDataInsertAllRequest withRows(TableDataInsertAllRequestRows[] rows) {
         this.rows = rows;
         return this;
@@ -48,6 +51,7 @@ public class TableDataInsertAllRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipInvalidRows")
     public Boolean skipInvalidRows;
+
     public TableDataInsertAllRequest withSkipInvalidRows(Boolean skipInvalidRows) {
         this.skipInvalidRows = skipInvalidRows;
         return this;
@@ -59,9 +63,11 @@ public class TableDataInsertAllRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateSuffix")
     public String templateSuffix;
+
     public TableDataInsertAllRequest withTemplateSuffix(String templateSuffix) {
         this.templateSuffix = templateSuffix;
         return this;
     }
     
+    public TableDataInsertAllRequest(){}
 }

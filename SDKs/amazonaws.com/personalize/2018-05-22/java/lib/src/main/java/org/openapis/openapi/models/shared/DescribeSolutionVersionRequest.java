@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeSolutionVersionRequest {
     @JsonProperty("solutionVersionArn")
     public String solutionVersionArn;
+
     public DescribeSolutionVersionRequest withSolutionVersionArn(String solutionVersionArn) {
         this.solutionVersionArn = solutionVersionArn;
         return this;
     }
     
+    public DescribeSolutionVersionRequest(@JsonProperty("solutionVersionArn") String solutionVersionArn) {
+        this.solutionVersionArn = solutionVersionArn;
+  }
 }

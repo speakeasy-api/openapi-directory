@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyCertificatesMessage {
     
     public String certificateIdentifier;
+
     public ModifyCertificatesMessage withCertificateIdentifier(String certificateIdentifier) {
         this.certificateIdentifier = certificateIdentifier;
         return this;
@@ -16,9 +17,11 @@ public class ModifyCertificatesMessage {
     
     
     public Boolean removeCustomerOverride;
+
     public ModifyCertificatesMessage withRemoveCustomerOverride(Boolean removeCustomerOverride) {
         this.removeCustomerOverride = removeCustomerOverride;
         return this;
     }
     
+    public ModifyCertificatesMessage(){}
 }

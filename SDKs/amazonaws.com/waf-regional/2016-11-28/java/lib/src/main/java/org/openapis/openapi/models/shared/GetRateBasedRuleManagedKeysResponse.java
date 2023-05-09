@@ -15,6 +15,7 @@ public class GetRateBasedRuleManagedKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManagedKeys")
     public String[] managedKeys;
+
     public GetRateBasedRuleManagedKeysResponse withManagedKeys(String[] managedKeys) {
         this.managedKeys = managedKeys;
         return this;
@@ -23,9 +24,11 @@ public class GetRateBasedRuleManagedKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public GetRateBasedRuleManagedKeysResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public GetRateBasedRuleManagedKeysResponse(){}
 }

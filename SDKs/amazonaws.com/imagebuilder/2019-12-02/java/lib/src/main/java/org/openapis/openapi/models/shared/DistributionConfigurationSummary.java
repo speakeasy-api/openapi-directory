@@ -15,6 +15,7 @@ public class DistributionConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public DistributionConfigurationSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class DistributionConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateCreated")
     public String dateCreated;
+
     public DistributionConfigurationSummary withDateCreated(String dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -31,6 +33,7 @@ public class DistributionConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateUpdated")
     public String dateUpdated;
+
     public DistributionConfigurationSummary withDateUpdated(String dateUpdated) {
         this.dateUpdated = dateUpdated;
         return this;
@@ -39,6 +42,7 @@ public class DistributionConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DistributionConfigurationSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +51,7 @@ public class DistributionConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DistributionConfigurationSummary withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +60,7 @@ public class DistributionConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regions")
     public String[] regions;
+
     public DistributionConfigurationSummary withRegions(String[] regions) {
         this.regions = regions;
         return this;
@@ -63,9 +69,11 @@ public class DistributionConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public DistributionConfigurationSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public DistributionConfigurationSummary(){}
 }

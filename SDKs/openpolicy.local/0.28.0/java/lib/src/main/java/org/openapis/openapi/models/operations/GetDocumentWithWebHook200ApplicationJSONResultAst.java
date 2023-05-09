@@ -16,6 +16,7 @@ public class GetDocumentWithWebHook200ApplicationJSONResultAst {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package")
     public GetDocumentWithWebHook200ApplicationJSONResultAstPackage package_;
+
     public GetDocumentWithWebHook200ApplicationJSONResultAst withPackage(GetDocumentWithWebHook200ApplicationJSONResultAstPackage package_) {
         this.package_ = package_;
         return this;
@@ -28,9 +29,11 @@ public class GetDocumentWithWebHook200ApplicationJSONResultAst {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public GetDocumentWithWebHook200ApplicationJSONResultAstRules[] rules;
+
     public GetDocumentWithWebHook200ApplicationJSONResultAst withRules(GetDocumentWithWebHook200ApplicationJSONResultAstRules[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public GetDocumentWithWebHook200ApplicationJSONResultAst(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * FixedResponseActionConfig - Information about an action that returns a custom HTTP response.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class FixedResponseActionConfig {
     
     public String contentType;
+
     public FixedResponseActionConfig withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +20,7 @@ public class FixedResponseActionConfig {
     
     
     public String messageBody;
+
     public FixedResponseActionConfig withMessageBody(String messageBody) {
         this.messageBody = messageBody;
         return this;
@@ -26,9 +28,13 @@ public class FixedResponseActionConfig {
     
     
     public String statusCode;
+
     public FixedResponseActionConfig withStatusCode(String statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public FixedResponseActionConfig(@JsonProperty("StatusCode") String statusCode) {
+        this.statusCode = statusCode;
+  }
 }

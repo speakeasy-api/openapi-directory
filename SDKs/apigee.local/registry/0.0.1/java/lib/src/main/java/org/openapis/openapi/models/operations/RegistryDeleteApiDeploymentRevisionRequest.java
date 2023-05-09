@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryDeleteApiDeploymentRevisionRequest {
@@ -12,6 +13,7 @@ public class RegistryDeleteApiDeploymentRevisionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
     public String api;
+
     public RegistryDeleteApiDeploymentRevisionRequest withApi(String api) {
         this.api = api;
         return this;
@@ -22,6 +24,7 @@ public class RegistryDeleteApiDeploymentRevisionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment")
     public String deployment;
+
     public RegistryDeleteApiDeploymentRevisionRequest withDeployment(String deployment) {
         this.deployment = deployment;
         return this;
@@ -32,6 +35,7 @@ public class RegistryDeleteApiDeploymentRevisionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public RegistryDeleteApiDeploymentRevisionRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -42,9 +46,16 @@ public class RegistryDeleteApiDeploymentRevisionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public RegistryDeleteApiDeploymentRevisionRequest withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public RegistryDeleteApiDeploymentRevisionRequest(@JsonProperty("api") String api, @JsonProperty("deployment") String deployment, @JsonProperty("location") String location, @JsonProperty("project") String project) {
+        this.api = api;
+        this.deployment = deployment;
+        this.location = location;
+        this.project = project;
+  }
 }

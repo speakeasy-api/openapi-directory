@@ -15,9 +15,11 @@ public class CreateDBSnapshotResult {
      */
     
     public DBSnapshot dbSnapshot;
+
     public CreateDBSnapshotResult withDBSnapshot(DBSnapshot dbSnapshot) {
         this.dbSnapshot = dbSnapshot;
         return this;
     }
     
+    public CreateDBSnapshotResult(){}
 }

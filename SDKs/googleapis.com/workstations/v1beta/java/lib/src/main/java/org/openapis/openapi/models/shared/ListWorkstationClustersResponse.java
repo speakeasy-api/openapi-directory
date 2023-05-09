@@ -18,6 +18,7 @@ public class ListWorkstationClustersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListWorkstationClustersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListWorkstationClustersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListWorkstationClustersResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
@@ -40,9 +42,11 @@ public class ListWorkstationClustersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workstationClusters")
     public WorkstationCluster[] workstationClusters;
+
     public ListWorkstationClustersResponse withWorkstationClusters(WorkstationCluster[] workstationClusters) {
         this.workstationClusters = workstationClusters;
         return this;
     }
     
+    public ListWorkstationClustersResponse(){}
 }

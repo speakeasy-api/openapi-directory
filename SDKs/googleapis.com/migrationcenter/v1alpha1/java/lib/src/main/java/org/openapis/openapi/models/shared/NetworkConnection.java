@@ -15,6 +15,7 @@ public class NetworkConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localIpAddress")
     public String localIpAddress;
+
     public NetworkConnection withLocalIpAddress(String localIpAddress) {
         this.localIpAddress = localIpAddress;
         return this;
@@ -26,6 +27,7 @@ public class NetworkConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localPort")
     public Integer localPort;
+
     public NetworkConnection withLocalPort(Integer localPort) {
         this.localPort = localPort;
         return this;
@@ -37,6 +39,7 @@ public class NetworkConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pid")
     public String pid;
+
     public NetworkConnection withPid(String pid) {
         this.pid = pid;
         return this;
@@ -48,6 +51,7 @@ public class NetworkConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processName")
     public String processName;
+
     public NetworkConnection withProcessName(String processName) {
         this.processName = processName;
         return this;
@@ -59,6 +63,7 @@ public class NetworkConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public String protocol;
+
     public NetworkConnection withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -70,6 +75,7 @@ public class NetworkConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteIpAddress")
     public String remoteIpAddress;
+
     public NetworkConnection withRemoteIpAddress(String remoteIpAddress) {
         this.remoteIpAddress = remoteIpAddress;
         return this;
@@ -81,6 +87,7 @@ public class NetworkConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remotePort")
     public Integer remotePort;
+
     public NetworkConnection withRemotePort(Integer remotePort) {
         this.remotePort = remotePort;
         return this;
@@ -92,9 +99,11 @@ public class NetworkConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public NetworkConnection withState(String state) {
         this.state = state;
         return this;
     }
     
+    public NetworkConnection(){}
 }

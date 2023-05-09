@@ -12,6 +12,7 @@ public class CreateImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Aliases")
     public String[] aliases;
+
     public CreateImageVersionRequest withAliases(String[] aliases) {
         this.aliases = aliases;
         return this;
@@ -19,6 +20,7 @@ public class CreateImageVersionRequest {
     
     @JsonProperty("BaseImage")
     public String baseImage;
+
     public CreateImageVersionRequest withBaseImage(String baseImage) {
         this.baseImage = baseImage;
         return this;
@@ -26,6 +28,7 @@ public class CreateImageVersionRequest {
     
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateImageVersionRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -34,6 +37,7 @@ public class CreateImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Horovod")
     public Boolean horovod;
+
     public CreateImageVersionRequest withHorovod(Boolean horovod) {
         this.horovod = horovod;
         return this;
@@ -41,6 +45,7 @@ public class CreateImageVersionRequest {
     
     @JsonProperty("ImageName")
     public String imageName;
+
     public CreateImageVersionRequest withImageName(String imageName) {
         this.imageName = imageName;
         return this;
@@ -49,6 +54,7 @@ public class CreateImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobType")
     public JobTypeEnum jobType;
+
     public CreateImageVersionRequest withJobType(JobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -57,6 +63,7 @@ public class CreateImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MLFramework")
     public String mlFramework;
+
     public CreateImageVersionRequest withMLFramework(String mlFramework) {
         this.mlFramework = mlFramework;
         return this;
@@ -65,6 +72,7 @@ public class CreateImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Processor")
     public ProcessorEnum processor;
+
     public CreateImageVersionRequest withProcessor(ProcessorEnum processor) {
         this.processor = processor;
         return this;
@@ -73,6 +81,7 @@ public class CreateImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProgrammingLang")
     public String programmingLang;
+
     public CreateImageVersionRequest withProgrammingLang(String programmingLang) {
         this.programmingLang = programmingLang;
         return this;
@@ -81,6 +90,7 @@ public class CreateImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReleaseNotes")
     public String releaseNotes;
+
     public CreateImageVersionRequest withReleaseNotes(String releaseNotes) {
         this.releaseNotes = releaseNotes;
         return this;
@@ -89,9 +99,15 @@ public class CreateImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VendorGuidance")
     public VendorGuidanceEnum vendorGuidance;
+
     public CreateImageVersionRequest withVendorGuidance(VendorGuidanceEnum vendorGuidance) {
         this.vendorGuidance = vendorGuidance;
         return this;
     }
     
+    public CreateImageVersionRequest(@JsonProperty("BaseImage") String baseImage, @JsonProperty("ClientToken") String clientToken, @JsonProperty("ImageName") String imageName) {
+        this.baseImage = baseImage;
+        this.clientToken = clientToken;
+        this.imageName = imageName;
+  }
 }

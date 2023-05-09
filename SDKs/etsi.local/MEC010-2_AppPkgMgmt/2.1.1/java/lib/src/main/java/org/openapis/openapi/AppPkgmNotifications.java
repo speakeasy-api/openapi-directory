@@ -59,11 +59,9 @@ public class AppPkgmNotifications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppPkgNotificationPOSTResponse res = new org.openapis.openapi.models.operations.AppPkgNotificationPOSTResponse() {{
+        org.openapis.openapi.models.operations.AppPkgNotificationPOSTResponse res = new org.openapis.openapi.models.operations.AppPkgNotificationPOSTResponse(contentType, httpRes.statusCode()) {{
             problemDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

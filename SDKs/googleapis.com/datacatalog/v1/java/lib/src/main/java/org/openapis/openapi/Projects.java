@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsCreateResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsCreateResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsCreateResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1EntryGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesCreateResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesCreateResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesCreateResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1Entry = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,11 +154,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesImportResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesImportResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesImportResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesImportResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesListResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesListResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesListResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1ListEntriesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,11 +244,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryContactsResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryContactsResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryContactsResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryContactsResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1Contacts = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,11 +290,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryOverviewResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryOverviewResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryOverviewResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryOverviewResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1EntryOverview = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -348,11 +336,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesStarResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesStarResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesStarResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesStarResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1StarEntryResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -396,11 +382,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesTagsReconcileResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesTagsReconcileResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesTagsReconcileResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesTagsReconcileResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -444,11 +428,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesUnstarResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesUnstarResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesUnstarResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesUnstarResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1UnstarEntryResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -490,11 +472,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsListResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsListResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsListResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1ListEntryGroupsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -538,11 +518,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsCreateResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsCreateResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsCreateResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1Tag = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -584,11 +562,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsListResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsListResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsListResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1ListTagsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -630,11 +606,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -676,11 +650,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -724,11 +696,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesCreateResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesCreateResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesCreateResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1TagTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -772,11 +742,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsCreateResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsCreateResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsCreateResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1TagTemplateField = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -820,11 +788,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsEnumValuesRenameResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsEnumValuesRenameResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsEnumValuesRenameResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsEnumValuesRenameResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1TagTemplateField = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -868,11 +834,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesCreateResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesCreateResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesCreateResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1Taxonomy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -914,11 +878,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesExportResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesExportResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesExportResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesExportResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1ExportTaxonomiesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -962,11 +924,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesImportResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesImportResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesImportResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesImportResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1ImportTaxonomiesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1008,11 +968,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesListResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesListResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesListResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1ListTaxonomiesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1056,11 +1014,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsCreateResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsCreateResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsCreateResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1PolicyTag = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1102,11 +1058,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsDeleteResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsDeleteResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1148,11 +1102,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1PolicyTag = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1196,11 +1148,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1242,11 +1192,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsListResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsListResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsListResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1ListPolicyTagsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1290,11 +1238,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1PolicyTag = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1338,11 +1284,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1386,11 +1330,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1434,11 +1376,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesReplaceResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesReplaceResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesReplaceResponse res = new org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesReplaceResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1Taxonomy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

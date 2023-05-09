@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePortfolioRequest {
@@ -14,6 +15,7 @@ public class DeletePortfolioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public DeletePortfolioRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -25,6 +27,7 @@ public class DeletePortfolioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public DeletePortfolioRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -35,9 +38,13 @@ public class DeletePortfolioRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portfolio_gid")
     public String portfolioGid;
+
     public DeletePortfolioRequest withPortfolioGid(String portfolioGid) {
         this.portfolioGid = portfolioGid;
         return this;
     }
     
+    public DeletePortfolioRequest(@JsonProperty("portfolio_gid") String portfolioGid) {
+        this.portfolioGid = portfolioGid;
+  }
 }

@@ -18,6 +18,7 @@ public class BatchGetAmpUrlsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lookupStrategy")
     public BatchGetAmpUrlsRequestLookupStrategyEnum lookupStrategy;
+
     public BatchGetAmpUrlsRequest withLookupStrategy(BatchGetAmpUrlsRequestLookupStrategyEnum lookupStrategy) {
         this.lookupStrategy = lookupStrategy;
         return this;
@@ -29,9 +30,11 @@ public class BatchGetAmpUrlsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urls")
     public String[] urls;
+
     public BatchGetAmpUrlsRequest withUrls(String[] urls) {
         this.urls = urls;
         return this;
     }
     
+    public BatchGetAmpUrlsRequest(){}
 }

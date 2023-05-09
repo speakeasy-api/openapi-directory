@@ -18,6 +18,7 @@ public class OSPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowNoResourceGroupMatch")
     public Boolean allowNoResourceGroupMatch;
+
     public OSPolicy withAllowNoResourceGroupMatch(Boolean allowNoResourceGroupMatch) {
         this.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
         return this;
@@ -29,6 +30,7 @@ public class OSPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public OSPolicy withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class OSPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public OSPolicy withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class OSPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public OSPolicyModeEnum mode;
+
     public OSPolicy withMode(OSPolicyModeEnum mode) {
         this.mode = mode;
         return this;
@@ -62,9 +66,11 @@ public class OSPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceGroups")
     public OSPolicyResourceGroup[] resourceGroups;
+
     public OSPolicy withResourceGroups(OSPolicyResourceGroup[] resourceGroups) {
         this.resourceGroups = resourceGroups;
         return this;
     }
     
+    public OSPolicy(){}
 }

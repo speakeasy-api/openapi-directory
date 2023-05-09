@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DnsResourceRecordSetsCreateRequest {
@@ -12,6 +13,7 @@ public class DnsResourceRecordSetsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DnsResourceRecordSetsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DnsResourceRecordSetsCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ResourceRecordSet resourceRecordSet;
+
     public DnsResourceRecordSetsCreateRequest withResourceRecordSet(org.openapis.openapi.models.shared.ResourceRecordSet resourceRecordSet) {
         this.resourceRecordSet = resourceRecordSet;
         return this;
@@ -29,6 +32,7 @@ public class DnsResourceRecordSetsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DnsResourceRecordSetsCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DnsResourceRecordSetsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DnsResourceRecordSetsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class DnsResourceRecordSetsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DnsResourceRecordSetsCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class DnsResourceRecordSetsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientOperationId")
     public String clientOperationId;
+
     public DnsResourceRecordSetsCreateRequest withClientOperationId(String clientOperationId) {
         this.clientOperationId = clientOperationId;
         return this;
@@ -69,6 +76,7 @@ public class DnsResourceRecordSetsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DnsResourceRecordSetsCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class DnsResourceRecordSetsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DnsResourceRecordSetsCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class DnsResourceRecordSetsCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=managedZone")
     public String managedZone;
+
     public DnsResourceRecordSetsCreateRequest withManagedZone(String managedZone) {
         this.managedZone = managedZone;
         return this;
@@ -99,6 +109,7 @@ public class DnsResourceRecordSetsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DnsResourceRecordSetsCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -109,6 +120,7 @@ public class DnsResourceRecordSetsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DnsResourceRecordSetsCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class DnsResourceRecordSetsCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public DnsResourceRecordSetsCreateRequest withProject(String project) {
         this.project = project;
         return this;
@@ -129,6 +142,7 @@ public class DnsResourceRecordSetsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DnsResourceRecordSetsCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -139,6 +153,7 @@ public class DnsResourceRecordSetsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DnsResourceRecordSetsCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,9 +164,14 @@ public class DnsResourceRecordSetsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DnsResourceRecordSetsCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DnsResourceRecordSetsCreateRequest(@JsonProperty("managedZone") String managedZone, @JsonProperty("project") String project) {
+        this.managedZone = managedZone;
+        this.project = project;
+  }
 }

@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * PropertyFilters - &lt;p/&gt;
+ * PropertyFilters - A list of PropertyFilter objects.
  */
 public class PropertyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogicalOperator")
     public LogicalOperatorEnum logicalOperator;
+
     public PropertyFilters withLogicalOperator(LogicalOperatorEnum logicalOperator) {
         this.logicalOperator = logicalOperator;
         return this;
@@ -23,9 +24,11 @@ public class PropertyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public PropertyFilter[] properties;
+
     public PropertyFilters withProperties(PropertyFilter[] properties) {
         this.properties = properties;
         return this;
     }
     
+    public PropertyFilters(){}
 }

@@ -15,9 +15,11 @@ public class AbortTransactionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimingInformation")
     public TimingInformation timingInformation;
+
     public AbortTransactionResult withTimingInformation(TimingInformation timingInformation) {
         this.timingInformation = timingInformation;
         return this;
     }
     
+    public AbortTransactionResult(){}
 }

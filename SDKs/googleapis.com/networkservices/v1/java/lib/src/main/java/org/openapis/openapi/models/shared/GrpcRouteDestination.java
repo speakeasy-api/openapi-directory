@@ -18,6 +18,7 @@ public class GrpcRouteDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public GrpcRouteDestination withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -29,9 +30,11 @@ public class GrpcRouteDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Integer weight;
+
     public GrpcRouteDestination withWeight(Integer weight) {
         this.weight = weight;
         return this;
     }
     
+    public GrpcRouteDestination(){}
 }

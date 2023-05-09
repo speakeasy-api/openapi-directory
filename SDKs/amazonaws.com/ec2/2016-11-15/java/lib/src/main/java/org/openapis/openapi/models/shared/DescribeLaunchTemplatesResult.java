@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLaunchTemplatesResult {
     
     public DescribeLaunchTemplatesResultLaunchTemplates[] launchTemplates;
+
     public DescribeLaunchTemplatesResult withLaunchTemplates(DescribeLaunchTemplatesResultLaunchTemplates[] launchTemplates) {
         this.launchTemplates = launchTemplates;
         return this;
@@ -19,9 +20,11 @@ public class DescribeLaunchTemplatesResult {
     
     
     public String nextToken;
+
     public DescribeLaunchTemplatesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeLaunchTemplatesResult(){}
 }

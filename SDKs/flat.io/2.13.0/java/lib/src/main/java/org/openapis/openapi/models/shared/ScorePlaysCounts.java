@@ -20,6 +20,7 @@ public class ScorePlaysCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monthly")
     public Double monthly;
+
     public ScorePlaysCounts withMonthly(Double monthly) {
         this.monthly = monthly;
         return this;
@@ -31,6 +32,7 @@ public class ScorePlaysCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public ScorePlaysCounts withTotal(Double total) {
         this.total = total;
         return this;
@@ -42,9 +44,11 @@ public class ScorePlaysCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weekly")
     public Double weekly;
+
     public ScorePlaysCounts withWeekly(Double weekly) {
         this.weekly = weekly;
         return this;
     }
     
+    public ScorePlaysCounts(){}
 }

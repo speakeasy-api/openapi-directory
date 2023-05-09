@@ -15,6 +15,7 @@ public class EcsContainerOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Command")
     public String[] command;
+
     public EcsContainerOverride withCommand(String[] command) {
         this.command = command;
         return this;
@@ -23,6 +24,7 @@ public class EcsContainerOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cpu")
     public Long cpu;
+
     public EcsContainerOverride withCpu(Long cpu) {
         this.cpu = cpu;
         return this;
@@ -31,6 +33,7 @@ public class EcsContainerOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public EcsEnvironmentVariable[] environment;
+
     public EcsContainerOverride withEnvironment(EcsEnvironmentVariable[] environment) {
         this.environment = environment;
         return this;
@@ -39,6 +42,7 @@ public class EcsContainerOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnvironmentFiles")
     public EcsEnvironmentFile[] environmentFiles;
+
     public EcsContainerOverride withEnvironmentFiles(EcsEnvironmentFile[] environmentFiles) {
         this.environmentFiles = environmentFiles;
         return this;
@@ -47,6 +51,7 @@ public class EcsContainerOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Memory")
     public Long memory;
+
     public EcsContainerOverride withMemory(Long memory) {
         this.memory = memory;
         return this;
@@ -55,6 +60,7 @@ public class EcsContainerOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemoryReservation")
     public Long memoryReservation;
+
     public EcsContainerOverride withMemoryReservation(Long memoryReservation) {
         this.memoryReservation = memoryReservation;
         return this;
@@ -63,6 +69,7 @@ public class EcsContainerOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public EcsContainerOverride withName(String name) {
         this.name = name;
         return this;
@@ -71,9 +78,11 @@ public class EcsContainerOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceRequirements")
     public EcsResourceRequirement[] resourceRequirements;
+
     public EcsContainerOverride withResourceRequirements(EcsResourceRequirement[] resourceRequirements) {
         this.resourceRequirements = resourceRequirements;
         return this;
     }
     
+    public EcsContainerOverride(){}
 }

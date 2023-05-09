@@ -13,22 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudDiscoveryengineV1betaUserEvent {
     /**
-     * Extra user event features to include in the recommendation model. These attributes must NOT contain data that needs to be parsed or processed further, e.g. JSON or other encodings. If you provide custom attributes for ingested user events, also include them in the user events that you associate with prediction requests. Custom attribute formatting must be consistent between imported events and events provided with prediction requests. This lets the Discovery Engine API use those custom attributes when training models and serving predictions, which helps improve recommendation quality. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * The key must be a UTF-8 encoded string with a length limit of 5,000 characters. * For text attributes, at most 400 values are allowed. Empty values are not allowed. Each value must be a UTF-8 encoded string with a length limit of 256 characters. * For number attributes, at most 400 values are allowed. For product recommendations, an example of extra user information is traffic_channel, which is how a user arrives at the site. Users can arrive at the site by coming to the site directly, coming through Google search, or in other ways.
+     * Extra user event features to include in the recommendation model. These attributes must NOT contain data that needs to be parsed or processed further, e.g. JSON or other encodings. If you provide custom attributes for ingested user events, also include them in the user events that you associate with prediction requests. Custom attribute formatting must be consistent between imported events and events provided with prediction requests. This lets the Discovery Engine API use those custom attributes when training models and serving predictions, which helps improve recommendation quality. This field needs to pass all below criteria, otherwise an `INVALID_ARGUMENT` error is returned: * The key must be a UTF-8 encoded string with a length limit of 5,000 characters. * For text attributes, at most 400 values are allowed. Empty values are not allowed. Each value must be a UTF-8 encoded string with a length limit of 256 characters. * For number attributes, at most 400 values are allowed. For product recommendations, an example of extra user information is ` traffic_channel`, which is how a user arrives at the site. Users can arrive at the site by coming to the site directly, coming through Google search, or in other ways.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, GoogleCloudDiscoveryengineV1betaCustomAttribute> attributes;
+
     public GoogleCloudDiscoveryengineV1betaUserEvent withAttributes(java.util.Map<String, GoogleCloudDiscoveryengineV1betaCustomAttribute> attributes) {
         this.attributes = attributes;
         return this;
     }
     
     /**
-     * Token to attribute an API response to user action(s) to trigger the event. Highly recommended for user events that are the result of PredictionService.Predict. This field enables accurate attribution of recommendation model performance. The value must be one of: * PredictResponse.attribution_token for events that are the result of PredictionService.Predict. * SearchResponse.attribution_token for events that are the result of SearchService.Search. * CompleteQueryResponse.attribution_token for events that are the result of SearchService.CompleteQuery. This token enables us to accurately attribute page view or conversion completion back to the event and the particular predict response containing this clicked/purchased product. If user clicks on product K in the recommendation results, pass PredictResponse.attribution_token as a URL parameter to product K's page. When recording events on product K's page, log the PredictResponse.attribution_token to this field.
+     * Token to attribute an API response to user action(s) to trigger the event. Highly recommended for user events that are the result of RecommendationService.Recommend. This field enables accurate attribution of recommendation model performance. The value must be one of: * PredictResponse.attribution_token for events that are the result of RecommendationService.Recommend. * SearchResponse.attribution_token for events that are the result of SearchService.Search. * CompleteQueryResponse.attribution_token for events that are the result of CompletionService.CompleteQuery. This token enables us to accurately attribute page view or conversion completion back to the event and the particular predict response containing this clicked/purchased product. If user clicks on product K in the recommendation results, pass PredictResponse.attribution_token as a URL parameter to product K's page. When recording events on product K's page, log the PredictResponse.attribution_token to this field.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributionToken")
     public String attributionToken;
+
     public GoogleCloudDiscoveryengineV1betaUserEvent withAttributionToken(String attributionToken) {
         this.attributionToken = attributionToken;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDiscoveryengineV1betaUserEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completionInfo")
     public GoogleCloudDiscoveryengineV1betaCompletionInfo completionInfo;
+
     public GoogleCloudDiscoveryengineV1betaUserEvent withCompletionInfo(GoogleCloudDiscoveryengineV1betaCompletionInfo completionInfo) {
         this.completionInfo = completionInfo;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDiscoveryengineV1betaUserEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directUserRequest")
     public Boolean directUserRequest;
+
     public GoogleCloudDiscoveryengineV1betaUserEvent withDirectUserRequest(Boolean directUserRequest) {
         this.directUserRequest = directUserRequest;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDiscoveryengineV1betaUserEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public GoogleCloudDiscoveryengineV1betaDocumentInfo[] documents;
+
     public GoogleCloudDiscoveryengineV1betaUserEvent withDocuments(GoogleCloudDiscoveryengineV1betaDocumentInfo[] documents) {
         this.documents = documents;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDiscoveryengineV1betaUserEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventTime")
     public String eventTime;
+
     public GoogleCloudDiscoveryengineV1betaUserEvent withEventTime(String eventTime) {
         this.eventTime = eventTime;
         return this;
@@ -84,17 +90,19 @@ public class GoogleCloudDiscoveryengineV1betaUserEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public String eventType;
+
     public GoogleCloudDiscoveryengineV1betaUserEvent withEventType(String eventType) {
         this.eventType = eventType;
         return this;
     }
     
     /**
-     * The filter syntax consists of an expression language for constructing a predicate from one or more fields of the documents being filtered. One example is for `search` events, the associated SearchService.SearchRequest may contain a filter expression in SearchService.SearchRequest.filter conforming to https://google.aip.dev/160#filtering. Similarly, for `view-item-list` events that are generated from a PredictionService.PredictRequest, this field may be populated directly from PredictionService.PredictRequest.filter conforming to https://google.aip.dev/160#filtering. The value must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     * The filter syntax consists of an expression language for constructing a predicate from one or more fields of the documents being filtered. One example is for `search` events, the associated SearchRequest may contain a filter expression in SearchRequest.filter conforming to https://google.aip.dev/160#filtering. Similarly, for `view-item-list` events that are generated from a RecommendationService.RecommendRequest, this field may be populated directly from RecommendationService.RecommendRequest.filter conforming to https://google.aip.dev/160#filtering. The value must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public GoogleCloudDiscoveryengineV1betaUserEvent withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDiscoveryengineV1betaUserEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaInfo")
     public GoogleCloudDiscoveryengineV1betaMediaInfo mediaInfo;
+
     public GoogleCloudDiscoveryengineV1betaUserEvent withMediaInfo(GoogleCloudDiscoveryengineV1betaMediaInfo mediaInfo) {
         this.mediaInfo = mediaInfo;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDiscoveryengineV1betaUserEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageInfo")
     public GoogleCloudDiscoveryengineV1betaPageInfo pageInfo;
+
     public GoogleCloudDiscoveryengineV1betaUserEvent withPageInfo(GoogleCloudDiscoveryengineV1betaPageInfo pageInfo) {
         this.pageInfo = pageInfo;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDiscoveryengineV1betaUserEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("panel")
     public GoogleCloudDiscoveryengineV1betaPanelInfo panel;
+
     public GoogleCloudDiscoveryengineV1betaUserEvent withPanel(GoogleCloudDiscoveryengineV1betaPanelInfo panel) {
         this.panel = panel;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudDiscoveryengineV1betaUserEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotionIds")
     public String[] promotionIds;
+
     public GoogleCloudDiscoveryengineV1betaUserEvent withPromotionIds(String[] promotionIds) {
         this.promotionIds = promotionIds;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudDiscoveryengineV1betaUserEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchInfo")
     public GoogleCloudDiscoveryengineV1betaSearchInfo searchInfo;
+
     public GoogleCloudDiscoveryengineV1betaUserEvent withSearchInfo(GoogleCloudDiscoveryengineV1betaSearchInfo searchInfo) {
         this.searchInfo = searchInfo;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudDiscoveryengineV1betaUserEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionId")
     public String sessionId;
+
     public GoogleCloudDiscoveryengineV1betaUserEvent withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -172,6 +186,7 @@ public class GoogleCloudDiscoveryengineV1betaUserEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagIds")
     public String[] tagIds;
+
     public GoogleCloudDiscoveryengineV1betaUserEvent withTagIds(String[] tagIds) {
         this.tagIds = tagIds;
         return this;
@@ -183,6 +198,7 @@ public class GoogleCloudDiscoveryengineV1betaUserEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionInfo")
     public GoogleCloudDiscoveryengineV1betaTransactionInfo transactionInfo;
+
     public GoogleCloudDiscoveryengineV1betaUserEvent withTransactionInfo(GoogleCloudDiscoveryengineV1betaTransactionInfo transactionInfo) {
         this.transactionInfo = transactionInfo;
         return this;
@@ -194,6 +210,7 @@ public class GoogleCloudDiscoveryengineV1betaUserEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userInfo")
     public GoogleCloudDiscoveryengineV1betaUserInfo userInfo;
+
     public GoogleCloudDiscoveryengineV1betaUserEvent withUserInfo(GoogleCloudDiscoveryengineV1betaUserInfo userInfo) {
         this.userInfo = userInfo;
         return this;
@@ -205,9 +222,11 @@ public class GoogleCloudDiscoveryengineV1betaUserEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userPseudoId")
     public String userPseudoId;
+
     public GoogleCloudDiscoveryengineV1betaUserEvent withUserPseudoId(String userPseudoId) {
         this.userPseudoId = userPseudoId;
         return this;
     }
     
+    public GoogleCloudDiscoveryengineV1betaUserEvent(){}
 }

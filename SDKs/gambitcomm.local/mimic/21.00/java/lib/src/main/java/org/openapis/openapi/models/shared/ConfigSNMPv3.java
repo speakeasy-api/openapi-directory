@@ -15,6 +15,7 @@ public class ConfigSNMPv3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context_engine_id")
     public String contextEngineId;
+
     public ConfigSNMPv3 withContextEngineId(String contextEngineId) {
         this.contextEngineId = contextEngineId;
         return this;
@@ -23,6 +24,7 @@ public class ConfigSNMPv3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("engine_id")
     public String engineId;
+
     public ConfigSNMPv3 withEngineId(String engineId) {
         this.engineId = engineId;
         return this;
@@ -31,6 +33,7 @@ public class ConfigSNMPv3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usm_db")
     public String usmDb;
+
     public ConfigSNMPv3 withUsmDb(String usmDb) {
         this.usmDb = usmDb;
         return this;
@@ -39,9 +42,11 @@ public class ConfigSNMPv3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vacm_db")
     public String vacmDb;
+
     public ConfigSNMPv3 withVacmDb(String vacmDb) {
         this.vacmDb = vacmDb;
         return this;
     }
     
+    public ConfigSNMPv3(){}
 }

@@ -15,6 +15,7 @@ public class ChallengeResponseType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChallengeName")
     public ChallengeNameEnum challengeName;
+
     public ChallengeResponseType withChallengeName(ChallengeNameEnum challengeName) {
         this.challengeName = challengeName;
         return this;
@@ -23,9 +24,11 @@ public class ChallengeResponseType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChallengeResponse")
     public ChallengeResponseEnum challengeResponse;
+
     public ChallengeResponseType withChallengeResponse(ChallengeResponseEnum challengeResponse) {
         this.challengeResponse = challengeResponse;
         return this;
     }
     
+    public ChallengeResponseType(){}
 }

@@ -18,9 +18,11 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumers")
     public Consumer[] consumers;
+
     public NetworkConfig withConsumers(Consumer[] consumers) {
         this.consumers = consumers;
         return this;
     }
     
+    public NetworkConfig(){}
 }

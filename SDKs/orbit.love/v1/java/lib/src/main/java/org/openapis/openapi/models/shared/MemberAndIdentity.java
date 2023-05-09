@@ -15,6 +15,7 @@ public class MemberAndIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identity")
     public Identity identity;
+
     public MemberAndIdentity withIdentity(Identity identity) {
         this.identity = identity;
         return this;
@@ -23,9 +24,11 @@ public class MemberAndIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member")
     public Member member;
+
     public MemberAndIdentity withMember(Member member) {
         this.member = member;
         return this;
     }
     
+    public MemberAndIdentity(){}
 }

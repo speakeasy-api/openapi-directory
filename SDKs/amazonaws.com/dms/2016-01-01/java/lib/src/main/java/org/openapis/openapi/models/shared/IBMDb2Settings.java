@@ -15,6 +15,7 @@ public class IBMDb2Settings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentLsn")
     public String currentLsn;
+
     public IBMDb2Settings withCurrentLsn(String currentLsn) {
         this.currentLsn = currentLsn;
         return this;
@@ -23,6 +24,7 @@ public class IBMDb2Settings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public IBMDb2Settings withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -31,6 +33,7 @@ public class IBMDb2Settings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxKBytesPerRead")
     public Long maxKBytesPerRead;
+
     public IBMDb2Settings withMaxKBytesPerRead(Long maxKBytesPerRead) {
         this.maxKBytesPerRead = maxKBytesPerRead;
         return this;
@@ -39,6 +42,7 @@ public class IBMDb2Settings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Password")
     public String password;
+
     public IBMDb2Settings withPassword(String password) {
         this.password = password;
         return this;
@@ -47,6 +51,7 @@ public class IBMDb2Settings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Long port;
+
     public IBMDb2Settings withPort(Long port) {
         this.port = port;
         return this;
@@ -55,6 +60,7 @@ public class IBMDb2Settings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretsManagerAccessRoleArn")
     public String secretsManagerAccessRoleArn;
+
     public IBMDb2Settings withSecretsManagerAccessRoleArn(String secretsManagerAccessRoleArn) {
         this.secretsManagerAccessRoleArn = secretsManagerAccessRoleArn;
         return this;
@@ -63,6 +69,7 @@ public class IBMDb2Settings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretsManagerSecretId")
     public String secretsManagerSecretId;
+
     public IBMDb2Settings withSecretsManagerSecretId(String secretsManagerSecretId) {
         this.secretsManagerSecretId = secretsManagerSecretId;
         return this;
@@ -71,6 +78,7 @@ public class IBMDb2Settings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerName")
     public String serverName;
+
     public IBMDb2Settings withServerName(String serverName) {
         this.serverName = serverName;
         return this;
@@ -79,6 +87,7 @@ public class IBMDb2Settings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SetDataCaptureChanges")
     public Boolean setDataCaptureChanges;
+
     public IBMDb2Settings withSetDataCaptureChanges(Boolean setDataCaptureChanges) {
         this.setDataCaptureChanges = setDataCaptureChanges;
         return this;
@@ -87,9 +96,11 @@ public class IBMDb2Settings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public IBMDb2Settings withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public IBMDb2Settings(){}
 }

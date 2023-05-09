@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ListIdentitiesResponse - A list of all identities that you have attempted to verify under your AWS account, regardless of verification status.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListIdentitiesResponse {
     
     public String[] identities;
+
     public ListIdentitiesResponse withIdentities(String[] identities) {
         this.identities = identities;
         return this;
@@ -19,9 +20,13 @@ public class ListIdentitiesResponse {
     
     
     public String nextToken;
+
     public ListIdentitiesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListIdentitiesResponse(@JsonProperty("Identities") String[] identities) {
+        this.identities = identities;
+  }
 }

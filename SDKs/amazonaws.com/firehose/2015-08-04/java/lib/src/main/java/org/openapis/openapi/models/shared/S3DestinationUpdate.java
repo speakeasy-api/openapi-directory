@@ -15,6 +15,7 @@ public class S3DestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BucketARN")
     public String bucketARN;
+
     public S3DestinationUpdate withBucketARN(String bucketARN) {
         this.bucketARN = bucketARN;
         return this;
@@ -23,6 +24,7 @@ public class S3DestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BufferingHints")
     public BufferingHints bufferingHints;
+
     public S3DestinationUpdate withBufferingHints(BufferingHints bufferingHints) {
         this.bufferingHints = bufferingHints;
         return this;
@@ -31,6 +33,7 @@ public class S3DestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLoggingOptions")
     public CloudWatchLoggingOptions cloudWatchLoggingOptions;
+
     public S3DestinationUpdate withCloudWatchLoggingOptions(CloudWatchLoggingOptions cloudWatchLoggingOptions) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         return this;
@@ -39,6 +42,7 @@ public class S3DestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompressionFormat")
     public CompressionFormatEnum compressionFormat;
+
     public S3DestinationUpdate withCompressionFormat(CompressionFormatEnum compressionFormat) {
         this.compressionFormat = compressionFormat;
         return this;
@@ -47,6 +51,7 @@ public class S3DestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public S3DestinationUpdate withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -55,6 +60,7 @@ public class S3DestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorOutputPrefix")
     public String errorOutputPrefix;
+
     public S3DestinationUpdate withErrorOutputPrefix(String errorOutputPrefix) {
         this.errorOutputPrefix = errorOutputPrefix;
         return this;
@@ -63,6 +69,7 @@ public class S3DestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Prefix")
     public String prefix;
+
     public S3DestinationUpdate withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -71,9 +78,11 @@ public class S3DestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public S3DestinationUpdate withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
     }
     
+    public S3DestinationUpdate(){}
 }

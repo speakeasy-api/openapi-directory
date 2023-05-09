@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateClusterRequest {
     @JsonProperty("AddressId")
     public String addressId;
+
     public CreateClusterRequest withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
@@ -19,21 +20,42 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateClusterRequest withDescription(String description) {
         this.description = description;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ForceCreateJobs")
+    public Boolean forceCreateJobs;
+
+    public CreateClusterRequest withForceCreateJobs(Boolean forceCreateJobs) {
+        this.forceCreateJobs = forceCreateJobs;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForwardingAddressId")
     public String forwardingAddressId;
+
     public CreateClusterRequest withForwardingAddressId(String forwardingAddressId) {
         this.forwardingAddressId = forwardingAddressId;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InitialClusterSize")
+    public Long initialClusterSize;
+
+    public CreateClusterRequest withInitialClusterSize(Long initialClusterSize) {
+        this.initialClusterSize = initialClusterSize;
+        return this;
+    }
+    
     @JsonProperty("JobType")
     public JobTypeEnum jobType;
+
     public CreateClusterRequest withJobType(JobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -42,14 +64,25 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyARN")
     public String kmsKeyARN;
+
     public CreateClusterRequest withKmsKeyARN(String kmsKeyARN) {
         this.kmsKeyARN = kmsKeyARN;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LongTermPricingIds")
+    public String[] longTermPricingIds;
+
+    public CreateClusterRequest withLongTermPricingIds(String[] longTermPricingIds) {
+        this.longTermPricingIds = longTermPricingIds;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notification")
     public Notification notification;
+
     public CreateClusterRequest withNotification(Notification notification) {
         this.notification = notification;
         return this;
@@ -58,6 +91,7 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnDeviceServiceConfiguration")
     public OnDeviceServiceConfiguration onDeviceServiceConfiguration;
+
     public CreateClusterRequest withOnDeviceServiceConfiguration(OnDeviceServiceConfiguration onDeviceServiceConfiguration) {
         this.onDeviceServiceConfiguration = onDeviceServiceConfiguration;
         return this;
@@ -66,20 +100,25 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoteManagement")
     public RemoteManagementEnum remoteManagement;
+
     public CreateClusterRequest withRemoteManagement(RemoteManagementEnum remoteManagement) {
         this.remoteManagement = remoteManagement;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resources")
     public JobResource resources;
+
     public CreateClusterRequest withResources(JobResource resources) {
         this.resources = resources;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public CreateClusterRequest withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -87,13 +126,24 @@ public class CreateClusterRequest {
     
     @JsonProperty("ShippingOption")
     public ShippingOptionEnum shippingOption;
+
     public CreateClusterRequest withShippingOption(ShippingOptionEnum shippingOption) {
         this.shippingOption = shippingOption;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("SnowballCapacityPreference")
+    public SnowballCapacityEnum snowballCapacityPreference;
+
+    public CreateClusterRequest withSnowballCapacityPreference(SnowballCapacityEnum snowballCapacityPreference) {
+        this.snowballCapacityPreference = snowballCapacityPreference;
+        return this;
+    }
+    
     @JsonProperty("SnowballType")
     public SnowballTypeEnum snowballType;
+
     public CreateClusterRequest withSnowballType(SnowballTypeEnum snowballType) {
         this.snowballType = snowballType;
         return this;
@@ -102,9 +152,16 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxDocuments")
     public TaxDocuments taxDocuments;
+
     public CreateClusterRequest withTaxDocuments(TaxDocuments taxDocuments) {
         this.taxDocuments = taxDocuments;
         return this;
     }
     
+    public CreateClusterRequest(@JsonProperty("AddressId") String addressId, @JsonProperty("JobType") JobTypeEnum jobType, @JsonProperty("ShippingOption") ShippingOptionEnum shippingOption, @JsonProperty("SnowballType") SnowballTypeEnum snowballType) {
+        this.addressId = addressId;
+        this.jobType = jobType;
+        this.shippingOption = shippingOption;
+        this.snowballType = snowballType;
+  }
 }

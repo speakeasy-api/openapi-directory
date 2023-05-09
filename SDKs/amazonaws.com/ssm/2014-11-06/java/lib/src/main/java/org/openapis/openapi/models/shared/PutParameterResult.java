@@ -15,6 +15,7 @@ public class PutParameterResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tier")
     public ParameterTierEnum tier;
+
     public PutParameterResult withTier(ParameterTierEnum tier) {
         this.tier = tier;
         return this;
@@ -23,9 +24,11 @@ public class PutParameterResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public PutParameterResult withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public PutParameterResult(){}
 }

@@ -15,6 +15,7 @@ public class GetEvents200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.EventResponse[] data;
+
     public GetEvents200ApplicationJSON withData(org.openapis.openapi.models.shared.EventResponse[] data) {
         this.data = data;
         return this;
@@ -26,6 +27,7 @@ public class GetEvents200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_more")
     public Boolean hasMore;
+
     public GetEvents200ApplicationJSON withHasMore(Boolean hasMore) {
         this.hasMore = hasMore;
         return this;
@@ -37,9 +39,11 @@ public class GetEvents200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sync")
     public String sync;
+
     public GetEvents200ApplicationJSON withSync(String sync) {
         this.sync = sync;
         return this;
     }
     
+    public GetEvents200ApplicationJSON(){}
 }

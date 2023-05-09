@@ -18,6 +18,7 @@ public class ChannelStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commentCount")
     public String commentCount;
+
     public ChannelStatistics withCommentCount(String commentCount) {
         this.commentCount = commentCount;
         return this;
@@ -29,6 +30,7 @@ public class ChannelStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hiddenSubscriberCount")
     public Boolean hiddenSubscriberCount;
+
     public ChannelStatistics withHiddenSubscriberCount(Boolean hiddenSubscriberCount) {
         this.hiddenSubscriberCount = hiddenSubscriberCount;
         return this;
@@ -40,6 +42,7 @@ public class ChannelStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriberCount")
     public String subscriberCount;
+
     public ChannelStatistics withSubscriberCount(String subscriberCount) {
         this.subscriberCount = subscriberCount;
         return this;
@@ -51,6 +54,7 @@ public class ChannelStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoCount")
     public String videoCount;
+
     public ChannelStatistics withVideoCount(String videoCount) {
         this.videoCount = videoCount;
         return this;
@@ -62,9 +66,11 @@ public class ChannelStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewCount")
     public String viewCount;
+
     public ChannelStatistics withViewCount(String viewCount) {
         this.viewCount = viewCount;
         return this;
     }
     
+    public ChannelStatistics(){}
 }

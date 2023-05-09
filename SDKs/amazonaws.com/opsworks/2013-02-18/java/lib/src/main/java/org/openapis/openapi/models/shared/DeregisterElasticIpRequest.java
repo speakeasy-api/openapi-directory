@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeregisterElasticIpRequest {
     @JsonProperty("ElasticIp")
     public String elasticIp;
+
     public DeregisterElasticIpRequest withElasticIp(String elasticIp) {
         this.elasticIp = elasticIp;
         return this;
     }
     
+    public DeregisterElasticIpRequest(@JsonProperty("ElasticIp") String elasticIp) {
+        this.elasticIp = elasticIp;
+  }
 }

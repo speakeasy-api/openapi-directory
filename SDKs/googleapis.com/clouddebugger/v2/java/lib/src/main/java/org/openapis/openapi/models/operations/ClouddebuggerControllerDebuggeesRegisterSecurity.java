@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ClouddebuggerControllerDebuggeesRegisterSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ClouddebuggerControllerDebuggeesRegisterSecurityOption1 option1;
+
     public ClouddebuggerControllerDebuggeesRegisterSecurity withOption1(ClouddebuggerControllerDebuggeesRegisterSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ClouddebuggerControllerDebuggeesRegisterSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ClouddebuggerControllerDebuggeesRegisterSecurityOption2 option2;
+
     public ClouddebuggerControllerDebuggeesRegisterSecurity withOption2(ClouddebuggerControllerDebuggeesRegisterSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ClouddebuggerControllerDebuggeesRegisterSecurity(){}
 }

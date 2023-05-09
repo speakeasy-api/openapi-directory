@@ -18,9 +18,11 @@ public class AddSshKeyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_key")
     public String publicKey;
+
     public AddSshKeyRequest withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
     }
     
+    public AddSshKeyRequest(){}
 }

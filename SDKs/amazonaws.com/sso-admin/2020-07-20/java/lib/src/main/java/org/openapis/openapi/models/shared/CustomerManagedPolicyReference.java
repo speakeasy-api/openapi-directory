@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomerManagedPolicyReference {
     @JsonProperty("Name")
     public String name;
+
     public CustomerManagedPolicyReference withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,13 @@ public class CustomerManagedPolicyReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public CustomerManagedPolicyReference withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public CustomerManagedPolicyReference(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

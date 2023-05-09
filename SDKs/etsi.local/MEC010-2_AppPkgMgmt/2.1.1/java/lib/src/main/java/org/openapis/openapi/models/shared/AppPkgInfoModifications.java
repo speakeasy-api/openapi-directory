@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AppPkgInfoModifications {
     @JsonProperty("operationState")
     public AppPkgInfoModificationsOperationStateEnum operationState;
+
     public AppPkgInfoModifications withOperationState(AppPkgInfoModificationsOperationStateEnum operationState) {
         this.operationState = operationState;
         return this;
     }
     
+    public AppPkgInfoModifications(@JsonProperty("operationState") AppPkgInfoModificationsOperationStateEnum operationState) {
+        this.operationState = operationState;
+  }
 }

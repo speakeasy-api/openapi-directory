@@ -64,12 +64,10 @@ public class Season {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSeasonsResponse res = new org.openapis.openapi.models.operations.GetSeasonsResponse() {{
+        org.openapis.openapi.models.operations.GetSeasonsResponse res = new org.openapis.openapi.models.operations.GetSeasonsResponse(contentType, httpRes.statusCode()) {{
             getSeasons200ApplicationVndApiPlusJsonObject = null;
             getSeasons400ApplicationVndApiPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -118,11 +116,9 @@ public class Season {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSeasonsIdResponse res = new org.openapis.openapi.models.operations.GetSeasonsIdResponse() {{
+        org.openapis.openapi.models.operations.GetSeasonsIdResponse res = new org.openapis.openapi.models.operations.GetSeasonsIdResponse(contentType, httpRes.statusCode()) {{
             getSeasonsId200ApplicationVndApiPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

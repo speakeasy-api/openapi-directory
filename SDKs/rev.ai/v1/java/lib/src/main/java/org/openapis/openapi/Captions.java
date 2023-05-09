@@ -70,7 +70,7 @@ public class Captions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCaptionsResponse res = new org.openapis.openapi.models.operations.GetCaptionsResponse() {{
+        org.openapis.openapi.models.operations.GetCaptionsResponse res = new org.openapis.openapi.models.operations.GetCaptionsResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             getCaptions401ApplicationProblemPlusJsonObject = null;
@@ -79,8 +79,6 @@ public class Captions {
             getCaptions406ApplicationProblemPlusJsonObject = null;
             getCaptions409ApplicationProblemPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class Genre {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("games_count")
     public Long gamesCount;
+
     public Genre withGamesCount(Long gamesCount) {
         this.gamesCount = gamesCount;
         return this;
@@ -20,6 +21,7 @@ public class Genre {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Genre withId(Long id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class Genre {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_background")
     public String imageBackground;
+
     public Genre withImageBackground(String imageBackground) {
         this.imageBackground = imageBackground;
         return this;
@@ -35,6 +38,7 @@ public class Genre {
     
     @JsonProperty("name")
     public String name;
+
     public Genre withName(String name) {
         this.name = name;
         return this;
@@ -43,9 +47,13 @@ public class Genre {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public Genre withSlug(String slug) {
         this.slug = slug;
         return this;
     }
     
+    public Genre(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

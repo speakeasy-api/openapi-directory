@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LaunchTemplate {
     
     public LaunchTemplateSpecification launchTemplateSpecification;
+
     public LaunchTemplate withLaunchTemplateSpecification(LaunchTemplateSpecification launchTemplateSpecification) {
         this.launchTemplateSpecification = launchTemplateSpecification;
         return this;
@@ -19,9 +20,11 @@ public class LaunchTemplate {
     
     
     public LaunchTemplateOverrides[] overrides;
+
     public LaunchTemplate withOverrides(LaunchTemplateOverrides[] overrides) {
         this.overrides = overrides;
         return this;
     }
     
+    public LaunchTemplate(){}
 }

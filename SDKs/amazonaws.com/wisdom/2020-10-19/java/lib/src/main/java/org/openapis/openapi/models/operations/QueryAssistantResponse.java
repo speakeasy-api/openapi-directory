@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class QueryAssistantResponse {
@@ -12,6 +13,7 @@ public class QueryAssistantResponse {
      */
     
     public Object accessDeniedException;
+
     public QueryAssistantResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class QueryAssistantResponse {
     
     
     public String contentType;
+
     public QueryAssistantResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class QueryAssistantResponse {
      */
     
     public org.openapis.openapi.models.shared.QueryAssistantResponse queryAssistantResponse;
+
     public QueryAssistantResponse withQueryAssistantResponse(org.openapis.openapi.models.shared.QueryAssistantResponse queryAssistantResponse) {
         this.queryAssistantResponse = queryAssistantResponse;
         return this;
@@ -39,6 +43,7 @@ public class QueryAssistantResponse {
      */
     
     public Object resourceNotFoundException;
+
     public QueryAssistantResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class QueryAssistantResponse {
     
     
     public Integer statusCode;
+
     public QueryAssistantResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class QueryAssistantResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public QueryAssistantResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class QueryAssistantResponse {
      */
     
     public Object validationException;
+
     public QueryAssistantResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public QueryAssistantResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

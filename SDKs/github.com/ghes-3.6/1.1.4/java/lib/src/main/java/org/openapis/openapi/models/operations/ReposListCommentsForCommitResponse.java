@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposListCommentsForCommitResponse {
     
     public String contentType;
+
     public ReposListCommentsForCommitResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposListCommentsForCommitResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ReposListCommentsForCommitResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ReposListCommentsForCommitResponse {
     
     
     public Integer statusCode;
+
     public ReposListCommentsForCommitResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ReposListCommentsForCommitResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposListCommentsForCommitResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class ReposListCommentsForCommitResponse {
      */
     
     public org.openapis.openapi.models.shared.CommitComment[] commitComments;
+
     public ReposListCommentsForCommitResponse withCommitComments(org.openapis.openapi.models.shared.CommitComment[] commitComments) {
         this.commitComments = commitComments;
         return this;
     }
     
+    public ReposListCommentsForCommitResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

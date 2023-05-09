@@ -20,6 +20,7 @@ public class UpdateScheduleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public UpdateScheduleRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -31,6 +32,7 @@ public class UpdateScheduleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateScheduleRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +46,7 @@ public class UpdateScheduleRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndDate")
     public OffsetDateTime endDate;
+
     public UpdateScheduleRequestBody withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -54,6 +57,7 @@ public class UpdateScheduleRequestBody {
      */
     @JsonProperty("FlexibleTimeWindow")
     public UpdateScheduleRequestBodyFlexibleTimeWindow flexibleTimeWindow;
+
     public UpdateScheduleRequestBody withFlexibleTimeWindow(UpdateScheduleRequestBodyFlexibleTimeWindow flexibleTimeWindow) {
         this.flexibleTimeWindow = flexibleTimeWindow;
         return this;
@@ -65,6 +69,7 @@ public class UpdateScheduleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupName")
     public String groupName;
+
     public UpdateScheduleRequestBody withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -76,6 +81,7 @@ public class UpdateScheduleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyArn")
     public String kmsKeyArn;
+
     public UpdateScheduleRequestBody withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -86,6 +92,7 @@ public class UpdateScheduleRequestBody {
      */
     @JsonProperty("ScheduleExpression")
     public String scheduleExpression;
+
     public UpdateScheduleRequestBody withScheduleExpression(String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
         return this;
@@ -97,6 +104,7 @@ public class UpdateScheduleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleExpressionTimezone")
     public String scheduleExpressionTimezone;
+
     public UpdateScheduleRequestBody withScheduleExpressionTimezone(String scheduleExpressionTimezone) {
         this.scheduleExpressionTimezone = scheduleExpressionTimezone;
         return this;
@@ -110,6 +118,7 @@ public class UpdateScheduleRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartDate")
     public OffsetDateTime startDate;
+
     public UpdateScheduleRequestBody withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -121,6 +130,7 @@ public class UpdateScheduleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public UpdateScheduleRequestBodyStateEnum state;
+
     public UpdateScheduleRequestBody withState(UpdateScheduleRequestBodyStateEnum state) {
         this.state = state;
         return this;
@@ -131,9 +141,15 @@ public class UpdateScheduleRequestBody {
      */
     @JsonProperty("Target")
     public UpdateScheduleRequestBodyTarget target;
+
     public UpdateScheduleRequestBody withTarget(UpdateScheduleRequestBodyTarget target) {
         this.target = target;
         return this;
     }
     
+    public UpdateScheduleRequestBody(@JsonProperty("FlexibleTimeWindow") UpdateScheduleRequestBodyFlexibleTimeWindow flexibleTimeWindow, @JsonProperty("ScheduleExpression") String scheduleExpression, @JsonProperty("Target") UpdateScheduleRequestBodyTarget target) {
+        this.flexibleTimeWindow = flexibleTimeWindow;
+        this.scheduleExpression = scheduleExpression;
+        this.target = target;
+  }
 }

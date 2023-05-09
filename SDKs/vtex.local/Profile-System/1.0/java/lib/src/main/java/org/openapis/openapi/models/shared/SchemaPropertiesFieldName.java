@@ -18,6 +18,7 @@ public class SchemaPropertiesFieldName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public java.util.Map<String, Object> items;
+
     public SchemaPropertiesFieldName withItems(java.util.Map<String, Object> items) {
         this.items = items;
         return this;
@@ -28,6 +29,7 @@ public class SchemaPropertiesFieldName {
      */
     @JsonProperty("pii")
     public Boolean pii;
+
     public SchemaPropertiesFieldName withPii(Boolean pii) {
         this.pii = pii;
         return this;
@@ -38,6 +40,7 @@ public class SchemaPropertiesFieldName {
      */
     @JsonProperty("sensitive")
     public Boolean sensitive;
+
     public SchemaPropertiesFieldName withSensitive(Boolean sensitive) {
         this.sensitive = sensitive;
         return this;
@@ -48,9 +51,15 @@ public class SchemaPropertiesFieldName {
      */
     @JsonProperty("type")
     public String type;
+
     public SchemaPropertiesFieldName withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SchemaPropertiesFieldName(@JsonProperty("pii") Boolean pii, @JsonProperty("sensitive") Boolean sensitive, @JsonProperty("type") String type) {
+        this.pii = pii;
+        this.sensitive = sensitive;
+        this.type = type;
+  }
 }

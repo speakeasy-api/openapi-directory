@@ -18,6 +18,7 @@ public class GoogleCloudMlV1ReplicaConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorConfig")
     public GoogleCloudMlV1AcceleratorConfig acceleratorConfig;
+
     public GoogleCloudMlV1ReplicaConfig withAcceleratorConfig(GoogleCloudMlV1AcceleratorConfig acceleratorConfig) {
         this.acceleratorConfig = acceleratorConfig;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1ReplicaConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerArgs")
     public String[] containerArgs;
+
     public GoogleCloudMlV1ReplicaConfig withContainerArgs(String[] containerArgs) {
         this.containerArgs = containerArgs;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudMlV1ReplicaConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerCommand")
     public String[] containerCommand;
+
     public GoogleCloudMlV1ReplicaConfig withContainerCommand(String[] containerCommand) {
         this.containerCommand = containerCommand;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudMlV1ReplicaConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskConfig")
     public GoogleCloudMlV1DiskConfig diskConfig;
+
     public GoogleCloudMlV1ReplicaConfig withDiskConfig(GoogleCloudMlV1DiskConfig diskConfig) {
         this.diskConfig = diskConfig;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudMlV1ReplicaConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUri")
     public String imageUri;
+
     public GoogleCloudMlV1ReplicaConfig withImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudMlV1ReplicaConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tpuTfVersion")
     public String tpuTfVersion;
+
     public GoogleCloudMlV1ReplicaConfig withTpuTfVersion(String tpuTfVersion) {
         this.tpuTfVersion = tpuTfVersion;
         return this;
     }
     
+    public GoogleCloudMlV1ReplicaConfig(){}
 }

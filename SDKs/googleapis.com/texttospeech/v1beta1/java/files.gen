@@ -67,4 +67,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/SynthesizeSpeechRequest.jav
 lib/src/main/java/org/openapis/openapi/models/shared/ListVoicesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/VoiceSsmlGenderEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Voice.java
+docs/sdk/README.md
+docs/projects/README.md
+docs/text/README.md
+docs/voices/README.md
 USAGE.md

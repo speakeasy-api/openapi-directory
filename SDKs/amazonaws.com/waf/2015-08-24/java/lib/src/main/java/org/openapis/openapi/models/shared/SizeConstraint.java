@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SizeConstraint {
     @JsonProperty("ComparisonOperator")
     public ComparisonOperatorEnum comparisonOperator;
+
     public SizeConstraint withComparisonOperator(ComparisonOperatorEnum comparisonOperator) {
         this.comparisonOperator = comparisonOperator;
         return this;
@@ -19,6 +20,7 @@ public class SizeConstraint {
     
     @JsonProperty("FieldToMatch")
     public FieldToMatch fieldToMatch;
+
     public SizeConstraint withFieldToMatch(FieldToMatch fieldToMatch) {
         this.fieldToMatch = fieldToMatch;
         return this;
@@ -26,6 +28,7 @@ public class SizeConstraint {
     
     @JsonProperty("Size")
     public Long size;
+
     public SizeConstraint withSize(Long size) {
         this.size = size;
         return this;
@@ -33,9 +36,16 @@ public class SizeConstraint {
     
     @JsonProperty("TextTransformation")
     public TextTransformationEnum textTransformation;
+
     public SizeConstraint withTextTransformation(TextTransformationEnum textTransformation) {
         this.textTransformation = textTransformation;
         return this;
     }
     
+    public SizeConstraint(@JsonProperty("ComparisonOperator") ComparisonOperatorEnum comparisonOperator, @JsonProperty("FieldToMatch") FieldToMatch fieldToMatch, @JsonProperty("Size") Long size, @JsonProperty("TextTransformation") TextTransformationEnum textTransformation) {
+        this.comparisonOperator = comparisonOperator;
+        this.fieldToMatch = fieldToMatch;
+        this.size = size;
+        this.textTransformation = textTransformation;
+  }
 }

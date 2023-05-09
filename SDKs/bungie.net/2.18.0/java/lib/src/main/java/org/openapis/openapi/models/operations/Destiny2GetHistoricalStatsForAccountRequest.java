@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetHistoricalStatsForAccountRequest {
@@ -12,6 +13,7 @@ public class Destiny2GetHistoricalStatsForAccountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
     public Long destinyMembershipId;
+
     public Destiny2GetHistoricalStatsForAccountRequest withDestinyMembershipId(Long destinyMembershipId) {
         this.destinyMembershipId = destinyMembershipId;
         return this;
@@ -22,6 +24,7 @@ public class Destiny2GetHistoricalStatsForAccountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=groups")
     public Integer[] groups;
+
     public Destiny2GetHistoricalStatsForAccountRequest withGroups(Integer[] groups) {
         this.groups = groups;
         return this;
@@ -32,9 +35,14 @@ public class Destiny2GetHistoricalStatsForAccountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
     public Integer membershipType;
+
     public Destiny2GetHistoricalStatsForAccountRequest withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
     }
     
+    public Destiny2GetHistoricalStatsForAccountRequest(@JsonProperty("destinyMembershipId") Long destinyMembershipId, @JsonProperty("membershipType") Integer membershipType) {
+        this.destinyMembershipId = destinyMembershipId;
+        this.membershipType = membershipType;
+  }
 }

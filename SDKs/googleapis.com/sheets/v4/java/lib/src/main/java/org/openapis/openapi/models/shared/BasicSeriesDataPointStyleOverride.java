@@ -18,6 +18,7 @@ public class BasicSeriesDataPointStyleOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public Color color;
+
     public BasicSeriesDataPointStyleOverride withColor(Color color) {
         this.color = color;
         return this;
@@ -29,6 +30,7 @@ public class BasicSeriesDataPointStyleOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colorStyle")
     public ColorStyle colorStyle;
+
     public BasicSeriesDataPointStyleOverride withColorStyle(ColorStyle colorStyle) {
         this.colorStyle = colorStyle;
         return this;
@@ -40,6 +42,7 @@ public class BasicSeriesDataPointStyleOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Integer index;
+
     public BasicSeriesDataPointStyleOverride withIndex(Integer index) {
         this.index = index;
         return this;
@@ -51,9 +54,11 @@ public class BasicSeriesDataPointStyleOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointStyle")
     public PointStyle pointStyle;
+
     public BasicSeriesDataPointStyleOverride withPointStyle(PointStyle pointStyle) {
         this.pointStyle = pointStyle;
         return this;
     }
     
+    public BasicSeriesDataPointStyleOverride(){}
 }

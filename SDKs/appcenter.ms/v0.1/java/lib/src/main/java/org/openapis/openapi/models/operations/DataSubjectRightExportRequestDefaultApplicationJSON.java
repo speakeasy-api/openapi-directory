@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DataSubjectRightExportRequestDefaultApplicationJSON {
     @JsonProperty("error")
     public DataSubjectRightExportRequestDefaultApplicationJSONError error;
+
     public DataSubjectRightExportRequestDefaultApplicationJSON withError(DataSubjectRightExportRequestDefaultApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public DataSubjectRightExportRequestDefaultApplicationJSON(@JsonProperty("error") DataSubjectRightExportRequestDefaultApplicationJSONError error) {
+        this.error = error;
+  }
 }

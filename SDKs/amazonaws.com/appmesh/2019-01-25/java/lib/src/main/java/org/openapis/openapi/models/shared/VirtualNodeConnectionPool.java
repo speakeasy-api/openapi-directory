@@ -15,6 +15,7 @@ public class VirtualNodeConnectionPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grpc")
     public VirtualNodeGrpcConnectionPool grpc;
+
     public VirtualNodeConnectionPool withGrpc(VirtualNodeGrpcConnectionPool grpc) {
         this.grpc = grpc;
         return this;
@@ -23,6 +24,7 @@ public class VirtualNodeConnectionPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http")
     public VirtualNodeHttpConnectionPool http;
+
     public VirtualNodeConnectionPool withHttp(VirtualNodeHttpConnectionPool http) {
         this.http = http;
         return this;
@@ -31,6 +33,7 @@ public class VirtualNodeConnectionPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http2")
     public VirtualNodeHttp2ConnectionPool http2;
+
     public VirtualNodeConnectionPool withHttp2(VirtualNodeHttp2ConnectionPool http2) {
         this.http2 = http2;
         return this;
@@ -39,9 +42,11 @@ public class VirtualNodeConnectionPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tcp")
     public VirtualNodeTcpConnectionPool tcp;
+
     public VirtualNodeConnectionPool withTcp(VirtualNodeTcpConnectionPool tcp) {
         this.tcp = tcp;
         return this;
     }
     
+    public VirtualNodeConnectionPool(){}
 }

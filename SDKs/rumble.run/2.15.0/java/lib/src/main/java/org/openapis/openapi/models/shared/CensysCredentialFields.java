@@ -12,6 +12,7 @@ public class CensysCredentialFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_url")
     public String apiUrl;
+
     public CensysCredentialFields withApiUrl(String apiUrl) {
         this.apiUrl = apiUrl;
         return this;
@@ -19,6 +20,7 @@ public class CensysCredentialFields {
     
     @JsonProperty("client_id")
     public String clientId;
+
     public CensysCredentialFields withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -26,9 +28,14 @@ public class CensysCredentialFields {
     
     @JsonProperty("client_secret")
     public String clientSecret;
+
     public CensysCredentialFields withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
     }
     
+    public CensysCredentialFields(@JsonProperty("client_id") String clientId, @JsonProperty("client_secret") String clientSecret) {
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+  }
 }

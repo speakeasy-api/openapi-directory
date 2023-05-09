@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05CareContextsDiscoverJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05CareContextsDiscoverJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05CareContextsDiscoverJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05CareContextsDiscoverJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PatientDiscoveryRequest patientDiscoveryRequest;
+
     public PostV05CareContextsDiscoverJsonRequest withPatientDiscoveryRequest(org.openapis.openapi.models.shared.PatientDiscoveryRequest patientDiscoveryRequest) {
         this.patientDiscoveryRequest = patientDiscoveryRequest;
         return this;
@@ -29,9 +32,15 @@ public class PostV05CareContextsDiscoverJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
     public String xHipId;
+
     public PostV05CareContextsDiscoverJsonRequest withXHipId(String xHipId) {
         this.xHipId = xHipId;
         return this;
     }
     
+    public PostV05CareContextsDiscoverJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("PatientDiscoveryRequest") org.openapis.openapi.models.shared.PatientDiscoveryRequest patientDiscoveryRequest, @JsonProperty("X-HIP-ID") String xHipId) {
+        this.authorization = authorization;
+        this.patientDiscoveryRequest = patientDiscoveryRequest;
+        this.xHipId = xHipId;
+  }
 }

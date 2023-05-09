@@ -12,6 +12,7 @@ public class Element {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("difference")
     public String difference;
+
     public Element withDifference(String difference) {
         this.difference = difference;
         return this;
@@ -20,6 +21,7 @@ public class Element {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("full_path")
     public String fullPath;
+
     public Element withFullPath(String fullPath) {
         this.fullPath = fullPath;
         return this;
@@ -28,6 +30,7 @@ public class Element {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("short_path")
     public String shortPath;
+
     public Element withShortPath(String shortPath) {
         this.shortPath = shortPath;
         return this;
@@ -36,6 +39,7 @@ public class Element {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_difference_public_url")
     public String showDifferencePublicUrl;
+
     public Element withShowDifferencePublicUrl(String showDifferencePublicUrl) {
         this.showDifferencePublicUrl = showDifferencePublicUrl;
         return this;
@@ -44,9 +48,11 @@ public class Element {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_difference_web_url")
     public String showDifferenceWebUrl;
+
     public Element withShowDifferenceWebUrl(String showDifferenceWebUrl) {
         this.showDifferenceWebUrl = showDifferenceWebUrl;
         return this;
     }
     
+    public Element(){}
 }

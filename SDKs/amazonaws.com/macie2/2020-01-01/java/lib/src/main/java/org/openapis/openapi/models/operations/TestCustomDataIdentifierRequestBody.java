@@ -15,6 +15,7 @@ public class TestCustomDataIdentifierRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreWords")
     public String[] ignoreWords;
+
     public TestCustomDataIdentifierRequestBody withIgnoreWords(String[] ignoreWords) {
         this.ignoreWords = ignoreWords;
         return this;
@@ -26,6 +27,7 @@ public class TestCustomDataIdentifierRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywords")
     public String[] keywords;
+
     public TestCustomDataIdentifierRequestBody withKeywords(String[] keywords) {
         this.keywords = keywords;
         return this;
@@ -37,6 +39,7 @@ public class TestCustomDataIdentifierRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumMatchDistance")
     public Long maximumMatchDistance;
+
     public TestCustomDataIdentifierRequestBody withMaximumMatchDistance(Long maximumMatchDistance) {
         this.maximumMatchDistance = maximumMatchDistance;
         return this;
@@ -47,6 +50,7 @@ public class TestCustomDataIdentifierRequestBody {
      */
     @JsonProperty("regex")
     public String regex;
+
     public TestCustomDataIdentifierRequestBody withRegex(String regex) {
         this.regex = regex;
         return this;
@@ -57,9 +61,14 @@ public class TestCustomDataIdentifierRequestBody {
      */
     @JsonProperty("sampleText")
     public String sampleText;
+
     public TestCustomDataIdentifierRequestBody withSampleText(String sampleText) {
         this.sampleText = sampleText;
         return this;
     }
     
+    public TestCustomDataIdentifierRequestBody(@JsonProperty("regex") String regex, @JsonProperty("sampleText") String sampleText) {
+        this.regex = regex;
+        this.sampleText = sampleText;
+  }
 }

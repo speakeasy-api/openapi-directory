@@ -15,6 +15,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Classification")
     public String classification;
+
     public Configuration withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -23,6 +24,7 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configurations")
     public Configuration[] configurations;
+
     public Configuration withConfigurations(Configuration[] configurations) {
         this.configurations = configurations;
         return this;
@@ -31,9 +33,11 @@ public class Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public java.util.Map<String, String> properties;
+
     public Configuration withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
     }
     
+    public Configuration(){}
 }

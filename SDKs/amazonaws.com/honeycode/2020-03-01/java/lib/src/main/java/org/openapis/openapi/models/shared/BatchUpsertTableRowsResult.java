@@ -15,6 +15,7 @@ public class BatchUpsertTableRowsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedBatchItems")
     public FailedBatchItem[] failedBatchItems;
+
     public BatchUpsertTableRowsResult withFailedBatchItems(FailedBatchItem[] failedBatchItems) {
         this.failedBatchItems = failedBatchItems;
         return this;
@@ -22,6 +23,7 @@ public class BatchUpsertTableRowsResult {
     
     @JsonProperty("rows")
     public java.util.Map<String, UpsertRowsResult> rows;
+
     public BatchUpsertTableRowsResult withRows(java.util.Map<String, UpsertRowsResult> rows) {
         this.rows = rows;
         return this;
@@ -29,9 +31,14 @@ public class BatchUpsertTableRowsResult {
     
     @JsonProperty("workbookCursor")
     public Long workbookCursor;
+
     public BatchUpsertTableRowsResult withWorkbookCursor(Long workbookCursor) {
         this.workbookCursor = workbookCursor;
         return this;
     }
     
+    public BatchUpsertTableRowsResult(@JsonProperty("rows") java.util.Map<String, UpsertRowsResult> rows, @JsonProperty("workbookCursor") Long workbookCursor) {
+        this.rows = rows;
+        this.workbookCursor = workbookCursor;
+  }
 }

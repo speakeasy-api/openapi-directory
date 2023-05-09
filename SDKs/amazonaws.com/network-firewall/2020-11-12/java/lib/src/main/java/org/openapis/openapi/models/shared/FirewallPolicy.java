@@ -15,6 +15,7 @@ public class FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatefulDefaultActions")
     public String[] statefulDefaultActions;
+
     public FirewallPolicy withStatefulDefaultActions(String[] statefulDefaultActions) {
         this.statefulDefaultActions = statefulDefaultActions;
         return this;
@@ -23,6 +24,7 @@ public class FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatefulEngineOptions")
     public StatefulEngineOptions statefulEngineOptions;
+
     public FirewallPolicy withStatefulEngineOptions(StatefulEngineOptions statefulEngineOptions) {
         this.statefulEngineOptions = statefulEngineOptions;
         return this;
@@ -31,6 +33,7 @@ public class FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatefulRuleGroupReferences")
     public StatefulRuleGroupReference[] statefulRuleGroupReferences;
+
     public FirewallPolicy withStatefulRuleGroupReferences(StatefulRuleGroupReference[] statefulRuleGroupReferences) {
         this.statefulRuleGroupReferences = statefulRuleGroupReferences;
         return this;
@@ -39,6 +42,7 @@ public class FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatelessCustomActions")
     public CustomAction[] statelessCustomActions;
+
     public FirewallPolicy withStatelessCustomActions(CustomAction[] statelessCustomActions) {
         this.statelessCustomActions = statelessCustomActions;
         return this;
@@ -46,6 +50,7 @@ public class FirewallPolicy {
     
     @JsonProperty("StatelessDefaultActions")
     public String[] statelessDefaultActions;
+
     public FirewallPolicy withStatelessDefaultActions(String[] statelessDefaultActions) {
         this.statelessDefaultActions = statelessDefaultActions;
         return this;
@@ -53,6 +58,7 @@ public class FirewallPolicy {
     
     @JsonProperty("StatelessFragmentDefaultActions")
     public String[] statelessFragmentDefaultActions;
+
     public FirewallPolicy withStatelessFragmentDefaultActions(String[] statelessFragmentDefaultActions) {
         this.statelessFragmentDefaultActions = statelessFragmentDefaultActions;
         return this;
@@ -61,9 +67,23 @@ public class FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatelessRuleGroupReferences")
     public StatelessRuleGroupReference[] statelessRuleGroupReferences;
+
     public FirewallPolicy withStatelessRuleGroupReferences(StatelessRuleGroupReference[] statelessRuleGroupReferences) {
         this.statelessRuleGroupReferences = statelessRuleGroupReferences;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TLSInspectionConfigurationArn")
+    public String tlsInspectionConfigurationArn;
+
+    public FirewallPolicy withTLSInspectionConfigurationArn(String tlsInspectionConfigurationArn) {
+        this.tlsInspectionConfigurationArn = tlsInspectionConfigurationArn;
+        return this;
+    }
+    
+    public FirewallPolicy(@JsonProperty("StatelessDefaultActions") String[] statelessDefaultActions, @JsonProperty("StatelessFragmentDefaultActions") String[] statelessFragmentDefaultActions) {
+        this.statelessDefaultActions = statelessDefaultActions;
+        this.statelessFragmentDefaultActions = statelessFragmentDefaultActions;
+  }
 }

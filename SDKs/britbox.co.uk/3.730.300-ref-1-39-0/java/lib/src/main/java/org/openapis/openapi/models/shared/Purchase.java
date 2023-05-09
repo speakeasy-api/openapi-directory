@@ -22,6 +22,7 @@ public class Purchase {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("authorizationDate")
     public OffsetDateTime authorizationDate;
+
     public Purchase withAuthorizationDate(OffsetDateTime authorizationDate) {
         this.authorizationDate = authorizationDate;
         return this;
@@ -34,6 +35,7 @@ public class Purchase {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public Purchase withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -44,6 +46,7 @@ public class Purchase {
      */
     @JsonProperty("currency")
     public String currency;
+
     public Purchase withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -54,6 +57,7 @@ public class Purchase {
      */
     @JsonProperty("id")
     public String id;
+
     public Purchase withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class Purchase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item")
     public ItemPurchase item;
+
     public Purchase withItem(ItemPurchase item) {
         this.item = item;
         return this;
@@ -73,6 +78,7 @@ public class Purchase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentMethodId")
     public String paymentMethodId;
+
     public Purchase withPaymentMethodId(String paymentMethodId) {
         this.paymentMethodId = paymentMethodId;
         return this;
@@ -81,6 +87,7 @@ public class Purchase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan")
     public PlanPurchase plan;
+
     public Purchase withPlan(PlanPurchase plan) {
         this.plan = plan;
         return this;
@@ -91,9 +98,16 @@ public class Purchase {
      */
     @JsonProperty("total")
     public Float total;
+
     public Purchase withTotal(Float total) {
         this.total = total;
         return this;
     }
     
+    public Purchase(@JsonProperty("creationDate") OffsetDateTime creationDate, @JsonProperty("currency") String currency, @JsonProperty("id") String id, @JsonProperty("total") Float total) {
+        this.creationDate = creationDate;
+        this.currency = currency;
+        this.id = id;
+        this.total = total;
+  }
 }

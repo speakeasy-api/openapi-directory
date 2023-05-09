@@ -15,6 +15,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetai
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lta_individual_protection_amount")
     public String ltaIndividualProtectionAmount;
+
     public CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetails withLtaIndividualProtectionAmount(String ltaIndividualProtectionAmount) {
         this.ltaIndividualProtectionAmount = ltaIndividualProtectionAmount;
         return this;
@@ -26,6 +27,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetai
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lta_primary_protection_factor")
     public String ltaPrimaryProtectionFactor;
+
     public CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetails withLtaPrimaryProtectionFactor(String ltaPrimaryProtectionFactor) {
         this.ltaPrimaryProtectionFactor = ltaPrimaryProtectionFactor;
         return this;
@@ -37,6 +39,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetai
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lta_protection_notification_number")
     public String ltaProtectionNotificationNumber;
+
     public CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetails withLtaProtectionNotificationNumber(String ltaProtectionNotificationNumber) {
         this.ltaProtectionNotificationNumber = ltaProtectionNotificationNumber;
         return this;
@@ -48,6 +51,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetai
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lta_protection_scheme_administrator_reference")
     public String ltaProtectionSchemeAdministratorReference;
+
     public CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetails withLtaProtectionSchemeAdministratorReference(String ltaProtectionSchemeAdministratorReference) {
         this.ltaProtectionSchemeAdministratorReference = ltaProtectionSchemeAdministratorReference;
         return this;
@@ -55,9 +59,13 @@ public class CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetai
     
     @JsonProperty("lta_protection_type")
     public CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetailsLtaProtectionTypeEnum ltaProtectionType;
+
     public CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetails withLtaProtectionType(CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetailsLtaProtectionTypeEnum ltaProtectionType) {
         this.ltaProtectionType = ltaProtectionType;
         return this;
     }
     
+    public CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetails(@JsonProperty("lta_protection_type") CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetailsLtaProtectionTypeEnum ltaProtectionType) {
+        this.ltaProtectionType = ltaProtectionType;
+  }
 }

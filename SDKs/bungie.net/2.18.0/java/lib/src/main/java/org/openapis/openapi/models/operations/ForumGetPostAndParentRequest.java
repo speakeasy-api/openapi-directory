@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ForumGetPostAndParentRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=childPostId")
     public Long childPostId;
+
     public ForumGetPostAndParentRequest withChildPostId(Long childPostId) {
         this.childPostId = childPostId;
         return this;
@@ -19,9 +21,13 @@ public class ForumGetPostAndParentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showbanned")
     public String showbanned;
+
     public ForumGetPostAndParentRequest withShowbanned(String showbanned) {
         this.showbanned = showbanned;
         return this;
     }
     
+    public ForumGetPostAndParentRequest(@JsonProperty("childPostId") Long childPostId) {
+        this.childPostId = childPostId;
+  }
 }

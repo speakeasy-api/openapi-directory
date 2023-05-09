@@ -17,6 +17,7 @@ public class GitCreateTreeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base_tree")
     public String baseTree;
+
     public GitCreateTreeRequestBody withBaseTree(String baseTree) {
         this.baseTree = baseTree;
         return this;
@@ -27,9 +28,13 @@ public class GitCreateTreeRequestBody {
      */
     @JsonProperty("tree")
     public GitCreateTreeRequestBodyTree[] tree;
+
     public GitCreateTreeRequestBody withTree(GitCreateTreeRequestBodyTree[] tree) {
         this.tree = tree;
         return this;
     }
     
+    public GitCreateTreeRequestBody(@JsonProperty("tree") GitCreateTreeRequestBodyTree[] tree) {
+        this.tree = tree;
+  }
 }

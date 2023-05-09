@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetSchoolsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_before")
     public String endingBefore;
+
     public GetSchoolsRequest withEndingBefore(String endingBefore) {
         this.endingBefore = endingBefore;
         return this;
@@ -16,6 +17,7 @@ public class GetSchoolsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetSchoolsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -23,6 +25,7 @@ public class GetSchoolsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=starting_after")
     public String startingAfter;
+
     public GetSchoolsRequest withStartingAfter(String startingAfter) {
         this.startingAfter = startingAfter;
         return this;
@@ -30,9 +33,11 @@ public class GetSchoolsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=where")
     public String where;
+
     public GetSchoolsRequest withWhere(String where) {
         this.where = where;
         return this;
     }
     
+    public GetSchoolsRequest(){}
 }

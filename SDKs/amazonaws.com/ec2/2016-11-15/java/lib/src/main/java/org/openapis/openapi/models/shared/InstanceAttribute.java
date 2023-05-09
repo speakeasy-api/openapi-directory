@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class InstanceAttribute {
     
     public InstanceAttributeBlockDeviceMappings[] blockDeviceMappings;
+
     public InstanceAttribute withBlockDeviceMappings(InstanceAttributeBlockDeviceMappings[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -19,6 +20,7 @@ public class InstanceAttribute {
     
     
     public InstanceAttributeDisableApiStop disableApiStop;
+
     public InstanceAttribute withDisableApiStop(InstanceAttributeDisableApiStop disableApiStop) {
         this.disableApiStop = disableApiStop;
         return this;
@@ -26,6 +28,7 @@ public class InstanceAttribute {
     
     
     public InstanceAttributeDisableApiTermination disableApiTermination;
+
     public InstanceAttribute withDisableApiTermination(InstanceAttributeDisableApiTermination disableApiTermination) {
         this.disableApiTermination = disableApiTermination;
         return this;
@@ -33,6 +36,7 @@ public class InstanceAttribute {
     
     
     public InstanceAttributeEbsOptimized ebsOptimized;
+
     public InstanceAttribute withEbsOptimized(InstanceAttributeEbsOptimized ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -40,6 +44,7 @@ public class InstanceAttribute {
     
     
     public InstanceAttributeEnaSupport enaSupport;
+
     public InstanceAttribute withEnaSupport(InstanceAttributeEnaSupport enaSupport) {
         this.enaSupport = enaSupport;
         return this;
@@ -47,6 +52,7 @@ public class InstanceAttribute {
     
     
     public InstanceAttributeEnclaveOptions enclaveOptions;
+
     public InstanceAttribute withEnclaveOptions(InstanceAttributeEnclaveOptions enclaveOptions) {
         this.enclaveOptions = enclaveOptions;
         return this;
@@ -54,6 +60,7 @@ public class InstanceAttribute {
     
     
     public InstanceAttributeGroups[] groups;
+
     public InstanceAttribute withGroups(InstanceAttributeGroups[] groups) {
         this.groups = groups;
         return this;
@@ -61,6 +68,7 @@ public class InstanceAttribute {
     
     
     public String instanceId;
+
     public InstanceAttribute withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -68,6 +76,7 @@ public class InstanceAttribute {
     
     
     public InstanceAttributeInstanceInitiatedShutdownBehavior instanceInitiatedShutdownBehavior;
+
     public InstanceAttribute withInstanceInitiatedShutdownBehavior(InstanceAttributeInstanceInitiatedShutdownBehavior instanceInitiatedShutdownBehavior) {
         this.instanceInitiatedShutdownBehavior = instanceInitiatedShutdownBehavior;
         return this;
@@ -75,6 +84,7 @@ public class InstanceAttribute {
     
     
     public InstanceAttributeInstanceType instanceType;
+
     public InstanceAttribute withInstanceType(InstanceAttributeInstanceType instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -82,6 +92,7 @@ public class InstanceAttribute {
     
     
     public InstanceAttributeKernelId kernelId;
+
     public InstanceAttribute withKernelId(InstanceAttributeKernelId kernelId) {
         this.kernelId = kernelId;
         return this;
@@ -89,6 +100,7 @@ public class InstanceAttribute {
     
     
     public InstanceAttributeProductCodes[] productCodes;
+
     public InstanceAttribute withProductCodes(InstanceAttributeProductCodes[] productCodes) {
         this.productCodes = productCodes;
         return this;
@@ -96,6 +108,7 @@ public class InstanceAttribute {
     
     
     public InstanceAttributeRamdiskId ramdiskId;
+
     public InstanceAttribute withRamdiskId(InstanceAttributeRamdiskId ramdiskId) {
         this.ramdiskId = ramdiskId;
         return this;
@@ -103,6 +116,7 @@ public class InstanceAttribute {
     
     
     public InstanceAttributeRootDeviceName rootDeviceName;
+
     public InstanceAttribute withRootDeviceName(InstanceAttributeRootDeviceName rootDeviceName) {
         this.rootDeviceName = rootDeviceName;
         return this;
@@ -110,6 +124,7 @@ public class InstanceAttribute {
     
     
     public InstanceAttributeSourceDestCheck sourceDestCheck;
+
     public InstanceAttribute withSourceDestCheck(InstanceAttributeSourceDestCheck sourceDestCheck) {
         this.sourceDestCheck = sourceDestCheck;
         return this;
@@ -117,6 +132,7 @@ public class InstanceAttribute {
     
     
     public InstanceAttributeSriovNetSupport sriovNetSupport;
+
     public InstanceAttribute withSriovNetSupport(InstanceAttributeSriovNetSupport sriovNetSupport) {
         this.sriovNetSupport = sriovNetSupport;
         return this;
@@ -124,9 +140,11 @@ public class InstanceAttribute {
     
     
     public InstanceAttributeUserData userData;
+
     public InstanceAttribute withUserData(InstanceAttributeUserData userData) {
         this.userData = userData;
         return this;
     }
     
+    public InstanceAttribute(){}
 }

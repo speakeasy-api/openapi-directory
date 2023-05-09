@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsCloudWatchLogs {
     
     public DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsCloudWatchLogsDeliveryStatus deliveryStatus;
+
     public DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsCloudWatchLogs withDeliveryStatus(DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsCloudWatchLogsDeliveryStatus deliveryStatus) {
         this.deliveryStatus = deliveryStatus;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingCon
     
     
     public Boolean enabled;
+
     public DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsCloudWatchLogs withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -26,9 +28,11 @@ public class DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingCon
     
     
     public String logGroup;
+
     public DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsCloudWatchLogs withLogGroup(String logGroup) {
         this.logGroup = logGroup;
         return this;
     }
     
+    public DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsCloudWatchLogs(){}
 }

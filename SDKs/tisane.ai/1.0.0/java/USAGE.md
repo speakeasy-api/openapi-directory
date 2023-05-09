@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetFamilyDetailsRequest;
 import org.openapis.openapi.models.operations.GetFamilyDetailsResponse;
 
@@ -16,15 +15,17 @@ public class Application {
             GetFamilyDetailsRequest req = new GetFamilyDetailsRequest() {{
                 ocpApimSubscriptionKey = "{{apiKey}}";
                 id = "{family_id}";
-            }}            
+            }};            
 
             GetFamilyDetailsResponse res = sdk.languageModelDirectAccess.getFamilyDetails(req);
 
-            if (res.getFamilyDetails200ApplicationJSONObject.isPresent()) {
+            if (res.getFamilyDetails200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -15,6 +15,7 @@ public class ListProjectPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListProjectPoliciesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListProjectPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectPolicies")
     public ProjectPolicy[] projectPolicies;
+
     public ListProjectPoliciesResponse withProjectPolicies(ProjectPolicy[] projectPolicies) {
         this.projectPolicies = projectPolicies;
         return this;
     }
     
+    public ListProjectPoliciesResponse(){}
 }

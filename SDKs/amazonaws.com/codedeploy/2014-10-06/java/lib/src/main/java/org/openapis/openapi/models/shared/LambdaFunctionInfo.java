@@ -15,6 +15,7 @@ public class LambdaFunctionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentVersion")
     public String currentVersion;
+
     public LambdaFunctionInfo withCurrentVersion(String currentVersion) {
         this.currentVersion = currentVersion;
         return this;
@@ -23,6 +24,7 @@ public class LambdaFunctionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functionAlias")
     public String functionAlias;
+
     public LambdaFunctionInfo withFunctionAlias(String functionAlias) {
         this.functionAlias = functionAlias;
         return this;
@@ -31,6 +33,7 @@ public class LambdaFunctionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functionName")
     public String functionName;
+
     public LambdaFunctionInfo withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
@@ -39,6 +42,7 @@ public class LambdaFunctionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetVersion")
     public String targetVersion;
+
     public LambdaFunctionInfo withTargetVersion(String targetVersion) {
         this.targetVersion = targetVersion;
         return this;
@@ -47,9 +51,11 @@ public class LambdaFunctionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetVersionWeight")
     public Double targetVersionWeight;
+
     public LambdaFunctionInfo withTargetVersionWeight(Double targetVersionWeight) {
         this.targetVersionWeight = targetVersionWeight;
         return this;
     }
     
+    public LambdaFunctionInfo(){}
 }

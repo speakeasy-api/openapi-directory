@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProvisionedCapacityUpdate {
     @JsonProperty("mcuCount")
     public Long mcuCount;
+
     public ProvisionedCapacityUpdate withMcuCount(Long mcuCount) {
         this.mcuCount = mcuCount;
         return this;
@@ -19,9 +20,14 @@ public class ProvisionedCapacityUpdate {
     
     @JsonProperty("workerCount")
     public Long workerCount;
+
     public ProvisionedCapacityUpdate withWorkerCount(Long workerCount) {
         this.workerCount = workerCount;
         return this;
     }
     
+    public ProvisionedCapacityUpdate(@JsonProperty("mcuCount") Long mcuCount, @JsonProperty("workerCount") Long workerCount) {
+        this.mcuCount = mcuCount;
+        this.workerCount = workerCount;
+  }
 }

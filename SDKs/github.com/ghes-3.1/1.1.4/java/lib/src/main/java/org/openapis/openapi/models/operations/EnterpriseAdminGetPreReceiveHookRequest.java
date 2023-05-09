@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminGetPreReceiveHookRequest {
@@ -12,9 +13,13 @@ public class EnterpriseAdminGetPreReceiveHookRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pre_receive_hook_id")
     public Long preReceiveHookId;
+
     public EnterpriseAdminGetPreReceiveHookRequest withPreReceiveHookId(Long preReceiveHookId) {
         this.preReceiveHookId = preReceiveHookId;
         return this;
     }
     
+    public EnterpriseAdminGetPreReceiveHookRequest(@JsonProperty("pre_receive_hook_id") Long preReceiveHookId) {
+        this.preReceiveHookId = preReceiveHookId;
+  }
 }

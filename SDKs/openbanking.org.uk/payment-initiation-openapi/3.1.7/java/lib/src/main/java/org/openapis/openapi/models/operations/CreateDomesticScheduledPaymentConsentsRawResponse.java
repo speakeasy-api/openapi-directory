@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDomesticScheduledPaymentConsentsRawResponse {
     
     public byte[] body;
+
     public CreateDomesticScheduledPaymentConsentsRawResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CreateDomesticScheduledPaymentConsentsRawResponse {
     
     
     public String contentType;
+
     public CreateDomesticScheduledPaymentConsentsRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class CreateDomesticScheduledPaymentConsentsRawResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CreateDomesticScheduledPaymentConsentsRawResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class CreateDomesticScheduledPaymentConsentsRawResponse {
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public CreateDomesticScheduledPaymentConsentsRawResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -43,6 +48,7 @@ public class CreateDomesticScheduledPaymentConsentsRawResponse {
      */
     
     public org.openapis.openapi.models.shared.OBWriteDomesticScheduledConsentResponse5 obWriteDomesticScheduledConsentResponse5;
+
     public CreateDomesticScheduledPaymentConsentsRawResponse withOBWriteDomesticScheduledConsentResponse5(org.openapis.openapi.models.shared.OBWriteDomesticScheduledConsentResponse5 obWriteDomesticScheduledConsentResponse5) {
         this.obWriteDomesticScheduledConsentResponse5 = obWriteDomesticScheduledConsentResponse5;
         return this;
@@ -50,6 +56,7 @@ public class CreateDomesticScheduledPaymentConsentsRawResponse {
     
     
     public Integer statusCode;
+
     public CreateDomesticScheduledPaymentConsentsRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -57,9 +64,14 @@ public class CreateDomesticScheduledPaymentConsentsRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDomesticScheduledPaymentConsentsRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateDomesticScheduledPaymentConsentsRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

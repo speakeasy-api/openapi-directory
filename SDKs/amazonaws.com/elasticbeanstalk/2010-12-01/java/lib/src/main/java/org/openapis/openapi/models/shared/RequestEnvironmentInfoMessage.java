@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RequestEnvironmentInfoMessage - Request to retrieve logs from an environment and store them in your Elastic Beanstalk storage bucket.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestEnvironmentInfoMessage {
     
     public String environmentId;
+
     public RequestEnvironmentInfoMessage withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -19,6 +20,7 @@ public class RequestEnvironmentInfoMessage {
     
     
     public String environmentName;
+
     public RequestEnvironmentInfoMessage withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -26,9 +28,13 @@ public class RequestEnvironmentInfoMessage {
     
     
     public EnvironmentInfoTypeEnum infoType;
+
     public RequestEnvironmentInfoMessage withInfoType(EnvironmentInfoTypeEnum infoType) {
         this.infoType = infoType;
         return this;
     }
     
+    public RequestEnvironmentInfoMessage(@JsonProperty("InfoType") EnvironmentInfoTypeEnum infoType) {
+        this.infoType = infoType;
+  }
 }

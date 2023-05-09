@@ -28,6 +28,7 @@ public class CreateCheckoutRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additional_recipients")
     public ChargeRequestAdditionalRecipient[] additionalRecipients;
+
     public CreateCheckoutRequest withAdditionalRecipients(ChargeRequestAdditionalRecipient[] additionalRecipients) {
         this.additionalRecipients = additionalRecipients;
         return this;
@@ -42,6 +43,7 @@ public class CreateCheckoutRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ask_for_shipping_address")
     public Boolean askForShippingAddress;
+
     public CreateCheckoutRequest withAskForShippingAddress(Boolean askForShippingAddress) {
         this.askForShippingAddress = askForShippingAddress;
         return this;
@@ -62,6 +64,7 @@ public class CreateCheckoutRequest {
      */
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CreateCheckoutRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -79,6 +82,7 @@ public class CreateCheckoutRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_support_email")
     public String merchantSupportEmail;
+
     public CreateCheckoutRequest withMerchantSupportEmail(String merchantSupportEmail) {
         this.merchantSupportEmail = merchantSupportEmail;
         return this;
@@ -92,6 +96,7 @@ public class CreateCheckoutRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public CreateCheckoutRequest withNote(String note) {
         this.note = note;
         return this;
@@ -99,6 +104,7 @@ public class CreateCheckoutRequest {
     
     @JsonProperty("order")
     public CreateOrderRequest order;
+
     public CreateCheckoutRequest withOrder(CreateOrderRequest order) {
         this.order = order;
         return this;
@@ -113,6 +119,7 @@ public class CreateCheckoutRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pre_populate_buyer_email")
     public String prePopulateBuyerEmail;
+
     public CreateCheckoutRequest withPrePopulateBuyerEmail(String prePopulateBuyerEmail) {
         this.prePopulateBuyerEmail = prePopulateBuyerEmail;
         return this;
@@ -151,6 +158,7 @@ public class CreateCheckoutRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pre_populate_shipping_address")
     public Address prePopulateShippingAddress;
+
     public CreateCheckoutRequest withPrePopulateShippingAddress(Address prePopulateShippingAddress) {
         this.prePopulateShippingAddress = prePopulateShippingAddress;
         return this;
@@ -174,9 +182,14 @@ public class CreateCheckoutRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirect_url")
     public String redirectUrl;
+
     public CreateCheckoutRequest withRedirectUrl(String redirectUrl) {
         this.redirectUrl = redirectUrl;
         return this;
     }
     
+    public CreateCheckoutRequest(@JsonProperty("idempotency_key") String idempotencyKey, @JsonProperty("order") CreateOrderRequest order) {
+        this.idempotencyKey = idempotencyKey;
+        this.order = order;
+  }
 }

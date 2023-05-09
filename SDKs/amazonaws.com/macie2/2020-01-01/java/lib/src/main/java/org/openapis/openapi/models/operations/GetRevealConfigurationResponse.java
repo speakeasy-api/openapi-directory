@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRevealConfigurationResponse {
@@ -12,6 +13,7 @@ public class GetRevealConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public GetRevealConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetRevealConfigurationResponse {
     
     
     public String contentType;
+
     public GetRevealConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetRevealConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRevealConfigurationResponse getRevealConfigurationResponse;
+
     public GetRevealConfigurationResponse withGetRevealConfigurationResponse(org.openapis.openapi.models.shared.GetRevealConfigurationResponse getRevealConfigurationResponse) {
         this.getRevealConfigurationResponse = getRevealConfigurationResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetRevealConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public GetRevealConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetRevealConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetRevealConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetRevealConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRevealConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetRevealConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public GetRevealConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class GetRevealConfigurationResponse {
      */
     
     public Object validationException;
+
     public GetRevealConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetRevealConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeployablePatchSnapshotForInstanceRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetDeployablePatchSnapshotForInstanceRequest getDeployablePatchSnapshotForInstanceRequest;
+
     public GetDeployablePatchSnapshotForInstanceRequest withGetDeployablePatchSnapshotForInstanceRequest(org.openapis.openapi.models.shared.GetDeployablePatchSnapshotForInstanceRequest getDeployablePatchSnapshotForInstanceRequest) {
         this.getDeployablePatchSnapshotForInstanceRequest = getDeployablePatchSnapshotForInstanceRequest;
         return this;
@@ -16,6 +18,7 @@ public class GetDeployablePatchSnapshotForInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetDeployablePatchSnapshotForInstanceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class GetDeployablePatchSnapshotForInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetDeployablePatchSnapshotForInstanceRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class GetDeployablePatchSnapshotForInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetDeployablePatchSnapshotForInstanceRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class GetDeployablePatchSnapshotForInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetDeployablePatchSnapshotForInstanceRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class GetDeployablePatchSnapshotForInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetDeployablePatchSnapshotForInstanceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class GetDeployablePatchSnapshotForInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetDeployablePatchSnapshotForInstanceRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class GetDeployablePatchSnapshotForInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetDeployablePatchSnapshotForInstanceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class GetDeployablePatchSnapshotForInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public GetDeployablePatchSnapshotForInstanceXAmzTargetEnum xAmzTarget;
+
     public GetDeployablePatchSnapshotForInstanceRequest withXAmzTarget(GetDeployablePatchSnapshotForInstanceXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public GetDeployablePatchSnapshotForInstanceRequest(@JsonProperty("GetDeployablePatchSnapshotForInstanceRequest") org.openapis.openapi.models.shared.GetDeployablePatchSnapshotForInstanceRequest getDeployablePatchSnapshotForInstanceRequest, @JsonProperty("X-Amz-Target") GetDeployablePatchSnapshotForInstanceXAmzTargetEnum xAmzTarget) {
+        this.getDeployablePatchSnapshotForInstanceRequest = getDeployablePatchSnapshotForInstanceRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

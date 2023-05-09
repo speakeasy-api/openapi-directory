@@ -61,11 +61,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllergiesCreateResponse res = new org.openapis.openapi.models.operations.AllergiesCreateResponse() {{
+        org.openapis.openapi.models.operations.AllergiesCreateResponse res = new org.openapis.openapi.models.operations.AllergiesCreateResponse(contentType, httpRes.statusCode()) {{
             patientAllergy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -109,11 +107,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllergiesListResponse res = new org.openapis.openapi.models.operations.AllergiesListResponse() {{
+        org.openapis.openapi.models.operations.AllergiesListResponse res = new org.openapis.openapi.models.operations.AllergiesListResponse(contentType, httpRes.statusCode()) {{
             allergiesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,10 +153,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllergiesPartialUpdateResponse res = new org.openapis.openapi.models.operations.AllergiesPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.AllergiesPartialUpdateResponse res = new org.openapis.openapi.models.operations.AllergiesPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -197,11 +191,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllergiesReadResponse res = new org.openapis.openapi.models.operations.AllergiesReadResponse() {{
+        org.openapis.openapi.models.operations.AllergiesReadResponse res = new org.openapis.openapi.models.operations.AllergiesReadResponse(contentType, httpRes.statusCode()) {{
             patientAllergy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,10 +237,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllergiesUpdateResponse res = new org.openapis.openapi.models.operations.AllergiesUpdateResponse() {{
+        org.openapis.openapi.models.operations.AllergiesUpdateResponse res = new org.openapis.openapi.models.operations.AllergiesUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -285,11 +275,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AmendmentsCreateResponse res = new org.openapis.openapi.models.operations.AmendmentsCreateResponse() {{
+        org.openapis.openapi.models.operations.AmendmentsCreateResponse res = new org.openapis.openapi.models.operations.AmendmentsCreateResponse(contentType, httpRes.statusCode()) {{
             patientAmendment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -333,10 +321,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AmendmentsDeleteResponse res = new org.openapis.openapi.models.operations.AmendmentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.AmendmentsDeleteResponse res = new org.openapis.openapi.models.operations.AmendmentsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -373,11 +359,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AmendmentsListResponse res = new org.openapis.openapi.models.operations.AmendmentsListResponse() {{
+        org.openapis.openapi.models.operations.AmendmentsListResponse res = new org.openapis.openapi.models.operations.AmendmentsListResponse(contentType, httpRes.statusCode()) {{
             amendmentsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -421,10 +405,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AmendmentsPartialUpdateResponse res = new org.openapis.openapi.models.operations.AmendmentsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.AmendmentsPartialUpdateResponse res = new org.openapis.openapi.models.operations.AmendmentsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -461,11 +443,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AmendmentsReadResponse res = new org.openapis.openapi.models.operations.AmendmentsReadResponse() {{
+        org.openapis.openapi.models.operations.AmendmentsReadResponse res = new org.openapis.openapi.models.operations.AmendmentsReadResponse(contentType, httpRes.statusCode()) {{
             patientAmendment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -509,10 +489,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AmendmentsUpdateResponse res = new org.openapis.openapi.models.operations.AmendmentsUpdateResponse() {{
+        org.openapis.openapi.models.operations.AmendmentsUpdateResponse res = new org.openapis.openapi.models.operations.AmendmentsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -549,11 +527,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppointmentProfilesCreateResponse res = new org.openapis.openapi.models.operations.AppointmentProfilesCreateResponse() {{
+        org.openapis.openapi.models.operations.AppointmentProfilesCreateResponse res = new org.openapis.openapi.models.operations.AppointmentProfilesCreateResponse(contentType, httpRes.statusCode()) {{
             appointmentProfile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -597,10 +573,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppointmentProfilesDeleteResponse res = new org.openapis.openapi.models.operations.AppointmentProfilesDeleteResponse() {{
+        org.openapis.openapi.models.operations.AppointmentProfilesDeleteResponse res = new org.openapis.openapi.models.operations.AppointmentProfilesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -637,11 +611,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppointmentProfilesListResponse res = new org.openapis.openapi.models.operations.AppointmentProfilesListResponse() {{
+        org.openapis.openapi.models.operations.AppointmentProfilesListResponse res = new org.openapis.openapi.models.operations.AppointmentProfilesListResponse(contentType, httpRes.statusCode()) {{
             appointmentProfilesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -685,10 +657,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppointmentProfilesPartialUpdateResponse res = new org.openapis.openapi.models.operations.AppointmentProfilesPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.AppointmentProfilesPartialUpdateResponse res = new org.openapis.openapi.models.operations.AppointmentProfilesPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -725,11 +695,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppointmentProfilesReadResponse res = new org.openapis.openapi.models.operations.AppointmentProfilesReadResponse() {{
+        org.openapis.openapi.models.operations.AppointmentProfilesReadResponse res = new org.openapis.openapi.models.operations.AppointmentProfilesReadResponse(contentType, httpRes.statusCode()) {{
             appointmentProfile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -773,10 +741,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppointmentProfilesUpdateResponse res = new org.openapis.openapi.models.operations.AppointmentProfilesUpdateResponse() {{
+        org.openapis.openapi.models.operations.AppointmentProfilesUpdateResponse res = new org.openapis.openapi.models.operations.AppointmentProfilesUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -813,11 +779,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppointmentTemplatesCreateResponse res = new org.openapis.openapi.models.operations.AppointmentTemplatesCreateResponse() {{
+        org.openapis.openapi.models.operations.AppointmentTemplatesCreateResponse res = new org.openapis.openapi.models.operations.AppointmentTemplatesCreateResponse(contentType, httpRes.statusCode()) {{
             appointmentTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -861,10 +825,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppointmentTemplatesDeleteResponse res = new org.openapis.openapi.models.operations.AppointmentTemplatesDeleteResponse() {{
+        org.openapis.openapi.models.operations.AppointmentTemplatesDeleteResponse res = new org.openapis.openapi.models.operations.AppointmentTemplatesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -901,11 +863,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppointmentTemplatesListResponse res = new org.openapis.openapi.models.operations.AppointmentTemplatesListResponse() {{
+        org.openapis.openapi.models.operations.AppointmentTemplatesListResponse res = new org.openapis.openapi.models.operations.AppointmentTemplatesListResponse(contentType, httpRes.statusCode()) {{
             appointmentTemplatesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -949,10 +909,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppointmentTemplatesPartialUpdateResponse res = new org.openapis.openapi.models.operations.AppointmentTemplatesPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.AppointmentTemplatesPartialUpdateResponse res = new org.openapis.openapi.models.operations.AppointmentTemplatesPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -989,11 +947,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppointmentTemplatesReadResponse res = new org.openapis.openapi.models.operations.AppointmentTemplatesReadResponse() {{
+        org.openapis.openapi.models.operations.AppointmentTemplatesReadResponse res = new org.openapis.openapi.models.operations.AppointmentTemplatesReadResponse(contentType, httpRes.statusCode()) {{
             appointmentTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1037,10 +993,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppointmentTemplatesUpdateResponse res = new org.openapis.openapi.models.operations.AppointmentTemplatesUpdateResponse() {{
+        org.openapis.openapi.models.operations.AppointmentTemplatesUpdateResponse res = new org.openapis.openapi.models.operations.AppointmentTemplatesUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -1077,11 +1031,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppointmentsCreateResponse res = new org.openapis.openapi.models.operations.AppointmentsCreateResponse() {{
+        org.openapis.openapi.models.operations.AppointmentsCreateResponse res = new org.openapis.openapi.models.operations.AppointmentsCreateResponse(contentType, httpRes.statusCode()) {{
             appointment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1125,10 +1077,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppointmentsDeleteResponse res = new org.openapis.openapi.models.operations.AppointmentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.AppointmentsDeleteResponse res = new org.openapis.openapi.models.operations.AppointmentsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -1165,11 +1115,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppointmentsListResponse res = new org.openapis.openapi.models.operations.AppointmentsListResponse() {{
+        org.openapis.openapi.models.operations.AppointmentsListResponse res = new org.openapis.openapi.models.operations.AppointmentsListResponse(contentType, httpRes.statusCode()) {{
             appointmentsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1213,10 +1161,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppointmentsPartialUpdateResponse res = new org.openapis.openapi.models.operations.AppointmentsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.AppointmentsPartialUpdateResponse res = new org.openapis.openapi.models.operations.AppointmentsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 409 || httpRes.statusCode() == 500) {
@@ -1253,11 +1199,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppointmentsReadResponse res = new org.openapis.openapi.models.operations.AppointmentsReadResponse() {{
+        org.openapis.openapi.models.operations.AppointmentsReadResponse res = new org.openapis.openapi.models.operations.AppointmentsReadResponse(contentType, httpRes.statusCode()) {{
             appointment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1301,10 +1245,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppointmentsUpdateResponse res = new org.openapis.openapi.models.operations.AppointmentsUpdateResponse() {{
+        org.openapis.openapi.models.operations.AppointmentsUpdateResponse res = new org.openapis.openapi.models.operations.AppointmentsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 409 || httpRes.statusCode() == 500) {
@@ -1341,11 +1283,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CarePlansListResponse res = new org.openapis.openapi.models.operations.CarePlansListResponse() {{
+        org.openapis.openapi.models.operations.CarePlansListResponse res = new org.openapis.openapi.models.operations.CarePlansListResponse(contentType, httpRes.statusCode()) {{
             carePlansList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1389,11 +1329,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CarePlansReadResponse res = new org.openapis.openapi.models.operations.CarePlansReadResponse() {{
+        org.openapis.openapi.models.operations.CarePlansReadResponse res = new org.openapis.openapi.models.operations.CarePlansReadResponse(contentType, httpRes.statusCode()) {{
             carePlan = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1430,11 +1368,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CareTeamMembersListResponse res = new org.openapis.openapi.models.operations.CareTeamMembersListResponse() {{
+        org.openapis.openapi.models.operations.CareTeamMembersListResponse res = new org.openapis.openapi.models.operations.CareTeamMembersListResponse(contentType, httpRes.statusCode()) {{
             careTeamMembersList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1471,11 +1407,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CareTeamMembersReadResponse res = new org.openapis.openapi.models.operations.CareTeamMembersReadResponse() {{
+        org.openapis.openapi.models.operations.CareTeamMembersReadResponse res = new org.openapis.openapi.models.operations.CareTeamMembersReadResponse(contentType, httpRes.statusCode()) {{
             careTeamMember = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1519,11 +1453,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClaimBillingNotesCreateResponse res = new org.openapis.openapi.models.operations.ClaimBillingNotesCreateResponse() {{
+        org.openapis.openapi.models.operations.ClaimBillingNotesCreateResponse res = new org.openapis.openapi.models.operations.ClaimBillingNotesCreateResponse(contentType, httpRes.statusCode()) {{
             claimBillingNotes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1567,11 +1499,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClaimBillingNotesListResponse res = new org.openapis.openapi.models.operations.ClaimBillingNotesListResponse() {{
+        org.openapis.openapi.models.operations.ClaimBillingNotesListResponse res = new org.openapis.openapi.models.operations.ClaimBillingNotesListResponse(contentType, httpRes.statusCode()) {{
             claimBillingNotesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1615,11 +1545,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClaimBillingNotesReadResponse res = new org.openapis.openapi.models.operations.ClaimBillingNotesReadResponse() {{
+        org.openapis.openapi.models.operations.ClaimBillingNotesReadResponse res = new org.openapis.openapi.models.operations.ClaimBillingNotesReadResponse(contentType, httpRes.statusCode()) {{
             claimBillingNotes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1663,11 +1591,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClinicalNoteFieldTypesListResponse res = new org.openapis.openapi.models.operations.ClinicalNoteFieldTypesListResponse() {{
+        org.openapis.openapi.models.operations.ClinicalNoteFieldTypesListResponse res = new org.openapis.openapi.models.operations.ClinicalNoteFieldTypesListResponse(contentType, httpRes.statusCode()) {{
             clinicalNoteFieldTypesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1711,11 +1637,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClinicalNoteFieldTypesReadResponse res = new org.openapis.openapi.models.operations.ClinicalNoteFieldTypesReadResponse() {{
+        org.openapis.openapi.models.operations.ClinicalNoteFieldTypesReadResponse res = new org.openapis.openapi.models.operations.ClinicalNoteFieldTypesReadResponse(contentType, httpRes.statusCode()) {{
             soapNoteLineItemFieldType = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1759,11 +1683,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClinicalNoteFieldValuesCreateResponse res = new org.openapis.openapi.models.operations.ClinicalNoteFieldValuesCreateResponse() {{
+        org.openapis.openapi.models.operations.ClinicalNoteFieldValuesCreateResponse res = new org.openapis.openapi.models.operations.ClinicalNoteFieldValuesCreateResponse(contentType, httpRes.statusCode()) {{
             soapNoteLineItemFieldValue = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1807,11 +1729,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClinicalNoteFieldValuesListResponse res = new org.openapis.openapi.models.operations.ClinicalNoteFieldValuesListResponse() {{
+        org.openapis.openapi.models.operations.ClinicalNoteFieldValuesListResponse res = new org.openapis.openapi.models.operations.ClinicalNoteFieldValuesListResponse(contentType, httpRes.statusCode()) {{
             clinicalNoteFieldValuesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1855,10 +1775,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClinicalNoteFieldValuesPartialUpdateResponse res = new org.openapis.openapi.models.operations.ClinicalNoteFieldValuesPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.ClinicalNoteFieldValuesPartialUpdateResponse res = new org.openapis.openapi.models.operations.ClinicalNoteFieldValuesPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -1895,11 +1813,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClinicalNoteFieldValuesReadResponse res = new org.openapis.openapi.models.operations.ClinicalNoteFieldValuesReadResponse() {{
+        org.openapis.openapi.models.operations.ClinicalNoteFieldValuesReadResponse res = new org.openapis.openapi.models.operations.ClinicalNoteFieldValuesReadResponse(contentType, httpRes.statusCode()) {{
             soapNoteLineItemFieldValue = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1943,10 +1859,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClinicalNoteFieldValuesUpdateResponse res = new org.openapis.openapi.models.operations.ClinicalNoteFieldValuesUpdateResponse() {{
+        org.openapis.openapi.models.operations.ClinicalNoteFieldValuesUpdateResponse res = new org.openapis.openapi.models.operations.ClinicalNoteFieldValuesUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -1983,11 +1897,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClinicalNoteTemplatesListResponse res = new org.openapis.openapi.models.operations.ClinicalNoteTemplatesListResponse() {{
+        org.openapis.openapi.models.operations.ClinicalNoteTemplatesListResponse res = new org.openapis.openapi.models.operations.ClinicalNoteTemplatesListResponse(contentType, httpRes.statusCode()) {{
             clinicalNoteTemplatesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2031,11 +1943,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClinicalNoteTemplatesReadResponse res = new org.openapis.openapi.models.operations.ClinicalNoteTemplatesReadResponse() {{
+        org.openapis.openapi.models.operations.ClinicalNoteTemplatesReadResponse res = new org.openapis.openapi.models.operations.ClinicalNoteTemplatesReadResponse(contentType, httpRes.statusCode()) {{
             soapNoteCustomReport = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2072,11 +1982,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClinicalNotesListResponse res = new org.openapis.openapi.models.operations.ClinicalNotesListResponse() {{
+        org.openapis.openapi.models.operations.ClinicalNotesListResponse res = new org.openapis.openapi.models.operations.ClinicalNotesListResponse(contentType, httpRes.statusCode()) {{
             clinicalNotesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2113,11 +2021,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClinicalNotesReadResponse res = new org.openapis.openapi.models.operations.ClinicalNotesReadResponse() {{
+        org.openapis.openapi.models.operations.ClinicalNotesReadResponse res = new org.openapis.openapi.models.operations.ClinicalNotesReadResponse(contentType, httpRes.statusCode()) {{
             clinicalNote = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2161,10 +2067,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConsentFormsApplyToAppointmentResponse res = new org.openapis.openapi.models.operations.ConsentFormsApplyToAppointmentResponse() {{
+        org.openapis.openapi.models.operations.ConsentFormsApplyToAppointmentResponse res = new org.openapis.openapi.models.operations.ConsentFormsApplyToAppointmentResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -2201,11 +2105,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConsentFormsCreateResponse res = new org.openapis.openapi.models.operations.ConsentFormsCreateResponse() {{
+        org.openapis.openapi.models.operations.ConsentFormsCreateResponse res = new org.openapis.openapi.models.operations.ConsentFormsCreateResponse(contentType, httpRes.statusCode()) {{
             consentForm = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -2249,11 +2151,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConsentFormsListResponse res = new org.openapis.openapi.models.operations.ConsentFormsListResponse() {{
+        org.openapis.openapi.models.operations.ConsentFormsListResponse res = new org.openapis.openapi.models.operations.ConsentFormsListResponse(contentType, httpRes.statusCode()) {{
             consentFormsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2297,10 +2197,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConsentFormsPartialUpdateResponse res = new org.openapis.openapi.models.operations.ConsentFormsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.ConsentFormsPartialUpdateResponse res = new org.openapis.openapi.models.operations.ConsentFormsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -2337,11 +2235,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConsentFormsReadResponse res = new org.openapis.openapi.models.operations.ConsentFormsReadResponse() {{
+        org.openapis.openapi.models.operations.ConsentFormsReadResponse res = new org.openapis.openapi.models.operations.ConsentFormsReadResponse(contentType, httpRes.statusCode()) {{
             consentForm = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2385,10 +2281,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConsentFormsUnapplyFromAppointmentResponse res = new org.openapis.openapi.models.operations.ConsentFormsUnapplyFromAppointmentResponse() {{
+        org.openapis.openapi.models.operations.ConsentFormsUnapplyFromAppointmentResponse res = new org.openapis.openapi.models.operations.ConsentFormsUnapplyFromAppointmentResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -2425,10 +2319,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConsentFormsUpdateResponse res = new org.openapis.openapi.models.operations.ConsentFormsUpdateResponse() {{
+        org.openapis.openapi.models.operations.ConsentFormsUpdateResponse res = new org.openapis.openapi.models.operations.ConsentFormsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -2465,11 +2357,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomAppointmentFieldsCreateResponse res = new org.openapis.openapi.models.operations.CustomAppointmentFieldsCreateResponse() {{
+        org.openapis.openapi.models.operations.CustomAppointmentFieldsCreateResponse res = new org.openapis.openapi.models.operations.CustomAppointmentFieldsCreateResponse(contentType, httpRes.statusCode()) {{
             customAppointmentFieldType = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -2513,11 +2403,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomAppointmentFieldsListResponse res = new org.openapis.openapi.models.operations.CustomAppointmentFieldsListResponse() {{
+        org.openapis.openapi.models.operations.CustomAppointmentFieldsListResponse res = new org.openapis.openapi.models.operations.CustomAppointmentFieldsListResponse(contentType, httpRes.statusCode()) {{
             customAppointmentFieldsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2561,10 +2449,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomAppointmentFieldsPartialUpdateResponse res = new org.openapis.openapi.models.operations.CustomAppointmentFieldsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.CustomAppointmentFieldsPartialUpdateResponse res = new org.openapis.openapi.models.operations.CustomAppointmentFieldsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -2601,11 +2487,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomAppointmentFieldsReadResponse res = new org.openapis.openapi.models.operations.CustomAppointmentFieldsReadResponse() {{
+        org.openapis.openapi.models.operations.CustomAppointmentFieldsReadResponse res = new org.openapis.openapi.models.operations.CustomAppointmentFieldsReadResponse(contentType, httpRes.statusCode()) {{
             customAppointmentFieldType = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2649,10 +2533,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomAppointmentFieldsUpdateResponse res = new org.openapis.openapi.models.operations.CustomAppointmentFieldsUpdateResponse() {{
+        org.openapis.openapi.models.operations.CustomAppointmentFieldsUpdateResponse res = new org.openapis.openapi.models.operations.CustomAppointmentFieldsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -2689,11 +2571,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomDemographicsCreateResponse res = new org.openapis.openapi.models.operations.CustomDemographicsCreateResponse() {{
+        org.openapis.openapi.models.operations.CustomDemographicsCreateResponse res = new org.openapis.openapi.models.operations.CustomDemographicsCreateResponse(contentType, httpRes.statusCode()) {{
             customPatientFieldType = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -2737,11 +2617,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomDemographicsListResponse res = new org.openapis.openapi.models.operations.CustomDemographicsListResponse() {{
+        org.openapis.openapi.models.operations.CustomDemographicsListResponse res = new org.openapis.openapi.models.operations.CustomDemographicsListResponse(contentType, httpRes.statusCode()) {{
             customDemographicsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2785,10 +2663,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomDemographicsPartialUpdateResponse res = new org.openapis.openapi.models.operations.CustomDemographicsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.CustomDemographicsPartialUpdateResponse res = new org.openapis.openapi.models.operations.CustomDemographicsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -2825,11 +2701,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomDemographicsReadResponse res = new org.openapis.openapi.models.operations.CustomDemographicsReadResponse() {{
+        org.openapis.openapi.models.operations.CustomDemographicsReadResponse res = new org.openapis.openapi.models.operations.CustomDemographicsReadResponse(contentType, httpRes.statusCode()) {{
             customPatientFieldType = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2873,10 +2747,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomDemographicsUpdateResponse res = new org.openapis.openapi.models.operations.CustomDemographicsUpdateResponse() {{
+        org.openapis.openapi.models.operations.CustomDemographicsUpdateResponse res = new org.openapis.openapi.models.operations.CustomDemographicsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -2913,11 +2785,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomVitalsListResponse res = new org.openapis.openapi.models.operations.CustomVitalsListResponse() {{
+        org.openapis.openapi.models.operations.CustomVitalsListResponse res = new org.openapis.openapi.models.operations.CustomVitalsListResponse(contentType, httpRes.statusCode()) {{
             customVitalsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2961,11 +2831,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomVitalsReadResponse res = new org.openapis.openapi.models.operations.CustomVitalsReadResponse() {{
+        org.openapis.openapi.models.operations.CustomVitalsReadResponse res = new org.openapis.openapi.models.operations.CustomVitalsReadResponse(contentType, httpRes.statusCode()) {{
             customVitalType = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3009,11 +2877,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentsCreateResponse res = new org.openapis.openapi.models.operations.DocumentsCreateResponse() {{
+        org.openapis.openapi.models.operations.DocumentsCreateResponse res = new org.openapis.openapi.models.operations.DocumentsCreateResponse(contentType, httpRes.statusCode()) {{
             scannedClinicalDocument = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -3057,10 +2923,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentsDeleteResponse res = new org.openapis.openapi.models.operations.DocumentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DocumentsDeleteResponse res = new org.openapis.openapi.models.operations.DocumentsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -3097,11 +2961,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentsListResponse res = new org.openapis.openapi.models.operations.DocumentsListResponse() {{
+        org.openapis.openapi.models.operations.DocumentsListResponse res = new org.openapis.openapi.models.operations.DocumentsListResponse(contentType, httpRes.statusCode()) {{
             documentsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3145,10 +3007,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentsPartialUpdateResponse res = new org.openapis.openapi.models.operations.DocumentsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.DocumentsPartialUpdateResponse res = new org.openapis.openapi.models.operations.DocumentsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -3185,11 +3045,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentsReadResponse res = new org.openapis.openapi.models.operations.DocumentsReadResponse() {{
+        org.openapis.openapi.models.operations.DocumentsReadResponse res = new org.openapis.openapi.models.operations.DocumentsReadResponse(contentType, httpRes.statusCode()) {{
             scannedClinicalDocument = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3233,10 +3091,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentsUpdateResponse res = new org.openapis.openapi.models.operations.DocumentsUpdateResponse() {{
+        org.openapis.openapi.models.operations.DocumentsUpdateResponse res = new org.openapis.openapi.models.operations.DocumentsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -3273,11 +3129,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EobsCreateResponse res = new org.openapis.openapi.models.operations.EobsCreateResponse() {{
+        org.openapis.openapi.models.operations.EobsCreateResponse res = new org.openapis.openapi.models.operations.EobsCreateResponse(contentType, httpRes.statusCode()) {{
             eobObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -3321,11 +3175,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EobsListResponse res = new org.openapis.openapi.models.operations.EobsListResponse() {{
+        org.openapis.openapi.models.operations.EobsListResponse res = new org.openapis.openapi.models.operations.EobsListResponse(contentType, httpRes.statusCode()) {{
             eobsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3369,11 +3221,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EobsReadResponse res = new org.openapis.openapi.models.operations.EobsReadResponse() {{
+        org.openapis.openapi.models.operations.EobsReadResponse res = new org.openapis.openapi.models.operations.EobsReadResponse(contentType, httpRes.statusCode()) {{
             eobObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3410,11 +3260,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FeeSchedulesListResponse res = new org.openapis.openapi.models.operations.FeeSchedulesListResponse() {{
+        org.openapis.openapi.models.operations.FeeSchedulesListResponse res = new org.openapis.openapi.models.operations.FeeSchedulesListResponse(contentType, httpRes.statusCode()) {{
             feeSchedulesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3451,11 +3299,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FeeSchedulesReadResponse res = new org.openapis.openapi.models.operations.FeeSchedulesReadResponse() {{
+        org.openapis.openapi.models.operations.FeeSchedulesReadResponse res = new org.openapis.openapi.models.operations.FeeSchedulesReadResponse(contentType, httpRes.statusCode()) {{
             doctorFeeSchedule = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3499,11 +3345,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImplantableDevicesListResponse res = new org.openapis.openapi.models.operations.ImplantableDevicesListResponse() {{
+        org.openapis.openapi.models.operations.ImplantableDevicesListResponse res = new org.openapis.openapi.models.operations.ImplantableDevicesListResponse(contentType, httpRes.statusCode()) {{
             implantableDevicesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3547,11 +3391,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImplantableDevicesReadResponse res = new org.openapis.openapi.models.operations.ImplantableDevicesReadResponse() {{
+        org.openapis.openapi.models.operations.ImplantableDevicesReadResponse res = new org.openapis.openapi.models.operations.ImplantableDevicesReadResponse(contentType, httpRes.statusCode()) {{
             implantableDevice = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3588,11 +3430,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InsurancesListResponse res = new org.openapis.openapi.models.operations.InsurancesListResponse() {{
+        org.openapis.openapi.models.operations.InsurancesListResponse res = new org.openapis.openapi.models.operations.InsurancesListResponse(contentType, httpRes.statusCode()) {{
             insurancesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3629,11 +3469,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InsurancesReadResponse res = new org.openapis.openapi.models.operations.InsurancesReadResponse() {{
+        org.openapis.openapi.models.operations.InsurancesReadResponse res = new org.openapis.openapi.models.operations.InsurancesReadResponse(contentType, httpRes.statusCode()) {{
             insurance = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3677,11 +3515,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabDocumentsCreateResponse res = new org.openapis.openapi.models.operations.LabDocumentsCreateResponse() {{
+        org.openapis.openapi.models.operations.LabDocumentsCreateResponse res = new org.openapis.openapi.models.operations.LabDocumentsCreateResponse(contentType, httpRes.statusCode()) {{
             labOrderDocument = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -3725,10 +3561,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabDocumentsDeleteResponse res = new org.openapis.openapi.models.operations.LabDocumentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.LabDocumentsDeleteResponse res = new org.openapis.openapi.models.operations.LabDocumentsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -3765,11 +3599,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabDocumentsListResponse res = new org.openapis.openapi.models.operations.LabDocumentsListResponse() {{
+        org.openapis.openapi.models.operations.LabDocumentsListResponse res = new org.openapis.openapi.models.operations.LabDocumentsListResponse(contentType, httpRes.statusCode()) {{
             labDocumentsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3813,10 +3645,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabDocumentsPartialUpdateResponse res = new org.openapis.openapi.models.operations.LabDocumentsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.LabDocumentsPartialUpdateResponse res = new org.openapis.openapi.models.operations.LabDocumentsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -3853,11 +3683,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabDocumentsReadResponse res = new org.openapis.openapi.models.operations.LabDocumentsReadResponse() {{
+        org.openapis.openapi.models.operations.LabDocumentsReadResponse res = new org.openapis.openapi.models.operations.LabDocumentsReadResponse(contentType, httpRes.statusCode()) {{
             labOrderDocument = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3901,10 +3729,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabDocumentsUpdateResponse res = new org.openapis.openapi.models.operations.LabDocumentsUpdateResponse() {{
+        org.openapis.openapi.models.operations.LabDocumentsUpdateResponse res = new org.openapis.openapi.models.operations.LabDocumentsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -3941,11 +3767,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabOrdersCreateResponse res = new org.openapis.openapi.models.operations.LabOrdersCreateResponse() {{
+        org.openapis.openapi.models.operations.LabOrdersCreateResponse res = new org.openapis.openapi.models.operations.LabOrdersCreateResponse(contentType, httpRes.statusCode()) {{
             labOrder = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -3989,10 +3813,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabOrdersDeleteResponse res = new org.openapis.openapi.models.operations.LabOrdersDeleteResponse() {{
+        org.openapis.openapi.models.operations.LabOrdersDeleteResponse res = new org.openapis.openapi.models.operations.LabOrdersDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -4029,11 +3851,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabOrdersListResponse res = new org.openapis.openapi.models.operations.LabOrdersListResponse() {{
+        org.openapis.openapi.models.operations.LabOrdersListResponse res = new org.openapis.openapi.models.operations.LabOrdersListResponse(contentType, httpRes.statusCode()) {{
             labOrdersList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4077,10 +3897,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabOrdersPartialUpdateResponse res = new org.openapis.openapi.models.operations.LabOrdersPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.LabOrdersPartialUpdateResponse res = new org.openapis.openapi.models.operations.LabOrdersPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -4117,11 +3935,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabOrdersReadResponse res = new org.openapis.openapi.models.operations.LabOrdersReadResponse() {{
+        org.openapis.openapi.models.operations.LabOrdersReadResponse res = new org.openapis.openapi.models.operations.LabOrdersReadResponse(contentType, httpRes.statusCode()) {{
             labOrder = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4158,11 +3974,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabOrdersSummaryListResponse res = new org.openapis.openapi.models.operations.LabOrdersSummaryListResponse() {{
+        org.openapis.openapi.models.operations.LabOrdersSummaryListResponse res = new org.openapis.openapi.models.operations.LabOrdersSummaryListResponse(contentType, httpRes.statusCode()) {{
             labOrdersSummaryList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4199,11 +4013,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabOrdersSummaryReadResponse res = new org.openapis.openapi.models.operations.LabOrdersSummaryReadResponse() {{
+        org.openapis.openapi.models.operations.LabOrdersSummaryReadResponse res = new org.openapis.openapi.models.operations.LabOrdersSummaryReadResponse(contentType, httpRes.statusCode()) {{
             labOrder = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4247,10 +4059,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabOrdersUpdateResponse res = new org.openapis.openapi.models.operations.LabOrdersUpdateResponse() {{
+        org.openapis.openapi.models.operations.LabOrdersUpdateResponse res = new org.openapis.openapi.models.operations.LabOrdersUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -4287,11 +4097,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabResultsCreateResponse res = new org.openapis.openapi.models.operations.LabResultsCreateResponse() {{
+        org.openapis.openapi.models.operations.LabResultsCreateResponse res = new org.openapis.openapi.models.operations.LabResultsCreateResponse(contentType, httpRes.statusCode()) {{
             labResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -4335,10 +4143,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabResultsDeleteResponse res = new org.openapis.openapi.models.operations.LabResultsDeleteResponse() {{
+        org.openapis.openapi.models.operations.LabResultsDeleteResponse res = new org.openapis.openapi.models.operations.LabResultsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -4375,11 +4181,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabResultsListResponse res = new org.openapis.openapi.models.operations.LabResultsListResponse() {{
+        org.openapis.openapi.models.operations.LabResultsListResponse res = new org.openapis.openapi.models.operations.LabResultsListResponse(contentType, httpRes.statusCode()) {{
             labResultsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4423,10 +4227,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabResultsPartialUpdateResponse res = new org.openapis.openapi.models.operations.LabResultsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.LabResultsPartialUpdateResponse res = new org.openapis.openapi.models.operations.LabResultsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -4463,11 +4265,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabResultsReadResponse res = new org.openapis.openapi.models.operations.LabResultsReadResponse() {{
+        org.openapis.openapi.models.operations.LabResultsReadResponse res = new org.openapis.openapi.models.operations.LabResultsReadResponse(contentType, httpRes.statusCode()) {{
             labResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4511,10 +4311,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabResultsUpdateResponse res = new org.openapis.openapi.models.operations.LabResultsUpdateResponse() {{
+        org.openapis.openapi.models.operations.LabResultsUpdateResponse res = new org.openapis.openapi.models.operations.LabResultsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -4551,11 +4349,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabTestsCreateResponse res = new org.openapis.openapi.models.operations.LabTestsCreateResponse() {{
+        org.openapis.openapi.models.operations.LabTestsCreateResponse res = new org.openapis.openapi.models.operations.LabTestsCreateResponse(contentType, httpRes.statusCode()) {{
             labTest = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -4599,10 +4395,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabTestsDeleteResponse res = new org.openapis.openapi.models.operations.LabTestsDeleteResponse() {{
+        org.openapis.openapi.models.operations.LabTestsDeleteResponse res = new org.openapis.openapi.models.operations.LabTestsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -4639,11 +4433,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabTestsListResponse res = new org.openapis.openapi.models.operations.LabTestsListResponse() {{
+        org.openapis.openapi.models.operations.LabTestsListResponse res = new org.openapis.openapi.models.operations.LabTestsListResponse(contentType, httpRes.statusCode()) {{
             labTestsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4687,10 +4479,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabTestsPartialUpdateResponse res = new org.openapis.openapi.models.operations.LabTestsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.LabTestsPartialUpdateResponse res = new org.openapis.openapi.models.operations.LabTestsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -4727,11 +4517,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabTestsReadResponse res = new org.openapis.openapi.models.operations.LabTestsReadResponse() {{
+        org.openapis.openapi.models.operations.LabTestsReadResponse res = new org.openapis.openapi.models.operations.LabTestsReadResponse(contentType, httpRes.statusCode()) {{
             labTest = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4775,10 +4563,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LabTestsUpdateResponse res = new org.openapis.openapi.models.operations.LabTestsUpdateResponse() {{
+        org.openapis.openapi.models.operations.LabTestsUpdateResponse res = new org.openapis.openapi.models.operations.LabTestsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -4815,10 +4601,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MedicationsAppendToPharmacyNoteResponse res = new org.openapis.openapi.models.operations.MedicationsAppendToPharmacyNoteResponse() {{
+        org.openapis.openapi.models.operations.MedicationsAppendToPharmacyNoteResponse res = new org.openapis.openapi.models.operations.MedicationsAppendToPharmacyNoteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -4855,11 +4639,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MedicationsCreateResponse res = new org.openapis.openapi.models.operations.MedicationsCreateResponse() {{
+        org.openapis.openapi.models.operations.MedicationsCreateResponse res = new org.openapis.openapi.models.operations.MedicationsCreateResponse(contentType, httpRes.statusCode()) {{
             patientDrug = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -4903,11 +4685,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MedicationsListResponse res = new org.openapis.openapi.models.operations.MedicationsListResponse() {{
+        org.openapis.openapi.models.operations.MedicationsListResponse res = new org.openapis.openapi.models.operations.MedicationsListResponse(contentType, httpRes.statusCode()) {{
             medicationsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4951,10 +4731,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MedicationsPartialUpdateResponse res = new org.openapis.openapi.models.operations.MedicationsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.MedicationsPartialUpdateResponse res = new org.openapis.openapi.models.operations.MedicationsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -4991,11 +4769,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MedicationsReadResponse res = new org.openapis.openapi.models.operations.MedicationsReadResponse() {{
+        org.openapis.openapi.models.operations.MedicationsReadResponse res = new org.openapis.openapi.models.operations.MedicationsReadResponse(contentType, httpRes.statusCode()) {{
             patientDrug = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5039,10 +4815,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MedicationsUpdateResponse res = new org.openapis.openapi.models.operations.MedicationsUpdateResponse() {{
+        org.openapis.openapi.models.operations.MedicationsUpdateResponse res = new org.openapis.openapi.models.operations.MedicationsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -5079,11 +4853,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientCommunicationsCreateResponse res = new org.openapis.openapi.models.operations.PatientCommunicationsCreateResponse() {{
+        org.openapis.openapi.models.operations.PatientCommunicationsCreateResponse res = new org.openapis.openapi.models.operations.PatientCommunicationsCreateResponse(contentType, httpRes.statusCode()) {{
             patientCommunication = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -5127,11 +4899,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientCommunicationsListResponse res = new org.openapis.openapi.models.operations.PatientCommunicationsListResponse() {{
+        org.openapis.openapi.models.operations.PatientCommunicationsListResponse res = new org.openapis.openapi.models.operations.PatientCommunicationsListResponse(contentType, httpRes.statusCode()) {{
             patientCommunicationsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5175,10 +4945,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientCommunicationsPartialUpdateResponse res = new org.openapis.openapi.models.operations.PatientCommunicationsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatientCommunicationsPartialUpdateResponse res = new org.openapis.openapi.models.operations.PatientCommunicationsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -5215,11 +4983,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientCommunicationsReadResponse res = new org.openapis.openapi.models.operations.PatientCommunicationsReadResponse() {{
+        org.openapis.openapi.models.operations.PatientCommunicationsReadResponse res = new org.openapis.openapi.models.operations.PatientCommunicationsReadResponse(contentType, httpRes.statusCode()) {{
             patientCommunication = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5263,10 +5029,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientCommunicationsUpdateResponse res = new org.openapis.openapi.models.operations.PatientCommunicationsUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatientCommunicationsUpdateResponse res = new org.openapis.openapi.models.operations.PatientCommunicationsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -5303,11 +5067,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientFlagTypesCreateResponse res = new org.openapis.openapi.models.operations.PatientFlagTypesCreateResponse() {{
+        org.openapis.openapi.models.operations.PatientFlagTypesCreateResponse res = new org.openapis.openapi.models.operations.PatientFlagTypesCreateResponse(contentType, httpRes.statusCode()) {{
             patientFlagType = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -5351,11 +5113,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientFlagTypesListResponse res = new org.openapis.openapi.models.operations.PatientFlagTypesListResponse() {{
+        org.openapis.openapi.models.operations.PatientFlagTypesListResponse res = new org.openapis.openapi.models.operations.PatientFlagTypesListResponse(contentType, httpRes.statusCode()) {{
             patientFlagTypesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5399,10 +5159,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientFlagTypesPartialUpdateResponse res = new org.openapis.openapi.models.operations.PatientFlagTypesPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatientFlagTypesPartialUpdateResponse res = new org.openapis.openapi.models.operations.PatientFlagTypesPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -5439,11 +5197,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientFlagTypesReadResponse res = new org.openapis.openapi.models.operations.PatientFlagTypesReadResponse() {{
+        org.openapis.openapi.models.operations.PatientFlagTypesReadResponse res = new org.openapis.openapi.models.operations.PatientFlagTypesReadResponse(contentType, httpRes.statusCode()) {{
             patientFlagType = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5487,10 +5243,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientFlagTypesUpdateResponse res = new org.openapis.openapi.models.operations.PatientFlagTypesUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatientFlagTypesUpdateResponse res = new org.openapis.openapi.models.operations.PatientFlagTypesUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -5527,11 +5281,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientInterventionsCreateResponse res = new org.openapis.openapi.models.operations.PatientInterventionsCreateResponse() {{
+        org.openapis.openapi.models.operations.PatientInterventionsCreateResponse res = new org.openapis.openapi.models.operations.PatientInterventionsCreateResponse(contentType, httpRes.statusCode()) {{
             patientIntervention = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -5575,11 +5327,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientInterventionsListResponse res = new org.openapis.openapi.models.operations.PatientInterventionsListResponse() {{
+        org.openapis.openapi.models.operations.PatientInterventionsListResponse res = new org.openapis.openapi.models.operations.PatientInterventionsListResponse(contentType, httpRes.statusCode()) {{
             patientInterventionsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5623,10 +5373,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientInterventionsPartialUpdateResponse res = new org.openapis.openapi.models.operations.PatientInterventionsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatientInterventionsPartialUpdateResponse res = new org.openapis.openapi.models.operations.PatientInterventionsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -5663,11 +5411,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientInterventionsReadResponse res = new org.openapis.openapi.models.operations.PatientInterventionsReadResponse() {{
+        org.openapis.openapi.models.operations.PatientInterventionsReadResponse res = new org.openapis.openapi.models.operations.PatientInterventionsReadResponse(contentType, httpRes.statusCode()) {{
             patientIntervention = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5711,10 +5457,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientInterventionsUpdateResponse res = new org.openapis.openapi.models.operations.PatientInterventionsUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatientInterventionsUpdateResponse res = new org.openapis.openapi.models.operations.PatientInterventionsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -5744,11 +5488,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientLabResultsCreateResponse res = new org.openapis.openapi.models.operations.PatientLabResultsCreateResponse() {{
+        org.openapis.openapi.models.operations.PatientLabResultsCreateResponse res = new org.openapis.openapi.models.operations.PatientLabResultsCreateResponse(contentType, httpRes.statusCode()) {{
             patientLabResultSet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -5785,10 +5527,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientLabResultsDeleteResponse res = new org.openapis.openapi.models.operations.PatientLabResultsDeleteResponse() {{
+        org.openapis.openapi.models.operations.PatientLabResultsDeleteResponse res = new org.openapis.openapi.models.operations.PatientLabResultsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -5818,11 +5558,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientLabResultsListResponse res = new org.openapis.openapi.models.operations.PatientLabResultsListResponse() {{
+        org.openapis.openapi.models.operations.PatientLabResultsListResponse res = new org.openapis.openapi.models.operations.PatientLabResultsListResponse(contentType, httpRes.statusCode()) {{
             patientLabResultsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5859,10 +5597,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientLabResultsPartialUpdateResponse res = new org.openapis.openapi.models.operations.PatientLabResultsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatientLabResultsPartialUpdateResponse res = new org.openapis.openapi.models.operations.PatientLabResultsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -5892,11 +5628,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientLabResultsReadResponse res = new org.openapis.openapi.models.operations.PatientLabResultsReadResponse() {{
+        org.openapis.openapi.models.operations.PatientLabResultsReadResponse res = new org.openapis.openapi.models.operations.PatientLabResultsReadResponse(contentType, httpRes.statusCode()) {{
             patientLabResultSet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5933,10 +5667,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientLabResultsUpdateResponse res = new org.openapis.openapi.models.operations.PatientLabResultsUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatientLabResultsUpdateResponse res = new org.openapis.openapi.models.operations.PatientLabResultsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -5966,11 +5698,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientMessagesCreateResponse res = new org.openapis.openapi.models.operations.PatientMessagesCreateResponse() {{
+        org.openapis.openapi.models.operations.PatientMessagesCreateResponse res = new org.openapis.openapi.models.operations.PatientMessagesCreateResponse(contentType, httpRes.statusCode()) {{
             patientMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -6007,11 +5737,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientMessagesListResponse res = new org.openapis.openapi.models.operations.PatientMessagesListResponse() {{
+        org.openapis.openapi.models.operations.PatientMessagesListResponse res = new org.openapis.openapi.models.operations.PatientMessagesListResponse(contentType, httpRes.statusCode()) {{
             patientMessagesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6048,10 +5776,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientMessagesPartialUpdateResponse res = new org.openapis.openapi.models.operations.PatientMessagesPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatientMessagesPartialUpdateResponse res = new org.openapis.openapi.models.operations.PatientMessagesPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -6081,11 +5807,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientMessagesReadResponse res = new org.openapis.openapi.models.operations.PatientMessagesReadResponse() {{
+        org.openapis.openapi.models.operations.PatientMessagesReadResponse res = new org.openapis.openapi.models.operations.PatientMessagesReadResponse(contentType, httpRes.statusCode()) {{
             patientMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6122,10 +5846,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientMessagesUpdateResponse res = new org.openapis.openapi.models.operations.PatientMessagesUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatientMessagesUpdateResponse res = new org.openapis.openapi.models.operations.PatientMessagesUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -6162,11 +5884,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientPhysicalExamsCreateResponse res = new org.openapis.openapi.models.operations.PatientPhysicalExamsCreateResponse() {{
+        org.openapis.openapi.models.operations.PatientPhysicalExamsCreateResponse res = new org.openapis.openapi.models.operations.PatientPhysicalExamsCreateResponse(contentType, httpRes.statusCode()) {{
             patientPhysicalExam = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -6210,11 +5930,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientPhysicalExamsListResponse res = new org.openapis.openapi.models.operations.PatientPhysicalExamsListResponse() {{
+        org.openapis.openapi.models.operations.PatientPhysicalExamsListResponse res = new org.openapis.openapi.models.operations.PatientPhysicalExamsListResponse(contentType, httpRes.statusCode()) {{
             patientPhysicalExamsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6258,10 +5976,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientPhysicalExamsPartialUpdateResponse res = new org.openapis.openapi.models.operations.PatientPhysicalExamsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatientPhysicalExamsPartialUpdateResponse res = new org.openapis.openapi.models.operations.PatientPhysicalExamsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -6298,11 +6014,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientPhysicalExamsReadResponse res = new org.openapis.openapi.models.operations.PatientPhysicalExamsReadResponse() {{
+        org.openapis.openapi.models.operations.PatientPhysicalExamsReadResponse res = new org.openapis.openapi.models.operations.PatientPhysicalExamsReadResponse(contentType, httpRes.statusCode()) {{
             patientPhysicalExam = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6346,10 +6060,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientPhysicalExamsUpdateResponse res = new org.openapis.openapi.models.operations.PatientPhysicalExamsUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatientPhysicalExamsUpdateResponse res = new org.openapis.openapi.models.operations.PatientPhysicalExamsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -6379,11 +6091,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientRiskAssessmentsCreateResponse res = new org.openapis.openapi.models.operations.PatientRiskAssessmentsCreateResponse() {{
+        org.openapis.openapi.models.operations.PatientRiskAssessmentsCreateResponse res = new org.openapis.openapi.models.operations.PatientRiskAssessmentsCreateResponse(contentType, httpRes.statusCode()) {{
             patientRiskAssessment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -6420,11 +6130,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientRiskAssessmentsListResponse res = new org.openapis.openapi.models.operations.PatientRiskAssessmentsListResponse() {{
+        org.openapis.openapi.models.operations.PatientRiskAssessmentsListResponse res = new org.openapis.openapi.models.operations.PatientRiskAssessmentsListResponse(contentType, httpRes.statusCode()) {{
             patientRiskAssessmentsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6461,10 +6169,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientRiskAssessmentsPartialUpdateResponse res = new org.openapis.openapi.models.operations.PatientRiskAssessmentsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatientRiskAssessmentsPartialUpdateResponse res = new org.openapis.openapi.models.operations.PatientRiskAssessmentsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -6494,11 +6200,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientRiskAssessmentsReadResponse res = new org.openapis.openapi.models.operations.PatientRiskAssessmentsReadResponse() {{
+        org.openapis.openapi.models.operations.PatientRiskAssessmentsReadResponse res = new org.openapis.openapi.models.operations.PatientRiskAssessmentsReadResponse(contentType, httpRes.statusCode()) {{
             patientRiskAssessment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6535,10 +6239,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientRiskAssessmentsUpdateResponse res = new org.openapis.openapi.models.operations.PatientRiskAssessmentsUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatientRiskAssessmentsUpdateResponse res = new org.openapis.openapi.models.operations.PatientRiskAssessmentsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -6575,11 +6277,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientVaccineRecordsCreateResponse res = new org.openapis.openapi.models.operations.PatientVaccineRecordsCreateResponse() {{
+        org.openapis.openapi.models.operations.PatientVaccineRecordsCreateResponse res = new org.openapis.openapi.models.operations.PatientVaccineRecordsCreateResponse(contentType, httpRes.statusCode()) {{
             patientVaccineRecord = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -6623,11 +6323,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientVaccineRecordsListResponse res = new org.openapis.openapi.models.operations.PatientVaccineRecordsListResponse() {{
+        org.openapis.openapi.models.operations.PatientVaccineRecordsListResponse res = new org.openapis.openapi.models.operations.PatientVaccineRecordsListResponse(contentType, httpRes.statusCode()) {{
             patientVaccineRecordsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6671,10 +6369,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientVaccineRecordsPartialUpdateResponse res = new org.openapis.openapi.models.operations.PatientVaccineRecordsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatientVaccineRecordsPartialUpdateResponse res = new org.openapis.openapi.models.operations.PatientVaccineRecordsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -6711,11 +6407,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientVaccineRecordsReadResponse res = new org.openapis.openapi.models.operations.PatientVaccineRecordsReadResponse() {{
+        org.openapis.openapi.models.operations.PatientVaccineRecordsReadResponse res = new org.openapis.openapi.models.operations.PatientVaccineRecordsReadResponse(contentType, httpRes.statusCode()) {{
             patientVaccineRecord = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6759,10 +6453,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientVaccineRecordsUpdateResponse res = new org.openapis.openapi.models.operations.PatientVaccineRecordsUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatientVaccineRecordsUpdateResponse res = new org.openapis.openapi.models.operations.PatientVaccineRecordsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -6799,11 +6491,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientsCcdaResponse res = new org.openapis.openapi.models.operations.PatientsCcdaResponse() {{
+        org.openapis.openapi.models.operations.PatientsCcdaResponse res = new org.openapis.openapi.models.operations.PatientsCcdaResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6846,11 +6536,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientsCreateResponse res = new org.openapis.openapi.models.operations.PatientsCreateResponse() {{
+        org.openapis.openapi.models.operations.PatientsCreateResponse res = new org.openapis.openapi.models.operations.PatientsCreateResponse(contentType, httpRes.statusCode()) {{
             patient = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -6894,10 +6582,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientsDeleteResponse res = new org.openapis.openapi.models.operations.PatientsDeleteResponse() {{
+        org.openapis.openapi.models.operations.PatientsDeleteResponse res = new org.openapis.openapi.models.operations.PatientsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -6934,11 +6620,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientsListResponse res = new org.openapis.openapi.models.operations.PatientsListResponse() {{
+        org.openapis.openapi.models.operations.PatientsListResponse res = new org.openapis.openapi.models.operations.PatientsListResponse(contentType, httpRes.statusCode()) {{
             patientsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6982,11 +6666,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientsOnpatientAccessCreateResponse res = new org.openapis.openapi.models.operations.PatientsOnpatientAccessCreateResponse() {{
+        org.openapis.openapi.models.operations.PatientsOnpatientAccessCreateResponse res = new org.openapis.openapi.models.operations.PatientsOnpatientAccessCreateResponse(contentType, httpRes.statusCode()) {{
             patient = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -7030,10 +6712,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientsOnpatientAccessDeleteResponse res = new org.openapis.openapi.models.operations.PatientsOnpatientAccessDeleteResponse() {{
+        org.openapis.openapi.models.operations.PatientsOnpatientAccessDeleteResponse res = new org.openapis.openapi.models.operations.PatientsOnpatientAccessDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -7070,11 +6750,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientsOnpatientAccessReadResponse res = new org.openapis.openapi.models.operations.PatientsOnpatientAccessReadResponse() {{
+        org.openapis.openapi.models.operations.PatientsOnpatientAccessReadResponse res = new org.openapis.openapi.models.operations.PatientsOnpatientAccessReadResponse(contentType, httpRes.statusCode()) {{
             patient = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7118,10 +6796,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientsPartialUpdateResponse res = new org.openapis.openapi.models.operations.PatientsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatientsPartialUpdateResponse res = new org.openapis.openapi.models.operations.PatientsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -7158,11 +6834,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientsQrda1Response res = new org.openapis.openapi.models.operations.PatientsQrda1Response() {{
+        org.openapis.openapi.models.operations.PatientsQrda1Response res = new org.openapis.openapi.models.operations.PatientsQrda1Response(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7205,11 +6879,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientsReadResponse res = new org.openapis.openapi.models.operations.PatientsReadResponse() {{
+        org.openapis.openapi.models.operations.PatientsReadResponse res = new org.openapis.openapi.models.operations.PatientsReadResponse(contentType, httpRes.statusCode()) {{
             patient = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7246,11 +6918,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientsSummaryCreateResponse res = new org.openapis.openapi.models.operations.PatientsSummaryCreateResponse() {{
+        org.openapis.openapi.models.operations.PatientsSummaryCreateResponse res = new org.openapis.openapi.models.operations.PatientsSummaryCreateResponse(contentType, httpRes.statusCode()) {{
             patient = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -7287,10 +6957,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientsSummaryDeleteResponse res = new org.openapis.openapi.models.operations.PatientsSummaryDeleteResponse() {{
+        org.openapis.openapi.models.operations.PatientsSummaryDeleteResponse res = new org.openapis.openapi.models.operations.PatientsSummaryDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -7320,11 +6988,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientsSummaryListResponse res = new org.openapis.openapi.models.operations.PatientsSummaryListResponse() {{
+        org.openapis.openapi.models.operations.PatientsSummaryListResponse res = new org.openapis.openapi.models.operations.PatientsSummaryListResponse(contentType, httpRes.statusCode()) {{
             patientsSummaryList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7361,10 +7027,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientsSummaryPartialUpdateResponse res = new org.openapis.openapi.models.operations.PatientsSummaryPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatientsSummaryPartialUpdateResponse res = new org.openapis.openapi.models.operations.PatientsSummaryPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -7394,11 +7058,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientsSummaryReadResponse res = new org.openapis.openapi.models.operations.PatientsSummaryReadResponse() {{
+        org.openapis.openapi.models.operations.PatientsSummaryReadResponse res = new org.openapis.openapi.models.operations.PatientsSummaryReadResponse(contentType, httpRes.statusCode()) {{
             patient = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7435,10 +7097,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientsSummaryUpdateResponse res = new org.openapis.openapi.models.operations.PatientsSummaryUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatientsSummaryUpdateResponse res = new org.openapis.openapi.models.operations.PatientsSummaryUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -7475,10 +7135,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatientsUpdateResponse res = new org.openapis.openapi.models.operations.PatientsUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatientsUpdateResponse res = new org.openapis.openapi.models.operations.PatientsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -7515,11 +7173,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrescriptionMessagesListResponse res = new org.openapis.openapi.models.operations.PrescriptionMessagesListResponse() {{
+        org.openapis.openapi.models.operations.PrescriptionMessagesListResponse res = new org.openapis.openapi.models.operations.PrescriptionMessagesListResponse(contentType, httpRes.statusCode()) {{
             prescriptionMessagesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7563,11 +7219,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrescriptionMessagesReadResponse res = new org.openapis.openapi.models.operations.PrescriptionMessagesReadResponse() {{
+        org.openapis.openapi.models.operations.PrescriptionMessagesReadResponse res = new org.openapis.openapi.models.operations.PrescriptionMessagesReadResponse(contentType, httpRes.statusCode()) {{
             prescriptionMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7611,11 +7265,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProblemsCreateResponse res = new org.openapis.openapi.models.operations.ProblemsCreateResponse() {{
+        org.openapis.openapi.models.operations.ProblemsCreateResponse res = new org.openapis.openapi.models.operations.ProblemsCreateResponse(contentType, httpRes.statusCode()) {{
             patientProblem = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -7659,11 +7311,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProblemsListResponse res = new org.openapis.openapi.models.operations.ProblemsListResponse() {{
+        org.openapis.openapi.models.operations.ProblemsListResponse res = new org.openapis.openapi.models.operations.ProblemsListResponse(contentType, httpRes.statusCode()) {{
             problemsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7707,10 +7357,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProblemsPartialUpdateResponse res = new org.openapis.openapi.models.operations.ProblemsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.ProblemsPartialUpdateResponse res = new org.openapis.openapi.models.operations.ProblemsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -7747,11 +7395,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProblemsReadResponse res = new org.openapis.openapi.models.operations.ProblemsReadResponse() {{
+        org.openapis.openapi.models.operations.ProblemsReadResponse res = new org.openapis.openapi.models.operations.ProblemsReadResponse(contentType, httpRes.statusCode()) {{
             patientProblem = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7795,10 +7441,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProblemsUpdateResponse res = new org.openapis.openapi.models.operations.ProblemsUpdateResponse() {{
+        org.openapis.openapi.models.operations.ProblemsUpdateResponse res = new org.openapis.openapi.models.operations.ProblemsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -7835,11 +7479,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReminderProfilesCreateResponse res = new org.openapis.openapi.models.operations.ReminderProfilesCreateResponse() {{
+        org.openapis.openapi.models.operations.ReminderProfilesCreateResponse res = new org.openapis.openapi.models.operations.ReminderProfilesCreateResponse(contentType, httpRes.statusCode()) {{
             reminderProfile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -7883,10 +7525,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReminderProfilesDeleteResponse res = new org.openapis.openapi.models.operations.ReminderProfilesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ReminderProfilesDeleteResponse res = new org.openapis.openapi.models.operations.ReminderProfilesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -7923,11 +7563,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReminderProfilesListResponse res = new org.openapis.openapi.models.operations.ReminderProfilesListResponse() {{
+        org.openapis.openapi.models.operations.ReminderProfilesListResponse res = new org.openapis.openapi.models.operations.ReminderProfilesListResponse(contentType, httpRes.statusCode()) {{
             reminderProfilesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7971,10 +7609,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReminderProfilesPartialUpdateResponse res = new org.openapis.openapi.models.operations.ReminderProfilesPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.ReminderProfilesPartialUpdateResponse res = new org.openapis.openapi.models.operations.ReminderProfilesPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -8011,11 +7647,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReminderProfilesReadResponse res = new org.openapis.openapi.models.operations.ReminderProfilesReadResponse() {{
+        org.openapis.openapi.models.operations.ReminderProfilesReadResponse res = new org.openapis.openapi.models.operations.ReminderProfilesReadResponse(contentType, httpRes.statusCode()) {{
             reminderProfile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8059,10 +7693,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReminderProfilesUpdateResponse res = new org.openapis.openapi.models.operations.ReminderProfilesUpdateResponse() {{
+        org.openapis.openapi.models.operations.ReminderProfilesUpdateResponse res = new org.openapis.openapi.models.operations.ReminderProfilesUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -8073,10 +7705,11 @@ public class Clinical {
 
     /**
      * Create sub-vendors -  - - When you get orders, submit them via `/api/lab_orders`, such that doctors can see them in drchrono. -  - - When results come in, submit the result document PDF via `/api/lab_documents` and submit the results data via `/api/lab_results` -  - - Update `/api/lab_orders` status - 
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SublabsCreateResponse sublabsCreate() throws Exception {
+    public org.openapis.openapi.models.operations.SublabsCreateResponse sublabsCreate(org.openapis.openapi.models.operations.SublabsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/sublabs");
         
@@ -8085,16 +7718,15 @@ public class Clinical {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SublabsCreateResponse res = new org.openapis.openapi.models.operations.SublabsCreateResponse() {{
+        org.openapis.openapi.models.operations.SublabsCreateResponse res = new org.openapis.openapi.models.operations.SublabsCreateResponse(contentType, httpRes.statusCode()) {{
             labVendorLocation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -8132,10 +7764,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SublabsDeleteResponse res = new org.openapis.openapi.models.operations.SublabsDeleteResponse() {{
+        org.openapis.openapi.models.operations.SublabsDeleteResponse res = new org.openapis.openapi.models.operations.SublabsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -8172,11 +7802,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SublabsListResponse res = new org.openapis.openapi.models.operations.SublabsListResponse() {{
+        org.openapis.openapi.models.operations.SublabsListResponse res = new org.openapis.openapi.models.operations.SublabsListResponse(contentType, httpRes.statusCode()) {{
             sublabsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8214,10 +7842,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SublabsPartialUpdateResponse res = new org.openapis.openapi.models.operations.SublabsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.SublabsPartialUpdateResponse res = new org.openapis.openapi.models.operations.SublabsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -8248,11 +7874,9 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SublabsReadResponse res = new org.openapis.openapi.models.operations.SublabsReadResponse() {{
+        org.openapis.openapi.models.operations.SublabsReadResponse res = new org.openapis.openapi.models.operations.SublabsReadResponse(contentType, httpRes.statusCode()) {{
             labVendorLocation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8290,10 +7914,8 @@ public class Clinical {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SublabsUpdateResponse res = new org.openapis.openapi.models.operations.SublabsUpdateResponse() {{
+        org.openapis.openapi.models.operations.SublabsUpdateResponse res = new org.openapis.openapi.models.operations.SublabsUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {

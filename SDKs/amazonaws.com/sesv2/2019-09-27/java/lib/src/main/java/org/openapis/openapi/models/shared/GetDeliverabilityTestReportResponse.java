@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDeliverabilityTestReportResponse {
     @JsonProperty("DeliverabilityTestReport")
     public DeliverabilityTestReport deliverabilityTestReport;
+
     public GetDeliverabilityTestReportResponse withDeliverabilityTestReport(DeliverabilityTestReport deliverabilityTestReport) {
         this.deliverabilityTestReport = deliverabilityTestReport;
         return this;
@@ -21,6 +22,7 @@ public class GetDeliverabilityTestReportResponse {
     
     @JsonProperty("IspPlacements")
     public IspPlacement[] ispPlacements;
+
     public GetDeliverabilityTestReportResponse withIspPlacements(IspPlacement[] ispPlacements) {
         this.ispPlacements = ispPlacements;
         return this;
@@ -29,6 +31,7 @@ public class GetDeliverabilityTestReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public GetDeliverabilityTestReportResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -36,6 +39,7 @@ public class GetDeliverabilityTestReportResponse {
     
     @JsonProperty("OverallPlacement")
     public PlacementStatistics overallPlacement;
+
     public GetDeliverabilityTestReportResponse withOverallPlacement(PlacementStatistics overallPlacement) {
         this.overallPlacement = overallPlacement;
         return this;
@@ -44,9 +48,15 @@ public class GetDeliverabilityTestReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public GetDeliverabilityTestReportResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetDeliverabilityTestReportResponse(@JsonProperty("DeliverabilityTestReport") DeliverabilityTestReport deliverabilityTestReport, @JsonProperty("IspPlacements") IspPlacement[] ispPlacements, @JsonProperty("OverallPlacement") PlacementStatistics overallPlacement) {
+        this.deliverabilityTestReport = deliverabilityTestReport;
+        this.ispPlacements = ispPlacements;
+        this.overallPlacement = overallPlacement;
+  }
 }

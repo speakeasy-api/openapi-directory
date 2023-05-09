@@ -14,6 +14,7 @@ public class TypedNode {
      */
     @JsonProperty("id")
     public String id;
+
     public TypedNode withId(String id) {
         this.id = id;
         return this;
@@ -25,6 +26,7 @@ public class TypedNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public TypedNode withLabel(String label) {
         this.label = label;
         return this;
@@ -36,6 +38,7 @@ public class TypedNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxon")
     public Node taxon;
+
     public TypedNode withTaxon(Node taxon) {
         this.taxon = taxon;
         return this;
@@ -47,9 +50,13 @@ public class TypedNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public TypedNode withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TypedNode(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

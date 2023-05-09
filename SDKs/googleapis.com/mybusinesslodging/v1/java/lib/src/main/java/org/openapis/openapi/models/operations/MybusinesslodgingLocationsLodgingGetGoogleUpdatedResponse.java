@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MybusinesslodgingLocationsLodgingGetGoogleUpdatedResponse {
     
     public String contentType;
+
     public MybusinesslodgingLocationsLodgingGetGoogleUpdatedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MybusinesslodgingLocationsLodgingGetGoogleUpdatedResponse {
      */
     
     public org.openapis.openapi.models.shared.GetGoogleUpdatedLodgingResponse getGoogleUpdatedLodgingResponse;
+
     public MybusinesslodgingLocationsLodgingGetGoogleUpdatedResponse withGetGoogleUpdatedLodgingResponse(org.openapis.openapi.models.shared.GetGoogleUpdatedLodgingResponse getGoogleUpdatedLodgingResponse) {
         this.getGoogleUpdatedLodgingResponse = getGoogleUpdatedLodgingResponse;
         return this;
@@ -26,6 +29,7 @@ public class MybusinesslodgingLocationsLodgingGetGoogleUpdatedResponse {
     
     
     public Integer statusCode;
+
     public MybusinesslodgingLocationsLodgingGetGoogleUpdatedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MybusinesslodgingLocationsLodgingGetGoogleUpdatedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MybusinesslodgingLocationsLodgingGetGoogleUpdatedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MybusinesslodgingLocationsLodgingGetGoogleUpdatedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribePipelinesOutput {
     @JsonProperty("pipelineDescriptionList")
     public PipelineDescription[] pipelineDescriptionList;
+
     public DescribePipelinesOutput withPipelineDescriptionList(PipelineDescription[] pipelineDescriptionList) {
         this.pipelineDescriptionList = pipelineDescriptionList;
         return this;
     }
     
+    public DescribePipelinesOutput(@JsonProperty("pipelineDescriptionList") PipelineDescription[] pipelineDescriptionList) {
+        this.pipelineDescriptionList = pipelineDescriptionList;
+  }
 }

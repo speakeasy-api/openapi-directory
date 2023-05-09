@@ -18,9 +18,11 @@ public class GooglePlayDeveloperReportingV1beta1FreshnessInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freshnesses")
     public GooglePlayDeveloperReportingV1beta1FreshnessInfoFreshness[] freshnesses;
+
     public GooglePlayDeveloperReportingV1beta1FreshnessInfo withFreshnesses(GooglePlayDeveloperReportingV1beta1FreshnessInfoFreshness[] freshnesses) {
         this.freshnesses = freshnesses;
         return this;
     }
     
+    public GooglePlayDeveloperReportingV1beta1FreshnessInfo(){}
 }

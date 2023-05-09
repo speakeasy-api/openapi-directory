@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImportFilter {
     @JsonProperty("name")
     public ImportFilterNameEnum name;
+
     public ImportFilter withName(ImportFilterNameEnum name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class ImportFilter {
     
     @JsonProperty("operator")
     public ImportFilterOperatorEnum operator;
+
     public ImportFilter withOperator(ImportFilterOperatorEnum operator) {
         this.operator = operator;
         return this;
@@ -26,9 +28,15 @@ public class ImportFilter {
     
     @JsonProperty("values")
     public String[] values;
+
     public ImportFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public ImportFilter(@JsonProperty("name") ImportFilterNameEnum name, @JsonProperty("operator") ImportFilterOperatorEnum operator, @JsonProperty("values") String[] values) {
+        this.name = name;
+        this.operator = operator;
+        this.values = values;
+  }
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateCategoriesRequest {
     @JsonProperty("categories")
     public CategoryDTO[] categories;
+
     public CreateCategoriesRequest withCategories(CategoryDTO[] categories) {
         this.categories = categories;
         return this;
     }
     
+    public CreateCategoriesRequest(@JsonProperty("categories") CategoryDTO[] categories) {
+        this.categories = categories;
+  }
 }

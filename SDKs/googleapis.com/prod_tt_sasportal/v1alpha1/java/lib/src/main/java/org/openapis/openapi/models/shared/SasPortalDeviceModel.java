@@ -18,6 +18,7 @@ public class SasPortalDeviceModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firmwareVersion")
     public String firmwareVersion;
+
     public SasPortalDeviceModel withFirmwareVersion(String firmwareVersion) {
         this.firmwareVersion = firmwareVersion;
         return this;
@@ -29,6 +30,7 @@ public class SasPortalDeviceModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hardwareVersion")
     public String hardwareVersion;
+
     public SasPortalDeviceModel withHardwareVersion(String hardwareVersion) {
         this.hardwareVersion = hardwareVersion;
         return this;
@@ -40,6 +42,7 @@ public class SasPortalDeviceModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SasPortalDeviceModel withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class SasPortalDeviceModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("softwareVersion")
     public String softwareVersion;
+
     public SasPortalDeviceModel withSoftwareVersion(String softwareVersion) {
         this.softwareVersion = softwareVersion;
         return this;
@@ -62,9 +66,11 @@ public class SasPortalDeviceModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor")
     public String vendor;
+
     public SasPortalDeviceModel withVendor(String vendor) {
         this.vendor = vendor;
         return this;
     }
     
+    public SasPortalDeviceModel(){}
 }

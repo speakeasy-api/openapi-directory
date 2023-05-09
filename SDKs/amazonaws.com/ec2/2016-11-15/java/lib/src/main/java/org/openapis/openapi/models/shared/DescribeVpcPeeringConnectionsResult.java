@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcPeeringConnectionsResult {
     
     public String nextToken;
+
     public DescribeVpcPeeringConnectionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVpcPeeringConnectionsResult {
     
     
     public DescribeVpcPeeringConnectionsResultVpcPeeringConnections[] vpcPeeringConnections;
+
     public DescribeVpcPeeringConnectionsResult withVpcPeeringConnections(DescribeVpcPeeringConnectionsResultVpcPeeringConnections[] vpcPeeringConnections) {
         this.vpcPeeringConnections = vpcPeeringConnections;
         return this;
     }
     
+    public DescribeVpcPeeringConnectionsResult(){}
 }

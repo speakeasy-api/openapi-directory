@@ -12,6 +12,7 @@ public class RunAMonitor200ApplicationJSONRunInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionUid")
     public String collectionUid;
+
     public RunAMonitor200ApplicationJSONRunInfo withCollectionUid(String collectionUid) {
         this.collectionUid = collectionUid;
         return this;
@@ -20,6 +21,7 @@ public class RunAMonitor200ApplicationJSONRunInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finishedAt")
     public String finishedAt;
+
     public RunAMonitor200ApplicationJSONRunInfo withFinishedAt(String finishedAt) {
         this.finishedAt = finishedAt;
         return this;
@@ -28,6 +30,7 @@ public class RunAMonitor200ApplicationJSONRunInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public RunAMonitor200ApplicationJSONRunInfo withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -36,6 +39,7 @@ public class RunAMonitor200ApplicationJSONRunInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitorId")
     public String monitorId;
+
     public RunAMonitor200ApplicationJSONRunInfo withMonitorId(String monitorId) {
         this.monitorId = monitorId;
         return this;
@@ -44,6 +48,7 @@ public class RunAMonitor200ApplicationJSONRunInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RunAMonitor200ApplicationJSONRunInfo withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class RunAMonitor200ApplicationJSONRunInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startedAt")
     public String startedAt;
+
     public RunAMonitor200ApplicationJSONRunInfo withStartedAt(String startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -60,9 +66,11 @@ public class RunAMonitor200ApplicationJSONRunInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public RunAMonitor200ApplicationJSONRunInfo withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public RunAMonitor200ApplicationJSONRunInfo(){}
 }

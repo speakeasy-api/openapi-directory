@@ -12,6 +12,7 @@ public class UpdateInstanceMetadataOptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpEndpoint")
     public HttpEndpointEnum httpEndpoint;
+
     public UpdateInstanceMetadataOptionsRequest withHttpEndpoint(HttpEndpointEnum httpEndpoint) {
         this.httpEndpoint = httpEndpoint;
         return this;
@@ -20,6 +21,7 @@ public class UpdateInstanceMetadataOptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpProtocolIpv6")
     public HttpProtocolIpv6Enum httpProtocolIpv6;
+
     public UpdateInstanceMetadataOptionsRequest withHttpProtocolIpv6(HttpProtocolIpv6Enum httpProtocolIpv6) {
         this.httpProtocolIpv6 = httpProtocolIpv6;
         return this;
@@ -28,6 +30,7 @@ public class UpdateInstanceMetadataOptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpPutResponseHopLimit")
     public Long httpPutResponseHopLimit;
+
     public UpdateInstanceMetadataOptionsRequest withHttpPutResponseHopLimit(Long httpPutResponseHopLimit) {
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         return this;
@@ -36,6 +39,7 @@ public class UpdateInstanceMetadataOptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpTokens")
     public HttpTokensEnum httpTokens;
+
     public UpdateInstanceMetadataOptionsRequest withHttpTokens(HttpTokensEnum httpTokens) {
         this.httpTokens = httpTokens;
         return this;
@@ -43,9 +47,13 @@ public class UpdateInstanceMetadataOptionsRequest {
     
     @JsonProperty("instanceName")
     public String instanceName;
+
     public UpdateInstanceMetadataOptionsRequest withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
     
+    public UpdateInstanceMetadataOptionsRequest(@JsonProperty("instanceName") String instanceName) {
+        this.instanceName = instanceName;
+  }
 }

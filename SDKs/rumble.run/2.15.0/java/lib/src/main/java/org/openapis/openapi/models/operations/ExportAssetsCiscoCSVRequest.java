@@ -12,9 +12,11 @@ public class ExportAssetsCiscoCSVRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public ExportAssetsCiscoCSVRequest withSearch(String search) {
         this.search = search;
         return this;
     }
     
+    public ExportAssetsCiscoCSVRequest(){}
 }

@@ -18,6 +18,7 @@ public class LookupEffectiveGuestPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osArchitecture")
     public String osArchitecture;
+
     public LookupEffectiveGuestPolicyRequest withOsArchitecture(String osArchitecture) {
         this.osArchitecture = osArchitecture;
         return this;
@@ -29,6 +30,7 @@ public class LookupEffectiveGuestPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osShortName")
     public String osShortName;
+
     public LookupEffectiveGuestPolicyRequest withOsShortName(String osShortName) {
         this.osShortName = osShortName;
         return this;
@@ -40,9 +42,11 @@ public class LookupEffectiveGuestPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osVersion")
     public String osVersion;
+
     public LookupEffectiveGuestPolicyRequest withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
     }
     
+    public LookupEffectiveGuestPolicyRequest(){}
 }

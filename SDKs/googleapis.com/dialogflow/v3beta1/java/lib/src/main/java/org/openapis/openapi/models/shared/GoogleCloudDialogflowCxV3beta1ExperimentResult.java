@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1ExperimentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdateTime")
     public String lastUpdateTime;
+
     public GoogleCloudDialogflowCxV3beta1ExperimentResult withLastUpdateTime(String lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3beta1ExperimentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionMetrics")
     public GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetrics[] versionMetrics;
+
     public GoogleCloudDialogflowCxV3beta1ExperimentResult withVersionMetrics(GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetrics[] versionMetrics) {
         this.versionMetrics = versionMetrics;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1ExperimentResult(){}
 }

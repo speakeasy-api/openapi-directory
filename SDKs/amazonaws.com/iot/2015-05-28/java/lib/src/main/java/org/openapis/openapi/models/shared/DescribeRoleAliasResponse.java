@@ -15,9 +15,11 @@ public class DescribeRoleAliasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleAliasDescription")
     public RoleAliasDescription roleAliasDescription;
+
     public DescribeRoleAliasResponse withRoleAliasDescription(RoleAliasDescription roleAliasDescription) {
         this.roleAliasDescription = roleAliasDescription;
         return this;
     }
     
+    public DescribeRoleAliasResponse(){}
 }

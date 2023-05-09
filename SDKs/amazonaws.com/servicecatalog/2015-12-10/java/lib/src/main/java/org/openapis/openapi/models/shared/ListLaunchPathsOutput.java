@@ -15,6 +15,7 @@ public class ListLaunchPathsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchPathSummaries")
     public LaunchPathSummary[] launchPathSummaries;
+
     public ListLaunchPathsOutput withLaunchPathSummaries(LaunchPathSummary[] launchPathSummaries) {
         this.launchPathSummaries = launchPathSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListLaunchPathsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public ListLaunchPathsOutput withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListLaunchPathsOutput(){}
 }

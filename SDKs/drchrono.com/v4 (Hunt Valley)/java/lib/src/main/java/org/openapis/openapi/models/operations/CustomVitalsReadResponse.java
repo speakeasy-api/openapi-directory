@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CustomVitalsReadResponse {
     
     public String contentType;
+
     public CustomVitalsReadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CustomVitalsReadResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomVitalType customVitalType;
+
     public CustomVitalsReadResponse withCustomVitalType(org.openapis.openapi.models.shared.CustomVitalType customVitalType) {
         this.customVitalType = customVitalType;
         return this;
@@ -26,6 +29,7 @@ public class CustomVitalsReadResponse {
     
     
     public Integer statusCode;
+
     public CustomVitalsReadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CustomVitalsReadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CustomVitalsReadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CustomVitalsReadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

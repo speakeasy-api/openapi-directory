@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CacheSubnetGroups {
     
     public String arn;
+
     public CacheSubnetGroups withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class CacheSubnetGroups {
     
     
     public String cacheSubnetGroupDescription;
+
     public CacheSubnetGroups withCacheSubnetGroupDescription(String cacheSubnetGroupDescription) {
         this.cacheSubnetGroupDescription = cacheSubnetGroupDescription;
         return this;
@@ -26,6 +28,7 @@ public class CacheSubnetGroups {
     
     
     public String cacheSubnetGroupName;
+
     public CacheSubnetGroups withCacheSubnetGroupName(String cacheSubnetGroupName) {
         this.cacheSubnetGroupName = cacheSubnetGroupName;
         return this;
@@ -33,6 +36,7 @@ public class CacheSubnetGroups {
     
     
     public SubnetList[] subnets;
+
     public CacheSubnetGroups withSubnets(SubnetList[] subnets) {
         this.subnets = subnets;
         return this;
@@ -40,6 +44,7 @@ public class CacheSubnetGroups {
     
     
     public NetworkTypeEnum[] supportedNetworkTypes;
+
     public CacheSubnetGroups withSupportedNetworkTypes(NetworkTypeEnum[] supportedNetworkTypes) {
         this.supportedNetworkTypes = supportedNetworkTypes;
         return this;
@@ -47,9 +52,11 @@ public class CacheSubnetGroups {
     
     
     public String vpcId;
+
     public CacheSubnetGroups withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CacheSubnetGroups(){}
 }

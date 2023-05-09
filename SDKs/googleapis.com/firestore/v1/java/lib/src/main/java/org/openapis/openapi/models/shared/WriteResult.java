@@ -18,6 +18,7 @@ public class WriteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transformResults")
     public Value[] transformResults;
+
     public WriteResult withTransformResults(Value[] transformResults) {
         this.transformResults = transformResults;
         return this;
@@ -29,9 +30,11 @@ public class WriteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public WriteResult withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public WriteResult(){}
 }

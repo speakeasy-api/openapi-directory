@@ -15,6 +15,7 @@ public class News200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public News200ApplicationJSONEntries[] entries;
+
     public News200ApplicationJSON withEntries(News200ApplicationJSONEntries[] entries) {
         this.entries = entries;
         return this;
@@ -23,9 +24,11 @@ public class News200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feed")
     public News200ApplicationJSONFeed feed;
+
     public News200ApplicationJSON withFeed(News200ApplicationJSONFeed feed) {
         this.feed = feed;
         return this;
     }
     
+    public News200ApplicationJSON(){}
 }

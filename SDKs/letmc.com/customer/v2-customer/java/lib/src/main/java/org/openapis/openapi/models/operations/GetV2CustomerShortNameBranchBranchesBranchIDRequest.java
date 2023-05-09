@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2CustomerShortNameBranchBranchesBranchIDRequest {
@@ -12,6 +13,7 @@ public class GetV2CustomerShortNameBranchBranchesBranchIDRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branchID")
     public String branchID;
+
     public GetV2CustomerShortNameBranchBranchesBranchIDRequest withBranchID(String branchID) {
         this.branchID = branchID;
         return this;
@@ -22,9 +24,14 @@ public class GetV2CustomerShortNameBranchBranchesBranchIDRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public GetV2CustomerShortNameBranchBranchesBranchIDRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
     }
     
+    public GetV2CustomerShortNameBranchBranchesBranchIDRequest(@JsonProperty("branchID") String branchID, @JsonProperty("shortName") String shortName) {
+        this.branchID = branchID;
+        this.shortName = shortName;
+  }
 }

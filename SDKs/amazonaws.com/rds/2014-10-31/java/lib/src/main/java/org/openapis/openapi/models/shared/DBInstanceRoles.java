@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBInstanceRoles {
     
     public String featureName;
+
     public DBInstanceRoles withFeatureName(String featureName) {
         this.featureName = featureName;
         return this;
@@ -19,6 +20,7 @@ public class DBInstanceRoles {
     
     
     public String roleArn;
+
     public DBInstanceRoles withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -26,9 +28,11 @@ public class DBInstanceRoles {
     
     
     public String status;
+
     public DBInstanceRoles withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DBInstanceRoles(){}
 }

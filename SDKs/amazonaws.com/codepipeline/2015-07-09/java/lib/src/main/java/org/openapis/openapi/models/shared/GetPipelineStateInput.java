@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetPipelineStateInput {
     @JsonProperty("name")
     public String name;
+
     public GetPipelineStateInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetPipelineStateInput(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

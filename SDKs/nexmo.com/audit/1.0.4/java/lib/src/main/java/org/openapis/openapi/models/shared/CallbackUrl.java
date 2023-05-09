@@ -15,6 +15,7 @@ public class CallbackUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public CallbackUrlMethodEnum method;
+
     public CallbackUrl withMethod(CallbackUrlMethodEnum method) {
         this.method = method;
         return this;
@@ -26,9 +27,11 @@ public class CallbackUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public CallbackUrl withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CallbackUrl(){}
 }

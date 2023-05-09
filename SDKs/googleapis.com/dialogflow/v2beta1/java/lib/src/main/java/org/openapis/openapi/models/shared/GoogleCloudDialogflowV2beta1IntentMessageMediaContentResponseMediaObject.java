@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentUrl")
     public String contentUrl;
+
     public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObject withContentUrl(String contentUrl) {
         this.contentUrl = contentUrl;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObject withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public GoogleCloudDialogflowV2beta1IntentMessageImage icon;
+
     public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObject withIcon(GoogleCloudDialogflowV2beta1IntentMessageImage icon) {
         this.icon = icon;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("largeImage")
     public GoogleCloudDialogflowV2beta1IntentMessageImage largeImage;
+
     public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObject withLargeImage(GoogleCloudDialogflowV2beta1IntentMessageImage largeImage) {
         this.largeImage = largeImage;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObject withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObject(){}
 }

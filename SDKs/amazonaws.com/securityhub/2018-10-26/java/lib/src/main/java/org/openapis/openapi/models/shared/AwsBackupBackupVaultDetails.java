@@ -15,6 +15,7 @@ public class AwsBackupBackupVaultDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessPolicy")
     public String accessPolicy;
+
     public AwsBackupBackupVaultDetails withAccessPolicy(String accessPolicy) {
         this.accessPolicy = accessPolicy;
         return this;
@@ -23,6 +24,7 @@ public class AwsBackupBackupVaultDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupVaultArn")
     public String backupVaultArn;
+
     public AwsBackupBackupVaultDetails withBackupVaultArn(String backupVaultArn) {
         this.backupVaultArn = backupVaultArn;
         return this;
@@ -31,6 +33,7 @@ public class AwsBackupBackupVaultDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupVaultName")
     public String backupVaultName;
+
     public AwsBackupBackupVaultDetails withBackupVaultName(String backupVaultName) {
         this.backupVaultName = backupVaultName;
         return this;
@@ -39,6 +42,7 @@ public class AwsBackupBackupVaultDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionKeyArn")
     public String encryptionKeyArn;
+
     public AwsBackupBackupVaultDetails withEncryptionKeyArn(String encryptionKeyArn) {
         this.encryptionKeyArn = encryptionKeyArn;
         return this;
@@ -47,9 +51,11 @@ public class AwsBackupBackupVaultDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notifications")
     public AwsBackupBackupVaultNotificationsDetails notifications;
+
     public AwsBackupBackupVaultDetails withNotifications(AwsBackupBackupVaultNotificationsDetails notifications) {
         this.notifications = notifications;
         return this;
     }
     
+    public AwsBackupBackupVaultDetails(){}
 }

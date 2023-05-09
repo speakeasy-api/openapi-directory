@@ -18,6 +18,7 @@ public class DistributionGroupsPatchForOrg200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public DistributionGroupsPatchForOrg200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -28,6 +29,7 @@ public class DistributionGroupsPatchForOrg200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public DistributionGroupsPatchForOrg200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +40,7 @@ public class DistributionGroupsPatchForOrg200ApplicationJSON {
      */
     @JsonProperty("is_public")
     public Boolean isPublic;
+
     public DistributionGroupsPatchForOrg200ApplicationJSON withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -48,6 +51,7 @@ public class DistributionGroupsPatchForOrg200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public DistributionGroupsPatchForOrg200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -58,9 +62,16 @@ public class DistributionGroupsPatchForOrg200ApplicationJSON {
      */
     @JsonProperty("origin")
     public DistributionGroupsPatchForOrg200ApplicationJSONOriginEnum origin;
+
     public DistributionGroupsPatchForOrg200ApplicationJSON withOrigin(DistributionGroupsPatchForOrg200ApplicationJSONOriginEnum origin) {
         this.origin = origin;
         return this;
     }
     
+    public DistributionGroupsPatchForOrg200ApplicationJSON(@JsonProperty("id") String id, @JsonProperty("is_public") Boolean isPublic, @JsonProperty("name") String name, @JsonProperty("origin") DistributionGroupsPatchForOrg200ApplicationJSONOriginEnum origin) {
+        this.id = id;
+        this.isPublic = isPublic;
+        this.name = name;
+        this.origin = origin;
+  }
 }

@@ -18,6 +18,7 @@ public class RestoreFromSnapshotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     public Namespace namespace;
+
     public RestoreFromSnapshotResponse withNamespace(Namespace namespace) {
         this.namespace = namespace;
         return this;
@@ -26,6 +27,7 @@ public class RestoreFromSnapshotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerAccount")
     public String ownerAccount;
+
     public RestoreFromSnapshotResponse withOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -34,9 +36,11 @@ public class RestoreFromSnapshotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotName")
     public String snapshotName;
+
     public RestoreFromSnapshotResponse withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
     }
     
+    public RestoreFromSnapshotResponse(){}
 }

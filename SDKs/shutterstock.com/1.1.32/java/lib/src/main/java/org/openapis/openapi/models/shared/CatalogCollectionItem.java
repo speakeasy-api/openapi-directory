@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CatalogCollectionItem {
     @JsonProperty("asset")
     public CatalogCollectionItemAsset asset;
+
     public CatalogCollectionItem withAsset(CatalogCollectionItemAsset asset) {
         this.asset = asset;
         return this;
@@ -30,6 +31,7 @@ public class CatalogCollectionItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection_ids")
     public String[] collectionIds;
+
     public CatalogCollectionItem withCollectionIds(String[] collectionIds) {
         this.collectionIds = collectionIds;
         return this;
@@ -39,6 +41,7 @@ public class CatalogCollectionItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_time")
     public OffsetDateTime createdTime;
+
     public CatalogCollectionItem withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -46,9 +49,15 @@ public class CatalogCollectionItem {
     
     @JsonProperty("id")
     public String id;
+
     public CatalogCollectionItem withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CatalogCollectionItem(@JsonProperty("asset") CatalogCollectionItemAsset asset, @JsonProperty("created_time") OffsetDateTime createdTime, @JsonProperty("id") String id) {
+        this.asset = asset;
+        this.createdTime = createdTime;
+        this.id = id;
+  }
 }

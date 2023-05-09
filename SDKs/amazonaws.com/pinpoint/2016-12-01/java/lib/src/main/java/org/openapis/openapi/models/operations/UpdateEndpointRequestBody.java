@@ -12,9 +12,13 @@ public class UpdateEndpointRequestBody {
      */
     @JsonProperty("EndpointRequest")
     public UpdateEndpointRequestBodyEndpointRequest endpointRequest;
+
     public UpdateEndpointRequestBody withEndpointRequest(UpdateEndpointRequestBodyEndpointRequest endpointRequest) {
         this.endpointRequest = endpointRequest;
         return this;
     }
     
+    public UpdateEndpointRequestBody(@JsonProperty("EndpointRequest") UpdateEndpointRequestBodyEndpointRequest endpointRequest) {
+        this.endpointRequest = endpointRequest;
+  }
 }

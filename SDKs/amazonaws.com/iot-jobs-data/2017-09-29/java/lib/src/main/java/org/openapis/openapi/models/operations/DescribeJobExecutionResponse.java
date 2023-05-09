@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeJobExecutionResponse {
@@ -12,6 +13,7 @@ public class DescribeJobExecutionResponse {
      */
     
     public Object certificateValidationException;
+
     public DescribeJobExecutionResponse withCertificateValidationException(Object certificateValidationException) {
         this.certificateValidationException = certificateValidationException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeJobExecutionResponse {
     
     
     public String contentType;
+
     public DescribeJobExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeJobExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeJobExecutionResponse describeJobExecutionResponse;
+
     public DescribeJobExecutionResponse withDescribeJobExecutionResponse(org.openapis.openapi.models.shared.DescribeJobExecutionResponse describeJobExecutionResponse) {
         this.describeJobExecutionResponse = describeJobExecutionResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeJobExecutionResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeJobExecutionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeJobExecutionResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeJobExecutionResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeJobExecutionResponse {
     
     
     public Integer statusCode;
+
     public DescribeJobExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeJobExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeJobExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeJobExecutionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeJobExecutionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DescribeJobExecutionResponse {
      */
     
     public Object terminalStateException;
+
     public DescribeJobExecutionResponse withTerminalStateException(Object terminalStateException) {
         this.terminalStateException = terminalStateException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeJobExecutionResponse {
      */
     
     public Object throttlingException;
+
     public DescribeJobExecutionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeJobExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

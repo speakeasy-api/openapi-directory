@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ValidateResourcePolicyRequest {
     @JsonProperty("ResourcePolicy")
     public String resourcePolicy;
+
     public ValidateResourcePolicyRequest withResourcePolicy(String resourcePolicy) {
         this.resourcePolicy = resourcePolicy;
         return this;
@@ -19,9 +20,13 @@ public class ValidateResourcePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretId")
     public String secretId;
+
     public ValidateResourcePolicyRequest withSecretId(String secretId) {
         this.secretId = secretId;
         return this;
     }
     
+    public ValidateResourcePolicyRequest(@JsonProperty("ResourcePolicy") String resourcePolicy) {
+        this.resourcePolicy = resourcePolicy;
+  }
 }

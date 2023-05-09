@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Link403ApplicationJSON {
     @JsonProperty("message")
     public String message;
+
     public Link403ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -19,9 +20,14 @@ public class Link403ApplicationJSON {
     
     @JsonProperty("meta")
     public Link403ApplicationJSONMeta meta;
+
     public Link403ApplicationJSON withMeta(Link403ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public Link403ApplicationJSON(@JsonProperty("message") String message, @JsonProperty("meta") Link403ApplicationJSONMeta meta) {
+        this.message = message;
+        this.meta = meta;
+  }
 }

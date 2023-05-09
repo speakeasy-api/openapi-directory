@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCertificateAuthorityAuditReportResponse {
     
     public String contentType;
+
     public CreateCertificateAuthorityAuditReportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateCertificateAuthorityAuditReportResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCertificateAuthorityAuditReportResponse createCertificateAuthorityAuditReportResponse;
+
     public CreateCertificateAuthorityAuditReportResponse withCreateCertificateAuthorityAuditReportResponse(org.openapis.openapi.models.shared.CreateCertificateAuthorityAuditReportResponse createCertificateAuthorityAuditReportResponse) {
         this.createCertificateAuthorityAuditReportResponse = createCertificateAuthorityAuditReportResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateCertificateAuthorityAuditReportResponse {
      */
     
     public Object invalidArgsException;
+
     public CreateCertificateAuthorityAuditReportResponse withInvalidArgsException(Object invalidArgsException) {
         this.invalidArgsException = invalidArgsException;
         return this;
@@ -39,6 +43,7 @@ public class CreateCertificateAuthorityAuditReportResponse {
      */
     
     public Object invalidArnException;
+
     public CreateCertificateAuthorityAuditReportResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class CreateCertificateAuthorityAuditReportResponse {
      */
     
     public Object invalidStateException;
+
     public CreateCertificateAuthorityAuditReportResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -59,6 +65,7 @@ public class CreateCertificateAuthorityAuditReportResponse {
      */
     
     public Object requestFailedException;
+
     public CreateCertificateAuthorityAuditReportResponse withRequestFailedException(Object requestFailedException) {
         this.requestFailedException = requestFailedException;
         return this;
@@ -69,6 +76,7 @@ public class CreateCertificateAuthorityAuditReportResponse {
      */
     
     public Object requestInProgressException;
+
     public CreateCertificateAuthorityAuditReportResponse withRequestInProgressException(Object requestInProgressException) {
         this.requestInProgressException = requestInProgressException;
         return this;
@@ -76,6 +84,7 @@ public class CreateCertificateAuthorityAuditReportResponse {
     
     
     public Integer statusCode;
+
     public CreateCertificateAuthorityAuditReportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateCertificateAuthorityAuditReportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCertificateAuthorityAuditReportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CreateCertificateAuthorityAuditReportResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateCertificateAuthorityAuditReportResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CreateCertificateAuthorityAuditReportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

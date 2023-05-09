@@ -22,6 +22,7 @@ public class CreateCustomerCardResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public Card card;
+
     public CreateCustomerCardResponse withCard(Card card) {
         this.card = card;
         return this;
@@ -33,9 +34,11 @@ public class CreateCustomerCardResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CreateCustomerCardResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public CreateCustomerCardResponse(){}
 }

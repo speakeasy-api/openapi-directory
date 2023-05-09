@@ -18,6 +18,7 @@ public class PivotValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calculatedDisplayType")
     public PivotValueCalculatedDisplayTypeEnum calculatedDisplayType;
+
     public PivotValue withCalculatedDisplayType(PivotValueCalculatedDisplayTypeEnum calculatedDisplayType) {
         this.calculatedDisplayType = calculatedDisplayType;
         return this;
@@ -29,6 +30,7 @@ public class PivotValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceColumnReference")
     public DataSourceColumnReference dataSourceColumnReference;
+
     public PivotValue withDataSourceColumnReference(DataSourceColumnReference dataSourceColumnReference) {
         this.dataSourceColumnReference = dataSourceColumnReference;
         return this;
@@ -40,6 +42,7 @@ public class PivotValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formula")
     public String formula;
+
     public PivotValue withFormula(String formula) {
         this.formula = formula;
         return this;
@@ -51,6 +54,7 @@ public class PivotValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PivotValue withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class PivotValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceColumnOffset")
     public Integer sourceColumnOffset;
+
     public PivotValue withSourceColumnOffset(Integer sourceColumnOffset) {
         this.sourceColumnOffset = sourceColumnOffset;
         return this;
@@ -73,9 +78,11 @@ public class PivotValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summarizeFunction")
     public PivotValueSummarizeFunctionEnum summarizeFunction;
+
     public PivotValue withSummarizeFunction(PivotValueSummarizeFunctionEnum summarizeFunction) {
         this.summarizeFunction = summarizeFunction;
         return this;
     }
     
+    public PivotValue(){}
 }

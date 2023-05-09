@@ -16,38 +16,35 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateParticipantTokenRequestBody;
 import org.openapis.openapi.models.operations.CreateParticipantTokenRequest;
+import org.openapis.openapi.models.operations.CreateParticipantTokenRequestBody;
 import org.openapis.openapi.models.operations.CreateParticipantTokenResponse;
 import org.openapis.openapi.models.shared.ParticipantTokenCapabilityEnum;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateParticipantTokenRequest req = new CreateParticipantTokenRequest() {{
-                requestBody = new CreateParticipantTokenRequestBody() {{
-                    attributes = new java.util.HashMap<String, String>() {{
-                        put("provident", "distinctio");
-                        put("quibusdam", "unde");
-                        put("nulla", "corrupti");
-                    }};
-                    capabilities = new org.openapis.openapi.models.shared.ParticipantTokenCapabilityEnum[]{{
-                        add("PUBLISH"),
-                        add("SUBSCRIBE"),
-                        add("SUBSCRIBE"),
-                        add("PUBLISH"),
-                    }};
-                    duration = 437587;
-                    stageArn = "magnam";
-                    userId = "debitis";
-                }};
+            CreateParticipantTokenRequest req = new CreateParticipantTokenRequest(                new CreateParticipantTokenRequestBody("provident") {{
+                                attributes = new java.util.HashMap<String, String>() {{
+                                    put("quibusdam", "unde");
+                                    put("nulla", "corrupti");
+                                    put("illum", "vel");
+                                }};
+                                capabilities = new org.openapis.openapi.models.shared.ParticipantTokenCapabilityEnum[]{{
+                                    add(ParticipantTokenCapabilityEnum.SUBSCRIBE),
+                                    add(ParticipantTokenCapabilityEnum.PUBLISH),
+                                    add(ParticipantTokenCapabilityEnum.PUBLISH),
+                                }};
+                                duration = 297534L;
+                                userId = "debitis";
+                            }};) {{
                 xAmzAlgorithm = "ipsa";
                 xAmzContentSha256 = "delectus";
                 xAmzCredential = "tempora";
@@ -55,34 +52,36 @@ public class Application {
                 xAmzSecurityToken = "molestiae";
                 xAmzSignature = "minus";
                 xAmzSignedHeaders = "placeat";
-            }}            
+            }};            
 
             CreateParticipantTokenResponse res = sdk.createParticipantToken(req);
 
-            if (res.createParticipantTokenResponse.isPresent()) {
+            if (res.createParticipantTokenResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `createParticipantToken` - <p>Creates an additional token for a specified stage. This can be done after stage creation or when tokens expire. Tokens always are scoped to the stage for which they are created.</p> <p>Encryption keys are owned by Amazon IVS and never used directly by your application.</p>
-* `createStage` - Creates a new stage (and optionally participant tokens).
-* `deleteStage` - Shuts down and deletes the specified stage (disconnecting all participants).
-* `disconnectParticipant` - Disconnects a specified participant and revokes the participant permanently from a specified stage.
-* `getStage` - Gets information for the specified stage.
-* `listStages` - Gets summary information about all stages in your account, in the AWS region where the API request is processed.
-* `listTagsForResource` - Gets information about AWS tags for the specified ARN.
-* `tagResource` - Adds or updates tags for the AWS resource with the specified ARN.
-* `untagResource` - Removes tags from the resource with the specified ARN.
-* `updateStage` - Updates a stage’s configuration.
+* [createParticipantToken](docs/sdk/README.md#createparticipanttoken) - <p>Creates an additional token for a specified stage. This can be done after stage creation or when tokens expire. Tokens always are scoped to the stage for which they are created.</p> <p>Encryption keys are owned by Amazon IVS and never used directly by your application.</p>
+* [createStage](docs/sdk/README.md#createstage) - Creates a new stage (and optionally participant tokens).
+* [deleteStage](docs/sdk/README.md#deletestage) - Shuts down and deletes the specified stage (disconnecting all participants).
+* [disconnectParticipant](docs/sdk/README.md#disconnectparticipant) - Disconnects a specified participant and revokes the participant permanently from a specified stage.
+* [getStage](docs/sdk/README.md#getstage) - Gets information for the specified stage.
+* [listStages](docs/sdk/README.md#liststages) - Gets summary information about all stages in your account, in the AWS region where the API request is processed.
+* [listTagsForResource](docs/sdk/README.md#listtagsforresource) - Gets information about AWS tags for the specified ARN.
+* [tagResource](docs/sdk/README.md#tagresource) - Adds or updates tags for the AWS resource with the specified ARN.
+* [untagResource](docs/sdk/README.md#untagresource) - Removes tags from the resource with the specified ARN.
+* [updateStage](docs/sdk/README.md#updatestage) - Updates a stage’s configuration.
 <!-- End SDK Available Operations -->
 
 ### Maturity

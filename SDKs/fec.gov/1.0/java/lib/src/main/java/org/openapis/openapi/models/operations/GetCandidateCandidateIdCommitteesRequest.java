@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCandidateCandidateIdCommitteesRequest {
@@ -13,6 +14,7 @@ public class GetCandidateCandidateIdCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetCandidateCandidateIdCommitteesRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -21,10 +23,17 @@ public class GetCandidateCandidateIdCommitteesRequest {
     /**
      * A unique identifier assigned to each candidate registered with the FEC.
      * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * First character indicates office - [P]residential, [H]ouse, [S]enate].
+     * Second character is the last digit of the two-year period the ID was created.
+     * Third and fourth is the candidate state. Presidential IDs don't have state.
+     * Fifth and sixth is the district when the candidate first ran. This does not change if the
+     * candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+     * The rest is sequence.
      * 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=candidate_id")
     public String candidateId;
+
     public GetCandidateCandidateIdCommitteesRequest withCandidateId(String candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -52,6 +61,7 @@ public class GetCandidateCandidateIdCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_type")
     public GetCandidateCandidateIdCommitteesCommitteeTypeEnum[] committeeType;
+
     public GetCandidateCandidateIdCommitteesRequest withCommitteeType(GetCandidateCandidateIdCommitteesCommitteeTypeEnum[] committeeType) {
         this.committeeType = committeeType;
         return this;
@@ -65,6 +75,7 @@ public class GetCandidateCandidateIdCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
     public Integer[] cycle;
+
     public GetCandidateCandidateIdCommitteesRequest withCycle(Integer[] cycle) {
         this.cycle = cycle;
         return this;
@@ -82,6 +93,7 @@ public class GetCandidateCandidateIdCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=designation")
     public GetCandidateCandidateIdCommitteesDesignationEnum[] designation;
+
     public GetCandidateCandidateIdCommitteesRequest withDesignation(GetCandidateCandidateIdCommitteesDesignationEnum[] designation) {
         this.designation = designation;
         return this;
@@ -100,6 +112,7 @@ public class GetCandidateCandidateIdCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filing_frequency")
     public GetCandidateCandidateIdCommitteesFilingFrequencyEnum[] filingFrequency;
+
     public GetCandidateCandidateIdCommitteesRequest withFilingFrequency(GetCandidateCandidateIdCommitteesFilingFrequencyEnum[] filingFrequency) {
         this.filingFrequency = filingFrequency;
         return this;
@@ -117,6 +130,7 @@ public class GetCandidateCandidateIdCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=organization_type")
     public GetCandidateCandidateIdCommitteesOrganizationTypeEnum[] organizationType;
+
     public GetCandidateCandidateIdCommitteesRequest withOrganizationType(GetCandidateCandidateIdCommitteesOrganizationTypeEnum[] organizationType) {
         this.organizationType = organizationType;
         return this;
@@ -127,6 +141,7 @@ public class GetCandidateCandidateIdCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetCandidateCandidateIdCommitteesRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -137,6 +152,7 @@ public class GetCandidateCandidateIdCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetCandidateCandidateIdCommitteesRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -148,6 +164,7 @@ public class GetCandidateCandidateIdCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetCandidateCandidateIdCommitteesRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -158,6 +175,7 @@ public class GetCandidateCandidateIdCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetCandidateCandidateIdCommitteesRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -168,6 +186,7 @@ public class GetCandidateCandidateIdCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetCandidateCandidateIdCommitteesRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -178,6 +197,7 @@ public class GetCandidateCandidateIdCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetCandidateCandidateIdCommitteesRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
@@ -188,9 +208,14 @@ public class GetCandidateCandidateIdCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Integer[] year;
+
     public GetCandidateCandidateIdCommitteesRequest withYear(Integer[] year) {
         this.year = year;
         return this;
     }
     
+    public GetCandidateCandidateIdCommitteesRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("candidate_id") String candidateId) {
+        this.apiKey = apiKey;
+        this.candidateId = candidateId;
+  }
 }

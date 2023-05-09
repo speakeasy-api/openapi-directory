@@ -18,6 +18,7 @@ public class Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataHeader")
     public MetadataHeader metadataHeader;
+
     public Metadata withMetadataHeader(MetadataHeader metadataHeader) {
         this.metadataHeader = metadataHeader;
         return this;
@@ -29,9 +30,11 @@ public class Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataRecords")
     public MetadataRecord[] metadataRecords;
+
     public Metadata withMetadataRecords(MetadataRecord[] metadataRecords) {
         this.metadataRecords = metadataRecords;
         return this;
     }
     
+    public Metadata(){}
 }

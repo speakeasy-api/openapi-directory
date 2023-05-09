@@ -15,9 +15,11 @@ public class GetThemeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("theme")
     public Theme theme;
+
     public GetThemeResponse withTheme(Theme theme) {
         this.theme = theme;
         return this;
     }
     
+    public GetThemeResponse(){}
 }

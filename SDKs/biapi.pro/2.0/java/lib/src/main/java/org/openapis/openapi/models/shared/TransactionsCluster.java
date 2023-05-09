@@ -17,6 +17,7 @@ public class TransactionsCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public String createdBy;
+
     public TransactionsCluster withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -24,6 +25,7 @@ public class TransactionsCluster {
     
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public TransactionsCluster withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -31,6 +33,7 @@ public class TransactionsCluster {
     
     @JsonProperty("id")
     public Long id;
+
     public TransactionsCluster withId(Long id) {
         this.id = id;
         return this;
@@ -38,6 +41,7 @@ public class TransactionsCluster {
     
     @JsonProperty("id_account")
     public Long idAccount;
+
     public TransactionsCluster withIdAccount(Long idAccount) {
         this.idAccount = idAccount;
         return this;
@@ -46,6 +50,7 @@ public class TransactionsCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_category")
     public Long idCategory;
+
     public TransactionsCluster withIdCategory(Long idCategory) {
         this.idCategory = idCategory;
         return this;
@@ -53,6 +58,7 @@ public class TransactionsCluster {
     
     @JsonProperty("mean_amount")
     public Float meanAmount;
+
     public TransactionsCluster withMeanAmount(Float meanAmount) {
         this.meanAmount = meanAmount;
         return this;
@@ -61,6 +67,7 @@ public class TransactionsCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("median_increment")
     public Long medianIncrement;
+
     public TransactionsCluster withMedianIncrement(Long medianIncrement) {
         this.medianIncrement = medianIncrement;
         return this;
@@ -70,6 +77,7 @@ public class TransactionsCluster {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("next_date")
     public LocalDate nextDate;
+
     public TransactionsCluster withNextDate(LocalDate nextDate) {
         this.nextDate = nextDate;
         return this;
@@ -77,9 +85,17 @@ public class TransactionsCluster {
     
     @JsonProperty("wording")
     public String wording;
+
     public TransactionsCluster withWording(String wording) {
         this.wording = wording;
         return this;
     }
     
+    public TransactionsCluster(@JsonProperty("enabled") Boolean enabled, @JsonProperty("id") Long id, @JsonProperty("id_account") Long idAccount, @JsonProperty("mean_amount") Float meanAmount, @JsonProperty("wording") String wording) {
+        this.enabled = enabled;
+        this.id = id;
+        this.idAccount = idAccount;
+        this.meanAmount = meanAmount;
+        this.wording = wording;
+  }
 }

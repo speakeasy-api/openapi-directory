@@ -18,6 +18,7 @@ public class JobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public JobResponse withGid(String gid) {
         this.gid = gid;
         return this;
@@ -26,6 +27,7 @@ public class JobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("new_project")
     public ProjectCompact newProject;
+
     public JobResponse withNewProject(ProjectCompact newProject) {
         this.newProject = newProject;
         return this;
@@ -34,6 +36,7 @@ public class JobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("new_project_template")
     public ProjectTemplateCompact newProjectTemplate;
+
     public JobResponse withNewProjectTemplate(ProjectTemplateCompact newProjectTemplate) {
         this.newProjectTemplate = newProjectTemplate;
         return this;
@@ -42,6 +45,7 @@ public class JobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("new_task")
     public TaskCompact newTask;
+
     public JobResponse withNewTask(TaskCompact newTask) {
         this.newTask = newTask;
         return this;
@@ -53,6 +57,7 @@ public class JobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_subtype")
     public String resourceSubtype;
+
     public JobResponse withResourceSubtype(String resourceSubtype) {
         this.resourceSubtype = resourceSubtype;
         return this;
@@ -64,6 +69,7 @@ public class JobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public JobResponse withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -75,9 +81,11 @@ public class JobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public JobResponseStatusEnum status;
+
     public JobResponse withStatus(JobResponseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public JobResponse(){}
 }

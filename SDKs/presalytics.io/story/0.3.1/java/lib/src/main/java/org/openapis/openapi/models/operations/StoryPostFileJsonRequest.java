@@ -12,6 +12,7 @@ public class StoryPostFileJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.FileUpload fileUpload;
+
     public StoryPostFileJsonRequest withFileUpload(org.openapis.openapi.models.shared.FileUpload fileUpload) {
         this.fileUpload = fileUpload;
         return this;
@@ -22,9 +23,11 @@ public class StoryPostFileJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_outline")
     public Boolean includeOutline;
+
     public StoryPostFileJsonRequest withIncludeOutline(Boolean includeOutline) {
         this.includeOutline = includeOutline;
         return this;
     }
     
+    public StoryPostFileJsonRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDocumentClassifiersResponse {
     
     public String contentType;
+
     public ListDocumentClassifiersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDocumentClassifiersResponse {
      */
     
     public Object internalServerException;
+
     public ListDocumentClassifiersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListDocumentClassifiersResponse {
      */
     
     public Object invalidFilterException;
+
     public ListDocumentClassifiersResponse withInvalidFilterException(Object invalidFilterException) {
         this.invalidFilterException = invalidFilterException;
         return this;
@@ -39,6 +43,7 @@ public class ListDocumentClassifiersResponse {
      */
     
     public Object invalidRequestException;
+
     public ListDocumentClassifiersResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListDocumentClassifiersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDocumentClassifiersResponse listDocumentClassifiersResponse;
+
     public ListDocumentClassifiersResponse withListDocumentClassifiersResponse(org.openapis.openapi.models.shared.ListDocumentClassifiersResponse listDocumentClassifiersResponse) {
         this.listDocumentClassifiersResponse = listDocumentClassifiersResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListDocumentClassifiersResponse {
     
     
     public Integer statusCode;
+
     public ListDocumentClassifiersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListDocumentClassifiersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDocumentClassifiersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListDocumentClassifiersResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListDocumentClassifiersResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListDocumentClassifiersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

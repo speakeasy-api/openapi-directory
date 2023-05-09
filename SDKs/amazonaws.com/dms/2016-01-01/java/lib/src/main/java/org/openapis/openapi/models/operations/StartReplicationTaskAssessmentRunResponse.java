@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartReplicationTaskAssessmentRunResponse {
@@ -12,6 +13,7 @@ public class StartReplicationTaskAssessmentRunResponse {
      */
     
     public Object accessDeniedFault;
+
     public StartReplicationTaskAssessmentRunResponse withAccessDeniedFault(Object accessDeniedFault) {
         this.accessDeniedFault = accessDeniedFault;
         return this;
@@ -19,6 +21,7 @@ public class StartReplicationTaskAssessmentRunResponse {
     
     
     public String contentType;
+
     public StartReplicationTaskAssessmentRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartReplicationTaskAssessmentRunResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public StartReplicationTaskAssessmentRunResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -39,6 +43,7 @@ public class StartReplicationTaskAssessmentRunResponse {
      */
     
     public Object kmsAccessDeniedFault;
+
     public StartReplicationTaskAssessmentRunResponse withKMSAccessDeniedFault(Object kmsAccessDeniedFault) {
         this.kmsAccessDeniedFault = kmsAccessDeniedFault;
         return this;
@@ -49,6 +54,7 @@ public class StartReplicationTaskAssessmentRunResponse {
      */
     
     public Object kmsDisabledFault;
+
     public StartReplicationTaskAssessmentRunResponse withKMSDisabledFault(Object kmsDisabledFault) {
         this.kmsDisabledFault = kmsDisabledFault;
         return this;
@@ -59,6 +65,7 @@ public class StartReplicationTaskAssessmentRunResponse {
      */
     
     public Object kmsFault;
+
     public StartReplicationTaskAssessmentRunResponse withKMSFault(Object kmsFault) {
         this.kmsFault = kmsFault;
         return this;
@@ -69,6 +76,7 @@ public class StartReplicationTaskAssessmentRunResponse {
      */
     
     public Object kmsInvalidStateFault;
+
     public StartReplicationTaskAssessmentRunResponse withKMSInvalidStateFault(Object kmsInvalidStateFault) {
         this.kmsInvalidStateFault = kmsInvalidStateFault;
         return this;
@@ -79,6 +87,7 @@ public class StartReplicationTaskAssessmentRunResponse {
      */
     
     public Object kmsKeyNotAccessibleFault;
+
     public StartReplicationTaskAssessmentRunResponse withKMSKeyNotAccessibleFault(Object kmsKeyNotAccessibleFault) {
         this.kmsKeyNotAccessibleFault = kmsKeyNotAccessibleFault;
         return this;
@@ -89,6 +98,7 @@ public class StartReplicationTaskAssessmentRunResponse {
      */
     
     public Object kmsNotFoundFault;
+
     public StartReplicationTaskAssessmentRunResponse withKMSNotFoundFault(Object kmsNotFoundFault) {
         this.kmsNotFoundFault = kmsNotFoundFault;
         return this;
@@ -99,6 +109,7 @@ public class StartReplicationTaskAssessmentRunResponse {
      */
     
     public Object resourceAlreadyExistsFault;
+
     public StartReplicationTaskAssessmentRunResponse withResourceAlreadyExistsFault(Object resourceAlreadyExistsFault) {
         this.resourceAlreadyExistsFault = resourceAlreadyExistsFault;
         return this;
@@ -109,6 +120,7 @@ public class StartReplicationTaskAssessmentRunResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public StartReplicationTaskAssessmentRunResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -119,6 +131,7 @@ public class StartReplicationTaskAssessmentRunResponse {
      */
     
     public Object s3AccessDeniedFault;
+
     public StartReplicationTaskAssessmentRunResponse withS3AccessDeniedFault(Object s3AccessDeniedFault) {
         this.s3AccessDeniedFault = s3AccessDeniedFault;
         return this;
@@ -129,6 +142,7 @@ public class StartReplicationTaskAssessmentRunResponse {
      */
     
     public Object s3ResourceNotFoundFault;
+
     public StartReplicationTaskAssessmentRunResponse withS3ResourceNotFoundFault(Object s3ResourceNotFoundFault) {
         this.s3ResourceNotFoundFault = s3ResourceNotFoundFault;
         return this;
@@ -139,6 +153,7 @@ public class StartReplicationTaskAssessmentRunResponse {
      */
     
     public org.openapis.openapi.models.shared.StartReplicationTaskAssessmentRunResponse startReplicationTaskAssessmentRunResponse;
+
     public StartReplicationTaskAssessmentRunResponse withStartReplicationTaskAssessmentRunResponse(org.openapis.openapi.models.shared.StartReplicationTaskAssessmentRunResponse startReplicationTaskAssessmentRunResponse) {
         this.startReplicationTaskAssessmentRunResponse = startReplicationTaskAssessmentRunResponse;
         return this;
@@ -146,6 +161,7 @@ public class StartReplicationTaskAssessmentRunResponse {
     
     
     public Integer statusCode;
+
     public StartReplicationTaskAssessmentRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -153,9 +169,14 @@ public class StartReplicationTaskAssessmentRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartReplicationTaskAssessmentRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartReplicationTaskAssessmentRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ListStackInstancesInput {
     
     public CallAsEnum callAs;
+
     public ListStackInstancesInput withCallAs(CallAsEnum callAs) {
         this.callAs = callAs;
         return this;
@@ -16,6 +17,7 @@ public class ListStackInstancesInput {
     
     
     public StackInstanceFilter[] filters;
+
     public ListStackInstancesInput withFilters(StackInstanceFilter[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class ListStackInstancesInput {
     
     
     public Long maxResults;
+
     public ListStackInstancesInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class ListStackInstancesInput {
     
     
     public String nextToken;
+
     public ListStackInstancesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,6 +41,7 @@ public class ListStackInstancesInput {
     
     
     public String stackInstanceAccount;
+
     public ListStackInstancesInput withStackInstanceAccount(String stackInstanceAccount) {
         this.stackInstanceAccount = stackInstanceAccount;
         return this;
@@ -44,6 +49,7 @@ public class ListStackInstancesInput {
     
     
     public String stackInstanceRegion;
+
     public ListStackInstancesInput withStackInstanceRegion(String stackInstanceRegion) {
         this.stackInstanceRegion = stackInstanceRegion;
         return this;
@@ -51,9 +57,13 @@ public class ListStackInstancesInput {
     
     
     public String stackSetName;
+
     public ListStackInstancesInput withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
     }
     
+    public ListStackInstancesInput(@JsonProperty("StackSetName") String stackSetName) {
+        this.stackSetName = stackSetName;
+  }
 }

@@ -17,6 +17,7 @@ public class InvoiceQuery {
      */
     @JsonProperty("filter")
     public InvoiceFilter filter;
+
     public InvoiceQuery withFilter(InvoiceFilter filter) {
         this.filter = filter;
         return this;
@@ -28,9 +29,13 @@ public class InvoiceQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
     public InvoiceSort sort;
+
     public InvoiceQuery withSort(InvoiceSort sort) {
         this.sort = sort;
         return this;
     }
     
+    public InvoiceQuery(@JsonProperty("filter") InvoiceFilter filter) {
+        this.filter = filter;
+  }
 }

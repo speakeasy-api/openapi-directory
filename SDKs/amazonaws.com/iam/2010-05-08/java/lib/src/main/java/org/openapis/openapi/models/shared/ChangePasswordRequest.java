@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ChangePasswordRequest {
     
     public String newPassword;
+
     public ChangePasswordRequest withNewPassword(String newPassword) {
         this.newPassword = newPassword;
         return this;
@@ -16,9 +17,14 @@ public class ChangePasswordRequest {
     
     
     public String oldPassword;
+
     public ChangePasswordRequest withOldPassword(String oldPassword) {
         this.oldPassword = oldPassword;
         return this;
     }
     
+    public ChangePasswordRequest(@JsonProperty("NewPassword") String newPassword, @JsonProperty("OldPassword") String oldPassword) {
+        this.newPassword = newPassword;
+        this.oldPassword = oldPassword;
+  }
 }

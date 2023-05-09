@@ -15,9 +15,11 @@ public class ListGitHubAccountTokenNamesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListGitHubAccountTokenNamesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListGitHubAccountTokenNamesInput(){}
 }

@@ -18,6 +18,7 @@ public class DoubleVerifyAppStarRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avoidInsufficientStarRating")
     public Boolean avoidInsufficientStarRating;
+
     public DoubleVerifyAppStarRating withAvoidInsufficientStarRating(Boolean avoidInsufficientStarRating) {
         this.avoidInsufficientStarRating = avoidInsufficientStarRating;
         return this;
@@ -29,9 +30,11 @@ public class DoubleVerifyAppStarRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avoidedStarRating")
     public DoubleVerifyAppStarRatingAvoidedStarRatingEnum avoidedStarRating;
+
     public DoubleVerifyAppStarRating withAvoidedStarRating(DoubleVerifyAppStarRatingAvoidedStarRatingEnum avoidedStarRating) {
         this.avoidedStarRating = avoidedStarRating;
         return this;
     }
     
+    public DoubleVerifyAppStarRating(){}
 }

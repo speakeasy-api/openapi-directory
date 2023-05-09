@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateServerEngineAttributesResponse {
     
     public String contentType;
+
     public UpdateServerEngineAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateServerEngineAttributesResponse {
      */
     
     public Object invalidStateException;
+
     public UpdateServerEngineAttributesResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateServerEngineAttributesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateServerEngineAttributesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateServerEngineAttributesResponse {
     
     
     public Integer statusCode;
+
     public UpdateServerEngineAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateServerEngineAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateServerEngineAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateServerEngineAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateServerEngineAttributesResponse updateServerEngineAttributesResponse;
+
     public UpdateServerEngineAttributesResponse withUpdateServerEngineAttributesResponse(org.openapis.openapi.models.shared.UpdateServerEngineAttributesResponse updateServerEngineAttributesResponse) {
         this.updateServerEngineAttributesResponse = updateServerEngineAttributesResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateServerEngineAttributesResponse {
      */
     
     public Object validationException;
+
     public UpdateServerEngineAttributesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateServerEngineAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

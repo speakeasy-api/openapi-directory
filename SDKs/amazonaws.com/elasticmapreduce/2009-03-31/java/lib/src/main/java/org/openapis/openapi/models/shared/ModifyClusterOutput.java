@@ -15,9 +15,11 @@ public class ModifyClusterOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepConcurrencyLevel")
     public Long stepConcurrencyLevel;
+
     public ModifyClusterOutput withStepConcurrencyLevel(Long stepConcurrencyLevel) {
         this.stepConcurrencyLevel = stepConcurrencyLevel;
         return this;
     }
     
+    public ModifyClusterOutput(){}
 }

@@ -18,6 +18,7 @@ public class ListMembershipsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListMembershipsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListMembershipsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public Membership[] resources;
+
     public ListMembershipsResponse withResources(Membership[] resources) {
         this.resources = resources;
         return this;
@@ -40,9 +42,11 @@ public class ListMembershipsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListMembershipsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListMembershipsResponse(){}
 }

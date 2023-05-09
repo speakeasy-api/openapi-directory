@@ -15,6 +15,7 @@ public class MessageStatusMMSUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public MessageStatusMMSUsageCurrencyEnum currency;
+
     public MessageStatusMMSUsage withCurrency(MessageStatusMMSUsageCurrencyEnum currency) {
         this.currency = currency;
         return this;
@@ -26,9 +27,11 @@ public class MessageStatusMMSUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public String price;
+
     public MessageStatusMMSUsage withPrice(String price) {
         this.price = price;
         return this;
     }
     
+    public MessageStatusMMSUsage(){}
 }

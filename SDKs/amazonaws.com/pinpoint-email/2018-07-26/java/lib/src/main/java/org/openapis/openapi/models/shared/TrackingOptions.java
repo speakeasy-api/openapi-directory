@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TrackingOptions {
     @JsonProperty("CustomRedirectDomain")
     public String customRedirectDomain;
+
     public TrackingOptions withCustomRedirectDomain(String customRedirectDomain) {
         this.customRedirectDomain = customRedirectDomain;
         return this;
     }
     
+    public TrackingOptions(@JsonProperty("CustomRedirectDomain") String customRedirectDomain) {
+        this.customRedirectDomain = customRedirectDomain;
+  }
 }

@@ -20,6 +20,7 @@ public class DictionaryEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public DictionaryEntity withActive(Boolean active) {
         this.active = active;
         return this;
@@ -28,6 +29,7 @@ public class DictionaryEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("andClearEventsQueue")
     public EventsQueue andClearEventsQueue;
+
     public DictionaryEntity withAndClearEventsQueue(EventsQueue andClearEventsQueue) {
         this.andClearEventsQueue = andClearEventsQueue;
         return this;
@@ -36,6 +38,7 @@ public class DictionaryEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auditDisplayName")
     public String auditDisplayName;
+
     public DictionaryEntity withAuditDisplayName(String auditDisplayName) {
         this.auditDisplayName = auditDisplayName;
         return this;
@@ -44,6 +47,7 @@ public class DictionaryEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auditPath")
     public String auditPath;
+
     public DictionaryEntity withAuditPath(String auditPath) {
         this.auditPath = auditPath;
         return this;
@@ -52,6 +56,7 @@ public class DictionaryEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classNameKey")
     public String classNameKey;
+
     public DictionaryEntity withClassNameKey(String classNameKey) {
         this.classNameKey = classNameKey;
         return this;
@@ -60,6 +65,7 @@ public class DictionaryEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classSimpleName")
     public String classSimpleName;
+
     public DictionaryEntity withClassSimpleName(String classSimpleName) {
         this.classSimpleName = classSimpleName;
         return this;
@@ -68,6 +74,7 @@ public class DictionaryEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compoundId")
     public String compoundId;
+
     public DictionaryEntity withCompoundId(String compoundId) {
         this.compoundId = compoundId;
         return this;
@@ -76,6 +83,7 @@ public class DictionaryEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultEntity")
     public Boolean defaultEntity;
+
     public DictionaryEntity withDefaultEntity(Boolean defaultEntity) {
         this.defaultEntity = defaultEntity;
         return this;
@@ -84,6 +92,7 @@ public class DictionaryEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public DictionaryEntity withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -92,6 +101,7 @@ public class DictionaryEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityMarkedAsNotSupposedToBePersisted")
     public Boolean entityMarkedAsNotSupposedToBePersisted;
+
     public DictionaryEntity withEntityMarkedAsNotSupposedToBePersisted(Boolean entityMarkedAsNotSupposedToBePersisted) {
         this.entityMarkedAsNotSupposedToBePersisted = entityMarkedAsNotSupposedToBePersisted;
         return this;
@@ -100,6 +110,7 @@ public class DictionaryEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventsQueueReadyToBeDispatched")
     public Boolean eventsQueueReadyToBeDispatched;
+
     public DictionaryEntity withEventsQueueReadyToBeDispatched(Boolean eventsQueueReadyToBeDispatched) {
         this.eventsQueueReadyToBeDispatched = eventsQueueReadyToBeDispatched;
         return this;
@@ -108,6 +119,7 @@ public class DictionaryEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public DictionaryEntity withId(Long id) {
         this.id = id;
         return this;
@@ -116,6 +128,7 @@ public class DictionaryEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public Identifier identifier;
+
     public DictionaryEntity withIdentifier(Identifier identifier) {
         this.identifier = identifier;
         return this;
@@ -124,6 +137,7 @@ public class DictionaryEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalDescription")
     public String internalDescription;
+
     public DictionaryEntity withInternalDescription(String internalDescription) {
         this.internalDescription = internalDescription;
         return this;
@@ -134,6 +148,7 @@ public class DictionaryEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModificationDate")
     public OffsetDateTime lastModificationDate;
+
     public DictionaryEntity withLastModificationDate(OffsetDateTime lastModificationDate) {
         this.lastModificationDate = lastModificationDate;
         return this;
@@ -141,6 +156,7 @@ public class DictionaryEntity {
     
     @JsonProperty("name")
     public String name;
+
     public DictionaryEntity withName(String name) {
         this.name = name;
         return this;
@@ -149,6 +165,7 @@ public class DictionaryEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packedCompoundId")
     public String packedCompoundId;
+
     public DictionaryEntity withPackedCompoundId(String packedCompoundId) {
         this.packedCompoundId = packedCompoundId;
         return this;
@@ -156,6 +173,7 @@ public class DictionaryEntity {
     
     @JsonProperty("preferedEntity")
     public Boolean preferedEntity;
+
     public DictionaryEntity withPreferedEntity(Boolean preferedEntity) {
         this.preferedEntity = preferedEntity;
         return this;
@@ -164,6 +182,7 @@ public class DictionaryEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferred")
     public Boolean preferred;
+
     public DictionaryEntity withPreferred(Boolean preferred) {
         this.preferred = preferred;
         return this;
@@ -172,9 +191,14 @@ public class DictionaryEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Integer version;
+
     public DictionaryEntity withVersion(Integer version) {
         this.version = version;
         return this;
     }
     
+    public DictionaryEntity(@JsonProperty("name") String name, @JsonProperty("preferedEntity") Boolean preferedEntity) {
+        this.name = name;
+        this.preferedEntity = preferedEntity;
+  }
 }

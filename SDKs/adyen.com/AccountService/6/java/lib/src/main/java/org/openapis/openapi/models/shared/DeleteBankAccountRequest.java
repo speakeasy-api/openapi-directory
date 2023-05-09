@@ -12,6 +12,7 @@ public class DeleteBankAccountRequest {
      */
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public DeleteBankAccountRequest withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -22,9 +23,14 @@ public class DeleteBankAccountRequest {
      */
     @JsonProperty("bankAccountUUIDs")
     public String[] bankAccountUUIDs;
+
     public DeleteBankAccountRequest withBankAccountUUIDs(String[] bankAccountUUIDs) {
         this.bankAccountUUIDs = bankAccountUUIDs;
         return this;
     }
     
+    public DeleteBankAccountRequest(@JsonProperty("accountHolderCode") String accountHolderCode, @JsonProperty("bankAccountUUIDs") String[] bankAccountUUIDs) {
+        this.accountHolderCode = accountHolderCode;
+        this.bankAccountUUIDs = bankAccountUUIDs;
+  }
 }

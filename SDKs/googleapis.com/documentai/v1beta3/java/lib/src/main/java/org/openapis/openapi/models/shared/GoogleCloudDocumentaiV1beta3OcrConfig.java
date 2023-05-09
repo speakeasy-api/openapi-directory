@@ -13,13 +13,26 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudDocumentaiV1beta3OcrConfig {
     /**
-     * A list of advanced OCR options to further fine-tune OCR behavior. Current valid values are: - "legacy_layout": a heuristics layout detection algorithm, which serves as an alternative to the current ML-based layout detection algorithm. Customers can choose the best suitable layout algorithm based on their situation.
+     * A list of advanced OCR options to further fine-tune OCR behavior. Current valid values are: - `legacy_layout`: a heuristics layout detection algorithm, which serves as an alternative to the current ML-based layout detection algorithm. Customers can choose the best suitable layout algorithm based on their situation.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advancedOcrOptions")
     public String[] advancedOcrOptions;
+
     public GoogleCloudDocumentaiV1beta3OcrConfig withAdvancedOcrOptions(String[] advancedOcrOptions) {
         this.advancedOcrOptions = advancedOcrOptions;
+        return this;
+    }
+    
+    /**
+     * Turn on font id model and returns font style information.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("computeStyleInfo")
+    public Boolean computeStyleInfo;
+
+    public GoogleCloudDocumentaiV1beta3OcrConfig withComputeStyleInfo(Boolean computeStyleInfo) {
+        this.computeStyleInfo = computeStyleInfo;
         return this;
     }
     
@@ -29,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta3OcrConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableImageQualityScores")
     public Boolean enableImageQualityScores;
+
     public GoogleCloudDocumentaiV1beta3OcrConfig withEnableImageQualityScores(Boolean enableImageQualityScores) {
         this.enableImageQualityScores = enableImageQualityScores;
         return this;
@@ -40,6 +54,7 @@ public class GoogleCloudDocumentaiV1beta3OcrConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableNativePdfParsing")
     public Boolean enableNativePdfParsing;
+
     public GoogleCloudDocumentaiV1beta3OcrConfig withEnableNativePdfParsing(Boolean enableNativePdfParsing) {
         this.enableNativePdfParsing = enableNativePdfParsing;
         return this;
@@ -51,6 +66,7 @@ public class GoogleCloudDocumentaiV1beta3OcrConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableSymbol")
     public Boolean enableSymbol;
+
     public GoogleCloudDocumentaiV1beta3OcrConfig withEnableSymbol(Boolean enableSymbol) {
         this.enableSymbol = enableSymbol;
         return this;
@@ -62,9 +78,11 @@ public class GoogleCloudDocumentaiV1beta3OcrConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hints")
     public GoogleCloudDocumentaiV1beta3OcrConfigHints hints;
+
     public GoogleCloudDocumentaiV1beta3OcrConfig withHints(GoogleCloudDocumentaiV1beta3OcrConfigHints hints) {
         this.hints = hints;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3OcrConfig(){}
 }

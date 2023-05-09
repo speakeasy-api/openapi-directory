@@ -18,6 +18,7 @@ public class V1X1SpecUpdatingPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_level_custom_fields")
     public V1x1ProperyPO firstLevelCustomFields;
+
     public V1X1SpecUpdatingPO withFirstLevelCustomFields(V1x1ProperyPO firstLevelCustomFields) {
         this.firstLevelCustomFields = firstLevelCustomFields;
         return this;
@@ -29,6 +30,7 @@ public class V1X1SpecUpdatingPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header_custom_fields")
     public V1x1ProperyPO headerCustomFields;
+
     public V1X1SpecUpdatingPO withHeaderCustomFields(V1x1ProperyPO headerCustomFields) {
         this.headerCustomFields = headerCustomFields;
         return this;
@@ -37,6 +39,7 @@ public class V1X1SpecUpdatingPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_type_id")
     public Long productTypeId;
+
     public V1X1SpecUpdatingPO withProductTypeId(Long productTypeId) {
         this.productTypeId = productTypeId;
         return this;
@@ -45,6 +48,7 @@ public class V1X1SpecUpdatingPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_1")
     public Long quantity1;
+
     public V1X1SpecUpdatingPO withQuantity1(Long quantity1) {
         this.quantity1 = quantity1;
         return this;
@@ -53,6 +57,7 @@ public class V1X1SpecUpdatingPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_2")
     public Long quantity2;
+
     public V1X1SpecUpdatingPO withQuantity2(Long quantity2) {
         this.quantity2 = quantity2;
         return this;
@@ -61,6 +66,7 @@ public class V1X1SpecUpdatingPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_3")
     public Long quantity3;
+
     public V1X1SpecUpdatingPO withQuantity3(Long quantity3) {
         this.quantity3 = quantity3;
         return this;
@@ -69,6 +75,7 @@ public class V1X1SpecUpdatingPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_4")
     public Long quantity4;
+
     public V1X1SpecUpdatingPO withQuantity4(Long quantity4) {
         this.quantity4 = quantity4;
         return this;
@@ -77,6 +84,7 @@ public class V1X1SpecUpdatingPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_5")
     public Long quantity5;
+
     public V1X1SpecUpdatingPO withQuantity5(Long quantity5) {
         this.quantity5 = quantity5;
         return this;
@@ -85,6 +93,7 @@ public class V1X1SpecUpdatingPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("second_level_custom_fields")
     public V1x1ProperyPO[] secondLevelCustomFields;
+
     public V1X1SpecUpdatingPO withSecondLevelCustomFields(V1x1ProperyPO[] secondLevelCustomFields) {
         this.secondLevelCustomFields = secondLevelCustomFields;
         return this;
@@ -93,6 +102,7 @@ public class V1X1SpecUpdatingPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public V1X1SpecUpdatingPO withSku(String sku) {
         this.sku = sku;
         return this;
@@ -101,6 +111,7 @@ public class V1X1SpecUpdatingPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_name")
     public String specName;
+
     public V1X1SpecUpdatingPO withSpecName(String specName) {
         this.specName = specName;
         return this;
@@ -109,6 +120,7 @@ public class V1X1SpecUpdatingPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_type_id")
     public Long specTypeId;
+
     public V1X1SpecUpdatingPO withSpecTypeId(Long specTypeId) {
         this.specTypeId = specTypeId;
         return this;
@@ -117,9 +129,11 @@ public class V1X1SpecUpdatingPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versions")
     public SpecVersionPersistVO[] versions;
+
     public V1X1SpecUpdatingPO withVersions(SpecVersionPersistVO[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public V1X1SpecUpdatingPO(){}
 }

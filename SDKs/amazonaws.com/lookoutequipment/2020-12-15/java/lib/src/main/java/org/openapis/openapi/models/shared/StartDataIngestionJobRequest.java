@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartDataIngestionJobRequest {
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public StartDataIngestionJobRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class StartDataIngestionJobRequest {
     
     @JsonProperty("DatasetName")
     public String datasetName;
+
     public StartDataIngestionJobRequest withDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
@@ -23,6 +25,7 @@ public class StartDataIngestionJobRequest {
     
     @JsonProperty("IngestionInputConfiguration")
     public IngestionInputConfiguration ingestionInputConfiguration;
+
     public StartDataIngestionJobRequest withIngestionInputConfiguration(IngestionInputConfiguration ingestionInputConfiguration) {
         this.ingestionInputConfiguration = ingestionInputConfiguration;
         return this;
@@ -30,9 +33,16 @@ public class StartDataIngestionJobRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public StartDataIngestionJobRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public StartDataIngestionJobRequest(@JsonProperty("ClientToken") String clientToken, @JsonProperty("DatasetName") String datasetName, @JsonProperty("IngestionInputConfiguration") IngestionInputConfiguration ingestionInputConfiguration, @JsonProperty("RoleArn") String roleArn) {
+        this.clientToken = clientToken;
+        this.datasetName = datasetName;
+        this.ingestionInputConfiguration = ingestionInputConfiguration;
+        this.roleArn = roleArn;
+  }
 }

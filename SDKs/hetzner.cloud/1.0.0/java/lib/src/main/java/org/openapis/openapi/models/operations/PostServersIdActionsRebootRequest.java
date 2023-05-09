@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostServersIdActionsRebootRequest {
@@ -12,9 +13,13 @@ public class PostServersIdActionsRebootRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public PostServersIdActionsRebootRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public PostServersIdActionsRebootRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

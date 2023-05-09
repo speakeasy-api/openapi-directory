@@ -15,9 +15,13 @@ public class GetChannelsResponse {
      */
     @JsonProperty("ChannelsResponse")
     public ChannelsResponse channelsResponse;
+
     public GetChannelsResponse withChannelsResponse(ChannelsResponse channelsResponse) {
         this.channelsResponse = channelsResponse;
         return this;
     }
     
+    public GetChannelsResponse(@JsonProperty("ChannelsResponse") ChannelsResponse channelsResponse) {
+        this.channelsResponse = channelsResponse;
+  }
 }

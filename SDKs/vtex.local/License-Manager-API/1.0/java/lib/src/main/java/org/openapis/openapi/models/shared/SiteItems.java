@@ -15,6 +15,7 @@ public class SiteItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LV")
     public String lv;
+
     public SiteItems withLv(String lv) {
         this.lv = lv;
         return this;
@@ -23,6 +24,7 @@ public class SiteItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aliases")
     public String[] aliases;
+
     public SiteItems withAliases(String[] aliases) {
         this.aliases = aliases;
         return this;
@@ -31,6 +33,7 @@ public class SiteItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domains")
     public String[] domains;
+
     public SiteItems withDomains(String[] domains) {
         this.domains = domains;
         return this;
@@ -42,6 +45,7 @@ public class SiteItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hosts")
     public String[] hosts;
+
     public SiteItems withHosts(String[] hosts) {
         this.hosts = hosts;
         return this;
@@ -53,6 +57,7 @@ public class SiteItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Double id;
+
     public SiteItems withId(Double id) {
         this.id = id;
         return this;
@@ -61,6 +66,7 @@ public class SiteItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public SiteItems withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -69,6 +75,7 @@ public class SiteItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monetaryUnitId")
     public Double monetaryUnitId;
+
     public SiteItems withMonetaryUnitId(Double monetaryUnitId) {
         this.monetaryUnitId = monetaryUnitId;
         return this;
@@ -80,6 +87,7 @@ public class SiteItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SiteItems withName(String name) {
         this.name = name;
         return this;
@@ -91,9 +99,11 @@ public class SiteItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tradingName")
     public String tradingName;
+
     public SiteItems withTradingName(String tradingName) {
         this.tradingName = tradingName;
         return this;
     }
     
+    public SiteItems(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsGetReviewRequest {
@@ -12,6 +13,7 @@ public class PullsGetReviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public PullsGetReviewRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -22,6 +24,7 @@ public class PullsGetReviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_number")
     public Long pullNumber;
+
     public PullsGetReviewRequest withPullNumber(Long pullNumber) {
         this.pullNumber = pullNumber;
         return this;
@@ -32,6 +35,7 @@ public class PullsGetReviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public PullsGetReviewRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -42,9 +46,16 @@ public class PullsGetReviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=review_id")
     public Long reviewId;
+
     public PullsGetReviewRequest withReviewId(Long reviewId) {
         this.reviewId = reviewId;
         return this;
     }
     
+    public PullsGetReviewRequest(@JsonProperty("owner") String owner, @JsonProperty("pull_number") Long pullNumber, @JsonProperty("repo") String repo, @JsonProperty("review_id") Long reviewId) {
+        this.owner = owner;
+        this.pullNumber = pullNumber;
+        this.repo = repo;
+        this.reviewId = reviewId;
+  }
 }

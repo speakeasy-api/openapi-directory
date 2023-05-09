@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealtimeRequest {
@@ -12,9 +13,13 @@ public class GetRealtimeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=sec-websocket-protocol")
     public String secWebsocketProtocol;
+
     public GetRealtimeRequest withSecWebsocketProtocol(String secWebsocketProtocol) {
         this.secWebsocketProtocol = secWebsocketProtocol;
         return this;
     }
     
+    public GetRealtimeRequest(@JsonProperty("sec-websocket-protocol") String secWebsocketProtocol) {
+        this.secWebsocketProtocol = secWebsocketProtocol;
+  }
 }

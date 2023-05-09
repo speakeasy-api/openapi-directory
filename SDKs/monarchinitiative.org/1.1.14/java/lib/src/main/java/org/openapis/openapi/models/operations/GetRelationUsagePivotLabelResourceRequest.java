@@ -14,6 +14,7 @@ public class GetRelationUsagePivotLabelResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
     public String evidence;
+
     public GetRelationUsagePivotLabelResourceRequest withEvidence(String evidence) {
         this.evidence = evidence;
         return this;
@@ -24,9 +25,11 @@ public class GetRelationUsagePivotLabelResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject_taxon")
     public String subjectTaxon;
+
     public GetRelationUsagePivotLabelResourceRequest withSubjectTaxon(String subjectTaxon) {
         this.subjectTaxon = subjectTaxon;
         return this;
     }
     
+    public GetRelationUsagePivotLabelResourceRequest(){}
 }

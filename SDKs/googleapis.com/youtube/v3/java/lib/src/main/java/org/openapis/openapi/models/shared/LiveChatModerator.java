@@ -18,6 +18,7 @@ public class LiveChatModerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public LiveChatModerator withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class LiveChatModerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public LiveChatModerator withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class LiveChatModerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public LiveChatModerator withKind(String kind) {
         this.kind = kind;
         return this;
@@ -48,9 +51,11 @@ public class LiveChatModerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public LiveChatModeratorSnippet snippet;
+
     public LiveChatModerator withSnippet(LiveChatModeratorSnippet snippet) {
         this.snippet = snippet;
         return this;
     }
     
+    public LiveChatModerator(){}
 }

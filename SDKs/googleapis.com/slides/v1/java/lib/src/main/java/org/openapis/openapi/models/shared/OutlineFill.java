@@ -18,9 +18,11 @@ public class OutlineFill {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solidFill")
     public SolidFill solidFill;
+
     public OutlineFill withSolidFill(SolidFill solidFill) {
         this.solidFill = solidFill;
         return this;
     }
     
+    public OutlineFill(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateFromMasterAccountResponse {
@@ -12,6 +13,7 @@ public class DisassociateFromMasterAccountResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateFromMasterAccountResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DisassociateFromMasterAccountResponse {
      */
     
     public Object conflictException;
+
     public DisassociateFromMasterAccountResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateFromMasterAccountResponse {
     
     
     public String contentType;
+
     public DisassociateFromMasterAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateFromMasterAccountResponse {
      */
     
     public java.util.Map<String, Object> disassociateFromMasterAccountResponse;
+
     public DisassociateFromMasterAccountResponse withDisassociateFromMasterAccountResponse(java.util.Map<String, Object> disassociateFromMasterAccountResponse) {
         this.disassociateFromMasterAccountResponse = disassociateFromMasterAccountResponse;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateFromMasterAccountResponse {
      */
     
     public Object internalServerException;
+
     public DisassociateFromMasterAccountResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateFromMasterAccountResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateFromMasterAccountResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DisassociateFromMasterAccountResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DisassociateFromMasterAccountResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class DisassociateFromMasterAccountResponse {
     
     
     public Integer statusCode;
+
     public DisassociateFromMasterAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DisassociateFromMasterAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateFromMasterAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DisassociateFromMasterAccountResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateFromMasterAccountResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DisassociateFromMasterAccountResponse {
      */
     
     public Object validationException;
+
     public DisassociateFromMasterAccountResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateFromMasterAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

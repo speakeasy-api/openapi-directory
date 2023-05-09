@@ -15,6 +15,7 @@ public class TableMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TableMember withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class TableMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public TableMember withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -31,9 +33,11 @@ public class TableMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public TableMember withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TableMember(){}
 }

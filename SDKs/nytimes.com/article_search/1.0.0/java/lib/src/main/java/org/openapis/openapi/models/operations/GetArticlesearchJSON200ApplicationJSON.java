@@ -15,9 +15,11 @@ public class GetArticlesearchJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public GetArticlesearchJSON200ApplicationJSONResponse response;
+
     public GetArticlesearchJSON200ApplicationJSON withResponse(GetArticlesearchJSON200ApplicationJSONResponse response) {
         this.response = response;
         return this;
     }
     
+    public GetArticlesearchJSON200ApplicationJSON(){}
 }

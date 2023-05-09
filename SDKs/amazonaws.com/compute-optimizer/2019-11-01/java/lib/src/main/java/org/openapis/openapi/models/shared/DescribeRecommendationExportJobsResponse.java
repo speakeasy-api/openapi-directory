@@ -15,6 +15,7 @@ public class DescribeRecommendationExportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeRecommendationExportJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeRecommendationExportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationExportJobs")
     public RecommendationExportJob[] recommendationExportJobs;
+
     public DescribeRecommendationExportJobsResponse withRecommendationExportJobs(RecommendationExportJob[] recommendationExportJobs) {
         this.recommendationExportJobs = recommendationExportJobs;
         return this;
     }
     
+    public DescribeRecommendationExportJobsResponse(){}
 }

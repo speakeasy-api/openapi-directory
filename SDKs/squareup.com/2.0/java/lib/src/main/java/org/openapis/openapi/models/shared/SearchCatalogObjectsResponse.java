@@ -19,6 +19,7 @@ public class SearchCatalogObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public SearchCatalogObjectsResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -30,6 +31,7 @@ public class SearchCatalogObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public SearchCatalogObjectsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -42,6 +44,7 @@ public class SearchCatalogObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latest_time")
     public String latestTime;
+
     public SearchCatalogObjectsResponse withLatestTime(String latestTime) {
         this.latestTime = latestTime;
         return this;
@@ -53,6 +56,7 @@ public class SearchCatalogObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objects")
     public CatalogObject[] objects;
+
     public SearchCatalogObjectsResponse withObjects(CatalogObject[] objects) {
         this.objects = objects;
         return this;
@@ -64,9 +68,11 @@ public class SearchCatalogObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("related_objects")
     public CatalogObject[] relatedObjects;
+
     public SearchCatalogObjectsResponse withRelatedObjects(CatalogObject[] relatedObjects) {
         this.relatedObjects = relatedObjects;
         return this;
     }
     
+    public SearchCatalogObjectsResponse(){}
 }

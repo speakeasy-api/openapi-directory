@@ -15,9 +15,11 @@ public class UpdateNetworkUplinkSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandwidthLimits")
     public UpdateNetworkUplinkSettingsRequestBodyBandwidthLimits bandwidthLimits;
+
     public UpdateNetworkUplinkSettingsRequestBody withBandwidthLimits(UpdateNetworkUplinkSettingsRequestBodyBandwidthLimits bandwidthLimits) {
         this.bandwidthLimits = bandwidthLimits;
         return this;
     }
     
+    public UpdateNetworkUplinkSettingsRequestBody(){}
 }

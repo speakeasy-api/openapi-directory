@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListLtiCredentialsResponse {
     
     public String contentType;
+
     public ListLtiCredentialsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListLtiCredentialsResponse {
      */
     
     public org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse;
+
     public ListLtiCredentialsResponse withFlatErrorResponse(org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse) {
         this.flatErrorResponse = flatErrorResponse;
         return this;
@@ -29,6 +32,7 @@ public class ListLtiCredentialsResponse {
      */
     
     public org.openapis.openapi.models.shared.LtiCredentials[] ltiCredentials;
+
     public ListLtiCredentialsResponse withLtiCredentials(org.openapis.openapi.models.shared.LtiCredentials[] ltiCredentials) {
         this.ltiCredentials = ltiCredentials;
         return this;
@@ -36,6 +40,7 @@ public class ListLtiCredentialsResponse {
     
     
     public Integer statusCode;
+
     public ListLtiCredentialsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListLtiCredentialsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListLtiCredentialsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListLtiCredentialsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class DeploymentBranchPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public DeploymentBranchPolicy withId(Long id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class DeploymentBranchPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DeploymentBranchPolicy withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class DeploymentBranchPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node_id")
     public String nodeId;
+
     public DeploymentBranchPolicy withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
     }
     
+    public DeploymentBranchPolicy(){}
 }

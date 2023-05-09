@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateTrustStoreResponse {
@@ -12,6 +13,7 @@ public class DisassociateTrustStoreResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateTrustStoreResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateTrustStoreResponse {
     
     
     public String contentType;
+
     public DisassociateTrustStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateTrustStoreResponse {
      */
     
     public java.util.Map<String, Object> disassociateTrustStoreResponse;
+
     public DisassociateTrustStoreResponse withDisassociateTrustStoreResponse(java.util.Map<String, Object> disassociateTrustStoreResponse) {
         this.disassociateTrustStoreResponse = disassociateTrustStoreResponse;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateTrustStoreResponse {
      */
     
     public Object internalServerException;
+
     public DisassociateTrustStoreResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DisassociateTrustStoreResponse {
     
     
     public Integer statusCode;
+
     public DisassociateTrustStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DisassociateTrustStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateTrustStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateTrustStoreResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateTrustStoreResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DisassociateTrustStoreResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateTrustStoreResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DisassociateTrustStoreResponse {
      */
     
     public Object validationException;
+
     public DisassociateTrustStoreResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateTrustStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

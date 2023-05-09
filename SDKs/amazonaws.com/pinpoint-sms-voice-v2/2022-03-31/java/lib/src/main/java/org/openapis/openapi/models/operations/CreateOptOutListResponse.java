@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateOptOutListResponse {
@@ -12,6 +13,7 @@ public class CreateOptOutListResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateOptOutListResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateOptOutListResponse {
      */
     
     public Object conflictException;
+
     public CreateOptOutListResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateOptOutListResponse {
     
     
     public String contentType;
+
     public CreateOptOutListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateOptOutListResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateOptOutListResult createOptOutListResult;
+
     public CreateOptOutListResponse withCreateOptOutListResult(org.openapis.openapi.models.shared.CreateOptOutListResult createOptOutListResult) {
         this.createOptOutListResult = createOptOutListResult;
         return this;
@@ -49,6 +54,7 @@ public class CreateOptOutListResponse {
      */
     
     public Object internalServerException;
+
     public CreateOptOutListResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateOptOutListResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateOptOutListResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateOptOutListResponse {
     
     
     public Integer statusCode;
+
     public CreateOptOutListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateOptOutListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateOptOutListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateOptOutListResponse {
      */
     
     public Object throttlingException;
+
     public CreateOptOutListResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateOptOutListResponse {
      */
     
     public Object validationException;
+
     public CreateOptOutListResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateOptOutListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

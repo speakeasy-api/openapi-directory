@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFacetNamesResponse {
@@ -12,6 +13,7 @@ public class ListFacetNamesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListFacetNamesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListFacetNamesResponse {
     
     
     public String contentType;
+
     public ListFacetNamesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListFacetNamesResponse {
      */
     
     public Object internalServiceException;
+
     public ListFacetNamesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ListFacetNamesResponse {
      */
     
     public Object invalidArnException;
+
     public ListFacetNamesResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class ListFacetNamesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListFacetNamesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListFacetNamesResponse {
      */
     
     public Object limitExceededException;
+
     public ListFacetNamesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ListFacetNamesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFacetNamesResponse listFacetNamesResponse;
+
     public ListFacetNamesResponse withListFacetNamesResponse(org.openapis.openapi.models.shared.ListFacetNamesResponse listFacetNamesResponse) {
         this.listFacetNamesResponse = listFacetNamesResponse;
         return this;
@@ -76,6 +84,7 @@ public class ListFacetNamesResponse {
     
     
     public Integer statusCode;
+
     public ListFacetNamesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListFacetNamesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFacetNamesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListFacetNamesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListFacetNamesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class ListFacetNamesResponse {
      */
     
     public Object retryableConflictException;
+
     public ListFacetNamesResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -113,9 +125,14 @@ public class ListFacetNamesResponse {
      */
     
     public Object validationException;
+
     public ListFacetNamesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListFacetNamesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

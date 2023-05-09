@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTrafficSourcesResponse {
     
     public String nextToken;
+
     public DescribeTrafficSourcesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeTrafficSourcesResponse {
     
     
     public TrafficSourceState[] trafficSources;
+
     public DescribeTrafficSourcesResponse withTrafficSources(TrafficSourceState[] trafficSources) {
         this.trafficSources = trafficSources;
         return this;
     }
     
+    public DescribeTrafficSourcesResponse(){}
 }

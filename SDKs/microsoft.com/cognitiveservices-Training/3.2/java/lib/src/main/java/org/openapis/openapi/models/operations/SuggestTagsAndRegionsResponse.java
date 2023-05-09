@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SuggestTagsAndRegionsResponse {
     
     public byte[] body;
+
     public SuggestTagsAndRegionsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class SuggestTagsAndRegionsResponse {
     
     
     public String contentType;
+
     public SuggestTagsAndRegionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class SuggestTagsAndRegionsResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomVisionError customVisionError;
+
     public SuggestTagsAndRegionsResponse withCustomVisionError(org.openapis.openapi.models.shared.CustomVisionError customVisionError) {
         this.customVisionError = customVisionError;
         return this;
@@ -33,6 +37,7 @@ public class SuggestTagsAndRegionsResponse {
     
     
     public Integer statusCode;
+
     public SuggestTagsAndRegionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class SuggestTagsAndRegionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SuggestTagsAndRegionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class SuggestTagsAndRegionsResponse {
      */
     
     public org.openapis.openapi.models.shared.SuggestedTagAndRegion[] suggestedTagAndRegions;
+
     public SuggestTagsAndRegionsResponse withSuggestedTagAndRegions(org.openapis.openapi.models.shared.SuggestedTagAndRegion[] suggestedTagAndRegions) {
         this.suggestedTagAndRegions = suggestedTagAndRegions;
         return this;
     }
     
+    public SuggestTagsAndRegionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

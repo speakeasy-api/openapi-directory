@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ComputeEnvironmentOrder {
     @JsonProperty("computeEnvironment")
     public String computeEnvironment;
+
     public ComputeEnvironmentOrder withComputeEnvironment(String computeEnvironment) {
         this.computeEnvironment = computeEnvironment;
         return this;
@@ -19,9 +20,14 @@ public class ComputeEnvironmentOrder {
     
     @JsonProperty("order")
     public Long order;
+
     public ComputeEnvironmentOrder withOrder(Long order) {
         this.order = order;
         return this;
     }
     
+    public ComputeEnvironmentOrder(@JsonProperty("computeEnvironment") String computeEnvironment, @JsonProperty("order") Long order) {
+        this.computeEnvironment = computeEnvironment;
+        this.order = order;
+  }
 }

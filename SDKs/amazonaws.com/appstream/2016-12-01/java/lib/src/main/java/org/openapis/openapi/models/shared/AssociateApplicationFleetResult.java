@@ -15,9 +15,11 @@ public class AssociateApplicationFleetResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationFleetAssociation")
     public ApplicationFleetAssociation applicationFleetAssociation;
+
     public AssociateApplicationFleetResult withApplicationFleetAssociation(ApplicationFleetAssociation applicationFleetAssociation) {
         this.applicationFleetAssociation = applicationFleetAssociation;
         return this;
     }
     
+    public AssociateApplicationFleetResult(){}
 }

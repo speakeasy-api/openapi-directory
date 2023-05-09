@@ -18,6 +18,7 @@ public class Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public String created;
+
     public Meta withCreated(String created) {
         this.created = created;
         return this;
@@ -29,6 +30,7 @@ public class Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModified")
     public String lastModified;
+
     public Meta withLastModified(String lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -40,6 +42,7 @@ public class Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public Meta withLocation(String location) {
         this.location = location;
         return this;
@@ -50,9 +53,13 @@ public class Meta {
      */
     @JsonProperty("resourceType")
     public MetaResourceTypeEnum resourceType;
+
     public Meta withResourceType(MetaResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public Meta(@JsonProperty("resourceType") MetaResourceTypeEnum resourceType) {
+        this.resourceType = resourceType;
+  }
 }

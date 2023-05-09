@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostAdminNearMissesRequestPatternResponse {
     
     public String contentType;
+
     public PostAdminNearMissesRequestPatternResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostAdminNearMissesRequestPatternResponse {
     
     
     public Integer statusCode;
+
     public PostAdminNearMissesRequestPatternResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostAdminNearMissesRequestPatternResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostAdminNearMissesRequestPatternResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostAdminNearMissesRequestPatternResponse {
      */
     
     public PostAdminNearMissesRequestPattern200ApplicationJSON postAdminNearMissesRequestPattern200ApplicationJSONObject;
+
     public PostAdminNearMissesRequestPatternResponse withPostAdminNearMissesRequestPattern200ApplicationJSONObject(PostAdminNearMissesRequestPattern200ApplicationJSON postAdminNearMissesRequestPattern200ApplicationJSONObject) {
         this.postAdminNearMissesRequestPattern200ApplicationJSONObject = postAdminNearMissesRequestPattern200ApplicationJSONObject;
         return this;
     }
     
+    public PostAdminNearMissesRequestPatternResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

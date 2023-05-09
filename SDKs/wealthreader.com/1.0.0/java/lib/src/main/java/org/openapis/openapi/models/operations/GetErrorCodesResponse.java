@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetErrorCodesResponse {
     
     public String contentType;
+
     public GetErrorCodesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetErrorCodesResponse {
     
     
     public Integer statusCode;
+
     public GetErrorCodesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,16 +26,18 @@ public class GetErrorCodesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetErrorCodesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
     /**
-     * C\u00f3digos de error junto con su descripci\u00f3n, posible motivo y c\u00f3mo proceder
+     * Códigos de error junto con su descripción, posible motivo y cómo proceder
      */
     
     public org.openapis.openapi.models.shared.ErrorCodes[] errorCodes;
+
     public GetErrorCodesResponse withErrorCodes(org.openapis.openapi.models.shared.ErrorCodes[] errorCodes) {
         this.errorCodes = errorCodes;
         return this;
@@ -43,9 +48,14 @@ public class GetErrorCodesResponse {
      */
     
     public org.openapis.openapi.models.shared.Error[] errors;
+
     public GetErrorCodesResponse withErrors(org.openapis.openapi.models.shared.Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public GetErrorCodesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

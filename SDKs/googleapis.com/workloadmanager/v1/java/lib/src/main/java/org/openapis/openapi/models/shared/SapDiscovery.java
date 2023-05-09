@@ -18,6 +18,7 @@ public class SapDiscovery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationLayer")
     public SapDiscoveryComponent applicationLayer;
+
     public SapDiscovery withApplicationLayer(SapDiscoveryComponent applicationLayer) {
         this.applicationLayer = applicationLayer;
         return this;
@@ -29,6 +30,7 @@ public class SapDiscovery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseLayer")
     public SapDiscoveryComponent databaseLayer;
+
     public SapDiscovery withDatabaseLayer(SapDiscoveryComponent databaseLayer) {
         this.databaseLayer = databaseLayer;
         return this;
@@ -40,6 +42,7 @@ public class SapDiscovery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public SapDiscoveryMetadata metadata;
+
     public SapDiscovery withMetadata(SapDiscoveryMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -51,6 +54,7 @@ public class SapDiscovery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemId")
     public String systemId;
+
     public SapDiscovery withSystemId(String systemId) {
         this.systemId = systemId;
         return this;
@@ -62,9 +66,11 @@ public class SapDiscovery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public SapDiscovery withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public SapDiscovery(){}
 }

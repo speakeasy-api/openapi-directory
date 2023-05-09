@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePermissionsBoundaryFromPermissionSetResponse {
@@ -12,6 +13,7 @@ public class DeletePermissionsBoundaryFromPermissionSetResponse {
      */
     
     public Object accessDeniedException;
+
     public DeletePermissionsBoundaryFromPermissionSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeletePermissionsBoundaryFromPermissionSetResponse {
     
     
     public String contentType;
+
     public DeletePermissionsBoundaryFromPermissionSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeletePermissionsBoundaryFromPermissionSetResponse {
      */
     
     public java.util.Map<String, Object> deletePermissionsBoundaryFromPermissionSetResponse;
+
     public DeletePermissionsBoundaryFromPermissionSetResponse withDeletePermissionsBoundaryFromPermissionSetResponse(java.util.Map<String, Object> deletePermissionsBoundaryFromPermissionSetResponse) {
         this.deletePermissionsBoundaryFromPermissionSetResponse = deletePermissionsBoundaryFromPermissionSetResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeletePermissionsBoundaryFromPermissionSetResponse {
      */
     
     public Object internalServerException;
+
     public DeletePermissionsBoundaryFromPermissionSetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeletePermissionsBoundaryFromPermissionSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeletePermissionsBoundaryFromPermissionSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeletePermissionsBoundaryFromPermissionSetResponse {
     
     
     public Integer statusCode;
+
     public DeletePermissionsBoundaryFromPermissionSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeletePermissionsBoundaryFromPermissionSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePermissionsBoundaryFromPermissionSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeletePermissionsBoundaryFromPermissionSetResponse {
      */
     
     public Object throttlingException;
+
     public DeletePermissionsBoundaryFromPermissionSetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeletePermissionsBoundaryFromPermissionSetResponse {
      */
     
     public Object validationException;
+
     public DeletePermissionsBoundaryFromPermissionSetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeletePermissionsBoundaryFromPermissionSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

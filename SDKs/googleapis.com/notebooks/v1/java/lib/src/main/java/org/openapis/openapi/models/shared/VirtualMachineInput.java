@@ -18,9 +18,11 @@ public class VirtualMachineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualMachineConfig")
     public VirtualMachineConfigInput virtualMachineConfig;
+
     public VirtualMachineInput withVirtualMachineConfig(VirtualMachineConfigInput virtualMachineConfig) {
         this.virtualMachineConfig = virtualMachineConfig;
         return this;
     }
     
+    public VirtualMachineInput(){}
 }

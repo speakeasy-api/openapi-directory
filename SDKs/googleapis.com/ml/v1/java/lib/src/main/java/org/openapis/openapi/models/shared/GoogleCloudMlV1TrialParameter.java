@@ -18,6 +18,7 @@ public class GoogleCloudMlV1TrialParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floatValue")
     public Double floatValue;
+
     public GoogleCloudMlV1TrialParameter withFloatValue(Double floatValue) {
         this.floatValue = floatValue;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1TrialParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intValue")
     public String intValue;
+
     public GoogleCloudMlV1TrialParameter withIntValue(String intValue) {
         this.intValue = intValue;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudMlV1TrialParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter")
     public String parameter;
+
     public GoogleCloudMlV1TrialParameter withParameter(String parameter) {
         this.parameter = parameter;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudMlV1TrialParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public GoogleCloudMlV1TrialParameter withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public GoogleCloudMlV1TrialParameter(){}
 }

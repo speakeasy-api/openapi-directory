@@ -18,9 +18,11 @@ public class GoogleCloudChannelV1RegisterSubscriberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public GoogleCloudChannelV1RegisterSubscriberRequest withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
     }
     
+    public GoogleCloudChannelV1RegisterSubscriberRequest(){}
 }

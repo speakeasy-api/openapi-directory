@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class JobRunSummary {
     @JsonProperty("applicationId")
     public String applicationId;
+
     public JobRunSummary withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -26,6 +27,7 @@ public class JobRunSummary {
     
     @JsonProperty("arn")
     public String arn;
+
     public JobRunSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -35,6 +37,7 @@ public class JobRunSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public JobRunSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -42,6 +45,7 @@ public class JobRunSummary {
     
     @JsonProperty("createdBy")
     public String createdBy;
+
     public JobRunSummary withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -49,6 +53,7 @@ public class JobRunSummary {
     
     @JsonProperty("executionRole")
     public String executionRole;
+
     public JobRunSummary withExecutionRole(String executionRole) {
         this.executionRole = executionRole;
         return this;
@@ -56,6 +61,7 @@ public class JobRunSummary {
     
     @JsonProperty("id")
     public String id;
+
     public JobRunSummary withId(String id) {
         this.id = id;
         return this;
@@ -64,6 +70,7 @@ public class JobRunSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public JobRunSummary withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class JobRunSummary {
     
     @JsonProperty("releaseLabel")
     public String releaseLabel;
+
     public JobRunSummary withReleaseLabel(String releaseLabel) {
         this.releaseLabel = releaseLabel;
         return this;
@@ -78,6 +86,7 @@ public class JobRunSummary {
     
     @JsonProperty("state")
     public JobRunStateEnum state;
+
     public JobRunSummary withState(JobRunStateEnum state) {
         this.state = state;
         return this;
@@ -85,6 +94,7 @@ public class JobRunSummary {
     
     @JsonProperty("stateDetails")
     public String stateDetails;
+
     public JobRunSummary withStateDetails(String stateDetails) {
         this.stateDetails = stateDetails;
         return this;
@@ -93,6 +103,7 @@ public class JobRunSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public JobRunSummary withType(String type) {
         this.type = type;
         return this;
@@ -102,9 +113,22 @@ public class JobRunSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public JobRunSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public JobRunSummary(@JsonProperty("applicationId") String applicationId, @JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("createdBy") String createdBy, @JsonProperty("executionRole") String executionRole, @JsonProperty("id") String id, @JsonProperty("releaseLabel") String releaseLabel, @JsonProperty("state") JobRunStateEnum state, @JsonProperty("stateDetails") String stateDetails, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.applicationId = applicationId;
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.createdBy = createdBy;
+        this.executionRole = executionRole;
+        this.id = id;
+        this.releaseLabel = releaseLabel;
+        this.state = state;
+        this.stateDetails = stateDetails;
+        this.updatedAt = updatedAt;
+  }
 }

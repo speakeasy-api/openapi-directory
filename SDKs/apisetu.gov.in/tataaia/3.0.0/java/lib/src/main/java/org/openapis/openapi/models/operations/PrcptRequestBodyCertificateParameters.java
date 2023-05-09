@@ -12,6 +12,7 @@ public class PrcptRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public PrcptRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class PrcptRequestBodyCertificateParameters {
      */
     @JsonProperty("PI_DOB")
     public String piDob;
+
     public PrcptRequestBodyCertificateParameters withPiDob(String piDob) {
         this.piDob = piDob;
         return this;
@@ -32,6 +34,7 @@ public class PrcptRequestBodyCertificateParameters {
      */
     @JsonProperty("PI_FIN_YEAR")
     public String piFinYear;
+
     public PrcptRequestBodyCertificateParameters withPiFinYear(String piFinYear) {
         this.piFinYear = piFinYear;
         return this;
@@ -42,9 +45,16 @@ public class PrcptRequestBodyCertificateParameters {
      */
     @JsonProperty("PI_POLICYNBR")
     public String piPolicynbr;
+
     public PrcptRequestBodyCertificateParameters withPiPolicynbr(String piPolicynbr) {
         this.piPolicynbr = piPolicynbr;
         return this;
     }
     
+    public PrcptRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("PI_DOB") String piDob, @JsonProperty("PI_FIN_YEAR") String piFinYear, @JsonProperty("PI_POLICYNBR") String piPolicynbr) {
+        this.fullName = fullName;
+        this.piDob = piDob;
+        this.piFinYear = piFinYear;
+        this.piPolicynbr = piPolicynbr;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLifecyclePolicyResponse {
@@ -12,6 +13,7 @@ public class GetLifecyclePolicyResponse {
      */
     
     public Object containerInUseException;
+
     public GetLifecyclePolicyResponse withContainerInUseException(Object containerInUseException) {
         this.containerInUseException = containerInUseException;
         return this;
@@ -22,6 +24,7 @@ public class GetLifecyclePolicyResponse {
      */
     
     public Object containerNotFoundException;
+
     public GetLifecyclePolicyResponse withContainerNotFoundException(Object containerNotFoundException) {
         this.containerNotFoundException = containerNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetLifecyclePolicyResponse {
     
     
     public String contentType;
+
     public GetLifecyclePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetLifecyclePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLifecyclePolicyOutput getLifecyclePolicyOutput;
+
     public GetLifecyclePolicyResponse withGetLifecyclePolicyOutput(org.openapis.openapi.models.shared.GetLifecyclePolicyOutput getLifecyclePolicyOutput) {
         this.getLifecyclePolicyOutput = getLifecyclePolicyOutput;
         return this;
@@ -49,6 +54,7 @@ public class GetLifecyclePolicyResponse {
      */
     
     public Object internalServerError;
+
     public GetLifecyclePolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class GetLifecyclePolicyResponse {
      */
     
     public Object policyNotFoundException;
+
     public GetLifecyclePolicyResponse withPolicyNotFoundException(Object policyNotFoundException) {
         this.policyNotFoundException = policyNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetLifecyclePolicyResponse {
     
     
     public Integer statusCode;
+
     public GetLifecyclePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetLifecyclePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLifecyclePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetLifecyclePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

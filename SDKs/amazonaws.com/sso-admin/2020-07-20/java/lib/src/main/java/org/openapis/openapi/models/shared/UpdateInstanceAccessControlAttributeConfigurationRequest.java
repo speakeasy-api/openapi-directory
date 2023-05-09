@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateInstanceAccessControlAttributeConfigurationRequest {
     @JsonProperty("InstanceAccessControlAttributeConfiguration")
     public InstanceAccessControlAttributeConfiguration instanceAccessControlAttributeConfiguration;
+
     public UpdateInstanceAccessControlAttributeConfigurationRequest withInstanceAccessControlAttributeConfiguration(InstanceAccessControlAttributeConfiguration instanceAccessControlAttributeConfiguration) {
         this.instanceAccessControlAttributeConfiguration = instanceAccessControlAttributeConfiguration;
         return this;
@@ -16,9 +17,14 @@ public class UpdateInstanceAccessControlAttributeConfigurationRequest {
     
     @JsonProperty("InstanceArn")
     public String instanceArn;
+
     public UpdateInstanceAccessControlAttributeConfigurationRequest withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
     }
     
+    public UpdateInstanceAccessControlAttributeConfigurationRequest(@JsonProperty("InstanceAccessControlAttributeConfiguration") InstanceAccessControlAttributeConfiguration instanceAccessControlAttributeConfiguration, @JsonProperty("InstanceArn") String instanceArn) {
+        this.instanceAccessControlAttributeConfiguration = instanceAccessControlAttributeConfiguration;
+        this.instanceArn = instanceArn;
+  }
 }

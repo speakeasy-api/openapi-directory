@@ -20,6 +20,7 @@ public class VocabularyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public VocabularyInfo withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -30,6 +31,7 @@ public class VocabularyInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public VocabularyInfo withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -38,6 +40,7 @@ public class VocabularyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VocabularyName")
     public String vocabularyName;
+
     public VocabularyInfo withVocabularyName(String vocabularyName) {
         this.vocabularyName = vocabularyName;
         return this;
@@ -46,9 +49,11 @@ public class VocabularyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VocabularyState")
     public VocabularyStateEnum vocabularyState;
+
     public VocabularyInfo withVocabularyState(VocabularyStateEnum vocabularyState) {
         this.vocabularyState = vocabularyState;
         return this;
     }
     
+    public VocabularyInfo(){}
 }

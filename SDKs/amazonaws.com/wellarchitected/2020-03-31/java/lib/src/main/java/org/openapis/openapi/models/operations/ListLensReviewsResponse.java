@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListLensReviewsResponse {
@@ -12,6 +13,7 @@ public class ListLensReviewsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListLensReviewsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListLensReviewsResponse {
     
     
     public String contentType;
+
     public ListLensReviewsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListLensReviewsResponse {
      */
     
     public Object internalServerException;
+
     public ListLensReviewsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListLensReviewsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListLensReviewsOutput listLensReviewsOutput;
+
     public ListLensReviewsResponse withListLensReviewsOutput(org.openapis.openapi.models.shared.ListLensReviewsOutput listLensReviewsOutput) {
         this.listLensReviewsOutput = listLensReviewsOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListLensReviewsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListLensReviewsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListLensReviewsResponse {
     
     
     public Integer statusCode;
+
     public ListLensReviewsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListLensReviewsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListLensReviewsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListLensReviewsResponse {
      */
     
     public Object throttlingException;
+
     public ListLensReviewsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListLensReviewsResponse {
      */
     
     public Object validationException;
+
     public ListLensReviewsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListLensReviewsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

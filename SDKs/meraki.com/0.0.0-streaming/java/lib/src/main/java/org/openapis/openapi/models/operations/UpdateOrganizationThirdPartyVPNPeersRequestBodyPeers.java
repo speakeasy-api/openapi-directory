@@ -15,6 +15,7 @@ public class UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ikeVersion")
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIkeVersionEnum ikeVersion;
+
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers withIkeVersion(UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIkeVersionEnum ikeVersion) {
         this.ikeVersion = ikeVersion;
         return this;
@@ -26,6 +27,7 @@ public class UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipsecPolicies")
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPolicies ipsecPolicies;
+
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers withIpsecPolicies(UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPolicies ipsecPolicies) {
         this.ipsecPolicies = ipsecPolicies;
         return this;
@@ -37,6 +39,7 @@ public class UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipsecPoliciesPreset")
     public String ipsecPoliciesPreset;
+
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers withIpsecPoliciesPreset(String ipsecPoliciesPreset) {
         this.ipsecPoliciesPreset = ipsecPoliciesPreset;
         return this;
@@ -47,6 +50,7 @@ public class UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers {
      */
     @JsonProperty("name")
     public String name;
+
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +62,7 @@ public class UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkTags")
     public String[] networkTags;
+
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers withNetworkTags(String[] networkTags) {
         this.networkTags = networkTags;
         return this;
@@ -68,6 +73,7 @@ public class UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers {
      */
     @JsonProperty("privateSubnets")
     public String[] privateSubnets;
+
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers withPrivateSubnets(String[] privateSubnets) {
         this.privateSubnets = privateSubnets;
         return this;
@@ -78,6 +84,7 @@ public class UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers {
      */
     @JsonProperty("publicIp")
     public String publicIp;
+
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -89,6 +96,7 @@ public class UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteId")
     public String remoteId;
+
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers withRemoteId(String remoteId) {
         this.remoteId = remoteId;
         return this;
@@ -99,9 +107,16 @@ public class UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers {
      */
     @JsonProperty("secret")
     public String secret;
+
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers withSecret(String secret) {
         this.secret = secret;
         return this;
     }
     
+    public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeers(@JsonProperty("name") String name, @JsonProperty("privateSubnets") String[] privateSubnets, @JsonProperty("publicIp") String publicIp, @JsonProperty("secret") String secret) {
+        this.name = name;
+        this.privateSubnets = privateSubnets;
+        this.publicIp = publicIp;
+        this.secret = secret;
+  }
 }

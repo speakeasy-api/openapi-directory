@@ -15,6 +15,7 @@ public class DescribeGlobalTableSettingsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTableName")
     public String globalTableName;
+
     public DescribeGlobalTableSettingsOutput withGlobalTableName(String globalTableName) {
         this.globalTableName = globalTableName;
         return this;
@@ -23,9 +24,11 @@ public class DescribeGlobalTableSettingsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaSettings")
     public ReplicaSettingsDescription[] replicaSettings;
+
     public DescribeGlobalTableSettingsOutput withReplicaSettings(ReplicaSettingsDescription[] replicaSettings) {
         this.replicaSettings = replicaSettings;
         return this;
     }
     
+    public DescribeGlobalTableSettingsOutput(){}
 }

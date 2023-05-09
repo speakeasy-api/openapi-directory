@@ -12,6 +12,7 @@ public class DescribeScalingActivitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeNotScaledActivities")
     public Boolean includeNotScaledActivities;
+
     public DescribeScalingActivitiesRequest withIncludeNotScaledActivities(Boolean includeNotScaledActivities) {
         this.includeNotScaledActivities = includeNotScaledActivities;
         return this;
@@ -20,6 +21,7 @@ public class DescribeScalingActivitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeScalingActivitiesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class DescribeScalingActivitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeScalingActivitiesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class DescribeScalingActivitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public DescribeScalingActivitiesRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -44,6 +48,7 @@ public class DescribeScalingActivitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalableDimension")
     public ScalableDimensionEnum scalableDimension;
+
     public DescribeScalingActivitiesRequest withScalableDimension(ScalableDimensionEnum scalableDimension) {
         this.scalableDimension = scalableDimension;
         return this;
@@ -51,9 +56,13 @@ public class DescribeScalingActivitiesRequest {
     
     @JsonProperty("ServiceNamespace")
     public ServiceNamespaceEnum serviceNamespace;
+
     public DescribeScalingActivitiesRequest withServiceNamespace(ServiceNamespaceEnum serviceNamespace) {
         this.serviceNamespace = serviceNamespace;
         return this;
     }
     
+    public DescribeScalingActivitiesRequest(@JsonProperty("ServiceNamespace") ServiceNamespaceEnum serviceNamespace) {
+        this.serviceNamespace = serviceNamespace;
+  }
 }

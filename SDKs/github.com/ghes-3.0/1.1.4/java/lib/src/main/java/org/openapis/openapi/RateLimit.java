@@ -57,12 +57,10 @@ public class RateLimit {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RateLimitGetResponse res = new org.openapis.openapi.models.operations.RateLimitGetResponse() {{
+        org.openapis.openapi.models.operations.RateLimitGetResponse res = new org.openapis.openapi.models.operations.RateLimitGetResponse(contentType, httpRes.statusCode()) {{
             rateLimitOverview = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

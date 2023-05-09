@@ -15,6 +15,7 @@ public class CommitDiffSourceCodeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationCommit")
     public String destinationCommit;
+
     public CommitDiffSourceCodeType withDestinationCommit(String destinationCommit) {
         this.destinationCommit = destinationCommit;
         return this;
@@ -23,6 +24,7 @@ public class CommitDiffSourceCodeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MergeBaseCommit")
     public String mergeBaseCommit;
+
     public CommitDiffSourceCodeType withMergeBaseCommit(String mergeBaseCommit) {
         this.mergeBaseCommit = mergeBaseCommit;
         return this;
@@ -31,9 +33,11 @@ public class CommitDiffSourceCodeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceCommit")
     public String sourceCommit;
+
     public CommitDiffSourceCodeType withSourceCommit(String sourceCommit) {
         this.sourceCommit = sourceCommit;
         return this;
     }
     
+    public CommitDiffSourceCodeType(){}
 }

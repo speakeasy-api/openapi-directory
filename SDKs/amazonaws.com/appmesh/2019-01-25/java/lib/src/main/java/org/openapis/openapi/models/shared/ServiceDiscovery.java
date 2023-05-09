@@ -15,6 +15,7 @@ public class ServiceDiscovery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsCloudMap")
     public AwsCloudMapServiceDiscovery awsCloudMap;
+
     public ServiceDiscovery withAwsCloudMap(AwsCloudMapServiceDiscovery awsCloudMap) {
         this.awsCloudMap = awsCloudMap;
         return this;
@@ -23,9 +24,11 @@ public class ServiceDiscovery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dns")
     public DnsServiceDiscovery dns;
+
     public ServiceDiscovery withDns(DnsServiceDiscovery dns) {
         this.dns = dns;
         return this;
     }
     
+    public ServiceDiscovery(){}
 }

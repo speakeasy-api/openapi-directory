@@ -15,6 +15,7 @@ public class LegalEntityAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatorId")
     public String associatorId;
+
     public LegalEntityAssociation withAssociatorId(String associatorId) {
         this.associatorId = associatorId;
         return this;
@@ -28,6 +29,7 @@ public class LegalEntityAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityType")
     public String entityType;
+
     public LegalEntityAssociation withEntityType(String entityType) {
         this.entityType = entityType;
         return this;
@@ -39,6 +41,7 @@ public class LegalEntityAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTitle")
     public String jobTitle;
+
     public LegalEntityAssociation withJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
         return this;
@@ -49,6 +52,7 @@ public class LegalEntityAssociation {
      */
     @JsonProperty("legalEntityId")
     public String legalEntityId;
+
     public LegalEntityAssociation withLegalEntityId(String legalEntityId) {
         this.legalEntityId = legalEntityId;
         return this;
@@ -64,6 +68,7 @@ public class LegalEntityAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LegalEntityAssociation withName(String name) {
         this.name = name;
         return this;
@@ -76,9 +81,14 @@ public class LegalEntityAssociation {
      */
     @JsonProperty("type")
     public LegalEntityAssociationTypeEnum type;
+
     public LegalEntityAssociation withType(LegalEntityAssociationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public LegalEntityAssociation(@JsonProperty("legalEntityId") String legalEntityId, @JsonProperty("type") LegalEntityAssociationTypeEnum type) {
+        this.legalEntityId = legalEntityId;
+        this.type = type;
+  }
 }

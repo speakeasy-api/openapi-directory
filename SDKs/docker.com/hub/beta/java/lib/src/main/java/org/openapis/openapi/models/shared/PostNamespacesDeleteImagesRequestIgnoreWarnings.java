@@ -14,6 +14,7 @@ public class PostNamespacesDeleteImagesRequestIgnoreWarnings {
      */
     @JsonProperty("digest")
     public String digest;
+
     public PostNamespacesDeleteImagesRequestIgnoreWarnings withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -24,6 +25,7 @@ public class PostNamespacesDeleteImagesRequestIgnoreWarnings {
      */
     @JsonProperty("repository")
     public String repository;
+
     public PostNamespacesDeleteImagesRequestIgnoreWarnings withRepository(String repository) {
         this.repository = repository;
         return this;
@@ -35,6 +37,7 @@ public class PostNamespacesDeleteImagesRequestIgnoreWarnings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public PostNamespacesDeleteImagesRequestIgnoreWarnings withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -45,9 +48,15 @@ public class PostNamespacesDeleteImagesRequestIgnoreWarnings {
      */
     @JsonProperty("warning")
     public PostNamespacesDeleteImagesRequestIgnoreWarningsWarningEnum warning;
+
     public PostNamespacesDeleteImagesRequestIgnoreWarnings withWarning(PostNamespacesDeleteImagesRequestIgnoreWarningsWarningEnum warning) {
         this.warning = warning;
         return this;
     }
     
+    public PostNamespacesDeleteImagesRequestIgnoreWarnings(@JsonProperty("digest") String digest, @JsonProperty("repository") String repository, @JsonProperty("warning") PostNamespacesDeleteImagesRequestIgnoreWarningsWarningEnum warning) {
+        this.digest = digest;
+        this.repository = repository;
+        this.warning = warning;
+  }
 }

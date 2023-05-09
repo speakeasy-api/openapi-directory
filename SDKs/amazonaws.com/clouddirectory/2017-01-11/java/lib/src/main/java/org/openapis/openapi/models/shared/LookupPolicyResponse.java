@@ -15,6 +15,7 @@ public class LookupPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public LookupPolicyResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class LookupPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyToPathList")
     public PolicyToPath[] policyToPathList;
+
     public LookupPolicyResponse withPolicyToPathList(PolicyToPath[] policyToPathList) {
         this.policyToPathList = policyToPathList;
         return this;
     }
     
+    public LookupPolicyResponse(){}
 }

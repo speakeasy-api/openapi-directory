@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReportTaskRunnerHeartbeatOutput {
     @JsonProperty("terminate")
     public Boolean terminate;
+
     public ReportTaskRunnerHeartbeatOutput withTerminate(Boolean terminate) {
         this.terminate = terminate;
         return this;
     }
     
+    public ReportTaskRunnerHeartbeatOutput(@JsonProperty("terminate") Boolean terminate) {
+        this.terminate = terminate;
+  }
 }

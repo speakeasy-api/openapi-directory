@@ -14,6 +14,7 @@ public class PostPortfolioAnalysisEffectiveNumberOfBetsRequestBody {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioAnalysisEffectiveNumberOfBetsRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -24,6 +25,7 @@ public class PostPortfolioAnalysisEffectiveNumberOfBetsRequestBody {
      */
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostPortfolioAnalysisEffectiveNumberOfBetsRequestBody withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
@@ -35,6 +37,7 @@ public class PostPortfolioAnalysisEffectiveNumberOfBetsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("factorsExtractionMethod")
     public PostPortfolioAnalysisEffectiveNumberOfBetsRequestBodyFactorsExtractionMethodEnum factorsExtractionMethod;
+
     public PostPortfolioAnalysisEffectiveNumberOfBetsRequestBody withFactorsExtractionMethod(PostPortfolioAnalysisEffectiveNumberOfBetsRequestBodyFactorsExtractionMethodEnum factorsExtractionMethod) {
         this.factorsExtractionMethod = factorsExtractionMethod;
         return this;
@@ -42,9 +45,15 @@ public class PostPortfolioAnalysisEffectiveNumberOfBetsRequestBody {
     
     @JsonProperty("portfolios")
     public PostPortfolioAnalysisEffectiveNumberOfBetsRequestBodyPortfolios[] portfolios;
+
     public PostPortfolioAnalysisEffectiveNumberOfBetsRequestBody withPortfolios(PostPortfolioAnalysisEffectiveNumberOfBetsRequestBodyPortfolios[] portfolios) {
         this.portfolios = portfolios;
         return this;
     }
     
+    public PostPortfolioAnalysisEffectiveNumberOfBetsRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsCovarianceMatrix") Double[][] assetsCovarianceMatrix, @JsonProperty("portfolios") PostPortfolioAnalysisEffectiveNumberOfBetsRequestBodyPortfolios[] portfolios) {
+        this.assets = assets;
+        this.assetsCovarianceMatrix = assetsCovarianceMatrix;
+        this.portfolios = portfolios;
+  }
 }

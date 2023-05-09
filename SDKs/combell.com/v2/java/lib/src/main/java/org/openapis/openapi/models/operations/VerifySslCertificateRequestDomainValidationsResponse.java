@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VerifySslCertificateRequestDomainValidationsResponse {
     
     public String contentType;
+
     public VerifySslCertificateRequestDomainValidationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class VerifySslCertificateRequestDomainValidationsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public VerifySslCertificateRequestDomainValidationsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class VerifySslCertificateRequestDomainValidationsResponse {
     
     
     public Integer statusCode;
+
     public VerifySslCertificateRequestDomainValidationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class VerifySslCertificateRequestDomainValidationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VerifySslCertificateRequestDomainValidationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public VerifySslCertificateRequestDomainValidationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

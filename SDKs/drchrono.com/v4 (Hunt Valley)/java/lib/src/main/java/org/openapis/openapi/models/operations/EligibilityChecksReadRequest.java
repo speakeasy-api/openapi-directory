@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EligibilityChecksReadRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
     public Long appointment;
+
     public EligibilityChecksReadRequest withAppointment(Long appointment) {
         this.appointment = appointment;
         return this;
@@ -16,6 +18,7 @@ public class EligibilityChecksReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment_date")
     public String appointmentDate;
+
     public EligibilityChecksReadRequest withAppointmentDate(String appointmentDate) {
         this.appointmentDate = appointmentDate;
         return this;
@@ -23,6 +26,7 @@ public class EligibilityChecksReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment_date_range")
     public String appointmentDateRange;
+
     public EligibilityChecksReadRequest withAppointmentDateRange(String appointmentDateRange) {
         this.appointmentDateRange = appointmentDateRange;
         return this;
@@ -30,6 +34,7 @@ public class EligibilityChecksReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public EligibilityChecksReadRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -37,6 +42,7 @@ public class EligibilityChecksReadRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public EligibilityChecksReadRequest withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +50,7 @@ public class EligibilityChecksReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public EligibilityChecksReadRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -51,6 +58,7 @@ public class EligibilityChecksReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query_date")
     public String queryDate;
+
     public EligibilityChecksReadRequest withQueryDate(String queryDate) {
         this.queryDate = queryDate;
         return this;
@@ -58,9 +66,13 @@ public class EligibilityChecksReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query_date_range")
     public String queryDateRange;
+
     public EligibilityChecksReadRequest withQueryDateRange(String queryDateRange) {
         this.queryDateRange = queryDateRange;
         return this;
     }
     
+    public EligibilityChecksReadRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

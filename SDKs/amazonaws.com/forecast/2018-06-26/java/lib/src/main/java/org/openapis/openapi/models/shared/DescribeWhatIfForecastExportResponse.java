@@ -22,6 +22,7 @@ public class DescribeWhatIfForecastExportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeWhatIfForecastExportResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -33,6 +34,7 @@ public class DescribeWhatIfForecastExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destination")
     public DataDestination destination;
+
     public DescribeWhatIfForecastExportResponse withDestination(DataDestination destination) {
         this.destination = destination;
         return this;
@@ -41,6 +43,7 @@ public class DescribeWhatIfForecastExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedTimeRemainingInMinutes")
     public Long estimatedTimeRemainingInMinutes;
+
     public DescribeWhatIfForecastExportResponse withEstimatedTimeRemainingInMinutes(Long estimatedTimeRemainingInMinutes) {
         this.estimatedTimeRemainingInMinutes = estimatedTimeRemainingInMinutes;
         return this;
@@ -49,6 +52,7 @@ public class DescribeWhatIfForecastExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public DescribeWhatIfForecastExportResponse withFormat(String format) {
         this.format = format;
         return this;
@@ -59,6 +63,7 @@ public class DescribeWhatIfForecastExportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public DescribeWhatIfForecastExportResponse withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -67,6 +72,7 @@ public class DescribeWhatIfForecastExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public DescribeWhatIfForecastExportResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -75,6 +81,7 @@ public class DescribeWhatIfForecastExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public DescribeWhatIfForecastExportResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -83,6 +90,7 @@ public class DescribeWhatIfForecastExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatIfForecastArns")
     public String[] whatIfForecastArns;
+
     public DescribeWhatIfForecastExportResponse withWhatIfForecastArns(String[] whatIfForecastArns) {
         this.whatIfForecastArns = whatIfForecastArns;
         return this;
@@ -91,6 +99,7 @@ public class DescribeWhatIfForecastExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatIfForecastExportArn")
     public String whatIfForecastExportArn;
+
     public DescribeWhatIfForecastExportResponse withWhatIfForecastExportArn(String whatIfForecastExportArn) {
         this.whatIfForecastExportArn = whatIfForecastExportArn;
         return this;
@@ -99,9 +108,11 @@ public class DescribeWhatIfForecastExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatIfForecastExportName")
     public String whatIfForecastExportName;
+
     public DescribeWhatIfForecastExportResponse withWhatIfForecastExportName(String whatIfForecastExportName) {
         this.whatIfForecastExportName = whatIfForecastExportName;
         return this;
     }
     
+    public DescribeWhatIfForecastExportResponse(){}
 }

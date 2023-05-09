@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ApplicationsApplicationDeveloper {
     
     public Integer apiEulaVersion;
+
     public ApplicationsApplicationDeveloper withApiEulaVersion(Integer apiEulaVersion) {
         this.apiEulaVersion = apiEulaVersion;
         return this;
@@ -16,6 +17,7 @@ public class ApplicationsApplicationDeveloper {
     
     
     public Integer role;
+
     public ApplicationsApplicationDeveloper withRole(Integer role) {
         this.role = role;
         return this;
@@ -26,9 +28,11 @@ public class ApplicationsApplicationDeveloper {
      */
     
     public UserUserInfoCard user;
+
     public ApplicationsApplicationDeveloper withUser(UserUserInfoCard user) {
         this.user = user;
         return this;
     }
     
+    public ApplicationsApplicationDeveloper(){}
 }

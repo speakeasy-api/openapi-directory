@@ -18,6 +18,7 @@ public class UpdateChartSpecRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chartId")
     public Integer chartId;
+
     public UpdateChartSpecRequest withChartId(Integer chartId) {
         this.chartId = chartId;
         return this;
@@ -29,9 +30,11 @@ public class UpdateChartSpecRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public ChartSpec spec;
+
     public UpdateChartSpecRequest withSpec(ChartSpec spec) {
         this.spec = spec;
         return this;
     }
     
+    public UpdateChartSpecRequest(){}
 }

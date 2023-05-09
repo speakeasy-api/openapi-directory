@@ -15,6 +15,7 @@ public class WorkgroupHTTPStatusVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public WorkgroupHTTPStatusVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +24,7 @@ public class WorkgroupHTTPStatusVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public WorkgroupHTTPStatusVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -31,6 +33,7 @@ public class WorkgroupHTTPStatusVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workgroup_id")
     public Long workgroupId;
+
     public WorkgroupHTTPStatusVO withWorkgroupId(Long workgroupId) {
         this.workgroupId = workgroupId;
         return this;
@@ -39,9 +42,11 @@ public class WorkgroupHTTPStatusVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workgroup_name")
     public String workgroupName;
+
     public WorkgroupHTTPStatusVO withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public WorkgroupHTTPStatusVO(){}
 }

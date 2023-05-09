@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVolumeStatusResultVolumeStatusesAttachmentStatuses {
     
     public String instanceId;
+
     public DescribeVolumeStatusResultVolumeStatusesAttachmentStatuses withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVolumeStatusResultVolumeStatusesAttachmentStatuses {
     
     
     public String ioPerformance;
+
     public DescribeVolumeStatusResultVolumeStatusesAttachmentStatuses withIoPerformance(String ioPerformance) {
         this.ioPerformance = ioPerformance;
         return this;
     }
     
+    public DescribeVolumeStatusResultVolumeStatusesAttachmentStatuses(){}
 }

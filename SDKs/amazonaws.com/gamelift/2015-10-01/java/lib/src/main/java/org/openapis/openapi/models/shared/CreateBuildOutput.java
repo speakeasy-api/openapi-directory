@@ -15,6 +15,7 @@ public class CreateBuildOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Build")
     public Build build;
+
     public CreateBuildOutput withBuild(Build build) {
         this.build = build;
         return this;
@@ -23,6 +24,7 @@ public class CreateBuildOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageLocation")
     public S3Location storageLocation;
+
     public CreateBuildOutput withStorageLocation(S3Location storageLocation) {
         this.storageLocation = storageLocation;
         return this;
@@ -31,9 +33,11 @@ public class CreateBuildOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UploadCredentials")
     public AwsCredentials uploadCredentials;
+
     public CreateBuildOutput withUploadCredentials(AwsCredentials uploadCredentials) {
         this.uploadCredentials = uploadCredentials;
         return this;
     }
     
+    public CreateBuildOutput(){}
 }

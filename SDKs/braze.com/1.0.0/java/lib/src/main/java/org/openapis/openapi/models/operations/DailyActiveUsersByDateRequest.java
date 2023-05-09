@@ -14,6 +14,7 @@ public class DailyActiveUsersByDateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_id")
     public String appId;
+
     public DailyActiveUsersByDateRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -26,6 +27,7 @@ public class DailyActiveUsersByDateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_at")
     public String endingAt;
+
     public DailyActiveUsersByDateRequest withEndingAt(String endingAt) {
         this.endingAt = endingAt;
         return this;
@@ -38,9 +40,11 @@ public class DailyActiveUsersByDateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
     public String length;
+
     public DailyActiveUsersByDateRequest withLength(String length) {
         this.length = length;
         return this;
     }
     
+    public DailyActiveUsersByDateRequest(){}
 }

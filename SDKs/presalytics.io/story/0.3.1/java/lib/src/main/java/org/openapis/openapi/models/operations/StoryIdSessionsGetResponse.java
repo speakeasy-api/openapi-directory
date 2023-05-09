@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StoryIdSessionsGetResponse {
     
     public String contentType;
+
     public StoryIdSessionsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class StoryIdSessionsGetResponse {
     
     
     public Integer statusCode;
+
     public StoryIdSessionsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class StoryIdSessionsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StoryIdSessionsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class StoryIdSessionsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.ProblemDetail problemDetail;
+
     public StoryIdSessionsGetResponse withProblemDetail(org.openapis.openapi.models.shared.ProblemDetail problemDetail) {
         this.problemDetail = problemDetail;
         return this;
@@ -43,9 +48,14 @@ public class StoryIdSessionsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Session[] sessions;
+
     public StoryIdSessionsGetResponse withSessions(org.openapis.openapi.models.shared.Session[] sessions) {
         this.sessions = sessions;
         return this;
     }
     
+    public StoryIdSessionsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

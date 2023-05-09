@@ -14,6 +14,7 @@ public class PutEventsRequestBody {
      */
     @JsonProperty("eventList")
     public org.openapis.openapi.models.shared.Event[] eventList;
+
     public PutEventsRequestBody withEventList(org.openapis.openapi.models.shared.Event[] eventList) {
         this.eventList = eventList;
         return this;
@@ -24,6 +25,7 @@ public class PutEventsRequestBody {
      */
     @JsonProperty("sessionId")
     public String sessionId;
+
     public PutEventsRequestBody withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -34,6 +36,7 @@ public class PutEventsRequestBody {
      */
     @JsonProperty("trackingId")
     public String trackingId;
+
     public PutEventsRequestBody withTrackingId(String trackingId) {
         this.trackingId = trackingId;
         return this;
@@ -45,9 +48,15 @@ public class PutEventsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public PutEventsRequestBody withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public PutEventsRequestBody(@JsonProperty("eventList") org.openapis.openapi.models.shared.Event[] eventList, @JsonProperty("sessionId") String sessionId, @JsonProperty("trackingId") String trackingId) {
+        this.eventList = eventList;
+        this.sessionId = sessionId;
+        this.trackingId = trackingId;
+  }
 }

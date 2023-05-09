@@ -18,6 +18,7 @@ public class ConvertConversionWorkspaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoCommit")
     public Boolean autoCommit;
+
     public ConvertConversionWorkspaceRequest withAutoCommit(Boolean autoCommit) {
         this.autoCommit = autoCommit;
         return this;
@@ -29,9 +30,11 @@ public class ConvertConversionWorkspaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public ConvertConversionWorkspaceRequest withFilter(String filter) {
         this.filter = filter;
         return this;
     }
     
+    public ConvertConversionWorkspaceRequest(){}
 }

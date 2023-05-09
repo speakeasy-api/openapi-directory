@@ -15,6 +15,7 @@ public class RestoreVolumeFromSnapshotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdministrativeActions")
     public AdministrativeAction[] administrativeActions;
+
     public RestoreVolumeFromSnapshotResponse withAdministrativeActions(AdministrativeAction[] administrativeActions) {
         this.administrativeActions = administrativeActions;
         return this;
@@ -23,6 +24,7 @@ public class RestoreVolumeFromSnapshotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lifecycle")
     public VolumeLifecycleEnum lifecycle;
+
     public RestoreVolumeFromSnapshotResponse withLifecycle(VolumeLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -31,9 +33,11 @@ public class RestoreVolumeFromSnapshotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeId")
     public String volumeId;
+
     public RestoreVolumeFromSnapshotResponse withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public RestoreVolumeFromSnapshotResponse(){}
 }

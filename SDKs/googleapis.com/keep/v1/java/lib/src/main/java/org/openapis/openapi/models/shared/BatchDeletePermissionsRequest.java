@@ -18,9 +18,11 @@ public class BatchDeletePermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public String[] names;
+
     public BatchDeletePermissionsRequest withNames(String[] names) {
         this.names = names;
         return this;
     }
     
+    public BatchDeletePermissionsRequest(){}
 }

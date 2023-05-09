@@ -18,6 +18,7 @@ public class UserDefinedFunctionResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlineCode")
     public String inlineCode;
+
     public UserDefinedFunctionResource withInlineCode(String inlineCode) {
         this.inlineCode = inlineCode;
         return this;
@@ -29,9 +30,11 @@ public class UserDefinedFunctionResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceUri")
     public String resourceUri;
+
     public UserDefinedFunctionResource withResourceUri(String resourceUri) {
         this.resourceUri = resourceUri;
         return this;
     }
     
+    public UserDefinedFunctionResource(){}
 }

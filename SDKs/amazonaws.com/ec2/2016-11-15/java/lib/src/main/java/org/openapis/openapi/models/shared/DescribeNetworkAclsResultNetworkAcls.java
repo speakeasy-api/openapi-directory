@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkAclsResultNetworkAcls {
     
     public DescribeNetworkAclsResultNetworkAclsAssociations[] associations;
+
     public DescribeNetworkAclsResultNetworkAcls withAssociations(DescribeNetworkAclsResultNetworkAclsAssociations[] associations) {
         this.associations = associations;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkAclsResultNetworkAcls {
     
     
     public DescribeNetworkAclsResultNetworkAclsEntries[] entries;
+
     public DescribeNetworkAclsResultNetworkAcls withEntries(DescribeNetworkAclsResultNetworkAclsEntries[] entries) {
         this.entries = entries;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNetworkAclsResultNetworkAcls {
     
     
     public Boolean isDefault;
+
     public DescribeNetworkAclsResultNetworkAcls withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -33,6 +36,7 @@ public class DescribeNetworkAclsResultNetworkAcls {
     
     
     public String networkAclId;
+
     public DescribeNetworkAclsResultNetworkAcls withNetworkAclId(String networkAclId) {
         this.networkAclId = networkAclId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeNetworkAclsResultNetworkAcls {
     
     
     public String ownerId;
+
     public DescribeNetworkAclsResultNetworkAcls withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeNetworkAclsResultNetworkAcls {
     
     
     public DescribeNetworkAclsResultNetworkAclsTags[] tags;
+
     public DescribeNetworkAclsResultNetworkAcls withTags(DescribeNetworkAclsResultNetworkAclsTags[] tags) {
         this.tags = tags;
         return this;
@@ -54,9 +60,11 @@ public class DescribeNetworkAclsResultNetworkAcls {
     
     
     public String vpcId;
+
     public DescribeNetworkAclsResultNetworkAcls withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DescribeNetworkAclsResultNetworkAcls(){}
 }

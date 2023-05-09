@@ -15,6 +15,7 @@ public class ResultFormattedResultsRuleResultsUrlBlocksHeader {
      */
     
     public ResultFormattedResultsRuleResultsUrlBlocksHeaderArgs[] args;
+
     public ResultFormattedResultsRuleResultsUrlBlocksHeader withArgs(ResultFormattedResultsRuleResultsUrlBlocksHeaderArgs[] args) {
         this.args = args;
         return this;
@@ -25,9 +26,11 @@ public class ResultFormattedResultsRuleResultsUrlBlocksHeader {
      */
     
     public String format;
+
     public ResultFormattedResultsRuleResultsUrlBlocksHeader withFormat(String format) {
         this.format = format;
         return this;
     }
     
+    public ResultFormattedResultsRuleResultsUrlBlocksHeader(){}
 }

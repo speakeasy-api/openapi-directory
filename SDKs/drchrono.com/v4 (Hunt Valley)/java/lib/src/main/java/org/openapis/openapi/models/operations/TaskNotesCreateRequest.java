@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class TaskNotesCreateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public TaskNotesCreateRequest withSince(String since) {
         this.since = since;
         return this;
@@ -16,9 +17,11 @@ public class TaskNotesCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=task")
     public Long task;
+
     public TaskNotesCreateRequest withTask(Long task) {
         this.task = task;
         return this;
     }
     
+    public TaskNotesCreateRequest(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBClusterEndpointMessage {
     
     public DBClusterEndpointList[] dbClusterEndpoints;
+
     public DBClusterEndpointMessage withDBClusterEndpoints(DBClusterEndpointList[] dbClusterEndpoints) {
         this.dbClusterEndpoints = dbClusterEndpoints;
         return this;
@@ -19,9 +20,11 @@ public class DBClusterEndpointMessage {
     
     
     public String marker;
+
     public DBClusterEndpointMessage withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public DBClusterEndpointMessage(){}
 }

@@ -92,4 +92,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRecommenderV1Mar
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRecommenderV1RecommenderConfigInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRecommenderV1RecommenderConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRecommenderV1RecommenderGenerationConfig.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

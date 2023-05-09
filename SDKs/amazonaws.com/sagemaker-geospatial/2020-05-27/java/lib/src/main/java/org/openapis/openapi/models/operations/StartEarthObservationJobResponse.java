@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartEarthObservationJobResponse {
@@ -12,6 +13,7 @@ public class StartEarthObservationJobResponse {
      */
     
     public Object accessDeniedException;
+
     public StartEarthObservationJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartEarthObservationJobResponse {
      */
     
     public Object conflictException;
+
     public StartEarthObservationJobResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartEarthObservationJobResponse {
     
     
     public String contentType;
+
     public StartEarthObservationJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartEarthObservationJobResponse {
      */
     
     public Object internalServerException;
+
     public StartEarthObservationJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class StartEarthObservationJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartEarthObservationJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartEarthObservationJobResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartEarthObservationJobResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -69,6 +76,7 @@ public class StartEarthObservationJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartEarthObservationJobOutput startEarthObservationJobOutput;
+
     public StartEarthObservationJobResponse withStartEarthObservationJobOutput(org.openapis.openapi.models.shared.StartEarthObservationJobOutput startEarthObservationJobOutput) {
         this.startEarthObservationJobOutput = startEarthObservationJobOutput;
         return this;
@@ -76,6 +84,7 @@ public class StartEarthObservationJobResponse {
     
     
     public Integer statusCode;
+
     public StartEarthObservationJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class StartEarthObservationJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartEarthObservationJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class StartEarthObservationJobResponse {
      */
     
     public Object throttlingException;
+
     public StartEarthObservationJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class StartEarthObservationJobResponse {
      */
     
     public Object validationException;
+
     public StartEarthObservationJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartEarthObservationJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

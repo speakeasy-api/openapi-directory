@@ -15,6 +15,7 @@ public class TableCell {
      */
     @JsonProperty("label")
     public String label;
+
     public TableCell withLabel(String label) {
         this.label = label;
         return this;
@@ -25,9 +26,14 @@ public class TableCell {
      */
     @JsonProperty("value")
     public String value;
+
     public TableCell withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public TableCell(@JsonProperty("label") String label, @JsonProperty("value") String value) {
+        this.label = label;
+        this.value = value;
+  }
 }

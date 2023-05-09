@@ -18,6 +18,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datapathProvider")
     public NetworkConfigDatapathProviderEnum datapathProvider;
+
     public NetworkConfig withDatapathProvider(NetworkConfigDatapathProviderEnum datapathProvider) {
         this.datapathProvider = datapathProvider;
         return this;
@@ -29,6 +30,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultSnatStatus")
     public DefaultSnatStatus defaultSnatStatus;
+
     public NetworkConfig withDefaultSnatStatus(DefaultSnatStatus defaultSnatStatus) {
         this.defaultSnatStatus = defaultSnatStatus;
         return this;
@@ -40,6 +42,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsConfig")
     public DNSConfig dnsConfig;
+
     public NetworkConfig withDnsConfig(DNSConfig dnsConfig) {
         this.dnsConfig = dnsConfig;
         return this;
@@ -51,6 +54,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableIntraNodeVisibility")
     public Boolean enableIntraNodeVisibility;
+
     public NetworkConfig withEnableIntraNodeVisibility(Boolean enableIntraNodeVisibility) {
         this.enableIntraNodeVisibility = enableIntraNodeVisibility;
         return this;
@@ -62,6 +66,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableL4ilbSubsetting")
     public Boolean enableL4ilbSubsetting;
+
     public NetworkConfig withEnableL4ilbSubsetting(Boolean enableL4ilbSubsetting) {
         this.enableL4ilbSubsetting = enableL4ilbSubsetting;
         return this;
@@ -73,6 +78,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gatewayApiConfig")
     public GatewayAPIConfig gatewayApiConfig;
+
     public NetworkConfig withGatewayApiConfig(GatewayAPIConfig gatewayApiConfig) {
         this.gatewayApiConfig = gatewayApiConfig;
         return this;
@@ -84,6 +90,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public NetworkConfig withNetwork(String network) {
         this.network = network;
         return this;
@@ -95,6 +102,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateIpv6GoogleAccess")
     public NetworkConfigPrivateIpv6GoogleAccessEnum privateIpv6GoogleAccess;
+
     public NetworkConfig withPrivateIpv6GoogleAccess(NetworkConfigPrivateIpv6GoogleAccessEnum privateIpv6GoogleAccess) {
         this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
         return this;
@@ -106,6 +114,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceExternalIpsConfig")
     public ServiceExternalIPsConfig serviceExternalIpsConfig;
+
     public NetworkConfig withServiceExternalIpsConfig(ServiceExternalIPsConfig serviceExternalIpsConfig) {
         this.serviceExternalIpsConfig = serviceExternalIpsConfig;
         return this;
@@ -117,9 +126,11 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public NetworkConfig withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
     }
     
+    public NetworkConfig(){}
 }

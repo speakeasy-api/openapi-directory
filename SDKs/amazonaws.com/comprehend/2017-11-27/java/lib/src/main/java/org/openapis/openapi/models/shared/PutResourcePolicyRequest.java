@@ -12,6 +12,7 @@ public class PutResourcePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyRevisionId")
     public String policyRevisionId;
+
     public PutResourcePolicyRequest withPolicyRevisionId(String policyRevisionId) {
         this.policyRevisionId = policyRevisionId;
         return this;
@@ -19,6 +20,7 @@ public class PutResourcePolicyRequest {
     
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public PutResourcePolicyRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -26,9 +28,14 @@ public class PutResourcePolicyRequest {
     
     @JsonProperty("ResourcePolicy")
     public String resourcePolicy;
+
     public PutResourcePolicyRequest withResourcePolicy(String resourcePolicy) {
         this.resourcePolicy = resourcePolicy;
         return this;
     }
     
+    public PutResourcePolicyRequest(@JsonProperty("ResourceArn") String resourceArn, @JsonProperty("ResourcePolicy") String resourcePolicy) {
+        this.resourceArn = resourceArn;
+        this.resourcePolicy = resourcePolicy;
+  }
 }

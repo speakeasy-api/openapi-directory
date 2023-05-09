@@ -73,6 +73,7 @@ public class SDK {
     public RegionHealthChecks regionHealthChecks;
     public RegionInstanceGroupManagers regionInstanceGroupManagers;
     public RegionInstanceGroups regionInstanceGroups;
+    public RegionInstanceTemplates regionInstanceTemplates;
     public RegionInstances regionInstances;
     public RegionNetworkEndpointGroups regionNetworkEndpointGroups;
     public RegionNetworkFirewallPolicies regionNetworkFirewallPolicies;
@@ -197,6 +198,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.acceleratorTypes = new AcceleratorTypes(
@@ -677,6 +683,15 @@ public class SDK {
 		);
 		
 		this.regionInstanceGroups = new RegionInstanceGroups(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.regionInstanceTemplates = new RegionInstanceTemplates(
 			this._defaultClient,
 			this._securityClient,
 			this._serverUrl,

@@ -15,6 +15,7 @@ public class NAPublicData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_id")
     public String id;
+
     public NAPublicData withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class NAPublicData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mark")
     public Long mark;
+
     public NAPublicData withMark(Long mark) {
         this.mark = mark;
         return this;
@@ -31,6 +33,7 @@ public class NAPublicData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measures")
     public java.util.Map<String, NAMeasure> measures;
+
     public NAPublicData withMeasures(java.util.Map<String, NAMeasure> measures) {
         this.measures = measures;
         return this;
@@ -42,6 +45,7 @@ public class NAPublicData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("module_types")
     public java.util.Map<String, String> moduleTypes;
+
     public NAPublicData withModuleTypes(java.util.Map<String, String> moduleTypes) {
         this.moduleTypes = moduleTypes;
         return this;
@@ -50,6 +54,7 @@ public class NAPublicData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modules")
     public String[] modules;
+
     public NAPublicData withModules(String[] modules) {
         this.modules = modules;
         return this;
@@ -58,9 +63,11 @@ public class NAPublicData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("place")
     public NAPlace place;
+
     public NAPublicData withPlace(NAPlace place) {
         this.place = place;
         return this;
     }
     
+    public NAPublicData(){}
 }

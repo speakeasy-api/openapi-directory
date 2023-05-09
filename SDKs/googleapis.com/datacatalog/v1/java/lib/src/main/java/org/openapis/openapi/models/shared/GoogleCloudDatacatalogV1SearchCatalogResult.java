@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1SearchCatalogResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDatacatalogV1SearchCatalogResult withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1SearchCatalogResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDatacatalogV1SearchCatalogResult withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1SearchCatalogResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullyQualifiedName")
     public String fullyQualifiedName;
+
     public GoogleCloudDatacatalogV1SearchCatalogResult withFullyQualifiedName(String fullyQualifiedName) {
         this.fullyQualifiedName = fullyQualifiedName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatacatalogV1SearchCatalogResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integratedSystem")
     public GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum integratedSystem;
+
     public GoogleCloudDatacatalogV1SearchCatalogResult withIntegratedSystem(GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum integratedSystem) {
         this.integratedSystem = integratedSystem;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDatacatalogV1SearchCatalogResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedResource")
     public String linkedResource;
+
     public GoogleCloudDatacatalogV1SearchCatalogResult withLinkedResource(String linkedResource) {
         this.linkedResource = linkedResource;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDatacatalogV1SearchCatalogResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifyTime")
     public String modifyTime;
+
     public GoogleCloudDatacatalogV1SearchCatalogResult withModifyTime(String modifyTime) {
         this.modifyTime = modifyTime;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDatacatalogV1SearchCatalogResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relativeResourceName")
     public String relativeResourceName;
+
     public GoogleCloudDatacatalogV1SearchCatalogResult withRelativeResourceName(String relativeResourceName) {
         this.relativeResourceName = relativeResourceName;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDatacatalogV1SearchCatalogResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchResultSubtype")
     public String searchResultSubtype;
+
     public GoogleCloudDatacatalogV1SearchCatalogResult withSearchResultSubtype(String searchResultSubtype) {
         this.searchResultSubtype = searchResultSubtype;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDatacatalogV1SearchCatalogResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchResultType")
     public GoogleCloudDatacatalogV1SearchCatalogResultSearchResultTypeEnum searchResultType;
+
     public GoogleCloudDatacatalogV1SearchCatalogResult withSearchResultType(GoogleCloudDatacatalogV1SearchCatalogResultSearchResultTypeEnum searchResultType) {
         this.searchResultType = searchResultType;
         return this;
@@ -117,9 +126,11 @@ public class GoogleCloudDatacatalogV1SearchCatalogResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userSpecifiedSystem")
     public String userSpecifiedSystem;
+
     public GoogleCloudDatacatalogV1SearchCatalogResult withUserSpecifiedSystem(String userSpecifiedSystem) {
         this.userSpecifiedSystem = userSpecifiedSystem;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1SearchCatalogResult(){}
 }

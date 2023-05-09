@@ -18,6 +18,7 @@ public class CloudPoolListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("odata.nextLink")
     public String odataNextLink;
+
     public CloudPoolListResult withOdataNextLink(String odataNextLink) {
         this.odataNextLink = odataNextLink;
         return this;
@@ -29,9 +30,11 @@ public class CloudPoolListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public CloudPool[] value;
+
     public CloudPoolListResult withValue(CloudPool[] value) {
         this.value = value;
         return this;
     }
     
+    public CloudPoolListResult(){}
 }

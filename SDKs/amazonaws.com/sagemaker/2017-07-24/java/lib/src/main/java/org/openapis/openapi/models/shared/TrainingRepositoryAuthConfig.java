@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TrainingRepositoryAuthConfig {
     @JsonProperty("TrainingRepositoryCredentialsProviderArn")
     public String trainingRepositoryCredentialsProviderArn;
+
     public TrainingRepositoryAuthConfig withTrainingRepositoryCredentialsProviderArn(String trainingRepositoryCredentialsProviderArn) {
         this.trainingRepositoryCredentialsProviderArn = trainingRepositoryCredentialsProviderArn;
         return this;
     }
     
+    public TrainingRepositoryAuthConfig(@JsonProperty("TrainingRepositoryCredentialsProviderArn") String trainingRepositoryCredentialsProviderArn) {
+        this.trainingRepositoryCredentialsProviderArn = trainingRepositoryCredentialsProviderArn;
+  }
 }

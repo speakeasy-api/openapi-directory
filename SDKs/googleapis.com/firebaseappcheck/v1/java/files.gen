@@ -185,4 +185,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirebaseAppcheckV1Ser
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirebaseAppcheckV1BatchUpdateServicesRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirebaseAppcheckV1UpdateServiceRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirebaseAppcheckV1ListServicesResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

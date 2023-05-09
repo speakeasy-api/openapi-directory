@@ -15,9 +15,11 @@ public class CreateEndpointGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointGroup")
     public EndpointGroup endpointGroup;
+
     public CreateEndpointGroupResponse withEndpointGroup(EndpointGroup endpointGroup) {
         this.endpointGroup = endpointGroup;
         return this;
     }
     
+    public CreateEndpointGroupResponse(){}
 }

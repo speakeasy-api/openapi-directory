@@ -15,9 +15,11 @@ public class BatchPutFieldOptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public FieldOptionError[] errors;
+
     public BatchPutFieldOptionsResponse withErrors(FieldOptionError[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public BatchPutFieldOptionsResponse(){}
 }

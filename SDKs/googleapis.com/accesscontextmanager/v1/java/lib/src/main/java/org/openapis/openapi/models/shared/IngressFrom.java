@@ -18,6 +18,7 @@ public class IngressFrom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identities")
     public String[] identities;
+
     public IngressFrom withIdentities(String[] identities) {
         this.identities = identities;
         return this;
@@ -29,6 +30,7 @@ public class IngressFrom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityType")
     public IngressFromIdentityTypeEnum identityType;
+
     public IngressFrom withIdentityType(IngressFromIdentityTypeEnum identityType) {
         this.identityType = identityType;
         return this;
@@ -40,9 +42,11 @@ public class IngressFrom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public IngressSource[] sources;
+
     public IngressFrom withSources(IngressSource[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public IngressFrom(){}
 }

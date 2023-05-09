@@ -15,6 +15,7 @@ public class AwsWafv2VisibilityConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchMetricsEnabled")
     public Boolean cloudWatchMetricsEnabled;
+
     public AwsWafv2VisibilityConfigDetails withCloudWatchMetricsEnabled(Boolean cloudWatchMetricsEnabled) {
         this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
         return this;
@@ -23,6 +24,7 @@ public class AwsWafv2VisibilityConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public AwsWafv2VisibilityConfigDetails withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -31,9 +33,11 @@ public class AwsWafv2VisibilityConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SampledRequestsEnabled")
     public Boolean sampledRequestsEnabled;
+
     public AwsWafv2VisibilityConfigDetails withSampledRequestsEnabled(Boolean sampledRequestsEnabled) {
         this.sampledRequestsEnabled = sampledRequestsEnabled;
         return this;
     }
     
+    public AwsWafv2VisibilityConfigDetails(){}
 }

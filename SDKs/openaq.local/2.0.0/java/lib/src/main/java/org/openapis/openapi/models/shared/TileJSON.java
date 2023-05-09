@@ -16,6 +16,7 @@ public class TileJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribution")
     public String attribution;
+
     public TileJSON withAttribution(String attribution) {
         this.attribution = attribution;
         return this;
@@ -24,6 +25,7 @@ public class TileJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bounds")
     public Double[] bounds;
+
     public TileJSON withBounds(Double[] bounds) {
         this.bounds = bounds;
         return this;
@@ -32,6 +34,7 @@ public class TileJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String[] data;
+
     public TileJSON withData(String[] data) {
         this.data = data;
         return this;
@@ -40,6 +43,7 @@ public class TileJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TileJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -48,6 +52,7 @@ public class TileJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grids")
     public String[] grids;
+
     public TileJSON withGrids(String[] grids) {
         this.grids = grids;
         return this;
@@ -56,6 +61,7 @@ public class TileJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legend")
     public String legend;
+
     public TileJSON withLegend(String legend) {
         this.legend = legend;
         return this;
@@ -64,6 +70,7 @@ public class TileJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxzoom")
     public Long maxzoom;
+
     public TileJSON withMaxzoom(Long maxzoom) {
         this.maxzoom = maxzoom;
         return this;
@@ -72,6 +79,7 @@ public class TileJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minzoom")
     public Long minzoom;
+
     public TileJSON withMinzoom(Long minzoom) {
         this.minzoom = minzoom;
         return this;
@@ -80,6 +88,7 @@ public class TileJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TileJSON withName(String name) {
         this.name = name;
         return this;
@@ -88,6 +97,7 @@ public class TileJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheme")
     public String scheme;
+
     public TileJSON withScheme(String scheme) {
         this.scheme = scheme;
         return this;
@@ -96,6 +106,7 @@ public class TileJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public String template;
+
     public TileJSON withTemplate(String template) {
         this.template = template;
         return this;
@@ -104,6 +115,7 @@ public class TileJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tilejson")
     public String tilejson;
+
     public TileJSON withTilejson(String tilejson) {
         this.tilejson = tilejson;
         return this;
@@ -111,6 +123,7 @@ public class TileJSON {
     
     @JsonProperty("tiles")
     public String[] tiles;
+
     public TileJSON withTiles(String[] tiles) {
         this.tiles = tiles;
         return this;
@@ -119,9 +132,13 @@ public class TileJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public TileJSON withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public TileJSON(@JsonProperty("tiles") String[] tiles) {
+        this.tiles = tiles;
+  }
 }

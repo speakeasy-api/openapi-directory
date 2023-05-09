@@ -18,6 +18,7 @@ public class PostCompile200ApplicationJSONResultAstRulesHeadKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PostCompile200ApplicationJSONResultAstRulesHeadKey withType(String type) {
         this.type = type;
         return this;
@@ -29,9 +30,11 @@ public class PostCompile200ApplicationJSONResultAstRulesHeadKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public PostCompile200ApplicationJSONResultAstRulesHeadKey withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PostCompile200ApplicationJSONResultAstRulesHeadKey(){}
 }

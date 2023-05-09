@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTransactionRequest {
@@ -12,19 +13,25 @@ public class CreateTransactionRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PostTransactionsWrapper postTransactionsWrapper;
+
     public CreateTransactionRequest withPostTransactionsWrapper(org.openapis.openapi.models.shared.PostTransactionsWrapper postTransactionsWrapper) {
         this.postTransactionsWrapper = postTransactionsWrapper;
         return this;
     }
     
     /**
-     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.ynab.com/#oauth-default-budget).
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=budget_id")
     public String budgetId;
+
     public CreateTransactionRequest withBudgetId(String budgetId) {
         this.budgetId = budgetId;
         return this;
     }
     
+    public CreateTransactionRequest(@JsonProperty("PostTransactionsWrapper") org.openapis.openapi.models.shared.PostTransactionsWrapper postTransactionsWrapper, @JsonProperty("budget_id") String budgetId) {
+        this.postTransactionsWrapper = postTransactionsWrapper;
+        this.budgetId = budgetId;
+  }
 }

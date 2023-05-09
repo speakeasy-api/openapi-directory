@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ConfirmSignUpResponse {
@@ -12,6 +13,7 @@ public class ConfirmSignUpResponse {
      */
     
     public Object aliasExistsException;
+
     public ConfirmSignUpResponse withAliasExistsException(Object aliasExistsException) {
         this.aliasExistsException = aliasExistsException;
         return this;
@@ -22,6 +24,7 @@ public class ConfirmSignUpResponse {
      */
     
     public Object codeMismatchException;
+
     public ConfirmSignUpResponse withCodeMismatchException(Object codeMismatchException) {
         this.codeMismatchException = codeMismatchException;
         return this;
@@ -32,6 +35,7 @@ public class ConfirmSignUpResponse {
      */
     
     public java.util.Map<String, Object> confirmSignUpResponse;
+
     public ConfirmSignUpResponse withConfirmSignUpResponse(java.util.Map<String, Object> confirmSignUpResponse) {
         this.confirmSignUpResponse = confirmSignUpResponse;
         return this;
@@ -39,6 +43,7 @@ public class ConfirmSignUpResponse {
     
     
     public String contentType;
+
     public ConfirmSignUpResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class ConfirmSignUpResponse {
      */
     
     public Object expiredCodeException;
+
     public ConfirmSignUpResponse withExpiredCodeException(Object expiredCodeException) {
         this.expiredCodeException = expiredCodeException;
         return this;
@@ -59,6 +65,7 @@ public class ConfirmSignUpResponse {
      */
     
     public Object forbiddenException;
+
     public ConfirmSignUpResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -69,6 +76,7 @@ public class ConfirmSignUpResponse {
      */
     
     public Object internalErrorException;
+
     public ConfirmSignUpResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -79,6 +87,7 @@ public class ConfirmSignUpResponse {
      */
     
     public Object invalidLambdaResponseException;
+
     public ConfirmSignUpResponse withInvalidLambdaResponseException(Object invalidLambdaResponseException) {
         this.invalidLambdaResponseException = invalidLambdaResponseException;
         return this;
@@ -89,6 +98,7 @@ public class ConfirmSignUpResponse {
      */
     
     public Object invalidParameterException;
+
     public ConfirmSignUpResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -99,6 +109,7 @@ public class ConfirmSignUpResponse {
      */
     
     public Object limitExceededException;
+
     public ConfirmSignUpResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -109,6 +120,7 @@ public class ConfirmSignUpResponse {
      */
     
     public Object notAuthorizedException;
+
     public ConfirmSignUpResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -119,6 +131,7 @@ public class ConfirmSignUpResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ConfirmSignUpResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -126,6 +139,7 @@ public class ConfirmSignUpResponse {
     
     
     public Integer statusCode;
+
     public ConfirmSignUpResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class ConfirmSignUpResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ConfirmSignUpResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,6 +158,7 @@ public class ConfirmSignUpResponse {
      */
     
     public Object tooManyFailedAttemptsException;
+
     public ConfirmSignUpResponse withTooManyFailedAttemptsException(Object tooManyFailedAttemptsException) {
         this.tooManyFailedAttemptsException = tooManyFailedAttemptsException;
         return this;
@@ -153,6 +169,7 @@ public class ConfirmSignUpResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ConfirmSignUpResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -163,6 +180,7 @@ public class ConfirmSignUpResponse {
      */
     
     public Object unexpectedLambdaException;
+
     public ConfirmSignUpResponse withUnexpectedLambdaException(Object unexpectedLambdaException) {
         this.unexpectedLambdaException = unexpectedLambdaException;
         return this;
@@ -173,6 +191,7 @@ public class ConfirmSignUpResponse {
      */
     
     public Object userLambdaValidationException;
+
     public ConfirmSignUpResponse withUserLambdaValidationException(Object userLambdaValidationException) {
         this.userLambdaValidationException = userLambdaValidationException;
         return this;
@@ -183,9 +202,14 @@ public class ConfirmSignUpResponse {
      */
     
     public Object userNotFoundException;
+
     public ConfirmSignUpResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public ConfirmSignUpResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

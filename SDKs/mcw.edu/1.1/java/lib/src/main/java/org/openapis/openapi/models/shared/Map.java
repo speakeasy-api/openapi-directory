@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class Map {
     
     public String dbsnpVersion;
+
     public Map withDbsnpVersion(String dbsnpVersion) {
         this.dbsnpVersion = dbsnpVersion;
         return this;
@@ -16,6 +17,7 @@ public class Map {
     
     
     public String description;
+
     public Map withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class Map {
     
     
     public Integer key;
+
     public Map withKey(Integer key) {
         this.key = key;
         return this;
@@ -30,6 +33,7 @@ public class Map {
     
     
     public Integer methodKey;
+
     public Map withMethodKey(Integer methodKey) {
         this.methodKey = methodKey;
         return this;
@@ -37,6 +41,7 @@ public class Map {
     
     
     public String name;
+
     public Map withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +49,7 @@ public class Map {
     
     
     public String notes;
+
     public Map withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -51,6 +57,7 @@ public class Map {
     
     
     public Boolean primaryRefAssembly;
+
     public Map withPrimaryRefAssembly(Boolean primaryRefAssembly) {
         this.primaryRefAssembly = primaryRefAssembly;
         return this;
@@ -58,6 +65,7 @@ public class Map {
     
     
     public Integer rank;
+
     public Map withRank(Integer rank) {
         this.rank = rank;
         return this;
@@ -65,6 +73,7 @@ public class Map {
     
     
     public String refSeqAssemblyAcc;
+
     public Map withRefSeqAssemblyAcc(String refSeqAssemblyAcc) {
         this.refSeqAssemblyAcc = refSeqAssemblyAcc;
         return this;
@@ -72,6 +81,7 @@ public class Map {
     
     
     public String refSeqAssemblyName;
+
     public Map withRefSeqAssemblyName(String refSeqAssemblyName) {
         this.refSeqAssemblyName = refSeqAssemblyName;
         return this;
@@ -79,6 +89,7 @@ public class Map {
     
     
     public Integer rgdId;
+
     public Map withRgdId(Integer rgdId) {
         this.rgdId = rgdId;
         return this;
@@ -86,6 +97,7 @@ public class Map {
     
     
     public String source;
+
     public Map withSource(String source) {
         this.source = source;
         return this;
@@ -93,6 +105,7 @@ public class Map {
     
     
     public Integer speciesTypeKey;
+
     public Map withSpeciesTypeKey(Integer speciesTypeKey) {
         this.speciesTypeKey = speciesTypeKey;
         return this;
@@ -100,6 +113,7 @@ public class Map {
     
     
     public String ucscAssemblyId;
+
     public Map withUcscAssemblyId(String ucscAssemblyId) {
         this.ucscAssemblyId = ucscAssemblyId;
         return this;
@@ -107,6 +121,7 @@ public class Map {
     
     
     public String unit;
+
     public Map withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -114,9 +129,11 @@ public class Map {
     
     
     public String version;
+
     public Map withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Map(){}
 }

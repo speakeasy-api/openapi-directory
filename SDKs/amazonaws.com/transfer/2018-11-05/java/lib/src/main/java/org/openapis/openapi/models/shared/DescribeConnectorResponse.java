@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeConnectorResponse {
     @JsonProperty("Connector")
     public DescribedConnector connector;
+
     public DescribeConnectorResponse withConnector(DescribedConnector connector) {
         this.connector = connector;
         return this;
     }
     
+    public DescribeConnectorResponse(@JsonProperty("Connector") DescribedConnector connector) {
+        this.connector = connector;
+  }
 }

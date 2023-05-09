@@ -20,6 +20,7 @@ public class NamespaceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public NamespaceSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class NamespaceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateDate")
     public OffsetDateTime createDate;
+
     public NamespaceSummary withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -38,6 +40,7 @@ public class NamespaceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public NamespaceSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class NamespaceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public NamespaceSummary withId(String id) {
         this.id = id;
         return this;
@@ -54,6 +58,7 @@ public class NamespaceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public NamespaceSummary withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class NamespaceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public NamespaceProperties properties;
+
     public NamespaceSummary withProperties(NamespaceProperties properties) {
         this.properties = properties;
         return this;
@@ -70,6 +76,7 @@ public class NamespaceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceCount")
     public Long serviceCount;
+
     public NamespaceSummary withServiceCount(Long serviceCount) {
         this.serviceCount = serviceCount;
         return this;
@@ -78,9 +85,11 @@ public class NamespaceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public NamespaceTypeEnum type;
+
     public NamespaceSummary withType(NamespaceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public NamespaceSummary(){}
 }

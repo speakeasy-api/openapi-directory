@@ -12,6 +12,7 @@ public class ListDeliveryStreamsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryStreamType")
     public DeliveryStreamTypeEnum deliveryStreamType;
+
     public ListDeliveryStreamsInput withDeliveryStreamType(DeliveryStreamTypeEnum deliveryStreamType) {
         this.deliveryStreamType = deliveryStreamType;
         return this;
@@ -20,6 +21,7 @@ public class ListDeliveryStreamsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusiveStartDeliveryStreamName")
     public String exclusiveStartDeliveryStreamName;
+
     public ListDeliveryStreamsInput withExclusiveStartDeliveryStreamName(String exclusiveStartDeliveryStreamName) {
         this.exclusiveStartDeliveryStreamName = exclusiveStartDeliveryStreamName;
         return this;
@@ -28,9 +30,11 @@ public class ListDeliveryStreamsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListDeliveryStreamsInput withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public ListDeliveryStreamsInput(){}
 }

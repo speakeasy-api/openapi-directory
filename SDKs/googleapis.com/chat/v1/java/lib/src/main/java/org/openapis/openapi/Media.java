@@ -58,11 +58,9 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChatMediaDownloadResponse res = new org.openapis.openapi.models.operations.ChatMediaDownloadResponse() {{
+        org.openapis.openapi.models.operations.ChatMediaDownloadResponse res = new org.openapis.openapi.models.operations.ChatMediaDownloadResponse(contentType, httpRes.statusCode()) {{
             media = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -74,4 +74,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/SendMessageResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/StartAttachmentUploadResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UploadMetadata.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -22,6 +22,7 @@ public class RecipeSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public RecipeSummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class RecipeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public DomainEnum domain;
+
     public RecipeSummary withDomain(DomainEnum domain) {
         this.domain = domain;
         return this;
@@ -40,6 +42,7 @@ public class RecipeSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public RecipeSummary withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -48,6 +51,7 @@ public class RecipeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RecipeSummary withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +60,7 @@ public class RecipeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipeArn")
     public String recipeArn;
+
     public RecipeSummary withRecipeArn(String recipeArn) {
         this.recipeArn = recipeArn;
         return this;
@@ -64,9 +69,11 @@ public class RecipeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public RecipeSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public RecipeSummary(){}
 }

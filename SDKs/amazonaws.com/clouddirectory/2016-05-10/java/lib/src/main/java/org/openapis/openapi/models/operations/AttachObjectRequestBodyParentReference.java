@@ -15,9 +15,11 @@ public class AttachObjectRequestBodyParentReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Selector")
     public String selector;
+
     public AttachObjectRequestBodyParentReference withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public AttachObjectRequestBodyParentReference(){}
 }

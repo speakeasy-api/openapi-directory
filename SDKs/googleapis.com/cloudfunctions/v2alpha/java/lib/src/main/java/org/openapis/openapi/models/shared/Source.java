@@ -18,6 +18,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repoSource")
     public RepoSource repoSource;
+
     public Source withRepoSource(RepoSource repoSource) {
         this.repoSource = repoSource;
         return this;
@@ -29,9 +30,11 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageSource")
     public StorageSource storageSource;
+
     public Source withStorageSource(StorageSource storageSource) {
         this.storageSource = storageSource;
         return this;
     }
     
+    public Source(){}
 }

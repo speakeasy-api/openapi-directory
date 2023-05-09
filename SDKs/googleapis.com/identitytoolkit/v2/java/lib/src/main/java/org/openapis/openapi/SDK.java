@@ -21,7 +21,8 @@ public class SDK {
   	
     public Accounts accounts;
     public DefaultSupportedIdps defaultSupportedIdps;
-    public Projects projects;	
+    public Projects projects;
+    public V2 v2;	
 
 	private HTTPClient _defaultClient;
 	private HTTPClient _securityClient;
@@ -110,6 +111,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.accounts = new Accounts(
@@ -131,6 +137,15 @@ public class SDK {
 		);
 		
 		this.projects = new Projects(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.v2 = new V2(
 			this._defaultClient,
 			this._securityClient,
 			this._serverUrl,

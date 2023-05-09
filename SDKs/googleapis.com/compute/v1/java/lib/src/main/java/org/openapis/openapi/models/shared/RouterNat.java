@@ -18,6 +18,7 @@ public class RouterNat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drainNatIps")
     public String[] drainNatIps;
+
     public RouterNat withDrainNatIps(String[] drainNatIps) {
         this.drainNatIps = drainNatIps;
         return this;
@@ -29,6 +30,7 @@ public class RouterNat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableDynamicPortAllocation")
     public Boolean enableDynamicPortAllocation;
+
     public RouterNat withEnableDynamicPortAllocation(Boolean enableDynamicPortAllocation) {
         this.enableDynamicPortAllocation = enableDynamicPortAllocation;
         return this;
@@ -37,6 +39,7 @@ public class RouterNat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableEndpointIndependentMapping")
     public Boolean enableEndpointIndependentMapping;
+
     public RouterNat withEnableEndpointIndependentMapping(Boolean enableEndpointIndependentMapping) {
         this.enableEndpointIndependentMapping = enableEndpointIndependentMapping;
         return this;
@@ -48,6 +51,7 @@ public class RouterNat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpointTypes")
     public RouterNatEndpointTypesEnum[] endpointTypes;
+
     public RouterNat withEndpointTypes(RouterNatEndpointTypesEnum[] endpointTypes) {
         this.endpointTypes = endpointTypes;
         return this;
@@ -59,6 +63,7 @@ public class RouterNat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icmpIdleTimeoutSec")
     public Integer icmpIdleTimeoutSec;
+
     public RouterNat withIcmpIdleTimeoutSec(Integer icmpIdleTimeoutSec) {
         this.icmpIdleTimeoutSec = icmpIdleTimeoutSec;
         return this;
@@ -70,6 +75,7 @@ public class RouterNat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logConfig")
     public RouterNatLogConfig logConfig;
+
     public RouterNat withLogConfig(RouterNatLogConfig logConfig) {
         this.logConfig = logConfig;
         return this;
@@ -81,6 +87,7 @@ public class RouterNat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxPortsPerVm")
     public Integer maxPortsPerVm;
+
     public RouterNat withMaxPortsPerVm(Integer maxPortsPerVm) {
         this.maxPortsPerVm = maxPortsPerVm;
         return this;
@@ -92,6 +99,7 @@ public class RouterNat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minPortsPerVm")
     public Integer minPortsPerVm;
+
     public RouterNat withMinPortsPerVm(Integer minPortsPerVm) {
         this.minPortsPerVm = minPortsPerVm;
         return this;
@@ -103,6 +111,7 @@ public class RouterNat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RouterNat withName(String name) {
         this.name = name;
         return this;
@@ -114,6 +123,7 @@ public class RouterNat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("natIpAllocateOption")
     public RouterNatNatIpAllocateOptionEnum natIpAllocateOption;
+
     public RouterNat withNatIpAllocateOption(RouterNatNatIpAllocateOptionEnum natIpAllocateOption) {
         this.natIpAllocateOption = natIpAllocateOption;
         return this;
@@ -125,6 +135,7 @@ public class RouterNat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("natIps")
     public String[] natIps;
+
     public RouterNat withNatIps(String[] natIps) {
         this.natIps = natIps;
         return this;
@@ -136,6 +147,7 @@ public class RouterNat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public RouterNatRule[] rules;
+
     public RouterNat withRules(RouterNatRule[] rules) {
         this.rules = rules;
         return this;
@@ -147,6 +159,7 @@ public class RouterNat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSubnetworkIpRangesToNat")
     public RouterNatSourceSubnetworkIpRangesToNatEnum sourceSubnetworkIpRangesToNat;
+
     public RouterNat withSourceSubnetworkIpRangesToNat(RouterNatSourceSubnetworkIpRangesToNatEnum sourceSubnetworkIpRangesToNat) {
         this.sourceSubnetworkIpRangesToNat = sourceSubnetworkIpRangesToNat;
         return this;
@@ -158,6 +171,7 @@ public class RouterNat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetworks")
     public RouterNatSubnetworkToNat[] subnetworks;
+
     public RouterNat withSubnetworks(RouterNatSubnetworkToNat[] subnetworks) {
         this.subnetworks = subnetworks;
         return this;
@@ -169,6 +183,7 @@ public class RouterNat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tcpEstablishedIdleTimeoutSec")
     public Integer tcpEstablishedIdleTimeoutSec;
+
     public RouterNat withTcpEstablishedIdleTimeoutSec(Integer tcpEstablishedIdleTimeoutSec) {
         this.tcpEstablishedIdleTimeoutSec = tcpEstablishedIdleTimeoutSec;
         return this;
@@ -180,6 +195,7 @@ public class RouterNat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tcpTimeWaitTimeoutSec")
     public Integer tcpTimeWaitTimeoutSec;
+
     public RouterNat withTcpTimeWaitTimeoutSec(Integer tcpTimeWaitTimeoutSec) {
         this.tcpTimeWaitTimeoutSec = tcpTimeWaitTimeoutSec;
         return this;
@@ -191,6 +207,7 @@ public class RouterNat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tcpTransitoryIdleTimeoutSec")
     public Integer tcpTransitoryIdleTimeoutSec;
+
     public RouterNat withTcpTransitoryIdleTimeoutSec(Integer tcpTransitoryIdleTimeoutSec) {
         this.tcpTransitoryIdleTimeoutSec = tcpTransitoryIdleTimeoutSec;
         return this;
@@ -202,9 +219,11 @@ public class RouterNat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("udpIdleTimeoutSec")
     public Integer udpIdleTimeoutSec;
+
     public RouterNat withUdpIdleTimeoutSec(Integer udpIdleTimeoutSec) {
         this.udpIdleTimeoutSec = udpIdleTimeoutSec;
         return this;
     }
     
+    public RouterNat(){}
 }

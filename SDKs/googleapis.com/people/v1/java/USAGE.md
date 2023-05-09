@@ -3,12 +3,11 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PeopleContactGroupsBatchGetSecurityOption1;
-import org.openapis.openapi.models.operations.PeopleContactGroupsBatchGetSecurityOption2;
-import org.openapis.openapi.models.operations.PeopleContactGroupsBatchGetSecurity;
 import org.openapis.openapi.models.operations.PeopleContactGroupsBatchGetRequest;
 import org.openapis.openapi.models.operations.PeopleContactGroupsBatchGetResponse;
+import org.openapis.openapi.models.operations.PeopleContactGroupsBatchGetSecurity;
+import org.openapis.openapi.models.operations.PeopleContactGroupsBatchGetSecurityOption1;
+import org.openapis.openapi.models.operations.PeopleContactGroupsBatchGetSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -19,14 +18,14 @@ public class Application {
                 .build();
 
             PeopleContactGroupsBatchGetRequest req = new PeopleContactGroupsBatchGetRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 accessToken = "provident";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "quibusdam";
                 fields = "unde";
                 groupFields = "nulla";
                 key = "corrupti";
-                maxMembers = 847252;
+                maxMembers = 847252L;
                 oauthToken = "vel";
                 prettyPrint = false;
                 quotaUser = "error";
@@ -37,20 +36,22 @@ public class Application {
                 }};
                 uploadType = "debitis";
                 uploadProtocol = "ipsa";
-            }}            
+            }};            
 
             PeopleContactGroupsBatchGetResponse res = sdk.contactGroups.peopleContactGroupsBatchGet(req, new PeopleContactGroupsBatchGetSecurity() {{
-                option1 = new PeopleContactGroupsBatchGetSecurityOption1() {{
+                option1 = new PeopleContactGroupsBatchGetSecurityOption1("delectus", "tempora") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.batchGetContactGroupsResponse.isPresent()) {
+            if (res.batchGetContactGroupsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

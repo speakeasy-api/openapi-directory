@@ -15,6 +15,7 @@ public class DescribeConnectorEntityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiVersion")
     public String apiVersion;
+
     public DescribeConnectorEntityRequestBody withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -25,6 +26,7 @@ public class DescribeConnectorEntityRequestBody {
      */
     @JsonProperty("connectorEntityName")
     public String connectorEntityName;
+
     public DescribeConnectorEntityRequestBody withConnectorEntityName(String connectorEntityName) {
         this.connectorEntityName = connectorEntityName;
         return this;
@@ -36,6 +38,7 @@ public class DescribeConnectorEntityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorProfileName")
     public String connectorProfileName;
+
     public DescribeConnectorEntityRequestBody withConnectorProfileName(String connectorProfileName) {
         this.connectorProfileName = connectorProfileName;
         return this;
@@ -47,9 +50,13 @@ public class DescribeConnectorEntityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorType")
     public DescribeConnectorEntityRequestBodyConnectorTypeEnum connectorType;
+
     public DescribeConnectorEntityRequestBody withConnectorType(DescribeConnectorEntityRequestBodyConnectorTypeEnum connectorType) {
         this.connectorType = connectorType;
         return this;
     }
     
+    public DescribeConnectorEntityRequestBody(@JsonProperty("connectorEntityName") String connectorEntityName) {
+        this.connectorEntityName = connectorEntityName;
+  }
 }

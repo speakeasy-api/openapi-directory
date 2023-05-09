@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuoteIdFromInternalIdRequest {
@@ -12,9 +13,13 @@ public class GetQuoteIdFromInternalIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public Long projectId;
+
     public GetQuoteIdFromInternalIdRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public GetQuoteIdFromInternalIdRequest(@JsonProperty("projectId") Long projectId) {
+        this.projectId = projectId;
+  }
 }

@@ -15,9 +15,11 @@ public class RejectCertificateTransferRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rejectReason")
     public String rejectReason;
+
     public RejectCertificateTransferRequestBody withRejectReason(String rejectReason) {
         this.rejectReason = rejectReason;
         return this;
     }
     
+    public RejectCertificateTransferRequestBody(){}
 }

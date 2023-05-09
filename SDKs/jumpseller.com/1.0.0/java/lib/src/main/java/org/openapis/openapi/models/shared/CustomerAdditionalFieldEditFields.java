@@ -15,6 +15,7 @@ public class CustomerAdditionalFieldEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkout_custom_field_id")
     public Integer checkoutCustomFieldId;
+
     public CustomerAdditionalFieldEditFields withCheckoutCustomFieldId(Integer checkoutCustomFieldId) {
         this.checkoutCustomFieldId = checkoutCustomFieldId;
         return this;
@@ -26,9 +27,11 @@ public class CustomerAdditionalFieldEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public CustomerAdditionalFieldEditFields withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CustomerAdditionalFieldEditFields(){}
 }

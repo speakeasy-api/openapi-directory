@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodeScanningListRecentAnalysesRequest {
@@ -12,6 +13,7 @@ public class CodeScanningListRecentAnalysesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public CodeScanningListRecentAnalysesRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -22,6 +24,7 @@ public class CodeScanningListRecentAnalysesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public CodeScanningListRecentAnalysesRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class CodeScanningListRecentAnalysesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public CodeScanningListRecentAnalysesRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,6 +46,7 @@ public class CodeScanningListRecentAnalysesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref")
     public String ref;
+
     public CodeScanningListRecentAnalysesRequest withRef(String ref) {
         this.ref = ref;
         return this;
@@ -52,6 +57,7 @@ public class CodeScanningListRecentAnalysesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public CodeScanningListRecentAnalysesRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -62,6 +68,7 @@ public class CodeScanningListRecentAnalysesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sarif_id")
     public String sarifId;
+
     public CodeScanningListRecentAnalysesRequest withSarifId(String sarifId) {
         this.sarifId = sarifId;
         return this;
@@ -72,6 +79,7 @@ public class CodeScanningListRecentAnalysesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tool_guid")
     public String toolGuid;
+
     public CodeScanningListRecentAnalysesRequest withToolGuid(String toolGuid) {
         this.toolGuid = toolGuid;
         return this;
@@ -82,9 +90,14 @@ public class CodeScanningListRecentAnalysesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tool_name")
     public String toolName;
+
     public CodeScanningListRecentAnalysesRequest withToolName(String toolName) {
         this.toolName = toolName;
         return this;
     }
     
+    public CodeScanningListRecentAnalysesRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

@@ -103,4 +103,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/ReportStatus.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateTweet.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateTweetResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/application/README.md
+docs/customreports/README.md
+docs/followerreports/README.md
+docs/reports/README.md
+docs/tweetreports/README.md
 USAGE.md

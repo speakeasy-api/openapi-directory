@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse {
     
     public String contentType;
+
     public EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseResp
     
     
     public Integer statusCode;
+
     public EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseResp
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseResp
      */
     
     public EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise200ApplicationJSON enterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise200ApplicationJSONObject;
+
     public EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse withEnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise200ApplicationJSONObject(EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise200ApplicationJSON enterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise200ApplicationJSONObject) {
         this.enterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise200ApplicationJSONObject = enterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise200ApplicationJSONObject;
         return this;
     }
     
+    public EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

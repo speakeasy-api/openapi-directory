@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ObstaclesByDistanceUsV1ObstaclesDistanceQueryPostResponse {
     
     public String contentType;
+
     public ObstaclesByDistanceUsV1ObstaclesDistanceQueryPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ObstaclesByDistanceUsV1ObstaclesDistanceQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public ObstaclesByDistanceUsV1ObstaclesDistanceQueryPostResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -29,6 +32,7 @@ public class ObstaclesByDistanceUsV1ObstaclesDistanceQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.ObstacleDistanceResponse obstacleDistanceResponse;
+
     public ObstaclesByDistanceUsV1ObstaclesDistanceQueryPostResponse withObstacleDistanceResponse(org.openapis.openapi.models.shared.ObstacleDistanceResponse obstacleDistanceResponse) {
         this.obstacleDistanceResponse = obstacleDistanceResponse;
         return this;
@@ -36,6 +40,7 @@ public class ObstaclesByDistanceUsV1ObstaclesDistanceQueryPostResponse {
     
     
     public Integer statusCode;
+
     public ObstaclesByDistanceUsV1ObstaclesDistanceQueryPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ObstaclesByDistanceUsV1ObstaclesDistanceQueryPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ObstaclesByDistanceUsV1ObstaclesDistanceQueryPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ObstaclesByDistanceUsV1ObstaclesDistanceQueryPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

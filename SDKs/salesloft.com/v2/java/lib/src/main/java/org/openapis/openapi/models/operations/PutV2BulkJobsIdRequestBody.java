@@ -12,6 +12,7 @@ public class PutV2BulkJobsIdRequestBody {
      */
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public PutV2BulkJobsIdRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,11 @@ public class PutV2BulkJobsIdRequestBody {
      */
     @SpeakeasyMetadata("form:name=ready_to_execute")
     public Boolean readyToExecute;
+
     public PutV2BulkJobsIdRequestBody withReadyToExecute(Boolean readyToExecute) {
         this.readyToExecute = readyToExecute;
         return this;
     }
     
+    public PutV2BulkJobsIdRequestBody(){}
 }

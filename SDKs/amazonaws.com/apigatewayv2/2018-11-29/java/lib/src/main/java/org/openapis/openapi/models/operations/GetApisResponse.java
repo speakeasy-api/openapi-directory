@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApisResponse {
@@ -12,6 +13,7 @@ public class GetApisResponse {
      */
     
     public Object badRequestException;
+
     public GetApisResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetApisResponse {
     
     
     public String contentType;
+
     public GetApisResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetApisResponse {
      */
     
     public org.openapis.openapi.models.shared.GetApisResponse getApisResponse;
+
     public GetApisResponse withGetApisResponse(org.openapis.openapi.models.shared.GetApisResponse getApisResponse) {
         this.getApisResponse = getApisResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetApisResponse {
      */
     
     public Object notFoundException;
+
     public GetApisResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetApisResponse {
     
     
     public Integer statusCode;
+
     public GetApisResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetApisResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApisResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetApisResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetApisResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetApisResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

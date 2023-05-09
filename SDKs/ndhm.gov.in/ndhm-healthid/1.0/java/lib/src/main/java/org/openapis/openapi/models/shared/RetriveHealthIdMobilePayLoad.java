@@ -15,6 +15,7 @@ public class RetriveHealthIdMobilePayLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfBirth")
     public String dayOfBirth;
+
     public RetriveHealthIdMobilePayLoad withDayOfBirth(String dayOfBirth) {
         this.dayOfBirth = dayOfBirth;
         return this;
@@ -23,6 +24,7 @@ public class RetriveHealthIdMobilePayLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public RetriveHealthIdMobilePayLoad withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -31,6 +33,7 @@ public class RetriveHealthIdMobilePayLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public String gender;
+
     public RetriveHealthIdMobilePayLoad withGender(String gender) {
         this.gender = gender;
         return this;
@@ -39,6 +42,7 @@ public class RetriveHealthIdMobilePayLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public RetriveHealthIdMobilePayLoad withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -47,6 +51,7 @@ public class RetriveHealthIdMobilePayLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("middleName")
     public String middleName;
+
     public RetriveHealthIdMobilePayLoad withMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
@@ -55,6 +60,7 @@ public class RetriveHealthIdMobilePayLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monthOfBirth")
     public String monthOfBirth;
+
     public RetriveHealthIdMobilePayLoad withMonthOfBirth(String monthOfBirth) {
         this.monthOfBirth = monthOfBirth;
         return this;
@@ -63,6 +69,7 @@ public class RetriveHealthIdMobilePayLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RetriveHealthIdMobilePayLoad withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class RetriveHealthIdMobilePayLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otp")
     public String otp;
+
     public RetriveHealthIdMobilePayLoad withOtp(String otp) {
         this.otp = otp;
         return this;
@@ -78,6 +86,7 @@ public class RetriveHealthIdMobilePayLoad {
     
     @JsonProperty("txnId")
     public String txnId;
+
     public RetriveHealthIdMobilePayLoad withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
@@ -86,9 +95,13 @@ public class RetriveHealthIdMobilePayLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yearOfBirth")
     public String yearOfBirth;
+
     public RetriveHealthIdMobilePayLoad withYearOfBirth(String yearOfBirth) {
         this.yearOfBirth = yearOfBirth;
         return this;
     }
     
+    public RetriveHealthIdMobilePayLoad(@JsonProperty("txnId") String txnId) {
+        this.txnId = txnId;
+  }
 }

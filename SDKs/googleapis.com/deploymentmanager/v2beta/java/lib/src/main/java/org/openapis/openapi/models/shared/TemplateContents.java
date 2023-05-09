@@ -18,6 +18,7 @@ public class TemplateContents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imports")
     public ImportFile[] imports;
+
     public TemplateContents withImports(ImportFile[] imports) {
         this.imports = imports;
         return this;
@@ -29,6 +30,7 @@ public class TemplateContents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interpreter")
     public TemplateContentsInterpreterEnum interpreter;
+
     public TemplateContents withInterpreter(TemplateContentsInterpreterEnum interpreter) {
         this.interpreter = interpreter;
         return this;
@@ -40,6 +42,7 @@ public class TemplateContents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mainTemplate")
     public String mainTemplate;
+
     public TemplateContents withMainTemplate(String mainTemplate) {
         this.mainTemplate = mainTemplate;
         return this;
@@ -51,6 +54,7 @@ public class TemplateContents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public TemplateContents withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -62,9 +66,11 @@ public class TemplateContents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public String template;
+
     public TemplateContents withTemplate(String template) {
         this.template = template;
         return this;
     }
     
+    public TemplateContents(){}
 }

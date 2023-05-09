@@ -25,9 +25,11 @@ public class GetImages400ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public GetImages400ApplicationVndApiPlusJsonErrors[] errors;
+
     public GetImages400ApplicationVndApiPlusJson withErrors(GetImages400ApplicationVndApiPlusJsonErrors[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public GetImages400ApplicationVndApiPlusJson(){}
 }

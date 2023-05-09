@@ -15,6 +15,7 @@ public class ListPadsUsingGET400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public ListPadsUsingGET400ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class ListPadsUsingGET400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public ListPadsUsingGET400ApplicationJSON withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class ListPadsUsingGET400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ListPadsUsingGET400ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ListPadsUsingGET400ApplicationJSON(){}
 }

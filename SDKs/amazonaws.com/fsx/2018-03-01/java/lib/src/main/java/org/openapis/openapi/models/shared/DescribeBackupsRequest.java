@@ -15,6 +15,7 @@ public class DescribeBackupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupIds")
     public String[] backupIds;
+
     public DescribeBackupsRequest withBackupIds(String[] backupIds) {
         this.backupIds = backupIds;
         return this;
@@ -23,6 +24,7 @@ public class DescribeBackupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public Filter[] filters;
+
     public DescribeBackupsRequest withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -31,6 +33,7 @@ public class DescribeBackupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeBackupsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -39,9 +42,11 @@ public class DescribeBackupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeBackupsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeBackupsRequest(){}
 }

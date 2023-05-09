@@ -15,6 +15,7 @@ public class BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContaine
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archiveConfiguration")
     public String archiveConfiguration;
+
     public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainersSharedSchemes withArchiveConfiguration(String archiveConfiguration) {
         this.archiveConfiguration = archiveConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContaine
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archiveProject")
     public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainersSharedSchemesArchiveProject archiveProject;
+
     public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainersSharedSchemes withArchiveProject(BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainersSharedSchemesArchiveProject archiveProject) {
         this.archiveProject = archiveProject;
         return this;
@@ -33,6 +35,7 @@ public class BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContaine
      */
     @JsonProperty("hasTestAction")
     public Boolean hasTestAction;
+
     public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainersSharedSchemes withHasTestAction(Boolean hasTestAction) {
         this.hasTestAction = hasTestAction;
         return this;
@@ -43,9 +46,14 @@ public class BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContaine
      */
     @JsonProperty("name")
     public String name;
+
     public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainersSharedSchemes withName(String name) {
         this.name = name;
         return this;
     }
     
+    public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainersSharedSchemes(@JsonProperty("hasTestAction") Boolean hasTestAction, @JsonProperty("name") String name) {
+        this.hasTestAction = hasTestAction;
+        this.name = name;
+  }
 }

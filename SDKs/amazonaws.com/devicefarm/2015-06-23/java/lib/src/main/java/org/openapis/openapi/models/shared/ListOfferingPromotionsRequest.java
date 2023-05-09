@@ -12,9 +12,11 @@ public class ListOfferingPromotionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListOfferingPromotionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListOfferingPromotionsRequest(){}
 }

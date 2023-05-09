@@ -18,6 +18,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointCount")
     public Integer pointCount;
+
     public Error withPointCount(Integer pointCount) {
         this.pointCount = pointCount;
         return this;
@@ -29,9 +30,11 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Status status;
+
     public Error withStatus(Status status) {
         this.status = status;
         return this;
     }
     
+    public Error(){}
 }

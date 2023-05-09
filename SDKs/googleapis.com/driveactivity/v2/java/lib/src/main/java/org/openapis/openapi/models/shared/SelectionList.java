@@ -18,9 +18,11 @@ public class SelectionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public Selection[] values;
+
     public SelectionList withValues(Selection[] values) {
         this.values = values;
         return this;
     }
     
+    public SelectionList(){}
 }

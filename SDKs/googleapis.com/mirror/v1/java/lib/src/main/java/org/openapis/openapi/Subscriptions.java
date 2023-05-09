@@ -56,10 +56,8 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MirrorSubscriptionsDeleteResponse res = new org.openapis.openapi.models.operations.MirrorSubscriptionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.MirrorSubscriptionsDeleteResponse res = new org.openapis.openapi.models.operations.MirrorSubscriptionsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MirrorSubscriptionsInsertResponse res = new org.openapis.openapi.models.operations.MirrorSubscriptionsInsertResponse() {{
+        org.openapis.openapi.models.operations.MirrorSubscriptionsInsertResponse res = new org.openapis.openapi.models.operations.MirrorSubscriptionsInsertResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -143,11 +139,9 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MirrorSubscriptionsListResponse res = new org.openapis.openapi.models.operations.MirrorSubscriptionsListResponse() {{
+        org.openapis.openapi.models.operations.MirrorSubscriptionsListResponse res = new org.openapis.openapi.models.operations.MirrorSubscriptionsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -190,11 +184,9 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MirrorSubscriptionsUpdateResponse res = new org.openapis.openapi.models.operations.MirrorSubscriptionsUpdateResponse() {{
+        org.openapis.openapi.models.operations.MirrorSubscriptionsUpdateResponse res = new org.openapis.openapi.models.operations.MirrorSubscriptionsUpdateResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

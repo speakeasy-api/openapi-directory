@@ -18,6 +18,7 @@ public class DeleteInstallation200ApplicationJSONUsageCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_token")
     public String apiToken;
+
     public DeleteInstallation200ApplicationJSONUsageCharge withApiToken(String apiToken) {
         this.apiToken = apiToken;
         return this;
@@ -29,9 +30,11 @@ public class DeleteInstallation200ApplicationJSONUsageCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closing_on")
     public Long closingOn;
+
     public DeleteInstallation200ApplicationJSONUsageCharge withClosingOn(Long closingOn) {
         this.closingOn = closingOn;
         return this;
     }
     
+    public DeleteInstallation200ApplicationJSONUsageCharge(){}
 }

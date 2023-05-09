@@ -15,9 +15,11 @@ public class ImplicitDeny {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policies")
     public Policy[] policies;
+
     public ImplicitDeny withPolicies(Policy[] policies) {
         this.policies = policies;
         return this;
     }
     
+    public ImplicitDeny(){}
 }

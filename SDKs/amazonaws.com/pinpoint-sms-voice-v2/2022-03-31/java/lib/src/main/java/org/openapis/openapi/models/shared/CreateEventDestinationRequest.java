@@ -12,6 +12,7 @@ public class CreateEventDestinationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateEventDestinationRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class CreateEventDestinationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogsDestination")
     public CloudWatchLogsDestination cloudWatchLogsDestination;
+
     public CreateEventDestinationRequest withCloudWatchLogsDestination(CloudWatchLogsDestination cloudWatchLogsDestination) {
         this.cloudWatchLogsDestination = cloudWatchLogsDestination;
         return this;
@@ -27,6 +29,7 @@ public class CreateEventDestinationRequest {
     
     @JsonProperty("ConfigurationSetName")
     public String configurationSetName;
+
     public CreateEventDestinationRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -34,6 +37,7 @@ public class CreateEventDestinationRequest {
     
     @JsonProperty("EventDestinationName")
     public String eventDestinationName;
+
     public CreateEventDestinationRequest withEventDestinationName(String eventDestinationName) {
         this.eventDestinationName = eventDestinationName;
         return this;
@@ -42,6 +46,7 @@ public class CreateEventDestinationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisFirehoseDestination")
     public KinesisFirehoseDestination kinesisFirehoseDestination;
+
     public CreateEventDestinationRequest withKinesisFirehoseDestination(KinesisFirehoseDestination kinesisFirehoseDestination) {
         this.kinesisFirehoseDestination = kinesisFirehoseDestination;
         return this;
@@ -49,6 +54,7 @@ public class CreateEventDestinationRequest {
     
     @JsonProperty("MatchingEventTypes")
     public EventTypeEnum[] matchingEventTypes;
+
     public CreateEventDestinationRequest withMatchingEventTypes(EventTypeEnum[] matchingEventTypes) {
         this.matchingEventTypes = matchingEventTypes;
         return this;
@@ -57,9 +63,15 @@ public class CreateEventDestinationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsDestination")
     public SnsDestination snsDestination;
+
     public CreateEventDestinationRequest withSnsDestination(SnsDestination snsDestination) {
         this.snsDestination = snsDestination;
         return this;
     }
     
+    public CreateEventDestinationRequest(@JsonProperty("ConfigurationSetName") String configurationSetName, @JsonProperty("EventDestinationName") String eventDestinationName, @JsonProperty("MatchingEventTypes") EventTypeEnum[] matchingEventTypes) {
+        this.configurationSetName = configurationSetName;
+        this.eventDestinationName = eventDestinationName;
+        this.matchingEventTypes = matchingEventTypes;
+  }
 }

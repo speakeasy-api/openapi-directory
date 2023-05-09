@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IndexFacesResponse {
@@ -12,6 +13,7 @@ public class IndexFacesResponse {
      */
     
     public Object accessDeniedException;
+
     public IndexFacesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class IndexFacesResponse {
     
     
     public String contentType;
+
     public IndexFacesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class IndexFacesResponse {
      */
     
     public Object imageTooLargeException;
+
     public IndexFacesResponse withImageTooLargeException(Object imageTooLargeException) {
         this.imageTooLargeException = imageTooLargeException;
         return this;
@@ -39,6 +43,7 @@ public class IndexFacesResponse {
      */
     
     public org.openapis.openapi.models.shared.IndexFacesResponse indexFacesResponse;
+
     public IndexFacesResponse withIndexFacesResponse(org.openapis.openapi.models.shared.IndexFacesResponse indexFacesResponse) {
         this.indexFacesResponse = indexFacesResponse;
         return this;
@@ -49,6 +54,7 @@ public class IndexFacesResponse {
      */
     
     public Object internalServerError;
+
     public IndexFacesResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class IndexFacesResponse {
      */
     
     public Object invalidImageFormatException;
+
     public IndexFacesResponse withInvalidImageFormatException(Object invalidImageFormatException) {
         this.invalidImageFormatException = invalidImageFormatException;
         return this;
@@ -69,6 +76,7 @@ public class IndexFacesResponse {
      */
     
     public Object invalidParameterException;
+
     public IndexFacesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class IndexFacesResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public IndexFacesResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -89,6 +98,7 @@ public class IndexFacesResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public IndexFacesResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -99,6 +109,7 @@ public class IndexFacesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public IndexFacesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -109,6 +120,7 @@ public class IndexFacesResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public IndexFacesResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -116,6 +128,7 @@ public class IndexFacesResponse {
     
     
     public Integer statusCode;
+
     public IndexFacesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,6 +136,7 @@ public class IndexFacesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IndexFacesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -133,9 +147,14 @@ public class IndexFacesResponse {
      */
     
     public Object throttlingException;
+
     public IndexFacesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public IndexFacesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

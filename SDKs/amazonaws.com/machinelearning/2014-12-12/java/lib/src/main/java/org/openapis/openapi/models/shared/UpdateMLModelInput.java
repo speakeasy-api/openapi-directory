@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateMLModelInput {
     @JsonProperty("MLModelId")
     public String mlModelId;
+
     public UpdateMLModelInput withMLModelId(String mlModelId) {
         this.mlModelId = mlModelId;
         return this;
@@ -19,6 +20,7 @@ public class UpdateMLModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MLModelName")
     public String mlModelName;
+
     public UpdateMLModelInput withMLModelName(String mlModelName) {
         this.mlModelName = mlModelName;
         return this;
@@ -27,9 +29,13 @@ public class UpdateMLModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoreThreshold")
     public Float scoreThreshold;
+
     public UpdateMLModelInput withScoreThreshold(Float scoreThreshold) {
         this.scoreThreshold = scoreThreshold;
         return this;
     }
     
+    public UpdateMLModelInput(@JsonProperty("MLModelId") String mlModelId) {
+        this.mlModelId = mlModelId;
+  }
 }

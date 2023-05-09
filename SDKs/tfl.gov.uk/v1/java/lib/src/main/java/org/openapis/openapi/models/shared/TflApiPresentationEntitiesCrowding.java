@@ -15,6 +15,7 @@ public class TflApiPresentationEntitiesCrowding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passengerFlows")
     public TflApiPresentationEntitiesPassengerFlow[] passengerFlows;
+
     public TflApiPresentationEntitiesCrowding withPassengerFlows(TflApiPresentationEntitiesPassengerFlow[] passengerFlows) {
         this.passengerFlows = passengerFlows;
         return this;
@@ -26,9 +27,11 @@ public class TflApiPresentationEntitiesCrowding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainLoadings")
     public TflApiPresentationEntitiesTrainLoading[] trainLoadings;
+
     public TflApiPresentationEntitiesCrowding withTrainLoadings(TflApiPresentationEntitiesTrainLoading[] trainLoadings) {
         this.trainLoadings = trainLoadings;
         return this;
     }
     
+    public TflApiPresentationEntitiesCrowding(){}
 }

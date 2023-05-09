@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetVCustomPricesSessionSchemaRequest;
 import org.openapis.openapi.models.operations.GetVCustomPricesSessionSchemaResponse;
 
@@ -26,19 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetVCustomPricesSessionSchemaRequest req = new GetVCustomPricesSessionSchemaRequest() {{
-                accept = "corrupti";
-                contentType = "provident";
-            }}            
+            GetVCustomPricesSessionSchemaRequest req = new GetVCustomPricesSessionSchemaRequest("corrupti", "provident");            
 
             GetVCustomPricesSessionSchemaResponse res = sdk.customPrices.getVCustomPricesSessionSchema(req);
 
-            if (res.requestBody.isPresent()) {
+            if (res.requestBody != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -46,21 +44,21 @@ public class Application {
 ## Available Resources and Operations
 
 
-### customPrices
+### [customPrices](docs/customprices/README.md)
 
-* `getVCustomPricesSessionSchema` - Get custom prices schema
-* `postVCustomPricesSessionSchema` - Create or Update custom prices schema
+* [getVCustomPricesSessionSchema](docs/customprices/README.md#getvcustompricessessionschema) - Get custom prices schema
+* [postVCustomPricesSessionSchema](docs/customprices/README.md#postvcustompricessessionschema) - Create or Update custom prices schema
 
-### priceAssociation
+### [priceAssociation](docs/priceassociation/README.md)
 
-* `deleteVCustomPricesRulesPriceAssociationId` - Disassociate price association by ID
-* `getVCustomPricesRulesPriceAssociationId` - Get price association by ID
-* `postVCustomPricesRules` - Create price association
-* `putVCustomPricesRulesPriceAssociationId` - Update price association by ID
+* [deleteVCustomPricesRulesPriceAssociationId](docs/priceassociation/README.md#deletevcustompricesrulespriceassociationid) - Disassociate price association by ID
+* [getVCustomPricesRulesPriceAssociationId](docs/priceassociation/README.md#getvcustompricesrulespriceassociationid) - Get price association by ID
+* [postVCustomPricesRules](docs/priceassociation/README.md#postvcustompricesrules) - Create price association
+* [putVCustomPricesRulesPriceAssociationId](docs/priceassociation/README.md#putvcustompricesrulespriceassociationid) - Update price association by ID
 
-### sessionManagement
+### [sessionManagement](docs/sessionmanagement/README.md)
 
-* `postSessions` - Update Order Configuration
+* [postSessions](docs/sessionmanagement/README.md#postsessions) - Update Order Configuration
 <!-- End SDK Available Operations -->
 
 ### Maturity

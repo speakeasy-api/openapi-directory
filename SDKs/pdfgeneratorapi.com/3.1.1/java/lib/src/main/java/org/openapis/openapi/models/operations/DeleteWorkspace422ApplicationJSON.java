@@ -18,6 +18,7 @@ public class DeleteWorkspace422ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public DeleteWorkspace422ApplicationJSONErrorEnum error;
+
     public DeleteWorkspace422ApplicationJSON withError(DeleteWorkspace422ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -29,9 +30,11 @@ public class DeleteWorkspace422ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public DeleteWorkspace422ApplicationJSON withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public DeleteWorkspace422ApplicationJSON(){}
 }

@@ -12,9 +12,13 @@ public class AssociateMemberRequestBody {
      */
     @JsonProperty("accountId")
     public String accountId;
+
     public AssociateMemberRequestBody withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
     
+    public AssociateMemberRequestBody(@JsonProperty("accountId") String accountId) {
+        this.accountId = accountId;
+  }
 }

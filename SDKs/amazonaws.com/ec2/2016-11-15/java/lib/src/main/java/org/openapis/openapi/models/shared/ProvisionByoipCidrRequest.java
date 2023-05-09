@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ProvisionByoipCidrRequest {
     
     public String cidr;
+
     public ProvisionByoipCidrRequest withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -16,6 +17,7 @@ public class ProvisionByoipCidrRequest {
     
     
     public CidrAuthorizationContext cidrAuthorizationContext;
+
     public ProvisionByoipCidrRequest withCidrAuthorizationContext(CidrAuthorizationContext cidrAuthorizationContext) {
         this.cidrAuthorizationContext = cidrAuthorizationContext;
         return this;
@@ -23,6 +25,7 @@ public class ProvisionByoipCidrRequest {
     
     
     public String description;
+
     public ProvisionByoipCidrRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +33,7 @@ public class ProvisionByoipCidrRequest {
     
     
     public Boolean dryRun;
+
     public ProvisionByoipCidrRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -37,6 +41,7 @@ public class ProvisionByoipCidrRequest {
     
     
     public Boolean multiRegion;
+
     public ProvisionByoipCidrRequest withMultiRegion(Boolean multiRegion) {
         this.multiRegion = multiRegion;
         return this;
@@ -44,6 +49,7 @@ public class ProvisionByoipCidrRequest {
     
     
     public ProvisionByoipCidrRequestPoolTagSpecifications[] poolTagSpecifications;
+
     public ProvisionByoipCidrRequest withPoolTagSpecifications(ProvisionByoipCidrRequestPoolTagSpecifications[] poolTagSpecifications) {
         this.poolTagSpecifications = poolTagSpecifications;
         return this;
@@ -51,9 +57,13 @@ public class ProvisionByoipCidrRequest {
     
     
     public Boolean publiclyAdvertisable;
+
     public ProvisionByoipCidrRequest withPubliclyAdvertisable(Boolean publiclyAdvertisable) {
         this.publiclyAdvertisable = publiclyAdvertisable;
         return this;
     }
     
+    public ProvisionByoipCidrRequest(@JsonProperty("Cidr") String cidr) {
+        this.cidr = cidr;
+  }
 }

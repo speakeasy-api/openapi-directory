@@ -15,6 +15,7 @@ public class ExecuteCommandResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterArn")
     public String clusterArn;
+
     public ExecuteCommandResponse withClusterArn(String clusterArn) {
         this.clusterArn = clusterArn;
         return this;
@@ -23,6 +24,7 @@ public class ExecuteCommandResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerArn")
     public String containerArn;
+
     public ExecuteCommandResponse withContainerArn(String containerArn) {
         this.containerArn = containerArn;
         return this;
@@ -31,6 +33,7 @@ public class ExecuteCommandResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerName")
     public String containerName;
+
     public ExecuteCommandResponse withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
@@ -39,6 +42,7 @@ public class ExecuteCommandResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interactive")
     public Boolean interactive;
+
     public ExecuteCommandResponse withInteractive(Boolean interactive) {
         this.interactive = interactive;
         return this;
@@ -47,6 +51,7 @@ public class ExecuteCommandResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("session")
     public Session session;
+
     public ExecuteCommandResponse withSession(Session session) {
         this.session = session;
         return this;
@@ -55,9 +60,11 @@ public class ExecuteCommandResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskArn")
     public String taskArn;
+
     public ExecuteCommandResponse withTaskArn(String taskArn) {
         this.taskArn = taskArn;
         return this;
     }
     
+    public ExecuteCommandResponse(){}
 }

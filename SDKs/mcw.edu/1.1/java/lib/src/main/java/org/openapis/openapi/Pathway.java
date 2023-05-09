@@ -46,11 +46,9 @@ public class Pathway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETPathwaysWithDiagramsForCategoryUsingGETResponse res = new org.openapis.openapi.models.operations.GETPathwaysWithDiagramsForCategoryUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETPathwaysWithDiagramsForCategoryUsingGETResponse res = new org.openapis.openapi.models.operations.GETPathwaysWithDiagramsForCategoryUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -85,11 +83,9 @@ public class Pathway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchPathwaysUsingGETResponse res = new org.openapis.openapi.models.operations.SearchPathwaysUsingGETResponse() {{
+        org.openapis.openapi.models.operations.SearchPathwaysUsingGETResponse res = new org.openapis.openapi.models.operations.SearchPathwaysUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

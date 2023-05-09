@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateInstitutionAccountGroupRolesCreateRequest {
@@ -12,6 +13,7 @@ public class PrivateInstitutionAccountGroupRolesCreateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public PrivateInstitutionAccountGroupRolesCreateRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class PrivateInstitutionAccountGroupRolesCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
     public Long accountId;
+
     public PrivateInstitutionAccountGroupRolesCreateRequest withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
     }
     
+    public PrivateInstitutionAccountGroupRolesCreateRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("account_id") Long accountId) {
+        this.requestBody = requestBody;
+        this.accountId = accountId;
+  }
 }

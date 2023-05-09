@@ -18,6 +18,7 @@ public class TextRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public TextRun withContent(String content) {
         this.content = content;
         return this;
@@ -29,9 +30,11 @@ public class TextRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("style")
     public TextStyle style;
+
     public TextRun withStyle(TextStyle style) {
         this.style = style;
         return this;
     }
     
+    public TextRun(){}
 }

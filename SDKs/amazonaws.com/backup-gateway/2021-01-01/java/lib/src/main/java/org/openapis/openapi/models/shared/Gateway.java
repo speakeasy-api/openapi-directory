@@ -20,6 +20,7 @@ public class Gateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatewayArn")
     public String gatewayArn;
+
     public Gateway withGatewayArn(String gatewayArn) {
         this.gatewayArn = gatewayArn;
         return this;
@@ -28,6 +29,7 @@ public class Gateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatewayDisplayName")
     public String gatewayDisplayName;
+
     public Gateway withGatewayDisplayName(String gatewayDisplayName) {
         this.gatewayDisplayName = gatewayDisplayName;
         return this;
@@ -36,6 +38,7 @@ public class Gateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatewayType")
     public GatewayTypeEnum gatewayType;
+
     public Gateway withGatewayType(GatewayTypeEnum gatewayType) {
         this.gatewayType = gatewayType;
         return this;
@@ -44,6 +47,7 @@ public class Gateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HypervisorId")
     public String hypervisorId;
+
     public Gateway withHypervisorId(String hypervisorId) {
         this.hypervisorId = hypervisorId;
         return this;
@@ -54,9 +58,11 @@ public class Gateway {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastSeenTime")
     public OffsetDateTime lastSeenTime;
+
     public Gateway withLastSeenTime(OffsetDateTime lastSeenTime) {
         this.lastSeenTime = lastSeenTime;
         return this;
     }
     
+    public Gateway(){}
 }

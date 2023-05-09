@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetReplicationSetOutput {
     @JsonProperty("replicationSet")
     public ReplicationSet replicationSet;
+
     public GetReplicationSetOutput withReplicationSet(ReplicationSet replicationSet) {
         this.replicationSet = replicationSet;
         return this;
     }
     
+    public GetReplicationSetOutput(@JsonProperty("replicationSet") ReplicationSet replicationSet) {
+        this.replicationSet = replicationSet;
+  }
 }

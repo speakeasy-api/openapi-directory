@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrderExportationsResponse {
@@ -12,6 +13,7 @@ public class GetOrderExportationsResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetOrderExportationsResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetOrderExportationsResponse {
     
     
     public String contentType;
+
     public GetOrderExportationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetOrderExportationsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetOrderExportationsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetOrderExportationsResponse {
     
     
     public Integer statusCode;
+
     public GetOrderExportationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetOrderExportationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrderExportationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetOrderExportationsResponse {
      */
     
     public org.openapis.openapi.models.shared.OrderExportations orderExportations;
+
     public GetOrderExportationsResponse withOrderExportations(org.openapis.openapi.models.shared.OrderExportations orderExportations) {
         this.orderExportations = orderExportations;
         return this;
     }
     
+    public GetOrderExportationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

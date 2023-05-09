@@ -15,6 +15,7 @@ public class ObjectiveStatusCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Failed")
     public Long failed;
+
     public ObjectiveStatusCounters withFailed(Long failed) {
         this.failed = failed;
         return this;
@@ -23,6 +24,7 @@ public class ObjectiveStatusCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pending")
     public Long pending;
+
     public ObjectiveStatusCounters withPending(Long pending) {
         this.pending = pending;
         return this;
@@ -31,9 +33,11 @@ public class ObjectiveStatusCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Succeeded")
     public Long succeeded;
+
     public ObjectiveStatusCounters withSucceeded(Long succeeded) {
         this.succeeded = succeeded;
         return this;
     }
     
+    public ObjectiveStatusCounters(){}
 }

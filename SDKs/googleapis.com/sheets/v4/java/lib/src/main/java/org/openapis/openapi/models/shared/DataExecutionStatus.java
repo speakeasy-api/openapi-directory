@@ -18,6 +18,7 @@ public class DataExecutionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public DataExecutionStatusErrorCodeEnum errorCode;
+
     public DataExecutionStatus withErrorCode(DataExecutionStatusErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -29,6 +30,7 @@ public class DataExecutionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public DataExecutionStatus withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -40,6 +42,7 @@ public class DataExecutionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastRefreshTime")
     public String lastRefreshTime;
+
     public DataExecutionStatus withLastRefreshTime(String lastRefreshTime) {
         this.lastRefreshTime = lastRefreshTime;
         return this;
@@ -51,9 +54,11 @@ public class DataExecutionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public DataExecutionStatusStateEnum state;
+
     public DataExecutionStatus withState(DataExecutionStatusStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public DataExecutionStatus(){}
 }

@@ -15,9 +15,11 @@ public class NotIndexException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public NotIndexException withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public NotIndexException(){}
 }

@@ -21,6 +21,7 @@ public class Error404PIIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public Error404PIIS withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -35,6 +36,7 @@ public class Error404PIIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalErrors")
     public Error404PIISAdditionalErrors[] additionalErrors;
+
     public Error404PIIS withAdditionalErrors(Error404PIISAdditionalErrors[] additionalErrors) {
         this.additionalErrors = additionalErrors;
         return this;
@@ -45,6 +47,7 @@ public class Error404PIIS {
      */
     @JsonProperty("code")
     public MessageCode404PIISEnum code;
+
     public Error404PIIS withCode(MessageCode404PIISEnum code) {
         this.code = code;
         return this;
@@ -59,6 +62,7 @@ public class Error404PIIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error404PIIS withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -73,6 +77,7 @@ public class Error404PIIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Error404PIIS withTitle(String title) {
         this.title = title;
         return this;
@@ -85,9 +90,14 @@ public class Error404PIIS {
      */
     @JsonProperty("type")
     public String type;
+
     public Error404PIIS withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Error404PIIS(@JsonProperty("code") MessageCode404PIISEnum code, @JsonProperty("type") String type) {
+        this.code = code;
+        this.type = type;
+  }
 }

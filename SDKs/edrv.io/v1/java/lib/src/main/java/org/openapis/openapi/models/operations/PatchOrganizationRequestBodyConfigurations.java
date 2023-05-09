@@ -12,6 +12,7 @@ public class PatchOrganizationRequestBodyConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basicAuthEnabled")
     public Boolean basicAuthEnabled;
+
     public PatchOrganizationRequestBodyConfigurations withBasicAuthEnabled(Boolean basicAuthEnabled) {
         this.basicAuthEnabled = basicAuthEnabled;
         return this;
@@ -20,9 +21,11 @@ public class PatchOrganizationRequestBodyConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basicAuthPassword")
     public Boolean basicAuthPassword;
+
     public PatchOrganizationRequestBodyConfigurations withBasicAuthPassword(Boolean basicAuthPassword) {
         this.basicAuthPassword = basicAuthPassword;
         return this;
     }
     
+    public PatchOrganizationRequestBodyConfigurations(){}
 }

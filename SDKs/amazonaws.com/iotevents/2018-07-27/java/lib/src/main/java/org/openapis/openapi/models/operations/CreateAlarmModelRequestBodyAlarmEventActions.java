@@ -15,9 +15,11 @@ public class CreateAlarmModelRequestBodyAlarmEventActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmActions")
     public org.openapis.openapi.models.shared.AlarmAction[] alarmActions;
+
     public CreateAlarmModelRequestBodyAlarmEventActions withAlarmActions(org.openapis.openapi.models.shared.AlarmAction[] alarmActions) {
         this.alarmActions = alarmActions;
         return this;
     }
     
+    public CreateAlarmModelRequestBodyAlarmEventActions(){}
 }

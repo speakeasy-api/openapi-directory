@@ -15,6 +15,7 @@ public class GetuserConversations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public GetuserConversations200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -26,6 +27,7 @@ public class GetuserConversations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public GetuserConversations200ApplicationJSON withHref(String href) {
         this.href = href;
         return this;
@@ -37,6 +39,7 @@ public class GetuserConversations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetuserConversations200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class GetuserConversations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
     public String imageUrl;
+
     public GetuserConversations200ApplicationJSON withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -59,6 +63,7 @@ public class GetuserConversations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member_id")
     public String memberId;
+
     public GetuserConversations200ApplicationJSON withMemberId(String memberId) {
         this.memberId = memberId;
         return this;
@@ -70,6 +75,7 @@ public class GetuserConversations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetuserConversations200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -81,6 +87,7 @@ public class GetuserConversations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sequence_number")
     public Long sequenceNumber;
+
     public GetuserConversations200ApplicationJSON withSequenceNumber(Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
@@ -92,6 +99,7 @@ public class GetuserConversations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public org.openapis.openapi.models.shared.MemberStateEnum state;
+
     public GetuserConversations200ApplicationJSON withState(org.openapis.openapi.models.shared.MemberStateEnum state) {
         this.state = state;
         return this;
@@ -100,9 +108,11 @@ public class GetuserConversations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public GetuserConversations200ApplicationJSONTimestamp timestamp;
+
     public GetuserConversations200ApplicationJSON withTimestamp(GetuserConversations200ApplicationJSONTimestamp timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public GetuserConversations200ApplicationJSON(){}
 }

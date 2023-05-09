@@ -15,9 +15,11 @@ public class DescribeStreamResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamInfo")
     public StreamInfo streamInfo;
+
     public DescribeStreamResponse withStreamInfo(StreamInfo streamInfo) {
         this.streamInfo = streamInfo;
         return this;
     }
     
+    public DescribeStreamResponse(){}
 }

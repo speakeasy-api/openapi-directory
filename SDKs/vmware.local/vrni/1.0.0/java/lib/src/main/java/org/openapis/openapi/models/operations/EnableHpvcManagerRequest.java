@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnableHpvcManagerRequest {
@@ -12,9 +13,13 @@ public class EnableHpvcManagerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public EnableHpvcManagerRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public EnableHpvcManagerRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

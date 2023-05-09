@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaProvisionClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudKmsConfig")
     public GoogleCloudIntegrationsV1alphaCloudKmsConfig cloudKmsConfig;
+
     public GoogleCloudIntegrationsV1alphaProvisionClientRequest withCloudKmsConfig(GoogleCloudIntegrationsV1alphaCloudKmsConfig cloudKmsConfig) {
         this.cloudKmsConfig = cloudKmsConfig;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaProvisionClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createSampleWorkflows")
     public Boolean createSampleWorkflows;
+
     public GoogleCloudIntegrationsV1alphaProvisionClientRequest withCreateSampleWorkflows(Boolean createSampleWorkflows) {
         this.createSampleWorkflows = createSampleWorkflows;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudIntegrationsV1alphaProvisionClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisionGmek")
     public Boolean provisionGmek;
+
     public GoogleCloudIntegrationsV1alphaProvisionClientRequest withProvisionGmek(Boolean provisionGmek) {
         this.provisionGmek = provisionGmek;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaProvisionClientRequest(){}
 }

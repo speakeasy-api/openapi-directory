@@ -15,6 +15,7 @@ public class BatchStopJobRunError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorDetail")
     public ErrorDetail errorDetail;
+
     public BatchStopJobRunError withErrorDetail(ErrorDetail errorDetail) {
         this.errorDetail = errorDetail;
         return this;
@@ -23,6 +24,7 @@ public class BatchStopJobRunError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public BatchStopJobRunError withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -31,9 +33,11 @@ public class BatchStopJobRunError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobRunId")
     public String jobRunId;
+
     public BatchStopJobRunError withJobRunId(String jobRunId) {
         this.jobRunId = jobRunId;
         return this;
     }
     
+    public BatchStopJobRunError(){}
 }

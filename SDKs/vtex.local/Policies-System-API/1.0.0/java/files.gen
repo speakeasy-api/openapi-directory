@@ -49,4 +49,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/StatementGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PolicySaveRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/PolicyActionGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/EvaluatePolicyRequest.java
+docs/sdk/README.md
+docs/policy/README.md
 USAGE.md

@@ -15,6 +15,7 @@ public class Surcharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("askConfirmation")
     public Boolean askConfirmation;
+
     public Surcharge withAskConfirmation(Boolean askConfirmation) {
         this.askConfirmation = askConfirmation;
         return this;
@@ -26,9 +27,11 @@ public class Surcharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurations")
     public Configuration[] configurations;
+
     public Surcharge withConfigurations(Configuration[] configurations) {
         this.configurations = configurations;
         return this;
     }
     
+    public Surcharge(){}
 }

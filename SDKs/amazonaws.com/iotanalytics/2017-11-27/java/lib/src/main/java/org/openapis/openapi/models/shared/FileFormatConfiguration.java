@@ -15,6 +15,7 @@ public class FileFormatConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonConfiguration")
     public java.util.Map<String, Object> jsonConfiguration;
+
     public FileFormatConfiguration withJsonConfiguration(java.util.Map<String, Object> jsonConfiguration) {
         this.jsonConfiguration = jsonConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class FileFormatConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parquetConfiguration")
     public ParquetConfiguration parquetConfiguration;
+
     public FileFormatConfiguration withParquetConfiguration(ParquetConfiguration parquetConfiguration) {
         this.parquetConfiguration = parquetConfiguration;
         return this;
     }
     
+    public FileFormatConfiguration(){}
 }

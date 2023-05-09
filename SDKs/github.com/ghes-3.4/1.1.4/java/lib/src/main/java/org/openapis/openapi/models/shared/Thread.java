@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Thread {
     @JsonProperty("id")
     public String id;
+
     public Thread withId(String id) {
         this.id = id;
         return this;
@@ -19,6 +20,7 @@ public class Thread {
     
     @JsonProperty("last_read_at")
     public String lastReadAt;
+
     public Thread withLastReadAt(String lastReadAt) {
         this.lastReadAt = lastReadAt;
         return this;
@@ -26,6 +28,7 @@ public class Thread {
     
     @JsonProperty("reason")
     public String reason;
+
     public Thread withReason(String reason) {
         this.reason = reason;
         return this;
@@ -36,6 +39,7 @@ public class Thread {
      */
     @JsonProperty("repository")
     public MinimalRepository repository;
+
     public Thread withRepository(MinimalRepository repository) {
         this.repository = repository;
         return this;
@@ -43,6 +47,7 @@ public class Thread {
     
     @JsonProperty("subject")
     public ThreadSubject subject;
+
     public Thread withSubject(ThreadSubject subject) {
         this.subject = subject;
         return this;
@@ -50,6 +55,7 @@ public class Thread {
     
     @JsonProperty("subscription_url")
     public String subscriptionUrl;
+
     public Thread withSubscriptionUrl(String subscriptionUrl) {
         this.subscriptionUrl = subscriptionUrl;
         return this;
@@ -57,6 +63,7 @@ public class Thread {
     
     @JsonProperty("unread")
     public Boolean unread;
+
     public Thread withUnread(Boolean unread) {
         this.unread = unread;
         return this;
@@ -64,6 +71,7 @@ public class Thread {
     
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public Thread withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -71,9 +79,21 @@ public class Thread {
     
     @JsonProperty("url")
     public String url;
+
     public Thread withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Thread(@JsonProperty("id") String id, @JsonProperty("last_read_at") String lastReadAt, @JsonProperty("reason") String reason, @JsonProperty("repository") MinimalRepository repository, @JsonProperty("subject") ThreadSubject subject, @JsonProperty("subscription_url") String subscriptionUrl, @JsonProperty("unread") Boolean unread, @JsonProperty("updated_at") String updatedAt, @JsonProperty("url") String url) {
+        this.id = id;
+        this.lastReadAt = lastReadAt;
+        this.reason = reason;
+        this.repository = repository;
+        this.subject = subject;
+        this.subscriptionUrl = subscriptionUrl;
+        this.unread = unread;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

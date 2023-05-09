@@ -12,6 +12,7 @@ public class CreateContactListRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateContactListRequest createContactListRequest;
+
     public CreateContactListRequest withCreateContactListRequest(org.openapis.openapi.models.shared.CreateContactListRequest createContactListRequest) {
         this.createContactListRequest = createContactListRequest;
         return this;
@@ -22,9 +23,11 @@ public class CreateContactListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CreateContactListRequest withFields(String fields) {
         this.fields = fields;
         return this;
     }
     
+    public CreateContactListRequest(){}
 }

@@ -15,9 +15,11 @@ public class CheckDomainTransferabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Transferability")
     public DomainTransferability transferability;
+
     public CheckDomainTransferabilityResponse withTransferability(DomainTransferability transferability) {
         this.transferability = transferability;
         return this;
     }
     
+    public CheckDomainTransferabilityResponse(){}
 }

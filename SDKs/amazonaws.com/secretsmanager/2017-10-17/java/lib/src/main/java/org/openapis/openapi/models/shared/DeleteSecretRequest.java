@@ -12,6 +12,7 @@ public class DeleteSecretRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForceDeleteWithoutRecovery")
     public Boolean forceDeleteWithoutRecovery;
+
     public DeleteSecretRequest withForceDeleteWithoutRecovery(Boolean forceDeleteWithoutRecovery) {
         this.forceDeleteWithoutRecovery = forceDeleteWithoutRecovery;
         return this;
@@ -20,6 +21,7 @@ public class DeleteSecretRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecoveryWindowInDays")
     public Long recoveryWindowInDays;
+
     public DeleteSecretRequest withRecoveryWindowInDays(Long recoveryWindowInDays) {
         this.recoveryWindowInDays = recoveryWindowInDays;
         return this;
@@ -27,9 +29,13 @@ public class DeleteSecretRequest {
     
     @JsonProperty("SecretId")
     public String secretId;
+
     public DeleteSecretRequest withSecretId(String secretId) {
         this.secretId = secretId;
         return this;
     }
     
+    public DeleteSecretRequest(@JsonProperty("SecretId") String secretId) {
+        this.secretId = secretId;
+  }
 }

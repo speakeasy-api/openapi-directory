@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteBGPPeerResponse {
     
     public String contentType;
+
     public DeleteBGPPeerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteBGPPeerResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteBGPPeerResponse deleteBGPPeerResponse;
+
     public DeleteBGPPeerResponse withDeleteBGPPeerResponse(org.openapis.openapi.models.shared.DeleteBGPPeerResponse deleteBGPPeerResponse) {
         this.deleteBGPPeerResponse = deleteBGPPeerResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteBGPPeerResponse {
      */
     
     public Object directConnectClientException;
+
     public DeleteBGPPeerResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteBGPPeerResponse {
      */
     
     public Object directConnectServerException;
+
     public DeleteBGPPeerResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteBGPPeerResponse {
     
     
     public Integer statusCode;
+
     public DeleteBGPPeerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteBGPPeerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteBGPPeerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteBGPPeerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

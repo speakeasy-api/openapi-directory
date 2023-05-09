@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ForumForumRecruitmentDetail {
     
     public UserGeneralUser[] fireteam;
+
     public ForumForumRecruitmentDetail withFireteam(UserGeneralUser[] fireteam) {
         this.fireteam = fireteam;
         return this;
@@ -16,6 +17,7 @@ public class ForumForumRecruitmentDetail {
     
     
     public Boolean approved;
+
     public ForumForumRecruitmentDetail withApproved(Boolean approved) {
         this.approved = approved;
         return this;
@@ -23,6 +25,7 @@ public class ForumForumRecruitmentDetail {
     
     
     public Long conversationId;
+
     public ForumForumRecruitmentDetail withConversationId(Long conversationId) {
         this.conversationId = conversationId;
         return this;
@@ -30,6 +33,7 @@ public class ForumForumRecruitmentDetail {
     
     
     public Long intensity;
+
     public ForumForumRecruitmentDetail withIntensity(Long intensity) {
         this.intensity = intensity;
         return this;
@@ -37,6 +41,7 @@ public class ForumForumRecruitmentDetail {
     
     
     public Long[] kickedPlayerIds;
+
     public ForumForumRecruitmentDetail withKickedPlayerIds(Long[] kickedPlayerIds) {
         this.kickedPlayerIds = kickedPlayerIds;
         return this;
@@ -44,6 +49,7 @@ public class ForumForumRecruitmentDetail {
     
     
     public Boolean microphoneRequired;
+
     public ForumForumRecruitmentDetail withMicrophoneRequired(Boolean microphoneRequired) {
         this.microphoneRequired = microphoneRequired;
         return this;
@@ -51,6 +57,7 @@ public class ForumForumRecruitmentDetail {
     
     
     public Integer playerSlotsRemaining;
+
     public ForumForumRecruitmentDetail withPlayerSlotsRemaining(Integer playerSlotsRemaining) {
         this.playerSlotsRemaining = playerSlotsRemaining;
         return this;
@@ -58,6 +65,7 @@ public class ForumForumRecruitmentDetail {
     
     
     public Integer playerSlotsTotal;
+
     public ForumForumRecruitmentDetail withPlayerSlotsTotal(Integer playerSlotsTotal) {
         this.playerSlotsTotal = playerSlotsTotal;
         return this;
@@ -65,6 +73,7 @@ public class ForumForumRecruitmentDetail {
     
     
     public Long tone;
+
     public ForumForumRecruitmentDetail withTone(Long tone) {
         this.tone = tone;
         return this;
@@ -72,9 +81,11 @@ public class ForumForumRecruitmentDetail {
     
     
     public Long topicId;
+
     public ForumForumRecruitmentDetail withTopicId(Long topicId) {
         this.topicId = topicId;
         return this;
     }
     
+    public ForumForumRecruitmentDetail(){}
 }

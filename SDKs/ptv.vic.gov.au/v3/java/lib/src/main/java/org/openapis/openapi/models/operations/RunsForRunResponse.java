@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RunsForRunResponse {
     
     public byte[] body;
+
     public RunsForRunResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class RunsForRunResponse {
     
     
     public String contentType;
+
     public RunsForRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class RunsForRunResponse {
     
     
     public Integer statusCode;
+
     public RunsForRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class RunsForRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RunsForRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class RunsForRunResponse {
      */
     
     public org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse;
+
     public RunsForRunResponse withV3ErrorResponse(org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse) {
         this.v3ErrorResponse = v3ErrorResponse;
         return this;
@@ -50,9 +56,14 @@ public class RunsForRunResponse {
      */
     
     public org.openapis.openapi.models.shared.V3RunsResponse v3RunsResponse;
+
     public RunsForRunResponse withV3RunsResponse(org.openapis.openapi.models.shared.V3RunsResponse v3RunsResponse) {
         this.v3RunsResponse = v3RunsResponse;
         return this;
     }
     
+    public RunsForRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

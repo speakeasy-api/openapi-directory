@@ -18,6 +18,7 @@ public class TimeSeriesData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelValues")
     public LabelValue[] labelValues;
+
     public TimeSeriesData withLabelValues(LabelValue[] labelValues) {
         this.labelValues = labelValues;
         return this;
@@ -29,9 +30,11 @@ public class TimeSeriesData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointData")
     public PointData[] pointData;
+
     public TimeSeriesData withPointData(PointData[] pointData) {
         this.pointData = pointData;
         return this;
     }
     
+    public TimeSeriesData(){}
 }

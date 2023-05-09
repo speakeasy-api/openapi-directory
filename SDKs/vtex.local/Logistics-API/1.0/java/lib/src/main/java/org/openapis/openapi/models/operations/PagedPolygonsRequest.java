@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PagedPolygonsRequest {
@@ -12,6 +13,7 @@ public class PagedPolygonsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public PagedPolygonsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class PagedPolygonsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public PagedPolygonsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PagedPolygonsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public PagedPolygonsRequest withPage(String page) {
         this.page = page;
         return this;
@@ -36,9 +40,16 @@ public class PagedPolygonsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
     public String perPage;
+
     public PagedPolygonsRequest withPerPage(String perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public PagedPolygonsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("page") String page, @JsonProperty("perPage") String perPage) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.page = page;
+        this.perPage = perPage;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsGetOrgInstallationRequest {
@@ -12,6 +13,7 @@ public class AppsGetOrgInstallationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
     public String accept;
+
     public AppsGetOrgInstallationRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -19,9 +21,14 @@ public class AppsGetOrgInstallationRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public AppsGetOrgInstallationRequest withOrg(String org) {
         this.org = org;
         return this;
     }
     
+    public AppsGetOrgInstallationRequest(@JsonProperty("accept") String accept, @JsonProperty("org") String org) {
+        this.accept = accept;
+        this.org = org;
+  }
 }

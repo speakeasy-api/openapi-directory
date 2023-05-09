@@ -15,6 +15,7 @@ public class GetConnectionStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ConnectionStatusEnum status;
+
     public GetConnectionStatusResponse withStatus(ConnectionStatusEnum status) {
         this.status = status;
         return this;
@@ -23,9 +24,11 @@ public class GetConnectionStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Target")
     public String target;
+
     public GetConnectionStatusResponse withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public GetConnectionStatusResponse(){}
 }

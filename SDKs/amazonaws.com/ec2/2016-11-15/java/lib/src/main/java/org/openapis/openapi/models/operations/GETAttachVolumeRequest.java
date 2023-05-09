@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAttachVolumeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETAttachVolumeActionEnum action;
+
     public GETAttachVolumeRequest withAction(GETAttachVolumeActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETAttachVolumeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Device")
     public String device;
+
     public GETAttachVolumeRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -29,6 +32,7 @@ public class GETAttachVolumeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETAttachVolumeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETAttachVolumeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
     public String instanceId;
+
     public GETAttachVolumeRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -46,6 +51,7 @@ public class GETAttachVolumeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETAttachVolumeVersionEnum version;
+
     public GETAttachVolumeRequest withVersion(GETAttachVolumeVersionEnum version) {
         this.version = version;
         return this;
@@ -56,6 +62,7 @@ public class GETAttachVolumeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VolumeId")
     public String volumeId;
+
     public GETAttachVolumeRequest withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
@@ -63,6 +70,7 @@ public class GETAttachVolumeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETAttachVolumeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETAttachVolumeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETAttachVolumeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETAttachVolumeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETAttachVolumeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETAttachVolumeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETAttachVolumeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETAttachVolumeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETAttachVolumeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETAttachVolumeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETAttachVolumeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,17 @@ public class GETAttachVolumeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETAttachVolumeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETAttachVolumeRequest(@JsonProperty("Action") GETAttachVolumeActionEnum action, @JsonProperty("Device") String device, @JsonProperty("InstanceId") String instanceId, @JsonProperty("Version") GETAttachVolumeVersionEnum version, @JsonProperty("VolumeId") String volumeId) {
+        this.action = action;
+        this.device = device;
+        this.instanceId = instanceId;
+        this.version = version;
+        this.volumeId = volumeId;
+  }
 }

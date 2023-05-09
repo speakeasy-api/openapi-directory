@@ -15,6 +15,7 @@ public class GetFieldResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetFieldResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class GetFieldResponse {
     
     @JsonProperty("fieldArn")
     public String fieldArn;
+
     public GetFieldResponse withFieldArn(String fieldArn) {
         this.fieldArn = fieldArn;
         return this;
@@ -29,6 +31,7 @@ public class GetFieldResponse {
     
     @JsonProperty("fieldId")
     public String fieldId;
+
     public GetFieldResponse withFieldId(String fieldId) {
         this.fieldId = fieldId;
         return this;
@@ -36,6 +39,7 @@ public class GetFieldResponse {
     
     @JsonProperty("name")
     public String name;
+
     public GetFieldResponse withName(String name) {
         this.name = name;
         return this;
@@ -43,6 +47,7 @@ public class GetFieldResponse {
     
     @JsonProperty("namespace")
     public FieldNamespaceEnum namespace;
+
     public GetFieldResponse withNamespace(FieldNamespaceEnum namespace) {
         this.namespace = namespace;
         return this;
@@ -51,6 +56,7 @@ public class GetFieldResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetFieldResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -58,9 +64,17 @@ public class GetFieldResponse {
     
     @JsonProperty("type")
     public FieldTypeEnum type;
+
     public GetFieldResponse withType(FieldTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetFieldResponse(@JsonProperty("fieldArn") String fieldArn, @JsonProperty("fieldId") String fieldId, @JsonProperty("name") String name, @JsonProperty("namespace") FieldNamespaceEnum namespace, @JsonProperty("type") FieldTypeEnum type) {
+        this.fieldArn = fieldArn;
+        this.fieldId = fieldId;
+        this.name = name;
+        this.namespace = namespace;
+        this.type = type;
+  }
 }

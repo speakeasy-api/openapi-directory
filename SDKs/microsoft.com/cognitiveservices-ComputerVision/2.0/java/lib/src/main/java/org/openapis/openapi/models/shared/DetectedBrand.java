@@ -18,6 +18,7 @@ public class DetectedBrand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Double confidence;
+
     public DetectedBrand withConfidence(Double confidence) {
         this.confidence = confidence;
         return this;
@@ -29,6 +30,7 @@ public class DetectedBrand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DetectedBrand withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class DetectedBrand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rectangle")
     public BoundingRect rectangle;
+
     public DetectedBrand withRectangle(BoundingRect rectangle) {
         this.rectangle = rectangle;
         return this;
     }
     
+    public DetectedBrand(){}
 }

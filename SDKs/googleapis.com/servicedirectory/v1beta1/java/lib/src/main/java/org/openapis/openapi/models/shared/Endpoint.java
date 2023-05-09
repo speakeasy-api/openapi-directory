@@ -18,6 +18,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public Endpoint withAddress(String address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Endpoint withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public Endpoint withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -51,6 +54,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Endpoint withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public Endpoint withNetwork(String network) {
         this.network = network;
         return this;
@@ -73,6 +78,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public Endpoint withPort(Integer port) {
         this.port = port;
         return this;
@@ -84,6 +90,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public Endpoint withUid(String uid) {
         this.uid = uid;
         return this;
@@ -95,9 +102,11 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Endpoint withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Endpoint(){}
 }

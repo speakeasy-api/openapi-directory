@@ -15,6 +15,7 @@ public class PostVCustomPricesRulesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public Object email;
+
     public PostVCustomPricesRulesRequestBody withEmail(Object email) {
         this.email = email;
         return this;
@@ -26,6 +27,7 @@ public class PostVCustomPricesRulesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderType")
     public String orderType;
+
     public PostVCustomPricesRulesRequestBody withOrderType(String orderType) {
         this.orderType = orderType;
         return this;
@@ -36,6 +38,7 @@ public class PostVCustomPricesRulesRequestBody {
      */
     @JsonProperty("pricetable")
     public String pricetable;
+
     public PostVCustomPricesRulesRequestBody withPricetable(String pricetable) {
         this.pricetable = pricetable;
         return this;
@@ -47,9 +50,13 @@ public class PostVCustomPricesRulesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public PostVCustomPricesRulesRequestBody withState(String state) {
         this.state = state;
         return this;
     }
     
+    public PostVCustomPricesRulesRequestBody(@JsonProperty("pricetable") String pricetable) {
+        this.pricetable = pricetable;
+  }
 }

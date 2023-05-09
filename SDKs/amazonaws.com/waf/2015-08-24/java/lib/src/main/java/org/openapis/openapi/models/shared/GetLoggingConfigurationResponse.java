@@ -15,9 +15,11 @@ public class GetLoggingConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoggingConfiguration")
     public LoggingConfiguration loggingConfiguration;
+
     public GetLoggingConfigurationResponse withLoggingConfiguration(LoggingConfiguration loggingConfiguration) {
         this.loggingConfiguration = loggingConfiguration;
         return this;
     }
     
+    public GetLoggingConfigurationResponse(){}
 }

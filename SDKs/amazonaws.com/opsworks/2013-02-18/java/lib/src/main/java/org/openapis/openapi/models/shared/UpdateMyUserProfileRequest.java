@@ -12,9 +12,11 @@ public class UpdateMyUserProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SshPublicKey")
     public String sshPublicKey;
+
     public UpdateMyUserProfileRequest withSshPublicKey(String sshPublicKey) {
         this.sshPublicKey = sshPublicKey;
         return this;
     }
     
+    public UpdateMyUserProfileRequest(){}
 }

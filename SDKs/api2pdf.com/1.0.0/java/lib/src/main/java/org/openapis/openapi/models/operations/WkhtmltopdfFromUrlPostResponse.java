@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WkhtmltopdfFromUrlPostResponse {
@@ -12,6 +13,7 @@ public class WkhtmltopdfFromUrlPostResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiResponseFailure apiResponseFailure;
+
     public WkhtmltopdfFromUrlPostResponse withApiResponseFailure(org.openapis.openapi.models.shared.ApiResponseFailure apiResponseFailure) {
         this.apiResponseFailure = apiResponseFailure;
         return this;
@@ -22,6 +24,7 @@ public class WkhtmltopdfFromUrlPostResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiResponseSuccess apiResponseSuccess;
+
     public WkhtmltopdfFromUrlPostResponse withApiResponseSuccess(org.openapis.openapi.models.shared.ApiResponseSuccess apiResponseSuccess) {
         this.apiResponseSuccess = apiResponseSuccess;
         return this;
@@ -29,6 +32,7 @@ public class WkhtmltopdfFromUrlPostResponse {
     
     
     public String contentType;
+
     public WkhtmltopdfFromUrlPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class WkhtmltopdfFromUrlPostResponse {
     
     
     public Integer statusCode;
+
     public WkhtmltopdfFromUrlPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class WkhtmltopdfFromUrlPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WkhtmltopdfFromUrlPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public WkhtmltopdfFromUrlPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

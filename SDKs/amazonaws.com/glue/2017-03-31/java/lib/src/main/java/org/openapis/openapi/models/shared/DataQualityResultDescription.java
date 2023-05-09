@@ -20,6 +20,7 @@ public class DataQualityResultDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSource")
     public DataSource dataSource;
+
     public DataQualityResultDescription withDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -28,6 +29,7 @@ public class DataQualityResultDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public DataQualityResultDescription withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -36,6 +38,7 @@ public class DataQualityResultDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobRunId")
     public String jobRunId;
+
     public DataQualityResultDescription withJobRunId(String jobRunId) {
         this.jobRunId = jobRunId;
         return this;
@@ -44,6 +47,7 @@ public class DataQualityResultDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultId")
     public String resultId;
+
     public DataQualityResultDescription withResultId(String resultId) {
         this.resultId = resultId;
         return this;
@@ -54,9 +58,11 @@ public class DataQualityResultDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartedOn")
     public OffsetDateTime startedOn;
+
     public DataQualityResultDescription withStartedOn(OffsetDateTime startedOn) {
         this.startedOn = startedOn;
         return this;
     }
     
+    public DataQualityResultDescription(){}
 }

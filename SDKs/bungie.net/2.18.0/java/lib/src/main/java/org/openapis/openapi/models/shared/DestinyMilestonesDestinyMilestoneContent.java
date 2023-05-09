@@ -15,6 +15,7 @@ public class DestinyMilestonesDestinyMilestoneContent {
      */
     
     public String about;
+
     public DestinyMilestonesDestinyMilestoneContent withAbout(String about) {
         this.about = about;
         return this;
@@ -25,6 +26,7 @@ public class DestinyMilestonesDestinyMilestoneContent {
      */
     
     public DestinyMilestonesDestinyMilestoneContentItemCategory[] itemCategories;
+
     public DestinyMilestonesDestinyMilestoneContent withItemCategories(DestinyMilestonesDestinyMilestoneContentItemCategory[] itemCategories) {
         this.itemCategories = itemCategories;
         return this;
@@ -35,6 +37,7 @@ public class DestinyMilestonesDestinyMilestoneContent {
      */
     
     public String status;
+
     public DestinyMilestonesDestinyMilestoneContent withStatus(String status) {
         this.status = status;
         return this;
@@ -45,9 +48,11 @@ public class DestinyMilestonesDestinyMilestoneContent {
      */
     
     public String[] tips;
+
     public DestinyMilestonesDestinyMilestoneContent withTips(String[] tips) {
         this.tips = tips;
         return this;
     }
     
+    public DestinyMilestonesDestinyMilestoneContent(){}
 }

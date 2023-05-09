@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEpisodeByIdResponse {
     
     public String contentType;
+
     public GetEpisodeByIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetEpisodeByIdResponse {
      */
     
     public org.openapis.openapi.models.shared.EpisodeFull episodeFull;
+
     public GetEpisodeByIdResponse withEpisodeFull(org.openapis.openapi.models.shared.EpisodeFull episodeFull) {
         this.episodeFull = episodeFull;
         return this;
@@ -26,6 +29,7 @@ public class GetEpisodeByIdResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetEpisodeByIdResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetEpisodeByIdResponse {
     
     
     public Integer statusCode;
+
     public GetEpisodeByIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetEpisodeByIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEpisodeByIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetEpisodeByIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

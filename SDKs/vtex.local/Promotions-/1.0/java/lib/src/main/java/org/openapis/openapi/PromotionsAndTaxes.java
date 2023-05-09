@@ -60,10 +60,8 @@ public class PromotionsAndTaxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArchivePromotionResponse res = new org.openapis.openapi.models.operations.ArchivePromotionResponse() {{
+        org.openapis.openapi.models.operations.ArchivePromotionResponse res = new org.openapis.openapi.models.operations.ArchivePromotionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -107,11 +105,9 @@ public class PromotionsAndTaxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateOrUpdateCalculatorConfigurationResponse res = new org.openapis.openapi.models.operations.CreateOrUpdateCalculatorConfigurationResponse() {{
+        org.openapis.openapi.models.operations.CreateOrUpdateCalculatorConfigurationResponse res = new org.openapis.openapi.models.operations.CreateOrUpdateCalculatorConfigurationResponse(contentType, httpRes.statusCode()) {{
             createOrUpdateCalculatorConfiguration200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,7 +125,7 @@ public class PromotionsAndTaxes {
      * Get All Promotions
      * Retrieves all promotions from an account. 
      * 
-     * &gt; \ud83d\udcd8 Onboarding guide 
+     * &gt; 📘 Onboarding guide 
      * &gt;
      * &gt; Check the new [Promotions onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/promotions-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about the Promotions and is organized by focusing on the developer's journey.
      * 
@@ -161,11 +157,9 @@ public class PromotionsAndTaxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllBenefitsResponse res = new org.openapis.openapi.models.operations.GetAllBenefitsResponse() {{
+        org.openapis.openapi.models.operations.GetAllBenefitsResponse res = new org.openapis.openapi.models.operations.GetAllBenefitsResponse(contentType, httpRes.statusCode()) {{
             getAllBenefits200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -209,11 +203,9 @@ public class PromotionsAndTaxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllTaxesResponse res = new org.openapis.openapi.models.operations.GetAllTaxesResponse() {{
+        org.openapis.openapi.models.operations.GetAllTaxesResponse res = new org.openapis.openapi.models.operations.GetAllTaxesResponse(contentType, httpRes.statusCode()) {{
             getAllTaxes200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -257,11 +249,9 @@ public class PromotionsAndTaxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetArchivedPromotionsResponse res = new org.openapis.openapi.models.operations.GetArchivedPromotionsResponse() {{
+        org.openapis.openapi.models.operations.GetArchivedPromotionsResponse res = new org.openapis.openapi.models.operations.GetArchivedPromotionsResponse(contentType, httpRes.statusCode()) {{
             getArchivedPromotions200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -305,11 +295,9 @@ public class PromotionsAndTaxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetArchivedTaxesResponse res = new org.openapis.openapi.models.operations.GetArchivedTaxesResponse() {{
+        org.openapis.openapi.models.operations.GetArchivedTaxesResponse res = new org.openapis.openapi.models.operations.GetArchivedTaxesResponse(contentType, httpRes.statusCode()) {{
             getArchivedTaxes200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -353,12 +341,10 @@ public class PromotionsAndTaxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCalculatorConfigurationByIdResponse res = new org.openapis.openapi.models.operations.GetCalculatorConfigurationByIdResponse() {{
+        org.openapis.openapi.models.operations.GetCalculatorConfigurationByIdResponse res = new org.openapis.openapi.models.operations.GetCalculatorConfigurationByIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -405,10 +391,8 @@ public class PromotionsAndTaxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UnarchivePromotionResponse res = new org.openapis.openapi.models.operations.UnarchivePromotionResponse() {{
+        org.openapis.openapi.models.operations.UnarchivePromotionResponse res = new org.openapis.openapi.models.operations.UnarchivePromotionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -420,7 +404,7 @@ public class PromotionsAndTaxes {
     /**
      * Create Multiple SKU Promotion
      * Creates a Multiple SKU Promotion. This scenario allows to create a single promotion for multiples SKUs with the Percentage Effect. 
-     * &gt; \u26a0\ufe0f 
+     * &gt; ⚠️ 
      * &gt;
      * &gt; The limit of SKUs on a Multiple Effects promotion is 400.
      * @param request the request object containing all of the parameters for the API call
@@ -452,10 +436,8 @@ public class PromotionsAndTaxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiRnbPvtImportCalculatorConfigurationResponse res = new org.openapis.openapi.models.operations.PostApiRnbPvtImportCalculatorConfigurationResponse() {{
+        org.openapis.openapi.models.operations.PostApiRnbPvtImportCalculatorConfigurationResponse res = new org.openapis.openapi.models.operations.PostApiRnbPvtImportCalculatorConfigurationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -467,7 +449,7 @@ public class PromotionsAndTaxes {
     /**
      * Update Multiple SKU Promotion
      * Updates information from a Multiple SKU Promotion. This scenario allows to create a single promotion for multiples SKUs with the Percentage Effect.  
-     * &gt; \u26a0\ufe0f 
+     * &gt; ⚠️ 
      * &gt;
      * &gt; The limit of SKUs on a Multiple Effects promotion is 400.
      * @param request the request object containing all of the parameters for the API call
@@ -499,10 +481,8 @@ public class PromotionsAndTaxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutApiRnbPvtImportCalculatorConfigurationPromotionIdResponse res = new org.openapis.openapi.models.operations.PutApiRnbPvtImportCalculatorConfigurationPromotionIdResponse() {{
+        org.openapis.openapi.models.operations.PutApiRnbPvtImportCalculatorConfigurationPromotionIdResponse res = new org.openapis.openapi.models.operations.PutApiRnbPvtImportCalculatorConfigurationPromotionIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

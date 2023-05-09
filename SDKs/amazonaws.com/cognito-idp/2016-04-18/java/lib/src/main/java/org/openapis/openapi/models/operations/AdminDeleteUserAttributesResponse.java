@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminDeleteUserAttributesResponse {
@@ -12,6 +13,7 @@ public class AdminDeleteUserAttributesResponse {
      */
     
     public java.util.Map<String, Object> adminDeleteUserAttributesResponse;
+
     public AdminDeleteUserAttributesResponse withAdminDeleteUserAttributesResponse(java.util.Map<String, Object> adminDeleteUserAttributesResponse) {
         this.adminDeleteUserAttributesResponse = adminDeleteUserAttributesResponse;
         return this;
@@ -19,6 +21,7 @@ public class AdminDeleteUserAttributesResponse {
     
     
     public String contentType;
+
     public AdminDeleteUserAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AdminDeleteUserAttributesResponse {
      */
     
     public Object internalErrorException;
+
     public AdminDeleteUserAttributesResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class AdminDeleteUserAttributesResponse {
      */
     
     public Object invalidParameterException;
+
     public AdminDeleteUserAttributesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class AdminDeleteUserAttributesResponse {
      */
     
     public Object notAuthorizedException;
+
     public AdminDeleteUserAttributesResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class AdminDeleteUserAttributesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AdminDeleteUserAttributesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class AdminDeleteUserAttributesResponse {
     
     
     public Integer statusCode;
+
     public AdminDeleteUserAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AdminDeleteUserAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminDeleteUserAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class AdminDeleteUserAttributesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AdminDeleteUserAttributesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,9 +103,14 @@ public class AdminDeleteUserAttributesResponse {
      */
     
     public Object userNotFoundException;
+
     public AdminDeleteUserAttributesResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public AdminDeleteUserAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

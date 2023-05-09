@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BikePointSearchResponse {
     
     public byte[] body;
+
     public BikePointSearchResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class BikePointSearchResponse {
     
     
     public String contentType;
+
     public BikePointSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class BikePointSearchResponse {
     
     
     public Integer statusCode;
+
     public BikePointSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class BikePointSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BikePointSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class BikePointSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.TflApiPresentationEntitiesPlace[] tflApiPresentationEntitiesPlaces;
+
     public BikePointSearchResponse withTflApiPresentationEntitiesPlaces(org.openapis.openapi.models.shared.TflApiPresentationEntitiesPlace[] tflApiPresentationEntitiesPlaces) {
         this.tflApiPresentationEntitiesPlaces = tflApiPresentationEntitiesPlaces;
         return this;
     }
     
+    public BikePointSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

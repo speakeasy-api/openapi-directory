@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRecordsResponse {
@@ -12,6 +13,7 @@ public class GetRecordsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetRecordsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetRecordsResponse {
     
     
     public String contentType;
+
     public GetRecordsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetRecordsResponse {
      */
     
     public Object expiredIteratorException;
+
     public GetRecordsResponse withExpiredIteratorException(Object expiredIteratorException) {
         this.expiredIteratorException = expiredIteratorException;
         return this;
@@ -39,6 +43,7 @@ public class GetRecordsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRecordsOutput getRecordsOutput;
+
     public GetRecordsResponse withGetRecordsOutput(org.openapis.openapi.models.shared.GetRecordsOutput getRecordsOutput) {
         this.getRecordsOutput = getRecordsOutput;
         return this;
@@ -49,6 +54,7 @@ public class GetRecordsResponse {
      */
     
     public Object invalidArgumentException;
+
     public GetRecordsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -59,6 +65,7 @@ public class GetRecordsResponse {
      */
     
     public Object kmsAccessDeniedException;
+
     public GetRecordsResponse withKMSAccessDeniedException(Object kmsAccessDeniedException) {
         this.kmsAccessDeniedException = kmsAccessDeniedException;
         return this;
@@ -69,6 +76,7 @@ public class GetRecordsResponse {
      */
     
     public Object kmsDisabledException;
+
     public GetRecordsResponse withKMSDisabledException(Object kmsDisabledException) {
         this.kmsDisabledException = kmsDisabledException;
         return this;
@@ -79,6 +87,7 @@ public class GetRecordsResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public GetRecordsResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -89,6 +98,7 @@ public class GetRecordsResponse {
      */
     
     public Object kmsNotFoundException;
+
     public GetRecordsResponse withKMSNotFoundException(Object kmsNotFoundException) {
         this.kmsNotFoundException = kmsNotFoundException;
         return this;
@@ -99,6 +109,7 @@ public class GetRecordsResponse {
      */
     
     public Object kmsOptInRequired;
+
     public GetRecordsResponse withKMSOptInRequired(Object kmsOptInRequired) {
         this.kmsOptInRequired = kmsOptInRequired;
         return this;
@@ -109,6 +120,7 @@ public class GetRecordsResponse {
      */
     
     public Object kmsThrottlingException;
+
     public GetRecordsResponse withKMSThrottlingException(Object kmsThrottlingException) {
         this.kmsThrottlingException = kmsThrottlingException;
         return this;
@@ -119,6 +131,7 @@ public class GetRecordsResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public GetRecordsResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -129,6 +142,7 @@ public class GetRecordsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetRecordsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -136,6 +150,7 @@ public class GetRecordsResponse {
     
     
     public Integer statusCode;
+
     public GetRecordsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -143,9 +158,14 @@ public class GetRecordsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRecordsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetRecordsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

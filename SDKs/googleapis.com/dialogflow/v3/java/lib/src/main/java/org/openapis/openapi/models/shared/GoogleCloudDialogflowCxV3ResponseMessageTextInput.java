@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowCxV3ResponseMessageTextInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String[] text;
+
     public GoogleCloudDialogflowCxV3ResponseMessageTextInput withText(String[] text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ResponseMessageTextInput(){}
 }

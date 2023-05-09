@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InstanceMetadataServiceConfiguration {
     @JsonProperty("MinimumInstanceMetadataServiceVersion")
     public String minimumInstanceMetadataServiceVersion;
+
     public InstanceMetadataServiceConfiguration withMinimumInstanceMetadataServiceVersion(String minimumInstanceMetadataServiceVersion) {
         this.minimumInstanceMetadataServiceVersion = minimumInstanceMetadataServiceVersion;
         return this;
     }
     
+    public InstanceMetadataServiceConfiguration(@JsonProperty("MinimumInstanceMetadataServiceVersion") String minimumInstanceMetadataServiceVersion) {
+        this.minimumInstanceMetadataServiceVersion = minimumInstanceMetadataServiceVersion;
+  }
 }

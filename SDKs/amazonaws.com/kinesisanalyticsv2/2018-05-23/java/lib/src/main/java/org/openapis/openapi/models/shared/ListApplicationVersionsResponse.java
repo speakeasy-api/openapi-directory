@@ -15,6 +15,7 @@ public class ListApplicationVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationVersionSummaries")
     public ApplicationVersionSummary[] applicationVersionSummaries;
+
     public ListApplicationVersionsResponse withApplicationVersionSummaries(ApplicationVersionSummary[] applicationVersionSummaries) {
         this.applicationVersionSummaries = applicationVersionSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListApplicationVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListApplicationVersionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListApplicationVersionsResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfareportingFloodlightActivityGroupsListRequest {
@@ -12,6 +13,7 @@ public class DfareportingFloodlightActivityGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DfareportingFloodlightActivityGroupsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DfareportingFloodlightActivityGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DfareportingFloodlightActivityGroupsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DfareportingFloodlightActivityGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=advertiserId")
     public String advertiserId;
+
     public DfareportingFloodlightActivityGroupsListRequest withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -42,6 +46,7 @@ public class DfareportingFloodlightActivityGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DfareportingFloodlightActivityGroupsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class DfareportingFloodlightActivityGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DfareportingFloodlightActivityGroupsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class DfareportingFloodlightActivityGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DfareportingFloodlightActivityGroupsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class DfareportingFloodlightActivityGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=floodlightConfigurationId")
     public String floodlightConfigurationId;
+
     public DfareportingFloodlightActivityGroupsListRequest withFloodlightConfigurationId(String floodlightConfigurationId) {
         this.floodlightConfigurationId = floodlightConfigurationId;
         return this;
@@ -82,6 +90,7 @@ public class DfareportingFloodlightActivityGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
     public String[] ids;
+
     public DfareportingFloodlightActivityGroupsListRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -92,6 +101,7 @@ public class DfareportingFloodlightActivityGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DfareportingFloodlightActivityGroupsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -102,6 +112,7 @@ public class DfareportingFloodlightActivityGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public DfareportingFloodlightActivityGroupsListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -112,6 +123,7 @@ public class DfareportingFloodlightActivityGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DfareportingFloodlightActivityGroupsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -122,6 +134,7 @@ public class DfareportingFloodlightActivityGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DfareportingFloodlightActivityGroupsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -132,6 +145,7 @@ public class DfareportingFloodlightActivityGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DfareportingFloodlightActivityGroupsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -142,6 +156,7 @@ public class DfareportingFloodlightActivityGroupsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public DfareportingFloodlightActivityGroupsListRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -152,6 +167,7 @@ public class DfareportingFloodlightActivityGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DfareportingFloodlightActivityGroupsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -162,6 +178,7 @@ public class DfareportingFloodlightActivityGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchString")
     public String searchString;
+
     public DfareportingFloodlightActivityGroupsListRequest withSearchString(String searchString) {
         this.searchString = searchString;
         return this;
@@ -172,6 +189,7 @@ public class DfareportingFloodlightActivityGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortField")
     public DfareportingFloodlightActivityGroupsListSortFieldEnum sortField;
+
     public DfareportingFloodlightActivityGroupsListRequest withSortField(DfareportingFloodlightActivityGroupsListSortFieldEnum sortField) {
         this.sortField = sortField;
         return this;
@@ -182,6 +200,7 @@ public class DfareportingFloodlightActivityGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
     public DfareportingFloodlightActivityGroupsListSortOrderEnum sortOrder;
+
     public DfareportingFloodlightActivityGroupsListRequest withSortOrder(DfareportingFloodlightActivityGroupsListSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -192,6 +211,7 @@ public class DfareportingFloodlightActivityGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public DfareportingFloodlightActivityGroupsListTypeEnum type;
+
     public DfareportingFloodlightActivityGroupsListRequest withType(DfareportingFloodlightActivityGroupsListTypeEnum type) {
         this.type = type;
         return this;
@@ -202,6 +222,7 @@ public class DfareportingFloodlightActivityGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DfareportingFloodlightActivityGroupsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -212,9 +233,13 @@ public class DfareportingFloodlightActivityGroupsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DfareportingFloodlightActivityGroupsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DfareportingFloodlightActivityGroupsListRequest(@JsonProperty("profileId") String profileId) {
+        this.profileId = profileId;
+  }
 }

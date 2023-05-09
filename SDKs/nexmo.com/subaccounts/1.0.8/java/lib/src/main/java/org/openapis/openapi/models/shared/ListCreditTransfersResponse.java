@@ -15,9 +15,11 @@ public class ListCreditTransfersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public ListCreditTransfersResponseEmbedded embedded;
+
     public ListCreditTransfersResponse withEmbedded(ListCreditTransfersResponseEmbedded embedded) {
         this.embedded = embedded;
         return this;
     }
     
+    public ListCreditTransfersResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSeriesSerieRequest {
@@ -12,9 +13,13 @@ public class GetSeriesSerieRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serie")
     public String serie;
+
     public GetSeriesSerieRequest withSerie(String serie) {
         this.serie = serie;
         return this;
     }
     
+    public GetSeriesSerieRequest(@JsonProperty("serie") String serie) {
+        this.serie = serie;
+  }
 }

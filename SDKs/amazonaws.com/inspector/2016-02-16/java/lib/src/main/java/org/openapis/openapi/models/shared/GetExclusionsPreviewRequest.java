@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetExclusionsPreviewRequest {
     @JsonProperty("assessmentTemplateArn")
     public String assessmentTemplateArn;
+
     public GetExclusionsPreviewRequest withAssessmentTemplateArn(String assessmentTemplateArn) {
         this.assessmentTemplateArn = assessmentTemplateArn;
         return this;
@@ -19,6 +20,7 @@ public class GetExclusionsPreviewRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public LocaleEnum locale;
+
     public GetExclusionsPreviewRequest withLocale(LocaleEnum locale) {
         this.locale = locale;
         return this;
@@ -27,6 +29,7 @@ public class GetExclusionsPreviewRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public GetExclusionsPreviewRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,6 +38,7 @@ public class GetExclusionsPreviewRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetExclusionsPreviewRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -42,9 +46,14 @@ public class GetExclusionsPreviewRequest {
     
     @JsonProperty("previewToken")
     public String previewToken;
+
     public GetExclusionsPreviewRequest withPreviewToken(String previewToken) {
         this.previewToken = previewToken;
         return this;
     }
     
+    public GetExclusionsPreviewRequest(@JsonProperty("assessmentTemplateArn") String assessmentTemplateArn, @JsonProperty("previewToken") String previewToken) {
+        this.assessmentTemplateArn = assessmentTemplateArn;
+        this.previewToken = previewToken;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetCaseEventConfigurationResponse {
     @JsonProperty("eventBridge")
     public EventBridgeConfiguration eventBridge;
+
     public GetCaseEventConfigurationResponse withEventBridge(EventBridgeConfiguration eventBridge) {
         this.eventBridge = eventBridge;
         return this;
     }
     
+    public GetCaseEventConfigurationResponse(@JsonProperty("eventBridge") EventBridgeConfiguration eventBridge) {
+        this.eventBridge = eventBridge;
+  }
 }

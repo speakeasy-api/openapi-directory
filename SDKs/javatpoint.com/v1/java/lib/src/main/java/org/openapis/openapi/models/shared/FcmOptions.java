@@ -18,9 +18,11 @@ public class FcmOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analyticsLabel")
     public String analyticsLabel;
+
     public FcmOptions withAnalyticsLabel(String analyticsLabel) {
         this.analyticsLabel = analyticsLabel;
         return this;
     }
     
+    public FcmOptions(){}
 }

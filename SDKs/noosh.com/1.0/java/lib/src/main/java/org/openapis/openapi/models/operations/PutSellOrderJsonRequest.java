@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSellOrderJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.OrderUpdPersistVO orderUpdPersistVO;
+
     public PutSellOrderJsonRequest withOrderUpdPersistVO(org.openapis.openapi.models.shared.OrderUpdPersistVO orderUpdPersistVO) {
         this.orderUpdPersistVO = orderUpdPersistVO;
         return this;
@@ -16,6 +18,7 @@ public class PutSellOrderJsonRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=order_id")
     public String orderId;
+
     public PutSellOrderJsonRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -23,6 +26,7 @@ public class PutSellOrderJsonRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public String projectId;
+
     public PutSellOrderJsonRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -30,9 +34,15 @@ public class PutSellOrderJsonRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
     public String workgroupId;
+
     public PutSellOrderJsonRequest withWorkgroupId(String workgroupId) {
         this.workgroupId = workgroupId;
         return this;
     }
     
+    public PutSellOrderJsonRequest(@JsonProperty("order_id") String orderId, @JsonProperty("project_id") String projectId, @JsonProperty("workgroup_id") String workgroupId) {
+        this.orderId = orderId;
+        this.projectId = projectId;
+        this.workgroupId = workgroupId;
+  }
 }

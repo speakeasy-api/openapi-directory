@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSamplesResponse {
@@ -12,6 +13,7 @@ public class ListSamplesResponse {
      */
     
     public Object argumentException;
+
     public ListSamplesResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class ListSamplesResponse {
     
     
     public String contentType;
+
     public ListSamplesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListSamplesResponse {
      */
     
     public Object limitExceededException;
+
     public ListSamplesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class ListSamplesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSamplesResult listSamplesResult;
+
     public ListSamplesResponse withListSamplesResult(org.openapis.openapi.models.shared.ListSamplesResult listSamplesResult) {
         this.listSamplesResult = listSamplesResult;
         return this;
@@ -49,6 +54,7 @@ public class ListSamplesResponse {
      */
     
     public Object notFoundException;
+
     public ListSamplesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListSamplesResponse {
      */
     
     public Object serviceAccountException;
+
     public ListSamplesResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class ListSamplesResponse {
     
     
     public Integer statusCode;
+
     public ListSamplesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListSamplesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSamplesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListSamplesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

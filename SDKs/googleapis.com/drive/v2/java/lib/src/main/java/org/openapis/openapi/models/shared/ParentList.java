@@ -18,6 +18,7 @@ public class ParentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public ParentList withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class ParentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public ParentReference[] items;
+
     public ParentList withItems(ParentReference[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class ParentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ParentList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class ParentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public ParentList withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
     }
     
+    public ParentList(){}
 }

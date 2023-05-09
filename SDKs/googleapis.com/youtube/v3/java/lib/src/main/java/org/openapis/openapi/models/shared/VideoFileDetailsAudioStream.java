@@ -18,6 +18,7 @@ public class VideoFileDetailsAudioStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bitrateBps")
     public String bitrateBps;
+
     public VideoFileDetailsAudioStream withBitrateBps(String bitrateBps) {
         this.bitrateBps = bitrateBps;
         return this;
@@ -29,6 +30,7 @@ public class VideoFileDetailsAudioStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelCount")
     public Long channelCount;
+
     public VideoFileDetailsAudioStream withChannelCount(Long channelCount) {
         this.channelCount = channelCount;
         return this;
@@ -40,6 +42,7 @@ public class VideoFileDetailsAudioStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codec")
     public String codec;
+
     public VideoFileDetailsAudioStream withCodec(String codec) {
         this.codec = codec;
         return this;
@@ -51,9 +54,11 @@ public class VideoFileDetailsAudioStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor")
     public String vendor;
+
     public VideoFileDetailsAudioStream withVendor(String vendor) {
         this.vendor = vendor;
         return this;
     }
     
+    public VideoFileDetailsAudioStream(){}
 }

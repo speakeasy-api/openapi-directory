@@ -15,9 +15,11 @@ public class UpdateServerEngineAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Server")
     public Server server;
+
     public UpdateServerEngineAttributesResponse withServer(Server server) {
         this.server = server;
         return this;
     }
     
+    public UpdateServerEngineAttributesResponse(){}
 }

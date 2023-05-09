@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateUserDefinedFunctionResponse {
@@ -12,6 +13,7 @@ public class CreateUserDefinedFunctionResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateUserDefinedFunctionResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -19,6 +21,7 @@ public class CreateUserDefinedFunctionResponse {
     
     
     public String contentType;
+
     public CreateUserDefinedFunctionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateUserDefinedFunctionResponse {
      */
     
     public java.util.Map<String, Object> createUserDefinedFunctionResponse;
+
     public CreateUserDefinedFunctionResponse withCreateUserDefinedFunctionResponse(java.util.Map<String, Object> createUserDefinedFunctionResponse) {
         this.createUserDefinedFunctionResponse = createUserDefinedFunctionResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateUserDefinedFunctionResponse {
      */
     
     public Object entityNotFoundException;
+
     public CreateUserDefinedFunctionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class CreateUserDefinedFunctionResponse {
      */
     
     public Object glueEncryptionException;
+
     public CreateUserDefinedFunctionResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -59,6 +65,7 @@ public class CreateUserDefinedFunctionResponse {
      */
     
     public Object internalServiceException;
+
     public CreateUserDefinedFunctionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class CreateUserDefinedFunctionResponse {
      */
     
     public Object invalidInputException;
+
     public CreateUserDefinedFunctionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class CreateUserDefinedFunctionResponse {
      */
     
     public Object operationTimeoutException;
+
     public CreateUserDefinedFunctionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -89,6 +98,7 @@ public class CreateUserDefinedFunctionResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public CreateUserDefinedFunctionResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -96,6 +106,7 @@ public class CreateUserDefinedFunctionResponse {
     
     
     public Integer statusCode;
+
     public CreateUserDefinedFunctionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class CreateUserDefinedFunctionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateUserDefinedFunctionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateUserDefinedFunctionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

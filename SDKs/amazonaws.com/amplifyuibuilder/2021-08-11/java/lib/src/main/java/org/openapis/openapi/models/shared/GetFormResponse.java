@@ -15,9 +15,11 @@ public class GetFormResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form")
     public Form form;
+
     public GetFormResponse withForm(Form form) {
         this.form = form;
         return this;
     }
     
+    public GetFormResponse(){}
 }

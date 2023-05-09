@@ -15,6 +15,7 @@ public class ModelQualityAppSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerArguments")
     public String[] containerArguments;
+
     public ModelQualityAppSpecification withContainerArguments(String[] containerArguments) {
         this.containerArguments = containerArguments;
         return this;
@@ -23,6 +24,7 @@ public class ModelQualityAppSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerEntrypoint")
     public String[] containerEntrypoint;
+
     public ModelQualityAppSpecification withContainerEntrypoint(String[] containerEntrypoint) {
         this.containerEntrypoint = containerEntrypoint;
         return this;
@@ -31,6 +33,7 @@ public class ModelQualityAppSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public java.util.Map<String, String> environment;
+
     public ModelQualityAppSpecification withEnvironment(java.util.Map<String, String> environment) {
         this.environment = environment;
         return this;
@@ -38,6 +41,7 @@ public class ModelQualityAppSpecification {
     
     @JsonProperty("ImageUri")
     public String imageUri;
+
     public ModelQualityAppSpecification withImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
@@ -46,6 +50,7 @@ public class ModelQualityAppSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostAnalyticsProcessorSourceUri")
     public String postAnalyticsProcessorSourceUri;
+
     public ModelQualityAppSpecification withPostAnalyticsProcessorSourceUri(String postAnalyticsProcessorSourceUri) {
         this.postAnalyticsProcessorSourceUri = postAnalyticsProcessorSourceUri;
         return this;
@@ -54,6 +59,7 @@ public class ModelQualityAppSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProblemType")
     public MonitoringProblemTypeEnum problemType;
+
     public ModelQualityAppSpecification withProblemType(MonitoringProblemTypeEnum problemType) {
         this.problemType = problemType;
         return this;
@@ -62,9 +68,13 @@ public class ModelQualityAppSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordPreprocessorSourceUri")
     public String recordPreprocessorSourceUri;
+
     public ModelQualityAppSpecification withRecordPreprocessorSourceUri(String recordPreprocessorSourceUri) {
         this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
         return this;
     }
     
+    public ModelQualityAppSpecification(@JsonProperty("ImageUri") String imageUri) {
+        this.imageUri = imageUri;
+  }
 }

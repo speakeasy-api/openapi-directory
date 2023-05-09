@@ -61,10 +61,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse res = new org.openapis.openapi.models.operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse() {{
+        org.openapis.openapi.models.operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse res = new org.openapis.openapi.models.operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -95,10 +93,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsAddSelectedRepoToOrgSecretResponse res = new org.openapis.openapi.models.operations.ActionsAddSelectedRepoToOrgSecretResponse() {{
+        org.openapis.openapi.models.operations.ActionsAddSelectedRepoToOrgSecretResponse res = new org.openapis.openapi.models.operations.ActionsAddSelectedRepoToOrgSecretResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 409) {
@@ -130,10 +126,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsAddSelfHostedRunnerToGroupForOrgResponse res = new org.openapis.openapi.models.operations.ActionsAddSelfHostedRunnerToGroupForOrgResponse() {{
+        org.openapis.openapi.models.operations.ActionsAddSelfHostedRunnerToGroupForOrgResponse res = new org.openapis.openapi.models.operations.ActionsAddSelfHostedRunnerToGroupForOrgResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -164,11 +158,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsCancelWorkflowRunResponse res = new org.openapis.openapi.models.operations.ActionsCancelWorkflowRunResponse() {{
+        org.openapis.openapi.models.operations.ActionsCancelWorkflowRunResponse res = new org.openapis.openapi.models.operations.ActionsCancelWorkflowRunResponse(contentType, httpRes.statusCode()) {{
             actionsCancelWorkflowRun202ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -283,11 +275,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsCreateOrUpdateOrgSecretResponse res = new org.openapis.openapi.models.operations.ActionsCreateOrUpdateOrgSecretResponse() {{
+        org.openapis.openapi.models.operations.ActionsCreateOrUpdateOrgSecretResponse res = new org.openapis.openapi.models.operations.ActionsCreateOrUpdateOrgSecretResponse(contentType, httpRes.statusCode()) {{
             emptyObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -404,11 +394,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsCreateOrUpdateRepoSecretResponse res = new org.openapis.openapi.models.operations.ActionsCreateOrUpdateRepoSecretResponse() {{
+        org.openapis.openapi.models.operations.ActionsCreateOrUpdateRepoSecretResponse res = new org.openapis.openapi.models.operations.ActionsCreateOrUpdateRepoSecretResponse(contentType, httpRes.statusCode()) {{
             actionsCreateOrUpdateRepoSecret201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -456,11 +444,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsCreateRegistrationTokenForOrgResponse res = new org.openapis.openapi.models.operations.ActionsCreateRegistrationTokenForOrgResponse() {{
+        org.openapis.openapi.models.operations.ActionsCreateRegistrationTokenForOrgResponse res = new org.openapis.openapi.models.operations.ActionsCreateRegistrationTokenForOrgResponse(contentType, httpRes.statusCode()) {{
             authenticationToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -505,11 +491,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsCreateRegistrationTokenForRepoResponse res = new org.openapis.openapi.models.operations.ActionsCreateRegistrationTokenForRepoResponse() {{
+        org.openapis.openapi.models.operations.ActionsCreateRegistrationTokenForRepoResponse res = new org.openapis.openapi.models.operations.ActionsCreateRegistrationTokenForRepoResponse(contentType, httpRes.statusCode()) {{
             authenticationToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -556,11 +540,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsCreateRemoveTokenForOrgResponse res = new org.openapis.openapi.models.operations.ActionsCreateRemoveTokenForOrgResponse() {{
+        org.openapis.openapi.models.operations.ActionsCreateRemoveTokenForOrgResponse res = new org.openapis.openapi.models.operations.ActionsCreateRemoveTokenForOrgResponse(contentType, httpRes.statusCode()) {{
             authenticationToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -605,11 +587,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsCreateRemoveTokenForRepoResponse res = new org.openapis.openapi.models.operations.ActionsCreateRemoveTokenForRepoResponse() {{
+        org.openapis.openapi.models.operations.ActionsCreateRemoveTokenForRepoResponse res = new org.openapis.openapi.models.operations.ActionsCreateRemoveTokenForRepoResponse(contentType, httpRes.statusCode()) {{
             authenticationToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -654,11 +634,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsCreateSelfHostedRunnerGroupForOrgResponse res = new org.openapis.openapi.models.operations.ActionsCreateSelfHostedRunnerGroupForOrgResponse() {{
+        org.openapis.openapi.models.operations.ActionsCreateSelfHostedRunnerGroupForOrgResponse res = new org.openapis.openapi.models.operations.ActionsCreateSelfHostedRunnerGroupForOrgResponse(contentType, httpRes.statusCode()) {{
             runnerGroupsOrg = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -703,10 +681,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsCreateWorkflowDispatchResponse res = new org.openapis.openapi.models.operations.ActionsCreateWorkflowDispatchResponse() {{
+        org.openapis.openapi.models.operations.ActionsCreateWorkflowDispatchResponse res = new org.openapis.openapi.models.operations.ActionsCreateWorkflowDispatchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -737,10 +713,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsDeleteArtifactResponse res = new org.openapis.openapi.models.operations.ActionsDeleteArtifactResponse() {{
+        org.openapis.openapi.models.operations.ActionsDeleteArtifactResponse res = new org.openapis.openapi.models.operations.ActionsDeleteArtifactResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -771,10 +745,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsDeleteOrgSecretResponse res = new org.openapis.openapi.models.operations.ActionsDeleteOrgSecretResponse() {{
+        org.openapis.openapi.models.operations.ActionsDeleteOrgSecretResponse res = new org.openapis.openapi.models.operations.ActionsDeleteOrgSecretResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -805,10 +777,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsDeleteRepoSecretResponse res = new org.openapis.openapi.models.operations.ActionsDeleteRepoSecretResponse() {{
+        org.openapis.openapi.models.operations.ActionsDeleteRepoSecretResponse res = new org.openapis.openapi.models.operations.ActionsDeleteRepoSecretResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -841,10 +811,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerFromOrgResponse res = new org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerFromOrgResponse() {{
+        org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerFromOrgResponse res = new org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerFromOrgResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -878,10 +846,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerFromRepoResponse res = new org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerFromRepoResponse() {{
+        org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerFromRepoResponse res = new org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerFromRepoResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -913,10 +879,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerGroupFromOrgResponse res = new org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerGroupFromOrgResponse() {{
+        org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerGroupFromOrgResponse res = new org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerGroupFromOrgResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -949,10 +913,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsDeleteWorkflowRunResponse res = new org.openapis.openapi.models.operations.ActionsDeleteWorkflowRunResponse() {{
+        org.openapis.openapi.models.operations.ActionsDeleteWorkflowRunResponse res = new org.openapis.openapi.models.operations.ActionsDeleteWorkflowRunResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -983,10 +945,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsDeleteWorkflowRunLogsResponse res = new org.openapis.openapi.models.operations.ActionsDeleteWorkflowRunLogsResponse() {{
+        org.openapis.openapi.models.operations.ActionsDeleteWorkflowRunLogsResponse res = new org.openapis.openapi.models.operations.ActionsDeleteWorkflowRunLogsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1020,10 +980,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsDownloadArtifactResponse res = new org.openapis.openapi.models.operations.ActionsDownloadArtifactResponse() {{
+        org.openapis.openapi.models.operations.ActionsDownloadArtifactResponse res = new org.openapis.openapi.models.operations.ActionsDownloadArtifactResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 302) {
@@ -1059,10 +1017,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsDownloadJobLogsForWorkflowRunResponse res = new org.openapis.openapi.models.operations.ActionsDownloadJobLogsForWorkflowRunResponse() {{
+        org.openapis.openapi.models.operations.ActionsDownloadJobLogsForWorkflowRunResponse res = new org.openapis.openapi.models.operations.ActionsDownloadJobLogsForWorkflowRunResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 302) {
@@ -1098,10 +1054,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsDownloadWorkflowRunLogsResponse res = new org.openapis.openapi.models.operations.ActionsDownloadWorkflowRunLogsResponse() {{
+        org.openapis.openapi.models.operations.ActionsDownloadWorkflowRunLogsResponse res = new org.openapis.openapi.models.operations.ActionsDownloadWorkflowRunLogsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 302) {
@@ -1134,11 +1088,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsGetArtifactResponse res = new org.openapis.openapi.models.operations.ActionsGetArtifactResponse() {{
+        org.openapis.openapi.models.operations.ActionsGetArtifactResponse res = new org.openapis.openapi.models.operations.ActionsGetArtifactResponse(contentType, httpRes.statusCode()) {{
             artifact = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1174,11 +1126,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsGetJobForWorkflowRunResponse res = new org.openapis.openapi.models.operations.ActionsGetJobForWorkflowRunResponse() {{
+        org.openapis.openapi.models.operations.ActionsGetJobForWorkflowRunResponse res = new org.openapis.openapi.models.operations.ActionsGetJobForWorkflowRunResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1214,11 +1164,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsGetOrgPublicKeyResponse res = new org.openapis.openapi.models.operations.ActionsGetOrgPublicKeyResponse() {{
+        org.openapis.openapi.models.operations.ActionsGetOrgPublicKeyResponse res = new org.openapis.openapi.models.operations.ActionsGetOrgPublicKeyResponse(contentType, httpRes.statusCode()) {{
             actionsPublicKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1254,11 +1202,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsGetOrgSecretResponse res = new org.openapis.openapi.models.operations.ActionsGetOrgSecretResponse() {{
+        org.openapis.openapi.models.operations.ActionsGetOrgSecretResponse res = new org.openapis.openapi.models.operations.ActionsGetOrgSecretResponse(contentType, httpRes.statusCode()) {{
             organizationActionsSecret = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1294,11 +1240,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsGetRepoPublicKeyResponse res = new org.openapis.openapi.models.operations.ActionsGetRepoPublicKeyResponse() {{
+        org.openapis.openapi.models.operations.ActionsGetRepoPublicKeyResponse res = new org.openapis.openapi.models.operations.ActionsGetRepoPublicKeyResponse(contentType, httpRes.statusCode()) {{
             actionsPublicKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1334,11 +1278,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsGetRepoSecretResponse res = new org.openapis.openapi.models.operations.ActionsGetRepoSecretResponse() {{
+        org.openapis.openapi.models.operations.ActionsGetRepoSecretResponse res = new org.openapis.openapi.models.operations.ActionsGetRepoSecretResponse(contentType, httpRes.statusCode()) {{
             actionsSecret = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1376,11 +1318,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerForOrgResponse res = new org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerForOrgResponse() {{
+        org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerForOrgResponse res = new org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerForOrgResponse(contentType, httpRes.statusCode()) {{
             runnerNoLabels = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1419,11 +1359,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerForRepoResponse res = new org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerForRepoResponse() {{
+        org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerForRepoResponse res = new org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerForRepoResponse(contentType, httpRes.statusCode()) {{
             runnerNoLabels = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1460,11 +1398,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerGroupForOrgResponse res = new org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerGroupForOrgResponse() {{
+        org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerGroupForOrgResponse res = new org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerGroupForOrgResponse(contentType, httpRes.statusCode()) {{
             runnerGroupsOrg = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1500,11 +1436,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsGetWorkflowResponse res = new org.openapis.openapi.models.operations.ActionsGetWorkflowResponse() {{
+        org.openapis.openapi.models.operations.ActionsGetWorkflowResponse res = new org.openapis.openapi.models.operations.ActionsGetWorkflowResponse(contentType, httpRes.statusCode()) {{
             workflow = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1546,11 +1480,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsGetWorkflowRunResponse res = new org.openapis.openapi.models.operations.ActionsGetWorkflowRunResponse() {{
+        org.openapis.openapi.models.operations.ActionsGetWorkflowRunResponse res = new org.openapis.openapi.models.operations.ActionsGetWorkflowRunResponse(contentType, httpRes.statusCode()) {{
             workflowRun = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1592,11 +1524,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsListArtifactsForRepoResponse res = new org.openapis.openapi.models.operations.ActionsListArtifactsForRepoResponse() {{
+        org.openapis.openapi.models.operations.ActionsListArtifactsForRepoResponse res = new org.openapis.openapi.models.operations.ActionsListArtifactsForRepoResponse(contentType, httpRes.statusCode()) {{
             actionsListArtifactsForRepo200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1640,11 +1570,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsListJobsForWorkflowRunResponse res = new org.openapis.openapi.models.operations.ActionsListJobsForWorkflowRunResponse() {{
+        org.openapis.openapi.models.operations.ActionsListJobsForWorkflowRunResponse res = new org.openapis.openapi.models.operations.ActionsListJobsForWorkflowRunResponse(contentType, httpRes.statusCode()) {{
             actionsListJobsForWorkflowRun200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1688,11 +1616,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsListOrgSecretsResponse res = new org.openapis.openapi.models.operations.ActionsListOrgSecretsResponse() {{
+        org.openapis.openapi.models.operations.ActionsListOrgSecretsResponse res = new org.openapis.openapi.models.operations.ActionsListOrgSecretsResponse(contentType, httpRes.statusCode()) {{
             actionsListOrgSecrets200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1740,11 +1666,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsListRepoAccessToSelfHostedRunnerGroupInOrgResponse res = new org.openapis.openapi.models.operations.ActionsListRepoAccessToSelfHostedRunnerGroupInOrgResponse() {{
+        org.openapis.openapi.models.operations.ActionsListRepoAccessToSelfHostedRunnerGroupInOrgResponse res = new org.openapis.openapi.models.operations.ActionsListRepoAccessToSelfHostedRunnerGroupInOrgResponse(contentType, httpRes.statusCode()) {{
             actionsListRepoAccessToSelfHostedRunnerGroupInOrg200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1786,11 +1710,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsListRepoSecretsResponse res = new org.openapis.openapi.models.operations.ActionsListRepoSecretsResponse() {{
+        org.openapis.openapi.models.operations.ActionsListRepoSecretsResponse res = new org.openapis.openapi.models.operations.ActionsListRepoSecretsResponse(contentType, httpRes.statusCode()) {{
             actionsListRepoSecrets200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1834,11 +1756,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsListRepoWorkflowsResponse res = new org.openapis.openapi.models.operations.ActionsListRepoWorkflowsResponse() {{
+        org.openapis.openapi.models.operations.ActionsListRepoWorkflowsResponse res = new org.openapis.openapi.models.operations.ActionsListRepoWorkflowsResponse(contentType, httpRes.statusCode()) {{
             actionsListRepoWorkflows200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1878,11 +1798,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsListRunnerApplicationsForOrgResponse res = new org.openapis.openapi.models.operations.ActionsListRunnerApplicationsForOrgResponse() {{
+        org.openapis.openapi.models.operations.ActionsListRunnerApplicationsForOrgResponse res = new org.openapis.openapi.models.operations.ActionsListRunnerApplicationsForOrgResponse(contentType, httpRes.statusCode()) {{
             runnerApplications = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1920,11 +1838,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsListRunnerApplicationsForRepoResponse res = new org.openapis.openapi.models.operations.ActionsListRunnerApplicationsForRepoResponse() {{
+        org.openapis.openapi.models.operations.ActionsListRunnerApplicationsForRepoResponse res = new org.openapis.openapi.models.operations.ActionsListRunnerApplicationsForRepoResponse(contentType, httpRes.statusCode()) {{
             runnerApplications = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1966,11 +1882,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsListSelectedReposForOrgSecretResponse res = new org.openapis.openapi.models.operations.ActionsListSelectedReposForOrgSecretResponse() {{
+        org.openapis.openapi.models.operations.ActionsListSelectedReposForOrgSecretResponse res = new org.openapis.openapi.models.operations.ActionsListSelectedReposForOrgSecretResponse(contentType, httpRes.statusCode()) {{
             actionsListSelectedReposForOrgSecret200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2013,11 +1927,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsListSelfHostedRunnerGroupsForOrgResponse res = new org.openapis.openapi.models.operations.ActionsListSelfHostedRunnerGroupsForOrgResponse() {{
+        org.openapis.openapi.models.operations.ActionsListSelfHostedRunnerGroupsForOrgResponse res = new org.openapis.openapi.models.operations.ActionsListSelfHostedRunnerGroupsForOrgResponse(contentType, httpRes.statusCode()) {{
             actionsListSelfHostedRunnerGroupsForOrg200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2061,11 +1973,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersForOrgResponse res = new org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersForOrgResponse() {{
+        org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersForOrgResponse res = new org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersForOrgResponse(contentType, httpRes.statusCode()) {{
             actionsListSelfHostedRunnersForOrg200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2109,11 +2019,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersForRepoResponse res = new org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersForRepoResponse() {{
+        org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersForRepoResponse res = new org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersForRepoResponse(contentType, httpRes.statusCode()) {{
             actionsListSelfHostedRunnersForRepo200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2158,11 +2066,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersInGroupForOrgResponse res = new org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersInGroupForOrgResponse() {{
+        org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersInGroupForOrgResponse res = new org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersInGroupForOrgResponse(contentType, httpRes.statusCode()) {{
             actionsListSelfHostedRunnersInGroupForOrg200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2206,11 +2112,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsListWorkflowRunArtifactsResponse res = new org.openapis.openapi.models.operations.ActionsListWorkflowRunArtifactsResponse() {{
+        org.openapis.openapi.models.operations.ActionsListWorkflowRunArtifactsResponse res = new org.openapis.openapi.models.operations.ActionsListWorkflowRunArtifactsResponse(contentType, httpRes.statusCode()) {{
             actionsListWorkflowRunArtifacts200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2256,11 +2160,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsListWorkflowRunsResponse res = new org.openapis.openapi.models.operations.ActionsListWorkflowRunsResponse() {{
+        org.openapis.openapi.models.operations.ActionsListWorkflowRunsResponse res = new org.openapis.openapi.models.operations.ActionsListWorkflowRunsResponse(contentType, httpRes.statusCode()) {{
             actionsListWorkflowRuns200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2306,11 +2208,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsListWorkflowRunsForRepoResponse res = new org.openapis.openapi.models.operations.ActionsListWorkflowRunsForRepoResponse() {{
+        org.openapis.openapi.models.operations.ActionsListWorkflowRunsForRepoResponse res = new org.openapis.openapi.models.operations.ActionsListWorkflowRunsForRepoResponse(contentType, httpRes.statusCode()) {{
             actionsListWorkflowRunsForRepo200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2333,7 +2233,9 @@ public class Actions {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ActionsReRunWorkflowResponse actionsReRunWorkflow(org.openapis.openapi.models.operations.ActionsReRunWorkflowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsReRunWorkflowRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/rerun", request, null);
@@ -2348,11 +2250,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsReRunWorkflowResponse res = new org.openapis.openapi.models.operations.ActionsReRunWorkflowResponse() {{
+        org.openapis.openapi.models.operations.ActionsReRunWorkflowResponse res = new org.openapis.openapi.models.operations.ActionsReRunWorkflowResponse(contentType, httpRes.statusCode()) {{
             actionsReRunWorkflow201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -2389,10 +2289,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgResponse res = new org.openapis.openapi.models.operations.ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgResponse() {{
+        org.openapis.openapi.models.operations.ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgResponse res = new org.openapis.openapi.models.operations.ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -2423,10 +2321,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsRemoveSelectedRepoFromOrgSecretResponse res = new org.openapis.openapi.models.operations.ActionsRemoveSelectedRepoFromOrgSecretResponse() {{
+        org.openapis.openapi.models.operations.ActionsRemoveSelectedRepoFromOrgSecretResponse res = new org.openapis.openapi.models.operations.ActionsRemoveSelectedRepoFromOrgSecretResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 409) {
@@ -2458,10 +2354,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsRemoveSelfHostedRunnerFromGroupForOrgResponse res = new org.openapis.openapi.models.operations.ActionsRemoveSelfHostedRunnerFromGroupForOrgResponse() {{
+        org.openapis.openapi.models.operations.ActionsRemoveSelfHostedRunnerFromGroupForOrgResponse res = new org.openapis.openapi.models.operations.ActionsRemoveSelfHostedRunnerFromGroupForOrgResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -2498,10 +2392,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgResponse res = new org.openapis.openapi.models.operations.ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgResponse() {{
+        org.openapis.openapi.models.operations.ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgResponse res = new org.openapis.openapi.models.operations.ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -2537,10 +2429,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsSetSelectedReposForOrgSecretResponse res = new org.openapis.openapi.models.operations.ActionsSetSelectedReposForOrgSecretResponse() {{
+        org.openapis.openapi.models.operations.ActionsSetSelectedReposForOrgSecretResponse res = new org.openapis.openapi.models.operations.ActionsSetSelectedReposForOrgSecretResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -2577,10 +2467,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsSetSelfHostedRunnersInGroupForOrgResponse res = new org.openapis.openapi.models.operations.ActionsSetSelfHostedRunnersInGroupForOrgResponse() {{
+        org.openapis.openapi.models.operations.ActionsSetSelfHostedRunnersInGroupForOrgResponse res = new org.openapis.openapi.models.operations.ActionsSetSelfHostedRunnersInGroupForOrgResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -2617,11 +2505,9 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsUpdateSelfHostedRunnerGroupForOrgResponse res = new org.openapis.openapi.models.operations.ActionsUpdateSelfHostedRunnerGroupForOrgResponse() {{
+        org.openapis.openapi.models.operations.ActionsUpdateSelfHostedRunnerGroupForOrgResponse res = new org.openapis.openapi.models.operations.ActionsUpdateSelfHostedRunnerGroupForOrgResponse(contentType, httpRes.statusCode()) {{
             runnerGroupsOrg = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

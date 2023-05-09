@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DataSubjectRightExportRequestResponse {
     
     public String contentType;
+
     public DataSubjectRightExportRequestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DataSubjectRightExportRequestResponse {
      */
     
     public DataSubjectRightExportRequest202ApplicationJSON dataSubjectRightExportRequest202ApplicationJSONObject;
+
     public DataSubjectRightExportRequestResponse withDataSubjectRightExportRequest202ApplicationJSONObject(DataSubjectRightExportRequest202ApplicationJSON dataSubjectRightExportRequest202ApplicationJSONObject) {
         this.dataSubjectRightExportRequest202ApplicationJSONObject = dataSubjectRightExportRequest202ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class DataSubjectRightExportRequestResponse {
      */
     
     public DataSubjectRightExportRequestDefaultApplicationJSON dataSubjectRightExportRequestDefaultApplicationJSONObject;
+
     public DataSubjectRightExportRequestResponse withDataSubjectRightExportRequestDefaultApplicationJSONObject(DataSubjectRightExportRequestDefaultApplicationJSON dataSubjectRightExportRequestDefaultApplicationJSONObject) {
         this.dataSubjectRightExportRequestDefaultApplicationJSONObject = dataSubjectRightExportRequestDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class DataSubjectRightExportRequestResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public DataSubjectRightExportRequestResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -43,6 +48,7 @@ public class DataSubjectRightExportRequestResponse {
     
     
     public Integer statusCode;
+
     public DataSubjectRightExportRequestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class DataSubjectRightExportRequestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DataSubjectRightExportRequestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DataSubjectRightExportRequestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

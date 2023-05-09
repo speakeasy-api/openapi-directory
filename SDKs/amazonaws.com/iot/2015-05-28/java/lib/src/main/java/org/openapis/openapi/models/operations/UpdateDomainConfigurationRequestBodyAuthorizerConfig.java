@@ -15,6 +15,7 @@ public class UpdateDomainConfigurationRequestBodyAuthorizerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowAuthorizerOverride")
     public Boolean allowAuthorizerOverride;
+
     public UpdateDomainConfigurationRequestBodyAuthorizerConfig withAllowAuthorizerOverride(Boolean allowAuthorizerOverride) {
         this.allowAuthorizerOverride = allowAuthorizerOverride;
         return this;
@@ -23,9 +24,11 @@ public class UpdateDomainConfigurationRequestBodyAuthorizerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultAuthorizerName")
     public String defaultAuthorizerName;
+
     public UpdateDomainConfigurationRequestBodyAuthorizerConfig withDefaultAuthorizerName(String defaultAuthorizerName) {
         this.defaultAuthorizerName = defaultAuthorizerName;
         return this;
     }
     
+    public UpdateDomainConfigurationRequestBodyAuthorizerConfig(){}
 }

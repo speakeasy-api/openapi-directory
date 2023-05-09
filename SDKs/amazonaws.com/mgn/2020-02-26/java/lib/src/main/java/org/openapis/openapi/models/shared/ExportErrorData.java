@@ -15,9 +15,11 @@ public class ExportErrorData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawError")
     public String rawError;
+
     public ExportErrorData withRawError(String rawError) {
         this.rawError = rawError;
         return this;
     }
     
+    public ExportErrorData(){}
 }

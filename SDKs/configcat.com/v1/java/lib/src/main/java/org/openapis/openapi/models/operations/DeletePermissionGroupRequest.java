@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePermissionGroupRequest {
@@ -12,9 +13,13 @@ public class DeletePermissionGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=permissionGroupId")
     public Long permissionGroupId;
+
     public DeletePermissionGroupRequest withPermissionGroupId(Long permissionGroupId) {
         this.permissionGroupId = permissionGroupId;
         return this;
     }
     
+    public DeletePermissionGroupRequest(@JsonProperty("permissionGroupId") Long permissionGroupId) {
+        this.permissionGroupId = permissionGroupId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInventoryResponse {
     
     public String contentType;
+
     public GetInventoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetInventoryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetInventoryResult getInventoryResult;
+
     public GetInventoryResponse withGetInventoryResult(org.openapis.openapi.models.shared.GetInventoryResult getInventoryResult) {
         this.getInventoryResult = getInventoryResult;
         return this;
@@ -29,6 +32,7 @@ public class GetInventoryResponse {
      */
     
     public Object internalServerError;
+
     public GetInventoryResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class GetInventoryResponse {
      */
     
     public Object invalidAggregatorException;
+
     public GetInventoryResponse withInvalidAggregatorException(Object invalidAggregatorException) {
         this.invalidAggregatorException = invalidAggregatorException;
         return this;
@@ -49,6 +54,7 @@ public class GetInventoryResponse {
      */
     
     public Object invalidFilter;
+
     public GetInventoryResponse withInvalidFilter(Object invalidFilter) {
         this.invalidFilter = invalidFilter;
         return this;
@@ -59,6 +65,7 @@ public class GetInventoryResponse {
      */
     
     public Object invalidInventoryGroupException;
+
     public GetInventoryResponse withInvalidInventoryGroupException(Object invalidInventoryGroupException) {
         this.invalidInventoryGroupException = invalidInventoryGroupException;
         return this;
@@ -69,6 +76,7 @@ public class GetInventoryResponse {
      */
     
     public Object invalidNextToken;
+
     public GetInventoryResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -79,6 +87,7 @@ public class GetInventoryResponse {
      */
     
     public Object invalidResultAttributeException;
+
     public GetInventoryResponse withInvalidResultAttributeException(Object invalidResultAttributeException) {
         this.invalidResultAttributeException = invalidResultAttributeException;
         return this;
@@ -89,6 +98,7 @@ public class GetInventoryResponse {
      */
     
     public Object invalidTypeNameException;
+
     public GetInventoryResponse withInvalidTypeNameException(Object invalidTypeNameException) {
         this.invalidTypeNameException = invalidTypeNameException;
         return this;
@@ -96,6 +106,7 @@ public class GetInventoryResponse {
     
     
     public Integer statusCode;
+
     public GetInventoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class GetInventoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInventoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetInventoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

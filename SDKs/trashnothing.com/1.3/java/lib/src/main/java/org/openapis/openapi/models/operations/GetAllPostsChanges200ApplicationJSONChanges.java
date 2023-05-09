@@ -22,6 +22,7 @@ public class GetAllPostsChanges200ApplicationJSONChanges {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public GetAllPostsChanges200ApplicationJSONChanges withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -30,6 +31,7 @@ public class GetAllPostsChanges200ApplicationJSONChanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("post_id")
     public String postId;
+
     public GetAllPostsChanges200ApplicationJSONChanges withPostId(String postId) {
         this.postId = postId;
         return this;
@@ -42,9 +44,11 @@ public class GetAllPostsChanges200ApplicationJSONChanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GetAllPostsChanges200ApplicationJSONChanges withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetAllPostsChanges200ApplicationJSONChanges(){}
 }

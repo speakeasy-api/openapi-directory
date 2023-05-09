@@ -15,6 +15,7 @@ public class MonotonicValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Monotonicity")
     public MonotonicityEnum monotonicity;
+
     public MonotonicValues withMonotonicity(MonotonicityEnum monotonicity) {
         this.monotonicity = monotonicity;
         return this;
@@ -22,9 +23,13 @@ public class MonotonicValues {
     
     @JsonProperty("Status")
     public StatisticalIssueStatusEnum status;
+
     public MonotonicValues withStatus(StatisticalIssueStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public MonotonicValues(@JsonProperty("Status") StatisticalIssueStatusEnum status) {
+        this.status = status;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteKnowledgeBaseResponse {
@@ -12,6 +13,7 @@ public class DeleteKnowledgeBaseResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteKnowledgeBaseResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteKnowledgeBaseResponse {
      */
     
     public Object conflictException;
+
     public DeleteKnowledgeBaseResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteKnowledgeBaseResponse {
     
     
     public String contentType;
+
     public DeleteKnowledgeBaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteKnowledgeBaseResponse {
      */
     
     public java.util.Map<String, Object> deleteKnowledgeBaseResponse;
+
     public DeleteKnowledgeBaseResponse withDeleteKnowledgeBaseResponse(java.util.Map<String, Object> deleteKnowledgeBaseResponse) {
         this.deleteKnowledgeBaseResponse = deleteKnowledgeBaseResponse;
         return this;
@@ -46,6 +51,7 @@ public class DeleteKnowledgeBaseResponse {
     
     
     public Integer statusCode;
+
     public DeleteKnowledgeBaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteKnowledgeBaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteKnowledgeBaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteKnowledgeBaseResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteKnowledgeBaseResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteKnowledgeBaseResponse {
      */
     
     public Object validationException;
+
     public DeleteKnowledgeBaseResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteKnowledgeBaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

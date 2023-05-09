@@ -15,6 +15,7 @@ public class ExclusionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ExclusionRule withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class ExclusionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device")
     public String device;
+
     public ExclusionRule withDevice(String device) {
         this.device = device;
         return this;
@@ -37,6 +39,7 @@ public class ExclusionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludeAirplay")
     public Boolean excludeAirplay;
+
     public ExclusionRule withExcludeAirplay(Boolean excludeAirplay) {
         this.excludeAirplay = excludeAirplay;
         return this;
@@ -48,6 +51,7 @@ public class ExclusionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludeChromecast")
     public Boolean excludeChromecast;
+
     public ExclusionRule withExcludeChromecast(Boolean excludeChromecast) {
         this.excludeChromecast = excludeChromecast;
         return this;
@@ -56,6 +60,7 @@ public class ExclusionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludeDelivery")
     public ExclusionRuleExcludeDeliveryEnum excludeDelivery;
+
     public ExclusionRule withExcludeDelivery(ExclusionRuleExcludeDeliveryEnum excludeDelivery) {
         this.excludeDelivery = excludeDelivery;
         return this;
@@ -64,9 +69,11 @@ public class ExclusionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludeMinResolution")
     public ExclusionRuleExcludeMinResolutionEnum excludeMinResolution;
+
     public ExclusionRule withExcludeMinResolution(ExclusionRuleExcludeMinResolutionEnum excludeMinResolution) {
         this.excludeMinResolution = excludeMinResolution;
         return this;
     }
     
+    public ExclusionRule(){}
 }

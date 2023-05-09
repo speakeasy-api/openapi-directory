@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateConnectClientAddInResponse {
@@ -12,6 +13,7 @@ public class CreateConnectClientAddInResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateConnectClientAddInResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateConnectClientAddInResponse {
     
     
     public String contentType;
+
     public CreateConnectClientAddInResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateConnectClientAddInResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateConnectClientAddInResult createConnectClientAddInResult;
+
     public CreateConnectClientAddInResponse withCreateConnectClientAddInResult(org.openapis.openapi.models.shared.CreateConnectClientAddInResult createConnectClientAddInResult) {
         this.createConnectClientAddInResult = createConnectClientAddInResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateConnectClientAddInResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public CreateConnectClientAddInResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -49,6 +54,7 @@ public class CreateConnectClientAddInResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateConnectClientAddInResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -59,6 +65,7 @@ public class CreateConnectClientAddInResponse {
      */
     
     public Object resourceCreationFailedException;
+
     public CreateConnectClientAddInResponse withResourceCreationFailedException(Object resourceCreationFailedException) {
         this.resourceCreationFailedException = resourceCreationFailedException;
         return this;
@@ -66,6 +73,7 @@ public class CreateConnectClientAddInResponse {
     
     
     public Integer statusCode;
+
     public CreateConnectClientAddInResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateConnectClientAddInResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateConnectClientAddInResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateConnectClientAddInResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateConnectClientAddInResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CreateConnectClientAddInResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

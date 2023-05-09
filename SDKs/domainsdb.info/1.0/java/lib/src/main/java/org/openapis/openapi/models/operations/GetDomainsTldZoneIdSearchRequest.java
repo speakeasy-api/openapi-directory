@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDomainsTldZoneIdSearchRequest {
@@ -12,6 +13,7 @@ public class GetDomainsTldZoneIdSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=A")
     public String a;
+
     public GetDomainsTldZoneIdSearchRequest withA(String a) {
         this.a = a;
         return this;
@@ -22,6 +24,7 @@ public class GetDomainsTldZoneIdSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CNAME")
     public String cname;
+
     public GetDomainsTldZoneIdSearchRequest withCname(String cname) {
         this.cname = cname;
         return this;
@@ -32,6 +35,7 @@ public class GetDomainsTldZoneIdSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MX")
     public String mx;
+
     public GetDomainsTldZoneIdSearchRequest withMx(String mx) {
         this.mx = mx;
         return this;
@@ -42,6 +46,7 @@ public class GetDomainsTldZoneIdSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NS")
     public String ns;
+
     public GetDomainsTldZoneIdSearchRequest withNs(String ns) {
         this.ns = ns;
         return this;
@@ -52,6 +57,7 @@ public class GetDomainsTldZoneIdSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TXT")
     public String txt;
+
     public GetDomainsTldZoneIdSearchRequest withTxt(String txt) {
         this.txt = txt;
         return this;
@@ -62,6 +68,7 @@ public class GetDomainsTldZoneIdSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetDomainsTldZoneIdSearchRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -72,6 +79,7 @@ public class GetDomainsTldZoneIdSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public GetDomainsTldZoneIdSearchRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -82,6 +90,7 @@ public class GetDomainsTldZoneIdSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public String date;
+
     public GetDomainsTldZoneIdSearchRequest withDate(String date) {
         this.date = date;
         return this;
@@ -92,6 +101,7 @@ public class GetDomainsTldZoneIdSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
     public String domain;
+
     public GetDomainsTldZoneIdSearchRequest withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -102,6 +112,7 @@ public class GetDomainsTldZoneIdSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isDead")
     public Boolean isDead;
+
     public GetDomainsTldZoneIdSearchRequest withIsDead(Boolean isDead) {
         this.isDead = isDead;
         return this;
@@ -112,6 +123,7 @@ public class GetDomainsTldZoneIdSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetDomainsTldZoneIdSearchRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -122,6 +134,7 @@ public class GetDomainsTldZoneIdSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetDomainsTldZoneIdSearchRequest withPage(String page) {
         this.page = page;
         return this;
@@ -129,9 +142,13 @@ public class GetDomainsTldZoneIdSearchRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone_id")
     public String zoneId;
+
     public GetDomainsTldZoneIdSearchRequest withZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
     }
     
+    public GetDomainsTldZoneIdSearchRequest(@JsonProperty("zone_id") String zoneId) {
+        this.zoneId = zoneId;
+  }
 }

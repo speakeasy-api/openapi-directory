@@ -12,6 +12,7 @@ public class UpdateMock200ApplicationJSONMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection")
     public String collection;
+
     public UpdateMock200ApplicationJSONMock withCollection(String collection) {
         this.collection = collection;
         return this;
@@ -20,6 +21,7 @@ public class UpdateMock200ApplicationJSONMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public UpdateMock200ApplicationJSONMockConfig config;
+
     public UpdateMock200ApplicationJSONMock withConfig(UpdateMock200ApplicationJSONMockConfig config) {
         this.config = config;
         return this;
@@ -28,6 +30,7 @@ public class UpdateMock200ApplicationJSONMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public String environment;
+
     public UpdateMock200ApplicationJSONMock withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -36,6 +39,7 @@ public class UpdateMock200ApplicationJSONMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UpdateMock200ApplicationJSONMock withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +48,7 @@ public class UpdateMock200ApplicationJSONMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mockUrl")
     public String mockUrl;
+
     public UpdateMock200ApplicationJSONMock withMockUrl(String mockUrl) {
         this.mockUrl = mockUrl;
         return this;
@@ -52,6 +57,7 @@ public class UpdateMock200ApplicationJSONMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateMock200ApplicationJSONMock withName(String name) {
         this.name = name;
         return this;
@@ -60,6 +66,7 @@ public class UpdateMock200ApplicationJSONMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public UpdateMock200ApplicationJSONMock withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -68,9 +75,11 @@ public class UpdateMock200ApplicationJSONMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public UpdateMock200ApplicationJSONMock withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public UpdateMock200ApplicationJSONMock(){}
 }

@@ -15,6 +15,7 @@ public class SmtpDomain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public SmtpDomain withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -26,9 +27,11 @@ public class SmtpDomain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostname")
     public String hostname;
+
     public SmtpDomain withHostname(String hostname) {
         this.hostname = hostname;
         return this;
     }
     
+    public SmtpDomain(){}
 }

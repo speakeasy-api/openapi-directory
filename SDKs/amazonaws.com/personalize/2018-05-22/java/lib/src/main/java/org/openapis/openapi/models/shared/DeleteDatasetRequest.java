@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteDatasetRequest {
     @JsonProperty("datasetArn")
     public String datasetArn;
+
     public DeleteDatasetRequest withDatasetArn(String datasetArn) {
         this.datasetArn = datasetArn;
         return this;
     }
     
+    public DeleteDatasetRequest(@JsonProperty("datasetArn") String datasetArn) {
+        this.datasetArn = datasetArn;
+  }
 }

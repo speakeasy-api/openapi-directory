@@ -15,6 +15,7 @@ public class EksPodPropertiesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containers")
     public EksContainerDetail[] containers;
+
     public EksPodPropertiesDetail withContainers(EksContainerDetail[] containers) {
         this.containers = containers;
         return this;
@@ -23,6 +24,7 @@ public class EksPodPropertiesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsPolicy")
     public String dnsPolicy;
+
     public EksPodPropertiesDetail withDnsPolicy(String dnsPolicy) {
         this.dnsPolicy = dnsPolicy;
         return this;
@@ -31,14 +33,28 @@ public class EksPodPropertiesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostNetwork")
     public Boolean hostNetwork;
+
     public EksPodPropertiesDetail withHostNetwork(Boolean hostNetwork) {
         this.hostNetwork = hostNetwork;
+        return this;
+    }
+    
+    /**
+     * Describes and uniquely identifies Kubernetes resources. For example, the compute environment that a pod runs in or the &lt;code&gt;jobID&lt;/code&gt; for a job running in the pod. For more information, see &lt;a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/"&gt;Understanding Kubernetes Objects&lt;/a&gt; in the &lt;i&gt;Kubernetes documentation&lt;/i&gt;.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    public EksMetadata metadata;
+
+    public EksPodPropertiesDetail withMetadata(EksMetadata metadata) {
+        this.metadata = metadata;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeName")
     public String nodeName;
+
     public EksPodPropertiesDetail withNodeName(String nodeName) {
         this.nodeName = nodeName;
         return this;
@@ -47,6 +63,7 @@ public class EksPodPropertiesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("podName")
     public String podName;
+
     public EksPodPropertiesDetail withPodName(String podName) {
         this.podName = podName;
         return this;
@@ -55,6 +72,7 @@ public class EksPodPropertiesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountName")
     public String serviceAccountName;
+
     public EksPodPropertiesDetail withServiceAccountName(String serviceAccountName) {
         this.serviceAccountName = serviceAccountName;
         return this;
@@ -63,9 +81,11 @@ public class EksPodPropertiesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumes")
     public EksVolume[] volumes;
+
     public EksPodPropertiesDetail withVolumes(EksVolume[] volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public EksPodPropertiesDetail(){}
 }

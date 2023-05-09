@@ -15,6 +15,7 @@ public class UsersInstitutionsListInstitutionAttributes {
      */
     
     public String authUrl;
+
     public UsersInstitutionsListInstitutionAttributes withAuthUrl(String authUrl) {
         this.authUrl = authUrl;
         return this;
@@ -25,6 +26,7 @@ public class UsersInstitutionsListInstitutionAttributes {
      */
     
     public String description;
+
     public UsersInstitutionsListInstitutionAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class UsersInstitutionsListInstitutionAttributes {
      */
     
     public String logoPath;
+
     public UsersInstitutionsListInstitutionAttributes withLogoPath(String logoPath) {
         this.logoPath = logoPath;
         return this;
@@ -45,9 +48,11 @@ public class UsersInstitutionsListInstitutionAttributes {
      */
     
     public String name;
+
     public UsersInstitutionsListInstitutionAttributes withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UsersInstitutionsListInstitutionAttributes(){}
 }

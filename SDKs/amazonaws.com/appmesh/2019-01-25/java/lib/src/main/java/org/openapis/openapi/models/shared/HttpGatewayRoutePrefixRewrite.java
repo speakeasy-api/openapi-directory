@@ -15,6 +15,7 @@ public class HttpGatewayRoutePrefixRewrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultPrefix")
     public DefaultGatewayRouteRewriteEnum defaultPrefix;
+
     public HttpGatewayRoutePrefixRewrite withDefaultPrefix(DefaultGatewayRouteRewriteEnum defaultPrefix) {
         this.defaultPrefix = defaultPrefix;
         return this;
@@ -23,9 +24,11 @@ public class HttpGatewayRoutePrefixRewrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public HttpGatewayRoutePrefixRewrite withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public HttpGatewayRoutePrefixRewrite(){}
 }

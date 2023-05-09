@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFacetAttributesResponse {
@@ -12,6 +13,7 @@ public class ListFacetAttributesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListFacetAttributesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListFacetAttributesResponse {
     
     
     public String contentType;
+
     public ListFacetAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListFacetAttributesResponse {
      */
     
     public Object facetNotFoundException;
+
     public ListFacetAttributesResponse withFacetNotFoundException(Object facetNotFoundException) {
         this.facetNotFoundException = facetNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class ListFacetAttributesResponse {
      */
     
     public Object internalServiceException;
+
     public ListFacetAttributesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class ListFacetAttributesResponse {
      */
     
     public Object invalidArnException;
+
     public ListFacetAttributesResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -59,6 +65,7 @@ public class ListFacetAttributesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListFacetAttributesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -69,6 +76,7 @@ public class ListFacetAttributesResponse {
      */
     
     public Object limitExceededException;
+
     public ListFacetAttributesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class ListFacetAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFacetAttributesResponse listFacetAttributesResponse;
+
     public ListFacetAttributesResponse withListFacetAttributesResponse(org.openapis.openapi.models.shared.ListFacetAttributesResponse listFacetAttributesResponse) {
         this.listFacetAttributesResponse = listFacetAttributesResponse;
         return this;
@@ -86,6 +95,7 @@ public class ListFacetAttributesResponse {
     
     
     public Integer statusCode;
+
     public ListFacetAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ListFacetAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFacetAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class ListFacetAttributesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListFacetAttributesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class ListFacetAttributesResponse {
      */
     
     public Object retryableConflictException;
+
     public ListFacetAttributesResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -123,9 +136,14 @@ public class ListFacetAttributesResponse {
      */
     
     public Object validationException;
+
     public ListFacetAttributesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListFacetAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

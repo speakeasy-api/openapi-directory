@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGiftCardTransactionbyIDRequest {
@@ -12,6 +13,7 @@ public class GetGiftCardTransactionbyIDRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetGiftCardTransactionbyIDRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetGiftCardTransactionbyIDRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetGiftCardTransactionbyIDRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetGiftCardTransactionbyIDRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=giftCardID")
     public String giftCardID;
+
     public GetGiftCardTransactionbyIDRequest withGiftCardID(String giftCardID) {
         this.giftCardID = giftCardID;
         return this;
@@ -36,9 +40,16 @@ public class GetGiftCardTransactionbyIDRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionID")
     public String transactionID;
+
     public GetGiftCardTransactionbyIDRequest withTransactionID(String transactionID) {
         this.transactionID = transactionID;
         return this;
     }
     
+    public GetGiftCardTransactionbyIDRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("giftCardID") String giftCardID, @JsonProperty("transactionID") String transactionID) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.giftCardID = giftCardID;
+        this.transactionID = transactionID;
+  }
 }

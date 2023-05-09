@@ -15,6 +15,7 @@ public class DescribeParameterGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeParameterGroupsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeParameterGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterGroups")
     public ParameterGroup[] parameterGroups;
+
     public DescribeParameterGroupsResponse withParameterGroups(ParameterGroup[] parameterGroups) {
         this.parameterGroups = parameterGroups;
         return this;
     }
     
+    public DescribeParameterGroupsResponse(){}
 }

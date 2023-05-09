@@ -15,6 +15,7 @@ public class ResultStandardizedCoefficients {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coefficient")
     public Long coefficient;
+
     public ResultStandardizedCoefficients withCoefficient(Long coefficient) {
         this.coefficient = coefficient;
         return this;
@@ -26,9 +27,11 @@ public class ResultStandardizedCoefficients {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variable")
     public String variable;
+
     public ResultStandardizedCoefficients withVariable(String variable) {
         this.variable = variable;
         return this;
     }
     
+    public ResultStandardizedCoefficients(){}
 }

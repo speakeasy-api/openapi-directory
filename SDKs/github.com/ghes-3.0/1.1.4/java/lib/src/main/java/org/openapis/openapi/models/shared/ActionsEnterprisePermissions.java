@@ -18,6 +18,7 @@ public class ActionsEnterprisePermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed_actions")
     public AllowedActionsEnum allowedActions;
+
     public ActionsEnterprisePermissions withAllowedActions(AllowedActionsEnum allowedActions) {
         this.allowedActions = allowedActions;
         return this;
@@ -28,6 +29,7 @@ public class ActionsEnterprisePermissions {
      */
     @JsonProperty("enabled_organizations")
     public EnabledOrganizationsEnum enabledOrganizations;
+
     public ActionsEnterprisePermissions withEnabledOrganizations(EnabledOrganizationsEnum enabledOrganizations) {
         this.enabledOrganizations = enabledOrganizations;
         return this;
@@ -39,6 +41,7 @@ public class ActionsEnterprisePermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selected_actions_url")
     public String selectedActionsUrl;
+
     public ActionsEnterprisePermissions withSelectedActionsUrl(String selectedActionsUrl) {
         this.selectedActionsUrl = selectedActionsUrl;
         return this;
@@ -50,9 +53,13 @@ public class ActionsEnterprisePermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selected_organizations_url")
     public String selectedOrganizationsUrl;
+
     public ActionsEnterprisePermissions withSelectedOrganizationsUrl(String selectedOrganizationsUrl) {
         this.selectedOrganizationsUrl = selectedOrganizationsUrl;
         return this;
     }
     
+    public ActionsEnterprisePermissions(@JsonProperty("enabled_organizations") EnabledOrganizationsEnum enabledOrganizations) {
+        this.enabledOrganizations = enabledOrganizations;
+  }
 }

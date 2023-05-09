@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetFoodBrandedBarcodePhpSecurity;
 import org.openapis.openapi.models.operations.GetFoodBrandedBarcodePhpRequest;
 import org.openapis.openapi.models.operations.GetFoodBrandedBarcodePhpResponse;
+import org.openapis.openapi.models.operations.GetFoodBrandedBarcodePhpSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -14,19 +13,19 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetFoodBrandedBarcodePhpRequest req = new GetFoodBrandedBarcodePhpRequest() {{
-                code = "corrupti";
-            }}            
+            GetFoodBrandedBarcodePhpRequest req = new GetFoodBrandedBarcodePhpRequest("corrupti");            
 
-            GetFoodBrandedBarcodePhpResponse res = sdk.getFoodBrandedBarcodePhp(req, new GetFoodBrandedBarcodePhpSecurity() {{
+            GetFoodBrandedBarcodePhpResponse res = sdk.getFoodBrandedBarcodePhp(req, new GetFoodBrandedBarcodePhpSecurity("provident") {{
                 apiKeyAuth = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.brandedFoodObject.isPresent()) {
+            if (res.brandedFoodObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

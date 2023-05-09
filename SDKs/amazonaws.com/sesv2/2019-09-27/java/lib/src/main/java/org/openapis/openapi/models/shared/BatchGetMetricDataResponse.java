@@ -15,6 +15,7 @@ public class BatchGetMetricDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public MetricDataError[] errors;
+
     public BatchGetMetricDataResponse withErrors(MetricDataError[] errors) {
         this.errors = errors;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetMetricDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Results")
     public MetricDataResult[] results;
+
     public BatchGetMetricDataResponse withResults(MetricDataResult[] results) {
         this.results = results;
         return this;
     }
     
+    public BatchGetMetricDataResponse(){}
 }

@@ -12,6 +12,7 @@ public class GetDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentFormat")
     public DocumentFormatEnum documentFormat;
+
     public GetDocumentRequest withDocumentFormat(DocumentFormatEnum documentFormat) {
         this.documentFormat = documentFormat;
         return this;
@@ -20,6 +21,7 @@ public class GetDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public GetDocumentRequest withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -27,6 +29,7 @@ public class GetDocumentRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public GetDocumentRequest withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +38,13 @@ public class GetDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionName")
     public String versionName;
+
     public GetDocumentRequest withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     
+    public GetDocumentRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

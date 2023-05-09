@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DoSigmaRsvExchangeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address")
     public String address;
+
     public DoSigmaRsvExchangeRequest withAddress(String address) {
         this.address = address;
         return this;
@@ -16,6 +18,7 @@ public class DoSigmaRsvExchangeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amount")
     public Long amount;
+
     public DoSigmaRsvExchangeRequest withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -23,6 +26,7 @@ public class DoSigmaRsvExchangeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=checkRate")
     public Long checkRate;
+
     public DoSigmaRsvExchangeRequest withCheckRate(Long checkRate) {
         this.checkRate = checkRate;
         return this;
@@ -30,9 +34,14 @@ public class DoSigmaRsvExchangeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=executionFee")
     public Long executionFee;
+
     public DoSigmaRsvExchangeRequest withExecutionFee(Long executionFee) {
         this.executionFee = executionFee;
         return this;
     }
     
+    public DoSigmaRsvExchangeRequest(@JsonProperty("address") String address, @JsonProperty("amount") Long amount) {
+        this.address = address;
+        this.amount = amount;
+  }
 }

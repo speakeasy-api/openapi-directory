@@ -12,6 +12,7 @@ public class ExportInProgressResponse {
      */
     @JsonProperty("cancelled")
     public Boolean cancelled;
+
     public ExportInProgressResponse withCancelled(Boolean cancelled) {
         this.cancelled = cancelled;
         return this;
@@ -22,6 +23,7 @@ public class ExportInProgressResponse {
      */
     @JsonProperty("completedDate")
     public String completedDate;
+
     public ExportInProgressResponse withCompletedDate(String completedDate) {
         this.completedDate = completedDate;
         return this;
@@ -32,6 +34,7 @@ public class ExportInProgressResponse {
      */
     @JsonProperty("dateOfRequest")
     public String dateOfRequest;
+
     public ExportInProgressResponse withDateOfRequest(String dateOfRequest) {
         this.dateOfRequest = dateOfRequest;
         return this;
@@ -42,6 +45,7 @@ public class ExportInProgressResponse {
      */
     @JsonProperty("email")
     public String email;
+
     public ExportInProgressResponse withEmail(String email) {
         this.email = email;
         return this;
@@ -52,6 +56,7 @@ public class ExportInProgressResponse {
      */
     @JsonProperty("filter")
     public String filter;
+
     public ExportInProgressResponse withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -62,6 +67,7 @@ public class ExportInProgressResponse {
      */
     @JsonProperty("hostUri")
     public String hostUri;
+
     public ExportInProgressResponse withHostUri(String hostUri) {
         this.hostUri = hostUri;
         return this;
@@ -72,6 +78,7 @@ public class ExportInProgressResponse {
      */
     @JsonProperty("id")
     public String id;
+
     public ExportInProgressResponse withId(String id) {
         this.id = id;
         return this;
@@ -82,6 +89,7 @@ public class ExportInProgressResponse {
      */
     @JsonProperty("instanceId")
     public String instanceId;
+
     public ExportInProgressResponse withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -92,6 +100,7 @@ public class ExportInProgressResponse {
      */
     @JsonProperty("lasUpdateTime")
     public String lasUpdateTime;
+
     public ExportInProgressResponse withLasUpdateTime(String lasUpdateTime) {
         this.lasUpdateTime = lasUpdateTime;
         return this;
@@ -102,6 +111,7 @@ public class ExportInProgressResponse {
      */
     @JsonProperty("linkToDownload")
     public String linkToDownload;
+
     public ExportInProgressResponse withLinkToDownload(String linkToDownload) {
         this.linkToDownload = linkToDownload;
         return this;
@@ -112,6 +122,7 @@ public class ExportInProgressResponse {
      */
     @JsonProperty("publishId")
     public String publishId;
+
     public ExportInProgressResponse withPublishId(String publishId) {
         this.publishId = publishId;
         return this;
@@ -122,6 +133,7 @@ public class ExportInProgressResponse {
      */
     @JsonProperty("query")
     public String query;
+
     public ExportInProgressResponse withQuery(String query) {
         this.query = query;
         return this;
@@ -132,6 +144,7 @@ public class ExportInProgressResponse {
      */
     @JsonProperty("rowNumber")
     public Integer rowNumber;
+
     public ExportInProgressResponse withRowNumber(Integer rowNumber) {
         this.rowNumber = rowNumber;
         return this;
@@ -142,6 +155,7 @@ public class ExportInProgressResponse {
      */
     @JsonProperty("rowsProcessed")
     public Integer rowsProcessed;
+
     public ExportInProgressResponse withRowsProcessed(Integer rowsProcessed) {
         this.rowsProcessed = rowsProcessed;
         return this;
@@ -152,6 +166,7 @@ public class ExportInProgressResponse {
      */
     @JsonProperty("startDate")
     public String startDate;
+
     public ExportInProgressResponse withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -162,9 +177,28 @@ public class ExportInProgressResponse {
      */
     @JsonProperty("utcTime")
     public String utcTime;
+
     public ExportInProgressResponse withUtcTime(String utcTime) {
         this.utcTime = utcTime;
         return this;
     }
     
+    public ExportInProgressResponse(@JsonProperty("cancelled") Boolean cancelled, @JsonProperty("completedDate") String completedDate, @JsonProperty("dateOfRequest") String dateOfRequest, @JsonProperty("email") String email, @JsonProperty("filter") String filter, @JsonProperty("hostUri") String hostUri, @JsonProperty("id") String id, @JsonProperty("instanceId") String instanceId, @JsonProperty("lasUpdateTime") String lasUpdateTime, @JsonProperty("linkToDownload") String linkToDownload, @JsonProperty("publishId") String publishId, @JsonProperty("query") String query, @JsonProperty("rowNumber") Integer rowNumber, @JsonProperty("rowsProcessed") Integer rowsProcessed, @JsonProperty("startDate") String startDate, @JsonProperty("utcTime") String utcTime) {
+        this.cancelled = cancelled;
+        this.completedDate = completedDate;
+        this.dateOfRequest = dateOfRequest;
+        this.email = email;
+        this.filter = filter;
+        this.hostUri = hostUri;
+        this.id = id;
+        this.instanceId = instanceId;
+        this.lasUpdateTime = lasUpdateTime;
+        this.linkToDownload = linkToDownload;
+        this.publishId = publishId;
+        this.query = query;
+        this.rowNumber = rowNumber;
+        this.rowsProcessed = rowsProcessed;
+        this.startDate = startDate;
+        this.utcTime = utcTime;
+  }
 }

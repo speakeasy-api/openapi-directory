@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTagRequest {
@@ -12,6 +13,7 @@ public class CreateTagRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
     public String trainingKey;
+
     public CreateTagRequest withTrainingKey(String trainingKey) {
         this.trainingKey = trainingKey;
         return this;
@@ -22,6 +24,7 @@ public class CreateTagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public CreateTagRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -32,6 +35,7 @@ public class CreateTagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public CreateTagRequest withName(String name) {
         this.name = name;
         return this;
@@ -42,6 +46,7 @@ public class CreateTagRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public CreateTagRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -52,9 +57,15 @@ public class CreateTagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public CreateTagTypeEnum type;
+
     public CreateTagRequest withType(CreateTagTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateTagRequest(@JsonProperty("Training-Key") String trainingKey, @JsonProperty("name") String name, @JsonProperty("projectId") String projectId) {
+        this.trainingKey = trainingKey;
+        this.name = name;
+        this.projectId = projectId;
+  }
 }

@@ -15,6 +15,7 @@ public class RegionOfInterest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BoundingBox")
     public BoundingBox boundingBox;
+
     public RegionOfInterest withBoundingBox(BoundingBox boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -23,9 +24,11 @@ public class RegionOfInterest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Polygon")
     public Point[] polygon;
+
     public RegionOfInterest withPolygon(Point[] polygon) {
         this.polygon = polygon;
         return this;
     }
     
+    public RegionOfInterest(){}
 }

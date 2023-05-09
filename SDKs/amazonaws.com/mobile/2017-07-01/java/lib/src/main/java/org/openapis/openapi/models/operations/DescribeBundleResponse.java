@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeBundleResponse {
@@ -12,6 +13,7 @@ public class DescribeBundleResponse {
      */
     
     public org.openapis.openapi.models.shared.BadRequestException badRequestException;
+
     public DescribeBundleResponse withBadRequestException(org.openapis.openapi.models.shared.BadRequestException badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeBundleResponse {
     
     
     public String contentType;
+
     public DescribeBundleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeBundleResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeBundleResult describeBundleResult;
+
     public DescribeBundleResponse withDescribeBundleResult(org.openapis.openapi.models.shared.DescribeBundleResult describeBundleResult) {
         this.describeBundleResult = describeBundleResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeBundleResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalFailureException internalFailureException;
+
     public DescribeBundleResponse withInternalFailureException(org.openapis.openapi.models.shared.InternalFailureException internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeBundleResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundException notFoundException;
+
     public DescribeBundleResponse withNotFoundException(org.openapis.openapi.models.shared.NotFoundException notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeBundleResponse {
     
     
     public Integer statusCode;
+
     public DescribeBundleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeBundleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeBundleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeBundleResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceUnavailableException serviceUnavailableException;
+
     public DescribeBundleResponse withServiceUnavailableException(org.openapis.openapi.models.shared.ServiceUnavailableException serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,6 +92,7 @@ public class DescribeBundleResponse {
      */
     
     public org.openapis.openapi.models.shared.TooManyRequestsException tooManyRequestsException;
+
     public DescribeBundleResponse withTooManyRequestsException(org.openapis.openapi.models.shared.TooManyRequestsException tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeBundleResponse {
      */
     
     public org.openapis.openapi.models.shared.UnauthorizedException unauthorizedException;
+
     public DescribeBundleResponse withUnauthorizedException(org.openapis.openapi.models.shared.UnauthorizedException unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeBundleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

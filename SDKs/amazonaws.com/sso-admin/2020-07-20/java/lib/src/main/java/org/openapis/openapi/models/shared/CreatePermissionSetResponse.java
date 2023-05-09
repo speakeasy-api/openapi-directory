@@ -15,9 +15,11 @@ public class CreatePermissionSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PermissionSet")
     public PermissionSet permissionSet;
+
     public CreatePermissionSetResponse withPermissionSet(PermissionSet permissionSet) {
         this.permissionSet = permissionSet;
         return this;
     }
     
+    public CreatePermissionSetResponse(){}
 }

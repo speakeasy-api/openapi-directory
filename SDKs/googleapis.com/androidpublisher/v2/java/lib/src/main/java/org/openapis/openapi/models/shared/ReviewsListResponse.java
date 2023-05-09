@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReviewsListResponse {
     
     public PageInfo pageInfo;
+
     public ReviewsListResponse withPageInfo(PageInfo pageInfo) {
         this.pageInfo = pageInfo;
         return this;
@@ -19,6 +20,7 @@ public class ReviewsListResponse {
     
     
     public Review[] reviews;
+
     public ReviewsListResponse withReviews(Review[] reviews) {
         this.reviews = reviews;
         return this;
@@ -26,9 +28,11 @@ public class ReviewsListResponse {
     
     
     public TokenPagination tokenPagination;
+
     public ReviewsListResponse withTokenPagination(TokenPagination tokenPagination) {
         this.tokenPagination = tokenPagination;
         return this;
     }
     
+    public ReviewsListResponse(){}
 }

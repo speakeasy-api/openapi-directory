@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDevEndpointResponse {
     
     public String contentType;
+
     public GetDevEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDevEndpointResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetDevEndpointResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetDevEndpointResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDevEndpointResponse getDevEndpointResponse;
+
     public GetDevEndpointResponse withGetDevEndpointResponse(org.openapis.openapi.models.shared.GetDevEndpointResponse getDevEndpointResponse) {
         this.getDevEndpointResponse = getDevEndpointResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetDevEndpointResponse {
      */
     
     public Object internalServiceException;
+
     public GetDevEndpointResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetDevEndpointResponse {
      */
     
     public Object invalidInputException;
+
     public GetDevEndpointResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetDevEndpointResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetDevEndpointResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class GetDevEndpointResponse {
     
     
     public Integer statusCode;
+
     public GetDevEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetDevEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDevEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDevEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

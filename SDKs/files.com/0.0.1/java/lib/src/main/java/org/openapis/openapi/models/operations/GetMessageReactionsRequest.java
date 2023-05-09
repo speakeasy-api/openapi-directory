@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMessageReactionsRequest {
@@ -12,6 +13,7 @@ public class GetMessageReactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetMessageReactionsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +24,7 @@ public class GetMessageReactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=message_id")
     public Integer messageId;
+
     public GetMessageReactionsRequest withMessageId(Integer messageId) {
         this.messageId = messageId;
         return this;
@@ -32,6 +35,7 @@ public class GetMessageReactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetMessageReactionsRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -42,9 +46,13 @@ public class GetMessageReactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     public Integer userId;
+
     public GetMessageReactionsRequest withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetMessageReactionsRequest(@JsonProperty("message_id") Integer messageId) {
+        this.messageId = messageId;
+  }
 }

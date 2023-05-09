@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAccessControlEffectResponse {
     
     public String contentType;
+
     public GetAccessControlEffectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAccessControlEffectResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetAccessControlEffectResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetAccessControlEffectResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAccessControlEffectResponse getAccessControlEffectResponse;
+
     public GetAccessControlEffectResponse withGetAccessControlEffectResponse(org.openapis.openapi.models.shared.GetAccessControlEffectResponse getAccessControlEffectResponse) {
         this.getAccessControlEffectResponse = getAccessControlEffectResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetAccessControlEffectResponse {
      */
     
     public Object invalidParameterException;
+
     public GetAccessControlEffectResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetAccessControlEffectResponse {
      */
     
     public Object organizationNotFoundException;
+
     public GetAccessControlEffectResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetAccessControlEffectResponse {
      */
     
     public Object organizationStateException;
+
     public GetAccessControlEffectResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -66,6 +73,7 @@ public class GetAccessControlEffectResponse {
     
     
     public Integer statusCode;
+
     public GetAccessControlEffectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetAccessControlEffectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAccessControlEffectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetAccessControlEffectResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAccessControlEffectResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetAccessControlEffectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

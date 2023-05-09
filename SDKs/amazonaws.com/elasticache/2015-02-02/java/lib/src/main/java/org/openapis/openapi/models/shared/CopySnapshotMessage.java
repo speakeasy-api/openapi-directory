@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CopySnapshotMessage - Represents the input of a &lt;code&gt;CopySnapshotMessage&lt;/code&gt; operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CopySnapshotMessage {
     
     public String kmsKeyId;
+
     public CopySnapshotMessage withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -19,6 +20,7 @@ public class CopySnapshotMessage {
     
     
     public String sourceSnapshotName;
+
     public CopySnapshotMessage withSourceSnapshotName(String sourceSnapshotName) {
         this.sourceSnapshotName = sourceSnapshotName;
         return this;
@@ -26,6 +28,7 @@ public class CopySnapshotMessage {
     
     
     public TagList[] tags;
+
     public CopySnapshotMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -33,6 +36,7 @@ public class CopySnapshotMessage {
     
     
     public String targetBucket;
+
     public CopySnapshotMessage withTargetBucket(String targetBucket) {
         this.targetBucket = targetBucket;
         return this;
@@ -40,9 +44,14 @@ public class CopySnapshotMessage {
     
     
     public String targetSnapshotName;
+
     public CopySnapshotMessage withTargetSnapshotName(String targetSnapshotName) {
         this.targetSnapshotName = targetSnapshotName;
         return this;
     }
     
+    public CopySnapshotMessage(@JsonProperty("SourceSnapshotName") String sourceSnapshotName, @JsonProperty("TargetSnapshotName") String targetSnapshotName) {
+        this.sourceSnapshotName = sourceSnapshotName;
+        this.targetSnapshotName = targetSnapshotName;
+  }
 }

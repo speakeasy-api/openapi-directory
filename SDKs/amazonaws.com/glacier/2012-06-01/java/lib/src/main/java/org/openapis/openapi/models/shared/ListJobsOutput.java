@@ -15,6 +15,7 @@ public class ListJobsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobList")
     public GlacierJobDescription[] jobList;
+
     public ListJobsOutput withJobList(GlacierJobDescription[] jobList) {
         this.jobList = jobList;
         return this;
@@ -23,9 +24,11 @@ public class ListJobsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListJobsOutput withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListJobsOutput(){}
 }

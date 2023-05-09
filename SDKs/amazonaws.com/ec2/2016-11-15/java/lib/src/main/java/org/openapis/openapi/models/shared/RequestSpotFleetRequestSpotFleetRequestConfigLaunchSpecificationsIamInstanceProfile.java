@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsIamInstanceProfile {
     
     public String arn;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsIamInstanceProfile withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,9 +20,11 @@ public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsIa
     
     
     public String name;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsIamInstanceProfile withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsIamInstanceProfile(){}
 }

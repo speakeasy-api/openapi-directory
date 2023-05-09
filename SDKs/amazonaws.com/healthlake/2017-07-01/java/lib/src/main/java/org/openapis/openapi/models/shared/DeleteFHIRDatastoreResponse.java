@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteFHIRDatastoreResponse {
     @JsonProperty("DatastoreArn")
     public String datastoreArn;
+
     public DeleteFHIRDatastoreResponse withDatastoreArn(String datastoreArn) {
         this.datastoreArn = datastoreArn;
         return this;
@@ -19,6 +20,7 @@ public class DeleteFHIRDatastoreResponse {
     
     @JsonProperty("DatastoreEndpoint")
     public String datastoreEndpoint;
+
     public DeleteFHIRDatastoreResponse withDatastoreEndpoint(String datastoreEndpoint) {
         this.datastoreEndpoint = datastoreEndpoint;
         return this;
@@ -26,6 +28,7 @@ public class DeleteFHIRDatastoreResponse {
     
     @JsonProperty("DatastoreId")
     public String datastoreId;
+
     public DeleteFHIRDatastoreResponse withDatastoreId(String datastoreId) {
         this.datastoreId = datastoreId;
         return this;
@@ -33,9 +36,16 @@ public class DeleteFHIRDatastoreResponse {
     
     @JsonProperty("DatastoreStatus")
     public DatastoreStatusEnum datastoreStatus;
+
     public DeleteFHIRDatastoreResponse withDatastoreStatus(DatastoreStatusEnum datastoreStatus) {
         this.datastoreStatus = datastoreStatus;
         return this;
     }
     
+    public DeleteFHIRDatastoreResponse(@JsonProperty("DatastoreArn") String datastoreArn, @JsonProperty("DatastoreEndpoint") String datastoreEndpoint, @JsonProperty("DatastoreId") String datastoreId, @JsonProperty("DatastoreStatus") DatastoreStatusEnum datastoreStatus) {
+        this.datastoreArn = datastoreArn;
+        this.datastoreEndpoint = datastoreEndpoint;
+        this.datastoreId = datastoreId;
+        this.datastoreStatus = datastoreStatus;
+  }
 }

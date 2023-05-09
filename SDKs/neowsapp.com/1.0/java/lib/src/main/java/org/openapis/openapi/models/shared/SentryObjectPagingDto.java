@@ -15,6 +15,7 @@ public class SentryObjectPagingDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public java.util.Map<String, Object> links;
+
     public SentryObjectPagingDto withLinks(java.util.Map<String, Object> links) {
         this.links = links;
         return this;
@@ -23,6 +24,7 @@ public class SentryObjectPagingDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public PageMetaData page;
+
     public SentryObjectPagingDto withPage(PageMetaData page) {
         this.page = page;
         return this;
@@ -31,9 +33,11 @@ public class SentryObjectPagingDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentry_objects")
     public SentryImpactRiskObject[] sentryObjects;
+
     public SentryObjectPagingDto withSentryObjects(SentryImpactRiskObject[] sentryObjects) {
         this.sentryObjects = sentryObjects;
         return this;
     }
     
+    public SentryObjectPagingDto(){}
 }

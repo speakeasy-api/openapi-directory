@@ -21,6 +21,7 @@ public class DescribeFeatureMetadataResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeFeatureMetadataResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class DescribeFeatureMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeFeatureMetadataResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class DescribeFeatureMetadataResponse {
     
     @JsonProperty("FeatureGroupArn")
     public String featureGroupArn;
+
     public DescribeFeatureMetadataResponse withFeatureGroupArn(String featureGroupArn) {
         this.featureGroupArn = featureGroupArn;
         return this;
@@ -43,6 +46,7 @@ public class DescribeFeatureMetadataResponse {
     
     @JsonProperty("FeatureGroupName")
     public String featureGroupName;
+
     public DescribeFeatureMetadataResponse withFeatureGroupName(String featureGroupName) {
         this.featureGroupName = featureGroupName;
         return this;
@@ -50,6 +54,7 @@ public class DescribeFeatureMetadataResponse {
     
     @JsonProperty("FeatureName")
     public String featureName;
+
     public DescribeFeatureMetadataResponse withFeatureName(String featureName) {
         this.featureName = featureName;
         return this;
@@ -57,6 +62,7 @@ public class DescribeFeatureMetadataResponse {
     
     @JsonProperty("FeatureType")
     public FeatureTypeEnum featureType;
+
     public DescribeFeatureMetadataResponse withFeatureType(FeatureTypeEnum featureType) {
         this.featureType = featureType;
         return this;
@@ -66,6 +72,7 @@ public class DescribeFeatureMetadataResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeFeatureMetadataResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -74,9 +81,18 @@ public class DescribeFeatureMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public FeatureParameter[] parameters;
+
     public DescribeFeatureMetadataResponse withParameters(FeatureParameter[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public DescribeFeatureMetadataResponse(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("FeatureGroupArn") String featureGroupArn, @JsonProperty("FeatureGroupName") String featureGroupName, @JsonProperty("FeatureName") String featureName, @JsonProperty("FeatureType") FeatureTypeEnum featureType, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime) {
+        this.creationTime = creationTime;
+        this.featureGroupArn = featureGroupArn;
+        this.featureGroupName = featureGroupName;
+        this.featureName = featureName;
+        this.featureType = featureType;
+        this.lastModifiedTime = lastModifiedTime;
+  }
 }

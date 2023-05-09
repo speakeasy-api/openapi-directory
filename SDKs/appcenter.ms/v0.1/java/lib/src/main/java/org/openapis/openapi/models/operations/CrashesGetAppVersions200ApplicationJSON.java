@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CrashesGetAppVersions200ApplicationJSON {
     @JsonProperty("app_id")
     public String appId;
+
     public CrashesGetAppVersions200ApplicationJSON withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -18,6 +19,7 @@ public class CrashesGetAppVersions200ApplicationJSON {
     
     @JsonProperty("app_version")
     public String appVersion;
+
     public CrashesGetAppVersions200ApplicationJSON withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -25,6 +27,7 @@ public class CrashesGetAppVersions200ApplicationJSON {
     
     @JsonProperty("app_version_id")
     public String appVersionId;
+
     public CrashesGetAppVersions200ApplicationJSON withAppVersionId(String appVersionId) {
         this.appVersionId = appVersionId;
         return this;
@@ -33,6 +36,7 @@ public class CrashesGetAppVersions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build_number")
     public String buildNumber;
+
     public CrashesGetAppVersions200ApplicationJSON withBuildNumber(String buildNumber) {
         this.buildNumber = buildNumber;
         return this;
@@ -40,9 +44,16 @@ public class CrashesGetAppVersions200ApplicationJSON {
     
     @JsonProperty("display_name")
     public String displayName;
+
     public CrashesGetAppVersions200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public CrashesGetAppVersions200ApplicationJSON(@JsonProperty("app_id") String appId, @JsonProperty("app_version") String appVersion, @JsonProperty("app_version_id") String appVersionId, @JsonProperty("display_name") String displayName) {
+        this.appId = appId;
+        this.appVersion = appVersion;
+        this.appVersionId = appVersionId;
+        this.displayName = displayName;
+  }
 }

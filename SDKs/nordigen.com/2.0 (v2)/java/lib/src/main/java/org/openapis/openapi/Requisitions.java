@@ -54,14 +54,13 @@ public class Requisitions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRequisitionByIdV2Response res = new org.openapis.openapi.models.operations.DeleteRequisitionByIdV2Response() {{
+        org.openapis.openapi.models.operations.DeleteRequisitionByIdV2Response res = new org.openapis.openapi.models.operations.DeleteRequisitionByIdV2Response(contentType, httpRes.statusCode()) {{
             deleteRequisitionByIdV2400ApplicationJSONObject = null;
             deleteRequisitionByIdV2401ApplicationJSONObject = null;
             deleteRequisitionByIdV2403ApplicationJSONObject = null;
             deleteRequisitionByIdV2404ApplicationJSONObject = null;
+            deleteRequisitionByIdV2429ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {
@@ -92,6 +91,13 @@ public class Requisitions {
                 res.deleteRequisitionByIdV2404ApplicationJSONObject = out;
             }
         }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.deleteRequisitionByIdV2429ApplicationJSONObject = out;
+            }
+        }
 
         return res;
     }
@@ -117,22 +123,21 @@ public class Requisitions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RequisitionByIdResponse res = new org.openapis.openapi.models.operations.RequisitionByIdResponse() {{
-            requisitionV2 = null;
+        org.openapis.openapi.models.operations.RequisitionByIdResponse res = new org.openapis.openapi.models.operations.RequisitionByIdResponse(contentType, httpRes.statusCode()) {{
+            requisition = null;
             requisitionById400ApplicationJSONObject = null;
             requisitionById401ApplicationJSONObject = null;
             requisitionById403ApplicationJSONObject = null;
             requisitionById404ApplicationJSONObject = null;
+            requisitionById429ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.RequisitionV2 out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.RequisitionV2.class);
-                res.requisitionV2 = out;
+                org.openapis.openapi.models.shared.Requisition out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Requisition.class);
+                res.requisition = out;
             }
         }
         else if (httpRes.statusCode() == 400) {
@@ -163,6 +168,13 @@ public class Requisitions {
                 res.requisitionById404ApplicationJSONObject = out;
             }
         }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.requisitionById429ApplicationJSONObject = out;
+            }
+        }
 
         return res;
     }
@@ -173,7 +185,7 @@ public class Requisitions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RequisitionCreatedResponse requisitionCreated(org.openapis.openapi.models.shared.RequisitionV2Request request) throws Exception {
+    public org.openapis.openapi.models.operations.RequisitionCreatedResponse requisitionCreated(org.openapis.openapi.models.shared.RequisitionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/requisitions/");
         
@@ -193,22 +205,21 @@ public class Requisitions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RequisitionCreatedResponse res = new org.openapis.openapi.models.operations.RequisitionCreatedResponse() {{
-            spectacularRequisitionV2 = null;
+        org.openapis.openapi.models.operations.RequisitionCreatedResponse res = new org.openapis.openapi.models.operations.RequisitionCreatedResponse(contentType, httpRes.statusCode()) {{
+            spectacularRequisition = null;
             requisitionCreated400ApplicationJSONObject = null;
             requisitionCreated401ApplicationJSONObject = null;
             requisitionCreated403ApplicationJSONObject = null;
             requisitionCreated404ApplicationJSONObject = null;
+            requisitionCreated429ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.SpectacularRequisitionV2 out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.SpectacularRequisitionV2.class);
-                res.spectacularRequisitionV2 = out;
+                org.openapis.openapi.models.shared.SpectacularRequisition out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.SpectacularRequisition.class);
+                res.spectacularRequisition = out;
             }
         }
         else if (httpRes.statusCode() == 400) {
@@ -237,6 +248,13 @@ public class Requisitions {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
                 res.requisitionCreated404ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.requisitionCreated429ApplicationJSONObject = out;
             }
         }
 
@@ -270,22 +288,21 @@ public class Requisitions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveAllRequisitionsResponse res = new org.openapis.openapi.models.operations.RetrieveAllRequisitionsResponse() {{
-            paginatedRequisitionV2List = null;
+        org.openapis.openapi.models.operations.RetrieveAllRequisitionsResponse res = new org.openapis.openapi.models.operations.RetrieveAllRequisitionsResponse(contentType, httpRes.statusCode()) {{
+            paginatedRequisitionList = null;
             retrieveAllRequisitions400ApplicationJSONObject = null;
             retrieveAllRequisitions401ApplicationJSONObject = null;
             retrieveAllRequisitions403ApplicationJSONObject = null;
             retrieveAllRequisitions404ApplicationJSONObject = null;
+            retrieveAllRequisitions429ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.PaginatedRequisitionV2List out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.PaginatedRequisitionV2List.class);
-                res.paginatedRequisitionV2List = out;
+                org.openapis.openapi.models.shared.PaginatedRequisitionList out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.PaginatedRequisitionList.class);
+                res.paginatedRequisitionList = out;
             }
         }
         else if (httpRes.statusCode() == 400) {
@@ -314,6 +331,13 @@ public class Requisitions {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
                 res.retrieveAllRequisitions404ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.retrieveAllRequisitions429ApplicationJSONObject = out;
             }
         }
 

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Translation {
     @JsonProperty("key")
     public String key;
+
     public Translation withKey(String key) {
         this.key = key;
         return this;
@@ -18,6 +19,7 @@ public class Translation {
     
     @JsonProperty("locale")
     public String locale;
+
     public Translation withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -26,9 +28,14 @@ public class Translation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Translation withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Translation(@JsonProperty("key") String key, @JsonProperty("locale") String locale) {
+        this.key = key;
+        this.locale = locale;
+  }
 }

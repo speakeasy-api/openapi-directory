@@ -12,9 +12,13 @@ public class ListTagsForResourceRequestBody {
      */
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public ListTagsForResourceRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public ListTagsForResourceRequestBody(@JsonProperty("resourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

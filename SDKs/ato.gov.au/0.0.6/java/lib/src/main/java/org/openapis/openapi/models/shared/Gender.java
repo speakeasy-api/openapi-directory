@@ -18,6 +18,7 @@ public class Gender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public String gender;
+
     public Gender withGender(String gender) {
         this.gender = gender;
         return this;
@@ -29,9 +30,11 @@ public class Gender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Gender withId(String id) {
         this.id = id;
         return this;
     }
     
+    public Gender(){}
 }

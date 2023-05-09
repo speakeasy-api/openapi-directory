@@ -15,6 +15,7 @@ public class TransferDomain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth_code")
     public String authCode;
+
     public TransferDomain withAuthCode(String authCode) {
         this.authCode = authCode;
         return this;
@@ -27,6 +28,7 @@ public class TransferDomain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain_name")
     public String domainName;
+
     public TransferDomain withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -38,6 +40,7 @@ public class TransferDomain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name_servers")
     public String[] nameServers;
+
     public TransferDomain withNameServers(String[] nameServers) {
         this.nameServers = nameServers;
         return this;
@@ -46,9 +49,11 @@ public class TransferDomain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrant")
     public RegistrantInput registrant;
+
     public TransferDomain withRegistrant(RegistrantInput registrant) {
         this.registrant = registrant;
         return this;
     }
     
+    public TransferDomain(){}
 }

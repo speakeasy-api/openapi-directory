@@ -18,9 +18,11 @@ public class DTMFRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digits")
     public String digits;
+
     public DTMFRequest withDigits(String digits) {
         this.digits = digits;
         return this;
     }
     
+    public DTMFRequest(){}
 }

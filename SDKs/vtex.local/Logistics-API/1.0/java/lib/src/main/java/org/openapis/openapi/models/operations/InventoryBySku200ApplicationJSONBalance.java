@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InventoryBySku200ApplicationJSONBalance {
     @JsonProperty("hasUnlimitedQuantity")
     public Boolean hasUnlimitedQuantity;
+
     public InventoryBySku200ApplicationJSONBalance withHasUnlimitedQuantity(Boolean hasUnlimitedQuantity) {
         this.hasUnlimitedQuantity = hasUnlimitedQuantity;
         return this;
@@ -16,6 +17,7 @@ public class InventoryBySku200ApplicationJSONBalance {
     
     @JsonProperty("reservedQuantity")
     public Integer reservedQuantity;
+
     public InventoryBySku200ApplicationJSONBalance withReservedQuantity(Integer reservedQuantity) {
         this.reservedQuantity = reservedQuantity;
         return this;
@@ -23,6 +25,7 @@ public class InventoryBySku200ApplicationJSONBalance {
     
     @JsonProperty("totalQuantity")
     public Integer totalQuantity;
+
     public InventoryBySku200ApplicationJSONBalance withTotalQuantity(Integer totalQuantity) {
         this.totalQuantity = totalQuantity;
         return this;
@@ -30,6 +33,7 @@ public class InventoryBySku200ApplicationJSONBalance {
     
     @JsonProperty("warehouseId")
     public String warehouseId;
+
     public InventoryBySku200ApplicationJSONBalance withWarehouseId(String warehouseId) {
         this.warehouseId = warehouseId;
         return this;
@@ -37,9 +41,17 @@ public class InventoryBySku200ApplicationJSONBalance {
     
     @JsonProperty("warehouseName")
     public String warehouseName;
+
     public InventoryBySku200ApplicationJSONBalance withWarehouseName(String warehouseName) {
         this.warehouseName = warehouseName;
         return this;
     }
     
+    public InventoryBySku200ApplicationJSONBalance(@JsonProperty("hasUnlimitedQuantity") Boolean hasUnlimitedQuantity, @JsonProperty("reservedQuantity") Integer reservedQuantity, @JsonProperty("totalQuantity") Integer totalQuantity, @JsonProperty("warehouseId") String warehouseId, @JsonProperty("warehouseName") String warehouseName) {
+        this.hasUnlimitedQuantity = hasUnlimitedQuantity;
+        this.reservedQuantity = reservedQuantity;
+        this.totalQuantity = totalQuantity;
+        this.warehouseId = warehouseId;
+        this.warehouseName = warehouseName;
+  }
 }

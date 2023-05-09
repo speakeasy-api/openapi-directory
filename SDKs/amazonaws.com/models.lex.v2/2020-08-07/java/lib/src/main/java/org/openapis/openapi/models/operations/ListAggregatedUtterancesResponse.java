@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAggregatedUtterancesResponse {
     
     public String contentType;
+
     public ListAggregatedUtterancesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAggregatedUtterancesResponse {
      */
     
     public Object internalServerException;
+
     public ListAggregatedUtterancesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListAggregatedUtterancesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAggregatedUtterancesResponse listAggregatedUtterancesResponse;
+
     public ListAggregatedUtterancesResponse withListAggregatedUtterancesResponse(org.openapis.openapi.models.shared.ListAggregatedUtterancesResponse listAggregatedUtterancesResponse) {
         this.listAggregatedUtterancesResponse = listAggregatedUtterancesResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListAggregatedUtterancesResponse {
      */
     
     public Object preconditionFailedException;
+
     public ListAggregatedUtterancesResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -46,6 +51,7 @@ public class ListAggregatedUtterancesResponse {
     
     
     public Integer statusCode;
+
     public ListAggregatedUtterancesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListAggregatedUtterancesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAggregatedUtterancesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListAggregatedUtterancesResponse {
      */
     
     public Object throttlingException;
+
     public ListAggregatedUtterancesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListAggregatedUtterancesResponse {
      */
     
     public Object validationException;
+
     public ListAggregatedUtterancesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAggregatedUtterancesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

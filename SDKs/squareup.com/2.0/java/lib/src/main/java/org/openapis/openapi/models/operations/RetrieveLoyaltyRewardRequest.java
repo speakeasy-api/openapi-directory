@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveLoyaltyRewardRequest {
@@ -12,9 +13,13 @@ public class RetrieveLoyaltyRewardRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reward_id")
     public String rewardId;
+
     public RetrieveLoyaltyRewardRequest withRewardId(String rewardId) {
         this.rewardId = rewardId;
         return this;
     }
     
+    public RetrieveLoyaltyRewardRequest(@JsonProperty("reward_id") String rewardId) {
+        this.rewardId = rewardId;
+  }
 }

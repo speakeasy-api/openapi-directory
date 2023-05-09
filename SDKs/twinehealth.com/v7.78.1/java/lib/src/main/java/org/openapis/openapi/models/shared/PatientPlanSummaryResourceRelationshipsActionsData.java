@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatientPlanSummaryResourceRelationshipsActionsData {
     @JsonProperty("id")
     public String id;
+
     public PatientPlanSummaryResourceRelationshipsActionsData withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class PatientPlanSummaryResourceRelationshipsActionsData {
     
     @JsonProperty("type")
     public String type;
+
     public PatientPlanSummaryResourceRelationshipsActionsData withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PatientPlanSummaryResourceRelationshipsActionsData(@JsonProperty("id") String id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

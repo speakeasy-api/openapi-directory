@@ -15,6 +15,7 @@ public class StartingEventBatchCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchSize")
     public Long batchSize;
+
     public StartingEventBatchCondition withBatchSize(Long batchSize) {
         this.batchSize = batchSize;
         return this;
@@ -23,9 +24,11 @@ public class StartingEventBatchCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchWindow")
     public Long batchWindow;
+
     public StartingEventBatchCondition withBatchWindow(Long batchWindow) {
         this.batchWindow = batchWindow;
         return this;
     }
     
+    public StartingEventBatchCondition(){}
 }

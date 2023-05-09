@@ -18,6 +18,7 @@ public class StretchedPictureFill {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentUrl")
     public String contentUrl;
+
     public StretchedPictureFill withContentUrl(String contentUrl) {
         this.contentUrl = contentUrl;
         return this;
@@ -29,9 +30,11 @@ public class StretchedPictureFill {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Size size;
+
     public StretchedPictureFill withSize(Size size) {
         this.size = size;
         return this;
     }
     
+    public StretchedPictureFill(){}
 }

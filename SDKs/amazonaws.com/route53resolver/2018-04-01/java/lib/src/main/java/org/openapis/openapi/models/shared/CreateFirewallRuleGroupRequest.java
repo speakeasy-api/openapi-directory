@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateFirewallRuleGroupRequest {
     @JsonProperty("CreatorRequestId")
     public String creatorRequestId;
+
     public CreateFirewallRuleGroupRequest withCreatorRequestId(String creatorRequestId) {
         this.creatorRequestId = creatorRequestId;
         return this;
@@ -18,6 +19,7 @@ public class CreateFirewallRuleGroupRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateFirewallRuleGroupRequest withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,14 @@ public class CreateFirewallRuleGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateFirewallRuleGroupRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateFirewallRuleGroupRequest(@JsonProperty("CreatorRequestId") String creatorRequestId, @JsonProperty("Name") String name) {
+        this.creatorRequestId = creatorRequestId;
+        this.name = name;
+  }
 }

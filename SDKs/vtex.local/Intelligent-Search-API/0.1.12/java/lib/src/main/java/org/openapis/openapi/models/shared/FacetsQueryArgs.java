@@ -18,6 +18,7 @@ public class FacetsQueryArgs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public FacetsQueryArgs withQuery(String query) {
         this.query = query;
         return this;
@@ -29,9 +30,11 @@ public class FacetsQueryArgs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedFacets")
     public FacetsQueryArgsSelectedFacets[] selectedFacets;
+
     public FacetsQueryArgs withSelectedFacets(FacetsQueryArgsSelectedFacets[] selectedFacets) {
         this.selectedFacets = selectedFacets;
         return this;
     }
     
+    public FacetsQueryArgs(){}
 }

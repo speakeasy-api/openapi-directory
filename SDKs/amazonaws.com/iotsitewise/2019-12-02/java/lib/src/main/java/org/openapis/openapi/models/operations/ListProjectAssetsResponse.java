@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListProjectAssetsResponse {
     
     public String contentType;
+
     public ListProjectAssetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListProjectAssetsResponse {
      */
     
     public Object internalFailureException;
+
     public ListProjectAssetsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListProjectAssetsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListProjectAssetsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListProjectAssetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListProjectAssetsResponse listProjectAssetsResponse;
+
     public ListProjectAssetsResponse withListProjectAssetsResponse(org.openapis.openapi.models.shared.ListProjectAssetsResponse listProjectAssetsResponse) {
         this.listProjectAssetsResponse = listProjectAssetsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListProjectAssetsResponse {
     
     
     public Integer statusCode;
+
     public ListProjectAssetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListProjectAssetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListProjectAssetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListProjectAssetsResponse {
      */
     
     public Object throttlingException;
+
     public ListProjectAssetsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListProjectAssetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

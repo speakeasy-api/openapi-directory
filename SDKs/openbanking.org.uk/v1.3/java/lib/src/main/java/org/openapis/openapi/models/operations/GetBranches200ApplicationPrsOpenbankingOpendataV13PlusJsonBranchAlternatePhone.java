@@ -18,6 +18,7 @@ public class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchAlt
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlternateTelephoneNumber")
     public String alternateTelephoneNumber;
+
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchAlternatePhone withAlternateTelephoneNumber(String alternateTelephoneNumber) {
         this.alternateTelephoneNumber = alternateTelephoneNumber;
         return this;
@@ -29,9 +30,11 @@ public class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchAlt
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlternateTelephoneNumberDescription")
     public String alternateTelephoneNumberDescription;
+
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchAlternatePhone withAlternateTelephoneNumberDescription(String alternateTelephoneNumberDescription) {
         this.alternateTelephoneNumberDescription = alternateTelephoneNumberDescription;
         return this;
     }
     
+    public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchAlternatePhone(){}
 }

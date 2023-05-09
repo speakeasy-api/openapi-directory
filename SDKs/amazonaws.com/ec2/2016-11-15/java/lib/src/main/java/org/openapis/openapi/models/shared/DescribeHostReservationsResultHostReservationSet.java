@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeHostReservationsResultHostReservationSet {
     
     public Long count;
+
     public DescribeHostReservationsResultHostReservationSet withCount(Long count) {
         this.count = count;
         return this;
@@ -19,6 +20,7 @@ public class DescribeHostReservationsResultHostReservationSet {
     
     
     public DescribeHostReservationsResultHostReservationSetCurrencyCodeEnum currencyCode;
+
     public DescribeHostReservationsResultHostReservationSet withCurrencyCode(DescribeHostReservationsResultHostReservationSetCurrencyCodeEnum currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -26,6 +28,7 @@ public class DescribeHostReservationsResultHostReservationSet {
     
     
     public Long duration;
+
     public DescribeHostReservationsResultHostReservationSet withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -33,6 +36,7 @@ public class DescribeHostReservationsResultHostReservationSet {
     
     
     public OffsetDateTime end;
+
     public DescribeHostReservationsResultHostReservationSet withEnd(OffsetDateTime end) {
         this.end = end;
         return this;
@@ -40,6 +44,7 @@ public class DescribeHostReservationsResultHostReservationSet {
     
     
     public String[] hostIdSet;
+
     public DescribeHostReservationsResultHostReservationSet withHostIdSet(String[] hostIdSet) {
         this.hostIdSet = hostIdSet;
         return this;
@@ -47,6 +52,7 @@ public class DescribeHostReservationsResultHostReservationSet {
     
     
     public String hostReservationId;
+
     public DescribeHostReservationsResultHostReservationSet withHostReservationId(String hostReservationId) {
         this.hostReservationId = hostReservationId;
         return this;
@@ -54,6 +60,7 @@ public class DescribeHostReservationsResultHostReservationSet {
     
     
     public String hourlyPrice;
+
     public DescribeHostReservationsResultHostReservationSet withHourlyPrice(String hourlyPrice) {
         this.hourlyPrice = hourlyPrice;
         return this;
@@ -61,6 +68,7 @@ public class DescribeHostReservationsResultHostReservationSet {
     
     
     public String instanceFamily;
+
     public DescribeHostReservationsResultHostReservationSet withInstanceFamily(String instanceFamily) {
         this.instanceFamily = instanceFamily;
         return this;
@@ -68,6 +76,7 @@ public class DescribeHostReservationsResultHostReservationSet {
     
     
     public String offeringId;
+
     public DescribeHostReservationsResultHostReservationSet withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
@@ -75,6 +84,7 @@ public class DescribeHostReservationsResultHostReservationSet {
     
     
     public DescribeHostReservationsResultHostReservationSetPaymentOptionEnum paymentOption;
+
     public DescribeHostReservationsResultHostReservationSet withPaymentOption(DescribeHostReservationsResultHostReservationSetPaymentOptionEnum paymentOption) {
         this.paymentOption = paymentOption;
         return this;
@@ -82,6 +92,7 @@ public class DescribeHostReservationsResultHostReservationSet {
     
     
     public OffsetDateTime start;
+
     public DescribeHostReservationsResultHostReservationSet withStart(OffsetDateTime start) {
         this.start = start;
         return this;
@@ -89,6 +100,7 @@ public class DescribeHostReservationsResultHostReservationSet {
     
     
     public DescribeHostReservationsResultHostReservationSetStateEnum state;
+
     public DescribeHostReservationsResultHostReservationSet withState(DescribeHostReservationsResultHostReservationSetStateEnum state) {
         this.state = state;
         return this;
@@ -96,6 +108,7 @@ public class DescribeHostReservationsResultHostReservationSet {
     
     
     public DescribeHostReservationsResultHostReservationSetTags[] tags;
+
     public DescribeHostReservationsResultHostReservationSet withTags(DescribeHostReservationsResultHostReservationSetTags[] tags) {
         this.tags = tags;
         return this;
@@ -103,9 +116,11 @@ public class DescribeHostReservationsResultHostReservationSet {
     
     
     public String upfrontPrice;
+
     public DescribeHostReservationsResultHostReservationSet withUpfrontPrice(String upfrontPrice) {
         this.upfrontPrice = upfrontPrice;
         return this;
     }
     
+    public DescribeHostReservationsResultHostReservationSet(){}
 }

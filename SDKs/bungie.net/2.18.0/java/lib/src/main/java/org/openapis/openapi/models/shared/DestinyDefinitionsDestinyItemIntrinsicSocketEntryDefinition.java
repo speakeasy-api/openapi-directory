@@ -15,6 +15,7 @@ public class DestinyDefinitionsDestinyItemIntrinsicSocketEntryDefinition {
      */
     
     public Boolean defaultVisible;
+
     public DestinyDefinitionsDestinyItemIntrinsicSocketEntryDefinition withDefaultVisible(Boolean defaultVisible) {
         this.defaultVisible = defaultVisible;
         return this;
@@ -25,6 +26,7 @@ public class DestinyDefinitionsDestinyItemIntrinsicSocketEntryDefinition {
      */
     
     public Long plugItemHash;
+
     public DestinyDefinitionsDestinyItemIntrinsicSocketEntryDefinition withPlugItemHash(Long plugItemHash) {
         this.plugItemHash = plugItemHash;
         return this;
@@ -35,9 +37,11 @@ public class DestinyDefinitionsDestinyItemIntrinsicSocketEntryDefinition {
      */
     
     public Long socketTypeHash;
+
     public DestinyDefinitionsDestinyItemIntrinsicSocketEntryDefinition withSocketTypeHash(Long socketTypeHash) {
         this.socketTypeHash = socketTypeHash;
         return this;
     }
     
+    public DestinyDefinitionsDestinyItemIntrinsicSocketEntryDefinition(){}
 }

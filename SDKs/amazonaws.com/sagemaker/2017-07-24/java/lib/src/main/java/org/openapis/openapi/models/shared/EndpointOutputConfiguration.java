@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EndpointOutputConfiguration {
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public EndpointOutputConfiguration withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -19,6 +20,7 @@ public class EndpointOutputConfiguration {
     
     @JsonProperty("InitialInstanceCount")
     public Long initialInstanceCount;
+
     public EndpointOutputConfiguration withInitialInstanceCount(Long initialInstanceCount) {
         this.initialInstanceCount = initialInstanceCount;
         return this;
@@ -26,6 +28,7 @@ public class EndpointOutputConfiguration {
     
     @JsonProperty("InstanceType")
     public ProductionVariantInstanceTypeEnum instanceType;
+
     public EndpointOutputConfiguration withInstanceType(ProductionVariantInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -33,9 +36,16 @@ public class EndpointOutputConfiguration {
     
     @JsonProperty("VariantName")
     public String variantName;
+
     public EndpointOutputConfiguration withVariantName(String variantName) {
         this.variantName = variantName;
         return this;
     }
     
+    public EndpointOutputConfiguration(@JsonProperty("EndpointName") String endpointName, @JsonProperty("InitialInstanceCount") Long initialInstanceCount, @JsonProperty("InstanceType") ProductionVariantInstanceTypeEnum instanceType, @JsonProperty("VariantName") String variantName) {
+        this.endpointName = endpointName;
+        this.initialInstanceCount = initialInstanceCount;
+        this.instanceType = instanceType;
+        this.variantName = variantName;
+  }
 }

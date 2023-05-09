@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDialogflowV2Version withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowV2Version withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2Version withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GoogleCloudDialogflowV2VersionStatusEnum status;
+
     public GoogleCloudDialogflowV2Version withStatus(GoogleCloudDialogflowV2VersionStatusEnum status) {
         this.status = status;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDialogflowV2Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionNumber")
     public Integer versionNumber;
+
     public GoogleCloudDialogflowV2Version withVersionNumber(Integer versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public GoogleCloudDialogflowV2Version(){}
 }

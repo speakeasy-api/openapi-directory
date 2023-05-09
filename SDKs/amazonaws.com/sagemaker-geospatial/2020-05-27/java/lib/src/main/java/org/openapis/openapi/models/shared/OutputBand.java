@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OutputBand {
     @JsonProperty("BandName")
     public String bandName;
+
     public OutputBand withBandName(String bandName) {
         this.bandName = bandName;
         return this;
@@ -19,9 +20,14 @@ public class OutputBand {
     
     @JsonProperty("OutputDataType")
     public OutputTypeEnum outputDataType;
+
     public OutputBand withOutputDataType(OutputTypeEnum outputDataType) {
         this.outputDataType = outputDataType;
         return this;
     }
     
+    public OutputBand(@JsonProperty("BandName") String bandName, @JsonProperty("OutputDataType") OutputTypeEnum outputDataType) {
+        this.bandName = bandName;
+        this.outputDataType = outputDataType;
+  }
 }

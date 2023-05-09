@@ -12,6 +12,7 @@ public class CodeCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public Category category;
+
     public CodeCategory withCategory(Category category) {
         this.category = category;
         return this;
@@ -20,9 +21,11 @@ public class CodeCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CodeCategory withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public CodeCategory(){}
 }

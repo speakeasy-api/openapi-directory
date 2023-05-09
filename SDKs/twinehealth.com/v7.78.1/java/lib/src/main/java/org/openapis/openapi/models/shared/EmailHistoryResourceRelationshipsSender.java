@@ -12,9 +12,11 @@ public class EmailHistoryResourceRelationshipsSender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public EmailHistoryResourceRelationshipsSenderData data;
+
     public EmailHistoryResourceRelationshipsSender withData(EmailHistoryResourceRelationshipsSenderData data) {
         this.data = data;
         return this;
     }
     
+    public EmailHistoryResourceRelationshipsSender(){}
 }

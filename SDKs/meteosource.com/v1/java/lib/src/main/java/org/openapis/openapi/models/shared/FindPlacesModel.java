@@ -18,6 +18,7 @@ public class FindPlacesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adm_area1")
     public String admArea1;
+
     public FindPlacesModel withAdmArea1(String admArea1) {
         this.admArea1 = admArea1;
         return this;
@@ -29,6 +30,7 @@ public class FindPlacesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adm_area2")
     public String admArea2;
+
     public FindPlacesModel withAdmArea2(String admArea2) {
         this.admArea2 = admArea2;
         return this;
@@ -40,6 +42,7 @@ public class FindPlacesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public FindPlacesModel withCountry(String country) {
         this.country = country;
         return this;
@@ -51,6 +54,7 @@ public class FindPlacesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lat")
     public String lat;
+
     public FindPlacesModel withLat(String lat) {
         this.lat = lat;
         return this;
@@ -62,6 +66,7 @@ public class FindPlacesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lon")
     public String lon;
+
     public FindPlacesModel withLon(String lon) {
         this.lon = lon;
         return this;
@@ -73,6 +78,7 @@ public class FindPlacesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FindPlacesModel withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class FindPlacesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("place_id")
     public String placeId;
+
     public FindPlacesModel withPlaceId(String placeId) {
         this.placeId = placeId;
         return this;
@@ -95,6 +102,7 @@ public class FindPlacesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public FindPlacesModel withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -118,9 +126,11 @@ public class FindPlacesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public FindPlacesModel withType(String type) {
         this.type = type;
         return this;
     }
     
+    public FindPlacesModel(){}
 }

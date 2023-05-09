@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAccountAssignmentDeletionStatusRequest {
     @JsonProperty("AccountAssignmentDeletionRequestId")
     public String accountAssignmentDeletionRequestId;
+
     public DescribeAccountAssignmentDeletionStatusRequest withAccountAssignmentDeletionRequestId(String accountAssignmentDeletionRequestId) {
         this.accountAssignmentDeletionRequestId = accountAssignmentDeletionRequestId;
         return this;
@@ -16,9 +17,14 @@ public class DescribeAccountAssignmentDeletionStatusRequest {
     
     @JsonProperty("InstanceArn")
     public String instanceArn;
+
     public DescribeAccountAssignmentDeletionStatusRequest withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
     }
     
+    public DescribeAccountAssignmentDeletionStatusRequest(@JsonProperty("AccountAssignmentDeletionRequestId") String accountAssignmentDeletionRequestId, @JsonProperty("InstanceArn") String instanceArn) {
+        this.accountAssignmentDeletionRequestId = accountAssignmentDeletionRequestId;
+        this.instanceArn = instanceArn;
+  }
 }

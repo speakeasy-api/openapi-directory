@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContent {
     
     public GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePaths[] excludePaths;
+
     public GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContent withExcludePaths(GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePaths[] excludePaths) {
         this.excludePaths = excludePaths;
         return this;
@@ -19,6 +20,7 @@ public class GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScop
     
     
     public GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPaths[] matchPaths;
+
     public GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContent withMatchPaths(GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPaths[] matchPaths) {
         this.matchPaths = matchPaths;
         return this;
@@ -26,9 +28,11 @@ public class GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScop
     
     
     public String networkInsightsAccessScopeId;
+
     public GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContent withNetworkInsightsAccessScopeId(String networkInsightsAccessScopeId) {
         this.networkInsightsAccessScopeId = networkInsightsAccessScopeId;
         return this;
     }
     
+    public GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContent(){}
 }

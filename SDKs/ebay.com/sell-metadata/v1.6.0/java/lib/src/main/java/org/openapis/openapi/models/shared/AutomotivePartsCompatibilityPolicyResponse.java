@@ -18,6 +18,7 @@ public class AutomotivePartsCompatibilityPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automotivePartsCompatibilityPolicies")
     public AutomotivePartsCompatibilityPolicy[] automotivePartsCompatibilityPolicies;
+
     public AutomotivePartsCompatibilityPolicyResponse withAutomotivePartsCompatibilityPolicies(AutomotivePartsCompatibilityPolicy[] automotivePartsCompatibilityPolicies) {
         this.automotivePartsCompatibilityPolicies = automotivePartsCompatibilityPolicies;
         return this;
@@ -29,9 +30,11 @@ public class AutomotivePartsCompatibilityPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public Error[] warnings;
+
     public AutomotivePartsCompatibilityPolicyResponse withWarnings(Error[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public AutomotivePartsCompatibilityPolicyResponse(){}
 }

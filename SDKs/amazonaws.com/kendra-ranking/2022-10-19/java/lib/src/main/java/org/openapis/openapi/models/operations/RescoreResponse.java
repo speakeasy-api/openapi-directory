@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RescoreResponse {
@@ -12,6 +13,7 @@ public class RescoreResponse {
      */
     
     public Object accessDeniedException;
+
     public RescoreResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class RescoreResponse {
      */
     
     public Object conflictException;
+
     public RescoreResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class RescoreResponse {
     
     
     public String contentType;
+
     public RescoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class RescoreResponse {
      */
     
     public Object internalServerException;
+
     public RescoreResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class RescoreResponse {
      */
     
     public org.openapis.openapi.models.shared.RescoreResult rescoreResult;
+
     public RescoreResponse withRescoreResult(org.openapis.openapi.models.shared.RescoreResult rescoreResult) {
         this.rescoreResult = rescoreResult;
         return this;
@@ -56,6 +62,7 @@ public class RescoreResponse {
     
     
     public Integer statusCode;
+
     public RescoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class RescoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RescoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class RescoreResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RescoreResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class RescoreResponse {
      */
     
     public Object throttlingException;
+
     public RescoreResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class RescoreResponse {
      */
     
     public Object validationException;
+
     public RescoreResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RescoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

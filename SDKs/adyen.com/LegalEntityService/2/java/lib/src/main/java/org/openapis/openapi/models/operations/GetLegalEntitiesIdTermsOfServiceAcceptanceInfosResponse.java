@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLegalEntitiesIdTermsOfServiceAcceptanceInfosResponse {
     
     public String contentType;
+
     public GetLegalEntitiesIdTermsOfServiceAcceptanceInfosResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetLegalEntitiesIdTermsOfServiceAcceptanceInfosResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTermsOfServiceAcceptanceInfosResponse getTermsOfServiceAcceptanceInfosResponse;
+
     public GetLegalEntitiesIdTermsOfServiceAcceptanceInfosResponse withGetTermsOfServiceAcceptanceInfosResponse(org.openapis.openapi.models.shared.GetTermsOfServiceAcceptanceInfosResponse getTermsOfServiceAcceptanceInfosResponse) {
         this.getTermsOfServiceAcceptanceInfosResponse = getTermsOfServiceAcceptanceInfosResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetLegalEntitiesIdTermsOfServiceAcceptanceInfosResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public GetLegalEntitiesIdTermsOfServiceAcceptanceInfosResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class GetLegalEntitiesIdTermsOfServiceAcceptanceInfosResponse {
     
     
     public Integer statusCode;
+
     public GetLegalEntitiesIdTermsOfServiceAcceptanceInfosResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetLegalEntitiesIdTermsOfServiceAcceptanceInfosResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLegalEntitiesIdTermsOfServiceAcceptanceInfosResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetLegalEntitiesIdTermsOfServiceAcceptanceInfosResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

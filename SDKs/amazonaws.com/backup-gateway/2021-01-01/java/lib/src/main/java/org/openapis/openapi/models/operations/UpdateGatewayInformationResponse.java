@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateGatewayInformationResponse {
@@ -12,6 +13,7 @@ public class UpdateGatewayInformationResponse {
      */
     
     public Object conflictException;
+
     public UpdateGatewayInformationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateGatewayInformationResponse {
     
     
     public String contentType;
+
     public UpdateGatewayInformationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateGatewayInformationResponse {
      */
     
     public Object internalServerException;
+
     public UpdateGatewayInformationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateGatewayInformationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateGatewayInformationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateGatewayInformationResponse {
     
     
     public Integer statusCode;
+
     public UpdateGatewayInformationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateGatewayInformationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateGatewayInformationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateGatewayInformationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateGatewayInformationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateGatewayInformationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateGatewayInformationOutput updateGatewayInformationOutput;
+
     public UpdateGatewayInformationResponse withUpdateGatewayInformationOutput(org.openapis.openapi.models.shared.UpdateGatewayInformationOutput updateGatewayInformationOutput) {
         this.updateGatewayInformationOutput = updateGatewayInformationOutput;
         return this;
@@ -83,9 +92,14 @@ public class UpdateGatewayInformationResponse {
      */
     
     public Object validationException;
+
     public UpdateGatewayInformationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateGatewayInformationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

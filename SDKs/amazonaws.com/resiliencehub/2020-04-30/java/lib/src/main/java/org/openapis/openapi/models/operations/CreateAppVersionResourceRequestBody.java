@@ -15,26 +15,29 @@ public class CreateAppVersionResourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInfo")
     public java.util.Map<String, String[]> additionalInfo;
+
     public CreateAppVersionResourceRequestBody withAdditionalInfo(java.util.Map<String, String[]> additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
     }
     
     /**
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
      */
     @JsonProperty("appArn")
     public String appArn;
+
     public CreateAppVersionResourceRequestBody withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
     }
     
     /**
-     * The list of Application Components that this resource belongs to. If an Application Component is not part of the AWS Resilience Hub application, it will be added.
+     * The list of Application Components that this resource belongs to. If an Application Component is not part of the Resilience Hub application, it will be added.
      */
     @JsonProperty("appComponents")
     public String[] appComponents;
+
     public CreateAppVersionResourceRequestBody withAppComponents(String[] appComponents) {
         this.appComponents = appComponents;
         return this;
@@ -46,6 +49,7 @@ public class CreateAppVersionResourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsAccountId")
     public String awsAccountId;
+
     public CreateAppVersionResourceRequestBody withAwsAccountId(String awsAccountId) {
         this.awsAccountId = awsAccountId;
         return this;
@@ -57,6 +61,7 @@ public class CreateAppVersionResourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsRegion")
     public String awsRegion;
+
     public CreateAppVersionResourceRequestBody withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -68,6 +73,7 @@ public class CreateAppVersionResourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateAppVersionResourceRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -78,6 +84,7 @@ public class CreateAppVersionResourceRequestBody {
      */
     @JsonProperty("logicalResourceId")
     public CreateAppVersionResourceRequestBodyLogicalResourceId logicalResourceId;
+
     public CreateAppVersionResourceRequestBody withLogicalResourceId(CreateAppVersionResourceRequestBodyLogicalResourceId logicalResourceId) {
         this.logicalResourceId = logicalResourceId;
         return this;
@@ -88,6 +95,7 @@ public class CreateAppVersionResourceRequestBody {
      */
     @JsonProperty("physicalResourceId")
     public String physicalResourceId;
+
     public CreateAppVersionResourceRequestBody withPhysicalResourceId(String physicalResourceId) {
         this.physicalResourceId = physicalResourceId;
         return this;
@@ -98,6 +106,7 @@ public class CreateAppVersionResourceRequestBody {
      */
     @JsonProperty("resourceName")
     public String resourceName;
+
     public CreateAppVersionResourceRequestBody withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -108,9 +117,18 @@ public class CreateAppVersionResourceRequestBody {
      */
     @JsonProperty("resourceType")
     public String resourceType;
+
     public CreateAppVersionResourceRequestBody withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public CreateAppVersionResourceRequestBody(@JsonProperty("appArn") String appArn, @JsonProperty("appComponents") String[] appComponents, @JsonProperty("logicalResourceId") CreateAppVersionResourceRequestBodyLogicalResourceId logicalResourceId, @JsonProperty("physicalResourceId") String physicalResourceId, @JsonProperty("resourceName") String resourceName, @JsonProperty("resourceType") String resourceType) {
+        this.appArn = appArn;
+        this.appComponents = appComponents;
+        this.logicalResourceId = logicalResourceId;
+        this.physicalResourceId = physicalResourceId;
+        this.resourceName = resourceName;
+        this.resourceType = resourceType;
+  }
 }

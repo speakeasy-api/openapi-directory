@@ -15,6 +15,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMGeographic
      */
     @JsonProperty("Latitude")
     public String latitude;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMGeographicLocation withLatitude(String latitude) {
         this.latitude = latitude;
         return this;
@@ -25,9 +26,14 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMGeographic
      */
     @JsonProperty("Longitude")
     public String longitude;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMGeographicLocation withLongitude(String longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMGeographicLocation(@JsonProperty("Latitude") String latitude, @JsonProperty("Longitude") String longitude) {
+        this.latitude = latitude;
+        this.longitude = longitude;
+  }
 }

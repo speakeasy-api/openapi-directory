@@ -15,6 +15,7 @@ public class RegisterClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public RegisterClusterRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -25,6 +26,7 @@ public class RegisterClusterRequestBody {
      */
     @JsonProperty("connectorConfig")
     public RegisterClusterRequestBodyConnectorConfig connectorConfig;
+
     public RegisterClusterRequestBody withConnectorConfig(RegisterClusterRequestBodyConnectorConfig connectorConfig) {
         this.connectorConfig = connectorConfig;
         return this;
@@ -35,6 +37,7 @@ public class RegisterClusterRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public RegisterClusterRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -46,9 +49,14 @@ public class RegisterClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public RegisterClusterRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public RegisterClusterRequestBody(@JsonProperty("connectorConfig") RegisterClusterRequestBodyConnectorConfig connectorConfig, @JsonProperty("name") String name) {
+        this.connectorConfig = connectorConfig;
+        this.name = name;
+  }
 }

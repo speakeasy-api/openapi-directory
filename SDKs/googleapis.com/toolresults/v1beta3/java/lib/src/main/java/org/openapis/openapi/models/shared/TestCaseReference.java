@@ -18,6 +18,7 @@ public class TestCaseReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("className")
     public String className;
+
     public TestCaseReference withClassName(String className) {
         this.className = className;
         return this;
@@ -29,6 +30,7 @@ public class TestCaseReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TestCaseReference withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class TestCaseReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testSuiteName")
     public String testSuiteName;
+
     public TestCaseReference withTestSuiteName(String testSuiteName) {
         this.testSuiteName = testSuiteName;
         return this;
     }
     
+    public TestCaseReference(){}
 }

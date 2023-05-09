@@ -18,9 +18,11 @@ public class EnterpriseCrmEventbusProtoNextTeardownTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EnterpriseCrmEventbusProtoNextTeardownTask withName(String name) {
         this.name = name;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoNextTeardownTask(){}
 }

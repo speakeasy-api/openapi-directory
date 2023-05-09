@@ -18,6 +18,7 @@ public class UserUpdateContentNotifications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_number")
     public String phoneNumber;
+
     public UserUpdateContentNotifications withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -29,9 +30,11 @@ public class UserUpdateContentNotifications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sms_enabled")
     public Boolean smsEnabled;
+
     public UserUpdateContentNotifications withSmsEnabled(Boolean smsEnabled) {
         this.smsEnabled = smsEnabled;
         return this;
     }
     
+    public UserUpdateContentNotifications(){}
 }

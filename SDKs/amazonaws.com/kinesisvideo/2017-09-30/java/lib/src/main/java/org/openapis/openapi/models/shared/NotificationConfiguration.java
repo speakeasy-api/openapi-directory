@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NotificationConfiguration {
     @JsonProperty("DestinationConfig")
     public NotificationDestinationConfig destinationConfig;
+
     public NotificationConfiguration withDestinationConfig(NotificationDestinationConfig destinationConfig) {
         this.destinationConfig = destinationConfig;
         return this;
@@ -19,9 +20,14 @@ public class NotificationConfiguration {
     
     @JsonProperty("Status")
     public ConfigurationStatusEnum status;
+
     public NotificationConfiguration withStatus(ConfigurationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public NotificationConfiguration(@JsonProperty("DestinationConfig") NotificationDestinationConfig destinationConfig, @JsonProperty("Status") ConfigurationStatusEnum status) {
+        this.destinationConfig = destinationConfig;
+        this.status = status;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReleasePhoneNumberResponse {
@@ -12,6 +13,7 @@ public class ReleasePhoneNumberResponse {
      */
     
     public Object accessDeniedException;
+
     public ReleasePhoneNumberResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ReleasePhoneNumberResponse {
      */
     
     public Object conflictException;
+
     public ReleasePhoneNumberResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ReleasePhoneNumberResponse {
     
     
     public String contentType;
+
     public ReleasePhoneNumberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ReleasePhoneNumberResponse {
      */
     
     public Object internalServerException;
+
     public ReleasePhoneNumberResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ReleasePhoneNumberResponse {
      */
     
     public org.openapis.openapi.models.shared.ReleasePhoneNumberResult releasePhoneNumberResult;
+
     public ReleasePhoneNumberResponse withReleasePhoneNumberResult(org.openapis.openapi.models.shared.ReleasePhoneNumberResult releasePhoneNumberResult) {
         this.releasePhoneNumberResult = releasePhoneNumberResult;
         return this;
@@ -59,6 +65,7 @@ public class ReleasePhoneNumberResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ReleasePhoneNumberResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ReleasePhoneNumberResponse {
     
     
     public Integer statusCode;
+
     public ReleasePhoneNumberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ReleasePhoneNumberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReleasePhoneNumberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ReleasePhoneNumberResponse {
      */
     
     public Object throttlingException;
+
     public ReleasePhoneNumberResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ReleasePhoneNumberResponse {
      */
     
     public Object validationException;
+
     public ReleasePhoneNumberResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ReleasePhoneNumberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0CommonLocationGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedItemSets")
     public String[] feedItemSets;
+
     public GoogleAdsSearchads360V0CommonLocationGroupInfo withFeedItemSets(String[] feedItemSets) {
         this.feedItemSets = feedItemSets;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0CommonLocationGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoTargetConstants")
     public String[] geoTargetConstants;
+
     public GoogleAdsSearchads360V0CommonLocationGroupInfo withGeoTargetConstants(String[] geoTargetConstants) {
         this.geoTargetConstants = geoTargetConstants;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAdsSearchads360V0CommonLocationGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("radius")
     public String radius;
+
     public GoogleAdsSearchads360V0CommonLocationGroupInfo withRadius(String radius) {
         this.radius = radius;
         return this;
@@ -51,9 +54,11 @@ public class GoogleAdsSearchads360V0CommonLocationGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("radiusUnits")
     public GoogleAdsSearchads360V0CommonLocationGroupInfoRadiusUnitsEnum radiusUnits;
+
     public GoogleAdsSearchads360V0CommonLocationGroupInfo withRadiusUnits(GoogleAdsSearchads360V0CommonLocationGroupInfoRadiusUnitsEnum radiusUnits) {
         this.radiusUnits = radiusUnits;
         return this;
     }
     
+    public GoogleAdsSearchads360V0CommonLocationGroupInfo(){}
 }

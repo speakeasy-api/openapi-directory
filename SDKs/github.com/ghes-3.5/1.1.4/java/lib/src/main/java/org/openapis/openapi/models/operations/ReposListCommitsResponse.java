@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposListCommitsResponse {
     
     public String contentType;
+
     public ReposListCommitsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposListCommitsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ReposListCommitsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ReposListCommitsResponse {
     
     
     public Integer statusCode;
+
     public ReposListCommitsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ReposListCommitsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposListCommitsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ReposListCommitsResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposListCommitsResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,6 +56,7 @@ public class ReposListCommitsResponse {
      */
     
     public org.openapis.openapi.models.shared.Commit[] commits;
+
     public ReposListCommitsResponse withCommits(org.openapis.openapi.models.shared.Commit[] commits) {
         this.commits = commits;
         return this;
@@ -60,9 +67,14 @@ public class ReposListCommitsResponse {
      */
     
     public org.openapis.openapi.models.shared.ScimError scimError;
+
     public ReposListCommitsResponse withScimError(org.openapis.openapi.models.shared.ScimError scimError) {
         this.scimError = scimError;
         return this;
     }
     
+    public ReposListCommitsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

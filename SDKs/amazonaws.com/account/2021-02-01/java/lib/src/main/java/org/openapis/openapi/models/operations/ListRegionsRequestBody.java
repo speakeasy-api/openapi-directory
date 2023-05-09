@@ -15,6 +15,7 @@ public class ListRegionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public ListRegionsRequestBody withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -26,6 +27,7 @@ public class ListRegionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListRegionsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class ListRegionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRegionsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -48,9 +51,11 @@ public class ListRegionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegionOptStatusContains")
     public org.openapis.openapi.models.shared.RegionOptStatusEnum[] regionOptStatusContains;
+
     public ListRegionsRequestBody withRegionOptStatusContains(org.openapis.openapi.models.shared.RegionOptStatusEnum[] regionOptStatusContains) {
         this.regionOptStatusContains = regionOptStatusContains;
         return this;
     }
     
+    public ListRegionsRequestBody(){}
 }

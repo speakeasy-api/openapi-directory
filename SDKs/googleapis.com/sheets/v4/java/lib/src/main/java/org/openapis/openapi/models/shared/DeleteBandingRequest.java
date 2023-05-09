@@ -18,9 +18,11 @@ public class DeleteBandingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandedRangeId")
     public Integer bandedRangeId;
+
     public DeleteBandingRequest withBandedRangeId(Integer bandedRangeId) {
         this.bandedRangeId = bandedRangeId;
         return this;
     }
     
+    public DeleteBandingRequest(){}
 }

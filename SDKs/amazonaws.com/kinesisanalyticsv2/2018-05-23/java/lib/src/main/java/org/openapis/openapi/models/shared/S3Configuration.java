@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3Configuration {
     @JsonProperty("BucketARN")
     public String bucketARN;
+
     public S3Configuration withBucketARN(String bucketARN) {
         this.bucketARN = bucketARN;
         return this;
@@ -19,9 +20,14 @@ public class S3Configuration {
     
     @JsonProperty("FileKey")
     public String fileKey;
+
     public S3Configuration withFileKey(String fileKey) {
         this.fileKey = fileKey;
         return this;
     }
     
+    public S3Configuration(@JsonProperty("BucketARN") String bucketARN, @JsonProperty("FileKey") String fileKey) {
+        this.bucketARN = bucketARN;
+        this.fileKey = fileKey;
+  }
 }

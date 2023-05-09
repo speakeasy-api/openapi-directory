@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeEnvironmentHealthRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeEnvironmentHealthActionEnum action;
+
     public GETDescribeEnvironmentHealthRequest withAction(GETDescribeEnvironmentHealthActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeEnvironmentHealthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AttributeNames")
     public org.openapis.openapi.models.shared.EnvironmentHealthAttributeEnum[] attributeNames;
+
     public GETDescribeEnvironmentHealthRequest withAttributeNames(org.openapis.openapi.models.shared.EnvironmentHealthAttributeEnum[] attributeNames) {
         this.attributeNames = attributeNames;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeEnvironmentHealthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentId")
     public String environmentId;
+
     public GETDescribeEnvironmentHealthRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeEnvironmentHealthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentName")
     public String environmentName;
+
     public GETDescribeEnvironmentHealthRequest withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -46,6 +51,7 @@ public class GETDescribeEnvironmentHealthRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeEnvironmentHealthVersionEnum version;
+
     public GETDescribeEnvironmentHealthRequest withVersion(GETDescribeEnvironmentHealthVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETDescribeEnvironmentHealthRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeEnvironmentHealthRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETDescribeEnvironmentHealthRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeEnvironmentHealthRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETDescribeEnvironmentHealthRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeEnvironmentHealthRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETDescribeEnvironmentHealthRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeEnvironmentHealthRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETDescribeEnvironmentHealthRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeEnvironmentHealthRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETDescribeEnvironmentHealthRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeEnvironmentHealthRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,14 @@ public class GETDescribeEnvironmentHealthRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeEnvironmentHealthRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeEnvironmentHealthRequest(@JsonProperty("Action") GETDescribeEnvironmentHealthActionEnum action, @JsonProperty("Version") GETDescribeEnvironmentHealthVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

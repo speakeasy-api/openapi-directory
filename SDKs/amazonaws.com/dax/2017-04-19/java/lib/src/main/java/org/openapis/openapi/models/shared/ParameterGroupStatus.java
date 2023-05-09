@@ -15,6 +15,7 @@ public class ParameterGroupStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NodeIdsToReboot")
     public String[] nodeIdsToReboot;
+
     public ParameterGroupStatus withNodeIdsToReboot(String[] nodeIdsToReboot) {
         this.nodeIdsToReboot = nodeIdsToReboot;
         return this;
@@ -23,6 +24,7 @@ public class ParameterGroupStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterApplyStatus")
     public String parameterApplyStatus;
+
     public ParameterGroupStatus withParameterApplyStatus(String parameterApplyStatus) {
         this.parameterApplyStatus = parameterApplyStatus;
         return this;
@@ -31,9 +33,11 @@ public class ParameterGroupStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterGroupName")
     public String parameterGroupName;
+
     public ParameterGroupStatus withParameterGroupName(String parameterGroupName) {
         this.parameterGroupName = parameterGroupName;
         return this;
     }
     
+    public ParameterGroupStatus(){}
 }

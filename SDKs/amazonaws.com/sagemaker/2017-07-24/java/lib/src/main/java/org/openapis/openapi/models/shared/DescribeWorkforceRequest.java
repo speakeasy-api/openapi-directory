@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeWorkforceRequest {
     @JsonProperty("WorkforceName")
     public String workforceName;
+
     public DescribeWorkforceRequest withWorkforceName(String workforceName) {
         this.workforceName = workforceName;
         return this;
     }
     
+    public DescribeWorkforceRequest(@JsonProperty("WorkforceName") String workforceName) {
+        this.workforceName = workforceName;
+  }
 }

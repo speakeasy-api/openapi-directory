@@ -15,6 +15,7 @@ public class ListActiveViolationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeViolations")
     public ActiveViolation[] activeViolations;
+
     public ListActiveViolationsResponse withActiveViolations(ActiveViolation[] activeViolations) {
         this.activeViolations = activeViolations;
         return this;
@@ -23,9 +24,11 @@ public class ListActiveViolationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListActiveViolationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListActiveViolationsResponse(){}
 }

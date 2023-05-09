@@ -15,6 +15,7 @@ public class UpdateExperimentTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public java.util.Map<String, org.openapis.openapi.models.shared.UpdateExperimentTemplateActionInputItem> actions;
+
     public UpdateExperimentTemplateRequestBody withActions(java.util.Map<String, org.openapis.openapi.models.shared.UpdateExperimentTemplateActionInputItem> actions) {
         this.actions = actions;
         return this;
@@ -26,6 +27,7 @@ public class UpdateExperimentTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateExperimentTemplateRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class UpdateExperimentTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logConfiguration")
     public UpdateExperimentTemplateRequestBodyLogConfiguration logConfiguration;
+
     public UpdateExperimentTemplateRequestBody withLogConfiguration(UpdateExperimentTemplateRequestBodyLogConfiguration logConfiguration) {
         this.logConfiguration = logConfiguration;
         return this;
@@ -48,6 +51,7 @@ public class UpdateExperimentTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public UpdateExperimentTemplateRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -59,6 +63,7 @@ public class UpdateExperimentTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopConditions")
     public org.openapis.openapi.models.shared.UpdateExperimentTemplateStopConditionInput[] stopConditions;
+
     public UpdateExperimentTemplateRequestBody withStopConditions(org.openapis.openapi.models.shared.UpdateExperimentTemplateStopConditionInput[] stopConditions) {
         this.stopConditions = stopConditions;
         return this;
@@ -70,9 +75,11 @@ public class UpdateExperimentTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targets")
     public java.util.Map<String, org.openapis.openapi.models.shared.UpdateExperimentTemplateTargetInput> targets;
+
     public UpdateExperimentTemplateRequestBody withTargets(java.util.Map<String, org.openapis.openapi.models.shared.UpdateExperimentTemplateTargetInput> targets) {
         this.targets = targets;
         return this;
     }
     
+    public UpdateExperimentTemplateRequestBody(){}
 }

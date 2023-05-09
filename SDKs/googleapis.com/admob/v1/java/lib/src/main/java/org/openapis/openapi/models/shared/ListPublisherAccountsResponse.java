@@ -18,6 +18,7 @@ public class ListPublisherAccountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public PublisherAccount[] account;
+
     public ListPublisherAccountsResponse withAccount(PublisherAccount[] account) {
         this.account = account;
         return this;
@@ -29,9 +30,11 @@ public class ListPublisherAccountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListPublisherAccountsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListPublisherAccountsResponse(){}
 }

@@ -18,6 +18,7 @@ public class PublicAdvertisedPrefixListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public PublicAdvertisedPrefixListWarningCodeEnum code;
+
     public PublicAdvertisedPrefixListWarning withCode(PublicAdvertisedPrefixListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class PublicAdvertisedPrefixListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public PublicAdvertisedPrefixListWarningData[] data;
+
     public PublicAdvertisedPrefixListWarning withData(PublicAdvertisedPrefixListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class PublicAdvertisedPrefixListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PublicAdvertisedPrefixListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PublicAdvertisedPrefixListWarning(){}
 }

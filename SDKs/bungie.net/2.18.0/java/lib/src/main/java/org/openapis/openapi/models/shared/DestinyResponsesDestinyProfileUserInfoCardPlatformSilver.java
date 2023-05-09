@@ -16,9 +16,11 @@ public class DestinyResponsesDestinyProfileUserInfoCardPlatformSilver {
      */
     
     public java.util.Map<String, DestinyEntitiesItemsDestinyItemComponent> platformSilver;
+
     public DestinyResponsesDestinyProfileUserInfoCardPlatformSilver withPlatformSilver(java.util.Map<String, DestinyEntitiesItemsDestinyItemComponent> platformSilver) {
         this.platformSilver = platformSilver;
         return this;
     }
     
+    public DestinyResponsesDestinyProfileUserInfoCardPlatformSilver(){}
 }

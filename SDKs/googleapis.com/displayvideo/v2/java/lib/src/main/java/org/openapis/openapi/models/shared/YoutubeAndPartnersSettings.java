@@ -18,6 +18,7 @@ public class YoutubeAndPartnersSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("biddingStrategy")
     public YoutubeAndPartnersBiddingStrategy biddingStrategy;
+
     public YoutubeAndPartnersSettings withBiddingStrategy(YoutubeAndPartnersBiddingStrategy biddingStrategy) {
         this.biddingStrategy = biddingStrategy;
         return this;
@@ -29,6 +30,7 @@ public class YoutubeAndPartnersSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentCategory")
     public YoutubeAndPartnersSettingsContentCategoryEnum contentCategory;
+
     public YoutubeAndPartnersSettings withContentCategory(YoutubeAndPartnersSettingsContentCategoryEnum contentCategory) {
         this.contentCategory = contentCategory;
         return this;
@@ -40,6 +42,7 @@ public class YoutubeAndPartnersSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventorySourceSettings")
     public YoutubeAndPartnersInventorySourceConfig inventorySourceSettings;
+
     public YoutubeAndPartnersSettings withInventorySourceSettings(YoutubeAndPartnersInventorySourceConfig inventorySourceSettings) {
         this.inventorySourceSettings = inventorySourceSettings;
         return this;
@@ -51,6 +54,7 @@ public class YoutubeAndPartnersSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leadFormId")
     public String leadFormId;
+
     public YoutubeAndPartnersSettings withLeadFormId(String leadFormId) {
         this.leadFormId = leadFormId;
         return this;
@@ -62,6 +66,7 @@ public class YoutubeAndPartnersSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedMerchantId")
     public String linkedMerchantId;
+
     public YoutubeAndPartnersSettings withLinkedMerchantId(String linkedMerchantId) {
         this.linkedMerchantId = linkedMerchantId;
         return this;
@@ -73,6 +78,7 @@ public class YoutubeAndPartnersSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relatedVideoIds")
     public String[] relatedVideoIds;
+
     public YoutubeAndPartnersSettings withRelatedVideoIds(String[] relatedVideoIds) {
         this.relatedVideoIds = relatedVideoIds;
         return this;
@@ -84,6 +90,7 @@ public class YoutubeAndPartnersSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetFrequency")
     public TargetFrequency targetFrequency;
+
     public YoutubeAndPartnersSettings withTargetFrequency(TargetFrequency targetFrequency) {
         this.targetFrequency = targetFrequency;
         return this;
@@ -95,6 +102,7 @@ public class YoutubeAndPartnersSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thirdPartyMeasurementSettings")
     public YoutubeAndPartnersThirdPartyMeasurementSettings thirdPartyMeasurementSettings;
+
     public YoutubeAndPartnersSettings withThirdPartyMeasurementSettings(YoutubeAndPartnersThirdPartyMeasurementSettings thirdPartyMeasurementSettings) {
         this.thirdPartyMeasurementSettings = thirdPartyMeasurementSettings;
         return this;
@@ -106,6 +114,7 @@ public class YoutubeAndPartnersSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoAdSequenceSettings")
     public VideoAdSequenceSettings videoAdSequenceSettings;
+
     public YoutubeAndPartnersSettings withVideoAdSequenceSettings(VideoAdSequenceSettings videoAdSequenceSettings) {
         this.videoAdSequenceSettings = videoAdSequenceSettings;
         return this;
@@ -117,9 +126,11 @@ public class YoutubeAndPartnersSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewFrequencyCap")
     public FrequencyCap viewFrequencyCap;
+
     public YoutubeAndPartnersSettings withViewFrequencyCap(FrequencyCap viewFrequencyCap) {
         this.viewFrequencyCap = viewFrequencyCap;
         return this;
     }
     
+    public YoutubeAndPartnersSettings(){}
 }

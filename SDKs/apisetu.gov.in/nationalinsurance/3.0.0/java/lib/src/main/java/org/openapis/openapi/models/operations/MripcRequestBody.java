@@ -15,6 +15,7 @@ public class MripcRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public MripcRequestBodyCertificateParameters certificateParameters;
+
     public MripcRequestBody withCertificateParameters(MripcRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class MripcRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public MripcRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class MripcRequestBody {
      */
     @JsonProperty("format")
     public MripcRequestBodyFormatEnum format;
+
     public MripcRequestBody withFormat(MripcRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class MripcRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public MripcRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public MripcRequestBody(@JsonProperty("format") MripcRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

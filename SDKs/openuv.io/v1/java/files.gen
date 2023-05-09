@@ -38,4 +38,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetUvResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Forecast.java
 lib/src/main/java/org/openapis/openapi/models/shared/ProtectionResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/UvIndexResult.java
+docs/sdk/README.md
 USAGE.md

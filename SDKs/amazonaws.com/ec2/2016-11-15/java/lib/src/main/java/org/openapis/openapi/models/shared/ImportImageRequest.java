@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ImportImageRequest {
     
     public String architecture;
+
     public ImportImageRequest withArchitecture(String architecture) {
         this.architecture = architecture;
         return this;
@@ -16,6 +17,7 @@ public class ImportImageRequest {
     
     
     public BootModeValuesEnum bootMode;
+
     public ImportImageRequest withBootMode(BootModeValuesEnum bootMode) {
         this.bootMode = bootMode;
         return this;
@@ -23,6 +25,7 @@ public class ImportImageRequest {
     
     
     public ClientData clientData;
+
     public ImportImageRequest withClientData(ClientData clientData) {
         this.clientData = clientData;
         return this;
@@ -30,6 +33,7 @@ public class ImportImageRequest {
     
     
     public String clientToken;
+
     public ImportImageRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -37,6 +41,7 @@ public class ImportImageRequest {
     
     
     public String description;
+
     public ImportImageRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +49,7 @@ public class ImportImageRequest {
     
     
     public ImportImageRequestDiskContainers[] diskContainers;
+
     public ImportImageRequest withDiskContainers(ImportImageRequestDiskContainers[] diskContainers) {
         this.diskContainers = diskContainers;
         return this;
@@ -51,6 +57,7 @@ public class ImportImageRequest {
     
     
     public Boolean dryRun;
+
     public ImportImageRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -58,6 +65,7 @@ public class ImportImageRequest {
     
     
     public Boolean encrypted;
+
     public ImportImageRequest withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -65,6 +73,7 @@ public class ImportImageRequest {
     
     
     public String hypervisor;
+
     public ImportImageRequest withHypervisor(String hypervisor) {
         this.hypervisor = hypervisor;
         return this;
@@ -72,6 +81,7 @@ public class ImportImageRequest {
     
     
     public String kmsKeyId;
+
     public ImportImageRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -79,6 +89,7 @@ public class ImportImageRequest {
     
     
     public ImportImageLicenseSpecificationListRequest[] licenseSpecifications;
+
     public ImportImageRequest withLicenseSpecifications(ImportImageLicenseSpecificationListRequest[] licenseSpecifications) {
         this.licenseSpecifications = licenseSpecifications;
         return this;
@@ -86,6 +97,7 @@ public class ImportImageRequest {
     
     
     public String licenseType;
+
     public ImportImageRequest withLicenseType(String licenseType) {
         this.licenseType = licenseType;
         return this;
@@ -93,6 +105,7 @@ public class ImportImageRequest {
     
     
     public String platform;
+
     public ImportImageRequest withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -100,6 +113,7 @@ public class ImportImageRequest {
     
     
     public String roleName;
+
     public ImportImageRequest withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
@@ -107,6 +121,7 @@ public class ImportImageRequest {
     
     
     public ImportImageRequestTagSpecifications[] tagSpecifications;
+
     public ImportImageRequest withTagSpecifications(ImportImageRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -114,9 +129,11 @@ public class ImportImageRequest {
     
     
     public String usageOperation;
+
     public ImportImageRequest withUsageOperation(String usageOperation) {
         this.usageOperation = usageOperation;
         return this;
     }
     
+    public ImportImageRequest(){}
 }

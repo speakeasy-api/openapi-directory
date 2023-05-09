@@ -56,11 +56,9 @@ public class TeamMembers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteUserUserIdResponse res = new org.openapis.openapi.models.operations.DeleteUserUserIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteUserUserIdResponse res = new org.openapis.openapi.models.operations.DeleteUserUserIdResponse(contentType, httpRes.statusCode()) {{
             invalidToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,12 +97,10 @@ public class TeamMembers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserUserIdResponse res = new org.openapis.openapi.models.operations.GetUserUserIdResponse() {{
+        org.openapis.openapi.models.operations.GetUserUserIdResponse res = new org.openapis.openapi.models.operations.GetUserUserIdResponse(contentType, httpRes.statusCode()) {{
             userRecord = null;
             invalidToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,12 +143,10 @@ public class TeamMembers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersResponse res = new org.openapis.openapi.models.operations.GetUsersResponse() {{
+        org.openapis.openapi.models.operations.GetUsersResponse res = new org.openapis.openapi.models.operations.GetUsersResponse(contentType, httpRes.statusCode()) {{
             userRecords = null;
             invalidToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,12 +194,10 @@ public class TeamMembers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostUserResponse res = new org.openapis.openapi.models.operations.PostUserResponse() {{
+        org.openapis.openapi.models.operations.PostUserResponse res = new org.openapis.openapi.models.operations.PostUserResponse(contentType, httpRes.statusCode()) {{
             createUserResponse = null;
             invalidToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

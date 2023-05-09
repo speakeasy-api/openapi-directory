@@ -18,6 +18,7 @@ public class ExtensionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationReceiver")
     public String notificationReceiver;
+
     public ExtensionConfig withNotificationReceiver(String notificationReceiver) {
         this.notificationReceiver = notificationReceiver;
         return this;
@@ -29,9 +30,11 @@ public class ExtensionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signingKeyFingerprintsSha256")
     public String[] signingKeyFingerprintsSha256;
+
     public ExtensionConfig withSigningKeyFingerprintsSha256(String[] signingKeyFingerprintsSha256) {
         this.signingKeyFingerprintsSha256 = signingKeyFingerprintsSha256;
         return this;
     }
     
+    public ExtensionConfig(){}
 }

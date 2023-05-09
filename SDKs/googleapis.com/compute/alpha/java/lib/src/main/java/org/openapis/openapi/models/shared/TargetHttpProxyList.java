@@ -18,6 +18,7 @@ public class TargetHttpProxyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TargetHttpProxyList withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class TargetHttpProxyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public TargetHttpProxy[] items;
+
     public TargetHttpProxyList withItems(TargetHttpProxy[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class TargetHttpProxyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TargetHttpProxyList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class TargetHttpProxyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public TargetHttpProxyList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -62,6 +66,7 @@ public class TargetHttpProxyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public TargetHttpProxyList withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -73,9 +78,11 @@ public class TargetHttpProxyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public TargetHttpProxyListWarning warning;
+
     public TargetHttpProxyList withWarning(TargetHttpProxyListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public TargetHttpProxyList(){}
 }

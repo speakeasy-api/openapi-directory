@@ -18,6 +18,7 @@ public class BatchDeleteCatalogObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted_at")
     public String deletedAt;
+
     public BatchDeleteCatalogObjectsResponse withDeletedAt(String deletedAt) {
         this.deletedAt = deletedAt;
         return this;
@@ -29,6 +30,7 @@ public class BatchDeleteCatalogObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted_object_ids")
     public String[] deletedObjectIds;
+
     public BatchDeleteCatalogObjectsResponse withDeletedObjectIds(String[] deletedObjectIds) {
         this.deletedObjectIds = deletedObjectIds;
         return this;
@@ -40,9 +42,11 @@ public class BatchDeleteCatalogObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public BatchDeleteCatalogObjectsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public BatchDeleteCatalogObjectsResponse(){}
 }

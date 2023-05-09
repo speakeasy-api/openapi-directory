@@ -15,9 +15,11 @@ public class PutResolverRulePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnValue")
     public Boolean returnValue;
+
     public PutResolverRulePolicyResponse withReturnValue(Boolean returnValue) {
         this.returnValue = returnValue;
         return this;
     }
     
+    public PutResolverRulePolicyResponse(){}
 }

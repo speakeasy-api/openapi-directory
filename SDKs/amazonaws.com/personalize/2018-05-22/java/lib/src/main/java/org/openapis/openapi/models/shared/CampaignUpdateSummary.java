@@ -23,6 +23,7 @@ public class CampaignUpdateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignConfig")
     public CampaignConfig campaignConfig;
+
     public CampaignUpdateSummary withCampaignConfig(CampaignConfig campaignConfig) {
         this.campaignConfig = campaignConfig;
         return this;
@@ -33,6 +34,7 @@ public class CampaignUpdateSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public CampaignUpdateSummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -41,6 +43,7 @@ public class CampaignUpdateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public CampaignUpdateSummary withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -51,6 +54,7 @@ public class CampaignUpdateSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public CampaignUpdateSummary withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -59,6 +63,7 @@ public class CampaignUpdateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minProvisionedTPS")
     public Long minProvisionedTPS;
+
     public CampaignUpdateSummary withMinProvisionedTPS(Long minProvisionedTPS) {
         this.minProvisionedTPS = minProvisionedTPS;
         return this;
@@ -67,6 +72,7 @@ public class CampaignUpdateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solutionVersionArn")
     public String solutionVersionArn;
+
     public CampaignUpdateSummary withSolutionVersionArn(String solutionVersionArn) {
         this.solutionVersionArn = solutionVersionArn;
         return this;
@@ -75,9 +81,11 @@ public class CampaignUpdateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public CampaignUpdateSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public CampaignUpdateSummary(){}
 }

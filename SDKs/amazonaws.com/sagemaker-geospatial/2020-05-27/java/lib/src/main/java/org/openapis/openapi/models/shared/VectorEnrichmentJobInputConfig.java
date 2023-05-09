@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VectorEnrichmentJobInputConfig {
     @JsonProperty("DataSourceConfig")
     public VectorEnrichmentJobDataSourceConfigInput dataSourceConfig;
+
     public VectorEnrichmentJobInputConfig withDataSourceConfig(VectorEnrichmentJobDataSourceConfigInput dataSourceConfig) {
         this.dataSourceConfig = dataSourceConfig;
         return this;
@@ -19,9 +20,14 @@ public class VectorEnrichmentJobInputConfig {
     
     @JsonProperty("DocumentType")
     public VectorEnrichmentJobDocumentTypeEnum documentType;
+
     public VectorEnrichmentJobInputConfig withDocumentType(VectorEnrichmentJobDocumentTypeEnum documentType) {
         this.documentType = documentType;
         return this;
     }
     
+    public VectorEnrichmentJobInputConfig(@JsonProperty("DataSourceConfig") VectorEnrichmentJobDataSourceConfigInput dataSourceConfig, @JsonProperty("DocumentType") VectorEnrichmentJobDocumentTypeEnum documentType) {
+        this.dataSourceConfig = dataSourceConfig;
+        this.documentType = documentType;
+  }
 }

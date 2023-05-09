@@ -15,6 +15,7 @@ public class RDSDataSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataRearrangement")
     public String dataRearrangement;
+
     public RDSDataSpec withDataRearrangement(String dataRearrangement) {
         this.dataRearrangement = dataRearrangement;
         return this;
@@ -23,6 +24,7 @@ public class RDSDataSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSchema")
     public String dataSchema;
+
     public RDSDataSpec withDataSchema(String dataSchema) {
         this.dataSchema = dataSchema;
         return this;
@@ -31,6 +33,7 @@ public class RDSDataSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSchemaUri")
     public String dataSchemaUri;
+
     public RDSDataSpec withDataSchemaUri(String dataSchemaUri) {
         this.dataSchemaUri = dataSchemaUri;
         return this;
@@ -38,6 +41,7 @@ public class RDSDataSpec {
     
     @JsonProperty("DatabaseCredentials")
     public RDSDatabaseCredentials databaseCredentials;
+
     public RDSDataSpec withDatabaseCredentials(RDSDatabaseCredentials databaseCredentials) {
         this.databaseCredentials = databaseCredentials;
         return this;
@@ -45,6 +49,7 @@ public class RDSDataSpec {
     
     @JsonProperty("DatabaseInformation")
     public RDSDatabase databaseInformation;
+
     public RDSDataSpec withDatabaseInformation(RDSDatabase databaseInformation) {
         this.databaseInformation = databaseInformation;
         return this;
@@ -52,6 +57,7 @@ public class RDSDataSpec {
     
     @JsonProperty("ResourceRole")
     public String resourceRole;
+
     public RDSDataSpec withResourceRole(String resourceRole) {
         this.resourceRole = resourceRole;
         return this;
@@ -59,6 +65,7 @@ public class RDSDataSpec {
     
     @JsonProperty("S3StagingLocation")
     public String s3StagingLocation;
+
     public RDSDataSpec withS3StagingLocation(String s3StagingLocation) {
         this.s3StagingLocation = s3StagingLocation;
         return this;
@@ -66,6 +73,7 @@ public class RDSDataSpec {
     
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public RDSDataSpec withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -73,6 +81,7 @@ public class RDSDataSpec {
     
     @JsonProperty("SelectSqlQuery")
     public String selectSqlQuery;
+
     public RDSDataSpec withSelectSqlQuery(String selectSqlQuery) {
         this.selectSqlQuery = selectSqlQuery;
         return this;
@@ -80,6 +89,7 @@ public class RDSDataSpec {
     
     @JsonProperty("ServiceRole")
     public String serviceRole;
+
     public RDSDataSpec withServiceRole(String serviceRole) {
         this.serviceRole = serviceRole;
         return this;
@@ -87,9 +97,20 @@ public class RDSDataSpec {
     
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public RDSDataSpec withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public RDSDataSpec(@JsonProperty("DatabaseCredentials") RDSDatabaseCredentials databaseCredentials, @JsonProperty("DatabaseInformation") RDSDatabase databaseInformation, @JsonProperty("ResourceRole") String resourceRole, @JsonProperty("S3StagingLocation") String s3StagingLocation, @JsonProperty("SecurityGroupIds") String[] securityGroupIds, @JsonProperty("SelectSqlQuery") String selectSqlQuery, @JsonProperty("ServiceRole") String serviceRole, @JsonProperty("SubnetId") String subnetId) {
+        this.databaseCredentials = databaseCredentials;
+        this.databaseInformation = databaseInformation;
+        this.resourceRole = resourceRole;
+        this.s3StagingLocation = s3StagingLocation;
+        this.securityGroupIds = securityGroupIds;
+        this.selectSqlQuery = selectSqlQuery;
+        this.serviceRole = serviceRole;
+        this.subnetId = subnetId;
+  }
 }

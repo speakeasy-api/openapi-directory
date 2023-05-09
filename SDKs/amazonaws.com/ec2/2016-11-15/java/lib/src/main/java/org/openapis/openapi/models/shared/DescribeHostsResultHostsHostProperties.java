@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeHostsResultHostsHostProperties {
     
     public Long cores;
+
     public DescribeHostsResultHostsHostProperties withCores(Long cores) {
         this.cores = cores;
         return this;
@@ -19,6 +20,7 @@ public class DescribeHostsResultHostsHostProperties {
     
     
     public String instanceFamily;
+
     public DescribeHostsResultHostsHostProperties withInstanceFamily(String instanceFamily) {
         this.instanceFamily = instanceFamily;
         return this;
@@ -26,6 +28,7 @@ public class DescribeHostsResultHostsHostProperties {
     
     
     public String instanceType;
+
     public DescribeHostsResultHostsHostProperties withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -33,6 +36,7 @@ public class DescribeHostsResultHostsHostProperties {
     
     
     public Long sockets;
+
     public DescribeHostsResultHostsHostProperties withSockets(Long sockets) {
         this.sockets = sockets;
         return this;
@@ -40,9 +44,11 @@ public class DescribeHostsResultHostsHostProperties {
     
     
     public Long totalVCpus;
+
     public DescribeHostsResultHostsHostProperties withTotalVCpus(Long totalVCpus) {
         this.totalVCpus = totalVCpus;
         return this;
     }
     
+    public DescribeHostsResultHostsHostProperties(){}
 }

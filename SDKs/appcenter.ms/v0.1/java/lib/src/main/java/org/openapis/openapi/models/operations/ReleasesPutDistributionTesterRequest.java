@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesPutDistributionTesterRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ReleasesPutDistributionTesterRequestBody requestBody;
+
     public ReleasesPutDistributionTesterRequest withRequestBody(ReleasesPutDistributionTesterRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ReleasesPutDistributionTesterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ReleasesPutDistributionTesterRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -29,6 +32,7 @@ public class ReleasesPutDistributionTesterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ReleasesPutDistributionTesterRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -39,6 +43,7 @@ public class ReleasesPutDistributionTesterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
     public Long releaseId;
+
     public ReleasesPutDistributionTesterRequest withReleaseId(Long releaseId) {
         this.releaseId = releaseId;
         return this;
@@ -49,9 +54,16 @@ public class ReleasesPutDistributionTesterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tester_id")
     public String testerId;
+
     public ReleasesPutDistributionTesterRequest withTesterId(String testerId) {
         this.testerId = testerId;
         return this;
     }
     
+    public ReleasesPutDistributionTesterRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("release_id") Long releaseId, @JsonProperty("tester_id") String testerId) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.releaseId = releaseId;
+        this.testerId = testerId;
+  }
 }

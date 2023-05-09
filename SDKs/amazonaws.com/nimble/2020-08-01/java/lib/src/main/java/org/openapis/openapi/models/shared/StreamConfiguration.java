@@ -15,6 +15,7 @@ public class StreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automaticTerminationMode")
     public AutomaticTerminationModeEnum automaticTerminationMode;
+
     public StreamConfiguration withAutomaticTerminationMode(AutomaticTerminationModeEnum automaticTerminationMode) {
         this.automaticTerminationMode = automaticTerminationMode;
         return this;
@@ -22,6 +23,7 @@ public class StreamConfiguration {
     
     @JsonProperty("clipboardMode")
     public StreamingClipboardModeEnum clipboardMode;
+
     public StreamConfiguration withClipboardMode(StreamingClipboardModeEnum clipboardMode) {
         this.clipboardMode = clipboardMode;
         return this;
@@ -29,6 +31,7 @@ public class StreamConfiguration {
     
     @JsonProperty("ec2InstanceTypes")
     public StreamingInstanceTypeEnum[] ec2InstanceTypes;
+
     public StreamConfiguration withEc2InstanceTypes(StreamingInstanceTypeEnum[] ec2InstanceTypes) {
         this.ec2InstanceTypes = ec2InstanceTypes;
         return this;
@@ -37,6 +40,7 @@ public class StreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxSessionLengthInMinutes")
     public Long maxSessionLengthInMinutes;
+
     public StreamConfiguration withMaxSessionLengthInMinutes(Long maxSessionLengthInMinutes) {
         this.maxSessionLengthInMinutes = maxSessionLengthInMinutes;
         return this;
@@ -45,6 +49,7 @@ public class StreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxStoppedSessionLengthInMinutes")
     public Long maxStoppedSessionLengthInMinutes;
+
     public StreamConfiguration withMaxStoppedSessionLengthInMinutes(Long maxStoppedSessionLengthInMinutes) {
         this.maxStoppedSessionLengthInMinutes = maxStoppedSessionLengthInMinutes;
         return this;
@@ -53,6 +58,7 @@ public class StreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionBackup")
     public StreamConfigurationSessionBackup sessionBackup;
+
     public StreamConfiguration withSessionBackup(StreamConfigurationSessionBackup sessionBackup) {
         this.sessionBackup = sessionBackup;
         return this;
@@ -61,6 +67,7 @@ public class StreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionPersistenceMode")
     public SessionPersistenceModeEnum sessionPersistenceMode;
+
     public StreamConfiguration withSessionPersistenceMode(SessionPersistenceModeEnum sessionPersistenceMode) {
         this.sessionPersistenceMode = sessionPersistenceMode;
         return this;
@@ -69,6 +76,7 @@ public class StreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionStorage")
     public StreamConfigurationSessionStorage sessionStorage;
+
     public StreamConfiguration withSessionStorage(StreamConfigurationSessionStorage sessionStorage) {
         this.sessionStorage = sessionStorage;
         return this;
@@ -76,6 +84,7 @@ public class StreamConfiguration {
     
     @JsonProperty("streamingImageIds")
     public String[] streamingImageIds;
+
     public StreamConfiguration withStreamingImageIds(String[] streamingImageIds) {
         this.streamingImageIds = streamingImageIds;
         return this;
@@ -84,9 +93,15 @@ public class StreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeConfiguration")
     public VolumeConfiguration volumeConfiguration;
+
     public StreamConfiguration withVolumeConfiguration(VolumeConfiguration volumeConfiguration) {
         this.volumeConfiguration = volumeConfiguration;
         return this;
     }
     
+    public StreamConfiguration(@JsonProperty("clipboardMode") StreamingClipboardModeEnum clipboardMode, @JsonProperty("ec2InstanceTypes") StreamingInstanceTypeEnum[] ec2InstanceTypes, @JsonProperty("streamingImageIds") String[] streamingImageIds) {
+        this.clipboardMode = clipboardMode;
+        this.ec2InstanceTypes = ec2InstanceTypes;
+        this.streamingImageIds = streamingImageIds;
+  }
 }

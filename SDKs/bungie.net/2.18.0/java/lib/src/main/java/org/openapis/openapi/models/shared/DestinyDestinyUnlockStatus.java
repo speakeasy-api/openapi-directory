@@ -16,6 +16,7 @@ public class DestinyDestinyUnlockStatus {
      */
     
     public Boolean isSet;
+
     public DestinyDestinyUnlockStatus withIsSet(Boolean isSet) {
         this.isSet = isSet;
         return this;
@@ -26,9 +27,11 @@ public class DestinyDestinyUnlockStatus {
      */
     
     public Long unlockHash;
+
     public DestinyDestinyUnlockStatus withUnlockHash(Long unlockHash) {
         this.unlockHash = unlockHash;
         return this;
     }
     
+    public DestinyDestinyUnlockStatus(){}
 }

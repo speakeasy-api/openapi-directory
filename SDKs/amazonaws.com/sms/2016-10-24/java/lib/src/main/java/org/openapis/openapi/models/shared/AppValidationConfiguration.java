@@ -15,6 +15,7 @@ public class AppValidationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appValidationStrategy")
     public AppValidationStrategyEnum appValidationStrategy;
+
     public AppValidationConfiguration withAppValidationStrategy(AppValidationStrategyEnum appValidationStrategy) {
         this.appValidationStrategy = appValidationStrategy;
         return this;
@@ -23,6 +24,7 @@ public class AppValidationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AppValidationConfiguration withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class AppValidationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssmValidationParameters")
     public SSMValidationParameters ssmValidationParameters;
+
     public AppValidationConfiguration withSsmValidationParameters(SSMValidationParameters ssmValidationParameters) {
         this.ssmValidationParameters = ssmValidationParameters;
         return this;
@@ -39,9 +42,11 @@ public class AppValidationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationId")
     public String validationId;
+
     public AppValidationConfiguration withValidationId(String validationId) {
         this.validationId = validationId;
         return this;
     }
     
+    public AppValidationConfiguration(){}
 }

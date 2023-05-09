@@ -21,6 +21,7 @@ public class TransactionResourceAttributes {
      */
     @JsonProperty("amount")
     public MoneyObject amount;
+
     public TransactionResourceAttributes withAmount(MoneyObject amount) {
         this.amount = amount;
         return this;
@@ -33,6 +34,7 @@ public class TransactionResourceAttributes {
      */
     @JsonProperty("cashback")
     public TransactionResourceAttributesCashback cashback;
+
     public TransactionResourceAttributes withCashback(TransactionResourceAttributesCashback cashback) {
         this.cashback = cashback;
         return this;
@@ -46,6 +48,7 @@ public class TransactionResourceAttributes {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public TransactionResourceAttributes withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -58,6 +61,7 @@ public class TransactionResourceAttributes {
      */
     @JsonProperty("description")
     public String description;
+
     public TransactionResourceAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -73,6 +77,7 @@ public class TransactionResourceAttributes {
      */
     @JsonProperty("foreignAmount")
     public TransactionResourceAttributesForeignAmount foreignAmount;
+
     public TransactionResourceAttributes withForeignAmount(TransactionResourceAttributesForeignAmount foreignAmount) {
         this.foreignAmount = foreignAmount;
         return this;
@@ -86,6 +91,7 @@ public class TransactionResourceAttributes {
      */
     @JsonProperty("holdInfo")
     public TransactionResourceAttributesHoldInfo holdInfo;
+
     public TransactionResourceAttributes withHoldInfo(TransactionResourceAttributesHoldInfo holdInfo) {
         this.holdInfo = holdInfo;
         return this;
@@ -98,6 +104,7 @@ public class TransactionResourceAttributes {
      */
     @JsonProperty("isCategorizable")
     public Boolean isCategorizable;
+
     public TransactionResourceAttributes withIsCategorizable(Boolean isCategorizable) {
         this.isCategorizable = isCategorizable;
         return this;
@@ -110,6 +117,7 @@ public class TransactionResourceAttributes {
      */
     @JsonProperty("message")
     public String message;
+
     public TransactionResourceAttributes withMessage(String message) {
         this.message = message;
         return this;
@@ -123,6 +131,7 @@ public class TransactionResourceAttributes {
      */
     @JsonProperty("rawText")
     public String rawText;
+
     public TransactionResourceAttributes withRawText(String rawText) {
         this.rawText = rawText;
         return this;
@@ -135,6 +144,7 @@ public class TransactionResourceAttributes {
      */
     @JsonProperty("roundUp")
     public TransactionResourceAttributesRoundUp roundUp;
+
     public TransactionResourceAttributes withRoundUp(TransactionResourceAttributesRoundUp roundUp) {
         this.roundUp = roundUp;
         return this;
@@ -149,6 +159,7 @@ public class TransactionResourceAttributes {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("settledAt")
     public OffsetDateTime settledAt;
+
     public TransactionResourceAttributes withSettledAt(OffsetDateTime settledAt) {
         this.settledAt = settledAt;
         return this;
@@ -161,9 +172,24 @@ public class TransactionResourceAttributes {
      */
     @JsonProperty("status")
     public TransactionStatusEnumEnum status;
+
     public TransactionResourceAttributes withStatus(TransactionStatusEnumEnum status) {
         this.status = status;
         return this;
     }
     
+    public TransactionResourceAttributes(@JsonProperty("amount") MoneyObject amount, @JsonProperty("cashback") TransactionResourceAttributesCashback cashback, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("description") String description, @JsonProperty("foreignAmount") TransactionResourceAttributesForeignAmount foreignAmount, @JsonProperty("holdInfo") TransactionResourceAttributesHoldInfo holdInfo, @JsonProperty("isCategorizable") Boolean isCategorizable, @JsonProperty("message") String message, @JsonProperty("rawText") String rawText, @JsonProperty("roundUp") TransactionResourceAttributesRoundUp roundUp, @JsonProperty("settledAt") OffsetDateTime settledAt, @JsonProperty("status") TransactionStatusEnumEnum status) {
+        this.amount = amount;
+        this.cashback = cashback;
+        this.createdAt = createdAt;
+        this.description = description;
+        this.foreignAmount = foreignAmount;
+        this.holdInfo = holdInfo;
+        this.isCategorizable = isCategorizable;
+        this.message = message;
+        this.rawText = rawText;
+        this.roundUp = roundUp;
+        this.settledAt = settledAt;
+        this.status = status;
+  }
 }

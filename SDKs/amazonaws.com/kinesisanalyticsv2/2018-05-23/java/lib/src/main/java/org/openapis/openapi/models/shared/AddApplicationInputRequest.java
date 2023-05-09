@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddApplicationInputRequest {
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public AddApplicationInputRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -16,6 +17,7 @@ public class AddApplicationInputRequest {
     
     @JsonProperty("CurrentApplicationVersionId")
     public Long currentApplicationVersionId;
+
     public AddApplicationInputRequest withCurrentApplicationVersionId(Long currentApplicationVersionId) {
         this.currentApplicationVersionId = currentApplicationVersionId;
         return this;
@@ -23,9 +25,15 @@ public class AddApplicationInputRequest {
     
     @JsonProperty("Input")
     public Input input;
+
     public AddApplicationInputRequest withInput(Input input) {
         this.input = input;
         return this;
     }
     
+    public AddApplicationInputRequest(@JsonProperty("ApplicationName") String applicationName, @JsonProperty("CurrentApplicationVersionId") Long currentApplicationVersionId, @JsonProperty("Input") Input input) {
+        this.applicationName = applicationName;
+        this.currentApplicationVersionId = currentApplicationVersionId;
+        this.input = input;
+  }
 }

@@ -15,6 +15,7 @@ public class DeploymentComponentUpdatePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public DeploymentComponentUpdatePolicyActionEnum action;
+
     public DeploymentComponentUpdatePolicy withAction(DeploymentComponentUpdatePolicyActionEnum action) {
         this.action = action;
         return this;
@@ -23,9 +24,11 @@ public class DeploymentComponentUpdatePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutInSeconds")
     public Long timeoutInSeconds;
+
     public DeploymentComponentUpdatePolicy withTimeoutInSeconds(Long timeoutInSeconds) {
         this.timeoutInSeconds = timeoutInSeconds;
         return this;
     }
     
+    public DeploymentComponentUpdatePolicy(){}
 }

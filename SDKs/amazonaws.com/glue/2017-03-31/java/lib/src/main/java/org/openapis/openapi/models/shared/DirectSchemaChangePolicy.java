@@ -15,6 +15,7 @@ public class DirectSchemaChangePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Database")
     public String database;
+
     public DirectSchemaChangePolicy withDatabase(String database) {
         this.database = database;
         return this;
@@ -23,6 +24,7 @@ public class DirectSchemaChangePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableUpdateCatalog")
     public Boolean enableUpdateCatalog;
+
     public DirectSchemaChangePolicy withEnableUpdateCatalog(Boolean enableUpdateCatalog) {
         this.enableUpdateCatalog = enableUpdateCatalog;
         return this;
@@ -31,6 +33,7 @@ public class DirectSchemaChangePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Table")
     public String table;
+
     public DirectSchemaChangePolicy withTable(String table) {
         this.table = table;
         return this;
@@ -39,9 +42,11 @@ public class DirectSchemaChangePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateBehavior")
     public UpdateCatalogBehaviorEnum updateBehavior;
+
     public DirectSchemaChangePolicy withUpdateBehavior(UpdateCatalogBehaviorEnum updateBehavior) {
         this.updateBehavior = updateBehavior;
         return this;
     }
     
+    public DirectSchemaChangePolicy(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.callbacks;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWorkflowFinalReportResponse {
     
     public String contentType;
+
     public CreateWorkflowFinalReportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateWorkflowFinalReportResponse {
     
     
     public Integer statusCode;
+
     public CreateWorkflowFinalReportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class CreateWorkflowFinalReportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWorkflowFinalReportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateWorkflowFinalReportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

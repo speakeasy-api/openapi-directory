@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ZippedScreenshotsResponse {
@@ -12,6 +13,7 @@ public class ZippedScreenshotsResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDenied accessDenied;
+
     public ZippedScreenshotsResponse withAccessDenied(org.openapis.openapi.models.shared.AccessDenied accessDenied) {
         this.accessDenied = accessDenied;
         return this;
@@ -19,6 +21,7 @@ public class ZippedScreenshotsResponse {
     
     
     public String contentType;
+
     public ZippedScreenshotsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ZippedScreenshotsResponse {
      */
     
     public org.openapis.openapi.models.shared.Forbidden forbidden;
+
     public ZippedScreenshotsResponse withForbidden(org.openapis.openapi.models.shared.Forbidden forbidden) {
         this.forbidden = forbidden;
         return this;
@@ -36,6 +40,7 @@ public class ZippedScreenshotsResponse {
     
     
     public Integer statusCode;
+
     public ZippedScreenshotsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ZippedScreenshotsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ZippedScreenshotsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class ZippedScreenshotsResponse {
      */
     
     public org.openapis.openapi.models.shared.ScreenshotNotFound screenshotNotFound;
+
     public ZippedScreenshotsResponse withScreenshotNotFound(org.openapis.openapi.models.shared.ScreenshotNotFound screenshotNotFound) {
         this.screenshotNotFound = screenshotNotFound;
         return this;
@@ -63,9 +70,14 @@ public class ZippedScreenshotsResponse {
      */
     
     public org.openapis.openapi.models.shared.ZippedScreenshotsSuccess zippedScreenshotsSuccess;
+
     public ZippedScreenshotsResponse withZippedScreenshotsSuccess(org.openapis.openapi.models.shared.ZippedScreenshotsSuccess zippedScreenshotsSuccess) {
         this.zippedScreenshotsSuccess = zippedScreenshotsSuccess;
         return this;
     }
     
+    public ZippedScreenshotsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

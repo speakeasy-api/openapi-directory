@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListApplicationTiersRequest {
@@ -12,9 +13,13 @@ public class ListApplicationTiersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public ListApplicationTiersRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ListApplicationTiersRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

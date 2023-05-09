@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLaunchTemplateVersionsRequestFilters {
     
     public String name;
+
     public DescribeLaunchTemplateVersionsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeLaunchTemplateVersionsRequestFilters {
     
     
     public String[] values;
+
     public DescribeLaunchTemplateVersionsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeLaunchTemplateVersionsRequestFilters(){}
 }

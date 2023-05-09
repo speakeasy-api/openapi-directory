@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSessionsResponse {
@@ -12,6 +13,7 @@ public class ListSessionsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListSessionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListSessionsResponse {
     
     
     public String contentType;
+
     public ListSessionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListSessionsResponse {
      */
     
     public Object internalServiceException;
+
     public ListSessionsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ListSessionsResponse {
      */
     
     public Object invalidInputException;
+
     public ListSessionsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListSessionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSessionsResponse listSessionsResponse;
+
     public ListSessionsResponse withListSessionsResponse(org.openapis.openapi.models.shared.ListSessionsResponse listSessionsResponse) {
         this.listSessionsResponse = listSessionsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListSessionsResponse {
      */
     
     public Object operationTimeoutException;
+
     public ListSessionsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class ListSessionsResponse {
     
     
     public Integer statusCode;
+
     public ListSessionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListSessionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSessionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListSessionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

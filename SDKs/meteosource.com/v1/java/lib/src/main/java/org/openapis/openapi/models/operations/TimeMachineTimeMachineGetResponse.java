@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TimeMachineTimeMachineGetResponse {
     
     public String contentType;
+
     public TimeMachineTimeMachineGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TimeMachineTimeMachineGetResponse {
      */
     
     public org.openapis.openapi.models.shared.GeneralRequestError generalRequestError;
+
     public TimeMachineTimeMachineGetResponse withGeneralRequestError(org.openapis.openapi.models.shared.GeneralRequestError generalRequestError) {
         this.generalRequestError = generalRequestError;
         return this;
@@ -29,6 +32,7 @@ public class TimeMachineTimeMachineGetResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public TimeMachineTimeMachineGetResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -36,6 +40,7 @@ public class TimeMachineTimeMachineGetResponse {
     
     
     public Integer statusCode;
+
     public TimeMachineTimeMachineGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class TimeMachineTimeMachineGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TimeMachineTimeMachineGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class TimeMachineTimeMachineGetResponse {
      */
     
     public org.openapis.openapi.models.shared.TimeMachineTimeMachine timeMachineTimeMachine;
+
     public TimeMachineTimeMachineGetResponse withTimeMachineTimeMachine(org.openapis.openapi.models.shared.TimeMachineTimeMachine timeMachineTimeMachine) {
         this.timeMachineTimeMachine = timeMachineTimeMachine;
         return this;
     }
     
+    public TimeMachineTimeMachineGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

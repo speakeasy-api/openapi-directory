@@ -59,15 +59,13 @@ public class FollowerReports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReportsTwitterCreateResponse res = new org.openapis.openapi.models.operations.GetReportsTwitterCreateResponse() {{
+        org.openapis.openapi.models.operations.GetReportsTwitterCreateResponse res = new org.openapis.openapi.models.operations.GetReportsTwitterCreateResponse(contentType, httpRes.statusCode()) {{
             createTwitter = null;
             fourHundredError = null;
             fourHundredAndOneError = null;
             fourHundredAndThreeError = null;
             fiveHundredError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -138,15 +136,13 @@ public class FollowerReports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostReportsTwitterCreateResponse res = new org.openapis.openapi.models.operations.PostReportsTwitterCreateResponse() {{
+        org.openapis.openapi.models.operations.PostReportsTwitterCreateResponse res = new org.openapis.openapi.models.operations.PostReportsTwitterCreateResponse(contentType, httpRes.statusCode()) {{
             createTwitter = null;
             fourHundredError = null;
             fourHundredAndOneError = null;
             fourHundredAndThreeError = null;
             fiveHundredError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

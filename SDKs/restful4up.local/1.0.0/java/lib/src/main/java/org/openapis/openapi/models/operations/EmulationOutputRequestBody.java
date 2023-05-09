@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EmulationOutputRequestBody {
@@ -12,9 +13,13 @@ public class EmulationOutputRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public EmulationOutputRequestBodyFile file;
+
     public EmulationOutputRequestBody withFile(EmulationOutputRequestBodyFile file) {
         this.file = file;
         return this;
     }
     
+    public EmulationOutputRequestBody(@JsonProperty("file") EmulationOutputRequestBodyFile file) {
+        this.file = file;
+  }
 }

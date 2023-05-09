@@ -56,11 +56,9 @@ public class Stores {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoresListResponse res = new org.openapis.openapi.models.operations.StoresListResponse() {{
+        org.openapis.openapi.models.operations.StoresListResponse res = new org.openapis.openapi.models.operations.StoresListResponse(contentType, httpRes.statusCode()) {{
             storesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,11 +92,9 @@ public class Stores {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoresReadResponse res = new org.openapis.openapi.models.operations.StoresReadResponse() {{
+        org.openapis.openapi.models.operations.StoresReadResponse res = new org.openapis.openapi.models.operations.StoresReadResponse(contentType, httpRes.statusCode()) {{
             storeSingle = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

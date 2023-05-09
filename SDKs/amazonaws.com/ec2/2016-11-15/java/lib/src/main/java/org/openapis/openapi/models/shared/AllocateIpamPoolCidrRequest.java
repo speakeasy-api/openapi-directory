@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AllocateIpamPoolCidrRequest {
     
     public String cidr;
+
     public AllocateIpamPoolCidrRequest withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -16,6 +17,7 @@ public class AllocateIpamPoolCidrRequest {
     
     
     public String clientToken;
+
     public AllocateIpamPoolCidrRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +25,7 @@ public class AllocateIpamPoolCidrRequest {
     
     
     public String description;
+
     public AllocateIpamPoolCidrRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +33,7 @@ public class AllocateIpamPoolCidrRequest {
     
     
     public String[] disallowedCidrs;
+
     public AllocateIpamPoolCidrRequest withDisallowedCidrs(String[] disallowedCidrs) {
         this.disallowedCidrs = disallowedCidrs;
         return this;
@@ -37,6 +41,7 @@ public class AllocateIpamPoolCidrRequest {
     
     
     public Boolean dryRun;
+
     public AllocateIpamPoolCidrRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -44,6 +49,7 @@ public class AllocateIpamPoolCidrRequest {
     
     
     public String ipamPoolId;
+
     public AllocateIpamPoolCidrRequest withIpamPoolId(String ipamPoolId) {
         this.ipamPoolId = ipamPoolId;
         return this;
@@ -51,6 +57,7 @@ public class AllocateIpamPoolCidrRequest {
     
     
     public Long netmaskLength;
+
     public AllocateIpamPoolCidrRequest withNetmaskLength(Long netmaskLength) {
         this.netmaskLength = netmaskLength;
         return this;
@@ -58,9 +65,13 @@ public class AllocateIpamPoolCidrRequest {
     
     
     public Boolean previewNextCidr;
+
     public AllocateIpamPoolCidrRequest withPreviewNextCidr(Boolean previewNextCidr) {
         this.previewNextCidr = previewNextCidr;
         return this;
     }
     
+    public AllocateIpamPoolCidrRequest(@JsonProperty("IpamPoolId") String ipamPoolId) {
+        this.ipamPoolId = ipamPoolId;
+  }
 }

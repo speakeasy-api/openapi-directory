@@ -15,6 +15,7 @@ public class GlobalSecondaryIndexInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexName")
     public String indexName;
+
     public GlobalSecondaryIndexInfo withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -23,6 +24,7 @@ public class GlobalSecondaryIndexInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeySchema")
     public KeySchemaElement[] keySchema;
+
     public GlobalSecondaryIndexInfo withKeySchema(KeySchemaElement[] keySchema) {
         this.keySchema = keySchema;
         return this;
@@ -31,6 +33,7 @@ public class GlobalSecondaryIndexInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Projection")
     public Projection projection;
+
     public GlobalSecondaryIndexInfo withProjection(Projection projection) {
         this.projection = projection;
         return this;
@@ -39,9 +42,11 @@ public class GlobalSecondaryIndexInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedThroughput")
     public ProvisionedThroughput provisionedThroughput;
+
     public GlobalSecondaryIndexInfo withProvisionedThroughput(ProvisionedThroughput provisionedThroughput) {
         this.provisionedThroughput = provisionedThroughput;
         return this;
     }
     
+    public GlobalSecondaryIndexInfo(){}
 }

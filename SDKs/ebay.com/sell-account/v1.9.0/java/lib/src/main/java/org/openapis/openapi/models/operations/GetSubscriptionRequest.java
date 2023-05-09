@@ -12,6 +12,7 @@ public class GetSubscriptionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=continuation_token")
     public String continuationToken;
+
     public GetSubscriptionRequest withContinuationToken(String continuationToken) {
         this.continuationToken = continuationToken;
         return this;
@@ -22,9 +23,11 @@ public class GetSubscriptionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public GetSubscriptionRequest withLimit(String limit) {
         this.limit = limit;
         return this;
     }
     
+    public GetSubscriptionRequest(){}
 }

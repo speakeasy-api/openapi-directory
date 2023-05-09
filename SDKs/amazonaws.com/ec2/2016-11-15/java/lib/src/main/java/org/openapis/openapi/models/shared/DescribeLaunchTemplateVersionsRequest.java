@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLaunchTemplateVersionsRequest {
     
     public Boolean dryRun;
+
     public DescribeLaunchTemplateVersionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeLaunchTemplateVersionsRequest {
     
     
     public DescribeLaunchTemplateVersionsRequestFilters[] filters;
+
     public DescribeLaunchTemplateVersionsRequest withFilters(DescribeLaunchTemplateVersionsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeLaunchTemplateVersionsRequest {
     
     
     public String launchTemplateId;
+
     public DescribeLaunchTemplateVersionsRequest withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -30,6 +33,7 @@ public class DescribeLaunchTemplateVersionsRequest {
     
     
     public String launchTemplateName;
+
     public DescribeLaunchTemplateVersionsRequest withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
@@ -37,6 +41,7 @@ public class DescribeLaunchTemplateVersionsRequest {
     
     
     public Long maxResults;
+
     public DescribeLaunchTemplateVersionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -44,6 +49,7 @@ public class DescribeLaunchTemplateVersionsRequest {
     
     
     public String maxVersion;
+
     public DescribeLaunchTemplateVersionsRequest withMaxVersion(String maxVersion) {
         this.maxVersion = maxVersion;
         return this;
@@ -51,6 +57,7 @@ public class DescribeLaunchTemplateVersionsRequest {
     
     
     public String minVersion;
+
     public DescribeLaunchTemplateVersionsRequest withMinVersion(String minVersion) {
         this.minVersion = minVersion;
         return this;
@@ -58,6 +65,7 @@ public class DescribeLaunchTemplateVersionsRequest {
     
     
     public String nextToken;
+
     public DescribeLaunchTemplateVersionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -65,6 +73,7 @@ public class DescribeLaunchTemplateVersionsRequest {
     
     
     public Boolean resolveAlias;
+
     public DescribeLaunchTemplateVersionsRequest withResolveAlias(Boolean resolveAlias) {
         this.resolveAlias = resolveAlias;
         return this;
@@ -72,9 +81,11 @@ public class DescribeLaunchTemplateVersionsRequest {
     
     
     public String[] versions;
+
     public DescribeLaunchTemplateVersionsRequest withVersions(String[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public DescribeLaunchTemplateVersionsRequest(){}
 }

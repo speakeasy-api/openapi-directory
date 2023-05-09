@@ -12,6 +12,7 @@ public class PaginatedCreditorAccountList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public PaginatedCreditorAccountList withCount(Long count) {
         this.count = count;
         return this;
@@ -20,6 +21,7 @@ public class PaginatedCreditorAccountList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public PaginatedCreditorAccountList withNext(String next) {
         this.next = next;
         return this;
@@ -28,6 +30,7 @@ public class PaginatedCreditorAccountList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public PaginatedCreditorAccountList withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -36,9 +39,11 @@ public class PaginatedCreditorAccountList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public CreditorAccount[] results;
+
     public PaginatedCreditorAccountList withResults(CreditorAccount[] results) {
         this.results = results;
         return this;
     }
     
+    public PaginatedCreditorAccountList(){}
 }

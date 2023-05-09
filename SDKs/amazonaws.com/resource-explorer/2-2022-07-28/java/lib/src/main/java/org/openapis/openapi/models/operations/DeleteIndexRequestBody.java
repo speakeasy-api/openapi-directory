@@ -12,9 +12,13 @@ public class DeleteIndexRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public DeleteIndexRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DeleteIndexRequestBody(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

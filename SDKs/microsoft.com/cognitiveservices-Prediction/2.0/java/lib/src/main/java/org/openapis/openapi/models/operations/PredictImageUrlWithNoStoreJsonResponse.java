@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PredictImageUrlWithNoStoreJsonResponse {
     
     public byte[] body;
+
     public PredictImageUrlWithNoStoreJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PredictImageUrlWithNoStoreJsonResponse {
     
     
     public String contentType;
+
     public PredictImageUrlWithNoStoreJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PredictImageUrlWithNoStoreJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.ImagePrediction imagePrediction;
+
     public PredictImageUrlWithNoStoreJsonResponse withImagePrediction(org.openapis.openapi.models.shared.ImagePrediction imagePrediction) {
         this.imagePrediction = imagePrediction;
         return this;
@@ -33,6 +37,7 @@ public class PredictImageUrlWithNoStoreJsonResponse {
     
     
     public Integer statusCode;
+
     public PredictImageUrlWithNoStoreJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class PredictImageUrlWithNoStoreJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PredictImageUrlWithNoStoreJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PredictImageUrlWithNoStoreJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

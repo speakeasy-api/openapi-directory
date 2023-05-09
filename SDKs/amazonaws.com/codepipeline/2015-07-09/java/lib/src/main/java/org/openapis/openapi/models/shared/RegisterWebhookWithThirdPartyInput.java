@@ -12,9 +12,11 @@ public class RegisterWebhookWithThirdPartyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhookName")
     public String webhookName;
+
     public RegisterWebhookWithThirdPartyInput withWebhookName(String webhookName) {
         this.webhookName = webhookName;
         return this;
     }
     
+    public RegisterWebhookWithThirdPartyInput(){}
 }

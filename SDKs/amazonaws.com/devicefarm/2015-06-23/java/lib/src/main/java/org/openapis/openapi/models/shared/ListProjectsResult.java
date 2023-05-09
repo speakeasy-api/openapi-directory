@@ -15,6 +15,7 @@ public class ListProjectsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListProjectsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListProjectsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projects")
     public Project[] projects;
+
     public ListProjectsResult withProjects(Project[] projects) {
         this.projects = projects;
         return this;
     }
     
+    public ListProjectsResult(){}
 }

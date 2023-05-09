@@ -18,6 +18,7 @@ public class AdvertiserSdfConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overridePartnerSdfConfig")
     public Boolean overridePartnerSdfConfig;
+
     public AdvertiserSdfConfig withOverridePartnerSdfConfig(Boolean overridePartnerSdfConfig) {
         this.overridePartnerSdfConfig = overridePartnerSdfConfig;
         return this;
@@ -29,9 +30,11 @@ public class AdvertiserSdfConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdfConfig")
     public SdfConfig sdfConfig;
+
     public AdvertiserSdfConfig withSdfConfig(SdfConfig sdfConfig) {
         this.sdfConfig = sdfConfig;
         return this;
     }
     
+    public AdvertiserSdfConfig(){}
 }

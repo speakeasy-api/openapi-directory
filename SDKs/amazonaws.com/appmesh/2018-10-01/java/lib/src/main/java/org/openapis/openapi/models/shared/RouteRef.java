@@ -15,6 +15,7 @@ public class RouteRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public RouteRef withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class RouteRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meshName")
     public String meshName;
+
     public RouteRef withMeshName(String meshName) {
         this.meshName = meshName;
         return this;
@@ -31,6 +33,7 @@ public class RouteRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routeName")
     public String routeName;
+
     public RouteRef withRouteName(String routeName) {
         this.routeName = routeName;
         return this;
@@ -39,9 +42,11 @@ public class RouteRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualRouterName")
     public String virtualRouterName;
+
     public RouteRef withVirtualRouterName(String virtualRouterName) {
         this.virtualRouterName = virtualRouterName;
         return this;
     }
     
+    public RouteRef(){}
 }

@@ -18,6 +18,7 @@ public class EncryptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionStatus")
     public Status encryptionStatus;
+
     public EncryptionInfo withEncryptionStatus(Status encryptionStatus) {
         this.encryptionStatus = encryptionStatus;
         return this;
@@ -29,6 +30,7 @@ public class EncryptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionType")
     public EncryptionInfoEncryptionTypeEnum encryptionType;
+
     public EncryptionInfo withEncryptionType(EncryptionInfoEncryptionTypeEnum encryptionType) {
         this.encryptionType = encryptionType;
         return this;
@@ -40,9 +42,11 @@ public class EncryptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyVersion")
     public String kmsKeyVersion;
+
     public EncryptionInfo withKmsKeyVersion(String kmsKeyVersion) {
         this.kmsKeyVersion = kmsKeyVersion;
         return this;
     }
     
+    public EncryptionInfo(){}
 }

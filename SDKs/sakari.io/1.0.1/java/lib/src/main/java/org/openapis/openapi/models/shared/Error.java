@@ -12,6 +12,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public Error withCode(String code) {
         this.code = code;
         return this;
@@ -20,9 +21,11 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Error withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public Error(){}
 }

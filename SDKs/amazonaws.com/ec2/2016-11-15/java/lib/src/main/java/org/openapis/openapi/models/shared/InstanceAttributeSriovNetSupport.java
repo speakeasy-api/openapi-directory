@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class InstanceAttributeSriovNetSupport {
     
     public String value;
+
     public InstanceAttributeSriovNetSupport withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public InstanceAttributeSriovNetSupport(){}
 }

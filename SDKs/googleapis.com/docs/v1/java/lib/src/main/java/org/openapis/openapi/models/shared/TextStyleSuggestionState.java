@@ -18,6 +18,7 @@ public class TextStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backgroundColorSuggested")
     public Boolean backgroundColorSuggested;
+
     public TextStyleSuggestionState withBackgroundColorSuggested(Boolean backgroundColorSuggested) {
         this.backgroundColorSuggested = backgroundColorSuggested;
         return this;
@@ -29,6 +30,7 @@ public class TextStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baselineOffsetSuggested")
     public Boolean baselineOffsetSuggested;
+
     public TextStyleSuggestionState withBaselineOffsetSuggested(Boolean baselineOffsetSuggested) {
         this.baselineOffsetSuggested = baselineOffsetSuggested;
         return this;
@@ -40,6 +42,7 @@ public class TextStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boldSuggested")
     public Boolean boldSuggested;
+
     public TextStyleSuggestionState withBoldSuggested(Boolean boldSuggested) {
         this.boldSuggested = boldSuggested;
         return this;
@@ -51,6 +54,7 @@ public class TextStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fontSizeSuggested")
     public Boolean fontSizeSuggested;
+
     public TextStyleSuggestionState withFontSizeSuggested(Boolean fontSizeSuggested) {
         this.fontSizeSuggested = fontSizeSuggested;
         return this;
@@ -62,6 +66,7 @@ public class TextStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("foregroundColorSuggested")
     public Boolean foregroundColorSuggested;
+
     public TextStyleSuggestionState withForegroundColorSuggested(Boolean foregroundColorSuggested) {
         this.foregroundColorSuggested = foregroundColorSuggested;
         return this;
@@ -73,6 +78,7 @@ public class TextStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("italicSuggested")
     public Boolean italicSuggested;
+
     public TextStyleSuggestionState withItalicSuggested(Boolean italicSuggested) {
         this.italicSuggested = italicSuggested;
         return this;
@@ -84,6 +90,7 @@ public class TextStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkSuggested")
     public Boolean linkSuggested;
+
     public TextStyleSuggestionState withLinkSuggested(Boolean linkSuggested) {
         this.linkSuggested = linkSuggested;
         return this;
@@ -95,6 +102,7 @@ public class TextStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smallCapsSuggested")
     public Boolean smallCapsSuggested;
+
     public TextStyleSuggestionState withSmallCapsSuggested(Boolean smallCapsSuggested) {
         this.smallCapsSuggested = smallCapsSuggested;
         return this;
@@ -106,6 +114,7 @@ public class TextStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strikethroughSuggested")
     public Boolean strikethroughSuggested;
+
     public TextStyleSuggestionState withStrikethroughSuggested(Boolean strikethroughSuggested) {
         this.strikethroughSuggested = strikethroughSuggested;
         return this;
@@ -117,6 +126,7 @@ public class TextStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("underlineSuggested")
     public Boolean underlineSuggested;
+
     public TextStyleSuggestionState withUnderlineSuggested(Boolean underlineSuggested) {
         this.underlineSuggested = underlineSuggested;
         return this;
@@ -128,9 +138,11 @@ public class TextStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weightedFontFamilySuggested")
     public Boolean weightedFontFamilySuggested;
+
     public TextStyleSuggestionState withWeightedFontFamilySuggested(Boolean weightedFontFamilySuggested) {
         this.weightedFontFamilySuggested = weightedFontFamilySuggested;
         return this;
     }
     
+    public TextStyleSuggestionState(){}
 }

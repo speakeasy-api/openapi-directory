@@ -15,6 +15,7 @@ public class PasswordData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ciphertext")
     public String ciphertext;
+
     public PasswordData withCiphertext(String ciphertext) {
         this.ciphertext = ciphertext;
         return this;
@@ -23,9 +24,11 @@ public class PasswordData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyPairName")
     public String keyPairName;
+
     public PasswordData withKeyPairName(String keyPairName) {
         this.keyPairName = keyPairName;
         return this;
     }
     
+    public PasswordData(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetIpamPoolAllocationsResult {
     
     public GetIpamPoolAllocationsResultIpamPoolAllocations[] ipamPoolAllocations;
+
     public GetIpamPoolAllocationsResult withIpamPoolAllocations(GetIpamPoolAllocationsResultIpamPoolAllocations[] ipamPoolAllocations) {
         this.ipamPoolAllocations = ipamPoolAllocations;
         return this;
@@ -19,9 +20,11 @@ public class GetIpamPoolAllocationsResult {
     
     
     public String nextToken;
+
     public GetIpamPoolAllocationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetIpamPoolAllocationsResult(){}
 }

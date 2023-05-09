@@ -18,6 +18,7 @@ public class StartEnvironmentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public String accessToken;
+
     public StartEnvironmentRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -29,9 +30,11 @@ public class StartEnvironmentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicKeys")
     public String[] publicKeys;
+
     public StartEnvironmentRequest withPublicKeys(String[] publicKeys) {
         this.publicKeys = publicKeys;
         return this;
     }
     
+    public StartEnvironmentRequest(){}
 }

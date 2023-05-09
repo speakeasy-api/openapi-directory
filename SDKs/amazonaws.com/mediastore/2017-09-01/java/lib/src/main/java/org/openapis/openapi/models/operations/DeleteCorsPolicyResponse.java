@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCorsPolicyResponse {
@@ -12,6 +13,7 @@ public class DeleteCorsPolicyResponse {
      */
     
     public Object containerInUseException;
+
     public DeleteCorsPolicyResponse withContainerInUseException(Object containerInUseException) {
         this.containerInUseException = containerInUseException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteCorsPolicyResponse {
      */
     
     public Object containerNotFoundException;
+
     public DeleteCorsPolicyResponse withContainerNotFoundException(Object containerNotFoundException) {
         this.containerNotFoundException = containerNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCorsPolicyResponse {
     
     
     public String contentType;
+
     public DeleteCorsPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCorsPolicyResponse {
      */
     
     public Object corsPolicyNotFoundException;
+
     public DeleteCorsPolicyResponse withCorsPolicyNotFoundException(Object corsPolicyNotFoundException) {
         this.corsPolicyNotFoundException = corsPolicyNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteCorsPolicyResponse {
      */
     
     public java.util.Map<String, Object> deleteCorsPolicyOutput;
+
     public DeleteCorsPolicyResponse withDeleteCorsPolicyOutput(java.util.Map<String, Object> deleteCorsPolicyOutput) {
         this.deleteCorsPolicyOutput = deleteCorsPolicyOutput;
         return this;
@@ -59,6 +65,7 @@ public class DeleteCorsPolicyResponse {
      */
     
     public Object internalServerError;
+
     public DeleteCorsPolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -66,6 +73,7 @@ public class DeleteCorsPolicyResponse {
     
     
     public Integer statusCode;
+
     public DeleteCorsPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteCorsPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCorsPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteCorsPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class LineItemGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineItemGroupIndex")
     public Long lineItemGroupIndex;
+
     public LineItemGroup withLineItemGroupIndex(Long lineItemGroupIndex) {
         this.lineItemGroupIndex = lineItemGroupIndex;
         return this;
@@ -23,9 +24,11 @@ public class LineItemGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineItems")
     public LineItemFields[] lineItems;
+
     public LineItemGroup withLineItems(LineItemFields[] lineItems) {
         this.lineItems = lineItems;
         return this;
     }
     
+    public LineItemGroup(){}
 }

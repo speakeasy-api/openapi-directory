@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RulesSourceList {
     @JsonProperty("GeneratedRulesType")
     public GeneratedRulesTypeEnum generatedRulesType;
+
     public RulesSourceList withGeneratedRulesType(GeneratedRulesTypeEnum generatedRulesType) {
         this.generatedRulesType = generatedRulesType;
         return this;
@@ -19,6 +20,7 @@ public class RulesSourceList {
     
     @JsonProperty("TargetTypes")
     public TargetTypeEnum[] targetTypes;
+
     public RulesSourceList withTargetTypes(TargetTypeEnum[] targetTypes) {
         this.targetTypes = targetTypes;
         return this;
@@ -26,9 +28,15 @@ public class RulesSourceList {
     
     @JsonProperty("Targets")
     public String[] targets;
+
     public RulesSourceList withTargets(String[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public RulesSourceList(@JsonProperty("GeneratedRulesType") GeneratedRulesTypeEnum generatedRulesType, @JsonProperty("TargetTypes") TargetTypeEnum[] targetTypes, @JsonProperty("Targets") String[] targets) {
+        this.generatedRulesType = generatedRulesType;
+        this.targetTypes = targetTypes;
+        this.targets = targets;
+  }
 }

@@ -15,9 +15,11 @@ public class GetStatementResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Statement")
     public Statement statement;
+
     public GetStatementResponse withStatement(Statement statement) {
         this.statement = statement;
         return this;
     }
     
+    public GetStatementResponse(){}
 }

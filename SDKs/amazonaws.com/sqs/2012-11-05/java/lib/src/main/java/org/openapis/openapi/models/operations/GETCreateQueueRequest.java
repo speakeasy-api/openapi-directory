@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateQueueRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETCreateQueueActionEnum action;
+
     public GETCreateQueueRequest withAction(GETCreateQueueActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETCreateQueueRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Attribute")
     public java.util.Map<String, String> attribute;
+
     public GETCreateQueueRequest withAttribute(java.util.Map<String, String> attribute) {
         this.attribute = attribute;
         return this;
@@ -29,6 +32,7 @@ public class GETCreateQueueRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=QueueName")
     public String queueName;
+
     public GETCreateQueueRequest withQueueName(String queueName) {
         this.queueName = queueName;
         return this;
@@ -39,6 +43,7 @@ public class GETCreateQueueRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Tag")
     public java.util.Map<String, String> tag;
+
     public GETCreateQueueRequest withTag(java.util.Map<String, String> tag) {
         this.tag = tag;
         return this;
@@ -46,6 +51,7 @@ public class GETCreateQueueRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETCreateQueueVersionEnum version;
+
     public GETCreateQueueRequest withVersion(GETCreateQueueVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETCreateQueueRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETCreateQueueRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETCreateQueueRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETCreateQueueRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETCreateQueueRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETCreateQueueRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETCreateQueueRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETCreateQueueRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETCreateQueueRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETCreateQueueRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETCreateQueueRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETCreateQueueRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETCreateQueueRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETCreateQueueRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETCreateQueueRequest(@JsonProperty("Action") GETCreateQueueActionEnum action, @JsonProperty("QueueName") String queueName, @JsonProperty("Version") GETCreateQueueVersionEnum version) {
+        this.action = action;
+        this.queueName = queueName;
+        this.version = version;
+  }
 }

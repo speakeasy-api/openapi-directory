@@ -12,6 +12,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2TrackingNumbersCarrierHyd
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canReprintPostage")
     public Boolean canReprintPostage;
+
     public GetOrders200ApplicationJSONOrderResponseV2TrackingNumbersCarrierHydratedV2 withCanReprintPostage(Boolean canReprintPostage) {
         this.canReprintPostage = canReprintPostage;
         return this;
@@ -20,6 +21,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2TrackingNumbersCarrierHyd
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public GetOrders200ApplicationJSONOrderResponseV2TrackingNumbersCarrierHydratedV2 withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -27,6 +29,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2TrackingNumbersCarrierHyd
     
     @JsonProperty("id")
     public Long id;
+
     public GetOrders200ApplicationJSONOrderResponseV2TrackingNumbersCarrierHydratedV2 withId(Long id) {
         this.id = id;
         return this;
@@ -35,6 +38,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2TrackingNumbersCarrierHyd
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includePeripherals")
     public Boolean includePeripherals;
+
     public GetOrders200ApplicationJSONOrderResponseV2TrackingNumbersCarrierHydratedV2 withIncludePeripherals(Boolean includePeripherals) {
         this.includePeripherals = includePeripherals;
         return this;
@@ -43,6 +47,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2TrackingNumbersCarrierHyd
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalRatesOnly")
     public Boolean internalRatesOnly;
+
     public GetOrders200ApplicationJSONOrderResponseV2TrackingNumbersCarrierHydratedV2 withInternalRatesOnly(Boolean internalRatesOnly) {
         this.internalRatesOnly = internalRatesOnly;
         return this;
@@ -50,6 +55,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2TrackingNumbersCarrierHyd
     
     @JsonProperty("name")
     public String name;
+
     public GetOrders200ApplicationJSONOrderResponseV2TrackingNumbersCarrierHydratedV2 withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +64,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2TrackingNumbersCarrierHyd
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiresDimensions")
     public Boolean requiresDimensions;
+
     public GetOrders200ApplicationJSONOrderResponseV2TrackingNumbersCarrierHydratedV2 withRequiresDimensions(Boolean requiresDimensions) {
         this.requiresDimensions = requiresDimensions;
         return this;
@@ -65,9 +72,15 @@ public class GetOrders200ApplicationJSONOrderResponseV2TrackingNumbersCarrierHyd
     
     @JsonProperty("symbol")
     public String symbol;
+
     public GetOrders200ApplicationJSONOrderResponseV2TrackingNumbersCarrierHydratedV2 withSymbol(String symbol) {
         this.symbol = symbol;
         return this;
     }
     
+    public GetOrders200ApplicationJSONOrderResponseV2TrackingNumbersCarrierHydratedV2(@JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("symbol") String symbol) {
+        this.id = id;
+        this.name = name;
+        this.symbol = symbol;
+  }
 }

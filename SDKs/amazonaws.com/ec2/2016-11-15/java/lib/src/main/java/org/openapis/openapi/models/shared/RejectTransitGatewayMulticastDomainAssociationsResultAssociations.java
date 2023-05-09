@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RejectTransitGatewayMulticastDomainAssociationsResultAssociations {
     
     public String resourceId;
+
     public RejectTransitGatewayMulticastDomainAssociationsResultAssociations withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -19,6 +20,7 @@ public class RejectTransitGatewayMulticastDomainAssociationsResultAssociations {
     
     
     public String resourceOwnerId;
+
     public RejectTransitGatewayMulticastDomainAssociationsResultAssociations withResourceOwnerId(String resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
@@ -26,6 +28,7 @@ public class RejectTransitGatewayMulticastDomainAssociationsResultAssociations {
     
     
     public RejectTransitGatewayMulticastDomainAssociationsResultAssociationsResourceTypeEnum resourceType;
+
     public RejectTransitGatewayMulticastDomainAssociationsResultAssociations withResourceType(RejectTransitGatewayMulticastDomainAssociationsResultAssociationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -33,6 +36,7 @@ public class RejectTransitGatewayMulticastDomainAssociationsResultAssociations {
     
     
     public RejectTransitGatewayMulticastDomainAssociationsResultAssociationsSubnets[] subnets;
+
     public RejectTransitGatewayMulticastDomainAssociationsResultAssociations withSubnets(RejectTransitGatewayMulticastDomainAssociationsResultAssociationsSubnets[] subnets) {
         this.subnets = subnets;
         return this;
@@ -40,6 +44,7 @@ public class RejectTransitGatewayMulticastDomainAssociationsResultAssociations {
     
     
     public String transitGatewayAttachmentId;
+
     public RejectTransitGatewayMulticastDomainAssociationsResultAssociations withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -47,9 +52,11 @@ public class RejectTransitGatewayMulticastDomainAssociationsResultAssociations {
     
     
     public String transitGatewayMulticastDomainId;
+
     public RejectTransitGatewayMulticastDomainAssociationsResultAssociations withTransitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
         this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
         return this;
     }
     
+    public RejectTransitGatewayMulticastDomainAssociationsResultAssociations(){}
 }

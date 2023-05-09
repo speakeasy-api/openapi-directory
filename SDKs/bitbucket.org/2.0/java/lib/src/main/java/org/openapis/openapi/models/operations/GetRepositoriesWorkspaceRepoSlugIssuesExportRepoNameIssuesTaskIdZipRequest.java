@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipRequest {
@@ -12,6 +13,7 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZip
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_name")
     public String repoName;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipRequest withRepoName(String repoName) {
         this.repoName = repoName;
         return this;
@@ -24,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZip
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -34,6 +37,7 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZip
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=task_id")
     public String taskId;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipRequest withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -46,9 +50,16 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZip
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipRequest(@JsonProperty("repo_name") String repoName, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("task_id") String taskId, @JsonProperty("workspace") String workspace) {
+        this.repoName = repoName;
+        this.repoSlug = repoSlug;
+        this.taskId = taskId;
+        this.workspace = workspace;
+  }
 }

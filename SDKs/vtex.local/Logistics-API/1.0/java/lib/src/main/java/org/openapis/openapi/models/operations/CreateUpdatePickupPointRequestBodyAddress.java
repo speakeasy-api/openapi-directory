@@ -12,6 +12,7 @@ public class CreateUpdatePickupPointRequestBodyAddress {
      */
     @JsonProperty("city")
     public String city;
+
     public CreateUpdatePickupPointRequestBodyAddress withCity(String city) {
         this.city = city;
         return this;
@@ -22,6 +23,7 @@ public class CreateUpdatePickupPointRequestBodyAddress {
      */
     @JsonProperty("complement")
     public String complement;
+
     public CreateUpdatePickupPointRequestBodyAddress withComplement(String complement) {
         this.complement = complement;
         return this;
@@ -29,6 +31,7 @@ public class CreateUpdatePickupPointRequestBodyAddress {
     
     @JsonProperty("country")
     public CreateUpdatePickupPointRequestBodyAddressCountry country;
+
     public CreateUpdatePickupPointRequestBodyAddress withCountry(CreateUpdatePickupPointRequestBodyAddressCountry country) {
         this.country = country;
         return this;
@@ -36,6 +39,7 @@ public class CreateUpdatePickupPointRequestBodyAddress {
     
     @JsonProperty("location")
     public CreateUpdatePickupPointRequestBodyAddressLocation location;
+
     public CreateUpdatePickupPointRequestBodyAddress withLocation(CreateUpdatePickupPointRequestBodyAddressLocation location) {
         this.location = location;
         return this;
@@ -46,6 +50,7 @@ public class CreateUpdatePickupPointRequestBodyAddress {
      */
     @JsonProperty("neighborhood")
     public String neighborhood;
+
     public CreateUpdatePickupPointRequestBodyAddress withNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
         return this;
@@ -56,6 +61,7 @@ public class CreateUpdatePickupPointRequestBodyAddress {
      */
     @JsonProperty("number")
     public String number;
+
     public CreateUpdatePickupPointRequestBodyAddress withNumber(String number) {
         this.number = number;
         return this;
@@ -66,6 +72,7 @@ public class CreateUpdatePickupPointRequestBodyAddress {
      */
     @JsonProperty("postalCode")
     public String postalCode;
+
     public CreateUpdatePickupPointRequestBodyAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -76,6 +83,7 @@ public class CreateUpdatePickupPointRequestBodyAddress {
      */
     @JsonProperty("reference")
     public String reference;
+
     public CreateUpdatePickupPointRequestBodyAddress withReference(String reference) {
         this.reference = reference;
         return this;
@@ -86,6 +94,7 @@ public class CreateUpdatePickupPointRequestBodyAddress {
      */
     @JsonProperty("state")
     public String state;
+
     public CreateUpdatePickupPointRequestBodyAddress withState(String state) {
         this.state = state;
         return this;
@@ -96,9 +105,22 @@ public class CreateUpdatePickupPointRequestBodyAddress {
      */
     @JsonProperty("street")
     public String street;
+
     public CreateUpdatePickupPointRequestBodyAddress withStreet(String street) {
         this.street = street;
         return this;
     }
     
+    public CreateUpdatePickupPointRequestBodyAddress(@JsonProperty("city") String city, @JsonProperty("complement") String complement, @JsonProperty("country") CreateUpdatePickupPointRequestBodyAddressCountry country, @JsonProperty("location") CreateUpdatePickupPointRequestBodyAddressLocation location, @JsonProperty("neighborhood") String neighborhood, @JsonProperty("number") String number, @JsonProperty("postalCode") String postalCode, @JsonProperty("reference") String reference, @JsonProperty("state") String state, @JsonProperty("street") String street) {
+        this.city = city;
+        this.complement = complement;
+        this.country = country;
+        this.location = location;
+        this.neighborhood = neighborhood;
+        this.number = number;
+        this.postalCode = postalCode;
+        this.reference = reference;
+        this.state = state;
+        this.street = street;
+  }
 }

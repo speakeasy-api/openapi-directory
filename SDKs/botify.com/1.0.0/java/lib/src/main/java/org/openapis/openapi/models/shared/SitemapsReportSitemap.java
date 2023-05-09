@@ -12,6 +12,7 @@ public class SitemapsReportSitemap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public SitemapsReportSitemapError error;
+
     public SitemapsReportSitemap withError(SitemapsReportSitemapError error) {
         this.error = error;
         return this;
@@ -20,6 +21,7 @@ public class SitemapsReportSitemap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_type")
     public String fileType;
+
     public SitemapsReportSitemap withFileType(String fileType) {
         this.fileType = fileType;
         return this;
@@ -28,6 +30,7 @@ public class SitemapsReportSitemap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalid_urls")
     public Long invalidUrls;
+
     public SitemapsReportSitemap withInvalidUrls(Long invalidUrls) {
         this.invalidUrls = invalidUrls;
         return this;
@@ -36,6 +39,7 @@ public class SitemapsReportSitemap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sitemap_indexes")
     public String[] sitemapIndexes;
+
     public SitemapsReportSitemap withSitemapIndexes(String[] sitemapIndexes) {
         this.sitemapIndexes = sitemapIndexes;
         return this;
@@ -43,6 +47,7 @@ public class SitemapsReportSitemap {
     
     @JsonProperty("url")
     public String url;
+
     public SitemapsReportSitemap withUrl(String url) {
         this.url = url;
         return this;
@@ -51,9 +56,13 @@ public class SitemapsReportSitemap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valid_urls")
     public Long validUrls;
+
     public SitemapsReportSitemap withValidUrls(Long validUrls) {
         this.validUrls = validUrls;
         return this;
     }
     
+    public SitemapsReportSitemap(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeStackInstanceRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeStackInstanceActionEnum action;
+
     public GETDescribeStackInstanceRequest withAction(GETDescribeStackInstanceActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeStackInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CallAs")
     public GETDescribeStackInstanceCallAsEnum callAs;
+
     public GETDescribeStackInstanceRequest withCallAs(GETDescribeStackInstanceCallAsEnum callAs) {
         this.callAs = callAs;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeStackInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackInstanceAccount")
     public String stackInstanceAccount;
+
     public GETDescribeStackInstanceRequest withStackInstanceAccount(String stackInstanceAccount) {
         this.stackInstanceAccount = stackInstanceAccount;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeStackInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackInstanceRegion")
     public String stackInstanceRegion;
+
     public GETDescribeStackInstanceRequest withStackInstanceRegion(String stackInstanceRegion) {
         this.stackInstanceRegion = stackInstanceRegion;
         return this;
@@ -49,6 +54,7 @@ public class GETDescribeStackInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackSetName")
     public String stackSetName;
+
     public GETDescribeStackInstanceRequest withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
@@ -56,6 +62,7 @@ public class GETDescribeStackInstanceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeStackInstanceVersionEnum version;
+
     public GETDescribeStackInstanceRequest withVersion(GETDescribeStackInstanceVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETDescribeStackInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeStackInstanceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETDescribeStackInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeStackInstanceRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETDescribeStackInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeStackInstanceRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETDescribeStackInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeStackInstanceRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETDescribeStackInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeStackInstanceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETDescribeStackInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeStackInstanceRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,17 @@ public class GETDescribeStackInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeStackInstanceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeStackInstanceRequest(@JsonProperty("Action") GETDescribeStackInstanceActionEnum action, @JsonProperty("StackInstanceAccount") String stackInstanceAccount, @JsonProperty("StackInstanceRegion") String stackInstanceRegion, @JsonProperty("StackSetName") String stackSetName, @JsonProperty("Version") GETDescribeStackInstanceVersionEnum version) {
+        this.action = action;
+        this.stackInstanceAccount = stackInstanceAccount;
+        this.stackInstanceRegion = stackInstanceRegion;
+        this.stackSetName = stackSetName;
+        this.version = version;
+  }
 }

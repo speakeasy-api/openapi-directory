@@ -15,6 +15,7 @@ public class PutFileEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileContent")
     public String fileContent;
+
     public PutFileEntry withFileContent(String fileContent) {
         this.fileContent = fileContent;
         return this;
@@ -23,6 +24,7 @@ public class PutFileEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileMode")
     public FileModeTypeEnumEnum fileMode;
+
     public PutFileEntry withFileMode(FileModeTypeEnumEnum fileMode) {
         this.fileMode = fileMode;
         return this;
@@ -30,6 +32,7 @@ public class PutFileEntry {
     
     @JsonProperty("filePath")
     public String filePath;
+
     public PutFileEntry withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
@@ -38,9 +41,13 @@ public class PutFileEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceFile")
     public SourceFileSpecifier sourceFile;
+
     public PutFileEntry withSourceFile(SourceFileSpecifier sourceFile) {
         this.sourceFile = sourceFile;
         return this;
     }
     
+    public PutFileEntry(@JsonProperty("filePath") String filePath) {
+        this.filePath = filePath;
+  }
 }

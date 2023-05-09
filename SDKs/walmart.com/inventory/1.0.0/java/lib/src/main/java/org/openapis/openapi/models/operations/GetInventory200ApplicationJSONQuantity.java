@@ -15,6 +15,7 @@ public class GetInventory200ApplicationJSONQuantity {
      */
     @JsonProperty("amount")
     public Double amount;
+
     public GetInventory200ApplicationJSONQuantity withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -25,9 +26,14 @@ public class GetInventory200ApplicationJSONQuantity {
      */
     @JsonProperty("unit")
     public GetInventory200ApplicationJSONQuantityUnitEnum unit;
+
     public GetInventory200ApplicationJSONQuantity withUnit(GetInventory200ApplicationJSONQuantityUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public GetInventory200ApplicationJSONQuantity(@JsonProperty("amount") Double amount, @JsonProperty("unit") GetInventory200ApplicationJSONQuantityUnitEnum unit) {
+        this.amount = amount;
+        this.unit = unit;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnableLDAPSRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public EnableLDAPSRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -16,9 +17,14 @@ public class EnableLDAPSRequest {
     
     @JsonProperty("Type")
     public LDAPSTypeEnum type;
+
     public EnableLDAPSRequest withType(LDAPSTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public EnableLDAPSRequest(@JsonProperty("DirectoryId") String directoryId, @JsonProperty("Type") LDAPSTypeEnum type) {
+        this.directoryId = directoryId;
+        this.type = type;
+  }
 }

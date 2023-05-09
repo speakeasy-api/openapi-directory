@@ -12,6 +12,7 @@ public class SingleMonitor200ApplicationJSONMonitorLastRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finishedAt")
     public String finishedAt;
+
     public SingleMonitor200ApplicationJSONMonitorLastRun withFinishedAt(String finishedAt) {
         this.finishedAt = finishedAt;
         return this;
@@ -20,6 +21,7 @@ public class SingleMonitor200ApplicationJSONMonitorLastRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startedAt")
     public String startedAt;
+
     public SingleMonitor200ApplicationJSONMonitorLastRun withStartedAt(String startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -28,6 +30,7 @@ public class SingleMonitor200ApplicationJSONMonitorLastRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public SingleMonitor200ApplicationJSONMonitorLastRunStats stats;
+
     public SingleMonitor200ApplicationJSONMonitorLastRun withStats(SingleMonitor200ApplicationJSONMonitorLastRunStats stats) {
         this.stats = stats;
         return this;
@@ -36,9 +39,11 @@ public class SingleMonitor200ApplicationJSONMonitorLastRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public SingleMonitor200ApplicationJSONMonitorLastRun withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public SingleMonitor200ApplicationJSONMonitorLastRun(){}
 }

@@ -15,6 +15,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Architectures")
     public ArchitectureEnum[] architectures;
+
     public FunctionConfiguration withArchitectures(ArchitectureEnum[] architectures) {
         this.architectures = architectures;
         return this;
@@ -23,6 +24,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeSha256")
     public String codeSha256;
+
     public FunctionConfiguration withCodeSha256(String codeSha256) {
         this.codeSha256 = codeSha256;
         return this;
@@ -31,6 +33,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeSize")
     public Long codeSize;
+
     public FunctionConfiguration withCodeSize(Long codeSize) {
         this.codeSize = codeSize;
         return this;
@@ -39,6 +42,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeadLetterConfig")
     public DeadLetterConfig deadLetterConfig;
+
     public FunctionConfiguration withDeadLetterConfig(DeadLetterConfig deadLetterConfig) {
         this.deadLetterConfig = deadLetterConfig;
         return this;
@@ -47,6 +51,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public FunctionConfiguration withDescription(String description) {
         this.description = description;
         return this;
@@ -55,6 +60,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public EnvironmentResponse environment;
+
     public FunctionConfiguration withEnvironment(EnvironmentResponse environment) {
         this.environment = environment;
         return this;
@@ -63,6 +69,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EphemeralStorage")
     public EphemeralStorage ephemeralStorage;
+
     public FunctionConfiguration withEphemeralStorage(EphemeralStorage ephemeralStorage) {
         this.ephemeralStorage = ephemeralStorage;
         return this;
@@ -71,6 +78,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemConfigs")
     public FileSystemConfig[] fileSystemConfigs;
+
     public FunctionConfiguration withFileSystemConfigs(FileSystemConfig[] fileSystemConfigs) {
         this.fileSystemConfigs = fileSystemConfigs;
         return this;
@@ -79,6 +87,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FunctionArn")
     public String functionArn;
+
     public FunctionConfiguration withFunctionArn(String functionArn) {
         this.functionArn = functionArn;
         return this;
@@ -87,6 +96,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FunctionName")
     public String functionName;
+
     public FunctionConfiguration withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
@@ -95,6 +105,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Handler")
     public String handler;
+
     public FunctionConfiguration withHandler(String handler) {
         this.handler = handler;
         return this;
@@ -103,6 +114,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageConfigResponse")
     public ImageConfigResponse imageConfigResponse;
+
     public FunctionConfiguration withImageConfigResponse(ImageConfigResponse imageConfigResponse) {
         this.imageConfigResponse = imageConfigResponse;
         return this;
@@ -111,6 +123,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSKeyArn")
     public String kmsKeyArn;
+
     public FunctionConfiguration withKMSKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -119,6 +132,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModified")
     public String lastModified;
+
     public FunctionConfiguration withLastModified(String lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -127,6 +141,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastUpdateStatus")
     public LastUpdateStatusEnum lastUpdateStatus;
+
     public FunctionConfiguration withLastUpdateStatus(LastUpdateStatusEnum lastUpdateStatus) {
         this.lastUpdateStatus = lastUpdateStatus;
         return this;
@@ -135,6 +150,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastUpdateStatusReason")
     public String lastUpdateStatusReason;
+
     public FunctionConfiguration withLastUpdateStatusReason(String lastUpdateStatusReason) {
         this.lastUpdateStatusReason = lastUpdateStatusReason;
         return this;
@@ -143,6 +159,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastUpdateStatusReasonCode")
     public LastUpdateStatusReasonCodeEnum lastUpdateStatusReasonCode;
+
     public FunctionConfiguration withLastUpdateStatusReasonCode(LastUpdateStatusReasonCodeEnum lastUpdateStatusReasonCode) {
         this.lastUpdateStatusReasonCode = lastUpdateStatusReasonCode;
         return this;
@@ -151,6 +168,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Layers")
     public Layer[] layers;
+
     public FunctionConfiguration withLayers(Layer[] layers) {
         this.layers = layers;
         return this;
@@ -159,6 +177,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MasterArn")
     public String masterArn;
+
     public FunctionConfiguration withMasterArn(String masterArn) {
         this.masterArn = masterArn;
         return this;
@@ -167,6 +186,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemorySize")
     public Long memorySize;
+
     public FunctionConfiguration withMemorySize(Long memorySize) {
         this.memorySize = memorySize;
         return this;
@@ -175,6 +195,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PackageType")
     public PackageTypeEnum packageType;
+
     public FunctionConfiguration withPackageType(PackageTypeEnum packageType) {
         this.packageType = packageType;
         return this;
@@ -183,6 +204,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RevisionId")
     public String revisionId;
+
     public FunctionConfiguration withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -191,6 +213,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Role")
     public String role;
+
     public FunctionConfiguration withRole(String role) {
         this.role = role;
         return this;
@@ -199,6 +222,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Runtime")
     public RuntimeEnum runtime;
+
     public FunctionConfiguration withRuntime(RuntimeEnum runtime) {
         this.runtime = runtime;
         return this;
@@ -207,6 +231,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuntimeVersionConfig")
     public RuntimeVersionConfig runtimeVersionConfig;
+
     public FunctionConfiguration withRuntimeVersionConfig(RuntimeVersionConfig runtimeVersionConfig) {
         this.runtimeVersionConfig = runtimeVersionConfig;
         return this;
@@ -215,6 +240,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SigningJobArn")
     public String signingJobArn;
+
     public FunctionConfiguration withSigningJobArn(String signingJobArn) {
         this.signingJobArn = signingJobArn;
         return this;
@@ -223,6 +249,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SigningProfileVersionArn")
     public String signingProfileVersionArn;
+
     public FunctionConfiguration withSigningProfileVersionArn(String signingProfileVersionArn) {
         this.signingProfileVersionArn = signingProfileVersionArn;
         return this;
@@ -231,6 +258,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapStart")
     public SnapStartResponse snapStart;
+
     public FunctionConfiguration withSnapStart(SnapStartResponse snapStart) {
         this.snapStart = snapStart;
         return this;
@@ -239,6 +267,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public StateEnum state;
+
     public FunctionConfiguration withState(StateEnum state) {
         this.state = state;
         return this;
@@ -247,6 +276,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateReason")
     public String stateReason;
+
     public FunctionConfiguration withStateReason(String stateReason) {
         this.stateReason = stateReason;
         return this;
@@ -255,6 +285,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateReasonCode")
     public StateReasonCodeEnum stateReasonCode;
+
     public FunctionConfiguration withStateReasonCode(StateReasonCodeEnum stateReasonCode) {
         this.stateReasonCode = stateReasonCode;
         return this;
@@ -263,6 +294,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeout")
     public Long timeout;
+
     public FunctionConfiguration withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
@@ -271,6 +303,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TracingConfig")
     public TracingConfigResponse tracingConfig;
+
     public FunctionConfiguration withTracingConfig(TracingConfigResponse tracingConfig) {
         this.tracingConfig = tracingConfig;
         return this;
@@ -279,6 +312,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public FunctionConfiguration withVersion(String version) {
         this.version = version;
         return this;
@@ -287,9 +321,11 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfigResponse vpcConfig;
+
     public FunctionConfiguration withVpcConfig(VpcConfigResponse vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public FunctionConfiguration(){}
 }

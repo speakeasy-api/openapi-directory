@@ -18,6 +18,7 @@ public class UrlNotificationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestRemove")
     public UrlNotification latestRemove;
+
     public UrlNotificationMetadata withLatestRemove(UrlNotification latestRemove) {
         this.latestRemove = latestRemove;
         return this;
@@ -29,6 +30,7 @@ public class UrlNotificationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestUpdate")
     public UrlNotification latestUpdate;
+
     public UrlNotificationMetadata withLatestUpdate(UrlNotification latestUpdate) {
         this.latestUpdate = latestUpdate;
         return this;
@@ -40,9 +42,11 @@ public class UrlNotificationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public UrlNotificationMetadata withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public UrlNotificationMetadata(){}
 }

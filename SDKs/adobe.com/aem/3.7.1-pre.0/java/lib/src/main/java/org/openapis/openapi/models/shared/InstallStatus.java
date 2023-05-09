@@ -15,9 +15,11 @@ public class InstallStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public InstallStatusStatus status;
+
     public InstallStatus withStatus(InstallStatusStatus status) {
         this.status = status;
         return this;
     }
     
+    public InstallStatus(){}
 }

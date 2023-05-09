@@ -20,9 +20,11 @@ public class GetQuotesQuoteId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote")
     public org.openapis.openapi.models.shared.QuoteV1 quote;
+
     public GetQuotesQuoteId200ApplicationJSON withQuote(org.openapis.openapi.models.shared.QuoteV1 quote) {
         this.quote = quote;
         return this;
     }
     
+    public GetQuotesQuoteId200ApplicationJSON(){}
 }

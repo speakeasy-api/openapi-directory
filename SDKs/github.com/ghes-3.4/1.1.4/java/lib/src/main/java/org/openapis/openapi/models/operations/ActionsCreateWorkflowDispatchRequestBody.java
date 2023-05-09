@@ -15,6 +15,7 @@ public class ActionsCreateWorkflowDispatchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputs")
     public java.util.Map<String, String> inputs;
+
     public ActionsCreateWorkflowDispatchRequestBody withInputs(java.util.Map<String, String> inputs) {
         this.inputs = inputs;
         return this;
@@ -25,9 +26,13 @@ public class ActionsCreateWorkflowDispatchRequestBody {
      */
     @JsonProperty("ref")
     public String ref;
+
     public ActionsCreateWorkflowDispatchRequestBody withRef(String ref) {
         this.ref = ref;
         return this;
     }
     
+    public ActionsCreateWorkflowDispatchRequestBody(@JsonProperty("ref") String ref) {
+        this.ref = ref;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchedulesScheduleDSubIdRequest {
@@ -13,6 +14,7 @@ public class GetSchedulesScheduleDSubIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetSchedulesScheduleDSubIdRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -23,6 +25,7 @@ public class GetSchedulesScheduleDSubIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetSchedulesScheduleDSubIdRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -33,6 +36,7 @@ public class GetSchedulesScheduleDSubIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetSchedulesScheduleDSubIdRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -44,6 +48,7 @@ public class GetSchedulesScheduleDSubIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetSchedulesScheduleDSubIdRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -54,6 +59,7 @@ public class GetSchedulesScheduleDSubIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetSchedulesScheduleDSubIdRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -64,6 +70,7 @@ public class GetSchedulesScheduleDSubIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetSchedulesScheduleDSubIdRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -74,6 +81,7 @@ public class GetSchedulesScheduleDSubIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetSchedulesScheduleDSubIdRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
@@ -81,9 +89,14 @@ public class GetSchedulesScheduleDSubIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sub_id")
     public String subId;
+
     public GetSchedulesScheduleDSubIdRequest withSubId(String subId) {
         this.subId = subId;
         return this;
     }
     
+    public GetSchedulesScheduleDSubIdRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("sub_id") String subId) {
+        this.apiKey = apiKey;
+        this.subId = subId;
+  }
 }

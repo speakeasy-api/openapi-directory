@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AccountPostGuestJsonResponse {
     
     public org.openapis.openapi.models.shared.ApiCoreDtoAccountingGuest apiCoreDtoAccountingGuest;
+
     public AccountPostGuestJsonResponse withApiCoreDtoAccountingGuest(org.openapis.openapi.models.shared.ApiCoreDtoAccountingGuest apiCoreDtoAccountingGuest) {
         this.apiCoreDtoAccountingGuest = apiCoreDtoAccountingGuest;
         return this;
@@ -16,6 +18,7 @@ public class AccountPostGuestJsonResponse {
     
     
     public byte[] body;
+
     public AccountPostGuestJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -23,6 +26,7 @@ public class AccountPostGuestJsonResponse {
     
     
     public String contentType;
+
     public AccountPostGuestJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -30,6 +34,7 @@ public class AccountPostGuestJsonResponse {
     
     
     public Integer statusCode;
+
     public AccountPostGuestJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,9 +42,14 @@ public class AccountPostGuestJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AccountPostGuestJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AccountPostGuestJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

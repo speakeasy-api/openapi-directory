@@ -18,6 +18,7 @@ public class AutoscalingPolicyCpuUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictiveMethod")
     public AutoscalingPolicyCpuUtilizationPredictiveMethodEnum predictiveMethod;
+
     public AutoscalingPolicyCpuUtilization withPredictiveMethod(AutoscalingPolicyCpuUtilizationPredictiveMethodEnum predictiveMethod) {
         this.predictiveMethod = predictiveMethod;
         return this;
@@ -29,9 +30,11 @@ public class AutoscalingPolicyCpuUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utilizationTarget")
     public Double utilizationTarget;
+
     public AutoscalingPolicyCpuUtilization withUtilizationTarget(Double utilizationTarget) {
         this.utilizationTarget = utilizationTarget;
         return this;
     }
     
+    public AutoscalingPolicyCpuUtilization(){}
 }

@@ -12,6 +12,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountName")
     public String accountName;
+
     public CustomerQueryDto withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -20,6 +21,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public CustomerQueryDto withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -28,6 +30,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalEmails")
     public String[] additionalEmails;
+
     public CustomerQueryDto withAdditionalEmails(String[] additionalEmails) {
         this.additionalEmails = additionalEmails;
         return this;
@@ -36,6 +39,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String[] address;
+
     public CustomerQueryDto withAddress(String[] address) {
         this.address = address;
         return this;
@@ -44,6 +48,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authCode")
     public String authCode;
+
     public CustomerQueryDto withAuthCode(String authCode) {
         this.authCode = authCode;
         return this;
@@ -52,6 +57,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank")
     public EFTBankDto bank;
+
     public CustomerQueryDto withBank(EFTBankDto bank) {
         this.bank = bank;
         return this;
@@ -60,6 +66,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessIdentifierCode")
     public String businessIdentifierCode;
+
     public CustomerQueryDto withBusinessIdentifierCode(String businessIdentifierCode) {
         this.businessIdentifierCode = businessIdentifierCode;
         return this;
@@ -68,6 +75,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public CustomerQueryDto withCode(String code) {
         this.code = code;
         return this;
@@ -76,6 +84,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact")
     public String contact;
+
     public CustomerQueryDto withContact(String contact) {
         this.contact = contact;
         return this;
@@ -84,6 +93,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delivery")
     public String[] delivery;
+
     public CustomerQueryDto withDelivery(String[] delivery) {
         this.delivery = delivery;
         return this;
@@ -92,6 +102,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eFTReference")
     public String eFTReference;
+
     public CustomerQueryDto withEFTReference(String eFTReference) {
         this.eFTReference = eFTReference;
         return this;
@@ -100,6 +111,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public CustomerQueryDto withEmail(String email) {
         this.email = email;
         return this;
@@ -108,6 +120,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fax")
     public String fax;
+
     public CustomerQueryDto withFax(String fax) {
         this.fax = fax;
         return this;
@@ -116,6 +129,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CustomerQueryDto withId(Long id) {
         this.id = id;
         return this;
@@ -124,6 +138,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internationalBankAccountNumber")
     public String internationalBankAccountNumber;
+
     public CustomerQueryDto withInternationalBankAccountNumber(String internationalBankAccountNumber) {
         this.internationalBankAccountNumber = internationalBankAccountNumber;
         return this;
@@ -132,6 +147,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobile")
     public String mobile;
+
     public CustomerQueryDto withMobile(String mobile) {
         this.mobile = mobile;
         return this;
@@ -140,6 +156,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomerQueryDto withName(String name) {
         this.name = name;
         return this;
@@ -148,6 +165,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ourCode")
     public String ourCode;
+
     public CustomerQueryDto withOurCode(String ourCode) {
         this.ourCode = ourCode;
         return this;
@@ -156,6 +174,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerTypeId")
     public Long ownerTypeId;
+
     public CustomerQueryDto withOwnerTypeId(Long ownerTypeId) {
         this.ownerTypeId = ownerTypeId;
         return this;
@@ -164,6 +183,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public CustomerQueryDto withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -172,6 +192,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public CustomerQueryDto withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -180,6 +201,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatAnalysisTypeId")
     public Long vatAnalysisTypeId;
+
     public CustomerQueryDto withVatAnalysisTypeId(Long vatAnalysisTypeId) {
         this.vatAnalysisTypeId = vatAnalysisTypeId;
         return this;
@@ -188,6 +210,7 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatReg")
     public String vatReg;
+
     public CustomerQueryDto withVatReg(String vatReg) {
         this.vatReg = vatReg;
         return this;
@@ -196,9 +219,11 @@ public class CustomerQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatType")
     public Long vatType;
+
     public CustomerQueryDto withVatType(Long vatType) {
         this.vatType = vatType;
         return this;
     }
     
+    public CustomerQueryDto(){}
 }

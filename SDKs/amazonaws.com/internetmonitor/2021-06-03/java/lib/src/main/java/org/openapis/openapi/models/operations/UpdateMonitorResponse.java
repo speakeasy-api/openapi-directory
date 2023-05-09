@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateMonitorResponse {
@@ -12,6 +13,7 @@ public class UpdateMonitorResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateMonitorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateMonitorResponse {
     
     
     public String contentType;
+
     public UpdateMonitorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateMonitorResponse {
      */
     
     public Object internalServerException;
+
     public UpdateMonitorResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateMonitorResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateMonitorResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateMonitorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateMonitorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateMonitorResponse {
     
     
     public Integer statusCode;
+
     public UpdateMonitorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateMonitorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateMonitorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateMonitorResponse {
      */
     
     public Object throttlingException;
+
     public UpdateMonitorResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateMonitorResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateMonitorOutput updateMonitorOutput;
+
     public UpdateMonitorResponse withUpdateMonitorOutput(org.openapis.openapi.models.shared.UpdateMonitorOutput updateMonitorOutput) {
         this.updateMonitorOutput = updateMonitorOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateMonitorResponse {
      */
     
     public Object validationException;
+
     public UpdateMonitorResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateMonitorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

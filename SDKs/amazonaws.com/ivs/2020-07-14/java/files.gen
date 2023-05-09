@@ -165,4 +165,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/StreamSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListTagsForResourceResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateChannelResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

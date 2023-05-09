@@ -15,6 +15,7 @@ public class InstanceGroupManagerStatusStateful {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasStatefulConfig")
     public Boolean hasStatefulConfig;
+
     public InstanceGroupManagerStatusStateful withHasStatefulConfig(Boolean hasStatefulConfig) {
         this.hasStatefulConfig = hasStatefulConfig;
         return this;
@@ -26,6 +27,7 @@ public class InstanceGroupManagerStatusStateful {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isStateful")
     public Boolean isStateful;
+
     public InstanceGroupManagerStatusStateful withIsStateful(Boolean isStateful) {
         this.isStateful = isStateful;
         return this;
@@ -34,9 +36,11 @@ public class InstanceGroupManagerStatusStateful {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("perInstanceConfigs")
     public InstanceGroupManagerStatusStatefulPerInstanceConfigs perInstanceConfigs;
+
     public InstanceGroupManagerStatusStateful withPerInstanceConfigs(InstanceGroupManagerStatusStatefulPerInstanceConfigs perInstanceConfigs) {
         this.perInstanceConfigs = perInstanceConfigs;
         return this;
     }
     
+    public InstanceGroupManagerStatusStateful(){}
 }

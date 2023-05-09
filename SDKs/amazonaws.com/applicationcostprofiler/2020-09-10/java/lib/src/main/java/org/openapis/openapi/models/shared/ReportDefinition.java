@@ -22,6 +22,7 @@ public class ReportDefinition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ReportDefinition withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class ReportDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationS3Location")
     public S3Location destinationS3Location;
+
     public ReportDefinition withDestinationS3Location(S3Location destinationS3Location) {
         this.destinationS3Location = destinationS3Location;
         return this;
@@ -38,6 +40,7 @@ public class ReportDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public FormatEnum format;
+
     public ReportDefinition withFormat(FormatEnum format) {
         this.format = format;
         return this;
@@ -48,6 +51,7 @@ public class ReportDefinition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public ReportDefinition withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -56,6 +60,7 @@ public class ReportDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportDescription")
     public String reportDescription;
+
     public ReportDefinition withReportDescription(String reportDescription) {
         this.reportDescription = reportDescription;
         return this;
@@ -64,6 +69,7 @@ public class ReportDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportFrequency")
     public ReportFrequencyEnum reportFrequency;
+
     public ReportDefinition withReportFrequency(ReportFrequencyEnum reportFrequency) {
         this.reportFrequency = reportFrequency;
         return this;
@@ -72,9 +78,11 @@ public class ReportDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportId")
     public String reportId;
+
     public ReportDefinition withReportId(String reportId) {
         this.reportId = reportId;
         return this;
     }
     
+    public ReportDefinition(){}
 }

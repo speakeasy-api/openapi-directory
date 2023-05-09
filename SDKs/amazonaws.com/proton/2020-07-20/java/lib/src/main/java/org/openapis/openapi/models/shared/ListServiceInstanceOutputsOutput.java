@@ -15,6 +15,7 @@ public class ListServiceInstanceOutputsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListServiceInstanceOutputsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListServiceInstanceOutputsOutput {
     
     @JsonProperty("outputs")
     public Output[] outputs;
+
     public ListServiceInstanceOutputsOutput withOutputs(Output[] outputs) {
         this.outputs = outputs;
         return this;
     }
     
+    public ListServiceInstanceOutputsOutput(@JsonProperty("outputs") Output[] outputs) {
+        this.outputs = outputs;
+  }
 }

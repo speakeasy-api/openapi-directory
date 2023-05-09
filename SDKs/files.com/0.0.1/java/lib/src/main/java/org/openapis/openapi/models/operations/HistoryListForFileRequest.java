@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class HistoryListForFileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public HistoryListForFileRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -23,6 +25,7 @@ public class HistoryListForFileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=display")
     public String display;
+
     public HistoryListForFileRequest withDisplay(String display) {
         this.display = display;
         return this;
@@ -33,6 +36,7 @@ public class HistoryListForFileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_at")
     public OffsetDateTime endAt;
+
     public HistoryListForFileRequest withEndAt(OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -43,6 +47,7 @@ public class HistoryListForFileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public HistoryListForFileRequest withPath(String path) {
         this.path = path;
         return this;
@@ -53,6 +58,7 @@ public class HistoryListForFileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public HistoryListForFileRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -63,6 +69,7 @@ public class HistoryListForFileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public java.util.Map<String, Object> sortBy;
+
     public HistoryListForFileRequest withSortBy(java.util.Map<String, Object> sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -73,9 +80,13 @@ public class HistoryListForFileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_at")
     public OffsetDateTime startAt;
+
     public HistoryListForFileRequest withStartAt(OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
     
+    public HistoryListForFileRequest(@JsonProperty("path") String path) {
+        this.path = path;
+  }
 }

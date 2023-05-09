@@ -18,9 +18,11 @@ public class RoutingVPCInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public RoutingVPCInput withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public RoutingVPCInput(){}
 }

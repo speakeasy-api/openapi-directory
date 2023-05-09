@@ -20,6 +20,7 @@ public class RecommendationFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeReviewArn")
     public String codeReviewArn;
+
     public RecommendationFeedback withCodeReviewArn(String codeReviewArn) {
         this.codeReviewArn = codeReviewArn;
         return this;
@@ -30,6 +31,7 @@ public class RecommendationFeedback {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimeStamp")
     public OffsetDateTime createdTimeStamp;
+
     public RecommendationFeedback withCreatedTimeStamp(OffsetDateTime createdTimeStamp) {
         this.createdTimeStamp = createdTimeStamp;
         return this;
@@ -40,6 +42,7 @@ public class RecommendationFeedback {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTimeStamp")
     public OffsetDateTime lastUpdatedTimeStamp;
+
     public RecommendationFeedback withLastUpdatedTimeStamp(OffsetDateTime lastUpdatedTimeStamp) {
         this.lastUpdatedTimeStamp = lastUpdatedTimeStamp;
         return this;
@@ -48,6 +51,7 @@ public class RecommendationFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reactions")
     public ReactionEnum[] reactions;
+
     public RecommendationFeedback withReactions(ReactionEnum[] reactions) {
         this.reactions = reactions;
         return this;
@@ -56,6 +60,7 @@ public class RecommendationFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationId")
     public String recommendationId;
+
     public RecommendationFeedback withRecommendationId(String recommendationId) {
         this.recommendationId = recommendationId;
         return this;
@@ -64,9 +69,11 @@ public class RecommendationFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserId")
     public String userId;
+
     public RecommendationFeedback withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public RecommendationFeedback(){}
 }

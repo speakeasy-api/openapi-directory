@@ -15,6 +15,7 @@ public class ConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Amplitude")
     public java.util.Map<String, Object> amplitude;
+
     public ConnectorProfileProperties withAmplitude(java.util.Map<String, Object> amplitude) {
         this.amplitude = amplitude;
         return this;
@@ -23,6 +24,7 @@ public class ConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomConnector")
     public CustomConnectorProfileProperties customConnector;
+
     public ConnectorProfileProperties withCustomConnector(CustomConnectorProfileProperties customConnector) {
         this.customConnector = customConnector;
         return this;
@@ -31,6 +33,7 @@ public class ConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Datadog")
     public DatadogConnectorProfileProperties datadog;
+
     public ConnectorProfileProperties withDatadog(DatadogConnectorProfileProperties datadog) {
         this.datadog = datadog;
         return this;
@@ -39,6 +42,7 @@ public class ConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dynatrace")
     public DynatraceConnectorProfileProperties dynatrace;
+
     public ConnectorProfileProperties withDynatrace(DynatraceConnectorProfileProperties dynatrace) {
         this.dynatrace = dynatrace;
         return this;
@@ -47,6 +51,7 @@ public class ConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoogleAnalytics")
     public java.util.Map<String, Object> googleAnalytics;
+
     public ConnectorProfileProperties withGoogleAnalytics(java.util.Map<String, Object> googleAnalytics) {
         this.googleAnalytics = googleAnalytics;
         return this;
@@ -55,6 +60,7 @@ public class ConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Honeycode")
     public java.util.Map<String, Object> honeycode;
+
     public ConnectorProfileProperties withHoneycode(java.util.Map<String, Object> honeycode) {
         this.honeycode = honeycode;
         return this;
@@ -63,6 +69,7 @@ public class ConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InforNexus")
     public InforNexusConnectorProfileProperties inforNexus;
+
     public ConnectorProfileProperties withInforNexus(InforNexusConnectorProfileProperties inforNexus) {
         this.inforNexus = inforNexus;
         return this;
@@ -71,6 +78,7 @@ public class ConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marketo")
     public MarketoConnectorProfileProperties marketo;
+
     public ConnectorProfileProperties withMarketo(MarketoConnectorProfileProperties marketo) {
         this.marketo = marketo;
         return this;
@@ -79,6 +87,7 @@ public class ConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pardot")
     public PardotConnectorProfileProperties pardot;
+
     public ConnectorProfileProperties withPardot(PardotConnectorProfileProperties pardot) {
         this.pardot = pardot;
         return this;
@@ -87,6 +96,7 @@ public class ConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Redshift")
     public RedshiftConnectorProfileProperties redshift;
+
     public ConnectorProfileProperties withRedshift(RedshiftConnectorProfileProperties redshift) {
         this.redshift = redshift;
         return this;
@@ -98,6 +108,7 @@ public class ConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SAPOData")
     public SAPODataConnectorProfileProperties sapoData;
+
     public ConnectorProfileProperties withSAPOData(SAPODataConnectorProfileProperties sapoData) {
         this.sapoData = sapoData;
         return this;
@@ -106,6 +117,7 @@ public class ConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Salesforce")
     public SalesforceConnectorProfileProperties salesforce;
+
     public ConnectorProfileProperties withSalesforce(SalesforceConnectorProfileProperties salesforce) {
         this.salesforce = salesforce;
         return this;
@@ -114,6 +126,7 @@ public class ConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceNow")
     public ServiceNowConnectorProfileProperties serviceNow;
+
     public ConnectorProfileProperties withServiceNow(ServiceNowConnectorProfileProperties serviceNow) {
         this.serviceNow = serviceNow;
         return this;
@@ -122,6 +135,7 @@ public class ConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Singular")
     public java.util.Map<String, Object> singular;
+
     public ConnectorProfileProperties withSingular(java.util.Map<String, Object> singular) {
         this.singular = singular;
         return this;
@@ -130,6 +144,7 @@ public class ConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Slack")
     public SlackConnectorProfileProperties slack;
+
     public ConnectorProfileProperties withSlack(SlackConnectorProfileProperties slack) {
         this.slack = slack;
         return this;
@@ -138,6 +153,7 @@ public class ConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Snowflake")
     public SnowflakeConnectorProfileProperties snowflake;
+
     public ConnectorProfileProperties withSnowflake(SnowflakeConnectorProfileProperties snowflake) {
         this.snowflake = snowflake;
         return this;
@@ -146,6 +162,7 @@ public class ConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Trendmicro")
     public java.util.Map<String, Object> trendmicro;
+
     public ConnectorProfileProperties withTrendmicro(java.util.Map<String, Object> trendmicro) {
         this.trendmicro = trendmicro;
         return this;
@@ -154,6 +171,7 @@ public class ConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Veeva")
     public VeevaConnectorProfileProperties veeva;
+
     public ConnectorProfileProperties withVeeva(VeevaConnectorProfileProperties veeva) {
         this.veeva = veeva;
         return this;
@@ -162,9 +180,11 @@ public class ConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Zendesk")
     public ZendeskConnectorProfileProperties zendesk;
+
     public ConnectorProfileProperties withZendesk(ZendeskConnectorProfileProperties zendesk) {
         this.zendesk = zendesk;
         return this;
     }
     
+    public ConnectorProfileProperties(){}
 }

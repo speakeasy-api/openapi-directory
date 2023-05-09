@@ -106,4 +106,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GetBreakpointResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListBreakpointsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SetBreakpointResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListDebuggeesResponse.java
+docs/sdk/README.md
+docs/controller/README.md
+docs/debugger/README.md
 USAGE.md

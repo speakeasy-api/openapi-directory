@@ -16,9 +16,11 @@ public class DeleteProjectUsernameProjectEnvvarName200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public DeleteProjectUsernameProjectEnvvarName200ApplicationJSONMessageEnum message;
+
     public DeleteProjectUsernameProjectEnvvarName200ApplicationJSON withMessage(DeleteProjectUsernameProjectEnvvarName200ApplicationJSONMessageEnum message) {
         this.message = message;
         return this;
     }
     
+    public DeleteProjectUsernameProjectEnvvarName200ApplicationJSON(){}
 }

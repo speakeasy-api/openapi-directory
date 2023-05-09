@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSitesWithinOutputFormatRequest {
@@ -12,6 +13,7 @@ public class GetSitesWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bbox")
     public String bbox;
+
     public GetSitesWithinOutputFormatRequest withBbox(String bbox) {
         this.bbox = bbox;
         return this;
@@ -22,6 +24,7 @@ public class GetSitesWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=brief")
     public Boolean brief;
+
     public GetSitesWithinOutputFormatRequest withBrief(Boolean brief) {
         this.brief = brief;
         return this;
@@ -32,6 +35,7 @@ public class GetSitesWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeUnits")
     public Boolean excludeUnits;
+
     public GetSitesWithinOutputFormatRequest withExcludeUnits(Boolean excludeUnits) {
         this.excludeUnits = excludeUnits;
         return this;
@@ -42,6 +46,7 @@ public class GetSitesWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationDescriptor")
     public GetSitesWithinOutputFormatLocationDescriptorEnum locationDescriptor;
+
     public GetSitesWithinOutputFormatRequest withLocationDescriptor(GetSitesWithinOutputFormatLocationDescriptorEnum locationDescriptor) {
         this.locationDescriptor = locationDescriptor;
         return this;
@@ -52,6 +57,7 @@ public class GetSitesWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public GetSitesWithinOutputFormatRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -62,6 +68,7 @@ public class GetSitesWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlyCivic")
     public Boolean onlyCivic;
+
     public GetSitesWithinOutputFormatRequest withOnlyCivic(Boolean onlyCivic) {
         this.onlyCivic = onlyCivic;
         return this;
@@ -74,6 +81,7 @@ public class GetSitesWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
     public GetSitesWithinOutputFormatOutputFormatEnum outputFormat;
+
     public GetSitesWithinOutputFormatRequest withOutputFormat(GetSitesWithinOutputFormatOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -84,6 +92,7 @@ public class GetSitesWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
     public GetSitesWithinOutputFormatOutputSrsEnum outputSRS;
+
     public GetSitesWithinOutputFormatRequest withOutputSRS(GetSitesWithinOutputFormatOutputSrsEnum outputSRS) {
         this.outputSRS = outputSRS;
         return this;
@@ -94,9 +103,14 @@ public class GetSitesWithinOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setBack")
     public Long setBack;
+
     public GetSitesWithinOutputFormatRequest withSetBack(Long setBack) {
         this.setBack = setBack;
         return this;
     }
     
+    public GetSitesWithinOutputFormatRequest(@JsonProperty("bbox") String bbox, @JsonProperty("outputFormat") GetSitesWithinOutputFormatOutputFormatEnum outputFormat) {
+        this.bbox = bbox;
+        this.outputFormat = outputFormat;
+  }
 }

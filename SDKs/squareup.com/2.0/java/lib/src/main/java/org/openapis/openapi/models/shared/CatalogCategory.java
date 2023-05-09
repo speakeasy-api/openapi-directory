@@ -18,9 +18,11 @@ public class CatalogCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CatalogCategory withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CatalogCategory(){}
 }

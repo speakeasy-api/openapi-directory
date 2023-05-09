@@ -15,6 +15,7 @@ public class ContactsListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ContactsSimpleVO[] results;
+
     public ContactsListVO withResults(ContactsSimpleVO[] results) {
         this.results = results;
         return this;
@@ -23,6 +24,7 @@ public class ContactsListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public ContactsListVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class ContactsListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public ContactsListVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public ContactsListVO(){}
 }

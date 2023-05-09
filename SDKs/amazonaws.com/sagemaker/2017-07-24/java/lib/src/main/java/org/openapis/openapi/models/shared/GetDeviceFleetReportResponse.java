@@ -20,6 +20,7 @@ public class GetDeviceFleetReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentVersions")
     public AgentVersion[] agentVersions;
+
     public GetDeviceFleetReportResponse withAgentVersions(AgentVersion[] agentVersions) {
         this.agentVersions = agentVersions;
         return this;
@@ -28,6 +29,7 @@ public class GetDeviceFleetReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public GetDeviceFleetReportResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class GetDeviceFleetReportResponse {
     
     @JsonProperty("DeviceFleetArn")
     public String deviceFleetArn;
+
     public GetDeviceFleetReportResponse withDeviceFleetArn(String deviceFleetArn) {
         this.deviceFleetArn = deviceFleetArn;
         return this;
@@ -42,6 +45,7 @@ public class GetDeviceFleetReportResponse {
     
     @JsonProperty("DeviceFleetName")
     public String deviceFleetName;
+
     public GetDeviceFleetReportResponse withDeviceFleetName(String deviceFleetName) {
         this.deviceFleetName = deviceFleetName;
         return this;
@@ -50,6 +54,7 @@ public class GetDeviceFleetReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceStats")
     public DeviceStats deviceStats;
+
     public GetDeviceFleetReportResponse withDeviceStats(DeviceStats deviceStats) {
         this.deviceStats = deviceStats;
         return this;
@@ -58,6 +63,7 @@ public class GetDeviceFleetReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelStats")
     public EdgeModelStat[] modelStats;
+
     public GetDeviceFleetReportResponse withModelStats(EdgeModelStat[] modelStats) {
         this.modelStats = modelStats;
         return this;
@@ -66,6 +72,7 @@ public class GetDeviceFleetReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputConfig")
     public EdgeOutputConfig outputConfig;
+
     public GetDeviceFleetReportResponse withOutputConfig(EdgeOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -76,9 +83,14 @@ public class GetDeviceFleetReportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReportGenerated")
     public OffsetDateTime reportGenerated;
+
     public GetDeviceFleetReportResponse withReportGenerated(OffsetDateTime reportGenerated) {
         this.reportGenerated = reportGenerated;
         return this;
     }
     
+    public GetDeviceFleetReportResponse(@JsonProperty("DeviceFleetArn") String deviceFleetArn, @JsonProperty("DeviceFleetName") String deviceFleetName) {
+        this.deviceFleetArn = deviceFleetArn;
+        this.deviceFleetName = deviceFleetName;
+  }
 }

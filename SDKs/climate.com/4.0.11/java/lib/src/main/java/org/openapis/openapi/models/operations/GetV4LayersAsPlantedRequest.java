@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetV4LayersAsPlantedRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetV4LayersAsPlantedRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -23,6 +25,7 @@ public class GetV4LayersAsPlantedRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Limit")
     public Integer xLimit;
+
     public GetV4LayersAsPlantedRequest withXLimit(Integer xLimit) {
         this.xLimit = xLimit;
         return this;
@@ -33,6 +36,7 @@ public class GetV4LayersAsPlantedRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Next-Token")
     public String xNextToken;
+
     public GetV4LayersAsPlantedRequest withXNextToken(String xNextToken) {
         this.xNextToken = xNextToken;
         return this;
@@ -43,6 +47,7 @@ public class GetV4LayersAsPlantedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurredAfter")
     public OffsetDateTime occurredAfter;
+
     public GetV4LayersAsPlantedRequest withOccurredAfter(OffsetDateTime occurredAfter) {
         this.occurredAfter = occurredAfter;
         return this;
@@ -53,6 +58,7 @@ public class GetV4LayersAsPlantedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurredBefore")
     public OffsetDateTime occurredBefore;
+
     public GetV4LayersAsPlantedRequest withOccurredBefore(OffsetDateTime occurredBefore) {
         this.occurredBefore = occurredBefore;
         return this;
@@ -63,6 +69,7 @@ public class GetV4LayersAsPlantedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceOwnerId")
     public String resourceOwnerId;
+
     public GetV4LayersAsPlantedRequest withResourceOwnerId(String resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
@@ -73,9 +80,13 @@ public class GetV4LayersAsPlantedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAfter")
     public OffsetDateTime updatedAfter;
+
     public GetV4LayersAsPlantedRequest withUpdatedAfter(OffsetDateTime updatedAfter) {
         this.updatedAfter = updatedAfter;
         return this;
     }
     
+    public GetV4LayersAsPlantedRequest(@JsonProperty("Accept") String accept) {
+        this.accept = accept;
+  }
 }

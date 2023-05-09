@@ -18,6 +18,7 @@ public class PriceInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictedClicksChangeFraction")
     public Double predictedClicksChangeFraction;
+
     public PriceInsights withPredictedClicksChangeFraction(Double predictedClicksChangeFraction) {
         this.predictedClicksChangeFraction = predictedClicksChangeFraction;
         return this;
@@ -29,6 +30,7 @@ public class PriceInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictedConversionsChangeFraction")
     public Double predictedConversionsChangeFraction;
+
     public PriceInsights withPredictedConversionsChangeFraction(Double predictedConversionsChangeFraction) {
         this.predictedConversionsChangeFraction = predictedConversionsChangeFraction;
         return this;
@@ -40,6 +42,7 @@ public class PriceInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictedGrossProfitChangeFraction")
     public Double predictedGrossProfitChangeFraction;
+
     public PriceInsights withPredictedGrossProfitChangeFraction(Double predictedGrossProfitChangeFraction) {
         this.predictedGrossProfitChangeFraction = predictedGrossProfitChangeFraction;
         return this;
@@ -51,6 +54,7 @@ public class PriceInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictedImpressionsChangeFraction")
     public Double predictedImpressionsChangeFraction;
+
     public PriceInsights withPredictedImpressionsChangeFraction(Double predictedImpressionsChangeFraction) {
         this.predictedImpressionsChangeFraction = predictedImpressionsChangeFraction;
         return this;
@@ -62,6 +66,7 @@ public class PriceInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictedMonthlyGrossProfitChangeCurrencyCode")
     public String predictedMonthlyGrossProfitChangeCurrencyCode;
+
     public PriceInsights withPredictedMonthlyGrossProfitChangeCurrencyCode(String predictedMonthlyGrossProfitChangeCurrencyCode) {
         this.predictedMonthlyGrossProfitChangeCurrencyCode = predictedMonthlyGrossProfitChangeCurrencyCode;
         return this;
@@ -73,6 +78,7 @@ public class PriceInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictedMonthlyGrossProfitChangeMicros")
     public String predictedMonthlyGrossProfitChangeMicros;
+
     public PriceInsights withPredictedMonthlyGrossProfitChangeMicros(String predictedMonthlyGrossProfitChangeMicros) {
         this.predictedMonthlyGrossProfitChangeMicros = predictedMonthlyGrossProfitChangeMicros;
         return this;
@@ -84,6 +90,7 @@ public class PriceInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedPriceCurrencyCode")
     public String suggestedPriceCurrencyCode;
+
     public PriceInsights withSuggestedPriceCurrencyCode(String suggestedPriceCurrencyCode) {
         this.suggestedPriceCurrencyCode = suggestedPriceCurrencyCode;
         return this;
@@ -95,9 +102,11 @@ public class PriceInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedPriceMicros")
     public String suggestedPriceMicros;
+
     public PriceInsights withSuggestedPriceMicros(String suggestedPriceMicros) {
         this.suggestedPriceMicros = suggestedPriceMicros;
         return this;
     }
     
+    public PriceInsights(){}
 }

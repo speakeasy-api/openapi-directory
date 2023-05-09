@@ -12,6 +12,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("friendlyDescription")
     public String friendlyDescription;
+
     public Category withFriendlyDescription(String friendlyDescription) {
         this.friendlyDescription = friendlyDescription;
         return this;
@@ -20,6 +21,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden")
     public Boolean hidden;
+
     public Category withHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
@@ -28,6 +30,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icd10Description")
     public String icd10Description;
+
     public Category withIcd10Description(String icd10Description) {
         this.icd10Description = icd10Description;
         return this;
@@ -36,6 +39,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Category withId(Long id) {
         this.id = id;
         return this;
@@ -44,9 +48,11 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public Integer number;
+
     public Category withNumber(Integer number) {
         this.number = number;
         return this;
     }
     
+    public Category(){}
 }

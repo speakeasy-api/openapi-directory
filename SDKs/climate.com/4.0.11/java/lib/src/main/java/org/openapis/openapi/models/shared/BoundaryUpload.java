@@ -15,9 +15,13 @@ public class BoundaryUpload {
      */
     @JsonProperty("geometry")
     public Geometry geometry;
+
     public BoundaryUpload withGeometry(Geometry geometry) {
         this.geometry = geometry;
         return this;
     }
     
+    public BoundaryUpload(@JsonProperty("geometry") Geometry geometry) {
+        this.geometry = geometry;
+  }
 }

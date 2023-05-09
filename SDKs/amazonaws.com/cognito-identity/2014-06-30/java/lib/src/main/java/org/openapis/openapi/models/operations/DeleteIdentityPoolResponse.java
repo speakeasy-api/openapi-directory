@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteIdentityPoolResponse {
     
     public String contentType;
+
     public DeleteIdentityPoolResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteIdentityPoolResponse {
      */
     
     public Object internalErrorException;
+
     public DeleteIdentityPoolResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteIdentityPoolResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteIdentityPoolResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteIdentityPoolResponse {
      */
     
     public Object notAuthorizedException;
+
     public DeleteIdentityPoolResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteIdentityPoolResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteIdentityPoolResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteIdentityPoolResponse {
     
     
     public Integer statusCode;
+
     public DeleteIdentityPoolResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteIdentityPoolResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteIdentityPoolResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteIdentityPoolResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteIdentityPoolResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteIdentityPoolResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

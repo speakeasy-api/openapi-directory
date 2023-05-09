@@ -39,7 +39,9 @@ public class MarketplacesOrdersOrder {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ChangeOrderResponse changeOrder(org.openapis.openapi.models.operations.ChangeOrderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangeOrderRequest.class, baseUrl, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/{changeOrderType}", request, null);
@@ -70,12 +72,10 @@ public class MarketplacesOrdersOrder {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeOrderResponse res = new org.openapis.openapi.models.operations.ChangeOrderResponse() {{
+        org.openapis.openapi.models.operations.ChangeOrderResponse res = new org.openapis.openapi.models.operations.ChangeOrderResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -109,7 +109,9 @@ public class MarketplacesOrdersOrder {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ClearMerchantOrderInfoResponse clearMerchantOrderInfo(org.openapis.openapi.models.operations.ClearMerchantOrderInfoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClearMerchantOrderInfoRequest.class, baseUrl, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/clearMerchantOrderInfo", request, null);
@@ -124,11 +126,9 @@ public class MarketplacesOrdersOrder {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClearMerchantOrderInfoResponse res = new org.openapis.openapi.models.operations.ClearMerchantOrderInfoResponse() {{
+        org.openapis.openapi.models.operations.ClearMerchantOrderInfoResponse res = new org.openapis.openapi.models.operations.ClearMerchantOrderInfoResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -150,7 +150,9 @@ public class MarketplacesOrdersOrder {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetOrderResponse getOrder(org.openapis.openapi.models.operations.GetOrderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrderRequest.class, baseUrl, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}", request, null);
@@ -173,12 +175,10 @@ public class MarketplacesOrdersOrder {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrderResponse res = new org.openapis.openapi.models.operations.GetOrderResponse() {{
+        org.openapis.openapi.models.operations.GetOrderResponse res = new org.openapis.openapi.models.operations.GetOrderResponse(contentType, httpRes.statusCode()) {{
             order = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -210,7 +210,9 @@ public class MarketplacesOrdersOrder {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetOrderHistoryResponse getOrderHistory(org.openapis.openapi.models.operations.GetOrderHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrderHistoryRequest.class, baseUrl, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/history", request, null);
@@ -233,12 +235,10 @@ public class MarketplacesOrdersOrder {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrderHistoryResponse res = new org.openapis.openapi.models.operations.GetOrderHistoryResponse() {{
+        org.openapis.openapi.models.operations.GetOrderHistoryResponse res = new org.openapis.openapi.models.operations.GetOrderHistoryResponse(contentType, httpRes.statusCode()) {{
             orderHistory = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -268,7 +268,9 @@ public class MarketplacesOrdersOrder {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.HarvestOrderResponse harvestOrder(org.openapis.openapi.models.operations.HarvestOrderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.HarvestOrderRequest.class, baseUrl, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/harvest", request, null);
@@ -283,12 +285,10 @@ public class MarketplacesOrdersOrder {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HarvestOrderResponse res = new org.openapis.openapi.models.operations.HarvestOrderResponse() {{
+        org.openapis.openapi.models.operations.HarvestOrderResponse res = new org.openapis.openapi.models.operations.HarvestOrderResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -324,7 +324,9 @@ public class MarketplacesOrdersOrder {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.HeadOrderResponse headOrder(org.openapis.openapi.models.operations.HeadOrderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.HeadOrderRequest.class, baseUrl, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}", request, null);
@@ -347,11 +349,9 @@ public class MarketplacesOrdersOrder {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HeadOrderResponse res = new org.openapis.openapi.models.operations.HeadOrderResponse() {{
+        org.openapis.openapi.models.operations.HeadOrderResponse res = new org.openapis.openapi.models.operations.HeadOrderResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 304) {
@@ -374,7 +374,9 @@ public class MarketplacesOrdersOrder {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.SetMerchantOrderInfoResponse setMerchantOrderInfo(org.openapis.openapi.models.operations.SetMerchantOrderInfoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetMerchantOrderInfoRequest.class, baseUrl, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/setMerchantOrderInfo", request, null);
@@ -394,11 +396,9 @@ public class MarketplacesOrdersOrder {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetMerchantOrderInfoResponse res = new org.openapis.openapi.models.operations.SetMerchantOrderInfoResponse() {{
+        org.openapis.openapi.models.operations.SetMerchantOrderInfoResponse res = new org.openapis.openapi.models.operations.SetMerchantOrderInfoResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

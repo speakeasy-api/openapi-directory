@@ -18,6 +18,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Document withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public java.util.Map<String, Value> fields;
+
     public Document withFields(java.util.Map<String, Value> fields) {
         this.fields = fields;
         return this;
@@ -40,6 +42,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Document withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Document withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Document(){}
 }

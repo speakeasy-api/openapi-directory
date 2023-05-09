@@ -54,11 +54,9 @@ public class ResourceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSetupV1ResourcegroupsIdResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1ResourcegroupsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteSetupV1ResourcegroupsIdResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1ResourcegroupsIdResponse(contentType, httpRes.statusCode()) {{
             resourceGroupViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class ResourceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1ResourcegroupsResponse res = new org.openapis.openapi.models.operations.GetSetupV1ResourcegroupsResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1ResourcegroupsResponse res = new org.openapis.openapi.models.operations.GetSetupV1ResourcegroupsResponse(contentType, httpRes.statusCode()) {{
             resourceGroupListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -141,11 +137,9 @@ public class ResourceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1ResourcegroupsIdResponse res = new org.openapis.openapi.models.operations.GetSetupV1ResourcegroupsIdResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1ResourcegroupsIdResponse res = new org.openapis.openapi.models.operations.GetSetupV1ResourcegroupsIdResponse(contentType, httpRes.statusCode()) {{
             resourceGroupViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -183,11 +177,9 @@ public class ResourceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSetupV1ResourcegroupsResponse res = new org.openapis.openapi.models.operations.PostSetupV1ResourcegroupsResponse() {{
+        org.openapis.openapi.models.operations.PostSetupV1ResourcegroupsResponse res = new org.openapis.openapi.models.operations.PostSetupV1ResourcegroupsResponse(contentType, httpRes.statusCode()) {{
             resourceGroupViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -225,11 +217,9 @@ public class ResourceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSetupV1ResourcegroupsIdResponse res = new org.openapis.openapi.models.operations.PutSetupV1ResourcegroupsIdResponse() {{
+        org.openapis.openapi.models.operations.PutSetupV1ResourcegroupsIdResponse res = new org.openapis.openapi.models.operations.PutSetupV1ResourcegroupsIdResponse(contentType, httpRes.statusCode()) {{
             resourceGroupViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -265,11 +255,9 @@ public class ResourceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSetupV1ResourcegroupsIdRecoverResponse res = new org.openapis.openapi.models.operations.PutSetupV1ResourcegroupsIdRecoverResponse() {{
+        org.openapis.openapi.models.operations.PutSetupV1ResourcegroupsIdRecoverResponse res = new org.openapis.openapi.models.operations.PutSetupV1ResourcegroupsIdRecoverResponse(contentType, httpRes.statusCode()) {{
             resourceViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

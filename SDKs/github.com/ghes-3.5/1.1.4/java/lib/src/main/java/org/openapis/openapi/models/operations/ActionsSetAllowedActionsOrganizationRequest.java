@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsSetAllowedActionsOrganizationRequest {
@@ -12,6 +13,7 @@ public class ActionsSetAllowedActionsOrganizationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public ActionsSetAllowedActionsOrganizationRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -19,9 +21,13 @@ public class ActionsSetAllowedActionsOrganizationRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SelectedActions selectedActions;
+
     public ActionsSetAllowedActionsOrganizationRequest withSelectedActions(org.openapis.openapi.models.shared.SelectedActions selectedActions) {
         this.selectedActions = selectedActions;
         return this;
     }
     
+    public ActionsSetAllowedActionsOrganizationRequest(@JsonProperty("org") String org) {
+        this.org = org;
+  }
 }

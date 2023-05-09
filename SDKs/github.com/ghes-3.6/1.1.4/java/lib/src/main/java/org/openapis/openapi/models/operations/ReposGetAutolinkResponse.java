@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposGetAutolinkResponse {
     
     public String contentType;
+
     public ReposGetAutolinkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposGetAutolinkResponse {
     
     
     public Integer statusCode;
+
     public ReposGetAutolinkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposGetAutolinkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposGetAutolinkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposGetAutolinkResponse {
      */
     
     public org.openapis.openapi.models.shared.Autolink autolink;
+
     public ReposGetAutolinkResponse withAutolink(org.openapis.openapi.models.shared.Autolink autolink) {
         this.autolink = autolink;
         return this;
@@ -43,9 +48,14 @@ public class ReposGetAutolinkResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposGetAutolinkResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
     }
     
+    public ReposGetAutolinkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

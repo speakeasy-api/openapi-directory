@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateAppRequest {
     @JsonProperty("AppName")
     public String appName;
+
     public CreateAppRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -18,6 +19,7 @@ public class CreateAppRequest {
     
     @JsonProperty("AppType")
     public AppTypeEnum appType;
+
     public CreateAppRequest withAppType(AppTypeEnum appType) {
         this.appType = appType;
         return this;
@@ -25,6 +27,7 @@ public class CreateAppRequest {
     
     @JsonProperty("DomainId")
     public String domainId;
+
     public CreateAppRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -33,6 +36,7 @@ public class CreateAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceSpec")
     public ResourceSpec resourceSpec;
+
     public CreateAppRequest withResourceSpec(ResourceSpec resourceSpec) {
         this.resourceSpec = resourceSpec;
         return this;
@@ -41,6 +45,7 @@ public class CreateAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpaceName")
     public String spaceName;
+
     public CreateAppRequest withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
@@ -49,6 +54,7 @@ public class CreateAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateAppRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -57,9 +63,15 @@ public class CreateAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserProfileName")
     public String userProfileName;
+
     public CreateAppRequest withUserProfileName(String userProfileName) {
         this.userProfileName = userProfileName;
         return this;
     }
     
+    public CreateAppRequest(@JsonProperty("AppName") String appName, @JsonProperty("AppType") AppTypeEnum appType, @JsonProperty("DomainId") String domainId) {
+        this.appName = appName;
+        this.appType = appType;
+        this.domainId = domainId;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProjectSavedFilter {
     @JsonProperty("filters")
     public java.util.Map<String, Object> filters;
+
     public ProjectSavedFilter withFilters(java.util.Map<String, Object> filters) {
         this.filters = filters;
         return this;
@@ -22,6 +23,7 @@ public class ProjectSavedFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public ProjectSavedFilter withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -29,9 +31,14 @@ public class ProjectSavedFilter {
     
     @JsonProperty("name")
     public String name;
+
     public ProjectSavedFilter withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ProjectSavedFilter(@JsonProperty("filters") java.util.Map<String, Object> filters, @JsonProperty("name") String name) {
+        this.filters = filters;
+        this.name = name;
+  }
 }

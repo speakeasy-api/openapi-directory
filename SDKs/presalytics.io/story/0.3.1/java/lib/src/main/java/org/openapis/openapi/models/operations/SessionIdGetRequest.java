@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SessionIdGetRequest {
@@ -12,6 +13,7 @@ public class SessionIdGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_relationships")
     public Boolean includeRelationships;
+
     public SessionIdGetRequest withIncludeRelationships(Boolean includeRelationships) {
         this.includeRelationships = includeRelationships;
         return this;
@@ -22,9 +24,13 @@ public class SessionIdGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=session_id")
     public String sessionId;
+
     public SessionIdGetRequest withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     
+    public SessionIdGetRequest(@JsonProperty("session_id") String sessionId) {
+        this.sessionId = sessionId;
+  }
 }

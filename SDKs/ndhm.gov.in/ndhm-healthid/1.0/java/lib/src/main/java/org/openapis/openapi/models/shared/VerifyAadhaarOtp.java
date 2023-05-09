@@ -15,6 +15,7 @@ public class VerifyAadhaarOtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otp")
     public String otp;
+
     public VerifyAadhaarOtp withOtp(String otp) {
         this.otp = otp;
         return this;
@@ -23,6 +24,7 @@ public class VerifyAadhaarOtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictions")
     public String restrictions;
+
     public VerifyAadhaarOtp withRestrictions(String restrictions) {
         this.restrictions = restrictions;
         return this;
@@ -31,9 +33,11 @@ public class VerifyAadhaarOtp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txnId")
     public String txnId;
+
     public VerifyAadhaarOtp withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public VerifyAadhaarOtp(){}
 }

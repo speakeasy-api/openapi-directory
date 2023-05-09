@@ -15,6 +15,7 @@ public class UpdateImagePipelineRequestBodySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineExecutionStartCondition")
     public org.openapis.openapi.models.shared.PipelineExecutionStartConditionEnum pipelineExecutionStartCondition;
+
     public UpdateImagePipelineRequestBodySchedule withPipelineExecutionStartCondition(org.openapis.openapi.models.shared.PipelineExecutionStartConditionEnum pipelineExecutionStartCondition) {
         this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
         return this;
@@ -23,6 +24,7 @@ public class UpdateImagePipelineRequestBodySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleExpression")
     public String scheduleExpression;
+
     public UpdateImagePipelineRequestBodySchedule withScheduleExpression(String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
         return this;
@@ -31,9 +33,11 @@ public class UpdateImagePipelineRequestBodySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public UpdateImagePipelineRequestBodySchedule withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public UpdateImagePipelineRequestBodySchedule(){}
 }

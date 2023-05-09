@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolTftpSessionSetParameterRequest {
@@ -12,6 +13,7 @@ public class ProtocolTftpSessionSetParameterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolTftpSessionSetParameterRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,6 +24,7 @@ public class ProtocolTftpSessionSetParameterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parameter")
     public String parameter;
+
     public ProtocolTftpSessionSetParameterRequest withParameter(String parameter) {
         this.parameter = parameter;
         return this;
@@ -32,6 +35,7 @@ public class ProtocolTftpSessionSetParameterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sessionID")
     public String sessionID;
+
     public ProtocolTftpSessionSetParameterRequest withSessionID(String sessionID) {
         this.sessionID = sessionID;
         return this;
@@ -42,9 +46,16 @@ public class ProtocolTftpSessionSetParameterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=value")
     public String value;
+
     public ProtocolTftpSessionSetParameterRequest withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ProtocolTftpSessionSetParameterRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("parameter") String parameter, @JsonProperty("sessionID") String sessionID, @JsonProperty("value") String value) {
+        this.agentNum = agentNum;
+        this.parameter = parameter;
+        this.sessionID = sessionID;
+        this.value = value;
+  }
 }

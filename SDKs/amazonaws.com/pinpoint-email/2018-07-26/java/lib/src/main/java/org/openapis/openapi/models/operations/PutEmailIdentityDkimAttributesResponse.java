@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutEmailIdentityDkimAttributesResponse {
@@ -12,6 +13,7 @@ public class PutEmailIdentityDkimAttributesResponse {
      */
     
     public Object badRequestException;
+
     public PutEmailIdentityDkimAttributesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class PutEmailIdentityDkimAttributesResponse {
     
     
     public String contentType;
+
     public PutEmailIdentityDkimAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutEmailIdentityDkimAttributesResponse {
      */
     
     public Object notFoundException;
+
     public PutEmailIdentityDkimAttributesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -39,6 +43,7 @@ public class PutEmailIdentityDkimAttributesResponse {
      */
     
     public java.util.Map<String, Object> putEmailIdentityDkimAttributesResponse;
+
     public PutEmailIdentityDkimAttributesResponse withPutEmailIdentityDkimAttributesResponse(java.util.Map<String, Object> putEmailIdentityDkimAttributesResponse) {
         this.putEmailIdentityDkimAttributesResponse = putEmailIdentityDkimAttributesResponse;
         return this;
@@ -46,6 +51,7 @@ public class PutEmailIdentityDkimAttributesResponse {
     
     
     public Integer statusCode;
+
     public PutEmailIdentityDkimAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutEmailIdentityDkimAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutEmailIdentityDkimAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PutEmailIdentityDkimAttributesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutEmailIdentityDkimAttributesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PutEmailIdentityDkimAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

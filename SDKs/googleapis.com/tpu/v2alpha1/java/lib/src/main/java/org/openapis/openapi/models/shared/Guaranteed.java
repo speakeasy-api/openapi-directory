@@ -18,6 +18,7 @@ public class Guaranteed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minDuration")
     public String minDuration;
+
     public Guaranteed withMinDuration(String minDuration) {
         this.minDuration = minDuration;
         return this;
@@ -29,9 +30,11 @@ public class Guaranteed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reserved")
     public Boolean reserved;
+
     public Guaranteed withReserved(Boolean reserved) {
         this.reserved = reserved;
         return this;
     }
     
+    public Guaranteed(){}
 }

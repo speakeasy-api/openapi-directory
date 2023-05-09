@@ -18,6 +18,7 @@ public class LayoutReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layoutId")
     public String layoutId;
+
     public LayoutReference withLayoutId(String layoutId) {
         this.layoutId = layoutId;
         return this;
@@ -29,9 +30,11 @@ public class LayoutReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predefinedLayout")
     public LayoutReferencePredefinedLayoutEnum predefinedLayout;
+
     public LayoutReference withPredefinedLayout(LayoutReferencePredefinedLayoutEnum predefinedLayout) {
         this.predefinedLayout = predefinedLayout;
         return this;
     }
     
+    public LayoutReference(){}
 }

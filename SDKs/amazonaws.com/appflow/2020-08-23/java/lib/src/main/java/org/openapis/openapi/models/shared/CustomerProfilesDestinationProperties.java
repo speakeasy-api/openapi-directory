@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomerProfilesDestinationProperties {
     @JsonProperty("domainName")
     public String domainName;
+
     public CustomerProfilesDestinationProperties withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -22,9 +23,13 @@ public class CustomerProfilesDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectTypeName")
     public String objectTypeName;
+
     public CustomerProfilesDestinationProperties withObjectTypeName(String objectTypeName) {
         this.objectTypeName = objectTypeName;
         return this;
     }
     
+    public CustomerProfilesDestinationProperties(@JsonProperty("domainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

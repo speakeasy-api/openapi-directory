@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResourcesResponse {
     
     public String contentType;
+
     public ListResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListResourcesResponse {
      */
     
     public Object internalServiceException;
+
     public ListResourcesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class ListResourcesResponse {
      */
     
     public Object invalidInputException;
+
     public ListResourcesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class ListResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResourcesResponse listResourcesResponse;
+
     public ListResourcesResponse withListResourcesResponse(org.openapis.openapi.models.shared.ListResourcesResponse listResourcesResponse) {
         this.listResourcesResponse = listResourcesResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListResourcesResponse {
      */
     
     public Object operationTimeoutException;
+
     public ListResourcesResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class ListResourcesResponse {
     
     
     public Integer statusCode;
+
     public ListResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

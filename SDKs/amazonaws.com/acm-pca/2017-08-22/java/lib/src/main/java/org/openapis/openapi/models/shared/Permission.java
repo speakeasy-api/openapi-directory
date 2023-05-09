@@ -20,6 +20,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Actions")
     public ActionTypeEnum[] actions;
+
     public Permission withActions(ActionTypeEnum[] actions) {
         this.actions = actions;
         return this;
@@ -28,6 +29,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateAuthorityArn")
     public String certificateAuthorityArn;
+
     public Permission withCertificateAuthorityArn(String certificateAuthorityArn) {
         this.certificateAuthorityArn = certificateAuthorityArn;
         return this;
@@ -38,6 +40,7 @@ public class Permission {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public Permission withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policy")
     public String policy;
+
     public Permission withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -54,6 +58,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Principal")
     public String principal;
+
     public Permission withPrincipal(String principal) {
         this.principal = principal;
         return this;
@@ -62,9 +67,11 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceAccount")
     public String sourceAccount;
+
     public Permission withSourceAccount(String sourceAccount) {
         this.sourceAccount = sourceAccount;
         return this;
     }
     
+    public Permission(){}
 }

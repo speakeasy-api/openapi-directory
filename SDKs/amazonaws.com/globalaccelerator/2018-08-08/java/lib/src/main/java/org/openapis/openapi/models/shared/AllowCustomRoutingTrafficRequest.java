@@ -12,6 +12,7 @@ public class AllowCustomRoutingTrafficRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowAllTrafficToEndpoint")
     public Boolean allowAllTrafficToEndpoint;
+
     public AllowCustomRoutingTrafficRequest withAllowAllTrafficToEndpoint(Boolean allowAllTrafficToEndpoint) {
         this.allowAllTrafficToEndpoint = allowAllTrafficToEndpoint;
         return this;
@@ -20,6 +21,7 @@ public class AllowCustomRoutingTrafficRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationAddresses")
     public String[] destinationAddresses;
+
     public AllowCustomRoutingTrafficRequest withDestinationAddresses(String[] destinationAddresses) {
         this.destinationAddresses = destinationAddresses;
         return this;
@@ -28,6 +30,7 @@ public class AllowCustomRoutingTrafficRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationPorts")
     public Long[] destinationPorts;
+
     public AllowCustomRoutingTrafficRequest withDestinationPorts(Long[] destinationPorts) {
         this.destinationPorts = destinationPorts;
         return this;
@@ -35,6 +38,7 @@ public class AllowCustomRoutingTrafficRequest {
     
     @JsonProperty("EndpointGroupArn")
     public String endpointGroupArn;
+
     public AllowCustomRoutingTrafficRequest withEndpointGroupArn(String endpointGroupArn) {
         this.endpointGroupArn = endpointGroupArn;
         return this;
@@ -42,9 +46,14 @@ public class AllowCustomRoutingTrafficRequest {
     
     @JsonProperty("EndpointId")
     public String endpointId;
+
     public AllowCustomRoutingTrafficRequest withEndpointId(String endpointId) {
         this.endpointId = endpointId;
         return this;
     }
     
+    public AllowCustomRoutingTrafficRequest(@JsonProperty("EndpointGroupArn") String endpointGroupArn, @JsonProperty("EndpointId") String endpointId) {
+        this.endpointGroupArn = endpointGroupArn;
+        this.endpointId = endpointId;
+  }
 }

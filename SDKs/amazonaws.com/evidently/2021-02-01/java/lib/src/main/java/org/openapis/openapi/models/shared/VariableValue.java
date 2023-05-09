@@ -15,6 +15,7 @@ public class VariableValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boolValue")
     public Boolean boolValue;
+
     public VariableValue withBoolValue(Boolean boolValue) {
         this.boolValue = boolValue;
         return this;
@@ -23,6 +24,7 @@ public class VariableValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValue")
     public Double doubleValue;
+
     public VariableValue withDoubleValue(Double doubleValue) {
         this.doubleValue = doubleValue;
         return this;
@@ -31,6 +33,7 @@ public class VariableValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longValue")
     public Long longValue;
+
     public VariableValue withLongValue(Long longValue) {
         this.longValue = longValue;
         return this;
@@ -39,9 +42,11 @@ public class VariableValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public VariableValue withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public VariableValue(){}
 }

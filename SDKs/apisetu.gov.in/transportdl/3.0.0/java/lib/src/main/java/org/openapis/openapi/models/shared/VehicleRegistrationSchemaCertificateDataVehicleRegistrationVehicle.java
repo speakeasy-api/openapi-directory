@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle {
     
     public String chasisNo;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle withChasisNo(String chasisNo) {
         this.chasisNo = chasisNo;
         return this;
@@ -16,6 +17,7 @@ public class VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle 
     
     
     public java.util.Map<String, Object> class_;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle withClass(java.util.Map<String, Object> class_) {
         this.class_ = class_;
         return this;
@@ -23,6 +25,7 @@ public class VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle 
     
     
     public String color;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle withColor(String color) {
         this.color = color;
         return this;
@@ -30,6 +33,7 @@ public class VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle 
     
     
     public java.util.Map<String, Object> cubicCapacity;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle withCubicCapacity(java.util.Map<String, Object> cubicCapacity) {
         this.cubicCapacity = cubicCapacity;
         return this;
@@ -37,6 +41,7 @@ public class VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle 
     
     
     public java.util.Map<String, Object> cylinder;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle withCylinder(java.util.Map<String, Object> cylinder) {
         this.cylinder = cylinder;
         return this;
@@ -44,6 +49,7 @@ public class VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle 
     
     
     public String engineNo;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle withEngineNo(String engineNo) {
         this.engineNo = engineNo;
         return this;
@@ -51,6 +57,7 @@ public class VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle 
     
     
     public java.util.Map<String, Object> fitTill;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle withFitTill(java.util.Map<String, Object> fitTill) {
         this.fitTill = fitTill;
         return this;
@@ -58,6 +65,7 @@ public class VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle 
     
     
     public java.util.Map<String, Object> fuelDesc;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle withFuelDesc(java.util.Map<String, Object> fuelDesc) {
         this.fuelDesc = fuelDesc;
         return this;
@@ -65,6 +73,7 @@ public class VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle 
     
     
     public java.util.Map<String, Object> make;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle withMake(java.util.Map<String, Object> make) {
         this.make = make;
         return this;
@@ -72,6 +81,7 @@ public class VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle 
     
     
     public java.util.Map<String, Object> mfgDate;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle withMfgDate(java.util.Map<String, Object> mfgDate) {
         this.mfgDate = mfgDate;
         return this;
@@ -79,6 +89,7 @@ public class VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle 
     
     
     public String model;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle withModel(String model) {
         this.model = model;
         return this;
@@ -86,6 +97,7 @@ public class VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle 
     
     
     public String seatCapacity;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle withSeatCapacity(String seatCapacity) {
         this.seatCapacity = seatCapacity;
         return this;
@@ -93,6 +105,7 @@ public class VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle 
     
     
     public String sleeperCapacity;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle withSleeperCapacity(String sleeperCapacity) {
         this.sleeperCapacity = sleeperCapacity;
         return this;
@@ -100,6 +113,7 @@ public class VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle 
     
     
     public java.util.Map<String, Object> standingCapacity;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle withStandingCapacity(java.util.Map<String, Object> standingCapacity) {
         this.standingCapacity = standingCapacity;
         return this;
@@ -107,6 +121,7 @@ public class VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle 
     
     
     public String unladenWeight;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle withUnladenWeight(String unladenWeight) {
         this.unladenWeight = unladenWeight;
         return this;
@@ -114,9 +129,11 @@ public class VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle 
     
     
     public java.util.Map<String, Object> wheelbase;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle withWheelbase(java.util.Map<String, Object> wheelbase) {
         this.wheelbase = wheelbase;
         return this;
     }
     
+    public VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle(){}
 }

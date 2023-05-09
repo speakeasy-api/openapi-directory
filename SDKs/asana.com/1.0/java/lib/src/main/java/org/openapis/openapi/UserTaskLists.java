@@ -61,12 +61,10 @@ public class UserTaskLists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserTaskListResponse res = new org.openapis.openapi.models.operations.GetUserTaskListResponse() {{
+        org.openapis.openapi.models.operations.GetUserTaskListResponse res = new org.openapis.openapi.models.operations.GetUserTaskListResponse(contentType, httpRes.statusCode()) {{
             getUserTaskList200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,12 +113,10 @@ public class UserTaskLists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserTaskListForUserResponse res = new org.openapis.openapi.models.operations.GetUserTaskListForUserResponse() {{
+        org.openapis.openapi.models.operations.GetUserTaskListForUserResponse res = new org.openapis.openapi.models.operations.GetUserTaskListForUserResponse(contentType, httpRes.statusCode()) {{
             getUserTaskListForUser200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

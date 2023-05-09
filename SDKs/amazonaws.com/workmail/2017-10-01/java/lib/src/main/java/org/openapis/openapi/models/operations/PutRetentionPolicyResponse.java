@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRetentionPolicyResponse {
     
     public String contentType;
+
     public PutRetentionPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutRetentionPolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public PutRetentionPolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class PutRetentionPolicyResponse {
      */
     
     public Object limitExceededException;
+
     public PutRetentionPolicyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class PutRetentionPolicyResponse {
      */
     
     public Object organizationNotFoundException;
+
     public PutRetentionPolicyResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class PutRetentionPolicyResponse {
      */
     
     public Object organizationStateException;
+
     public PutRetentionPolicyResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -59,6 +65,7 @@ public class PutRetentionPolicyResponse {
      */
     
     public java.util.Map<String, Object> putRetentionPolicyResponse;
+
     public PutRetentionPolicyResponse withPutRetentionPolicyResponse(java.util.Map<String, Object> putRetentionPolicyResponse) {
         this.putRetentionPolicyResponse = putRetentionPolicyResponse;
         return this;
@@ -66,6 +73,7 @@ public class PutRetentionPolicyResponse {
     
     
     public Integer statusCode;
+
     public PutRetentionPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class PutRetentionPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRetentionPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutRetentionPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

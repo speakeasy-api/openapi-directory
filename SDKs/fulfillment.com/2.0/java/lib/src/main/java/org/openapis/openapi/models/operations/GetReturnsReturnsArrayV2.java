@@ -15,6 +15,7 @@ public class GetReturnsReturnsArrayV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetReturnsReturnsArrayV2ReturnV2[] data;
+
     public GetReturnsReturnsArrayV2 withData(GetReturnsReturnsArrayV2ReturnV2[] data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class GetReturnsReturnsArrayV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public GetReturnsReturnsArrayV2Meta meta;
+
     public GetReturnsReturnsArrayV2 withMeta(GetReturnsReturnsArrayV2Meta meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetReturnsReturnsArrayV2(){}
 }

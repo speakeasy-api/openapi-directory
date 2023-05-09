@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CopySnapshotRequestTagSpecificationsTags {
     
     public String key;
+
     public CopySnapshotRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CopySnapshotRequestTagSpecificationsTags {
     
     
     public String value;
+
     public CopySnapshotRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CopySnapshotRequestTagSpecificationsTags(){}
 }

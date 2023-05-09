@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTListJobsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSAccessKeyId")
     public String awsAccessKeyId;
+
     public POSTListJobsRequest withAWSAccessKeyId(String awsAccessKeyId) {
         this.awsAccessKeyId = awsAccessKeyId;
         return this;
@@ -16,6 +18,7 @@ public class POSTListJobsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTListJobsActionEnum action;
+
     public POSTListJobsRequest withAction(POSTListJobsActionEnum action) {
         this.action = action;
         return this;
@@ -26,6 +29,7 @@ public class POSTListJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public POSTListJobsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -36,6 +40,7 @@ public class POSTListJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxJobs")
     public String maxJobs;
+
     public POSTListJobsRequest withMaxJobs(String maxJobs) {
         this.maxJobs = maxJobs;
         return this;
@@ -43,6 +48,7 @@ public class POSTListJobsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Operation")
     public POSTListJobsOperationEnum operation;
+
     public POSTListJobsRequest withOperation(POSTListJobsOperationEnum operation) {
         this.operation = operation;
         return this;
@@ -50,6 +56,7 @@ public class POSTListJobsRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTListJobsRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -57,6 +64,7 @@ public class POSTListJobsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Signature")
     public String signature;
+
     public POSTListJobsRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -64,6 +72,7 @@ public class POSTListJobsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureMethod")
     public String signatureMethod;
+
     public POSTListJobsRequest withSignatureMethod(String signatureMethod) {
         this.signatureMethod = signatureMethod;
         return this;
@@ -71,6 +80,7 @@ public class POSTListJobsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureVersion")
     public String signatureVersion;
+
     public POSTListJobsRequest withSignatureVersion(String signatureVersion) {
         this.signatureVersion = signatureVersion;
         return this;
@@ -78,6 +88,7 @@ public class POSTListJobsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timestamp")
     public String timestamp;
+
     public POSTListJobsRequest withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -85,9 +96,20 @@ public class POSTListJobsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTListJobsVersionEnum version;
+
     public POSTListJobsRequest withVersion(POSTListJobsVersionEnum version) {
         this.version = version;
         return this;
     }
     
+    public POSTListJobsRequest(@JsonProperty("AWSAccessKeyId") String awsAccessKeyId, @JsonProperty("Action") POSTListJobsActionEnum action, @JsonProperty("Operation") POSTListJobsOperationEnum operation, @JsonProperty("Signature") String signature, @JsonProperty("SignatureMethod") String signatureMethod, @JsonProperty("SignatureVersion") String signatureVersion, @JsonProperty("Timestamp") String timestamp, @JsonProperty("Version") POSTListJobsVersionEnum version) {
+        this.awsAccessKeyId = awsAccessKeyId;
+        this.action = action;
+        this.operation = operation;
+        this.signature = signature;
+        this.signatureMethod = signatureMethod;
+        this.signatureVersion = signatureVersion;
+        this.timestamp = timestamp;
+        this.version = version;
+  }
 }

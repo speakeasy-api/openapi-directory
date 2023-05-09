@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyConfigGearAssetDataBaseDefinition {
     
     public String path;
+
     public DestinyConfigGearAssetDataBaseDefinition withPath(String path) {
         this.path = path;
         return this;
@@ -16,9 +17,11 @@ public class DestinyConfigGearAssetDataBaseDefinition {
     
     
     public Integer version;
+
     public DestinyConfigGearAssetDataBaseDefinition withVersion(Integer version) {
         this.version = version;
         return this;
     }
     
+    public DestinyConfigGearAssetDataBaseDefinition(){}
 }

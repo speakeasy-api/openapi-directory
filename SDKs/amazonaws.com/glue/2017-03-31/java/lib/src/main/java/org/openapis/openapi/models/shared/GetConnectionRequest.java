@@ -12,6 +12,7 @@ public class GetConnectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetConnectionRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -20,6 +21,7 @@ public class GetConnectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HidePassword")
     public Boolean hidePassword;
+
     public GetConnectionRequest withHidePassword(Boolean hidePassword) {
         this.hidePassword = hidePassword;
         return this;
@@ -27,9 +29,13 @@ public class GetConnectionRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public GetConnectionRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetConnectionRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

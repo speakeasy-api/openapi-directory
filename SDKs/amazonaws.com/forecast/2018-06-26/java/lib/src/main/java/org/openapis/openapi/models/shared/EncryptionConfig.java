@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EncryptionConfig {
     @JsonProperty("KMSKeyArn")
     public String kmsKeyArn;
+
     public EncryptionConfig withKMSKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -19,9 +20,14 @@ public class EncryptionConfig {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public EncryptionConfig withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public EncryptionConfig(@JsonProperty("KMSKeyArn") String kmsKeyArn, @JsonProperty("RoleArn") String roleArn) {
+        this.kmsKeyArn = kmsKeyArn;
+        this.roleArn = roleArn;
+  }
 }

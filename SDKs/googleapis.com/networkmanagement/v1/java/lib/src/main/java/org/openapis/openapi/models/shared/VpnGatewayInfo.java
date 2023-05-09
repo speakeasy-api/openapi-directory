@@ -18,6 +18,7 @@ public class VpnGatewayInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public VpnGatewayInfo withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class VpnGatewayInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public VpnGatewayInfo withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -40,6 +42,7 @@ public class VpnGatewayInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkUri")
     public String networkUri;
+
     public VpnGatewayInfo withNetworkUri(String networkUri) {
         this.networkUri = networkUri;
         return this;
@@ -51,6 +54,7 @@ public class VpnGatewayInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public VpnGatewayInfo withRegion(String region) {
         this.region = region;
         return this;
@@ -62,6 +66,7 @@ public class VpnGatewayInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public VpnGatewayInfo withUri(String uri) {
         this.uri = uri;
         return this;
@@ -73,9 +78,11 @@ public class VpnGatewayInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpnTunnelUri")
     public String vpnTunnelUri;
+
     public VpnGatewayInfo withVpnTunnelUri(String vpnTunnelUri) {
         this.vpnTunnelUri = vpnTunnelUri;
         return this;
     }
     
+    public VpnGatewayInfo(){}
 }

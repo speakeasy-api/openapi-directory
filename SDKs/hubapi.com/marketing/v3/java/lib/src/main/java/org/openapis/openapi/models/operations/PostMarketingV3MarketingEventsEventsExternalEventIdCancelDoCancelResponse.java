@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelResponse {
     
     public byte[] body;
+
     public PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelRe
     
     
     public String contentType;
+
     public PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelRe
      */
     
     public org.openapis.openapi.models.shared.MarketingEventDefaultResponse marketingEventDefaultResponse;
+
     public PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelResponse withMarketingEventDefaultResponse(org.openapis.openapi.models.shared.MarketingEventDefaultResponse marketingEventDefaultResponse) {
         this.marketingEventDefaultResponse = marketingEventDefaultResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelRe
     
     
     public Integer statusCode;
+
     public PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelRe
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

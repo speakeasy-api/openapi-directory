@@ -15,6 +15,7 @@ public class ComponentProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bindingProperties")
     public ComponentPropertyBindingProperties bindingProperties;
+
     public ComponentProperty withBindingProperties(ComponentPropertyBindingProperties bindingProperties) {
         this.bindingProperties = bindingProperties;
         return this;
@@ -23,6 +24,7 @@ public class ComponentProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bindings")
     public java.util.Map<String, FormBindingElement> bindings;
+
     public ComponentProperty withBindings(java.util.Map<String, FormBindingElement> bindings) {
         this.bindings = bindings;
         return this;
@@ -31,6 +33,7 @@ public class ComponentProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionBindingProperties")
     public ComponentPropertyBindingProperties collectionBindingProperties;
+
     public ComponentProperty withCollectionBindingProperties(ComponentPropertyBindingProperties collectionBindingProperties) {
         this.collectionBindingProperties = collectionBindingProperties;
         return this;
@@ -39,6 +42,7 @@ public class ComponentProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentName")
     public String componentName;
+
     public ComponentProperty withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -47,6 +51,7 @@ public class ComponentProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concat")
     public ComponentProperty[] concat;
+
     public ComponentProperty withConcat(ComponentProperty[] concat) {
         this.concat = concat;
         return this;
@@ -55,6 +60,7 @@ public class ComponentProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public ComponentConditionProperty condition;
+
     public ComponentProperty withCondition(ComponentConditionProperty condition) {
         this.condition = condition;
         return this;
@@ -63,6 +69,7 @@ public class ComponentProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configured")
     public Boolean configured;
+
     public ComponentProperty withConfigured(Boolean configured) {
         this.configured = configured;
         return this;
@@ -71,6 +78,7 @@ public class ComponentProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public String defaultValue;
+
     public ComponentProperty withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -79,6 +87,7 @@ public class ComponentProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public String event;
+
     public ComponentProperty withEvent(String event) {
         this.event = event;
         return this;
@@ -87,6 +96,7 @@ public class ComponentProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importedValue")
     public String importedValue;
+
     public ComponentProperty withImportedValue(String importedValue) {
         this.importedValue = importedValue;
         return this;
@@ -95,6 +105,7 @@ public class ComponentProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public ComponentProperty withModel(String model) {
         this.model = model;
         return this;
@@ -103,6 +114,7 @@ public class ComponentProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property")
     public String property;
+
     public ComponentProperty withProperty(String property) {
         this.property = property;
         return this;
@@ -111,6 +123,7 @@ public class ComponentProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ComponentProperty withType(String type) {
         this.type = type;
         return this;
@@ -119,6 +132,7 @@ public class ComponentProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAttribute")
     public String userAttribute;
+
     public ComponentProperty withUserAttribute(String userAttribute) {
         this.userAttribute = userAttribute;
         return this;
@@ -127,9 +141,11 @@ public class ComponentProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ComponentProperty withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ComponentProperty(){}
 }

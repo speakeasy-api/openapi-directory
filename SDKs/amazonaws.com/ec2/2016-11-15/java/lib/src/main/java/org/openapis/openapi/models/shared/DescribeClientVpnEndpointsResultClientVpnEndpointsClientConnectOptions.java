@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClientVpnEndpointsResultClientVpnEndpointsClientConnectOptions {
     
     public Boolean enabled;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpointsClientConnectOptions withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -19,6 +20,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpointsClientConnectOpti
     
     
     public String lambdaFunctionArn;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpointsClientConnectOptions withLambdaFunctionArn(String lambdaFunctionArn) {
         this.lambdaFunctionArn = lambdaFunctionArn;
         return this;
@@ -26,9 +28,11 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpointsClientConnectOpti
     
     
     public DescribeClientVpnEndpointsResultClientVpnEndpointsClientConnectOptionsStatus status;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpointsClientConnectOptions withStatus(DescribeClientVpnEndpointsResultClientVpnEndpointsClientConnectOptionsStatus status) {
         this.status = status;
         return this;
     }
     
+    public DescribeClientVpnEndpointsResultClientVpnEndpointsClientConnectOptions(){}
 }

@@ -55,11 +55,9 @@ public class Social {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PhoneCodeResponse res = new org.openapis.openapi.models.operations.PhoneCodeResponse() {{
+        org.openapis.openapi.models.operations.PhoneCodeResponse res = new org.openapis.openapi.models.operations.PhoneCodeResponse(contentType, httpRes.statusCode()) {{
             firstLastNamePhoneCodedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Social {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PhoneCodeBatchResponse res = new org.openapis.openapi.models.operations.PhoneCodeBatchResponse() {{
+        org.openapis.openapi.models.operations.PhoneCodeBatchResponse res = new org.openapis.openapi.models.operations.PhoneCodeBatchResponse(contentType, httpRes.statusCode()) {{
             batchFirstLastNamePhoneCodedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -141,11 +137,9 @@ public class Social {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PhoneCodeGeoResponse res = new org.openapis.openapi.models.operations.PhoneCodeGeoResponse() {{
+        org.openapis.openapi.models.operations.PhoneCodeGeoResponse res = new org.openapis.openapi.models.operations.PhoneCodeGeoResponse(contentType, httpRes.statusCode()) {{
             firstLastNamePhoneCodedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -185,11 +179,9 @@ public class Social {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PhoneCodeGeoBatchResponse res = new org.openapis.openapi.models.operations.PhoneCodeGeoBatchResponse() {{
+        org.openapis.openapi.models.operations.PhoneCodeGeoBatchResponse res = new org.openapis.openapi.models.operations.PhoneCodeGeoBatchResponse(contentType, httpRes.statusCode()) {{
             batchFirstLastNamePhoneCodedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -227,11 +219,9 @@ public class Social {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PhoneCodeGeoFeedbackLoopResponse res = new org.openapis.openapi.models.operations.PhoneCodeGeoFeedbackLoopResponse() {{
+        org.openapis.openapi.models.operations.PhoneCodeGeoFeedbackLoopResponse res = new org.openapis.openapi.models.operations.PhoneCodeGeoFeedbackLoopResponse(contentType, httpRes.statusCode()) {{
             firstLastNamePhoneCodedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

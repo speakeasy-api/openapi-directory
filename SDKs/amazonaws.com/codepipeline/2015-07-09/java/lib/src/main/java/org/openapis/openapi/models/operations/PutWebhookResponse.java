@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutWebhookResponse {
@@ -12,6 +13,7 @@ public class PutWebhookResponse {
      */
     
     public Object concurrentModificationException;
+
     public PutWebhookResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class PutWebhookResponse {
     
     
     public String contentType;
+
     public PutWebhookResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutWebhookResponse {
      */
     
     public Object invalidTagsException;
+
     public PutWebhookResponse withInvalidTagsException(Object invalidTagsException) {
         this.invalidTagsException = invalidTagsException;
         return this;
@@ -39,6 +43,7 @@ public class PutWebhookResponse {
      */
     
     public Object invalidWebhookAuthenticationParametersException;
+
     public PutWebhookResponse withInvalidWebhookAuthenticationParametersException(Object invalidWebhookAuthenticationParametersException) {
         this.invalidWebhookAuthenticationParametersException = invalidWebhookAuthenticationParametersException;
         return this;
@@ -49,6 +54,7 @@ public class PutWebhookResponse {
      */
     
     public Object invalidWebhookFilterPatternException;
+
     public PutWebhookResponse withInvalidWebhookFilterPatternException(Object invalidWebhookFilterPatternException) {
         this.invalidWebhookFilterPatternException = invalidWebhookFilterPatternException;
         return this;
@@ -59,6 +65,7 @@ public class PutWebhookResponse {
      */
     
     public Object limitExceededException;
+
     public PutWebhookResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class PutWebhookResponse {
      */
     
     public Object pipelineNotFoundException;
+
     public PutWebhookResponse withPipelineNotFoundException(Object pipelineNotFoundException) {
         this.pipelineNotFoundException = pipelineNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class PutWebhookResponse {
      */
     
     public org.openapis.openapi.models.shared.PutWebhookOutput putWebhookOutput;
+
     public PutWebhookResponse withPutWebhookOutput(org.openapis.openapi.models.shared.PutWebhookOutput putWebhookOutput) {
         this.putWebhookOutput = putWebhookOutput;
         return this;
@@ -86,6 +95,7 @@ public class PutWebhookResponse {
     
     
     public Integer statusCode;
+
     public PutWebhookResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class PutWebhookResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutWebhookResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class PutWebhookResponse {
      */
     
     public Object tooManyTagsException;
+
     public PutWebhookResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
@@ -113,9 +125,14 @@ public class PutWebhookResponse {
      */
     
     public Object validationException;
+
     public PutWebhookResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutWebhookResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

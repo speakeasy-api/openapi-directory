@@ -35,6 +35,7 @@ public class OrderFulfillment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public OrderFulfillment withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -46,6 +47,7 @@ public class OrderFulfillment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickup_details")
     public OrderFulfillmentPickupDetails pickupDetails;
+
     public OrderFulfillment withPickupDetails(OrderFulfillmentPickupDetails pickupDetails) {
         this.pickupDetails = pickupDetails;
         return this;
@@ -57,6 +59,7 @@ public class OrderFulfillment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipment_details")
     public OrderFulfillmentShipmentDetails shipmentDetails;
+
     public OrderFulfillment withShipmentDetails(OrderFulfillmentShipmentDetails shipmentDetails) {
         this.shipmentDetails = shipmentDetails;
         return this;
@@ -68,6 +71,7 @@ public class OrderFulfillment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public OrderFulfillment withState(String state) {
         this.state = state;
         return this;
@@ -79,6 +83,7 @@ public class OrderFulfillment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public OrderFulfillment withType(String type) {
         this.type = type;
         return this;
@@ -90,9 +95,11 @@ public class OrderFulfillment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public OrderFulfillment withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public OrderFulfillment(){}
 }

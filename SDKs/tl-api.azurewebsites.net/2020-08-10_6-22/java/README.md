@@ -16,45 +16,47 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.ArticleAddMeasureUnitResponse;
 import org.openapis.openapi.models.shared.MeasureUnitDTO;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     bearer = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }})
                 .build();
 
             org.openapis.openapi.models.. req = new org.openapis.openapi.models.shared.MeasureUnitDTO[]{{
                 add(new MeasureUnitDTO() {{
-                    id = 592845;
-                    name = "distinctio";
-                    type = "quibusdam";
+                    id = 715190;
+                    name = "Stuart Stiedemann";
+                    type = "vel";
                 }}),
                 add(new MeasureUnitDTO() {{
-                    id = 602763;
-                    name = "nulla";
-                    type = "corrupti";
+                    id = 623564;
+                    name = "Rick Kertzmann";
+                    type = "ipsa";
                 }}),
                 add(new MeasureUnitDTO() {{
-                    id = 847252;
-                    name = "vel";
-                    type = "error";
+                    id = 963663;
+                    name = "Laurie Kreiger";
+                    type = "voluptatum";
                 }}),
             }}            
 
             ArticleAddMeasureUnitResponse res = sdk.article.articleAddMeasureUnit(req);
 
-            if (res.defaultResponseDTOOfStatusDTO.isPresent()) {
+            if (res.defaultResponseDTOOfStatusDTO != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -62,80 +64,80 @@ public class Application {
 ## Available Resources and Operations
 
 
-### article
+### [article](docs/article/README.md)
 
-* `articleAddMeasureUnit` - Add measure unit
-* `articleDelete` - Delete article from the system
+* [articleAddMeasureUnit](docs/article/README.md#articleaddmeasureunit) - Add measure unit
+* [articleDelete](docs/article/README.md#articledelete) - Delete article from the system
             
-* `articleGetAddons`
-* `articleGetMeasureUnits` - Get mesure units
-* `articleGetRevenueAccounts` - Get Revenue Accounts 
-* `articleGymArticleDetails` - Get Gym specific properties for article
+* [articleGetAddons](docs/article/README.md#articlegetaddons)
+* [articleGetMeasureUnits](docs/article/README.md#articlegetmeasureunits) - Get mesure units
+* [articleGetRevenueAccounts](docs/article/README.md#articlegetrevenueaccounts) - Get Revenue Accounts 
+* [articleGymArticleDetails](docs/article/README.md#articlegymarticledetails) - Get Gym specific properties for article
             
-* `articlePost` - Add new article
+* [articlePost](docs/article/README.md#articlepost) - Add new article
             
-* `articlePut` - update existing article
+* [articlePut](docs/article/README.md#articleput) - update existing article
             
-* `articleSearch` - Search articles
+* [articleSearch](docs/article/README.md#articlesearch) - Search articles
 It will only return basic information of article
             
-* `articleUpdateArticleGymDetails` - Add article details that associate with a Gym
+* [articleUpdateArticleGymDetails](docs/article/README.md#articleupdatearticlegymdetails) - Add article details that associate with a Gym
             
-* `articleUpdateStatus` - Deactivate existing article 
-* `articleGet` - Get article details
+* [articleUpdateStatus](docs/article/README.md#articleupdatestatus) - Deactivate existing article 
+* [articleGet](docs/article/README.md#articleget) - Get article details
 This will return all properties related to article entity
             
 
-### auth
+### [auth](docs/auth/README.md)
 
-* `authLogin` - Authenticate and provide token for autherizations.
+* [authLogin](docs/auth/README.md#authlogin) - Authenticate and provide token for autherizations.
             
 
-### gym
+### [gym](docs/gym/README.md)
 
-* `gymGet` - Get gym details
+* [gymGet](docs/gym/README.md#gymget) - Get gym details
 This will return all properties related to gym entity
             
 
-### membership
+### [membership](docs/membership/README.md)
 
-* `membershipGet` - Get all of the members details
+* [membershipGet](docs/membership/README.md#membershipget) - Get all of the members details
 This will return all properties related to member entity
             
-* `membershipPost` - Add new Member
+* [membershipPost](docs/membership/README.md#membershippost) - Add new Member
             
 
-### package_
+### [package_](docs/package/README.md)
 
-* `packageDelete` - Delete existing package
+* [packageDelete](docs/package/README.md#packagedelete) - Delete existing package
             
-* `packageGet` - Get package details by packageId
+* [packageGet](docs/package/README.md#packageget) - Get package details by packageId
             
-* `packagePost` - Insert new package into the system
+* [packagePost](docs/package/README.md#packagepost) - Insert new package into the system
             
-* `packagePut` - Update existing package by its ID
+* [packagePut](docs/package/README.md#packageput) - Update existing package by its ID
             
-* `packageSearch` - Search packages
+* [packageSearch](docs/package/README.md#packagesearch) - Search packages
             
-* `packageUpdateStatus` - Status update of existing package 
+* [packageUpdateStatus](docs/package/README.md#packageupdatestatus) - Status update of existing package 
 
-### status
+### [status](docs/status/README.md)
 
-* `statusGet` - Get the current status of message
+* [statusGet](docs/status/README.md#statusget) - Get the current status of message
 
-### test
+### [test](docs/test/README.md)
 
-* `testGet` - Get the all Test objects.
+* [testGet](docs/test/README.md#testget) - Get the all Test objects.
             
 
-### user
+### [user](docs/user/README.md)
 
-* `userGet` - Get all Users detail
+* [userGet](docs/user/README.md#userget) - Get all Users detail
 This will return all properties related to User entity
             
-* `userRegisterUser` - Register a new User
+* [userRegisterUser](docs/user/README.md#userregisteruser) - Register a new User
             
-* `userUpdateUser` - Update an exsisting User
+* [userUpdateUser](docs/user/README.md#userupdateuser) - Update an exsisting User
             
 <!-- End SDK Available Operations -->
 

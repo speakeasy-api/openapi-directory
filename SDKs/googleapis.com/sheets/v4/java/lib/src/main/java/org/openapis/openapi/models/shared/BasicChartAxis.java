@@ -18,6 +18,7 @@ public class BasicChartAxis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public TextFormat format;
+
     public BasicChartAxis withFormat(TextFormat format) {
         this.format = format;
         return this;
@@ -29,6 +30,7 @@ public class BasicChartAxis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public BasicChartAxisPositionEnum position;
+
     public BasicChartAxis withPosition(BasicChartAxisPositionEnum position) {
         this.position = position;
         return this;
@@ -40,6 +42,7 @@ public class BasicChartAxis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public BasicChartAxis withTitle(String title) {
         this.title = title;
         return this;
@@ -51,6 +54,7 @@ public class BasicChartAxis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("titleTextPosition")
     public TextPosition titleTextPosition;
+
     public BasicChartAxis withTitleTextPosition(TextPosition titleTextPosition) {
         this.titleTextPosition = titleTextPosition;
         return this;
@@ -62,9 +66,11 @@ public class BasicChartAxis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewWindowOptions")
     public ChartAxisViewWindowOptions viewWindowOptions;
+
     public BasicChartAxis withViewWindowOptions(ChartAxisViewWindowOptions viewWindowOptions) {
         this.viewWindowOptions = viewWindowOptions;
         return this;
     }
     
+    public BasicChartAxis(){}
 }

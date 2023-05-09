@@ -18,9 +18,11 @@ public class GuestOsFeature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GuestOsFeature withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GuestOsFeature(){}
 }

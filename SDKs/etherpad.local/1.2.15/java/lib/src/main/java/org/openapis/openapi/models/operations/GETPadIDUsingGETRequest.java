@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETPadIDUsingGETRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=roID")
     public String roID;
+
     public GETPadIDUsingGETRequest withRoID(String roID) {
         this.roID = roID;
         return this;
     }
     
+    public GETPadIDUsingGETRequest(){}
 }

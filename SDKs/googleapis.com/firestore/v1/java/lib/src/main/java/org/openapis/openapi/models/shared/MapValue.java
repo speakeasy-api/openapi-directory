@@ -18,9 +18,11 @@ public class MapValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public java.util.Map<String, Value> fields;
+
     public MapValue withFields(java.util.Map<String, Value> fields) {
         this.fields = fields;
         return this;
     }
     
+    public MapValue(){}
 }

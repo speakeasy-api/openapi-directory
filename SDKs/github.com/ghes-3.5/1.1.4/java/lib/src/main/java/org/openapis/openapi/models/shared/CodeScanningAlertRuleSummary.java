@@ -15,6 +15,7 @@ public class CodeScanningAlertRuleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CodeScanningAlertRuleSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class CodeScanningAlertRuleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CodeScanningAlertRuleSummary withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class CodeScanningAlertRuleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CodeScanningAlertRuleSummary withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class CodeScanningAlertRuleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public CodeScanningAlertRuleSummarySeverityEnum severity;
+
     public CodeScanningAlertRuleSummary withSeverity(CodeScanningAlertRuleSummarySeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -59,9 +63,11 @@ public class CodeScanningAlertRuleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public CodeScanningAlertRuleSummary withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CodeScanningAlertRuleSummary(){}
 }

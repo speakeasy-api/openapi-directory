@@ -18,9 +18,11 @@ public class AppInvitationsList200ApplicationJSONDistributionGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public AppInvitationsList200ApplicationJSONDistributionGroupOwner owner;
+
     public AppInvitationsList200ApplicationJSONDistributionGroup withOwner(AppInvitationsList200ApplicationJSONDistributionGroupOwner owner) {
         this.owner = owner;
         return this;
     }
     
+    public AppInvitationsList200ApplicationJSONDistributionGroup(){}
 }

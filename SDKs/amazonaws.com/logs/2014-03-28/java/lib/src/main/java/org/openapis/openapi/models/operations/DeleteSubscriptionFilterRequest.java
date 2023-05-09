@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSubscriptionFilterRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DeleteSubscriptionFilterRequest deleteSubscriptionFilterRequest;
+
     public DeleteSubscriptionFilterRequest withDeleteSubscriptionFilterRequest(org.openapis.openapi.models.shared.DeleteSubscriptionFilterRequest deleteSubscriptionFilterRequest) {
         this.deleteSubscriptionFilterRequest = deleteSubscriptionFilterRequest;
         return this;
@@ -16,6 +18,7 @@ public class DeleteSubscriptionFilterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteSubscriptionFilterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class DeleteSubscriptionFilterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteSubscriptionFilterRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class DeleteSubscriptionFilterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteSubscriptionFilterRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class DeleteSubscriptionFilterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteSubscriptionFilterRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class DeleteSubscriptionFilterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteSubscriptionFilterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class DeleteSubscriptionFilterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteSubscriptionFilterRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class DeleteSubscriptionFilterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteSubscriptionFilterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class DeleteSubscriptionFilterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DeleteSubscriptionFilterXAmzTargetEnum xAmzTarget;
+
     public DeleteSubscriptionFilterRequest withXAmzTarget(DeleteSubscriptionFilterXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DeleteSubscriptionFilterRequest(@JsonProperty("DeleteSubscriptionFilterRequest") org.openapis.openapi.models.shared.DeleteSubscriptionFilterRequest deleteSubscriptionFilterRequest, @JsonProperty("X-Amz-Target") DeleteSubscriptionFilterXAmzTargetEnum xAmzTarget) {
+        this.deleteSubscriptionFilterRequest = deleteSubscriptionFilterRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

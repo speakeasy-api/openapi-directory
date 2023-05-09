@@ -15,9 +15,11 @@ public class AddTagForTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TaskAddTagRequest data;
+
     public AddTagForTaskRequestBody withData(org.openapis.openapi.models.shared.TaskAddTagRequest data) {
         this.data = data;
         return this;
     }
     
+    public AddTagForTaskRequestBody(){}
 }

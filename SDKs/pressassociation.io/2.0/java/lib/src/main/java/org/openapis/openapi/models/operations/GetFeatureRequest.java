@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFeatureRequest {
@@ -12,9 +13,13 @@ public class GetFeatureRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=featureId")
     public String featureId;
+
     public GetFeatureRequest withFeatureId(String featureId) {
         this.featureId = featureId;
         return this;
     }
     
+    public GetFeatureRequest(@JsonProperty("featureId") String featureId) {
+        this.featureId = featureId;
+  }
 }

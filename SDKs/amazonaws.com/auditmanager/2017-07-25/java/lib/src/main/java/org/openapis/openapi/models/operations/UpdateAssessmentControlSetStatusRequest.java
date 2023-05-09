@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAssessmentControlSetStatusRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateAssessmentControlSetStatusRequestBody requestBody;
+
     public UpdateAssessmentControlSetStatusRequest withRequestBody(UpdateAssessmentControlSetStatusRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class UpdateAssessmentControlSetStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateAssessmentControlSetStatusRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class UpdateAssessmentControlSetStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateAssessmentControlSetStatusRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class UpdateAssessmentControlSetStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateAssessmentControlSetStatusRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class UpdateAssessmentControlSetStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateAssessmentControlSetStatusRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class UpdateAssessmentControlSetStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateAssessmentControlSetStatusRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class UpdateAssessmentControlSetStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateAssessmentControlSetStatusRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class UpdateAssessmentControlSetStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateAssessmentControlSetStatusRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class UpdateAssessmentControlSetStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assessmentId")
     public String assessmentId;
+
     public UpdateAssessmentControlSetStatusRequest withAssessmentId(String assessmentId) {
         this.assessmentId = assessmentId;
         return this;
@@ -78,9 +88,15 @@ public class UpdateAssessmentControlSetStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=controlSetId")
     public String controlSetId;
+
     public UpdateAssessmentControlSetStatusRequest withControlSetId(String controlSetId) {
         this.controlSetId = controlSetId;
         return this;
     }
     
+    public UpdateAssessmentControlSetStatusRequest(@JsonProperty("RequestBody") UpdateAssessmentControlSetStatusRequestBody requestBody, @JsonProperty("assessmentId") String assessmentId, @JsonProperty("controlSetId") String controlSetId) {
+        this.requestBody = requestBody;
+        this.assessmentId = assessmentId;
+        this.controlSetId = controlSetId;
+  }
 }

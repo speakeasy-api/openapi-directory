@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostBenefitsDocumentUploadResponse {
     
     public String contentType;
+
     public PostBenefitsDocumentUploadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostBenefitsDocumentUploadResponse {
     
     
     public Integer statusCode;
+
     public PostBenefitsDocumentUploadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostBenefitsDocumentUploadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostBenefitsDocumentUploadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostBenefitsDocumentUploadResponse {
      */
     
     public PostBenefitsDocumentUpload202ApplicationJSON postBenefitsDocumentUpload202ApplicationJSONObject;
+
     public PostBenefitsDocumentUploadResponse withPostBenefitsDocumentUpload202ApplicationJSONObject(PostBenefitsDocumentUpload202ApplicationJSON postBenefitsDocumentUpload202ApplicationJSONObject) {
         this.postBenefitsDocumentUpload202ApplicationJSONObject = postBenefitsDocumentUpload202ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class PostBenefitsDocumentUploadResponse {
      */
     
     public PostBenefitsDocumentUpload401ApplicationJSON postBenefitsDocumentUpload401ApplicationJSONObject;
+
     public PostBenefitsDocumentUploadResponse withPostBenefitsDocumentUpload401ApplicationJSONObject(PostBenefitsDocumentUpload401ApplicationJSON postBenefitsDocumentUpload401ApplicationJSONObject) {
         this.postBenefitsDocumentUpload401ApplicationJSONObject = postBenefitsDocumentUpload401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class PostBenefitsDocumentUploadResponse {
      */
     
     public PostBenefitsDocumentUpload403ApplicationJSON postBenefitsDocumentUpload403ApplicationJSONObject;
+
     public PostBenefitsDocumentUploadResponse withPostBenefitsDocumentUpload403ApplicationJSONObject(PostBenefitsDocumentUpload403ApplicationJSON postBenefitsDocumentUpload403ApplicationJSONObject) {
         this.postBenefitsDocumentUpload403ApplicationJSONObject = postBenefitsDocumentUpload403ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class PostBenefitsDocumentUploadResponse {
      */
     
     public PostBenefitsDocumentUpload422ApplicationJSON postBenefitsDocumentUpload422ApplicationJSONObject;
+
     public PostBenefitsDocumentUploadResponse withPostBenefitsDocumentUpload422ApplicationJSONObject(PostBenefitsDocumentUpload422ApplicationJSON postBenefitsDocumentUpload422ApplicationJSONObject) {
         this.postBenefitsDocumentUpload422ApplicationJSONObject = postBenefitsDocumentUpload422ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class PostBenefitsDocumentUploadResponse {
      */
     
     public PostBenefitsDocumentUpload429ApplicationJSON postBenefitsDocumentUpload429ApplicationJSONObject;
+
     public PostBenefitsDocumentUploadResponse withPostBenefitsDocumentUpload429ApplicationJSONObject(PostBenefitsDocumentUpload429ApplicationJSON postBenefitsDocumentUpload429ApplicationJSONObject) {
         this.postBenefitsDocumentUpload429ApplicationJSONObject = postBenefitsDocumentUpload429ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class PostBenefitsDocumentUploadResponse {
      */
     
     public PostBenefitsDocumentUpload500ApplicationJSON postBenefitsDocumentUpload500ApplicationJSONObject;
+
     public PostBenefitsDocumentUploadResponse withPostBenefitsDocumentUpload500ApplicationJSONObject(PostBenefitsDocumentUpload500ApplicationJSON postBenefitsDocumentUpload500ApplicationJSONObject) {
         this.postBenefitsDocumentUpload500ApplicationJSONObject = postBenefitsDocumentUpload500ApplicationJSONObject;
         return this;
     }
     
+    public PostBenefitsDocumentUploadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

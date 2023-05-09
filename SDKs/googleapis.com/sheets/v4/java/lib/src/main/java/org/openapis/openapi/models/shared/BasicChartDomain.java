@@ -18,6 +18,7 @@ public class BasicChartDomain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public ChartData domain;
+
     public BasicChartDomain withDomain(ChartData domain) {
         this.domain = domain;
         return this;
@@ -29,9 +30,11 @@ public class BasicChartDomain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reversed")
     public Boolean reversed;
+
     public BasicChartDomain withReversed(Boolean reversed) {
         this.reversed = reversed;
         return this;
     }
     
+    public BasicChartDomain(){}
 }

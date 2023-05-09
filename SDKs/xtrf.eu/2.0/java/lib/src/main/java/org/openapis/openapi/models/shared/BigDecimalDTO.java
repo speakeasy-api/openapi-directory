@@ -15,9 +15,11 @@ public class BigDecimalDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public BigDecimalDTO withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public BigDecimalDTO(){}
 }

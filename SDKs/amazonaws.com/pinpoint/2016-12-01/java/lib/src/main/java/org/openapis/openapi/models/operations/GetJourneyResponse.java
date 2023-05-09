@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetJourneyResponse {
@@ -12,6 +13,7 @@ public class GetJourneyResponse {
      */
     
     public Object badRequestException;
+
     public GetJourneyResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetJourneyResponse {
     
     
     public String contentType;
+
     public GetJourneyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetJourneyResponse {
      */
     
     public Object forbiddenException;
+
     public GetJourneyResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetJourneyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetJourneyResponse getJourneyResponse;
+
     public GetJourneyResponse withGetJourneyResponse(org.openapis.openapi.models.shared.GetJourneyResponse getJourneyResponse) {
         this.getJourneyResponse = getJourneyResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetJourneyResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetJourneyResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetJourneyResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetJourneyResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetJourneyResponse {
      */
     
     public Object notFoundException;
+
     public GetJourneyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetJourneyResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetJourneyResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetJourneyResponse {
     
     
     public Integer statusCode;
+
     public GetJourneyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetJourneyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetJourneyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetJourneyResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetJourneyResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetJourneyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

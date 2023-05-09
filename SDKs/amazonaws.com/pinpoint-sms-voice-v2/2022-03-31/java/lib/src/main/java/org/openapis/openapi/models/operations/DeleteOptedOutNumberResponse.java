@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteOptedOutNumberResponse {
@@ -12,6 +13,7 @@ public class DeleteOptedOutNumberResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteOptedOutNumberResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteOptedOutNumberResponse {
      */
     
     public Object conflictException;
+
     public DeleteOptedOutNumberResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteOptedOutNumberResponse {
     
     
     public String contentType;
+
     public DeleteOptedOutNumberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteOptedOutNumberResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteOptedOutNumberResult deleteOptedOutNumberResult;
+
     public DeleteOptedOutNumberResponse withDeleteOptedOutNumberResult(org.openapis.openapi.models.shared.DeleteOptedOutNumberResult deleteOptedOutNumberResult) {
         this.deleteOptedOutNumberResult = deleteOptedOutNumberResult;
         return this;
@@ -49,6 +54,7 @@ public class DeleteOptedOutNumberResponse {
      */
     
     public Object internalServerException;
+
     public DeleteOptedOutNumberResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteOptedOutNumberResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteOptedOutNumberResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteOptedOutNumberResponse {
     
     
     public Integer statusCode;
+
     public DeleteOptedOutNumberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteOptedOutNumberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteOptedOutNumberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteOptedOutNumberResponse {
      */
     
     public Object throttlingException;
+
     public DeleteOptedOutNumberResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteOptedOutNumberResponse {
      */
     
     public Object validationException;
+
     public DeleteOptedOutNumberResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteOptedOutNumberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class ParentHyperParameterTuningJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HyperParameterTuningJobName")
     public String hyperParameterTuningJobName;
+
     public ParentHyperParameterTuningJob withHyperParameterTuningJobName(String hyperParameterTuningJobName) {
         this.hyperParameterTuningJobName = hyperParameterTuningJobName;
         return this;
     }
     
+    public ParentHyperParameterTuningJob(){}
 }

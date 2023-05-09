@@ -18,6 +18,7 @@ public class MetricValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public MetricValue withValue(String value) {
         this.value = value;
         return this;
@@ -29,9 +30,11 @@ public class MetricValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variance")
     public String variance;
+
     public MetricValue withVariance(String variance) {
         this.variance = variance;
         return this;
     }
     
+    public MetricValue(){}
 }

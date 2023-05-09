@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UsersListForOrgResponse {
     
     public String contentType;
+
     public UsersListForOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UsersListForOrgResponse {
     
     
     public Integer statusCode;
+
     public UsersListForOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UsersListForOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UsersListForOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UsersListForOrgResponse {
      */
     
     public UsersListForOrg200ApplicationJSON[] usersListForOrg200ApplicationJSONObjects;
+
     public UsersListForOrgResponse withUsersListForOrg200ApplicationJSONObjects(UsersListForOrg200ApplicationJSON[] usersListForOrg200ApplicationJSONObjects) {
         this.usersListForOrg200ApplicationJSONObjects = usersListForOrg200ApplicationJSONObjects;
         return this;
@@ -43,9 +48,14 @@ public class UsersListForOrgResponse {
      */
     
     public UsersListForOrgDefaultApplicationJSON usersListForOrgDefaultApplicationJSONObject;
+
     public UsersListForOrgResponse withUsersListForOrgDefaultApplicationJSONObject(UsersListForOrgDefaultApplicationJSON usersListForOrgDefaultApplicationJSONObject) {
         this.usersListForOrgDefaultApplicationJSONObject = usersListForOrgDefaultApplicationJSONObject;
         return this;
     }
     
+    public UsersListForOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

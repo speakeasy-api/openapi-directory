@@ -15,6 +15,7 @@ public class Ec2CopyRouteTableAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Ec2CopyRouteTableAction withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class Ec2CopyRouteTableAction {
     
     @JsonProperty("RouteTableId")
     public ActionTarget routeTableId;
+
     public Ec2CopyRouteTableAction withRouteTableId(ActionTarget routeTableId) {
         this.routeTableId = routeTableId;
         return this;
@@ -29,9 +31,14 @@ public class Ec2CopyRouteTableAction {
     
     @JsonProperty("VpcId")
     public ActionTarget vpcId;
+
     public Ec2CopyRouteTableAction withVpcId(ActionTarget vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public Ec2CopyRouteTableAction(@JsonProperty("RouteTableId") ActionTarget routeTableId, @JsonProperty("VpcId") ActionTarget vpcId) {
+        this.routeTableId = routeTableId;
+        this.vpcId = vpcId;
+  }
 }

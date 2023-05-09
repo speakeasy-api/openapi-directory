@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2MetadataLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageLabel")
     public GooglePrivacyDlpV2StorageMetadataLabel storageLabel;
+
     public GooglePrivacyDlpV2MetadataLocation withStorageLabel(GooglePrivacyDlpV2StorageMetadataLabel storageLabel) {
         this.storageLabel = storageLabel;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2MetadataLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GooglePrivacyDlpV2MetadataLocationTypeEnum type;
+
     public GooglePrivacyDlpV2MetadataLocation withType(GooglePrivacyDlpV2MetadataLocationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GooglePrivacyDlpV2MetadataLocation(){}
 }

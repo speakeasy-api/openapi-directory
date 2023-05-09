@@ -20,6 +20,7 @@ public class WorkflowListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public WorkflowListItem withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class WorkflowListItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public WorkflowListItem withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class WorkflowListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digest")
     public String digest;
+
     public WorkflowListItem withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -46,6 +49,7 @@ public class WorkflowListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public WorkflowListItem withId(String id) {
         this.id = id;
         return this;
@@ -54,6 +58,7 @@ public class WorkflowListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WorkflowListItem withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class WorkflowListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public WorkflowStatusEnum status;
+
     public WorkflowListItem withStatus(WorkflowStatusEnum status) {
         this.status = status;
         return this;
@@ -70,9 +76,11 @@ public class WorkflowListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public WorkflowTypeEnum type;
+
     public WorkflowListItem withType(WorkflowTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public WorkflowListItem(){}
 }

@@ -15,6 +15,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aiIcon")
     public String aiIcon;
+
     public Chore withAiIcon(String aiIcon) {
         this.aiIcon = aiIcon;
         return this;
@@ -23,6 +24,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("altitude")
     public Long altitude;
+
     public Chore withAltitude(Long altitude) {
         this.altitude = altitude;
         return this;
@@ -31,6 +33,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockDash")
     public Boolean blockDash;
+
     public Chore withBlockDash(Boolean blockDash) {
         this.blockDash = blockDash;
         return this;
@@ -39,6 +42,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("choreDescription")
     public String choreDescription;
+
     public Chore withChoreDescription(String choreDescription) {
         this.choreDescription = choreDescription;
         return this;
@@ -47,6 +51,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("choreName")
     public String choreName;
+
     public Chore withChoreName(String choreName) {
         this.choreName = choreName;
         return this;
@@ -55,6 +60,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("choreNumber")
     public Long choreNumber;
+
     public Chore withChoreNumber(Long choreNumber) {
         this.choreNumber = choreNumber;
         return this;
@@ -63,6 +69,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day")
     public String day;
+
     public Chore withDay(String day) {
         this.day = day;
         return this;
@@ -71,6 +78,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extraAllowance")
     public Long extraAllowance;
+
     public Chore withExtraAllowance(Long extraAllowance) {
         this.extraAllowance = extraAllowance;
         return this;
@@ -79,6 +87,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idChoreList")
     public Long idChoreList;
+
     public Chore withIdChoreList(Long idChoreList) {
         this.idChoreList = idChoreList;
         return this;
@@ -87,6 +96,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCalendar")
     public Boolean isCalendar;
+
     public Chore withIsCalendar(Boolean isCalendar) {
         this.isCalendar = isCalendar;
         return this;
@@ -95,6 +105,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kid")
     public String kid;
+
     public Chore withKid(String kid) {
         this.kid = kid;
         return this;
@@ -103,6 +114,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Long latitude;
+
     public Chore withLatitude(Long latitude) {
         this.latitude = latitude;
         return this;
@@ -111,6 +123,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Long longitude;
+
     public Chore withLongitude(Long longitude) {
         this.longitude = longitude;
         return this;
@@ -119,6 +132,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nfcTag")
     public String nfcTag;
+
     public Chore withNfcTag(String nfcTag) {
         this.nfcTag = nfcTag;
         return this;
@@ -127,6 +141,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public Chore withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -135,6 +150,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneTime")
     public Boolean oneTime;
+
     public Chore withOneTime(Boolean oneTime) {
         this.oneTime = oneTime;
         return this;
@@ -143,6 +159,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optional")
     public Boolean optional;
+
     public Chore withOptional(Boolean optional) {
         this.optional = optional;
         return this;
@@ -151,6 +168,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reassignable")
     public Boolean reassignable;
+
     public Chore withReassignable(Boolean reassignable) {
         this.reassignable = reassignable;
         return this;
@@ -159,6 +177,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reassigned")
     public Boolean reassigned;
+
     public Chore withReassigned(Boolean reassigned) {
         this.reassigned = reassigned;
         return this;
@@ -167,6 +186,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requireObjectDetection")
     public String requireObjectDetection;
+
     public Chore withRequireObjectDetection(String requireObjectDetection) {
         this.requireObjectDetection = requireObjectDetection;
         return this;
@@ -175,6 +195,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public String startDate;
+
     public Chore withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -183,6 +204,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Chore withStatus(String status) {
         this.status = status;
         return this;
@@ -191,6 +213,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stolen")
     public Boolean stolen;
+
     public Chore withStolen(Boolean stolen) {
         this.stolen = stolen;
         return this;
@@ -199,6 +222,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stolenBy")
     public String stolenBy;
+
     public Chore withStolenBy(String stolenBy) {
         this.stolenBy = stolenBy;
         return this;
@@ -207,6 +231,7 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated")
     public String updated;
+
     public Chore withUpdated(String updated) {
         this.updated = updated;
         return this;
@@ -215,9 +240,11 @@ public class Chore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedBy")
     public String updatedBy;
+
     public Chore withUpdatedBy(String updatedBy) {
         this.updatedBy = updatedBy;
         return this;
     }
     
+    public Chore(){}
 }

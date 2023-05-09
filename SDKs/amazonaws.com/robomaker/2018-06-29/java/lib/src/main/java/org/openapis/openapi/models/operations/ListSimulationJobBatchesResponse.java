@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSimulationJobBatchesResponse {
     
     public String contentType;
+
     public ListSimulationJobBatchesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSimulationJobBatchesResponse {
      */
     
     public Object internalServerException;
+
     public ListSimulationJobBatchesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListSimulationJobBatchesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListSimulationJobBatchesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListSimulationJobBatchesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSimulationJobBatchesResponse listSimulationJobBatchesResponse;
+
     public ListSimulationJobBatchesResponse withListSimulationJobBatchesResponse(org.openapis.openapi.models.shared.ListSimulationJobBatchesResponse listSimulationJobBatchesResponse) {
         this.listSimulationJobBatchesResponse = listSimulationJobBatchesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListSimulationJobBatchesResponse {
     
     
     public Integer statusCode;
+
     public ListSimulationJobBatchesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListSimulationJobBatchesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSimulationJobBatchesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListSimulationJobBatchesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

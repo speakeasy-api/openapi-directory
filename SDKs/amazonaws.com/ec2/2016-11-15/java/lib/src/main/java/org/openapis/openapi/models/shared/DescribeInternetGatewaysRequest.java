@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInternetGatewaysRequest {
     
     public Boolean dryRun;
+
     public DescribeInternetGatewaysRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeInternetGatewaysRequest {
     
     
     public DescribeInternetGatewaysRequestFilters[] filters;
+
     public DescribeInternetGatewaysRequest withFilters(DescribeInternetGatewaysRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeInternetGatewaysRequest {
     
     
     public String[] internetGatewayIds;
+
     public DescribeInternetGatewaysRequest withInternetGatewayIds(String[] internetGatewayIds) {
         this.internetGatewayIds = internetGatewayIds;
         return this;
@@ -30,6 +33,7 @@ public class DescribeInternetGatewaysRequest {
     
     
     public Long maxResults;
+
     public DescribeInternetGatewaysRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,11 @@ public class DescribeInternetGatewaysRequest {
     
     
     public String nextToken;
+
     public DescribeInternetGatewaysRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInternetGatewaysRequest(){}
 }

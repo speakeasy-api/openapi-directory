@@ -15,6 +15,7 @@ public class AppInputSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eksSourceClusterNamespace")
     public EksSourceClusterNamespace eksSourceClusterNamespace;
+
     public AppInputSource withEksSourceClusterNamespace(EksSourceClusterNamespace eksSourceClusterNamespace) {
         this.eksSourceClusterNamespace = eksSourceClusterNamespace;
         return this;
@@ -22,6 +23,7 @@ public class AppInputSource {
     
     @JsonProperty("importType")
     public ResourceMappingTypeEnum importType;
+
     public AppInputSource withImportType(ResourceMappingTypeEnum importType) {
         this.importType = importType;
         return this;
@@ -30,6 +32,7 @@ public class AppInputSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceCount")
     public Long resourceCount;
+
     public AppInputSource withResourceCount(Long resourceCount) {
         this.resourceCount = resourceCount;
         return this;
@@ -38,6 +41,7 @@ public class AppInputSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceArn")
     public String sourceArn;
+
     public AppInputSource withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
@@ -46,6 +50,7 @@ public class AppInputSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceName")
     public String sourceName;
+
     public AppInputSource withSourceName(String sourceName) {
         this.sourceName = sourceName;
         return this;
@@ -54,9 +59,13 @@ public class AppInputSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terraformSource")
     public TerraformSource terraformSource;
+
     public AppInputSource withTerraformSource(TerraformSource terraformSource) {
         this.terraformSource = terraformSource;
         return this;
     }
     
+    public AppInputSource(@JsonProperty("importType") ResourceMappingTypeEnum importType) {
+        this.importType = importType;
+  }
 }

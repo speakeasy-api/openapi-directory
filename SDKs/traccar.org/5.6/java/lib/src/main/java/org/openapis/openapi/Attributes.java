@@ -55,10 +55,8 @@ public class Attributes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAttributesComputedIdResponse res = new org.openapis.openapi.models.operations.DeleteAttributesComputedIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteAttributesComputedIdResponse res = new org.openapis.openapi.models.operations.DeleteAttributesComputedIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -95,11 +93,9 @@ public class Attributes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAttributesComputedResponse res = new org.openapis.openapi.models.operations.GetAttributesComputedResponse() {{
+        org.openapis.openapi.models.operations.GetAttributesComputedResponse res = new org.openapis.openapi.models.operations.GetAttributesComputedResponse(contentType, httpRes.statusCode()) {{
             attributes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class Attributes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAttributesComputedResponse res = new org.openapis.openapi.models.operations.PostAttributesComputedResponse() {{
+        org.openapis.openapi.models.operations.PostAttributesComputedResponse res = new org.openapis.openapi.models.operations.PostAttributesComputedResponse(contentType, httpRes.statusCode()) {{
             attribute = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -183,11 +177,9 @@ public class Attributes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutAttributesComputedIdResponse res = new org.openapis.openapi.models.operations.PutAttributesComputedIdResponse() {{
+        org.openapis.openapi.models.operations.PutAttributesComputedIdResponse res = new org.openapis.openapi.models.operations.PutAttributesComputedIdResponse(contentType, httpRes.statusCode()) {{
             attribute = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

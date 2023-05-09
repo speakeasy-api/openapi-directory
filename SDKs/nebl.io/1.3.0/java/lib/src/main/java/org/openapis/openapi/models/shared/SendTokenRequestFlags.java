@@ -18,9 +18,11 @@ public class SendTokenRequestFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("splitChange")
     public Boolean splitChange;
+
     public SendTokenRequestFlags withSplitChange(Boolean splitChange) {
         this.splitChange = splitChange;
         return this;
     }
     
+    public SendTokenRequestFlags(){}
 }

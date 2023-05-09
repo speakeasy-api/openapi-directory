@@ -15,9 +15,11 @@ public class DescribeLoggingOptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingOptions")
     public LoggingOptions loggingOptions;
+
     public DescribeLoggingOptionsResponse withLoggingOptions(LoggingOptions loggingOptions) {
         this.loggingOptions = loggingOptions;
         return this;
     }
     
+    public DescribeLoggingOptionsResponse(){}
 }

@@ -12,6 +12,7 @@ public class PatchSchema {
      */
     @JsonProperty("Operations")
     public PatchSchemaOperations[] operations;
+
     public PatchSchema withOperations(PatchSchemaOperations[] operations) {
         this.operations = operations;
         return this;
@@ -19,9 +20,14 @@ public class PatchSchema {
     
     @JsonProperty("schemas")
     public PatchSchemaSchemasEnum[] schemas;
+
     public PatchSchema withSchemas(PatchSchemaSchemasEnum[] schemas) {
         this.schemas = schemas;
         return this;
     }
     
+    public PatchSchema(@JsonProperty("Operations") PatchSchemaOperations[] operations, @JsonProperty("schemas") PatchSchemaSchemasEnum[] schemas) {
+        this.operations = operations;
+        this.schemas = schemas;
+  }
 }

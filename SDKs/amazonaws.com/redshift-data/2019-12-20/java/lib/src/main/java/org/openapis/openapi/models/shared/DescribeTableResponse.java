@@ -15,6 +15,7 @@ public class DescribeTableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnList")
     public ColumnMetadata[] columnList;
+
     public DescribeTableResponse withColumnList(ColumnMetadata[] columnList) {
         this.columnList = columnList;
         return this;
@@ -23,6 +24,7 @@ public class DescribeTableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeTableResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class DescribeTableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public DescribeTableResponse withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public DescribeTableResponse(){}
 }

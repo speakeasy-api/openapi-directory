@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopAssessmentRunRequest {
     @JsonProperty("assessmentRunArn")
     public String assessmentRunArn;
+
     public StopAssessmentRunRequest withAssessmentRunArn(String assessmentRunArn) {
         this.assessmentRunArn = assessmentRunArn;
         return this;
@@ -19,9 +20,13 @@ public class StopAssessmentRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopAction")
     public StopActionEnum stopAction;
+
     public StopAssessmentRunRequest withStopAction(StopActionEnum stopAction) {
         this.stopAction = stopAction;
         return this;
     }
     
+    public StopAssessmentRunRequest(@JsonProperty("assessmentRunArn") String assessmentRunArn) {
+        this.assessmentRunArn = assessmentRunArn;
+  }
 }

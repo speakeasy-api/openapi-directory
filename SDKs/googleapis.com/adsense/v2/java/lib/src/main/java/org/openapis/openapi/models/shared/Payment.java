@@ -18,6 +18,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public String amount;
+
     public Payment withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -29,6 +30,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public Date date;
+
     public Payment withDate(Date date) {
         this.date = date;
         return this;
@@ -40,9 +42,11 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Payment withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Payment(){}
 }

@@ -36,10 +36,13 @@ public class EditorialImages {
     /**
      * (Deprecated) List editorial categories
      * Deprecated; use `GET /v2/editorial/images/categories` instead. This endpoint lists the categories that editorial images can belong to, which are separate from the categories that other types of assets can belong to.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
-    public org.openapis.openapi.models.operations.GetEditorialCategoriesResponse getEditorialCategories() throws Exception {
+    @Deprecated
+    public org.openapis.openapi.models.operations.GetEditorialCategoriesResponse getEditorialCategories(org.openapis.openapi.models.operations.GetEditorialCategoriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/categories");
         
@@ -48,16 +51,15 @@ public class EditorialImages {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEditorialCategoriesResponse res = new org.openapis.openapi.models.operations.GetEditorialCategoriesResponse() {{
+        org.openapis.openapi.models.operations.GetEditorialCategoriesResponse res = new org.openapis.openapi.models.operations.GetEditorialCategoriesResponse(contentType, httpRes.statusCode()) {{
             editorialCategoryResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,11 +104,9 @@ public class EditorialImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEditorialImageResponse res = new org.openapis.openapi.models.operations.GetEditorialImageResponse() {{
+        org.openapis.openapi.models.operations.GetEditorialImageResponse res = new org.openapis.openapi.models.operations.GetEditorialImageResponse(contentType, httpRes.statusCode()) {{
             editorialContent = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +151,9 @@ public class EditorialImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEditorialImageLicenseListResponse res = new org.openapis.openapi.models.operations.GetEditorialImageLicenseListResponse() {{
+        org.openapis.openapi.models.operations.GetEditorialImageLicenseListResponse res = new org.openapis.openapi.models.operations.GetEditorialImageLicenseListResponse(contentType, httpRes.statusCode()) {{
             downloadHistoryDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +197,9 @@ public class EditorialImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEditorialImageLivefeedResponse res = new org.openapis.openapi.models.operations.GetEditorialImageLivefeedResponse() {{
+        org.openapis.openapi.models.operations.GetEditorialImageLivefeedResponse res = new org.openapis.openapi.models.operations.GetEditorialImageLivefeedResponse(contentType, httpRes.statusCode()) {{
             editorialImageLivefeed = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +243,9 @@ public class EditorialImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEditorialImageLivefeedItemsResponse res = new org.openapis.openapi.models.operations.GetEditorialImageLivefeedItemsResponse() {{
+        org.openapis.openapi.models.operations.GetEditorialImageLivefeedItemsResponse res = new org.openapis.openapi.models.operations.GetEditorialImageLivefeedItemsResponse(contentType, httpRes.statusCode()) {{
             editorialImageContentDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +289,9 @@ public class EditorialImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEditorialImageLivefeedListResponse res = new org.openapis.openapi.models.operations.GetEditorialImageLivefeedListResponse() {{
+        org.openapis.openapi.models.operations.GetEditorialImageLivefeedListResponse res = new org.openapis.openapi.models.operations.GetEditorialImageLivefeedListResponse(contentType, httpRes.statusCode()) {{
             editorialImageLivefeedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -322,7 +314,9 @@ public class EditorialImages {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetEditorialLivefeedResponse getEditorialLivefeed(org.openapis.openapi.models.operations.GetEditorialLivefeedRequest request, org.openapis.openapi.models.operations.GetEditorialLivefeedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEditorialLivefeedRequest.class, baseUrl, "/v2/editorial/livefeeds/{id}", request, null);
@@ -344,11 +338,9 @@ public class EditorialImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEditorialLivefeedResponse res = new org.openapis.openapi.models.operations.GetEditorialLivefeedResponse() {{
+        org.openapis.openapi.models.operations.GetEditorialLivefeedResponse res = new org.openapis.openapi.models.operations.GetEditorialLivefeedResponse(contentType, httpRes.statusCode()) {{
             editorialLivefeed = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -371,7 +363,9 @@ public class EditorialImages {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetEditorialLivefeedItemsResponse getEditorialLivefeedItems(org.openapis.openapi.models.operations.GetEditorialLivefeedItemsRequest request, org.openapis.openapi.models.operations.GetEditorialLivefeedItemsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEditorialLivefeedItemsRequest.class, baseUrl, "/v2/editorial/livefeeds/{id}/items", request, null);
@@ -393,11 +387,9 @@ public class EditorialImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEditorialLivefeedItemsResponse res = new org.openapis.openapi.models.operations.GetEditorialLivefeedItemsResponse() {{
+        org.openapis.openapi.models.operations.GetEditorialLivefeedItemsResponse res = new org.openapis.openapi.models.operations.GetEditorialLivefeedItemsResponse(contentType, httpRes.statusCode()) {{
             editorialContentDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -420,7 +412,9 @@ public class EditorialImages {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetEditorialLivefeedListResponse getEditorialLivefeedList(org.openapis.openapi.models.operations.GetEditorialLivefeedListRequest request, org.openapis.openapi.models.operations.GetEditorialLivefeedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/livefeeds");
@@ -442,11 +436,9 @@ public class EditorialImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEditorialLivefeedListResponse res = new org.openapis.openapi.models.operations.GetEditorialLivefeedListResponse() {{
+        org.openapis.openapi.models.operations.GetEditorialLivefeedListResponse res = new org.openapis.openapi.models.operations.GetEditorialLivefeedListResponse(contentType, httpRes.statusCode()) {{
             editorialLivefeedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -469,7 +461,9 @@ public class EditorialImages {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetUpdatedEditorialImageResponse getUpdatedEditorialImage(org.openapis.openapi.models.operations.GetUpdatedEditorialImageRequest request, org.openapis.openapi.models.operations.GetUpdatedEditorialImageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/updated");
@@ -491,11 +485,9 @@ public class EditorialImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUpdatedEditorialImageResponse res = new org.openapis.openapi.models.operations.GetUpdatedEditorialImageResponse() {{
+        org.openapis.openapi.models.operations.GetUpdatedEditorialImageResponse res = new org.openapis.openapi.models.operations.GetUpdatedEditorialImageResponse(contentType, httpRes.statusCode()) {{
             editorialUpdatedResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -540,11 +532,9 @@ public class EditorialImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUpdatedEditorialImagesResponse res = new org.openapis.openapi.models.operations.GetUpdatedEditorialImagesResponse() {{
+        org.openapis.openapi.models.operations.GetUpdatedEditorialImagesResponse res = new org.openapis.openapi.models.operations.GetUpdatedEditorialImagesResponse(contentType, httpRes.statusCode()) {{
             editorialUpdatedResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -567,7 +557,9 @@ public class EditorialImages {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetV2EditorialIdResponse getV2EditorialId(org.openapis.openapi.models.operations.GetV2EditorialIdRequest request, org.openapis.openapi.models.operations.GetV2EditorialIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2EditorialIdRequest.class, baseUrl, "/v2/editorial/{id}", request, null);
@@ -589,11 +581,9 @@ public class EditorialImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2EditorialIdResponse res = new org.openapis.openapi.models.operations.GetV2EditorialIdResponse() {{
+        org.openapis.openapi.models.operations.GetV2EditorialIdResponse res = new org.openapis.openapi.models.operations.GetV2EditorialIdResponse(contentType, httpRes.statusCode()) {{
             editorialContent = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -616,7 +606,9 @@ public class EditorialImages {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.LicenseEditorialImageResponse licenseEditorialImage(org.openapis.openapi.models.shared.LicenseEditorialContentRequest request, org.openapis.openapi.models.operations.LicenseEditorialImageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/licenses");
@@ -637,11 +629,9 @@ public class EditorialImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LicenseEditorialImageResponse res = new org.openapis.openapi.models.operations.LicenseEditorialImageResponse() {{
+        org.openapis.openapi.models.operations.LicenseEditorialImageResponse res = new org.openapis.openapi.models.operations.LicenseEditorialImageResponse(contentType, httpRes.statusCode()) {{
             licenseEditorialContentResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -685,11 +675,9 @@ public class EditorialImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LicenseEditorialImagesResponse res = new org.openapis.openapi.models.operations.LicenseEditorialImagesResponse() {{
+        org.openapis.openapi.models.operations.LicenseEditorialImagesResponse res = new org.openapis.openapi.models.operations.LicenseEditorialImagesResponse(contentType, httpRes.statusCode()) {{
             licenseEditorialContentResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -708,10 +696,11 @@ public class EditorialImages {
     /**
      * List editorial categories
      * This endpoint lists the categories that editorial images can belong to, which are separate from the categories that other types of assets can belong to.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListEditorialImageCategoriesResponse listEditorialImageCategories() throws Exception {
+    public org.openapis.openapi.models.operations.ListEditorialImageCategoriesResponse listEditorialImageCategories(org.openapis.openapi.models.operations.ListEditorialImageCategoriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/images/categories");
         
@@ -720,16 +709,15 @@ public class EditorialImages {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListEditorialImageCategoriesResponse res = new org.openapis.openapi.models.operations.ListEditorialImageCategoriesResponse() {{
+        org.openapis.openapi.models.operations.ListEditorialImageCategoriesResponse res = new org.openapis.openapi.models.operations.ListEditorialImageCategoriesResponse(contentType, httpRes.statusCode()) {{
             editorialImageCategoryResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -752,7 +740,9 @@ public class EditorialImages {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.SearchEditorialResponse searchEditorial(org.openapis.openapi.models.operations.SearchEditorialRequest request, org.openapis.openapi.models.operations.SearchEditorialSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/search");
@@ -774,11 +764,9 @@ public class EditorialImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchEditorialResponse res = new org.openapis.openapi.models.operations.SearchEditorialResponse() {{
+        org.openapis.openapi.models.operations.SearchEditorialResponse res = new org.openapis.openapi.models.operations.SearchEditorialResponse(contentType, httpRes.statusCode()) {{
             editorialSearchResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -823,11 +811,9 @@ public class EditorialImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchEditorialImagesResponse res = new org.openapis.openapi.models.operations.SearchEditorialImagesResponse() {{
+        org.openapis.openapi.models.operations.SearchEditorialImagesResponse res = new org.openapis.openapi.models.operations.SearchEditorialImagesResponse(contentType, httpRes.statusCode()) {{
             editorialSearchResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

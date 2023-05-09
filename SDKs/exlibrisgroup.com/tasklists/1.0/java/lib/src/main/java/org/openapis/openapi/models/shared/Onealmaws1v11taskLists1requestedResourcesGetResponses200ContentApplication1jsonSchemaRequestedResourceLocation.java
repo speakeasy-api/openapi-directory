@@ -18,6 +18,7 @@ public class Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("call_number")
     public String callNumber;
+
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceLocation withCallNumber(String callNumber) {
         this.callNumber = callNumber;
         return this;
@@ -29,6 +30,7 @@ public class Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copy")
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceLocationCopy[] copy;
+
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceLocation withCopy(Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceLocationCopy[] copy) {
         this.copy = copy;
         return this;
@@ -40,6 +42,7 @@ public class Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("holding_id")
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceLocationHoldingId holdingId;
+
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceLocation withHoldingId(Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceLocationHoldingId holdingId) {
         this.holdingId = holdingId;
         return this;
@@ -51,6 +54,7 @@ public class Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("library")
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceLocationLibrary library;
+
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceLocation withLibrary(Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceLocationLibrary library) {
         this.library = library;
         return this;
@@ -62,9 +66,11 @@ public class Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shelving_location")
     public String shelvingLocation;
+
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceLocation withShelvingLocation(String shelvingLocation) {
         this.shelvingLocation = shelvingLocation;
         return this;
     }
     
+    public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceLocation(){}
 }

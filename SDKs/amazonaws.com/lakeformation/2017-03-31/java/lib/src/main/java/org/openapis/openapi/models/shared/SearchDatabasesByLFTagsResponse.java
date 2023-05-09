@@ -15,6 +15,7 @@ public class SearchDatabasesByLFTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseList")
     public TaggedDatabase[] databaseList;
+
     public SearchDatabasesByLFTagsResponse withDatabaseList(TaggedDatabase[] databaseList) {
         this.databaseList = databaseList;
         return this;
@@ -23,9 +24,11 @@ public class SearchDatabasesByLFTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public SearchDatabasesByLFTagsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public SearchDatabasesByLFTagsResponse(){}
 }

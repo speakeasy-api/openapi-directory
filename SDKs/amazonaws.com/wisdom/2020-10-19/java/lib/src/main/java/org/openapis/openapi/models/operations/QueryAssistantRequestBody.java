@@ -15,6 +15,7 @@ public class QueryAssistantRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public QueryAssistantRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class QueryAssistantRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public QueryAssistantRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +38,13 @@ public class QueryAssistantRequestBody {
      */
     @JsonProperty("queryText")
     public String queryText;
+
     public QueryAssistantRequestBody withQueryText(String queryText) {
         this.queryText = queryText;
         return this;
     }
     
+    public QueryAssistantRequestBody(@JsonProperty("queryText") String queryText) {
+        this.queryText = queryText;
+  }
 }

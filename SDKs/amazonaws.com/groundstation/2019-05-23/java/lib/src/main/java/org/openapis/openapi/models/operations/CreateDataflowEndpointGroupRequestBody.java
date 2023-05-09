@@ -10,22 +10,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateDataflowEndpointGroupRequestBody {
     /**
-     * Amount of time, in seconds, after a contact ends for the contact to remain in a &lt;code&gt;POSTPASS&lt;/code&gt; state. A CloudWatch event is emitted when the contact enters and exits the &lt;code&gt;POSTPASS&lt;/code&gt; state.
+     * Amount of time, in seconds, after a contact ends that the Ground Station Dataflow Endpoint Group will be in a &lt;code&gt;POSTPASS&lt;/code&gt; state. A Ground Station Dataflow Endpoint Group State Change event will be emitted when the Dataflow Endpoint Group enters and exits the &lt;code&gt;POSTPASS&lt;/code&gt; state.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactPostPassDurationSeconds")
     public Long contactPostPassDurationSeconds;
+
     public CreateDataflowEndpointGroupRequestBody withContactPostPassDurationSeconds(Long contactPostPassDurationSeconds) {
         this.contactPostPassDurationSeconds = contactPostPassDurationSeconds;
         return this;
     }
     
     /**
-     * Amount of time, in seconds, prior to contact start for the contact to remain in a &lt;code&gt;PREPASS&lt;/code&gt; state. A CloudWatch event is emitted when the contact enters and exits the &lt;code&gt;PREPASS&lt;/code&gt; state.
+     * Amount of time, in seconds, before a contact starts that the Ground Station Dataflow Endpoint Group will be in a &lt;code&gt;PREPASS&lt;/code&gt; state. A Ground Station Dataflow Endpoint Group State Change event will be emitted when the Dataflow Endpoint Group enters and exits the &lt;code&gt;PREPASS&lt;/code&gt; state.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactPrePassDurationSeconds")
     public Long contactPrePassDurationSeconds;
+
     public CreateDataflowEndpointGroupRequestBody withContactPrePassDurationSeconds(Long contactPrePassDurationSeconds) {
         this.contactPrePassDurationSeconds = contactPrePassDurationSeconds;
         return this;
@@ -36,6 +38,7 @@ public class CreateDataflowEndpointGroupRequestBody {
      */
     @JsonProperty("endpointDetails")
     public org.openapis.openapi.models.shared.EndpointDetails[] endpointDetails;
+
     public CreateDataflowEndpointGroupRequestBody withEndpointDetails(org.openapis.openapi.models.shared.EndpointDetails[] endpointDetails) {
         this.endpointDetails = endpointDetails;
         return this;
@@ -47,9 +50,13 @@ public class CreateDataflowEndpointGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateDataflowEndpointGroupRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDataflowEndpointGroupRequestBody(@JsonProperty("endpointDetails") org.openapis.openapi.models.shared.EndpointDetails[] endpointDetails) {
+        this.endpointDetails = endpointDetails;
+  }
 }

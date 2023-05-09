@@ -18,6 +18,7 @@ public class DfpSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dfpNetworkCode")
     public String dfpNetworkCode;
+
     public DfpSettings withDfpNetworkCode(String dfpNetworkCode) {
         this.dfpNetworkCode = dfpNetworkCode;
         return this;
@@ -29,6 +30,7 @@ public class DfpSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dfpNetworkName")
     public String dfpNetworkName;
+
     public DfpSettings withDfpNetworkName(String dfpNetworkName) {
         this.dfpNetworkName = dfpNetworkName;
         return this;
@@ -40,6 +42,7 @@ public class DfpSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("programmaticPlacementAccepted")
     public Boolean programmaticPlacementAccepted;
+
     public DfpSettings withProgrammaticPlacementAccepted(Boolean programmaticPlacementAccepted) {
         this.programmaticPlacementAccepted = programmaticPlacementAccepted;
         return this;
@@ -51,6 +54,7 @@ public class DfpSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubPaidPlacementAccepted")
     public Boolean pubPaidPlacementAccepted;
+
     public DfpSettings withPubPaidPlacementAccepted(Boolean pubPaidPlacementAccepted) {
         this.pubPaidPlacementAccepted = pubPaidPlacementAccepted;
         return this;
@@ -62,9 +66,11 @@ public class DfpSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisherPortalOnly")
     public Boolean publisherPortalOnly;
+
     public DfpSettings withPublisherPortalOnly(Boolean publisherPortalOnly) {
         this.publisherPortalOnly = publisherPortalOnly;
         return this;
     }
     
+    public DfpSettings(){}
 }

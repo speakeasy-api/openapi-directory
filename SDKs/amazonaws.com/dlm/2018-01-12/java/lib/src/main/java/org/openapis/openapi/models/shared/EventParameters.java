@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EventParameters {
     @JsonProperty("DescriptionRegex")
     public String descriptionRegex;
+
     public EventParameters withDescriptionRegex(String descriptionRegex) {
         this.descriptionRegex = descriptionRegex;
         return this;
@@ -19,6 +20,7 @@ public class EventParameters {
     
     @JsonProperty("EventType")
     public EventTypeValuesEnum eventType;
+
     public EventParameters withEventType(EventTypeValuesEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -26,9 +28,15 @@ public class EventParameters {
     
     @JsonProperty("SnapshotOwner")
     public String[] snapshotOwner;
+
     public EventParameters withSnapshotOwner(String[] snapshotOwner) {
         this.snapshotOwner = snapshotOwner;
         return this;
     }
     
+    public EventParameters(@JsonProperty("DescriptionRegex") String descriptionRegex, @JsonProperty("EventType") EventTypeValuesEnum eventType, @JsonProperty("SnapshotOwner") String[] snapshotOwner) {
+        this.descriptionRegex = descriptionRegex;
+        this.eventType = eventType;
+        this.snapshotOwner = snapshotOwner;
+  }
 }

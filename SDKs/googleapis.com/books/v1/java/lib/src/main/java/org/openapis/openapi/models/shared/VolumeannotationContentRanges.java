@@ -15,6 +15,7 @@ public class VolumeannotationContentRanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cfiRange")
     public BooksAnnotationsRange cfiRange;
+
     public VolumeannotationContentRanges withCfiRange(BooksAnnotationsRange cfiRange) {
         this.cfiRange = cfiRange;
         return this;
@@ -26,6 +27,7 @@ public class VolumeannotationContentRanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentVersion")
     public String contentVersion;
+
     public VolumeannotationContentRanges withContentVersion(String contentVersion) {
         this.contentVersion = contentVersion;
         return this;
@@ -34,6 +36,7 @@ public class VolumeannotationContentRanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gbImageRange")
     public BooksAnnotationsRange gbImageRange;
+
     public VolumeannotationContentRanges withGbImageRange(BooksAnnotationsRange gbImageRange) {
         this.gbImageRange = gbImageRange;
         return this;
@@ -42,9 +45,11 @@ public class VolumeannotationContentRanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gbTextRange")
     public BooksAnnotationsRange gbTextRange;
+
     public VolumeannotationContentRanges withGbTextRange(BooksAnnotationsRange gbTextRange) {
         this.gbTextRange = gbTextRange;
         return this;
     }
     
+    public VolumeannotationContentRanges(){}
 }

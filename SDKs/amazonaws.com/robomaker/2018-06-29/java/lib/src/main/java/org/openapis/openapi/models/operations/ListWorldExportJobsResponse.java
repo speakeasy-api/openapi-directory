@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListWorldExportJobsResponse {
     
     public String contentType;
+
     public ListWorldExportJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListWorldExportJobsResponse {
      */
     
     public Object internalServerException;
+
     public ListWorldExportJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListWorldExportJobsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListWorldExportJobsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListWorldExportJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListWorldExportJobsResponse listWorldExportJobsResponse;
+
     public ListWorldExportJobsResponse withListWorldExportJobsResponse(org.openapis.openapi.models.shared.ListWorldExportJobsResponse listWorldExportJobsResponse) {
         this.listWorldExportJobsResponse = listWorldExportJobsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListWorldExportJobsResponse {
     
     
     public Integer statusCode;
+
     public ListWorldExportJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListWorldExportJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListWorldExportJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListWorldExportJobsResponse {
      */
     
     public Object throttlingException;
+
     public ListWorldExportJobsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListWorldExportJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

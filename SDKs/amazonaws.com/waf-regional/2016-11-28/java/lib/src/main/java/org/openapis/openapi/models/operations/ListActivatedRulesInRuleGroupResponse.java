@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListActivatedRulesInRuleGroupResponse {
     
     public String contentType;
+
     public ListActivatedRulesInRuleGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListActivatedRulesInRuleGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.ListActivatedRulesInRuleGroupResponse listActivatedRulesInRuleGroupResponse;
+
     public ListActivatedRulesInRuleGroupResponse withListActivatedRulesInRuleGroupResponse(org.openapis.openapi.models.shared.ListActivatedRulesInRuleGroupResponse listActivatedRulesInRuleGroupResponse) {
         this.listActivatedRulesInRuleGroupResponse = listActivatedRulesInRuleGroupResponse;
         return this;
@@ -26,6 +29,7 @@ public class ListActivatedRulesInRuleGroupResponse {
     
     
     public Integer statusCode;
+
     public ListActivatedRulesInRuleGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ListActivatedRulesInRuleGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListActivatedRulesInRuleGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class ListActivatedRulesInRuleGroupResponse {
      */
     
     public Object wafInternalErrorException;
+
     public ListActivatedRulesInRuleGroupResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class ListActivatedRulesInRuleGroupResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public ListActivatedRulesInRuleGroupResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -63,9 +70,14 @@ public class ListActivatedRulesInRuleGroupResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public ListActivatedRulesInRuleGroupResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
     }
     
+    public ListActivatedRulesInRuleGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ResourceRecordSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ResourceRecordSet withKind(String kind) {
         this.kind = kind;
         return this;
@@ -26,6 +27,7 @@ public class ResourceRecordSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ResourceRecordSet withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class ResourceRecordSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routingPolicy")
     public RRSetRoutingPolicy routingPolicy;
+
     public ResourceRecordSet withRoutingPolicy(RRSetRoutingPolicy routingPolicy) {
         this.routingPolicy = routingPolicy;
         return this;
@@ -48,6 +51,7 @@ public class ResourceRecordSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rrdatas")
     public String[] rrdatas;
+
     public ResourceRecordSet withRrdatas(String[] rrdatas) {
         this.rrdatas = rrdatas;
         return this;
@@ -59,6 +63,7 @@ public class ResourceRecordSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatureRrdatas")
     public String[] signatureRrdatas;
+
     public ResourceRecordSet withSignatureRrdatas(String[] signatureRrdatas) {
         this.signatureRrdatas = signatureRrdatas;
         return this;
@@ -70,6 +75,7 @@ public class ResourceRecordSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public Integer ttl;
+
     public ResourceRecordSet withTtl(Integer ttl) {
         this.ttl = ttl;
         return this;
@@ -81,9 +87,11 @@ public class ResourceRecordSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ResourceRecordSet withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ResourceRecordSet(){}
 }

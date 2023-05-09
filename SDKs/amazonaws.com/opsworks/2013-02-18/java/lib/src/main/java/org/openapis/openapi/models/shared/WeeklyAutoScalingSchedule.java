@@ -15,6 +15,7 @@ public class WeeklyAutoScalingSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Friday")
     public java.util.Map<String, String> friday;
+
     public WeeklyAutoScalingSchedule withFriday(java.util.Map<String, String> friday) {
         this.friday = friday;
         return this;
@@ -23,6 +24,7 @@ public class WeeklyAutoScalingSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Monday")
     public java.util.Map<String, String> monday;
+
     public WeeklyAutoScalingSchedule withMonday(java.util.Map<String, String> monday) {
         this.monday = monday;
         return this;
@@ -31,6 +33,7 @@ public class WeeklyAutoScalingSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Saturday")
     public java.util.Map<String, String> saturday;
+
     public WeeklyAutoScalingSchedule withSaturday(java.util.Map<String, String> saturday) {
         this.saturday = saturday;
         return this;
@@ -39,6 +42,7 @@ public class WeeklyAutoScalingSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sunday")
     public java.util.Map<String, String> sunday;
+
     public WeeklyAutoScalingSchedule withSunday(java.util.Map<String, String> sunday) {
         this.sunday = sunday;
         return this;
@@ -47,6 +51,7 @@ public class WeeklyAutoScalingSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Thursday")
     public java.util.Map<String, String> thursday;
+
     public WeeklyAutoScalingSchedule withThursday(java.util.Map<String, String> thursday) {
         this.thursday = thursday;
         return this;
@@ -55,6 +60,7 @@ public class WeeklyAutoScalingSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tuesday")
     public java.util.Map<String, String> tuesday;
+
     public WeeklyAutoScalingSchedule withTuesday(java.util.Map<String, String> tuesday) {
         this.tuesday = tuesday;
         return this;
@@ -63,9 +69,11 @@ public class WeeklyAutoScalingSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Wednesday")
     public java.util.Map<String, String> wednesday;
+
     public WeeklyAutoScalingSchedule withWednesday(java.util.Map<String, String> wednesday) {
         this.wednesday = wednesday;
         return this;
     }
     
+    public WeeklyAutoScalingSchedule(){}
 }

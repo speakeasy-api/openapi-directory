@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAuthRenewRequestBody {
@@ -12,6 +13,7 @@ public class PostAuthRenewRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=client_id")
     public String clientId;
+
     public PostAuthRenewRequestBody withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -22,6 +24,7 @@ public class PostAuthRenewRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=client_secret")
     public String clientSecret;
+
     public PostAuthRenewRequestBody withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -32,6 +35,7 @@ public class PostAuthRenewRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=grant_type")
     public String grantType;
+
     public PostAuthRenewRequestBody withGrantType(String grantType) {
         this.grantType = grantType;
         return this;
@@ -42,6 +46,7 @@ public class PostAuthRenewRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=id_user")
     public Long idUser;
+
     public PostAuthRenewRequestBody withIdUser(Long idUser) {
         this.idUser = idUser;
         return this;
@@ -52,9 +57,15 @@ public class PostAuthRenewRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=revoke_previous")
     public Boolean revokePrevious;
+
     public PostAuthRenewRequestBody withRevokePrevious(Boolean revokePrevious) {
         this.revokePrevious = revokePrevious;
         return this;
     }
     
+    public PostAuthRenewRequestBody(@JsonProperty("client_id") String clientId, @JsonProperty("client_secret") String clientSecret, @JsonProperty("id_user") Long idUser) {
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+        this.idUser = idUser;
+  }
 }

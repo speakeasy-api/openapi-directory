@@ -15,6 +15,7 @@ public class ListComponentProvisionedResourcesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListComponentProvisionedResourcesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListComponentProvisionedResourcesOutput {
     
     @JsonProperty("provisionedResources")
     public ProvisionedResource[] provisionedResources;
+
     public ListComponentProvisionedResourcesOutput withProvisionedResources(ProvisionedResource[] provisionedResources) {
         this.provisionedResources = provisionedResources;
         return this;
     }
     
+    public ListComponentProvisionedResourcesOutput(@JsonProperty("provisionedResources") ProvisionedResource[] provisionedResources) {
+        this.provisionedResources = provisionedResources;
+  }
 }

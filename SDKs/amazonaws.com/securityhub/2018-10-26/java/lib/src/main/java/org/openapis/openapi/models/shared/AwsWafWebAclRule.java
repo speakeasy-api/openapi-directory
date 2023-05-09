@@ -15,6 +15,7 @@ public class AwsWafWebAclRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public WafAction action;
+
     public AwsWafWebAclRule withAction(WafAction action) {
         this.action = action;
         return this;
@@ -23,6 +24,7 @@ public class AwsWafWebAclRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludedRules")
     public WafExcludedRule[] excludedRules;
+
     public AwsWafWebAclRule withExcludedRules(WafExcludedRule[] excludedRules) {
         this.excludedRules = excludedRules;
         return this;
@@ -31,6 +33,7 @@ public class AwsWafWebAclRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OverrideAction")
     public WafOverrideAction overrideAction;
+
     public AwsWafWebAclRule withOverrideAction(WafOverrideAction overrideAction) {
         this.overrideAction = overrideAction;
         return this;
@@ -39,6 +42,7 @@ public class AwsWafWebAclRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Priority")
     public Long priority;
+
     public AwsWafWebAclRule withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -47,6 +51,7 @@ public class AwsWafWebAclRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleId")
     public String ruleId;
+
     public AwsWafWebAclRule withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
@@ -55,9 +60,11 @@ public class AwsWafWebAclRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsWafWebAclRule withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AwsWafWebAclRule(){}
 }

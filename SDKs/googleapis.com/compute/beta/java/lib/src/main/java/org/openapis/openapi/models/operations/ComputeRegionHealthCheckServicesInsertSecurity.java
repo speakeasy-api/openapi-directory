@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeRegionHealthCheckServicesInsertSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionHealthCheckServicesInsertSecurityOption1 option1;
+
     public ComputeRegionHealthCheckServicesInsertSecurity withOption1(ComputeRegionHealthCheckServicesInsertSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeRegionHealthCheckServicesInsertSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionHealthCheckServicesInsertSecurityOption2 option2;
+
     public ComputeRegionHealthCheckServicesInsertSecurity withOption2(ComputeRegionHealthCheckServicesInsertSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeRegionHealthCheckServicesInsertSecurity(){}
 }

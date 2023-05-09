@@ -20,6 +20,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlarmConfiguration")
     public AlarmConfiguration alarmConfiguration;
+
     public AutomationExecutionMetadata withAlarmConfiguration(AlarmConfiguration alarmConfiguration) {
         this.alarmConfiguration = alarmConfiguration;
         return this;
@@ -28,6 +29,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationId")
     public String associationId;
+
     public AutomationExecutionMetadata withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -36,6 +38,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomationExecutionId")
     public String automationExecutionId;
+
     public AutomationExecutionMetadata withAutomationExecutionId(String automationExecutionId) {
         this.automationExecutionId = automationExecutionId;
         return this;
@@ -44,6 +47,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomationExecutionStatus")
     public AutomationExecutionStatusEnum automationExecutionStatus;
+
     public AutomationExecutionMetadata withAutomationExecutionStatus(AutomationExecutionStatusEnum automationExecutionStatus) {
         this.automationExecutionStatus = automationExecutionStatus;
         return this;
@@ -52,6 +56,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomationSubtype")
     public AutomationSubtypeEnum automationSubtype;
+
     public AutomationExecutionMetadata withAutomationSubtype(AutomationSubtypeEnum automationSubtype) {
         this.automationSubtype = automationSubtype;
         return this;
@@ -60,6 +65,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomationType")
     public AutomationTypeEnum automationType;
+
     public AutomationExecutionMetadata withAutomationType(AutomationTypeEnum automationType) {
         this.automationType = automationType;
         return this;
@@ -68,6 +74,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeRequestName")
     public String changeRequestName;
+
     public AutomationExecutionMetadata withChangeRequestName(String changeRequestName) {
         this.changeRequestName = changeRequestName;
         return this;
@@ -76,6 +83,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentAction")
     public String currentAction;
+
     public AutomationExecutionMetadata withCurrentAction(String currentAction) {
         this.currentAction = currentAction;
         return this;
@@ -84,6 +92,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentStepName")
     public String currentStepName;
+
     public AutomationExecutionMetadata withCurrentStepName(String currentStepName) {
         this.currentStepName = currentStepName;
         return this;
@@ -92,6 +101,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentName")
     public String documentName;
+
     public AutomationExecutionMetadata withDocumentName(String documentName) {
         this.documentName = documentName;
         return this;
@@ -100,6 +110,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public AutomationExecutionMetadata withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -108,6 +119,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutedBy")
     public String executedBy;
+
     public AutomationExecutionMetadata withExecutedBy(String executedBy) {
         this.executedBy = executedBy;
         return this;
@@ -118,6 +130,7 @@ public class AutomationExecutionMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExecutionEndTime")
     public OffsetDateTime executionEndTime;
+
     public AutomationExecutionMetadata withExecutionEndTime(OffsetDateTime executionEndTime) {
         this.executionEndTime = executionEndTime;
         return this;
@@ -128,6 +141,7 @@ public class AutomationExecutionMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExecutionStartTime")
     public OffsetDateTime executionStartTime;
+
     public AutomationExecutionMetadata withExecutionStartTime(OffsetDateTime executionStartTime) {
         this.executionStartTime = executionStartTime;
         return this;
@@ -136,6 +150,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureMessage")
     public String failureMessage;
+
     public AutomationExecutionMetadata withFailureMessage(String failureMessage) {
         this.failureMessage = failureMessage;
         return this;
@@ -144,6 +159,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogFile")
     public String logFile;
+
     public AutomationExecutionMetadata withLogFile(String logFile) {
         this.logFile = logFile;
         return this;
@@ -152,6 +168,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrency")
     public String maxConcurrency;
+
     public AutomationExecutionMetadata withMaxConcurrency(String maxConcurrency) {
         this.maxConcurrency = maxConcurrency;
         return this;
@@ -160,6 +177,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxErrors")
     public String maxErrors;
+
     public AutomationExecutionMetadata withMaxErrors(String maxErrors) {
         this.maxErrors = maxErrors;
         return this;
@@ -168,6 +186,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mode")
     public ExecutionModeEnum mode;
+
     public AutomationExecutionMetadata withMode(ExecutionModeEnum mode) {
         this.mode = mode;
         return this;
@@ -176,6 +195,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsItemId")
     public String opsItemId;
+
     public AutomationExecutionMetadata withOpsItemId(String opsItemId) {
         this.opsItemId = opsItemId;
         return this;
@@ -184,6 +204,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Outputs")
     public java.util.Map<String, String[]> outputs;
+
     public AutomationExecutionMetadata withOutputs(java.util.Map<String, String[]> outputs) {
         this.outputs = outputs;
         return this;
@@ -192,6 +213,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParentAutomationExecutionId")
     public String parentAutomationExecutionId;
+
     public AutomationExecutionMetadata withParentAutomationExecutionId(String parentAutomationExecutionId) {
         this.parentAutomationExecutionId = parentAutomationExecutionId;
         return this;
@@ -200,6 +222,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolvedTargets")
     public ResolvedTargets resolvedTargets;
+
     public AutomationExecutionMetadata withResolvedTargets(ResolvedTargets resolvedTargets) {
         this.resolvedTargets = resolvedTargets;
         return this;
@@ -208,6 +231,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Runbooks")
     public Runbook[] runbooks;
+
     public AutomationExecutionMetadata withRunbooks(Runbook[] runbooks) {
         this.runbooks = runbooks;
         return this;
@@ -218,6 +242,7 @@ public class AutomationExecutionMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ScheduledTime")
     public OffsetDateTime scheduledTime;
+
     public AutomationExecutionMetadata withScheduledTime(OffsetDateTime scheduledTime) {
         this.scheduledTime = scheduledTime;
         return this;
@@ -226,6 +251,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Target")
     public String target;
+
     public AutomationExecutionMetadata withTarget(String target) {
         this.target = target;
         return this;
@@ -234,6 +260,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetMaps")
     public java.util.Map<String, String[]>[] targetMaps;
+
     public AutomationExecutionMetadata withTargetMaps(java.util.Map<String, String[]>[] targetMaps) {
         this.targetMaps = targetMaps;
         return this;
@@ -242,6 +269,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetParameterName")
     public String targetParameterName;
+
     public AutomationExecutionMetadata withTargetParameterName(String targetParameterName) {
         this.targetParameterName = targetParameterName;
         return this;
@@ -250,6 +278,7 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public Target[] targets;
+
     public AutomationExecutionMetadata withTargets(Target[] targets) {
         this.targets = targets;
         return this;
@@ -258,9 +287,11 @@ public class AutomationExecutionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TriggeredAlarms")
     public AlarmStateInformation[] triggeredAlarms;
+
     public AutomationExecutionMetadata withTriggeredAlarms(AlarmStateInformation[] triggeredAlarms) {
         this.triggeredAlarms = triggeredAlarms;
         return this;
     }
     
+    public AutomationExecutionMetadata(){}
 }

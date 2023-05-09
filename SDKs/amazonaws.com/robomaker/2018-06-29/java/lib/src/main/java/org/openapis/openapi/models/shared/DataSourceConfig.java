@@ -15,6 +15,7 @@ public class DataSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public DataSourceConfig withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -22,6 +23,7 @@ public class DataSourceConfig {
     
     @JsonProperty("name")
     public String name;
+
     public DataSourceConfig withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +31,7 @@ public class DataSourceConfig {
     
     @JsonProperty("s3Bucket")
     public String s3Bucket;
+
     public DataSourceConfig withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -36,6 +39,7 @@ public class DataSourceConfig {
     
     @JsonProperty("s3Keys")
     public String[] s3Keys;
+
     public DataSourceConfig withS3Keys(String[] s3Keys) {
         this.s3Keys = s3Keys;
         return this;
@@ -44,9 +48,15 @@ public class DataSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DataSourceTypeEnum type;
+
     public DataSourceConfig withType(DataSourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DataSourceConfig(@JsonProperty("name") String name, @JsonProperty("s3Bucket") String s3Bucket, @JsonProperty("s3Keys") String[] s3Keys) {
+        this.name = name;
+        this.s3Bucket = s3Bucket;
+        this.s3Keys = s3Keys;
+  }
 }

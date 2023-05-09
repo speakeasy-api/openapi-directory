@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OpenSearchServiceDataSourceConfig {
     @JsonProperty("awsRegion")
     public String awsRegion;
+
     public OpenSearchServiceDataSourceConfig withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -19,9 +20,14 @@ public class OpenSearchServiceDataSourceConfig {
     
     @JsonProperty("endpoint")
     public String endpoint;
+
     public OpenSearchServiceDataSourceConfig withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
     }
     
+    public OpenSearchServiceDataSourceConfig(@JsonProperty("awsRegion") String awsRegion, @JsonProperty("endpoint") String endpoint) {
+        this.awsRegion = awsRegion;
+        this.endpoint = endpoint;
+  }
 }

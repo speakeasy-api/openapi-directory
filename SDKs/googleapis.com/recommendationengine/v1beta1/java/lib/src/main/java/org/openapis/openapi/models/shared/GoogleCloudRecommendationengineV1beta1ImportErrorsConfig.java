@@ -18,9 +18,11 @@ public class GoogleCloudRecommendationengineV1beta1ImportErrorsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsPrefix")
     public String gcsPrefix;
+
     public GoogleCloudRecommendationengineV1beta1ImportErrorsConfig withGcsPrefix(String gcsPrefix) {
         this.gcsPrefix = gcsPrefix;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1ImportErrorsConfig(){}
 }

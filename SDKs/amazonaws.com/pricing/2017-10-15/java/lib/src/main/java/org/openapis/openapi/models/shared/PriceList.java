@@ -15,6 +15,7 @@ public class PriceList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrencyCode")
     public String currencyCode;
+
     public PriceList withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -23,6 +24,7 @@ public class PriceList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileFormats")
     public String[] fileFormats;
+
     public PriceList withFileFormats(String[] fileFormats) {
         this.fileFormats = fileFormats;
         return this;
@@ -31,6 +33,7 @@ public class PriceList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PriceListArn")
     public String priceListArn;
+
     public PriceList withPriceListArn(String priceListArn) {
         this.priceListArn = priceListArn;
         return this;
@@ -39,9 +42,11 @@ public class PriceList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegionCode")
     public String regionCode;
+
     public PriceList withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
     
+    public PriceList(){}
 }

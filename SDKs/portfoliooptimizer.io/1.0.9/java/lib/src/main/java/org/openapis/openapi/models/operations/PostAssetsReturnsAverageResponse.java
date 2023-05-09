@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostAssetsReturnsAverageResponse {
     
     public String contentType;
+
     public PostAssetsReturnsAverageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostAssetsReturnsAverageResponse {
     
     
     public Integer statusCode;
+
     public PostAssetsReturnsAverageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostAssetsReturnsAverageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostAssetsReturnsAverageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostAssetsReturnsAverageResponse {
      */
     
     public PostAssetsReturnsAverage200ApplicationJSON postAssetsReturnsAverage200ApplicationJSONObject;
+
     public PostAssetsReturnsAverageResponse withPostAssetsReturnsAverage200ApplicationJSONObject(PostAssetsReturnsAverage200ApplicationJSON postAssetsReturnsAverage200ApplicationJSONObject) {
         this.postAssetsReturnsAverage200ApplicationJSONObject = postAssetsReturnsAverage200ApplicationJSONObject;
         return this;
     }
     
+    public PostAssetsReturnsAverageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

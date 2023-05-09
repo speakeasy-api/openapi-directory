@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInAppMessagesResponse {
@@ -12,6 +13,7 @@ public class GetInAppMessagesResponse {
      */
     
     public Object badRequestException;
+
     public GetInAppMessagesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetInAppMessagesResponse {
     
     
     public String contentType;
+
     public GetInAppMessagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetInAppMessagesResponse {
      */
     
     public Object forbiddenException;
+
     public GetInAppMessagesResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetInAppMessagesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetInAppMessagesResponse getInAppMessagesResponse;
+
     public GetInAppMessagesResponse withGetInAppMessagesResponse(org.openapis.openapi.models.shared.GetInAppMessagesResponse getInAppMessagesResponse) {
         this.getInAppMessagesResponse = getInAppMessagesResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetInAppMessagesResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetInAppMessagesResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetInAppMessagesResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetInAppMessagesResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetInAppMessagesResponse {
      */
     
     public Object notFoundException;
+
     public GetInAppMessagesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetInAppMessagesResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetInAppMessagesResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetInAppMessagesResponse {
     
     
     public Integer statusCode;
+
     public GetInAppMessagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetInAppMessagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInAppMessagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetInAppMessagesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetInAppMessagesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetInAppMessagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

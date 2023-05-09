@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Exfiltration - Exfiltration represents a data exfiltration attempt of one or more sources to one or more targets. Sources represent the source of data that is exfiltrated, and Targets represents the destination the data was copied to.
+ * Exfiltration - Exfiltration represents a data exfiltration attempt from one or more sources to one or more targets. The `sources` attribute lists the sources of the exfiltrated data. The `targets` attribute lists the destinations the data was copied to.
  */
 public class Exfiltration {
     /**
@@ -18,6 +18,7 @@ public class Exfiltration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public ExfilResource[] sources;
+
     public Exfiltration withSources(ExfilResource[] sources) {
         this.sources = sources;
         return this;
@@ -29,9 +30,11 @@ public class Exfiltration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targets")
     public ExfilResource[] targets;
+
     public Exfiltration withTargets(ExfilResource[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public Exfiltration(){}
 }

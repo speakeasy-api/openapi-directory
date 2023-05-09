@@ -15,9 +15,11 @@ public class ListKeysRequestBodyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyStatus")
     public org.openapis.openapi.models.shared.StatusEnum keyStatus;
+
     public ListKeysRequestBodyFilter withKeyStatus(org.openapis.openapi.models.shared.StatusEnum keyStatus) {
         this.keyStatus = keyStatus;
         return this;
     }
     
+    public ListKeysRequestBodyFilter(){}
 }

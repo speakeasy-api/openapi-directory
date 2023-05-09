@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Qualifier {
     @JsonProperty("CpsUri")
     public String cpsUri;
+
     public Qualifier withCpsUri(String cpsUri) {
         this.cpsUri = cpsUri;
         return this;
     }
     
+    public Qualifier(@JsonProperty("CpsUri") String cpsUri) {
+        this.cpsUri = cpsUri;
+  }
 }

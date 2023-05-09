@@ -15,9 +15,11 @@ public class CreateWorkteamResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkteamArn")
     public String workteamArn;
+
     public CreateWorkteamResponse withWorkteamArn(String workteamArn) {
         this.workteamArn = workteamArn;
         return this;
     }
     
+    public CreateWorkteamResponse(){}
 }

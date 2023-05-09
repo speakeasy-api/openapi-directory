@@ -25,6 +25,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public Account account;
+
     public Status withAccount(Account account) {
         this.account = account;
         return this;
@@ -37,6 +38,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application")
     public Application application;
+
     public Status withApplication(Application application) {
         this.application = application;
         return this;
@@ -48,6 +50,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookmarked")
     public Boolean bookmarked;
+
     public Status withBookmarked(Boolean bookmarked) {
         this.bookmarked = bookmarked;
         return this;
@@ -60,6 +63,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public Card card;
+
     public Status withCard(Card card) {
         this.card = card;
         return this;
@@ -71,6 +75,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public Status withContent(String content) {
         this.content = content;
         return this;
@@ -84,6 +89,7 @@ public class Status {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Status withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -95,6 +101,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emojis")
     public Emoji[] emojis;
+
     public Status withEmojis(Emoji[] emojis) {
         this.emojis = emojis;
         return this;
@@ -106,6 +113,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("favourited")
     public Boolean favourited;
+
     public Status withFavourited(Boolean favourited) {
         this.favourited = favourited;
         return this;
@@ -117,6 +125,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("favourites_count")
     public Long favouritesCount;
+
     public Status withFavouritesCount(Long favouritesCount) {
         this.favouritesCount = favouritesCount;
         return this;
@@ -128,6 +137,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Status withId(String id) {
         this.id = id;
         return this;
@@ -139,6 +149,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in_reply_to_account_id")
     public String inReplyToAccountId;
+
     public Status withInReplyToAccountId(String inReplyToAccountId) {
         this.inReplyToAccountId = inReplyToAccountId;
         return this;
@@ -150,6 +161,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in_reply_to_id")
     public String inReplyToId;
+
     public Status withInReplyToId(String inReplyToId) {
         this.inReplyToId = inReplyToId;
         return this;
@@ -161,6 +173,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public Status withLanguage(String language) {
         this.language = language;
         return this;
@@ -172,6 +185,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media_attachments")
     public Attachment[] mediaAttachments;
+
     public Status withMediaAttachments(Attachment[] mediaAttachments) {
         this.mediaAttachments = mediaAttachments;
         return this;
@@ -183,6 +197,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mentions")
     public Mention[] mentions;
+
     public Status withMentions(Mention[] mentions) {
         this.mentions = mentions;
         return this;
@@ -194,6 +209,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("muted")
     public Boolean muted;
+
     public Status withMuted(Boolean muted) {
         this.muted = muted;
         return this;
@@ -205,6 +221,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pinned")
     public Boolean pinned;
+
     public Status withPinned(Boolean pinned) {
         this.pinned = pinned;
         return this;
@@ -217,6 +234,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("poll")
     public Poll poll;
+
     public Status withPoll(Poll poll) {
         this.poll = poll;
         return this;
@@ -229,6 +247,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reblog")
     public Status reblog;
+
     public Status withReblog(Status reblog) {
         this.reblog = reblog;
         return this;
@@ -240,6 +259,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reblogged")
     public Boolean reblogged;
+
     public Status withReblogged(Boolean reblogged) {
         this.reblogged = reblogged;
         return this;
@@ -251,6 +271,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reblogs_count")
     public Long reblogsCount;
+
     public Status withReblogsCount(Long reblogsCount) {
         this.reblogsCount = reblogsCount;
         return this;
@@ -262,6 +283,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replies_count")
     public Long repliesCount;
+
     public Status withRepliesCount(Long repliesCount) {
         this.repliesCount = repliesCount;
         return this;
@@ -273,6 +295,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sensitive")
     public Boolean sensitive;
+
     public Status withSensitive(Boolean sensitive) {
         this.sensitive = sensitive;
         return this;
@@ -284,6 +307,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spoiler_text")
     public String spoilerText;
+
     public Status withSpoilerText(String spoilerText) {
         this.spoilerText = spoilerText;
         return this;
@@ -295,6 +319,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public Status withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -306,6 +331,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public Status withText(String text) {
         this.text = text;
         return this;
@@ -317,6 +343,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public Status withUri(String uri) {
         this.uri = uri;
         return this;
@@ -328,6 +355,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Status withUrl(String url) {
         this.url = url;
         return this;
@@ -339,9 +367,11 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public StatusVisibilityEnum visibility;
+
     public Status withVisibility(StatusVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public Status(){}
 }

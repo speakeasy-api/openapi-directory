@@ -15,6 +15,7 @@ public class CreateConnectorRequestBodyWorkerConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revision")
     public Long revision;
+
     public CreateConnectorRequestBodyWorkerConfiguration withRevision(Long revision) {
         this.revision = revision;
         return this;
@@ -23,9 +24,11 @@ public class CreateConnectorRequestBodyWorkerConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerConfigurationArn")
     public String workerConfigurationArn;
+
     public CreateConnectorRequestBodyWorkerConfiguration withWorkerConfigurationArn(String workerConfigurationArn) {
         this.workerConfigurationArn = workerConfigurationArn;
         return this;
     }
     
+    public CreateConnectorRequestBodyWorkerConfiguration(){}
 }

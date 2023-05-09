@@ -18,6 +18,7 @@ public class SAMLParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificate")
     public String certificate;
+
     public SAMLParams withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -29,6 +30,7 @@ public class SAMLParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityId")
     public String entityId;
+
     public SAMLParams withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -40,6 +42,7 @@ public class SAMLParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssoUri")
     public String ssoUri;
+
     public SAMLParams withSsoUri(String ssoUri) {
         this.ssoUri = ssoUri;
         return this;
@@ -51,9 +54,11 @@ public class SAMLParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userEmail")
     public String userEmail;
+
     public SAMLParams withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public SAMLParams(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeProblemResponse {
     
     public String contentType;
+
     public DescribeProblemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeProblemResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeProblemResponse describeProblemResponse;
+
     public DescribeProblemResponse withDescribeProblemResponse(org.openapis.openapi.models.shared.DescribeProblemResponse describeProblemResponse) {
         this.describeProblemResponse = describeProblemResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeProblemResponse {
      */
     
     public Object internalServerException;
+
     public DescribeProblemResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeProblemResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeProblemResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeProblemResponse {
     
     
     public Integer statusCode;
+
     public DescribeProblemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeProblemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeProblemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeProblemResponse {
      */
     
     public Object validationException;
+
     public DescribeProblemResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeProblemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ReleaseHostsRequest {
     
     public String[] hostIds;
+
     public ReleaseHostsRequest withHostIds(String[] hostIds) {
         this.hostIds = hostIds;
         return this;
     }
     
+    public ReleaseHostsRequest(@JsonProperty("HostIds") String[] hostIds) {
+        this.hostIds = hostIds;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETExpressionForTaxonUsingGETRequest {
@@ -12,9 +13,13 @@ public class GETExpressionForTaxonUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxonId")
     public String taxonId;
+
     public GETExpressionForTaxonUsingGETRequest withTaxonId(String taxonId) {
         this.taxonId = taxonId;
         return this;
     }
     
+    public GETExpressionForTaxonUsingGETRequest(@JsonProperty("taxonId") String taxonId) {
+        this.taxonId = taxonId;
+  }
 }

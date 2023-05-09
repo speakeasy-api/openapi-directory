@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymentInitiationAuthorisationRequest {
@@ -12,6 +13,7 @@ public class GetPaymentInitiationAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Digest")
     public String digest;
+
     public GetPaymentInitiationAuthorisationRequest withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -23,6 +25,7 @@ public class GetPaymentInitiationAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept")
     public String psuAccept;
+
     public GetPaymentInitiationAuthorisationRequest withPSUAccept(String psuAccept) {
         this.psuAccept = psuAccept;
         return this;
@@ -34,6 +37,7 @@ public class GetPaymentInitiationAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Charset")
     public String psuAcceptCharset;
+
     public GetPaymentInitiationAuthorisationRequest withPSUAcceptCharset(String psuAcceptCharset) {
         this.psuAcceptCharset = psuAcceptCharset;
         return this;
@@ -45,6 +49,7 @@ public class GetPaymentInitiationAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Encoding")
     public String psuAcceptEncoding;
+
     public GetPaymentInitiationAuthorisationRequest withPSUAcceptEncoding(String psuAcceptEncoding) {
         this.psuAcceptEncoding = psuAcceptEncoding;
         return this;
@@ -56,6 +61,7 @@ public class GetPaymentInitiationAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Language")
     public String psuAcceptLanguage;
+
     public GetPaymentInitiationAuthorisationRequest withPSUAcceptLanguage(String psuAcceptLanguage) {
         this.psuAcceptLanguage = psuAcceptLanguage;
         return this;
@@ -69,6 +75,7 @@ public class GetPaymentInitiationAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Device-ID")
     public String psuDeviceID;
+
     public GetPaymentInitiationAuthorisationRequest withPSUDeviceID(String psuDeviceID) {
         this.psuDeviceID = psuDeviceID;
         return this;
@@ -80,6 +87,7 @@ public class GetPaymentInitiationAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Geo-Location")
     public String psuGeoLocation;
+
     public GetPaymentInitiationAuthorisationRequest withPSUGeoLocation(String psuGeoLocation) {
         this.psuGeoLocation = psuGeoLocation;
         return this;
@@ -97,6 +105,7 @@ public class GetPaymentInitiationAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Http-Method")
     public org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod;
+
     public GetPaymentInitiationAuthorisationRequest withPSUHttpMethod(org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod) {
         this.psuHttpMethod = psuHttpMethod;
         return this;
@@ -108,6 +117,7 @@ public class GetPaymentInitiationAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Address")
     public String psuIPAddress;
+
     public GetPaymentInitiationAuthorisationRequest withPSUIPAddress(String psuIPAddress) {
         this.psuIPAddress = psuIPAddress;
         return this;
@@ -119,6 +129,7 @@ public class GetPaymentInitiationAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Port")
     public String psuIPPort;
+
     public GetPaymentInitiationAuthorisationRequest withPSUIPPort(String psuIPPort) {
         this.psuIPPort = psuIPPort;
         return this;
@@ -130,6 +141,7 @@ public class GetPaymentInitiationAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-User-Agent")
     public String psuUserAgent;
+
     public GetPaymentInitiationAuthorisationRequest withPSUUserAgent(String psuUserAgent) {
         this.psuUserAgent = psuUserAgent;
         return this;
@@ -141,6 +153,7 @@ public class GetPaymentInitiationAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Signature")
     public String signature;
+
     public GetPaymentInitiationAuthorisationRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -153,6 +166,7 @@ public class GetPaymentInitiationAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Signature-Certificate")
     public String tppSignatureCertificate;
+
     public GetPaymentInitiationAuthorisationRequest withTPPSignatureCertificate(String tppSignatureCertificate) {
         this.tppSignatureCertificate = tppSignatureCertificate;
         return this;
@@ -163,6 +177,7 @@ public class GetPaymentInitiationAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Request-ID")
     public String xRequestID;
+
     public GetPaymentInitiationAuthorisationRequest withXRequestID(String xRequestID) {
         this.xRequestID = xRequestID;
         return this;
@@ -193,6 +208,7 @@ public class GetPaymentInitiationAuthorisationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment-product")
     public org.openapis.openapi.models.shared.PaymentProductEnum paymentProduct;
+
     public GetPaymentInitiationAuthorisationRequest withPaymentProduct(org.openapis.openapi.models.shared.PaymentProductEnum paymentProduct) {
         this.paymentProduct = paymentProduct;
         return this;
@@ -209,6 +225,7 @@ public class GetPaymentInitiationAuthorisationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment-service")
     public org.openapis.openapi.models.shared.PaymentServiceEnum paymentService;
+
     public GetPaymentInitiationAuthorisationRequest withPaymentService(org.openapis.openapi.models.shared.PaymentServiceEnum paymentService) {
         this.paymentService = paymentService;
         return this;
@@ -219,9 +236,16 @@ public class GetPaymentInitiationAuthorisationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentId")
     public String paymentId;
+
     public GetPaymentInitiationAuthorisationRequest withPaymentId(String paymentId) {
         this.paymentId = paymentId;
         return this;
     }
     
+    public GetPaymentInitiationAuthorisationRequest(@JsonProperty("X-Request-ID") String xRequestID, @JsonProperty("payment-product") org.openapis.openapi.models.shared.PaymentProductEnum paymentProduct, @JsonProperty("payment-service") org.openapis.openapi.models.shared.PaymentServiceEnum paymentService, @JsonProperty("paymentId") String paymentId) {
+        this.xRequestID = xRequestID;
+        this.paymentProduct = paymentProduct;
+        this.paymentService = paymentService;
+        this.paymentId = paymentId;
+  }
 }

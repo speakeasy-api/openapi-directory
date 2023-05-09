@@ -18,6 +18,7 @@ public class ListAdUnitsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adUnits")
     public AdUnit[] adUnits;
+
     public ListAdUnitsResponse withAdUnits(AdUnit[] adUnits) {
         this.adUnits = adUnits;
         return this;
@@ -29,9 +30,11 @@ public class ListAdUnitsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAdUnitsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListAdUnitsResponse(){}
 }

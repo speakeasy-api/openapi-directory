@@ -12,6 +12,7 @@ public class StateElectionOfficeInfoPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public StateElectionOfficeInfoPage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class StateElectionOfficeInfoPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public StateElectionOfficeInfo[] results;
+
     public StateElectionOfficeInfoPage withResults(StateElectionOfficeInfo[] results) {
         this.results = results;
         return this;
     }
     
+    public StateElectionOfficeInfoPage(){}
 }

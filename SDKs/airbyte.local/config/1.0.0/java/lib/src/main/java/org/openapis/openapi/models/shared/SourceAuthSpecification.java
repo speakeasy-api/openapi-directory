@@ -12,6 +12,7 @@ public class SourceAuthSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth_type")
     public SourceAuthSpecificationAuthTypeEnum authType;
+
     public SourceAuthSpecification withAuthType(SourceAuthSpecificationAuthTypeEnum authType) {
         this.authType = authType;
         return this;
@@ -23,9 +24,11 @@ public class SourceAuthSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauth2Specification")
     public OAuth2Specification oauth2Specification;
+
     public SourceAuthSpecification withOauth2Specification(OAuth2Specification oauth2Specification) {
         this.oauth2Specification = oauth2Specification;
         return this;
     }
     
+    public SourceAuthSpecification(){}
 }

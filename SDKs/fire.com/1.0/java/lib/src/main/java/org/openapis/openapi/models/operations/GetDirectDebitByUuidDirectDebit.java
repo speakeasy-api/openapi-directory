@@ -23,6 +23,7 @@ public class GetDirectDebitByUuidDirectDebit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Long amount;
+
     public GetDirectDebitByUuidDirectDebit withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -34,6 +35,7 @@ public class GetDirectDebitByUuidDirectDebit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public GetDirectDebitByUuidDirectDebitCurrency currency;
+
     public GetDirectDebitByUuidDirectDebit withCurrency(GetDirectDebitByUuidDirectDebitCurrency currency) {
         this.currency = currency;
         return this;
@@ -47,6 +49,7 @@ public class GetDirectDebitByUuidDirectDebit {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dateCreated")
     public OffsetDateTime dateCreated;
+
     public GetDirectDebitByUuidDirectDebit withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -58,6 +61,7 @@ public class GetDirectDebitByUuidDirectDebit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directDebitReference")
     public String directDebitReference;
+
     public GetDirectDebitByUuidDirectDebit withDirectDebitReference(String directDebitReference) {
         this.directDebitReference = directDebitReference;
         return this;
@@ -69,6 +73,7 @@ public class GetDirectDebitByUuidDirectDebit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directDebitUuid")
     public String directDebitUuid;
+
     public GetDirectDebitByUuidDirectDebit withDirectDebitUuid(String directDebitUuid) {
         this.directDebitUuid = directDebitUuid;
         return this;
@@ -80,6 +85,7 @@ public class GetDirectDebitByUuidDirectDebit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDDIC")
     public Boolean isDDIC;
+
     public GetDirectDebitByUuidDirectDebit withIsDDIC(Boolean isDDIC) {
         this.isDDIC = isDDIC;
         return this;
@@ -93,6 +99,7 @@ public class GetDirectDebitByUuidDirectDebit {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdated")
     public OffsetDateTime lastUpdated;
+
     public GetDirectDebitByUuidDirectDebit withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -104,6 +111,7 @@ public class GetDirectDebitByUuidDirectDebit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mandateUUid")
     public String mandateUUid;
+
     public GetDirectDebitByUuidDirectDebit withMandateUUid(String mandateUUid) {
         this.mandateUUid = mandateUUid;
         return this;
@@ -115,6 +123,7 @@ public class GetDirectDebitByUuidDirectDebit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originatorAlias")
     public String originatorAlias;
+
     public GetDirectDebitByUuidDirectDebit withOriginatorAlias(String originatorAlias) {
         this.originatorAlias = originatorAlias;
         return this;
@@ -126,6 +135,7 @@ public class GetDirectDebitByUuidDirectDebit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originatorName")
     public String originatorName;
+
     public GetDirectDebitByUuidDirectDebit withOriginatorName(String originatorName) {
         this.originatorName = originatorName;
         return this;
@@ -137,6 +147,7 @@ public class GetDirectDebitByUuidDirectDebit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originatorReference")
     public String originatorReference;
+
     public GetDirectDebitByUuidDirectDebit withOriginatorReference(String originatorReference) {
         this.originatorReference = originatorReference;
         return this;
@@ -148,6 +159,7 @@ public class GetDirectDebitByUuidDirectDebit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemeRejectReason")
     public String schemeRejectReason;
+
     public GetDirectDebitByUuidDirectDebit withSchemeRejectReason(String schemeRejectReason) {
         this.schemeRejectReason = schemeRejectReason;
         return this;
@@ -159,6 +171,7 @@ public class GetDirectDebitByUuidDirectDebit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemeRejectReasonCode")
     public GetDirectDebitByUuidDirectDebitSchemeRejectReasonCodeEnum schemeRejectReasonCode;
+
     public GetDirectDebitByUuidDirectDebit withSchemeRejectReasonCode(GetDirectDebitByUuidDirectDebitSchemeRejectReasonCodeEnum schemeRejectReasonCode) {
         this.schemeRejectReasonCode = schemeRejectReasonCode;
         return this;
@@ -184,6 +197,7 @@ public class GetDirectDebitByUuidDirectDebit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GetDirectDebitByUuidDirectDebitStatusEnum status;
+
     public GetDirectDebitByUuidDirectDebit withStatus(GetDirectDebitByUuidDirectDebitStatusEnum status) {
         this.status = status;
         return this;
@@ -195,6 +209,7 @@ public class GetDirectDebitByUuidDirectDebit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetIcan")
     public Long targetIcan;
+
     public GetDirectDebitByUuidDirectDebit withTargetIcan(Long targetIcan) {
         this.targetIcan = targetIcan;
         return this;
@@ -206,6 +221,7 @@ public class GetDirectDebitByUuidDirectDebit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetPayeeId")
     public Long targetPayeeId;
+
     public GetDirectDebitByUuidDirectDebit withTargetPayeeId(Long targetPayeeId) {
         this.targetPayeeId = targetPayeeId;
         return this;
@@ -217,9 +233,11 @@ public class GetDirectDebitByUuidDirectDebit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GetDirectDebitByUuidDirectDebitTypeEnum type;
+
     public GetDirectDebitByUuidDirectDebit withType(GetDirectDebitByUuidDirectDebitTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetDirectDebitByUuidDirectDebit(){}
 }

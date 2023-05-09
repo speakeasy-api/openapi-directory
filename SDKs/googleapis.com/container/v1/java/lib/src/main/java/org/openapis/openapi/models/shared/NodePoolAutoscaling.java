@@ -18,6 +18,7 @@ public class NodePoolAutoscaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoprovisioned")
     public Boolean autoprovisioned;
+
     public NodePoolAutoscaling withAutoprovisioned(Boolean autoprovisioned) {
         this.autoprovisioned = autoprovisioned;
         return this;
@@ -29,6 +30,7 @@ public class NodePoolAutoscaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public NodePoolAutoscaling withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -40,6 +42,7 @@ public class NodePoolAutoscaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationPolicy")
     public NodePoolAutoscalingLocationPolicyEnum locationPolicy;
+
     public NodePoolAutoscaling withLocationPolicy(NodePoolAutoscalingLocationPolicyEnum locationPolicy) {
         this.locationPolicy = locationPolicy;
         return this;
@@ -51,6 +54,7 @@ public class NodePoolAutoscaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxNodeCount")
     public Integer maxNodeCount;
+
     public NodePoolAutoscaling withMaxNodeCount(Integer maxNodeCount) {
         this.maxNodeCount = maxNodeCount;
         return this;
@@ -62,6 +66,7 @@ public class NodePoolAutoscaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minNodeCount")
     public Integer minNodeCount;
+
     public NodePoolAutoscaling withMinNodeCount(Integer minNodeCount) {
         this.minNodeCount = minNodeCount;
         return this;
@@ -73,6 +78,7 @@ public class NodePoolAutoscaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalMaxNodeCount")
     public Integer totalMaxNodeCount;
+
     public NodePoolAutoscaling withTotalMaxNodeCount(Integer totalMaxNodeCount) {
         this.totalMaxNodeCount = totalMaxNodeCount;
         return this;
@@ -84,9 +90,11 @@ public class NodePoolAutoscaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalMinNodeCount")
     public Integer totalMinNodeCount;
+
     public NodePoolAutoscaling withTotalMinNodeCount(Integer totalMinNodeCount) {
         this.totalMinNodeCount = totalMinNodeCount;
         return this;
     }
     
+    public NodePoolAutoscaling(){}
 }

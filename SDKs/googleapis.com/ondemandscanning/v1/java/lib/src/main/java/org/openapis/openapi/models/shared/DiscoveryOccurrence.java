@@ -18,6 +18,7 @@ public class DiscoveryOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisCompleted")
     public AnalysisCompleted analysisCompleted;
+
     public DiscoveryOccurrence withAnalysisCompleted(AnalysisCompleted analysisCompleted) {
         this.analysisCompleted = analysisCompleted;
         return this;
@@ -29,6 +30,7 @@ public class DiscoveryOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisError")
     public Status[] analysisError;
+
     public DiscoveryOccurrence withAnalysisError(Status[] analysisError) {
         this.analysisError = analysisError;
         return this;
@@ -40,6 +42,7 @@ public class DiscoveryOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisStatus")
     public DiscoveryOccurrenceAnalysisStatusEnum analysisStatus;
+
     public DiscoveryOccurrence withAnalysisStatus(DiscoveryOccurrenceAnalysisStatusEnum analysisStatus) {
         this.analysisStatus = analysisStatus;
         return this;
@@ -51,6 +54,7 @@ public class DiscoveryOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisStatusError")
     public Status analysisStatusError;
+
     public DiscoveryOccurrence withAnalysisStatusError(Status analysisStatusError) {
         this.analysisStatusError = analysisStatusError;
         return this;
@@ -62,6 +66,7 @@ public class DiscoveryOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archiveTime")
     public String archiveTime;
+
     public DiscoveryOccurrence withArchiveTime(String archiveTime) {
         this.archiveTime = archiveTime;
         return this;
@@ -73,6 +78,7 @@ public class DiscoveryOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continuousAnalysis")
     public DiscoveryOccurrenceContinuousAnalysisEnum continuousAnalysis;
+
     public DiscoveryOccurrence withContinuousAnalysis(DiscoveryOccurrenceContinuousAnalysisEnum continuousAnalysis) {
         this.continuousAnalysis = continuousAnalysis;
         return this;
@@ -84,6 +90,7 @@ public class DiscoveryOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpe")
     public String cpe;
+
     public DiscoveryOccurrence withCpe(String cpe) {
         this.cpe = cpe;
         return this;
@@ -95,9 +102,11 @@ public class DiscoveryOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastScanTime")
     public String lastScanTime;
+
     public DiscoveryOccurrence withLastScanTime(String lastScanTime) {
         this.lastScanTime = lastScanTime;
         return this;
     }
     
+    public DiscoveryOccurrence(){}
 }

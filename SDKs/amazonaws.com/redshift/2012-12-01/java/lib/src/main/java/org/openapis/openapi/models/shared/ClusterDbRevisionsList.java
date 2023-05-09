@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ClusterDbRevisionsList {
     
     public String clusterIdentifier;
+
     public ClusterDbRevisionsList withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class ClusterDbRevisionsList {
     
     
     public String currentDatabaseRevision;
+
     public ClusterDbRevisionsList withCurrentDatabaseRevision(String currentDatabaseRevision) {
         this.currentDatabaseRevision = currentDatabaseRevision;
         return this;
@@ -26,6 +28,7 @@ public class ClusterDbRevisionsList {
     
     
     public OffsetDateTime databaseRevisionReleaseDate;
+
     public ClusterDbRevisionsList withDatabaseRevisionReleaseDate(OffsetDateTime databaseRevisionReleaseDate) {
         this.databaseRevisionReleaseDate = databaseRevisionReleaseDate;
         return this;
@@ -33,9 +36,11 @@ public class ClusterDbRevisionsList {
     
     
     public RevisionTargetsList[] revisionTargets;
+
     public ClusterDbRevisionsList withRevisionTargets(RevisionTargetsList[] revisionTargets) {
         this.revisionTargets = revisionTargets;
         return this;
     }
     
+    public ClusterDbRevisionsList(){}
 }

@@ -15,9 +15,11 @@ public class GetCatalogItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogItem")
     public CatalogItem catalogItem;
+
     public GetCatalogItemOutput withCatalogItem(CatalogItem catalogItem) {
         this.catalogItem = catalogItem;
         return this;
     }
     
+    public GetCatalogItemOutput(){}
 }

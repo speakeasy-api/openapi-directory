@@ -15,6 +15,7 @@ public class AppointmentReminderViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailFirstReminder")
     public Integer emailFirstReminder;
+
     public AppointmentReminderViewModel withEmailFirstReminder(Integer emailFirstReminder) {
         this.emailFirstReminder = emailFirstReminder;
         return this;
@@ -23,6 +24,7 @@ public class AppointmentReminderViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailFirstReminderInterval")
     public Integer emailFirstReminderInterval;
+
     public AppointmentReminderViewModel withEmailFirstReminderInterval(Integer emailFirstReminderInterval) {
         this.emailFirstReminderInterval = emailFirstReminderInterval;
         return this;
@@ -31,6 +33,7 @@ public class AppointmentReminderViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailSecondReminder")
     public Integer emailSecondReminder;
+
     public AppointmentReminderViewModel withEmailSecondReminder(Integer emailSecondReminder) {
         this.emailSecondReminder = emailSecondReminder;
         return this;
@@ -39,6 +42,7 @@ public class AppointmentReminderViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailSecondReminderInterval")
     public Integer emailSecondReminderInterval;
+
     public AppointmentReminderViewModel withEmailSecondReminderInterval(Integer emailSecondReminderInterval) {
         this.emailSecondReminderInterval = emailSecondReminderInterval;
         return this;
@@ -47,6 +51,7 @@ public class AppointmentReminderViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smsFirstReminder")
     public Integer smsFirstReminder;
+
     public AppointmentReminderViewModel withSmsFirstReminder(Integer smsFirstReminder) {
         this.smsFirstReminder = smsFirstReminder;
         return this;
@@ -55,6 +60,7 @@ public class AppointmentReminderViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smsFirstReminderInterval")
     public Integer smsFirstReminderInterval;
+
     public AppointmentReminderViewModel withSmsFirstReminderInterval(Integer smsFirstReminderInterval) {
         this.smsFirstReminderInterval = smsFirstReminderInterval;
         return this;
@@ -63,6 +69,7 @@ public class AppointmentReminderViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smsSecondReminder")
     public Integer smsSecondReminder;
+
     public AppointmentReminderViewModel withSmsSecondReminder(Integer smsSecondReminder) {
         this.smsSecondReminder = smsSecondReminder;
         return this;
@@ -71,9 +78,11 @@ public class AppointmentReminderViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smsSecondReminderInterval")
     public Integer smsSecondReminderInterval;
+
     public AppointmentReminderViewModel withSmsSecondReminderInterval(Integer smsSecondReminderInterval) {
         this.smsSecondReminderInterval = smsSecondReminderInterval;
         return this;
     }
     
+    public AppointmentReminderViewModel(){}
 }

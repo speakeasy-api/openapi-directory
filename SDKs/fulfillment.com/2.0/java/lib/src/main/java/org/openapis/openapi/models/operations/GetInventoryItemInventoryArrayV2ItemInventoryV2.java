@@ -15,6 +15,7 @@ public class GetInventoryItemInventoryArrayV2ItemInventoryV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item")
     public GetInventoryItemInventoryArrayV2ItemInventoryV2Item item;
+
     public GetInventoryItemInventoryArrayV2ItemInventoryV2 withItem(GetInventoryItemInventoryArrayV2ItemInventoryV2Item item) {
         this.item = item;
         return this;
@@ -26,6 +27,7 @@ public class GetInventoryItemInventoryArrayV2ItemInventoryV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant")
     public GetInventoryItemInventoryArrayV2ItemInventoryV2Merchant merchant;
+
     public GetInventoryItemInventoryArrayV2ItemInventoryV2 withMerchant(GetInventoryItemInventoryArrayV2ItemInventoryV2Merchant merchant) {
         this.merchant = merchant;
         return this;
@@ -34,9 +36,11 @@ public class GetInventoryItemInventoryArrayV2ItemInventoryV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public GetInventoryItemInventoryArrayV2ItemInventoryV2Quantity quantity;
+
     public GetInventoryItemInventoryArrayV2ItemInventoryV2 withQuantity(GetInventoryItemInventoryArrayV2ItemInventoryV2Quantity quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public GetInventoryItemInventoryArrayV2ItemInventoryV2(){}
 }

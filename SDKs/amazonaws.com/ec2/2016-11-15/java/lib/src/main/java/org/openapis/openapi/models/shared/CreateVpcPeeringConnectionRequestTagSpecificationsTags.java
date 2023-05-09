@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpcPeeringConnectionRequestTagSpecificationsTags {
     
     public String key;
+
     public CreateVpcPeeringConnectionRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateVpcPeeringConnectionRequestTagSpecificationsTags {
     
     
     public String value;
+
     public CreateVpcPeeringConnectionRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateVpcPeeringConnectionRequestTagSpecificationsTags(){}
 }

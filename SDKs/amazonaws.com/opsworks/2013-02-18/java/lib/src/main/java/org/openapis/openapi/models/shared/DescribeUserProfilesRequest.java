@@ -12,9 +12,11 @@ public class DescribeUserProfilesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamUserArns")
     public String[] iamUserArns;
+
     public DescribeUserProfilesRequest withIamUserArns(String[] iamUserArns) {
         this.iamUserArns = iamUserArns;
         return this;
     }
     
+    public DescribeUserProfilesRequest(){}
 }

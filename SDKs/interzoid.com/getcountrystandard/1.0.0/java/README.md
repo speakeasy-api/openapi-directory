@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetcountrystandardRequest;
 import org.openapis.openapi.models.operations.GetcountrystandardResponse;
 
@@ -26,19 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetcountrystandardRequest req = new GetcountrystandardRequest() {{
-                country = "Malta";
-                license = "provident";
-            }}            
+            GetcountrystandardRequest req = new GetcountrystandardRequest("corrupti", "provident");            
 
             GetcountrystandardResponse res = sdk.countryNameStandardization.getcountrystandard(req);
 
-            if (res.getcountrystandard200ApplicationJSONObject.isPresent()) {
+            if (res.getcountrystandard200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -46,9 +44,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### countryNameStandardization
+### [countryNameStandardization](docs/countrynamestandardization/README.md)
 
-* `getcountrystandard` - Gets country name standard
+* [getcountrystandard](docs/countrynamestandardization/README.md#getcountrystandard) - Gets country name standard
 <!-- End SDK Available Operations -->
 
 ### Maturity

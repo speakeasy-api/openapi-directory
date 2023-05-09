@@ -15,6 +15,7 @@ public class BatchMatchPersonalFirstLastNameIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facts")
     public FactIn[] facts;
+
     public BatchMatchPersonalFirstLastNameIn withFacts(FactIn[] facts) {
         this.facts = facts;
         return this;
@@ -23,9 +24,11 @@ public class BatchMatchPersonalFirstLastNameIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalNames")
     public MatchPersonalFirstLastNameIn[] personalNames;
+
     public BatchMatchPersonalFirstLastNameIn withPersonalNames(MatchPersonalFirstLastNameIn[] personalNames) {
         this.personalNames = personalNames;
         return this;
     }
     
+    public BatchMatchPersonalFirstLastNameIn(){}
 }

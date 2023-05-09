@@ -15,6 +15,7 @@ public class ListedAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalId")
     public String externalId;
+
     public ListedAccess withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -23,6 +24,7 @@ public class ListedAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeDirectory")
     public String homeDirectory;
+
     public ListedAccess withHomeDirectory(String homeDirectory) {
         this.homeDirectory = homeDirectory;
         return this;
@@ -31,6 +33,7 @@ public class ListedAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeDirectoryType")
     public HomeDirectoryTypeEnum homeDirectoryType;
+
     public ListedAccess withHomeDirectoryType(HomeDirectoryTypeEnum homeDirectoryType) {
         this.homeDirectoryType = homeDirectoryType;
         return this;
@@ -39,9 +42,11 @@ public class ListedAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Role")
     public String role;
+
     public ListedAccess withRole(String role) {
         this.role = role;
         return this;
     }
     
+    public ListedAccess(){}
 }

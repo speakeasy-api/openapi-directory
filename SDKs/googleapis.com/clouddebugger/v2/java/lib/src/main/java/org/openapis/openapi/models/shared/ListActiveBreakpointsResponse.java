@@ -18,6 +18,7 @@ public class ListActiveBreakpointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("breakpoints")
     public Breakpoint[] breakpoints;
+
     public ListActiveBreakpointsResponse withBreakpoints(Breakpoint[] breakpoints) {
         this.breakpoints = breakpoints;
         return this;
@@ -29,6 +30,7 @@ public class ListActiveBreakpointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextWaitToken")
     public String nextWaitToken;
+
     public ListActiveBreakpointsResponse withNextWaitToken(String nextWaitToken) {
         this.nextWaitToken = nextWaitToken;
         return this;
@@ -40,9 +42,11 @@ public class ListActiveBreakpointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waitExpired")
     public Boolean waitExpired;
+
     public ListActiveBreakpointsResponse withWaitExpired(Boolean waitExpired) {
         this.waitExpired = waitExpired;
         return this;
     }
     
+    public ListActiveBreakpointsResponse(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Address {
     @JsonProperty("AddressLine1")
     public String addressLine1;
+
     public Address withAddressLine1(String addressLine1) {
         this.addressLine1 = addressLine1;
         return this;
@@ -22,6 +23,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressLine2")
     public String addressLine2;
+
     public Address withAddressLine2(String addressLine2) {
         this.addressLine2 = addressLine2;
         return this;
@@ -30,6 +32,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressLine3")
     public String addressLine3;
+
     public Address withAddressLine3(String addressLine3) {
         this.addressLine3 = addressLine3;
         return this;
@@ -37,6 +40,7 @@ public class Address {
     
     @JsonProperty("City")
     public String city;
+
     public Address withCity(String city) {
         this.city = city;
         return this;
@@ -45,6 +49,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactName")
     public String contactName;
+
     public Address withContactName(String contactName) {
         this.contactName = contactName;
         return this;
@@ -53,6 +58,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactPhoneNumber")
     public String contactPhoneNumber;
+
     public Address withContactPhoneNumber(String contactPhoneNumber) {
         this.contactPhoneNumber = contactPhoneNumber;
         return this;
@@ -60,6 +66,7 @@ public class Address {
     
     @JsonProperty("CountryCode")
     public String countryCode;
+
     public Address withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -68,6 +75,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DistrictOrCounty")
     public String districtOrCounty;
+
     public Address withDistrictOrCounty(String districtOrCounty) {
         this.districtOrCounty = districtOrCounty;
         return this;
@@ -76,6 +84,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Municipality")
     public String municipality;
+
     public Address withMunicipality(String municipality) {
         this.municipality = municipality;
         return this;
@@ -83,6 +92,7 @@ public class Address {
     
     @JsonProperty("PostalCode")
     public String postalCode;
+
     public Address withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -90,9 +100,17 @@ public class Address {
     
     @JsonProperty("StateOrRegion")
     public String stateOrRegion;
+
     public Address withStateOrRegion(String stateOrRegion) {
         this.stateOrRegion = stateOrRegion;
         return this;
     }
     
+    public Address(@JsonProperty("AddressLine1") String addressLine1, @JsonProperty("City") String city, @JsonProperty("CountryCode") String countryCode, @JsonProperty("PostalCode") String postalCode, @JsonProperty("StateOrRegion") String stateOrRegion) {
+        this.addressLine1 = addressLine1;
+        this.city = city;
+        this.countryCode = countryCode;
+        this.postalCode = postalCode;
+        this.stateOrRegion = stateOrRegion;
+  }
 }

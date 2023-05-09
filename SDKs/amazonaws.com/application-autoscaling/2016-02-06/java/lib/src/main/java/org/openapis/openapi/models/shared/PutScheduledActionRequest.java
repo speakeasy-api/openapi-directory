@@ -19,6 +19,7 @@ public class PutScheduledActionRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public PutScheduledActionRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -26,6 +27,7 @@ public class PutScheduledActionRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public PutScheduledActionRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -33,6 +35,7 @@ public class PutScheduledActionRequest {
     
     @JsonProperty("ScalableDimension")
     public ScalableDimensionEnum scalableDimension;
+
     public PutScheduledActionRequest withScalableDimension(ScalableDimensionEnum scalableDimension) {
         this.scalableDimension = scalableDimension;
         return this;
@@ -41,6 +44,7 @@ public class PutScheduledActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalableTargetAction")
     public ScalableTargetAction scalableTargetAction;
+
     public PutScheduledActionRequest withScalableTargetAction(ScalableTargetAction scalableTargetAction) {
         this.scalableTargetAction = scalableTargetAction;
         return this;
@@ -49,6 +53,7 @@ public class PutScheduledActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public String schedule;
+
     public PutScheduledActionRequest withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
@@ -56,6 +61,7 @@ public class PutScheduledActionRequest {
     
     @JsonProperty("ScheduledActionName")
     public String scheduledActionName;
+
     public PutScheduledActionRequest withScheduledActionName(String scheduledActionName) {
         this.scheduledActionName = scheduledActionName;
         return this;
@@ -63,6 +69,7 @@ public class PutScheduledActionRequest {
     
     @JsonProperty("ServiceNamespace")
     public ServiceNamespaceEnum serviceNamespace;
+
     public PutScheduledActionRequest withServiceNamespace(ServiceNamespaceEnum serviceNamespace) {
         this.serviceNamespace = serviceNamespace;
         return this;
@@ -73,6 +80,7 @@ public class PutScheduledActionRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public PutScheduledActionRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -81,9 +89,16 @@ public class PutScheduledActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timezone")
     public String timezone;
+
     public PutScheduledActionRequest withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public PutScheduledActionRequest(@JsonProperty("ResourceId") String resourceId, @JsonProperty("ScalableDimension") ScalableDimensionEnum scalableDimension, @JsonProperty("ScheduledActionName") String scheduledActionName, @JsonProperty("ServiceNamespace") ServiceNamespaceEnum serviceNamespace) {
+        this.resourceId = resourceId;
+        this.scalableDimension = scalableDimension;
+        this.scheduledActionName = scheduledActionName;
+        this.serviceNamespace = serviceNamespace;
+  }
 }

@@ -15,9 +15,11 @@ public class DescribeFilterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public Filter filter;
+
     public DescribeFilterResponse withFilter(Filter filter) {
         this.filter = filter;
         return this;
     }
     
+    public DescribeFilterResponse(){}
 }

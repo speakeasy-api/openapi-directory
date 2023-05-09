@@ -34,10 +34,15 @@ public class HostedOnboarding {
     /**
      * Get a list of hosted onboarding page themes
      * Returns a list of hosted onboarding page themes.
+     * 
+     * &gt;If you are using hosted onboarding, [only use v2](https://docs.adyen.com/release-notes/platforms-and-financial-products#releaseNote=2023-05-01-legal-entity-management-api-3) for your API requests.
+     * 
+     * 
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetThemesResponse getThemes() throws Exception {
+    public org.openapis.openapi.models.operations.GetThemesResponse getThemes(org.openapis.openapi.models.operations.GetThemesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/themes");
         
@@ -46,17 +51,16 @@ public class HostedOnboarding {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetThemesResponse res = new org.openapis.openapi.models.operations.GetThemesResponse() {{
+        org.openapis.openapi.models.operations.GetThemesResponse res = new org.openapis.openapi.models.operations.GetThemesResponse(contentType, httpRes.statusCode()) {{
             onboardingThemes = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -79,7 +83,9 @@ public class HostedOnboarding {
 
     /**
      * Get an onboarding link theme
-     * Returns the details of the theme identified in the path.
+     * Returns the details of the theme identified in the path.&gt;If you are using hosted onboarding, [only use v2](https://docs.adyen.com/release-notes/platforms-and-financial-products#releaseNote=2023-05-01-legal-entity-management-api-3) for your API requests.
+     * 
+     * 
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -100,12 +106,10 @@ public class HostedOnboarding {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetThemesIdResponse res = new org.openapis.openapi.models.operations.GetThemesIdResponse() {{
+        org.openapis.openapi.models.operations.GetThemesIdResponse res = new org.openapis.openapi.models.operations.GetThemesIdResponse(contentType, httpRes.statusCode()) {{
             onboardingTheme = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,6 +133,10 @@ public class HostedOnboarding {
     /**
      * Get a link to an Adyen-hosted onboarding page
      * Returns a link to an Adyen-hosted onboarding page where you need to redirect your user.
+     * 
+     * &gt;If you are using hosted onboarding, [only use v2](https://docs.adyen.com/release-notes/platforms-and-financial-products#releaseNote=2023-05-01-legal-entity-management-api-3) for your API requests.
+     * 
+     * 
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -151,12 +159,10 @@ public class HostedOnboarding {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLegalEntitiesIdOnboardingLinksResponse res = new org.openapis.openapi.models.operations.PostLegalEntitiesIdOnboardingLinksResponse() {{
+        org.openapis.openapi.models.operations.PostLegalEntitiesIdOnboardingLinksResponse res = new org.openapis.openapi.models.operations.PostLegalEntitiesIdOnboardingLinksResponse(contentType, httpRes.statusCode()) {{
             onboardingLink = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

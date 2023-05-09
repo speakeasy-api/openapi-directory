@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposDeclineInvitationForAuthenticatedUserRequest {
@@ -12,9 +13,13 @@ public class ReposDeclineInvitationForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invitation_id")
     public Long invitationId;
+
     public ReposDeclineInvitationForAuthenticatedUserRequest withInvitationId(Long invitationId) {
         this.invitationId = invitationId;
         return this;
     }
     
+    public ReposDeclineInvitationForAuthenticatedUserRequest(@JsonProperty("invitation_id") Long invitationId) {
+        this.invitationId = invitationId;
+  }
 }

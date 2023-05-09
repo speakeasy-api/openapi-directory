@@ -52,11 +52,9 @@ public class Dhcp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolDhcpGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolDhcpGetArgsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolDhcpGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolDhcpGetArgsResponse(contentType, httpRes.statusCode()) {{
             protocolDhcpGetArgs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,11 +92,9 @@ public class Dhcp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolDhcpGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolDhcpGetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolDhcpGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolDhcpGetConfigResponse(contentType, httpRes.statusCode()) {{
             configDHCP = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,11 +132,9 @@ public class Dhcp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolDhcpGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolDhcpGetStatisticsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolDhcpGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolDhcpGetStatisticsResponse(contentType, httpRes.statusCode()) {{
             protocolDhcpGetStatistics200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,11 +171,9 @@ public class Dhcp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolDhcpGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolDhcpGetStatsHdrResponse() {{
+        org.openapis.openapi.models.operations.ProtocolDhcpGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolDhcpGetStatsHdrResponse(contentType, httpRes.statusCode()) {{
             protocolDhcpGetStatsHdr200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -219,11 +211,9 @@ public class Dhcp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolDhcpGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolDhcpGetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolDhcpGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolDhcpGetTraceResponse(contentType, httpRes.statusCode()) {{
             configDHCP = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -261,11 +251,9 @@ public class Dhcp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolDhcpParamsResponse res = new org.openapis.openapi.models.operations.ProtocolDhcpParamsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolDhcpParamsResponse res = new org.openapis.openapi.models.operations.ProtocolDhcpParamsResponse(contentType, httpRes.statusCode()) {{
             protocolDhcpParams200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -303,11 +291,9 @@ public class Dhcp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolDhcpSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolDhcpSetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolDhcpSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolDhcpSetConfigResponse(contentType, httpRes.statusCode()) {{
             protocolDhcpSetConfig200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +330,9 @@ public class Dhcp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolDhcpSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolDhcpSetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolDhcpSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolDhcpSetTraceResponse(contentType, httpRes.statusCode()) {{
             protocolDhcpSetTrace200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

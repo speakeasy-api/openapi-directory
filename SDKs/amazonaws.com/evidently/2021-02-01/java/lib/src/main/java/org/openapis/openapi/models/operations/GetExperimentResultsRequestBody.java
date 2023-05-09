@@ -20,6 +20,7 @@ public class GetExperimentResultsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseStat")
     public GetExperimentResultsRequestBodyBaseStatEnum baseStat;
+
     public GetExperimentResultsRequestBody withBaseStat(GetExperimentResultsRequestBodyBaseStatEnum baseStat) {
         this.baseStat = baseStat;
         return this;
@@ -33,6 +34,7 @@ public class GetExperimentResultsRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public GetExperimentResultsRequestBody withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -43,6 +45,7 @@ public class GetExperimentResultsRequestBody {
      */
     @JsonProperty("metricNames")
     public String[] metricNames;
+
     public GetExperimentResultsRequestBody withMetricNames(String[] metricNames) {
         this.metricNames = metricNames;
         return this;
@@ -54,6 +57,7 @@ public class GetExperimentResultsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("period")
     public Long period;
+
     public GetExperimentResultsRequestBody withPeriod(Long period) {
         this.period = period;
         return this;
@@ -65,6 +69,7 @@ public class GetExperimentResultsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportNames")
     public org.openapis.openapi.models.shared.ExperimentReportNameEnum[] reportNames;
+
     public GetExperimentResultsRequestBody withReportNames(org.openapis.openapi.models.shared.ExperimentReportNameEnum[] reportNames) {
         this.reportNames = reportNames;
         return this;
@@ -76,6 +81,7 @@ public class GetExperimentResultsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultStats")
     public org.openapis.openapi.models.shared.ExperimentResultRequestTypeEnum[] resultStats;
+
     public GetExperimentResultsRequestBody withResultStats(org.openapis.openapi.models.shared.ExperimentResultRequestTypeEnum[] resultStats) {
         this.resultStats = resultStats;
         return this;
@@ -89,6 +95,7 @@ public class GetExperimentResultsRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public GetExperimentResultsRequestBody withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -99,9 +106,14 @@ public class GetExperimentResultsRequestBody {
      */
     @JsonProperty("treatmentNames")
     public String[] treatmentNames;
+
     public GetExperimentResultsRequestBody withTreatmentNames(String[] treatmentNames) {
         this.treatmentNames = treatmentNames;
         return this;
     }
     
+    public GetExperimentResultsRequestBody(@JsonProperty("metricNames") String[] metricNames, @JsonProperty("treatmentNames") String[] treatmentNames) {
+        this.metricNames = metricNames;
+        this.treatmentNames = treatmentNames;
+  }
 }

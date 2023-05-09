@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class QueryTableRowsResponse {
@@ -12,6 +13,7 @@ public class QueryTableRowsResponse {
      */
     
     public Object accessDeniedException;
+
     public QueryTableRowsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class QueryTableRowsResponse {
     
     
     public String contentType;
+
     public QueryTableRowsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class QueryTableRowsResponse {
      */
     
     public Object internalServerException;
+
     public QueryTableRowsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class QueryTableRowsResponse {
      */
     
     public org.openapis.openapi.models.shared.QueryTableRowsResult queryTableRowsResult;
+
     public QueryTableRowsResponse withQueryTableRowsResult(org.openapis.openapi.models.shared.QueryTableRowsResult queryTableRowsResult) {
         this.queryTableRowsResult = queryTableRowsResult;
         return this;
@@ -49,6 +54,7 @@ public class QueryTableRowsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public QueryTableRowsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class QueryTableRowsResponse {
     
     
     public Integer statusCode;
+
     public QueryTableRowsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class QueryTableRowsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public QueryTableRowsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class QueryTableRowsResponse {
      */
     
     public Object requestTimeoutException;
+
     public QueryTableRowsResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -83,6 +92,7 @@ public class QueryTableRowsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public QueryTableRowsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class QueryTableRowsResponse {
      */
     
     public Object throttlingException;
+
     public QueryTableRowsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class QueryTableRowsResponse {
      */
     
     public Object validationException;
+
     public QueryTableRowsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public QueryTableRowsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

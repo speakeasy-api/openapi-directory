@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FreightValues200ApplicationJSON {
     @JsonProperty("absoluteMoneyCost")
     public Double absoluteMoneyCost;
+
     public FreightValues200ApplicationJSON withAbsoluteMoneyCost(Double absoluteMoneyCost) {
         this.absoluteMoneyCost = absoluteMoneyCost;
         return this;
@@ -16,6 +17,7 @@ public class FreightValues200ApplicationJSON {
     
     @JsonProperty("country")
     public String country;
+
     public FreightValues200ApplicationJSON withCountry(String country) {
         this.country = country;
         return this;
@@ -23,6 +25,7 @@ public class FreightValues200ApplicationJSON {
     
     @JsonProperty("maxVolume")
     public Double maxVolume;
+
     public FreightValues200ApplicationJSON withMaxVolume(Double maxVolume) {
         this.maxVolume = maxVolume;
         return this;
@@ -30,6 +33,7 @@ public class FreightValues200ApplicationJSON {
     
     @JsonProperty("minimumValueInsurance")
     public Double minimumValueInsurance;
+
     public FreightValues200ApplicationJSON withMinimumValueInsurance(Double minimumValueInsurance) {
         this.minimumValueInsurance = minimumValueInsurance;
         return this;
@@ -37,6 +41,7 @@ public class FreightValues200ApplicationJSON {
     
     @JsonProperty("operationType")
     public Integer operationType;
+
     public FreightValues200ApplicationJSON withOperationType(Integer operationType) {
         this.operationType = operationType;
         return this;
@@ -44,6 +49,7 @@ public class FreightValues200ApplicationJSON {
     
     @JsonProperty("polygon")
     public String polygon;
+
     public FreightValues200ApplicationJSON withPolygon(String polygon) {
         this.polygon = polygon;
         return this;
@@ -51,6 +57,7 @@ public class FreightValues200ApplicationJSON {
     
     @JsonProperty("pricePercent")
     public Double pricePercent;
+
     public FreightValues200ApplicationJSON withPricePercent(Double pricePercent) {
         this.pricePercent = pricePercent;
         return this;
@@ -58,6 +65,7 @@ public class FreightValues200ApplicationJSON {
     
     @JsonProperty("pricePercentByWeight")
     public Double pricePercentByWeight;
+
     public FreightValues200ApplicationJSON withPricePercentByWeight(Double pricePercentByWeight) {
         this.pricePercentByWeight = pricePercentByWeight;
         return this;
@@ -65,6 +73,7 @@ public class FreightValues200ApplicationJSON {
     
     @JsonProperty("restrictedFreights")
     public String[] restrictedFreights;
+
     public FreightValues200ApplicationJSON withRestrictedFreights(String[] restrictedFreights) {
         this.restrictedFreights = restrictedFreights;
         return this;
@@ -72,6 +81,7 @@ public class FreightValues200ApplicationJSON {
     
     @JsonProperty("timeCost")
     public String timeCost;
+
     public FreightValues200ApplicationJSON withTimeCost(String timeCost) {
         this.timeCost = timeCost;
         return this;
@@ -79,6 +89,7 @@ public class FreightValues200ApplicationJSON {
     
     @JsonProperty("weightEnd")
     public Double weightEnd;
+
     public FreightValues200ApplicationJSON withWeightEnd(Double weightEnd) {
         this.weightEnd = weightEnd;
         return this;
@@ -86,6 +97,7 @@ public class FreightValues200ApplicationJSON {
     
     @JsonProperty("weightStart")
     public Double weightStart;
+
     public FreightValues200ApplicationJSON withWeightStart(Double weightStart) {
         this.weightStart = weightStart;
         return this;
@@ -93,6 +105,7 @@ public class FreightValues200ApplicationJSON {
     
     @JsonProperty("zipCodeEnd")
     public String zipCodeEnd;
+
     public FreightValues200ApplicationJSON withZipCodeEnd(String zipCodeEnd) {
         this.zipCodeEnd = zipCodeEnd;
         return this;
@@ -100,9 +113,26 @@ public class FreightValues200ApplicationJSON {
     
     @JsonProperty("zipCodeStart")
     public String zipCodeStart;
+
     public FreightValues200ApplicationJSON withZipCodeStart(String zipCodeStart) {
         this.zipCodeStart = zipCodeStart;
         return this;
     }
     
+    public FreightValues200ApplicationJSON(@JsonProperty("absoluteMoneyCost") Double absoluteMoneyCost, @JsonProperty("country") String country, @JsonProperty("maxVolume") Double maxVolume, @JsonProperty("minimumValueInsurance") Double minimumValueInsurance, @JsonProperty("operationType") Integer operationType, @JsonProperty("polygon") String polygon, @JsonProperty("pricePercent") Double pricePercent, @JsonProperty("pricePercentByWeight") Double pricePercentByWeight, @JsonProperty("restrictedFreights") String[] restrictedFreights, @JsonProperty("timeCost") String timeCost, @JsonProperty("weightEnd") Double weightEnd, @JsonProperty("weightStart") Double weightStart, @JsonProperty("zipCodeEnd") String zipCodeEnd, @JsonProperty("zipCodeStart") String zipCodeStart) {
+        this.absoluteMoneyCost = absoluteMoneyCost;
+        this.country = country;
+        this.maxVolume = maxVolume;
+        this.minimumValueInsurance = minimumValueInsurance;
+        this.operationType = operationType;
+        this.polygon = polygon;
+        this.pricePercent = pricePercent;
+        this.pricePercentByWeight = pricePercentByWeight;
+        this.restrictedFreights = restrictedFreights;
+        this.timeCost = timeCost;
+        this.weightEnd = weightEnd;
+        this.weightStart = weightStart;
+        this.zipCodeEnd = zipCodeEnd;
+        this.zipCodeStart = zipCodeStart;
+  }
 }

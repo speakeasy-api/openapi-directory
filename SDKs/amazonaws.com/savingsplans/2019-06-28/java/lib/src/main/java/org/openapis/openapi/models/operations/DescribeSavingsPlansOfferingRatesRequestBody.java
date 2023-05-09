@@ -15,6 +15,7 @@ public class DescribeSavingsPlansOfferingRatesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.SavingsPlanOfferingRateFilterElement[] filters;
+
     public DescribeSavingsPlansOfferingRatesRequestBody withFilters(org.openapis.openapi.models.shared.SavingsPlanOfferingRateFilterElement[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class DescribeSavingsPlansOfferingRatesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeSavingsPlansOfferingRatesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class DescribeSavingsPlansOfferingRatesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeSavingsPlansOfferingRatesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -48,6 +51,7 @@ public class DescribeSavingsPlansOfferingRatesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public String[] operations;
+
     public DescribeSavingsPlansOfferingRatesRequestBody withOperations(String[] operations) {
         this.operations = operations;
         return this;
@@ -59,6 +63,7 @@ public class DescribeSavingsPlansOfferingRatesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public org.openapis.openapi.models.shared.SavingsPlanProductTypeEnum[] products;
+
     public DescribeSavingsPlansOfferingRatesRequestBody withProducts(org.openapis.openapi.models.shared.SavingsPlanProductTypeEnum[] products) {
         this.products = products;
         return this;
@@ -70,6 +75,7 @@ public class DescribeSavingsPlansOfferingRatesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingsPlanOfferingIds")
     public String[] savingsPlanOfferingIds;
+
     public DescribeSavingsPlansOfferingRatesRequestBody withSavingsPlanOfferingIds(String[] savingsPlanOfferingIds) {
         this.savingsPlanOfferingIds = savingsPlanOfferingIds;
         return this;
@@ -81,6 +87,7 @@ public class DescribeSavingsPlansOfferingRatesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingsPlanPaymentOptions")
     public org.openapis.openapi.models.shared.SavingsPlanPaymentOptionEnum[] savingsPlanPaymentOptions;
+
     public DescribeSavingsPlansOfferingRatesRequestBody withSavingsPlanPaymentOptions(org.openapis.openapi.models.shared.SavingsPlanPaymentOptionEnum[] savingsPlanPaymentOptions) {
         this.savingsPlanPaymentOptions = savingsPlanPaymentOptions;
         return this;
@@ -92,6 +99,7 @@ public class DescribeSavingsPlansOfferingRatesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingsPlanTypes")
     public org.openapis.openapi.models.shared.SavingsPlanTypeEnum[] savingsPlanTypes;
+
     public DescribeSavingsPlansOfferingRatesRequestBody withSavingsPlanTypes(org.openapis.openapi.models.shared.SavingsPlanTypeEnum[] savingsPlanTypes) {
         this.savingsPlanTypes = savingsPlanTypes;
         return this;
@@ -103,6 +111,7 @@ public class DescribeSavingsPlansOfferingRatesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceCodes")
     public org.openapis.openapi.models.shared.SavingsPlanRateServiceCodeEnum[] serviceCodes;
+
     public DescribeSavingsPlansOfferingRatesRequestBody withServiceCodes(org.openapis.openapi.models.shared.SavingsPlanRateServiceCodeEnum[] serviceCodes) {
         this.serviceCodes = serviceCodes;
         return this;
@@ -114,9 +123,11 @@ public class DescribeSavingsPlansOfferingRatesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageTypes")
     public String[] usageTypes;
+
     public DescribeSavingsPlansOfferingRatesRequestBody withUsageTypes(String[] usageTypes) {
         this.usageTypes = usageTypes;
         return this;
     }
     
+    public DescribeSavingsPlansOfferingRatesRequestBody(){}
 }

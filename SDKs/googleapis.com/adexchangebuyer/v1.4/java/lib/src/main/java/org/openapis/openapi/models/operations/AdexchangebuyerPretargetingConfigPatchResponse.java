@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdexchangebuyerPretargetingConfigPatchResponse {
     
     public String contentType;
+
     public AdexchangebuyerPretargetingConfigPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AdexchangebuyerPretargetingConfigPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.PretargetingConfig pretargetingConfig;
+
     public AdexchangebuyerPretargetingConfigPatchResponse withPretargetingConfig(org.openapis.openapi.models.shared.PretargetingConfig pretargetingConfig) {
         this.pretargetingConfig = pretargetingConfig;
         return this;
@@ -26,6 +29,7 @@ public class AdexchangebuyerPretargetingConfigPatchResponse {
     
     
     public Integer statusCode;
+
     public AdexchangebuyerPretargetingConfigPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AdexchangebuyerPretargetingConfigPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdexchangebuyerPretargetingConfigPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AdexchangebuyerPretargetingConfigPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

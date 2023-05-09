@@ -18,9 +18,11 @@ public class BulkEditAssignedInventorySourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignedInventorySources")
     public AssignedInventorySource[] assignedInventorySources;
+
     public BulkEditAssignedInventorySourcesResponse withAssignedInventorySources(AssignedInventorySource[] assignedInventorySources) {
         this.assignedInventorySources = assignedInventorySources;
         return this;
     }
     
+    public BulkEditAssignedInventorySourcesResponse(){}
 }

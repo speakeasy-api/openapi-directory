@@ -9,26 +9,28 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * AccessReview - Conveys information about a Kubernetes access review (e.g. kubectl auth can-i ...) that was involved in a finding.
+ * AccessReview - Conveys information about a Kubernetes access review (such as one returned by a [`kubectl auth can-i`](https://kubernetes.io/docs/reference/access-authn-authz/authorization/#checking-api-access) command) that was involved in a finding.
  */
 public class AccessReview {
     /**
-     * Group is the API Group of the Resource. "*" means all.
+     * The API group of the resource. "*" means all.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
+
     public AccessReview withGroup(String group) {
         this.group = group;
         return this;
     }
     
     /**
-     * Name is the name of the resource being requested. Empty means all.
+     * The name of the resource being requested. Empty means all.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AccessReview withName(String name) {
         this.name = name;
         return this;
@@ -40,53 +42,59 @@ public class AccessReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ns")
     public String ns;
+
     public AccessReview withNs(String ns) {
         this.ns = ns;
         return this;
     }
     
     /**
-     * Resource is the optional resource type requested. "*" means all.
+     * The optional resource type requested. "*" means all.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public AccessReview withResource(String resource) {
         this.resource = resource;
         return this;
     }
     
     /**
-     * Subresource is the optional subresource type.
+     * The optional subresource type.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subresource")
     public String subresource;
+
     public AccessReview withSubresource(String subresource) {
         this.subresource = subresource;
         return this;
     }
     
     /**
-     * Verb is a Kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy. "*" means all.
+     * A Kubernetes resource API verb, like get, list, watch, create, update, delete, proxy. "*" means all.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verb")
     public String verb;
+
     public AccessReview withVerb(String verb) {
         this.verb = verb;
         return this;
     }
     
     /**
-     * Version is the API Version of the Resource. "*" means all.
+     * The API version of the resource. "*" means all.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public AccessReview withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public AccessReview(){}
 }

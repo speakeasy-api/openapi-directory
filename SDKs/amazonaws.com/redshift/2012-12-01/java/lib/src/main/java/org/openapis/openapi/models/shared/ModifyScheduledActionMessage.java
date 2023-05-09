@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 public class ModifyScheduledActionMessage {
     
     public Boolean enable;
+
     public ModifyScheduledActionMessage withEnable(Boolean enable) {
         this.enable = enable;
         return this;
@@ -16,6 +18,7 @@ public class ModifyScheduledActionMessage {
     
     
     public OffsetDateTime endTime;
+
     public ModifyScheduledActionMessage withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -23,6 +26,7 @@ public class ModifyScheduledActionMessage {
     
     
     public String iamRole;
+
     public ModifyScheduledActionMessage withIamRole(String iamRole) {
         this.iamRole = iamRole;
         return this;
@@ -30,6 +34,7 @@ public class ModifyScheduledActionMessage {
     
     
     public String schedule;
+
     public ModifyScheduledActionMessage withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
@@ -37,6 +42,7 @@ public class ModifyScheduledActionMessage {
     
     
     public String scheduledActionDescription;
+
     public ModifyScheduledActionMessage withScheduledActionDescription(String scheduledActionDescription) {
         this.scheduledActionDescription = scheduledActionDescription;
         return this;
@@ -44,6 +50,7 @@ public class ModifyScheduledActionMessage {
     
     
     public String scheduledActionName;
+
     public ModifyScheduledActionMessage withScheduledActionName(String scheduledActionName) {
         this.scheduledActionName = scheduledActionName;
         return this;
@@ -51,6 +58,7 @@ public class ModifyScheduledActionMessage {
     
     
     public OffsetDateTime startTime;
+
     public ModifyScheduledActionMessage withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -58,9 +66,13 @@ public class ModifyScheduledActionMessage {
     
     
     public ScheduledActionType targetAction;
+
     public ModifyScheduledActionMessage withTargetAction(ScheduledActionType targetAction) {
         this.targetAction = targetAction;
         return this;
     }
     
+    public ModifyScheduledActionMessage(@JsonProperty("ScheduledActionName") String scheduledActionName) {
+        this.scheduledActionName = scheduledActionName;
+  }
 }

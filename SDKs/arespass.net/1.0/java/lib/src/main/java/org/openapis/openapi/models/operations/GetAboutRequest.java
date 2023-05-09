@@ -17,9 +17,11 @@ public class GetAboutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputFormat")
     public String outputFormat;
+
     public GetAboutRequest withOutputFormat(String outputFormat) {
         this.outputFormat = outputFormat;
         return this;
     }
     
+    public GetAboutRequest(){}
 }

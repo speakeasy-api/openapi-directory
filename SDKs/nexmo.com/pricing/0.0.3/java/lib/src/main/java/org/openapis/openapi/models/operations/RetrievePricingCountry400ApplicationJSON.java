@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RetrievePricingCountry400ApplicationJSON {
     @JsonProperty("error_title")
     public String errorTitle;
+
     public RetrievePricingCountry400ApplicationJSON withErrorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
         return this;
@@ -19,6 +20,7 @@ public class RetrievePricingCountry400ApplicationJSON {
     
     @JsonProperty("invalid_parameters")
     public RetrievePricingCountry400ApplicationJSONInvalidParameters invalidParameters;
+
     public RetrievePricingCountry400ApplicationJSON withInvalidParameters(RetrievePricingCountry400ApplicationJSONInvalidParameters invalidParameters) {
         this.invalidParameters = invalidParameters;
         return this;
@@ -26,9 +28,15 @@ public class RetrievePricingCountry400ApplicationJSON {
     
     @JsonProperty("type")
     public String type;
+
     public RetrievePricingCountry400ApplicationJSON withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RetrievePricingCountry400ApplicationJSON(@JsonProperty("error_title") String errorTitle, @JsonProperty("invalid_parameters") RetrievePricingCountry400ApplicationJSONInvalidParameters invalidParameters, @JsonProperty("type") String type) {
+        this.errorTitle = errorTitle;
+        this.invalidParameters = invalidParameters;
+        this.type = type;
+  }
 }

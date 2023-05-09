@@ -62,11 +62,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBiddersCreativesWatchResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersCreativesWatchResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBiddersCreativesWatchResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersCreativesWatchResponse(contentType, httpRes.statusCode()) {{
             watchCreativesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBiddersEndpointsListResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersEndpointsListResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBiddersEndpointsListResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersEndpointsListResponse(contentType, httpRes.statusCode()) {{
             listEndpointsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBiddersListResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersListResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBiddersListResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersListResponse(contentType, httpRes.statusCode()) {{
             listBiddersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsActivateResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsActivateResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsActivateResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsActivateResponse(contentType, httpRes.statusCode()) {{
             pretargetingConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsResponse(contentType, httpRes.statusCode()) {{
             pretargetingConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,11 +288,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishersResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishersResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishersResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishersResponse(contentType, httpRes.statusCode()) {{
             pretargetingConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,11 +334,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedSitesResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedSitesResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedSitesResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedSitesResponse(contentType, httpRes.statusCode()) {{
             pretargetingConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -394,11 +380,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsCreateResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsCreateResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsCreateResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsCreateResponse(contentType, httpRes.statusCode()) {{
             pretargetingConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -440,11 +424,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsDeleteResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsDeleteResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsDeleteResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,11 +468,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsListResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsListResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsListResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsListResponse(contentType, httpRes.statusCode()) {{
             listPretargetingConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -534,11 +514,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedAppsResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedAppsResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedAppsResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedAppsResponse(contentType, httpRes.statusCode()) {{
             pretargetingConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -582,11 +560,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersResponse(contentType, httpRes.statusCode()) {{
             pretargetingConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -630,11 +606,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSitesResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSitesResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSitesResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSitesResponse(contentType, httpRes.statusCode()) {{
             pretargetingConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -678,11 +652,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsSuspendResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsSuspendResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsSuspendResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsSuspendResponse(contentType, httpRes.statusCode()) {{
             pretargetingConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -726,11 +698,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchApproveResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchApproveResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchApproveResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchApproveResponse(contentType, httpRes.statusCode()) {{
             batchApprovePublisherConnectionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -774,11 +744,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchRejectResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchRejectResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchRejectResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchRejectResponse(contentType, httpRes.statusCode()) {{
             batchRejectPublisherConnectionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -820,11 +788,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsListResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsListResponse() {{
+        org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsListResponse res = new org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsListResponse(contentType, httpRes.statusCode()) {{
             listPublisherConnectionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class UpdateDomainContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdminContact")
     public ContactDetail adminContact;
+
     public UpdateDomainContactRequest withAdminContact(ContactDetail adminContact) {
         this.adminContact = adminContact;
         return this;
@@ -23,6 +24,7 @@ public class UpdateDomainContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Consent")
     public Consent consent;
+
     public UpdateDomainContactRequest withConsent(Consent consent) {
         this.consent = consent;
         return this;
@@ -30,6 +32,7 @@ public class UpdateDomainContactRequest {
     
     @JsonProperty("DomainName")
     public String domainName;
+
     public UpdateDomainContactRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -38,6 +41,7 @@ public class UpdateDomainContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistrantContact")
     public ContactDetail registrantContact;
+
     public UpdateDomainContactRequest withRegistrantContact(ContactDetail registrantContact) {
         this.registrantContact = registrantContact;
         return this;
@@ -46,9 +50,13 @@ public class UpdateDomainContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TechContact")
     public ContactDetail techContact;
+
     public UpdateDomainContactRequest withTechContact(ContactDetail techContact) {
         this.techContact = techContact;
         return this;
     }
     
+    public UpdateDomainContactRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

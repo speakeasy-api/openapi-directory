@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifyDBInstanceMessage - Represents the input to &lt;a&gt;ModifyDBInstance&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyDBInstanceMessage {
     
     public Boolean applyImmediately;
+
     public ModifyDBInstanceMessage withApplyImmediately(Boolean applyImmediately) {
         this.applyImmediately = applyImmediately;
         return this;
@@ -19,6 +20,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Boolean autoMinorVersionUpgrade;
+
     public ModifyDBInstanceMessage withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -26,6 +28,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String caCertificateIdentifier;
+
     public ModifyDBInstanceMessage withCACertificateIdentifier(String caCertificateIdentifier) {
         this.caCertificateIdentifier = caCertificateIdentifier;
         return this;
@@ -33,6 +36,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Boolean copyTagsToSnapshot;
+
     public ModifyDBInstanceMessage withCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
         this.copyTagsToSnapshot = copyTagsToSnapshot;
         return this;
@@ -40,6 +44,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String dbInstanceClass;
+
     public ModifyDBInstanceMessage withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -47,6 +52,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String dbInstanceIdentifier;
+
     public ModifyDBInstanceMessage withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -54,6 +60,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Boolean enablePerformanceInsights;
+
     public ModifyDBInstanceMessage withEnablePerformanceInsights(Boolean enablePerformanceInsights) {
         this.enablePerformanceInsights = enablePerformanceInsights;
         return this;
@@ -61,6 +68,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String newDBInstanceIdentifier;
+
     public ModifyDBInstanceMessage withNewDBInstanceIdentifier(String newDBInstanceIdentifier) {
         this.newDBInstanceIdentifier = newDBInstanceIdentifier;
         return this;
@@ -68,6 +76,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String performanceInsightsKMSKeyId;
+
     public ModifyDBInstanceMessage withPerformanceInsightsKMSKeyId(String performanceInsightsKMSKeyId) {
         this.performanceInsightsKMSKeyId = performanceInsightsKMSKeyId;
         return this;
@@ -75,6 +84,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String preferredMaintenanceWindow;
+
     public ModifyDBInstanceMessage withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -82,9 +92,13 @@ public class ModifyDBInstanceMessage {
     
     
     public Long promotionTier;
+
     public ModifyDBInstanceMessage withPromotionTier(Long promotionTier) {
         this.promotionTier = promotionTier;
         return this;
     }
     
+    public ModifyDBInstanceMessage(@JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier) {
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+  }
 }

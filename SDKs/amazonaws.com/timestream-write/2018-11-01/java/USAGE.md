@@ -3,195 +3,184 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateBatchLoadTaskXAmzTargetEnum;
 import org.openapis.openapi.models.operations.CreateBatchLoadTaskRequest;
 import org.openapis.openapi.models.operations.CreateBatchLoadTaskResponse;
+import org.openapis.openapi.models.operations.CreateBatchLoadTaskXAmzTargetEnum;
+import org.openapis.openapi.models.shared.BatchLoadDataFormatEnum;
 import org.openapis.openapi.models.shared.CreateBatchLoadTaskRequest;
+import org.openapis.openapi.models.shared.CsvConfiguration;
+import org.openapis.openapi.models.shared.DataModel;
+import org.openapis.openapi.models.shared.DataModelConfiguration;
+import org.openapis.openapi.models.shared.DataModelS3Configuration;
+import org.openapis.openapi.models.shared.DataSourceConfiguration;
+import org.openapis.openapi.models.shared.DataSourceS3Configuration;
+import org.openapis.openapi.models.shared.DimensionMapping;
+import org.openapis.openapi.models.shared.MeasureValueTypeEnum;
+import org.openapis.openapi.models.shared.MixedMeasureMapping;
+import org.openapis.openapi.models.shared.MultiMeasureAttributeMapping;
+import org.openapis.openapi.models.shared.MultiMeasureMappings;
 import org.openapis.openapi.models.shared.ReportConfiguration;
 import org.openapis.openapi.models.shared.ReportS3Configuration;
 import org.openapis.openapi.models.shared.S3EncryptionOptionEnum;
-import org.openapis.openapi.models.shared.DataSourceConfiguration;
-import org.openapis.openapi.models.shared.DataSourceS3Configuration;
-import org.openapis.openapi.models.shared.BatchLoadDataFormatEnum;
-import org.openapis.openapi.models.shared.CsvConfiguration;
-import org.openapis.openapi.models.shared.DataModelConfiguration;
-import org.openapis.openapi.models.shared.DataModelS3Configuration;
-import org.openapis.openapi.models.shared.DataModel;
-import org.openapis.openapi.models.shared.TimeUnitEnum;
-import org.openapis.openapi.models.shared.MultiMeasureMappings;
-import org.openapis.openapi.models.shared.MultiMeasureAttributeMapping;
 import org.openapis.openapi.models.shared.ScalarMeasureValueTypeEnum;
-import org.openapis.openapi.models.shared.MixedMeasureMapping;
-import org.openapis.openapi.models.shared.MeasureValueTypeEnum;
-import org.openapis.openapi.models.shared.DimensionMapping;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.shared.TimeUnitEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateBatchLoadTaskRequest req = new CreateBatchLoadTaskRequest() {{
-                createBatchLoadTaskRequest = new CreateBatchLoadTaskRequest() {{
-                    clientToken = "corrupti";
-                    dataModelConfiguration = new DataModelConfiguration() {{
-                        dataModel = new DataModel() {{
-                            dimensionMappings = new org.openapis.openapi.models.shared.DimensionMapping[]{{
-                                add(new DimensionMapping() {{
-                                    destinationColumn = "distinctio";
-                                    sourceColumn = "quibusdam";
-                                }}),
-                                add(new DimensionMapping() {{
-                                    destinationColumn = "unde";
-                                    sourceColumn = "nulla";
-                                }}),
-                                add(new DimensionMapping() {{
-                                    destinationColumn = "corrupti";
-                                    sourceColumn = "illum";
-                                }}),
-                            }};
-                            measureNameColumn = "vel";
-                            mixedMeasureMappings = new org.openapis.openapi.models.shared.MixedMeasureMapping[]{{
-                                add(new MixedMeasureMapping() {{
-                                    measureName = "deserunt";
-                                    measureValueType = "VARCHAR";
-                                    multiMeasureAttributeMappings = new org.openapis.openapi.models.shared.MultiMeasureAttributeMapping[]{{
-                                        add(new MultiMeasureAttributeMapping() {{
-                                            measureValueType = "BIGINT";
-                                            sourceColumn = "debitis";
-                                            targetMultiMeasureAttributeName = "ipsa";
-                                        }}),
-                                        add(new MultiMeasureAttributeMapping() {{
-                                            measureValueType = "TIMESTAMP";
-                                            sourceColumn = "tempora";
-                                            targetMultiMeasureAttributeName = "suscipit";
-                                        }}),
-                                    }};
-                                    sourceColumn = "molestiae";
-                                    targetMeasureName = "minus";
-                                }}),
-                                add(new MixedMeasureMapping() {{
-                                    measureName = "placeat";
-                                    measureValueType = "BOOLEAN";
-                                    multiMeasureAttributeMappings = new org.openapis.openapi.models.shared.MultiMeasureAttributeMapping[]{{
-                                        add(new MultiMeasureAttributeMapping() {{
-                                            measureValueType = "BOOLEAN";
-                                            sourceColumn = "nisi";
-                                            targetMultiMeasureAttributeName = "recusandae";
-                                        }}),
-                                        add(new MultiMeasureAttributeMapping() {{
-                                            measureValueType = "TIMESTAMP";
-                                            sourceColumn = "ab";
-                                            targetMultiMeasureAttributeName = "quis";
-                                        }}),
-                                    }};
-                                    sourceColumn = "veritatis";
-                                    targetMeasureName = "deserunt";
-                                }}),
-                                add(new MixedMeasureMapping() {{
-                                    measureName = "perferendis";
-                                    measureValueType = "VARCHAR";
-                                    multiMeasureAttributeMappings = new org.openapis.openapi.models.shared.MultiMeasureAttributeMapping[]{{
-                                        add(new MultiMeasureAttributeMapping() {{
-                                            measureValueType = "TIMESTAMP";
-                                            sourceColumn = "quo";
-                                            targetMultiMeasureAttributeName = "odit";
-                                        }}),
-                                        add(new MultiMeasureAttributeMapping() {{
-                                            measureValueType = "TIMESTAMP";
-                                            sourceColumn = "at";
-                                            targetMultiMeasureAttributeName = "maiores";
-                                        }}),
-                                        add(new MultiMeasureAttributeMapping() {{
-                                            measureValueType = "BOOLEAN";
-                                            sourceColumn = "quod";
-                                            targetMultiMeasureAttributeName = "quod";
-                                        }}),
-                                        add(new MultiMeasureAttributeMapping() {{
-                                            measureValueType = "BOOLEAN";
-                                            sourceColumn = "totam";
-                                            targetMultiMeasureAttributeName = "porro";
-                                        }}),
-                                    }};
-                                    sourceColumn = "dolorum";
-                                    targetMeasureName = "dicta";
-                                }}),
-                            }};
-                            multiMeasureMappings = new MultiMeasureMappings() {{
-                                multiMeasureAttributeMappings = new org.openapis.openapi.models.shared.MultiMeasureAttributeMapping[]{{
-                                    add(new MultiMeasureAttributeMapping() {{
-                                        measureValueType = "VARCHAR";
-                                        sourceColumn = "occaecati";
-                                        targetMultiMeasureAttributeName = "fugit";
-                                    }}),
-                                    add(new MultiMeasureAttributeMapping() {{
-                                        measureValueType = "BOOLEAN";
-                                        sourceColumn = "hic";
-                                        targetMultiMeasureAttributeName = "optio";
-                                    }}),
-                                    add(new MultiMeasureAttributeMapping() {{
-                                        measureValueType = "BOOLEAN";
-                                        sourceColumn = "beatae";
-                                        targetMultiMeasureAttributeName = "commodi";
-                                    }}),
-                                }};
-                                targetMultiMeasureName = "molestiae";
-                            }};
-                            timeColumn = "modi";
-                            timeUnit = "MILLISECONDS";
-                        }};
-                        dataModelS3Configuration = new DataModelS3Configuration() {{
-                            bucketName = "impedit";
-                            objectKey = "cum";
-                        }};
-                    }};
-                    dataSourceConfiguration = new DataSourceConfiguration() {{
-                        csvConfiguration = new CsvConfiguration() {{
-                            columnSeparator = "esse";
-                            escapeChar = "ipsum";
-                            nullValue = "excepturi";
-                            quoteChar = "aspernatur";
-                            trimWhiteSpace = false;
-                        }};
-                        dataFormat = "CSV";
-                        dataSourceS3Configuration = new DataSourceS3Configuration() {{
-                            bucketName = "perferendis";
-                            objectKeyPrefix = "ad";
-                        }};
-                    }};
-                    recordVersion = 617636;
-                    reportConfiguration = new ReportConfiguration() {{
-                        reportS3Configuration = new ReportS3Configuration() {{
-                            bucketName = "sed";
-                            encryptionOption = "SSE_KMS";
-                            kmsKeyId = "dolor";
-                            objectKeyPrefix = "natus";
-                        }};
-                    }};
-                    targetDatabaseName = "laboriosam";
-                    targetTableName = "hic";
-                }};
-                xAmzAlgorithm = "saepe";
-                xAmzContentSha256 = "fuga";
-                xAmzCredential = "in";
+            CreateBatchLoadTaskRequest req = new CreateBatchLoadTaskRequest(                new CreateBatchLoadTaskRequest(                new DataSourceConfiguration(BatchLoadDataFormatEnum.CSV,                 new DataSourceS3Configuration("provident") {{
+                                                                objectKeyPrefix = "distinctio";
+                                                            }};) {{
+                                                csvConfiguration = new CsvConfiguration() {{
+                                                    columnSeparator = "quibusdam";
+                                                    escapeChar = "unde";
+                                                    nullValue = "nulla";
+                                                    quoteChar = "corrupti";
+                                                    trimWhiteSpace = false;
+                                                }};;
+                                            }};,                 new ReportConfiguration() {{
+                                                reportS3Configuration = new ReportS3Configuration("illum") {{
+                                                    encryptionOption = S3EncryptionOptionEnum.SSE_S3;
+                                                    kmsKeyId = "error";
+                                                    objectKeyPrefix = "deserunt";
+                                                }};;
+                                            }};, "suscipit", "iure") {{
+                                clientToken = "magnam";
+                                dataModelConfiguration = new DataModelConfiguration() {{
+                                    dataModel = new DataModel(                new org.openapis.openapi.models.shared.DimensionMapping[]{{
+                                                        add(new DimensionMapping() {{
+                                                            destinationColumn = "ipsa";
+                                                            sourceColumn = "delectus";
+                                                        }}),
+                                                        add(new DimensionMapping() {{
+                                                            destinationColumn = "tempora";
+                                                            sourceColumn = "suscipit";
+                                                        }}),
+                                                        add(new DimensionMapping() {{
+                                                            destinationColumn = "molestiae";
+                                                            sourceColumn = "minus";
+                                                        }}),
+                                                        add(new DimensionMapping() {{
+                                                            destinationColumn = "placeat";
+                                                            sourceColumn = "voluptatum";
+                                                        }}),
+                                                    }}) {{
+                                        measureNameColumn = "iusto";
+                                        mixedMeasureMappings = new org.openapis.openapi.models.shared.MixedMeasureMapping[]{{
+                                            add(new MixedMeasureMapping(MeasureValueTypeEnum.TIMESTAMP) {{
+                                                measureName = "nisi";
+                                                measureValueType = MeasureValueTypeEnum.MULTI;
+                                                multiMeasureAttributeMappings = new org.openapis.openapi.models.shared.MultiMeasureAttributeMapping[]{{
+                                                    add(new MultiMeasureAttributeMapping("deserunt") {{
+                                                        measureValueType = ScalarMeasureValueTypeEnum.DOUBLE;
+                                                        sourceColumn = "quis";
+                                                        targetMultiMeasureAttributeName = "veritatis";
+                                                    }}),
+                                                    add(new MultiMeasureAttributeMapping("sapiente") {{
+                                                        measureValueType = ScalarMeasureValueTypeEnum.DOUBLE;
+                                                        sourceColumn = "ipsam";
+                                                        targetMultiMeasureAttributeName = "repellendus";
+                                                    }}),
+                                                    add(new MultiMeasureAttributeMapping("at") {{
+                                                        measureValueType = ScalarMeasureValueTypeEnum.VARCHAR;
+                                                        sourceColumn = "odit";
+                                                        targetMultiMeasureAttributeName = "at";
+                                                    }}),
+                                                    add(new MultiMeasureAttributeMapping("quod") {{
+                                                        measureValueType = ScalarMeasureValueTypeEnum.TIMESTAMP;
+                                                        sourceColumn = "molestiae";
+                                                        targetMultiMeasureAttributeName = "quod";
+                                                    }}),
+                                                }};
+                                                sourceColumn = "esse";
+                                                targetMeasureName = "totam";
+                                            }}),
+                                            add(new MixedMeasureMapping(MeasureValueTypeEnum.VARCHAR) {{
+                                                measureName = "dolorum";
+                                                measureValueType = MeasureValueTypeEnum.DOUBLE;
+                                                multiMeasureAttributeMappings = new org.openapis.openapi.models.shared.MultiMeasureAttributeMapping[]{{
+                                                    add(new MultiMeasureAttributeMapping("deleniti") {{
+                                                        measureValueType = ScalarMeasureValueTypeEnum.VARCHAR;
+                                                        sourceColumn = "occaecati";
+                                                        targetMultiMeasureAttributeName = "fugit";
+                                                    }}),
+                                                    add(new MultiMeasureAttributeMapping("beatae") {{
+                                                        measureValueType = ScalarMeasureValueTypeEnum.TIMESTAMP;
+                                                        sourceColumn = "optio";
+                                                        targetMultiMeasureAttributeName = "totam";
+                                                    }}),
+                                                    add(new MultiMeasureAttributeMapping("qui") {{
+                                                        measureValueType = ScalarMeasureValueTypeEnum.BOOLEAN_;
+                                                        sourceColumn = "molestiae";
+                                                        targetMultiMeasureAttributeName = "modi";
+                                                    }}),
+                                                }};
+                                                sourceColumn = "impedit";
+                                                targetMeasureName = "cum";
+                                            }}),
+                                            add(new MixedMeasureMapping(MeasureValueTypeEnum.BOOLEAN_) {{
+                                                measureName = "ipsum";
+                                                measureValueType = MeasureValueTypeEnum.BOOLEAN_;
+                                                multiMeasureAttributeMappings = new org.openapis.openapi.models.shared.MultiMeasureAttributeMapping[]{{
+                                                    add(new MultiMeasureAttributeMapping("sed") {{
+                                                        measureValueType = ScalarMeasureValueTypeEnum.DOUBLE;
+                                                        sourceColumn = "ad";
+                                                        targetMultiMeasureAttributeName = "natus";
+                                                    }}),
+                                                }};
+                                                sourceColumn = "iste";
+                                                targetMeasureName = "dolor";
+                                            }}),
+                                        }};
+                                        multiMeasureMappings = new MultiMeasureMappings(                new org.openapis.openapi.models.shared.MultiMeasureAttributeMapping[]{{
+                                                            add(new MultiMeasureAttributeMapping("in") {{
+                                                                measureValueType = ScalarMeasureValueTypeEnum.TIMESTAMP;
+                                                                sourceColumn = "saepe";
+                                                                targetMultiMeasureAttributeName = "fuga";
+                                                            }}),
+                                                            add(new MultiMeasureAttributeMapping("saepe") {{
+                                                                measureValueType = ScalarMeasureValueTypeEnum.BIGINT;
+                                                                sourceColumn = "iste";
+                                                                targetMultiMeasureAttributeName = "iure";
+                                                            }}),
+                                                        }}) {{
+                                            targetMultiMeasureName = "quidem";
+                                        }};;
+                                        timeColumn = "architecto";
+                                        timeUnit = TimeUnitEnum.MILLISECONDS;
+                                    }};;
+                                    dataModelS3Configuration = new DataModelS3Configuration() {{
+                                        bucketName = "reiciendis";
+                                        objectKey = "est";
+                                    }};;
+                                }};;
+                                recordVersion = 653140L;
+                            }};, CreateBatchLoadTaskXAmzTargetEnum.TIMESTREAM20181101_CREATE_BATCH_LOAD_TASK) {{
+                xAmzAlgorithm = "laborum";
+                xAmzContentSha256 = "dolores";
+                xAmzCredential = "dolorem";
                 xAmzDate = "corporis";
-                xAmzSecurityToken = "iste";
-                xAmzSignature = "iure";
-                xAmzSignedHeaders = "saepe";
-                xAmzTarget = "Timestream_20181101.CreateBatchLoadTask";
-            }}            
+                xAmzSecurityToken = "explicabo";
+                xAmzSignature = "nobis";
+                xAmzSignedHeaders = "enim";
+            }};            
 
             CreateBatchLoadTaskResponse res = sdk.createBatchLoadTask(req);
 
-            if (res.createBatchLoadTaskResponse.isPresent()) {
+            if (res.createBatchLoadTaskResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -18,6 +18,7 @@ public class EventSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public EventSource withTitle(String title) {
         this.title = title;
         return this;
@@ -29,9 +30,11 @@ public class EventSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public EventSource withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public EventSource(){}
 }

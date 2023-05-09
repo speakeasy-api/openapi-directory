@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutContainerPolicyResponse {
@@ -12,6 +13,7 @@ public class PutContainerPolicyResponse {
      */
     
     public Object containerInUseException;
+
     public PutContainerPolicyResponse withContainerInUseException(Object containerInUseException) {
         this.containerInUseException = containerInUseException;
         return this;
@@ -22,6 +24,7 @@ public class PutContainerPolicyResponse {
      */
     
     public Object containerNotFoundException;
+
     public PutContainerPolicyResponse withContainerNotFoundException(Object containerNotFoundException) {
         this.containerNotFoundException = containerNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class PutContainerPolicyResponse {
     
     
     public String contentType;
+
     public PutContainerPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutContainerPolicyResponse {
      */
     
     public Object internalServerError;
+
     public PutContainerPolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class PutContainerPolicyResponse {
      */
     
     public java.util.Map<String, Object> putContainerPolicyOutput;
+
     public PutContainerPolicyResponse withPutContainerPolicyOutput(java.util.Map<String, Object> putContainerPolicyOutput) {
         this.putContainerPolicyOutput = putContainerPolicyOutput;
         return this;
@@ -56,6 +62,7 @@ public class PutContainerPolicyResponse {
     
     
     public Integer statusCode;
+
     public PutContainerPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class PutContainerPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutContainerPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutContainerPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

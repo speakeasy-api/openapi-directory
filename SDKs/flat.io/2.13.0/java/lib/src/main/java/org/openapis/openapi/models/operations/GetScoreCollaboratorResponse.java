@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetScoreCollaboratorResponse {
     
     public String contentType;
+
     public GetScoreCollaboratorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetScoreCollaboratorResponse {
      */
     
     public org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse;
+
     public GetScoreCollaboratorResponse withFlatErrorResponse(org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse) {
         this.flatErrorResponse = flatErrorResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetScoreCollaboratorResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceCollaborator resourceCollaborator;
+
     public GetScoreCollaboratorResponse withResourceCollaborator(org.openapis.openapi.models.shared.ResourceCollaborator resourceCollaborator) {
         this.resourceCollaborator = resourceCollaborator;
         return this;
@@ -36,6 +40,7 @@ public class GetScoreCollaboratorResponse {
     
     
     public Integer statusCode;
+
     public GetScoreCollaboratorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetScoreCollaboratorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetScoreCollaboratorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetScoreCollaboratorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

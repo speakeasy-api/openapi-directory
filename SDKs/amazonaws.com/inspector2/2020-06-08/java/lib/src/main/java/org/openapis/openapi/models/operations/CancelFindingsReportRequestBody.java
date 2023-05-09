@@ -12,9 +12,13 @@ public class CancelFindingsReportRequestBody {
      */
     @JsonProperty("reportId")
     public String reportId;
+
     public CancelFindingsReportRequestBody withReportId(String reportId) {
         this.reportId = reportId;
         return this;
     }
     
+    public CancelFindingsReportRequestBody(@JsonProperty("reportId") String reportId) {
+        this.reportId = reportId;
+  }
 }

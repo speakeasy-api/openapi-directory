@@ -12,9 +12,11 @@ public class ArticleGetMeasureUnitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public ArticleGetMeasureUnitsRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ArticleGetMeasureUnitsRequest(){}
 }

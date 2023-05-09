@@ -24,6 +24,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acct")
     public String acct;
+
     public Account withAcct(String acct) {
         this.acct = acct;
         return this;
@@ -35,6 +36,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar")
     public String avatar;
+
     public Account withAvatar(String avatar) {
         this.avatar = avatar;
         return this;
@@ -46,6 +48,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_static")
     public String avatarStatic;
+
     public Account withAvatarStatic(String avatarStatic) {
         this.avatarStatic = avatarStatic;
         return this;
@@ -57,6 +60,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bot")
     public Boolean bot;
+
     public Account withBot(Boolean bot) {
         this.bot = bot;
         return this;
@@ -70,6 +74,7 @@ public class Account {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Account withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -81,6 +86,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discoverable")
     public Boolean discoverable;
+
     public Account withDiscoverable(Boolean discoverable) {
         this.discoverable = discoverable;
         return this;
@@ -92,6 +98,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public Account withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -103,6 +110,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emojis")
     public Emoji[] emojis;
+
     public Account withEmojis(Emoji[] emojis) {
         this.emojis = emojis;
         return this;
@@ -114,6 +122,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public Field[] fields;
+
     public Account withFields(Field[] fields) {
         this.fields = fields;
         return this;
@@ -125,6 +134,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("followers_count")
     public Long followersCount;
+
     public Account withFollowersCount(Long followersCount) {
         this.followersCount = followersCount;
         return this;
@@ -136,6 +146,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("following_count")
     public Long followingCount;
+
     public Account withFollowingCount(Long followingCount) {
         this.followingCount = followingCount;
         return this;
@@ -147,6 +158,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public String header;
+
     public Account withHeader(String header) {
         this.header = header;
         return this;
@@ -158,6 +170,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header_static")
     public String headerStatic;
+
     public Account withHeaderStatic(String headerStatic) {
         this.headerStatic = headerStatic;
         return this;
@@ -169,6 +182,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Account withId(String id) {
         this.id = id;
         return this;
@@ -182,6 +196,7 @@ public class Account {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_status_at")
     public OffsetDateTime lastStatusAt;
+
     public Account withLastStatusAt(OffsetDateTime lastStatusAt) {
         this.lastStatusAt = lastStatusAt;
         return this;
@@ -193,6 +208,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locked")
     public Boolean locked;
+
     public Account withLocked(Boolean locked) {
         this.locked = locked;
         return this;
@@ -205,6 +221,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moved")
     public Account moved;
+
     public Account withMoved(Account moved) {
         this.moved = moved;
         return this;
@@ -218,6 +235,7 @@ public class Account {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("mute_expires_at")
     public OffsetDateTime muteExpiresAt;
+
     public Account withMuteExpiresAt(OffsetDateTime muteExpiresAt) {
         this.muteExpiresAt = muteExpiresAt;
         return this;
@@ -229,6 +247,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public Account withNote(String note) {
         this.note = note;
         return this;
@@ -241,6 +260,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public Account withSource(Source source) {
         this.source = source;
         return this;
@@ -252,6 +272,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statuses_count")
     public Long statusesCount;
+
     public Account withStatusesCount(Long statusesCount) {
         this.statusesCount = statusesCount;
         return this;
@@ -263,6 +284,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspended")
     public Boolean suspended;
+
     public Account withSuspended(Boolean suspended) {
         this.suspended = suspended;
         return this;
@@ -274,6 +296,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Account withUrl(String url) {
         this.url = url;
         return this;
@@ -285,9 +308,11 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public Account withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public Account(){}
 }

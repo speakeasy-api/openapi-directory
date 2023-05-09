@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateConnectionResponse {
     
     public String contentType;
+
     public CreateConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateConnectionResponse createConnectionResponse;
+
     public CreateConnectionResponse withCreateConnectionResponse(org.openapis.openapi.models.shared.CreateConnectionResponse createConnectionResponse) {
         this.createConnectionResponse = createConnectionResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateConnectionResponse {
      */
     
     public Object internalException;
+
     public CreateConnectionResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class CreateConnectionResponse {
      */
     
     public Object limitExceededException;
+
     public CreateConnectionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateConnectionResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateConnectionResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -56,6 +62,7 @@ public class CreateConnectionResponse {
     
     
     public Integer statusCode;
+
     public CreateConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

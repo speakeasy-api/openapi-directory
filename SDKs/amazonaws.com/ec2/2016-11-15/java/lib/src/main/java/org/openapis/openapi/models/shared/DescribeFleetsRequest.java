@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFleetsRequest {
     
     public Boolean dryRun;
+
     public DescribeFleetsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeFleetsRequest {
     
     
     public DescribeFleetsRequestFilters[] filters;
+
     public DescribeFleetsRequest withFilters(DescribeFleetsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeFleetsRequest {
     
     
     public String[] fleetIds;
+
     public DescribeFleetsRequest withFleetIds(String[] fleetIds) {
         this.fleetIds = fleetIds;
         return this;
@@ -30,6 +33,7 @@ public class DescribeFleetsRequest {
     
     
     public Long maxResults;
+
     public DescribeFleetsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,11 @@ public class DescribeFleetsRequest {
     
     
     public String nextToken;
+
     public DescribeFleetsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFleetsRequest(){}
 }

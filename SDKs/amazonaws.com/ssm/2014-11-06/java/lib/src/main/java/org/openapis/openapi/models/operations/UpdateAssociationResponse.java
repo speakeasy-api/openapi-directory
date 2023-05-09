@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAssociationResponse {
@@ -12,6 +13,7 @@ public class UpdateAssociationResponse {
      */
     
     public Object associationDoesNotExist;
+
     public UpdateAssociationResponse withAssociationDoesNotExist(Object associationDoesNotExist) {
         this.associationDoesNotExist = associationDoesNotExist;
         return this;
@@ -22,6 +24,7 @@ public class UpdateAssociationResponse {
      */
     
     public Object associationVersionLimitExceeded;
+
     public UpdateAssociationResponse withAssociationVersionLimitExceeded(Object associationVersionLimitExceeded) {
         this.associationVersionLimitExceeded = associationVersionLimitExceeded;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAssociationResponse {
     
     
     public String contentType;
+
     public UpdateAssociationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAssociationResponse {
      */
     
     public Object internalServerError;
+
     public UpdateAssociationResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class UpdateAssociationResponse {
      */
     
     public Object invalidAssociationVersion;
+
     public UpdateAssociationResponse withInvalidAssociationVersion(Object invalidAssociationVersion) {
         this.invalidAssociationVersion = invalidAssociationVersion;
         return this;
@@ -59,6 +65,7 @@ public class UpdateAssociationResponse {
      */
     
     public Object invalidDocument;
+
     public UpdateAssociationResponse withInvalidDocument(Object invalidDocument) {
         this.invalidDocument = invalidDocument;
         return this;
@@ -69,6 +76,7 @@ public class UpdateAssociationResponse {
      */
     
     public Object invalidDocumentVersion;
+
     public UpdateAssociationResponse withInvalidDocumentVersion(Object invalidDocumentVersion) {
         this.invalidDocumentVersion = invalidDocumentVersion;
         return this;
@@ -79,6 +87,7 @@ public class UpdateAssociationResponse {
      */
     
     public Object invalidOutputLocation;
+
     public UpdateAssociationResponse withInvalidOutputLocation(Object invalidOutputLocation) {
         this.invalidOutputLocation = invalidOutputLocation;
         return this;
@@ -89,6 +98,7 @@ public class UpdateAssociationResponse {
      */
     
     public Object invalidParameters;
+
     public UpdateAssociationResponse withInvalidParameters(Object invalidParameters) {
         this.invalidParameters = invalidParameters;
         return this;
@@ -99,6 +109,7 @@ public class UpdateAssociationResponse {
      */
     
     public Object invalidSchedule;
+
     public UpdateAssociationResponse withInvalidSchedule(Object invalidSchedule) {
         this.invalidSchedule = invalidSchedule;
         return this;
@@ -109,6 +120,7 @@ public class UpdateAssociationResponse {
      */
     
     public Object invalidTarget;
+
     public UpdateAssociationResponse withInvalidTarget(Object invalidTarget) {
         this.invalidTarget = invalidTarget;
         return this;
@@ -119,6 +131,7 @@ public class UpdateAssociationResponse {
      */
     
     public Object invalidTargetMaps;
+
     public UpdateAssociationResponse withInvalidTargetMaps(Object invalidTargetMaps) {
         this.invalidTargetMaps = invalidTargetMaps;
         return this;
@@ -129,6 +142,7 @@ public class UpdateAssociationResponse {
      */
     
     public Object invalidUpdate;
+
     public UpdateAssociationResponse withInvalidUpdate(Object invalidUpdate) {
         this.invalidUpdate = invalidUpdate;
         return this;
@@ -136,6 +150,7 @@ public class UpdateAssociationResponse {
     
     
     public Integer statusCode;
+
     public UpdateAssociationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -143,6 +158,7 @@ public class UpdateAssociationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAssociationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -153,6 +169,7 @@ public class UpdateAssociationResponse {
      */
     
     public Object tooManyUpdates;
+
     public UpdateAssociationResponse withTooManyUpdates(Object tooManyUpdates) {
         this.tooManyUpdates = tooManyUpdates;
         return this;
@@ -163,9 +180,14 @@ public class UpdateAssociationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAssociationResult updateAssociationResult;
+
     public UpdateAssociationResponse withUpdateAssociationResult(org.openapis.openapi.models.shared.UpdateAssociationResult updateAssociationResult) {
         this.updateAssociationResult = updateAssociationResult;
         return this;
     }
     
+    public UpdateAssociationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

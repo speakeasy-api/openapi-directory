@@ -18,6 +18,7 @@ public class Subaccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Subaccount withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class Subaccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availablePermissionIds")
     public String[] availablePermissionIds;
+
     public Subaccount withAvailablePermissionIds(String[] availablePermissionIds) {
         this.availablePermissionIds = availablePermissionIds;
         return this;
@@ -40,6 +42,7 @@ public class Subaccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Subaccount withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class Subaccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Subaccount withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,9 +66,11 @@ public class Subaccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Subaccount withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Subaccount(){}
 }

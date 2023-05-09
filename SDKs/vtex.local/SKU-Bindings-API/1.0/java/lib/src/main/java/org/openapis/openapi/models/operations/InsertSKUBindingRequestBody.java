@@ -15,6 +15,7 @@ public class InsertSKUBindingRequestBody {
      */
     @JsonProperty("IsActive")
     public Boolean isActive;
+
     public InsertSKUBindingRequestBody withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -25,6 +26,7 @@ public class InsertSKUBindingRequestBody {
      */
     @JsonProperty("SellerId")
     public String sellerId;
+
     public InsertSKUBindingRequestBody withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -35,6 +37,7 @@ public class InsertSKUBindingRequestBody {
      */
     @JsonProperty("SellerStockKeepingUnitId")
     public String sellerStockKeepingUnitId;
+
     public InsertSKUBindingRequestBody withSellerStockKeepingUnitId(String sellerStockKeepingUnitId) {
         this.sellerStockKeepingUnitId = sellerStockKeepingUnitId;
         return this;
@@ -45,9 +48,16 @@ public class InsertSKUBindingRequestBody {
      */
     @JsonProperty("StockKeepingUnitId")
     public Integer stockKeepingUnitId;
+
     public InsertSKUBindingRequestBody withStockKeepingUnitId(Integer stockKeepingUnitId) {
         this.stockKeepingUnitId = stockKeepingUnitId;
         return this;
     }
     
+    public InsertSKUBindingRequestBody(@JsonProperty("IsActive") Boolean isActive, @JsonProperty("SellerId") String sellerId, @JsonProperty("SellerStockKeepingUnitId") String sellerStockKeepingUnitId, @JsonProperty("StockKeepingUnitId") Integer stockKeepingUnitId) {
+        this.isActive = isActive;
+        this.sellerId = sellerId;
+        this.sellerStockKeepingUnitId = sellerStockKeepingUnitId;
+        this.stockKeepingUnitId = stockKeepingUnitId;
+  }
 }

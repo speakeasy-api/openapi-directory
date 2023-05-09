@@ -18,6 +18,7 @@ public class TriggerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public Destination destination;
+
     public TriggerInput withDestination(Destination destination) {
         this.destination = destination;
         return this;
@@ -29,6 +30,7 @@ public class TriggerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public TriggerInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class TriggerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchingCriteria")
     public MatchingCriteria[] matchingCriteria;
+
     public TriggerInput withMatchingCriteria(MatchingCriteria[] matchingCriteria) {
         this.matchingCriteria = matchingCriteria;
         return this;
@@ -51,6 +54,7 @@ public class TriggerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TriggerInput withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class TriggerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public TriggerInput withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
@@ -73,9 +78,11 @@ public class TriggerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transport")
     public TransportInput transport;
+
     public TriggerInput withTransport(TransportInput transport) {
         this.transport = transport;
         return this;
     }
     
+    public TriggerInput(){}
 }

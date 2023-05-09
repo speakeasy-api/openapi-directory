@@ -15,9 +15,11 @@ public class ImageConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUri")
     public String imageUri;
+
     public ImageConfigurationInput withImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
     }
     
+    public ImageConfigurationInput(){}
 }

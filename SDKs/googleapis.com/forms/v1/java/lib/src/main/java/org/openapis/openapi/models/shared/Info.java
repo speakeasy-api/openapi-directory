@@ -18,6 +18,7 @@ public class Info {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Info withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class Info {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentTitle")
     public String documentTitle;
+
     public Info withDocumentTitle(String documentTitle) {
         this.documentTitle = documentTitle;
         return this;
@@ -40,9 +42,11 @@ public class Info {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Info withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Info(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ChildWorkflowExecutionTerminatedEventAttributes {
     @JsonProperty("initiatedEventId")
     public Long initiatedEventId;
+
     public ChildWorkflowExecutionTerminatedEventAttributes withInitiatedEventId(Long initiatedEventId) {
         this.initiatedEventId = initiatedEventId;
         return this;
@@ -19,6 +20,7 @@ public class ChildWorkflowExecutionTerminatedEventAttributes {
     
     @JsonProperty("startedEventId")
     public Long startedEventId;
+
     public ChildWorkflowExecutionTerminatedEventAttributes withStartedEventId(Long startedEventId) {
         this.startedEventId = startedEventId;
         return this;
@@ -26,6 +28,7 @@ public class ChildWorkflowExecutionTerminatedEventAttributes {
     
     @JsonProperty("workflowExecution")
     public WorkflowExecution workflowExecution;
+
     public ChildWorkflowExecutionTerminatedEventAttributes withWorkflowExecution(WorkflowExecution workflowExecution) {
         this.workflowExecution = workflowExecution;
         return this;
@@ -33,9 +36,16 @@ public class ChildWorkflowExecutionTerminatedEventAttributes {
     
     @JsonProperty("workflowType")
     public WorkflowType workflowType;
+
     public ChildWorkflowExecutionTerminatedEventAttributes withWorkflowType(WorkflowType workflowType) {
         this.workflowType = workflowType;
         return this;
     }
     
+    public ChildWorkflowExecutionTerminatedEventAttributes(@JsonProperty("initiatedEventId") Long initiatedEventId, @JsonProperty("startedEventId") Long startedEventId, @JsonProperty("workflowExecution") WorkflowExecution workflowExecution, @JsonProperty("workflowType") WorkflowType workflowType) {
+        this.initiatedEventId = initiatedEventId;
+        this.startedEventId = startedEventId;
+        this.workflowExecution = workflowExecution;
+        this.workflowType = workflowType;
+  }
 }

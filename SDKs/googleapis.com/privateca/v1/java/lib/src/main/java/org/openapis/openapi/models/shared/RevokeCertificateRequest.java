@@ -18,6 +18,7 @@ public class RevokeCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public RevokeCertificateRequestReasonEnum reason;
+
     public RevokeCertificateRequest withReason(RevokeCertificateRequestReasonEnum reason) {
         this.reason = reason;
         return this;
@@ -29,9 +30,11 @@ public class RevokeCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public RevokeCertificateRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public RevokeCertificateRequest(){}
 }

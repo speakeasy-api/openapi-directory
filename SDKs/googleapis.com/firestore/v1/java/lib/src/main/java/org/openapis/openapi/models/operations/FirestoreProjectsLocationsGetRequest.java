@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FirestoreProjectsLocationsGetRequest {
@@ -12,6 +13,7 @@ public class FirestoreProjectsLocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public FirestoreProjectsLocationsGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class FirestoreProjectsLocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public FirestoreProjectsLocationsGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class FirestoreProjectsLocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public FirestoreProjectsLocationsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class FirestoreProjectsLocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public FirestoreProjectsLocationsGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class FirestoreProjectsLocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public FirestoreProjectsLocationsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class FirestoreProjectsLocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public FirestoreProjectsLocationsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class FirestoreProjectsLocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mask.fieldPaths")
     public String[] maskFieldPaths;
+
     public FirestoreProjectsLocationsGetRequest withMaskFieldPaths(String[] maskFieldPaths) {
         this.maskFieldPaths = maskFieldPaths;
         return this;
@@ -82,6 +90,7 @@ public class FirestoreProjectsLocationsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public FirestoreProjectsLocationsGetRequest withName(String name) {
         this.name = name;
         return this;
@@ -92,6 +101,7 @@ public class FirestoreProjectsLocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public FirestoreProjectsLocationsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class FirestoreProjectsLocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public FirestoreProjectsLocationsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class FirestoreProjectsLocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public FirestoreProjectsLocationsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class FirestoreProjectsLocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=readTime")
     public String readTime;
+
     public FirestoreProjectsLocationsGetRequest withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
@@ -132,6 +145,7 @@ public class FirestoreProjectsLocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transaction")
     public String transaction;
+
     public FirestoreProjectsLocationsGetRequest withTransaction(String transaction) {
         this.transaction = transaction;
         return this;
@@ -142,6 +156,7 @@ public class FirestoreProjectsLocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public FirestoreProjectsLocationsGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,9 +167,13 @@ public class FirestoreProjectsLocationsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public FirestoreProjectsLocationsGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public FirestoreProjectsLocationsGetRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

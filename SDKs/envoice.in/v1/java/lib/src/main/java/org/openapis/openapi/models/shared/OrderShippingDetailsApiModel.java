@@ -17,6 +17,7 @@ public class OrderShippingDetailsApiModel {
     @JsonProperty("Address")
     @SpeakeasyMetadata("form:name=Address")
     public String address;
+
     public OrderShippingDetailsApiModel withAddress(String address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class OrderShippingDetailsApiModel {
     @JsonProperty("CountryId")
     @SpeakeasyMetadata("form:name=CountryId")
     public Integer countryId;
+
     public OrderShippingDetailsApiModel withCountryId(Integer countryId) {
         this.countryId = countryId;
         return this;
@@ -41,6 +43,7 @@ public class OrderShippingDetailsApiModel {
     @JsonProperty("Email")
     @SpeakeasyMetadata("form:name=Email")
     public String email;
+
     public OrderShippingDetailsApiModel withEmail(String email) {
         this.email = email;
         return this;
@@ -53,6 +56,7 @@ public class OrderShippingDetailsApiModel {
     @JsonProperty("Name")
     @SpeakeasyMetadata("form:name=Name")
     public String name;
+
     public OrderShippingDetailsApiModel withName(String name) {
         this.name = name;
         return this;
@@ -65,9 +69,11 @@ public class OrderShippingDetailsApiModel {
     @JsonProperty("PhoneNumber")
     @SpeakeasyMetadata("form:name=PhoneNumber")
     public String phoneNumber;
+
     public OrderShippingDetailsApiModel withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public OrderShippingDetailsApiModel(){}
 }

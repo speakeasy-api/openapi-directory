@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportTableResponse {
     
     public String contentType;
+
     public ImportTableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ImportTableResponse {
      */
     
     public Object importConflictException;
+
     public ImportTableResponse withImportConflictException(Object importConflictException) {
         this.importConflictException = importConflictException;
         return this;
@@ -29,6 +32,7 @@ public class ImportTableResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportTableOutput importTableOutput;
+
     public ImportTableResponse withImportTableOutput(org.openapis.openapi.models.shared.ImportTableOutput importTableOutput) {
         this.importTableOutput = importTableOutput;
         return this;
@@ -39,6 +43,7 @@ public class ImportTableResponse {
      */
     
     public Object limitExceededException;
+
     public ImportTableResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class ImportTableResponse {
      */
     
     public Object resourceInUseException;
+
     public ImportTableResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -56,6 +62,7 @@ public class ImportTableResponse {
     
     
     public Integer statusCode;
+
     public ImportTableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ImportTableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportTableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ImportTableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

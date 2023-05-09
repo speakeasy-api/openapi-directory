@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SignRequestRequest {
@@ -12,6 +13,7 @@ public class SignRequestRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/jwt")
     public byte[] requestBody;
+
     public SignRequestRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,13 @@ public class SignRequestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=test")
     public Long test;
+
     public SignRequestRequest withTest(Long test) {
         this.test = test;
         return this;
     }
     
+    public SignRequestRequest(@JsonProperty("RequestBody") byte[] requestBody) {
+        this.requestBody = requestBody;
+  }
 }

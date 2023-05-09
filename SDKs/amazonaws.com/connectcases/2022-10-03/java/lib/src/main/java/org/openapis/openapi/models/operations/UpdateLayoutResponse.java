@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateLayoutResponse {
@@ -12,6 +13,7 @@ public class UpdateLayoutResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateLayoutResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateLayoutResponse {
      */
     
     public Object conflictException;
+
     public UpdateLayoutResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateLayoutResponse {
     
     
     public String contentType;
+
     public UpdateLayoutResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateLayoutResponse {
      */
     
     public Object internalServerException;
+
     public UpdateLayoutResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateLayoutResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateLayoutResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateLayoutResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateLayoutResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateLayoutResponse {
     
     
     public Integer statusCode;
+
     public UpdateLayoutResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateLayoutResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateLayoutResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateLayoutResponse {
      */
     
     public Object throttlingException;
+
     public UpdateLayoutResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateLayoutResponse {
      */
     
     public java.util.Map<String, Object> updateLayoutResponse;
+
     public UpdateLayoutResponse withUpdateLayoutResponse(java.util.Map<String, Object> updateLayoutResponse) {
         this.updateLayoutResponse = updateLayoutResponse;
         return this;
@@ -103,9 +114,14 @@ public class UpdateLayoutResponse {
      */
     
     public Object validationException;
+
     public UpdateLayoutResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateLayoutResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

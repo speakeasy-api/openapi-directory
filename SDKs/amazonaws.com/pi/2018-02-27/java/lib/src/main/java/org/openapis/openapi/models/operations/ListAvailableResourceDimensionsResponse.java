@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAvailableResourceDimensionsResponse {
     
     public String contentType;
+
     public ListAvailableResourceDimensionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAvailableResourceDimensionsResponse {
      */
     
     public Object internalServiceError;
+
     public ListAvailableResourceDimensionsResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class ListAvailableResourceDimensionsResponse {
      */
     
     public Object invalidArgumentException;
+
     public ListAvailableResourceDimensionsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class ListAvailableResourceDimensionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAvailableResourceDimensionsResponse listAvailableResourceDimensionsResponse;
+
     public ListAvailableResourceDimensionsResponse withListAvailableResourceDimensionsResponse(org.openapis.openapi.models.shared.ListAvailableResourceDimensionsResponse listAvailableResourceDimensionsResponse) {
         this.listAvailableResourceDimensionsResponse = listAvailableResourceDimensionsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListAvailableResourceDimensionsResponse {
      */
     
     public Object notAuthorizedException;
+
     public ListAvailableResourceDimensionsResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class ListAvailableResourceDimensionsResponse {
     
     
     public Integer statusCode;
+
     public ListAvailableResourceDimensionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListAvailableResourceDimensionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAvailableResourceDimensionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAvailableResourceDimensionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

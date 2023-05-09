@@ -15,9 +15,11 @@ public class GetStudioSessionMappingOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionMapping")
     public SessionMappingDetail sessionMapping;
+
     public GetStudioSessionMappingOutput withSessionMapping(SessionMappingDetail sessionMapping) {
         this.sessionMapping = sessionMapping;
         return this;
     }
     
+    public GetStudioSessionMappingOutput(){}
 }

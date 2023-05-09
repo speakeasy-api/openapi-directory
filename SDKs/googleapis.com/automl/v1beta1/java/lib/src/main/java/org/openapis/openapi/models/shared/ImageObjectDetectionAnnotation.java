@@ -18,6 +18,7 @@ public class ImageObjectDetectionAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingBox")
     public BoundingPoly boundingBox;
+
     public ImageObjectDetectionAnnotation withBoundingBox(BoundingPoly boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -29,9 +30,11 @@ public class ImageObjectDetectionAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Float score;
+
     public ImageObjectDetectionAnnotation withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public ImageObjectDetectionAnnotation(){}
 }

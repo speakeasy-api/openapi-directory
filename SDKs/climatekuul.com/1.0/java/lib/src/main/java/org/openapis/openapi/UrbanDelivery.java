@@ -99,10 +99,8 @@ public class UrbanDelivery {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmCarbonOffsetResponse res = new org.openapis.openapi.models.operations.ConfirmCarbonOffsetResponse() {{
+        org.openapis.openapi.models.operations.ConfirmCarbonOffsetResponse res = new org.openapis.openapi.models.operations.ConfirmCarbonOffsetResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,10 +146,8 @@ public class UrbanDelivery {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmPaymentResponse res = new org.openapis.openapi.models.operations.ConfirmPaymentResponse() {{
+        org.openapis.openapi.models.operations.ConfirmPaymentResponse res = new org.openapis.openapi.models.operations.ConfirmPaymentResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,10 +193,8 @@ public class UrbanDelivery {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmPaymentOfTransactionResponse res = new org.openapis.openapi.models.operations.ConfirmPaymentOfTransactionResponse() {{
+        org.openapis.openapi.models.operations.ConfirmPaymentOfTransactionResponse res = new org.openapis.openapi.models.operations.ConfirmPaymentOfTransactionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -246,10 +240,8 @@ public class UrbanDelivery {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmsPlantingResponse res = new org.openapis.openapi.models.operations.ConfirmsPlantingResponse() {{
+        org.openapis.openapi.models.operations.ConfirmsPlantingResponse res = new org.openapis.openapi.models.operations.ConfirmsPlantingResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,10 +287,8 @@ public class UrbanDelivery {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UrbanDeliveryResponse res = new org.openapis.openapi.models.operations.UrbanDeliveryResponse() {{
+        org.openapis.openapi.models.operations.UrbanDeliveryResponse res = new org.openapis.openapi.models.operations.UrbanDeliveryResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

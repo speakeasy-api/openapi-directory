@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteGatewayResponse {
     
     public String contentType;
+
     public DeleteGatewayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteGatewayResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteGatewayOutput deleteGatewayOutput;
+
     public DeleteGatewayResponse withDeleteGatewayOutput(org.openapis.openapi.models.shared.DeleteGatewayOutput deleteGatewayOutput) {
         this.deleteGatewayOutput = deleteGatewayOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteGatewayResponse {
      */
     
     public Object internalServerException;
+
     public DeleteGatewayResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteGatewayResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteGatewayResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteGatewayResponse {
     
     
     public Integer statusCode;
+
     public DeleteGatewayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteGatewayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteGatewayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteGatewayResponse {
      */
     
     public Object throttlingException;
+
     public DeleteGatewayResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteGatewayResponse {
      */
     
     public Object validationException;
+
     public DeleteGatewayResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteGatewayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

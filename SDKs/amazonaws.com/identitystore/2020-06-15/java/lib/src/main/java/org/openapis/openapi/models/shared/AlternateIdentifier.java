@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * AlternateIdentifier - A unique identifier for a user or group that is not the primary identifier. This value can be an identifier from an external identity provider (IdP) that is associated with the user, the group, or a unique attribute. For example, a unique &lt;code&gt;GroupDisplayName&lt;/code&gt;.
+ * AlternateIdentifier - A unique identifier for a user or group that is not the primary identifier. This value can be an identifier from an external identity provider (IdP) that is associated with the user, the group, or a unique attribute.
  */
 public class AlternateIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalId")
     public ExternalId externalId;
+
     public AlternateIdentifier withExternalId(ExternalId externalId) {
         this.externalId = externalId;
         return this;
@@ -23,9 +24,11 @@ public class AlternateIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UniqueAttribute")
     public UniqueAttribute uniqueAttribute;
+
     public AlternateIdentifier withUniqueAttribute(UniqueAttribute uniqueAttribute) {
         this.uniqueAttribute = uniqueAttribute;
         return this;
     }
     
+    public AlternateIdentifier(){}
 }

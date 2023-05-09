@@ -17,6 +17,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("AccessChannels")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataAccessChannelsEnum[] accessChannels;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withAccessChannels(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataAccessChannelsEnum[] accessChannels) {
         this.accessChannels = accessChannels;
         return this;
@@ -27,6 +28,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("Benefits")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits benefits;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withBenefits(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits benefits) {
         this.benefits = benefits;
         return this;
@@ -34,6 +36,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     
     @JsonProperty("CAPricing")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCAPricing[] caPricing;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withCAPricing(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCAPricing[] caPricing) {
         this.caPricing = caPricing;
         return this;
@@ -45,6 +48,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CardNotes")
     public String cardNotes;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withCardNotes(String cardNotes) {
         this.cardNotes = cardNotes;
         return this;
@@ -55,6 +59,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("CardType")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCardTypeEnum[] cardType;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withCardType(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCardTypeEnum[] cardType) {
         this.cardType = cardType;
         return this;
@@ -65,6 +70,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("CardWithdrawalLimit")
     public String cardWithdrawalLimit;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withCardWithdrawalLimit(String cardWithdrawalLimit) {
         this.cardWithdrawalLimit = cardWithdrawalLimit;
         return this;
@@ -75,6 +81,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("ChequeBookAvailable")
     public Boolean chequeBookAvailable;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withChequeBookAvailable(Boolean chequeBookAvailable) {
         this.chequeBookAvailable = chequeBookAvailable;
         return this;
@@ -85,6 +92,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("Contactless")
     public Boolean contactless;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withContactless(Boolean contactless) {
         this.contactless = contactless;
         return this;
@@ -95,6 +103,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("CreditInterest")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterest creditInterest;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withCreditInterest(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterest creditInterest) {
         this.creditInterest = creditInterest;
         return this;
@@ -105,6 +114,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("CreditScoringPartOfAccountOpeningForGettingAnAccount")
     public Boolean creditScoringPartOfAccountOpeningForGettingAnAccount;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withCreditScoringPartOfAccountOpeningForGettingAnAccount(Boolean creditScoringPartOfAccountOpeningForGettingAnAccount) {
         this.creditScoringPartOfAccountOpeningForGettingAnAccount = creditScoringPartOfAccountOpeningForGettingAnAccount;
         return this;
@@ -116,6 +126,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreditScoringPartOfAccountOpeningForIDVerification")
     public Boolean creditScoringPartOfAccountOpeningForIDVerification;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withCreditScoringPartOfAccountOpeningForIDVerification(Boolean creditScoringPartOfAccountOpeningForIDVerification) {
         this.creditScoringPartOfAccountOpeningForIDVerification = creditScoringPartOfAccountOpeningForIDVerification;
         return this;
@@ -124,6 +135,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScore")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScoreEnum[] creditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScore;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withCreditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScore(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScoreEnum[] creditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScore) {
         this.creditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScore = creditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScore;
         return this;
@@ -135,6 +147,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreditScoringPartOfAccountOpeningIDVerificationText")
     public String[] creditScoringPartOfAccountOpeningIDVerificationText;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withCreditScoringPartOfAccountOpeningIDVerificationText(String[] creditScoringPartOfAccountOpeningIDVerificationText) {
         this.creditScoringPartOfAccountOpeningIDVerificationText = creditScoringPartOfAccountOpeningIDVerificationText;
         return this;
@@ -146,6 +159,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScore")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum[] creditScoringPartOfAccountOpeningIsAHardOrSoftCreditScore;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScore(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum[] creditScoringPartOfAccountOpeningIsAHardOrSoftCreditScore) {
         this.creditScoringPartOfAccountOpeningIsAHardOrSoftCreditScore = creditScoringPartOfAccountOpeningIsAHardOrSoftCreditScore;
         return this;
@@ -157,6 +171,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreditScoringPartOfAccountOpeningText")
     public String creditScoringPartOfAccountOpeningText;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withCreditScoringPartOfAccountOpeningText(String creditScoringPartOfAccountOpeningText) {
         this.creditScoringPartOfAccountOpeningText = creditScoringPartOfAccountOpeningText;
         return this;
@@ -167,6 +182,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("Currency")
     public String[] currency;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withCurrency(String[] currency) {
         this.currency = currency;
         return this;
@@ -177,6 +193,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("Eligibility")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility eligibility;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withEligibility(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility eligibility) {
         this.eligibility = eligibility;
         return this;
@@ -185,6 +202,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Feature")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeature[] feature;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withFeature(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeature[] feature) {
         this.feature = feature;
         return this;
@@ -192,6 +210,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     
     @JsonProperty("FeesAndCharges")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges[] feesAndCharges;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withFeesAndCharges(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges[] feesAndCharges) {
         this.feesAndCharges = feesAndCharges;
         return this;
@@ -202,6 +221,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("InternationalPaymentsSupported")
     public Boolean internationalPaymentsSupported;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withInternationalPaymentsSupported(Boolean internationalPaymentsSupported) {
         this.internationalPaymentsSupported = internationalPaymentsSupported;
         return this;
@@ -213,6 +233,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumMonthlyCharge")
     public String maximumMonthlyCharge;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withMaximumMonthlyCharge(String maximumMonthlyCharge) {
         this.maximumMonthlyCharge = maximumMonthlyCharge;
         return this;
@@ -224,6 +245,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MobileWallet")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataMobileWalletEnum[] mobileWallet;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withMobileWallet(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataMobileWalletEnum[] mobileWallet) {
         this.mobileWallet = mobileWallet;
         return this;
@@ -234,6 +256,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("Organisation")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation organisation;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withOrganisation(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation organisation) {
         this.organisation = organisation;
         return this;
@@ -242,6 +265,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Overdraft")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft[] overdraft;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withOverdraft(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOverdraft[] overdraft) {
         this.overdraft = overdraft;
         return this;
@@ -252,6 +276,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("OverdraftOffered")
     public Boolean overdraftOffered;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withOverdraftOffered(Boolean overdraftOffered) {
         this.overdraftOffered = overdraftOffered;
         return this;
@@ -262,6 +287,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("ProductDescription")
     public String productDescription;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withProductDescription(String productDescription) {
         this.productDescription = productDescription;
         return this;
@@ -272,6 +298,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("ProductIdentifier")
     public String productIdentifier;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withProductIdentifier(String productIdentifier) {
         this.productIdentifier = productIdentifier;
         return this;
@@ -283,6 +310,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductName")
     public String productName;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withProductName(String productName) {
         this.productName = productName;
         return this;
@@ -290,6 +318,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     
     @JsonProperty("ProductSegment")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum[] productSegment;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withProductSegment(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum[] productSegment) {
         this.productSegment = productSegment;
         return this;
@@ -300,6 +329,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("ProductType")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeEnum productType;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withProductType(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeEnum productType) {
         this.productType = productType;
         return this;
@@ -310,6 +340,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("ProductURL")
     public String[] productURL;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withProductURL(String[] productURL) {
         this.productURL = productURL;
         return this;
@@ -320,9 +351,33 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("TsandCs")
     public String[] tsandCs;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData withTsandCs(String[] tsandCs) {
         this.tsandCs = tsandCs;
         return this;
     }
     
+    public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonData(@JsonProperty("AccessChannels") GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataAccessChannelsEnum[] accessChannels, @JsonProperty("Benefits") GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits benefits, @JsonProperty("CAPricing") GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCAPricing[] caPricing, @JsonProperty("CardType") GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCardTypeEnum[] cardType, @JsonProperty("CardWithdrawalLimit") String cardWithdrawalLimit, @JsonProperty("ChequeBookAvailable") Boolean chequeBookAvailable, @JsonProperty("Contactless") Boolean contactless, @JsonProperty("CreditInterest") GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCreditInterest creditInterest, @JsonProperty("CreditScoringPartOfAccountOpeningForGettingAnAccount") Boolean creditScoringPartOfAccountOpeningForGettingAnAccount, @JsonProperty("Currency") String[] currency, @JsonProperty("Eligibility") GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility eligibility, @JsonProperty("FeesAndCharges") GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges[] feesAndCharges, @JsonProperty("InternationalPaymentsSupported") Boolean internationalPaymentsSupported, @JsonProperty("Organisation") GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation organisation, @JsonProperty("OverdraftOffered") Boolean overdraftOffered, @JsonProperty("ProductDescription") String productDescription, @JsonProperty("ProductIdentifier") String productIdentifier, @JsonProperty("ProductSegment") GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum[] productSegment, @JsonProperty("ProductType") GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeEnum productType, @JsonProperty("ProductURL") String[] productURL, @JsonProperty("TsandCs") String[] tsandCs) {
+        this.accessChannels = accessChannels;
+        this.benefits = benefits;
+        this.caPricing = caPricing;
+        this.cardType = cardType;
+        this.cardWithdrawalLimit = cardWithdrawalLimit;
+        this.chequeBookAvailable = chequeBookAvailable;
+        this.contactless = contactless;
+        this.creditInterest = creditInterest;
+        this.creditScoringPartOfAccountOpeningForGettingAnAccount = creditScoringPartOfAccountOpeningForGettingAnAccount;
+        this.currency = currency;
+        this.eligibility = eligibility;
+        this.feesAndCharges = feesAndCharges;
+        this.internationalPaymentsSupported = internationalPaymentsSupported;
+        this.organisation = organisation;
+        this.overdraftOffered = overdraftOffered;
+        this.productDescription = productDescription;
+        this.productIdentifier = productIdentifier;
+        this.productSegment = productSegment;
+        this.productType = productType;
+        this.productURL = productURL;
+        this.tsandCs = tsandCs;
+  }
 }

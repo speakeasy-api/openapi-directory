@@ -15,6 +15,7 @@ public class CurationDetail {
      */
     @JsonProperty("account_id")
     public Long accountId;
+
     public CurationDetail withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
@@ -25,6 +26,7 @@ public class CurationDetail {
      */
     @JsonProperty("article_id")
     public Long articleId;
+
     public CurationDetail withArticleId(Long articleId) {
         this.articleId = articleId;
         return this;
@@ -35,6 +37,7 @@ public class CurationDetail {
      */
     @JsonProperty("assigned_to")
     public Long assignedTo;
+
     public CurationDetail withAssignedTo(Long assignedTo) {
         this.assignedTo = assignedTo;
         return this;
@@ -45,6 +48,7 @@ public class CurationDetail {
      */
     @JsonProperty("comments_count")
     public Long commentsCount;
+
     public CurationDetail withCommentsCount(Long commentsCount) {
         this.commentsCount = commentsCount;
         return this;
@@ -55,6 +59,7 @@ public class CurationDetail {
      */
     @JsonProperty("created_date")
     public String createdDate;
+
     public CurationDetail withCreatedDate(String createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -65,6 +70,7 @@ public class CurationDetail {
      */
     @JsonProperty("group_id")
     public Long groupId;
+
     public CurationDetail withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -75,6 +81,7 @@ public class CurationDetail {
      */
     @JsonProperty("id")
     public Long id;
+
     public CurationDetail withId(Long id) {
         this.id = id;
         return this;
@@ -82,6 +89,7 @@ public class CurationDetail {
     
     @JsonProperty("item")
     public ArticleComplete item;
+
     public CurationDetail withItem(ArticleComplete item) {
         this.item = item;
         return this;
@@ -92,6 +100,7 @@ public class CurationDetail {
      */
     @JsonProperty("modified_date")
     public String modifiedDate;
+
     public CurationDetail withModifiedDate(String modifiedDate) {
         this.modifiedDate = modifiedDate;
         return this;
@@ -102,6 +111,7 @@ public class CurationDetail {
      */
     @JsonProperty("review_date")
     public String reviewDate;
+
     public CurationDetail withReviewDate(String reviewDate) {
         this.reviewDate = reviewDate;
         return this;
@@ -112,6 +122,7 @@ public class CurationDetail {
      */
     @JsonProperty("status")
     public CurationDetailStatusEnum status;
+
     public CurationDetail withStatus(CurationDetailStatusEnum status) {
         this.status = status;
         return this;
@@ -122,9 +133,24 @@ public class CurationDetail {
      */
     @JsonProperty("version")
     public Long version;
+
     public CurationDetail withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public CurationDetail(@JsonProperty("account_id") Long accountId, @JsonProperty("article_id") Long articleId, @JsonProperty("assigned_to") Long assignedTo, @JsonProperty("comments_count") Long commentsCount, @JsonProperty("created_date") String createdDate, @JsonProperty("group_id") Long groupId, @JsonProperty("id") Long id, @JsonProperty("item") ArticleComplete item, @JsonProperty("modified_date") String modifiedDate, @JsonProperty("review_date") String reviewDate, @JsonProperty("status") CurationDetailStatusEnum status, @JsonProperty("version") Long version) {
+        this.accountId = accountId;
+        this.articleId = articleId;
+        this.assignedTo = assignedTo;
+        this.commentsCount = commentsCount;
+        this.createdDate = createdDate;
+        this.groupId = groupId;
+        this.id = id;
+        this.item = item;
+        this.modifiedDate = modifiedDate;
+        this.reviewDate = reviewDate;
+        this.status = status;
+        this.version = version;
+  }
 }

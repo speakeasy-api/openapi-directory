@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1ListTelemetryEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleChromeManagementV1ListTelemetryEventsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromeManagementV1ListTelemetryEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telemetryEvents")
     public GoogleChromeManagementV1TelemetryEvent[] telemetryEvents;
+
     public GoogleChromeManagementV1ListTelemetryEventsResponse withTelemetryEvents(GoogleChromeManagementV1TelemetryEvent[] telemetryEvents) {
         this.telemetryEvents = telemetryEvents;
         return this;
     }
     
+    public GoogleChromeManagementV1ListTelemetryEventsResponse(){}
 }

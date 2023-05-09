@@ -12,6 +12,7 @@ public class UpdateConstraintInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public UpdateConstraintInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class UpdateConstraintInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateConstraintInput withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class UpdateConstraintInput {
     
     @JsonProperty("Id")
     public String id;
+
     public UpdateConstraintInput withId(String id) {
         this.id = id;
         return this;
@@ -35,9 +38,13 @@ public class UpdateConstraintInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public String parameters;
+
     public UpdateConstraintInput withParameters(String parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public UpdateConstraintInput(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

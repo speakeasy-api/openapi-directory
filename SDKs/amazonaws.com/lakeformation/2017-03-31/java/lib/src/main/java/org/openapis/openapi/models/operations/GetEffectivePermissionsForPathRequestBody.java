@@ -15,6 +15,7 @@ public class GetEffectivePermissionsForPathRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetEffectivePermissionsForPathRequestBody withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -26,6 +27,7 @@ public class GetEffectivePermissionsForPathRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetEffectivePermissionsForPathRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class GetEffectivePermissionsForPathRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetEffectivePermissionsForPathRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -47,9 +50,13 @@ public class GetEffectivePermissionsForPathRequestBody {
      */
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public GetEffectivePermissionsForPathRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public GetEffectivePermissionsForPathRequestBody(@JsonProperty("ResourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

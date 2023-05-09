@@ -18,6 +18,7 @@ public class AccountsCustomBatchRequestEntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public AccountInput account;
+
     public AccountsCustomBatchRequestEntryInput withAccount(AccountInput account) {
         this.account = account;
         return this;
@@ -29,6 +30,7 @@ public class AccountsCustomBatchRequestEntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public AccountsCustomBatchRequestEntryInput withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -40,6 +42,7 @@ public class AccountsCustomBatchRequestEntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchId")
     public Long batchId;
+
     public AccountsCustomBatchRequestEntryInput withBatchId(Long batchId) {
         this.batchId = batchId;
         return this;
@@ -51,6 +54,7 @@ public class AccountsCustomBatchRequestEntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("force")
     public Boolean force;
+
     public AccountsCustomBatchRequestEntryInput withForce(Boolean force) {
         this.force = force;
         return this;
@@ -62,6 +66,7 @@ public class AccountsCustomBatchRequestEntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelIds")
     public String[] labelIds;
+
     public AccountsCustomBatchRequestEntryInput withLabelIds(String[] labelIds) {
         this.labelIds = labelIds;
         return this;
@@ -70,6 +75,7 @@ public class AccountsCustomBatchRequestEntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkRequest")
     public AccountsCustomBatchRequestEntryLinkRequest linkRequest;
+
     public AccountsCustomBatchRequestEntryInput withLinkRequest(AccountsCustomBatchRequestEntryLinkRequest linkRequest) {
         this.linkRequest = linkRequest;
         return this;
@@ -81,6 +87,7 @@ public class AccountsCustomBatchRequestEntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantId")
     public String merchantId;
+
     public AccountsCustomBatchRequestEntryInput withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -92,6 +99,7 @@ public class AccountsCustomBatchRequestEntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public String method;
+
     public AccountsCustomBatchRequestEntryInput withMethod(String method) {
         this.method = method;
         return this;
@@ -103,6 +111,7 @@ public class AccountsCustomBatchRequestEntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overwrite")
     public Boolean overwrite;
+
     public AccountsCustomBatchRequestEntryInput withOverwrite(Boolean overwrite) {
         this.overwrite = overwrite;
         return this;
@@ -114,9 +123,11 @@ public class AccountsCustomBatchRequestEntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("view")
     public String view;
+
     public AccountsCustomBatchRequestEntryInput withView(String view) {
         this.view = view;
         return this;
     }
     
+    public AccountsCustomBatchRequestEntryInput(){}
 }

@@ -15,6 +15,7 @@ public class BatchDescribeSimulationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobs")
     public SimulationJob[] jobs;
+
     public BatchDescribeSimulationJobResponse withJobs(SimulationJob[] jobs) {
         this.jobs = jobs;
         return this;
@@ -23,9 +24,11 @@ public class BatchDescribeSimulationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unprocessedJobs")
     public String[] unprocessedJobs;
+
     public BatchDescribeSimulationJobResponse withUnprocessedJobs(String[] unprocessedJobs) {
         this.unprocessedJobs = unprocessedJobs;
         return this;
     }
     
+    public BatchDescribeSimulationJobResponse(){}
 }

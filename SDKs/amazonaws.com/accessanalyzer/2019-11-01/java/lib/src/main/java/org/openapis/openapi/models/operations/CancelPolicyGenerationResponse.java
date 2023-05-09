@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelPolicyGenerationResponse {
@@ -12,6 +13,7 @@ public class CancelPolicyGenerationResponse {
      */
     
     public Object accessDeniedException;
+
     public CancelPolicyGenerationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CancelPolicyGenerationResponse {
      */
     
     public java.util.Map<String, Object> cancelPolicyGenerationResponse;
+
     public CancelPolicyGenerationResponse withCancelPolicyGenerationResponse(java.util.Map<String, Object> cancelPolicyGenerationResponse) {
         this.cancelPolicyGenerationResponse = cancelPolicyGenerationResponse;
         return this;
@@ -29,6 +32,7 @@ public class CancelPolicyGenerationResponse {
     
     
     public String contentType;
+
     public CancelPolicyGenerationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CancelPolicyGenerationResponse {
      */
     
     public Object internalServerException;
+
     public CancelPolicyGenerationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class CancelPolicyGenerationResponse {
     
     
     public Integer statusCode;
+
     public CancelPolicyGenerationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CancelPolicyGenerationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelPolicyGenerationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CancelPolicyGenerationResponse {
      */
     
     public Object throttlingException;
+
     public CancelPolicyGenerationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class CancelPolicyGenerationResponse {
      */
     
     public Object validationException;
+
     public CancelPolicyGenerationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CancelPolicyGenerationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1DataplexTableSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataplexSpec")
     public GoogleCloudDatacatalogV1DataplexSpec dataplexSpec;
+
     public GoogleCloudDatacatalogV1DataplexTableSpec withDataplexSpec(GoogleCloudDatacatalogV1DataplexSpec dataplexSpec) {
         this.dataplexSpec = dataplexSpec;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1DataplexTableSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalTables")
     public GoogleCloudDatacatalogV1DataplexExternalTable[] externalTables;
+
     public GoogleCloudDatacatalogV1DataplexTableSpec withExternalTables(GoogleCloudDatacatalogV1DataplexExternalTable[] externalTables) {
         this.externalTables = externalTables;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatacatalogV1DataplexTableSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userManaged")
     public Boolean userManaged;
+
     public GoogleCloudDatacatalogV1DataplexTableSpec withUserManaged(Boolean userManaged) {
         this.userManaged = userManaged;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1DataplexTableSpec(){}
 }

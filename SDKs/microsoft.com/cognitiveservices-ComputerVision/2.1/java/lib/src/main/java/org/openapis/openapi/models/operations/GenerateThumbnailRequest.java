@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateThumbnailRequest {
@@ -12,6 +13,7 @@ public class GenerateThumbnailRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ImageUrl imageUrl;
+
     public GenerateThumbnailRequest withImageUrl(org.openapis.openapi.models.shared.ImageUrl imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -22,6 +24,7 @@ public class GenerateThumbnailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height")
     public Integer height;
+
     public GenerateThumbnailRequest withHeight(Integer height) {
         this.height = height;
         return this;
@@ -32,6 +35,7 @@ public class GenerateThumbnailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=smartCropping")
     public Boolean smartCropping;
+
     public GenerateThumbnailRequest withSmartCropping(Boolean smartCropping) {
         this.smartCropping = smartCropping;
         return this;
@@ -42,9 +46,15 @@ public class GenerateThumbnailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
     public Integer width;
+
     public GenerateThumbnailRequest withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public GenerateThumbnailRequest(@JsonProperty("ImageUrl") org.openapis.openapi.models.shared.ImageUrl imageUrl, @JsonProperty("height") Integer height, @JsonProperty("width") Integer width) {
+        this.imageUrl = imageUrl;
+        this.height = height;
+        this.width = width;
+  }
 }

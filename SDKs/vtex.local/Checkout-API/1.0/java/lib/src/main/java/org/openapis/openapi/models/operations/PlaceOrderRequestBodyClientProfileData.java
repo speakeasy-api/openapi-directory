@@ -22,6 +22,7 @@ public class PlaceOrderRequestBodyClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corporateDocument")
     public String corporateDocument;
+
     public PlaceOrderRequestBodyClientProfileData withCorporateDocument(String corporateDocument) {
         this.corporateDocument = corporateDocument;
         return this;
@@ -33,6 +34,7 @@ public class PlaceOrderRequestBodyClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corporateName")
     public String corporateName;
+
     public PlaceOrderRequestBodyClientProfileData withCorporateName(String corporateName) {
         this.corporateName = corporateName;
         return this;
@@ -44,6 +46,7 @@ public class PlaceOrderRequestBodyClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corporatePhone")
     public String corporatePhone;
+
     public PlaceOrderRequestBodyClientProfileData withCorporatePhone(String corporatePhone) {
         this.corporatePhone = corporatePhone;
         return this;
@@ -55,6 +58,7 @@ public class PlaceOrderRequestBodyClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public String document;
+
     public PlaceOrderRequestBodyClientProfileData withDocument(String document) {
         this.document = document;
         return this;
@@ -66,6 +70,7 @@ public class PlaceOrderRequestBodyClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentType")
     public String documentType;
+
     public PlaceOrderRequestBodyClientProfileData withDocumentType(String documentType) {
         this.documentType = documentType;
         return this;
@@ -76,6 +81,7 @@ public class PlaceOrderRequestBodyClientProfileData {
      */
     @JsonProperty("email")
     public String email;
+
     public PlaceOrderRequestBodyClientProfileData withEmail(String email) {
         this.email = email;
         return this;
@@ -87,6 +93,7 @@ public class PlaceOrderRequestBodyClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public PlaceOrderRequestBodyClientProfileData withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -98,6 +105,7 @@ public class PlaceOrderRequestBodyClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCorporate")
     public Boolean isCorporate;
+
     public PlaceOrderRequestBodyClientProfileData withIsCorporate(Boolean isCorporate) {
         this.isCorporate = isCorporate;
         return this;
@@ -109,6 +117,7 @@ public class PlaceOrderRequestBodyClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public PlaceOrderRequestBodyClientProfileData withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -120,6 +129,7 @@ public class PlaceOrderRequestBodyClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public PlaceOrderRequestBodyClientProfileData withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -131,6 +141,7 @@ public class PlaceOrderRequestBodyClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateInscription")
     public String stateInscription;
+
     public PlaceOrderRequestBodyClientProfileData withStateInscription(String stateInscription) {
         this.stateInscription = stateInscription;
         return this;
@@ -142,9 +153,13 @@ public class PlaceOrderRequestBodyClientProfileData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tradeName")
     public String tradeName;
+
     public PlaceOrderRequestBodyClientProfileData withTradeName(String tradeName) {
         this.tradeName = tradeName;
         return this;
     }
     
+    public PlaceOrderRequestBodyClientProfileData(@JsonProperty("email") String email) {
+        this.email = email;
+  }
 }

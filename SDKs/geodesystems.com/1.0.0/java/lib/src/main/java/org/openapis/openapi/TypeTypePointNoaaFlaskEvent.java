@@ -57,10 +57,8 @@ public class TypeTypePointNoaaFlaskEvent {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTypePointNoaaFlaskEventResponse res = new org.openapis.openapi.models.operations.SearchTypePointNoaaFlaskEventResponse() {{
+        org.openapis.openapi.models.operations.SearchTypePointNoaaFlaskEventResponse res = new org.openapis.openapi.models.operations.SearchTypePointNoaaFlaskEventResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

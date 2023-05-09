@@ -50,14 +50,12 @@ public class SmartMeDeviceConfiguration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SmartMeDeviceConfigurationGetResponse res = new org.openapis.openapi.models.operations.SmartMeDeviceConfigurationGetResponse() {{
+        org.openapis.openapi.models.operations.SmartMeDeviceConfigurationGetResponse res = new org.openapis.openapi.models.operations.SmartMeDeviceConfigurationGetResponse(contentType, httpRes.statusCode()) {{
             smartMeDeviceConfigurationContainer = null;
             smartMeDeviceConfigurationContainer = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,10 +107,8 @@ public class SmartMeDeviceConfiguration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SmartMeDeviceConfigurationPostFormResponse res = new org.openapis.openapi.models.operations.SmartMeDeviceConfigurationPostFormResponse() {{
+        org.openapis.openapi.models.operations.SmartMeDeviceConfigurationPostFormResponse res = new org.openapis.openapi.models.operations.SmartMeDeviceConfigurationPostFormResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -146,10 +142,8 @@ public class SmartMeDeviceConfiguration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SmartMeDeviceConfigurationPostJsonResponse res = new org.openapis.openapi.models.operations.SmartMeDeviceConfigurationPostJsonResponse() {{
+        org.openapis.openapi.models.operations.SmartMeDeviceConfigurationPostJsonResponse res = new org.openapis.openapi.models.operations.SmartMeDeviceConfigurationPostJsonResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -183,10 +177,8 @@ public class SmartMeDeviceConfiguration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SmartMeDeviceConfigurationPostRawResponse res = new org.openapis.openapi.models.operations.SmartMeDeviceConfigurationPostRawResponse() {{
+        org.openapis.openapi.models.operations.SmartMeDeviceConfigurationPostRawResponse res = new org.openapis.openapi.models.operations.SmartMeDeviceConfigurationPostRawResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

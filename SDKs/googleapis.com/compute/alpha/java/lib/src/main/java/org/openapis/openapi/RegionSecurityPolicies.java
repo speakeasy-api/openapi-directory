@@ -61,11 +61,9 @@ public class RegionSecurityPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesAddRuleResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesAddRuleResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesAddRuleResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesAddRuleResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class RegionSecurityPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class RegionSecurityPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetResponse(contentType, httpRes.statusCode()) {{
             securityPolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class RegionSecurityPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetRuleResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetRuleResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetRuleResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetRuleResponse(contentType, httpRes.statusCode()) {{
             securityPolicyRule = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class RegionSecurityPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class RegionSecurityPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesListResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesListResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesListResponse(contentType, httpRes.statusCode()) {{
             securityPolicyList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class RegionSecurityPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -389,11 +375,9 @@ public class RegionSecurityPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchRuleResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchRuleResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchRuleResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchRuleResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -435,11 +419,9 @@ public class RegionSecurityPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesRemoveRuleResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesRemoveRuleResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesRemoveRuleResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesRemoveRuleResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

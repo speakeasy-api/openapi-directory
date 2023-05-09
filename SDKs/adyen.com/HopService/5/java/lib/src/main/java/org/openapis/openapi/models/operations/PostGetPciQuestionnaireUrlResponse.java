@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostGetPciQuestionnaireUrlResponse {
     
     public String contentType;
+
     public PostGetPciQuestionnaireUrlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostGetPciQuestionnaireUrlResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPciUrlResponse getPciUrlResponse;
+
     public PostGetPciQuestionnaireUrlResponse withGetPciUrlResponse(org.openapis.openapi.models.shared.GetPciUrlResponse getPciUrlResponse) {
         this.getPciUrlResponse = getPciUrlResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostGetPciQuestionnaireUrlResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostGetPciQuestionnaireUrlResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class PostGetPciQuestionnaireUrlResponse {
     
     
     public Integer statusCode;
+
     public PostGetPciQuestionnaireUrlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostGetPciQuestionnaireUrlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostGetPciQuestionnaireUrlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostGetPciQuestionnaireUrlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

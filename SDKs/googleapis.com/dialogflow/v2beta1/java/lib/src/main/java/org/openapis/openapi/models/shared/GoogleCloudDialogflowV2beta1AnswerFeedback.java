@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1AnswerFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentAssistantDetailFeedback")
     public GoogleCloudDialogflowV2beta1AgentAssistantFeedback agentAssistantDetailFeedback;
+
     public GoogleCloudDialogflowV2beta1AnswerFeedback withAgentAssistantDetailFeedback(GoogleCloudDialogflowV2beta1AgentAssistantFeedback agentAssistantDetailFeedback) {
         this.agentAssistantDetailFeedback = agentAssistantDetailFeedback;
         return this;
@@ -29,17 +30,19 @@ public class GoogleCloudDialogflowV2beta1AnswerFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickTime")
     public String clickTime;
+
     public GoogleCloudDialogflowV2beta1AnswerFeedback withClickTime(String clickTime) {
         this.clickTime = clickTime;
         return this;
     }
     
     /**
-     * Indicates whether the answer/item was clicked by the human agent or not. Default to false.
+     * Indicates whether the answer/item was clicked by the human agent or not. Default to false. For knowledge search, the answer record is considered to be clicked if the answer was copied or any URI was clicked.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clicked")
     public Boolean clicked;
+
     public GoogleCloudDialogflowV2beta1AnswerFeedback withClicked(Boolean clicked) {
         this.clicked = clicked;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1AnswerFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("correctnessLevel")
     public GoogleCloudDialogflowV2beta1AnswerFeedbackCorrectnessLevelEnum correctnessLevel;
+
     public GoogleCloudDialogflowV2beta1AnswerFeedback withCorrectnessLevel(GoogleCloudDialogflowV2beta1AnswerFeedbackCorrectnessLevelEnum correctnessLevel) {
         this.correctnessLevel = correctnessLevel;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2beta1AnswerFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayTime")
     public String displayTime;
+
     public GoogleCloudDialogflowV2beta1AnswerFeedback withDisplayTime(String displayTime) {
         this.displayTime = displayTime;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowV2beta1AnswerFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayed")
     public Boolean displayed;
+
     public GoogleCloudDialogflowV2beta1AnswerFeedback withDisplayed(Boolean displayed) {
         this.displayed = displayed;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1AnswerFeedback(){}
 }

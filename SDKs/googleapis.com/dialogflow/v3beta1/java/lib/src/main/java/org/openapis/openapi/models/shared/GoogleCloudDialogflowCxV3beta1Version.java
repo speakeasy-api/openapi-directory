@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDialogflowCxV3beta1Version withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowCxV3beta1Version withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3beta1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowCxV3beta1Version withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3beta1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowCxV3beta1Version withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3beta1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nluSettings")
     public GoogleCloudDialogflowCxV3beta1NluSettings nluSettings;
+
     public GoogleCloudDialogflowCxV3beta1Version withNluSettings(GoogleCloudDialogflowCxV3beta1NluSettings nluSettings) {
         this.nluSettings = nluSettings;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowCxV3beta1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDialogflowCxV3beta1VersionStateEnum state;
+
     public GoogleCloudDialogflowCxV3beta1Version withState(GoogleCloudDialogflowCxV3beta1VersionStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1Version(){}
 }

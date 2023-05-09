@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetTableRestoreStatusRequest {
     @JsonProperty("tableRestoreRequestId")
     public String tableRestoreRequestId;
+
     public GetTableRestoreStatusRequest withTableRestoreRequestId(String tableRestoreRequestId) {
         this.tableRestoreRequestId = tableRestoreRequestId;
         return this;
     }
     
+    public GetTableRestoreStatusRequest(@JsonProperty("tableRestoreRequestId") String tableRestoreRequestId) {
+        this.tableRestoreRequestId = tableRestoreRequestId;
+  }
 }

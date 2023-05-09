@@ -18,6 +18,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigTableDetails")
     public BigTableIODetails[] bigTableDetails;
+
     public JobMetadata withBigTableDetails(BigTableIODetails[] bigTableDetails) {
         this.bigTableDetails = bigTableDetails;
         return this;
@@ -29,6 +30,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigqueryDetails")
     public BigQueryIODetails[] bigqueryDetails;
+
     public JobMetadata withBigqueryDetails(BigQueryIODetails[] bigqueryDetails) {
         this.bigqueryDetails = bigqueryDetails;
         return this;
@@ -40,6 +42,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datastoreDetails")
     public DatastoreIODetails[] datastoreDetails;
+
     public JobMetadata withDatastoreDetails(DatastoreIODetails[] datastoreDetails) {
         this.datastoreDetails = datastoreDetails;
         return this;
@@ -51,6 +54,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileDetails")
     public FileIODetails[] fileDetails;
+
     public JobMetadata withFileDetails(FileIODetails[] fileDetails) {
         this.fileDetails = fileDetails;
         return this;
@@ -62,6 +66,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubsubDetails")
     public PubSubIODetails[] pubsubDetails;
+
     public JobMetadata withPubsubDetails(PubSubIODetails[] pubsubDetails) {
         this.pubsubDetails = pubsubDetails;
         return this;
@@ -73,6 +78,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdkVersion")
     public SDKVersion sdkVersion;
+
     public JobMetadata withSDKVersion(SDKVersion sdkVersion) {
         this.sdkVersion = sdkVersion;
         return this;
@@ -84,6 +90,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spannerDetails")
     public SpannerIODetails[] spannerDetails;
+
     public JobMetadata withSpannerDetails(SpannerIODetails[] spannerDetails) {
         this.spannerDetails = spannerDetails;
         return this;
@@ -95,9 +102,11 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userDisplayProperties")
     public java.util.Map<String, String> userDisplayProperties;
+
     public JobMetadata withUserDisplayProperties(java.util.Map<String, String> userDisplayProperties) {
         this.userDisplayProperties = userDisplayProperties;
         return this;
     }
     
+    public JobMetadata(){}
 }

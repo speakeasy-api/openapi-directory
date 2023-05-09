@@ -15,6 +15,7 @@ public class StopBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public StopBotRecommendationResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -23,6 +24,7 @@ public class StopBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botRecommendationId")
     public String botRecommendationId;
+
     public StopBotRecommendationResponse withBotRecommendationId(String botRecommendationId) {
         this.botRecommendationId = botRecommendationId;
         return this;
@@ -31,6 +33,7 @@ public class StopBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botRecommendationStatus")
     public BotRecommendationStatusEnum botRecommendationStatus;
+
     public StopBotRecommendationResponse withBotRecommendationStatus(BotRecommendationStatusEnum botRecommendationStatus) {
         this.botRecommendationStatus = botRecommendationStatus;
         return this;
@@ -39,6 +42,7 @@ public class StopBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public StopBotRecommendationResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -47,9 +51,11 @@ public class StopBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public StopBotRecommendationResponse withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
     }
     
+    public StopBotRecommendationResponse(){}
 }

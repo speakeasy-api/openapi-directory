@@ -21,6 +21,7 @@ public class OBWriteFileConsent3DataInitiationRemittanceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reference")
     public String reference;
+
     public OBWriteFileConsent3DataInitiationRemittanceInformation withReference(String reference) {
         this.reference = reference;
         return this;
@@ -32,9 +33,11 @@ public class OBWriteFileConsent3DataInitiationRemittanceInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unstructured")
     public String unstructured;
+
     public OBWriteFileConsent3DataInitiationRemittanceInformation withUnstructured(String unstructured) {
         this.unstructured = unstructured;
         return this;
     }
     
+    public OBWriteFileConsent3DataInitiationRemittanceInformation(){}
 }

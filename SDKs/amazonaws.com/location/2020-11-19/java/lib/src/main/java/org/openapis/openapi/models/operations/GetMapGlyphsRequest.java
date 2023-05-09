@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMapGlyphsRequest {
@@ -12,6 +13,7 @@ public class GetMapGlyphsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FontStack")
     public String fontStack;
+
     public GetMapGlyphsRequest withFontStack(String fontStack) {
         this.fontStack = fontStack;
         return this;
@@ -22,6 +24,7 @@ public class GetMapGlyphsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FontUnicodeRange")
     public String fontUnicodeRange;
+
     public GetMapGlyphsRequest withFontUnicodeRange(String fontUnicodeRange) {
         this.fontUnicodeRange = fontUnicodeRange;
         return this;
@@ -32,6 +35,7 @@ public class GetMapGlyphsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MapName")
     public String mapName;
+
     public GetMapGlyphsRequest withMapName(String mapName) {
         this.mapName = mapName;
         return this;
@@ -39,6 +43,7 @@ public class GetMapGlyphsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetMapGlyphsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -46,6 +51,7 @@ public class GetMapGlyphsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetMapGlyphsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -53,6 +59,7 @@ public class GetMapGlyphsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetMapGlyphsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -60,6 +67,7 @@ public class GetMapGlyphsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetMapGlyphsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -67,6 +75,7 @@ public class GetMapGlyphsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetMapGlyphsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -74,6 +83,7 @@ public class GetMapGlyphsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetMapGlyphsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -81,6 +91,7 @@ public class GetMapGlyphsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetMapGlyphsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -91,9 +102,15 @@ public class GetMapGlyphsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public GetMapGlyphsRequest withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public GetMapGlyphsRequest(@JsonProperty("FontStack") String fontStack, @JsonProperty("FontUnicodeRange") String fontUnicodeRange, @JsonProperty("MapName") String mapName) {
+        this.fontStack = fontStack;
+        this.fontUnicodeRange = fontUnicodeRange;
+        this.mapName = mapName;
+  }
 }

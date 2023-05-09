@@ -15,9 +15,11 @@ public class ReposAddCollaboratorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public String permission;
+
     public ReposAddCollaboratorRequestBody withPermission(String permission) {
         this.permission = permission;
         return this;
     }
     
+    public ReposAddCollaboratorRequestBody(){}
 }

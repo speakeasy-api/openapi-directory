@@ -18,6 +18,7 @@ public class ServerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channels")
     public ReleaseChannelConfig[] channels;
+
     public ServerConfig withChannels(ReleaseChannelConfig[] channels) {
         this.channels = channels;
         return this;
@@ -29,6 +30,7 @@ public class ServerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultClusterVersion")
     public String defaultClusterVersion;
+
     public ServerConfig withDefaultClusterVersion(String defaultClusterVersion) {
         this.defaultClusterVersion = defaultClusterVersion;
         return this;
@@ -40,6 +42,7 @@ public class ServerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultImageType")
     public String defaultImageType;
+
     public ServerConfig withDefaultImageType(String defaultImageType) {
         this.defaultImageType = defaultImageType;
         return this;
@@ -51,6 +54,7 @@ public class ServerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validImageTypes")
     public String[] validImageTypes;
+
     public ServerConfig withValidImageTypes(String[] validImageTypes) {
         this.validImageTypes = validImageTypes;
         return this;
@@ -62,6 +66,7 @@ public class ServerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validMasterVersions")
     public String[] validMasterVersions;
+
     public ServerConfig withValidMasterVersions(String[] validMasterVersions) {
         this.validMasterVersions = validMasterVersions;
         return this;
@@ -73,6 +78,7 @@ public class ServerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validNodeVersions")
     public String[] validNodeVersions;
+
     public ServerConfig withValidNodeVersions(String[] validNodeVersions) {
         this.validNodeVersions = validNodeVersions;
         return this;
@@ -84,9 +90,11 @@ public class ServerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windowsVersionMaps")
     public java.util.Map<String, WindowsVersions> windowsVersionMaps;
+
     public ServerConfig withWindowsVersionMaps(java.util.Map<String, WindowsVersions> windowsVersionMaps) {
         this.windowsVersionMaps = windowsVersionMaps;
         return this;
     }
     
+    public ServerConfig(){}
 }

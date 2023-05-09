@@ -15,6 +15,7 @@ public class EndpointSendConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BodyOverride")
     public String bodyOverride;
+
     public EndpointSendConfiguration withBodyOverride(String bodyOverride) {
         this.bodyOverride = bodyOverride;
         return this;
@@ -23,6 +24,7 @@ public class EndpointSendConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Context")
     public java.util.Map<String, String> context;
+
     public EndpointSendConfiguration withContext(java.util.Map<String, String> context) {
         this.context = context;
         return this;
@@ -31,6 +33,7 @@ public class EndpointSendConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RawContent")
     public String rawContent;
+
     public EndpointSendConfiguration withRawContent(String rawContent) {
         this.rawContent = rawContent;
         return this;
@@ -39,6 +42,7 @@ public class EndpointSendConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Substitutions")
     public java.util.Map<String, String[]> substitutions;
+
     public EndpointSendConfiguration withSubstitutions(java.util.Map<String, String[]> substitutions) {
         this.substitutions = substitutions;
         return this;
@@ -47,9 +51,11 @@ public class EndpointSendConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TitleOverride")
     public String titleOverride;
+
     public EndpointSendConfiguration withTitleOverride(String titleOverride) {
         this.titleOverride = titleOverride;
         return this;
     }
     
+    public EndpointSendConfiguration(){}
 }

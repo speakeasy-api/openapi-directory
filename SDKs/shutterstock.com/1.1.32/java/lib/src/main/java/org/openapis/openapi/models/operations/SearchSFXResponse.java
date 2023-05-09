@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchSFXResponse {
     
     public String contentType;
+
     public SearchSFXResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SearchSFXResponse {
      */
     
     public org.openapis.openapi.models.shared.SFXSearchResults sfxSearchResults;
+
     public SearchSFXResponse withSFXSearchResults(org.openapis.openapi.models.shared.SFXSearchResults sfxSearchResults) {
         this.sfxSearchResults = sfxSearchResults;
         return this;
@@ -26,6 +29,7 @@ public class SearchSFXResponse {
     
     
     public Integer statusCode;
+
     public SearchSFXResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SearchSFXResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchSFXResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SearchSFXResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

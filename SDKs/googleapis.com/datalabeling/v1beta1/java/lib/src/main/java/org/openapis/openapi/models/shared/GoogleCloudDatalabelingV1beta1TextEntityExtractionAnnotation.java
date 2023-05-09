@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1TextEntityExtractionAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSpec")
     public GoogleCloudDatalabelingV1beta1AnnotationSpec annotationSpec;
+
     public GoogleCloudDatalabelingV1beta1TextEntityExtractionAnnotation withAnnotationSpec(GoogleCloudDatalabelingV1beta1AnnotationSpec annotationSpec) {
         this.annotationSpec = annotationSpec;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1TextEntityExtractionAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sequentialSegment")
     public GoogleCloudDatalabelingV1beta1SequentialSegment sequentialSegment;
+
     public GoogleCloudDatalabelingV1beta1TextEntityExtractionAnnotation withSequentialSegment(GoogleCloudDatalabelingV1beta1SequentialSegment sequentialSegment) {
         this.sequentialSegment = sequentialSegment;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1TextEntityExtractionAnnotation(){}
 }

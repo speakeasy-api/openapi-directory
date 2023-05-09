@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBranchesResponse {
     
     public String contentType;
+
     public ListBranchesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListBranchesResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public ListBranchesResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -29,6 +32,7 @@ public class ListBranchesResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public ListBranchesResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -39,6 +43,7 @@ public class ListBranchesResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public ListBranchesResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -49,6 +54,7 @@ public class ListBranchesResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public ListBranchesResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListBranchesResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public ListBranchesResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -69,6 +76,7 @@ public class ListBranchesResponse {
      */
     
     public Object invalidContinuationTokenException;
+
     public ListBranchesResponse withInvalidContinuationTokenException(Object invalidContinuationTokenException) {
         this.invalidContinuationTokenException = invalidContinuationTokenException;
         return this;
@@ -79,6 +87,7 @@ public class ListBranchesResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public ListBranchesResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -89,6 +98,7 @@ public class ListBranchesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBranchesOutput listBranchesOutput;
+
     public ListBranchesResponse withListBranchesOutput(org.openapis.openapi.models.shared.ListBranchesOutput listBranchesOutput) {
         this.listBranchesOutput = listBranchesOutput;
         return this;
@@ -99,6 +109,7 @@ public class ListBranchesResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public ListBranchesResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -109,6 +120,7 @@ public class ListBranchesResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public ListBranchesResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -116,6 +128,7 @@ public class ListBranchesResponse {
     
     
     public Integer statusCode;
+
     public ListBranchesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,9 +136,14 @@ public class ListBranchesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBranchesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListBranchesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

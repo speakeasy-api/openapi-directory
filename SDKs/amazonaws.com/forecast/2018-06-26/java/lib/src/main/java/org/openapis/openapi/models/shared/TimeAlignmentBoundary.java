@@ -15,6 +15,7 @@ public class TimeAlignmentBoundary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DayOfMonth")
     public Long dayOfMonth;
+
     public TimeAlignmentBoundary withDayOfMonth(Long dayOfMonth) {
         this.dayOfMonth = dayOfMonth;
         return this;
@@ -23,6 +24,7 @@ public class TimeAlignmentBoundary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DayOfWeek")
     public DayOfWeekEnum dayOfWeek;
+
     public TimeAlignmentBoundary withDayOfWeek(DayOfWeekEnum dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -31,6 +33,7 @@ public class TimeAlignmentBoundary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hour")
     public Long hour;
+
     public TimeAlignmentBoundary withHour(Long hour) {
         this.hour = hour;
         return this;
@@ -39,9 +42,11 @@ public class TimeAlignmentBoundary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Month")
     public MonthEnum month;
+
     public TimeAlignmentBoundary withMonth(MonthEnum month) {
         this.month = month;
         return this;
     }
     
+    public TimeAlignmentBoundary(){}
 }

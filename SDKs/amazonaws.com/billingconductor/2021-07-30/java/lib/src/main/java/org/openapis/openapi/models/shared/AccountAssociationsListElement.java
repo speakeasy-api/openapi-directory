@@ -15,6 +15,7 @@ public class AccountAssociationsListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountEmail")
     public String accountEmail;
+
     public AccountAssociationsListElement withAccountEmail(String accountEmail) {
         this.accountEmail = accountEmail;
         return this;
@@ -23,6 +24,7 @@ public class AccountAssociationsListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public AccountAssociationsListElement withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -31,6 +33,7 @@ public class AccountAssociationsListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountName")
     public String accountName;
+
     public AccountAssociationsListElement withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -39,9 +42,11 @@ public class AccountAssociationsListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingGroupArn")
     public String billingGroupArn;
+
     public AccountAssociationsListElement withBillingGroupArn(String billingGroupArn) {
         this.billingGroupArn = billingGroupArn;
         return this;
     }
     
+    public AccountAssociationsListElement(){}
 }

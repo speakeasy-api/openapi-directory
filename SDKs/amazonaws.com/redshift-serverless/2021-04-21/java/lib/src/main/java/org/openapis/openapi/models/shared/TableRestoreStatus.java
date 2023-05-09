@@ -20,6 +20,7 @@ public class TableRestoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public TableRestoreStatus withMessage(String message) {
         this.message = message;
         return this;
@@ -28,6 +29,7 @@ public class TableRestoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public TableRestoreStatus withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
@@ -36,6 +38,7 @@ public class TableRestoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newTableName")
     public String newTableName;
+
     public TableRestoreStatus withNewTableName(String newTableName) {
         this.newTableName = newTableName;
         return this;
@@ -44,6 +47,7 @@ public class TableRestoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progressInMegaBytes")
     public Long progressInMegaBytes;
+
     public TableRestoreStatus withProgressInMegaBytes(Long progressInMegaBytes) {
         this.progressInMegaBytes = progressInMegaBytes;
         return this;
@@ -54,6 +58,7 @@ public class TableRestoreStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("requestTime")
     public OffsetDateTime requestTime;
+
     public TableRestoreStatus withRequestTime(OffsetDateTime requestTime) {
         this.requestTime = requestTime;
         return this;
@@ -62,6 +67,7 @@ public class TableRestoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotName")
     public String snapshotName;
+
     public TableRestoreStatus withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
@@ -70,6 +76,7 @@ public class TableRestoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceDatabaseName")
     public String sourceDatabaseName;
+
     public TableRestoreStatus withSourceDatabaseName(String sourceDatabaseName) {
         this.sourceDatabaseName = sourceDatabaseName;
         return this;
@@ -78,6 +85,7 @@ public class TableRestoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSchemaName")
     public String sourceSchemaName;
+
     public TableRestoreStatus withSourceSchemaName(String sourceSchemaName) {
         this.sourceSchemaName = sourceSchemaName;
         return this;
@@ -86,6 +94,7 @@ public class TableRestoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceTableName")
     public String sourceTableName;
+
     public TableRestoreStatus withSourceTableName(String sourceTableName) {
         this.sourceTableName = sourceTableName;
         return this;
@@ -94,6 +103,7 @@ public class TableRestoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public TableRestoreStatus withStatus(String status) {
         this.status = status;
         return this;
@@ -102,6 +112,7 @@ public class TableRestoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableRestoreRequestId")
     public String tableRestoreRequestId;
+
     public TableRestoreStatus withTableRestoreRequestId(String tableRestoreRequestId) {
         this.tableRestoreRequestId = tableRestoreRequestId;
         return this;
@@ -110,6 +121,7 @@ public class TableRestoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetDatabaseName")
     public String targetDatabaseName;
+
     public TableRestoreStatus withTargetDatabaseName(String targetDatabaseName) {
         this.targetDatabaseName = targetDatabaseName;
         return this;
@@ -118,6 +130,7 @@ public class TableRestoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetSchemaName")
     public String targetSchemaName;
+
     public TableRestoreStatus withTargetSchemaName(String targetSchemaName) {
         this.targetSchemaName = targetSchemaName;
         return this;
@@ -126,6 +139,7 @@ public class TableRestoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalDataInMegaBytes")
     public Long totalDataInMegaBytes;
+
     public TableRestoreStatus withTotalDataInMegaBytes(Long totalDataInMegaBytes) {
         this.totalDataInMegaBytes = totalDataInMegaBytes;
         return this;
@@ -134,9 +148,11 @@ public class TableRestoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workgroupName")
     public String workgroupName;
+
     public TableRestoreStatus withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public TableRestoreStatus(){}
 }

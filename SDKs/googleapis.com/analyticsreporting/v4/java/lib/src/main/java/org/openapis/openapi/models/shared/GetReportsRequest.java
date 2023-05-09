@@ -18,6 +18,7 @@ public class GetReportsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportRequests")
     public ReportRequest[] reportRequests;
+
     public GetReportsRequest withReportRequests(ReportRequest[] reportRequests) {
         this.reportRequests = reportRequests;
         return this;
@@ -29,9 +30,11 @@ public class GetReportsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useResourceQuotas")
     public Boolean useResourceQuotas;
+
     public GetReportsRequest withUseResourceQuotas(Boolean useResourceQuotas) {
         this.useResourceQuotas = useResourceQuotas;
         return this;
     }
     
+    public GetReportsRequest(){}
 }

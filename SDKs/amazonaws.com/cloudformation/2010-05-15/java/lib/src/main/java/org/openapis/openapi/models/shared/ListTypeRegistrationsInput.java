@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListTypeRegistrationsInput {
     
     public Long maxResults;
+
     public ListTypeRegistrationsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -16,6 +17,7 @@ public class ListTypeRegistrationsInput {
     
     
     public String nextToken;
+
     public ListTypeRegistrationsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +25,7 @@ public class ListTypeRegistrationsInput {
     
     
     public RegistrationStatusEnum registrationStatusFilter;
+
     public ListTypeRegistrationsInput withRegistrationStatusFilter(RegistrationStatusEnum registrationStatusFilter) {
         this.registrationStatusFilter = registrationStatusFilter;
         return this;
@@ -30,6 +33,7 @@ public class ListTypeRegistrationsInput {
     
     
     public RegistryTypeEnum type;
+
     public ListTypeRegistrationsInput withType(RegistryTypeEnum type) {
         this.type = type;
         return this;
@@ -37,6 +41,7 @@ public class ListTypeRegistrationsInput {
     
     
     public String typeArn;
+
     public ListTypeRegistrationsInput withTypeArn(String typeArn) {
         this.typeArn = typeArn;
         return this;
@@ -44,9 +49,11 @@ public class ListTypeRegistrationsInput {
     
     
     public String typeName;
+
     public ListTypeRegistrationsInput withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public ListTypeRegistrationsInput(){}
 }

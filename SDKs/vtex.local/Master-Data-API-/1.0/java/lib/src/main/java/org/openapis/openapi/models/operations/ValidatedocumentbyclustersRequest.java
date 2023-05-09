@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ValidatedocumentbyclustersRequest {
@@ -12,6 +13,7 @@ public class ValidatedocumentbyclustersRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ValidatedocumentbyclustersRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ValidatedocumentbyclustersRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public String requestBody;
+
     public ValidatedocumentbyclustersRequest withRequestBody(String requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -32,6 +35,7 @@ public class ValidatedocumentbyclustersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataEntityName")
     public String dataEntityName;
+
     public ValidatedocumentbyclustersRequest withDataEntityName(String dataEntityName) {
         this.dataEntityName = dataEntityName;
         return this;
@@ -42,9 +46,16 @@ public class ValidatedocumentbyclustersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public ValidatedocumentbyclustersRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ValidatedocumentbyclustersRequest(@JsonProperty("Accept") String accept, @JsonProperty("RequestBody") String requestBody, @JsonProperty("dataEntityName") String dataEntityName, @JsonProperty("id") String id) {
+        this.accept = accept;
+        this.requestBody = requestBody;
+        this.dataEntityName = dataEntityName;
+        this.id = id;
+  }
 }

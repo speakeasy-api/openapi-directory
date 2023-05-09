@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeDomainsResponse - A response message that contains the status of one or more domains.
@@ -15,9 +15,13 @@ public class DescribeDomainsResponse {
      */
     
     public DomainStatus[] domainStatusList;
+
     public DescribeDomainsResponse withDomainStatusList(DomainStatus[] domainStatusList) {
         this.domainStatusList = domainStatusList;
         return this;
     }
     
+    public DescribeDomainsResponse(@JsonProperty("DomainStatusList") DomainStatus[] domainStatusList) {
+        this.domainStatusList = domainStatusList;
+  }
 }

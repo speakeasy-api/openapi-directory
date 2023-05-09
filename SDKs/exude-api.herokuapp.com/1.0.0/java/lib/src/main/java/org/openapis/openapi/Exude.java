@@ -55,11 +55,9 @@ public class Exude {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FilterFileDataStoppingsResponse res = new org.openapis.openapi.models.operations.FilterFileDataStoppingsResponse() {{
+        org.openapis.openapi.models.operations.FilterFileDataStoppingsResponse res = new org.openapis.openapi.models.operations.FilterFileDataStoppingsResponse(contentType, httpRes.statusCode()) {{
             exudeResponseBean = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class Exude {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FilterStoppingsResponse res = new org.openapis.openapi.models.operations.FilterStoppingsResponse() {{
+        org.openapis.openapi.models.operations.FilterStoppingsResponse res = new org.openapis.openapi.models.operations.FilterStoppingsResponse(contentType, httpRes.statusCode()) {{
             exudeResponseBean = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

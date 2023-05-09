@@ -22,6 +22,7 @@ public class DomainDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DomainDetails withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainArn")
     public String domainArn;
+
     public DomainDetails withDomainArn(String domainArn) {
         this.domainArn = domainArn;
         return this;
@@ -38,6 +40,7 @@ public class DomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainId")
     public String domainId;
+
     public DomainDetails withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -46,6 +49,7 @@ public class DomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public DomainDetails withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -56,6 +60,7 @@ public class DomainDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DomainDetails withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -64,6 +69,7 @@ public class DomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public DomainStatusEnum status;
+
     public DomainDetails withStatus(DomainStatusEnum status) {
         this.status = status;
         return this;
@@ -72,9 +78,11 @@ public class DomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public DomainDetails withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public DomainDetails(){}
 }

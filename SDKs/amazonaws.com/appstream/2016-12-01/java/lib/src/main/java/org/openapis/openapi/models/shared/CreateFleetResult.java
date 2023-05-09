@@ -15,9 +15,11 @@ public class CreateFleetResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Fleet")
     public Fleet fleet;
+
     public CreateFleetResult withFleet(Fleet fleet) {
         this.fleet = fleet;
         return this;
     }
     
+    public CreateFleetResult(){}
 }

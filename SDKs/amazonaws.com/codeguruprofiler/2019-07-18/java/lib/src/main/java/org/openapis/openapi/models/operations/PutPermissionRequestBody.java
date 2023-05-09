@@ -14,6 +14,7 @@ public class PutPermissionRequestBody {
      */
     @JsonProperty("principals")
     public String[] principals;
+
     public PutPermissionRequestBody withPrincipals(String[] principals) {
         this.principals = principals;
         return this;
@@ -25,9 +26,13 @@ public class PutPermissionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public PutPermissionRequestBody withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
     }
     
+    public PutPermissionRequestBody(@JsonProperty("principals") String[] principals) {
+        this.principals = principals;
+  }
 }

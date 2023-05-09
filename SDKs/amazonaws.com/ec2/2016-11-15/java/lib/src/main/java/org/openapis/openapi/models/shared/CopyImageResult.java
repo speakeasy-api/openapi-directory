@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CopyImageResult {
     
     public String imageId;
+
     public CopyImageResult withImageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
     
+    public CopyImageResult(){}
 }

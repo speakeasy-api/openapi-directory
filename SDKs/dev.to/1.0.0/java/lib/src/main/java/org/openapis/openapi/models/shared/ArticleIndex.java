@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ArticleIndex {
     @JsonProperty("canonical_url")
     public String canonicalUrl;
+
     public ArticleIndex withCanonicalUrl(String canonicalUrl) {
         this.canonicalUrl = canonicalUrl;
         return this;
@@ -26,6 +27,7 @@ public class ArticleIndex {
     
     @JsonProperty("cover_image")
     public String coverImage;
+
     public ArticleIndex withCoverImage(String coverImage) {
         this.coverImage = coverImage;
         return this;
@@ -35,6 +37,7 @@ public class ArticleIndex {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public ArticleIndex withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -44,6 +47,7 @@ public class ArticleIndex {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("crossposted_at")
     public OffsetDateTime crosspostedAt;
+
     public ArticleIndex withCrosspostedAt(OffsetDateTime crosspostedAt) {
         this.crosspostedAt = crosspostedAt;
         return this;
@@ -51,6 +55,7 @@ public class ArticleIndex {
     
     @JsonProperty("description")
     public String description;
+
     public ArticleIndex withDescription(String description) {
         this.description = description;
         return this;
@@ -60,6 +65,7 @@ public class ArticleIndex {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("edited_at")
     public OffsetDateTime editedAt;
+
     public ArticleIndex withEditedAt(OffsetDateTime editedAt) {
         this.editedAt = editedAt;
         return this;
@@ -71,6 +77,7 @@ public class ArticleIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flare_tag")
     public ArticleFlareTag flareTag;
+
     public ArticleIndex withFlareTag(ArticleFlareTag flareTag) {
         this.flareTag = flareTag;
         return this;
@@ -78,6 +85,7 @@ public class ArticleIndex {
     
     @JsonProperty("id")
     public Integer id;
+
     public ArticleIndex withId(Integer id) {
         this.id = id;
         return this;
@@ -87,6 +95,7 @@ public class ArticleIndex {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_comment_at")
     public OffsetDateTime lastCommentAt;
+
     public ArticleIndex withLastCommentAt(OffsetDateTime lastCommentAt) {
         this.lastCommentAt = lastCommentAt;
         return this;
@@ -98,6 +107,7 @@ public class ArticleIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public SharedOrganization organization;
+
     public ArticleIndex withOrganization(SharedOrganization organization) {
         this.organization = organization;
         return this;
@@ -105,6 +115,7 @@ public class ArticleIndex {
     
     @JsonProperty("path")
     public String path;
+
     public ArticleIndex withPath(String path) {
         this.path = path;
         return this;
@@ -112,6 +123,7 @@ public class ArticleIndex {
     
     @JsonProperty("positive_reactions_count")
     public Integer positiveReactionsCount;
+
     public ArticleIndex withPositiveReactionsCount(Integer positiveReactionsCount) {
         this.positiveReactionsCount = positiveReactionsCount;
         return this;
@@ -119,6 +131,7 @@ public class ArticleIndex {
     
     @JsonProperty("public_reactions_count")
     public Integer publicReactionsCount;
+
     public ArticleIndex withPublicReactionsCount(Integer publicReactionsCount) {
         this.publicReactionsCount = publicReactionsCount;
         return this;
@@ -128,6 +141,7 @@ public class ArticleIndex {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("published_at")
     public OffsetDateTime publishedAt;
+
     public ArticleIndex withPublishedAt(OffsetDateTime publishedAt) {
         this.publishedAt = publishedAt;
         return this;
@@ -140,6 +154,7 @@ public class ArticleIndex {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("published_timestamp")
     public OffsetDateTime publishedTimestamp;
+
     public ArticleIndex withPublishedTimestamp(OffsetDateTime publishedTimestamp) {
         this.publishedTimestamp = publishedTimestamp;
         return this;
@@ -147,6 +162,7 @@ public class ArticleIndex {
     
     @JsonProperty("readable_publish_date")
     public String readablePublishDate;
+
     public ArticleIndex withReadablePublishDate(String readablePublishDate) {
         this.readablePublishDate = readablePublishDate;
         return this;
@@ -157,6 +173,7 @@ public class ArticleIndex {
      */
     @JsonProperty("reading_time_minutes")
     public Integer readingTimeMinutes;
+
     public ArticleIndex withReadingTimeMinutes(Integer readingTimeMinutes) {
         this.readingTimeMinutes = readingTimeMinutes;
         return this;
@@ -164,6 +181,7 @@ public class ArticleIndex {
     
     @JsonProperty("slug")
     public String slug;
+
     public ArticleIndex withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -171,6 +189,7 @@ public class ArticleIndex {
     
     @JsonProperty("social_image")
     public String socialImage;
+
     public ArticleIndex withSocialImage(String socialImage) {
         this.socialImage = socialImage;
         return this;
@@ -178,6 +197,7 @@ public class ArticleIndex {
     
     @JsonProperty("tag_list")
     public String[] tagList;
+
     public ArticleIndex withTagList(String[] tagList) {
         this.tagList = tagList;
         return this;
@@ -185,6 +205,7 @@ public class ArticleIndex {
     
     @JsonProperty("tags")
     public String tags;
+
     public ArticleIndex withTags(String tags) {
         this.tags = tags;
         return this;
@@ -192,6 +213,7 @@ public class ArticleIndex {
     
     @JsonProperty("title")
     public String title;
+
     public ArticleIndex withTitle(String title) {
         this.title = title;
         return this;
@@ -199,6 +221,7 @@ public class ArticleIndex {
     
     @JsonProperty("type_of")
     public String typeOf;
+
     public ArticleIndex withTypeOf(String typeOf) {
         this.typeOf = typeOf;
         return this;
@@ -206,6 +229,7 @@ public class ArticleIndex {
     
     @JsonProperty("url")
     public String url;
+
     public ArticleIndex withUrl(String url) {
         this.url = url;
         return this;
@@ -216,9 +240,35 @@ public class ArticleIndex {
      */
     @JsonProperty("user")
     public SharedUser user;
+
     public ArticleIndex withUser(SharedUser user) {
         this.user = user;
         return this;
     }
     
+    public ArticleIndex(@JsonProperty("canonical_url") String canonicalUrl, @JsonProperty("cover_image") String coverImage, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("crossposted_at") OffsetDateTime crosspostedAt, @JsonProperty("description") String description, @JsonProperty("edited_at") OffsetDateTime editedAt, @JsonProperty("id") Integer id, @JsonProperty("last_comment_at") OffsetDateTime lastCommentAt, @JsonProperty("path") String path, @JsonProperty("positive_reactions_count") Integer positiveReactionsCount, @JsonProperty("public_reactions_count") Integer publicReactionsCount, @JsonProperty("published_at") OffsetDateTime publishedAt, @JsonProperty("published_timestamp") OffsetDateTime publishedTimestamp, @JsonProperty("readable_publish_date") String readablePublishDate, @JsonProperty("reading_time_minutes") Integer readingTimeMinutes, @JsonProperty("slug") String slug, @JsonProperty("social_image") String socialImage, @JsonProperty("tag_list") String[] tagList, @JsonProperty("tags") String tags, @JsonProperty("title") String title, @JsonProperty("type_of") String typeOf, @JsonProperty("url") String url, @JsonProperty("user") SharedUser user) {
+        this.canonicalUrl = canonicalUrl;
+        this.coverImage = coverImage;
+        this.createdAt = createdAt;
+        this.crosspostedAt = crosspostedAt;
+        this.description = description;
+        this.editedAt = editedAt;
+        this.id = id;
+        this.lastCommentAt = lastCommentAt;
+        this.path = path;
+        this.positiveReactionsCount = positiveReactionsCount;
+        this.publicReactionsCount = publicReactionsCount;
+        this.publishedAt = publishedAt;
+        this.publishedTimestamp = publishedTimestamp;
+        this.readablePublishDate = readablePublishDate;
+        this.readingTimeMinutes = readingTimeMinutes;
+        this.slug = slug;
+        this.socialImage = socialImage;
+        this.tagList = tagList;
+        this.tags = tags;
+        this.title = title;
+        this.typeOf = typeOf;
+        this.url = url;
+        this.user = user;
+  }
 }

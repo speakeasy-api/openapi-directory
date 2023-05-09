@@ -52,10 +52,8 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRealmAuthenticationConfigIdResponse res = new org.openapis.openapi.models.operations.DeleteRealmAuthenticationConfigIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteRealmAuthenticationConfigIdResponse res = new org.openapis.openapi.models.operations.DeleteRealmAuthenticationConfigIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -85,10 +83,8 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRealmAuthenticationExecutionsExecutionIdResponse res = new org.openapis.openapi.models.operations.DeleteRealmAuthenticationExecutionsExecutionIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteRealmAuthenticationExecutionsExecutionIdResponse res = new org.openapis.openapi.models.operations.DeleteRealmAuthenticationExecutionsExecutionIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -118,10 +114,8 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRealmAuthenticationFlowsIdResponse res = new org.openapis.openapi.models.operations.DeleteRealmAuthenticationFlowsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteRealmAuthenticationFlowsIdResponse res = new org.openapis.openapi.models.operations.DeleteRealmAuthenticationFlowsIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -151,10 +145,8 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRealmAuthenticationRequiredActionsAliasResponse res = new org.openapis.openapi.models.operations.DeleteRealmAuthenticationRequiredActionsAliasResponse() {{
+        org.openapis.openapi.models.operations.DeleteRealmAuthenticationRequiredActionsAliasResponse res = new org.openapis.openapi.models.operations.DeleteRealmAuthenticationRequiredActionsAliasResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -184,11 +176,9 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmAuthenticationAuthenticatorProvidersResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationAuthenticatorProvidersResponse() {{
+        org.openapis.openapi.models.operations.GetRealmAuthenticationAuthenticatorProvidersResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationAuthenticatorProvidersResponse(contentType, httpRes.statusCode()) {{
             getRealmAuthenticationAuthenticatorProviders2XXApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -223,11 +213,9 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmAuthenticationClientAuthenticatorProvidersResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationClientAuthenticatorProvidersResponse() {{
+        org.openapis.openapi.models.operations.GetRealmAuthenticationClientAuthenticatorProvidersResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationClientAuthenticatorProvidersResponse(contentType, httpRes.statusCode()) {{
             getRealmAuthenticationClientAuthenticatorProviders2XXApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -262,11 +250,9 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmAuthenticationConfigDescriptionProviderIdResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationConfigDescriptionProviderIdResponse() {{
+        org.openapis.openapi.models.operations.GetRealmAuthenticationConfigDescriptionProviderIdResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationConfigDescriptionProviderIdResponse(contentType, httpRes.statusCode()) {{
             authenticatorConfigInfoRepresentation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -301,11 +287,9 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmAuthenticationConfigIdResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationConfigIdResponse() {{
+        org.openapis.openapi.models.operations.GetRealmAuthenticationConfigIdResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationConfigIdResponse(contentType, httpRes.statusCode()) {{
             authenticatorConfigRepresentation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -340,10 +324,8 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmAuthenticationExecutionsExecutionIdResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationExecutionsExecutionIdResponse() {{
+        org.openapis.openapi.models.operations.GetRealmAuthenticationExecutionsExecutionIdResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationExecutionsExecutionIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -373,11 +355,9 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsResponse() {{
+        org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsResponse(contentType, httpRes.statusCode()) {{
             authenticationFlowRepresentations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -412,10 +392,8 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsFlowAliasExecutionsResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsFlowAliasExecutionsResponse() {{
+        org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsFlowAliasExecutionsResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsFlowAliasExecutionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -445,11 +423,9 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsIdResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsIdResponse() {{
+        org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsIdResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsIdResponse(contentType, httpRes.statusCode()) {{
             authenticationFlowRepresentation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -484,11 +460,9 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmAuthenticationFormActionProvidersResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationFormActionProvidersResponse() {{
+        org.openapis.openapi.models.operations.GetRealmAuthenticationFormActionProvidersResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationFormActionProvidersResponse(contentType, httpRes.statusCode()) {{
             getRealmAuthenticationFormActionProviders2XXApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -523,11 +497,9 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmAuthenticationFormProvidersResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationFormProvidersResponse() {{
+        org.openapis.openapi.models.operations.GetRealmAuthenticationFormProvidersResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationFormProvidersResponse(contentType, httpRes.statusCode()) {{
             getRealmAuthenticationFormProviders2XXApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -562,11 +534,9 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmAuthenticationPerClientConfigDescriptionResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationPerClientConfigDescriptionResponse() {{
+        org.openapis.openapi.models.operations.GetRealmAuthenticationPerClientConfigDescriptionResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationPerClientConfigDescriptionResponse(contentType, httpRes.statusCode()) {{
             getRealmAuthenticationPerClientConfigDescription2XXApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -601,11 +571,9 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmAuthenticationRequiredActionsResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationRequiredActionsResponse() {{
+        org.openapis.openapi.models.operations.GetRealmAuthenticationRequiredActionsResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationRequiredActionsResponse(contentType, httpRes.statusCode()) {{
             requiredActionProviderRepresentations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -640,11 +608,9 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmAuthenticationRequiredActionsAliasResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationRequiredActionsAliasResponse() {{
+        org.openapis.openapi.models.operations.GetRealmAuthenticationRequiredActionsAliasResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationRequiredActionsAliasResponse(contentType, httpRes.statusCode()) {{
             requiredActionProviderRepresentation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -679,11 +645,9 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmAuthenticationUnregisteredRequiredActionsResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationUnregisteredRequiredActionsResponse() {{
+        org.openapis.openapi.models.operations.GetRealmAuthenticationUnregisteredRequiredActionsResponse res = new org.openapis.openapi.models.operations.GetRealmAuthenticationUnregisteredRequiredActionsResponse(contentType, httpRes.statusCode()) {{
             getRealmAuthenticationUnregisteredRequiredActions2XXApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -723,10 +687,8 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsResponse() {{
+        org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -761,10 +723,8 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdConfigResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdConfigResponse() {{
+        org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdConfigResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdConfigResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -794,10 +754,8 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdLowerPriorityResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdLowerPriorityResponse() {{
+        org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdLowerPriorityResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdLowerPriorityResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -827,10 +785,8 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdRaisePriorityResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdRaisePriorityResponse() {{
+        org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdRaisePriorityResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdRaisePriorityResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -865,10 +821,8 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsResponse() {{
+        org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -903,10 +857,8 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasCopyResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasCopyResponse() {{
+        org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasCopyResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasCopyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -941,10 +893,8 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasExecutionsExecutionResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasExecutionsExecutionResponse() {{
+        org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasExecutionsExecutionResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasExecutionsExecutionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -979,10 +929,8 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasExecutionsFlowResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasExecutionsFlowResponse() {{
+        org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasExecutionsFlowResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasExecutionsFlowResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -1017,10 +965,8 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRealmAuthenticationRegisterRequiredActionResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationRegisterRequiredActionResponse() {{
+        org.openapis.openapi.models.operations.PostRealmAuthenticationRegisterRequiredActionResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationRegisterRequiredActionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -1050,10 +996,8 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRealmAuthenticationRequiredActionsAliasLowerPriorityResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationRequiredActionsAliasLowerPriorityResponse() {{
+        org.openapis.openapi.models.operations.PostRealmAuthenticationRequiredActionsAliasLowerPriorityResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationRequiredActionsAliasLowerPriorityResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -1083,10 +1027,8 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRealmAuthenticationRequiredActionsAliasRaisePriorityResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationRequiredActionsAliasRaisePriorityResponse() {{
+        org.openapis.openapi.models.operations.PostRealmAuthenticationRequiredActionsAliasRaisePriorityResponse res = new org.openapis.openapi.models.operations.PostRealmAuthenticationRequiredActionsAliasRaisePriorityResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -1121,10 +1063,8 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutRealmAuthenticationConfigIdResponse res = new org.openapis.openapi.models.operations.PutRealmAuthenticationConfigIdResponse() {{
+        org.openapis.openapi.models.operations.PutRealmAuthenticationConfigIdResponse res = new org.openapis.openapi.models.operations.PutRealmAuthenticationConfigIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -1159,10 +1099,8 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutRealmAuthenticationFlowsFlowAliasExecutionsResponse res = new org.openapis.openapi.models.operations.PutRealmAuthenticationFlowsFlowAliasExecutionsResponse() {{
+        org.openapis.openapi.models.operations.PutRealmAuthenticationFlowsFlowAliasExecutionsResponse res = new org.openapis.openapi.models.operations.PutRealmAuthenticationFlowsFlowAliasExecutionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -1197,10 +1135,8 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutRealmAuthenticationFlowsIdResponse res = new org.openapis.openapi.models.operations.PutRealmAuthenticationFlowsIdResponse() {{
+        org.openapis.openapi.models.operations.PutRealmAuthenticationFlowsIdResponse res = new org.openapis.openapi.models.operations.PutRealmAuthenticationFlowsIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -1235,10 +1171,8 @@ public class AuthenticationManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutRealmAuthenticationRequiredActionsAliasResponse res = new org.openapis.openapi.models.operations.PutRealmAuthenticationRequiredActionsAliasResponse() {{
+        org.openapis.openapi.models.operations.PutRealmAuthenticationRequiredActionsAliasResponse res = new org.openapis.openapi.models.operations.PutRealmAuthenticationRequiredActionsAliasResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {

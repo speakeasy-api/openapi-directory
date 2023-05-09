@@ -18,6 +18,7 @@ public class ProjectMembershipCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public ProjectMembershipCompact withGid(String gid) {
         this.gid = gid;
         return this;
@@ -29,6 +30,7 @@ public class ProjectMembershipCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public ProjectMembershipCompact withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -37,9 +39,11 @@ public class ProjectMembershipCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public UserCompact user;
+
     public ProjectMembershipCompact withUser(UserCompact user) {
         this.user = user;
         return this;
     }
     
+    public ProjectMembershipCompact(){}
 }

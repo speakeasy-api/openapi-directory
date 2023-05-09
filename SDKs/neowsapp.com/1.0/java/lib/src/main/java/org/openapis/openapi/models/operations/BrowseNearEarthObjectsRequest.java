@@ -12,6 +12,7 @@ public class BrowseNearEarthObjectsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public BrowseNearEarthObjectsRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -22,9 +23,11 @@ public class BrowseNearEarthObjectsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Integer size;
+
     public BrowseNearEarthObjectsRequest withSize(Integer size) {
         this.size = size;
         return this;
     }
     
+    public BrowseNearEarthObjectsRequest(){}
 }

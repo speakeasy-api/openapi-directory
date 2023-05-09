@@ -15,9 +15,11 @@ public class SalesActivities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activities")
     public SalesActivity[] activities;
+
     public SalesActivities withActivities(SalesActivity[] activities) {
         this.activities = activities;
         return this;
     }
     
+    public SalesActivities(){}
 }

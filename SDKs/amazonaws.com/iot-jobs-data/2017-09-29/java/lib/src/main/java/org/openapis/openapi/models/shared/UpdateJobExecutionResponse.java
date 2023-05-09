@@ -15,6 +15,7 @@ public class UpdateJobExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionState")
     public JobExecutionState executionState;
+
     public UpdateJobExecutionResponse withExecutionState(JobExecutionState executionState) {
         this.executionState = executionState;
         return this;
@@ -23,9 +24,11 @@ public class UpdateJobExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobDocument")
     public String jobDocument;
+
     public UpdateJobExecutionResponse withJobDocument(String jobDocument) {
         this.jobDocument = jobDocument;
         return this;
     }
     
+    public UpdateJobExecutionResponse(){}
 }

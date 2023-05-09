@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1ConversationDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialogflowSource")
     public GoogleCloudContactcenterinsightsV1DialogflowSource dialogflowSource;
+
     public GoogleCloudContactcenterinsightsV1ConversationDataSource withDialogflowSource(GoogleCloudContactcenterinsightsV1DialogflowSource dialogflowSource) {
         this.dialogflowSource = dialogflowSource;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudContactcenterinsightsV1ConversationDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsSource")
     public GoogleCloudContactcenterinsightsV1GcsSource gcsSource;
+
     public GoogleCloudContactcenterinsightsV1ConversationDataSource withGcsSource(GoogleCloudContactcenterinsightsV1GcsSource gcsSource) {
         this.gcsSource = gcsSource;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1ConversationDataSource(){}
 }

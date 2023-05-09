@@ -12,6 +12,7 @@ public class SearchArtifactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentId")
     public Long contentId;
+
     public SearchArtifactsRequest withContentId(Long contentId) {
         this.contentId = contentId;
         return this;
@@ -22,6 +23,7 @@ public class SearchArtifactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchArtifactsRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -32,6 +34,7 @@ public class SearchArtifactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=globalId")
     public Long globalId;
+
     public SearchArtifactsRequest withGlobalId(Long globalId) {
         this.globalId = globalId;
         return this;
@@ -42,6 +45,7 @@ public class SearchArtifactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchArtifactsRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -53,6 +57,7 @@ public class SearchArtifactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=labels")
     public String[] labels;
+
     public SearchArtifactsRequest withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -63,6 +68,7 @@ public class SearchArtifactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public SearchArtifactsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -73,6 +79,7 @@ public class SearchArtifactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchArtifactsRequest withName(String name) {
         this.name = name;
         return this;
@@ -83,6 +90,7 @@ public class SearchArtifactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public SearchArtifactsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -93,6 +101,7 @@ public class SearchArtifactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public org.openapis.openapi.models.shared.SortOrderEnum order;
+
     public SearchArtifactsRequest withOrder(org.openapis.openapi.models.shared.SortOrderEnum order) {
         this.order = order;
         return this;
@@ -107,6 +116,7 @@ public class SearchArtifactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderby")
     public org.openapis.openapi.models.shared.SortByEnum orderby;
+
     public SearchArtifactsRequest withOrderby(org.openapis.openapi.models.shared.SortByEnum orderby) {
         this.orderby = orderby;
         return this;
@@ -119,9 +129,11 @@ public class SearchArtifactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=properties")
     public String[] properties;
+
     public SearchArtifactsRequest withProperties(String[] properties) {
         this.properties = properties;
         return this;
     }
     
+    public SearchArtifactsRequest(){}
 }

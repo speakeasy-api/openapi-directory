@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAnnotationsByRgdIdAndOntologyUsingGETRequest {
@@ -12,6 +13,7 @@ public class GETAnnotationsByRgdIdAndOntologyUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ontologyPrefix")
     public String ontologyPrefix;
+
     public GETAnnotationsByRgdIdAndOntologyUsingGETRequest withOntologyPrefix(String ontologyPrefix) {
         this.ontologyPrefix = ontologyPrefix;
         return this;
@@ -22,9 +24,14 @@ public class GETAnnotationsByRgdIdAndOntologyUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rgdId")
     public Integer rgdId;
+
     public GETAnnotationsByRgdIdAndOntologyUsingGETRequest withRgdId(Integer rgdId) {
         this.rgdId = rgdId;
         return this;
     }
     
+    public GETAnnotationsByRgdIdAndOntologyUsingGETRequest(@JsonProperty("ontologyPrefix") String ontologyPrefix, @JsonProperty("rgdId") Integer rgdId) {
+        this.ontologyPrefix = ontologyPrefix;
+        this.rgdId = rgdId;
+  }
 }

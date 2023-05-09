@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Attribute {
     @JsonProperty("jsonPath")
     public String jsonPath;
+
     public Attribute withJsonPath(String jsonPath) {
         this.jsonPath = jsonPath;
         return this;
     }
     
+    public Attribute(@JsonProperty("jsonPath") String jsonPath) {
+        this.jsonPath = jsonPath;
+  }
 }

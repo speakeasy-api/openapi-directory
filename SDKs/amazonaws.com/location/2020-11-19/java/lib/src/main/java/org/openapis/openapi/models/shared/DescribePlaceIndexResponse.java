@@ -21,6 +21,7 @@ public class DescribePlaceIndexResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public DescribePlaceIndexResponse withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -28,6 +29,7 @@ public class DescribePlaceIndexResponse {
     
     @JsonProperty("DataSource")
     public String dataSource;
+
     public DescribePlaceIndexResponse withDataSource(String dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -35,6 +37,7 @@ public class DescribePlaceIndexResponse {
     
     @JsonProperty("DataSourceConfiguration")
     public DataSourceConfiguration dataSourceConfiguration;
+
     public DescribePlaceIndexResponse withDataSourceConfiguration(DataSourceConfiguration dataSourceConfiguration) {
         this.dataSourceConfiguration = dataSourceConfiguration;
         return this;
@@ -42,6 +45,7 @@ public class DescribePlaceIndexResponse {
     
     @JsonProperty("Description")
     public String description;
+
     public DescribePlaceIndexResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -49,6 +53,7 @@ public class DescribePlaceIndexResponse {
     
     @JsonProperty("IndexArn")
     public String indexArn;
+
     public DescribePlaceIndexResponse withIndexArn(String indexArn) {
         this.indexArn = indexArn;
         return this;
@@ -56,6 +61,7 @@ public class DescribePlaceIndexResponse {
     
     @JsonProperty("IndexName")
     public String indexName;
+
     public DescribePlaceIndexResponse withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -64,6 +70,7 @@ public class DescribePlaceIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlan")
     public DescribePlaceIndexResponsePricingPlanEnum pricingPlan;
+
     public DescribePlaceIndexResponse withPricingPlan(DescribePlaceIndexResponsePricingPlanEnum pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
@@ -72,6 +79,7 @@ public class DescribePlaceIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public DescribePlaceIndexResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -81,9 +89,19 @@ public class DescribePlaceIndexResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public DescribePlaceIndexResponse withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public DescribePlaceIndexResponse(@JsonProperty("CreateTime") OffsetDateTime createTime, @JsonProperty("DataSource") String dataSource, @JsonProperty("DataSourceConfiguration") DataSourceConfiguration dataSourceConfiguration, @JsonProperty("Description") String description, @JsonProperty("IndexArn") String indexArn, @JsonProperty("IndexName") String indexName, @JsonProperty("UpdateTime") OffsetDateTime updateTime) {
+        this.createTime = createTime;
+        this.dataSource = dataSource;
+        this.dataSourceConfiguration = dataSourceConfiguration;
+        this.description = description;
+        this.indexArn = indexArn;
+        this.indexName = indexName;
+        this.updateTime = updateTime;
+  }
 }

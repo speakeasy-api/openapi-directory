@@ -15,9 +15,11 @@ public class ItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Item")
     public java.util.Map<String, AttributeValue> item;
+
     public ItemResponse withItem(java.util.Map<String, AttributeValue> item) {
         this.item = item;
         return this;
     }
     
+    public ItemResponse(){}
 }

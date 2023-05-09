@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Links {
     @JsonProperty("self")
     public LinksElement self;
+
     public Links withSelf(LinksElement self) {
         this.self = self;
         return this;
     }
     
+    public Links(@JsonProperty("self") LinksElement self) {
+        this.self = self;
+  }
 }

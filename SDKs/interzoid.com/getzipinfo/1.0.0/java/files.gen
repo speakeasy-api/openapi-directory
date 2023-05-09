@@ -33,4 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetzipcodeinfoRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Getzipcodeinfo200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetzipcodeinfoResponse.java
+docs/sdk/README.md
+docs/detailedzipcodeinformation/README.md
 USAGE.md

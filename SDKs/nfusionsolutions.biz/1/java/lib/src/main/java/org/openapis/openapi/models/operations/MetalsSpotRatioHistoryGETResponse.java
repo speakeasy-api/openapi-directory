@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MetalsSpotRatioHistoryGETResponse {
     
     public byte[] body;
+
     public MetalsSpotRatioHistoryGETResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class MetalsSpotRatioHistoryGETResponse {
     
     
     public String contentType;
+
     public MetalsSpotRatioHistoryGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class MetalsSpotRatioHistoryGETResponse {
      */
     
     public org.openapis.openapi.models.shared.IntervalCollectionResponse[] intervalCollectionResponses;
+
     public MetalsSpotRatioHistoryGETResponse withIntervalCollectionResponses(org.openapis.openapi.models.shared.IntervalCollectionResponse[] intervalCollectionResponses) {
         this.intervalCollectionResponses = intervalCollectionResponses;
         return this;
@@ -33,6 +37,7 @@ public class MetalsSpotRatioHistoryGETResponse {
     
     
     public Integer statusCode;
+
     public MetalsSpotRatioHistoryGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class MetalsSpotRatioHistoryGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MetalsSpotRatioHistoryGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MetalsSpotRatioHistoryGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

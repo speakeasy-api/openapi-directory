@@ -18,6 +18,7 @@ public class TileCoordinates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x")
     public Integer x;
+
     public TileCoordinates withX(Integer x) {
         this.x = x;
         return this;
@@ -29,6 +30,7 @@ public class TileCoordinates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("y")
     public Integer y;
+
     public TileCoordinates withY(Integer y) {
         this.y = y;
         return this;
@@ -40,9 +42,11 @@ public class TileCoordinates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zoom")
     public Integer zoom;
+
     public TileCoordinates withZoom(Integer zoom) {
         this.zoom = zoom;
         return this;
     }
     
+    public TileCoordinates(){}
 }

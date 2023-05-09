@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basicCard")
     public GoogleCloudDialogflowV2beta1IntentMessageBasicCard basicCard;
+
     public GoogleCloudDialogflowV2beta1IntentMessage withBasicCard(GoogleCloudDialogflowV2beta1IntentMessageBasicCard basicCard) {
         this.basicCard = basicCard;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("browseCarouselCard")
     public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCard browseCarouselCard;
+
     public GoogleCloudDialogflowV2beta1IntentMessage withBrowseCarouselCard(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCard browseCarouselCard) {
         this.browseCarouselCard = browseCarouselCard;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public GoogleCloudDialogflowV2beta1IntentMessageCard card;
+
     public GoogleCloudDialogflowV2beta1IntentMessage withCard(GoogleCloudDialogflowV2beta1IntentMessageCard card) {
         this.card = card;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carouselSelect")
     public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelect carouselSelect;
+
     public GoogleCloudDialogflowV2beta1IntentMessage withCarouselSelect(GoogleCloudDialogflowV2beta1IntentMessageCarouselSelect carouselSelect) {
         this.carouselSelect = carouselSelect;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public GoogleCloudDialogflowV2beta1IntentMessageImage image;
+
     public GoogleCloudDialogflowV2beta1IntentMessage withImage(GoogleCloudDialogflowV2beta1IntentMessageImage image) {
         this.image = image;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkOutSuggestion")
     public GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestion linkOutSuggestion;
+
     public GoogleCloudDialogflowV2beta1IntentMessage withLinkOutSuggestion(GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestion linkOutSuggestion) {
         this.linkOutSuggestion = linkOutSuggestion;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listSelect")
     public GoogleCloudDialogflowV2beta1IntentMessageListSelect listSelect;
+
     public GoogleCloudDialogflowV2beta1IntentMessage withListSelect(GoogleCloudDialogflowV2beta1IntentMessageListSelect listSelect) {
         this.listSelect = listSelect;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaContent")
     public GoogleCloudDialogflowV2beta1IntentMessageMediaContent mediaContent;
+
     public GoogleCloudDialogflowV2beta1IntentMessage withMediaContent(GoogleCloudDialogflowV2beta1IntentMessageMediaContent mediaContent) {
         this.mediaContent = mediaContent;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public java.util.Map<String, Object> payload;
+
     public GoogleCloudDialogflowV2beta1IntentMessage withPayload(java.util.Map<String, Object> payload) {
         this.payload = payload;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public GoogleCloudDialogflowV2beta1IntentMessagePlatformEnum platform;
+
     public GoogleCloudDialogflowV2beta1IntentMessage withPlatform(GoogleCloudDialogflowV2beta1IntentMessagePlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quickReplies")
     public GoogleCloudDialogflowV2beta1IntentMessageQuickReplies quickReplies;
+
     public GoogleCloudDialogflowV2beta1IntentMessage withQuickReplies(GoogleCloudDialogflowV2beta1IntentMessageQuickReplies quickReplies) {
         this.quickReplies = quickReplies;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rbmCarouselRichCard")
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard rbmCarouselRichCard;
+
     public GoogleCloudDialogflowV2beta1IntentMessage withRbmCarouselRichCard(GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard rbmCarouselRichCard) {
         this.rbmCarouselRichCard = rbmCarouselRichCard;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rbmStandaloneRichCard")
     public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCard rbmStandaloneRichCard;
+
     public GoogleCloudDialogflowV2beta1IntentMessage withRbmStandaloneRichCard(GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCard rbmStandaloneRichCard) {
         this.rbmStandaloneRichCard = rbmStandaloneRichCard;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rbmText")
     public GoogleCloudDialogflowV2beta1IntentMessageRbmText rbmText;
+
     public GoogleCloudDialogflowV2beta1IntentMessage withRbmText(GoogleCloudDialogflowV2beta1IntentMessageRbmText rbmText) {
         this.rbmText = rbmText;
         return this;
@@ -172,6 +186,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simpleResponses")
     public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponses simpleResponses;
+
     public GoogleCloudDialogflowV2beta1IntentMessage withSimpleResponses(GoogleCloudDialogflowV2beta1IntentMessageSimpleResponses simpleResponses) {
         this.simpleResponses = simpleResponses;
         return this;
@@ -183,6 +198,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestions")
     public GoogleCloudDialogflowV2beta1IntentMessageSuggestions suggestions;
+
     public GoogleCloudDialogflowV2beta1IntentMessage withSuggestions(GoogleCloudDialogflowV2beta1IntentMessageSuggestions suggestions) {
         this.suggestions = suggestions;
         return this;
@@ -194,6 +210,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableCard")
     public GoogleCloudDialogflowV2beta1IntentMessageTableCard tableCard;
+
     public GoogleCloudDialogflowV2beta1IntentMessage withTableCard(GoogleCloudDialogflowV2beta1IntentMessageTableCard tableCard) {
         this.tableCard = tableCard;
         return this;
@@ -205,6 +222,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephonyPlayAudio")
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudio telephonyPlayAudio;
+
     public GoogleCloudDialogflowV2beta1IntentMessage withTelephonyPlayAudio(GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudio telephonyPlayAudio) {
         this.telephonyPlayAudio = telephonyPlayAudio;
         return this;
@@ -216,6 +234,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephonySynthesizeSpeech")
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeech telephonySynthesizeSpeech;
+
     public GoogleCloudDialogflowV2beta1IntentMessage withTelephonySynthesizeSpeech(GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeech telephonySynthesizeSpeech) {
         this.telephonySynthesizeSpeech = telephonySynthesizeSpeech;
         return this;
@@ -227,6 +246,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephonyTransferCall")
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCall telephonyTransferCall;
+
     public GoogleCloudDialogflowV2beta1IntentMessage withTelephonyTransferCall(GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCall telephonyTransferCall) {
         this.telephonyTransferCall = telephonyTransferCall;
         return this;
@@ -238,9 +258,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public GoogleCloudDialogflowV2beta1IntentMessageText text;
+
     public GoogleCloudDialogflowV2beta1IntentMessage withText(GoogleCloudDialogflowV2beta1IntentMessageText text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessage(){}
 }

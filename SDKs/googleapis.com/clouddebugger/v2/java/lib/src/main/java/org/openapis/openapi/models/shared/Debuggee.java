@@ -18,6 +18,7 @@ public class Debuggee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentVersion")
     public String agentVersion;
+
     public Debuggee withAgentVersion(String agentVersion) {
         this.agentVersion = agentVersion;
         return this;
@@ -29,6 +30,7 @@ public class Debuggee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canaryMode")
     public DebuggeeCanaryModeEnum canaryMode;
+
     public Debuggee withCanaryMode(DebuggeeCanaryModeEnum canaryMode) {
         this.canaryMode = canaryMode;
         return this;
@@ -40,6 +42,7 @@ public class Debuggee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Debuggee withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class Debuggee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extSourceContexts")
     public ExtendedSourceContext[] extSourceContexts;
+
     public Debuggee withExtSourceContexts(ExtendedSourceContext[] extSourceContexts) {
         this.extSourceContexts = extSourceContexts;
         return this;
@@ -62,6 +66,7 @@ public class Debuggee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Debuggee withId(String id) {
         this.id = id;
         return this;
@@ -73,6 +78,7 @@ public class Debuggee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDisabled")
     public Boolean isDisabled;
+
     public Debuggee withIsDisabled(Boolean isDisabled) {
         this.isDisabled = isDisabled;
         return this;
@@ -84,6 +90,7 @@ public class Debuggee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isInactive")
     public Boolean isInactive;
+
     public Debuggee withIsInactive(Boolean isInactive) {
         this.isInactive = isInactive;
         return this;
@@ -95,6 +102,7 @@ public class Debuggee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Debuggee withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -106,6 +114,7 @@ public class Debuggee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public Debuggee withProject(String project) {
         this.project = project;
         return this;
@@ -117,6 +126,7 @@ public class Debuggee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceContexts")
     public SourceContext[] sourceContexts;
+
     public Debuggee withSourceContexts(SourceContext[] sourceContexts) {
         this.sourceContexts = sourceContexts;
         return this;
@@ -128,6 +138,7 @@ public class Debuggee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StatusMessage status;
+
     public Debuggee withStatus(StatusMessage status) {
         this.status = status;
         return this;
@@ -139,9 +150,11 @@ public class Debuggee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uniquifier")
     public String uniquifier;
+
     public Debuggee withUniquifier(String uniquifier) {
         this.uniquifier = uniquifier;
         return this;
     }
     
+    public Debuggee(){}
 }

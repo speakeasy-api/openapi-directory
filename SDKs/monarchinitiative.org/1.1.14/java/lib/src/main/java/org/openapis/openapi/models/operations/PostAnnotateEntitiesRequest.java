@@ -12,6 +12,7 @@ public class PostAnnotateEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content")
     public String content;
+
     public PostAnnotateEntitiesRequest withContent(String content) {
         this.content = content;
         return this;
@@ -22,6 +23,7 @@ public class PostAnnotateEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_category")
     public String[] excludeCategory;
+
     public PostAnnotateEntitiesRequest withExcludeCategory(String[] excludeCategory) {
         this.excludeCategory = excludeCategory;
         return this;
@@ -32,6 +34,7 @@ public class PostAnnotateEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_abbreviation")
     public Boolean includeAbbreviation;
+
     public PostAnnotateEntitiesRequest withIncludeAbbreviation(Boolean includeAbbreviation) {
         this.includeAbbreviation = includeAbbreviation;
         return this;
@@ -42,6 +45,7 @@ public class PostAnnotateEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_acronym")
     public Boolean includeAcronym;
+
     public PostAnnotateEntitiesRequest withIncludeAcronym(Boolean includeAcronym) {
         this.includeAcronym = includeAcronym;
         return this;
@@ -52,6 +56,7 @@ public class PostAnnotateEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_category")
     public String[] includeCategory;
+
     public PostAnnotateEntitiesRequest withIncludeCategory(String[] includeCategory) {
         this.includeCategory = includeCategory;
         return this;
@@ -62,6 +67,7 @@ public class PostAnnotateEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_numbers")
     public Boolean includeNumbers;
+
     public PostAnnotateEntitiesRequest withIncludeNumbers(Boolean includeNumbers) {
         this.includeNumbers = includeNumbers;
         return this;
@@ -72,6 +78,7 @@ public class PostAnnotateEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longest_only")
     public Boolean longestOnly;
+
     public PostAnnotateEntitiesRequest withLongestOnly(Boolean longestOnly) {
         this.longestOnly = longestOnly;
         return this;
@@ -82,9 +89,11 @@ public class PostAnnotateEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_length")
     public String minLength;
+
     public PostAnnotateEntitiesRequest withMinLength(String minLength) {
         this.minLength = minLength;
         return this;
     }
     
+    public PostAnnotateEntitiesRequest(){}
 }

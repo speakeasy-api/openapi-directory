@@ -15,6 +15,7 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostIp")
     public String hostIp;
+
     public Host withHostIp(String hostIp) {
         this.hostIp = hostIp;
         return this;
@@ -23,6 +24,7 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostName")
     public String hostName;
+
     public Host withHostName(String hostName) {
         this.hostName = hostName;
         return this;
@@ -31,6 +33,7 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostRole")
     public HostRoleEnum hostRole;
+
     public Host withHostRole(HostRoleEnum hostRole) {
         this.hostRole = hostRole;
         return this;
@@ -39,9 +42,11 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public Host withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public Host(){}
 }

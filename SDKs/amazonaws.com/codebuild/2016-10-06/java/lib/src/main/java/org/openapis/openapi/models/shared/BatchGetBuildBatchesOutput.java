@@ -15,6 +15,7 @@ public class BatchGetBuildBatchesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildBatches")
     public BuildBatch[] buildBatches;
+
     public BatchGetBuildBatchesOutput withBuildBatches(BuildBatch[] buildBatches) {
         this.buildBatches = buildBatches;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetBuildBatchesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildBatchesNotFound")
     public String[] buildBatchesNotFound;
+
     public BatchGetBuildBatchesOutput withBuildBatchesNotFound(String[] buildBatchesNotFound) {
         this.buildBatchesNotFound = buildBatchesNotFound;
         return this;
     }
     
+    public BatchGetBuildBatchesOutput(){}
 }

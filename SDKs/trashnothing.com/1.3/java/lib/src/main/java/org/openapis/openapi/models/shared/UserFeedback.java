@@ -16,6 +16,7 @@ public class UserFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percent_positive")
     public Double percentPositive;
+
     public UserFeedback withPercentPositive(Double percentPositive) {
         this.percentPositive = percentPositive;
         return this;
@@ -32,6 +33,7 @@ public class UserFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restriction")
     public String restriction;
+
     public UserFeedback withRestriction(String restriction) {
         this.restriction = restriction;
         return this;
@@ -44,9 +46,11 @@ public class UserFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Long score;
+
     public UserFeedback withScore(Long score) {
         this.score = score;
         return this;
     }
     
+    public UserFeedback(){}
 }

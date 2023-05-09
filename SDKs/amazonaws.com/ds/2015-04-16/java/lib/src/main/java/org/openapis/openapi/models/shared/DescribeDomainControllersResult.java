@@ -15,6 +15,7 @@ public class DescribeDomainControllersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainControllers")
     public DomainController[] domainControllers;
+
     public DescribeDomainControllersResult withDomainControllers(DomainController[] domainControllers) {
         this.domainControllers = domainControllers;
         return this;
@@ -23,9 +24,11 @@ public class DescribeDomainControllersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeDomainControllersResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeDomainControllersResult(){}
 }

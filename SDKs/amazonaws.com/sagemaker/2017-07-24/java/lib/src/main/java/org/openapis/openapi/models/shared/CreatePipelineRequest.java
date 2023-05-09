@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreatePipelineRequest {
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CreatePipelineRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class CreatePipelineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParallelismConfiguration")
     public ParallelismConfiguration parallelismConfiguration;
+
     public CreatePipelineRequest withParallelismConfiguration(ParallelismConfiguration parallelismConfiguration) {
         this.parallelismConfiguration = parallelismConfiguration;
         return this;
@@ -27,6 +29,7 @@ public class CreatePipelineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineDefinition")
     public String pipelineDefinition;
+
     public CreatePipelineRequest withPipelineDefinition(String pipelineDefinition) {
         this.pipelineDefinition = pipelineDefinition;
         return this;
@@ -35,6 +38,7 @@ public class CreatePipelineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineDefinitionS3Location")
     public PipelineDefinitionS3Location pipelineDefinitionS3Location;
+
     public CreatePipelineRequest withPipelineDefinitionS3Location(PipelineDefinitionS3Location pipelineDefinitionS3Location) {
         this.pipelineDefinitionS3Location = pipelineDefinitionS3Location;
         return this;
@@ -43,6 +47,7 @@ public class CreatePipelineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineDescription")
     public String pipelineDescription;
+
     public CreatePipelineRequest withPipelineDescription(String pipelineDescription) {
         this.pipelineDescription = pipelineDescription;
         return this;
@@ -51,6 +56,7 @@ public class CreatePipelineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineDisplayName")
     public String pipelineDisplayName;
+
     public CreatePipelineRequest withPipelineDisplayName(String pipelineDisplayName) {
         this.pipelineDisplayName = pipelineDisplayName;
         return this;
@@ -58,6 +64,7 @@ public class CreatePipelineRequest {
     
     @JsonProperty("PipelineName")
     public String pipelineName;
+
     public CreatePipelineRequest withPipelineName(String pipelineName) {
         this.pipelineName = pipelineName;
         return this;
@@ -65,6 +72,7 @@ public class CreatePipelineRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreatePipelineRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -73,9 +81,15 @@ public class CreatePipelineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreatePipelineRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreatePipelineRequest(@JsonProperty("ClientRequestToken") String clientRequestToken, @JsonProperty("PipelineName") String pipelineName, @JsonProperty("RoleArn") String roleArn) {
+        this.clientRequestToken = clientRequestToken;
+        this.pipelineName = pipelineName;
+        this.roleArn = roleArn;
+  }
 }

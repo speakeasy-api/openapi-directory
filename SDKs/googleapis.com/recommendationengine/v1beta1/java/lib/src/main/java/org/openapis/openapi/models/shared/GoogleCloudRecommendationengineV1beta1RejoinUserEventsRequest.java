@@ -18,9 +18,11 @@ public class GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userEventRejoinScope")
     public GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequestUserEventRejoinScopeEnum userEventRejoinScope;
+
     public GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequest withUserEventRejoinScope(GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequestUserEventRejoinScopeEnum userEventRejoinScope) {
         this.userEventRejoinScope = userEventRejoinScope;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequest(){}
 }

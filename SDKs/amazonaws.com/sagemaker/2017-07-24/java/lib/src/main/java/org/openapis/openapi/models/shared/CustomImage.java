@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomImage {
     @JsonProperty("AppImageConfigName")
     public String appImageConfigName;
+
     public CustomImage withAppImageConfigName(String appImageConfigName) {
         this.appImageConfigName = appImageConfigName;
         return this;
@@ -21,6 +22,7 @@ public class CustomImage {
     
     @JsonProperty("ImageName")
     public String imageName;
+
     public CustomImage withImageName(String imageName) {
         this.imageName = imageName;
         return this;
@@ -29,9 +31,14 @@ public class CustomImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageVersionNumber")
     public Long imageVersionNumber;
+
     public CustomImage withImageVersionNumber(Long imageVersionNumber) {
         this.imageVersionNumber = imageVersionNumber;
         return this;
     }
     
+    public CustomImage(@JsonProperty("AppImageConfigName") String appImageConfigName, @JsonProperty("ImageName") String imageName) {
+        this.appImageConfigName = appImageConfigName;
+        this.imageName = imageName;
+  }
 }

@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class TargetSslProxy {
     /**
-     * URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored.
+     * URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored. Accepted format is //certificatemanager.googleapis.com/projects/{project }/locations/{location}/certificateMaps/{resourceName}.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateMap")
     public String certificateMap;
+
     public TargetSslProxy withCertificateMap(String certificateMap) {
         this.certificateMap = certificateMap;
         return this;
@@ -29,6 +30,7 @@ public class TargetSslProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public TargetSslProxy withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -40,6 +42,7 @@ public class TargetSslProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TargetSslProxy withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class TargetSslProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TargetSslProxy withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class TargetSslProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TargetSslProxy withKind(String kind) {
         this.kind = kind;
         return this;
@@ -73,6 +78,7 @@ public class TargetSslProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TargetSslProxy withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class TargetSslProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proxyHeader")
     public TargetSslProxyProxyHeaderEnum proxyHeader;
+
     public TargetSslProxy withProxyHeader(TargetSslProxyProxyHeaderEnum proxyHeader) {
         this.proxyHeader = proxyHeader;
         return this;
@@ -95,6 +102,7 @@ public class TargetSslProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public TargetSslProxy withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -106,6 +114,7 @@ public class TargetSslProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public TargetSslProxy withService(String service) {
         this.service = service;
         return this;
@@ -117,6 +126,7 @@ public class TargetSslProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslCertificates")
     public String[] sslCertificates;
+
     public TargetSslProxy withSslCertificates(String[] sslCertificates) {
         this.sslCertificates = sslCertificates;
         return this;
@@ -128,9 +138,11 @@ public class TargetSslProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslPolicy")
     public String sslPolicy;
+
     public TargetSslProxy withSslPolicy(String sslPolicy) {
         this.sslPolicy = sslPolicy;
         return this;
     }
     
+    public TargetSslProxy(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAnomalyMonitorsResponse {
     
     public String contentType;
+
     public GetAnomalyMonitorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAnomalyMonitorsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAnomalyMonitorsResponse getAnomalyMonitorsResponse;
+
     public GetAnomalyMonitorsResponse withGetAnomalyMonitorsResponse(org.openapis.openapi.models.shared.GetAnomalyMonitorsResponse getAnomalyMonitorsResponse) {
         this.getAnomalyMonitorsResponse = getAnomalyMonitorsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetAnomalyMonitorsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetAnomalyMonitorsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class GetAnomalyMonitorsResponse {
      */
     
     public Object limitExceededException;
+
     public GetAnomalyMonitorsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class GetAnomalyMonitorsResponse {
     
     
     public Integer statusCode;
+
     public GetAnomalyMonitorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetAnomalyMonitorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAnomalyMonitorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetAnomalyMonitorsResponse {
      */
     
     public Object unknownMonitorException;
+
     public GetAnomalyMonitorsResponse withUnknownMonitorException(Object unknownMonitorException) {
         this.unknownMonitorException = unknownMonitorException;
         return this;
     }
     
+    public GetAnomalyMonitorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

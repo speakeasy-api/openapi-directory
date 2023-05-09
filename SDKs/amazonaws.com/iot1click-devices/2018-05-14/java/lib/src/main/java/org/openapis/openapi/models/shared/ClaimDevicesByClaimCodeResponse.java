@@ -15,6 +15,7 @@ public class ClaimDevicesByClaimCodeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClaimCode")
     public String claimCode;
+
     public ClaimDevicesByClaimCodeResponse withClaimCode(String claimCode) {
         this.claimCode = claimCode;
         return this;
@@ -23,9 +24,11 @@ public class ClaimDevicesByClaimCodeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Total")
     public Long total;
+
     public ClaimDevicesByClaimCodeResponse withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public ClaimDevicesByClaimCodeResponse(){}
 }

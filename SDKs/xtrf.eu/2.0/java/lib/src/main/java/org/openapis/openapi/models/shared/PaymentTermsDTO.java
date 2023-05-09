@@ -15,6 +15,7 @@ public class PaymentTermsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PaymentTermsDTO withDescription(String description) {
         this.description = description;
         return this;
@@ -23,9 +24,11 @@ public class PaymentTermsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PaymentTermsDTO withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PaymentTermsDTO(){}
 }

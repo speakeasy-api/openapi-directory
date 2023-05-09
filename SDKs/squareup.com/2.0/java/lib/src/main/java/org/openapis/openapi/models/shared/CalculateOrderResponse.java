@@ -18,6 +18,7 @@ public class CalculateOrderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CalculateOrderResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -34,9 +35,11 @@ public class CalculateOrderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Order order;
+
     public CalculateOrderResponse withOrder(Order order) {
         this.order = order;
         return this;
     }
     
+    public CalculateOrderResponse(){}
 }

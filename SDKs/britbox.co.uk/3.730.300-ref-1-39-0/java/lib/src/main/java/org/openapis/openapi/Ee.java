@@ -64,11 +64,9 @@ public class Ee {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssignMsisdnResponse res = new org.openapis.openapi.models.operations.AssignMsisdnResponse() {{
+        org.openapis.openapi.models.operations.AssignMsisdnResponse res = new org.openapis.openapi.models.operations.AssignMsisdnResponse(contentType, httpRes.statusCode()) {{
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201 || httpRes.statusCode() == 401) {
@@ -112,11 +110,9 @@ public class Ee {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CheckEeBtEligibilityResponse res = new org.openapis.openapi.models.operations.CheckEeBtEligibilityResponse() {{
+        org.openapis.openapi.models.operations.CheckEeBtEligibilityResponse res = new org.openapis.openapi.models.operations.CheckEeBtEligibilityResponse(contentType, httpRes.statusCode()) {{
             eeBtEligibility = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -163,12 +159,10 @@ public class Ee {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePinRequestResponse res = new org.openapis.openapi.models.operations.CreatePinRequestResponse() {{
+        org.openapis.openapi.models.operations.CreatePinRequestResponse res = new org.openapis.openapi.models.operations.CreatePinRequestResponse(contentType, httpRes.statusCode()) {{
             eeCreatePinResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -208,12 +202,10 @@ public class Ee {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTokenResponse res = new org.openapis.openapi.models.operations.CreateTokenResponse() {{
+        org.openapis.openapi.models.operations.CreateTokenResponse res = new org.openapis.openapi.models.operations.CreateTokenResponse(contentType, httpRes.statusCode()) {{
             eeCreateTokenResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -265,12 +257,10 @@ public class Ee {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEligibleOffersResponse res = new org.openapis.openapi.models.operations.GetEligibleOffersResponse() {{
+        org.openapis.openapi.models.operations.GetEligibleOffersResponse res = new org.openapis.openapi.models.operations.GetEligibleOffersResponse(contentType, httpRes.statusCode()) {{
             eeOffersResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -317,12 +307,10 @@ public class Ee {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPlanResponse res = new org.openapis.openapi.models.operations.GetPlanResponse() {{
+        org.openapis.openapi.models.operations.GetPlanResponse res = new org.openapis.openapi.models.operations.GetPlanResponse(contentType, httpRes.statusCode()) {{
             eePlanListItem = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -369,12 +357,10 @@ public class Ee {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEePlansResponse res = new org.openapis.openapi.models.operations.GetEePlansResponse() {{
+        org.openapis.openapi.models.operations.GetEePlansResponse res = new org.openapis.openapi.models.operations.GetEePlansResponse(contentType, httpRes.statusCode()) {{
             eePlans = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -426,12 +412,10 @@ public class Ee {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ValidatePinRequestResponse res = new org.openapis.openapi.models.operations.ValidatePinRequestResponse() {{
+        org.openapis.openapi.models.operations.ValidatePinRequestResponse res = new org.openapis.openapi.models.operations.ValidatePinRequestResponse(contentType, httpRes.statusCode()) {{
             eeValidatePinResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

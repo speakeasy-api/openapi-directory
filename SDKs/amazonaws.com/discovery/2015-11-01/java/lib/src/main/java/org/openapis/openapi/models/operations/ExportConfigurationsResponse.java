@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportConfigurationsResponse {
@@ -12,6 +13,7 @@ public class ExportConfigurationsResponse {
      */
     
     public Object authorizationErrorException;
+
     public ExportConfigurationsResponse withAuthorizationErrorException(Object authorizationErrorException) {
         this.authorizationErrorException = authorizationErrorException;
         return this;
@@ -19,6 +21,7 @@ public class ExportConfigurationsResponse {
     
     
     public String contentType;
+
     public ExportConfigurationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ExportConfigurationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ExportConfigurationsResponse exportConfigurationsResponse;
+
     public ExportConfigurationsResponse withExportConfigurationsResponse(org.openapis.openapi.models.shared.ExportConfigurationsResponse exportConfigurationsResponse) {
         this.exportConfigurationsResponse = exportConfigurationsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ExportConfigurationsResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public ExportConfigurationsResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -49,6 +54,7 @@ public class ExportConfigurationsResponse {
      */
     
     public Object invalidParameterException;
+
     public ExportConfigurationsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class ExportConfigurationsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ExportConfigurationsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -69,6 +76,7 @@ public class ExportConfigurationsResponse {
      */
     
     public Object operationNotPermittedException;
+
     public ExportConfigurationsResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -79,6 +87,7 @@ public class ExportConfigurationsResponse {
      */
     
     public Object serverInternalErrorException;
+
     public ExportConfigurationsResponse withServerInternalErrorException(Object serverInternalErrorException) {
         this.serverInternalErrorException = serverInternalErrorException;
         return this;
@@ -86,6 +95,7 @@ public class ExportConfigurationsResponse {
     
     
     public Integer statusCode;
+
     public ExportConfigurationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class ExportConfigurationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportConfigurationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ExportConfigurationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

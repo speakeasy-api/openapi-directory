@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2InfoTypeTransformations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transformations")
     public GooglePrivacyDlpV2InfoTypeTransformation[] transformations;
+
     public GooglePrivacyDlpV2InfoTypeTransformations withTransformations(GooglePrivacyDlpV2InfoTypeTransformation[] transformations) {
         this.transformations = transformations;
         return this;
     }
     
+    public GooglePrivacyDlpV2InfoTypeTransformations(){}
 }

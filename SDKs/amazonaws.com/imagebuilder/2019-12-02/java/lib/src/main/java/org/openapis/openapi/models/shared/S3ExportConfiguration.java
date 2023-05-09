@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3ExportConfiguration {
     @JsonProperty("diskImageFormat")
     public DiskImageFormatEnum diskImageFormat;
+
     public S3ExportConfiguration withDiskImageFormat(DiskImageFormatEnum diskImageFormat) {
         this.diskImageFormat = diskImageFormat;
         return this;
@@ -21,6 +22,7 @@ public class S3ExportConfiguration {
     
     @JsonProperty("roleName")
     public String roleName;
+
     public S3ExportConfiguration withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
@@ -28,6 +30,7 @@ public class S3ExportConfiguration {
     
     @JsonProperty("s3Bucket")
     public String s3Bucket;
+
     public S3ExportConfiguration withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -36,9 +39,15 @@ public class S3ExportConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Prefix")
     public String s3Prefix;
+
     public S3ExportConfiguration withS3Prefix(String s3Prefix) {
         this.s3Prefix = s3Prefix;
         return this;
     }
     
+    public S3ExportConfiguration(@JsonProperty("diskImageFormat") DiskImageFormatEnum diskImageFormat, @JsonProperty("roleName") String roleName, @JsonProperty("s3Bucket") String s3Bucket) {
+        this.diskImageFormat = diskImageFormat;
+        this.roleName = roleName;
+        this.s3Bucket = s3Bucket;
+  }
 }

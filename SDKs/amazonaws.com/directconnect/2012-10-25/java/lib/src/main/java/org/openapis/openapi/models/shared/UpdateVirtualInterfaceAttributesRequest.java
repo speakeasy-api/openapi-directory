@@ -12,6 +12,7 @@ public class UpdateVirtualInterfaceAttributesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableSiteLink")
     public Boolean enableSiteLink;
+
     public UpdateVirtualInterfaceAttributesRequest withEnableSiteLink(Boolean enableSiteLink) {
         this.enableSiteLink = enableSiteLink;
         return this;
@@ -20,6 +21,7 @@ public class UpdateVirtualInterfaceAttributesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mtu")
     public Long mtu;
+
     public UpdateVirtualInterfaceAttributesRequest withMtu(Long mtu) {
         this.mtu = mtu;
         return this;
@@ -27,6 +29,7 @@ public class UpdateVirtualInterfaceAttributesRequest {
     
     @JsonProperty("virtualInterfaceId")
     public String virtualInterfaceId;
+
     public UpdateVirtualInterfaceAttributesRequest withVirtualInterfaceId(String virtualInterfaceId) {
         this.virtualInterfaceId = virtualInterfaceId;
         return this;
@@ -35,9 +38,13 @@ public class UpdateVirtualInterfaceAttributesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualInterfaceName")
     public String virtualInterfaceName;
+
     public UpdateVirtualInterfaceAttributesRequest withVirtualInterfaceName(String virtualInterfaceName) {
         this.virtualInterfaceName = virtualInterfaceName;
         return this;
     }
     
+    public UpdateVirtualInterfaceAttributesRequest(@JsonProperty("virtualInterfaceId") String virtualInterfaceId) {
+        this.virtualInterfaceId = virtualInterfaceId;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CDDriveItem {
     @JsonProperty("id")
     public Long id;
+
     public CDDriveItem withId(Long id) {
         this.id = id;
         return this;
@@ -19,6 +20,7 @@ public class CDDriveItem {
     
     @JsonProperty("name")
     public String name;
+
     public CDDriveItem withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class CDDriveItem {
     
     @JsonProperty("type")
     public CDDriveItemTypeEnum type;
+
     public CDDriveItem withType(CDDriveItemTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CDDriveItem(@JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("type") CDDriveItemTypeEnum type) {
+        this.id = id;
+        this.name = name;
+        this.type = type;
+  }
 }

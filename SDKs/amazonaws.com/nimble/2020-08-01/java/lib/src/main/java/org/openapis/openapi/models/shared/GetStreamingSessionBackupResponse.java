@@ -15,9 +15,11 @@ public class GetStreamingSessionBackupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamingSessionBackup")
     public StreamingSessionBackup streamingSessionBackup;
+
     public GetStreamingSessionBackupResponse withStreamingSessionBackup(StreamingSessionBackup streamingSessionBackup) {
         this.streamingSessionBackup = streamingSessionBackup;
         return this;
     }
     
+    public GetStreamingSessionBackupResponse(){}
 }

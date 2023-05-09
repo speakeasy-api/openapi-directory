@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1alphaAccessDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionName")
     public String dimensionName;
+
     public GoogleAnalyticsAdminV1alphaAccessDimension withDimensionName(String dimensionName) {
         this.dimensionName = dimensionName;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAccessDimension(){}
 }

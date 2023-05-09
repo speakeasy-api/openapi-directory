@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsFirelensConfigurationDetail
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Options")
     public java.util.Map<String, String> options;
+
     public AwsEcsTaskDefinitionContainerDefinitionsFirelensConfigurationDetails withOptions(java.util.Map<String, String> options) {
         this.options = options;
         return this;
@@ -23,9 +24,11 @@ public class AwsEcsTaskDefinitionContainerDefinitionsFirelensConfigurationDetail
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsEcsTaskDefinitionContainerDefinitionsFirelensConfigurationDetails withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AwsEcsTaskDefinitionContainerDefinitionsFirelensConfigurationDetails(){}
 }

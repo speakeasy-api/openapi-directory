@@ -12,6 +12,7 @@ public class RunAMonitor200ApplicationJSONRunExecutionsResponseHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connection")
     public String connection;
+
     public RunAMonitor200ApplicationJSONRunExecutionsResponseHeaders withConnection(String connection) {
         this.connection = connection;
         return this;
@@ -20,6 +21,7 @@ public class RunAMonitor200ApplicationJSONRunExecutionsResponseHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content-encoding")
     public String contentEncoding;
+
     public RunAMonitor200ApplicationJSONRunExecutionsResponseHeaders withContentEncoding(String contentEncoding) {
         this.contentEncoding = contentEncoding;
         return this;
@@ -28,6 +30,7 @@ public class RunAMonitor200ApplicationJSONRunExecutionsResponseHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content-type")
     public String contentType;
+
     public RunAMonitor200ApplicationJSONRunExecutionsResponseHeaders withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +39,7 @@ public class RunAMonitor200ApplicationJSONRunExecutionsResponseHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public RunAMonitor200ApplicationJSONRunExecutionsResponseHeaders withDate(String date) {
         this.date = date;
         return this;
@@ -44,9 +48,11 @@ public class RunAMonitor200ApplicationJSONRunExecutionsResponseHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfer-encoding")
     public String transferEncoding;
+
     public RunAMonitor200ApplicationJSONRunExecutionsResponseHeaders withTransferEncoding(String transferEncoding) {
         this.transferEncoding = transferEncoding;
         return this;
     }
     
+    public RunAMonitor200ApplicationJSONRunExecutionsResponseHeaders(){}
 }

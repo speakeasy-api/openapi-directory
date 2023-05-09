@@ -15,9 +15,11 @@ public class RouteSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpRoute")
     public HttpRoute httpRoute;
+
     public RouteSpec withHttpRoute(HttpRoute httpRoute) {
         this.httpRoute = httpRoute;
         return this;
     }
     
+    public RouteSpec(){}
 }

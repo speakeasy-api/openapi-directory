@@ -17,6 +17,7 @@ public class AppPkgInfo {
      */
     @JsonProperty("_links")
     public AppPkgInfoLinks links;
+
     public AppPkgInfo withLinks(AppPkgInfoLinks links) {
         this.links = links;
         return this;
@@ -28,6 +29,7 @@ public class AppPkgInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalArtifacts")
     public Object additionalArtifacts;
+
     public AppPkgInfo withAdditionalArtifacts(Object additionalArtifacts) {
         this.additionalArtifacts = additionalArtifacts;
         return this;
@@ -38,6 +40,7 @@ public class AppPkgInfo {
      */
     @JsonProperty("appDId")
     public String appDId;
+
     public AppPkgInfo withAppDId(String appDId) {
         this.appDId = appDId;
         return this;
@@ -48,6 +51,7 @@ public class AppPkgInfo {
      */
     @JsonProperty("appDVersion")
     public String appDVersion;
+
     public AppPkgInfo withAppDVersion(String appDVersion) {
         this.appDVersion = appDVersion;
         return this;
@@ -58,6 +62,7 @@ public class AppPkgInfo {
      */
     @JsonProperty("appName")
     public String appName;
+
     public AppPkgInfo withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -69,6 +74,7 @@ public class AppPkgInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appProvider")
     public String appProvider;
+
     public AppPkgInfo withAppProvider(String appProvider) {
         this.appProvider = appProvider;
         return this;
@@ -79,6 +85,7 @@ public class AppPkgInfo {
      */
     @JsonProperty("appSoftwareVersion")
     public String appSoftwareVersion;
+
     public AppPkgInfo withAppSoftwareVersion(String appSoftwareVersion) {
         this.appSoftwareVersion = appSoftwareVersion;
         return this;
@@ -86,6 +93,7 @@ public class AppPkgInfo {
     
     @JsonProperty("checksum")
     public Checksum checksum;
+
     public AppPkgInfo withChecksum(Checksum checksum) {
         this.checksum = checksum;
         return this;
@@ -96,6 +104,7 @@ public class AppPkgInfo {
      */
     @JsonProperty("id")
     public String id;
+
     public AppPkgInfo withId(String id) {
         this.id = id;
         return this;
@@ -106,6 +115,7 @@ public class AppPkgInfo {
      */
     @JsonProperty("onboardingState")
     public OnboardingStateEnum onboardingState;
+
     public AppPkgInfo withOnboardingState(OnboardingStateEnum onboardingState) {
         this.onboardingState = onboardingState;
         return this;
@@ -116,6 +126,7 @@ public class AppPkgInfo {
      */
     @JsonProperty("operationalState")
     public AppPkgOperationalStateEnum operationalState;
+
     public AppPkgInfo withOperationalState(AppPkgOperationalStateEnum operationalState) {
         this.operationalState = operationalState;
         return this;
@@ -126,6 +137,7 @@ public class AppPkgInfo {
      */
     @JsonProperty("softwareImages")
     public Object softwareImages;
+
     public AppPkgInfo withSoftwareImages(Object softwareImages) {
         this.softwareImages = softwareImages;
         return this;
@@ -136,6 +148,7 @@ public class AppPkgInfo {
      */
     @JsonProperty("usageState")
     public UsageStateEnum usageState;
+
     public AppPkgInfo withUsageState(UsageStateEnum usageState) {
         this.usageState = usageState;
         return this;
@@ -147,9 +160,23 @@ public class AppPkgInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userDefinedData")
     public java.util.Map<String, Object> userDefinedData;
+
     public AppPkgInfo withUserDefinedData(java.util.Map<String, Object> userDefinedData) {
         this.userDefinedData = userDefinedData;
         return this;
     }
     
+    public AppPkgInfo(@JsonProperty("_links") AppPkgInfoLinks links, @JsonProperty("appDId") String appDId, @JsonProperty("appDVersion") String appDVersion, @JsonProperty("appName") String appName, @JsonProperty("appSoftwareVersion") String appSoftwareVersion, @JsonProperty("checksum") Checksum checksum, @JsonProperty("id") String id, @JsonProperty("onboardingState") OnboardingStateEnum onboardingState, @JsonProperty("operationalState") AppPkgOperationalStateEnum operationalState, @JsonProperty("softwareImages") Object softwareImages, @JsonProperty("usageState") UsageStateEnum usageState) {
+        this.links = links;
+        this.appDId = appDId;
+        this.appDVersion = appDVersion;
+        this.appName = appName;
+        this.appSoftwareVersion = appSoftwareVersion;
+        this.checksum = checksum;
+        this.id = id;
+        this.onboardingState = onboardingState;
+        this.operationalState = operationalState;
+        this.softwareImages = softwareImages;
+        this.usageState = usageState;
+  }
 }

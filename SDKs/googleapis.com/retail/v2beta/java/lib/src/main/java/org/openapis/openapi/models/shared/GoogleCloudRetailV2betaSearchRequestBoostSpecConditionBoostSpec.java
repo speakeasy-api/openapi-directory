@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaSearchRequestBoostSpecConditionBoostSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boost")
     public Float boost;
+
     public GoogleCloudRetailV2betaSearchRequestBoostSpecConditionBoostSpec withBoost(Float boost) {
         this.boost = boost;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2betaSearchRequestBoostSpecConditionBoostSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public String condition;
+
     public GoogleCloudRetailV2betaSearchRequestBoostSpecConditionBoostSpec withCondition(String condition) {
         this.condition = condition;
         return this;
     }
     
+    public GoogleCloudRetailV2betaSearchRequestBoostSpecConditionBoostSpec(){}
 }

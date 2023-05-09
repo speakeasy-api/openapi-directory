@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEntitySetFunctionSlimmerRequest {
@@ -12,6 +13,7 @@ public class GetEntitySetFunctionSlimmerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_automatic_assertions")
     public Boolean excludeAutomaticAssertions;
+
     public GetEntitySetFunctionSlimmerRequest withExcludeAutomaticAssertions(Boolean excludeAutomaticAssertions) {
         this.excludeAutomaticAssertions = excludeAutomaticAssertions;
         return this;
@@ -22,6 +24,7 @@ public class GetEntitySetFunctionSlimmerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=relationship_type")
     public GetEntitySetFunctionSlimmerRelationshipTypeEnum relationshipType;
+
     public GetEntitySetFunctionSlimmerRequest withRelationshipType(GetEntitySetFunctionSlimmerRelationshipTypeEnum relationshipType) {
         this.relationshipType = relationshipType;
         return this;
@@ -32,6 +35,7 @@ public class GetEntitySetFunctionSlimmerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
     public Long rows;
+
     public GetEntitySetFunctionSlimmerRequest withRows(Long rows) {
         this.rows = rows;
         return this;
@@ -42,6 +46,7 @@ public class GetEntitySetFunctionSlimmerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slim")
     public String[] slim;
+
     public GetEntitySetFunctionSlimmerRequest withSlim(String[] slim) {
         this.slim = slim;
         return this;
@@ -52,6 +57,7 @@ public class GetEntitySetFunctionSlimmerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public Long start;
+
     public GetEntitySetFunctionSlimmerRequest withStart(Long start) {
         this.start = start;
         return this;
@@ -62,9 +68,14 @@ public class GetEntitySetFunctionSlimmerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject")
     public String[] subject;
+
     public GetEntitySetFunctionSlimmerRequest withSubject(String[] subject) {
         this.subject = subject;
         return this;
     }
     
+    public GetEntitySetFunctionSlimmerRequest(@JsonProperty("slim") String[] slim, @JsonProperty("subject") String[] subject) {
+        this.slim = slim;
+        this.subject = subject;
+  }
 }

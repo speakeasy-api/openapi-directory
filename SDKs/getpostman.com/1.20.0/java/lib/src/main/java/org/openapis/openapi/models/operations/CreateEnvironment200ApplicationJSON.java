@@ -15,9 +15,11 @@ public class CreateEnvironment200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public CreateEnvironment200ApplicationJSONEnvironment environment;
+
     public CreateEnvironment200ApplicationJSON withEnvironment(CreateEnvironment200ApplicationJSONEnvironment environment) {
         this.environment = environment;
         return this;
     }
     
+    public CreateEnvironment200ApplicationJSON(){}
 }

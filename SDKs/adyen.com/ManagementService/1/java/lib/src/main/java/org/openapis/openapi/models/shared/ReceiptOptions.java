@@ -15,6 +15,7 @@ public class ReceiptOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public ReceiptOptions withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -31,9 +32,11 @@ public class ReceiptOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qrCodeData")
     public String qrCodeData;
+
     public ReceiptOptions withQrCodeData(String qrCodeData) {
         this.qrCodeData = qrCodeData;
         return this;
     }
     
+    public ReceiptOptions(){}
 }

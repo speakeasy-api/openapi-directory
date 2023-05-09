@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCampaignSoundDataMp3Security {
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=password")
     public String password;
+
     public GetCampaignSoundDataMp3Security withPassword(String password) {
         this.password = password;
         return this;
@@ -16,9 +18,14 @@ public class GetCampaignSoundDataMp3Security {
     
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=username")
     public String username;
+
     public GetCampaignSoundDataMp3Security withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetCampaignSoundDataMp3Security(@JsonProperty("Username") String username, @JsonProperty("Password") String password) {
+        this.username = username;
+        this.password = password;
+  }
 }

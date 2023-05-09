@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class DBInstanceList {
     
     public Long allocatedStorage;
+
     public DBInstanceList withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
         return this;
@@ -16,6 +17,7 @@ public class DBInstanceList {
     
     
     public Boolean autoMinorVersionUpgrade;
+
     public DBInstanceList withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -23,6 +25,7 @@ public class DBInstanceList {
     
     
     public String availabilityZone;
+
     public DBInstanceList withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -30,6 +33,7 @@ public class DBInstanceList {
     
     
     public Long backupRetentionPeriod;
+
     public DBInstanceList withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -37,6 +41,7 @@ public class DBInstanceList {
     
     
     public String characterSetName;
+
     public DBInstanceList withCharacterSetName(String characterSetName) {
         this.characterSetName = characterSetName;
         return this;
@@ -44,6 +49,7 @@ public class DBInstanceList {
     
     
     public String dbInstanceClass;
+
     public DBInstanceList withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -51,6 +57,7 @@ public class DBInstanceList {
     
     
     public String dbInstanceIdentifier;
+
     public DBInstanceList withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -58,6 +65,7 @@ public class DBInstanceList {
     
     
     public String dbInstanceStatus;
+
     public DBInstanceList withDBInstanceStatus(String dbInstanceStatus) {
         this.dbInstanceStatus = dbInstanceStatus;
         return this;
@@ -65,6 +73,7 @@ public class DBInstanceList {
     
     
     public String dbName;
+
     public DBInstanceList withDBName(String dbName) {
         this.dbName = dbName;
         return this;
@@ -72,6 +81,7 @@ public class DBInstanceList {
     
     
     public DBParameterGroupStatusList[] dbParameterGroups;
+
     public DBInstanceList withDBParameterGroups(DBParameterGroupStatusList[] dbParameterGroups) {
         this.dbParameterGroups = dbParameterGroups;
         return this;
@@ -79,6 +89,7 @@ public class DBInstanceList {
     
     
     public DBSecurityGroupMembershipList[] dbSecurityGroups;
+
     public DBInstanceList withDBSecurityGroups(DBSecurityGroupMembershipList[] dbSecurityGroups) {
         this.dbSecurityGroups = dbSecurityGroups;
         return this;
@@ -86,6 +97,7 @@ public class DBInstanceList {
     
     
     public DBSubnetGroup dbSubnetGroup;
+
     public DBInstanceList withDBSubnetGroup(DBSubnetGroup dbSubnetGroup) {
         this.dbSubnetGroup = dbSubnetGroup;
         return this;
@@ -93,6 +105,7 @@ public class DBInstanceList {
     
     
     public Endpoint endpoint;
+
     public DBInstanceList withEndpoint(Endpoint endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -100,6 +113,7 @@ public class DBInstanceList {
     
     
     public String engine;
+
     public DBInstanceList withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -107,6 +121,7 @@ public class DBInstanceList {
     
     
     public String engineVersion;
+
     public DBInstanceList withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -114,6 +129,7 @@ public class DBInstanceList {
     
     
     public OffsetDateTime instanceCreateTime;
+
     public DBInstanceList withInstanceCreateTime(OffsetDateTime instanceCreateTime) {
         this.instanceCreateTime = instanceCreateTime;
         return this;
@@ -121,6 +137,7 @@ public class DBInstanceList {
     
     
     public Long iops;
+
     public DBInstanceList withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -128,6 +145,7 @@ public class DBInstanceList {
     
     
     public OffsetDateTime latestRestorableTime;
+
     public DBInstanceList withLatestRestorableTime(OffsetDateTime latestRestorableTime) {
         this.latestRestorableTime = latestRestorableTime;
         return this;
@@ -135,6 +153,7 @@ public class DBInstanceList {
     
     
     public String licenseModel;
+
     public DBInstanceList withLicenseModel(String licenseModel) {
         this.licenseModel = licenseModel;
         return this;
@@ -142,6 +161,7 @@ public class DBInstanceList {
     
     
     public String masterUsername;
+
     public DBInstanceList withMasterUsername(String masterUsername) {
         this.masterUsername = masterUsername;
         return this;
@@ -149,6 +169,7 @@ public class DBInstanceList {
     
     
     public Boolean multiAZ;
+
     public DBInstanceList withMultiAZ(Boolean multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -156,6 +177,7 @@ public class DBInstanceList {
     
     
     public OptionGroupMembershipList[] optionGroupMemberships;
+
     public DBInstanceList withOptionGroupMemberships(OptionGroupMembershipList[] optionGroupMemberships) {
         this.optionGroupMemberships = optionGroupMemberships;
         return this;
@@ -163,6 +185,7 @@ public class DBInstanceList {
     
     
     public PendingModifiedValues pendingModifiedValues;
+
     public DBInstanceList withPendingModifiedValues(PendingModifiedValues pendingModifiedValues) {
         this.pendingModifiedValues = pendingModifiedValues;
         return this;
@@ -170,6 +193,7 @@ public class DBInstanceList {
     
     
     public String preferredBackupWindow;
+
     public DBInstanceList withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
@@ -177,6 +201,7 @@ public class DBInstanceList {
     
     
     public String preferredMaintenanceWindow;
+
     public DBInstanceList withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -184,6 +209,7 @@ public class DBInstanceList {
     
     
     public Boolean publiclyAccessible;
+
     public DBInstanceList withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -191,6 +217,7 @@ public class DBInstanceList {
     
     
     public String[] readReplicaDBInstanceIdentifiers;
+
     public DBInstanceList withReadReplicaDBInstanceIdentifiers(String[] readReplicaDBInstanceIdentifiers) {
         this.readReplicaDBInstanceIdentifiers = readReplicaDBInstanceIdentifiers;
         return this;
@@ -198,6 +225,7 @@ public class DBInstanceList {
     
     
     public String readReplicaSourceDBInstanceIdentifier;
+
     public DBInstanceList withReadReplicaSourceDBInstanceIdentifier(String readReplicaSourceDBInstanceIdentifier) {
         this.readReplicaSourceDBInstanceIdentifier = readReplicaSourceDBInstanceIdentifier;
         return this;
@@ -205,6 +233,7 @@ public class DBInstanceList {
     
     
     public String secondaryAvailabilityZone;
+
     public DBInstanceList withSecondaryAvailabilityZone(String secondaryAvailabilityZone) {
         this.secondaryAvailabilityZone = secondaryAvailabilityZone;
         return this;
@@ -212,6 +241,7 @@ public class DBInstanceList {
     
     
     public DBInstanceStatusInfoList[] statusInfos;
+
     public DBInstanceList withStatusInfos(DBInstanceStatusInfoList[] statusInfos) {
         this.statusInfos = statusInfos;
         return this;
@@ -219,9 +249,11 @@ public class DBInstanceList {
     
     
     public VpcSecurityGroupMembershipList[] vpcSecurityGroups;
+
     public DBInstanceList withVpcSecurityGroups(VpcSecurityGroupMembershipList[] vpcSecurityGroups) {
         this.vpcSecurityGroups = vpcSecurityGroups;
         return this;
     }
     
+    public DBInstanceList(){}
 }

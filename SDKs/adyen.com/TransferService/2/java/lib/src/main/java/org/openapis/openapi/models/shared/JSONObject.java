@@ -12,6 +12,7 @@ public class JSONObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paths")
     public JSONPath[] paths;
+
     public JSONObject withPaths(JSONPath[] paths) {
         this.paths = paths;
         return this;
@@ -20,9 +21,11 @@ public class JSONObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootPath")
     public JSONPath rootPath;
+
     public JSONObject withRootPath(JSONPath rootPath) {
         this.rootPath = rootPath;
         return this;
     }
     
+    public JSONObject(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListLaunchesResponse {
@@ -12,6 +13,7 @@ public class ListLaunchesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListLaunchesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListLaunchesResponse {
     
     
     public String contentType;
+
     public ListLaunchesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListLaunchesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListLaunchesResponse listLaunchesResponse;
+
     public ListLaunchesResponse withListLaunchesResponse(org.openapis.openapi.models.shared.ListLaunchesResponse listLaunchesResponse) {
         this.listLaunchesResponse = listLaunchesResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListLaunchesResponse {
     
     
     public Integer statusCode;
+
     public ListLaunchesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListLaunchesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListLaunchesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class ListLaunchesResponse {
      */
     
     public Object throttlingException;
+
     public ListLaunchesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,9 +70,14 @@ public class ListLaunchesResponse {
      */
     
     public Object validationException;
+
     public ListLaunchesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListLaunchesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

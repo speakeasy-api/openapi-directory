@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOperationsResponse {
@@ -12,6 +13,7 @@ public class GetOperationsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetOperationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetOperationsResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetOperationsResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetOperationsResponse {
     
     
     public String contentType;
+
     public GetOperationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetOperationsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetOperationsResult getOperationsResult;
+
     public GetOperationsResponse withGetOperationsResult(org.openapis.openapi.models.shared.GetOperationsResult getOperationsResult) {
         this.getOperationsResult = getOperationsResult;
         return this;
@@ -49,6 +54,7 @@ public class GetOperationsResponse {
      */
     
     public Object invalidInputException;
+
     public GetOperationsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetOperationsResponse {
      */
     
     public Object notFoundException;
+
     public GetOperationsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetOperationsResponse {
      */
     
     public Object operationFailureException;
+
     public GetOperationsResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetOperationsResponse {
      */
     
     public Object serviceException;
+
     public GetOperationsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetOperationsResponse {
     
     
     public Integer statusCode;
+
     public GetOperationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetOperationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOperationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetOperationsResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetOperationsResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetOperationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

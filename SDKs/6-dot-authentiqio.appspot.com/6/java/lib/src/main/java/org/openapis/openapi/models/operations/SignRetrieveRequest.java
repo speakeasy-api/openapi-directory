@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SignRetrieveRequest {
@@ -12,9 +13,13 @@ public class SignRetrieveRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=job")
     public String job;
+
     public SignRetrieveRequest withJob(String job) {
         this.job = job;
         return this;
     }
     
+    public SignRetrieveRequest(@JsonProperty("job") String job) {
+        this.job = job;
+  }
 }

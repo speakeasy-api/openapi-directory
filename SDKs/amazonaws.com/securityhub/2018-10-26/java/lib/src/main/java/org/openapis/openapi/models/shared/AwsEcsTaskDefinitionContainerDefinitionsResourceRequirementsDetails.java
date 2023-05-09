@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsResourceRequirementsDetails
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsEcsTaskDefinitionContainerDefinitionsResourceRequirementsDetails withType(String type) {
         this.type = type;
         return this;
@@ -23,9 +24,11 @@ public class AwsEcsTaskDefinitionContainerDefinitionsResourceRequirementsDetails
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public AwsEcsTaskDefinitionContainerDefinitionsResourceRequirementsDetails withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AwsEcsTaskDefinitionContainerDefinitionsResourceRequirementsDetails(){}
 }

@@ -18,6 +18,7 @@ public class OAuthToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public OAuthToken withScope(String scope) {
         this.scope = scope;
         return this;
@@ -29,9 +30,11 @@ public class OAuthToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountEmail")
     public String serviceAccountEmail;
+
     public OAuthToken withServiceAccountEmail(String serviceAccountEmail) {
         this.serviceAccountEmail = serviceAccountEmail;
         return this;
     }
     
+    public OAuthToken(){}
 }

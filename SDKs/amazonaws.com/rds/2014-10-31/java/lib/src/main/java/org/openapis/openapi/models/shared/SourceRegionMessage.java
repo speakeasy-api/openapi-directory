@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SourceRegionMessage {
     
     public String marker;
+
     public SourceRegionMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,9 +20,11 @@ public class SourceRegionMessage {
     
     
     public SourceRegionList[] sourceRegions;
+
     public SourceRegionMessage withSourceRegions(SourceRegionList[] sourceRegions) {
         this.sourceRegions = sourceRegions;
         return this;
     }
     
+    public SourceRegionMessage(){}
 }

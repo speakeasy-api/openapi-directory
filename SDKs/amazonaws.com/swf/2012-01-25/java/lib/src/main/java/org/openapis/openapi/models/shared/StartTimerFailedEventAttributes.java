@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartTimerFailedEventAttributes {
     @JsonProperty("cause")
     public StartTimerFailedCauseEnum cause;
+
     public StartTimerFailedEventAttributes withCause(StartTimerFailedCauseEnum cause) {
         this.cause = cause;
         return this;
@@ -19,6 +20,7 @@ public class StartTimerFailedEventAttributes {
     
     @JsonProperty("decisionTaskCompletedEventId")
     public Long decisionTaskCompletedEventId;
+
     public StartTimerFailedEventAttributes withDecisionTaskCompletedEventId(Long decisionTaskCompletedEventId) {
         this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
         return this;
@@ -26,9 +28,15 @@ public class StartTimerFailedEventAttributes {
     
     @JsonProperty("timerId")
     public String timerId;
+
     public StartTimerFailedEventAttributes withTimerId(String timerId) {
         this.timerId = timerId;
         return this;
     }
     
+    public StartTimerFailedEventAttributes(@JsonProperty("cause") StartTimerFailedCauseEnum cause, @JsonProperty("decisionTaskCompletedEventId") Long decisionTaskCompletedEventId, @JsonProperty("timerId") String timerId) {
+        this.cause = cause;
+        this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
+        this.timerId = timerId;
+  }
 }

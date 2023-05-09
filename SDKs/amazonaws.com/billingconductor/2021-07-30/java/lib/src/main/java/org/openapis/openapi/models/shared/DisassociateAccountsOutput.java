@@ -15,9 +15,11 @@ public class DisassociateAccountsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public DisassociateAccountsOutput withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DisassociateAccountsOutput(){}
 }

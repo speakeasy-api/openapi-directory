@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStoreCheckStatusJsonRequest {
@@ -12,6 +13,7 @@ public class GetStoreCheckStatusJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auth_token")
     public String authToken;
+
     public GetStoreCheckStatusJsonRequest withAuthToken(String authToken) {
         this.authToken = authToken;
         return this;
@@ -22,6 +24,7 @@ public class GetStoreCheckStatusJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public GetStoreCheckStatusJsonRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -32,6 +35,7 @@ public class GetStoreCheckStatusJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partner_code")
     public String partnerCode;
+
     public GetStoreCheckStatusJsonRequest withPartnerCode(String partnerCode) {
         this.partnerCode = partnerCode;
         return this;
@@ -42,9 +46,15 @@ public class GetStoreCheckStatusJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=store_code")
     public String storeCode;
+
     public GetStoreCheckStatusJsonRequest withStoreCode(String storeCode) {
         this.storeCode = storeCode;
         return this;
     }
     
+    public GetStoreCheckStatusJsonRequest(@JsonProperty("auth_token") String authToken, @JsonProperty("partner_code") String partnerCode, @JsonProperty("store_code") String storeCode) {
+        this.authToken = authToken;
+        this.partnerCode = partnerCode;
+        this.storeCode = storeCode;
+  }
 }

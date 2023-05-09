@@ -15,6 +15,7 @@ public class ListStudioLifecycleConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListStudioLifecycleConfigsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListStudioLifecycleConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StudioLifecycleConfigs")
     public StudioLifecycleConfigDetails[] studioLifecycleConfigs;
+
     public ListStudioLifecycleConfigsResponse withStudioLifecycleConfigs(StudioLifecycleConfigDetails[] studioLifecycleConfigs) {
         this.studioLifecycleConfigs = studioLifecycleConfigs;
         return this;
     }
     
+    public ListStudioLifecycleConfigsResponse(){}
 }

@@ -18,6 +18,7 @@ public class ReservationsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ReservationsScopedListWarningCodeEnum code;
+
     public ReservationsScopedListWarning withCode(ReservationsScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class ReservationsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ReservationsScopedListWarningData[] data;
+
     public ReservationsScopedListWarning withData(ReservationsScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class ReservationsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ReservationsScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ReservationsScopedListWarning(){}
 }

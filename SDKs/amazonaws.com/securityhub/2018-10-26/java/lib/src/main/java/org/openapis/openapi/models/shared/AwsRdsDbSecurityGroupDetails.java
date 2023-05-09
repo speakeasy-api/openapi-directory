@@ -15,6 +15,7 @@ public class AwsRdsDbSecurityGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbSecurityGroupArn")
     public String dbSecurityGroupArn;
+
     public AwsRdsDbSecurityGroupDetails withDbSecurityGroupArn(String dbSecurityGroupArn) {
         this.dbSecurityGroupArn = dbSecurityGroupArn;
         return this;
@@ -23,6 +24,7 @@ public class AwsRdsDbSecurityGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbSecurityGroupDescription")
     public String dbSecurityGroupDescription;
+
     public AwsRdsDbSecurityGroupDetails withDbSecurityGroupDescription(String dbSecurityGroupDescription) {
         this.dbSecurityGroupDescription = dbSecurityGroupDescription;
         return this;
@@ -31,6 +33,7 @@ public class AwsRdsDbSecurityGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbSecurityGroupName")
     public String dbSecurityGroupName;
+
     public AwsRdsDbSecurityGroupDetails withDbSecurityGroupName(String dbSecurityGroupName) {
         this.dbSecurityGroupName = dbSecurityGroupName;
         return this;
@@ -39,6 +42,7 @@ public class AwsRdsDbSecurityGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ec2SecurityGroups")
     public AwsRdsDbSecurityGroupEc2SecurityGroup[] ec2SecurityGroups;
+
     public AwsRdsDbSecurityGroupDetails withEc2SecurityGroups(AwsRdsDbSecurityGroupEc2SecurityGroup[] ec2SecurityGroups) {
         this.ec2SecurityGroups = ec2SecurityGroups;
         return this;
@@ -47,6 +51,7 @@ public class AwsRdsDbSecurityGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpRanges")
     public AwsRdsDbSecurityGroupIpRange[] ipRanges;
+
     public AwsRdsDbSecurityGroupDetails withIpRanges(AwsRdsDbSecurityGroupIpRange[] ipRanges) {
         this.ipRanges = ipRanges;
         return this;
@@ -55,6 +60,7 @@ public class AwsRdsDbSecurityGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerId")
     public String ownerId;
+
     public AwsRdsDbSecurityGroupDetails withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -63,9 +69,11 @@ public class AwsRdsDbSecurityGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public AwsRdsDbSecurityGroupDetails withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public AwsRdsDbSecurityGroupDetails(){}
 }

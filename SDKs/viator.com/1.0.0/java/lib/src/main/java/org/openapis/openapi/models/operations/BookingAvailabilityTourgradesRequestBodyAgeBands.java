@@ -17,6 +17,7 @@ public class BookingAvailabilityTourgradesRequestBodyAgeBands {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandId")
     public Long bandId;
+
     public BookingAvailabilityTourgradesRequestBodyAgeBands withBandId(Long bandId) {
         this.bandId = bandId;
         return this;
@@ -28,9 +29,11 @@ public class BookingAvailabilityTourgradesRequestBodyAgeBands {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public BookingAvailabilityTourgradesRequestBodyAgeBands withCount(Long count) {
         this.count = count;
         return this;
     }
     
+    public BookingAvailabilityTourgradesRequestBodyAgeBands(){}
 }

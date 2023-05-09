@@ -17,6 +17,7 @@ public class JobSchedulingError {
      */
     @JsonProperty("category")
     public JobSchedulingErrorCategoryEnum category;
+
     public JobSchedulingError withCategory(JobSchedulingErrorCategoryEnum category) {
         this.category = category;
         return this;
@@ -28,6 +29,7 @@ public class JobSchedulingError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public JobSchedulingError withCode(String code) {
         this.code = code;
         return this;
@@ -39,6 +41,7 @@ public class JobSchedulingError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public NameValuePair[] details;
+
     public JobSchedulingError withDetails(NameValuePair[] details) {
         this.details = details;
         return this;
@@ -50,9 +53,13 @@ public class JobSchedulingError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public JobSchedulingError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public JobSchedulingError(@JsonProperty("category") JobSchedulingErrorCategoryEnum category) {
+        this.category = category;
+  }
 }

@@ -15,6 +15,7 @@ public class InAppCampaignSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndDate")
     public String endDate;
+
     public InAppCampaignSchedule withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -23,6 +24,7 @@ public class InAppCampaignSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventFilter")
     public CampaignEventFilter eventFilter;
+
     public InAppCampaignSchedule withEventFilter(CampaignEventFilter eventFilter) {
         this.eventFilter = eventFilter;
         return this;
@@ -31,9 +33,11 @@ public class InAppCampaignSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuietTime")
     public QuietTime quietTime;
+
     public InAppCampaignSchedule withQuietTime(QuietTime quietTime) {
         this.quietTime = quietTime;
         return this;
     }
     
+    public InAppCampaignSchedule(){}
 }

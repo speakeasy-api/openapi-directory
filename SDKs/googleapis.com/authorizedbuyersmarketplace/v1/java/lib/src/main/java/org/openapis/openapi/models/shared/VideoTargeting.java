@@ -18,6 +18,7 @@ public class VideoTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedPositionTypes")
     public VideoTargetingExcludedPositionTypesEnum[] excludedPositionTypes;
+
     public VideoTargeting withExcludedPositionTypes(VideoTargetingExcludedPositionTypesEnum[] excludedPositionTypes) {
         this.excludedPositionTypes = excludedPositionTypes;
         return this;
@@ -29,9 +30,11 @@ public class VideoTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetedPositionTypes")
     public VideoTargetingTargetedPositionTypesEnum[] targetedPositionTypes;
+
     public VideoTargeting withTargetedPositionTypes(VideoTargetingTargetedPositionTypesEnum[] targetedPositionTypes) {
         this.targetedPositionTypes = targetedPositionTypes;
         return this;
     }
     
+    public VideoTargeting(){}
 }

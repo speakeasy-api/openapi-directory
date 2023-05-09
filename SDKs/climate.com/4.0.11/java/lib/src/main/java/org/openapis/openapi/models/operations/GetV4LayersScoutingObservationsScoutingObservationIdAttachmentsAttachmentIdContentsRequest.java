@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsRequest {
@@ -12,6 +13,7 @@ public class GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAtta
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAtta
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Range")
     public String range;
+
     public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsRequest withRange(String range) {
         this.range = range;
         return this;
@@ -32,6 +35,7 @@ public class GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAtta
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attachmentId")
     public String attachmentId;
+
     public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsRequest withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -42,9 +46,16 @@ public class GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAtta
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scoutingObservationId")
     public String scoutingObservationId;
+
     public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsRequest withScoutingObservationId(String scoutingObservationId) {
         this.scoutingObservationId = scoutingObservationId;
         return this;
     }
     
+    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Range") String range, @JsonProperty("attachmentId") String attachmentId, @JsonProperty("scoutingObservationId") String scoutingObservationId) {
+        this.accept = accept;
+        this.range = range;
+        this.attachmentId = attachmentId;
+        this.scoutingObservationId = scoutingObservationId;
+  }
 }

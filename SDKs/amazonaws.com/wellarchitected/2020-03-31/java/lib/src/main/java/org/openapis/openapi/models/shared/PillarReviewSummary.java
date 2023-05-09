@@ -18,6 +18,7 @@ public class PillarReviewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notes")
     public String notes;
+
     public PillarReviewSummary withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -29,6 +30,7 @@ public class PillarReviewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PillarId")
     public String pillarId;
+
     public PillarReviewSummary withPillarId(String pillarId) {
         this.pillarId = pillarId;
         return this;
@@ -40,20 +42,23 @@ public class PillarReviewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PillarName")
     public String pillarName;
+
     public PillarReviewSummary withPillarName(String pillarName) {
         this.pillarName = pillarName;
         return this;
     }
     
     /**
-     * A map from risk names to the count of how questions have that rating.
+     * A map from risk names to the count of how many questions have that rating.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RiskCounts")
     public java.util.Map<String, Long> riskCounts;
+
     public PillarReviewSummary withRiskCounts(java.util.Map<String, Long> riskCounts) {
         this.riskCounts = riskCounts;
         return this;
     }
     
+    public PillarReviewSummary(){}
 }

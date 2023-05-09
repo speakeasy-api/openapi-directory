@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateServiceTemplateResponse {
@@ -12,6 +13,7 @@ public class CreateServiceTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateServiceTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateServiceTemplateResponse {
      */
     
     public Object conflictException;
+
     public CreateServiceTemplateResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateServiceTemplateResponse {
     
     
     public String contentType;
+
     public CreateServiceTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateServiceTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateServiceTemplateOutput createServiceTemplateOutput;
+
     public CreateServiceTemplateResponse withCreateServiceTemplateOutput(org.openapis.openapi.models.shared.CreateServiceTemplateOutput createServiceTemplateOutput) {
         this.createServiceTemplateOutput = createServiceTemplateOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateServiceTemplateResponse {
      */
     
     public Object internalServerException;
+
     public CreateServiceTemplateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateServiceTemplateResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateServiceTemplateResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateServiceTemplateResponse {
     
     
     public Integer statusCode;
+
     public CreateServiceTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateServiceTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateServiceTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateServiceTemplateResponse {
      */
     
     public Object throttlingException;
+
     public CreateServiceTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateServiceTemplateResponse {
      */
     
     public Object validationException;
+
     public CreateServiceTemplateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateServiceTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

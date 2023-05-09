@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeBundleTasksResultBundleTasksBundleTaskError {
     
     public String code;
+
     public DescribeBundleTasksResultBundleTasksBundleTaskError withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class DescribeBundleTasksResultBundleTasksBundleTaskError {
     
     
     public String message;
+
     public DescribeBundleTasksResultBundleTasksBundleTaskError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DescribeBundleTasksResultBundleTasksBundleTaskError(){}
 }

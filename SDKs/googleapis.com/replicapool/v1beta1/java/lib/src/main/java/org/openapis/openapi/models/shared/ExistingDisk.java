@@ -18,6 +18,7 @@ public class ExistingDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachment")
     public DiskAttachment attachment;
+
     public ExistingDisk withAttachment(DiskAttachment attachment) {
         this.attachment = attachment;
         return this;
@@ -29,9 +30,11 @@ public class ExistingDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public ExistingDisk withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public ExistingDisk(){}
 }

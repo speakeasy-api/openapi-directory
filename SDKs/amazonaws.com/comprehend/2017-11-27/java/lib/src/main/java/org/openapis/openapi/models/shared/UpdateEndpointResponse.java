@@ -15,9 +15,11 @@ public class UpdateEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredModelArn")
     public String desiredModelArn;
+
     public UpdateEndpointResponse withDesiredModelArn(String desiredModelArn) {
         this.desiredModelArn = desiredModelArn;
         return this;
     }
     
+    public UpdateEndpointResponse(){}
 }

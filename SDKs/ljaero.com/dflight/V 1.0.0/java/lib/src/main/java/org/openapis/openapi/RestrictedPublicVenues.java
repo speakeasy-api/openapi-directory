@@ -75,12 +75,10 @@ public class RestrictedPublicVenues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VenByDistanceUsV1VenuesDistanceQueryPostResponse res = new org.openapis.openapi.models.operations.VenByDistanceUsV1VenuesDistanceQueryPostResponse() {{
+        org.openapis.openapi.models.operations.VenByDistanceUsV1VenuesDistanceQueryPostResponse res = new org.openapis.openapi.models.operations.VenByDistanceUsV1VenuesDistanceQueryPostResponse(contentType, httpRes.statusCode()) {{
             venueDistanceResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,12 +134,10 @@ public class RestrictedPublicVenues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VenByPolyUsV1VenuesPolygonQueryPostResponse res = new org.openapis.openapi.models.operations.VenByPolyUsV1VenuesPolygonQueryPostResponse() {{
+        org.openapis.openapi.models.operations.VenByPolyUsV1VenuesPolygonQueryPostResponse res = new org.openapis.openapi.models.operations.VenByPolyUsV1VenuesPolygonQueryPostResponse(contentType, httpRes.statusCode()) {{
             venuePolyResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,12 +193,10 @@ public class RestrictedPublicVenues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VenByRouteUsV1VenuesRouteQueryPostResponse res = new org.openapis.openapi.models.operations.VenByRouteUsV1VenuesRouteQueryPostResponse() {{
+        org.openapis.openapi.models.operations.VenByRouteUsV1VenuesRouteQueryPostResponse res = new org.openapis.openapi.models.operations.VenByRouteUsV1VenuesRouteQueryPostResponse(contentType, httpRes.statusCode()) {{
             venueRouteResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

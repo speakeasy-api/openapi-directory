@@ -18,6 +18,7 @@ public class SideInputInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public java.util.Map<String, Object> kind;
+
     public SideInputInfo withKind(java.util.Map<String, Object> kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class SideInputInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public Source[] sources;
+
     public SideInputInfo withSources(Source[] sources) {
         this.sources = sources;
         return this;
@@ -40,9 +42,11 @@ public class SideInputInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public SideInputInfo withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public SideInputInfo(){}
 }

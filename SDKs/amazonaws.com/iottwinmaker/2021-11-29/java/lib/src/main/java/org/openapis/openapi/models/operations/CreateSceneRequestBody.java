@@ -15,6 +15,7 @@ public class CreateSceneRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public String[] capabilities;
+
     public CreateSceneRequestBody withCapabilities(String[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -25,6 +26,7 @@ public class CreateSceneRequestBody {
      */
     @JsonProperty("contentLocation")
     public String contentLocation;
+
     public CreateSceneRequestBody withContentLocation(String contentLocation) {
         this.contentLocation = contentLocation;
         return this;
@@ -36,6 +38,7 @@ public class CreateSceneRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateSceneRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class CreateSceneRequestBody {
      */
     @JsonProperty("sceneId")
     public String sceneId;
+
     public CreateSceneRequestBody withSceneId(String sceneId) {
         this.sceneId = sceneId;
         return this;
@@ -57,6 +61,7 @@ public class CreateSceneRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sceneMetadata")
     public java.util.Map<String, String> sceneMetadata;
+
     public CreateSceneRequestBody withSceneMetadata(java.util.Map<String, String> sceneMetadata) {
         this.sceneMetadata = sceneMetadata;
         return this;
@@ -68,9 +73,14 @@ public class CreateSceneRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateSceneRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSceneRequestBody(@JsonProperty("contentLocation") String contentLocation, @JsonProperty("sceneId") String sceneId) {
+        this.contentLocation = contentLocation;
+        this.sceneId = sceneId;
+  }
 }

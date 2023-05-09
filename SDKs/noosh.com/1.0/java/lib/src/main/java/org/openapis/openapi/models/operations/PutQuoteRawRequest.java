@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutQuoteRawRequest {
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public PutQuoteRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class PutQuoteRawRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public String projectId;
+
     public PutQuoteRawRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -23,6 +26,7 @@ public class PutQuoteRawRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quote_id")
     public String quoteId;
+
     public PutQuoteRawRequest withQuoteId(String quoteId) {
         this.quoteId = quoteId;
         return this;
@@ -30,9 +34,15 @@ public class PutQuoteRawRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
     public String workgroupId;
+
     public PutQuoteRawRequest withWorkgroupId(String workgroupId) {
         this.workgroupId = workgroupId;
         return this;
     }
     
+    public PutQuoteRawRequest(@JsonProperty("project_id") String projectId, @JsonProperty("quote_id") String quoteId, @JsonProperty("workgroup_id") String workgroupId) {
+        this.projectId = projectId;
+        this.quoteId = quoteId;
+        this.workgroupId = workgroupId;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeEffectivePolicyRequest {
     @JsonProperty("PolicyType")
     public EffectivePolicyTypeEnum policyType;
+
     public DescribeEffectivePolicyRequest withPolicyType(EffectivePolicyTypeEnum policyType) {
         this.policyType = policyType;
         return this;
@@ -19,9 +20,13 @@ public class DescribeEffectivePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetId")
     public String targetId;
+
     public DescribeEffectivePolicyRequest withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
     }
     
+    public DescribeEffectivePolicyRequest(@JsonProperty("PolicyType") EffectivePolicyTypeEnum policyType) {
+        this.policyType = policyType;
+  }
 }

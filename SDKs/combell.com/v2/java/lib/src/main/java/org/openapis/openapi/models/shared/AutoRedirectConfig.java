@@ -18,9 +18,11 @@ public class AutoRedirectConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AutoRedirectConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public AutoRedirectConfig(){}
 }

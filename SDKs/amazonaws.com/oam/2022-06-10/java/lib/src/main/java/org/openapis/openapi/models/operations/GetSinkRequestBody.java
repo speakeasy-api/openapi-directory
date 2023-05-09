@@ -12,9 +12,13 @@ public class GetSinkRequestBody {
      */
     @JsonProperty("Identifier")
     public String identifier;
+
     public GetSinkRequestBody withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
     }
     
+    public GetSinkRequestBody(@JsonProperty("Identifier") String identifier) {
+        this.identifier = identifier;
+  }
 }

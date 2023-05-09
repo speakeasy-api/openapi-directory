@@ -15,6 +15,7 @@ public class TflApiPresentationEntitiesPassengerFlow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSlice")
     public String timeSlice;
+
     public TflApiPresentationEntitiesPassengerFlow withTimeSlice(String timeSlice) {
         this.timeSlice = timeSlice;
         return this;
@@ -26,9 +27,11 @@ public class TflApiPresentationEntitiesPassengerFlow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Integer value;
+
     public TflApiPresentationEntitiesPassengerFlow withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public TflApiPresentationEntitiesPassengerFlow(){}
 }

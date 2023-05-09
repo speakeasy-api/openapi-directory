@@ -58,13 +58,11 @@ public class Package {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PackageDeleteResponse res = new org.openapis.openapi.models.operations.PackageDeleteResponse() {{
+        org.openapis.openapi.models.operations.PackageDeleteResponse res = new org.openapis.openapi.models.operations.PackageDeleteResponse(contentType, httpRes.statusCode()) {{
             defaultResponseDTOOfBoolean = null;
             defaultResponseDTOOfString = null;
             apiException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -119,12 +117,10 @@ public class Package {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PackageGetResponse res = new org.openapis.openapi.models.operations.PackageGetResponse() {{
+        org.openapis.openapi.models.operations.PackageGetResponse res = new org.openapis.openapi.models.operations.PackageGetResponse(contentType, httpRes.statusCode()) {{
             defaultResponseDTOOfPackageDTO = null;
             apiException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -171,12 +167,10 @@ public class Package {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PackagePostResponse res = new org.openapis.openapi.models.operations.PackagePostResponse() {{
+        org.openapis.openapi.models.operations.PackagePostResponse res = new org.openapis.openapi.models.operations.PackagePostResponse(contentType, httpRes.statusCode()) {{
             defaultResponseDTOOfStatusDTO = null;
             apiException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -223,12 +217,10 @@ public class Package {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PackagePutResponse res = new org.openapis.openapi.models.operations.PackagePutResponse() {{
+        org.openapis.openapi.models.operations.PackagePutResponse res = new org.openapis.openapi.models.operations.PackagePutResponse(contentType, httpRes.statusCode()) {{
             defaultResponseDTOOfStatusDTO = null;
             apiException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -276,13 +268,11 @@ public class Package {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PackageSearchResponse res = new org.openapis.openapi.models.operations.PackageSearchResponse() {{
+        org.openapis.openapi.models.operations.PackageSearchResponse res = new org.openapis.openapi.models.operations.PackageSearchResponse(contentType, httpRes.statusCode()) {{
             defaultResponseDTOOfPackageSearchDTOS = null;
             defaultResponseDTOOfListOfPackageSearchDTO = null;
             apiException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -337,13 +327,11 @@ public class Package {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PackageUpdateStatusResponse res = new org.openapis.openapi.models.operations.PackageUpdateStatusResponse() {{
+        org.openapis.openapi.models.operations.PackageUpdateStatusResponse res = new org.openapis.openapi.models.operations.PackageUpdateStatusResponse(contentType, httpRes.statusCode()) {{
             defaultResponseDTOOfBoolean = null;
             defaultResponseDTOOfString = null;
             apiException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

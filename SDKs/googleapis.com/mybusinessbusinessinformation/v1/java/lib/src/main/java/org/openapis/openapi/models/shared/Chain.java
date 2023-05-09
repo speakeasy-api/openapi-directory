@@ -18,6 +18,7 @@ public class Chain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chainNames")
     public ChainName[] chainNames;
+
     public Chain withChainNames(ChainName[] chainNames) {
         this.chainNames = chainNames;
         return this;
@@ -29,6 +30,7 @@ public class Chain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationCount")
     public Integer locationCount;
+
     public Chain withLocationCount(Integer locationCount) {
         this.locationCount = locationCount;
         return this;
@@ -40,6 +42,7 @@ public class Chain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Chain withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class Chain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("websites")
     public ChainUri[] websites;
+
     public Chain withWebsites(ChainUri[] websites) {
         this.websites = websites;
         return this;
     }
     
+    public Chain(){}
 }

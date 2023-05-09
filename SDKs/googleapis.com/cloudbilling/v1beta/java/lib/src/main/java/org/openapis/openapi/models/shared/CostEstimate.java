@@ -18,6 +18,7 @@ public class CostEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditEstimates")
     public CreditEstimate[] creditEstimates;
+
     public CostEstimate withCreditEstimates(CreditEstimate[] creditEstimates) {
         this.creditEstimates = creditEstimates;
         return this;
@@ -29,6 +30,7 @@ public class CostEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("netCostEstimate")
     public Money netCostEstimate;
+
     public CostEstimate withNetCostEstimate(Money netCostEstimate) {
         this.netCostEstimate = netCostEstimate;
         return this;
@@ -40,9 +42,11 @@ public class CostEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preCreditCostEstimate")
     public Money preCreditCostEstimate;
+
     public CostEstimate withPreCreditCostEstimate(Money preCreditCostEstimate) {
         this.preCreditCostEstimate = preCreditCostEstimate;
         return this;
     }
     
+    public CostEstimate(){}
 }

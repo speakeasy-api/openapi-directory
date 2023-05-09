@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExportJobResponse {
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public ExportJobResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -22,6 +23,7 @@ public class ExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompletedPieces")
     public Long completedPieces;
+
     public ExportJobResponse withCompletedPieces(Long completedPieces) {
         this.completedPieces = completedPieces;
         return this;
@@ -30,6 +32,7 @@ public class ExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompletionDate")
     public String completionDate;
+
     public ExportJobResponse withCompletionDate(String completionDate) {
         this.completionDate = completionDate;
         return this;
@@ -37,6 +40,7 @@ public class ExportJobResponse {
     
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public ExportJobResponse withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -44,6 +48,7 @@ public class ExportJobResponse {
     
     @JsonProperty("Definition")
     public ExportJobResource definition;
+
     public ExportJobResponse withDefinition(ExportJobResource definition) {
         this.definition = definition;
         return this;
@@ -52,6 +57,7 @@ public class ExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedPieces")
     public Long failedPieces;
+
     public ExportJobResponse withFailedPieces(Long failedPieces) {
         this.failedPieces = failedPieces;
         return this;
@@ -60,6 +66,7 @@ public class ExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Failures")
     public String[] failures;
+
     public ExportJobResponse withFailures(String[] failures) {
         this.failures = failures;
         return this;
@@ -67,6 +74,7 @@ public class ExportJobResponse {
     
     @JsonProperty("Id")
     public String id;
+
     public ExportJobResponse withId(String id) {
         this.id = id;
         return this;
@@ -74,6 +82,7 @@ public class ExportJobResponse {
     
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public ExportJobResponse withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -82,6 +91,7 @@ public class ExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalFailures")
     public Long totalFailures;
+
     public ExportJobResponse withTotalFailures(Long totalFailures) {
         this.totalFailures = totalFailures;
         return this;
@@ -90,6 +100,7 @@ public class ExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalPieces")
     public Long totalPieces;
+
     public ExportJobResponse withTotalPieces(Long totalPieces) {
         this.totalPieces = totalPieces;
         return this;
@@ -98,6 +109,7 @@ public class ExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalProcessed")
     public Long totalProcessed;
+
     public ExportJobResponse withTotalProcessed(Long totalProcessed) {
         this.totalProcessed = totalProcessed;
         return this;
@@ -105,9 +117,18 @@ public class ExportJobResponse {
     
     @JsonProperty("Type")
     public String type;
+
     public ExportJobResponse withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ExportJobResponse(@JsonProperty("ApplicationId") String applicationId, @JsonProperty("CreationDate") String creationDate, @JsonProperty("Definition") ExportJobResource definition, @JsonProperty("Id") String id, @JsonProperty("JobStatus") JobStatusEnum jobStatus, @JsonProperty("Type") String type) {
+        this.applicationId = applicationId;
+        this.creationDate = creationDate;
+        this.definition = definition;
+        this.id = id;
+        this.jobStatus = jobStatus;
+        this.type = type;
+  }
 }

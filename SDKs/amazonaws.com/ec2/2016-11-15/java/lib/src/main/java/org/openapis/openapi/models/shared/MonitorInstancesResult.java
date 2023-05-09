@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class MonitorInstancesResult {
     
     public MonitorInstancesResultInstanceMonitorings[] instanceMonitorings;
+
     public MonitorInstancesResult withInstanceMonitorings(MonitorInstancesResultInstanceMonitorings[] instanceMonitorings) {
         this.instanceMonitorings = instanceMonitorings;
         return this;
     }
     
+    public MonitorInstancesResult(){}
 }

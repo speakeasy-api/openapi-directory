@@ -15,6 +15,7 @@ public class CustomLineItemVersionListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public CustomLineItemVersionListElement withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class CustomLineItemVersionListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationSize")
     public Long associationSize;
+
     public CustomLineItemVersionListElement withAssociationSize(Long associationSize) {
         this.associationSize = associationSize;
         return this;
@@ -31,6 +33,7 @@ public class CustomLineItemVersionListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingGroupArn")
     public String billingGroupArn;
+
     public CustomLineItemVersionListElement withBillingGroupArn(String billingGroupArn) {
         this.billingGroupArn = billingGroupArn;
         return this;
@@ -42,6 +45,7 @@ public class CustomLineItemVersionListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChargeDetails")
     public ListCustomLineItemChargeDetails chargeDetails;
+
     public CustomLineItemVersionListElement withChargeDetails(ListCustomLineItemChargeDetails chargeDetails) {
         this.chargeDetails = chargeDetails;
         return this;
@@ -50,6 +54,7 @@ public class CustomLineItemVersionListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationTime")
     public Long creationTime;
+
     public CustomLineItemVersionListElement withCreationTime(Long creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -58,6 +63,7 @@ public class CustomLineItemVersionListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrencyCode")
     public CurrencyCodeEnum currencyCode;
+
     public CustomLineItemVersionListElement withCurrencyCode(CurrencyCodeEnum currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -66,6 +72,7 @@ public class CustomLineItemVersionListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CustomLineItemVersionListElement withDescription(String description) {
         this.description = description;
         return this;
@@ -74,6 +81,7 @@ public class CustomLineItemVersionListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndBillingPeriod")
     public String endBillingPeriod;
+
     public CustomLineItemVersionListElement withEndBillingPeriod(String endBillingPeriod) {
         this.endBillingPeriod = endBillingPeriod;
         return this;
@@ -82,6 +90,7 @@ public class CustomLineItemVersionListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedTime")
     public Long lastModifiedTime;
+
     public CustomLineItemVersionListElement withLastModifiedTime(Long lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -90,6 +99,7 @@ public class CustomLineItemVersionListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CustomLineItemVersionListElement withName(String name) {
         this.name = name;
         return this;
@@ -98,6 +108,7 @@ public class CustomLineItemVersionListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductCode")
     public String productCode;
+
     public CustomLineItemVersionListElement withProductCode(String productCode) {
         this.productCode = productCode;
         return this;
@@ -106,6 +117,7 @@ public class CustomLineItemVersionListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartBillingPeriod")
     public String startBillingPeriod;
+
     public CustomLineItemVersionListElement withStartBillingPeriod(String startBillingPeriod) {
         this.startBillingPeriod = startBillingPeriod;
         return this;
@@ -114,9 +126,11 @@ public class CustomLineItemVersionListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartTime")
     public Long startTime;
+
     public CustomLineItemVersionListElement withStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public CustomLineItemVersionListElement(){}
 }

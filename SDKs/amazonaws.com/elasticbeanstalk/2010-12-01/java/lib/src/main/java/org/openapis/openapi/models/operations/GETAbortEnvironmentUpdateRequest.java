@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAbortEnvironmentUpdateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETAbortEnvironmentUpdateActionEnum action;
+
     public GETAbortEnvironmentUpdateRequest withAction(GETAbortEnvironmentUpdateActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETAbortEnvironmentUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentId")
     public String environmentId;
+
     public GETAbortEnvironmentUpdateRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -29,6 +32,7 @@ public class GETAbortEnvironmentUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentName")
     public String environmentName;
+
     public GETAbortEnvironmentUpdateRequest withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -36,6 +40,7 @@ public class GETAbortEnvironmentUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETAbortEnvironmentUpdateVersionEnum version;
+
     public GETAbortEnvironmentUpdateRequest withVersion(GETAbortEnvironmentUpdateVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETAbortEnvironmentUpdateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETAbortEnvironmentUpdateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETAbortEnvironmentUpdateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETAbortEnvironmentUpdateRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETAbortEnvironmentUpdateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETAbortEnvironmentUpdateRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETAbortEnvironmentUpdateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETAbortEnvironmentUpdateRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETAbortEnvironmentUpdateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETAbortEnvironmentUpdateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETAbortEnvironmentUpdateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETAbortEnvironmentUpdateRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,14 @@ public class GETAbortEnvironmentUpdateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETAbortEnvironmentUpdateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETAbortEnvironmentUpdateRequest(@JsonProperty("Action") GETAbortEnvironmentUpdateActionEnum action, @JsonProperty("Version") GETAbortEnvironmentUpdateVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

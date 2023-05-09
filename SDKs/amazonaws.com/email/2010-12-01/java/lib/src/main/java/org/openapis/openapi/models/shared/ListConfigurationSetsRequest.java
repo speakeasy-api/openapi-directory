@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListConfigurationSetsRequest {
     
     public Long maxItems;
+
     public ListConfigurationSetsRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -19,9 +20,11 @@ public class ListConfigurationSetsRequest {
     
     
     public String nextToken;
+
     public ListConfigurationSetsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListConfigurationSetsRequest(){}
 }

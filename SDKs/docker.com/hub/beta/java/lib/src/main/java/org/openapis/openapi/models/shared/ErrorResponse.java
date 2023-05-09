@@ -18,6 +18,7 @@ public class ErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errinfo")
     public ErrorInfo errinfo;
+
     public ErrorResponse withErrinfo(ErrorInfo errinfo) {
         this.errinfo = errinfo;
         return this;
@@ -29,6 +30,7 @@ public class ErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ErrorResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -40,9 +42,11 @@ public class ErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txnid")
     public String txnid;
+
     public ErrorResponse withTxnid(String txnid) {
         this.txnid = txnid;
         return this;
     }
     
+    public ErrorResponse(){}
 }

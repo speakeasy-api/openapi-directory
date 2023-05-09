@@ -18,6 +18,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecI
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freeTrialDuration")
     public GoogleCloudPaymentsResellerSubscriptionV1Duration freeTrialDuration;
+
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput withFreeTrialDuration(GoogleCloudPaymentsResellerSubscriptionV1Duration freeTrialDuration) {
         this.freeTrialDuration = freeTrialDuration;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecI
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("introductoryPricingDetails")
     public GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsInput introductoryPricingDetails;
+
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput withIntroductoryPricingDetails(GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsInput introductoryPricingDetails) {
         this.introductoryPricingDetails = introductoryPricingDetails;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecI
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotion")
     public String promotion;
+
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput withPromotion(String promotion) {
         this.promotion = promotion;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput(){}
 }

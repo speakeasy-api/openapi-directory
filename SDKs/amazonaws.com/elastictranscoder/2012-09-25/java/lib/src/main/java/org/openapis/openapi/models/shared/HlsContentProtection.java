@@ -15,6 +15,7 @@ public class HlsContentProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InitializationVector")
     public String initializationVector;
+
     public HlsContentProtection withInitializationVector(String initializationVector) {
         this.initializationVector = initializationVector;
         return this;
@@ -23,6 +24,7 @@ public class HlsContentProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public HlsContentProtection withKey(String key) {
         this.key = key;
         return this;
@@ -31,6 +33,7 @@ public class HlsContentProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyMd5")
     public String keyMd5;
+
     public HlsContentProtection withKeyMd5(String keyMd5) {
         this.keyMd5 = keyMd5;
         return this;
@@ -39,6 +42,7 @@ public class HlsContentProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyStoragePolicy")
     public String keyStoragePolicy;
+
     public HlsContentProtection withKeyStoragePolicy(String keyStoragePolicy) {
         this.keyStoragePolicy = keyStoragePolicy;
         return this;
@@ -47,6 +51,7 @@ public class HlsContentProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseAcquisitionUrl")
     public String licenseAcquisitionUrl;
+
     public HlsContentProtection withLicenseAcquisitionUrl(String licenseAcquisitionUrl) {
         this.licenseAcquisitionUrl = licenseAcquisitionUrl;
         return this;
@@ -55,9 +60,11 @@ public class HlsContentProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Method")
     public String method;
+
     public HlsContentProtection withMethod(String method) {
         this.method = method;
         return this;
     }
     
+    public HlsContentProtection(){}
 }

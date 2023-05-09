@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RemoveRoleFromDBClusterMessage {
     
     public String dbClusterIdentifier;
+
     public RemoveRoleFromDBClusterMessage withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class RemoveRoleFromDBClusterMessage {
     
     
     public String featureName;
+
     public RemoveRoleFromDBClusterMessage withFeatureName(String featureName) {
         this.featureName = featureName;
         return this;
@@ -23,9 +25,14 @@ public class RemoveRoleFromDBClusterMessage {
     
     
     public String roleArn;
+
     public RemoveRoleFromDBClusterMessage withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public RemoveRoleFromDBClusterMessage(@JsonProperty("DBClusterIdentifier") String dbClusterIdentifier, @JsonProperty("RoleArn") String roleArn) {
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        this.roleArn = roleArn;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdatePrice200ApplicationXMLErrors {
     
     public UpdatePrice200ApplicationXMLErrorsCategoryEnum category;
+
     public UpdatePrice200ApplicationXMLErrors withCategory(UpdatePrice200ApplicationXMLErrorsCategoryEnum category) {
         this.category = category;
         return this;
@@ -16,6 +17,7 @@ public class UpdatePrice200ApplicationXMLErrors {
     
     
     public UpdatePrice200ApplicationXMLErrorsCauses[] causes;
+
     public UpdatePrice200ApplicationXMLErrors withCauses(UpdatePrice200ApplicationXMLErrorsCauses[] causes) {
         this.causes = causes;
         return this;
@@ -23,6 +25,7 @@ public class UpdatePrice200ApplicationXMLErrors {
     
     
     public String code;
+
     public UpdatePrice200ApplicationXMLErrors withCode(String code) {
         this.code = code;
         return this;
@@ -30,6 +33,7 @@ public class UpdatePrice200ApplicationXMLErrors {
     
     
     public String component;
+
     public UpdatePrice200ApplicationXMLErrors withComponent(String component) {
         this.component = component;
         return this;
@@ -37,6 +41,7 @@ public class UpdatePrice200ApplicationXMLErrors {
     
     
     public String description;
+
     public UpdatePrice200ApplicationXMLErrors withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +49,7 @@ public class UpdatePrice200ApplicationXMLErrors {
     
     
     public java.util.Map<String, java.util.Map<String, Object>> errorIdentifiers;
+
     public UpdatePrice200ApplicationXMLErrors withErrorIdentifiers(java.util.Map<String, java.util.Map<String, Object>> errorIdentifiers) {
         this.errorIdentifiers = errorIdentifiers;
         return this;
@@ -51,6 +57,7 @@ public class UpdatePrice200ApplicationXMLErrors {
     
     
     public String field;
+
     public UpdatePrice200ApplicationXMLErrors withField(String field) {
         this.field = field;
         return this;
@@ -58,6 +65,7 @@ public class UpdatePrice200ApplicationXMLErrors {
     
     
     public UpdatePrice200ApplicationXMLErrorsGatewayErrorCategoryEnum gatewayErrorCategory;
+
     public UpdatePrice200ApplicationXMLErrors withGatewayErrorCategory(UpdatePrice200ApplicationXMLErrorsGatewayErrorCategoryEnum gatewayErrorCategory) {
         this.gatewayErrorCategory = gatewayErrorCategory;
         return this;
@@ -65,6 +73,7 @@ public class UpdatePrice200ApplicationXMLErrors {
     
     
     public String info;
+
     public UpdatePrice200ApplicationXMLErrors withInfo(String info) {
         this.info = info;
         return this;
@@ -72,6 +81,7 @@ public class UpdatePrice200ApplicationXMLErrors {
     
     
     public String serviceName;
+
     public UpdatePrice200ApplicationXMLErrors withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -79,6 +89,7 @@ public class UpdatePrice200ApplicationXMLErrors {
     
     
     public UpdatePrice200ApplicationXMLErrorsSeverityEnum severity;
+
     public UpdatePrice200ApplicationXMLErrors withSeverity(UpdatePrice200ApplicationXMLErrorsSeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -86,9 +97,13 @@ public class UpdatePrice200ApplicationXMLErrors {
     
     
     public String type;
+
     public UpdatePrice200ApplicationXMLErrors withType(String type) {
         this.type = type;
         return this;
     }
     
+    public UpdatePrice200ApplicationXMLErrors(@JsonProperty("code") String code) {
+        this.code = code;
+  }
 }

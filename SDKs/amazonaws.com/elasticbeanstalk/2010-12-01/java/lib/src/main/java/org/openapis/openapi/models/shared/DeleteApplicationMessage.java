@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteApplicationMessage - Request to delete an application.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteApplicationMessage {
     
     public String applicationName;
+
     public DeleteApplicationMessage withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,9 +20,13 @@ public class DeleteApplicationMessage {
     
     
     public Boolean terminateEnvByForce;
+
     public DeleteApplicationMessage withTerminateEnvByForce(Boolean terminateEnvByForce) {
         this.terminateEnvByForce = terminateEnvByForce;
         return this;
     }
     
+    public DeleteApplicationMessage(@JsonProperty("ApplicationName") String applicationName) {
+        this.applicationName = applicationName;
+  }
 }

@@ -12,6 +12,7 @@ public class ResourceBulkUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public AddressUpdateModel address;
+
     public ResourceBulkUpdateModel withAddress(AddressUpdateModel address) {
         this.address = address;
         return this;
@@ -20,6 +21,7 @@ public class ResourceBulkUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availability")
     public AvailabilityInputModel availability;
+
     public ResourceBulkUpdateModel withAvailability(AvailabilityInputModel availability) {
         this.availability = availability;
         return this;
@@ -28,6 +30,7 @@ public class ResourceBulkUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact")
     public ContactUpdateModel contact;
+
     public ResourceBulkUpdateModel withContact(ContactUpdateModel contact) {
         this.contact = contact;
         return this;
@@ -36,6 +39,7 @@ public class ResourceBulkUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public CustomFieldUpdateModel customFields;
+
     public ResourceBulkUpdateModel withCustomFields(CustomFieldUpdateModel customFields) {
         this.customFields = customFields;
         return this;
@@ -44,6 +48,7 @@ public class ResourceBulkUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ResourceBulkUpdateModel withDescription(String description) {
         this.description = description;
         return this;
@@ -52,6 +57,7 @@ public class ResourceBulkUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ResourceBulkUpdateModel withEmail(String email) {
         this.email = email;
         return this;
@@ -60,6 +66,7 @@ public class ResourceBulkUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupId")
     public String groupId;
+
     public ResourceBulkUpdateModel withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -68,6 +75,7 @@ public class ResourceBulkUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ResourceBulkUpdateModel withId(String id) {
         this.id = id;
         return this;
@@ -76,6 +84,7 @@ public class ResourceBulkUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ResourceBulkUpdateModel withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +93,7 @@ public class ResourceBulkUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public ResourceOptionsUpdateModel options;
+
     public ResourceBulkUpdateModel withOptions(ResourceOptionsUpdateModel options) {
         this.options = options;
         return this;
@@ -92,6 +102,7 @@ public class ResourceBulkUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurringAvailability")
     public Boolean recurringAvailability;
+
     public ResourceBulkUpdateModel withRecurringAvailability(Boolean recurringAvailability) {
         this.recurringAvailability = recurringAvailability;
         return this;
@@ -100,6 +111,7 @@ public class ResourceBulkUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceIds")
     public String[] serviceIds;
+
     public ResourceBulkUpdateModel withServiceIds(String[] serviceIds) {
         this.serviceIds = serviceIds;
         return this;
@@ -108,9 +120,11 @@ public class ResourceBulkUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezoneId")
     public String timezoneId;
+
     public ResourceBulkUpdateModel withTimezoneId(String timezoneId) {
         this.timezoneId = timezoneId;
         return this;
     }
     
+    public ResourceBulkUpdateModel(){}
 }

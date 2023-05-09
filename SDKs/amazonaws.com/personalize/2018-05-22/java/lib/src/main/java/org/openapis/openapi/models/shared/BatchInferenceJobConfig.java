@@ -15,9 +15,11 @@ public class BatchInferenceJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemExplorationConfig")
     public java.util.Map<String, String> itemExplorationConfig;
+
     public BatchInferenceJobConfig withItemExplorationConfig(java.util.Map<String, String> itemExplorationConfig) {
         this.itemExplorationConfig = itemExplorationConfig;
         return this;
     }
     
+    public BatchInferenceJobConfig(){}
 }

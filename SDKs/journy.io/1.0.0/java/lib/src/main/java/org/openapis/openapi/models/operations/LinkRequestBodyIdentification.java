@@ -18,6 +18,7 @@ public class LinkRequestBodyIdentification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public LinkRequestBodyIdentification withEmail(String email) {
         this.email = email;
         return this;
@@ -29,9 +30,11 @@ public class LinkRequestBodyIdentification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public LinkRequestBodyIdentification withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public LinkRequestBodyIdentification(){}
 }

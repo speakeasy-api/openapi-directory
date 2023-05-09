@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportationGetProductsReportRequest {
@@ -12,6 +13,7 @@ public class ImportationGetProductsReportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
     public String executionId;
+
     public ImportationGetProductsReportRequest withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -19,6 +21,7 @@ public class ImportationGetProductsReportRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetImportationProductsReportRequest getImportationProductsReportRequest;
+
     public ImportationGetProductsReportRequest withGetImportationProductsReportRequest(org.openapis.openapi.models.shared.GetImportationProductsReportRequest getImportationProductsReportRequest) {
         this.getImportationProductsReportRequest = getImportationProductsReportRequest;
         return this;
@@ -29,9 +32,15 @@ public class ImportationGetProductsReportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public ImportationGetProductsReportRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public ImportationGetProductsReportRequest(@JsonProperty("executionId") String executionId, @JsonProperty("getImportationProductsReportRequest") org.openapis.openapi.models.shared.GetImportationProductsReportRequest getImportationProductsReportRequest, @JsonProperty("storeId") String storeId) {
+        this.executionId = executionId;
+        this.getImportationProductsReportRequest = getImportationProductsReportRequest;
+        this.storeId = storeId;
+  }
 }

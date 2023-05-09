@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListServicesByNamespaceResponse {
@@ -12,6 +13,7 @@ public class ListServicesByNamespaceResponse {
      */
     
     public Object clientException;
+
     public ListServicesByNamespaceResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class ListServicesByNamespaceResponse {
     
     
     public String contentType;
+
     public ListServicesByNamespaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListServicesByNamespaceResponse {
      */
     
     public Object invalidParameterException;
+
     public ListServicesByNamespaceResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListServicesByNamespaceResponse {
      */
     
     public org.openapis.openapi.models.shared.ListServicesByNamespaceResponse listServicesByNamespaceResponse;
+
     public ListServicesByNamespaceResponse withListServicesByNamespaceResponse(org.openapis.openapi.models.shared.ListServicesByNamespaceResponse listServicesByNamespaceResponse) {
         this.listServicesByNamespaceResponse = listServicesByNamespaceResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListServicesByNamespaceResponse {
      */
     
     public Object namespaceNotFoundException;
+
     public ListServicesByNamespaceResponse withNamespaceNotFoundException(Object namespaceNotFoundException) {
         this.namespaceNotFoundException = namespaceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListServicesByNamespaceResponse {
      */
     
     public Object serverException;
+
     public ListServicesByNamespaceResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -66,6 +73,7 @@ public class ListServicesByNamespaceResponse {
     
     
     public Integer statusCode;
+
     public ListServicesByNamespaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListServicesByNamespaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListServicesByNamespaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListServicesByNamespaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

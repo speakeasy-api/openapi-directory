@@ -18,6 +18,7 @@ public class ListOrdersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListOrdersOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,9 +27,11 @@ public class ListOrdersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Orders")
     public OrderSummary[] orders;
+
     public ListOrdersOutput withOrders(OrderSummary[] orders) {
         this.orders = orders;
         return this;
     }
     
+    public ListOrdersOutput(){}
 }

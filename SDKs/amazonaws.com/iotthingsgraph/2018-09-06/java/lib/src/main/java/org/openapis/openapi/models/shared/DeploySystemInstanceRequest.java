@@ -12,9 +12,11 @@ public class DeploySystemInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DeploySystemInstanceRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeploySystemInstanceRequest(){}
 }

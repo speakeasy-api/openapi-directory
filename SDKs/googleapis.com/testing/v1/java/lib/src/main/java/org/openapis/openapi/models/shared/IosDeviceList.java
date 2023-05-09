@@ -18,9 +18,11 @@ public class IosDeviceList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iosDevices")
     public IosDevice[] iosDevices;
+
     public IosDeviceList withIosDevices(IosDevice[] iosDevices) {
         this.iosDevices = iosDevices;
         return this;
     }
     
+    public IosDeviceList(){}
 }

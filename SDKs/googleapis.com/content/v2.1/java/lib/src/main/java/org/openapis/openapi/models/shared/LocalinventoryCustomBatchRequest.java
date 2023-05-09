@@ -15,9 +15,11 @@ public class LocalinventoryCustomBatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public LocalinventoryCustomBatchRequestEntry[] entries;
+
     public LocalinventoryCustomBatchRequest withEntries(LocalinventoryCustomBatchRequestEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public LocalinventoryCustomBatchRequest(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListModelPackagesOutput {
     @JsonProperty("ModelPackageSummaryList")
     public ModelPackageSummary[] modelPackageSummaryList;
+
     public ListModelPackagesOutput withModelPackageSummaryList(ModelPackageSummary[] modelPackageSummaryList) {
         this.modelPackageSummaryList = modelPackageSummaryList;
         return this;
@@ -22,9 +23,13 @@ public class ListModelPackagesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListModelPackagesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListModelPackagesOutput(@JsonProperty("ModelPackageSummaryList") ModelPackageSummary[] modelPackageSummaryList) {
+        this.modelPackageSummaryList = modelPackageSummaryList;
+  }
 }

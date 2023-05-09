@@ -15,6 +15,7 @@ public class PostPlacementGroupsCreatePlacementGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public PostPlacementGroupsCreatePlacementGroupResponseNullableAction action;
+
     public PostPlacementGroupsCreatePlacementGroupResponse withAction(PostPlacementGroupsCreatePlacementGroupResponseNullableAction action) {
         this.action = action;
         return this;
@@ -22,9 +23,13 @@ public class PostPlacementGroupsCreatePlacementGroupResponse {
     
     @JsonProperty("placement_group")
     public PostPlacementGroupsCreatePlacementGroupResponsePlacementGroup placementGroup;
+
     public PostPlacementGroupsCreatePlacementGroupResponse withPlacementGroup(PostPlacementGroupsCreatePlacementGroupResponsePlacementGroup placementGroup) {
         this.placementGroup = placementGroup;
         return this;
     }
     
+    public PostPlacementGroupsCreatePlacementGroupResponse(@JsonProperty("placement_group") PostPlacementGroupsCreatePlacementGroupResponsePlacementGroup placementGroup) {
+        this.placementGroup = placementGroup;
+  }
 }

@@ -15,6 +15,7 @@ public class ReservationPurchaseRecommendationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GenerationTimestamp")
     public String generationTimestamp;
+
     public ReservationPurchaseRecommendationMetadata withGenerationTimestamp(String generationTimestamp) {
         this.generationTimestamp = generationTimestamp;
         return this;
@@ -23,9 +24,11 @@ public class ReservationPurchaseRecommendationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationId")
     public String recommendationId;
+
     public ReservationPurchaseRecommendationMetadata withRecommendationId(String recommendationId) {
         this.recommendationId = recommendationId;
         return this;
     }
     
+    public ReservationPurchaseRecommendationMetadata(){}
 }

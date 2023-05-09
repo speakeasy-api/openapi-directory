@@ -15,6 +15,7 @@ public class PipeTargetEventBridgeEventBusParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetailType")
     public String detailType;
+
     public PipeTargetEventBridgeEventBusParameters withDetailType(String detailType) {
         this.detailType = detailType;
         return this;
@@ -23,6 +24,7 @@ public class PipeTargetEventBridgeEventBusParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointId")
     public String endpointId;
+
     public PipeTargetEventBridgeEventBusParameters withEndpointId(String endpointId) {
         this.endpointId = endpointId;
         return this;
@@ -31,6 +33,7 @@ public class PipeTargetEventBridgeEventBusParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resources")
     public String[] resources;
+
     public PipeTargetEventBridgeEventBusParameters withResources(String[] resources) {
         this.resources = resources;
         return this;
@@ -39,6 +42,7 @@ public class PipeTargetEventBridgeEventBusParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public PipeTargetEventBridgeEventBusParameters withSource(String source) {
         this.source = source;
         return this;
@@ -47,9 +51,11 @@ public class PipeTargetEventBridgeEventBusParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Time")
     public String time;
+
     public PipeTargetEventBridgeEventBusParameters withTime(String time) {
         this.time = time;
         return this;
     }
     
+    public PipeTargetEventBridgeEventBusParameters(){}
 }

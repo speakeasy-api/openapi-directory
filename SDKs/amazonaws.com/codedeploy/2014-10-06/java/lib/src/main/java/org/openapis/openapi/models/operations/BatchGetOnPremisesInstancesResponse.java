@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetOnPremisesInstancesResponse {
@@ -12,6 +13,7 @@ public class BatchGetOnPremisesInstancesResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetOnPremisesInstancesOutput batchGetOnPremisesInstancesOutput;
+
     public BatchGetOnPremisesInstancesResponse withBatchGetOnPremisesInstancesOutput(org.openapis.openapi.models.shared.BatchGetOnPremisesInstancesOutput batchGetOnPremisesInstancesOutput) {
         this.batchGetOnPremisesInstancesOutput = batchGetOnPremisesInstancesOutput;
         return this;
@@ -22,6 +24,7 @@ public class BatchGetOnPremisesInstancesResponse {
      */
     
     public Object batchLimitExceededException;
+
     public BatchGetOnPremisesInstancesResponse withBatchLimitExceededException(Object batchLimitExceededException) {
         this.batchLimitExceededException = batchLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetOnPremisesInstancesResponse {
     
     
     public String contentType;
+
     public BatchGetOnPremisesInstancesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetOnPremisesInstancesResponse {
      */
     
     public Object instanceNameRequiredException;
+
     public BatchGetOnPremisesInstancesResponse withInstanceNameRequiredException(Object instanceNameRequiredException) {
         this.instanceNameRequiredException = instanceNameRequiredException;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetOnPremisesInstancesResponse {
      */
     
     public Object invalidInstanceNameException;
+
     public BatchGetOnPremisesInstancesResponse withInvalidInstanceNameException(Object invalidInstanceNameException) {
         this.invalidInstanceNameException = invalidInstanceNameException;
         return this;
@@ -56,6 +62,7 @@ public class BatchGetOnPremisesInstancesResponse {
     
     
     public Integer statusCode;
+
     public BatchGetOnPremisesInstancesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class BatchGetOnPremisesInstancesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetOnPremisesInstancesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchGetOnPremisesInstancesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

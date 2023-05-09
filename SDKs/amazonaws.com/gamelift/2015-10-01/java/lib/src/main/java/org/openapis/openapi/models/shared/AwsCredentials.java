@@ -15,6 +15,7 @@ public class AwsCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessKeyId")
     public String accessKeyId;
+
     public AwsCredentials withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -23,6 +24,7 @@ public class AwsCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretAccessKey")
     public String secretAccessKey;
+
     public AwsCredentials withSecretAccessKey(String secretAccessKey) {
         this.secretAccessKey = secretAccessKey;
         return this;
@@ -31,9 +33,11 @@ public class AwsCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionToken")
     public String sessionToken;
+
     public AwsCredentials withSessionToken(String sessionToken) {
         this.sessionToken = sessionToken;
         return this;
     }
     
+    public AwsCredentials(){}
 }

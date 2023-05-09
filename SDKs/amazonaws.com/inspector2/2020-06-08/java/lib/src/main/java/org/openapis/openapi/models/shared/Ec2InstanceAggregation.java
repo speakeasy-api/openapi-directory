@@ -15,6 +15,7 @@ public class Ec2InstanceAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amis")
     public StringFilter[] amis;
+
     public Ec2InstanceAggregation withAmis(StringFilter[] amis) {
         this.amis = amis;
         return this;
@@ -23,6 +24,7 @@ public class Ec2InstanceAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceIds")
     public StringFilter[] instanceIds;
+
     public Ec2InstanceAggregation withInstanceIds(StringFilter[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
@@ -31,6 +33,7 @@ public class Ec2InstanceAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceTags")
     public MapFilter[] instanceTags;
+
     public Ec2InstanceAggregation withInstanceTags(MapFilter[] instanceTags) {
         this.instanceTags = instanceTags;
         return this;
@@ -39,6 +42,7 @@ public class Ec2InstanceAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatingSystems")
     public StringFilter[] operatingSystems;
+
     public Ec2InstanceAggregation withOperatingSystems(StringFilter[] operatingSystems) {
         this.operatingSystems = operatingSystems;
         return this;
@@ -47,6 +51,7 @@ public class Ec2InstanceAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public Ec2InstanceSortByEnum sortBy;
+
     public Ec2InstanceAggregation withSortBy(Ec2InstanceSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -55,9 +60,11 @@ public class Ec2InstanceAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public SortOrderEnum sortOrder;
+
     public Ec2InstanceAggregation withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public Ec2InstanceAggregation(){}
 }

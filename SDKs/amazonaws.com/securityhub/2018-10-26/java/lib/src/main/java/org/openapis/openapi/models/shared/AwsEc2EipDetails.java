@@ -15,6 +15,7 @@ public class AwsEc2EipDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllocationId")
     public String allocationId;
+
     public AwsEc2EipDetails withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2EipDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationId")
     public String associationId;
+
     public AwsEc2EipDetails withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2EipDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public String domain;
+
     public AwsEc2EipDetails withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2EipDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public AwsEc2EipDetails withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -47,6 +51,7 @@ public class AwsEc2EipDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkBorderGroup")
     public String networkBorderGroup;
+
     public AwsEc2EipDetails withNetworkBorderGroup(String networkBorderGroup) {
         this.networkBorderGroup = networkBorderGroup;
         return this;
@@ -55,6 +60,7 @@ public class AwsEc2EipDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkInterfaceId")
     public String networkInterfaceId;
+
     public AwsEc2EipDetails withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -63,6 +69,7 @@ public class AwsEc2EipDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkInterfaceOwnerId")
     public String networkInterfaceOwnerId;
+
     public AwsEc2EipDetails withNetworkInterfaceOwnerId(String networkInterfaceOwnerId) {
         this.networkInterfaceOwnerId = networkInterfaceOwnerId;
         return this;
@@ -71,6 +78,7 @@ public class AwsEc2EipDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateIpAddress")
     public String privateIpAddress;
+
     public AwsEc2EipDetails withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -79,6 +87,7 @@ public class AwsEc2EipDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicIp")
     public String publicIp;
+
     public AwsEc2EipDetails withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -87,9 +96,11 @@ public class AwsEc2EipDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicIpv4Pool")
     public String publicIpv4Pool;
+
     public AwsEc2EipDetails withPublicIpv4Pool(String publicIpv4Pool) {
         this.publicIpv4Pool = publicIpv4Pool;
         return this;
     }
     
+    public AwsEc2EipDetails(){}
 }

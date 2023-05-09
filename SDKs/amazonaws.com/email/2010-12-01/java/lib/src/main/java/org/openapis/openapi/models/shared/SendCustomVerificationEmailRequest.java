@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SendCustomVerificationEmailRequest - Represents a request to send a custom verification email to a specified recipient.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SendCustomVerificationEmailRequest {
     
     public String configurationSetName;
+
     public SendCustomVerificationEmailRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -19,6 +20,7 @@ public class SendCustomVerificationEmailRequest {
     
     
     public String emailAddress;
+
     public SendCustomVerificationEmailRequest withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -26,9 +28,14 @@ public class SendCustomVerificationEmailRequest {
     
     
     public String templateName;
+
     public SendCustomVerificationEmailRequest withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public SendCustomVerificationEmailRequest(@JsonProperty("EmailAddress") String emailAddress, @JsonProperty("TemplateName") String templateName) {
+        this.emailAddress = emailAddress;
+        this.templateName = templateName;
+  }
 }

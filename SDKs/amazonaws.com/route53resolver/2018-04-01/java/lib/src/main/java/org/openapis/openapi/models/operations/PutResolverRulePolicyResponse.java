@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutResolverRulePolicyResponse {
@@ -12,6 +13,7 @@ public class PutResolverRulePolicyResponse {
      */
     
     public Object accessDeniedException;
+
     public PutResolverRulePolicyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class PutResolverRulePolicyResponse {
     
     
     public String contentType;
+
     public PutResolverRulePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutResolverRulePolicyResponse {
      */
     
     public Object internalServiceErrorException;
+
     public PutResolverRulePolicyResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class PutResolverRulePolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public PutResolverRulePolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class PutResolverRulePolicyResponse {
      */
     
     public Object invalidPolicyDocument;
+
     public PutResolverRulePolicyResponse withInvalidPolicyDocument(Object invalidPolicyDocument) {
         this.invalidPolicyDocument = invalidPolicyDocument;
         return this;
@@ -59,6 +65,7 @@ public class PutResolverRulePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.PutResolverRulePolicyResponse putResolverRulePolicyResponse;
+
     public PutResolverRulePolicyResponse withPutResolverRulePolicyResponse(org.openapis.openapi.models.shared.PutResolverRulePolicyResponse putResolverRulePolicyResponse) {
         this.putResolverRulePolicyResponse = putResolverRulePolicyResponse;
         return this;
@@ -66,6 +73,7 @@ public class PutResolverRulePolicyResponse {
     
     
     public Integer statusCode;
+
     public PutResolverRulePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PutResolverRulePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutResolverRulePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class PutResolverRulePolicyResponse {
      */
     
     public Object unknownResourceException;
+
     public PutResolverRulePolicyResponse withUnknownResourceException(Object unknownResourceException) {
         this.unknownResourceException = unknownResourceException;
         return this;
     }
     
+    public PutResolverRulePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

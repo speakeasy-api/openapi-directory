@@ -18,6 +18,7 @@ public class UpdateNetworkSecurityIntrusionSettingsRequestBodyProtectedNetworks 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedCidr")
     public String[] excludedCidr;
+
     public UpdateNetworkSecurityIntrusionSettingsRequestBodyProtectedNetworks withExcludedCidr(String[] excludedCidr) {
         this.excludedCidr = excludedCidr;
         return this;
@@ -29,6 +30,7 @@ public class UpdateNetworkSecurityIntrusionSettingsRequestBodyProtectedNetworks 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includedCidr")
     public String[] includedCidr;
+
     public UpdateNetworkSecurityIntrusionSettingsRequestBodyProtectedNetworks withIncludedCidr(String[] includedCidr) {
         this.includedCidr = includedCidr;
         return this;
@@ -40,9 +42,11 @@ public class UpdateNetworkSecurityIntrusionSettingsRequestBodyProtectedNetworks 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useDefault")
     public Boolean useDefault;
+
     public UpdateNetworkSecurityIntrusionSettingsRequestBodyProtectedNetworks withUseDefault(Boolean useDefault) {
         this.useDefault = useDefault;
         return this;
     }
     
+    public UpdateNetworkSecurityIntrusionSettingsRequestBodyProtectedNetworks(){}
 }

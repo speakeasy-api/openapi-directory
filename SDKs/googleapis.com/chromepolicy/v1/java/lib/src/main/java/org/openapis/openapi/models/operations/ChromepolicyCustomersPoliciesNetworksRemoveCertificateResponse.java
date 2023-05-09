@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChromepolicyCustomersPoliciesNetworksRemoveCertificateResponse {
     
     public String contentType;
+
     public ChromepolicyCustomersPoliciesNetworksRemoveCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ChromepolicyCustomersPoliciesNetworksRemoveCertificateResponse {
      */
     
     public java.util.Map<String, Object> googleChromePolicyVersionsV1RemoveCertificateResponse;
+
     public ChromepolicyCustomersPoliciesNetworksRemoveCertificateResponse withGoogleChromePolicyVersionsV1RemoveCertificateResponse(java.util.Map<String, Object> googleChromePolicyVersionsV1RemoveCertificateResponse) {
         this.googleChromePolicyVersionsV1RemoveCertificateResponse = googleChromePolicyVersionsV1RemoveCertificateResponse;
         return this;
@@ -26,6 +29,7 @@ public class ChromepolicyCustomersPoliciesNetworksRemoveCertificateResponse {
     
     
     public Integer statusCode;
+
     public ChromepolicyCustomersPoliciesNetworksRemoveCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ChromepolicyCustomersPoliciesNetworksRemoveCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChromepolicyCustomersPoliciesNetworksRemoveCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ChromepolicyCustomersPoliciesNetworksRemoveCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InvitationsSentResponse {
     
     public String contentType;
+
     public InvitationsSentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class InvitationsSentResponse {
     
     
     public Integer statusCode;
+
     public InvitationsSentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class InvitationsSentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InvitationsSentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class InvitationsSentResponse {
      */
     
     public InvitationsSent200ApplicationJSON[] invitationsSent200ApplicationJSONObjects;
+
     public InvitationsSentResponse withInvitationsSent200ApplicationJSONObjects(InvitationsSent200ApplicationJSON[] invitationsSent200ApplicationJSONObjects) {
         this.invitationsSent200ApplicationJSONObjects = invitationsSent200ApplicationJSONObjects;
         return this;
@@ -43,9 +48,14 @@ public class InvitationsSentResponse {
      */
     
     public InvitationsSentDefaultApplicationJSON invitationsSentDefaultApplicationJSONObject;
+
     public InvitationsSentResponse withInvitationsSentDefaultApplicationJSONObject(InvitationsSentDefaultApplicationJSON invitationsSentDefaultApplicationJSONObject) {
         this.invitationsSentDefaultApplicationJSONObject = invitationsSentDefaultApplicationJSONObject;
         return this;
     }
     
+    public InvitationsSentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

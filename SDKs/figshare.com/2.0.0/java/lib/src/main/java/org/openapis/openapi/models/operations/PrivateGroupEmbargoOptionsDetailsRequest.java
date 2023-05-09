@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateGroupEmbargoOptionsDetailsRequest {
@@ -12,9 +13,13 @@ public class PrivateGroupEmbargoOptionsDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
     public Long groupId;
+
     public PrivateGroupEmbargoOptionsDetailsRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public PrivateGroupEmbargoOptionsDetailsRequest(@JsonProperty("group_id") Long groupId) {
+        this.groupId = groupId;
+  }
 }

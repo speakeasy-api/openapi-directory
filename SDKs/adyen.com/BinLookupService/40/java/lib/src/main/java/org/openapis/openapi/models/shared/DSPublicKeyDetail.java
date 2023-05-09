@@ -15,6 +15,7 @@ public class DSPublicKeyDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public DSPublicKeyDetail withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -26,6 +27,7 @@ public class DSPublicKeyDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directoryServerId")
     public String directoryServerId;
+
     public DSPublicKeyDetail withDirectoryServerId(String directoryServerId) {
         this.directoryServerId = directoryServerId;
         return this;
@@ -37,6 +39,7 @@ public class DSPublicKeyDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromSDKVersion")
     public String fromSDKVersion;
+
     public DSPublicKeyDetail withFromSDKVersion(String fromSDKVersion) {
         this.fromSDKVersion = fromSDKVersion;
         return this;
@@ -48,9 +51,11 @@ public class DSPublicKeyDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicKey")
     public String publicKey;
+
     public DSPublicKeyDetail withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
     }
     
+    public DSPublicKeyDetail(){}
 }

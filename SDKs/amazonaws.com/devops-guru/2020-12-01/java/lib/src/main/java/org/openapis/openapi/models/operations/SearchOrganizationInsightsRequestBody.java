@@ -14,6 +14,7 @@ public class SearchOrganizationInsightsRequestBody {
      */
     @JsonProperty("AccountIds")
     public String[] accountIds;
+
     public SearchOrganizationInsightsRequestBody withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -25,6 +26,7 @@ public class SearchOrganizationInsightsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public SearchOrganizationInsightsRequestBodyFilters filters;
+
     public SearchOrganizationInsightsRequestBody withFilters(SearchOrganizationInsightsRequestBodyFilters filters) {
         this.filters = filters;
         return this;
@@ -36,6 +38,7 @@ public class SearchOrganizationInsightsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public SearchOrganizationInsightsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -47,6 +50,7 @@ public class SearchOrganizationInsightsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public SearchOrganizationInsightsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -57,6 +61,7 @@ public class SearchOrganizationInsightsRequestBody {
      */
     @JsonProperty("StartTimeRange")
     public SearchOrganizationInsightsRequestBodyStartTimeRange startTimeRange;
+
     public SearchOrganizationInsightsRequestBody withStartTimeRange(SearchOrganizationInsightsRequestBodyStartTimeRange startTimeRange) {
         this.startTimeRange = startTimeRange;
         return this;
@@ -67,9 +72,15 @@ public class SearchOrganizationInsightsRequestBody {
      */
     @JsonProperty("Type")
     public SearchOrganizationInsightsRequestBodyTypeEnum type;
+
     public SearchOrganizationInsightsRequestBody withType(SearchOrganizationInsightsRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SearchOrganizationInsightsRequestBody(@JsonProperty("AccountIds") String[] accountIds, @JsonProperty("StartTimeRange") SearchOrganizationInsightsRequestBodyStartTimeRange startTimeRange, @JsonProperty("Type") SearchOrganizationInsightsRequestBodyTypeEnum type) {
+        this.accountIds = accountIds;
+        this.startTimeRange = startTimeRange;
+        this.type = type;
+  }
 }

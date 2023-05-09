@@ -18,6 +18,7 @@ public class WebBackendConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogDiff")
     public CatalogDiff catalogDiff;
+
     public WebBackendConnectionRead withCatalogDiff(CatalogDiff catalogDiff) {
         this.catalogDiff = catalogDiff;
         return this;
@@ -26,6 +27,7 @@ public class WebBackendConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogId")
     public String catalogId;
+
     public WebBackendConnectionRead withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -33,6 +35,7 @@ public class WebBackendConnectionRead {
     
     @JsonProperty("connectionId")
     public String connectionId;
+
     public WebBackendConnectionRead withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -40,6 +43,7 @@ public class WebBackendConnectionRead {
     
     @JsonProperty("destination")
     public DestinationRead destination;
+
     public WebBackendConnectionRead withDestination(DestinationRead destination) {
         this.destination = destination;
         return this;
@@ -47,6 +51,7 @@ public class WebBackendConnectionRead {
     
     @JsonProperty("destinationId")
     public String destinationId;
+
     public WebBackendConnectionRead withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -55,6 +60,7 @@ public class WebBackendConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geography")
     public GeographyEnum geography;
+
     public WebBackendConnectionRead withGeography(GeographyEnum geography) {
         this.geography = geography;
         return this;
@@ -62,6 +68,7 @@ public class WebBackendConnectionRead {
     
     @JsonProperty("isSyncing")
     public Boolean isSyncing;
+
     public WebBackendConnectionRead withIsSyncing(Boolean isSyncing) {
         this.isSyncing = isSyncing;
         return this;
@@ -73,6 +80,7 @@ public class WebBackendConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestSyncJobCreatedAt")
     public Long latestSyncJobCreatedAt;
+
     public WebBackendConnectionRead withLatestSyncJobCreatedAt(Long latestSyncJobCreatedAt) {
         this.latestSyncJobCreatedAt = latestSyncJobCreatedAt;
         return this;
@@ -81,6 +89,7 @@ public class WebBackendConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestSyncJobStatus")
     public JobStatusEnum latestSyncJobStatus;
+
     public WebBackendConnectionRead withLatestSyncJobStatus(JobStatusEnum latestSyncJobStatus) {
         this.latestSyncJobStatus = latestSyncJobStatus;
         return this;
@@ -88,6 +97,7 @@ public class WebBackendConnectionRead {
     
     @JsonProperty("name")
     public String name;
+
     public WebBackendConnectionRead withName(String name) {
         this.name = name;
         return this;
@@ -99,6 +109,7 @@ public class WebBackendConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceDefinition")
     public NamespaceDefinitionTypeEnum namespaceDefinition;
+
     public WebBackendConnectionRead withNamespaceDefinition(NamespaceDefinitionTypeEnum namespaceDefinition) {
         this.namespaceDefinition = namespaceDefinition;
         return this;
@@ -110,6 +121,7 @@ public class WebBackendConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceFormat")
     public String namespaceFormat;
+
     public WebBackendConnectionRead withNamespaceFormat(String namespaceFormat) {
         this.namespaceFormat = namespaceFormat;
         return this;
@@ -117,6 +129,7 @@ public class WebBackendConnectionRead {
     
     @JsonProperty("nonBreakingChangesPreference")
     public NonBreakingChangesPreferenceEnum nonBreakingChangesPreference;
+
     public WebBackendConnectionRead withNonBreakingChangesPreference(NonBreakingChangesPreferenceEnum nonBreakingChangesPreference) {
         this.nonBreakingChangesPreference = nonBreakingChangesPreference;
         return this;
@@ -124,6 +137,7 @@ public class WebBackendConnectionRead {
     
     @JsonProperty("notifySchemaChanges")
     public Boolean notifySchemaChanges;
+
     public WebBackendConnectionRead withNotifySchemaChanges(Boolean notifySchemaChanges) {
         this.notifySchemaChanges = notifySchemaChanges;
         return this;
@@ -132,6 +146,7 @@ public class WebBackendConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationIds")
     public String[] operationIds;
+
     public WebBackendConnectionRead withOperationIds(String[] operationIds) {
         this.operationIds = operationIds;
         return this;
@@ -140,6 +155,7 @@ public class WebBackendConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public OperationRead[] operations;
+
     public WebBackendConnectionRead withOperations(OperationRead[] operations) {
         this.operations = operations;
         return this;
@@ -151,6 +167,7 @@ public class WebBackendConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public WebBackendConnectionRead withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -162,6 +179,7 @@ public class WebBackendConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRequirements")
     public ResourceRequirements resourceRequirements;
+
     public WebBackendConnectionRead withResourceRequirements(ResourceRequirements resourceRequirements) {
         this.resourceRequirements = resourceRequirements;
         return this;
@@ -173,6 +191,7 @@ public class WebBackendConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public ConnectionSchedule schedule;
+
     public WebBackendConnectionRead withSchedule(ConnectionSchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -184,6 +203,7 @@ public class WebBackendConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleData")
     public ConnectionScheduleData scheduleData;
+
     public WebBackendConnectionRead withScheduleData(ConnectionScheduleData scheduleData) {
         this.scheduleData = scheduleData;
         return this;
@@ -195,6 +215,7 @@ public class WebBackendConnectionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleType")
     public ConnectionScheduleTypeEnum scheduleType;
+
     public WebBackendConnectionRead withScheduleType(ConnectionScheduleTypeEnum scheduleType) {
         this.scheduleType = scheduleType;
         return this;
@@ -202,6 +223,7 @@ public class WebBackendConnectionRead {
     
     @JsonProperty("schemaChange")
     public SchemaChangeEnum schemaChange;
+
     public WebBackendConnectionRead withSchemaChange(SchemaChangeEnum schemaChange) {
         this.schemaChange = schemaChange;
         return this;
@@ -209,6 +231,7 @@ public class WebBackendConnectionRead {
     
     @JsonProperty("source")
     public SourceRead source;
+
     public WebBackendConnectionRead withSource(SourceRead source) {
         this.source = source;
         return this;
@@ -216,6 +239,7 @@ public class WebBackendConnectionRead {
     
     @JsonProperty("sourceId")
     public String sourceId;
+
     public WebBackendConnectionRead withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -226,6 +250,7 @@ public class WebBackendConnectionRead {
      */
     @JsonProperty("status")
     public ConnectionStatusEnum status;
+
     public WebBackendConnectionRead withStatus(ConnectionStatusEnum status) {
         this.status = status;
         return this;
@@ -236,9 +261,24 @@ public class WebBackendConnectionRead {
      */
     @JsonProperty("syncCatalog")
     public AirbyteCatalog syncCatalog;
+
     public WebBackendConnectionRead withSyncCatalog(AirbyteCatalog syncCatalog) {
         this.syncCatalog = syncCatalog;
         return this;
     }
     
+    public WebBackendConnectionRead(@JsonProperty("connectionId") String connectionId, @JsonProperty("destination") DestinationRead destination, @JsonProperty("destinationId") String destinationId, @JsonProperty("isSyncing") Boolean isSyncing, @JsonProperty("name") String name, @JsonProperty("nonBreakingChangesPreference") NonBreakingChangesPreferenceEnum nonBreakingChangesPreference, @JsonProperty("notifySchemaChanges") Boolean notifySchemaChanges, @JsonProperty("schemaChange") SchemaChangeEnum schemaChange, @JsonProperty("source") SourceRead source, @JsonProperty("sourceId") String sourceId, @JsonProperty("status") ConnectionStatusEnum status, @JsonProperty("syncCatalog") AirbyteCatalog syncCatalog) {
+        this.connectionId = connectionId;
+        this.destination = destination;
+        this.destinationId = destinationId;
+        this.isSyncing = isSyncing;
+        this.name = name;
+        this.nonBreakingChangesPreference = nonBreakingChangesPreference;
+        this.notifySchemaChanges = notifySchemaChanges;
+        this.schemaChange = schemaChange;
+        this.source = source;
+        this.sourceId = sourceId;
+        this.status = status;
+        this.syncCatalog = syncCatalog;
+  }
 }

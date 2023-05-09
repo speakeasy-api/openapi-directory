@@ -18,6 +18,7 @@ public class GetEvents200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public GetEvents200ApplicationJSONDataGroup group;
+
     public GetEvents200ApplicationJSONData withGroup(GetEvents200ApplicationJSONDataGroup group) {
         this.group = group;
         return this;
@@ -25,6 +26,7 @@ public class GetEvents200ApplicationJSONData {
     
     @JsonProperty("id")
     public String id;
+
     public GetEvents200ApplicationJSONData withId(String id) {
         this.id = id;
         return this;
@@ -32,9 +34,14 @@ public class GetEvents200ApplicationJSONData {
     
     @JsonProperty("name")
     public String name;
+
     public GetEvents200ApplicationJSONData withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetEvents200ApplicationJSONData(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

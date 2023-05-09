@@ -18,6 +18,7 @@ public class Method {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Method withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class Method {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public Option[] options;
+
     public Method withOptions(Option[] options) {
         this.options = options;
         return this;
@@ -40,6 +42,7 @@ public class Method {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestStreaming")
     public Boolean requestStreaming;
+
     public Method withRequestStreaming(Boolean requestStreaming) {
         this.requestStreaming = requestStreaming;
         return this;
@@ -51,6 +54,7 @@ public class Method {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestTypeUrl")
     public String requestTypeUrl;
+
     public Method withRequestTypeUrl(String requestTypeUrl) {
         this.requestTypeUrl = requestTypeUrl;
         return this;
@@ -62,6 +66,7 @@ public class Method {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseStreaming")
     public Boolean responseStreaming;
+
     public Method withResponseStreaming(Boolean responseStreaming) {
         this.responseStreaming = responseStreaming;
         return this;
@@ -73,6 +78,7 @@ public class Method {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseTypeUrl")
     public String responseTypeUrl;
+
     public Method withResponseTypeUrl(String responseTypeUrl) {
         this.responseTypeUrl = responseTypeUrl;
         return this;
@@ -84,9 +90,11 @@ public class Method {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syntax")
     public MethodSyntaxEnum syntax;
+
     public Method withSyntax(MethodSyntaxEnum syntax) {
         this.syntax = syntax;
         return this;
     }
     
+    public Method(){}
 }

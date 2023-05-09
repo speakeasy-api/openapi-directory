@@ -18,6 +18,7 @@ public class ColumnFamily {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcRule")
     public GcRule gcRule;
+
     public ColumnFamily withGcRule(GcRule gcRule) {
         this.gcRule = gcRule;
         return this;
@@ -29,9 +30,11 @@ public class ColumnFamily {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public ColumnFamilyStats stats;
+
     public ColumnFamily withStats(ColumnFamilyStats stats) {
         this.stats = stats;
         return this;
     }
     
+    public ColumnFamily(){}
 }

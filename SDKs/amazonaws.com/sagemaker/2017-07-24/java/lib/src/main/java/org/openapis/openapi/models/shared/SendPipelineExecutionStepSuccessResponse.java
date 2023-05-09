@@ -15,9 +15,11 @@ public class SendPipelineExecutionStepSuccessResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineExecutionArn")
     public String pipelineExecutionArn;
+
     public SendPipelineExecutionStepSuccessResponse withPipelineExecutionArn(String pipelineExecutionArn) {
         this.pipelineExecutionArn = pipelineExecutionArn;
         return this;
     }
     
+    public SendPipelineExecutionStepSuccessResponse(){}
 }

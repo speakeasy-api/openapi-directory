@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostVCustomPricesRulesResponse {
     
     public String contentType;
+
     public PostVCustomPricesRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostVCustomPricesRulesResponse {
     
     
     public Integer statusCode;
+
     public PostVCustomPricesRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostVCustomPricesRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostVCustomPricesRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostVCustomPricesRulesResponse {
      */
     
     public PostVCustomPricesRules200ApplicationJSON postVCustomPricesRules200ApplicationJSONObject;
+
     public PostVCustomPricesRulesResponse withPostVCustomPricesRules200ApplicationJSONObject(PostVCustomPricesRules200ApplicationJSON postVCustomPricesRules200ApplicationJSONObject) {
         this.postVCustomPricesRules200ApplicationJSONObject = postVCustomPricesRules200ApplicationJSONObject;
         return this;
     }
     
+    public PostVCustomPricesRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

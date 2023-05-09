@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageObjectsInsertRequest {
     @SpeakeasyMetadata("request:mediaType=application/octet-stream")
     public byte[] requestBody;
+
     public StorageObjectsInsertRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class StorageObjectsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public StorageObjectsInsertRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class StorageObjectsInsertRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket")
     public String bucket;
+
     public StorageObjectsInsertRequest withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -39,6 +43,7 @@ public class StorageObjectsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentEncoding")
     public String contentEncoding;
+
     public StorageObjectsInsertRequest withContentEncoding(String contentEncoding) {
         this.contentEncoding = contentEncoding;
         return this;
@@ -49,6 +54,7 @@ public class StorageObjectsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public StorageObjectsInsertRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -59,6 +65,7 @@ public class StorageObjectsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifGenerationMatch")
     public String ifGenerationMatch;
+
     public StorageObjectsInsertRequest withIfGenerationMatch(String ifGenerationMatch) {
         this.ifGenerationMatch = ifGenerationMatch;
         return this;
@@ -69,6 +76,7 @@ public class StorageObjectsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifGenerationNotMatch")
     public String ifGenerationNotMatch;
+
     public StorageObjectsInsertRequest withIfGenerationNotMatch(String ifGenerationNotMatch) {
         this.ifGenerationNotMatch = ifGenerationNotMatch;
         return this;
@@ -79,6 +87,7 @@ public class StorageObjectsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationMatch")
     public String ifMetagenerationMatch;
+
     public StorageObjectsInsertRequest withIfMetagenerationMatch(String ifMetagenerationMatch) {
         this.ifMetagenerationMatch = ifMetagenerationMatch;
         return this;
@@ -89,6 +98,7 @@ public class StorageObjectsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationNotMatch")
     public String ifMetagenerationNotMatch;
+
     public StorageObjectsInsertRequest withIfMetagenerationNotMatch(String ifMetagenerationNotMatch) {
         this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
         return this;
@@ -99,6 +109,7 @@ public class StorageObjectsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public StorageObjectsInsertRequest withKey(String key) {
         this.key = key;
         return this;
@@ -109,6 +120,7 @@ public class StorageObjectsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kmsKeyName")
     public String kmsKeyName;
+
     public StorageObjectsInsertRequest withKmsKeyName(String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
         return this;
@@ -119,6 +131,7 @@ public class StorageObjectsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public StorageObjectsInsertRequest withName(String name) {
         this.name = name;
         return this;
@@ -129,6 +142,7 @@ public class StorageObjectsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public StorageObjectsInsertRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -139,6 +153,7 @@ public class StorageObjectsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=predefinedAcl")
     public StorageObjectsInsertPredefinedACLEnum predefinedAcl;
+
     public StorageObjectsInsertRequest withPredefinedAcl(StorageObjectsInsertPredefinedACLEnum predefinedAcl) {
         this.predefinedAcl = predefinedAcl;
         return this;
@@ -149,6 +164,7 @@ public class StorageObjectsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public StorageObjectsInsertRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -159,6 +175,7 @@ public class StorageObjectsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
     public StorageObjectsInsertProjectionEnum projection;
+
     public StorageObjectsInsertRequest withProjection(StorageObjectsInsertProjectionEnum projection) {
         this.projection = projection;
         return this;
@@ -169,6 +186,7 @@ public class StorageObjectsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public StorageObjectsInsertRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -179,6 +197,7 @@ public class StorageObjectsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public StorageObjectsInsertRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -189,6 +208,7 @@ public class StorageObjectsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public StorageObjectsInsertRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -199,9 +219,13 @@ public class StorageObjectsInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userProject")
     public String userProject;
+
     public StorageObjectsInsertRequest withUserProject(String userProject) {
         this.userProject = userProject;
         return this;
     }
     
+    public StorageObjectsInsertRequest(@JsonProperty("bucket") String bucket) {
+        this.bucket = bucket;
+  }
 }

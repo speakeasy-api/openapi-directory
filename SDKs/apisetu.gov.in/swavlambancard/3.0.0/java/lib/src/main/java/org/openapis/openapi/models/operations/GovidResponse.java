@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GovidResponse {
     
     public byte[] body;
+
     public GovidResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GovidResponse {
     
     
     public String contentType;
+
     public GovidResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GovidResponse {
     
     
     public Integer statusCode;
+
     public GovidResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GovidResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GovidResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GovidResponse {
      */
     
     public Govid400ApplicationJSON govid400ApplicationJSONObject;
+
     public GovidResponse withGovid400ApplicationJSONObject(Govid400ApplicationJSON govid400ApplicationJSONObject) {
         this.govid400ApplicationJSONObject = govid400ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class GovidResponse {
      */
     
     public Govid401ApplicationJSON govid401ApplicationJSONObject;
+
     public GovidResponse withGovid401ApplicationJSONObject(Govid401ApplicationJSON govid401ApplicationJSONObject) {
         this.govid401ApplicationJSONObject = govid401ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class GovidResponse {
      */
     
     public Govid404ApplicationJSON govid404ApplicationJSONObject;
+
     public GovidResponse withGovid404ApplicationJSONObject(Govid404ApplicationJSON govid404ApplicationJSONObject) {
         this.govid404ApplicationJSONObject = govid404ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class GovidResponse {
      */
     
     public Govid500ApplicationJSON govid500ApplicationJSONObject;
+
     public GovidResponse withGovid500ApplicationJSONObject(Govid500ApplicationJSON govid500ApplicationJSONObject) {
         this.govid500ApplicationJSONObject = govid500ApplicationJSONObject;
         return this;
@@ -80,6 +89,7 @@ public class GovidResponse {
      */
     
     public Govid502ApplicationJSON govid502ApplicationJSONObject;
+
     public GovidResponse withGovid502ApplicationJSONObject(Govid502ApplicationJSON govid502ApplicationJSONObject) {
         this.govid502ApplicationJSONObject = govid502ApplicationJSONObject;
         return this;
@@ -90,6 +100,7 @@ public class GovidResponse {
      */
     
     public Govid503ApplicationJSON govid503ApplicationJSONObject;
+
     public GovidResponse withGovid503ApplicationJSONObject(Govid503ApplicationJSON govid503ApplicationJSONObject) {
         this.govid503ApplicationJSONObject = govid503ApplicationJSONObject;
         return this;
@@ -100,9 +111,14 @@ public class GovidResponse {
      */
     
     public Govid504ApplicationJSON govid504ApplicationJSONObject;
+
     public GovidResponse withGovid504ApplicationJSONObject(Govid504ApplicationJSON govid504ApplicationJSONObject) {
         this.govid504ApplicationJSONObject = govid504ApplicationJSONObject;
         return this;
     }
     
+    public GovidResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

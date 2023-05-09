@@ -18,9 +18,11 @@ public class SendMessage202ApplicationJSON3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message_uuid")
     public String messageUuid;
+
     public SendMessage202ApplicationJSON3 withMessageUuid(String messageUuid) {
         this.messageUuid = messageUuid;
         return this;
     }
     
+    public SendMessage202ApplicationJSON3(){}
 }

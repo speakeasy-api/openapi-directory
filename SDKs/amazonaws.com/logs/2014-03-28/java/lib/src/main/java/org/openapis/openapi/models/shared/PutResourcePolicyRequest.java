@@ -12,6 +12,7 @@ public class PutResourcePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyDocument")
     public String policyDocument;
+
     public PutResourcePolicyRequest withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -20,9 +21,11 @@ public class PutResourcePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyName")
     public String policyName;
+
     public PutResourcePolicyRequest withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public PutResourcePolicyRequest(){}
 }

@@ -12,6 +12,7 @@ public class ListRequestedServiceQuotaChangeHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListRequestedServiceQuotaChangeHistoryRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListRequestedServiceQuotaChangeHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRequestedServiceQuotaChangeHistoryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,6 +30,7 @@ public class ListRequestedServiceQuotaChangeHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceCode")
     public String serviceCode;
+
     public ListRequestedServiceQuotaChangeHistoryRequest withServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
@@ -36,9 +39,11 @@ public class ListRequestedServiceQuotaChangeHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public RequestStatusEnum status;
+
     public ListRequestedServiceQuotaChangeHistoryRequest withStatus(RequestStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ListRequestedServiceQuotaChangeHistoryRequest(){}
 }

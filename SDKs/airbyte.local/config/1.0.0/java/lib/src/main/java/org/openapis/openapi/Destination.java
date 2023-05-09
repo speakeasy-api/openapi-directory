@@ -58,13 +58,11 @@ public class Destination {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CheckConnectionToDestinationResponse res = new org.openapis.openapi.models.operations.CheckConnectionToDestinationResponse() {{
+        org.openapis.openapi.models.operations.CheckConnectionToDestinationResponse res = new org.openapis.openapi.models.operations.CheckConnectionToDestinationResponse(contentType, httpRes.statusCode()) {{
             checkConnectionRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -117,13 +115,11 @@ public class Destination {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CheckConnectionToDestinationForUpdateResponse res = new org.openapis.openapi.models.operations.CheckConnectionToDestinationForUpdateResponse() {{
+        org.openapis.openapi.models.operations.CheckConnectionToDestinationForUpdateResponse res = new org.openapis.openapi.models.operations.CheckConnectionToDestinationForUpdateResponse(contentType, httpRes.statusCode()) {{
             checkConnectionRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,13 +172,11 @@ public class Destination {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloneDestinationResponse res = new org.openapis.openapi.models.operations.CloneDestinationResponse() {{
+        org.openapis.openapi.models.operations.CloneDestinationResponse res = new org.openapis.openapi.models.operations.CloneDestinationResponse(contentType, httpRes.statusCode()) {{
             destinationRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -235,12 +229,10 @@ public class Destination {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDestinationResponse res = new org.openapis.openapi.models.operations.CreateDestinationResponse() {{
+        org.openapis.openapi.models.operations.CreateDestinationResponse res = new org.openapis.openapi.models.operations.CreateDestinationResponse(contentType, httpRes.statusCode()) {{
             destinationRead = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -286,12 +278,10 @@ public class Destination {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDestinationResponse res = new org.openapis.openapi.models.operations.DeleteDestinationResponse() {{
+        org.openapis.openapi.models.operations.DeleteDestinationResponse res = new org.openapis.openapi.models.operations.DeleteDestinationResponse(contentType, httpRes.statusCode()) {{
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -339,13 +329,11 @@ public class Destination {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDestinationResponse res = new org.openapis.openapi.models.operations.GetDestinationResponse() {{
+        org.openapis.openapi.models.operations.GetDestinationResponse res = new org.openapis.openapi.models.operations.GetDestinationResponse(contentType, httpRes.statusCode()) {{
             destinationRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -398,13 +386,11 @@ public class Destination {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDestinationsForWorkspaceResponse res = new org.openapis.openapi.models.operations.ListDestinationsForWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.ListDestinationsForWorkspaceResponse res = new org.openapis.openapi.models.operations.ListDestinationsForWorkspaceResponse(contentType, httpRes.statusCode()) {{
             destinationReadList = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -457,12 +443,10 @@ public class Destination {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchDestinationsResponse res = new org.openapis.openapi.models.operations.SearchDestinationsResponse() {{
+        org.openapis.openapi.models.operations.SearchDestinationsResponse res = new org.openapis.openapi.models.operations.SearchDestinationsResponse(contentType, httpRes.statusCode()) {{
             destinationReadList = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -508,12 +492,10 @@ public class Destination {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDestinationResponse res = new org.openapis.openapi.models.operations.UpdateDestinationResponse() {{
+        org.openapis.openapi.models.operations.UpdateDestinationResponse res = new org.openapis.openapi.models.operations.UpdateDestinationResponse(contentType, httpRes.statusCode()) {{
             destinationRead = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class Edge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationId")
     public String destinationId;
+
     public Edge withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -23,9 +24,11 @@ public class Edge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceId")
     public String sourceId;
+
     public Edge withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
     }
     
+    public Edge(){}
 }

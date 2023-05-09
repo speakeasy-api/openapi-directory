@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddTagUsingPOSTRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public AddTagUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +21,13 @@ public class AddTagUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TagRequest tagRequest;
+
     public AddTagUsingPOSTRequest withTagRequest(org.openapis.openapi.models.shared.TagRequest tagRequest) {
         this.tagRequest = tagRequest;
         return this;
     }
     
+    public AddTagUsingPOSTRequest(@JsonProperty("TagRequest") org.openapis.openapi.models.shared.TagRequest tagRequest) {
+        this.tagRequest = tagRequest;
+  }
 }

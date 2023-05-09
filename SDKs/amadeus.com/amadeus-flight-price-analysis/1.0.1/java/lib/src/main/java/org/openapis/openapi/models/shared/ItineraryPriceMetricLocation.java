@@ -18,9 +18,11 @@ public class ItineraryPriceMetricLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iataCode")
     public String iataCode;
+
     public ItineraryPriceMetricLocation withIataCode(String iataCode) {
         this.iataCode = iataCode;
         return this;
     }
     
+    public ItineraryPriceMetricLocation(){}
 }

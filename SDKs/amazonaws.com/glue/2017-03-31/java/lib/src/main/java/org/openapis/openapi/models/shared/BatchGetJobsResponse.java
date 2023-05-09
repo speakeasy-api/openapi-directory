@@ -15,6 +15,7 @@ public class BatchGetJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Jobs")
     public Job[] jobs;
+
     public BatchGetJobsResponse withJobs(Job[] jobs) {
         this.jobs = jobs;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobsNotFound")
     public String[] jobsNotFound;
+
     public BatchGetJobsResponse withJobsNotFound(String[] jobsNotFound) {
         this.jobsNotFound = jobsNotFound;
         return this;
     }
     
+    public BatchGetJobsResponse(){}
 }

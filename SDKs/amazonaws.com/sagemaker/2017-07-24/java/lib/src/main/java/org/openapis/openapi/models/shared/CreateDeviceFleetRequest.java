@@ -12,6 +12,7 @@ public class CreateDeviceFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateDeviceFleetRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class CreateDeviceFleetRequest {
     
     @JsonProperty("DeviceFleetName")
     public String deviceFleetName;
+
     public CreateDeviceFleetRequest withDeviceFleetName(String deviceFleetName) {
         this.deviceFleetName = deviceFleetName;
         return this;
@@ -27,6 +29,7 @@ public class CreateDeviceFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableIotRoleAlias")
     public Boolean enableIotRoleAlias;
+
     public CreateDeviceFleetRequest withEnableIotRoleAlias(Boolean enableIotRoleAlias) {
         this.enableIotRoleAlias = enableIotRoleAlias;
         return this;
@@ -34,6 +37,7 @@ public class CreateDeviceFleetRequest {
     
     @JsonProperty("OutputConfig")
     public EdgeOutputConfig outputConfig;
+
     public CreateDeviceFleetRequest withOutputConfig(EdgeOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -42,6 +46,7 @@ public class CreateDeviceFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateDeviceFleetRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -50,9 +55,14 @@ public class CreateDeviceFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateDeviceFleetRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDeviceFleetRequest(@JsonProperty("DeviceFleetName") String deviceFleetName, @JsonProperty("OutputConfig") EdgeOutputConfig outputConfig) {
+        this.deviceFleetName = deviceFleetName;
+        this.outputConfig = outputConfig;
+  }
 }

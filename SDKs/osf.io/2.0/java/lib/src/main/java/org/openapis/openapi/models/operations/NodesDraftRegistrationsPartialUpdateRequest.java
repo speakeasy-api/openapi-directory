@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NodesDraftRegistrationsPartialUpdateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public NodesDraftRegistrationsPartialUpdateDraftRegistrationInput requestBody;
+
     public NodesDraftRegistrationsPartialUpdateRequest withRequestBody(NodesDraftRegistrationsPartialUpdateDraftRegistrationInput requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class NodesDraftRegistrationsPartialUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=draft_id")
     public String draftId;
+
     public NodesDraftRegistrationsPartialUpdateRequest withDraftId(String draftId) {
         this.draftId = draftId;
         return this;
@@ -29,9 +32,15 @@ public class NodesDraftRegistrationsPartialUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
     public String nodeId;
+
     public NodesDraftRegistrationsPartialUpdateRequest withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
     }
     
+    public NodesDraftRegistrationsPartialUpdateRequest(@JsonProperty("RequestBody") NodesDraftRegistrationsPartialUpdateDraftRegistrationInput requestBody, @JsonProperty("draft_id") String draftId, @JsonProperty("node_id") String nodeId) {
+        this.requestBody = requestBody;
+        this.draftId = draftId;
+        this.nodeId = nodeId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsGetActionsCacheUsageForOrgResponse {
     
     public String contentType;
+
     public ActionsGetActionsCacheUsageForOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsGetActionsCacheUsageForOrgResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ActionsGetActionsCacheUsageForOrgResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ActionsGetActionsCacheUsageForOrgResponse {
     
     
     public Integer statusCode;
+
     public ActionsGetActionsCacheUsageForOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ActionsGetActionsCacheUsageForOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsGetActionsCacheUsageForOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class ActionsGetActionsCacheUsageForOrgResponse {
      */
     
     public org.openapis.openapi.models.shared.ActionsCacheUsageOrgEnterprise actionsCacheUsageOrgEnterprise;
+
     public ActionsGetActionsCacheUsageForOrgResponse withActionsCacheUsageOrgEnterprise(org.openapis.openapi.models.shared.ActionsCacheUsageOrgEnterprise actionsCacheUsageOrgEnterprise) {
         this.actionsCacheUsageOrgEnterprise = actionsCacheUsageOrgEnterprise;
         return this;
     }
     
+    public ActionsGetActionsCacheUsageForOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

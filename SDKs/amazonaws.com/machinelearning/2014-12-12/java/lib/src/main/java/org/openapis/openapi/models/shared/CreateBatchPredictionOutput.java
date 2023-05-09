@@ -15,9 +15,11 @@ public class CreateBatchPredictionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchPredictionId")
     public String batchPredictionId;
+
     public CreateBatchPredictionOutput withBatchPredictionId(String batchPredictionId) {
         this.batchPredictionId = batchPredictionId;
         return this;
     }
     
+    public CreateBatchPredictionOutput(){}
 }

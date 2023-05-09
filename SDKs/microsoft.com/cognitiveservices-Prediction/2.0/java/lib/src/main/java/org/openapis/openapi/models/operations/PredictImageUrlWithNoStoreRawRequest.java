@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PredictImageUrlWithNoStoreRawRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Prediction-Key")
     public String predictionKey;
+
     public PredictImageUrlWithNoStoreRawRequest withPredictionKey(String predictionKey) {
         this.predictionKey = predictionKey;
         return this;
@@ -19,6 +21,7 @@ public class PredictImageUrlWithNoStoreRawRequest {
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public PredictImageUrlWithNoStoreRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -29,6 +32,7 @@ public class PredictImageUrlWithNoStoreRawRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application")
     public String application;
+
     public PredictImageUrlWithNoStoreRawRequest withApplication(String application) {
         this.application = application;
         return this;
@@ -40,6 +44,7 @@ public class PredictImageUrlWithNoStoreRawRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
     public String iterationId;
+
     public PredictImageUrlWithNoStoreRawRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -50,9 +55,15 @@ public class PredictImageUrlWithNoStoreRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public PredictImageUrlWithNoStoreRawRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public PredictImageUrlWithNoStoreRawRequest(@JsonProperty("Prediction-Key") String predictionKey, @JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("projectId") String projectId) {
+        this.predictionKey = predictionKey;
+        this.requestBody = requestBody;
+        this.projectId = projectId;
+  }
 }

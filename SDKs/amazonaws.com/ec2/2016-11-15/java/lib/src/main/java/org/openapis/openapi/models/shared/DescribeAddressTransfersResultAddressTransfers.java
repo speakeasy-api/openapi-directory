@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeAddressTransfersResultAddressTransfers {
     
     public DescribeAddressTransfersResultAddressTransfersAddressTransferStatusEnum addressTransferStatus;
+
     public DescribeAddressTransfersResultAddressTransfers withAddressTransferStatus(DescribeAddressTransfersResultAddressTransfersAddressTransferStatusEnum addressTransferStatus) {
         this.addressTransferStatus = addressTransferStatus;
         return this;
@@ -19,6 +20,7 @@ public class DescribeAddressTransfersResultAddressTransfers {
     
     
     public String allocationId;
+
     public DescribeAddressTransfersResultAddressTransfers withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeAddressTransfersResultAddressTransfers {
     
     
     public String publicIp;
+
     public DescribeAddressTransfersResultAddressTransfers withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -33,6 +36,7 @@ public class DescribeAddressTransfersResultAddressTransfers {
     
     
     public String transferAccountId;
+
     public DescribeAddressTransfersResultAddressTransfers withTransferAccountId(String transferAccountId) {
         this.transferAccountId = transferAccountId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeAddressTransfersResultAddressTransfers {
     
     
     public OffsetDateTime transferOfferAcceptedTimestamp;
+
     public DescribeAddressTransfersResultAddressTransfers withTransferOfferAcceptedTimestamp(OffsetDateTime transferOfferAcceptedTimestamp) {
         this.transferOfferAcceptedTimestamp = transferOfferAcceptedTimestamp;
         return this;
@@ -47,9 +52,11 @@ public class DescribeAddressTransfersResultAddressTransfers {
     
     
     public OffsetDateTime transferOfferExpirationTimestamp;
+
     public DescribeAddressTransfersResultAddressTransfers withTransferOfferExpirationTimestamp(OffsetDateTime transferOfferExpirationTimestamp) {
         this.transferOfferExpirationTimestamp = transferOfferExpirationTimestamp;
         return this;
     }
     
+    public DescribeAddressTransfersResultAddressTransfers(){}
 }

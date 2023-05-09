@@ -15,6 +15,7 @@ public class ListIdentityProvidersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListIdentityProvidersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListIdentityProvidersResponse {
     
     @JsonProperty("Providers")
     public ProviderDescription[] providers;
+
     public ListIdentityProvidersResponse withProviders(ProviderDescription[] providers) {
         this.providers = providers;
         return this;
     }
     
+    public ListIdentityProvidersResponse(@JsonProperty("Providers") ProviderDescription[] providers) {
+        this.providers = providers;
+  }
 }

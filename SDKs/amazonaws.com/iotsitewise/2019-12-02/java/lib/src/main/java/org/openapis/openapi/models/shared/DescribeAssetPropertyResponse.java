@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAssetPropertyResponse {
     @JsonProperty("assetId")
     public String assetId;
+
     public DescribeAssetPropertyResponse withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
@@ -21,6 +22,7 @@ public class DescribeAssetPropertyResponse {
     
     @JsonProperty("assetModelId")
     public String assetModelId;
+
     public DescribeAssetPropertyResponse withAssetModelId(String assetModelId) {
         this.assetModelId = assetModelId;
         return this;
@@ -28,6 +30,7 @@ public class DescribeAssetPropertyResponse {
     
     @JsonProperty("assetName")
     public String assetName;
+
     public DescribeAssetPropertyResponse withAssetName(String assetName) {
         this.assetName = assetName;
         return this;
@@ -36,6 +39,7 @@ public class DescribeAssetPropertyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetProperty")
     public Property assetProperty;
+
     public DescribeAssetPropertyResponse withAssetProperty(Property assetProperty) {
         this.assetProperty = assetProperty;
         return this;
@@ -44,9 +48,15 @@ public class DescribeAssetPropertyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compositeModel")
     public CompositeModelProperty compositeModel;
+
     public DescribeAssetPropertyResponse withCompositeModel(CompositeModelProperty compositeModel) {
         this.compositeModel = compositeModel;
         return this;
     }
     
+    public DescribeAssetPropertyResponse(@JsonProperty("assetId") String assetId, @JsonProperty("assetModelId") String assetModelId, @JsonProperty("assetName") String assetName) {
+        this.assetId = assetId;
+        this.assetModelId = assetModelId;
+        this.assetName = assetName;
+  }
 }

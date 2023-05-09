@@ -60,12 +60,10 @@ public class Project {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProjectAnalysesResponse res = new org.openapis.openapi.models.operations.GetProjectAnalysesResponse() {{
+        org.openapis.openapi.models.operations.GetProjectAnalysesResponse res = new org.openapis.openapi.models.operations.GetProjectAnalysesResponse(contentType, httpRes.statusCode()) {{
             getProjectAnalyses200ApplicationJSONObject = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,12 +114,10 @@ public class Project {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProjectUrlsAggsResponse res = new org.openapis.openapi.models.operations.GetProjectUrlsAggsResponse() {{
+        org.openapis.openapi.models.operations.GetProjectUrlsAggsResponse res = new org.openapis.openapi.models.operations.GetProjectUrlsAggsResponse(contentType, httpRes.statusCode()) {{
             default_ = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -164,12 +160,10 @@ public class Project {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSavedFilterResponse res = new org.openapis.openapi.models.operations.GetSavedFilterResponse() {{
+        org.openapis.openapi.models.operations.GetSavedFilterResponse res = new org.openapis.openapi.models.operations.GetSavedFilterResponse(contentType, httpRes.statusCode()) {{
             projectSavedFilter = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -218,12 +212,10 @@ public class Project {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSavedFiltersResponse res = new org.openapis.openapi.models.operations.GetSavedFiltersResponse() {{
+        org.openapis.openapi.models.operations.GetSavedFiltersResponse res = new org.openapis.openapi.models.operations.GetSavedFiltersResponse(contentType, httpRes.statusCode()) {{
             getSavedFilters200ApplicationJSONObject = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -266,12 +258,10 @@ public class Project {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestUrlRewritingRulesResponse res = new org.openapis.openapi.models.operations.TestUrlRewritingRulesResponse() {{
+        org.openapis.openapi.models.operations.TestUrlRewritingRulesResponse res = new org.openapis.openapi.models.operations.TestUrlRewritingRulesResponse(contentType, httpRes.statusCode()) {{
             urlRewritingRulesSerializer = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

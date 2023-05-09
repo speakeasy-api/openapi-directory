@@ -12,6 +12,7 @@ public class ClusterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clustering")
     public ClusterConfigurationClustering clustering;
+
     public ClusterConfiguration withClustering(ClusterConfigurationClustering clustering) {
         this.clustering = clustering;
         return this;
@@ -23,6 +24,7 @@ public class ClusterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_type")
     public String responseType;
+
     public ClusterConfiguration withResponseType(String responseType) {
         this.responseType = responseType;
         return this;
@@ -31,9 +33,11 @@ public class ClusterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routing")
     public ClusterConfigurationRouting routing;
+
     public ClusterConfiguration withRouting(ClusterConfigurationRouting routing) {
         this.routing = routing;
         return this;
     }
     
+    public ClusterConfiguration(){}
 }

@@ -13,7 +13,8 @@ public enum EffectiveDeploymentExecutionStatusEnum {
     COMPLETED("COMPLETED"),
     TIMED_OUT("TIMED_OUT"),
     CANCELED("CANCELED"),
-    REJECTED("REJECTED");
+    REJECTED("REJECTED"),
+    SUCCEEDED("SUCCEEDED");
 
     @JsonValue
     public final String value;

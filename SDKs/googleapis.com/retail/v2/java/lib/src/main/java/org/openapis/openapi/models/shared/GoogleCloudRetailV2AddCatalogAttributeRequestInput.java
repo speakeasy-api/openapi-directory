@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2AddCatalogAttributeRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogAttribute")
     public GoogleCloudRetailV2CatalogAttributeInput catalogAttribute;
+
     public GoogleCloudRetailV2AddCatalogAttributeRequestInput withCatalogAttribute(GoogleCloudRetailV2CatalogAttributeInput catalogAttribute) {
         this.catalogAttribute = catalogAttribute;
         return this;
     }
     
+    public GoogleCloudRetailV2AddCatalogAttributeRequestInput(){}
 }

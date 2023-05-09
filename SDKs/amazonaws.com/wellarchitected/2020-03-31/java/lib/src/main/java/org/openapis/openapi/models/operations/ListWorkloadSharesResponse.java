@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListWorkloadSharesResponse {
@@ -12,6 +13,7 @@ public class ListWorkloadSharesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListWorkloadSharesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListWorkloadSharesResponse {
     
     
     public String contentType;
+
     public ListWorkloadSharesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListWorkloadSharesResponse {
      */
     
     public Object internalServerException;
+
     public ListWorkloadSharesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListWorkloadSharesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListWorkloadSharesOutput listWorkloadSharesOutput;
+
     public ListWorkloadSharesResponse withListWorkloadSharesOutput(org.openapis.openapi.models.shared.ListWorkloadSharesOutput listWorkloadSharesOutput) {
         this.listWorkloadSharesOutput = listWorkloadSharesOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListWorkloadSharesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListWorkloadSharesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListWorkloadSharesResponse {
     
     
     public Integer statusCode;
+
     public ListWorkloadSharesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListWorkloadSharesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListWorkloadSharesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListWorkloadSharesResponse {
      */
     
     public Object throttlingException;
+
     public ListWorkloadSharesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListWorkloadSharesResponse {
      */
     
     public Object validationException;
+
     public ListWorkloadSharesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListWorkloadSharesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class AutomaticTransition {
      */
     @JsonProperty("accountId")
     public Integer accountId;
+
     public AutomaticTransition withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -19,6 +20,7 @@ public class AutomaticTransition {
     
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AutomaticTransition withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,6 +31,7 @@ public class AutomaticTransition {
      */
     @JsonProperty("marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public AutomaticTransition withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
@@ -36,9 +39,16 @@ public class AutomaticTransition {
     
     @JsonProperty("orderStatusTransitionId")
     public Integer orderStatusTransitionId;
+
     public AutomaticTransition withOrderStatusTransitionId(Integer orderStatusTransitionId) {
         this.orderStatusTransitionId = orderStatusTransitionId;
         return this;
     }
     
+    public AutomaticTransition(@JsonProperty("accountId") Integer accountId, @JsonProperty("enabled") Boolean enabled, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode, @JsonProperty("orderStatusTransitionId") Integer orderStatusTransitionId) {
+        this.accountId = accountId;
+        this.enabled = enabled;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+        this.orderStatusTransitionId = orderStatusTransitionId;
+  }
 }

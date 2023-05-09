@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSmtpDomainResponse {
@@ -12,6 +13,7 @@ public class CreateSmtpDomainResponse {
      */
     
     public org.openapis.openapi.models.shared.BadRequestResponse badRequestResponse;
+
     public CreateSmtpDomainResponse withBadRequestResponse(org.openapis.openapi.models.shared.BadRequestResponse badRequestResponse) {
         this.badRequestResponse = badRequestResponse;
         return this;
@@ -19,6 +21,7 @@ public class CreateSmtpDomainResponse {
     
     
     public String contentType;
+
     public CreateSmtpDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CreateSmtpDomainResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CreateSmtpDomainResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class CreateSmtpDomainResponse {
     
     
     public Integer statusCode;
+
     public CreateSmtpDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class CreateSmtpDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSmtpDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateSmtpDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ConversionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversion")
     public Conversion[] conversion;
+
     public ConversionList withConversion(Conversion[] conversion) {
         this.conversion = conversion;
         return this;
@@ -29,9 +30,11 @@ public class ConversionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ConversionList withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public ConversionList(){}
 }

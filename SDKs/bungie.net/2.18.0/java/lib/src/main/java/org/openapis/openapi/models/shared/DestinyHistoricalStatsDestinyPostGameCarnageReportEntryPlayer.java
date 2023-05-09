@@ -15,6 +15,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer {
      */
     
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungieNetUserInfo bungieNetUserInfo;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer withBungieNetUserInfo(DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungieNetUserInfo bungieNetUserInfo) {
         this.bungieNetUserInfo = bungieNetUserInfo;
         return this;
@@ -25,6 +26,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer {
      */
     
     public String characterClass;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer withCharacterClass(String characterClass) {
         this.characterClass = characterClass;
         return this;
@@ -35,6 +37,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer {
      */
     
     public Integer characterLevel;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer withCharacterLevel(Integer characterLevel) {
         this.characterLevel = characterLevel;
         return this;
@@ -45,6 +48,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer {
      */
     
     public String clanName;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer withClanName(String clanName) {
         this.clanName = clanName;
         return this;
@@ -55,6 +59,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer {
      */
     
     public String clanTag;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer withClanTag(String clanTag) {
         this.clanTag = clanTag;
         return this;
@@ -62,6 +67,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer {
     
     
     public Long classHash;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer withClassHash(Long classHash) {
         this.classHash = classHash;
         return this;
@@ -72,6 +78,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer {
      */
     
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerDestinyUserInfo destinyUserInfo;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer withDestinyUserInfo(DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerDestinyUserInfo destinyUserInfo) {
         this.destinyUserInfo = destinyUserInfo;
         return this;
@@ -82,6 +89,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer {
      */
     
     public Long emblemHash;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer withEmblemHash(Long emblemHash) {
         this.emblemHash = emblemHash;
         return this;
@@ -89,6 +97,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer {
     
     
     public Long genderHash;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer withGenderHash(Long genderHash) {
         this.genderHash = genderHash;
         return this;
@@ -99,6 +108,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer {
      */
     
     public Integer lightLevel;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer withLightLevel(Integer lightLevel) {
         this.lightLevel = lightLevel;
         return this;
@@ -106,9 +116,11 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer {
     
     
     public Long raceHash;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer withRaceHash(Long raceHash) {
         this.raceHash = raceHash;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayer(){}
 }

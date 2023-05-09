@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CompanyControllerGetBranchesRequest;
 import org.openapis.openapi.models.operations.CompanyControllerGetBranchesResponse;
 
@@ -13,19 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CompanyControllerGetBranchesRequest req = new CompanyControllerGetBranchesRequest() {{
-                count = 548814;
-                offset = 592845;
-                shortName = "distinctio";
-            }}            
+            CompanyControllerGetBranchesRequest req = new CompanyControllerGetBranchesRequest(548814, 592845, "distinctio");            
 
             CompanyControllerGetBranchesResponse res = sdk.companyController.companyControllerGetBranches(req);
 
-            if (res.advertisingBranchModelResults.isPresent()) {
+            if (res.advertisingBranchModelResults != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

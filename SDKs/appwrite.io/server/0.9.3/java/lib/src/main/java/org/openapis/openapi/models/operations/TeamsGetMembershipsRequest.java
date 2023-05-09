@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsGetMembershipsRequest {
@@ -12,6 +13,7 @@ public class TeamsGetMembershipsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public TeamsGetMembershipsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -22,6 +24,7 @@ public class TeamsGetMembershipsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public TeamsGetMembershipsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -32,6 +35,7 @@ public class TeamsGetMembershipsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderType")
     public String orderType;
+
     public TeamsGetMembershipsRequest withOrderType(String orderType) {
         this.orderType = orderType;
         return this;
@@ -42,6 +46,7 @@ public class TeamsGetMembershipsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public TeamsGetMembershipsRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -52,9 +57,13 @@ public class TeamsGetMembershipsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=teamId")
     public String teamId;
+
     public TeamsGetMembershipsRequest withTeamId(String teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public TeamsGetMembershipsRequest(@JsonProperty("teamId") String teamId) {
+        this.teamId = teamId;
+  }
 }

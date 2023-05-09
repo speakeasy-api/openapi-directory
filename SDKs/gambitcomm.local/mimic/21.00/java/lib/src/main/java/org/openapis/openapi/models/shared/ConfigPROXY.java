@@ -15,6 +15,7 @@ public class ConfigPROXY {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TCP_NODELAY")
     public Integer tcpNodelay;
+
     public ConfigPROXY withTcpNodelay(Integer tcpNodelay) {
         this.tcpNodelay = tcpNodelay;
         return this;
@@ -23,6 +24,7 @@ public class ConfigPROXY {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_to_server")
     public String clientToServer;
+
     public ConfigPROXY withClientToServer(String clientToServer) {
         this.clientToServer = clientToServer;
         return this;
@@ -31,6 +33,7 @@ public class ConfigPROXY {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disconnect_delay")
     public Integer disconnectDelay;
+
     public ConfigPROXY withDisconnectDelay(Integer disconnectDelay) {
         this.disconnectDelay = disconnectDelay;
         return this;
@@ -39,6 +42,7 @@ public class ConfigPROXY {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_connects")
     public Integer maxConnects;
+
     public ConfigPROXY withMaxConnects(Integer maxConnects) {
         this.maxConnects = maxConnects;
         return this;
@@ -47,6 +51,7 @@ public class ConfigPROXY {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portno")
     public Integer portno;
+
     public ConfigPROXY withPortno(Integer portno) {
         this.portno = portno;
         return this;
@@ -55,6 +60,7 @@ public class ConfigPROXY {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pre_connect")
     public String preConnect;
+
     public ConfigPROXY withPreConnect(String preConnect) {
         this.preConnect = preConnect;
         return this;
@@ -63,6 +69,7 @@ public class ConfigPROXY {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server_to_client")
     public String serverToClient;
+
     public ConfigPROXY withServerToClient(String serverToClient) {
         this.serverToClient = serverToClient;
         return this;
@@ -71,6 +78,7 @@ public class ConfigPROXY {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public String target;
+
     public ConfigPROXY withTarget(String target) {
         this.target = target;
         return this;
@@ -79,9 +87,11 @@ public class ConfigPROXY {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transport")
     public String transport;
+
     public ConfigPROXY withTransport(String transport) {
         this.transport = transport;
         return this;
     }
     
+    public ConfigPROXY(){}
 }

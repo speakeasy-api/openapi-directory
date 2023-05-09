@@ -18,9 +18,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPrici
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discountAmount")
     public GoogleCloudPaymentsResellerSubscriptionV1Amount discountAmount;
+
     public GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput withDiscountAmount(GoogleCloudPaymentsResellerSubscriptionV1Amount discountAmount) {
         this.discountAmount = discountAmount;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput(){}
 }

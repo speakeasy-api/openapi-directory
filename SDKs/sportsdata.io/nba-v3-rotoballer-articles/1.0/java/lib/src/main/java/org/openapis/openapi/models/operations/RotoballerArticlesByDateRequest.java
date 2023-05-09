@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RotoballerArticlesByDateRequest {
@@ -13,6 +14,7 @@ public class RotoballerArticlesByDateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
     public String date;
+
     public RotoballerArticlesByDateRequest withDate(String date) {
         this.date = date;
         return this;
@@ -23,9 +25,14 @@ public class RotoballerArticlesByDateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public RotoballerArticlesByDateFormatEnum format;
+
     public RotoballerArticlesByDateRequest withFormat(RotoballerArticlesByDateFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public RotoballerArticlesByDateRequest(@JsonProperty("date") String date, @JsonProperty("format") RotoballerArticlesByDateFormatEnum format) {
+        this.date = date;
+        this.format = format;
+  }
 }

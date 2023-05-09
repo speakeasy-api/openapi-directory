@@ -16,8 +16,8 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetApiVersionResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,12 +30,14 @@ public class Application {
 
             GetApiVersionResponse res = sdk.apiInformation.getApiVersion();
 
-            if (res.apiVersion.isPresent()) {
+            if (res.apiVersion != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -43,10 +45,10 @@ public class Application {
 ## Available Resources and Operations
 
 
-### apiInformation
+### [apiInformation](docs/apiinformation/README.md)
 
-* `getApiVersion` - API version
-* `getHealth` - Service health
+* [getApiVersion](docs/apiinformation/README.md#getapiversion) - API version
+* [getHealth](docs/apiinformation/README.md#gethealth) - Service health
 <!-- End SDK Available Operations -->
 
 ### Maturity

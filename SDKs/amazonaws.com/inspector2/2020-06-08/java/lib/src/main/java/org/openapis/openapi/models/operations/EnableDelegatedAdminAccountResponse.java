@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnableDelegatedAdminAccountResponse {
@@ -12,6 +13,7 @@ public class EnableDelegatedAdminAccountResponse {
      */
     
     public Object accessDeniedException;
+
     public EnableDelegatedAdminAccountResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class EnableDelegatedAdminAccountResponse {
      */
     
     public Object conflictException;
+
     public EnableDelegatedAdminAccountResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class EnableDelegatedAdminAccountResponse {
     
     
     public String contentType;
+
     public EnableDelegatedAdminAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class EnableDelegatedAdminAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.EnableDelegatedAdminAccountResponse enableDelegatedAdminAccountResponse;
+
     public EnableDelegatedAdminAccountResponse withEnableDelegatedAdminAccountResponse(org.openapis.openapi.models.shared.EnableDelegatedAdminAccountResponse enableDelegatedAdminAccountResponse) {
         this.enableDelegatedAdminAccountResponse = enableDelegatedAdminAccountResponse;
         return this;
@@ -49,6 +54,7 @@ public class EnableDelegatedAdminAccountResponse {
      */
     
     public Object internalServerException;
+
     public EnableDelegatedAdminAccountResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class EnableDelegatedAdminAccountResponse {
     
     
     public Integer statusCode;
+
     public EnableDelegatedAdminAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class EnableDelegatedAdminAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnableDelegatedAdminAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class EnableDelegatedAdminAccountResponse {
      */
     
     public Object resourceNotFoundException;
+
     public EnableDelegatedAdminAccountResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class EnableDelegatedAdminAccountResponse {
      */
     
     public Object throttlingException;
+
     public EnableDelegatedAdminAccountResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class EnableDelegatedAdminAccountResponse {
      */
     
     public Object validationException;
+
     public EnableDelegatedAdminAccountResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public EnableDelegatedAdminAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

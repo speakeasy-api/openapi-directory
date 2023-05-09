@@ -15,9 +15,11 @@ public class AccessLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public FileAccessLog file;
+
     public AccessLog withFile(FileAccessLog file) {
         this.file = file;
         return this;
     }
     
+    public AccessLog(){}
 }

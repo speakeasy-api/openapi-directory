@@ -15,9 +15,11 @@ public class PutRemediationExceptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedBatches")
     public FailedRemediationExceptionBatch[] failedBatches;
+
     public PutRemediationExceptionsResponse withFailedBatches(FailedRemediationExceptionBatch[] failedBatches) {
         this.failedBatches = failedBatches;
         return this;
     }
     
+    public PutRemediationExceptionsResponse(){}
 }

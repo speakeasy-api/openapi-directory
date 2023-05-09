@@ -15,9 +15,11 @@ public class LocationsEmbeddedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Location[] data;
+
     public LocationsEmbeddedObject withData(Location[] data) {
         this.data = data;
         return this;
     }
     
+    public LocationsEmbeddedObject(){}
 }

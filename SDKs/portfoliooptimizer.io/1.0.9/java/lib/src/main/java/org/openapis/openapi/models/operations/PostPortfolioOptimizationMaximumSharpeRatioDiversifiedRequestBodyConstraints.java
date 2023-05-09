@@ -12,6 +12,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBodyCo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetsGroups")
     public Long[][] assetsGroups;
+
     public PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBodyConstraints withAssetsGroups(Long[][] assetsGroups) {
         this.assetsGroups = assetsGroups;
         return this;
@@ -23,6 +24,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBodyCo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetsGroupsMatrix")
     public Double[][] assetsGroupsMatrix;
+
     public PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBodyConstraints withAssetsGroupsMatrix(Double[][] assetsGroupsMatrix) {
         this.assetsGroupsMatrix = assetsGroupsMatrix;
         return this;
@@ -34,6 +36,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBodyCo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deltaReturn")
     public Double deltaReturn;
+
     public PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBodyConstraints withDeltaReturn(Double deltaReturn) {
         this.deltaReturn = deltaReturn;
         return this;
@@ -45,6 +48,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBodyCo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deltaVolatility")
     public Double deltaVolatility;
+
     public PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBodyConstraints withDeltaVolatility(Double deltaVolatility) {
         this.deltaVolatility = deltaVolatility;
         return this;
@@ -56,6 +60,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBodyCo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumAssetsGroupsWeights")
     public Double[] maximumAssetsGroupsWeights;
+
     public PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBodyConstraints withMaximumAssetsGroupsWeights(Double[] maximumAssetsGroupsWeights) {
         this.maximumAssetsGroupsWeights = maximumAssetsGroupsWeights;
         return this;
@@ -67,6 +72,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBodyCo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumAssetsWeights")
     public Double[] maximumAssetsWeights;
+
     public PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBodyConstraints withMaximumAssetsWeights(Double[] maximumAssetsWeights) {
         this.maximumAssetsWeights = maximumAssetsWeights;
         return this;
@@ -78,6 +84,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBodyCo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumPortfolioExposure")
     public Double maximumPortfolioExposure;
+
     public PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBodyConstraints withMaximumPortfolioExposure(Double maximumPortfolioExposure) {
         this.maximumPortfolioExposure = maximumPortfolioExposure;
         return this;
@@ -89,6 +96,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBodyCo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumAssetsWeights")
     public Double[] minimumAssetsWeights;
+
     public PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBodyConstraints withMinimumAssetsWeights(Double[] minimumAssetsWeights) {
         this.minimumAssetsWeights = minimumAssetsWeights;
         return this;
@@ -100,9 +108,11 @@ public class PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBodyCo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumPortfolioExposure")
     public Double minimumPortfolioExposure;
+
     public PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBodyConstraints withMinimumPortfolioExposure(Double minimumPortfolioExposure) {
         this.minimumPortfolioExposure = minimumPortfolioExposure;
         return this;
     }
     
+    public PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBodyConstraints(){}
 }

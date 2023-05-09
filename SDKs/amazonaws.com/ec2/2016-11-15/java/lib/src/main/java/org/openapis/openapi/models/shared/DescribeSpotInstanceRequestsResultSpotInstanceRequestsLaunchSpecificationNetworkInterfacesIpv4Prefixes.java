@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationNetworkInterfacesIpv4Prefixes {
     
     public String ipv4Prefix;
+
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationNetworkInterfacesIpv4Prefixes withIpv4Prefix(String ipv4Prefix) {
         this.ipv4Prefix = ipv4Prefix;
         return this;
     }
     
+    public DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationNetworkInterfacesIpv4Prefixes(){}
 }

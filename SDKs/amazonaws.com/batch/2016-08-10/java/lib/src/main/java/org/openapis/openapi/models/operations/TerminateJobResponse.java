@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TerminateJobResponse {
@@ -12,6 +13,7 @@ public class TerminateJobResponse {
      */
     
     public Object clientException;
+
     public TerminateJobResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class TerminateJobResponse {
     
     
     public String contentType;
+
     public TerminateJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class TerminateJobResponse {
      */
     
     public Object serverException;
+
     public TerminateJobResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -36,6 +40,7 @@ public class TerminateJobResponse {
     
     
     public Integer statusCode;
+
     public TerminateJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class TerminateJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TerminateJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class TerminateJobResponse {
      */
     
     public java.util.Map<String, Object> terminateJobResponse;
+
     public TerminateJobResponse withTerminateJobResponse(java.util.Map<String, Object> terminateJobResponse) {
         this.terminateJobResponse = terminateJobResponse;
         return this;
     }
     
+    public TerminateJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

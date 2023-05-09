@@ -20,9 +20,11 @@ public class ScoreFork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection")
     public String collection;
+
     public ScoreFork withCollection(String collection) {
         this.collection = collection;
         return this;
     }
     
+    public ScoreFork(){}
 }

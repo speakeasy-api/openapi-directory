@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopDataSourceSyncJobResponse {
@@ -12,6 +13,7 @@ public class StopDataSourceSyncJobResponse {
      */
     
     public Object accessDeniedException;
+
     public StopDataSourceSyncJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StopDataSourceSyncJobResponse {
     
     
     public String contentType;
+
     public StopDataSourceSyncJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopDataSourceSyncJobResponse {
      */
     
     public Object internalServerException;
+
     public StopDataSourceSyncJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class StopDataSourceSyncJobResponse {
     
     
     public Integer statusCode;
+
     public StopDataSourceSyncJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class StopDataSourceSyncJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopDataSourceSyncJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class StopDataSourceSyncJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopDataSourceSyncJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class StopDataSourceSyncJobResponse {
      */
     
     public Object throttlingException;
+
     public StopDataSourceSyncJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class StopDataSourceSyncJobResponse {
      */
     
     public Object validationException;
+
     public StopDataSourceSyncJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StopDataSourceSyncJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

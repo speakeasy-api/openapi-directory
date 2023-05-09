@@ -18,6 +18,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public java.util.Map<String, String> details;
+
     public Error withDetails(java.util.Map<String, String> details) {
         this.details = details;
         return this;
@@ -29,6 +30,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorTime")
     public String errorTime;
+
     public Error withErrorTime(String errorTime) {
         this.errorTime = errorTime;
         return this;
@@ -40,6 +42,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorUuid")
     public String errorUuid;
+
     public Error withErrorUuid(String errorUuid) {
         this.errorUuid = errorUuid;
         return this;
@@ -51,6 +54,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Error withMessage(String message) {
         this.message = message;
         return this;
@@ -62,9 +66,11 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public Error withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public Error(){}
 }

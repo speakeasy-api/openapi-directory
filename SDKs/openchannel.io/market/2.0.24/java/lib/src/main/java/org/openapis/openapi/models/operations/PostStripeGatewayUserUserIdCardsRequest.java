@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostStripeGatewayUserUserIdCardsRequest {
@@ -12,6 +13,7 @@ public class PostStripeGatewayUserUserIdCardsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isDefault")
     public Boolean isDefault;
+
     public PostStripeGatewayUserUserIdCardsRequest withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -22,6 +24,7 @@ public class PostStripeGatewayUserUserIdCardsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public PostStripeGatewayUserUserIdCardsRequest withToken(String token) {
         this.token = token;
         return this;
@@ -32,9 +35,14 @@ public class PostStripeGatewayUserUserIdCardsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public PostStripeGatewayUserUserIdCardsRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public PostStripeGatewayUserUserIdCardsRequest(@JsonProperty("token") String token, @JsonProperty("userId") String userId) {
+        this.token = token;
+        this.userId = userId;
+  }
 }

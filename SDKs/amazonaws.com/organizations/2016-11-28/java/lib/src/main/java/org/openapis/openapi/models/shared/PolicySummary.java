@@ -15,6 +15,7 @@ public class PolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public PolicySummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class PolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsManaged")
     public Boolean awsManaged;
+
     public PolicySummary withAwsManaged(Boolean awsManaged) {
         this.awsManaged = awsManaged;
         return this;
@@ -31,6 +33,7 @@ public class PolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public PolicySummary withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class PolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public PolicySummary withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class PolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PolicySummary withName(String name) {
         this.name = name;
         return this;
@@ -55,9 +60,11 @@ public class PolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public PolicyTypeEnum type;
+
     public PolicySummary withType(PolicyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PolicySummary(){}
 }

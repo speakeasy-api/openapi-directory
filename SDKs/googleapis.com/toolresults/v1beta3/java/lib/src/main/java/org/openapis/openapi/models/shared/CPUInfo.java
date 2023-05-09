@@ -15,6 +15,7 @@ public class CPUInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuProcessor")
     public String cpuProcessor;
+
     public CPUInfo withCpuProcessor(String cpuProcessor) {
         this.cpuProcessor = cpuProcessor;
         return this;
@@ -26,6 +27,7 @@ public class CPUInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuSpeedInGhz")
     public Float cpuSpeedInGhz;
+
     public CPUInfo withCpuSpeedInGhz(Float cpuSpeedInGhz) {
         this.cpuSpeedInGhz = cpuSpeedInGhz;
         return this;
@@ -37,9 +39,11 @@ public class CPUInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfCores")
     public Integer numberOfCores;
+
     public CPUInfo withNumberOfCores(Integer numberOfCores) {
         this.numberOfCores = numberOfCores;
         return this;
     }
     
+    public CPUInfo(){}
 }

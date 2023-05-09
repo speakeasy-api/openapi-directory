@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNatGatewayResultNatGatewayNatGatewayAddresses {
     
     public String allocationId;
+
     public CreateNatGatewayResultNatGatewayNatGatewayAddresses withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -19,6 +20,7 @@ public class CreateNatGatewayResultNatGatewayNatGatewayAddresses {
     
     
     public String associationId;
+
     public CreateNatGatewayResultNatGatewayNatGatewayAddresses withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -26,6 +28,7 @@ public class CreateNatGatewayResultNatGatewayNatGatewayAddresses {
     
     
     public String failureMessage;
+
     public CreateNatGatewayResultNatGatewayNatGatewayAddresses withFailureMessage(String failureMessage) {
         this.failureMessage = failureMessage;
         return this;
@@ -33,6 +36,7 @@ public class CreateNatGatewayResultNatGatewayNatGatewayAddresses {
     
     
     public Boolean isPrimary;
+
     public CreateNatGatewayResultNatGatewayNatGatewayAddresses withIsPrimary(Boolean isPrimary) {
         this.isPrimary = isPrimary;
         return this;
@@ -40,6 +44,7 @@ public class CreateNatGatewayResultNatGatewayNatGatewayAddresses {
     
     
     public String networkInterfaceId;
+
     public CreateNatGatewayResultNatGatewayNatGatewayAddresses withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -47,6 +52,7 @@ public class CreateNatGatewayResultNatGatewayNatGatewayAddresses {
     
     
     public String privateIp;
+
     public CreateNatGatewayResultNatGatewayNatGatewayAddresses withPrivateIp(String privateIp) {
         this.privateIp = privateIp;
         return this;
@@ -54,6 +60,7 @@ public class CreateNatGatewayResultNatGatewayNatGatewayAddresses {
     
     
     public String publicIp;
+
     public CreateNatGatewayResultNatGatewayNatGatewayAddresses withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -61,9 +68,11 @@ public class CreateNatGatewayResultNatGatewayNatGatewayAddresses {
     
     
     public CreateNatGatewayResultNatGatewayNatGatewayAddressesStatusEnum status;
+
     public CreateNatGatewayResultNatGatewayNatGatewayAddresses withStatus(CreateNatGatewayResultNatGatewayNatGatewayAddressesStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CreateNatGatewayResultNatGatewayNatGatewayAddresses(){}
 }

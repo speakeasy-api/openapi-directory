@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaEventParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GoogleCloudIntegrationsV1alphaEventParameter withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIntegrationsV1alphaEventParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public GoogleCloudIntegrationsV1alphaValueType value;
+
     public GoogleCloudIntegrationsV1alphaEventParameter withValue(GoogleCloudIntegrationsV1alphaValueType value) {
         this.value = value;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaEventParameter(){}
 }

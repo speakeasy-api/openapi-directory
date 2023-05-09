@@ -61,11 +61,9 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingConversionsBatchinsertResponse res = new org.openapis.openapi.models.operations.DfareportingConversionsBatchinsertResponse() {{
+        org.openapis.openapi.models.operations.DfareportingConversionsBatchinsertResponse res = new org.openapis.openapi.models.operations.DfareportingConversionsBatchinsertResponse(contentType, httpRes.statusCode()) {{
             conversionsBatchInsertResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Conversions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingConversionsBatchupdateResponse res = new org.openapis.openapi.models.operations.DfareportingConversionsBatchupdateResponse() {{
+        org.openapis.openapi.models.operations.DfareportingConversionsBatchupdateResponse res = new org.openapis.openapi.models.operations.DfareportingConversionsBatchupdateResponse(contentType, httpRes.statusCode()) {{
             conversionsBatchUpdateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

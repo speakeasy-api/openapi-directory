@@ -15,6 +15,7 @@ public class AwsS3BucketBucketVersioningConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsMfaDeleteEnabled")
     public Boolean isMfaDeleteEnabled;
+
     public AwsS3BucketBucketVersioningConfiguration withIsMfaDeleteEnabled(Boolean isMfaDeleteEnabled) {
         this.isMfaDeleteEnabled = isMfaDeleteEnabled;
         return this;
@@ -23,9 +24,11 @@ public class AwsS3BucketBucketVersioningConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsS3BucketBucketVersioningConfiguration withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AwsS3BucketBucketVersioningConfiguration(){}
 }

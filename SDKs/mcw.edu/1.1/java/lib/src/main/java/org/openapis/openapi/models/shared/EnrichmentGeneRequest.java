@@ -15,6 +15,7 @@ public class EnrichmentGeneRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accId")
     public String accId;
+
     public EnrichmentGeneRequest withAccId(String accId) {
         this.accId = accId;
         return this;
@@ -23,6 +24,7 @@ public class EnrichmentGeneRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geneSymbols")
     public String[] geneSymbols;
+
     public EnrichmentGeneRequest withGeneSymbols(String[] geneSymbols) {
         this.geneSymbols = geneSymbols;
         return this;
@@ -31,9 +33,11 @@ public class EnrichmentGeneRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("species")
     public String species;
+
     public EnrichmentGeneRequest withSpecies(String species) {
         this.species = species;
         return this;
     }
     
+    public EnrichmentGeneRequest(){}
 }

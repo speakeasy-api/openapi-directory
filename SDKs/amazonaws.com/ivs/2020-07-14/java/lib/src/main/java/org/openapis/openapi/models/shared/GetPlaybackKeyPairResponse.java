@@ -15,9 +15,11 @@ public class GetPlaybackKeyPairResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyPair")
     public PlaybackKeyPair keyPair;
+
     public GetPlaybackKeyPairResponse withKeyPair(PlaybackKeyPair keyPair) {
         this.keyPair = keyPair;
         return this;
     }
     
+    public GetPlaybackKeyPairResponse(){}
 }

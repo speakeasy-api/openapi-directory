@@ -15,6 +15,7 @@ public class SchemaVersionNumber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestVersion")
     public Boolean latestVersion;
+
     public SchemaVersionNumber withLatestVersion(Boolean latestVersion) {
         this.latestVersion = latestVersion;
         return this;
@@ -23,9 +24,11 @@ public class SchemaVersionNumber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionNumber")
     public Long versionNumber;
+
     public SchemaVersionNumber withVersionNumber(Long versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public SchemaVersionNumber(){}
 }

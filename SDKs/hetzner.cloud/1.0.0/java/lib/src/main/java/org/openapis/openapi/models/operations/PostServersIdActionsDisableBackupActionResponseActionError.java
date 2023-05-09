@@ -15,6 +15,7 @@ public class PostServersIdActionsDisableBackupActionResponseActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public PostServersIdActionsDisableBackupActionResponseActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class PostServersIdActionsDisableBackupActionResponseActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public PostServersIdActionsDisableBackupActionResponseActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostServersIdActionsDisableBackupActionResponseActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

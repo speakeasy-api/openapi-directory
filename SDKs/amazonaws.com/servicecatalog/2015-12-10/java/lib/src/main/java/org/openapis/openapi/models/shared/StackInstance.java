@@ -15,6 +15,7 @@ public class StackInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Account")
     public String account;
+
     public StackInstance withAccount(String account) {
         this.account = account;
         return this;
@@ -23,6 +24,7 @@ public class StackInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public StackInstance withRegion(String region) {
         this.region = region;
         return this;
@@ -31,9 +33,11 @@ public class StackInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackInstanceStatus")
     public StackInstanceStatusEnum stackInstanceStatus;
+
     public StackInstance withStackInstanceStatus(StackInstanceStatusEnum stackInstanceStatus) {
         this.stackInstanceStatus = stackInstanceStatus;
         return this;
     }
     
+    public StackInstance(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsCreateForTeamDiscussionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ReactionsCreateForTeamDiscussionRequestBody requestBody;
+
     public ReactionsCreateForTeamDiscussionRequest withRequestBody(ReactionsCreateForTeamDiscussionRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ReactionsCreateForTeamDiscussionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
     public String accept;
+
     public ReactionsCreateForTeamDiscussionRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -26,6 +29,7 @@ public class ReactionsCreateForTeamDiscussionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
     public Long discussionNumber;
+
     public ReactionsCreateForTeamDiscussionRequest withDiscussionNumber(Long discussionNumber) {
         this.discussionNumber = discussionNumber;
         return this;
@@ -33,9 +37,16 @@ public class ReactionsCreateForTeamDiscussionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
     public Long teamId;
+
     public ReactionsCreateForTeamDiscussionRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public ReactionsCreateForTeamDiscussionRequest(@JsonProperty("RequestBody") ReactionsCreateForTeamDiscussionRequestBody requestBody, @JsonProperty("accept") String accept, @JsonProperty("discussion_number") Long discussionNumber, @JsonProperty("team_id") Long teamId) {
+        this.requestBody = requestBody;
+        this.accept = accept;
+        this.discussionNumber = discussionNumber;
+        this.teamId = teamId;
+  }
 }

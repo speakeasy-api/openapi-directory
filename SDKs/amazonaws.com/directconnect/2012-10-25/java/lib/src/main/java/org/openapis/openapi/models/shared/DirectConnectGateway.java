@@ -15,6 +15,7 @@ public class DirectConnectGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amazonSideAsn")
     public Long amazonSideAsn;
+
     public DirectConnectGateway withAmazonSideAsn(Long amazonSideAsn) {
         this.amazonSideAsn = amazonSideAsn;
         return this;
@@ -23,6 +24,7 @@ public class DirectConnectGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directConnectGatewayId")
     public String directConnectGatewayId;
+
     public DirectConnectGateway withDirectConnectGatewayId(String directConnectGatewayId) {
         this.directConnectGatewayId = directConnectGatewayId;
         return this;
@@ -31,6 +33,7 @@ public class DirectConnectGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directConnectGatewayName")
     public String directConnectGatewayName;
+
     public DirectConnectGateway withDirectConnectGatewayName(String directConnectGatewayName) {
         this.directConnectGatewayName = directConnectGatewayName;
         return this;
@@ -39,6 +42,7 @@ public class DirectConnectGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directConnectGatewayState")
     public DirectConnectGatewayStateEnum directConnectGatewayState;
+
     public DirectConnectGateway withDirectConnectGatewayState(DirectConnectGatewayStateEnum directConnectGatewayState) {
         this.directConnectGatewayState = directConnectGatewayState;
         return this;
@@ -47,6 +51,7 @@ public class DirectConnectGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerAccount")
     public String ownerAccount;
+
     public DirectConnectGateway withOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -55,9 +60,11 @@ public class DirectConnectGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateChangeError")
     public String stateChangeError;
+
     public DirectConnectGateway withStateChangeError(String stateChangeError) {
         this.stateChangeError = stateChangeError;
         return this;
     }
     
+    public DirectConnectGateway(){}
 }

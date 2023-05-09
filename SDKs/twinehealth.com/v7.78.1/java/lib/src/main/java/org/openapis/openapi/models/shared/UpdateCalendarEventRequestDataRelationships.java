@@ -12,9 +12,11 @@ public class UpdateCalendarEventRequestDataRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public UpdateCalendarEventRequestDataRelationshipsOwner owner;
+
     public UpdateCalendarEventRequestDataRelationships withOwner(UpdateCalendarEventRequestDataRelationshipsOwner owner) {
         this.owner = owner;
         return this;
     }
     
+    public UpdateCalendarEventRequestDataRelationships(){}
 }

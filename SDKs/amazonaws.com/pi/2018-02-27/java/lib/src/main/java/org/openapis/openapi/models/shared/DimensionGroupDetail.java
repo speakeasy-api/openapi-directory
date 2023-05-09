@@ -15,6 +15,7 @@ public class DimensionGroupDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public DimensionDetail[] dimensions;
+
     public DimensionGroupDetail withDimensions(DimensionDetail[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -23,9 +24,11 @@ public class DimensionGroupDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Group")
     public String group;
+
     public DimensionGroupDetail withGroup(String group) {
         this.group = group;
         return this;
     }
     
+    public DimensionGroupDetail(){}
 }

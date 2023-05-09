@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetServerCertificateRequest {
     
     public String serverCertificateName;
+
     public GetServerCertificateRequest withServerCertificateName(String serverCertificateName) {
         this.serverCertificateName = serverCertificateName;
         return this;
     }
     
+    public GetServerCertificateRequest(@JsonProperty("ServerCertificateName") String serverCertificateName) {
+        this.serverCertificateName = serverCertificateName;
+  }
 }

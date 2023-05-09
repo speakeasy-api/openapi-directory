@@ -12,6 +12,7 @@ public class PutPrincipalMappingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceId")
     public String dataSourceId;
+
     public PutPrincipalMappingRequest withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -19,6 +20,7 @@ public class PutPrincipalMappingRequest {
     
     @JsonProperty("GroupId")
     public String groupId;
+
     public PutPrincipalMappingRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -26,6 +28,7 @@ public class PutPrincipalMappingRequest {
     
     @JsonProperty("GroupMembers")
     public GroupMembers groupMembers;
+
     public PutPrincipalMappingRequest withGroupMembers(GroupMembers groupMembers) {
         this.groupMembers = groupMembers;
         return this;
@@ -33,6 +36,7 @@ public class PutPrincipalMappingRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public PutPrincipalMappingRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -41,6 +45,7 @@ public class PutPrincipalMappingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrderingId")
     public Long orderingId;
+
     public PutPrincipalMappingRequest withOrderingId(Long orderingId) {
         this.orderingId = orderingId;
         return this;
@@ -49,9 +54,15 @@ public class PutPrincipalMappingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public PutPrincipalMappingRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public PutPrincipalMappingRequest(@JsonProperty("GroupId") String groupId, @JsonProperty("GroupMembers") GroupMembers groupMembers, @JsonProperty("IndexId") String indexId) {
+        this.groupId = groupId;
+        this.groupMembers = groupMembers;
+        this.indexId = indexId;
+  }
 }

@@ -15,6 +15,7 @@ public class PutTransactionAccountsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("institution_id")
     public Long institutionId;
+
     public PutTransactionAccountsIdRequestBody withInstitutionId(Long institutionId) {
         this.institutionId = institutionId;
         return this;
@@ -26,6 +27,7 @@ public class PutTransactionAccountsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("starting_balance")
     public Double startingBalance;
+
     public PutTransactionAccountsIdRequestBody withStartingBalance(Double startingBalance) {
         this.startingBalance = startingBalance;
         return this;
@@ -37,9 +39,11 @@ public class PutTransactionAccountsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("starting_balance_date")
     public String startingBalanceDate;
+
     public PutTransactionAccountsIdRequestBody withStartingBalanceDate(String startingBalanceDate) {
         this.startingBalanceDate = startingBalanceDate;
         return this;
     }
     
+    public PutTransactionAccountsIdRequestBody(){}
 }

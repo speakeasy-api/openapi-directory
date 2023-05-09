@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetClientProfileByEmailResponse {
     
     public String contentType;
+
     public GetClientProfileByEmailResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetClientProfileByEmailResponse {
      */
     
     public GetClientProfileByEmail200ApplicationJSON getClientProfileByEmail200ApplicationJSONObject;
+
     public GetClientProfileByEmailResponse withGetClientProfileByEmail200ApplicationJSONObject(GetClientProfileByEmail200ApplicationJSON getClientProfileByEmail200ApplicationJSONObject) {
         this.getClientProfileByEmail200ApplicationJSONObject = getClientProfileByEmail200ApplicationJSONObject;
         return this;
@@ -26,6 +29,7 @@ public class GetClientProfileByEmailResponse {
     
     
     public Integer statusCode;
+
     public GetClientProfileByEmailResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetClientProfileByEmailResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetClientProfileByEmailResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetClientProfileByEmailResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

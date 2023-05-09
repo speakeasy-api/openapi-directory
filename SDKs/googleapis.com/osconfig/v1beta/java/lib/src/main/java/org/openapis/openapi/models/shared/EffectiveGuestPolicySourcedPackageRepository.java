@@ -18,6 +18,7 @@ public class EffectiveGuestPolicySourcedPackageRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageRepository")
     public PackageRepository packageRepository;
+
     public EffectiveGuestPolicySourcedPackageRepository withPackageRepository(PackageRepository packageRepository) {
         this.packageRepository = packageRepository;
         return this;
@@ -29,9 +30,11 @@ public class EffectiveGuestPolicySourcedPackageRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public EffectiveGuestPolicySourcedPackageRepository withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public EffectiveGuestPolicySourcedPackageRepository(){}
 }

@@ -15,6 +15,7 @@ public class RecoveryInstanceDataReplicationInfoReplicatedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backloggedStorageBytes")
     public Long backloggedStorageBytes;
+
     public RecoveryInstanceDataReplicationInfoReplicatedDisk withBackloggedStorageBytes(Long backloggedStorageBytes) {
         this.backloggedStorageBytes = backloggedStorageBytes;
         return this;
@@ -23,6 +24,7 @@ public class RecoveryInstanceDataReplicationInfoReplicatedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceName")
     public String deviceName;
+
     public RecoveryInstanceDataReplicationInfoReplicatedDisk withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -31,6 +33,7 @@ public class RecoveryInstanceDataReplicationInfoReplicatedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicatedStorageBytes")
     public Long replicatedStorageBytes;
+
     public RecoveryInstanceDataReplicationInfoReplicatedDisk withReplicatedStorageBytes(Long replicatedStorageBytes) {
         this.replicatedStorageBytes = replicatedStorageBytes;
         return this;
@@ -39,6 +42,7 @@ public class RecoveryInstanceDataReplicationInfoReplicatedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rescannedStorageBytes")
     public Long rescannedStorageBytes;
+
     public RecoveryInstanceDataReplicationInfoReplicatedDisk withRescannedStorageBytes(Long rescannedStorageBytes) {
         this.rescannedStorageBytes = rescannedStorageBytes;
         return this;
@@ -47,9 +51,11 @@ public class RecoveryInstanceDataReplicationInfoReplicatedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalStorageBytes")
     public Long totalStorageBytes;
+
     public RecoveryInstanceDataReplicationInfoReplicatedDisk withTotalStorageBytes(Long totalStorageBytes) {
         this.totalStorageBytes = totalStorageBytes;
         return this;
     }
     
+    public RecoveryInstanceDataReplicationInfoReplicatedDisk(){}
 }

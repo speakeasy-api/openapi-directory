@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateResponse {
     
     public String contentType;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRespo
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig googleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateResponse withGoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig(org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig googleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig) {
         this.googleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig = googleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig;
         return this;
@@ -26,6 +29,7 @@ public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRespo
     
     
     public Integer statusCode;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRespo
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

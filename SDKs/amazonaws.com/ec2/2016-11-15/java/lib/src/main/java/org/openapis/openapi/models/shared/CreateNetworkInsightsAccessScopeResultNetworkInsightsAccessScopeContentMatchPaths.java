@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPaths {
     
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPathsDestination destination;
+
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPaths withDestination(CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPathsDestination destination) {
         this.destination = destination;
         return this;
@@ -19,6 +20,7 @@ public class CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeCon
     
     
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPathsSource source;
+
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPaths withSource(CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPathsSource source) {
         this.source = source;
         return this;
@@ -26,9 +28,11 @@ public class CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeCon
     
     
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPathsThroughResources[] throughResources;
+
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPaths withThroughResources(CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPathsThroughResources[] throughResources) {
         this.throughResources = throughResources;
         return this;
     }
     
+    public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContentMatchPaths(){}
 }

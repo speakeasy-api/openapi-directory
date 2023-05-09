@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppPackagesPOSTResponse {
@@ -12,6 +13,7 @@ public class AppPackagesPOSTResponse {
      */
     
     public org.openapis.openapi.models.shared.AppPkgInfo[] appPkgInfos;
+
     public AppPackagesPOSTResponse withAppPkgInfos(org.openapis.openapi.models.shared.AppPkgInfo[] appPkgInfos) {
         this.appPkgInfos = appPkgInfos;
         return this;
@@ -19,6 +21,7 @@ public class AppPackagesPOSTResponse {
     
     
     public String contentType;
+
     public AppPackagesPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AppPackagesPOSTResponse {
      */
     
     public org.openapis.openapi.models.shared.ProblemDetails problemDetails;
+
     public AppPackagesPOSTResponse withProblemDetails(org.openapis.openapi.models.shared.ProblemDetails problemDetails) {
         this.problemDetails = problemDetails;
         return this;
@@ -36,6 +40,7 @@ public class AppPackagesPOSTResponse {
     
     
     public Integer statusCode;
+
     public AppPackagesPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AppPackagesPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppPackagesPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AppPackagesPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

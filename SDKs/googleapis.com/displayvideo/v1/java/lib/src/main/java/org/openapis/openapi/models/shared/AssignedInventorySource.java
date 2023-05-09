@@ -18,6 +18,7 @@ public class AssignedInventorySource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignedInventorySourceId")
     public String assignedInventorySourceId;
+
     public AssignedInventorySource withAssignedInventorySourceId(String assignedInventorySourceId) {
         this.assignedInventorySourceId = assignedInventorySourceId;
         return this;
@@ -29,6 +30,7 @@ public class AssignedInventorySource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventorySourceId")
     public String inventorySourceId;
+
     public AssignedInventorySource withInventorySourceId(String inventorySourceId) {
         this.inventorySourceId = inventorySourceId;
         return this;
@@ -40,9 +42,11 @@ public class AssignedInventorySource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AssignedInventorySource withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AssignedInventorySource(){}
 }

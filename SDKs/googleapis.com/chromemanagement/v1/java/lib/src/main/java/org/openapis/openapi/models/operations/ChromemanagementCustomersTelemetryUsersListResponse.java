@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChromemanagementCustomersTelemetryUsersListResponse {
     
     public String contentType;
+
     public ChromemanagementCustomersTelemetryUsersListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ChromemanagementCustomersTelemetryUsersListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleChromeManagementV1ListTelemetryUsersResponse googleChromeManagementV1ListTelemetryUsersResponse;
+
     public ChromemanagementCustomersTelemetryUsersListResponse withGoogleChromeManagementV1ListTelemetryUsersResponse(org.openapis.openapi.models.shared.GoogleChromeManagementV1ListTelemetryUsersResponse googleChromeManagementV1ListTelemetryUsersResponse) {
         this.googleChromeManagementV1ListTelemetryUsersResponse = googleChromeManagementV1ListTelemetryUsersResponse;
         return this;
@@ -26,6 +29,7 @@ public class ChromemanagementCustomersTelemetryUsersListResponse {
     
     
     public Integer statusCode;
+
     public ChromemanagementCustomersTelemetryUsersListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ChromemanagementCustomersTelemetryUsersListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChromemanagementCustomersTelemetryUsersListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ChromemanagementCustomersTelemetryUsersListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

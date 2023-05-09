@@ -18,9 +18,11 @@ public class CustomerListConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurations")
     public Configuration[] configurations;
+
     public CustomerListConfigurationsResponse withConfigurations(Configuration[] configurations) {
         this.configurations = configurations;
         return this;
     }
     
+    public CustomerListConfigurationsResponse(){}
 }

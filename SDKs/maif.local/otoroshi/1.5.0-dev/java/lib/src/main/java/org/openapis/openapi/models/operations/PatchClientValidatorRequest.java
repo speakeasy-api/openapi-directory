@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchClientValidatorRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Patch[] requestBody;
+
     public PatchClientValidatorRequest withRequestBody(org.openapis.openapi.models.shared.Patch[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class PatchClientValidatorRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PatchClientValidatorRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PatchClientValidatorRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

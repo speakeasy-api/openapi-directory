@@ -12,6 +12,7 @@ public class ShipmentInvoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceSummary")
     public InvoiceSummary invoiceSummary;
+
     public ShipmentInvoice withInvoiceSummary(InvoiceSummary invoiceSummary) {
         this.invoiceSummary = invoiceSummary;
         return this;
@@ -23,6 +24,7 @@ public class ShipmentInvoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemInvoices")
     public ShipmentInvoiceLineItemInvoice[] lineItemInvoices;
+
     public ShipmentInvoice withLineItemInvoices(ShipmentInvoiceLineItemInvoice[] lineItemInvoices) {
         this.lineItemInvoices = lineItemInvoices;
         return this;
@@ -34,9 +36,11 @@ public class ShipmentInvoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipmentGroupId")
     public String shipmentGroupId;
+
     public ShipmentInvoice withShipmentGroupId(String shipmentGroupId) {
         this.shipmentGroupId = shipmentGroupId;
         return this;
     }
     
+    public ShipmentInvoice(){}
 }

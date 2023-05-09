@@ -15,6 +15,7 @@ public class OBWriteDomesticScheduledConsent4Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Authorisation")
     public OBWriteDomesticScheduledConsent4DataAuthorisation authorisation;
+
     public OBWriteDomesticScheduledConsent4Data withAuthorisation(OBWriteDomesticScheduledConsent4DataAuthorisation authorisation) {
         this.authorisation = authorisation;
         return this;
@@ -25,6 +26,7 @@ public class OBWriteDomesticScheduledConsent4Data {
      */
     @JsonProperty("Initiation")
     public OBWriteDomesticScheduledConsent4DataInitiation initiation;
+
     public OBWriteDomesticScheduledConsent4Data withInitiation(OBWriteDomesticScheduledConsent4DataInitiation initiation) {
         this.initiation = initiation;
         return this;
@@ -35,6 +37,7 @@ public class OBWriteDomesticScheduledConsent4Data {
      */
     @JsonProperty("Permission")
     public OBWriteDomesticScheduledConsent4DataPermissionEnum permission;
+
     public OBWriteDomesticScheduledConsent4Data withPermission(OBWriteDomesticScheduledConsent4DataPermissionEnum permission) {
         this.permission = permission;
         return this;
@@ -46,6 +49,7 @@ public class OBWriteDomesticScheduledConsent4Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadRefundAccount")
     public OBWriteDomesticScheduledConsent4DataReadRefundAccountEnum readRefundAccount;
+
     public OBWriteDomesticScheduledConsent4Data withReadRefundAccount(OBWriteDomesticScheduledConsent4DataReadRefundAccountEnum readRefundAccount) {
         this.readRefundAccount = readRefundAccount;
         return this;
@@ -57,9 +61,14 @@ public class OBWriteDomesticScheduledConsent4Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SCASupportData")
     public OBSCASupportData1 scaSupportData;
+
     public OBWriteDomesticScheduledConsent4Data withSCASupportData(OBSCASupportData1 scaSupportData) {
         this.scaSupportData = scaSupportData;
         return this;
     }
     
+    public OBWriteDomesticScheduledConsent4Data(@JsonProperty("Initiation") OBWriteDomesticScheduledConsent4DataInitiation initiation, @JsonProperty("Permission") OBWriteDomesticScheduledConsent4DataPermissionEnum permission) {
+        this.initiation = initiation;
+        this.permission = permission;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StreamConfigurationSessionStorage {
     @JsonProperty("mode")
     public StreamingSessionStorageModeEnum[] mode;
+
     public StreamConfigurationSessionStorage withMode(StreamingSessionStorageModeEnum[] mode) {
         this.mode = mode;
         return this;
@@ -22,9 +23,13 @@ public class StreamConfigurationSessionStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("root")
     public StreamingSessionStorageRoot root;
+
     public StreamConfigurationSessionStorage withRoot(StreamingSessionStorageRoot root) {
         this.root = root;
         return this;
     }
     
+    public StreamConfigurationSessionStorage(@JsonProperty("mode") StreamingSessionStorageModeEnum[] mode) {
+        this.mode = mode;
+  }
 }

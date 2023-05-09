@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QuickTestImageUrlRawRequest {
@@ -12,6 +13,7 @@ public class QuickTestImageUrlRawRequest {
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public QuickTestImageUrlRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +25,7 @@ public class QuickTestImageUrlRawRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
     public String iterationId;
+
     public QuickTestImageUrlRawRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -33,6 +36,7 @@ public class QuickTestImageUrlRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public QuickTestImageUrlRawRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -43,9 +47,14 @@ public class QuickTestImageUrlRawRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=store")
     public Boolean store;
+
     public QuickTestImageUrlRawRequest withStore(Boolean store) {
         this.store = store;
         return this;
     }
     
+    public QuickTestImageUrlRawRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("projectId") String projectId) {
+        this.requestBody = requestBody;
+        this.projectId = projectId;
+  }
 }

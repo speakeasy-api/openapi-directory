@@ -12,6 +12,7 @@ public class SendMessagesResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedPrice")
     public Double estimatedPrice;
+
     public SendMessagesResponseData withEstimatedPrice(Double estimatedPrice) {
         this.estimatedPrice = estimatedPrice;
         return this;
@@ -20,6 +21,7 @@ public class SendMessagesResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalid")
     public Contact[] invalid;
+
     public SendMessagesResponseData withInvalid(Contact[] invalid) {
         this.invalid = invalid;
         return this;
@@ -28,6 +30,7 @@ public class SendMessagesResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public SendMessagesResponseData withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -36,6 +39,7 @@ public class SendMessagesResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
     public Message[] messages;
+
     public SendMessagesResponseData withMessages(Message[] messages) {
         this.messages = messages;
         return this;
@@ -44,6 +48,7 @@ public class SendMessagesResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested")
     public Long requested;
+
     public SendMessagesResponseData withRequested(Long requested) {
         this.requested = requested;
         return this;
@@ -52,9 +57,11 @@ public class SendMessagesResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valid")
     public Long valid;
+
     public SendMessagesResponseData withValid(Long valid) {
         this.valid = valid;
         return this;
     }
     
+    public SendMessagesResponseData(){}
 }

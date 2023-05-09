@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeEffectiveInstanceAssociationsResponse {
     
     public String contentType;
+
     public DescribeEffectiveInstanceAssociationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeEffectiveInstanceAssociationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeEffectiveInstanceAssociationsResult describeEffectiveInstanceAssociationsResult;
+
     public DescribeEffectiveInstanceAssociationsResponse withDescribeEffectiveInstanceAssociationsResult(org.openapis.openapi.models.shared.DescribeEffectiveInstanceAssociationsResult describeEffectiveInstanceAssociationsResult) {
         this.describeEffectiveInstanceAssociationsResult = describeEffectiveInstanceAssociationsResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeEffectiveInstanceAssociationsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeEffectiveInstanceAssociationsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeEffectiveInstanceAssociationsResponse {
      */
     
     public Object invalidInstanceId;
+
     public DescribeEffectiveInstanceAssociationsResponse withInvalidInstanceId(Object invalidInstanceId) {
         this.invalidInstanceId = invalidInstanceId;
         return this;
@@ -49,6 +54,7 @@ public class DescribeEffectiveInstanceAssociationsResponse {
      */
     
     public Object invalidNextToken;
+
     public DescribeEffectiveInstanceAssociationsResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -56,6 +62,7 @@ public class DescribeEffectiveInstanceAssociationsResponse {
     
     
     public Integer statusCode;
+
     public DescribeEffectiveInstanceAssociationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeEffectiveInstanceAssociationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeEffectiveInstanceAssociationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeEffectiveInstanceAssociationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDocumentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AddOrUpdateDocumentRequest addOrUpdateDocumentRequest;
+
     public UpdateDocumentRequest withAddOrUpdateDocumentRequest(org.openapis.openapi.models.shared.AddOrUpdateDocumentRequest addOrUpdateDocumentRequest) {
         this.addOrUpdateDocumentRequest = addOrUpdateDocumentRequest;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDocumentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
     public Long documentId;
+
     public UpdateDocumentRequest withDocumentId(Long documentId) {
         this.documentId = documentId;
         return this;
@@ -29,9 +32,14 @@ public class UpdateDocumentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public Long projectId;
+
     public UpdateDocumentRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public UpdateDocumentRequest(@JsonProperty("documentId") Long documentId, @JsonProperty("projectId") Long projectId) {
+        this.documentId = documentId;
+        this.projectId = projectId;
+  }
 }

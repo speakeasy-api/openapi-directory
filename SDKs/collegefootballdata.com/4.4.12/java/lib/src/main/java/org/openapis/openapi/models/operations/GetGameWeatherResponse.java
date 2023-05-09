@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetGameWeatherResponse {
     
     public String contentType;
+
     public GetGameWeatherResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetGameWeatherResponse {
      */
     
     public org.openapis.openapi.models.shared.GameWeather[] gameWeathers;
+
     public GetGameWeatherResponse withGameWeathers(org.openapis.openapi.models.shared.GameWeather[] gameWeathers) {
         this.gameWeathers = gameWeathers;
         return this;
@@ -26,6 +29,7 @@ public class GetGameWeatherResponse {
     
     
     public Integer statusCode;
+
     public GetGameWeatherResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetGameWeatherResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetGameWeatherResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetGameWeatherResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

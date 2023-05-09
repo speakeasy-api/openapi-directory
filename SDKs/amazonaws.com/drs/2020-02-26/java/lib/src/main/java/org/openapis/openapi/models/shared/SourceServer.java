@@ -15,6 +15,7 @@ public class SourceServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public SourceServer withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class SourceServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataReplicationInfo")
     public DataReplicationInfo dataReplicationInfo;
+
     public SourceServer withDataReplicationInfo(DataReplicationInfo dataReplicationInfo) {
         this.dataReplicationInfo = dataReplicationInfo;
         return this;
@@ -31,6 +33,7 @@ public class SourceServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastLaunchResult")
     public LastLaunchResultEnum lastLaunchResult;
+
     public SourceServer withLastLaunchResult(LastLaunchResultEnum lastLaunchResult) {
         this.lastLaunchResult = lastLaunchResult;
         return this;
@@ -39,6 +42,7 @@ public class SourceServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifeCycle")
     public LifeCycle lifeCycle;
+
     public SourceServer withLifeCycle(LifeCycle lifeCycle) {
         this.lifeCycle = lifeCycle;
         return this;
@@ -47,6 +51,7 @@ public class SourceServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recoveryInstanceId")
     public String recoveryInstanceId;
+
     public SourceServer withRecoveryInstanceId(String recoveryInstanceId) {
         this.recoveryInstanceId = recoveryInstanceId;
         return this;
@@ -55,6 +60,7 @@ public class SourceServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationDirection")
     public ReplicationDirectionEnum replicationDirection;
+
     public SourceServer withReplicationDirection(ReplicationDirectionEnum replicationDirection) {
         this.replicationDirection = replicationDirection;
         return this;
@@ -63,6 +69,7 @@ public class SourceServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reversedDirectionSourceServerArn")
     public String reversedDirectionSourceServerArn;
+
     public SourceServer withReversedDirectionSourceServerArn(String reversedDirectionSourceServerArn) {
         this.reversedDirectionSourceServerArn = reversedDirectionSourceServerArn;
         return this;
@@ -71,6 +78,7 @@ public class SourceServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceCloudProperties")
     public SourceCloudProperties sourceCloudProperties;
+
     public SourceServer withSourceCloudProperties(SourceCloudProperties sourceCloudProperties) {
         this.sourceCloudProperties = sourceCloudProperties;
         return this;
@@ -79,6 +87,7 @@ public class SourceServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceProperties")
     public SourceProperties sourceProperties;
+
     public SourceServer withSourceProperties(SourceProperties sourceProperties) {
         this.sourceProperties = sourceProperties;
         return this;
@@ -87,6 +96,7 @@ public class SourceServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public SourceServer withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
@@ -95,6 +105,7 @@ public class SourceServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stagingArea")
     public StagingArea stagingArea;
+
     public SourceServer withStagingArea(StagingArea stagingArea) {
         this.stagingArea = stagingArea;
         return this;
@@ -103,9 +114,11 @@ public class SourceServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public SourceServer withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public SourceServer(){}
 }

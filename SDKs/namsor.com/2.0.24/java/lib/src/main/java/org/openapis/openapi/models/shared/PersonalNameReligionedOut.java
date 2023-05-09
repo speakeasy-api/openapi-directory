@@ -15,6 +15,7 @@ public class PersonalNameReligionedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PersonalNameReligionedOut withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class PersonalNameReligionedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PersonalNameReligionedOut withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class PersonalNameReligionedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probabilityAltCalibrated")
     public Double probabilityAltCalibrated;
+
     public PersonalNameReligionedOut withProbabilityAltCalibrated(Double probabilityAltCalibrated) {
         this.probabilityAltCalibrated = probabilityAltCalibrated;
         return this;
@@ -48,6 +51,7 @@ public class PersonalNameReligionedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probabilityCalibrated")
     public Double probabilityCalibrated;
+
     public PersonalNameReligionedOut withProbabilityCalibrated(Double probabilityCalibrated) {
         this.probabilityCalibrated = probabilityCalibrated;
         return this;
@@ -59,6 +63,7 @@ public class PersonalNameReligionedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("religion")
     public String religion;
+
     public PersonalNameReligionedOut withReligion(String religion) {
         this.religion = religion;
         return this;
@@ -70,6 +75,7 @@ public class PersonalNameReligionedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("religionAlt")
     public String religionAlt;
+
     public PersonalNameReligionedOut withReligionAlt(String religionAlt) {
         this.religionAlt = religionAlt;
         return this;
@@ -81,6 +87,7 @@ public class PersonalNameReligionedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("religionsTop")
     public String[] religionsTop;
+
     public PersonalNameReligionedOut withReligionsTop(String[] religionsTop) {
         this.religionsTop = religionsTop;
         return this;
@@ -92,6 +99,7 @@ public class PersonalNameReligionedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Double score;
+
     public PersonalNameReligionedOut withScore(Double score) {
         this.score = score;
         return this;
@@ -100,9 +108,11 @@ public class PersonalNameReligionedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public PersonalNameReligionedOut withScript(String script) {
         this.script = script;
         return this;
     }
     
+    public PersonalNameReligionedOut(){}
 }

@@ -17,6 +17,7 @@ public class PaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acCode")
     public String acCode;
+
     public PaymentQueryDto withAcCode(String acCode) {
         this.acCode = acCode;
         return this;
@@ -25,6 +26,7 @@ public class PaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acEntries")
     public AcEntryDto[] acEntries;
+
     public PaymentQueryDto withAcEntries(AcEntryDto[] acEntries) {
         this.acEntries = acEntries;
         return this;
@@ -33,6 +35,7 @@ public class PaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccountCode")
     public String bankAccountCode;
+
     public PaymentQueryDto withBankAccountCode(String bankAccountCode) {
         this.bankAccountCode = bankAccountCode;
         return this;
@@ -41,6 +44,7 @@ public class PaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccountId")
     public Long bankAccountId;
+
     public PaymentQueryDto withBankAccountId(Long bankAccountId) {
         this.bankAccountId = bankAccountId;
         return this;
@@ -49,6 +53,7 @@ public class PaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookTranTypeId")
     public Long bookTranTypeId;
+
     public PaymentQueryDto withBookTranTypeId(Long bookTranTypeId) {
         this.bookTranTypeId = bookTranTypeId;
         return this;
@@ -57,6 +62,7 @@ public class PaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public AcudfValueDto[] customFields;
+
     public PaymentQueryDto withCustomFields(AcudfValueDto[] customFields) {
         this.customFields = customFields;
         return this;
@@ -65,6 +71,7 @@ public class PaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailCollection")
     public String[] detailCollection;
+
     public PaymentQueryDto withDetailCollection(String[] detailCollection) {
         this.detailCollection = detailCollection;
         return this;
@@ -73,6 +80,7 @@ public class PaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount")
     public Double discount;
+
     public PaymentQueryDto withDiscount(Double discount) {
         this.discount = discount;
         return this;
@@ -83,6 +91,7 @@ public class PaymentQueryDto {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("entryDate")
     public OffsetDateTime entryDate;
+
     public PaymentQueryDto withEntryDate(OffsetDateTime entryDate) {
         this.entryDate = entryDate;
         return this;
@@ -91,6 +100,7 @@ public class PaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PaymentQueryDto withId(Long id) {
         this.id = id;
         return this;
@@ -99,6 +109,7 @@ public class PaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public PaymentQueryDto withNote(String note) {
         this.note = note;
         return this;
@@ -107,6 +118,7 @@ public class PaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plaidTransactionId")
     public String plaidTransactionId;
+
     public PaymentQueryDto withPlaidTransactionId(String plaidTransactionId) {
         this.plaidTransactionId = plaidTransactionId;
         return this;
@@ -117,6 +129,7 @@ public class PaymentQueryDto {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("procDate")
     public OffsetDateTime procDate;
+
     public PaymentQueryDto withProcDate(OffsetDateTime procDate) {
         this.procDate = procDate;
         return this;
@@ -125,6 +138,7 @@ public class PaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public PaymentQueryDto withReference(String reference) {
         this.reference = reference;
         return this;
@@ -133,6 +147,7 @@ public class PaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplierId")
     public Long supplierId;
+
     public PaymentQueryDto withSupplierId(Long supplierId) {
         this.supplierId = supplierId;
         return this;
@@ -141,6 +156,7 @@ public class PaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public PaymentQueryDto withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -149,6 +165,7 @@ public class PaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public PaymentQueryDto withTotal(Double total) {
         this.total = total;
         return this;
@@ -157,6 +174,7 @@ public class PaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferBankCode")
     public String transferBankCode;
+
     public PaymentQueryDto withTransferBankCode(String transferBankCode) {
         this.transferBankCode = transferBankCode;
         return this;
@@ -165,6 +183,7 @@ public class PaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferBankId")
     public Long transferBankId;
+
     public PaymentQueryDto withTransferBankId(Long transferBankId) {
         this.transferBankId = transferBankId;
         return this;
@@ -173,9 +192,11 @@ public class PaymentQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unallocated")
     public Double unallocated;
+
     public PaymentQueryDto withUnallocated(Double unallocated) {
         this.unallocated = unallocated;
         return this;
     }
     
+    public PaymentQueryDto(){}
 }

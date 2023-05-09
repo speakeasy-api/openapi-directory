@@ -18,6 +18,7 @@ public class JobNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public Message message;
+
     public JobNotification withMessage(Message message) {
         this.message = message;
         return this;
@@ -29,9 +30,11 @@ public class JobNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubsubTopic")
     public String pubsubTopic;
+
     public JobNotification withPubsubTopic(String pubsubTopic) {
         this.pubsubTopic = pubsubTopic;
         return this;
     }
     
+    public JobNotification(){}
 }

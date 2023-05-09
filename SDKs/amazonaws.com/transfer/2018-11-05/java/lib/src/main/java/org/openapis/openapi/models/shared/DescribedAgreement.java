@@ -15,6 +15,7 @@ public class DescribedAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessRole")
     public String accessRole;
+
     public DescribedAgreement withAccessRole(String accessRole) {
         this.accessRole = accessRole;
         return this;
@@ -23,6 +24,7 @@ public class DescribedAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgreementId")
     public String agreementId;
+
     public DescribedAgreement withAgreementId(String agreementId) {
         this.agreementId = agreementId;
         return this;
@@ -30,6 +32,7 @@ public class DescribedAgreement {
     
     @JsonProperty("Arn")
     public String arn;
+
     public DescribedAgreement withArn(String arn) {
         this.arn = arn;
         return this;
@@ -38,6 +41,7 @@ public class DescribedAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaseDirectory")
     public String baseDirectory;
+
     public DescribedAgreement withBaseDirectory(String baseDirectory) {
         this.baseDirectory = baseDirectory;
         return this;
@@ -46,6 +50,7 @@ public class DescribedAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribedAgreement withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +59,7 @@ public class DescribedAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalProfileId")
     public String localProfileId;
+
     public DescribedAgreement withLocalProfileId(String localProfileId) {
         this.localProfileId = localProfileId;
         return this;
@@ -62,6 +68,7 @@ public class DescribedAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartnerProfileId")
     public String partnerProfileId;
+
     public DescribedAgreement withPartnerProfileId(String partnerProfileId) {
         this.partnerProfileId = partnerProfileId;
         return this;
@@ -70,6 +77,7 @@ public class DescribedAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerId")
     public String serverId;
+
     public DescribedAgreement withServerId(String serverId) {
         this.serverId = serverId;
         return this;
@@ -78,6 +86,7 @@ public class DescribedAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AgreementStatusTypeEnum status;
+
     public DescribedAgreement withStatus(AgreementStatusTypeEnum status) {
         this.status = status;
         return this;
@@ -86,9 +95,13 @@ public class DescribedAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public DescribedAgreement withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribedAgreement(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

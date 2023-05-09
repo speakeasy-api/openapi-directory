@@ -15,9 +15,11 @@ public class DetachFromIndexRequestBodyIndexReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Selector")
     public String selector;
+
     public DetachFromIndexRequestBodyIndexReference withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public DetachFromIndexRequestBodyIndexReference(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartChangeSetResponse {
@@ -12,6 +13,7 @@ public class StartChangeSetResponse {
      */
     
     public Object accessDeniedException;
+
     public StartChangeSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StartChangeSetResponse {
     
     
     public String contentType;
+
     public StartChangeSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartChangeSetResponse {
      */
     
     public Object internalServiceException;
+
     public StartChangeSetResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class StartChangeSetResponse {
      */
     
     public Object resourceInUseException;
+
     public StartChangeSetResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -49,6 +54,7 @@ public class StartChangeSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartChangeSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartChangeSetResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartChangeSetResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -69,6 +76,7 @@ public class StartChangeSetResponse {
      */
     
     public org.openapis.openapi.models.shared.StartChangeSetResponse startChangeSetResponse;
+
     public StartChangeSetResponse withStartChangeSetResponse(org.openapis.openapi.models.shared.StartChangeSetResponse startChangeSetResponse) {
         this.startChangeSetResponse = startChangeSetResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartChangeSetResponse {
     
     
     public Integer statusCode;
+
     public StartChangeSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class StartChangeSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartChangeSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class StartChangeSetResponse {
      */
     
     public Object throttlingException;
+
     public StartChangeSetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class StartChangeSetResponse {
      */
     
     public Object validationException;
+
     public StartChangeSetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartChangeSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

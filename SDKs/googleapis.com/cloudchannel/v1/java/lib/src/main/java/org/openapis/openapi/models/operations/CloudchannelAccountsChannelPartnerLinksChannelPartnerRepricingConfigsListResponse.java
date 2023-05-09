@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListResponse {
     
     public String contentType;
+
     public CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfi
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudChannelV1ListChannelPartnerRepricingConfigsResponse googleCloudChannelV1ListChannelPartnerRepricingConfigsResponse;
+
     public CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListResponse withGoogleCloudChannelV1ListChannelPartnerRepricingConfigsResponse(org.openapis.openapi.models.shared.GoogleCloudChannelV1ListChannelPartnerRepricingConfigsResponse googleCloudChannelV1ListChannelPartnerRepricingConfigsResponse) {
         this.googleCloudChannelV1ListChannelPartnerRepricingConfigsResponse = googleCloudChannelV1ListChannelPartnerRepricingConfigsResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfi
     
     
     public Integer statusCode;
+
     public CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfi
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

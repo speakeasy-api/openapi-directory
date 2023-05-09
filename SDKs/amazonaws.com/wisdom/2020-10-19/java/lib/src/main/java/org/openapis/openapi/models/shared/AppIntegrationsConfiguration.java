@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AppIntegrationsConfiguration {
     @JsonProperty("appIntegrationArn")
     public String appIntegrationArn;
+
     public AppIntegrationsConfiguration withAppIntegrationArn(String appIntegrationArn) {
         this.appIntegrationArn = appIntegrationArn;
         return this;
@@ -22,9 +23,13 @@ public class AppIntegrationsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectFields")
     public String[] objectFields;
+
     public AppIntegrationsConfiguration withObjectFields(String[] objectFields) {
         this.objectFields = objectFields;
         return this;
     }
     
+    public AppIntegrationsConfiguration(@JsonProperty("appIntegrationArn") String appIntegrationArn) {
+        this.appIntegrationArn = appIntegrationArn;
+  }
 }

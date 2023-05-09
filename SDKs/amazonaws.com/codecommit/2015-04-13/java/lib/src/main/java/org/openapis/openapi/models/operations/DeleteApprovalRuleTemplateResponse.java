@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApprovalRuleTemplateResponse {
@@ -12,6 +13,7 @@ public class DeleteApprovalRuleTemplateResponse {
      */
     
     public Object approvalRuleTemplateInUseException;
+
     public DeleteApprovalRuleTemplateResponse withApprovalRuleTemplateInUseException(Object approvalRuleTemplateInUseException) {
         this.approvalRuleTemplateInUseException = approvalRuleTemplateInUseException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteApprovalRuleTemplateResponse {
      */
     
     public Object approvalRuleTemplateNameRequiredException;
+
     public DeleteApprovalRuleTemplateResponse withApprovalRuleTemplateNameRequiredException(Object approvalRuleTemplateNameRequiredException) {
         this.approvalRuleTemplateNameRequiredException = approvalRuleTemplateNameRequiredException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteApprovalRuleTemplateResponse {
     
     
     public String contentType;
+
     public DeleteApprovalRuleTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteApprovalRuleTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteApprovalRuleTemplateOutput deleteApprovalRuleTemplateOutput;
+
     public DeleteApprovalRuleTemplateResponse withDeleteApprovalRuleTemplateOutput(org.openapis.openapi.models.shared.DeleteApprovalRuleTemplateOutput deleteApprovalRuleTemplateOutput) {
         this.deleteApprovalRuleTemplateOutput = deleteApprovalRuleTemplateOutput;
         return this;
@@ -49,6 +54,7 @@ public class DeleteApprovalRuleTemplateResponse {
      */
     
     public Object invalidApprovalRuleTemplateNameException;
+
     public DeleteApprovalRuleTemplateResponse withInvalidApprovalRuleTemplateNameException(Object invalidApprovalRuleTemplateNameException) {
         this.invalidApprovalRuleTemplateNameException = invalidApprovalRuleTemplateNameException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteApprovalRuleTemplateResponse {
     
     
     public Integer statusCode;
+
     public DeleteApprovalRuleTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteApprovalRuleTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApprovalRuleTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteApprovalRuleTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

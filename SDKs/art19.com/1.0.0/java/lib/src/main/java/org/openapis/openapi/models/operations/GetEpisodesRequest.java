@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -16,6 +17,7 @@ public class GetEpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids[]")
     public String[] ids;
+
     public GetEpisodesRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -26,6 +28,7 @@ public class GetEpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=included_in_inventory_calendar")
     public String includedInInventoryCalendar;
+
     public GetEpisodesRequest withIncludedInInventoryCalendar(String includedInInventoryCalendar) {
         this.includedInInventoryCalendar = includedInInventoryCalendar;
         return this;
@@ -36,6 +39,7 @@ public class GetEpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=month")
     public String month;
+
     public GetEpisodesRequest withMonth(String month) {
         this.month = month;
         return this;
@@ -48,6 +52,7 @@ public class GetEpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[number]")
     public Long pageNumber;
+
     public GetEpisodesRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -60,6 +65,7 @@ public class GetEpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
     public Long pageSize;
+
     public GetEpisodesRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -72,6 +78,7 @@ public class GetEpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=published")
     public Boolean published;
+
     public GetEpisodesRequest withPublished(Boolean published) {
         this.published = published;
         return this;
@@ -82,6 +89,7 @@ public class GetEpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetEpisodesRequest withQ(String q) {
         this.q = q;
         return this;
@@ -92,6 +100,7 @@ public class GetEpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=released_after")
     public OffsetDateTime releasedAfter;
+
     public GetEpisodesRequest withReleasedAfter(OffsetDateTime releasedAfter) {
         this.releasedAfter = releasedAfter;
         return this;
@@ -102,6 +111,7 @@ public class GetEpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=released_before")
     public OffsetDateTime releasedBefore;
+
     public GetEpisodesRequest withReleasedBefore(OffsetDateTime releasedBefore) {
         this.releasedBefore = releasedBefore;
         return this;
@@ -114,6 +124,7 @@ public class GetEpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rss")
     public Boolean rss;
+
     public GetEpisodesRequest withRss(Boolean rss) {
         this.rss = rss;
         return this;
@@ -124,6 +135,7 @@ public class GetEpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=season_id")
     public String seasonId;
+
     public GetEpisodesRequest withSeasonId(String seasonId) {
         this.seasonId = seasonId;
         return this;
@@ -134,6 +146,7 @@ public class GetEpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=series_id")
     public String seriesId;
+
     public GetEpisodesRequest withSeriesId(String seriesId) {
         this.seriesId = seriesId;
         return this;
@@ -146,6 +159,7 @@ public class GetEpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sort")
     public GetEpisodesSortEnum[] sort;
+
     public GetEpisodesRequest withSort(GetEpisodesSortEnum[] sort) {
         this.sort = sort;
         return this;
@@ -156,9 +170,14 @@ public class GetEpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public String year;
+
     public GetEpisodesRequest withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public GetEpisodesRequest(@JsonProperty("page[number]") Long pageNumber, @JsonProperty("page[size]") Long pageSize) {
+        this.pageNumber = pageNumber;
+        this.pageSize = pageSize;
+  }
 }

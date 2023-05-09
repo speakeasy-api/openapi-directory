@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesGetPublicGroupsForReleaseByHashRequest {
@@ -12,6 +13,7 @@ public class ReleasesGetPublicGroupsForReleaseByHashRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_secret")
     public String appSecret;
+
     public ReleasesGetPublicGroupsForReleaseByHashRequest withAppSecret(String appSecret) {
         this.appSecret = appSecret;
         return this;
@@ -22,9 +24,14 @@ public class ReleasesGetPublicGroupsForReleaseByHashRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_hash")
     public String releaseHash;
+
     public ReleasesGetPublicGroupsForReleaseByHashRequest withReleaseHash(String releaseHash) {
         this.releaseHash = releaseHash;
         return this;
     }
     
+    public ReleasesGetPublicGroupsForReleaseByHashRequest(@JsonProperty("app_secret") String appSecret, @JsonProperty("release_hash") String releaseHash) {
+        this.appSecret = appSecret;
+        this.releaseHash = releaseHash;
+  }
 }

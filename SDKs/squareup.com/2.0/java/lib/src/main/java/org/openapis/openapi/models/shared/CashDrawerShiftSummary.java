@@ -21,6 +21,7 @@ public class CashDrawerShiftSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_at")
     public String closedAt;
+
     public CashDrawerShiftSummary withClosedAt(String closedAt) {
         this.closedAt = closedAt;
         return this;
@@ -37,6 +38,7 @@ public class CashDrawerShiftSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_cash_money")
     public Money closedCashMoney;
+
     public CashDrawerShiftSummary withClosedCashMoney(Money closedCashMoney) {
         this.closedCashMoney = closedCashMoney;
         return this;
@@ -48,6 +50,7 @@ public class CashDrawerShiftSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CashDrawerShiftSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -59,6 +62,7 @@ public class CashDrawerShiftSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ended_at")
     public String endedAt;
+
     public CashDrawerShiftSummary withEndedAt(String endedAt) {
         this.endedAt = endedAt;
         return this;
@@ -75,6 +79,7 @@ public class CashDrawerShiftSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expected_cash_money")
     public Money expectedCashMoney;
+
     public CashDrawerShiftSummary withExpectedCashMoney(Money expectedCashMoney) {
         this.expectedCashMoney = expectedCashMoney;
         return this;
@@ -86,6 +91,7 @@ public class CashDrawerShiftSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CashDrawerShiftSummary withId(String id) {
         this.id = id;
         return this;
@@ -97,6 +103,7 @@ public class CashDrawerShiftSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opened_at")
     public String openedAt;
+
     public CashDrawerShiftSummary withOpenedAt(String openedAt) {
         this.openedAt = openedAt;
         return this;
@@ -113,6 +120,7 @@ public class CashDrawerShiftSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opened_cash_money")
     public Money openedCashMoney;
+
     public CashDrawerShiftSummary withOpenedCashMoney(Money openedCashMoney) {
         this.openedCashMoney = openedCashMoney;
         return this;
@@ -124,9 +132,11 @@ public class CashDrawerShiftSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public CashDrawerShiftSummary withState(String state) {
         this.state = state;
         return this;
     }
     
+    public CashDrawerShiftSummary(){}
 }

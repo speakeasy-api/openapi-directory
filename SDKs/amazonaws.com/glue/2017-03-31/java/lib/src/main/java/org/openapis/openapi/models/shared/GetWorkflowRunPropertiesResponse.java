@@ -15,9 +15,11 @@ public class GetWorkflowRunPropertiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunProperties")
     public java.util.Map<String, String> runProperties;
+
     public GetWorkflowRunPropertiesResponse withRunProperties(java.util.Map<String, String> runProperties) {
         this.runProperties = runProperties;
         return this;
     }
     
+    public GetWorkflowRunPropertiesResponse(){}
 }

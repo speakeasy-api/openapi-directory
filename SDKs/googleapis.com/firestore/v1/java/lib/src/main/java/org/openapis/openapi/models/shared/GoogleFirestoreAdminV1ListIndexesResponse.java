@@ -18,6 +18,7 @@ public class GoogleFirestoreAdminV1ListIndexesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexes")
     public GoogleFirestoreAdminV1Index[] indexes;
+
     public GoogleFirestoreAdminV1ListIndexesResponse withIndexes(GoogleFirestoreAdminV1Index[] indexes) {
         this.indexes = indexes;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFirestoreAdminV1ListIndexesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleFirestoreAdminV1ListIndexesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleFirestoreAdminV1ListIndexesResponse(){}
 }

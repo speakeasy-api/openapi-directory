@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCertificateResponse {
@@ -12,6 +13,7 @@ public class DeleteCertificateResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteCertificateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteCertificateResponse {
      */
     
     public Object conflictException;
+
     public DeleteCertificateResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCertificateResponse {
     
     
     public String contentType;
+
     public DeleteCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCertificateResponse {
      */
     
     public Object invalidArnException;
+
     public DeleteCertificateResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteCertificateResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteCertificateResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteCertificateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteCertificateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteCertificateResponse {
     
     
     public Integer statusCode;
+
     public DeleteCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteCertificateResponse {
      */
     
     public Object throttlingException;
+
     public DeleteCertificateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

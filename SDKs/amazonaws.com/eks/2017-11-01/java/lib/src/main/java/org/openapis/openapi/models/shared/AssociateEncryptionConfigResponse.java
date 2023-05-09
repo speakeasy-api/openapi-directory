@@ -18,9 +18,11 @@ public class AssociateEncryptionConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update")
     public Update update;
+
     public AssociateEncryptionConfigResponse withUpdate(Update update) {
         this.update = update;
         return this;
     }
     
+    public AssociateEncryptionConfigResponse(){}
 }

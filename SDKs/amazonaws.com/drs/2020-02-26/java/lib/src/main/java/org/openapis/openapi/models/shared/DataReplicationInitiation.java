@@ -15,6 +15,7 @@ public class DataReplicationInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextAttemptDateTime")
     public String nextAttemptDateTime;
+
     public DataReplicationInitiation withNextAttemptDateTime(String nextAttemptDateTime) {
         this.nextAttemptDateTime = nextAttemptDateTime;
         return this;
@@ -23,6 +24,7 @@ public class DataReplicationInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDateTime")
     public String startDateTime;
+
     public DataReplicationInitiation withStartDateTime(String startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -31,9 +33,11 @@ public class DataReplicationInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("steps")
     public DataReplicationInitiationStep[] steps;
+
     public DataReplicationInitiation withSteps(DataReplicationInitiationStep[] steps) {
         this.steps = steps;
         return this;
     }
     
+    public DataReplicationInitiation(){}
 }

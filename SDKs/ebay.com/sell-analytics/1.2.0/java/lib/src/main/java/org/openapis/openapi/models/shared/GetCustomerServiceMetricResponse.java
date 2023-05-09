@@ -18,6 +18,7 @@ public class GetCustomerServiceMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionMetrics")
     public DimensionMetric[] dimensionMetrics;
+
     public GetCustomerServiceMetricResponse withDimensionMetrics(DimensionMetric[] dimensionMetrics) {
         this.dimensionMetrics = dimensionMetrics;
         return this;
@@ -29,6 +30,7 @@ public class GetCustomerServiceMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationCycle")
     public EvaluationCycle evaluationCycle;
+
     public GetCustomerServiceMetricResponse withEvaluationCycle(EvaluationCycle evaluationCycle) {
         this.evaluationCycle = evaluationCycle;
         return this;
@@ -40,9 +42,11 @@ public class GetCustomerServiceMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceId")
     public String marketplaceId;
+
     public GetCustomerServiceMetricResponse withMarketplaceId(String marketplaceId) {
         this.marketplaceId = marketplaceId;
         return this;
     }
     
+    public GetCustomerServiceMetricResponse(){}
 }

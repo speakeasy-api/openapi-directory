@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetAvailableVendorsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AvailableVendorsFilter availableVendorsFilter;
+
     public GetAvailableVendorsRequest withAvailableVendorsFilter(org.openapis.openapi.models.shared.AvailableVendorsFilter availableVendorsFilter) {
         this.availableVendorsFilter = availableVendorsFilter;
         return this;
@@ -19,9 +20,11 @@ public class GetAvailableVendorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with[]")
     public GetAvailableVendorsWithEnum[] with;
+
     public GetAvailableVendorsRequest withWith(GetAvailableVendorsWithEnum[] with) {
         this.with = with;
         return this;
     }
     
+    public GetAvailableVendorsRequest(){}
 }

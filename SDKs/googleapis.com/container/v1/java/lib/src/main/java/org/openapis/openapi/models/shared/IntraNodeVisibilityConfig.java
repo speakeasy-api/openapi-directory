@@ -18,9 +18,11 @@ public class IntraNodeVisibilityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public IntraNodeVisibilityConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public IntraNodeVisibilityConfig(){}
 }

@@ -20,6 +20,7 @@ public class GetDevicePositionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Accuracy")
     public PositionalAccuracy accuracy;
+
     public GetDevicePositionResponse withAccuracy(PositionalAccuracy accuracy) {
         this.accuracy = accuracy;
         return this;
@@ -28,6 +29,7 @@ public class GetDevicePositionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceId")
     public String deviceId;
+
     public GetDevicePositionResponse withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -35,6 +37,7 @@ public class GetDevicePositionResponse {
     
     @JsonProperty("Position")
     public Double[] position;
+
     public GetDevicePositionResponse withPosition(Double[] position) {
         this.position = position;
         return this;
@@ -43,6 +46,7 @@ public class GetDevicePositionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PositionProperties")
     public java.util.Map<String, String> positionProperties;
+
     public GetDevicePositionResponse withPositionProperties(java.util.Map<String, String> positionProperties) {
         this.positionProperties = positionProperties;
         return this;
@@ -52,6 +56,7 @@ public class GetDevicePositionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReceivedTime")
     public OffsetDateTime receivedTime;
+
     public GetDevicePositionResponse withReceivedTime(OffsetDateTime receivedTime) {
         this.receivedTime = receivedTime;
         return this;
@@ -61,9 +66,15 @@ public class GetDevicePositionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SampleTime")
     public OffsetDateTime sampleTime;
+
     public GetDevicePositionResponse withSampleTime(OffsetDateTime sampleTime) {
         this.sampleTime = sampleTime;
         return this;
     }
     
+    public GetDevicePositionResponse(@JsonProperty("Position") Double[] position, @JsonProperty("ReceivedTime") OffsetDateTime receivedTime, @JsonProperty("SampleTime") OffsetDateTime sampleTime) {
+        this.position = position;
+        this.receivedTime = receivedTime;
+        this.sampleTime = sampleTime;
+  }
 }

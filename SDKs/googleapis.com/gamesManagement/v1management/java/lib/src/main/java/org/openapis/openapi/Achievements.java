@@ -59,11 +59,9 @@ public class Achievements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesManagementAchievementsResetResponse res = new org.openapis.openapi.models.operations.GamesManagementAchievementsResetResponse() {{
+        org.openapis.openapi.models.operations.GamesManagementAchievementsResetResponse res = new org.openapis.openapi.models.operations.GamesManagementAchievementsResetResponse(contentType, httpRes.statusCode()) {{
             achievementResetResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Achievements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllResponse res = new org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllResponse() {{
+        org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllResponse res = new org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllResponse(contentType, httpRes.statusCode()) {{
             achievementResetAllResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,10 +147,8 @@ public class Achievements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllForAllPlayersResponse res = new org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllForAllPlayersResponse() {{
+        org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllForAllPlayersResponse res = new org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllForAllPlayersResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -191,10 +185,8 @@ public class Achievements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesManagementAchievementsResetForAllPlayersResponse res = new org.openapis.openapi.models.operations.GamesManagementAchievementsResetForAllPlayersResponse() {{
+        org.openapis.openapi.models.operations.GamesManagementAchievementsResetForAllPlayersResponse res = new org.openapis.openapi.models.operations.GamesManagementAchievementsResetForAllPlayersResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -233,10 +225,8 @@ public class Achievements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesManagementAchievementsResetMultipleForAllPlayersResponse res = new org.openapis.openapi.models.operations.GamesManagementAchievementsResetMultipleForAllPlayersResponse() {{
+        org.openapis.openapi.models.operations.GamesManagementAchievementsResetMultipleForAllPlayersResponse res = new org.openapis.openapi.models.operations.GamesManagementAchievementsResetMultipleForAllPlayersResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteRegexMatchSetRequest {
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public DeleteRegexMatchSetRequest withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -16,9 +17,14 @@ public class DeleteRegexMatchSetRequest {
     
     @JsonProperty("RegexMatchSetId")
     public String regexMatchSetId;
+
     public DeleteRegexMatchSetRequest withRegexMatchSetId(String regexMatchSetId) {
         this.regexMatchSetId = regexMatchSetId;
         return this;
     }
     
+    public DeleteRegexMatchSetRequest(@JsonProperty("ChangeToken") String changeToken, @JsonProperty("RegexMatchSetId") String regexMatchSetId) {
+        this.changeToken = changeToken;
+        this.regexMatchSetId = regexMatchSetId;
+  }
 }

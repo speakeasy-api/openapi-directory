@@ -18,9 +18,11 @@ public class MembershipRoleRestrictionEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public MembershipRoleRestrictionEvaluationStateEnum state;
+
     public MembershipRoleRestrictionEvaluation withState(MembershipRoleRestrictionEvaluationStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public MembershipRoleRestrictionEvaluation(){}
 }

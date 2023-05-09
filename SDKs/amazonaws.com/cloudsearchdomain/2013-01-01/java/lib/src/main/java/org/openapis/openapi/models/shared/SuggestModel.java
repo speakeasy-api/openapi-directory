@@ -15,6 +15,7 @@ public class SuggestModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("found")
     public Long found;
+
     public SuggestModel withFound(Long found) {
         this.found = found;
         return this;
@@ -23,6 +24,7 @@ public class SuggestModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public SuggestModel withQuery(String query) {
         this.query = query;
         return this;
@@ -31,9 +33,11 @@ public class SuggestModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestions")
     public SuggestionMatch[] suggestions;
+
     public SuggestModel withSuggestions(SuggestionMatch[] suggestions) {
         this.suggestions = suggestions;
         return this;
     }
     
+    public SuggestModel(){}
 }

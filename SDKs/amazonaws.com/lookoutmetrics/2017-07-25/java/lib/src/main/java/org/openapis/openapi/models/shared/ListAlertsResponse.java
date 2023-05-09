@@ -15,6 +15,7 @@ public class ListAlertsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertSummaryList")
     public AlertSummary[] alertSummaryList;
+
     public ListAlertsResponse withAlertSummaryList(AlertSummary[] alertSummaryList) {
         this.alertSummaryList = alertSummaryList;
         return this;
@@ -23,9 +24,11 @@ public class ListAlertsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAlertsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAlertsResponse(){}
 }

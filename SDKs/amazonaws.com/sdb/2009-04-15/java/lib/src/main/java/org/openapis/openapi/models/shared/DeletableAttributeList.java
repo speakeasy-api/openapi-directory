@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeletableAttributeList {
     
     public String name;
+
     public DeletableAttributeList withName(String name) {
         this.name = name;
         return this;
@@ -16,9 +17,13 @@ public class DeletableAttributeList {
     
     
     public String value;
+
     public DeletableAttributeList withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DeletableAttributeList(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

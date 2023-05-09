@@ -17,6 +17,7 @@ public class BugtrackerGetSettingsDefaultApplicationJSON {
      */
     @JsonProperty("code")
     public BugtrackerGetSettingsDefaultApplicationJSONCodeEnum code;
+
     public BugtrackerGetSettingsDefaultApplicationJSON withCode(BugtrackerGetSettingsDefaultApplicationJSONCodeEnum code) {
         this.code = code;
         return this;
@@ -28,6 +29,7 @@ public class BugtrackerGetSettingsDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public BugtrackerGetSettingsDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -38,9 +40,14 @@ public class BugtrackerGetSettingsDefaultApplicationJSON {
      */
     @JsonProperty("request_id")
     public String requestId;
+
     public BugtrackerGetSettingsDefaultApplicationJSON withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public BugtrackerGetSettingsDefaultApplicationJSON(@JsonProperty("code") BugtrackerGetSettingsDefaultApplicationJSONCodeEnum code, @JsonProperty("request_id") String requestId) {
+        this.code = code;
+        this.requestId = requestId;
+  }
 }

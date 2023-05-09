@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CloudWatchDestination - &lt;p&gt;Contains information associated with an Amazon CloudWatch event destination to which email sending events are published.&lt;/p&gt; &lt;p&gt;Event destinations, such as Amazon CloudWatch, are associated with configuration sets, which enable you to publish email sending events. For information about using configuration sets, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.&lt;/p&gt;
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class CloudWatchDestination {
     
     public CloudWatchDimensionConfiguration[] dimensionConfigurations;
+
     public CloudWatchDestination withDimensionConfigurations(CloudWatchDimensionConfiguration[] dimensionConfigurations) {
         this.dimensionConfigurations = dimensionConfigurations;
         return this;
     }
     
+    public CloudWatchDestination(@JsonProperty("DimensionConfigurations") CloudWatchDimensionConfiguration[] dimensionConfigurations) {
+        this.dimensionConfigurations = dimensionConfigurations;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCustomerGroupResponse {
     
     public String contentType;
+
     public CreateCustomerGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateCustomerGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCustomerGroupResponse createCustomerGroupResponse;
+
     public CreateCustomerGroupResponse withCreateCustomerGroupResponse(org.openapis.openapi.models.shared.CreateCustomerGroupResponse createCustomerGroupResponse) {
         this.createCustomerGroupResponse = createCustomerGroupResponse;
         return this;
@@ -26,6 +29,7 @@ public class CreateCustomerGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateCustomerGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CreateCustomerGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCustomerGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateCustomerGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

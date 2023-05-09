@@ -18,6 +18,7 @@ public class RichResultsIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issueMessage")
     public String issueMessage;
+
     public RichResultsIssue withIssueMessage(String issueMessage) {
         this.issueMessage = issueMessage;
         return this;
@@ -29,9 +30,11 @@ public class RichResultsIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public RichResultsIssueSeverityEnum severity;
+
     public RichResultsIssue withSeverity(RichResultsIssueSeverityEnum severity) {
         this.severity = severity;
         return this;
     }
     
+    public RichResultsIssue(){}
 }

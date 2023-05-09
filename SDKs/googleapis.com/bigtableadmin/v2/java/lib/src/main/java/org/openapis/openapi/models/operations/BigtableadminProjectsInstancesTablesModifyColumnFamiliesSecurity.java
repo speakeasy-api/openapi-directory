@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurityOption1 option1;
+
     public BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurity withOption1(BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurityOption2 option2;
+
     public BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurity withOption2(BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurityOption3 option3;
+
     public BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurity withOption3(BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurityOption4 option4;
+
     public BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurity withOption4(BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,9 +41,11 @@ public class BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurityOption5 option5;
+
     public BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurity withOption5(BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurityOption5 option5) {
         this.option5 = option5;
         return this;
     }
     
+    public BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurity(){}
 }

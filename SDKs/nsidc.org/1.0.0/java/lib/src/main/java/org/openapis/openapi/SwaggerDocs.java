@@ -58,11 +58,9 @@ public class SwaggerDocs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FacetsResponse res = new org.openapis.openapi.models.operations.FacetsResponse() {{
+        org.openapis.openapi.models.operations.FacetsResponse res = new org.openapis.openapi.models.operations.FacetsResponse(contentType, httpRes.statusCode()) {{
             facets200ApplicationNsidcfacetsPlusXmlString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class SwaggerDocs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdResponse res = new org.openapis.openapi.models.operations.IdResponse() {{
+        org.openapis.openapi.models.operations.IdResponse res = new org.openapis.openapi.models.operations.IdResponse(contentType, httpRes.statusCode()) {{
             id200ApplicationXSuggestionsPlusJsonString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class SwaggerDocs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OpenSearchResponse res = new org.openapis.openapi.models.operations.OpenSearchResponse() {{
+        org.openapis.openapi.models.operations.OpenSearchResponse res = new org.openapis.openapi.models.operations.OpenSearchResponse(contentType, httpRes.statusCode()) {{
             openSearch200ApplicationAtomPlusXmlString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -188,11 +182,9 @@ public class SwaggerDocs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OpensearchDescriptionResponse res = new org.openapis.openapi.models.operations.OpensearchDescriptionResponse() {{
+        org.openapis.openapi.models.operations.OpensearchDescriptionResponse res = new org.openapis.openapi.models.operations.OpensearchDescriptionResponse(contentType, httpRes.statusCode()) {{
             opensearchDescription200ApplicationOpensearchdescriptionPlusXmlString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

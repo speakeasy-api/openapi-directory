@@ -15,6 +15,7 @@ public class WipeNetworkSmDeviceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public WipeNetworkSmDeviceRequestBody withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class WipeNetworkSmDeviceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pin")
     public Long pin;
+
     public WipeNetworkSmDeviceRequestBody withPin(Long pin) {
         this.pin = pin;
         return this;
@@ -37,6 +39,7 @@ public class WipeNetworkSmDeviceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serial")
     public String serial;
+
     public WipeNetworkSmDeviceRequestBody withSerial(String serial) {
         this.serial = serial;
         return this;
@@ -48,9 +51,11 @@ public class WipeNetworkSmDeviceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wifiMac")
     public String wifiMac;
+
     public WipeNetworkSmDeviceRequestBody withWifiMac(String wifiMac) {
         this.wifiMac = wifiMac;
         return this;
     }
     
+    public WipeNetworkSmDeviceRequestBody(){}
 }

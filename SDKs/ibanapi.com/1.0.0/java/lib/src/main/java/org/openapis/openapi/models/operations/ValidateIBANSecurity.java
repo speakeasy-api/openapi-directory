@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ValidateIBANSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=api_key")
     public String apiKeySecurity;
+
     public ValidateIBANSecurity withApiKeySecurity(String apiKeySecurity) {
         this.apiKeySecurity = apiKeySecurity;
         return this;
     }
     
+    public ValidateIBANSecurity(@JsonProperty("api_key_security") String apiKeySecurity) {
+        this.apiKeySecurity = apiKeySecurity;
+  }
 }

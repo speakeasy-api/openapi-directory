@@ -44,4 +44,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Error.java
 lib/src/main/java/org/openapis/openapi/models/shared/CountrySummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/Country.java
 lib/src/main/java/org/openapis/openapi/models/shared/State.java
+docs/sdk/README.md
+docs/v1/README.md
 USAGE.md

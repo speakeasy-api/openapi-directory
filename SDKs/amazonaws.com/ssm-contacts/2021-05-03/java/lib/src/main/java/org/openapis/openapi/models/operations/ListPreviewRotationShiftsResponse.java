@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPreviewRotationShiftsResponse {
@@ -12,6 +13,7 @@ public class ListPreviewRotationShiftsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListPreviewRotationShiftsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListPreviewRotationShiftsResponse {
     
     
     public String contentType;
+
     public ListPreviewRotationShiftsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListPreviewRotationShiftsResponse {
      */
     
     public Object internalServerException;
+
     public ListPreviewRotationShiftsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListPreviewRotationShiftsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPreviewRotationShiftsResult listPreviewRotationShiftsResult;
+
     public ListPreviewRotationShiftsResponse withListPreviewRotationShiftsResult(org.openapis.openapi.models.shared.ListPreviewRotationShiftsResult listPreviewRotationShiftsResult) {
         this.listPreviewRotationShiftsResult = listPreviewRotationShiftsResult;
         return this;
@@ -46,6 +51,7 @@ public class ListPreviewRotationShiftsResponse {
     
     
     public Integer statusCode;
+
     public ListPreviewRotationShiftsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListPreviewRotationShiftsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPreviewRotationShiftsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListPreviewRotationShiftsResponse {
      */
     
     public Object throttlingException;
+
     public ListPreviewRotationShiftsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListPreviewRotationShiftsResponse {
      */
     
     public Object validationException;
+
     public ListPreviewRotationShiftsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListPreviewRotationShiftsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

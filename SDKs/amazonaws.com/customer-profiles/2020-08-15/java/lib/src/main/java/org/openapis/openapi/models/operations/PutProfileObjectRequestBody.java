@@ -12,6 +12,7 @@ public class PutProfileObjectRequestBody {
      */
     @JsonProperty("Object")
     public String object;
+
     public PutProfileObjectRequestBody withObject(String object) {
         this.object = object;
         return this;
@@ -22,9 +23,14 @@ public class PutProfileObjectRequestBody {
      */
     @JsonProperty("ObjectTypeName")
     public String objectTypeName;
+
     public PutProfileObjectRequestBody withObjectTypeName(String objectTypeName) {
         this.objectTypeName = objectTypeName;
         return this;
     }
     
+    public PutProfileObjectRequestBody(@JsonProperty("Object") String object, @JsonProperty("ObjectTypeName") String objectTypeName) {
+        this.object = object;
+        this.objectTypeName = objectTypeName;
+  }
 }

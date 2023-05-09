@@ -15,6 +15,7 @@ public class ListEventsDetectionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventsDetectionJobPropertiesList")
     public EventsDetectionJobProperties[] eventsDetectionJobPropertiesList;
+
     public ListEventsDetectionJobsResponse withEventsDetectionJobPropertiesList(EventsDetectionJobProperties[] eventsDetectionJobPropertiesList) {
         this.eventsDetectionJobPropertiesList = eventsDetectionJobPropertiesList;
         return this;
@@ -23,9 +24,11 @@ public class ListEventsDetectionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEventsDetectionJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEventsDetectionJobsResponse(){}
 }

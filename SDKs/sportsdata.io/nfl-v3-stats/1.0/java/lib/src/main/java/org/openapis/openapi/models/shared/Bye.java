@@ -12,6 +12,7 @@ public class Bye {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public Bye withSeason(Long season) {
         this.season = season;
         return this;
@@ -20,6 +21,7 @@ public class Bye {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public Bye withTeam(String team) {
         this.team = team;
         return this;
@@ -28,9 +30,11 @@ public class Bye {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Week")
     public Long week;
+
     public Bye withWeek(Long week) {
         this.week = week;
         return this;
     }
     
+    public Bye(){}
 }

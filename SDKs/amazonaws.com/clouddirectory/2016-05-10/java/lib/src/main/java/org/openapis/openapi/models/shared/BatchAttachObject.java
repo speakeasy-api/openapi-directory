@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchAttachObject {
     @JsonProperty("ChildReference")
     public ObjectReference childReference;
+
     public BatchAttachObject withChildReference(ObjectReference childReference) {
         this.childReference = childReference;
         return this;
@@ -19,6 +20,7 @@ public class BatchAttachObject {
     
     @JsonProperty("LinkName")
     public String linkName;
+
     public BatchAttachObject withLinkName(String linkName) {
         this.linkName = linkName;
         return this;
@@ -26,9 +28,15 @@ public class BatchAttachObject {
     
     @JsonProperty("ParentReference")
     public ObjectReference parentReference;
+
     public BatchAttachObject withParentReference(ObjectReference parentReference) {
         this.parentReference = parentReference;
         return this;
     }
     
+    public BatchAttachObject(@JsonProperty("ChildReference") ObjectReference childReference, @JsonProperty("LinkName") String linkName, @JsonProperty("ParentReference") ObjectReference parentReference) {
+        this.childReference = childReference;
+        this.linkName = linkName;
+        this.parentReference = parentReference;
+  }
 }

@@ -15,6 +15,7 @@ public class DescribeConnectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Connections")
     public Connection[] connections;
+
     public DescribeConnectionsResponse withConnections(Connection[] connections) {
         this.connections = connections;
         return this;
@@ -23,9 +24,11 @@ public class DescribeConnectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeConnectionsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public DescribeConnectionsResponse(){}
 }

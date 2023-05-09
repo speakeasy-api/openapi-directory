@@ -15,6 +15,7 @@ public class TableResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public TableResource withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -22,6 +23,7 @@ public class TableResource {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public TableResource withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -30,6 +32,7 @@ public class TableResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public TableResource withName(String name) {
         this.name = name;
         return this;
@@ -38,9 +41,13 @@ public class TableResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableWildcard")
     public java.util.Map<String, Object> tableWildcard;
+
     public TableResource withTableWildcard(java.util.Map<String, Object> tableWildcard) {
         this.tableWildcard = tableWildcard;
         return this;
     }
     
+    public TableResource(@JsonProperty("DatabaseName") String databaseName) {
+        this.databaseName = databaseName;
+  }
 }

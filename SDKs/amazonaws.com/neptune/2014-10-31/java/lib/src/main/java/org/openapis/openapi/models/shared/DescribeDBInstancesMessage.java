@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDBInstancesMessage {
     
     public String dbInstanceIdentifier;
+
     public DescribeDBInstancesMessage withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class DescribeDBInstancesMessage {
     
     
     public FilterList[] filters;
+
     public DescribeDBInstancesMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeDBInstancesMessage {
     
     
     public String marker;
+
     public DescribeDBInstancesMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,9 +33,11 @@ public class DescribeDBInstancesMessage {
     
     
     public Long maxRecords;
+
     public DescribeDBInstancesMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeDBInstancesMessage(){}
 }

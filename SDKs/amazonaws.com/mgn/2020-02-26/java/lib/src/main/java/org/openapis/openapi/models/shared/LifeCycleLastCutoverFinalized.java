@@ -15,9 +15,11 @@ public class LifeCycleLastCutoverFinalized {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiCallDateTime")
     public String apiCallDateTime;
+
     public LifeCycleLastCutoverFinalized withApiCallDateTime(String apiCallDateTime) {
         this.apiCallDateTime = apiCallDateTime;
         return this;
     }
     
+    public LifeCycleLastCutoverFinalized(){}
 }

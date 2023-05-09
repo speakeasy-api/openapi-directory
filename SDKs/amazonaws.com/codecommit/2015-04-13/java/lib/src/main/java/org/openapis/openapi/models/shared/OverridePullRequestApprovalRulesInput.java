@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OverridePullRequestApprovalRulesInput {
     @JsonProperty("overrideStatus")
     public OverrideStatusEnum overrideStatus;
+
     public OverridePullRequestApprovalRulesInput withOverrideStatus(OverrideStatusEnum overrideStatus) {
         this.overrideStatus = overrideStatus;
         return this;
@@ -16,6 +17,7 @@ public class OverridePullRequestApprovalRulesInput {
     
     @JsonProperty("pullRequestId")
     public String pullRequestId;
+
     public OverridePullRequestApprovalRulesInput withPullRequestId(String pullRequestId) {
         this.pullRequestId = pullRequestId;
         return this;
@@ -23,9 +25,15 @@ public class OverridePullRequestApprovalRulesInput {
     
     @JsonProperty("revisionId")
     public String revisionId;
+
     public OverridePullRequestApprovalRulesInput withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
     }
     
+    public OverridePullRequestApprovalRulesInput(@JsonProperty("overrideStatus") OverrideStatusEnum overrideStatus, @JsonProperty("pullRequestId") String pullRequestId, @JsonProperty("revisionId") String revisionId) {
+        this.overrideStatus = overrideStatus;
+        this.pullRequestId = pullRequestId;
+        this.revisionId = revisionId;
+  }
 }

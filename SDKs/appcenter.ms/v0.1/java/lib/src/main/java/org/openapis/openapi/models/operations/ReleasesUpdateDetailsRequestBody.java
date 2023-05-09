@@ -18,6 +18,7 @@ public class ReleasesUpdateDetailsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build")
     public ReleasesUpdateDetailsRequestBodyBuild build;
+
     public ReleasesUpdateDetailsRequestBody withBuild(ReleasesUpdateDetailsRequestBodyBuild build) {
         this.build = build;
         return this;
@@ -29,6 +30,7 @@ public class ReleasesUpdateDetailsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ReleasesUpdateDetailsRequestBody withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -40,9 +42,11 @@ public class ReleasesUpdateDetailsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_notes")
     public String releaseNotes;
+
     public ReleasesUpdateDetailsRequestBody withReleaseNotes(String releaseNotes) {
         this.releaseNotes = releaseNotes;
         return this;
     }
     
+    public ReleasesUpdateDetailsRequestBody(){}
 }

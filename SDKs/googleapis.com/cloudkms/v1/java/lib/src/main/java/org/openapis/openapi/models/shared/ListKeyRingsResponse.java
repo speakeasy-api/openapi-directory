@@ -18,6 +18,7 @@ public class ListKeyRingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyRings")
     public KeyRing[] keyRings;
+
     public ListKeyRingsResponse withKeyRings(KeyRing[] keyRings) {
         this.keyRings = keyRings;
         return this;
@@ -29,6 +30,7 @@ public class ListKeyRingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListKeyRingsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListKeyRingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public ListKeyRingsResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public ListKeyRingsResponse(){}
 }

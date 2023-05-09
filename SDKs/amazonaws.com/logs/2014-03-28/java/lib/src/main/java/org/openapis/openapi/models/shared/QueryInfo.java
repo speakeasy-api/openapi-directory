@@ -15,6 +15,7 @@ public class QueryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public Long createTime;
+
     public QueryInfo withCreateTime(Long createTime) {
         this.createTime = createTime;
         return this;
@@ -23,6 +24,7 @@ public class QueryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public QueryInfo withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -31,6 +33,7 @@ public class QueryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryId")
     public String queryId;
+
     public QueryInfo withQueryId(String queryId) {
         this.queryId = queryId;
         return this;
@@ -39,6 +42,7 @@ public class QueryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryString")
     public String queryString;
+
     public QueryInfo withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
@@ -47,9 +51,11 @@ public class QueryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public QueryStatusEnum status;
+
     public QueryInfo withStatus(QueryStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public QueryInfo(){}
 }

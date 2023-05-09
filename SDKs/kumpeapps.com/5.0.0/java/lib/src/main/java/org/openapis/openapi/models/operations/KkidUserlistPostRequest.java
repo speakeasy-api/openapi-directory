@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidUserlistPostRequest {
@@ -12,6 +13,7 @@ public class KkidUserlistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public KkidUserlistPostRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -22,6 +24,7 @@ public class KkidUserlistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=firstName")
     public String firstName;
+
     public KkidUserlistPostRequest withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -32,6 +35,7 @@ public class KkidUserlistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastName")
     public String lastName;
+
     public KkidUserlistPostRequest withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -42,6 +46,7 @@ public class KkidUserlistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=password")
     public String password;
+
     public KkidUserlistPostRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -52,9 +57,17 @@ public class KkidUserlistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public KkidUserlistPostRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public KkidUserlistPostRequest(@JsonProperty("username") String username, @JsonProperty("password") String password, @JsonProperty("email") String email, @JsonProperty("firstName") String firstName, @JsonProperty("lastName") String lastName) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDatasetEntriesResponse {
@@ -12,6 +13,7 @@ public class UpdateDatasetEntriesResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateDatasetEntriesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDatasetEntriesResponse {
     
     
     public String contentType;
+
     public UpdateDatasetEntriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDatasetEntriesResponse {
      */
     
     public Object internalServerError;
+
     public UpdateDatasetEntriesResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDatasetEntriesResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateDatasetEntriesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDatasetEntriesResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateDatasetEntriesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateDatasetEntriesResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public UpdateDatasetEntriesResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateDatasetEntriesResponse {
     
     
     public Integer statusCode;
+
     public UpdateDatasetEntriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDatasetEntriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDatasetEntriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateDatasetEntriesResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateDatasetEntriesResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateDatasetEntriesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateDatasetEntriesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateDatasetEntriesResponse {
      */
     
     public Object throttlingException;
+
     public UpdateDatasetEntriesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -113,9 +125,14 @@ public class UpdateDatasetEntriesResponse {
      */
     
     public java.util.Map<String, Object> updateDatasetEntriesResponse;
+
     public UpdateDatasetEntriesResponse withUpdateDatasetEntriesResponse(java.util.Map<String, Object> updateDatasetEntriesResponse) {
         this.updateDatasetEntriesResponse = updateDatasetEntriesResponse;
         return this;
     }
     
+    public UpdateDatasetEntriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

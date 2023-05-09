@@ -22,6 +22,7 @@ public class GetMaintenanceWindowExecutionTaskInvocationResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public GetMaintenanceWindowExecutionTaskInvocationResult withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -30,6 +31,7 @@ public class GetMaintenanceWindowExecutionTaskInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionId")
     public String executionId;
+
     public GetMaintenanceWindowExecutionTaskInvocationResult withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -38,6 +40,7 @@ public class GetMaintenanceWindowExecutionTaskInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvocationId")
     public String invocationId;
+
     public GetMaintenanceWindowExecutionTaskInvocationResult withInvocationId(String invocationId) {
         this.invocationId = invocationId;
         return this;
@@ -46,6 +49,7 @@ public class GetMaintenanceWindowExecutionTaskInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerInformation")
     public String ownerInformation;
+
     public GetMaintenanceWindowExecutionTaskInvocationResult withOwnerInformation(String ownerInformation) {
         this.ownerInformation = ownerInformation;
         return this;
@@ -54,6 +58,7 @@ public class GetMaintenanceWindowExecutionTaskInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public String parameters;
+
     public GetMaintenanceWindowExecutionTaskInvocationResult withParameters(String parameters) {
         this.parameters = parameters;
         return this;
@@ -64,6 +69,7 @@ public class GetMaintenanceWindowExecutionTaskInvocationResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public GetMaintenanceWindowExecutionTaskInvocationResult withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -72,6 +78,7 @@ public class GetMaintenanceWindowExecutionTaskInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public MaintenanceWindowExecutionStatusEnum status;
+
     public GetMaintenanceWindowExecutionTaskInvocationResult withStatus(MaintenanceWindowExecutionStatusEnum status) {
         this.status = status;
         return this;
@@ -80,6 +87,7 @@ public class GetMaintenanceWindowExecutionTaskInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusDetails")
     public String statusDetails;
+
     public GetMaintenanceWindowExecutionTaskInvocationResult withStatusDetails(String statusDetails) {
         this.statusDetails = statusDetails;
         return this;
@@ -88,6 +96,7 @@ public class GetMaintenanceWindowExecutionTaskInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskExecutionId")
     public String taskExecutionId;
+
     public GetMaintenanceWindowExecutionTaskInvocationResult withTaskExecutionId(String taskExecutionId) {
         this.taskExecutionId = taskExecutionId;
         return this;
@@ -96,6 +105,7 @@ public class GetMaintenanceWindowExecutionTaskInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskType")
     public MaintenanceWindowTaskTypeEnum taskType;
+
     public GetMaintenanceWindowExecutionTaskInvocationResult withTaskType(MaintenanceWindowTaskTypeEnum taskType) {
         this.taskType = taskType;
         return this;
@@ -104,6 +114,7 @@ public class GetMaintenanceWindowExecutionTaskInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowExecutionId")
     public String windowExecutionId;
+
     public GetMaintenanceWindowExecutionTaskInvocationResult withWindowExecutionId(String windowExecutionId) {
         this.windowExecutionId = windowExecutionId;
         return this;
@@ -112,9 +123,11 @@ public class GetMaintenanceWindowExecutionTaskInvocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowTargetId")
     public String windowTargetId;
+
     public GetMaintenanceWindowExecutionTaskInvocationResult withWindowTargetId(String windowTargetId) {
         this.windowTargetId = windowTargetId;
         return this;
     }
     
+    public GetMaintenanceWindowExecutionTaskInvocationResult(){}
 }

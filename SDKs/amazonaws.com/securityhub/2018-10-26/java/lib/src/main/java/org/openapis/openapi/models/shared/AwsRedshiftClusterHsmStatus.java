@@ -15,6 +15,7 @@ public class AwsRedshiftClusterHsmStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HsmClientCertificateIdentifier")
     public String hsmClientCertificateIdentifier;
+
     public AwsRedshiftClusterHsmStatus withHsmClientCertificateIdentifier(String hsmClientCertificateIdentifier) {
         this.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
         return this;
@@ -23,6 +24,7 @@ public class AwsRedshiftClusterHsmStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HsmConfigurationIdentifier")
     public String hsmConfigurationIdentifier;
+
     public AwsRedshiftClusterHsmStatus withHsmConfigurationIdentifier(String hsmConfigurationIdentifier) {
         this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
         return this;
@@ -31,9 +33,11 @@ public class AwsRedshiftClusterHsmStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsRedshiftClusterHsmStatus withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AwsRedshiftClusterHsmStatus(){}
 }

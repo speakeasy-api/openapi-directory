@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartDocumentAnalysisResponse {
@@ -12,6 +13,7 @@ public class StartDocumentAnalysisResponse {
      */
     
     public Object accessDeniedException;
+
     public StartDocumentAnalysisResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartDocumentAnalysisResponse {
      */
     
     public Object badDocumentException;
+
     public StartDocumentAnalysisResponse withBadDocumentException(Object badDocumentException) {
         this.badDocumentException = badDocumentException;
         return this;
@@ -29,6 +32,7 @@ public class StartDocumentAnalysisResponse {
     
     
     public String contentType;
+
     public StartDocumentAnalysisResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartDocumentAnalysisResponse {
      */
     
     public Object documentTooLargeException;
+
     public StartDocumentAnalysisResponse withDocumentTooLargeException(Object documentTooLargeException) {
         this.documentTooLargeException = documentTooLargeException;
         return this;
@@ -49,6 +54,7 @@ public class StartDocumentAnalysisResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public StartDocumentAnalysisResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -59,6 +65,7 @@ public class StartDocumentAnalysisResponse {
      */
     
     public Object internalServerError;
+
     public StartDocumentAnalysisResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -69,6 +76,7 @@ public class StartDocumentAnalysisResponse {
      */
     
     public Object invalidKMSKeyException;
+
     public StartDocumentAnalysisResponse withInvalidKMSKeyException(Object invalidKMSKeyException) {
         this.invalidKMSKeyException = invalidKMSKeyException;
         return this;
@@ -79,6 +87,7 @@ public class StartDocumentAnalysisResponse {
      */
     
     public Object invalidParameterException;
+
     public StartDocumentAnalysisResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -89,6 +98,7 @@ public class StartDocumentAnalysisResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public StartDocumentAnalysisResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -99,6 +109,7 @@ public class StartDocumentAnalysisResponse {
      */
     
     public Object limitExceededException;
+
     public StartDocumentAnalysisResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -109,6 +120,7 @@ public class StartDocumentAnalysisResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public StartDocumentAnalysisResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -119,6 +131,7 @@ public class StartDocumentAnalysisResponse {
      */
     
     public org.openapis.openapi.models.shared.StartDocumentAnalysisResponse startDocumentAnalysisResponse;
+
     public StartDocumentAnalysisResponse withStartDocumentAnalysisResponse(org.openapis.openapi.models.shared.StartDocumentAnalysisResponse startDocumentAnalysisResponse) {
         this.startDocumentAnalysisResponse = startDocumentAnalysisResponse;
         return this;
@@ -126,6 +139,7 @@ public class StartDocumentAnalysisResponse {
     
     
     public Integer statusCode;
+
     public StartDocumentAnalysisResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class StartDocumentAnalysisResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartDocumentAnalysisResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,6 +158,7 @@ public class StartDocumentAnalysisResponse {
      */
     
     public Object throttlingException;
+
     public StartDocumentAnalysisResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -153,9 +169,14 @@ public class StartDocumentAnalysisResponse {
      */
     
     public Object unsupportedDocumentException;
+
     public StartDocumentAnalysisResponse withUnsupportedDocumentException(Object unsupportedDocumentException) {
         this.unsupportedDocumentException = unsupportedDocumentException;
         return this;
     }
     
+    public StartDocumentAnalysisResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

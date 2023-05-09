@@ -18,6 +18,7 @@ public class ConfigureManagementSettingsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managementSettings")
     public ManagementSettingsInput managementSettings;
+
     public ConfigureManagementSettingsRequestInput withManagementSettings(ManagementSettingsInput managementSettings) {
         this.managementSettings = managementSettings;
         return this;
@@ -29,9 +30,11 @@ public class ConfigureManagementSettingsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public ConfigureManagementSettingsRequestInput withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public ConfigureManagementSettingsRequestInput(){}
 }

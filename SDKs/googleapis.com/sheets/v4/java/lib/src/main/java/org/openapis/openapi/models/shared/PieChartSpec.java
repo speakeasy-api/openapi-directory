@@ -18,6 +18,7 @@ public class PieChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public ChartData domain;
+
     public PieChartSpec withDomain(ChartData domain) {
         this.domain = domain;
         return this;
@@ -29,6 +30,7 @@ public class PieChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legendPosition")
     public PieChartSpecLegendPositionEnum legendPosition;
+
     public PieChartSpec withLegendPosition(PieChartSpecLegendPositionEnum legendPosition) {
         this.legendPosition = legendPosition;
         return this;
@@ -40,6 +42,7 @@ public class PieChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pieHole")
     public Double pieHole;
+
     public PieChartSpec withPieHole(Double pieHole) {
         this.pieHole = pieHole;
         return this;
@@ -51,6 +54,7 @@ public class PieChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("series")
     public ChartData series;
+
     public PieChartSpec withSeries(ChartData series) {
         this.series = series;
         return this;
@@ -62,9 +66,11 @@ public class PieChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threeDimensional")
     public Boolean threeDimensional;
+
     public PieChartSpec withThreeDimensional(Boolean threeDimensional) {
         this.threeDimensional = threeDimensional;
         return this;
     }
     
+    public PieChartSpec(){}
 }

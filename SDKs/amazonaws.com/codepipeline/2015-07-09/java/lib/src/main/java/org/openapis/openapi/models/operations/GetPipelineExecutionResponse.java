@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPipelineExecutionResponse {
     
     public String contentType;
+
     public GetPipelineExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPipelineExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPipelineExecutionOutput getPipelineExecutionOutput;
+
     public GetPipelineExecutionResponse withGetPipelineExecutionOutput(org.openapis.openapi.models.shared.GetPipelineExecutionOutput getPipelineExecutionOutput) {
         this.getPipelineExecutionOutput = getPipelineExecutionOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetPipelineExecutionResponse {
      */
     
     public Object pipelineExecutionNotFoundException;
+
     public GetPipelineExecutionResponse withPipelineExecutionNotFoundException(Object pipelineExecutionNotFoundException) {
         this.pipelineExecutionNotFoundException = pipelineExecutionNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GetPipelineExecutionResponse {
      */
     
     public Object pipelineNotFoundException;
+
     public GetPipelineExecutionResponse withPipelineNotFoundException(Object pipelineNotFoundException) {
         this.pipelineNotFoundException = pipelineNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetPipelineExecutionResponse {
     
     
     public Integer statusCode;
+
     public GetPipelineExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetPipelineExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPipelineExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetPipelineExecutionResponse {
      */
     
     public Object validationException;
+
     public GetPipelineExecutionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetPipelineExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

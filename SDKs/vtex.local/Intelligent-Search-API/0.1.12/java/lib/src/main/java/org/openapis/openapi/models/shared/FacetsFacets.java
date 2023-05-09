@@ -15,6 +15,7 @@ public class FacetsFacets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden")
     public Boolean hidden;
+
     public FacetsFacets withHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
@@ -26,6 +27,7 @@ public class FacetsFacets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FacetsFacets withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class FacetsFacets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Double quantity;
+
     public FacetsFacets withQuantity(Double quantity) {
         this.quantity = quantity;
         return this;
@@ -51,6 +54,7 @@ public class FacetsFacets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public FacetsFacetsTypeEnum type;
+
     public FacetsFacets withType(FacetsFacetsTypeEnum type) {
         this.type = type;
         return this;
@@ -62,9 +66,11 @@ public class FacetsFacets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public FacetsFacetsValues[] values;
+
     public FacetsFacets withValues(FacetsFacetsValues[] values) {
         this.values = values;
         return this;
     }
     
+    public FacetsFacets(){}
 }

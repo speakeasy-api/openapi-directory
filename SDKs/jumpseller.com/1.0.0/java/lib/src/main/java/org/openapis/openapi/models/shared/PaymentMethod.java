@@ -15,9 +15,11 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_method")
     public PaymentMethodFields paymentMethod;
+
     public PaymentMethod withPaymentMethod(PaymentMethodFields paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
     }
     
+    public PaymentMethod(){}
 }

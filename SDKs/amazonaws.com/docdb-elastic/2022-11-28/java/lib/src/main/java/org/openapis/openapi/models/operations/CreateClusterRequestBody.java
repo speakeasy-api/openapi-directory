@@ -14,6 +14,7 @@ public class CreateClusterRequestBody {
      */
     @JsonProperty("adminUserName")
     public String adminUserName;
+
     public CreateClusterRequestBody withAdminUserName(String adminUserName) {
         this.adminUserName = adminUserName;
         return this;
@@ -24,6 +25,7 @@ public class CreateClusterRequestBody {
      */
     @JsonProperty("adminUserPassword")
     public String adminUserPassword;
+
     public CreateClusterRequestBody withAdminUserPassword(String adminUserPassword) {
         this.adminUserPassword = adminUserPassword;
         return this;
@@ -34,6 +36,7 @@ public class CreateClusterRequestBody {
      */
     @JsonProperty("authType")
     public CreateClusterRequestBodyAuthTypeEnum authType;
+
     public CreateClusterRequestBody withAuthType(CreateClusterRequestBodyAuthTypeEnum authType) {
         this.authType = authType;
         return this;
@@ -45,6 +48,7 @@ public class CreateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateClusterRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -55,6 +59,7 @@ public class CreateClusterRequestBody {
      */
     @JsonProperty("clusterName")
     public String clusterName;
+
     public CreateClusterRequestBody withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -66,6 +71,7 @@ public class CreateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public CreateClusterRequestBody withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -77,6 +83,7 @@ public class CreateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredMaintenanceWindow")
     public String preferredMaintenanceWindow;
+
     public CreateClusterRequestBody withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -87,6 +94,7 @@ public class CreateClusterRequestBody {
      */
     @JsonProperty("shardCapacity")
     public Long shardCapacity;
+
     public CreateClusterRequestBody withShardCapacity(Long shardCapacity) {
         this.shardCapacity = shardCapacity;
         return this;
@@ -97,6 +105,7 @@ public class CreateClusterRequestBody {
      */
     @JsonProperty("shardCount")
     public Long shardCount;
+
     public CreateClusterRequestBody withShardCount(Long shardCount) {
         this.shardCount = shardCount;
         return this;
@@ -108,6 +117,7 @@ public class CreateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public CreateClusterRequestBody withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -119,6 +129,7 @@ public class CreateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateClusterRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -130,9 +141,18 @@ public class CreateClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcSecurityGroupIds")
     public String[] vpcSecurityGroupIds;
+
     public CreateClusterRequestBody withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public CreateClusterRequestBody(@JsonProperty("adminUserName") String adminUserName, @JsonProperty("adminUserPassword") String adminUserPassword, @JsonProperty("authType") CreateClusterRequestBodyAuthTypeEnum authType, @JsonProperty("clusterName") String clusterName, @JsonProperty("shardCapacity") Long shardCapacity, @JsonProperty("shardCount") Long shardCount) {
+        this.adminUserName = adminUserName;
+        this.adminUserPassword = adminUserPassword;
+        this.authType = authType;
+        this.clusterName = clusterName;
+        this.shardCapacity = shardCapacity;
+        this.shardCount = shardCount;
+  }
 }

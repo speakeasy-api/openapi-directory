@@ -203,6 +203,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -228,11 +233,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AreGamesInProgressResponse res = new org.openapis.openapi.models.operations.AreGamesInProgressResponse() {{
+        org.openapis.openapi.models.operations.AreGamesInProgressResponse res = new org.openapis.openapi.models.operations.AreGamesInProgressResponse(contentType, httpRes.statusCode()) {{
             areGamesInProgress200ApplicationJSONBoolean = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -267,11 +270,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BoxScoreByScoreidVResponse res = new org.openapis.openapi.models.operations.BoxScoreByScoreidVResponse() {{
+        org.openapis.openapi.models.operations.BoxScoreByScoreidVResponse res = new org.openapis.openapi.models.operations.BoxScoreByScoreidVResponse(contentType, httpRes.statusCode()) {{
             boxScoreV3 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -306,11 +307,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BoxScoreVResponse res = new org.openapis.openapi.models.operations.BoxScoreVResponse() {{
+        org.openapis.openapi.models.operations.BoxScoreVResponse res = new org.openapis.openapi.models.operations.BoxScoreVResponse(contentType, httpRes.statusCode()) {{
             boxScoreV3 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,11 +345,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BoxScoresDeltaVResponse res = new org.openapis.openapi.models.operations.BoxScoresDeltaVResponse() {{
+        org.openapis.openapi.models.operations.BoxScoresDeltaVResponse res = new org.openapis.openapi.models.operations.BoxScoresDeltaVResponse(contentType, httpRes.statusCode()) {{
             boxScoreV3s = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -386,11 +383,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BoxScoresVSimulationResponse res = new org.openapis.openapi.models.operations.BoxScoresVSimulationResponse() {{
+        org.openapis.openapi.models.operations.BoxScoresVSimulationResponse res = new org.openapis.openapi.models.operations.BoxScoresVSimulationResponse(contentType, httpRes.statusCode()) {{
             boxScoreV3s = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -426,11 +421,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ByeWeeksResponse res = new org.openapis.openapi.models.operations.ByeWeeksResponse() {{
+        org.openapis.openapi.models.operations.ByeWeeksResponse res = new org.openapis.openapi.models.operations.ByeWeeksResponse(contentType, httpRes.statusCode()) {{
             byes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -465,11 +458,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DailyFantasyPlayersResponse res = new org.openapis.openapi.models.operations.DailyFantasyPlayersResponse() {{
+        org.openapis.openapi.models.operations.DailyFantasyPlayersResponse res = new org.openapis.openapi.models.operations.DailyFantasyPlayersResponse(contentType, httpRes.statusCode()) {{
             dailyFantasyPlayers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -504,11 +495,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DailyFantasyScoringResponse res = new org.openapis.openapi.models.operations.DailyFantasyScoringResponse() {{
+        org.openapis.openapi.models.operations.DailyFantasyScoringResponse res = new org.openapis.openapi.models.operations.DailyFantasyScoringResponse(contentType, httpRes.statusCode()) {{
             dailyFantasyScorings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -543,11 +532,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfsSlatesByDateResponse res = new org.openapis.openapi.models.operations.DfsSlatesByDateResponse() {{
+        org.openapis.openapi.models.operations.DfsSlatesByDateResponse res = new org.openapis.openapi.models.operations.DfsSlatesByDateResponse(contentType, httpRes.statusCode()) {{
             dfsSlates = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -582,11 +569,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfsSlatesByWeekResponse res = new org.openapis.openapi.models.operations.DfsSlatesByWeekResponse() {{
+        org.openapis.openapi.models.operations.DfsSlatesByWeekResponse res = new org.openapis.openapi.models.operations.DfsSlatesByWeekResponse(contentType, httpRes.statusCode()) {{
             dfsSlates = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -621,11 +606,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FantasyDefenseGameStatsResponse res = new org.openapis.openapi.models.operations.FantasyDefenseGameStatsResponse() {{
+        org.openapis.openapi.models.operations.FantasyDefenseGameStatsResponse res = new org.openapis.openapi.models.operations.FantasyDefenseGameStatsResponse(contentType, httpRes.statusCode()) {{
             fantasyDefenseGames = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -660,11 +643,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FantasyDefenseGameStatsByTeamResponse res = new org.openapis.openapi.models.operations.FantasyDefenseGameStatsByTeamResponse() {{
+        org.openapis.openapi.models.operations.FantasyDefenseGameStatsByTeamResponse res = new org.openapis.openapi.models.operations.FantasyDefenseGameStatsByTeamResponse(contentType, httpRes.statusCode()) {{
             fantasyDefenseGame = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -699,11 +680,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FantasyDefenseSeasonStatsResponse res = new org.openapis.openapi.models.operations.FantasyDefenseSeasonStatsResponse() {{
+        org.openapis.openapi.models.operations.FantasyDefenseSeasonStatsResponse res = new org.openapis.openapi.models.operations.FantasyDefenseSeasonStatsResponse(contentType, httpRes.statusCode()) {{
             fantasyDefenseSeasons = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -738,11 +717,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FantasyDefenseSeasonStatsByTeamResponse res = new org.openapis.openapi.models.operations.FantasyDefenseSeasonStatsByTeamResponse() {{
+        org.openapis.openapi.models.operations.FantasyDefenseSeasonStatsByTeamResponse res = new org.openapis.openapi.models.operations.FantasyDefenseSeasonStatsByTeamResponse(contentType, httpRes.statusCode()) {{
             fantasyDefenseSeason = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -777,11 +754,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FantasyPlayerOwnershipPercentagesSeasonLongResponse res = new org.openapis.openapi.models.operations.FantasyPlayerOwnershipPercentagesSeasonLongResponse() {{
+        org.openapis.openapi.models.operations.FantasyPlayerOwnershipPercentagesSeasonLongResponse res = new org.openapis.openapi.models.operations.FantasyPlayerOwnershipPercentagesSeasonLongResponse(contentType, httpRes.statusCode()) {{
             playerOwnerships = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -817,11 +792,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FantasyPlayersWithAdpResponse res = new org.openapis.openapi.models.operations.FantasyPlayersWithAdpResponse() {{
+        org.openapis.openapi.models.operations.FantasyPlayersWithAdpResponse res = new org.openapis.openapi.models.operations.FantasyPlayersWithAdpResponse(contentType, httpRes.statusCode()) {{
             fantasyPlayers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -857,11 +830,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse res = new org.openapis.openapi.models.operations.GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse() {{
+        org.openapis.openapi.models.operations.GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse res = new org.openapis.openapi.models.operations.GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse(contentType, httpRes.statusCode()) {{
             games = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -897,11 +868,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GameStatsByWeekDeprecatedUseTeamGameStatsInsteadResponse res = new org.openapis.openapi.models.operations.GameStatsByWeekDeprecatedUseTeamGameStatsInsteadResponse() {{
+        org.openapis.openapi.models.operations.GameStatsByWeekDeprecatedUseTeamGameStatsInsteadResponse res = new org.openapis.openapi.models.operations.GameStatsByWeekDeprecatedUseTeamGameStatsInsteadResponse(contentType, httpRes.statusCode()) {{
             games = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -937,11 +906,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdpFantasyPlayersWithAdpResponse res = new org.openapis.openapi.models.operations.IdpFantasyPlayersWithAdpResponse() {{
+        org.openapis.openapi.models.operations.IdpFantasyPlayersWithAdpResponse res = new org.openapis.openapi.models.operations.IdpFantasyPlayersWithAdpResponse(contentType, httpRes.statusCode()) {{
             fantasyPlayers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -976,11 +943,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InjuriesResponse res = new org.openapis.openapi.models.operations.InjuriesResponse() {{
+        org.openapis.openapi.models.operations.InjuriesResponse res = new org.openapis.openapi.models.operations.InjuriesResponse(contentType, httpRes.statusCode()) {{
             injuries = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1015,11 +980,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InjuriesByTeamResponse res = new org.openapis.openapi.models.operations.InjuriesByTeamResponse() {{
+        org.openapis.openapi.models.operations.InjuriesByTeamResponse res = new org.openapis.openapi.models.operations.InjuriesByTeamResponse(contentType, httpRes.statusCode()) {{
             injuries = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1054,11 +1017,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LeagueLeadersBySeasonResponse res = new org.openapis.openapi.models.operations.LeagueLeadersBySeasonResponse() {{
+        org.openapis.openapi.models.operations.LeagueLeadersBySeasonResponse res = new org.openapis.openapi.models.operations.LeagueLeadersBySeasonResponse(contentType, httpRes.statusCode()) {{
             playerSeasons = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1093,11 +1054,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LeagueLeadersByWeekResponse res = new org.openapis.openapi.models.operations.LeagueLeadersByWeekResponse() {{
+        org.openapis.openapi.models.operations.LeagueLeadersByWeekResponse res = new org.openapis.openapi.models.operations.LeagueLeadersByWeekResponse(contentType, httpRes.statusCode()) {{
             playerGames = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1132,11 +1091,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LegacyBoxScoreResponse res = new org.openapis.openapi.models.operations.LegacyBoxScoreResponse() {{
+        org.openapis.openapi.models.operations.LegacyBoxScoreResponse res = new org.openapis.openapi.models.operations.LegacyBoxScoreResponse(contentType, httpRes.statusCode()) {{
             boxScore = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1172,11 +1129,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LegacyBoxScoresResponse res = new org.openapis.openapi.models.operations.LegacyBoxScoresResponse() {{
+        org.openapis.openapi.models.operations.LegacyBoxScoresResponse res = new org.openapis.openapi.models.operations.LegacyBoxScoresResponse(contentType, httpRes.statusCode()) {{
             boxScores = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1212,11 +1167,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LegacyBoxScoresActiveResponse res = new org.openapis.openapi.models.operations.LegacyBoxScoresActiveResponse() {{
+        org.openapis.openapi.models.operations.LegacyBoxScoresActiveResponse res = new org.openapis.openapi.models.operations.LegacyBoxScoresActiveResponse(contentType, httpRes.statusCode()) {{
             boxScores = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1252,11 +1205,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LegacyBoxScoresDeltaResponse res = new org.openapis.openapi.models.operations.LegacyBoxScoresDeltaResponse() {{
+        org.openapis.openapi.models.operations.LegacyBoxScoresDeltaResponse res = new org.openapis.openapi.models.operations.LegacyBoxScoresDeltaResponse(contentType, httpRes.statusCode()) {{
             boxScores = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1291,11 +1242,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LegacyBoxScoresDeltaCurrentWeekResponse res = new org.openapis.openapi.models.operations.LegacyBoxScoresDeltaCurrentWeekResponse() {{
+        org.openapis.openapi.models.operations.LegacyBoxScoresDeltaCurrentWeekResponse res = new org.openapis.openapi.models.operations.LegacyBoxScoresDeltaCurrentWeekResponse(contentType, httpRes.statusCode()) {{
             boxScores = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1330,11 +1279,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LegacyBoxScoresFinalResponse res = new org.openapis.openapi.models.operations.LegacyBoxScoresFinalResponse() {{
+        org.openapis.openapi.models.operations.LegacyBoxScoresFinalResponse res = new org.openapis.openapi.models.operations.LegacyBoxScoresFinalResponse(contentType, httpRes.statusCode()) {{
             boxScores = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1369,11 +1316,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LegacyBoxScoresLiveResponse res = new org.openapis.openapi.models.operations.LegacyBoxScoresLiveResponse() {{
+        org.openapis.openapi.models.operations.LegacyBoxScoresLiveResponse res = new org.openapis.openapi.models.operations.LegacyBoxScoresLiveResponse(contentType, httpRes.statusCode()) {{
             boxScores = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1408,11 +1353,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NewsResponse res = new org.openapis.openapi.models.operations.NewsResponse() {{
+        org.openapis.openapi.models.operations.NewsResponse res = new org.openapis.openapi.models.operations.NewsResponse(contentType, httpRes.statusCode()) {{
             news = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1447,11 +1390,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NewsByDateResponse res = new org.openapis.openapi.models.operations.NewsByDateResponse() {{
+        org.openapis.openapi.models.operations.NewsByDateResponse res = new org.openapis.openapi.models.operations.NewsByDateResponse(contentType, httpRes.statusCode()) {{
             news = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1486,11 +1427,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NewsByPlayerResponse res = new org.openapis.openapi.models.operations.NewsByPlayerResponse() {{
+        org.openapis.openapi.models.operations.NewsByPlayerResponse res = new org.openapis.openapi.models.operations.NewsByPlayerResponse(contentType, httpRes.statusCode()) {{
             news = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1525,11 +1464,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NewsByTeamResponse res = new org.openapis.openapi.models.operations.NewsByTeamResponse() {{
+        org.openapis.openapi.models.operations.NewsByTeamResponse res = new org.openapis.openapi.models.operations.NewsByTeamResponse(contentType, httpRes.statusCode()) {{
             news = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1564,11 +1501,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayerDetailsByAvailableResponse res = new org.openapis.openapi.models.operations.PlayerDetailsByAvailableResponse() {{
+        org.openapis.openapi.models.operations.PlayerDetailsByAvailableResponse res = new org.openapis.openapi.models.operations.PlayerDetailsByAvailableResponse(contentType, httpRes.statusCode()) {{
             players = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1603,11 +1538,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayerDetailsByFreeAgentsResponse res = new org.openapis.openapi.models.operations.PlayerDetailsByFreeAgentsResponse() {{
+        org.openapis.openapi.models.operations.PlayerDetailsByFreeAgentsResponse res = new org.openapis.openapi.models.operations.PlayerDetailsByFreeAgentsResponse(contentType, httpRes.statusCode()) {{
             players = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1642,11 +1575,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayerDetailsByPlayerResponse res = new org.openapis.openapi.models.operations.PlayerDetailsByPlayerResponse() {{
+        org.openapis.openapi.models.operations.PlayerDetailsByPlayerResponse res = new org.openapis.openapi.models.operations.PlayerDetailsByPlayerResponse(contentType, httpRes.statusCode()) {{
             playerDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1681,11 +1612,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayerDetailsByRookieDraftYearResponse res = new org.openapis.openapi.models.operations.PlayerDetailsByRookieDraftYearResponse() {{
+        org.openapis.openapi.models.operations.PlayerDetailsByRookieDraftYearResponse res = new org.openapis.openapi.models.operations.PlayerDetailsByRookieDraftYearResponse(contentType, httpRes.statusCode()) {{
             players = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1720,11 +1649,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayerDetailsByTeamResponse res = new org.openapis.openapi.models.operations.PlayerDetailsByTeamResponse() {{
+        org.openapis.openapi.models.operations.PlayerDetailsByTeamResponse res = new org.openapis.openapi.models.operations.PlayerDetailsByTeamResponse(contentType, httpRes.statusCode()) {{
             playerDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1759,11 +1686,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayerGameLogsBySeasonResponse res = new org.openapis.openapi.models.operations.PlayerGameLogsBySeasonResponse() {{
+        org.openapis.openapi.models.operations.PlayerGameLogsBySeasonResponse res = new org.openapis.openapi.models.operations.PlayerGameLogsBySeasonResponse(contentType, httpRes.statusCode()) {{
             playerGames = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1798,11 +1723,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayerGameRedZoneStatsResponse res = new org.openapis.openapi.models.operations.PlayerGameRedZoneStatsResponse() {{
+        org.openapis.openapi.models.operations.PlayerGameRedZoneStatsResponse res = new org.openapis.openapi.models.operations.PlayerGameRedZoneStatsResponse(contentType, httpRes.statusCode()) {{
             playerGameRedZones = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1837,11 +1760,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayerGameRedZoneStatsInsideFiveResponse res = new org.openapis.openapi.models.operations.PlayerGameRedZoneStatsInsideFiveResponse() {{
+        org.openapis.openapi.models.operations.PlayerGameRedZoneStatsInsideFiveResponse res = new org.openapis.openapi.models.operations.PlayerGameRedZoneStatsInsideFiveResponse(contentType, httpRes.statusCode()) {{
             playerGameRedZones = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1876,11 +1797,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayerGameRedZoneStatsInsideTenResponse res = new org.openapis.openapi.models.operations.PlayerGameRedZoneStatsInsideTenResponse() {{
+        org.openapis.openapi.models.operations.PlayerGameRedZoneStatsInsideTenResponse res = new org.openapis.openapi.models.operations.PlayerGameRedZoneStatsInsideTenResponse(contentType, httpRes.statusCode()) {{
             playerGameRedZones = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1915,11 +1834,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayerGameStatsByPlayerResponse res = new org.openapis.openapi.models.operations.PlayerGameStatsByPlayerResponse() {{
+        org.openapis.openapi.models.operations.PlayerGameStatsByPlayerResponse res = new org.openapis.openapi.models.operations.PlayerGameStatsByPlayerResponse(contentType, httpRes.statusCode()) {{
             playerGame = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1954,11 +1871,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayerGameStatsByTeamResponse res = new org.openapis.openapi.models.operations.PlayerGameStatsByTeamResponse() {{
+        org.openapis.openapi.models.operations.PlayerGameStatsByTeamResponse res = new org.openapis.openapi.models.operations.PlayerGameStatsByTeamResponse(contentType, httpRes.statusCode()) {{
             playerGames = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1993,11 +1908,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayerGameStatsByWeekResponse res = new org.openapis.openapi.models.operations.PlayerGameStatsByWeekResponse() {{
+        org.openapis.openapi.models.operations.PlayerGameStatsByWeekResponse res = new org.openapis.openapi.models.operations.PlayerGameStatsByWeekResponse(contentType, httpRes.statusCode()) {{
             playerGames = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2032,11 +1945,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayerGameStatsByWeekDeltaResponse res = new org.openapis.openapi.models.operations.PlayerGameStatsByWeekDeltaResponse() {{
+        org.openapis.openapi.models.operations.PlayerGameStatsByWeekDeltaResponse res = new org.openapis.openapi.models.operations.PlayerGameStatsByWeekDeltaResponse(contentType, httpRes.statusCode()) {{
             playerGames = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2071,11 +1982,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayerGameStatsDeltaResponse res = new org.openapis.openapi.models.operations.PlayerGameStatsDeltaResponse() {{
+        org.openapis.openapi.models.operations.PlayerGameStatsDeltaResponse res = new org.openapis.openapi.models.operations.PlayerGameStatsDeltaResponse(contentType, httpRes.statusCode()) {{
             playerGames = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2110,11 +2019,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayerSeasonRedZoneStatsResponse res = new org.openapis.openapi.models.operations.PlayerSeasonRedZoneStatsResponse() {{
+        org.openapis.openapi.models.operations.PlayerSeasonRedZoneStatsResponse res = new org.openapis.openapi.models.operations.PlayerSeasonRedZoneStatsResponse(contentType, httpRes.statusCode()) {{
             playerSeasonRedZones = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2149,11 +2056,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayerSeasonRedZoneStatsInsideFiveResponse res = new org.openapis.openapi.models.operations.PlayerSeasonRedZoneStatsInsideFiveResponse() {{
+        org.openapis.openapi.models.operations.PlayerSeasonRedZoneStatsInsideFiveResponse res = new org.openapis.openapi.models.operations.PlayerSeasonRedZoneStatsInsideFiveResponse(contentType, httpRes.statusCode()) {{
             playerSeasonRedZones = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2188,11 +2093,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayerSeasonRedZoneStatsInsideTenResponse res = new org.openapis.openapi.models.operations.PlayerSeasonRedZoneStatsInsideTenResponse() {{
+        org.openapis.openapi.models.operations.PlayerSeasonRedZoneStatsInsideTenResponse res = new org.openapis.openapi.models.operations.PlayerSeasonRedZoneStatsInsideTenResponse(contentType, httpRes.statusCode()) {{
             playerSeasonRedZones = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2227,11 +2130,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayerSeasonStatsResponse res = new org.openapis.openapi.models.operations.PlayerSeasonStatsResponse() {{
+        org.openapis.openapi.models.operations.PlayerSeasonStatsResponse res = new org.openapis.openapi.models.operations.PlayerSeasonStatsResponse(contentType, httpRes.statusCode()) {{
             playerSeasons = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2266,11 +2167,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayerSeasonStatsByPlayerResponse res = new org.openapis.openapi.models.operations.PlayerSeasonStatsByPlayerResponse() {{
+        org.openapis.openapi.models.operations.PlayerSeasonStatsByPlayerResponse res = new org.openapis.openapi.models.operations.PlayerSeasonStatsByPlayerResponse(contentType, httpRes.statusCode()) {{
             playerSeasons = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2305,11 +2204,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayerSeasonStatsByTeamResponse res = new org.openapis.openapi.models.operations.PlayerSeasonStatsByTeamResponse() {{
+        org.openapis.openapi.models.operations.PlayerSeasonStatsByTeamResponse res = new org.openapis.openapi.models.operations.PlayerSeasonStatsByTeamResponse(contentType, httpRes.statusCode()) {{
             playerSeasons = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2344,11 +2241,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayerSeasonThirdDownStatsResponse res = new org.openapis.openapi.models.operations.PlayerSeasonThirdDownStatsResponse() {{
+        org.openapis.openapi.models.operations.PlayerSeasonThirdDownStatsResponse res = new org.openapis.openapi.models.operations.PlayerSeasonThirdDownStatsResponse(contentType, httpRes.statusCode()) {{
             playerSeasonThirdDowns = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2383,11 +2278,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProBowlersResponse res = new org.openapis.openapi.models.operations.ProBowlersResponse() {{
+        org.openapis.openapi.models.operations.ProBowlersResponse res = new org.openapis.openapi.models.operations.ProBowlersResponse(contentType, httpRes.statusCode()) {{
             playerInfos = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2423,11 +2316,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ScheduleResponse res = new org.openapis.openapi.models.operations.ScheduleResponse() {{
+        org.openapis.openapi.models.operations.ScheduleResponse res = new org.openapis.openapi.models.operations.ScheduleResponse(contentType, httpRes.statusCode()) {{
             schedules = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2463,11 +2354,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ScoresByDateResponse res = new org.openapis.openapi.models.operations.ScoresByDateResponse() {{
+        org.openapis.openapi.models.operations.ScoresByDateResponse res = new org.openapis.openapi.models.operations.ScoresByDateResponse(contentType, httpRes.statusCode()) {{
             scores = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2503,11 +2392,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ScoresBySeasonResponse res = new org.openapis.openapi.models.operations.ScoresBySeasonResponse() {{
+        org.openapis.openapi.models.operations.ScoresBySeasonResponse res = new org.openapis.openapi.models.operations.ScoresBySeasonResponse(contentType, httpRes.statusCode()) {{
             scores = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2543,11 +2430,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ScoresByWeekResponse res = new org.openapis.openapi.models.operations.ScoresByWeekResponse() {{
+        org.openapis.openapi.models.operations.ScoresByWeekResponse res = new org.openapis.openapi.models.operations.ScoresByWeekResponse(contentType, httpRes.statusCode()) {{
             scores = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2583,11 +2468,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ScoresByWeekSimulationResponse res = new org.openapis.openapi.models.operations.ScoresByWeekSimulationResponse() {{
+        org.openapis.openapi.models.operations.ScoresByWeekSimulationResponse res = new org.openapis.openapi.models.operations.ScoresByWeekSimulationResponse(contentType, httpRes.statusCode()) {{
             scores = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2623,11 +2506,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SeasonCurrentResponse res = new org.openapis.openapi.models.operations.SeasonCurrentResponse() {{
+        org.openapis.openapi.models.operations.SeasonCurrentResponse res = new org.openapis.openapi.models.operations.SeasonCurrentResponse(contentType, httpRes.statusCode()) {{
             seasonCurrent200ApplicationJSONInteger = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2663,11 +2544,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SeasonLastCompletedResponse res = new org.openapis.openapi.models.operations.SeasonLastCompletedResponse() {{
+        org.openapis.openapi.models.operations.SeasonLastCompletedResponse res = new org.openapis.openapi.models.operations.SeasonLastCompletedResponse(contentType, httpRes.statusCode()) {{
             seasonLastCompleted200ApplicationJSONInteger = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2703,11 +2582,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SeasonUpcomingResponse res = new org.openapis.openapi.models.operations.SeasonUpcomingResponse() {{
+        org.openapis.openapi.models.operations.SeasonUpcomingResponse res = new org.openapis.openapi.models.operations.SeasonUpcomingResponse(contentType, httpRes.statusCode()) {{
             seasonUpcoming200ApplicationJSONInteger = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2743,11 +2620,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StadiumsResponse res = new org.openapis.openapi.models.operations.StadiumsResponse() {{
+        org.openapis.openapi.models.operations.StadiumsResponse res = new org.openapis.openapi.models.operations.StadiumsResponse(contentType, httpRes.statusCode()) {{
             stadiums = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2782,11 +2657,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StandingsResponse res = new org.openapis.openapi.models.operations.StandingsResponse() {{
+        org.openapis.openapi.models.operations.StandingsResponse res = new org.openapis.openapi.models.operations.StandingsResponse(contentType, httpRes.statusCode()) {{
             standings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2822,11 +2695,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamGameLogsBySeasonResponse res = new org.openapis.openapi.models.operations.TeamGameLogsBySeasonResponse() {{
+        org.openapis.openapi.models.operations.TeamGameLogsBySeasonResponse res = new org.openapis.openapi.models.operations.TeamGameLogsBySeasonResponse(contentType, httpRes.statusCode()) {{
             teamGames = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2861,11 +2732,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamGameStatsResponse res = new org.openapis.openapi.models.operations.TeamGameStatsResponse() {{
+        org.openapis.openapi.models.operations.TeamGameStatsResponse res = new org.openapis.openapi.models.operations.TeamGameStatsResponse(contentType, httpRes.statusCode()) {{
             teamGames = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2900,11 +2769,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamSeasonStatsResponse res = new org.openapis.openapi.models.operations.TeamSeasonStatsResponse() {{
+        org.openapis.openapi.models.operations.TeamSeasonStatsResponse res = new org.openapis.openapi.models.operations.TeamSeasonStatsResponse(contentType, httpRes.statusCode()) {{
             teamSeasons = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2940,11 +2807,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsActiveResponse res = new org.openapis.openapi.models.operations.TeamsActiveResponse() {{
+        org.openapis.openapi.models.operations.TeamsActiveResponse res = new org.openapis.openapi.models.operations.TeamsActiveResponse(contentType, httpRes.statusCode()) {{
             teams = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2980,11 +2845,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsAllResponse res = new org.openapis.openapi.models.operations.TeamsAllResponse() {{
+        org.openapis.openapi.models.operations.TeamsAllResponse res = new org.openapis.openapi.models.operations.TeamsAllResponse(contentType, httpRes.statusCode()) {{
             teams = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3020,11 +2883,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TeamsBySeasonResponse res = new org.openapis.openapi.models.operations.TeamsBySeasonResponse() {{
+        org.openapis.openapi.models.operations.TeamsBySeasonResponse res = new org.openapis.openapi.models.operations.TeamsBySeasonResponse(contentType, httpRes.statusCode()) {{
             teams = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3060,11 +2921,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TimeframesResponse res = new org.openapis.openapi.models.operations.TimeframesResponse() {{
+        org.openapis.openapi.models.operations.TimeframesResponse res = new org.openapis.openapi.models.operations.TimeframesResponse(contentType, httpRes.statusCode()) {{
             timeframes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3100,11 +2959,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WeekCurrentResponse res = new org.openapis.openapi.models.operations.WeekCurrentResponse() {{
+        org.openapis.openapi.models.operations.WeekCurrentResponse res = new org.openapis.openapi.models.operations.WeekCurrentResponse(contentType, httpRes.statusCode()) {{
             weekCurrent200ApplicationJSONInteger = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3140,11 +2997,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WeekLastCompletedResponse res = new org.openapis.openapi.models.operations.WeekLastCompletedResponse() {{
+        org.openapis.openapi.models.operations.WeekLastCompletedResponse res = new org.openapis.openapi.models.operations.WeekLastCompletedResponse(contentType, httpRes.statusCode()) {{
             weekLastCompleted200ApplicationJSONInteger = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3180,11 +3035,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WeekUpcomingResponse res = new org.openapis.openapi.models.operations.WeekUpcomingResponse() {{
+        org.openapis.openapi.models.operations.WeekUpcomingResponse res = new org.openapis.openapi.models.operations.WeekUpcomingResponse(contentType, httpRes.statusCode()) {{
             weekUpcoming200ApplicationJSONInteger = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

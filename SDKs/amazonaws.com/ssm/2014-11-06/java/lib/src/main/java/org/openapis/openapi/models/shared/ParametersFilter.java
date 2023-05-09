@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ParametersFilter {
     @JsonProperty("Key")
     public ParametersFilterKeyEnum key;
+
     public ParametersFilter withKey(ParametersFilterKeyEnum key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class ParametersFilter {
     
     @JsonProperty("Values")
     public String[] values;
+
     public ParametersFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public ParametersFilter(@JsonProperty("Key") ParametersFilterKeyEnum key, @JsonProperty("Values") String[] values) {
+        this.key = key;
+        this.values = values;
+  }
 }

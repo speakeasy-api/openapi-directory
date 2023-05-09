@@ -19,6 +19,7 @@ public class OBStandingOrder5 {
      */
     @JsonProperty("AccountId")
     public String accountId;
+
     public OBStandingOrder5 withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -27,6 +28,7 @@ public class OBStandingOrder5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreditorAccount")
     public OBCashAccount5 creditorAccount;
+
     public OBStandingOrder5 withCreditorAccount(OBCashAccount5 creditorAccount) {
         this.creditorAccount = creditorAccount;
         return this;
@@ -35,6 +37,7 @@ public class OBStandingOrder5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FinalPaymentAmount")
     public OBActiveOrHistoricCurrencyAndAmount finalPaymentAmount;
+
     public OBStandingOrder5 withFinalPaymentAmount(OBActiveOrHistoricCurrencyAndAmount finalPaymentAmount) {
         this.finalPaymentAmount = finalPaymentAmount;
         return this;
@@ -50,6 +53,7 @@ public class OBStandingOrder5 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FinalPaymentDateTime")
     public OffsetDateTime finalPaymentDateTime;
+
     public OBStandingOrder5 withFinalPaymentDateTime(OffsetDateTime finalPaymentDateTime) {
         this.finalPaymentDateTime = finalPaymentDateTime;
         return this;
@@ -58,6 +62,7 @@ public class OBStandingOrder5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstPaymentAmount")
     public OBActiveOrHistoricCurrencyAndAmount firstPaymentAmount;
+
     public OBStandingOrder5 withFirstPaymentAmount(OBActiveOrHistoricCurrencyAndAmount firstPaymentAmount) {
         this.firstPaymentAmount = firstPaymentAmount;
         return this;
@@ -73,6 +78,7 @@ public class OBStandingOrder5 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FirstPaymentDateTime")
     public OffsetDateTime firstPaymentDateTime;
+
     public OBStandingOrder5 withFirstPaymentDateTime(OffsetDateTime firstPaymentDateTime) {
         this.firstPaymentDateTime = firstPaymentDateTime;
         return this;
@@ -86,6 +92,7 @@ public class OBStandingOrder5 {
      */
     @JsonProperty("Frequency")
     public String frequency;
+
     public OBStandingOrder5 withFrequency(String frequency) {
         this.frequency = frequency;
         return this;
@@ -94,6 +101,7 @@ public class OBStandingOrder5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastPaymentAmount")
     public OBActiveOrHistoricCurrencyAndAmount lastPaymentAmount;
+
     public OBStandingOrder5 withLastPaymentAmount(OBActiveOrHistoricCurrencyAndAmount lastPaymentAmount) {
         this.lastPaymentAmount = lastPaymentAmount;
         return this;
@@ -109,6 +117,7 @@ public class OBStandingOrder5 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastPaymentDateTime")
     public OffsetDateTime lastPaymentDateTime;
+
     public OBStandingOrder5 withLastPaymentDateTime(OffsetDateTime lastPaymentDateTime) {
         this.lastPaymentDateTime = lastPaymentDateTime;
         return this;
@@ -117,6 +126,7 @@ public class OBStandingOrder5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPaymentAmount")
     public OBActiveOrHistoricCurrencyAndAmount nextPaymentAmount;
+
     public OBStandingOrder5 withNextPaymentAmount(OBActiveOrHistoricCurrencyAndAmount nextPaymentAmount) {
         this.nextPaymentAmount = nextPaymentAmount;
         return this;
@@ -132,6 +142,7 @@ public class OBStandingOrder5 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("NextPaymentDateTime")
     public OffsetDateTime nextPaymentDateTime;
+
     public OBStandingOrder5 withNextPaymentDateTime(OffsetDateTime nextPaymentDateTime) {
         this.nextPaymentDateTime = nextPaymentDateTime;
         return this;
@@ -145,6 +156,7 @@ public class OBStandingOrder5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reference")
     public String reference;
+
     public OBStandingOrder5 withReference(String reference) {
         this.reference = reference;
         return this;
@@ -156,6 +168,7 @@ public class OBStandingOrder5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandingOrderId")
     public String standingOrderId;
+
     public OBStandingOrder5 withStandingOrderId(String standingOrderId) {
         this.standingOrderId = standingOrderId;
         return this;
@@ -164,9 +177,14 @@ public class OBStandingOrder5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandingOrderStatusCode")
     public OBExternalStandingOrderStatus1CodeEnum standingOrderStatusCode;
+
     public OBStandingOrder5 withStandingOrderStatusCode(OBExternalStandingOrderStatus1CodeEnum standingOrderStatusCode) {
         this.standingOrderStatusCode = standingOrderStatusCode;
         return this;
     }
     
+    public OBStandingOrder5(@JsonProperty("AccountId") String accountId, @JsonProperty("Frequency") String frequency) {
+        this.accountId = accountId;
+        this.frequency = frequency;
+  }
 }

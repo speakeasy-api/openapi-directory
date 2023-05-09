@@ -18,6 +18,7 @@ public class ProperNounCategorizedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonType")
     public String commonType;
+
     public ProperNounCategorizedOut withCommonType(String commonType) {
         this.commonType = commonType;
         return this;
@@ -29,6 +30,7 @@ public class ProperNounCategorizedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonTypeAlt")
     public String commonTypeAlt;
+
     public ProperNounCategorizedOut withCommonTypeAlt(String commonTypeAlt) {
         this.commonTypeAlt = commonTypeAlt;
         return this;
@@ -37,6 +39,7 @@ public class ProperNounCategorizedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ProperNounCategorizedOut withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class ProperNounCategorizedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProperNounCategorizedOut withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +63,7 @@ public class ProperNounCategorizedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Double score;
+
     public ProperNounCategorizedOut withScore(Double score) {
         this.score = score;
         return this;
@@ -67,9 +72,11 @@ public class ProperNounCategorizedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public ProperNounCategorizedOut withScript(String script) {
         this.script = script;
         return this;
     }
     
+    public ProperNounCategorizedOut(){}
 }

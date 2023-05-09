@@ -15,6 +15,7 @@ public class UpdateSiteRackPhysicalPropertiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FiberOpticCableType")
     public UpdateSiteRackPhysicalPropertiesRequestBodyFiberOpticCableTypeEnum fiberOpticCableType;
+
     public UpdateSiteRackPhysicalPropertiesRequestBody withFiberOpticCableType(UpdateSiteRackPhysicalPropertiesRequestBodyFiberOpticCableTypeEnum fiberOpticCableType) {
         this.fiberOpticCableType = fiberOpticCableType;
         return this;
@@ -26,6 +27,7 @@ public class UpdateSiteRackPhysicalPropertiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumSupportedWeightLbs")
     public UpdateSiteRackPhysicalPropertiesRequestBodyMaximumSupportedWeightLbsEnum maximumSupportedWeightLbs;
+
     public UpdateSiteRackPhysicalPropertiesRequestBody withMaximumSupportedWeightLbs(UpdateSiteRackPhysicalPropertiesRequestBodyMaximumSupportedWeightLbsEnum maximumSupportedWeightLbs) {
         this.maximumSupportedWeightLbs = maximumSupportedWeightLbs;
         return this;
@@ -37,6 +39,7 @@ public class UpdateSiteRackPhysicalPropertiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpticalStandard")
     public UpdateSiteRackPhysicalPropertiesRequestBodyOpticalStandardEnum opticalStandard;
+
     public UpdateSiteRackPhysicalPropertiesRequestBody withOpticalStandard(UpdateSiteRackPhysicalPropertiesRequestBodyOpticalStandardEnum opticalStandard) {
         this.opticalStandard = opticalStandard;
         return this;
@@ -48,6 +51,7 @@ public class UpdateSiteRackPhysicalPropertiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PowerConnector")
     public UpdateSiteRackPhysicalPropertiesRequestBodyPowerConnectorEnum powerConnector;
+
     public UpdateSiteRackPhysicalPropertiesRequestBody withPowerConnector(UpdateSiteRackPhysicalPropertiesRequestBodyPowerConnectorEnum powerConnector) {
         this.powerConnector = powerConnector;
         return this;
@@ -59,6 +63,7 @@ public class UpdateSiteRackPhysicalPropertiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PowerDrawKva")
     public UpdateSiteRackPhysicalPropertiesRequestBodyPowerDrawKvaEnum powerDrawKva;
+
     public UpdateSiteRackPhysicalPropertiesRequestBody withPowerDrawKva(UpdateSiteRackPhysicalPropertiesRequestBodyPowerDrawKvaEnum powerDrawKva) {
         this.powerDrawKva = powerDrawKva;
         return this;
@@ -70,6 +75,7 @@ public class UpdateSiteRackPhysicalPropertiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PowerFeedDrop")
     public UpdateSiteRackPhysicalPropertiesRequestBodyPowerFeedDropEnum powerFeedDrop;
+
     public UpdateSiteRackPhysicalPropertiesRequestBody withPowerFeedDrop(UpdateSiteRackPhysicalPropertiesRequestBodyPowerFeedDropEnum powerFeedDrop) {
         this.powerFeedDrop = powerFeedDrop;
         return this;
@@ -81,6 +87,7 @@ public class UpdateSiteRackPhysicalPropertiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PowerPhase")
     public UpdateSiteRackPhysicalPropertiesRequestBodyPowerPhaseEnum powerPhase;
+
     public UpdateSiteRackPhysicalPropertiesRequestBody withPowerPhase(UpdateSiteRackPhysicalPropertiesRequestBodyPowerPhaseEnum powerPhase) {
         this.powerPhase = powerPhase;
         return this;
@@ -92,6 +99,7 @@ public class UpdateSiteRackPhysicalPropertiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UplinkCount")
     public UpdateSiteRackPhysicalPropertiesRequestBodyUplinkCountEnum uplinkCount;
+
     public UpdateSiteRackPhysicalPropertiesRequestBody withUplinkCount(UpdateSiteRackPhysicalPropertiesRequestBodyUplinkCountEnum uplinkCount) {
         this.uplinkCount = uplinkCount;
         return this;
@@ -103,9 +111,11 @@ public class UpdateSiteRackPhysicalPropertiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UplinkGbps")
     public UpdateSiteRackPhysicalPropertiesRequestBodyUplinkGbpsEnum uplinkGbps;
+
     public UpdateSiteRackPhysicalPropertiesRequestBody withUplinkGbps(UpdateSiteRackPhysicalPropertiesRequestBodyUplinkGbpsEnum uplinkGbps) {
         this.uplinkGbps = uplinkGbps;
         return this;
     }
     
+    public UpdateSiteRackPhysicalPropertiesRequestBody(){}
 }

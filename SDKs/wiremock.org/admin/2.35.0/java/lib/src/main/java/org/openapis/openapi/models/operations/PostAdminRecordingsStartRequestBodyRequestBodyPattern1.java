@@ -18,6 +18,7 @@ public class PostAdminRecordingsStartRequestBodyRequestBodyPattern1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseInsensitive")
     public Boolean caseInsensitive;
+
     public PostAdminRecordingsStartRequestBodyRequestBodyPattern1 withCaseInsensitive(Boolean caseInsensitive) {
         this.caseInsensitive = caseInsensitive;
         return this;
@@ -29,6 +30,7 @@ public class PostAdminRecordingsStartRequestBodyRequestBodyPattern1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreArrayOrder")
     public Boolean ignoreArrayOrder;
+
     public PostAdminRecordingsStartRequestBodyRequestBodyPattern1 withIgnoreArrayOrder(Boolean ignoreArrayOrder) {
         this.ignoreArrayOrder = ignoreArrayOrder;
         return this;
@@ -40,6 +42,7 @@ public class PostAdminRecordingsStartRequestBodyRequestBodyPattern1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreExtraElements")
     public Boolean ignoreExtraElements;
+
     public PostAdminRecordingsStartRequestBodyRequestBodyPattern1 withIgnoreExtraElements(Boolean ignoreExtraElements) {
         this.ignoreExtraElements = ignoreExtraElements;
         return this;
@@ -48,9 +51,11 @@ public class PostAdminRecordingsStartRequestBodyRequestBodyPattern1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matcher")
     public PostAdminRecordingsStartRequestBodyRequestBodyPattern1MatcherEnum matcher;
+
     public PostAdminRecordingsStartRequestBodyRequestBodyPattern1 withMatcher(PostAdminRecordingsStartRequestBodyRequestBodyPattern1MatcherEnum matcher) {
         this.matcher = matcher;
         return this;
     }
     
+    public PostAdminRecordingsStartRequestBodyRequestBodyPattern1(){}
 }

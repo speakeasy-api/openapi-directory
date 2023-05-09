@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DeploymentSummary {
     @JsonProperty("applicationId")
     public String applicationId;
+
     public DeploymentSummary withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -26,6 +27,7 @@ public class DeploymentSummary {
     
     @JsonProperty("applicationVersion")
     public Long applicationVersion;
+
     public DeploymentSummary withApplicationVersion(Long applicationVersion) {
         this.applicationVersion = applicationVersion;
         return this;
@@ -35,6 +37,7 @@ public class DeploymentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public DeploymentSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -42,6 +45,7 @@ public class DeploymentSummary {
     
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public DeploymentSummary withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -49,6 +53,7 @@ public class DeploymentSummary {
     
     @JsonProperty("environmentId")
     public String environmentId;
+
     public DeploymentSummary withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -56,6 +61,7 @@ public class DeploymentSummary {
     
     @JsonProperty("status")
     public DeploymentLifecycleEnum status;
+
     public DeploymentSummary withStatus(DeploymentLifecycleEnum status) {
         this.status = status;
         return this;
@@ -64,9 +70,18 @@ public class DeploymentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public DeploymentSummary withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public DeploymentSummary(@JsonProperty("applicationId") String applicationId, @JsonProperty("applicationVersion") Long applicationVersion, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("deploymentId") String deploymentId, @JsonProperty("environmentId") String environmentId, @JsonProperty("status") DeploymentLifecycleEnum status) {
+        this.applicationId = applicationId;
+        this.applicationVersion = applicationVersion;
+        this.creationTime = creationTime;
+        this.deploymentId = deploymentId;
+        this.environmentId = environmentId;
+        this.status = status;
+  }
 }

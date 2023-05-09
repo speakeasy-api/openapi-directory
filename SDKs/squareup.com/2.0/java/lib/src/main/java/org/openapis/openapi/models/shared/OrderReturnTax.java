@@ -27,6 +27,7 @@ public class OrderReturnTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applied_money")
     public Money appliedMoney;
+
     public OrderReturnTax withAppliedMoney(Money appliedMoney) {
         this.appliedMoney = appliedMoney;
         return this;
@@ -38,6 +39,7 @@ public class OrderReturnTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_object_id")
     public String catalogObjectId;
+
     public OrderReturnTax withCatalogObjectId(String catalogObjectId) {
         this.catalogObjectId = catalogObjectId;
         return this;
@@ -49,6 +51,7 @@ public class OrderReturnTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_version")
     public Long catalogVersion;
+
     public OrderReturnTax withCatalogVersion(Long catalogVersion) {
         this.catalogVersion = catalogVersion;
         return this;
@@ -60,6 +63,7 @@ public class OrderReturnTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrderReturnTax withName(String name) {
         this.name = name;
         return this;
@@ -72,6 +76,7 @@ public class OrderReturnTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public String percentage;
+
     public OrderReturnTax withPercentage(String percentage) {
         this.percentage = percentage;
         return this;
@@ -86,6 +91,7 @@ public class OrderReturnTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public OrderReturnTax withScope(String scope) {
         this.scope = scope;
         return this;
@@ -97,6 +103,7 @@ public class OrderReturnTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_tax_uid")
     public String sourceTaxUid;
+
     public OrderReturnTax withSourceTaxUid(String sourceTaxUid) {
         this.sourceTaxUid = sourceTaxUid;
         return this;
@@ -108,6 +115,7 @@ public class OrderReturnTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public OrderReturnTax withType(String type) {
         this.type = type;
         return this;
@@ -119,9 +127,11 @@ public class OrderReturnTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public OrderReturnTax withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public OrderReturnTax(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeEndpointSettingsMessage {
     @JsonProperty("EngineName")
     public String engineName;
+
     public DescribeEndpointSettingsMessage withEngineName(String engineName) {
         this.engineName = engineName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeEndpointSettingsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeEndpointSettingsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -27,9 +29,13 @@ public class DescribeEndpointSettingsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRecords")
     public Long maxRecords;
+
     public DescribeEndpointSettingsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeEndpointSettingsMessage(@JsonProperty("EngineName") String engineName) {
+        this.engineName = engineName;
+  }
 }

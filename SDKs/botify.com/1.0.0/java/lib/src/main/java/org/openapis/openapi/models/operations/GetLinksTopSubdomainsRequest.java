@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLinksTopSubdomainsRequest {
@@ -12,6 +13,7 @@ public class GetLinksTopSubdomainsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
     public String analysisSlug;
+
     public GetLinksTopSubdomainsRequest withAnalysisSlug(String analysisSlug) {
         this.analysisSlug = analysisSlug;
         return this;
@@ -22,6 +24,7 @@ public class GetLinksTopSubdomainsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetLinksTopSubdomainsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class GetLinksTopSubdomainsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
     public String projectSlug;
+
     public GetLinksTopSubdomainsRequest withProjectSlug(String projectSlug) {
         this.projectSlug = projectSlug;
         return this;
@@ -42,6 +46,7 @@ public class GetLinksTopSubdomainsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Long size;
+
     public GetLinksTopSubdomainsRequest withSize(Long size) {
         this.size = size;
         return this;
@@ -52,9 +57,15 @@ public class GetLinksTopSubdomainsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public GetLinksTopSubdomainsRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetLinksTopSubdomainsRequest(@JsonProperty("analysis_slug") String analysisSlug, @JsonProperty("project_slug") String projectSlug, @JsonProperty("username") String username) {
+        this.analysisSlug = analysisSlug;
+        this.projectSlug = projectSlug;
+        this.username = username;
+  }
 }

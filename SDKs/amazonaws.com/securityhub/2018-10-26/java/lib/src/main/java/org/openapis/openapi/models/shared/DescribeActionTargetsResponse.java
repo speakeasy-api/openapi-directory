@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeActionTargetsResponse {
     @JsonProperty("ActionTargets")
     public ActionTarget[] actionTargets;
+
     public DescribeActionTargetsResponse withActionTargets(ActionTarget[] actionTargets) {
         this.actionTargets = actionTargets;
         return this;
@@ -22,9 +23,13 @@ public class DescribeActionTargetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeActionTargetsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeActionTargetsResponse(@JsonProperty("ActionTargets") ActionTarget[] actionTargets) {
+        this.actionTargets = actionTargets;
+  }
 }

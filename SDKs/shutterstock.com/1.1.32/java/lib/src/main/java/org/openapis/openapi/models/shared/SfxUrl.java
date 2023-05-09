@@ -15,9 +15,13 @@ public class SfxUrl {
      */
     @JsonProperty("url")
     public String url;
+
     public SfxUrl withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public SfxUrl(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

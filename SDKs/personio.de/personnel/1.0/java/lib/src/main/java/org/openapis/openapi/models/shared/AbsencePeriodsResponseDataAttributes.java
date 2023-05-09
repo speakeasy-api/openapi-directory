@@ -12,6 +12,7 @@ public class AbsencePeriodsResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificate")
     public AbsencePeriodsResponseDataAttributesCertificate certificate;
+
     public AbsencePeriodsResponseDataAttributes withCertificate(AbsencePeriodsResponseDataAttributesCertificate certificate) {
         this.certificate = certificate;
         return this;
@@ -20,6 +21,7 @@ public class AbsencePeriodsResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public AbsencePeriodsResponseDataAttributes withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -28,6 +30,7 @@ public class AbsencePeriodsResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("days_count")
     public Double daysCount;
+
     public AbsencePeriodsResponseDataAttributes withDaysCount(Double daysCount) {
         this.daysCount = daysCount;
         return this;
@@ -36,6 +39,7 @@ public class AbsencePeriodsResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee")
     public AbsencePeriodsResponseDataAttributesEmployee employee;
+
     public AbsencePeriodsResponseDataAttributes withEmployee(AbsencePeriodsResponseDataAttributesEmployee employee) {
         this.employee = employee;
         return this;
@@ -44,6 +48,7 @@ public class AbsencePeriodsResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_date")
     public String endDate;
+
     public AbsencePeriodsResponseDataAttributes withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -52,6 +57,7 @@ public class AbsencePeriodsResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("half_day_end")
     public Double halfDayEnd;
+
     public AbsencePeriodsResponseDataAttributes withHalfDayEnd(Double halfDayEnd) {
         this.halfDayEnd = halfDayEnd;
         return this;
@@ -60,6 +66,7 @@ public class AbsencePeriodsResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("half_day_start")
     public Double halfDayStart;
+
     public AbsencePeriodsResponseDataAttributes withHalfDayStart(Double halfDayStart) {
         this.halfDayStart = halfDayStart;
         return this;
@@ -68,6 +75,7 @@ public class AbsencePeriodsResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public AbsencePeriodsResponseDataAttributes withId(Long id) {
         this.id = id;
         return this;
@@ -76,6 +84,7 @@ public class AbsencePeriodsResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_date")
     public String startDate;
+
     public AbsencePeriodsResponseDataAttributes withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -84,6 +93,7 @@ public class AbsencePeriodsResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public AbsencePeriodsResponseDataAttributes withStatus(String status) {
         this.status = status;
         return this;
@@ -92,9 +102,11 @@ public class AbsencePeriodsResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_off_type")
     public AbsencePeriodsResponseDataAttributesTimeOffType timeOffType;
+
     public AbsencePeriodsResponseDataAttributes withTimeOffType(AbsencePeriodsResponseDataAttributesTimeOffType timeOffType) {
         this.timeOffType = timeOffType;
         return this;
     }
     
+    public AbsencePeriodsResponseDataAttributes(){}
 }

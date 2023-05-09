@@ -61,11 +61,9 @@ public class Folders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersCreateResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersCreateResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Folders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersListResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersListResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersListResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersListResponse(contentType, httpRes.statusCode()) {{
             listFoldersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Folders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersSearchResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersSearchResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerFoldersSearchResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerFoldersSearchResponse(contentType, httpRes.statusCode()) {{
             searchFoldersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

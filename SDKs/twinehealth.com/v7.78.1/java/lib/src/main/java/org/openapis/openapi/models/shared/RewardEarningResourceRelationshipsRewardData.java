@@ -12,6 +12,7 @@ public class RewardEarningResourceRelationshipsRewardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public RewardEarningResourceRelationshipsRewardData withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class RewardEarningResourceRelationshipsRewardData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public RewardEarningResourceRelationshipsRewardData withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RewardEarningResourceRelationshipsRewardData(){}
 }

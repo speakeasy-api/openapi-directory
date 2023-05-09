@@ -15,6 +15,7 @@ public class DescribeEventTopicsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public DescribeEventTopicsRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -23,9 +24,11 @@ public class DescribeEventTopicsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TopicNames")
     public String[] topicNames;
+
     public DescribeEventTopicsRequest withTopicNames(String[] topicNames) {
         this.topicNames = topicNames;
         return this;
     }
     
+    public DescribeEventTopicsRequest(){}
 }

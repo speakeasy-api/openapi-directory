@@ -15,9 +15,11 @@ public class BatchDisassociateClientDeviceFromCoreDeviceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public org.openapis.openapi.models.shared.DisassociateClientDeviceFromCoreDeviceEntry[] entries;
+
     public BatchDisassociateClientDeviceFromCoreDeviceRequestBody withEntries(org.openapis.openapi.models.shared.DisassociateClientDeviceFromCoreDeviceEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public BatchDisassociateClientDeviceFromCoreDeviceRequestBody(){}
 }

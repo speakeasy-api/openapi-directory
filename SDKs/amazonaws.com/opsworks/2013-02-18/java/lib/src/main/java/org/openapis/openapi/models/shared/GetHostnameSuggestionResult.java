@@ -15,6 +15,7 @@ public class GetHostnameSuggestionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hostname")
     public String hostname;
+
     public GetHostnameSuggestionResult withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -23,9 +24,11 @@ public class GetHostnameSuggestionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LayerId")
     public String layerId;
+
     public GetHostnameSuggestionResult withLayerId(String layerId) {
         this.layerId = layerId;
         return this;
     }
     
+    public GetHostnameSuggestionResult(){}
 }

@@ -15,6 +15,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public Long createdAt;
+
     public Site withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -23,6 +24,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Site withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludes")
     public String excludes;
+
     public Site withExcludes(String excludes) {
         this.excludes = excludes;
         return this;
@@ -38,6 +41,7 @@ public class Site {
     
     @JsonProperty("id")
     public String id;
+
     public Site withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +49,7 @@ public class Site {
     
     @JsonProperty("name")
     public String name;
+
     public Site withName(String name) {
         this.name = name;
         return this;
@@ -53,6 +58,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permanent")
     public Boolean permanent;
+
     public Site withPermanent(Boolean permanent) {
         this.permanent = permanent;
         return this;
@@ -61,6 +67,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public Site withScope(String scope) {
         this.scope = scope;
         return this;
@@ -69,6 +76,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnets")
     public java.util.Map<String, Object> subnets;
+
     public Site withSubnets(java.util.Map<String, Object> subnets) {
         this.subnets = subnets;
         return this;
@@ -77,9 +85,14 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public Long updatedAt;
+
     public Site withUpdatedAt(Long updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Site(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

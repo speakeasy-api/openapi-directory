@@ -18,6 +18,7 @@ public class GoogleCloudConnectorsV1LockConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locked")
     public Boolean locked;
+
     public GoogleCloudConnectorsV1LockConfig withLocked(Boolean locked) {
         this.locked = locked;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudConnectorsV1LockConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public GoogleCloudConnectorsV1LockConfig withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public GoogleCloudConnectorsV1LockConfig(){}
 }

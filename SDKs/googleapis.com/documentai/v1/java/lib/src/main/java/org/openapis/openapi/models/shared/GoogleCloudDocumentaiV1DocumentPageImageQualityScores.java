@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1DocumentPageImageQualityScores {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedDefects")
     public GoogleCloudDocumentaiV1DocumentPageImageQualityScoresDetectedDefect[] detectedDefects;
+
     public GoogleCloudDocumentaiV1DocumentPageImageQualityScores withDetectedDefects(GoogleCloudDocumentaiV1DocumentPageImageQualityScoresDetectedDefect[] detectedDefects) {
         this.detectedDefects = detectedDefects;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1DocumentPageImageQualityScores {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qualityScore")
     public Float qualityScore;
+
     public GoogleCloudDocumentaiV1DocumentPageImageQualityScores withQualityScore(Float qualityScore) {
         this.qualityScore = qualityScore;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1DocumentPageImageQualityScores(){}
 }

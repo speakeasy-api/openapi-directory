@@ -133,6 +133,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.cache = new Cache(
@@ -246,12 +251,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEnvironmentResponse res = new org.openapis.openapi.models.operations.GetEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.GetEnvironmentResponse res = new org.openapis.openapi.models.operations.GetEnvironmentResponse(contentType, httpRes.statusCode()) {{
             getEnvironment200ApplicationJSONObject = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -292,11 +295,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SpecNoTagsResponse res = new org.openapis.openapi.models.operations.SpecNoTagsResponse() {{
+        org.openapis.openapi.models.operations.SpecNoTagsResponse res = new org.openapis.openapi.models.operations.SpecNoTagsResponse(contentType, httpRes.statusCode()) {{
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

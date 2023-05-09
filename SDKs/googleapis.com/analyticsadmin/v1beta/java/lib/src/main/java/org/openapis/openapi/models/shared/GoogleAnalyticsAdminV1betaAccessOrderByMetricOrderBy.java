@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1betaAccessOrderByMetricOrderBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricName")
     public String metricName;
+
     public GoogleAnalyticsAdminV1betaAccessOrderByMetricOrderBy withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaAccessOrderByMetricOrderBy(){}
 }

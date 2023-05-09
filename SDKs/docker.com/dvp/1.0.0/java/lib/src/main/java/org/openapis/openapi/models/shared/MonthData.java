@@ -12,9 +12,11 @@ public class MonthData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("months")
     public MonthModel[] months;
+
     public MonthData withMonths(MonthModel[] months) {
         this.months = months;
         return this;
     }
     
+    public MonthData(){}
 }

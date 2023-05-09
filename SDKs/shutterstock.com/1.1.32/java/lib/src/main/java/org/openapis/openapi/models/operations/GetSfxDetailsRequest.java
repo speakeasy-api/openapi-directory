@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSfxDetailsRequest {
@@ -12,6 +13,7 @@ public class GetSfxDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetSfxDetailsRequest withId(Long id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class GetSfxDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public org.openapis.openapi.models.shared.LanguageEnum language;
+
     public GetSfxDetailsRequest withLanguage(org.openapis.openapi.models.shared.LanguageEnum language) {
         this.language = language;
         return this;
@@ -32,6 +35,7 @@ public class GetSfxDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=library")
     public GetSfxDetailsLibraryEnum library;
+
     public GetSfxDetailsRequest withLibrary(GetSfxDetailsLibraryEnum library) {
         this.library = library;
         return this;
@@ -42,6 +46,7 @@ public class GetSfxDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_id")
     public String searchId;
+
     public GetSfxDetailsRequest withSearchId(String searchId) {
         this.searchId = searchId;
         return this;
@@ -52,9 +57,13 @@ public class GetSfxDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public GetSfxDetailsViewEnum view;
+
     public GetSfxDetailsRequest withView(GetSfxDetailsViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public GetSfxDetailsRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

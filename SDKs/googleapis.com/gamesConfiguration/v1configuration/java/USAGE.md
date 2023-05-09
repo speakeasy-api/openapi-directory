@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsDeleteSecurity;
 import org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsDeleteRequest;
 import org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsDeleteResponse;
+import org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsDeleteSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -16,11 +15,10 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GamesConfigurationAchievementConfigurationsDeleteRequest req = new GamesConfigurationAchievementConfigurationsDeleteRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                achievementId = "distinctio";
-                alt = "proto";
+            GamesConfigurationAchievementConfigurationsDeleteRequest req = new GamesConfigurationAchievementConfigurationsDeleteRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
                 callback = "unde";
                 fields = "nulla";
                 key = "corrupti";
@@ -29,9 +27,9 @@ public class Application {
                 quotaUser = "vel";
                 uploadType = "error";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
-            GamesConfigurationAchievementConfigurationsDeleteResponse res = sdk.achievementConfigurations.gamesConfigurationAchievementConfigurationsDelete(req, new GamesConfigurationAchievementConfigurationsDeleteSecurity() {{
+            GamesConfigurationAchievementConfigurationsDeleteResponse res = sdk.achievementConfigurations.gamesConfigurationAchievementConfigurationsDelete(req, new GamesConfigurationAchievementConfigurationsDeleteSecurity("suscipit", "iure") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
@@ -42,5 +40,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

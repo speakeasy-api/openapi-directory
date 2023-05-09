@@ -12,6 +12,7 @@ public class EditableMetaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EditableMetaData withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class EditableMetaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String[] labels;
+
     public EditableMetaData withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -28,6 +30,7 @@ public class EditableMetaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EditableMetaData withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class EditableMetaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public EditableMetaData withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
     }
     
+    public EditableMetaData(){}
 }

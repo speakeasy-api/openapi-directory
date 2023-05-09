@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateUserAccessLoggingSettingsResponse {
@@ -12,6 +13,7 @@ public class DisassociateUserAccessLoggingSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateUserAccessLoggingSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateUserAccessLoggingSettingsResponse {
     
     
     public String contentType;
+
     public DisassociateUserAccessLoggingSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateUserAccessLoggingSettingsResponse {
      */
     
     public java.util.Map<String, Object> disassociateUserAccessLoggingSettingsResponse;
+
     public DisassociateUserAccessLoggingSettingsResponse withDisassociateUserAccessLoggingSettingsResponse(java.util.Map<String, Object> disassociateUserAccessLoggingSettingsResponse) {
         this.disassociateUserAccessLoggingSettingsResponse = disassociateUserAccessLoggingSettingsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateUserAccessLoggingSettingsResponse {
      */
     
     public Object internalServerException;
+
     public DisassociateUserAccessLoggingSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DisassociateUserAccessLoggingSettingsResponse {
     
     
     public Integer statusCode;
+
     public DisassociateUserAccessLoggingSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DisassociateUserAccessLoggingSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateUserAccessLoggingSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateUserAccessLoggingSettingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateUserAccessLoggingSettingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DisassociateUserAccessLoggingSettingsResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateUserAccessLoggingSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DisassociateUserAccessLoggingSettingsResponse {
      */
     
     public Object validationException;
+
     public DisassociateUserAccessLoggingSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateUserAccessLoggingSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

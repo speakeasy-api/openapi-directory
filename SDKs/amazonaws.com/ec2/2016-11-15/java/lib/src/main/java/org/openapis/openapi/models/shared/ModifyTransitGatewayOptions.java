@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyTransitGatewayOptions {
     
     public String[] addTransitGatewayCidrBlocks;
+
     public ModifyTransitGatewayOptions withAddTransitGatewayCidrBlocks(String[] addTransitGatewayCidrBlocks) {
         this.addTransitGatewayCidrBlocks = addTransitGatewayCidrBlocks;
         return this;
@@ -19,6 +20,7 @@ public class ModifyTransitGatewayOptions {
     
     
     public Long amazonSideAsn;
+
     public ModifyTransitGatewayOptions withAmazonSideAsn(Long amazonSideAsn) {
         this.amazonSideAsn = amazonSideAsn;
         return this;
@@ -26,6 +28,7 @@ public class ModifyTransitGatewayOptions {
     
     
     public String associationDefaultRouteTableId;
+
     public ModifyTransitGatewayOptions withAssociationDefaultRouteTableId(String associationDefaultRouteTableId) {
         this.associationDefaultRouteTableId = associationDefaultRouteTableId;
         return this;
@@ -33,6 +36,7 @@ public class ModifyTransitGatewayOptions {
     
     
     public AutoAcceptSharedAttachmentsValueEnum autoAcceptSharedAttachments;
+
     public ModifyTransitGatewayOptions withAutoAcceptSharedAttachments(AutoAcceptSharedAttachmentsValueEnum autoAcceptSharedAttachments) {
         this.autoAcceptSharedAttachments = autoAcceptSharedAttachments;
         return this;
@@ -40,6 +44,7 @@ public class ModifyTransitGatewayOptions {
     
     
     public DefaultRouteTableAssociationValueEnum defaultRouteTableAssociation;
+
     public ModifyTransitGatewayOptions withDefaultRouteTableAssociation(DefaultRouteTableAssociationValueEnum defaultRouteTableAssociation) {
         this.defaultRouteTableAssociation = defaultRouteTableAssociation;
         return this;
@@ -47,6 +52,7 @@ public class ModifyTransitGatewayOptions {
     
     
     public DefaultRouteTablePropagationValueEnum defaultRouteTablePropagation;
+
     public ModifyTransitGatewayOptions withDefaultRouteTablePropagation(DefaultRouteTablePropagationValueEnum defaultRouteTablePropagation) {
         this.defaultRouteTablePropagation = defaultRouteTablePropagation;
         return this;
@@ -54,6 +60,7 @@ public class ModifyTransitGatewayOptions {
     
     
     public DnsSupportValueEnum dnsSupport;
+
     public ModifyTransitGatewayOptions withDnsSupport(DnsSupportValueEnum dnsSupport) {
         this.dnsSupport = dnsSupport;
         return this;
@@ -61,6 +68,7 @@ public class ModifyTransitGatewayOptions {
     
     
     public String propagationDefaultRouteTableId;
+
     public ModifyTransitGatewayOptions withPropagationDefaultRouteTableId(String propagationDefaultRouteTableId) {
         this.propagationDefaultRouteTableId = propagationDefaultRouteTableId;
         return this;
@@ -68,6 +76,7 @@ public class ModifyTransitGatewayOptions {
     
     
     public String[] removeTransitGatewayCidrBlocks;
+
     public ModifyTransitGatewayOptions withRemoveTransitGatewayCidrBlocks(String[] removeTransitGatewayCidrBlocks) {
         this.removeTransitGatewayCidrBlocks = removeTransitGatewayCidrBlocks;
         return this;
@@ -75,9 +84,11 @@ public class ModifyTransitGatewayOptions {
     
     
     public VpnEcmpSupportValueEnum vpnEcmpSupport;
+
     public ModifyTransitGatewayOptions withVpnEcmpSupport(VpnEcmpSupportValueEnum vpnEcmpSupport) {
         this.vpnEcmpSupport = vpnEcmpSupport;
         return this;
     }
     
+    public ModifyTransitGatewayOptions(){}
 }

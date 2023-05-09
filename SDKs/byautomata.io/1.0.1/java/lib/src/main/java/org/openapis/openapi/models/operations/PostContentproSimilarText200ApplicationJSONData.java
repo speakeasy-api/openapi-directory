@@ -12,6 +12,7 @@ public class PostContentproSimilarText200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("article")
     public org.openapis.openapi.models.shared.Article article;
+
     public PostContentproSimilarText200ApplicationJSONData withArticle(org.openapis.openapi.models.shared.Article article) {
         this.article = article;
         return this;
@@ -20,6 +21,7 @@ public class PostContentproSimilarText200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     public org.openapis.openapi.models.shared.ContentProCompany company;
+
     public PostContentproSimilarText200ApplicationJSONData withCompany(org.openapis.openapi.models.shared.ContentProCompany company) {
         this.company = company;
         return this;
@@ -28,9 +30,11 @@ public class PostContentproSimilarText200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippets")
     public org.openapis.openapi.models.shared.ContentProSnippets snippets;
+
     public PostContentproSimilarText200ApplicationJSONData withSnippets(org.openapis.openapi.models.shared.ContentProSnippets snippets) {
         this.snippets = snippets;
         return this;
     }
     
+    public PostContentproSimilarText200ApplicationJSONData(){}
 }

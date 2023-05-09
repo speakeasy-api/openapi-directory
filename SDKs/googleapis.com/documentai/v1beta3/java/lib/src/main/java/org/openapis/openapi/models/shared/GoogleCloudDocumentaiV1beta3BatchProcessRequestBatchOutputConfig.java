@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchOutputConfig - The message for output config in batch process.
+ * GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchOutputConfig - The output configuration in the BatchProcessDocuments method.
  */
 public class GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchOutputConfig {
     /**
@@ -18,9 +18,11 @@ public class GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsDestination")
     public String gcsDestination;
+
     public GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchOutputConfig withGcsDestination(String gcsDestination) {
         this.gcsDestination = gcsDestination;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchOutputConfig(){}
 }

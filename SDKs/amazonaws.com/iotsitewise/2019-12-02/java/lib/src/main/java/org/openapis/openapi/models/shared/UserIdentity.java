@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UserIdentity {
     @JsonProperty("id")
     public String id;
+
     public UserIdentity withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UserIdentity(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

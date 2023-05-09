@@ -15,9 +15,13 @@ public class GetEndpointResponse {
      */
     @JsonProperty("EndpointResponse")
     public EndpointResponse endpointResponse;
+
     public GetEndpointResponse withEndpointResponse(EndpointResponse endpointResponse) {
         this.endpointResponse = endpointResponse;
         return this;
     }
     
+    public GetEndpointResponse(@JsonProperty("EndpointResponse") EndpointResponse endpointResponse) {
+        this.endpointResponse = endpointResponse;
+  }
 }

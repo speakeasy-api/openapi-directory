@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WxByRouteUsV1WxForecastRouteQueryPostResponse {
     
     public String contentType;
+
     public WxByRouteUsV1WxForecastRouteQueryPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class WxByRouteUsV1WxForecastRouteQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public WxByRouteUsV1WxForecastRouteQueryPostResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -26,6 +29,7 @@ public class WxByRouteUsV1WxForecastRouteQueryPostResponse {
     
     
     public Integer statusCode;
+
     public WxByRouteUsV1WxForecastRouteQueryPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class WxByRouteUsV1WxForecastRouteQueryPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WxByRouteUsV1WxForecastRouteQueryPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class WxByRouteUsV1WxForecastRouteQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.WxRouteResponse wxRouteResponse;
+
     public WxByRouteUsV1WxForecastRouteQueryPostResponse withWxRouteResponse(org.openapis.openapi.models.shared.WxRouteResponse wxRouteResponse) {
         this.wxRouteResponse = wxRouteResponse;
         return this;
     }
     
+    public WxByRouteUsV1WxForecastRouteQueryPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

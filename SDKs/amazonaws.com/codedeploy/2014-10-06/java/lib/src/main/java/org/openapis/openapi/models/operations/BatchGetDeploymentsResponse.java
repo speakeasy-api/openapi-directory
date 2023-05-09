@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetDeploymentsResponse {
@@ -12,6 +13,7 @@ public class BatchGetDeploymentsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetDeploymentsOutput batchGetDeploymentsOutput;
+
     public BatchGetDeploymentsResponse withBatchGetDeploymentsOutput(org.openapis.openapi.models.shared.BatchGetDeploymentsOutput batchGetDeploymentsOutput) {
         this.batchGetDeploymentsOutput = batchGetDeploymentsOutput;
         return this;
@@ -22,6 +24,7 @@ public class BatchGetDeploymentsResponse {
      */
     
     public Object batchLimitExceededException;
+
     public BatchGetDeploymentsResponse withBatchLimitExceededException(Object batchLimitExceededException) {
         this.batchLimitExceededException = batchLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetDeploymentsResponse {
     
     
     public String contentType;
+
     public BatchGetDeploymentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetDeploymentsResponse {
      */
     
     public Object deploymentIdRequiredException;
+
     public BatchGetDeploymentsResponse withDeploymentIdRequiredException(Object deploymentIdRequiredException) {
         this.deploymentIdRequiredException = deploymentIdRequiredException;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetDeploymentsResponse {
      */
     
     public Object invalidDeploymentIdException;
+
     public BatchGetDeploymentsResponse withInvalidDeploymentIdException(Object invalidDeploymentIdException) {
         this.invalidDeploymentIdException = invalidDeploymentIdException;
         return this;
@@ -56,6 +62,7 @@ public class BatchGetDeploymentsResponse {
     
     
     public Integer statusCode;
+
     public BatchGetDeploymentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class BatchGetDeploymentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetDeploymentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchGetDeploymentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

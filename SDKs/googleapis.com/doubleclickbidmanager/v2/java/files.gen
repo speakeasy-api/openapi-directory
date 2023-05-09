@@ -84,4 +84,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ReportStatus.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReportKey.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListReportsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/RunQueryRequest.java
+docs/sdk/README.md
+docs/queries/README.md
 USAGE.md

@@ -15,9 +15,11 @@ public class ListObjectParentPathsRequestBodyObjectReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Selector")
     public String selector;
+
     public ListObjectParentPathsRequestBodyObjectReference withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public ListObjectParentPathsRequestBodyObjectReference(){}
 }

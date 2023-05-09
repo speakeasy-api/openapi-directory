@@ -20,6 +20,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public String attributes;
+
     public Event withAttributes(String attributes) {
         this.attributes = attributes;
         return this;
@@ -28,6 +29,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chat_prompt")
     public String chatPrompt;
+
     public Event withChatPrompt(String chatPrompt) {
         this.chatPrompt = chatPrompt;
         return this;
@@ -36,6 +38,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversation_id")
     public String conversationId;
+
     public Event withConversationId(String conversationId) {
         this.conversationId = conversationId;
         return this;
@@ -46,6 +49,7 @@ public class Event {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Event withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -54,6 +58,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public String createdBy;
+
     public Event withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -62,6 +67,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dom_selectors")
     public String domSelectors;
+
     public Event withDomSelectors(String domSelectors) {
         this.domSelectors = domSelectors;
         return this;
@@ -70,6 +76,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Event withId(String id) {
         this.id = id;
         return this;
@@ -78,6 +85,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_chat_hidden")
     public Boolean isChatHidden;
+
     public Event withIsChatHidden(Boolean isChatHidden) {
         this.isChatHidden = isChatHidden;
         return this;
@@ -86,6 +94,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_notify_enabled")
     public Boolean isNotifyEnabled;
+
     public Event withIsNotifyEnabled(Boolean isNotifyEnabled) {
         this.isNotifyEnabled = isNotifyEnabled;
         return this;
@@ -94,6 +103,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Event withName(String name) {
         this.name = name;
         return this;
@@ -104,6 +114,7 @@ public class Event {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public Event withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -112,9 +123,11 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_by")
     public String updatedBy;
+
     public Event withUpdatedBy(String updatedBy) {
         this.updatedBy = updatedBy;
         return this;
     }
     
+    public Event(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendRemindersResponse {
     
     public String contentType;
+
     public SendRemindersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SendRemindersResponse {
      */
     
     public org.openapis.openapi.models.shared.SendRemindersResponseDTO sendRemindersResponseDTO;
+
     public SendRemindersResponse withSendRemindersResponseDTO(org.openapis.openapi.models.shared.SendRemindersResponseDTO sendRemindersResponseDTO) {
         this.sendRemindersResponseDTO = sendRemindersResponseDTO;
         return this;
@@ -26,6 +29,7 @@ public class SendRemindersResponse {
     
     
     public Integer statusCode;
+
     public SendRemindersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SendRemindersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendRemindersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SendRemindersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

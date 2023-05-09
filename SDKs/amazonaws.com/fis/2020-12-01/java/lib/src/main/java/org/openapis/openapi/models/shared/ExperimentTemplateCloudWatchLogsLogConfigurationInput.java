@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExperimentTemplateCloudWatchLogsLogConfigurationInput {
     @JsonProperty("logGroupArn")
     public String logGroupArn;
+
     public ExperimentTemplateCloudWatchLogsLogConfigurationInput withLogGroupArn(String logGroupArn) {
         this.logGroupArn = logGroupArn;
         return this;
     }
     
+    public ExperimentTemplateCloudWatchLogsLogConfigurationInput(@JsonProperty("logGroupArn") String logGroupArn) {
+        this.logGroupArn = logGroupArn;
+  }
 }

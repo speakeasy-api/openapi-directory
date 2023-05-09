@@ -15,9 +15,11 @@ public class InterconnectRemoteLocationPermittedConnections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interconnectLocation")
     public String interconnectLocation;
+
     public InterconnectRemoteLocationPermittedConnections withInterconnectLocation(String interconnectLocation) {
         this.interconnectLocation = interconnectLocation;
         return this;
     }
     
+    public InterconnectRemoteLocationPermittedConnections(){}
 }

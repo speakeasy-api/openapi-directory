@@ -9,62 +9,68 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Database - Represents database access information, such as queries. A database may be a sub-resource of an instance (as in the case of CloudSQL instances or Cloud Spanner instances), or the database instance itself. Some database resources may not have the full resource name populated because these resource types are not yet supported by Cloud Asset Inventory (e.g. CloudSQL databases). In these cases only the display name will be provided.
+ * Database - Represents database access information, such as queries. A database may be a sub-resource of an instance (as in the case of Cloud SQL instances or Cloud Spanner instances), or the database instance itself. Some database resources might not have the [full resource name](https://google.aip.dev/122#full-resource-names) populated because these resource types, such as Cloud SQL databases, are not yet supported by Cloud Asset Inventory. In these cases only the display name is provided. Some database resources may not have the [full resource name](https://google.aip.dev/122#full-resource-names) populated because these resource types are not yet supported by Cloud Asset Inventory (e.g. Cloud SQL databases). In these cases only the display name will be provided.
  */
 public class Database {
     /**
-     * The human readable name of the database the user connected to.
+     * The human-readable name of the database that the user connected to.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Database withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
     /**
-     * The target usernames/roles/groups of a SQL privilege grant (not an IAM policy change).
+     * The target usernames, roles, or groups of an SQL privilege grant, which is not an IAM policy change.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grantees")
     public String[] grantees;
+
     public Database withGrantees(String[] grantees) {
         this.grantees = grantees;
         return this;
     }
     
     /**
-     * The full resource name of the database the user connected to, if it is supported by CAI. (https://google.aip.dev/122#full-resource-names)
+     * The [full resource name](https://google.aip.dev/122#full-resource-names) of the database that the user connected to, if it is supported by Cloud Asset Inventory.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Database withName(String name) {
         this.name = name;
         return this;
     }
     
     /**
-     * The SQL statement associated with the relevant access.
+     * The SQL statement that is associated with the database access.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public Database withQuery(String query) {
         this.query = query;
         return this;
     }
     
     /**
-     * The username used to connect to the DB. This may not necessarily be an IAM principal, and has no required format.
+     * The username used to connect to the database. The username might not be an IAM principal and does not have a set format.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userName")
     public String userName;
+
     public Database withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public Database(){}
 }

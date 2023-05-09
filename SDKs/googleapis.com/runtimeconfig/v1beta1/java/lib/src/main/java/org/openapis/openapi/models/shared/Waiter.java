@@ -18,6 +18,7 @@ public class Waiter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Waiter withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Waiter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("done")
     public Boolean done;
+
     public Waiter withDone(Boolean done) {
         this.done = done;
         return this;
@@ -40,6 +42,7 @@ public class Waiter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Status error;
+
     public Waiter withError(Status error) {
         this.error = error;
         return this;
@@ -51,6 +54,7 @@ public class Waiter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failure")
     public EndCondition failure;
+
     public Waiter withFailure(EndCondition failure) {
         this.failure = failure;
         return this;
@@ -62,6 +66,7 @@ public class Waiter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Waiter withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class Waiter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public EndCondition success;
+
     public Waiter withSuccess(EndCondition success) {
         this.success = success;
         return this;
@@ -84,9 +90,11 @@ public class Waiter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public String timeout;
+
     public Waiter withTimeout(String timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public Waiter(){}
 }

@@ -13,11 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class DeployJobRun {
     /**
+     * The artifacts produced by a deploy operation.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("artifact")
+    public DeployArtifact artifact;
+
+    public DeployJobRun withArtifact(DeployArtifact artifact) {
+        this.artifact = artifact;
+        return this;
+    }
+    
+    /**
      * Output only. The resource name of the Cloud Build `Build` object that is used to deploy. Format is projects/{project}/locations/{location}/builds/{build}.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build")
     public String build;
+
     public DeployJobRun withBuild(String build) {
         this.build = build;
         return this;
@@ -29,6 +42,7 @@ public class DeployJobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCause")
     public DeployJobRunFailureCauseEnum failureCause;
+
     public DeployJobRun withFailureCause(DeployJobRunFailureCauseEnum failureCause) {
         this.failureCause = failureCause;
         return this;
@@ -40,6 +54,7 @@ public class DeployJobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureMessage")
     public String failureMessage;
+
     public DeployJobRun withFailureMessage(String failureMessage) {
         this.failureMessage = failureMessage;
         return this;
@@ -51,9 +66,11 @@ public class DeployJobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public DeployJobRunMetadata metadata;
+
     public DeployJobRun withMetadata(DeployJobRunMetadata metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public DeployJobRun(){}
 }

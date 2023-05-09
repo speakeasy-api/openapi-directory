@@ -18,6 +18,7 @@ public class ShippingsettingsCustomBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public ShippingsettingsCustomBatchResponseEntry[] entries;
+
     public ShippingsettingsCustomBatchResponse withEntries(ShippingsettingsCustomBatchResponseEntry[] entries) {
         this.entries = entries;
         return this;
@@ -29,9 +30,11 @@ public class ShippingsettingsCustomBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ShippingsettingsCustomBatchResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public ShippingsettingsCustomBatchResponse(){}
 }

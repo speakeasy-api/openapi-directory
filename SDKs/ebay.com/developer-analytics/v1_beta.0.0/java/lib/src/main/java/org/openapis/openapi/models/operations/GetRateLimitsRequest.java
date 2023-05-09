@@ -12,6 +12,7 @@ public class GetRateLimitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_context")
     public String apiContext;
+
     public GetRateLimitsRequest withApiContext(String apiContext) {
         this.apiContext = apiContext;
         return this;
@@ -22,9 +23,11 @@ public class GetRateLimitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_name")
     public String apiName;
+
     public GetRateLimitsRequest withApiName(String apiName) {
         this.apiName = apiName;
         return this;
     }
     
+    public GetRateLimitsRequest(){}
 }

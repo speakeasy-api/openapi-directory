@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UsageLimitList {
     
     public String marker;
+
     public UsageLimitList withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,9 +20,11 @@ public class UsageLimitList {
     
     
     public UsageLimit[] usageLimits;
+
     public UsageLimitList withUsageLimits(UsageLimit[] usageLimits) {
         this.usageLimits = usageLimits;
         return this;
     }
     
+    public UsageLimitList(){}
 }

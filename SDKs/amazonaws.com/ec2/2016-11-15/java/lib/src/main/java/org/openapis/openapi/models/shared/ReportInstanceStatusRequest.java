@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 public class ReportInstanceStatusRequest {
     
     public String description;
+
     public ReportInstanceStatusRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -16,6 +18,7 @@ public class ReportInstanceStatusRequest {
     
     
     public Boolean dryRun;
+
     public ReportInstanceStatusRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +26,7 @@ public class ReportInstanceStatusRequest {
     
     
     public OffsetDateTime endTime;
+
     public ReportInstanceStatusRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -30,6 +34,7 @@ public class ReportInstanceStatusRequest {
     
     
     public String[] instances;
+
     public ReportInstanceStatusRequest withInstances(String[] instances) {
         this.instances = instances;
         return this;
@@ -37,6 +42,7 @@ public class ReportInstanceStatusRequest {
     
     
     public ReportInstanceStatusRequestReasonCodesEnum[] reasonCodes;
+
     public ReportInstanceStatusRequest withReasonCodes(ReportInstanceStatusRequestReasonCodesEnum[] reasonCodes) {
         this.reasonCodes = reasonCodes;
         return this;
@@ -44,6 +50,7 @@ public class ReportInstanceStatusRequest {
     
     
     public OffsetDateTime startTime;
+
     public ReportInstanceStatusRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -51,9 +58,15 @@ public class ReportInstanceStatusRequest {
     
     
     public ReportInstanceStatusRequestStatusEnum status;
+
     public ReportInstanceStatusRequest withStatus(ReportInstanceStatusRequestStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ReportInstanceStatusRequest(@JsonProperty("Instances") String[] instances, @JsonProperty("ReasonCodes") ReportInstanceStatusRequestReasonCodesEnum[] reasonCodes, @JsonProperty("Status") ReportInstanceStatusRequestStatusEnum status) {
+        this.instances = instances;
+        this.reasonCodes = reasonCodes;
+        this.status = status;
+  }
 }

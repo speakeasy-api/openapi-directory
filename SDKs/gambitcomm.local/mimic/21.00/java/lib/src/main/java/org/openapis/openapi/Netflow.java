@@ -52,11 +52,9 @@ public class Netflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolNetflowChangeAttrResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowChangeAttrResponse() {{
+        org.openapis.openapi.models.operations.ProtocolNetflowChangeAttrResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowChangeAttrResponse(contentType, httpRes.statusCode()) {{
             protocolNetflowChangeAttr200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -93,11 +91,9 @@ public class Netflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolNetflowChangeDfsResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowChangeDfsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolNetflowChangeDfsResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowChangeDfsResponse(contentType, httpRes.statusCode()) {{
             protocolNetflowChangeDfs200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -134,11 +130,9 @@ public class Netflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolNetflowChangeTfsResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowChangeTfsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolNetflowChangeTfsResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowChangeTfsResponse(contentType, httpRes.statusCode()) {{
             protocolNetflowChangeTfs200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -175,11 +169,9 @@ public class Netflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolNetflowGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowGetArgsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolNetflowGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowGetArgsResponse(contentType, httpRes.statusCode()) {{
             protocolNetflowGetArgs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -217,11 +209,9 @@ public class Netflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolNetflowGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowGetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolNetflowGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowGetConfigResponse(contentType, httpRes.statusCode()) {{
             configNETFLOW = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -259,11 +249,9 @@ public class Netflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolNetflowGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowGetStatisticsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolNetflowGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowGetStatisticsResponse(contentType, httpRes.statusCode()) {{
             protocolNetflowGetStatistics200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,11 +288,9 @@ public class Netflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolNetflowGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowGetStatsHdrResponse() {{
+        org.openapis.openapi.models.operations.ProtocolNetflowGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowGetStatsHdrResponse(contentType, httpRes.statusCode()) {{
             protocolNetflowGetStatsHdr200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +328,9 @@ public class Netflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolNetflowGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowGetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolNetflowGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowGetTraceResponse(contentType, httpRes.statusCode()) {{
             configNETFLOW = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -384,11 +368,9 @@ public class Netflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolNetflowHaltResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowHaltResponse() {{
+        org.openapis.openapi.models.operations.ProtocolNetflowHaltResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowHaltResponse(contentType, httpRes.statusCode()) {{
             protocolNetflowHalt200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -425,11 +407,9 @@ public class Netflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolNetflowListResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowListResponse() {{
+        org.openapis.openapi.models.operations.ProtocolNetflowListResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowListResponse(contentType, httpRes.statusCode()) {{
             protocolNetflowList200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -467,11 +447,9 @@ public class Netflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolNetflowReloadResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowReloadResponse() {{
+        org.openapis.openapi.models.operations.ProtocolNetflowReloadResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowReloadResponse(contentType, httpRes.statusCode()) {{
             protocolNetflowReload200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -508,11 +486,9 @@ public class Netflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolNetflowResumeResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowResumeResponse() {{
+        org.openapis.openapi.models.operations.ProtocolNetflowResumeResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowResumeResponse(contentType, httpRes.statusCode()) {{
             protocolNetflowResume200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -549,11 +525,9 @@ public class Netflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolNetflowSetCollectorResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowSetCollectorResponse() {{
+        org.openapis.openapi.models.operations.ProtocolNetflowSetCollectorResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowSetCollectorResponse(contentType, httpRes.statusCode()) {{
             protocolNetflowSetCollector200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -590,11 +564,9 @@ public class Netflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolNetflowSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowSetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolNetflowSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowSetConfigResponse(contentType, httpRes.statusCode()) {{
             protocolNetflowSetConfig200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -631,11 +603,9 @@ public class Netflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolNetflowSetFileNameResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowSetFileNameResponse() {{
+        org.openapis.openapi.models.operations.ProtocolNetflowSetFileNameResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowSetFileNameResponse(contentType, httpRes.statusCode()) {{
             protocolNetflowSetFileName200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -672,11 +642,9 @@ public class Netflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolNetflowSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowSetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolNetflowSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolNetflowSetTraceResponse(contentType, httpRes.statusCode()) {{
             protocolNetflowSetTrace200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

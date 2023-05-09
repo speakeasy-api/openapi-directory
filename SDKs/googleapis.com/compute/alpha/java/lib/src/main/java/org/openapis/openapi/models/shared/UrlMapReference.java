@@ -12,9 +12,11 @@ public class UrlMapReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlMap")
     public String urlMap;
+
     public UrlMapReference withUrlMap(String urlMap) {
         this.urlMap = urlMap;
         return this;
     }
     
+    public UrlMapReference(){}
 }

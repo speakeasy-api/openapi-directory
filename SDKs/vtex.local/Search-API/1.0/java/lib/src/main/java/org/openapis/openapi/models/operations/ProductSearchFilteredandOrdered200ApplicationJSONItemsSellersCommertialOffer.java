@@ -15,6 +15,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommer
      */
     @JsonProperty("AvailableQuantity")
     public Long availableQuantity;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer withAvailableQuantity(Long availableQuantity) {
         this.availableQuantity = availableQuantity;
         return this;
@@ -25,6 +26,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommer
      */
     @JsonProperty("BuyTogether")
     public Object[] buyTogether;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer withBuyTogether(Object[] buyTogether) {
         this.buyTogether = buyTogether;
         return this;
@@ -35,6 +37,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommer
      */
     @JsonProperty("CacheVersionUsedToCallCheckout")
     public String cacheVersionUsedToCallCheckout;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer withCacheVersionUsedToCallCheckout(String cacheVersionUsedToCallCheckout) {
         this.cacheVersionUsedToCallCheckout = cacheVersionUsedToCallCheckout;
         return this;
@@ -45,6 +48,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommer
      */
     @JsonProperty("DeliverySlaSamples")
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOfferDeliverySlaSamples[] deliverySlaSamples;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer withDeliverySlaSamples(ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOfferDeliverySlaSamples[] deliverySlaSamples) {
         this.deliverySlaSamples = deliverySlaSamples;
         return this;
@@ -55,6 +59,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommer
      */
     @JsonProperty("DeliverySlaSamplesPerRegion")
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOfferDeliverySlaSamplesPerRegion deliverySlaSamplesPerRegion;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer withDeliverySlaSamplesPerRegion(ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOfferDeliverySlaSamplesPerRegion deliverySlaSamplesPerRegion) {
         this.deliverySlaSamplesPerRegion = deliverySlaSamplesPerRegion;
         return this;
@@ -65,6 +70,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommer
      */
     @JsonProperty("DiscountHighLight")
     public Object[] discountHighLight;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer withDiscountHighLight(Object[] discountHighLight) {
         this.discountHighLight = discountHighLight;
         return this;
@@ -75,6 +81,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommer
      */
     @JsonProperty("GetInfoErrorMessage")
     public String getInfoErrorMessage;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer withGetInfoErrorMessage(String getInfoErrorMessage) {
         this.getInfoErrorMessage = getInfoErrorMessage;
         return this;
@@ -85,6 +92,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommer
      */
     @JsonProperty("GiftSkuIds")
     public Object[] giftSkuIds;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer withGiftSkuIds(Object[] giftSkuIds) {
         this.giftSkuIds = giftSkuIds;
         return this;
@@ -95,6 +103,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommer
      */
     @JsonProperty("Installments")
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOfferInstallments[] installments;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer withInstallments(ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOfferInstallments[] installments) {
         this.installments = installments;
         return this;
@@ -105,6 +114,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommer
      */
     @JsonProperty("IsAvailable")
     public Boolean isAvailable;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer withIsAvailable(Boolean isAvailable) {
         this.isAvailable = isAvailable;
         return this;
@@ -115,6 +125,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommer
      */
     @JsonProperty("ItemMetadataAttachment")
     public Object[] itemMetadataAttachment;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer withItemMetadataAttachment(Object[] itemMetadataAttachment) {
         this.itemMetadataAttachment = itemMetadataAttachment;
         return this;
@@ -125,6 +136,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommer
      */
     @JsonProperty("ListPrice")
     public Double listPrice;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer withListPrice(Double listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -135,6 +147,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommer
      */
     @JsonProperty("PaymentOptions")
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOfferPaymentOptions paymentOptions;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer withPaymentOptions(ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOfferPaymentOptions paymentOptions) {
         this.paymentOptions = paymentOptions;
         return this;
@@ -145,6 +158,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommer
      */
     @JsonProperty("Price")
     public Double price;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer withPrice(Double price) {
         this.price = price;
         return this;
@@ -155,6 +169,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommer
      */
     @JsonProperty("PriceValidUntil")
     public String priceValidUntil;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer withPriceValidUntil(String priceValidUntil) {
         this.priceValidUntil = priceValidUntil;
         return this;
@@ -165,6 +180,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommer
      */
     @JsonProperty("PriceWithoutDiscount")
     public Double priceWithoutDiscount;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer withPriceWithoutDiscount(Double priceWithoutDiscount) {
         this.priceWithoutDiscount = priceWithoutDiscount;
         return this;
@@ -175,6 +191,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommer
      */
     @JsonProperty("RewardValue")
     public Double rewardValue;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer withRewardValue(Double rewardValue) {
         this.rewardValue = rewardValue;
         return this;
@@ -185,6 +202,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommer
      */
     @JsonProperty("SaleChannel")
     public Long saleChannel;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer withSaleChannel(Long saleChannel) {
         this.saleChannel = saleChannel;
         return this;
@@ -195,6 +213,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommer
      */
     @JsonProperty("Tax")
     public Double tax;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer withTax(Double tax) {
         this.tax = tax;
         return this;
@@ -205,9 +224,32 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommer
      */
     @JsonProperty("Teasers")
     public Object[] teasers;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer withTeasers(Object[] teasers) {
         this.teasers = teasers;
         return this;
     }
     
+    public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOffer(@JsonProperty("AvailableQuantity") Long availableQuantity, @JsonProperty("BuyTogether") Object[] buyTogether, @JsonProperty("CacheVersionUsedToCallCheckout") String cacheVersionUsedToCallCheckout, @JsonProperty("DeliverySlaSamples") ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOfferDeliverySlaSamples[] deliverySlaSamples, @JsonProperty("DeliverySlaSamplesPerRegion") ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOfferDeliverySlaSamplesPerRegion deliverySlaSamplesPerRegion, @JsonProperty("DiscountHighLight") Object[] discountHighLight, @JsonProperty("GetInfoErrorMessage") String getInfoErrorMessage, @JsonProperty("GiftSkuIds") Object[] giftSkuIds, @JsonProperty("Installments") ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOfferInstallments[] installments, @JsonProperty("IsAvailable") Boolean isAvailable, @JsonProperty("ItemMetadataAttachment") Object[] itemMetadataAttachment, @JsonProperty("ListPrice") Double listPrice, @JsonProperty("PaymentOptions") ProductSearchFilteredandOrdered200ApplicationJSONItemsSellersCommertialOfferPaymentOptions paymentOptions, @JsonProperty("Price") Double price, @JsonProperty("PriceValidUntil") String priceValidUntil, @JsonProperty("PriceWithoutDiscount") Double priceWithoutDiscount, @JsonProperty("RewardValue") Double rewardValue, @JsonProperty("SaleChannel") Long saleChannel, @JsonProperty("Tax") Double tax, @JsonProperty("Teasers") Object[] teasers) {
+        this.availableQuantity = availableQuantity;
+        this.buyTogether = buyTogether;
+        this.cacheVersionUsedToCallCheckout = cacheVersionUsedToCallCheckout;
+        this.deliverySlaSamples = deliverySlaSamples;
+        this.deliverySlaSamplesPerRegion = deliverySlaSamplesPerRegion;
+        this.discountHighLight = discountHighLight;
+        this.getInfoErrorMessage = getInfoErrorMessage;
+        this.giftSkuIds = giftSkuIds;
+        this.installments = installments;
+        this.isAvailable = isAvailable;
+        this.itemMetadataAttachment = itemMetadataAttachment;
+        this.listPrice = listPrice;
+        this.paymentOptions = paymentOptions;
+        this.price = price;
+        this.priceValidUntil = priceValidUntil;
+        this.priceWithoutDiscount = priceWithoutDiscount;
+        this.rewardValue = rewardValue;
+        this.saleChannel = saleChannel;
+        this.tax = tax;
+        this.teasers = teasers;
+  }
 }

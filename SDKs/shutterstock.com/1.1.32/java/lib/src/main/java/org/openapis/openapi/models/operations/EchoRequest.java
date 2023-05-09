@@ -12,9 +12,11 @@ public class EchoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public EchoRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public EchoRequest(){}
 }

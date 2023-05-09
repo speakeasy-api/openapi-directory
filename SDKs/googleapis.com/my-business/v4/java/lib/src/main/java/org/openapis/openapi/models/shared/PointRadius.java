@@ -18,6 +18,7 @@ public class PointRadius {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latlng")
     public LatLng latlng;
+
     public PointRadius withLatlng(LatLng latlng) {
         this.latlng = latlng;
         return this;
@@ -29,9 +30,11 @@ public class PointRadius {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("radiusKm")
     public Float radiusKm;
+
     public PointRadius withRadiusKm(Float radiusKm) {
         this.radiusKm = radiusKm;
         return this;
     }
     
+    public PointRadius(){}
 }

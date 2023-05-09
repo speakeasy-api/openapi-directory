@@ -12,6 +12,7 @@ public class CategoryGroup {
      */
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public CategoryGroup withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -22,6 +23,7 @@ public class CategoryGroup {
      */
     @JsonProperty("hidden")
     public Boolean hidden;
+
     public CategoryGroup withHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
@@ -29,6 +31,7 @@ public class CategoryGroup {
     
     @JsonProperty("id")
     public String id;
+
     public CategoryGroup withId(String id) {
         this.id = id;
         return this;
@@ -36,9 +39,16 @@ public class CategoryGroup {
     
     @JsonProperty("name")
     public String name;
+
     public CategoryGroup withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CategoryGroup(@JsonProperty("deleted") Boolean deleted, @JsonProperty("hidden") Boolean hidden, @JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.deleted = deleted;
+        this.hidden = hidden;
+        this.id = id;
+        this.name = name;
+  }
 }

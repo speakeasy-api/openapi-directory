@@ -14,6 +14,7 @@ public class StartBatchJobRequestBody {
      */
     @JsonProperty("batchJobIdentifier")
     public StartBatchJobRequestBodyBatchJobIdentifier batchJobIdentifier;
+
     public StartBatchJobRequestBody withBatchJobIdentifier(StartBatchJobRequestBodyBatchJobIdentifier batchJobIdentifier) {
         this.batchJobIdentifier = batchJobIdentifier;
         return this;
@@ -25,9 +26,13 @@ public class StartBatchJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobParams")
     public java.util.Map<String, String> jobParams;
+
     public StartBatchJobRequestBody withJobParams(java.util.Map<String, String> jobParams) {
         this.jobParams = jobParams;
         return this;
     }
     
+    public StartBatchJobRequestBody(@JsonProperty("batchJobIdentifier") StartBatchJobRequestBodyBatchJobIdentifier batchJobIdentifier) {
+        this.batchJobIdentifier = batchJobIdentifier;
+  }
 }

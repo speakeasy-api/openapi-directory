@@ -15,9 +15,11 @@ public class UserUndelete {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgUnitPath")
     public String orgUnitPath;
+
     public UserUndelete withOrgUnitPath(String orgUnitPath) {
         this.orgUnitPath = orgUnitPath;
         return this;
     }
     
+    public UserUndelete(){}
 }

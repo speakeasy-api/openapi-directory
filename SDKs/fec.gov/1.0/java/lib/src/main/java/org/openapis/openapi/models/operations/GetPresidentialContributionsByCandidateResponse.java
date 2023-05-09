@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPresidentialContributionsByCandidateResponse {
     
     public String contentType;
+
     public GetPresidentialContributionsByCandidateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetPresidentialContributionsByCandidateResponse {
     
     
     public org.openapis.openapi.models.shared.PresidentialByCandidatePage presidentialByCandidatePage;
+
     public GetPresidentialContributionsByCandidateResponse withPresidentialByCandidatePage(org.openapis.openapi.models.shared.PresidentialByCandidatePage presidentialByCandidatePage) {
         this.presidentialByCandidatePage = presidentialByCandidatePage;
         return this;
@@ -23,6 +26,7 @@ public class GetPresidentialContributionsByCandidateResponse {
     
     
     public Integer statusCode;
+
     public GetPresidentialContributionsByCandidateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetPresidentialContributionsByCandidateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPresidentialContributionsByCandidateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPresidentialContributionsByCandidateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

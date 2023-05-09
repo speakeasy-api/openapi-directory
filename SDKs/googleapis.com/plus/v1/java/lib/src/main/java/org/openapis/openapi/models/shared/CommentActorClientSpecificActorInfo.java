@@ -18,9 +18,11 @@ public class CommentActorClientSpecificActorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("youtubeActorInfo")
     public CommentActorClientSpecificActorInfoYoutubeActorInfo youtubeActorInfo;
+
     public CommentActorClientSpecificActorInfo withYoutubeActorInfo(CommentActorClientSpecificActorInfoYoutubeActorInfo youtubeActorInfo) {
         this.youtubeActorInfo = youtubeActorInfo;
         return this;
     }
     
+    public CommentActorClientSpecificActorInfo(){}
 }

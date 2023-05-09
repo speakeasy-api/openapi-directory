@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeInstancesResultReservationsInstancesElasticInferenceAcceleratorAssociations {
     
     public String elasticInferenceAcceleratorArn;
+
     public DescribeInstancesResultReservationsInstancesElasticInferenceAcceleratorAssociations withElasticInferenceAcceleratorArn(String elasticInferenceAcceleratorArn) {
         this.elasticInferenceAcceleratorArn = elasticInferenceAcceleratorArn;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstancesResultReservationsInstancesElasticInferenceAcceler
     
     
     public String elasticInferenceAcceleratorAssociationId;
+
     public DescribeInstancesResultReservationsInstancesElasticInferenceAcceleratorAssociations withElasticInferenceAcceleratorAssociationId(String elasticInferenceAcceleratorAssociationId) {
         this.elasticInferenceAcceleratorAssociationId = elasticInferenceAcceleratorAssociationId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeInstancesResultReservationsInstancesElasticInferenceAcceler
     
     
     public String elasticInferenceAcceleratorAssociationState;
+
     public DescribeInstancesResultReservationsInstancesElasticInferenceAcceleratorAssociations withElasticInferenceAcceleratorAssociationState(String elasticInferenceAcceleratorAssociationState) {
         this.elasticInferenceAcceleratorAssociationState = elasticInferenceAcceleratorAssociationState;
         return this;
@@ -33,9 +36,11 @@ public class DescribeInstancesResultReservationsInstancesElasticInferenceAcceler
     
     
     public OffsetDateTime elasticInferenceAcceleratorAssociationTime;
+
     public DescribeInstancesResultReservationsInstancesElasticInferenceAcceleratorAssociations withElasticInferenceAcceleratorAssociationTime(OffsetDateTime elasticInferenceAcceleratorAssociationTime) {
         this.elasticInferenceAcceleratorAssociationTime = elasticInferenceAcceleratorAssociationTime;
         return this;
     }
     
+    public DescribeInstancesResultReservationsInstancesElasticInferenceAcceleratorAssociations(){}
 }

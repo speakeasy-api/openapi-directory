@@ -18,6 +18,7 @@ public class NotificationEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public NotificationEndpoint withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class NotificationEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public NotificationEndpoint withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class NotificationEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grpcSettings")
     public NotificationEndpointGrpcSettings grpcSettings;
+
     public NotificationEndpoint withGrpcSettings(NotificationEndpointGrpcSettings grpcSettings) {
         this.grpcSettings = grpcSettings;
         return this;
@@ -51,6 +54,7 @@ public class NotificationEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NotificationEndpoint withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class NotificationEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public NotificationEndpoint withKind(String kind) {
         this.kind = kind;
         return this;
@@ -73,6 +78,7 @@ public class NotificationEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NotificationEndpoint withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class NotificationEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public NotificationEndpoint withRegion(String region) {
         this.region = region;
         return this;
@@ -95,9 +102,11 @@ public class NotificationEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public NotificationEndpoint withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
     }
     
+    public NotificationEndpoint(){}
 }

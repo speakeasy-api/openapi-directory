@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advancedSettings")
     public GoogleCloudDialogflowCxV3beta1AdvancedSettings advancedSettings;
+
     public GoogleCloudDialogflowCxV3beta1Agent withAdvancedSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettings advancedSettings) {
         this.advancedSettings = advancedSettings;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatarUri")
     public String avatarUri;
+
     public GoogleCloudDialogflowCxV3beta1Agent withAvatarUri(String avatarUri) {
         this.avatarUri = avatarUri;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultLanguageCode")
     public String defaultLanguageCode;
+
     public GoogleCloudDialogflowCxV3beta1Agent withDefaultLanguageCode(String defaultLanguageCode) {
         this.defaultLanguageCode = defaultLanguageCode;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowCxV3beta1Agent withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowCxV3beta1Agent withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowCxV3beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableSpellCorrection")
     public Boolean enableSpellCorrection;
+
     public GoogleCloudDialogflowCxV3beta1Agent withEnableSpellCorrection(Boolean enableSpellCorrection) {
         this.enableSpellCorrection = enableSpellCorrection;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDialogflowCxV3beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableStackdriverLogging")
     public Boolean enableStackdriverLogging;
+
     public GoogleCloudDialogflowCxV3beta1Agent withEnableStackdriverLogging(Boolean enableStackdriverLogging) {
         this.enableStackdriverLogging = enableStackdriverLogging;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDialogflowCxV3beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locked")
     public Boolean locked;
+
     public GoogleCloudDialogflowCxV3beta1Agent withLocked(Boolean locked) {
         this.locked = locked;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDialogflowCxV3beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowCxV3beta1Agent withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDialogflowCxV3beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securitySettings")
     public String securitySettings;
+
     public GoogleCloudDialogflowCxV3beta1Agent withSecuritySettings(String securitySettings) {
         this.securitySettings = securitySettings;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDialogflowCxV3beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("speechToTextSettings")
     public GoogleCloudDialogflowCxV3beta1SpeechToTextSettings speechToTextSettings;
+
     public GoogleCloudDialogflowCxV3beta1Agent withSpeechToTextSettings(GoogleCloudDialogflowCxV3beta1SpeechToTextSettings speechToTextSettings) {
         this.speechToTextSettings = speechToTextSettings;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudDialogflowCxV3beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startFlow")
     public String startFlow;
+
     public GoogleCloudDialogflowCxV3beta1Agent withStartFlow(String startFlow) {
         this.startFlow = startFlow;
         return this;
@@ -150,17 +162,19 @@ public class GoogleCloudDialogflowCxV3beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedLanguageCodes")
     public String[] supportedLanguageCodes;
+
     public GoogleCloudDialogflowCxV3beta1Agent withSupportedLanguageCodes(String[] supportedLanguageCodes) {
         this.supportedLanguageCodes = supportedLanguageCodes;
         return this;
     }
     
     /**
-     * Settings related to speech generating.
+     * Settings related to speech synthesizing.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textToSpeechSettings")
     public GoogleCloudDialogflowCxV3beta1TextToSpeechSettings textToSpeechSettings;
+
     public GoogleCloudDialogflowCxV3beta1Agent withTextToSpeechSettings(GoogleCloudDialogflowCxV3beta1TextToSpeechSettings textToSpeechSettings) {
         this.textToSpeechSettings = textToSpeechSettings;
         return this;
@@ -172,9 +186,11 @@ public class GoogleCloudDialogflowCxV3beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public GoogleCloudDialogflowCxV3beta1Agent withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1Agent(){}
 }

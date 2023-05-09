@@ -15,6 +15,7 @@ public class OfficeOfficeOnlineHours {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day")
     public Long day;
+
     public OfficeOfficeOnlineHours withDay(Long day) {
         this.day = day;
         return this;
@@ -26,6 +27,7 @@ public class OfficeOfficeOnlineHours {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hour")
     public Long hour;
+
     public OfficeOfficeOnlineHours withHour(Long hour) {
         this.hour = hour;
         return this;
@@ -37,9 +39,11 @@ public class OfficeOfficeOnlineHours {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minute")
     public Long minute;
+
     public OfficeOfficeOnlineHours withMinute(Long minute) {
         this.minute = minute;
         return this;
     }
     
+    public OfficeOfficeOnlineHours(){}
 }

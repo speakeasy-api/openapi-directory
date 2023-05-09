@@ -12,6 +12,7 @@ public class ListRecipesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public DomainEnum domain;
+
     public ListRecipesRequest withDomain(DomainEnum domain) {
         this.domain = domain;
         return this;
@@ -20,6 +21,7 @@ public class ListRecipesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListRecipesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListRecipesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRecipesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class ListRecipesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipeProvider")
     public RecipeProviderEnum recipeProvider;
+
     public ListRecipesRequest withRecipeProvider(RecipeProviderEnum recipeProvider) {
         this.recipeProvider = recipeProvider;
         return this;
     }
     
+    public ListRecipesRequest(){}
 }

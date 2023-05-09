@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetSpotPlacementScoresResultSpotPlacementScores {
     
     public String availabilityZoneId;
+
     public GetSpotPlacementScoresResultSpotPlacementScores withAvailabilityZoneId(String availabilityZoneId) {
         this.availabilityZoneId = availabilityZoneId;
         return this;
@@ -19,6 +20,7 @@ public class GetSpotPlacementScoresResultSpotPlacementScores {
     
     
     public String region;
+
     public GetSpotPlacementScoresResultSpotPlacementScores withRegion(String region) {
         this.region = region;
         return this;
@@ -26,9 +28,11 @@ public class GetSpotPlacementScoresResultSpotPlacementScores {
     
     
     public Long score;
+
     public GetSpotPlacementScoresResultSpotPlacementScores withScore(Long score) {
         this.score = score;
         return this;
     }
     
+    public GetSpotPlacementScoresResultSpotPlacementScores(){}
 }

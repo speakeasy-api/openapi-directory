@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateWorkteamResponse {
     
     public String contentType;
+
     public UpdateWorkteamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateWorkteamResponse {
     
     
     public Integer statusCode;
+
     public UpdateWorkteamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateWorkteamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateWorkteamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateWorkteamResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public UpdateWorkteamResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -43,9 +48,14 @@ public class UpdateWorkteamResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateWorkteamResponse updateWorkteamResponse;
+
     public UpdateWorkteamResponse withUpdateWorkteamResponse(org.openapis.openapi.models.shared.UpdateWorkteamResponse updateWorkteamResponse) {
         this.updateWorkteamResponse = updateWorkteamResponse;
         return this;
     }
     
+    public UpdateWorkteamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

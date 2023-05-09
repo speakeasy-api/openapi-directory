@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetOnPremisesInstancesInput {
     @JsonProperty("instanceNames")
     public String[] instanceNames;
+
     public BatchGetOnPremisesInstancesInput withInstanceNames(String[] instanceNames) {
         this.instanceNames = instanceNames;
         return this;
     }
     
+    public BatchGetOnPremisesInstancesInput(@JsonProperty("instanceNames") String[] instanceNames) {
+        this.instanceNames = instanceNames;
+  }
 }

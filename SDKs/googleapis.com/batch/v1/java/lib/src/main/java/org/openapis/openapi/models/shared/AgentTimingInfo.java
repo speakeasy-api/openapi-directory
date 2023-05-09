@@ -18,6 +18,7 @@ public class AgentTimingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentStartupTime")
     public String agentStartupTime;
+
     public AgentTimingInfo withAgentStartupTime(String agentStartupTime) {
         this.agentStartupTime = agentStartupTime;
         return this;
@@ -29,6 +30,7 @@ public class AgentTimingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootTime")
     public String bootTime;
+
     public AgentTimingInfo withBootTime(String bootTime) {
         this.bootTime = bootTime;
         return this;
@@ -40,9 +42,11 @@ public class AgentTimingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptStartupTime")
     public String scriptStartupTime;
+
     public AgentTimingInfo withScriptStartupTime(String scriptStartupTime) {
         this.scriptStartupTime = scriptStartupTime;
         return this;
     }
     
+    public AgentTimingInfo(){}
 }

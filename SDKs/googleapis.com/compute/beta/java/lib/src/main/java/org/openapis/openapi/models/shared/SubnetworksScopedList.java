@@ -15,6 +15,7 @@ public class SubnetworksScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetworks")
     public Subnetwork[] subnetworks;
+
     public SubnetworksScopedList withSubnetworks(Subnetwork[] subnetworks) {
         this.subnetworks = subnetworks;
         return this;
@@ -26,9 +27,11 @@ public class SubnetworksScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public SubnetworksScopedListWarning warning;
+
     public SubnetworksScopedList withWarning(SubnetworksScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public SubnetworksScopedList(){}
 }

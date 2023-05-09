@@ -12,6 +12,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Armor")
     public Double armor;
+
     public Champion withArmor(Double armor) {
         this.armor = armor;
         return this;
@@ -20,6 +21,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArmorPerLevel")
     public Double armorPerLevel;
+
     public Champion withArmorPerLevel(Double armorPerLevel) {
         this.armorPerLevel = armorPerLevel;
         return this;
@@ -28,6 +30,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attack")
     public Double attack;
+
     public Champion withAttack(Double attack) {
         this.attack = attack;
         return this;
@@ -36,6 +39,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttackDamage")
     public Double attackDamage;
+
     public Champion withAttackDamage(Double attackDamage) {
         this.attackDamage = attackDamage;
         return this;
@@ -44,6 +48,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttackDamagePerLevel")
     public Double attackDamagePerLevel;
+
     public Champion withAttackDamagePerLevel(Double attackDamagePerLevel) {
         this.attackDamagePerLevel = attackDamagePerLevel;
         return this;
@@ -52,6 +57,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttackRange")
     public Double attackRange;
+
     public Champion withAttackRange(Double attackRange) {
         this.attackRange = attackRange;
         return this;
@@ -60,6 +66,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttackSpeedOffset")
     public Double attackSpeedOffset;
+
     public Champion withAttackSpeedOffset(Double attackSpeedOffset) {
         this.attackSpeedOffset = attackSpeedOffset;
         return this;
@@ -68,6 +75,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChampionId")
     public Long championId;
+
     public Champion withChampionId(Long championId) {
         this.championId = championId;
         return this;
@@ -76,6 +84,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Defense")
     public Double defense;
+
     public Champion withDefense(Double defense) {
         this.defense = defense;
         return this;
@@ -84,6 +93,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Difficulty")
     public Double difficulty;
+
     public Champion withDifficulty(Double difficulty) {
         this.difficulty = difficulty;
         return this;
@@ -92,6 +102,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hp")
     public Double hp;
+
     public Champion withHp(Double hp) {
         this.hp = hp;
         return this;
@@ -100,6 +111,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HpRegen")
     public Double hpRegen;
+
     public Champion withHpRegen(Double hpRegen) {
         this.hpRegen = hpRegen;
         return this;
@@ -108,6 +120,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HpRegenPerLevel")
     public Double hpRegenPerLevel;
+
     public Champion withHpRegenPerLevel(Double hpRegenPerLevel) {
         this.hpRegenPerLevel = hpRegenPerLevel;
         return this;
@@ -116,6 +129,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HpUpPerLevel")
     public Double hpUpPerLevel;
+
     public Champion withHpUpPerLevel(Double hpUpPerLevel) {
         this.hpUpPerLevel = hpUpPerLevel;
         return this;
@@ -124,6 +138,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Magic")
     public Double magic;
+
     public Champion withMagic(Double magic) {
         this.magic = magic;
         return this;
@@ -132,6 +147,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MoveSpeed")
     public Double moveSpeed;
+
     public Champion withMoveSpeed(Double moveSpeed) {
         this.moveSpeed = moveSpeed;
         return this;
@@ -140,6 +156,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mp")
     public Double mp;
+
     public Champion withMp(Double mp) {
         this.mp = mp;
         return this;
@@ -148,6 +165,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MpRegen")
     public Double mpRegen;
+
     public Champion withMpRegen(Double mpRegen) {
         this.mpRegen = mpRegen;
         return this;
@@ -156,6 +174,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MpRegenPerLevel")
     public Double mpRegenPerLevel;
+
     public Champion withMpRegenPerLevel(Double mpRegenPerLevel) {
         this.mpRegenPerLevel = mpRegenPerLevel;
         return this;
@@ -164,6 +183,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MpUpPerLevel")
     public Double mpUpPerLevel;
+
     public Champion withMpUpPerLevel(Double mpUpPerLevel) {
         this.mpUpPerLevel = mpUpPerLevel;
         return this;
@@ -172,6 +192,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Champion withName(String name) {
         this.name = name;
         return this;
@@ -180,6 +201,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpellBlock")
     public Double spellBlock;
+
     public Champion withSpellBlock(Double spellBlock) {
         this.spellBlock = spellBlock;
         return this;
@@ -188,6 +210,7 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpellBlockPerLevel")
     public Double spellBlockPerLevel;
+
     public Champion withSpellBlockPerLevel(Double spellBlockPerLevel) {
         this.spellBlockPerLevel = spellBlockPerLevel;
         return this;
@@ -196,9 +219,11 @@ public class Champion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public Champion withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Champion(){}
 }

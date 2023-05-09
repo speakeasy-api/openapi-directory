@@ -12,6 +12,7 @@ public class GetRecommendationPreferencesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public GetRecommendationPreferencesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class GetRecommendationPreferencesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetRecommendationPreferencesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,6 +29,7 @@ public class GetRecommendationPreferencesRequest {
     
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public GetRecommendationPreferencesRequest withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -35,9 +38,13 @@ public class GetRecommendationPreferencesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public Scope scope;
+
     public GetRecommendationPreferencesRequest withScope(Scope scope) {
         this.scope = scope;
         return this;
     }
     
+    public GetRecommendationPreferencesRequest(@JsonProperty("resourceType") ResourceTypeEnum resourceType) {
+        this.resourceType = resourceType;
+  }
 }

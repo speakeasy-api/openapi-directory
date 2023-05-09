@@ -12,6 +12,7 @@ public class CreateLoadBalancerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateAlternativeNames")
     public String[] certificateAlternativeNames;
+
     public CreateLoadBalancerRequest withCertificateAlternativeNames(String[] certificateAlternativeNames) {
         this.certificateAlternativeNames = certificateAlternativeNames;
         return this;
@@ -20,6 +21,7 @@ public class CreateLoadBalancerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateDomainName")
     public String certificateDomainName;
+
     public CreateLoadBalancerRequest withCertificateDomainName(String certificateDomainName) {
         this.certificateDomainName = certificateDomainName;
         return this;
@@ -28,6 +30,7 @@ public class CreateLoadBalancerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateName")
     public String certificateName;
+
     public CreateLoadBalancerRequest withCertificateName(String certificateName) {
         this.certificateName = certificateName;
         return this;
@@ -36,6 +39,7 @@ public class CreateLoadBalancerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthCheckPath")
     public String healthCheckPath;
+
     public CreateLoadBalancerRequest withHealthCheckPath(String healthCheckPath) {
         this.healthCheckPath = healthCheckPath;
         return this;
@@ -43,6 +47,7 @@ public class CreateLoadBalancerRequest {
     
     @JsonProperty("instancePort")
     public Long instancePort;
+
     public CreateLoadBalancerRequest withInstancePort(Long instancePort) {
         this.instancePort = instancePort;
         return this;
@@ -51,6 +56,7 @@ public class CreateLoadBalancerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddressType")
     public IpAddressTypeEnum ipAddressType;
+
     public CreateLoadBalancerRequest withIpAddressType(IpAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -58,6 +64,7 @@ public class CreateLoadBalancerRequest {
     
     @JsonProperty("loadBalancerName")
     public String loadBalancerName;
+
     public CreateLoadBalancerRequest withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -66,6 +73,7 @@ public class CreateLoadBalancerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateLoadBalancerRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -74,9 +82,14 @@ public class CreateLoadBalancerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tlsPolicyName")
     public String tlsPolicyName;
+
     public CreateLoadBalancerRequest withTlsPolicyName(String tlsPolicyName) {
         this.tlsPolicyName = tlsPolicyName;
         return this;
     }
     
+    public CreateLoadBalancerRequest(@JsonProperty("instancePort") Long instancePort, @JsonProperty("loadBalancerName") String loadBalancerName) {
+        this.instancePort = instancePort;
+        this.loadBalancerName = loadBalancerName;
+  }
 }

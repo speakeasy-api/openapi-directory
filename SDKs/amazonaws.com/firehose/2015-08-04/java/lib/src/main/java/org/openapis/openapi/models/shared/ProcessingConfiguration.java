@@ -15,6 +15,7 @@ public class ProcessingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public ProcessingConfiguration withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,9 +24,11 @@ public class ProcessingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Processors")
     public Processor[] processors;
+
     public ProcessingConfiguration withProcessors(Processor[] processors) {
         this.processors = processors;
         return this;
     }
     
+    public ProcessingConfiguration(){}
 }

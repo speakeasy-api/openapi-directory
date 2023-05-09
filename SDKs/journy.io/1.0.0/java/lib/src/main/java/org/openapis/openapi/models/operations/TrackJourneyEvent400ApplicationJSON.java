@@ -15,6 +15,7 @@ public class TrackJourneyEvent400ApplicationJSON {
      */
     @JsonProperty("errors")
     public TrackJourneyEvent400ApplicationJSONErrors errors;
+
     public TrackJourneyEvent400ApplicationJSON withErrors(TrackJourneyEvent400ApplicationJSONErrors errors) {
         this.errors = errors;
         return this;
@@ -22,6 +23,7 @@ public class TrackJourneyEvent400ApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public TrackJourneyEvent400ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -29,9 +31,15 @@ public class TrackJourneyEvent400ApplicationJSON {
     
     @JsonProperty("meta")
     public TrackJourneyEvent400ApplicationJSONMeta meta;
+
     public TrackJourneyEvent400ApplicationJSON withMeta(TrackJourneyEvent400ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public TrackJourneyEvent400ApplicationJSON(@JsonProperty("errors") TrackJourneyEvent400ApplicationJSONErrors errors, @JsonProperty("message") String message, @JsonProperty("meta") TrackJourneyEvent400ApplicationJSONMeta meta) {
+        this.errors = errors;
+        this.message = message;
+        this.meta = meta;
+  }
 }

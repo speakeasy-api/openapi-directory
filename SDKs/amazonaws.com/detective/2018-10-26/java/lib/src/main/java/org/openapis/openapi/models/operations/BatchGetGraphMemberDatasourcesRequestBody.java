@@ -12,6 +12,7 @@ public class BatchGetGraphMemberDatasourcesRequestBody {
      */
     @JsonProperty("AccountIds")
     public String[] accountIds;
+
     public BatchGetGraphMemberDatasourcesRequestBody withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -22,9 +23,14 @@ public class BatchGetGraphMemberDatasourcesRequestBody {
      */
     @JsonProperty("GraphArn")
     public String graphArn;
+
     public BatchGetGraphMemberDatasourcesRequestBody withGraphArn(String graphArn) {
         this.graphArn = graphArn;
         return this;
     }
     
+    public BatchGetGraphMemberDatasourcesRequestBody(@JsonProperty("AccountIds") String[] accountIds, @JsonProperty("GraphArn") String graphArn) {
+        this.accountIds = accountIds;
+        this.graphArn = graphArn;
+  }
 }

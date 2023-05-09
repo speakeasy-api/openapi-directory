@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeEffectivePatchesForPatchBaselineRequest {
     @JsonProperty("BaselineId")
     public String baselineId;
+
     public DescribeEffectivePatchesForPatchBaselineRequest withBaselineId(String baselineId) {
         this.baselineId = baselineId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeEffectivePatchesForPatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeEffectivePatchesForPatchBaselineRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class DescribeEffectivePatchesForPatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeEffectivePatchesForPatchBaselineRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeEffectivePatchesForPatchBaselineRequest(@JsonProperty("BaselineId") String baselineId) {
+        this.baselineId = baselineId;
+  }
 }

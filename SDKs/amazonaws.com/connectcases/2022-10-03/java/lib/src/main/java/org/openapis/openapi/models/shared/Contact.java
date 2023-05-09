@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Contact {
     @JsonProperty("contactArn")
     public String contactArn;
+
     public Contact withContactArn(String contactArn) {
         this.contactArn = contactArn;
         return this;
     }
     
+    public Contact(@JsonProperty("contactArn") String contactArn) {
+        this.contactArn = contactArn;
+  }
 }

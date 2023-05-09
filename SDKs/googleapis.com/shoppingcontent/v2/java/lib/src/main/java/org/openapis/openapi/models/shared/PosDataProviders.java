@@ -15,6 +15,7 @@ public class PosDataProviders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public PosDataProviders withCountry(String country) {
         this.country = country;
         return this;
@@ -26,9 +27,11 @@ public class PosDataProviders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posDataProviders")
     public PosDataProvidersPosDataProvider[] posDataProviders;
+
     public PosDataProviders withPosDataProviders(PosDataProvidersPosDataProvider[] posDataProviders) {
         this.posDataProviders = posDataProviders;
         return this;
     }
     
+    public PosDataProviders(){}
 }

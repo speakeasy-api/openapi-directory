@@ -15,6 +15,7 @@ public class Receipt {
      */
     @JsonProperty("date")
     public String date;
+
     public Receipt withDate(String date) {
         this.date = date;
         return this;
@@ -25,6 +26,7 @@ public class Receipt {
      */
     @JsonProperty("orderId")
     public String orderId;
+
     public Receipt withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -35,9 +37,15 @@ public class Receipt {
      */
     @JsonProperty("receipt")
     public String receipt;
+
     public Receipt withReceipt(String receipt) {
         this.receipt = receipt;
         return this;
     }
     
+    public Receipt(@JsonProperty("date") String date, @JsonProperty("orderId") String orderId, @JsonProperty("receipt") String receipt) {
+        this.date = date;
+        this.orderId = orderId;
+        this.receipt = receipt;
+  }
 }

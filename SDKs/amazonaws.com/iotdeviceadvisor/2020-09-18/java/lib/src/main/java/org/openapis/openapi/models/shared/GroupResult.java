@@ -15,6 +15,7 @@ public class GroupResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupId")
     public String groupId;
+
     public GroupResult withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -23,6 +24,7 @@ public class GroupResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupName")
     public String groupName;
+
     public GroupResult withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -31,9 +33,11 @@ public class GroupResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tests")
     public TestCaseRun[] tests;
+
     public GroupResult withTests(TestCaseRun[] tests) {
         this.tests = tests;
         return this;
     }
     
+    public GroupResult(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class HidBenefitLinkedResponsePayload {
     
     public String benefitName;
+
     public HidBenefitLinkedResponsePayload withBenefitName(String benefitName) {
         this.benefitName = benefitName;
         return this;
@@ -19,6 +20,7 @@ public class HidBenefitLinkedResponsePayload {
     
     
     public String healthId;
+
     public HidBenefitLinkedResponsePayload withHealthId(String healthId) {
         this.healthId = healthId;
         return this;
@@ -26,9 +28,11 @@ public class HidBenefitLinkedResponsePayload {
     
     
     public String status;
+
     public HidBenefitLinkedResponsePayload withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public HidBenefitLinkedResponsePayload(){}
 }

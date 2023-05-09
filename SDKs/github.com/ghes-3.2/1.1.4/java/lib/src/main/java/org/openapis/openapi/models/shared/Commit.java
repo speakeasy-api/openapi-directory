@@ -17,6 +17,7 @@ public class Commit {
      */
     @JsonProperty("author")
     public NullableSimpleUser author;
+
     public Commit withAuthor(NullableSimpleUser author) {
         this.author = author;
         return this;
@@ -24,6 +25,7 @@ public class Commit {
     
     @JsonProperty("comments_url")
     public String commentsUrl;
+
     public Commit withCommentsUrl(String commentsUrl) {
         this.commentsUrl = commentsUrl;
         return this;
@@ -31,6 +33,7 @@ public class Commit {
     
     @JsonProperty("commit")
     public CommitCommit commit;
+
     public Commit withCommit(CommitCommit commit) {
         this.commit = commit;
         return this;
@@ -41,6 +44,7 @@ public class Commit {
      */
     @JsonProperty("committer")
     public NullableSimpleUser committer;
+
     public Commit withCommitter(NullableSimpleUser committer) {
         this.committer = committer;
         return this;
@@ -49,6 +53,7 @@ public class Commit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public DiffEntry[] files;
+
     public Commit withFiles(DiffEntry[] files) {
         this.files = files;
         return this;
@@ -56,6 +61,7 @@ public class Commit {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public Commit withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -63,6 +69,7 @@ public class Commit {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public Commit withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -70,6 +77,7 @@ public class Commit {
     
     @JsonProperty("parents")
     public CommitParents[] parents;
+
     public Commit withParents(CommitParents[] parents) {
         this.parents = parents;
         return this;
@@ -77,6 +85,7 @@ public class Commit {
     
     @JsonProperty("sha")
     public String sha;
+
     public Commit withSha(String sha) {
         this.sha = sha;
         return this;
@@ -85,6 +94,7 @@ public class Commit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public CommitStats stats;
+
     public Commit withStats(CommitStats stats) {
         this.stats = stats;
         return this;
@@ -92,9 +102,21 @@ public class Commit {
     
     @JsonProperty("url")
     public String url;
+
     public Commit withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Commit(@JsonProperty("author") NullableSimpleUser author, @JsonProperty("comments_url") String commentsUrl, @JsonProperty("commit") CommitCommit commit, @JsonProperty("committer") NullableSimpleUser committer, @JsonProperty("html_url") String htmlUrl, @JsonProperty("node_id") String nodeId, @JsonProperty("parents") CommitParents[] parents, @JsonProperty("sha") String sha, @JsonProperty("url") String url) {
+        this.author = author;
+        this.commentsUrl = commentsUrl;
+        this.commit = commit;
+        this.committer = committer;
+        this.htmlUrl = htmlUrl;
+        this.nodeId = nodeId;
+        this.parents = parents;
+        this.sha = sha;
+        this.url = url;
+  }
 }

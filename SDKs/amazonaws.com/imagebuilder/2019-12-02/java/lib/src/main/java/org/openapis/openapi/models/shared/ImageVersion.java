@@ -15,6 +15,7 @@ public class ImageVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ImageVersion withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ImageVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildType")
     public BuildTypeEnum buildType;
+
     public ImageVersion withBuildType(BuildTypeEnum buildType) {
         this.buildType = buildType;
         return this;
@@ -31,6 +33,7 @@ public class ImageVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateCreated")
     public String dateCreated;
+
     public ImageVersion withDateCreated(String dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -39,6 +42,7 @@ public class ImageVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageSource")
     public ImageSourceEnum imageSource;
+
     public ImageVersion withImageSource(ImageSourceEnum imageSource) {
         this.imageSource = imageSource;
         return this;
@@ -47,6 +51,7 @@ public class ImageVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ImageVersion withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +60,7 @@ public class ImageVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osVersion")
     public String osVersion;
+
     public ImageVersion withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -63,6 +69,7 @@ public class ImageVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public ImageVersion withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -71,6 +78,7 @@ public class ImageVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public PlatformEnum platform;
+
     public ImageVersion withPlatform(PlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -79,6 +87,7 @@ public class ImageVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ImageTypeEnum type;
+
     public ImageVersion withType(ImageTypeEnum type) {
         this.type = type;
         return this;
@@ -87,9 +96,11 @@ public class ImageVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public ImageVersion withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ImageVersion(){}
 }

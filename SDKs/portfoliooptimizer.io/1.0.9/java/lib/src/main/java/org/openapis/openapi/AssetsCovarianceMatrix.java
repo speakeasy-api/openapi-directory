@@ -64,11 +64,9 @@ public class AssetsCovarianceMatrix {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixResponse res = new org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixResponse() {{
+        org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixResponse res = new org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixResponse(contentType, httpRes.statusCode()) {{
             postAssetsCovarianceMatrix200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -113,11 +111,9 @@ public class AssetsCovarianceMatrix {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixEffectiveRankResponse res = new org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixEffectiveRankResponse() {{
+        org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixEffectiveRankResponse res = new org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixEffectiveRankResponse(contentType, httpRes.statusCode()) {{
             postAssetsCovarianceMatrixEffectiveRank200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -162,11 +158,9 @@ public class AssetsCovarianceMatrix {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixExponentiallyWeightedResponse res = new org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixExponentiallyWeightedResponse() {{
+        org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixExponentiallyWeightedResponse res = new org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixExponentiallyWeightedResponse(contentType, httpRes.statusCode()) {{
             postAssetsCovarianceMatrixExponentiallyWeighted200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -211,11 +205,9 @@ public class AssetsCovarianceMatrix {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixValidationResponse res = new org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixValidationResponse() {{
+        org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixValidationResponse res = new org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixValidationResponse(contentType, httpRes.statusCode()) {{
             postAssetsCovarianceMatrixValidation200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

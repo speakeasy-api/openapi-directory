@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutRuleGroupsNamespaceResponse {
     @JsonProperty("arn")
     public String arn;
+
     public PutRuleGroupsNamespaceResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -21,6 +22,7 @@ public class PutRuleGroupsNamespaceResponse {
     
     @JsonProperty("name")
     public String name;
+
     public PutRuleGroupsNamespaceResponse withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class PutRuleGroupsNamespaceResponse {
     
     @JsonProperty("status")
     public RuleGroupsNamespaceStatus status;
+
     public PutRuleGroupsNamespaceResponse withStatus(RuleGroupsNamespaceStatus status) {
         this.status = status;
         return this;
@@ -36,9 +39,15 @@ public class PutRuleGroupsNamespaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public PutRuleGroupsNamespaceResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public PutRuleGroupsNamespaceResponse(@JsonProperty("arn") String arn, @JsonProperty("name") String name, @JsonProperty("status") RuleGroupsNamespaceStatus status) {
+        this.arn = arn;
+        this.name = name;
+        this.status = status;
+  }
 }

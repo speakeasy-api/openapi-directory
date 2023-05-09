@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSpeakerEnrollmentJobsResponse {
@@ -12,6 +13,7 @@ public class ListSpeakerEnrollmentJobsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListSpeakerEnrollmentJobsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListSpeakerEnrollmentJobsResponse {
     
     
     public String contentType;
+
     public ListSpeakerEnrollmentJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListSpeakerEnrollmentJobsResponse {
      */
     
     public Object internalServerException;
+
     public ListSpeakerEnrollmentJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListSpeakerEnrollmentJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSpeakerEnrollmentJobsResponse listSpeakerEnrollmentJobsResponse;
+
     public ListSpeakerEnrollmentJobsResponse withListSpeakerEnrollmentJobsResponse(org.openapis.openapi.models.shared.ListSpeakerEnrollmentJobsResponse listSpeakerEnrollmentJobsResponse) {
         this.listSpeakerEnrollmentJobsResponse = listSpeakerEnrollmentJobsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListSpeakerEnrollmentJobsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListSpeakerEnrollmentJobsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListSpeakerEnrollmentJobsResponse {
     
     
     public Integer statusCode;
+
     public ListSpeakerEnrollmentJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListSpeakerEnrollmentJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSpeakerEnrollmentJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListSpeakerEnrollmentJobsResponse {
      */
     
     public Object throttlingException;
+
     public ListSpeakerEnrollmentJobsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListSpeakerEnrollmentJobsResponse {
      */
     
     public Object validationException;
+
     public ListSpeakerEnrollmentJobsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListSpeakerEnrollmentJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

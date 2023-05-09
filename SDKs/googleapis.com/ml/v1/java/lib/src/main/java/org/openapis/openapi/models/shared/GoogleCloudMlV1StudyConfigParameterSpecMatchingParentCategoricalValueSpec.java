@@ -18,9 +18,11 @@ public class GoogleCloudMlV1StudyConfigParameterSpecMatchingParentCategoricalVal
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public GoogleCloudMlV1StudyConfigParameterSpecMatchingParentCategoricalValueSpec withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public GoogleCloudMlV1StudyConfigParameterSpecMatchingParentCategoricalValueSpec(){}
 }

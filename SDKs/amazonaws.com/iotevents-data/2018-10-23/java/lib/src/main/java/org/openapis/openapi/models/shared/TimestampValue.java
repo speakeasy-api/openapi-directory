@@ -15,9 +15,11 @@ public class TimestampValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeInMillis")
     public Long timeInMillis;
+
     public TimestampValue withTimeInMillis(Long timeInMillis) {
         this.timeInMillis = timeInMillis;
         return this;
     }
     
+    public TimestampValue(){}
 }

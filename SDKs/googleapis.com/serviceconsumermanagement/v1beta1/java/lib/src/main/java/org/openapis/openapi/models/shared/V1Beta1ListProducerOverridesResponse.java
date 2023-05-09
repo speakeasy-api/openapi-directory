@@ -18,6 +18,7 @@ public class V1Beta1ListProducerOverridesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public V1Beta1ListProducerOverridesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class V1Beta1ListProducerOverridesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrides")
     public V1Beta1QuotaOverride[] overrides;
+
     public V1Beta1ListProducerOverridesResponse withOverrides(V1Beta1QuotaOverride[] overrides) {
         this.overrides = overrides;
         return this;
     }
     
+    public V1Beta1ListProducerOverridesResponse(){}
 }

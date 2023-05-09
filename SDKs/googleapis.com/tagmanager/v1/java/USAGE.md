@@ -3,14 +3,13 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreateSecurity;
 import org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreateRequest;
 import org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreateResponse;
+import org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.Container;
 import org.openapis.openapi.models.shared.ContainerEnabledBuiltInVariableEnum;
 import org.openapis.openapi.models.shared.ContainerUsageContextEnum;
-import org.openapis.openapi.models.shared.Container;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -19,55 +18,56 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            TagmanagerAccountsContainersCreateRequest req = new TagmanagerAccountsContainersCreateRequest() {{
-                dollarXgafv = "2";
+            TagmanagerAccountsContainersCreateRequest req = new TagmanagerAccountsContainersCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 container = new Container() {{
-                    accountId = "provident";
-                    containerId = "distinctio";
+                    accountId = "distinctio";
+                    containerId = "quibusdam";
                     domainName = new String[]{{
-                        add("unde"),
                         add("nulla"),
                         add("corrupti"),
                         add("illum"),
                     }};
                     enabledBuiltInVariable = new org.openapis.openapi.models.shared.ContainerEnabledBuiltInVariableEnum[]{{
-                        add("ampGtmEvent"),
-                        add("firebaseEventParameterCampaign"),
+                        add(ContainerEnabledBuiltInVariableEnum.AMP_GTM_EVENT),
+                        add(ContainerEnabledBuiltInVariableEnum.FIREBASE_EVENT_PARAMETER_CAMPAIGN),
                     }};
                     fingerprint = "suscipit";
-                    name = "iure";
-                    notes = "magnam";
-                    publicId = "debitis";
-                    timeZoneCountryId = "ipsa";
-                    timeZoneId = "delectus";
+                    name = "Dr. Valerie Toy";
+                    notes = "suscipit";
+                    publicId = "molestiae";
+                    timeZoneCountryId = "minus";
+                    timeZoneId = "placeat";
                     usageContext = new org.openapis.openapi.models.shared.ContainerUsageContextEnum[]{{
-                        add("ios"),
-                        add("ios"),
+                        add(ContainerUsageContextEnum.IOS),
+                        add(ContainerUsageContextEnum.ANDROID_SDK5),
+                        add(ContainerUsageContextEnum.IOS),
                     }};
-                }};
-                accessToken = "minus";
-                accountId = "placeat";
-                alt = "media";
-                callback = "iusto";
-                fields = "excepturi";
-                key = "nisi";
-                oauthToken = "recusandae";
+                }};;
+                accessToken = "recusandae";
+                alt = AltEnum.PROTO;
+                callback = "ab";
+                fields = "quis";
+                key = "veritatis";
+                oauthToken = "deserunt";
                 prettyPrint = false;
-                quotaUser = "temporibus";
-                uploadType = "ab";
-                uploadProtocol = "quis";
-            }}            
+                quotaUser = "perferendis";
+                uploadType = "ipsam";
+                uploadProtocol = "repellendus";
+            }};            
 
-            TagmanagerAccountsContainersCreateResponse res = sdk.accounts.tagmanagerAccountsContainersCreate(req, new TagmanagerAccountsContainersCreateSecurity() {{
+            TagmanagerAccountsContainersCreateResponse res = sdk.accounts.tagmanagerAccountsContainersCreate(req, new TagmanagerAccountsContainersCreateSecurity("sapiente", "quo") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.container.isPresent()) {
+            if (res.container != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

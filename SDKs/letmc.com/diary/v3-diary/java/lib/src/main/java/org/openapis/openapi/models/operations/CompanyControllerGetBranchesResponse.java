@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CompanyControllerGetBranchesResponse {
@@ -12,6 +13,7 @@ public class CompanyControllerGetBranchesResponse {
      */
     
     public org.openapis.openapi.models.shared.AdvertisingBranchModelResults advertisingBranchModelResults;
+
     public CompanyControllerGetBranchesResponse withAdvertisingBranchModelResults(org.openapis.openapi.models.shared.AdvertisingBranchModelResults advertisingBranchModelResults) {
         this.advertisingBranchModelResults = advertisingBranchModelResults;
         return this;
@@ -19,6 +21,7 @@ public class CompanyControllerGetBranchesResponse {
     
     
     public byte[] body;
+
     public CompanyControllerGetBranchesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -26,6 +29,7 @@ public class CompanyControllerGetBranchesResponse {
     
     
     public String contentType;
+
     public CompanyControllerGetBranchesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class CompanyControllerGetBranchesResponse {
     
     
     public Integer statusCode;
+
     public CompanyControllerGetBranchesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class CompanyControllerGetBranchesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CompanyControllerGetBranchesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CompanyControllerGetBranchesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

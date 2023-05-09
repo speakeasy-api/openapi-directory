@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class FederatedAuthenticationRequest {
     
     public String samlProviderArn;
+
     public FederatedAuthenticationRequest withSAMLProviderArn(String samlProviderArn) {
         this.samlProviderArn = samlProviderArn;
         return this;
@@ -19,9 +20,11 @@ public class FederatedAuthenticationRequest {
     
     
     public String selfServiceSAMLProviderArn;
+
     public FederatedAuthenticationRequest withSelfServiceSAMLProviderArn(String selfServiceSAMLProviderArn) {
         this.selfServiceSAMLProviderArn = selfServiceSAMLProviderArn;
         return this;
     }
     
+    public FederatedAuthenticationRequest(){}
 }

@@ -12,6 +12,7 @@ public class GitCreateRefRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GitCreateRefRequestBody withKey(String key) {
         this.key = key;
         return this;
@@ -22,6 +23,7 @@ public class GitCreateRefRequestBody {
      */
     @JsonProperty("ref")
     public String ref;
+
     public GitCreateRefRequestBody withRef(String ref) {
         this.ref = ref;
         return this;
@@ -32,9 +34,14 @@ public class GitCreateRefRequestBody {
      */
     @JsonProperty("sha")
     public String sha;
+
     public GitCreateRefRequestBody withSha(String sha) {
         this.sha = sha;
         return this;
     }
     
+    public GitCreateRefRequestBody(@JsonProperty("ref") String ref, @JsonProperty("sha") String sha) {
+        this.ref = ref;
+        this.sha = sha;
+  }
 }

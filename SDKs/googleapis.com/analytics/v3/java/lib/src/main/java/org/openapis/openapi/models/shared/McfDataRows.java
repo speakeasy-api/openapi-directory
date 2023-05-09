@@ -18,6 +18,7 @@ public class McfDataRows {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionPathValue")
     public McfDataRowsConversionPathValue[] conversionPathValue;
+
     public McfDataRows withConversionPathValue(McfDataRowsConversionPathValue[] conversionPathValue) {
         this.conversionPathValue = conversionPathValue;
         return this;
@@ -29,9 +30,11 @@ public class McfDataRows {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primitiveValue")
     public String primitiveValue;
+
     public McfDataRows withPrimitiveValue(String primitiveValue) {
         this.primitiveValue = primitiveValue;
         return this;
     }
     
+    public McfDataRows(){}
 }

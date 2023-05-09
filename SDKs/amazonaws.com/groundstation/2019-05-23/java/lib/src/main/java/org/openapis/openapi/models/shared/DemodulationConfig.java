@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DemodulationConfig {
     @JsonProperty("unvalidatedJSON")
     public String unvalidatedJSON;
+
     public DemodulationConfig withUnvalidatedJSON(String unvalidatedJSON) {
         this.unvalidatedJSON = unvalidatedJSON;
         return this;
     }
     
+    public DemodulationConfig(@JsonProperty("unvalidatedJSON") String unvalidatedJSON) {
+        this.unvalidatedJSON = unvalidatedJSON;
+  }
 }

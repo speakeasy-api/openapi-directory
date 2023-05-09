@@ -22,6 +22,7 @@ public class ResiliencyPolicy {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public ResiliencyPolicy withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class ResiliencyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataLocationConstraint")
     public DataLocationConstraintEnum dataLocationConstraint;
+
     public ResiliencyPolicy withDataLocationConstraint(DataLocationConstraintEnum dataLocationConstraint) {
         this.dataLocationConstraint = dataLocationConstraint;
         return this;
@@ -38,6 +40,7 @@ public class ResiliencyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedCostTier")
     public EstimatedCostTierEnum estimatedCostTier;
+
     public ResiliencyPolicy withEstimatedCostTier(EstimatedCostTierEnum estimatedCostTier) {
         this.estimatedCostTier = estimatedCostTier;
         return this;
@@ -46,6 +49,7 @@ public class ResiliencyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public java.util.Map<String, FailurePolicy> policy;
+
     public ResiliencyPolicy withPolicy(java.util.Map<String, FailurePolicy> policy) {
         this.policy = policy;
         return this;
@@ -54,6 +58,7 @@ public class ResiliencyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyArn")
     public String policyArn;
+
     public ResiliencyPolicy withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
@@ -62,6 +67,7 @@ public class ResiliencyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyDescription")
     public String policyDescription;
+
     public ResiliencyPolicy withPolicyDescription(String policyDescription) {
         this.policyDescription = policyDescription;
         return this;
@@ -70,6 +76,7 @@ public class ResiliencyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyName")
     public String policyName;
+
     public ResiliencyPolicy withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -78,6 +85,7 @@ public class ResiliencyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ResiliencyPolicy withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -86,9 +94,11 @@ public class ResiliencyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tier")
     public ResiliencyPolicyTierEnum tier;
+
     public ResiliencyPolicy withTier(ResiliencyPolicyTierEnum tier) {
         this.tier = tier;
         return this;
     }
     
+    public ResiliencyPolicy(){}
 }

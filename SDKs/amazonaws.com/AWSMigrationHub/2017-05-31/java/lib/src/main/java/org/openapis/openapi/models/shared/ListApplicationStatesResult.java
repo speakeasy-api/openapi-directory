@@ -15,6 +15,7 @@ public class ListApplicationStatesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationStateList")
     public ApplicationState[] applicationStateList;
+
     public ListApplicationStatesResult withApplicationStateList(ApplicationState[] applicationStateList) {
         this.applicationStateList = applicationStateList;
         return this;
@@ -23,9 +24,11 @@ public class ListApplicationStatesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListApplicationStatesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListApplicationStatesResult(){}
 }

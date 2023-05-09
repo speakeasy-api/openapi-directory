@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AppsTransferOwnershipRawDefaultApplicationJSON {
     @JsonProperty("error")
     public AppsTransferOwnershipRawDefaultApplicationJSONError error;
+
     public AppsTransferOwnershipRawDefaultApplicationJSON withError(AppsTransferOwnershipRawDefaultApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public AppsTransferOwnershipRawDefaultApplicationJSON(@JsonProperty("error") AppsTransferOwnershipRawDefaultApplicationJSONError error) {
+        this.error = error;
+  }
 }

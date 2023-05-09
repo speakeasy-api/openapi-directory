@@ -17,6 +17,7 @@ public class SplitAmount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public SplitAmount withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -27,9 +28,13 @@ public class SplitAmount {
      */
     @JsonProperty("value")
     public Long value;
+
     public SplitAmount withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public SplitAmount(@JsonProperty("value") Long value) {
+        this.value = value;
+  }
 }

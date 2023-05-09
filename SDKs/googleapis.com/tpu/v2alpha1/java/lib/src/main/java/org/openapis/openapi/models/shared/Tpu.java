@@ -18,9 +18,11 @@ public class Tpu {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeSpec")
     public NodeSpec[] nodeSpec;
+
     public Tpu withNodeSpec(NodeSpec[] nodeSpec) {
         this.nodeSpec = nodeSpec;
         return this;
     }
     
+    public Tpu(){}
 }

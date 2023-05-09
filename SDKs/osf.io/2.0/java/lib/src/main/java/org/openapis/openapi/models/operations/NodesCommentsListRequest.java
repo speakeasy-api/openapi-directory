@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NodesCommentsListRequest {
@@ -12,9 +13,13 @@ public class NodesCommentsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
     public String nodeId;
+
     public NodesCommentsListRequest withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
     }
     
+    public NodesCommentsListRequest(@JsonProperty("node_id") String nodeId) {
+        this.nodeId = nodeId;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ApplySecurityGroupsToClientVpnTargetNetworkResult {
     
     public String[] securityGroupIds;
+
     public ApplySecurityGroupsToClientVpnTargetNetworkResult withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
     }
     
+    public ApplySecurityGroupsToClientVpnTargetNetworkResult(){}
 }

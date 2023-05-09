@@ -15,6 +15,7 @@ public class SymbolicLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("absolutePath")
     public String absolutePath;
+
     public SymbolicLink withAbsolutePath(String absolutePath) {
         this.absolutePath = absolutePath;
         return this;
@@ -23,6 +24,7 @@ public class SymbolicLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blobId")
     public String blobId;
+
     public SymbolicLink withBlobId(String blobId) {
         this.blobId = blobId;
         return this;
@@ -31,6 +33,7 @@ public class SymbolicLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileMode")
     public FileModeTypeEnumEnum fileMode;
+
     public SymbolicLink withFileMode(FileModeTypeEnumEnum fileMode) {
         this.fileMode = fileMode;
         return this;
@@ -39,9 +42,11 @@ public class SymbolicLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relativePath")
     public String relativePath;
+
     public SymbolicLink withRelativePath(String relativePath) {
         this.relativePath = relativePath;
         return this;
     }
     
+    public SymbolicLink(){}
 }

@@ -18,6 +18,7 @@ public class MaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public MaintenanceWindow withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,6 +30,7 @@ public class MaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurrence")
     public String recurrence;
+
     public MaintenanceWindow withRecurrence(String recurrence) {
         this.recurrence = recurrence;
         return this;
@@ -40,9 +42,11 @@ public class MaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public MaintenanceWindow withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public MaintenanceWindow(){}
 }

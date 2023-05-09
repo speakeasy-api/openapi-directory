@@ -15,6 +15,7 @@ public class TestInvokeAuthorizerRequestBodyHttpContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public java.util.Map<String, String> headers;
+
     public TestInvokeAuthorizerRequestBodyHttpContext withHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
@@ -23,9 +24,11 @@ public class TestInvokeAuthorizerRequestBodyHttpContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryString")
     public String queryString;
+
     public TestInvokeAuthorizerRequestBodyHttpContext withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
     }
     
+    public TestInvokeAuthorizerRequestBodyHttpContext(){}
 }

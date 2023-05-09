@@ -15,6 +15,7 @@ public class DestinyDefinitionsItemsDestinyDerivedItemDefinition {
      */
     
     public String iconPath;
+
     public DestinyDefinitionsItemsDestinyDerivedItemDefinition withIconPath(String iconPath) {
         this.iconPath = iconPath;
         return this;
@@ -25,6 +26,7 @@ public class DestinyDefinitionsItemsDestinyDerivedItemDefinition {
      */
     
     public String itemDescription;
+
     public DestinyDefinitionsItemsDestinyDerivedItemDefinition withItemDescription(String itemDescription) {
         this.itemDescription = itemDescription;
         return this;
@@ -35,6 +37,7 @@ public class DestinyDefinitionsItemsDestinyDerivedItemDefinition {
      */
     
     public String itemDetail;
+
     public DestinyDefinitionsItemsDestinyDerivedItemDefinition withItemDetail(String itemDetail) {
         this.itemDetail = itemDetail;
         return this;
@@ -45,6 +48,7 @@ public class DestinyDefinitionsItemsDestinyDerivedItemDefinition {
      */
     
     public Long itemHash;
+
     public DestinyDefinitionsItemsDestinyDerivedItemDefinition withItemHash(Long itemHash) {
         this.itemHash = itemHash;
         return this;
@@ -55,6 +59,7 @@ public class DestinyDefinitionsItemsDestinyDerivedItemDefinition {
      */
     
     public String itemName;
+
     public DestinyDefinitionsItemsDestinyDerivedItemDefinition withItemName(String itemName) {
         this.itemName = itemName;
         return this;
@@ -65,9 +70,11 @@ public class DestinyDefinitionsItemsDestinyDerivedItemDefinition {
      */
     
     public Integer vendorItemIndex;
+
     public DestinyDefinitionsItemsDestinyDerivedItemDefinition withVendorItemIndex(Integer vendorItemIndex) {
         this.vendorItemIndex = vendorItemIndex;
         return this;
     }
     
+    public DestinyDefinitionsItemsDestinyDerivedItemDefinition(){}
 }

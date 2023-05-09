@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteFlowLogsResultUnsuccessfulError {
     
     public String code;
+
     public DeleteFlowLogsResultUnsuccessfulError withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class DeleteFlowLogsResultUnsuccessfulError {
     
     
     public String message;
+
     public DeleteFlowLogsResultUnsuccessfulError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DeleteFlowLogsResultUnsuccessfulError(){}
 }

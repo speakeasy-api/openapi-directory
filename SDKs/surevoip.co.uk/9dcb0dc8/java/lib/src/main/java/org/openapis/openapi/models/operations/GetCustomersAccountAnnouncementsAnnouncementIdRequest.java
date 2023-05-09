@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomersAccountAnnouncementsAnnouncementIdRequest {
@@ -12,6 +13,7 @@ public class GetCustomersAccountAnnouncementsAnnouncementIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account")
     public Long account;
+
     public GetCustomersAccountAnnouncementsAnnouncementIdRequest withAccount(Long account) {
         this.account = account;
         return this;
@@ -22,9 +24,14 @@ public class GetCustomersAccountAnnouncementsAnnouncementIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=announcement_id")
     public String announcementId;
+
     public GetCustomersAccountAnnouncementsAnnouncementIdRequest withAnnouncementId(String announcementId) {
         this.announcementId = announcementId;
         return this;
     }
     
+    public GetCustomersAccountAnnouncementsAnnouncementIdRequest(@JsonProperty("account") Long account, @JsonProperty("announcement_id") String announcementId) {
+        this.account = account;
+        this.announcementId = announcementId;
+  }
 }

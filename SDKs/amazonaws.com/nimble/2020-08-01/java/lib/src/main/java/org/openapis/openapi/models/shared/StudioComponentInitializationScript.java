@@ -15,6 +15,7 @@ public class StudioComponentInitializationScript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchProfileProtocolVersion")
     public String launchProfileProtocolVersion;
+
     public StudioComponentInitializationScript withLaunchProfileProtocolVersion(String launchProfileProtocolVersion) {
         this.launchProfileProtocolVersion = launchProfileProtocolVersion;
         return this;
@@ -23,6 +24,7 @@ public class StudioComponentInitializationScript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public LaunchProfilePlatformEnum platform;
+
     public StudioComponentInitializationScript withPlatform(LaunchProfilePlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -31,6 +33,7 @@ public class StudioComponentInitializationScript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runContext")
     public StudioComponentInitializationScriptRunContextEnum runContext;
+
     public StudioComponentInitializationScript withRunContext(StudioComponentInitializationScriptRunContextEnum runContext) {
         this.runContext = runContext;
         return this;
@@ -39,9 +42,11 @@ public class StudioComponentInitializationScript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public StudioComponentInitializationScript withScript(String script) {
         this.script = script;
         return this;
     }
     
+    public StudioComponentInitializationScript(){}
 }

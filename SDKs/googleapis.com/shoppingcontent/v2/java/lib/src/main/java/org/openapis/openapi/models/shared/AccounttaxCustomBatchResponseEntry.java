@@ -18,6 +18,7 @@ public class AccounttaxCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountTax")
     public AccountTax accountTax;
+
     public AccounttaxCustomBatchResponseEntry withAccountTax(AccountTax accountTax) {
         this.accountTax = accountTax;
         return this;
@@ -29,6 +30,7 @@ public class AccounttaxCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchId")
     public Long batchId;
+
     public AccounttaxCustomBatchResponseEntry withBatchId(Long batchId) {
         this.batchId = batchId;
         return this;
@@ -40,6 +42,7 @@ public class AccounttaxCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Errors errors;
+
     public AccounttaxCustomBatchResponseEntry withErrors(Errors errors) {
         this.errors = errors;
         return this;
@@ -51,9 +54,11 @@ public class AccounttaxCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccounttaxCustomBatchResponseEntry withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public AccounttaxCustomBatchResponseEntry(){}
 }

@@ -15,9 +15,11 @@ public class EnvironmentPropertyDescriptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PropertyGroupDescriptions")
     public PropertyGroup[] propertyGroupDescriptions;
+
     public EnvironmentPropertyDescriptions withPropertyGroupDescriptions(PropertyGroup[] propertyGroupDescriptions) {
         this.propertyGroupDescriptions = propertyGroupDescriptions;
         return this;
     }
     
+    public EnvironmentPropertyDescriptions(){}
 }

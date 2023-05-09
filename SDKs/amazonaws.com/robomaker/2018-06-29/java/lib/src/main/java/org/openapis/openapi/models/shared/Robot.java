@@ -20,6 +20,7 @@ public class Robot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public ArchitectureEnum architecture;
+
     public Robot withArchitecture(ArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -28,6 +29,7 @@ public class Robot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Robot withArn(String arn) {
         this.arn = arn;
         return this;
@@ -38,6 +40,7 @@ public class Robot {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Robot withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class Robot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fleetArn")
     public String fleetArn;
+
     public Robot withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -54,6 +58,7 @@ public class Robot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("greenGrassGroupId")
     public String greenGrassGroupId;
+
     public Robot withGreenGrassGroupId(String greenGrassGroupId) {
         this.greenGrassGroupId = greenGrassGroupId;
         return this;
@@ -62,6 +67,7 @@ public class Robot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastDeploymentJob")
     public String lastDeploymentJob;
+
     public Robot withLastDeploymentJob(String lastDeploymentJob) {
         this.lastDeploymentJob = lastDeploymentJob;
         return this;
@@ -72,6 +78,7 @@ public class Robot {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastDeploymentTime")
     public OffsetDateTime lastDeploymentTime;
+
     public Robot withLastDeploymentTime(OffsetDateTime lastDeploymentTime) {
         this.lastDeploymentTime = lastDeploymentTime;
         return this;
@@ -80,6 +87,7 @@ public class Robot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Robot withName(String name) {
         this.name = name;
         return this;
@@ -88,9 +96,11 @@ public class Robot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public RobotStatusEnum status;
+
     public Robot withStatus(RobotStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Robot(){}
 }

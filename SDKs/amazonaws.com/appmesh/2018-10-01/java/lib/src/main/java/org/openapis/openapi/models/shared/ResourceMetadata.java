@@ -20,6 +20,7 @@ public class ResourceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ResourceMetadata withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class ResourceMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ResourceMetadata withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -40,6 +42,7 @@ public class ResourceMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public ResourceMetadata withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -48,6 +51,7 @@ public class ResourceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public ResourceMetadata withUid(String uid) {
         this.uid = uid;
         return this;
@@ -56,9 +60,11 @@ public class ResourceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public ResourceMetadata withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public ResourceMetadata(){}
 }

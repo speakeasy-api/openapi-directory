@@ -20,6 +20,7 @@ public class PlaceOrderRequestBodyShippingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public PlaceOrderRequestBodyShippingDataAddress address;
+
     public PlaceOrderRequestBodyShippingData withAddress(PlaceOrderRequestBodyShippingDataAddress address) {
         this.address = address;
         return this;
@@ -31,6 +32,7 @@ public class PlaceOrderRequestBodyShippingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logisticsInfo")
     public PlaceOrderRequestBodyShippingDataLogisticsInfo[] logisticsInfo;
+
     public PlaceOrderRequestBodyShippingData withLogisticsInfo(PlaceOrderRequestBodyShippingDataLogisticsInfo[] logisticsInfo) {
         this.logisticsInfo = logisticsInfo;
         return this;
@@ -42,9 +44,11 @@ public class PlaceOrderRequestBodyShippingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateStatus")
     public String updateStatus;
+
     public PlaceOrderRequestBodyShippingData withUpdateStatus(String updateStatus) {
         this.updateStatus = updateStatus;
         return this;
     }
     
+    public PlaceOrderRequestBodyShippingData(){}
 }

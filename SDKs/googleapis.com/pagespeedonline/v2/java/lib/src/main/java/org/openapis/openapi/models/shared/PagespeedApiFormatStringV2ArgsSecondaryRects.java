@@ -12,6 +12,7 @@ public class PagespeedApiFormatStringV2ArgsSecondaryRects {
      */
     
     public Integer height;
+
     public PagespeedApiFormatStringV2ArgsSecondaryRects withHeight(Integer height) {
         this.height = height;
         return this;
@@ -22,6 +23,7 @@ public class PagespeedApiFormatStringV2ArgsSecondaryRects {
      */
     
     public Integer left;
+
     public PagespeedApiFormatStringV2ArgsSecondaryRects withLeft(Integer left) {
         this.left = left;
         return this;
@@ -32,6 +34,7 @@ public class PagespeedApiFormatStringV2ArgsSecondaryRects {
      */
     
     public Integer top;
+
     public PagespeedApiFormatStringV2ArgsSecondaryRects withTop(Integer top) {
         this.top = top;
         return this;
@@ -42,9 +45,11 @@ public class PagespeedApiFormatStringV2ArgsSecondaryRects {
      */
     
     public Integer width;
+
     public PagespeedApiFormatStringV2ArgsSecondaryRects withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public PagespeedApiFormatStringV2ArgsSecondaryRects(){}
 }

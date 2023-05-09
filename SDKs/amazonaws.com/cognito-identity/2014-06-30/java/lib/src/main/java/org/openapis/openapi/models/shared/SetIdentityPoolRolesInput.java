@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SetIdentityPoolRolesInput {
     @JsonProperty("IdentityPoolId")
     public String identityPoolId;
+
     public SetIdentityPoolRolesInput withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
@@ -22,6 +23,7 @@ public class SetIdentityPoolRolesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleMappings")
     public java.util.Map<String, RoleMapping> roleMappings;
+
     public SetIdentityPoolRolesInput withRoleMappings(java.util.Map<String, RoleMapping> roleMappings) {
         this.roleMappings = roleMappings;
         return this;
@@ -29,9 +31,14 @@ public class SetIdentityPoolRolesInput {
     
     @JsonProperty("Roles")
     public java.util.Map<String, String> roles;
+
     public SetIdentityPoolRolesInput withRoles(java.util.Map<String, String> roles) {
         this.roles = roles;
         return this;
     }
     
+    public SetIdentityPoolRolesInput(@JsonProperty("IdentityPoolId") String identityPoolId, @JsonProperty("Roles") java.util.Map<String, String> roles) {
+        this.identityPoolId = identityPoolId;
+        this.roles = roles;
+  }
 }

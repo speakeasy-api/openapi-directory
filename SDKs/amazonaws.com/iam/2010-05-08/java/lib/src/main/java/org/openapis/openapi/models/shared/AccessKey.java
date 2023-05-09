@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class AccessKey {
     
     public String accessKeyId;
+
     public AccessKey withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -19,6 +21,7 @@ public class AccessKey {
     
     
     public OffsetDateTime createDate;
+
     public AccessKey withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -26,6 +29,7 @@ public class AccessKey {
     
     
     public String secretAccessKey;
+
     public AccessKey withSecretAccessKey(String secretAccessKey) {
         this.secretAccessKey = secretAccessKey;
         return this;
@@ -33,6 +37,7 @@ public class AccessKey {
     
     
     public StatusTypeEnum status;
+
     public AccessKey withStatus(StatusTypeEnum status) {
         this.status = status;
         return this;
@@ -40,9 +45,16 @@ public class AccessKey {
     
     
     public String userName;
+
     public AccessKey withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public AccessKey(@JsonProperty("AccessKeyId") String accessKeyId, @JsonProperty("SecretAccessKey") String secretAccessKey, @JsonProperty("Status") StatusTypeEnum status, @JsonProperty("UserName") String userName) {
+        this.accessKeyId = accessKeyId;
+        this.secretAccessKey = secretAccessKey;
+        this.status = status;
+        this.userName = userName;
+  }
 }

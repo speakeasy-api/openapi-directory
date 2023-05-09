@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClearMerchantOrderInfoV3Request {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public Integer accountId;
+
     public ClearMerchantOrderInfoV3Request withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -19,6 +21,7 @@ public class ClearMerchantOrderInfoV3Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=beezUPOrderId")
     public String beezUPOrderId;
+
     public ClearMerchantOrderInfoV3Request withBeezUPOrderId(String beezUPOrderId) {
         this.beezUPOrderId = beezUPOrderId;
         return this;
@@ -29,6 +32,7 @@ public class ClearMerchantOrderInfoV3Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public ClearMerchantOrderInfoV3Request withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
@@ -39,9 +43,15 @@ public class ClearMerchantOrderInfoV3Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=testMode")
     public Boolean testMode;
+
     public ClearMerchantOrderInfoV3Request withTestMode(Boolean testMode) {
         this.testMode = testMode;
         return this;
     }
     
+    public ClearMerchantOrderInfoV3Request(@JsonProperty("accountId") Integer accountId, @JsonProperty("beezUPOrderId") String beezUPOrderId, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode) {
+        this.accountId = accountId;
+        this.beezUPOrderId = beezUPOrderId;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+  }
 }

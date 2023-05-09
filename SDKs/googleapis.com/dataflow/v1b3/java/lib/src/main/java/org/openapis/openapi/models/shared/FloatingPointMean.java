@@ -18,6 +18,7 @@ public class FloatingPointMean {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public SplitInt64 count;
+
     public FloatingPointMean withCount(SplitInt64 count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class FloatingPointMean {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sum")
     public Double sum;
+
     public FloatingPointMean withSum(Double sum) {
         this.sum = sum;
         return this;
     }
     
+    public FloatingPointMean(){}
 }

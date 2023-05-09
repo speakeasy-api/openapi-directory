@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateSourceServersResponse {
@@ -12,6 +13,7 @@ public class DisassociateSourceServersResponse {
      */
     
     public Object conflictException;
+
     public DisassociateSourceServersResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateSourceServersResponse {
     
     
     public String contentType;
+
     public DisassociateSourceServersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateSourceServersResponse {
      */
     
     public java.util.Map<String, Object> disassociateSourceServersResponse;
+
     public DisassociateSourceServersResponse withDisassociateSourceServersResponse(java.util.Map<String, Object> disassociateSourceServersResponse) {
         this.disassociateSourceServersResponse = disassociateSourceServersResponse;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateSourceServersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateSourceServersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DisassociateSourceServersResponse {
     
     
     public Integer statusCode;
+
     public DisassociateSourceServersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DisassociateSourceServersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateSourceServersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DisassociateSourceServersResponse {
      */
     
     public Object uninitializedAccountException;
+
     public DisassociateSourceServersResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public DisassociateSourceServersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

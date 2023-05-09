@@ -15,9 +15,11 @@ public class StageContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StageContext withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StageContext(){}
 }

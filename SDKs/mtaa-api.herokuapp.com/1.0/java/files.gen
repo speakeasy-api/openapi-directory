@@ -44,4 +44,10 @@ lib/src/main/java/org/openapis/openapi/models/operations/WardsInADistrictRequest
 lib/src/main/java/org/openapis/openapi/models/operations/WardsInADistrictResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/NeighborhoodInAStreetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/NeighborhoodInAStreetResponse.java
+docs/sdk/README.md
+docs/districtsinregion/README.md
+docs/streetsinaward/README.md
+docs/tanzaniaregions/README.md
+docs/wardsinadistrict/README.md
+docs/neighborhoodinastreet/README.md
 USAGE.md

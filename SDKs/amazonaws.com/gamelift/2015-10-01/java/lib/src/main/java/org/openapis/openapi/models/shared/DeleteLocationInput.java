@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteLocationInput {
     @JsonProperty("LocationName")
     public String locationName;
+
     public DeleteLocationInput withLocationName(String locationName) {
         this.locationName = locationName;
         return this;
     }
     
+    public DeleteLocationInput(@JsonProperty("LocationName") String locationName) {
+        this.locationName = locationName;
+  }
 }

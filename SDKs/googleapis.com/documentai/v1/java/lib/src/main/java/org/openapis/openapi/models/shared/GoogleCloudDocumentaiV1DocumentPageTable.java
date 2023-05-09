@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1DocumentPageTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bodyRows")
     public GoogleCloudDocumentaiV1DocumentPageTableTableRow[] bodyRows;
+
     public GoogleCloudDocumentaiV1DocumentPageTable withBodyRows(GoogleCloudDocumentaiV1DocumentPageTableTableRow[] bodyRows) {
         this.bodyRows = bodyRows;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1DocumentPageTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedLanguages")
     public GoogleCloudDocumentaiV1DocumentPageDetectedLanguage[] detectedLanguages;
+
     public GoogleCloudDocumentaiV1DocumentPageTable withDetectedLanguages(GoogleCloudDocumentaiV1DocumentPageDetectedLanguage[] detectedLanguages) {
         this.detectedLanguages = detectedLanguages;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1DocumentPageTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerRows")
     public GoogleCloudDocumentaiV1DocumentPageTableTableRow[] headerRows;
+
     public GoogleCloudDocumentaiV1DocumentPageTable withHeaderRows(GoogleCloudDocumentaiV1DocumentPageTableTableRow[] headerRows) {
         this.headerRows = headerRows;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDocumentaiV1DocumentPageTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public GoogleCloudDocumentaiV1DocumentPageLayout layout;
+
     public GoogleCloudDocumentaiV1DocumentPageTable withLayout(GoogleCloudDocumentaiV1DocumentPageLayout layout) {
         this.layout = layout;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDocumentaiV1DocumentPageTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provenance")
     public GoogleCloudDocumentaiV1DocumentProvenance provenance;
+
     public GoogleCloudDocumentaiV1DocumentPageTable withProvenance(GoogleCloudDocumentaiV1DocumentProvenance provenance) {
         this.provenance = provenance;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1DocumentPageTable(){}
 }

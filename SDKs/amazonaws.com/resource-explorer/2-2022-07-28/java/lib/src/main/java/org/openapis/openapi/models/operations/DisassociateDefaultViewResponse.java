@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateDefaultViewResponse {
@@ -12,6 +13,7 @@ public class DisassociateDefaultViewResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateDefaultViewResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateDefaultViewResponse {
     
     
     public String contentType;
+
     public DisassociateDefaultViewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateDefaultViewResponse {
      */
     
     public Object internalServerException;
+
     public DisassociateDefaultViewResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class DisassociateDefaultViewResponse {
     
     
     public Integer statusCode;
+
     public DisassociateDefaultViewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DisassociateDefaultViewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateDefaultViewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class DisassociateDefaultViewResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateDefaultViewResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,9 +70,14 @@ public class DisassociateDefaultViewResponse {
      */
     
     public Object validationException;
+
     public DisassociateDefaultViewResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateDefaultViewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

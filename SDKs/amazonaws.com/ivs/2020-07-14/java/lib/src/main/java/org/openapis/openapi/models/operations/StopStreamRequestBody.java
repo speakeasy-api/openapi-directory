@@ -12,9 +12,13 @@ public class StopStreamRequestBody {
      */
     @JsonProperty("channelArn")
     public String channelArn;
+
     public StopStreamRequestBody withChannelArn(String channelArn) {
         this.channelArn = channelArn;
         return this;
     }
     
+    public StopStreamRequestBody(@JsonProperty("channelArn") String channelArn) {
+        this.channelArn = channelArn;
+  }
 }

@@ -12,6 +12,7 @@ public class GetDeploymentsRequestBody {
      */
     @JsonProperty("DeviceFleetName")
     public String deviceFleetName;
+
     public GetDeploymentsRequestBody withDeviceFleetName(String deviceFleetName) {
         this.deviceFleetName = deviceFleetName;
         return this;
@@ -22,9 +23,14 @@ public class GetDeploymentsRequestBody {
      */
     @JsonProperty("DeviceName")
     public String deviceName;
+
     public GetDeploymentsRequestBody withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
     }
     
+    public GetDeploymentsRequestBody(@JsonProperty("DeviceFleetName") String deviceFleetName, @JsonProperty("DeviceName") String deviceName) {
+        this.deviceFleetName = deviceFleetName;
+        this.deviceName = deviceName;
+  }
 }

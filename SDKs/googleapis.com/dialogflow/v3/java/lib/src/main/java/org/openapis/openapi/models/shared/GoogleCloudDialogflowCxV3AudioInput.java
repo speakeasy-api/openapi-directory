@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3AudioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audio")
     public String audio;
+
     public GoogleCloudDialogflowCxV3AudioInput withAudio(String audio) {
         this.audio = audio;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3AudioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public GoogleCloudDialogflowCxV3InputAudioConfig config;
+
     public GoogleCloudDialogflowCxV3AudioInput withConfig(GoogleCloudDialogflowCxV3InputAudioConfig config) {
         this.config = config;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3AudioInput(){}
 }

@@ -18,9 +18,11 @@ public class SegmentDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentFilters")
     public SegmentFilter[] segmentFilters;
+
     public SegmentDefinition withSegmentFilters(SegmentFilter[] segmentFilters) {
         this.segmentFilters = segmentFilters;
         return this;
     }
     
+    public SegmentDefinition(){}
 }

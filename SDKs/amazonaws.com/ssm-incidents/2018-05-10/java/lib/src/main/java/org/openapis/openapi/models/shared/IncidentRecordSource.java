@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IncidentRecordSource {
     @JsonProperty("createdBy")
     public String createdBy;
+
     public IncidentRecordSource withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -22,6 +23,7 @@ public class IncidentRecordSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invokedBy")
     public String invokedBy;
+
     public IncidentRecordSource withInvokedBy(String invokedBy) {
         this.invokedBy = invokedBy;
         return this;
@@ -30,6 +32,7 @@ public class IncidentRecordSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public IncidentRecordSource withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -37,9 +40,14 @@ public class IncidentRecordSource {
     
     @JsonProperty("source")
     public String source;
+
     public IncidentRecordSource withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public IncidentRecordSource(@JsonProperty("createdBy") String createdBy, @JsonProperty("source") String source) {
+        this.createdBy = createdBy;
+        this.source = source;
+  }
 }

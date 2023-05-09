@@ -12,6 +12,7 @@ public class ApiDimensionFilterGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public ApiDimensionFilter[] filters;
+
     public ApiDimensionFilterGroup withFilters(ApiDimensionFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,9 +21,11 @@ public class ApiDimensionFilterGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupType")
     public String groupType;
+
     public ApiDimensionFilterGroup withGroupType(String groupType) {
         this.groupType = groupType;
         return this;
     }
     
+    public ApiDimensionFilterGroup(){}
 }

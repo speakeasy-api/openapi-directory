@@ -18,6 +18,7 @@ public class HistogramChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketSize")
     public Double bucketSize;
+
     public HistogramChartSpec withBucketSize(Double bucketSize) {
         this.bucketSize = bucketSize;
         return this;
@@ -29,6 +30,7 @@ public class HistogramChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legendPosition")
     public HistogramChartSpecLegendPositionEnum legendPosition;
+
     public HistogramChartSpec withLegendPosition(HistogramChartSpecLegendPositionEnum legendPosition) {
         this.legendPosition = legendPosition;
         return this;
@@ -40,6 +42,7 @@ public class HistogramChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outlierPercentile")
     public Double outlierPercentile;
+
     public HistogramChartSpec withOutlierPercentile(Double outlierPercentile) {
         this.outlierPercentile = outlierPercentile;
         return this;
@@ -51,6 +54,7 @@ public class HistogramChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("series")
     public HistogramSeries[] series;
+
     public HistogramChartSpec withSeries(HistogramSeries[] series) {
         this.series = series;
         return this;
@@ -62,9 +66,11 @@ public class HistogramChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showItemDividers")
     public Boolean showItemDividers;
+
     public HistogramChartSpec withShowItemDividers(Boolean showItemDividers) {
         this.showItemDividers = showItemDividers;
         return this;
     }
     
+    public HistogramChartSpec(){}
 }

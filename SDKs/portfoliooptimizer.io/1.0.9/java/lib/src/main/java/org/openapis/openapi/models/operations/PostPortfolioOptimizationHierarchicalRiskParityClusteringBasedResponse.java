@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedResponse {
     
     public String contentType;
+
     public PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRespo
     
     
     public Integer statusCode;
+
     public PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRespo
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRespo
      */
     
     public PostPortfolioOptimizationHierarchicalRiskParityClusteringBased200ApplicationJSON postPortfolioOptimizationHierarchicalRiskParityClusteringBased200ApplicationJSONObject;
+
     public PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedResponse withPostPortfolioOptimizationHierarchicalRiskParityClusteringBased200ApplicationJSONObject(PostPortfolioOptimizationHierarchicalRiskParityClusteringBased200ApplicationJSON postPortfolioOptimizationHierarchicalRiskParityClusteringBased200ApplicationJSONObject) {
         this.postPortfolioOptimizationHierarchicalRiskParityClusteringBased200ApplicationJSONObject = postPortfolioOptimizationHierarchicalRiskParityClusteringBased200ApplicationJSONObject;
         return this;
     }
     
+    public PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

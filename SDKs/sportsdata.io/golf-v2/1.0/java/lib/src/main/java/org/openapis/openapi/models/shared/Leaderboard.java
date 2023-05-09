@@ -12,6 +12,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Players")
     public PlayerTournament[] players;
+
     public Leaderboard withPlayers(PlayerTournament[] players) {
         this.players = players;
         return this;
@@ -20,9 +21,11 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tournament")
     public Tournament tournament;
+
     public Leaderboard withTournament(Tournament tournament) {
         this.tournament = tournament;
         return this;
     }
     
+    public Leaderboard(){}
 }

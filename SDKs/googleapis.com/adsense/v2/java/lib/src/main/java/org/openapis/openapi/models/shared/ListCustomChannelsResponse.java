@@ -18,6 +18,7 @@ public class ListCustomChannelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customChannels")
     public CustomChannel[] customChannels;
+
     public ListCustomChannelsResponse withCustomChannels(CustomChannel[] customChannels) {
         this.customChannels = customChannels;
         return this;
@@ -29,9 +30,11 @@ public class ListCustomChannelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCustomChannelsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListCustomChannelsResponse(){}
 }

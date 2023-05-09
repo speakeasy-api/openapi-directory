@@ -18,6 +18,7 @@ public class ListCssesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("csses")
     public Css[] csses;
+
     public ListCssesResponse withCsses(Css[] csses) {
         this.csses = csses;
         return this;
@@ -29,9 +30,11 @@ public class ListCssesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCssesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListCssesResponse(){}
 }

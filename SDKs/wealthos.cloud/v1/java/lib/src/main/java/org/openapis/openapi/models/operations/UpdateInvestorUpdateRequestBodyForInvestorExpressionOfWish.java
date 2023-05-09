@@ -18,6 +18,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorExpressionOfWish {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sipp_beneficiaries")
     public UpdateInvestorUpdateRequestBodyForInvestorExpressionOfWishSippBeneficiaries[] sippBeneficiaries;
+
     public UpdateInvestorUpdateRequestBodyForInvestorExpressionOfWish withSippBeneficiaries(UpdateInvestorUpdateRequestBodyForInvestorExpressionOfWishSippBeneficiaries[] sippBeneficiaries) {
         this.sippBeneficiaries = sippBeneficiaries;
         return this;
@@ -29,9 +30,11 @@ public class UpdateInvestorUpdateRequestBodyForInvestorExpressionOfWish {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sipp_nominees")
     public UpdateInvestorUpdateRequestBodyForInvestorExpressionOfWishSippNominees[] sippNominees;
+
     public UpdateInvestorUpdateRequestBodyForInvestorExpressionOfWish withSippNominees(UpdateInvestorUpdateRequestBodyForInvestorExpressionOfWishSippNominees[] sippNominees) {
         this.sippNominees = sippNominees;
         return this;
     }
     
+    public UpdateInvestorUpdateRequestBodyForInvestorExpressionOfWish(){}
 }

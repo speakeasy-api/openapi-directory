@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetIpamDiscoveredAccountsResult {
     
     public GetIpamDiscoveredAccountsResultIpamDiscoveredAccounts[] ipamDiscoveredAccounts;
+
     public GetIpamDiscoveredAccountsResult withIpamDiscoveredAccounts(GetIpamDiscoveredAccountsResultIpamDiscoveredAccounts[] ipamDiscoveredAccounts) {
         this.ipamDiscoveredAccounts = ipamDiscoveredAccounts;
         return this;
@@ -19,9 +20,11 @@ public class GetIpamDiscoveredAccountsResult {
     
     
     public String nextToken;
+
     public GetIpamDiscoveredAccountsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetIpamDiscoveredAccountsResult(){}
 }

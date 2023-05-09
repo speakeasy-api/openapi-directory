@@ -23,6 +23,7 @@ public class BusinessCardRecognitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressString")
     public String addressString;
+
     public BusinessCardRecognitionResult withAddressString(String addressString) {
         this.addressString = addressString;
         return this;
@@ -34,6 +35,7 @@ public class BusinessCardRecognitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BusinessName")
     public String businessName;
+
     public BusinessCardRecognitionResult withBusinessName(String businessName) {
         this.businessName = businessName;
         return this;
@@ -45,6 +47,7 @@ public class BusinessCardRecognitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailAddress")
     public String emailAddress;
+
     public BusinessCardRecognitionResult withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -56,6 +59,7 @@ public class BusinessCardRecognitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PersonName")
     public String personName;
+
     public BusinessCardRecognitionResult withPersonName(String personName) {
         this.personName = personName;
         return this;
@@ -67,6 +71,7 @@ public class BusinessCardRecognitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PersonTitle")
     public String personTitle;
+
     public BusinessCardRecognitionResult withPersonTitle(String personTitle) {
         this.personTitle = personTitle;
         return this;
@@ -78,6 +83,7 @@ public class BusinessCardRecognitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneNumber")
     public String phoneNumber;
+
     public BusinessCardRecognitionResult withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -89,6 +95,7 @@ public class BusinessCardRecognitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Successful")
     public Boolean successful;
+
     public BusinessCardRecognitionResult withSuccessful(Boolean successful) {
         this.successful = successful;
         return this;
@@ -102,9 +109,11 @@ public class BusinessCardRecognitionResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Timestamp")
     public OffsetDateTime timestamp;
+
     public BusinessCardRecognitionResult withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public BusinessCardRecognitionResult(){}
 }

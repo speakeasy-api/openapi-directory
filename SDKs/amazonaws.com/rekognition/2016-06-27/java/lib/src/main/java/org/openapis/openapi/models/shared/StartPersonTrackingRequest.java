@@ -12,6 +12,7 @@ public class StartPersonTrackingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartPersonTrackingRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -20,6 +21,7 @@ public class StartPersonTrackingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobTag")
     public String jobTag;
+
     public StartPersonTrackingRequest withJobTag(String jobTag) {
         this.jobTag = jobTag;
         return this;
@@ -28,6 +30,7 @@ public class StartPersonTrackingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationChannel")
     public NotificationChannel notificationChannel;
+
     public StartPersonTrackingRequest withNotificationChannel(NotificationChannel notificationChannel) {
         this.notificationChannel = notificationChannel;
         return this;
@@ -35,9 +38,13 @@ public class StartPersonTrackingRequest {
     
     @JsonProperty("Video")
     public Video video;
+
     public StartPersonTrackingRequest withVideo(Video video) {
         this.video = video;
         return this;
     }
     
+    public StartPersonTrackingRequest(@JsonProperty("Video") Video video) {
+        this.video = video;
+  }
 }

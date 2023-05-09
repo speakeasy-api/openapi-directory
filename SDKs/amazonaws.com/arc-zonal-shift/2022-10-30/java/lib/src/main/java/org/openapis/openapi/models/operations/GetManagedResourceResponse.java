@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetManagedResourceResponse {
@@ -12,6 +13,7 @@ public class GetManagedResourceResponse {
      */
     
     public Object accessDeniedException;
+
     public GetManagedResourceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetManagedResourceResponse {
     
     
     public String contentType;
+
     public GetManagedResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetManagedResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.GetManagedResourceResponse getManagedResourceResponse;
+
     public GetManagedResourceResponse withGetManagedResourceResponse(org.openapis.openapi.models.shared.GetManagedResourceResponse getManagedResourceResponse) {
         this.getManagedResourceResponse = getManagedResourceResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetManagedResourceResponse {
      */
     
     public Object internalServerException;
+
     public GetManagedResourceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetManagedResourceResponse {
     
     
     public Integer statusCode;
+
     public GetManagedResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetManagedResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetManagedResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetManagedResourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetManagedResourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetManagedResourceResponse {
      */
     
     public Object throttlingException;
+
     public GetManagedResourceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetManagedResourceResponse {
      */
     
     public Object validationException;
+
     public GetManagedResourceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetManagedResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

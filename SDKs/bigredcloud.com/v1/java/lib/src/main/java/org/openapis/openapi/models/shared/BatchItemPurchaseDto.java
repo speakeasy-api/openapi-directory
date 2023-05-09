@@ -12,6 +12,7 @@ public class BatchItemPurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item")
     public PurchaseDto item;
+
     public BatchItemPurchaseDto withItem(PurchaseDto item) {
         this.item = item;
         return this;
@@ -25,9 +26,11 @@ public class BatchItemPurchaseDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opCode")
     public BatchItemPurchaseDtoOpCodeEnum opCode;
+
     public BatchItemPurchaseDto withOpCode(BatchItemPurchaseDtoOpCodeEnum opCode) {
         this.opCode = opCode;
         return this;
     }
     
+    public BatchItemPurchaseDto(){}
 }

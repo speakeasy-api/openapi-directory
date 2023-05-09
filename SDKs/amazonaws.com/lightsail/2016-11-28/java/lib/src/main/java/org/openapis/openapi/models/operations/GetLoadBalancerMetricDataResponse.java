@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLoadBalancerMetricDataResponse {
@@ -12,6 +13,7 @@ public class GetLoadBalancerMetricDataResponse {
      */
     
     public Object accessDeniedException;
+
     public GetLoadBalancerMetricDataResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetLoadBalancerMetricDataResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetLoadBalancerMetricDataResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetLoadBalancerMetricDataResponse {
     
     
     public String contentType;
+
     public GetLoadBalancerMetricDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetLoadBalancerMetricDataResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLoadBalancerMetricDataResult getLoadBalancerMetricDataResult;
+
     public GetLoadBalancerMetricDataResponse withGetLoadBalancerMetricDataResult(org.openapis.openapi.models.shared.GetLoadBalancerMetricDataResult getLoadBalancerMetricDataResult) {
         this.getLoadBalancerMetricDataResult = getLoadBalancerMetricDataResult;
         return this;
@@ -49,6 +54,7 @@ public class GetLoadBalancerMetricDataResponse {
      */
     
     public Object invalidInputException;
+
     public GetLoadBalancerMetricDataResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetLoadBalancerMetricDataResponse {
      */
     
     public Object notFoundException;
+
     public GetLoadBalancerMetricDataResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetLoadBalancerMetricDataResponse {
      */
     
     public Object operationFailureException;
+
     public GetLoadBalancerMetricDataResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetLoadBalancerMetricDataResponse {
      */
     
     public Object serviceException;
+
     public GetLoadBalancerMetricDataResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetLoadBalancerMetricDataResponse {
     
     
     public Integer statusCode;
+
     public GetLoadBalancerMetricDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetLoadBalancerMetricDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLoadBalancerMetricDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetLoadBalancerMetricDataResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetLoadBalancerMetricDataResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetLoadBalancerMetricDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

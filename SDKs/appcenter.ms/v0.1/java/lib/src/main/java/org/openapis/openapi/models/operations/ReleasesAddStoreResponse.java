@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReleasesAddStoreResponse {
     
     public String contentType;
+
     public ReleasesAddStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReleasesAddStoreResponse {
     
     
     public Integer statusCode;
+
     public ReleasesAddStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReleasesAddStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReleasesAddStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReleasesAddStoreResponse {
      */
     
     public ReleasesAddStore201ApplicationJSON releasesAddStore201ApplicationJSONObject;
+
     public ReleasesAddStoreResponse withReleasesAddStore201ApplicationJSONObject(ReleasesAddStore201ApplicationJSON releasesAddStore201ApplicationJSONObject) {
         this.releasesAddStore201ApplicationJSONObject = releasesAddStore201ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ReleasesAddStoreResponse {
      */
     
     public ReleasesAddStore400ApplicationJSON releasesAddStore400ApplicationJSONObject;
+
     public ReleasesAddStoreResponse withReleasesAddStore400ApplicationJSONObject(ReleasesAddStore400ApplicationJSON releasesAddStore400ApplicationJSONObject) {
         this.releasesAddStore400ApplicationJSONObject = releasesAddStore400ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class ReleasesAddStoreResponse {
      */
     
     public ReleasesAddStore404ApplicationJSON releasesAddStore404ApplicationJSONObject;
+
     public ReleasesAddStoreResponse withReleasesAddStore404ApplicationJSONObject(ReleasesAddStore404ApplicationJSON releasesAddStore404ApplicationJSONObject) {
         this.releasesAddStore404ApplicationJSONObject = releasesAddStore404ApplicationJSONObject;
         return this;
     }
     
+    public ReleasesAddStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

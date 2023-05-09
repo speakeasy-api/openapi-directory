@@ -15,6 +15,7 @@ public class GetAlternateContactRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public GetAlternateContactRequestBody withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -25,9 +26,13 @@ public class GetAlternateContactRequestBody {
      */
     @JsonProperty("AlternateContactType")
     public GetAlternateContactRequestBodyAlternateContactTypeEnum alternateContactType;
+
     public GetAlternateContactRequestBody withAlternateContactType(GetAlternateContactRequestBodyAlternateContactTypeEnum alternateContactType) {
         this.alternateContactType = alternateContactType;
         return this;
     }
     
+    public GetAlternateContactRequestBody(@JsonProperty("AlternateContactType") GetAlternateContactRequestBodyAlternateContactTypeEnum alternateContactType) {
+        this.alternateContactType = alternateContactType;
+  }
 }

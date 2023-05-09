@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateServiceResponse {
     
     public String contentType;
+
     public UpdateServiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateServiceResponse {
      */
     
     public Object duplicateRequest;
+
     public UpdateServiceResponse withDuplicateRequest(Object duplicateRequest) {
         this.duplicateRequest = duplicateRequest;
         return this;
@@ -29,6 +32,7 @@ public class UpdateServiceResponse {
      */
     
     public Object invalidInput;
+
     public UpdateServiceResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -39,6 +43,7 @@ public class UpdateServiceResponse {
      */
     
     public Object serviceNotFound;
+
     public UpdateServiceResponse withServiceNotFound(Object serviceNotFound) {
         this.serviceNotFound = serviceNotFound;
         return this;
@@ -46,6 +51,7 @@ public class UpdateServiceResponse {
     
     
     public Integer statusCode;
+
     public UpdateServiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateServiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateServiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateServiceResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateServiceResponse updateServiceResponse;
+
     public UpdateServiceResponse withUpdateServiceResponse(org.openapis.openapi.models.shared.UpdateServiceResponse updateServiceResponse) {
         this.updateServiceResponse = updateServiceResponse;
         return this;
     }
     
+    public UpdateServiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

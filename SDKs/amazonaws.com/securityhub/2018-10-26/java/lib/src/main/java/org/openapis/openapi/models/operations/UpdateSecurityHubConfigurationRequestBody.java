@@ -15,6 +15,7 @@ public class UpdateSecurityHubConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoEnableControls")
     public Boolean autoEnableControls;
+
     public UpdateSecurityHubConfigurationRequestBody withAutoEnableControls(Boolean autoEnableControls) {
         this.autoEnableControls = autoEnableControls;
         return this;
@@ -26,9 +27,11 @@ public class UpdateSecurityHubConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ControlFindingGenerator")
     public UpdateSecurityHubConfigurationRequestBodyControlFindingGeneratorEnum controlFindingGenerator;
+
     public UpdateSecurityHubConfigurationRequestBody withControlFindingGenerator(UpdateSecurityHubConfigurationRequestBodyControlFindingGeneratorEnum controlFindingGenerator) {
         this.controlFindingGenerator = controlFindingGenerator;
         return this;
     }
     
+    public UpdateSecurityHubConfigurationRequestBody(){}
 }

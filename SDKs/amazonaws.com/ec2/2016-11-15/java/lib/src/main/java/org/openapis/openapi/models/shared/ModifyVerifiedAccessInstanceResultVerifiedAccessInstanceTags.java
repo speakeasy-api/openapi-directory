@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceTags {
     
     public String key;
+
     public ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceTags {
     
     
     public String value;
+
     public ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceTags(){}
 }

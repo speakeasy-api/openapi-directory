@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetContactPolicyRequest {
     @JsonProperty("ContactArn")
     public String contactArn;
+
     public GetContactPolicyRequest withContactArn(String contactArn) {
         this.contactArn = contactArn;
         return this;
     }
     
+    public GetContactPolicyRequest(@JsonProperty("ContactArn") String contactArn) {
+        this.contactArn = contactArn;
+  }
 }

@@ -15,6 +15,7 @@ public class RegistrationSchemasListRegistrationSchema {
      */
     
     public RegistrationSchemasListRegistrationSchemaAttributes attributes;
+
     public RegistrationSchemasListRegistrationSchema withAttributes(RegistrationSchemasListRegistrationSchemaAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class RegistrationSchemasListRegistrationSchema {
      */
     
     public String id;
+
     public RegistrationSchemasListRegistrationSchema withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class RegistrationSchemasListRegistrationSchema {
      */
     
     public RegistrationSchemasListRegistrationSchemaLinks links;
+
     public RegistrationSchemasListRegistrationSchema withLinks(RegistrationSchemasListRegistrationSchemaLinks links) {
         this.links = links;
         return this;
@@ -45,6 +48,7 @@ public class RegistrationSchemasListRegistrationSchema {
      */
     
     public RegistrationSchemasListRegistrationSchemaRelationships relationships;
+
     public RegistrationSchemasListRegistrationSchema withRelationships(RegistrationSchemasListRegistrationSchemaRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -55,9 +59,11 @@ public class RegistrationSchemasListRegistrationSchema {
      */
     
     public String type;
+
     public RegistrationSchemasListRegistrationSchema withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RegistrationSchemasListRegistrationSchema(){}
 }

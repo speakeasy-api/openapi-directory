@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyDBProxyTargetGroupResponse {
     
     public DBProxyTargetGroup dbProxyTargetGroup;
+
     public ModifyDBProxyTargetGroupResponse withDBProxyTargetGroup(DBProxyTargetGroup dbProxyTargetGroup) {
         this.dbProxyTargetGroup = dbProxyTargetGroup;
         return this;
     }
     
+    public ModifyDBProxyTargetGroupResponse(){}
 }

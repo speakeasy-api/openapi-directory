@@ -18,6 +18,7 @@ public class PlacementsGenerateTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PlacementsGenerateTagsResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class PlacementsGenerateTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placementTags")
     public PlacementTag[] placementTags;
+
     public PlacementsGenerateTagsResponse withPlacementTags(PlacementTag[] placementTags) {
         this.placementTags = placementTags;
         return this;
     }
     
+    public PlacementsGenerateTagsResponse(){}
 }

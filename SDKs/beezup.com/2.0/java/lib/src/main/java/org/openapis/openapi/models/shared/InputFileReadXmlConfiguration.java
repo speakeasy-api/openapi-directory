@@ -15,6 +15,7 @@ public class InputFileReadXmlConfiguration {
      */
     @JsonProperty("flattenXmlChildElements")
     public Boolean flattenXmlChildElements;
+
     public InputFileReadXmlConfiguration withFlattenXmlChildElements(Boolean flattenXmlChildElements) {
         this.flattenXmlChildElements = flattenXmlChildElements;
         return this;
@@ -25,9 +26,14 @@ public class InputFileReadXmlConfiguration {
      */
     @JsonProperty("useXmlAttributes")
     public Boolean useXmlAttributes;
+
     public InputFileReadXmlConfiguration withUseXmlAttributes(Boolean useXmlAttributes) {
         this.useXmlAttributes = useXmlAttributes;
         return this;
     }
     
+    public InputFileReadXmlConfiguration(@JsonProperty("flattenXmlChildElements") Boolean flattenXmlChildElements, @JsonProperty("useXmlAttributes") Boolean useXmlAttributes) {
+        this.flattenXmlChildElements = flattenXmlChildElements;
+        this.useXmlAttributes = useXmlAttributes;
+  }
 }

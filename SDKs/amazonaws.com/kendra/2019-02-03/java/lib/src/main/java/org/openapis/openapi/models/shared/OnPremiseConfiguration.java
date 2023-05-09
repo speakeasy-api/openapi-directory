@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OnPremiseConfiguration {
     @JsonProperty("HostUrl")
     public String hostUrl;
+
     public OnPremiseConfiguration withHostUrl(String hostUrl) {
         this.hostUrl = hostUrl;
         return this;
@@ -19,6 +20,7 @@ public class OnPremiseConfiguration {
     
     @JsonProperty("OrganizationName")
     public String organizationName;
+
     public OnPremiseConfiguration withOrganizationName(String organizationName) {
         this.organizationName = organizationName;
         return this;
@@ -26,9 +28,15 @@ public class OnPremiseConfiguration {
     
     @JsonProperty("SslCertificateS3Path")
     public S3Path sslCertificateS3Path;
+
     public OnPremiseConfiguration withSslCertificateS3Path(S3Path sslCertificateS3Path) {
         this.sslCertificateS3Path = sslCertificateS3Path;
         return this;
     }
     
+    public OnPremiseConfiguration(@JsonProperty("HostUrl") String hostUrl, @JsonProperty("OrganizationName") String organizationName, @JsonProperty("SslCertificateS3Path") S3Path sslCertificateS3Path) {
+        this.hostUrl = hostUrl;
+        this.organizationName = organizationName;
+        this.sslCertificateS3Path = sslCertificateS3Path;
+  }
 }

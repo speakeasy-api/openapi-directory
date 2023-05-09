@@ -15,9 +15,11 @@ public class InstanceGroupManagersAbandonInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public String[] instances;
+
     public InstanceGroupManagersAbandonInstancesRequest withInstances(String[] instances) {
         this.instances = instances;
         return this;
     }
     
+    public InstanceGroupManagersAbandonInstancesRequest(){}
 }

@@ -15,9 +15,11 @@ public class InputStartingPositionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputStartingPosition")
     public InputStartingPositionEnum inputStartingPosition;
+
     public InputStartingPositionConfiguration withInputStartingPosition(InputStartingPositionEnum inputStartingPosition) {
         this.inputStartingPosition = inputStartingPosition;
         return this;
     }
     
+    public InputStartingPositionConfiguration(){}
 }

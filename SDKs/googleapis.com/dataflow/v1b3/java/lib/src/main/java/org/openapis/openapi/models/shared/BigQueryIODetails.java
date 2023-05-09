@@ -18,6 +18,7 @@ public class BigQueryIODetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataset")
     public String dataset;
+
     public BigQueryIODetails withDataset(String dataset) {
         this.dataset = dataset;
         return this;
@@ -29,6 +30,7 @@ public class BigQueryIODetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public BigQueryIODetails withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -40,6 +42,7 @@ public class BigQueryIODetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public BigQueryIODetails withQuery(String query) {
         this.query = query;
         return this;
@@ -51,9 +54,11 @@ public class BigQueryIODetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("table")
     public String table;
+
     public BigQueryIODetails withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public BigQueryIODetails(){}
 }

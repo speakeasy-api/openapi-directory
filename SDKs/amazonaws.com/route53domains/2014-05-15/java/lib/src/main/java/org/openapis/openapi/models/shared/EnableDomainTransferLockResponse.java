@@ -15,9 +15,11 @@ public class EnableDomainTransferLockResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationId")
     public String operationId;
+
     public EnableDomainTransferLockResponse withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public EnableDomainTransferLockResponse(){}
 }

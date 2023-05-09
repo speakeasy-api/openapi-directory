@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRulesResponse {
     
     public String contentType;
+
     public ListRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListRulesResponse {
      */
     
     public Object internalException;
+
     public ListRulesResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -29,6 +32,7 @@ public class ListRulesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRulesResponse listRulesResponse;
+
     public ListRulesResponse withListRulesResponse(org.openapis.openapi.models.shared.ListRulesResponse listRulesResponse) {
         this.listRulesResponse = listRulesResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListRulesResponse {
     
     
     public Integer statusCode;
+
     public ListRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class ListRulesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListRulesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

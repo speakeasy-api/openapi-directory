@@ -18,6 +18,7 @@ public class PrivatePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifactStorage")
     public String artifactStorage;
+
     public PrivatePool withArtifactStorage(String artifactStorage) {
         this.artifactStorage = artifactStorage;
         return this;
@@ -29,6 +30,7 @@ public class PrivatePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public PrivatePool withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
@@ -40,9 +42,11 @@ public class PrivatePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerPool")
     public String workerPool;
+
     public PrivatePool withWorkerPool(String workerPool) {
         this.workerPool = workerPool;
         return this;
     }
     
+    public PrivatePool(){}
 }

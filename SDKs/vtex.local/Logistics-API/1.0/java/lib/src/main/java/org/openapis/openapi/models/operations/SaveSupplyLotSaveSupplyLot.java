@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SaveSupplyLotSaveSupplyLot {
     @JsonProperty("dateOfSupplyUtc")
     public String dateOfSupplyUtc;
+
     public SaveSupplyLotSaveSupplyLot withDateOfSupplyUtc(String dateOfSupplyUtc) {
         this.dateOfSupplyUtc = dateOfSupplyUtc;
         return this;
@@ -16,6 +17,7 @@ public class SaveSupplyLotSaveSupplyLot {
     
     @JsonProperty("keepSellingAfterExpiration")
     public Boolean keepSellingAfterExpiration;
+
     public SaveSupplyLotSaveSupplyLot withKeepSellingAfterExpiration(Boolean keepSellingAfterExpiration) {
         this.keepSellingAfterExpiration = keepSellingAfterExpiration;
         return this;
@@ -23,9 +25,15 @@ public class SaveSupplyLotSaveSupplyLot {
     
     @JsonProperty("quantity")
     public Double quantity;
+
     public SaveSupplyLotSaveSupplyLot withQuantity(Double quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public SaveSupplyLotSaveSupplyLot(@JsonProperty("dateOfSupplyUtc") String dateOfSupplyUtc, @JsonProperty("keepSellingAfterExpiration") Boolean keepSellingAfterExpiration, @JsonProperty("quantity") Double quantity) {
+        this.dateOfSupplyUtc = dateOfSupplyUtc;
+        this.keepSellingAfterExpiration = keepSellingAfterExpiration;
+        this.quantity = quantity;
+  }
 }

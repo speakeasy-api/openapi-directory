@@ -18,6 +18,7 @@ public class PrivateClusterConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enablePrivateEndpoint")
     public Boolean enablePrivateEndpoint;
+
     public PrivateClusterConfigInput withEnablePrivateEndpoint(Boolean enablePrivateEndpoint) {
         this.enablePrivateEndpoint = enablePrivateEndpoint;
         return this;
@@ -29,9 +30,11 @@ public class PrivateClusterConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterIpv4CidrBlock")
     public String masterIpv4CidrBlock;
+
     public PrivateClusterConfigInput withMasterIpv4CidrBlock(String masterIpv4CidrBlock) {
         this.masterIpv4CidrBlock = masterIpv4CidrBlock;
         return this;
     }
     
+    public PrivateClusterConfigInput(){}
 }

@@ -18,9 +18,11 @@ public class FitDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fitLevel")
     public FitDescriptorFitLevelEnum fitLevel;
+
     public FitDescriptor withFitLevel(FitDescriptorFitLevelEnum fitLevel) {
         this.fitLevel = fitLevel;
         return this;
     }
     
+    public FitDescriptor(){}
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class BackendEnvironment {
     @JsonProperty("backendEnvironmentArn")
     public String backendEnvironmentArn;
+
     public BackendEnvironment withBackendEnvironmentArn(String backendEnvironmentArn) {
         this.backendEnvironmentArn = backendEnvironmentArn;
         return this;
@@ -28,6 +29,7 @@ public class BackendEnvironment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public BackendEnvironment withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -36,6 +38,7 @@ public class BackendEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentArtifacts")
     public String deploymentArtifacts;
+
     public BackendEnvironment withDeploymentArtifacts(String deploymentArtifacts) {
         this.deploymentArtifacts = deploymentArtifacts;
         return this;
@@ -43,6 +46,7 @@ public class BackendEnvironment {
     
     @JsonProperty("environmentName")
     public String environmentName;
+
     public BackendEnvironment withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -51,6 +55,7 @@ public class BackendEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackName")
     public String stackName;
+
     public BackendEnvironment withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -60,9 +65,16 @@ public class BackendEnvironment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public BackendEnvironment withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public BackendEnvironment(@JsonProperty("backendEnvironmentArn") String backendEnvironmentArn, @JsonProperty("createTime") OffsetDateTime createTime, @JsonProperty("environmentName") String environmentName, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.backendEnvironmentArn = backendEnvironmentArn;
+        this.createTime = createTime;
+        this.environmentName = environmentName;
+        this.updateTime = updateTime;
+  }
 }

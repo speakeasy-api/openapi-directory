@@ -12,6 +12,7 @@ public class UpdateComponentConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoConfigEnabled")
     public Boolean autoConfigEnabled;
+
     public UpdateComponentConfigurationRequest withAutoConfigEnabled(Boolean autoConfigEnabled) {
         this.autoConfigEnabled = autoConfigEnabled;
         return this;
@@ -20,6 +21,7 @@ public class UpdateComponentConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComponentConfiguration")
     public String componentConfiguration;
+
     public UpdateComponentConfigurationRequest withComponentConfiguration(String componentConfiguration) {
         this.componentConfiguration = componentConfiguration;
         return this;
@@ -27,6 +29,7 @@ public class UpdateComponentConfigurationRequest {
     
     @JsonProperty("ComponentName")
     public String componentName;
+
     public UpdateComponentConfigurationRequest withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -35,6 +38,7 @@ public class UpdateComponentConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Monitor")
     public Boolean monitor;
+
     public UpdateComponentConfigurationRequest withMonitor(Boolean monitor) {
         this.monitor = monitor;
         return this;
@@ -42,6 +46,7 @@ public class UpdateComponentConfigurationRequest {
     
     @JsonProperty("ResourceGroupName")
     public String resourceGroupName;
+
     public UpdateComponentConfigurationRequest withResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
         return this;
@@ -50,9 +55,14 @@ public class UpdateComponentConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tier")
     public TierEnum tier;
+
     public UpdateComponentConfigurationRequest withTier(TierEnum tier) {
         this.tier = tier;
         return this;
     }
     
+    public UpdateComponentConfigurationRequest(@JsonProperty("ComponentName") String componentName, @JsonProperty("ResourceGroupName") String resourceGroupName) {
+        this.componentName = componentName;
+        this.resourceGroupName = resourceGroupName;
+  }
 }

@@ -15,9 +15,11 @@ public class GetCanaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Canary")
     public Canary canary;
+
     public GetCanaryResponse withCanary(Canary canary) {
         this.canary = canary;
         return this;
     }
     
+    public GetCanaryResponse(){}
 }

@@ -15,6 +15,7 @@ public class CreateJobTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abortConfig")
     public CreateJobTemplateRequestBodyAbortConfig abortConfig;
+
     public CreateJobTemplateRequestBody withAbortConfig(CreateJobTemplateRequestBodyAbortConfig abortConfig) {
         this.abortConfig = abortConfig;
         return this;
@@ -25,6 +26,7 @@ public class CreateJobTemplateRequestBody {
      */
     @JsonProperty("description")
     public String description;
+
     public CreateJobTemplateRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class CreateJobTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public String document;
+
     public CreateJobTemplateRequestBody withDocument(String document) {
         this.document = document;
         return this;
@@ -47,6 +50,7 @@ public class CreateJobTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentSource")
     public String documentSource;
+
     public CreateJobTemplateRequestBody withDocumentSource(String documentSource) {
         this.documentSource = documentSource;
         return this;
@@ -58,6 +62,7 @@ public class CreateJobTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobArn")
     public String jobArn;
+
     public CreateJobTemplateRequestBody withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -69,6 +74,7 @@ public class CreateJobTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobExecutionsRetryConfig")
     public CreateJobTemplateRequestBodyJobExecutionsRetryConfig jobExecutionsRetryConfig;
+
     public CreateJobTemplateRequestBody withJobExecutionsRetryConfig(CreateJobTemplateRequestBodyJobExecutionsRetryConfig jobExecutionsRetryConfig) {
         this.jobExecutionsRetryConfig = jobExecutionsRetryConfig;
         return this;
@@ -80,6 +86,7 @@ public class CreateJobTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobExecutionsRolloutConfig")
     public CreateJobTemplateRequestBodyJobExecutionsRolloutConfig jobExecutionsRolloutConfig;
+
     public CreateJobTemplateRequestBody withJobExecutionsRolloutConfig(CreateJobTemplateRequestBodyJobExecutionsRolloutConfig jobExecutionsRolloutConfig) {
         this.jobExecutionsRolloutConfig = jobExecutionsRolloutConfig;
         return this;
@@ -91,6 +98,7 @@ public class CreateJobTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maintenanceWindows")
     public org.openapis.openapi.models.shared.MaintenanceWindow[] maintenanceWindows;
+
     public CreateJobTemplateRequestBody withMaintenanceWindows(org.openapis.openapi.models.shared.MaintenanceWindow[] maintenanceWindows) {
         this.maintenanceWindows = maintenanceWindows;
         return this;
@@ -102,6 +110,7 @@ public class CreateJobTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("presignedUrlConfig")
     public CreateJobTemplateRequestBodyPresignedUrlConfig presignedUrlConfig;
+
     public CreateJobTemplateRequestBody withPresignedUrlConfig(CreateJobTemplateRequestBodyPresignedUrlConfig presignedUrlConfig) {
         this.presignedUrlConfig = presignedUrlConfig;
         return this;
@@ -113,6 +122,7 @@ public class CreateJobTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateJobTemplateRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
@@ -124,9 +134,13 @@ public class CreateJobTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutConfig")
     public CreateJobTemplateRequestBodyTimeoutConfig timeoutConfig;
+
     public CreateJobTemplateRequestBody withTimeoutConfig(CreateJobTemplateRequestBodyTimeoutConfig timeoutConfig) {
         this.timeoutConfig = timeoutConfig;
         return this;
     }
     
+    public CreateJobTemplateRequestBody(@JsonProperty("description") String description) {
+        this.description = description;
+  }
 }

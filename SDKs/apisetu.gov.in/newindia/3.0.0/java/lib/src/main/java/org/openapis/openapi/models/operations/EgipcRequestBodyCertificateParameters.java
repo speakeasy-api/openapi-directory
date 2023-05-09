@@ -12,6 +12,7 @@ public class EgipcRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public EgipcRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class EgipcRequestBodyCertificateParameters {
      */
     @JsonProperty("UDF1")
     public String udf1;
+
     public EgipcRequestBodyCertificateParameters withUdf1(String udf1) {
         this.udf1 = udf1;
         return this;
@@ -32,6 +34,7 @@ public class EgipcRequestBodyCertificateParameters {
      */
     @JsonProperty("UDF2")
     public String udf2;
+
     public EgipcRequestBodyCertificateParameters withUdf2(String udf2) {
         this.udf2 = udf2;
         return this;
@@ -42,9 +45,16 @@ public class EgipcRequestBodyCertificateParameters {
      */
     @JsonProperty("UDF3")
     public String udf3;
+
     public EgipcRequestBodyCertificateParameters withUdf3(String udf3) {
         this.udf3 = udf3;
         return this;
     }
     
+    public EgipcRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("UDF1") String udf1, @JsonProperty("UDF2") String udf2, @JsonProperty("UDF3") String udf3) {
+        this.fullName = fullName;
+        this.udf1 = udf1;
+        this.udf2 = udf2;
+        this.udf3 = udf3;
+  }
 }

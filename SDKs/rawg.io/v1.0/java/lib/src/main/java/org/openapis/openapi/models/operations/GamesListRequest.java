@@ -12,6 +12,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=creators")
     public String creators;
+
     public GamesListRequest withCreators(String creators) {
         this.creators = creators;
         return this;
@@ -22,6 +23,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dates")
     public String dates;
+
     public GamesListRequest withDates(String dates) {
         this.dates = dates;
         return this;
@@ -32,6 +34,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developers")
     public String developers;
+
     public GamesListRequest withDevelopers(String developers) {
         this.developers = developers;
         return this;
@@ -42,6 +45,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_additions")
     public Boolean excludeAdditions;
+
     public GamesListRequest withExcludeAdditions(Boolean excludeAdditions) {
         this.excludeAdditions = excludeAdditions;
         return this;
@@ -52,6 +56,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_collection")
     public Long excludeCollection;
+
     public GamesListRequest withExcludeCollection(Long excludeCollection) {
         this.excludeCollection = excludeCollection;
         return this;
@@ -62,6 +67,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_game_series")
     public Boolean excludeGameSeries;
+
     public GamesListRequest withExcludeGameSeries(Boolean excludeGameSeries) {
         this.excludeGameSeries = excludeGameSeries;
         return this;
@@ -72,6 +78,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_parents")
     public Boolean excludeParents;
+
     public GamesListRequest withExcludeParents(Boolean excludeParents) {
         this.excludeParents = excludeParents;
         return this;
@@ -82,6 +89,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_stores")
     public String excludeStores;
+
     public GamesListRequest withExcludeStores(String excludeStores) {
         this.excludeStores = excludeStores;
         return this;
@@ -92,6 +100,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=genres")
     public String genres;
+
     public GamesListRequest withGenres(String genres) {
         this.genres = genres;
         return this;
@@ -102,6 +111,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metacritic")
     public String metacritic;
+
     public GamesListRequest withMetacritic(String metacritic) {
         this.metacritic = metacritic;
         return this;
@@ -112,6 +122,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering")
     public String ordering;
+
     public GamesListRequest withOrdering(String ordering) {
         this.ordering = ordering;
         return this;
@@ -122,6 +133,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GamesListRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -132,6 +144,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public GamesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -142,6 +155,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_platforms")
     public String parentPlatforms;
+
     public GamesListRequest withParentPlatforms(String parentPlatforms) {
         this.parentPlatforms = parentPlatforms;
         return this;
@@ -152,6 +166,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=platforms")
     public String platforms;
+
     public GamesListRequest withPlatforms(String platforms) {
         this.platforms = platforms;
         return this;
@@ -162,6 +177,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=platforms_count")
     public Long platformsCount;
+
     public GamesListRequest withPlatformsCount(Long platformsCount) {
         this.platformsCount = platformsCount;
         return this;
@@ -172,6 +188,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=publishers")
     public String publishers;
+
     public GamesListRequest withPublishers(String publishers) {
         this.publishers = publishers;
         return this;
@@ -182,6 +199,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public GamesListRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -192,6 +210,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_exact")
     public Boolean searchExact;
+
     public GamesListRequest withSearchExact(Boolean searchExact) {
         this.searchExact = searchExact;
         return this;
@@ -202,6 +221,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_precise")
     public Boolean searchPrecise;
+
     public GamesListRequest withSearchPrecise(Boolean searchPrecise) {
         this.searchPrecise = searchPrecise;
         return this;
@@ -212,6 +232,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stores")
     public String stores;
+
     public GamesListRequest withStores(String stores) {
         this.stores = stores;
         return this;
@@ -222,6 +243,7 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String tags;
+
     public GamesListRequest withTags(String tags) {
         this.tags = tags;
         return this;
@@ -232,9 +254,11 @@ public class GamesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated")
     public String updated;
+
     public GamesListRequest withUpdated(String updated) {
         this.updated = updated;
         return this;
     }
     
+    public GamesListRequest(){}
 }

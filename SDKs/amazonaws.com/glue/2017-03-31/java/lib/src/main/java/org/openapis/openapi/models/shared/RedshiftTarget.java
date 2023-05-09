@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RedshiftTarget {
     @JsonProperty("Database")
     public String database;
+
     public RedshiftTarget withDatabase(String database) {
         this.database = database;
         return this;
@@ -21,6 +22,7 @@ public class RedshiftTarget {
     
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public RedshiftTarget withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -28,6 +30,7 @@ public class RedshiftTarget {
     
     @JsonProperty("Name")
     public String name;
+
     public RedshiftTarget withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class RedshiftTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedshiftTmpDir")
     public String redshiftTmpDir;
+
     public RedshiftTarget withRedshiftTmpDir(String redshiftTmpDir) {
         this.redshiftTmpDir = redshiftTmpDir;
         return this;
@@ -43,6 +47,7 @@ public class RedshiftTarget {
     
     @JsonProperty("Table")
     public String table;
+
     public RedshiftTarget withTable(String table) {
         this.table = table;
         return this;
@@ -51,6 +56,7 @@ public class RedshiftTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TmpDirIAMRole")
     public String tmpDirIAMRole;
+
     public RedshiftTarget withTmpDirIAMRole(String tmpDirIAMRole) {
         this.tmpDirIAMRole = tmpDirIAMRole;
         return this;
@@ -59,9 +65,16 @@ public class RedshiftTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpsertRedshiftOptions")
     public UpsertRedshiftTargetOptions upsertRedshiftOptions;
+
     public RedshiftTarget withUpsertRedshiftOptions(UpsertRedshiftTargetOptions upsertRedshiftOptions) {
         this.upsertRedshiftOptions = upsertRedshiftOptions;
         return this;
     }
     
+    public RedshiftTarget(@JsonProperty("Database") String database, @JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name, @JsonProperty("Table") String table) {
+        this.database = database;
+        this.inputs = inputs;
+        this.name = name;
+        this.table = table;
+  }
 }

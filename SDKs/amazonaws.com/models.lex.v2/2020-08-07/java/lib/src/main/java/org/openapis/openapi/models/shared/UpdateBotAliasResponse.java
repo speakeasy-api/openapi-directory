@@ -20,6 +20,7 @@ public class UpdateBotAliasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botAliasId")
     public String botAliasId;
+
     public UpdateBotAliasResponse withBotAliasId(String botAliasId) {
         this.botAliasId = botAliasId;
         return this;
@@ -28,6 +29,7 @@ public class UpdateBotAliasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botAliasLocaleSettings")
     public java.util.Map<String, BotAliasLocaleSettings> botAliasLocaleSettings;
+
     public UpdateBotAliasResponse withBotAliasLocaleSettings(java.util.Map<String, BotAliasLocaleSettings> botAliasLocaleSettings) {
         this.botAliasLocaleSettings = botAliasLocaleSettings;
         return this;
@@ -36,6 +38,7 @@ public class UpdateBotAliasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botAliasName")
     public String botAliasName;
+
     public UpdateBotAliasResponse withBotAliasName(String botAliasName) {
         this.botAliasName = botAliasName;
         return this;
@@ -44,6 +47,7 @@ public class UpdateBotAliasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botAliasStatus")
     public BotAliasStatusEnum botAliasStatus;
+
     public UpdateBotAliasResponse withBotAliasStatus(BotAliasStatusEnum botAliasStatus) {
         this.botAliasStatus = botAliasStatus;
         return this;
@@ -52,6 +56,7 @@ public class UpdateBotAliasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public UpdateBotAliasResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -60,6 +65,7 @@ public class UpdateBotAliasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public UpdateBotAliasResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -68,6 +74,7 @@ public class UpdateBotAliasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversationLogSettings")
     public ConversationLogSettings conversationLogSettings;
+
     public UpdateBotAliasResponse withConversationLogSettings(ConversationLogSettings conversationLogSettings) {
         this.conversationLogSettings = conversationLogSettings;
         return this;
@@ -78,6 +85,7 @@ public class UpdateBotAliasResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public UpdateBotAliasResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -86,6 +94,7 @@ public class UpdateBotAliasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateBotAliasResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -96,6 +105,7 @@ public class UpdateBotAliasResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public UpdateBotAliasResponse withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -107,9 +117,11 @@ public class UpdateBotAliasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentimentAnalysisSettings")
     public SentimentAnalysisSettings sentimentAnalysisSettings;
+
     public UpdateBotAliasResponse withSentimentAnalysisSettings(SentimentAnalysisSettings sentimentAnalysisSettings) {
         this.sentimentAnalysisSettings = sentimentAnalysisSettings;
         return this;
     }
     
+    public UpdateBotAliasResponse(){}
 }

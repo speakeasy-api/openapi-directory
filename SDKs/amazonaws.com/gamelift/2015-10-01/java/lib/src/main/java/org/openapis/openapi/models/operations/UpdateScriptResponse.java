@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateScriptResponse {
     
     public String contentType;
+
     public UpdateScriptResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateScriptResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateScriptResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateScriptResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateScriptResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateScriptResponse {
      */
     
     public Object notFoundException;
+
     public UpdateScriptResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateScriptResponse {
     
     
     public Integer statusCode;
+
     public UpdateScriptResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateScriptResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateScriptResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateScriptResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateScriptResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateScriptResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateScriptOutput updateScriptOutput;
+
     public UpdateScriptResponse withUpdateScriptOutput(org.openapis.openapi.models.shared.UpdateScriptOutput updateScriptOutput) {
         this.updateScriptOutput = updateScriptOutput;
         return this;
     }
     
+    public UpdateScriptResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class HealthStatusForNetworkEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backendService")
     public BackendServiceReference backendService;
+
     public HealthStatusForNetworkEndpoint withBackendService(BackendServiceReference backendService) {
         this.backendService = backendService;
         return this;
@@ -20,6 +21,7 @@ public class HealthStatusForNetworkEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forwardingRule")
     public ForwardingRuleReference forwardingRule;
+
     public HealthStatusForNetworkEndpoint withForwardingRule(ForwardingRuleReference forwardingRule) {
         this.forwardingRule = forwardingRule;
         return this;
@@ -31,6 +33,7 @@ public class HealthStatusForNetworkEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthCheck")
     public HealthCheckReference healthCheck;
+
     public HealthStatusForNetworkEndpoint withHealthCheck(HealthCheckReference healthCheck) {
         this.healthCheck = healthCheck;
         return this;
@@ -42,6 +45,7 @@ public class HealthStatusForNetworkEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthCheckService")
     public HealthCheckServiceReference healthCheckService;
+
     public HealthStatusForNetworkEndpoint withHealthCheckService(HealthCheckServiceReference healthCheckService) {
         this.healthCheckService = healthCheckService;
         return this;
@@ -53,9 +57,11 @@ public class HealthStatusForNetworkEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthState")
     public HealthStatusForNetworkEndpointHealthStateEnum healthState;
+
     public HealthStatusForNetworkEndpoint withHealthState(HealthStatusForNetworkEndpointHealthStateEnum healthState) {
         this.healthState = healthState;
         return this;
     }
     
+    public HealthStatusForNetworkEndpoint(){}
 }

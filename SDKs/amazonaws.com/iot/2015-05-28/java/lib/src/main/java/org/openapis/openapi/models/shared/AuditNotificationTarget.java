@@ -15,6 +15,7 @@ public class AuditNotificationTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AuditNotificationTarget withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,6 +24,7 @@ public class AuditNotificationTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public AuditNotificationTarget withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -31,9 +33,11 @@ public class AuditNotificationTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetArn")
     public String targetArn;
+
     public AuditNotificationTarget withTargetArn(String targetArn) {
         this.targetArn = targetArn;
         return this;
     }
     
+    public AuditNotificationTarget(){}
 }

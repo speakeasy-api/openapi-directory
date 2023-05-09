@@ -15,6 +15,7 @@ public class ListRecordingConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRecordingConfigurationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListRecordingConfigurationsResponse {
     
     @JsonProperty("recordingConfigurations")
     public RecordingConfigurationSummary[] recordingConfigurations;
+
     public ListRecordingConfigurationsResponse withRecordingConfigurations(RecordingConfigurationSummary[] recordingConfigurations) {
         this.recordingConfigurations = recordingConfigurations;
         return this;
     }
     
+    public ListRecordingConfigurationsResponse(@JsonProperty("recordingConfigurations") RecordingConfigurationSummary[] recordingConfigurations) {
+        this.recordingConfigurations = recordingConfigurations;
+  }
 }

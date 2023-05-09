@@ -58,11 +58,9 @@ public class Internalappsharingartifacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadapkResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadapkResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadapkResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadapkResponse(contentType, httpRes.statusCode()) {{
             internalAppSharingArtifact = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Internalappsharingartifacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadbundleResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadbundleResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadbundleResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadbundleResponse(contentType, httpRes.statusCode()) {{
             internalAppSharingArtifact = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

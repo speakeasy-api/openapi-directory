@@ -15,9 +15,11 @@ public class DeregisterIdentityProviderRequestBodyIdentityProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveDirectoryIdentityProvider")
     public org.openapis.openapi.models.shared.ActiveDirectoryIdentityProvider activeDirectoryIdentityProvider;
+
     public DeregisterIdentityProviderRequestBodyIdentityProvider withActiveDirectoryIdentityProvider(org.openapis.openapi.models.shared.ActiveDirectoryIdentityProvider activeDirectoryIdentityProvider) {
         this.activeDirectoryIdentityProvider = activeDirectoryIdentityProvider;
         return this;
     }
     
+    public DeregisterIdentityProviderRequestBodyIdentityProvider(){}
 }

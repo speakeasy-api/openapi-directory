@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2StoredInfoTypeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GooglePrivacyDlpV2StoredInfoTypeConfig withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2StoredInfoTypeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dictionary")
     public GooglePrivacyDlpV2Dictionary dictionary;
+
     public GooglePrivacyDlpV2StoredInfoTypeConfig withDictionary(GooglePrivacyDlpV2Dictionary dictionary) {
         this.dictionary = dictionary;
         return this;
@@ -40,6 +42,7 @@ public class GooglePrivacyDlpV2StoredInfoTypeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GooglePrivacyDlpV2StoredInfoTypeConfig withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GooglePrivacyDlpV2StoredInfoTypeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("largeCustomDictionary")
     public GooglePrivacyDlpV2LargeCustomDictionaryConfig largeCustomDictionary;
+
     public GooglePrivacyDlpV2StoredInfoTypeConfig withLargeCustomDictionary(GooglePrivacyDlpV2LargeCustomDictionaryConfig largeCustomDictionary) {
         this.largeCustomDictionary = largeCustomDictionary;
         return this;
@@ -62,9 +66,11 @@ public class GooglePrivacyDlpV2StoredInfoTypeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regex")
     public GooglePrivacyDlpV2Regex regex;
+
     public GooglePrivacyDlpV2StoredInfoTypeConfig withRegex(GooglePrivacyDlpV2Regex regex) {
         this.regex = regex;
         return this;
     }
     
+    public GooglePrivacyDlpV2StoredInfoTypeConfig(){}
 }

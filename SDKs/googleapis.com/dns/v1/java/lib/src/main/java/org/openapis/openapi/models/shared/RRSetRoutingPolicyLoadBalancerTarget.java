@@ -10,11 +10,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RRSetRoutingPolicyLoadBalancerTarget {
     /**
-     * The frontend IP address of the
+     * The frontend IP address of the Load Balancer to health check.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public RRSetRoutingPolicyLoadBalancerTarget withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -23,6 +24,7 @@ public class RRSetRoutingPolicyLoadBalancerTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipProtocol")
     public RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum ipProtocol;
+
     public RRSetRoutingPolicyLoadBalancerTarget withIpProtocol(RRSetRoutingPolicyLoadBalancerTargetIpProtocolEnum ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
@@ -31,61 +33,71 @@ public class RRSetRoutingPolicyLoadBalancerTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RRSetRoutingPolicyLoadBalancerTarget withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    /**
+     * The type of Load Balancer specified by this target. Must match the configuration of the Load Balancer located at the LoadBalancerTarget's IP address/port and region.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadBalancerType")
     public RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum loadBalancerType;
+
     public RRSetRoutingPolicyLoadBalancerTarget withLoadBalancerType(RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum loadBalancerType) {
         this.loadBalancerType = loadBalancerType;
         return this;
     }
     
     /**
-     * The fully qualified url of the network on which the ILB is
+     * The fully qualified url of the network on which the ILB is present. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkUrl")
     public String networkUrl;
+
     public RRSetRoutingPolicyLoadBalancerTarget withNetworkUrl(String networkUrl) {
         this.networkUrl = networkUrl;
         return this;
     }
     
     /**
-     * Load Balancer to health check. The configured port of the Load Balancer.
+     * The configured port of the Load Balancer.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public String port;
+
     public RRSetRoutingPolicyLoadBalancerTarget withPort(String port) {
         this.port = port;
         return this;
     }
     
     /**
-     * present. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network} The project ID in which the ILB exists.
+     * The project ID in which the ILB exists.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public RRSetRoutingPolicyLoadBalancerTarget withProject(String project) {
         this.project = project;
         return this;
     }
     
     /**
-     * The region for regional ILBs.
+     * The region in which the ILB exists.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public RRSetRoutingPolicyLoadBalancerTarget withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public RRSetRoutingPolicyLoadBalancerTarget(){}
 }

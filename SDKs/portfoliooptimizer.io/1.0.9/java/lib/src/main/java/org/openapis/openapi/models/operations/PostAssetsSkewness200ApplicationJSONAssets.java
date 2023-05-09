@@ -12,9 +12,13 @@ public class PostAssetsSkewness200ApplicationJSONAssets {
      */
     @JsonProperty("assetSkewness")
     public Double assetSkewness;
+
     public PostAssetsSkewness200ApplicationJSONAssets withAssetSkewness(Double assetSkewness) {
         this.assetSkewness = assetSkewness;
         return this;
     }
     
+    public PostAssetsSkewness200ApplicationJSONAssets(@JsonProperty("assetSkewness") Double assetSkewness) {
+        this.assetSkewness = assetSkewness;
+  }
 }

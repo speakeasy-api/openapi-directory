@@ -15,6 +15,7 @@ public class PersonDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BoundingBox")
     public BoundingBox boundingBox;
+
     public PersonDetail withBoundingBox(BoundingBox boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -23,6 +24,7 @@ public class PersonDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Face")
     public FaceDetail face;
+
     public PersonDetail withFace(FaceDetail face) {
         this.face = face;
         return this;
@@ -31,9 +33,11 @@ public class PersonDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Index")
     public Long index;
+
     public PersonDetail withIndex(Long index) {
         this.index = index;
         return this;
     }
     
+    public PersonDetail(){}
 }

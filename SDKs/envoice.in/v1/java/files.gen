@@ -443,4 +443,15 @@ lib/src/main/java/org/openapis/openapi/models/shared/WorkTypeDetailsApiModel.jav
 lib/src/main/java/org/openapis/openapi/models/shared/WorkTypeDeleteApiModel.java
 lib/src/main/java/org/openapis/openapi/models/shared/WorkTypeCreateApiModel.java
 lib/src/main/java/org/openapis/openapi/models/shared/WorkTypeUpdateApiModel.java
+docs/sdk/README.md
+docs/client/README.md
+docs/estimation/README.md
+docs/general/README.md
+docs/invoice/README.md
+docs/order/README.md
+docs/payment/README.md
+docs/paymentlink/README.md
+docs/product/README.md
+docs/tax/README.md
+docs/worktype/README.md
 USAGE.md

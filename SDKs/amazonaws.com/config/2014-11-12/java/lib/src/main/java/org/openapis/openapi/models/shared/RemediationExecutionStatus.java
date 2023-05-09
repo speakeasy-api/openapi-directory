@@ -22,6 +22,7 @@ public class RemediationExecutionStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("InvocationTime")
     public OffsetDateTime invocationTime;
+
     public RemediationExecutionStatus withInvocationTime(OffsetDateTime invocationTime) {
         this.invocationTime = invocationTime;
         return this;
@@ -32,6 +33,7 @@ public class RemediationExecutionStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public RemediationExecutionStatus withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -43,6 +45,7 @@ public class RemediationExecutionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceKey")
     public ResourceKey resourceKey;
+
     public RemediationExecutionStatus withResourceKey(ResourceKey resourceKey) {
         this.resourceKey = resourceKey;
         return this;
@@ -51,6 +54,7 @@ public class RemediationExecutionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public RemediationExecutionStateEnum state;
+
     public RemediationExecutionStatus withState(RemediationExecutionStateEnum state) {
         this.state = state;
         return this;
@@ -59,9 +63,11 @@ public class RemediationExecutionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepDetails")
     public RemediationExecutionStep[] stepDetails;
+
     public RemediationExecutionStatus withStepDetails(RemediationExecutionStep[] stepDetails) {
         this.stepDetails = stepDetails;
         return this;
     }
     
+    public RemediationExecutionStatus(){}
 }

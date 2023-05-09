@@ -18,6 +18,7 @@ public class OrderFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationDateRange")
     public DateRange creationDateRange;
+
     public OrderFilterCriteria withCreationDateRange(DateRange creationDateRange) {
         this.creationDateRange = creationDateRange;
         return this;
@@ -29,6 +30,7 @@ public class OrderFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifiedDateRange")
     public DateRange modifiedDateRange;
+
     public OrderFilterCriteria withModifiedDateRange(DateRange modifiedDateRange) {
         this.modifiedDateRange = modifiedDateRange;
         return this;
@@ -40,9 +42,11 @@ public class OrderFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderStatus")
     public String orderStatus;
+
     public OrderFilterCriteria withOrderStatus(String orderStatus) {
         this.orderStatus = orderStatus;
         return this;
     }
     
+    public OrderFilterCriteria(){}
 }

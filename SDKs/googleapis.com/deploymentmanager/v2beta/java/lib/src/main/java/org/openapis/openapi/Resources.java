@@ -58,11 +58,9 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerResourcesGetResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerResourcesGetResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerResourcesGetResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerResourcesGetResponse(contentType, httpRes.statusCode()) {{
             resource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerResourcesListResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerResourcesListResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerResourcesListResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerResourcesListResponse(contentType, httpRes.statusCode()) {{
             resourcesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

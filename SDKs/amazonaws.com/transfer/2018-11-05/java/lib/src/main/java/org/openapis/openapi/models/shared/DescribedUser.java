@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribedUser {
     @JsonProperty("Arn")
     public String arn;
+
     public DescribedUser withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class DescribedUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeDirectory")
     public String homeDirectory;
+
     public DescribedUser withHomeDirectory(String homeDirectory) {
         this.homeDirectory = homeDirectory;
         return this;
@@ -30,6 +32,7 @@ public class DescribedUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeDirectoryMappings")
     public HomeDirectoryMapEntry[] homeDirectoryMappings;
+
     public DescribedUser withHomeDirectoryMappings(HomeDirectoryMapEntry[] homeDirectoryMappings) {
         this.homeDirectoryMappings = homeDirectoryMappings;
         return this;
@@ -38,6 +41,7 @@ public class DescribedUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeDirectoryType")
     public HomeDirectoryTypeEnum homeDirectoryType;
+
     public DescribedUser withHomeDirectoryType(HomeDirectoryTypeEnum homeDirectoryType) {
         this.homeDirectoryType = homeDirectoryType;
         return this;
@@ -46,6 +50,7 @@ public class DescribedUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policy")
     public String policy;
+
     public DescribedUser withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -54,6 +59,7 @@ public class DescribedUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PosixProfile")
     public PosixProfile posixProfile;
+
     public DescribedUser withPosixProfile(PosixProfile posixProfile) {
         this.posixProfile = posixProfile;
         return this;
@@ -62,6 +68,7 @@ public class DescribedUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Role")
     public String role;
+
     public DescribedUser withRole(String role) {
         this.role = role;
         return this;
@@ -70,6 +77,7 @@ public class DescribedUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SshPublicKeys")
     public SshPublicKey[] sshPublicKeys;
+
     public DescribedUser withSshPublicKeys(SshPublicKey[] sshPublicKeys) {
         this.sshPublicKeys = sshPublicKeys;
         return this;
@@ -78,6 +86,7 @@ public class DescribedUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public DescribedUser withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -86,9 +95,13 @@ public class DescribedUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserName")
     public String userName;
+
     public DescribedUser withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public DescribedUser(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

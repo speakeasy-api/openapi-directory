@@ -15,6 +15,7 @@ public class GetServersIdActionsActionsResponseActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public GetServersIdActionsActionsResponseActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class GetServersIdActionsActionsResponseActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public GetServersIdActionsActionsResponseActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetServersIdActionsActionsResponseActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

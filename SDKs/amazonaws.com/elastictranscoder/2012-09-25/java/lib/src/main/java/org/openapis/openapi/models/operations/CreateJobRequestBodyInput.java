@@ -15,6 +15,7 @@ public class CreateJobRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AspectRatio")
     public String aspectRatio;
+
     public CreateJobRequestBodyInput withAspectRatio(String aspectRatio) {
         this.aspectRatio = aspectRatio;
         return this;
@@ -23,6 +24,7 @@ public class CreateJobRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Container")
     public String container;
+
     public CreateJobRequestBodyInput withContainer(String container) {
         this.container = container;
         return this;
@@ -31,6 +33,7 @@ public class CreateJobRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetectedProperties")
     public org.openapis.openapi.models.shared.DetectedProperties detectedProperties;
+
     public CreateJobRequestBodyInput withDetectedProperties(org.openapis.openapi.models.shared.DetectedProperties detectedProperties) {
         this.detectedProperties = detectedProperties;
         return this;
@@ -39,6 +42,7 @@ public class CreateJobRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Encryption")
     public org.openapis.openapi.models.shared.Encryption encryption;
+
     public CreateJobRequestBodyInput withEncryption(org.openapis.openapi.models.shared.Encryption encryption) {
         this.encryption = encryption;
         return this;
@@ -47,6 +51,7 @@ public class CreateJobRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FrameRate")
     public String frameRate;
+
     public CreateJobRequestBodyInput withFrameRate(String frameRate) {
         this.frameRate = frameRate;
         return this;
@@ -55,6 +60,7 @@ public class CreateJobRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputCaptions")
     public org.openapis.openapi.models.shared.InputCaptions inputCaptions;
+
     public CreateJobRequestBodyInput withInputCaptions(org.openapis.openapi.models.shared.InputCaptions inputCaptions) {
         this.inputCaptions = inputCaptions;
         return this;
@@ -63,6 +69,7 @@ public class CreateJobRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Interlaced")
     public String interlaced;
+
     public CreateJobRequestBodyInput withInterlaced(String interlaced) {
         this.interlaced = interlaced;
         return this;
@@ -71,6 +78,7 @@ public class CreateJobRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public CreateJobRequestBodyInput withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class CreateJobRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resolution")
     public String resolution;
+
     public CreateJobRequestBodyInput withResolution(String resolution) {
         this.resolution = resolution;
         return this;
@@ -87,9 +96,11 @@ public class CreateJobRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeSpan")
     public org.openapis.openapi.models.shared.TimeSpan timeSpan;
+
     public CreateJobRequestBodyInput withTimeSpan(org.openapis.openapi.models.shared.TimeSpan timeSpan) {
         this.timeSpan = timeSpan;
         return this;
     }
     
+    public CreateJobRequestBodyInput(){}
 }

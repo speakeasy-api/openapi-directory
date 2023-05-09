@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BranchControllerGetBranchesRequest {
@@ -12,6 +13,7 @@ public class BranchControllerGetBranchesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public Integer count;
+
     public BranchControllerGetBranchesRequest withCount(Integer count) {
         this.count = count;
         return this;
@@ -22,6 +24,7 @@ public class BranchControllerGetBranchesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public BranchControllerGetBranchesRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -32,9 +35,15 @@ public class BranchControllerGetBranchesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public BranchControllerGetBranchesRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
     }
     
+    public BranchControllerGetBranchesRequest(@JsonProperty("count") Integer count, @JsonProperty("offset") Integer offset, @JsonProperty("shortName") String shortName) {
+        this.count = count;
+        this.offset = offset;
+        this.shortName = shortName;
+  }
 }

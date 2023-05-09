@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateServiceSpecificCredentialRequest {
     
     public String serviceName;
+
     public CreateServiceSpecificCredentialRequest withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -16,9 +17,14 @@ public class CreateServiceSpecificCredentialRequest {
     
     
     public String userName;
+
     public CreateServiceSpecificCredentialRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public CreateServiceSpecificCredentialRequest(@JsonProperty("ServiceName") String serviceName, @JsonProperty("UserName") String userName) {
+        this.serviceName = serviceName;
+        this.userName = userName;
+  }
 }

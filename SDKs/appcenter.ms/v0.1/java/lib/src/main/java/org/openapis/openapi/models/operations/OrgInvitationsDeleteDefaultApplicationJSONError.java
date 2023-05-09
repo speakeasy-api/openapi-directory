@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OrgInvitationsDeleteDefaultApplicationJSONError {
     @JsonProperty("code")
     public OrgInvitationsDeleteDefaultApplicationJSONErrorCodeEnum code;
+
     public OrgInvitationsDeleteDefaultApplicationJSONError withCode(OrgInvitationsDeleteDefaultApplicationJSONErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -16,9 +17,14 @@ public class OrgInvitationsDeleteDefaultApplicationJSONError {
     
     @JsonProperty("message")
     public String message;
+
     public OrgInvitationsDeleteDefaultApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public OrgInvitationsDeleteDefaultApplicationJSONError(@JsonProperty("code") OrgInvitationsDeleteDefaultApplicationJSONErrorCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

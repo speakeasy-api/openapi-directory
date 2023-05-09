@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLoadBalancerTlsCertificatesResponse {
@@ -12,6 +13,7 @@ public class GetLoadBalancerTlsCertificatesResponse {
      */
     
     public Object accessDeniedException;
+
     public GetLoadBalancerTlsCertificatesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetLoadBalancerTlsCertificatesResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetLoadBalancerTlsCertificatesResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetLoadBalancerTlsCertificatesResponse {
     
     
     public String contentType;
+
     public GetLoadBalancerTlsCertificatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetLoadBalancerTlsCertificatesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLoadBalancerTlsCertificatesResult getLoadBalancerTlsCertificatesResult;
+
     public GetLoadBalancerTlsCertificatesResponse withGetLoadBalancerTlsCertificatesResult(org.openapis.openapi.models.shared.GetLoadBalancerTlsCertificatesResult getLoadBalancerTlsCertificatesResult) {
         this.getLoadBalancerTlsCertificatesResult = getLoadBalancerTlsCertificatesResult;
         return this;
@@ -49,6 +54,7 @@ public class GetLoadBalancerTlsCertificatesResponse {
      */
     
     public Object invalidInputException;
+
     public GetLoadBalancerTlsCertificatesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetLoadBalancerTlsCertificatesResponse {
      */
     
     public Object notFoundException;
+
     public GetLoadBalancerTlsCertificatesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetLoadBalancerTlsCertificatesResponse {
      */
     
     public Object operationFailureException;
+
     public GetLoadBalancerTlsCertificatesResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetLoadBalancerTlsCertificatesResponse {
      */
     
     public Object serviceException;
+
     public GetLoadBalancerTlsCertificatesResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetLoadBalancerTlsCertificatesResponse {
     
     
     public Integer statusCode;
+
     public GetLoadBalancerTlsCertificatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetLoadBalancerTlsCertificatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLoadBalancerTlsCertificatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetLoadBalancerTlsCertificatesResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetLoadBalancerTlsCertificatesResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetLoadBalancerTlsCertificatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

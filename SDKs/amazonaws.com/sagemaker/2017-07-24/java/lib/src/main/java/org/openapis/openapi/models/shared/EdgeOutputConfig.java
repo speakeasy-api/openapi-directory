@@ -15,6 +15,7 @@ public class EdgeOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public EdgeOutputConfig withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -23,6 +24,7 @@ public class EdgeOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PresetDeploymentConfig")
     public String presetDeploymentConfig;
+
     public EdgeOutputConfig withPresetDeploymentConfig(String presetDeploymentConfig) {
         this.presetDeploymentConfig = presetDeploymentConfig;
         return this;
@@ -31,6 +33,7 @@ public class EdgeOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PresetDeploymentType")
     public EdgePresetDeploymentTypeEnum presetDeploymentType;
+
     public EdgeOutputConfig withPresetDeploymentType(EdgePresetDeploymentTypeEnum presetDeploymentType) {
         this.presetDeploymentType = presetDeploymentType;
         return this;
@@ -38,9 +41,13 @@ public class EdgeOutputConfig {
     
     @JsonProperty("S3OutputLocation")
     public String s3OutputLocation;
+
     public EdgeOutputConfig withS3OutputLocation(String s3OutputLocation) {
         this.s3OutputLocation = s3OutputLocation;
         return this;
     }
     
+    public EdgeOutputConfig(@JsonProperty("S3OutputLocation") String s3OutputLocation) {
+        this.s3OutputLocation = s3OutputLocation;
+  }
 }

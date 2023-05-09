@@ -12,6 +12,7 @@ public class UpdatePortfolioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public UpdatePortfolioInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class UpdatePortfolioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddTags")
     public Tag[] addTags;
+
     public UpdatePortfolioInput withAddTags(Tag[] addTags) {
         this.addTags = addTags;
         return this;
@@ -28,6 +30,7 @@ public class UpdatePortfolioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdatePortfolioInput withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class UpdatePortfolioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public UpdatePortfolioInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -43,6 +47,7 @@ public class UpdatePortfolioInput {
     
     @JsonProperty("Id")
     public String id;
+
     public UpdatePortfolioInput withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +56,7 @@ public class UpdatePortfolioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderName")
     public String providerName;
+
     public UpdatePortfolioInput withProviderName(String providerName) {
         this.providerName = providerName;
         return this;
@@ -59,9 +65,13 @@ public class UpdatePortfolioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoveTags")
     public String[] removeTags;
+
     public UpdatePortfolioInput withRemoveTags(String[] removeTags) {
         this.removeTags = removeTags;
         return this;
     }
     
+    public UpdatePortfolioInput(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

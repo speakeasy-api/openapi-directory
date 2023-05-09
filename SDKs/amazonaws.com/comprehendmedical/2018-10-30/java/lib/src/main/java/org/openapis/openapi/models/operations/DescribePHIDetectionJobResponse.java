@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePHIDetectionJobResponse {
     
     public String contentType;
+
     public DescribePHIDetectionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribePHIDetectionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePHIDetectionJobResponse describePHIDetectionJobResponse;
+
     public DescribePHIDetectionJobResponse withDescribePHIDetectionJobResponse(org.openapis.openapi.models.shared.DescribePHIDetectionJobResponse describePHIDetectionJobResponse) {
         this.describePHIDetectionJobResponse = describePHIDetectionJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribePHIDetectionJobResponse {
      */
     
     public Object internalServerException;
+
     public DescribePHIDetectionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribePHIDetectionJobResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribePHIDetectionJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribePHIDetectionJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribePHIDetectionJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribePHIDetectionJobResponse {
     
     
     public Integer statusCode;
+
     public DescribePHIDetectionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribePHIDetectionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePHIDetectionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribePHIDetectionJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribePHIDetectionJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribePHIDetectionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

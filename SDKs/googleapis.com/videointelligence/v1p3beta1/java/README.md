@@ -16,25 +16,24 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.VideointelligenceVideosAnnotateSecurity;
 import org.openapis.openapi.models.operations.VideointelligenceVideosAnnotateRequest;
 import org.openapis.openapi.models.operations.VideointelligenceVideosAnnotateResponse;
+import org.openapis.openapi.models.operations.VideointelligenceVideosAnnotateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequestFeaturesEnum;
 import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequest;
-import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1VideoContext;
-import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1TextDetectionConfig;
-import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1SpeechTranscriptionConfig;
-import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1SpeechContext;
-import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1ShotChangeDetectionConfig;
-import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1VideoSegment;
-import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1PersonDetectionConfig;
-import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1ObjectTrackingConfig;
-import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1LabelDetectionConfigLabelDetectionModeEnum;
-import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1LabelDetectionConfig;
-import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1FaceDetectionConfig;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequestFeaturesEnum;
 import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1ExplicitContentDetectionConfig;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1FaceDetectionConfig;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1LabelDetectionConfig;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1LabelDetectionConfigLabelDetectionModeEnum;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1ObjectTrackingConfig;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1PersonDetectionConfig;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1ShotChangeDetectionConfig;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1SpeechContext;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1SpeechTranscriptionConfig;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1TextDetectionConfig;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1VideoContext;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1VideoSegment;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -44,12 +43,12 @@ public class Application {
                 .build();
 
             VideointelligenceVideosAnnotateRequest req = new VideointelligenceVideosAnnotateRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 googleCloudVideointelligenceV1p3beta1AnnotateVideoRequest = new GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequest() {{
                     features = new org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequestFeaturesEnum[]{{
-                        add("OBJECT_TRACKING"),
-                        add("CELEBRITY_RECOGNITION"),
-                        add("TEXT_DETECTION"),
+                        add(GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequestFeaturesEnum.OBJECT_TRACKING),
+                        add(GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequestFeaturesEnum.CELEBRITY_RECOGNITION),
+                        add(GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequestFeaturesEnum.TEXT_DETECTION),
                     }};
                     inputContent = "nulla";
                     inputUri = "corrupti";
@@ -58,27 +57,27 @@ public class Application {
                     videoContext = new GoogleCloudVideointelligenceV1p3beta1VideoContext() {{
                         explicitContentDetectionConfig = new GoogleCloudVideointelligenceV1p3beta1ExplicitContentDetectionConfig() {{
                             model = "error";
-                        }};
+                        }};;
                         faceDetectionConfig = new GoogleCloudVideointelligenceV1p3beta1FaceDetectionConfig() {{
                             includeAttributes = false;
                             includeBoundingBoxes = false;
                             model = "deserunt";
-                        }};
+                        }};;
                         labelDetectionConfig = new GoogleCloudVideointelligenceV1p3beta1LabelDetectionConfig() {{
                             frameConfidenceThreshold = 3843.82;
-                            labelDetectionMode = "SHOT_MODE";
+                            labelDetectionMode = GoogleCloudVideointelligenceV1p3beta1LabelDetectionConfigLabelDetectionModeEnum.SHOT_MODE;
                             model = "magnam";
                             stationaryCamera = false;
                             videoConfidenceThreshold = 8917.73;
-                        }};
+                        }};;
                         objectTrackingConfig = new GoogleCloudVideointelligenceV1p3beta1ObjectTrackingConfig() {{
                             model = "ipsa";
-                        }};
+                        }};;
                         personDetectionConfig = new GoogleCloudVideointelligenceV1p3beta1PersonDetectionConfig() {{
                             includeAttributes = false;
                             includeBoundingBoxes = false;
                             includePoseLandmarks = false;
-                        }};
+                        }};;
                         segments = new org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p3beta1VideoSegment[]{{
                             add(new GoogleCloudVideointelligenceV1p3beta1VideoSegment() {{
                                 endTimeOffset = "tempora";
@@ -99,7 +98,7 @@ public class Application {
                         }};
                         shotChangeDetectionConfig = new GoogleCloudVideointelligenceV1p3beta1ShotChangeDetectionConfig() {{
                             model = "nisi";
-                        }};
+                        }};;
                         speechTranscriptionConfig = new GoogleCloudVideointelligenceV1p3beta1SpeechTranscriptionConfig() {{
                             audioTracks = new Integer[]{{
                                 add(836079),
@@ -146,7 +145,7 @@ public class Application {
                                     }};
                                 }}),
                             }};
-                        }};
+                        }};;
                         textDetectionConfig = new GoogleCloudVideointelligenceV1p3beta1TextDetectionConfig() {{
                             languageHints = new String[]{{
                                 add("hic"),
@@ -154,11 +153,11 @@ public class Application {
                                 add("totam"),
                             }};
                             model = "beatae";
-                        }};
-                    }};
-                }};
+                        }};;
+                    }};;
+                }};;
                 accessToken = "commodi";
-                alt = "media";
+                alt = AltEnum.MEDIA;
                 callback = "modi";
                 fields = "qui";
                 key = "impedit";
@@ -167,19 +166,21 @@ public class Application {
                 quotaUser = "esse";
                 uploadType = "ipsum";
                 uploadProtocol = "excepturi";
-            }}            
+            }};            
 
-            VideointelligenceVideosAnnotateResponse res = sdk.videos.videointelligenceVideosAnnotate(req, new VideointelligenceVideosAnnotateSecurity() {{
+            VideointelligenceVideosAnnotateResponse res = sdk.videos.videointelligenceVideosAnnotate(req, new VideointelligenceVideosAnnotateSecurity("aspernatur", "perferendis") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.googleLongrunningOperation.isPresent()) {
+            if (res.googleLongrunningOperation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -187,9 +188,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### videos
+### [videos](docs/videos/README.md)
 
-* `videointelligenceVideosAnnotate` - Performs asynchronous video annotation. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `AnnotateVideoProgress` (progress). `Operation.response` contains `AnnotateVideoResponse` (results).
+* [videointelligenceVideosAnnotate](docs/videos/README.md#videointelligencevideosannotate) - Performs asynchronous video annotation. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `AnnotateVideoProgress` (progress). `Operation.response` contains `AnnotateVideoResponse` (results).
 <!-- End SDK Available Operations -->
 
 ### Maturity

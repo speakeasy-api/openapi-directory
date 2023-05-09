@@ -133,4 +133,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ScheduleTransferRunsRequest
 lib/src/main/java/org/openapis/openapi/models/shared/StartManualTransferRunsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/StartManualTransferRunsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/TimeRange.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

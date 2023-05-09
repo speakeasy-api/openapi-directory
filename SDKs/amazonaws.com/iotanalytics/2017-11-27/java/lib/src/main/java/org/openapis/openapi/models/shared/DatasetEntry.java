@@ -15,6 +15,7 @@ public class DatasetEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataURI")
     public String dataURI;
+
     public DatasetEntry withDataURI(String dataURI) {
         this.dataURI = dataURI;
         return this;
@@ -23,9 +24,11 @@ public class DatasetEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryName")
     public String entryName;
+
     public DatasetEntry withEntryName(String entryName) {
         this.entryName = entryName;
         return this;
     }
     
+    public DatasetEntry(){}
 }

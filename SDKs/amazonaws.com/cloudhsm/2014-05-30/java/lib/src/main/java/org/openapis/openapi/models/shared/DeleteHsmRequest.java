@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteHsmRequest {
     @JsonProperty("HsmArn")
     public String hsmArn;
+
     public DeleteHsmRequest withHsmArn(String hsmArn) {
         this.hsmArn = hsmArn;
         return this;
     }
     
+    public DeleteHsmRequest(@JsonProperty("HsmArn") String hsmArn) {
+        this.hsmArn = hsmArn;
+  }
 }

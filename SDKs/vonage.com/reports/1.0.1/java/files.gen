@@ -43,4 +43,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/NextHref.java
 lib/src/main/java/org/openapis/openapi/models/shared/FirstHref.java
 lib/src/main/java/org/openapis/openapi/models/shared/CallLogsEmbeddedObject.java
 lib/src/main/java/org/openapis/openapi/models/shared/CallLog.java
+docs/sdk/README.md
 USAGE.md

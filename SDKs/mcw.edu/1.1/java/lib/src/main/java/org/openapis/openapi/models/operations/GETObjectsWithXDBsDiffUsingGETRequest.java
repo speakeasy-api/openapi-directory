@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETObjectsWithXDBsDiffUsingGETRequest {
@@ -12,6 +13,7 @@ public class GETObjectsWithXDBsDiffUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dateFromYYYYMMDD")
     public String dateFromYYYYMMDD;
+
     public GETObjectsWithXDBsDiffUsingGETRequest withDateFromYYYYMMDD(String dateFromYYYYMMDD) {
         this.dateFromYYYYMMDD = dateFromYYYYMMDD;
         return this;
@@ -22,6 +24,7 @@ public class GETObjectsWithXDBsDiffUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dateToYYYYMMDD")
     public String dateToYYYYMMDD;
+
     public GETObjectsWithXDBsDiffUsingGETRequest withDateToYYYYMMDD(String dateToYYYYMMDD) {
         this.dateToYYYYMMDD = dateToYYYYMMDD;
         return this;
@@ -32,6 +35,7 @@ public class GETObjectsWithXDBsDiffUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=objectKey")
     public Integer objectKey;
+
     public GETObjectsWithXDBsDiffUsingGETRequest withObjectKey(Integer objectKey) {
         this.objectKey = objectKey;
         return this;
@@ -42,9 +46,16 @@ public class GETObjectsWithXDBsDiffUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
     public Integer speciesTypeKey;
+
     public GETObjectsWithXDBsDiffUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
         this.speciesTypeKey = speciesTypeKey;
         return this;
     }
     
+    public GETObjectsWithXDBsDiffUsingGETRequest(@JsonProperty("dateFromYYYYMMDD") String dateFromYYYYMMDD, @JsonProperty("dateToYYYYMMDD") String dateToYYYYMMDD, @JsonProperty("objectKey") Integer objectKey, @JsonProperty("speciesTypeKey") Integer speciesTypeKey) {
+        this.dateFromYYYYMMDD = dateFromYYYYMMDD;
+        this.dateToYYYYMMDD = dateToYYYYMMDD;
+        this.objectKey = objectKey;
+        this.speciesTypeKey = speciesTypeKey;
+  }
 }

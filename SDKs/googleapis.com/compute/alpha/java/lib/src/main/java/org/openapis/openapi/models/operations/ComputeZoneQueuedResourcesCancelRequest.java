@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeZoneQueuedResourcesCancelRequest {
@@ -12,6 +13,7 @@ public class ComputeZoneQueuedResourcesCancelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeZoneQueuedResourcesCancelRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ComputeZoneQueuedResourcesCancelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeZoneQueuedResourcesCancelRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ComputeZoneQueuedResourcesCancelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeZoneQueuedResourcesCancelRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ComputeZoneQueuedResourcesCancelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeZoneQueuedResourcesCancelRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ComputeZoneQueuedResourcesCancelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeZoneQueuedResourcesCancelRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class ComputeZoneQueuedResourcesCancelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeZoneQueuedResourcesCancelRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class ComputeZoneQueuedResourcesCancelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeZoneQueuedResourcesCancelRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class ComputeZoneQueuedResourcesCancelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeZoneQueuedResourcesCancelRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -92,6 +101,7 @@ public class ComputeZoneQueuedResourcesCancelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeZoneQueuedResourcesCancelRequest withProject(String project) {
         this.project = project;
         return this;
@@ -102,6 +112,7 @@ public class ComputeZoneQueuedResourcesCancelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=queuedResource")
     public String queuedResource;
+
     public ComputeZoneQueuedResourcesCancelRequest withQueuedResource(String queuedResource) {
         this.queuedResource = queuedResource;
         return this;
@@ -112,6 +123,7 @@ public class ComputeZoneQueuedResourcesCancelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeZoneQueuedResourcesCancelRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class ComputeZoneQueuedResourcesCancelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeZoneQueuedResourcesCancelRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -132,6 +145,7 @@ public class ComputeZoneQueuedResourcesCancelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeZoneQueuedResourcesCancelRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,6 +156,7 @@ public class ComputeZoneQueuedResourcesCancelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeZoneQueuedResourcesCancelRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -152,6 +167,7 @@ public class ComputeZoneQueuedResourcesCancelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeZoneQueuedResourcesCancelRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -162,9 +178,15 @@ public class ComputeZoneQueuedResourcesCancelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone")
     public String zone;
+
     public ComputeZoneQueuedResourcesCancelRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public ComputeZoneQueuedResourcesCancelRequest(@JsonProperty("project") String project, @JsonProperty("queuedResource") String queuedResource, @JsonProperty("zone") String zone) {
+        this.project = project;
+        this.queuedResource = queuedResource;
+        this.zone = zone;
+  }
 }

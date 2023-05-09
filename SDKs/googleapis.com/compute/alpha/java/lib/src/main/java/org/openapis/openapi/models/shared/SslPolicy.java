@@ -18,6 +18,7 @@ public class SslPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public SslPolicy withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class SslPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFeatures")
     public String[] customFeatures;
+
     public SslPolicy withCustomFeatures(String[] customFeatures) {
         this.customFeatures = customFeatures;
         return this;
@@ -40,6 +42,7 @@ public class SslPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SslPolicy withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class SslPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabledFeatures")
     public String[] enabledFeatures;
+
     public SslPolicy withEnabledFeatures(String[] enabledFeatures) {
         this.enabledFeatures = enabledFeatures;
         return this;
@@ -62,6 +66,7 @@ public class SslPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public SslPolicy withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -73,6 +78,7 @@ public class SslPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SslPolicy withId(String id) {
         this.id = id;
         return this;
@@ -84,6 +90,7 @@ public class SslPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SslPolicy withKind(String kind) {
         this.kind = kind;
         return this;
@@ -95,6 +102,7 @@ public class SslPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minTlsVersion")
     public SslPolicyMinTlsVersionEnum minTlsVersion;
+
     public SslPolicy withMinTlsVersion(SslPolicyMinTlsVersionEnum minTlsVersion) {
         this.minTlsVersion = minTlsVersion;
         return this;
@@ -106,6 +114,7 @@ public class SslPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SslPolicy withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +126,7 @@ public class SslPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile")
     public SslPolicyProfileEnum profile;
+
     public SslPolicy withProfile(SslPolicyProfileEnum profile) {
         this.profile = profile;
         return this;
@@ -128,6 +138,7 @@ public class SslPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public SslPolicy withRegion(String region) {
         this.region = region;
         return this;
@@ -139,6 +150,7 @@ public class SslPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public SslPolicy withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -150,6 +162,7 @@ public class SslPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public SslPolicy withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -161,6 +174,7 @@ public class SslPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tlsSettings")
     public ServerTlsSettings tlsSettings;
+
     public SslPolicy withTlsSettings(ServerTlsSettings tlsSettings) {
         this.tlsSettings = tlsSettings;
         return this;
@@ -172,9 +186,11 @@ public class SslPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public SslPolicyWarnings[] warnings;
+
     public SslPolicy withWarnings(SslPolicyWarnings[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public SslPolicy(){}
 }

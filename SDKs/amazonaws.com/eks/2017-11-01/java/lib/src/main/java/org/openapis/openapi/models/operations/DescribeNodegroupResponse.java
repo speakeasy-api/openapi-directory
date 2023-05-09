@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeNodegroupResponse {
@@ -12,6 +13,7 @@ public class DescribeNodegroupResponse {
      */
     
     public Object clientException;
+
     public DescribeNodegroupResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeNodegroupResponse {
     
     
     public String contentType;
+
     public DescribeNodegroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeNodegroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeNodegroupResponse describeNodegroupResponse;
+
     public DescribeNodegroupResponse withDescribeNodegroupResponse(org.openapis.openapi.models.shared.DescribeNodegroupResponse describeNodegroupResponse) {
         this.describeNodegroupResponse = describeNodegroupResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeNodegroupResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeNodegroupResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeNodegroupResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeNodegroupResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeNodegroupResponse {
     
     
     public Integer statusCode;
+
     public DescribeNodegroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeNodegroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeNodegroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeNodegroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeNodegroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeNodegroupResponse {
      */
     
     public Object serverException;
+
     public DescribeNodegroupResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public DescribeNodegroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

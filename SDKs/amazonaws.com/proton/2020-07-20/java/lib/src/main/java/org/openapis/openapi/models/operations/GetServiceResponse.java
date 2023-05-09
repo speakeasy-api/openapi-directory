@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetServiceResponse {
@@ -12,6 +13,7 @@ public class GetServiceResponse {
      */
     
     public Object accessDeniedException;
+
     public GetServiceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetServiceResponse {
     
     
     public String contentType;
+
     public GetServiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetServiceResponse {
      */
     
     public org.openapis.openapi.models.shared.GetServiceOutput getServiceOutput;
+
     public GetServiceResponse withGetServiceOutput(org.openapis.openapi.models.shared.GetServiceOutput getServiceOutput) {
         this.getServiceOutput = getServiceOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetServiceResponse {
      */
     
     public Object internalServerException;
+
     public GetServiceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetServiceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetServiceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetServiceResponse {
     
     
     public Integer statusCode;
+
     public GetServiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetServiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetServiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetServiceResponse {
      */
     
     public Object throttlingException;
+
     public GetServiceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetServiceResponse {
      */
     
     public Object validationException;
+
     public GetServiceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetServiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

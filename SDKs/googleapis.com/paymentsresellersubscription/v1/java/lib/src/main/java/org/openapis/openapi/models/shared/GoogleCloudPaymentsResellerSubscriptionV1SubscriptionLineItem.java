@@ -18,6 +18,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public GoogleCloudPaymentsResellerSubscriptionV1Amount amount;
+
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem withAmount(GoogleCloudPaymentsResellerSubscriptionV1Amount amount) {
         this.amount = amount;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem withDescription(String description) {
         this.description = description;
         return this;
@@ -40,8 +42,21 @@ public class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemFreeTrialEndTime")
     public String lineItemFreeTrialEndTime;
+
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem withLineItemFreeTrialEndTime(String lineItemFreeTrialEndTime) {
         this.lineItemFreeTrialEndTime = lineItemFreeTrialEndTime;
+        return this;
+    }
+    
+    /**
+     * Output only. A unique index of the subscription line item.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lineItemIndex")
+    public Integer lineItemIndex;
+
+    public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem withLineItemIndex(Integer lineItemIndex) {
+        this.lineItemIndex = lineItemIndex;
         return this;
     }
     
@@ -51,6 +66,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemPromotionSpecs")
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec[] lineItemPromotionSpecs;
+
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem withLineItemPromotionSpecs(GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec[] lineItemPromotionSpecs) {
         this.lineItemPromotionSpecs = lineItemPromotionSpecs;
         return this;
@@ -62,6 +78,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneTimeRecurrenceDetails")
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails oneTimeRecurrenceDetails;
+
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem withOneTimeRecurrenceDetails(GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails oneTimeRecurrenceDetails) {
         this.oneTimeRecurrenceDetails = oneTimeRecurrenceDetails;
         return this;
@@ -73,6 +90,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public String product;
+
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem withProduct(String product) {
         this.product = product;
         return this;
@@ -84,6 +102,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productPayload")
     public GoogleCloudPaymentsResellerSubscriptionV1ProductPayload productPayload;
+
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem withProductPayload(GoogleCloudPaymentsResellerSubscriptionV1ProductPayload productPayload) {
         this.productPayload = productPayload;
         return this;
@@ -95,6 +114,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurrenceType")
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemRecurrenceTypeEnum recurrenceType;
+
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem withRecurrenceType(GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemRecurrenceTypeEnum recurrenceType) {
         this.recurrenceType = recurrenceType;
         return this;
@@ -106,9 +126,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum state;
+
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem withState(GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem(){}
 }

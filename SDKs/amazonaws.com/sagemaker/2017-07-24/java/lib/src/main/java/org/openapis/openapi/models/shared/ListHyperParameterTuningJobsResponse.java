@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListHyperParameterTuningJobsResponse {
     @JsonProperty("HyperParameterTuningJobSummaries")
     public HyperParameterTuningJobSummary[] hyperParameterTuningJobSummaries;
+
     public ListHyperParameterTuningJobsResponse withHyperParameterTuningJobSummaries(HyperParameterTuningJobSummary[] hyperParameterTuningJobSummaries) {
         this.hyperParameterTuningJobSummaries = hyperParameterTuningJobSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListHyperParameterTuningJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListHyperParameterTuningJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListHyperParameterTuningJobsResponse(@JsonProperty("HyperParameterTuningJobSummaries") HyperParameterTuningJobSummary[] hyperParameterTuningJobSummaries) {
+        this.hyperParameterTuningJobSummaries = hyperParameterTuningJobSummaries;
+  }
 }

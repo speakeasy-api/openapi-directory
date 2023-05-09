@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteImpersonationRoleResponse {
     
     public String contentType;
+
     public DeleteImpersonationRoleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteImpersonationRoleResponse {
      */
     
     public java.util.Map<String, Object> deleteImpersonationRoleResponse;
+
     public DeleteImpersonationRoleResponse withDeleteImpersonationRoleResponse(java.util.Map<String, Object> deleteImpersonationRoleResponse) {
         this.deleteImpersonationRoleResponse = deleteImpersonationRoleResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteImpersonationRoleResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteImpersonationRoleResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteImpersonationRoleResponse {
      */
     
     public Object organizationNotFoundException;
+
     public DeleteImpersonationRoleResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteImpersonationRoleResponse {
      */
     
     public Object organizationStateException;
+
     public DeleteImpersonationRoleResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteImpersonationRoleResponse {
     
     
     public Integer statusCode;
+
     public DeleteImpersonationRoleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteImpersonationRoleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteImpersonationRoleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteImpersonationRoleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

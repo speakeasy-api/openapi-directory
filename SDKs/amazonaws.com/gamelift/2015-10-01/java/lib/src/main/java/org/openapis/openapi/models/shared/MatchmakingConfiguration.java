@@ -20,6 +20,7 @@ public class MatchmakingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptanceRequired")
     public Boolean acceptanceRequired;
+
     public MatchmakingConfiguration withAcceptanceRequired(Boolean acceptanceRequired) {
         this.acceptanceRequired = acceptanceRequired;
         return this;
@@ -28,6 +29,7 @@ public class MatchmakingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptanceTimeoutSeconds")
     public Long acceptanceTimeoutSeconds;
+
     public MatchmakingConfiguration withAcceptanceTimeoutSeconds(Long acceptanceTimeoutSeconds) {
         this.acceptanceTimeoutSeconds = acceptanceTimeoutSeconds;
         return this;
@@ -36,6 +38,7 @@ public class MatchmakingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalPlayerCount")
     public Long additionalPlayerCount;
+
     public MatchmakingConfiguration withAdditionalPlayerCount(Long additionalPlayerCount) {
         this.additionalPlayerCount = additionalPlayerCount;
         return this;
@@ -44,6 +47,7 @@ public class MatchmakingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackfillMode")
     public BackfillModeEnum backfillMode;
+
     public MatchmakingConfiguration withBackfillMode(BackfillModeEnum backfillMode) {
         this.backfillMode = backfillMode;
         return this;
@@ -52,6 +56,7 @@ public class MatchmakingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationArn")
     public String configurationArn;
+
     public MatchmakingConfiguration withConfigurationArn(String configurationArn) {
         this.configurationArn = configurationArn;
         return this;
@@ -62,6 +67,7 @@ public class MatchmakingConfiguration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public MatchmakingConfiguration withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -70,6 +76,7 @@ public class MatchmakingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomEventData")
     public String customEventData;
+
     public MatchmakingConfiguration withCustomEventData(String customEventData) {
         this.customEventData = customEventData;
         return this;
@@ -78,6 +85,7 @@ public class MatchmakingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public MatchmakingConfiguration withDescription(String description) {
         this.description = description;
         return this;
@@ -86,6 +94,7 @@ public class MatchmakingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlexMatchMode")
     public FlexMatchModeEnum flexMatchMode;
+
     public MatchmakingConfiguration withFlexMatchMode(FlexMatchModeEnum flexMatchMode) {
         this.flexMatchMode = flexMatchMode;
         return this;
@@ -94,6 +103,7 @@ public class MatchmakingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameProperties")
     public GameProperty[] gameProperties;
+
     public MatchmakingConfiguration withGameProperties(GameProperty[] gameProperties) {
         this.gameProperties = gameProperties;
         return this;
@@ -102,6 +112,7 @@ public class MatchmakingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSessionData")
     public String gameSessionData;
+
     public MatchmakingConfiguration withGameSessionData(String gameSessionData) {
         this.gameSessionData = gameSessionData;
         return this;
@@ -110,6 +121,7 @@ public class MatchmakingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSessionQueueArns")
     public String[] gameSessionQueueArns;
+
     public MatchmakingConfiguration withGameSessionQueueArns(String[] gameSessionQueueArns) {
         this.gameSessionQueueArns = gameSessionQueueArns;
         return this;
@@ -118,6 +130,7 @@ public class MatchmakingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public MatchmakingConfiguration withName(String name) {
         this.name = name;
         return this;
@@ -126,6 +139,7 @@ public class MatchmakingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationTarget")
     public String notificationTarget;
+
     public MatchmakingConfiguration withNotificationTarget(String notificationTarget) {
         this.notificationTarget = notificationTarget;
         return this;
@@ -134,6 +148,7 @@ public class MatchmakingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestTimeoutSeconds")
     public Long requestTimeoutSeconds;
+
     public MatchmakingConfiguration withRequestTimeoutSeconds(Long requestTimeoutSeconds) {
         this.requestTimeoutSeconds = requestTimeoutSeconds;
         return this;
@@ -142,6 +157,7 @@ public class MatchmakingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleSetArn")
     public String ruleSetArn;
+
     public MatchmakingConfiguration withRuleSetArn(String ruleSetArn) {
         this.ruleSetArn = ruleSetArn;
         return this;
@@ -150,9 +166,11 @@ public class MatchmakingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleSetName")
     public String ruleSetName;
+
     public MatchmakingConfiguration withRuleSetName(String ruleSetName) {
         this.ruleSetName = ruleSetName;
         return this;
     }
     
+    public MatchmakingConfiguration(){}
 }

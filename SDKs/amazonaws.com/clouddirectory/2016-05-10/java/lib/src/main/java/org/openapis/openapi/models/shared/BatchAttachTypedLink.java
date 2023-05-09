@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchAttachTypedLink {
     @JsonProperty("Attributes")
     public AttributeNameAndValue[] attributes;
+
     public BatchAttachTypedLink withAttributes(AttributeNameAndValue[] attributes) {
         this.attributes = attributes;
         return this;
@@ -19,6 +20,7 @@ public class BatchAttachTypedLink {
     
     @JsonProperty("SourceObjectReference")
     public ObjectReference sourceObjectReference;
+
     public BatchAttachTypedLink withSourceObjectReference(ObjectReference sourceObjectReference) {
         this.sourceObjectReference = sourceObjectReference;
         return this;
@@ -26,6 +28,7 @@ public class BatchAttachTypedLink {
     
     @JsonProperty("TargetObjectReference")
     public ObjectReference targetObjectReference;
+
     public BatchAttachTypedLink withTargetObjectReference(ObjectReference targetObjectReference) {
         this.targetObjectReference = targetObjectReference;
         return this;
@@ -33,9 +36,16 @@ public class BatchAttachTypedLink {
     
     @JsonProperty("TypedLinkFacet")
     public TypedLinkSchemaAndFacetName typedLinkFacet;
+
     public BatchAttachTypedLink withTypedLinkFacet(TypedLinkSchemaAndFacetName typedLinkFacet) {
         this.typedLinkFacet = typedLinkFacet;
         return this;
     }
     
+    public BatchAttachTypedLink(@JsonProperty("Attributes") AttributeNameAndValue[] attributes, @JsonProperty("SourceObjectReference") ObjectReference sourceObjectReference, @JsonProperty("TargetObjectReference") ObjectReference targetObjectReference, @JsonProperty("TypedLinkFacet") TypedLinkSchemaAndFacetName typedLinkFacet) {
+        this.attributes = attributes;
+        this.sourceObjectReference = sourceObjectReference;
+        this.targetObjectReference = targetObjectReference;
+        this.typedLinkFacet = typedLinkFacet;
+  }
 }

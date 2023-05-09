@@ -18,6 +18,7 @@ public class ResourceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("physicalHost")
     public String physicalHost;
+
     public ResourceStatus withPhysicalHost(String physicalHost) {
         this.physicalHost = physicalHost;
         return this;
@@ -26,9 +27,11 @@ public class ResourceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduling")
     public ResourceStatusScheduling scheduling;
+
     public ResourceStatus withScheduling(ResourceStatusScheduling scheduling) {
         this.scheduling = scheduling;
         return this;
     }
     
+    public ResourceStatus(){}
 }

@@ -57,10 +57,8 @@ public class WmsWmts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCapabilitiesResponse res = new org.openapis.openapi.models.operations.GetCapabilitiesResponse() {{
+        org.openapis.openapi.models.operations.GetCapabilitiesResponse res = new org.openapis.openapi.models.operations.GetCapabilitiesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 202 || httpRes.statusCode() == 401 || httpRes.statusCode() == 500) {
@@ -99,10 +97,8 @@ public class WmsWmts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMapResponse res = new org.openapis.openapi.models.operations.GetMapResponse() {{
+        org.openapis.openapi.models.operations.GetMapResponse res = new org.openapis.openapi.models.operations.GetMapResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 202 || httpRes.statusCode() == 401 || httpRes.statusCode() == 500) {
@@ -138,10 +134,8 @@ public class WmsWmts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlResponse res = new org.openapis.openapi.models.operations.GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlResponse() {{
+        org.openapis.openapi.models.operations.GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlResponse res = new org.openapis.openapi.models.operations.GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 500) {

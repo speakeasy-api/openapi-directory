@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DomainMembershipList {
     
     public String domain;
+
     public DomainMembershipList withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -19,6 +20,7 @@ public class DomainMembershipList {
     
     
     public String fqdn;
+
     public DomainMembershipList withFqdn(String fqdn) {
         this.fqdn = fqdn;
         return this;
@@ -26,6 +28,7 @@ public class DomainMembershipList {
     
     
     public String iamRoleName;
+
     public DomainMembershipList withIAMRoleName(String iamRoleName) {
         this.iamRoleName = iamRoleName;
         return this;
@@ -33,9 +36,11 @@ public class DomainMembershipList {
     
     
     public String status;
+
     public DomainMembershipList withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DomainMembershipList(){}
 }

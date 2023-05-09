@@ -15,6 +15,7 @@ public class ErrorsEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String[] fields;
+
     public ErrorsEntity withFields(String[] fields) {
         this.fields = fields;
         return this;
@@ -26,9 +27,11 @@ public class ErrorsEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
     public String[] messages;
+
     public ErrorsEntity withMessages(String[] messages) {
         this.messages = messages;
         return this;
     }
     
+    public ErrorsEntity(){}
 }

@@ -15,9 +15,11 @@ public class GetDistributionBundlesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundles")
     public DistributionBundle[] bundles;
+
     public GetDistributionBundlesResult withBundles(DistributionBundle[] bundles) {
         this.bundles = bundles;
         return this;
     }
     
+    public GetDistributionBundlesResult(){}
 }

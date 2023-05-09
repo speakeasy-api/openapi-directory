@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEntitlementResponse {
     
     public String contentType;
+
     public CreateEntitlementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateEntitlementResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateEntitlementResult createEntitlementResult;
+
     public CreateEntitlementResponse withCreateEntitlementResult(org.openapis.openapi.models.shared.CreateEntitlementResult createEntitlementResult) {
         this.createEntitlementResult = createEntitlementResult;
         return this;
@@ -29,6 +32,7 @@ public class CreateEntitlementResponse {
      */
     
     public Object entitlementAlreadyExistsException;
+
     public CreateEntitlementResponse withEntitlementAlreadyExistsException(Object entitlementAlreadyExistsException) {
         this.entitlementAlreadyExistsException = entitlementAlreadyExistsException;
         return this;
@@ -39,6 +43,7 @@ public class CreateEntitlementResponse {
      */
     
     public Object limitExceededException;
+
     public CreateEntitlementResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateEntitlementResponse {
      */
     
     public Object operationNotPermittedException;
+
     public CreateEntitlementResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -56,6 +62,7 @@ public class CreateEntitlementResponse {
     
     
     public Integer statusCode;
+
     public CreateEntitlementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateEntitlementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEntitlementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateEntitlementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateEntitlementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CreateEntitlementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

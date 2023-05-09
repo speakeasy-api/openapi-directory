@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WebBackendCreateConnectionResponse {
     
     public String contentType;
+
     public WebBackendCreateConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class WebBackendCreateConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public WebBackendCreateConnectionResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -26,6 +29,7 @@ public class WebBackendCreateConnectionResponse {
     
     
     public Integer statusCode;
+
     public WebBackendCreateConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class WebBackendCreateConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WebBackendCreateConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class WebBackendCreateConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.WebBackendConnectionRead webBackendConnectionRead;
+
     public WebBackendCreateConnectionResponse withWebBackendConnectionRead(org.openapis.openapi.models.shared.WebBackendConnectionRead webBackendConnectionRead) {
         this.webBackendConnectionRead = webBackendConnectionRead;
         return this;
     }
     
+    public WebBackendCreateConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

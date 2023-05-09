@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRelationByENSGIDRequest {
@@ -12,9 +13,13 @@ public class GetRelationByENSGIDRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target")
     public String target;
+
     public GetRelationByENSGIDRequest withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public GetRelationByENSGIDRequest(@JsonProperty("target") String target) {
+        this.target = target;
+  }
 }

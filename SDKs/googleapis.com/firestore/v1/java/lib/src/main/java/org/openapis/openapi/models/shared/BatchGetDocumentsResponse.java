@@ -18,6 +18,7 @@ public class BatchGetDocumentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("found")
     public Document found;
+
     public BatchGetDocumentsResponse withFound(Document found) {
         this.found = found;
         return this;
@@ -29,6 +30,7 @@ public class BatchGetDocumentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missing")
     public String missing;
+
     public BatchGetDocumentsResponse withMissing(String missing) {
         this.missing = missing;
         return this;
@@ -40,6 +42,7 @@ public class BatchGetDocumentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public BatchGetDocumentsResponse withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
@@ -51,9 +54,11 @@ public class BatchGetDocumentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction")
     public String transaction;
+
     public BatchGetDocumentsResponse withTransaction(String transaction) {
         this.transaction = transaction;
         return this;
     }
     
+    public BatchGetDocumentsResponse(){}
 }

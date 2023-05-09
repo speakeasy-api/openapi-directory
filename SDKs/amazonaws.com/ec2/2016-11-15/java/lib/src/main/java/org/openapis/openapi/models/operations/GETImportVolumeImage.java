@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -12,6 +13,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETImportVolumeImage {
     @SpeakeasyMetadata("queryParam:name=Bytes")
     public Long bytes;
+
     public GETImportVolumeImage withBytes(Long bytes) {
         this.bytes = bytes;
         return this;
@@ -19,6 +21,7 @@ public class GETImportVolumeImage {
     
     @SpeakeasyMetadata("queryParam:name=Format")
     public GETImportVolumeImageFormatEnum format;
+
     public GETImportVolumeImage withFormat(GETImportVolumeImageFormatEnum format) {
         this.format = format;
         return this;
@@ -26,9 +29,15 @@ public class GETImportVolumeImage {
     
     @SpeakeasyMetadata("queryParam:name=ImportManifestUrl")
     public String importManifestUrl;
+
     public GETImportVolumeImage withImportManifestUrl(String importManifestUrl) {
         this.importManifestUrl = importManifestUrl;
         return this;
     }
     
+    public GETImportVolumeImage(@JsonProperty("Bytes") Long bytes, @JsonProperty("Format") GETImportVolumeImageFormatEnum format, @JsonProperty("ImportManifestUrl") String importManifestUrl) {
+        this.bytes = bytes;
+        this.format = format;
+        this.importManifestUrl = importManifestUrl;
+  }
 }

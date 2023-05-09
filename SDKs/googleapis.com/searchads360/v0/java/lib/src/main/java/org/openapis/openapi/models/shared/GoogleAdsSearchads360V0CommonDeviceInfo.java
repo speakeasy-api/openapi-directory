@@ -18,9 +18,11 @@ public class GoogleAdsSearchads360V0CommonDeviceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleAdsSearchads360V0CommonDeviceInfoTypeEnum type;
+
     public GoogleAdsSearchads360V0CommonDeviceInfo withType(GoogleAdsSearchads360V0CommonDeviceInfoTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleAdsSearchads360V0CommonDeviceInfo(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TapcnResponse {
     
     public String contentType;
+
     public TapcnResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TapcnResponse {
     
     
     public Integer statusCode;
+
     public TapcnResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TapcnResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TapcnResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class TapcnResponse {
      */
     
     public Tapcn400ApplicationJSON tapcn400ApplicationJSONObject;
+
     public TapcnResponse withTapcn400ApplicationJSONObject(Tapcn400ApplicationJSON tapcn400ApplicationJSONObject) {
         this.tapcn400ApplicationJSONObject = tapcn400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class TapcnResponse {
      */
     
     public Tapcn401ApplicationJSON tapcn401ApplicationJSONObject;
+
     public TapcnResponse withTapcn401ApplicationJSONObject(Tapcn401ApplicationJSON tapcn401ApplicationJSONObject) {
         this.tapcn401ApplicationJSONObject = tapcn401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class TapcnResponse {
      */
     
     public Tapcn404ApplicationJSON tapcn404ApplicationJSONObject;
+
     public TapcnResponse withTapcn404ApplicationJSONObject(Tapcn404ApplicationJSON tapcn404ApplicationJSONObject) {
         this.tapcn404ApplicationJSONObject = tapcn404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class TapcnResponse {
      */
     
     public Tapcn500ApplicationJSON tapcn500ApplicationJSONObject;
+
     public TapcnResponse withTapcn500ApplicationJSONObject(Tapcn500ApplicationJSON tapcn500ApplicationJSONObject) {
         this.tapcn500ApplicationJSONObject = tapcn500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class TapcnResponse {
      */
     
     public Tapcn502ApplicationJSON tapcn502ApplicationJSONObject;
+
     public TapcnResponse withTapcn502ApplicationJSONObject(Tapcn502ApplicationJSON tapcn502ApplicationJSONObject) {
         this.tapcn502ApplicationJSONObject = tapcn502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class TapcnResponse {
      */
     
     public Tapcn503ApplicationJSON tapcn503ApplicationJSONObject;
+
     public TapcnResponse withTapcn503ApplicationJSONObject(Tapcn503ApplicationJSON tapcn503ApplicationJSONObject) {
         this.tapcn503ApplicationJSONObject = tapcn503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class TapcnResponse {
      */
     
     public Tapcn504ApplicationJSON tapcn504ApplicationJSONObject;
+
     public TapcnResponse withTapcn504ApplicationJSONObject(Tapcn504ApplicationJSON tapcn504ApplicationJSONObject) {
         this.tapcn504ApplicationJSONObject = tapcn504ApplicationJSONObject;
         return this;
     }
     
+    public TapcnResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

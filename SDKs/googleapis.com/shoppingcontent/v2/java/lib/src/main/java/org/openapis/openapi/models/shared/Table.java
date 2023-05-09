@@ -15,6 +15,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnHeaders")
     public Headers columnHeaders;
+
     public Table withColumnHeaders(Headers columnHeaders) {
         this.columnHeaders = columnHeaders;
         return this;
@@ -26,6 +27,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Table withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowHeaders")
     public Headers rowHeaders;
+
     public Table withRowHeaders(Headers rowHeaders) {
         this.rowHeaders = rowHeaders;
         return this;
@@ -48,9 +51,11 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public Row[] rows;
+
     public Table withRows(Row[] rows) {
         this.rows = rows;
         return this;
     }
     
+    public Table(){}
 }

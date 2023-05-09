@@ -15,6 +15,7 @@ public class SearchSessionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public SearchSessionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class SearchSessionsResponse {
     
     @JsonProperty("sessionSummaries")
     public SessionSummary[] sessionSummaries;
+
     public SearchSessionsResponse withSessionSummaries(SessionSummary[] sessionSummaries) {
         this.sessionSummaries = sessionSummaries;
         return this;
     }
     
+    public SearchSessionsResponse(@JsonProperty("sessionSummaries") SessionSummary[] sessionSummaries) {
+        this.sessionSummaries = sessionSummaries;
+  }
 }

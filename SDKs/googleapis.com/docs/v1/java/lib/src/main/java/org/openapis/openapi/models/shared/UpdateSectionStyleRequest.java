@@ -18,6 +18,7 @@ public class UpdateSectionStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateSectionStyleRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -29,6 +30,7 @@ public class UpdateSectionStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public Range range;
+
     public UpdateSectionStyleRequest withRange(Range range) {
         this.range = range;
         return this;
@@ -40,9 +42,11 @@ public class UpdateSectionStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sectionStyle")
     public SectionStyle sectionStyle;
+
     public UpdateSectionStyleRequest withSectionStyle(SectionStyle sectionStyle) {
         this.sectionStyle = sectionStyle;
         return this;
     }
     
+    public UpdateSectionStyleRequest(){}
 }

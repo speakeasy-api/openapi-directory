@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetUserSegments200ApplicationJSONData {
     @JsonProperty("id")
     public String id;
+
     public GetUserSegments200ApplicationJSONData withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class GetUserSegments200ApplicationJSONData {
     
     @JsonProperty("name")
     public String name;
+
     public GetUserSegments200ApplicationJSONData withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetUserSegments200ApplicationJSONData(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

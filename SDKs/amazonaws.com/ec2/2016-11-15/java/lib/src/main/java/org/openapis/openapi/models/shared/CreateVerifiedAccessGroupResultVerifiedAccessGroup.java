@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVerifiedAccessGroupResultVerifiedAccessGroup {
     
     public String creationTime;
+
     public CreateVerifiedAccessGroupResultVerifiedAccessGroup withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +20,7 @@ public class CreateVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public String deletionTime;
+
     public CreateVerifiedAccessGroupResultVerifiedAccessGroup withDeletionTime(String deletionTime) {
         this.deletionTime = deletionTime;
         return this;
@@ -26,6 +28,7 @@ public class CreateVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public String description;
+
     public CreateVerifiedAccessGroupResultVerifiedAccessGroup withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class CreateVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public String lastUpdatedTime;
+
     public CreateVerifiedAccessGroupResultVerifiedAccessGroup withLastUpdatedTime(String lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -40,6 +44,7 @@ public class CreateVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public String owner;
+
     public CreateVerifiedAccessGroupResultVerifiedAccessGroup withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -47,6 +52,7 @@ public class CreateVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public CreateVerifiedAccessGroupResultVerifiedAccessGroupTags[] tags;
+
     public CreateVerifiedAccessGroupResultVerifiedAccessGroup withTags(CreateVerifiedAccessGroupResultVerifiedAccessGroupTags[] tags) {
         this.tags = tags;
         return this;
@@ -54,6 +60,7 @@ public class CreateVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public String verifiedAccessGroupArn;
+
     public CreateVerifiedAccessGroupResultVerifiedAccessGroup withVerifiedAccessGroupArn(String verifiedAccessGroupArn) {
         this.verifiedAccessGroupArn = verifiedAccessGroupArn;
         return this;
@@ -61,6 +68,7 @@ public class CreateVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public String verifiedAccessGroupId;
+
     public CreateVerifiedAccessGroupResultVerifiedAccessGroup withVerifiedAccessGroupId(String verifiedAccessGroupId) {
         this.verifiedAccessGroupId = verifiedAccessGroupId;
         return this;
@@ -68,9 +76,11 @@ public class CreateVerifiedAccessGroupResultVerifiedAccessGroup {
     
     
     public String verifiedAccessInstanceId;
+
     public CreateVerifiedAccessGroupResultVerifiedAccessGroup withVerifiedAccessInstanceId(String verifiedAccessInstanceId) {
         this.verifiedAccessInstanceId = verifiedAccessInstanceId;
         return this;
     }
     
+    public CreateVerifiedAccessGroupResultVerifiedAccessGroup(){}
 }

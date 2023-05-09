@@ -57,11 +57,9 @@ public class Creators {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatorsListResponse res = new org.openapis.openapi.models.operations.CreatorsListResponse() {{
+        org.openapis.openapi.models.operations.CreatorsListResponse res = new org.openapis.openapi.models.operations.CreatorsListResponse(contentType, httpRes.statusCode()) {{
             creatorsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,11 +93,9 @@ public class Creators {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatorsReadResponse res = new org.openapis.openapi.models.operations.CreatorsReadResponse() {{
+        org.openapis.openapi.models.operations.CreatorsReadResponse res = new org.openapis.openapi.models.operations.CreatorsReadResponse(contentType, httpRes.statusCode()) {{
             personSingle = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

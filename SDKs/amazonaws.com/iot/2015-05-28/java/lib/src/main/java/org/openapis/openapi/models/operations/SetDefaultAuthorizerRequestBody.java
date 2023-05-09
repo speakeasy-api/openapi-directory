@@ -12,9 +12,13 @@ public class SetDefaultAuthorizerRequestBody {
      */
     @JsonProperty("authorizerName")
     public String authorizerName;
+
     public SetDefaultAuthorizerRequestBody withAuthorizerName(String authorizerName) {
         this.authorizerName = authorizerName;
         return this;
     }
     
+    public SetDefaultAuthorizerRequestBody(@JsonProperty("authorizerName") String authorizerName) {
+        this.authorizerName = authorizerName;
+  }
 }

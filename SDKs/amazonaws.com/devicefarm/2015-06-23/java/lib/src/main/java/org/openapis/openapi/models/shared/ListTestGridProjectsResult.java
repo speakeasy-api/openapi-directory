@@ -15,6 +15,7 @@ public class ListTestGridProjectsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTestGridProjectsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTestGridProjectsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testGridProjects")
     public TestGridProject[] testGridProjects;
+
     public ListTestGridProjectsResult withTestGridProjects(TestGridProject[] testGridProjects) {
         this.testGridProjects = testGridProjects;
         return this;
     }
     
+    public ListTestGridProjectsResult(){}
 }

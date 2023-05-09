@@ -12,6 +12,7 @@ public class SingleMonitor200ApplicationJSONMonitorNotifications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onError")
     public SingleMonitor200ApplicationJSONMonitorNotificationsOnError[] onError;
+
     public SingleMonitor200ApplicationJSONMonitorNotifications withOnError(SingleMonitor200ApplicationJSONMonitorNotificationsOnError[] onError) {
         this.onError = onError;
         return this;
@@ -20,9 +21,11 @@ public class SingleMonitor200ApplicationJSONMonitorNotifications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onFailure")
     public SingleMonitor200ApplicationJSONMonitorNotificationsOnFailure[] onFailure;
+
     public SingleMonitor200ApplicationJSONMonitorNotifications withOnFailure(SingleMonitor200ApplicationJSONMonitorNotificationsOnFailure[] onFailure) {
         this.onFailure = onFailure;
         return this;
     }
     
+    public SingleMonitor200ApplicationJSONMonitorNotifications(){}
 }

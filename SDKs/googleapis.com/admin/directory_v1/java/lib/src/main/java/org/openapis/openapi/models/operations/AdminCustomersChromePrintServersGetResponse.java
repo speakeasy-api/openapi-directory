@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminCustomersChromePrintServersGetResponse {
     
     public String contentType;
+
     public AdminCustomersChromePrintServersGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AdminCustomersChromePrintServersGetResponse {
      */
     
     public org.openapis.openapi.models.shared.PrintServer printServer;
+
     public AdminCustomersChromePrintServersGetResponse withPrintServer(org.openapis.openapi.models.shared.PrintServer printServer) {
         this.printServer = printServer;
         return this;
@@ -26,6 +29,7 @@ public class AdminCustomersChromePrintServersGetResponse {
     
     
     public Integer statusCode;
+
     public AdminCustomersChromePrintServersGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AdminCustomersChromePrintServersGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminCustomersChromePrintServersGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AdminCustomersChromePrintServersGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

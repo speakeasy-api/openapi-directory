@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersIdUserConnectionsIdConnectionRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PostUsersIdUserConnectionsIdConnectionRequestBody requestBody;
+
     public PostUsersIdUserConnectionsIdConnectionRequest withRequestBody(PostUsersIdUserConnectionsIdConnectionRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class PostUsersIdUserConnectionsIdConnectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=background")
     public Boolean background;
+
     public PostUsersIdUserConnectionsIdConnectionRequest withBackground(Boolean background) {
         this.background = background;
         return this;
@@ -26,6 +29,7 @@ public class PostUsersIdUserConnectionsIdConnectionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public PostUsersIdUserConnectionsIdConnectionRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -33,6 +37,7 @@ public class PostUsersIdUserConnectionsIdConnectionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
     public Long idConnection;
+
     public PostUsersIdUserConnectionsIdConnectionRequest withIdConnection(Long idConnection) {
         this.idConnection = idConnection;
         return this;
@@ -43,6 +48,7 @@ public class PostUsersIdUserConnectionsIdConnectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
     public String idUser;
+
     public PostUsersIdUserConnectionsIdConnectionRequest withIdUser(String idUser) {
         this.idUser = idUser;
         return this;
@@ -53,6 +59,7 @@ public class PostUsersIdUserConnectionsIdConnectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=psu_requested")
     public Boolean psuRequested;
+
     public PostUsersIdUserConnectionsIdConnectionRequest withPsuRequested(Boolean psuRequested) {
         this.psuRequested = psuRequested;
         return this;
@@ -63,9 +70,14 @@ public class PostUsersIdUserConnectionsIdConnectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=refresh_psd2_auth")
     public Boolean refreshPsd2Auth;
+
     public PostUsersIdUserConnectionsIdConnectionRequest withRefreshPsd2Auth(Boolean refreshPsd2Auth) {
         this.refreshPsd2Auth = refreshPsd2Auth;
         return this;
     }
     
+    public PostUsersIdUserConnectionsIdConnectionRequest(@JsonProperty("id_connection") Long idConnection, @JsonProperty("id_user") String idUser) {
+        this.idConnection = idConnection;
+        this.idUser = idUser;
+  }
 }

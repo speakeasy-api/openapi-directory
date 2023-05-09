@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeRemediationConfigurationsRequest {
     @JsonProperty("ConfigRuleNames")
     public String[] configRuleNames;
+
     public DescribeRemediationConfigurationsRequest withConfigRuleNames(String[] configRuleNames) {
         this.configRuleNames = configRuleNames;
         return this;
     }
     
+    public DescribeRemediationConfigurationsRequest(@JsonProperty("ConfigRuleNames") String[] configRuleNames) {
+        this.configRuleNames = configRuleNames;
+  }
 }

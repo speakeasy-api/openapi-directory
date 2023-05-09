@@ -15,9 +15,11 @@ public class SpellResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedQuery")
     public String suggestedQuery;
+
     public SpellResult withSuggestedQuery(String suggestedQuery) {
         this.suggestedQuery = suggestedQuery;
         return this;
     }
     
+    public SpellResult(){}
 }

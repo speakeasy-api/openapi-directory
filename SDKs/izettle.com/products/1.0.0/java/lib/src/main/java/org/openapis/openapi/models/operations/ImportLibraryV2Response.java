@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportLibraryV2Response {
     
     public String contentType;
+
     public ImportLibraryV2Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ImportLibraryV2Response {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public ImportLibraryV2Response withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -29,6 +32,7 @@ public class ImportLibraryV2Response {
      */
     
     public org.openapis.openapi.models.shared.ImportResponse importResponse;
+
     public ImportLibraryV2Response withImportResponse(org.openapis.openapi.models.shared.ImportResponse importResponse) {
         this.importResponse = importResponse;
         return this;
@@ -36,6 +40,7 @@ public class ImportLibraryV2Response {
     
     
     public Integer statusCode;
+
     public ImportLibraryV2Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ImportLibraryV2Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportLibraryV2Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ImportLibraryV2Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

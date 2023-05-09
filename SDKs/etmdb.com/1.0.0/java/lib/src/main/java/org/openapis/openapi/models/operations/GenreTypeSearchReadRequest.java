@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenreTypeSearchReadRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=genre_description")
     public String genreDescription;
+
     public GenreTypeSearchReadRequest withGenreDescription(String genreDescription) {
         this.genreDescription = genreDescription;
         return this;
     }
     
+    public GenreTypeSearchReadRequest(@JsonProperty("genre_description") String genreDescription) {
+        this.genreDescription = genreDescription;
+  }
 }

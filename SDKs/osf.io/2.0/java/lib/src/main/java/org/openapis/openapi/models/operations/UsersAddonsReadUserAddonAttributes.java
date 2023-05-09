@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UsersAddonsReadUserAddonAttributes - The properties of the user addon entity.
@@ -15,9 +15,13 @@ public class UsersAddonsReadUserAddonAttributes {
      */
     
     public Boolean userHasAuth;
+
     public UsersAddonsReadUserAddonAttributes withUserHasAuth(Boolean userHasAuth) {
         this.userHasAuth = userHasAuth;
         return this;
     }
     
+    public UsersAddonsReadUserAddonAttributes(@JsonProperty("user_has_auth") Boolean userHasAuth) {
+        this.userHasAuth = userHasAuth;
+  }
 }

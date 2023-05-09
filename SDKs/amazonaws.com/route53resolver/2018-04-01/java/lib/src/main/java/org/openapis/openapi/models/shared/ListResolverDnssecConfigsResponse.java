@@ -15,6 +15,7 @@ public class ListResolverDnssecConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResolverDnssecConfigsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListResolverDnssecConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolverDnssecConfigs")
     public ResolverDnssecConfig[] resolverDnssecConfigs;
+
     public ListResolverDnssecConfigsResponse withResolverDnssecConfigs(ResolverDnssecConfig[] resolverDnssecConfigs) {
         this.resolverDnssecConfigs = resolverDnssecConfigs;
         return this;
     }
     
+    public ListResolverDnssecConfigsResponse(){}
 }

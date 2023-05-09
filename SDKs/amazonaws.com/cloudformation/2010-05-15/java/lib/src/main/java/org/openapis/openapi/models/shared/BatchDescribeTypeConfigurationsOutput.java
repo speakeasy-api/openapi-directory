@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class BatchDescribeTypeConfigurationsOutput {
     
     public BatchDescribeTypeConfigurationsError[] errors;
+
     public BatchDescribeTypeConfigurationsOutput withErrors(BatchDescribeTypeConfigurationsError[] errors) {
         this.errors = errors;
         return this;
@@ -19,6 +20,7 @@ public class BatchDescribeTypeConfigurationsOutput {
     
     
     public TypeConfigurationDetails[] typeConfigurations;
+
     public BatchDescribeTypeConfigurationsOutput withTypeConfigurations(TypeConfigurationDetails[] typeConfigurations) {
         this.typeConfigurations = typeConfigurations;
         return this;
@@ -26,9 +28,11 @@ public class BatchDescribeTypeConfigurationsOutput {
     
     
     public TypeConfigurationIdentifier[] unprocessedTypeConfigurations;
+
     public BatchDescribeTypeConfigurationsOutput withUnprocessedTypeConfigurations(TypeConfigurationIdentifier[] unprocessedTypeConfigurations) {
         this.unprocessedTypeConfigurations = unprocessedTypeConfigurations;
         return this;
     }
     
+    public BatchDescribeTypeConfigurationsOutput(){}
 }

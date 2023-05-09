@@ -20,6 +20,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestRsNote withContent(String content) {
         this.content = content;
         return this;
@@ -31,6 +32,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public String createdBy;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestRsNote withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -43,9 +45,11 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("created_date")
     public LocalDate createdDate;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestRsNote withCreatedDate(LocalDate createdDate) {
         this.createdDate = createdDate;
         return this;
     }
     
+    public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestRsNote(){}
 }

@@ -18,6 +18,7 @@ public class ListCollectionStatusesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCollectionStatusesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListCollectionStatusesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public CollectionStatus[] resources;
+
     public ListCollectionStatusesResponse withResources(CollectionStatus[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public ListCollectionStatusesResponse(){}
 }

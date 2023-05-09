@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateBundleRequest {
     @SpeakeasyMetadata("request:mediaType=application/vnd.api+json")
     public org.openapis.openapi.models.shared.UpdateBundleRequest updateBundleRequest;
+
     public UpdateBundleRequest withUpdateBundleRequest(org.openapis.openapi.models.shared.UpdateBundleRequest updateBundleRequest) {
         this.updateBundleRequest = updateBundleRequest;
         return this;
@@ -19,9 +21,14 @@ public class UpdateBundleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public UpdateBundleRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateBundleRequest(@JsonProperty("UpdateBundleRequest") org.openapis.openapi.models.shared.UpdateBundleRequest updateBundleRequest, @JsonProperty("id") String id) {
+        this.updateBundleRequest = updateBundleRequest;
+        this.id = id;
+  }
 }

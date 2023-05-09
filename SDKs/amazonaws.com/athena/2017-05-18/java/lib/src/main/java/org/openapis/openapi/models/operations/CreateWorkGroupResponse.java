@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWorkGroupResponse {
     
     public String contentType;
+
     public CreateWorkGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateWorkGroupResponse {
      */
     
     public java.util.Map<String, Object> createWorkGroupOutput;
+
     public CreateWorkGroupResponse withCreateWorkGroupOutput(java.util.Map<String, Object> createWorkGroupOutput) {
         this.createWorkGroupOutput = createWorkGroupOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateWorkGroupResponse {
      */
     
     public Object internalServerException;
+
     public CreateWorkGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateWorkGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateWorkGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class CreateWorkGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateWorkGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateWorkGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWorkGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateWorkGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudbuildProjectsLocationsWorkerPoolsCreateRequest {
@@ -12,6 +13,7 @@ public class CloudbuildProjectsLocationsWorkerPoolsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class CloudbuildProjectsLocationsWorkerPoolsCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.WorkerPoolInput workerPoolInput;
+
     public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withWorkerPoolInput(org.openapis.openapi.models.shared.WorkerPoolInput workerPoolInput) {
         this.workerPoolInput = workerPoolInput;
         return this;
@@ -29,6 +32,7 @@ public class CloudbuildProjectsLocationsWorkerPoolsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class CloudbuildProjectsLocationsWorkerPoolsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class CloudbuildProjectsLocationsWorkerPoolsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class CloudbuildProjectsLocationsWorkerPoolsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class CloudbuildProjectsLocationsWorkerPoolsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class CloudbuildProjectsLocationsWorkerPoolsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class CloudbuildProjectsLocationsWorkerPoolsCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -99,6 +109,7 @@ public class CloudbuildProjectsLocationsWorkerPoolsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class CloudbuildProjectsLocationsWorkerPoolsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class CloudbuildProjectsLocationsWorkerPoolsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,6 +142,7 @@ public class CloudbuildProjectsLocationsWorkerPoolsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -139,9 +153,13 @@ public class CloudbuildProjectsLocationsWorkerPoolsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workerPoolId")
     public String workerPoolId;
+
     public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withWorkerPoolId(String workerPoolId) {
         this.workerPoolId = workerPoolId;
         return this;
     }
     
+    public CloudbuildProjectsLocationsWorkerPoolsCreateRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

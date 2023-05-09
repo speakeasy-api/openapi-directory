@@ -15,9 +15,11 @@ public class GetDataRetrievalPolicyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policy")
     public DataRetrievalPolicy policy;
+
     public GetDataRetrievalPolicyOutput withPolicy(DataRetrievalPolicy policy) {
         this.policy = policy;
         return this;
     }
     
+    public GetDataRetrievalPolicyOutput(){}
 }

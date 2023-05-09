@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExecuteSqlResponse {
@@ -12,6 +13,7 @@ public class ExecuteSqlResponse {
      */
     
     public Object accessDeniedException;
+
     public ExecuteSqlResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ExecuteSqlResponse {
      */
     
     public Object badRequestException;
+
     public ExecuteSqlResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class ExecuteSqlResponse {
     
     
     public String contentType;
+
     public ExecuteSqlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ExecuteSqlResponse {
      */
     
     public org.openapis.openapi.models.shared.ExecuteSqlResponse executeSqlResponse;
+
     public ExecuteSqlResponse withExecuteSqlResponse(org.openapis.openapi.models.shared.ExecuteSqlResponse executeSqlResponse) {
         this.executeSqlResponse = executeSqlResponse;
         return this;
@@ -49,6 +54,7 @@ public class ExecuteSqlResponse {
      */
     
     public Object forbiddenException;
+
     public ExecuteSqlResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class ExecuteSqlResponse {
      */
     
     public Object internalServerErrorException;
+
     public ExecuteSqlResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -69,6 +76,7 @@ public class ExecuteSqlResponse {
      */
     
     public Object serviceUnavailableError;
+
     public ExecuteSqlResponse withServiceUnavailableError(Object serviceUnavailableError) {
         this.serviceUnavailableError = serviceUnavailableError;
         return this;
@@ -76,6 +84,7 @@ public class ExecuteSqlResponse {
     
     
     public Integer statusCode;
+
     public ExecuteSqlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ExecuteSqlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExecuteSqlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ExecuteSqlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

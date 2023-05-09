@@ -12,6 +12,7 @@ public class InvalidField {
      */
     @JsonProperty("message")
     public String message;
+
     public InvalidField withMessage(String message) {
         this.message = message;
         return this;
@@ -22,6 +23,7 @@ public class InvalidField {
      */
     @JsonProperty("name")
     public String name;
+
     public InvalidField withName(String name) {
         this.name = name;
         return this;
@@ -32,9 +34,15 @@ public class InvalidField {
      */
     @JsonProperty("value")
     public String value;
+
     public InvalidField withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public InvalidField(@JsonProperty("message") String message, @JsonProperty("name") String name, @JsonProperty("value") String value) {
+        this.message = message;
+        this.name = name;
+        this.value = value;
+  }
 }

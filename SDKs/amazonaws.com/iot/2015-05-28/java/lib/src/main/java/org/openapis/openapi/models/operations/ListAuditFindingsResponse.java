@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAuditFindingsResponse {
     
     public String contentType;
+
     public ListAuditFindingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAuditFindingsResponse {
      */
     
     public Object internalFailureException;
+
     public ListAuditFindingsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListAuditFindingsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListAuditFindingsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListAuditFindingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAuditFindingsResponse listAuditFindingsResponse;
+
     public ListAuditFindingsResponse withListAuditFindingsResponse(org.openapis.openapi.models.shared.ListAuditFindingsResponse listAuditFindingsResponse) {
         this.listAuditFindingsResponse = listAuditFindingsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListAuditFindingsResponse {
     
     
     public Integer statusCode;
+
     public ListAuditFindingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListAuditFindingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAuditFindingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListAuditFindingsResponse {
      */
     
     public Object throttlingException;
+
     public ListAuditFindingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListAuditFindingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

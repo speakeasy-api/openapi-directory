@@ -18,6 +18,7 @@ public class ListDeploymentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deployments")
     public Deployment[] deployments;
+
     public ListDeploymentsResponse withDeployments(Deployment[] deployments) {
         this.deployments = deployments;
         return this;
@@ -29,9 +30,11 @@ public class ListDeploymentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListDeploymentsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListDeploymentsResponse(){}
 }

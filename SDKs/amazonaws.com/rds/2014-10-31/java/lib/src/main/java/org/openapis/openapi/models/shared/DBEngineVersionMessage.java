@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBEngineVersionMessage {
     
     public DBEngineVersionList[] dbEngineVersions;
+
     public DBEngineVersionMessage withDBEngineVersions(DBEngineVersionList[] dbEngineVersions) {
         this.dbEngineVersions = dbEngineVersions;
         return this;
@@ -19,9 +20,11 @@ public class DBEngineVersionMessage {
     
     
     public String marker;
+
     public DBEngineVersionMessage withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public DBEngineVersionMessage(){}
 }

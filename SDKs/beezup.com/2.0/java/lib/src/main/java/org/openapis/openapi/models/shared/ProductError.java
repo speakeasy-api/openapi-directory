@@ -12,6 +12,7 @@ public class ProductError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ean")
     public String ean;
+
     public ProductError withEan(String ean) {
         this.ean = ean;
         return this;
@@ -19,6 +20,7 @@ public class ProductError {
     
     @JsonProperty("errors")
     public ProductErrorCode[] errors;
+
     public ProductError withErrors(ProductErrorCode[] errors) {
         this.errors = errors;
         return this;
@@ -26,6 +28,7 @@ public class ProductError {
     
     @JsonProperty("lineNumber")
     public Long lineNumber;
+
     public ProductError withLineNumber(Long lineNumber) {
         this.lineNumber = lineNumber;
         return this;
@@ -34,6 +37,7 @@ public class ProductError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mpn")
     public String mpn;
+
     public ProductError withMpn(String mpn) {
         this.mpn = mpn;
         return this;
@@ -45,6 +49,7 @@ public class ProductError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public ProductError withSku(String sku) {
         this.sku = sku;
         return this;
@@ -53,9 +58,14 @@ public class ProductError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ProductError withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ProductError(@JsonProperty("errors") ProductErrorCode[] errors, @JsonProperty("lineNumber") Long lineNumber) {
+        this.errors = errors;
+        this.lineNumber = lineNumber;
+  }
 }

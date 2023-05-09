@@ -136,4 +136,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateRowRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListRowsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Workspace.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListWorkspacesResponse.java
+docs/sdk/README.md
+docs/tables/README.md
+docs/workspaces/README.md
 USAGE.md

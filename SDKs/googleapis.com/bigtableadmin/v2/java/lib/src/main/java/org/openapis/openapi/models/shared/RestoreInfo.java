@@ -18,6 +18,7 @@ public class RestoreInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backupInfo")
     public BackupInfo backupInfo;
+
     public RestoreInfo withBackupInfo(BackupInfo backupInfo) {
         this.backupInfo = backupInfo;
         return this;
@@ -29,9 +30,11 @@ public class RestoreInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceType")
     public RestoreInfoSourceTypeEnum sourceType;
+
     public RestoreInfo withSourceType(RestoreInfoSourceTypeEnum sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public RestoreInfo(){}
 }

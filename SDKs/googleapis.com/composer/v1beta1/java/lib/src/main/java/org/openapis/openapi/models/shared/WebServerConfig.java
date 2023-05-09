@@ -18,9 +18,11 @@ public class WebServerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public String machineType;
+
     public WebServerConfig withMachineType(String machineType) {
         this.machineType = machineType;
         return this;
     }
     
+    public WebServerConfig(){}
 }

@@ -18,9 +18,11 @@ public class DeleteConditionalFormatRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule")
     public ConditionalFormatRule rule;
+
     public DeleteConditionalFormatRuleResponse withRule(ConditionalFormatRule rule) {
         this.rule = rule;
         return this;
     }
     
+    public DeleteConditionalFormatRuleResponse(){}
 }

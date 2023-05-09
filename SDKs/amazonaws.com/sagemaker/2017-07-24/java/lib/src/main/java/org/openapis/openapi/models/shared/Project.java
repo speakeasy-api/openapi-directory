@@ -20,6 +20,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public Project withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -30,6 +31,7 @@ public class Project {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Project withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -41,6 +43,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public UserContext lastModifiedBy;
+
     public Project withLastModifiedBy(UserContext lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -51,6 +54,7 @@ public class Project {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public Project withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -59,6 +63,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectArn")
     public String projectArn;
+
     public Project withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
@@ -67,6 +72,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectDescription")
     public String projectDescription;
+
     public Project withProjectDescription(String projectDescription) {
         this.projectDescription = projectDescription;
         return this;
@@ -75,6 +81,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectId")
     public String projectId;
+
     public Project withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -83,6 +90,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectName")
     public String projectName;
+
     public Project withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -91,6 +99,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectStatus")
     public ProjectStatusEnum projectStatus;
+
     public Project withProjectStatus(ProjectStatusEnum projectStatus) {
         this.projectStatus = projectStatus;
         return this;
@@ -102,6 +111,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceCatalogProvisionedProductDetails")
     public ServiceCatalogProvisionedProductDetails serviceCatalogProvisionedProductDetails;
+
     public Project withServiceCatalogProvisionedProductDetails(ServiceCatalogProvisionedProductDetails serviceCatalogProvisionedProductDetails) {
         this.serviceCatalogProvisionedProductDetails = serviceCatalogProvisionedProductDetails;
         return this;
@@ -113,6 +123,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceCatalogProvisioningDetails")
     public ServiceCatalogProvisioningDetails serviceCatalogProvisioningDetails;
+
     public Project withServiceCatalogProvisioningDetails(ServiceCatalogProvisioningDetails serviceCatalogProvisioningDetails) {
         this.serviceCatalogProvisioningDetails = serviceCatalogProvisioningDetails;
         return this;
@@ -121,9 +132,11 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public Project withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public Project(){}
 }

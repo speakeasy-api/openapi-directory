@@ -15,9 +15,11 @@ public class RejectSharedDirectoryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedDirectoryId")
     public String sharedDirectoryId;
+
     public RejectSharedDirectoryResult withSharedDirectoryId(String sharedDirectoryId) {
         this.sharedDirectoryId = sharedDirectoryId;
         return this;
     }
     
+    public RejectSharedDirectoryResult(){}
 }

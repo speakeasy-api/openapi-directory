@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeSchedulingPoliciesResponse {
@@ -12,6 +13,7 @@ public class DescribeSchedulingPoliciesResponse {
      */
     
     public Object clientException;
+
     public DescribeSchedulingPoliciesResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeSchedulingPoliciesResponse {
     
     
     public String contentType;
+
     public DescribeSchedulingPoliciesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeSchedulingPoliciesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeSchedulingPoliciesResponse describeSchedulingPoliciesResponse;
+
     public DescribeSchedulingPoliciesResponse withDescribeSchedulingPoliciesResponse(org.openapis.openapi.models.shared.DescribeSchedulingPoliciesResponse describeSchedulingPoliciesResponse) {
         this.describeSchedulingPoliciesResponse = describeSchedulingPoliciesResponse;
         return this;
@@ -36,6 +40,7 @@ public class DescribeSchedulingPoliciesResponse {
     
     
     public Integer statusCode;
+
     public DescribeSchedulingPoliciesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeSchedulingPoliciesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeSchedulingPoliciesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeSchedulingPoliciesResponse {
      */
     
     public Object serverException;
+
     public DescribeSchedulingPoliciesResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public DescribeSchedulingPoliciesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

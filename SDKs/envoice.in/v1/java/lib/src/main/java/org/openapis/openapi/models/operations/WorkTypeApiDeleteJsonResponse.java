@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WorkTypeApiDeleteJsonResponse {
     
     public byte[] body;
+
     public WorkTypeApiDeleteJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class WorkTypeApiDeleteJsonResponse {
     
     
     public String contentType;
+
     public WorkTypeApiDeleteJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class WorkTypeApiDeleteJsonResponse {
     
     
     public Integer statusCode;
+
     public WorkTypeApiDeleteJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class WorkTypeApiDeleteJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WorkTypeApiDeleteJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class WorkTypeApiDeleteJsonResponse {
      */
     
     public Integer workTypeApiDeleteJSON200ApplicationJSONInt32Integer;
+
     public WorkTypeApiDeleteJsonResponse withWorkTypeApiDeleteJSON200ApplicationJSONInt32Integer(Integer workTypeApiDeleteJSON200ApplicationJSONInt32Integer) {
         this.workTypeApiDeleteJSON200ApplicationJSONInt32Integer = workTypeApiDeleteJSON200ApplicationJSONInt32Integer;
         return this;
@@ -50,9 +56,14 @@ public class WorkTypeApiDeleteJsonResponse {
      */
     
     public Integer workTypeApiDeleteJSON200TextJSONInt32Integer;
+
     public WorkTypeApiDeleteJsonResponse withWorkTypeApiDeleteJSON200TextJSONInt32Integer(Integer workTypeApiDeleteJSON200TextJSONInt32Integer) {
         this.workTypeApiDeleteJSON200TextJSONInt32Integer = workTypeApiDeleteJSON200TextJSONInt32Integer;
         return this;
     }
     
+    public WorkTypeApiDeleteJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

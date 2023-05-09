@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeServiceUpdatesResponse {
     
     public String contentType;
+
     public DescribeServiceUpdatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeServiceUpdatesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeServiceUpdatesResponse describeServiceUpdatesResponse;
+
     public DescribeServiceUpdatesResponse withDescribeServiceUpdatesResponse(org.openapis.openapi.models.shared.DescribeServiceUpdatesResponse describeServiceUpdatesResponse) {
         this.describeServiceUpdatesResponse = describeServiceUpdatesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeServiceUpdatesResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public DescribeServiceUpdatesResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeServiceUpdatesResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeServiceUpdatesResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeServiceUpdatesResponse {
     
     
     public Integer statusCode;
+
     public DescribeServiceUpdatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeServiceUpdatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeServiceUpdatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeServiceUpdatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

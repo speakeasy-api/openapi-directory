@@ -18,9 +18,11 @@ public class RelatedResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relatedResources")
     public RelatedResource[] relatedResources;
+
     public RelatedResources withRelatedResources(RelatedResource[] relatedResources) {
         this.relatedResources = relatedResources;
         return this;
     }
     
+    public RelatedResources(){}
 }

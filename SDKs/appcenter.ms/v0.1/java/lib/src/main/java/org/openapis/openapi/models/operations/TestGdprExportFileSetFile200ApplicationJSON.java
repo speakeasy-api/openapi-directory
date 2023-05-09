@@ -15,6 +15,7 @@ public class TestGdprExportFileSetFile200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_upload_id")
     public String appUploadId;
+
     public TestGdprExportFileSetFile200ApplicationJSON withAppUploadId(String appUploadId) {
         this.appUploadId = appUploadId;
         return this;
@@ -23,6 +24,7 @@ public class TestGdprExportFileSetFile200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hash_file_id")
     public String hashFileId;
+
     public TestGdprExportFileSetFile200ApplicationJSON withHashFileId(String hashFileId) {
         this.hashFileId = hashFileId;
         return this;
@@ -31,6 +33,7 @@ public class TestGdprExportFileSetFile200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hash_file_url")
     public String hashFileUrl;
+
     public TestGdprExportFileSetFile200ApplicationJSON withHashFileUrl(String hashFileUrl) {
         this.hashFileUrl = hashFileUrl;
         return this;
@@ -39,9 +42,11 @@ public class TestGdprExportFileSetFile200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public TestGdprExportFileSetFile200ApplicationJSON withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public TestGdprExportFileSetFile200ApplicationJSON(){}
 }

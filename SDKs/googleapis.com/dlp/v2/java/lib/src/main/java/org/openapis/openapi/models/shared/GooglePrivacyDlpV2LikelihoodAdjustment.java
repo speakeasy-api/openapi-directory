@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2LikelihoodAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedLikelihood")
     public GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihoodEnum fixedLikelihood;
+
     public GooglePrivacyDlpV2LikelihoodAdjustment withFixedLikelihood(GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihoodEnum fixedLikelihood) {
         this.fixedLikelihood = fixedLikelihood;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2LikelihoodAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relativeLikelihood")
     public Integer relativeLikelihood;
+
     public GooglePrivacyDlpV2LikelihoodAdjustment withRelativeLikelihood(Integer relativeLikelihood) {
         this.relativeLikelihood = relativeLikelihood;
         return this;
     }
     
+    public GooglePrivacyDlpV2LikelihoodAdjustment(){}
 }

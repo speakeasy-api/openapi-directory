@@ -15,9 +15,11 @@ public class GetEvents200ApplicationJSONEmbeddedData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public Object[] events;
+
     public GetEvents200ApplicationJSONEmbeddedData withEvents(Object[] events) {
         this.events = events;
         return this;
     }
     
+    public GetEvents200ApplicationJSONEmbeddedData(){}
 }

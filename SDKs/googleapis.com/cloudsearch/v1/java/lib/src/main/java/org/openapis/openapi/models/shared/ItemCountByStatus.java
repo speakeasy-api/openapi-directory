@@ -15,6 +15,7 @@ public class ItemCountByStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public ItemCountByStatus withCount(String count) {
         this.count = count;
         return this;
@@ -26,6 +27,7 @@ public class ItemCountByStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexedItemsCount")
     public String indexedItemsCount;
+
     public ItemCountByStatus withIndexedItemsCount(String indexedItemsCount) {
         this.indexedItemsCount = indexedItemsCount;
         return this;
@@ -37,9 +39,11 @@ public class ItemCountByStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCode")
     public ItemCountByStatusStatusCodeEnum statusCode;
+
     public ItemCountByStatus withStatusCode(ItemCountByStatusStatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public ItemCountByStatus(){}
 }

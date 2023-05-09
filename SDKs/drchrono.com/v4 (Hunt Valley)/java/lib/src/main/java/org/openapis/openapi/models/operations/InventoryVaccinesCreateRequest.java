@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class InventoryVaccinesCreateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cvx_code")
     public String cvxCode;
+
     public InventoryVaccinesCreateRequest withCvxCode(String cvxCode) {
         this.cvxCode = cvxCode;
         return this;
@@ -16,6 +17,7 @@ public class InventoryVaccinesCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public InventoryVaccinesCreateRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -23,6 +25,7 @@ public class InventoryVaccinesCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public InventoryVaccinesCreateRequest withSince(String since) {
         this.since = since;
         return this;
@@ -30,9 +33,11 @@ public class InventoryVaccinesCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public InventoryVaccinesCreateRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public InventoryVaccinesCreateRequest(){}
 }

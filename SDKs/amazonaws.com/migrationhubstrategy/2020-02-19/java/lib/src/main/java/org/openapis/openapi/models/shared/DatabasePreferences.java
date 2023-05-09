@@ -15,6 +15,7 @@ public class DatabasePreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseManagementPreference")
     public DatabaseManagementPreferenceEnum databaseManagementPreference;
+
     public DatabasePreferences withDatabaseManagementPreference(DatabaseManagementPreferenceEnum databaseManagementPreference) {
         this.databaseManagementPreference = databaseManagementPreference;
         return this;
@@ -23,9 +24,11 @@ public class DatabasePreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseMigrationPreference")
     public DatabaseMigrationPreference databaseMigrationPreference;
+
     public DatabasePreferences withDatabaseMigrationPreference(DatabaseMigrationPreference databaseMigrationPreference) {
         this.databaseMigrationPreference = databaseMigrationPreference;
         return this;
     }
     
+    public DatabasePreferences(){}
 }

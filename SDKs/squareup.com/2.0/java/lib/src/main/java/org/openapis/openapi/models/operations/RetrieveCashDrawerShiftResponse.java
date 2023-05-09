@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetrieveCashDrawerShiftResponse {
     
     public String contentType;
+
     public RetrieveCashDrawerShiftResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RetrieveCashDrawerShiftResponse {
      */
     
     public org.openapis.openapi.models.shared.RetrieveCashDrawerShiftResponse retrieveCashDrawerShiftResponse;
+
     public RetrieveCashDrawerShiftResponse withRetrieveCashDrawerShiftResponse(org.openapis.openapi.models.shared.RetrieveCashDrawerShiftResponse retrieveCashDrawerShiftResponse) {
         this.retrieveCashDrawerShiftResponse = retrieveCashDrawerShiftResponse;
         return this;
@@ -26,6 +29,7 @@ public class RetrieveCashDrawerShiftResponse {
     
     
     public Integer statusCode;
+
     public RetrieveCashDrawerShiftResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RetrieveCashDrawerShiftResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetrieveCashDrawerShiftResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RetrieveCashDrawerShiftResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

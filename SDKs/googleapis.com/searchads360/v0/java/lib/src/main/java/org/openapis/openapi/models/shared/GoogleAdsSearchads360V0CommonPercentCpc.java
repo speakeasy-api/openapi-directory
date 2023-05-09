@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0CommonPercentCpc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpcBidCeilingMicros")
     public String cpcBidCeilingMicros;
+
     public GoogleAdsSearchads360V0CommonPercentCpc withCpcBidCeilingMicros(String cpcBidCeilingMicros) {
         this.cpcBidCeilingMicros = cpcBidCeilingMicros;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAdsSearchads360V0CommonPercentCpc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enhancedCpcEnabled")
     public Boolean enhancedCpcEnabled;
+
     public GoogleAdsSearchads360V0CommonPercentCpc withEnhancedCpcEnabled(Boolean enhancedCpcEnabled) {
         this.enhancedCpcEnabled = enhancedCpcEnabled;
         return this;
     }
     
+    public GoogleAdsSearchads360V0CommonPercentCpc(){}
 }

@@ -20,6 +20,7 @@ public class ExportSnapshotRecordSourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ExportSnapshotRecordSourceInfo withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class ExportSnapshotRecordSourceInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ExportSnapshotRecordSourceInfo withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class ExportSnapshotRecordSourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSnapshotInfo")
     public DiskSnapshotInfo diskSnapshotInfo;
+
     public ExportSnapshotRecordSourceInfo withDiskSnapshotInfo(DiskSnapshotInfo diskSnapshotInfo) {
         this.diskSnapshotInfo = diskSnapshotInfo;
         return this;
@@ -46,6 +49,7 @@ public class ExportSnapshotRecordSourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromResourceArn")
     public String fromResourceArn;
+
     public ExportSnapshotRecordSourceInfo withFromResourceArn(String fromResourceArn) {
         this.fromResourceArn = fromResourceArn;
         return this;
@@ -54,6 +58,7 @@ public class ExportSnapshotRecordSourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromResourceName")
     public String fromResourceName;
+
     public ExportSnapshotRecordSourceInfo withFromResourceName(String fromResourceName) {
         this.fromResourceName = fromResourceName;
         return this;
@@ -62,6 +67,7 @@ public class ExportSnapshotRecordSourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceSnapshotInfo")
     public InstanceSnapshotInfo instanceSnapshotInfo;
+
     public ExportSnapshotRecordSourceInfo withInstanceSnapshotInfo(InstanceSnapshotInfo instanceSnapshotInfo) {
         this.instanceSnapshotInfo = instanceSnapshotInfo;
         return this;
@@ -70,6 +76,7 @@ public class ExportSnapshotRecordSourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ExportSnapshotRecordSourceInfo withName(String name) {
         this.name = name;
         return this;
@@ -78,9 +85,11 @@ public class ExportSnapshotRecordSourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ExportSnapshotRecordSourceTypeEnum resourceType;
+
     public ExportSnapshotRecordSourceInfo withResourceType(ExportSnapshotRecordSourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ExportSnapshotRecordSourceInfo(){}
 }

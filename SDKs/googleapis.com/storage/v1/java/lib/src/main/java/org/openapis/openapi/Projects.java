@@ -60,11 +60,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageProjectsHmacKeysCreateResponse res = new org.openapis.openapi.models.operations.StorageProjectsHmacKeysCreateResponse() {{
+        org.openapis.openapi.models.operations.StorageProjectsHmacKeysCreateResponse res = new org.openapis.openapi.models.operations.StorageProjectsHmacKeysCreateResponse(contentType, httpRes.statusCode()) {{
             hmacKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,10 +104,8 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageProjectsHmacKeysDeleteResponse res = new org.openapis.openapi.models.operations.StorageProjectsHmacKeysDeleteResponse() {{
+        org.openapis.openapi.models.operations.StorageProjectsHmacKeysDeleteResponse res = new org.openapis.openapi.models.operations.StorageProjectsHmacKeysDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -146,11 +142,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageProjectsHmacKeysGetResponse res = new org.openapis.openapi.models.operations.StorageProjectsHmacKeysGetResponse() {{
+        org.openapis.openapi.models.operations.StorageProjectsHmacKeysGetResponse res = new org.openapis.openapi.models.operations.StorageProjectsHmacKeysGetResponse(contentType, httpRes.statusCode()) {{
             hmacKeyMetadata = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -192,11 +186,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageProjectsHmacKeysListResponse res = new org.openapis.openapi.models.operations.StorageProjectsHmacKeysListResponse() {{
+        org.openapis.openapi.models.operations.StorageProjectsHmacKeysListResponse res = new org.openapis.openapi.models.operations.StorageProjectsHmacKeysListResponse(contentType, httpRes.statusCode()) {{
             hmacKeysMetadata = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -240,11 +232,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageProjectsHmacKeysUpdateResponse res = new org.openapis.openapi.models.operations.StorageProjectsHmacKeysUpdateResponse() {{
+        org.openapis.openapi.models.operations.StorageProjectsHmacKeysUpdateResponse res = new org.openapis.openapi.models.operations.StorageProjectsHmacKeysUpdateResponse(contentType, httpRes.statusCode()) {{
             hmacKeyMetadata = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -286,11 +276,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageProjectsServiceAccountGetResponse res = new org.openapis.openapi.models.operations.StorageProjectsServiceAccountGetResponse() {{
+        org.openapis.openapi.models.operations.StorageProjectsServiceAccountGetResponse res = new org.openapis.openapi.models.operations.StorageProjectsServiceAccountGetResponse(contentType, httpRes.statusCode()) {{
             serviceAccount = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -22,6 +22,7 @@ public class WhatIfForecastSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public WhatIfForecastSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -32,6 +33,7 @@ public class WhatIfForecastSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public WhatIfForecastSummary withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -40,6 +42,7 @@ public class WhatIfForecastSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public WhatIfForecastSummary withMessage(String message) {
         this.message = message;
         return this;
@@ -48,6 +51,7 @@ public class WhatIfForecastSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public WhatIfForecastSummary withStatus(String status) {
         this.status = status;
         return this;
@@ -56,6 +60,7 @@ public class WhatIfForecastSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatIfAnalysisArn")
     public String whatIfAnalysisArn;
+
     public WhatIfForecastSummary withWhatIfAnalysisArn(String whatIfAnalysisArn) {
         this.whatIfAnalysisArn = whatIfAnalysisArn;
         return this;
@@ -64,6 +69,7 @@ public class WhatIfForecastSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatIfForecastArn")
     public String whatIfForecastArn;
+
     public WhatIfForecastSummary withWhatIfForecastArn(String whatIfForecastArn) {
         this.whatIfForecastArn = whatIfForecastArn;
         return this;
@@ -72,9 +78,11 @@ public class WhatIfForecastSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatIfForecastName")
     public String whatIfForecastName;
+
     public WhatIfForecastSummary withWhatIfForecastName(String whatIfForecastName) {
         this.whatIfForecastName = whatIfForecastName;
         return this;
     }
     
+    public WhatIfForecastSummary(){}
 }

@@ -15,6 +15,7 @@ public class AwsSsmComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceType")
     public String complianceType;
+
     public AwsSsmComplianceSummary withComplianceType(String complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -23,6 +24,7 @@ public class AwsSsmComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompliantCriticalCount")
     public Long compliantCriticalCount;
+
     public AwsSsmComplianceSummary withCompliantCriticalCount(Long compliantCriticalCount) {
         this.compliantCriticalCount = compliantCriticalCount;
         return this;
@@ -31,6 +33,7 @@ public class AwsSsmComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompliantHighCount")
     public Long compliantHighCount;
+
     public AwsSsmComplianceSummary withCompliantHighCount(Long compliantHighCount) {
         this.compliantHighCount = compliantHighCount;
         return this;
@@ -39,6 +42,7 @@ public class AwsSsmComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompliantInformationalCount")
     public Long compliantInformationalCount;
+
     public AwsSsmComplianceSummary withCompliantInformationalCount(Long compliantInformationalCount) {
         this.compliantInformationalCount = compliantInformationalCount;
         return this;
@@ -47,6 +51,7 @@ public class AwsSsmComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompliantLowCount")
     public Long compliantLowCount;
+
     public AwsSsmComplianceSummary withCompliantLowCount(Long compliantLowCount) {
         this.compliantLowCount = compliantLowCount;
         return this;
@@ -55,6 +60,7 @@ public class AwsSsmComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompliantMediumCount")
     public Long compliantMediumCount;
+
     public AwsSsmComplianceSummary withCompliantMediumCount(Long compliantMediumCount) {
         this.compliantMediumCount = compliantMediumCount;
         return this;
@@ -63,6 +69,7 @@ public class AwsSsmComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompliantUnspecifiedCount")
     public Long compliantUnspecifiedCount;
+
     public AwsSsmComplianceSummary withCompliantUnspecifiedCount(Long compliantUnspecifiedCount) {
         this.compliantUnspecifiedCount = compliantUnspecifiedCount;
         return this;
@@ -71,6 +78,7 @@ public class AwsSsmComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionType")
     public String executionType;
+
     public AwsSsmComplianceSummary withExecutionType(String executionType) {
         this.executionType = executionType;
         return this;
@@ -79,6 +87,7 @@ public class AwsSsmComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonCompliantCriticalCount")
     public Long nonCompliantCriticalCount;
+
     public AwsSsmComplianceSummary withNonCompliantCriticalCount(Long nonCompliantCriticalCount) {
         this.nonCompliantCriticalCount = nonCompliantCriticalCount;
         return this;
@@ -87,6 +96,7 @@ public class AwsSsmComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonCompliantHighCount")
     public Long nonCompliantHighCount;
+
     public AwsSsmComplianceSummary withNonCompliantHighCount(Long nonCompliantHighCount) {
         this.nonCompliantHighCount = nonCompliantHighCount;
         return this;
@@ -95,6 +105,7 @@ public class AwsSsmComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonCompliantInformationalCount")
     public Long nonCompliantInformationalCount;
+
     public AwsSsmComplianceSummary withNonCompliantInformationalCount(Long nonCompliantInformationalCount) {
         this.nonCompliantInformationalCount = nonCompliantInformationalCount;
         return this;
@@ -103,6 +114,7 @@ public class AwsSsmComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonCompliantLowCount")
     public Long nonCompliantLowCount;
+
     public AwsSsmComplianceSummary withNonCompliantLowCount(Long nonCompliantLowCount) {
         this.nonCompliantLowCount = nonCompliantLowCount;
         return this;
@@ -111,6 +123,7 @@ public class AwsSsmComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonCompliantMediumCount")
     public Long nonCompliantMediumCount;
+
     public AwsSsmComplianceSummary withNonCompliantMediumCount(Long nonCompliantMediumCount) {
         this.nonCompliantMediumCount = nonCompliantMediumCount;
         return this;
@@ -119,6 +132,7 @@ public class AwsSsmComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonCompliantUnspecifiedCount")
     public Long nonCompliantUnspecifiedCount;
+
     public AwsSsmComplianceSummary withNonCompliantUnspecifiedCount(Long nonCompliantUnspecifiedCount) {
         this.nonCompliantUnspecifiedCount = nonCompliantUnspecifiedCount;
         return this;
@@ -127,6 +141,7 @@ public class AwsSsmComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OverallSeverity")
     public String overallSeverity;
+
     public AwsSsmComplianceSummary withOverallSeverity(String overallSeverity) {
         this.overallSeverity = overallSeverity;
         return this;
@@ -135,6 +150,7 @@ public class AwsSsmComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PatchBaselineId")
     public String patchBaselineId;
+
     public AwsSsmComplianceSummary withPatchBaselineId(String patchBaselineId) {
         this.patchBaselineId = patchBaselineId;
         return this;
@@ -143,6 +159,7 @@ public class AwsSsmComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PatchGroup")
     public String patchGroup;
+
     public AwsSsmComplianceSummary withPatchGroup(String patchGroup) {
         this.patchGroup = patchGroup;
         return this;
@@ -151,9 +168,11 @@ public class AwsSsmComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsSsmComplianceSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AwsSsmComplianceSummary(){}
 }

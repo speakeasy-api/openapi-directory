@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1ActionIncompatibleDataSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("existingSchema")
     public String existingSchema;
+
     public GoogleCloudDataplexV1ActionIncompatibleDataSchema withExistingSchema(String existingSchema) {
         this.existingSchema = existingSchema;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1ActionIncompatibleDataSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newSchema")
     public String newSchema;
+
     public GoogleCloudDataplexV1ActionIncompatibleDataSchema withNewSchema(String newSchema) {
         this.newSchema = newSchema;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1ActionIncompatibleDataSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampledDataLocations")
     public String[] sampledDataLocations;
+
     public GoogleCloudDataplexV1ActionIncompatibleDataSchema withSampledDataLocations(String[] sampledDataLocations) {
         this.sampledDataLocations = sampledDataLocations;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1ActionIncompatibleDataSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaChange")
     public GoogleCloudDataplexV1ActionIncompatibleDataSchemaSchemaChangeEnum schemaChange;
+
     public GoogleCloudDataplexV1ActionIncompatibleDataSchema withSchemaChange(GoogleCloudDataplexV1ActionIncompatibleDataSchemaSchemaChangeEnum schemaChange) {
         this.schemaChange = schemaChange;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDataplexV1ActionIncompatibleDataSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("table")
     public String table;
+
     public GoogleCloudDataplexV1ActionIncompatibleDataSchema withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public GoogleCloudDataplexV1ActionIncompatibleDataSchema(){}
 }

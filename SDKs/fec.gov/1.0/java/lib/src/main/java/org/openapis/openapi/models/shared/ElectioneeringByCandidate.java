@@ -12,6 +12,7 @@ public class ElectioneeringByCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate")
     public String candidate;
+
     public ElectioneeringByCandidate withCandidate(String candidate) {
         this.candidate = candidate;
         return this;
@@ -20,6 +21,7 @@ public class ElectioneeringByCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
     public String candidateId;
+
     public ElectioneeringByCandidate withCandidateId(String candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -28,6 +30,7 @@ public class ElectioneeringByCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_name")
     public String candidateName;
+
     public ElectioneeringByCandidate withCandidateName(String candidateName) {
         this.candidateName = candidateName;
         return this;
@@ -36,6 +39,7 @@ public class ElectioneeringByCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee")
     public String committee;
+
     public ElectioneeringByCandidate withCommittee(String committee) {
         this.committee = committee;
         return this;
@@ -44,6 +48,7 @@ public class ElectioneeringByCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee_id")
     public String committeeId;
+
     public ElectioneeringByCandidate withCommitteeId(String committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -52,6 +57,7 @@ public class ElectioneeringByCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee_name")
     public String committeeName;
+
     public ElectioneeringByCandidate withCommitteeName(String committeeName) {
         this.committeeName = committeeName;
         return this;
@@ -60,6 +66,7 @@ public class ElectioneeringByCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public ElectioneeringByCandidate withCount(Integer count) {
         this.count = count;
         return this;
@@ -68,6 +75,7 @@ public class ElectioneeringByCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cycle")
     public Integer cycle;
+
     public ElectioneeringByCandidate withCycle(Integer cycle) {
         this.cycle = cycle;
         return this;
@@ -76,9 +84,11 @@ public class ElectioneeringByCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public ElectioneeringByCandidate withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public ElectioneeringByCandidate(){}
 }

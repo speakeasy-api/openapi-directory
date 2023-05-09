@@ -17,6 +17,7 @@ public class ChangeOrderStatusApiModel {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Integer id;
+
     public ChangeOrderStatusApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class ChangeOrderStatusApiModel {
     @JsonProperty("Reason")
     @SpeakeasyMetadata("form:name=Reason")
     public String reason;
+
     public ChangeOrderStatusApiModel withReason(String reason) {
         this.reason = reason;
         return this;
@@ -41,9 +43,11 @@ public class ChangeOrderStatusApiModel {
     @JsonProperty("Status")
     @SpeakeasyMetadata("form:name=Status")
     public ChangeOrderStatusApiModelStatusEnum status;
+
     public ChangeOrderStatusApiModel withStatus(ChangeOrderStatusApiModelStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ChangeOrderStatusApiModel(){}
 }

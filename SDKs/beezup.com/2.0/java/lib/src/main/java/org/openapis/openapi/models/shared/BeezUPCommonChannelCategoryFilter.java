@@ -15,9 +15,11 @@ public class BeezUPCommonChannelCategoryFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryPath")
     public String[] categoryPath;
+
     public BeezUPCommonChannelCategoryFilter withCategoryPath(String[] categoryPath) {
         this.categoryPath = categoryPath;
         return this;
     }
     
+    public BeezUPCommonChannelCategoryFilter(){}
 }

@@ -16,6 +16,7 @@ public class GetDocument200ApplicationJSONResultAst {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package")
     public GetDocument200ApplicationJSONResultAstPackage package_;
+
     public GetDocument200ApplicationJSONResultAst withPackage(GetDocument200ApplicationJSONResultAstPackage package_) {
         this.package_ = package_;
         return this;
@@ -28,9 +29,11 @@ public class GetDocument200ApplicationJSONResultAst {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public GetDocument200ApplicationJSONResultAstRules[] rules;
+
     public GetDocument200ApplicationJSONResultAst withRules(GetDocument200ApplicationJSONResultAstRules[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public GetDocument200ApplicationJSONResultAst(){}
 }

@@ -15,6 +15,7 @@ public class VcenterClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public VcenterClient withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class VcenterClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datacenterName")
     public String datacenterName;
+
     public VcenterClient withDatacenterName(String datacenterName) {
         this.datacenterName = datacenterName;
         return this;
@@ -31,6 +33,7 @@ public class VcenterClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostname")
     public String hostname;
+
     public VcenterClient withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -39,6 +42,7 @@ public class VcenterClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastSeenDatetime")
     public String lastSeenDatetime;
+
     public VcenterClient withLastSeenDatetime(String lastSeenDatetime) {
         this.lastSeenDatetime = lastSeenDatetime;
         return this;
@@ -47,6 +51,7 @@ public class VcenterClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceServerTags")
     public java.util.Map<String, String> sourceServerTags;
+
     public VcenterClient withSourceServerTags(java.util.Map<String, String> sourceServerTags) {
         this.sourceServerTags = sourceServerTags;
         return this;
@@ -55,6 +60,7 @@ public class VcenterClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public VcenterClient withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -63,6 +69,7 @@ public class VcenterClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcenterClientID")
     public String vcenterClientID;
+
     public VcenterClient withVcenterClientID(String vcenterClientID) {
         this.vcenterClientID = vcenterClientID;
         return this;
@@ -71,9 +78,11 @@ public class VcenterClient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcenterUUID")
     public String vcenterUUID;
+
     public VcenterClient withVcenterUUID(String vcenterUUID) {
         this.vcenterUUID = vcenterUUID;
         return this;
     }
     
+    public VcenterClient(){}
 }

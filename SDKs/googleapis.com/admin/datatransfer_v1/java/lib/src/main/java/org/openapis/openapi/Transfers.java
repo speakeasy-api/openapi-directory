@@ -60,11 +60,9 @@ public class Transfers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatatransferTransfersGetResponse res = new org.openapis.openapi.models.operations.DatatransferTransfersGetResponse() {{
+        org.openapis.openapi.models.operations.DatatransferTransfersGetResponse res = new org.openapis.openapi.models.operations.DatatransferTransfersGetResponse(contentType, httpRes.statusCode()) {{
             dataTransfer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Transfers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatatransferTransfersInsertResponse res = new org.openapis.openapi.models.operations.DatatransferTransfersInsertResponse() {{
+        org.openapis.openapi.models.operations.DatatransferTransfersInsertResponse res = new org.openapis.openapi.models.operations.DatatransferTransfersInsertResponse(contentType, httpRes.statusCode()) {{
             dataTransfer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Transfers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatatransferTransfersListResponse res = new org.openapis.openapi.models.operations.DatatransferTransfersListResponse() {{
+        org.openapis.openapi.models.operations.DatatransferTransfersListResponse res = new org.openapis.openapi.models.operations.DatatransferTransfersListResponse(contentType, httpRes.statusCode()) {{
             dataTransfersListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

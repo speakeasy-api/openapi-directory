@@ -22,6 +22,7 @@ public class DeliveryStreamDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTimestamp")
     public OffsetDateTime createTimestamp;
+
     public DeliveryStreamDescription withCreateTimestamp(OffsetDateTime createTimestamp) {
         this.createTimestamp = createTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class DeliveryStreamDescription {
     
     @JsonProperty("DeliveryStreamARN")
     public String deliveryStreamARN;
+
     public DeliveryStreamDescription withDeliveryStreamARN(String deliveryStreamARN) {
         this.deliveryStreamARN = deliveryStreamARN;
         return this;
@@ -37,6 +39,7 @@ public class DeliveryStreamDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryStreamEncryptionConfiguration")
     public DeliveryStreamEncryptionConfiguration deliveryStreamEncryptionConfiguration;
+
     public DeliveryStreamDescription withDeliveryStreamEncryptionConfiguration(DeliveryStreamEncryptionConfiguration deliveryStreamEncryptionConfiguration) {
         this.deliveryStreamEncryptionConfiguration = deliveryStreamEncryptionConfiguration;
         return this;
@@ -44,6 +47,7 @@ public class DeliveryStreamDescription {
     
     @JsonProperty("DeliveryStreamName")
     public String deliveryStreamName;
+
     public DeliveryStreamDescription withDeliveryStreamName(String deliveryStreamName) {
         this.deliveryStreamName = deliveryStreamName;
         return this;
@@ -51,6 +55,7 @@ public class DeliveryStreamDescription {
     
     @JsonProperty("DeliveryStreamStatus")
     public DeliveryStreamStatusEnum deliveryStreamStatus;
+
     public DeliveryStreamDescription withDeliveryStreamStatus(DeliveryStreamStatusEnum deliveryStreamStatus) {
         this.deliveryStreamStatus = deliveryStreamStatus;
         return this;
@@ -58,6 +63,7 @@ public class DeliveryStreamDescription {
     
     @JsonProperty("DeliveryStreamType")
     public DeliveryStreamTypeEnum deliveryStreamType;
+
     public DeliveryStreamDescription withDeliveryStreamType(DeliveryStreamTypeEnum deliveryStreamType) {
         this.deliveryStreamType = deliveryStreamType;
         return this;
@@ -65,6 +71,7 @@ public class DeliveryStreamDescription {
     
     @JsonProperty("Destinations")
     public DestinationDescription[] destinations;
+
     public DeliveryStreamDescription withDestinations(DestinationDescription[] destinations) {
         this.destinations = destinations;
         return this;
@@ -73,6 +80,7 @@ public class DeliveryStreamDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureDescription")
     public FailureDescription failureDescription;
+
     public DeliveryStreamDescription withFailureDescription(FailureDescription failureDescription) {
         this.failureDescription = failureDescription;
         return this;
@@ -80,6 +88,7 @@ public class DeliveryStreamDescription {
     
     @JsonProperty("HasMoreDestinations")
     public Boolean hasMoreDestinations;
+
     public DeliveryStreamDescription withHasMoreDestinations(Boolean hasMoreDestinations) {
         this.hasMoreDestinations = hasMoreDestinations;
         return this;
@@ -90,6 +99,7 @@ public class DeliveryStreamDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateTimestamp")
     public OffsetDateTime lastUpdateTimestamp;
+
     public DeliveryStreamDescription withLastUpdateTimestamp(OffsetDateTime lastUpdateTimestamp) {
         this.lastUpdateTimestamp = lastUpdateTimestamp;
         return this;
@@ -98,6 +108,7 @@ public class DeliveryStreamDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public SourceDescription source;
+
     public DeliveryStreamDescription withSource(SourceDescription source) {
         this.source = source;
         return this;
@@ -105,9 +116,19 @@ public class DeliveryStreamDescription {
     
     @JsonProperty("VersionId")
     public String versionId;
+
     public DeliveryStreamDescription withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public DeliveryStreamDescription(@JsonProperty("DeliveryStreamARN") String deliveryStreamARN, @JsonProperty("DeliveryStreamName") String deliveryStreamName, @JsonProperty("DeliveryStreamStatus") DeliveryStreamStatusEnum deliveryStreamStatus, @JsonProperty("DeliveryStreamType") DeliveryStreamTypeEnum deliveryStreamType, @JsonProperty("Destinations") DestinationDescription[] destinations, @JsonProperty("HasMoreDestinations") Boolean hasMoreDestinations, @JsonProperty("VersionId") String versionId) {
+        this.deliveryStreamARN = deliveryStreamARN;
+        this.deliveryStreamName = deliveryStreamName;
+        this.deliveryStreamStatus = deliveryStreamStatus;
+        this.deliveryStreamType = deliveryStreamType;
+        this.destinations = destinations;
+        this.hasMoreDestinations = hasMoreDestinations;
+        this.versionId = versionId;
+  }
 }

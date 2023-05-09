@@ -15,6 +15,7 @@ public class ResourceFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public ResourceFilters withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class ResourceFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public ResourceFilters withRegion(String region) {
         this.region = region;
         return this;
@@ -31,6 +33,7 @@ public class ResourceFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ResourceFilters withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -39,9 +42,11 @@ public class ResourceFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceName")
     public String resourceName;
+
     public ResourceFilters withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public ResourceFilters(){}
 }

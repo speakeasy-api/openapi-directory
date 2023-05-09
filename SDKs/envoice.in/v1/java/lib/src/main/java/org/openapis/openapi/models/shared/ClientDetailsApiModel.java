@@ -23,6 +23,7 @@ public class ClientDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalEmails")
     public AdditionalClientEmailApiModel[] additionalEmails;
+
     public ClientDetailsApiModel withAdditionalEmails(AdditionalClientEmailApiModel[] additionalEmails) {
         this.additionalEmails = additionalEmails;
         return this;
@@ -34,6 +35,7 @@ public class ClientDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address")
     public String address;
+
     public ClientDetailsApiModel withAddress(String address) {
         this.address = address;
         return this;
@@ -45,6 +47,7 @@ public class ClientDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientCountryId")
     public Integer clientCountryId;
+
     public ClientDetailsApiModel withClientCountryId(Integer clientCountryId) {
         this.clientCountryId = clientCountryId;
         return this;
@@ -56,6 +59,7 @@ public class ClientDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientCurrencyId")
     public Integer clientCurrencyId;
+
     public ClientDetailsApiModel withClientCurrencyId(Integer clientCurrencyId) {
         this.clientCurrencyId = clientCurrencyId;
         return this;
@@ -67,6 +71,7 @@ public class ClientDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompanyRegistrationNumber")
     public String companyRegistrationNumber;
+
     public ClientDetailsApiModel withCompanyRegistrationNumber(String companyRegistrationNumber) {
         this.companyRegistrationNumber = companyRegistrationNumber;
         return this;
@@ -80,6 +85,7 @@ public class ClientDetailsApiModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedOn")
     public OffsetDateTime createdOn;
+
     public ClientDetailsApiModel withCreatedOn(OffsetDateTime createdOn) {
         this.createdOn = createdOn;
         return this;
@@ -91,6 +97,7 @@ public class ClientDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultDueDateInDays")
     public Integer defaultDueDateInDays;
+
     public ClientDetailsApiModel withDefaultDueDateInDays(Integer defaultDueDateInDays) {
         this.defaultDueDateInDays = defaultDueDateInDays;
         return this;
@@ -102,6 +109,7 @@ public class ClientDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public ClientDetailsApiModel withEmail(String email) {
         this.email = email;
         return this;
@@ -113,6 +121,7 @@ public class ClientDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public ClientDetailsApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -124,6 +133,7 @@ public class ClientDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ClientDetailsApiModel withName(String name) {
         this.name = name;
         return this;
@@ -135,6 +145,7 @@ public class ClientDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneNumber")
     public String phoneNumber;
+
     public ClientDetailsApiModel withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -146,6 +157,7 @@ public class ClientDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UiLanguageId")
     public Integer uiLanguageId;
+
     public ClientDetailsApiModel withUiLanguageId(Integer uiLanguageId) {
         this.uiLanguageId = uiLanguageId;
         return this;
@@ -157,9 +169,11 @@ public class ClientDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Vat")
     public String vat;
+
     public ClientDetailsApiModel withVat(String vat) {
         this.vat = vat;
         return this;
     }
     
+    public ClientDetailsApiModel(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTrustResponse {
@@ -12,6 +13,7 @@ public class DeleteTrustResponse {
      */
     
     public Object clientException;
+
     public DeleteTrustResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteTrustResponse {
     
     
     public String contentType;
+
     public DeleteTrustResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTrustResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteTrustResult deleteTrustResult;
+
     public DeleteTrustResponse withDeleteTrustResult(org.openapis.openapi.models.shared.DeleteTrustResult deleteTrustResult) {
         this.deleteTrustResult = deleteTrustResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTrustResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public DeleteTrustResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteTrustResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteTrustResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteTrustResponse {
      */
     
     public Object serviceException;
+
     public DeleteTrustResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteTrustResponse {
     
     
     public Integer statusCode;
+
     public DeleteTrustResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteTrustResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTrustResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteTrustResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DeleteTrustResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DeleteTrustResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

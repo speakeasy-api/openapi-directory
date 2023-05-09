@@ -12,9 +12,11 @@ public class InstanceGroupManagersSetAutoHealingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoHealingPolicies")
     public InstanceGroupManagerAutoHealingPolicy[] autoHealingPolicies;
+
     public InstanceGroupManagersSetAutoHealingRequest withAutoHealingPolicies(InstanceGroupManagerAutoHealingPolicy[] autoHealingPolicies) {
         this.autoHealingPolicies = autoHealingPolicies;
         return this;
     }
     
+    public InstanceGroupManagersSetAutoHealingRequest(){}
 }

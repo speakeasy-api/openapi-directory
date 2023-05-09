@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetConnectorsIdConnectorSourcesIdConnectorSourceFieldsResponse {
     
     public String contentType;
+
     public GetConnectorsIdConnectorSourcesIdConnectorSourceFieldsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetConnectorsIdConnectorSourcesIdConnectorSourceFieldsResponse {
     
     
     public Integer statusCode;
+
     public GetConnectorsIdConnectorSourcesIdConnectorSourceFieldsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetConnectorsIdConnectorSourcesIdConnectorSourceFieldsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetConnectorsIdConnectorSourcesIdConnectorSourceFieldsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetConnectorsIdConnectorSourcesIdConnectorSourceFieldsResponse {
      */
     
     public GetConnectorsIdConnectorSourcesIdConnectorSourceFields200ApplicationJSON getConnectorsIdConnectorSourcesIdConnectorSourceFields200ApplicationJSONObject;
+
     public GetConnectorsIdConnectorSourcesIdConnectorSourceFieldsResponse withGetConnectorsIdConnectorSourcesIdConnectorSourceFields200ApplicationJSONObject(GetConnectorsIdConnectorSourcesIdConnectorSourceFields200ApplicationJSON getConnectorsIdConnectorSourcesIdConnectorSourceFields200ApplicationJSONObject) {
         this.getConnectorsIdConnectorSourcesIdConnectorSourceFields200ApplicationJSONObject = getConnectorsIdConnectorSourcesIdConnectorSourceFields200ApplicationJSONObject;
         return this;
     }
     
+    public GetConnectorsIdConnectorSourcesIdConnectorSourceFieldsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

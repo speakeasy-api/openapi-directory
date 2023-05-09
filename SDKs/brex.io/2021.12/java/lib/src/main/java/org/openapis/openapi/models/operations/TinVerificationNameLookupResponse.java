@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TinVerificationNameLookupResponse {
     
     public String contentType;
+
     public TinVerificationNameLookupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TinVerificationNameLookupResponse {
     
     
     public Integer statusCode;
+
     public TinVerificationNameLookupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TinVerificationNameLookupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TinVerificationNameLookupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class TinVerificationNameLookupResponse {
      */
     
     public TinVerificationNameLookup200ApplicationJSON tinVerificationNameLookup200ApplicationJSONObject;
+
     public TinVerificationNameLookupResponse withTinVerificationNameLookup200ApplicationJSONObject(TinVerificationNameLookup200ApplicationJSON tinVerificationNameLookup200ApplicationJSONObject) {
         this.tinVerificationNameLookup200ApplicationJSONObject = tinVerificationNameLookup200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class TinVerificationNameLookupResponse {
      */
     
     public TinVerificationNameLookupDefaultApplicationJSON tinVerificationNameLookupDefaultApplicationJSONObject;
+
     public TinVerificationNameLookupResponse withTinVerificationNameLookupDefaultApplicationJSONObject(TinVerificationNameLookupDefaultApplicationJSON tinVerificationNameLookupDefaultApplicationJSONObject) {
         this.tinVerificationNameLookupDefaultApplicationJSONObject = tinVerificationNameLookupDefaultApplicationJSONObject;
         return this;
     }
     
+    public TinVerificationNameLookupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

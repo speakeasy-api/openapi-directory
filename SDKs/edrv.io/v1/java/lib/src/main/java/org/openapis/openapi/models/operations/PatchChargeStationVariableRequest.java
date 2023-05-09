@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchChargeStationVariableRequest {
@@ -12,6 +13,7 @@ public class PatchChargeStationVariableRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PatchChargeStationVariableRequestBody requestBody;
+
     public PatchChargeStationVariableRequest withRequestBody(PatchChargeStationVariableRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class PatchChargeStationVariableRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PatchChargeStationVariableRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PatchChargeStationVariableRequest(@JsonProperty("RequestBody") PatchChargeStationVariableRequestBody requestBody, @JsonProperty("id") String id) {
+        this.requestBody = requestBody;
+        this.id = id;
+  }
 }

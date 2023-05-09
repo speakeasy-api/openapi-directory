@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFulfillmentPolicySecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String apiAuth;
+
     public DeleteFulfillmentPolicySecurity withApiAuth(String apiAuth) {
         this.apiAuth = apiAuth;
         return this;
     }
     
+    public DeleteFulfillmentPolicySecurity(@JsonProperty("api_auth") String apiAuth) {
+        this.apiAuth = apiAuth;
+  }
 }

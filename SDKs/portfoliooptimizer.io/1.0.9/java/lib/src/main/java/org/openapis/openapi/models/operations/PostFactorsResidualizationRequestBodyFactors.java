@@ -12,9 +12,13 @@ public class PostFactorsResidualizationRequestBodyFactors {
      */
     @JsonProperty("factorReturns")
     public Double[] factorReturns;
+
     public PostFactorsResidualizationRequestBodyFactors withFactorReturns(Double[] factorReturns) {
         this.factorReturns = factorReturns;
         return this;
     }
     
+    public PostFactorsResidualizationRequestBodyFactors(@JsonProperty("factorReturns") Double[] factorReturns) {
+        this.factorReturns = factorReturns;
+  }
 }

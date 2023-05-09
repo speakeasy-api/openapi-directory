@@ -12,6 +12,7 @@ public class ListAutoScalingConfigurationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingConfigurationName")
     public String autoScalingConfigurationName;
+
     public ListAutoScalingConfigurationsRequest withAutoScalingConfigurationName(String autoScalingConfigurationName) {
         this.autoScalingConfigurationName = autoScalingConfigurationName;
         return this;
@@ -20,6 +21,7 @@ public class ListAutoScalingConfigurationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestOnly")
     public Boolean latestOnly;
+
     public ListAutoScalingConfigurationsRequest withLatestOnly(Boolean latestOnly) {
         this.latestOnly = latestOnly;
         return this;
@@ -28,6 +30,7 @@ public class ListAutoScalingConfigurationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAutoScalingConfigurationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +39,11 @@ public class ListAutoScalingConfigurationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAutoScalingConfigurationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAutoScalingConfigurationsRequest(){}
 }

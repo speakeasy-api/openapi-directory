@@ -18,6 +18,7 @@ public class EmbeddedObjectBorder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public OptionalColor color;
+
     public EmbeddedObjectBorder withColor(OptionalColor color) {
         this.color = color;
         return this;
@@ -29,6 +30,7 @@ public class EmbeddedObjectBorder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dashStyle")
     public EmbeddedObjectBorderDashStyleEnum dashStyle;
+
     public EmbeddedObjectBorder withDashStyle(EmbeddedObjectBorderDashStyleEnum dashStyle) {
         this.dashStyle = dashStyle;
         return this;
@@ -40,6 +42,7 @@ public class EmbeddedObjectBorder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyState")
     public EmbeddedObjectBorderPropertyStateEnum propertyState;
+
     public EmbeddedObjectBorder withPropertyState(EmbeddedObjectBorderPropertyStateEnum propertyState) {
         this.propertyState = propertyState;
         return this;
@@ -51,9 +54,11 @@ public class EmbeddedObjectBorder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Dimension width;
+
     public EmbeddedObjectBorder withWidth(Dimension width) {
         this.width = width;
         return this;
     }
     
+    public EmbeddedObjectBorder(){}
 }

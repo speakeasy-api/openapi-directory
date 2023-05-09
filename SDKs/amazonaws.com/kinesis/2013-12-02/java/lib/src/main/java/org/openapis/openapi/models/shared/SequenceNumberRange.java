@@ -15,6 +15,7 @@ public class SequenceNumberRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndingSequenceNumber")
     public String endingSequenceNumber;
+
     public SequenceNumberRange withEndingSequenceNumber(String endingSequenceNumber) {
         this.endingSequenceNumber = endingSequenceNumber;
         return this;
@@ -22,9 +23,13 @@ public class SequenceNumberRange {
     
     @JsonProperty("StartingSequenceNumber")
     public String startingSequenceNumber;
+
     public SequenceNumberRange withStartingSequenceNumber(String startingSequenceNumber) {
         this.startingSequenceNumber = startingSequenceNumber;
         return this;
     }
     
+    public SequenceNumberRange(@JsonProperty("StartingSequenceNumber") String startingSequenceNumber) {
+        this.startingSequenceNumber = startingSequenceNumber;
+  }
 }

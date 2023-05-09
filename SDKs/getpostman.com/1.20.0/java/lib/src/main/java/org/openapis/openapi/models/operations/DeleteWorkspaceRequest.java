@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWorkspaceRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_id")
     public String workspaceId;
+
     public DeleteWorkspaceRequest withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public DeleteWorkspaceRequest(@JsonProperty("workspace_id") String workspaceId) {
+        this.workspaceId = workspaceId;
+  }
 }

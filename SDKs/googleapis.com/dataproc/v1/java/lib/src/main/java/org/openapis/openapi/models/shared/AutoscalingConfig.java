@@ -18,9 +18,11 @@ public class AutoscalingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyUri")
     public String policyUri;
+
     public AutoscalingConfig withPolicyUri(String policyUri) {
         this.policyUri = policyUri;
         return this;
     }
     
+    public AutoscalingConfig(){}
 }

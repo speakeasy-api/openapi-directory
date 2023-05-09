@@ -12,6 +12,7 @@ public class UpdateRoutingControlRequestBody {
      */
     @JsonProperty("RoutingControlArn")
     public String routingControlArn;
+
     public UpdateRoutingControlRequestBody withRoutingControlArn(String routingControlArn) {
         this.routingControlArn = routingControlArn;
         return this;
@@ -22,9 +23,14 @@ public class UpdateRoutingControlRequestBody {
      */
     @JsonProperty("RoutingControlName")
     public String routingControlName;
+
     public UpdateRoutingControlRequestBody withRoutingControlName(String routingControlName) {
         this.routingControlName = routingControlName;
         return this;
     }
     
+    public UpdateRoutingControlRequestBody(@JsonProperty("RoutingControlArn") String routingControlArn, @JsonProperty("RoutingControlName") String routingControlName) {
+        this.routingControlArn = routingControlArn;
+        this.routingControlName = routingControlName;
+  }
 }

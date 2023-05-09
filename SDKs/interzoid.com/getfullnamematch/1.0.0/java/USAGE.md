@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetfullnamematchRequest;
 import org.openapis.openapi.models.operations.GetfullnamematchResponse;
 
@@ -13,18 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetfullnamematchRequest req = new GetfullnamematchRequest() {{
-                fullname = "corrupti";
-                license = "provident";
-            }}            
+            GetfullnamematchRequest req = new GetfullnamematchRequest("corrupti", "provident");            
 
             GetfullnamematchResponse res = sdk.fullNameMatchSimilarityKey.getfullnamematch(req);
 
-            if (res.getfullnamematch200ApplicationJSONObject.isPresent()) {
+            if (res.getfullnamematch200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

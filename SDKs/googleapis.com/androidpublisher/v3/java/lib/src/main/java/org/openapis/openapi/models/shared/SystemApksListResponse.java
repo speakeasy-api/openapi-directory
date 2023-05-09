@@ -18,9 +18,11 @@ public class SystemApksListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variants")
     public Variant[] variants;
+
     public SystemApksListResponse withVariants(Variant[] variants) {
         this.variants = variants;
         return this;
     }
     
+    public SystemApksListResponse(){}
 }

@@ -15,6 +15,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoTotals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CartSimulation200ApplicationJSONLogisticsInfoTotals withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoTotals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CartSimulation200ApplicationJSONLogisticsInfoTotals withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class CartSimulation200ApplicationJSONLogisticsInfoTotals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public CartSimulation200ApplicationJSONLogisticsInfoTotals withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public CartSimulation200ApplicationJSONLogisticsInfoTotals(){}
 }

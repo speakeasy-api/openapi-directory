@@ -19,6 +19,7 @@ public class Account {
      */
     @JsonProperty("balance")
     public Long balance;
+
     public Account withBalance(Long balance) {
         this.balance = balance;
         return this;
@@ -29,6 +30,7 @@ public class Account {
      */
     @JsonProperty("cleared_balance")
     public Long clearedBalance;
+
     public Account withClearedBalance(Long clearedBalance) {
         this.clearedBalance = clearedBalance;
         return this;
@@ -39,6 +41,7 @@ public class Account {
      */
     @JsonProperty("closed")
     public Boolean closed;
+
     public Account withClosed(Boolean closed) {
         this.closed = closed;
         return this;
@@ -47,6 +50,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debt_escrow_amounts")
     public java.util.Map<String, Long> debtEscrowAmounts;
+
     public Account withDebtEscrowAmounts(java.util.Map<String, Long> debtEscrowAmounts) {
         this.debtEscrowAmounts = debtEscrowAmounts;
         return this;
@@ -55,6 +59,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debt_interest_rates")
     public java.util.Map<String, Long> debtInterestRates;
+
     public Account withDebtInterestRates(java.util.Map<String, Long> debtInterestRates) {
         this.debtInterestRates = debtInterestRates;
         return this;
@@ -63,6 +68,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debt_minimum_payments")
     public java.util.Map<String, Long> debtMinimumPayments;
+
     public Account withDebtMinimumPayments(java.util.Map<String, Long> debtMinimumPayments) {
         this.debtMinimumPayments = debtMinimumPayments;
         return this;
@@ -74,6 +80,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debt_original_balance")
     public Long debtOriginalBalance;
+
     public Account withDebtOriginalBalance(Long debtOriginalBalance) {
         this.debtOriginalBalance = debtOriginalBalance;
         return this;
@@ -84,6 +91,7 @@ public class Account {
      */
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public Account withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -95,6 +103,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direct_import_in_error")
     public Boolean directImportInError;
+
     public Account withDirectImportInError(Boolean directImportInError) {
         this.directImportInError = directImportInError;
         return this;
@@ -106,6 +115,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direct_import_linked")
     public Boolean directImportLinked;
+
     public Account withDirectImportLinked(Boolean directImportLinked) {
         this.directImportLinked = directImportLinked;
         return this;
@@ -113,6 +123,7 @@ public class Account {
     
     @JsonProperty("id")
     public String id;
+
     public Account withId(String id) {
         this.id = id;
         return this;
@@ -126,6 +137,7 @@ public class Account {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_reconciled_at")
     public OffsetDateTime lastReconciledAt;
+
     public Account withLastReconciledAt(OffsetDateTime lastReconciledAt) {
         this.lastReconciledAt = lastReconciledAt;
         return this;
@@ -133,6 +145,7 @@ public class Account {
     
     @JsonProperty("name")
     public String name;
+
     public Account withName(String name) {
         this.name = name;
         return this;
@@ -141,6 +154,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public Account withNote(String note) {
         this.note = note;
         return this;
@@ -151,6 +165,7 @@ public class Account {
      */
     @JsonProperty("on_budget")
     public Boolean onBudget;
+
     public Account withOnBudget(Boolean onBudget) {
         this.onBudget = onBudget;
         return this;
@@ -161,6 +176,7 @@ public class Account {
      */
     @JsonProperty("transfer_payee_id")
     public String transferPayeeId;
+
     public Account withTransferPayeeId(String transferPayeeId) {
         this.transferPayeeId = transferPayeeId;
         return this;
@@ -171,6 +187,7 @@ public class Account {
      */
     @JsonProperty("type")
     public AccountTypeEnum type;
+
     public Account withType(AccountTypeEnum type) {
         this.type = type;
         return this;
@@ -181,9 +198,22 @@ public class Account {
      */
     @JsonProperty("uncleared_balance")
     public Long unclearedBalance;
+
     public Account withUnclearedBalance(Long unclearedBalance) {
         this.unclearedBalance = unclearedBalance;
         return this;
     }
     
+    public Account(@JsonProperty("balance") Long balance, @JsonProperty("cleared_balance") Long clearedBalance, @JsonProperty("closed") Boolean closed, @JsonProperty("deleted") Boolean deleted, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("on_budget") Boolean onBudget, @JsonProperty("transfer_payee_id") String transferPayeeId, @JsonProperty("type") AccountTypeEnum type, @JsonProperty("uncleared_balance") Long unclearedBalance) {
+        this.balance = balance;
+        this.clearedBalance = clearedBalance;
+        this.closed = closed;
+        this.deleted = deleted;
+        this.id = id;
+        this.name = name;
+        this.onBudget = onBudget;
+        this.transferPayeeId = transferPayeeId;
+        this.type = type;
+        this.unclearedBalance = unclearedBalance;
+  }
 }

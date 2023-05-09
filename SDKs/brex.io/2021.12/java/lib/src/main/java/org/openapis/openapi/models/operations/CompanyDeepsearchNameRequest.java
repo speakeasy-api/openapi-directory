@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompanyDeepsearchNameRequest {
@@ -12,6 +13,7 @@ public class CompanyDeepsearchNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country")
     public String country;
+
     public CompanyDeepsearchNameRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -22,9 +24,14 @@ public class CompanyDeepsearchNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public CompanyDeepsearchNameRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CompanyDeepsearchNameRequest(@JsonProperty("country") String country, @JsonProperty("name") String name) {
+        this.country = country;
+        this.name = name;
+  }
 }

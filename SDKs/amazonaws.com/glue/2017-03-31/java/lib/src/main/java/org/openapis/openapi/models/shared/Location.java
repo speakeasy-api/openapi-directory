@@ -15,6 +15,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DynamoDB")
     public CodeGenNodeArg[] dynamoDB;
+
     public Location withDynamoDB(CodeGenNodeArg[] dynamoDB) {
         this.dynamoDB = dynamoDB;
         return this;
@@ -23,6 +24,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Jdbc")
     public CodeGenNodeArg[] jdbc;
+
     public Location withJdbc(CodeGenNodeArg[] jdbc) {
         this.jdbc = jdbc;
         return this;
@@ -31,9 +33,11 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3")
     public CodeGenNodeArg[] s3;
+
     public Location withS3(CodeGenNodeArg[] s3) {
         this.s3 = s3;
         return this;
     }
     
+    public Location(){}
 }

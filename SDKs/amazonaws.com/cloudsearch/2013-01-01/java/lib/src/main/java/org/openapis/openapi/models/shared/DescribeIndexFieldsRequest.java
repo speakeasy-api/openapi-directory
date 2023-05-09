@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeIndexFieldsRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;DescribeIndexFields&lt;/a&gt;&lt;/code&gt; operation. Specifies the name of the domain you want to describe. To restrict the response to particular index fields, specify the names of the index fields you want to describe. To show the active configuration and exclude any pending changes, set the &lt;code&gt;Deployed&lt;/code&gt; option to &lt;code&gt;true&lt;/code&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeIndexFieldsRequest {
     
     public Boolean deployed;
+
     public DescribeIndexFieldsRequest withDeployed(Boolean deployed) {
         this.deployed = deployed;
         return this;
@@ -19,6 +20,7 @@ public class DescribeIndexFieldsRequest {
     
     
     public String domainName;
+
     public DescribeIndexFieldsRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -26,9 +28,13 @@ public class DescribeIndexFieldsRequest {
     
     
     public String[] fieldNames;
+
     public DescribeIndexFieldsRequest withFieldNames(String[] fieldNames) {
         this.fieldNames = fieldNames;
         return this;
     }
     
+    public DescribeIndexFieldsRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

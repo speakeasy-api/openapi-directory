@@ -12,6 +12,7 @@ public class PatchLocationRequestBodyOpeningHours0 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public PatchLocationRequestBodyOpeningHours0 withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -20,9 +21,11 @@ public class PatchLocationRequestBodyOpeningHours0 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public PatchLocationRequestBodyOpeningHours0 withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public PatchLocationRequestBodyOpeningHours0(){}
 }

@@ -62,11 +62,9 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveFilesCopyResponse res = new org.openapis.openapi.models.operations.DriveFilesCopyResponse() {{
+        org.openapis.openapi.models.operations.DriveFilesCopyResponse res = new org.openapis.openapi.models.operations.DriveFilesCopyResponse(contentType, httpRes.statusCode()) {{
             file = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,10 +106,8 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveFilesDeleteResponse res = new org.openapis.openapi.models.operations.DriveFilesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DriveFilesDeleteResponse res = new org.openapis.openapi.models.operations.DriveFilesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -121,7 +117,7 @@ public class Files {
     }
 
     /**
-     * Permanently deletes all of the user's trashed files.
+     * Permanently deletes all trashed files of a user or shared drive.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -148,10 +144,8 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveFilesEmptyTrashResponse res = new org.openapis.openapi.models.operations.DriveFilesEmptyTrashResponse() {{
+        org.openapis.openapi.models.operations.DriveFilesEmptyTrashResponse res = new org.openapis.openapi.models.operations.DriveFilesEmptyTrashResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -188,10 +182,8 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveFilesExportResponse res = new org.openapis.openapi.models.operations.DriveFilesExportResponse() {{
+        org.openapis.openapi.models.operations.DriveFilesExportResponse res = new org.openapis.openapi.models.operations.DriveFilesExportResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -228,11 +220,9 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveFilesGenerateIdsResponse res = new org.openapis.openapi.models.operations.DriveFilesGenerateIdsResponse() {{
+        org.openapis.openapi.models.operations.DriveFilesGenerateIdsResponse res = new org.openapis.openapi.models.operations.DriveFilesGenerateIdsResponse(contentType, httpRes.statusCode()) {{
             generatedIds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -274,11 +264,9 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveFilesGetResponse res = new org.openapis.openapi.models.operations.DriveFilesGetResponse() {{
+        org.openapis.openapi.models.operations.DriveFilesGetResponse res = new org.openapis.openapi.models.operations.DriveFilesGetResponse(contentType, httpRes.statusCode()) {{
             file = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -322,11 +310,9 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveFilesInsertResponse res = new org.openapis.openapi.models.operations.DriveFilesInsertResponse() {{
+        org.openapis.openapi.models.operations.DriveFilesInsertResponse res = new org.openapis.openapi.models.operations.DriveFilesInsertResponse(contentType, httpRes.statusCode()) {{
             file = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -368,11 +354,9 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveFilesListResponse res = new org.openapis.openapi.models.operations.DriveFilesListResponse() {{
+        org.openapis.openapi.models.operations.DriveFilesListResponse res = new org.openapis.openapi.models.operations.DriveFilesListResponse(contentType, httpRes.statusCode()) {{
             fileList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -414,11 +398,9 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveFilesListLabelsResponse res = new org.openapis.openapi.models.operations.DriveFilesListLabelsResponse() {{
+        org.openapis.openapi.models.operations.DriveFilesListLabelsResponse res = new org.openapis.openapi.models.operations.DriveFilesListLabelsResponse(contentType, httpRes.statusCode()) {{
             labelList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -462,11 +444,9 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveFilesModifyLabelsResponse res = new org.openapis.openapi.models.operations.DriveFilesModifyLabelsResponse() {{
+        org.openapis.openapi.models.operations.DriveFilesModifyLabelsResponse res = new org.openapis.openapi.models.operations.DriveFilesModifyLabelsResponse(contentType, httpRes.statusCode()) {{
             modifyLabelsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -510,11 +490,9 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveFilesPatchResponse res = new org.openapis.openapi.models.operations.DriveFilesPatchResponse() {{
+        org.openapis.openapi.models.operations.DriveFilesPatchResponse res = new org.openapis.openapi.models.operations.DriveFilesPatchResponse(contentType, httpRes.statusCode()) {{
             file = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -556,11 +534,9 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveFilesTouchResponse res = new org.openapis.openapi.models.operations.DriveFilesTouchResponse() {{
+        org.openapis.openapi.models.operations.DriveFilesTouchResponse res = new org.openapis.openapi.models.operations.DriveFilesTouchResponse(contentType, httpRes.statusCode()) {{
             file = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -602,11 +578,9 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveFilesTrashResponse res = new org.openapis.openapi.models.operations.DriveFilesTrashResponse() {{
+        org.openapis.openapi.models.operations.DriveFilesTrashResponse res = new org.openapis.openapi.models.operations.DriveFilesTrashResponse(contentType, httpRes.statusCode()) {{
             file = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -648,11 +622,9 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveFilesUntrashResponse res = new org.openapis.openapi.models.operations.DriveFilesUntrashResponse() {{
+        org.openapis.openapi.models.operations.DriveFilesUntrashResponse res = new org.openapis.openapi.models.operations.DriveFilesUntrashResponse(contentType, httpRes.statusCode()) {{
             file = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -696,11 +668,9 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveFilesUpdateResponse res = new org.openapis.openapi.models.operations.DriveFilesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DriveFilesUpdateResponse res = new org.openapis.openapi.models.operations.DriveFilesUpdateResponse(contentType, httpRes.statusCode()) {{
             file = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -715,7 +685,7 @@ public class Files {
     }
 
     /**
-     * Subscribes to changes to a file. While you can establish a channel for changes to a file on a shared drive, a change to a shared drive file won't create a notification.
+     * Subscribe to changes on a file.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -744,11 +714,9 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveFilesWatchResponse res = new org.openapis.openapi.models.operations.DriveFilesWatchResponse() {{
+        org.openapis.openapi.models.operations.DriveFilesWatchResponse res = new org.openapis.openapi.models.operations.DriveFilesWatchResponse(contentType, httpRes.statusCode()) {{
             channel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

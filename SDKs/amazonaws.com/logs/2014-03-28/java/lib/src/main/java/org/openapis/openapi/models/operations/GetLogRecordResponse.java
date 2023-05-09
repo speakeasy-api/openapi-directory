@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLogRecordResponse {
     
     public String contentType;
+
     public GetLogRecordResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetLogRecordResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLogRecordResponse getLogRecordResponse;
+
     public GetLogRecordResponse withGetLogRecordResponse(org.openapis.openapi.models.shared.GetLogRecordResponse getLogRecordResponse) {
         this.getLogRecordResponse = getLogRecordResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetLogRecordResponse {
      */
     
     public Object invalidParameterException;
+
     public GetLogRecordResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class GetLogRecordResponse {
      */
     
     public Object limitExceededException;
+
     public GetLogRecordResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class GetLogRecordResponse {
     
     
     public Integer statusCode;
+
     public GetLogRecordResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetLogRecordResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLogRecordResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetLogRecordResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetLogRecordResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class GetLogRecordResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetLogRecordResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public GetLogRecordResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

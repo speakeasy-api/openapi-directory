@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class Stack {
     
     public CapabilityEnum[] capabilities;
+
     public Stack withCapabilities(CapabilityEnum[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -19,6 +21,7 @@ public class Stack {
     
     
     public String changeSetId;
+
     public Stack withChangeSetId(String changeSetId) {
         this.changeSetId = changeSetId;
         return this;
@@ -26,6 +29,7 @@ public class Stack {
     
     
     public OffsetDateTime creationTime;
+
     public Stack withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -33,6 +37,7 @@ public class Stack {
     
     
     public OffsetDateTime deletionTime;
+
     public Stack withDeletionTime(OffsetDateTime deletionTime) {
         this.deletionTime = deletionTime;
         return this;
@@ -40,6 +45,7 @@ public class Stack {
     
     
     public String description;
+
     public Stack withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +53,7 @@ public class Stack {
     
     
     public Boolean disableRollback;
+
     public Stack withDisableRollback(Boolean disableRollback) {
         this.disableRollback = disableRollback;
         return this;
@@ -54,6 +61,7 @@ public class Stack {
     
     
     public StackDriftInformation driftInformation;
+
     public Stack withDriftInformation(StackDriftInformation driftInformation) {
         this.driftInformation = driftInformation;
         return this;
@@ -61,6 +69,7 @@ public class Stack {
     
     
     public Boolean enableTerminationProtection;
+
     public Stack withEnableTerminationProtection(Boolean enableTerminationProtection) {
         this.enableTerminationProtection = enableTerminationProtection;
         return this;
@@ -68,6 +77,7 @@ public class Stack {
     
     
     public OffsetDateTime lastUpdatedTime;
+
     public Stack withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -75,6 +85,7 @@ public class Stack {
     
     
     public String[] notificationARNs;
+
     public Stack withNotificationARNs(String[] notificationARNs) {
         this.notificationARNs = notificationARNs;
         return this;
@@ -82,6 +93,7 @@ public class Stack {
     
     
     public Output[] outputs;
+
     public Stack withOutputs(Output[] outputs) {
         this.outputs = outputs;
         return this;
@@ -89,6 +101,7 @@ public class Stack {
     
     
     public Parameter[] parameters;
+
     public Stack withParameters(Parameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -96,6 +109,7 @@ public class Stack {
     
     
     public String parentId;
+
     public Stack withParentId(String parentId) {
         this.parentId = parentId;
         return this;
@@ -103,6 +117,7 @@ public class Stack {
     
     
     public String roleARN;
+
     public Stack withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -110,6 +125,7 @@ public class Stack {
     
     
     public RollbackConfiguration rollbackConfiguration;
+
     public Stack withRollbackConfiguration(RollbackConfiguration rollbackConfiguration) {
         this.rollbackConfiguration = rollbackConfiguration;
         return this;
@@ -117,6 +133,7 @@ public class Stack {
     
     
     public String rootId;
+
     public Stack withRootId(String rootId) {
         this.rootId = rootId;
         return this;
@@ -124,6 +141,7 @@ public class Stack {
     
     
     public String stackId;
+
     public Stack withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -131,6 +149,7 @@ public class Stack {
     
     
     public String stackName;
+
     public Stack withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -138,6 +157,7 @@ public class Stack {
     
     
     public StackStatusEnum stackStatus;
+
     public Stack withStackStatus(StackStatusEnum stackStatus) {
         this.stackStatus = stackStatus;
         return this;
@@ -145,6 +165,7 @@ public class Stack {
     
     
     public String stackStatusReason;
+
     public Stack withStackStatusReason(String stackStatusReason) {
         this.stackStatusReason = stackStatusReason;
         return this;
@@ -152,6 +173,7 @@ public class Stack {
     
     
     public Tag[] tags;
+
     public Stack withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -159,9 +181,15 @@ public class Stack {
     
     
     public Long timeoutInMinutes;
+
     public Stack withTimeoutInMinutes(Long timeoutInMinutes) {
         this.timeoutInMinutes = timeoutInMinutes;
         return this;
     }
     
+    public Stack(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("StackName") String stackName, @JsonProperty("StackStatus") StackStatusEnum stackStatus) {
+        this.creationTime = creationTime;
+        this.stackName = stackName;
+        this.stackStatus = stackStatus;
+  }
 }

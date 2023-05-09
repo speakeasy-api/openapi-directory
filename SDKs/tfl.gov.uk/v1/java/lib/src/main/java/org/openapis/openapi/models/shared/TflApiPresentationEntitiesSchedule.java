@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstJourney")
     public TflApiPresentationEntitiesKnownJourney firstJourney;
+
     public TflApiPresentationEntitiesSchedule withFirstJourney(TflApiPresentationEntitiesKnownJourney firstJourney) {
         this.firstJourney = firstJourney;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("knownJourneys")
     public TflApiPresentationEntitiesKnownJourney[] knownJourneys;
+
     public TflApiPresentationEntitiesSchedule withKnownJourneys(TflApiPresentationEntitiesKnownJourney[] knownJourneys) {
         this.knownJourneys = knownJourneys;
         return this;
@@ -28,6 +30,7 @@ public class TflApiPresentationEntitiesSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastJourney")
     public TflApiPresentationEntitiesKnownJourney lastJourney;
+
     public TflApiPresentationEntitiesSchedule withLastJourney(TflApiPresentationEntitiesKnownJourney lastJourney) {
         this.lastJourney = lastJourney;
         return this;
@@ -36,6 +39,7 @@ public class TflApiPresentationEntitiesSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TflApiPresentationEntitiesSchedule withName(String name) {
         this.name = name;
         return this;
@@ -44,9 +48,11 @@ public class TflApiPresentationEntitiesSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periods")
     public TflApiPresentationEntitiesPeriod[] periods;
+
     public TflApiPresentationEntitiesSchedule withPeriods(TflApiPresentationEntitiesPeriod[] periods) {
         this.periods = periods;
         return this;
     }
     
+    public TflApiPresentationEntitiesSchedule(){}
 }

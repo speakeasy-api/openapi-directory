@@ -15,9 +15,11 @@ public class GetNetworkSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkSettings")
     public NetworkSettings networkSettings;
+
     public GetNetworkSettingsResponse withNetworkSettings(NetworkSettings networkSettings) {
         this.networkSettings = networkSettings;
         return this;
     }
     
+    public GetNetworkSettingsResponse(){}
 }

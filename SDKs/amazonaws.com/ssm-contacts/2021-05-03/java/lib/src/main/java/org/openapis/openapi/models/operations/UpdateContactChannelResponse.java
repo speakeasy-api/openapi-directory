@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateContactChannelResponse {
@@ -12,6 +13,7 @@ public class UpdateContactChannelResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateContactChannelResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateContactChannelResponse {
      */
     
     public Object conflictException;
+
     public UpdateContactChannelResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateContactChannelResponse {
     
     
     public String contentType;
+
     public UpdateContactChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateContactChannelResponse {
      */
     
     public Object dataEncryptionException;
+
     public UpdateContactChannelResponse withDataEncryptionException(Object dataEncryptionException) {
         this.dataEncryptionException = dataEncryptionException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateContactChannelResponse {
      */
     
     public Object internalServerException;
+
     public UpdateContactChannelResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateContactChannelResponse {
     
     
     public Integer statusCode;
+
     public UpdateContactChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateContactChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateContactChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateContactChannelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateContactChannelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateContactChannelResponse {
      */
     
     public Object throttlingException;
+
     public UpdateContactChannelResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateContactChannelResponse {
      */
     
     public java.util.Map<String, Object> updateContactChannelResult;
+
     public UpdateContactChannelResponse withUpdateContactChannelResult(java.util.Map<String, Object> updateContactChannelResult) {
         this.updateContactChannelResult = updateContactChannelResult;
         return this;
@@ -103,9 +114,14 @@ public class UpdateContactChannelResponse {
      */
     
     public Object validationException;
+
     public UpdateContactChannelResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateContactChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class NewPrivateVirtualInterfaceAllocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressFamily")
     public AddressFamilyEnum addressFamily;
+
     public NewPrivateVirtualInterfaceAllocation withAddressFamily(AddressFamilyEnum addressFamily) {
         this.addressFamily = addressFamily;
         return this;
@@ -23,6 +24,7 @@ public class NewPrivateVirtualInterfaceAllocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amazonAddress")
     public String amazonAddress;
+
     public NewPrivateVirtualInterfaceAllocation withAmazonAddress(String amazonAddress) {
         this.amazonAddress = amazonAddress;
         return this;
@@ -30,6 +32,7 @@ public class NewPrivateVirtualInterfaceAllocation {
     
     @JsonProperty("asn")
     public Long asn;
+
     public NewPrivateVirtualInterfaceAllocation withAsn(Long asn) {
         this.asn = asn;
         return this;
@@ -38,6 +41,7 @@ public class NewPrivateVirtualInterfaceAllocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authKey")
     public String authKey;
+
     public NewPrivateVirtualInterfaceAllocation withAuthKey(String authKey) {
         this.authKey = authKey;
         return this;
@@ -46,6 +50,7 @@ public class NewPrivateVirtualInterfaceAllocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerAddress")
     public String customerAddress;
+
     public NewPrivateVirtualInterfaceAllocation withCustomerAddress(String customerAddress) {
         this.customerAddress = customerAddress;
         return this;
@@ -54,6 +59,7 @@ public class NewPrivateVirtualInterfaceAllocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mtu")
     public Long mtu;
+
     public NewPrivateVirtualInterfaceAllocation withMtu(Long mtu) {
         this.mtu = mtu;
         return this;
@@ -62,6 +68,7 @@ public class NewPrivateVirtualInterfaceAllocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public NewPrivateVirtualInterfaceAllocation withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -69,6 +76,7 @@ public class NewPrivateVirtualInterfaceAllocation {
     
     @JsonProperty("virtualInterfaceName")
     public String virtualInterfaceName;
+
     public NewPrivateVirtualInterfaceAllocation withVirtualInterfaceName(String virtualInterfaceName) {
         this.virtualInterfaceName = virtualInterfaceName;
         return this;
@@ -76,9 +84,15 @@ public class NewPrivateVirtualInterfaceAllocation {
     
     @JsonProperty("vlan")
     public Long vlan;
+
     public NewPrivateVirtualInterfaceAllocation withVlan(Long vlan) {
         this.vlan = vlan;
         return this;
     }
     
+    public NewPrivateVirtualInterfaceAllocation(@JsonProperty("asn") Long asn, @JsonProperty("virtualInterfaceName") String virtualInterfaceName, @JsonProperty("vlan") Long vlan) {
+        this.asn = asn;
+        this.virtualInterfaceName = virtualInterfaceName;
+        this.vlan = vlan;
+  }
 }

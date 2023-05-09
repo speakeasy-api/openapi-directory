@@ -15,6 +15,7 @@ public class TrafficSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaign")
     public String campaign;
+
     public TrafficSource withCampaign(String campaign) {
         this.campaign = campaign;
         return this;
@@ -26,6 +27,7 @@ public class TrafficSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_page_visited")
     public String firstPageVisited;
+
     public TrafficSource withFirstPageVisited(String firstPageVisited) {
         this.firstPageVisited = firstPageVisited;
         return this;
@@ -37,6 +39,7 @@ public class TrafficSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_page_visited_at")
     public String firstPageVisitedAt;
+
     public TrafficSource withFirstPageVisitedAt(String firstPageVisitedAt) {
         this.firstPageVisitedAt = firstPageVisitedAt;
         return this;
@@ -48,6 +51,7 @@ public class TrafficSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("medium")
     public String medium;
+
     public TrafficSource withMedium(String medium) {
         this.medium = medium;
         return this;
@@ -59,6 +63,7 @@ public class TrafficSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referral_code")
     public String referralCode;
+
     public TrafficSource withReferralCode(String referralCode) {
         this.referralCode = referralCode;
         return this;
@@ -70,6 +75,7 @@ public class TrafficSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referral_source")
     public String referralSource;
+
     public TrafficSource withReferralSource(String referralSource) {
         this.referralSource = referralSource;
         return this;
@@ -81,6 +87,7 @@ public class TrafficSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referral_url")
     public String referralUrl;
+
     public TrafficSource withReferralUrl(String referralUrl) {
         this.referralUrl = referralUrl;
         return this;
@@ -92,6 +99,7 @@ public class TrafficSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_name")
     public String sourceName;
+
     public TrafficSource withSourceName(String sourceName) {
         this.sourceName = sourceName;
         return this;
@@ -103,9 +111,11 @@ public class TrafficSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_agent")
     public String userAgent;
+
     public TrafficSource withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
     }
     
+    public TrafficSource(){}
 }

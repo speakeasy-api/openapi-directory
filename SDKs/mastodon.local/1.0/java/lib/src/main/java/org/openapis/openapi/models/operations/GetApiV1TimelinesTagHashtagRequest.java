@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1TimelinesTagHashtagRequest {
@@ -12,6 +13,7 @@ public class GetApiV1TimelinesTagHashtagRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hashtag")
     public String hashtag;
+
     public GetApiV1TimelinesTagHashtagRequest withHashtag(String hashtag) {
         this.hashtag = hashtag;
         return this;
@@ -22,6 +24,7 @@ public class GetApiV1TimelinesTagHashtagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetApiV1TimelinesTagHashtagRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,6 +35,7 @@ public class GetApiV1TimelinesTagHashtagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=local")
     public Boolean local;
+
     public GetApiV1TimelinesTagHashtagRequest withLocal(Boolean local) {
         this.local = local;
         return this;
@@ -42,6 +46,7 @@ public class GetApiV1TimelinesTagHashtagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_id")
     public String maxId;
+
     public GetApiV1TimelinesTagHashtagRequest withMaxId(String maxId) {
         this.maxId = maxId;
         return this;
@@ -52,6 +57,7 @@ public class GetApiV1TimelinesTagHashtagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_id")
     public String minId;
+
     public GetApiV1TimelinesTagHashtagRequest withMinId(String minId) {
         this.minId = minId;
         return this;
@@ -62,6 +68,7 @@ public class GetApiV1TimelinesTagHashtagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=only_media")
     public Boolean onlyMedia;
+
     public GetApiV1TimelinesTagHashtagRequest withOnlyMedia(Boolean onlyMedia) {
         this.onlyMedia = onlyMedia;
         return this;
@@ -72,6 +79,7 @@ public class GetApiV1TimelinesTagHashtagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=remote")
     public Boolean remote;
+
     public GetApiV1TimelinesTagHashtagRequest withRemote(Boolean remote) {
         this.remote = remote;
         return this;
@@ -82,9 +90,13 @@ public class GetApiV1TimelinesTagHashtagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since_id")
     public String sinceId;
+
     public GetApiV1TimelinesTagHashtagRequest withSinceId(String sinceId) {
         this.sinceId = sinceId;
         return this;
     }
     
+    public GetApiV1TimelinesTagHashtagRequest(@JsonProperty("hashtag") String hashtag) {
+        this.hashtag = hashtag;
+  }
 }

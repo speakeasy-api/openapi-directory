@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceSimpleFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterExpression")
     public GoogleAnalyticsAdminV1alphaAudienceFilterExpression filterExpression;
+
     public GoogleAnalyticsAdminV1alphaAudienceSimpleFilter withFilterExpression(GoogleAnalyticsAdminV1alphaAudienceFilterExpression filterExpression) {
         this.filterExpression = filterExpression;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaAudienceSimpleFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public GoogleAnalyticsAdminV1alphaAudienceSimpleFilterScopeEnum scope;
+
     public GoogleAnalyticsAdminV1alphaAudienceSimpleFilter withScope(GoogleAnalyticsAdminV1alphaAudienceSimpleFilterScopeEnum scope) {
         this.scope = scope;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAudienceSimpleFilter(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTranslationCacheRequest {
@@ -12,6 +13,7 @@ public class GetTranslationCacheRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=flatten")
     public Boolean flatten;
+
     public GetTranslationCacheRequest withFlatten(Boolean flatten) {
         this.flatten = flatten;
         return this;
@@ -22,9 +24,13 @@ public class GetTranslationCacheRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public Long projectId;
+
     public GetTranslationCacheRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public GetTranslationCacheRequest(@JsonProperty("projectId") Long projectId) {
+        this.projectId = projectId;
+  }
 }

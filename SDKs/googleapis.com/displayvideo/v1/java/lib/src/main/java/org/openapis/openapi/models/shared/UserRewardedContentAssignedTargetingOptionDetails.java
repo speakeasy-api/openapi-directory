@@ -18,6 +18,7 @@ public class UserRewardedContentAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public UserRewardedContentAssignedTargetingOptionDetails withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
@@ -29,9 +30,11 @@ public class UserRewardedContentAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userRewardedContent")
     public UserRewardedContentAssignedTargetingOptionDetailsUserRewardedContentEnum userRewardedContent;
+
     public UserRewardedContentAssignedTargetingOptionDetails withUserRewardedContent(UserRewardedContentAssignedTargetingOptionDetailsUserRewardedContentEnum userRewardedContent) {
         this.userRewardedContent = userRewardedContent;
         return this;
     }
     
+    public UserRewardedContentAssignedTargetingOptionDetails(){}
 }

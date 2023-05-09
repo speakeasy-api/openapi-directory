@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCallAnalyticsCategoryResponse {
@@ -12,6 +13,7 @@ public class GetCallAnalyticsCategoryResponse {
      */
     
     public Object badRequestException;
+
     public GetCallAnalyticsCategoryResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetCallAnalyticsCategoryResponse {
     
     
     public String contentType;
+
     public GetCallAnalyticsCategoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCallAnalyticsCategoryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCallAnalyticsCategoryResponse getCallAnalyticsCategoryResponse;
+
     public GetCallAnalyticsCategoryResponse withGetCallAnalyticsCategoryResponse(org.openapis.openapi.models.shared.GetCallAnalyticsCategoryResponse getCallAnalyticsCategoryResponse) {
         this.getCallAnalyticsCategoryResponse = getCallAnalyticsCategoryResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetCallAnalyticsCategoryResponse {
      */
     
     public Object internalFailureException;
+
     public GetCallAnalyticsCategoryResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class GetCallAnalyticsCategoryResponse {
      */
     
     public Object limitExceededException;
+
     public GetCallAnalyticsCategoryResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class GetCallAnalyticsCategoryResponse {
      */
     
     public Object notFoundException;
+
     public GetCallAnalyticsCategoryResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetCallAnalyticsCategoryResponse {
     
     
     public Integer statusCode;
+
     public GetCallAnalyticsCategoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetCallAnalyticsCategoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCallAnalyticsCategoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCallAnalyticsCategoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

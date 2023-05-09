@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest {
@@ -12,6 +13,7 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_id")
     public String issueId;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest withIssueId(String issueId) {
         this.issueId = issueId;
         return this;
@@ -22,6 +24,7 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest withPath(String path) {
         this.path = path;
         return this;
@@ -34,6 +37,7 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -46,9 +50,16 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest(@JsonProperty("issue_id") String issueId, @JsonProperty("path") String path, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.issueId = issueId;
+        this.path = path;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PollForThirdPartyJobsInput {
     @JsonProperty("actionTypeId")
     public ActionTypeId actionTypeId;
+
     public PollForThirdPartyJobsInput withActionTypeId(ActionTypeId actionTypeId) {
         this.actionTypeId = actionTypeId;
         return this;
@@ -22,9 +23,13 @@ public class PollForThirdPartyJobsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxBatchSize")
     public Long maxBatchSize;
+
     public PollForThirdPartyJobsInput withMaxBatchSize(Long maxBatchSize) {
         this.maxBatchSize = maxBatchSize;
         return this;
     }
     
+    public PollForThirdPartyJobsInput(@JsonProperty("actionTypeId") ActionTypeId actionTypeId) {
+        this.actionTypeId = actionTypeId;
+  }
 }

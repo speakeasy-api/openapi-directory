@@ -18,6 +18,7 @@ public class OBWriteInternationalConsent5DataInitiationExchangeRateInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContractIdentification")
     public String contractIdentification;
+
     public OBWriteInternationalConsent5DataInitiationExchangeRateInformation withContractIdentification(String contractIdentification) {
         this.contractIdentification = contractIdentification;
         return this;
@@ -29,6 +30,7 @@ public class OBWriteInternationalConsent5DataInitiationExchangeRateInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExchangeRate")
     public Double exchangeRate;
+
     public OBWriteInternationalConsent5DataInitiationExchangeRateInformation withExchangeRate(Double exchangeRate) {
         this.exchangeRate = exchangeRate;
         return this;
@@ -39,6 +41,7 @@ public class OBWriteInternationalConsent5DataInitiationExchangeRateInformation {
      */
     @JsonProperty("RateType")
     public OBWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnum rateType;
+
     public OBWriteInternationalConsent5DataInitiationExchangeRateInformation withRateType(OBWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnum rateType) {
         this.rateType = rateType;
         return this;
@@ -49,9 +52,14 @@ public class OBWriteInternationalConsent5DataInitiationExchangeRateInformation {
      */
     @JsonProperty("UnitCurrency")
     public String unitCurrency;
+
     public OBWriteInternationalConsent5DataInitiationExchangeRateInformation withUnitCurrency(String unitCurrency) {
         this.unitCurrency = unitCurrency;
         return this;
     }
     
+    public OBWriteInternationalConsent5DataInitiationExchangeRateInformation(@JsonProperty("RateType") OBWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnum rateType, @JsonProperty("UnitCurrency") String unitCurrency) {
+        this.rateType = rateType;
+        this.unitCurrency = unitCurrency;
+  }
 }

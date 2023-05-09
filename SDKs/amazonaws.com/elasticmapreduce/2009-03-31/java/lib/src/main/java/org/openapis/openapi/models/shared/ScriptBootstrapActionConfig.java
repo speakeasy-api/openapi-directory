@@ -15,6 +15,7 @@ public class ScriptBootstrapActionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Args")
     public String[] args;
+
     public ScriptBootstrapActionConfig withArgs(String[] args) {
         this.args = args;
         return this;
@@ -22,9 +23,13 @@ public class ScriptBootstrapActionConfig {
     
     @JsonProperty("Path")
     public String path;
+
     public ScriptBootstrapActionConfig withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public ScriptBootstrapActionConfig(@JsonProperty("Path") String path) {
+        this.path = path;
+  }
 }

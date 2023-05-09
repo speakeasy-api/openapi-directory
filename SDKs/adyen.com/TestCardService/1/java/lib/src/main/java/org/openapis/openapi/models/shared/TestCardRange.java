@@ -12,6 +12,7 @@ public class TestCardRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public AvsAddress address;
+
     public TestCardRange withAddress(AvsAddress address) {
         this.address = address;
         return this;
@@ -22,6 +23,7 @@ public class TestCardRange {
      */
     @JsonProperty("cardHolderName")
     public String cardHolderName;
+
     public TestCardRange withCardHolderName(String cardHolderName) {
         this.cardHolderName = cardHolderName;
         return this;
@@ -35,6 +37,7 @@ public class TestCardRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cvc")
     public String cvc;
+
     public TestCardRange withCvc(String cvc) {
         this.cvc = cvc;
         return this;
@@ -59,6 +62,7 @@ public class TestCardRange {
      */
     @JsonProperty("expiryMonth")
     public TestCardRangeExpiryMonthEnum expiryMonth;
+
     public TestCardRange withExpiryMonth(TestCardRangeExpiryMonthEnum expiryMonth) {
         this.expiryMonth = expiryMonth;
         return this;
@@ -71,6 +75,7 @@ public class TestCardRange {
      */
     @JsonProperty("expiryYear")
     public Integer expiryYear;
+
     public TestCardRange withExpiryYear(Integer expiryYear) {
         this.expiryYear = expiryYear;
         return this;
@@ -85,6 +90,7 @@ public class TestCardRange {
      */
     @JsonProperty("rangeEnd")
     public String rangeEnd;
+
     public TestCardRange withRangeEnd(String rangeEnd) {
         this.rangeEnd = rangeEnd;
         return this;
@@ -99,6 +105,7 @@ public class TestCardRange {
      */
     @JsonProperty("rangeStart")
     public String rangeStart;
+
     public TestCardRange withRangeStart(String rangeStart) {
         this.rangeStart = rangeStart;
         return this;
@@ -114,6 +121,7 @@ public class TestCardRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threeDDirectoryServerResponse")
     public TestCardRangeThreeDDirectoryServerResponseEnum threeDDirectoryServerResponse;
+
     public TestCardRange withThreeDDirectoryServerResponse(TestCardRangeThreeDDirectoryServerResponseEnum threeDDirectoryServerResponse) {
         this.threeDDirectoryServerResponse = threeDDirectoryServerResponse;
         return this;
@@ -125,6 +133,7 @@ public class TestCardRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threeDPassword")
     public String threeDPassword;
+
     public TestCardRange withThreeDPassword(String threeDPassword) {
         this.threeDPassword = threeDPassword;
         return this;
@@ -136,9 +145,17 @@ public class TestCardRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threeDUsername")
     public String threeDUsername;
+
     public TestCardRange withThreeDUsername(String threeDUsername) {
         this.threeDUsername = threeDUsername;
         return this;
     }
     
+    public TestCardRange(@JsonProperty("cardHolderName") String cardHolderName, @JsonProperty("expiryMonth") TestCardRangeExpiryMonthEnum expiryMonth, @JsonProperty("expiryYear") Integer expiryYear, @JsonProperty("rangeEnd") String rangeEnd, @JsonProperty("rangeStart") String rangeStart) {
+        this.cardHolderName = cardHolderName;
+        this.expiryMonth = expiryMonth;
+        this.expiryYear = expiryYear;
+        this.rangeEnd = rangeEnd;
+        this.rangeStart = rangeStart;
+  }
 }

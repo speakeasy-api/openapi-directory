@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyClusterMaintenanceRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyClusterMaintenanceActionEnum action;
+
     public GETModifyClusterMaintenanceRequest withAction(GETModifyClusterMaintenanceActionEnum action) {
         this.action = action;
         return this;
@@ -20,6 +22,7 @@ public class GETModifyClusterMaintenanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
     public String clusterIdentifier;
+
     public GETModifyClusterMaintenanceRequest withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -30,6 +33,7 @@ public class GETModifyClusterMaintenanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeferMaintenance")
     public Boolean deferMaintenance;
+
     public GETModifyClusterMaintenanceRequest withDeferMaintenance(Boolean deferMaintenance) {
         this.deferMaintenance = deferMaintenance;
         return this;
@@ -40,6 +44,7 @@ public class GETModifyClusterMaintenanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeferMaintenanceDuration")
     public Long deferMaintenanceDuration;
+
     public GETModifyClusterMaintenanceRequest withDeferMaintenanceDuration(Long deferMaintenanceDuration) {
         this.deferMaintenanceDuration = deferMaintenanceDuration;
         return this;
@@ -50,6 +55,7 @@ public class GETModifyClusterMaintenanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeferMaintenanceEndTime")
     public OffsetDateTime deferMaintenanceEndTime;
+
     public GETModifyClusterMaintenanceRequest withDeferMaintenanceEndTime(OffsetDateTime deferMaintenanceEndTime) {
         this.deferMaintenanceEndTime = deferMaintenanceEndTime;
         return this;
@@ -60,6 +66,7 @@ public class GETModifyClusterMaintenanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeferMaintenanceIdentifier")
     public String deferMaintenanceIdentifier;
+
     public GETModifyClusterMaintenanceRequest withDeferMaintenanceIdentifier(String deferMaintenanceIdentifier) {
         this.deferMaintenanceIdentifier = deferMaintenanceIdentifier;
         return this;
@@ -70,6 +77,7 @@ public class GETModifyClusterMaintenanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeferMaintenanceStartTime")
     public OffsetDateTime deferMaintenanceStartTime;
+
     public GETModifyClusterMaintenanceRequest withDeferMaintenanceStartTime(OffsetDateTime deferMaintenanceStartTime) {
         this.deferMaintenanceStartTime = deferMaintenanceStartTime;
         return this;
@@ -77,6 +85,7 @@ public class GETModifyClusterMaintenanceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyClusterMaintenanceVersionEnum version;
+
     public GETModifyClusterMaintenanceRequest withVersion(GETModifyClusterMaintenanceVersionEnum version) {
         this.version = version;
         return this;
@@ -84,6 +93,7 @@ public class GETModifyClusterMaintenanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyClusterMaintenanceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -91,6 +101,7 @@ public class GETModifyClusterMaintenanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyClusterMaintenanceRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -98,6 +109,7 @@ public class GETModifyClusterMaintenanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyClusterMaintenanceRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -105,6 +117,7 @@ public class GETModifyClusterMaintenanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyClusterMaintenanceRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -112,6 +125,7 @@ public class GETModifyClusterMaintenanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyClusterMaintenanceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -119,6 +133,7 @@ public class GETModifyClusterMaintenanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyClusterMaintenanceRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -126,9 +141,15 @@ public class GETModifyClusterMaintenanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyClusterMaintenanceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyClusterMaintenanceRequest(@JsonProperty("Action") GETModifyClusterMaintenanceActionEnum action, @JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("Version") GETModifyClusterMaintenanceVersionEnum version) {
+        this.action = action;
+        this.clusterIdentifier = clusterIdentifier;
+        this.version = version;
+  }
 }

@@ -15,6 +15,7 @@ public class ListReportDefinitionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListReportDefinitionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListReportDefinitionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportDefinitions")
     public ReportDefinition[] reportDefinitions;
+
     public ListReportDefinitionsResult withReportDefinitions(ReportDefinition[] reportDefinitions) {
         this.reportDefinitions = reportDefinitions;
         return this;
     }
     
+    public ListReportDefinitionsResult(){}
 }

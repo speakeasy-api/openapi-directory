@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1Content {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDataplexV1Content withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1Content {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataText")
     public String dataText;
+
     public GoogleCloudDataplexV1Content withDataText(String dataText) {
         this.dataText = dataText;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1Content {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDataplexV1Content withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1Content {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudDataplexV1Content withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1Content {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDataplexV1Content withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDataplexV1Content {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notebook")
     public GoogleCloudDataplexV1ContentNotebook notebook;
+
     public GoogleCloudDataplexV1Content withNotebook(GoogleCloudDataplexV1ContentNotebook notebook) {
         this.notebook = notebook;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDataplexV1Content {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public GoogleCloudDataplexV1Content withPath(String path) {
         this.path = path;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDataplexV1Content {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sqlScript")
     public GoogleCloudDataplexV1ContentSqlScript sqlScript;
+
     public GoogleCloudDataplexV1Content withSqlScript(GoogleCloudDataplexV1ContentSqlScript sqlScript) {
         this.sqlScript = sqlScript;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDataplexV1Content {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public GoogleCloudDataplexV1Content withUid(String uid) {
         this.uid = uid;
         return this;
@@ -117,9 +126,11 @@ public class GoogleCloudDataplexV1Content {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDataplexV1Content withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudDataplexV1Content(){}
 }

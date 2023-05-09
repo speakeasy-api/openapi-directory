@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveaccountconfigRequest {
@@ -12,6 +13,7 @@ public class SaveaccountconfigRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public SaveaccountconfigRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class SaveaccountconfigRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public SaveaccountconfigRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SaveaccountconfigRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SaveaccountconfigRequest saveaccountconfigRequest;
+
     public SaveaccountconfigRequest withSaveaccountconfigRequest(org.openapis.openapi.models.shared.SaveaccountconfigRequest saveaccountconfigRequest) {
         this.saveaccountconfigRequest = saveaccountconfigRequest;
         return this;
@@ -39,9 +43,16 @@ public class SaveaccountconfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public SaveaccountconfigRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
     }
     
+    public SaveaccountconfigRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("SaveaccountconfigRequest") org.openapis.openapi.models.shared.SaveaccountconfigRequest saveaccountconfigRequest, @JsonProperty("accountName") String accountName) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.saveaccountconfigRequest = saveaccountconfigRequest;
+        this.accountName = accountName;
+  }
 }

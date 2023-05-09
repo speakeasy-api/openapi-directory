@@ -15,6 +15,7 @@ public class TableAutoScalingDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Replicas")
     public ReplicaAutoScalingDescription[] replicas;
+
     public TableAutoScalingDescription withReplicas(ReplicaAutoScalingDescription[] replicas) {
         this.replicas = replicas;
         return this;
@@ -23,6 +24,7 @@ public class TableAutoScalingDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public TableAutoScalingDescription withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -31,9 +33,11 @@ public class TableAutoScalingDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableStatus")
     public TableStatusEnum tableStatus;
+
     public TableAutoScalingDescription withTableStatus(TableStatusEnum tableStatus) {
         this.tableStatus = tableStatus;
         return this;
     }
     
+    public TableAutoScalingDescription(){}
 }

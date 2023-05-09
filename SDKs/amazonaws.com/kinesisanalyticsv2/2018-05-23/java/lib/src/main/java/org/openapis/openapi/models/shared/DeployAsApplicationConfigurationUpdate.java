@@ -15,9 +15,11 @@ public class DeployAsApplicationConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3ContentLocationUpdate")
     public S3ContentBaseLocationUpdate s3ContentLocationUpdate;
+
     public DeployAsApplicationConfigurationUpdate withS3ContentLocationUpdate(S3ContentBaseLocationUpdate s3ContentLocationUpdate) {
         this.s3ContentLocationUpdate = s3ContentLocationUpdate;
         return this;
     }
     
+    public DeployAsApplicationConfigurationUpdate(){}
 }

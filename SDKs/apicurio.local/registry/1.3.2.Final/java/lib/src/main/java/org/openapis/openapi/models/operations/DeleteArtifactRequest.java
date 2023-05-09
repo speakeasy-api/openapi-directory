@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteArtifactRequest {
@@ -12,9 +13,13 @@ public class DeleteArtifactRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
     public String artifactId;
+
     public DeleteArtifactRequest withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
     }
     
+    public DeleteArtifactRequest(@JsonProperty("artifactId") String artifactId) {
+        this.artifactId = artifactId;
+  }
 }

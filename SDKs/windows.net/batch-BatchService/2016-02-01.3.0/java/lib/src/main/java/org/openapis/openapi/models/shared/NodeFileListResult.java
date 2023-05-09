@@ -18,6 +18,7 @@ public class NodeFileListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("odata.nextLink")
     public String odataNextLink;
+
     public NodeFileListResult withOdataNextLink(String odataNextLink) {
         this.odataNextLink = odataNextLink;
         return this;
@@ -29,9 +30,11 @@ public class NodeFileListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public NodeFile[] value;
+
     public NodeFileListResult withValue(NodeFile[] value) {
         this.value = value;
         return this;
     }
     
+    public NodeFileListResult(){}
 }

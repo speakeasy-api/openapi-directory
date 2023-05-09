@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudRetailV2betaCatalog withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2betaCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantCenterLinkingConfig")
     public GoogleCloudRetailV2betaMerchantCenterLinkingConfig merchantCenterLinkingConfig;
+
     public GoogleCloudRetailV2betaCatalog withMerchantCenterLinkingConfig(GoogleCloudRetailV2betaMerchantCenterLinkingConfig merchantCenterLinkingConfig) {
         this.merchantCenterLinkingConfig = merchantCenterLinkingConfig;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2betaCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRetailV2betaCatalog withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudRetailV2betaCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productLevelConfig")
     public GoogleCloudRetailV2betaProductLevelConfig productLevelConfig;
+
     public GoogleCloudRetailV2betaCatalog withProductLevelConfig(GoogleCloudRetailV2betaProductLevelConfig productLevelConfig) {
         this.productLevelConfig = productLevelConfig;
         return this;
     }
     
+    public GoogleCloudRetailV2betaCatalog(){}
 }

@@ -18,6 +18,7 @@ public class AuditLoggingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logAdminReadActions")
     public Boolean logAdminReadActions;
+
     public AuditLoggingSettings withLogAdminReadActions(Boolean logAdminReadActions) {
         this.logAdminReadActions = logAdminReadActions;
         return this;
@@ -29,6 +30,7 @@ public class AuditLoggingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logDataReadActions")
     public Boolean logDataReadActions;
+
     public AuditLoggingSettings withLogDataReadActions(Boolean logDataReadActions) {
         this.logDataReadActions = logDataReadActions;
         return this;
@@ -40,6 +42,7 @@ public class AuditLoggingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logDataWriteActions")
     public Boolean logDataWriteActions;
+
     public AuditLoggingSettings withLogDataWriteActions(Boolean logDataWriteActions) {
         this.logDataWriteActions = logDataWriteActions;
         return this;
@@ -51,9 +54,11 @@ public class AuditLoggingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public AuditLoggingSettings withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public AuditLoggingSettings(){}
 }

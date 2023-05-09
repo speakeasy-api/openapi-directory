@@ -25,6 +25,7 @@ public class Project {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Project withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -35,6 +36,7 @@ public class Project {
      */
     @JsonProperty("description")
     public String description;
+
     public Project withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +48,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drModeEnabled")
     public Boolean drModeEnabled;
+
     public Project withDrModeEnabled(Boolean drModeEnabled) {
         this.drModeEnabled = drModeEnabled;
         return this;
@@ -57,6 +60,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Project withId(String id) {
         this.id = id;
         return this;
@@ -70,6 +74,7 @@ public class Project {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModified")
     public OffsetDateTime lastModified;
+
     public Project withLastModified(OffsetDateTime lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -80,6 +85,7 @@ public class Project {
      */
     @JsonProperty("name")
     public String name;
+
     public Project withName(String name) {
         this.name = name;
         return this;
@@ -90,6 +96,7 @@ public class Project {
      */
     @JsonProperty("settings")
     public ProjectSettings settings;
+
     public Project withSettings(ProjectSettings settings) {
         this.settings = settings;
         return this;
@@ -101,6 +108,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ProjectStatusEnum status;
+
     public Project withStatus(ProjectStatusEnum status) {
         this.status = status;
         return this;
@@ -112,9 +120,15 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailUri")
     public String thumbnailUri;
+
     public Project withThumbnailUri(String thumbnailUri) {
         this.thumbnailUri = thumbnailUri;
         return this;
     }
     
+    public Project(@JsonProperty("description") String description, @JsonProperty("name") String name, @JsonProperty("settings") ProjectSettings settings) {
+        this.description = description;
+        this.name = name;
+        this.settings = settings;
+  }
 }

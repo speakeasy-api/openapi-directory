@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig {
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigAllocationStrategyEnum allocationStrategy;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withAllocationStrategy(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigAllocationStrategyEnum allocationStrategy) {
         this.allocationStrategy = allocationStrategy;
         return this;
@@ -19,6 +21,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public String clientToken;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +29,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public String context;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withContext(String context) {
         this.context = context;
         return this;
@@ -33,6 +37,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigExcessCapacityTerminationPolicyEnum excessCapacityTerminationPolicy;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withExcessCapacityTerminationPolicy(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigExcessCapacityTerminationPolicyEnum excessCapacityTerminationPolicy) {
         this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
         return this;
@@ -40,6 +45,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public Double fulfilledCapacity;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withFulfilledCapacity(Double fulfilledCapacity) {
         this.fulfilledCapacity = fulfilledCapacity;
         return this;
@@ -47,6 +53,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public String iamFleetRole;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withIamFleetRole(String iamFleetRole) {
         this.iamFleetRole = iamFleetRole;
         return this;
@@ -54,6 +61,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigInstanceInterruptionBehaviorEnum instanceInterruptionBehavior;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withInstanceInterruptionBehavior(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigInstanceInterruptionBehaviorEnum instanceInterruptionBehavior) {
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         return this;
@@ -61,6 +69,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public Long instancePoolsToUseCount;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withInstancePoolsToUseCount(Long instancePoolsToUseCount) {
         this.instancePoolsToUseCount = instancePoolsToUseCount;
         return this;
@@ -68,6 +77,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications[] launchSpecifications;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withLaunchSpecifications(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecifications[] launchSpecifications) {
         this.launchSpecifications = launchSpecifications;
         return this;
@@ -75,6 +85,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchTemplateConfigs[] launchTemplateConfigs;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withLaunchTemplateConfigs(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchTemplateConfigs[] launchTemplateConfigs) {
         this.launchTemplateConfigs = launchTemplateConfigs;
         return this;
@@ -82,6 +93,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLoadBalancersConfig loadBalancersConfig;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withLoadBalancersConfig(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLoadBalancersConfig loadBalancersConfig) {
         this.loadBalancersConfig = loadBalancersConfig;
         return this;
@@ -89,6 +101,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigOnDemandAllocationStrategyEnum onDemandAllocationStrategy;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withOnDemandAllocationStrategy(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigOnDemandAllocationStrategyEnum onDemandAllocationStrategy) {
         this.onDemandAllocationStrategy = onDemandAllocationStrategy;
         return this;
@@ -96,6 +109,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public Double onDemandFulfilledCapacity;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withOnDemandFulfilledCapacity(Double onDemandFulfilledCapacity) {
         this.onDemandFulfilledCapacity = onDemandFulfilledCapacity;
         return this;
@@ -103,6 +117,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public String onDemandMaxTotalPrice;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withOnDemandMaxTotalPrice(String onDemandMaxTotalPrice) {
         this.onDemandMaxTotalPrice = onDemandMaxTotalPrice;
         return this;
@@ -110,6 +125,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public Long onDemandTargetCapacity;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withOnDemandTargetCapacity(Long onDemandTargetCapacity) {
         this.onDemandTargetCapacity = onDemandTargetCapacity;
         return this;
@@ -117,6 +133,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public Boolean replaceUnhealthyInstances;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withReplaceUnhealthyInstances(Boolean replaceUnhealthyInstances) {
         this.replaceUnhealthyInstances = replaceUnhealthyInstances;
         return this;
@@ -124,6 +141,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigSpotMaintenanceStrategies spotMaintenanceStrategies;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withSpotMaintenanceStrategies(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigSpotMaintenanceStrategies spotMaintenanceStrategies) {
         this.spotMaintenanceStrategies = spotMaintenanceStrategies;
         return this;
@@ -131,6 +149,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public String spotMaxTotalPrice;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withSpotMaxTotalPrice(String spotMaxTotalPrice) {
         this.spotMaxTotalPrice = spotMaxTotalPrice;
         return this;
@@ -138,6 +157,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public String spotPrice;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withSpotPrice(String spotPrice) {
         this.spotPrice = spotPrice;
         return this;
@@ -145,6 +165,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigTagSpecifications[] tagSpecifications;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withTagSpecifications(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -152,6 +173,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public Long targetCapacity;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withTargetCapacity(Long targetCapacity) {
         this.targetCapacity = targetCapacity;
         return this;
@@ -159,6 +181,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigTargetCapacityUnitTypeEnum targetCapacityUnitType;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withTargetCapacityUnitType(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigTargetCapacityUnitTypeEnum targetCapacityUnitType) {
         this.targetCapacityUnitType = targetCapacityUnitType;
         return this;
@@ -166,6 +189,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public Boolean terminateInstancesWithExpiration;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withTerminateInstancesWithExpiration(Boolean terminateInstancesWithExpiration) {
         this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
         return this;
@@ -173,6 +197,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigTypeEnum type;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withType(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigTypeEnum type) {
         this.type = type;
         return this;
@@ -180,6 +205,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public OffsetDateTime validFrom;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withValidFrom(OffsetDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
@@ -187,9 +213,14 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public OffsetDateTime validUntil;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig withValidUntil(OffsetDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
     
+    public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig(@JsonProperty("IamFleetRole") String iamFleetRole, @JsonProperty("TargetCapacity") Long targetCapacity) {
+        this.iamFleetRole = iamFleetRole;
+        this.targetCapacity = targetCapacity;
+  }
 }

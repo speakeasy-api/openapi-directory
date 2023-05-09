@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1NonprofitsShowRequest {
@@ -12,9 +13,13 @@ public class GetApiV1NonprofitsShowRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public GetApiV1NonprofitsShowRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetApiV1NonprofitsShowRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

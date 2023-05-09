@@ -15,6 +15,7 @@ public class NetworkUnblockResponseUnprocessableNetworkInvalidParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NetworkUnblockResponseUnprocessableNetworkInvalidParameters withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +27,11 @@ public class NetworkUnblockResponseUnprocessableNetworkInvalidParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public NetworkUnblockResponseUnprocessableNetworkInvalidParameters withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public NetworkUnblockResponseUnprocessableNetworkInvalidParameters(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateDBProxyEndpointRequest {
     
     public String dbProxyEndpointName;
+
     public CreateDBProxyEndpointRequest withDBProxyEndpointName(String dbProxyEndpointName) {
         this.dbProxyEndpointName = dbProxyEndpointName;
         return this;
@@ -16,6 +17,7 @@ public class CreateDBProxyEndpointRequest {
     
     
     public String dbProxyName;
+
     public CreateDBProxyEndpointRequest withDBProxyName(String dbProxyName) {
         this.dbProxyName = dbProxyName;
         return this;
@@ -26,6 +28,7 @@ public class CreateDBProxyEndpointRequest {
      */
     
     public TagList[] tags;
+
     public CreateDBProxyEndpointRequest withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -33,6 +36,7 @@ public class CreateDBProxyEndpointRequest {
     
     
     public DBProxyEndpointTargetRoleEnum targetRole;
+
     public CreateDBProxyEndpointRequest withTargetRole(DBProxyEndpointTargetRoleEnum targetRole) {
         this.targetRole = targetRole;
         return this;
@@ -40,6 +44,7 @@ public class CreateDBProxyEndpointRequest {
     
     
     public String[] vpcSecurityGroupIds;
+
     public CreateDBProxyEndpointRequest withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
@@ -47,9 +52,15 @@ public class CreateDBProxyEndpointRequest {
     
     
     public String[] vpcSubnetIds;
+
     public CreateDBProxyEndpointRequest withVpcSubnetIds(String[] vpcSubnetIds) {
         this.vpcSubnetIds = vpcSubnetIds;
         return this;
     }
     
+    public CreateDBProxyEndpointRequest(@JsonProperty("DBProxyEndpointName") String dbProxyEndpointName, @JsonProperty("DBProxyName") String dbProxyName, @JsonProperty("VpcSubnetIds") String[] vpcSubnetIds) {
+        this.dbProxyEndpointName = dbProxyEndpointName;
+        this.dbProxyName = dbProxyName;
+        this.vpcSubnetIds = vpcSubnetIds;
+  }
 }

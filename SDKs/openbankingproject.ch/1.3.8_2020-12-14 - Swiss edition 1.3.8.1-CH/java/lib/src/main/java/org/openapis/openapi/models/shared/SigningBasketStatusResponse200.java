@@ -27,9 +27,13 @@ public class SigningBasketStatusResponse200 {
      */
     @JsonProperty("transactionStatus")
     public TransactionStatusSBSEnum transactionStatus;
+
     public SigningBasketStatusResponse200 withTransactionStatus(TransactionStatusSBSEnum transactionStatus) {
         this.transactionStatus = transactionStatus;
         return this;
     }
     
+    public SigningBasketStatusResponse200(@JsonProperty("transactionStatus") TransactionStatusSBSEnum transactionStatus) {
+        this.transactionStatus = transactionStatus;
+  }
 }

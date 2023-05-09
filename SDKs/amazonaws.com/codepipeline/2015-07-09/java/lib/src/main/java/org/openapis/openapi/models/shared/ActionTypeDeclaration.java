@@ -15,6 +15,7 @@ public class ActionTypeDeclaration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ActionTypeDeclaration withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class ActionTypeDeclaration {
     
     @JsonProperty("executor")
     public ActionTypeExecutor executor;
+
     public ActionTypeDeclaration withExecutor(ActionTypeExecutor executor) {
         this.executor = executor;
         return this;
@@ -29,6 +31,7 @@ public class ActionTypeDeclaration {
     
     @JsonProperty("id")
     public ActionTypeIdentifier id;
+
     public ActionTypeDeclaration withId(ActionTypeIdentifier id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class ActionTypeDeclaration {
     
     @JsonProperty("inputArtifactDetails")
     public ActionTypeArtifactDetails inputArtifactDetails;
+
     public ActionTypeDeclaration withInputArtifactDetails(ActionTypeArtifactDetails inputArtifactDetails) {
         this.inputArtifactDetails = inputArtifactDetails;
         return this;
@@ -43,6 +47,7 @@ public class ActionTypeDeclaration {
     
     @JsonProperty("outputArtifactDetails")
     public ActionTypeArtifactDetails outputArtifactDetails;
+
     public ActionTypeDeclaration withOutputArtifactDetails(ActionTypeArtifactDetails outputArtifactDetails) {
         this.outputArtifactDetails = outputArtifactDetails;
         return this;
@@ -51,6 +56,7 @@ public class ActionTypeDeclaration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public ActionTypePermissions permissions;
+
     public ActionTypeDeclaration withPermissions(ActionTypePermissions permissions) {
         this.permissions = permissions;
         return this;
@@ -62,6 +68,7 @@ public class ActionTypeDeclaration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public Object properties;
+
     public ActionTypeDeclaration withProperties(Object properties) {
         this.properties = properties;
         return this;
@@ -70,9 +77,16 @@ public class ActionTypeDeclaration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urls")
     public ActionTypeUrls urls;
+
     public ActionTypeDeclaration withUrls(ActionTypeUrls urls) {
         this.urls = urls;
         return this;
     }
     
+    public ActionTypeDeclaration(@JsonProperty("executor") ActionTypeExecutor executor, @JsonProperty("id") ActionTypeIdentifier id, @JsonProperty("inputArtifactDetails") ActionTypeArtifactDetails inputArtifactDetails, @JsonProperty("outputArtifactDetails") ActionTypeArtifactDetails outputArtifactDetails) {
+        this.executor = executor;
+        this.id = id;
+        this.inputArtifactDetails = inputArtifactDetails;
+        this.outputArtifactDetails = outputArtifactDetails;
+  }
 }

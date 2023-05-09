@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetResponse {
     
     public String contentType;
+
     public FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaBatchGetPlayIntegrityConfigsResponse googleFirebaseAppcheckV1betaBatchGetPlayIntegrityConfigsResponse;
+
     public FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetResponse withGoogleFirebaseAppcheckV1betaBatchGetPlayIntegrityConfigsResponse(org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaBatchGetPlayIntegrityConfigsResponse googleFirebaseAppcheckV1betaBatchGetPlayIntegrityConfigsResponse) {
         this.googleFirebaseAppcheckV1betaBatchGetPlayIntegrityConfigsResponse = googleFirebaseAppcheckV1betaBatchGetPlayIntegrityConfigsResponse;
         return this;
@@ -26,6 +29,7 @@ public class FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetResponse {
     
     
     public Integer statusCode;
+
     public FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

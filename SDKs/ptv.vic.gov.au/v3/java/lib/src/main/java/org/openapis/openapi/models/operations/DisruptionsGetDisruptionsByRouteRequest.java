@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisruptionsGetDisruptionsByRouteRequest {
@@ -12,6 +13,7 @@ public class DisruptionsGetDisruptionsByRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
     public String devid;
+
     public DisruptionsGetDisruptionsByRouteRequest withDevid(String devid) {
         this.devid = devid;
         return this;
@@ -22,6 +24,7 @@ public class DisruptionsGetDisruptionsByRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disruption_status")
     public DisruptionsGetDisruptionsByRouteDisruptionStatusEnum disruptionStatus;
+
     public DisruptionsGetDisruptionsByRouteRequest withDisruptionStatus(DisruptionsGetDisruptionsByRouteDisruptionStatusEnum disruptionStatus) {
         this.disruptionStatus = disruptionStatus;
         return this;
@@ -32,6 +35,7 @@ public class DisruptionsGetDisruptionsByRouteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_id")
     public Integer routeId;
+
     public DisruptionsGetDisruptionsByRouteRequest withRouteId(Integer routeId) {
         this.routeId = routeId;
         return this;
@@ -42,6 +46,7 @@ public class DisruptionsGetDisruptionsByRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
     public String signature;
+
     public DisruptionsGetDisruptionsByRouteRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -52,9 +57,13 @@ public class DisruptionsGetDisruptionsByRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public DisruptionsGetDisruptionsByRouteRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public DisruptionsGetDisruptionsByRouteRequest(@JsonProperty("route_id") Integer routeId) {
+        this.routeId = routeId;
+  }
 }

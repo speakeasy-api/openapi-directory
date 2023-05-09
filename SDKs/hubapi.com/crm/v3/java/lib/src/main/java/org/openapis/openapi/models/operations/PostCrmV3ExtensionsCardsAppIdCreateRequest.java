@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCrmV3ExtensionsCardsAppIdCreateRequest {
@@ -12,6 +13,7 @@ public class PostCrmV3ExtensionsCardsAppIdCreateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CardCreateRequest cardCreateRequest;
+
     public PostCrmV3ExtensionsCardsAppIdCreateRequest withCardCreateRequest(org.openapis.openapi.models.shared.CardCreateRequest cardCreateRequest) {
         this.cardCreateRequest = cardCreateRequest;
         return this;
@@ -22,9 +24,14 @@ public class PostCrmV3ExtensionsCardsAppIdCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public Integer appId;
+
     public PostCrmV3ExtensionsCardsAppIdCreateRequest withAppId(Integer appId) {
         this.appId = appId;
         return this;
     }
     
+    public PostCrmV3ExtensionsCardsAppIdCreateRequest(@JsonProperty("CardCreateRequest") org.openapis.openapi.models.shared.CardCreateRequest cardCreateRequest, @JsonProperty("appId") Integer appId) {
+        this.cardCreateRequest = cardCreateRequest;
+        this.appId = appId;
+  }
 }

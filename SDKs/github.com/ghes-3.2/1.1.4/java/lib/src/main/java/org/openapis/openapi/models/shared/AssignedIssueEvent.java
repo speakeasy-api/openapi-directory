@@ -15,6 +15,7 @@ public class AssignedIssueEvent {
      */
     @JsonProperty("actor")
     public SimpleUser actor;
+
     public AssignedIssueEvent withActor(SimpleUser actor) {
         this.actor = actor;
         return this;
@@ -25,6 +26,7 @@ public class AssignedIssueEvent {
      */
     @JsonProperty("assignee")
     public SimpleUser assignee;
+
     public AssignedIssueEvent withAssignee(SimpleUser assignee) {
         this.assignee = assignee;
         return this;
@@ -35,6 +37,7 @@ public class AssignedIssueEvent {
      */
     @JsonProperty("assigner")
     public SimpleUser assigner;
+
     public AssignedIssueEvent withAssigner(SimpleUser assigner) {
         this.assigner = assigner;
         return this;
@@ -42,6 +45,7 @@ public class AssignedIssueEvent {
     
     @JsonProperty("commit_id")
     public String commitId;
+
     public AssignedIssueEvent withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -49,6 +53,7 @@ public class AssignedIssueEvent {
     
     @JsonProperty("commit_url")
     public String commitUrl;
+
     public AssignedIssueEvent withCommitUrl(String commitUrl) {
         this.commitUrl = commitUrl;
         return this;
@@ -56,6 +61,7 @@ public class AssignedIssueEvent {
     
     @JsonProperty("created_at")
     public String createdAt;
+
     public AssignedIssueEvent withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -63,6 +69,7 @@ public class AssignedIssueEvent {
     
     @JsonProperty("event")
     public String event;
+
     public AssignedIssueEvent withEvent(String event) {
         this.event = event;
         return this;
@@ -70,6 +77,7 @@ public class AssignedIssueEvent {
     
     @JsonProperty("id")
     public Long id;
+
     public AssignedIssueEvent withId(Long id) {
         this.id = id;
         return this;
@@ -77,6 +85,7 @@ public class AssignedIssueEvent {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public AssignedIssueEvent withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -87,6 +96,7 @@ public class AssignedIssueEvent {
      */
     @JsonProperty("performed_via_github_app")
     public Integration performedViaGithubApp;
+
     public AssignedIssueEvent withPerformedViaGithubApp(Integration performedViaGithubApp) {
         this.performedViaGithubApp = performedViaGithubApp;
         return this;
@@ -94,9 +104,23 @@ public class AssignedIssueEvent {
     
     @JsonProperty("url")
     public String url;
+
     public AssignedIssueEvent withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public AssignedIssueEvent(@JsonProperty("actor") SimpleUser actor, @JsonProperty("assignee") SimpleUser assignee, @JsonProperty("assigner") SimpleUser assigner, @JsonProperty("commit_id") String commitId, @JsonProperty("commit_url") String commitUrl, @JsonProperty("created_at") String createdAt, @JsonProperty("event") String event, @JsonProperty("id") Long id, @JsonProperty("node_id") String nodeId, @JsonProperty("performed_via_github_app") Integration performedViaGithubApp, @JsonProperty("url") String url) {
+        this.actor = actor;
+        this.assignee = assignee;
+        this.assigner = assigner;
+        this.commitId = commitId;
+        this.commitUrl = commitUrl;
+        this.createdAt = createdAt;
+        this.event = event;
+        this.id = id;
+        this.nodeId = nodeId;
+        this.performedViaGithubApp = performedViaGithubApp;
+        this.url = url;
+  }
 }

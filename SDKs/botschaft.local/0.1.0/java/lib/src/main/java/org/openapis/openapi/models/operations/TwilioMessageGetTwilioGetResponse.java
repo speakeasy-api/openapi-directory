@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TwilioMessageGetTwilioGetResponse {
     
     public String contentType;
+
     public TwilioMessageGetTwilioGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TwilioMessageGetTwilioGetResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public TwilioMessageGetTwilioGetResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -26,6 +29,7 @@ public class TwilioMessageGetTwilioGetResponse {
     
     
     public Integer statusCode;
+
     public TwilioMessageGetTwilioGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class TwilioMessageGetTwilioGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TwilioMessageGetTwilioGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class TwilioMessageGetTwilioGetResponse {
      */
     
     public Object twilioMessageGetTwilioGet200ApplicationJSONAny;
+
     public TwilioMessageGetTwilioGetResponse withTwilioMessageGetTwilioGet200ApplicationJSONAny(Object twilioMessageGetTwilioGet200ApplicationJSONAny) {
         this.twilioMessageGetTwilioGet200ApplicationJSONAny = twilioMessageGetTwilioGet200ApplicationJSONAny;
         return this;
     }
     
+    public TwilioMessageGetTwilioGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

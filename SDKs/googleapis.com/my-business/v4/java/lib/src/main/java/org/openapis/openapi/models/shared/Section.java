@@ -18,6 +18,7 @@ public class Section {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Item[] items;
+
     public Section withItems(Item[] items) {
         this.items = items;
         return this;
@@ -29,6 +30,7 @@ public class Section {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public Label[] labels;
+
     public Section withLabels(Label[] labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class Section {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sectionId")
     public String sectionId;
+
     public Section withSectionId(String sectionId) {
         this.sectionId = sectionId;
         return this;
@@ -51,9 +54,11 @@ public class Section {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sectionType")
     public SectionSectionTypeEnum sectionType;
+
     public Section withSectionType(SectionSectionTypeEnum sectionType) {
         this.sectionType = sectionType;
         return this;
     }
     
+    public Section(){}
 }

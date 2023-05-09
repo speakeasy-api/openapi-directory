@@ -14,6 +14,7 @@ public class CreateDedicatedIpPoolRequestBody {
      */
     @JsonProperty("PoolName")
     public String poolName;
+
     public CreateDedicatedIpPoolRequestBody withPoolName(String poolName) {
         this.poolName = poolName;
         return this;
@@ -25,9 +26,13 @@ public class CreateDedicatedIpPoolRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateDedicatedIpPoolRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDedicatedIpPoolRequestBody(@JsonProperty("PoolName") String poolName) {
+        this.poolName = poolName;
+  }
 }

@@ -15,6 +15,7 @@ public class StoreStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("best_sold")
     public BestSold[] bestSold;
+
     public StoreStats withBestSold(BestSold[] bestSold) {
         this.bestSold = bestSold;
         return this;
@@ -23,6 +24,7 @@ public class StoreStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversions")
     public StoreStatsConversions conversions;
+
     public StoreStats withConversions(StoreStatsConversions conversions) {
         this.conversions = conversions;
         return this;
@@ -34,6 +36,7 @@ public class StoreStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public StoreStats withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -45,6 +48,7 @@ public class StoreStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("daily_visits")
     public DailyVisits[] dailyVisits;
+
     public StoreStats withDailyVisits(DailyVisits[] dailyVisits) {
         this.dailyVisits = dailyVisits;
         return this;
@@ -56,6 +60,7 @@ public class StoreStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public String from;
+
     public StoreStats withFrom(String from) {
         this.from = from;
         return this;
@@ -64,6 +69,7 @@ public class StoreStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("new_vs_returning_customers")
     public StoreStatsNewVsReturningCustomers newVsReturningCustomers;
+
     public StoreStats withNewVsReturningCustomers(StoreStatsNewVsReturningCustomers newVsReturningCustomers) {
         this.newVsReturningCustomers = newVsReturningCustomers;
         return this;
@@ -72,6 +78,7 @@ public class StoreStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("new_vs_returning_orders")
     public StoreStatsNewVsReturningOrders newVsReturningOrders;
+
     public StoreStats withNewVsReturningOrders(StoreStatsNewVsReturningOrders newVsReturningOrders) {
         this.newVsReturningOrders = newVsReturningOrders;
         return this;
@@ -80,6 +87,7 @@ public class StoreStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orders")
     public StoreStatsOrders orders;
+
     public StoreStats withOrders(StoreStatsOrders orders) {
         this.orders = orders;
         return this;
@@ -91,6 +99,7 @@ public class StoreStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_methods")
     public PaymentMethodFreq[] paymentMethods;
+
     public StoreStats withPaymentMethods(PaymentMethodFreq[] paymentMethods) {
         this.paymentMethods = paymentMethods;
         return this;
@@ -102,6 +111,7 @@ public class StoreStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referrers")
     public Referrer[] referrers;
+
     public StoreStats withReferrers(Referrer[] referrers) {
         this.referrers = referrers;
         return this;
@@ -110,6 +120,7 @@ public class StoreStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region_orders")
     public StoreStatsRegionOrders regionOrders;
+
     public StoreStats withRegionOrders(StoreStatsRegionOrders regionOrders) {
         this.regionOrders = regionOrders;
         return this;
@@ -121,6 +132,7 @@ public class StoreStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_frequencies_all")
     public Object[] searchFrequenciesAll;
+
     public StoreStats withSearchFrequenciesAll(Object[] searchFrequenciesAll) {
         this.searchFrequenciesAll = searchFrequenciesAll;
         return this;
@@ -132,6 +144,7 @@ public class StoreStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_frequencies_without_results")
     public Object[] searchFrequenciesWithoutResults;
+
     public StoreStats withSearchFrequenciesWithoutResults(Object[] searchFrequenciesWithoutResults) {
         this.searchFrequenciesWithoutResults = searchFrequenciesWithoutResults;
         return this;
@@ -143,6 +156,7 @@ public class StoreStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_methods")
     public ShippingMethodFreq[] shippingMethods;
+
     public StoreStats withShippingMethods(ShippingMethodFreq[] shippingMethods) {
         this.shippingMethods = shippingMethods;
         return this;
@@ -154,6 +168,7 @@ public class StoreStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public String to;
+
     public StoreStats withTo(String to) {
         this.to = to;
         return this;
@@ -165,6 +180,7 @@ public class StoreStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("traffic_type")
     public TrafficType[] trafficType;
+
     public StoreStats withTrafficType(TrafficType[] trafficType) {
         this.trafficType = trafficType;
         return this;
@@ -176,9 +192,11 @@ public class StoreStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visits")
     public Long visits;
+
     public StoreStats withVisits(Long visits) {
         this.visits = visits;
         return this;
     }
     
+    public StoreStats(){}
 }

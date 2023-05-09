@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteEventsIdRequest {
@@ -12,6 +13,7 @@ public class DeleteEventsIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=behaviour")
     public DeleteEventsIdBehaviourEnum behaviour;
+
     public DeleteEventsIdRequest withBehaviour(DeleteEventsIdBehaviourEnum behaviour) {
         this.behaviour = behaviour;
         return this;
@@ -22,9 +24,14 @@ public class DeleteEventsIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public DeleteEventsIdRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeleteEventsIdRequest(@JsonProperty("behaviour") DeleteEventsIdBehaviourEnum behaviour, @JsonProperty("id") String id) {
+        this.behaviour = behaviour;
+        this.id = id;
+  }
 }

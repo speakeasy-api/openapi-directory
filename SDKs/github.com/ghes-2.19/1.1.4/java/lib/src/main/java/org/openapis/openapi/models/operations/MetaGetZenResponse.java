@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MetaGetZenResponse {
     
     public String contentType;
+
     public MetaGetZenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MetaGetZenResponse {
     
     
     public Integer statusCode;
+
     public MetaGetZenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class MetaGetZenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MetaGetZenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class MetaGetZenResponse {
      */
     
     public String metaGetZen200TextPlainString;
+
     public MetaGetZenResponse withMetaGetZen200TextPlainString(String metaGetZen200TextPlainString) {
         this.metaGetZen200TextPlainString = metaGetZen200TextPlainString;
         return this;
     }
     
+    public MetaGetZenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

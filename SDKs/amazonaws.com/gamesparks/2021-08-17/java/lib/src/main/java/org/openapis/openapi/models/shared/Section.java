@@ -15,6 +15,7 @@ public class Section {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, Object> attributes;
+
     public Section withAttributes(java.util.Map<String, Object> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class Section {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Section withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class Section {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Size")
     public Long size;
+
     public Section withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public Section(){}
 }

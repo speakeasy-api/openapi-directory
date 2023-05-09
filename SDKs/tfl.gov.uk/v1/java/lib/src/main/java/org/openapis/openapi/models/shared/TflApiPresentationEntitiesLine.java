@@ -19,6 +19,7 @@ public class TflApiPresentationEntitiesLine {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public TflApiPresentationEntitiesLine withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -27,6 +28,7 @@ public class TflApiPresentationEntitiesLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crowding")
     public TflApiPresentationEntitiesCrowding crowding;
+
     public TflApiPresentationEntitiesLine withCrowding(TflApiPresentationEntitiesCrowding crowding) {
         this.crowding = crowding;
         return this;
@@ -35,6 +37,7 @@ public class TflApiPresentationEntitiesLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disruptions")
     public TflApiPresentationEntitiesDisruption[] disruptions;
+
     public TflApiPresentationEntitiesLine withDisruptions(TflApiPresentationEntitiesDisruption[] disruptions) {
         this.disruptions = disruptions;
         return this;
@@ -43,6 +46,7 @@ public class TflApiPresentationEntitiesLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TflApiPresentationEntitiesLine withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +55,7 @@ public class TflApiPresentationEntitiesLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineStatuses")
     public TflApiPresentationEntitiesLineStatus[] lineStatuses;
+
     public TflApiPresentationEntitiesLine withLineStatuses(TflApiPresentationEntitiesLineStatus[] lineStatuses) {
         this.lineStatuses = lineStatuses;
         return this;
@@ -59,6 +64,7 @@ public class TflApiPresentationEntitiesLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modeName")
     public String modeName;
+
     public TflApiPresentationEntitiesLine withModeName(String modeName) {
         this.modeName = modeName;
         return this;
@@ -69,6 +75,7 @@ public class TflApiPresentationEntitiesLine {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modified")
     public OffsetDateTime modified;
+
     public TflApiPresentationEntitiesLine withModified(OffsetDateTime modified) {
         this.modified = modified;
         return this;
@@ -77,6 +84,7 @@ public class TflApiPresentationEntitiesLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TflApiPresentationEntitiesLine withName(String name) {
         this.name = name;
         return this;
@@ -85,6 +93,7 @@ public class TflApiPresentationEntitiesLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routeSections")
     public TflApiPresentationEntitiesMatchedRoute[] routeSections;
+
     public TflApiPresentationEntitiesLine withRouteSections(TflApiPresentationEntitiesMatchedRoute[] routeSections) {
         this.routeSections = routeSections;
         return this;
@@ -93,9 +102,11 @@ public class TflApiPresentationEntitiesLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceTypes")
     public TflApiPresentationEntitiesLineServiceTypeInfo[] serviceTypes;
+
     public TflApiPresentationEntitiesLine withServiceTypes(TflApiPresentationEntitiesLineServiceTypeInfo[] serviceTypes) {
         this.serviceTypes = serviceTypes;
         return this;
     }
     
+    public TflApiPresentationEntitiesLine(){}
 }

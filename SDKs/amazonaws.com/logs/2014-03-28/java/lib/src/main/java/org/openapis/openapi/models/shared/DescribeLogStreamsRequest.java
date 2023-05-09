@@ -12,6 +12,7 @@ public class DescribeLogStreamsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("descending")
     public Boolean descending;
+
     public DescribeLogStreamsRequest withDescending(Boolean descending) {
         this.descending = descending;
         return this;
@@ -20,6 +21,7 @@ public class DescribeLogStreamsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public DescribeLogStreamsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -28,6 +30,7 @@ public class DescribeLogStreamsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroupIdentifier")
     public String logGroupIdentifier;
+
     public DescribeLogStreamsRequest withLogGroupIdentifier(String logGroupIdentifier) {
         this.logGroupIdentifier = logGroupIdentifier;
         return this;
@@ -36,6 +39,7 @@ public class DescribeLogStreamsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public DescribeLogStreamsRequest withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -44,6 +48,7 @@ public class DescribeLogStreamsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logStreamNamePrefix")
     public String logStreamNamePrefix;
+
     public DescribeLogStreamsRequest withLogStreamNamePrefix(String logStreamNamePrefix) {
         this.logStreamNamePrefix = logStreamNamePrefix;
         return this;
@@ -52,6 +57,7 @@ public class DescribeLogStreamsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeLogStreamsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -60,9 +66,11 @@ public class DescribeLogStreamsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderBy")
     public OrderByEnum orderBy;
+
     public DescribeLogStreamsRequest withOrderBy(OrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
     }
     
+    public DescribeLogStreamsRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DevicesPutRequest {
@@ -12,6 +13,7 @@ public class DevicesPutRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public DevicesPutRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class DevicesPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=switchNumber")
     public Integer switchNumber;
+
     public DevicesPutRequest withSwitchNumber(Integer switchNumber) {
         this.switchNumber = switchNumber;
         return this;
@@ -32,9 +35,14 @@ public class DevicesPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=switchState")
     public Boolean switchState;
+
     public DevicesPutRequest withSwitchState(Boolean switchState) {
         this.switchState = switchState;
         return this;
     }
     
+    public DevicesPutRequest(@JsonProperty("id") String id, @JsonProperty("switchState") Boolean switchState) {
+        this.id = id;
+        this.switchState = switchState;
+  }
 }

@@ -15,6 +15,7 @@ public class TimelineUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstOnline")
     public String firstOnline;
+
     public TimelineUpdate withFirstOnline(String firstOnline) {
         this.firstOnline = firstOnline;
         return this;
@@ -26,6 +27,7 @@ public class TimelineUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisherAcceptance")
     public String publisherAcceptance;
+
     public TimelineUpdate withPublisherAcceptance(String publisherAcceptance) {
         this.publisherAcceptance = publisherAcceptance;
         return this;
@@ -37,9 +39,11 @@ public class TimelineUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisherPublication")
     public String publisherPublication;
+
     public TimelineUpdate withPublisherPublication(String publisherPublication) {
         this.publisherPublication = publisherPublication;
         return this;
     }
     
+    public TimelineUpdate(){}
 }

@@ -12,6 +12,7 @@ public class ListServiceQuotasRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListServiceQuotasRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListServiceQuotasRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListServiceQuotasRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListServiceQuotasRequest {
     
     @JsonProperty("ServiceCode")
     public String serviceCode;
+
     public ListServiceQuotasRequest withServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
     }
     
+    public ListServiceQuotasRequest(@JsonProperty("ServiceCode") String serviceCode) {
+        this.serviceCode = serviceCode;
+  }
 }

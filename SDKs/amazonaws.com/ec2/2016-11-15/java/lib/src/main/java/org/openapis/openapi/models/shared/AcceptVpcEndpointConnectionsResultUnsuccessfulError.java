@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AcceptVpcEndpointConnectionsResultUnsuccessfulError {
     
     public String code;
+
     public AcceptVpcEndpointConnectionsResultUnsuccessfulError withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class AcceptVpcEndpointConnectionsResultUnsuccessfulError {
     
     
     public String message;
+
     public AcceptVpcEndpointConnectionsResultUnsuccessfulError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AcceptVpcEndpointConnectionsResultUnsuccessfulError(){}
 }

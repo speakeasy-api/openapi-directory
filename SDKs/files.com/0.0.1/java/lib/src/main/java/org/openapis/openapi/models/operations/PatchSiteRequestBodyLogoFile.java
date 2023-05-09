@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSiteRequestBodyLogoFile {
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public PatchSiteRequestBodyLogoFile withContent(byte[] content) {
         this.content = content;
         return this;
@@ -16,9 +18,14 @@ public class PatchSiteRequestBodyLogoFile {
     
     @SpeakeasyMetadata("multipartForm:name=logo_file")
     public String logoFile;
+
     public PatchSiteRequestBodyLogoFile withLogoFile(String logoFile) {
         this.logoFile = logoFile;
         return this;
     }
     
+    public PatchSiteRequestBodyLogoFile(@JsonProperty("content") byte[] content, @JsonProperty("logo_file") String logoFile) {
+        this.content = content;
+        this.logoFile = logoFile;
+  }
 }

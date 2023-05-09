@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeVpcPeeringConnectionsResponse {
     
     public String contentType;
+
     public DescribeVpcPeeringConnectionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeVpcPeeringConnectionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeVpcPeeringConnectionsOutput describeVpcPeeringConnectionsOutput;
+
     public DescribeVpcPeeringConnectionsResponse withDescribeVpcPeeringConnectionsOutput(org.openapis.openapi.models.shared.DescribeVpcPeeringConnectionsOutput describeVpcPeeringConnectionsOutput) {
         this.describeVpcPeeringConnectionsOutput = describeVpcPeeringConnectionsOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeVpcPeeringConnectionsResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeVpcPeeringConnectionsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeVpcPeeringConnectionsResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeVpcPeeringConnectionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeVpcPeeringConnectionsResponse {
      */
     
     public Object notFoundException;
+
     public DescribeVpcPeeringConnectionsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeVpcPeeringConnectionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeVpcPeeringConnectionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeVpcPeeringConnectionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeVpcPeeringConnectionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeVpcPeeringConnectionsResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeVpcPeeringConnectionsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeVpcPeeringConnectionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

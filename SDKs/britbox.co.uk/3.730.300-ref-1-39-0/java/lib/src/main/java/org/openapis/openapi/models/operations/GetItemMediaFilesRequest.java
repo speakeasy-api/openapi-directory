@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemMediaFilesRequest {
@@ -12,6 +13,7 @@ public class GetItemMediaFilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=delivery")
     public org.openapis.openapi.models.shared.MediaFileDeliveryEnum[] delivery;
+
     public GetItemMediaFilesRequest withDelivery(org.openapis.openapi.models.shared.MediaFileDeliveryEnum[] delivery) {
         this.delivery = delivery;
         return this;
@@ -22,6 +24,7 @@ public class GetItemMediaFilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
     public String device;
+
     public GetItemMediaFilesRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -52,6 +55,7 @@ public class GetItemMediaFilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetItemMediaFilesRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -69,6 +73,7 @@ public class GetItemMediaFilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=formats")
     public org.openapis.openapi.models.shared.MediaFileFormatsEnum[] formats;
+
     public GetItemMediaFilesRequest withFormats(org.openapis.openapi.models.shared.MediaFileFormatsEnum[] formats) {
         this.formats = formats;
         return this;
@@ -79,6 +84,7 @@ public class GetItemMediaFilesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetItemMediaFilesRequest withId(String id) {
         this.id = id;
         return this;
@@ -99,6 +105,7 @@ public class GetItemMediaFilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetItemMediaFilesRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -109,6 +116,7 @@ public class GetItemMediaFilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolution")
     public org.openapis.openapi.models.shared.MediaFileResolutionEnum resolution;
+
     public GetItemMediaFilesRequest withResolution(org.openapis.openapi.models.shared.MediaFileResolutionEnum resolution) {
         this.resolution = resolution;
         return this;
@@ -119,6 +127,7 @@ public class GetItemMediaFilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
     public String[] segments;
+
     public GetItemMediaFilesRequest withSegments(String[] segments) {
         this.segments = segments;
         return this;
@@ -129,9 +138,15 @@ public class GetItemMediaFilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub")
     public String sub;
+
     public GetItemMediaFilesRequest withSub(String sub) {
         this.sub = sub;
         return this;
     }
     
+    public GetItemMediaFilesRequest(@JsonProperty("delivery") org.openapis.openapi.models.shared.MediaFileDeliveryEnum[] delivery, @JsonProperty("id") String id, @JsonProperty("resolution") org.openapis.openapi.models.shared.MediaFileResolutionEnum resolution) {
+        this.delivery = delivery;
+        this.id = id;
+        this.resolution = resolution;
+  }
 }

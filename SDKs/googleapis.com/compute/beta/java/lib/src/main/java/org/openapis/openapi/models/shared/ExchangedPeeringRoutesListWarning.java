@@ -18,6 +18,7 @@ public class ExchangedPeeringRoutesListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ExchangedPeeringRoutesListWarningCodeEnum code;
+
     public ExchangedPeeringRoutesListWarning withCode(ExchangedPeeringRoutesListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class ExchangedPeeringRoutesListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ExchangedPeeringRoutesListWarningData[] data;
+
     public ExchangedPeeringRoutesListWarning withData(ExchangedPeeringRoutesListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class ExchangedPeeringRoutesListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ExchangedPeeringRoutesListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ExchangedPeeringRoutesListWarning(){}
 }

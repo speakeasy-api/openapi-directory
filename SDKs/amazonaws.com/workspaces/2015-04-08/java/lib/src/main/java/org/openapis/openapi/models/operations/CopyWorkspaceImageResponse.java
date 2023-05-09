@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CopyWorkspaceImageResponse {
@@ -12,6 +13,7 @@ public class CopyWorkspaceImageResponse {
      */
     
     public Object accessDeniedException;
+
     public CopyWorkspaceImageResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CopyWorkspaceImageResponse {
     
     
     public String contentType;
+
     public CopyWorkspaceImageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CopyWorkspaceImageResponse {
      */
     
     public org.openapis.openapi.models.shared.CopyWorkspaceImageResult copyWorkspaceImageResult;
+
     public CopyWorkspaceImageResponse withCopyWorkspaceImageResult(org.openapis.openapi.models.shared.CopyWorkspaceImageResult copyWorkspaceImageResult) {
         this.copyWorkspaceImageResult = copyWorkspaceImageResult;
         return this;
@@ -39,6 +43,7 @@ public class CopyWorkspaceImageResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public CopyWorkspaceImageResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -49,6 +54,7 @@ public class CopyWorkspaceImageResponse {
      */
     
     public Object operationNotSupportedException;
+
     public CopyWorkspaceImageResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -59,6 +65,7 @@ public class CopyWorkspaceImageResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CopyWorkspaceImageResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -69,6 +76,7 @@ public class CopyWorkspaceImageResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public CopyWorkspaceImageResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CopyWorkspaceImageResponse {
     
     
     public Integer statusCode;
+
     public CopyWorkspaceImageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CopyWorkspaceImageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CopyWorkspaceImageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CopyWorkspaceImageResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CopyWorkspaceImageResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class CopyWorkspaceImageResponse {
      */
     
     public Object resourceUnavailableException;
+
     public CopyWorkspaceImageResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
     }
     
+    public CopyWorkspaceImageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

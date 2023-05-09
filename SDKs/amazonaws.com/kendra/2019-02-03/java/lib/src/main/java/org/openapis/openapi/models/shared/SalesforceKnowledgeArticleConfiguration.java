@@ -15,6 +15,7 @@ public class SalesforceKnowledgeArticleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomKnowledgeArticleTypeConfigurations")
     public SalesforceCustomKnowledgeArticleTypeConfiguration[] customKnowledgeArticleTypeConfigurations;
+
     public SalesforceKnowledgeArticleConfiguration withCustomKnowledgeArticleTypeConfigurations(SalesforceCustomKnowledgeArticleTypeConfiguration[] customKnowledgeArticleTypeConfigurations) {
         this.customKnowledgeArticleTypeConfigurations = customKnowledgeArticleTypeConfigurations;
         return this;
@@ -22,6 +23,7 @@ public class SalesforceKnowledgeArticleConfiguration {
     
     @JsonProperty("IncludedStates")
     public SalesforceKnowledgeArticleStateEnum[] includedStates;
+
     public SalesforceKnowledgeArticleConfiguration withIncludedStates(SalesforceKnowledgeArticleStateEnum[] includedStates) {
         this.includedStates = includedStates;
         return this;
@@ -30,9 +32,13 @@ public class SalesforceKnowledgeArticleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardKnowledgeArticleTypeConfiguration")
     public SalesforceStandardKnowledgeArticleTypeConfiguration standardKnowledgeArticleTypeConfiguration;
+
     public SalesforceKnowledgeArticleConfiguration withStandardKnowledgeArticleTypeConfiguration(SalesforceStandardKnowledgeArticleTypeConfiguration standardKnowledgeArticleTypeConfiguration) {
         this.standardKnowledgeArticleTypeConfiguration = standardKnowledgeArticleTypeConfiguration;
         return this;
     }
     
+    public SalesforceKnowledgeArticleConfiguration(@JsonProperty("IncludedStates") SalesforceKnowledgeArticleStateEnum[] includedStates) {
+        this.includedStates = includedStates;
+  }
 }

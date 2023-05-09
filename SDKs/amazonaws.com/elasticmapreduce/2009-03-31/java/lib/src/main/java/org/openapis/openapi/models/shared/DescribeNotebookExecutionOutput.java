@@ -15,9 +15,11 @@ public class DescribeNotebookExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookExecution")
     public NotebookExecution notebookExecution;
+
     public DescribeNotebookExecutionOutput withNotebookExecution(NotebookExecution notebookExecution) {
         this.notebookExecution = notebookExecution;
         return this;
     }
     
+    public DescribeNotebookExecutionOutput(){}
 }

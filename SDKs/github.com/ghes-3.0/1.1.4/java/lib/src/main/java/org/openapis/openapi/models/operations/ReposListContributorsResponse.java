@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposListContributorsResponse {
     
     public String contentType;
+
     public ReposListContributorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposListContributorsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ReposListContributorsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ReposListContributorsResponse {
     
     
     public Integer statusCode;
+
     public ReposListContributorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ReposListContributorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposListContributorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ReposListContributorsResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposListContributorsResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,9 +56,14 @@ public class ReposListContributorsResponse {
      */
     
     public org.openapis.openapi.models.shared.Contributor[] contributors;
+
     public ReposListContributorsResponse withContributors(org.openapis.openapi.models.shared.Contributor[] contributors) {
         this.contributors = contributors;
         return this;
     }
     
+    public ReposListContributorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

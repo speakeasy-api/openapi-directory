@@ -15,9 +15,11 @@ public class PopulateVersionFilesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public java.util.Map<String, String> files;
+
     public PopulateVersionFilesRequest withFiles(java.util.Map<String, String> files) {
         this.files = files;
         return this;
     }
     
+    public PopulateVersionFilesRequest(){}
 }

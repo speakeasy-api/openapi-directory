@@ -15,6 +15,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribute")
     public DeviceAttributeEnum attribute;
+
     public Rule withAttribute(DeviceAttributeEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -23,6 +24,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operator")
     public RuleOperatorEnum operator;
+
     public Rule withOperator(RuleOperatorEnum operator) {
         this.operator = operator;
         return this;
@@ -31,9 +33,11 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Rule withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Rule(){}
 }

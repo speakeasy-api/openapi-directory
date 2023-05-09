@@ -12,6 +12,7 @@ public class OrgsListMembershipsForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public OrgsListMembershipsForAuthenticatedUserRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -22,6 +23,7 @@ public class OrgsListMembershipsForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public OrgsListMembershipsForAuthenticatedUserRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -32,9 +34,11 @@ public class OrgsListMembershipsForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public OrgsListMembershipsForAuthenticatedUserStateEnum state;
+
     public OrgsListMembershipsForAuthenticatedUserRequest withState(OrgsListMembershipsForAuthenticatedUserStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public OrgsListMembershipsForAuthenticatedUserRequest(){}
 }

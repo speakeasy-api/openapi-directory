@@ -14,6 +14,7 @@ public class PutTemplateActionRequestBody {
      */
     @JsonProperty("actionID")
     public String actionID;
+
     public PutTemplateActionRequestBody withActionID(String actionID) {
         this.actionID = actionID;
         return this;
@@ -24,6 +25,7 @@ public class PutTemplateActionRequestBody {
      */
     @JsonProperty("actionName")
     public String actionName;
+
     public PutTemplateActionRequestBody withActionName(String actionName) {
         this.actionName = actionName;
         return this;
@@ -35,6 +37,7 @@ public class PutTemplateActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public PutTemplateActionRequestBody withActive(Boolean active) {
         this.active = active;
         return this;
@@ -46,6 +49,7 @@ public class PutTemplateActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public PutTemplateActionRequestBodyCategoryEnum category;
+
     public PutTemplateActionRequestBody withCategory(PutTemplateActionRequestBodyCategoryEnum category) {
         this.category = category;
         return this;
@@ -57,6 +61,7 @@ public class PutTemplateActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PutTemplateActionRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -67,6 +72,7 @@ public class PutTemplateActionRequestBody {
      */
     @JsonProperty("documentIdentifier")
     public String documentIdentifier;
+
     public PutTemplateActionRequestBody withDocumentIdentifier(String documentIdentifier) {
         this.documentIdentifier = documentIdentifier;
         return this;
@@ -78,6 +84,7 @@ public class PutTemplateActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentVersion")
     public String documentVersion;
+
     public PutTemplateActionRequestBody withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -89,6 +96,7 @@ public class PutTemplateActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalParameters")
     public java.util.Map<String, org.openapis.openapi.models.shared.SsmExternalParameter> externalParameters;
+
     public PutTemplateActionRequestBody withExternalParameters(java.util.Map<String, org.openapis.openapi.models.shared.SsmExternalParameter> externalParameters) {
         this.externalParameters = externalParameters;
         return this;
@@ -99,6 +107,7 @@ public class PutTemplateActionRequestBody {
      */
     @JsonProperty("launchConfigurationTemplateID")
     public String launchConfigurationTemplateID;
+
     public PutTemplateActionRequestBody withLaunchConfigurationTemplateID(String launchConfigurationTemplateID) {
         this.launchConfigurationTemplateID = launchConfigurationTemplateID;
         return this;
@@ -110,6 +119,7 @@ public class PutTemplateActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mustSucceedForCutover")
     public Boolean mustSucceedForCutover;
+
     public PutTemplateActionRequestBody withMustSucceedForCutover(Boolean mustSucceedForCutover) {
         this.mustSucceedForCutover = mustSucceedForCutover;
         return this;
@@ -121,6 +131,7 @@ public class PutTemplateActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatingSystem")
     public String operatingSystem;
+
     public PutTemplateActionRequestBody withOperatingSystem(String operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
@@ -131,6 +142,7 @@ public class PutTemplateActionRequestBody {
      */
     @JsonProperty("order")
     public Long order;
+
     public PutTemplateActionRequestBody withOrder(Long order) {
         this.order = order;
         return this;
@@ -142,6 +154,7 @@ public class PutTemplateActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, org.openapis.openapi.models.shared.SsmParameterStoreParameter[]> parameters;
+
     public PutTemplateActionRequestBody withParameters(java.util.Map<String, org.openapis.openapi.models.shared.SsmParameterStoreParameter[]> parameters) {
         this.parameters = parameters;
         return this;
@@ -153,9 +166,17 @@ public class PutTemplateActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutSeconds")
     public Long timeoutSeconds;
+
     public PutTemplateActionRequestBody withTimeoutSeconds(Long timeoutSeconds) {
         this.timeoutSeconds = timeoutSeconds;
         return this;
     }
     
+    public PutTemplateActionRequestBody(@JsonProperty("actionID") String actionID, @JsonProperty("actionName") String actionName, @JsonProperty("documentIdentifier") String documentIdentifier, @JsonProperty("launchConfigurationTemplateID") String launchConfigurationTemplateID, @JsonProperty("order") Long order) {
+        this.actionID = actionID;
+        this.actionName = actionName;
+        this.documentIdentifier = documentIdentifier;
+        this.launchConfigurationTemplateID = launchConfigurationTemplateID;
+        this.order = order;
+  }
 }

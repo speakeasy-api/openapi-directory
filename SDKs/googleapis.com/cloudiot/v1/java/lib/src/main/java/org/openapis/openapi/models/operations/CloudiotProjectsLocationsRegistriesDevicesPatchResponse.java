@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudiotProjectsLocationsRegistriesDevicesPatchResponse {
     
     public String contentType;
+
     public CloudiotProjectsLocationsRegistriesDevicesPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudiotProjectsLocationsRegistriesDevicesPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.Device device;
+
     public CloudiotProjectsLocationsRegistriesDevicesPatchResponse withDevice(org.openapis.openapi.models.shared.Device device) {
         this.device = device;
         return this;
@@ -26,6 +29,7 @@ public class CloudiotProjectsLocationsRegistriesDevicesPatchResponse {
     
     
     public Integer statusCode;
+
     public CloudiotProjectsLocationsRegistriesDevicesPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudiotProjectsLocationsRegistriesDevicesPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudiotProjectsLocationsRegistriesDevicesPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudiotProjectsLocationsRegistriesDevicesPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

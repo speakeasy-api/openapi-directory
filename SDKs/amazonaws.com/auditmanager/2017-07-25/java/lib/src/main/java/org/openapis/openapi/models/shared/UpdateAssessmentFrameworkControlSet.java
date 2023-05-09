@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateAssessmentFrameworkControlSet {
     @JsonProperty("controls")
     public CreateAssessmentFrameworkControl[] controls;
+
     public UpdateAssessmentFrameworkControlSet withControls(CreateAssessmentFrameworkControl[] controls) {
         this.controls = controls;
         return this;
@@ -22,6 +23,7 @@ public class UpdateAssessmentFrameworkControlSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UpdateAssessmentFrameworkControlSet withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +31,14 @@ public class UpdateAssessmentFrameworkControlSet {
     
     @JsonProperty("name")
     public String name;
+
     public UpdateAssessmentFrameworkControlSet withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateAssessmentFrameworkControlSet(@JsonProperty("controls") CreateAssessmentFrameworkControl[] controls, @JsonProperty("name") String name) {
+        this.controls = controls;
+        this.name = name;
+  }
 }

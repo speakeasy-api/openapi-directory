@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetFolderOutput {
     @JsonProperty("commitId")
     public String commitId;
+
     public GetFolderOutput withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -22,6 +23,7 @@ public class GetFolderOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public File[] files;
+
     public GetFolderOutput withFiles(File[] files) {
         this.files = files;
         return this;
@@ -29,6 +31,7 @@ public class GetFolderOutput {
     
     @JsonProperty("folderPath")
     public String folderPath;
+
     public GetFolderOutput withFolderPath(String folderPath) {
         this.folderPath = folderPath;
         return this;
@@ -37,6 +40,7 @@ public class GetFolderOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subFolders")
     public Folder[] subFolders;
+
     public GetFolderOutput withSubFolders(Folder[] subFolders) {
         this.subFolders = subFolders;
         return this;
@@ -45,6 +49,7 @@ public class GetFolderOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subModules")
     public SubModule[] subModules;
+
     public GetFolderOutput withSubModules(SubModule[] subModules) {
         this.subModules = subModules;
         return this;
@@ -53,6 +58,7 @@ public class GetFolderOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("symbolicLinks")
     public SymbolicLink[] symbolicLinks;
+
     public GetFolderOutput withSymbolicLinks(SymbolicLink[] symbolicLinks) {
         this.symbolicLinks = symbolicLinks;
         return this;
@@ -61,9 +67,14 @@ public class GetFolderOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("treeId")
     public String treeId;
+
     public GetFolderOutput withTreeId(String treeId) {
         this.treeId = treeId;
         return this;
     }
     
+    public GetFolderOutput(@JsonProperty("commitId") String commitId, @JsonProperty("folderPath") String folderPath) {
+        this.commitId = commitId;
+        this.folderPath = folderPath;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopTalkRequest {
@@ -12,9 +13,13 @@ public class StopTalkRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uuid")
     public String uuid;
+
     public StopTalkRequest withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public StopTalkRequest(@JsonProperty("uuid") String uuid) {
+        this.uuid = uuid;
+  }
 }

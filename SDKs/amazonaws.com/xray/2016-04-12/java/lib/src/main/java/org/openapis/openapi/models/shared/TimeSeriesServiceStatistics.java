@@ -23,6 +23,7 @@ public class TimeSeriesServiceStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EdgeSummaryStatistics")
     public EdgeStatistics edgeSummaryStatistics;
+
     public TimeSeriesServiceStatistics withEdgeSummaryStatistics(EdgeStatistics edgeSummaryStatistics) {
         this.edgeSummaryStatistics = edgeSummaryStatistics;
         return this;
@@ -31,6 +32,7 @@ public class TimeSeriesServiceStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResponseTimeHistogram")
     public HistogramEntry[] responseTimeHistogram;
+
     public TimeSeriesServiceStatistics withResponseTimeHistogram(HistogramEntry[] responseTimeHistogram) {
         this.responseTimeHistogram = responseTimeHistogram;
         return this;
@@ -39,6 +41,7 @@ public class TimeSeriesServiceStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceForecastStatistics")
     public ForecastStatistics serviceForecastStatistics;
+
     public TimeSeriesServiceStatistics withServiceForecastStatistics(ForecastStatistics serviceForecastStatistics) {
         this.serviceForecastStatistics = serviceForecastStatistics;
         return this;
@@ -50,6 +53,7 @@ public class TimeSeriesServiceStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceSummaryStatistics")
     public ServiceStatistics serviceSummaryStatistics;
+
     public TimeSeriesServiceStatistics withServiceSummaryStatistics(ServiceStatistics serviceSummaryStatistics) {
         this.serviceSummaryStatistics = serviceSummaryStatistics;
         return this;
@@ -60,9 +64,11 @@ public class TimeSeriesServiceStatistics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Timestamp")
     public OffsetDateTime timestamp;
+
     public TimeSeriesServiceStatistics withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public TimeSeriesServiceStatistics(){}
 }

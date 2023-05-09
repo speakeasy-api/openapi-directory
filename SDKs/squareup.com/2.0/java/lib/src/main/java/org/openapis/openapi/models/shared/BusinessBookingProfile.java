@@ -15,6 +15,7 @@ public class BusinessBookingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_user_cancel")
     public Boolean allowUserCancel;
+
     public BusinessBookingProfile withAllowUserCancel(Boolean allowUserCancel) {
         this.allowUserCancel = allowUserCancel;
         return this;
@@ -26,6 +27,7 @@ public class BusinessBookingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booking_enabled")
     public Boolean bookingEnabled;
+
     public BusinessBookingProfile withBookingEnabled(Boolean bookingEnabled) {
         this.bookingEnabled = bookingEnabled;
         return this;
@@ -37,6 +39,7 @@ public class BusinessBookingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booking_policy")
     public String bookingPolicy;
+
     public BusinessBookingProfile withBookingPolicy(String bookingPolicy) {
         this.bookingPolicy = bookingPolicy;
         return this;
@@ -48,6 +51,7 @@ public class BusinessBookingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("business_appointment_settings")
     public BusinessAppointmentSettings businessAppointmentSettings;
+
     public BusinessBookingProfile withBusinessAppointmentSettings(BusinessAppointmentSettings businessAppointmentSettings) {
         this.businessAppointmentSettings = businessAppointmentSettings;
         return this;
@@ -59,6 +63,7 @@ public class BusinessBookingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public BusinessBookingProfile withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -72,6 +77,7 @@ public class BusinessBookingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_timezone_choice")
     public String customerTimezoneChoice;
+
     public BusinessBookingProfile withCustomerTimezoneChoice(String customerTimezoneChoice) {
         this.customerTimezoneChoice = customerTimezoneChoice;
         return this;
@@ -83,9 +89,11 @@ public class BusinessBookingProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seller_id")
     public String sellerId;
+
     public BusinessBookingProfile withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
     }
     
+    public BusinessBookingProfile(){}
 }

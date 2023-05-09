@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateSnapshotCopyGrantMessage - The result of the &lt;code&gt;CreateSnapshotCopyGrant&lt;/code&gt; action.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateSnapshotCopyGrantMessage {
     
     public String kmsKeyId;
+
     public CreateSnapshotCopyGrantMessage withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -19,6 +20,7 @@ public class CreateSnapshotCopyGrantMessage {
     
     
     public String snapshotCopyGrantName;
+
     public CreateSnapshotCopyGrantMessage withSnapshotCopyGrantName(String snapshotCopyGrantName) {
         this.snapshotCopyGrantName = snapshotCopyGrantName;
         return this;
@@ -26,9 +28,13 @@ public class CreateSnapshotCopyGrantMessage {
     
     
     public TagList[] tags;
+
     public CreateSnapshotCopyGrantMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSnapshotCopyGrantMessage(@JsonProperty("SnapshotCopyGrantName") String snapshotCopyGrantName) {
+        this.snapshotCopyGrantName = snapshotCopyGrantName;
+  }
 }

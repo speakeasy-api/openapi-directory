@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSamplingRuleResponse {
     
     public String contentType;
+
     public UpdateSamplingRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSamplingRuleResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateSamplingRuleResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -26,6 +29,7 @@ public class UpdateSamplingRuleResponse {
     
     
     public Integer statusCode;
+
     public UpdateSamplingRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateSamplingRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSamplingRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateSamplingRuleResponse {
      */
     
     public Object throttledException;
+
     public UpdateSamplingRuleResponse withThrottledException(Object throttledException) {
         this.throttledException = throttledException;
         return this;
@@ -53,9 +59,14 @@ public class UpdateSamplingRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSamplingRuleResult updateSamplingRuleResult;
+
     public UpdateSamplingRuleResponse withUpdateSamplingRuleResult(org.openapis.openapi.models.shared.UpdateSamplingRuleResult updateSamplingRuleResult) {
         this.updateSamplingRuleResult = updateSamplingRuleResult;
         return this;
     }
     
+    public UpdateSamplingRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

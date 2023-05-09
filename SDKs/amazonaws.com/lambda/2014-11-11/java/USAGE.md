@@ -3,49 +3,47 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AddEventSourceRequestBody;
 import org.openapis.openapi.models.operations.AddEventSourceRequest;
+import org.openapis.openapi.models.operations.AddEventSourceRequestBody;
 import org.openapis.openapi.models.operations.AddEventSourceResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            AddEventSourceRequest req = new AddEventSourceRequest() {{
-                requestBody = new AddEventSourceRequestBody() {{
-                    batchSize = 548814;
-                    eventSource = "provident";
-                    functionName = "distinctio";
-                    parameters = new java.util.HashMap<String, String>() {{
-                        put("unde", "nulla");
-                        put("corrupti", "illum");
-                        put("vel", "error");
-                        put("deserunt", "suscipit");
-                    }};
-                    role = "iure";
-                }};
-                xAmzAlgorithm = "magnam";
-                xAmzContentSha256 = "debitis";
-                xAmzCredential = "ipsa";
-                xAmzDate = "delectus";
-                xAmzSecurityToken = "tempora";
-                xAmzSignature = "suscipit";
-                xAmzSignedHeaders = "molestiae";
-            }}            
+            AddEventSourceRequest req = new AddEventSourceRequest(                new AddEventSourceRequestBody("provident", "distinctio", "quibusdam") {{
+                                batchSize = 602763L;
+                                parameters = new java.util.HashMap<String, String>() {{
+                                    put("corrupti", "illum");
+                                    put("vel", "error");
+                                    put("deserunt", "suscipit");
+                                    put("iure", "magnam");
+                                }};
+                            }};) {{
+                xAmzAlgorithm = "debitis";
+                xAmzContentSha256 = "ipsa";
+                xAmzCredential = "delectus";
+                xAmzDate = "tempora";
+                xAmzSecurityToken = "suscipit";
+                xAmzSignature = "molestiae";
+                xAmzSignedHeaders = "minus";
+            }};            
 
             AddEventSourceResponse res = sdk.addEventSource(req);
 
-            if (res.eventSourceConfiguration.isPresent()) {
+            if (res.eventSourceConfiguration != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

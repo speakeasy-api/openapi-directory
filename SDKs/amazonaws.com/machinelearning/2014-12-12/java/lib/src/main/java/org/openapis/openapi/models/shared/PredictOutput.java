@@ -18,9 +18,11 @@ public class PredictOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Prediction")
     public Prediction prediction;
+
     public PredictOutput withPrediction(Prediction prediction) {
         this.prediction = prediction;
         return this;
     }
     
+    public PredictOutput(){}
 }

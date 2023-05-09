@@ -15,9 +15,11 @@ public class ActivityStartedEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerName")
     public String workerName;
+
     public ActivityStartedEventDetails withWorkerName(String workerName) {
         this.workerName = workerName;
         return this;
     }
     
+    public ActivityStartedEventDetails(){}
 }

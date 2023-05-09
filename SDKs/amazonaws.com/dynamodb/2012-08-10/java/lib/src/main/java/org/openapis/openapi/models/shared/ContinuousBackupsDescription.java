@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ContinuousBackupsDescription {
     @JsonProperty("ContinuousBackupsStatus")
     public ContinuousBackupsStatusEnum continuousBackupsStatus;
+
     public ContinuousBackupsDescription withContinuousBackupsStatus(ContinuousBackupsStatusEnum continuousBackupsStatus) {
         this.continuousBackupsStatus = continuousBackupsStatus;
         return this;
@@ -22,9 +23,13 @@ public class ContinuousBackupsDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PointInTimeRecoveryDescription")
     public PointInTimeRecoveryDescription pointInTimeRecoveryDescription;
+
     public ContinuousBackupsDescription withPointInTimeRecoveryDescription(PointInTimeRecoveryDescription pointInTimeRecoveryDescription) {
         this.pointInTimeRecoveryDescription = pointInTimeRecoveryDescription;
         return this;
     }
     
+    public ContinuousBackupsDescription(@JsonProperty("ContinuousBackupsStatus") ContinuousBackupsStatusEnum continuousBackupsStatus) {
+        this.continuousBackupsStatus = continuousBackupsStatus;
+  }
 }

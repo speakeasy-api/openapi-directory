@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BundleInformation {
     @JsonProperty("bundleNames")
     public String[] bundleNames;
+
     public BundleInformation withBundleNames(String[] bundleNames) {
         this.bundleNames = bundleNames;
         return this;
@@ -22,9 +23,13 @@ public class BundleInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricingTier")
     public PricingTierEnum pricingTier;
+
     public BundleInformation withPricingTier(PricingTierEnum pricingTier) {
         this.pricingTier = pricingTier;
         return this;
     }
     
+    public BundleInformation(@JsonProperty("bundleNames") String[] bundleNames) {
+        this.bundleNames = bundleNames;
+  }
 }

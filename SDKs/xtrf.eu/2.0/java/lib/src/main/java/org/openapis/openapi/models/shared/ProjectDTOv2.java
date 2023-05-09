@@ -15,6 +15,7 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budgetCode")
     public String budgetCode;
+
     public ProjectDTOv2 withBudgetCode(String budgetCode) {
         this.budgetCode = budgetCode;
         return this;
@@ -23,6 +24,7 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryIds")
     public Long[] categoryIds;
+
     public ProjectDTOv2 withCategoryIds(Long[] categoryIds) {
         this.categoryIds = categoryIds;
         return this;
@@ -31,6 +33,7 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientDeadline")
     public Long clientDeadline;
+
     public ProjectDTOv2 withClientDeadline(Long clientDeadline) {
         this.clientDeadline = clientDeadline;
         return this;
@@ -39,6 +42,7 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public Long clientId;
+
     public ProjectDTOv2 withClientId(Long clientId) {
         this.clientId = clientId;
         return this;
@@ -47,6 +51,7 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientNotes")
     public String clientNotes;
+
     public ProjectDTOv2 withClientNotes(String clientNotes) {
         this.clientNotes = clientNotes;
         return this;
@@ -55,6 +60,7 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientReferenceNumber")
     public String clientReferenceNumber;
+
     public ProjectDTOv2 withClientReferenceNumber(String clientReferenceNumber) {
         this.clientReferenceNumber = clientReferenceNumber;
         return this;
@@ -63,6 +69,7 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public DocumentsDTO documents;
+
     public ProjectDTOv2 withDocuments(DocumentsDTO documents) {
         this.documents = documents;
         return this;
@@ -71,6 +78,7 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ProjectDTOv2 withId(String id) {
         this.id = id;
         return this;
@@ -79,6 +87,7 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructionsForAllJobs")
     public String instructionsForAllJobs;
+
     public ProjectDTOv2 withInstructionsForAllJobs(String instructionsForAllJobs) {
         this.instructionsForAllJobs = instructionsForAllJobs;
         return this;
@@ -87,6 +96,7 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalNotes")
     public String internalNotes;
+
     public ProjectDTOv2 withInternalNotes(String internalNotes) {
         this.internalNotes = internalNotes;
         return this;
@@ -95,6 +105,7 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isClassicProject")
     public Boolean isClassicProject;
+
     public ProjectDTOv2 withIsClassicProject(Boolean isClassicProject) {
         this.isClassicProject = isClassicProject;
         return this;
@@ -103,6 +114,7 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languages")
     public ProjectLanguagesDTO languages;
+
     public ProjectDTOv2 withLanguages(ProjectLanguagesDTO languages) {
         this.languages = languages;
         return this;
@@ -111,6 +123,7 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProjectDTOv2 withName(String name) {
         this.name = name;
         return this;
@@ -119,6 +132,7 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderedOn")
     public Long orderedOn;
+
     public ProjectDTOv2 withOrderedOn(Long orderedOn) {
         this.orderedOn = orderedOn;
         return this;
@@ -127,6 +141,7 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public String origin;
+
     public ProjectDTOv2 withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -135,6 +150,7 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("people")
     public PeopleDTO people;
+
     public ProjectDTOv2 withPeople(PeopleDTO people) {
         this.people = people;
         return this;
@@ -143,6 +159,7 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public ProjectDTOv2 withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -151,6 +168,7 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectIdNumber")
     public String projectIdNumber;
+
     public ProjectDTOv2 withProjectIdNumber(String projectIdNumber) {
         this.projectIdNumber = projectIdNumber;
         return this;
@@ -159,6 +177,7 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quoteIdNumber")
     public String quoteIdNumber;
+
     public ProjectDTOv2 withQuoteIdNumber(String quoteIdNumber) {
         this.quoteIdNumber = quoteIdNumber;
         return this;
@@ -167,6 +186,7 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceId")
     public Long serviceId;
+
     public ProjectDTOv2 withServiceId(Long serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -175,6 +195,7 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ProjectDTOv2 withStatus(String status) {
         this.status = status;
         return this;
@@ -183,9 +204,11 @@ public class ProjectDTOv2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volume")
     public VolumeDTO volume;
+
     public ProjectDTOv2 withVolume(VolumeDTO volume) {
         this.volume = volume;
         return this;
     }
     
+    public ProjectDTOv2(){}
 }

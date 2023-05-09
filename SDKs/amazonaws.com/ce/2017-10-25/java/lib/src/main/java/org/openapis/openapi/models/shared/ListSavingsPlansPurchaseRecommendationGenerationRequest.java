@@ -12,6 +12,7 @@ public class ListSavingsPlansPurchaseRecommendationGenerationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GenerationStatus")
     public GenerationStatusEnum generationStatus;
+
     public ListSavingsPlansPurchaseRecommendationGenerationRequest withGenerationStatus(GenerationStatusEnum generationStatus) {
         this.generationStatus = generationStatus;
         return this;
@@ -20,6 +21,7 @@ public class ListSavingsPlansPurchaseRecommendationGenerationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public ListSavingsPlansPurchaseRecommendationGenerationRequest withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -28,6 +30,7 @@ public class ListSavingsPlansPurchaseRecommendationGenerationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public ListSavingsPlansPurchaseRecommendationGenerationRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -36,9 +39,11 @@ public class ListSavingsPlansPurchaseRecommendationGenerationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationIds")
     public String[] recommendationIds;
+
     public ListSavingsPlansPurchaseRecommendationGenerationRequest withRecommendationIds(String[] recommendationIds) {
         this.recommendationIds = recommendationIds;
         return this;
     }
     
+    public ListSavingsPlansPurchaseRecommendationGenerationRequest(){}
 }

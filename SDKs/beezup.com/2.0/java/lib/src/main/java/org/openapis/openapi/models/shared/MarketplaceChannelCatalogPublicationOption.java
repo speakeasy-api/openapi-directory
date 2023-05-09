@@ -12,6 +12,7 @@ public class MarketplaceChannelCatalogPublicationOption {
      */
     @JsonProperty("feedType")
     public FeedTypeEnum feedType;
+
     public MarketplaceChannelCatalogPublicationOption withFeedType(FeedTypeEnum feedType) {
         this.feedType = feedType;
         return this;
@@ -26,6 +27,7 @@ public class MarketplaceChannelCatalogPublicationOption {
      */
     @JsonProperty("kind")
     public PublicationStrategyKindEnum kind;
+
     public MarketplaceChannelCatalogPublicationOption withKind(PublicationStrategyKindEnum kind) {
         this.kind = kind;
         return this;
@@ -33,6 +35,7 @@ public class MarketplaceChannelCatalogPublicationOption {
     
     @JsonProperty("link")
     public LinksPublishCatalogToMarketplaceLink link;
+
     public MarketplaceChannelCatalogPublicationOption withLink(LinksPublishCatalogToMarketplaceLink link) {
         this.link = link;
         return this;
@@ -43,6 +46,7 @@ public class MarketplaceChannelCatalogPublicationOption {
      */
     @JsonProperty("strategy")
     public String strategy;
+
     public MarketplaceChannelCatalogPublicationOption withStrategy(String strategy) {
         this.strategy = strategy;
         return this;
@@ -50,9 +54,17 @@ public class MarketplaceChannelCatalogPublicationOption {
     
     @JsonProperty("withUnpublish")
     public Boolean withUnpublish;
+
     public MarketplaceChannelCatalogPublicationOption withWithUnpublish(Boolean withUnpublish) {
         this.withUnpublish = withUnpublish;
         return this;
     }
     
+    public MarketplaceChannelCatalogPublicationOption(@JsonProperty("feedType") FeedTypeEnum feedType, @JsonProperty("kind") PublicationStrategyKindEnum kind, @JsonProperty("link") LinksPublishCatalogToMarketplaceLink link, @JsonProperty("strategy") String strategy, @JsonProperty("withUnpublish") Boolean withUnpublish) {
+        this.feedType = feedType;
+        this.kind = kind;
+        this.link = link;
+        this.strategy = strategy;
+        this.withUnpublish = withUnpublish;
+  }
 }

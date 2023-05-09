@@ -15,9 +15,11 @@ public class AwsS3BucketServerSideEncryptionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplyServerSideEncryptionByDefault")
     public AwsS3BucketServerSideEncryptionByDefault applyServerSideEncryptionByDefault;
+
     public AwsS3BucketServerSideEncryptionRule withApplyServerSideEncryptionByDefault(AwsS3BucketServerSideEncryptionByDefault applyServerSideEncryptionByDefault) {
         this.applyServerSideEncryptionByDefault = applyServerSideEncryptionByDefault;
         return this;
     }
     
+    public AwsS3BucketServerSideEncryptionRule(){}
 }

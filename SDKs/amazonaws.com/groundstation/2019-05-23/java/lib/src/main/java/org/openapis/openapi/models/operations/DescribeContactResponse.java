@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeContactResponse {
     
     public String contentType;
+
     public DescribeContactResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeContactResponse {
      */
     
     public Object dependencyException;
+
     public DescribeContactResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeContactResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeContactResponse describeContactResponse;
+
     public DescribeContactResponse withDescribeContactResponse(org.openapis.openapi.models.shared.DescribeContactResponse describeContactResponse) {
         this.describeContactResponse = describeContactResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeContactResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeContactResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeContactResponse {
     
     
     public Integer statusCode;
+
     public DescribeContactResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeContactResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeContactResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeContactResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeContactResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeContactResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

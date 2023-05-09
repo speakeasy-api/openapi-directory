@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEdgeResourceRequest {
@@ -12,6 +13,7 @@ public class GetEdgeResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=depth")
     public Long depth;
+
     public GetEdgeResourceRequest withDepth(Long depth) {
         this.depth = depth;
         return this;
@@ -22,6 +24,7 @@ public class GetEdgeResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public GetEdgeResourceDirectionEnum direction;
+
     public GetEdgeResourceRequest withDirection(GetEdgeResourceDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -32,6 +35,7 @@ public class GetEdgeResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entail")
     public Boolean entail;
+
     public GetEdgeResourceRequest withEntail(Boolean entail) {
         this.entail = entail;
         return this;
@@ -42,6 +46,7 @@ public class GetEdgeResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=graph")
     public GetEdgeResourceGraphEnum graph;
+
     public GetEdgeResourceRequest withGraph(GetEdgeResourceGraphEnum graph) {
         this.graph = graph;
         return this;
@@ -52,6 +57,7 @@ public class GetEdgeResourceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetEdgeResourceRequest withId(String id) {
         this.id = id;
         return this;
@@ -62,9 +68,13 @@ public class GetEdgeResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=relationship_type")
     public String[] relationshipType;
+
     public GetEdgeResourceRequest withRelationshipType(String[] relationshipType) {
         this.relationshipType = relationshipType;
         return this;
     }
     
+    public GetEdgeResourceRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

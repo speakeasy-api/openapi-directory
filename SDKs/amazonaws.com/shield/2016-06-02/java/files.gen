@@ -217,4 +217,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateEmergencyContactSetti
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateProtectionGroupRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateSubscriptionRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

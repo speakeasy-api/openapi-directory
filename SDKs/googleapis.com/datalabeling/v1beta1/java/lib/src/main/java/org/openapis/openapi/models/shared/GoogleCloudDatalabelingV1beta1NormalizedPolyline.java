@@ -18,9 +18,11 @@ public class GoogleCloudDatalabelingV1beta1NormalizedPolyline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("normalizedVertices")
     public GoogleCloudDatalabelingV1beta1NormalizedVertex[] normalizedVertices;
+
     public GoogleCloudDatalabelingV1beta1NormalizedPolyline withNormalizedVertices(GoogleCloudDatalabelingV1beta1NormalizedVertex[] normalizedVertices) {
         this.normalizedVertices = normalizedVertices;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1NormalizedPolyline(){}
 }

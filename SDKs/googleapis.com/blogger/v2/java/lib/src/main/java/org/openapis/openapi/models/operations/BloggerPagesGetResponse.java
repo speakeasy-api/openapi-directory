@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BloggerPagesGetResponse {
     
     public String contentType;
+
     public BloggerPagesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BloggerPagesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Page page;
+
     public BloggerPagesGetResponse withPage(org.openapis.openapi.models.shared.Page page) {
         this.page = page;
         return this;
@@ -26,6 +29,7 @@ public class BloggerPagesGetResponse {
     
     
     public Integer statusCode;
+
     public BloggerPagesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BloggerPagesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BloggerPagesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BloggerPagesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

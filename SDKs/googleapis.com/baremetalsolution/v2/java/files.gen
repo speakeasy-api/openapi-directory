@@ -212,4 +212,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/VolumeSnapshotTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/VolumeSnapshot.java
 lib/src/main/java/org/openapis/openapi/models/shared/VolumeSnapshotInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListVolumeSnapshotsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateStackResponse {
@@ -12,6 +13,7 @@ public class UpdateStackResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateStackResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateStackResponse {
     
     
     public String contentType;
+
     public UpdateStackResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateStackResponse {
      */
     
     public Object incompatibleImageException;
+
     public UpdateStackResponse withIncompatibleImageException(Object incompatibleImageException) {
         this.incompatibleImageException = incompatibleImageException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateStackResponse {
      */
     
     public Object invalidAccountStatusException;
+
     public UpdateStackResponse withInvalidAccountStatusException(Object invalidAccountStatusException) {
         this.invalidAccountStatusException = invalidAccountStatusException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateStackResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public UpdateStackResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateStackResponse {
      */
     
     public Object invalidRoleException;
+
     public UpdateStackResponse withInvalidRoleException(Object invalidRoleException) {
         this.invalidRoleException = invalidRoleException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateStackResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateStackResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class UpdateStackResponse {
      */
     
     public Object operationNotPermittedException;
+
     public UpdateStackResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -86,6 +95,7 @@ public class UpdateStackResponse {
     
     
     public Integer statusCode;
+
     public UpdateStackResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class UpdateStackResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateStackResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class UpdateStackResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateStackResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -113,6 +125,7 @@ public class UpdateStackResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateStackResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -123,9 +136,14 @@ public class UpdateStackResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateStackResult updateStackResult;
+
     public UpdateStackResponse withUpdateStackResult(org.openapis.openapi.models.shared.UpdateStackResult updateStackResult) {
         this.updateStackResult = updateStackResult;
         return this;
     }
     
+    public UpdateStackResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -19,9 +19,11 @@ public class DeleteShiftResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public DeleteShiftResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public DeleteShiftResponse(){}
 }

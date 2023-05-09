@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchChargeStationRequest {
@@ -12,6 +13,7 @@ public class PatchChargeStationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PatchChargeStationRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +24,14 @@ public class PatchChargeStationRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Schema1 schema1;
+
     public PatchChargeStationRequest withSchema1(org.openapis.openapi.models.shared.Schema1 schema1) {
         this.schema1 = schema1;
         return this;
     }
     
+    public PatchChargeStationRequest(@JsonProperty("id") String id, @JsonProperty("schema1") org.openapis.openapi.models.shared.Schema1 schema1) {
+        this.id = id;
+        this.schema1 = schema1;
+  }
 }

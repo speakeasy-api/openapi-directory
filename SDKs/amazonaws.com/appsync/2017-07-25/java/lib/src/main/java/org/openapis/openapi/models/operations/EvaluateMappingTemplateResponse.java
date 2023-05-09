@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EvaluateMappingTemplateResponse {
@@ -12,6 +13,7 @@ public class EvaluateMappingTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public EvaluateMappingTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class EvaluateMappingTemplateResponse {
      */
     
     public Object badRequestException;
+
     public EvaluateMappingTemplateResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class EvaluateMappingTemplateResponse {
     
     
     public String contentType;
+
     public EvaluateMappingTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class EvaluateMappingTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.EvaluateMappingTemplateResponse evaluateMappingTemplateResponse;
+
     public EvaluateMappingTemplateResponse withEvaluateMappingTemplateResponse(org.openapis.openapi.models.shared.EvaluateMappingTemplateResponse evaluateMappingTemplateResponse) {
         this.evaluateMappingTemplateResponse = evaluateMappingTemplateResponse;
         return this;
@@ -49,6 +54,7 @@ public class EvaluateMappingTemplateResponse {
      */
     
     public Object internalFailureException;
+
     public EvaluateMappingTemplateResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -56,6 +62,7 @@ public class EvaluateMappingTemplateResponse {
     
     
     public Integer statusCode;
+
     public EvaluateMappingTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class EvaluateMappingTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EvaluateMappingTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EvaluateMappingTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

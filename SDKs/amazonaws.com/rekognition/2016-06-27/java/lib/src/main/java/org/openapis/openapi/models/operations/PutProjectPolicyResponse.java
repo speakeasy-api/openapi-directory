@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutProjectPolicyResponse {
@@ -12,6 +13,7 @@ public class PutProjectPolicyResponse {
      */
     
     public Object accessDeniedException;
+
     public PutProjectPolicyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class PutProjectPolicyResponse {
     
     
     public String contentType;
+
     public PutProjectPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutProjectPolicyResponse {
      */
     
     public Object internalServerError;
+
     public PutProjectPolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class PutProjectPolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public PutProjectPolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class PutProjectPolicyResponse {
      */
     
     public Object invalidPolicyRevisionIdException;
+
     public PutProjectPolicyResponse withInvalidPolicyRevisionIdException(Object invalidPolicyRevisionIdException) {
         this.invalidPolicyRevisionIdException = invalidPolicyRevisionIdException;
         return this;
@@ -59,6 +65,7 @@ public class PutProjectPolicyResponse {
      */
     
     public Object limitExceededException;
+
     public PutProjectPolicyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class PutProjectPolicyResponse {
      */
     
     public Object malformedPolicyDocumentException;
+
     public PutProjectPolicyResponse withMalformedPolicyDocumentException(Object malformedPolicyDocumentException) {
         this.malformedPolicyDocumentException = malformedPolicyDocumentException;
         return this;
@@ -79,6 +87,7 @@ public class PutProjectPolicyResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public PutProjectPolicyResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -89,6 +98,7 @@ public class PutProjectPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.PutProjectPolicyResponse putProjectPolicyResponse;
+
     public PutProjectPolicyResponse withPutProjectPolicyResponse(org.openapis.openapi.models.shared.PutProjectPolicyResponse putProjectPolicyResponse) {
         this.putProjectPolicyResponse = putProjectPolicyResponse;
         return this;
@@ -99,6 +109,7 @@ public class PutProjectPolicyResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public PutProjectPolicyResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -109,6 +120,7 @@ public class PutProjectPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutProjectPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -119,6 +131,7 @@ public class PutProjectPolicyResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public PutProjectPolicyResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -126,6 +139,7 @@ public class PutProjectPolicyResponse {
     
     
     public Integer statusCode;
+
     public PutProjectPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class PutProjectPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutProjectPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,9 +158,14 @@ public class PutProjectPolicyResponse {
      */
     
     public Object throttlingException;
+
     public PutProjectPolicyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public PutProjectPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

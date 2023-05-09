@@ -19,6 +19,7 @@ public class AuditLogEventContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_authentication_method")
     public AuditLogEventContextApiAuthenticationMethodEnum apiAuthenticationMethod;
+
     public AuditLogEventContext withApiAuthenticationMethod(AuditLogEventContextApiAuthenticationMethodEnum apiAuthenticationMethod) {
         this.apiAuthenticationMethod = apiAuthenticationMethod;
         return this;
@@ -30,6 +31,7 @@ public class AuditLogEventContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_ip_address")
     public String clientIpAddress;
+
     public AuditLogEventContext withClientIpAddress(String clientIpAddress) {
         this.clientIpAddress = clientIpAddress;
         return this;
@@ -42,6 +44,7 @@ public class AuditLogEventContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context_type")
     public AuditLogEventContextContextTypeEnum contextType;
+
     public AuditLogEventContext withContextType(AuditLogEventContextContextTypeEnum contextType) {
         this.contextType = contextType;
         return this;
@@ -54,6 +57,7 @@ public class AuditLogEventContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauth_app_name")
     public String oauthAppName;
+
     public AuditLogEventContext withOauthAppName(String oauthAppName) {
         this.oauthAppName = oauthAppName;
         return this;
@@ -65,9 +69,11 @@ public class AuditLogEventContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_agent")
     public String userAgent;
+
     public AuditLogEventContext withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
     }
     
+    public AuditLogEventContext(){}
 }

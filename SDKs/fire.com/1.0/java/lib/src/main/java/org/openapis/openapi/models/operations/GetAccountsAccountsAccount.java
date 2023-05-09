@@ -15,6 +15,7 @@ public class GetAccountsAccountsAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance")
     public Long balance;
+
     public GetAccountsAccountsAccount withBalance(Long balance) {
         this.balance = balance;
         return this;
@@ -26,6 +27,7 @@ public class GetAccountsAccountsAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cbic")
     public String cbic;
+
     public GetAccountsAccountsAccount withCbic(String cbic) {
         this.cbic = cbic;
         return this;
@@ -37,6 +39,7 @@ public class GetAccountsAccountsAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ccan")
     public String ccan;
+
     public GetAccountsAccountsAccount withCcan(String ccan) {
         this.ccan = ccan;
         return this;
@@ -48,6 +51,7 @@ public class GetAccountsAccountsAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ciban")
     public String ciban;
+
     public GetAccountsAccountsAccount withCiban(String ciban) {
         this.ciban = ciban;
         return this;
@@ -59,6 +63,7 @@ public class GetAccountsAccountsAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cnsc")
     public String cnsc;
+
     public GetAccountsAccountsAccount withCnsc(String cnsc) {
         this.cnsc = cnsc;
         return this;
@@ -70,6 +75,7 @@ public class GetAccountsAccountsAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colour")
     public String colour;
+
     public GetAccountsAccountsAccount withColour(String colour) {
         this.colour = colour;
         return this;
@@ -81,6 +87,7 @@ public class GetAccountsAccountsAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public GetAccountsAccountsAccountCurrency currency;
+
     public GetAccountsAccountsAccount withCurrency(GetAccountsAccountsAccountCurrency currency) {
         this.currency = currency;
         return this;
@@ -92,6 +99,7 @@ public class GetAccountsAccountsAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultAccount")
     public Boolean defaultAccount;
+
     public GetAccountsAccountsAccount withDefaultAccount(Boolean defaultAccount) {
         this.defaultAccount = defaultAccount;
         return this;
@@ -103,6 +111,7 @@ public class GetAccountsAccountsAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directDebitsAllowed")
     public Boolean directDebitsAllowed;
+
     public GetAccountsAccountsAccount withDirectDebitsAllowed(Boolean directDebitsAllowed) {
         this.directDebitsAllowed = directDebitsAllowed;
         return this;
@@ -114,6 +123,7 @@ public class GetAccountsAccountsAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fopOnly")
     public Boolean fopOnly;
+
     public GetAccountsAccountsAccount withFopOnly(Boolean fopOnly) {
         this.fopOnly = fopOnly;
         return this;
@@ -125,6 +135,7 @@ public class GetAccountsAccountsAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ican")
     public Long ican;
+
     public GetAccountsAccountsAccount withIcan(Long ican) {
         this.ican = ican;
         return this;
@@ -136,6 +147,7 @@ public class GetAccountsAccountsAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetAccountsAccountsAccount withName(String name) {
         this.name = name;
         return this;
@@ -147,9 +159,11 @@ public class GetAccountsAccountsAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GetAccountsAccountsAccountStatusEnum status;
+
     public GetAccountsAccountsAccount withStatus(GetAccountsAccountsAccountStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetAccountsAccountsAccount(){}
 }

@@ -15,6 +15,7 @@ public class TransformInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompressionType")
     public CompressionTypeEnum compressionType;
+
     public TransformInput withCompressionType(CompressionTypeEnum compressionType) {
         this.compressionType = compressionType;
         return this;
@@ -23,6 +24,7 @@ public class TransformInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentType")
     public String contentType;
+
     public TransformInput withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -30,6 +32,7 @@ public class TransformInput {
     
     @JsonProperty("DataSource")
     public TransformDataSource dataSource;
+
     public TransformInput withDataSource(TransformDataSource dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -38,9 +41,13 @@ public class TransformInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SplitType")
     public SplitTypeEnum splitType;
+
     public TransformInput withSplitType(SplitTypeEnum splitType) {
         this.splitType = splitType;
         return this;
     }
     
+    public TransformInput(@JsonProperty("DataSource") TransformDataSource dataSource) {
+        this.dataSource = dataSource;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -14,6 +15,7 @@ public class GetEfileReportsPresidentialRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetEfileReportsPresidentialRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -25,6 +27,7 @@ public class GetEfileReportsPresidentialRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
     public String[] committeeId;
+
     public GetEfileReportsPresidentialRequest withCommitteeId(String[] committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -35,6 +38,7 @@ public class GetEfileReportsPresidentialRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=file_number")
     public Integer[] fileNumber;
+
     public GetEfileReportsPresidentialRequest withFileNumber(Integer[] fileNumber) {
         this.fileNumber = fileNumber;
         return this;
@@ -46,6 +50,7 @@ public class GetEfileReportsPresidentialRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_receipt_date")
     public LocalDate maxReceiptDate;
+
     public GetEfileReportsPresidentialRequest withMaxReceiptDate(LocalDate maxReceiptDate) {
         this.maxReceiptDate = maxReceiptDate;
         return this;
@@ -57,6 +62,7 @@ public class GetEfileReportsPresidentialRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_receipt_date")
     public LocalDate minReceiptDate;
+
     public GetEfileReportsPresidentialRequest withMinReceiptDate(LocalDate minReceiptDate) {
         this.minReceiptDate = minReceiptDate;
         return this;
@@ -67,6 +73,7 @@ public class GetEfileReportsPresidentialRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetEfileReportsPresidentialRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -77,6 +84,7 @@ public class GetEfileReportsPresidentialRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetEfileReportsPresidentialRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -88,6 +96,7 @@ public class GetEfileReportsPresidentialRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q_filer")
     public String[] qFiler;
+
     public GetEfileReportsPresidentialRequest withQFiler(String[] qFiler) {
         this.qFiler = qFiler;
         return this;
@@ -99,6 +108,7 @@ public class GetEfileReportsPresidentialRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetEfileReportsPresidentialRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -109,6 +119,7 @@ public class GetEfileReportsPresidentialRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetEfileReportsPresidentialRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -119,6 +130,7 @@ public class GetEfileReportsPresidentialRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetEfileReportsPresidentialRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -129,9 +141,13 @@ public class GetEfileReportsPresidentialRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetEfileReportsPresidentialRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
     }
     
+    public GetEfileReportsPresidentialRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

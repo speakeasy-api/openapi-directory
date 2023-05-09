@@ -24,6 +24,7 @@ public class ListSubscriptionEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public ListSubscriptionEventsResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -35,6 +36,7 @@ public class ListSubscriptionEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public ListSubscriptionEventsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -46,9 +48,11 @@ public class ListSubscriptionEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription_events")
     public SubscriptionEvent[] subscriptionEvents;
+
     public ListSubscriptionEventsResponse withSubscriptionEvents(SubscriptionEvent[] subscriptionEvents) {
         this.subscriptionEvents = subscriptionEvents;
         return this;
     }
     
+    public ListSubscriptionEventsResponse(){}
 }

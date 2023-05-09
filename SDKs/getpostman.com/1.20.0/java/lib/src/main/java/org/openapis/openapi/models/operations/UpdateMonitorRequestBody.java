@@ -12,9 +12,11 @@ public class UpdateMonitorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitor")
     public UpdateMonitorRequestBodyMonitor monitor;
+
     public UpdateMonitorRequestBody withMonitor(UpdateMonitorRequestBodyMonitor monitor) {
         this.monitor = monitor;
         return this;
     }
     
+    public UpdateMonitorRequestBody(){}
 }

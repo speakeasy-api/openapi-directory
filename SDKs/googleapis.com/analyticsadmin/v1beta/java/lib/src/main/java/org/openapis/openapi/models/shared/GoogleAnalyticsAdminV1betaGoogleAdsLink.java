@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1betaGoogleAdsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adsPersonalizationEnabled")
     public Boolean adsPersonalizationEnabled;
+
     public GoogleAnalyticsAdminV1betaGoogleAdsLink withAdsPersonalizationEnabled(Boolean adsPersonalizationEnabled) {
         this.adsPersonalizationEnabled = adsPersonalizationEnabled;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1betaGoogleAdsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canManageClients")
     public Boolean canManageClients;
+
     public GoogleAnalyticsAdminV1betaGoogleAdsLink withCanManageClients(Boolean canManageClients) {
         this.canManageClients = canManageClients;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1betaGoogleAdsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleAnalyticsAdminV1betaGoogleAdsLink withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1betaGoogleAdsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creatorEmailAddress")
     public String creatorEmailAddress;
+
     public GoogleAnalyticsAdminV1betaGoogleAdsLink withCreatorEmailAddress(String creatorEmailAddress) {
         this.creatorEmailAddress = creatorEmailAddress;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAnalyticsAdminV1betaGoogleAdsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public String customerId;
+
     public GoogleAnalyticsAdminV1betaGoogleAdsLink withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAnalyticsAdminV1betaGoogleAdsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1betaGoogleAdsLink withName(String name) {
         this.name = name;
         return this;
@@ -84,9 +90,11 @@ public class GoogleAnalyticsAdminV1betaGoogleAdsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleAnalyticsAdminV1betaGoogleAdsLink withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaGoogleAdsLink(){}
 }

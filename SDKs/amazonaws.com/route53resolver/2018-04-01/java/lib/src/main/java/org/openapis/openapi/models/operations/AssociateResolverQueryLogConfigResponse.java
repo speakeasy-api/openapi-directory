@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateResolverQueryLogConfigResponse {
@@ -12,6 +13,7 @@ public class AssociateResolverQueryLogConfigResponse {
      */
     
     public Object accessDeniedException;
+
     public AssociateResolverQueryLogConfigResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AssociateResolverQueryLogConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateResolverQueryLogConfigResponse associateResolverQueryLogConfigResponse;
+
     public AssociateResolverQueryLogConfigResponse withAssociateResolverQueryLogConfigResponse(org.openapis.openapi.models.shared.AssociateResolverQueryLogConfigResponse associateResolverQueryLogConfigResponse) {
         this.associateResolverQueryLogConfigResponse = associateResolverQueryLogConfigResponse;
         return this;
@@ -29,6 +32,7 @@ public class AssociateResolverQueryLogConfigResponse {
     
     
     public String contentType;
+
     public AssociateResolverQueryLogConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AssociateResolverQueryLogConfigResponse {
      */
     
     public Object internalServiceErrorException;
+
     public AssociateResolverQueryLogConfigResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateResolverQueryLogConfigResponse {
      */
     
     public Object invalidParameterException;
+
     public AssociateResolverQueryLogConfigResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateResolverQueryLogConfigResponse {
      */
     
     public Object invalidRequestException;
+
     public AssociateResolverQueryLogConfigResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateResolverQueryLogConfigResponse {
      */
     
     public Object limitExceededException;
+
     public AssociateResolverQueryLogConfigResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class AssociateResolverQueryLogConfigResponse {
     
     
     public Integer statusCode;
+
     public AssociateResolverQueryLogConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class AssociateResolverQueryLogConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateResolverQueryLogConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class AssociateResolverQueryLogConfigResponse {
      */
     
     public Object resourceExistsException;
+
     public AssociateResolverQueryLogConfigResponse withResourceExistsException(Object resourceExistsException) {
         this.resourceExistsException = resourceExistsException;
         return this;
@@ -103,6 +114,7 @@ public class AssociateResolverQueryLogConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateResolverQueryLogConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,9 +125,14 @@ public class AssociateResolverQueryLogConfigResponse {
      */
     
     public Object throttlingException;
+
     public AssociateResolverQueryLogConfigResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public AssociateResolverQueryLogConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

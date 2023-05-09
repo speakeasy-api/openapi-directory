@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRateBasedRuleResponse {
     
     public String contentType;
+
     public CreateRateBasedRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateRateBasedRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRateBasedRuleResponse createRateBasedRuleResponse;
+
     public CreateRateBasedRuleResponse withCreateRateBasedRuleResponse(org.openapis.openapi.models.shared.CreateRateBasedRuleResponse createRateBasedRuleResponse) {
         this.createRateBasedRuleResponse = createRateBasedRuleResponse;
         return this;
@@ -26,6 +29,7 @@ public class CreateRateBasedRuleResponse {
     
     
     public Integer statusCode;
+
     public CreateRateBasedRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateRateBasedRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRateBasedRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class CreateRateBasedRuleResponse {
      */
     
     public Object wafBadRequestException;
+
     public CreateRateBasedRuleResponse withWAFBadRequestException(Object wafBadRequestException) {
         this.wafBadRequestException = wafBadRequestException;
         return this;
@@ -53,6 +59,7 @@ public class CreateRateBasedRuleResponse {
      */
     
     public Object wafDisallowedNameException;
+
     public CreateRateBasedRuleResponse withWAFDisallowedNameException(Object wafDisallowedNameException) {
         this.wafDisallowedNameException = wafDisallowedNameException;
         return this;
@@ -63,6 +70,7 @@ public class CreateRateBasedRuleResponse {
      */
     
     public Object wafInternalErrorException;
+
     public CreateRateBasedRuleResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -73,6 +81,7 @@ public class CreateRateBasedRuleResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public CreateRateBasedRuleResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -83,6 +92,7 @@ public class CreateRateBasedRuleResponse {
      */
     
     public Object wafLimitsExceededException;
+
     public CreateRateBasedRuleResponse withWAFLimitsExceededException(Object wafLimitsExceededException) {
         this.wafLimitsExceededException = wafLimitsExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateRateBasedRuleResponse {
      */
     
     public Object wafStaleDataException;
+
     public CreateRateBasedRuleResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
@@ -103,6 +114,7 @@ public class CreateRateBasedRuleResponse {
      */
     
     public Object wafTagOperationException;
+
     public CreateRateBasedRuleResponse withWAFTagOperationException(Object wafTagOperationException) {
         this.wafTagOperationException = wafTagOperationException;
         return this;
@@ -113,9 +125,14 @@ public class CreateRateBasedRuleResponse {
      */
     
     public Object wafTagOperationInternalErrorException;
+
     public CreateRateBasedRuleResponse withWAFTagOperationInternalErrorException(Object wafTagOperationInternalErrorException) {
         this.wafTagOperationInternalErrorException = wafTagOperationInternalErrorException;
         return this;
     }
     
+    public CreateRateBasedRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

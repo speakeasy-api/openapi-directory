@@ -18,6 +18,7 @@ public class AutoRenewingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoRenewEnabled")
     public Boolean autoRenewEnabled;
+
     public AutoRenewingPlan withAutoRenewEnabled(Boolean autoRenewEnabled) {
         this.autoRenewEnabled = autoRenewEnabled;
         return this;
@@ -29,9 +30,11 @@ public class AutoRenewingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceChangeDetails")
     public SubscriptionItemPriceChangeDetails priceChangeDetails;
+
     public AutoRenewingPlan withPriceChangeDetails(SubscriptionItemPriceChangeDetails priceChangeDetails) {
         this.priceChangeDetails = priceChangeDetails;
         return this;
     }
     
+    public AutoRenewingPlan(){}
 }

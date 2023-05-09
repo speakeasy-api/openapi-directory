@@ -15,6 +15,7 @@ public class CreditResponseEtat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credit")
     public Double credit;
+
     public CreditResponseEtat withCredit(Double credit) {
         this.credit = credit;
         return this;
@@ -26,9 +27,11 @@ public class CreditResponseEtat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantite")
     public String quantite;
+
     public CreditResponseEtat withQuantite(String quantite) {
         this.quantite = quantite;
         return this;
     }
     
+    public CreditResponseEtat(){}
 }

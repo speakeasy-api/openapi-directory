@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyVpcTenancyResult {
     
     public Boolean returnValue;
+
     public ModifyVpcTenancyResult withReturnValue(Boolean returnValue) {
         this.returnValue = returnValue;
         return this;
     }
     
+    public ModifyVpcTenancyResult(){}
 }

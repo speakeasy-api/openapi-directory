@@ -18,6 +18,7 @@ public class ReadOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readConsistency")
     public ReadOptionsReadConsistencyEnum readConsistency;
+
     public ReadOptions withReadConsistency(ReadOptionsReadConsistencyEnum readConsistency) {
         this.readConsistency = readConsistency;
         return this;
@@ -29,6 +30,7 @@ public class ReadOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public ReadOptions withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
@@ -40,9 +42,11 @@ public class ReadOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction")
     public String transaction;
+
     public ReadOptions withTransaction(String transaction) {
         this.transaction = transaction;
         return this;
     }
     
+    public ReadOptions(){}
 }

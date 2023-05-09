@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUsersIdUserConnectionsIdConnectionLogsResponse {
     
     public String contentType;
+
     public GetUsersIdUserConnectionsIdConnectionLogsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetUsersIdUserConnectionsIdConnectionLogsResponse {
     
     
     public Integer statusCode;
+
     public GetUsersIdUserConnectionsIdConnectionLogsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetUsersIdUserConnectionsIdConnectionLogsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUsersIdUserConnectionsIdConnectionLogsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetUsersIdUserConnectionsIdConnectionLogsResponse {
      */
     
     public GetUsersIdUserConnectionsIdConnectionLogs200ApplicationJSON getUsersIdUserConnectionsIdConnectionLogs200ApplicationJSONObject;
+
     public GetUsersIdUserConnectionsIdConnectionLogsResponse withGetUsersIdUserConnectionsIdConnectionLogs200ApplicationJSONObject(GetUsersIdUserConnectionsIdConnectionLogs200ApplicationJSON getUsersIdUserConnectionsIdConnectionLogs200ApplicationJSONObject) {
         this.getUsersIdUserConnectionsIdConnectionLogs200ApplicationJSONObject = getUsersIdUserConnectionsIdConnectionLogs200ApplicationJSONObject;
         return this;
     }
     
+    public GetUsersIdUserConnectionsIdConnectionLogsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

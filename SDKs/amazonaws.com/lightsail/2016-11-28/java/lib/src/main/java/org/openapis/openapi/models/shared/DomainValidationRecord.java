@@ -15,6 +15,7 @@ public class DomainValidationRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsRecordCreationState")
     public DnsRecordCreationState dnsRecordCreationState;
+
     public DomainValidationRecord withDnsRecordCreationState(DnsRecordCreationState dnsRecordCreationState) {
         this.dnsRecordCreationState = dnsRecordCreationState;
         return this;
@@ -23,6 +24,7 @@ public class DomainValidationRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public DomainValidationRecord withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -31,6 +33,7 @@ public class DomainValidationRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRecord")
     public ResourceRecord resourceRecord;
+
     public DomainValidationRecord withResourceRecord(ResourceRecord resourceRecord) {
         this.resourceRecord = resourceRecord;
         return this;
@@ -39,9 +42,11 @@ public class DomainValidationRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationStatus")
     public CertificateDomainValidationStatusEnum validationStatus;
+
     public DomainValidationRecord withValidationStatus(CertificateDomainValidationStatusEnum validationStatus) {
         this.validationStatus = validationStatus;
         return this;
     }
     
+    public DomainValidationRecord(){}
 }

@@ -18,6 +18,7 @@ public class GenerateExclusivityManifestResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crManifest")
     public String crManifest;
+
     public GenerateExclusivityManifestResponse withCrManifest(String crManifest) {
         this.crManifest = crManifest;
         return this;
@@ -29,9 +30,11 @@ public class GenerateExclusivityManifestResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crdManifest")
     public String crdManifest;
+
     public GenerateExclusivityManifestResponse withCrdManifest(String crdManifest) {
         this.crdManifest = crdManifest;
         return this;
     }
     
+    public GenerateExclusivityManifestResponse(){}
 }

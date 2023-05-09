@@ -15,9 +15,11 @@ public class DescribeBundleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public BundleDetails details;
+
     public DescribeBundleResult withDetails(BundleDetails details) {
         this.details = details;
         return this;
     }
     
+    public DescribeBundleResult(){}
 }

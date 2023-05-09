@@ -15,6 +15,7 @@ public class FitcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public FitcerRequestBodyCertificateParameters certificateParameters;
+
     public FitcerRequestBody withCertificateParameters(FitcerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class FitcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public FitcerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class FitcerRequestBody {
      */
     @JsonProperty("format")
     public FitcerRequestBodyFormatEnum format;
+
     public FitcerRequestBody withFormat(FitcerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class FitcerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public FitcerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public FitcerRequestBody(@JsonProperty("format") FitcerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

@@ -15,6 +15,7 @@ public class ImportTaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applications")
     public ImportTaskSummaryApplications applications;
+
     public ImportTaskSummary withApplications(ImportTaskSummaryApplications applications) {
         this.applications = applications;
         return this;
@@ -23,6 +24,7 @@ public class ImportTaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servers")
     public ImportTaskSummaryServers servers;
+
     public ImportTaskSummary withServers(ImportTaskSummaryServers servers) {
         this.servers = servers;
         return this;
@@ -31,9 +33,11 @@ public class ImportTaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waves")
     public ImportTaskSummaryWaves waves;
+
     public ImportTaskSummary withWaves(ImportTaskSummaryWaves waves) {
         this.waves = waves;
         return this;
     }
     
+    public ImportTaskSummary(){}
 }

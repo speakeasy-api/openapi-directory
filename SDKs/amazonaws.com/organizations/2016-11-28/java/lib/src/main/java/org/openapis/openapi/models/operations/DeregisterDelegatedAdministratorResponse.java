@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterDelegatedAdministratorResponse {
@@ -12,6 +13,7 @@ public class DeregisterDelegatedAdministratorResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public DeregisterDelegatedAdministratorResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class DeregisterDelegatedAdministratorResponse {
      */
     
     public Object accessDeniedException;
+
     public DeregisterDelegatedAdministratorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class DeregisterDelegatedAdministratorResponse {
      */
     
     public Object accountNotFoundException;
+
     public DeregisterDelegatedAdministratorResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -42,6 +46,7 @@ public class DeregisterDelegatedAdministratorResponse {
      */
     
     public Object accountNotRegisteredException;
+
     public DeregisterDelegatedAdministratorResponse withAccountNotRegisteredException(Object accountNotRegisteredException) {
         this.accountNotRegisteredException = accountNotRegisteredException;
         return this;
@@ -52,6 +57,7 @@ public class DeregisterDelegatedAdministratorResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeregisterDelegatedAdministratorResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -62,6 +68,7 @@ public class DeregisterDelegatedAdministratorResponse {
      */
     
     public Object constraintViolationException;
+
     public DeregisterDelegatedAdministratorResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -69,6 +76,7 @@ public class DeregisterDelegatedAdministratorResponse {
     
     
     public String contentType;
+
     public DeregisterDelegatedAdministratorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -79,6 +87,7 @@ public class DeregisterDelegatedAdministratorResponse {
      */
     
     public Object invalidInputException;
+
     public DeregisterDelegatedAdministratorResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -89,6 +98,7 @@ public class DeregisterDelegatedAdministratorResponse {
      */
     
     public Object serviceException;
+
     public DeregisterDelegatedAdministratorResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -96,6 +106,7 @@ public class DeregisterDelegatedAdministratorResponse {
     
     
     public Integer statusCode;
+
     public DeregisterDelegatedAdministratorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class DeregisterDelegatedAdministratorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterDelegatedAdministratorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class DeregisterDelegatedAdministratorResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeregisterDelegatedAdministratorResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -123,9 +136,14 @@ public class DeregisterDelegatedAdministratorResponse {
      */
     
     public Object unsupportedAPIEndpointException;
+
     public DeregisterDelegatedAdministratorResponse withUnsupportedAPIEndpointException(Object unsupportedAPIEndpointException) {
         this.unsupportedAPIEndpointException = unsupportedAPIEndpointException;
         return this;
     }
     
+    public DeregisterDelegatedAdministratorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

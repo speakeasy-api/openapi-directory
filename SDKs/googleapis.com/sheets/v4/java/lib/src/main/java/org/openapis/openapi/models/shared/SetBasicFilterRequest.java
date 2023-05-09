@@ -18,9 +18,11 @@ public class SetBasicFilterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public BasicFilter filter;
+
     public SetBasicFilterRequest withFilter(BasicFilter filter) {
         this.filter = filter;
         return this;
     }
     
+    public SetBasicFilterRequest(){}
 }

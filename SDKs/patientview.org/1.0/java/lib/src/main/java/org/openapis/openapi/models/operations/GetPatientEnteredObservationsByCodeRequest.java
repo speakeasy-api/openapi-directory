@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPatientEnteredObservationsByCodeRequest {
@@ -12,6 +13,7 @@ public class GetPatientEnteredObservationsByCodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=code")
     public String code;
+
     public GetPatientEnteredObservationsByCodeRequest withCode(String code) {
         this.code = code;
         return this;
@@ -22,9 +24,14 @@ public class GetPatientEnteredObservationsByCodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public Long userId;
+
     public GetPatientEnteredObservationsByCodeRequest withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetPatientEnteredObservationsByCodeRequest(@JsonProperty("code") String code, @JsonProperty("userId") Long userId) {
+        this.code = code;
+        this.userId = userId;
+  }
 }

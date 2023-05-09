@@ -18,6 +18,7 @@ public class GoogleCloudRunV2RevisionScaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxInstanceCount")
     public Integer maxInstanceCount;
+
     public GoogleCloudRunV2RevisionScaling withMaxInstanceCount(Integer maxInstanceCount) {
         this.maxInstanceCount = maxInstanceCount;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRunV2RevisionScaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minInstanceCount")
     public Integer minInstanceCount;
+
     public GoogleCloudRunV2RevisionScaling withMinInstanceCount(Integer minInstanceCount) {
         this.minInstanceCount = minInstanceCount;
         return this;
     }
     
+    public GoogleCloudRunV2RevisionScaling(){}
 }

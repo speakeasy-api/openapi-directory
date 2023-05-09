@@ -18,6 +18,7 @@ public class WorkstationClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public WorkstationClusterInput withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,17 +30,19 @@ public class WorkstationClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public WorkstationClusterInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
     /**
-     * Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.
+     * Checksum computed by the server. May be sent on update and delete requests to make sure that the client has an up-to-date value before proceeding.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public WorkstationClusterInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,6 +54,7 @@ public class WorkstationClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public WorkstationClusterInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,6 +66,7 @@ public class WorkstationClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WorkstationClusterInput withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class WorkstationClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public WorkstationClusterInput withNetwork(String network) {
         this.network = network;
         return this;
@@ -84,6 +90,7 @@ public class WorkstationClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateClusterConfig")
     public PrivateClusterConfigInput privateClusterConfig;
+
     public WorkstationClusterInput withPrivateClusterConfig(PrivateClusterConfigInput privateClusterConfig) {
         this.privateClusterConfig = privateClusterConfig;
         return this;
@@ -95,9 +102,11 @@ public class WorkstationClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public WorkstationClusterInput withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
     }
     
+    public WorkstationClusterInput(){}
 }

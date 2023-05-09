@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1ListEntryGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryGroups")
     public GoogleCloudDatacatalogV1EntryGroup[] entryGroups;
+
     public GoogleCloudDatacatalogV1ListEntryGroupsResponse withEntryGroups(GoogleCloudDatacatalogV1EntryGroup[] entryGroups) {
         this.entryGroups = entryGroups;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatacatalogV1ListEntryGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDatacatalogV1ListEntryGroupsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1ListEntryGroupsResponse(){}
 }

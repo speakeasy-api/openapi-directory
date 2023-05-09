@@ -18,6 +18,7 @@ public class FacetOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerFacetingOptions")
     public IntegerFacetingOptions integerFacetingOptions;
+
     public FacetOptions withIntegerFacetingOptions(IntegerFacetingOptions integerFacetingOptions) {
         this.integerFacetingOptions = integerFacetingOptions;
         return this;
@@ -29,6 +30,7 @@ public class FacetOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numFacetBuckets")
     public Integer numFacetBuckets;
+
     public FacetOptions withNumFacetBuckets(Integer numFacetBuckets) {
         this.numFacetBuckets = numFacetBuckets;
         return this;
@@ -40,6 +42,7 @@ public class FacetOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectType")
     public String objectType;
+
     public FacetOptions withObjectType(String objectType) {
         this.objectType = objectType;
         return this;
@@ -51,6 +54,7 @@ public class FacetOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorName")
     public String operatorName;
+
     public FacetOptions withOperatorName(String operatorName) {
         this.operatorName = operatorName;
         return this;
@@ -62,9 +66,11 @@ public class FacetOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceName")
     public String sourceName;
+
     public FacetOptions withSourceName(String sourceName) {
         this.sourceName = sourceName;
         return this;
     }
     
+    public FacetOptions(){}
 }

@@ -27,6 +27,7 @@ public class OBWriteDomesticStandingOrderResponse6DataMultiAuthorisation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationDateTime")
     public OffsetDateTime expirationDateTime;
+
     public OBWriteDomesticStandingOrderResponse6DataMultiAuthorisation withExpirationDateTime(OffsetDateTime expirationDateTime) {
         this.expirationDateTime = expirationDateTime;
         return this;
@@ -42,6 +43,7 @@ public class OBWriteDomesticStandingOrderResponse6DataMultiAuthorisation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateDateTime")
     public OffsetDateTime lastUpdateDateTime;
+
     public OBWriteDomesticStandingOrderResponse6DataMultiAuthorisation withLastUpdateDateTime(OffsetDateTime lastUpdateDateTime) {
         this.lastUpdateDateTime = lastUpdateDateTime;
         return this;
@@ -53,6 +55,7 @@ public class OBWriteDomesticStandingOrderResponse6DataMultiAuthorisation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberReceived")
     public Long numberReceived;
+
     public OBWriteDomesticStandingOrderResponse6DataMultiAuthorisation withNumberReceived(Long numberReceived) {
         this.numberReceived = numberReceived;
         return this;
@@ -64,6 +67,7 @@ public class OBWriteDomesticStandingOrderResponse6DataMultiAuthorisation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberRequired")
     public Long numberRequired;
+
     public OBWriteDomesticStandingOrderResponse6DataMultiAuthorisation withNumberRequired(Long numberRequired) {
         this.numberRequired = numberRequired;
         return this;
@@ -74,9 +78,13 @@ public class OBWriteDomesticStandingOrderResponse6DataMultiAuthorisation {
      */
     @JsonProperty("Status")
     public OBWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnum status;
+
     public OBWriteDomesticStandingOrderResponse6DataMultiAuthorisation withStatus(OBWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public OBWriteDomesticStandingOrderResponse6DataMultiAuthorisation(@JsonProperty("Status") OBWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnum status) {
+        this.status = status;
+  }
 }

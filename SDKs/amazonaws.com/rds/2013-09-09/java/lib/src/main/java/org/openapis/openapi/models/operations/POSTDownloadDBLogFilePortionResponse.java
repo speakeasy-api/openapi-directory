@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTDownloadDBLogFilePortionResponse {
     
     public byte[] body;
+
     public POSTDownloadDBLogFilePortionResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTDownloadDBLogFilePortionResponse {
     
     
     public String contentType;
+
     public POSTDownloadDBLogFilePortionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTDownloadDBLogFilePortionResponse {
     
     
     public Integer statusCode;
+
     public POSTDownloadDBLogFilePortionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTDownloadDBLogFilePortionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTDownloadDBLogFilePortionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTDownloadDBLogFilePortionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class Manifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public Manifest withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -29,20 +30,23 @@ public class Manifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("muxStreams")
     public String[] muxStreams;
+
     public Manifest withMuxStreams(String[] muxStreams) {
         this.muxStreams = muxStreams;
         return this;
     }
     
     /**
-     * Required. Type of the manifest, can be `HLS` or `DASH`.
+     * Required. Type of the manifest.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ManifestTypeEnum type;
+
     public Manifest withType(ManifestTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Manifest(){}
 }

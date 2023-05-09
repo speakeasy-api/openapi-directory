@@ -15,6 +15,7 @@ public class CreatePresetRequestBodyThumbnails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AspectRatio")
     public String aspectRatio;
+
     public CreatePresetRequestBodyThumbnails withAspectRatio(String aspectRatio) {
         this.aspectRatio = aspectRatio;
         return this;
@@ -23,6 +24,7 @@ public class CreatePresetRequestBodyThumbnails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public CreatePresetRequestBodyThumbnails withFormat(String format) {
         this.format = format;
         return this;
@@ -31,6 +33,7 @@ public class CreatePresetRequestBodyThumbnails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Interval")
     public String interval;
+
     public CreatePresetRequestBodyThumbnails withInterval(String interval) {
         this.interval = interval;
         return this;
@@ -39,6 +42,7 @@ public class CreatePresetRequestBodyThumbnails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxHeight")
     public String maxHeight;
+
     public CreatePresetRequestBodyThumbnails withMaxHeight(String maxHeight) {
         this.maxHeight = maxHeight;
         return this;
@@ -47,6 +51,7 @@ public class CreatePresetRequestBodyThumbnails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxWidth")
     public String maxWidth;
+
     public CreatePresetRequestBodyThumbnails withMaxWidth(String maxWidth) {
         this.maxWidth = maxWidth;
         return this;
@@ -55,6 +60,7 @@ public class CreatePresetRequestBodyThumbnails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaddingPolicy")
     public String paddingPolicy;
+
     public CreatePresetRequestBodyThumbnails withPaddingPolicy(String paddingPolicy) {
         this.paddingPolicy = paddingPolicy;
         return this;
@@ -63,6 +69,7 @@ public class CreatePresetRequestBodyThumbnails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resolution")
     public String resolution;
+
     public CreatePresetRequestBodyThumbnails withResolution(String resolution) {
         this.resolution = resolution;
         return this;
@@ -71,9 +78,11 @@ public class CreatePresetRequestBodyThumbnails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizingPolicy")
     public String sizingPolicy;
+
     public CreatePresetRequestBodyThumbnails withSizingPolicy(String sizingPolicy) {
         this.sizingPolicy = sizingPolicy;
         return this;
     }
     
+    public CreatePresetRequestBodyThumbnails(){}
 }

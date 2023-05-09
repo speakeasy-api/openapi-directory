@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FunctionUrlConfig {
     @JsonProperty("AuthType")
     public FunctionUrlAuthTypeEnum authType;
+
     public FunctionUrlConfig withAuthType(FunctionUrlAuthTypeEnum authType) {
         this.authType = authType;
         return this;
@@ -22,6 +23,7 @@ public class FunctionUrlConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cors")
     public Cors cors;
+
     public FunctionUrlConfig withCors(Cors cors) {
         this.cors = cors;
         return this;
@@ -29,6 +31,7 @@ public class FunctionUrlConfig {
     
     @JsonProperty("CreationTime")
     public String creationTime;
+
     public FunctionUrlConfig withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -36,6 +39,7 @@ public class FunctionUrlConfig {
     
     @JsonProperty("FunctionArn")
     public String functionArn;
+
     public FunctionUrlConfig withFunctionArn(String functionArn) {
         this.functionArn = functionArn;
         return this;
@@ -43,16 +47,34 @@ public class FunctionUrlConfig {
     
     @JsonProperty("FunctionUrl")
     public String functionUrl;
+
     public FunctionUrlConfig withFunctionUrl(String functionUrl) {
         this.functionUrl = functionUrl;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InvokeMode")
+    public InvokeModeEnum invokeMode;
+
+    public FunctionUrlConfig withInvokeMode(InvokeModeEnum invokeMode) {
+        this.invokeMode = invokeMode;
+        return this;
+    }
+    
     @JsonProperty("LastModifiedTime")
     public String lastModifiedTime;
+
     public FunctionUrlConfig withLastModifiedTime(String lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
     }
     
+    public FunctionUrlConfig(@JsonProperty("AuthType") FunctionUrlAuthTypeEnum authType, @JsonProperty("CreationTime") String creationTime, @JsonProperty("FunctionArn") String functionArn, @JsonProperty("FunctionUrl") String functionUrl, @JsonProperty("LastModifiedTime") String lastModifiedTime) {
+        this.authType = authType;
+        this.creationTime = creationTime;
+        this.functionArn = functionArn;
+        this.functionUrl = functionUrl;
+        this.lastModifiedTime = lastModifiedTime;
+  }
 }

@@ -15,9 +15,11 @@ public class DeleteServiceTemplateVersionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceTemplateVersion")
     public ServiceTemplateVersion serviceTemplateVersion;
+
     public DeleteServiceTemplateVersionOutput withServiceTemplateVersion(ServiceTemplateVersion serviceTemplateVersion) {
         this.serviceTemplateVersion = serviceTemplateVersion;
         return this;
     }
     
+    public DeleteServiceTemplateVersionOutput(){}
 }

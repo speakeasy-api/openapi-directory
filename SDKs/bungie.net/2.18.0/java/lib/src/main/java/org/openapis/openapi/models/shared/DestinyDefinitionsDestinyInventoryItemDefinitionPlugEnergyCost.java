@@ -15,6 +15,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlugEnergyCost {
      */
     
     public Integer energyCost;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlugEnergyCost withEnergyCost(Integer energyCost) {
         this.energyCost = energyCost;
         return this;
@@ -25,6 +26,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlugEnergyCost {
      */
     
     public Integer energyType;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlugEnergyCost withEnergyType(Integer energyType) {
         this.energyType = energyType;
         return this;
@@ -35,9 +37,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlugEnergyCost {
      */
     
     public Long energyTypeHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlugEnergyCost withEnergyTypeHash(Long energyTypeHash) {
         this.energyTypeHash = energyTypeHash;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionPlugEnergyCost(){}
 }

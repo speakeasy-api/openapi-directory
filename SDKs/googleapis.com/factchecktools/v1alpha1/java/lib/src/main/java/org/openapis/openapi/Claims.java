@@ -56,11 +56,9 @@ public class Claims {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FactchecktoolsClaimsSearchResponse res = new org.openapis.openapi.models.operations.FactchecktoolsClaimsSearchResponse() {{
+        org.openapis.openapi.models.operations.FactchecktoolsClaimsSearchResponse res = new org.openapis.openapi.models.operations.FactchecktoolsClaimsSearchResponse(contentType, httpRes.statusCode()) {{
             googleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

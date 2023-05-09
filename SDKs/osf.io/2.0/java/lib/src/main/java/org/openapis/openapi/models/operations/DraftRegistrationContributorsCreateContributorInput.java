@@ -15,6 +15,7 @@ public class DraftRegistrationContributorsCreateContributorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public DraftRegistrationContributorsCreateContributorAttributesInput attributes;
+
     public DraftRegistrationContributorsCreateContributorInput withAttributes(DraftRegistrationContributorsCreateContributorAttributesInput attributes) {
         this.attributes = attributes;
         return this;
@@ -25,9 +26,13 @@ public class DraftRegistrationContributorsCreateContributorInput {
      */
     @JsonProperty("relationships")
     public DraftRegistrationContributorsCreateContributorRelationshipsInput relationships;
+
     public DraftRegistrationContributorsCreateContributorInput withRelationships(DraftRegistrationContributorsCreateContributorRelationshipsInput relationships) {
         this.relationships = relationships;
         return this;
     }
     
+    public DraftRegistrationContributorsCreateContributorInput(@JsonProperty("relationships") DraftRegistrationContributorsCreateContributorRelationshipsInput relationships) {
+        this.relationships = relationships;
+  }
 }

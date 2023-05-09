@@ -18,6 +18,7 @@ public class GoogleCloudMlV1AcceleratorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public GoogleCloudMlV1AcceleratorConfig withCount(String count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudMlV1AcceleratorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudMlV1AcceleratorConfigTypeEnum type;
+
     public GoogleCloudMlV1AcceleratorConfig withType(GoogleCloudMlV1AcceleratorConfigTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudMlV1AcceleratorConfig(){}
 }

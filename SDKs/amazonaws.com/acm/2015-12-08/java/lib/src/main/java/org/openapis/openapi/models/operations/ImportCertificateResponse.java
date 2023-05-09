@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportCertificateResponse {
     
     public String contentType;
+
     public ImportCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ImportCertificateResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportCertificateResponse importCertificateResponse;
+
     public ImportCertificateResponse withImportCertificateResponse(org.openapis.openapi.models.shared.ImportCertificateResponse importCertificateResponse) {
         this.importCertificateResponse = importCertificateResponse;
         return this;
@@ -29,6 +32,7 @@ public class ImportCertificateResponse {
      */
     
     public Object invalidArnException;
+
     public ImportCertificateResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -39,6 +43,7 @@ public class ImportCertificateResponse {
      */
     
     public Object invalidParameterException;
+
     public ImportCertificateResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class ImportCertificateResponse {
      */
     
     public Object invalidTagException;
+
     public ImportCertificateResponse withInvalidTagException(Object invalidTagException) {
         this.invalidTagException = invalidTagException;
         return this;
@@ -59,6 +65,7 @@ public class ImportCertificateResponse {
      */
     
     public Object limitExceededException;
+
     public ImportCertificateResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ImportCertificateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ImportCertificateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class ImportCertificateResponse {
     
     
     public Integer statusCode;
+
     public ImportCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ImportCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ImportCertificateResponse {
      */
     
     public Object tagPolicyException;
+
     public ImportCertificateResponse withTagPolicyException(Object tagPolicyException) {
         this.tagPolicyException = tagPolicyException;
         return this;
@@ -103,9 +114,14 @@ public class ImportCertificateResponse {
      */
     
     public Object tooManyTagsException;
+
     public ImportCertificateResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public ImportCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class GetActionOrganizationShowRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public GetActionOrganizationShowRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +23,11 @@ public class GetActionOrganizationShowRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_datasets")
     public Boolean includeDatasets;
+
     public GetActionOrganizationShowRequest withIncludeDatasets(Boolean includeDatasets) {
         this.includeDatasets = includeDatasets;
         return this;
     }
     
+    public GetActionOrganizationShowRequest(){}
 }

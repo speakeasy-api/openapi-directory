@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AppsListInstallationReposForAuthenticatedUser200ApplicationJSON {
     @JsonProperty("repositories")
     public org.openapis.openapi.models.shared.Repository[] repositories;
+
     public AppsListInstallationReposForAuthenticatedUser200ApplicationJSON withRepositories(org.openapis.openapi.models.shared.Repository[] repositories) {
         this.repositories = repositories;
         return this;
@@ -22,6 +23,7 @@ public class AppsListInstallationReposForAuthenticatedUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository_selection")
     public String repositorySelection;
+
     public AppsListInstallationReposForAuthenticatedUser200ApplicationJSON withRepositorySelection(String repositorySelection) {
         this.repositorySelection = repositorySelection;
         return this;
@@ -29,9 +31,14 @@ public class AppsListInstallationReposForAuthenticatedUser200ApplicationJSON {
     
     @JsonProperty("total_count")
     public Long totalCount;
+
     public AppsListInstallationReposForAuthenticatedUser200ApplicationJSON withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public AppsListInstallationReposForAuthenticatedUser200ApplicationJSON(@JsonProperty("repositories") org.openapis.openapi.models.shared.Repository[] repositories, @JsonProperty("total_count") Long totalCount) {
+        this.repositories = repositories;
+        this.totalCount = totalCount;
+  }
 }

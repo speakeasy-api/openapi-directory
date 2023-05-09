@@ -18,6 +18,7 @@ public class PubsubTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public PubsubTarget withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class PubsubTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public PubsubTarget withData(String data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class PubsubTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topicName")
     public String topicName;
+
     public PubsubTarget withTopicName(String topicName) {
         this.topicName = topicName;
         return this;
     }
     
+    public PubsubTarget(){}
 }

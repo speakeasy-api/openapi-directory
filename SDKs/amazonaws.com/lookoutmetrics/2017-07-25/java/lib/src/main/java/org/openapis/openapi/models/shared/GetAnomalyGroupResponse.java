@@ -15,9 +15,11 @@ public class GetAnomalyGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyGroup")
     public AnomalyGroup anomalyGroup;
+
     public GetAnomalyGroupResponse withAnomalyGroup(AnomalyGroup anomalyGroup) {
         this.anomalyGroup = anomalyGroup;
         return this;
     }
     
+    public GetAnomalyGroupResponse(){}
 }

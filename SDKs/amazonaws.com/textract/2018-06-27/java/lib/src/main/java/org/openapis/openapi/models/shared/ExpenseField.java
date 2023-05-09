@@ -15,6 +15,7 @@ public class ExpenseField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Currency")
     public ExpenseCurrency currency;
+
     public ExpenseField withCurrency(ExpenseCurrency currency) {
         this.currency = currency;
         return this;
@@ -23,6 +24,7 @@ public class ExpenseField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupProperties")
     public ExpenseGroupProperty[] groupProperties;
+
     public ExpenseField withGroupProperties(ExpenseGroupProperty[] groupProperties) {
         this.groupProperties = groupProperties;
         return this;
@@ -31,6 +33,7 @@ public class ExpenseField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelDetection")
     public ExpenseDetection labelDetection;
+
     public ExpenseField withLabelDetection(ExpenseDetection labelDetection) {
         this.labelDetection = labelDetection;
         return this;
@@ -39,6 +42,7 @@ public class ExpenseField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageNumber")
     public Long pageNumber;
+
     public ExpenseField withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -47,6 +51,7 @@ public class ExpenseField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ExpenseType type;
+
     public ExpenseField withType(ExpenseType type) {
         this.type = type;
         return this;
@@ -55,9 +60,11 @@ public class ExpenseField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValueDetection")
     public ExpenseDetection valueDetection;
+
     public ExpenseField withValueDetection(ExpenseDetection valueDetection) {
         this.valueDetection = valueDetection;
         return this;
     }
     
+    public ExpenseField(){}
 }

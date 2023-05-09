@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Fields {
     @JsonProperty("accountId")
     public String accountId;
+
     public Fields withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -16,6 +17,7 @@ public class Fields {
     
     @JsonProperty("address")
     public String address;
+
     public Fields withAddress(String address) {
         this.address = address;
         return this;
@@ -23,6 +25,7 @@ public class Fields {
     
     @JsonProperty("callbackUrl")
     public String callbackUrl;
+
     public Fields withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
@@ -30,6 +33,7 @@ public class Fields {
     
     @JsonProperty("cardNumber")
     public String cardNumber;
+
     public Fields withCardNumber(String cardNumber) {
         this.cardNumber = cardNumber;
         return this;
@@ -37,6 +41,7 @@ public class Fields {
     
     @JsonProperty("document")
     public String document;
+
     public Fields withDocument(String document) {
         this.document = document;
         return this;
@@ -44,6 +49,7 @@ public class Fields {
     
     @JsonProperty("dueDate")
     public String dueDate;
+
     public Fields withDueDate(String dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -51,6 +57,7 @@ public class Fields {
     
     @JsonProperty("holderName")
     public String holderName;
+
     public Fields withHolderName(String holderName) {
         this.holderName = holderName;
         return this;
@@ -58,9 +65,20 @@ public class Fields {
     
     @JsonProperty("validationCode")
     public String validationCode;
+
     public Fields withValidationCode(String validationCode) {
         this.validationCode = validationCode;
         return this;
     }
     
+    public Fields(@JsonProperty("accountId") String accountId, @JsonProperty("address") String address, @JsonProperty("callbackUrl") String callbackUrl, @JsonProperty("cardNumber") String cardNumber, @JsonProperty("document") String document, @JsonProperty("dueDate") String dueDate, @JsonProperty("holderName") String holderName, @JsonProperty("validationCode") String validationCode) {
+        this.accountId = accountId;
+        this.address = address;
+        this.callbackUrl = callbackUrl;
+        this.cardNumber = cardNumber;
+        this.document = document;
+        this.dueDate = dueDate;
+        this.holderName = holderName;
+        this.validationCode = validationCode;
+  }
 }

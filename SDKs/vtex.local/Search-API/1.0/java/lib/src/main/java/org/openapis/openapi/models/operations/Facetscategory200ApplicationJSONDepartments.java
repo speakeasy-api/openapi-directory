@@ -12,6 +12,7 @@ public class Facetscategory200ApplicationJSONDepartments {
      */
     @JsonProperty("Link")
     public String link;
+
     public Facetscategory200ApplicationJSONDepartments withLink(String link) {
         this.link = link;
         return this;
@@ -22,6 +23,7 @@ public class Facetscategory200ApplicationJSONDepartments {
      */
     @JsonProperty("LinkEncoded")
     public String linkEncoded;
+
     public Facetscategory200ApplicationJSONDepartments withLinkEncoded(String linkEncoded) {
         this.linkEncoded = linkEncoded;
         return this;
@@ -32,6 +34,7 @@ public class Facetscategory200ApplicationJSONDepartments {
      */
     @JsonProperty("Map")
     public String map;
+
     public Facetscategory200ApplicationJSONDepartments withMap(String map) {
         this.map = map;
         return this;
@@ -42,6 +45,7 @@ public class Facetscategory200ApplicationJSONDepartments {
      */
     @JsonProperty("Name")
     public String name;
+
     public Facetscategory200ApplicationJSONDepartments withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +56,7 @@ public class Facetscategory200ApplicationJSONDepartments {
      */
     @JsonProperty("Position")
     public Long position;
+
     public Facetscategory200ApplicationJSONDepartments withPosition(Long position) {
         this.position = position;
         return this;
@@ -62,6 +67,7 @@ public class Facetscategory200ApplicationJSONDepartments {
      */
     @JsonProperty("Quantity")
     public Long quantity;
+
     public Facetscategory200ApplicationJSONDepartments withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -72,9 +78,19 @@ public class Facetscategory200ApplicationJSONDepartments {
      */
     @JsonProperty("Value")
     public String value;
+
     public Facetscategory200ApplicationJSONDepartments withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Facetscategory200ApplicationJSONDepartments(@JsonProperty("Link") String link, @JsonProperty("LinkEncoded") String linkEncoded, @JsonProperty("Map") String map, @JsonProperty("Name") String name, @JsonProperty("Position") Long position, @JsonProperty("Quantity") Long quantity, @JsonProperty("Value") String value) {
+        this.link = link;
+        this.linkEncoded = linkEncoded;
+        this.map = map;
+        this.name = name;
+        this.position = position;
+        this.quantity = quantity;
+        this.value = value;
+  }
 }

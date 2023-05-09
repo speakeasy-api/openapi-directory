@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInstanceObjectRequest {
@@ -12,6 +13,7 @@ public class GetInstanceObjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor")
     public String contributor;
+
     public GetInstanceObjectRequest withContributor(String contributor) {
         this.contributor = contributor;
         return this;
@@ -19,6 +21,7 @@ public class GetInstanceObjectRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetInstanceObjectRequest withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +32,13 @@ public class GetInstanceObjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title")
     public String title;
+
     public GetInstanceObjectRequest withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GetInstanceObjectRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

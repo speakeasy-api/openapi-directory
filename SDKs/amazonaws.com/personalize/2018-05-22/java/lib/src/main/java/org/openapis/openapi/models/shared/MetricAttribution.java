@@ -22,6 +22,7 @@ public class MetricAttribution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public MetricAttribution withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class MetricAttribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetGroupArn")
     public String datasetGroupArn;
+
     public MetricAttribution withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -38,6 +40,7 @@ public class MetricAttribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public MetricAttribution withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -48,6 +51,7 @@ public class MetricAttribution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public MetricAttribution withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -56,6 +60,7 @@ public class MetricAttribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricAttributionArn")
     public String metricAttributionArn;
+
     public MetricAttribution withMetricAttributionArn(String metricAttributionArn) {
         this.metricAttributionArn = metricAttributionArn;
         return this;
@@ -64,6 +69,7 @@ public class MetricAttribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricsOutputConfig")
     public MetricAttributionOutput metricsOutputConfig;
+
     public MetricAttribution withMetricsOutputConfig(MetricAttributionOutput metricsOutputConfig) {
         this.metricsOutputConfig = metricsOutputConfig;
         return this;
@@ -72,6 +78,7 @@ public class MetricAttribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MetricAttribution withName(String name) {
         this.name = name;
         return this;
@@ -80,9 +87,11 @@ public class MetricAttribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public MetricAttribution withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public MetricAttribution(){}
 }

@@ -12,9 +12,13 @@ public class PostAssetsCorrelationMatrixRequestBody1Assets {
      */
     @JsonProperty("assetReturns")
     public Double[] assetReturns;
+
     public PostAssetsCorrelationMatrixRequestBody1Assets withAssetReturns(Double[] assetReturns) {
         this.assetReturns = assetReturns;
         return this;
     }
     
+    public PostAssetsCorrelationMatrixRequestBody1Assets(@JsonProperty("assetReturns") Double[] assetReturns) {
+        this.assetReturns = assetReturns;
+  }
 }

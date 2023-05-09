@@ -12,6 +12,7 @@ public class DetectEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bytes")
     public String bytes;
+
     public DetectEntitiesRequest withBytes(String bytes) {
         this.bytes = bytes;
         return this;
@@ -20,6 +21,7 @@ public class DetectEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentReaderConfig")
     public DocumentReaderConfig documentReaderConfig;
+
     public DetectEntitiesRequest withDocumentReaderConfig(DocumentReaderConfig documentReaderConfig) {
         this.documentReaderConfig = documentReaderConfig;
         return this;
@@ -28,6 +30,7 @@ public class DetectEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointArn")
     public String endpointArn;
+
     public DetectEntitiesRequest withEndpointArn(String endpointArn) {
         this.endpointArn = endpointArn;
         return this;
@@ -36,6 +39,7 @@ public class DetectEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public DetectEntitiesRequest withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -44,9 +48,11 @@ public class DetectEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public DetectEntitiesRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public DetectEntitiesRequest(){}
 }

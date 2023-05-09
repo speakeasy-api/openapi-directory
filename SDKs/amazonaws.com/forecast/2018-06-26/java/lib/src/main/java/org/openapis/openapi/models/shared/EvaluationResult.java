@@ -15,6 +15,7 @@ public class EvaluationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlgorithmArn")
     public String algorithmArn;
+
     public EvaluationResult withAlgorithmArn(String algorithmArn) {
         this.algorithmArn = algorithmArn;
         return this;
@@ -23,9 +24,11 @@ public class EvaluationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TestWindows")
     public WindowSummary[] testWindows;
+
     public EvaluationResult withTestWindows(WindowSummary[] testWindows) {
         this.testWindows = testWindows;
         return this;
     }
     
+    public EvaluationResult(){}
 }

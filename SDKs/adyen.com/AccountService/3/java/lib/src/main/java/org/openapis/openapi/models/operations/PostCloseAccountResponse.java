@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostCloseAccountResponse {
@@ -12,6 +13,7 @@ public class PostCloseAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.CloseAccountResponse closeAccountResponse;
+
     public PostCloseAccountResponse withCloseAccountResponse(org.openapis.openapi.models.shared.CloseAccountResponse closeAccountResponse) {
         this.closeAccountResponse = closeAccountResponse;
         return this;
@@ -19,6 +21,7 @@ public class PostCloseAccountResponse {
     
     
     public String contentType;
+
     public PostCloseAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PostCloseAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostCloseAccountResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class PostCloseAccountResponse {
     
     
     public Integer statusCode;
+
     public PostCloseAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostCloseAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostCloseAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostCloseAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

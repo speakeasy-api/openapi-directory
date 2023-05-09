@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateEmailIdentityPolicyResponse {
@@ -12,6 +13,7 @@ public class UpdateEmailIdentityPolicyResponse {
      */
     
     public Object badRequestException;
+
     public UpdateEmailIdentityPolicyResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateEmailIdentityPolicyResponse {
     
     
     public String contentType;
+
     public UpdateEmailIdentityPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateEmailIdentityPolicyResponse {
      */
     
     public Object notFoundException;
+
     public UpdateEmailIdentityPolicyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateEmailIdentityPolicyResponse {
     
     
     public Integer statusCode;
+
     public UpdateEmailIdentityPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateEmailIdentityPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateEmailIdentityPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateEmailIdentityPolicyResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateEmailIdentityPolicyResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -63,9 +70,14 @@ public class UpdateEmailIdentityPolicyResponse {
      */
     
     public java.util.Map<String, Object> updateEmailIdentityPolicyResponse;
+
     public UpdateEmailIdentityPolicyResponse withUpdateEmailIdentityPolicyResponse(java.util.Map<String, Object> updateEmailIdentityPolicyResponse) {
         this.updateEmailIdentityPolicyResponse = updateEmailIdentityPolicyResponse;
         return this;
     }
     
+    public UpdateEmailIdentityPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

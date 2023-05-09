@@ -18,6 +18,7 @@ public class PatientMessagesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.PatientMessage[] data;
+
     public PatientMessagesList200ApplicationJSON withData(org.openapis.openapi.models.shared.PatientMessage[] data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class PatientMessagesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public PatientMessagesList200ApplicationJSON withNext(String next) {
         this.next = next;
         return this;
@@ -40,9 +42,11 @@ public class PatientMessagesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public PatientMessagesList200ApplicationJSON withPrevious(String previous) {
         this.previous = previous;
         return this;
     }
     
+    public PatientMessagesList200ApplicationJSON(){}
 }

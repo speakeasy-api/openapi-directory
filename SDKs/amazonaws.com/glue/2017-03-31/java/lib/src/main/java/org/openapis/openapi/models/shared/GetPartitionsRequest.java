@@ -17,6 +17,7 @@ public class GetPartitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetPartitionsRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -24,6 +25,7 @@ public class GetPartitionsRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public GetPartitionsRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -32,6 +34,7 @@ public class GetPartitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludeColumnSchema")
     public Boolean excludeColumnSchema;
+
     public GetPartitionsRequest withExcludeColumnSchema(Boolean excludeColumnSchema) {
         this.excludeColumnSchema = excludeColumnSchema;
         return this;
@@ -40,6 +43,7 @@ public class GetPartitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Expression")
     public String expression;
+
     public GetPartitionsRequest withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -48,6 +52,7 @@ public class GetPartitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetPartitionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -56,6 +61,7 @@ public class GetPartitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetPartitionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -66,6 +72,7 @@ public class GetPartitionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("QueryAsOfTime")
     public OffsetDateTime queryAsOfTime;
+
     public GetPartitionsRequest withQueryAsOfTime(OffsetDateTime queryAsOfTime) {
         this.queryAsOfTime = queryAsOfTime;
         return this;
@@ -74,6 +81,7 @@ public class GetPartitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Segment")
     public Segment segment;
+
     public GetPartitionsRequest withSegment(Segment segment) {
         this.segment = segment;
         return this;
@@ -81,6 +89,7 @@ public class GetPartitionsRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public GetPartitionsRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -89,9 +98,14 @@ public class GetPartitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public GetPartitionsRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public GetPartitionsRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.tableName = tableName;
+  }
 }

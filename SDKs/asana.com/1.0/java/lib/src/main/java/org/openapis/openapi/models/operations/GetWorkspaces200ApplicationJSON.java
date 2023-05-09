@@ -15,9 +15,11 @@ public class GetWorkspaces200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.WorkspaceCompact[] data;
+
     public GetWorkspaces200ApplicationJSON withData(org.openapis.openapi.models.shared.WorkspaceCompact[] data) {
         this.data = data;
         return this;
     }
     
+    public GetWorkspaces200ApplicationJSON(){}
 }

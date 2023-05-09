@@ -18,9 +18,11 @@ public class SubExchangeTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public SubExchangeTargetingOptionDetails withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public SubExchangeTargetingOptionDetails(){}
 }

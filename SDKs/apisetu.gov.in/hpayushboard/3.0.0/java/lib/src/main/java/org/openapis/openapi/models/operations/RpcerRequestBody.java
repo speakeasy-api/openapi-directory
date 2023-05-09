@@ -15,6 +15,7 @@ public class RpcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public RpcerRequestBodyCertificateParameters certificateParameters;
+
     public RpcerRequestBody withCertificateParameters(RpcerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class RpcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public RpcerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class RpcerRequestBody {
      */
     @JsonProperty("format")
     public RpcerRequestBodyFormatEnum format;
+
     public RpcerRequestBody withFormat(RpcerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class RpcerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public RpcerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public RpcerRequestBody(@JsonProperty("format") RpcerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

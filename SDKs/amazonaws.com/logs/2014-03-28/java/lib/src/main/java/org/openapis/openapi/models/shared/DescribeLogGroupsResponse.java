@@ -15,6 +15,7 @@ public class DescribeLogGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroups")
     public LogGroup[] logGroups;
+
     public DescribeLogGroupsResponse withLogGroups(LogGroup[] logGroups) {
         this.logGroups = logGroups;
         return this;
@@ -26,9 +27,11 @@ public class DescribeLogGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeLogGroupsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeLogGroupsResponse(){}
 }

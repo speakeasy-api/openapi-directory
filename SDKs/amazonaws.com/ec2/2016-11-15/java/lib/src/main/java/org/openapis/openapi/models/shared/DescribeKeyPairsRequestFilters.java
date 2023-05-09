@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeKeyPairsRequestFilters {
     
     public String name;
+
     public DescribeKeyPairsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeKeyPairsRequestFilters {
     
     
     public String[] values;
+
     public DescribeKeyPairsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeKeyPairsRequestFilters(){}
 }

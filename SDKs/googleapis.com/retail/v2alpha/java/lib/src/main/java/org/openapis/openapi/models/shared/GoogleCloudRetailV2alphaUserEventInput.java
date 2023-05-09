@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaUserEventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, GoogleCloudRetailV2alphaCustomAttribute> attributes;
+
     public GoogleCloudRetailV2alphaUserEventInput withAttributes(java.util.Map<String, GoogleCloudRetailV2alphaCustomAttribute> attributes) {
         this.attributes = attributes;
         return this;
@@ -29,19 +30,9 @@ public class GoogleCloudRetailV2alphaUserEventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributionToken")
     public String attributionToken;
+
     public GoogleCloudRetailV2alphaUserEventInput withAttributionToken(String attributionToken) {
         this.attributionToken = attributionToken;
-        return this;
-    }
-    
-    /**
-     * Represents the banner of the user event, for projects that combine banners. For example: retailer can have events from multiple banners like retailer-main, retailer-baby, retailer-meds, etc. under one project.
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("banner")
-    public String banner;
-    public GoogleCloudRetailV2alphaUserEventInput withBanner(String banner) {
-        this.banner = banner;
         return this;
     }
     
@@ -51,6 +42,7 @@ public class GoogleCloudRetailV2alphaUserEventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cartId")
     public String cartId;
+
     public GoogleCloudRetailV2alphaUserEventInput withCartId(String cartId) {
         this.cartId = cartId;
         return this;
@@ -62,8 +54,21 @@ public class GoogleCloudRetailV2alphaUserEventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completionDetail")
     public GoogleCloudRetailV2alphaCompletionDetail completionDetail;
+
     public GoogleCloudRetailV2alphaUserEventInput withCompletionDetail(GoogleCloudRetailV2alphaCompletionDetail completionDetail) {
         this.completionDetail = completionDetail;
+        return this;
+    }
+    
+    /**
+     * The entity for customers that may run multiple different entities, domains, sites or regions, for example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. We recommend that you set this field to get better per-entity search, completion, and prediction results.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("entity")
+    public String entity;
+
+    public GoogleCloudRetailV2alphaUserEventInput withEntity(String entity) {
+        this.entity = entity;
         return this;
     }
     
@@ -73,6 +78,7 @@ public class GoogleCloudRetailV2alphaUserEventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventTime")
     public String eventTime;
+
     public GoogleCloudRetailV2alphaUserEventInput withEventTime(String eventTime) {
         this.eventTime = eventTime;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudRetailV2alphaUserEventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public String eventType;
+
     public GoogleCloudRetailV2alphaUserEventInput withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudRetailV2alphaUserEventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("experimentIds")
     public String[] experimentIds;
+
     public GoogleCloudRetailV2alphaUserEventInput withExperimentIds(String[] experimentIds) {
         this.experimentIds = experimentIds;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudRetailV2alphaUserEventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public GoogleCloudRetailV2alphaUserEventInput withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudRetailV2alphaUserEventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public GoogleCloudRetailV2alphaUserEventInput withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudRetailV2alphaUserEventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderBy")
     public String orderBy;
+
     public GoogleCloudRetailV2alphaUserEventInput withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudRetailV2alphaUserEventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageCategories")
     public String[] pageCategories;
+
     public GoogleCloudRetailV2alphaUserEventInput withPageCategories(String[] pageCategories) {
         this.pageCategories = pageCategories;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudRetailV2alphaUserEventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageViewId")
     public String pageViewId;
+
     public GoogleCloudRetailV2alphaUserEventInput withPageViewId(String pageViewId) {
         this.pageViewId = pageViewId;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudRetailV2alphaUserEventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productDetails")
     public GoogleCloudRetailV2alphaProductDetailInput[] productDetails;
+
     public GoogleCloudRetailV2alphaUserEventInput withProductDetails(GoogleCloudRetailV2alphaProductDetailInput[] productDetails) {
         this.productDetails = productDetails;
         return this;
@@ -172,6 +186,7 @@ public class GoogleCloudRetailV2alphaUserEventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchaseTransaction")
     public GoogleCloudRetailV2alphaPurchaseTransaction purchaseTransaction;
+
     public GoogleCloudRetailV2alphaUserEventInput withPurchaseTransaction(GoogleCloudRetailV2alphaPurchaseTransaction purchaseTransaction) {
         this.purchaseTransaction = purchaseTransaction;
         return this;
@@ -183,6 +198,7 @@ public class GoogleCloudRetailV2alphaUserEventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referrerUri")
     public String referrerUri;
+
     public GoogleCloudRetailV2alphaUserEventInput withReferrerUri(String referrerUri) {
         this.referrerUri = referrerUri;
         return this;
@@ -194,6 +210,7 @@ public class GoogleCloudRetailV2alphaUserEventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchQuery")
     public String searchQuery;
+
     public GoogleCloudRetailV2alphaUserEventInput withSearchQuery(String searchQuery) {
         this.searchQuery = searchQuery;
         return this;
@@ -205,6 +222,7 @@ public class GoogleCloudRetailV2alphaUserEventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionId")
     public String sessionId;
+
     public GoogleCloudRetailV2alphaUserEventInput withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -216,6 +234,7 @@ public class GoogleCloudRetailV2alphaUserEventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudRetailV2alphaUserEventInput withUri(String uri) {
         this.uri = uri;
         return this;
@@ -227,6 +246,7 @@ public class GoogleCloudRetailV2alphaUserEventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userInfo")
     public GoogleCloudRetailV2alphaUserInfo userInfo;
+
     public GoogleCloudRetailV2alphaUserEventInput withUserInfo(GoogleCloudRetailV2alphaUserInfo userInfo) {
         this.userInfo = userInfo;
         return this;
@@ -238,9 +258,11 @@ public class GoogleCloudRetailV2alphaUserEventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visitorId")
     public String visitorId;
+
     public GoogleCloudRetailV2alphaUserEventInput withVisitorId(String visitorId) {
         this.visitorId = visitorId;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaUserEventInput(){}
 }

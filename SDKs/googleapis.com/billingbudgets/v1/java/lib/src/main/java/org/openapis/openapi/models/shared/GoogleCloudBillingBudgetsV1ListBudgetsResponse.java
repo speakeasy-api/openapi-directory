@@ -18,6 +18,7 @@ public class GoogleCloudBillingBudgetsV1ListBudgetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budgets")
     public GoogleCloudBillingBudgetsV1Budget[] budgets;
+
     public GoogleCloudBillingBudgetsV1ListBudgetsResponse withBudgets(GoogleCloudBillingBudgetsV1Budget[] budgets) {
         this.budgets = budgets;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudBillingBudgetsV1ListBudgetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudBillingBudgetsV1ListBudgetsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudBillingBudgetsV1ListBudgetsResponse(){}
 }

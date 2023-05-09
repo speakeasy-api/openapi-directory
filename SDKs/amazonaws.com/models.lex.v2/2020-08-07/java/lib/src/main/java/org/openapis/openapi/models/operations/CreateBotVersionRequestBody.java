@@ -14,6 +14,7 @@ public class CreateBotVersionRequestBody {
      */
     @JsonProperty("botVersionLocaleSpecification")
     public java.util.Map<String, org.openapis.openapi.models.shared.BotVersionLocaleDetails> botVersionLocaleSpecification;
+
     public CreateBotVersionRequestBody withBotVersionLocaleSpecification(java.util.Map<String, org.openapis.openapi.models.shared.BotVersionLocaleDetails> botVersionLocaleSpecification) {
         this.botVersionLocaleSpecification = botVersionLocaleSpecification;
         return this;
@@ -25,9 +26,13 @@ public class CreateBotVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateBotVersionRequestBody withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public CreateBotVersionRequestBody(@JsonProperty("botVersionLocaleSpecification") java.util.Map<String, org.openapis.openapi.models.shared.BotVersionLocaleDetails> botVersionLocaleSpecification) {
+        this.botVersionLocaleSpecification = botVersionLocaleSpecification;
+  }
 }

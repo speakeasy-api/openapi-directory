@@ -15,6 +15,7 @@ public class LFTagError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public ErrorDetail error;
+
     public LFTagError withError(ErrorDetail error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class LFTagError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LFTag")
     public LFTagPair lfTag;
+
     public LFTagError withLFTag(LFTagPair lfTag) {
         this.lfTag = lfTag;
         return this;
     }
     
+    public LFTagError(){}
 }

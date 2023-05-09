@@ -32,6 +32,196 @@ public class Prices {
 	}
 
     /**
+     * Create Repricer Strategy
+     * Creates a new strategy for the seller
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateStrategyResponse createStrategy(org.openapis.openapi.models.operations.CreateStrategyRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v3/repricer/strategy");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CreateStrategyResponse res = new org.openapis.openapi.models.operations.CreateStrategyResponse(contentType, httpRes.statusCode()) {{
+            createStrategy200ApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.CreateStrategy200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.CreateStrategy200ApplicationJSON.class);
+                res.createStrategy200ApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Delete Repricer Strategy
+     * Deletes the strategy
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteStrategyResponse deleteStrategy(org.openapis.openapi.models.operations.DeleteStrategyRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteStrategyRequest.class, baseUrl, "/v3/repricer/strategy/{strategyCollectionId}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.DeleteStrategyResponse res = new org.openapis.openapi.models.operations.DeleteStrategyResponse(contentType, httpRes.statusCode()) {{
+            deleteStrategy200ApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.DeleteStrategy200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.DeleteStrategy200ApplicationJSON.class);
+                res.deleteStrategy200ApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Assign/Unassign items to/from Repricer Strategy
+     * Add/Remove one or more items from a strategy
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetRepricerFeedResponse getRepricerFeed(org.openapis.openapi.models.operations.GetRepricerFeedRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v3/repricerFeeds");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.GetRepricerFeedResponse res = new org.openapis.openapi.models.operations.GetRepricerFeedResponse(contentType, httpRes.statusCode()) {{
+            getRepricerFeed200ApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.GetRepricerFeed200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.GetRepricerFeed200ApplicationJSON.class);
+                res.getRepricerFeed200ApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List of Repricer Strategies
+     * Get the list of strategies
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetStrategiesResponse getStrategies(org.openapis.openapi.models.operations.GetStrategiesRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v3/repricer/strategies");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.GetStrategiesResponse res = new org.openapis.openapi.models.operations.GetStrategiesResponse(contentType, httpRes.statusCode()) {{
+            getStrategies200ApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.GetStrategies200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.GetStrategies200ApplicationJSON.class);
+                res.getStrategies200ApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Set up CAP SKU All
      * This API helps Sellers to completely opt-in or opt-out from CAP program.
      * 
@@ -70,11 +260,9 @@ public class Prices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OptCapProgramInPriceResponse res = new org.openapis.openapi.models.operations.OptCapProgramInPriceResponse() {{
+        org.openapis.openapi.models.operations.OptCapProgramInPriceResponse res = new org.openapis.openapi.models.operations.OptCapProgramInPriceResponse(contentType, httpRes.statusCode()) {{
             optCapProgramInPrice200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -140,12 +328,10 @@ public class Prices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PriceBulkUploadsResponse res = new org.openapis.openapi.models.operations.PriceBulkUploadsResponse() {{
+        org.openapis.openapi.models.operations.PriceBulkUploadsResponse res = new org.openapis.openapi.models.operations.PriceBulkUploadsResponse(contentType, httpRes.statusCode()) {{
             priceBulkUploads200ApplicationJSONObject = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,12 +383,10 @@ public class Prices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePriceResponse res = new org.openapis.openapi.models.operations.UpdatePriceResponse() {{
+        org.openapis.openapi.models.operations.UpdatePriceResponse res = new org.openapis.openapi.models.operations.UpdatePriceResponse(contentType, httpRes.statusCode()) {{
             updatePrice200ApplicationJSONObject = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -214,6 +398,56 @@ public class Prices {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/xml")) {
                 byte[] out = httpRes.body();
                 res.body = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Update Repricer Strategy
+     * Updates the existing strategy
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateStrategyResponse updateStrategy(org.openapis.openapi.models.operations.UpdateStrategyRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateStrategyRequest.class, baseUrl, "/v3/repricer/strategy/{strategyCollectionId}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PUT");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.UpdateStrategyResponse res = new org.openapis.openapi.models.operations.UpdateStrategyResponse(contentType, httpRes.statusCode()) {{
+            updateStrategy200ApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.UpdateStrategy200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.UpdateStrategy200ApplicationJSON.class);
+                res.updateStrategy200ApplicationJSONObject = out;
             }
         }
 

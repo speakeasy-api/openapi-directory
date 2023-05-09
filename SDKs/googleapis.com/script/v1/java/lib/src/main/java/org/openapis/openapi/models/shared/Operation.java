@@ -18,6 +18,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("done")
     public Boolean done;
+
     public Operation withDone(Boolean done) {
         this.done = done;
         return this;
@@ -29,6 +30,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Status error;
+
     public Operation withError(Status error) {
         this.error = error;
         return this;
@@ -40,9 +42,11 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public java.util.Map<String, Object> response;
+
     public Operation withResponse(java.util.Map<String, Object> response) {
         this.response = response;
         return this;
     }
     
+    public Operation(){}
 }

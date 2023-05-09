@@ -15,9 +15,11 @@ public class ModifyReplicationInstanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationInstance")
     public ReplicationInstance replicationInstance;
+
     public ModifyReplicationInstanceResponse withReplicationInstance(ReplicationInstance replicationInstance) {
         this.replicationInstance = replicationInstance;
         return this;
     }
     
+    public ModifyReplicationInstanceResponse(){}
 }

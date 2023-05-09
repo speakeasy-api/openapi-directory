@@ -15,9 +15,11 @@ public class HyperParameterTuningJobStrategyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HyperbandStrategyConfig")
     public HyperbandStrategyConfig hyperbandStrategyConfig;
+
     public HyperParameterTuningJobStrategyConfig withHyperbandStrategyConfig(HyperbandStrategyConfig hyperbandStrategyConfig) {
         this.hyperbandStrategyConfig = hyperbandStrategyConfig;
         return this;
     }
     
+    public HyperParameterTuningJobStrategyConfig(){}
 }

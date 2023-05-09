@@ -15,6 +15,7 @@ public class ListEnabledProductsForImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEnabledProductsForImportResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListEnabledProductsForImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductSubscriptions")
     public String[] productSubscriptions;
+
     public ListEnabledProductsForImportResponse withProductSubscriptions(String[] productSubscriptions) {
         this.productSubscriptions = productSubscriptions;
         return this;
     }
     
+    public ListEnabledProductsForImportResponse(){}
 }

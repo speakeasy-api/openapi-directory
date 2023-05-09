@@ -18,6 +18,7 @@ public class InstantSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public InstantSnapshotArchitectureEnum architecture;
+
     public InstantSnapshot withArchitecture(InstantSnapshotArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -29,6 +30,7 @@ public class InstantSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public InstantSnapshot withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -40,6 +42,7 @@ public class InstantSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public InstantSnapshot withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class InstantSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSizeGb")
     public String diskSizeGb;
+
     public InstantSnapshot withDiskSizeGb(String diskSizeGb) {
         this.diskSizeGb = diskSizeGb;
         return this;
@@ -62,6 +66,7 @@ public class InstantSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestFlush")
     public Boolean guestFlush;
+
     public InstantSnapshot withGuestFlush(Boolean guestFlush) {
         this.guestFlush = guestFlush;
         return this;
@@ -73,6 +78,7 @@ public class InstantSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public InstantSnapshot withId(String id) {
         this.id = id;
         return this;
@@ -84,6 +90,7 @@ public class InstantSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public InstantSnapshot withKind(String kind) {
         this.kind = kind;
         return this;
@@ -95,6 +102,7 @@ public class InstantSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelFingerprint")
     public String labelFingerprint;
+
     public InstantSnapshot withLabelFingerprint(String labelFingerprint) {
         this.labelFingerprint = labelFingerprint;
         return this;
@@ -106,6 +114,7 @@ public class InstantSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public InstantSnapshot withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -117,6 +126,7 @@ public class InstantSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InstantSnapshot withName(String name) {
         this.name = name;
         return this;
@@ -128,6 +138,7 @@ public class InstantSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public InstantSnapshot withRegion(String region) {
         this.region = region;
         return this;
@@ -136,6 +147,7 @@ public class InstantSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceStatus")
     public InstantSnapshotResourceStatus resourceStatus;
+
     public InstantSnapshot withResourceStatus(InstantSnapshotResourceStatus resourceStatus) {
         this.resourceStatus = resourceStatus;
         return this;
@@ -147,6 +159,7 @@ public class InstantSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satisfiesPzs")
     public Boolean satisfiesPzs;
+
     public InstantSnapshot withSatisfiesPzs(Boolean satisfiesPzs) {
         this.satisfiesPzs = satisfiesPzs;
         return this;
@@ -158,6 +171,7 @@ public class InstantSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public InstantSnapshot withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -169,6 +183,7 @@ public class InstantSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public InstantSnapshot withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -180,6 +195,7 @@ public class InstantSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceDisk")
     public String sourceDisk;
+
     public InstantSnapshot withSourceDisk(String sourceDisk) {
         this.sourceDisk = sourceDisk;
         return this;
@@ -191,6 +207,7 @@ public class InstantSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceDiskId")
     public String sourceDiskId;
+
     public InstantSnapshot withSourceDiskId(String sourceDiskId) {
         this.sourceDiskId = sourceDiskId;
         return this;
@@ -202,6 +219,7 @@ public class InstantSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public InstantSnapshotStatusEnum status;
+
     public InstantSnapshot withStatus(InstantSnapshotStatusEnum status) {
         this.status = status;
         return this;
@@ -213,9 +231,11 @@ public class InstantSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public InstantSnapshot withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public InstantSnapshot(){}
 }

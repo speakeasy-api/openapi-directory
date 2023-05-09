@@ -15,9 +15,13 @@ public class ErrorResponse {
      */
     @JsonProperty("error")
     public String error;
+
     public ErrorResponse withError(String error) {
         this.error = error;
         return this;
     }
     
+    public ErrorResponse(@JsonProperty("error") String error) {
+        this.error = error;
+  }
 }

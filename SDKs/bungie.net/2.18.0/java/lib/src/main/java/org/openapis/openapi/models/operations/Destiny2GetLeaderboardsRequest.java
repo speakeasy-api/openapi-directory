@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetLeaderboardsRequest {
@@ -12,6 +13,7 @@ public class Destiny2GetLeaderboardsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
     public Long destinyMembershipId;
+
     public Destiny2GetLeaderboardsRequest withDestinyMembershipId(Long destinyMembershipId) {
         this.destinyMembershipId = destinyMembershipId;
         return this;
@@ -22,6 +24,7 @@ public class Destiny2GetLeaderboardsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxtop")
     public Integer maxtop;
+
     public Destiny2GetLeaderboardsRequest withMaxtop(Integer maxtop) {
         this.maxtop = maxtop;
         return this;
@@ -32,6 +35,7 @@ public class Destiny2GetLeaderboardsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
     public Integer membershipType;
+
     public Destiny2GetLeaderboardsRequest withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
@@ -42,6 +46,7 @@ public class Destiny2GetLeaderboardsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modes")
     public String modes;
+
     public Destiny2GetLeaderboardsRequest withModes(String modes) {
         this.modes = modes;
         return this;
@@ -52,9 +57,14 @@ public class Destiny2GetLeaderboardsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=statid")
     public String statid;
+
     public Destiny2GetLeaderboardsRequest withStatid(String statid) {
         this.statid = statid;
         return this;
     }
     
+    public Destiny2GetLeaderboardsRequest(@JsonProperty("destinyMembershipId") Long destinyMembershipId, @JsonProperty("membershipType") Integer membershipType) {
+        this.destinyMembershipId = destinyMembershipId;
+        this.membershipType = membershipType;
+  }
 }

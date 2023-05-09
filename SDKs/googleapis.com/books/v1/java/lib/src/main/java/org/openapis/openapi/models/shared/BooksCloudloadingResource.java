@@ -15,6 +15,7 @@ public class BooksCloudloadingResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public String author;
+
     public BooksCloudloadingResource withAuthor(String author) {
         this.author = author;
         return this;
@@ -23,6 +24,7 @@ public class BooksCloudloadingResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processingState")
     public String processingState;
+
     public BooksCloudloadingResource withProcessingState(String processingState) {
         this.processingState = processingState;
         return this;
@@ -31,6 +33,7 @@ public class BooksCloudloadingResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public BooksCloudloadingResource withTitle(String title) {
         this.title = title;
         return this;
@@ -39,9 +42,11 @@ public class BooksCloudloadingResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeId")
     public String volumeId;
+
     public BooksCloudloadingResource withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public BooksCloudloadingResource(){}
 }

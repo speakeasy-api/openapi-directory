@@ -18,6 +18,7 @@ public class MinuteRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endMinutesAgo")
     public Integer endMinutesAgo;
+
     public MinuteRange withEndMinutesAgo(Integer endMinutesAgo) {
         this.endMinutesAgo = endMinutesAgo;
         return this;
@@ -29,6 +30,7 @@ public class MinuteRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MinuteRange withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class MinuteRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startMinutesAgo")
     public Integer startMinutesAgo;
+
     public MinuteRange withStartMinutesAgo(Integer startMinutesAgo) {
         this.startMinutesAgo = startMinutesAgo;
         return this;
     }
     
+    public MinuteRange(){}
 }

@@ -15,6 +15,7 @@ public class GeoMosaicConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlgorithmName")
     public AlgorithmNameGeoMosaicEnum algorithmName;
+
     public GeoMosaicConfigInput withAlgorithmName(AlgorithmNameGeoMosaicEnum algorithmName) {
         this.algorithmName = algorithmName;
         return this;
@@ -23,9 +24,11 @@ public class GeoMosaicConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetBands")
     public String[] targetBands;
+
     public GeoMosaicConfigInput withTargetBands(String[] targetBands) {
         this.targetBands = targetBands;
         return this;
     }
     
+    public GeoMosaicConfigInput(){}
 }

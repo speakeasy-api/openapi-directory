@@ -20,6 +20,7 @@ public class DescribeRobotApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public DescribeRobotApplicationResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class DescribeRobotApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public Environment environment;
+
     public DescribeRobotApplicationResponse withEnvironment(Environment environment) {
         this.environment = environment;
         return this;
@@ -36,6 +38,7 @@ public class DescribeRobotApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageDigest")
     public String imageDigest;
+
     public DescribeRobotApplicationResponse withImageDigest(String imageDigest) {
         this.imageDigest = imageDigest;
         return this;
@@ -46,6 +49,7 @@ public class DescribeRobotApplicationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public DescribeRobotApplicationResponse withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -54,6 +58,7 @@ public class DescribeRobotApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DescribeRobotApplicationResponse withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class DescribeRobotApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public DescribeRobotApplicationResponse withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -70,6 +76,7 @@ public class DescribeRobotApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("robotSoftwareSuite")
     public RobotSoftwareSuite robotSoftwareSuite;
+
     public DescribeRobotApplicationResponse withRobotSoftwareSuite(RobotSoftwareSuite robotSoftwareSuite) {
         this.robotSoftwareSuite = robotSoftwareSuite;
         return this;
@@ -78,6 +85,7 @@ public class DescribeRobotApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public Source[] sources;
+
     public DescribeRobotApplicationResponse withSources(Source[] sources) {
         this.sources = sources;
         return this;
@@ -86,6 +94,7 @@ public class DescribeRobotApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public DescribeRobotApplicationResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -94,9 +103,11 @@ public class DescribeRobotApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public DescribeRobotApplicationResponse withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public DescribeRobotApplicationResponse(){}
 }

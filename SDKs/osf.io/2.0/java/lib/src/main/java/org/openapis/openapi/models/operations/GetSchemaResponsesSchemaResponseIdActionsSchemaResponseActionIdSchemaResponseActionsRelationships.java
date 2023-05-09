@@ -15,6 +15,7 @@ public class GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSche
      */
     
     public String creator;
+
     public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsRelationships withCreator(String creator) {
         this.creator = creator;
         return this;
@@ -25,9 +26,11 @@ public class GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSche
      */
     
     public String target;
+
     public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsRelationships withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsRelationships(){}
 }

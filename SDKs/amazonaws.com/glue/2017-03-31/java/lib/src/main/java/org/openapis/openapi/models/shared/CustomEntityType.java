@@ -15,6 +15,7 @@ public class CustomEntityType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContextWords")
     public String[] contextWords;
+
     public CustomEntityType withContextWords(String[] contextWords) {
         this.contextWords = contextWords;
         return this;
@@ -22,6 +23,7 @@ public class CustomEntityType {
     
     @JsonProperty("Name")
     public String name;
+
     public CustomEntityType withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +31,14 @@ public class CustomEntityType {
     
     @JsonProperty("RegexString")
     public String regexString;
+
     public CustomEntityType withRegexString(String regexString) {
         this.regexString = regexString;
         return this;
     }
     
+    public CustomEntityType(@JsonProperty("Name") String name, @JsonProperty("RegexString") String regexString) {
+        this.name = name;
+        this.regexString = regexString;
+  }
 }

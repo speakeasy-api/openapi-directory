@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AttackVectorDescription {
     @JsonProperty("VectorType")
     public String vectorType;
+
     public AttackVectorDescription withVectorType(String vectorType) {
         this.vectorType = vectorType;
         return this;
     }
     
+    public AttackVectorDescription(@JsonProperty("VectorType") String vectorType) {
+        this.vectorType = vectorType;
+  }
 }

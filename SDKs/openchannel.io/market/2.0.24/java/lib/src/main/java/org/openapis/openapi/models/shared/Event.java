@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Event - OK
@@ -15,6 +15,7 @@ public class Event {
      */
     
     public App app;
+
     public Event withApp(App app) {
         this.app = app;
         return this;
@@ -25,6 +26,7 @@ public class Event {
      */
     
     public Long createdDate;
+
     public Event withCreatedDate(Long createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -35,6 +37,7 @@ public class Event {
      */
     
     public String description;
+
     public Event withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class Event {
      */
     
     public Developer developer;
+
     public Event withDeveloper(Developer developer) {
         this.developer = developer;
         return this;
@@ -55,6 +59,7 @@ public class Event {
      */
     
     public String eventId;
+
     public Event withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -65,6 +70,7 @@ public class Event {
      */
     
     public EventEventTypeEnum eventType;
+
     public Event withEventType(EventEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -75,6 +81,7 @@ public class Event {
      */
     
     public String marketplaceId;
+
     public Event withMarketplaceId(String marketplaceId) {
         this.marketplaceId = marketplaceId;
         return this;
@@ -82,6 +89,7 @@ public class Event {
     
     
     public Ownership ownership;
+
     public Event withOwnership(Ownership ownership) {
         this.ownership = ownership;
         return this;
@@ -92,6 +100,7 @@ public class Event {
      */
     
     public Review review;
+
     public Event withReview(Review review) {
         this.review = review;
         return this;
@@ -102,6 +111,7 @@ public class Event {
      */
     
     public Transaction transaction;
+
     public Event withTransaction(Transaction transaction) {
         this.transaction = transaction;
         return this;
@@ -112,9 +122,16 @@ public class Event {
      */
     
     public User user;
+
     public Event withUser(User user) {
         this.user = user;
         return this;
     }
     
+    public Event(@JsonProperty("createdDate") Long createdDate, @JsonProperty("eventId") String eventId, @JsonProperty("eventType") EventEventTypeEnum eventType, @JsonProperty("marketplaceId") String marketplaceId) {
+        this.createdDate = createdDate;
+        this.eventId = eventId;
+        this.eventType = eventType;
+        this.marketplaceId = marketplaceId;
+  }
 }

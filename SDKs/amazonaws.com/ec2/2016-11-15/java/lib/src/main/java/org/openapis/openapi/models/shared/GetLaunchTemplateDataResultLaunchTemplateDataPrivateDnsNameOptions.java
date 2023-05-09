@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetLaunchTemplateDataResultLaunchTemplateDataPrivateDnsNameOptions {
     
     public Boolean enableResourceNameDnsAAAARecord;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataPrivateDnsNameOptions withEnableResourceNameDnsAAAARecord(Boolean enableResourceNameDnsAAAARecord) {
         this.enableResourceNameDnsAAAARecord = enableResourceNameDnsAAAARecord;
         return this;
@@ -19,6 +20,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataPrivateDnsNameOptions 
     
     
     public Boolean enableResourceNameDnsARecord;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataPrivateDnsNameOptions withEnableResourceNameDnsARecord(Boolean enableResourceNameDnsARecord) {
         this.enableResourceNameDnsARecord = enableResourceNameDnsARecord;
         return this;
@@ -26,9 +28,11 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataPrivateDnsNameOptions 
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataPrivateDnsNameOptionsHostnameTypeEnum hostnameType;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataPrivateDnsNameOptions withHostnameType(GetLaunchTemplateDataResultLaunchTemplateDataPrivateDnsNameOptionsHostnameTypeEnum hostnameType) {
         this.hostnameType = hostnameType;
         return this;
     }
     
+    public GetLaunchTemplateDataResultLaunchTemplateDataPrivateDnsNameOptions(){}
 }

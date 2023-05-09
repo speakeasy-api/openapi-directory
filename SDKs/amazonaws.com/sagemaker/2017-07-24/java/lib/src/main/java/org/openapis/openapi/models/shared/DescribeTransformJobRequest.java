@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeTransformJobRequest {
     @JsonProperty("TransformJobName")
     public String transformJobName;
+
     public DescribeTransformJobRequest withTransformJobName(String transformJobName) {
         this.transformJobName = transformJobName;
         return this;
     }
     
+    public DescribeTransformJobRequest(@JsonProperty("TransformJobName") String transformJobName) {
+        this.transformJobName = transformJobName;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RemoveTagsInput - Contains the parameters for RemoveTags.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RemoveTagsInput {
     
     public String[] loadBalancerNames;
+
     public RemoveTagsInput withLoadBalancerNames(String[] loadBalancerNames) {
         this.loadBalancerNames = loadBalancerNames;
         return this;
@@ -19,9 +20,14 @@ public class RemoveTagsInput {
     
     
     public TagKeyOnly[] tags;
+
     public RemoveTagsInput withTags(TagKeyOnly[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public RemoveTagsInput(@JsonProperty("LoadBalancerNames") String[] loadBalancerNames, @JsonProperty("Tags") TagKeyOnly[] tags) {
+        this.loadBalancerNames = loadBalancerNames;
+        this.tags = tags;
+  }
 }

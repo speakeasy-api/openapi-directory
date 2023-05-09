@@ -15,6 +15,7 @@ public class ListObjectChildrenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Children")
     public java.util.Map<String, String> children;
+
     public ListObjectChildrenResponse withChildren(java.util.Map<String, String> children) {
         this.children = children;
         return this;
@@ -23,9 +24,11 @@ public class ListObjectChildrenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListObjectChildrenResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListObjectChildrenResponse(){}
 }

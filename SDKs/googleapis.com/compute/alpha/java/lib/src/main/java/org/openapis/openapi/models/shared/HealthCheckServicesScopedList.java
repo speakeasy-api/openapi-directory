@@ -15,6 +15,7 @@ public class HealthCheckServicesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public HealthCheckService[] resources;
+
     public HealthCheckServicesScopedList withResources(HealthCheckService[] resources) {
         this.resources = resources;
         return this;
@@ -26,9 +27,11 @@ public class HealthCheckServicesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public HealthCheckServicesScopedListWarning warning;
+
     public HealthCheckServicesScopedList withWarning(HealthCheckServicesScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public HealthCheckServicesScopedList(){}
 }

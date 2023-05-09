@@ -15,6 +15,7 @@ public class NewCustomVocabularyItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayAs")
     public String displayAs;
+
     public NewCustomVocabularyItem withDisplayAs(String displayAs) {
         this.displayAs = displayAs;
         return this;
@@ -22,6 +23,7 @@ public class NewCustomVocabularyItem {
     
     @JsonProperty("phrase")
     public String phrase;
+
     public NewCustomVocabularyItem withPhrase(String phrase) {
         this.phrase = phrase;
         return this;
@@ -30,9 +32,13 @@ public class NewCustomVocabularyItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Long weight;
+
     public NewCustomVocabularyItem withWeight(Long weight) {
         this.weight = weight;
         return this;
     }
     
+    public NewCustomVocabularyItem(@JsonProperty("phrase") String phrase) {
+        this.phrase = phrase;
+  }
 }

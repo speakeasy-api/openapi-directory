@@ -12,6 +12,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Aces")
     public Double aces;
+
     public Leaderboard withAces(Double aces) {
         this.aces = aces;
         return this;
@@ -20,6 +21,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Assists")
     public Double assists;
+
     public Leaderboard withAssists(Double assists) {
         this.assists = assists;
         return this;
@@ -28,6 +30,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageDamagePerRound")
     public Double averageDamagePerRound;
+
     public Leaderboard withAverageDamagePerRound(Double averageDamagePerRound) {
         this.averageDamagePerRound = averageDamagePerRound;
         return this;
@@ -36,6 +39,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Clutch1v2s")
     public Double clutch1v2s;
+
     public Leaderboard withClutch1v2s(Double clutch1v2s) {
         this.clutch1v2s = clutch1v2s;
         return this;
@@ -44,6 +48,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Clutch1v3s")
     public Double clutch1v3s;
+
     public Leaderboard withClutch1v3s(Double clutch1v3s) {
         this.clutch1v3s = clutch1v3s;
         return this;
@@ -52,6 +57,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Clutch1v4s")
     public Double clutch1v4s;
+
     public Leaderboard withClutch1v4s(Double clutch1v4s) {
         this.clutch1v4s = clutch1v4s;
         return this;
@@ -60,6 +66,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Clutch1v5s")
     public Double clutch1v5s;
+
     public Leaderboard withClutch1v5s(Double clutch1v5s) {
         this.clutch1v5s = clutch1v5s;
         return this;
@@ -68,6 +75,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateTime")
     public String dateTime;
+
     public Leaderboard withDateTime(String dateTime) {
         this.dateTime = dateTime;
         return this;
@@ -76,6 +84,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Day")
     public String day;
+
     public Leaderboard withDay(String day) {
         this.day = day;
         return this;
@@ -84,6 +93,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Deaths")
     public Double deaths;
+
     public Leaderboard withDeaths(Double deaths) {
         this.deaths = deaths;
         return this;
@@ -92,6 +102,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntryKills")
     public Double entryKills;
+
     public Leaderboard withEntryKills(Double entryKills) {
         this.entryKills = entryKills;
         return this;
@@ -100,6 +111,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPoints")
     public Double fantasyPoints;
+
     public Leaderboard withFantasyPoints(Double fantasyPoints) {
         this.fantasyPoints = fantasyPoints;
         return this;
@@ -108,6 +120,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameId")
     public Long gameId;
+
     public Leaderboard withGameId(Long gameId) {
         this.gameId = gameId;
         return this;
@@ -116,6 +129,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Games")
     public Long games;
+
     public Leaderboard withGames(Long games) {
         this.games = games;
         return this;
@@ -124,6 +138,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Headshots")
     public Double headshots;
+
     public Leaderboard withHeadshots(Double headshots) {
         this.headshots = headshots;
         return this;
@@ -132,6 +147,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsClosed")
     public Boolean isClosed;
+
     public Leaderboard withIsClosed(Boolean isClosed) {
         this.isClosed = isClosed;
         return this;
@@ -140,6 +156,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Kast")
     public Double kast;
+
     public Leaderboard withKast(Double kast) {
         this.kast = kast;
         return this;
@@ -148,6 +165,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Kills")
     public Double kills;
+
     public Leaderboard withKills(Double kills) {
         this.kills = kills;
         return this;
@@ -156,6 +174,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Maps")
     public Double maps;
+
     public Leaderboard withMaps(Double maps) {
         this.maps = maps;
         return this;
@@ -164,6 +183,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchName")
     public String matchName;
+
     public Leaderboard withMatchName(String matchName) {
         this.matchName = matchName;
         return this;
@@ -172,6 +192,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Leaderboard withName(String name) {
         this.name = name;
         return this;
@@ -180,6 +201,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Opponent")
     public String opponent;
+
     public Leaderboard withOpponent(String opponent) {
         this.opponent = opponent;
         return this;
@@ -188,6 +210,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentId")
     public Long opponentId;
+
     public Leaderboard withOpponentId(Long opponentId) {
         this.opponentId = opponentId;
         return this;
@@ -196,6 +219,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerId")
     public Long playerId;
+
     public Leaderboard withPlayerId(Long playerId) {
         this.playerId = playerId;
         return this;
@@ -204,6 +228,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuadKills")
     public Double quadKills;
+
     public Leaderboard withQuadKills(Double quadKills) {
         this.quadKills = quadKills;
         return this;
@@ -212,6 +237,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rating")
     public Double rating;
+
     public Leaderboard withRating(Double rating) {
         this.rating = rating;
         return this;
@@ -220,6 +246,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public Leaderboard withTeam(String team) {
         this.team = team;
         return this;
@@ -228,6 +255,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamId")
     public Long teamId;
+
     public Leaderboard withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
@@ -236,6 +264,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public Leaderboard withUpdated(String updated) {
         this.updated = updated;
         return this;
@@ -244,9 +273,11 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdatedUtc")
     public String updatedUtc;
+
     public Leaderboard withUpdatedUtc(String updatedUtc) {
         this.updatedUtc = updatedUtc;
         return this;
     }
     
+    public Leaderboard(){}
 }

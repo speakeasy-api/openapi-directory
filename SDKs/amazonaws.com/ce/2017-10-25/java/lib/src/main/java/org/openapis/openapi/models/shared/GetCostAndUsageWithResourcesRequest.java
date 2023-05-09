@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetCostAndUsageWithResourcesRequest {
     @JsonProperty("Filter")
     public Expression filter;
+
     public GetCostAndUsageWithResourcesRequest withFilter(Expression filter) {
         this.filter = filter;
         return this;
@@ -18,6 +19,7 @@ public class GetCostAndUsageWithResourcesRequest {
     
     @JsonProperty("Granularity")
     public GranularityEnum granularity;
+
     public GetCostAndUsageWithResourcesRequest withGranularity(GranularityEnum granularity) {
         this.granularity = granularity;
         return this;
@@ -26,6 +28,7 @@ public class GetCostAndUsageWithResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupBy")
     public GroupDefinition[] groupBy;
+
     public GetCostAndUsageWithResourcesRequest withGroupBy(GroupDefinition[] groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -34,6 +37,7 @@ public class GetCostAndUsageWithResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metrics")
     public String[] metrics;
+
     public GetCostAndUsageWithResourcesRequest withMetrics(String[] metrics) {
         this.metrics = metrics;
         return this;
@@ -42,6 +46,7 @@ public class GetCostAndUsageWithResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetCostAndUsageWithResourcesRequest withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -49,9 +54,15 @@ public class GetCostAndUsageWithResourcesRequest {
     
     @JsonProperty("TimePeriod")
     public DateInterval timePeriod;
+
     public GetCostAndUsageWithResourcesRequest withTimePeriod(DateInterval timePeriod) {
         this.timePeriod = timePeriod;
         return this;
     }
     
+    public GetCostAndUsageWithResourcesRequest(@JsonProperty("Filter") Expression filter, @JsonProperty("Granularity") GranularityEnum granularity, @JsonProperty("TimePeriod") DateInterval timePeriod) {
+        this.filter = filter;
+        this.granularity = granularity;
+        this.timePeriod = timePeriod;
+  }
 }

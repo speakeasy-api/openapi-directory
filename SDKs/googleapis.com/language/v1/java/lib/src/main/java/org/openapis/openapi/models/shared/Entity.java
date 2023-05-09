@@ -18,6 +18,7 @@ public class Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mentions")
     public EntityMention[] mentions;
+
     public Entity withMentions(EntityMention[] mentions) {
         this.mentions = mentions;
         return this;
@@ -29,6 +30,7 @@ public class Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public Entity withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -40,6 +42,7 @@ public class Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Entity withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salience")
     public Float salience;
+
     public Entity withSalience(Float salience) {
         this.salience = salience;
         return this;
@@ -62,6 +66,7 @@ public class Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentiment")
     public Sentiment sentiment;
+
     public Entity withSentiment(Sentiment sentiment) {
         this.sentiment = sentiment;
         return this;
@@ -73,9 +78,11 @@ public class Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public EntityTypeEnum type;
+
     public Entity withType(EntityTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Entity(){}
 }

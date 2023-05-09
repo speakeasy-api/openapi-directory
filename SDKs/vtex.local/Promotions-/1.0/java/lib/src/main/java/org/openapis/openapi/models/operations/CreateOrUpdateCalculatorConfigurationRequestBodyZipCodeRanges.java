@@ -18,9 +18,11 @@ public class CreateOrUpdateCalculatorConfigurationRequestBodyZipCodeRanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inclusive")
     public Boolean inclusive;
+
     public CreateOrUpdateCalculatorConfigurationRequestBodyZipCodeRanges withInclusive(Boolean inclusive) {
         this.inclusive = inclusive;
         return this;
     }
     
+    public CreateOrUpdateCalculatorConfigurationRequestBodyZipCodeRanges(){}
 }

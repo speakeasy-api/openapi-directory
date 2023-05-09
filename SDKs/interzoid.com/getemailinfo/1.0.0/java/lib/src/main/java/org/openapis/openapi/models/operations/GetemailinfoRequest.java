@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetemailinfoRequest {
@@ -12,6 +13,7 @@ public class GetemailinfoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public GetemailinfoRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -22,9 +24,14 @@ public class GetemailinfoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
     public String license;
+
     public GetemailinfoRequest withLicense(String license) {
         this.license = license;
         return this;
     }
     
+    public GetemailinfoRequest(@JsonProperty("email") String email, @JsonProperty("license") String license) {
+        this.email = email;
+        this.license = license;
+  }
 }

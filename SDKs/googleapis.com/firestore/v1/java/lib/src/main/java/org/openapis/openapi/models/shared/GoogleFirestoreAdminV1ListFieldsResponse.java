@@ -18,6 +18,7 @@ public class GoogleFirestoreAdminV1ListFieldsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public GoogleFirestoreAdminV1Field[] fields;
+
     public GoogleFirestoreAdminV1ListFieldsResponse withFields(GoogleFirestoreAdminV1Field[] fields) {
         this.fields = fields;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFirestoreAdminV1ListFieldsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleFirestoreAdminV1ListFieldsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleFirestoreAdminV1ListFieldsResponse(){}
 }

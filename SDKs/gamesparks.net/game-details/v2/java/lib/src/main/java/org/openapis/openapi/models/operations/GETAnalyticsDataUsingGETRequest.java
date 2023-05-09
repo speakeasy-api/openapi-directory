@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GETAnalyticsDataUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public GETAnalyticsDataUsingGETRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -23,6 +25,7 @@ public class GETAnalyticsDataUsingGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dataType")
     public GETAnalyticsDataUsingGETDataTypeEnum dataType;
+
     public GETAnalyticsDataUsingGETRequest withDataType(GETAnalyticsDataUsingGETDataTypeEnum dataType) {
         this.dataType = dataType;
         return this;
@@ -33,6 +36,7 @@ public class GETAnalyticsDataUsingGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public LocalDate endDate;
+
     public GETAnalyticsDataUsingGETRequest withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -43,6 +47,7 @@ public class GETAnalyticsDataUsingGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keys")
     public String keys;
+
     public GETAnalyticsDataUsingGETRequest withKeys(String keys) {
         this.keys = keys;
         return this;
@@ -53,6 +58,7 @@ public class GETAnalyticsDataUsingGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=precision")
     public GETAnalyticsDataUsingGETPrecisionEnum precision;
+
     public GETAnalyticsDataUsingGETRequest withPrecision(GETAnalyticsDataUsingGETPrecisionEnum precision) {
         this.precision = precision;
         return this;
@@ -63,6 +69,7 @@ public class GETAnalyticsDataUsingGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stage")
     public GETAnalyticsDataUsingGETStageEnum stage;
+
     public GETAnalyticsDataUsingGETRequest withStage(GETAnalyticsDataUsingGETStageEnum stage) {
         this.stage = stage;
         return this;
@@ -73,9 +80,18 @@ public class GETAnalyticsDataUsingGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public LocalDate startDate;
+
     public GETAnalyticsDataUsingGETRequest withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public GETAnalyticsDataUsingGETRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("dataType") GETAnalyticsDataUsingGETDataTypeEnum dataType, @JsonProperty("endDate") LocalDate endDate, @JsonProperty("precision") GETAnalyticsDataUsingGETPrecisionEnum precision, @JsonProperty("stage") GETAnalyticsDataUsingGETStageEnum stage, @JsonProperty("startDate") LocalDate startDate) {
+        this.apiKey = apiKey;
+        this.dataType = dataType;
+        this.endDate = endDate;
+        this.precision = precision;
+        this.stage = stage;
+        this.startDate = startDate;
+  }
 }

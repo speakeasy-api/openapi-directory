@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudidentityDevicesDeviceUsersLookupResponse {
     
     public String contentType;
+
     public CloudidentityDevicesDeviceUsersLookupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudidentityDevicesDeviceUsersLookupResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse googleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse;
+
     public CloudidentityDevicesDeviceUsersLookupResponse withGoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse(org.openapis.openapi.models.shared.GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse googleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse) {
         this.googleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse = googleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudidentityDevicesDeviceUsersLookupResponse {
     
     
     public Integer statusCode;
+
     public CloudidentityDevicesDeviceUsersLookupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudidentityDevicesDeviceUsersLookupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudidentityDevicesDeviceUsersLookupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudidentityDevicesDeviceUsersLookupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

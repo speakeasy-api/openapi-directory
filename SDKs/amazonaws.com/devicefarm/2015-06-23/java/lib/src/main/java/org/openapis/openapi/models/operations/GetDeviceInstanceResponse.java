@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDeviceInstanceResponse {
@@ -12,6 +13,7 @@ public class GetDeviceInstanceResponse {
      */
     
     public Object argumentException;
+
     public GetDeviceInstanceResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class GetDeviceInstanceResponse {
     
     
     public String contentType;
+
     public GetDeviceInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDeviceInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDeviceInstanceResult getDeviceInstanceResult;
+
     public GetDeviceInstanceResponse withGetDeviceInstanceResult(org.openapis.openapi.models.shared.GetDeviceInstanceResult getDeviceInstanceResult) {
         this.getDeviceInstanceResult = getDeviceInstanceResult;
         return this;
@@ -39,6 +43,7 @@ public class GetDeviceInstanceResponse {
      */
     
     public Object limitExceededException;
+
     public GetDeviceInstanceResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class GetDeviceInstanceResponse {
      */
     
     public Object notFoundException;
+
     public GetDeviceInstanceResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetDeviceInstanceResponse {
      */
     
     public Object serviceAccountException;
+
     public GetDeviceInstanceResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class GetDeviceInstanceResponse {
     
     
     public Integer statusCode;
+
     public GetDeviceInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetDeviceInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDeviceInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDeviceInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

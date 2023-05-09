@@ -18,9 +18,11 @@ public class OrFiltersForSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentFilterClauses")
     public SegmentFilterClause[] segmentFilterClauses;
+
     public OrFiltersForSegment withSegmentFilterClauses(SegmentFilterClause[] segmentFilterClauses) {
         this.segmentFilterClauses = segmentFilterClauses;
         return this;
     }
     
+    public OrFiltersForSegment(){}
 }

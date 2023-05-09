@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersAddonAccountsReadRequest {
@@ -12,6 +13,7 @@ public class UsersAddonAccountsReadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
     public String accountId;
+
     public UsersAddonAccountsReadRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class UsersAddonAccountsReadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=provider")
     public String provider;
+
     public UsersAddonAccountsReadRequest withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -32,9 +35,15 @@ public class UsersAddonAccountsReadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
     public String userId;
+
     public UsersAddonAccountsReadRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public UsersAddonAccountsReadRequest(@JsonProperty("account_id") String accountId, @JsonProperty("provider") String provider, @JsonProperty("user_id") String userId) {
+        this.accountId = accountId;
+        this.provider = provider;
+        this.userId = userId;
+  }
 }

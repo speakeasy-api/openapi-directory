@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchSecurity {
     @SpeakeasyMetadata("security:option=true")
     public IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchSecurityOption1 option1;
+
     public IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchSecurity withOption1(IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchSecurityOption2 option2;
+
     public IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchSecurity withOption2(IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchSecurity(){}
 }

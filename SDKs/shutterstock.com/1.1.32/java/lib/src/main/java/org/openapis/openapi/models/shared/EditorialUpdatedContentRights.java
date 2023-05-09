@@ -12,9 +12,11 @@ public class EditorialUpdatedContentRights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countries")
     public String countries;
+
     public EditorialUpdatedContentRights withCountries(String countries) {
         this.countries = countries;
         return this;
     }
     
+    public EditorialUpdatedContentRights(){}
 }

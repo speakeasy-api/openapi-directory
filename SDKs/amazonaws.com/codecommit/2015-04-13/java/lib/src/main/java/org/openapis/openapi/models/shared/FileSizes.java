@@ -15,6 +15,7 @@ public class FileSizes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base")
     public Long base;
+
     public FileSizes withBase(Long base) {
         this.base = base;
         return this;
@@ -23,6 +24,7 @@ public class FileSizes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public Long destination;
+
     public FileSizes withDestination(Long destination) {
         this.destination = destination;
         return this;
@@ -31,9 +33,11 @@ public class FileSizes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Long source;
+
     public FileSizes withSource(Long source) {
         this.source = source;
         return this;
     }
     
+    public FileSizes(){}
 }

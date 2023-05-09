@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetViewsBriefRequest {
@@ -12,6 +13,7 @@ public class GetViewsBriefRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=className")
     public String className;
+
     public GetViewsBriefRequest withClassName(String className) {
         this.className = className;
         return this;
@@ -22,9 +24,13 @@ public class GetViewsBriefRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placeName")
     public String placeName;
+
     public GetViewsBriefRequest withPlaceName(String placeName) {
         this.placeName = placeName;
         return this;
     }
     
+    public GetViewsBriefRequest(@JsonProperty("className") String className) {
+        this.className = className;
+  }
 }

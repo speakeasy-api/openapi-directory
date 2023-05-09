@@ -18,6 +18,7 @@ public class ResourceStatusServiceIntegrationStatusBackupDRStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrationDetails")
     public String integrationDetails;
+
     public ResourceStatusServiceIntegrationStatusBackupDRStatus withIntegrationDetails(String integrationDetails) {
         this.integrationDetails = integrationDetails;
         return this;
@@ -29,9 +30,11 @@ public class ResourceStatusServiceIntegrationStatusBackupDRStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ResourceStatusServiceIntegrationStatusBackupDRStatusStateEnum state;
+
     public ResourceStatusServiceIntegrationStatusBackupDRStatus withState(ResourceStatusServiceIntegrationStatusBackupDRStatusStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ResourceStatusServiceIntegrationStatusBackupDRStatus(){}
 }

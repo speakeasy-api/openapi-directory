@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListObjectParentsResponse {
@@ -12,6 +13,7 @@ public class ListObjectParentsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListObjectParentsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListObjectParentsResponse {
      */
     
     public Object cannotListParentOfRootException;
+
     public ListObjectParentsResponse withCannotListParentOfRootException(Object cannotListParentOfRootException) {
         this.cannotListParentOfRootException = cannotListParentOfRootException;
         return this;
@@ -29,6 +32,7 @@ public class ListObjectParentsResponse {
     
     
     public String contentType;
+
     public ListObjectParentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListObjectParentsResponse {
      */
     
     public Object directoryNotEnabledException;
+
     public ListObjectParentsResponse withDirectoryNotEnabledException(Object directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -49,6 +54,7 @@ public class ListObjectParentsResponse {
      */
     
     public Object internalServiceException;
+
     public ListObjectParentsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class ListObjectParentsResponse {
      */
     
     public Object invalidArnException;
+
     public ListObjectParentsResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class ListObjectParentsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListObjectParentsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -79,6 +87,7 @@ public class ListObjectParentsResponse {
      */
     
     public Object limitExceededException;
+
     public ListObjectParentsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -89,6 +98,7 @@ public class ListObjectParentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListObjectParentsResponse listObjectParentsResponse;
+
     public ListObjectParentsResponse withListObjectParentsResponse(org.openapis.openapi.models.shared.ListObjectParentsResponse listObjectParentsResponse) {
         this.listObjectParentsResponse = listObjectParentsResponse;
         return this;
@@ -96,6 +106,7 @@ public class ListObjectParentsResponse {
     
     
     public Integer statusCode;
+
     public ListObjectParentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class ListObjectParentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListObjectParentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class ListObjectParentsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListObjectParentsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -123,6 +136,7 @@ public class ListObjectParentsResponse {
      */
     
     public Object retryableConflictException;
+
     public ListObjectParentsResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -133,9 +147,14 @@ public class ListObjectParentsResponse {
      */
     
     public Object validationException;
+
     public ListObjectParentsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListObjectParentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

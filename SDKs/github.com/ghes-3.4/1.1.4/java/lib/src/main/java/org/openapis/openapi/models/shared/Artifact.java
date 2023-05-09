@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Artifact {
     @JsonProperty("archive_download_url")
     public String archiveDownloadUrl;
+
     public Artifact withArchiveDownloadUrl(String archiveDownloadUrl) {
         this.archiveDownloadUrl = archiveDownloadUrl;
         return this;
@@ -28,6 +29,7 @@ public class Artifact {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Artifact withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class Artifact {
      */
     @JsonProperty("expired")
     public Boolean expired;
+
     public Artifact withExpired(Boolean expired) {
         this.expired = expired;
         return this;
@@ -47,6 +50,7 @@ public class Artifact {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expires_at")
     public OffsetDateTime expiresAt;
+
     public Artifact withExpiresAt(OffsetDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -54,6 +58,7 @@ public class Artifact {
     
     @JsonProperty("id")
     public Long id;
+
     public Artifact withId(Long id) {
         this.id = id;
         return this;
@@ -64,6 +69,7 @@ public class Artifact {
      */
     @JsonProperty("name")
     public String name;
+
     public Artifact withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +77,7 @@ public class Artifact {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public Artifact withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -81,6 +88,7 @@ public class Artifact {
      */
     @JsonProperty("size_in_bytes")
     public Long sizeInBytes;
+
     public Artifact withSizeInBytes(Long sizeInBytes) {
         this.sizeInBytes = sizeInBytes;
         return this;
@@ -90,6 +98,7 @@ public class Artifact {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public Artifact withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -97,6 +106,7 @@ public class Artifact {
     
     @JsonProperty("url")
     public String url;
+
     public Artifact withUrl(String url) {
         this.url = url;
         return this;
@@ -105,9 +115,22 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflow_run")
     public ArtifactWorkflowRun workflowRun;
+
     public Artifact withWorkflowRun(ArtifactWorkflowRun workflowRun) {
         this.workflowRun = workflowRun;
         return this;
     }
     
+    public Artifact(@JsonProperty("archive_download_url") String archiveDownloadUrl, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("expired") Boolean expired, @JsonProperty("expires_at") OffsetDateTime expiresAt, @JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("size_in_bytes") Long sizeInBytes, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
+        this.archiveDownloadUrl = archiveDownloadUrl;
+        this.createdAt = createdAt;
+        this.expired = expired;
+        this.expiresAt = expiresAt;
+        this.id = id;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.sizeInBytes = sizeInBytes;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

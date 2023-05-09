@@ -12,6 +12,7 @@ public class SscerRequestBodyCertificateParameters {
      */
     @JsonProperty("CUID")
     public String cuid;
+
     public SscerRequestBodyCertificateParameters withCuid(String cuid) {
         this.cuid = cuid;
         return this;
@@ -22,6 +23,7 @@ public class SscerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public SscerRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -32,6 +34,7 @@ public class SscerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public SscerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -42,6 +45,7 @@ public class SscerRequestBodyCertificateParameters {
      */
     @JsonProperty("IDXN")
     public String idxn;
+
     public SscerRequestBodyCertificateParameters withIdxn(String idxn) {
         this.idxn = idxn;
         return this;
@@ -52,6 +56,7 @@ public class SscerRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public SscerRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
@@ -62,9 +67,18 @@ public class SscerRequestBodyCertificateParameters {
      */
     @JsonProperty("YOE")
     public String yoe;
+
     public SscerRequestBodyCertificateParameters withYoe(String yoe) {
         this.yoe = yoe;
         return this;
     }
     
+    public SscerRequestBodyCertificateParameters(@JsonProperty("CUID") String cuid, @JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("IDXN") String idxn, @JsonProperty("UID") String uid, @JsonProperty("YOE") String yoe) {
+        this.cuid = cuid;
+        this.dob = dob;
+        this.fullName = fullName;
+        this.idxn = idxn;
+        this.uid = uid;
+        this.yoe = yoe;
+  }
 }

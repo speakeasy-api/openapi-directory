@@ -15,6 +15,7 @@ public class AddonIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public AddonIssueCodeEnum code;
+
     public AddonIssue withCode(AddonIssueCodeEnum code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class AddonIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AddonIssue withMessage(String message) {
         this.message = message;
         return this;
@@ -31,9 +33,11 @@ public class AddonIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceIds")
     public String[] resourceIds;
+
     public AddonIssue withResourceIds(String[] resourceIds) {
         this.resourceIds = resourceIds;
         return this;
     }
     
+    public AddonIssue(){}
 }

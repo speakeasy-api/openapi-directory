@@ -12,6 +12,7 @@ public class CreateGrantRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Constraints")
     public GrantConstraints constraints;
+
     public CreateGrantRequest withConstraints(GrantConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -20,6 +21,7 @@ public class CreateGrantRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrantTokens")
     public String[] grantTokens;
+
     public CreateGrantRequest withGrantTokens(String[] grantTokens) {
         this.grantTokens = grantTokens;
         return this;
@@ -27,6 +29,7 @@ public class CreateGrantRequest {
     
     @JsonProperty("GranteePrincipal")
     public String granteePrincipal;
+
     public CreateGrantRequest withGranteePrincipal(String granteePrincipal) {
         this.granteePrincipal = granteePrincipal;
         return this;
@@ -34,6 +37,7 @@ public class CreateGrantRequest {
     
     @JsonProperty("KeyId")
     public String keyId;
+
     public CreateGrantRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -42,6 +46,7 @@ public class CreateGrantRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateGrantRequest withName(String name) {
         this.name = name;
         return this;
@@ -49,6 +54,7 @@ public class CreateGrantRequest {
     
     @JsonProperty("Operations")
     public GrantOperationEnum[] operations;
+
     public CreateGrantRequest withOperations(GrantOperationEnum[] operations) {
         this.operations = operations;
         return this;
@@ -57,9 +63,15 @@ public class CreateGrantRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetiringPrincipal")
     public String retiringPrincipal;
+
     public CreateGrantRequest withRetiringPrincipal(String retiringPrincipal) {
         this.retiringPrincipal = retiringPrincipal;
         return this;
     }
     
+    public CreateGrantRequest(@JsonProperty("GranteePrincipal") String granteePrincipal, @JsonProperty("KeyId") String keyId, @JsonProperty("Operations") GrantOperationEnum[] operations) {
+        this.granteePrincipal = granteePrincipal;
+        this.keyId = keyId;
+        this.operations = operations;
+  }
 }

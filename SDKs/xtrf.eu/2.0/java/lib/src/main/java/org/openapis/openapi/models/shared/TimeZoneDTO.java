@@ -15,6 +15,7 @@ public class TimeZoneDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public TimeZoneDTO withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -23,6 +24,7 @@ public class TimeZoneDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TimeZoneDTO withId(String id) {
         this.id = id;
         return this;
@@ -31,9 +33,11 @@ public class TimeZoneDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public TimeZoneDTO withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public TimeZoneDTO(){}
 }

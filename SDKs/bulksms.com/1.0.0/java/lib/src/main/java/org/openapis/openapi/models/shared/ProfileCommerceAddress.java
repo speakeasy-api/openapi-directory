@@ -12,6 +12,7 @@ public class ProfileCommerceAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public ProfileCommerceAddress withCity(String city) {
         this.city = city;
         return this;
@@ -20,6 +21,7 @@ public class ProfileCommerceAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public ProfileCommerceAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -28,6 +30,7 @@ public class ProfileCommerceAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public ProfileCommerceAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -36,6 +39,7 @@ public class ProfileCommerceAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public ProfileCommerceAddress withRegion(String region) {
         this.region = region;
         return this;
@@ -44,9 +48,11 @@ public class ProfileCommerceAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street")
     public String[] street;
+
     public ProfileCommerceAddress withStreet(String[] street) {
         this.street = street;
         return this;
     }
     
+    public ProfileCommerceAddress(){}
 }

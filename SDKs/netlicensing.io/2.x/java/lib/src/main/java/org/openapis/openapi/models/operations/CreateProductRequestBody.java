@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateProductRequestBody {
@@ -12,6 +13,7 @@ public class CreateProductRequestBody {
      */
     @SpeakeasyMetadata("form:name=active")
     public Boolean active;
+
     public CreateProductRequestBody withActive(Boolean active) {
         this.active = active;
         return this;
@@ -22,6 +24,7 @@ public class CreateProductRequestBody {
      */
     @SpeakeasyMetadata("form:name=description")
     public String description;
+
     public CreateProductRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -32,6 +35,7 @@ public class CreateProductRequestBody {
      */
     @SpeakeasyMetadata("form:name=licenseeAutoCreate")
     public Boolean licenseeAutoCreate;
+
     public CreateProductRequestBody withLicenseeAutoCreate(Boolean licenseeAutoCreate) {
         this.licenseeAutoCreate = licenseeAutoCreate;
         return this;
@@ -42,6 +46,7 @@ public class CreateProductRequestBody {
      */
     @SpeakeasyMetadata("form:name=licensingInfo")
     public String licensingInfo;
+
     public CreateProductRequestBody withLicensingInfo(String licensingInfo) {
         this.licensingInfo = licensingInfo;
         return this;
@@ -52,6 +57,7 @@ public class CreateProductRequestBody {
      */
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public CreateProductRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +68,7 @@ public class CreateProductRequestBody {
      */
     @SpeakeasyMetadata("form:name=number")
     public String number;
+
     public CreateProductRequestBody withNumber(String number) {
         this.number = number;
         return this;
@@ -72,6 +79,7 @@ public class CreateProductRequestBody {
      */
     @SpeakeasyMetadata("form:name=vatMode")
     public CreateProductRequestBodyVatModeEnum vatMode;
+
     public CreateProductRequestBody withVatMode(CreateProductRequestBodyVatModeEnum vatMode) {
         this.vatMode = vatMode;
         return this;
@@ -82,9 +90,15 @@ public class CreateProductRequestBody {
      */
     @SpeakeasyMetadata("form:name=version")
     public String version;
+
     public CreateProductRequestBody withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public CreateProductRequestBody(@JsonProperty("active") Boolean active, @JsonProperty("name") String name, @JsonProperty("version") String version) {
+        this.active = active;
+        this.name = name;
+        this.version = version;
+  }
 }

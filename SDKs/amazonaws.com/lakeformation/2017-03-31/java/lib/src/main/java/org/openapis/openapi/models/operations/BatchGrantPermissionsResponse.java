@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGrantPermissionsResponse {
@@ -12,6 +13,7 @@ public class BatchGrantPermissionsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGrantPermissionsResponse batchGrantPermissionsResponse;
+
     public BatchGrantPermissionsResponse withBatchGrantPermissionsResponse(org.openapis.openapi.models.shared.BatchGrantPermissionsResponse batchGrantPermissionsResponse) {
         this.batchGrantPermissionsResponse = batchGrantPermissionsResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchGrantPermissionsResponse {
     
     
     public String contentType;
+
     public BatchGrantPermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGrantPermissionsResponse {
      */
     
     public Object invalidInputException;
+
     public BatchGrantPermissionsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class BatchGrantPermissionsResponse {
      */
     
     public Object operationTimeoutException;
+
     public BatchGrantPermissionsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -46,6 +51,7 @@ public class BatchGrantPermissionsResponse {
     
     
     public Integer statusCode;
+
     public BatchGrantPermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class BatchGrantPermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGrantPermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchGrantPermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

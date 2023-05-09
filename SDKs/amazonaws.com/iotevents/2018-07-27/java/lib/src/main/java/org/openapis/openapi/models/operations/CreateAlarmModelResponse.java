@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAlarmModelResponse {
     
     public String contentType;
+
     public CreateAlarmModelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateAlarmModelResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAlarmModelResponse createAlarmModelResponse;
+
     public CreateAlarmModelResponse withCreateAlarmModelResponse(org.openapis.openapi.models.shared.CreateAlarmModelResponse createAlarmModelResponse) {
         this.createAlarmModelResponse = createAlarmModelResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateAlarmModelResponse {
      */
     
     public Object internalFailureException;
+
     public CreateAlarmModelResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateAlarmModelResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateAlarmModelResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateAlarmModelResponse {
      */
     
     public Object limitExceededException;
+
     public CreateAlarmModelResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAlarmModelResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateAlarmModelResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -66,6 +73,7 @@ public class CreateAlarmModelResponse {
     
     
     public Integer statusCode;
+
     public CreateAlarmModelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateAlarmModelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAlarmModelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateAlarmModelResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateAlarmModelResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -93,6 +103,7 @@ public class CreateAlarmModelResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateAlarmModelResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,9 +114,14 @@ public class CreateAlarmModelResponse {
      */
     
     public Object throttlingException;
+
     public CreateAlarmModelResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateAlarmModelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ProductPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoInstallPolicy")
     public AutoInstallPolicy autoInstallPolicy;
+
     public ProductPolicy withAutoInstallPolicy(AutoInstallPolicy autoInstallPolicy) {
         this.autoInstallPolicy = autoInstallPolicy;
         return this;
@@ -26,6 +27,7 @@ public class ProductPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoUpdateMode")
     public ProductPolicyAutoUpdateModeEnum autoUpdateMode;
+
     public ProductPolicy withAutoUpdateMode(ProductPolicyAutoUpdateModeEnum autoUpdateMode) {
         this.autoUpdateMode = autoUpdateMode;
         return this;
@@ -37,6 +39,7 @@ public class ProductPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enterpriseAuthenticationAppLinkConfigs")
     public EnterpriseAuthenticationAppLinkConfig[] enterpriseAuthenticationAppLinkConfigs;
+
     public ProductPolicy withEnterpriseAuthenticationAppLinkConfigs(EnterpriseAuthenticationAppLinkConfig[] enterpriseAuthenticationAppLinkConfigs) {
         this.enterpriseAuthenticationAppLinkConfigs = enterpriseAuthenticationAppLinkConfigs;
         return this;
@@ -48,6 +51,7 @@ public class ProductPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedConfiguration")
     public ManagedConfiguration managedConfiguration;
+
     public ProductPolicy withManagedConfiguration(ManagedConfiguration managedConfiguration) {
         this.managedConfiguration = managedConfiguration;
         return this;
@@ -59,6 +63,7 @@ public class ProductPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public ProductPolicy withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -70,6 +75,7 @@ public class ProductPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackIds")
     public String[] trackIds;
+
     public ProductPolicy withTrackIds(String[] trackIds) {
         this.trackIds = trackIds;
         return this;
@@ -81,9 +87,11 @@ public class ProductPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracks")
     public ProductPolicyTracksEnum[] tracks;
+
     public ProductPolicy withTracks(ProductPolicyTracksEnum[] tracks) {
         this.tracks = tracks;
         return this;
     }
     
+    public ProductPolicy(){}
 }

@@ -15,9 +15,11 @@ public class UpdateBucketBundleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public UpdateBucketBundleResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public UpdateBucketBundleResult(){}
 }

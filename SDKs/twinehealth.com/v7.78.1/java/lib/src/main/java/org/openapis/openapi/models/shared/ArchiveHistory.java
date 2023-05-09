@@ -12,6 +12,7 @@ public class ArchiveHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archived")
     public Boolean archived;
+
     public ArchiveHistory withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -20,6 +21,7 @@ public class ArchiveHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modified_at")
     public String modifiedAt;
+
     public ArchiveHistory withModifiedAt(String modifiedAt) {
         this.modifiedAt = modifiedAt;
         return this;
@@ -28,6 +30,7 @@ public class ArchiveHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public ArchiveHistory withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -36,9 +39,11 @@ public class ArchiveHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ArchiveHistory withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public ArchiveHistory(){}
 }

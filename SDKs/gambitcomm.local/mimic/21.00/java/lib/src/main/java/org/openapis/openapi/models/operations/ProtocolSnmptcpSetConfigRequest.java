@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmptcpSetConfigRequest {
@@ -12,6 +13,7 @@ public class ProtocolSnmptcpSetConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolSnmptcpSetConfigRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,6 +24,7 @@ public class ProtocolSnmptcpSetConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=argument")
     public String argument;
+
     public ProtocolSnmptcpSetConfigRequest withArgument(String argument) {
         this.argument = argument;
         return this;
@@ -32,9 +35,15 @@ public class ProtocolSnmptcpSetConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=value")
     public String value;
+
     public ProtocolSnmptcpSetConfigRequest withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ProtocolSnmptcpSetConfigRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("argument") String argument, @JsonProperty("value") String value) {
+        this.agentNum = agentNum;
+        this.argument = argument;
+        this.value = value;
+  }
 }

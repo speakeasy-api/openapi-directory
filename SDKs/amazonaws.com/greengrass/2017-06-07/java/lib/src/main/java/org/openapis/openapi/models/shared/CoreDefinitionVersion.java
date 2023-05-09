@@ -15,9 +15,11 @@ public class CoreDefinitionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cores")
     public Core[] cores;
+
     public CoreDefinitionVersion withCores(Core[] cores) {
         this.cores = cores;
         return this;
     }
     
+    public CoreDefinitionVersion(){}
 }

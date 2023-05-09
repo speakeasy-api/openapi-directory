@@ -7,12 +7,12 @@ package org.openapis.openapi.models.operations;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum ErrorsGetRetentionSettings200ApplicationJSONRetentionInDaysEnum {
-    TWENTY_EIGHT("28");
+    TWENTY_EIGHT(28L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private ErrorsGetRetentionSettings200ApplicationJSONRetentionInDaysEnum(String value) {
+    private ErrorsGetRetentionSettings200ApplicationJSONRetentionInDaysEnum(Long value) {
         this.value = value;
     }
 }

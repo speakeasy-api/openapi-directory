@@ -18,6 +18,7 @@ public class LocalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availability")
     public String availability;
+
     public LocalInventory withAvailability(String availability) {
         this.availability = availability;
         return this;
@@ -29,6 +30,7 @@ public class LocalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customAttributes")
     public CustomAttribute[] customAttributes;
+
     public LocalInventory withCustomAttributes(CustomAttribute[] customAttributes) {
         this.customAttributes = customAttributes;
         return this;
@@ -40,6 +42,7 @@ public class LocalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instoreProductLocation")
     public String instoreProductLocation;
+
     public LocalInventory withInstoreProductLocation(String instoreProductLocation) {
         this.instoreProductLocation = instoreProductLocation;
         return this;
@@ -51,6 +54,7 @@ public class LocalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public LocalInventory withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class LocalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupMethod")
     public String pickupMethod;
+
     public LocalInventory withPickupMethod(String pickupMethod) {
         this.pickupMethod = pickupMethod;
         return this;
@@ -73,6 +78,7 @@ public class LocalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupSla")
     public String pickupSla;
+
     public LocalInventory withPickupSla(String pickupSla) {
         this.pickupSla = pickupSla;
         return this;
@@ -81,6 +87,7 @@ public class LocalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Price price;
+
     public LocalInventory withPrice(Price price) {
         this.price = price;
         return this;
@@ -92,6 +99,7 @@ public class LocalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public LocalInventory withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -100,6 +108,7 @@ public class LocalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salePrice")
     public Price salePrice;
+
     public LocalInventory withSalePrice(Price salePrice) {
         this.salePrice = salePrice;
         return this;
@@ -111,6 +120,7 @@ public class LocalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salePriceEffectiveDate")
     public String salePriceEffectiveDate;
+
     public LocalInventory withSalePriceEffectiveDate(String salePriceEffectiveDate) {
         this.salePriceEffectiveDate = salePriceEffectiveDate;
         return this;
@@ -122,9 +132,11 @@ public class LocalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeCode")
     public String storeCode;
+
     public LocalInventory withStoreCode(String storeCode) {
         this.storeCode = storeCode;
         return this;
     }
     
+    public LocalInventory(){}
 }

@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetReisezentrenRequest;
 import org.openapis.openapi.models.operations.GetReisezentrenResponse;
 
@@ -27,29 +26,31 @@ public class Application {
                 .build();
 
             GetReisezentrenRequest req = new GetReisezentrenRequest() {{
-                name = "corrupti";
-            }}            
+                name = "Terrence Rau";
+            }};            
 
             GetReisezentrenResponse res = sdk.getReisezentren(req);
 
-            if (res.travelCenterList.isPresent()) {
+            if (res.travelCenterList != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getReisezentren` - Get all station infos
-* `getReisezentrenLocLatLon` - Get information about a station near a location
-* `getReisezentrenLocLatLonDist` - Get stations in a given radius
-* `getReisezentrenId` - Get information about a specific station
+* [getReisezentren](docs/sdk/README.md#getreisezentren) - Get all station infos
+* [getReisezentrenLocLatLon](docs/sdk/README.md#getreisezentrenloclatlon) - Get information about a station near a location
+* [getReisezentrenLocLatLonDist](docs/sdk/README.md#getreisezentrenloclatlondist) - Get stations in a given radius
+* [getReisezentrenId](docs/sdk/README.md#getreisezentrenid) - Get information about a specific station
 <!-- End SDK Available Operations -->
 
 ### Maturity

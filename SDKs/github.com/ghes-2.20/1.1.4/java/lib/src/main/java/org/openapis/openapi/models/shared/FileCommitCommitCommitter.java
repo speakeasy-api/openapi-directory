@@ -12,6 +12,7 @@ public class FileCommitCommitCommitter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public FileCommitCommitCommitter withDate(String date) {
         this.date = date;
         return this;
@@ -20,6 +21,7 @@ public class FileCommitCommitCommitter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public FileCommitCommitCommitter withEmail(String email) {
         this.email = email;
         return this;
@@ -28,9 +30,11 @@ public class FileCommitCommitCommitter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FileCommitCommitCommitter withName(String name) {
         this.name = name;
         return this;
     }
     
+    public FileCommitCommitCommitter(){}
 }

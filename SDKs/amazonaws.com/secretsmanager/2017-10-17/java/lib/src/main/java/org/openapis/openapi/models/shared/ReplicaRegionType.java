@@ -15,6 +15,7 @@ public class ReplicaRegionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public ReplicaRegionType withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -23,9 +24,11 @@ public class ReplicaRegionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public ReplicaRegionType withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public ReplicaRegionType(){}
 }

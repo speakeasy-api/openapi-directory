@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMeshResponse {
@@ -12,6 +13,7 @@ public class DeleteMeshResponse {
      */
     
     public Object badRequestException;
+
     public DeleteMeshResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteMeshResponse {
     
     
     public String contentType;
+
     public DeleteMeshResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteMeshResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteMeshOutput deleteMeshOutput;
+
     public DeleteMeshResponse withDeleteMeshOutput(org.openapis.openapi.models.shared.DeleteMeshOutput deleteMeshOutput) {
         this.deleteMeshOutput = deleteMeshOutput;
         return this;
@@ -39,6 +43,7 @@ public class DeleteMeshResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteMeshResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteMeshResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteMeshResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteMeshResponse {
      */
     
     public Object notFoundException;
+
     public DeleteMeshResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteMeshResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteMeshResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteMeshResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteMeshResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteMeshResponse {
     
     
     public Integer statusCode;
+
     public DeleteMeshResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteMeshResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMeshResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteMeshResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteMeshResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteMeshResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

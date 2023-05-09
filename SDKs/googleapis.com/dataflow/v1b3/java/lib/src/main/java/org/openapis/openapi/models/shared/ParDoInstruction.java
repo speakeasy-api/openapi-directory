@@ -18,6 +18,7 @@ public class ParDoInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public InstructionInput input;
+
     public ParDoInstruction withInput(InstructionInput input) {
         this.input = input;
         return this;
@@ -29,6 +30,7 @@ public class ParDoInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiOutputInfos")
     public MultiOutputInfo[] multiOutputInfos;
+
     public ParDoInstruction withMultiOutputInfos(MultiOutputInfo[] multiOutputInfos) {
         this.multiOutputInfos = multiOutputInfos;
         return this;
@@ -40,6 +42,7 @@ public class ParDoInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numOutputs")
     public Integer numOutputs;
+
     public ParDoInstruction withNumOutputs(Integer numOutputs) {
         this.numOutputs = numOutputs;
         return this;
@@ -51,6 +54,7 @@ public class ParDoInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sideInputs")
     public SideInputInfo[] sideInputs;
+
     public ParDoInstruction withSideInputs(SideInputInfo[] sideInputs) {
         this.sideInputs = sideInputs;
         return this;
@@ -62,9 +66,11 @@ public class ParDoInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userFn")
     public java.util.Map<String, Object> userFn;
+
     public ParDoInstruction withUserFn(java.util.Map<String, Object> userFn) {
         this.userFn = userFn;
         return this;
     }
     
+    public ParDoInstruction(){}
 }

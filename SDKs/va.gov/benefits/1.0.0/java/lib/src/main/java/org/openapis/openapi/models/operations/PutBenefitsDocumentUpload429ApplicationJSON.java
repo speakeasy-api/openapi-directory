@@ -18,9 +18,11 @@ public class PutBenefitsDocumentUpload429ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public PutBenefitsDocumentUpload429ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PutBenefitsDocumentUpload429ApplicationJSON(){}
 }

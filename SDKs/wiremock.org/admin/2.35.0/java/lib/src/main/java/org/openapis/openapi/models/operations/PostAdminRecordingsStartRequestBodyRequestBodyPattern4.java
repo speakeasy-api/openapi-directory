@@ -15,9 +15,11 @@ public class PostAdminRecordingsStartRequestBodyRequestBodyPattern4 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matcher")
     public PostAdminRecordingsStartRequestBodyRequestBodyPattern4MatcherEnum matcher;
+
     public PostAdminRecordingsStartRequestBodyRequestBodyPattern4 withMatcher(PostAdminRecordingsStartRequestBodyRequestBodyPattern4MatcherEnum matcher) {
         this.matcher = matcher;
         return this;
     }
     
+    public PostAdminRecordingsStartRequestBodyRequestBodyPattern4(){}
 }

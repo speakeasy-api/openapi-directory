@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class GetSAMLProviderResponse {
     
     public OffsetDateTime createDate;
+
     public GetSAMLProviderResponse withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -19,6 +20,7 @@ public class GetSAMLProviderResponse {
     
     
     public String samlMetadataDocument;
+
     public GetSAMLProviderResponse withSAMLMetadataDocument(String samlMetadataDocument) {
         this.samlMetadataDocument = samlMetadataDocument;
         return this;
@@ -26,6 +28,7 @@ public class GetSAMLProviderResponse {
     
     
     public Tag[] tags;
+
     public GetSAMLProviderResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -33,9 +36,11 @@ public class GetSAMLProviderResponse {
     
     
     public OffsetDateTime validUntil;
+
     public GetSAMLProviderResponse withValidUntil(OffsetDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
     
+    public GetSAMLProviderResponse(){}
 }

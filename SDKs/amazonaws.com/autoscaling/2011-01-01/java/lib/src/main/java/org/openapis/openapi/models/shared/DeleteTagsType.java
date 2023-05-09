@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteTagsType {
     
     public Tag[] tags;
+
     public DeleteTagsType withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DeleteTagsType(@JsonProperty("Tags") Tag[] tags) {
+        this.tags = tags;
+  }
 }

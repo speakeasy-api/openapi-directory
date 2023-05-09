@@ -18,9 +18,11 @@ public class SessionPositionAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionPosition")
     public SessionPositionAssignedTargetingOptionDetailsSessionPositionEnum sessionPosition;
+
     public SessionPositionAssignedTargetingOptionDetails withSessionPosition(SessionPositionAssignedTargetingOptionDetailsSessionPositionEnum sessionPosition) {
         this.sessionPosition = sessionPosition;
         return this;
     }
     
+    public SessionPositionAssignedTargetingOptionDetails(){}
 }

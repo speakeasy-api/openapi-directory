@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV2SpotsRequestBody {
@@ -12,6 +13,7 @@ public class PostApiV2SpotsRequestBody {
      */
     @SpeakeasyMetadata("form:name=cdDriveUri")
     public String cdDriveUri;
+
     public PostApiV2SpotsRequestBody withCdDriveUri(String cdDriveUri) {
         this.cdDriveUri = cdDriveUri;
         return this;
@@ -22,6 +24,7 @@ public class PostApiV2SpotsRequestBody {
      */
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public PostApiV2SpotsRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -32,9 +35,15 @@ public class PostApiV2SpotsRequestBody {
      */
     @SpeakeasyMetadata("form:name=notes")
     public String notes;
+
     public PostApiV2SpotsRequestBody withNotes(String notes) {
         this.notes = notes;
         return this;
     }
     
+    public PostApiV2SpotsRequestBody(@JsonProperty("cdDriveUri") String cdDriveUri, @JsonProperty("name") String name, @JsonProperty("notes") String notes) {
+        this.cdDriveUri = cdDriveUri;
+        this.name = name;
+        this.notes = notes;
+  }
 }

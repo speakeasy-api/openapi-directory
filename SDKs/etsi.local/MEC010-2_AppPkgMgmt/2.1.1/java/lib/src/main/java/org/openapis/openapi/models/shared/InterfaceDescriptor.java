@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class InterfaceDescriptor {
     /**
@@ -12,6 +12,7 @@ public class InterfaceDescriptor {
      */
     
     public String dstIPAddress;
+
     public InterfaceDescriptor withDstIPAddress(String dstIPAddress) {
         this.dstIPAddress = dstIPAddress;
         return this;
@@ -22,6 +23,7 @@ public class InterfaceDescriptor {
      */
     
     public String dstMACAddress;
+
     public InterfaceDescriptor withDstMACAddress(String dstMACAddress) {
         this.dstMACAddress = dstMACAddress;
         return this;
@@ -32,6 +34,7 @@ public class InterfaceDescriptor {
      */
     
     public InterfaceTypeEnum interfaceType;
+
     public InterfaceDescriptor withInterfaceType(InterfaceTypeEnum interfaceType) {
         this.interfaceType = interfaceType;
         return this;
@@ -42,6 +45,7 @@ public class InterfaceDescriptor {
      */
     
     public String srcMACAddress;
+
     public InterfaceDescriptor withSrcMACAddress(String srcMACAddress) {
         this.srcMACAddress = srcMACAddress;
         return this;
@@ -49,9 +53,13 @@ public class InterfaceDescriptor {
     
     
     public TunnelInfo tunnelInfo;
+
     public InterfaceDescriptor withTunnelInfo(TunnelInfo tunnelInfo) {
         this.tunnelInfo = tunnelInfo;
         return this;
     }
     
+    public InterfaceDescriptor(@JsonProperty("interfaceType") InterfaceTypeEnum interfaceType) {
+        this.interfaceType = interfaceType;
+  }
 }

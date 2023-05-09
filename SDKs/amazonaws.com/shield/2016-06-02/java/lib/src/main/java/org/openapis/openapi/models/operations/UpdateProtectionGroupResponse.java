@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateProtectionGroupResponse {
     
     public String contentType;
+
     public UpdateProtectionGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateProtectionGroupResponse {
      */
     
     public Object internalErrorException;
+
     public UpdateProtectionGroupResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateProtectionGroupResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateProtectionGroupResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateProtectionGroupResponse {
      */
     
     public Object optimisticLockException;
+
     public UpdateProtectionGroupResponse withOptimisticLockException(Object optimisticLockException) {
         this.optimisticLockException = optimisticLockException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateProtectionGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateProtectionGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateProtectionGroupResponse {
     
     
     public Integer statusCode;
+
     public UpdateProtectionGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateProtectionGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateProtectionGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateProtectionGroupResponse {
      */
     
     public java.util.Map<String, Object> updateProtectionGroupResponse;
+
     public UpdateProtectionGroupResponse withUpdateProtectionGroupResponse(java.util.Map<String, Object> updateProtectionGroupResponse) {
         this.updateProtectionGroupResponse = updateProtectionGroupResponse;
         return this;
     }
     
+    public UpdateProtectionGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

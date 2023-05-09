@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateFunctionConfigurationRequest {
@@ -12,6 +13,7 @@ public class UpdateFunctionConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Description")
     public String description;
+
     public UpdateFunctionConfigurationRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +24,7 @@ public class UpdateFunctionConfigurationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FunctionName")
     public String functionName;
+
     public UpdateFunctionConfigurationRequest withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
@@ -32,6 +35,7 @@ public class UpdateFunctionConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Handler")
     public String handler;
+
     public UpdateFunctionConfigurationRequest withHandler(String handler) {
         this.handler = handler;
         return this;
@@ -42,6 +46,7 @@ public class UpdateFunctionConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MemorySize")
     public Long memorySize;
+
     public UpdateFunctionConfigurationRequest withMemorySize(Long memorySize) {
         this.memorySize = memorySize;
         return this;
@@ -52,6 +57,7 @@ public class UpdateFunctionConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Role")
     public String role;
+
     public UpdateFunctionConfigurationRequest withRole(String role) {
         this.role = role;
         return this;
@@ -62,6 +68,7 @@ public class UpdateFunctionConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timeout")
     public Long timeout;
+
     public UpdateFunctionConfigurationRequest withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
@@ -69,6 +76,7 @@ public class UpdateFunctionConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateFunctionConfigurationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -76,6 +84,7 @@ public class UpdateFunctionConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateFunctionConfigurationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -83,6 +92,7 @@ public class UpdateFunctionConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateFunctionConfigurationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -90,6 +100,7 @@ public class UpdateFunctionConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateFunctionConfigurationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -97,6 +108,7 @@ public class UpdateFunctionConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateFunctionConfigurationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -104,6 +116,7 @@ public class UpdateFunctionConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateFunctionConfigurationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -111,9 +124,13 @@ public class UpdateFunctionConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateFunctionConfigurationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public UpdateFunctionConfigurationRequest(@JsonProperty("FunctionName") String functionName) {
+        this.functionName = functionName;
+  }
 }

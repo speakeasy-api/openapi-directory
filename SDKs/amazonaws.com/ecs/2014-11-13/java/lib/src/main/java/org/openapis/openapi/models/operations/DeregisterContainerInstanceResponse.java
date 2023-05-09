@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterContainerInstanceResponse {
@@ -12,6 +13,7 @@ public class DeregisterContainerInstanceResponse {
      */
     
     public Object clientException;
+
     public DeregisterContainerInstanceResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -22,6 +24,7 @@ public class DeregisterContainerInstanceResponse {
      */
     
     public Object clusterNotFoundException;
+
     public DeregisterContainerInstanceResponse withClusterNotFoundException(Object clusterNotFoundException) {
         this.clusterNotFoundException = clusterNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class DeregisterContainerInstanceResponse {
     
     
     public String contentType;
+
     public DeregisterContainerInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeregisterContainerInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.DeregisterContainerInstanceResponse deregisterContainerInstanceResponse;
+
     public DeregisterContainerInstanceResponse withDeregisterContainerInstanceResponse(org.openapis.openapi.models.shared.DeregisterContainerInstanceResponse deregisterContainerInstanceResponse) {
         this.deregisterContainerInstanceResponse = deregisterContainerInstanceResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeregisterContainerInstanceResponse {
      */
     
     public Object invalidParameterException;
+
     public DeregisterContainerInstanceResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeregisterContainerInstanceResponse {
      */
     
     public Object serverException;
+
     public DeregisterContainerInstanceResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -66,6 +73,7 @@ public class DeregisterContainerInstanceResponse {
     
     
     public Integer statusCode;
+
     public DeregisterContainerInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeregisterContainerInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterContainerInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeregisterContainerInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

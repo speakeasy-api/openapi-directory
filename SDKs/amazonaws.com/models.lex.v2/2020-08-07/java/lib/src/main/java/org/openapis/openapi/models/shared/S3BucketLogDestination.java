@@ -15,6 +15,7 @@ public class S3BucketLogDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyArn")
     public String kmsKeyArn;
+
     public S3BucketLogDestination withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -22,6 +23,7 @@ public class S3BucketLogDestination {
     
     @JsonProperty("logPrefix")
     public String logPrefix;
+
     public S3BucketLogDestination withLogPrefix(String logPrefix) {
         this.logPrefix = logPrefix;
         return this;
@@ -29,9 +31,14 @@ public class S3BucketLogDestination {
     
     @JsonProperty("s3BucketArn")
     public String s3BucketArn;
+
     public S3BucketLogDestination withS3BucketArn(String s3BucketArn) {
         this.s3BucketArn = s3BucketArn;
         return this;
     }
     
+    public S3BucketLogDestination(@JsonProperty("logPrefix") String logPrefix, @JsonProperty("s3BucketArn") String s3BucketArn) {
+        this.logPrefix = logPrefix;
+        this.s3BucketArn = s3BucketArn;
+  }
 }

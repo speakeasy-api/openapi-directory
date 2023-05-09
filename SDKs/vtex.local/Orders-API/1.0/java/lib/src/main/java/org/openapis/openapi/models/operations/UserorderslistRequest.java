@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserorderslistRequest {
@@ -12,6 +13,7 @@ public class UserorderslistRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public UserorderslistRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class UserorderslistRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public UserorderslistRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class UserorderslistRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientEmail")
     public String clientEmail;
+
     public UserorderslistRequest withClientEmail(String clientEmail) {
         this.clientEmail = clientEmail;
         return this;
@@ -42,6 +46,7 @@ public class UserorderslistRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public UserorderslistRequest withPage(String page) {
         this.page = page;
         return this;
@@ -52,9 +57,17 @@ public class UserorderslistRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public String perPage;
+
     public UserorderslistRequest withPerPage(String perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public UserorderslistRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("clientEmail") String clientEmail, @JsonProperty("page") String page, @JsonProperty("per_page") String perPage) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.clientEmail = clientEmail;
+        this.page = page;
+        this.perPage = perPage;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ArticleGetResponse {
     
     public org.openapis.openapi.models.shared.ApiResponse apiResponse;
+
     public ArticleGetResponse withApiResponse(org.openapis.openapi.models.shared.ApiResponse apiResponse) {
         this.apiResponse = apiResponse;
         return this;
@@ -16,6 +18,7 @@ public class ArticleGetResponse {
     
     
     public String contentType;
+
     public ArticleGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ArticleGetResponse {
      */
     
     public org.openapis.openapi.models.shared.DefaultResponseDTOOfArticleDTO defaultResponseDTOOfArticleDTO;
+
     public ArticleGetResponse withDefaultResponseDTOOfArticleDTO(org.openapis.openapi.models.shared.DefaultResponseDTOOfArticleDTO defaultResponseDTOOfArticleDTO) {
         this.defaultResponseDTOOfArticleDTO = defaultResponseDTOOfArticleDTO;
         return this;
@@ -33,6 +37,7 @@ public class ArticleGetResponse {
     
     
     public Integer statusCode;
+
     public ArticleGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class ArticleGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ArticleGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ArticleGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

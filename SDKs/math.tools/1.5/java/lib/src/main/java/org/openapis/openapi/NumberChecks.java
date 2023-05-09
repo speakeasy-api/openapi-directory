@@ -58,10 +58,8 @@ public class NumberChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersIsCubeResponse res = new org.openapis.openapi.models.operations.GetNumbersIsCubeResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersIsCubeResponse res = new org.openapis.openapi.models.operations.GetNumbersIsCubeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -98,10 +96,8 @@ public class NumberChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersIsPalindromeResponse res = new org.openapis.openapi.models.operations.GetNumbersIsPalindromeResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersIsPalindromeResponse res = new org.openapis.openapi.models.operations.GetNumbersIsPalindromeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -138,10 +134,8 @@ public class NumberChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersIsSquareResponse res = new org.openapis.openapi.models.operations.GetNumbersIsSquareResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersIsSquareResponse res = new org.openapis.openapi.models.operations.GetNumbersIsSquareResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -178,10 +172,8 @@ public class NumberChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersIsTriangleResponse res = new org.openapis.openapi.models.operations.GetNumbersIsTriangleResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersIsTriangleResponse res = new org.openapis.openapi.models.operations.GetNumbersIsTriangleResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -218,10 +210,8 @@ public class NumberChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersPrimeIsFermatPrimeResponse res = new org.openapis.openapi.models.operations.GetNumbersPrimeIsFermatPrimeResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersPrimeIsFermatPrimeResponse res = new org.openapis.openapi.models.operations.GetNumbersPrimeIsFermatPrimeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -258,10 +248,8 @@ public class NumberChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersPrimeIsFibonacciPrimeResponse res = new org.openapis.openapi.models.operations.GetNumbersPrimeIsFibonacciPrimeResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersPrimeIsFibonacciPrimeResponse res = new org.openapis.openapi.models.operations.GetNumbersPrimeIsFibonacciPrimeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -298,10 +286,8 @@ public class NumberChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersPrimeIsMersennePrimeResponse res = new org.openapis.openapi.models.operations.GetNumbersPrimeIsMersennePrimeResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersPrimeIsMersennePrimeResponse res = new org.openapis.openapi.models.operations.GetNumbersPrimeIsMersennePrimeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -338,10 +324,8 @@ public class NumberChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersPrimeIsPartitionPrimeResponse res = new org.openapis.openapi.models.operations.GetNumbersPrimeIsPartitionPrimeResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersPrimeIsPartitionPrimeResponse res = new org.openapis.openapi.models.operations.GetNumbersPrimeIsPartitionPrimeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -378,10 +362,8 @@ public class NumberChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersPrimeIsPellPrimeResponse res = new org.openapis.openapi.models.operations.GetNumbersPrimeIsPellPrimeResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersPrimeIsPellPrimeResponse res = new org.openapis.openapi.models.operations.GetNumbersPrimeIsPellPrimeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -418,10 +400,8 @@ public class NumberChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersPrimeIsPerfectResponse res = new org.openapis.openapi.models.operations.GetNumbersPrimeIsPerfectResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersPrimeIsPerfectResponse res = new org.openapis.openapi.models.operations.GetNumbersPrimeIsPerfectResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -458,10 +438,8 @@ public class NumberChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersPrimeIsPrimeResponse res = new org.openapis.openapi.models.operations.GetNumbersPrimeIsPrimeResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersPrimeIsPrimeResponse res = new org.openapis.openapi.models.operations.GetNumbersPrimeIsPrimeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {

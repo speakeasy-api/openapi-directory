@@ -18,6 +18,7 @@ public class GoogleFirestoreAdminV1Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appEngineIntegrationMode")
     public GoogleFirestoreAdminV1DatabaseAppEngineIntegrationModeEnum appEngineIntegrationMode;
+
     public GoogleFirestoreAdminV1Database withAppEngineIntegrationMode(GoogleFirestoreAdminV1DatabaseAppEngineIntegrationModeEnum appEngineIntegrationMode) {
         this.appEngineIntegrationMode = appEngineIntegrationMode;
         return this;
@@ -29,19 +30,33 @@ public class GoogleFirestoreAdminV1Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concurrencyMode")
     public GoogleFirestoreAdminV1DatabaseConcurrencyModeEnum concurrencyMode;
+
     public GoogleFirestoreAdminV1Database withConcurrencyMode(GoogleFirestoreAdminV1DatabaseConcurrencyModeEnum concurrencyMode) {
         this.concurrencyMode = concurrencyMode;
         return this;
     }
     
     /**
-     * Output only. The timestamp at which this database was created.
+     * Output only. The timestamp at which this database was created. Databases created before 2016 do not populate create_time.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleFirestoreAdminV1Database withCreateTime(String createTime) {
         this.createTime = createTime;
+        return this;
+    }
+    
+    /**
+     * State of delete protection for the database.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deleteProtectionState")
+    public GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnum deleteProtectionState;
+
+    public GoogleFirestoreAdminV1Database withDeleteProtectionState(GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnum deleteProtectionState) {
+        this.deleteProtectionState = deleteProtectionState;
         return this;
     }
     
@@ -51,6 +66,7 @@ public class GoogleFirestoreAdminV1Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleFirestoreAdminV1Database withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -62,6 +78,7 @@ public class GoogleFirestoreAdminV1Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyPrefix")
     public String keyPrefix;
+
     public GoogleFirestoreAdminV1Database withKeyPrefix(String keyPrefix) {
         this.keyPrefix = keyPrefix;
         return this;
@@ -73,6 +90,7 @@ public class GoogleFirestoreAdminV1Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public GoogleFirestoreAdminV1Database withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -84,6 +102,7 @@ public class GoogleFirestoreAdminV1Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleFirestoreAdminV1Database withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +114,7 @@ public class GoogleFirestoreAdminV1Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleFirestoreAdminV1DatabaseTypeEnum type;
+
     public GoogleFirestoreAdminV1Database withType(GoogleFirestoreAdminV1DatabaseTypeEnum type) {
         this.type = type;
         return this;
@@ -106,6 +126,7 @@ public class GoogleFirestoreAdminV1Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public GoogleFirestoreAdminV1Database withUid(String uid) {
         this.uid = uid;
         return this;
@@ -117,9 +138,11 @@ public class GoogleFirestoreAdminV1Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleFirestoreAdminV1Database withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleFirestoreAdminV1Database(){}
 }

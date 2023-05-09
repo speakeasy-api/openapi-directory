@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateReceivable1Request {
@@ -12,6 +13,7 @@ public class UpdateReceivable1Request {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ReceivableDTO receivableDTO;
+
     public UpdateReceivable1Request withReceivableDTO(org.openapis.openapi.models.shared.ReceivableDTO receivableDTO) {
         this.receivableDTO = receivableDTO;
         return this;
@@ -22,6 +24,7 @@ public class UpdateReceivable1Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
     public String quoteId;
+
     public UpdateReceivable1Request withQuoteId(String quoteId) {
         this.quoteId = quoteId;
         return this;
@@ -32,9 +35,15 @@ public class UpdateReceivable1Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=receivableId")
     public Long receivableId;
+
     public UpdateReceivable1Request withReceivableId(Long receivableId) {
         this.receivableId = receivableId;
         return this;
     }
     
+    public UpdateReceivable1Request(@JsonProperty("ReceivableDTO") org.openapis.openapi.models.shared.ReceivableDTO receivableDTO, @JsonProperty("quoteId") String quoteId, @JsonProperty("receivableId") Long receivableId) {
+        this.receivableDTO = receivableDTO;
+        this.quoteId = quoteId;
+        this.receivableId = receivableId;
+  }
 }

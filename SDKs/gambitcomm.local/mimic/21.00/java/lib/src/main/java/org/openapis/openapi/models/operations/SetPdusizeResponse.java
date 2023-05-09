@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetPdusizeResponse {
     
     public String contentType;
+
     public SetPdusizeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SetPdusizeResponse {
     
     
     public Integer statusCode;
+
     public SetPdusizeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SetPdusizeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetPdusizeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class SetPdusizeResponse {
      */
     
     public Integer setPdusize200ApplicationJSONInt32Integer;
+
     public SetPdusizeResponse withSetPdusize200ApplicationJSONInt32Integer(Integer setPdusize200ApplicationJSONInt32Integer) {
         this.setPdusize200ApplicationJSONInt32Integer = setPdusize200ApplicationJSONInt32Integer;
         return this;
     }
     
+    public SetPdusizeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

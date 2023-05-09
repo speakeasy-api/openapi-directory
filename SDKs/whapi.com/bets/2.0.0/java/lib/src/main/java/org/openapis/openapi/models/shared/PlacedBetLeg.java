@@ -14,6 +14,7 @@ public class PlacedBetLeg {
      */
     @JsonProperty("number")
     public Long number;
+
     public PlacedBetLeg withNumber(Long number) {
         this.number = number;
         return this;
@@ -21,6 +22,7 @@ public class PlacedBetLeg {
     
     @JsonProperty("parts")
     public PlacedBetPart[] parts;
+
     public PlacedBetLeg withParts(PlacedBetPart[] parts) {
         this.parts = parts;
         return this;
@@ -32,6 +34,7 @@ public class PlacedBetLeg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
     public String sort;
+
     public PlacedBetLeg withSort(String sort) {
         this.sort = sort;
         return this;
@@ -42,9 +45,15 @@ public class PlacedBetLeg {
      */
     @JsonProperty("type")
     public String type;
+
     public PlacedBetLeg withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PlacedBetLeg(@JsonProperty("number") Long number, @JsonProperty("parts") PlacedBetPart[] parts, @JsonProperty("type") String type) {
+        this.number = number;
+        this.parts = parts;
+        this.type = type;
+  }
 }

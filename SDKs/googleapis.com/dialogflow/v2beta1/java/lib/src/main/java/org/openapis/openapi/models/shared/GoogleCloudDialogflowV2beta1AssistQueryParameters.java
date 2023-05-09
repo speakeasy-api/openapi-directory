@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2beta1AssistQueryParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentsMetadataFilters")
     public java.util.Map<String, String> documentsMetadataFilters;
+
     public GoogleCloudDialogflowV2beta1AssistQueryParameters withDocumentsMetadataFilters(java.util.Map<String, String> documentsMetadataFilters) {
         this.documentsMetadataFilters = documentsMetadataFilters;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1AssistQueryParameters(){}
 }

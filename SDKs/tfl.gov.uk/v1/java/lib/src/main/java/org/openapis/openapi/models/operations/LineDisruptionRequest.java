@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineDisruptionRequest {
@@ -12,9 +13,13 @@ public class LineDisruptionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
     public String[] ids;
+
     public LineDisruptionRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
     }
     
+    public LineDisruptionRequest(@JsonProperty("ids") String[] ids) {
+        this.ids = ids;
+  }
 }

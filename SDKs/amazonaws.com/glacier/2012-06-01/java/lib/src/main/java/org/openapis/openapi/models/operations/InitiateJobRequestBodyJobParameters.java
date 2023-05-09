@@ -15,6 +15,7 @@ public class InitiateJobRequestBodyJobParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArchiveId")
     public String archiveId;
+
     public InitiateJobRequestBodyJobParameters withArchiveId(String archiveId) {
         this.archiveId = archiveId;
         return this;
@@ -23,6 +24,7 @@ public class InitiateJobRequestBodyJobParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public InitiateJobRequestBodyJobParameters withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class InitiateJobRequestBodyJobParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public InitiateJobRequestBodyJobParameters withFormat(String format) {
         this.format = format;
         return this;
@@ -39,6 +42,7 @@ public class InitiateJobRequestBodyJobParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InventoryRetrievalParameters")
     public org.openapis.openapi.models.shared.InventoryRetrievalJobInput inventoryRetrievalParameters;
+
     public InitiateJobRequestBodyJobParameters withInventoryRetrievalParameters(org.openapis.openapi.models.shared.InventoryRetrievalJobInput inventoryRetrievalParameters) {
         this.inventoryRetrievalParameters = inventoryRetrievalParameters;
         return this;
@@ -47,6 +51,7 @@ public class InitiateJobRequestBodyJobParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputLocation")
     public org.openapis.openapi.models.shared.OutputLocation outputLocation;
+
     public InitiateJobRequestBodyJobParameters withOutputLocation(org.openapis.openapi.models.shared.OutputLocation outputLocation) {
         this.outputLocation = outputLocation;
         return this;
@@ -55,6 +60,7 @@ public class InitiateJobRequestBodyJobParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetrievalByteRange")
     public String retrievalByteRange;
+
     public InitiateJobRequestBodyJobParameters withRetrievalByteRange(String retrievalByteRange) {
         this.retrievalByteRange = retrievalByteRange;
         return this;
@@ -63,6 +69,7 @@ public class InitiateJobRequestBodyJobParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SNSTopic")
     public String snsTopic;
+
     public InitiateJobRequestBodyJobParameters withSNSTopic(String snsTopic) {
         this.snsTopic = snsTopic;
         return this;
@@ -71,6 +78,7 @@ public class InitiateJobRequestBodyJobParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelectParameters")
     public org.openapis.openapi.models.shared.SelectParameters selectParameters;
+
     public InitiateJobRequestBodyJobParameters withSelectParameters(org.openapis.openapi.models.shared.SelectParameters selectParameters) {
         this.selectParameters = selectParameters;
         return this;
@@ -79,6 +87,7 @@ public class InitiateJobRequestBodyJobParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tier")
     public String tier;
+
     public InitiateJobRequestBodyJobParameters withTier(String tier) {
         this.tier = tier;
         return this;
@@ -87,9 +96,11 @@ public class InitiateJobRequestBodyJobParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public InitiateJobRequestBodyJobParameters withType(String type) {
         this.type = type;
         return this;
     }
     
+    public InitiateJobRequestBodyJobParameters(){}
 }

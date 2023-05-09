@@ -15,6 +15,7 @@ public class TaskSucceededEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("output")
     public String output;
+
     public TaskSucceededEventDetails withOutput(String output) {
         this.output = output;
         return this;
@@ -23,6 +24,7 @@ public class TaskSucceededEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputDetails")
     public HistoryEventExecutionDataDetails outputDetails;
+
     public TaskSucceededEventDetails withOutputDetails(HistoryEventExecutionDataDetails outputDetails) {
         this.outputDetails = outputDetails;
         return this;
@@ -30,6 +32,7 @@ public class TaskSucceededEventDetails {
     
     @JsonProperty("resource")
     public String resource;
+
     public TaskSucceededEventDetails withResource(String resource) {
         this.resource = resource;
         return this;
@@ -37,9 +40,14 @@ public class TaskSucceededEventDetails {
     
     @JsonProperty("resourceType")
     public String resourceType;
+
     public TaskSucceededEventDetails withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public TaskSucceededEventDetails(@JsonProperty("resource") String resource, @JsonProperty("resourceType") String resourceType) {
+        this.resource = resource;
+        this.resourceType = resourceType;
+  }
 }

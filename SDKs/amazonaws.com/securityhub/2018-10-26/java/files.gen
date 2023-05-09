@@ -828,4 +828,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/StandardsControlAssociation
 lib/src/main/java/org/openapis/openapi/models/shared/ListTagsForResourceResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateFindingAggregatorResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

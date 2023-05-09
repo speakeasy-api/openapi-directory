@@ -12,6 +12,7 @@ public class HLRReponseEtatEtat {
      */
     @JsonProperty("operateur")
     public String operateur;
+
     public HLRReponseEtatEtat withOperateur(String operateur) {
         this.operateur = operateur;
         return this;
@@ -22,9 +23,14 @@ public class HLRReponseEtatEtat {
      */
     @JsonProperty("tel")
     public String tel;
+
     public HLRReponseEtatEtat withTel(String tel) {
         this.tel = tel;
         return this;
     }
     
+    public HLRReponseEtatEtat(@JsonProperty("operateur") String operateur, @JsonProperty("tel") String tel) {
+        this.operateur = operateur;
+        this.tel = tel;
+  }
 }

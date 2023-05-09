@@ -22,6 +22,7 @@ public class EdgeModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LatestInference")
     public OffsetDateTime latestInference;
+
     public EdgeModel withLatestInference(OffsetDateTime latestInference) {
         this.latestInference = latestInference;
         return this;
@@ -32,6 +33,7 @@ public class EdgeModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LatestSampleTime")
     public OffsetDateTime latestSampleTime;
+
     public EdgeModel withLatestSampleTime(OffsetDateTime latestSampleTime) {
         this.latestSampleTime = latestSampleTime;
         return this;
@@ -39,6 +41,7 @@ public class EdgeModel {
     
     @JsonProperty("ModelName")
     public String modelName;
+
     public EdgeModel withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -46,9 +49,14 @@ public class EdgeModel {
     
     @JsonProperty("ModelVersion")
     public String modelVersion;
+
     public EdgeModel withModelVersion(String modelVersion) {
         this.modelVersion = modelVersion;
         return this;
     }
     
+    public EdgeModel(@JsonProperty("ModelName") String modelName, @JsonProperty("ModelVersion") String modelVersion) {
+        this.modelName = modelName;
+        this.modelVersion = modelVersion;
+  }
 }

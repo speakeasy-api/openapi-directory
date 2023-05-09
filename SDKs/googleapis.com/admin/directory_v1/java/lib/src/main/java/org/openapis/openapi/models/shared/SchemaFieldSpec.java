@@ -18,6 +18,7 @@ public class SchemaFieldSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public SchemaFieldSpec withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class SchemaFieldSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public SchemaFieldSpec withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,6 +42,7 @@ public class SchemaFieldSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldId")
     public String fieldId;
+
     public SchemaFieldSpec withFieldId(String fieldId) {
         this.fieldId = fieldId;
         return this;
@@ -51,6 +54,7 @@ public class SchemaFieldSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldName")
     public String fieldName;
+
     public SchemaFieldSpec withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -62,6 +66,7 @@ public class SchemaFieldSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldType")
     public String fieldType;
+
     public SchemaFieldSpec withFieldType(String fieldType) {
         this.fieldType = fieldType;
         return this;
@@ -73,6 +78,7 @@ public class SchemaFieldSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexed")
     public Boolean indexed;
+
     public SchemaFieldSpec withIndexed(Boolean indexed) {
         this.indexed = indexed;
         return this;
@@ -84,6 +90,7 @@ public class SchemaFieldSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SchemaFieldSpec withKind(String kind) {
         this.kind = kind;
         return this;
@@ -95,6 +102,7 @@ public class SchemaFieldSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiValued")
     public Boolean multiValued;
+
     public SchemaFieldSpec withMultiValued(Boolean multiValued) {
         this.multiValued = multiValued;
         return this;
@@ -106,6 +114,7 @@ public class SchemaFieldSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numericIndexingSpec")
     public SchemaFieldSpecNumericIndexingSpec numericIndexingSpec;
+
     public SchemaFieldSpec withNumericIndexingSpec(SchemaFieldSpecNumericIndexingSpec numericIndexingSpec) {
         this.numericIndexingSpec = numericIndexingSpec;
         return this;
@@ -117,9 +126,11 @@ public class SchemaFieldSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readAccessType")
     public String readAccessType;
+
     public SchemaFieldSpec withReadAccessType(String readAccessType) {
         this.readAccessType = readAccessType;
         return this;
     }
     
+    public SchemaFieldSpec(){}
 }

@@ -12,6 +12,7 @@ public class OauthAuthorizationsListAuthorizationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client_id")
     public String clientId;
+
     public OauthAuthorizationsListAuthorizationsRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -22,6 +23,7 @@ public class OauthAuthorizationsListAuthorizationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public OauthAuthorizationsListAuthorizationsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,9 +34,11 @@ public class OauthAuthorizationsListAuthorizationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public OauthAuthorizationsListAuthorizationsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public OauthAuthorizationsListAuthorizationsRequest(){}
 }

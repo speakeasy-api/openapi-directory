@@ -15,9 +15,11 @@ public class CreateProfilingGroupRequestBodyAgentOrchestrationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profilingEnabled")
     public Boolean profilingEnabled;
+
     public CreateProfilingGroupRequestBodyAgentOrchestrationConfig withProfilingEnabled(Boolean profilingEnabled) {
         this.profilingEnabled = profilingEnabled;
         return this;
     }
     
+    public CreateProfilingGroupRequestBodyAgentOrchestrationConfig(){}
 }

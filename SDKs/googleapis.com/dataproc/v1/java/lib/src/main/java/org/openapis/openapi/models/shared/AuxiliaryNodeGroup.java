@@ -18,6 +18,7 @@ public class AuxiliaryNodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeGroup")
     public NodeGroup nodeGroup;
+
     public AuxiliaryNodeGroup withNodeGroup(NodeGroup nodeGroup) {
         this.nodeGroup = nodeGroup;
         return this;
@@ -29,9 +30,11 @@ public class AuxiliaryNodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeGroupId")
     public String nodeGroupId;
+
     public AuxiliaryNodeGroup withNodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;
         return this;
     }
     
+    public AuxiliaryNodeGroup(){}
 }

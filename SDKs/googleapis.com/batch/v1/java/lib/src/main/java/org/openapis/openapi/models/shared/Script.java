@@ -18,6 +18,7 @@ public class Script {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public Script withPath(String path) {
         this.path = path;
         return this;
@@ -29,9 +30,11 @@ public class Script {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public Script withText(String text) {
         this.text = text;
         return this;
     }
     
+    public Script(){}
 }

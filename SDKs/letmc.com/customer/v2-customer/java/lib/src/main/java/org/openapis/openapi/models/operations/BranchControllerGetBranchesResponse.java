@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BranchControllerGetBranchesResponse {
     
     public byte[] body;
+
     public BranchControllerGetBranchesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -19,6 +21,7 @@ public class BranchControllerGetBranchesResponse {
      */
     
     public org.openapis.openapi.models.shared.BranchModelResults branchModelResults;
+
     public BranchControllerGetBranchesResponse withBranchModelResults(org.openapis.openapi.models.shared.BranchModelResults branchModelResults) {
         this.branchModelResults = branchModelResults;
         return this;
@@ -26,6 +29,7 @@ public class BranchControllerGetBranchesResponse {
     
     
     public String contentType;
+
     public BranchControllerGetBranchesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class BranchControllerGetBranchesResponse {
     
     
     public Integer statusCode;
+
     public BranchControllerGetBranchesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class BranchControllerGetBranchesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BranchControllerGetBranchesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BranchControllerGetBranchesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

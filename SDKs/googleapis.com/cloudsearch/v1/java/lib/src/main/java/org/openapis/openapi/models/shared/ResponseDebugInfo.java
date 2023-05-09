@@ -18,9 +18,11 @@ public class ResponseDebugInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formattedDebugInfo")
     public String formattedDebugInfo;
+
     public ResponseDebugInfo withFormattedDebugInfo(String formattedDebugInfo) {
         this.formattedDebugInfo = formattedDebugInfo;
         return this;
     }
     
+    public ResponseDebugInfo(){}
 }

@@ -15,6 +15,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public User withEmail(String email) {
         this.email = email;
         return this;
@@ -23,6 +24,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emoji")
     public String emoji;
+
     public User withEmoji(String emoji) {
         this.emoji = emoji;
         return this;
@@ -31,6 +33,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableAllowance")
     public Boolean enableAllowance;
+
     public User withEnableAllowance(Boolean enableAllowance) {
         this.enableAllowance = enableAllowance;
         return this;
@@ -39,6 +42,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableBehaviorChart")
     public Boolean enableBehaviorChart;
+
     public User withEnableBehaviorChart(Boolean enableBehaviorChart) {
         this.enableBehaviorChart = enableBehaviorChart;
         return this;
@@ -47,6 +51,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableChores")
     public Boolean enableChores;
+
     public User withEnableChores(Boolean enableChores) {
         this.enableChores = enableChores;
         return this;
@@ -55,6 +60,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableNoAds")
     public Boolean enableNoAds;
+
     public User withEnableNoAds(Boolean enableNoAds) {
         this.enableNoAds = enableNoAds;
         return this;
@@ -63,6 +69,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableObjectDetection")
     public Boolean enableObjectDetection;
+
     public User withEnableObjectDetection(Boolean enableObjectDetection) {
         this.enableObjectDetection = enableObjectDetection;
         return this;
@@ -71,6 +78,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableTmdb")
     public Boolean enableTmdb;
+
     public User withEnableTmdb(Boolean enableTmdb) {
         this.enableTmdb = enableTmdb;
         return this;
@@ -79,6 +87,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public User withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -87,6 +96,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homeId")
     public Long homeId;
+
     public User withHomeId(Long homeId) {
         this.homeId = homeId;
         return this;
@@ -95,6 +105,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public User withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -103,6 +114,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAdmin")
     public Boolean isAdmin;
+
     public User withIsAdmin(Boolean isAdmin) {
         this.isAdmin = isAdmin;
         return this;
@@ -111,6 +123,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isBanned")
     public Boolean isBanned;
+
     public User withIsBanned(Boolean isBanned) {
         this.isBanned = isBanned;
         return this;
@@ -119,6 +132,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isChild")
     public Boolean isChild;
+
     public User withIsChild(Boolean isChild) {
         this.isChild = isChild;
         return this;
@@ -127,6 +141,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDisabled")
     public Boolean isDisabled;
+
     public User withIsDisabled(Boolean isDisabled) {
         this.isDisabled = isDisabled;
         return this;
@@ -135,6 +150,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isLocked")
     public Boolean isLocked;
+
     public User withIsLocked(Boolean isLocked) {
         this.isLocked = isLocked;
         return this;
@@ -143,6 +159,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isMaster")
     public Boolean isMaster;
+
     public User withIsMaster(Boolean isMaster) {
         this.isMaster = isMaster;
         return this;
@@ -151,6 +168,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public User withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -159,6 +177,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterId")
     public Long masterId;
+
     public User withMasterId(Long masterId) {
         this.masterId = masterId;
         return this;
@@ -167,6 +186,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pushAllowance")
     public Boolean pushAllowance;
+
     public User withPushAllowance(Boolean pushAllowance) {
         this.pushAllowance = pushAllowance;
         return this;
@@ -175,6 +195,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pushAllowanceNew")
     public Boolean pushAllowanceNew;
+
     public User withPushAllowanceNew(Boolean pushAllowanceNew) {
         this.pushAllowanceNew = pushAllowanceNew;
         return this;
@@ -183,6 +204,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pushChores")
     public Boolean pushChores;
+
     public User withPushChores(Boolean pushChores) {
         this.pushChores = pushChores;
         return this;
@@ -191,6 +213,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pushChoresNew")
     public Boolean pushChoresNew;
+
     public User withPushChoresNew(Boolean pushChoresNew) {
         this.pushChoresNew = pushChoresNew;
         return this;
@@ -199,6 +222,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pushChoresReminders")
     public Boolean pushChoresReminders;
+
     public User withPushChoresReminders(Boolean pushChoresReminders) {
         this.pushChoresReminders = pushChoresReminders;
         return this;
@@ -207,6 +231,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tmdbKey")
     public String tmdbKey;
+
     public User withTmdbKey(String tmdbKey) {
         this.tmdbKey = tmdbKey;
         return this;
@@ -215,6 +240,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public Long userId;
+
     public User withUserId(Long userId) {
         this.userId = userId;
         return this;
@@ -223,6 +249,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public User withUsername(String username) {
         this.username = username;
         return this;
@@ -231,9 +258,11 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weeklyAllowance")
     public Long weeklyAllowance;
+
     public User withWeeklyAllowance(Long weeklyAllowance) {
         this.weeklyAllowance = weeklyAllowance;
         return this;
     }
     
+    public User(){}
 }

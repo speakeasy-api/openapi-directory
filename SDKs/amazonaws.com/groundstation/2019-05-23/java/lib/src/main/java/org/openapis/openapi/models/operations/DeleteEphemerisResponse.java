@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEphemerisResponse {
     
     public String contentType;
+
     public DeleteEphemerisResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteEphemerisResponse {
      */
     
     public Object dependencyException;
+
     public DeleteEphemerisResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEphemerisResponse {
      */
     
     public org.openapis.openapi.models.shared.EphemerisIdResponse ephemerisIdResponse;
+
     public DeleteEphemerisResponse withEphemerisIdResponse(org.openapis.openapi.models.shared.EphemerisIdResponse ephemerisIdResponse) {
         this.ephemerisIdResponse = ephemerisIdResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteEphemerisResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteEphemerisResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteEphemerisResponse {
     
     
     public Integer statusCode;
+
     public DeleteEphemerisResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteEphemerisResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEphemerisResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteEphemerisResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteEphemerisResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteEphemerisResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

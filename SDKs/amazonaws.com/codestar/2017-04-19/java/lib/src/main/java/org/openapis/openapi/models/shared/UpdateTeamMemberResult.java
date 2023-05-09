@@ -15,6 +15,7 @@ public class UpdateTeamMemberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectRole")
     public String projectRole;
+
     public UpdateTeamMemberResult withProjectRole(String projectRole) {
         this.projectRole = projectRole;
         return this;
@@ -23,6 +24,7 @@ public class UpdateTeamMemberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteAccessAllowed")
     public Boolean remoteAccessAllowed;
+
     public UpdateTeamMemberResult withRemoteAccessAllowed(Boolean remoteAccessAllowed) {
         this.remoteAccessAllowed = remoteAccessAllowed;
         return this;
@@ -31,9 +33,11 @@ public class UpdateTeamMemberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userArn")
     public String userArn;
+
     public UpdateTeamMemberResult withUserArn(String userArn) {
         this.userArn = userArn;
         return this;
     }
     
+    public UpdateTeamMemberResult(){}
 }

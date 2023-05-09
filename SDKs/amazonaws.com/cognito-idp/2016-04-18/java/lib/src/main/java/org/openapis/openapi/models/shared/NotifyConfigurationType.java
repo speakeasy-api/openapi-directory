@@ -15,6 +15,7 @@ public class NotifyConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockEmail")
     public NotifyEmailType blockEmail;
+
     public NotifyConfigurationType withBlockEmail(NotifyEmailType blockEmail) {
         this.blockEmail = blockEmail;
         return this;
@@ -23,6 +24,7 @@ public class NotifyConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("From")
     public String from;
+
     public NotifyConfigurationType withFrom(String from) {
         this.from = from;
         return this;
@@ -31,6 +33,7 @@ public class NotifyConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MfaEmail")
     public NotifyEmailType mfaEmail;
+
     public NotifyConfigurationType withMfaEmail(NotifyEmailType mfaEmail) {
         this.mfaEmail = mfaEmail;
         return this;
@@ -39,6 +42,7 @@ public class NotifyConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NoActionEmail")
     public NotifyEmailType noActionEmail;
+
     public NotifyConfigurationType withNoActionEmail(NotifyEmailType noActionEmail) {
         this.noActionEmail = noActionEmail;
         return this;
@@ -47,6 +51,7 @@ public class NotifyConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplyTo")
     public String replyTo;
+
     public NotifyConfigurationType withReplyTo(String replyTo) {
         this.replyTo = replyTo;
         return this;
@@ -54,9 +59,13 @@ public class NotifyConfigurationType {
     
     @JsonProperty("SourceArn")
     public String sourceArn;
+
     public NotifyConfigurationType withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
     }
     
+    public NotifyConfigurationType(@JsonProperty("SourceArn") String sourceArn) {
+        this.sourceArn = sourceArn;
+  }
 }

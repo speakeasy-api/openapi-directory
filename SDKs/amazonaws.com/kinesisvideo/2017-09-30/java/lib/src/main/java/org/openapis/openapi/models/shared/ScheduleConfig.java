@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScheduleConfig {
     @JsonProperty("DurationInSeconds")
     public Long durationInSeconds;
+
     public ScheduleConfig withDurationInSeconds(Long durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
         return this;
@@ -19,9 +20,14 @@ public class ScheduleConfig {
     
     @JsonProperty("ScheduleExpression")
     public String scheduleExpression;
+
     public ScheduleConfig withScheduleExpression(String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
         return this;
     }
     
+    public ScheduleConfig(@JsonProperty("DurationInSeconds") Long durationInSeconds, @JsonProperty("ScheduleExpression") String scheduleExpression) {
+        this.durationInSeconds = durationInSeconds;
+        this.scheduleExpression = scheduleExpression;
+  }
 }

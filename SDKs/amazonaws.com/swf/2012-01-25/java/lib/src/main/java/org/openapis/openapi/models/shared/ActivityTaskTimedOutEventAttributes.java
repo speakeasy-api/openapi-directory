@@ -15,6 +15,7 @@ public class ActivityTaskTimedOutEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public ActivityTaskTimedOutEventAttributes withDetails(String details) {
         this.details = details;
         return this;
@@ -22,6 +23,7 @@ public class ActivityTaskTimedOutEventAttributes {
     
     @JsonProperty("scheduledEventId")
     public Long scheduledEventId;
+
     public ActivityTaskTimedOutEventAttributes withScheduledEventId(Long scheduledEventId) {
         this.scheduledEventId = scheduledEventId;
         return this;
@@ -29,6 +31,7 @@ public class ActivityTaskTimedOutEventAttributes {
     
     @JsonProperty("startedEventId")
     public Long startedEventId;
+
     public ActivityTaskTimedOutEventAttributes withStartedEventId(Long startedEventId) {
         this.startedEventId = startedEventId;
         return this;
@@ -36,9 +39,15 @@ public class ActivityTaskTimedOutEventAttributes {
     
     @JsonProperty("timeoutType")
     public ActivityTaskTimeoutTypeEnum timeoutType;
+
     public ActivityTaskTimedOutEventAttributes withTimeoutType(ActivityTaskTimeoutTypeEnum timeoutType) {
         this.timeoutType = timeoutType;
         return this;
     }
     
+    public ActivityTaskTimedOutEventAttributes(@JsonProperty("scheduledEventId") Long scheduledEventId, @JsonProperty("startedEventId") Long startedEventId, @JsonProperty("timeoutType") ActivityTaskTimeoutTypeEnum timeoutType) {
+        this.scheduledEventId = scheduledEventId;
+        this.startedEventId = startedEventId;
+        this.timeoutType = timeoutType;
+  }
 }

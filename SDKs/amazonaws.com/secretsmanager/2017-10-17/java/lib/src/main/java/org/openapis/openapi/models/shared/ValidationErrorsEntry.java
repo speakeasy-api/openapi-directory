@@ -15,6 +15,7 @@ public class ValidationErrorsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CheckName")
     public String checkName;
+
     public ValidationErrorsEntry withCheckName(String checkName) {
         this.checkName = checkName;
         return this;
@@ -23,9 +24,11 @@ public class ValidationErrorsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public ValidationErrorsEntry withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public ValidationErrorsEntry(){}
 }

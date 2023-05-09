@@ -18,6 +18,7 @@ public class Crop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bottom")
     public Float bottom;
+
     public Crop withBottom(Float bottom) {
         this.bottom = bottom;
         return this;
@@ -29,6 +30,7 @@ public class Crop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("left")
     public Float left;
+
     public Crop withLeft(Float left) {
         this.left = left;
         return this;
@@ -40,6 +42,7 @@ public class Crop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("right")
     public Float right;
+
     public Crop withRight(Float right) {
         this.right = right;
         return this;
@@ -51,9 +54,11 @@ public class Crop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("top")
     public Float top;
+
     public Crop withTop(Float top) {
         this.top = top;
         return this;
     }
     
+    public Crop(){}
 }

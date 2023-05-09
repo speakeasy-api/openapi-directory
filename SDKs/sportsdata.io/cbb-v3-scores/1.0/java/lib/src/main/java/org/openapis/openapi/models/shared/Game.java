@@ -12,6 +12,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attendance")
     public Long attendance;
+
     public Game withAttendance(Long attendance) {
         this.attendance = attendance;
         return this;
@@ -20,6 +21,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayPointSpreadPayout")
     public Long awayPointSpreadPayout;
+
     public Game withAwayPointSpreadPayout(Long awayPointSpreadPayout) {
         this.awayPointSpreadPayout = awayPointSpreadPayout;
         return this;
@@ -28,6 +30,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayRotationNumber")
     public Long awayRotationNumber;
+
     public Game withAwayRotationNumber(Long awayRotationNumber) {
         this.awayRotationNumber = awayRotationNumber;
         return this;
@@ -36,6 +39,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayTeam")
     public String awayTeam;
+
     public Game withAwayTeam(String awayTeam) {
         this.awayTeam = awayTeam;
         return this;
@@ -44,6 +48,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayTeamID")
     public Long awayTeamID;
+
     public Game withAwayTeamID(Long awayTeamID) {
         this.awayTeamID = awayTeamID;
         return this;
@@ -52,6 +57,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayTeamMoneyLine")
     public Long awayTeamMoneyLine;
+
     public Game withAwayTeamMoneyLine(Long awayTeamMoneyLine) {
         this.awayTeamMoneyLine = awayTeamMoneyLine;
         return this;
@@ -60,6 +66,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayTeamPreviousGameID")
     public Long awayTeamPreviousGameID;
+
     public Game withAwayTeamPreviousGameID(Long awayTeamPreviousGameID) {
         this.awayTeamPreviousGameID = awayTeamPreviousGameID;
         return this;
@@ -68,6 +75,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayTeamPreviousGlobalGameID")
     public Long awayTeamPreviousGlobalGameID;
+
     public Game withAwayTeamPreviousGlobalGameID(Long awayTeamPreviousGlobalGameID) {
         this.awayTeamPreviousGlobalGameID = awayTeamPreviousGlobalGameID;
         return this;
@@ -76,6 +84,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayTeamScore")
     public Long awayTeamScore;
+
     public Game withAwayTeamScore(Long awayTeamScore) {
         this.awayTeamScore = awayTeamScore;
         return this;
@@ -84,6 +93,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayTeamSeed")
     public Long awayTeamSeed;
+
     public Game withAwayTeamSeed(Long awayTeamSeed) {
         this.awayTeamSeed = awayTeamSeed;
         return this;
@@ -92,6 +102,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BottomTeamPreviousGameId")
     public Long bottomTeamPreviousGameId;
+
     public Game withBottomTeamPreviousGameId(Long bottomTeamPreviousGameId) {
         this.bottomTeamPreviousGameId = bottomTeamPreviousGameId;
         return this;
@@ -100,6 +111,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bracket")
     public String bracket;
+
     public Game withBracket(String bracket) {
         this.bracket = bracket;
         return this;
@@ -108,6 +120,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Channel")
     public String channel;
+
     public Game withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -116,6 +129,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateTime")
     public String dateTime;
+
     public Game withDateTime(String dateTime) {
         this.dateTime = dateTime;
         return this;
@@ -124,6 +138,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateTimeUTC")
     public String dateTimeUTC;
+
     public Game withDateTimeUTC(String dateTimeUTC) {
         this.dateTimeUTC = dateTimeUTC;
         return this;
@@ -132,6 +147,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Day")
     public String day;
+
     public Game withDay(String day) {
         this.day = day;
         return this;
@@ -140,6 +156,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameEndDateTime")
     public String gameEndDateTime;
+
     public Game withGameEndDateTime(String gameEndDateTime) {
         this.gameEndDateTime = gameEndDateTime;
         return this;
@@ -148,6 +165,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameID")
     public Long gameID;
+
     public Game withGameID(Long gameID) {
         this.gameID = gameID;
         return this;
@@ -156,6 +174,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalAwayTeamID")
     public Long globalAwayTeamID;
+
     public Game withGlobalAwayTeamID(Long globalAwayTeamID) {
         this.globalAwayTeamID = globalAwayTeamID;
         return this;
@@ -164,6 +183,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalGameID")
     public Long globalGameID;
+
     public Game withGlobalGameID(Long globalGameID) {
         this.globalGameID = globalGameID;
         return this;
@@ -172,6 +192,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalHomeTeamID")
     public Long globalHomeTeamID;
+
     public Game withGlobalHomeTeamID(Long globalHomeTeamID) {
         this.globalHomeTeamID = globalHomeTeamID;
         return this;
@@ -180,6 +201,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomePointSpreadPayout")
     public Long homePointSpreadPayout;
+
     public Game withHomePointSpreadPayout(Long homePointSpreadPayout) {
         this.homePointSpreadPayout = homePointSpreadPayout;
         return this;
@@ -188,6 +210,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeRotationNumber")
     public Long homeRotationNumber;
+
     public Game withHomeRotationNumber(Long homeRotationNumber) {
         this.homeRotationNumber = homeRotationNumber;
         return this;
@@ -196,6 +219,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeTeam")
     public String homeTeam;
+
     public Game withHomeTeam(String homeTeam) {
         this.homeTeam = homeTeam;
         return this;
@@ -204,6 +228,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeTeamID")
     public Long homeTeamID;
+
     public Game withHomeTeamID(Long homeTeamID) {
         this.homeTeamID = homeTeamID;
         return this;
@@ -212,6 +237,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeTeamMoneyLine")
     public Long homeTeamMoneyLine;
+
     public Game withHomeTeamMoneyLine(Long homeTeamMoneyLine) {
         this.homeTeamMoneyLine = homeTeamMoneyLine;
         return this;
@@ -220,6 +246,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeTeamPreviousGameID")
     public Long homeTeamPreviousGameID;
+
     public Game withHomeTeamPreviousGameID(Long homeTeamPreviousGameID) {
         this.homeTeamPreviousGameID = homeTeamPreviousGameID;
         return this;
@@ -228,6 +255,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeTeamPreviousGlobalGameID")
     public Long homeTeamPreviousGlobalGameID;
+
     public Game withHomeTeamPreviousGlobalGameID(Long homeTeamPreviousGlobalGameID) {
         this.homeTeamPreviousGlobalGameID = homeTeamPreviousGlobalGameID;
         return this;
@@ -236,6 +264,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeTeamScore")
     public Long homeTeamScore;
+
     public Game withHomeTeamScore(Long homeTeamScore) {
         this.homeTeamScore = homeTeamScore;
         return this;
@@ -244,6 +273,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeTeamSeed")
     public Long homeTeamSeed;
+
     public Game withHomeTeamSeed(Long homeTeamSeed) {
         this.homeTeamSeed = homeTeamSeed;
         return this;
@@ -252,6 +282,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsClosed")
     public Boolean isClosed;
+
     public Game withIsClosed(Boolean isClosed) {
         this.isClosed = isClosed;
         return this;
@@ -260,6 +291,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NeutralVenue")
     public Boolean neutralVenue;
+
     public Game withNeutralVenue(Boolean neutralVenue) {
         this.neutralVenue = neutralVenue;
         return this;
@@ -268,6 +300,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OverPayout")
     public Long overPayout;
+
     public Game withOverPayout(Long overPayout) {
         this.overPayout = overPayout;
         return this;
@@ -276,6 +309,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OverUnder")
     public Double overUnder;
+
     public Game withOverUnder(Double overUnder) {
         this.overUnder = overUnder;
         return this;
@@ -284,6 +318,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Period")
     public String period;
+
     public Game withPeriod(String period) {
         this.period = period;
         return this;
@@ -292,6 +327,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Periods")
     public Period[] periods;
+
     public Game withPeriods(Period[] periods) {
         this.periods = periods;
         return this;
@@ -300,6 +336,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PointSpread")
     public Double pointSpread;
+
     public Game withPointSpread(Double pointSpread) {
         this.pointSpread = pointSpread;
         return this;
@@ -308,6 +345,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Round")
     public Long round;
+
     public Game withRound(Long round) {
         this.round = round;
         return this;
@@ -316,6 +354,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public Game withSeason(Long season) {
         this.season = season;
         return this;
@@ -324,6 +363,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonType")
     public Long seasonType;
+
     public Game withSeasonType(Long seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -332,6 +372,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Stadium")
     public Stadium stadium;
+
     public Game withStadium(Stadium stadium) {
         this.stadium = stadium;
         return this;
@@ -340,6 +381,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public Game withStatus(String status) {
         this.status = status;
         return this;
@@ -348,6 +390,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeRemainingMinutes")
     public Long timeRemainingMinutes;
+
     public Game withTimeRemainingMinutes(Long timeRemainingMinutes) {
         this.timeRemainingMinutes = timeRemainingMinutes;
         return this;
@@ -356,6 +399,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeRemainingSeconds")
     public Long timeRemainingSeconds;
+
     public Game withTimeRemainingSeconds(Long timeRemainingSeconds) {
         this.timeRemainingSeconds = timeRemainingSeconds;
         return this;
@@ -364,6 +408,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TopTeamPreviousGameId")
     public Long topTeamPreviousGameId;
+
     public Game withTopTeamPreviousGameId(Long topTeamPreviousGameId) {
         this.topTeamPreviousGameId = topTeamPreviousGameId;
         return this;
@@ -372,6 +417,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TournamentDisplayOrder")
     public Long tournamentDisplayOrder;
+
     public Game withTournamentDisplayOrder(Long tournamentDisplayOrder) {
         this.tournamentDisplayOrder = tournamentDisplayOrder;
         return this;
@@ -380,6 +426,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TournamentDisplayOrderForHomeTeam")
     public String tournamentDisplayOrderForHomeTeam;
+
     public Game withTournamentDisplayOrderForHomeTeam(String tournamentDisplayOrderForHomeTeam) {
         this.tournamentDisplayOrderForHomeTeam = tournamentDisplayOrderForHomeTeam;
         return this;
@@ -388,6 +435,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TournamentID")
     public Long tournamentID;
+
     public Game withTournamentID(Long tournamentID) {
         this.tournamentID = tournamentID;
         return this;
@@ -396,6 +444,7 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnderPayout")
     public Long underPayout;
+
     public Game withUnderPayout(Long underPayout) {
         this.underPayout = underPayout;
         return this;
@@ -404,9 +453,11 @@ public class Game {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public Game withUpdated(String updated) {
         this.updated = updated;
         return this;
     }
     
+    public Game(){}
 }

@@ -10,13 +10,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * ReinitializeActionConfigurationResetAlertAfterNTimesEnum - When set to &lt;em&gt;1&lt;/em&gt;, resets the number of times thresholds can be breached before triggering an alert to their default values (1 time) for numeric, discrete, connector status and present parameters.
  */
 public enum ReinitializeActionConfigurationResetAlertAfterNTimesEnum {
-    ZERO("0"),
-    ONE("1");
+    ZERO(0),
+    ONE(1);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private ReinitializeActionConfigurationResetAlertAfterNTimesEnum(String value) {
+    private ReinitializeActionConfigurationResetAlertAfterNTimesEnum(Integer value) {
         this.value = value;
     }
 }

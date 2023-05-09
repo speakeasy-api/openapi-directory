@@ -15,6 +15,7 @@ public class RatingAspect {
      */
     
     public Long count;
+
     public RatingAspect withCount(Long count) {
         this.count = count;
         return this;
@@ -25,6 +26,7 @@ public class RatingAspect {
      */
     
     public String description;
+
     public RatingAspect withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class RatingAspect {
      */
     
     public String name;
+
     public RatingAspect withName(String name) {
         this.name = name;
         return this;
@@ -45,9 +48,11 @@ public class RatingAspect {
      */
     
     public RatingAspectDistribution[] ratingAspectDistributions;
+
     public RatingAspect withRatingAspectDistributions(RatingAspectDistribution[] ratingAspectDistributions) {
         this.ratingAspectDistributions = ratingAspectDistributions;
         return this;
     }
     
+    public RatingAspect(){}
 }

@@ -15,6 +15,7 @@ public class ListPermissionVersionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListPermissionVersionsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,19 +27,24 @@ public class ListPermissionVersionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListPermissionVersionsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
     /**
-     * Specifies the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resoure Name (ARN)&lt;/a&gt; of the RAM permission whose versions you want to list. You can use the &lt;code&gt;permissionVersion&lt;/code&gt; parameter on the &lt;a&gt;AssociateResourceSharePermission&lt;/a&gt; operation to specify a non-default version to attach.
+     * Specifies the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resource Name (ARN)&lt;/a&gt; of the RAM permission whose versions you want to list. You can use the &lt;code&gt;permissionVersion&lt;/code&gt; parameter on the &lt;a&gt;AssociateResourceSharePermission&lt;/a&gt; operation to specify a non-default version to attach.
      */
     @JsonProperty("permissionArn")
     public String permissionArn;
+
     public ListPermissionVersionsRequestBody withPermissionArn(String permissionArn) {
         this.permissionArn = permissionArn;
         return this;
     }
     
+    public ListPermissionVersionsRequestBody(@JsonProperty("permissionArn") String permissionArn) {
+        this.permissionArn = permissionArn;
+  }
 }

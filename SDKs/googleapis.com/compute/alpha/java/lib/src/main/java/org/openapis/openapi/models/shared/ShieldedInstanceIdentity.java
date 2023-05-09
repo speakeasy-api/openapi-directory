@@ -18,6 +18,7 @@ public class ShieldedInstanceIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eccP256EncryptionKey")
     public ShieldedInstanceIdentityEntry eccP256EncryptionKey;
+
     public ShieldedInstanceIdentity withEccP256EncryptionKey(ShieldedInstanceIdentityEntry eccP256EncryptionKey) {
         this.eccP256EncryptionKey = eccP256EncryptionKey;
         return this;
@@ -29,6 +30,7 @@ public class ShieldedInstanceIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eccP256SigningKey")
     public ShieldedInstanceIdentityEntry eccP256SigningKey;
+
     public ShieldedInstanceIdentity withEccP256SigningKey(ShieldedInstanceIdentityEntry eccP256SigningKey) {
         this.eccP256SigningKey = eccP256SigningKey;
         return this;
@@ -40,6 +42,7 @@ public class ShieldedInstanceIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionKey")
     public ShieldedInstanceIdentityEntry encryptionKey;
+
     public ShieldedInstanceIdentity withEncryptionKey(ShieldedInstanceIdentityEntry encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -51,6 +54,7 @@ public class ShieldedInstanceIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ShieldedInstanceIdentity withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,9 +66,11 @@ public class ShieldedInstanceIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signingKey")
     public ShieldedInstanceIdentityEntry signingKey;
+
     public ShieldedInstanceIdentity withSigningKey(ShieldedInstanceIdentityEntry signingKey) {
         this.signingKey = signingKey;
         return this;
     }
     
+    public ShieldedInstanceIdentity(){}
 }

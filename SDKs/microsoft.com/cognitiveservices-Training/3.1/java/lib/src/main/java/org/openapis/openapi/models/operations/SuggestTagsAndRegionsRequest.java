@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SuggestTagsAndRegionsRequest {
@@ -12,6 +13,7 @@ public class SuggestTagsAndRegionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
     public String trainingKey;
+
     public SuggestTagsAndRegionsRequest withTrainingKey(String trainingKey) {
         this.trainingKey = trainingKey;
         return this;
@@ -22,6 +24,7 @@ public class SuggestTagsAndRegionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=imageIds")
     public String[] imageIds;
+
     public SuggestTagsAndRegionsRequest withImageIds(String[] imageIds) {
         this.imageIds = imageIds;
         return this;
@@ -32,6 +35,7 @@ public class SuggestTagsAndRegionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
     public String iterationId;
+
     public SuggestTagsAndRegionsRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -42,9 +46,16 @@ public class SuggestTagsAndRegionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public SuggestTagsAndRegionsRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public SuggestTagsAndRegionsRequest(@JsonProperty("Training-Key") String trainingKey, @JsonProperty("imageIds") String[] imageIds, @JsonProperty("iterationId") String iterationId, @JsonProperty("projectId") String projectId) {
+        this.trainingKey = trainingKey;
+        this.imageIds = imageIds;
+        this.iterationId = iterationId;
+        this.projectId = projectId;
+  }
 }

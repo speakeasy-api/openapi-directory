@@ -18,9 +18,11 @@ public class GoogleCloudRecaptchaenterpriseV1FirewallActionSubstituteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public GoogleCloudRecaptchaenterpriseV1FirewallActionSubstituteAction withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1FirewallActionSubstituteAction(){}
 }

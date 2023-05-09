@@ -3,12 +3,11 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.CloudresourcemanagerLiensCreateSecurityOption1;
-import org.openapis.openapi.models.operations.CloudresourcemanagerLiensCreateSecurityOption2;
-import org.openapis.openapi.models.operations.CloudresourcemanagerLiensCreateSecurity;
 import org.openapis.openapi.models.operations.CloudresourcemanagerLiensCreateRequest;
 import org.openapis.openapi.models.operations.CloudresourcemanagerLiensCreateResponse;
+import org.openapis.openapi.models.operations.CloudresourcemanagerLiensCreateSecurity;
+import org.openapis.openapi.models.operations.CloudresourcemanagerLiensCreateSecurityOption1;
+import org.openapis.openapi.models.operations.CloudresourcemanagerLiensCreateSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.Lien;
 import org.openapis.openapi.models.shared.XgafvEnum;
@@ -20,43 +19,45 @@ public class Application {
                 .build();
 
             CloudresourcemanagerLiensCreateRequest req = new CloudresourcemanagerLiensCreateRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 lien = new Lien() {{
                     createTime = "provident";
-                    name = "distinctio";
-                    origin = "quibusdam";
-                    parent = "unde";
-                    reason = "nulla";
+                    name = "Ellis Mitchell";
+                    origin = "illum";
+                    parent = "vel";
+                    reason = "error";
                     restrictions = new String[]{{
-                        add("illum"),
-                        add("vel"),
-                        add("error"),
+                        add("suscipit"),
+                        add("iure"),
+                        add("magnam"),
                     }};
-                }};
-                accessToken = "deserunt";
-                alt = "media";
-                callback = "iure";
-                fields = "magnam";
-                key = "debitis";
-                oauthToken = "ipsa";
+                }};;
+                accessToken = "debitis";
+                alt = AltEnum.JSON;
+                callback = "delectus";
+                fields = "tempora";
+                key = "suscipit";
+                oauthToken = "molestiae";
                 prettyPrint = false;
-                quotaUser = "delectus";
-                uploadType = "tempora";
-                uploadProtocol = "suscipit";
-            }}            
+                quotaUser = "minus";
+                uploadType = "placeat";
+                uploadProtocol = "voluptatum";
+            }};            
 
             CloudresourcemanagerLiensCreateResponse res = sdk.liens.cloudresourcemanagerLiensCreate(req, new CloudresourcemanagerLiensCreateSecurity() {{
-                option1 = new CloudresourcemanagerLiensCreateSecurityOption1() {{
+                option1 = new CloudresourcemanagerLiensCreateSecurityOption1("iusto", "excepturi") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.lien.isPresent()) {
+            if (res.lien != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

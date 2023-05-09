@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeParametersResponse {
     
     public String contentType;
+
     public DescribeParametersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeParametersResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeParametersResponse describeParametersResponse;
+
     public DescribeParametersResponse withDescribeParametersResponse(org.openapis.openapi.models.shared.DescribeParametersResponse describeParametersResponse) {
         this.describeParametersResponse = describeParametersResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeParametersResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public DescribeParametersResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeParametersResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeParametersResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeParametersResponse {
      */
     
     public Object parameterGroupNotFoundFault;
+
     public DescribeParametersResponse withParameterGroupNotFoundFault(Object parameterGroupNotFoundFault) {
         this.parameterGroupNotFoundFault = parameterGroupNotFoundFault;
         return this;
@@ -56,6 +62,7 @@ public class DescribeParametersResponse {
     
     
     public Integer statusCode;
+
     public DescribeParametersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeParametersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeParametersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeParametersResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public DescribeParametersResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
     }
     
+    public DescribeParametersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

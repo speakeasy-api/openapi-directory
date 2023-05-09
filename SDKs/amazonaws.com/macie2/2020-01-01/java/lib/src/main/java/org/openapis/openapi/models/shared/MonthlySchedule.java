@@ -15,9 +15,11 @@ public class MonthlySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfMonth")
     public Long dayOfMonth;
+
     public MonthlySchedule withDayOfMonth(Long dayOfMonth) {
         this.dayOfMonth = dayOfMonth;
         return this;
     }
     
+    public MonthlySchedule(){}
 }

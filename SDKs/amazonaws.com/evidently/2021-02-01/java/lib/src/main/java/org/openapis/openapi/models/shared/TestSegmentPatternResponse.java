@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TestSegmentPatternResponse {
     @JsonProperty("match")
     public Boolean match;
+
     public TestSegmentPatternResponse withMatch(Boolean match) {
         this.match = match;
         return this;
     }
     
+    public TestSegmentPatternResponse(@JsonProperty("match") Boolean match) {
+        this.match = match;
+  }
 }

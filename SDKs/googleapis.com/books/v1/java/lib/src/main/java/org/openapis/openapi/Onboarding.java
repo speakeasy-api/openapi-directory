@@ -58,11 +58,9 @@ public class Onboarding {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksOnboardingListCategoriesResponse res = new org.openapis.openapi.models.operations.BooksOnboardingListCategoriesResponse() {{
+        org.openapis.openapi.models.operations.BooksOnboardingListCategoriesResponse res = new org.openapis.openapi.models.operations.BooksOnboardingListCategoriesResponse(contentType, httpRes.statusCode()) {{
             category = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Onboarding {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksOnboardingListCategoryVolumesResponse res = new org.openapis.openapi.models.operations.BooksOnboardingListCategoryVolumesResponse() {{
+        org.openapis.openapi.models.operations.BooksOnboardingListCategoryVolumesResponse res = new org.openapis.openapi.models.operations.BooksOnboardingListCategoryVolumesResponse(contentType, httpRes.statusCode()) {{
             volume2 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,9 +15,11 @@ public class SqsQueueConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queuePolicy")
     public String queuePolicy;
+
     public SqsQueueConfiguration withQueuePolicy(String queuePolicy) {
         this.queuePolicy = queuePolicy;
         return this;
     }
     
+    public SqsQueueConfiguration(){}
 }

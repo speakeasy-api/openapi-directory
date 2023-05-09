@@ -15,6 +15,7 @@ public class ListDomainsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterConditions")
     public FilterCondition[] filterConditions;
+
     public ListDomainsRequest withFilterConditions(FilterCondition[] filterConditions) {
         this.filterConditions = filterConditions;
         return this;
@@ -23,6 +24,7 @@ public class ListDomainsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListDomainsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -31,6 +33,7 @@ public class ListDomainsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxItems")
     public Long maxItems;
+
     public ListDomainsRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -39,9 +42,11 @@ public class ListDomainsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortCondition")
     public SortCondition sortCondition;
+
     public ListDomainsRequest withSortCondition(SortCondition sortCondition) {
         this.sortCondition = sortCondition;
         return this;
     }
     
+    public ListDomainsRequest(){}
 }

@@ -12,9 +12,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class StoryIdFilePostOpenOfficeXmlDocumentEGXlsxPptxFile {
     @SpeakeasyMetadata("multipartForm:name=file,json")
     public byte[][] file;
+
     public StoryIdFilePostOpenOfficeXmlDocumentEGXlsxPptxFile withFile(byte[][] file) {
         this.file = file;
         return this;
     }
     
+    public StoryIdFilePostOpenOfficeXmlDocumentEGXlsxPptxFile(){}
 }

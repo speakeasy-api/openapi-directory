@@ -14,6 +14,7 @@ public class DescribeImageReplicationStatusRequest {
      */
     @JsonProperty("imageId")
     public ImageIdentifier imageId;
+
     public DescribeImageReplicationStatusRequest withImageId(ImageIdentifier imageId) {
         this.imageId = imageId;
         return this;
@@ -22,6 +23,7 @@ public class DescribeImageReplicationStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public DescribeImageReplicationStatusRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -29,9 +31,14 @@ public class DescribeImageReplicationStatusRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public DescribeImageReplicationStatusRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public DescribeImageReplicationStatusRequest(@JsonProperty("imageId") ImageIdentifier imageId, @JsonProperty("repositoryName") String repositoryName) {
+        this.imageId = imageId;
+        this.repositoryName = repositoryName;
+  }
 }

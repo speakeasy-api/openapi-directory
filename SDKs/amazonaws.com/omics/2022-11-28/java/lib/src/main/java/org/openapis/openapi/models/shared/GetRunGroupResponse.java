@@ -20,6 +20,7 @@ public class GetRunGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public GetRunGroupResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class GetRunGroupResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetRunGroupResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class GetRunGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetRunGroupResponse withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class GetRunGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxCpus")
     public Long maxCpus;
+
     public GetRunGroupResponse withMaxCpus(Long maxCpus) {
         this.maxCpus = maxCpus;
         return this;
@@ -54,6 +58,7 @@ public class GetRunGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxDuration")
     public Long maxDuration;
+
     public GetRunGroupResponse withMaxDuration(Long maxDuration) {
         this.maxDuration = maxDuration;
         return this;
@@ -62,6 +67,7 @@ public class GetRunGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRuns")
     public Long maxRuns;
+
     public GetRunGroupResponse withMaxRuns(Long maxRuns) {
         this.maxRuns = maxRuns;
         return this;
@@ -70,6 +76,7 @@ public class GetRunGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetRunGroupResponse withName(String name) {
         this.name = name;
         return this;
@@ -78,9 +85,11 @@ public class GetRunGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetRunGroupResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetRunGroupResponse(){}
 }

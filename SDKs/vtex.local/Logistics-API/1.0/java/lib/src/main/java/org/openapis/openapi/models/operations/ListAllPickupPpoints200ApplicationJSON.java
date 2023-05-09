@@ -15,6 +15,7 @@ public class ListAllPickupPpoints200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountGroupId")
     public String accountGroupId;
+
     public ListAllPickupPpoints200ApplicationJSON withAccountGroupId(String accountGroupId) {
         this.accountGroupId = accountGroupId;
         return this;
@@ -26,6 +27,7 @@ public class ListAllPickupPpoints200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountOwnerId")
     public String accountOwnerId;
+
     public ListAllPickupPpoints200ApplicationJSON withAccountOwnerId(String accountOwnerId) {
         this.accountOwnerId = accountOwnerId;
         return this;
@@ -37,6 +39,7 @@ public class ListAllPickupPpoints200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountOwnerName")
     public String accountOwnerName;
+
     public ListAllPickupPpoints200ApplicationJSON withAccountOwnerName(String accountOwnerName) {
         this.accountOwnerName = accountOwnerName;
         return this;
@@ -45,6 +48,7 @@ public class ListAllPickupPpoints200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public ListAllPickupPpoints200ApplicationJSONAddress address;
+
     public ListAllPickupPpoints200ApplicationJSON withAddress(ListAllPickupPpoints200ApplicationJSONAddress address) {
         this.address = address;
         return this;
@@ -56,6 +60,7 @@ public class ListAllPickupPpoints200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessHours")
     public ListAllPickupPpoints200ApplicationJSONBusinessHours[] businessHours;
+
     public ListAllPickupPpoints200ApplicationJSON withBusinessHours(ListAllPickupPpoints200ApplicationJSONBusinessHours[] businessHours) {
         this.businessHours = businessHours;
         return this;
@@ -67,6 +72,7 @@ public class ListAllPickupPpoints200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ListAllPickupPpoints200ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -78,6 +84,7 @@ public class ListAllPickupPpoints200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distance")
     public Double distance;
+
     public ListAllPickupPpoints200ApplicationJSON withDistance(Double distance) {
         this.distance = distance;
         return this;
@@ -89,6 +96,7 @@ public class ListAllPickupPpoints200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formatted_address")
     public String formattedAddress;
+
     public ListAllPickupPpoints200ApplicationJSON withFormattedAddress(String formattedAddress) {
         this.formattedAddress = formattedAddress;
         return this;
@@ -100,6 +108,7 @@ public class ListAllPickupPpoints200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ListAllPickupPpoints200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -111,6 +120,7 @@ public class ListAllPickupPpoints200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructions")
     public String instructions;
+
     public ListAllPickupPpoints200ApplicationJSON withInstructions(String instructions) {
         this.instructions = instructions;
         return this;
@@ -122,6 +132,7 @@ public class ListAllPickupPpoints200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public ListAllPickupPpoints200ApplicationJSON withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -133,6 +144,7 @@ public class ListAllPickupPpoints200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isThirdPartyPickup")
     public Boolean isThirdPartyPickup;
+
     public ListAllPickupPpoints200ApplicationJSON withIsThirdPartyPickup(Boolean isThirdPartyPickup) {
         this.isThirdPartyPickup = isThirdPartyPickup;
         return this;
@@ -144,6 +156,7 @@ public class ListAllPickupPpoints200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ListAllPickupPpoints200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -155,6 +168,7 @@ public class ListAllPickupPpoints200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalId")
     public String originalId;
+
     public ListAllPickupPpoints200ApplicationJSON withOriginalId(String originalId) {
         this.originalId = originalId;
         return this;
@@ -166,6 +180,7 @@ public class ListAllPickupPpoints200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentAccountName")
     public String parentAccountName;
+
     public ListAllPickupPpoints200ApplicationJSON withParentAccountName(String parentAccountName) {
         this.parentAccountName = parentAccountName;
         return this;
@@ -177,6 +192,7 @@ public class ListAllPickupPpoints200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupHolidays")
     public String[] pickupHolidays;
+
     public ListAllPickupPpoints200ApplicationJSON withPickupHolidays(String[] pickupHolidays) {
         this.pickupHolidays = pickupHolidays;
         return this;
@@ -188,6 +204,7 @@ public class ListAllPickupPpoints200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seller")
     public String seller;
+
     public ListAllPickupPpoints200ApplicationJSON withSeller(String seller) {
         this.seller = seller;
         return this;
@@ -199,9 +216,11 @@ public class ListAllPickupPpoints200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagsLabel")
     public String[] tagsLabel;
+
     public ListAllPickupPpoints200ApplicationJSON withTagsLabel(String[] tagsLabel) {
         this.tagsLabel = tagsLabel;
         return this;
     }
     
+    public ListAllPickupPpoints200ApplicationJSON(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse {
     
     public String contentType;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResp
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDiscoveryengineV1betaListDocumentsResponse googleCloudDiscoveryengineV1betaListDocumentsResponse;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse withGoogleCloudDiscoveryengineV1betaListDocumentsResponse(org.openapis.openapi.models.shared.GoogleCloudDiscoveryengineV1betaListDocumentsResponse googleCloudDiscoveryengineV1betaListDocumentsResponse) {
         this.googleCloudDiscoveryengineV1betaListDocumentsResponse = googleCloudDiscoveryengineV1betaListDocumentsResponse;
         return this;
@@ -26,6 +29,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResp
     
     
     public Integer statusCode;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResp
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

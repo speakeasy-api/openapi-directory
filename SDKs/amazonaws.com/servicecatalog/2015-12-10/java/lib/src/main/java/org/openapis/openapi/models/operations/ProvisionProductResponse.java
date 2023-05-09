@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProvisionProductResponse {
     
     public String contentType;
+
     public ProvisionProductResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ProvisionProductResponse {
      */
     
     public Object duplicateResourceException;
+
     public ProvisionProductResponse withDuplicateResourceException(Object duplicateResourceException) {
         this.duplicateResourceException = duplicateResourceException;
         return this;
@@ -29,6 +32,7 @@ public class ProvisionProductResponse {
      */
     
     public Object invalidParametersException;
+
     public ProvisionProductResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -39,6 +43,7 @@ public class ProvisionProductResponse {
      */
     
     public org.openapis.openapi.models.shared.ProvisionProductOutput provisionProductOutput;
+
     public ProvisionProductResponse withProvisionProductOutput(org.openapis.openapi.models.shared.ProvisionProductOutput provisionProductOutput) {
         this.provisionProductOutput = provisionProductOutput;
         return this;
@@ -46,6 +51,7 @@ public class ProvisionProductResponse {
     
     
     public Integer statusCode;
+
     public ProvisionProductResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ProvisionProductResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProvisionProductResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ProvisionProductResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ProvisionProductResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ProvisionProductResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

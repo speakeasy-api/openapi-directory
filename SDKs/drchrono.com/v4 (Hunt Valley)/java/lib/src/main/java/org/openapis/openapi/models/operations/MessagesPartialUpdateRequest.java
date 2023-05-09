@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MessagesPartialUpdateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public MessagesPartialUpdateRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -16,6 +18,7 @@ public class MessagesPartialUpdateRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public MessagesPartialUpdateRequest withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +26,7 @@ public class MessagesPartialUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=owner")
     public Long owner;
+
     public MessagesPartialUpdateRequest withOwner(Long owner) {
         this.owner = owner;
         return this;
@@ -30,6 +34,7 @@ public class MessagesPartialUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public MessagesPartialUpdateRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -37,6 +42,7 @@ public class MessagesPartialUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=received_since")
     public String receivedSince;
+
     public MessagesPartialUpdateRequest withReceivedSince(String receivedSince) {
         this.receivedSince = receivedSince;
         return this;
@@ -44,6 +50,7 @@ public class MessagesPartialUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=responsible_user")
     public Long responsibleUser;
+
     public MessagesPartialUpdateRequest withResponsibleUser(Long responsibleUser) {
         this.responsibleUser = responsibleUser;
         return this;
@@ -51,6 +58,7 @@ public class MessagesPartialUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public MessagesPartialUpdateRequest withType(String type) {
         this.type = type;
         return this;
@@ -58,9 +66,13 @@ public class MessagesPartialUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_since")
     public String updatedSince;
+
     public MessagesPartialUpdateRequest withUpdatedSince(String updatedSince) {
         this.updatedSince = updatedSince;
         return this;
     }
     
+    public MessagesPartialUpdateRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

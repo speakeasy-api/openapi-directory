@@ -12,6 +12,7 @@ public class TimerScript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arg")
     public String arg;
+
     public TimerScript withArg(String arg) {
         this.arg = arg;
         return this;
@@ -20,6 +21,7 @@ public class TimerScript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     public Integer interval;
+
     public TimerScript withInterval(Integer interval) {
         this.interval = interval;
         return this;
@@ -28,9 +30,11 @@ public class TimerScript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public TimerScript withScript(String script) {
         this.script = script;
         return this;
     }
     
+    public TimerScript(){}
 }

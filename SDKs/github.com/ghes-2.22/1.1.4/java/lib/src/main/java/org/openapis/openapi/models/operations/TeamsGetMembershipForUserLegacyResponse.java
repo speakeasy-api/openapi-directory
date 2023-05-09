@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TeamsGetMembershipForUserLegacyResponse {
     
     public String contentType;
+
     public TeamsGetMembershipForUserLegacyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TeamsGetMembershipForUserLegacyResponse {
     
     
     public Integer statusCode;
+
     public TeamsGetMembershipForUserLegacyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TeamsGetMembershipForUserLegacyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TeamsGetMembershipForUserLegacyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class TeamsGetMembershipForUserLegacyResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public TeamsGetMembershipForUserLegacyResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class TeamsGetMembershipForUserLegacyResponse {
      */
     
     public org.openapis.openapi.models.shared.TeamMembership teamMembership;
+
     public TeamsGetMembershipForUserLegacyResponse withTeamMembership(org.openapis.openapi.models.shared.TeamMembership teamMembership) {
         this.teamMembership = teamMembership;
         return this;
     }
     
+    public TeamsGetMembershipForUserLegacyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

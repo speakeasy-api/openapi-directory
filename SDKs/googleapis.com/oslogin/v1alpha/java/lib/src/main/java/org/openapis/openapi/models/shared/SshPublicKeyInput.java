@@ -18,6 +18,7 @@ public class SshPublicKeyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expirationTimeUsec")
     public String expirationTimeUsec;
+
     public SshPublicKeyInput withExpirationTimeUsec(String expirationTimeUsec) {
         this.expirationTimeUsec = expirationTimeUsec;
         return this;
@@ -29,9 +30,11 @@ public class SshPublicKeyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public SshPublicKeyInput withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public SshPublicKeyInput(){}
 }

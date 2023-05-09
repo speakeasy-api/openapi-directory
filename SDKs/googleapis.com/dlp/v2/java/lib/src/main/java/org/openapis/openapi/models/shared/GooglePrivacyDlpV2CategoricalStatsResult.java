@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2CategoricalStatsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueFrequencyHistogramBuckets")
     public GooglePrivacyDlpV2CategoricalStatsHistogramBucket[] valueFrequencyHistogramBuckets;
+
     public GooglePrivacyDlpV2CategoricalStatsResult withValueFrequencyHistogramBuckets(GooglePrivacyDlpV2CategoricalStatsHistogramBucket[] valueFrequencyHistogramBuckets) {
         this.valueFrequencyHistogramBuckets = valueFrequencyHistogramBuckets;
         return this;
     }
     
+    public GooglePrivacyDlpV2CategoricalStatsResult(){}
 }

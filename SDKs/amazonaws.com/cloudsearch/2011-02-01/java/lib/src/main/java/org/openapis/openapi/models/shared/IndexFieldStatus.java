@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * IndexFieldStatus - The value of an &lt;code&gt;IndexField&lt;/code&gt; and its current status.
@@ -15,6 +15,7 @@ public class IndexFieldStatus {
      */
     
     public IndexField options;
+
     public IndexFieldStatus withOptions(IndexField options) {
         this.options = options;
         return this;
@@ -25,9 +26,14 @@ public class IndexFieldStatus {
      */
     
     public OptionStatus status;
+
     public IndexFieldStatus withStatus(OptionStatus status) {
         this.status = status;
         return this;
     }
     
+    public IndexFieldStatus(@JsonProperty("Options") IndexField options, @JsonProperty("Status") OptionStatus status) {
+        this.options = options;
+        this.status = status;
+  }
 }

@@ -15,9 +15,13 @@ public class ItemClipFilesList {
      */
     @JsonProperty("items")
     public ItemClipFiles[] items;
+
     public ItemClipFilesList withItems(ItemClipFiles[] items) {
         this.items = items;
         return this;
     }
     
+    public ItemClipFilesList(@JsonProperty("items") ItemClipFiles[] items) {
+        this.items = items;
+  }
 }

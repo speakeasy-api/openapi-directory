@@ -12,6 +12,7 @@ public class CreateDiskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addOns")
     public AddOnRequest[] addOns;
+
     public CreateDiskRequest withAddOns(AddOnRequest[] addOns) {
         this.addOns = addOns;
         return this;
@@ -19,6 +20,7 @@ public class CreateDiskRequest {
     
     @JsonProperty("availabilityZone")
     public String availabilityZone;
+
     public CreateDiskRequest withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class CreateDiskRequest {
     
     @JsonProperty("diskName")
     public String diskName;
+
     public CreateDiskRequest withDiskName(String diskName) {
         this.diskName = diskName;
         return this;
@@ -33,6 +36,7 @@ public class CreateDiskRequest {
     
     @JsonProperty("sizeInGb")
     public Long sizeInGb;
+
     public CreateDiskRequest withSizeInGb(Long sizeInGb) {
         this.sizeInGb = sizeInGb;
         return this;
@@ -41,9 +45,15 @@ public class CreateDiskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateDiskRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDiskRequest(@JsonProperty("availabilityZone") String availabilityZone, @JsonProperty("diskName") String diskName, @JsonProperty("sizeInGb") Long sizeInGb) {
+        this.availabilityZone = availabilityZone;
+        this.diskName = diskName;
+        this.sizeInGb = sizeInGb;
+  }
 }

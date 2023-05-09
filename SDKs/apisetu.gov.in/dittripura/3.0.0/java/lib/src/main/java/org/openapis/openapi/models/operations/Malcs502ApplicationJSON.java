@@ -15,6 +15,7 @@ public class Malcs502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Malcs502ApplicationJSONErrorEnum error;
+
     public Malcs502ApplicationJSON withError(Malcs502ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Malcs502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Malcs502ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Malcs502ApplicationJSON withErrorDescription(Malcs502ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Malcs502ApplicationJSON(){}
 }

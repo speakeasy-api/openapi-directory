@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopProductSubscriptionResponse {
     @JsonProperty("ProductUserSummary")
     public ProductUserSummary productUserSummary;
+
     public StopProductSubscriptionResponse withProductUserSummary(ProductUserSummary productUserSummary) {
         this.productUserSummary = productUserSummary;
         return this;
     }
     
+    public StopProductSubscriptionResponse(@JsonProperty("ProductUserSummary") ProductUserSummary productUserSummary) {
+        this.productUserSummary = productUserSummary;
+  }
 }

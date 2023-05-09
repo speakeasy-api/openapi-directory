@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ServicesSearchSearchAds360Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customColumnHeaders")
     public GoogleAdsSearchads360V0ServicesCustomColumnHeader[] customColumnHeaders;
+
     public GoogleAdsSearchads360V0ServicesSearchSearchAds360Response withCustomColumnHeaders(GoogleAdsSearchads360V0ServicesCustomColumnHeader[] customColumnHeaders) {
         this.customColumnHeaders = customColumnHeaders;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0ServicesSearchSearchAds360Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldMask")
     public String fieldMask;
+
     public GoogleAdsSearchads360V0ServicesSearchSearchAds360Response withFieldMask(String fieldMask) {
         this.fieldMask = fieldMask;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAdsSearchads360V0ServicesSearchSearchAds360Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleAdsSearchads360V0ServicesSearchSearchAds360Response withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAdsSearchads360V0ServicesSearchSearchAds360Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public GoogleAdsSearchads360V0ServicesSearchAds360Row[] results;
+
     public GoogleAdsSearchads360V0ServicesSearchSearchAds360Response withResults(GoogleAdsSearchads360V0ServicesSearchAds360Row[] results) {
         this.results = results;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAdsSearchads360V0ServicesSearchSearchAds360Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summaryRow")
     public GoogleAdsSearchads360V0ServicesSearchAds360Row summaryRow;
+
     public GoogleAdsSearchads360V0ServicesSearchSearchAds360Response withSummaryRow(GoogleAdsSearchads360V0ServicesSearchAds360Row summaryRow) {
         this.summaryRow = summaryRow;
         return this;
@@ -73,9 +78,11 @@ public class GoogleAdsSearchads360V0ServicesSearchSearchAds360Response {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalResultsCount")
     public String totalResultsCount;
+
     public GoogleAdsSearchads360V0ServicesSearchSearchAds360Response withTotalResultsCount(String totalResultsCount) {
         this.totalResultsCount = totalResultsCount;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ServicesSearchSearchAds360Response(){}
 }

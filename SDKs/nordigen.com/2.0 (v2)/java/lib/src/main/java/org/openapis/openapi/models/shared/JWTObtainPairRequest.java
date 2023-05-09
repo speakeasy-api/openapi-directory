@@ -17,6 +17,7 @@ public class JWTObtainPairRequest {
     @JsonProperty("secret_id")
     @SpeakeasyMetadata("form:name=secret_id multipartForm:name=secret_id")
     public String secretId;
+
     public JWTObtainPairRequest withSecretId(String secretId) {
         this.secretId = secretId;
         return this;
@@ -28,9 +29,14 @@ public class JWTObtainPairRequest {
     @JsonProperty("secret_key")
     @SpeakeasyMetadata("form:name=secret_key multipartForm:name=secret_key")
     public String secretKey;
+
     public JWTObtainPairRequest withSecretKey(String secretKey) {
         this.secretKey = secretKey;
         return this;
     }
     
+    public JWTObtainPairRequest(@JsonProperty("secret_id") String secretId, @JsonProperty("secret_key") String secretKey) {
+        this.secretId = secretId;
+        this.secretKey = secretKey;
+  }
 }

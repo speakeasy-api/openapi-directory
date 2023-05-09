@@ -18,6 +18,7 @@ public class LendingField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyDetection")
     public LendingDetection keyDetection;
+
     public LendingField withKeyDetection(LendingDetection keyDetection) {
         this.keyDetection = keyDetection;
         return this;
@@ -26,6 +27,7 @@ public class LendingField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public LendingField withType(String type) {
         this.type = type;
         return this;
@@ -34,9 +36,11 @@ public class LendingField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValueDetections")
     public LendingDetection[] valueDetections;
+
     public LendingField withValueDetections(LendingDetection[] valueDetections) {
         this.valueDetections = valueDetections;
         return this;
     }
     
+    public LendingField(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AssociateClientVpnTargetNetworkResult {
     
     public String associationId;
+
     public AssociateClientVpnTargetNetworkResult withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -19,9 +20,11 @@ public class AssociateClientVpnTargetNetworkResult {
     
     
     public AssociateClientVpnTargetNetworkResultStatus status;
+
     public AssociateClientVpnTargetNetworkResult withStatus(AssociateClientVpnTargetNetworkResultStatus status) {
         this.status = status;
         return this;
     }
     
+    public AssociateClientVpnTargetNetworkResult(){}
 }

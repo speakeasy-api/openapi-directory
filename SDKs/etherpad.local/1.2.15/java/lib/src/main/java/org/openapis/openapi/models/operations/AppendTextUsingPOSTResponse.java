@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppendTextUsingPOSTResponse {
     
     public String contentType;
+
     public AppendTextUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppendTextUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public AppendTextUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AppendTextUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppendTextUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AppendTextUsingPOSTResponse {
      */
     
     public AppendTextUsingPOST200ApplicationJSON appendTextUsingPOST200ApplicationJSONObject;
+
     public AppendTextUsingPOSTResponse withAppendTextUsingPOST200ApplicationJSONObject(AppendTextUsingPOST200ApplicationJSON appendTextUsingPOST200ApplicationJSONObject) {
         this.appendTextUsingPOST200ApplicationJSONObject = appendTextUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class AppendTextUsingPOSTResponse {
      */
     
     public AppendTextUsingPOST400ApplicationJSON appendTextUsingPOST400ApplicationJSONObject;
+
     public AppendTextUsingPOSTResponse withAppendTextUsingPOST400ApplicationJSONObject(AppendTextUsingPOST400ApplicationJSON appendTextUsingPOST400ApplicationJSONObject) {
         this.appendTextUsingPOST400ApplicationJSONObject = appendTextUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class AppendTextUsingPOSTResponse {
      */
     
     public AppendTextUsingPOST401ApplicationJSON appendTextUsingPOST401ApplicationJSONObject;
+
     public AppendTextUsingPOSTResponse withAppendTextUsingPOST401ApplicationJSONObject(AppendTextUsingPOST401ApplicationJSON appendTextUsingPOST401ApplicationJSONObject) {
         this.appendTextUsingPOST401ApplicationJSONObject = appendTextUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class AppendTextUsingPOSTResponse {
      */
     
     public AppendTextUsingPOST500ApplicationJSON appendTextUsingPOST500ApplicationJSONObject;
+
     public AppendTextUsingPOSTResponse withAppendTextUsingPOST500ApplicationJSONObject(AppendTextUsingPOST500ApplicationJSON appendTextUsingPOST500ApplicationJSONObject) {
         this.appendTextUsingPOST500ApplicationJSONObject = appendTextUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public AppendTextUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

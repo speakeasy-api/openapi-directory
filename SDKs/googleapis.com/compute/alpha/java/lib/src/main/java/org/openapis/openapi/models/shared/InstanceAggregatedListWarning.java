@@ -18,6 +18,7 @@ public class InstanceAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public InstanceAggregatedListWarningCodeEnum code;
+
     public InstanceAggregatedListWarning withCode(InstanceAggregatedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class InstanceAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public InstanceAggregatedListWarningData[] data;
+
     public InstanceAggregatedListWarning withData(InstanceAggregatedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class InstanceAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public InstanceAggregatedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InstanceAggregatedListWarning(){}
 }

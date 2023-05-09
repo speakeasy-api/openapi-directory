@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p1beta1LatLongRect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxLatLng")
     public LatLng maxLatLng;
+
     public GoogleCloudVisionV1p1beta1LatLongRect withMaxLatLng(LatLng maxLatLng) {
         this.maxLatLng = maxLatLng;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudVisionV1p1beta1LatLongRect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minLatLng")
     public LatLng minLatLng;
+
     public GoogleCloudVisionV1p1beta1LatLongRect withMinLatLng(LatLng minLatLng) {
         this.minLatLng = minLatLng;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1LatLongRect(){}
 }

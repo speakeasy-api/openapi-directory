@@ -18,9 +18,11 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public Link withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public Link(){}
 }

@@ -18,6 +18,7 @@ public class InstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public ConfigInput config;
+
     public InstanceInput withConfig(ConfigInput config) {
         this.config = config;
         return this;
@@ -29,9 +30,11 @@ public class InstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InstanceInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public InstanceInput(){}
 }

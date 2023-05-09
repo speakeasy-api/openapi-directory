@@ -15,6 +15,7 @@ public class GetDevicePoolCompatibilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appArn")
     public String appArn;
+
     public GetDevicePoolCompatibilityRequest withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -23,6 +24,7 @@ public class GetDevicePoolCompatibilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public ScheduleRunConfiguration configuration;
+
     public GetDevicePoolCompatibilityRequest withConfiguration(ScheduleRunConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -30,6 +32,7 @@ public class GetDevicePoolCompatibilityRequest {
     
     @JsonProperty("devicePoolArn")
     public String devicePoolArn;
+
     public GetDevicePoolCompatibilityRequest withDevicePoolArn(String devicePoolArn) {
         this.devicePoolArn = devicePoolArn;
         return this;
@@ -38,6 +41,7 @@ public class GetDevicePoolCompatibilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("test")
     public ScheduleRunTest test;
+
     public GetDevicePoolCompatibilityRequest withTest(ScheduleRunTest test) {
         this.test = test;
         return this;
@@ -46,9 +50,13 @@ public class GetDevicePoolCompatibilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testType")
     public TestTypeEnum testType;
+
     public GetDevicePoolCompatibilityRequest withTestType(TestTypeEnum testType) {
         this.testType = testType;
         return this;
     }
     
+    public GetDevicePoolCompatibilityRequest(@JsonProperty("devicePoolArn") String devicePoolArn) {
+        this.devicePoolArn = devicePoolArn;
+  }
 }

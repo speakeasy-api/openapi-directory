@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AllowedInputTypes {
     @JsonProperty("allowAudioInput")
     public Boolean allowAudioInput;
+
     public AllowedInputTypes withAllowAudioInput(Boolean allowAudioInput) {
         this.allowAudioInput = allowAudioInput;
         return this;
@@ -19,9 +20,14 @@ public class AllowedInputTypes {
     
     @JsonProperty("allowDTMFInput")
     public Boolean allowDTMFInput;
+
     public AllowedInputTypes withAllowDTMFInput(Boolean allowDTMFInput) {
         this.allowDTMFInput = allowDTMFInput;
         return this;
     }
     
+    public AllowedInputTypes(@JsonProperty("allowAudioInput") Boolean allowAudioInput, @JsonProperty("allowDTMFInput") Boolean allowDTMFInput) {
+        this.allowAudioInput = allowAudioInput;
+        this.allowDTMFInput = allowDTMFInput;
+  }
 }

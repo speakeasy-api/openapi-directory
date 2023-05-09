@@ -12,6 +12,7 @@ public class AbsencePeriodsResponseDataAttributesTimeOffType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public AbsencePeriodsResponseDataAttributesTimeOffTypeAttributes[] attributes;
+
     public AbsencePeriodsResponseDataAttributesTimeOffType withAttributes(AbsencePeriodsResponseDataAttributesTimeOffTypeAttributes[] attributes) {
         this.attributes = attributes;
         return this;
@@ -20,9 +21,11 @@ public class AbsencePeriodsResponseDataAttributesTimeOffType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public AbsencePeriodsResponseDataAttributesTimeOffType withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AbsencePeriodsResponseDataAttributesTimeOffType(){}
 }

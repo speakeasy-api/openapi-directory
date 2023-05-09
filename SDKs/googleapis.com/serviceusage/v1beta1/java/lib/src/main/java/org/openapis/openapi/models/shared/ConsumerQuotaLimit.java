@@ -18,6 +18,7 @@ public class ConsumerQuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowsAdminOverrides")
     public Boolean allowsAdminOverrides;
+
     public ConsumerQuotaLimit withAllowsAdminOverrides(Boolean allowsAdminOverrides) {
         this.allowsAdminOverrides = allowsAdminOverrides;
         return this;
@@ -29,6 +30,7 @@ public class ConsumerQuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPrecise")
     public Boolean isPrecise;
+
     public ConsumerQuotaLimit withIsPrecise(Boolean isPrecise) {
         this.isPrecise = isPrecise;
         return this;
@@ -40,6 +42,7 @@ public class ConsumerQuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public String metric;
+
     public ConsumerQuotaLimit withMetric(String metric) {
         this.metric = metric;
         return this;
@@ -51,6 +54,7 @@ public class ConsumerQuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConsumerQuotaLimit withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class ConsumerQuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quotaBuckets")
     public QuotaBucket[] quotaBuckets;
+
     public ConsumerQuotaLimit withQuotaBuckets(QuotaBucket[] quotaBuckets) {
         this.quotaBuckets = quotaBuckets;
         return this;
@@ -73,6 +78,7 @@ public class ConsumerQuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedLocations")
     public String[] supportedLocations;
+
     public ConsumerQuotaLimit withSupportedLocations(String[] supportedLocations) {
         this.supportedLocations = supportedLocations;
         return this;
@@ -84,9 +90,11 @@ public class ConsumerQuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public ConsumerQuotaLimit withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public ConsumerQuotaLimit(){}
 }

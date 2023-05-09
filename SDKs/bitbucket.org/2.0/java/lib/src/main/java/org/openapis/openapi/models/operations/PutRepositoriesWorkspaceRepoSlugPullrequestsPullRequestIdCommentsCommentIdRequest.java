@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdRequest {
@@ -12,6 +13,7 @@ public class PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCo
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCo
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
     public Long commentId;
+
     public PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdRequest withCommentId(Long commentId) {
         this.commentId = commentId;
         return this;
@@ -32,6 +35,7 @@ public class PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCo
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_request_id")
     public Long pullRequestId;
+
     public PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdRequest withPullRequestId(Long pullRequestId) {
         this.pullRequestId = pullRequestId;
         return this;
@@ -44,6 +48,7 @@ public class PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCo
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -56,9 +61,17 @@ public class PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCo
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("comment_id") Long commentId, @JsonProperty("pull_request_id") Long pullRequestId, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.requestBody = requestBody;
+        this.commentId = commentId;
+        this.pullRequestId = pullRequestId;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

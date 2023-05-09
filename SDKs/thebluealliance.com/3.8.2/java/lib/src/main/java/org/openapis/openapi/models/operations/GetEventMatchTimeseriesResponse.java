@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEventMatchTimeseriesResponse {
     
     public String contentType;
+
     public GetEventMatchTimeseriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetEventMatchTimeseriesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetEventMatchTimeseriesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetEventMatchTimeseriesResponse {
     
     
     public Integer statusCode;
+
     public GetEventMatchTimeseriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetEventMatchTimeseriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEventMatchTimeseriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetEventMatchTimeseriesResponse {
      */
     
     public String[] getEventMatchTimeseries200ApplicationJSONStrings;
+
     public GetEventMatchTimeseriesResponse withGetEventMatchTimeseries200ApplicationJSONStrings(String[] getEventMatchTimeseries200ApplicationJSONStrings) {
         this.getEventMatchTimeseries200ApplicationJSONStrings = getEventMatchTimeseries200ApplicationJSONStrings;
         return this;
     }
     
+    public GetEventMatchTimeseriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

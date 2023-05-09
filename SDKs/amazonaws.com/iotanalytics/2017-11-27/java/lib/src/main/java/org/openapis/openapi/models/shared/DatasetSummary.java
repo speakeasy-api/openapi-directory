@@ -20,6 +20,7 @@ public class DatasetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public DatasetActionSummary[] actions;
+
     public DatasetSummary withActions(DatasetActionSummary[] actions) {
         this.actions = actions;
         return this;
@@ -30,6 +31,7 @@ public class DatasetSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public DatasetSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class DatasetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetName")
     public String datasetName;
+
     public DatasetSummary withDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
@@ -48,6 +51,7 @@ public class DatasetSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public DatasetSummary withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -56,6 +60,7 @@ public class DatasetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DatasetStatusEnum status;
+
     public DatasetSummary withStatus(DatasetStatusEnum status) {
         this.status = status;
         return this;
@@ -64,9 +69,11 @@ public class DatasetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggers")
     public DatasetTrigger[] triggers;
+
     public DatasetSummary withTriggers(DatasetTrigger[] triggers) {
         this.triggers = triggers;
         return this;
     }
     
+    public DatasetSummary(){}
 }

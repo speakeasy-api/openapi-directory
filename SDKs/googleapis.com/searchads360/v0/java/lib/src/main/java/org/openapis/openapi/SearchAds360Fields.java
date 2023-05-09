@@ -59,11 +59,9 @@ public class SearchAds360Fields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Searchads360SearchAds360FieldsGetResponse res = new org.openapis.openapi.models.operations.Searchads360SearchAds360FieldsGetResponse() {{
+        org.openapis.openapi.models.operations.Searchads360SearchAds360FieldsGetResponse res = new org.openapis.openapi.models.operations.Searchads360SearchAds360FieldsGetResponse(contentType, httpRes.statusCode()) {{
             googleAdsSearchads360V0ResourcesSearchAds360Field = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class SearchAds360Fields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Searchads360SearchAds360FieldsSearchResponse res = new org.openapis.openapi.models.operations.Searchads360SearchAds360FieldsSearchResponse() {{
+        org.openapis.openapi.models.operations.Searchads360SearchAds360FieldsSearchResponse res = new org.openapis.openapi.models.operations.Searchads360SearchAds360FieldsSearchResponse(contentType, httpRes.statusCode()) {{
             googleAdsSearchads360V0ServicesSearchSearchAds360FieldsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

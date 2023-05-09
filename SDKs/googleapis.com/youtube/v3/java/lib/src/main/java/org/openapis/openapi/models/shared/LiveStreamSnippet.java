@@ -20,6 +20,7 @@ public class LiveStreamSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelId")
     public String channelId;
+
     public LiveStreamSnippet withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -31,6 +32,7 @@ public class LiveStreamSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public LiveStreamSnippet withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +41,7 @@ public class LiveStreamSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDefaultStream")
     public Boolean isDefaultStream;
+
     public LiveStreamSnippet withIsDefaultStream(Boolean isDefaultStream) {
         this.isDefaultStream = isDefaultStream;
         return this;
@@ -52,6 +55,7 @@ public class LiveStreamSnippet {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("publishedAt")
     public OffsetDateTime publishedAt;
+
     public LiveStreamSnippet withPublishedAt(OffsetDateTime publishedAt) {
         this.publishedAt = publishedAt;
         return this;
@@ -63,9 +67,11 @@ public class LiveStreamSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public LiveStreamSnippet withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public LiveStreamSnippet(){}
 }

@@ -15,9 +15,11 @@ public class SubmitTaskStateChangeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acknowledgment")
     public String acknowledgment;
+
     public SubmitTaskStateChangeResponse withAcknowledgment(String acknowledgment) {
         this.acknowledgment = acknowledgment;
         return this;
     }
     
+    public SubmitTaskStateChangeResponse(){}
 }

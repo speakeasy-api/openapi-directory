@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SendTaskHeartbeatInput {
     @JsonProperty("taskToken")
     public String taskToken;
+
     public SendTaskHeartbeatInput withTaskToken(String taskToken) {
         this.taskToken = taskToken;
         return this;
     }
     
+    public SendTaskHeartbeatInput(@JsonProperty("taskToken") String taskToken) {
+        this.taskToken = taskToken;
+  }
 }

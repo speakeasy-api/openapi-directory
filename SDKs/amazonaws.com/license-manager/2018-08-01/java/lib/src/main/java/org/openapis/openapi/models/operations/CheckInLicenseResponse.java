@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CheckInLicenseResponse {
@@ -12,6 +13,7 @@ public class CheckInLicenseResponse {
      */
     
     public Object accessDeniedException;
+
     public CheckInLicenseResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CheckInLicenseResponse {
      */
     
     public Object authorizationException;
+
     public CheckInLicenseResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -32,6 +35,7 @@ public class CheckInLicenseResponse {
      */
     
     public java.util.Map<String, Object> checkInLicenseResponse;
+
     public CheckInLicenseResponse withCheckInLicenseResponse(java.util.Map<String, Object> checkInLicenseResponse) {
         this.checkInLicenseResponse = checkInLicenseResponse;
         return this;
@@ -42,6 +46,7 @@ public class CheckInLicenseResponse {
      */
     
     public Object conflictException;
+
     public CheckInLicenseResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -49,6 +54,7 @@ public class CheckInLicenseResponse {
     
     
     public String contentType;
+
     public CheckInLicenseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class CheckInLicenseResponse {
      */
     
     public Object invalidParameterValueException;
+
     public CheckInLicenseResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -69,6 +76,7 @@ public class CheckInLicenseResponse {
      */
     
     public Object rateLimitExceededException;
+
     public CheckInLicenseResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class CheckInLicenseResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CheckInLicenseResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class CheckInLicenseResponse {
      */
     
     public Object serverInternalException;
+
     public CheckInLicenseResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -96,6 +106,7 @@ public class CheckInLicenseResponse {
     
     
     public Integer statusCode;
+
     public CheckInLicenseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CheckInLicenseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CheckInLicenseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class CheckInLicenseResponse {
      */
     
     public Object validationException;
+
     public CheckInLicenseResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CheckInLicenseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

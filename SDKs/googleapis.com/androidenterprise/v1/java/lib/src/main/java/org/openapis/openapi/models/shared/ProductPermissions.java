@@ -18,6 +18,7 @@ public class ProductPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public ProductPermission[] permission;
+
     public ProductPermissions withPermission(ProductPermission[] permission) {
         this.permission = permission;
         return this;
@@ -29,9 +30,11 @@ public class ProductPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public ProductPermissions withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public ProductPermissions(){}
 }

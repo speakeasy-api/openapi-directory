@@ -15,6 +15,7 @@ public class CustomPolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableDebugLogDelivery")
     public Boolean enableDebugLogDelivery;
+
     public CustomPolicyDetails withEnableDebugLogDelivery(Boolean enableDebugLogDelivery) {
         this.enableDebugLogDelivery = enableDebugLogDelivery;
         return this;
@@ -22,6 +23,7 @@ public class CustomPolicyDetails {
     
     @JsonProperty("PolicyRuntime")
     public String policyRuntime;
+
     public CustomPolicyDetails withPolicyRuntime(String policyRuntime) {
         this.policyRuntime = policyRuntime;
         return this;
@@ -29,9 +31,14 @@ public class CustomPolicyDetails {
     
     @JsonProperty("PolicyText")
     public String policyText;
+
     public CustomPolicyDetails withPolicyText(String policyText) {
         this.policyText = policyText;
         return this;
     }
     
+    public CustomPolicyDetails(@JsonProperty("PolicyRuntime") String policyRuntime, @JsonProperty("PolicyText") String policyText) {
+        this.policyRuntime = policyRuntime;
+        this.policyText = policyText;
+  }
 }

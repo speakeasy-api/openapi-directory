@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopPipelineExecutionResponse {
@@ -12,6 +13,7 @@ public class StopPipelineExecutionResponse {
      */
     
     public Object conflictException;
+
     public StopPipelineExecutionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class StopPipelineExecutionResponse {
     
     
     public String contentType;
+
     public StopPipelineExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopPipelineExecutionResponse {
      */
     
     public Object duplicatedStopRequestException;
+
     public StopPipelineExecutionResponse withDuplicatedStopRequestException(Object duplicatedStopRequestException) {
         this.duplicatedStopRequestException = duplicatedStopRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StopPipelineExecutionResponse {
      */
     
     public Object pipelineExecutionNotStoppableException;
+
     public StopPipelineExecutionResponse withPipelineExecutionNotStoppableException(Object pipelineExecutionNotStoppableException) {
         this.pipelineExecutionNotStoppableException = pipelineExecutionNotStoppableException;
         return this;
@@ -49,6 +54,7 @@ public class StopPipelineExecutionResponse {
      */
     
     public Object pipelineNotFoundException;
+
     public StopPipelineExecutionResponse withPipelineNotFoundException(Object pipelineNotFoundException) {
         this.pipelineNotFoundException = pipelineNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class StopPipelineExecutionResponse {
     
     
     public Integer statusCode;
+
     public StopPipelineExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StopPipelineExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopPipelineExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class StopPipelineExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.StopPipelineExecutionOutput stopPipelineExecutionOutput;
+
     public StopPipelineExecutionResponse withStopPipelineExecutionOutput(org.openapis.openapi.models.shared.StopPipelineExecutionOutput stopPipelineExecutionOutput) {
         this.stopPipelineExecutionOutput = stopPipelineExecutionOutput;
         return this;
@@ -83,9 +92,14 @@ public class StopPipelineExecutionResponse {
      */
     
     public Object validationException;
+
     public StopPipelineExecutionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StopPipelineExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

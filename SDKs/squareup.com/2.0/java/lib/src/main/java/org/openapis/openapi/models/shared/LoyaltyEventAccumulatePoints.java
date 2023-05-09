@@ -18,6 +18,7 @@ public class LoyaltyEventAccumulatePoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loyalty_program_id")
     public String loyaltyProgramId;
+
     public LoyaltyEventAccumulatePoints withLoyaltyProgramId(String loyaltyProgramId) {
         this.loyaltyProgramId = loyaltyProgramId;
         return this;
@@ -30,6 +31,7 @@ public class LoyaltyEventAccumulatePoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     public String orderId;
+
     public LoyaltyEventAccumulatePoints withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -41,9 +43,11 @@ public class LoyaltyEventAccumulatePoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("points")
     public Long points;
+
     public LoyaltyEventAccumulatePoints withPoints(Long points) {
         this.points = points;
         return this;
     }
     
+    public LoyaltyEventAccumulatePoints(){}
 }

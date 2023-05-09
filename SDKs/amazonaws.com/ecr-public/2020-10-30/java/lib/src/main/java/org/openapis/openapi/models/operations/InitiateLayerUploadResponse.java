@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InitiateLayerUploadResponse {
     
     public String contentType;
+
     public InitiateLayerUploadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class InitiateLayerUploadResponse {
      */
     
     public org.openapis.openapi.models.shared.InitiateLayerUploadResponse initiateLayerUploadResponse;
+
     public InitiateLayerUploadResponse withInitiateLayerUploadResponse(org.openapis.openapi.models.shared.InitiateLayerUploadResponse initiateLayerUploadResponse) {
         this.initiateLayerUploadResponse = initiateLayerUploadResponse;
         return this;
@@ -29,6 +32,7 @@ public class InitiateLayerUploadResponse {
      */
     
     public Object invalidParameterException;
+
     public InitiateLayerUploadResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class InitiateLayerUploadResponse {
      */
     
     public Object registryNotFoundException;
+
     public InitiateLayerUploadResponse withRegistryNotFoundException(Object registryNotFoundException) {
         this.registryNotFoundException = registryNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class InitiateLayerUploadResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public InitiateLayerUploadResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class InitiateLayerUploadResponse {
      */
     
     public Object serverException;
+
     public InitiateLayerUploadResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -66,6 +73,7 @@ public class InitiateLayerUploadResponse {
     
     
     public Integer statusCode;
+
     public InitiateLayerUploadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class InitiateLayerUploadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InitiateLayerUploadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class InitiateLayerUploadResponse {
      */
     
     public Object unsupportedCommandException;
+
     public InitiateLayerUploadResponse withUnsupportedCommandException(Object unsupportedCommandException) {
         this.unsupportedCommandException = unsupportedCommandException;
         return this;
     }
     
+    public InitiateLayerUploadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

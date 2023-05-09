@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchCompaniesCompanyIdWebhooksWebhookIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateCompanyWebhookRequest updateCompanyWebhookRequest;
+
     public PatchCompaniesCompanyIdWebhooksWebhookIdRequest withUpdateCompanyWebhookRequest(org.openapis.openapi.models.shared.UpdateCompanyWebhookRequest updateCompanyWebhookRequest) {
         this.updateCompanyWebhookRequest = updateCompanyWebhookRequest;
         return this;
@@ -19,6 +21,7 @@ public class PatchCompaniesCompanyIdWebhooksWebhookIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public PatchCompaniesCompanyIdWebhooksWebhookIdRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -29,9 +32,14 @@ public class PatchCompaniesCompanyIdWebhooksWebhookIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhookId")
     public String webhookId;
+
     public PatchCompaniesCompanyIdWebhooksWebhookIdRequest withWebhookId(String webhookId) {
         this.webhookId = webhookId;
         return this;
     }
     
+    public PatchCompaniesCompanyIdWebhooksWebhookIdRequest(@JsonProperty("companyId") String companyId, @JsonProperty("webhookId") String webhookId) {
+        this.companyId = companyId;
+        this.webhookId = webhookId;
+  }
 }

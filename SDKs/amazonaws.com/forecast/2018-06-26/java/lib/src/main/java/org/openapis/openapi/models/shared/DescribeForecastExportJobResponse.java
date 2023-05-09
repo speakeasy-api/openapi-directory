@@ -22,6 +22,7 @@ public class DescribeForecastExportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeForecastExportJobResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DescribeForecastExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destination")
     public DataDestination destination;
+
     public DescribeForecastExportJobResponse withDestination(DataDestination destination) {
         this.destination = destination;
         return this;
@@ -38,6 +40,7 @@ public class DescribeForecastExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastArn")
     public String forecastArn;
+
     public DescribeForecastExportJobResponse withForecastArn(String forecastArn) {
         this.forecastArn = forecastArn;
         return this;
@@ -46,6 +49,7 @@ public class DescribeForecastExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastExportJobArn")
     public String forecastExportJobArn;
+
     public DescribeForecastExportJobResponse withForecastExportJobArn(String forecastExportJobArn) {
         this.forecastExportJobArn = forecastExportJobArn;
         return this;
@@ -54,6 +58,7 @@ public class DescribeForecastExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastExportJobName")
     public String forecastExportJobName;
+
     public DescribeForecastExportJobResponse withForecastExportJobName(String forecastExportJobName) {
         this.forecastExportJobName = forecastExportJobName;
         return this;
@@ -62,6 +67,7 @@ public class DescribeForecastExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public DescribeForecastExportJobResponse withFormat(String format) {
         this.format = format;
         return this;
@@ -72,6 +78,7 @@ public class DescribeForecastExportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public DescribeForecastExportJobResponse withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -80,6 +87,7 @@ public class DescribeForecastExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public DescribeForecastExportJobResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -88,9 +96,11 @@ public class DescribeForecastExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public DescribeForecastExportJobResponse withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DescribeForecastExportJobResponse(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudRecommenderV1CostProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost")
     public GoogleTypeMoney cost;
+
     public GoogleCloudRecommenderV1CostProjection withCost(GoogleTypeMoney cost) {
         this.cost = cost;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecommenderV1CostProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public GoogleCloudRecommenderV1CostProjection withDuration(String duration) {
         this.duration = duration;
         return this;
     }
     
+    public GoogleCloudRecommenderV1CostProjection(){}
 }

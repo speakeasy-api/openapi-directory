@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelAuditTaskResponse {
@@ -12,6 +13,7 @@ public class CancelAuditTaskResponse {
      */
     
     public java.util.Map<String, Object> cancelAuditTaskResponse;
+
     public CancelAuditTaskResponse withCancelAuditTaskResponse(java.util.Map<String, Object> cancelAuditTaskResponse) {
         this.cancelAuditTaskResponse = cancelAuditTaskResponse;
         return this;
@@ -19,6 +21,7 @@ public class CancelAuditTaskResponse {
     
     
     public String contentType;
+
     public CancelAuditTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CancelAuditTaskResponse {
      */
     
     public Object internalFailureException;
+
     public CancelAuditTaskResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CancelAuditTaskResponse {
      */
     
     public Object invalidRequestException;
+
     public CancelAuditTaskResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CancelAuditTaskResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelAuditTaskResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CancelAuditTaskResponse {
     
     
     public Integer statusCode;
+
     public CancelAuditTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CancelAuditTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelAuditTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CancelAuditTaskResponse {
      */
     
     public Object throttlingException;
+
     public CancelAuditTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CancelAuditTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

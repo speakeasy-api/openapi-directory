@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class FleetLaunchTemplateOverridesListRequest {
     
     public String availabilityZone;
+
     public FleetLaunchTemplateOverridesListRequest withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class FleetLaunchTemplateOverridesListRequest {
     
     
     public String imageId;
+
     public FleetLaunchTemplateOverridesListRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -26,6 +28,7 @@ public class FleetLaunchTemplateOverridesListRequest {
     
     
     public InstanceRequirementsRequest instanceRequirements;
+
     public FleetLaunchTemplateOverridesListRequest withInstanceRequirements(InstanceRequirementsRequest instanceRequirements) {
         this.instanceRequirements = instanceRequirements;
         return this;
@@ -33,6 +36,7 @@ public class FleetLaunchTemplateOverridesListRequest {
     
     
     public InstanceTypeEnum instanceType;
+
     public FleetLaunchTemplateOverridesListRequest withInstanceType(InstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -40,6 +44,7 @@ public class FleetLaunchTemplateOverridesListRequest {
     
     
     public String maxPrice;
+
     public FleetLaunchTemplateOverridesListRequest withMaxPrice(String maxPrice) {
         this.maxPrice = maxPrice;
         return this;
@@ -47,6 +52,7 @@ public class FleetLaunchTemplateOverridesListRequest {
     
     
     public Placement placement;
+
     public FleetLaunchTemplateOverridesListRequest withPlacement(Placement placement) {
         this.placement = placement;
         return this;
@@ -54,6 +60,7 @@ public class FleetLaunchTemplateOverridesListRequest {
     
     
     public Double priority;
+
     public FleetLaunchTemplateOverridesListRequest withPriority(Double priority) {
         this.priority = priority;
         return this;
@@ -61,6 +68,7 @@ public class FleetLaunchTemplateOverridesListRequest {
     
     
     public String subnetId;
+
     public FleetLaunchTemplateOverridesListRequest withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -68,9 +76,11 @@ public class FleetLaunchTemplateOverridesListRequest {
     
     
     public Double weightedCapacity;
+
     public FleetLaunchTemplateOverridesListRequest withWeightedCapacity(Double weightedCapacity) {
         this.weightedCapacity = weightedCapacity;
         return this;
     }
     
+    public FleetLaunchTemplateOverridesListRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteOrganizationResponse {
     
     public String contentType;
+
     public DeleteOrganizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteOrganizationResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteOrganizationResponse deleteOrganizationResponse;
+
     public DeleteOrganizationResponse withDeleteOrganizationResponse(org.openapis.openapi.models.shared.DeleteOrganizationResponse deleteOrganizationResponse) {
         this.deleteOrganizationResponse = deleteOrganizationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteOrganizationResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteOrganizationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteOrganizationResponse {
      */
     
     public Object organizationNotFoundException;
+
     public DeleteOrganizationResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteOrganizationResponse {
      */
     
     public Object organizationStateException;
+
     public DeleteOrganizationResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteOrganizationResponse {
     
     
     public Integer statusCode;
+
     public DeleteOrganizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteOrganizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteOrganizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteOrganizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

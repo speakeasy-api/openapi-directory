@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeElasticGpusResultElasticGpuSet {
     
     public String availabilityZone;
+
     public DescribeElasticGpusResultElasticGpuSet withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class DescribeElasticGpusResultElasticGpuSet {
     
     
     public DescribeElasticGpusResultElasticGpuSetElasticGpuHealth elasticGpuHealth;
+
     public DescribeElasticGpusResultElasticGpuSet withElasticGpuHealth(DescribeElasticGpusResultElasticGpuSetElasticGpuHealth elasticGpuHealth) {
         this.elasticGpuHealth = elasticGpuHealth;
         return this;
@@ -26,6 +28,7 @@ public class DescribeElasticGpusResultElasticGpuSet {
     
     
     public String elasticGpuId;
+
     public DescribeElasticGpusResultElasticGpuSet withElasticGpuId(String elasticGpuId) {
         this.elasticGpuId = elasticGpuId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeElasticGpusResultElasticGpuSet {
     
     
     public DescribeElasticGpusResultElasticGpuSetElasticGpuStateEnum elasticGpuState;
+
     public DescribeElasticGpusResultElasticGpuSet withElasticGpuState(DescribeElasticGpusResultElasticGpuSetElasticGpuStateEnum elasticGpuState) {
         this.elasticGpuState = elasticGpuState;
         return this;
@@ -40,6 +44,7 @@ public class DescribeElasticGpusResultElasticGpuSet {
     
     
     public String elasticGpuType;
+
     public DescribeElasticGpusResultElasticGpuSet withElasticGpuType(String elasticGpuType) {
         this.elasticGpuType = elasticGpuType;
         return this;
@@ -47,6 +52,7 @@ public class DescribeElasticGpusResultElasticGpuSet {
     
     
     public String instanceId;
+
     public DescribeElasticGpusResultElasticGpuSet withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -54,9 +60,11 @@ public class DescribeElasticGpusResultElasticGpuSet {
     
     
     public DescribeElasticGpusResultElasticGpuSetTags[] tags;
+
     public DescribeElasticGpusResultElasticGpuSet withTags(DescribeElasticGpusResultElasticGpuSetTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeElasticGpusResultElasticGpuSet(){}
 }

@@ -12,6 +12,7 @@ public class RegionProposal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingBox")
     public BoundingBox boundingBox;
+
     public RegionProposal withBoundingBox(BoundingBox boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -20,9 +21,11 @@ public class RegionProposal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Float confidence;
+
     public RegionProposal withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
     }
     
+    public RegionProposal(){}
 }

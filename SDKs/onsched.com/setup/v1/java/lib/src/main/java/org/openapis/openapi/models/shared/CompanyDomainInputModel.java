@@ -15,9 +15,11 @@ public class CompanyDomainInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public CompanyDomainInputModel withDomain(String domain) {
         this.domain = domain;
         return this;
     }
     
+    public CompanyDomainInputModel(){}
 }

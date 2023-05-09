@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddCommunicationToCaseResponse {
@@ -12,6 +13,7 @@ public class AddCommunicationToCaseResponse {
      */
     
     public org.openapis.openapi.models.shared.AddCommunicationToCaseResponse addCommunicationToCaseResponse;
+
     public AddCommunicationToCaseResponse withAddCommunicationToCaseResponse(org.openapis.openapi.models.shared.AddCommunicationToCaseResponse addCommunicationToCaseResponse) {
         this.addCommunicationToCaseResponse = addCommunicationToCaseResponse;
         return this;
@@ -22,6 +24,7 @@ public class AddCommunicationToCaseResponse {
      */
     
     public Object attachmentSetExpired;
+
     public AddCommunicationToCaseResponse withAttachmentSetExpired(Object attachmentSetExpired) {
         this.attachmentSetExpired = attachmentSetExpired;
         return this;
@@ -32,6 +35,7 @@ public class AddCommunicationToCaseResponse {
      */
     
     public Object attachmentSetIdNotFound;
+
     public AddCommunicationToCaseResponse withAttachmentSetIdNotFound(Object attachmentSetIdNotFound) {
         this.attachmentSetIdNotFound = attachmentSetIdNotFound;
         return this;
@@ -42,6 +46,7 @@ public class AddCommunicationToCaseResponse {
      */
     
     public Object caseIdNotFound;
+
     public AddCommunicationToCaseResponse withCaseIdNotFound(Object caseIdNotFound) {
         this.caseIdNotFound = caseIdNotFound;
         return this;
@@ -49,6 +54,7 @@ public class AddCommunicationToCaseResponse {
     
     
     public String contentType;
+
     public AddCommunicationToCaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class AddCommunicationToCaseResponse {
      */
     
     public Object internalServerError;
+
     public AddCommunicationToCaseResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -66,6 +73,7 @@ public class AddCommunicationToCaseResponse {
     
     
     public Integer statusCode;
+
     public AddCommunicationToCaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class AddCommunicationToCaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddCommunicationToCaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AddCommunicationToCaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

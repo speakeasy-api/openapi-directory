@@ -15,6 +15,7 @@ public class ImportResultDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentSystemVersion")
     public String currentSystemVersion;
+
     public ImportResultDTO withCurrentSystemVersion(String currentSystemVersion) {
         this.currentSystemVersion = currentSystemVersion;
         return this;
@@ -23,6 +24,7 @@ public class ImportResultDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importedReportsNames")
     public String[] importedReportsNames;
+
     public ImportResultDTO withImportedReportsNames(String[] importedReportsNames) {
         this.importedReportsNames = importedReportsNames;
         return this;
@@ -31,6 +33,7 @@ public class ImportResultDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidReportsNames")
     public String[] invalidReportsNames;
+
     public ImportResultDTO withInvalidReportsNames(String[] invalidReportsNames) {
         this.invalidReportsNames = invalidReportsNames;
         return this;
@@ -39,9 +42,11 @@ public class ImportResultDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetSystemVersion")
     public String targetSystemVersion;
+
     public ImportResultDTO withTargetSystemVersion(String targetSystemVersion) {
         this.targetSystemVersion = targetSystemVersion;
         return this;
     }
     
+    public ImportResultDTO(){}
 }

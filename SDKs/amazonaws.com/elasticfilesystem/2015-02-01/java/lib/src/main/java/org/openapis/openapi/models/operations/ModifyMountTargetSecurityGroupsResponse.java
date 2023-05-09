@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModifyMountTargetSecurityGroupsResponse {
@@ -12,6 +13,7 @@ public class ModifyMountTargetSecurityGroupsResponse {
      */
     
     public Object badRequest;
+
     public ModifyMountTargetSecurityGroupsResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class ModifyMountTargetSecurityGroupsResponse {
     
     
     public String contentType;
+
     public ModifyMountTargetSecurityGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ModifyMountTargetSecurityGroupsResponse {
      */
     
     public Object incorrectMountTargetState;
+
     public ModifyMountTargetSecurityGroupsResponse withIncorrectMountTargetState(Object incorrectMountTargetState) {
         this.incorrectMountTargetState = incorrectMountTargetState;
         return this;
@@ -39,6 +43,7 @@ public class ModifyMountTargetSecurityGroupsResponse {
      */
     
     public Object internalServerError;
+
     public ModifyMountTargetSecurityGroupsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class ModifyMountTargetSecurityGroupsResponse {
      */
     
     public Object mountTargetNotFound;
+
     public ModifyMountTargetSecurityGroupsResponse withMountTargetNotFound(Object mountTargetNotFound) {
         this.mountTargetNotFound = mountTargetNotFound;
         return this;
@@ -59,6 +65,7 @@ public class ModifyMountTargetSecurityGroupsResponse {
      */
     
     public Object securityGroupLimitExceeded;
+
     public ModifyMountTargetSecurityGroupsResponse withSecurityGroupLimitExceeded(Object securityGroupLimitExceeded) {
         this.securityGroupLimitExceeded = securityGroupLimitExceeded;
         return this;
@@ -69,6 +76,7 @@ public class ModifyMountTargetSecurityGroupsResponse {
      */
     
     public Object securityGroupNotFound;
+
     public ModifyMountTargetSecurityGroupsResponse withSecurityGroupNotFound(Object securityGroupNotFound) {
         this.securityGroupNotFound = securityGroupNotFound;
         return this;
@@ -76,6 +84,7 @@ public class ModifyMountTargetSecurityGroupsResponse {
     
     
     public Integer statusCode;
+
     public ModifyMountTargetSecurityGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ModifyMountTargetSecurityGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModifyMountTargetSecurityGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ModifyMountTargetSecurityGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

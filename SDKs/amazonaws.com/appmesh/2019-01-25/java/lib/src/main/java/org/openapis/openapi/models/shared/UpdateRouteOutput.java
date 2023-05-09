@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateRouteOutput {
     @JsonProperty("route")
     public RouteData route;
+
     public UpdateRouteOutput withRoute(RouteData route) {
         this.route = route;
         return this;
     }
     
+    public UpdateRouteOutput(@JsonProperty("route") RouteData route) {
+        this.route = route;
+  }
 }

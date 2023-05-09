@@ -18,9 +18,11 @@ public class GoalRelationshipRequestSupportingResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoalRelationshipRequestSupportingResourceInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoalRelationshipRequestSupportingResourceInput(){}
 }

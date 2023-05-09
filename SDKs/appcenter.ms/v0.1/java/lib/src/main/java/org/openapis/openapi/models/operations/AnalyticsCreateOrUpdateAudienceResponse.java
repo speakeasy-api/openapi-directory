@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsCreateOrUpdateAudienceResponse {
@@ -12,6 +13,7 @@ public class AnalyticsCreateOrUpdateAudienceResponse {
      */
     
     public AnalyticsCreateOrUpdateAudience200ApplicationJSON analyticsCreateOrUpdateAudience200ApplicationJSONObject;
+
     public AnalyticsCreateOrUpdateAudienceResponse withAnalyticsCreateOrUpdateAudience200ApplicationJSONObject(AnalyticsCreateOrUpdateAudience200ApplicationJSON analyticsCreateOrUpdateAudience200ApplicationJSONObject) {
         this.analyticsCreateOrUpdateAudience200ApplicationJSONObject = analyticsCreateOrUpdateAudience200ApplicationJSONObject;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsCreateOrUpdateAudienceResponse {
      */
     
     public AnalyticsCreateOrUpdateAudienceDefaultApplicationJSON analyticsCreateOrUpdateAudienceDefaultApplicationJSONObject;
+
     public AnalyticsCreateOrUpdateAudienceResponse withAnalyticsCreateOrUpdateAudienceDefaultApplicationJSONObject(AnalyticsCreateOrUpdateAudienceDefaultApplicationJSON analyticsCreateOrUpdateAudienceDefaultApplicationJSONObject) {
         this.analyticsCreateOrUpdateAudienceDefaultApplicationJSONObject = analyticsCreateOrUpdateAudienceDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsCreateOrUpdateAudienceResponse {
     
     
     public String contentType;
+
     public AnalyticsCreateOrUpdateAudienceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class AnalyticsCreateOrUpdateAudienceResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsCreateOrUpdateAudienceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AnalyticsCreateOrUpdateAudienceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsCreateOrUpdateAudienceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsCreateOrUpdateAudienceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

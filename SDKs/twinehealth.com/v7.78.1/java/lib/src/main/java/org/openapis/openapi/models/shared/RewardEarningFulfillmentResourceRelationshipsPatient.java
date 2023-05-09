@@ -12,9 +12,11 @@ public class RewardEarningFulfillmentResourceRelationshipsPatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public RewardEarningFulfillmentResourceRelationshipsPatientData data;
+
     public RewardEarningFulfillmentResourceRelationshipsPatient withData(RewardEarningFulfillmentResourceRelationshipsPatientData data) {
         this.data = data;
         return this;
     }
     
+    public RewardEarningFulfillmentResourceRelationshipsPatient(){}
 }

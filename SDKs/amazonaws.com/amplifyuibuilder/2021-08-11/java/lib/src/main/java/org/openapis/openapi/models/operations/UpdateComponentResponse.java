@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateComponentResponse {
     
     public String contentType;
+
     public UpdateComponentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateComponentResponse {
      */
     
     public Object internalServerException;
+
     public UpdateComponentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateComponentResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateComponentResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateComponentResponse {
     
     
     public Integer statusCode;
+
     public UpdateComponentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateComponentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateComponentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateComponentResponse {
      */
     
     public Object resourceConflictException;
+
     public UpdateComponentResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -63,9 +70,14 @@ public class UpdateComponentResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateComponentResponse updateComponentResponse;
+
     public UpdateComponentResponse withUpdateComponentResponse(org.openapis.openapi.models.shared.UpdateComponentResponse updateComponentResponse) {
         this.updateComponentResponse = updateComponentResponse;
         return this;
     }
     
+    public UpdateComponentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

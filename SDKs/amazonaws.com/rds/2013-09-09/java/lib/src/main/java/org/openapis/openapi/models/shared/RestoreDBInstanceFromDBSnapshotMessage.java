@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RestoreDBInstanceFromDBSnapshotMessage {
     
     public Boolean autoMinorVersionUpgrade;
+
     public RestoreDBInstanceFromDBSnapshotMessage withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -16,6 +17,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String availabilityZone;
+
     public RestoreDBInstanceFromDBSnapshotMessage withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -23,6 +25,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String dbInstanceClass;
+
     public RestoreDBInstanceFromDBSnapshotMessage withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -30,6 +33,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String dbInstanceIdentifier;
+
     public RestoreDBInstanceFromDBSnapshotMessage withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -37,6 +41,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String dbName;
+
     public RestoreDBInstanceFromDBSnapshotMessage withDBName(String dbName) {
         this.dbName = dbName;
         return this;
@@ -44,6 +49,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String dbSnapshotIdentifier;
+
     public RestoreDBInstanceFromDBSnapshotMessage withDBSnapshotIdentifier(String dbSnapshotIdentifier) {
         this.dbSnapshotIdentifier = dbSnapshotIdentifier;
         return this;
@@ -51,6 +57,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String dbSubnetGroupName;
+
     public RestoreDBInstanceFromDBSnapshotMessage withDBSubnetGroupName(String dbSubnetGroupName) {
         this.dbSubnetGroupName = dbSubnetGroupName;
         return this;
@@ -58,6 +65,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String engine;
+
     public RestoreDBInstanceFromDBSnapshotMessage withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -65,6 +73,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public Long iops;
+
     public RestoreDBInstanceFromDBSnapshotMessage withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -72,6 +81,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String licenseModel;
+
     public RestoreDBInstanceFromDBSnapshotMessage withLicenseModel(String licenseModel) {
         this.licenseModel = licenseModel;
         return this;
@@ -79,6 +89,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public Boolean multiAZ;
+
     public RestoreDBInstanceFromDBSnapshotMessage withMultiAZ(Boolean multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -86,6 +97,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String optionGroupName;
+
     public RestoreDBInstanceFromDBSnapshotMessage withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -93,6 +105,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public Long port;
+
     public RestoreDBInstanceFromDBSnapshotMessage withPort(Long port) {
         this.port = port;
         return this;
@@ -100,6 +113,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public Boolean publiclyAccessible;
+
     public RestoreDBInstanceFromDBSnapshotMessage withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -107,9 +121,14 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public TagList[] tags;
+
     public RestoreDBInstanceFromDBSnapshotMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public RestoreDBInstanceFromDBSnapshotMessage(@JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier, @JsonProperty("DBSnapshotIdentifier") String dbSnapshotIdentifier) {
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+        this.dbSnapshotIdentifier = dbSnapshotIdentifier;
+  }
 }

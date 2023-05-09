@@ -14,6 +14,7 @@ public class UnregisterConnectorRequestBody {
      */
     @JsonProperty("connectorLabel")
     public String connectorLabel;
+
     public UnregisterConnectorRequestBody withConnectorLabel(String connectorLabel) {
         this.connectorLabel = connectorLabel;
         return this;
@@ -25,9 +26,13 @@ public class UnregisterConnectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceDelete")
     public Boolean forceDelete;
+
     public UnregisterConnectorRequestBody withForceDelete(Boolean forceDelete) {
         this.forceDelete = forceDelete;
         return this;
     }
     
+    public UnregisterConnectorRequestBody(@JsonProperty("connectorLabel") String connectorLabel) {
+        this.connectorLabel = connectorLabel;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModifyClusterResponse {
     
     public String contentType;
+
     public ModifyClusterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ModifyClusterResponse {
      */
     
     public Object internalServerError;
+
     public ModifyClusterResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class ModifyClusterResponse {
      */
     
     public Object invalidRequestException;
+
     public ModifyClusterResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ModifyClusterResponse {
      */
     
     public org.openapis.openapi.models.shared.ModifyClusterOutput modifyClusterOutput;
+
     public ModifyClusterResponse withModifyClusterOutput(org.openapis.openapi.models.shared.ModifyClusterOutput modifyClusterOutput) {
         this.modifyClusterOutput = modifyClusterOutput;
         return this;
@@ -46,6 +51,7 @@ public class ModifyClusterResponse {
     
     
     public Integer statusCode;
+
     public ModifyClusterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ModifyClusterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModifyClusterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ModifyClusterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

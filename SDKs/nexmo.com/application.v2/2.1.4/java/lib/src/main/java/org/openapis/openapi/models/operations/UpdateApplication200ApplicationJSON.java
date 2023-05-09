@@ -18,6 +18,7 @@ public class UpdateApplication200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public org.openapis.openapi.models.shared.Capabilities capabilities;
+
     public UpdateApplication200ApplicationJSON withCapabilities(org.openapis.openapi.models.shared.Capabilities capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -29,6 +30,7 @@ public class UpdateApplication200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UpdateApplication200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class UpdateApplication200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keys")
     public UpdateApplication200ApplicationJSONKeys keys;
+
     public UpdateApplication200ApplicationJSON withKeys(UpdateApplication200ApplicationJSONKeys keys) {
         this.keys = keys;
         return this;
@@ -48,6 +51,7 @@ public class UpdateApplication200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateApplication200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -59,9 +63,11 @@ public class UpdateApplication200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacy")
     public UpdateApplication200ApplicationJSONPrivacy privacy;
+
     public UpdateApplication200ApplicationJSON withPrivacy(UpdateApplication200ApplicationJSONPrivacy privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public UpdateApplication200ApplicationJSON(){}
 }

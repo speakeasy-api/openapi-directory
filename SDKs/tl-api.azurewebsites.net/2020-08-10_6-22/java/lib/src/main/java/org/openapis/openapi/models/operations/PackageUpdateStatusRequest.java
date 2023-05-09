@@ -12,6 +12,7 @@ public class PackageUpdateStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=packageId")
     public Integer packageId;
+
     public PackageUpdateStatusRequest withPackageId(Integer packageId) {
         this.packageId = packageId;
         return this;
@@ -22,6 +23,7 @@ public class PackageUpdateStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public Integer status;
+
     public PackageUpdateStatusRequest withStatus(Integer status) {
         this.status = status;
         return this;
@@ -32,9 +34,11 @@ public class PackageUpdateStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userName")
     public String userName;
+
     public PackageUpdateStatusRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public PackageUpdateStatusRequest(){}
 }

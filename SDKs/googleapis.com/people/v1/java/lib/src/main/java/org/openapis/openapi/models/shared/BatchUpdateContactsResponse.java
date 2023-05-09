@@ -18,9 +18,11 @@ public class BatchUpdateContactsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateResult")
     public java.util.Map<String, PersonResponse> updateResult;
+
     public BatchUpdateContactsResponse withUpdateResult(java.util.Map<String, PersonResponse> updateResult) {
         this.updateResult = updateResult;
         return this;
     }
     
+    public BatchUpdateContactsResponse(){}
 }

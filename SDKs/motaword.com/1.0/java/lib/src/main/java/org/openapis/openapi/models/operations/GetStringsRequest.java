@@ -12,6 +12,7 @@ public class GetStringsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetStringsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -22,9 +23,11 @@ public class GetStringsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source_language")
     public String sourceLanguage;
+
     public GetStringsRequest withSourceLanguage(String sourceLanguage) {
         this.sourceLanguage = sourceLanguage;
         return this;
     }
     
+    public GetStringsRequest(){}
 }

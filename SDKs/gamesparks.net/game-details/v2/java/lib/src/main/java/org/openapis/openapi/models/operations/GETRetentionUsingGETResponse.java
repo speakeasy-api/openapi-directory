@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETRetentionUsingGETResponse {
@@ -12,6 +13,7 @@ public class GETRetentionUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.AnalyticsDataCountSwaggerModel analyticsDataCountSwaggerModel;
+
     public GETRetentionUsingGETResponse withAnalyticsDataCountSwaggerModel(org.openapis.openapi.models.shared.AnalyticsDataCountSwaggerModel analyticsDataCountSwaggerModel) {
         this.analyticsDataCountSwaggerModel = analyticsDataCountSwaggerModel;
         return this;
@@ -19,6 +21,7 @@ public class GETRetentionUsingGETResponse {
     
     
     public String contentType;
+
     public GETRetentionUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GETRetentionUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.MessageModel messageModel;
+
     public GETRetentionUsingGETResponse withMessageModel(org.openapis.openapi.models.shared.MessageModel messageModel) {
         this.messageModel = messageModel;
         return this;
@@ -36,6 +40,7 @@ public class GETRetentionUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETRetentionUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GETRetentionUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETRetentionUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETRetentionUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

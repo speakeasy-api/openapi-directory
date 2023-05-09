@@ -12,6 +12,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentVersion")
     public String agentVersion;
+
     public CreateStackRequest withAgentVersion(String agentVersion) {
         this.agentVersion = agentVersion;
         return this;
@@ -20,6 +21,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public CreateStackRequest withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -28,6 +30,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChefConfiguration")
     public ChefConfiguration chefConfiguration;
+
     public CreateStackRequest withChefConfiguration(ChefConfiguration chefConfiguration) {
         this.chefConfiguration = chefConfiguration;
         return this;
@@ -36,6 +39,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationManager")
     public StackConfigurationManager configurationManager;
+
     public CreateStackRequest withConfigurationManager(StackConfigurationManager configurationManager) {
         this.configurationManager = configurationManager;
         return this;
@@ -44,6 +48,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomCookbooksSource")
     public Source customCookbooksSource;
+
     public CreateStackRequest withCustomCookbooksSource(Source customCookbooksSource) {
         this.customCookbooksSource = customCookbooksSource;
         return this;
@@ -52,6 +57,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomJson")
     public String customJson;
+
     public CreateStackRequest withCustomJson(String customJson) {
         this.customJson = customJson;
         return this;
@@ -60,6 +66,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultAvailabilityZone")
     public String defaultAvailabilityZone;
+
     public CreateStackRequest withDefaultAvailabilityZone(String defaultAvailabilityZone) {
         this.defaultAvailabilityZone = defaultAvailabilityZone;
         return this;
@@ -67,6 +74,7 @@ public class CreateStackRequest {
     
     @JsonProperty("DefaultInstanceProfileArn")
     public String defaultInstanceProfileArn;
+
     public CreateStackRequest withDefaultInstanceProfileArn(String defaultInstanceProfileArn) {
         this.defaultInstanceProfileArn = defaultInstanceProfileArn;
         return this;
@@ -75,6 +83,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultOs")
     public String defaultOs;
+
     public CreateStackRequest withDefaultOs(String defaultOs) {
         this.defaultOs = defaultOs;
         return this;
@@ -83,6 +92,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultRootDeviceType")
     public RootDeviceTypeEnum defaultRootDeviceType;
+
     public CreateStackRequest withDefaultRootDeviceType(RootDeviceTypeEnum defaultRootDeviceType) {
         this.defaultRootDeviceType = defaultRootDeviceType;
         return this;
@@ -91,6 +101,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSshKeyName")
     public String defaultSshKeyName;
+
     public CreateStackRequest withDefaultSshKeyName(String defaultSshKeyName) {
         this.defaultSshKeyName = defaultSshKeyName;
         return this;
@@ -99,6 +110,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSubnetId")
     public String defaultSubnetId;
+
     public CreateStackRequest withDefaultSubnetId(String defaultSubnetId) {
         this.defaultSubnetId = defaultSubnetId;
         return this;
@@ -107,6 +119,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostnameTheme")
     public String hostnameTheme;
+
     public CreateStackRequest withHostnameTheme(String hostnameTheme) {
         this.hostnameTheme = hostnameTheme;
         return this;
@@ -114,6 +127,7 @@ public class CreateStackRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateStackRequest withName(String name) {
         this.name = name;
         return this;
@@ -121,6 +135,7 @@ public class CreateStackRequest {
     
     @JsonProperty("Region")
     public String region;
+
     public CreateStackRequest withRegion(String region) {
         this.region = region;
         return this;
@@ -128,6 +143,7 @@ public class CreateStackRequest {
     
     @JsonProperty("ServiceRoleArn")
     public String serviceRoleArn;
+
     public CreateStackRequest withServiceRoleArn(String serviceRoleArn) {
         this.serviceRoleArn = serviceRoleArn;
         return this;
@@ -136,6 +152,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseCustomCookbooks")
     public Boolean useCustomCookbooks;
+
     public CreateStackRequest withUseCustomCookbooks(Boolean useCustomCookbooks) {
         this.useCustomCookbooks = useCustomCookbooks;
         return this;
@@ -144,6 +161,7 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseOpsworksSecurityGroups")
     public Boolean useOpsworksSecurityGroups;
+
     public CreateStackRequest withUseOpsworksSecurityGroups(Boolean useOpsworksSecurityGroups) {
         this.useOpsworksSecurityGroups = useOpsworksSecurityGroups;
         return this;
@@ -152,9 +170,16 @@ public class CreateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public CreateStackRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateStackRequest(@JsonProperty("DefaultInstanceProfileArn") String defaultInstanceProfileArn, @JsonProperty("Name") String name, @JsonProperty("Region") String region, @JsonProperty("ServiceRoleArn") String serviceRoleArn) {
+        this.defaultInstanceProfileArn = defaultInstanceProfileArn;
+        this.name = name;
+        this.region = region;
+        this.serviceRoleArn = serviceRoleArn;
+  }
 }

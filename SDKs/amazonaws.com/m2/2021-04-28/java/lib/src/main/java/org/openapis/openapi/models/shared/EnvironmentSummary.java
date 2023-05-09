@@ -19,6 +19,7 @@ public class EnvironmentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public EnvironmentSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -26,6 +27,7 @@ public class EnvironmentSummary {
     
     @JsonProperty("engineType")
     public EngineTypeEnum engineType;
+
     public EnvironmentSummary withEngineType(EngineTypeEnum engineType) {
         this.engineType = engineType;
         return this;
@@ -33,6 +35,7 @@ public class EnvironmentSummary {
     
     @JsonProperty("engineVersion")
     public String engineVersion;
+
     public EnvironmentSummary withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -40,6 +43,7 @@ public class EnvironmentSummary {
     
     @JsonProperty("environmentArn")
     public String environmentArn;
+
     public EnvironmentSummary withEnvironmentArn(String environmentArn) {
         this.environmentArn = environmentArn;
         return this;
@@ -47,6 +51,7 @@ public class EnvironmentSummary {
     
     @JsonProperty("environmentId")
     public String environmentId;
+
     public EnvironmentSummary withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -54,6 +59,7 @@ public class EnvironmentSummary {
     
     @JsonProperty("instanceType")
     public String instanceType;
+
     public EnvironmentSummary withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -61,6 +67,7 @@ public class EnvironmentSummary {
     
     @JsonProperty("name")
     public String name;
+
     public EnvironmentSummary withName(String name) {
         this.name = name;
         return this;
@@ -68,9 +75,20 @@ public class EnvironmentSummary {
     
     @JsonProperty("status")
     public EnvironmentLifecycleEnum status;
+
     public EnvironmentSummary withStatus(EnvironmentLifecycleEnum status) {
         this.status = status;
         return this;
     }
     
+    public EnvironmentSummary(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("engineType") EngineTypeEnum engineType, @JsonProperty("engineVersion") String engineVersion, @JsonProperty("environmentArn") String environmentArn, @JsonProperty("environmentId") String environmentId, @JsonProperty("instanceType") String instanceType, @JsonProperty("name") String name, @JsonProperty("status") EnvironmentLifecycleEnum status) {
+        this.creationTime = creationTime;
+        this.engineType = engineType;
+        this.engineVersion = engineVersion;
+        this.environmentArn = environmentArn;
+        this.environmentId = environmentId;
+        this.instanceType = instanceType;
+        this.name = name;
+        this.status = status;
+  }
 }

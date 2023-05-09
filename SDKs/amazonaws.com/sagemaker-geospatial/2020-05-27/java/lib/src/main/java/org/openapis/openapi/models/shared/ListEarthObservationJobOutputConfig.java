@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ListEarthObservationJobOutputConfig {
     @JsonProperty("Arn")
     public String arn;
+
     public ListEarthObservationJobOutputConfig withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class ListEarthObservationJobOutputConfig {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ListEarthObservationJobOutputConfig withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -35,6 +37,7 @@ public class ListEarthObservationJobOutputConfig {
     
     @JsonProperty("DurationInSeconds")
     public Long durationInSeconds;
+
     public ListEarthObservationJobOutputConfig withDurationInSeconds(Long durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
         return this;
@@ -42,6 +45,7 @@ public class ListEarthObservationJobOutputConfig {
     
     @JsonProperty("Name")
     public String name;
+
     public ListEarthObservationJobOutputConfig withName(String name) {
         this.name = name;
         return this;
@@ -49,6 +53,7 @@ public class ListEarthObservationJobOutputConfig {
     
     @JsonProperty("OperationType")
     public String operationType;
+
     public ListEarthObservationJobOutputConfig withOperationType(String operationType) {
         this.operationType = operationType;
         return this;
@@ -56,6 +61,7 @@ public class ListEarthObservationJobOutputConfig {
     
     @JsonProperty("Status")
     public EarthObservationJobStatusEnum status;
+
     public ListEarthObservationJobOutputConfig withStatus(EarthObservationJobStatusEnum status) {
         this.status = status;
         return this;
@@ -64,9 +70,18 @@ public class ListEarthObservationJobOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public ListEarthObservationJobOutputConfig withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public ListEarthObservationJobOutputConfig(@JsonProperty("Arn") String arn, @JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("DurationInSeconds") Long durationInSeconds, @JsonProperty("Name") String name, @JsonProperty("OperationType") String operationType, @JsonProperty("Status") EarthObservationJobStatusEnum status) {
+        this.arn = arn;
+        this.creationTime = creationTime;
+        this.durationInSeconds = durationInSeconds;
+        this.name = name;
+        this.operationType = operationType;
+        this.status = status;
+  }
 }

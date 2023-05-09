@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ReshardingStatus {
     
     public SlotMigration slotMigration;
+
     public ReshardingStatus withSlotMigration(SlotMigration slotMigration) {
         this.slotMigration = slotMigration;
         return this;
     }
     
+    public ReshardingStatus(){}
 }

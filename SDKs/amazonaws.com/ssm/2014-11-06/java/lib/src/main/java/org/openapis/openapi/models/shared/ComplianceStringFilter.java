@@ -15,6 +15,7 @@ public class ComplianceStringFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public ComplianceStringFilter withKey(String key) {
         this.key = key;
         return this;
@@ -23,6 +24,7 @@ public class ComplianceStringFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ComplianceQueryOperatorTypeEnum type;
+
     public ComplianceStringFilter withType(ComplianceQueryOperatorTypeEnum type) {
         this.type = type;
         return this;
@@ -31,9 +33,11 @@ public class ComplianceStringFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public ComplianceStringFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public ComplianceStringFilter(){}
 }

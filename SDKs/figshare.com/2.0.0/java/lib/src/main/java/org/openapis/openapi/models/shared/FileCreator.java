@@ -15,6 +15,7 @@ public class FileCreator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public FileCreator withLink(String link) {
         this.link = link;
         return this;
@@ -26,6 +27,7 @@ public class FileCreator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("md5")
     public String md5;
+
     public FileCreator withMd5(String md5) {
         this.md5 = md5;
         return this;
@@ -37,6 +39,7 @@ public class FileCreator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FileCreator withName(String name) {
         this.name = name;
         return this;
@@ -48,9 +51,11 @@ public class FileCreator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public FileCreator withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public FileCreator(){}
 }

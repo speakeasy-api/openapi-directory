@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopRelationalDatabaseRequest {
     @JsonProperty("relationalDatabaseName")
     public String relationalDatabaseName;
+
     public StopRelationalDatabaseRequest withRelationalDatabaseName(String relationalDatabaseName) {
         this.relationalDatabaseName = relationalDatabaseName;
         return this;
@@ -19,9 +20,13 @@ public class StopRelationalDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationalDatabaseSnapshotName")
     public String relationalDatabaseSnapshotName;
+
     public StopRelationalDatabaseRequest withRelationalDatabaseSnapshotName(String relationalDatabaseSnapshotName) {
         this.relationalDatabaseSnapshotName = relationalDatabaseSnapshotName;
         return this;
     }
     
+    public StopRelationalDatabaseRequest(@JsonProperty("relationalDatabaseName") String relationalDatabaseName) {
+        this.relationalDatabaseName = relationalDatabaseName;
+  }
 }

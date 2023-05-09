@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Cluster {
     @JsonProperty("adminUserName")
     public String adminUserName;
+
     public Cluster withAdminUserName(String adminUserName) {
         this.adminUserName = adminUserName;
         return this;
@@ -19,6 +20,7 @@ public class Cluster {
     
     @JsonProperty("authType")
     public AuthEnum authType;
+
     public Cluster withAuthType(AuthEnum authType) {
         this.authType = authType;
         return this;
@@ -26,6 +28,7 @@ public class Cluster {
     
     @JsonProperty("clusterArn")
     public String clusterArn;
+
     public Cluster withClusterArn(String clusterArn) {
         this.clusterArn = clusterArn;
         return this;
@@ -33,6 +36,7 @@ public class Cluster {
     
     @JsonProperty("clusterEndpoint")
     public String clusterEndpoint;
+
     public Cluster withClusterEndpoint(String clusterEndpoint) {
         this.clusterEndpoint = clusterEndpoint;
         return this;
@@ -40,6 +44,7 @@ public class Cluster {
     
     @JsonProperty("clusterName")
     public String clusterName;
+
     public Cluster withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -47,6 +52,7 @@ public class Cluster {
     
     @JsonProperty("createTime")
     public String createTime;
+
     public Cluster withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -54,6 +60,7 @@ public class Cluster {
     
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public Cluster withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -61,6 +68,7 @@ public class Cluster {
     
     @JsonProperty("preferredMaintenanceWindow")
     public String preferredMaintenanceWindow;
+
     public Cluster withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -68,6 +76,7 @@ public class Cluster {
     
     @JsonProperty("shardCapacity")
     public Long shardCapacity;
+
     public Cluster withShardCapacity(Long shardCapacity) {
         this.shardCapacity = shardCapacity;
         return this;
@@ -75,6 +84,7 @@ public class Cluster {
     
     @JsonProperty("shardCount")
     public Long shardCount;
+
     public Cluster withShardCount(Long shardCount) {
         this.shardCount = shardCount;
         return this;
@@ -82,6 +92,7 @@ public class Cluster {
     
     @JsonProperty("status")
     public StatusEnum status;
+
     public Cluster withStatus(StatusEnum status) {
         this.status = status;
         return this;
@@ -89,6 +100,7 @@ public class Cluster {
     
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public Cluster withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -96,9 +108,25 @@ public class Cluster {
     
     @JsonProperty("vpcSecurityGroupIds")
     public String[] vpcSecurityGroupIds;
+
     public Cluster withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public Cluster(@JsonProperty("adminUserName") String adminUserName, @JsonProperty("authType") AuthEnum authType, @JsonProperty("clusterArn") String clusterArn, @JsonProperty("clusterEndpoint") String clusterEndpoint, @JsonProperty("clusterName") String clusterName, @JsonProperty("createTime") String createTime, @JsonProperty("kmsKeyId") String kmsKeyId, @JsonProperty("preferredMaintenanceWindow") String preferredMaintenanceWindow, @JsonProperty("shardCapacity") Long shardCapacity, @JsonProperty("shardCount") Long shardCount, @JsonProperty("status") StatusEnum status, @JsonProperty("subnetIds") String[] subnetIds, @JsonProperty("vpcSecurityGroupIds") String[] vpcSecurityGroupIds) {
+        this.adminUserName = adminUserName;
+        this.authType = authType;
+        this.clusterArn = clusterArn;
+        this.clusterEndpoint = clusterEndpoint;
+        this.clusterName = clusterName;
+        this.createTime = createTime;
+        this.kmsKeyId = kmsKeyId;
+        this.preferredMaintenanceWindow = preferredMaintenanceWindow;
+        this.shardCapacity = shardCapacity;
+        this.shardCount = shardCount;
+        this.status = status;
+        this.subnetIds = subnetIds;
+        this.vpcSecurityGroupIds = vpcSecurityGroupIds;
+  }
 }

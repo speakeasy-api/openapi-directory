@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImportCertificateMessage {
     @JsonProperty("CertificateIdentifier")
     public String certificateIdentifier;
+
     public ImportCertificateMessage withCertificateIdentifier(String certificateIdentifier) {
         this.certificateIdentifier = certificateIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class ImportCertificateMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificatePem")
     public String certificatePem;
+
     public ImportCertificateMessage withCertificatePem(String certificatePem) {
         this.certificatePem = certificatePem;
         return this;
@@ -27,6 +29,7 @@ public class ImportCertificateMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateWallet")
     public String certificateWallet;
+
     public ImportCertificateMessage withCertificateWallet(String certificateWallet) {
         this.certificateWallet = certificateWallet;
         return this;
@@ -35,9 +38,13 @@ public class ImportCertificateMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public ImportCertificateMessage withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ImportCertificateMessage(@JsonProperty("CertificateIdentifier") String certificateIdentifier) {
+        this.certificateIdentifier = certificateIdentifier;
+  }
 }

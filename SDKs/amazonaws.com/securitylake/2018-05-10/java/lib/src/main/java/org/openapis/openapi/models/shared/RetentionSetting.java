@@ -15,6 +15,7 @@ public class RetentionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionPeriod")
     public Long retentionPeriod;
+
     public RetentionSetting withRetentionPeriod(Long retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
@@ -23,9 +24,11 @@ public class RetentionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageClass")
     public StorageClassEnum storageClass;
+
     public RetentionSetting withStorageClass(StorageClassEnum storageClass) {
         this.storageClass = storageClass;
         return this;
     }
     
+    public RetentionSetting(){}
 }

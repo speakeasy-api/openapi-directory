@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutFileOutput {
     @JsonProperty("blobId")
     public String blobId;
+
     public PutFileOutput withBlobId(String blobId) {
         this.blobId = blobId;
         return this;
@@ -19,6 +20,7 @@ public class PutFileOutput {
     
     @JsonProperty("commitId")
     public String commitId;
+
     public PutFileOutput withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -26,9 +28,15 @@ public class PutFileOutput {
     
     @JsonProperty("treeId")
     public String treeId;
+
     public PutFileOutput withTreeId(String treeId) {
         this.treeId = treeId;
         return this;
     }
     
+    public PutFileOutput(@JsonProperty("blobId") String blobId, @JsonProperty("commitId") String commitId, @JsonProperty("treeId") String treeId) {
+        this.blobId = blobId;
+        this.commitId = commitId;
+        this.treeId = treeId;
+  }
 }

@@ -22,6 +22,7 @@ public class InvoiceCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public InvoiceCustomField withLabel(String label) {
         this.label = label;
         return this;
@@ -33,6 +34,7 @@ public class InvoiceCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placement")
     public String placement;
+
     public InvoiceCustomField withPlacement(String placement) {
         this.placement = placement;
         return this;
@@ -44,9 +46,11 @@ public class InvoiceCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public InvoiceCustomField withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public InvoiceCustomField(){}
 }

@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowCxV3beta1DeployFlowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowVersion")
     public String flowVersion;
+
     public GoogleCloudDialogflowCxV3beta1DeployFlowRequest withFlowVersion(String flowVersion) {
         this.flowVersion = flowVersion;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1DeployFlowRequest(){}
 }

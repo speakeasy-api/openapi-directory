@@ -165,12 +165,10 @@ public class CustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCustomFieldResponse res = new org.openapis.openapi.models.operations.CreateCustomFieldResponse() {{
+        org.openapis.openapi.models.operations.CreateCustomFieldResponse res = new org.openapis.openapi.models.operations.CreateCustomFieldResponse(contentType, httpRes.statusCode()) {{
             createCustomField201ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -223,12 +221,10 @@ public class CustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateEnumOptionForCustomFieldResponse res = new org.openapis.openapi.models.operations.CreateEnumOptionForCustomFieldResponse() {{
+        org.openapis.openapi.models.operations.CreateEnumOptionForCustomFieldResponse res = new org.openapis.openapi.models.operations.CreateEnumOptionForCustomFieldResponse(contentType, httpRes.statusCode()) {{
             createEnumOptionForCustomField201ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -279,12 +275,10 @@ public class CustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCustomFieldResponse res = new org.openapis.openapi.models.operations.DeleteCustomFieldResponse() {{
+        org.openapis.openapi.models.operations.DeleteCustomFieldResponse res = new org.openapis.openapi.models.operations.DeleteCustomFieldResponse(contentType, httpRes.statusCode()) {{
             deleteCustomField200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -340,12 +334,10 @@ public class CustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomFieldResponse res = new org.openapis.openapi.models.operations.GetCustomFieldResponse() {{
+        org.openapis.openapi.models.operations.GetCustomFieldResponse res = new org.openapis.openapi.models.operations.GetCustomFieldResponse(contentType, httpRes.statusCode()) {{
             getCustomField200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -394,12 +386,10 @@ public class CustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomFieldsForWorkspaceResponse res = new org.openapis.openapi.models.operations.GetCustomFieldsForWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.GetCustomFieldsForWorkspaceResponse res = new org.openapis.openapi.models.operations.GetCustomFieldsForWorkspaceResponse(contentType, httpRes.statusCode()) {{
             getCustomFieldsForWorkspace200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -451,12 +441,10 @@ public class CustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InsertEnumOptionForCustomFieldResponse res = new org.openapis.openapi.models.operations.InsertEnumOptionForCustomFieldResponse() {{
+        org.openapis.openapi.models.operations.InsertEnumOptionForCustomFieldResponse res = new org.openapis.openapi.models.operations.InsertEnumOptionForCustomFieldResponse(contentType, httpRes.statusCode()) {{
             insertEnumOptionForCustomField200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -512,12 +500,10 @@ public class CustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCustomFieldResponse res = new org.openapis.openapi.models.operations.UpdateCustomFieldResponse() {{
+        org.openapis.openapi.models.operations.UpdateCustomFieldResponse res = new org.openapis.openapi.models.operations.UpdateCustomFieldResponse(contentType, httpRes.statusCode()) {{
             updateCustomField200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -570,12 +556,10 @@ public class CustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateEnumOptionResponse res = new org.openapis.openapi.models.operations.UpdateEnumOptionResponse() {{
+        org.openapis.openapi.models.operations.UpdateEnumOptionResponse res = new org.openapis.openapi.models.operations.UpdateEnumOptionResponse(contentType, httpRes.statusCode()) {{
             updateEnumOption200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

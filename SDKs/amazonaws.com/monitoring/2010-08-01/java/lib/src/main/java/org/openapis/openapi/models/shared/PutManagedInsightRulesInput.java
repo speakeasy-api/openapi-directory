@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PutManagedInsightRulesInput {
     
     public ManagedRule[] managedRules;
+
     public PutManagedInsightRulesInput withManagedRules(ManagedRule[] managedRules) {
         this.managedRules = managedRules;
         return this;
     }
     
+    public PutManagedInsightRulesInput(@JsonProperty("ManagedRules") ManagedRule[] managedRules) {
+        this.managedRules = managedRules;
+  }
 }

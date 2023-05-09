@@ -15,9 +15,11 @@ public class RetryableConflictException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public RetryableConflictException withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public RetryableConflictException(){}
 }

@@ -15,6 +15,7 @@ public class BatchGetItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedCapacity")
     public ConsumedCapacity[] consumedCapacity;
+
     public BatchGetItemOutput withConsumedCapacity(ConsumedCapacity[] consumedCapacity) {
         this.consumedCapacity = consumedCapacity;
         return this;
@@ -23,6 +24,7 @@ public class BatchGetItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Responses")
     public java.util.Map<String, java.util.Map<String, AttributeValue>[]> responses;
+
     public BatchGetItemOutput withResponses(java.util.Map<String, java.util.Map<String, AttributeValue>[]> responses) {
         this.responses = responses;
         return this;
@@ -31,9 +33,11 @@ public class BatchGetItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnprocessedKeys")
     public java.util.Map<String, KeysAndAttributes> unprocessedKeys;
+
     public BatchGetItemOutput withUnprocessedKeys(java.util.Map<String, KeysAndAttributes> unprocessedKeys) {
         this.unprocessedKeys = unprocessedKeys;
         return this;
     }
     
+    public BatchGetItemOutput(){}
 }

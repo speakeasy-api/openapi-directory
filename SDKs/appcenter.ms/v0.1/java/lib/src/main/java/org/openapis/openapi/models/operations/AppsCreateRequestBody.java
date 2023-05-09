@@ -18,6 +18,7 @@ public class AppsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AppsCreateRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +29,7 @@ public class AppsCreateRequestBody {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public AppsCreateRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -39,6 +41,7 @@ public class AppsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AppsCreateRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -49,6 +52,7 @@ public class AppsCreateRequestBody {
      */
     @JsonProperty("os")
     public AppsCreateRequestBodyOsEnum os;
+
     public AppsCreateRequestBody withOs(AppsCreateRequestBodyOsEnum os) {
         this.os = os;
         return this;
@@ -59,6 +63,7 @@ public class AppsCreateRequestBody {
      */
     @JsonProperty("platform")
     public AppsCreateRequestBodyPlatformEnum platform;
+
     public AppsCreateRequestBody withPlatform(AppsCreateRequestBodyPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -70,9 +75,15 @@ public class AppsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_type")
     public String releaseType;
+
     public AppsCreateRequestBody withReleaseType(String releaseType) {
         this.releaseType = releaseType;
         return this;
     }
     
+    public AppsCreateRequestBody(@JsonProperty("display_name") String displayName, @JsonProperty("os") AppsCreateRequestBodyOsEnum os, @JsonProperty("platform") AppsCreateRequestBodyPlatformEnum platform) {
+        this.displayName = displayName;
+        this.os = os;
+        this.platform = platform;
+  }
 }

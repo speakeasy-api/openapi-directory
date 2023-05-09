@@ -15,6 +15,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcknowledgedAt")
     public String acknowledgedAt;
+
     public Command withAcknowledgedAt(String acknowledgedAt) {
         this.acknowledgedAt = acknowledgedAt;
         return this;
@@ -23,6 +24,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CommandId")
     public String commandId;
+
     public Command withCommandId(String commandId) {
         this.commandId = commandId;
         return this;
@@ -31,6 +33,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompletedAt")
     public String completedAt;
+
     public Command withCompletedAt(String completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -39,6 +42,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedAt")
     public String createdAt;
+
     public Command withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -47,6 +51,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentId")
     public String deploymentId;
+
     public Command withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -55,6 +60,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExitCode")
     public Long exitCode;
+
     public Command withExitCode(Long exitCode) {
         this.exitCode = exitCode;
         return this;
@@ -63,6 +69,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public Command withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -71,6 +78,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogUrl")
     public String logUrl;
+
     public Command withLogUrl(String logUrl) {
         this.logUrl = logUrl;
         return this;
@@ -79,6 +87,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public Command withStatus(String status) {
         this.status = status;
         return this;
@@ -87,9 +96,11 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public Command withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Command(){}
 }

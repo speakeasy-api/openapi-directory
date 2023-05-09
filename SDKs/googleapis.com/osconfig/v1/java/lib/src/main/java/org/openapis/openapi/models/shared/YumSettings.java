@@ -18,6 +18,7 @@ public class YumSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludes")
     public String[] excludes;
+
     public YumSettings withExcludes(String[] excludes) {
         this.excludes = excludes;
         return this;
@@ -29,6 +30,7 @@ public class YumSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclusivePackages")
     public String[] exclusivePackages;
+
     public YumSettings withExclusivePackages(String[] exclusivePackages) {
         this.exclusivePackages = exclusivePackages;
         return this;
@@ -40,6 +42,7 @@ public class YumSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimal")
     public Boolean minimal;
+
     public YumSettings withMinimal(Boolean minimal) {
         this.minimal = minimal;
         return this;
@@ -51,9 +54,11 @@ public class YumSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("security")
     public Boolean security;
+
     public YumSettings withSecurity(Boolean security) {
         this.security = security;
         return this;
     }
     
+    public YumSettings(){}
 }

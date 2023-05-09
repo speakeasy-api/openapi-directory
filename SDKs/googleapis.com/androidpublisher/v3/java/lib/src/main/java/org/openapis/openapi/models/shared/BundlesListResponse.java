@@ -18,6 +18,7 @@ public class BundlesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundles")
     public Bundle[] bundles;
+
     public BundlesListResponse withBundles(Bundle[] bundles) {
         this.bundles = bundles;
         return this;
@@ -29,9 +30,11 @@ public class BundlesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public BundlesListResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public BundlesListResponse(){}
 }

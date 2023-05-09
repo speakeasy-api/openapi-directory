@@ -15,9 +15,11 @@ public class PrioritizeBusinessGoals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessGoals")
     public BusinessGoals businessGoals;
+
     public PrioritizeBusinessGoals withBusinessGoals(BusinessGoals businessGoals) {
         this.businessGoals = businessGoals;
         return this;
     }
     
+    public PrioritizeBusinessGoals(){}
 }

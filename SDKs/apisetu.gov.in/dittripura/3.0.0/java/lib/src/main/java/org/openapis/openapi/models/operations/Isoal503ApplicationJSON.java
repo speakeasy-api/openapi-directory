@@ -15,6 +15,7 @@ public class Isoal503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Isoal503ApplicationJSONErrorEnum error;
+
     public Isoal503ApplicationJSON withError(Isoal503ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Isoal503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Isoal503ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Isoal503ApplicationJSON withErrorDescription(Isoal503ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Isoal503ApplicationJSON(){}
 }

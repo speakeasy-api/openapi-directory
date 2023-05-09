@@ -62,12 +62,10 @@ public class Story {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryGetResponse res = new org.openapis.openapi.models.operations.StoryGetResponse() {{
+        org.openapis.openapi.models.operations.StoryGetResponse res = new org.openapis.openapi.models.operations.StoryGetResponse(contentType, httpRes.statusCode()) {{
             stories = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,13 +107,11 @@ public class Story {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdAnalyticsResponse res = new org.openapis.openapi.models.operations.StoryIdAnalyticsResponse() {{
+        org.openapis.openapi.models.operations.StoryIdAnalyticsResponse res = new org.openapis.openapi.models.operations.StoryIdAnalyticsResponse(contentType, httpRes.statusCode()) {{
             revealJsPresenationWithAnalyticsData = null;
             problemDetail = null;
             loginButton = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -162,11 +158,9 @@ public class Story {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdDeleteResponse res = new org.openapis.openapi.models.operations.StoryIdDeleteResponse() {{
+        org.openapis.openapi.models.operations.StoryIdDeleteResponse res = new org.openapis.openapi.models.operations.StoryIdDeleteResponse(contentType, httpRes.statusCode()) {{
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -203,11 +197,9 @@ public class Story {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdFileOoxmlautomationidDeleteResponse res = new org.openapis.openapi.models.operations.StoryIdFileOoxmlautomationidDeleteResponse() {{
+        org.openapis.openapi.models.operations.StoryIdFileOoxmlautomationidDeleteResponse res = new org.openapis.openapi.models.operations.StoryIdFileOoxmlautomationidDeleteResponse(contentType, httpRes.statusCode()) {{
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -244,14 +236,12 @@ public class Story {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdFileOoxmlautomationidGetResponse res = new org.openapis.openapi.models.operations.StoryIdFileOoxmlautomationidGetResponse() {{
+        org.openapis.openapi.models.operations.StoryIdFileOoxmlautomationidGetResponse res = new org.openapis.openapi.models.operations.StoryIdFileOoxmlautomationidGetResponse(contentType, httpRes.statusCode()) {{
             powerpointPresentation = null;
             wordDocument = null;
             excelSpreadsheet = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -311,12 +301,10 @@ public class Story {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdFilePostResponse res = new org.openapis.openapi.models.operations.StoryIdFilePostResponse() {{
+        org.openapis.openapi.models.operations.StoryIdFilePostResponse res = new org.openapis.openapi.models.operations.StoryIdFilePostResponse(contentType, httpRes.statusCode()) {{
             story = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -364,12 +352,10 @@ public class Story {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdGetResponse res = new org.openapis.openapi.models.operations.StoryIdGetResponse() {{
+        org.openapis.openapi.models.operations.StoryIdGetResponse res = new org.openapis.openapi.models.operations.StoryIdGetResponse(contentType, httpRes.statusCode()) {{
             story = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -411,13 +397,11 @@ public class Story {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdOutlineGetResponse res = new org.openapis.openapi.models.operations.StoryIdOutlineGetResponse() {{
+        org.openapis.openapi.models.operations.StoryIdOutlineGetResponse res = new org.openapis.openapi.models.operations.StoryIdOutlineGetResponse(contentType, httpRes.statusCode()) {{
             storyIdOutlineGet200ApplicationJSONString = null;
             status = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -472,11 +456,9 @@ public class Story {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdOutlinePostResponse res = new org.openapis.openapi.models.operations.StoryIdOutlinePostResponse() {{
+        org.openapis.openapi.models.operations.StoryIdOutlinePostResponse res = new org.openapis.openapi.models.operations.StoryIdOutlinePostResponse(contentType, httpRes.statusCode()) {{
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -513,12 +495,10 @@ public class Story {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdPublicResponse res = new org.openapis.openapi.models.operations.StoryIdPublicResponse() {{
+        org.openapis.openapi.models.operations.StoryIdPublicResponse res = new org.openapis.openapi.models.operations.StoryIdPublicResponse(contentType, httpRes.statusCode()) {{
             revealJsPresenation = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -572,12 +552,10 @@ public class Story {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdPutResponse res = new org.openapis.openapi.models.operations.StoryIdPutResponse() {{
+        org.openapis.openapi.models.operations.StoryIdPutResponse res = new org.openapis.openapi.models.operations.StoryIdPutResponse(contentType, httpRes.statusCode()) {{
             story = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -619,13 +597,11 @@ public class Story {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdRevealResponse res = new org.openapis.openapi.models.operations.StoryIdRevealResponse() {{
+        org.openapis.openapi.models.operations.StoryIdRevealResponse res = new org.openapis.openapi.models.operations.StoryIdRevealResponse(contentType, httpRes.statusCode()) {{
             revealJsPresenation = null;
             problemDetail = null;
             loginButton = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -672,12 +648,10 @@ public class Story {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdStatusGetResponse res = new org.openapis.openapi.models.operations.StoryIdStatusGetResponse() {{
+        org.openapis.openapi.models.operations.StoryIdStatusGetResponse res = new org.openapis.openapi.models.operations.StoryIdStatusGetResponse(contentType, httpRes.statusCode()) {{
             status = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -732,12 +706,10 @@ public class Story {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryPostResponse res = new org.openapis.openapi.models.operations.StoryPostResponse() {{
+        org.openapis.openapi.models.operations.StoryPostResponse res = new org.openapis.openapi.models.operations.StoryPostResponse(contentType, httpRes.statusCode()) {{
             story = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -790,12 +762,10 @@ public class Story {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryPostFileResponse res = new org.openapis.openapi.models.operations.StoryPostFileResponse() {{
+        org.openapis.openapi.models.operations.StoryPostFileResponse res = new org.openapis.openapi.models.operations.StoryPostFileResponse(contentType, httpRes.statusCode()) {{
             story = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -845,12 +815,10 @@ public class Story {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryPostFileJsonResponse res = new org.openapis.openapi.models.operations.StoryPostFileJsonResponse() {{
+        org.openapis.openapi.models.operations.StoryPostFileJsonResponse res = new org.openapis.openapi.models.operations.StoryPostFileJsonResponse(contentType, httpRes.statusCode()) {{
             story = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateEventIntegrationResponse {
@@ -12,6 +13,7 @@ public class UpdateEventIntegrationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateEventIntegrationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateEventIntegrationResponse {
     
     
     public String contentType;
+
     public UpdateEventIntegrationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateEventIntegrationResponse {
      */
     
     public Object internalServiceError;
+
     public UpdateEventIntegrationResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class UpdateEventIntegrationResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateEventIntegrationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateEventIntegrationResponse {
     
     
     public Integer statusCode;
+
     public UpdateEventIntegrationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateEventIntegrationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateEventIntegrationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateEventIntegrationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateEventIntegrationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateEventIntegrationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateEventIntegrationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateEventIntegrationResponse {
      */
     
     public java.util.Map<String, Object> updateEventIntegrationResponse;
+
     public UpdateEventIntegrationResponse withUpdateEventIntegrationResponse(java.util.Map<String, Object> updateEventIntegrationResponse) {
         this.updateEventIntegrationResponse = updateEventIntegrationResponse;
         return this;
     }
     
+    public UpdateEventIntegrationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

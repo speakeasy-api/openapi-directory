@@ -18,6 +18,7 @@ public class ImportJobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetSource")
     public String assetSource;
+
     public ImportJobInput withAssetSource(String assetSource) {
         this.assetSource = assetSource;
         return this;
@@ -29,6 +30,7 @@ public class ImportJobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ImportJobInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class ImportJobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionReport")
     public ExecutionReport executionReport;
+
     public ImportJobInput withExecutionReport(ExecutionReport executionReport) {
         this.executionReport = executionReport;
         return this;
@@ -51,6 +54,7 @@ public class ImportJobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsPayload")
     public GCSPayloadInfo gcsPayload;
+
     public ImportJobInput withGcsPayload(GCSPayloadInfo gcsPayload) {
         this.gcsPayload = gcsPayload;
         return this;
@@ -62,6 +66,7 @@ public class ImportJobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlinePayload")
     public InlinePayloadInfo inlinePayload;
+
     public ImportJobInput withInlinePayload(InlinePayloadInfo inlinePayload) {
         this.inlinePayload = inlinePayload;
         return this;
@@ -73,6 +78,7 @@ public class ImportJobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ImportJobInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -84,9 +90,11 @@ public class ImportJobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationReport")
     public ValidationReport validationReport;
+
     public ImportJobInput withValidationReport(ValidationReport validationReport) {
         this.validationReport = validationReport;
         return this;
     }
     
+    public ImportJobInput(){}
 }

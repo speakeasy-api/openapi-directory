@@ -12,9 +12,13 @@ public class SearchContentRequestBody {
      */
     @JsonProperty("searchExpression")
     public SearchContentRequestBodySearchExpression searchExpression;
+
     public SearchContentRequestBody withSearchExpression(SearchContentRequestBodySearchExpression searchExpression) {
         this.searchExpression = searchExpression;
         return this;
     }
     
+    public SearchContentRequestBody(@JsonProperty("searchExpression") SearchContentRequestBodySearchExpression searchExpression) {
+        this.searchExpression = searchExpression;
+  }
 }

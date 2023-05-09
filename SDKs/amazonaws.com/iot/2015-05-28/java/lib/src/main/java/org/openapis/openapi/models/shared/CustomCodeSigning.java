@@ -15,6 +15,7 @@ public class CustomCodeSigning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateChain")
     public CodeSigningCertificateChain certificateChain;
+
     public CustomCodeSigning withCertificateChain(CodeSigningCertificateChain certificateChain) {
         this.certificateChain = certificateChain;
         return this;
@@ -23,6 +24,7 @@ public class CustomCodeSigning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hashAlgorithm")
     public String hashAlgorithm;
+
     public CustomCodeSigning withHashAlgorithm(String hashAlgorithm) {
         this.hashAlgorithm = hashAlgorithm;
         return this;
@@ -31,6 +33,7 @@ public class CustomCodeSigning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signature")
     public CodeSigningSignature signature;
+
     public CustomCodeSigning withSignature(CodeSigningSignature signature) {
         this.signature = signature;
         return this;
@@ -39,9 +42,11 @@ public class CustomCodeSigning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatureAlgorithm")
     public String signatureAlgorithm;
+
     public CustomCodeSigning withSignatureAlgorithm(String signatureAlgorithm) {
         this.signatureAlgorithm = signatureAlgorithm;
         return this;
     }
     
+    public CustomCodeSigning(){}
 }

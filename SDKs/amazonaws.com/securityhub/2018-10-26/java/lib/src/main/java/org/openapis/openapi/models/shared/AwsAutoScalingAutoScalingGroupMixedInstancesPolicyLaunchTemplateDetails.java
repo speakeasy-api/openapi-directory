@@ -15,6 +15,7 @@ public class AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateDet
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchTemplateSpecification")
     public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification launchTemplateSpecification;
+
     public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateDetails withLaunchTemplateSpecification(AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification launchTemplateSpecification) {
         this.launchTemplateSpecification = launchTemplateSpecification;
         return this;
@@ -23,9 +24,11 @@ public class AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateDet
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Overrides")
     public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesListDetails[] overrides;
+
     public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateDetails withOverrides(AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesListDetails[] overrides) {
         this.overrides = overrides;
         return this;
     }
     
+    public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateDetails(){}
 }

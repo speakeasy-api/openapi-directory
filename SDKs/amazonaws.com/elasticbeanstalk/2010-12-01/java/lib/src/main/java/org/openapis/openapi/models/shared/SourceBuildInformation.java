@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SourceBuildInformation - Location of the source code for an application version.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SourceBuildInformation {
     
     public String sourceLocation;
+
     public SourceBuildInformation withSourceLocation(String sourceLocation) {
         this.sourceLocation = sourceLocation;
         return this;
@@ -19,6 +20,7 @@ public class SourceBuildInformation {
     
     
     public SourceRepositoryEnum sourceRepository;
+
     public SourceBuildInformation withSourceRepository(SourceRepositoryEnum sourceRepository) {
         this.sourceRepository = sourceRepository;
         return this;
@@ -26,9 +28,15 @@ public class SourceBuildInformation {
     
     
     public SourceTypeEnum sourceType;
+
     public SourceBuildInformation withSourceType(SourceTypeEnum sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public SourceBuildInformation(@JsonProperty("SourceLocation") String sourceLocation, @JsonProperty("SourceRepository") SourceRepositoryEnum sourceRepository, @JsonProperty("SourceType") SourceTypeEnum sourceType) {
+        this.sourceLocation = sourceLocation;
+        this.sourceRepository = sourceRepository;
+        this.sourceType = sourceType;
+  }
 }

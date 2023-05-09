@@ -18,9 +18,11 @@ public class ManualRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public ManualRuleGroup[] groups;
+
     public ManualRule withGroups(ManualRuleGroup[] groups) {
         this.groups = groups;
         return this;
     }
     
+    public ManualRule(){}
 }

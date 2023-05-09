@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLocalGatewayVirtualInterfacesResultLocalGatewayVirtualInterfaces {
     
     public String localAddress;
+
     public DescribeLocalGatewayVirtualInterfacesResultLocalGatewayVirtualInterfaces withLocalAddress(String localAddress) {
         this.localAddress = localAddress;
         return this;
@@ -19,6 +20,7 @@ public class DescribeLocalGatewayVirtualInterfacesResultLocalGatewayVirtualInter
     
     
     public Long localBgpAsn;
+
     public DescribeLocalGatewayVirtualInterfacesResultLocalGatewayVirtualInterfaces withLocalBgpAsn(Long localBgpAsn) {
         this.localBgpAsn = localBgpAsn;
         return this;
@@ -26,6 +28,7 @@ public class DescribeLocalGatewayVirtualInterfacesResultLocalGatewayVirtualInter
     
     
     public String localGatewayId;
+
     public DescribeLocalGatewayVirtualInterfacesResultLocalGatewayVirtualInterfaces withLocalGatewayId(String localGatewayId) {
         this.localGatewayId = localGatewayId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeLocalGatewayVirtualInterfacesResultLocalGatewayVirtualInter
     
     
     public String localGatewayVirtualInterfaceId;
+
     public DescribeLocalGatewayVirtualInterfacesResultLocalGatewayVirtualInterfaces withLocalGatewayVirtualInterfaceId(String localGatewayVirtualInterfaceId) {
         this.localGatewayVirtualInterfaceId = localGatewayVirtualInterfaceId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeLocalGatewayVirtualInterfacesResultLocalGatewayVirtualInter
     
     
     public String ownerId;
+
     public DescribeLocalGatewayVirtualInterfacesResultLocalGatewayVirtualInterfaces withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeLocalGatewayVirtualInterfacesResultLocalGatewayVirtualInter
     
     
     public String peerAddress;
+
     public DescribeLocalGatewayVirtualInterfacesResultLocalGatewayVirtualInterfaces withPeerAddress(String peerAddress) {
         this.peerAddress = peerAddress;
         return this;
@@ -54,6 +60,7 @@ public class DescribeLocalGatewayVirtualInterfacesResultLocalGatewayVirtualInter
     
     
     public Long peerBgpAsn;
+
     public DescribeLocalGatewayVirtualInterfacesResultLocalGatewayVirtualInterfaces withPeerBgpAsn(Long peerBgpAsn) {
         this.peerBgpAsn = peerBgpAsn;
         return this;
@@ -61,6 +68,7 @@ public class DescribeLocalGatewayVirtualInterfacesResultLocalGatewayVirtualInter
     
     
     public DescribeLocalGatewayVirtualInterfacesResultLocalGatewayVirtualInterfacesTags[] tags;
+
     public DescribeLocalGatewayVirtualInterfacesResultLocalGatewayVirtualInterfaces withTags(DescribeLocalGatewayVirtualInterfacesResultLocalGatewayVirtualInterfacesTags[] tags) {
         this.tags = tags;
         return this;
@@ -68,9 +76,11 @@ public class DescribeLocalGatewayVirtualInterfacesResultLocalGatewayVirtualInter
     
     
     public Long vlan;
+
     public DescribeLocalGatewayVirtualInterfacesResultLocalGatewayVirtualInterfaces withVlan(Long vlan) {
         this.vlan = vlan;
         return this;
     }
     
+    public DescribeLocalGatewayVirtualInterfacesResultLocalGatewayVirtualInterfaces(){}
 }

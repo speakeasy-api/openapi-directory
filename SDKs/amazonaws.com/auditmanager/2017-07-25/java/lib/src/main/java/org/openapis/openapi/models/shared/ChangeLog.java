@@ -20,6 +20,7 @@ public class ChangeLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public ActionEnumEnum action;
+
     public ChangeLog withAction(ActionEnumEnum action) {
         this.action = action;
         return this;
@@ -30,6 +31,7 @@ public class ChangeLog {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ChangeLog withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class ChangeLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdBy")
     public String createdBy;
+
     public ChangeLog withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -46,6 +49,7 @@ public class ChangeLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectName")
     public String objectName;
+
     public ChangeLog withObjectName(String objectName) {
         this.objectName = objectName;
         return this;
@@ -54,9 +58,11 @@ public class ChangeLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectType")
     public ObjectTypeEnumEnum objectType;
+
     public ChangeLog withObjectType(ObjectTypeEnumEnum objectType) {
         this.objectType = objectType;
         return this;
     }
     
+    public ChangeLog(){}
 }

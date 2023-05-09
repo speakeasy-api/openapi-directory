@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEdgeDeploymentPlanResponse {
     
     public String contentType;
+
     public CreateEdgeDeploymentPlanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateEdgeDeploymentPlanResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateEdgeDeploymentPlanResponse createEdgeDeploymentPlanResponse;
+
     public CreateEdgeDeploymentPlanResponse withCreateEdgeDeploymentPlanResponse(org.openapis.openapi.models.shared.CreateEdgeDeploymentPlanResponse createEdgeDeploymentPlanResponse) {
         this.createEdgeDeploymentPlanResponse = createEdgeDeploymentPlanResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateEdgeDeploymentPlanResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateEdgeDeploymentPlanResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -36,6 +40,7 @@ public class CreateEdgeDeploymentPlanResponse {
     
     
     public Integer statusCode;
+
     public CreateEdgeDeploymentPlanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateEdgeDeploymentPlanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEdgeDeploymentPlanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateEdgeDeploymentPlanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

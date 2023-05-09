@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsUserIdGroupPairs {
     
     public String description;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsUserIdGroupPairs withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermis
     
     
     public String groupId;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsUserIdGroupPairs withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermis
     
     
     public String groupName;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsUserIdGroupPairs withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -33,6 +36,7 @@ public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermis
     
     
     public String peeringStatus;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsUserIdGroupPairs withPeeringStatus(String peeringStatus) {
         this.peeringStatus = peeringStatus;
         return this;
@@ -40,6 +44,7 @@ public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermis
     
     
     public String userId;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsUserIdGroupPairs withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermis
     
     
     public String vpcId;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsUserIdGroupPairs withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -54,9 +60,11 @@ public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermis
     
     
     public String vpcPeeringConnectionId;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsUserIdGroupPairs withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsUserIdGroupPairs(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDominantLanguageDetectionJobResponse {
     
     public String contentType;
+
     public DescribeDominantLanguageDetectionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDominantLanguageDetectionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDominantLanguageDetectionJobResponse describeDominantLanguageDetectionJobResponse;
+
     public DescribeDominantLanguageDetectionJobResponse withDescribeDominantLanguageDetectionJobResponse(org.openapis.openapi.models.shared.DescribeDominantLanguageDetectionJobResponse describeDominantLanguageDetectionJobResponse) {
         this.describeDominantLanguageDetectionJobResponse = describeDominantLanguageDetectionJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDominantLanguageDetectionJobResponse {
      */
     
     public Object internalServerException;
+
     public DescribeDominantLanguageDetectionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDominantLanguageDetectionJobResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeDominantLanguageDetectionJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeDominantLanguageDetectionJobResponse {
      */
     
     public Object jobNotFoundException;
+
     public DescribeDominantLanguageDetectionJobResponse withJobNotFoundException(Object jobNotFoundException) {
         this.jobNotFoundException = jobNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeDominantLanguageDetectionJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeDominantLanguageDetectionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeDominantLanguageDetectionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDominantLanguageDetectionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeDominantLanguageDetectionJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeDominantLanguageDetectionJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeDominantLanguageDetectionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

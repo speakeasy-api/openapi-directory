@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreatePermissionRequest {
     @JsonProperty("Actions")
     public ActionTypeEnum[] actions;
+
     public CreatePermissionRequest withActions(ActionTypeEnum[] actions) {
         this.actions = actions;
         return this;
@@ -18,6 +19,7 @@ public class CreatePermissionRequest {
     
     @JsonProperty("CertificateAuthorityArn")
     public String certificateAuthorityArn;
+
     public CreatePermissionRequest withCertificateAuthorityArn(String certificateAuthorityArn) {
         this.certificateAuthorityArn = certificateAuthorityArn;
         return this;
@@ -25,6 +27,7 @@ public class CreatePermissionRequest {
     
     @JsonProperty("Principal")
     public String principal;
+
     public CreatePermissionRequest withPrincipal(String principal) {
         this.principal = principal;
         return this;
@@ -33,9 +36,15 @@ public class CreatePermissionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceAccount")
     public String sourceAccount;
+
     public CreatePermissionRequest withSourceAccount(String sourceAccount) {
         this.sourceAccount = sourceAccount;
         return this;
     }
     
+    public CreatePermissionRequest(@JsonProperty("Actions") ActionTypeEnum[] actions, @JsonProperty("CertificateAuthorityArn") String certificateAuthorityArn, @JsonProperty("Principal") String principal) {
+        this.actions = actions;
+        this.certificateAuthorityArn = certificateAuthorityArn;
+        this.principal = principal;
+  }
 }

@@ -18,6 +18,7 @@ public class TaskCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public TaskCompact withGid(String gid) {
         this.gid = gid;
         return this;
@@ -29,6 +30,7 @@ public class TaskCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TaskCompact withName(String name) {
         this.name = name;
         return this;
@@ -41,6 +43,7 @@ public class TaskCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_subtype")
     public TaskCompactResourceSubtypeEnum resourceSubtype;
+
     public TaskCompact withResourceSubtype(TaskCompactResourceSubtypeEnum resourceSubtype) {
         this.resourceSubtype = resourceSubtype;
         return this;
@@ -52,9 +55,11 @@ public class TaskCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public TaskCompact withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public TaskCompact(){}
 }

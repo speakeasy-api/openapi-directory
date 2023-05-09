@@ -20,6 +20,7 @@ public class AppAssessmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appArn")
     public String appArn;
+
     public AppAssessmentSummary withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -28,6 +29,7 @@ public class AppAssessmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appVersion")
     public String appVersion;
+
     public AppAssessmentSummary withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -35,6 +37,7 @@ public class AppAssessmentSummary {
     
     @JsonProperty("assessmentArn")
     public String assessmentArn;
+
     public AppAssessmentSummary withAssessmentArn(String assessmentArn) {
         this.assessmentArn = assessmentArn;
         return this;
@@ -43,6 +46,7 @@ public class AppAssessmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentName")
     public String assessmentName;
+
     public AppAssessmentSummary withAssessmentName(String assessmentName) {
         this.assessmentName = assessmentName;
         return this;
@@ -50,6 +54,7 @@ public class AppAssessmentSummary {
     
     @JsonProperty("assessmentStatus")
     public AssessmentStatusEnum assessmentStatus;
+
     public AppAssessmentSummary withAssessmentStatus(AssessmentStatusEnum assessmentStatus) {
         this.assessmentStatus = assessmentStatus;
         return this;
@@ -58,6 +63,7 @@ public class AppAssessmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceStatus")
     public ComplianceStatusEnum complianceStatus;
+
     public AppAssessmentSummary withComplianceStatus(ComplianceStatusEnum complianceStatus) {
         this.complianceStatus = complianceStatus;
         return this;
@@ -66,6 +72,7 @@ public class AppAssessmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost")
     public Cost cost;
+
     public AppAssessmentSummary withCost(Cost cost) {
         this.cost = cost;
         return this;
@@ -76,6 +83,7 @@ public class AppAssessmentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public AppAssessmentSummary withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -84,6 +92,7 @@ public class AppAssessmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoker")
     public AssessmentInvokerEnum invoker;
+
     public AppAssessmentSummary withInvoker(AssessmentInvokerEnum invoker) {
         this.invoker = invoker;
         return this;
@@ -92,6 +101,7 @@ public class AppAssessmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AppAssessmentSummary withMessage(String message) {
         this.message = message;
         return this;
@@ -100,6 +110,7 @@ public class AppAssessmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resiliencyScore")
     public Double resiliencyScore;
+
     public AppAssessmentSummary withResiliencyScore(Double resiliencyScore) {
         this.resiliencyScore = resiliencyScore;
         return this;
@@ -110,9 +121,14 @@ public class AppAssessmentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public AppAssessmentSummary withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public AppAssessmentSummary(@JsonProperty("assessmentArn") String assessmentArn, @JsonProperty("assessmentStatus") AssessmentStatusEnum assessmentStatus) {
+        this.assessmentArn = assessmentArn;
+        this.assessmentStatus = assessmentStatus;
+  }
 }

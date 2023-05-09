@@ -13,6 +13,7 @@ public class ListEmployeesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batch_token")
     public String batchToken;
+
     public ListEmployeesRequest withBatchToken(String batchToken) {
         this.batchToken = batchToken;
         return this;
@@ -23,6 +24,7 @@ public class ListEmployeesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_created_at")
     public String beginCreatedAt;
+
     public ListEmployeesRequest withBeginCreatedAt(String beginCreatedAt) {
         this.beginCreatedAt = beginCreatedAt;
         return this;
@@ -33,6 +35,7 @@ public class ListEmployeesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_updated_at")
     public String beginUpdatedAt;
+
     public ListEmployeesRequest withBeginUpdatedAt(String beginUpdatedAt) {
         this.beginUpdatedAt = beginUpdatedAt;
         return this;
@@ -43,6 +46,7 @@ public class ListEmployeesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_created_at")
     public String endCreatedAt;
+
     public ListEmployeesRequest withEndCreatedAt(String endCreatedAt) {
         this.endCreatedAt = endCreatedAt;
         return this;
@@ -53,6 +57,7 @@ public class ListEmployeesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_updated_at")
     public String endUpdatedAt;
+
     public ListEmployeesRequest withEndUpdatedAt(String endUpdatedAt) {
         this.endUpdatedAt = endUpdatedAt;
         return this;
@@ -63,6 +68,7 @@ public class ListEmployeesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=external_id")
     public String externalId;
+
     public ListEmployeesRequest withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -73,6 +79,7 @@ public class ListEmployeesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListEmployeesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -83,6 +90,7 @@ public class ListEmployeesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public String order;
+
     public ListEmployeesRequest withOrder(String order) {
         this.order = order;
         return this;
@@ -93,9 +101,11 @@ public class ListEmployeesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public ListEmployeesRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ListEmployeesRequest(){}
 }

@@ -21,6 +21,7 @@ public class SearchOrdersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public SearchOrdersResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -32,6 +33,7 @@ public class SearchOrdersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public SearchOrdersResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -44,6 +46,7 @@ public class SearchOrdersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_entries")
     public OrderEntry[] orderEntries;
+
     public SearchOrdersResponse withOrderEntries(OrderEntry[] orderEntries) {
         this.orderEntries = orderEntries;
         return this;
@@ -57,9 +60,11 @@ public class SearchOrdersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orders")
     public Order[] orders;
+
     public SearchOrdersResponse withOrders(Order[] orders) {
         this.orders = orders;
         return this;
     }
     
+    public SearchOrdersResponse(){}
 }

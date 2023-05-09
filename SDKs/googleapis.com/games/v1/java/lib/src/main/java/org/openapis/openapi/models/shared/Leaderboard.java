@@ -18,6 +18,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iconUrl")
     public String iconUrl;
+
     public Leaderboard withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -29,6 +30,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Leaderboard withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isIconUrlDefault")
     public Boolean isIconUrlDefault;
+
     public Leaderboard withIsIconUrlDefault(Boolean isIconUrlDefault) {
         this.isIconUrlDefault = isIconUrlDefault;
         return this;
@@ -51,6 +54,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Leaderboard withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Leaderboard withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class Leaderboard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public LeaderboardOrderEnum order;
+
     public Leaderboard withOrder(LeaderboardOrderEnum order) {
         this.order = order;
         return this;
     }
     
+    public Leaderboard(){}
 }

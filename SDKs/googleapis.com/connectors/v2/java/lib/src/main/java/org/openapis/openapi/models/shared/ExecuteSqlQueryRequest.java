@@ -18,9 +18,11 @@ public class ExecuteSqlQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public Query query;
+
     public ExecuteSqlQueryRequest withQuery(Query query) {
         this.query = query;
         return this;
     }
     
+    public ExecuteSqlQueryRequest(){}
 }

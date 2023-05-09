@@ -15,6 +15,7 @@ public class RetryPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumEventAgeInSeconds")
     public Long maximumEventAgeInSeconds;
+
     public RetryPolicy withMaximumEventAgeInSeconds(Long maximumEventAgeInSeconds) {
         this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
         return this;
@@ -23,9 +24,11 @@ public class RetryPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumRetryAttempts")
     public Long maximumRetryAttempts;
+
     public RetryPolicy withMaximumRetryAttempts(Long maximumRetryAttempts) {
         this.maximumRetryAttempts = maximumRetryAttempts;
         return this;
     }
     
+    public RetryPolicy(){}
 }

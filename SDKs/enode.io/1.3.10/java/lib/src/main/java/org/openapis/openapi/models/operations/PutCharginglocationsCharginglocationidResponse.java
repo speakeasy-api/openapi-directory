@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutCharginglocationsCharginglocationidResponse {
     
     public String contentType;
+
     public PutCharginglocationsCharginglocationidResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PutCharginglocationsCharginglocationidResponse {
     
     
     public Integer statusCode;
+
     public PutCharginglocationsCharginglocationidResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PutCharginglocationsCharginglocationidResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutCharginglocationsCharginglocationidResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PutCharginglocationsCharginglocationidResponse {
      */
     
     public org.openapis.openapi.models.shared.OnechargingLocationsPostRequestBodyContentApplication1jsonSchema onechargingLocationsPostRequestBodyContentApplication1jsonSchema;
+
     public PutCharginglocationsCharginglocationidResponse withOnechargingLocationsPostRequestBodyContentApplication1jsonSchema(org.openapis.openapi.models.shared.OnechargingLocationsPostRequestBodyContentApplication1jsonSchema onechargingLocationsPostRequestBodyContentApplication1jsonSchema) {
         this.onechargingLocationsPostRequestBodyContentApplication1jsonSchema = onechargingLocationsPostRequestBodyContentApplication1jsonSchema;
         return this;
     }
     
+    public PutCharginglocationsCharginglocationidResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

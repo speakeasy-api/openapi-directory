@@ -18,6 +18,7 @@ public class ListServicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListServicesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListServicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("services")
     public Service[] services;
+
     public ListServicesResponse withServices(Service[] services) {
         this.services = services;
         return this;
@@ -40,9 +42,11 @@ public class ListServicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListServicesResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListServicesResponse(){}
 }

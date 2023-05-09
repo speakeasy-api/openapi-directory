@@ -59,11 +59,9 @@ public class Subnetworks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSubnetworksAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeSubnetworksAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksAggregatedListResponse(contentType, httpRes.statusCode()) {{
             subnetworkAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Subnetworks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSubnetworksDeleteResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeSubnetworksDeleteResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Subnetworks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSubnetworksExpandIpCidrRangeResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksExpandIpCidrRangeResponse() {{
+        org.openapis.openapi.models.operations.ComputeSubnetworksExpandIpCidrRangeResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksExpandIpCidrRangeResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class Subnetworks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSubnetworksGetResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeSubnetworksGetResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksGetResponse(contentType, httpRes.statusCode()) {{
             subnetwork = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class Subnetworks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSubnetworksGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeSubnetworksGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class Subnetworks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSubnetworksInsertResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeSubnetworksInsertResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,11 +327,9 @@ public class Subnetworks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSubnetworksListResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksListResponse() {{
+        org.openapis.openapi.models.operations.ComputeSubnetworksListResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksListResponse(contentType, httpRes.statusCode()) {{
             subnetworkList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -385,11 +371,9 @@ public class Subnetworks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSubnetworksListUsableResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksListUsableResponse() {{
+        org.openapis.openapi.models.operations.ComputeSubnetworksListUsableResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksListUsableResponse(contentType, httpRes.statusCode()) {{
             usableSubnetworksAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -433,11 +417,9 @@ public class Subnetworks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSubnetworksPatchResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeSubnetworksPatchResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -481,11 +463,9 @@ public class Subnetworks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSubnetworksSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeSubnetworksSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -529,11 +509,9 @@ public class Subnetworks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSubnetworksSetPrivateIpGoogleAccessResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksSetPrivateIpGoogleAccessResponse() {{
+        org.openapis.openapi.models.operations.ComputeSubnetworksSetPrivateIpGoogleAccessResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksSetPrivateIpGoogleAccessResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -577,11 +555,9 @@ public class Subnetworks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSubnetworksTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeSubnetworksTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeSubnetworksTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

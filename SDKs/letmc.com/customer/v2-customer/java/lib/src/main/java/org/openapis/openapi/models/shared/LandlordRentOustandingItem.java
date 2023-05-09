@@ -18,6 +18,7 @@ public class LandlordRentOustandingItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebtDays")
     public Integer debtDays;
+
     public LandlordRentOustandingItem withDebtDays(Integer debtDays) {
         this.debtDays = debtDays;
         return this;
@@ -29,6 +30,7 @@ public class LandlordRentOustandingItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutstandingRent")
     public Double outstandingRent;
+
     public LandlordRentOustandingItem withOutstandingRent(Double outstandingRent) {
         this.outstandingRent = outstandingRent;
         return this;
@@ -40,6 +42,7 @@ public class LandlordRentOustandingItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Property")
     public String property;
+
     public LandlordRentOustandingItem withProperty(String property) {
         this.property = property;
         return this;
@@ -51,6 +54,7 @@ public class LandlordRentOustandingItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tenant")
     public String tenant;
+
     public LandlordRentOustandingItem withTenant(String tenant) {
         this.tenant = tenant;
         return this;
@@ -62,9 +66,11 @@ public class LandlordRentOustandingItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TenantID")
     public String tenantID;
+
     public LandlordRentOustandingItem withTenantID(String tenantID) {
         this.tenantID = tenantID;
         return this;
     }
     
+    public LandlordRentOustandingItem(){}
 }

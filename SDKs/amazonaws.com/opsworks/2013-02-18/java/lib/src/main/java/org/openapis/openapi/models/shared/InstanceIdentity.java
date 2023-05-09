@@ -15,6 +15,7 @@ public class InstanceIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Document")
     public String document;
+
     public InstanceIdentity withDocument(String document) {
         this.document = document;
         return this;
@@ -23,9 +24,11 @@ public class InstanceIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Signature")
     public String signature;
+
     public InstanceIdentity withSignature(String signature) {
         this.signature = signature;
         return this;
     }
     
+    public InstanceIdentity(){}
 }

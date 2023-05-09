@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWirelessLANRequest {
@@ -12,9 +13,13 @@ public class GetWirelessLANRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=wireless_id")
     public String wirelessId;
+
     public GetWirelessLANRequest withWirelessId(String wirelessId) {
         this.wirelessId = wirelessId;
         return this;
     }
     
+    public GetWirelessLANRequest(@JsonProperty("wireless_id") String wirelessId) {
+        this.wirelessId = wirelessId;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TargetSummary {
     @JsonProperty("Arn")
     public String arn;
+
     public TargetSummary withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public TargetSummary(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

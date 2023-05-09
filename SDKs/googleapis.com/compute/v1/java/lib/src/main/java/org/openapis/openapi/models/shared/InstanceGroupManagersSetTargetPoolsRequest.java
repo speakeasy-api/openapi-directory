@@ -15,6 +15,7 @@ public class InstanceGroupManagersSetTargetPoolsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public InstanceGroupManagersSetTargetPoolsRequest withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -26,9 +27,11 @@ public class InstanceGroupManagersSetTargetPoolsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetPools")
     public String[] targetPools;
+
     public InstanceGroupManagersSetTargetPoolsRequest withTargetPools(String[] targetPools) {
         this.targetPools = targetPools;
         return this;
     }
     
+    public InstanceGroupManagersSetTargetPoolsRequest(){}
 }

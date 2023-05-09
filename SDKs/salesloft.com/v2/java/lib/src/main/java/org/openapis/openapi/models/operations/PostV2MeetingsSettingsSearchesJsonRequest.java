@@ -12,6 +12,7 @@ public class PostV2MeetingsSettingsSearchesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=calendar_type")
     public String calendarType;
+
     public PostV2MeetingsSettingsSearchesJsonRequest withCalendarType(String calendarType) {
         this.calendarType = calendarType;
         return this;
@@ -22,18 +23,9 @@ public class PostV2MeetingsSettingsSearchesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public PostV2MeetingsSettingsSearchesJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
-        return this;
-    }
-    
-    /**
-     * Specifies whether the max limit of 10k records should be applied to pagination counts. Affects the total_count and total_pages data
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
-    public Boolean limitPagingCounts;
-    public PostV2MeetingsSettingsSearchesJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
-        this.limitPagingCounts = limitPagingCounts;
         return this;
     }
     
@@ -42,6 +34,7 @@ public class PostV2MeetingsSettingsSearchesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public PostV2MeetingsSettingsSearchesJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -52,6 +45,7 @@ public class PostV2MeetingsSettingsSearchesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public PostV2MeetingsSettingsSearchesJsonRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -66,6 +60,7 @@ public class PostV2MeetingsSettingsSearchesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=updated_at")
     public String[] updatedAt;
+
     public PostV2MeetingsSettingsSearchesJsonRequest withUpdatedAt(String[] updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -76,9 +71,11 @@ public class PostV2MeetingsSettingsSearchesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=user_guids")
     public String[] userGuids;
+
     public PostV2MeetingsSettingsSearchesJsonRequest withUserGuids(String[] userGuids) {
         this.userGuids = userGuids;
         return this;
     }
     
+    public PostV2MeetingsSettingsSearchesJsonRequest(){}
 }

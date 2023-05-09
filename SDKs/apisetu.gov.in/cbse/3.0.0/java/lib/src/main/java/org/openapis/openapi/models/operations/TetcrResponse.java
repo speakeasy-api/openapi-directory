@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TetcrResponse {
     
     public String contentType;
+
     public TetcrResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TetcrResponse {
     
     
     public Integer statusCode;
+
     public TetcrResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TetcrResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TetcrResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class TetcrResponse {
      */
     
     public Tetcr400ApplicationJSON tetcr400ApplicationJSONObject;
+
     public TetcrResponse withTetcr400ApplicationJSONObject(Tetcr400ApplicationJSON tetcr400ApplicationJSONObject) {
         this.tetcr400ApplicationJSONObject = tetcr400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class TetcrResponse {
      */
     
     public Tetcr401ApplicationJSON tetcr401ApplicationJSONObject;
+
     public TetcrResponse withTetcr401ApplicationJSONObject(Tetcr401ApplicationJSON tetcr401ApplicationJSONObject) {
         this.tetcr401ApplicationJSONObject = tetcr401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class TetcrResponse {
      */
     
     public Tetcr404ApplicationJSON tetcr404ApplicationJSONObject;
+
     public TetcrResponse withTetcr404ApplicationJSONObject(Tetcr404ApplicationJSON tetcr404ApplicationJSONObject) {
         this.tetcr404ApplicationJSONObject = tetcr404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class TetcrResponse {
      */
     
     public Tetcr500ApplicationJSON tetcr500ApplicationJSONObject;
+
     public TetcrResponse withTetcr500ApplicationJSONObject(Tetcr500ApplicationJSON tetcr500ApplicationJSONObject) {
         this.tetcr500ApplicationJSONObject = tetcr500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class TetcrResponse {
      */
     
     public Tetcr502ApplicationJSON tetcr502ApplicationJSONObject;
+
     public TetcrResponse withTetcr502ApplicationJSONObject(Tetcr502ApplicationJSON tetcr502ApplicationJSONObject) {
         this.tetcr502ApplicationJSONObject = tetcr502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class TetcrResponse {
      */
     
     public Tetcr503ApplicationJSON tetcr503ApplicationJSONObject;
+
     public TetcrResponse withTetcr503ApplicationJSONObject(Tetcr503ApplicationJSON tetcr503ApplicationJSONObject) {
         this.tetcr503ApplicationJSONObject = tetcr503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class TetcrResponse {
      */
     
     public Tetcr504ApplicationJSON tetcr504ApplicationJSONObject;
+
     public TetcrResponse withTetcr504ApplicationJSONObject(Tetcr504ApplicationJSON tetcr504ApplicationJSONObject) {
         this.tetcr504ApplicationJSONObject = tetcr504ApplicationJSONObject;
         return this;
     }
     
+    public TetcrResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

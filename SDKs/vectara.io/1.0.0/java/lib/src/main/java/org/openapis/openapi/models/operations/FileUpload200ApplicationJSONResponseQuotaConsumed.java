@@ -15,6 +15,7 @@ public class FileUpload200ApplicationJSONResponseQuotaConsumed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numChars")
     public String numChars;
+
     public FileUpload200ApplicationJSONResponseQuotaConsumed withNumChars(String numChars) {
         this.numChars = numChars;
         return this;
@@ -26,9 +27,11 @@ public class FileUpload200ApplicationJSONResponseQuotaConsumed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numMetadataChars")
     public String numMetadataChars;
+
     public FileUpload200ApplicationJSONResponseQuotaConsumed withNumMetadataChars(String numMetadataChars) {
         this.numMetadataChars = numMetadataChars;
         return this;
     }
     
+    public FileUpload200ApplicationJSONResponseQuotaConsumed(){}
 }

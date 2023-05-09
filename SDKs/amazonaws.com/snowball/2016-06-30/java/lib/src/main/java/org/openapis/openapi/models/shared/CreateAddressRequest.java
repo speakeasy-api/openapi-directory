@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateAddressRequest {
     @JsonProperty("Address")
     public Address address;
+
     public CreateAddressRequest withAddress(Address address) {
         this.address = address;
         return this;
     }
     
+    public CreateAddressRequest(@JsonProperty("Address") Address address) {
+        this.address = address;
+  }
 }

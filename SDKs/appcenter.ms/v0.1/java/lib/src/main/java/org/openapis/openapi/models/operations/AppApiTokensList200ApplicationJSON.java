@@ -14,6 +14,7 @@ public class AppApiTokensList200ApplicationJSON {
      */
     @JsonProperty("created_at")
     public String createdAt;
+
     public AppApiTokensList200ApplicationJSON withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -25,6 +26,7 @@ public class AppApiTokensList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AppApiTokensList200ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class AppApiTokensList200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public AppApiTokensList200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -46,9 +49,14 @@ public class AppApiTokensList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public AppApiTokensList200ApplicationJSONScopeEnum[] scope;
+
     public AppApiTokensList200ApplicationJSON withScope(AppApiTokensList200ApplicationJSONScopeEnum[] scope) {
         this.scope = scope;
         return this;
     }
     
+    public AppApiTokensList200ApplicationJSON(@JsonProperty("created_at") String createdAt, @JsonProperty("id") String id) {
+        this.createdAt = createdAt;
+        this.id = id;
+  }
 }

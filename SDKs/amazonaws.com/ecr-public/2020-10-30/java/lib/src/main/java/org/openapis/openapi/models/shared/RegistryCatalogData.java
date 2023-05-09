@@ -15,9 +15,11 @@ public class RegistryCatalogData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public RegistryCatalogData withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public RegistryCatalogData(){}
 }

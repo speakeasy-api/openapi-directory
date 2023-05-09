@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ErrorsGroupOperatingSystemCountsResponse {
     
     public String contentType;
+
     public ErrorsGroupOperatingSystemCountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ErrorsGroupOperatingSystemCountsResponse {
      */
     
     public ErrorsGroupOperatingSystemCounts200ApplicationJSON errorsGroupOperatingSystemCounts200ApplicationJSONObject;
+
     public ErrorsGroupOperatingSystemCountsResponse withErrorsGroupOperatingSystemCounts200ApplicationJSONObject(ErrorsGroupOperatingSystemCounts200ApplicationJSON errorsGroupOperatingSystemCounts200ApplicationJSONObject) {
         this.errorsGroupOperatingSystemCounts200ApplicationJSONObject = errorsGroupOperatingSystemCounts200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class ErrorsGroupOperatingSystemCountsResponse {
      */
     
     public ErrorsGroupOperatingSystemCountsDefaultApplicationJSON errorsGroupOperatingSystemCountsDefaultApplicationJSONObject;
+
     public ErrorsGroupOperatingSystemCountsResponse withErrorsGroupOperatingSystemCountsDefaultApplicationJSONObject(ErrorsGroupOperatingSystemCountsDefaultApplicationJSON errorsGroupOperatingSystemCountsDefaultApplicationJSONObject) {
         this.errorsGroupOperatingSystemCountsDefaultApplicationJSONObject = errorsGroupOperatingSystemCountsDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class ErrorsGroupOperatingSystemCountsResponse {
     
     
     public Integer statusCode;
+
     public ErrorsGroupOperatingSystemCountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ErrorsGroupOperatingSystemCountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ErrorsGroupOperatingSystemCountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ErrorsGroupOperatingSystemCountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class AddCommunicationToCaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public Boolean result;
+
     public AddCommunicationToCaseResponse withResult(Boolean result) {
         this.result = result;
         return this;
     }
     
+    public AddCommunicationToCaseResponse(){}
 }

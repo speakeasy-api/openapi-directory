@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListWebhookDeliveriesRequest {
@@ -12,6 +13,7 @@ public class ReposListWebhookDeliveriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ReposListWebhookDeliveriesRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +24,7 @@ public class ReposListWebhookDeliveriesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
     public Long hookId;
+
     public ReposListWebhookDeliveriesRequest withHookId(Long hookId) {
         this.hookId = hookId;
         return this;
@@ -32,6 +35,7 @@ public class ReposListWebhookDeliveriesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposListWebhookDeliveriesRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -42,6 +46,7 @@ public class ReposListWebhookDeliveriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ReposListWebhookDeliveriesRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -52,9 +57,15 @@ public class ReposListWebhookDeliveriesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposListWebhookDeliveriesRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposListWebhookDeliveriesRequest(@JsonProperty("hook_id") Long hookId, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.hookId = hookId;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

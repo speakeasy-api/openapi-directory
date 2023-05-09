@@ -15,6 +15,7 @@ public class CustomDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public CustomDetection withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class CustomDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public CustomDetection withCount(Long count) {
         this.count = count;
         return this;
@@ -31,6 +33,7 @@ public class CustomDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomDetection withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class CustomDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occurrences")
     public Occurrences occurrences;
+
     public CustomDetection withOccurrences(Occurrences occurrences) {
         this.occurrences = occurrences;
         return this;
     }
     
+    public CustomDetection(){}
 }

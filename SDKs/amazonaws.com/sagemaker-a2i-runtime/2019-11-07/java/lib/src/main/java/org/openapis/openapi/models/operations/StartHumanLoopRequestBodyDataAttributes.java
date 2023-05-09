@@ -15,9 +15,11 @@ public class StartHumanLoopRequestBodyDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentClassifiers")
     public org.openapis.openapi.models.shared.ContentClassifierEnum[] contentClassifiers;
+
     public StartHumanLoopRequestBodyDataAttributes withContentClassifiers(org.openapis.openapi.models.shared.ContentClassifierEnum[] contentClassifiers) {
         this.contentClassifiers = contentClassifiers;
         return this;
     }
     
+    public StartHumanLoopRequestBodyDataAttributes(){}
 }

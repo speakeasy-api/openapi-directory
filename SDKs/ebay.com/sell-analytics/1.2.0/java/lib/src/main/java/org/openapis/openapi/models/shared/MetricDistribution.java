@@ -18,6 +18,7 @@ public class MetricDistribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basis")
     public String basis;
+
     public MetricDistribution withBasis(String basis) {
         this.basis = basis;
         return this;
@@ -29,9 +30,11 @@ public class MetricDistribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Distribution[] data;
+
     public MetricDistribution withData(Distribution[] data) {
         this.data = data;
         return this;
     }
     
+    public MetricDistribution(){}
 }

@@ -15,6 +15,7 @@ public class ListServiceActionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public ListServiceActionsOutput withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,9 +24,11 @@ public class ListServiceActionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceActionSummaries")
     public ServiceActionSummary[] serviceActionSummaries;
+
     public ListServiceActionsOutput withServiceActionSummaries(ServiceActionSummary[] serviceActionSummaries) {
         this.serviceActionSummaries = serviceActionSummaries;
         return this;
     }
     
+    public ListServiceActionsOutput(){}
 }

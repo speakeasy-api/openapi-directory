@@ -15,6 +15,7 @@ public class RecurrenceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DailySettings")
     public HandOffTime[] dailySettings;
+
     public RecurrenceSettings withDailySettings(HandOffTime[] dailySettings) {
         this.dailySettings = dailySettings;
         return this;
@@ -23,6 +24,7 @@ public class RecurrenceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonthlySettings")
     public MonthlySetting[] monthlySettings;
+
     public RecurrenceSettings withMonthlySettings(MonthlySetting[] monthlySettings) {
         this.monthlySettings = monthlySettings;
         return this;
@@ -30,6 +32,7 @@ public class RecurrenceSettings {
     
     @JsonProperty("NumberOfOnCalls")
     public Long numberOfOnCalls;
+
     public RecurrenceSettings withNumberOfOnCalls(Long numberOfOnCalls) {
         this.numberOfOnCalls = numberOfOnCalls;
         return this;
@@ -37,6 +40,7 @@ public class RecurrenceSettings {
     
     @JsonProperty("RecurrenceMultiplier")
     public Long recurrenceMultiplier;
+
     public RecurrenceSettings withRecurrenceMultiplier(Long recurrenceMultiplier) {
         this.recurrenceMultiplier = recurrenceMultiplier;
         return this;
@@ -45,6 +49,7 @@ public class RecurrenceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShiftCoverages")
     public java.util.Map<String, CoverageTime[]> shiftCoverages;
+
     public RecurrenceSettings withShiftCoverages(java.util.Map<String, CoverageTime[]> shiftCoverages) {
         this.shiftCoverages = shiftCoverages;
         return this;
@@ -53,9 +58,14 @@ public class RecurrenceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeeklySettings")
     public WeeklySetting[] weeklySettings;
+
     public RecurrenceSettings withWeeklySettings(WeeklySetting[] weeklySettings) {
         this.weeklySettings = weeklySettings;
         return this;
     }
     
+    public RecurrenceSettings(@JsonProperty("NumberOfOnCalls") Long numberOfOnCalls, @JsonProperty("RecurrenceMultiplier") Long recurrenceMultiplier) {
+        this.numberOfOnCalls = numberOfOnCalls;
+        this.recurrenceMultiplier = recurrenceMultiplier;
+  }
 }

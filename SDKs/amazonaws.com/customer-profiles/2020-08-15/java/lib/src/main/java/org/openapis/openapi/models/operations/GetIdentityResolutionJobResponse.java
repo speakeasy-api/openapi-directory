@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetIdentityResolutionJobResponse {
@@ -12,6 +13,7 @@ public class GetIdentityResolutionJobResponse {
      */
     
     public Object accessDeniedException;
+
     public GetIdentityResolutionJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetIdentityResolutionJobResponse {
      */
     
     public Object badRequestException;
+
     public GetIdentityResolutionJobResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class GetIdentityResolutionJobResponse {
     
     
     public String contentType;
+
     public GetIdentityResolutionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetIdentityResolutionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.GetIdentityResolutionJobResponse getIdentityResolutionJobResponse;
+
     public GetIdentityResolutionJobResponse withGetIdentityResolutionJobResponse(org.openapis.openapi.models.shared.GetIdentityResolutionJobResponse getIdentityResolutionJobResponse) {
         this.getIdentityResolutionJobResponse = getIdentityResolutionJobResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetIdentityResolutionJobResponse {
      */
     
     public Object internalServerException;
+
     public GetIdentityResolutionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class GetIdentityResolutionJobResponse {
     
     
     public Integer statusCode;
+
     public GetIdentityResolutionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetIdentityResolutionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetIdentityResolutionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetIdentityResolutionJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetIdentityResolutionJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class GetIdentityResolutionJobResponse {
      */
     
     public Object throttlingException;
+
     public GetIdentityResolutionJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetIdentityResolutionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

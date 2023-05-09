@@ -12,6 +12,7 @@ public class ListImportsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destination")
     public String destination;
+
     public ListImportsRequest withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -20,6 +21,7 @@ public class ListImportsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportStatus")
     public ImportStatusEnum importStatus;
+
     public ListImportsRequest withImportStatus(ImportStatusEnum importStatus) {
         this.importStatus = importStatus;
         return this;
@@ -28,6 +30,7 @@ public class ListImportsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListImportsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +39,11 @@ public class ListImportsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListImportsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListImportsRequest(){}
 }

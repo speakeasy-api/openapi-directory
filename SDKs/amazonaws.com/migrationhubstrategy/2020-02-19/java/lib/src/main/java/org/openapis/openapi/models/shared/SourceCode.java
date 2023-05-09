@@ -15,6 +15,7 @@ public class SourceCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public SourceCode withLocation(String location) {
         this.location = location;
         return this;
@@ -23,6 +24,7 @@ public class SourceCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectName")
     public String projectName;
+
     public SourceCode withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -31,6 +33,7 @@ public class SourceCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceVersion")
     public String sourceVersion;
+
     public SourceCode withSourceVersion(String sourceVersion) {
         this.sourceVersion = sourceVersion;
         return this;
@@ -39,9 +42,11 @@ public class SourceCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionControl")
     public VersionControlEnum versionControl;
+
     public SourceCode withVersionControl(VersionControlEnum versionControl) {
         this.versionControl = versionControl;
         return this;
     }
     
+    public SourceCode(){}
 }

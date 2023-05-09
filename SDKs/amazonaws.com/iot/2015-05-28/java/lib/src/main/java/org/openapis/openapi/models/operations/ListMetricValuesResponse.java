@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListMetricValuesResponse {
     
     public String contentType;
+
     public ListMetricValuesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListMetricValuesResponse {
      */
     
     public Object internalFailureException;
+
     public ListMetricValuesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListMetricValuesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListMetricValuesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListMetricValuesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMetricValuesResponse listMetricValuesResponse;
+
     public ListMetricValuesResponse withListMetricValuesResponse(org.openapis.openapi.models.shared.ListMetricValuesResponse listMetricValuesResponse) {
         this.listMetricValuesResponse = listMetricValuesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListMetricValuesResponse {
     
     
     public Integer statusCode;
+
     public ListMetricValuesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListMetricValuesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListMetricValuesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListMetricValuesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListMetricValuesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class ListMetricValuesResponse {
      */
     
     public Object throttlingException;
+
     public ListMetricValuesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListMetricValuesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class PayAtTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authenticationMethod")
     public PayAtTableAuthenticationMethodEnum authenticationMethod;
+
     public PayAtTable withAuthenticationMethod(PayAtTableAuthenticationMethodEnum authenticationMethod) {
         this.authenticationMethod = authenticationMethod;
         return this;
@@ -26,9 +27,11 @@ public class PayAtTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enablePayAtTable")
     public Boolean enablePayAtTable;
+
     public PayAtTable withEnablePayAtTable(Boolean enablePayAtTable) {
         this.enablePayAtTable = enablePayAtTable;
         return this;
     }
     
+    public PayAtTable(){}
 }

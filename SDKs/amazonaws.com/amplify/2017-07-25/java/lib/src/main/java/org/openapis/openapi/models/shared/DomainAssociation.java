@@ -15,6 +15,7 @@ public class DomainAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoSubDomainCreationPatterns")
     public String[] autoSubDomainCreationPatterns;
+
     public DomainAssociation withAutoSubDomainCreationPatterns(String[] autoSubDomainCreationPatterns) {
         this.autoSubDomainCreationPatterns = autoSubDomainCreationPatterns;
         return this;
@@ -23,6 +24,7 @@ public class DomainAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoSubDomainIAMRole")
     public String autoSubDomainIAMRole;
+
     public DomainAssociation withAutoSubDomainIAMRole(String autoSubDomainIAMRole) {
         this.autoSubDomainIAMRole = autoSubDomainIAMRole;
         return this;
@@ -31,6 +33,7 @@ public class DomainAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateVerificationDNSRecord")
     public String certificateVerificationDNSRecord;
+
     public DomainAssociation withCertificateVerificationDNSRecord(String certificateVerificationDNSRecord) {
         this.certificateVerificationDNSRecord = certificateVerificationDNSRecord;
         return this;
@@ -38,6 +41,7 @@ public class DomainAssociation {
     
     @JsonProperty("domainAssociationArn")
     public String domainAssociationArn;
+
     public DomainAssociation withDomainAssociationArn(String domainAssociationArn) {
         this.domainAssociationArn = domainAssociationArn;
         return this;
@@ -45,6 +49,7 @@ public class DomainAssociation {
     
     @JsonProperty("domainName")
     public String domainName;
+
     public DomainAssociation withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -52,6 +57,7 @@ public class DomainAssociation {
     
     @JsonProperty("domainStatus")
     public DomainStatusEnum domainStatus;
+
     public DomainAssociation withDomainStatus(DomainStatusEnum domainStatus) {
         this.domainStatus = domainStatus;
         return this;
@@ -59,6 +65,7 @@ public class DomainAssociation {
     
     @JsonProperty("enableAutoSubDomain")
     public Boolean enableAutoSubDomain;
+
     public DomainAssociation withEnableAutoSubDomain(Boolean enableAutoSubDomain) {
         this.enableAutoSubDomain = enableAutoSubDomain;
         return this;
@@ -66,6 +73,7 @@ public class DomainAssociation {
     
     @JsonProperty("statusReason")
     public String statusReason;
+
     public DomainAssociation withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -73,9 +81,18 @@ public class DomainAssociation {
     
     @JsonProperty("subDomains")
     public SubDomain[] subDomains;
+
     public DomainAssociation withSubDomains(SubDomain[] subDomains) {
         this.subDomains = subDomains;
         return this;
     }
     
+    public DomainAssociation(@JsonProperty("domainAssociationArn") String domainAssociationArn, @JsonProperty("domainName") String domainName, @JsonProperty("domainStatus") DomainStatusEnum domainStatus, @JsonProperty("enableAutoSubDomain") Boolean enableAutoSubDomain, @JsonProperty("statusReason") String statusReason, @JsonProperty("subDomains") SubDomain[] subDomains) {
+        this.domainAssociationArn = domainAssociationArn;
+        this.domainName = domainName;
+        this.domainStatus = domainStatus;
+        this.enableAutoSubDomain = enableAutoSubDomain;
+        this.statusReason = statusReason;
+        this.subDomains = subDomains;
+  }
 }

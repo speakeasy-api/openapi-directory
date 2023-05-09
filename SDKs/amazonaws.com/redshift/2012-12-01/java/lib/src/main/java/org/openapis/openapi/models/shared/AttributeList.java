@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AttributeList {
     
     public String attributeName;
+
     public AttributeList withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -19,9 +20,11 @@ public class AttributeList {
     
     
     public AttributeValueList[] attributeValues;
+
     public AttributeList withAttributeValues(AttributeValueList[] attributeValues) {
         this.attributeValues = attributeValues;
         return this;
     }
     
+    public AttributeList(){}
 }

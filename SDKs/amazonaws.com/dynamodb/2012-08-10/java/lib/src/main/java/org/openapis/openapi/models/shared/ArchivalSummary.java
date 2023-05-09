@@ -20,6 +20,7 @@ public class ArchivalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArchivalBackupArn")
     public String archivalBackupArn;
+
     public ArchivalSummary withArchivalBackupArn(String archivalBackupArn) {
         this.archivalBackupArn = archivalBackupArn;
         return this;
@@ -30,6 +31,7 @@ public class ArchivalSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ArchivalDateTime")
     public OffsetDateTime archivalDateTime;
+
     public ArchivalSummary withArchivalDateTime(OffsetDateTime archivalDateTime) {
         this.archivalDateTime = archivalDateTime;
         return this;
@@ -38,9 +40,11 @@ public class ArchivalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArchivalReason")
     public String archivalReason;
+
     public ArchivalSummary withArchivalReason(String archivalReason) {
         this.archivalReason = archivalReason;
         return this;
     }
     
+    public ArchivalSummary(){}
 }

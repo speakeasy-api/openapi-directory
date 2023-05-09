@@ -18,6 +18,7 @@ public class AdStyleColors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("background")
     public String background;
+
     public AdStyleColors withBackground(String background) {
         this.background = background;
         return this;
@@ -29,6 +30,7 @@ public class AdStyleColors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("border")
     public String border;
+
     public AdStyleColors withBorder(String border) {
         this.border = border;
         return this;
@@ -40,6 +42,7 @@ public class AdStyleColors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public AdStyleColors withText(String text) {
         this.text = text;
         return this;
@@ -51,6 +54,7 @@ public class AdStyleColors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public AdStyleColors withTitle(String title) {
         this.title = title;
         return this;
@@ -62,9 +66,11 @@ public class AdStyleColors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public AdStyleColors withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public AdStyleColors(){}
 }

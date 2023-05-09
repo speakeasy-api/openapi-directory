@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPageRankLostResponse {
     
     public String contentType;
+
     public GetPageRankLostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPageRankLostResponse {
      */
     
     public org.openapis.openapi.models.shared.DefaultPayload defaultPayload;
+
     public GetPageRankLostResponse withDefaultPayload(org.openapis.openapi.models.shared.DefaultPayload defaultPayload) {
         this.defaultPayload = defaultPayload;
         return this;
@@ -29,6 +32,7 @@ public class GetPageRankLostResponse {
      */
     
     public org.openapis.openapi.models.shared.PageRankLost pageRankLost;
+
     public GetPageRankLostResponse withPageRankLost(org.openapis.openapi.models.shared.PageRankLost pageRankLost) {
         this.pageRankLost = pageRankLost;
         return this;
@@ -36,6 +40,7 @@ public class GetPageRankLostResponse {
     
     
     public Integer statusCode;
+
     public GetPageRankLostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetPageRankLostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPageRankLostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPageRankLostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

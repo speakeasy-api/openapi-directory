@@ -15,6 +15,7 @@ public class ProblemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public ProblemDetail withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -23,6 +24,7 @@ public class ProblemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Integer status;
+
     public ProblemDetail withStatus(Integer status) {
         this.status = status;
         return this;
@@ -31,6 +33,7 @@ public class ProblemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ProblemDetail withTitle(String title) {
         this.title = title;
         return this;
@@ -39,9 +42,11 @@ public class ProblemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ProblemDetail withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ProblemDetail(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetApiV1FavouritesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public GetApiV1FavouritesRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -16,6 +17,7 @@ public class GetApiV1FavouritesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_id")
     public String maxId;
+
     public GetApiV1FavouritesRequest withMaxId(String maxId) {
         this.maxId = maxId;
         return this;
@@ -23,9 +25,11 @@ public class GetApiV1FavouritesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_id")
     public String minId;
+
     public GetApiV1FavouritesRequest withMinId(String minId) {
         this.minId = minId;
         return this;
     }
     
+    public GetApiV1FavouritesRequest(){}
 }

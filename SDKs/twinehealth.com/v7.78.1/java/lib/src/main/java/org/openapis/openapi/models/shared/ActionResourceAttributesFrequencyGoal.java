@@ -12,9 +12,11 @@ public class ActionResourceAttributesFrequencyGoal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weeks")
     public ActionResourceAttributesFrequencyGoalWeeks weeks;
+
     public ActionResourceAttributesFrequencyGoal withWeeks(ActionResourceAttributesFrequencyGoalWeeks weeks) {
         this.weeks = weeks;
         return this;
     }
     
+    public ActionResourceAttributesFrequencyGoal(){}
 }

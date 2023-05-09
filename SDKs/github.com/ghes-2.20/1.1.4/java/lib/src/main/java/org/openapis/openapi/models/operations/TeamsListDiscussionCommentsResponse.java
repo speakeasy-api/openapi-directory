@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TeamsListDiscussionCommentsResponse {
     
     public String contentType;
+
     public TeamsListDiscussionCommentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TeamsListDiscussionCommentsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public TeamsListDiscussionCommentsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class TeamsListDiscussionCommentsResponse {
     
     
     public Integer statusCode;
+
     public TeamsListDiscussionCommentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class TeamsListDiscussionCommentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TeamsListDiscussionCommentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class TeamsListDiscussionCommentsResponse {
      */
     
     public org.openapis.openapi.models.shared.TeamDiscussionComment[] teamDiscussionComments;
+
     public TeamsListDiscussionCommentsResponse withTeamDiscussionComments(org.openapis.openapi.models.shared.TeamDiscussionComment[] teamDiscussionComments) {
         this.teamDiscussionComments = teamDiscussionComments;
         return this;
     }
     
+    public TeamsListDiscussionCommentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

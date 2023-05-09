@@ -15,6 +15,7 @@ public class GicerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public GicerRequestBodyCertificateParameters certificateParameters;
+
     public GicerRequestBody withCertificateParameters(GicerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class GicerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public GicerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class GicerRequestBody {
      */
     @JsonProperty("format")
     public GicerRequestBodyFormatEnum format;
+
     public GicerRequestBody withFormat(GicerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class GicerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public GicerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public GicerRequestBody(@JsonProperty("format") GicerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

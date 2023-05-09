@@ -18,6 +18,7 @@ public class ServiceAccountKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public ServiceAccountKey withData(String data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class ServiceAccountKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ServiceAccountKey withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class ServiceAccountKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicData")
     public String publicData;
+
     public ServiceAccountKey withPublicData(String publicData) {
         this.publicData = publicData;
         return this;
@@ -51,9 +54,11 @@ public class ServiceAccountKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ServiceAccountKeyTypeEnum type;
+
     public ServiceAccountKey withType(ServiceAccountKeyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ServiceAccountKey(){}
 }

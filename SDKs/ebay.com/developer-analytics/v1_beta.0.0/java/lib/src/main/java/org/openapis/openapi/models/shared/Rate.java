@@ -18,6 +18,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public Rate withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -29,6 +30,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remaining")
     public Integer remaining;
+
     public Rate withRemaining(Integer remaining) {
         this.remaining = remaining;
         return this;
@@ -40,6 +42,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reset")
     public String reset;
+
     public Rate withReset(String reset) {
         this.reset = reset;
         return this;
@@ -51,9 +54,11 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeWindow")
     public Integer timeWindow;
+
     public Rate withTimeWindow(Integer timeWindow) {
         this.timeWindow = timeWindow;
         return this;
     }
     
+    public Rate(){}
 }

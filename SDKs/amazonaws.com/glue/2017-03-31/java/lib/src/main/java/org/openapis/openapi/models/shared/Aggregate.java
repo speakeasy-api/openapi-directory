@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Aggregate {
     @JsonProperty("Aggs")
     public AggregateOperation[] aggs;
+
     public Aggregate withAggs(AggregateOperation[] aggs) {
         this.aggs = aggs;
         return this;
@@ -19,6 +20,7 @@ public class Aggregate {
     
     @JsonProperty("Groups")
     public String[][] groups;
+
     public Aggregate withGroups(String[][] groups) {
         this.groups = groups;
         return this;
@@ -26,6 +28,7 @@ public class Aggregate {
     
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public Aggregate withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -33,9 +36,16 @@ public class Aggregate {
     
     @JsonProperty("Name")
     public String name;
+
     public Aggregate withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Aggregate(@JsonProperty("Aggs") AggregateOperation[] aggs, @JsonProperty("Groups") String[][] groups, @JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name) {
+        this.aggs = aggs;
+        this.groups = groups;
+        this.inputs = inputs;
+        this.name = name;
+  }
 }

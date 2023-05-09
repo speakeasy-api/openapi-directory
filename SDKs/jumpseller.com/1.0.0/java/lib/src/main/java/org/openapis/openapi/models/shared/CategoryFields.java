@@ -15,6 +15,7 @@ public class CategoryFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public CategoryFields withId(Integer id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class CategoryFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CategoryFields withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class CategoryFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     public Integer parentId;
+
     public CategoryFields withParentId(Integer parentId) {
         this.parentId = parentId;
         return this;
@@ -48,9 +51,11 @@ public class CategoryFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permalink")
     public String permalink;
+
     public CategoryFields withPermalink(String permalink) {
         this.permalink = permalink;
         return this;
     }
     
+    public CategoryFields(){}
 }

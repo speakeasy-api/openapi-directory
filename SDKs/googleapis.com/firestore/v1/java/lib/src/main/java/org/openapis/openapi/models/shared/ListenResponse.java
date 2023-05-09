@@ -18,6 +18,7 @@ public class ListenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentChange")
     public DocumentChange documentChange;
+
     public ListenResponse withDocumentChange(DocumentChange documentChange) {
         this.documentChange = documentChange;
         return this;
@@ -29,6 +30,7 @@ public class ListenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentDelete")
     public DocumentDelete documentDelete;
+
     public ListenResponse withDocumentDelete(DocumentDelete documentDelete) {
         this.documentDelete = documentDelete;
         return this;
@@ -40,6 +42,7 @@ public class ListenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentRemove")
     public DocumentRemove documentRemove;
+
     public ListenResponse withDocumentRemove(DocumentRemove documentRemove) {
         this.documentRemove = documentRemove;
         return this;
@@ -51,6 +54,7 @@ public class ListenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public ExistenceFilter filter;
+
     public ListenResponse withFilter(ExistenceFilter filter) {
         this.filter = filter;
         return this;
@@ -62,9 +66,11 @@ public class ListenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetChange")
     public TargetChange targetChange;
+
     public ListenResponse withTargetChange(TargetChange targetChange) {
         this.targetChange = targetChange;
         return this;
     }
     
+    public ListenResponse(){}
 }

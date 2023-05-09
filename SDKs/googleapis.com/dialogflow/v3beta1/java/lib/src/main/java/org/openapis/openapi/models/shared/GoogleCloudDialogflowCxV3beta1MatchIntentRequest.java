@@ -18,17 +18,19 @@ public class GoogleCloudDialogflowCxV3beta1MatchIntentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persistParameterChanges")
     public Boolean persistParameterChanges;
+
     public GoogleCloudDialogflowCxV3beta1MatchIntentRequest withPersistParameterChanges(Boolean persistParameterChanges) {
         this.persistParameterChanges = persistParameterChanges;
         return this;
     }
     
     /**
-     * Represents the query input. It can contain one of: 1. A conversational query in the form of text. 2. An intent query that specifies which intent to trigger. 3. Natural language speech audio to be processed. 4. An event to be triggered. 
+     * Represents the query input. It can contain one of: 1. A conversational query in the form of text. 2. An intent query that specifies which intent to trigger. 3. Natural language speech audio to be processed. 4. An event to be triggered. 5. DTMF digits to invoke an intent and fill in parameter value.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryInput")
     public GoogleCloudDialogflowCxV3beta1QueryInput queryInput;
+
     public GoogleCloudDialogflowCxV3beta1MatchIntentRequest withQueryInput(GoogleCloudDialogflowCxV3beta1QueryInput queryInput) {
         this.queryInput = queryInput;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowCxV3beta1MatchIntentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryParams")
     public GoogleCloudDialogflowCxV3beta1QueryParameters queryParams;
+
     public GoogleCloudDialogflowCxV3beta1MatchIntentRequest withQueryParams(GoogleCloudDialogflowCxV3beta1QueryParameters queryParams) {
         this.queryParams = queryParams;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1MatchIntentRequest(){}
 }

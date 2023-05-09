@@ -15,6 +15,7 @@ public class ChannelProfileDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelId")
     public String channelId;
+
     public ChannelProfileDetails withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -26,6 +27,7 @@ public class ChannelProfileDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelUrl")
     public String channelUrl;
+
     public ChannelProfileDetails withChannelUrl(String channelUrl) {
         this.channelUrl = channelUrl;
         return this;
@@ -37,6 +39,7 @@ public class ChannelProfileDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ChannelProfileDetails withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -48,9 +51,11 @@ public class ChannelProfileDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileImageUrl")
     public String profileImageUrl;
+
     public ChannelProfileDetails withProfileImageUrl(String profileImageUrl) {
         this.profileImageUrl = profileImageUrl;
         return this;
     }
     
+    public ChannelProfileDetails(){}
 }

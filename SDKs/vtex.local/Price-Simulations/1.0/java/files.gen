@@ -58,4 +58,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostSessionsRequestBody
 lib/src/main/java/org/openapis/openapi/models/operations/PostSessionsRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostSessionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostSessionsResponse.java
+docs/sdk/README.md
+docs/customprices/README.md
+docs/priceassociation/README.md
+docs/sessionmanagement/README.md
 USAGE.md

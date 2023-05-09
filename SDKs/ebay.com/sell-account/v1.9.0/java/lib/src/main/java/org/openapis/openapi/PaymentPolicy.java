@@ -60,11 +60,9 @@ public class PaymentPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePaymentPolicyResponse res = new org.openapis.openapi.models.operations.CreatePaymentPolicyResponse() {{
+        org.openapis.openapi.models.operations.CreatePaymentPolicyResponse res = new org.openapis.openapi.models.operations.CreatePaymentPolicyResponse(contentType, httpRes.statusCode()) {{
             setPaymentPolicyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -104,10 +102,8 @@ public class PaymentPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePaymentPolicyResponse res = new org.openapis.openapi.models.operations.DeletePaymentPolicyResponse() {{
+        org.openapis.openapi.models.operations.DeletePaymentPolicyResponse res = new org.openapis.openapi.models.operations.DeletePaymentPolicyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404 || httpRes.statusCode() == 409 || httpRes.statusCode() == 500) {
@@ -144,11 +140,9 @@ public class PaymentPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPaymentPoliciesResponse res = new org.openapis.openapi.models.operations.GetPaymentPoliciesResponse() {{
+        org.openapis.openapi.models.operations.GetPaymentPoliciesResponse res = new org.openapis.openapi.models.operations.GetPaymentPoliciesResponse(contentType, httpRes.statusCode()) {{
             paymentPolicyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -186,11 +180,9 @@ public class PaymentPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPaymentPolicyResponse res = new org.openapis.openapi.models.operations.GetPaymentPolicyResponse() {{
+        org.openapis.openapi.models.operations.GetPaymentPolicyResponse res = new org.openapis.openapi.models.operations.GetPaymentPolicyResponse(contentType, httpRes.statusCode()) {{
             paymentPolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -234,11 +226,9 @@ public class PaymentPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPaymentPolicyByNameResponse res = new org.openapis.openapi.models.operations.GetPaymentPolicyByNameResponse() {{
+        org.openapis.openapi.models.operations.GetPaymentPolicyByNameResponse res = new org.openapis.openapi.models.operations.GetPaymentPolicyByNameResponse(contentType, httpRes.statusCode()) {{
             paymentPolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -281,11 +271,9 @@ public class PaymentPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePaymentPolicyResponse res = new org.openapis.openapi.models.operations.UpdatePaymentPolicyResponse() {{
+        org.openapis.openapi.models.operations.UpdatePaymentPolicyResponse res = new org.openapis.openapi.models.operations.UpdatePaymentPolicyResponse(contentType, httpRes.statusCode()) {{
             setPaymentPolicyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

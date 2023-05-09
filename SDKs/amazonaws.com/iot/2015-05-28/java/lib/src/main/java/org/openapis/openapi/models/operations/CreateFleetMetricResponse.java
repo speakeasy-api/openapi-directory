@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFleetMetricResponse {
     
     public String contentType;
+
     public CreateFleetMetricResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateFleetMetricResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFleetMetricResponse createFleetMetricResponse;
+
     public CreateFleetMetricResponse withCreateFleetMetricResponse(org.openapis.openapi.models.shared.CreateFleetMetricResponse createFleetMetricResponse) {
         this.createFleetMetricResponse = createFleetMetricResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateFleetMetricResponse {
      */
     
     public Object indexNotReadyException;
+
     public CreateFleetMetricResponse withIndexNotReadyException(Object indexNotReadyException) {
         this.indexNotReadyException = indexNotReadyException;
         return this;
@@ -39,6 +43,7 @@ public class CreateFleetMetricResponse {
      */
     
     public Object internalFailureException;
+
     public CreateFleetMetricResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class CreateFleetMetricResponse {
      */
     
     public Object invalidAggregationException;
+
     public CreateFleetMetricResponse withInvalidAggregationException(Object invalidAggregationException) {
         this.invalidAggregationException = invalidAggregationException;
         return this;
@@ -59,6 +65,7 @@ public class CreateFleetMetricResponse {
      */
     
     public Object invalidQueryException;
+
     public CreateFleetMetricResponse withInvalidQueryException(Object invalidQueryException) {
         this.invalidQueryException = invalidQueryException;
         return this;
@@ -69,6 +76,7 @@ public class CreateFleetMetricResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateFleetMetricResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -79,6 +87,7 @@ public class CreateFleetMetricResponse {
      */
     
     public Object limitExceededException;
+
     public CreateFleetMetricResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -89,6 +98,7 @@ public class CreateFleetMetricResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateFleetMetricResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -99,6 +109,7 @@ public class CreateFleetMetricResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateFleetMetricResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -106,6 +117,7 @@ public class CreateFleetMetricResponse {
     
     
     public Integer statusCode;
+
     public CreateFleetMetricResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class CreateFleetMetricResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFleetMetricResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class CreateFleetMetricResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateFleetMetricResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -133,6 +147,7 @@ public class CreateFleetMetricResponse {
      */
     
     public Object throttlingException;
+
     public CreateFleetMetricResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -143,9 +158,14 @@ public class CreateFleetMetricResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateFleetMetricResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateFleetMetricResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

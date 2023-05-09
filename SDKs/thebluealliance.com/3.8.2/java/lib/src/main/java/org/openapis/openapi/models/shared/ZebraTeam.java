@@ -12,6 +12,7 @@ public class ZebraTeam {
      */
     @JsonProperty("team_key")
     public String teamKey;
+
     public ZebraTeam withTeamKey(String teamKey) {
         this.teamKey = teamKey;
         return this;
@@ -22,6 +23,7 @@ public class ZebraTeam {
      */
     @JsonProperty("xs")
     public Double[] xs;
+
     public ZebraTeam withXs(Double[] xs) {
         this.xs = xs;
         return this;
@@ -32,9 +34,15 @@ public class ZebraTeam {
      */
     @JsonProperty("ys")
     public Double[] ys;
+
     public ZebraTeam withYs(Double[] ys) {
         this.ys = ys;
         return this;
     }
     
+    public ZebraTeam(@JsonProperty("team_key") String teamKey, @JsonProperty("xs") Double[] xs, @JsonProperty("ys") Double[] ys) {
+        this.teamKey = teamKey;
+        this.xs = xs;
+        this.ys = ys;
+  }
 }

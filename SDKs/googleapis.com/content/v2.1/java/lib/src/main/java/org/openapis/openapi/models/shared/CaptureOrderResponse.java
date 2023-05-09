@@ -18,9 +18,11 @@ public class CaptureOrderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionStatus")
     public CaptureOrderResponseExecutionStatusEnum executionStatus;
+
     public CaptureOrderResponse withExecutionStatus(CaptureOrderResponseExecutionStatusEnum executionStatus) {
         this.executionStatus = executionStatus;
         return this;
     }
     
+    public CaptureOrderResponse(){}
 }

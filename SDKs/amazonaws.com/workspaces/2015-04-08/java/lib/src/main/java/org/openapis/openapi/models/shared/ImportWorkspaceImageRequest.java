@@ -12,6 +12,7 @@ public class ImportWorkspaceImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Applications")
     public ApplicationEnum[] applications;
+
     public ImportWorkspaceImageRequest withApplications(ApplicationEnum[] applications) {
         this.applications = applications;
         return this;
@@ -19,6 +20,7 @@ public class ImportWorkspaceImageRequest {
     
     @JsonProperty("Ec2ImageId")
     public String ec2ImageId;
+
     public ImportWorkspaceImageRequest withEc2ImageId(String ec2ImageId) {
         this.ec2ImageId = ec2ImageId;
         return this;
@@ -26,6 +28,7 @@ public class ImportWorkspaceImageRequest {
     
     @JsonProperty("ImageDescription")
     public String imageDescription;
+
     public ImportWorkspaceImageRequest withImageDescription(String imageDescription) {
         this.imageDescription = imageDescription;
         return this;
@@ -33,6 +36,7 @@ public class ImportWorkspaceImageRequest {
     
     @JsonProperty("ImageName")
     public String imageName;
+
     public ImportWorkspaceImageRequest withImageName(String imageName) {
         this.imageName = imageName;
         return this;
@@ -40,6 +44,7 @@ public class ImportWorkspaceImageRequest {
     
     @JsonProperty("IngestionProcess")
     public WorkspaceImageIngestionProcessEnum ingestionProcess;
+
     public ImportWorkspaceImageRequest withIngestionProcess(WorkspaceImageIngestionProcessEnum ingestionProcess) {
         this.ingestionProcess = ingestionProcess;
         return this;
@@ -48,9 +53,16 @@ public class ImportWorkspaceImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public ImportWorkspaceImageRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ImportWorkspaceImageRequest(@JsonProperty("Ec2ImageId") String ec2ImageId, @JsonProperty("ImageDescription") String imageDescription, @JsonProperty("ImageName") String imageName, @JsonProperty("IngestionProcess") WorkspaceImageIngestionProcessEnum ingestionProcess) {
+        this.ec2ImageId = ec2ImageId;
+        this.imageDescription = imageDescription;
+        this.imageName = imageName;
+        this.ingestionProcess = ingestionProcess;
+  }
 }

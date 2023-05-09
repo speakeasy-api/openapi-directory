@@ -15,6 +15,7 @@ public class UpdateFileSystemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedThroughputInMibps")
     public Double provisionedThroughputInMibps;
+
     public UpdateFileSystemRequestBody withProvisionedThroughputInMibps(Double provisionedThroughputInMibps) {
         this.provisionedThroughputInMibps = provisionedThroughputInMibps;
         return this;
@@ -26,9 +27,11 @@ public class UpdateFileSystemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThroughputMode")
     public UpdateFileSystemRequestBodyThroughputModeEnum throughputMode;
+
     public UpdateFileSystemRequestBody withThroughputMode(UpdateFileSystemRequestBodyThroughputModeEnum throughputMode) {
         this.throughputMode = throughputMode;
         return this;
     }
     
+    public UpdateFileSystemRequestBody(){}
 }

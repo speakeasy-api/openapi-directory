@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminUpdateLdapMappingForTeamResponse {
     
     public String contentType;
+
     public EnterpriseAdminUpdateLdapMappingForTeamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminUpdateLdapMappingForTeamResponse {
     
     
     public Integer statusCode;
+
     public EnterpriseAdminUpdateLdapMappingForTeamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminUpdateLdapMappingForTeamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminUpdateLdapMappingForTeamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class EnterpriseAdminUpdateLdapMappingForTeamResponse {
      */
     
     public org.openapis.openapi.models.shared.LdapMappingTeam ldapMappingTeam;
+
     public EnterpriseAdminUpdateLdapMappingForTeamResponse withLdapMappingTeam(org.openapis.openapi.models.shared.LdapMappingTeam ldapMappingTeam) {
         this.ldapMappingTeam = ldapMappingTeam;
         return this;
     }
     
+    public EnterpriseAdminUpdateLdapMappingForTeamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

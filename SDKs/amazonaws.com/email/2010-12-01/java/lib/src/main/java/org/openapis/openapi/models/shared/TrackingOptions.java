@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class TrackingOptions {
     
     public String customRedirectDomain;
+
     public TrackingOptions withCustomRedirectDomain(String customRedirectDomain) {
         this.customRedirectDomain = customRedirectDomain;
         return this;
     }
     
+    public TrackingOptions(){}
 }

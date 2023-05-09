@@ -15,6 +15,7 @@ public class CreateStudioRequestBodyStudioEncryptionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyArn")
     public String keyArn;
+
     public CreateStudioRequestBodyStudioEncryptionConfiguration withKeyArn(String keyArn) {
         this.keyArn = keyArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateStudioRequestBodyStudioEncryptionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyType")
     public org.openapis.openapi.models.shared.StudioEncryptionConfigurationKeyTypeEnum keyType;
+
     public CreateStudioRequestBodyStudioEncryptionConfiguration withKeyType(org.openapis.openapi.models.shared.StudioEncryptionConfigurationKeyTypeEnum keyType) {
         this.keyType = keyType;
         return this;
     }
     
+    public CreateStudioRequestBodyStudioEncryptionConfiguration(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LaunchTemplateEbsBlockDeviceRequest {
     
     public Boolean deleteOnTermination;
+
     public LaunchTemplateEbsBlockDeviceRequest withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -19,6 +20,7 @@ public class LaunchTemplateEbsBlockDeviceRequest {
     
     
     public Boolean encrypted;
+
     public LaunchTemplateEbsBlockDeviceRequest withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -26,6 +28,7 @@ public class LaunchTemplateEbsBlockDeviceRequest {
     
     
     public Long iops;
+
     public LaunchTemplateEbsBlockDeviceRequest withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -33,6 +36,7 @@ public class LaunchTemplateEbsBlockDeviceRequest {
     
     
     public String kmsKeyId;
+
     public LaunchTemplateEbsBlockDeviceRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -40,6 +44,7 @@ public class LaunchTemplateEbsBlockDeviceRequest {
     
     
     public String snapshotId;
+
     public LaunchTemplateEbsBlockDeviceRequest withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -47,6 +52,7 @@ public class LaunchTemplateEbsBlockDeviceRequest {
     
     
     public Long throughput;
+
     public LaunchTemplateEbsBlockDeviceRequest withThroughput(Long throughput) {
         this.throughput = throughput;
         return this;
@@ -54,6 +60,7 @@ public class LaunchTemplateEbsBlockDeviceRequest {
     
     
     public Long volumeSize;
+
     public LaunchTemplateEbsBlockDeviceRequest withVolumeSize(Long volumeSize) {
         this.volumeSize = volumeSize;
         return this;
@@ -61,9 +68,11 @@ public class LaunchTemplateEbsBlockDeviceRequest {
     
     
     public VolumeTypeEnum volumeType;
+
     public LaunchTemplateEbsBlockDeviceRequest withVolumeType(VolumeTypeEnum volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public LaunchTemplateEbsBlockDeviceRequest(){}
 }

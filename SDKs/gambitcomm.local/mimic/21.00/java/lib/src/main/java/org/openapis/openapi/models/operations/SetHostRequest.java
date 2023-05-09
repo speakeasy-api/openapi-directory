@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetHostRequest {
@@ -12,6 +13,7 @@ public class SetHostRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Long agentNum;
+
     public SetHostRequest withAgentNum(Long agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class SetHostRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=host")
     public String host;
+
     public SetHostRequest withHost(String host) {
         this.host = host;
         return this;
     }
     
+    public SetHostRequest(@JsonProperty("agentNum") Long agentNum, @JsonProperty("host") String host) {
+        this.agentNum = agentNum;
+        this.host = host;
+  }
 }

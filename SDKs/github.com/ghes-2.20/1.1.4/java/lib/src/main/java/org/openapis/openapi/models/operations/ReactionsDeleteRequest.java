@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsDeleteRequest {
@@ -12,6 +13,7 @@ public class ReactionsDeleteRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
     public String accept;
+
     public ReactionsDeleteRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -19,9 +21,14 @@ public class ReactionsDeleteRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reaction_id")
     public Long reactionId;
+
     public ReactionsDeleteRequest withReactionId(Long reactionId) {
         this.reactionId = reactionId;
         return this;
     }
     
+    public ReactionsDeleteRequest(@JsonProperty("accept") String accept, @JsonProperty("reaction_id") Long reactionId) {
+        this.accept = accept;
+        this.reactionId = reactionId;
+  }
 }

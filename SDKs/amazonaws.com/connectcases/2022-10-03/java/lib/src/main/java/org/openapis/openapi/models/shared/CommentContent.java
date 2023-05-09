@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CommentContent {
     @JsonProperty("body")
     public String body;
+
     public CommentContent withBody(String body) {
         this.body = body;
         return this;
@@ -19,9 +20,14 @@ public class CommentContent {
     
     @JsonProperty("contentType")
     public CommentBodyTextTypeEnum contentType;
+
     public CommentContent withContentType(CommentBodyTextTypeEnum contentType) {
         this.contentType = contentType;
         return this;
     }
     
+    public CommentContent(@JsonProperty("body") String body, @JsonProperty("contentType") CommentBodyTextTypeEnum contentType) {
+        this.body = body;
+        this.contentType = contentType;
+  }
 }

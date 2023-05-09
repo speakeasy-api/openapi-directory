@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModifyReplicationTaskResponse {
     
     public String contentType;
+
     public ModifyReplicationTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ModifyReplicationTaskResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public ModifyReplicationTaskResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -29,6 +32,7 @@ public class ModifyReplicationTaskResponse {
      */
     
     public Object kmsKeyNotAccessibleFault;
+
     public ModifyReplicationTaskResponse withKMSKeyNotAccessibleFault(Object kmsKeyNotAccessibleFault) {
         this.kmsKeyNotAccessibleFault = kmsKeyNotAccessibleFault;
         return this;
@@ -39,6 +43,7 @@ public class ModifyReplicationTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.ModifyReplicationTaskResponse modifyReplicationTaskResponse;
+
     public ModifyReplicationTaskResponse withModifyReplicationTaskResponse(org.openapis.openapi.models.shared.ModifyReplicationTaskResponse modifyReplicationTaskResponse) {
         this.modifyReplicationTaskResponse = modifyReplicationTaskResponse;
         return this;
@@ -49,6 +54,7 @@ public class ModifyReplicationTaskResponse {
      */
     
     public Object resourceAlreadyExistsFault;
+
     public ModifyReplicationTaskResponse withResourceAlreadyExistsFault(Object resourceAlreadyExistsFault) {
         this.resourceAlreadyExistsFault = resourceAlreadyExistsFault;
         return this;
@@ -56,6 +62,7 @@ public class ModifyReplicationTaskResponse {
     
     
     public Integer statusCode;
+
     public ModifyReplicationTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ModifyReplicationTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModifyReplicationTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ModifyReplicationTaskResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public ModifyReplicationTaskResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
     }
     
+    public ModifyReplicationTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

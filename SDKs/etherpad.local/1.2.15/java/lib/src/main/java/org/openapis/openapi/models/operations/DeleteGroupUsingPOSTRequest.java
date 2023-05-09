@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DeleteGroupUsingPOSTRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupID")
     public String groupID;
+
     public DeleteGroupUsingPOSTRequest withGroupID(String groupID) {
         this.groupID = groupID;
         return this;
     }
     
+    public DeleteGroupUsingPOSTRequest(){}
 }

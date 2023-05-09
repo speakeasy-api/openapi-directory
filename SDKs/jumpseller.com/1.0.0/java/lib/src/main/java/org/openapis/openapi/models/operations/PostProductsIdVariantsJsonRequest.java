@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProductsIdVariantsJsonRequest {
@@ -12,6 +13,7 @@ public class PostProductsIdVariantsJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.VariantEdit variantEdit;
+
     public PostProductsIdVariantsJsonRequest withVariantEdit(org.openapis.openapi.models.shared.VariantEdit variantEdit) {
         this.variantEdit = variantEdit;
         return this;
@@ -22,6 +24,7 @@ public class PostProductsIdVariantsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PostProductsIdVariantsJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class PostProductsIdVariantsJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PostProductsIdVariantsJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -42,9 +46,16 @@ public class PostProductsIdVariantsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PostProductsIdVariantsJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PostProductsIdVariantsJsonRequest(@JsonProperty("VariantEdit") org.openapis.openapi.models.shared.VariantEdit variantEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("login") String login) {
+        this.variantEdit = variantEdit;
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+  }
 }

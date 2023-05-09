@@ -68,12 +68,10 @@ public class ItemPriority {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetItemPriorityFeedResponse res = new org.openapis.openapi.models.operations.GetItemPriorityFeedResponse() {{
+        org.openapis.openapi.models.operations.GetItemPriorityFeedResponse res = new org.openapis.openapi.models.operations.GetItemPriorityFeedResponse(contentType, httpRes.statusCode()) {{
             itemPriorityResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 206) {

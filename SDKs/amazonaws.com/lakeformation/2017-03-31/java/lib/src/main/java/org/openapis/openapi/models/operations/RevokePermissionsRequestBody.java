@@ -15,6 +15,7 @@ public class RevokePermissionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public RevokePermissionsRequestBody withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -25,6 +26,7 @@ public class RevokePermissionsRequestBody {
      */
     @JsonProperty("Permissions")
     public org.openapis.openapi.models.shared.PermissionEnum[] permissions;
+
     public RevokePermissionsRequestBody withPermissions(org.openapis.openapi.models.shared.PermissionEnum[] permissions) {
         this.permissions = permissions;
         return this;
@@ -36,6 +38,7 @@ public class RevokePermissionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PermissionsWithGrantOption")
     public org.openapis.openapi.models.shared.PermissionEnum[] permissionsWithGrantOption;
+
     public RevokePermissionsRequestBody withPermissionsWithGrantOption(org.openapis.openapi.models.shared.PermissionEnum[] permissionsWithGrantOption) {
         this.permissionsWithGrantOption = permissionsWithGrantOption;
         return this;
@@ -46,6 +49,7 @@ public class RevokePermissionsRequestBody {
      */
     @JsonProperty("Principal")
     public RevokePermissionsRequestBodyPrincipal principal;
+
     public RevokePermissionsRequestBody withPrincipal(RevokePermissionsRequestBodyPrincipal principal) {
         this.principal = principal;
         return this;
@@ -56,9 +60,15 @@ public class RevokePermissionsRequestBody {
      */
     @JsonProperty("Resource")
     public RevokePermissionsRequestBodyResource resource;
+
     public RevokePermissionsRequestBody withResource(RevokePermissionsRequestBodyResource resource) {
         this.resource = resource;
         return this;
     }
     
+    public RevokePermissionsRequestBody(@JsonProperty("Permissions") org.openapis.openapi.models.shared.PermissionEnum[] permissions, @JsonProperty("Principal") RevokePermissionsRequestBodyPrincipal principal, @JsonProperty("Resource") RevokePermissionsRequestBodyResource resource) {
+        this.permissions = permissions;
+        this.principal = principal;
+        this.resource = resource;
+  }
 }

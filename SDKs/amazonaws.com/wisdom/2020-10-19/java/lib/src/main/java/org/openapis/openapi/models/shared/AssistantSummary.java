@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssistantSummary {
     @JsonProperty("assistantArn")
     public String assistantArn;
+
     public AssistantSummary withAssistantArn(String assistantArn) {
         this.assistantArn = assistantArn;
         return this;
@@ -21,6 +22,7 @@ public class AssistantSummary {
     
     @JsonProperty("assistantId")
     public String assistantId;
+
     public AssistantSummary withAssistantId(String assistantId) {
         this.assistantId = assistantId;
         return this;
@@ -29,6 +31,7 @@ public class AssistantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AssistantSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class AssistantSummary {
     
     @JsonProperty("name")
     public String name;
+
     public AssistantSummary withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class AssistantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverSideEncryptionConfiguration")
     public ServerSideEncryptionConfiguration serverSideEncryptionConfiguration;
+
     public AssistantSummary withServerSideEncryptionConfiguration(ServerSideEncryptionConfiguration serverSideEncryptionConfiguration) {
         this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
         return this;
@@ -51,6 +56,7 @@ public class AssistantSummary {
     
     @JsonProperty("status")
     public AssistantStatusEnum status;
+
     public AssistantSummary withStatus(AssistantStatusEnum status) {
         this.status = status;
         return this;
@@ -59,6 +65,7 @@ public class AssistantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public AssistantSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -66,9 +73,17 @@ public class AssistantSummary {
     
     @JsonProperty("type")
     public AssistantTypeEnum type;
+
     public AssistantSummary withType(AssistantTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AssistantSummary(@JsonProperty("assistantArn") String assistantArn, @JsonProperty("assistantId") String assistantId, @JsonProperty("name") String name, @JsonProperty("status") AssistantStatusEnum status, @JsonProperty("type") AssistantTypeEnum type) {
+        this.assistantArn = assistantArn;
+        this.assistantId = assistantId;
+        this.name = name;
+        this.status = status;
+        this.type = type;
+  }
 }

@@ -15,6 +15,7 @@ public class GetSiteAddressOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address")
     public Address address;
+
     public GetSiteAddressOutput withAddress(Address address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class GetSiteAddressOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressType")
     public AddressTypeEnum addressType;
+
     public GetSiteAddressOutput withAddressType(AddressTypeEnum addressType) {
         this.addressType = addressType;
         return this;
@@ -34,9 +36,11 @@ public class GetSiteAddressOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SiteId")
     public String siteId;
+
     public GetSiteAddressOutput withSiteId(String siteId) {
         this.siteId = siteId;
         return this;
     }
     
+    public GetSiteAddressOutput(){}
 }

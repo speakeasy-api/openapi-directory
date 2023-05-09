@@ -15,6 +15,7 @@ public class AggregateComplianceByConformancePack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public AggregateComplianceByConformancePack withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class AggregateComplianceByConformancePack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsRegion")
     public String awsRegion;
+
     public AggregateComplianceByConformancePack withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -31,6 +33,7 @@ public class AggregateComplianceByConformancePack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Compliance")
     public AggregateConformancePackCompliance compliance;
+
     public AggregateComplianceByConformancePack withCompliance(AggregateConformancePackCompliance compliance) {
         this.compliance = compliance;
         return this;
@@ -39,9 +42,11 @@ public class AggregateComplianceByConformancePack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConformancePackName")
     public String conformancePackName;
+
     public AggregateComplianceByConformancePack withConformancePackName(String conformancePackName) {
         this.conformancePackName = conformancePackName;
         return this;
     }
     
+    public AggregateComplianceByConformancePack(){}
 }

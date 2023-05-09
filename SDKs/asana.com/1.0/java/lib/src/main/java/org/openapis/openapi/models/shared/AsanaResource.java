@@ -18,6 +18,7 @@ public class AsanaResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public AsanaResource withGid(String gid) {
         this.gid = gid;
         return this;
@@ -29,9 +30,11 @@ public class AsanaResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public AsanaResource withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public AsanaResource(){}
 }

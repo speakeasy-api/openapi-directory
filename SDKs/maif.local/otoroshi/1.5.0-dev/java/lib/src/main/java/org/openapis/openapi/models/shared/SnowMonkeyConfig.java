@@ -15,6 +15,7 @@ public class SnowMonkeyConfig {
      */
     @JsonProperty("chaosConfig")
     public ChaosConfig chaosConfig;
+
     public SnowMonkeyConfig withChaosConfig(ChaosConfig chaosConfig) {
         this.chaosConfig = chaosConfig;
         return this;
@@ -25,6 +26,7 @@ public class SnowMonkeyConfig {
      */
     @JsonProperty("dryRun")
     public Boolean dryRun;
+
     public SnowMonkeyConfig withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -35,6 +37,7 @@ public class SnowMonkeyConfig {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public SnowMonkeyConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -45,6 +48,7 @@ public class SnowMonkeyConfig {
      */
     @JsonProperty("includeUserFacingDescriptors")
     public Boolean includeUserFacingDescriptors;
+
     public SnowMonkeyConfig withIncludeUserFacingDescriptors(Boolean includeUserFacingDescriptors) {
         this.includeUserFacingDescriptors = includeUserFacingDescriptors;
         return this;
@@ -55,6 +59,7 @@ public class SnowMonkeyConfig {
      */
     @JsonProperty("outageDurationFrom")
     public Integer outageDurationFrom;
+
     public SnowMonkeyConfig withOutageDurationFrom(Integer outageDurationFrom) {
         this.outageDurationFrom = outageDurationFrom;
         return this;
@@ -65,6 +70,7 @@ public class SnowMonkeyConfig {
      */
     @JsonProperty("outageDurationTo")
     public Integer outageDurationTo;
+
     public SnowMonkeyConfig withOutageDurationTo(Integer outageDurationTo) {
         this.outageDurationTo = outageDurationTo;
         return this;
@@ -72,6 +78,7 @@ public class SnowMonkeyConfig {
     
     @JsonProperty("outageStrategy")
     public OutageStrategyEnum outageStrategy;
+
     public SnowMonkeyConfig withOutageStrategy(OutageStrategyEnum outageStrategy) {
         this.outageStrategy = outageStrategy;
         return this;
@@ -82,6 +89,7 @@ public class SnowMonkeyConfig {
      */
     @JsonProperty("startTime")
     public String startTime;
+
     public SnowMonkeyConfig withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -92,6 +100,7 @@ public class SnowMonkeyConfig {
      */
     @JsonProperty("stopTime")
     public String stopTime;
+
     public SnowMonkeyConfig withStopTime(String stopTime) {
         this.stopTime = stopTime;
         return this;
@@ -102,6 +111,7 @@ public class SnowMonkeyConfig {
      */
     @JsonProperty("targetGroups")
     public String[] targetGroups;
+
     public SnowMonkeyConfig withTargetGroups(String[] targetGroups) {
         this.targetGroups = targetGroups;
         return this;
@@ -112,9 +122,23 @@ public class SnowMonkeyConfig {
      */
     @JsonProperty("timesPerDay")
     public Integer timesPerDay;
+
     public SnowMonkeyConfig withTimesPerDay(Integer timesPerDay) {
         this.timesPerDay = timesPerDay;
         return this;
     }
     
+    public SnowMonkeyConfig(@JsonProperty("chaosConfig") ChaosConfig chaosConfig, @JsonProperty("dryRun") Boolean dryRun, @JsonProperty("enabled") Boolean enabled, @JsonProperty("includeUserFacingDescriptors") Boolean includeUserFacingDescriptors, @JsonProperty("outageDurationFrom") Integer outageDurationFrom, @JsonProperty("outageDurationTo") Integer outageDurationTo, @JsonProperty("outageStrategy") OutageStrategyEnum outageStrategy, @JsonProperty("startTime") String startTime, @JsonProperty("stopTime") String stopTime, @JsonProperty("targetGroups") String[] targetGroups, @JsonProperty("timesPerDay") Integer timesPerDay) {
+        this.chaosConfig = chaosConfig;
+        this.dryRun = dryRun;
+        this.enabled = enabled;
+        this.includeUserFacingDescriptors = includeUserFacingDescriptors;
+        this.outageDurationFrom = outageDurationFrom;
+        this.outageDurationTo = outageDurationTo;
+        this.outageStrategy = outageStrategy;
+        this.startTime = startTime;
+        this.stopTime = stopTime;
+        this.targetGroups = targetGroups;
+        this.timesPerDay = timesPerDay;
+  }
 }

@@ -15,9 +15,13 @@ public class UpdateappkeyRequest {
      */
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public UpdateappkeyRequest withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
     
+    public UpdateappkeyRequest(@JsonProperty("isActive") Boolean isActive) {
+        this.isActive = isActive;
+  }
 }

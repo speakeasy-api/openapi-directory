@@ -15,6 +15,7 @@ public class Occurrences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cells")
     public Cell[] cells;
+
     public Occurrences withCells(Cell[] cells) {
         this.cells = cells;
         return this;
@@ -23,6 +24,7 @@ public class Occurrences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineRanges")
     public Range[] lineRanges;
+
     public Occurrences withLineRanges(Range[] lineRanges) {
         this.lineRanges = lineRanges;
         return this;
@@ -31,6 +33,7 @@ public class Occurrences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsetRanges")
     public Range[] offsetRanges;
+
     public Occurrences withOffsetRanges(Range[] offsetRanges) {
         this.offsetRanges = offsetRanges;
         return this;
@@ -39,6 +42,7 @@ public class Occurrences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pages")
     public Page[] pages;
+
     public Occurrences withPages(Page[] pages) {
         this.pages = pages;
         return this;
@@ -47,9 +51,11 @@ public class Occurrences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("records")
     public Record[] records;
+
     public Occurrences withRecords(Record[] records) {
         this.records = records;
         return this;
     }
     
+    public Occurrences(){}
 }

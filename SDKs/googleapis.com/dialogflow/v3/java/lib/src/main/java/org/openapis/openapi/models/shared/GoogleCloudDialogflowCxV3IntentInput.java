@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowCxV3IntentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intent")
     public String intent;
+
     public GoogleCloudDialogflowCxV3IntentInput withIntent(String intent) {
         this.intent = intent;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3IntentInput(){}
 }

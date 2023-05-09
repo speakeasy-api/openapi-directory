@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeScheduledInstancesResult {
     
     public String nextToken;
+
     public DescribeScheduledInstancesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeScheduledInstancesResult {
     
     
     public DescribeScheduledInstancesResultScheduledInstanceSet[] scheduledInstanceSet;
+
     public DescribeScheduledInstancesResult withScheduledInstanceSet(DescribeScheduledInstancesResultScheduledInstanceSet[] scheduledInstanceSet) {
         this.scheduledInstanceSet = scheduledInstanceSet;
         return this;
     }
     
+    public DescribeScheduledInstancesResult(){}
 }

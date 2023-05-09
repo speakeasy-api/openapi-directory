@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetConnectors200ApplicationJSON {
     @JsonProperty("connectors")
     public org.openapis.openapi.models.shared.Connector[] connectors;
+
     public GetConnectors200ApplicationJSON withConnectors(org.openapis.openapi.models.shared.Connector[] connectors) {
         this.connectors = connectors;
         return this;
@@ -25,9 +26,13 @@ public class GetConnectors200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public GetConnectors200ApplicationJSON withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public GetConnectors200ApplicationJSON(@JsonProperty("connectors") org.openapis.openapi.models.shared.Connector[] connectors) {
+        this.connectors = connectors;
+  }
 }

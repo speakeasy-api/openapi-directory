@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeAlarmsForMetricInput {
     
     public Dimension[] dimensions;
+
     public DescribeAlarmsForMetricInput withDimensions(Dimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -16,6 +17,7 @@ public class DescribeAlarmsForMetricInput {
     
     
     public String extendedStatistic;
+
     public DescribeAlarmsForMetricInput withExtendedStatistic(String extendedStatistic) {
         this.extendedStatistic = extendedStatistic;
         return this;
@@ -23,6 +25,7 @@ public class DescribeAlarmsForMetricInput {
     
     
     public String metricName;
+
     public DescribeAlarmsForMetricInput withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -30,6 +33,7 @@ public class DescribeAlarmsForMetricInput {
     
     
     public String namespace;
+
     public DescribeAlarmsForMetricInput withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -37,6 +41,7 @@ public class DescribeAlarmsForMetricInput {
     
     
     public Long period;
+
     public DescribeAlarmsForMetricInput withPeriod(Long period) {
         this.period = period;
         return this;
@@ -44,6 +49,7 @@ public class DescribeAlarmsForMetricInput {
     
     
     public StatisticEnum statistic;
+
     public DescribeAlarmsForMetricInput withStatistic(StatisticEnum statistic) {
         this.statistic = statistic;
         return this;
@@ -51,9 +57,14 @@ public class DescribeAlarmsForMetricInput {
     
     
     public StandardUnitEnum unit;
+
     public DescribeAlarmsForMetricInput withUnit(StandardUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public DescribeAlarmsForMetricInput(@JsonProperty("MetricName") String metricName, @JsonProperty("Namespace") String namespace) {
+        this.metricName = metricName;
+        this.namespace = namespace;
+  }
 }

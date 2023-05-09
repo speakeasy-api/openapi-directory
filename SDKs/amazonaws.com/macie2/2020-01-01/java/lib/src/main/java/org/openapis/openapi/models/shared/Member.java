@@ -20,6 +20,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Member withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -28,6 +29,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("administratorAccountId")
     public String administratorAccountId;
+
     public Member withAdministratorAccountId(String administratorAccountId) {
         this.administratorAccountId = administratorAccountId;
         return this;
@@ -36,6 +38,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Member withArn(String arn) {
         this.arn = arn;
         return this;
@@ -44,6 +47,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Member withEmail(String email) {
         this.email = email;
         return this;
@@ -54,6 +58,7 @@ public class Member {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("invitedAt")
     public OffsetDateTime invitedAt;
+
     public Member withInvitedAt(OffsetDateTime invitedAt) {
         this.invitedAt = invitedAt;
         return this;
@@ -62,6 +67,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterAccountId")
     public String masterAccountId;
+
     public Member withMasterAccountId(String masterAccountId) {
         this.masterAccountId = masterAccountId;
         return this;
@@ -70,6 +76,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationshipStatus")
     public RelationshipStatusEnum relationshipStatus;
+
     public Member withRelationshipStatus(RelationshipStatusEnum relationshipStatus) {
         this.relationshipStatus = relationshipStatus;
         return this;
@@ -78,6 +85,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Member withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -88,9 +96,11 @@ public class Member {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public Member withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Member(){}
 }

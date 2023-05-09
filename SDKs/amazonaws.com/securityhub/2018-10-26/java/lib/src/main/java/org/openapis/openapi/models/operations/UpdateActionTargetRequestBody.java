@@ -15,6 +15,7 @@ public class UpdateActionTargetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateActionTargetRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class UpdateActionTargetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateActionTargetRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateActionTargetRequestBody(){}
 }

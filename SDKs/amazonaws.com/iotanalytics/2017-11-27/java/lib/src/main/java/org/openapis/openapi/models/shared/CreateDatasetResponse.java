@@ -15,6 +15,7 @@ public class CreateDatasetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetArn")
     public String datasetArn;
+
     public CreateDatasetResponse withDatasetArn(String datasetArn) {
         this.datasetArn = datasetArn;
         return this;
@@ -23,6 +24,7 @@ public class CreateDatasetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetName")
     public String datasetName;
+
     public CreateDatasetResponse withDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
@@ -31,9 +33,11 @@ public class CreateDatasetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionPeriod")
     public RetentionPeriod retentionPeriod;
+
     public CreateDatasetResponse withRetentionPeriod(RetentionPeriod retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
     }
     
+    public CreateDatasetResponse(){}
 }

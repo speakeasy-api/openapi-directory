@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeListenerCertificatesOutput {
     
     public Certificate[] certificates;
+
     public DescribeListenerCertificatesOutput withCertificates(Certificate[] certificates) {
         this.certificates = certificates;
         return this;
@@ -19,9 +20,11 @@ public class DescribeListenerCertificatesOutput {
     
     
     public String nextMarker;
+
     public DescribeListenerCertificatesOutput withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public DescribeListenerCertificatesOutput(){}
 }

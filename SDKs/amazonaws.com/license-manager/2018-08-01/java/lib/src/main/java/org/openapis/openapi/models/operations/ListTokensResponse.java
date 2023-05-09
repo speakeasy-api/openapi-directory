@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTokensResponse {
@@ -12,6 +13,7 @@ public class ListTokensResponse {
      */
     
     public Object accessDeniedException;
+
     public ListTokensResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListTokensResponse {
      */
     
     public Object authorizationException;
+
     public ListTokensResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class ListTokensResponse {
     
     
     public String contentType;
+
     public ListTokensResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListTokensResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTokensResponse listTokensResponse;
+
     public ListTokensResponse withListTokensResponse(org.openapis.openapi.models.shared.ListTokensResponse listTokensResponse) {
         this.listTokensResponse = listTokensResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListTokensResponse {
      */
     
     public Object rateLimitExceededException;
+
     public ListTokensResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class ListTokensResponse {
     
     
     public Integer statusCode;
+
     public ListTokensResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListTokensResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTokensResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListTokensResponse {
      */
     
     public Object serverInternalException;
+
     public ListTokensResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -83,9 +92,14 @@ public class ListTokensResponse {
      */
     
     public Object validationException;
+
     public ListTokensResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListTokensResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

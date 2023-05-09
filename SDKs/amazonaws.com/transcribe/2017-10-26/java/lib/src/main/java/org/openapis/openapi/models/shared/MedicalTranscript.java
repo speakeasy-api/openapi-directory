@@ -15,9 +15,11 @@ public class MedicalTranscript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TranscriptFileUri")
     public String transcriptFileUri;
+
     public MedicalTranscript withTranscriptFileUri(String transcriptFileUri) {
         this.transcriptFileUri = transcriptFileUri;
         return this;
     }
     
+    public MedicalTranscript(){}
 }

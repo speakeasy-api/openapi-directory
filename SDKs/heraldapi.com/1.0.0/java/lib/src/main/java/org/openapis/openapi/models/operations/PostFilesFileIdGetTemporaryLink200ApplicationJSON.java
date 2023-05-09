@@ -18,9 +18,11 @@ public class PostFilesFileIdGetTemporaryLink200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temporary_link")
     public org.openapis.openapi.models.shared.TemporaryLinkV1 temporaryLink;
+
     public PostFilesFileIdGetTemporaryLink200ApplicationJSON withTemporaryLink(org.openapis.openapi.models.shared.TemporaryLinkV1 temporaryLink) {
         this.temporaryLink = temporaryLink;
         return this;
     }
     
+    public PostFilesFileIdGetTemporaryLink200ApplicationJSON(){}
 }

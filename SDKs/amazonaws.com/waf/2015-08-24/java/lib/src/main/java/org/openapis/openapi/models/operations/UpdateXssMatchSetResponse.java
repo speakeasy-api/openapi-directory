@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateXssMatchSetResponse {
     
     public String contentType;
+
     public UpdateXssMatchSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateXssMatchSetResponse {
     
     
     public Integer statusCode;
+
     public UpdateXssMatchSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateXssMatchSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateXssMatchSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateXssMatchSetResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateXssMatchSetResponse updateXssMatchSetResponse;
+
     public UpdateXssMatchSetResponse withUpdateXssMatchSetResponse(org.openapis.openapi.models.shared.UpdateXssMatchSetResponse updateXssMatchSetResponse) {
         this.updateXssMatchSetResponse = updateXssMatchSetResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateXssMatchSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public UpdateXssMatchSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateXssMatchSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public UpdateXssMatchSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateXssMatchSetResponse {
      */
     
     public Object wafInvalidOperationException;
+
     public UpdateXssMatchSetResponse withWAFInvalidOperationException(Object wafInvalidOperationException) {
         this.wafInvalidOperationException = wafInvalidOperationException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateXssMatchSetResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public UpdateXssMatchSetResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateXssMatchSetResponse {
      */
     
     public Object wafLimitsExceededException;
+
     public UpdateXssMatchSetResponse withWAFLimitsExceededException(Object wafLimitsExceededException) {
         this.wafLimitsExceededException = wafLimitsExceededException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateXssMatchSetResponse {
      */
     
     public Object wafNonexistentContainerException;
+
     public UpdateXssMatchSetResponse withWAFNonexistentContainerException(Object wafNonexistentContainerException) {
         this.wafNonexistentContainerException = wafNonexistentContainerException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateXssMatchSetResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public UpdateXssMatchSetResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -113,9 +125,14 @@ public class UpdateXssMatchSetResponse {
      */
     
     public Object wafStaleDataException;
+
     public UpdateXssMatchSetResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public UpdateXssMatchSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

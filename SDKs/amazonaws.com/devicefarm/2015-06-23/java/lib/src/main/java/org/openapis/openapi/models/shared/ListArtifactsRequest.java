@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListArtifactsRequest {
     @JsonProperty("arn")
     public String arn;
+
     public ListArtifactsRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class ListArtifactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListArtifactsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -29,9 +31,14 @@ public class ListArtifactsRequest {
     
     @JsonProperty("type")
     public ArtifactCategoryEnum type;
+
     public ListArtifactsRequest withType(ArtifactCategoryEnum type) {
         this.type = type;
         return this;
     }
     
+    public ListArtifactsRequest(@JsonProperty("arn") String arn, @JsonProperty("type") ArtifactCategoryEnum type) {
+        this.arn = arn;
+        this.type = type;
+  }
 }

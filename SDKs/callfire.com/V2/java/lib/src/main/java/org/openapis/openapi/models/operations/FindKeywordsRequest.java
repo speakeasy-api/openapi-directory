@@ -12,9 +12,11 @@ public class FindKeywordsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keywords")
     public String[] keywords;
+
     public FindKeywordsRequest withKeywords(String[] keywords) {
         this.keywords = keywords;
         return this;
     }
     
+    public FindKeywordsRequest(){}
 }

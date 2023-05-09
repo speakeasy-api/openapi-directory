@@ -18,6 +18,7 @@ public class SignupUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SignupUrl withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class SignupUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public SignupUrl withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public SignupUrl(){}
 }

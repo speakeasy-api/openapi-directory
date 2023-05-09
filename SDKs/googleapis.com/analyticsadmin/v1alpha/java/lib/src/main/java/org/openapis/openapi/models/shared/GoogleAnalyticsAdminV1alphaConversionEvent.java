@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaConversionEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleAnalyticsAdminV1alphaConversionEvent withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaConversionEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom")
     public Boolean custom;
+
     public GoogleAnalyticsAdminV1alphaConversionEvent withCustom(Boolean custom) {
         this.custom = custom;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaConversionEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletable")
     public Boolean deletable;
+
     public GoogleAnalyticsAdminV1alphaConversionEvent withDeletable(Boolean deletable) {
         this.deletable = deletable;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1alphaConversionEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventName")
     public String eventName;
+
     public GoogleAnalyticsAdminV1alphaConversionEvent withEventName(String eventName) {
         this.eventName = eventName;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAnalyticsAdminV1alphaConversionEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1alphaConversionEvent withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaConversionEvent(){}
 }

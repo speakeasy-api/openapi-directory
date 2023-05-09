@@ -54,12 +54,10 @@ public class CatalogsCatalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CatalogStoreIndexResponse res = new org.openapis.openapi.models.operations.CatalogStoreIndexResponse() {{
+        org.openapis.openapi.models.operations.CatalogStoreIndexResponse res = new org.openapis.openapi.models.operations.CatalogStoreIndexResponse(contentType, httpRes.statusCode()) {{
             catalogStoreIndex = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,12 +103,10 @@ public class CatalogsCatalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CatalogChangeCatalogColumnUserNameResponse res = new org.openapis.openapi.models.operations.CatalogChangeCatalogColumnUserNameResponse() {{
+        org.openapis.openapi.models.operations.CatalogChangeCatalogColumnUserNameResponse res = new org.openapis.openapi.models.operations.CatalogChangeCatalogColumnUserNameResponse(contentType, httpRes.statusCode()) {{
             importAlreadyInProgressResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -158,12 +154,10 @@ public class CatalogsCatalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CatalogChangeCustomColumnExpressionResponse res = new org.openapis.openapi.models.operations.CatalogChangeCustomColumnExpressionResponse() {{
+        org.openapis.openapi.models.operations.CatalogChangeCustomColumnExpressionResponse res = new org.openapis.openapi.models.operations.CatalogChangeCustomColumnExpressionResponse(contentType, httpRes.statusCode()) {{
             importAlreadyInProgressResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -211,12 +205,10 @@ public class CatalogsCatalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CatalogChangeCustomColumnUserNameResponse res = new org.openapis.openapi.models.operations.CatalogChangeCustomColumnUserNameResponse() {{
+        org.openapis.openapi.models.operations.CatalogChangeCustomColumnUserNameResponse res = new org.openapis.openapi.models.operations.CatalogChangeCustomColumnUserNameResponse(contentType, httpRes.statusCode()) {{
             importAlreadyInProgressResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -264,13 +256,11 @@ public class CatalogsCatalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CatalogComputeExpressionResponse res = new org.openapis.openapi.models.operations.CatalogComputeExpressionResponse() {{
+        org.openapis.openapi.models.operations.CatalogComputeExpressionResponse res = new org.openapis.openapi.models.operations.CatalogComputeExpressionResponse(contentType, httpRes.statusCode()) {{
             catalogComputeExpression200ApplicationJSONString = null;
             catalogComputeExpression400ApplicationJSONString = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -316,11 +306,9 @@ public class CatalogsCatalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CatalogDeleteCustomColumnResponse res = new org.openapis.openapi.models.operations.CatalogDeleteCustomColumnResponse() {{
+        org.openapis.openapi.models.operations.CatalogDeleteCustomColumnResponse res = new org.openapis.openapi.models.operations.CatalogDeleteCustomColumnResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -356,12 +344,10 @@ public class CatalogsCatalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CatalogGetCatalogColumnsResponse res = new org.openapis.openapi.models.operations.CatalogGetCatalogColumnsResponse() {{
+        org.openapis.openapi.models.operations.CatalogGetCatalogColumnsResponse res = new org.openapis.openapi.models.operations.CatalogGetCatalogColumnsResponse(contentType, httpRes.statusCode()) {{
             catalogColumnList = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -410,12 +396,10 @@ public class CatalogsCatalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CatalogGetCategoriesResponse res = new org.openapis.openapi.models.operations.CatalogGetCategoriesResponse() {{
+        org.openapis.openapi.models.operations.CatalogGetCategoriesResponse res = new org.openapis.openapi.models.operations.CatalogGetCategoriesResponse(contentType, httpRes.statusCode()) {{
             categoryList = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -458,12 +442,10 @@ public class CatalogsCatalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CatalogGetCustomColumnExpressionResponse res = new org.openapis.openapi.models.operations.CatalogGetCustomColumnExpressionResponse() {{
+        org.openapis.openapi.models.operations.CatalogGetCustomColumnExpressionResponse res = new org.openapis.openapi.models.operations.CatalogGetCustomColumnExpressionResponse(contentType, httpRes.statusCode()) {{
             catalogGetCustomColumnExpression200ApplicationJSONString = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -505,12 +487,10 @@ public class CatalogsCatalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CatalogGetCustomColumnsResponse res = new org.openapis.openapi.models.operations.CatalogGetCustomColumnsResponse() {{
+        org.openapis.openapi.models.operations.CatalogGetCustomColumnsResponse res = new org.openapis.openapi.models.operations.CatalogGetCustomColumnsResponse(contentType, httpRes.statusCode()) {{
             customColumnList = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -551,12 +531,10 @@ public class CatalogsCatalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CatalogGetProductByProductIdResponse res = new org.openapis.openapi.models.operations.CatalogGetProductByProductIdResponse() {{
+        org.openapis.openapi.models.operations.CatalogGetProductByProductIdResponse res = new org.openapis.openapi.models.operations.CatalogGetProductByProductIdResponse(contentType, httpRes.statusCode()) {{
             product = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -603,12 +581,10 @@ public class CatalogsCatalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CatalogGetProductBySkuResponse res = new org.openapis.openapi.models.operations.CatalogGetProductBySkuResponse() {{
+        org.openapis.openapi.models.operations.CatalogGetProductBySkuResponse res = new org.openapis.openapi.models.operations.CatalogGetProductBySkuResponse(contentType, httpRes.statusCode()) {{
             product = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -654,12 +630,10 @@ public class CatalogsCatalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CatalogGetProductsResponse res = new org.openapis.openapi.models.operations.CatalogGetProductsResponse() {{
+        org.openapis.openapi.models.operations.CatalogGetProductsResponse res = new org.openapis.openapi.models.operations.CatalogGetProductsResponse(contentType, httpRes.statusCode()) {{
             productList = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -701,12 +675,10 @@ public class CatalogsCatalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CatalogGetRandomProductsResponse res = new org.openapis.openapi.models.operations.CatalogGetRandomProductsResponse() {{
+        org.openapis.openapi.models.operations.CatalogGetRandomProductsResponse res = new org.openapis.openapi.models.operations.CatalogGetRandomProductsResponse(contentType, httpRes.statusCode()) {{
             randomProductList = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -752,12 +724,10 @@ public class CatalogsCatalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CatalogSaveCustomColumnResponse res = new org.openapis.openapi.models.operations.CatalogSaveCustomColumnResponse() {{
+        org.openapis.openapi.models.operations.CatalogSaveCustomColumnResponse res = new org.openapis.openapi.models.operations.CatalogSaveCustomColumnResponse(contentType, httpRes.statusCode()) {{
             importAlreadyInProgressResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -800,12 +770,10 @@ public class CatalogsCatalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportationGetManualUpdateLastInputConfigResponse res = new org.openapis.openapi.models.operations.ImportationGetManualUpdateLastInputConfigResponse() {{
+        org.openapis.openapi.models.operations.ImportationGetManualUpdateLastInputConfigResponse res = new org.openapis.openapi.models.operations.ImportationGetManualUpdateLastInputConfigResponse(contentType, httpRes.statusCode()) {{
             lastManualImportInputConfiguration = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

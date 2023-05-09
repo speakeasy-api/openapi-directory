@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV2SavedListViewsJsonRequestBody {
@@ -12,6 +13,7 @@ public class PostV2SavedListViewsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=is_default")
     public Boolean isDefault;
+
     public PostV2SavedListViewsJsonRequestBody withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -22,6 +24,7 @@ public class PostV2SavedListViewsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public PostV2SavedListViewsJsonRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -32,6 +35,7 @@ public class PostV2SavedListViewsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=view")
     public String view;
+
     public PostV2SavedListViewsJsonRequestBody withView(String view) {
         this.view = view;
         return this;
@@ -42,9 +46,14 @@ public class PostV2SavedListViewsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=view_params")
     public String viewParams;
+
     public PostV2SavedListViewsJsonRequestBody withViewParams(String viewParams) {
         this.viewParams = viewParams;
         return this;
     }
     
+    public PostV2SavedListViewsJsonRequestBody(@JsonProperty("name") String name, @JsonProperty("view") String view) {
+        this.name = name;
+        this.view = view;
+  }
 }

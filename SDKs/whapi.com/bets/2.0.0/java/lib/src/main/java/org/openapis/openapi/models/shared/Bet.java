@@ -15,6 +15,7 @@ public class Bet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delayedBetId")
     public String delayedBetId;
+
     public Bet withDelayedBetId(String delayedBetId) {
         this.delayedBetId = delayedBetId;
         return this;
@@ -26,6 +27,7 @@ public class Bet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freeBetId")
     public String freeBetId;
+
     public Bet withFreeBetId(String freeBetId) {
         this.freeBetId = freeBetId;
         return this;
@@ -33,6 +35,7 @@ public class Bet {
     
     @JsonProperty("legs")
     public Leg[] legs;
+
     public Bet withLegs(Leg[] legs) {
         this.legs = legs;
         return this;
@@ -43,6 +46,7 @@ public class Bet {
      */
     @JsonProperty("number")
     public Long number;
+
     public Bet withNumber(Long number) {
         this.number = number;
         return this;
@@ -53,6 +57,7 @@ public class Bet {
      */
     @JsonProperty("stake")
     public Double stake;
+
     public Bet withStake(Double stake) {
         this.stake = stake;
         return this;
@@ -63,9 +68,16 @@ public class Bet {
      */
     @JsonProperty("typeCode")
     public String typeCode;
+
     public Bet withTypeCode(String typeCode) {
         this.typeCode = typeCode;
         return this;
     }
     
+    public Bet(@JsonProperty("legs") Leg[] legs, @JsonProperty("number") Long number, @JsonProperty("stake") Double stake, @JsonProperty("typeCode") String typeCode) {
+        this.legs = legs;
+        this.number = number;
+        this.stake = stake;
+        this.typeCode = typeCode;
+  }
 }

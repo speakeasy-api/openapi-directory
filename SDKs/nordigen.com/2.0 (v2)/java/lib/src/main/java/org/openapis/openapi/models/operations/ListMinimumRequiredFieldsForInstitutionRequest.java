@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListMinimumRequiredFieldsForInstitutionRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=institution_id")
     public String institutionId;
+
     public ListMinimumRequiredFieldsForInstitutionRequest withInstitutionId(String institutionId) {
         this.institutionId = institutionId;
         return this;
     }
     
+    public ListMinimumRequiredFieldsForInstitutionRequest(@JsonProperty("institution_id") String institutionId) {
+        this.institutionId = institutionId;
+  }
 }

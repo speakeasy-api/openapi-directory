@@ -15,6 +15,7 @@ public class ListAliasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAliasesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListAliasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SageMakerImageVersionAliases")
     public String[] sageMakerImageVersionAliases;
+
     public ListAliasesResponse withSageMakerImageVersionAliases(String[] sageMakerImageVersionAliases) {
         this.sageMakerImageVersionAliases = sageMakerImageVersionAliases;
         return this;
     }
     
+    public ListAliasesResponse(){}
 }

@@ -18,6 +18,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamicSegment")
     public DynamicSegment dynamicSegment;
+
     public Segment withDynamicSegment(DynamicSegment dynamicSegment) {
         this.dynamicSegment = dynamicSegment;
         return this;
@@ -29,9 +30,11 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentId")
     public String segmentId;
+
     public Segment withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
     }
     
+    public Segment(){}
 }

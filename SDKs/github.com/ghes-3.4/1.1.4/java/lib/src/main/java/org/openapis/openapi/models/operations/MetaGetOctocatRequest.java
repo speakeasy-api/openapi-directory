@@ -12,9 +12,11 @@ public class MetaGetOctocatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=s")
     public String s;
+
     public MetaGetOctocatRequest withS(String s) {
         this.s = s;
         return this;
     }
     
+    public MetaGetOctocatRequest(){}
 }

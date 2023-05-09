@@ -18,9 +18,11 @@ public class NamespaceLifecycleState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public NamespaceLifecycleStateCodeEnum code;
+
     public NamespaceLifecycleState withCode(NamespaceLifecycleStateCodeEnum code) {
         this.code = code;
         return this;
     }
     
+    public NamespaceLifecycleState(){}
 }

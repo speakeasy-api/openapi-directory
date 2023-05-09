@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTrialResponse {
@@ -12,6 +13,7 @@ public class UpdateTrialResponse {
      */
     
     public Object conflictException;
+
     public UpdateTrialResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateTrialResponse {
     
     
     public String contentType;
+
     public UpdateTrialResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateTrialResponse {
      */
     
     public Object resourceNotFound;
+
     public UpdateTrialResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class UpdateTrialResponse {
     
     
     public Integer statusCode;
+
     public UpdateTrialResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateTrialResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTrialResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class UpdateTrialResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateTrialResponse updateTrialResponse;
+
     public UpdateTrialResponse withUpdateTrialResponse(org.openapis.openapi.models.shared.UpdateTrialResponse updateTrialResponse) {
         this.updateTrialResponse = updateTrialResponse;
         return this;
     }
     
+    public UpdateTrialResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

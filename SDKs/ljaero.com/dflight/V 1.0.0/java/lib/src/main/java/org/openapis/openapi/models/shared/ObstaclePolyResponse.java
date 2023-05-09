@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ObstaclePolyResponse {
     @JsonProperty("found")
     public java.util.Map<String, Object> found;
+
     public ObstaclePolyResponse withFound(java.util.Map<String, Object> found) {
         this.found = found;
         return this;
     }
     
+    public ObstaclePolyResponse(@JsonProperty("found") java.util.Map<String, Object> found) {
+        this.found = found;
+  }
 }

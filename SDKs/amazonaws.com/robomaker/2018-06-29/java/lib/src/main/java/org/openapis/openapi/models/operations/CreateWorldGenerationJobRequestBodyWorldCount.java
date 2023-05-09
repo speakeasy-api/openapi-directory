@@ -15,6 +15,7 @@ public class CreateWorldGenerationJobRequestBodyWorldCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floorplanCount")
     public Long floorplanCount;
+
     public CreateWorldGenerationJobRequestBodyWorldCount withFloorplanCount(Long floorplanCount) {
         this.floorplanCount = floorplanCount;
         return this;
@@ -23,9 +24,11 @@ public class CreateWorldGenerationJobRequestBodyWorldCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interiorCountPerFloorplan")
     public Long interiorCountPerFloorplan;
+
     public CreateWorldGenerationJobRequestBodyWorldCount withInteriorCountPerFloorplan(Long interiorCountPerFloorplan) {
         this.interiorCountPerFloorplan = interiorCountPerFloorplan;
         return this;
     }
     
+    public CreateWorldGenerationJobRequestBodyWorldCount(){}
 }

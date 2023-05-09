@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdTagsTagsTopQuestionsRequest {
@@ -13,6 +14,7 @@ public class GetUsersIdTagsTagsTopQuestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetUsersIdTagsTagsTopQuestionsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -53,6 +55,7 @@ public class GetUsersIdTagsTagsTopQuestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetUsersIdTagsTagsTopQuestionsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -63,6 +66,7 @@ public class GetUsersIdTagsTagsTopQuestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public Long fromdate;
+
     public GetUsersIdTagsTagsTopQuestionsRequest withFromdate(Long fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -70,6 +74,7 @@ public class GetUsersIdTagsTagsTopQuestionsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetUsersIdTagsTagsTopQuestionsRequest withId(Long id) {
         this.id = id;
         return this;
@@ -83,6 +88,7 @@ public class GetUsersIdTagsTagsTopQuestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public String max;
+
     public GetUsersIdTagsTagsTopQuestionsRequest withMax(String max) {
         this.max = max;
         return this;
@@ -96,6 +102,7 @@ public class GetUsersIdTagsTagsTopQuestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min")
     public String min;
+
     public GetUsersIdTagsTagsTopQuestionsRequest withMin(String min) {
         this.min = min;
         return this;
@@ -103,6 +110,7 @@ public class GetUsersIdTagsTagsTopQuestionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public GetUsersIdTagsTagsTopQuestionsOrderEnum order;
+
     public GetUsersIdTagsTagsTopQuestionsRequest withOrder(GetUsersIdTagsTagsTopQuestionsOrderEnum order) {
         this.order = order;
         return this;
@@ -110,6 +118,7 @@ public class GetUsersIdTagsTagsTopQuestionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetUsersIdTagsTagsTopQuestionsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -117,6 +126,7 @@ public class GetUsersIdTagsTagsTopQuestionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetUsersIdTagsTagsTopQuestionsRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
@@ -128,6 +138,7 @@ public class GetUsersIdTagsTagsTopQuestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
     public String site;
+
     public GetUsersIdTagsTagsTopQuestionsRequest withSite(String site) {
         this.site = site;
         return this;
@@ -135,6 +146,7 @@ public class GetUsersIdTagsTagsTopQuestionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetUsersIdTagsTagsTopQuestionsSortEnum sort;
+
     public GetUsersIdTagsTagsTopQuestionsRequest withSort(GetUsersIdTagsTagsTopQuestionsSortEnum sort) {
         this.sort = sort;
         return this;
@@ -145,6 +157,7 @@ public class GetUsersIdTagsTagsTopQuestionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tags")
     public String tags;
+
     public GetUsersIdTagsTagsTopQuestionsRequest withTags(String tags) {
         this.tags = tags;
         return this;
@@ -155,9 +168,15 @@ public class GetUsersIdTagsTagsTopQuestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public Long todate;
+
     public GetUsersIdTagsTagsTopQuestionsRequest withTodate(Long todate) {
         this.todate = todate;
         return this;
     }
     
+    public GetUsersIdTagsTagsTopQuestionsRequest(@JsonProperty("id") Long id, @JsonProperty("site") String site, @JsonProperty("tags") String tags) {
+        this.id = id;
+        this.site = site;
+        this.tags = tags;
+  }
 }

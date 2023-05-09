@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRebalanceResponse {
     
     public String contentType;
+
     public CreateRebalanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateRebalanceResponse {
      */
     
     public CreateRebalance201ApplicationJSON createRebalance201ApplicationJSONObject;
+
     public CreateRebalanceResponse withCreateRebalance201ApplicationJSONObject(CreateRebalance201ApplicationJSON createRebalance201ApplicationJSONObject) {
         this.createRebalance201ApplicationJSONObject = createRebalance201ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class CreateRebalanceResponse {
      */
     
     public CreateRebalance400ApplicationJSON createRebalance400ApplicationJSONObject;
+
     public CreateRebalanceResponse withCreateRebalance400ApplicationJSONObject(CreateRebalance400ApplicationJSON createRebalance400ApplicationJSONObject) {
         this.createRebalance400ApplicationJSONObject = createRebalance400ApplicationJSONObject;
         return this;
@@ -39,6 +43,7 @@ public class CreateRebalanceResponse {
      */
     
     public CreateRebalance401ApplicationJSON createRebalance401ApplicationJSONObject;
+
     public CreateRebalanceResponse withCreateRebalance401ApplicationJSONObject(CreateRebalance401ApplicationJSON createRebalance401ApplicationJSONObject) {
         this.createRebalance401ApplicationJSONObject = createRebalance401ApplicationJSONObject;
         return this;
@@ -49,6 +54,7 @@ public class CreateRebalanceResponse {
      */
     
     public CreateRebalance403ApplicationJSON createRebalance403ApplicationJSONObject;
+
     public CreateRebalanceResponse withCreateRebalance403ApplicationJSONObject(CreateRebalance403ApplicationJSON createRebalance403ApplicationJSONObject) {
         this.createRebalance403ApplicationJSONObject = createRebalance403ApplicationJSONObject;
         return this;
@@ -59,6 +65,7 @@ public class CreateRebalanceResponse {
      */
     
     public CreateRebalance404ApplicationJSON createRebalance404ApplicationJSONObject;
+
     public CreateRebalanceResponse withCreateRebalance404ApplicationJSONObject(CreateRebalance404ApplicationJSON createRebalance404ApplicationJSONObject) {
         this.createRebalance404ApplicationJSONObject = createRebalance404ApplicationJSONObject;
         return this;
@@ -69,6 +76,7 @@ public class CreateRebalanceResponse {
      */
     
     public CreateRebalance409ApplicationJSON createRebalance409ApplicationJSONObject;
+
     public CreateRebalanceResponse withCreateRebalance409ApplicationJSONObject(CreateRebalance409ApplicationJSON createRebalance409ApplicationJSONObject) {
         this.createRebalance409ApplicationJSONObject = createRebalance409ApplicationJSONObject;
         return this;
@@ -79,6 +87,7 @@ public class CreateRebalanceResponse {
      */
     
     public CreateRebalance429ApplicationJSON createRebalance429ApplicationJSONObject;
+
     public CreateRebalanceResponse withCreateRebalance429ApplicationJSONObject(CreateRebalance429ApplicationJSON createRebalance429ApplicationJSONObject) {
         this.createRebalance429ApplicationJSONObject = createRebalance429ApplicationJSONObject;
         return this;
@@ -89,6 +98,7 @@ public class CreateRebalanceResponse {
      */
     
     public CreateRebalance500ApplicationJSON createRebalance500ApplicationJSONObject;
+
     public CreateRebalanceResponse withCreateRebalance500ApplicationJSONObject(CreateRebalance500ApplicationJSON createRebalance500ApplicationJSONObject) {
         this.createRebalance500ApplicationJSONObject = createRebalance500ApplicationJSONObject;
         return this;
@@ -96,6 +106,7 @@ public class CreateRebalanceResponse {
     
     
     public Integer statusCode;
+
     public CreateRebalanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class CreateRebalanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRebalanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateRebalanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

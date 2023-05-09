@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NetworkImpairment {
     @JsonProperty("AsPath")
     public Network[] asPath;
+
     public NetworkImpairment withAsPath(Network[] asPath) {
         this.asPath = asPath;
         return this;
@@ -19,6 +20,7 @@ public class NetworkImpairment {
     
     @JsonProperty("NetworkEventType")
     public TriangulationEventTypeEnum networkEventType;
+
     public NetworkImpairment withNetworkEventType(TriangulationEventTypeEnum networkEventType) {
         this.networkEventType = networkEventType;
         return this;
@@ -26,9 +28,15 @@ public class NetworkImpairment {
     
     @JsonProperty("Networks")
     public Network[] networks;
+
     public NetworkImpairment withNetworks(Network[] networks) {
         this.networks = networks;
         return this;
     }
     
+    public NetworkImpairment(@JsonProperty("AsPath") Network[] asPath, @JsonProperty("NetworkEventType") TriangulationEventTypeEnum networkEventType, @JsonProperty("Networks") Network[] networks) {
+        this.asPath = asPath;
+        this.networkEventType = networkEventType;
+        this.networks = networks;
+  }
 }

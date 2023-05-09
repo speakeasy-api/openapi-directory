@@ -60,12 +60,10 @@ public class RewardEarningFulfillment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRewardEarningFulfillmentResponse res = new org.openapis.openapi.models.operations.CreateRewardEarningFulfillmentResponse() {{
+        org.openapis.openapi.models.operations.CreateRewardEarningFulfillmentResponse res = new org.openapis.openapi.models.operations.CreateRewardEarningFulfillmentResponse(contentType, httpRes.statusCode()) {{
             createRewardEarningFulfillmentResponse = null;
             createOrUpdateErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,12 +105,10 @@ public class RewardEarningFulfillment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchRewardEarningFulfillmentResponse res = new org.openapis.openapi.models.operations.FetchRewardEarningFulfillmentResponse() {{
+        org.openapis.openapi.models.operations.FetchRewardEarningFulfillmentResponse res = new org.openapis.openapi.models.operations.FetchRewardEarningFulfillmentResponse(contentType, httpRes.statusCode()) {{
             fetchRewardEarningFulfillmentResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -160,12 +156,10 @@ public class RewardEarningFulfillment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchRewardEarningFulfillmentsResponse res = new org.openapis.openapi.models.operations.FetchRewardEarningFulfillmentsResponse() {{
+        org.openapis.openapi.models.operations.FetchRewardEarningFulfillmentsResponse res = new org.openapis.openapi.models.operations.FetchRewardEarningFulfillmentsResponse(contentType, httpRes.statusCode()) {{
             fetchRewardEarningFulfillmentsResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

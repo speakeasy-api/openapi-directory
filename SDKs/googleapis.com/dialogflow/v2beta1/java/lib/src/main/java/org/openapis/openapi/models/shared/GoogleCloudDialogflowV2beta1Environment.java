@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentVersion")
     public String agentVersion;
+
     public GoogleCloudDialogflowV2beta1Environment withAgentVersion(String agentVersion) {
         this.agentVersion = agentVersion;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowV2beta1Environment withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfillment")
     public GoogleCloudDialogflowV2beta1Fulfillment fulfillment;
+
     public GoogleCloudDialogflowV2beta1Environment withFulfillment(GoogleCloudDialogflowV2beta1Fulfillment fulfillment) {
         this.fulfillment = fulfillment;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2beta1Environment withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2beta1Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDialogflowV2beta1EnvironmentStateEnum state;
+
     public GoogleCloudDialogflowV2beta1Environment withState(GoogleCloudDialogflowV2beta1EnvironmentStateEnum state) {
         this.state = state;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowV2beta1Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textToSpeechSettings")
     public GoogleCloudDialogflowV2beta1TextToSpeechSettings textToSpeechSettings;
+
     public GoogleCloudDialogflowV2beta1Environment withTextToSpeechSettings(GoogleCloudDialogflowV2beta1TextToSpeechSettings textToSpeechSettings) {
         this.textToSpeechSettings = textToSpeechSettings;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDialogflowV2beta1Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDialogflowV2beta1Environment withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1Environment(){}
 }

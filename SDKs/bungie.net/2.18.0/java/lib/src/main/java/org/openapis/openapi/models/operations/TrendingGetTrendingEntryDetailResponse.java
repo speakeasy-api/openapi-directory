@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TrendingGetTrendingEntryDetailResponse {
     
     public byte[] body;
+
     public TrendingGetTrendingEntryDetailResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class TrendingGetTrendingEntryDetailResponse {
     
     
     public String contentType;
+
     public TrendingGetTrendingEntryDetailResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class TrendingGetTrendingEntryDetailResponse {
     
     
     public Integer statusCode;
+
     public TrendingGetTrendingEntryDetailResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class TrendingGetTrendingEntryDetailResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TrendingGetTrendingEntryDetailResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TrendingGetTrendingEntryDetailResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouse
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlAction withUrl(String url) {
         this.url = url;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouse
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlTypeHint")
     public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionUrlTypeHintEnum urlTypeHint;
+
     public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlAction withUrlTypeHint(GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionUrlTypeHintEnum urlTypeHint) {
         this.urlTypeHint = urlTypeHint;
         return this;
     }
     
+    public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlAction(){}
 }

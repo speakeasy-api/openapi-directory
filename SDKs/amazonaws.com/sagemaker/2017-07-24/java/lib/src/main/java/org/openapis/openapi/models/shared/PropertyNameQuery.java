@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PropertyNameQuery {
     @JsonProperty("PropertyNameHint")
     public String propertyNameHint;
+
     public PropertyNameQuery withPropertyNameHint(String propertyNameHint) {
         this.propertyNameHint = propertyNameHint;
         return this;
     }
     
+    public PropertyNameQuery(@JsonProperty("PropertyNameHint") String propertyNameHint) {
+        this.propertyNameHint = propertyNameHint;
+  }
 }

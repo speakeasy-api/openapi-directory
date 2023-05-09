@@ -18,6 +18,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnectionApplicationEndpoi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionApplicationEndpoint withHost(String host) {
         this.host = host;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnectionApplicationEndpoi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionApplicationEndpoint withPort(Integer port) {
         this.port = port;
         return this;
     }
     
+    public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionApplicationEndpoint(){}
 }

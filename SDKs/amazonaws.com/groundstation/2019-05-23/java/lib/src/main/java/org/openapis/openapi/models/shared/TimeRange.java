@@ -19,6 +19,7 @@ public class TimeRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public TimeRange withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -28,9 +29,14 @@ public class TimeRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public TimeRange withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public TimeRange(@JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("startTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.startTime = startTime;
+  }
 }

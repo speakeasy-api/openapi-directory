@@ -18,6 +18,7 @@ public class ClientUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ClientUser withEmail(String email) {
         this.email = email;
         return this;
@@ -29,6 +30,7 @@ public class ClientUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ClientUser withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class ClientUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ClientUserStateEnum state;
+
     public ClientUser withState(ClientUserStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ClientUser(){}
 }

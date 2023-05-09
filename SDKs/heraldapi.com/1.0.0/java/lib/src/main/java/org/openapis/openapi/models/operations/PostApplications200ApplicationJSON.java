@@ -18,9 +18,11 @@ public class PostApplications200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application")
     public org.openapis.openapi.models.shared.ApplicationReadV1 application;
+
     public PostApplications200ApplicationJSON withApplication(org.openapis.openapi.models.shared.ApplicationReadV1 application) {
         this.application = application;
         return this;
     }
     
+    public PostApplications200ApplicationJSON(){}
 }

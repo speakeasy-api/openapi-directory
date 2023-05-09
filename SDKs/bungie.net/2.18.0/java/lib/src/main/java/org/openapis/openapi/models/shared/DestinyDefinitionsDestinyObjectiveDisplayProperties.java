@@ -12,6 +12,7 @@ public class DestinyDefinitionsDestinyObjectiveDisplayProperties {
      */
     
     public Long activityHash;
+
     public DestinyDefinitionsDestinyObjectiveDisplayProperties withActivityHash(Long activityHash) {
         this.activityHash = activityHash;
         return this;
@@ -22,9 +23,11 @@ public class DestinyDefinitionsDestinyObjectiveDisplayProperties {
      */
     
     public Boolean displayOnItemPreviewScreen;
+
     public DestinyDefinitionsDestinyObjectiveDisplayProperties withDisplayOnItemPreviewScreen(Boolean displayOnItemPreviewScreen) {
         this.displayOnItemPreviewScreen = displayOnItemPreviewScreen;
         return this;
     }
     
+    public DestinyDefinitionsDestinyObjectiveDisplayProperties(){}
 }

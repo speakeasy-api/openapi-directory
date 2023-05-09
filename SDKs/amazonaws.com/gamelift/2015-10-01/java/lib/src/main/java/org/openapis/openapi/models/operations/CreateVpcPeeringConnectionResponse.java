@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateVpcPeeringConnectionResponse {
     
     public String contentType;
+
     public CreateVpcPeeringConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateVpcPeeringConnectionResponse {
      */
     
     public java.util.Map<String, Object> createVpcPeeringConnectionOutput;
+
     public CreateVpcPeeringConnectionResponse withCreateVpcPeeringConnectionOutput(java.util.Map<String, Object> createVpcPeeringConnectionOutput) {
         this.createVpcPeeringConnectionOutput = createVpcPeeringConnectionOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateVpcPeeringConnectionResponse {
      */
     
     public Object internalServiceException;
+
     public CreateVpcPeeringConnectionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class CreateVpcPeeringConnectionResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateVpcPeeringConnectionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateVpcPeeringConnectionResponse {
      */
     
     public Object notFoundException;
+
     public CreateVpcPeeringConnectionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CreateVpcPeeringConnectionResponse {
     
     
     public Integer statusCode;
+
     public CreateVpcPeeringConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateVpcPeeringConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateVpcPeeringConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateVpcPeeringConnectionResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateVpcPeeringConnectionResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateVpcPeeringConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

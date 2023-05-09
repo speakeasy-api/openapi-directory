@@ -12,6 +12,7 @@ public class PatientPlanSummaryResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("critical")
     public java.util.Map<String, Object> critical;
+
     public PatientPlanSummaryResourceAttributesInput withCritical(java.util.Map<String, Object> critical) {
         this.critical = critical;
         return this;
@@ -20,6 +21,7 @@ public class PatientPlanSummaryResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_zone")
     public String timeZone;
+
     public PatientPlanSummaryResourceAttributesInput withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -28,9 +30,11 @@ public class PatientPlanSummaryResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("window_order")
     public PatientPlanSummaryResourceAttributesWindowOrder[] windowOrder;
+
     public PatientPlanSummaryResourceAttributesInput withWindowOrder(PatientPlanSummaryResourceAttributesWindowOrder[] windowOrder) {
         this.windowOrder = windowOrder;
         return this;
     }
     
+    public PatientPlanSummaryResourceAttributesInput(){}
 }

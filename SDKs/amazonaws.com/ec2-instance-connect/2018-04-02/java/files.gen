@@ -40,4 +40,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/SendSSHPublicKeyRequest.jav
 lib/src/main/java/org/openapis/openapi/models/shared/SendSerialConsoleSSHPublicKeyResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SendSerialConsoleSSHPublicKeyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

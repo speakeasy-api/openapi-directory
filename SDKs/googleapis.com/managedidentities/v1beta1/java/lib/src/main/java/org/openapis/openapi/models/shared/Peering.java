@@ -18,6 +18,7 @@ public class Peering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizedNetwork")
     public String authorizedNetwork;
+
     public Peering withAuthorizedNetwork(String authorizedNetwork) {
         this.authorizedNetwork = authorizedNetwork;
         return this;
@@ -29,6 +30,7 @@ public class Peering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Peering withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class Peering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainResource")
     public String domainResource;
+
     public Peering withDomainResource(String domainResource) {
         this.domainResource = domainResource;
         return this;
@@ -51,6 +54,7 @@ public class Peering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Peering withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,6 +66,7 @@ public class Peering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Peering withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class Peering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public PeeringStateEnum state;
+
     public Peering withState(PeeringStateEnum state) {
         this.state = state;
         return this;
@@ -84,6 +90,7 @@ public class Peering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public Peering withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -95,9 +102,11 @@ public class Peering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Peering withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Peering(){}
 }

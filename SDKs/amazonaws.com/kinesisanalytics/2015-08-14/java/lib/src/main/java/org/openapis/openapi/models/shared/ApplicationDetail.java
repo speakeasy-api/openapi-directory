@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ApplicationDetail {
     @JsonProperty("ApplicationARN")
     public String applicationARN;
+
     public ApplicationDetail withApplicationARN(String applicationARN) {
         this.applicationARN = applicationARN;
         return this;
@@ -27,6 +28,7 @@ public class ApplicationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationCode")
     public String applicationCode;
+
     public ApplicationDetail withApplicationCode(String applicationCode) {
         this.applicationCode = applicationCode;
         return this;
@@ -35,6 +37,7 @@ public class ApplicationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationDescription")
     public String applicationDescription;
+
     public ApplicationDetail withApplicationDescription(String applicationDescription) {
         this.applicationDescription = applicationDescription;
         return this;
@@ -42,6 +45,7 @@ public class ApplicationDetail {
     
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public ApplicationDetail withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -49,6 +53,7 @@ public class ApplicationDetail {
     
     @JsonProperty("ApplicationStatus")
     public ApplicationStatusEnum applicationStatus;
+
     public ApplicationDetail withApplicationStatus(ApplicationStatusEnum applicationStatus) {
         this.applicationStatus = applicationStatus;
         return this;
@@ -56,6 +61,7 @@ public class ApplicationDetail {
     
     @JsonProperty("ApplicationVersionId")
     public Long applicationVersionId;
+
     public ApplicationDetail withApplicationVersionId(Long applicationVersionId) {
         this.applicationVersionId = applicationVersionId;
         return this;
@@ -64,6 +70,7 @@ public class ApplicationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLoggingOptionDescriptions")
     public CloudWatchLoggingOptionDescription[] cloudWatchLoggingOptionDescriptions;
+
     public ApplicationDetail withCloudWatchLoggingOptionDescriptions(CloudWatchLoggingOptionDescription[] cloudWatchLoggingOptionDescriptions) {
         this.cloudWatchLoggingOptionDescriptions = cloudWatchLoggingOptionDescriptions;
         return this;
@@ -74,6 +81,7 @@ public class ApplicationDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTimestamp")
     public OffsetDateTime createTimestamp;
+
     public ApplicationDetail withCreateTimestamp(OffsetDateTime createTimestamp) {
         this.createTimestamp = createTimestamp;
         return this;
@@ -82,6 +90,7 @@ public class ApplicationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDescriptions")
     public InputDescription[] inputDescriptions;
+
     public ApplicationDetail withInputDescriptions(InputDescription[] inputDescriptions) {
         this.inputDescriptions = inputDescriptions;
         return this;
@@ -92,6 +101,7 @@ public class ApplicationDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateTimestamp")
     public OffsetDateTime lastUpdateTimestamp;
+
     public ApplicationDetail withLastUpdateTimestamp(OffsetDateTime lastUpdateTimestamp) {
         this.lastUpdateTimestamp = lastUpdateTimestamp;
         return this;
@@ -100,6 +110,7 @@ public class ApplicationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputDescriptions")
     public OutputDescription[] outputDescriptions;
+
     public ApplicationDetail withOutputDescriptions(OutputDescription[] outputDescriptions) {
         this.outputDescriptions = outputDescriptions;
         return this;
@@ -108,9 +119,16 @@ public class ApplicationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferenceDataSourceDescriptions")
     public ReferenceDataSourceDescription[] referenceDataSourceDescriptions;
+
     public ApplicationDetail withReferenceDataSourceDescriptions(ReferenceDataSourceDescription[] referenceDataSourceDescriptions) {
         this.referenceDataSourceDescriptions = referenceDataSourceDescriptions;
         return this;
     }
     
+    public ApplicationDetail(@JsonProperty("ApplicationARN") String applicationARN, @JsonProperty("ApplicationName") String applicationName, @JsonProperty("ApplicationStatus") ApplicationStatusEnum applicationStatus, @JsonProperty("ApplicationVersionId") Long applicationVersionId) {
+        this.applicationARN = applicationARN;
+        this.applicationName = applicationName;
+        this.applicationStatus = applicationStatus;
+        this.applicationVersionId = applicationVersionId;
+  }
 }

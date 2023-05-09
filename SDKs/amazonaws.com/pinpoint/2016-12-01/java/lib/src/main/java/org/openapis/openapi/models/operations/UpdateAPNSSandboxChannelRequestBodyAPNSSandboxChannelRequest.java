@@ -15,6 +15,7 @@ public class UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BundleId")
     public String bundleId;
+
     public UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -23,6 +24,7 @@ public class UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Certificate")
     public String certificate;
+
     public UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -31,6 +33,7 @@ public class UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultAuthenticationMethod")
     public String defaultAuthenticationMethod;
+
     public UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest withDefaultAuthenticationMethod(String defaultAuthenticationMethod) {
         this.defaultAuthenticationMethod = defaultAuthenticationMethod;
         return this;
@@ -39,6 +42,7 @@ public class UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -47,6 +51,7 @@ public class UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateKey")
     public String privateKey;
+
     public UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -55,6 +60,7 @@ public class UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamId")
     public String teamId;
+
     public UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest withTeamId(String teamId) {
         this.teamId = teamId;
         return this;
@@ -63,6 +69,7 @@ public class UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TokenKey")
     public String tokenKey;
+
     public UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest withTokenKey(String tokenKey) {
         this.tokenKey = tokenKey;
         return this;
@@ -71,9 +78,11 @@ public class UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TokenKeyId")
     public String tokenKeyId;
+
     public UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest withTokenKeyId(String tokenKeyId) {
         this.tokenKeyId = tokenKeyId;
         return this;
     }
     
+    public UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest(){}
 }

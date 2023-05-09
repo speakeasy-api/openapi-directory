@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InvoiceApiChangeStatusRawResponse {
     
     public byte[] body;
+
     public InvoiceApiChangeStatusRawResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class InvoiceApiChangeStatusRawResponse {
     
     
     public String contentType;
+
     public InvoiceApiChangeStatusRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class InvoiceApiChangeStatusRawResponse {
      */
     
     public Boolean invoiceApiChangeStatusRaw200ApplicationJSONBoolean;
+
     public InvoiceApiChangeStatusRawResponse withInvoiceApiChangeStatusRaw200ApplicationJSONBoolean(Boolean invoiceApiChangeStatusRaw200ApplicationJSONBoolean) {
         this.invoiceApiChangeStatusRaw200ApplicationJSONBoolean = invoiceApiChangeStatusRaw200ApplicationJSONBoolean;
         return this;
@@ -36,6 +40,7 @@ public class InvoiceApiChangeStatusRawResponse {
      */
     
     public Boolean invoiceApiChangeStatusRaw200TextJSONBoolean;
+
     public InvoiceApiChangeStatusRawResponse withInvoiceApiChangeStatusRaw200TextJSONBoolean(Boolean invoiceApiChangeStatusRaw200TextJSONBoolean) {
         this.invoiceApiChangeStatusRaw200TextJSONBoolean = invoiceApiChangeStatusRaw200TextJSONBoolean;
         return this;
@@ -43,6 +48,7 @@ public class InvoiceApiChangeStatusRawResponse {
     
     
     public Integer statusCode;
+
     public InvoiceApiChangeStatusRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class InvoiceApiChangeStatusRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InvoiceApiChangeStatusRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public InvoiceApiChangeStatusRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

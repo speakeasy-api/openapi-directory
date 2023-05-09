@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetDistributionMetricDataRequest {
     @JsonProperty("distributionName")
     public String distributionName;
+
     public GetDistributionMetricDataRequest withDistributionName(String distributionName) {
         this.distributionName = distributionName;
         return this;
@@ -23,6 +24,7 @@ public class GetDistributionMetricDataRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public GetDistributionMetricDataRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -30,6 +32,7 @@ public class GetDistributionMetricDataRequest {
     
     @JsonProperty("metricName")
     public DistributionMetricNameEnum metricName;
+
     public GetDistributionMetricDataRequest withMetricName(DistributionMetricNameEnum metricName) {
         this.metricName = metricName;
         return this;
@@ -37,6 +40,7 @@ public class GetDistributionMetricDataRequest {
     
     @JsonProperty("period")
     public Long period;
+
     public GetDistributionMetricDataRequest withPeriod(Long period) {
         this.period = period;
         return this;
@@ -46,6 +50,7 @@ public class GetDistributionMetricDataRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public GetDistributionMetricDataRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -53,6 +58,7 @@ public class GetDistributionMetricDataRequest {
     
     @JsonProperty("statistics")
     public MetricStatisticEnum[] statistics;
+
     public GetDistributionMetricDataRequest withStatistics(MetricStatisticEnum[] statistics) {
         this.statistics = statistics;
         return this;
@@ -60,9 +66,19 @@ public class GetDistributionMetricDataRequest {
     
     @JsonProperty("unit")
     public MetricUnitEnum unit;
+
     public GetDistributionMetricDataRequest withUnit(MetricUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public GetDistributionMetricDataRequest(@JsonProperty("distributionName") String distributionName, @JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("metricName") DistributionMetricNameEnum metricName, @JsonProperty("period") Long period, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("statistics") MetricStatisticEnum[] statistics, @JsonProperty("unit") MetricUnitEnum unit) {
+        this.distributionName = distributionName;
+        this.endTime = endTime;
+        this.metricName = metricName;
+        this.period = period;
+        this.startTime = startTime;
+        this.statistics = statistics;
+        this.unit = unit;
+  }
 }

@@ -15,9 +15,11 @@ public class CreateAssistantRequestBodyServerSideEncryptionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public CreateAssistantRequestBodyServerSideEncryptionConfiguration withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
     }
     
+    public CreateAssistantRequestBodyServerSideEncryptionConfiguration(){}
 }

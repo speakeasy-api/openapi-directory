@@ -18,6 +18,7 @@ public class CreateSinglePaymentIntent201ApplicationJSONServiceProviderParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank_account_id")
     public String bankAccountId;
+
     public CreateSinglePaymentIntent201ApplicationJSONServiceProviderParams withBankAccountId(String bankAccountId) {
         this.bankAccountId = bankAccountId;
         return this;
@@ -29,6 +30,7 @@ public class CreateSinglePaymentIntent201ApplicationJSONServiceProviderParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_secret")
     public String clientSecret;
+
     public CreateSinglePaymentIntent201ApplicationJSONServiceProviderParams withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -40,6 +42,7 @@ public class CreateSinglePaymentIntent201ApplicationJSONServiceProviderParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hpp_url")
     public String hppUrl;
+
     public CreateSinglePaymentIntent201ApplicationJSONServiceProviderParams withHppUrl(String hppUrl) {
         this.hppUrl = hppUrl;
         return this;
@@ -51,6 +54,7 @@ public class CreateSinglePaymentIntent201ApplicationJSONServiceProviderParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_intent_id")
     public String paymentIntentId;
+
     public CreateSinglePaymentIntent201ApplicationJSONServiceProviderParams withPaymentIntentId(String paymentIntentId) {
         this.paymentIntentId = paymentIntentId;
         return this;
@@ -62,9 +66,11 @@ public class CreateSinglePaymentIntent201ApplicationJSONServiceProviderParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishable_key")
     public String publishableKey;
+
     public CreateSinglePaymentIntent201ApplicationJSONServiceProviderParams withPublishableKey(String publishableKey) {
         this.publishableKey = publishableKey;
         return this;
     }
     
+    public CreateSinglePaymentIntent201ApplicationJSONServiceProviderParams(){}
 }

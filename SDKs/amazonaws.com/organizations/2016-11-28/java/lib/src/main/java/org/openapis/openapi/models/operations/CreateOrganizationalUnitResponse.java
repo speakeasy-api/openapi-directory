@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateOrganizationalUnitResponse {
@@ -12,6 +13,7 @@ public class CreateOrganizationalUnitResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public CreateOrganizationalUnitResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class CreateOrganizationalUnitResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateOrganizationalUnitResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class CreateOrganizationalUnitResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateOrganizationalUnitResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -42,6 +46,7 @@ public class CreateOrganizationalUnitResponse {
      */
     
     public Object constraintViolationException;
+
     public CreateOrganizationalUnitResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -49,6 +54,7 @@ public class CreateOrganizationalUnitResponse {
     
     
     public String contentType;
+
     public CreateOrganizationalUnitResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class CreateOrganizationalUnitResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateOrganizationalUnitResponse createOrganizationalUnitResponse;
+
     public CreateOrganizationalUnitResponse withCreateOrganizationalUnitResponse(org.openapis.openapi.models.shared.CreateOrganizationalUnitResponse createOrganizationalUnitResponse) {
         this.createOrganizationalUnitResponse = createOrganizationalUnitResponse;
         return this;
@@ -69,6 +76,7 @@ public class CreateOrganizationalUnitResponse {
      */
     
     public Object duplicateOrganizationalUnitException;
+
     public CreateOrganizationalUnitResponse withDuplicateOrganizationalUnitException(Object duplicateOrganizationalUnitException) {
         this.duplicateOrganizationalUnitException = duplicateOrganizationalUnitException;
         return this;
@@ -79,6 +87,7 @@ public class CreateOrganizationalUnitResponse {
      */
     
     public Object invalidInputException;
+
     public CreateOrganizationalUnitResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -89,6 +98,7 @@ public class CreateOrganizationalUnitResponse {
      */
     
     public Object parentNotFoundException;
+
     public CreateOrganizationalUnitResponse withParentNotFoundException(Object parentNotFoundException) {
         this.parentNotFoundException = parentNotFoundException;
         return this;
@@ -96,6 +106,7 @@ public class CreateOrganizationalUnitResponse {
     
     
     public Integer statusCode;
+
     public CreateOrganizationalUnitResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CreateOrganizationalUnitResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateOrganizationalUnitResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class CreateOrganizationalUnitResponse {
      */
     
     public Object serviceException;
+
     public CreateOrganizationalUnitResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -123,9 +136,14 @@ public class CreateOrganizationalUnitResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateOrganizationalUnitResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateOrganizationalUnitResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -22,6 +22,7 @@ public class JobDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completedOn")
     public OffsetDateTime completedOn;
+
     public JobDetails withCompletedOn(OffsetDateTime completedOn) {
         this.completedOn = completedOn;
         return this;
@@ -30,6 +31,7 @@ public class JobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobError")
     public JobError jobError;
+
     public JobDetails withJobError(JobError jobError) {
         this.jobError = jobError;
         return this;
@@ -37,6 +39,7 @@ public class JobDetails {
     
     @JsonProperty("jobId")
     public String jobId;
+
     public JobDetails withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -46,6 +49,7 @@ public class JobDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startedOn")
     public OffsetDateTime startedOn;
+
     public JobDetails withStartedOn(OffsetDateTime startedOn) {
         this.startedOn = startedOn;
         return this;
@@ -53,9 +57,15 @@ public class JobDetails {
     
     @JsonProperty("status")
     public JobStatusEnum status;
+
     public JobDetails withStatus(JobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public JobDetails(@JsonProperty("jobId") String jobId, @JsonProperty("startedOn") OffsetDateTime startedOn, @JsonProperty("status") JobStatusEnum status) {
+        this.jobId = jobId;
+        this.startedOn = startedOn;
+        this.status = status;
+  }
 }

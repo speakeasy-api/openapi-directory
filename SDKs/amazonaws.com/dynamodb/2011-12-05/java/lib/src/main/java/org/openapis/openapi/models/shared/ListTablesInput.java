@@ -12,6 +12,7 @@ public class ListTablesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusiveStartTableName")
     public String exclusiveStartTableName;
+
     public ListTablesInput withExclusiveStartTableName(String exclusiveStartTableName) {
         this.exclusiveStartTableName = exclusiveStartTableName;
         return this;
@@ -23,9 +24,11 @@ public class ListTablesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListTablesInput withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public ListTablesInput(){}
 }

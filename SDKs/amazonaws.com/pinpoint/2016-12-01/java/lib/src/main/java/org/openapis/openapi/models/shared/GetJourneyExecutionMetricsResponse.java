@@ -15,9 +15,13 @@ public class GetJourneyExecutionMetricsResponse {
      */
     @JsonProperty("JourneyExecutionMetricsResponse")
     public JourneyExecutionMetricsResponse journeyExecutionMetricsResponse;
+
     public GetJourneyExecutionMetricsResponse withJourneyExecutionMetricsResponse(JourneyExecutionMetricsResponse journeyExecutionMetricsResponse) {
         this.journeyExecutionMetricsResponse = journeyExecutionMetricsResponse;
         return this;
     }
     
+    public GetJourneyExecutionMetricsResponse(@JsonProperty("JourneyExecutionMetricsResponse") JourneyExecutionMetricsResponse journeyExecutionMetricsResponse) {
+        this.journeyExecutionMetricsResponse = journeyExecutionMetricsResponse;
+  }
 }

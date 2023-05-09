@@ -15,6 +15,7 @@ public class EndpointItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public EndpointItemResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class EndpointItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusCode")
     public Long statusCode;
+
     public EndpointItemResponse withStatusCode(Long statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public EndpointItemResponse(){}
 }

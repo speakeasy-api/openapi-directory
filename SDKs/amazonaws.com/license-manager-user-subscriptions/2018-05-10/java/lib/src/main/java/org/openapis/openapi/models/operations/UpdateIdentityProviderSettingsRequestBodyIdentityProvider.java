@@ -15,9 +15,11 @@ public class UpdateIdentityProviderSettingsRequestBodyIdentityProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveDirectoryIdentityProvider")
     public org.openapis.openapi.models.shared.ActiveDirectoryIdentityProvider activeDirectoryIdentityProvider;
+
     public UpdateIdentityProviderSettingsRequestBodyIdentityProvider withActiveDirectoryIdentityProvider(org.openapis.openapi.models.shared.ActiveDirectoryIdentityProvider activeDirectoryIdentityProvider) {
         this.activeDirectoryIdentityProvider = activeDirectoryIdentityProvider;
         return this;
     }
     
+    public UpdateIdentityProviderSettingsRequestBodyIdentityProvider(){}
 }

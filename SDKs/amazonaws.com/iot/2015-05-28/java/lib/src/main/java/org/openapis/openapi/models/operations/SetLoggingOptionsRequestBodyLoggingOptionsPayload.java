@@ -15,6 +15,7 @@ public class SetLoggingOptionsRequestBodyLoggingOptionsPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logLevel")
     public org.openapis.openapi.models.shared.LogLevelEnum logLevel;
+
     public SetLoggingOptionsRequestBodyLoggingOptionsPayload withLogLevel(org.openapis.openapi.models.shared.LogLevelEnum logLevel) {
         this.logLevel = logLevel;
         return this;
@@ -23,9 +24,11 @@ public class SetLoggingOptionsRequestBodyLoggingOptionsPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public SetLoggingOptionsRequestBodyLoggingOptionsPayload withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public SetLoggingOptionsRequestBodyLoggingOptionsPayload(){}
 }

@@ -43,6 +43,7 @@ public class UpdatePsuAuthenticationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public UpdatePsuAuthenticationResponse withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -54,6 +55,7 @@ public class UpdatePsuAuthenticationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorisationId")
     public String authorisationId;
+
     public UpdatePsuAuthenticationResponse withAuthorisationId(String authorisationId) {
         this.authorisationId = authorisationId;
         return this;
@@ -67,6 +69,7 @@ public class UpdatePsuAuthenticationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("challengeData")
     public ChallengeData challengeData;
+
     public UpdatePsuAuthenticationResponse withChallengeData(ChallengeData challengeData) {
         this.challengeData = challengeData;
         return this;
@@ -79,6 +82,7 @@ public class UpdatePsuAuthenticationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chosenScaMethod")
     public ChosenScaMethod chosenScaMethod;
+
     public UpdatePsuAuthenticationResponse withChosenScaMethod(ChosenScaMethod chosenScaMethod) {
         this.chosenScaMethod = chosenScaMethod;
         return this;
@@ -87,6 +91,7 @@ public class UpdatePsuAuthenticationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyConversionFees")
     public Amount currencyConversionFees;
+
     public UpdatePsuAuthenticationResponse withCurrencyConversionFees(Amount currencyConversionFees) {
         this.currencyConversionFees = currencyConversionFees;
         return this;
@@ -95,6 +100,7 @@ public class UpdatePsuAuthenticationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedInterbankSettlementAmount")
     public Amount estimatedInterbankSettlementAmount;
+
     public UpdatePsuAuthenticationResponse withEstimatedInterbankSettlementAmount(Amount estimatedInterbankSettlementAmount) {
         this.estimatedInterbankSettlementAmount = estimatedInterbankSettlementAmount;
         return this;
@@ -103,6 +109,7 @@ public class UpdatePsuAuthenticationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedTotalAmount")
     public Amount estimatedTotalAmount;
+
     public UpdatePsuAuthenticationResponse withEstimatedTotalAmount(Amount estimatedTotalAmount) {
         this.estimatedTotalAmount = estimatedTotalAmount;
         return this;
@@ -114,6 +121,7 @@ public class UpdatePsuAuthenticationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("psuMessage")
     public String psuMessage;
+
     public UpdatePsuAuthenticationResponse withPsuMessage(String psuMessage) {
         this.psuMessage = psuMessage;
         return this;
@@ -135,6 +143,7 @@ public class UpdatePsuAuthenticationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaMethods")
     public AuthenticationObject[] scaMethods;
+
     public UpdatePsuAuthenticationResponse withScaMethods(AuthenticationObject[] scaMethods) {
         this.scaMethods = scaMethods;
         return this;
@@ -172,6 +181,7 @@ public class UpdatePsuAuthenticationResponse {
      */
     @JsonProperty("scaStatus")
     public ScaStatusEnum scaStatus;
+
     public UpdatePsuAuthenticationResponse withScaStatus(ScaStatusEnum scaStatus) {
         this.scaStatus = scaStatus;
         return this;
@@ -180,9 +190,13 @@ public class UpdatePsuAuthenticationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionFees")
     public Amount transactionFees;
+
     public UpdatePsuAuthenticationResponse withTransactionFees(Amount transactionFees) {
         this.transactionFees = transactionFees;
         return this;
     }
     
+    public UpdatePsuAuthenticationResponse(@JsonProperty("scaStatus") ScaStatusEnum scaStatus) {
+        this.scaStatus = scaStatus;
+  }
 }

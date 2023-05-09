@@ -18,6 +18,7 @@ public class RegistrationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactSettings")
     public ContactSettings contactSettings;
+
     public RegistrationInput withContactSettings(ContactSettings contactSettings) {
         this.contactSettings = contactSettings;
         return this;
@@ -29,6 +30,7 @@ public class RegistrationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsSettings")
     public DnsSettingsInput dnsSettings;
+
     public RegistrationInput withDnsSettings(DnsSettingsInput dnsSettings) {
         this.dnsSettings = dnsSettings;
         return this;
@@ -40,6 +42,7 @@ public class RegistrationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public RegistrationInput withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -51,6 +54,7 @@ public class RegistrationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public RegistrationInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,6 +66,7 @@ public class RegistrationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managementSettings")
     public ManagementSettingsInput managementSettings;
+
     public RegistrationInput withManagementSettings(ManagementSettingsInput managementSettings) {
         this.managementSettings = managementSettings;
         return this;
@@ -73,9 +78,11 @@ public class RegistrationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingContactSettings")
     public ContactSettings pendingContactSettings;
+
     public RegistrationInput withPendingContactSettings(ContactSettings pendingContactSettings) {
         this.pendingContactSettings = pendingContactSettings;
         return this;
     }
     
+    public RegistrationInput(){}
 }

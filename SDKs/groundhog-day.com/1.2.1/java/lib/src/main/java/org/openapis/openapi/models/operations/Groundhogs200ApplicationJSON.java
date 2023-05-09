@@ -15,9 +15,11 @@ public class Groundhogs200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groundhogs")
     public org.openapis.openapi.models.shared.Groundhog[] groundhogs;
+
     public Groundhogs200ApplicationJSON withGroundhogs(org.openapis.openapi.models.shared.Groundhog[] groundhogs) {
         this.groundhogs = groundhogs;
         return this;
     }
     
+    public Groundhogs200ApplicationJSON(){}
 }

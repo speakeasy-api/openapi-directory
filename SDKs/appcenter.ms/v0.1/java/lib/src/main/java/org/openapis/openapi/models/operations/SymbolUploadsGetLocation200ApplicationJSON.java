@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SymbolUploadsGetLocation200ApplicationJSON {
     @JsonProperty("uri")
     public String uri;
+
     public SymbolUploadsGetLocation200ApplicationJSON withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public SymbolUploadsGetLocation200ApplicationJSON(@JsonProperty("uri") String uri) {
+        this.uri = uri;
+  }
 }

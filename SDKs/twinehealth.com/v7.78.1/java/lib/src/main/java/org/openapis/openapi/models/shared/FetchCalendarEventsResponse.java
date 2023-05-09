@@ -15,6 +15,7 @@ public class FetchCalendarEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public CalendarEventResource[] data;
+
     public FetchCalendarEventsResponse withData(CalendarEventResource[] data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class FetchCalendarEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("included")
     public Resource[] included;
+
     public FetchCalendarEventsResponse withIncluded(Resource[] included) {
         this.included = included;
         return this;
@@ -37,6 +39,7 @@ public class FetchCalendarEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public CollectionResponseLinks links;
+
     public FetchCalendarEventsResponse withLinks(CollectionResponseLinks links) {
         this.links = links;
         return this;
@@ -45,9 +48,11 @@ public class FetchCalendarEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public FetchMetaResponse meta;
+
     public FetchCalendarEventsResponse withMeta(FetchMetaResponse meta) {
         this.meta = meta;
         return this;
     }
     
+    public FetchCalendarEventsResponse(){}
 }

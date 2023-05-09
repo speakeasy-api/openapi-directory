@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateApiResponse {
@@ -12,6 +13,7 @@ public class CreateApiResponse {
      */
     
     public Object badRequestException;
+
     public CreateApiResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateApiResponse {
      */
     
     public Object conflictException;
+
     public CreateApiResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateApiResponse {
     
     
     public String contentType;
+
     public CreateApiResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateApiResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateApiResponse createApiResponse;
+
     public CreateApiResponse withCreateApiResponse(org.openapis.openapi.models.shared.CreateApiResponse createApiResponse) {
         this.createApiResponse = createApiResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateApiResponse {
      */
     
     public Object notFoundException;
+
     public CreateApiResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CreateApiResponse {
     
     
     public Integer statusCode;
+
     public CreateApiResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateApiResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateApiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateApiResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateApiResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateApiResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

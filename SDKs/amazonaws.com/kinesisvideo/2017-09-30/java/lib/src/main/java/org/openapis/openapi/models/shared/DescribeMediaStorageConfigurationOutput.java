@@ -15,9 +15,11 @@ public class DescribeMediaStorageConfigurationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MediaStorageConfiguration")
     public MediaStorageConfiguration mediaStorageConfiguration;
+
     public DescribeMediaStorageConfigurationOutput withMediaStorageConfiguration(MediaStorageConfiguration mediaStorageConfiguration) {
         this.mediaStorageConfiguration = mediaStorageConfiguration;
         return this;
     }
     
+    public DescribeMediaStorageConfigurationOutput(){}
 }

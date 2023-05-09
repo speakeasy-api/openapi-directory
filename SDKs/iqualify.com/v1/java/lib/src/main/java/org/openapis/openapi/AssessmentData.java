@@ -51,12 +51,10 @@ public class AssessmentData {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsActivitiesResponsesResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsActivitiesResponsesResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsActivitiesResponsesResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsActivitiesResponsesResponse(contentType, httpRes.statusCode()) {{
             activityAttemptOpenResponses = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,12 +97,10 @@ public class AssessmentData {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsMarksAssignmentsResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsMarksAssignmentsResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsMarksAssignmentsResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsMarksAssignmentsResponse(contentType, httpRes.statusCode()) {{
             assignmentMarkResponses = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,12 +143,10 @@ public class AssessmentData {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsMarksQuizzesResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsMarksQuizzesResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsMarksQuizzesResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsMarksQuizzesResponse(contentType, httpRes.statusCode()) {{
             quizMarkResponses = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,12 +189,10 @@ public class AssessmentData {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsAssignmentsResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsAssignmentsResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsAssignmentsResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsAssignmentsResponse(contentType, httpRes.statusCode()) {{
             assignmentMarkResponses = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,12 +235,10 @@ public class AssessmentData {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsOpenResponseAssessmentIdResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsOpenResponseAssessmentIdResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsOpenResponseAssessmentIdResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsOpenResponseAssessmentIdResponse(contentType, httpRes.statusCode()) {{
             submissionMarkResponses = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,12 +281,10 @@ public class AssessmentData {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsUserEmailAssignmentsAssessmentIdResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsUserEmailAssignmentsAssessmentIdResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsUserEmailAssignmentsAssessmentIdResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsUserEmailAssignmentsAssessmentIdResponse(contentType, httpRes.statusCode()) {{
             submissionMarkResponses = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class UrlNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifyTime")
     public String notifyTime;
+
     public UrlNotification withNotifyTime(String notifyTime) {
         this.notifyTime = notifyTime;
         return this;
@@ -29,6 +30,7 @@ public class UrlNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public UrlNotificationTypeEnum type;
+
     public UrlNotification withType(UrlNotificationTypeEnum type) {
         this.type = type;
         return this;
@@ -40,9 +42,11 @@ public class UrlNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public UrlNotification withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public UrlNotification(){}
 }

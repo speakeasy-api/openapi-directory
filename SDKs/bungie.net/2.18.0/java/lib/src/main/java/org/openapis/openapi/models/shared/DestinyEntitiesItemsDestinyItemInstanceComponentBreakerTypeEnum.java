@@ -10,15 +10,15 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum - If populated, this item has a breaker type corresponding to the given value. See DestinyBreakerTypeDefinition for more details.
  */
 public enum DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum {
-    ZERO("0"),
-    ONE("1"),
-    TWO("2"),
-    THREE("3");
+    ZERO(0),
+    ONE(1),
+    TWO(2),
+    THREE(3);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum(String value) {
+    private DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum(Integer value) {
         this.value = value;
     }
 }

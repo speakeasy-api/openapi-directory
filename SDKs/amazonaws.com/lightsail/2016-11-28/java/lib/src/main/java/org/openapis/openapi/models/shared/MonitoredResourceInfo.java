@@ -15,6 +15,7 @@ public class MonitoredResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public MonitoredResourceInfo withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class MonitoredResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MonitoredResourceInfo withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class MonitoredResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public MonitoredResourceInfo withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public MonitoredResourceInfo(){}
 }

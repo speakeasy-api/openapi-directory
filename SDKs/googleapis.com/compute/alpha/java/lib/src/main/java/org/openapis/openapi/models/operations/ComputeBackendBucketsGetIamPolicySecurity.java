@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeBackendBucketsGetIamPolicySecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeBackendBucketsGetIamPolicySecurityOption1 option1;
+
     public ComputeBackendBucketsGetIamPolicySecurity withOption1(ComputeBackendBucketsGetIamPolicySecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeBackendBucketsGetIamPolicySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeBackendBucketsGetIamPolicySecurityOption2 option2;
+
     public ComputeBackendBucketsGetIamPolicySecurity withOption2(ComputeBackendBucketsGetIamPolicySecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeBackendBucketsGetIamPolicySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeBackendBucketsGetIamPolicySecurityOption3 option3;
+
     public ComputeBackendBucketsGetIamPolicySecurity withOption3(ComputeBackendBucketsGetIamPolicySecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeBackendBucketsGetIamPolicySecurity(){}
 }

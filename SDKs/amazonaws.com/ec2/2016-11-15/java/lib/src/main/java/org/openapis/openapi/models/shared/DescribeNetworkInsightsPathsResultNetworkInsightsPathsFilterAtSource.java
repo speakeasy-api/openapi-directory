@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInsightsPathsResultNetworkInsightsPathsFilterAtSource {
     
     public String destinationAddress;
+
     public DescribeNetworkInsightsPathsResultNetworkInsightsPathsFilterAtSource withDestinationAddress(String destinationAddress) {
         this.destinationAddress = destinationAddress;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkInsightsPathsResultNetworkInsightsPathsFilterAtSourc
     
     
     public DescribeNetworkInsightsPathsResultNetworkInsightsPathsFilterAtSourceDestinationPortRange destinationPortRange;
+
     public DescribeNetworkInsightsPathsResultNetworkInsightsPathsFilterAtSource withDestinationPortRange(DescribeNetworkInsightsPathsResultNetworkInsightsPathsFilterAtSourceDestinationPortRange destinationPortRange) {
         this.destinationPortRange = destinationPortRange;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNetworkInsightsPathsResultNetworkInsightsPathsFilterAtSourc
     
     
     public String sourceAddress;
+
     public DescribeNetworkInsightsPathsResultNetworkInsightsPathsFilterAtSource withSourceAddress(String sourceAddress) {
         this.sourceAddress = sourceAddress;
         return this;
@@ -33,9 +36,11 @@ public class DescribeNetworkInsightsPathsResultNetworkInsightsPathsFilterAtSourc
     
     
     public DescribeNetworkInsightsPathsResultNetworkInsightsPathsFilterAtSourceSourcePortRange sourcePortRange;
+
     public DescribeNetworkInsightsPathsResultNetworkInsightsPathsFilterAtSource withSourcePortRange(DescribeNetworkInsightsPathsResultNetworkInsightsPathsFilterAtSourceSourcePortRange sourcePortRange) {
         this.sourcePortRange = sourcePortRange;
         return this;
     }
     
+    public DescribeNetworkInsightsPathsResultNetworkInsightsPathsFilterAtSource(){}
 }

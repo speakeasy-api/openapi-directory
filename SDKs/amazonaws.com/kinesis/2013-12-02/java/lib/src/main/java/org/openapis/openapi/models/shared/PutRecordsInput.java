@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutRecordsInput {
     @JsonProperty("Records")
     public PutRecordsRequestEntry[] records;
+
     public PutRecordsInput withRecords(PutRecordsRequestEntry[] records) {
         this.records = records;
         return this;
@@ -22,6 +23,7 @@ public class PutRecordsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public PutRecordsInput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -30,9 +32,13 @@ public class PutRecordsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public PutRecordsInput withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public PutRecordsInput(@JsonProperty("Records") PutRecordsRequestEntry[] records) {
+        this.records = records;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserCtrlGetUsersRequest {
@@ -12,6 +13,7 @@ public class UserCtrlGetUsersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
     public String accountId;
+
     public UserCtrlGetUsersRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class UserCtrlGetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public UserCtrlGetUsersRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -32,6 +35,7 @@ public class UserCtrlGetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_name")
     public String firstName;
+
     public UserCtrlGetUsersRequest withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -42,6 +46,7 @@ public class UserCtrlGetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_name")
     public String lastName;
+
     public UserCtrlGetUsersRequest withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -52,6 +57,7 @@ public class UserCtrlGetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login_name")
     public String loginName;
+
     public UserCtrlGetUsersRequest withLoginName(String loginName) {
         this.loginName = loginName;
         return this;
@@ -62,6 +68,7 @@ public class UserCtrlGetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Double page;
+
     public UserCtrlGetUsersRequest withPage(Double page) {
         this.page = page;
         return this;
@@ -72,9 +79,13 @@ public class UserCtrlGetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Double pageSize;
+
     public UserCtrlGetUsersRequest withPageSize(Double pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public UserCtrlGetUsersRequest(@JsonProperty("account_id") String accountId) {
+        this.accountId = accountId;
+  }
 }

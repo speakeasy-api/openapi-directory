@@ -15,6 +15,7 @@ public class GetResourceLFTagsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetResourceLFTagsRequestBody withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -25,6 +26,7 @@ public class GetResourceLFTagsRequestBody {
      */
     @JsonProperty("Resource")
     public GetResourceLFTagsRequestBodyResource resource;
+
     public GetResourceLFTagsRequestBody withResource(GetResourceLFTagsRequestBodyResource resource) {
         this.resource = resource;
         return this;
@@ -36,9 +38,13 @@ public class GetResourceLFTagsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShowAssignedLFTags")
     public Boolean showAssignedLFTags;
+
     public GetResourceLFTagsRequestBody withShowAssignedLFTags(Boolean showAssignedLFTags) {
         this.showAssignedLFTags = showAssignedLFTags;
         return this;
     }
     
+    public GetResourceLFTagsRequestBody(@JsonProperty("Resource") GetResourceLFTagsRequestBodyResource resource) {
+        this.resource = resource;
+  }
 }

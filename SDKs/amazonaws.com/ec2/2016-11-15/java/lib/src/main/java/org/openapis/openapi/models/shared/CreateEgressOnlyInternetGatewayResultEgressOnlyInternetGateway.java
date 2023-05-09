@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGateway {
     
     public CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayAttachments[] attachments;
+
     public CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGateway withAttachments(CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayAttachments[] attachments) {
         this.attachments = attachments;
         return this;
@@ -19,6 +20,7 @@ public class CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGateway {
     
     
     public String egressOnlyInternetGatewayId;
+
     public CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGateway withEgressOnlyInternetGatewayId(String egressOnlyInternetGatewayId) {
         this.egressOnlyInternetGatewayId = egressOnlyInternetGatewayId;
         return this;
@@ -26,9 +28,11 @@ public class CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGateway {
     
     
     public CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayTags[] tags;
+
     public CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGateway withTags(CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGateway(){}
 }

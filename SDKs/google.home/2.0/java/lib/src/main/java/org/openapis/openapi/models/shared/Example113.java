@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Example113 {
     @JsonProperty("ssid")
     public String ssid;
+
     public Example113 withSsid(String ssid) {
         this.ssid = ssid;
         return this;
@@ -16,6 +17,7 @@ public class Example113 {
     
     @JsonProperty("wpa_auth")
     public Integer wpaAuth;
+
     public Example113 withWpaAuth(Integer wpaAuth) {
         this.wpaAuth = wpaAuth;
         return this;
@@ -23,6 +25,7 @@ public class Example113 {
     
     @JsonProperty("wpa_cipher")
     public Integer wpaCipher;
+
     public Example113 withWpaCipher(Integer wpaCipher) {
         this.wpaCipher = wpaCipher;
         return this;
@@ -30,9 +33,16 @@ public class Example113 {
     
     @JsonProperty("wpa_id")
     public Integer wpaId;
+
     public Example113 withWpaId(Integer wpaId) {
         this.wpaId = wpaId;
         return this;
     }
     
+    public Example113(@JsonProperty("ssid") String ssid, @JsonProperty("wpa_auth") Integer wpaAuth, @JsonProperty("wpa_cipher") Integer wpaCipher, @JsonProperty("wpa_id") Integer wpaId) {
+        this.ssid = ssid;
+        this.wpaAuth = wpaAuth;
+        this.wpaCipher = wpaCipher;
+        this.wpaId = wpaId;
+  }
 }

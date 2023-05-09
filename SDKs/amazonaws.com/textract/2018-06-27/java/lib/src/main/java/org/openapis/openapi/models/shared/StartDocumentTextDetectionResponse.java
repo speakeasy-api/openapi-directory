@@ -15,9 +15,11 @@ public class StartDocumentTextDetectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public StartDocumentTextDetectionResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public StartDocumentTextDetectionResponse(){}
 }

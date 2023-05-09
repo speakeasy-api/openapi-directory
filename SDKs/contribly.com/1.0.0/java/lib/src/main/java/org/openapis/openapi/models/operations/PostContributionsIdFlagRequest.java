@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostContributionsIdFlagRequest {
@@ -12,6 +13,7 @@ public class PostContributionsIdFlagRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Flag flag;
+
     public PostContributionsIdFlagRequest withFlag(org.openapis.openapi.models.shared.Flag flag) {
         this.flag = flag;
         return this;
@@ -22,9 +24,14 @@ public class PostContributionsIdFlagRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PostContributionsIdFlagRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PostContributionsIdFlagRequest(@JsonProperty("Flag") org.openapis.openapi.models.shared.Flag flag, @JsonProperty("id") String id) {
+        this.flag = flag;
+        this.id = id;
+  }
 }

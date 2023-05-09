@@ -15,9 +15,11 @@ public class CreateProjectVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectVersionArn")
     public String projectVersionArn;
+
     public CreateProjectVersionResponse withProjectVersionArn(String projectVersionArn) {
         this.projectVersionArn = projectVersionArn;
         return this;
     }
     
+    public CreateProjectVersionResponse(){}
 }

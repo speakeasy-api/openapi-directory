@@ -10,11 +10,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateFlowRequestBody {
     /**
+     * &lt;p&gt;The &lt;code&gt;clientToken&lt;/code&gt; parameter is an idempotency token. It ensures that your &lt;code&gt;UpdateFlow&lt;/code&gt; request completes only once. You choose the value to pass. For example, if you don't receive a response from your request, you can safely retry the request with the same &lt;code&gt;clientToken&lt;/code&gt; parameter value.&lt;/p&gt; &lt;p&gt;If you omit a &lt;code&gt;clientToken&lt;/code&gt; value, the Amazon Web Services SDK that you are using inserts a value for you. This way, the SDK can safely retry requests multiple times after a network error. You must provide your own value for other use cases.&lt;/p&gt; &lt;p&gt;If you specify input parameters that differ from your first request, an error occurs. If you use a different value for &lt;code&gt;clientToken&lt;/code&gt;, Amazon AppFlow considers it a new call to &lt;code&gt;UpdateFlow&lt;/code&gt;. The token is active for 8 hours.&lt;/p&gt;
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("clientToken")
+    public String clientToken;
+
+    public UpdateFlowRequestBody withClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    
+    /**
      *  A description of the flow. 
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateFlowRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +38,7 @@ public class UpdateFlowRequestBody {
      */
     @JsonProperty("destinationFlowConfigList")
     public org.openapis.openapi.models.shared.DestinationFlowConfig[] destinationFlowConfigList;
+
     public UpdateFlowRequestBody withDestinationFlowConfigList(org.openapis.openapi.models.shared.DestinationFlowConfig[] destinationFlowConfigList) {
         this.destinationFlowConfigList = destinationFlowConfigList;
         return this;
@@ -35,6 +49,7 @@ public class UpdateFlowRequestBody {
      */
     @JsonProperty("flowName")
     public String flowName;
+
     public UpdateFlowRequestBody withFlowName(String flowName) {
         this.flowName = flowName;
         return this;
@@ -46,6 +61,7 @@ public class UpdateFlowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataCatalogConfig")
     public UpdateFlowRequestBodyMetadataCatalogConfig metadataCatalogConfig;
+
     public UpdateFlowRequestBody withMetadataCatalogConfig(UpdateFlowRequestBodyMetadataCatalogConfig metadataCatalogConfig) {
         this.metadataCatalogConfig = metadataCatalogConfig;
         return this;
@@ -56,6 +72,7 @@ public class UpdateFlowRequestBody {
      */
     @JsonProperty("sourceFlowConfig")
     public UpdateFlowRequestBodySourceFlowConfig sourceFlowConfig;
+
     public UpdateFlowRequestBody withSourceFlowConfig(UpdateFlowRequestBodySourceFlowConfig sourceFlowConfig) {
         this.sourceFlowConfig = sourceFlowConfig;
         return this;
@@ -66,6 +83,7 @@ public class UpdateFlowRequestBody {
      */
     @JsonProperty("tasks")
     public org.openapis.openapi.models.shared.Task[] tasks;
+
     public UpdateFlowRequestBody withTasks(org.openapis.openapi.models.shared.Task[] tasks) {
         this.tasks = tasks;
         return this;
@@ -76,9 +94,17 @@ public class UpdateFlowRequestBody {
      */
     @JsonProperty("triggerConfig")
     public UpdateFlowRequestBodyTriggerConfig triggerConfig;
+
     public UpdateFlowRequestBody withTriggerConfig(UpdateFlowRequestBodyTriggerConfig triggerConfig) {
         this.triggerConfig = triggerConfig;
         return this;
     }
     
+    public UpdateFlowRequestBody(@JsonProperty("destinationFlowConfigList") org.openapis.openapi.models.shared.DestinationFlowConfig[] destinationFlowConfigList, @JsonProperty("flowName") String flowName, @JsonProperty("sourceFlowConfig") UpdateFlowRequestBodySourceFlowConfig sourceFlowConfig, @JsonProperty("tasks") org.openapis.openapi.models.shared.Task[] tasks, @JsonProperty("triggerConfig") UpdateFlowRequestBodyTriggerConfig triggerConfig) {
+        this.destinationFlowConfigList = destinationFlowConfigList;
+        this.flowName = flowName;
+        this.sourceFlowConfig = sourceFlowConfig;
+        this.tasks = tasks;
+        this.triggerConfig = triggerConfig;
+  }
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class Area120tablesWorkspacesListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public Area120tablesWorkspacesListSecurityOption1 option1;
+
     public Area120tablesWorkspacesListSecurity withOption1(Area120tablesWorkspacesListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class Area120tablesWorkspacesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public Area120tablesWorkspacesListSecurityOption2 option2;
+
     public Area120tablesWorkspacesListSecurity withOption2(Area120tablesWorkspacesListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class Area120tablesWorkspacesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public Area120tablesWorkspacesListSecurityOption3 option3;
+
     public Area120tablesWorkspacesListSecurity withOption3(Area120tablesWorkspacesListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class Area120tablesWorkspacesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public Area120tablesWorkspacesListSecurityOption4 option4;
+
     public Area120tablesWorkspacesListSecurity withOption4(Area120tablesWorkspacesListSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,6 +41,7 @@ public class Area120tablesWorkspacesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public Area120tablesWorkspacesListSecurityOption5 option5;
+
     public Area120tablesWorkspacesListSecurity withOption5(Area120tablesWorkspacesListSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -44,9 +49,11 @@ public class Area120tablesWorkspacesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public Area120tablesWorkspacesListSecurityOption6 option6;
+
     public Area120tablesWorkspacesListSecurity withOption6(Area120tablesWorkspacesListSecurityOption6 option6) {
         this.option6 = option6;
         return this;
     }
     
+    public Area120tablesWorkspacesListSecurity(){}
 }

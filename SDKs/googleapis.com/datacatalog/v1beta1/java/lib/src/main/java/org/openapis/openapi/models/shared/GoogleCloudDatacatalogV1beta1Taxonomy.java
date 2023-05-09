@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1beta1Taxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activatedPolicyTypes")
     public GoogleCloudDatacatalogV1beta1TaxonomyActivatedPolicyTypesEnum[] activatedPolicyTypes;
+
     public GoogleCloudDatacatalogV1beta1Taxonomy withActivatedPolicyTypes(GoogleCloudDatacatalogV1beta1TaxonomyActivatedPolicyTypesEnum[] activatedPolicyTypes) {
         this.activatedPolicyTypes = activatedPolicyTypes;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1beta1Taxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDatacatalogV1beta1Taxonomy withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1beta1Taxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDatacatalogV1beta1Taxonomy withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatacatalogV1beta1Taxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDatacatalogV1beta1Taxonomy withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDatacatalogV1beta1Taxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyTagCount")
     public Integer policyTagCount;
+
     public GoogleCloudDatacatalogV1beta1Taxonomy withPolicyTagCount(Integer policyTagCount) {
         this.policyTagCount = policyTagCount;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDatacatalogV1beta1Taxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public GoogleCloudDatacatalogV1beta1TaxonomyService service;
+
     public GoogleCloudDatacatalogV1beta1Taxonomy withService(GoogleCloudDatacatalogV1beta1TaxonomyService service) {
         this.service = service;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDatacatalogV1beta1Taxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxonomyTimestamps")
     public GoogleCloudDatacatalogV1beta1SystemTimestamps taxonomyTimestamps;
+
     public GoogleCloudDatacatalogV1beta1Taxonomy withTaxonomyTimestamps(GoogleCloudDatacatalogV1beta1SystemTimestamps taxonomyTimestamps) {
         this.taxonomyTimestamps = taxonomyTimestamps;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1Taxonomy(){}
 }

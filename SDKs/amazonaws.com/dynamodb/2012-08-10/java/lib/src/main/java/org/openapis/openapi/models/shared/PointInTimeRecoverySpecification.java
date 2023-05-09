@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PointInTimeRecoverySpecification {
     @JsonProperty("PointInTimeRecoveryEnabled")
     public Boolean pointInTimeRecoveryEnabled;
+
     public PointInTimeRecoverySpecification withPointInTimeRecoveryEnabled(Boolean pointInTimeRecoveryEnabled) {
         this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
         return this;
     }
     
+    public PointInTimeRecoverySpecification(@JsonProperty("PointInTimeRecoveryEnabled") Boolean pointInTimeRecoveryEnabled) {
+        this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
+  }
 }

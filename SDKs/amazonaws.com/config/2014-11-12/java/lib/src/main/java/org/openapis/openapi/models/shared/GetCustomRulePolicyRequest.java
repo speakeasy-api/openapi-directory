@@ -12,9 +12,11 @@ public class GetCustomRulePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigRuleName")
     public String configRuleName;
+
     public GetCustomRulePolicyRequest withConfigRuleName(String configRuleName) {
         this.configRuleName = configRuleName;
         return this;
     }
     
+    public GetCustomRulePolicyRequest(){}
 }

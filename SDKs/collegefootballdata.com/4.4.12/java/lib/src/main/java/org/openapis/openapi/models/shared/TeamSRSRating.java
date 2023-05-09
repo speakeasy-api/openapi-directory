@@ -12,6 +12,7 @@ public class TeamSRSRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conference")
     public String conference;
+
     public TeamSRSRating withConference(String conference) {
         this.conference = conference;
         return this;
@@ -20,6 +21,7 @@ public class TeamSRSRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("division")
     public String division;
+
     public TeamSRSRating withDivision(String division) {
         this.division = division;
         return this;
@@ -28,6 +30,7 @@ public class TeamSRSRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ranking")
     public Double ranking;
+
     public TeamSRSRating withRanking(Double ranking) {
         this.ranking = ranking;
         return this;
@@ -36,6 +39,7 @@ public class TeamSRSRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rating")
     public Double rating;
+
     public TeamSRSRating withRating(Double rating) {
         this.rating = rating;
         return this;
@@ -44,6 +48,7 @@ public class TeamSRSRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public TeamSRSRating withTeam(String team) {
         this.team = team;
         return this;
@@ -52,9 +57,11 @@ public class TeamSRSRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public Long year;
+
     public TeamSRSRating withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public TeamSRSRating(){}
 }

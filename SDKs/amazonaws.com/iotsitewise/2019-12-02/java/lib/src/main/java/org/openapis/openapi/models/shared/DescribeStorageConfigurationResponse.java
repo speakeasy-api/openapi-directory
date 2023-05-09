@@ -22,6 +22,7 @@ public class DescribeStorageConfigurationResponse {
      */
     @JsonProperty("configurationStatus")
     public ConfigurationStatus configurationStatus;
+
     public DescribeStorageConfigurationResponse withConfigurationStatus(ConfigurationStatus configurationStatus) {
         this.configurationStatus = configurationStatus;
         return this;
@@ -30,6 +31,7 @@ public class DescribeStorageConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disassociatedDataStorage")
     public DisassociatedDataStorageStateEnum disassociatedDataStorage;
+
     public DescribeStorageConfigurationResponse withDisassociatedDataStorage(DisassociatedDataStorageStateEnum disassociatedDataStorage) {
         this.disassociatedDataStorage = disassociatedDataStorage;
         return this;
@@ -40,6 +42,7 @@ public class DescribeStorageConfigurationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateDate")
     public OffsetDateTime lastUpdateDate;
+
     public DescribeStorageConfigurationResponse withLastUpdateDate(OffsetDateTime lastUpdateDate) {
         this.lastUpdateDate = lastUpdateDate;
         return this;
@@ -48,6 +51,7 @@ public class DescribeStorageConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiLayerStorage")
     public MultiLayerStorage multiLayerStorage;
+
     public DescribeStorageConfigurationResponse withMultiLayerStorage(MultiLayerStorage multiLayerStorage) {
         this.multiLayerStorage = multiLayerStorage;
         return this;
@@ -56,6 +60,7 @@ public class DescribeStorageConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionPeriod")
     public RetentionPeriod retentionPeriod;
+
     public DescribeStorageConfigurationResponse withRetentionPeriod(RetentionPeriod retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
@@ -63,9 +68,14 @@ public class DescribeStorageConfigurationResponse {
     
     @JsonProperty("storageType")
     public StorageTypeEnum storageType;
+
     public DescribeStorageConfigurationResponse withStorageType(StorageTypeEnum storageType) {
         this.storageType = storageType;
         return this;
     }
     
+    public DescribeStorageConfigurationResponse(@JsonProperty("configurationStatus") ConfigurationStatus configurationStatus, @JsonProperty("storageType") StorageTypeEnum storageType) {
+        this.configurationStatus = configurationStatus;
+        this.storageType = storageType;
+  }
 }

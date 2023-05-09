@@ -15,9 +15,13 @@ public class PreviewOrderInvoiceResponse {
      */
     @JsonProperty("invoiceHtmlContent")
     public String invoiceHtmlContent;
+
     public PreviewOrderInvoiceResponse withInvoiceHtmlContent(String invoiceHtmlContent) {
         this.invoiceHtmlContent = invoiceHtmlContent;
         return this;
     }
     
+    public PreviewOrderInvoiceResponse(@JsonProperty("invoiceHtmlContent") String invoiceHtmlContent) {
+        this.invoiceHtmlContent = invoiceHtmlContent;
+  }
 }

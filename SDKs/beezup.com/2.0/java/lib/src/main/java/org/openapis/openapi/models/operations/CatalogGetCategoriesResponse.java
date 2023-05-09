@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CatalogGetCategoriesResponse {
@@ -12,6 +13,7 @@ public class CatalogGetCategoriesResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public CatalogGetCategoriesResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class CatalogGetCategoriesResponse {
     
     
     public String contentType;
+
     public CatalogGetCategoriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CatalogGetCategoriesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CatalogGetCategoriesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class CatalogGetCategoriesResponse {
     
     
     public Integer statusCode;
+
     public CatalogGetCategoriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class CatalogGetCategoriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CatalogGetCategoriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class CatalogGetCategoriesResponse {
      */
     
     public org.openapis.openapi.models.shared.CategoryList categoryList;
+
     public CatalogGetCategoriesResponse withCategoryList(org.openapis.openapi.models.shared.CategoryList categoryList) {
         this.categoryList = categoryList;
         return this;
     }
     
+    public CatalogGetCategoriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

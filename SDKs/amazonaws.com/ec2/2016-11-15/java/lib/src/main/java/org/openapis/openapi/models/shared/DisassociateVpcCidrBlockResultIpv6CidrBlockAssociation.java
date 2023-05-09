@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DisassociateVpcCidrBlockResultIpv6CidrBlockAssociation {
     
     public String associationId;
+
     public DisassociateVpcCidrBlockResultIpv6CidrBlockAssociation withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -19,6 +20,7 @@ public class DisassociateVpcCidrBlockResultIpv6CidrBlockAssociation {
     
     
     public String ipv6CidrBlock;
+
     public DisassociateVpcCidrBlockResultIpv6CidrBlockAssociation withIpv6CidrBlock(String ipv6CidrBlock) {
         this.ipv6CidrBlock = ipv6CidrBlock;
         return this;
@@ -26,6 +28,7 @@ public class DisassociateVpcCidrBlockResultIpv6CidrBlockAssociation {
     
     
     public DisassociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState ipv6CidrBlockState;
+
     public DisassociateVpcCidrBlockResultIpv6CidrBlockAssociation withIpv6CidrBlockState(DisassociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState ipv6CidrBlockState) {
         this.ipv6CidrBlockState = ipv6CidrBlockState;
         return this;
@@ -33,6 +36,7 @@ public class DisassociateVpcCidrBlockResultIpv6CidrBlockAssociation {
     
     
     public String ipv6Pool;
+
     public DisassociateVpcCidrBlockResultIpv6CidrBlockAssociation withIpv6Pool(String ipv6Pool) {
         this.ipv6Pool = ipv6Pool;
         return this;
@@ -40,9 +44,11 @@ public class DisassociateVpcCidrBlockResultIpv6CidrBlockAssociation {
     
     
     public String networkBorderGroup;
+
     public DisassociateVpcCidrBlockResultIpv6CidrBlockAssociation withNetworkBorderGroup(String networkBorderGroup) {
         this.networkBorderGroup = networkBorderGroup;
         return this;
     }
     
+    public DisassociateVpcCidrBlockResultIpv6CidrBlockAssociation(){}
 }

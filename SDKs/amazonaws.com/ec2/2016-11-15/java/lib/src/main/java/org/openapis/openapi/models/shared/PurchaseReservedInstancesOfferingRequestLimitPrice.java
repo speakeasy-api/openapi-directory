@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PurchaseReservedInstancesOfferingRequestLimitPrice {
     
     public Double amount;
+
     public PurchaseReservedInstancesOfferingRequestLimitPrice withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -19,9 +20,11 @@ public class PurchaseReservedInstancesOfferingRequestLimitPrice {
     
     
     public PurchaseReservedInstancesOfferingRequestLimitPriceCurrencyCodeEnum currencyCode;
+
     public PurchaseReservedInstancesOfferingRequestLimitPrice withCurrencyCode(PurchaseReservedInstancesOfferingRequestLimitPriceCurrencyCodeEnum currencyCode) {
         this.currencyCode = currencyCode;
         return this;
     }
     
+    public PurchaseReservedInstancesOfferingRequestLimitPrice(){}
 }

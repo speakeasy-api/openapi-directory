@@ -18,6 +18,7 @@ public class Denoise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strength")
     public Double strength;
+
     public Denoise withStrength(Double strength) {
         this.strength = strength;
         return this;
@@ -29,9 +30,11 @@ public class Denoise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tune")
     public String tune;
+
     public Denoise withTune(String tune) {
         this.tune = tune;
         return this;
     }
     
+    public Denoise(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WebACLUpdate {
     @JsonProperty("Action")
     public ChangeActionEnum action;
+
     public WebACLUpdate withAction(ChangeActionEnum action) {
         this.action = action;
         return this;
@@ -19,9 +20,14 @@ public class WebACLUpdate {
     
     @JsonProperty("ActivatedRule")
     public ActivatedRule activatedRule;
+
     public WebACLUpdate withActivatedRule(ActivatedRule activatedRule) {
         this.activatedRule = activatedRule;
         return this;
     }
     
+    public WebACLUpdate(@JsonProperty("Action") ChangeActionEnum action, @JsonProperty("ActivatedRule") ActivatedRule activatedRule) {
+        this.action = action;
+        this.activatedRule = activatedRule;
+  }
 }

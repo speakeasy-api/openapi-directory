@@ -15,6 +15,7 @@ public class DetectedFileFormatDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CsvFormatDescriptor")
     public DetectedCsvFormatDescriptor csvFormatDescriptor;
+
     public DetectedFileFormatDescriptor withCsvFormatDescriptor(DetectedCsvFormatDescriptor csvFormatDescriptor) {
         this.csvFormatDescriptor = csvFormatDescriptor;
         return this;
@@ -23,9 +24,11 @@ public class DetectedFileFormatDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JsonFormatDescriptor")
     public DetectedJsonFormatDescriptor jsonFormatDescriptor;
+
     public DetectedFileFormatDescriptor withJsonFormatDescriptor(DetectedJsonFormatDescriptor jsonFormatDescriptor) {
         this.jsonFormatDescriptor = jsonFormatDescriptor;
         return this;
     }
     
+    public DetectedFileFormatDescriptor(){}
 }

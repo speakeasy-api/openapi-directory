@@ -18,6 +18,7 @@ public class GsiDispatch200ApplicationJSONTimeframe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public Long end;
+
     public GsiDispatch200ApplicationJSONTimeframe withEnd(Long end) {
         this.end = end;
         return this;
@@ -29,9 +30,11 @@ public class GsiDispatch200ApplicationJSONTimeframe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public Long start;
+
     public GsiDispatch200ApplicationJSONTimeframe withStart(Long start) {
         this.start = start;
         return this;
     }
     
+    public GsiDispatch200ApplicationJSONTimeframe(){}
 }

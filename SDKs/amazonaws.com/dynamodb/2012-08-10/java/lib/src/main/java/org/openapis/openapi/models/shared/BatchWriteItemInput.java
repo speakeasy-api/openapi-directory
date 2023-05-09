@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchWriteItemInput {
     @JsonProperty("RequestItems")
     public java.util.Map<String, WriteRequest[]> requestItems;
+
     public BatchWriteItemInput withRequestItems(java.util.Map<String, WriteRequest[]> requestItems) {
         this.requestItems = requestItems;
         return this;
@@ -25,6 +26,7 @@ public class BatchWriteItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnConsumedCapacity")
     public ReturnConsumedCapacityEnum returnConsumedCapacity;
+
     public BatchWriteItemInput withReturnConsumedCapacity(ReturnConsumedCapacityEnum returnConsumedCapacity) {
         this.returnConsumedCapacity = returnConsumedCapacity;
         return this;
@@ -33,9 +35,13 @@ public class BatchWriteItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnItemCollectionMetrics")
     public ReturnItemCollectionMetricsEnum returnItemCollectionMetrics;
+
     public BatchWriteItemInput withReturnItemCollectionMetrics(ReturnItemCollectionMetricsEnum returnItemCollectionMetrics) {
         this.returnItemCollectionMetrics = returnItemCollectionMetrics;
         return this;
     }
     
+    public BatchWriteItemInput(@JsonProperty("RequestItems") java.util.Map<String, WriteRequest[]> requestItems) {
+        this.requestItems = requestItems;
+  }
 }

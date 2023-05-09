@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListPlaceIndexesResponse {
     @JsonProperty("Entries")
     public ListPlaceIndexesResponseEntry[] entries;
+
     public ListPlaceIndexesResponse withEntries(ListPlaceIndexesResponseEntry[] entries) {
         this.entries = entries;
         return this;
@@ -22,9 +23,13 @@ public class ListPlaceIndexesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPlaceIndexesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListPlaceIndexesResponse(@JsonProperty("Entries") ListPlaceIndexesResponseEntry[] entries) {
+        this.entries = entries;
+  }
 }

@@ -18,6 +18,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public WorkerPool withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public WorkerPool withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteTime")
     public String deleteTime;
+
     public WorkerPool withDeleteTime(String deleteTime) {
         this.deleteTime = deleteTime;
         return this;
@@ -51,6 +54,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public WorkerPool withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public WorkerPool withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -73,6 +78,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WorkerPool withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkConfig")
     public NetworkConfig networkConfig;
+
     public WorkerPool withNetworkConfig(NetworkConfig networkConfig) {
         this.networkConfig = networkConfig;
         return this;
@@ -95,6 +102,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public WorkerPoolStateEnum state;
+
     public WorkerPool withState(WorkerPoolStateEnum state) {
         this.state = state;
         return this;
@@ -106,6 +114,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public WorkerPool withUid(String uid) {
         this.uid = uid;
         return this;
@@ -117,6 +126,7 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public WorkerPool withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -128,9 +138,11 @@ public class WorkerPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerConfig")
     public WorkerConfig workerConfig;
+
     public WorkerPool withWorkerConfig(WorkerConfig workerConfig) {
         this.workerConfig = workerConfig;
         return this;
     }
     
+    public WorkerPool(){}
 }

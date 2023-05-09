@@ -12,6 +12,7 @@ public class Url {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authority")
     public String authority;
+
     public Url withAuthority(String authority) {
         this.authority = authority;
         return this;
@@ -20,6 +21,7 @@ public class Url {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public java.util.Map<String, Object> content;
+
     public Url withContent(java.util.Map<String, Object> content) {
         this.content = content;
         return this;
@@ -28,6 +30,7 @@ public class Url {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultPort")
     public Integer defaultPort;
+
     public Url withDefaultPort(Integer defaultPort) {
         this.defaultPort = defaultPort;
         return this;
@@ -36,6 +39,7 @@ public class Url {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public String file;
+
     public Url withFile(String file) {
         this.file = file;
         return this;
@@ -44,6 +48,7 @@ public class Url {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public Url withHost(String host) {
         this.host = host;
         return this;
@@ -52,6 +57,7 @@ public class Url {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public Url withPath(String path) {
         this.path = path;
         return this;
@@ -60,6 +66,7 @@ public class Url {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public Url withPort(Integer port) {
         this.port = port;
         return this;
@@ -68,6 +75,7 @@ public class Url {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public String protocol;
+
     public Url withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -76,6 +84,7 @@ public class Url {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public Url withQuery(String query) {
         this.query = query;
         return this;
@@ -84,6 +93,7 @@ public class Url {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ref")
     public String ref;
+
     public Url withRef(String ref) {
         this.ref = ref;
         return this;
@@ -92,9 +102,11 @@ public class Url {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userInfo")
     public String userInfo;
+
     public Url withUserInfo(String userInfo) {
         this.userInfo = userInfo;
         return this;
     }
     
+    public Url(){}
 }

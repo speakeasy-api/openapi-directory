@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AssignIpv6AddressesRequest {
     
     public Long ipv6AddressCount;
+
     public AssignIpv6AddressesRequest withIpv6AddressCount(Long ipv6AddressCount) {
         this.ipv6AddressCount = ipv6AddressCount;
         return this;
@@ -16,6 +17,7 @@ public class AssignIpv6AddressesRequest {
     
     
     public String[] ipv6Addresses;
+
     public AssignIpv6AddressesRequest withIpv6Addresses(String[] ipv6Addresses) {
         this.ipv6Addresses = ipv6Addresses;
         return this;
@@ -23,6 +25,7 @@ public class AssignIpv6AddressesRequest {
     
     
     public Long ipv6PrefixCount;
+
     public AssignIpv6AddressesRequest withIpv6PrefixCount(Long ipv6PrefixCount) {
         this.ipv6PrefixCount = ipv6PrefixCount;
         return this;
@@ -30,6 +33,7 @@ public class AssignIpv6AddressesRequest {
     
     
     public String[] ipv6Prefixes;
+
     public AssignIpv6AddressesRequest withIpv6Prefixes(String[] ipv6Prefixes) {
         this.ipv6Prefixes = ipv6Prefixes;
         return this;
@@ -37,9 +41,13 @@ public class AssignIpv6AddressesRequest {
     
     
     public String networkInterfaceId;
+
     public AssignIpv6AddressesRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
     }
     
+    public AssignIpv6AddressesRequest(@JsonProperty("NetworkInterfaceId") String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+  }
 }

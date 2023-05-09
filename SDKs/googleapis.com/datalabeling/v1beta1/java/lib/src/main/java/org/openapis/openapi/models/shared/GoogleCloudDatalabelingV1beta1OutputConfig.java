@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1OutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsDestination")
     public GoogleCloudDatalabelingV1beta1GcsDestination gcsDestination;
+
     public GoogleCloudDatalabelingV1beta1OutputConfig withGcsDestination(GoogleCloudDatalabelingV1beta1GcsDestination gcsDestination) {
         this.gcsDestination = gcsDestination;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1OutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsFolderDestination")
     public GoogleCloudDatalabelingV1beta1GcsFolderDestination gcsFolderDestination;
+
     public GoogleCloudDatalabelingV1beta1OutputConfig withGcsFolderDestination(GoogleCloudDatalabelingV1beta1GcsFolderDestination gcsFolderDestination) {
         this.gcsFolderDestination = gcsFolderDestination;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1OutputConfig(){}
 }

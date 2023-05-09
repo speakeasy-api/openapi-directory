@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDeviceDefinitionResponse {
@@ -12,6 +13,7 @@ public class GetDeviceDefinitionResponse {
      */
     
     public Object badRequestException;
+
     public GetDeviceDefinitionResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetDeviceDefinitionResponse {
     
     
     public String contentType;
+
     public GetDeviceDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDeviceDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDeviceDefinitionResponse getDeviceDefinitionResponse;
+
     public GetDeviceDefinitionResponse withGetDeviceDefinitionResponse(org.openapis.openapi.models.shared.GetDeviceDefinitionResponse getDeviceDefinitionResponse) {
         this.getDeviceDefinitionResponse = getDeviceDefinitionResponse;
         return this;
@@ -36,6 +40,7 @@ public class GetDeviceDefinitionResponse {
     
     
     public Integer statusCode;
+
     public GetDeviceDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetDeviceDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDeviceDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDeviceDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

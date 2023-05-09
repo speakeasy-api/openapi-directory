@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePermissionSetResponse {
@@ -12,6 +13,7 @@ public class DeletePermissionSetResponse {
      */
     
     public Object accessDeniedException;
+
     public DeletePermissionSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeletePermissionSetResponse {
      */
     
     public Object conflictException;
+
     public DeletePermissionSetResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeletePermissionSetResponse {
     
     
     public String contentType;
+
     public DeletePermissionSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeletePermissionSetResponse {
      */
     
     public java.util.Map<String, Object> deletePermissionSetResponse;
+
     public DeletePermissionSetResponse withDeletePermissionSetResponse(java.util.Map<String, Object> deletePermissionSetResponse) {
         this.deletePermissionSetResponse = deletePermissionSetResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeletePermissionSetResponse {
      */
     
     public Object internalServerException;
+
     public DeletePermissionSetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeletePermissionSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeletePermissionSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeletePermissionSetResponse {
     
     
     public Integer statusCode;
+
     public DeletePermissionSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeletePermissionSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePermissionSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeletePermissionSetResponse {
      */
     
     public Object throttlingException;
+
     public DeletePermissionSetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeletePermissionSetResponse {
      */
     
     public Object validationException;
+
     public DeletePermissionSetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeletePermissionSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

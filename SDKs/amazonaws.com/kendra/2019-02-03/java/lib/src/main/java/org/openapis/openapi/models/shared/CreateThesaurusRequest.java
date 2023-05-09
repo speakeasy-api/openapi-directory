@@ -12,6 +12,7 @@ public class CreateThesaurusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateThesaurusRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class CreateThesaurusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateThesaurusRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class CreateThesaurusRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public CreateThesaurusRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -34,6 +37,7 @@ public class CreateThesaurusRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateThesaurusRequest withName(String name) {
         this.name = name;
         return this;
@@ -41,6 +45,7 @@ public class CreateThesaurusRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateThesaurusRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -48,6 +53,7 @@ public class CreateThesaurusRequest {
     
     @JsonProperty("SourceS3Path")
     public S3Path sourceS3Path;
+
     public CreateThesaurusRequest withSourceS3Path(S3Path sourceS3Path) {
         this.sourceS3Path = sourceS3Path;
         return this;
@@ -56,9 +62,16 @@ public class CreateThesaurusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateThesaurusRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateThesaurusRequest(@JsonProperty("IndexId") String indexId, @JsonProperty("Name") String name, @JsonProperty("RoleArn") String roleArn, @JsonProperty("SourceS3Path") S3Path sourceS3Path) {
+        this.indexId = indexId;
+        this.name = name;
+        this.roleArn = roleArn;
+        this.sourceS3Path = sourceS3Path;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDirectoryResponse {
@@ -12,6 +13,7 @@ public class DeleteDirectoryResponse {
      */
     
     public Object clientException;
+
     public DeleteDirectoryResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDirectoryResponse {
     
     
     public String contentType;
+
     public DeleteDirectoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteDirectoryResult deleteDirectoryResult;
+
     public DeleteDirectoryResponse withDeleteDirectoryResult(org.openapis.openapi.models.shared.DeleteDirectoryResult deleteDirectoryResult) {
         this.deleteDirectoryResult = deleteDirectoryResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDirectoryResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public DeleteDirectoryResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteDirectoryResponse {
     
     
     public Integer statusCode;
+
     public DeleteDirectoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteDirectoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDirectoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteDirectoryResponse {
      */
     
     public Object serviceException;
+
     public DeleteDirectoryResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
     }
     
+    public DeleteDirectoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class SetMasterAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public SetMasterAuthRequestActionEnum action;
+
     public SetMasterAuthRequest withAction(SetMasterAuthRequestActionEnum action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class SetMasterAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterId")
     public String clusterId;
+
     public SetMasterAuthRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -40,6 +42,7 @@ public class SetMasterAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SetMasterAuthRequest withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class SetMasterAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public SetMasterAuthRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -62,6 +66,7 @@ public class SetMasterAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update")
     public MasterAuth update;
+
     public SetMasterAuthRequest withUpdate(MasterAuth update) {
         this.update = update;
         return this;
@@ -73,9 +78,11 @@ public class SetMasterAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public SetMasterAuthRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public SetMasterAuthRequest(){}
 }

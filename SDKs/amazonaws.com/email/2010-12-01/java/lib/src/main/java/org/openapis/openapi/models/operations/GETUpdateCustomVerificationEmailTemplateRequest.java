@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateCustomVerificationEmailTemplateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETUpdateCustomVerificationEmailTemplateActionEnum action;
+
     public GETUpdateCustomVerificationEmailTemplateRequest withAction(GETUpdateCustomVerificationEmailTemplateActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETUpdateCustomVerificationEmailTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FailureRedirectionURL")
     public String failureRedirectionURL;
+
     public GETUpdateCustomVerificationEmailTemplateRequest withFailureRedirectionURL(String failureRedirectionURL) {
         this.failureRedirectionURL = failureRedirectionURL;
         return this;
@@ -29,6 +32,7 @@ public class GETUpdateCustomVerificationEmailTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FromEmailAddress")
     public String fromEmailAddress;
+
     public GETUpdateCustomVerificationEmailTemplateRequest withFromEmailAddress(String fromEmailAddress) {
         this.fromEmailAddress = fromEmailAddress;
         return this;
@@ -39,6 +43,7 @@ public class GETUpdateCustomVerificationEmailTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SuccessRedirectionURL")
     public String successRedirectionURL;
+
     public GETUpdateCustomVerificationEmailTemplateRequest withSuccessRedirectionURL(String successRedirectionURL) {
         this.successRedirectionURL = successRedirectionURL;
         return this;
@@ -49,6 +54,7 @@ public class GETUpdateCustomVerificationEmailTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateContent")
     public String templateContent;
+
     public GETUpdateCustomVerificationEmailTemplateRequest withTemplateContent(String templateContent) {
         this.templateContent = templateContent;
         return this;
@@ -59,6 +65,7 @@ public class GETUpdateCustomVerificationEmailTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateName")
     public String templateName;
+
     public GETUpdateCustomVerificationEmailTemplateRequest withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -69,6 +76,7 @@ public class GETUpdateCustomVerificationEmailTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateSubject")
     public String templateSubject;
+
     public GETUpdateCustomVerificationEmailTemplateRequest withTemplateSubject(String templateSubject) {
         this.templateSubject = templateSubject;
         return this;
@@ -76,6 +84,7 @@ public class GETUpdateCustomVerificationEmailTemplateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETUpdateCustomVerificationEmailTemplateVersionEnum version;
+
     public GETUpdateCustomVerificationEmailTemplateRequest withVersion(GETUpdateCustomVerificationEmailTemplateVersionEnum version) {
         this.version = version;
         return this;
@@ -83,6 +92,7 @@ public class GETUpdateCustomVerificationEmailTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETUpdateCustomVerificationEmailTemplateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -90,6 +100,7 @@ public class GETUpdateCustomVerificationEmailTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETUpdateCustomVerificationEmailTemplateRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -97,6 +108,7 @@ public class GETUpdateCustomVerificationEmailTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETUpdateCustomVerificationEmailTemplateRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -104,6 +116,7 @@ public class GETUpdateCustomVerificationEmailTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETUpdateCustomVerificationEmailTemplateRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -111,6 +124,7 @@ public class GETUpdateCustomVerificationEmailTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETUpdateCustomVerificationEmailTemplateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -118,6 +132,7 @@ public class GETUpdateCustomVerificationEmailTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETUpdateCustomVerificationEmailTemplateRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -125,9 +140,15 @@ public class GETUpdateCustomVerificationEmailTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETUpdateCustomVerificationEmailTemplateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETUpdateCustomVerificationEmailTemplateRequest(@JsonProperty("Action") GETUpdateCustomVerificationEmailTemplateActionEnum action, @JsonProperty("TemplateName") String templateName, @JsonProperty("Version") GETUpdateCustomVerificationEmailTemplateVersionEnum version) {
+        this.action = action;
+        this.templateName = templateName;
+        this.version = version;
+  }
 }

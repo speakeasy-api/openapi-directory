@@ -15,9 +15,11 @@ public class EcrRepositoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryPolicy")
     public String repositoryPolicy;
+
     public EcrRepositoryConfiguration withRepositoryPolicy(String repositoryPolicy) {
         this.repositoryPolicy = repositoryPolicy;
         return this;
     }
     
+    public EcrRepositoryConfiguration(){}
 }

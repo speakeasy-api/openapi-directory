@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterChangeResponse {
     
     public String contentType;
+
     public RegisterChangeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RegisterChangeResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterChange registerChange;
+
     public RegisterChangeResponse withRegisterChange(org.openapis.openapi.models.shared.RegisterChange registerChange) {
         this.registerChange = registerChange;
         return this;
@@ -26,6 +29,7 @@ public class RegisterChangeResponse {
     
     
     public Integer statusCode;
+
     public RegisterChangeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RegisterChangeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterChangeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RegisterChangeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

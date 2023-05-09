@@ -18,6 +18,7 @@ public class FirstLastNameGenderedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public FirstLastNameGenderedOut withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -29,6 +30,7 @@ public class FirstLastNameGenderedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genderScale")
     public Double genderScale;
+
     public FirstLastNameGenderedOut withGenderScale(Double genderScale) {
         this.genderScale = genderScale;
         return this;
@@ -37,6 +39,7 @@ public class FirstLastNameGenderedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FirstLastNameGenderedOut withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class FirstLastNameGenderedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public FirstLastNameGenderedOut withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -59,6 +63,7 @@ public class FirstLastNameGenderedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("likelyGender")
     public FirstLastNameGenderedOutLikelyGenderEnum likelyGender;
+
     public FirstLastNameGenderedOut withLikelyGender(FirstLastNameGenderedOutLikelyGenderEnum likelyGender) {
         this.likelyGender = likelyGender;
         return this;
@@ -70,6 +75,7 @@ public class FirstLastNameGenderedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probabilityCalibrated")
     public Double probabilityCalibrated;
+
     public FirstLastNameGenderedOut withProbabilityCalibrated(Double probabilityCalibrated) {
         this.probabilityCalibrated = probabilityCalibrated;
         return this;
@@ -81,6 +87,7 @@ public class FirstLastNameGenderedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Double score;
+
     public FirstLastNameGenderedOut withScore(Double score) {
         this.score = score;
         return this;
@@ -89,9 +96,11 @@ public class FirstLastNameGenderedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public FirstLastNameGenderedOut withScript(String script) {
         this.script = script;
         return this;
     }
     
+    public FirstLastNameGenderedOut(){}
 }

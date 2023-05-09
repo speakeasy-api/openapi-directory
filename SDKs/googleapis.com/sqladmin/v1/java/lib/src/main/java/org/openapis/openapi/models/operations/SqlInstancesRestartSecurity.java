@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SqlInstancesRestartSecurity {
     @SpeakeasyMetadata("security:option=true")
     public SqlInstancesRestartSecurityOption1 option1;
+
     public SqlInstancesRestartSecurity withOption1(SqlInstancesRestartSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class SqlInstancesRestartSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SqlInstancesRestartSecurityOption2 option2;
+
     public SqlInstancesRestartSecurity withOption2(SqlInstancesRestartSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public SqlInstancesRestartSecurity(){}
 }

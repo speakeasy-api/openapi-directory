@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPrivateDestinationDefinitionsResponse {
     
     public String contentType;
+
     public ListPrivateDestinationDefinitionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListPrivateDestinationDefinitionsResponse {
      */
     
     public org.openapis.openapi.models.shared.PrivateDestinationDefinitionReadList privateDestinationDefinitionReadList;
+
     public ListPrivateDestinationDefinitionsResponse withPrivateDestinationDefinitionReadList(org.openapis.openapi.models.shared.PrivateDestinationDefinitionReadList privateDestinationDefinitionReadList) {
         this.privateDestinationDefinitionReadList = privateDestinationDefinitionReadList;
         return this;
@@ -26,6 +29,7 @@ public class ListPrivateDestinationDefinitionsResponse {
     
     
     public Integer statusCode;
+
     public ListPrivateDestinationDefinitionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ListPrivateDestinationDefinitionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPrivateDestinationDefinitionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListPrivateDestinationDefinitionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

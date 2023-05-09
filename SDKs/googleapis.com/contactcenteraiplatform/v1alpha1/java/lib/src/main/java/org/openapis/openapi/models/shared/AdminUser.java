@@ -18,6 +18,7 @@ public class AdminUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("familyName")
     public String familyName;
+
     public AdminUser withFamilyName(String familyName) {
         this.familyName = familyName;
         return this;
@@ -29,9 +30,11 @@ public class AdminUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("givenName")
     public String givenName;
+
     public AdminUser withGivenName(String givenName) {
         this.givenName = givenName;
         return this;
     }
     
+    public AdminUser(){}
 }

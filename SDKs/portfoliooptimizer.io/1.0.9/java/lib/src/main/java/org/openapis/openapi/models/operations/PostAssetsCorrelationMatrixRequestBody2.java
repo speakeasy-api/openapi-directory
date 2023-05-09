@@ -12,6 +12,7 @@ public class PostAssetsCorrelationMatrixRequestBody2 {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostAssetsCorrelationMatrixRequestBody2 withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -22,9 +23,14 @@ public class PostAssetsCorrelationMatrixRequestBody2 {
      */
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostAssetsCorrelationMatrixRequestBody2 withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
     }
     
+    public PostAssetsCorrelationMatrixRequestBody2(@JsonProperty("assets") Long assets, @JsonProperty("assetsCovarianceMatrix") Double[][] assetsCovarianceMatrix) {
+        this.assets = assets;
+        this.assetsCovarianceMatrix = assetsCovarianceMatrix;
+  }
 }

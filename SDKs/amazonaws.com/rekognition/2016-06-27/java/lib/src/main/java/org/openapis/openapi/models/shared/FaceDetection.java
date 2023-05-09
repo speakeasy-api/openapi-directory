@@ -15,6 +15,7 @@ public class FaceDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Face")
     public FaceDetail face;
+
     public FaceDetection withFace(FaceDetail face) {
         this.face = face;
         return this;
@@ -23,9 +24,11 @@ public class FaceDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timestamp")
     public Long timestamp;
+
     public FaceDetection withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public FaceDetection(){}
 }

@@ -15,6 +15,7 @@ public class MonitoringConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudWatchMonitoringConfiguration")
     public CloudWatchMonitoringConfiguration cloudWatchMonitoringConfiguration;
+
     public MonitoringConfiguration withCloudWatchMonitoringConfiguration(CloudWatchMonitoringConfiguration cloudWatchMonitoringConfiguration) {
         this.cloudWatchMonitoringConfiguration = cloudWatchMonitoringConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class MonitoringConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persistentAppUI")
     public PersistentAppUIEnum persistentAppUI;
+
     public MonitoringConfiguration withPersistentAppUI(PersistentAppUIEnum persistentAppUI) {
         this.persistentAppUI = persistentAppUI;
         return this;
@@ -31,9 +33,11 @@ public class MonitoringConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3MonitoringConfiguration")
     public S3MonitoringConfiguration s3MonitoringConfiguration;
+
     public MonitoringConfiguration withS3MonitoringConfiguration(S3MonitoringConfiguration s3MonitoringConfiguration) {
         this.s3MonitoringConfiguration = s3MonitoringConfiguration;
         return this;
     }
     
+    public MonitoringConfiguration(){}
 }

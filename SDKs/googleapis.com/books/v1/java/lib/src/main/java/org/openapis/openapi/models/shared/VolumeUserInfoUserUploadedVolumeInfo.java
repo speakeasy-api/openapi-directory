@@ -12,9 +12,11 @@ public class VolumeUserInfoUserUploadedVolumeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processingState")
     public String processingState;
+
     public VolumeUserInfoUserUploadedVolumeInfo withProcessingState(String processingState) {
         this.processingState = processingState;
         return this;
     }
     
+    public VolumeUserInfoUserUploadedVolumeInfo(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiFindRequest {
@@ -12,6 +13,7 @@ public class OrderApiFindRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public OrderApiFindRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +24,14 @@ public class OrderApiFindRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partner")
     public String partner;
+
     public OrderApiFindRequest withPartner(String partner) {
         this.partner = partner;
         return this;
     }
     
+    public OrderApiFindRequest(@JsonProperty("id") String id, @JsonProperty("partner") String partner) {
+        this.id = id;
+        this.partner = partner;
+  }
 }

@@ -2,10 +2,10 @@
 ```java
 package hello.world;
 
+import java.time.OffsetDateTime;
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PostEventsV3SendSecurity;
 import org.openapis.openapi.models.operations.PostEventsV3SendResponse;
+import org.openapis.openapi.models.operations.PostEventsV3SendSecurity;
 import org.openapis.openapi.models.shared.BehavioralEventHttpCompletionRequest;
 
 public class Application {
@@ -14,18 +14,16 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            org.openapis.openapi.models.shared.BehavioralEventHttpCompletionRequest req = new BehavioralEventHttpCompletionRequest() {{
-                email = "Larue_Rau85@yahoo.com";
-                eventName = "corrupti";
-                objectId = "illum";
-                occurredAt = "2022-05-18T09:34:54.894Z";
-                properties = new java.util.HashMap<String, String>() {{
-                    put("suscipit", "iure");
-                    put("magnam", "debitis");
-                    put("ipsa", "delectus");
-                }};
-                utk = "tempora";
-            }}            
+            org.openapis.openapi.models.shared.BehavioralEventHttpCompletionRequest req = new BehavioralEventHttpCompletionRequest("corrupti",                 new java.util.HashMap<String, String>() {{
+                                put("distinctio", "quibusdam");
+                                put("unde", "nulla");
+                                put("corrupti", "illum");
+                            }}) {{
+                email = "Linda.Oberbrunner@yahoo.com";
+                objectId = "magnam";
+                occurredAt = OffsetDateTime.parse("2022-10-30T21:34:57.850Z");
+                utk = "delectus";
+            }};            
 
             PostEventsV3SendResponse res = sdk.behavioralEventsTracking.postEventsV3Send(req, new PostEventsV3SendSecurity() {{
                 hapikey = "YOUR_API_KEY_HERE";
@@ -37,5 +35,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class UpdatePlaceIndexResponse {
     @JsonProperty("IndexArn")
     public String indexArn;
+
     public UpdatePlaceIndexResponse withIndexArn(String indexArn) {
         this.indexArn = indexArn;
         return this;
@@ -24,6 +25,7 @@ public class UpdatePlaceIndexResponse {
     
     @JsonProperty("IndexName")
     public String indexName;
+
     public UpdatePlaceIndexResponse withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -33,9 +35,15 @@ public class UpdatePlaceIndexResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public UpdatePlaceIndexResponse withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public UpdatePlaceIndexResponse(@JsonProperty("IndexArn") String indexArn, @JsonProperty("IndexName") String indexName, @JsonProperty("UpdateTime") OffsetDateTime updateTime) {
+        this.indexArn = indexArn;
+        this.indexName = indexName;
+        this.updateTime = updateTime;
+  }
 }

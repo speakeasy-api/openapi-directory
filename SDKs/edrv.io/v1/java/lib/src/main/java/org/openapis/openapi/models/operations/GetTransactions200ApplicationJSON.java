@@ -15,6 +15,7 @@ public class GetTransactions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasNext")
     public Boolean hasNext;
+
     public GetTransactions200ApplicationJSON withHasNext(Boolean hasNext) {
         this.hasNext = hasNext;
         return this;
@@ -23,6 +24,7 @@ public class GetTransactions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasPrevious")
     public Boolean hasPrevious;
+
     public GetTransactions200ApplicationJSON withHasPrevious(Boolean hasPrevious) {
         this.hasPrevious = hasPrevious;
         return this;
@@ -31,6 +33,7 @@ public class GetTransactions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GetTransactions200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -39,6 +42,7 @@ public class GetTransactions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ok")
     public Boolean ok;
+
     public GetTransactions200ApplicationJSON withOk(Boolean ok) {
         this.ok = ok;
         return this;
@@ -47,9 +51,11 @@ public class GetTransactions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public Object[] result;
+
     public GetTransactions200ApplicationJSON withResult(Object[] result) {
         this.result = result;
         return this;
     }
     
+    public GetTransactions200ApplicationJSON(){}
 }

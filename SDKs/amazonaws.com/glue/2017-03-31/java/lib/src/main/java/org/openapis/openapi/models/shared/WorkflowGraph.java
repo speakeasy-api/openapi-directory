@@ -15,6 +15,7 @@ public class WorkflowGraph {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Edges")
     public Edge[] edges;
+
     public WorkflowGraph withEdges(Edge[] edges) {
         this.edges = edges;
         return this;
@@ -23,9 +24,11 @@ public class WorkflowGraph {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Nodes")
     public Node[] nodes;
+
     public WorkflowGraph withNodes(Node[] nodes) {
         this.nodes = nodes;
         return this;
     }
     
+    public WorkflowGraph(){}
 }

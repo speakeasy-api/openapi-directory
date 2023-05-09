@@ -15,6 +15,7 @@ public class CodeScanningUpdateAlertRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dismissed_comment")
     public String dismissedComment;
+
     public CodeScanningUpdateAlertRequestBody withDismissedComment(String dismissedComment) {
         this.dismissedComment = dismissedComment;
         return this;
@@ -26,6 +27,7 @@ public class CodeScanningUpdateAlertRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dismissed_reason")
     public org.openapis.openapi.models.shared.CodeScanningAlertDismissedReasonEnum dismissedReason;
+
     public CodeScanningUpdateAlertRequestBody withDismissedReason(org.openapis.openapi.models.shared.CodeScanningAlertDismissedReasonEnum dismissedReason) {
         this.dismissedReason = dismissedReason;
         return this;
@@ -36,9 +38,13 @@ public class CodeScanningUpdateAlertRequestBody {
      */
     @JsonProperty("state")
     public org.openapis.openapi.models.shared.CodeScanningAlertSetStateEnum state;
+
     public CodeScanningUpdateAlertRequestBody withState(org.openapis.openapi.models.shared.CodeScanningAlertSetStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public CodeScanningUpdateAlertRequestBody(@JsonProperty("state") org.openapis.openapi.models.shared.CodeScanningAlertSetStateEnum state) {
+        this.state = state;
+  }
 }

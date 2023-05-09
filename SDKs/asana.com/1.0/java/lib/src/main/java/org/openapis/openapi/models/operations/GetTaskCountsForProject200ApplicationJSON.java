@@ -18,9 +18,11 @@ public class GetTaskCountsForProject200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TaskCountResponse data;
+
     public GetTaskCountsForProject200ApplicationJSON withData(org.openapis.openapi.models.shared.TaskCountResponse data) {
         this.data = data;
         return this;
     }
     
+    public GetTaskCountsForProject200ApplicationJSON(){}
 }

@@ -18,9 +18,11 @@ public class InspectUrlIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inspectionResult")
     public UrlInspectionResult inspectionResult;
+
     public InspectUrlIndexResponse withInspectionResult(UrlInspectionResult inspectionResult) {
         this.inspectionResult = inspectionResult;
         return this;
     }
     
+    public InspectUrlIndexResponse(){}
 }

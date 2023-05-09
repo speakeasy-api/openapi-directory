@@ -15,6 +15,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cll")
     public Integer cll;
+
     public Environment withCll(Integer cll) {
         this.cll = cll;
         return this;
@@ -26,6 +27,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clm")
     public Integer clm;
+
     public Environment withClm(Integer clm) {
         this.clm = clm;
         return this;
@@ -37,9 +39,11 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mat")
     public Float mat;
+
     public Environment withMat(Float mat) {
         this.mat = mat;
         return this;
     }
     
+    public Environment(){}
 }

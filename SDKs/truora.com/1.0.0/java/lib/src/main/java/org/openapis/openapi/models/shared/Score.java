@@ -17,6 +17,7 @@ public class Score {
      */
     @JsonProperty("by_id")
     public ScoreDetail byId;
+
     public Score withById(ScoreDetail byId) {
         this.byId = byId;
         return this;
@@ -27,6 +28,7 @@ public class Score {
      */
     @JsonProperty("by_name")
     public ScoreDetail byName;
+
     public Score withByName(ScoreDetail byName) {
         this.byName = byName;
         return this;
@@ -37,6 +39,7 @@ public class Score {
      */
     @JsonProperty("data_set")
     public ScoreDataSetEnum dataSet;
+
     public Score withDataSet(ScoreDataSetEnum dataSet) {
         this.dataSet = dataSet;
         return this;
@@ -48,6 +51,7 @@ public class Score {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public ScoreResultEnum result;
+
     public Score withResult(ScoreResultEnum result) {
         this.result = result;
         return this;
@@ -58,6 +62,7 @@ public class Score {
      */
     @JsonProperty("score")
     public Float score;
+
     public Score withScore(Float score) {
         this.score = score;
         return this;
@@ -68,9 +73,17 @@ public class Score {
      */
     @JsonProperty("severity")
     public ScoreSeverityEnum severity;
+
     public Score withSeverity(ScoreSeverityEnum severity) {
         this.severity = severity;
         return this;
     }
     
+    public Score(@JsonProperty("by_id") ScoreDetail byId, @JsonProperty("by_name") ScoreDetail byName, @JsonProperty("data_set") ScoreDataSetEnum dataSet, @JsonProperty("score") Float score, @JsonProperty("severity") ScoreSeverityEnum severity) {
+        this.byId = byId;
+        this.byName = byName;
+        this.dataSet = dataSet;
+        this.score = score;
+        this.severity = severity;
+  }
 }

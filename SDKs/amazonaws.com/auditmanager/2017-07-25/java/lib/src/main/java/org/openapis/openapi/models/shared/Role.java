@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Role {
     @JsonProperty("roleArn")
     public String roleArn;
+
     public Role withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -19,9 +20,14 @@ public class Role {
     
     @JsonProperty("roleType")
     public RoleTypeEnum roleType;
+
     public Role withRoleType(RoleTypeEnum roleType) {
         this.roleType = roleType;
         return this;
     }
     
+    public Role(@JsonProperty("roleArn") String roleArn, @JsonProperty("roleType") RoleTypeEnum roleType) {
+        this.roleArn = roleArn;
+        this.roleType = roleType;
+  }
 }

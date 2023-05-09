@@ -15,6 +15,7 @@ public class BatchDisassociateApprovalRuleTemplateFromRepositoriesError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public String errorCode;
+
     public BatchDisassociateApprovalRuleTemplateFromRepositoriesError withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class BatchDisassociateApprovalRuleTemplateFromRepositoriesError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public BatchDisassociateApprovalRuleTemplateFromRepositoriesError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class BatchDisassociateApprovalRuleTemplateFromRepositoriesError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public BatchDisassociateApprovalRuleTemplateFromRepositoriesError withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public BatchDisassociateApprovalRuleTemplateFromRepositoriesError(){}
 }

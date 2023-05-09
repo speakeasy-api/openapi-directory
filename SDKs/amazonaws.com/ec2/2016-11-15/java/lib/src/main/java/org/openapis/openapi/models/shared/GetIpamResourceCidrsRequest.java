@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetIpamResourceCidrsRequest {
     
     public Boolean dryRun;
+
     public GetIpamResourceCidrsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class GetIpamResourceCidrsRequest {
     
     
     public GetIpamResourceCidrsRequestFilters[] filters;
+
     public GetIpamResourceCidrsRequest withFilters(GetIpamResourceCidrsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class GetIpamResourceCidrsRequest {
     
     
     public String ipamPoolId;
+
     public GetIpamResourceCidrsRequest withIpamPoolId(String ipamPoolId) {
         this.ipamPoolId = ipamPoolId;
         return this;
@@ -30,6 +33,7 @@ public class GetIpamResourceCidrsRequest {
     
     
     public String ipamScopeId;
+
     public GetIpamResourceCidrsRequest withIpamScopeId(String ipamScopeId) {
         this.ipamScopeId = ipamScopeId;
         return this;
@@ -37,6 +41,7 @@ public class GetIpamResourceCidrsRequest {
     
     
     public Long maxResults;
+
     public GetIpamResourceCidrsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -44,6 +49,7 @@ public class GetIpamResourceCidrsRequest {
     
     
     public String nextToken;
+
     public GetIpamResourceCidrsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -51,6 +57,7 @@ public class GetIpamResourceCidrsRequest {
     
     
     public String resourceId;
+
     public GetIpamResourceCidrsRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -58,6 +65,7 @@ public class GetIpamResourceCidrsRequest {
     
     
     public String resourceOwner;
+
     public GetIpamResourceCidrsRequest withResourceOwner(String resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
@@ -65,6 +73,7 @@ public class GetIpamResourceCidrsRequest {
     
     
     public RequestIpamResourceTag resourceTag;
+
     public GetIpamResourceCidrsRequest withResourceTag(RequestIpamResourceTag resourceTag) {
         this.resourceTag = resourceTag;
         return this;
@@ -72,9 +81,13 @@ public class GetIpamResourceCidrsRequest {
     
     
     public IpamResourceTypeEnum resourceType;
+
     public GetIpamResourceCidrsRequest withResourceType(IpamResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public GetIpamResourceCidrsRequest(@JsonProperty("IpamScopeId") String ipamScopeId) {
+        this.ipamScopeId = ipamScopeId;
+  }
 }

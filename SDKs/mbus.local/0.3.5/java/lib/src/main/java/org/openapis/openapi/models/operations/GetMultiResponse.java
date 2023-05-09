@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMultiResponse {
     
     public String contentType;
+
     public GetMultiResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetMultiResponse {
     
     
     public Integer statusCode;
+
     public GetMultiResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetMultiResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMultiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetMultiResponse {
      */
     
     public String mbusData;
+
     public GetMultiResponse withMbusData(String mbusData) {
         this.mbusData = mbusData;
         return this;
@@ -43,9 +48,14 @@ public class GetMultiResponse {
      */
     
     public String textError;
+
     public GetMultiResponse withTextError(String textError) {
         this.textError = textError;
         return this;
     }
     
+    public GetMultiResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class ContentGenreTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ContentGenreTargetingOptionDetails withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public ContentGenreTargetingOptionDetails(){}
 }

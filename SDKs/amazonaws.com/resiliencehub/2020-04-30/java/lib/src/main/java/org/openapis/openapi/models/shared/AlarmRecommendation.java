@@ -15,6 +15,7 @@ public class AlarmRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appComponentName")
     public String appComponentName;
+
     public AlarmRecommendation withAppComponentName(String appComponentName) {
         this.appComponentName = appComponentName;
         return this;
@@ -23,6 +24,7 @@ public class AlarmRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AlarmRecommendation withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class AlarmRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public RecommendationItem[] items;
+
     public AlarmRecommendation withItems(RecommendationItem[] items) {
         this.items = items;
         return this;
@@ -38,6 +41,7 @@ public class AlarmRecommendation {
     
     @JsonProperty("name")
     public String name;
+
     public AlarmRecommendation withName(String name) {
         this.name = name;
         return this;
@@ -46,6 +50,7 @@ public class AlarmRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prerequisite")
     public String prerequisite;
+
     public AlarmRecommendation withPrerequisite(String prerequisite) {
         this.prerequisite = prerequisite;
         return this;
@@ -53,6 +58,7 @@ public class AlarmRecommendation {
     
     @JsonProperty("recommendationId")
     public String recommendationId;
+
     public AlarmRecommendation withRecommendationId(String recommendationId) {
         this.recommendationId = recommendationId;
         return this;
@@ -60,6 +66,7 @@ public class AlarmRecommendation {
     
     @JsonProperty("referenceId")
     public String referenceId;
+
     public AlarmRecommendation withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -67,9 +74,16 @@ public class AlarmRecommendation {
     
     @JsonProperty("type")
     public AlarmTypeEnum type;
+
     public AlarmRecommendation withType(AlarmTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AlarmRecommendation(@JsonProperty("name") String name, @JsonProperty("recommendationId") String recommendationId, @JsonProperty("referenceId") String referenceId, @JsonProperty("type") AlarmTypeEnum type) {
+        this.name = name;
+        this.recommendationId = recommendationId;
+        this.referenceId = referenceId;
+        this.type = type;
+  }
 }

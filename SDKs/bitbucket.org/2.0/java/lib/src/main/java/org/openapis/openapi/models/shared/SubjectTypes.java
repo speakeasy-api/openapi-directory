@@ -15,6 +15,7 @@ public class SubjectTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository")
     public SubjectTypesRepository repository;
+
     public SubjectTypes withRepository(SubjectTypesRepository repository) {
         this.repository = repository;
         return this;
@@ -23,9 +24,11 @@ public class SubjectTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace")
     public SubjectTypesWorkspace workspace;
+
     public SubjectTypes withWorkspace(SubjectTypesWorkspace workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public SubjectTypes(){}
 }

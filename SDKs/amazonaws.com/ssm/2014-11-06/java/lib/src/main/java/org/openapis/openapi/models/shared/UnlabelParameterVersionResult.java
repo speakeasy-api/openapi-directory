@@ -15,6 +15,7 @@ public class UnlabelParameterVersionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvalidLabels")
     public String[] invalidLabels;
+
     public UnlabelParameterVersionResult withInvalidLabels(String[] invalidLabels) {
         this.invalidLabels = invalidLabels;
         return this;
@@ -23,9 +24,11 @@ public class UnlabelParameterVersionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemovedLabels")
     public String[] removedLabels;
+
     public UnlabelParameterVersionResult withRemovedLabels(String[] removedLabels) {
         this.removedLabels = removedLabels;
         return this;
     }
     
+    public UnlabelParameterVersionResult(){}
 }

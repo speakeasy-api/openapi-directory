@@ -107,4 +107,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/GetStatusInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListJobsInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateJobInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateWindowToChangeSellerRequest {
@@ -12,6 +13,7 @@ public class UpdateWindowToChangeSellerRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public UpdateWindowToChangeSellerRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class UpdateWindowToChangeSellerRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public UpdateWindowToChangeSellerRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class UpdateWindowToChangeSellerRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.WaitingTime waitingTime;
+
     public UpdateWindowToChangeSellerRequest withWaitingTime(org.openapis.openapi.models.shared.WaitingTime waitingTime) {
         this.waitingTime = waitingTime;
         return this;
     }
     
+    public UpdateWindowToChangeSellerRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("WaitingTime") org.openapis.openapi.models.shared.WaitingTime waitingTime) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.waitingTime = waitingTime;
+  }
 }

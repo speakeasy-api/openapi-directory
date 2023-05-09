@@ -15,6 +15,7 @@ public class EstimateByTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public CurrencyEnum currency;
+
     public EstimateByTime withCurrency(CurrencyEnum currency) {
         this.currency = currency;
         return this;
@@ -23,6 +24,7 @@ public class EstimateByTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricingUnit")
     public PricingUnitEnum pricingUnit;
+
     public EstimateByTime withPricingUnit(PricingUnitEnum pricingUnit) {
         this.pricingUnit = pricingUnit;
         return this;
@@ -31,6 +33,7 @@ public class EstimateByTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timePeriod")
     public TimePeriod timePeriod;
+
     public EstimateByTime withTimePeriod(TimePeriod timePeriod) {
         this.timePeriod = timePeriod;
         return this;
@@ -39,6 +42,7 @@ public class EstimateByTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public Double unit;
+
     public EstimateByTime withUnit(Double unit) {
         this.unit = unit;
         return this;
@@ -47,9 +51,11 @@ public class EstimateByTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageCost")
     public Double usageCost;
+
     public EstimateByTime withUsageCost(Double usageCost) {
         this.usageCost = usageCost;
         return this;
     }
     
+    public EstimateByTime(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.EntityAdWordsLink entityAdWordsLink;
+
     public AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest withEntityAdWordsLink(org.openapis.openapi.models.shared.EntityAdWordsLink entityAdWordsLink) {
         this.entityAdWordsLink = entityAdWordsLink;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -39,6 +43,7 @@ public class AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -49,6 +54,7 @@ public class AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -59,6 +65,7 @@ public class AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -69,6 +76,7 @@ public class AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -79,6 +87,7 @@ public class AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -89,6 +98,7 @@ public class AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -99,6 +109,7 @@ public class AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webPropertyAdWordsLinkId")
     public String webPropertyAdWordsLinkId;
+
     public AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest withWebPropertyAdWordsLinkId(String webPropertyAdWordsLinkId) {
         this.webPropertyAdWordsLinkId = webPropertyAdWordsLinkId;
         return this;
@@ -109,9 +120,15 @@ public class AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webPropertyId")
     public String webPropertyId;
+
     public AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest withWebPropertyId(String webPropertyId) {
         this.webPropertyId = webPropertyId;
         return this;
     }
     
+    public AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest(@JsonProperty("accountId") String accountId, @JsonProperty("webPropertyAdWordsLinkId") String webPropertyAdWordsLinkId, @JsonProperty("webPropertyId") String webPropertyId) {
+        this.accountId = accountId;
+        this.webPropertyAdWordsLinkId = webPropertyAdWordsLinkId;
+        this.webPropertyId = webPropertyId;
+  }
 }

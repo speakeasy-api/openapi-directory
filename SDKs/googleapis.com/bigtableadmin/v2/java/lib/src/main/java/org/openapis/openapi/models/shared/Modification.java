@@ -18,6 +18,7 @@ public class Modification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("create")
     public ColumnFamily create;
+
     public Modification withCreate(ColumnFamily create) {
         this.create = create;
         return this;
@@ -29,6 +30,7 @@ public class Modification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drop")
     public Boolean drop;
+
     public Modification withDrop(Boolean drop) {
         this.drop = drop;
         return this;
@@ -40,6 +42,7 @@ public class Modification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Modification withId(String id) {
         this.id = id;
         return this;
@@ -51,9 +54,11 @@ public class Modification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update")
     public ColumnFamily update;
+
     public Modification withUpdate(ColumnFamily update) {
         this.update = update;
         return this;
     }
     
+    public Modification(){}
 }

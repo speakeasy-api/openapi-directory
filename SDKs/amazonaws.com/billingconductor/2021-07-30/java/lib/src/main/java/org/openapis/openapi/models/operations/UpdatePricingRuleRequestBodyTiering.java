@@ -15,9 +15,11 @@ public class UpdatePricingRuleRequestBodyTiering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FreeTier")
     public org.openapis.openapi.models.shared.UpdateFreeTierConfig freeTier;
+
     public UpdatePricingRuleRequestBodyTiering withFreeTier(org.openapis.openapi.models.shared.UpdateFreeTierConfig freeTier) {
         this.freeTier = freeTier;
         return this;
     }
     
+    public UpdatePricingRuleRequestBodyTiering(){}
 }

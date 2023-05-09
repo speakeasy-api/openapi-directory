@@ -15,6 +15,7 @@ public class PatientAuthConfirmRequestCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authCode")
     public String authCode;
+
     public PatientAuthConfirmRequestCredential withAuthCode(String authCode) {
         this.authCode = authCode;
         return this;
@@ -26,9 +27,11 @@ public class PatientAuthConfirmRequestCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("demographic")
     public PatientDemographic demographic;
+
     public PatientAuthConfirmRequestCredential withDemographic(PatientDemographic demographic) {
         this.demographic = demographic;
         return this;
     }
     
+    public PatientAuthConfirmRequestCredential(){}
 }

@@ -12,6 +12,7 @@ public class SingleApi200ApplicationJSONApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdAt")
     public String createdAt;
+
     public SingleApi200ApplicationJSONApi withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -20,6 +21,7 @@ public class SingleApi200ApplicationJSONApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdBy")
     public String createdBy;
+
     public SingleApi200ApplicationJSONApi withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -28,6 +30,7 @@ public class SingleApi200ApplicationJSONApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SingleApi200ApplicationJSONApi withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class SingleApi200ApplicationJSONApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SingleApi200ApplicationJSONApi withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +48,7 @@ public class SingleApi200ApplicationJSONApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SingleApi200ApplicationJSONApi withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class SingleApi200ApplicationJSONApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public SingleApi200ApplicationJSONApi withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -60,9 +66,11 @@ public class SingleApi200ApplicationJSONApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedAt")
     public String updatedAt;
+
     public SingleApi200ApplicationJSONApi withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public SingleApi200ApplicationJSONApi(){}
 }

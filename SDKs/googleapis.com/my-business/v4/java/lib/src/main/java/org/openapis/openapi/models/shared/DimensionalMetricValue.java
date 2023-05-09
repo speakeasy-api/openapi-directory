@@ -18,6 +18,7 @@ public class DimensionalMetricValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricOption")
     public DimensionalMetricValueMetricOptionEnum metricOption;
+
     public DimensionalMetricValue withMetricOption(DimensionalMetricValueMetricOptionEnum metricOption) {
         this.metricOption = metricOption;
         return this;
@@ -29,6 +30,7 @@ public class DimensionalMetricValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeDimension")
     public TimeDimension timeDimension;
+
     public DimensionalMetricValue withTimeDimension(TimeDimension timeDimension) {
         this.timeDimension = timeDimension;
         return this;
@@ -40,9 +42,11 @@ public class DimensionalMetricValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public DimensionalMetricValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DimensionalMetricValue(){}
 }

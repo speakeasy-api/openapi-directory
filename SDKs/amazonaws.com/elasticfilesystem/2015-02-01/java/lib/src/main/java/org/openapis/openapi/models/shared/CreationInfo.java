@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreationInfo {
     @JsonProperty("OwnerGid")
     public Long ownerGid;
+
     public CreationInfo withOwnerGid(Long ownerGid) {
         this.ownerGid = ownerGid;
         return this;
@@ -19,6 +20,7 @@ public class CreationInfo {
     
     @JsonProperty("OwnerUid")
     public Long ownerUid;
+
     public CreationInfo withOwnerUid(Long ownerUid) {
         this.ownerUid = ownerUid;
         return this;
@@ -26,9 +28,15 @@ public class CreationInfo {
     
     @JsonProperty("Permissions")
     public String permissions;
+
     public CreationInfo withPermissions(String permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public CreationInfo(@JsonProperty("OwnerGid") Long ownerGid, @JsonProperty("OwnerUid") Long ownerUid, @JsonProperty("Permissions") String permissions) {
+        this.ownerGid = ownerGid;
+        this.ownerUid = ownerUid;
+        this.permissions = permissions;
+  }
 }

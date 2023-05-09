@@ -15,9 +15,13 @@ public class ItvHadEntitlement {
      */
     @JsonProperty("hasHadEntitlements")
     public Boolean hasHadEntitlements;
+
     public ItvHadEntitlement withHasHadEntitlements(Boolean hasHadEntitlements) {
         this.hasHadEntitlements = hasHadEntitlements;
         return this;
     }
     
+    public ItvHadEntitlement(@JsonProperty("hasHadEntitlements") Boolean hasHadEntitlements) {
+        this.hasHadEntitlements = hasHadEntitlements;
+  }
 }

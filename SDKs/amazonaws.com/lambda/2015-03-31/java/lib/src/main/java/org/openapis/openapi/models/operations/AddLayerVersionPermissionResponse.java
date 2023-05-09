@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddLayerVersionPermissionResponse {
@@ -12,6 +13,7 @@ public class AddLayerVersionPermissionResponse {
      */
     
     public org.openapis.openapi.models.shared.AddLayerVersionPermissionResponse addLayerVersionPermissionResponse;
+
     public AddLayerVersionPermissionResponse withAddLayerVersionPermissionResponse(org.openapis.openapi.models.shared.AddLayerVersionPermissionResponse addLayerVersionPermissionResponse) {
         this.addLayerVersionPermissionResponse = addLayerVersionPermissionResponse;
         return this;
@@ -19,6 +21,7 @@ public class AddLayerVersionPermissionResponse {
     
     
     public String contentType;
+
     public AddLayerVersionPermissionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AddLayerVersionPermissionResponse {
      */
     
     public Object invalidParameterValueException;
+
     public AddLayerVersionPermissionResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class AddLayerVersionPermissionResponse {
      */
     
     public Object policyLengthExceededException;
+
     public AddLayerVersionPermissionResponse withPolicyLengthExceededException(Object policyLengthExceededException) {
         this.policyLengthExceededException = policyLengthExceededException;
         return this;
@@ -49,6 +54,7 @@ public class AddLayerVersionPermissionResponse {
      */
     
     public Object preconditionFailedException;
+
     public AddLayerVersionPermissionResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -59,6 +65,7 @@ public class AddLayerVersionPermissionResponse {
      */
     
     public Object resourceConflictException;
+
     public AddLayerVersionPermissionResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -69,6 +76,7 @@ public class AddLayerVersionPermissionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AddLayerVersionPermissionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class AddLayerVersionPermissionResponse {
      */
     
     public Object serviceException;
+
     public AddLayerVersionPermissionResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class AddLayerVersionPermissionResponse {
     
     
     public Integer statusCode;
+
     public AddLayerVersionPermissionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class AddLayerVersionPermissionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddLayerVersionPermissionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class AddLayerVersionPermissionResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AddLayerVersionPermissionResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public AddLayerVersionPermissionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

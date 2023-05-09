@@ -15,6 +15,7 @@ public class DelcsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public DelcsRequestBodyCertificateParameters certificateParameters;
+
     public DelcsRequestBody withCertificateParameters(DelcsRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class DelcsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public DelcsRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class DelcsRequestBody {
      */
     @JsonProperty("format")
     public DelcsRequestBodyFormatEnum format;
+
     public DelcsRequestBody withFormat(DelcsRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class DelcsRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public DelcsRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public DelcsRequestBody(@JsonProperty("format") DelcsRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

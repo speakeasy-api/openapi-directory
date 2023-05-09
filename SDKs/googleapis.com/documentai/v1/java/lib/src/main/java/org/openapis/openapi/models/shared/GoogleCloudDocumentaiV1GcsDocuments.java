@@ -18,9 +18,11 @@ public class GoogleCloudDocumentaiV1GcsDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public GoogleCloudDocumentaiV1GcsDocument[] documents;
+
     public GoogleCloudDocumentaiV1GcsDocuments withDocuments(GoogleCloudDocumentaiV1GcsDocument[] documents) {
         this.documents = documents;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1GcsDocuments(){}
 }

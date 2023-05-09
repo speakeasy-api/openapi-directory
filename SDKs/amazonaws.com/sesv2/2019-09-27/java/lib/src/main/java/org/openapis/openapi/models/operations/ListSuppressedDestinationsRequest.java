@@ -13,6 +13,7 @@ public class ListSuppressedDestinationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndDate")
     public OffsetDateTime endDate;
+
     public ListSuppressedDestinationsRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -23,6 +24,7 @@ public class ListSuppressedDestinationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListSuppressedDestinationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -33,6 +35,7 @@ public class ListSuppressedDestinationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
     public Long pageSize;
+
     public ListSuppressedDestinationsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -43,6 +46,7 @@ public class ListSuppressedDestinationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Reason")
     public org.openapis.openapi.models.shared.SuppressionListReasonEnum[] reason;
+
     public ListSuppressedDestinationsRequest withReason(org.openapis.openapi.models.shared.SuppressionListReasonEnum[] reason) {
         this.reason = reason;
         return this;
@@ -53,6 +57,7 @@ public class ListSuppressedDestinationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartDate")
     public OffsetDateTime startDate;
+
     public ListSuppressedDestinationsRequest withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -60,6 +65,7 @@ public class ListSuppressedDestinationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListSuppressedDestinationsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -67,6 +73,7 @@ public class ListSuppressedDestinationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListSuppressedDestinationsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -74,6 +81,7 @@ public class ListSuppressedDestinationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListSuppressedDestinationsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -81,6 +89,7 @@ public class ListSuppressedDestinationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListSuppressedDestinationsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -88,6 +97,7 @@ public class ListSuppressedDestinationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListSuppressedDestinationsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -95,6 +105,7 @@ public class ListSuppressedDestinationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListSuppressedDestinationsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -102,9 +113,11 @@ public class ListSuppressedDestinationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListSuppressedDestinationsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public ListSuppressedDestinationsRequest(){}
 }

@@ -59,11 +59,9 @@ public class Settings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarSettingsGetResponse res = new org.openapis.openapi.models.operations.CalendarSettingsGetResponse() {{
+        org.openapis.openapi.models.operations.CalendarSettingsGetResponse res = new org.openapis.openapi.models.operations.CalendarSettingsGetResponse(contentType, httpRes.statusCode()) {{
             setting = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Settings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarSettingsListResponse res = new org.openapis.openapi.models.operations.CalendarSettingsListResponse() {{
+        org.openapis.openapi.models.operations.CalendarSettingsListResponse res = new org.openapis.openapi.models.operations.CalendarSettingsListResponse(contentType, httpRes.statusCode()) {{
             settings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Settings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarSettingsWatchResponse res = new org.openapis.openapi.models.operations.CalendarSettingsWatchResponse() {{
+        org.openapis.openapi.models.operations.CalendarSettingsWatchResponse res = new org.openapis.openapi.models.operations.CalendarSettingsWatchResponse(contentType, httpRes.statusCode()) {{
             channel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

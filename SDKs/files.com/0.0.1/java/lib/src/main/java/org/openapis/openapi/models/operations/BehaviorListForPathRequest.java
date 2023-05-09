@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BehaviorListForPathRequest {
@@ -12,6 +13,7 @@ public class BehaviorListForPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=behavior")
     public String behavior;
+
     public BehaviorListForPathRequest withBehavior(String behavior) {
         this.behavior = behavior;
         return this;
@@ -22,6 +24,7 @@ public class BehaviorListForPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public BehaviorListForPathRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -32,58 +35,20 @@ public class BehaviorListForPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public java.util.Map<String, Object> filter;
+
     public BehaviorListForPathRequest withFilter(java.util.Map<String, Object> filter) {
         this.filter = filter;
         return this;
     }
     
     /**
-     * If set, return records where the specified field is greater than the supplied value. Valid fields are `behavior`.
+     * If set, return records where the specified field is prefixed by the supplied value. Valid fields are `behavior`.
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gt")
-    public java.util.Map<String, Object> filterGt;
-    public BehaviorListForPathRequest withFilterGt(java.util.Map<String, Object> filterGt) {
-        this.filterGt = filterGt;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `behavior`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gteq")
-    public java.util.Map<String, Object> filterGteq;
-    public BehaviorListForPathRequest withFilterGteq(java.util.Map<String, Object> filterGteq) {
-        this.filterGteq = filterGteq;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `behavior`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_like")
-    public java.util.Map<String, Object> filterLike;
-    public BehaviorListForPathRequest withFilterLike(java.util.Map<String, Object> filterLike) {
-        this.filterLike = filterLike;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is less than the supplied value. Valid fields are `behavior`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lt")
-    public java.util.Map<String, Object> filterLt;
-    public BehaviorListForPathRequest withFilterLt(java.util.Map<String, Object> filterLt) {
-        this.filterLt = filterLt;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `behavior`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lteq")
-    public java.util.Map<String, Object> filterLteq;
-    public BehaviorListForPathRequest withFilterLteq(java.util.Map<String, Object> filterLteq) {
-        this.filterLteq = filterLteq;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_prefix")
+    public java.util.Map<String, Object> filterPrefix;
+
+    public BehaviorListForPathRequest withFilterPrefix(java.util.Map<String, Object> filterPrefix) {
+        this.filterPrefix = filterPrefix;
         return this;
     }
     
@@ -92,6 +57,7 @@ public class BehaviorListForPathRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public BehaviorListForPathRequest withPath(String path) {
         this.path = path;
         return this;
@@ -102,6 +68,7 @@ public class BehaviorListForPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public BehaviorListForPathRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -112,6 +79,7 @@ public class BehaviorListForPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recursive")
     public String recursive;
+
     public BehaviorListForPathRequest withRecursive(String recursive) {
         this.recursive = recursive;
         return this;
@@ -122,9 +90,13 @@ public class BehaviorListForPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public java.util.Map<String, Object> sortBy;
+
     public BehaviorListForPathRequest withSortBy(java.util.Map<String, Object> sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public BehaviorListForPathRequest(@JsonProperty("path") String path) {
+        this.path = path;
+  }
 }

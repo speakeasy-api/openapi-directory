@@ -15,6 +15,7 @@ public class GetCalculatorConfigurationById200PromotionSkus {
      */
     
     public String id;
+
     public GetCalculatorConfigurationById200PromotionSkus withId(String id) {
         this.id = id;
         return this;
@@ -25,9 +26,11 @@ public class GetCalculatorConfigurationById200PromotionSkus {
      */
     
     public String name;
+
     public GetCalculatorConfigurationById200PromotionSkus withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetCalculatorConfigurationById200PromotionSkus(){}
 }

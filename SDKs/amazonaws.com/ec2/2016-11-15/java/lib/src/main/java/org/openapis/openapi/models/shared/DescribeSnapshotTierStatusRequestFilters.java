@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSnapshotTierStatusRequestFilters {
     
     public String name;
+
     public DescribeSnapshotTierStatusRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSnapshotTierStatusRequestFilters {
     
     
     public String[] values;
+
     public DescribeSnapshotTierStatusRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeSnapshotTierStatusRequestFilters(){}
 }

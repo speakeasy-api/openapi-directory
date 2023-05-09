@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2CloudStoragePath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public GooglePrivacyDlpV2CloudStoragePath withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public GooglePrivacyDlpV2CloudStoragePath(){}
 }

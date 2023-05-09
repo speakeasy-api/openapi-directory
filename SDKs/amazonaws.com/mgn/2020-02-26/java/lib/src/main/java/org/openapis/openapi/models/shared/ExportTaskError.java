@@ -15,6 +15,7 @@ public class ExportTaskError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorData")
     public ExportErrorData errorData;
+
     public ExportTaskError withErrorData(ExportErrorData errorData) {
         this.errorData = errorData;
         return this;
@@ -23,9 +24,11 @@ public class ExportTaskError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDateTime")
     public String errorDateTime;
+
     public ExportTaskError withErrorDateTime(String errorDateTime) {
         this.errorDateTime = errorDateTime;
         return this;
     }
     
+    public ExportTaskError(){}
 }

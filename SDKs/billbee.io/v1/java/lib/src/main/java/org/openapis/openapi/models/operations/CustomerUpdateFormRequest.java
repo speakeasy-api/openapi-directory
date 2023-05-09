@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomerUpdateFormRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAPIModelInput billbeeInterfacesBillbeeAPIModelCustomerAPIModelInput;
+
     public CustomerUpdateFormRequest withBillbeeInterfacesBillbeeAPIModelCustomerAPIModelInput(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAPIModelInput billbeeInterfacesBillbeeAPIModelCustomerAPIModelInput) {
         this.billbeeInterfacesBillbeeAPIModelCustomerAPIModelInput = billbeeInterfacesBillbeeAPIModelCustomerAPIModelInput;
         return this;
@@ -19,9 +21,14 @@ public class CustomerUpdateFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public CustomerUpdateFormRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public CustomerUpdateFormRequest(@JsonProperty("Billbee.Interfaces.BillbeeAPI.Model.CustomerApiModelInput") org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAPIModelInput billbeeInterfacesBillbeeAPIModelCustomerAPIModelInput, @JsonProperty("id") Long id) {
+        this.billbeeInterfacesBillbeeAPIModelCustomerAPIModelInput = billbeeInterfacesBillbeeAPIModelCustomerAPIModelInput;
+        this.id = id;
+  }
 }

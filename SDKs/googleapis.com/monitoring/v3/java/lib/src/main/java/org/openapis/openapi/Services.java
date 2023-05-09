@@ -62,11 +62,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonitoringServicesCreateResponse res = new org.openapis.openapi.models.operations.MonitoringServicesCreateResponse() {{
+        org.openapis.openapi.models.operations.MonitoringServicesCreateResponse res = new org.openapis.openapi.models.operations.MonitoringServicesCreateResponse(contentType, httpRes.statusCode()) {{
             service = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonitoringServicesListResponse res = new org.openapis.openapi.models.operations.MonitoringServicesListResponse() {{
+        org.openapis.openapi.models.operations.MonitoringServicesListResponse res = new org.openapis.openapi.models.operations.MonitoringServicesListResponse(contentType, httpRes.statusCode()) {{
             listServicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesCreateResponse res = new org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesCreateResponse() {{
+        org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesCreateResponse res = new org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesCreateResponse(contentType, httpRes.statusCode()) {{
             serviceLevelObjective = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesDeleteResponse res = new org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesDeleteResponse() {{
+        org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesDeleteResponse res = new org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesGetResponse res = new org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesGetResponse() {{
+        org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesGetResponse res = new org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesGetResponse(contentType, httpRes.statusCode()) {{
             serviceLevelObjective = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,11 +284,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesListResponse res = new org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesListResponse() {{
+        org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesListResponse res = new org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesListResponse(contentType, httpRes.statusCode()) {{
             listServiceLevelObjectivesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesPatchResponse res = new org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesPatchResponse() {{
+        org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesPatchResponse res = new org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesPatchResponse(contentType, httpRes.statusCode()) {{
             serviceLevelObjective = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class StartSavingsPlansPurchaseRecommendationGenerationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedCompletionTime")
     public String estimatedCompletionTime;
+
     public StartSavingsPlansPurchaseRecommendationGenerationResponse withEstimatedCompletionTime(String estimatedCompletionTime) {
         this.estimatedCompletionTime = estimatedCompletionTime;
         return this;
@@ -23,6 +24,7 @@ public class StartSavingsPlansPurchaseRecommendationGenerationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GenerationStartedTime")
     public String generationStartedTime;
+
     public StartSavingsPlansPurchaseRecommendationGenerationResponse withGenerationStartedTime(String generationStartedTime) {
         this.generationStartedTime = generationStartedTime;
         return this;
@@ -31,9 +33,11 @@ public class StartSavingsPlansPurchaseRecommendationGenerationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationId")
     public String recommendationId;
+
     public StartSavingsPlansPurchaseRecommendationGenerationResponse withRecommendationId(String recommendationId) {
         this.recommendationId = recommendationId;
         return this;
     }
     
+    public StartSavingsPlansPurchaseRecommendationGenerationResponse(){}
 }

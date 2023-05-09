@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteTableRequest {
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public DeleteTableRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -16,9 +17,14 @@ public class DeleteTableRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public DeleteTableRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public DeleteTableRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.tableName = tableName;
+  }
 }

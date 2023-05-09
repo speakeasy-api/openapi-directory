@@ -15,9 +15,11 @@ public class RequestServiceQuotaIncreaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestedQuota")
     public RequestedServiceQuotaChange requestedQuota;
+
     public RequestServiceQuotaIncreaseResponse withRequestedQuota(RequestedServiceQuotaChange requestedQuota) {
         this.requestedQuota = requestedQuota;
         return this;
     }
     
+    public RequestServiceQuotaIncreaseResponse(){}
 }

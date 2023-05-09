@@ -15,9 +15,11 @@ public class DescribeNodegroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodegroup")
     public Nodegroup nodegroup;
+
     public DescribeNodegroupResponse withNodegroup(Nodegroup nodegroup) {
         this.nodegroup = nodegroup;
         return this;
     }
     
+    public DescribeNodegroupResponse(){}
 }

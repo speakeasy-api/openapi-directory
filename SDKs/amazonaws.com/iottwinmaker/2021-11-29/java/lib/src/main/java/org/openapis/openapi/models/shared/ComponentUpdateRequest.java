@@ -15,6 +15,7 @@ public class ComponentUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentTypeId")
     public String componentTypeId;
+
     public ComponentUpdateRequest withComponentTypeId(String componentTypeId) {
         this.componentTypeId = componentTypeId;
         return this;
@@ -23,6 +24,7 @@ public class ComponentUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ComponentUpdateRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class ComponentUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyGroupUpdates")
     public java.util.Map<String, ComponentPropertyGroupRequest> propertyGroupUpdates;
+
     public ComponentUpdateRequest withPropertyGroupUpdates(java.util.Map<String, ComponentPropertyGroupRequest> propertyGroupUpdates) {
         this.propertyGroupUpdates = propertyGroupUpdates;
         return this;
@@ -39,6 +42,7 @@ public class ComponentUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyUpdates")
     public java.util.Map<String, PropertyRequest> propertyUpdates;
+
     public ComponentUpdateRequest withPropertyUpdates(java.util.Map<String, PropertyRequest> propertyUpdates) {
         this.propertyUpdates = propertyUpdates;
         return this;
@@ -47,9 +51,11 @@ public class ComponentUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateType")
     public ComponentUpdateTypeEnum updateType;
+
     public ComponentUpdateRequest withUpdateType(ComponentUpdateTypeEnum updateType) {
         this.updateType = updateType;
         return this;
     }
     
+    public ComponentUpdateRequest(){}
 }

@@ -15,6 +15,7 @@ public class DeleteGrantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrantArn")
     public String grantArn;
+
     public DeleteGrantResponse withGrantArn(String grantArn) {
         this.grantArn = grantArn;
         return this;
@@ -23,6 +24,7 @@ public class DeleteGrantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public GrantStatusEnum status;
+
     public DeleteGrantResponse withStatus(GrantStatusEnum status) {
         this.status = status;
         return this;
@@ -31,9 +33,11 @@ public class DeleteGrantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public DeleteGrantResponse withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public DeleteGrantResponse(){}
 }

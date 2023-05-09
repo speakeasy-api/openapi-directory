@@ -18,6 +18,7 @@ public class BatchUpdateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public Request[] requests;
+
     public BatchUpdateDocumentRequest withRequests(Request[] requests) {
         this.requests = requests;
         return this;
@@ -29,9 +30,11 @@ public class BatchUpdateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeControl")
     public WriteControl writeControl;
+
     public BatchUpdateDocumentRequest withWriteControl(WriteControl writeControl) {
         this.writeControl = writeControl;
         return this;
     }
     
+    public BatchUpdateDocumentRequest(){}
 }

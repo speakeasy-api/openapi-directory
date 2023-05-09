@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VirtualGatewayHealthCheckPolicy {
     @JsonProperty("healthyThreshold")
     public Long healthyThreshold;
+
     public VirtualGatewayHealthCheckPolicy withHealthyThreshold(Long healthyThreshold) {
         this.healthyThreshold = healthyThreshold;
         return this;
@@ -21,6 +22,7 @@ public class VirtualGatewayHealthCheckPolicy {
     
     @JsonProperty("intervalMillis")
     public Long intervalMillis;
+
     public VirtualGatewayHealthCheckPolicy withIntervalMillis(Long intervalMillis) {
         this.intervalMillis = intervalMillis;
         return this;
@@ -29,6 +31,7 @@ public class VirtualGatewayHealthCheckPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public VirtualGatewayHealthCheckPolicy withPath(String path) {
         this.path = path;
         return this;
@@ -37,6 +40,7 @@ public class VirtualGatewayHealthCheckPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Long port;
+
     public VirtualGatewayHealthCheckPolicy withPort(Long port) {
         this.port = port;
         return this;
@@ -44,6 +48,7 @@ public class VirtualGatewayHealthCheckPolicy {
     
     @JsonProperty("protocol")
     public VirtualGatewayPortProtocolEnum protocol;
+
     public VirtualGatewayHealthCheckPolicy withProtocol(VirtualGatewayPortProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -51,6 +56,7 @@ public class VirtualGatewayHealthCheckPolicy {
     
     @JsonProperty("timeoutMillis")
     public Long timeoutMillis;
+
     public VirtualGatewayHealthCheckPolicy withTimeoutMillis(Long timeoutMillis) {
         this.timeoutMillis = timeoutMillis;
         return this;
@@ -58,9 +64,17 @@ public class VirtualGatewayHealthCheckPolicy {
     
     @JsonProperty("unhealthyThreshold")
     public Long unhealthyThreshold;
+
     public VirtualGatewayHealthCheckPolicy withUnhealthyThreshold(Long unhealthyThreshold) {
         this.unhealthyThreshold = unhealthyThreshold;
         return this;
     }
     
+    public VirtualGatewayHealthCheckPolicy(@JsonProperty("healthyThreshold") Long healthyThreshold, @JsonProperty("intervalMillis") Long intervalMillis, @JsonProperty("protocol") VirtualGatewayPortProtocolEnum protocol, @JsonProperty("timeoutMillis") Long timeoutMillis, @JsonProperty("unhealthyThreshold") Long unhealthyThreshold) {
+        this.healthyThreshold = healthyThreshold;
+        this.intervalMillis = intervalMillis;
+        this.protocol = protocol;
+        this.timeoutMillis = timeoutMillis;
+        this.unhealthyThreshold = unhealthyThreshold;
+  }
 }

@@ -18,6 +18,7 @@ public class BrandedFoodObjectItemsPackagingPhotos {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("front")
     public BrandedFoodObjectItemsPackagingPhotosFront front;
+
     public BrandedFoodObjectItemsPackagingPhotos withFront(BrandedFoodObjectItemsPackagingPhotosFront front) {
         this.front = front;
         return this;
@@ -29,6 +30,7 @@ public class BrandedFoodObjectItemsPackagingPhotos {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingredients")
     public BrandedFoodObjectItemsPackagingPhotosIngredients ingredients;
+
     public BrandedFoodObjectItemsPackagingPhotos withIngredients(BrandedFoodObjectItemsPackagingPhotosIngredients ingredients) {
         this.ingredients = ingredients;
         return this;
@@ -40,9 +42,11 @@ public class BrandedFoodObjectItemsPackagingPhotos {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nutrition")
     public BrandedFoodObjectItemsPackagingPhotosNutrition nutrition;
+
     public BrandedFoodObjectItemsPackagingPhotos withNutrition(BrandedFoodObjectItemsPackagingPhotosNutrition nutrition) {
         this.nutrition = nutrition;
         return this;
     }
     
+    public BrandedFoodObjectItemsPackagingPhotos(){}
 }

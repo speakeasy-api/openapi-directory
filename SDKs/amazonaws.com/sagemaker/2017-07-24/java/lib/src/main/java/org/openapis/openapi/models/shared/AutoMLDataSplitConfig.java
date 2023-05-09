@@ -15,9 +15,11 @@ public class AutoMLDataSplitConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationFraction")
     public Float validationFraction;
+
     public AutoMLDataSplitConfig withValidationFraction(Float validationFraction) {
         this.validationFraction = validationFraction;
         return this;
     }
     
+    public AutoMLDataSplitConfig(){}
 }

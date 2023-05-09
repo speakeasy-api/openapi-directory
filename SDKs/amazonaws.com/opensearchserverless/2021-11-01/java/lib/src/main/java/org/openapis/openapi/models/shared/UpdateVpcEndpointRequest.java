@@ -12,6 +12,7 @@ public class UpdateVpcEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addSecurityGroupIds")
     public String[] addSecurityGroupIds;
+
     public UpdateVpcEndpointRequest withAddSecurityGroupIds(String[] addSecurityGroupIds) {
         this.addSecurityGroupIds = addSecurityGroupIds;
         return this;
@@ -20,6 +21,7 @@ public class UpdateVpcEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addSubnetIds")
     public String[] addSubnetIds;
+
     public UpdateVpcEndpointRequest withAddSubnetIds(String[] addSubnetIds) {
         this.addSubnetIds = addSubnetIds;
         return this;
@@ -28,6 +30,7 @@ public class UpdateVpcEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateVpcEndpointRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -35,6 +38,7 @@ public class UpdateVpcEndpointRequest {
     
     @JsonProperty("id")
     public String id;
+
     public UpdateVpcEndpointRequest withId(String id) {
         this.id = id;
         return this;
@@ -43,6 +47,7 @@ public class UpdateVpcEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeSecurityGroupIds")
     public String[] removeSecurityGroupIds;
+
     public UpdateVpcEndpointRequest withRemoveSecurityGroupIds(String[] removeSecurityGroupIds) {
         this.removeSecurityGroupIds = removeSecurityGroupIds;
         return this;
@@ -51,9 +56,13 @@ public class UpdateVpcEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeSubnetIds")
     public String[] removeSubnetIds;
+
     public UpdateVpcEndpointRequest withRemoveSubnetIds(String[] removeSubnetIds) {
         this.removeSubnetIds = removeSubnetIds;
         return this;
     }
     
+    public UpdateVpcEndpointRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

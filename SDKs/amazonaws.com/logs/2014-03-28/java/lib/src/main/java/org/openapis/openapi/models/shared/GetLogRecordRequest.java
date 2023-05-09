@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetLogRecordRequest {
     @JsonProperty("logRecordPointer")
     public String logRecordPointer;
+
     public GetLogRecordRequest withLogRecordPointer(String logRecordPointer) {
         this.logRecordPointer = logRecordPointer;
         return this;
@@ -19,9 +20,13 @@ public class GetLogRecordRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unmask")
     public Boolean unmask;
+
     public GetLogRecordRequest withUnmask(Boolean unmask) {
         this.unmask = unmask;
         return this;
     }
     
+    public GetLogRecordRequest(@JsonProperty("logRecordPointer") String logRecordPointer) {
+        this.logRecordPointer = logRecordPointer;
+  }
 }

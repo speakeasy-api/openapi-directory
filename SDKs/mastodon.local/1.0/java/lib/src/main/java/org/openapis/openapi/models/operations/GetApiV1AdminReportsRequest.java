@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetApiV1AdminReportsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account_id")
     public String accountId;
+
     public GetApiV1AdminReportsRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -16,6 +17,7 @@ public class GetApiV1AdminReportsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolved")
     public Boolean resolved;
+
     public GetApiV1AdminReportsRequest withResolved(Boolean resolved) {
         this.resolved = resolved;
         return this;
@@ -23,9 +25,11 @@ public class GetApiV1AdminReportsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=target_account_id")
     public String targetAccountId;
+
     public GetApiV1AdminReportsRequest withTargetAccountId(String targetAccountId) {
         this.targetAccountId = targetAccountId;
         return this;
     }
     
+    public GetApiV1AdminReportsRequest(){}
 }

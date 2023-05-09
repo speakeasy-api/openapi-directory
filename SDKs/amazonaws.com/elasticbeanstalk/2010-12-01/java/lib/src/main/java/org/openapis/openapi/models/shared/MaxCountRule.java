@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * MaxCountRule - A lifecycle rule that deletes the oldest application version when the maximum count is exceeded.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MaxCountRule {
     
     public Boolean deleteSourceFromS3;
+
     public MaxCountRule withDeleteSourceFromS3(Boolean deleteSourceFromS3) {
         this.deleteSourceFromS3 = deleteSourceFromS3;
         return this;
@@ -19,6 +20,7 @@ public class MaxCountRule {
     
     
     public Boolean enabled;
+
     public MaxCountRule withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -26,9 +28,13 @@ public class MaxCountRule {
     
     
     public Long maxCount;
+
     public MaxCountRule withMaxCount(Long maxCount) {
         this.maxCount = maxCount;
         return this;
     }
     
+    public MaxCountRule(@JsonProperty("Enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

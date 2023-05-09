@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListMedicalVocabulariesResponse {
@@ -12,6 +13,7 @@ public class ListMedicalVocabulariesResponse {
      */
     
     public Object badRequestException;
+
     public ListMedicalVocabulariesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListMedicalVocabulariesResponse {
     
     
     public String contentType;
+
     public ListMedicalVocabulariesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListMedicalVocabulariesResponse {
      */
     
     public Object internalFailureException;
+
     public ListMedicalVocabulariesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class ListMedicalVocabulariesResponse {
      */
     
     public Object limitExceededException;
+
     public ListMedicalVocabulariesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class ListMedicalVocabulariesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMedicalVocabulariesResponse listMedicalVocabulariesResponse;
+
     public ListMedicalVocabulariesResponse withListMedicalVocabulariesResponse(org.openapis.openapi.models.shared.ListMedicalVocabulariesResponse listMedicalVocabulariesResponse) {
         this.listMedicalVocabulariesResponse = listMedicalVocabulariesResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListMedicalVocabulariesResponse {
     
     
     public Integer statusCode;
+
     public ListMedicalVocabulariesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListMedicalVocabulariesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListMedicalVocabulariesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListMedicalVocabulariesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

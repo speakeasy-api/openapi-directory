@@ -19,6 +19,7 @@ public class ListTestGridSessionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListTestGridSessionsRequest withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListTestGridSessionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListTestGridSessionsRequest withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -39,6 +41,7 @@ public class ListTestGridSessionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTimeAfter")
     public OffsetDateTime endTimeAfter;
+
     public ListTestGridSessionsRequest withEndTimeAfter(OffsetDateTime endTimeAfter) {
         this.endTimeAfter = endTimeAfter;
         return this;
@@ -49,6 +52,7 @@ public class ListTestGridSessionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTimeBefore")
     public OffsetDateTime endTimeBefore;
+
     public ListTestGridSessionsRequest withEndTimeBefore(OffsetDateTime endTimeBefore) {
         this.endTimeBefore = endTimeBefore;
         return this;
@@ -57,6 +61,7 @@ public class ListTestGridSessionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResult")
     public Long maxResult;
+
     public ListTestGridSessionsRequest withMaxResult(Long maxResult) {
         this.maxResult = maxResult;
         return this;
@@ -65,6 +70,7 @@ public class ListTestGridSessionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTestGridSessionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -72,6 +78,7 @@ public class ListTestGridSessionsRequest {
     
     @JsonProperty("projectArn")
     public String projectArn;
+
     public ListTestGridSessionsRequest withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
@@ -80,9 +87,13 @@ public class ListTestGridSessionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TestGridSessionStatusEnum status;
+
     public ListTestGridSessionsRequest withStatus(TestGridSessionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ListTestGridSessionsRequest(@JsonProperty("projectArn") String projectArn) {
+        this.projectArn = projectArn;
+  }
 }

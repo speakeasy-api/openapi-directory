@@ -14,6 +14,7 @@ public class GetAutoMergingPreviewRequestBody {
      */
     @JsonProperty("ConflictResolution")
     public GetAutoMergingPreviewRequestBodyConflictResolution conflictResolution;
+
     public GetAutoMergingPreviewRequestBody withConflictResolution(GetAutoMergingPreviewRequestBodyConflictResolution conflictResolution) {
         this.conflictResolution = conflictResolution;
         return this;
@@ -24,6 +25,7 @@ public class GetAutoMergingPreviewRequestBody {
      */
     @JsonProperty("Consolidation")
     public GetAutoMergingPreviewRequestBodyConsolidation consolidation;
+
     public GetAutoMergingPreviewRequestBody withConsolidation(GetAutoMergingPreviewRequestBodyConsolidation consolidation) {
         this.consolidation = consolidation;
         return this;
@@ -35,9 +37,14 @@ public class GetAutoMergingPreviewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinAllowedConfidenceScoreForMerging")
     public Double minAllowedConfidenceScoreForMerging;
+
     public GetAutoMergingPreviewRequestBody withMinAllowedConfidenceScoreForMerging(Double minAllowedConfidenceScoreForMerging) {
         this.minAllowedConfidenceScoreForMerging = minAllowedConfidenceScoreForMerging;
         return this;
     }
     
+    public GetAutoMergingPreviewRequestBody(@JsonProperty("ConflictResolution") GetAutoMergingPreviewRequestBodyConflictResolution conflictResolution, @JsonProperty("Consolidation") GetAutoMergingPreviewRequestBodyConsolidation consolidation) {
+        this.conflictResolution = conflictResolution;
+        this.consolidation = consolidation;
+  }
 }

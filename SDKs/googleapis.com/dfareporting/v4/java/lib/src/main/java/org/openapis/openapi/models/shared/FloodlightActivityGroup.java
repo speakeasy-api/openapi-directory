@@ -18,6 +18,7 @@ public class FloodlightActivityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public FloodlightActivityGroup withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class FloodlightActivityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public FloodlightActivityGroup withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -40,6 +42,7 @@ public class FloodlightActivityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserIdDimensionValue")
     public DimensionValue advertiserIdDimensionValue;
+
     public FloodlightActivityGroup withAdvertiserIdDimensionValue(DimensionValue advertiserIdDimensionValue) {
         this.advertiserIdDimensionValue = advertiserIdDimensionValue;
         return this;
@@ -51,6 +54,7 @@ public class FloodlightActivityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floodlightConfigurationId")
     public String floodlightConfigurationId;
+
     public FloodlightActivityGroup withFloodlightConfigurationId(String floodlightConfigurationId) {
         this.floodlightConfigurationId = floodlightConfigurationId;
         return this;
@@ -62,6 +66,7 @@ public class FloodlightActivityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floodlightConfigurationIdDimensionValue")
     public DimensionValue floodlightConfigurationIdDimensionValue;
+
     public FloodlightActivityGroup withFloodlightConfigurationIdDimensionValue(DimensionValue floodlightConfigurationIdDimensionValue) {
         this.floodlightConfigurationIdDimensionValue = floodlightConfigurationIdDimensionValue;
         return this;
@@ -73,6 +78,7 @@ public class FloodlightActivityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FloodlightActivityGroup withId(String id) {
         this.id = id;
         return this;
@@ -84,6 +90,7 @@ public class FloodlightActivityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idDimensionValue")
     public DimensionValue idDimensionValue;
+
     public FloodlightActivityGroup withIdDimensionValue(DimensionValue idDimensionValue) {
         this.idDimensionValue = idDimensionValue;
         return this;
@@ -95,6 +102,7 @@ public class FloodlightActivityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public FloodlightActivityGroup withKind(String kind) {
         this.kind = kind;
         return this;
@@ -106,6 +114,7 @@ public class FloodlightActivityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FloodlightActivityGroup withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +126,7 @@ public class FloodlightActivityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subaccountId")
     public String subaccountId;
+
     public FloodlightActivityGroup withSubaccountId(String subaccountId) {
         this.subaccountId = subaccountId;
         return this;
@@ -128,6 +138,7 @@ public class FloodlightActivityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagString")
     public String tagString;
+
     public FloodlightActivityGroup withTagString(String tagString) {
         this.tagString = tagString;
         return this;
@@ -139,9 +150,11 @@ public class FloodlightActivityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public FloodlightActivityGroupTypeEnum type;
+
     public FloodlightActivityGroup withType(FloodlightActivityGroupTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public FloodlightActivityGroup(){}
 }

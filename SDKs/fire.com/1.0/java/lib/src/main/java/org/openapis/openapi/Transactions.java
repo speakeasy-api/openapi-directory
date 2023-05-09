@@ -34,21 +34,29 @@ public class Transactions {
 	}
 
     /**
-     * List transactions for an account (v1)
-     * Retrieve a list of transactions against an account. Recommended to use the v3 endpoint instead.
+     * Filtered list of transactions for an account (v1)
+     * Retrieve a filtered list of transactions against an account. Recommended to use the v3 endpoint instead.
+     * * `dateRangeFrom` - A millisecond epoch time specifying the date range start date.
+     * * `dateRangeTo` - A millisecond epoch time specifying the date range end date.
+     * * `searchKeyword` - Search term to filter by from the reference field (`myRef`).
+     * * `transactionTypes` - One or more of the transaction types above. This field can be repeated multiple times to allow for multiple transaction types.
+     * * `offset` - The page offset. Defaults to 0. This is the record number that the returned list will start at. E.g. offset = 40 and limit = 20 will return records 40 to 59.
+     * 
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
-    public org.openapis.openapi.models.operations.GetTransactionsByIdv1Response getTransactionsByIdv1(org.openapis.openapi.models.operations.GetTransactionsByIdv1Request request) throws Exception {
+    @Deprecated
+    public org.openapis.openapi.models.operations.GetTransactionsByAccountIdFilteredResponse getTransactionsByAccountIdFiltered(org.openapis.openapi.models.operations.GetTransactionsByAccountIdFilteredRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionsByIdv1Request.class, baseUrl, "/v1/accounts/{ican}/transactions", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionsByAccountIdFilteredRequest.class, baseUrl, "/v1/accounts/{ican}/transactions/filter", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTransactionsByIdv1Request.class, request, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTransactionsByAccountIdFilteredRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -61,17 +69,61 @@ public class Transactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTransactionsByIdv1Response res = new org.openapis.openapi.models.operations.GetTransactionsByIdv1Response() {{
+        org.openapis.openapi.models.operations.GetTransactionsByAccountIdFilteredResponse res = new org.openapis.openapi.models.operations.GetTransactionsByAccountIdFilteredResponse(contentType, httpRes.statusCode()) {{
             cardTransactionsv1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.operations.GetTransactionsByIdv1CardTransactionsv1 out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.GetTransactionsByIdv1CardTransactionsv1.class);
+                org.openapis.openapi.models.operations.GetTransactionsByAccountIdFilteredCardTransactionsv1 out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.GetTransactionsByAccountIdFilteredCardTransactionsv1.class);
+                res.cardTransactionsv1 = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List transactions for an account (v1)
+     * Retrieve a list of transactions against an account. Recommended to use the v3 endpoint instead.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
+     */
+    @Deprecated
+    public org.openapis.openapi.models.operations.GetTransactionsByAccountIdv1Response getTransactionsByAccountIdv1(org.openapis.openapi.models.operations.GetTransactionsByAccountIdv1Request request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionsByAccountIdv1Request.class, baseUrl, "/v1/accounts/{ican}/transactions", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTransactionsByAccountIdv1Request.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.GetTransactionsByAccountIdv1Response res = new org.openapis.openapi.models.operations.GetTransactionsByAccountIdv1Response(contentType, httpRes.statusCode()) {{
+            cardTransactionsv1 = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.GetTransactionsByAccountIdv1CardTransactionsv1 out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.GetTransactionsByAccountIdv1CardTransactionsv1.class);
                 res.cardTransactionsv1 = out;
             }
         }
@@ -87,15 +139,15 @@ public class Transactions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTransactionsByIdv3Response getTransactionsByIdv3(org.openapis.openapi.models.operations.GetTransactionsByIdv3Request request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTransactionsByAccountIdv3Response getTransactionsByAccountIdv3(org.openapis.openapi.models.operations.GetTransactionsByAccountIdv3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionsByIdv3Request.class, baseUrl, "/v3/accounts/{ican}/transactions", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionsByAccountIdv3Request.class, baseUrl, "/v3/accounts/{ican}/transactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTransactionsByIdv3Request.class, request, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTransactionsByAccountIdv3Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -108,70 +160,16 @@ public class Transactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTransactionsByIdv3Response res = new org.openapis.openapi.models.operations.GetTransactionsByIdv3Response() {{
+        org.openapis.openapi.models.operations.GetTransactionsByAccountIdv3Response res = new org.openapis.openapi.models.operations.GetTransactionsByAccountIdv3Response(contentType, httpRes.statusCode()) {{
             cardTransactionsv3 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.operations.GetTransactionsByIdv3CardTransactionsv3 out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.GetTransactionsByIdv3CardTransactionsv3.class);
+                org.openapis.openapi.models.operations.GetTransactionsByAccountIdv3CardTransactionsv3 out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.GetTransactionsByAccountIdv3CardTransactionsv3.class);
                 res.cardTransactionsv3 = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Filtered list of transactions for an account (v1)
-     * Retrieve a filtered list of transactions against an account. Recommended to use the v3 endpoint instead.
-     * * `dateRangeFrom` - A millisecond epoch time specifying the date range start date.
-     * * `dateRangeTo` - A millisecond epoch time specifying the date range end date.
-     * * `searchKeyword` - Search term to filter by from the reference field (`myRef`).
-     * * `transactionTypes` - One or more of the transaction types above. This field can be repeated multiple times to allow for multiple transaction types.
-     * * `offset` - The page offset. Defaults to 0. This is the record number that the returned list will start at. E.g. offset = 40 and limit = 20 will return records 40 to 59.
-     * 
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.GetTransactionsFilteredByIdResponse getTransactionsFilteredById(org.openapis.openapi.models.operations.GetTransactionsFilteredByIdRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionsFilteredByIdRequest.class, baseUrl, "/v1/accounts/{ican}/transactions/filter", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTransactionsFilteredByIdRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.GetTransactionsFilteredByIdResponse res = new org.openapis.openapi.models.operations.GetTransactionsFilteredByIdResponse() {{
-            cardTransactionsv1 = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.operations.GetTransactionsFilteredByIdCardTransactionsv1 out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.GetTransactionsFilteredByIdCardTransactionsv1.class);
-                res.cardTransactionsv1 = out;
             }
         }
 

@@ -14,6 +14,7 @@ public class CreateSignalingChannelRequestBody {
      */
     @JsonProperty("ChannelName")
     public String channelName;
+
     public CreateSignalingChannelRequestBody withChannelName(String channelName) {
         this.channelName = channelName;
         return this;
@@ -25,6 +26,7 @@ public class CreateSignalingChannelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelType")
     public CreateSignalingChannelRequestBodyChannelTypeEnum channelType;
+
     public CreateSignalingChannelRequestBody withChannelType(CreateSignalingChannelRequestBodyChannelTypeEnum channelType) {
         this.channelType = channelType;
         return this;
@@ -36,6 +38,7 @@ public class CreateSignalingChannelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SingleMasterConfiguration")
     public CreateSignalingChannelRequestBodySingleMasterConfiguration singleMasterConfiguration;
+
     public CreateSignalingChannelRequestBody withSingleMasterConfiguration(CreateSignalingChannelRequestBodySingleMasterConfiguration singleMasterConfiguration) {
         this.singleMasterConfiguration = singleMasterConfiguration;
         return this;
@@ -47,9 +50,13 @@ public class CreateSignalingChannelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateSignalingChannelRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSignalingChannelRequestBody(@JsonProperty("ChannelName") String channelName) {
+        this.channelName = channelName;
+  }
 }

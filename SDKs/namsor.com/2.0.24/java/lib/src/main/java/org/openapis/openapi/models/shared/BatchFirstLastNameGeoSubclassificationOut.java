@@ -18,9 +18,11 @@ public class BatchFirstLastNameGeoSubclassificationOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalNames")
     public FirstLastNameGeoSubclassificationOut[] personalNames;
+
     public BatchFirstLastNameGeoSubclassificationOut withPersonalNames(FirstLastNameGeoSubclassificationOut[] personalNames) {
         this.personalNames = personalNames;
         return this;
     }
     
+    public BatchFirstLastNameGeoSubclassificationOut(){}
 }

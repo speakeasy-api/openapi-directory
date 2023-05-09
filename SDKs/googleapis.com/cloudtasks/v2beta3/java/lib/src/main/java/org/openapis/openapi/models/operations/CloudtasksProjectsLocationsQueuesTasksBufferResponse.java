@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudtasksProjectsLocationsQueuesTasksBufferResponse {
@@ -12,6 +13,7 @@ public class CloudtasksProjectsLocationsQueuesTasksBufferResponse {
      */
     
     public org.openapis.openapi.models.shared.BufferTaskResponse bufferTaskResponse;
+
     public CloudtasksProjectsLocationsQueuesTasksBufferResponse withBufferTaskResponse(org.openapis.openapi.models.shared.BufferTaskResponse bufferTaskResponse) {
         this.bufferTaskResponse = bufferTaskResponse;
         return this;
@@ -19,6 +21,7 @@ public class CloudtasksProjectsLocationsQueuesTasksBufferResponse {
     
     
     public String contentType;
+
     public CloudtasksProjectsLocationsQueuesTasksBufferResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CloudtasksProjectsLocationsQueuesTasksBufferResponse {
     
     
     public Integer statusCode;
+
     public CloudtasksProjectsLocationsQueuesTasksBufferResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudtasksProjectsLocationsQueuesTasksBufferResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudtasksProjectsLocationsQueuesTasksBufferResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudtasksProjectsLocationsQueuesTasksBufferResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

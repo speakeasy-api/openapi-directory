@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2DeidentifyDataSourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deidentifyStats")
     public GooglePrivacyDlpV2DeidentifyDataSourceStats deidentifyStats;
+
     public GooglePrivacyDlpV2DeidentifyDataSourceDetails withDeidentifyStats(GooglePrivacyDlpV2DeidentifyDataSourceStats deidentifyStats) {
         this.deidentifyStats = deidentifyStats;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2DeidentifyDataSourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedOptions")
     public GooglePrivacyDlpV2RequestedDeidentifyOptions requestedOptions;
+
     public GooglePrivacyDlpV2DeidentifyDataSourceDetails withRequestedOptions(GooglePrivacyDlpV2RequestedDeidentifyOptions requestedOptions) {
         this.requestedOptions = requestedOptions;
         return this;
     }
     
+    public GooglePrivacyDlpV2DeidentifyDataSourceDetails(){}
 }

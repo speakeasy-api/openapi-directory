@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WorkUnitRange {
     @JsonProperty("WorkUnitIdMax")
     public Long workUnitIdMax;
+
     public WorkUnitRange withWorkUnitIdMax(Long workUnitIdMax) {
         this.workUnitIdMax = workUnitIdMax;
         return this;
@@ -19,6 +20,7 @@ public class WorkUnitRange {
     
     @JsonProperty("WorkUnitIdMin")
     public Long workUnitIdMin;
+
     public WorkUnitRange withWorkUnitIdMin(Long workUnitIdMin) {
         this.workUnitIdMin = workUnitIdMin;
         return this;
@@ -26,9 +28,15 @@ public class WorkUnitRange {
     
     @JsonProperty("WorkUnitToken")
     public String workUnitToken;
+
     public WorkUnitRange withWorkUnitToken(String workUnitToken) {
         this.workUnitToken = workUnitToken;
         return this;
     }
     
+    public WorkUnitRange(@JsonProperty("WorkUnitIdMax") Long workUnitIdMax, @JsonProperty("WorkUnitIdMin") Long workUnitIdMin, @JsonProperty("WorkUnitToken") String workUnitToken) {
+        this.workUnitIdMax = workUnitIdMax;
+        this.workUnitIdMin = workUnitIdMin;
+        this.workUnitToken = workUnitToken;
+  }
 }

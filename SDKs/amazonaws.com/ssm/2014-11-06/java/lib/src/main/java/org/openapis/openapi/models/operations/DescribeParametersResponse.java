@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeParametersResponse {
     
     public String contentType;
+
     public DescribeParametersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeParametersResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeParametersResult describeParametersResult;
+
     public DescribeParametersResponse withDescribeParametersResult(org.openapis.openapi.models.shared.DescribeParametersResult describeParametersResult) {
         this.describeParametersResult = describeParametersResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeParametersResponse {
      */
     
     public Object internalServerError;
+
     public DescribeParametersResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeParametersResponse {
      */
     
     public Object invalidFilterKey;
+
     public DescribeParametersResponse withInvalidFilterKey(Object invalidFilterKey) {
         this.invalidFilterKey = invalidFilterKey;
         return this;
@@ -49,6 +54,7 @@ public class DescribeParametersResponse {
      */
     
     public Object invalidFilterOption;
+
     public DescribeParametersResponse withInvalidFilterOption(Object invalidFilterOption) {
         this.invalidFilterOption = invalidFilterOption;
         return this;
@@ -59,6 +65,7 @@ public class DescribeParametersResponse {
      */
     
     public Object invalidFilterValue;
+
     public DescribeParametersResponse withInvalidFilterValue(Object invalidFilterValue) {
         this.invalidFilterValue = invalidFilterValue;
         return this;
@@ -69,6 +76,7 @@ public class DescribeParametersResponse {
      */
     
     public Object invalidNextToken;
+
     public DescribeParametersResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -76,6 +84,7 @@ public class DescribeParametersResponse {
     
     
     public Integer statusCode;
+
     public DescribeParametersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DescribeParametersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeParametersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeParametersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

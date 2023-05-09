@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFactNumbersRequest {
@@ -12,9 +13,13 @@ public class GetFactNumbersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
     public Long number;
+
     public GetFactNumbersRequest withNumber(Long number) {
         this.number = number;
         return this;
     }
     
+    public GetFactNumbersRequest(@JsonProperty("number") Long number) {
+        this.number = number;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TargetGroupTuple {
     
     public String targetGroupArn;
+
     public TargetGroupTuple withTargetGroupArn(String targetGroupArn) {
         this.targetGroupArn = targetGroupArn;
         return this;
@@ -19,9 +20,11 @@ public class TargetGroupTuple {
     
     
     public Long weight;
+
     public TargetGroupTuple withWeight(Long weight) {
         this.weight = weight;
         return this;
     }
     
+    public TargetGroupTuple(){}
 }

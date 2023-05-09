@@ -17,6 +17,7 @@ public class GenericOauth2ModuleConfig {
      */
     @JsonProperty("accessTokenField")
     public String accessTokenField;
+
     public GenericOauth2ModuleConfig withAccessTokenField(String accessTokenField) {
         this.accessTokenField = accessTokenField;
         return this;
@@ -27,6 +28,7 @@ public class GenericOauth2ModuleConfig {
      */
     @JsonProperty("authorizeUrl")
     public String authorizeUrl;
+
     public GenericOauth2ModuleConfig withAuthorizeUrl(String authorizeUrl) {
         this.authorizeUrl = authorizeUrl;
         return this;
@@ -37,6 +39,7 @@ public class GenericOauth2ModuleConfig {
      */
     @JsonProperty("callbackUrl")
     public String callbackUrl;
+
     public GenericOauth2ModuleConfig withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
@@ -48,6 +51,7 @@ public class GenericOauth2ModuleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("claims")
     public String claims;
+
     public GenericOauth2ModuleConfig withClaims(String claims) {
         this.claims = claims;
         return this;
@@ -58,6 +62,7 @@ public class GenericOauth2ModuleConfig {
      */
     @JsonProperty("clientId")
     public String clientId;
+
     public GenericOauth2ModuleConfig withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -68,6 +73,7 @@ public class GenericOauth2ModuleConfig {
      */
     @JsonProperty("clientSecret")
     public String clientSecret;
+
     public GenericOauth2ModuleConfig withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -78,6 +84,7 @@ public class GenericOauth2ModuleConfig {
      */
     @JsonProperty("desc")
     public String desc;
+
     public GenericOauth2ModuleConfig withDesc(String desc) {
         this.desc = desc;
         return this;
@@ -88,6 +95,7 @@ public class GenericOauth2ModuleConfig {
      */
     @JsonProperty("emailField")
     public String emailField;
+
     public GenericOauth2ModuleConfig withEmailField(String emailField) {
         this.emailField = emailField;
         return this;
@@ -98,6 +106,7 @@ public class GenericOauth2ModuleConfig {
      */
     @JsonProperty("id")
     public String id;
+
     public GenericOauth2ModuleConfig withId(String id) {
         this.id = id;
         return this;
@@ -109,6 +118,7 @@ public class GenericOauth2ModuleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jwtVerifier")
     public Object jwtVerifier;
+
     public GenericOauth2ModuleConfig withJwtVerifier(Object jwtVerifier) {
         this.jwtVerifier = jwtVerifier;
         return this;
@@ -119,6 +129,7 @@ public class GenericOauth2ModuleConfig {
      */
     @JsonProperty("loginUrl")
     public String loginUrl;
+
     public GenericOauth2ModuleConfig withLoginUrl(String loginUrl) {
         this.loginUrl = loginUrl;
         return this;
@@ -129,6 +140,7 @@ public class GenericOauth2ModuleConfig {
      */
     @JsonProperty("logoutUrl")
     public String logoutUrl;
+
     public GenericOauth2ModuleConfig withLogoutUrl(String logoutUrl) {
         this.logoutUrl = logoutUrl;
         return this;
@@ -139,6 +151,7 @@ public class GenericOauth2ModuleConfig {
      */
     @JsonProperty("name")
     public String name;
+
     public GenericOauth2ModuleConfig withName(String name) {
         this.name = name;
         return this;
@@ -149,6 +162,7 @@ public class GenericOauth2ModuleConfig {
      */
     @JsonProperty("nameField")
     public String nameField;
+
     public GenericOauth2ModuleConfig withNameField(String nameField) {
         this.nameField = nameField;
         return this;
@@ -160,6 +174,7 @@ public class GenericOauth2ModuleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oidConfig")
     public String oidConfig;
+
     public GenericOauth2ModuleConfig withOidConfig(String oidConfig) {
         this.oidConfig = oidConfig;
         return this;
@@ -170,6 +185,7 @@ public class GenericOauth2ModuleConfig {
      */
     @JsonProperty("otoroshiDataField")
     public String otoroshiDataField;
+
     public GenericOauth2ModuleConfig withOtoroshiDataField(String otoroshiDataField) {
         this.otoroshiDataField = otoroshiDataField;
         return this;
@@ -181,6 +197,7 @@ public class GenericOauth2ModuleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readProfileFromToken")
     public Boolean readProfileFromToken;
+
     public GenericOauth2ModuleConfig withReadProfileFromToken(Boolean readProfileFromToken) {
         this.readProfileFromToken = readProfileFromToken;
         return this;
@@ -192,6 +209,7 @@ public class GenericOauth2ModuleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public GenericOauth2ModuleConfig withScope(String scope) {
         this.scope = scope;
         return this;
@@ -202,6 +220,7 @@ public class GenericOauth2ModuleConfig {
      */
     @JsonProperty("sessionMaxAge")
     public Integer sessionMaxAge;
+
     public GenericOauth2ModuleConfig withSessionMaxAge(Integer sessionMaxAge) {
         this.sessionMaxAge = sessionMaxAge;
         return this;
@@ -212,6 +231,7 @@ public class GenericOauth2ModuleConfig {
      */
     @JsonProperty("tokenUrl")
     public String tokenUrl;
+
     public GenericOauth2ModuleConfig withTokenUrl(String tokenUrl) {
         this.tokenUrl = tokenUrl;
         return this;
@@ -222,6 +242,7 @@ public class GenericOauth2ModuleConfig {
      */
     @JsonProperty("type")
     public String type;
+
     public GenericOauth2ModuleConfig withType(String type) {
         this.type = type;
         return this;
@@ -233,6 +254,7 @@ public class GenericOauth2ModuleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useCookies")
     public Boolean useCookies;
+
     public GenericOauth2ModuleConfig withUseCookies(Boolean useCookies) {
         this.useCookies = useCookies;
         return this;
@@ -244,6 +266,7 @@ public class GenericOauth2ModuleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useJson")
     public Boolean useJson;
+
     public GenericOauth2ModuleConfig withUseJson(Boolean useJson) {
         this.useJson = useJson;
         return this;
@@ -254,9 +277,29 @@ public class GenericOauth2ModuleConfig {
      */
     @JsonProperty("userInfoUrl")
     public String userInfoUrl;
+
     public GenericOauth2ModuleConfig withUserInfoUrl(String userInfoUrl) {
         this.userInfoUrl = userInfoUrl;
         return this;
     }
     
+    public GenericOauth2ModuleConfig(@JsonProperty("accessTokenField") String accessTokenField, @JsonProperty("authorizeUrl") String authorizeUrl, @JsonProperty("callbackUrl") String callbackUrl, @JsonProperty("clientId") String clientId, @JsonProperty("clientSecret") String clientSecret, @JsonProperty("desc") String desc, @JsonProperty("emailField") String emailField, @JsonProperty("id") String id, @JsonProperty("loginUrl") String loginUrl, @JsonProperty("logoutUrl") String logoutUrl, @JsonProperty("name") String name, @JsonProperty("nameField") String nameField, @JsonProperty("otoroshiDataField") String otoroshiDataField, @JsonProperty("sessionMaxAge") Integer sessionMaxAge, @JsonProperty("tokenUrl") String tokenUrl, @JsonProperty("type") String type, @JsonProperty("userInfoUrl") String userInfoUrl) {
+        this.accessTokenField = accessTokenField;
+        this.authorizeUrl = authorizeUrl;
+        this.callbackUrl = callbackUrl;
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+        this.desc = desc;
+        this.emailField = emailField;
+        this.id = id;
+        this.loginUrl = loginUrl;
+        this.logoutUrl = logoutUrl;
+        this.name = name;
+        this.nameField = nameField;
+        this.otoroshiDataField = otoroshiDataField;
+        this.sessionMaxAge = sessionMaxAge;
+        this.tokenUrl = tokenUrl;
+        this.type = type;
+        this.userInfoUrl = userInfoUrl;
+  }
 }

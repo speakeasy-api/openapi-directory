@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserDocumentsRequest {
@@ -12,6 +13,7 @@ public class GetUserDocumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language_code")
     public String languageCode;
+
     public GetUserDocumentsRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -19,6 +21,7 @@ public class GetUserDocumentsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
     public GetUserDocumentsOrderByEnum orderBy;
+
     public GetUserDocumentsRequest withOrderBy(GetUserDocumentsOrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -26,6 +29,7 @@ public class GetUserDocumentsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_type")
     public org.openapis.openapi.models.shared.ListOrderTypeEnum orderType;
+
     public GetUserDocumentsRequest withOrderType(org.openapis.openapi.models.shared.ListOrderTypeEnum orderType) {
         this.orderType = orderType;
         return this;
@@ -33,6 +37,7 @@ public class GetUserDocumentsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetUserDocumentsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -40,6 +45,7 @@ public class GetUserDocumentsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetUserDocumentsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -50,6 +56,7 @@ public class GetUserDocumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recent")
     public Boolean recent;
+
     public GetUserDocumentsRequest withRecent(Boolean recent) {
         this.recent = recent;
         return this;
@@ -57,6 +64,7 @@ public class GetUserDocumentsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public GetUserDocumentsRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -64,6 +72,7 @@ public class GetUserDocumentsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type_filter")
     public GetUserDocumentsTypeFilterEnum typeFilter;
+
     public GetUserDocumentsRequest withTypeFilter(GetUserDocumentsTypeFilterEnum typeFilter) {
         this.typeFilter = typeFilter;
         return this;
@@ -74,9 +83,13 @@ public class GetUserDocumentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public Long userId;
+
     public GetUserDocumentsRequest withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetUserDocumentsRequest(@JsonProperty("userId") Long userId) {
+        this.userId = userId;
+  }
 }

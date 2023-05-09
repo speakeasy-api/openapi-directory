@@ -15,9 +15,11 @@ public class UpdateUserPoolDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudFrontDomain")
     public String cloudFrontDomain;
+
     public UpdateUserPoolDomainResponse withCloudFrontDomain(String cloudFrontDomain) {
         this.cloudFrontDomain = cloudFrontDomain;
         return this;
     }
     
+    public UpdateUserPoolDomainResponse(){}
 }

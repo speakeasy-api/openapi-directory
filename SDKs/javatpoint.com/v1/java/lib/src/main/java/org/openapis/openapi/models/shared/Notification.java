@@ -18,6 +18,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public Notification withBody(String body) {
         this.body = body;
         return this;
@@ -29,6 +30,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public Notification withImage(String image) {
         this.image = image;
         return this;
@@ -40,9 +42,11 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Notification withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Notification(){}
 }

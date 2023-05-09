@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CreateAuthorIfNotExistsForUsingGETRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authorMapper")
     public String authorMapper;
+
     public CreateAuthorIfNotExistsForUsingGETRequest withAuthorMapper(String authorMapper) {
         this.authorMapper = authorMapper;
         return this;
@@ -16,9 +17,11 @@ public class CreateAuthorIfNotExistsForUsingGETRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public CreateAuthorIfNotExistsForUsingGETRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateAuthorIfNotExistsForUsingGETRequest(){}
 }

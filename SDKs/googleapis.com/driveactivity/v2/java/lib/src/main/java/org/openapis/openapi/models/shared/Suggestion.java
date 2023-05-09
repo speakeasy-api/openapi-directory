@@ -18,9 +18,11 @@ public class Suggestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtype")
     public SuggestionSubtypeEnum subtype;
+
     public Suggestion withSubtype(SuggestionSubtypeEnum subtype) {
         this.subtype = subtype;
         return this;
     }
     
+    public Suggestion(){}
 }

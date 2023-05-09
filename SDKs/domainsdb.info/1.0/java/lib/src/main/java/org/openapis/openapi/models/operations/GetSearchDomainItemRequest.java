@@ -12,6 +12,7 @@ public class GetSearchDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=A")
     public String a;
+
     public GetSearchDomainItemRequest withA(String a) {
         this.a = a;
         return this;
@@ -22,6 +23,7 @@ public class GetSearchDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CNAME")
     public String cname;
+
     public GetSearchDomainItemRequest withCname(String cname) {
         this.cname = cname;
         return this;
@@ -32,6 +34,7 @@ public class GetSearchDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MX")
     public String mx;
+
     public GetSearchDomainItemRequest withMx(String mx) {
         this.mx = mx;
         return this;
@@ -42,6 +45,7 @@ public class GetSearchDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NS")
     public String ns;
+
     public GetSearchDomainItemRequest withNs(String ns) {
         this.ns = ns;
         return this;
@@ -52,6 +56,7 @@ public class GetSearchDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TXT")
     public String txt;
+
     public GetSearchDomainItemRequest withTxt(String txt) {
         this.txt = txt;
         return this;
@@ -62,6 +67,7 @@ public class GetSearchDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetSearchDomainItemRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -72,6 +78,7 @@ public class GetSearchDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public GetSearchDomainItemRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -82,6 +89,7 @@ public class GetSearchDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public String date;
+
     public GetSearchDomainItemRequest withDate(String date) {
         this.date = date;
         return this;
@@ -92,6 +100,7 @@ public class GetSearchDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
     public String domain;
+
     public GetSearchDomainItemRequest withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -102,6 +111,7 @@ public class GetSearchDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isDead")
     public Boolean isDead;
+
     public GetSearchDomainItemRequest withIsDead(Boolean isDead) {
         this.isDead = isDead;
         return this;
@@ -112,6 +122,7 @@ public class GetSearchDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetSearchDomainItemRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -122,6 +133,7 @@ public class GetSearchDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetSearchDomainItemRequest withPage(String page) {
         this.page = page;
         return this;
@@ -132,9 +144,11 @@ public class GetSearchDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zone")
     public String zone;
+
     public GetSearchDomainItemRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public GetSearchDomainItemRequest(){}
 }

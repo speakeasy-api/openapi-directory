@@ -15,9 +15,11 @@ public class AppRegistryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagQueryConfiguration")
     public TagQueryConfiguration tagQueryConfiguration;
+
     public AppRegistryConfiguration withTagQueryConfiguration(TagQueryConfiguration tagQueryConfiguration) {
         this.tagQueryConfiguration = tagQueryConfiguration;
         return this;
     }
     
+    public AppRegistryConfiguration(){}
 }

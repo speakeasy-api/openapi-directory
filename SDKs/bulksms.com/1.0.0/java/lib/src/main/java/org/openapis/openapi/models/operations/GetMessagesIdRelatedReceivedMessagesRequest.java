@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMessagesIdRelatedReceivedMessagesRequest {
@@ -12,9 +13,13 @@ public class GetMessagesIdRelatedReceivedMessagesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetMessagesIdRelatedReceivedMessagesRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetMessagesIdRelatedReceivedMessagesRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

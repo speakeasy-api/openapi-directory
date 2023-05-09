@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListBootstrapActionsInput {
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public ListBootstrapActionsInput withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -22,9 +23,13 @@ public class ListBootstrapActionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListBootstrapActionsInput withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListBootstrapActionsInput(@JsonProperty("ClusterId") String clusterId) {
+        this.clusterId = clusterId;
+  }
 }

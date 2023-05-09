@@ -18,6 +18,7 @@ public class PolicyControllerPolicyControllerDeploymentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerResources")
     public PolicyControllerResourceRequirements containerResources;
+
     public PolicyControllerPolicyControllerDeploymentConfig withContainerResources(PolicyControllerResourceRequirements containerResources) {
         this.containerResources = containerResources;
         return this;
@@ -29,6 +30,7 @@ public class PolicyControllerPolicyControllerDeploymentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("podAntiAffinity")
     public Boolean podAntiAffinity;
+
     public PolicyControllerPolicyControllerDeploymentConfig withPodAntiAffinity(Boolean podAntiAffinity) {
         this.podAntiAffinity = podAntiAffinity;
         return this;
@@ -40,6 +42,7 @@ public class PolicyControllerPolicyControllerDeploymentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("podTolerations")
     public PolicyControllerToleration[] podTolerations;
+
     public PolicyControllerPolicyControllerDeploymentConfig withPodTolerations(PolicyControllerToleration[] podTolerations) {
         this.podTolerations = podTolerations;
         return this;
@@ -51,9 +54,11 @@ public class PolicyControllerPolicyControllerDeploymentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicaCount")
     public String replicaCount;
+
     public PolicyControllerPolicyControllerDeploymentConfig withReplicaCount(String replicaCount) {
         this.replicaCount = replicaCount;
         return this;
     }
     
+    public PolicyControllerPolicyControllerDeploymentConfig(){}
 }

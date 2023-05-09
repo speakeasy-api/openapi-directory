@@ -15,9 +15,11 @@ public class GetAuditLogEvents200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.AuditLogEvent[] data;
+
     public GetAuditLogEvents200ApplicationJSON withData(org.openapis.openapi.models.shared.AuditLogEvent[] data) {
         this.data = data;
         return this;
     }
     
+    public GetAuditLogEvents200ApplicationJSON(){}
 }

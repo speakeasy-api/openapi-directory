@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrderApiGetPatchableFieldsResponse {
     
     public String contentType;
+
     public OrderApiGetPatchableFieldsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class OrderApiGetPatchableFieldsResponse {
      */
     
     public java.util.Map<String, Object> orderApiGetPatchableFields200ApplicationJSONObject;
+
     public OrderApiGetPatchableFieldsResponse withOrderApiGetPatchableFields200ApplicationJSONObject(java.util.Map<String, Object> orderApiGetPatchableFields200ApplicationJSONObject) {
         this.orderApiGetPatchableFields200ApplicationJSONObject = orderApiGetPatchableFields200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class OrderApiGetPatchableFieldsResponse {
      */
     
     public java.util.Map<String, Object> orderApiGetPatchableFields200TextJSONObject;
+
     public OrderApiGetPatchableFieldsResponse withOrderApiGetPatchableFields200TextJSONObject(java.util.Map<String, Object> orderApiGetPatchableFields200TextJSONObject) {
         this.orderApiGetPatchableFields200TextJSONObject = orderApiGetPatchableFields200TextJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class OrderApiGetPatchableFieldsResponse {
     
     
     public Integer statusCode;
+
     public OrderApiGetPatchableFieldsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class OrderApiGetPatchableFieldsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrderApiGetPatchableFieldsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OrderApiGetPatchableFieldsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

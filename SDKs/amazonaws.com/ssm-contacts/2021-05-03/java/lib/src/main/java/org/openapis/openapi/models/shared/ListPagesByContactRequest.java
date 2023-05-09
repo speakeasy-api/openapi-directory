@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListPagesByContactRequest {
     @JsonProperty("ContactId")
     public String contactId;
+
     public ListPagesByContactRequest withContactId(String contactId) {
         this.contactId = contactId;
         return this;
@@ -19,6 +20,7 @@ public class ListPagesByContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListPagesByContactRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListPagesByContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPagesByContactRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListPagesByContactRequest(@JsonProperty("ContactId") String contactId) {
+        this.contactId = contactId;
+  }
 }

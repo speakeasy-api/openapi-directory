@@ -15,6 +15,7 @@ public class VirtualGatewayConnectionPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grpc")
     public VirtualGatewayGrpcConnectionPool grpc;
+
     public VirtualGatewayConnectionPool withGrpc(VirtualGatewayGrpcConnectionPool grpc) {
         this.grpc = grpc;
         return this;
@@ -23,6 +24,7 @@ public class VirtualGatewayConnectionPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http")
     public VirtualGatewayHttpConnectionPool http;
+
     public VirtualGatewayConnectionPool withHttp(VirtualGatewayHttpConnectionPool http) {
         this.http = http;
         return this;
@@ -31,9 +33,11 @@ public class VirtualGatewayConnectionPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http2")
     public VirtualGatewayHttp2ConnectionPool http2;
+
     public VirtualGatewayConnectionPool withHttp2(VirtualGatewayHttp2ConnectionPool http2) {
         this.http2 = http2;
         return this;
     }
     
+    public VirtualGatewayConnectionPool(){}
 }

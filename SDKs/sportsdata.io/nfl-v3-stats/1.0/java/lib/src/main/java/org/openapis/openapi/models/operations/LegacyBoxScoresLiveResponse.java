@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LegacyBoxScoresLiveResponse {
     
     public org.openapis.openapi.models.shared.BoxScore[] boxScores;
+
     public LegacyBoxScoresLiveResponse withBoxScores(org.openapis.openapi.models.shared.BoxScore[] boxScores) {
         this.boxScores = boxScores;
         return this;
@@ -16,6 +18,7 @@ public class LegacyBoxScoresLiveResponse {
     
     
     public String contentType;
+
     public LegacyBoxScoresLiveResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class LegacyBoxScoresLiveResponse {
     
     
     public Integer statusCode;
+
     public LegacyBoxScoresLiveResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class LegacyBoxScoresLiveResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LegacyBoxScoresLiveResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public LegacyBoxScoresLiveResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

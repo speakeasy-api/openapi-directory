@@ -12,9 +12,13 @@ public class GetStreamRequestBody {
      */
     @JsonProperty("channelArn")
     public String channelArn;
+
     public GetStreamRequestBody withChannelArn(String channelArn) {
         this.channelArn = channelArn;
         return this;
     }
     
+    public GetStreamRequestBody(@JsonProperty("channelArn") String channelArn) {
+        this.channelArn = channelArn;
+  }
 }

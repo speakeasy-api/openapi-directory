@@ -15,6 +15,7 @@ public class MembershipsDurationAtLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public String level;
+
     public MembershipsDurationAtLevel withLevel(String level) {
         this.level = level;
         return this;
@@ -26,6 +27,7 @@ public class MembershipsDurationAtLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memberSince")
     public String memberSince;
+
     public MembershipsDurationAtLevel withMemberSince(String memberSince) {
         this.memberSince = memberSince;
         return this;
@@ -37,9 +39,11 @@ public class MembershipsDurationAtLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memberTotalDurationMonths")
     public Integer memberTotalDurationMonths;
+
     public MembershipsDurationAtLevel withMemberTotalDurationMonths(Integer memberTotalDurationMonths) {
         this.memberTotalDurationMonths = memberTotalDurationMonths;
         return this;
     }
     
+    public MembershipsDurationAtLevel(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCanaryResponse {
     
     public String contentType;
+
     public GetCanaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCanaryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCanaryResponse getCanaryResponse;
+
     public GetCanaryResponse withGetCanaryResponse(org.openapis.openapi.models.shared.GetCanaryResponse getCanaryResponse) {
         this.getCanaryResponse = getCanaryResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetCanaryResponse {
      */
     
     public Object internalServerException;
+
     public GetCanaryResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class GetCanaryResponse {
     
     
     public Integer statusCode;
+
     public GetCanaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetCanaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCanaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetCanaryResponse {
      */
     
     public Object validationException;
+
     public GetCanaryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetCanaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

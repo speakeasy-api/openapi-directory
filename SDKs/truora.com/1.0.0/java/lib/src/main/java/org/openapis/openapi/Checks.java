@@ -63,11 +63,9 @@ public class Checks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetHealthDashboardResponse res = new org.openapis.openapi.models.operations.GetHealthDashboardResponse() {{
+        org.openapis.openapi.models.operations.GetHealthDashboardResponse res = new org.openapis.openapi.models.operations.GetHealthDashboardResponse(contentType, httpRes.statusCode()) {{
             databases = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -133,12 +131,10 @@ public class Checks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCheckResponse res = new org.openapis.openapi.models.operations.CreateCheckResponse() {{
+        org.openapis.openapi.models.operations.CreateCheckResponse res = new org.openapis.openapi.models.operations.CreateCheckResponse(contentType, httpRes.statusCode()) {{
             checkOutput = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -198,12 +194,10 @@ public class Checks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCheckResponse res = new org.openapis.openapi.models.operations.GetCheckResponse() {{
+        org.openapis.openapi.models.operations.GetCheckResponse res = new org.openapis.openapi.models.operations.GetCheckResponse(contentType, httpRes.statusCode()) {{
             checkOutput = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -253,11 +247,9 @@ public class Checks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCheckDetailsResponse res = new org.openapis.openapi.models.operations.ListCheckDetailsResponse() {{
+        org.openapis.openapi.models.operations.ListCheckDetailsResponse res = new org.openapis.openapi.models.operations.ListCheckDetailsResponse(contentType, httpRes.statusCode()) {{
             checkDetailsOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,11 +292,9 @@ public class Checks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListChecksResponse res = new org.openapis.openapi.models.operations.ListChecksResponse() {{
+        org.openapis.openapi.models.operations.ListChecksResponse res = new org.openapis.openapi.models.operations.ListChecksResponse(contentType, httpRes.statusCode()) {{
             checksOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

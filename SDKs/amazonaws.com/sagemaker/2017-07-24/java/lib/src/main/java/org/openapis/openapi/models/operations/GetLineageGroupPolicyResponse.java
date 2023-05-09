@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLineageGroupPolicyResponse {
     
     public String contentType;
+
     public GetLineageGroupPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetLineageGroupPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLineageGroupPolicyResponse getLineageGroupPolicyResponse;
+
     public GetLineageGroupPolicyResponse withGetLineageGroupPolicyResponse(org.openapis.openapi.models.shared.GetLineageGroupPolicyResponse getLineageGroupPolicyResponse) {
         this.getLineageGroupPolicyResponse = getLineageGroupPolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetLineageGroupPolicyResponse {
      */
     
     public Object resourceNotFound;
+
     public GetLineageGroupPolicyResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class GetLineageGroupPolicyResponse {
     
     
     public Integer statusCode;
+
     public GetLineageGroupPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetLineageGroupPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLineageGroupPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetLineageGroupPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

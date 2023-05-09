@@ -21,6 +21,7 @@ public class RetrieveInventoryPhysicalCountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public InventoryPhysicalCount count;
+
     public RetrieveInventoryPhysicalCountResponse withCount(InventoryPhysicalCount count) {
         this.count = count;
         return this;
@@ -32,9 +33,11 @@ public class RetrieveInventoryPhysicalCountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RetrieveInventoryPhysicalCountResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public RetrieveInventoryPhysicalCountResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSchemaResponse {
@@ -12,6 +13,7 @@ public class CreateSchemaResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateSchemaResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateSchemaResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateSchemaResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -32,6 +35,7 @@ public class CreateSchemaResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateSchemaResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class CreateSchemaResponse {
     
     
     public String contentType;
+
     public CreateSchemaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSchemaResponse createSchemaResponse;
+
     public CreateSchemaResponse withCreateSchemaResponse(org.openapis.openapi.models.shared.CreateSchemaResponse createSchemaResponse) {
         this.createSchemaResponse = createSchemaResponse;
         return this;
@@ -59,6 +65,7 @@ public class CreateSchemaResponse {
      */
     
     public Object entityNotFoundException;
+
     public CreateSchemaResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateSchemaResponse {
      */
     
     public Object internalServiceException;
+
     public CreateSchemaResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -79,6 +87,7 @@ public class CreateSchemaResponse {
      */
     
     public Object invalidInputException;
+
     public CreateSchemaResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -89,6 +98,7 @@ public class CreateSchemaResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public CreateSchemaResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -96,6 +106,7 @@ public class CreateSchemaResponse {
     
     
     public Integer statusCode;
+
     public CreateSchemaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class CreateSchemaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSchemaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateSchemaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddTagsToResourceResponse {
@@ -12,6 +13,7 @@ public class AddTagsToResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.AddTagsToResourceResponse addTagsToResourceResponse;
+
     public AddTagsToResourceResponse withAddTagsToResourceResponse(org.openapis.openapi.models.shared.AddTagsToResourceResponse addTagsToResourceResponse) {
         this.addTagsToResourceResponse = addTagsToResourceResponse;
         return this;
@@ -22,6 +24,7 @@ public class AddTagsToResourceResponse {
      */
     
     public Object cloudHsmInternalException;
+
     public AddTagsToResourceResponse withCloudHsmInternalException(Object cloudHsmInternalException) {
         this.cloudHsmInternalException = cloudHsmInternalException;
         return this;
@@ -32,6 +35,7 @@ public class AddTagsToResourceResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public AddTagsToResourceResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -39,6 +43,7 @@ public class AddTagsToResourceResponse {
     
     
     public String contentType;
+
     public AddTagsToResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AddTagsToResourceResponse {
      */
     
     public Object invalidRequestException;
+
     public AddTagsToResourceResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class AddTagsToResourceResponse {
     
     
     public Integer statusCode;
+
     public AddTagsToResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class AddTagsToResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddTagsToResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AddTagsToResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

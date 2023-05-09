@@ -9,15 +9,17 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * SuggestionQuery - Specified in the &lt;a&gt;GetSearchSuggestions&lt;/a&gt; request. Limits the property names that are included in the response.
+ * SuggestionQuery - Specified in the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_GetSearchSuggestions.html"&gt;GetSearchSuggestions&lt;/a&gt; request. Limits the property names that are included in the response.
  */
 public class SuggestionQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PropertyNameQuery")
     public PropertyNameQuery propertyNameQuery;
+
     public SuggestionQuery withPropertyNameQuery(PropertyNameQuery propertyNameQuery) {
         this.propertyNameQuery = propertyNameQuery;
         return this;
     }
     
+    public SuggestionQuery(){}
 }

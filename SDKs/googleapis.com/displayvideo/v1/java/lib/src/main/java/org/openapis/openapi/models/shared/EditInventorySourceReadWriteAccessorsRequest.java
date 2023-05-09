@@ -18,6 +18,7 @@ public class EditInventorySourceReadWriteAccessorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertisersUpdate")
     public EditInventorySourceReadWriteAccessorsRequestAdvertisersUpdate advertisersUpdate;
+
     public EditInventorySourceReadWriteAccessorsRequest withAdvertisersUpdate(EditInventorySourceReadWriteAccessorsRequestAdvertisersUpdate advertisersUpdate) {
         this.advertisersUpdate = advertisersUpdate;
         return this;
@@ -29,6 +30,7 @@ public class EditInventorySourceReadWriteAccessorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignPartner")
     public Boolean assignPartner;
+
     public EditInventorySourceReadWriteAccessorsRequest withAssignPartner(Boolean assignPartner) {
         this.assignPartner = assignPartner;
         return this;
@@ -40,9 +42,11 @@ public class EditInventorySourceReadWriteAccessorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerId")
     public String partnerId;
+
     public EditInventorySourceReadWriteAccessorsRequest withPartnerId(String partnerId) {
         this.partnerId = partnerId;
         return this;
     }
     
+    public EditInventorySourceReadWriteAccessorsRequest(){}
 }

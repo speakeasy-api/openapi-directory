@@ -18,6 +18,7 @@ public class RegisterDomainRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactNotices")
     public RegisterDomainRequestContactNoticesEnum[] contactNotices;
+
     public RegisterDomainRequestInput withContactNotices(RegisterDomainRequestContactNoticesEnum[] contactNotices) {
         this.contactNotices = contactNotices;
         return this;
@@ -29,6 +30,7 @@ public class RegisterDomainRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainNotices")
     public RegisterDomainRequestDomainNoticesEnum[] domainNotices;
+
     public RegisterDomainRequestInput withDomainNotices(RegisterDomainRequestDomainNoticesEnum[] domainNotices) {
         this.domainNotices = domainNotices;
         return this;
@@ -40,6 +42,7 @@ public class RegisterDomainRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registration")
     public RegistrationInput registration;
+
     public RegisterDomainRequestInput withRegistration(RegistrationInput registration) {
         this.registration = registration;
         return this;
@@ -51,6 +54,7 @@ public class RegisterDomainRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateOnly")
     public Boolean validateOnly;
+
     public RegisterDomainRequestInput withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
@@ -62,9 +66,11 @@ public class RegisterDomainRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yearlyPrice")
     public Money yearlyPrice;
+
     public RegisterDomainRequestInput withYearlyPrice(Money yearlyPrice) {
         this.yearlyPrice = yearlyPrice;
         return this;
     }
     
+    public RegisterDomainRequestInput(){}
 }

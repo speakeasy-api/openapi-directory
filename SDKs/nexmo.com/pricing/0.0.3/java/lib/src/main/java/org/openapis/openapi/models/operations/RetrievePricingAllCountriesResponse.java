@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetrievePricingAllCountriesResponse {
     
     public String contentType;
+
     public RetrievePricingAllCountriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RetrievePricingAllCountriesResponse {
      */
     
     public org.openapis.openapi.models.shared.PricingCountriesResponse pricingCountriesResponse;
+
     public RetrievePricingAllCountriesResponse withPricingCountriesResponse(org.openapis.openapi.models.shared.PricingCountriesResponse pricingCountriesResponse) {
         this.pricingCountriesResponse = pricingCountriesResponse;
         return this;
@@ -26,6 +29,7 @@ public class RetrievePricingAllCountriesResponse {
     
     
     public Integer statusCode;
+
     public RetrievePricingAllCountriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class RetrievePricingAllCountriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetrievePricingAllCountriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class RetrievePricingAllCountriesResponse {
      */
     
     public RetrievePricingAllCountries400ApplicationJSON retrievePricingAllCountries400ApplicationJSONObject;
+
     public RetrievePricingAllCountriesResponse withRetrievePricingAllCountries400ApplicationJSONObject(RetrievePricingAllCountries400ApplicationJSON retrievePricingAllCountries400ApplicationJSONObject) {
         this.retrievePricingAllCountries400ApplicationJSONObject = retrievePricingAllCountries400ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class RetrievePricingAllCountriesResponse {
      */
     
     public RetrievePricingAllCountries401ApplicationJSON retrievePricingAllCountries401ApplicationJSONObject;
+
     public RetrievePricingAllCountriesResponse withRetrievePricingAllCountries401ApplicationJSONObject(RetrievePricingAllCountries401ApplicationJSON retrievePricingAllCountries401ApplicationJSONObject) {
         this.retrievePricingAllCountries401ApplicationJSONObject = retrievePricingAllCountries401ApplicationJSONObject;
         return this;
     }
     
+    public RetrievePricingAllCountriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

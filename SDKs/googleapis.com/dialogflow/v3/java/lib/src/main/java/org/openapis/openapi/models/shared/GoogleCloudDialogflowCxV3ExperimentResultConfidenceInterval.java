@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidenceLevel")
     public Double confidenceLevel;
+
     public GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval withConfidenceLevel(Double confidenceLevel) {
         this.confidenceLevel = confidenceLevel;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowerBound")
     public Double lowerBound;
+
     public GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval withLowerBound(Double lowerBound) {
         this.lowerBound = lowerBound;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ratio")
     public Double ratio;
+
     public GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval withRatio(Double ratio) {
         this.ratio = ratio;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upperBound")
     public Double upperBound;
+
     public GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval withUpperBound(Double upperBound) {
         this.upperBound = upperBound;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval(){}
 }

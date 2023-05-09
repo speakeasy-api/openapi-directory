@@ -15,9 +15,11 @@ public class EpisodeRelationshipsAListOfSegmentListsDirectlyAttachedToTheEpisode
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ResourceIdentifier[] data;
+
     public EpisodeRelationshipsAListOfSegmentListsDirectlyAttachedToTheEpisode withData(ResourceIdentifier[] data) {
         this.data = data;
         return this;
     }
     
+    public EpisodeRelationshipsAListOfSegmentListsDirectlyAttachedToTheEpisode(){}
 }

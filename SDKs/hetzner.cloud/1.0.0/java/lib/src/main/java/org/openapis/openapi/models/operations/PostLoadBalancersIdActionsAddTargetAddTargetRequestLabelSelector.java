@@ -15,9 +15,13 @@ public class PostLoadBalancersIdActionsAddTargetAddTargetRequestLabelSelector {
      */
     @JsonProperty("selector")
     public String selector;
+
     public PostLoadBalancersIdActionsAddTargetAddTargetRequestLabelSelector withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public PostLoadBalancersIdActionsAddTargetAddTargetRequestLabelSelector(@JsonProperty("selector") String selector) {
+        this.selector = selector;
+  }
 }

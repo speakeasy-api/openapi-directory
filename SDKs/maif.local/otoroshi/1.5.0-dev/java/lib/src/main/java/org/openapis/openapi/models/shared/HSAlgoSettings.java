@@ -15,6 +15,7 @@ public class HSAlgoSettings {
      */
     @JsonProperty("secret")
     public String secret;
+
     public HSAlgoSettings withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -25,6 +26,7 @@ public class HSAlgoSettings {
      */
     @JsonProperty("size")
     public Integer size;
+
     public HSAlgoSettings withSize(Integer size) {
         this.size = size;
         return this;
@@ -35,9 +37,15 @@ public class HSAlgoSettings {
      */
     @JsonProperty("type")
     public String type;
+
     public HSAlgoSettings withType(String type) {
         this.type = type;
         return this;
     }
     
+    public HSAlgoSettings(@JsonProperty("secret") String secret, @JsonProperty("size") Integer size, @JsonProperty("type") String type) {
+        this.secret = secret;
+        this.size = size;
+        this.type = type;
+  }
 }

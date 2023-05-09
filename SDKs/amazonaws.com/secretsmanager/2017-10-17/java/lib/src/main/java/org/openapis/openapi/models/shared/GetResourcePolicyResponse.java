@@ -15,6 +15,7 @@ public class GetResourcePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public GetResourcePolicyResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class GetResourcePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GetResourcePolicyResponse withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class GetResourcePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourcePolicy")
     public String resourcePolicy;
+
     public GetResourcePolicyResponse withResourcePolicy(String resourcePolicy) {
         this.resourcePolicy = resourcePolicy;
         return this;
     }
     
+    public GetResourcePolicyResponse(){}
 }

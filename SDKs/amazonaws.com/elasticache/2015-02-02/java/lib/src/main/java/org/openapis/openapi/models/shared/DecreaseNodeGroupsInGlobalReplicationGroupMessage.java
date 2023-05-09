@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DecreaseNodeGroupsInGlobalReplicationGroupMessage {
     
     public Boolean applyImmediately;
+
     public DecreaseNodeGroupsInGlobalReplicationGroupMessage withApplyImmediately(Boolean applyImmediately) {
         this.applyImmediately = applyImmediately;
         return this;
@@ -16,6 +17,7 @@ public class DecreaseNodeGroupsInGlobalReplicationGroupMessage {
     
     
     public String[] globalNodeGroupsToRemove;
+
     public DecreaseNodeGroupsInGlobalReplicationGroupMessage withGlobalNodeGroupsToRemove(String[] globalNodeGroupsToRemove) {
         this.globalNodeGroupsToRemove = globalNodeGroupsToRemove;
         return this;
@@ -23,6 +25,7 @@ public class DecreaseNodeGroupsInGlobalReplicationGroupMessage {
     
     
     public String[] globalNodeGroupsToRetain;
+
     public DecreaseNodeGroupsInGlobalReplicationGroupMessage withGlobalNodeGroupsToRetain(String[] globalNodeGroupsToRetain) {
         this.globalNodeGroupsToRetain = globalNodeGroupsToRetain;
         return this;
@@ -30,6 +33,7 @@ public class DecreaseNodeGroupsInGlobalReplicationGroupMessage {
     
     
     public String globalReplicationGroupId;
+
     public DecreaseNodeGroupsInGlobalReplicationGroupMessage withGlobalReplicationGroupId(String globalReplicationGroupId) {
         this.globalReplicationGroupId = globalReplicationGroupId;
         return this;
@@ -37,9 +41,15 @@ public class DecreaseNodeGroupsInGlobalReplicationGroupMessage {
     
     
     public Long nodeGroupCount;
+
     public DecreaseNodeGroupsInGlobalReplicationGroupMessage withNodeGroupCount(Long nodeGroupCount) {
         this.nodeGroupCount = nodeGroupCount;
         return this;
     }
     
+    public DecreaseNodeGroupsInGlobalReplicationGroupMessage(@JsonProperty("ApplyImmediately") Boolean applyImmediately, @JsonProperty("GlobalReplicationGroupId") String globalReplicationGroupId, @JsonProperty("NodeGroupCount") Long nodeGroupCount) {
+        this.applyImmediately = applyImmediately;
+        this.globalReplicationGroupId = globalReplicationGroupId;
+        this.nodeGroupCount = nodeGroupCount;
+  }
 }

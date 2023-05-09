@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeregisterTargetsInput {
     
     public String targetGroupArn;
+
     public DeregisterTargetsInput withTargetGroupArn(String targetGroupArn) {
         this.targetGroupArn = targetGroupArn;
         return this;
@@ -16,9 +17,14 @@ public class DeregisterTargetsInput {
     
     
     public TargetDescription[] targets;
+
     public DeregisterTargetsInput withTargets(TargetDescription[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public DeregisterTargetsInput(@JsonProperty("TargetGroupArn") String targetGroupArn, @JsonProperty("Targets") TargetDescription[] targets) {
+        this.targetGroupArn = targetGroupArn;
+        this.targets = targets;
+  }
 }

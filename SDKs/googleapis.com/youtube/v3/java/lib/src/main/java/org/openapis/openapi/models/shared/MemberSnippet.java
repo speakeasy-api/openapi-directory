@@ -15,6 +15,7 @@ public class MemberSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creatorChannelId")
     public String creatorChannelId;
+
     public MemberSnippet withCreatorChannelId(String creatorChannelId) {
         this.creatorChannelId = creatorChannelId;
         return this;
@@ -23,6 +24,7 @@ public class MemberSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memberDetails")
     public ChannelProfileDetails memberDetails;
+
     public MemberSnippet withMemberDetails(ChannelProfileDetails memberDetails) {
         this.memberDetails = memberDetails;
         return this;
@@ -31,9 +33,11 @@ public class MemberSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membershipsDetails")
     public MembershipsDetails membershipsDetails;
+
     public MemberSnippet withMembershipsDetails(MembershipsDetails membershipsDetails) {
         this.membershipsDetails = membershipsDetails;
         return this;
     }
     
+    public MemberSnippet(){}
 }

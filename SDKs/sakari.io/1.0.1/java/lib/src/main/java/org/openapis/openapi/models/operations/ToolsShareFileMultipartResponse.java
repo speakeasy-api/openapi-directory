@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ToolsShareFileMultipartResponse {
     
     public String contentType;
+
     public ToolsShareFileMultipartResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ToolsShareFileMultipartResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public ToolsShareFileMultipartResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -29,6 +32,7 @@ public class ToolsShareFileMultipartResponse {
      */
     
     public org.openapis.openapi.models.shared.ShareFileResponse shareFileResponse;
+
     public ToolsShareFileMultipartResponse withShareFileResponse(org.openapis.openapi.models.shared.ShareFileResponse shareFileResponse) {
         this.shareFileResponse = shareFileResponse;
         return this;
@@ -36,6 +40,7 @@ public class ToolsShareFileMultipartResponse {
     
     
     public Integer statusCode;
+
     public ToolsShareFileMultipartResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ToolsShareFileMultipartResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ToolsShareFileMultipartResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ToolsShareFileMultipartResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

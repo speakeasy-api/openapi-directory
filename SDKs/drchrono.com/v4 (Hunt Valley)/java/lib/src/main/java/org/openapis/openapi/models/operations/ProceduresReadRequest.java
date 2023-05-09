@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProceduresReadRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
     public Long appointment;
+
     public ProceduresReadRequest withAppointment(Long appointment) {
         this.appointment = appointment;
         return this;
@@ -16,6 +18,7 @@ public class ProceduresReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public ProceduresReadRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -23,6 +26,7 @@ public class ProceduresReadRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public ProceduresReadRequest withId(String id) {
         this.id = id;
         return this;
@@ -30,6 +34,7 @@ public class ProceduresReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mu_date")
     public String muDate;
+
     public ProceduresReadRequest withMuDate(String muDate) {
         this.muDate = muDate;
         return this;
@@ -37,6 +42,7 @@ public class ProceduresReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mu_date_range")
     public String muDateRange;
+
     public ProceduresReadRequest withMuDateRange(String muDateRange) {
         this.muDateRange = muDateRange;
         return this;
@@ -44,6 +50,7 @@ public class ProceduresReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public ProceduresReadRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -51,9 +58,13 @@ public class ProceduresReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service_date")
     public String serviceDate;
+
     public ProceduresReadRequest withServiceDate(String serviceDate) {
         this.serviceDate = serviceDate;
         return this;
     }
     
+    public ProceduresReadRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

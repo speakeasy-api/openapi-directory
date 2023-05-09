@@ -18,9 +18,11 @@ public class AccountSettingsDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityLimits")
     public CapacityLimits capacityLimits;
+
     public AccountSettingsDetail withCapacityLimits(CapacityLimits capacityLimits) {
         this.capacityLimits = capacityLimits;
         return this;
     }
     
+    public AccountSettingsDetail(){}
 }

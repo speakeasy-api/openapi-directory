@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -15,6 +16,7 @@ public class NodesForksListNodeAttributes {
      */
     
     public NodesForksListNodeAttributesCategoryEnum category;
+
     public NodesForksListNodeAttributes withCategory(NodesForksListNodeAttributesCategoryEnum category) {
         this.category = category;
         return this;
@@ -25,6 +27,7 @@ public class NodesForksListNodeAttributes {
      */
     
     public Boolean collection;
+
     public NodesForksListNodeAttributes withCollection(Boolean collection) {
         this.collection = collection;
         return this;
@@ -35,6 +38,7 @@ public class NodesForksListNodeAttributes {
      */
     
     public Boolean currentUserCanComment;
+
     public NodesForksListNodeAttributes withCurrentUserCanComment(Boolean currentUserCanComment) {
         this.currentUserCanComment = currentUserCanComment;
         return this;
@@ -45,6 +49,7 @@ public class NodesForksListNodeAttributes {
      */
     
     public String[] currentUserPermissions;
+
     public NodesForksListNodeAttributes withCurrentUserPermissions(String[] currentUserPermissions) {
         this.currentUserPermissions = currentUserPermissions;
         return this;
@@ -55,6 +60,7 @@ public class NodesForksListNodeAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public NodesForksListNodeAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -65,6 +71,7 @@ public class NodesForksListNodeAttributes {
      */
     
     public OffsetDateTime dateModified;
+
     public NodesForksListNodeAttributes withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -75,6 +82,7 @@ public class NodesForksListNodeAttributes {
      */
     
     public String description;
+
     public NodesForksListNodeAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -85,6 +93,7 @@ public class NodesForksListNodeAttributes {
      */
     
     public Boolean fork;
+
     public NodesForksListNodeAttributes withFork(Boolean fork) {
         this.fork = fork;
         return this;
@@ -95,6 +104,7 @@ public class NodesForksListNodeAttributes {
      */
     
     public OffsetDateTime forkedDate;
+
     public NodesForksListNodeAttributes withForkedDate(OffsetDateTime forkedDate) {
         this.forkedDate = forkedDate;
         return this;
@@ -105,6 +115,7 @@ public class NodesForksListNodeAttributes {
      */
     
     public String nodeLicense;
+
     public NodesForksListNodeAttributes withNodeLicense(String nodeLicense) {
         this.nodeLicense = nodeLicense;
         return this;
@@ -115,6 +126,7 @@ public class NodesForksListNodeAttributes {
      */
     
     public Boolean preprint;
+
     public NodesForksListNodeAttributes withPreprint(Boolean preprint) {
         this.preprint = preprint;
         return this;
@@ -125,6 +137,7 @@ public class NodesForksListNodeAttributes {
      */
     
     public Boolean public_;
+
     public NodesForksListNodeAttributes withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -135,6 +148,7 @@ public class NodesForksListNodeAttributes {
      */
     
     public Boolean registration;
+
     public NodesForksListNodeAttributes withRegistration(Boolean registration) {
         this.registration = registration;
         return this;
@@ -145,6 +159,7 @@ public class NodesForksListNodeAttributes {
      */
     
     public String[] tags;
+
     public NodesForksListNodeAttributes withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -155,6 +170,7 @@ public class NodesForksListNodeAttributes {
      */
     
     public String templateFrom;
+
     public NodesForksListNodeAttributes withTemplateFrom(String templateFrom) {
         this.templateFrom = templateFrom;
         return this;
@@ -165,9 +181,14 @@ public class NodesForksListNodeAttributes {
      */
     
     public String title;
+
     public NodesForksListNodeAttributes withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public NodesForksListNodeAttributes(@JsonProperty("category") NodesForksListNodeAttributesCategoryEnum category, @JsonProperty("title") String title) {
+        this.category = category;
+        this.title = title;
+  }
 }

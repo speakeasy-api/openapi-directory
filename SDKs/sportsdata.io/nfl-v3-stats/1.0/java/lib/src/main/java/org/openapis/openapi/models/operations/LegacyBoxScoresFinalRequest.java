@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LegacyBoxScoresFinalRequest {
@@ -12,9 +13,13 @@ public class LegacyBoxScoresFinalRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public LegacyBoxScoresFinalFormatEnum format;
+
     public LegacyBoxScoresFinalRequest withFormat(LegacyBoxScoresFinalFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public LegacyBoxScoresFinalRequest(@JsonProperty("format") LegacyBoxScoresFinalFormatEnum format) {
+        this.format = format;
+  }
 }

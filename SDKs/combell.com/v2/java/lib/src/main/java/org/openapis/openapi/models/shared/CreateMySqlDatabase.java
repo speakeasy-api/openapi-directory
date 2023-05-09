@@ -15,6 +15,7 @@ public class CreateMySqlDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     public Integer accountId;
+
     public CreateMySqlDatabase withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -27,6 +28,7 @@ public class CreateMySqlDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("database_name")
     public String databaseName;
+
     public CreateMySqlDatabase withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -39,9 +41,11 @@ public class CreateMySqlDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public CreateMySqlDatabase withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public CreateMySqlDatabase(){}
 }

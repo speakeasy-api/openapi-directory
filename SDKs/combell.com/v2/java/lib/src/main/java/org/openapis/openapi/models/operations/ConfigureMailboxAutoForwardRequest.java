@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigureMailboxAutoForwardRequest {
@@ -12,6 +13,7 @@ public class ConfigureMailboxAutoForwardRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AutoForward autoForward;
+
     public ConfigureMailboxAutoForwardRequest withAutoForward(org.openapis.openapi.models.shared.AutoForward autoForward) {
         this.autoForward = autoForward;
         return this;
@@ -22,6 +24,7 @@ public class ConfigureMailboxAutoForwardRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mailboxName")
     public String mailboxNamePathParameter;
+
     public ConfigureMailboxAutoForwardRequest withMailboxNamePathParameter(String mailboxNamePathParameter) {
         this.mailboxNamePathParameter = mailboxNamePathParameter;
         return this;
@@ -32,9 +35,14 @@ public class ConfigureMailboxAutoForwardRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mailbox_name")
     public String mailboxNameQueryParameter;
+
     public ConfigureMailboxAutoForwardRequest withMailboxNameQueryParameter(String mailboxNameQueryParameter) {
         this.mailboxNameQueryParameter = mailboxNameQueryParameter;
         return this;
     }
     
+    public ConfigureMailboxAutoForwardRequest(@JsonProperty("mailboxNamePathParameter") String mailboxNamePathParameter, @JsonProperty("mailbox_nameQueryParameter") String mailboxNameQueryParameter) {
+        this.mailboxNamePathParameter = mailboxNamePathParameter;
+        this.mailboxNameQueryParameter = mailboxNameQueryParameter;
+  }
 }

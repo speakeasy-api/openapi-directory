@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class KkidWishlistPutResponse {
     
     public String contentType;
+
     public KkidWishlistPutResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class KkidWishlistPutResponse {
     
     
     public Integer statusCode;
+
     public KkidWishlistPutResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class KkidWishlistPutResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public KkidWishlistPutResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class KkidWishlistPutResponse {
      */
     
     public org.openapis.openapi.models.shared.Success success;
+
     public KkidWishlistPutResponse withSuccess(org.openapis.openapi.models.shared.Success success) {
         this.success = success;
         return this;
     }
     
+    public KkidWishlistPutResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

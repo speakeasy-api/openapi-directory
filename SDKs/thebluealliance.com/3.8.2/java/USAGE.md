@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetStatusSecurity;
 import org.openapis.openapi.models.operations.GetStatusRequest;
 import org.openapis.openapi.models.operations.GetStatusResponse;
+import org.openapis.openapi.models.operations.GetStatusSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -16,17 +15,19 @@ public class Application {
 
             GetStatusRequest req = new GetStatusRequest() {{
                 ifNoneMatch = "corrupti";
-            }}            
+            }};            
 
-            GetStatusResponse res = sdk.tba.getStatus(req, new GetStatusSecurity() {{
+            GetStatusResponse res = sdk.tba.getStatus(req, new GetStatusSecurity("provident") {{
                 apiKey = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.apiStatus.isPresent()) {
+            if (res.apiStatus != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

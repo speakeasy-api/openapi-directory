@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPrioritiesRequest {
@@ -12,6 +13,7 @@ public class GetPrioritiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetPrioritiesRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +24,7 @@ public class GetPrioritiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
     public String path;
+
     public GetPrioritiesRequest withPath(String path) {
         this.path = path;
         return this;
@@ -32,9 +35,13 @@ public class GetPrioritiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetPrioritiesRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public GetPrioritiesRequest(@JsonProperty("path") String path) {
+        this.path = path;
+  }
 }

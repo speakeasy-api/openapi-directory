@@ -12,6 +12,7 @@ public class SicrdRequestBodyCertificateParameters {
      */
     @JsonProperty("CERTNO")
     public String certno;
+
     public SicrdRequestBodyCertificateParameters withCertno(String certno) {
         this.certno = certno;
         return this;
@@ -22,9 +23,14 @@ public class SicrdRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public SicrdRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
     }
     
+    public SicrdRequestBodyCertificateParameters(@JsonProperty("CERTNO") String certno, @JsonProperty("DOB") String dob) {
+        this.certno = certno;
+        this.dob = dob;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMarketingV3MarketingEventsEventsSearchDoSearchResponse {
     
     public byte[] body;
+
     public GetMarketingV3MarketingEventsEventsSearchDoSearchResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -19,6 +21,7 @@ public class GetMarketingV3MarketingEventsEventsSearchDoSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.CollectionResponseMarketingEventExternalUniqueIdentifierNoPaging collectionResponseMarketingEventExternalUniqueIdentifierNoPaging;
+
     public GetMarketingV3MarketingEventsEventsSearchDoSearchResponse withCollectionResponseMarketingEventExternalUniqueIdentifierNoPaging(org.openapis.openapi.models.shared.CollectionResponseMarketingEventExternalUniqueIdentifierNoPaging collectionResponseMarketingEventExternalUniqueIdentifierNoPaging) {
         this.collectionResponseMarketingEventExternalUniqueIdentifierNoPaging = collectionResponseMarketingEventExternalUniqueIdentifierNoPaging;
         return this;
@@ -26,6 +29,7 @@ public class GetMarketingV3MarketingEventsEventsSearchDoSearchResponse {
     
     
     public String contentType;
+
     public GetMarketingV3MarketingEventsEventsSearchDoSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class GetMarketingV3MarketingEventsEventsSearchDoSearchResponse {
     
     
     public Integer statusCode;
+
     public GetMarketingV3MarketingEventsEventsSearchDoSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetMarketingV3MarketingEventsEventsSearchDoSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMarketingV3MarketingEventsEventsSearchDoSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMarketingV3MarketingEventsEventsSearchDoSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

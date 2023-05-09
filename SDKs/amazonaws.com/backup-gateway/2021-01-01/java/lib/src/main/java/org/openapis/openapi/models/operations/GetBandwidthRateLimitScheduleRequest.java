@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBandwidthRateLimitScheduleRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetBandwidthRateLimitScheduleInput getBandwidthRateLimitScheduleInput;
+
     public GetBandwidthRateLimitScheduleRequest withGetBandwidthRateLimitScheduleInput(org.openapis.openapi.models.shared.GetBandwidthRateLimitScheduleInput getBandwidthRateLimitScheduleInput) {
         this.getBandwidthRateLimitScheduleInput = getBandwidthRateLimitScheduleInput;
         return this;
@@ -16,6 +18,7 @@ public class GetBandwidthRateLimitScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetBandwidthRateLimitScheduleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class GetBandwidthRateLimitScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetBandwidthRateLimitScheduleRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class GetBandwidthRateLimitScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetBandwidthRateLimitScheduleRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class GetBandwidthRateLimitScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetBandwidthRateLimitScheduleRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class GetBandwidthRateLimitScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetBandwidthRateLimitScheduleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class GetBandwidthRateLimitScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetBandwidthRateLimitScheduleRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class GetBandwidthRateLimitScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetBandwidthRateLimitScheduleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class GetBandwidthRateLimitScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public GetBandwidthRateLimitScheduleXAmzTargetEnum xAmzTarget;
+
     public GetBandwidthRateLimitScheduleRequest withXAmzTarget(GetBandwidthRateLimitScheduleXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public GetBandwidthRateLimitScheduleRequest(@JsonProperty("GetBandwidthRateLimitScheduleInput") org.openapis.openapi.models.shared.GetBandwidthRateLimitScheduleInput getBandwidthRateLimitScheduleInput, @JsonProperty("X-Amz-Target") GetBandwidthRateLimitScheduleXAmzTargetEnum xAmzTarget) {
+        this.getBandwidthRateLimitScheduleInput = getBandwidthRateLimitScheduleInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.ServicebrokerGetIamPolicySecurity;
 import org.openapis.openapi.models.operations.ServicebrokerGetIamPolicyRequest;
 import org.openapis.openapi.models.operations.ServicebrokerGetIamPolicyResponse;
+import org.openapis.openapi.models.operations.ServicebrokerGetIamPolicySecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -29,33 +28,34 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ServicebrokerGetIamPolicyRequest req = new ServicebrokerGetIamPolicyRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                key = "nulla";
-                oauthToken = "corrupti";
-                optionsRequestedPolicyVersion = 847252;
+            ServicebrokerGetIamPolicyRequest req = new ServicebrokerGetIamPolicyRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                key = "corrupti";
+                oauthToken = "illum";
+                optionsRequestedPolicyVersion = 423655L;
                 prettyPrint = false;
-                quotaUser = "vel";
-                resource = "error";
+                quotaUser = "error";
                 uploadType = "deserunt";
                 uploadProtocol = "suscipit";
-            }}            
+            }};            
 
-            ServicebrokerGetIamPolicyResponse res = sdk.v1.servicebrokerGetIamPolicy(req, new ServicebrokerGetIamPolicySecurity() {{
+            ServicebrokerGetIamPolicyResponse res = sdk.v1.servicebrokerGetIamPolicy(req, new ServicebrokerGetIamPolicySecurity("iure", "magnam") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -63,16 +63,16 @@ public class Application {
 ## Available Resources and Operations
 
 
-### v1
+### [v1](docs/v1/README.md)
 
-* `servicebrokerGetIamPolicy` - Gets the access control policy for a resource.
+* [servicebrokerGetIamPolicy](docs/v1/README.md#servicebrokergetiampolicy) - Gets the access control policy for a resource.
 Returns an empty policy if the resource exists and does not have a policy
 set.
-* `servicebrokerSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any
+* [servicebrokerSetIamPolicy](docs/v1/README.md#servicebrokersetiampolicy) - Sets the access control policy on the specified resource. Replaces any
 existing policy.
 
 Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
-* `servicebrokerTestIamPermissions` - Returns permissions that a caller has on the specified resource.
+* [servicebrokerTestIamPermissions](docs/v1/README.md#servicebrokertestiampermissions) - Returns permissions that a caller has on the specified resource.
 If the resource does not exist, this will return an empty set of
 permissions, not a NOT_FOUND error.
 

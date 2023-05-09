@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ScalingParametersStatus - The status and configuration of a search domain's scaling parameters. 
@@ -15,6 +15,7 @@ public class ScalingParametersStatus {
      */
     
     public ScalingParameters options;
+
     public ScalingParametersStatus withOptions(ScalingParameters options) {
         this.options = options;
         return this;
@@ -25,9 +26,14 @@ public class ScalingParametersStatus {
      */
     
     public OptionStatus status;
+
     public ScalingParametersStatus withStatus(OptionStatus status) {
         this.status = status;
         return this;
     }
     
+    public ScalingParametersStatus(@JsonProperty("Options") ScalingParameters options, @JsonProperty("Status") OptionStatus status) {
+        this.options = options;
+        this.status = status;
+  }
 }

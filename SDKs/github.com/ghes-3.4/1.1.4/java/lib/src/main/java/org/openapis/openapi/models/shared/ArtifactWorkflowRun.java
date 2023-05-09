@@ -12,6 +12,7 @@ public class ArtifactWorkflowRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("head_branch")
     public String headBranch;
+
     public ArtifactWorkflowRun withHeadBranch(String headBranch) {
         this.headBranch = headBranch;
         return this;
@@ -20,6 +21,7 @@ public class ArtifactWorkflowRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("head_repository_id")
     public Long headRepositoryId;
+
     public ArtifactWorkflowRun withHeadRepositoryId(Long headRepositoryId) {
         this.headRepositoryId = headRepositoryId;
         return this;
@@ -28,6 +30,7 @@ public class ArtifactWorkflowRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("head_sha")
     public String headSha;
+
     public ArtifactWorkflowRun withHeadSha(String headSha) {
         this.headSha = headSha;
         return this;
@@ -36,6 +39,7 @@ public class ArtifactWorkflowRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ArtifactWorkflowRun withId(Long id) {
         this.id = id;
         return this;
@@ -44,9 +48,11 @@ public class ArtifactWorkflowRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository_id")
     public Long repositoryId;
+
     public ArtifactWorkflowRun withRepositoryId(Long repositoryId) {
         this.repositoryId = repositoryId;
         return this;
     }
     
+    public ArtifactWorkflowRun(){}
 }

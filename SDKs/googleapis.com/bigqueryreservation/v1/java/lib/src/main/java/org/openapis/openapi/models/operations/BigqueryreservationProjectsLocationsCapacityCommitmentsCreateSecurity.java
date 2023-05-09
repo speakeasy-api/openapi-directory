@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1 option1;
+
     public BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity withOption1(BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecuri
     
     @SpeakeasyMetadata("security:option=true")
     public BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption2 option2;
+
     public BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity withOption2(BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateDRTLogBucketResponse {
@@ -12,6 +13,7 @@ public class DisassociateDRTLogBucketResponse {
      */
     
     public Object accessDeniedForDependencyException;
+
     public DisassociateDRTLogBucketResponse withAccessDeniedForDependencyException(Object accessDeniedForDependencyException) {
         this.accessDeniedForDependencyException = accessDeniedForDependencyException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateDRTLogBucketResponse {
     
     
     public String contentType;
+
     public DisassociateDRTLogBucketResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateDRTLogBucketResponse {
      */
     
     public java.util.Map<String, Object> disassociateDRTLogBucketResponse;
+
     public DisassociateDRTLogBucketResponse withDisassociateDRTLogBucketResponse(java.util.Map<String, Object> disassociateDRTLogBucketResponse) {
         this.disassociateDRTLogBucketResponse = disassociateDRTLogBucketResponse;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateDRTLogBucketResponse {
      */
     
     public Object internalErrorException;
+
     public DisassociateDRTLogBucketResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateDRTLogBucketResponse {
      */
     
     public Object invalidOperationException;
+
     public DisassociateDRTLogBucketResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateDRTLogBucketResponse {
      */
     
     public Object noAssociatedRoleException;
+
     public DisassociateDRTLogBucketResponse withNoAssociatedRoleException(Object noAssociatedRoleException) {
         this.noAssociatedRoleException = noAssociatedRoleException;
         return this;
@@ -69,6 +76,7 @@ public class DisassociateDRTLogBucketResponse {
      */
     
     public Object optimisticLockException;
+
     public DisassociateDRTLogBucketResponse withOptimisticLockException(Object optimisticLockException) {
         this.optimisticLockException = optimisticLockException;
         return this;
@@ -79,6 +87,7 @@ public class DisassociateDRTLogBucketResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateDRTLogBucketResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class DisassociateDRTLogBucketResponse {
     
     
     public Integer statusCode;
+
     public DisassociateDRTLogBucketResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class DisassociateDRTLogBucketResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateDRTLogBucketResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisassociateDRTLogBucketResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

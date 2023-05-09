@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateClientVpnRouteRequest {
     
     public String clientToken;
+
     public CreateClientVpnRouteRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateClientVpnRouteRequest {
     
     
     public String clientVpnEndpointId;
+
     public CreateClientVpnRouteRequest withClientVpnEndpointId(String clientVpnEndpointId) {
         this.clientVpnEndpointId = clientVpnEndpointId;
         return this;
@@ -23,6 +25,7 @@ public class CreateClientVpnRouteRequest {
     
     
     public String description;
+
     public CreateClientVpnRouteRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +33,7 @@ public class CreateClientVpnRouteRequest {
     
     
     public String destinationCidrBlock;
+
     public CreateClientVpnRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -37,6 +41,7 @@ public class CreateClientVpnRouteRequest {
     
     
     public Boolean dryRun;
+
     public CreateClientVpnRouteRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -44,9 +49,15 @@ public class CreateClientVpnRouteRequest {
     
     
     public String targetVpcSubnetId;
+
     public CreateClientVpnRouteRequest withTargetVpcSubnetId(String targetVpcSubnetId) {
         this.targetVpcSubnetId = targetVpcSubnetId;
         return this;
     }
     
+    public CreateClientVpnRouteRequest(@JsonProperty("ClientVpnEndpointId") String clientVpnEndpointId, @JsonProperty("DestinationCidrBlock") String destinationCidrBlock, @JsonProperty("TargetVpcSubnetId") String targetVpcSubnetId) {
+        this.clientVpnEndpointId = clientVpnEndpointId;
+        this.destinationCidrBlock = destinationCidrBlock;
+        this.targetVpcSubnetId = targetVpcSubnetId;
+  }
 }

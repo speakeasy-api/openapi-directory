@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeamTeamnameRequest {
@@ -13,9 +14,13 @@ public class GetTeamTeamnameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=teamname")
     public String teamname;
+
     public GetTeamTeamnameRequest withTeamname(String teamname) {
         this.teamname = teamname;
         return this;
     }
     
+    public GetTeamTeamnameRequest(@JsonProperty("teamname") String teamname) {
+        this.teamname = teamname;
+  }
 }

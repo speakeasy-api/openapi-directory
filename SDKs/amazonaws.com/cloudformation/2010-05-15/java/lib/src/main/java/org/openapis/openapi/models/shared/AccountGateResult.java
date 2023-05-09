@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AccountGateResult {
     
     public AccountGateStatusEnum status;
+
     public AccountGateResult withStatus(AccountGateStatusEnum status) {
         this.status = status;
         return this;
@@ -19,9 +20,11 @@ public class AccountGateResult {
     
     
     public String statusReason;
+
     public AccountGateResult withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public AccountGateResult(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsErrorSearchRequest {
@@ -12,6 +13,7 @@ public class ErrorsErrorSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$skip")
     public Long dollarSkip;
+
     public ErrorsErrorSearchRequest withDollarSkip(Long dollarSkip) {
         this.dollarSkip = dollarSkip;
         return this;
@@ -22,6 +24,7 @@ public class ErrorsErrorSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$top")
     public Long dollarTop;
+
     public ErrorsErrorSearchRequest withDollarTop(Long dollarTop) {
         this.dollarTop = dollarTop;
         return this;
@@ -32,6 +35,7 @@ public class ErrorsErrorSearchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ErrorsErrorSearchRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -42,6 +46,7 @@ public class ErrorsErrorSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public ErrorsErrorSearchRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -52,6 +57,7 @@ public class ErrorsErrorSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public ErrorsErrorSearchOrderEnum order;
+
     public ErrorsErrorSearchRequest withOrder(ErrorsErrorSearchOrderEnum order) {
         this.order = order;
         return this;
@@ -62,6 +68,7 @@ public class ErrorsErrorSearchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ErrorsErrorSearchRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -72,6 +79,7 @@ public class ErrorsErrorSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public ErrorsErrorSearchRequest withQ(String q) {
         this.q = q;
         return this;
@@ -82,9 +90,14 @@ public class ErrorsErrorSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public ErrorsErrorSearchSortEnum sort;
+
     public ErrorsErrorSearchRequest withSort(ErrorsErrorSearchSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public ErrorsErrorSearchRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+  }
 }

@@ -15,6 +15,7 @@ public class SlackConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public String accessToken;
+
     public SlackConnectorProfileCredentials withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -22,6 +23,7 @@ public class SlackConnectorProfileCredentials {
     
     @JsonProperty("clientId")
     public String clientId;
+
     public SlackConnectorProfileCredentials withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -29,6 +31,7 @@ public class SlackConnectorProfileCredentials {
     
     @JsonProperty("clientSecret")
     public String clientSecret;
+
     public SlackConnectorProfileCredentials withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -37,9 +40,14 @@ public class SlackConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oAuthRequest")
     public ConnectorOAuthRequest oAuthRequest;
+
     public SlackConnectorProfileCredentials withOAuthRequest(ConnectorOAuthRequest oAuthRequest) {
         this.oAuthRequest = oAuthRequest;
         return this;
     }
     
+    public SlackConnectorProfileCredentials(@JsonProperty("clientId") String clientId, @JsonProperty("clientSecret") String clientSecret) {
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+  }
 }

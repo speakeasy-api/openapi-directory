@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1ObjectDetectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSpecSet")
     public String annotationSpecSet;
+
     public GoogleCloudDatalabelingV1beta1ObjectDetectionConfig withAnnotationSpecSet(String annotationSpecSet) {
         this.annotationSpecSet = annotationSpecSet;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1ObjectDetectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extractionFrameRate")
     public Double extractionFrameRate;
+
     public GoogleCloudDatalabelingV1beta1ObjectDetectionConfig withExtractionFrameRate(Double extractionFrameRate) {
         this.extractionFrameRate = extractionFrameRate;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1ObjectDetectionConfig(){}
 }

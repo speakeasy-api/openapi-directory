@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCampaignResponse {
@@ -12,6 +13,7 @@ public class DeleteCampaignResponse {
      */
     
     public Object badRequestException;
+
     public DeleteCampaignResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCampaignResponse {
     
     
     public String contentType;
+
     public DeleteCampaignResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCampaignResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteCampaignResponse deleteCampaignResponse;
+
     public DeleteCampaignResponse withDeleteCampaignResponse(org.openapis.openapi.models.shared.DeleteCampaignResponse deleteCampaignResponse) {
         this.deleteCampaignResponse = deleteCampaignResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCampaignResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteCampaignResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteCampaignResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteCampaignResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteCampaignResponse {
      */
     
     public Object methodNotAllowedException;
+
     public DeleteCampaignResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteCampaignResponse {
      */
     
     public Object notFoundException;
+
     public DeleteCampaignResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteCampaignResponse {
      */
     
     public Object payloadTooLargeException;
+
     public DeleteCampaignResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteCampaignResponse {
     
     
     public Integer statusCode;
+
     public DeleteCampaignResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteCampaignResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCampaignResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteCampaignResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteCampaignResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteCampaignResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

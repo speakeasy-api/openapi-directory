@@ -15,6 +15,7 @@ public class DependabotPublicKey {
      */
     @JsonProperty("key")
     public String key;
+
     public DependabotPublicKey withKey(String key) {
         this.key = key;
         return this;
@@ -25,9 +26,14 @@ public class DependabotPublicKey {
      */
     @JsonProperty("key_id")
     public String keyId;
+
     public DependabotPublicKey withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
     
+    public DependabotPublicKey(@JsonProperty("key") String key, @JsonProperty("key_id") String keyId) {
+        this.key = key;
+        this.keyId = keyId;
+  }
 }

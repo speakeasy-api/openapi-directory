@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCampaignStateResponse {
@@ -12,6 +13,7 @@ public class GetCampaignStateResponse {
      */
     
     public Object accessDeniedException;
+
     public GetCampaignStateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetCampaignStateResponse {
     
     
     public String contentType;
+
     public GetCampaignStateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCampaignStateResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCampaignStateResponse getCampaignStateResponse;
+
     public GetCampaignStateResponse withGetCampaignStateResponse(org.openapis.openapi.models.shared.GetCampaignStateResponse getCampaignStateResponse) {
         this.getCampaignStateResponse = getCampaignStateResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetCampaignStateResponse {
      */
     
     public Object internalServerException;
+
     public GetCampaignStateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetCampaignStateResponse {
     
     
     public Integer statusCode;
+
     public GetCampaignStateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetCampaignStateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCampaignStateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetCampaignStateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetCampaignStateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetCampaignStateResponse {
      */
     
     public Object throttlingException;
+
     public GetCampaignStateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetCampaignStateResponse {
      */
     
     public Object validationException;
+
     public GetCampaignStateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetCampaignStateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

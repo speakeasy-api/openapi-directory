@@ -13,6 +13,7 @@ public class PingResponseMeta {
      */
     @JsonProperty("id")
     public String id;
+
     public PingResponseMeta withId(String id) {
         this.id = id;
         return this;
@@ -24,9 +25,14 @@ public class PingResponseMeta {
      */
     @JsonProperty("statusEmoji")
     public String statusEmoji;
+
     public PingResponseMeta withStatusEmoji(String statusEmoji) {
         this.statusEmoji = statusEmoji;
         return this;
     }
     
+    public PingResponseMeta(@JsonProperty("id") String id, @JsonProperty("statusEmoji") String statusEmoji) {
+        this.id = id;
+        this.statusEmoji = statusEmoji;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DnsManagedZonesUpdateRequest {
@@ -12,6 +13,7 @@ public class DnsManagedZonesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DnsManagedZonesUpdateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DnsManagedZonesUpdateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ManagedZone managedZone1;
+
     public DnsManagedZonesUpdateRequest withManagedZone1(org.openapis.openapi.models.shared.ManagedZone managedZone1) {
         this.managedZone1 = managedZone1;
         return this;
@@ -29,6 +32,7 @@ public class DnsManagedZonesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DnsManagedZonesUpdateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DnsManagedZonesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DnsManagedZonesUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class DnsManagedZonesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DnsManagedZonesUpdateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class DnsManagedZonesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientOperationId")
     public String clientOperationId;
+
     public DnsManagedZonesUpdateRequest withClientOperationId(String clientOperationId) {
         this.clientOperationId = clientOperationId;
         return this;
@@ -69,6 +76,7 @@ public class DnsManagedZonesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DnsManagedZonesUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class DnsManagedZonesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DnsManagedZonesUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class DnsManagedZonesUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public DnsManagedZonesUpdateRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -99,6 +109,7 @@ public class DnsManagedZonesUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=managedZone")
     public String managedZonePathParameter;
+
     public DnsManagedZonesUpdateRequest withManagedZonePathParameter(String managedZonePathParameter) {
         this.managedZonePathParameter = managedZonePathParameter;
         return this;
@@ -109,6 +120,7 @@ public class DnsManagedZonesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DnsManagedZonesUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -119,6 +131,7 @@ public class DnsManagedZonesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DnsManagedZonesUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -129,6 +142,7 @@ public class DnsManagedZonesUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public DnsManagedZonesUpdateRequest withProject(String project) {
         this.project = project;
         return this;
@@ -139,6 +153,7 @@ public class DnsManagedZonesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DnsManagedZonesUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -149,6 +164,7 @@ public class DnsManagedZonesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DnsManagedZonesUpdateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -159,9 +175,15 @@ public class DnsManagedZonesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DnsManagedZonesUpdateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DnsManagedZonesUpdateRequest(@JsonProperty("location") String location, @JsonProperty("managedZonePathParameter") String managedZonePathParameter, @JsonProperty("project") String project) {
+        this.location = location;
+        this.managedZonePathParameter = managedZonePathParameter;
+        this.project = project;
+  }
 }

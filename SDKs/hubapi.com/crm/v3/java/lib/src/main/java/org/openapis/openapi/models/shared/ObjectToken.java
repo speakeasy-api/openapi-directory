@@ -12,6 +12,7 @@ public class ObjectToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public ObjectTokenDataTypeEnum dataType;
+
     public ObjectToken withDataType(ObjectTokenDataTypeEnum dataType) {
         this.dataType = dataType;
         return this;
@@ -20,6 +21,7 @@ public class ObjectToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public ObjectToken withLabel(String label) {
         this.label = label;
         return this;
@@ -28,6 +30,7 @@ public class ObjectToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ObjectToken withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +38,13 @@ public class ObjectToken {
     
     @JsonProperty("value")
     public String value;
+
     public ObjectToken withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ObjectToken(@JsonProperty("value") String value) {
+        this.value = value;
+  }
 }

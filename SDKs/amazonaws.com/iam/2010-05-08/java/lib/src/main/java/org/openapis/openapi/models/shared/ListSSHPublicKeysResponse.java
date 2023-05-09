@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListSSHPublicKeysResponse {
     
     public Boolean isTruncated;
+
     public ListSSHPublicKeysResponse withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -19,6 +20,7 @@ public class ListSSHPublicKeysResponse {
     
     
     public String marker;
+
     public ListSSHPublicKeysResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,9 +28,11 @@ public class ListSSHPublicKeysResponse {
     
     
     public SSHPublicKeyMetadata[] sshPublicKeys;
+
     public ListSSHPublicKeysResponse withSSHPublicKeys(SSHPublicKeyMetadata[] sshPublicKeys) {
         this.sshPublicKeys = sshPublicKeys;
         return this;
     }
     
+    public ListSSHPublicKeysResponse(){}
 }

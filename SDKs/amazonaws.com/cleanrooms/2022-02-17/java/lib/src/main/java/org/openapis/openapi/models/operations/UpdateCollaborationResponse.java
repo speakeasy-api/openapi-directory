@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCollaborationResponse {
@@ -12,6 +13,7 @@ public class UpdateCollaborationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateCollaborationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateCollaborationResponse {
     
     
     public String contentType;
+
     public UpdateCollaborationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCollaborationResponse {
      */
     
     public Object internalServerException;
+
     public UpdateCollaborationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateCollaborationResponse {
     
     
     public Integer statusCode;
+
     public UpdateCollaborationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateCollaborationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCollaborationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateCollaborationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateCollaborationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateCollaborationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateCollaborationOutput updateCollaborationOutput;
+
     public UpdateCollaborationResponse withUpdateCollaborationOutput(org.openapis.openapi.models.shared.UpdateCollaborationOutput updateCollaborationOutput) {
         this.updateCollaborationOutput = updateCollaborationOutput;
         return this;
@@ -73,9 +81,14 @@ public class UpdateCollaborationResponse {
      */
     
     public Object validationException;
+
     public UpdateCollaborationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateCollaborationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

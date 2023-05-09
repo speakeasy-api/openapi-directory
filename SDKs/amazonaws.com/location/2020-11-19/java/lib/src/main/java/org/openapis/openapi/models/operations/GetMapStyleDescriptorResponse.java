@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMapStyleDescriptorResponse {
@@ -12,6 +13,7 @@ public class GetMapStyleDescriptorResponse {
      */
     
     public Object accessDeniedException;
+
     public GetMapStyleDescriptorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetMapStyleDescriptorResponse {
     
     
     public String contentType;
+
     public GetMapStyleDescriptorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetMapStyleDescriptorResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMapStyleDescriptorResponse getMapStyleDescriptorResponse;
+
     public GetMapStyleDescriptorResponse withGetMapStyleDescriptorResponse(org.openapis.openapi.models.shared.GetMapStyleDescriptorResponse getMapStyleDescriptorResponse) {
         this.getMapStyleDescriptorResponse = getMapStyleDescriptorResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetMapStyleDescriptorResponse {
      */
     
     public Object internalServerException;
+
     public GetMapStyleDescriptorResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetMapStyleDescriptorResponse {
     
     
     public Integer statusCode;
+
     public GetMapStyleDescriptorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetMapStyleDescriptorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMapStyleDescriptorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetMapStyleDescriptorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetMapStyleDescriptorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetMapStyleDescriptorResponse {
      */
     
     public Object throttlingException;
+
     public GetMapStyleDescriptorResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetMapStyleDescriptorResponse {
      */
     
     public Object validationException;
+
     public GetMapStyleDescriptorResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetMapStyleDescriptorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

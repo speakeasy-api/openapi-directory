@@ -15,6 +15,7 @@ public class ConfigIPMI {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_port")
     public Integer primaryPort;
+
     public ConfigIPMI withPrimaryPort(Integer primaryPort) {
         this.primaryPort = primaryPort;
         return this;
@@ -23,6 +24,7 @@ public class ConfigIPMI {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secure_port")
     public Integer securePort;
+
     public ConfigIPMI withSecurePort(Integer securePort) {
         this.securePort = securePort;
         return this;
@@ -31,9 +33,11 @@ public class ConfigIPMI {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public ConfigIPMI withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ConfigIPMI(){}
 }

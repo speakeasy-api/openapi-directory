@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAssociationsForLicenseConfigurationRequest {
     @JsonProperty("LicenseConfigurationArn")
     public String licenseConfigurationArn;
+
     public ListAssociationsForLicenseConfigurationRequest withLicenseConfigurationArn(String licenseConfigurationArn) {
         this.licenseConfigurationArn = licenseConfigurationArn;
         return this;
@@ -19,6 +20,7 @@ public class ListAssociationsForLicenseConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAssociationsForLicenseConfigurationRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListAssociationsForLicenseConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAssociationsForLicenseConfigurationRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAssociationsForLicenseConfigurationRequest(@JsonProperty("LicenseConfigurationArn") String licenseConfigurationArn) {
+        this.licenseConfigurationArn = licenseConfigurationArn;
+  }
 }

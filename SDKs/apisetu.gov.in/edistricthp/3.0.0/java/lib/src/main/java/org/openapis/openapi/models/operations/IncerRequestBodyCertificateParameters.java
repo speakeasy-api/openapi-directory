@@ -12,9 +12,13 @@ public class IncerRequestBodyCertificateParameters {
      */
     @JsonProperty("UDF1")
     public String udf1;
+
     public IncerRequestBodyCertificateParameters withUdf1(String udf1) {
         this.udf1 = udf1;
         return this;
     }
     
+    public IncerRequestBodyCertificateParameters(@JsonProperty("UDF1") String udf1) {
+        this.udf1 = udf1;
+  }
 }

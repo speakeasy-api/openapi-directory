@@ -15,6 +15,7 @@ public class UrlMapsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlMaps")
     public UrlMap[] urlMaps;
+
     public UrlMapsScopedList withUrlMaps(UrlMap[] urlMaps) {
         this.urlMaps = urlMaps;
         return this;
@@ -26,9 +27,11 @@ public class UrlMapsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public UrlMapsScopedListWarning warning;
+
     public UrlMapsScopedList withWarning(UrlMapsScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public UrlMapsScopedList(){}
 }

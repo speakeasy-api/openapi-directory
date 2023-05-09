@@ -17,6 +17,7 @@ public class EditorialContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aspect")
     public Double aspect;
+
     public EditorialContent withAspect(Double aspect) {
         this.aspect = aspect;
         return this;
@@ -28,6 +29,7 @@ public class EditorialContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assets")
     public EditorialAssets assets;
+
     public EditorialContent withAssets(EditorialAssets assets) {
         this.assets = assets;
         return this;
@@ -36,6 +38,7 @@ public class EditorialContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("byline")
     public String byline;
+
     public EditorialContent withByline(String byline) {
         this.byline = byline;
         return this;
@@ -44,6 +47,7 @@ public class EditorialContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caption")
     public String caption;
+
     public EditorialContent withCaption(String caption) {
         this.caption = caption;
         return this;
@@ -55,6 +59,7 @@ public class EditorialContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public EditorialCategory[] categories;
+
     public EditorialContent withCategories(EditorialCategory[] categories) {
         this.categories = categories;
         return this;
@@ -64,6 +69,7 @@ public class EditorialContent {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date_taken")
     public LocalDate dateTaken;
+
     public EditorialContent withDateTaken(LocalDate dateTaken) {
         this.dateTaken = dateTaken;
         return this;
@@ -72,6 +78,7 @@ public class EditorialContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EditorialContent withDescription(String description) {
         this.description = description;
         return this;
@@ -79,6 +86,7 @@ public class EditorialContent {
     
     @JsonProperty("id")
     public String id;
+
     public EditorialContent withId(String id) {
         this.id = id;
         return this;
@@ -87,6 +95,7 @@ public class EditorialContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywords")
     public String[] keywords;
+
     public EditorialContent withKeywords(String[] keywords) {
         this.keywords = keywords;
         return this;
@@ -95,6 +104,7 @@ public class EditorialContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("special_instructions")
     public String specialInstructions;
+
     public EditorialContent withSpecialInstructions(String specialInstructions) {
         this.specialInstructions = specialInstructions;
         return this;
@@ -103,9 +113,13 @@ public class EditorialContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public EditorialContent withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public EditorialContent(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

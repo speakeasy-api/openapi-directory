@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateLoggingConfigurationResponse {
     @JsonProperty("status")
     public LoggingConfigurationStatus status;
+
     public CreateLoggingConfigurationResponse withStatus(LoggingConfigurationStatus status) {
         this.status = status;
         return this;
     }
     
+    public CreateLoggingConfigurationResponse(@JsonProperty("status") LoggingConfigurationStatus status) {
+        this.status = status;
+  }
 }

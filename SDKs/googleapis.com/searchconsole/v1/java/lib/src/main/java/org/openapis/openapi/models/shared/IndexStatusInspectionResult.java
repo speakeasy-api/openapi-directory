@@ -18,6 +18,7 @@ public class IndexStatusInspectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverageState")
     public String coverageState;
+
     public IndexStatusInspectionResult withCoverageState(String coverageState) {
         this.coverageState = coverageState;
         return this;
@@ -29,6 +30,7 @@ public class IndexStatusInspectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crawledAs")
     public IndexStatusInspectionResultCrawledAsEnum crawledAs;
+
     public IndexStatusInspectionResult withCrawledAs(IndexStatusInspectionResultCrawledAsEnum crawledAs) {
         this.crawledAs = crawledAs;
         return this;
@@ -40,6 +42,7 @@ public class IndexStatusInspectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleCanonical")
     public String googleCanonical;
+
     public IndexStatusInspectionResult withGoogleCanonical(String googleCanonical) {
         this.googleCanonical = googleCanonical;
         return this;
@@ -51,6 +54,7 @@ public class IndexStatusInspectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexingState")
     public IndexStatusInspectionResultIndexingStateEnum indexingState;
+
     public IndexStatusInspectionResult withIndexingState(IndexStatusInspectionResultIndexingStateEnum indexingState) {
         this.indexingState = indexingState;
         return this;
@@ -62,6 +66,7 @@ public class IndexStatusInspectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastCrawlTime")
     public String lastCrawlTime;
+
     public IndexStatusInspectionResult withLastCrawlTime(String lastCrawlTime) {
         this.lastCrawlTime = lastCrawlTime;
         return this;
@@ -73,6 +78,7 @@ public class IndexStatusInspectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageFetchState")
     public IndexStatusInspectionResultPageFetchStateEnum pageFetchState;
+
     public IndexStatusInspectionResult withPageFetchState(IndexStatusInspectionResultPageFetchStateEnum pageFetchState) {
         this.pageFetchState = pageFetchState;
         return this;
@@ -84,6 +90,7 @@ public class IndexStatusInspectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referringUrls")
     public String[] referringUrls;
+
     public IndexStatusInspectionResult withReferringUrls(String[] referringUrls) {
         this.referringUrls = referringUrls;
         return this;
@@ -95,6 +102,7 @@ public class IndexStatusInspectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("robotsTxtState")
     public IndexStatusInspectionResultRobotsTxtStateEnum robotsTxtState;
+
     public IndexStatusInspectionResult withRobotsTxtState(IndexStatusInspectionResultRobotsTxtStateEnum robotsTxtState) {
         this.robotsTxtState = robotsTxtState;
         return this;
@@ -106,6 +114,7 @@ public class IndexStatusInspectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sitemap")
     public String[] sitemap;
+
     public IndexStatusInspectionResult withSitemap(String[] sitemap) {
         this.sitemap = sitemap;
         return this;
@@ -117,6 +126,7 @@ public class IndexStatusInspectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userCanonical")
     public String userCanonical;
+
     public IndexStatusInspectionResult withUserCanonical(String userCanonical) {
         this.userCanonical = userCanonical;
         return this;
@@ -128,9 +138,11 @@ public class IndexStatusInspectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verdict")
     public IndexStatusInspectionResultVerdictEnum verdict;
+
     public IndexStatusInspectionResult withVerdict(IndexStatusInspectionResultVerdictEnum verdict) {
         this.verdict = verdict;
         return this;
     }
     
+    public IndexStatusInspectionResult(){}
 }

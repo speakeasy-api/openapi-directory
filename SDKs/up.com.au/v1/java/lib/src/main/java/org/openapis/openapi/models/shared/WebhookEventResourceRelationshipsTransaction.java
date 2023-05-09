@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WebhookEventResourceRelationshipsTransaction {
     @JsonProperty("data")
     public WebhookEventResourceRelationshipsTransactionData data;
+
     public WebhookEventResourceRelationshipsTransaction withData(WebhookEventResourceRelationshipsTransactionData data) {
         this.data = data;
         return this;
@@ -19,9 +20,13 @@ public class WebhookEventResourceRelationshipsTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public WebhookEventResourceRelationshipsTransactionLinks links;
+
     public WebhookEventResourceRelationshipsTransaction withLinks(WebhookEventResourceRelationshipsTransactionLinks links) {
         this.links = links;
         return this;
     }
     
+    public WebhookEventResourceRelationshipsTransaction(@JsonProperty("data") WebhookEventResourceRelationshipsTransactionData data) {
+        this.data = data;
+  }
 }

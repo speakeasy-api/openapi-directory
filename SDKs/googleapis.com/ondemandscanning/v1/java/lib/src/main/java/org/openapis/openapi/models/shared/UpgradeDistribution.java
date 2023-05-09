@@ -18,6 +18,7 @@ public class UpgradeDistribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classification")
     public String classification;
+
     public UpgradeDistribution withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -29,6 +30,7 @@ public class UpgradeDistribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpeUri")
     public String cpeUri;
+
     public UpgradeDistribution withCpeUri(String cpeUri) {
         this.cpeUri = cpeUri;
         return this;
@@ -40,6 +42,7 @@ public class UpgradeDistribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cve")
     public String[] cve;
+
     public UpgradeDistribution withCve(String[] cve) {
         this.cve = cve;
         return this;
@@ -51,9 +54,11 @@ public class UpgradeDistribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public String severity;
+
     public UpgradeDistribution withSeverity(String severity) {
         this.severity = severity;
         return this;
     }
     
+    public UpgradeDistribution(){}
 }

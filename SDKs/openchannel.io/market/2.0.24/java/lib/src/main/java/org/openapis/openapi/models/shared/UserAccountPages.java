@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UserAccountPages - Pages of userAccount results
@@ -15,6 +15,7 @@ public class UserAccountPages {
      */
     
     public Long count;
+
     public UserAccountPages withCount(Long count) {
         this.count = count;
         return this;
@@ -25,6 +26,7 @@ public class UserAccountPages {
      */
     
     public UserAccount[] list;
+
     public UserAccountPages withList(UserAccount[] list) {
         this.list = list;
         return this;
@@ -35,6 +37,7 @@ public class UserAccountPages {
      */
     
     public Long pageNumber;
+
     public UserAccountPages withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -45,9 +48,14 @@ public class UserAccountPages {
      */
     
     public Long pages;
+
     public UserAccountPages withPages(Long pages) {
         this.pages = pages;
         return this;
     }
     
+    public UserAccountPages(@JsonProperty("count") Long count, @JsonProperty("list") UserAccount[] list) {
+        this.count = count;
+        this.list = list;
+  }
 }

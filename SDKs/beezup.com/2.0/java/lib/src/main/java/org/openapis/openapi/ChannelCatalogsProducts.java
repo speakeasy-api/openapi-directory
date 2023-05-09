@@ -64,12 +64,10 @@ public class ChannelCatalogsProducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportChannelCatalogProductInfoListResponse res = new org.openapis.openapi.models.operations.ExportChannelCatalogProductInfoListResponse() {{
+        org.openapis.openapi.models.operations.ExportChannelCatalogProductInfoListResponse res = new org.openapis.openapi.models.operations.ExportChannelCatalogProductInfoListResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonLink3 = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -117,12 +115,10 @@ public class ChannelCatalogsProducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChannelCatalogProductByChannelCatalogResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogProductByChannelCatalogResponse() {{
+        org.openapis.openapi.models.operations.GetChannelCatalogProductByChannelCatalogResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogProductByChannelCatalogResponse(contentType, httpRes.statusCode()) {{
             channelCatalogProductByChannelCatalogResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -163,12 +159,10 @@ public class ChannelCatalogsProducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChannelCatalogProductInfoResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogProductInfoResponse() {{
+        org.openapis.openapi.models.operations.GetChannelCatalogProductInfoResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogProductInfoResponse(contentType, httpRes.statusCode()) {{
             channelCatalogProductInfo = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -214,12 +208,10 @@ public class ChannelCatalogsProducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChannelCatalogProductInfoListResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogProductInfoListResponse() {{
+        org.openapis.openapi.models.operations.GetChannelCatalogProductInfoListResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogProductInfoListResponse(contentType, httpRes.statusCode()) {{
             channelCatalogProductInfoList = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -260,12 +252,10 @@ public class ChannelCatalogsProducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChannelCatalogProductsCountersResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogProductsCountersResponse() {{
+        org.openapis.openapi.models.operations.GetChannelCatalogProductsCountersResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogProductsCountersResponse(contentType, httpRes.statusCode()) {{
             channelCatalogProductsCounters = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

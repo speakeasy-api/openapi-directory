@@ -18,6 +18,7 @@ public class CustomRichMediaEvents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filteredEventIds")
     public DimensionValue[] filteredEventIds;
+
     public CustomRichMediaEvents withFilteredEventIds(DimensionValue[] filteredEventIds) {
         this.filteredEventIds = filteredEventIds;
         return this;
@@ -29,9 +30,11 @@ public class CustomRichMediaEvents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CustomRichMediaEvents withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public CustomRichMediaEvents(){}
 }

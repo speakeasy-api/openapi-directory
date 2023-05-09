@@ -15,9 +15,11 @@ public class DescribeTimeToLiveOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeToLiveDescription")
     public TimeToLiveDescription timeToLiveDescription;
+
     public DescribeTimeToLiveOutput withTimeToLiveDescription(TimeToLiveDescription timeToLiveDescription) {
         this.timeToLiveDescription = timeToLiveDescription;
         return this;
     }
     
+    public DescribeTimeToLiveOutput(){}
 }

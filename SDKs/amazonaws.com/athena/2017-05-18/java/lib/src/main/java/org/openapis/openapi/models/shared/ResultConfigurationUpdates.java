@@ -15,6 +15,7 @@ public class ResultConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AclConfiguration")
     public AclConfiguration aclConfiguration;
+
     public ResultConfigurationUpdates withAclConfiguration(AclConfiguration aclConfiguration) {
         this.aclConfiguration = aclConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class ResultConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public ResultConfigurationUpdates withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -31,6 +33,7 @@ public class ResultConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpectedBucketOwner")
     public String expectedBucketOwner;
+
     public ResultConfigurationUpdates withExpectedBucketOwner(String expectedBucketOwner) {
         this.expectedBucketOwner = expectedBucketOwner;
         return this;
@@ -39,6 +42,7 @@ public class ResultConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputLocation")
     public String outputLocation;
+
     public ResultConfigurationUpdates withOutputLocation(String outputLocation) {
         this.outputLocation = outputLocation;
         return this;
@@ -47,6 +51,7 @@ public class ResultConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoveAclConfiguration")
     public Boolean removeAclConfiguration;
+
     public ResultConfigurationUpdates withRemoveAclConfiguration(Boolean removeAclConfiguration) {
         this.removeAclConfiguration = removeAclConfiguration;
         return this;
@@ -55,6 +60,7 @@ public class ResultConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoveEncryptionConfiguration")
     public Boolean removeEncryptionConfiguration;
+
     public ResultConfigurationUpdates withRemoveEncryptionConfiguration(Boolean removeEncryptionConfiguration) {
         this.removeEncryptionConfiguration = removeEncryptionConfiguration;
         return this;
@@ -63,6 +69,7 @@ public class ResultConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoveExpectedBucketOwner")
     public Boolean removeExpectedBucketOwner;
+
     public ResultConfigurationUpdates withRemoveExpectedBucketOwner(Boolean removeExpectedBucketOwner) {
         this.removeExpectedBucketOwner = removeExpectedBucketOwner;
         return this;
@@ -71,9 +78,11 @@ public class ResultConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoveOutputLocation")
     public Boolean removeOutputLocation;
+
     public ResultConfigurationUpdates withRemoveOutputLocation(Boolean removeOutputLocation) {
         this.removeOutputLocation = removeOutputLocation;
         return this;
     }
     
+    public ResultConfigurationUpdates(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListSubscribedAddresses {
     @JsonProperty("ipns")
     public Ipn[] ipns;
+
     public ListSubscribedAddresses withIpns(Ipn[] ipns) {
         this.ipns = ipns;
         return this;
@@ -16,9 +17,14 @@ public class ListSubscribedAddresses {
     
     @JsonProperty("ok")
     public Boolean ok;
+
     public ListSubscribedAddresses withOk(Boolean ok) {
         this.ok = ok;
         return this;
     }
     
+    public ListSubscribedAddresses(@JsonProperty("ipns") Ipn[] ipns, @JsonProperty("ok") Boolean ok) {
+        this.ipns = ipns;
+        this.ok = ok;
+  }
 }

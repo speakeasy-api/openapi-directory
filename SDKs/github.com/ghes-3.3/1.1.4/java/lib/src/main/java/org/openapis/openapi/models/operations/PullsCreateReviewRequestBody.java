@@ -15,6 +15,7 @@ public class PullsCreateReviewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public PullsCreateReviewRequestBody withBody(String body) {
         this.body = body;
         return this;
@@ -26,6 +27,7 @@ public class PullsCreateReviewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public PullsCreateReviewRequestBodyComments[] comments;
+
     public PullsCreateReviewRequestBody withComments(PullsCreateReviewRequestBodyComments[] comments) {
         this.comments = comments;
         return this;
@@ -37,6 +39,7 @@ public class PullsCreateReviewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commit_id")
     public String commitId;
+
     public PullsCreateReviewRequestBody withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -48,9 +51,11 @@ public class PullsCreateReviewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public PullsCreateReviewRequestBodyEventEnum event;
+
     public PullsCreateReviewRequestBody withEvent(PullsCreateReviewRequestBodyEventEnum event) {
         this.event = event;
         return this;
     }
     
+    public PullsCreateReviewRequestBody(){}
 }

@@ -18,6 +18,7 @@ public class LanguageSpoken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public LanguageSpoken withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -29,6 +30,7 @@ public class LanguageSpoken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spoken")
     public Boolean spoken;
+
     public LanguageSpoken withSpoken(Boolean spoken) {
         this.spoken = spoken;
         return this;
@@ -40,9 +42,11 @@ public class LanguageSpoken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spokenException")
     public LanguageSpokenSpokenExceptionEnum spokenException;
+
     public LanguageSpoken withSpokenException(LanguageSpokenSpokenExceptionEnum spokenException) {
         this.spokenException = spokenException;
         return this;
     }
     
+    public LanguageSpoken(){}
 }

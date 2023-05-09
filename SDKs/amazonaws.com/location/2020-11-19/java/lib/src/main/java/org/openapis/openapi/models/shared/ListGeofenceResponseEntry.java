@@ -19,6 +19,7 @@ public class ListGeofenceResponseEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public ListGeofenceResponseEntry withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -26,6 +27,7 @@ public class ListGeofenceResponseEntry {
     
     @JsonProperty("GeofenceId")
     public String geofenceId;
+
     public ListGeofenceResponseEntry withGeofenceId(String geofenceId) {
         this.geofenceId = geofenceId;
         return this;
@@ -33,6 +35,7 @@ public class ListGeofenceResponseEntry {
     
     @JsonProperty("Geometry")
     public GeofenceGeometry geometry;
+
     public ListGeofenceResponseEntry withGeometry(GeofenceGeometry geometry) {
         this.geometry = geometry;
         return this;
@@ -40,6 +43,7 @@ public class ListGeofenceResponseEntry {
     
     @JsonProperty("Status")
     public String status;
+
     public ListGeofenceResponseEntry withStatus(String status) {
         this.status = status;
         return this;
@@ -49,9 +53,17 @@ public class ListGeofenceResponseEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public ListGeofenceResponseEntry withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ListGeofenceResponseEntry(@JsonProperty("CreateTime") OffsetDateTime createTime, @JsonProperty("GeofenceId") String geofenceId, @JsonProperty("Geometry") GeofenceGeometry geometry, @JsonProperty("Status") String status, @JsonProperty("UpdateTime") OffsetDateTime updateTime) {
+        this.createTime = createTime;
+        this.geofenceId = geofenceId;
+        this.geometry = geometry;
+        this.status = status;
+        this.updateTime = updateTime;
+  }
 }

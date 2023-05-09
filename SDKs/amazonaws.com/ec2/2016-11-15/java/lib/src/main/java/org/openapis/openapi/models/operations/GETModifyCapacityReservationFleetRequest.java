@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyCapacityReservationFleetRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyCapacityReservationFleetActionEnum action;
+
     public GETModifyCapacityReservationFleetRequest withAction(GETModifyCapacityReservationFleetActionEnum action) {
         this.action = action;
         return this;
@@ -20,6 +22,7 @@ public class GETModifyCapacityReservationFleetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CapacityReservationFleetId")
     public String capacityReservationFleetId;
+
     public GETModifyCapacityReservationFleetRequest withCapacityReservationFleetId(String capacityReservationFleetId) {
         this.capacityReservationFleetId = capacityReservationFleetId;
         return this;
@@ -30,6 +33,7 @@ public class GETModifyCapacityReservationFleetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyCapacityReservationFleetRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -40,6 +44,7 @@ public class GETModifyCapacityReservationFleetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndDate")
     public OffsetDateTime endDate;
+
     public GETModifyCapacityReservationFleetRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -50,6 +55,7 @@ public class GETModifyCapacityReservationFleetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoveEndDate")
     public Boolean removeEndDate;
+
     public GETModifyCapacityReservationFleetRequest withRemoveEndDate(Boolean removeEndDate) {
         this.removeEndDate = removeEndDate;
         return this;
@@ -60,6 +66,7 @@ public class GETModifyCapacityReservationFleetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TotalTargetCapacity")
     public Long totalTargetCapacity;
+
     public GETModifyCapacityReservationFleetRequest withTotalTargetCapacity(Long totalTargetCapacity) {
         this.totalTargetCapacity = totalTargetCapacity;
         return this;
@@ -67,6 +74,7 @@ public class GETModifyCapacityReservationFleetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyCapacityReservationFleetVersionEnum version;
+
     public GETModifyCapacityReservationFleetRequest withVersion(GETModifyCapacityReservationFleetVersionEnum version) {
         this.version = version;
         return this;
@@ -74,6 +82,7 @@ public class GETModifyCapacityReservationFleetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyCapacityReservationFleetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -81,6 +90,7 @@ public class GETModifyCapacityReservationFleetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyCapacityReservationFleetRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -88,6 +98,7 @@ public class GETModifyCapacityReservationFleetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyCapacityReservationFleetRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -95,6 +106,7 @@ public class GETModifyCapacityReservationFleetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyCapacityReservationFleetRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -102,6 +114,7 @@ public class GETModifyCapacityReservationFleetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyCapacityReservationFleetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -109,6 +122,7 @@ public class GETModifyCapacityReservationFleetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyCapacityReservationFleetRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -116,9 +130,15 @@ public class GETModifyCapacityReservationFleetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyCapacityReservationFleetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyCapacityReservationFleetRequest(@JsonProperty("Action") GETModifyCapacityReservationFleetActionEnum action, @JsonProperty("CapacityReservationFleetId") String capacityReservationFleetId, @JsonProperty("Version") GETModifyCapacityReservationFleetVersionEnum version) {
+        this.action = action;
+        this.capacityReservationFleetId = capacityReservationFleetId;
+        this.version = version;
+  }
 }

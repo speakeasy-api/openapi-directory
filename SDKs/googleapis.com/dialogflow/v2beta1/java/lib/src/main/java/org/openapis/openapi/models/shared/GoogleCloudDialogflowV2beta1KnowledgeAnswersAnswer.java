@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answer")
     public String answer;
+
     public GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer withAnswer(String answer) {
         this.answer = answer;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("faqQuestion")
     public String faqQuestion;
+
     public GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer withFaqQuestion(String faqQuestion) {
         this.faqQuestion = faqQuestion;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchConfidence")
     public Float matchConfidence;
+
     public GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer withMatchConfidence(Float matchConfidence) {
         this.matchConfidence = matchConfidence;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchConfidenceLevel")
     public GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswerMatchConfidenceLevelEnum matchConfidenceLevel;
+
     public GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer withMatchConfidenceLevel(GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswerMatchConfidenceLevelEnum matchConfidenceLevel) {
         this.matchConfidenceLevel = matchConfidenceLevel;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer(){}
 }

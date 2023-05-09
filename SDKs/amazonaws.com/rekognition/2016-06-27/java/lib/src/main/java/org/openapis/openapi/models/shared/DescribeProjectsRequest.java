@@ -12,6 +12,7 @@ public class DescribeProjectsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeProjectsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class DescribeProjectsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeProjectsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class DescribeProjectsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectNames")
     public String[] projectNames;
+
     public DescribeProjectsRequest withProjectNames(String[] projectNames) {
         this.projectNames = projectNames;
         return this;
     }
     
+    public DescribeProjectsRequest(){}
 }

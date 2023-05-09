@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateEnvironmentMembershipRequest {
     @JsonProperty("environmentId")
     public String environmentId;
+
     public CreateEnvironmentMembershipRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -16,6 +17,7 @@ public class CreateEnvironmentMembershipRequest {
     
     @JsonProperty("permissions")
     public MemberPermissionsEnum permissions;
+
     public CreateEnvironmentMembershipRequest withPermissions(MemberPermissionsEnum permissions) {
         this.permissions = permissions;
         return this;
@@ -23,9 +25,15 @@ public class CreateEnvironmentMembershipRequest {
     
     @JsonProperty("userArn")
     public String userArn;
+
     public CreateEnvironmentMembershipRequest withUserArn(String userArn) {
         this.userArn = userArn;
         return this;
     }
     
+    public CreateEnvironmentMembershipRequest(@JsonProperty("environmentId") String environmentId, @JsonProperty("permissions") MemberPermissionsEnum permissions, @JsonProperty("userArn") String userArn) {
+        this.environmentId = environmentId;
+        this.permissions = permissions;
+        this.userArn = userArn;
+  }
 }

@@ -15,6 +15,7 @@ public class SecurityPolicyUserDefinedField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base")
     public SecurityPolicyUserDefinedFieldBaseEnum base;
+
     public SecurityPolicyUserDefinedField withBase(SecurityPolicyUserDefinedFieldBaseEnum base) {
         this.base = base;
         return this;
@@ -26,6 +27,7 @@ public class SecurityPolicyUserDefinedField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mask")
     public String mask;
+
     public SecurityPolicyUserDefinedField withMask(String mask) {
         this.mask = mask;
         return this;
@@ -37,6 +39,7 @@ public class SecurityPolicyUserDefinedField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SecurityPolicyUserDefinedField withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class SecurityPolicyUserDefinedField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public SecurityPolicyUserDefinedField withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -59,9 +63,11 @@ public class SecurityPolicyUserDefinedField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Integer size;
+
     public SecurityPolicyUserDefinedField withSize(Integer size) {
         this.size = size;
         return this;
     }
     
+    public SecurityPolicyUserDefinedField(){}
 }

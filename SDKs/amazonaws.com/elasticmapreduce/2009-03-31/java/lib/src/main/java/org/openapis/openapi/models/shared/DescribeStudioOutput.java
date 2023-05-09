@@ -15,9 +15,11 @@ public class DescribeStudioOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Studio")
     public Studio studio;
+
     public DescribeStudioOutput withStudio(Studio studio) {
         this.studio = studio;
         return this;
     }
     
+    public DescribeStudioOutput(){}
 }

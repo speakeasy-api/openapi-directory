@@ -15,6 +15,7 @@ public class ListLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Locations")
     public LocationListEntry[] locations;
+
     public ListLocationsResponse withLocations(LocationListEntry[] locations) {
         this.locations = locations;
         return this;
@@ -23,9 +24,11 @@ public class ListLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLocationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLocationsResponse(){}
 }

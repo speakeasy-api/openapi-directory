@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class PatientAuthInitRequest {
     @JsonProperty("query")
     public PatientAuthInitRequestQuery query;
+
     public PatientAuthInitRequest withQuery(PatientAuthInitRequestQuery query) {
         this.query = query;
         return this;
@@ -24,6 +25,7 @@ public class PatientAuthInitRequest {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public PatientAuthInitRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -36,9 +38,15 @@ public class PatientAuthInitRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public PatientAuthInitRequest withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public PatientAuthInitRequest(@JsonProperty("query") PatientAuthInitRequestQuery query, @JsonProperty("requestId") String requestId, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.query = query;
+        this.requestId = requestId;
+        this.timestamp = timestamp;
+  }
 }

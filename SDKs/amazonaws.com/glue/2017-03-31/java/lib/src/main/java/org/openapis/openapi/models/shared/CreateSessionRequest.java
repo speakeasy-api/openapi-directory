@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateSessionRequest {
     @JsonProperty("Command")
     public SessionCommand command;
+
     public CreateSessionRequest withCommand(SessionCommand command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class CreateSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Connections")
     public ConnectionsList connections;
+
     public CreateSessionRequest withConnections(ConnectionsList connections) {
         this.connections = connections;
         return this;
@@ -30,6 +32,7 @@ public class CreateSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultArguments")
     public java.util.Map<String, String> defaultArguments;
+
     public CreateSessionRequest withDefaultArguments(java.util.Map<String, String> defaultArguments) {
         this.defaultArguments = defaultArguments;
         return this;
@@ -38,6 +41,7 @@ public class CreateSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateSessionRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +50,7 @@ public class CreateSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlueVersion")
     public String glueVersion;
+
     public CreateSessionRequest withGlueVersion(String glueVersion) {
         this.glueVersion = glueVersion;
         return this;
@@ -53,6 +58,7 @@ public class CreateSessionRequest {
     
     @JsonProperty("Id")
     public String id;
+
     public CreateSessionRequest withId(String id) {
         this.id = id;
         return this;
@@ -61,6 +67,7 @@ public class CreateSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdleTimeout")
     public Long idleTimeout;
+
     public CreateSessionRequest withIdleTimeout(Long idleTimeout) {
         this.idleTimeout = idleTimeout;
         return this;
@@ -69,6 +76,7 @@ public class CreateSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxCapacity")
     public Double maxCapacity;
+
     public CreateSessionRequest withMaxCapacity(Double maxCapacity) {
         this.maxCapacity = maxCapacity;
         return this;
@@ -77,6 +85,7 @@ public class CreateSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfWorkers")
     public Long numberOfWorkers;
+
     public CreateSessionRequest withNumberOfWorkers(Long numberOfWorkers) {
         this.numberOfWorkers = numberOfWorkers;
         return this;
@@ -85,6 +94,7 @@ public class CreateSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestOrigin")
     public String requestOrigin;
+
     public CreateSessionRequest withRequestOrigin(String requestOrigin) {
         this.requestOrigin = requestOrigin;
         return this;
@@ -92,6 +102,7 @@ public class CreateSessionRequest {
     
     @JsonProperty("Role")
     public String role;
+
     public CreateSessionRequest withRole(String role) {
         this.role = role;
         return this;
@@ -100,6 +111,7 @@ public class CreateSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityConfiguration")
     public String securityConfiguration;
+
     public CreateSessionRequest withSecurityConfiguration(String securityConfiguration) {
         this.securityConfiguration = securityConfiguration;
         return this;
@@ -108,6 +120,7 @@ public class CreateSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateSessionRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -116,6 +129,7 @@ public class CreateSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeout")
     public Long timeout;
+
     public CreateSessionRequest withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
@@ -124,9 +138,15 @@ public class CreateSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkerType")
     public WorkerTypeEnum workerType;
+
     public CreateSessionRequest withWorkerType(WorkerTypeEnum workerType) {
         this.workerType = workerType;
         return this;
     }
     
+    public CreateSessionRequest(@JsonProperty("Command") SessionCommand command, @JsonProperty("Id") String id, @JsonProperty("Role") String role) {
+        this.command = command;
+        this.id = id;
+        this.role = role;
+  }
 }

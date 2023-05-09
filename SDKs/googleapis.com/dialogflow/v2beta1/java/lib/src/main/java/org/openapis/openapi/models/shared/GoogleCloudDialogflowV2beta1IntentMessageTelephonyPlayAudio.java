@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioUri")
     public String audioUri;
+
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudio withAudioUri(String audioUri) {
         this.audioUri = audioUri;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudio(){}
 }

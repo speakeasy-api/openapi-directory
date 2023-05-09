@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AppPkgSubscriptionLinkListLinks {
     @JsonProperty("self")
     public LinkType self;
+
     public AppPkgSubscriptionLinkListLinks withSelf(LinkType self) {
         this.self = self;
         return this;
@@ -22,9 +23,13 @@ public class AppPkgSubscriptionLinkListLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptions")
     public SubscriptionsAppPkgSubscription[] subscriptions;
+
     public AppPkgSubscriptionLinkListLinks withSubscriptions(SubscriptionsAppPkgSubscription[] subscriptions) {
         this.subscriptions = subscriptions;
         return this;
     }
     
+    public AppPkgSubscriptionLinkListLinks(@JsonProperty("self") LinkType self) {
+        this.self = self;
+  }
 }

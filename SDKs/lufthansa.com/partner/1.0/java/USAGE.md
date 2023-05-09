@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.BaggageTripAndContactSecurity;
 import org.openapis.openapi.models.operations.BaggageTripAndContactRequest;
 import org.openapis.openapi.models.operations.BaggageTripAndContactResponse;
+import org.openapis.openapi.models.operations.BaggageTripAndContactSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -14,20 +13,19 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            BaggageTripAndContactRequest req = new BaggageTripAndContactRequest() {{
-                accept = "corrupti";
-                searchID = "provident";
-            }}            
+            BaggageTripAndContactRequest req = new BaggageTripAndContactRequest("corrupti", "provident");            
 
-            BaggageTripAndContactResponse res = sdk.baggage.baggageTripAndContact(req, new BaggageTripAndContactSecurity() {{
+            BaggageTripAndContactResponse res = sdk.baggage.baggageTripAndContact(req, new BaggageTripAndContactSecurity("distinctio") {{
                 auth = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.baggageTripAndContact200ApplicationJSONString.isPresent()) {
+            if (res.baggageTripAndContact200ApplicationJSONString != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

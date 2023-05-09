@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDBInstanceAutomatedBackupsMessage {
     
     public String dbInstanceAutomatedBackupsArn;
+
     public DescribeDBInstanceAutomatedBackupsMessage withDBInstanceAutomatedBackupsArn(String dbInstanceAutomatedBackupsArn) {
         this.dbInstanceAutomatedBackupsArn = dbInstanceAutomatedBackupsArn;
         return this;
@@ -19,6 +20,7 @@ public class DescribeDBInstanceAutomatedBackupsMessage {
     
     
     public String dbInstanceIdentifier;
+
     public DescribeDBInstanceAutomatedBackupsMessage withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class DescribeDBInstanceAutomatedBackupsMessage {
     
     
     public String dbiResourceId;
+
     public DescribeDBInstanceAutomatedBackupsMessage withDbiResourceId(String dbiResourceId) {
         this.dbiResourceId = dbiResourceId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeDBInstanceAutomatedBackupsMessage {
     
     
     public FilterList[] filters;
+
     public DescribeDBInstanceAutomatedBackupsMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -40,6 +44,7 @@ public class DescribeDBInstanceAutomatedBackupsMessage {
     
     
     public String marker;
+
     public DescribeDBInstanceAutomatedBackupsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -47,9 +52,11 @@ public class DescribeDBInstanceAutomatedBackupsMessage {
     
     
     public Long maxRecords;
+
     public DescribeDBInstanceAutomatedBackupsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeDBInstanceAutomatedBackupsMessage(){}
 }

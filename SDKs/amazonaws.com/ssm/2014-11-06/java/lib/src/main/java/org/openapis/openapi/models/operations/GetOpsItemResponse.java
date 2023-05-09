@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOpsItemResponse {
     
     public String contentType;
+
     public GetOpsItemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetOpsItemResponse {
      */
     
     public org.openapis.openapi.models.shared.GetOpsItemResponse getOpsItemResponse;
+
     public GetOpsItemResponse withGetOpsItemResponse(org.openapis.openapi.models.shared.GetOpsItemResponse getOpsItemResponse) {
         this.getOpsItemResponse = getOpsItemResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetOpsItemResponse {
      */
     
     public Object internalServerError;
+
     public GetOpsItemResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class GetOpsItemResponse {
      */
     
     public Object opsItemAccessDeniedException;
+
     public GetOpsItemResponse withOpsItemAccessDeniedException(Object opsItemAccessDeniedException) {
         this.opsItemAccessDeniedException = opsItemAccessDeniedException;
         return this;
@@ -49,6 +54,7 @@ public class GetOpsItemResponse {
      */
     
     public Object opsItemNotFoundException;
+
     public GetOpsItemResponse withOpsItemNotFoundException(Object opsItemNotFoundException) {
         this.opsItemNotFoundException = opsItemNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetOpsItemResponse {
     
     
     public Integer statusCode;
+
     public GetOpsItemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetOpsItemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOpsItemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetOpsItemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

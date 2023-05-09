@@ -15,6 +15,7 @@ public class ContentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public ContentResult withContent(String content) {
         this.content = content;
         return this;
@@ -23,6 +24,7 @@ public class ContentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public ContentResult withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -31,9 +33,11 @@ public class ContentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCode")
     public Integer statusCode;
+
     public ContentResult withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public ContentResult(){}
 }

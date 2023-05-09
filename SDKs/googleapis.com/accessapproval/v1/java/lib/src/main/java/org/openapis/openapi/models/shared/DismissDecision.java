@@ -18,6 +18,7 @@ public class DismissDecision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dismissTime")
     public String dismissTime;
+
     public DismissDecision withDismissTime(String dismissTime) {
         this.dismissTime = dismissTime;
         return this;
@@ -29,9 +30,11 @@ public class DismissDecision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("implicit")
     public Boolean implicit;
+
     public DismissDecision withImplicit(Boolean implicit) {
         this.implicit = implicit;
         return this;
     }
     
+    public DismissDecision(){}
 }

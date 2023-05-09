@@ -18,6 +18,7 @@ public class SubnetworkList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SubnetworkList withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class SubnetworkList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Subnetwork[] items;
+
     public SubnetworkList withItems(Subnetwork[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class SubnetworkList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SubnetworkList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class SubnetworkList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SubnetworkList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -62,6 +66,7 @@ public class SubnetworkList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public SubnetworkList withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -73,9 +78,11 @@ public class SubnetworkList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public SubnetworkListWarning warning;
+
     public SubnetworkList withWarning(SubnetworkListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public SubnetworkList(){}
 }

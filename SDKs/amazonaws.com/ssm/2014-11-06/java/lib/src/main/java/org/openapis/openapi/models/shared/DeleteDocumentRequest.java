@@ -12,6 +12,7 @@ public class DeleteDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public DeleteDocumentRequest withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -20,6 +21,7 @@ public class DeleteDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Force")
     public Boolean force;
+
     public DeleteDocumentRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -27,6 +29,7 @@ public class DeleteDocumentRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public DeleteDocumentRequest withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +38,13 @@ public class DeleteDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionName")
     public String versionName;
+
     public DeleteDocumentRequest withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     
+    public DeleteDocumentRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

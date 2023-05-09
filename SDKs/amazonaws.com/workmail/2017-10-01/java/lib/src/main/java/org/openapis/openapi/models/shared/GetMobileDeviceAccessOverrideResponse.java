@@ -22,6 +22,7 @@ public class GetMobileDeviceAccessOverrideResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DateCreated")
     public OffsetDateTime dateCreated;
+
     public GetMobileDeviceAccessOverrideResponse withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -32,6 +33,7 @@ public class GetMobileDeviceAccessOverrideResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DateModified")
     public OffsetDateTime dateModified;
+
     public GetMobileDeviceAccessOverrideResponse withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -40,6 +42,7 @@ public class GetMobileDeviceAccessOverrideResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public GetMobileDeviceAccessOverrideResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -48,6 +51,7 @@ public class GetMobileDeviceAccessOverrideResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceId")
     public String deviceId;
+
     public GetMobileDeviceAccessOverrideResponse withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -56,6 +60,7 @@ public class GetMobileDeviceAccessOverrideResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Effect")
     public MobileDeviceAccessRuleEffectEnum effect;
+
     public GetMobileDeviceAccessOverrideResponse withEffect(MobileDeviceAccessRuleEffectEnum effect) {
         this.effect = effect;
         return this;
@@ -64,9 +69,11 @@ public class GetMobileDeviceAccessOverrideResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserId")
     public String userId;
+
     public GetMobileDeviceAccessOverrideResponse withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetMobileDeviceAccessOverrideResponse(){}
 }

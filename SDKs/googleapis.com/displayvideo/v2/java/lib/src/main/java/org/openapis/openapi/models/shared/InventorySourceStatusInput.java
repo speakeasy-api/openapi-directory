@@ -18,6 +18,7 @@ public class InventorySourceStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityPauseReason")
     public String entityPauseReason;
+
     public InventorySourceStatusInput withEntityPauseReason(String entityPauseReason) {
         this.entityPauseReason = entityPauseReason;
         return this;
@@ -29,9 +30,11 @@ public class InventorySourceStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityStatus")
     public InventorySourceStatusEntityStatusEnum entityStatus;
+
     public InventorySourceStatusInput withEntityStatus(InventorySourceStatusEntityStatusEnum entityStatus) {
         this.entityStatus = entityStatus;
         return this;
     }
     
+    public InventorySourceStatusInput(){}
 }

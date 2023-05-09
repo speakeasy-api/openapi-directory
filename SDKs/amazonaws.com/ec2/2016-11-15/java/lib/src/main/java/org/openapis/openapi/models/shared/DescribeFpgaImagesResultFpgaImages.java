@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeFpgaImagesResultFpgaImages {
     
     public OffsetDateTime createTime;
+
     public DescribeFpgaImagesResultFpgaImages withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -19,6 +20,7 @@ public class DescribeFpgaImagesResultFpgaImages {
     
     
     public Boolean dataRetentionSupport;
+
     public DescribeFpgaImagesResultFpgaImages withDataRetentionSupport(Boolean dataRetentionSupport) {
         this.dataRetentionSupport = dataRetentionSupport;
         return this;
@@ -26,6 +28,7 @@ public class DescribeFpgaImagesResultFpgaImages {
     
     
     public String description;
+
     public DescribeFpgaImagesResultFpgaImages withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class DescribeFpgaImagesResultFpgaImages {
     
     
     public String fpgaImageGlobalId;
+
     public DescribeFpgaImagesResultFpgaImages withFpgaImageGlobalId(String fpgaImageGlobalId) {
         this.fpgaImageGlobalId = fpgaImageGlobalId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeFpgaImagesResultFpgaImages {
     
     
     public String fpgaImageId;
+
     public DescribeFpgaImagesResultFpgaImages withFpgaImageId(String fpgaImageId) {
         this.fpgaImageId = fpgaImageId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeFpgaImagesResultFpgaImages {
     
     
     public String[] instanceTypes;
+
     public DescribeFpgaImagesResultFpgaImages withInstanceTypes(String[] instanceTypes) {
         this.instanceTypes = instanceTypes;
         return this;
@@ -54,6 +60,7 @@ public class DescribeFpgaImagesResultFpgaImages {
     
     
     public String name;
+
     public DescribeFpgaImagesResultFpgaImages withName(String name) {
         this.name = name;
         return this;
@@ -61,6 +68,7 @@ public class DescribeFpgaImagesResultFpgaImages {
     
     
     public String ownerAlias;
+
     public DescribeFpgaImagesResultFpgaImages withOwnerAlias(String ownerAlias) {
         this.ownerAlias = ownerAlias;
         return this;
@@ -68,6 +76,7 @@ public class DescribeFpgaImagesResultFpgaImages {
     
     
     public String ownerId;
+
     public DescribeFpgaImagesResultFpgaImages withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -75,6 +84,7 @@ public class DescribeFpgaImagesResultFpgaImages {
     
     
     public DescribeFpgaImagesResultFpgaImagesPciId pciId;
+
     public DescribeFpgaImagesResultFpgaImages withPciId(DescribeFpgaImagesResultFpgaImagesPciId pciId) {
         this.pciId = pciId;
         return this;
@@ -82,6 +92,7 @@ public class DescribeFpgaImagesResultFpgaImages {
     
     
     public DescribeFpgaImagesResultFpgaImagesProductCodes[] productCodes;
+
     public DescribeFpgaImagesResultFpgaImages withProductCodes(DescribeFpgaImagesResultFpgaImagesProductCodes[] productCodes) {
         this.productCodes = productCodes;
         return this;
@@ -89,6 +100,7 @@ public class DescribeFpgaImagesResultFpgaImages {
     
     
     public Boolean public_;
+
     public DescribeFpgaImagesResultFpgaImages withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -96,6 +108,7 @@ public class DescribeFpgaImagesResultFpgaImages {
     
     
     public String shellVersion;
+
     public DescribeFpgaImagesResultFpgaImages withShellVersion(String shellVersion) {
         this.shellVersion = shellVersion;
         return this;
@@ -103,6 +116,7 @@ public class DescribeFpgaImagesResultFpgaImages {
     
     
     public DescribeFpgaImagesResultFpgaImagesState state;
+
     public DescribeFpgaImagesResultFpgaImages withState(DescribeFpgaImagesResultFpgaImagesState state) {
         this.state = state;
         return this;
@@ -110,6 +124,7 @@ public class DescribeFpgaImagesResultFpgaImages {
     
     
     public DescribeFpgaImagesResultFpgaImagesTags[] tags;
+
     public DescribeFpgaImagesResultFpgaImages withTags(DescribeFpgaImagesResultFpgaImagesTags[] tags) {
         this.tags = tags;
         return this;
@@ -117,9 +132,11 @@ public class DescribeFpgaImagesResultFpgaImages {
     
     
     public OffsetDateTime updateTime;
+
     public DescribeFpgaImagesResultFpgaImages withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public DescribeFpgaImagesResultFpgaImages(){}
 }

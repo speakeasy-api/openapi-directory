@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DeleteAccountAccessConsentsConsentIdSecurity;
 import org.openapis.openapi.models.operations.DeleteAccountAccessConsentsConsentIdRequest;
 import org.openapis.openapi.models.operations.DeleteAccountAccessConsentsConsentIdResponse;
+import org.openapis.openapi.models.operations.DeleteAccountAccessConsentsConsentIdSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -14,16 +13,14 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteAccountAccessConsentsConsentIdRequest req = new DeleteAccountAccessConsentsConsentIdRequest() {{
-                consentId = "corrupti";
-                sandboxId = "provident";
+            DeleteAccountAccessConsentsConsentIdRequest req = new DeleteAccountAccessConsentsConsentIdRequest("corrupti", "provident") {{
                 xCustomerUserAgent = "distinctio";
                 xFapiAuthDate = "quibusdam";
                 xFapiCustomerIpAddress = "unde";
                 xFapiInteractionId = "nulla";
-            }}            
+            }};            
 
-            DeleteAccountAccessConsentsConsentIdResponse res = sdk.accountAccess.deleteAccountAccessConsentsConsentId(req, new DeleteAccountAccessConsentsConsentIdSecurity() {{
+            DeleteAccountAccessConsentsConsentIdResponse res = sdk.accountAccess.deleteAccountAccessConsentsConsentId(req, new DeleteAccountAccessConsentsConsentIdSecurity("corrupti", "illum") {{
                 clientCredentialsToken = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 clientId = "YOUR_API_KEY_HERE";
             }});
@@ -34,5 +31,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

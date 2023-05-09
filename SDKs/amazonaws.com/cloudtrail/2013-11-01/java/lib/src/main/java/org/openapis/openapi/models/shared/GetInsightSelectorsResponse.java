@@ -15,6 +15,7 @@ public class GetInsightSelectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InsightSelectors")
     public InsightSelector[] insightSelectors;
+
     public GetInsightSelectorsResponse withInsightSelectors(InsightSelector[] insightSelectors) {
         this.insightSelectors = insightSelectors;
         return this;
@@ -23,9 +24,11 @@ public class GetInsightSelectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrailARN")
     public String trailARN;
+
     public GetInsightSelectorsResponse withTrailARN(String trailARN) {
         this.trailARN = trailARN;
         return this;
     }
     
+    public GetInsightSelectorsResponse(){}
 }

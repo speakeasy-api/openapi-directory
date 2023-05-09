@@ -12,9 +12,13 @@ public class BuildsListToolsetProjects200ApplicationJSONUwp {
      */
     @JsonProperty("uwpSolutions")
     public BuildsListToolsetProjects200ApplicationJSONUwpUwpSolutions[] uwpSolutions;
+
     public BuildsListToolsetProjects200ApplicationJSONUwp withUwpSolutions(BuildsListToolsetProjects200ApplicationJSONUwpUwpSolutions[] uwpSolutions) {
         this.uwpSolutions = uwpSolutions;
         return this;
     }
     
+    public BuildsListToolsetProjects200ApplicationJSONUwp(@JsonProperty("uwpSolutions") BuildsListToolsetProjects200ApplicationJSONUwpUwpSolutions[] uwpSolutions) {
+        this.uwpSolutions = uwpSolutions;
+  }
 }

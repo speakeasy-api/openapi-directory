@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2AuxiliaryTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quasiIds")
     public GooglePrivacyDlpV2QuasiIdField[] quasiIds;
+
     public GooglePrivacyDlpV2AuxiliaryTable withQuasiIds(GooglePrivacyDlpV2QuasiIdField[] quasiIds) {
         this.quasiIds = quasiIds;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2AuxiliaryTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relativeFrequency")
     public GooglePrivacyDlpV2FieldId relativeFrequency;
+
     public GooglePrivacyDlpV2AuxiliaryTable withRelativeFrequency(GooglePrivacyDlpV2FieldId relativeFrequency) {
         this.relativeFrequency = relativeFrequency;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2AuxiliaryTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("table")
     public GooglePrivacyDlpV2BigQueryTable table;
+
     public GooglePrivacyDlpV2AuxiliaryTable withTable(GooglePrivacyDlpV2BigQueryTable table) {
         this.table = table;
         return this;
     }
     
+    public GooglePrivacyDlpV2AuxiliaryTable(){}
 }

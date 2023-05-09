@@ -62,12 +62,10 @@ public class LendingRequests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAlmawsV1TaskListsRsLendingRequestsResponse res = new org.openapis.openapi.models.operations.GetAlmawsV1TaskListsRsLendingRequestsResponse() {{
+        org.openapis.openapi.models.operations.GetAlmawsV1TaskListsRsLendingRequestsResponse res = new org.openapis.openapi.models.operations.GetAlmawsV1TaskListsRsLendingRequestsResponse(contentType, httpRes.statusCode()) {{
             getAlmawsV1TaskListsRsLendingRequests200ApplicationJSONObject = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -117,12 +115,10 @@ public class LendingRequests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAlmawsV1TaskListsRsLendingRequestsResponse res = new org.openapis.openapi.models.operations.PostAlmawsV1TaskListsRsLendingRequestsResponse() {{
+        org.openapis.openapi.models.operations.PostAlmawsV1TaskListsRsLendingRequestsResponse res = new org.openapis.openapi.models.operations.PostAlmawsV1TaskListsRsLendingRequestsResponse(contentType, httpRes.statusCode()) {{
             onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItems = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

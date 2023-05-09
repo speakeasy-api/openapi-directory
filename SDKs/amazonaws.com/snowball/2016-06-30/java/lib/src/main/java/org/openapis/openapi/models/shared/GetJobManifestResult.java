@@ -15,9 +15,11 @@ public class GetJobManifestResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManifestURI")
     public String manifestURI;
+
     public GetJobManifestResult withManifestURI(String manifestURI) {
         this.manifestURI = manifestURI;
         return this;
     }
     
+    public GetJobManifestResult(){}
 }

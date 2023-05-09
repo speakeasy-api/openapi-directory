@@ -16,6 +16,7 @@ public class CreateSslCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additional_validation_attributes")
     public AdditionalValidationAttribute[] additionalValidationAttributes;
+
     public CreateSslCertificateRequest withAdditionalValidationAttributes(AdditionalValidationAttribute[] additionalValidationAttributes) {
         this.additionalValidationAttributes = additionalValidationAttributes;
         return this;
@@ -28,6 +29,7 @@ public class CreateSslCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificate_type")
     public SslCertificateTypeEnum certificateType;
+
     public CreateSslCertificateRequest withCertificateType(SslCertificateTypeEnum certificateType) {
         this.certificateType = certificateType;
         return this;
@@ -41,6 +43,7 @@ public class CreateSslCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("csr")
     public String csr;
+
     public CreateSslCertificateRequest withCsr(String csr) {
         this.csr = csr;
         return this;
@@ -53,9 +56,11 @@ public class CreateSslCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validation_level")
     public SslCertificateValidationLevelEnum validationLevel;
+
     public CreateSslCertificateRequest withValidationLevel(SslCertificateValidationLevelEnum validationLevel) {
         this.validationLevel = validationLevel;
         return this;
     }
     
+    public CreateSslCertificateRequest(){}
 }

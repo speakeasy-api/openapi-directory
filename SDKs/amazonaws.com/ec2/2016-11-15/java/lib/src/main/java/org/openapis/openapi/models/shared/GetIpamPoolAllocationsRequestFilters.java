@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetIpamPoolAllocationsRequestFilters {
     
     public String name;
+
     public GetIpamPoolAllocationsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class GetIpamPoolAllocationsRequestFilters {
     
     
     public String[] values;
+
     public GetIpamPoolAllocationsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public GetIpamPoolAllocationsRequestFilters(){}
 }

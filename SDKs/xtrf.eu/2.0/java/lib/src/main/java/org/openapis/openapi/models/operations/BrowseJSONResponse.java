@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BrowseJSONResponse {
     
     public String contentType;
+
     public BrowseJSONResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class BrowseJSONResponse {
     
     
     public Integer statusCode;
+
     public BrowseJSONResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class BrowseJSONResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BrowseJSONResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class BrowseJSONResponse {
      */
     
     public java.util.Map<String, Object> browseJSONDefaultApplicationVndXtrfV1PlusJSONObject;
+
     public BrowseJSONResponse withBrowseJSONDefaultApplicationVndXtrfV1PlusJSONObject(java.util.Map<String, Object> browseJSONDefaultApplicationVndXtrfV1PlusJSONObject) {
         this.browseJSONDefaultApplicationVndXtrfV1PlusJSONObject = browseJSONDefaultApplicationVndXtrfV1PlusJSONObject;
         return this;
     }
     
+    public BrowseJSONResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

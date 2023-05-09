@@ -12,6 +12,7 @@ public class GetRiddleSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
     public String category;
+
     public GetRiddleSearchRequest withCategory(String category) {
         this.category = category;
         return this;
@@ -22,9 +23,11 @@ public class GetRiddleSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetRiddleSearchRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public GetRiddleSearchRequest(){}
 }

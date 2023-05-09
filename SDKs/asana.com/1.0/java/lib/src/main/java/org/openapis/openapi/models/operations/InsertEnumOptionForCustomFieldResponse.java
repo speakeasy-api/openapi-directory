@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InsertEnumOptionForCustomFieldResponse {
     
     public String contentType;
+
     public InsertEnumOptionForCustomFieldResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class InsertEnumOptionForCustomFieldResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public InsertEnumOptionForCustomFieldResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class InsertEnumOptionForCustomFieldResponse {
     
     
     public Integer statusCode;
+
     public InsertEnumOptionForCustomFieldResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class InsertEnumOptionForCustomFieldResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InsertEnumOptionForCustomFieldResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class InsertEnumOptionForCustomFieldResponse {
      */
     
     public InsertEnumOptionForCustomField200ApplicationJSON insertEnumOptionForCustomField200ApplicationJSONObject;
+
     public InsertEnumOptionForCustomFieldResponse withInsertEnumOptionForCustomField200ApplicationJSONObject(InsertEnumOptionForCustomField200ApplicationJSON insertEnumOptionForCustomField200ApplicationJSONObject) {
         this.insertEnumOptionForCustomField200ApplicationJSONObject = insertEnumOptionForCustomField200ApplicationJSONObject;
         return this;
     }
     
+    public InsertEnumOptionForCustomFieldResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

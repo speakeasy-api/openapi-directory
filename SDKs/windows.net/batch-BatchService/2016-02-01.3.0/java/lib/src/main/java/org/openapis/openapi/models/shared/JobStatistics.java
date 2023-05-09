@@ -20,6 +20,7 @@ public class JobStatistics {
      */
     @JsonProperty("kernelCPUTime")
     public String kernelCPUTime;
+
     public JobStatistics withKernelCPUTime(String kernelCPUTime) {
         this.kernelCPUTime = kernelCPUTime;
         return this;
@@ -32,6 +33,7 @@ public class JobStatistics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public JobStatistics withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -42,6 +44,7 @@ public class JobStatistics {
      */
     @JsonProperty("numFailedTasks")
     public Long numFailedTasks;
+
     public JobStatistics withNumFailedTasks(Long numFailedTasks) {
         this.numFailedTasks = numFailedTasks;
         return this;
@@ -52,6 +55,7 @@ public class JobStatistics {
      */
     @JsonProperty("numSucceededTasks")
     public Long numSucceededTasks;
+
     public JobStatistics withNumSucceededTasks(Long numSucceededTasks) {
         this.numSucceededTasks = numSucceededTasks;
         return this;
@@ -62,6 +66,7 @@ public class JobStatistics {
      */
     @JsonProperty("numTaskRetries")
     public Long numTaskRetries;
+
     public JobStatistics withNumTaskRetries(Long numTaskRetries) {
         this.numTaskRetries = numTaskRetries;
         return this;
@@ -72,6 +77,7 @@ public class JobStatistics {
      */
     @JsonProperty("readIOGiB")
     public Double readIOGiB;
+
     public JobStatistics withReadIOGiB(Double readIOGiB) {
         this.readIOGiB = readIOGiB;
         return this;
@@ -82,6 +88,7 @@ public class JobStatistics {
      */
     @JsonProperty("readIOps")
     public Long readIOps;
+
     public JobStatistics withReadIOps(Long readIOps) {
         this.readIOps = readIOps;
         return this;
@@ -94,6 +101,7 @@ public class JobStatistics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public JobStatistics withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -104,6 +112,7 @@ public class JobStatistics {
      */
     @JsonProperty("url")
     public String url;
+
     public JobStatistics withUrl(String url) {
         this.url = url;
         return this;
@@ -114,6 +123,7 @@ public class JobStatistics {
      */
     @JsonProperty("userCPUTime")
     public String userCPUTime;
+
     public JobStatistics withUserCPUTime(String userCPUTime) {
         this.userCPUTime = userCPUTime;
         return this;
@@ -124,6 +134,7 @@ public class JobStatistics {
      */
     @JsonProperty("waitTime")
     public String waitTime;
+
     public JobStatistics withWaitTime(String waitTime) {
         this.waitTime = waitTime;
         return this;
@@ -134,6 +145,7 @@ public class JobStatistics {
      */
     @JsonProperty("wallClockTime")
     public String wallClockTime;
+
     public JobStatistics withWallClockTime(String wallClockTime) {
         this.wallClockTime = wallClockTime;
         return this;
@@ -144,6 +156,7 @@ public class JobStatistics {
      */
     @JsonProperty("writeIOGiB")
     public Double writeIOGiB;
+
     public JobStatistics withWriteIOGiB(Double writeIOGiB) {
         this.writeIOGiB = writeIOGiB;
         return this;
@@ -154,9 +167,26 @@ public class JobStatistics {
      */
     @JsonProperty("writeIOps")
     public Long writeIOps;
+
     public JobStatistics withWriteIOps(Long writeIOps) {
         this.writeIOps = writeIOps;
         return this;
     }
     
+    public JobStatistics(@JsonProperty("kernelCPUTime") String kernelCPUTime, @JsonProperty("lastUpdateTime") OffsetDateTime lastUpdateTime, @JsonProperty("numFailedTasks") Long numFailedTasks, @JsonProperty("numSucceededTasks") Long numSucceededTasks, @JsonProperty("numTaskRetries") Long numTaskRetries, @JsonProperty("readIOGiB") Double readIOGiB, @JsonProperty("readIOps") Long readIOps, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("url") String url, @JsonProperty("userCPUTime") String userCPUTime, @JsonProperty("waitTime") String waitTime, @JsonProperty("wallClockTime") String wallClockTime, @JsonProperty("writeIOGiB") Double writeIOGiB, @JsonProperty("writeIOps") Long writeIOps) {
+        this.kernelCPUTime = kernelCPUTime;
+        this.lastUpdateTime = lastUpdateTime;
+        this.numFailedTasks = numFailedTasks;
+        this.numSucceededTasks = numSucceededTasks;
+        this.numTaskRetries = numTaskRetries;
+        this.readIOGiB = readIOGiB;
+        this.readIOps = readIOps;
+        this.startTime = startTime;
+        this.url = url;
+        this.userCPUTime = userCPUTime;
+        this.waitTime = waitTime;
+        this.wallClockTime = wallClockTime;
+        this.writeIOGiB = writeIOGiB;
+        this.writeIOps = writeIOps;
+  }
 }

@@ -15,6 +15,7 @@ public class CurrencySeparators {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("major")
     public String major;
+
     public CurrencySeparators withMajor(String major) {
         this.major = major;
         return this;
@@ -26,9 +27,11 @@ public class CurrencySeparators {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minor")
     public String minor;
+
     public CurrencySeparators withMinor(String minor) {
         this.minor = minor;
         return this;
     }
     
+    public CurrencySeparators(){}
 }

@@ -58,11 +58,9 @@ public class Leaderboards {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesLeaderboardsGetResponse res = new org.openapis.openapi.models.operations.GamesLeaderboardsGetResponse() {{
+        org.openapis.openapi.models.operations.GamesLeaderboardsGetResponse res = new org.openapis.openapi.models.operations.GamesLeaderboardsGetResponse(contentType, httpRes.statusCode()) {{
             leaderboard = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Leaderboards {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesLeaderboardsListResponse res = new org.openapis.openapi.models.operations.GamesLeaderboardsListResponse() {{
+        org.openapis.openapi.models.operations.GamesLeaderboardsListResponse res = new org.openapis.openapi.models.operations.GamesLeaderboardsListResponse(contentType, httpRes.statusCode()) {{
             leaderboardListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

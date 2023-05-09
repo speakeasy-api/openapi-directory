@@ -15,6 +15,7 @@ public class AndroidApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AndroidApp withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class AndroidApp {
      */
     @JsonProperty("id")
     public String id;
+
     public AndroidApp withId(String id) {
         this.id = id;
         return this;
@@ -36,6 +38,7 @@ public class AndroidApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public AndroidApp withLabel(String label) {
         this.label = label;
         return this;
@@ -47,6 +50,7 @@ public class AndroidApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public AndroidApp withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -62,6 +66,7 @@ public class AndroidApp {
      */
     @JsonProperty("status")
     public String status;
+
     public AndroidApp withStatus(String status) {
         this.status = status;
         return this;
@@ -73,6 +78,7 @@ public class AndroidApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionCode")
     public Integer versionCode;
+
     public AndroidApp withVersionCode(Integer versionCode) {
         this.versionCode = versionCode;
         return this;
@@ -84,9 +90,14 @@ public class AndroidApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionName")
     public String versionName;
+
     public AndroidApp withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     
+    public AndroidApp(@JsonProperty("id") String id, @JsonProperty("status") String status) {
+        this.id = id;
+        this.status = status;
+  }
 }

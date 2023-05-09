@@ -15,6 +15,7 @@ public class ListOutgoingTypedLinksRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsistencyLevel")
     public ListOutgoingTypedLinksRequestBodyConsistencyLevelEnum consistencyLevel;
+
     public ListOutgoingTypedLinksRequestBody withConsistencyLevel(ListOutgoingTypedLinksRequestBodyConsistencyLevelEnum consistencyLevel) {
         this.consistencyLevel = consistencyLevel;
         return this;
@@ -26,6 +27,7 @@ public class ListOutgoingTypedLinksRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterAttributeRanges")
     public org.openapis.openapi.models.shared.TypedLinkAttributeRange[] filterAttributeRanges;
+
     public ListOutgoingTypedLinksRequestBody withFilterAttributeRanges(org.openapis.openapi.models.shared.TypedLinkAttributeRange[] filterAttributeRanges) {
         this.filterAttributeRanges = filterAttributeRanges;
         return this;
@@ -37,6 +39,7 @@ public class ListOutgoingTypedLinksRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterTypedLink")
     public ListOutgoingTypedLinksRequestBodyFilterTypedLink filterTypedLink;
+
     public ListOutgoingTypedLinksRequestBody withFilterTypedLink(ListOutgoingTypedLinksRequestBodyFilterTypedLink filterTypedLink) {
         this.filterTypedLink = filterTypedLink;
         return this;
@@ -48,6 +51,7 @@ public class ListOutgoingTypedLinksRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListOutgoingTypedLinksRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -59,6 +63,7 @@ public class ListOutgoingTypedLinksRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListOutgoingTypedLinksRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -69,9 +74,13 @@ public class ListOutgoingTypedLinksRequestBody {
      */
     @JsonProperty("ObjectReference")
     public ListOutgoingTypedLinksRequestBodyObjectReference objectReference;
+
     public ListOutgoingTypedLinksRequestBody withObjectReference(ListOutgoingTypedLinksRequestBodyObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
     }
     
+    public ListOutgoingTypedLinksRequestBody(@JsonProperty("ObjectReference") ListOutgoingTypedLinksRequestBodyObjectReference objectReference) {
+        this.objectReference = objectReference;
+  }
 }

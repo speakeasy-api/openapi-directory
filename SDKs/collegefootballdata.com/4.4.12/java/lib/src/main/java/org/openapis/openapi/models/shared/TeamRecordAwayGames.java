@@ -12,6 +12,7 @@ public class TeamRecordAwayGames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("games")
     public Long games;
+
     public TeamRecordAwayGames withGames(Long games) {
         this.games = games;
         return this;
@@ -20,6 +21,7 @@ public class TeamRecordAwayGames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("losses")
     public Long losses;
+
     public TeamRecordAwayGames withLosses(Long losses) {
         this.losses = losses;
         return this;
@@ -28,6 +30,7 @@ public class TeamRecordAwayGames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ties")
     public Long ties;
+
     public TeamRecordAwayGames withTies(Long ties) {
         this.ties = ties;
         return this;
@@ -36,9 +39,11 @@ public class TeamRecordAwayGames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wins")
     public Long wins;
+
     public TeamRecordAwayGames withWins(Long wins) {
         this.wins = wins;
         return this;
     }
     
+    public TeamRecordAwayGames(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RejectQualificationRequestRequest {
     @JsonProperty("QualificationRequestId")
     public String qualificationRequestId;
+
     public RejectQualificationRequestRequest withQualificationRequestId(String qualificationRequestId) {
         this.qualificationRequestId = qualificationRequestId;
         return this;
@@ -19,9 +20,13 @@ public class RejectQualificationRequestRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public String reason;
+
     public RejectQualificationRequestRequest withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public RejectQualificationRequestRequest(@JsonProperty("QualificationRequestId") String qualificationRequestId) {
+        this.qualificationRequestId = qualificationRequestId;
+  }
 }

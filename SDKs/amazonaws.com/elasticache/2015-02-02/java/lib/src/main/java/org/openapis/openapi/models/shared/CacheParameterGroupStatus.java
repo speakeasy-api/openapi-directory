@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CacheParameterGroupStatus {
     
     public String[] cacheNodeIdsToReboot;
+
     public CacheParameterGroupStatus withCacheNodeIdsToReboot(String[] cacheNodeIdsToReboot) {
         this.cacheNodeIdsToReboot = cacheNodeIdsToReboot;
         return this;
@@ -19,6 +20,7 @@ public class CacheParameterGroupStatus {
     
     
     public String cacheParameterGroupName;
+
     public CacheParameterGroupStatus withCacheParameterGroupName(String cacheParameterGroupName) {
         this.cacheParameterGroupName = cacheParameterGroupName;
         return this;
@@ -26,9 +28,11 @@ public class CacheParameterGroupStatus {
     
     
     public String parameterApplyStatus;
+
     public CacheParameterGroupStatus withParameterApplyStatus(String parameterApplyStatus) {
         this.parameterApplyStatus = parameterApplyStatus;
         return this;
     }
     
+    public CacheParameterGroupStatus(){}
 }

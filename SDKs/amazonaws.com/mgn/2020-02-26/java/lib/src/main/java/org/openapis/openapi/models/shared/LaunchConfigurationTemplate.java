@@ -15,6 +15,7 @@ public class LaunchConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public LaunchConfigurationTemplate withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class LaunchConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatePublicIpAddress")
     public Boolean associatePublicIpAddress;
+
     public LaunchConfigurationTemplate withAssociatePublicIpAddress(Boolean associatePublicIpAddress) {
         this.associatePublicIpAddress = associatePublicIpAddress;
         return this;
@@ -31,6 +33,7 @@ public class LaunchConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootMode")
     public BootModeEnum bootMode;
+
     public LaunchConfigurationTemplate withBootMode(BootModeEnum bootMode) {
         this.bootMode = bootMode;
         return this;
@@ -39,6 +42,7 @@ public class LaunchConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyPrivateIp")
     public Boolean copyPrivateIp;
+
     public LaunchConfigurationTemplate withCopyPrivateIp(Boolean copyPrivateIp) {
         this.copyPrivateIp = copyPrivateIp;
         return this;
@@ -47,6 +51,7 @@ public class LaunchConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyTags")
     public Boolean copyTags;
+
     public LaunchConfigurationTemplate withCopyTags(Boolean copyTags) {
         this.copyTags = copyTags;
         return this;
@@ -55,6 +60,7 @@ public class LaunchConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2LaunchTemplateID")
     public String ec2LaunchTemplateID;
+
     public LaunchConfigurationTemplate withEc2LaunchTemplateID(String ec2LaunchTemplateID) {
         this.ec2LaunchTemplateID = ec2LaunchTemplateID;
         return this;
@@ -63,6 +69,7 @@ public class LaunchConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableMapAutoTagging")
     public Boolean enableMapAutoTagging;
+
     public LaunchConfigurationTemplate withEnableMapAutoTagging(Boolean enableMapAutoTagging) {
         this.enableMapAutoTagging = enableMapAutoTagging;
         return this;
@@ -71,6 +78,7 @@ public class LaunchConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("largeVolumeConf")
     public LaunchTemplateDiskConf largeVolumeConf;
+
     public LaunchConfigurationTemplate withLargeVolumeConf(LaunchTemplateDiskConf largeVolumeConf) {
         this.largeVolumeConf = largeVolumeConf;
         return this;
@@ -78,6 +86,7 @@ public class LaunchConfigurationTemplate {
     
     @JsonProperty("launchConfigurationTemplateID")
     public String launchConfigurationTemplateID;
+
     public LaunchConfigurationTemplate withLaunchConfigurationTemplateID(String launchConfigurationTemplateID) {
         this.launchConfigurationTemplateID = launchConfigurationTemplateID;
         return this;
@@ -86,6 +95,7 @@ public class LaunchConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchDisposition")
     public LaunchDispositionEnum launchDisposition;
+
     public LaunchConfigurationTemplate withLaunchDisposition(LaunchDispositionEnum launchDisposition) {
         this.launchDisposition = launchDisposition;
         return this;
@@ -97,6 +107,7 @@ public class LaunchConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licensing")
     public Licensing licensing;
+
     public LaunchConfigurationTemplate withLicensing(Licensing licensing) {
         this.licensing = licensing;
         return this;
@@ -105,6 +116,7 @@ public class LaunchConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapAutoTaggingMpeID")
     public String mapAutoTaggingMpeID;
+
     public LaunchConfigurationTemplate withMapAutoTaggingMpeID(String mapAutoTaggingMpeID) {
         this.mapAutoTaggingMpeID = mapAutoTaggingMpeID;
         return this;
@@ -113,6 +125,7 @@ public class LaunchConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postLaunchActions")
     public PostLaunchActions postLaunchActions;
+
     public LaunchConfigurationTemplate withPostLaunchActions(PostLaunchActions postLaunchActions) {
         this.postLaunchActions = postLaunchActions;
         return this;
@@ -121,6 +134,7 @@ public class LaunchConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smallVolumeConf")
     public LaunchTemplateDiskConf smallVolumeConf;
+
     public LaunchConfigurationTemplate withSmallVolumeConf(LaunchTemplateDiskConf smallVolumeConf) {
         this.smallVolumeConf = smallVolumeConf;
         return this;
@@ -129,6 +143,7 @@ public class LaunchConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smallVolumeMaxSize")
     public Long smallVolumeMaxSize;
+
     public LaunchConfigurationTemplate withSmallVolumeMaxSize(Long smallVolumeMaxSize) {
         this.smallVolumeMaxSize = smallVolumeMaxSize;
         return this;
@@ -137,6 +152,7 @@ public class LaunchConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public LaunchConfigurationTemplate withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -145,9 +161,13 @@ public class LaunchConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetInstanceTypeRightSizingMethod")
     public TargetInstanceTypeRightSizingMethodEnum targetInstanceTypeRightSizingMethod;
+
     public LaunchConfigurationTemplate withTargetInstanceTypeRightSizingMethod(TargetInstanceTypeRightSizingMethodEnum targetInstanceTypeRightSizingMethod) {
         this.targetInstanceTypeRightSizingMethod = targetInstanceTypeRightSizingMethod;
         return this;
     }
     
+    public LaunchConfigurationTemplate(@JsonProperty("launchConfigurationTemplateID") String launchConfigurationTemplateID) {
+        this.launchConfigurationTemplateID = launchConfigurationTemplateID;
+  }
 }

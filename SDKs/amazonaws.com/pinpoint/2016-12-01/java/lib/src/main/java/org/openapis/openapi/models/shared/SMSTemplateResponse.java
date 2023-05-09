@@ -15,6 +15,7 @@ public class SMSTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public SMSTemplateResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class SMSTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Body")
     public String body;
+
     public SMSTemplateResponse withBody(String body) {
         this.body = body;
         return this;
@@ -30,6 +32,7 @@ public class SMSTemplateResponse {
     
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public SMSTemplateResponse withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -38,6 +41,7 @@ public class SMSTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSubstitutions")
     public String defaultSubstitutions;
+
     public SMSTemplateResponse withDefaultSubstitutions(String defaultSubstitutions) {
         this.defaultSubstitutions = defaultSubstitutions;
         return this;
@@ -45,6 +49,7 @@ public class SMSTemplateResponse {
     
     @JsonProperty("LastModifiedDate")
     public String lastModifiedDate;
+
     public SMSTemplateResponse withLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -53,6 +58,7 @@ public class SMSTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommenderId")
     public String recommenderId;
+
     public SMSTemplateResponse withRecommenderId(String recommenderId) {
         this.recommenderId = recommenderId;
         return this;
@@ -61,6 +67,7 @@ public class SMSTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateDescription")
     public String templateDescription;
+
     public SMSTemplateResponse withTemplateDescription(String templateDescription) {
         this.templateDescription = templateDescription;
         return this;
@@ -68,6 +75,7 @@ public class SMSTemplateResponse {
     
     @JsonProperty("TemplateName")
     public String templateName;
+
     public SMSTemplateResponse withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -75,6 +83,7 @@ public class SMSTemplateResponse {
     
     @JsonProperty("TemplateType")
     public TemplateTypeEnum templateType;
+
     public SMSTemplateResponse withTemplateType(TemplateTypeEnum templateType) {
         this.templateType = templateType;
         return this;
@@ -83,6 +92,7 @@ public class SMSTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public SMSTemplateResponse withVersion(String version) {
         this.version = version;
         return this;
@@ -91,9 +101,16 @@ public class SMSTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public SMSTemplateResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public SMSTemplateResponse(@JsonProperty("CreationDate") String creationDate, @JsonProperty("LastModifiedDate") String lastModifiedDate, @JsonProperty("TemplateName") String templateName, @JsonProperty("TemplateType") TemplateTypeEnum templateType) {
+        this.creationDate = creationDate;
+        this.lastModifiedDate = lastModifiedDate;
+        this.templateName = templateName;
+        this.templateType = templateType;
+  }
 }

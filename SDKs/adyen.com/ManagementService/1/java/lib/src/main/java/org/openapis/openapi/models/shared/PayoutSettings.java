@@ -21,6 +21,7 @@ public class PayoutSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed")
     public Boolean allowed;
+
     public PayoutSettings withAllowed(Boolean allowed) {
         this.allowed = allowed;
         return this;
@@ -34,6 +35,7 @@ public class PayoutSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public PayoutSettings withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -54,6 +56,7 @@ public class PayoutSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabledFromDate")
     public String enabledFromDate;
+
     public PayoutSettings withEnabledFromDate(String enabledFromDate) {
         this.enabledFromDate = enabledFromDate;
         return this;
@@ -64,6 +67,7 @@ public class PayoutSettings {
      */
     @JsonProperty("id")
     public String id;
+
     public PayoutSettings withId(String id) {
         this.id = id;
         return this;
@@ -80,6 +84,7 @@ public class PayoutSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public PayoutSettingsPriorityEnum priority;
+
     public PayoutSettings withPriority(PayoutSettingsPriorityEnum priority) {
         this.priority = priority;
         return this;
@@ -90,6 +95,7 @@ public class PayoutSettings {
      */
     @JsonProperty("transferInstrumentId")
     public String transferInstrumentId;
+
     public PayoutSettings withTransferInstrumentId(String transferInstrumentId) {
         this.transferInstrumentId = transferInstrumentId;
         return this;
@@ -107,9 +113,14 @@ public class PayoutSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationStatus")
     public PayoutSettingsVerificationStatusEnum verificationStatus;
+
     public PayoutSettings withVerificationStatus(PayoutSettingsVerificationStatusEnum verificationStatus) {
         this.verificationStatus = verificationStatus;
         return this;
     }
     
+    public PayoutSettings(@JsonProperty("id") String id, @JsonProperty("transferInstrumentId") String transferInstrumentId) {
+        this.id = id;
+        this.transferInstrumentId = transferInstrumentId;
+  }
 }

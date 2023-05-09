@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAppResponse {
     
     public String contentType;
+
     public DeleteAppResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAppResponse {
      */
     
     public java.util.Map<String, Object> deleteAppResponse;
+
     public DeleteAppResponse withDeleteAppResponse(java.util.Map<String, Object> deleteAppResponse) {
         this.deleteAppResponse = deleteAppResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAppResponse {
      */
     
     public Object internalError;
+
     public DeleteAppResponse withInternalError(Object internalError) {
         this.internalError = internalError;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAppResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteAppResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAppResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public DeleteAppResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteAppResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DeleteAppResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteAppResponse {
     
     
     public Integer statusCode;
+
     public DeleteAppResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteAppResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAppResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteAppResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public DeleteAppResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public DeleteAppResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1DetectIntentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputAudio")
     public String inputAudio;
+
     public GoogleCloudDialogflowV2beta1DetectIntentRequest withInputAudio(String inputAudio) {
         this.inputAudio = inputAudio;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1DetectIntentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputAudioConfig")
     public GoogleCloudDialogflowV2beta1OutputAudioConfig outputAudioConfig;
+
     public GoogleCloudDialogflowV2beta1DetectIntentRequest withOutputAudioConfig(GoogleCloudDialogflowV2beta1OutputAudioConfig outputAudioConfig) {
         this.outputAudioConfig = outputAudioConfig;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1DetectIntentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputAudioConfigMask")
     public String outputAudioConfigMask;
+
     public GoogleCloudDialogflowV2beta1DetectIntentRequest withOutputAudioConfigMask(String outputAudioConfigMask) {
         this.outputAudioConfigMask = outputAudioConfigMask;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1DetectIntentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryInput")
     public GoogleCloudDialogflowV2beta1QueryInput queryInput;
+
     public GoogleCloudDialogflowV2beta1DetectIntentRequest withQueryInput(GoogleCloudDialogflowV2beta1QueryInput queryInput) {
         this.queryInput = queryInput;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDialogflowV2beta1DetectIntentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryParams")
     public GoogleCloudDialogflowV2beta1QueryParameters queryParams;
+
     public GoogleCloudDialogflowV2beta1DetectIntentRequest withQueryParams(GoogleCloudDialogflowV2beta1QueryParameters queryParams) {
         this.queryParams = queryParams;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1DetectIntentRequest(){}
 }

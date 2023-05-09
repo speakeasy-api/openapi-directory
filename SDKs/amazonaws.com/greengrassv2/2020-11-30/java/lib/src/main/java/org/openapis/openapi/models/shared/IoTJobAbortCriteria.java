@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IoTJobAbortCriteria {
     @JsonProperty("action")
     public IoTJobAbortActionEnum action;
+
     public IoTJobAbortCriteria withAction(IoTJobAbortActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +20,7 @@ public class IoTJobAbortCriteria {
     
     @JsonProperty("failureType")
     public IoTJobExecutionFailureTypeEnum failureType;
+
     public IoTJobAbortCriteria withFailureType(IoTJobExecutionFailureTypeEnum failureType) {
         this.failureType = failureType;
         return this;
@@ -26,6 +28,7 @@ public class IoTJobAbortCriteria {
     
     @JsonProperty("minNumberOfExecutedThings")
     public Long minNumberOfExecutedThings;
+
     public IoTJobAbortCriteria withMinNumberOfExecutedThings(Long minNumberOfExecutedThings) {
         this.minNumberOfExecutedThings = minNumberOfExecutedThings;
         return this;
@@ -33,9 +36,16 @@ public class IoTJobAbortCriteria {
     
     @JsonProperty("thresholdPercentage")
     public Double thresholdPercentage;
+
     public IoTJobAbortCriteria withThresholdPercentage(Double thresholdPercentage) {
         this.thresholdPercentage = thresholdPercentage;
         return this;
     }
     
+    public IoTJobAbortCriteria(@JsonProperty("action") IoTJobAbortActionEnum action, @JsonProperty("failureType") IoTJobExecutionFailureTypeEnum failureType, @JsonProperty("minNumberOfExecutedThings") Long minNumberOfExecutedThings, @JsonProperty("thresholdPercentage") Double thresholdPercentage) {
+        this.action = action;
+        this.failureType = failureType;
+        this.minNumberOfExecutedThings = minNumberOfExecutedThings;
+        this.thresholdPercentage = thresholdPercentage;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAuthorizableKeystoreResponse {
     
     public String contentType;
+
     public GetAuthorizableKeystoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAuthorizableKeystoreResponse {
      */
     
     public String keystoreInfo;
+
     public GetAuthorizableKeystoreResponse withKeystoreInfo(String keystoreInfo) {
         this.keystoreInfo = keystoreInfo;
         return this;
@@ -26,6 +29,7 @@ public class GetAuthorizableKeystoreResponse {
     
     
     public Integer statusCode;
+
     public GetAuthorizableKeystoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetAuthorizableKeystoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAuthorizableKeystoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetAuthorizableKeystoreResponse {
      */
     
     public String getAuthorizableKeystoreDefaultTextPlainString;
+
     public GetAuthorizableKeystoreResponse withGetAuthorizableKeystoreDefaultTextPlainString(String getAuthorizableKeystoreDefaultTextPlainString) {
         this.getAuthorizableKeystoreDefaultTextPlainString = getAuthorizableKeystoreDefaultTextPlainString;
         return this;
     }
     
+    public GetAuthorizableKeystoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

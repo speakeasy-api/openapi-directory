@@ -51,14 +51,12 @@ public class CustomDevice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomDeviceGetResponse res = new org.openapis.openapi.models.operations.CustomDeviceGetResponse() {{
+        org.openapis.openapi.models.operations.CustomDeviceGetResponse res = new org.openapis.openapi.models.operations.CustomDeviceGetResponse(contentType, httpRes.statusCode()) {{
             customDeviceToPosts = null;
             customDeviceToPosts = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,14 +113,12 @@ public class CustomDevice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomDevicePostFormResponse res = new org.openapis.openapi.models.operations.CustomDevicePostFormResponse() {{
+        org.openapis.openapi.models.operations.CustomDevicePostFormResponse res = new org.openapis.openapi.models.operations.CustomDevicePostFormResponse(contentType, httpRes.statusCode()) {{
             customDeviceToPost = null;
             customDeviceToPost = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -181,14 +177,12 @@ public class CustomDevice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomDevicePostJsonResponse res = new org.openapis.openapi.models.operations.CustomDevicePostJsonResponse() {{
+        org.openapis.openapi.models.operations.CustomDevicePostJsonResponse res = new org.openapis.openapi.models.operations.CustomDevicePostJsonResponse(contentType, httpRes.statusCode()) {{
             customDeviceToPost = null;
             customDeviceToPost = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,14 +241,12 @@ public class CustomDevice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomDevicePostRawResponse res = new org.openapis.openapi.models.operations.CustomDevicePostRawResponse() {{
+        org.openapis.openapi.models.operations.CustomDevicePostRawResponse res = new org.openapis.openapi.models.operations.CustomDevicePostRawResponse(contentType, httpRes.statusCode()) {{
             customDeviceToPost = null;
             customDeviceToPost = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -304,14 +296,12 @@ public class CustomDevice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiCustomDeviceIdResponse res = new org.openapis.openapi.models.operations.GetApiCustomDeviceIdResponse() {{
+        org.openapis.openapi.models.operations.GetApiCustomDeviceIdResponse res = new org.openapis.openapi.models.operations.GetApiCustomDeviceIdResponse(contentType, httpRes.statusCode()) {{
             customDeviceToPost = null;
             customDeviceToPost = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

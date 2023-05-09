@@ -18,9 +18,11 @@ public class GetNotificationChannelVerificationCodeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public GetNotificationChannelVerificationCodeRequest withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
     }
     
+    public GetNotificationChannelVerificationCodeRequest(){}
 }

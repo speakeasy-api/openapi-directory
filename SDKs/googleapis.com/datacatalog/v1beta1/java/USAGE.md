@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DatacatalogCatalogSearchSecurity;
 import org.openapis.openapi.models.operations.DatacatalogCatalogSearchRequest;
 import org.openapis.openapi.models.operations.DatacatalogCatalogSearchResponse;
+import org.openapis.openapi.models.operations.DatacatalogCatalogSearchSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1beta1SearchCatalogRequest;
 import org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope;
@@ -19,7 +18,7 @@ public class Application {
                 .build();
 
             DatacatalogCatalogSearchRequest req = new DatacatalogCatalogSearchRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 googleCloudDatacatalogV1beta1SearchCatalogRequest = new GoogleCloudDatacatalogV1beta1SearchCatalogRequest() {{
                     orderBy = "provident";
                     pageSize = 715190;
@@ -44,10 +43,10 @@ public class Application {
                             add("tempora"),
                             add("suscipit"),
                         }};
-                    }};
-                }};
+                    }};;
+                }};;
                 accessToken = "molestiae";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "placeat";
                 fields = "voluptatum";
                 key = "iusto";
@@ -56,18 +55,20 @@ public class Application {
                 quotaUser = "nisi";
                 uploadType = "recusandae";
                 uploadProtocol = "temporibus";
-            }}            
+            }};            
 
-            DatacatalogCatalogSearchResponse res = sdk.catalog.datacatalogCatalogSearch(req, new DatacatalogCatalogSearchSecurity() {{
+            DatacatalogCatalogSearchResponse res = sdk.catalog.datacatalogCatalogSearch(req, new DatacatalogCatalogSearchSecurity("ab", "quis") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.googleCloudDatacatalogV1beta1SearchCatalogResponse.isPresent()) {
+            if (res.googleCloudDatacatalogV1beta1SearchCatalogResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

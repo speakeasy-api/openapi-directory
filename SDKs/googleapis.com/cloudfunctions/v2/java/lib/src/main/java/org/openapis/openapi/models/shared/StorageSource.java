@@ -18,6 +18,7 @@ public class StorageSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public String bucket;
+
     public StorageSource withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -29,6 +30,7 @@ public class StorageSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generation")
     public String generation;
+
     public StorageSource withGeneration(String generation) {
         this.generation = generation;
         return this;
@@ -40,9 +42,11 @@ public class StorageSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public StorageSource withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public StorageSource(){}
 }

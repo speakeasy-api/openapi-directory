@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyDBParameterGroupMessage {
     
     public String dbParameterGroupName;
+
     public ModifyDBParameterGroupMessage withDBParameterGroupName(String dbParameterGroupName) {
         this.dbParameterGroupName = dbParameterGroupName;
         return this;
@@ -16,9 +17,14 @@ public class ModifyDBParameterGroupMessage {
     
     
     public ParametersList[] parameters;
+
     public ModifyDBParameterGroupMessage withParameters(ParametersList[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public ModifyDBParameterGroupMessage(@JsonProperty("DBParameterGroupName") String dbParameterGroupName, @JsonProperty("Parameters") ParametersList[] parameters) {
+        this.dbParameterGroupName = dbParameterGroupName;
+        this.parameters = parameters;
+  }
 }

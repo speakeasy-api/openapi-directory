@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TrustedAdvisorCheckRefreshStatus {
     @JsonProperty("checkId")
     public String checkId;
+
     public TrustedAdvisorCheckRefreshStatus withCheckId(String checkId) {
         this.checkId = checkId;
         return this;
@@ -19,6 +20,7 @@ public class TrustedAdvisorCheckRefreshStatus {
     
     @JsonProperty("millisUntilNextRefreshable")
     public Long millisUntilNextRefreshable;
+
     public TrustedAdvisorCheckRefreshStatus withMillisUntilNextRefreshable(Long millisUntilNextRefreshable) {
         this.millisUntilNextRefreshable = millisUntilNextRefreshable;
         return this;
@@ -26,9 +28,15 @@ public class TrustedAdvisorCheckRefreshStatus {
     
     @JsonProperty("status")
     public String status;
+
     public TrustedAdvisorCheckRefreshStatus withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public TrustedAdvisorCheckRefreshStatus(@JsonProperty("checkId") String checkId, @JsonProperty("millisUntilNextRefreshable") Long millisUntilNextRefreshable, @JsonProperty("status") String status) {
+        this.checkId = checkId;
+        this.millisUntilNextRefreshable = millisUntilNextRefreshable;
+        this.status = status;
+  }
 }

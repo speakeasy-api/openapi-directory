@@ -18,6 +18,7 @@ public class BranchConfigurationsGet200ApplicationJSONToolsets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("android")
     public BranchConfigurationsGet200ApplicationJSONToolsetsAndroid android;
+
     public BranchConfigurationsGet200ApplicationJSONToolsets withAndroid(BranchConfigurationsGet200ApplicationJSONToolsetsAndroid android) {
         this.android = android;
         return this;
@@ -29,6 +30,7 @@ public class BranchConfigurationsGet200ApplicationJSONToolsets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("javascript")
     public BranchConfigurationsGet200ApplicationJSONToolsetsJavascript javascript;
+
     public BranchConfigurationsGet200ApplicationJSONToolsets withJavascript(BranchConfigurationsGet200ApplicationJSONToolsetsJavascript javascript) {
         this.javascript = javascript;
         return this;
@@ -40,6 +42,7 @@ public class BranchConfigurationsGet200ApplicationJSONToolsets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xamarin")
     public BranchConfigurationsGet200ApplicationJSONToolsetsXamarin xamarin;
+
     public BranchConfigurationsGet200ApplicationJSONToolsets withXamarin(BranchConfigurationsGet200ApplicationJSONToolsetsXamarin xamarin) {
         this.xamarin = xamarin;
         return this;
@@ -51,9 +54,11 @@ public class BranchConfigurationsGet200ApplicationJSONToolsets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xcode")
     public BranchConfigurationsGet200ApplicationJSONToolsetsXcode xcode;
+
     public BranchConfigurationsGet200ApplicationJSONToolsets withXcode(BranchConfigurationsGet200ApplicationJSONToolsetsXcode xcode) {
         this.xcode = xcode;
         return this;
     }
     
+    public BranchConfigurationsGet200ApplicationJSONToolsets(){}
 }

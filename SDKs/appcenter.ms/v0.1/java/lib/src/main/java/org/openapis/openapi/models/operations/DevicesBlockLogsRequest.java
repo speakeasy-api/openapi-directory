@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DevicesBlockLogsRequest {
@@ -12,6 +13,7 @@ public class DevicesBlockLogsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public DevicesBlockLogsRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class DevicesBlockLogsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=install_id")
     public String installId;
+
     public DevicesBlockLogsRequest withInstallId(String installId) {
         this.installId = installId;
         return this;
@@ -32,9 +35,15 @@ public class DevicesBlockLogsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public DevicesBlockLogsRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public DevicesBlockLogsRequest(@JsonProperty("app_name") String appName, @JsonProperty("install_id") String installId, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.installId = installId;
+        this.ownerName = ownerName;
+  }
 }

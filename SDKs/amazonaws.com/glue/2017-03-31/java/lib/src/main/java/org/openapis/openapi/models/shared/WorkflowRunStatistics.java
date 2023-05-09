@@ -15,6 +15,7 @@ public class WorkflowRunStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErroredActions")
     public Long erroredActions;
+
     public WorkflowRunStatistics withErroredActions(Long erroredActions) {
         this.erroredActions = erroredActions;
         return this;
@@ -23,6 +24,7 @@ public class WorkflowRunStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedActions")
     public Long failedActions;
+
     public WorkflowRunStatistics withFailedActions(Long failedActions) {
         this.failedActions = failedActions;
         return this;
@@ -31,6 +33,7 @@ public class WorkflowRunStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunningActions")
     public Long runningActions;
+
     public WorkflowRunStatistics withRunningActions(Long runningActions) {
         this.runningActions = runningActions;
         return this;
@@ -39,6 +42,7 @@ public class WorkflowRunStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoppedActions")
     public Long stoppedActions;
+
     public WorkflowRunStatistics withStoppedActions(Long stoppedActions) {
         this.stoppedActions = stoppedActions;
         return this;
@@ -47,6 +51,7 @@ public class WorkflowRunStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SucceededActions")
     public Long succeededActions;
+
     public WorkflowRunStatistics withSucceededActions(Long succeededActions) {
         this.succeededActions = succeededActions;
         return this;
@@ -55,6 +60,7 @@ public class WorkflowRunStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeoutActions")
     public Long timeoutActions;
+
     public WorkflowRunStatistics withTimeoutActions(Long timeoutActions) {
         this.timeoutActions = timeoutActions;
         return this;
@@ -63,6 +69,7 @@ public class WorkflowRunStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalActions")
     public Long totalActions;
+
     public WorkflowRunStatistics withTotalActions(Long totalActions) {
         this.totalActions = totalActions;
         return this;
@@ -71,9 +78,11 @@ public class WorkflowRunStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WaitingActions")
     public Long waitingActions;
+
     public WorkflowRunStatistics withWaitingActions(Long waitingActions) {
         this.waitingActions = waitingActions;
         return this;
     }
     
+    public WorkflowRunStatistics(){}
 }

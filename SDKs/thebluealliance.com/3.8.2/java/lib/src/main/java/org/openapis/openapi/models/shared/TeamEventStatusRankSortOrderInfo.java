@@ -15,6 +15,7 @@ public class TeamEventStatusRankSortOrderInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TeamEventStatusRankSortOrderInfo withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +27,11 @@ public class TeamEventStatusRankSortOrderInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precision")
     public Long precision;
+
     public TeamEventStatusRankSortOrderInfo withPrecision(Long precision) {
         this.precision = precision;
         return this;
     }
     
+    public TeamEventStatusRankSortOrderInfo(){}
 }

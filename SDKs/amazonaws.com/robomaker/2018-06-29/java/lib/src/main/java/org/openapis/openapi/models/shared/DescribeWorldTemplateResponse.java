@@ -20,6 +20,7 @@ public class DescribeWorldTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public DescribeWorldTemplateResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class DescribeWorldTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public DescribeWorldTemplateResponse withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -38,6 +40,7 @@ public class DescribeWorldTemplateResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public DescribeWorldTemplateResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -48,6 +51,7 @@ public class DescribeWorldTemplateResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public DescribeWorldTemplateResponse withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -56,6 +60,7 @@ public class DescribeWorldTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DescribeWorldTemplateResponse withName(String name) {
         this.name = name;
         return this;
@@ -64,6 +69,7 @@ public class DescribeWorldTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public DescribeWorldTemplateResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -72,9 +78,11 @@ public class DescribeWorldTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public DescribeWorldTemplateResponse withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public DescribeWorldTemplateResponse(){}
 }

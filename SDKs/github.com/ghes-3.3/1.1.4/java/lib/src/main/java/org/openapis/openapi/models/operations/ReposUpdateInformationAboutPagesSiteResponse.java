@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposUpdateInformationAboutPagesSiteResponse {
     
     public String contentType;
+
     public ReposUpdateInformationAboutPagesSiteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposUpdateInformationAboutPagesSiteResponse {
     
     
     public Integer statusCode;
+
     public ReposUpdateInformationAboutPagesSiteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposUpdateInformationAboutPagesSiteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposUpdateInformationAboutPagesSiteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposUpdateInformationAboutPagesSiteResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposUpdateInformationAboutPagesSiteResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class ReposUpdateInformationAboutPagesSiteResponse {
      */
     
     public org.openapis.openapi.models.shared.ScimError scimError;
+
     public ReposUpdateInformationAboutPagesSiteResponse withScimError(org.openapis.openapi.models.shared.ScimError scimError) {
         this.scimError = scimError;
         return this;
@@ -53,9 +59,14 @@ public class ReposUpdateInformationAboutPagesSiteResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposUpdateInformationAboutPagesSiteResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposUpdateInformationAboutPagesSiteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

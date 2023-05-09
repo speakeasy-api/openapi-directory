@@ -18,6 +18,7 @@ public class GoogleUpdatedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diffMask")
     public String diffMask;
+
     public GoogleUpdatedLocation withDiffMask(String diffMask) {
         this.diffMask = diffMask;
         return this;
@@ -29,9 +30,11 @@ public class GoogleUpdatedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Location location;
+
     public GoogleUpdatedLocation withLocation(Location location) {
         this.location = location;
         return this;
     }
     
+    public GoogleUpdatedLocation(){}
 }

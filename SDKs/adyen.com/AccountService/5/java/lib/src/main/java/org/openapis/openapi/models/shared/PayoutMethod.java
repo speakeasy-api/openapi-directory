@@ -14,6 +14,7 @@ public class PayoutMethod {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public PayoutMethod withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -25,6 +26,7 @@ public class PayoutMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutMethodCode")
     public String payoutMethodCode;
+
     public PayoutMethod withPayoutMethodCode(String payoutMethodCode) {
         this.payoutMethodCode = payoutMethodCode;
         return this;
@@ -36,6 +38,7 @@ public class PayoutMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutMethodReference")
     public String payoutMethodReference;
+
     public PayoutMethod withPayoutMethodReference(String payoutMethodReference) {
         this.payoutMethodReference = payoutMethodReference;
         return this;
@@ -46,6 +49,7 @@ public class PayoutMethod {
      */
     @JsonProperty("recurringDetailReference")
     public String recurringDetailReference;
+
     public PayoutMethod withRecurringDetailReference(String recurringDetailReference) {
         this.recurringDetailReference = recurringDetailReference;
         return this;
@@ -56,9 +60,15 @@ public class PayoutMethod {
      */
     @JsonProperty("shopperReference")
     public String shopperReference;
+
     public PayoutMethod withShopperReference(String shopperReference) {
         this.shopperReference = shopperReference;
         return this;
     }
     
+    public PayoutMethod(@JsonProperty("merchantAccount") String merchantAccount, @JsonProperty("recurringDetailReference") String recurringDetailReference, @JsonProperty("shopperReference") String shopperReference) {
+        this.merchantAccount = merchantAccount;
+        this.recurringDetailReference = recurringDetailReference;
+        this.shopperReference = shopperReference;
+  }
 }

@@ -12,6 +12,7 @@ public class DeleteBudgetActionRequest {
      */
     @JsonProperty("AccountId")
     public String accountId;
+
     public DeleteBudgetActionRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,6 +20,7 @@ public class DeleteBudgetActionRequest {
     
     @JsonProperty("ActionId")
     public String actionId;
+
     public DeleteBudgetActionRequest withActionId(String actionId) {
         this.actionId = actionId;
         return this;
@@ -29,9 +31,15 @@ public class DeleteBudgetActionRequest {
      */
     @JsonProperty("BudgetName")
     public String budgetName;
+
     public DeleteBudgetActionRequest withBudgetName(String budgetName) {
         this.budgetName = budgetName;
         return this;
     }
     
+    public DeleteBudgetActionRequest(@JsonProperty("AccountId") String accountId, @JsonProperty("ActionId") String actionId, @JsonProperty("BudgetName") String budgetName) {
+        this.accountId = accountId;
+        this.actionId = actionId;
+        this.budgetName = budgetName;
+  }
 }

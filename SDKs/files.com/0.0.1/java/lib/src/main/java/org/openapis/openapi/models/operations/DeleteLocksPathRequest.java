@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteLocksPathRequest {
@@ -12,6 +13,7 @@ public class DeleteLocksPathRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public DeleteLocksPathRequest withPath(String path) {
         this.path = path;
         return this;
@@ -22,9 +24,14 @@ public class DeleteLocksPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public DeleteLocksPathRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public DeleteLocksPathRequest(@JsonProperty("path") String path, @JsonProperty("token") String token) {
+        this.path = path;
+        this.token = token;
+  }
 }

@@ -12,6 +12,7 @@ public class DeletePolicyModule200ApplicationJSONExplanationLocals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public DeletePolicyModule200ApplicationJSONExplanationLocalsKey key;
+
     public DeletePolicyModule200ApplicationJSONExplanationLocals withKey(DeletePolicyModule200ApplicationJSONExplanationLocalsKey key) {
         this.key = key;
         return this;
@@ -20,9 +21,11 @@ public class DeletePolicyModule200ApplicationJSONExplanationLocals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public DeletePolicyModule200ApplicationJSONExplanationLocalsValue value;
+
     public DeletePolicyModule200ApplicationJSONExplanationLocals withValue(DeletePolicyModule200ApplicationJSONExplanationLocalsValue value) {
         this.value = value;
         return this;
     }
     
+    public DeletePolicyModule200ApplicationJSONExplanationLocals(){}
 }

@@ -15,6 +15,7 @@ public class OrdersReturnLineItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemId")
     public String lineItemId;
+
     public OrdersReturnLineItemRequest withLineItemId(String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
@@ -26,6 +27,7 @@ public class OrdersReturnLineItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationId")
     public String operationId;
+
     public OrdersReturnLineItemRequest withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -37,6 +39,7 @@ public class OrdersReturnLineItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public OrdersReturnLineItemRequest withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -48,6 +51,7 @@ public class OrdersReturnLineItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public OrdersReturnLineItemRequest withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -59,6 +63,7 @@ public class OrdersReturnLineItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public OrdersReturnLineItemRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -70,9 +75,11 @@ public class OrdersReturnLineItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonText")
     public String reasonText;
+
     public OrdersReturnLineItemRequest withReasonText(String reasonText) {
         this.reasonText = reasonText;
         return this;
     }
     
+    public OrdersReturnLineItemRequest(){}
 }

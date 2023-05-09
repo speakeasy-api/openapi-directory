@@ -18,6 +18,7 @@ public class GoogleCloudDatapipelinesV1DataflowJobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentWorkers")
     public Integer currentWorkers;
+
     public GoogleCloudDatapipelinesV1DataflowJobDetails withCurrentWorkers(Integer currentWorkers) {
         this.currentWorkers = currentWorkers;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatapipelinesV1DataflowJobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceInfo")
     public java.util.Map<String, Double> resourceInfo;
+
     public GoogleCloudDatapipelinesV1DataflowJobDetails withResourceInfo(java.util.Map<String, Double> resourceInfo) {
         this.resourceInfo = resourceInfo;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatapipelinesV1DataflowJobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdkVersion")
     public GoogleCloudDatapipelinesV1SDKVersion sdkVersion;
+
     public GoogleCloudDatapipelinesV1DataflowJobDetails withSDKVersion(GoogleCloudDatapipelinesV1SDKVersion sdkVersion) {
         this.sdkVersion = sdkVersion;
         return this;
     }
     
+    public GoogleCloudDatapipelinesV1DataflowJobDetails(){}
 }

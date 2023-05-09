@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteVirtualNodeOutput {
     @JsonProperty("virtualNode")
     public VirtualNodeData virtualNode;
+
     public DeleteVirtualNodeOutput withVirtualNode(VirtualNodeData virtualNode) {
         this.virtualNode = virtualNode;
         return this;
     }
     
+    public DeleteVirtualNodeOutput(@JsonProperty("virtualNode") VirtualNodeData virtualNode) {
+        this.virtualNode = virtualNode;
+  }
 }

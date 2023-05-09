@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkInterfaceResultNetworkInterface {
     
     public CreateNetworkInterfaceResultNetworkInterfaceAssociation association;
+
     public CreateNetworkInterfaceResultNetworkInterface withAssociation(CreateNetworkInterfaceResultNetworkInterfaceAssociation association) {
         this.association = association;
         return this;
@@ -19,6 +20,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public CreateNetworkInterfaceResultNetworkInterfaceAttachment attachment;
+
     public CreateNetworkInterfaceResultNetworkInterface withAttachment(CreateNetworkInterfaceResultNetworkInterfaceAttachment attachment) {
         this.attachment = attachment;
         return this;
@@ -26,6 +28,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public String availabilityZone;
+
     public CreateNetworkInterfaceResultNetworkInterface withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -33,6 +36,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public Boolean denyAllIgwTraffic;
+
     public CreateNetworkInterfaceResultNetworkInterface withDenyAllIgwTraffic(Boolean denyAllIgwTraffic) {
         this.denyAllIgwTraffic = denyAllIgwTraffic;
         return this;
@@ -40,6 +44,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public String description;
+
     public CreateNetworkInterfaceResultNetworkInterface withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +52,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public CreateNetworkInterfaceResultNetworkInterfaceGroups[] groups;
+
     public CreateNetworkInterfaceResultNetworkInterface withGroups(CreateNetworkInterfaceResultNetworkInterfaceGroups[] groups) {
         this.groups = groups;
         return this;
@@ -54,6 +60,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public CreateNetworkInterfaceResultNetworkInterfaceInterfaceTypeEnum interfaceType;
+
     public CreateNetworkInterfaceResultNetworkInterface withInterfaceType(CreateNetworkInterfaceResultNetworkInterfaceInterfaceTypeEnum interfaceType) {
         this.interfaceType = interfaceType;
         return this;
@@ -61,6 +68,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public CreateNetworkInterfaceResultNetworkInterfaceIpv4Prefixes[] ipv4Prefixes;
+
     public CreateNetworkInterfaceResultNetworkInterface withIpv4Prefixes(CreateNetworkInterfaceResultNetworkInterfaceIpv4Prefixes[] ipv4Prefixes) {
         this.ipv4Prefixes = ipv4Prefixes;
         return this;
@@ -68,6 +76,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public String ipv6Address;
+
     public CreateNetworkInterfaceResultNetworkInterface withIpv6Address(String ipv6Address) {
         this.ipv6Address = ipv6Address;
         return this;
@@ -75,6 +84,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public CreateNetworkInterfaceResultNetworkInterfaceIpv6Addresses[] ipv6Addresses;
+
     public CreateNetworkInterfaceResultNetworkInterface withIpv6Addresses(CreateNetworkInterfaceResultNetworkInterfaceIpv6Addresses[] ipv6Addresses) {
         this.ipv6Addresses = ipv6Addresses;
         return this;
@@ -82,6 +92,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public Boolean ipv6Native;
+
     public CreateNetworkInterfaceResultNetworkInterface withIpv6Native(Boolean ipv6Native) {
         this.ipv6Native = ipv6Native;
         return this;
@@ -89,6 +100,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public CreateNetworkInterfaceResultNetworkInterfaceIpv6Prefixes[] ipv6Prefixes;
+
     public CreateNetworkInterfaceResultNetworkInterface withIpv6Prefixes(CreateNetworkInterfaceResultNetworkInterfaceIpv6Prefixes[] ipv6Prefixes) {
         this.ipv6Prefixes = ipv6Prefixes;
         return this;
@@ -96,6 +108,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public String macAddress;
+
     public CreateNetworkInterfaceResultNetworkInterface withMacAddress(String macAddress) {
         this.macAddress = macAddress;
         return this;
@@ -103,6 +116,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public String networkInterfaceId;
+
     public CreateNetworkInterfaceResultNetworkInterface withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -110,6 +124,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public String outpostArn;
+
     public CreateNetworkInterfaceResultNetworkInterface withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -117,6 +132,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public String ownerId;
+
     public CreateNetworkInterfaceResultNetworkInterface withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -124,6 +140,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public String privateDnsName;
+
     public CreateNetworkInterfaceResultNetworkInterface withPrivateDnsName(String privateDnsName) {
         this.privateDnsName = privateDnsName;
         return this;
@@ -131,6 +148,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public String privateIpAddress;
+
     public CreateNetworkInterfaceResultNetworkInterface withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -138,6 +156,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddresses[] privateIpAddresses;
+
     public CreateNetworkInterfaceResultNetworkInterface withPrivateIpAddresses(CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddresses[] privateIpAddresses) {
         this.privateIpAddresses = privateIpAddresses;
         return this;
@@ -145,6 +164,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public String requesterId;
+
     public CreateNetworkInterfaceResultNetworkInterface withRequesterId(String requesterId) {
         this.requesterId = requesterId;
         return this;
@@ -152,6 +172,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public Boolean requesterManaged;
+
     public CreateNetworkInterfaceResultNetworkInterface withRequesterManaged(Boolean requesterManaged) {
         this.requesterManaged = requesterManaged;
         return this;
@@ -159,6 +180,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public Boolean sourceDestCheck;
+
     public CreateNetworkInterfaceResultNetworkInterface withSourceDestCheck(Boolean sourceDestCheck) {
         this.sourceDestCheck = sourceDestCheck;
         return this;
@@ -166,6 +188,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public CreateNetworkInterfaceResultNetworkInterfaceStatusEnum status;
+
     public CreateNetworkInterfaceResultNetworkInterface withStatus(CreateNetworkInterfaceResultNetworkInterfaceStatusEnum status) {
         this.status = status;
         return this;
@@ -173,6 +196,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public String subnetId;
+
     public CreateNetworkInterfaceResultNetworkInterface withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -180,6 +204,7 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public CreateNetworkInterfaceResultNetworkInterfaceTagSet[] tagSet;
+
     public CreateNetworkInterfaceResultNetworkInterface withTagSet(CreateNetworkInterfaceResultNetworkInterfaceTagSet[] tagSet) {
         this.tagSet = tagSet;
         return this;
@@ -187,9 +212,11 @@ public class CreateNetworkInterfaceResultNetworkInterface {
     
     
     public String vpcId;
+
     public CreateNetworkInterfaceResultNetworkInterface withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateNetworkInterfaceResultNetworkInterface(){}
 }

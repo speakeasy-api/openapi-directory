@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposCreateUsingTemplateResponse {
     
     public String contentType;
+
     public ReposCreateUsingTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposCreateUsingTemplateResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ReposCreateUsingTemplateResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ReposCreateUsingTemplateResponse {
     
     
     public Integer statusCode;
+
     public ReposCreateUsingTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ReposCreateUsingTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposCreateUsingTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class ReposCreateUsingTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.Repository repository;
+
     public ReposCreateUsingTemplateResponse withRepository(org.openapis.openapi.models.shared.Repository repository) {
         this.repository = repository;
         return this;
     }
     
+    public ReposCreateUsingTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

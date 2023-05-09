@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1alphaBatchDeleteUserLinksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public GoogleAnalyticsAdminV1alphaDeleteUserLinkRequest[] requests;
+
     public GoogleAnalyticsAdminV1alphaBatchDeleteUserLinksRequest withRequests(GoogleAnalyticsAdminV1alphaDeleteUserLinkRequest[] requests) {
         this.requests = requests;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaBatchDeleteUserLinksRequest(){}
 }

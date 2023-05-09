@@ -12,6 +12,7 @@ public class DescribeProductViewInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public DescribeProductViewInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +20,13 @@ public class DescribeProductViewInput {
     
     @JsonProperty("Id")
     public String id;
+
     public DescribeProductViewInput withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DescribeProductViewInput(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

@@ -12,9 +12,11 @@ public class ApiCoreResponsesCountResponce {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public ApiCoreResponsesCountResponce withCount(Long count) {
         this.count = count;
         return this;
     }
     
+    public ApiCoreResponsesCountResponce(){}
 }

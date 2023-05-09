@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopContinuousExportResponse {
@@ -12,6 +13,7 @@ public class StopContinuousExportResponse {
      */
     
     public Object authorizationErrorException;
+
     public StopContinuousExportResponse withAuthorizationErrorException(Object authorizationErrorException) {
         this.authorizationErrorException = authorizationErrorException;
         return this;
@@ -19,6 +21,7 @@ public class StopContinuousExportResponse {
     
     
     public String contentType;
+
     public StopContinuousExportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopContinuousExportResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public StopContinuousExportResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -39,6 +43,7 @@ public class StopContinuousExportResponse {
      */
     
     public Object invalidParameterException;
+
     public StopContinuousExportResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class StopContinuousExportResponse {
      */
     
     public Object invalidParameterValueException;
+
     public StopContinuousExportResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class StopContinuousExportResponse {
      */
     
     public Object operationNotPermittedException;
+
     public StopContinuousExportResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -69,6 +76,7 @@ public class StopContinuousExportResponse {
      */
     
     public Object resourceInUseException;
+
     public StopContinuousExportResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -76,6 +84,7 @@ public class StopContinuousExportResponse {
     
     
     public Integer statusCode;
+
     public StopContinuousExportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class StopContinuousExportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopContinuousExportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class StopContinuousExportResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopContinuousExportResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class StopContinuousExportResponse {
      */
     
     public Object serverInternalErrorException;
+
     public StopContinuousExportResponse withServerInternalErrorException(Object serverInternalErrorException) {
         this.serverInternalErrorException = serverInternalErrorException;
         return this;
@@ -113,9 +125,14 @@ public class StopContinuousExportResponse {
      */
     
     public org.openapis.openapi.models.shared.StopContinuousExportResponse stopContinuousExportResponse;
+
     public StopContinuousExportResponse withStopContinuousExportResponse(org.openapis.openapi.models.shared.StopContinuousExportResponse stopContinuousExportResponse) {
         this.stopContinuousExportResponse = stopContinuousExportResponse;
         return this;
     }
     
+    public StopContinuousExportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

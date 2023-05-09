@@ -15,9 +15,11 @@ public class AccessDenied {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AccessDenied withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AccessDenied(){}
 }

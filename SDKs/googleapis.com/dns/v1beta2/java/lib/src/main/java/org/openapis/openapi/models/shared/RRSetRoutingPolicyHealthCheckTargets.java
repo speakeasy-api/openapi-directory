@@ -15,9 +15,11 @@ public class RRSetRoutingPolicyHealthCheckTargets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalLoadBalancers")
     public RRSetRoutingPolicyLoadBalancerTarget[] internalLoadBalancers;
+
     public RRSetRoutingPolicyHealthCheckTargets withInternalLoadBalancers(RRSetRoutingPolicyLoadBalancerTarget[] internalLoadBalancers) {
         this.internalLoadBalancers = internalLoadBalancers;
         return this;
     }
     
+    public RRSetRoutingPolicyHealthCheckTargets(){}
 }

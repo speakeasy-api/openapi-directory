@@ -15,6 +15,7 @@ public class DeleteOrganizationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public DeleteOrganizationResponse withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -23,9 +24,11 @@ public class DeleteOrganizationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public DeleteOrganizationResponse withState(String state) {
         this.state = state;
         return this;
     }
     
+    public DeleteOrganizationResponse(){}
 }

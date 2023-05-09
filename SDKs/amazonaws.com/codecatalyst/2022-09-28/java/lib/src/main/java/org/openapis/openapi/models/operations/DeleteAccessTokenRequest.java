@@ -4,17 +4,22 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAccessTokenRequest {
     /**
-     * The ID of the personal access token to delete. You can find the IDs of all PATs associated with your user account by calling &lt;a&gt;ListAccessTokens&lt;/a&gt;.
+     * The ID of the personal access token to delete. You can find the IDs of all PATs associated with your Amazon Web Services Builder ID in a space by calling &lt;a&gt;ListAccessTokens&lt;/a&gt;.
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public DeleteAccessTokenRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeleteAccessTokenRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

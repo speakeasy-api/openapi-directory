@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostLocksPathResponse {
     
     public String contentType;
+
     public PostLocksPathResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostLocksPathResponse {
      */
     
     public org.openapis.openapi.models.shared.LockEntity lockEntity;
+
     public PostLocksPathResponse withLockEntity(org.openapis.openapi.models.shared.LockEntity lockEntity) {
         this.lockEntity = lockEntity;
         return this;
@@ -26,6 +29,7 @@ public class PostLocksPathResponse {
     
     
     public Integer statusCode;
+
     public PostLocksPathResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostLocksPathResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostLocksPathResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostLocksPathResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMerchantsMerchantIdTerminalOrdersRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TerminalOrderRequest terminalOrderRequest;
+
     public PostMerchantsMerchantIdTerminalOrdersRequest withTerminalOrderRequest(org.openapis.openapi.models.shared.TerminalOrderRequest terminalOrderRequest) {
         this.terminalOrderRequest = terminalOrderRequest;
         return this;
@@ -19,9 +21,13 @@ public class PostMerchantsMerchantIdTerminalOrdersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public PostMerchantsMerchantIdTerminalOrdersRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
     }
     
+    public PostMerchantsMerchantIdTerminalOrdersRequest(@JsonProperty("merchantId") String merchantId) {
+        this.merchantId = merchantId;
+  }
 }

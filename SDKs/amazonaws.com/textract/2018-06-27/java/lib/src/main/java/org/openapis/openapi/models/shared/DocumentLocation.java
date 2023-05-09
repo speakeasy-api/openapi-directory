@@ -15,9 +15,11 @@ public class DocumentLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Object")
     public S3Object s3Object;
+
     public DocumentLocation withS3Object(S3Object s3Object) {
         this.s3Object = s3Object;
         return this;
     }
     
+    public DocumentLocation(){}
 }

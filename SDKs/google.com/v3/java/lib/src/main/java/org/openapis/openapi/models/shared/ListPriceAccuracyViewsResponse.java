@@ -18,9 +18,11 @@ public class ListPriceAccuracyViewsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceAccuracyViews")
     public PriceAccuracyView[] priceAccuracyViews;
+
     public ListPriceAccuracyViewsResponse withPriceAccuracyViews(PriceAccuracyView[] priceAccuracyViews) {
         this.priceAccuracyViews = priceAccuracyViews;
         return this;
     }
     
+    public ListPriceAccuracyViewsResponse(){}
 }

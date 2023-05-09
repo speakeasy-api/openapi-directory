@@ -18,6 +18,7 @@ public class ClusterSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterLabels")
     public java.util.Map<String, String> clusterLabels;
+
     public ClusterSelector withClusterLabels(java.util.Map<String, String> clusterLabels) {
         this.clusterLabels = clusterLabels;
         return this;
@@ -29,9 +30,11 @@ public class ClusterSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public ClusterSelector withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public ClusterSelector(){}
 }

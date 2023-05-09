@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateWorkspaceAliasResponse {
@@ -12,6 +13,7 @@ public class UpdateWorkspaceAliasResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateWorkspaceAliasResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateWorkspaceAliasResponse {
      */
     
     public Object conflictException;
+
     public UpdateWorkspaceAliasResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateWorkspaceAliasResponse {
     
     
     public String contentType;
+
     public UpdateWorkspaceAliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateWorkspaceAliasResponse {
      */
     
     public Object internalServerException;
+
     public UpdateWorkspaceAliasResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateWorkspaceAliasResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateWorkspaceAliasResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateWorkspaceAliasResponse {
     
     
     public Integer statusCode;
+
     public UpdateWorkspaceAliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateWorkspaceAliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateWorkspaceAliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateWorkspaceAliasResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateWorkspaceAliasResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateWorkspaceAliasResponse {
      */
     
     public Object throttlingException;
+
     public UpdateWorkspaceAliasResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateWorkspaceAliasResponse {
      */
     
     public Object validationException;
+
     public UpdateWorkspaceAliasResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateWorkspaceAliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

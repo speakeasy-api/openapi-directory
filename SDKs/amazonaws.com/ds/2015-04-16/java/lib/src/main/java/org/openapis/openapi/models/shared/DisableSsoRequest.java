@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisableSsoRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public DisableSsoRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -22,6 +23,7 @@ public class DisableSsoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Password")
     public String password;
+
     public DisableSsoRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -30,9 +32,13 @@ public class DisableSsoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserName")
     public String userName;
+
     public DisableSsoRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public DisableSsoRequest(@JsonProperty("DirectoryId") String directoryId) {
+        this.directoryId = directoryId;
+  }
 }

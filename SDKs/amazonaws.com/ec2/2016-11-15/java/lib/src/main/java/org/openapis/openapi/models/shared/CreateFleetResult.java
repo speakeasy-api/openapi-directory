@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateFleetResult {
     
     public CreateFleetResultErrors[] errors;
+
     public CreateFleetResult withErrors(CreateFleetResultErrors[] errors) {
         this.errors = errors;
         return this;
@@ -19,6 +20,7 @@ public class CreateFleetResult {
     
     
     public String fleetId;
+
     public CreateFleetResult withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -26,9 +28,11 @@ public class CreateFleetResult {
     
     
     public CreateFleetResultInstances[] instances;
+
     public CreateFleetResult withInstances(CreateFleetResultInstances[] instances) {
         this.instances = instances;
         return this;
     }
     
+    public CreateFleetResult(){}
 }

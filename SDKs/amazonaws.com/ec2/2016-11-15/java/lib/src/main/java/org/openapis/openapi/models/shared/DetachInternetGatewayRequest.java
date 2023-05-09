@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DetachInternetGatewayRequest {
     
     public Boolean dryRun;
+
     public DetachInternetGatewayRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DetachInternetGatewayRequest {
     
     
     public String internetGatewayId;
+
     public DetachInternetGatewayRequest withInternetGatewayId(String internetGatewayId) {
         this.internetGatewayId = internetGatewayId;
         return this;
@@ -23,9 +25,14 @@ public class DetachInternetGatewayRequest {
     
     
     public String vpcId;
+
     public DetachInternetGatewayRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DetachInternetGatewayRequest(@JsonProperty("InternetGatewayId") String internetGatewayId, @JsonProperty("VpcId") String vpcId) {
+        this.internetGatewayId = internetGatewayId;
+        this.vpcId = vpcId;
+  }
 }

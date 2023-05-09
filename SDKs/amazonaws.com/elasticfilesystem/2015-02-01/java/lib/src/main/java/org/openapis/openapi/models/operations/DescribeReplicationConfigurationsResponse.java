@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeReplicationConfigurationsResponse {
@@ -12,6 +13,7 @@ public class DescribeReplicationConfigurationsResponse {
      */
     
     public Object badRequest;
+
     public DescribeReplicationConfigurationsResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class DescribeReplicationConfigurationsResponse {
     
     
     public String contentType;
+
     public DescribeReplicationConfigurationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeReplicationConfigurationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeReplicationConfigurationsResponse describeReplicationConfigurationsResponse;
+
     public DescribeReplicationConfigurationsResponse withDescribeReplicationConfigurationsResponse(org.openapis.openapi.models.shared.DescribeReplicationConfigurationsResponse describeReplicationConfigurationsResponse) {
         this.describeReplicationConfigurationsResponse = describeReplicationConfigurationsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeReplicationConfigurationsResponse {
      */
     
     public Object fileSystemNotFound;
+
     public DescribeReplicationConfigurationsResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -49,6 +54,7 @@ public class DescribeReplicationConfigurationsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeReplicationConfigurationsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class DescribeReplicationConfigurationsResponse {
      */
     
     public Object replicationNotFound;
+
     public DescribeReplicationConfigurationsResponse withReplicationNotFound(Object replicationNotFound) {
         this.replicationNotFound = replicationNotFound;
         return this;
@@ -66,6 +73,7 @@ public class DescribeReplicationConfigurationsResponse {
     
     
     public Integer statusCode;
+
     public DescribeReplicationConfigurationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeReplicationConfigurationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeReplicationConfigurationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DescribeReplicationConfigurationsResponse {
      */
     
     public Object validationException;
+
     public DescribeReplicationConfigurationsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeReplicationConfigurationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

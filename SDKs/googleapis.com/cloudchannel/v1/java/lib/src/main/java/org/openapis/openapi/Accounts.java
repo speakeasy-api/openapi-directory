@@ -61,11 +61,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1ChannelPartnerRepricingConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1ListChannelPartnerRepricingConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksCreateResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksCreateResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1ChannelPartnerLink = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksListResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksListResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksListResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksListResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1ListChannelPartnerLinksResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +241,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCheckCloudIdentityAccountsExistResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCheckCloudIdentityAccountsExistResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCheckCloudIdentityAccountsExistResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCheckCloudIdentityAccountsExistResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1CheckCloudIdentityAccountsExistResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -297,11 +287,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersCreateResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersCreateResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1Customer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -345,11 +333,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersCustomerRepricingConfigsCreateResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersCustomerRepricingConfigsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersCustomerRepricingConfigsCreateResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersCustomerRepricingConfigsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1CustomerRepricingConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -391,11 +377,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersCustomerRepricingConfigsListResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersCustomerRepricingConfigsListResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersCustomerRepricingConfigsListResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersCustomerRepricingConfigsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1ListCustomerRepricingConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -439,11 +423,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersCustomerRepricingConfigsPatchResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersCustomerRepricingConfigsPatchResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersCustomerRepricingConfigsPatchResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersCustomerRepricingConfigsPatchResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1CustomerRepricingConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -487,11 +469,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsActivateResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsActivateResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsActivateResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsActivateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -535,11 +515,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsChangeOfferResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsChangeOfferResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsChangeOfferResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsChangeOfferResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -583,11 +561,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsChangeParametersResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsChangeParametersResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsChangeParametersResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsChangeParametersResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -631,11 +607,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsChangeRenewalSettingsResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsChangeRenewalSettingsResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsChangeRenewalSettingsResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsChangeRenewalSettingsResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -679,11 +653,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsCreateResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsCreateResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -725,11 +697,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsListResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsListResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsListResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1ListEntitlementsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -771,11 +741,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsListEntitlementChangesResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsListEntitlementChangesResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsListEntitlementChangesResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsListEntitlementChangesResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1ListEntitlementChangesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -817,11 +785,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsLookupOfferResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsLookupOfferResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsLookupOfferResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsLookupOfferResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1Offer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -865,11 +831,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsStartPaidServiceResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsStartPaidServiceResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsStartPaidServiceResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsStartPaidServiceResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -913,11 +877,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsSuspendResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsSuspendResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsSuspendResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersEntitlementsSuspendResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -961,11 +923,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersImportResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersImportResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersImportResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersImportResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1Customer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1007,11 +967,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersListResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersListResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersListResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersListResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1ListCustomersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1053,11 +1011,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersListPurchasableOffersResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersListPurchasableOffersResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersListPurchasableOffersResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersListPurchasableOffersResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1ListPurchasableOffersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1099,11 +1055,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersListPurchasableSkusResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersListPurchasableSkusResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersListPurchasableSkusResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersListPurchasableSkusResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1ListPurchasableSkusResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1147,11 +1101,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersProvisionCloudIdentityResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersProvisionCloudIdentityResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersProvisionCloudIdentityResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersProvisionCloudIdentityResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1195,11 +1147,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersTransferEntitlementsResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersTransferEntitlementsResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersTransferEntitlementsResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersTransferEntitlementsResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1243,11 +1193,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersTransferEntitlementsToGoogleResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersTransferEntitlementsToGoogleResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsCustomersTransferEntitlementsToGoogleResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsCustomersTransferEntitlementsToGoogleResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1289,11 +1237,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsListSubscribersResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsListSubscribersResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsListSubscribersResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsListSubscribersResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1ListSubscribersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1337,11 +1283,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsListTransferableOffersResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsListTransferableOffersResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsListTransferableOffersResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsListTransferableOffersResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1ListTransferableOffersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1385,11 +1329,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsListTransferableSkusResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsListTransferableSkusResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsListTransferableSkusResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsListTransferableSkusResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1ListTransferableSkusResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1431,11 +1373,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsOffersListResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsOffersListResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsOffersListResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsOffersListResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1ListOffersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1479,11 +1419,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsRegisterResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsRegisterResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsRegisterResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsRegisterResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1RegisterSubscriberResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1527,11 +1465,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsReportJobsFetchReportResultsResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsReportJobsFetchReportResultsResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsReportJobsFetchReportResultsResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsReportJobsFetchReportResultsResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1FetchReportResultsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1573,11 +1509,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsReportsListResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsReportsListResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsReportsListResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsReportsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1ListReportsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1621,11 +1555,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsReportsRunResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsReportsRunResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsReportsRunResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsReportsRunResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1669,11 +1601,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudchannelAccountsUnregisterResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsUnregisterResponse() {{
+        org.openapis.openapi.models.operations.CloudchannelAccountsUnregisterResponse res = new org.openapis.openapi.models.operations.CloudchannelAccountsUnregisterResponse(contentType, httpRes.statusCode()) {{
             googleCloudChannelV1UnregisterSubscriberResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

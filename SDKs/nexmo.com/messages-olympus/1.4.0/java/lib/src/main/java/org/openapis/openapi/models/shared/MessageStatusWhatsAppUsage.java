@@ -15,6 +15,7 @@ public class MessageStatusWhatsAppUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public MessageStatusWhatsAppUsageCurrencyEnum currency;
+
     public MessageStatusWhatsAppUsage withCurrency(MessageStatusWhatsAppUsageCurrencyEnum currency) {
         this.currency = currency;
         return this;
@@ -26,9 +27,11 @@ public class MessageStatusWhatsAppUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public String price;
+
     public MessageStatusWhatsAppUsage withPrice(String price) {
         this.price = price;
         return this;
     }
     
+    public MessageStatusWhatsAppUsage(){}
 }

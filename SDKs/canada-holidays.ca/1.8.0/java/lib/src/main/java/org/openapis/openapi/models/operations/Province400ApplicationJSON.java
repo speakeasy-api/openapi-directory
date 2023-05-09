@@ -15,9 +15,11 @@ public class Province400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public org.openapis.openapi.models.shared.Error error;
+
     public Province400ApplicationJSON withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
     }
     
+    public Province400ApplicationJSON(){}
 }

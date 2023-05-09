@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutAccountPreferencesResponse {
@@ -12,6 +13,7 @@ public class PutAccountPreferencesResponse {
      */
     
     public Object badRequest;
+
     public PutAccountPreferencesResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class PutAccountPreferencesResponse {
     
     
     public String contentType;
+
     public PutAccountPreferencesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutAccountPreferencesResponse {
      */
     
     public Object internalServerError;
+
     public PutAccountPreferencesResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class PutAccountPreferencesResponse {
      */
     
     public org.openapis.openapi.models.shared.PutAccountPreferencesResponse putAccountPreferencesResponse;
+
     public PutAccountPreferencesResponse withPutAccountPreferencesResponse(org.openapis.openapi.models.shared.PutAccountPreferencesResponse putAccountPreferencesResponse) {
         this.putAccountPreferencesResponse = putAccountPreferencesResponse;
         return this;
@@ -46,6 +51,7 @@ public class PutAccountPreferencesResponse {
     
     
     public Integer statusCode;
+
     public PutAccountPreferencesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class PutAccountPreferencesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutAccountPreferencesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutAccountPreferencesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

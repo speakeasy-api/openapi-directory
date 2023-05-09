@@ -15,6 +15,7 @@ public class ListSensorStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSensorStatisticsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListSensorStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SensorStatisticsSummaries")
     public SensorStatisticsSummary[] sensorStatisticsSummaries;
+
     public ListSensorStatisticsResponse withSensorStatisticsSummaries(SensorStatisticsSummary[] sensorStatisticsSummaries) {
         this.sensorStatisticsSummaries = sensorStatisticsSummaries;
         return this;
     }
     
+    public ListSensorStatisticsResponse(){}
 }

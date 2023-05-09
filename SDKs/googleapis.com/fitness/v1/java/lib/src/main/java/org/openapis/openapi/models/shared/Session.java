@@ -18,6 +18,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeTimeMillis")
     public String activeTimeMillis;
+
     public Session withActiveTimeMillis(String activeTimeMillis) {
         this.activeTimeMillis = activeTimeMillis;
         return this;
@@ -29,6 +30,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activityType")
     public Integer activityType;
+
     public Session withActivityType(Integer activityType) {
         this.activityType = activityType;
         return this;
@@ -37,6 +39,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application")
     public Application application;
+
     public Session withApplication(Application application) {
         this.application = application;
         return this;
@@ -48,6 +51,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Session withDescription(String description) {
         this.description = description;
         return this;
@@ -59,6 +63,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTimeMillis")
     public String endTimeMillis;
+
     public Session withEndTimeMillis(String endTimeMillis) {
         this.endTimeMillis = endTimeMillis;
         return this;
@@ -70,6 +75,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Session withId(String id) {
         this.id = id;
         return this;
@@ -81,6 +87,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifiedTimeMillis")
     public String modifiedTimeMillis;
+
     public Session withModifiedTimeMillis(String modifiedTimeMillis) {
         this.modifiedTimeMillis = modifiedTimeMillis;
         return this;
@@ -92,6 +99,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Session withName(String name) {
         this.name = name;
         return this;
@@ -103,9 +111,11 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTimeMillis")
     public String startTimeMillis;
+
     public Session withStartTimeMillis(String startTimeMillis) {
         this.startTimeMillis = startTimeMillis;
         return this;
     }
     
+    public Session(){}
 }

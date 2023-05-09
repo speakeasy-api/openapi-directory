@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class PutUsersIdUserConnectionsIdConnectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=background")
     public Boolean background;
+
     public PutUsersIdUserConnectionsIdConnectionRequest withBackground(Boolean background) {
         this.background = background;
         return this;
@@ -20,6 +22,7 @@ public class PutUsersIdUserConnectionsIdConnectionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public PutUsersIdUserConnectionsIdConnectionRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -27,6 +30,7 @@ public class PutUsersIdUserConnectionsIdConnectionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
     public Long idConnection;
+
     public PutUsersIdUserConnectionsIdConnectionRequest withIdConnection(Long idConnection) {
         this.idConnection = idConnection;
         return this;
@@ -37,6 +41,7 @@ public class PutUsersIdUserConnectionsIdConnectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
     public String idUser;
+
     public PutUsersIdUserConnectionsIdConnectionRequest withIdUser(String idUser) {
         this.idUser = idUser;
         return this;
@@ -47,6 +52,7 @@ public class PutUsersIdUserConnectionsIdConnectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_update")
     public OffsetDateTime lastUpdate;
+
     public PutUsersIdUserConnectionsIdConnectionRequest withLastUpdate(OffsetDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
         return this;
@@ -57,9 +63,14 @@ public class PutUsersIdUserConnectionsIdConnectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=psu_requested")
     public Boolean psuRequested;
+
     public PutUsersIdUserConnectionsIdConnectionRequest withPsuRequested(Boolean psuRequested) {
         this.psuRequested = psuRequested;
         return this;
     }
     
+    public PutUsersIdUserConnectionsIdConnectionRequest(@JsonProperty("id_connection") Long idConnection, @JsonProperty("id_user") String idUser) {
+        this.idConnection = idConnection;
+        this.idUser = idUser;
+  }
 }

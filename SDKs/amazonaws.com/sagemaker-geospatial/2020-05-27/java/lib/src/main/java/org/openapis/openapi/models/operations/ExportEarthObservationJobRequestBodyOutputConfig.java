@@ -15,9 +15,11 @@ public class ExportEarthObservationJobRequestBodyOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Data")
     public org.openapis.openapi.models.shared.ExportS3DataInput s3Data;
+
     public ExportEarthObservationJobRequestBodyOutputConfig withS3Data(org.openapis.openapi.models.shared.ExportS3DataInput s3Data) {
         this.s3Data = s3Data;
         return this;
     }
     
+    public ExportEarthObservationJobRequestBodyOutputConfig(){}
 }

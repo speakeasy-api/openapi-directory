@@ -15,9 +15,11 @@ public class ListTagsForCertificateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public ListTagsForCertificateResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ListTagsForCertificateResponse(){}
 }

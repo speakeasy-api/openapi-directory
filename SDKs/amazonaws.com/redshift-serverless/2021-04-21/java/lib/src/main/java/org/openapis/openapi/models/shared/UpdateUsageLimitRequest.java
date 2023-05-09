@@ -12,6 +12,7 @@ public class UpdateUsageLimitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Long amount;
+
     public UpdateUsageLimitRequest withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -20,6 +21,7 @@ public class UpdateUsageLimitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("breachAction")
     public UsageLimitBreachActionEnum breachAction;
+
     public UpdateUsageLimitRequest withBreachAction(UsageLimitBreachActionEnum breachAction) {
         this.breachAction = breachAction;
         return this;
@@ -27,9 +29,13 @@ public class UpdateUsageLimitRequest {
     
     @JsonProperty("usageLimitId")
     public String usageLimitId;
+
     public UpdateUsageLimitRequest withUsageLimitId(String usageLimitId) {
         this.usageLimitId = usageLimitId;
         return this;
     }
     
+    public UpdateUsageLimitRequest(@JsonProperty("usageLimitId") String usageLimitId) {
+        this.usageLimitId = usageLimitId;
+  }
 }

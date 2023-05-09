@@ -18,6 +18,7 @@ public class Inventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public java.util.Map<String, Item> items;
+
     public Inventory withItems(java.util.Map<String, Item> items) {
         this.items = items;
         return this;
@@ -29,6 +30,7 @@ public class Inventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Inventory withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class Inventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osInfo")
     public OsInfo osInfo;
+
     public Inventory withOsInfo(OsInfo osInfo) {
         this.osInfo = osInfo;
         return this;
@@ -51,9 +54,11 @@ public class Inventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Inventory withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Inventory(){}
 }

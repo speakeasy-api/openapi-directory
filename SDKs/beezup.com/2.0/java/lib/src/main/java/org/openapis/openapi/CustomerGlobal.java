@@ -59,12 +59,10 @@ public class CustomerGlobal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomerIndexResponse res = new org.openapis.openapi.models.operations.GetCustomerIndexResponse() {{
+        org.openapis.openapi.models.operations.GetCustomerIndexResponse res = new org.openapis.openapi.models.operations.GetCustomerIndexResponse(contentType, httpRes.statusCode()) {{
             customerIndex = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

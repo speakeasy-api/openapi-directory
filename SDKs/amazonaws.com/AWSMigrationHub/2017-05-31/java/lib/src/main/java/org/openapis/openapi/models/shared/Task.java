@@ -15,6 +15,7 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProgressPercent")
     public Long progressPercent;
+
     public Task withProgressPercent(Long progressPercent) {
         this.progressPercent = progressPercent;
         return this;
@@ -22,6 +23,7 @@ public class Task {
     
     @JsonProperty("Status")
     public StatusEnum status;
+
     public Task withStatus(StatusEnum status) {
         this.status = status;
         return this;
@@ -30,9 +32,13 @@ public class Task {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusDetail")
     public String statusDetail;
+
     public Task withStatusDetail(String statusDetail) {
         this.statusDetail = statusDetail;
         return this;
     }
     
+    public Task(@JsonProperty("Status") StatusEnum status) {
+        this.status = status;
+  }
 }

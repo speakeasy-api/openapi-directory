@@ -15,9 +15,11 @@ public class DeleteJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public DeleteJobResponse withJobName(String jobName) {
         this.jobName = jobName;
         return this;
     }
     
+    public DeleteJobResponse(){}
 }

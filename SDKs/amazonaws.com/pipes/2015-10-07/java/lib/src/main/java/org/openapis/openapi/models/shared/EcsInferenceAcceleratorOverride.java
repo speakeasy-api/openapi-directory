@@ -15,6 +15,7 @@ public class EcsInferenceAcceleratorOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceName")
     public String deviceName;
+
     public EcsInferenceAcceleratorOverride withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -23,9 +24,11 @@ public class EcsInferenceAcceleratorOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceType")
     public String deviceType;
+
     public EcsInferenceAcceleratorOverride withDeviceType(String deviceType) {
         this.deviceType = deviceType;
         return this;
     }
     
+    public EcsInferenceAcceleratorOverride(){}
 }

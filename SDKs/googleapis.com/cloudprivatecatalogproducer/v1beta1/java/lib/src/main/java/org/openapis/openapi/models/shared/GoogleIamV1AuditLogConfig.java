@@ -38,6 +38,7 @@ public class GoogleIamV1AuditLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exemptedMembers")
     public String[] exemptedMembers;
+
     public GoogleIamV1AuditLogConfig withExemptedMembers(String[] exemptedMembers) {
         this.exemptedMembers = exemptedMembers;
         return this;
@@ -49,9 +50,11 @@ public class GoogleIamV1AuditLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logType")
     public GoogleIamV1AuditLogConfigLogTypeEnum logType;
+
     public GoogleIamV1AuditLogConfig withLogType(GoogleIamV1AuditLogConfigLogTypeEnum logType) {
         this.logType = logType;
         return this;
     }
     
+    public GoogleIamV1AuditLogConfig(){}
 }

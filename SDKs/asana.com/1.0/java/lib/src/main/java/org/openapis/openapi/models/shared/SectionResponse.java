@@ -25,6 +25,7 @@ public class SectionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public SectionResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -36,6 +37,7 @@ public class SectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public SectionResponse withGid(String gid) {
         this.gid = gid;
         return this;
@@ -47,6 +49,7 @@ public class SectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SectionResponse withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +58,7 @@ public class SectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public ProjectCompact project;
+
     public SectionResponse withProject(ProjectCompact project) {
         this.project = project;
         return this;
@@ -66,6 +70,7 @@ public class SectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projects")
     public ProjectCompact[] projects;
+
     public SectionResponse withProjects(ProjectCompact[] projects) {
         this.projects = projects;
         return this;
@@ -77,9 +82,11 @@ public class SectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public SectionResponse withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public SectionResponse(){}
 }

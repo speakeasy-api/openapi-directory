@@ -18,6 +18,7 @@ public class ChannelColumnConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beezUPColumnName")
     public String beezUPColumnName;
+
     public ChannelColumnConfiguration withBeezUPColumnName(String beezUPColumnName) {
         this.beezUPColumnName = beezUPColumnName;
         return this;
@@ -28,6 +29,7 @@ public class ChannelColumnConfiguration {
      */
     @JsonProperty("columnDataType")
     public BeezUPCommonColumnDataTypeEnum columnDataType;
+
     public ChannelColumnConfiguration withColumnDataType(BeezUPCommonColumnDataTypeEnum columnDataType) {
         this.columnDataType = columnDataType;
         return this;
@@ -38,9 +40,14 @@ public class ChannelColumnConfiguration {
      */
     @JsonProperty("columnImportance")
     public BeezUPCommonColumnImportanceEnum columnImportance;
+
     public ChannelColumnConfiguration withColumnImportance(BeezUPCommonColumnImportanceEnum columnImportance) {
         this.columnImportance = columnImportance;
         return this;
     }
     
+    public ChannelColumnConfiguration(@JsonProperty("columnDataType") BeezUPCommonColumnDataTypeEnum columnDataType, @JsonProperty("columnImportance") BeezUPCommonColumnImportanceEnum columnImportance) {
+        this.columnDataType = columnDataType;
+        this.columnImportance = columnImportance;
+  }
 }

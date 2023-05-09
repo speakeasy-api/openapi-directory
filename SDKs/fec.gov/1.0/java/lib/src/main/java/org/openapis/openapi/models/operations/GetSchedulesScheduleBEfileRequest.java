@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -14,6 +15,7 @@ public class GetSchedulesScheduleBEfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetSchedulesScheduleBEfileRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -25,6 +27,7 @@ public class GetSchedulesScheduleBEfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
     public String[] committeeId;
+
     public GetSchedulesScheduleBEfileRequest withCommitteeId(String[] committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -35,6 +38,7 @@ public class GetSchedulesScheduleBEfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disbursement_description")
     public String[] disbursementDescription;
+
     public GetSchedulesScheduleBEfileRequest withDisbursementDescription(String[] disbursementDescription) {
         this.disbursementDescription = disbursementDescription;
         return this;
@@ -46,6 +50,7 @@ public class GetSchedulesScheduleBEfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=image_number")
     public String[] imageNumber;
+
     public GetSchedulesScheduleBEfileRequest withImageNumber(String[] imageNumber) {
         this.imageNumber = imageNumber;
         return this;
@@ -56,6 +61,7 @@ public class GetSchedulesScheduleBEfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_amount")
     public String maxAmount;
+
     public GetSchedulesScheduleBEfileRequest withMaxAmount(String maxAmount) {
         this.maxAmount = maxAmount;
         return this;
@@ -66,6 +72,7 @@ public class GetSchedulesScheduleBEfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_date")
     public LocalDate maxDate;
+
     public GetSchedulesScheduleBEfileRequest withMaxDate(LocalDate maxDate) {
         this.maxDate = maxDate;
         return this;
@@ -76,6 +83,7 @@ public class GetSchedulesScheduleBEfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_amount")
     public String minAmount;
+
     public GetSchedulesScheduleBEfileRequest withMinAmount(String minAmount) {
         this.minAmount = minAmount;
         return this;
@@ -86,6 +94,7 @@ public class GetSchedulesScheduleBEfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_date")
     public LocalDate minDate;
+
     public GetSchedulesScheduleBEfileRequest withMinDate(LocalDate minDate) {
         this.minDate = minDate;
         return this;
@@ -96,6 +105,7 @@ public class GetSchedulesScheduleBEfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetSchedulesScheduleBEfileRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -106,6 +116,7 @@ public class GetSchedulesScheduleBEfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetSchedulesScheduleBEfileRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -116,6 +127,7 @@ public class GetSchedulesScheduleBEfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recipient_city")
     public String[] recipientCity;
+
     public GetSchedulesScheduleBEfileRequest withRecipientCity(String[] recipientCity) {
         this.recipientCity = recipientCity;
         return this;
@@ -126,6 +138,7 @@ public class GetSchedulesScheduleBEfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recipient_state")
     public String[] recipientState;
+
     public GetSchedulesScheduleBEfileRequest withRecipientState(String[] recipientState) {
         this.recipientState = recipientState;
         return this;
@@ -137,6 +150,7 @@ public class GetSchedulesScheduleBEfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetSchedulesScheduleBEfileRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -147,6 +161,7 @@ public class GetSchedulesScheduleBEfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetSchedulesScheduleBEfileRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -157,6 +172,7 @@ public class GetSchedulesScheduleBEfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetSchedulesScheduleBEfileRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -167,9 +183,13 @@ public class GetSchedulesScheduleBEfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetSchedulesScheduleBEfileRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
     }
     
+    public GetSchedulesScheduleBEfileRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

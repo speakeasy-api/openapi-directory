@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteGlobalReplicationGroupMessage {
     
     public String globalReplicationGroupId;
+
     public DeleteGlobalReplicationGroupMessage withGlobalReplicationGroupId(String globalReplicationGroupId) {
         this.globalReplicationGroupId = globalReplicationGroupId;
         return this;
@@ -16,9 +17,14 @@ public class DeleteGlobalReplicationGroupMessage {
     
     
     public Boolean retainPrimaryReplicationGroup;
+
     public DeleteGlobalReplicationGroupMessage withRetainPrimaryReplicationGroup(Boolean retainPrimaryReplicationGroup) {
         this.retainPrimaryReplicationGroup = retainPrimaryReplicationGroup;
         return this;
     }
     
+    public DeleteGlobalReplicationGroupMessage(@JsonProperty("GlobalReplicationGroupId") String globalReplicationGroupId, @JsonProperty("RetainPrimaryReplicationGroup") Boolean retainPrimaryReplicationGroup) {
+        this.globalReplicationGroupId = globalReplicationGroupId;
+        this.retainPrimaryReplicationGroup = retainPrimaryReplicationGroup;
+  }
 }

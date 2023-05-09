@@ -16,6 +16,7 @@ public class PhoneNumber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneCountryCode")
     public String phoneCountryCode;
+
     public PhoneNumber withPhoneCountryCode(String phoneCountryCode) {
         this.phoneCountryCode = phoneCountryCode;
         return this;
@@ -28,6 +29,7 @@ public class PhoneNumber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public PhoneNumber withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -40,9 +42,11 @@ public class PhoneNumber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneType")
     public PhoneNumberPhoneTypeEnum phoneType;
+
     public PhoneNumber withPhoneType(PhoneNumberPhoneTypeEnum phoneType) {
         this.phoneType = phoneType;
         return this;
     }
     
+    public PhoneNumber(){}
 }

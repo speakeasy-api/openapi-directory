@@ -18,6 +18,7 @@ public class ListAppGatewaysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appGateways")
     public AppGateway[] appGateways;
+
     public ListAppGatewaysResponse withAppGateways(AppGateway[] appGateways) {
         this.appGateways = appGateways;
         return this;
@@ -29,6 +30,7 @@ public class ListAppGatewaysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAppGatewaysResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListAppGatewaysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListAppGatewaysResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListAppGatewaysResponse(){}
 }

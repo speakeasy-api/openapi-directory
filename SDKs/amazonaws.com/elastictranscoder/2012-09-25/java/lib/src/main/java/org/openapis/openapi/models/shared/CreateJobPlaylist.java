@@ -15,6 +15,7 @@ public class CreateJobPlaylist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public CreateJobPlaylist withFormat(String format) {
         this.format = format;
         return this;
@@ -23,6 +24,7 @@ public class CreateJobPlaylist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HlsContentProtection")
     public HlsContentProtection hlsContentProtection;
+
     public CreateJobPlaylist withHlsContentProtection(HlsContentProtection hlsContentProtection) {
         this.hlsContentProtection = hlsContentProtection;
         return this;
@@ -31,6 +33,7 @@ public class CreateJobPlaylist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateJobPlaylist withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class CreateJobPlaylist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputKeys")
     public String[] outputKeys;
+
     public CreateJobPlaylist withOutputKeys(String[] outputKeys) {
         this.outputKeys = outputKeys;
         return this;
@@ -47,9 +51,11 @@ public class CreateJobPlaylist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayReadyDrm")
     public PlayReadyDrm playReadyDrm;
+
     public CreateJobPlaylist withPlayReadyDrm(PlayReadyDrm playReadyDrm) {
         this.playReadyDrm = playReadyDrm;
         return this;
     }
     
+    public CreateJobPlaylist(){}
 }

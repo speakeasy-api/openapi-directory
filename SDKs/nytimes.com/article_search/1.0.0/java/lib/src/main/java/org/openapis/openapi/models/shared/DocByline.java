@@ -12,6 +12,7 @@ public class DocByline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public String organization;
+
     public DocByline withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -20,6 +21,7 @@ public class DocByline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original")
     public String original;
+
     public DocByline withOriginal(String original) {
         this.original = original;
         return this;
@@ -28,9 +30,11 @@ public class DocByline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("person")
     public Object[] person;
+
     public DocByline withPerson(Object[] person) {
         this.person = person;
         return this;
     }
     
+    public DocByline(){}
 }

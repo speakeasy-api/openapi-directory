@@ -18,6 +18,7 @@ public class AcmeTxtRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digest")
     public String digest;
+
     public AcmeTxtRecord withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -29,6 +30,7 @@ public class AcmeTxtRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fqdn")
     public String fqdn;
+
     public AcmeTxtRecord withFqdn(String fqdn) {
         this.fqdn = fqdn;
         return this;
@@ -40,9 +42,11 @@ public class AcmeTxtRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public AcmeTxtRecord withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public AcmeTxtRecord(){}
 }

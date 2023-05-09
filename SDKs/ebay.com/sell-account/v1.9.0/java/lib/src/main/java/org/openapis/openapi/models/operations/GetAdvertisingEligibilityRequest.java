@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAdvertisingEligibilityRequest {
@@ -12,6 +13,7 @@ public class GetAdvertisingEligibilityRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public GetAdvertisingEligibilityRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
@@ -22,9 +24,13 @@ public class GetAdvertisingEligibilityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=program_types")
     public String programTypes;
+
     public GetAdvertisingEligibilityRequest withProgramTypes(String programTypes) {
         this.programTypes = programTypes;
         return this;
     }
     
+    public GetAdvertisingEligibilityRequest(@JsonProperty("X-EBAY-C-MARKETPLACE-ID") String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
+  }
 }

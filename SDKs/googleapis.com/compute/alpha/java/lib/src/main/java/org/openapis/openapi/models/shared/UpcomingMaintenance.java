@@ -18,6 +18,7 @@ public class UpcomingMaintenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canReschedule")
     public Boolean canReschedule;
+
     public UpcomingMaintenance withCanReschedule(Boolean canReschedule) {
         this.canReschedule = canReschedule;
         return this;
@@ -29,6 +30,7 @@ public class UpcomingMaintenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public UpcomingMaintenance withDate(String date) {
         this.date = date;
         return this;
@@ -40,6 +42,7 @@ public class UpcomingMaintenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestWindowStartTime")
     public String latestWindowStartTime;
+
     public UpcomingMaintenance withLatestWindowStartTime(String latestWindowStartTime) {
         this.latestWindowStartTime = latestWindowStartTime;
         return this;
@@ -48,6 +51,7 @@ public class UpcomingMaintenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maintenanceStatus")
     public UpcomingMaintenanceMaintenanceStatusEnum maintenanceStatus;
+
     public UpcomingMaintenance withMaintenanceStatus(UpcomingMaintenanceMaintenanceStatusEnum maintenanceStatus) {
         this.maintenanceStatus = maintenanceStatus;
         return this;
@@ -59,6 +63,7 @@ public class UpcomingMaintenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTimeWindow")
     public UpcomingMaintenanceTimeWindow startTimeWindow;
+
     public UpcomingMaintenance withStartTimeWindow(UpcomingMaintenanceTimeWindow startTimeWindow) {
         this.startTimeWindow = startTimeWindow;
         return this;
@@ -70,6 +75,7 @@ public class UpcomingMaintenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public String time;
+
     public UpcomingMaintenance withTime(String time) {
         this.time = time;
         return this;
@@ -81,6 +87,7 @@ public class UpcomingMaintenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public UpcomingMaintenanceTypeEnum type;
+
     public UpcomingMaintenance withType(UpcomingMaintenanceTypeEnum type) {
         this.type = type;
         return this;
@@ -92,6 +99,7 @@ public class UpcomingMaintenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windowEndTime")
     public String windowEndTime;
+
     public UpcomingMaintenance withWindowEndTime(String windowEndTime) {
         this.windowEndTime = windowEndTime;
         return this;
@@ -103,9 +111,11 @@ public class UpcomingMaintenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windowStartTime")
     public String windowStartTime;
+
     public UpcomingMaintenance withWindowStartTime(String windowStartTime) {
         this.windowStartTime = windowStartTime;
         return this;
     }
     
+    public UpcomingMaintenance(){}
 }

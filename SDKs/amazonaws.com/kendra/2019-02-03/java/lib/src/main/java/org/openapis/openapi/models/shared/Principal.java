@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Principal {
     @JsonProperty("Access")
     public ReadAccessTypeEnum access;
+
     public Principal withAccess(ReadAccessTypeEnum access) {
         this.access = access;
         return this;
@@ -22,6 +23,7 @@ public class Principal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceId")
     public String dataSourceId;
+
     public Principal withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -29,6 +31,7 @@ public class Principal {
     
     @JsonProperty("Name")
     public String name;
+
     public Principal withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,15 @@ public class Principal {
     
     @JsonProperty("Type")
     public PrincipalTypeEnum type;
+
     public Principal withType(PrincipalTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Principal(@JsonProperty("Access") ReadAccessTypeEnum access, @JsonProperty("Name") String name, @JsonProperty("Type") PrincipalTypeEnum type) {
+        this.access = access;
+        this.name = name;
+        this.type = type;
+  }
 }

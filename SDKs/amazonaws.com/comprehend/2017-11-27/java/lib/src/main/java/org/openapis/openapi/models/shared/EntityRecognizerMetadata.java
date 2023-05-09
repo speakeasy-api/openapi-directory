@@ -15,6 +15,7 @@ public class EntityRecognizerMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityTypes")
     public EntityRecognizerMetadataEntityTypesListItem[] entityTypes;
+
     public EntityRecognizerMetadata withEntityTypes(EntityRecognizerMetadataEntityTypesListItem[] entityTypes) {
         this.entityTypes = entityTypes;
         return this;
@@ -23,6 +24,7 @@ public class EntityRecognizerMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationMetrics")
     public EntityRecognizerEvaluationMetrics evaluationMetrics;
+
     public EntityRecognizerMetadata withEvaluationMetrics(EntityRecognizerEvaluationMetrics evaluationMetrics) {
         this.evaluationMetrics = evaluationMetrics;
         return this;
@@ -31,6 +33,7 @@ public class EntityRecognizerMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfTestDocuments")
     public Long numberOfTestDocuments;
+
     public EntityRecognizerMetadata withNumberOfTestDocuments(Long numberOfTestDocuments) {
         this.numberOfTestDocuments = numberOfTestDocuments;
         return this;
@@ -39,9 +42,11 @@ public class EntityRecognizerMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfTrainedDocuments")
     public Long numberOfTrainedDocuments;
+
     public EntityRecognizerMetadata withNumberOfTrainedDocuments(Long numberOfTrainedDocuments) {
         this.numberOfTrainedDocuments = numberOfTrainedDocuments;
         return this;
     }
     
+    public EntityRecognizerMetadata(){}
 }

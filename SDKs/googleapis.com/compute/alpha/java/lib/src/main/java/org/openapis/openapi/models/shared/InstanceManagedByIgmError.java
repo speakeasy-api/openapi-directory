@@ -12,6 +12,7 @@ public class InstanceManagedByIgmError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public InstanceManagedByIgmErrorManagedInstanceError error;
+
     public InstanceManagedByIgmError withError(InstanceManagedByIgmErrorManagedInstanceError error) {
         this.error = error;
         return this;
@@ -20,6 +21,7 @@ public class InstanceManagedByIgmError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceActionDetails")
     public InstanceManagedByIgmErrorInstanceActionDetails instanceActionDetails;
+
     public InstanceManagedByIgmError withInstanceActionDetails(InstanceManagedByIgmErrorInstanceActionDetails instanceActionDetails) {
         this.instanceActionDetails = instanceActionDetails;
         return this;
@@ -31,9 +33,11 @@ public class InstanceManagedByIgmError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public InstanceManagedByIgmError withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public InstanceManagedByIgmError(){}
 }

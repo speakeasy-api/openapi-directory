@@ -15,6 +15,7 @@ public class LicensesReadLicenseAttributes {
      */
     
     public String name;
+
     public LicensesReadLicenseAttributes withName(String name) {
         this.name = name;
         return this;
@@ -25,6 +26,7 @@ public class LicensesReadLicenseAttributes {
      */
     
     public String[] requiredFields;
+
     public LicensesReadLicenseAttributes withRequiredFields(String[] requiredFields) {
         this.requiredFields = requiredFields;
         return this;
@@ -35,9 +37,11 @@ public class LicensesReadLicenseAttributes {
      */
     
     public String text;
+
     public LicensesReadLicenseAttributes withText(String text) {
         this.text = text;
         return this;
     }
     
+    public LicensesReadLicenseAttributes(){}
 }

@@ -15,6 +15,7 @@ public class CreatedAt {
      */
     @SpeakeasyMetadata("queryParam:name=from")
     public String from;
+
     public CreatedAt withFrom(String from) {
         this.from = from;
         return this;
@@ -25,9 +26,11 @@ public class CreatedAt {
      */
     @SpeakeasyMetadata("queryParam:name=to")
     public String to;
+
     public CreatedAt withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public CreatedAt(){}
 }

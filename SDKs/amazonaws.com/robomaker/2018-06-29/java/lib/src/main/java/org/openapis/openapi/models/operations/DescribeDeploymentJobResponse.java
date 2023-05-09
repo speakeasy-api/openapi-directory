@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDeploymentJobResponse {
     
     public String contentType;
+
     public DescribeDeploymentJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDeploymentJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDeploymentJobResponse describeDeploymentJobResponse;
+
     public DescribeDeploymentJobResponse withDescribeDeploymentJobResponse(org.openapis.openapi.models.shared.DescribeDeploymentJobResponse describeDeploymentJobResponse) {
         this.describeDeploymentJobResponse = describeDeploymentJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDeploymentJobResponse {
      */
     
     public Object internalServerException;
+
     public DescribeDeploymentJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDeploymentJobResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeDeploymentJobResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeDeploymentJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeDeploymentJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeDeploymentJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeDeploymentJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeDeploymentJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDeploymentJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeDeploymentJobResponse {
      */
     
     public Object throttlingException;
+
     public DescribeDeploymentJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeDeploymentJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

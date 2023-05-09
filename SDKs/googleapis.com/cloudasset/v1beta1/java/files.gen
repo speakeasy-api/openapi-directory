@@ -89,4 +89,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ExportAssetsRequestContentT
 lib/src/main/java/org/openapis/openapi/models/shared/ExportAssetsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/OutputConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/GcsDestination.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -15,9 +15,11 @@ public class AwsWafv2ActionAllowDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomRequestHandling")
     public AwsWafv2CustomRequestHandlingDetails customRequestHandling;
+
     public AwsWafv2ActionAllowDetails withCustomRequestHandling(AwsWafv2CustomRequestHandlingDetails customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
         return this;
     }
     
+    public AwsWafv2ActionAllowDetails(){}
 }

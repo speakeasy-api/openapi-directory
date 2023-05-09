@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutSubscriptionFilterResponse {
     
     public String contentType;
+
     public PutSubscriptionFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutSubscriptionFilterResponse {
      */
     
     public Object invalidParameterException;
+
     public PutSubscriptionFilterResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class PutSubscriptionFilterResponse {
      */
     
     public Object limitExceededException;
+
     public PutSubscriptionFilterResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class PutSubscriptionFilterResponse {
      */
     
     public Object operationAbortedException;
+
     public PutSubscriptionFilterResponse withOperationAbortedException(Object operationAbortedException) {
         this.operationAbortedException = operationAbortedException;
         return this;
@@ -49,6 +54,7 @@ public class PutSubscriptionFilterResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutSubscriptionFilterResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class PutSubscriptionFilterResponse {
      */
     
     public Object serviceUnavailableException;
+
     public PutSubscriptionFilterResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class PutSubscriptionFilterResponse {
     
     
     public Integer statusCode;
+
     public PutSubscriptionFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class PutSubscriptionFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutSubscriptionFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutSubscriptionFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdResponse {
@@ -12,6 +13,7 @@ public class GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdRe
      */
     
     public org.openapis.openapi.models.shared.ActionRevision actionRevision;
+
     public GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdResponse withActionRevision(org.openapis.openapi.models.shared.ActionRevision actionRevision) {
         this.actionRevision = actionRevision;
         return this;
@@ -19,6 +21,7 @@ public class GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdRe
     
     
     public byte[] body;
+
     public GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -26,6 +29,7 @@ public class GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdRe
     
     
     public String contentType;
+
     public GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdRe
     
     
     public Integer statusCode;
+
     public GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdRe
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

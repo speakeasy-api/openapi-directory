@@ -15,9 +15,11 @@ public class AggregationResultFrequency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public java.util.Map<String, String> values;
+
     public AggregationResultFrequency withValues(java.util.Map<String, String> values) {
         this.values = values;
         return this;
     }
     
+    public AggregationResultFrequency(){}
 }

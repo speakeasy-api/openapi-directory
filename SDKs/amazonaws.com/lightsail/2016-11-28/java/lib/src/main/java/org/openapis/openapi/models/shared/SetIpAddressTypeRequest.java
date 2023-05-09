@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SetIpAddressTypeRequest {
     @JsonProperty("ipAddressType")
     public IpAddressTypeEnum ipAddressType;
+
     public SetIpAddressTypeRequest withIpAddressType(IpAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -16,6 +17,7 @@ public class SetIpAddressTypeRequest {
     
     @JsonProperty("resourceName")
     public String resourceName;
+
     public SetIpAddressTypeRequest withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -23,9 +25,15 @@ public class SetIpAddressTypeRequest {
     
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public SetIpAddressTypeRequest withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public SetIpAddressTypeRequest(@JsonProperty("ipAddressType") IpAddressTypeEnum ipAddressType, @JsonProperty("resourceName") String resourceName, @JsonProperty("resourceType") ResourceTypeEnum resourceType) {
+        this.ipAddressType = ipAddressType;
+        this.resourceName = resourceName;
+        this.resourceType = resourceType;
+  }
 }

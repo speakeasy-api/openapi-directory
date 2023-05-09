@@ -15,6 +15,7 @@ public class ConfigCOAP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keystore")
     public String keystore;
+
     public ConfigCOAP withKeystore(String keystore) {
         this.keystore = keystore;
         return this;
@@ -23,6 +24,7 @@ public class ConfigCOAP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_port")
     public Integer primaryPort;
+
     public ConfigCOAP withPrimaryPort(Integer primaryPort) {
         this.primaryPort = primaryPort;
         return this;
@@ -31,6 +33,7 @@ public class ConfigCOAP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule")
     public String rule;
+
     public ConfigCOAP withRule(String rule) {
         this.rule = rule;
         return this;
@@ -39,9 +42,11 @@ public class ConfigCOAP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secure_port")
     public Integer securePort;
+
     public ConfigCOAP withSecurePort(Integer securePort) {
         this.securePort = securePort;
         return this;
     }
     
+    public ConfigCOAP(){}
 }

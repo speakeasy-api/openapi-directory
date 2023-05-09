@@ -20,6 +20,7 @@ public class ProjectVersionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillableTrainingTimeInSeconds")
     public Long billableTrainingTimeInSeconds;
+
     public ProjectVersionDescription withBillableTrainingTimeInSeconds(Long billableTrainingTimeInSeconds) {
         this.billableTrainingTimeInSeconds = billableTrainingTimeInSeconds;
         return this;
@@ -30,6 +31,7 @@ public class ProjectVersionDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimestamp")
     public OffsetDateTime creationTimestamp;
+
     public ProjectVersionDescription withCreationTimestamp(OffsetDateTime creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -38,6 +40,7 @@ public class ProjectVersionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationResult")
     public EvaluationResult evaluationResult;
+
     public ProjectVersionDescription withEvaluationResult(EvaluationResult evaluationResult) {
         this.evaluationResult = evaluationResult;
         return this;
@@ -46,6 +49,7 @@ public class ProjectVersionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public ProjectVersionDescription withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -54,6 +58,7 @@ public class ProjectVersionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManifestSummary")
     public GroundTruthManifest manifestSummary;
+
     public ProjectVersionDescription withManifestSummary(GroundTruthManifest manifestSummary) {
         this.manifestSummary = manifestSummary;
         return this;
@@ -62,6 +67,7 @@ public class ProjectVersionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxInferenceUnits")
     public Long maxInferenceUnits;
+
     public ProjectVersionDescription withMaxInferenceUnits(Long maxInferenceUnits) {
         this.maxInferenceUnits = maxInferenceUnits;
         return this;
@@ -70,6 +76,7 @@ public class ProjectVersionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinInferenceUnits")
     public Long minInferenceUnits;
+
     public ProjectVersionDescription withMinInferenceUnits(Long minInferenceUnits) {
         this.minInferenceUnits = minInferenceUnits;
         return this;
@@ -78,6 +85,7 @@ public class ProjectVersionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputConfig")
     public OutputConfig outputConfig;
+
     public ProjectVersionDescription withOutputConfig(OutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -86,6 +94,7 @@ public class ProjectVersionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectVersionArn")
     public String projectVersionArn;
+
     public ProjectVersionDescription withProjectVersionArn(String projectVersionArn) {
         this.projectVersionArn = projectVersionArn;
         return this;
@@ -94,6 +103,7 @@ public class ProjectVersionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceProjectVersionArn")
     public String sourceProjectVersionArn;
+
     public ProjectVersionDescription withSourceProjectVersionArn(String sourceProjectVersionArn) {
         this.sourceProjectVersionArn = sourceProjectVersionArn;
         return this;
@@ -102,6 +112,7 @@ public class ProjectVersionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ProjectVersionStatusEnum status;
+
     public ProjectVersionDescription withStatus(ProjectVersionStatusEnum status) {
         this.status = status;
         return this;
@@ -110,6 +121,7 @@ public class ProjectVersionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public ProjectVersionDescription withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -118,6 +130,7 @@ public class ProjectVersionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TestingDataResult")
     public TestingDataResult testingDataResult;
+
     public ProjectVersionDescription withTestingDataResult(TestingDataResult testingDataResult) {
         this.testingDataResult = testingDataResult;
         return this;
@@ -126,6 +139,7 @@ public class ProjectVersionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingDataResult")
     public TrainingDataResult trainingDataResult;
+
     public ProjectVersionDescription withTrainingDataResult(TrainingDataResult trainingDataResult) {
         this.trainingDataResult = trainingDataResult;
         return this;
@@ -136,9 +150,11 @@ public class ProjectVersionDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TrainingEndTimestamp")
     public OffsetDateTime trainingEndTimestamp;
+
     public ProjectVersionDescription withTrainingEndTimestamp(OffsetDateTime trainingEndTimestamp) {
         this.trainingEndTimestamp = trainingEndTimestamp;
         return this;
     }
     
+    public ProjectVersionDescription(){}
 }

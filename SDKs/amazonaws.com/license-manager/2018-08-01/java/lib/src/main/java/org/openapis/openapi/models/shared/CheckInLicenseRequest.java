@@ -12,6 +12,7 @@ public class CheckInLicenseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Beneficiary")
     public String beneficiary;
+
     public CheckInLicenseRequest withBeneficiary(String beneficiary) {
         this.beneficiary = beneficiary;
         return this;
@@ -19,9 +20,13 @@ public class CheckInLicenseRequest {
     
     @JsonProperty("LicenseConsumptionToken")
     public String licenseConsumptionToken;
+
     public CheckInLicenseRequest withLicenseConsumptionToken(String licenseConsumptionToken) {
         this.licenseConsumptionToken = licenseConsumptionToken;
         return this;
     }
     
+    public CheckInLicenseRequest(@JsonProperty("LicenseConsumptionToken") String licenseConsumptionToken) {
+        this.licenseConsumptionToken = licenseConsumptionToken;
+  }
 }

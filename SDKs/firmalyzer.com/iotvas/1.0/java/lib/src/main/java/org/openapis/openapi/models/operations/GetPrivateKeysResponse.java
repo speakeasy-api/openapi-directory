@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPrivateKeysResponse {
     
     public String contentType;
+
     public GetPrivateKeysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPrivateKeysResponse {
      */
     
     public org.openapis.openapi.models.shared.CryptoKey[] cryptoKeys;
+
     public GetPrivateKeysResponse withCryptoKeys(org.openapis.openapi.models.shared.CryptoKey[] cryptoKeys) {
         this.cryptoKeys = cryptoKeys;
         return this;
@@ -29,6 +32,7 @@ public class GetPrivateKeysResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public GetPrivateKeysResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -36,6 +40,7 @@ public class GetPrivateKeysResponse {
     
     
     public Integer statusCode;
+
     public GetPrivateKeysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetPrivateKeysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPrivateKeysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPrivateKeysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

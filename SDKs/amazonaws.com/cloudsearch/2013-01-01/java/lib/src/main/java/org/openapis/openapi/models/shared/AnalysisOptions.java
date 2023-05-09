@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AnalysisOptions {
     
     public AlgorithmicStemmingEnum algorithmicStemming;
+
     public AnalysisOptions withAlgorithmicStemming(AlgorithmicStemmingEnum algorithmicStemming) {
         this.algorithmicStemming = algorithmicStemming;
         return this;
@@ -19,6 +20,7 @@ public class AnalysisOptions {
     
     
     public String japaneseTokenizationDictionary;
+
     public AnalysisOptions withJapaneseTokenizationDictionary(String japaneseTokenizationDictionary) {
         this.japaneseTokenizationDictionary = japaneseTokenizationDictionary;
         return this;
@@ -26,6 +28,7 @@ public class AnalysisOptions {
     
     
     public String stemmingDictionary;
+
     public AnalysisOptions withStemmingDictionary(String stemmingDictionary) {
         this.stemmingDictionary = stemmingDictionary;
         return this;
@@ -33,6 +36,7 @@ public class AnalysisOptions {
     
     
     public String stopwords;
+
     public AnalysisOptions withStopwords(String stopwords) {
         this.stopwords = stopwords;
         return this;
@@ -40,9 +44,11 @@ public class AnalysisOptions {
     
     
     public String synonyms;
+
     public AnalysisOptions withSynonyms(String synonyms) {
         this.synonyms = synonyms;
         return this;
     }
     
+    public AnalysisOptions(){}
 }

@@ -15,6 +15,7 @@ public class ListManagedDataIdentifiersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public ManagedDataIdentifierSummary[] items;
+
     public ListManagedDataIdentifiersResponse withItems(ManagedDataIdentifierSummary[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class ListManagedDataIdentifiersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListManagedDataIdentifiersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListManagedDataIdentifiersResponse(){}
 }

@@ -15,6 +15,7 @@ public class BatchGetDocumentStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentStatusList")
     public Status[] documentStatusList;
+
     public BatchGetDocumentStatusResponse withDocumentStatusList(Status[] documentStatusList) {
         this.documentStatusList = documentStatusList;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetDocumentStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public BatchGetDocumentStatusResponseError[] errors;
+
     public BatchGetDocumentStatusResponse withErrors(BatchGetDocumentStatusResponseError[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public BatchGetDocumentStatusResponse(){}
 }

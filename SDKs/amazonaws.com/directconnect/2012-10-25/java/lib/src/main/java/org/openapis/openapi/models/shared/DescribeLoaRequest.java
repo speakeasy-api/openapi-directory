@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeLoaRequest {
     @JsonProperty("connectionId")
     public String connectionId;
+
     public DescribeLoaRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeLoaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loaContentType")
     public LoaContentTypeEnum loaContentType;
+
     public DescribeLoaRequest withLoaContentType(LoaContentTypeEnum loaContentType) {
         this.loaContentType = loaContentType;
         return this;
@@ -27,9 +29,13 @@ public class DescribeLoaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("providerName")
     public String providerName;
+
     public DescribeLoaRequest withProviderName(String providerName) {
         this.providerName = providerName;
         return this;
     }
     
+    public DescribeLoaRequest(@JsonProperty("connectionId") String connectionId) {
+        this.connectionId = connectionId;
+  }
 }

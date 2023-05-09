@@ -18,6 +18,7 @@ public class TerminateContract {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contractTerminationReason")
     public String contractTerminationReason;
+
     public TerminateContract withContractTerminationReason(String contractTerminationReason) {
         this.contractTerminationReason = contractTerminationReason;
         return this;
@@ -28,9 +29,13 @@ public class TerminateContract {
      */
     @JsonProperty("contractTerminationReasonType")
     public Integer contractTerminationReasonType;
+
     public TerminateContract withContractTerminationReasonType(Integer contractTerminationReasonType) {
         this.contractTerminationReasonType = contractTerminationReasonType;
         return this;
     }
     
+    public TerminateContract(@JsonProperty("contractTerminationReasonType") Integer contractTerminationReasonType) {
+        this.contractTerminationReasonType = contractTerminationReasonType;
+  }
 }

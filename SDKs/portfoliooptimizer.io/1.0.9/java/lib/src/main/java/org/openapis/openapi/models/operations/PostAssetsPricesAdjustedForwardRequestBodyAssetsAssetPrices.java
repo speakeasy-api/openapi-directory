@@ -12,6 +12,7 @@ public class PostAssetsPricesAdjustedForwardRequestBodyAssetsAssetPrices {
      */
     @JsonProperty("close")
     public Double close;
+
     public PostAssetsPricesAdjustedForwardRequestBodyAssetsAssetPrices withClose(Double close) {
         this.close = close;
         return this;
@@ -22,9 +23,14 @@ public class PostAssetsPricesAdjustedForwardRequestBodyAssetsAssetPrices {
      */
     @JsonProperty("date")
     public String date;
+
     public PostAssetsPricesAdjustedForwardRequestBodyAssetsAssetPrices withDate(String date) {
         this.date = date;
         return this;
     }
     
+    public PostAssetsPricesAdjustedForwardRequestBodyAssetsAssetPrices(@JsonProperty("close") Double close, @JsonProperty("date") String date) {
+        this.close = close;
+        this.date = date;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetCoipPoolUsageResult {
     
     public GetCoipPoolUsageResultCoipAddressUsages[] coipAddressUsages;
+
     public GetCoipPoolUsageResult withCoipAddressUsages(GetCoipPoolUsageResultCoipAddressUsages[] coipAddressUsages) {
         this.coipAddressUsages = coipAddressUsages;
         return this;
@@ -19,6 +20,7 @@ public class GetCoipPoolUsageResult {
     
     
     public String coipPoolId;
+
     public GetCoipPoolUsageResult withCoipPoolId(String coipPoolId) {
         this.coipPoolId = coipPoolId;
         return this;
@@ -26,9 +28,11 @@ public class GetCoipPoolUsageResult {
     
     
     public String localGatewayRouteTableId;
+
     public GetCoipPoolUsageResult withLocalGatewayRouteTableId(String localGatewayRouteTableId) {
         this.localGatewayRouteTableId = localGatewayRouteTableId;
         return this;
     }
     
+    public GetCoipPoolUsageResult(){}
 }

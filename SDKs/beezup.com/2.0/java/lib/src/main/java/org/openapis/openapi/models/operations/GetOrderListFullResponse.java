@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrderListFullResponse {
@@ -12,6 +13,7 @@ public class GetOrderListFullResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetOrderListFullResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetOrderListFullResponse {
     
     
     public String contentType;
+
     public GetOrderListFullResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetOrderListFullResponse {
     
     
     public Integer statusCode;
+
     public GetOrderListFullResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetOrderListFullResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrderListFullResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetOrderListFullResponse {
      */
     
     public org.openapis.openapi.models.shared.OrderListFull orderListFull;
+
     public GetOrderListFullResponse withOrderListFull(org.openapis.openapi.models.shared.OrderListFull orderListFull) {
         this.orderListFull = orderListFull;
         return this;
     }
     
+    public GetOrderListFullResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

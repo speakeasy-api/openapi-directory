@@ -15,6 +15,7 @@ public class SearchCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addOneWayOffers")
     public Boolean addOneWayOffers;
+
     public SearchCriteria withAddOneWayOffers(Boolean addOneWayOffers) {
         this.addOneWayOffers = addOneWayOffers;
         return this;
@@ -23,6 +24,7 @@ public class SearchCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInformation")
     public SearchCriteriaAdditionalInformation additionalInformation;
+
     public SearchCriteria withAdditionalInformation(SearchCriteriaAdditionalInformation additionalInformation) {
         this.additionalInformation = additionalInformation;
         return this;
@@ -34,6 +36,7 @@ public class SearchCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowAlternativeFareOptions")
     public Boolean allowAlternativeFareOptions;
+
     public SearchCriteria withAllowAlternativeFareOptions(Boolean allowAlternativeFareOptions) {
         this.allowAlternativeFareOptions = allowAlternativeFareOptions;
         return this;
@@ -45,6 +48,7 @@ public class SearchCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludeAllotments")
     public Boolean excludeAllotments;
+
     public SearchCriteria withExcludeAllotments(Boolean excludeAllotments) {
         this.excludeAllotments = excludeAllotments;
         return this;
@@ -53,6 +57,7 @@ public class SearchCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flightFilters")
     public SearchCriteriaFlightFilters flightFilters;
+
     public SearchCriteria withFlightFilters(SearchCriteriaFlightFilters flightFilters) {
         this.flightFilters = flightFilters;
         return this;
@@ -64,6 +69,7 @@ public class SearchCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxFlightOffers")
     public Double maxFlightOffers;
+
     public SearchCriteria withMaxFlightOffers(Double maxFlightOffers) {
         this.maxFlightOffers = maxFlightOffers;
         return this;
@@ -75,6 +81,7 @@ public class SearchCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxPrice")
     public Long maxPrice;
+
     public SearchCriteria withMaxPrice(Long maxPrice) {
         this.maxPrice = maxPrice;
         return this;
@@ -86,6 +93,7 @@ public class SearchCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneFlightOfferPerDay")
     public Boolean oneFlightOfferPerDay;
+
     public SearchCriteria withOneFlightOfferPerDay(Boolean oneFlightOfferPerDay) {
         this.oneFlightOfferPerDay = oneFlightOfferPerDay;
         return this;
@@ -97,9 +105,11 @@ public class SearchCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricingOptions")
     public ExtendedPricingOptions pricingOptions;
+
     public SearchCriteria withPricingOptions(ExtendedPricingOptions pricingOptions) {
         this.pricingOptions = pricingOptions;
         return this;
     }
     
+    public SearchCriteria(){}
 }

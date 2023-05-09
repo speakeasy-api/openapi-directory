@@ -18,6 +18,7 @@ public class ReplaceAllTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containsText")
     public SubstringMatchCriteria containsText;
+
     public ReplaceAllTextRequest withContainsText(SubstringMatchCriteria containsText) {
         this.containsText = containsText;
         return this;
@@ -29,6 +30,7 @@ public class ReplaceAllTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageObjectIds")
     public String[] pageObjectIds;
+
     public ReplaceAllTextRequest withPageObjectIds(String[] pageObjectIds) {
         this.pageObjectIds = pageObjectIds;
         return this;
@@ -40,9 +42,11 @@ public class ReplaceAllTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replaceText")
     public String replaceText;
+
     public ReplaceAllTextRequest withReplaceText(String replaceText) {
         this.replaceText = replaceText;
         return this;
     }
     
+    public ReplaceAllTextRequest(){}
 }

@@ -15,6 +15,7 @@ public class CodeScanningAnalysisTool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guid")
     public String guid;
+
     public CodeScanningAnalysisTool withGuid(String guid) {
         this.guid = guid;
         return this;
@@ -26,6 +27,7 @@ public class CodeScanningAnalysisTool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CodeScanningAnalysisTool withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class CodeScanningAnalysisTool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public CodeScanningAnalysisTool withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public CodeScanningAnalysisTool(){}
 }

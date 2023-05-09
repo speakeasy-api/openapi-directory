@@ -15,6 +15,7 @@ public class ListSecurityControlDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSecurityControlDefinitionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListSecurityControlDefinitionsResponse {
     
     @JsonProperty("SecurityControlDefinitions")
     public SecurityControlDefinition[] securityControlDefinitions;
+
     public ListSecurityControlDefinitionsResponse withSecurityControlDefinitions(SecurityControlDefinition[] securityControlDefinitions) {
         this.securityControlDefinitions = securityControlDefinitions;
         return this;
     }
     
+    public ListSecurityControlDefinitionsResponse(@JsonProperty("SecurityControlDefinitions") SecurityControlDefinition[] securityControlDefinitions) {
+        this.securityControlDefinitions = securityControlDefinitions;
+  }
 }

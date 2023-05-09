@@ -18,6 +18,7 @@ public class PreferenceSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public PreferenceSet withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class PreferenceSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PreferenceSet withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class PreferenceSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public PreferenceSet withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class PreferenceSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PreferenceSet withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class PreferenceSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public PreferenceSet withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -73,9 +78,11 @@ public class PreferenceSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualMachinePreferences")
     public VirtualMachinePreferences virtualMachinePreferences;
+
     public PreferenceSet withVirtualMachinePreferences(VirtualMachinePreferences virtualMachinePreferences) {
         this.virtualMachinePreferences = virtualMachinePreferences;
         return this;
     }
     
+    public PreferenceSet(){}
 }

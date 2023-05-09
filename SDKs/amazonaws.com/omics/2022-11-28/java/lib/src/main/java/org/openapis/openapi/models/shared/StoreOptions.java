@@ -15,9 +15,11 @@ public class StoreOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tsvStoreOptions")
     public TsvStoreOptions tsvStoreOptions;
+
     public StoreOptions withTsvStoreOptions(TsvStoreOptions tsvStoreOptions) {
         this.tsvStoreOptions = tsvStoreOptions;
         return this;
     }
     
+    public StoreOptions(){}
 }

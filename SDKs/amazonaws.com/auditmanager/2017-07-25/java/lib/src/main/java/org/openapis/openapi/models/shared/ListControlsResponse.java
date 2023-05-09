@@ -15,6 +15,7 @@ public class ListControlsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlMetadataList")
     public ControlMetadata[] controlMetadataList;
+
     public ListControlsResponse withControlMetadataList(ControlMetadata[] controlMetadataList) {
         this.controlMetadataList = controlMetadataList;
         return this;
@@ -23,9 +24,11 @@ public class ListControlsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListControlsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListControlsResponse(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImportHubContentRequest {
     @JsonProperty("DocumentSchemaVersion")
     public String documentSchemaVersion;
+
     public ImportHubContentRequest withDocumentSchemaVersion(String documentSchemaVersion) {
         this.documentSchemaVersion = documentSchemaVersion;
         return this;
@@ -19,6 +20,7 @@ public class ImportHubContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubContentDescription")
     public String hubContentDescription;
+
     public ImportHubContentRequest withHubContentDescription(String hubContentDescription) {
         this.hubContentDescription = hubContentDescription;
         return this;
@@ -27,6 +29,7 @@ public class ImportHubContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubContentDisplayName")
     public String hubContentDisplayName;
+
     public ImportHubContentRequest withHubContentDisplayName(String hubContentDisplayName) {
         this.hubContentDisplayName = hubContentDisplayName;
         return this;
@@ -34,6 +37,7 @@ public class ImportHubContentRequest {
     
     @JsonProperty("HubContentDocument")
     public String hubContentDocument;
+
     public ImportHubContentRequest withHubContentDocument(String hubContentDocument) {
         this.hubContentDocument = hubContentDocument;
         return this;
@@ -42,6 +46,7 @@ public class ImportHubContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubContentMarkdown")
     public String hubContentMarkdown;
+
     public ImportHubContentRequest withHubContentMarkdown(String hubContentMarkdown) {
         this.hubContentMarkdown = hubContentMarkdown;
         return this;
@@ -49,6 +54,7 @@ public class ImportHubContentRequest {
     
     @JsonProperty("HubContentName")
     public String hubContentName;
+
     public ImportHubContentRequest withHubContentName(String hubContentName) {
         this.hubContentName = hubContentName;
         return this;
@@ -57,6 +63,7 @@ public class ImportHubContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubContentSearchKeywords")
     public String[] hubContentSearchKeywords;
+
     public ImportHubContentRequest withHubContentSearchKeywords(String[] hubContentSearchKeywords) {
         this.hubContentSearchKeywords = hubContentSearchKeywords;
         return this;
@@ -64,6 +71,7 @@ public class ImportHubContentRequest {
     
     @JsonProperty("HubContentType")
     public HubContentTypeEnum hubContentType;
+
     public ImportHubContentRequest withHubContentType(HubContentTypeEnum hubContentType) {
         this.hubContentType = hubContentType;
         return this;
@@ -72,6 +80,7 @@ public class ImportHubContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubContentVersion")
     public String hubContentVersion;
+
     public ImportHubContentRequest withHubContentVersion(String hubContentVersion) {
         this.hubContentVersion = hubContentVersion;
         return this;
@@ -79,6 +88,7 @@ public class ImportHubContentRequest {
     
     @JsonProperty("HubName")
     public String hubName;
+
     public ImportHubContentRequest withHubName(String hubName) {
         this.hubName = hubName;
         return this;
@@ -87,9 +97,17 @@ public class ImportHubContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public ImportHubContentRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ImportHubContentRequest(@JsonProperty("DocumentSchemaVersion") String documentSchemaVersion, @JsonProperty("HubContentDocument") String hubContentDocument, @JsonProperty("HubContentName") String hubContentName, @JsonProperty("HubContentType") HubContentTypeEnum hubContentType, @JsonProperty("HubName") String hubName) {
+        this.documentSchemaVersion = documentSchemaVersion;
+        this.hubContentDocument = hubContentDocument;
+        this.hubContentName = hubContentName;
+        this.hubContentType = hubContentType;
+        this.hubName = hubName;
+  }
 }

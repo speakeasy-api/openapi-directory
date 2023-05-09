@@ -15,6 +15,7 @@ public class Tetms404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Tetms404ApplicationJSONErrorEnum error;
+
     public Tetms404ApplicationJSON withError(Tetms404ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Tetms404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Tetms404ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Tetms404ApplicationJSON withErrorDescription(Tetms404ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Tetms404ApplicationJSON(){}
 }

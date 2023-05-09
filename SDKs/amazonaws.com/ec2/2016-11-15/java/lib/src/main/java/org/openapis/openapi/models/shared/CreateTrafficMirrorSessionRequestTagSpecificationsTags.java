@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateTrafficMirrorSessionRequestTagSpecificationsTags {
     
     public String key;
+
     public CreateTrafficMirrorSessionRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateTrafficMirrorSessionRequestTagSpecificationsTags {
     
     
     public String value;
+
     public CreateTrafficMirrorSessionRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateTrafficMirrorSessionRequestTagSpecificationsTags(){}
 }

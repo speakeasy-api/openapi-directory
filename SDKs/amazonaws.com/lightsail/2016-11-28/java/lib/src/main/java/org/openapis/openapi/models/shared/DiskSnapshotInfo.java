@@ -15,9 +15,11 @@ public class DiskSnapshotInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeInGb")
     public Long sizeInGb;
+
     public DiskSnapshotInfo withSizeInGb(Long sizeInGb) {
         this.sizeInGb = sizeInGb;
         return this;
     }
     
+    public DiskSnapshotInfo(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RunNamespacesExecutionsListRequest {
@@ -12,6 +13,7 @@ public class RunNamespacesExecutionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public RunNamespacesExecutionsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class RunNamespacesExecutionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public RunNamespacesExecutionsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class RunNamespacesExecutionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public RunNamespacesExecutionsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class RunNamespacesExecutionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public RunNamespacesExecutionsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class RunNamespacesExecutionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=continue")
     public String continue_;
+
     public RunNamespacesExecutionsListRequest withContinue(String continue_) {
         this.continue_ = continue_;
         return this;
@@ -62,6 +68,7 @@ public class RunNamespacesExecutionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fieldSelector")
     public String fieldSelector;
+
     public RunNamespacesExecutionsListRequest withFieldSelector(String fieldSelector) {
         this.fieldSelector = fieldSelector;
         return this;
@@ -72,6 +79,7 @@ public class RunNamespacesExecutionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public RunNamespacesExecutionsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class RunNamespacesExecutionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeUninitialized")
     public Boolean includeUninitialized;
+
     public RunNamespacesExecutionsListRequest withIncludeUninitialized(Boolean includeUninitialized) {
         this.includeUninitialized = includeUninitialized;
         return this;
@@ -92,6 +101,7 @@ public class RunNamespacesExecutionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public RunNamespacesExecutionsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -102,6 +112,7 @@ public class RunNamespacesExecutionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=labelSelector")
     public String labelSelector;
+
     public RunNamespacesExecutionsListRequest withLabelSelector(String labelSelector) {
         this.labelSelector = labelSelector;
         return this;
@@ -112,6 +123,7 @@ public class RunNamespacesExecutionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public RunNamespacesExecutionsListRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -122,6 +134,7 @@ public class RunNamespacesExecutionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public RunNamespacesExecutionsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -132,6 +145,7 @@ public class RunNamespacesExecutionsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public RunNamespacesExecutionsListRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -142,6 +156,7 @@ public class RunNamespacesExecutionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public RunNamespacesExecutionsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -152,6 +167,7 @@ public class RunNamespacesExecutionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public RunNamespacesExecutionsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -162,6 +178,7 @@ public class RunNamespacesExecutionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceVersion")
     public String resourceVersion;
+
     public RunNamespacesExecutionsListRequest withResourceVersion(String resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
@@ -172,6 +189,7 @@ public class RunNamespacesExecutionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public RunNamespacesExecutionsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -182,6 +200,7 @@ public class RunNamespacesExecutionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public RunNamespacesExecutionsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -192,9 +211,13 @@ public class RunNamespacesExecutionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=watch")
     public Boolean watch;
+
     public RunNamespacesExecutionsListRequest withWatch(Boolean watch) {
         this.watch = watch;
         return this;
     }
     
+    public RunNamespacesExecutionsListRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

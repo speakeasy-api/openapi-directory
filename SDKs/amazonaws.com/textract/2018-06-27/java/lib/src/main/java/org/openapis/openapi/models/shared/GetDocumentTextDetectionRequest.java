@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDocumentTextDetectionRequest {
     @JsonProperty("JobId")
     public String jobId;
+
     public GetDocumentTextDetectionRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -19,6 +20,7 @@ public class GetDocumentTextDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetDocumentTextDetectionRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class GetDocumentTextDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetDocumentTextDetectionRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetDocumentTextDetectionRequest(@JsonProperty("JobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

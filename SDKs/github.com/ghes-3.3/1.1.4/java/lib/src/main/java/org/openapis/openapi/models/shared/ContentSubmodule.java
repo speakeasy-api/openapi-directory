@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ContentSubmodule {
     @JsonProperty("_links")
     public ContentSubmoduleLinks links;
+
     public ContentSubmodule withLinks(ContentSubmoduleLinks links) {
         this.links = links;
         return this;
@@ -19,6 +20,7 @@ public class ContentSubmodule {
     
     @JsonProperty("download_url")
     public String downloadUrl;
+
     public ContentSubmodule withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -26,6 +28,7 @@ public class ContentSubmodule {
     
     @JsonProperty("git_url")
     public String gitUrl;
+
     public ContentSubmodule withGitUrl(String gitUrl) {
         this.gitUrl = gitUrl;
         return this;
@@ -33,6 +36,7 @@ public class ContentSubmodule {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public ContentSubmodule withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -40,6 +44,7 @@ public class ContentSubmodule {
     
     @JsonProperty("name")
     public String name;
+
     public ContentSubmodule withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +52,7 @@ public class ContentSubmodule {
     
     @JsonProperty("path")
     public String path;
+
     public ContentSubmodule withPath(String path) {
         this.path = path;
         return this;
@@ -54,6 +60,7 @@ public class ContentSubmodule {
     
     @JsonProperty("sha")
     public String sha;
+
     public ContentSubmodule withSha(String sha) {
         this.sha = sha;
         return this;
@@ -61,6 +68,7 @@ public class ContentSubmodule {
     
     @JsonProperty("size")
     public Long size;
+
     public ContentSubmodule withSize(Long size) {
         this.size = size;
         return this;
@@ -68,6 +76,7 @@ public class ContentSubmodule {
     
     @JsonProperty("submodule_git_url")
     public String submoduleGitUrl;
+
     public ContentSubmodule withSubmoduleGitUrl(String submoduleGitUrl) {
         this.submoduleGitUrl = submoduleGitUrl;
         return this;
@@ -75,6 +84,7 @@ public class ContentSubmodule {
     
     @JsonProperty("type")
     public ContentSubmoduleTypeEnum type;
+
     public ContentSubmodule withType(ContentSubmoduleTypeEnum type) {
         this.type = type;
         return this;
@@ -82,9 +92,23 @@ public class ContentSubmodule {
     
     @JsonProperty("url")
     public String url;
+
     public ContentSubmodule withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ContentSubmodule(@JsonProperty("_links") ContentSubmoduleLinks links, @JsonProperty("download_url") String downloadUrl, @JsonProperty("git_url") String gitUrl, @JsonProperty("html_url") String htmlUrl, @JsonProperty("name") String name, @JsonProperty("path") String path, @JsonProperty("sha") String sha, @JsonProperty("size") Long size, @JsonProperty("submodule_git_url") String submoduleGitUrl, @JsonProperty("type") ContentSubmoduleTypeEnum type, @JsonProperty("url") String url) {
+        this.links = links;
+        this.downloadUrl = downloadUrl;
+        this.gitUrl = gitUrl;
+        this.htmlUrl = htmlUrl;
+        this.name = name;
+        this.path = path;
+        this.sha = sha;
+        this.size = size;
+        this.submoduleGitUrl = submoduleGitUrl;
+        this.type = type;
+        this.url = url;
+  }
 }

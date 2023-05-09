@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDisableAvailabilityZonesForLoadBalancerRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDisableAvailabilityZonesForLoadBalancerActionEnum action;
+
     public GETDisableAvailabilityZonesForLoadBalancerRequest withAction(GETDisableAvailabilityZonesForLoadBalancerActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDisableAvailabilityZonesForLoadBalancerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AvailabilityZones")
     public String[] availabilityZones;
+
     public GETDisableAvailabilityZonesForLoadBalancerRequest withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -29,6 +32,7 @@ public class GETDisableAvailabilityZonesForLoadBalancerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoadBalancerName")
     public String loadBalancerName;
+
     public GETDisableAvailabilityZonesForLoadBalancerRequest withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -36,6 +40,7 @@ public class GETDisableAvailabilityZonesForLoadBalancerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDisableAvailabilityZonesForLoadBalancerVersionEnum version;
+
     public GETDisableAvailabilityZonesForLoadBalancerRequest withVersion(GETDisableAvailabilityZonesForLoadBalancerVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDisableAvailabilityZonesForLoadBalancerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDisableAvailabilityZonesForLoadBalancerRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDisableAvailabilityZonesForLoadBalancerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDisableAvailabilityZonesForLoadBalancerRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDisableAvailabilityZonesForLoadBalancerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDisableAvailabilityZonesForLoadBalancerRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDisableAvailabilityZonesForLoadBalancerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDisableAvailabilityZonesForLoadBalancerRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDisableAvailabilityZonesForLoadBalancerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDisableAvailabilityZonesForLoadBalancerRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDisableAvailabilityZonesForLoadBalancerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDisableAvailabilityZonesForLoadBalancerRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETDisableAvailabilityZonesForLoadBalancerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDisableAvailabilityZonesForLoadBalancerRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDisableAvailabilityZonesForLoadBalancerRequest(@JsonProperty("Action") GETDisableAvailabilityZonesForLoadBalancerActionEnum action, @JsonProperty("AvailabilityZones") String[] availabilityZones, @JsonProperty("LoadBalancerName") String loadBalancerName, @JsonProperty("Version") GETDisableAvailabilityZonesForLoadBalancerVersionEnum version) {
+        this.action = action;
+        this.availabilityZones = availabilityZones;
+        this.loadBalancerName = loadBalancerName;
+        this.version = version;
+  }
 }

@@ -12,6 +12,7 @@ public class ListPricesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListPricesRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -20,6 +21,7 @@ public class ListPricesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxItems")
     public Long maxItems;
+
     public ListPricesRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -28,9 +30,11 @@ public class ListPricesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tld")
     public String tld;
+
     public ListPricesRequest withTld(String tld) {
         this.tld = tld;
         return this;
     }
     
+    public ListPricesRequest(){}
 }

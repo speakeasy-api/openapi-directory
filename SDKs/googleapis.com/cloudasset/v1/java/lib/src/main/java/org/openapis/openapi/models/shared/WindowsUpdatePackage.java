@@ -18,6 +18,7 @@ public class WindowsUpdatePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public WindowsUpdateCategory[] categories;
+
     public WindowsUpdatePackage withCategories(WindowsUpdateCategory[] categories) {
         this.categories = categories;
         return this;
@@ -29,6 +30,7 @@ public class WindowsUpdatePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public WindowsUpdatePackage withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class WindowsUpdatePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kbArticleIds")
     public String[] kbArticleIds;
+
     public WindowsUpdatePackage withKbArticleIds(String[] kbArticleIds) {
         this.kbArticleIds = kbArticleIds;
         return this;
@@ -51,6 +54,7 @@ public class WindowsUpdatePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastDeploymentChangeTime")
     public String lastDeploymentChangeTime;
+
     public WindowsUpdatePackage withLastDeploymentChangeTime(String lastDeploymentChangeTime) {
         this.lastDeploymentChangeTime = lastDeploymentChangeTime;
         return this;
@@ -62,6 +66,7 @@ public class WindowsUpdatePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moreInfoUrls")
     public String[] moreInfoUrls;
+
     public WindowsUpdatePackage withMoreInfoUrls(String[] moreInfoUrls) {
         this.moreInfoUrls = moreInfoUrls;
         return this;
@@ -73,6 +78,7 @@ public class WindowsUpdatePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionNumber")
     public Integer revisionNumber;
+
     public WindowsUpdatePackage withRevisionNumber(Integer revisionNumber) {
         this.revisionNumber = revisionNumber;
         return this;
@@ -84,6 +90,7 @@ public class WindowsUpdatePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportUrl")
     public String supportUrl;
+
     public WindowsUpdatePackage withSupportUrl(String supportUrl) {
         this.supportUrl = supportUrl;
         return this;
@@ -95,6 +102,7 @@ public class WindowsUpdatePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public WindowsUpdatePackage withTitle(String title) {
         this.title = title;
         return this;
@@ -106,9 +114,11 @@ public class WindowsUpdatePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateId")
     public String updateId;
+
     public WindowsUpdatePackage withUpdateId(String updateId) {
         this.updateId = updateId;
         return this;
     }
     
+    public WindowsUpdatePackage(){}
 }

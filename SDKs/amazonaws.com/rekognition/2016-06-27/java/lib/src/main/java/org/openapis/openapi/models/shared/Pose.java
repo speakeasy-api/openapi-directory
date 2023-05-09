@@ -15,6 +15,7 @@ public class Pose {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pitch")
     public Float pitch;
+
     public Pose withPitch(Float pitch) {
         this.pitch = pitch;
         return this;
@@ -23,6 +24,7 @@ public class Pose {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Roll")
     public Float roll;
+
     public Pose withRoll(Float roll) {
         this.roll = roll;
         return this;
@@ -31,9 +33,11 @@ public class Pose {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Yaw")
     public Float yaw;
+
     public Pose withYaw(Float yaw) {
         this.yaw = yaw;
         return this;
     }
     
+    public Pose(){}
 }

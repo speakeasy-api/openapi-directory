@@ -15,6 +15,7 @@ public class DestinationPortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceleratorArn")
     public String acceleratorArn;
+
     public DestinationPortMapping withAcceleratorArn(String acceleratorArn) {
         this.acceleratorArn = acceleratorArn;
         return this;
@@ -23,6 +24,7 @@ public class DestinationPortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceleratorSocketAddresses")
     public SocketAddress[] acceleratorSocketAddresses;
+
     public DestinationPortMapping withAcceleratorSocketAddresses(SocketAddress[] acceleratorSocketAddresses) {
         this.acceleratorSocketAddresses = acceleratorSocketAddresses;
         return this;
@@ -31,6 +33,7 @@ public class DestinationPortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationSocketAddress")
     public SocketAddress destinationSocketAddress;
+
     public DestinationPortMapping withDestinationSocketAddress(SocketAddress destinationSocketAddress) {
         this.destinationSocketAddress = destinationSocketAddress;
         return this;
@@ -39,6 +42,7 @@ public class DestinationPortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationTrafficState")
     public CustomRoutingDestinationTrafficStateEnum destinationTrafficState;
+
     public DestinationPortMapping withDestinationTrafficState(CustomRoutingDestinationTrafficStateEnum destinationTrafficState) {
         this.destinationTrafficState = destinationTrafficState;
         return this;
@@ -47,6 +51,7 @@ public class DestinationPortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointGroupArn")
     public String endpointGroupArn;
+
     public DestinationPortMapping withEndpointGroupArn(String endpointGroupArn) {
         this.endpointGroupArn = endpointGroupArn;
         return this;
@@ -55,6 +60,7 @@ public class DestinationPortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointGroupRegion")
     public String endpointGroupRegion;
+
     public DestinationPortMapping withEndpointGroupRegion(String endpointGroupRegion) {
         this.endpointGroupRegion = endpointGroupRegion;
         return this;
@@ -63,6 +69,7 @@ public class DestinationPortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointId")
     public String endpointId;
+
     public DestinationPortMapping withEndpointId(String endpointId) {
         this.endpointId = endpointId;
         return this;
@@ -71,9 +78,11 @@ public class DestinationPortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddressType")
     public IpAddressTypeEnum ipAddressType;
+
     public DestinationPortMapping withIpAddressType(IpAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
     }
     
+    public DestinationPortMapping(){}
 }

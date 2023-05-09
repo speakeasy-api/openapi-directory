@@ -15,6 +15,7 @@ public class ListTableRowsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListTableRowsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class ListTableRowsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTableRowsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +39,11 @@ public class ListTableRowsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowIds")
     public String[] rowIds;
+
     public ListTableRowsRequestBody withRowIds(String[] rowIds) {
         this.rowIds = rowIds;
         return this;
     }
     
+    public ListTableRowsRequestBody(){}
 }

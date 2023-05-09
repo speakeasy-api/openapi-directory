@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemRelatedListRequest {
@@ -12,6 +13,7 @@ public class GetItemRelatedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
     public String device;
+
     public GetItemRelatedListRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -42,6 +44,7 @@ public class GetItemRelatedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetItemRelatedListRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -52,6 +55,7 @@ public class GetItemRelatedListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetItemRelatedListRequest withId(String id) {
         this.id = id;
         return this;
@@ -72,6 +76,7 @@ public class GetItemRelatedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetItemRelatedListRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -82,6 +87,7 @@ public class GetItemRelatedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_rating")
     public String maxRating;
+
     public GetItemRelatedListRequest withMaxRating(String maxRating) {
         this.maxRating = maxRating;
         return this;
@@ -92,6 +98,7 @@ public class GetItemRelatedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetItemRelatedListRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -102,6 +109,7 @@ public class GetItemRelatedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Integer pageSize;
+
     public GetItemRelatedListRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -112,6 +120,7 @@ public class GetItemRelatedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
     public String[] segments;
+
     public GetItemRelatedListRequest withSegments(String[] segments) {
         this.segments = segments;
         return this;
@@ -122,9 +131,13 @@ public class GetItemRelatedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub")
     public String sub;
+
     public GetItemRelatedListRequest withSub(String sub) {
         this.sub = sub;
         return this;
     }
     
+    public GetItemRelatedListRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

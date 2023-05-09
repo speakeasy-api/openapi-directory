@@ -15,6 +15,7 @@ public class Getglobaltime200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClockTime")
     public String clockTime;
+
     public Getglobaltime200ApplicationJSON withClockTime(String clockTime) {
         this.clockTime = clockTime;
         return this;
@@ -23,6 +24,7 @@ public class Getglobaltime200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public Getglobaltime200ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -31,6 +33,7 @@ public class Getglobaltime200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credits")
     public String credits;
+
     public Getglobaltime200ApplicationJSON withCredits(String credits) {
         this.credits = credits;
         return this;
@@ -39,6 +42,7 @@ public class Getglobaltime200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentDate")
     public String currentDate;
+
     public Getglobaltime200ApplicationJSON withCurrentDate(String currentDate) {
         this.currentDate = currentDate;
         return this;
@@ -47,6 +51,7 @@ public class Getglobaltime200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentTime")
     public String currentTime;
+
     public Getglobaltime200ApplicationJSON withCurrentTime(String currentTime) {
         this.currentTime = currentTime;
         return this;
@@ -55,6 +60,7 @@ public class Getglobaltime200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Day")
     public String day;
+
     public Getglobaltime200ApplicationJSON withDay(String day) {
         this.day = day;
         return this;
@@ -63,6 +69,7 @@ public class Getglobaltime200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hour")
     public String hour;
+
     public Getglobaltime200ApplicationJSON withHour(String hour) {
         this.hour = hour;
         return this;
@@ -71,6 +78,7 @@ public class Getglobaltime200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Locale")
     public String locale;
+
     public Getglobaltime200ApplicationJSON withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -79,6 +87,7 @@ public class Getglobaltime200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Minute")
     public String minute;
+
     public Getglobaltime200ApplicationJSON withMinute(String minute) {
         this.minute = minute;
         return this;
@@ -87,6 +96,7 @@ public class Getglobaltime200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Month")
     public String month;
+
     public Getglobaltime200ApplicationJSON withMonth(String month) {
         this.month = month;
         return this;
@@ -95,6 +105,7 @@ public class Getglobaltime200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonthNumber")
     public String monthNumber;
+
     public Getglobaltime200ApplicationJSON withMonthNumber(String monthNumber) {
         this.monthNumber = monthNumber;
         return this;
@@ -103,6 +114,7 @@ public class Getglobaltime200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Second")
     public String second;
+
     public Getglobaltime200ApplicationJSON withSecond(String second) {
         this.second = second;
         return this;
@@ -111,6 +123,7 @@ public class Getglobaltime200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeStamp")
     public String timeStamp;
+
     public Getglobaltime200ApplicationJSON withTimeStamp(String timeStamp) {
         this.timeStamp = timeStamp;
         return this;
@@ -119,6 +132,7 @@ public class Getglobaltime200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Weekday")
     public String weekday;
+
     public Getglobaltime200ApplicationJSON withWeekday(String weekday) {
         this.weekday = weekday;
         return this;
@@ -127,6 +141,7 @@ public class Getglobaltime200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Year")
     public String year;
+
     public Getglobaltime200ApplicationJSON withYear(String year) {
         this.year = year;
         return this;
@@ -135,9 +150,11 @@ public class Getglobaltime200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Zone")
     public String zone;
+
     public Getglobaltime200ApplicationJSON withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public Getglobaltime200ApplicationJSON(){}
 }

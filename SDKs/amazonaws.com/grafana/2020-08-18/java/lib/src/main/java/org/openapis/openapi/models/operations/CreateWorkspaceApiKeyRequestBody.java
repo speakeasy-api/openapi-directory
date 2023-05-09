@@ -12,6 +12,7 @@ public class CreateWorkspaceApiKeyRequestBody {
      */
     @JsonProperty("keyName")
     public String keyName;
+
     public CreateWorkspaceApiKeyRequestBody withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -22,6 +23,7 @@ public class CreateWorkspaceApiKeyRequestBody {
      */
     @JsonProperty("keyRole")
     public String keyRole;
+
     public CreateWorkspaceApiKeyRequestBody withKeyRole(String keyRole) {
         this.keyRole = keyRole;
         return this;
@@ -32,9 +34,15 @@ public class CreateWorkspaceApiKeyRequestBody {
      */
     @JsonProperty("secondsToLive")
     public Long secondsToLive;
+
     public CreateWorkspaceApiKeyRequestBody withSecondsToLive(Long secondsToLive) {
         this.secondsToLive = secondsToLive;
         return this;
     }
     
+    public CreateWorkspaceApiKeyRequestBody(@JsonProperty("keyName") String keyName, @JsonProperty("keyRole") String keyRole, @JsonProperty("secondsToLive") Long secondsToLive) {
+        this.keyName = keyName;
+        this.keyRole = keyRole;
+        this.secondsToLive = secondsToLive;
+  }
 }

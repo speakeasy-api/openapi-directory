@@ -15,9 +15,11 @@ public class CreateHomeRegionControlResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeRegionControl")
     public HomeRegionControl homeRegionControl;
+
     public CreateHomeRegionControlResult withHomeRegionControl(HomeRegionControl homeRegionControl) {
         this.homeRegionControl = homeRegionControl;
         return this;
     }
     
+    public CreateHomeRegionControlResult(){}
 }

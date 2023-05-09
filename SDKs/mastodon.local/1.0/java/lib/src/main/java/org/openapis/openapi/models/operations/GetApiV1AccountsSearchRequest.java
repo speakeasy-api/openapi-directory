@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1AccountsSearchRequest {
@@ -12,6 +13,7 @@ public class GetApiV1AccountsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=following")
     public Boolean following;
+
     public GetApiV1AccountsSearchRequest withFollowing(Boolean following) {
         this.following = following;
         return this;
@@ -22,6 +24,7 @@ public class GetApiV1AccountsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetApiV1AccountsSearchRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,6 +35,7 @@ public class GetApiV1AccountsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetApiV1AccountsSearchRequest withQ(String q) {
         this.q = q;
         return this;
@@ -42,9 +46,13 @@ public class GetApiV1AccountsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolve")
     public String resolve;
+
     public GetApiV1AccountsSearchRequest withResolve(String resolve) {
         this.resolve = resolve;
         return this;
     }
     
+    public GetApiV1AccountsSearchRequest(@JsonProperty("q") String q) {
+        this.q = q;
+  }
 }

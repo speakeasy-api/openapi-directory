@@ -15,6 +15,7 @@ public class DelegatedAdminAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public DelegatedAdminAccount withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,9 +24,11 @@ public class DelegatedAdminAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DelegatedAdminStatusEnum status;
+
     public DelegatedAdminAccount withStatus(DelegatedAdminStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DelegatedAdminAccount(){}
 }

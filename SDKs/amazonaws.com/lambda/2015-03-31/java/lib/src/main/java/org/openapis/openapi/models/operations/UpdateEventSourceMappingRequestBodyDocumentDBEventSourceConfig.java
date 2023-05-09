@@ -15,6 +15,7 @@ public class UpdateEventSourceMappingRequestBodyDocumentDBEventSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CollectionName")
     public String collectionName;
+
     public UpdateEventSourceMappingRequestBodyDocumentDBEventSourceConfig withCollectionName(String collectionName) {
         this.collectionName = collectionName;
         return this;
@@ -23,6 +24,7 @@ public class UpdateEventSourceMappingRequestBodyDocumentDBEventSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public UpdateEventSourceMappingRequestBodyDocumentDBEventSourceConfig withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -31,9 +33,11 @@ public class UpdateEventSourceMappingRequestBodyDocumentDBEventSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FullDocument")
     public org.openapis.openapi.models.shared.FullDocumentEnum fullDocument;
+
     public UpdateEventSourceMappingRequestBodyDocumentDBEventSourceConfig withFullDocument(org.openapis.openapi.models.shared.FullDocumentEnum fullDocument) {
         this.fullDocument = fullDocument;
         return this;
     }
     
+    public UpdateEventSourceMappingRequestBodyDocumentDBEventSourceConfig(){}
 }

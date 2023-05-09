@@ -18,6 +18,7 @@ public class GoogleCloudMlV1ListVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudMlV1ListVersionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudMlV1ListVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versions")
     public GoogleCloudMlV1Version[] versions;
+
     public GoogleCloudMlV1ListVersionsResponse withVersions(GoogleCloudMlV1Version[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public GoogleCloudMlV1ListVersionsResponse(){}
 }

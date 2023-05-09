@@ -18,6 +18,7 @@ public class SourceSplitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public SourceSplitOptions options;
+
     public SourceSplitRequest withOptions(SourceSplitOptions options) {
         this.options = options;
         return this;
@@ -29,9 +30,11 @@ public class SourceSplitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public SourceSplitRequest withSource(Source source) {
         this.source = source;
         return this;
     }
     
+    public SourceSplitRequest(){}
 }

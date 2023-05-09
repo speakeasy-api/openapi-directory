@@ -15,6 +15,7 @@ public class RecordStartResponse {
      */
     @JsonProperty("Message")
     public RecordStartResponseMessageEnum message;
+
     public RecordStartResponse withMessage(RecordStartResponseMessageEnum message) {
         this.message = message;
         return this;
@@ -25,6 +26,7 @@ public class RecordStartResponse {
      */
     @JsonProperty("RecordFile")
     public String recordFile;
+
     public RecordStartResponse withRecordFile(String recordFile) {
         this.recordFile = recordFile;
         return this;
@@ -35,9 +37,15 @@ public class RecordStartResponse {
      */
     @JsonProperty("Success")
     public Boolean success;
+
     public RecordStartResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public RecordStartResponse(@JsonProperty("Message") RecordStartResponseMessageEnum message, @JsonProperty("RecordFile") String recordFile, @JsonProperty("Success") Boolean success) {
+        this.message = message;
+        this.recordFile = recordFile;
+        this.success = success;
+  }
 }

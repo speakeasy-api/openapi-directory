@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSatellitesResponse {
     
     public String contentType;
+
     public ListSatellitesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSatellitesResponse {
      */
     
     public Object dependencyException;
+
     public ListSatellitesResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -29,6 +32,7 @@ public class ListSatellitesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListSatellitesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListSatellitesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSatellitesResponse listSatellitesResponse;
+
     public ListSatellitesResponse withListSatellitesResponse(org.openapis.openapi.models.shared.ListSatellitesResponse listSatellitesResponse) {
         this.listSatellitesResponse = listSatellitesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListSatellitesResponse {
     
     
     public Integer statusCode;
+
     public ListSatellitesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListSatellitesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSatellitesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListSatellitesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListSatellitesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListSatellitesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetParametersForImportRequest {
     @JsonProperty("KeyId")
     public String keyId;
+
     public GetParametersForImportRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -16,6 +17,7 @@ public class GetParametersForImportRequest {
     
     @JsonProperty("WrappingAlgorithm")
     public AlgorithmSpecEnum wrappingAlgorithm;
+
     public GetParametersForImportRequest withWrappingAlgorithm(AlgorithmSpecEnum wrappingAlgorithm) {
         this.wrappingAlgorithm = wrappingAlgorithm;
         return this;
@@ -23,9 +25,15 @@ public class GetParametersForImportRequest {
     
     @JsonProperty("WrappingKeySpec")
     public WrappingKeySpecEnum wrappingKeySpec;
+
     public GetParametersForImportRequest withWrappingKeySpec(WrappingKeySpecEnum wrappingKeySpec) {
         this.wrappingKeySpec = wrappingKeySpec;
         return this;
     }
     
+    public GetParametersForImportRequest(@JsonProperty("KeyId") String keyId, @JsonProperty("WrappingAlgorithm") AlgorithmSpecEnum wrappingAlgorithm, @JsonProperty("WrappingKeySpec") WrappingKeySpecEnum wrappingKeySpec) {
+        this.keyId = keyId;
+        this.wrappingAlgorithm = wrappingAlgorithm;
+        this.wrappingKeySpec = wrappingKeySpec;
+  }
 }

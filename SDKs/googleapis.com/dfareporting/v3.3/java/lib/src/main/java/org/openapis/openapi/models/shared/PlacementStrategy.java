@@ -18,6 +18,7 @@ public class PlacementStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public PlacementStrategy withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class PlacementStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PlacementStrategy withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class PlacementStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PlacementStrategy withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class PlacementStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PlacementStrategy withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PlacementStrategy(){}
 }

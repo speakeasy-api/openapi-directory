@@ -15,9 +15,11 @@ public class BillbeeInterfacesBillbeeAPIModelGetReservedAmountResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReservedAmount")
     public Double reservedAmount;
+
     public BillbeeInterfacesBillbeeAPIModelGetReservedAmountResponseData withReservedAmount(Double reservedAmount) {
         this.reservedAmount = reservedAmount;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelGetReservedAmountResponseData(){}
 }

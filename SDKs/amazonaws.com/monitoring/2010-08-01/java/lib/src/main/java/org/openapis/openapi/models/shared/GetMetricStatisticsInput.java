@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 public class GetMetricStatisticsInput {
     
     public Dimension[] dimensions;
+
     public GetMetricStatisticsInput withDimensions(Dimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -16,6 +18,7 @@ public class GetMetricStatisticsInput {
     
     
     public OffsetDateTime endTime;
+
     public GetMetricStatisticsInput withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -23,6 +26,7 @@ public class GetMetricStatisticsInput {
     
     
     public String[] extendedStatistics;
+
     public GetMetricStatisticsInput withExtendedStatistics(String[] extendedStatistics) {
         this.extendedStatistics = extendedStatistics;
         return this;
@@ -30,6 +34,7 @@ public class GetMetricStatisticsInput {
     
     
     public String metricName;
+
     public GetMetricStatisticsInput withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -37,6 +42,7 @@ public class GetMetricStatisticsInput {
     
     
     public String namespace;
+
     public GetMetricStatisticsInput withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -44,6 +50,7 @@ public class GetMetricStatisticsInput {
     
     
     public Long period;
+
     public GetMetricStatisticsInput withPeriod(Long period) {
         this.period = period;
         return this;
@@ -51,6 +58,7 @@ public class GetMetricStatisticsInput {
     
     
     public OffsetDateTime startTime;
+
     public GetMetricStatisticsInput withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -58,6 +66,7 @@ public class GetMetricStatisticsInput {
     
     
     public StatisticEnum[] statistics;
+
     public GetMetricStatisticsInput withStatistics(StatisticEnum[] statistics) {
         this.statistics = statistics;
         return this;
@@ -65,9 +74,17 @@ public class GetMetricStatisticsInput {
     
     
     public StandardUnitEnum unit;
+
     public GetMetricStatisticsInput withUnit(StandardUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public GetMetricStatisticsInput(@JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("MetricName") String metricName, @JsonProperty("Namespace") String namespace, @JsonProperty("Period") Long period, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.metricName = metricName;
+        this.namespace = namespace;
+        this.period = period;
+        this.startTime = startTime;
+  }
 }

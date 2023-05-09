@@ -18,6 +18,7 @@ public class BillingAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public BillingAccount withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class BillingAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterBillingAccount")
     public String masterBillingAccount;
+
     public BillingAccount withMasterBillingAccount(String masterBillingAccount) {
         this.masterBillingAccount = masterBillingAccount;
         return this;
@@ -40,6 +42,7 @@ public class BillingAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BillingAccount withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class BillingAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("open")
     public Boolean open;
+
     public BillingAccount withOpen(Boolean open) {
         this.open = open;
         return this;
     }
     
+    public BillingAccount(){}
 }

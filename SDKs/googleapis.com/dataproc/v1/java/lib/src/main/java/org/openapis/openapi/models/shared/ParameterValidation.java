@@ -18,6 +18,7 @@ public class ParameterValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regex")
     public RegexValidation regex;
+
     public ParameterValidation withRegex(RegexValidation regex) {
         this.regex = regex;
         return this;
@@ -29,9 +30,11 @@ public class ParameterValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public ValueValidation values;
+
     public ParameterValidation withValues(ValueValidation values) {
         this.values = values;
         return this;
     }
     
+    public ParameterValidation(){}
 }

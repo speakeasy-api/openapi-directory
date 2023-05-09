@@ -12,6 +12,7 @@ public class CollectionMetaLinkCollectionLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first")
     public String first;
+
     public CollectionMetaLinkCollectionLinks withFirst(String first) {
         this.first = first;
         return this;
@@ -20,6 +21,7 @@ public class CollectionMetaLinkCollectionLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last")
     public String last;
+
     public CollectionMetaLinkCollectionLinks withLast(String last) {
         this.last = last;
         return this;
@@ -28,6 +30,7 @@ public class CollectionMetaLinkCollectionLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public CollectionMetaLinkCollectionLinks withNext(String next) {
         this.next = next;
         return this;
@@ -36,6 +39,7 @@ public class CollectionMetaLinkCollectionLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public CollectionMetaLinkCollectionLinks withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -44,6 +48,7 @@ public class CollectionMetaLinkCollectionLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public String self;
+
     public CollectionMetaLinkCollectionLinks withSelf(String self) {
         this.self = self;
         return this;
@@ -52,9 +57,11 @@ public class CollectionMetaLinkCollectionLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("up")
     public String up;
+
     public CollectionMetaLinkCollectionLinks withUp(String up) {
         this.up = up;
         return this;
     }
     
+    public CollectionMetaLinkCollectionLinks(){}
 }

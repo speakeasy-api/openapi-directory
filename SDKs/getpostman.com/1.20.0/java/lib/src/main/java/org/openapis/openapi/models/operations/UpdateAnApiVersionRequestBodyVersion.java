@@ -12,9 +12,11 @@ public class UpdateAnApiVersionRequestBodyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateAnApiVersionRequestBodyVersion withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateAnApiVersionRequestBodyVersion(){}
 }

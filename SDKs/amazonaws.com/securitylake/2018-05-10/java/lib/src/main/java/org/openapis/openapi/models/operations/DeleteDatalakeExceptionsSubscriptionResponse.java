@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDatalakeExceptionsSubscriptionResponse {
@@ -12,6 +13,7 @@ public class DeleteDatalakeExceptionsSubscriptionResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteDatalakeExceptionsSubscriptionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteDatalakeExceptionsSubscriptionResponse {
      */
     
     public Object accountNotFoundException;
+
     public DeleteDatalakeExceptionsSubscriptionResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDatalakeExceptionsSubscriptionResponse {
     
     
     public String contentType;
+
     public DeleteDatalakeExceptionsSubscriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDatalakeExceptionsSubscriptionResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteDatalakeExceptionsSubscriptionResponse deleteDatalakeExceptionsSubscriptionResponse;
+
     public DeleteDatalakeExceptionsSubscriptionResponse withDeleteDatalakeExceptionsSubscriptionResponse(org.openapis.openapi.models.shared.DeleteDatalakeExceptionsSubscriptionResponse deleteDatalakeExceptionsSubscriptionResponse) {
         this.deleteDatalakeExceptionsSubscriptionResponse = deleteDatalakeExceptionsSubscriptionResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDatalakeExceptionsSubscriptionResponse {
      */
     
     public Object internalServerException;
+
     public DeleteDatalakeExceptionsSubscriptionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteDatalakeExceptionsSubscriptionResponse {
     
     
     public Integer statusCode;
+
     public DeleteDatalakeExceptionsSubscriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteDatalakeExceptionsSubscriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDatalakeExceptionsSubscriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteDatalakeExceptionsSubscriptionResponse {
      */
     
     public Object validationException;
+
     public DeleteDatalakeExceptionsSubscriptionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteDatalakeExceptionsSubscriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ public class SuperMembership {
      */
     @JsonProperty("EmployeeNumber")
     public String employeeNumber;
+
     public SuperMembership withEmployeeNumber(String employeeNumber) {
         this.employeeNumber = employeeNumber;
         return this;
@@ -24,6 +25,7 @@ public class SuperMembership {
      */
     @JsonProperty("SuperFundID")
     public String superFundID;
+
     public SuperMembership withSuperFundID(String superFundID) {
         this.superFundID = superFundID;
         return this;
@@ -35,9 +37,14 @@ public class SuperMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuperMembershipID")
     public String superMembershipID;
+
     public SuperMembership withSuperMembershipID(String superMembershipID) {
         this.superMembershipID = superMembershipID;
         return this;
     }
     
+    public SuperMembership(@JsonProperty("EmployeeNumber") String employeeNumber, @JsonProperty("SuperFundID") String superFundID) {
+        this.employeeNumber = employeeNumber;
+        this.superFundID = superFundID;
+  }
 }

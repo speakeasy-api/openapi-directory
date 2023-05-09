@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchRequest {
@@ -12,6 +13,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
     public String xListenAPIKey;
+
     public SearchRequest withXListenAPIKey(String xListenAPIKey) {
         this.xListenAPIKey = xListenAPIKey;
         return this;
@@ -23,6 +25,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=episode_count_max")
     public Long episodeCountMax;
+
     public SearchRequest withEpisodeCountMax(Long episodeCountMax) {
         this.episodeCountMax = episodeCountMax;
         return this;
@@ -34,6 +37,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=episode_count_min")
     public Long episodeCountMin;
+
     public SearchRequest withEpisodeCountMin(Long episodeCountMin) {
         this.episodeCountMin = episodeCountMin;
         return this;
@@ -45,6 +49,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=genre_ids")
     public String genreIds;
+
     public SearchRequest withGenreIds(String genreIds) {
         this.genreIds = genreIds;
         return this;
@@ -56,6 +61,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
+
     public SearchRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -69,6 +75,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=len_max")
     public Long lenMax;
+
     public SearchRequest withLenMax(Long lenMax) {
         this.lenMax = lenMax;
         return this;
@@ -82,6 +89,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=len_min")
     public Long lenMin;
+
     public SearchRequest withLenMin(Long lenMin) {
         this.lenMin = lenMin;
         return this;
@@ -93,6 +101,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ncid")
     public String ncid;
+
     public SearchRequest withNcid(String ncid) {
         this.ncid = ncid;
         return this;
@@ -104,6 +113,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ocid")
     public String ocid;
+
     public SearchRequest withOcid(String ocid) {
         this.ocid = ocid;
         return this;
@@ -115,6 +125,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public SearchRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -126,8 +137,21 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=only_in")
     public String onlyIn;
+
     public SearchRequest withOnlyIn(String onlyIn) {
         this.onlyIn = onlyIn;
+        return this;
+    }
+    
+    /**
+     * The maximum number of search results per page. A valid value should be an integer between 1 and 10 (inclusive).
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+
+    public SearchRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
@@ -137,6 +161,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=published_after")
     public Long publishedAfter;
+
     public SearchRequest withPublishedAfter(Long publishedAfter) {
         this.publishedAfter = publishedAfter;
         return this;
@@ -148,6 +173,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=published_before")
     public Long publishedBefore;
+
     public SearchRequest withPublishedBefore(Long publishedBefore) {
         this.publishedBefore = publishedBefore;
         return this;
@@ -159,6 +185,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public SearchRequest withQ(String q) {
         this.q = q;
         return this;
@@ -170,6 +197,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=region")
     public String region;
+
     public SearchRequest withRegion(String region) {
         this.region = region;
         return this;
@@ -181,6 +209,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=safe_mode")
     public SearchSafeModeEnum safeMode;
+
     public SearchRequest withSafeMode(SearchSafeModeEnum safeMode) {
         this.safeMode = safeMode;
         return this;
@@ -192,6 +221,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by_date")
     public SearchSortByDateEnum sortByDate;
+
     public SearchRequest withSortByDate(SearchSortByDateEnum sortByDate) {
         this.sortByDate = sortByDate;
         return this;
@@ -203,6 +233,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public SearchTypeEnum type;
+
     public SearchRequest withType(SearchTypeEnum type) {
         this.type = type;
         return this;
@@ -214,6 +245,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unique_podcasts")
     public SearchUniquePodcastsEnum uniquePodcasts;
+
     public SearchRequest withUniquePodcasts(SearchUniquePodcastsEnum uniquePodcasts) {
         this.uniquePodcasts = uniquePodcasts;
         return this;
@@ -225,6 +257,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=update_freq_max")
     public Long updateFreqMax;
+
     public SearchRequest withUpdateFreqMax(Long updateFreqMax) {
         this.updateFreqMax = updateFreqMax;
         return this;
@@ -236,9 +269,14 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=update_freq_min")
     public Long updateFreqMin;
+
     public SearchRequest withUpdateFreqMin(Long updateFreqMin) {
         this.updateFreqMin = updateFreqMin;
         return this;
     }
     
+    public SearchRequest(@JsonProperty("X-ListenAPI-Key") String xListenAPIKey, @JsonProperty("q") String q) {
+        this.xListenAPIKey = xListenAPIKey;
+        this.q = q;
+  }
 }

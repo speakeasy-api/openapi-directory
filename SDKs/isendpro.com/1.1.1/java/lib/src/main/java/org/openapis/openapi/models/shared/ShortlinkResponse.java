@@ -15,9 +15,11 @@ public class ShortlinkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etat")
     public ShortlinkResponseEtat etat;
+
     public ShortlinkResponse withEtat(ShortlinkResponseEtat etat) {
         this.etat = etat;
         return this;
     }
     
+    public ShortlinkResponse(){}
 }

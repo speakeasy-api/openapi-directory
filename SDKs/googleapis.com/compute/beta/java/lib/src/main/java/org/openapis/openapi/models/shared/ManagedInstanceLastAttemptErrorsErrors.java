@@ -15,6 +15,7 @@ public class ManagedInstanceLastAttemptErrorsErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public ManagedInstanceLastAttemptErrorsErrors withCode(String code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class ManagedInstanceLastAttemptErrorsErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDetails")
     public ManagedInstanceLastAttemptErrorsErrorsErrorDetails[] errorDetails;
+
     public ManagedInstanceLastAttemptErrorsErrors withErrorDetails(ManagedInstanceLastAttemptErrorsErrorsErrorDetails[] errorDetails) {
         this.errorDetails = errorDetails;
         return this;
@@ -37,6 +39,7 @@ public class ManagedInstanceLastAttemptErrorsErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public ManagedInstanceLastAttemptErrorsErrors withLocation(String location) {
         this.location = location;
         return this;
@@ -48,9 +51,11 @@ public class ManagedInstanceLastAttemptErrorsErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ManagedInstanceLastAttemptErrorsErrors withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ManagedInstanceLastAttemptErrorsErrors(){}
 }

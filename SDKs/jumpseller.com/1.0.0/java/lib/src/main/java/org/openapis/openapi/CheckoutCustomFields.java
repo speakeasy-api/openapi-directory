@@ -57,12 +57,10 @@ public class CheckoutCustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCheckoutCustomFieldsIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteCheckoutCustomFieldsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.DeleteCheckoutCustomFieldsIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteCheckoutCustomFieldsIdJsonResponse(contentType, httpRes.statusCode()) {{
             deleteCheckoutCustomFieldsIdJSON200ApplicationJSONString = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class CheckoutCustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCheckoutCustomFieldsJsonResponse res = new org.openapis.openapi.models.operations.GetCheckoutCustomFieldsJsonResponse() {{
+        org.openapis.openapi.models.operations.GetCheckoutCustomFieldsJsonResponse res = new org.openapis.openapi.models.operations.GetCheckoutCustomFieldsJsonResponse(contentType, httpRes.statusCode()) {{
             checkoutCustomFields = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,12 +148,10 @@ public class CheckoutCustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCheckoutCustomFieldsIdJsonResponse res = new org.openapis.openapi.models.operations.GetCheckoutCustomFieldsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetCheckoutCustomFieldsIdJsonResponse res = new org.openapis.openapi.models.operations.GetCheckoutCustomFieldsIdJsonResponse(contentType, httpRes.statusCode()) {{
             checkoutCustomField = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -210,12 +204,10 @@ public class CheckoutCustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCheckoutCustomFieldsJsonResponse res = new org.openapis.openapi.models.operations.PostCheckoutCustomFieldsJsonResponse() {{
+        org.openapis.openapi.models.operations.PostCheckoutCustomFieldsJsonResponse res = new org.openapis.openapi.models.operations.PostCheckoutCustomFieldsJsonResponse(contentType, httpRes.statusCode()) {{
             checkoutCustomField = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -267,12 +259,10 @@ public class CheckoutCustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutCheckoutCustomFieldsIdJsonResponse res = new org.openapis.openapi.models.operations.PutCheckoutCustomFieldsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.PutCheckoutCustomFieldsIdJsonResponse res = new org.openapis.openapi.models.operations.PutCheckoutCustomFieldsIdJsonResponse(contentType, httpRes.statusCode()) {{
             checkoutCustomField = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

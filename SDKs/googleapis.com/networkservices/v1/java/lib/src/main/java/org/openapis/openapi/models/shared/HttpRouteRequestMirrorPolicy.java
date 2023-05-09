@@ -18,9 +18,11 @@ public class HttpRouteRequestMirrorPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public HttpRouteDestination destination;
+
     public HttpRouteRequestMirrorPolicy withDestination(HttpRouteDestination destination) {
         this.destination = destination;
         return this;
     }
     
+    public HttpRouteRequestMirrorPolicy(){}
 }

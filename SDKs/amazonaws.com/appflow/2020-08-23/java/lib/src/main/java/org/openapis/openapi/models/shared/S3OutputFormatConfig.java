@@ -18,6 +18,7 @@ public class S3OutputFormatConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationConfig")
     public AggregationConfig aggregationConfig;
+
     public S3OutputFormatConfig withAggregationConfig(AggregationConfig aggregationConfig) {
         this.aggregationConfig = aggregationConfig;
         return this;
@@ -26,6 +27,7 @@ public class S3OutputFormatConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileType")
     public FileTypeEnum fileType;
+
     public S3OutputFormatConfig withFileType(FileTypeEnum fileType) {
         this.fileType = fileType;
         return this;
@@ -34,6 +36,7 @@ public class S3OutputFormatConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefixConfig")
     public PrefixConfig prefixConfig;
+
     public S3OutputFormatConfig withPrefixConfig(PrefixConfig prefixConfig) {
         this.prefixConfig = prefixConfig;
         return this;
@@ -42,9 +45,11 @@ public class S3OutputFormatConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preserveSourceDataTyping")
     public Boolean preserveSourceDataTyping;
+
     public S3OutputFormatConfig withPreserveSourceDataTyping(Boolean preserveSourceDataTyping) {
         this.preserveSourceDataTyping = preserveSourceDataTyping;
         return this;
     }
     
+    public S3OutputFormatConfig(){}
 }

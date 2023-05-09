@@ -18,9 +18,11 @@ public class ScopeFeatureState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public FeatureState state;
+
     public ScopeFeatureState withState(FeatureState state) {
         this.state = state;
         return this;
     }
     
+    public ScopeFeatureState(){}
 }

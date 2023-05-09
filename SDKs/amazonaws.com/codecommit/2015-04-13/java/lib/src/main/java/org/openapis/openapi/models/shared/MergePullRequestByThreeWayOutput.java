@@ -18,9 +18,11 @@ public class MergePullRequestByThreeWayOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pullRequest")
     public PullRequest pullRequest;
+
     public MergePullRequestByThreeWayOutput withPullRequest(PullRequest pullRequest) {
         this.pullRequest = pullRequest;
         return this;
     }
     
+    public MergePullRequestByThreeWayOutput(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateCloudFormationStackRequest {
     @JsonProperty("instances")
     public InstanceEntry[] instances;
+
     public CreateCloudFormationStackRequest withInstances(InstanceEntry[] instances) {
         this.instances = instances;
         return this;
     }
     
+    public CreateCloudFormationStackRequest(@JsonProperty("instances") InstanceEntry[] instances) {
+        this.instances = instances;
+  }
 }

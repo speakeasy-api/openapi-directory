@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SetLoadBalancerListenerSSLCertificateInput - Contains the parameters for SetLoadBalancerListenerSSLCertificate.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SetLoadBalancerListenerSSLCertificateInput {
     
     public String loadBalancerName;
+
     public SetLoadBalancerListenerSSLCertificateInput withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -19,6 +20,7 @@ public class SetLoadBalancerListenerSSLCertificateInput {
     
     
     public Long loadBalancerPort;
+
     public SetLoadBalancerListenerSSLCertificateInput withLoadBalancerPort(Long loadBalancerPort) {
         this.loadBalancerPort = loadBalancerPort;
         return this;
@@ -26,9 +28,15 @@ public class SetLoadBalancerListenerSSLCertificateInput {
     
     
     public String sslCertificateId;
+
     public SetLoadBalancerListenerSSLCertificateInput withSSLCertificateId(String sslCertificateId) {
         this.sslCertificateId = sslCertificateId;
         return this;
     }
     
+    public SetLoadBalancerListenerSSLCertificateInput(@JsonProperty("LoadBalancerName") String loadBalancerName, @JsonProperty("LoadBalancerPort") Long loadBalancerPort, @JsonProperty("SSLCertificateId") String sslCertificateId) {
+        this.loadBalancerName = loadBalancerName;
+        this.loadBalancerPort = loadBalancerPort;
+        this.sslCertificateId = sslCertificateId;
+  }
 }

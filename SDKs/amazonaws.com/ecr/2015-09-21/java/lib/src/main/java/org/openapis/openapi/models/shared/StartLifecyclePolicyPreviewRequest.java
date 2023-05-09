@@ -12,6 +12,7 @@ public class StartLifecyclePolicyPreviewRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecyclePolicyText")
     public String lifecyclePolicyText;
+
     public StartLifecyclePolicyPreviewRequest withLifecyclePolicyText(String lifecyclePolicyText) {
         this.lifecyclePolicyText = lifecyclePolicyText;
         return this;
@@ -20,6 +21,7 @@ public class StartLifecyclePolicyPreviewRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public StartLifecyclePolicyPreviewRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -27,9 +29,13 @@ public class StartLifecyclePolicyPreviewRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public StartLifecyclePolicyPreviewRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public StartLifecyclePolicyPreviewRequest(@JsonProperty("repositoryName") String repositoryName) {
+        this.repositoryName = repositoryName;
+  }
 }

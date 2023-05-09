@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETDeleteNetworkInsightsAccessScopeResponse {
     
     public byte[] body;
+
     public GETDeleteNetworkInsightsAccessScopeResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETDeleteNetworkInsightsAccessScopeResponse {
     
     
     public String contentType;
+
     public GETDeleteNetworkInsightsAccessScopeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETDeleteNetworkInsightsAccessScopeResponse {
     
     
     public Integer statusCode;
+
     public GETDeleteNetworkInsightsAccessScopeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETDeleteNetworkInsightsAccessScopeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETDeleteNetworkInsightsAccessScopeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETDeleteNetworkInsightsAccessScopeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

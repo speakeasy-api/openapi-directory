@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostDeclineThirdPartyResponse {
     
     public String contentType;
+
     public PostDeclineThirdPartyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostDeclineThirdPartyResponse {
      */
     
     public org.openapis.openapi.models.shared.ModifyResponse modifyResponse;
+
     public PostDeclineThirdPartyResponse withModifyResponse(org.openapis.openapi.models.shared.ModifyResponse modifyResponse) {
         this.modifyResponse = modifyResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostDeclineThirdPartyResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostDeclineThirdPartyResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class PostDeclineThirdPartyResponse {
     
     
     public Integer statusCode;
+
     public PostDeclineThirdPartyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostDeclineThirdPartyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostDeclineThirdPartyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostDeclineThirdPartyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

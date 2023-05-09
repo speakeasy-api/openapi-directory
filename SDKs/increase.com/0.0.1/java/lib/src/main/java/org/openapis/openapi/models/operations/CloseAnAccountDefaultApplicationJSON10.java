@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CloseAnAccountDefaultApplicationJSON10 {
     @JsonProperty("detail")
     public String detail;
+
     public CloseAnAccountDefaultApplicationJSON10 withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -16,6 +17,7 @@ public class CloseAnAccountDefaultApplicationJSON10 {
     
     @JsonProperty("status")
     public CloseAnAccountDefaultApplicationJSON10StatusEnum status;
+
     public CloseAnAccountDefaultApplicationJSON10 withStatus(CloseAnAccountDefaultApplicationJSON10StatusEnum status) {
         this.status = status;
         return this;
@@ -23,6 +25,7 @@ public class CloseAnAccountDefaultApplicationJSON10 {
     
     @JsonProperty("title")
     public String title;
+
     public CloseAnAccountDefaultApplicationJSON10 withTitle(String title) {
         this.title = title;
         return this;
@@ -30,9 +33,16 @@ public class CloseAnAccountDefaultApplicationJSON10 {
     
     @JsonProperty("type")
     public CloseAnAccountDefaultApplicationJSON10TypeEnum type;
+
     public CloseAnAccountDefaultApplicationJSON10 withType(CloseAnAccountDefaultApplicationJSON10TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CloseAnAccountDefaultApplicationJSON10(@JsonProperty("detail") String detail, @JsonProperty("status") CloseAnAccountDefaultApplicationJSON10StatusEnum status, @JsonProperty("title") String title, @JsonProperty("type") CloseAnAccountDefaultApplicationJSON10TypeEnum type) {
+        this.detail = detail;
+        this.status = status;
+        this.title = title;
+        this.type = type;
+  }
 }

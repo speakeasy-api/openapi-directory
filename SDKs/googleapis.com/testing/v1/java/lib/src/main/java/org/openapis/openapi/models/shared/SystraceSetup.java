@@ -15,9 +15,11 @@ public class SystraceSetup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationSeconds")
     public Integer durationSeconds;
+
     public SystraceSetup withDurationSeconds(Integer durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
     }
     
+    public SystraceSetup(){}
 }

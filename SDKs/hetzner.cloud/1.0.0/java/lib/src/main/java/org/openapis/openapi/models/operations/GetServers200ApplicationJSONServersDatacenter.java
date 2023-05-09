@@ -15,6 +15,7 @@ public class GetServers200ApplicationJSONServersDatacenter {
      */
     @JsonProperty("description")
     public String description;
+
     public GetServers200ApplicationJSONServersDatacenter withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class GetServers200ApplicationJSONServersDatacenter {
      */
     @JsonProperty("id")
     public Long id;
+
     public GetServers200ApplicationJSONServersDatacenter withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class GetServers200ApplicationJSONServersDatacenter {
     
     @JsonProperty("location")
     public GetServers200ApplicationJSONServersDatacenterLocation location;
+
     public GetServers200ApplicationJSONServersDatacenter withLocation(GetServers200ApplicationJSONServersDatacenterLocation location) {
         this.location = location;
         return this;
@@ -42,6 +45,7 @@ public class GetServers200ApplicationJSONServersDatacenter {
      */
     @JsonProperty("name")
     public String name;
+
     public GetServers200ApplicationJSONServersDatacenter withName(String name) {
         this.name = name;
         return this;
@@ -52,9 +56,17 @@ public class GetServers200ApplicationJSONServersDatacenter {
      */
     @JsonProperty("server_types")
     public GetServers200ApplicationJSONServersDatacenterServerTypes serverTypes;
+
     public GetServers200ApplicationJSONServersDatacenter withServerTypes(GetServers200ApplicationJSONServersDatacenterServerTypes serverTypes) {
         this.serverTypes = serverTypes;
         return this;
     }
     
+    public GetServers200ApplicationJSONServersDatacenter(@JsonProperty("description") String description, @JsonProperty("id") Long id, @JsonProperty("location") GetServers200ApplicationJSONServersDatacenterLocation location, @JsonProperty("name") String name, @JsonProperty("server_types") GetServers200ApplicationJSONServersDatacenterServerTypes serverTypes) {
+        this.description = description;
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.serverTypes = serverTypes;
+  }
 }

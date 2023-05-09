@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdatePullRequestApprovalStateInput {
     @JsonProperty("approvalState")
     public ApprovalStateEnum approvalState;
+
     public UpdatePullRequestApprovalStateInput withApprovalState(ApprovalStateEnum approvalState) {
         this.approvalState = approvalState;
         return this;
@@ -16,6 +17,7 @@ public class UpdatePullRequestApprovalStateInput {
     
     @JsonProperty("pullRequestId")
     public String pullRequestId;
+
     public UpdatePullRequestApprovalStateInput withPullRequestId(String pullRequestId) {
         this.pullRequestId = pullRequestId;
         return this;
@@ -23,9 +25,15 @@ public class UpdatePullRequestApprovalStateInput {
     
     @JsonProperty("revisionId")
     public String revisionId;
+
     public UpdatePullRequestApprovalStateInput withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
     }
     
+    public UpdatePullRequestApprovalStateInput(@JsonProperty("approvalState") ApprovalStateEnum approvalState, @JsonProperty("pullRequestId") String pullRequestId, @JsonProperty("revisionId") String revisionId) {
+        this.approvalState = approvalState;
+        this.pullRequestId = pullRequestId;
+        this.revisionId = revisionId;
+  }
 }

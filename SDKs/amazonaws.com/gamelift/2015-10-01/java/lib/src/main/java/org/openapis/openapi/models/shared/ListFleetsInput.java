@@ -12,6 +12,7 @@ public class ListFleetsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BuildId")
     public String buildId;
+
     public ListFleetsInput withBuildId(String buildId) {
         this.buildId = buildId;
         return this;
@@ -20,6 +21,7 @@ public class ListFleetsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListFleetsInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -28,6 +30,7 @@ public class ListFleetsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFleetsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class ListFleetsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScriptId")
     public String scriptId;
+
     public ListFleetsInput withScriptId(String scriptId) {
         this.scriptId = scriptId;
         return this;
     }
     
+    public ListFleetsInput(){}
 }

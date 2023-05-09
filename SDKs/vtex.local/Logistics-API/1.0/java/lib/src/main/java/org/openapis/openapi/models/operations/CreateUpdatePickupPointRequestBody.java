@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateUpdatePickupPointRequestBody {
     @JsonProperty("address")
     public CreateUpdatePickupPointRequestBodyAddress address;
+
     public CreateUpdatePickupPointRequestBody withAddress(CreateUpdatePickupPointRequestBodyAddress address) {
         this.address = address;
         return this;
@@ -18,6 +19,7 @@ public class CreateUpdatePickupPointRequestBody {
     
     @JsonProperty("businessHours")
     public CreateUpdatePickupPointRequestBodyBusinessHour[] businessHours;
+
     public CreateUpdatePickupPointRequestBody withBusinessHours(CreateUpdatePickupPointRequestBodyBusinessHour[] businessHours) {
         this.businessHours = businessHours;
         return this;
@@ -28,6 +30,7 @@ public class CreateUpdatePickupPointRequestBody {
      */
     @JsonProperty("description")
     public String description;
+
     public CreateUpdatePickupPointRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +41,7 @@ public class CreateUpdatePickupPointRequestBody {
      */
     @JsonProperty("formatted_address")
     public String formattedAddress;
+
     public CreateUpdatePickupPointRequestBody withFormattedAddress(String formattedAddress) {
         this.formattedAddress = formattedAddress;
         return this;
@@ -48,6 +52,7 @@ public class CreateUpdatePickupPointRequestBody {
      */
     @JsonProperty("id")
     public String id;
+
     public CreateUpdatePickupPointRequestBody withId(String id) {
         this.id = id;
         return this;
@@ -58,6 +63,7 @@ public class CreateUpdatePickupPointRequestBody {
      */
     @JsonProperty("instructions")
     public String instructions;
+
     public CreateUpdatePickupPointRequestBody withInstructions(String instructions) {
         this.instructions = instructions;
         return this;
@@ -65,6 +71,7 @@ public class CreateUpdatePickupPointRequestBody {
     
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public CreateUpdatePickupPointRequestBody withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -73,6 +80,7 @@ public class CreateUpdatePickupPointRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isThirdPartyPickup")
     public Boolean isThirdPartyPickup;
+
     public CreateUpdatePickupPointRequestBody withIsThirdPartyPickup(Boolean isThirdPartyPickup) {
         this.isThirdPartyPickup = isThirdPartyPickup;
         return this;
@@ -83,6 +91,7 @@ public class CreateUpdatePickupPointRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateUpdatePickupPointRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -90,9 +99,21 @@ public class CreateUpdatePickupPointRequestBody {
     
     @JsonProperty("tagsLabel")
     public String[] tagsLabel;
+
     public CreateUpdatePickupPointRequestBody withTagsLabel(String[] tagsLabel) {
         this.tagsLabel = tagsLabel;
         return this;
     }
     
+    public CreateUpdatePickupPointRequestBody(@JsonProperty("address") CreateUpdatePickupPointRequestBodyAddress address, @JsonProperty("businessHours") CreateUpdatePickupPointRequestBodyBusinessHour[] businessHours, @JsonProperty("description") String description, @JsonProperty("formatted_address") String formattedAddress, @JsonProperty("id") String id, @JsonProperty("instructions") String instructions, @JsonProperty("isActive") Boolean isActive, @JsonProperty("name") String name, @JsonProperty("tagsLabel") String[] tagsLabel) {
+        this.address = address;
+        this.businessHours = businessHours;
+        this.description = description;
+        this.formattedAddress = formattedAddress;
+        this.id = id;
+        this.instructions = instructions;
+        this.isActive = isActive;
+        this.name = name;
+        this.tagsLabel = tagsLabel;
+  }
 }

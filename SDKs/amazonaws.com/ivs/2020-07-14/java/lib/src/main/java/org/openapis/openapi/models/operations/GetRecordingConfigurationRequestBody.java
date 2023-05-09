@@ -12,9 +12,13 @@ public class GetRecordingConfigurationRequestBody {
      */
     @JsonProperty("arn")
     public String arn;
+
     public GetRecordingConfigurationRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public GetRecordingConfigurationRequestBody(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

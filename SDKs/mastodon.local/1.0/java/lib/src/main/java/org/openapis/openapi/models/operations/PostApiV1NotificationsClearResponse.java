@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostApiV1NotificationsClearResponse {
     
     public String contentType;
+
     public PostApiV1NotificationsClearResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostApiV1NotificationsClearResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PostApiV1NotificationsClearResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class PostApiV1NotificationsClearResponse {
     
     
     public Integer statusCode;
+
     public PostApiV1NotificationsClearResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class PostApiV1NotificationsClearResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostApiV1NotificationsClearResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class PostApiV1NotificationsClearResponse {
      */
     
     public java.util.Map<String, Object> postApiV1NotificationsClear200ApplicationJSONObject;
+
     public PostApiV1NotificationsClearResponse withPostApiV1NotificationsClear200ApplicationJSONObject(java.util.Map<String, Object> postApiV1NotificationsClear200ApplicationJSONObject) {
         this.postApiV1NotificationsClear200ApplicationJSONObject = postApiV1NotificationsClear200ApplicationJSONObject;
         return this;
     }
     
+    public PostApiV1NotificationsClearResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

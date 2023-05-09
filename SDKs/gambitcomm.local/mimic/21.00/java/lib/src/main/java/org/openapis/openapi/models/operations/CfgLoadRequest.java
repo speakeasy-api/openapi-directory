@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CfgLoadRequest {
@@ -12,6 +13,7 @@ public class CfgLoadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cfgFile")
     public String cfgFile;
+
     public CfgLoadRequest withCfgFile(String cfgFile) {
         this.cfgFile = cfgFile;
         return this;
@@ -22,6 +24,7 @@ public class CfgLoadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firstAgentNum")
     public Integer firstAgentNum;
+
     public CfgLoadRequest withFirstAgentNum(Integer firstAgentNum) {
         this.firstAgentNum = firstAgentNum;
         return this;
@@ -32,6 +35,7 @@ public class CfgLoadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lastAgentNum")
     public Integer lastAgentNum;
+
     public CfgLoadRequest withLastAgentNum(Integer lastAgentNum) {
         this.lastAgentNum = lastAgentNum;
         return this;
@@ -42,9 +46,16 @@ public class CfgLoadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=startAgentNum")
     public Integer startAgentNum;
+
     public CfgLoadRequest withStartAgentNum(Integer startAgentNum) {
         this.startAgentNum = startAgentNum;
         return this;
     }
     
+    public CfgLoadRequest(@JsonProperty("cfgFile") String cfgFile, @JsonProperty("firstAgentNum") Integer firstAgentNum, @JsonProperty("lastAgentNum") Integer lastAgentNum, @JsonProperty("startAgentNum") Integer startAgentNum) {
+        this.cfgFile = cfgFile;
+        this.firstAgentNum = firstAgentNum;
+        this.lastAgentNum = lastAgentNum;
+        this.startAgentNum = startAgentNum;
+  }
 }

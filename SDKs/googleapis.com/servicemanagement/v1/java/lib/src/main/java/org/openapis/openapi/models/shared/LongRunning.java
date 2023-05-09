@@ -18,6 +18,7 @@ public class LongRunning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialPollDelay")
     public String initialPollDelay;
+
     public LongRunning withInitialPollDelay(String initialPollDelay) {
         this.initialPollDelay = initialPollDelay;
         return this;
@@ -29,6 +30,7 @@ public class LongRunning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxPollDelay")
     public String maxPollDelay;
+
     public LongRunning withMaxPollDelay(String maxPollDelay) {
         this.maxPollDelay = maxPollDelay;
         return this;
@@ -40,6 +42,7 @@ public class LongRunning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pollDelayMultiplier")
     public Float pollDelayMultiplier;
+
     public LongRunning withPollDelayMultiplier(Float pollDelayMultiplier) {
         this.pollDelayMultiplier = pollDelayMultiplier;
         return this;
@@ -51,9 +54,11 @@ public class LongRunning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalPollTimeout")
     public String totalPollTimeout;
+
     public LongRunning withTotalPollTimeout(String totalPollTimeout) {
         this.totalPollTimeout = totalPollTimeout;
         return this;
     }
     
+    public LongRunning(){}
 }

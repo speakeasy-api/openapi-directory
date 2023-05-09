@@ -18,6 +18,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public File withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +30,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relativePath")
     public String relativePath;
+
     public File withRelativePath(String relativePath) {
         this.relativePath = relativePath;
         return this;
@@ -40,9 +42,11 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public File withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public File(){}
 }

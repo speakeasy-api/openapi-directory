@@ -15,6 +15,7 @@ public class FastLaunchLaunchTemplateSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchTemplateId")
     public String launchTemplateId;
+
     public FastLaunchLaunchTemplateSpecification withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -23,6 +24,7 @@ public class FastLaunchLaunchTemplateSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchTemplateName")
     public String launchTemplateName;
+
     public FastLaunchLaunchTemplateSpecification withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
@@ -31,9 +33,11 @@ public class FastLaunchLaunchTemplateSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchTemplateVersion")
     public String launchTemplateVersion;
+
     public FastLaunchLaunchTemplateSpecification withLaunchTemplateVersion(String launchTemplateVersion) {
         this.launchTemplateVersion = launchTemplateVersion;
         return this;
     }
     
+    public FastLaunchLaunchTemplateSpecification(){}
 }

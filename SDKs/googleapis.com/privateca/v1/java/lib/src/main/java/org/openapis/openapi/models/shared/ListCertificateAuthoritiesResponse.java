@@ -18,6 +18,7 @@ public class ListCertificateAuthoritiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateAuthorities")
     public CertificateAuthority[] certificateAuthorities;
+
     public ListCertificateAuthoritiesResponse withCertificateAuthorities(CertificateAuthority[] certificateAuthorities) {
         this.certificateAuthorities = certificateAuthorities;
         return this;
@@ -29,6 +30,7 @@ public class ListCertificateAuthoritiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCertificateAuthoritiesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListCertificateAuthoritiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListCertificateAuthoritiesResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListCertificateAuthoritiesResponse(){}
 }

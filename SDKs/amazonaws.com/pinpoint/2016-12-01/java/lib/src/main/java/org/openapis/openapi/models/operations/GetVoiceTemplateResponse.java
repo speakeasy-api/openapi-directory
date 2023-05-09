@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetVoiceTemplateResponse {
@@ -12,6 +13,7 @@ public class GetVoiceTemplateResponse {
      */
     
     public Object badRequestException;
+
     public GetVoiceTemplateResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetVoiceTemplateResponse {
     
     
     public String contentType;
+
     public GetVoiceTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetVoiceTemplateResponse {
      */
     
     public Object forbiddenException;
+
     public GetVoiceTemplateResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetVoiceTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.GetVoiceTemplateResponse getVoiceTemplateResponse;
+
     public GetVoiceTemplateResponse withGetVoiceTemplateResponse(org.openapis.openapi.models.shared.GetVoiceTemplateResponse getVoiceTemplateResponse) {
         this.getVoiceTemplateResponse = getVoiceTemplateResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetVoiceTemplateResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetVoiceTemplateResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetVoiceTemplateResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetVoiceTemplateResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetVoiceTemplateResponse {
      */
     
     public Object notFoundException;
+
     public GetVoiceTemplateResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetVoiceTemplateResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetVoiceTemplateResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetVoiceTemplateResponse {
     
     
     public Integer statusCode;
+
     public GetVoiceTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetVoiceTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetVoiceTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetVoiceTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetVoiceTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetVoiceTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

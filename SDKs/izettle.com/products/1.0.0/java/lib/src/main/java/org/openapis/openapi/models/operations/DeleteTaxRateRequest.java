@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTaxRateRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxRateUuid")
     public String taxRateUuid;
+
     public DeleteTaxRateRequest withTaxRateUuid(String taxRateUuid) {
         this.taxRateUuid = taxRateUuid;
         return this;
     }
     
+    public DeleteTaxRateRequest(@JsonProperty("taxRateUuid") String taxRateUuid) {
+        this.taxRateUuid = taxRateUuid;
+  }
 }

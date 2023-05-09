@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeEntitiesDetectionV2JobResponse {
     
     public String contentType;
+
     public DescribeEntitiesDetectionV2JobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeEntitiesDetectionV2JobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeEntitiesDetectionV2JobResponse describeEntitiesDetectionV2JobResponse;
+
     public DescribeEntitiesDetectionV2JobResponse withDescribeEntitiesDetectionV2JobResponse(org.openapis.openapi.models.shared.DescribeEntitiesDetectionV2JobResponse describeEntitiesDetectionV2JobResponse) {
         this.describeEntitiesDetectionV2JobResponse = describeEntitiesDetectionV2JobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeEntitiesDetectionV2JobResponse {
      */
     
     public Object internalServerException;
+
     public DescribeEntitiesDetectionV2JobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeEntitiesDetectionV2JobResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeEntitiesDetectionV2JobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeEntitiesDetectionV2JobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeEntitiesDetectionV2JobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeEntitiesDetectionV2JobResponse {
     
     
     public Integer statusCode;
+
     public DescribeEntitiesDetectionV2JobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeEntitiesDetectionV2JobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeEntitiesDetectionV2JobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeEntitiesDetectionV2JobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeEntitiesDetectionV2JobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeEntitiesDetectionV2JobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

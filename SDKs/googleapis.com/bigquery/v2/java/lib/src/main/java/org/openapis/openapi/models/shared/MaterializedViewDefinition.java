@@ -15,6 +15,7 @@ public class MaterializedViewDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_non_incremental_definition")
     public Boolean allowNonIncrementalDefinition;
+
     public MaterializedViewDefinition withAllowNonIncrementalDefinition(Boolean allowNonIncrementalDefinition) {
         this.allowNonIncrementalDefinition = allowNonIncrementalDefinition;
         return this;
@@ -26,6 +27,7 @@ public class MaterializedViewDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableRefresh")
     public Boolean enableRefresh;
+
     public MaterializedViewDefinition withEnableRefresh(Boolean enableRefresh) {
         this.enableRefresh = enableRefresh;
         return this;
@@ -37,6 +39,7 @@ public class MaterializedViewDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastRefreshTime")
     public String lastRefreshTime;
+
     public MaterializedViewDefinition withLastRefreshTime(String lastRefreshTime) {
         this.lastRefreshTime = lastRefreshTime;
         return this;
@@ -48,6 +51,7 @@ public class MaterializedViewDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxStaleness")
     public String maxStaleness;
+
     public MaterializedViewDefinition withMaxStaleness(String maxStaleness) {
         this.maxStaleness = maxStaleness;
         return this;
@@ -59,6 +63,7 @@ public class MaterializedViewDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public MaterializedViewDefinition withQuery(String query) {
         this.query = query;
         return this;
@@ -70,9 +75,11 @@ public class MaterializedViewDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refreshIntervalMs")
     public String refreshIntervalMs;
+
     public MaterializedViewDefinition withRefreshIntervalMs(String refreshIntervalMs) {
         this.refreshIntervalMs = refreshIntervalMs;
         return this;
     }
     
+    public MaterializedViewDefinition(){}
 }

@@ -4,25 +4,46 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.time.LocalDate;
 
 public class PartyIdentification2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public Address2 address;
+
     public PartyIdentification2 withAddress(Address2 address) {
         this.address = address;
         return this;
     }
     
     /**
-     * First name of the individual. Required when `type` is **individual**.
+     * The date of birth of the individual in [ISO-8601](https://www.w3.org/TR/NOTE-datetime) format. For example, **YYYY-MM-DD**.
+     * 
+     * Allowed only when `type` is **individual**.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonProperty("dateOfBirth")
+    public LocalDate dateOfBirth;
+
+    public PartyIdentification2 withDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+        return this;
+    }
+    
+    /**
+     * First name of the individual.
+     * 
+     * Allowed only when `type` is **individual**.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public PartyIdentification2 withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -33,19 +54,35 @@ public class PartyIdentification2 {
      */
     @JsonProperty("fullName")
     public String fullName;
+
     public PartyIdentification2 withFullName(String fullName) {
         this.fullName = fullName;
         return this;
     }
     
     /**
-     * Last name of the individual. Required when `type` is **individual**.
+     * Last name of the individual.
+     * 
+     * Allowed only when `type` is **individual**.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public PartyIdentification2 withLastName(String lastName) {
         this.lastName = lastName;
+        return this;
+    }
+    
+    /**
+     * Your unique reference of the party. This should be consistent for all transfers initiated to/from the same party/counterparty. e.g Your client's unique wallet or payee ID
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reference")
+    public String reference;
+
+    public PartyIdentification2 withReference(String reference) {
+        this.reference = reference;
         return this;
     }
     
@@ -57,9 +94,13 @@ public class PartyIdentification2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PartyIdentification2TypeEnum type;
+
     public PartyIdentification2 withType(PartyIdentification2TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PartyIdentification2(@JsonProperty("fullName") String fullName) {
+        this.fullName = fullName;
+  }
 }

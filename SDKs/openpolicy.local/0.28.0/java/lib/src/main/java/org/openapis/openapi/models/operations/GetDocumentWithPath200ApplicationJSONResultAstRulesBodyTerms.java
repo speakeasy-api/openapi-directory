@@ -15,6 +15,7 @@ public class GetDocumentWithPath200ApplicationJSONResultAstRulesBodyTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GetDocumentWithPath200ApplicationJSONResultAstRulesBodyTerms withType(String type) {
         this.type = type;
         return this;
@@ -26,9 +27,11 @@ public class GetDocumentWithPath200ApplicationJSONResultAstRulesBodyTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public GetDocumentWithPath200ApplicationJSONResultAstRulesBodyTermsValue[] value;
+
     public GetDocumentWithPath200ApplicationJSONResultAstRulesBodyTerms withValue(GetDocumentWithPath200ApplicationJSONResultAstRulesBodyTermsValue[] value) {
         this.value = value;
         return this;
     }
     
+    public GetDocumentWithPath200ApplicationJSONResultAstRulesBodyTerms(){}
 }

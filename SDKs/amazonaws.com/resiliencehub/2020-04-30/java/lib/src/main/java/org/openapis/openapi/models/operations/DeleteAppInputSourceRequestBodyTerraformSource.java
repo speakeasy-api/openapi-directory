@@ -15,9 +15,11 @@ public class DeleteAppInputSourceRequestBodyTerraformSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3StateFileUrl")
     public String s3StateFileUrl;
+
     public DeleteAppInputSourceRequestBodyTerraformSource withS3StateFileUrl(String s3StateFileUrl) {
         this.s3StateFileUrl = s3StateFileUrl;
         return this;
     }
     
+    public DeleteAppInputSourceRequestBodyTerraformSource(){}
 }

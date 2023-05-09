@@ -18,6 +18,7 @@ public class MachineType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customMachineType")
     public CustomMachineType customMachineType;
+
     public MachineType withCustomMachineType(CustomMachineType customMachineType) {
         this.customMachineType = customMachineType;
         return this;
@@ -29,9 +30,11 @@ public class MachineType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predefinedMachineType")
     public PredefinedMachineType predefinedMachineType;
+
     public MachineType withPredefinedMachineType(PredefinedMachineType predefinedMachineType) {
         this.predefinedMachineType = predefinedMachineType;
         return this;
     }
     
+    public MachineType(){}
 }

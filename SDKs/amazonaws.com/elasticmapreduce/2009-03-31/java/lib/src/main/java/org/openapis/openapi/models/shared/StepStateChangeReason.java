@@ -15,6 +15,7 @@ public class StepStateChangeReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public StepStateChangeReasonCodeEnum code;
+
     public StepStateChangeReason withCode(StepStateChangeReasonCodeEnum code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class StepStateChangeReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public StepStateChangeReason withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public StepStateChangeReason(){}
 }

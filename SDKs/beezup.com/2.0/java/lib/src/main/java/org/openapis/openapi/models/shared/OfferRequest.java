@@ -14,6 +14,7 @@ public class OfferRequest {
      */
     @JsonProperty("billingPeriodInMonth")
     public Integer billingPeriodInMonth;
+
     public OfferRequest withBillingPeriodInMonth(Integer billingPeriodInMonth) {
         this.billingPeriodInMonth = billingPeriodInMonth;
         return this;
@@ -25,6 +26,7 @@ public class OfferRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("couponDiscountCode")
     public String couponDiscountCode;
+
     public OfferRequest withCouponDiscountCode(String couponDiscountCode) {
         this.couponDiscountCode = couponDiscountCode;
         return this;
@@ -36,6 +38,7 @@ public class OfferRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("couponOfferCode")
     public String couponOfferCode;
+
     public OfferRequest withCouponOfferCode(String couponOfferCode) {
         this.couponOfferCode = couponOfferCode;
         return this;
@@ -46,6 +49,7 @@ public class OfferRequest {
      */
     @JsonProperty("offerId")
     public Integer offerId;
+
     public OfferRequest withOfferId(Integer offerId) {
         this.offerId = offerId;
         return this;
@@ -56,9 +60,15 @@ public class OfferRequest {
      */
     @JsonProperty("storeCount")
     public Integer storeCount;
+
     public OfferRequest withStoreCount(Integer storeCount) {
         this.storeCount = storeCount;
         return this;
     }
     
+    public OfferRequest(@JsonProperty("billingPeriodInMonth") Integer billingPeriodInMonth, @JsonProperty("offerId") Integer offerId, @JsonProperty("storeCount") Integer storeCount) {
+        this.billingPeriodInMonth = billingPeriodInMonth;
+        this.offerId = offerId;
+        this.storeCount = storeCount;
+  }
 }

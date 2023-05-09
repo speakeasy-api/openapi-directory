@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CertificateListResponse {
@@ -12,6 +13,7 @@ public class CertificateListResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public CertificateListResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -22,6 +24,7 @@ public class CertificateListResponse {
      */
     
     public org.openapis.openapi.models.shared.CertificateListResult certificateListResult;
+
     public CertificateListResponse withCertificateListResult(org.openapis.openapi.models.shared.CertificateListResult certificateListResult) {
         this.certificateListResult = certificateListResult;
         return this;
@@ -29,6 +32,7 @@ public class CertificateListResponse {
     
     
     public String contentType;
+
     public CertificateListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class CertificateListResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CertificateListResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -43,6 +48,7 @@ public class CertificateListResponse {
     
     
     public Integer statusCode;
+
     public CertificateListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class CertificateListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CertificateListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CertificateListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

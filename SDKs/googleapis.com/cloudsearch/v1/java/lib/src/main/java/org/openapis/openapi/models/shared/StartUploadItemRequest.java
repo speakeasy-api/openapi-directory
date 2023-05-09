@@ -18,6 +18,7 @@ public class StartUploadItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorName")
     public String connectorName;
+
     public StartUploadItemRequest withConnectorName(String connectorName) {
         this.connectorName = connectorName;
         return this;
@@ -29,9 +30,11 @@ public class StartUploadItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debugOptions")
     public DebugOptions debugOptions;
+
     public StartUploadItemRequest withDebugOptions(DebugOptions debugOptions) {
         this.debugOptions = debugOptions;
         return this;
     }
     
+    public StartUploadItemRequest(){}
 }

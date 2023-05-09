@@ -18,6 +18,7 @@ public class DockerImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildTime")
     public String buildTime;
+
     public DockerImage withBuildTime(String buildTime) {
         this.buildTime = buildTime;
         return this;
@@ -29,6 +30,7 @@ public class DockerImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageSizeBytes")
     public String imageSizeBytes;
+
     public DockerImage withImageSizeBytes(String imageSizeBytes) {
         this.imageSizeBytes = imageSizeBytes;
         return this;
@@ -40,6 +42,7 @@ public class DockerImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaType")
     public String mediaType;
+
     public DockerImage withMediaType(String mediaType) {
         this.mediaType = mediaType;
         return this;
@@ -51,6 +54,7 @@ public class DockerImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DockerImage withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class DockerImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public DockerImage withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -73,6 +78,7 @@ public class DockerImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public DockerImage withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -84,6 +90,7 @@ public class DockerImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadTime")
     public String uploadTime;
+
     public DockerImage withUploadTime(String uploadTime) {
         this.uploadTime = uploadTime;
         return this;
@@ -95,9 +102,11 @@ public class DockerImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public DockerImage withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public DockerImage(){}
 }

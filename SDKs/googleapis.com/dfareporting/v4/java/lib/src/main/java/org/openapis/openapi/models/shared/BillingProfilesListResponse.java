@@ -18,6 +18,7 @@ public class BillingProfilesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingProfiles")
     public BillingProfile[] billingProfiles;
+
     public BillingProfilesListResponse withBillingProfiles(BillingProfile[] billingProfiles) {
         this.billingProfiles = billingProfiles;
         return this;
@@ -29,6 +30,7 @@ public class BillingProfilesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public BillingProfilesListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class BillingProfilesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public BillingProfilesListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public BillingProfilesListResponse(){}
 }

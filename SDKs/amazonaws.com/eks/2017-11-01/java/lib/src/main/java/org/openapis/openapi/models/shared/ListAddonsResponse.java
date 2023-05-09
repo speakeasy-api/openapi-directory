@@ -15,6 +15,7 @@ public class ListAddonsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addons")
     public String[] addons;
+
     public ListAddonsResponse withAddons(String[] addons) {
         this.addons = addons;
         return this;
@@ -23,9 +24,11 @@ public class ListAddonsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAddonsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAddonsResponse(){}
 }

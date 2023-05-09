@@ -15,6 +15,7 @@ public class ResourceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ResourceIdentifier withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class ResourceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ResourceIdentifier withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ResourceIdentifier(){}
 }

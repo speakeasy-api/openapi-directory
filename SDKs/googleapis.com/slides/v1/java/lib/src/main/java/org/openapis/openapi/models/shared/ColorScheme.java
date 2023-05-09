@@ -18,9 +18,11 @@ public class ColorScheme {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colors")
     public ThemeColorPair[] colors;
+
     public ColorScheme withColors(ThemeColorPair[] colors) {
         this.colors = colors;
         return this;
     }
     
+    public ColorScheme(){}
 }

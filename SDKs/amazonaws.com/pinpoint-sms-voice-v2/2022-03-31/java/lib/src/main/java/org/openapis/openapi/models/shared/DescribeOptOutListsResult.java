@@ -15,6 +15,7 @@ public class DescribeOptOutListsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeOptOutListsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeOptOutListsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptOutLists")
     public OptOutListInformation[] optOutLists;
+
     public DescribeOptOutListsResult withOptOutLists(OptOutListInformation[] optOutLists) {
         this.optOutLists = optOutLists;
         return this;
     }
     
+    public DescribeOptOutListsResult(){}
 }

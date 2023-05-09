@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TimelineCommittedEventParents {
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public TimelineCommittedEventParents withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -19,6 +20,7 @@ public class TimelineCommittedEventParents {
      */
     @JsonProperty("sha")
     public String sha;
+
     public TimelineCommittedEventParents withSha(String sha) {
         this.sha = sha;
         return this;
@@ -26,9 +28,15 @@ public class TimelineCommittedEventParents {
     
     @JsonProperty("url")
     public String url;
+
     public TimelineCommittedEventParents withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public TimelineCommittedEventParents(@JsonProperty("html_url") String htmlUrl, @JsonProperty("sha") String sha, @JsonProperty("url") String url) {
+        this.htmlUrl = htmlUrl;
+        this.sha = sha;
+        this.url = url;
+  }
 }

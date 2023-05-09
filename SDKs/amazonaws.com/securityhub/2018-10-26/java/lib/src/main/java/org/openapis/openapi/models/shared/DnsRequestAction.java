@@ -15,6 +15,7 @@ public class DnsRequestAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Blocked")
     public Boolean blocked;
+
     public DnsRequestAction withBlocked(Boolean blocked) {
         this.blocked = blocked;
         return this;
@@ -23,6 +24,7 @@ public class DnsRequestAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public String domain;
+
     public DnsRequestAction withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -31,9 +33,11 @@ public class DnsRequestAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocol")
     public String protocol;
+
     public DnsRequestAction withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public DnsRequestAction(){}
 }

@@ -12,6 +12,7 @@ public class EnterpriseCrmEventbusProtoSuspensionAuthPermissionsGaiaIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public EnterpriseCrmEventbusProtoSuspensionAuthPermissionsGaiaIdentity withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -20,9 +21,11 @@ public class EnterpriseCrmEventbusProtoSuspensionAuthPermissionsGaiaIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gaiaId")
     public String gaiaId;
+
     public EnterpriseCrmEventbusProtoSuspensionAuthPermissionsGaiaIdentity withGaiaId(String gaiaId) {
         this.gaiaId = gaiaId;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoSuspensionAuthPermissionsGaiaIdentity(){}
 }

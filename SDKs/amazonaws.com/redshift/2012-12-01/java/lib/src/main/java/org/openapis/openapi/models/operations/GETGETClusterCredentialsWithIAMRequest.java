@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETClusterCredentialsWithIAMRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETClusterCredentialsWithIAMActionEnum action;
+
     public GETGETClusterCredentialsWithIAMRequest withAction(GETGETClusterCredentialsWithIAMActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETGETClusterCredentialsWithIAMRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
     public String clusterIdentifier;
+
     public GETGETClusterCredentialsWithIAMRequest withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -29,6 +32,7 @@ public class GETGETClusterCredentialsWithIAMRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DbName")
     public String dbName;
+
     public GETGETClusterCredentialsWithIAMRequest withDbName(String dbName) {
         this.dbName = dbName;
         return this;
@@ -39,6 +43,7 @@ public class GETGETClusterCredentialsWithIAMRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DurationSeconds")
     public Long durationSeconds;
+
     public GETGETClusterCredentialsWithIAMRequest withDurationSeconds(Long durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -46,6 +51,7 @@ public class GETGETClusterCredentialsWithIAMRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETClusterCredentialsWithIAMVersionEnum version;
+
     public GETGETClusterCredentialsWithIAMRequest withVersion(GETGETClusterCredentialsWithIAMVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETGETClusterCredentialsWithIAMRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGETClusterCredentialsWithIAMRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETGETClusterCredentialsWithIAMRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGETClusterCredentialsWithIAMRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETGETClusterCredentialsWithIAMRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGETClusterCredentialsWithIAMRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETGETClusterCredentialsWithIAMRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGETClusterCredentialsWithIAMRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETGETClusterCredentialsWithIAMRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGETClusterCredentialsWithIAMRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETGETClusterCredentialsWithIAMRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGETClusterCredentialsWithIAMRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETGETClusterCredentialsWithIAMRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGETClusterCredentialsWithIAMRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGETClusterCredentialsWithIAMRequest(@JsonProperty("Action") GETGETClusterCredentialsWithIAMActionEnum action, @JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("Version") GETGETClusterCredentialsWithIAMVersionEnum version) {
+        this.action = action;
+        this.clusterIdentifier = clusterIdentifier;
+        this.version = version;
+  }
 }

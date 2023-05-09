@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PatchAppsAppIdVersionsVersionResponse {
     
     public byte[] body;
+
     public PatchAppsAppIdVersionsVersionResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PatchAppsAppIdVersionsVersionResponse {
     
     
     public String contentType;
+
     public PatchAppsAppIdVersionsVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PatchAppsAppIdVersionsVersionResponse {
     
     
     public Integer statusCode;
+
     public PatchAppsAppIdVersionsVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class PatchAppsAppIdVersionsVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PatchAppsAppIdVersionsVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PatchAppsAppIdVersionsVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

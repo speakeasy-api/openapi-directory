@@ -12,6 +12,7 @@ public class GetEnvironmentRelations200ApplicationJSONEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetEnvironmentRelations200ApplicationJSONEnvironment withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class GetEnvironmentRelations200ApplicationJSONEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetEnvironmentRelations200ApplicationJSONEnvironment withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class GetEnvironmentRelations200ApplicationJSONEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedAt")
     public String updatedAt;
+
     public GetEnvironmentRelations200ApplicationJSONEnvironment withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetEnvironmentRelations200ApplicationJSONEnvironment(){}
 }

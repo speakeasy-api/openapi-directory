@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ZebraGETResponse {
     
     public String contentType;
+
     public ZebraGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ZebraGETResponse {
     
     
     public Integer statusCode;
+
     public ZebraGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ZebraGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ZebraGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ZebraGETResponse {
      */
     
     public byte[] zebraGET200ImagePngBinaryString;
+
     public ZebraGETResponse withZebraGET200ImagePngBinaryString(byte[] zebraGET200ImagePngBinaryString) {
         this.zebraGET200ImagePngBinaryString = zebraGET200ImagePngBinaryString;
         return this;
     }
     
+    public ZebraGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

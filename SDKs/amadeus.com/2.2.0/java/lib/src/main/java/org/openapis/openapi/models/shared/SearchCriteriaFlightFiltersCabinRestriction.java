@@ -15,6 +15,7 @@ public class SearchCriteriaFlightFiltersCabinRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cabin")
     public TravelClassEnum cabin;
+
     public SearchCriteriaFlightFiltersCabinRestriction withCabin(TravelClassEnum cabin) {
         this.cabin = cabin;
         return this;
@@ -26,6 +27,7 @@ public class SearchCriteriaFlightFiltersCabinRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverage")
     public CoverageEnum coverage;
+
     public SearchCriteriaFlightFiltersCabinRestriction withCoverage(CoverageEnum coverage) {
         this.coverage = coverage;
         return this;
@@ -37,9 +39,11 @@ public class SearchCriteriaFlightFiltersCabinRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originDestinationIds")
     public String[] originDestinationIds;
+
     public SearchCriteriaFlightFiltersCabinRestriction withOriginDestinationIds(String[] originDestinationIds) {
         this.originDestinationIds = originDestinationIds;
         return this;
     }
     
+    public SearchCriteriaFlightFiltersCabinRestriction(){}
 }

@@ -58,11 +58,9 @@ public class Volumes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksVolumesAssociatedListResponse res = new org.openapis.openapi.models.operations.BooksVolumesAssociatedListResponse() {{
+        org.openapis.openapi.models.operations.BooksVolumesAssociatedListResponse res = new org.openapis.openapi.models.operations.BooksVolumesAssociatedListResponse(contentType, httpRes.statusCode()) {{
             volumes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Volumes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksVolumesGetResponse res = new org.openapis.openapi.models.operations.BooksVolumesGetResponse() {{
+        org.openapis.openapi.models.operations.BooksVolumesGetResponse res = new org.openapis.openapi.models.operations.BooksVolumesGetResponse(contentType, httpRes.statusCode()) {{
             volume = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class Volumes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksVolumesListResponse res = new org.openapis.openapi.models.operations.BooksVolumesListResponse() {{
+        org.openapis.openapi.models.operations.BooksVolumesListResponse res = new org.openapis.openapi.models.operations.BooksVolumesListResponse(contentType, httpRes.statusCode()) {{
             volumes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,11 +190,9 @@ public class Volumes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksVolumesMybooksListResponse res = new org.openapis.openapi.models.operations.BooksVolumesMybooksListResponse() {{
+        org.openapis.openapi.models.operations.BooksVolumesMybooksListResponse res = new org.openapis.openapi.models.operations.BooksVolumesMybooksListResponse(contentType, httpRes.statusCode()) {{
             volumes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -242,11 +234,9 @@ public class Volumes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksVolumesRecommendedListResponse res = new org.openapis.openapi.models.operations.BooksVolumesRecommendedListResponse() {{
+        org.openapis.openapi.models.operations.BooksVolumesRecommendedListResponse res = new org.openapis.openapi.models.operations.BooksVolumesRecommendedListResponse(contentType, httpRes.statusCode()) {{
             volumes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -288,11 +278,9 @@ public class Volumes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksVolumesRecommendedRateResponse res = new org.openapis.openapi.models.operations.BooksVolumesRecommendedRateResponse() {{
+        org.openapis.openapi.models.operations.BooksVolumesRecommendedRateResponse res = new org.openapis.openapi.models.operations.BooksVolumesRecommendedRateResponse(contentType, httpRes.statusCode()) {{
             booksVolumesRecommendedRateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -334,11 +322,9 @@ public class Volumes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksVolumesUseruploadedListResponse res = new org.openapis.openapi.models.operations.BooksVolumesUseruploadedListResponse() {{
+        org.openapis.openapi.models.operations.BooksVolumesUseruploadedListResponse res = new org.openapis.openapi.models.operations.BooksVolumesUseruploadedListResponse(contentType, httpRes.statusCode()) {{
             volumes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

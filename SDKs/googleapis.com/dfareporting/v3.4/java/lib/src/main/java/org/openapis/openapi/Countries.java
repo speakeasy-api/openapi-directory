@@ -58,11 +58,9 @@ public class Countries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingCountriesGetResponse res = new org.openapis.openapi.models.operations.DfareportingCountriesGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingCountriesGetResponse res = new org.openapis.openapi.models.operations.DfareportingCountriesGetResponse(contentType, httpRes.statusCode()) {{
             country = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Countries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingCountriesListResponse res = new org.openapis.openapi.models.operations.DfareportingCountriesListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingCountriesListResponse res = new org.openapis.openapi.models.operations.DfareportingCountriesListResponse(contentType, httpRes.statusCode()) {{
             countriesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

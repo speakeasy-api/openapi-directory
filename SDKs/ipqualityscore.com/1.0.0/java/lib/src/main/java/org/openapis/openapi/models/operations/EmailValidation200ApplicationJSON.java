@@ -15,6 +15,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associated_names")
     public EmailValidation200ApplicationJSONAssociatedNames associatedNames;
+
     public EmailValidation200ApplicationJSON withAssociatedNames(EmailValidation200ApplicationJSONAssociatedNames associatedNames) {
         this.associatedNames = associatedNames;
         return this;
@@ -23,6 +24,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associated_phone_numbers")
     public EmailValidation200ApplicationJSONAssociatedPhoneNumbers associatedPhoneNumbers;
+
     public EmailValidation200ApplicationJSON withAssociatedPhoneNumbers(EmailValidation200ApplicationJSONAssociatedPhoneNumbers associatedPhoneNumbers) {
         this.associatedPhoneNumbers = associatedPhoneNumbers;
         return this;
@@ -31,6 +33,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catch_all")
     public Boolean catchAll;
+
     public EmailValidation200ApplicationJSON withCatchAll(Boolean catchAll) {
         this.catchAll = catchAll;
         return this;
@@ -39,6 +42,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("common")
     public Boolean common;
+
     public EmailValidation200ApplicationJSON withCommon(Boolean common) {
         this.common = common;
         return this;
@@ -47,6 +51,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliverability")
     public String deliverability;
+
     public EmailValidation200ApplicationJSON withDeliverability(String deliverability) {
         this.deliverability = deliverability;
         return this;
@@ -55,6 +60,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disposable")
     public Boolean disposable;
+
     public EmailValidation200ApplicationJSON withDisposable(Boolean disposable) {
         this.disposable = disposable;
         return this;
@@ -63,6 +69,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dns_valid")
     public Boolean dnsValid;
+
     public EmailValidation200ApplicationJSON withDnsValid(Boolean dnsValid) {
         this.dnsValid = dnsValid;
         return this;
@@ -71,6 +78,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain_age")
     public EmailValidation200ApplicationJSONDomainAge domainAge;
+
     public EmailValidation200ApplicationJSON withDomainAge(EmailValidation200ApplicationJSONDomainAge domainAge) {
         this.domainAge = domainAge;
         return this;
@@ -79,6 +87,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain_velocity")
     public String domainVelocity;
+
     public EmailValidation200ApplicationJSON withDomainVelocity(String domainVelocity) {
         this.domainVelocity = domainVelocity;
         return this;
@@ -87,6 +96,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public EmailValidation200ApplicationJSON withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -95,6 +105,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_seen")
     public EmailValidation200ApplicationJSONFirstSeen firstSeen;
+
     public EmailValidation200ApplicationJSON withFirstSeen(EmailValidation200ApplicationJSONFirstSeen firstSeen) {
         this.firstSeen = firstSeen;
         return this;
@@ -103,6 +114,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fraud_score")
     public Double fraudScore;
+
     public EmailValidation200ApplicationJSON withFraudScore(Double fraudScore) {
         this.fraudScore = fraudScore;
         return this;
@@ -111,6 +123,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequent_complainer")
     public Boolean frequentComplainer;
+
     public EmailValidation200ApplicationJSON withFrequentComplainer(Boolean frequentComplainer) {
         this.frequentComplainer = frequentComplainer;
         return this;
@@ -119,6 +132,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generic")
     public Boolean generic;
+
     public EmailValidation200ApplicationJSON withGeneric(Boolean generic) {
         this.generic = generic;
         return this;
@@ -127,6 +141,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("honeypot")
     public Boolean honeypot;
+
     public EmailValidation200ApplicationJSON withHoneypot(Boolean honeypot) {
         this.honeypot = honeypot;
         return this;
@@ -135,6 +150,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leaked")
     public Boolean leaked;
+
     public EmailValidation200ApplicationJSON withLeaked(Boolean leaked) {
         this.leaked = leaked;
         return this;
@@ -143,6 +159,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public EmailValidation200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -151,6 +168,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overall_score")
     public Double overallScore;
+
     public EmailValidation200ApplicationJSON withOverallScore(Double overallScore) {
         this.overallScore = overallScore;
         return this;
@@ -159,6 +177,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recent_abuse")
     public Boolean recentAbuse;
+
     public EmailValidation200ApplicationJSON withRecentAbuse(Boolean recentAbuse) {
         this.recentAbuse = recentAbuse;
         return this;
@@ -167,6 +186,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request_id")
     public String requestId;
+
     public EmailValidation200ApplicationJSON withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -175,6 +195,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sanitized_email")
     public String sanitizedEmail;
+
     public EmailValidation200ApplicationJSON withSanitizedEmail(String sanitizedEmail) {
         this.sanitizedEmail = sanitizedEmail;
         return this;
@@ -183,6 +204,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smtp_score")
     public Double smtpScore;
+
     public EmailValidation200ApplicationJSON withSmtpScore(Double smtpScore) {
         this.smtpScore = smtpScore;
         return this;
@@ -191,6 +213,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spam_trap_score")
     public String spamTrapScore;
+
     public EmailValidation200ApplicationJSON withSpamTrapScore(String spamTrapScore) {
         this.spamTrapScore = spamTrapScore;
         return this;
@@ -199,6 +222,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public EmailValidation200ApplicationJSON withSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -207,6 +231,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggested_domain")
     public String suggestedDomain;
+
     public EmailValidation200ApplicationJSON withSuggestedDomain(String suggestedDomain) {
         this.suggestedDomain = suggestedDomain;
         return this;
@@ -215,6 +240,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspect")
     public Boolean suspect;
+
     public EmailValidation200ApplicationJSON withSuspect(Boolean suspect) {
         this.suspect = suspect;
         return this;
@@ -223,6 +249,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timed_out")
     public Boolean timedOut;
+
     public EmailValidation200ApplicationJSON withTimedOut(Boolean timedOut) {
         this.timedOut = timedOut;
         return this;
@@ -231,6 +258,7 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_activity")
     public String userActivity;
+
     public EmailValidation200ApplicationJSON withUserActivity(String userActivity) {
         this.userActivity = userActivity;
         return this;
@@ -239,9 +267,11 @@ public class EmailValidation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valid")
     public Boolean valid;
+
     public EmailValidation200ApplicationJSON withValid(Boolean valid) {
         this.valid = valid;
         return this;
     }
     
+    public EmailValidation200ApplicationJSON(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RestoreServerResponse {
     
     public String contentType;
+
     public RestoreServerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RestoreServerResponse {
      */
     
     public Object invalidStateException;
+
     public RestoreServerResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -29,6 +32,7 @@ public class RestoreServerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RestoreServerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class RestoreServerResponse {
      */
     
     public org.openapis.openapi.models.shared.RestoreServerResponse restoreServerResponse;
+
     public RestoreServerResponse withRestoreServerResponse(org.openapis.openapi.models.shared.RestoreServerResponse restoreServerResponse) {
         this.restoreServerResponse = restoreServerResponse;
         return this;
@@ -46,6 +51,7 @@ public class RestoreServerResponse {
     
     
     public Integer statusCode;
+
     public RestoreServerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class RestoreServerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RestoreServerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class RestoreServerResponse {
      */
     
     public Object validationException;
+
     public RestoreServerResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RestoreServerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

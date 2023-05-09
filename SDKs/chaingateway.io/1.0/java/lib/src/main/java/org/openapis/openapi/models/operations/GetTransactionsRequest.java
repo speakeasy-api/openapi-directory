@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionsRequest {
@@ -12,6 +13,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public GetTransactionsRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,9 +21,14 @@ public class GetTransactionsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetTransactionsRequest getTransactionsRequest;
+
     public GetTransactionsRequest withGetTransactionsRequest(org.openapis.openapi.models.shared.GetTransactionsRequest getTransactionsRequest) {
         this.getTransactionsRequest = getTransactionsRequest;
         return this;
     }
     
+    public GetTransactionsRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("getTransactionsRequest") org.openapis.openapi.models.shared.GetTransactionsRequest getTransactionsRequest) {
+        this.authorization = authorization;
+        this.getTransactionsRequest = getTransactionsRequest;
+  }
 }

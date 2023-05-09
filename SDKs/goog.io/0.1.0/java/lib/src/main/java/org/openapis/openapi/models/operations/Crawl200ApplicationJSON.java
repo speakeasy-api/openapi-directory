@@ -15,6 +15,7 @@ public class Crawl200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answer")
     public String answer;
+
     public Crawl200ApplicationJSON withAnswer(String answer) {
         this.answer = answer;
         return this;
@@ -23,6 +24,7 @@ public class Crawl200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public String[] results;
+
     public Crawl200ApplicationJSON withResults(String[] results) {
         this.results = results;
         return this;
@@ -31,9 +33,11 @@ public class Crawl200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public String total;
+
     public Crawl200ApplicationJSON withTotal(String total) {
         this.total = total;
         return this;
     }
     
+    public Crawl200ApplicationJSON(){}
 }

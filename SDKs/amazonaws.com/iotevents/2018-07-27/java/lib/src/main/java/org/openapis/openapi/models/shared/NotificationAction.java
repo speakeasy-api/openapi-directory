@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NotificationAction {
     @JsonProperty("action")
     public NotificationTargetActions action;
+
     public NotificationAction withAction(NotificationTargetActions action) {
         this.action = action;
         return this;
@@ -22,6 +23,7 @@ public class NotificationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailConfigurations")
     public EmailConfiguration[] emailConfigurations;
+
     public NotificationAction withEmailConfigurations(EmailConfiguration[] emailConfigurations) {
         this.emailConfigurations = emailConfigurations;
         return this;
@@ -30,9 +32,13 @@ public class NotificationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smsConfigurations")
     public SMSConfiguration[] smsConfigurations;
+
     public NotificationAction withSmsConfigurations(SMSConfiguration[] smsConfigurations) {
         this.smsConfigurations = smsConfigurations;
         return this;
     }
     
+    public NotificationAction(@JsonProperty("action") NotificationTargetActions action) {
+        this.action = action;
+  }
 }

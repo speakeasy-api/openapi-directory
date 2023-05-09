@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeRegionInstantSnapshotsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionInstantSnapshotsListSecurityOption1 option1;
+
     public ComputeRegionInstantSnapshotsListSecurity withOption1(ComputeRegionInstantSnapshotsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeRegionInstantSnapshotsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionInstantSnapshotsListSecurityOption2 option2;
+
     public ComputeRegionInstantSnapshotsListSecurity withOption2(ComputeRegionInstantSnapshotsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeRegionInstantSnapshotsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionInstantSnapshotsListSecurityOption3 option3;
+
     public ComputeRegionInstantSnapshotsListSecurity withOption3(ComputeRegionInstantSnapshotsListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeRegionInstantSnapshotsListSecurity(){}
 }

@@ -15,6 +15,7 @@ public class DimensionGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public String[] dimensions;
+
     public DimensionGroup withDimensions(String[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -22,6 +23,7 @@ public class DimensionGroup {
     
     @JsonProperty("Group")
     public String group;
+
     public DimensionGroup withGroup(String group) {
         this.group = group;
         return this;
@@ -30,9 +32,13 @@ public class DimensionGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DimensionGroup withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public DimensionGroup(@JsonProperty("Group") String group) {
+        this.group = group;
+  }
 }

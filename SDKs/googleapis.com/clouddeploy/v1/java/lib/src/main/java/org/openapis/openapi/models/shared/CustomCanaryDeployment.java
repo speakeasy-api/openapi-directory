@@ -18,9 +18,11 @@ public class CustomCanaryDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phaseConfigs")
     public PhaseConfig[] phaseConfigs;
+
     public CustomCanaryDeployment withPhaseConfigs(PhaseConfig[] phaseConfigs) {
         this.phaseConfigs = phaseConfigs;
         return this;
     }
     
+    public CustomCanaryDeployment(){}
 }

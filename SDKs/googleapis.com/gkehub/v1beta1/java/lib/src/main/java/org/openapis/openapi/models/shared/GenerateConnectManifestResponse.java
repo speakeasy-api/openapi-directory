@@ -18,9 +18,11 @@ public class GenerateConnectManifestResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manifest")
     public ConnectAgentResource[] manifest;
+
     public GenerateConnectManifestResponse withManifest(ConnectAgentResource[] manifest) {
         this.manifest = manifest;
         return this;
     }
     
+    public GenerateConnectManifestResponse(){}
 }

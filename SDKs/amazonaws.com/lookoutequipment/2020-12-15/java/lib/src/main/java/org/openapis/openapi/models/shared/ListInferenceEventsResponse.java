@@ -15,6 +15,7 @@ public class ListInferenceEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceEventSummaries")
     public InferenceEventSummary[] inferenceEventSummaries;
+
     public ListInferenceEventsResponse withInferenceEventSummaries(InferenceEventSummary[] inferenceEventSummaries) {
         this.inferenceEventSummaries = inferenceEventSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListInferenceEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListInferenceEventsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListInferenceEventsResponse(){}
 }

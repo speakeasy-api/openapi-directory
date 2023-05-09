@@ -16,9 +16,11 @@ public class PersonRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar")
     public PersonRelationshipsAvatar avatar;
+
     public PersonRelationships withAvatar(PersonRelationshipsAvatar avatar) {
         this.avatar = avatar;
         return this;
     }
     
+    public PersonRelationships(){}
 }

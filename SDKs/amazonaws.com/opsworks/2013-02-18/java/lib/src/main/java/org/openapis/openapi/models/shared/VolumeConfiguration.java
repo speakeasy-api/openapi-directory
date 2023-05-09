@@ -15,6 +15,7 @@ public class VolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Encrypted")
     public Boolean encrypted;
+
     public VolumeConfiguration withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -23,6 +24,7 @@ public class VolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Iops")
     public Long iops;
+
     public VolumeConfiguration withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -30,6 +32,7 @@ public class VolumeConfiguration {
     
     @JsonProperty("MountPoint")
     public String mountPoint;
+
     public VolumeConfiguration withMountPoint(String mountPoint) {
         this.mountPoint = mountPoint;
         return this;
@@ -37,6 +40,7 @@ public class VolumeConfiguration {
     
     @JsonProperty("NumberOfDisks")
     public Long numberOfDisks;
+
     public VolumeConfiguration withNumberOfDisks(Long numberOfDisks) {
         this.numberOfDisks = numberOfDisks;
         return this;
@@ -45,6 +49,7 @@ public class VolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RaidLevel")
     public Long raidLevel;
+
     public VolumeConfiguration withRaidLevel(Long raidLevel) {
         this.raidLevel = raidLevel;
         return this;
@@ -52,6 +57,7 @@ public class VolumeConfiguration {
     
     @JsonProperty("Size")
     public Long size;
+
     public VolumeConfiguration withSize(Long size) {
         this.size = size;
         return this;
@@ -60,9 +66,15 @@ public class VolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeType")
     public String volumeType;
+
     public VolumeConfiguration withVolumeType(String volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public VolumeConfiguration(@JsonProperty("MountPoint") String mountPoint, @JsonProperty("NumberOfDisks") Long numberOfDisks, @JsonProperty("Size") Long size) {
+        this.mountPoint = mountPoint;
+        this.numberOfDisks = numberOfDisks;
+        this.size = size;
+  }
 }

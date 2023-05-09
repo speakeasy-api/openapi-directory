@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class TokensUserRewardAvailabilityModel {
     
     public TokensRewardAvailabilityModel availabilityModel;
+
     public TokensUserRewardAvailabilityModel withAvailabilityModel(TokensRewardAvailabilityModel availabilityModel) {
         this.availabilityModel = availabilityModel;
         return this;
@@ -16,6 +17,7 @@ public class TokensUserRewardAvailabilityModel {
     
     
     public Boolean isAvailableForUser;
+
     public TokensUserRewardAvailabilityModel withIsAvailableForUser(Boolean isAvailableForUser) {
         this.isAvailableForUser = isAvailableForUser;
         return this;
@@ -23,9 +25,11 @@ public class TokensUserRewardAvailabilityModel {
     
     
     public Boolean isUnlockedForUser;
+
     public TokensUserRewardAvailabilityModel withIsUnlockedForUser(Boolean isUnlockedForUser) {
         this.isUnlockedForUser = isUnlockedForUser;
         return this;
     }
     
+    public TokensUserRewardAvailabilityModel(){}
 }

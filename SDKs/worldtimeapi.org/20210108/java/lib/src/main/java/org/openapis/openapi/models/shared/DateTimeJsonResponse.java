@@ -17,6 +17,7 @@ public class DateTimeJsonResponse {
      */
     @JsonProperty("abbreviation")
     public String abbreviation;
+
     public DateTimeJsonResponse withAbbreviation(String abbreviation) {
         this.abbreviation = abbreviation;
         return this;
@@ -27,6 +28,7 @@ public class DateTimeJsonResponse {
      */
     @JsonProperty("client_ip")
     public String clientIp;
+
     public DateTimeJsonResponse withClientIp(String clientIp) {
         this.clientIp = clientIp;
         return this;
@@ -37,6 +39,7 @@ public class DateTimeJsonResponse {
      */
     @JsonProperty("datetime")
     public String datetime;
+
     public DateTimeJsonResponse withDatetime(String datetime) {
         this.datetime = datetime;
         return this;
@@ -47,6 +50,7 @@ public class DateTimeJsonResponse {
      */
     @JsonProperty("day_of_week")
     public Long dayOfWeek;
+
     public DateTimeJsonResponse withDayOfWeek(Long dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -57,6 +61,7 @@ public class DateTimeJsonResponse {
      */
     @JsonProperty("day_of_year")
     public Long dayOfYear;
+
     public DateTimeJsonResponse withDayOfYear(Long dayOfYear) {
         this.dayOfYear = dayOfYear;
         return this;
@@ -67,6 +72,7 @@ public class DateTimeJsonResponse {
      */
     @JsonProperty("dst")
     public Boolean dst;
+
     public DateTimeJsonResponse withDst(Boolean dst) {
         this.dst = dst;
         return this;
@@ -78,6 +84,7 @@ public class DateTimeJsonResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dst_from")
     public String dstFrom;
+
     public DateTimeJsonResponse withDstFrom(String dstFrom) {
         this.dstFrom = dstFrom;
         return this;
@@ -88,6 +95,7 @@ public class DateTimeJsonResponse {
      */
     @JsonProperty("dst_offset")
     public Long dstOffset;
+
     public DateTimeJsonResponse withDstOffset(Long dstOffset) {
         this.dstOffset = dstOffset;
         return this;
@@ -99,6 +107,7 @@ public class DateTimeJsonResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dst_until")
     public String dstUntil;
+
     public DateTimeJsonResponse withDstUntil(String dstUntil) {
         this.dstUntil = dstUntil;
         return this;
@@ -110,6 +119,7 @@ public class DateTimeJsonResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw_offset")
     public Long rawOffset;
+
     public DateTimeJsonResponse withRawOffset(Long rawOffset) {
         this.rawOffset = rawOffset;
         return this;
@@ -120,6 +130,7 @@ public class DateTimeJsonResponse {
      */
     @JsonProperty("timezone")
     public String timezone;
+
     public DateTimeJsonResponse withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -130,6 +141,7 @@ public class DateTimeJsonResponse {
      */
     @JsonProperty("unixtime")
     public Long unixtime;
+
     public DateTimeJsonResponse withUnixtime(Long unixtime) {
         this.unixtime = unixtime;
         return this;
@@ -140,6 +152,7 @@ public class DateTimeJsonResponse {
      */
     @JsonProperty("utc_datetime")
     public String utcDatetime;
+
     public DateTimeJsonResponse withUtcDatetime(String utcDatetime) {
         this.utcDatetime = utcDatetime;
         return this;
@@ -150,6 +163,7 @@ public class DateTimeJsonResponse {
      */
     @JsonProperty("utc_offset")
     public String utcOffset;
+
     public DateTimeJsonResponse withUtcOffset(String utcOffset) {
         this.utcOffset = utcOffset;
         return this;
@@ -160,9 +174,24 @@ public class DateTimeJsonResponse {
      */
     @JsonProperty("week_number")
     public Long weekNumber;
+
     public DateTimeJsonResponse withWeekNumber(Long weekNumber) {
         this.weekNumber = weekNumber;
         return this;
     }
     
+    public DateTimeJsonResponse(@JsonProperty("abbreviation") String abbreviation, @JsonProperty("client_ip") String clientIp, @JsonProperty("datetime") String datetime, @JsonProperty("day_of_week") Long dayOfWeek, @JsonProperty("day_of_year") Long dayOfYear, @JsonProperty("dst") Boolean dst, @JsonProperty("dst_offset") Long dstOffset, @JsonProperty("timezone") String timezone, @JsonProperty("unixtime") Long unixtime, @JsonProperty("utc_datetime") String utcDatetime, @JsonProperty("utc_offset") String utcOffset, @JsonProperty("week_number") Long weekNumber) {
+        this.abbreviation = abbreviation;
+        this.clientIp = clientIp;
+        this.datetime = datetime;
+        this.dayOfWeek = dayOfWeek;
+        this.dayOfYear = dayOfYear;
+        this.dst = dst;
+        this.dstOffset = dstOffset;
+        this.timezone = timezone;
+        this.unixtime = unixtime;
+        this.utcDatetime = utcDatetime;
+        this.utcOffset = utcOffset;
+        this.weekNumber = weekNumber;
+  }
 }

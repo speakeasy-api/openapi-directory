@@ -18,6 +18,7 @@ public class AttestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AttestorInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class AttestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public AttestorInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,6 +42,7 @@ public class AttestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AttestorInput withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class AttestorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userOwnedGrafeasNote")
     public UserOwnedGrafeasNoteInput userOwnedGrafeasNote;
+
     public AttestorInput withUserOwnedGrafeasNote(UserOwnedGrafeasNoteInput userOwnedGrafeasNote) {
         this.userOwnedGrafeasNote = userOwnedGrafeasNote;
         return this;
     }
     
+    public AttestorInput(){}
 }

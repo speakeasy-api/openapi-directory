@@ -12,9 +12,11 @@ public class GetUsersMeUserContactV2Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GetUsersMeUserContactV2Merchant withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public GetUsersMeUserContactV2Merchant(){}
 }

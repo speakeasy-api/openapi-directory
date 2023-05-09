@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1AssessmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountDefenderAssessment")
     public GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment accountDefenderAssessment;
+
     public GoogleCloudRecaptchaenterpriseV1AssessmentInput withAccountDefenderAssessment(GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment accountDefenderAssessment) {
         this.accountDefenderAssessment = accountDefenderAssessment;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecaptchaenterpriseV1AssessmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountVerification")
     public GoogleCloudRecaptchaenterpriseV1AccountVerificationInfoInput accountVerification;
+
     public GoogleCloudRecaptchaenterpriseV1AssessmentInput withAccountVerification(GoogleCloudRecaptchaenterpriseV1AccountVerificationInfoInput accountVerification) {
         this.accountVerification = accountVerification;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecaptchaenterpriseV1AssessmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public GoogleCloudRecaptchaenterpriseV1Event event;
+
     public GoogleCloudRecaptchaenterpriseV1AssessmentInput withEvent(GoogleCloudRecaptchaenterpriseV1Event event) {
         this.event = event;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRecaptchaenterpriseV1AssessmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firewallPolicyAssessment")
     public GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment firewallPolicyAssessment;
+
     public GoogleCloudRecaptchaenterpriseV1AssessmentInput withFirewallPolicyAssessment(GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment firewallPolicyAssessment) {
         this.firewallPolicyAssessment = firewallPolicyAssessment;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRecaptchaenterpriseV1AssessmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fraudPreventionAssessment")
     public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment fraudPreventionAssessment;
+
     public GoogleCloudRecaptchaenterpriseV1AssessmentInput withFraudPreventionAssessment(GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment fraudPreventionAssessment) {
         this.fraudPreventionAssessment = fraudPreventionAssessment;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudRecaptchaenterpriseV1AssessmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privatePasswordLeakVerification")
     public GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificationInput privatePasswordLeakVerification;
+
     public GoogleCloudRecaptchaenterpriseV1AssessmentInput withPrivatePasswordLeakVerification(GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificationInput privatePasswordLeakVerification) {
         this.privatePasswordLeakVerification = privatePasswordLeakVerification;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudRecaptchaenterpriseV1AssessmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("riskAnalysis")
     public GoogleCloudRecaptchaenterpriseV1RiskAnalysis riskAnalysis;
+
     public GoogleCloudRecaptchaenterpriseV1AssessmentInput withRiskAnalysis(GoogleCloudRecaptchaenterpriseV1RiskAnalysis riskAnalysis) {
         this.riskAnalysis = riskAnalysis;
         return this;
@@ -95,9 +102,11 @@ public class GoogleCloudRecaptchaenterpriseV1AssessmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenProperties")
     public GoogleCloudRecaptchaenterpriseV1TokenProperties tokenProperties;
+
     public GoogleCloudRecaptchaenterpriseV1AssessmentInput withTokenProperties(GoogleCloudRecaptchaenterpriseV1TokenProperties tokenProperties) {
         this.tokenProperties = tokenProperties;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1AssessmentInput(){}
 }

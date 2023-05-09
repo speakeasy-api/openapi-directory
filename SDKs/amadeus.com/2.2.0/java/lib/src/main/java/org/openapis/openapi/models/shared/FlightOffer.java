@@ -15,6 +15,7 @@ public class FlightOffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disablePricing")
     public Boolean disablePricing;
+
     public FlightOffer withDisablePricing(Boolean disablePricing) {
         this.disablePricing = disablePricing;
         return this;
@@ -25,6 +26,7 @@ public class FlightOffer {
      */
     @JsonProperty("id")
     public String id;
+
     public FlightOffer withId(String id) {
         this.id = id;
         return this;
@@ -36,6 +38,7 @@ public class FlightOffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instantTicketingRequired")
     public Boolean instantTicketingRequired;
+
     public FlightOffer withInstantTicketingRequired(Boolean instantTicketingRequired) {
         this.instantTicketingRequired = instantTicketingRequired;
         return this;
@@ -44,6 +47,7 @@ public class FlightOffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itineraries")
     public FlightOfferItineraries[] itineraries;
+
     public FlightOffer withItineraries(FlightOfferItineraries[] itineraries) {
         this.itineraries = itineraries;
         return this;
@@ -55,6 +59,7 @@ public class FlightOffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastTicketingDate")
     public String lastTicketingDate;
+
     public FlightOffer withLastTicketingDate(String lastTicketingDate) {
         this.lastTicketingDate = lastTicketingDate;
         return this;
@@ -66,6 +71,7 @@ public class FlightOffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonHomogeneous")
     public Boolean nonHomogeneous;
+
     public FlightOffer withNonHomogeneous(Boolean nonHomogeneous) {
         this.nonHomogeneous = nonHomogeneous;
         return this;
@@ -77,6 +83,7 @@ public class FlightOffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfBookableSeats")
     public Double numberOfBookableSeats;
+
     public FlightOffer withNumberOfBookableSeats(Double numberOfBookableSeats) {
         this.numberOfBookableSeats = numberOfBookableSeats;
         return this;
@@ -88,6 +95,7 @@ public class FlightOffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneWay")
     public Boolean oneWay;
+
     public FlightOffer withOneWay(Boolean oneWay) {
         this.oneWay = oneWay;
         return this;
@@ -99,6 +107,7 @@ public class FlightOffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentCardRequired")
     public Boolean paymentCardRequired;
+
     public FlightOffer withPaymentCardRequired(Boolean paymentCardRequired) {
         this.paymentCardRequired = paymentCardRequired;
         return this;
@@ -110,6 +119,7 @@ public class FlightOffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public ExtendedPrice price;
+
     public FlightOffer withPrice(ExtendedPrice price) {
         this.price = price;
         return this;
@@ -118,6 +128,7 @@ public class FlightOffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricingOptions")
     public FlightOfferPricingOptions pricingOptions;
+
     public FlightOffer withPricingOptions(FlightOfferPricingOptions pricingOptions) {
         this.pricingOptions = pricingOptions;
         return this;
@@ -129,6 +140,7 @@ public class FlightOffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public FlightOfferSourceEnum source;
+
     public FlightOffer withSource(FlightOfferSourceEnum source) {
         this.source = source;
         return this;
@@ -140,6 +152,7 @@ public class FlightOffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("travelerPricings")
     public FlightOfferTravelerPricing[] travelerPricings;
+
     public FlightOffer withTravelerPricings(FlightOfferTravelerPricing[] travelerPricings) {
         this.travelerPricings = travelerPricings;
         return this;
@@ -150,6 +163,7 @@ public class FlightOffer {
      */
     @JsonProperty("type")
     public String type;
+
     public FlightOffer withType(String type) {
         this.type = type;
         return this;
@@ -161,9 +175,14 @@ public class FlightOffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validatingAirlineCodes")
     public String[] validatingAirlineCodes;
+
     public FlightOffer withValidatingAirlineCodes(String[] validatingAirlineCodes) {
         this.validatingAirlineCodes = validatingAirlineCodes;
         return this;
     }
     
+    public FlightOffer(@JsonProperty("id") String id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

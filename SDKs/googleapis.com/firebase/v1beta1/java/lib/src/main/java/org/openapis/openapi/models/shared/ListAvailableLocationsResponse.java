@@ -18,6 +18,7 @@ public class ListAvailableLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public Location[] locations;
+
     public ListAvailableLocationsResponse withLocations(Location[] locations) {
         this.locations = locations;
         return this;
@@ -29,9 +30,11 @@ public class ListAvailableLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAvailableLocationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListAvailableLocationsResponse(){}
 }

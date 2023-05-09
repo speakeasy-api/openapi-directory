@@ -15,6 +15,7 @@ public class SearchPlaceIndexForTextRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BiasPosition")
     public Double[] biasPosition;
+
     public SearchPlaceIndexForTextRequestBody withBiasPosition(Double[] biasPosition) {
         this.biasPosition = biasPosition;
         return this;
@@ -26,6 +27,7 @@ public class SearchPlaceIndexForTextRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterBBox")
     public Double[] filterBBox;
+
     public SearchPlaceIndexForTextRequestBody withFilterBBox(Double[] filterBBox) {
         this.filterBBox = filterBBox;
         return this;
@@ -37,6 +39,7 @@ public class SearchPlaceIndexForTextRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterCountries")
     public String[] filterCountries;
+
     public SearchPlaceIndexForTextRequestBody withFilterCountries(String[] filterCountries) {
         this.filterCountries = filterCountries;
         return this;
@@ -48,6 +51,7 @@ public class SearchPlaceIndexForTextRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Language")
     public String language;
+
     public SearchPlaceIndexForTextRequestBody withLanguage(String language) {
         this.language = language;
         return this;
@@ -59,6 +63,7 @@ public class SearchPlaceIndexForTextRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public SearchPlaceIndexForTextRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -69,9 +74,13 @@ public class SearchPlaceIndexForTextRequestBody {
      */
     @JsonProperty("Text")
     public String text;
+
     public SearchPlaceIndexForTextRequestBody withText(String text) {
         this.text = text;
         return this;
     }
     
+    public SearchPlaceIndexForTextRequestBody(@JsonProperty("Text") String text) {
+        this.text = text;
+  }
 }

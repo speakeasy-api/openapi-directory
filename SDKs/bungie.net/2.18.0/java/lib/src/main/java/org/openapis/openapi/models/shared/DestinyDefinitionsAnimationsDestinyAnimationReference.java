@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsAnimationsDestinyAnimationReference {
     
     public String animIdentifier;
+
     public DestinyDefinitionsAnimationsDestinyAnimationReference withAnimIdentifier(String animIdentifier) {
         this.animIdentifier = animIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class DestinyDefinitionsAnimationsDestinyAnimationReference {
     
     
     public String animName;
+
     public DestinyDefinitionsAnimationsDestinyAnimationReference withAnimName(String animName) {
         this.animName = animName;
         return this;
@@ -23,9 +25,11 @@ public class DestinyDefinitionsAnimationsDestinyAnimationReference {
     
     
     public String path;
+
     public DestinyDefinitionsAnimationsDestinyAnimationReference withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public DestinyDefinitionsAnimationsDestinyAnimationReference(){}
 }

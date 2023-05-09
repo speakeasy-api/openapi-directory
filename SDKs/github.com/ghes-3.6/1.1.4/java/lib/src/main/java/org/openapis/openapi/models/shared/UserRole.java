@@ -12,6 +12,7 @@ public class UserRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display")
     public String display;
+
     public UserRole withDisplay(String display) {
         this.display = display;
         return this;
@@ -23,6 +24,7 @@ public class UserRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
     public Boolean primary;
+
     public UserRole withPrimary(Boolean primary) {
         this.primary = primary;
         return this;
@@ -31,6 +33,7 @@ public class UserRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public UserRole withType(String type) {
         this.type = type;
         return this;
@@ -41,9 +44,13 @@ public class UserRole {
      */
     @JsonProperty("value")
     public UserRoleValueEnum value;
+
     public UserRole withValue(UserRoleValueEnum value) {
         this.value = value;
         return this;
     }
     
+    public UserRole(@JsonProperty("value") UserRoleValueEnum value) {
+        this.value = value;
+  }
 }

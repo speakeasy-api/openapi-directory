@@ -15,6 +15,7 @@ public class CustomDocumentEnrichmentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InlineConfigurations")
     public InlineCustomDocumentEnrichmentConfiguration[] inlineConfigurations;
+
     public CustomDocumentEnrichmentConfiguration withInlineConfigurations(InlineCustomDocumentEnrichmentConfiguration[] inlineConfigurations) {
         this.inlineConfigurations = inlineConfigurations;
         return this;
@@ -23,6 +24,7 @@ public class CustomDocumentEnrichmentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostExtractionHookConfiguration")
     public HookConfiguration postExtractionHookConfiguration;
+
     public CustomDocumentEnrichmentConfiguration withPostExtractionHookConfiguration(HookConfiguration postExtractionHookConfiguration) {
         this.postExtractionHookConfiguration = postExtractionHookConfiguration;
         return this;
@@ -31,6 +33,7 @@ public class CustomDocumentEnrichmentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreExtractionHookConfiguration")
     public HookConfiguration preExtractionHookConfiguration;
+
     public CustomDocumentEnrichmentConfiguration withPreExtractionHookConfiguration(HookConfiguration preExtractionHookConfiguration) {
         this.preExtractionHookConfiguration = preExtractionHookConfiguration;
         return this;
@@ -39,9 +42,11 @@ public class CustomDocumentEnrichmentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CustomDocumentEnrichmentConfiguration withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public CustomDocumentEnrichmentConfiguration(){}
 }

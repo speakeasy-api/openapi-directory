@@ -10,55 +10,65 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateDistributionConfigurationRequestBody {
     /**
-     *  The idempotency token of the distribution configuration.
+     * The idempotency token of the distribution configuration.
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateDistributionConfigurationRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
     /**
-     *  The description of the distribution configuration.
+     * The description of the distribution configuration.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateDistributionConfigurationRequestBody withDescription(String description) {
         this.description = description;
         return this;
     }
     
     /**
-     *  The distributions of the distribution configuration.
+     * The distributions of the distribution configuration.
      */
     @JsonProperty("distributions")
     public org.openapis.openapi.models.shared.Distribution[] distributions;
+
     public CreateDistributionConfigurationRequestBody withDistributions(org.openapis.openapi.models.shared.Distribution[] distributions) {
         this.distributions = distributions;
         return this;
     }
     
     /**
-     *  The name of the distribution configuration.
+     * The name of the distribution configuration.
      */
     @JsonProperty("name")
     public String name;
+
     public CreateDistributionConfigurationRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
     /**
-     *  The tags of the distribution configuration.
+     * The tags of the distribution configuration.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateDistributionConfigurationRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDistributionConfigurationRequestBody(@JsonProperty("clientToken") String clientToken, @JsonProperty("distributions") org.openapis.openapi.models.shared.Distribution[] distributions, @JsonProperty("name") String name) {
+        this.clientToken = clientToken;
+        this.distributions = distributions;
+        this.name = name;
+  }
 }

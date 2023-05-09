@@ -12,6 +12,7 @@ public class AccountBusinessInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public AccountAddress address;
+
     public AccountBusinessInformation withAddress(AccountAddress address) {
         this.address = address;
         return this;
@@ -20,6 +21,7 @@ public class AccountBusinessInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerService")
     public AccountCustomerService customerService;
+
     public AccountBusinessInformation withCustomerService(AccountCustomerService customerService) {
         this.customerService = customerService;
         return this;
@@ -31,6 +33,7 @@ public class AccountBusinessInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("koreanBusinessRegistrationNumber")
     public String koreanBusinessRegistrationNumber;
+
     public AccountBusinessInformation withKoreanBusinessRegistrationNumber(String koreanBusinessRegistrationNumber) {
         this.koreanBusinessRegistrationNumber = koreanBusinessRegistrationNumber;
         return this;
@@ -42,6 +45,7 @@ public class AccountBusinessInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public AccountBusinessInformation withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -53,9 +57,11 @@ public class AccountBusinessInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneVerificationStatus")
     public String phoneVerificationStatus;
+
     public AccountBusinessInformation withPhoneVerificationStatus(String phoneVerificationStatus) {
         this.phoneVerificationStatus = phoneVerificationStatus;
         return this;
     }
     
+    public AccountBusinessInformation(){}
 }

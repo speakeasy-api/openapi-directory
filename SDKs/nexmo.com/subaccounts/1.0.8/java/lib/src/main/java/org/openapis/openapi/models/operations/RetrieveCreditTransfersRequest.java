@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveCreditTransfersRequest {
@@ -12,6 +13,7 @@ public class RetrieveCreditTransfersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api_key")
     public String apiKey;
+
     public RetrieveCreditTransfersRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class RetrieveCreditTransfersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public String endDate;
+
     public RetrieveCreditTransfersRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -32,6 +35,7 @@ public class RetrieveCreditTransfersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public String startDate;
+
     public RetrieveCreditTransfersRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -42,9 +46,14 @@ public class RetrieveCreditTransfersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subaccount")
     public String subaccount;
+
     public RetrieveCreditTransfersRequest withSubaccount(String subaccount) {
         this.subaccount = subaccount;
         return this;
     }
     
+    public RetrieveCreditTransfersRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("start_date") String startDate) {
+        this.apiKey = apiKey;
+        this.startDate = startDate;
+  }
 }

@@ -12,6 +12,7 @@ public class UpdatePriceRequestBodyPricingCurrentPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public UpdatePriceRequestBodyPricingCurrentPrice withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -20,9 +21,11 @@ public class UpdatePriceRequestBodyPricingCurrentPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public UpdatePriceRequestBodyPricingCurrentPriceCurrencyEnum currency;
+
     public UpdatePriceRequestBodyPricingCurrentPrice withCurrency(UpdatePriceRequestBodyPricingCurrentPriceCurrencyEnum currency) {
         this.currency = currency;
         return this;
     }
     
+    public UpdatePriceRequestBodyPricingCurrentPrice(){}
 }

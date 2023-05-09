@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeTargetGrpcProxiesPatchSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeTargetGrpcProxiesPatchSecurityOption1 option1;
+
     public ComputeTargetGrpcProxiesPatchSecurity withOption1(ComputeTargetGrpcProxiesPatchSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeTargetGrpcProxiesPatchSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeTargetGrpcProxiesPatchSecurityOption2 option2;
+
     public ComputeTargetGrpcProxiesPatchSecurity withOption2(ComputeTargetGrpcProxiesPatchSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeTargetGrpcProxiesPatchSecurity(){}
 }

@@ -18,9 +18,11 @@ public class ConfigManagementPolicyControllerMonitoring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backends")
     public ConfigManagementPolicyControllerMonitoringBackendsEnum[] backends;
+
     public ConfigManagementPolicyControllerMonitoring withBackends(ConfigManagementPolicyControllerMonitoringBackendsEnum[] backends) {
         this.backends = backends;
         return this;
     }
     
+    public ConfigManagementPolicyControllerMonitoring(){}
 }

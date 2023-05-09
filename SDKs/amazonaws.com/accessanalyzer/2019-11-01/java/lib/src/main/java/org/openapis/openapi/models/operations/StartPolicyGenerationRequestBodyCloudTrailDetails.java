@@ -20,6 +20,7 @@ public class StartPolicyGenerationRequestBodyCloudTrailDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessRole")
     public String accessRole;
+
     public StartPolicyGenerationRequestBodyCloudTrailDetails withAccessRole(String accessRole) {
         this.accessRole = accessRole;
         return this;
@@ -30,6 +31,7 @@ public class StartPolicyGenerationRequestBodyCloudTrailDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public StartPolicyGenerationRequestBodyCloudTrailDetails withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -40,6 +42,7 @@ public class StartPolicyGenerationRequestBodyCloudTrailDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public StartPolicyGenerationRequestBodyCloudTrailDetails withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -48,9 +51,11 @@ public class StartPolicyGenerationRequestBodyCloudTrailDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trails")
     public org.openapis.openapi.models.shared.Trail[] trails;
+
     public StartPolicyGenerationRequestBodyCloudTrailDetails withTrails(org.openapis.openapi.models.shared.Trail[] trails) {
         this.trails = trails;
         return this;
     }
     
+    public StartPolicyGenerationRequestBodyCloudTrailDetails(){}
 }

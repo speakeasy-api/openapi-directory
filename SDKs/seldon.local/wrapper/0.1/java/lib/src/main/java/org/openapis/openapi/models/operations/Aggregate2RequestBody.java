@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class Aggregate2RequestBody {
     @SpeakeasyMetadata("form:name=json,json")
     public org.openapis.openapi.models.shared.SeldonMessageList json;
+
     public Aggregate2RequestBody withJson(org.openapis.openapi.models.shared.SeldonMessageList json) {
         this.json = json;
         return this;
     }
     
+    public Aggregate2RequestBody(){}
 }

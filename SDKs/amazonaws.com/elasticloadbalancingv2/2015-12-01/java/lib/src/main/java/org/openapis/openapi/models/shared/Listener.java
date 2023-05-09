@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Listener {
     
     public String[] alpnPolicy;
+
     public Listener withAlpnPolicy(String[] alpnPolicy) {
         this.alpnPolicy = alpnPolicy;
         return this;
@@ -19,6 +20,7 @@ public class Listener {
     
     
     public Certificate[] certificates;
+
     public Listener withCertificates(Certificate[] certificates) {
         this.certificates = certificates;
         return this;
@@ -26,6 +28,7 @@ public class Listener {
     
     
     public Action[] defaultActions;
+
     public Listener withDefaultActions(Action[] defaultActions) {
         this.defaultActions = defaultActions;
         return this;
@@ -33,6 +36,7 @@ public class Listener {
     
     
     public String listenerArn;
+
     public Listener withListenerArn(String listenerArn) {
         this.listenerArn = listenerArn;
         return this;
@@ -40,6 +44,7 @@ public class Listener {
     
     
     public String loadBalancerArn;
+
     public Listener withLoadBalancerArn(String loadBalancerArn) {
         this.loadBalancerArn = loadBalancerArn;
         return this;
@@ -47,6 +52,7 @@ public class Listener {
     
     
     public Long port;
+
     public Listener withPort(Long port) {
         this.port = port;
         return this;
@@ -54,6 +60,7 @@ public class Listener {
     
     
     public ProtocolEnumEnum protocol;
+
     public Listener withProtocol(ProtocolEnumEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -61,9 +68,11 @@ public class Listener {
     
     
     public String sslPolicy;
+
     public Listener withSslPolicy(String sslPolicy) {
         this.sslPolicy = sslPolicy;
         return this;
     }
     
+    public Listener(){}
 }

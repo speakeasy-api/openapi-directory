@@ -12,6 +12,7 @@ public class GetLogGroupFieldsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroupIdentifier")
     public String logGroupIdentifier;
+
     public GetLogGroupFieldsRequest withLogGroupIdentifier(String logGroupIdentifier) {
         this.logGroupIdentifier = logGroupIdentifier;
         return this;
@@ -20,6 +21,7 @@ public class GetLogGroupFieldsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public GetLogGroupFieldsRequest withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -28,9 +30,11 @@ public class GetLogGroupFieldsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public Long time;
+
     public GetLogGroupFieldsRequest withTime(Long time) {
         this.time = time;
         return this;
     }
     
+    public GetLogGroupFieldsRequest(){}
 }

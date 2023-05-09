@@ -15,6 +15,7 @@ public class CommonLanguageCombinationDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceLanguageId")
     public Long sourceLanguageId;
+
     public CommonLanguageCombinationDTO withSourceLanguageId(Long sourceLanguageId) {
         this.sourceLanguageId = sourceLanguageId;
         return this;
@@ -23,9 +24,11 @@ public class CommonLanguageCombinationDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetLanguageId")
     public Long targetLanguageId;
+
     public CommonLanguageCombinationDTO withTargetLanguageId(Long targetLanguageId) {
         this.targetLanguageId = targetLanguageId;
         return this;
     }
     
+    public CommonLanguageCombinationDTO(){}
 }

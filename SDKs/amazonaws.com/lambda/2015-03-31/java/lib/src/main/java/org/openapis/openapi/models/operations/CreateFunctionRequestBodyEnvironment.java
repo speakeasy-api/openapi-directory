@@ -15,9 +15,11 @@ public class CreateFunctionRequestBodyEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Variables")
     public java.util.Map<String, String> variables;
+
     public CreateFunctionRequestBodyEnvironment withVariables(java.util.Map<String, String> variables) {
         this.variables = variables;
         return this;
     }
     
+    public CreateFunctionRequestBodyEnvironment(){}
 }

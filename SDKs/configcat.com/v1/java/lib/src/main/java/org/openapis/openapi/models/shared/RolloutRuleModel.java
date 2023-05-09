@@ -12,6 +12,7 @@ public class RolloutRuleModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparator")
     public RolloutRuleComparatorEnum comparator;
+
     public RolloutRuleModel withComparator(RolloutRuleComparatorEnum comparator) {
         this.comparator = comparator;
         return this;
@@ -23,6 +24,7 @@ public class RolloutRuleModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparisonAttribute")
     public String comparisonAttribute;
+
     public RolloutRuleModel withComparisonAttribute(String comparisonAttribute) {
         this.comparisonAttribute = comparisonAttribute;
         return this;
@@ -34,6 +36,7 @@ public class RolloutRuleModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparisonValue")
     public String comparisonValue;
+
     public RolloutRuleModel withComparisonValue(String comparisonValue) {
         this.comparisonValue = comparisonValue;
         return this;
@@ -42,6 +45,7 @@ public class RolloutRuleModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentComparator")
     public SegmentComparatorEnum segmentComparator;
+
     public RolloutRuleModel withSegmentComparator(SegmentComparatorEnum segmentComparator) {
         this.segmentComparator = segmentComparator;
         return this;
@@ -53,6 +57,7 @@ public class RolloutRuleModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentId")
     public String segmentId;
+
     public RolloutRuleModel withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
@@ -64,9 +69,11 @@ public class RolloutRuleModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Object value;
+
     public RolloutRuleModel withValue(Object value) {
         this.value = value;
         return this;
     }
     
+    public RolloutRuleModel(){}
 }

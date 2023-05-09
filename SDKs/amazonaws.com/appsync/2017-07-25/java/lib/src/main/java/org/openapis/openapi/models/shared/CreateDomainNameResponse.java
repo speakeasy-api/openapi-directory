@@ -15,9 +15,11 @@ public class CreateDomainNameResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainNameConfig")
     public DomainNameConfig domainNameConfig;
+
     public CreateDomainNameResponse withDomainNameConfig(DomainNameConfig domainNameConfig) {
         this.domainNameConfig = domainNameConfig;
         return this;
     }
     
+    public CreateDomainNameResponse(){}
 }

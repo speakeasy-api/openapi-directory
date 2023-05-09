@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminGetProvisioningInformationForEnterpriseUserResponse {
     
     public String contentType;
+
     public EnterpriseAdminGetProvisioningInformationForEnterpriseUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminGetProvisioningInformationForEnterpriseUserResponse 
     
     
     public Integer statusCode;
+
     public EnterpriseAdminGetProvisioningInformationForEnterpriseUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminGetProvisioningInformationForEnterpriseUserResponse 
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminGetProvisioningInformationForEnterpriseUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class EnterpriseAdminGetProvisioningInformationForEnterpriseUserResponse 
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public EnterpriseAdminGetProvisioningInformationForEnterpriseUserResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class EnterpriseAdminGetProvisioningInformationForEnterpriseUserResponse 
      */
     
     public org.openapis.openapi.models.shared.ScimEnterpriseUserResponse scimEnterpriseUserResponse;
+
     public EnterpriseAdminGetProvisioningInformationForEnterpriseUserResponse withScimEnterpriseUserResponse(org.openapis.openapi.models.shared.ScimEnterpriseUserResponse scimEnterpriseUserResponse) {
         this.scimEnterpriseUserResponse = scimEnterpriseUserResponse;
         return this;
@@ -53,9 +59,14 @@ public class EnterpriseAdminGetProvisioningInformationForEnterpriseUserResponse 
      */
     
     public org.openapis.openapi.models.shared.ScimError scimError;
+
     public EnterpriseAdminGetProvisioningInformationForEnterpriseUserResponse withScimError(org.openapis.openapi.models.shared.ScimError scimError) {
         this.scimError = scimError;
         return this;
     }
     
+    public EnterpriseAdminGetProvisioningInformationForEnterpriseUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

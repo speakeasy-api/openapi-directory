@@ -16,6 +16,7 @@ public class GetDocument200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ast")
     public GetDocument200ApplicationJSONResultAst ast;
+
     public GetDocument200ApplicationJSONResult withAst(GetDocument200ApplicationJSONResultAst ast) {
         this.ast = ast;
         return this;
@@ -27,6 +28,7 @@ public class GetDocument200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetDocument200ApplicationJSONResult withId(String id) {
         this.id = id;
         return this;
@@ -38,9 +40,11 @@ public class GetDocument200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public String raw;
+
     public GetDocument200ApplicationJSONResult withRaw(String raw) {
         this.raw = raw;
         return this;
     }
     
+    public GetDocument200ApplicationJSONResult(){}
 }

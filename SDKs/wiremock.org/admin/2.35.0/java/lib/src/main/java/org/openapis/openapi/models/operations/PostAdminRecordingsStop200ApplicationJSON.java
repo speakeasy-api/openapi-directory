@@ -15,6 +15,7 @@ public class PostAdminRecordingsStop200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mappings")
     public PostAdminRecordingsStop200ApplicationJSONMappings[] mappings;
+
     public PostAdminRecordingsStop200ApplicationJSON withMappings(PostAdminRecordingsStop200ApplicationJSONMappings[] mappings) {
         this.mappings = mappings;
         return this;
@@ -23,9 +24,11 @@ public class PostAdminRecordingsStop200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PostAdminRecordingsStop200ApplicationJSONMeta meta;
+
     public PostAdminRecordingsStop200ApplicationJSON withMeta(PostAdminRecordingsStop200ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public PostAdminRecordingsStop200ApplicationJSON(){}
 }

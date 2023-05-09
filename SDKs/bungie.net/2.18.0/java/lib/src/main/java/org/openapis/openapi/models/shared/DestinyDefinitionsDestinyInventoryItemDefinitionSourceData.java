@@ -15,6 +15,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionSourceData {
      */
     
     public Integer exclusive;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionSourceData withExclusive(Integer exclusive) {
         this.exclusive = exclusive;
         return this;
@@ -25,6 +26,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionSourceData {
      */
     
     public Long[] sourceHashes;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionSourceData withSourceHashes(Long[] sourceHashes) {
         this.sourceHashes = sourceHashes;
         return this;
@@ -35,6 +37,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionSourceData {
      */
     
     public DestinyDefinitionsSourcesDestinyItemSourceDefinition[] sources;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionSourceData withSources(DestinyDefinitionsSourcesDestinyItemSourceDefinition[] sources) {
         this.sources = sources;
         return this;
@@ -45,9 +48,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionSourceData {
      */
     
     public DestinyDefinitionsDestinyItemVendorSourceReference[] vendorSources;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionSourceData withVendorSources(DestinyDefinitionsDestinyItemVendorSourceReference[] vendorSources) {
         this.vendorSources = vendorSources;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionSourceData(){}
 }

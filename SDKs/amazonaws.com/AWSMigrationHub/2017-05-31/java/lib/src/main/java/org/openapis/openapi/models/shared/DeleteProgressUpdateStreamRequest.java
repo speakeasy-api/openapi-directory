@@ -12,6 +12,7 @@ public class DeleteProgressUpdateStreamRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DryRun")
     public Boolean dryRun;
+
     public DeleteProgressUpdateStreamRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,9 +20,13 @@ public class DeleteProgressUpdateStreamRequest {
     
     @JsonProperty("ProgressUpdateStreamName")
     public String progressUpdateStreamName;
+
     public DeleteProgressUpdateStreamRequest withProgressUpdateStreamName(String progressUpdateStreamName) {
         this.progressUpdateStreamName = progressUpdateStreamName;
         return this;
     }
     
+    public DeleteProgressUpdateStreamRequest(@JsonProperty("ProgressUpdateStreamName") String progressUpdateStreamName) {
+        this.progressUpdateStreamName = progressUpdateStreamName;
+  }
 }

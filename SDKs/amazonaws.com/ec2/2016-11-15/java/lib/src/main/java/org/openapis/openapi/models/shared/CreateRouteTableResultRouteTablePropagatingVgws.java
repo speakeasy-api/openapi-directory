@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateRouteTableResultRouteTablePropagatingVgws {
     
     public String gatewayId;
+
     public CreateRouteTableResultRouteTablePropagatingVgws withGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
     }
     
+    public CreateRouteTableResultRouteTablePropagatingVgws(){}
 }

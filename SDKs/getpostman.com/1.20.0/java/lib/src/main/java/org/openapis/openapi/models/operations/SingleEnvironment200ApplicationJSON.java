@@ -15,9 +15,11 @@ public class SingleEnvironment200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public SingleEnvironment200ApplicationJSONEnvironment environment;
+
     public SingleEnvironment200ApplicationJSON withEnvironment(SingleEnvironment200ApplicationJSONEnvironment environment) {
         this.environment = environment;
         return this;
     }
     
+    public SingleEnvironment200ApplicationJSON(){}
 }

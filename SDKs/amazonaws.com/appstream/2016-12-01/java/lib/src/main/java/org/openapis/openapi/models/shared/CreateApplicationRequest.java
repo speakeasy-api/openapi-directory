@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateApplicationRequest {
     @JsonProperty("AppBlockArn")
     public String appBlockArn;
+
     public CreateApplicationRequest withAppBlockArn(String appBlockArn) {
         this.appBlockArn = appBlockArn;
         return this;
@@ -19,6 +20,7 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateApplicationRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public CreateApplicationRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -34,6 +37,7 @@ public class CreateApplicationRequest {
     
     @JsonProperty("IconS3Location")
     public S3Location iconS3Location;
+
     public CreateApplicationRequest withIconS3Location(S3Location iconS3Location) {
         this.iconS3Location = iconS3Location;
         return this;
@@ -41,6 +45,7 @@ public class CreateApplicationRequest {
     
     @JsonProperty("InstanceFamilies")
     public String[] instanceFamilies;
+
     public CreateApplicationRequest withInstanceFamilies(String[] instanceFamilies) {
         this.instanceFamilies = instanceFamilies;
         return this;
@@ -49,6 +54,7 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchParameters")
     public String launchParameters;
+
     public CreateApplicationRequest withLaunchParameters(String launchParameters) {
         this.launchParameters = launchParameters;
         return this;
@@ -56,6 +62,7 @@ public class CreateApplicationRequest {
     
     @JsonProperty("LaunchPath")
     public String launchPath;
+
     public CreateApplicationRequest withLaunchPath(String launchPath) {
         this.launchPath = launchPath;
         return this;
@@ -63,6 +70,7 @@ public class CreateApplicationRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateApplicationRequest withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +78,7 @@ public class CreateApplicationRequest {
     
     @JsonProperty("Platforms")
     public PlatformTypeEnum[] platforms;
+
     public CreateApplicationRequest withPlatforms(PlatformTypeEnum[] platforms) {
         this.platforms = platforms;
         return this;
@@ -78,6 +87,7 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateApplicationRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -86,9 +96,18 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkingDirectory")
     public String workingDirectory;
+
     public CreateApplicationRequest withWorkingDirectory(String workingDirectory) {
         this.workingDirectory = workingDirectory;
         return this;
     }
     
+    public CreateApplicationRequest(@JsonProperty("AppBlockArn") String appBlockArn, @JsonProperty("IconS3Location") S3Location iconS3Location, @JsonProperty("InstanceFamilies") String[] instanceFamilies, @JsonProperty("LaunchPath") String launchPath, @JsonProperty("Name") String name, @JsonProperty("Platforms") PlatformTypeEnum[] platforms) {
+        this.appBlockArn = appBlockArn;
+        this.iconS3Location = iconS3Location;
+        this.instanceFamilies = instanceFamilies;
+        this.launchPath = launchPath;
+        this.name = name;
+        this.platforms = platforms;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateRateBasedRuleRequest {
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public CreateRateBasedRuleRequest withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -18,6 +19,7 @@ public class CreateRateBasedRuleRequest {
     
     @JsonProperty("MetricName")
     public String metricName;
+
     public CreateRateBasedRuleRequest withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -25,6 +27,7 @@ public class CreateRateBasedRuleRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateRateBasedRuleRequest withName(String name) {
         this.name = name;
         return this;
@@ -32,6 +35,7 @@ public class CreateRateBasedRuleRequest {
     
     @JsonProperty("RateKey")
     public RateKeyEnum rateKey;
+
     public CreateRateBasedRuleRequest withRateKey(RateKeyEnum rateKey) {
         this.rateKey = rateKey;
         return this;
@@ -39,6 +43,7 @@ public class CreateRateBasedRuleRequest {
     
     @JsonProperty("RateLimit")
     public Long rateLimit;
+
     public CreateRateBasedRuleRequest withRateLimit(Long rateLimit) {
         this.rateLimit = rateLimit;
         return this;
@@ -47,9 +52,17 @@ public class CreateRateBasedRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateRateBasedRuleRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRateBasedRuleRequest(@JsonProperty("ChangeToken") String changeToken, @JsonProperty("MetricName") String metricName, @JsonProperty("Name") String name, @JsonProperty("RateKey") RateKeyEnum rateKey, @JsonProperty("RateLimit") Long rateLimit) {
+        this.changeToken = changeToken;
+        this.metricName = metricName;
+        this.name = name;
+        this.rateKey = rateKey;
+        this.rateLimit = rateLimit;
+  }
 }

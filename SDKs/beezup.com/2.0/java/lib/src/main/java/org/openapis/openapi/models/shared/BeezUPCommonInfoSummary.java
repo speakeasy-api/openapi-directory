@@ -12,6 +12,7 @@ public class BeezUPCommonInfoSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("informationArguments")
     public java.util.Map<String, String> informationArguments;
+
     public BeezUPCommonInfoSummary withInformationArguments(java.util.Map<String, String> informationArguments) {
         this.informationArguments = informationArguments;
         return this;
@@ -20,6 +21,7 @@ public class BeezUPCommonInfoSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("informationCode")
     public String informationCode;
+
     public BeezUPCommonInfoSummary withInformationCode(String informationCode) {
         this.informationCode = informationCode;
         return this;
@@ -28,6 +30,7 @@ public class BeezUPCommonInfoSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("informationMessage")
     public String informationMessage;
+
     public BeezUPCommonInfoSummary withInformationMessage(String informationMessage) {
         this.informationMessage = informationMessage;
         return this;
@@ -36,6 +39,7 @@ public class BeezUPCommonInfoSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectName")
     public String objectName;
+
     public BeezUPCommonInfoSummary withObjectName(String objectName) {
         this.objectName = objectName;
         return this;
@@ -44,6 +48,7 @@ public class BeezUPCommonInfoSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyName")
     public String propertyName;
+
     public BeezUPCommonInfoSummary withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
@@ -52,9 +57,11 @@ public class BeezUPCommonInfoSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyValue")
     public String propertyValue;
+
     public BeezUPCommonInfoSummary withPropertyValue(String propertyValue) {
         this.propertyValue = propertyValue;
         return this;
     }
     
+    public BeezUPCommonInfoSummary(){}
 }

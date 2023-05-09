@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsGetStatisticsListRequest {
@@ -12,6 +13,7 @@ public class GroupsGetStatisticsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
     public String fromDay;
+
     public GroupsGetStatisticsListRequest withFromDay(String fromDay) {
         this.fromDay = fromDay;
         return this;
@@ -22,6 +24,7 @@ public class GroupsGetStatisticsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupBy")
     public GroupsGetStatisticsListGroupByEnum groupBy;
+
     public GroupsGetStatisticsListRequest withGroupBy(GroupsGetStatisticsListGroupByEnum groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -32,6 +35,7 @@ public class GroupsGetStatisticsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GroupsGetStatisticsListRequest withId(Long id) {
         this.id = id;
         return this;
@@ -42,6 +46,7 @@ public class GroupsGetStatisticsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
     public GroupsGetStatisticsListTimeFrameEnum timeFrame;
+
     public GroupsGetStatisticsListRequest withTimeFrame(GroupsGetStatisticsListTimeFrameEnum timeFrame) {
         this.timeFrame = timeFrame;
         return this;
@@ -52,9 +57,14 @@ public class GroupsGetStatisticsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
     public String toDay;
+
     public GroupsGetStatisticsListRequest withToDay(String toDay) {
         this.toDay = toDay;
         return this;
     }
     
+    public GroupsGetStatisticsListRequest(@JsonProperty("id") Long id, @JsonProperty("timeFrame") GroupsGetStatisticsListTimeFrameEnum timeFrame) {
+        this.id = id;
+        this.timeFrame = timeFrame;
+  }
 }

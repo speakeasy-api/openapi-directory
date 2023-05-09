@@ -12,6 +12,7 @@ public class ApiKeyOwner200ApplicationJSONUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar")
     public String avatar;
+
     public ApiKeyOwner200ApplicationJSONUser withAvatar(String avatar) {
         this.avatar = avatar;
         return this;
@@ -20,6 +21,7 @@ public class ApiKeyOwner200ApplicationJSONUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ApiKeyOwner200ApplicationJSONUser withEmail(String email) {
         this.email = email;
         return this;
@@ -28,6 +30,7 @@ public class ApiKeyOwner200ApplicationJSONUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullName")
     public String fullName;
+
     public ApiKeyOwner200ApplicationJSONUser withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -36,6 +39,7 @@ public class ApiKeyOwner200ApplicationJSONUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ApiKeyOwner200ApplicationJSONUser withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +48,7 @@ public class ApiKeyOwner200ApplicationJSONUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPublic")
     public Boolean isPublic;
+
     public ApiKeyOwner200ApplicationJSONUser withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -52,9 +57,11 @@ public class ApiKeyOwner200ApplicationJSONUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public ApiKeyOwner200ApplicationJSONUser withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public ApiKeyOwner200ApplicationJSONUser(){}
 }

@@ -3,15 +3,14 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DriveactivityActivityQuerySecurityOption1;
-import org.openapis.openapi.models.operations.DriveactivityActivityQuerySecurityOption2;
-import org.openapis.openapi.models.operations.DriveactivityActivityQuerySecurity;
 import org.openapis.openapi.models.operations.DriveactivityActivityQueryRequest;
 import org.openapis.openapi.models.operations.DriveactivityActivityQueryResponse;
+import org.openapis.openapi.models.operations.DriveactivityActivityQuerySecurity;
+import org.openapis.openapi.models.operations.DriveactivityActivityQuerySecurityOption1;
+import org.openapis.openapi.models.operations.DriveactivityActivityQuerySecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.QueryDriveActivityRequest;
 import org.openapis.openapi.models.shared.ConsolidationStrategy;
+import org.openapis.openapi.models.shared.QueryDriveActivityRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -21,7 +20,7 @@ public class Application {
                 .build();
 
             DriveactivityActivityQueryRequest req = new DriveactivityActivityQueryRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 queryDriveActivityRequest = new QueryDriveActivityRequest() {{
                     ancestorName = "provident";
                     consolidationStrategy = new ConsolidationStrategy() {{
@@ -35,14 +34,14 @@ public class Application {
                             put("iure", "magnam");
                             put("debitis", "ipsa");
                         }};
-                    }};
+                    }};;
                     filter = "delectus";
                     itemName = "tempora";
                     pageSize = 383441;
                     pageToken = "molestiae";
-                }};
+                }};;
                 accessToken = "minus";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "voluptatum";
                 fields = "iusto";
                 key = "excepturi";
@@ -51,20 +50,22 @@ public class Application {
                 quotaUser = "recusandae";
                 uploadType = "temporibus";
                 uploadProtocol = "ab";
-            }}            
+            }};            
 
             DriveactivityActivityQueryResponse res = sdk.activity.driveactivityActivityQuery(req, new DriveactivityActivityQuerySecurity() {{
-                option1 = new DriveactivityActivityQuerySecurityOption1() {{
+                option1 = new DriveactivityActivityQuerySecurityOption1("quis", "veritatis") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.queryDriveActivityResponse.isPresent()) {
+            if (res.queryDriveActivityResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -12,6 +12,7 @@ public class Goaltender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confirmed")
     public Boolean confirmed;
+
     public Goaltender withConfirmed(Boolean confirmed) {
         this.confirmed = confirmed;
         return this;
@@ -20,6 +21,7 @@ public class Goaltender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstName")
     public String firstName;
+
     public Goaltender withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -28,6 +30,7 @@ public class Goaltender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Jersey")
     public Long jersey;
+
     public Goaltender withJersey(Long jersey) {
         this.jersey = jersey;
         return this;
@@ -36,6 +39,7 @@ public class Goaltender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastName")
     public String lastName;
+
     public Goaltender withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -44,6 +48,7 @@ public class Goaltender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public Goaltender withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -52,6 +57,7 @@ public class Goaltender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public Goaltender withTeam(String team) {
         this.team = team;
         return this;
@@ -60,9 +66,11 @@ public class Goaltender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamID")
     public Long teamID;
+
     public Goaltender withTeamID(Long teamID) {
         this.teamID = teamID;
         return this;
     }
     
+    public Goaltender(){}
 }

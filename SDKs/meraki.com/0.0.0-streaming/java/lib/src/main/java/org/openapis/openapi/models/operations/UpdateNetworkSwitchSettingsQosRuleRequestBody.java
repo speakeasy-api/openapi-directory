@@ -15,6 +15,7 @@ public class UpdateNetworkSwitchSettingsQosRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dscp")
     public Long dscp;
+
     public UpdateNetworkSwitchSettingsQosRuleRequestBody withDscp(Long dscp) {
         this.dscp = dscp;
         return this;
@@ -26,6 +27,7 @@ public class UpdateNetworkSwitchSettingsQosRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dstPort")
     public Long dstPort;
+
     public UpdateNetworkSwitchSettingsQosRuleRequestBody withDstPort(Long dstPort) {
         this.dstPort = dstPort;
         return this;
@@ -37,6 +39,7 @@ public class UpdateNetworkSwitchSettingsQosRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dstPortRange")
     public String dstPortRange;
+
     public UpdateNetworkSwitchSettingsQosRuleRequestBody withDstPortRange(String dstPortRange) {
         this.dstPortRange = dstPortRange;
         return this;
@@ -48,6 +51,7 @@ public class UpdateNetworkSwitchSettingsQosRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public UpdateNetworkSwitchSettingsQosRuleRequestBodyProtocolEnum protocol;
+
     public UpdateNetworkSwitchSettingsQosRuleRequestBody withProtocol(UpdateNetworkSwitchSettingsQosRuleRequestBodyProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -59,6 +63,7 @@ public class UpdateNetworkSwitchSettingsQosRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("srcPort")
     public Long srcPort;
+
     public UpdateNetworkSwitchSettingsQosRuleRequestBody withSrcPort(Long srcPort) {
         this.srcPort = srcPort;
         return this;
@@ -70,6 +75,7 @@ public class UpdateNetworkSwitchSettingsQosRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("srcPortRange")
     public String srcPortRange;
+
     public UpdateNetworkSwitchSettingsQosRuleRequestBody withSrcPortRange(String srcPortRange) {
         this.srcPortRange = srcPortRange;
         return this;
@@ -81,9 +87,11 @@ public class UpdateNetworkSwitchSettingsQosRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vlan")
     public Long vlan;
+
     public UpdateNetworkSwitchSettingsQosRuleRequestBody withVlan(Long vlan) {
         this.vlan = vlan;
         return this;
     }
     
+    public UpdateNetworkSwitchSettingsQosRuleRequestBody(){}
 }

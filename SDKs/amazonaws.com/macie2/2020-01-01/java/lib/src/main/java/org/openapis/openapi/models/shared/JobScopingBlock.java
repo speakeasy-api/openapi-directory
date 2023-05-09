@@ -15,9 +15,11 @@ public class JobScopingBlock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("and")
     public JobScopeTerm[] and;
+
     public JobScopingBlock withAnd(JobScopeTerm[] and) {
         this.and = and;
         return this;
     }
     
+    public JobScopingBlock(){}
 }

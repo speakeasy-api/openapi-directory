@@ -12,6 +12,7 @@ public class DiscoverInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthStatus")
     public HealthStatusFilterEnum healthStatus;
+
     public DiscoverInstancesRequest withHealthStatus(HealthStatusFilterEnum healthStatus) {
         this.healthStatus = healthStatus;
         return this;
@@ -20,6 +21,7 @@ public class DiscoverInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DiscoverInstancesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,6 +29,7 @@ public class DiscoverInstancesRequest {
     
     @JsonProperty("NamespaceName")
     public String namespaceName;
+
     public DiscoverInstancesRequest withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
@@ -35,6 +38,7 @@ public class DiscoverInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptionalParameters")
     public java.util.Map<String, String> optionalParameters;
+
     public DiscoverInstancesRequest withOptionalParameters(java.util.Map<String, String> optionalParameters) {
         this.optionalParameters = optionalParameters;
         return this;
@@ -43,6 +47,7 @@ public class DiscoverInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryParameters")
     public java.util.Map<String, String> queryParameters;
+
     public DiscoverInstancesRequest withQueryParameters(java.util.Map<String, String> queryParameters) {
         this.queryParameters = queryParameters;
         return this;
@@ -50,9 +55,14 @@ public class DiscoverInstancesRequest {
     
     @JsonProperty("ServiceName")
     public String serviceName;
+
     public DiscoverInstancesRequest withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public DiscoverInstancesRequest(@JsonProperty("NamespaceName") String namespaceName, @JsonProperty("ServiceName") String serviceName) {
+        this.namespaceName = namespaceName;
+        this.serviceName = serviceName;
+  }
 }

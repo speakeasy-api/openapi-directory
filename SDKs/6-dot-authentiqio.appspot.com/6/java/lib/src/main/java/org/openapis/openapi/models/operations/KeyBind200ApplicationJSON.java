@@ -18,9 +18,11 @@ public class KeyBind200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public KeyBind200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public KeyBind200ApplicationJSON(){}
 }

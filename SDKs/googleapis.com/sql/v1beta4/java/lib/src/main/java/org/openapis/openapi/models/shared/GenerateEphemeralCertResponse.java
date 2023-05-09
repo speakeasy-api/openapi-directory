@@ -18,9 +18,11 @@ public class GenerateEphemeralCertResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ephemeralCert")
     public SslCert ephemeralCert;
+
     public GenerateEphemeralCertResponse withEphemeralCert(SslCert ephemeralCert) {
         this.ephemeralCert = ephemeralCert;
         return this;
     }
     
+    public GenerateEphemeralCertResponse(){}
 }

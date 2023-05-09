@@ -18,6 +18,7 @@ public class GoogleCloudMlV1MeasurementMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public String metric;
+
     public GoogleCloudMlV1MeasurementMetric withMetric(String metric) {
         this.metric = metric;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudMlV1MeasurementMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public GoogleCloudMlV1MeasurementMetric withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public GoogleCloudMlV1MeasurementMetric(){}
 }

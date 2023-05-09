@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateExperienceResponse {
@@ -12,6 +13,7 @@ public class UpdateExperienceResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateExperienceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateExperienceResponse {
      */
     
     public Object conflictException;
+
     public UpdateExperienceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateExperienceResponse {
     
     
     public String contentType;
+
     public UpdateExperienceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateExperienceResponse {
      */
     
     public Object internalServerException;
+
     public UpdateExperienceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateExperienceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateExperienceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateExperienceResponse {
     
     
     public Integer statusCode;
+
     public UpdateExperienceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateExperienceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateExperienceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateExperienceResponse {
      */
     
     public Object throttlingException;
+
     public UpdateExperienceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateExperienceResponse {
      */
     
     public Object validationException;
+
     public UpdateExperienceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateExperienceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

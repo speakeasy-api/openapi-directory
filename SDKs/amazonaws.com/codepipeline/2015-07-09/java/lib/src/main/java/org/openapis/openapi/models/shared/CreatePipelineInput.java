@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreatePipelineInput {
     @JsonProperty("pipeline")
     public PipelineDeclaration pipeline;
+
     public CreatePipelineInput withPipeline(PipelineDeclaration pipeline) {
         this.pipeline = pipeline;
         return this;
@@ -22,9 +23,13 @@ public class CreatePipelineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreatePipelineInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreatePipelineInput(@JsonProperty("pipeline") PipelineDeclaration pipeline) {
+        this.pipeline = pipeline;
+  }
 }

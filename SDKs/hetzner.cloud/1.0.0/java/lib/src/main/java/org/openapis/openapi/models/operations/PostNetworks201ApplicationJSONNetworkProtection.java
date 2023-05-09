@@ -15,9 +15,13 @@ public class PostNetworks201ApplicationJSONNetworkProtection {
      */
     @JsonProperty("delete")
     public Boolean delete;
+
     public PostNetworks201ApplicationJSONNetworkProtection withDelete(Boolean delete) {
         this.delete = delete;
         return this;
     }
     
+    public PostNetworks201ApplicationJSONNetworkProtection(@JsonProperty("delete") Boolean delete) {
+        this.delete = delete;
+  }
 }

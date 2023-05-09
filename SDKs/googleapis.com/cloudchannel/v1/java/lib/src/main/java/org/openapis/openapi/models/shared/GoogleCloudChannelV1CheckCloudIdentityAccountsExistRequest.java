@@ -18,9 +18,11 @@ public class GoogleCloudChannelV1CheckCloudIdentityAccountsExistRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public GoogleCloudChannelV1CheckCloudIdentityAccountsExistRequest withDomain(String domain) {
         this.domain = domain;
         return this;
     }
     
+    public GoogleCloudChannelV1CheckCloudIdentityAccountsExistRequest(){}
 }

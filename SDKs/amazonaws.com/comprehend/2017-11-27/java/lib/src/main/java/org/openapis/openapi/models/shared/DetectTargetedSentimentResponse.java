@@ -15,9 +15,11 @@ public class DetectTargetedSentimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Entities")
     public TargetedSentimentEntity[] entities;
+
     public DetectTargetedSentimentResponse withEntities(TargetedSentimentEntity[] entities) {
         this.entities = entities;
         return this;
     }
     
+    public DetectTargetedSentimentResponse(){}
 }

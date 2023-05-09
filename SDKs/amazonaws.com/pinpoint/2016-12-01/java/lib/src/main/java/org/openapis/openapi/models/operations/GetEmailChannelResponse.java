@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEmailChannelResponse {
@@ -12,6 +13,7 @@ public class GetEmailChannelResponse {
      */
     
     public Object badRequestException;
+
     public GetEmailChannelResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetEmailChannelResponse {
     
     
     public String contentType;
+
     public GetEmailChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetEmailChannelResponse {
      */
     
     public Object forbiddenException;
+
     public GetEmailChannelResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetEmailChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEmailChannelResponse getEmailChannelResponse;
+
     public GetEmailChannelResponse withGetEmailChannelResponse(org.openapis.openapi.models.shared.GetEmailChannelResponse getEmailChannelResponse) {
         this.getEmailChannelResponse = getEmailChannelResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetEmailChannelResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetEmailChannelResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetEmailChannelResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetEmailChannelResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetEmailChannelResponse {
      */
     
     public Object notFoundException;
+
     public GetEmailChannelResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetEmailChannelResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetEmailChannelResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetEmailChannelResponse {
     
     
     public Integer statusCode;
+
     public GetEmailChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetEmailChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEmailChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetEmailChannelResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetEmailChannelResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetEmailChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

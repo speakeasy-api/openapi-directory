@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLoadBalancerTlsPoliciesResponse {
@@ -12,6 +13,7 @@ public class GetLoadBalancerTlsPoliciesResponse {
      */
     
     public Object accessDeniedException;
+
     public GetLoadBalancerTlsPoliciesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetLoadBalancerTlsPoliciesResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetLoadBalancerTlsPoliciesResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetLoadBalancerTlsPoliciesResponse {
     
     
     public String contentType;
+
     public GetLoadBalancerTlsPoliciesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetLoadBalancerTlsPoliciesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLoadBalancerTlsPoliciesResult getLoadBalancerTlsPoliciesResult;
+
     public GetLoadBalancerTlsPoliciesResponse withGetLoadBalancerTlsPoliciesResult(org.openapis.openapi.models.shared.GetLoadBalancerTlsPoliciesResult getLoadBalancerTlsPoliciesResult) {
         this.getLoadBalancerTlsPoliciesResult = getLoadBalancerTlsPoliciesResult;
         return this;
@@ -49,6 +54,7 @@ public class GetLoadBalancerTlsPoliciesResponse {
      */
     
     public Object invalidInputException;
+
     public GetLoadBalancerTlsPoliciesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetLoadBalancerTlsPoliciesResponse {
      */
     
     public Object serviceException;
+
     public GetLoadBalancerTlsPoliciesResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class GetLoadBalancerTlsPoliciesResponse {
     
     
     public Integer statusCode;
+
     public GetLoadBalancerTlsPoliciesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetLoadBalancerTlsPoliciesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLoadBalancerTlsPoliciesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetLoadBalancerTlsPoliciesResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetLoadBalancerTlsPoliciesResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetLoadBalancerTlsPoliciesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

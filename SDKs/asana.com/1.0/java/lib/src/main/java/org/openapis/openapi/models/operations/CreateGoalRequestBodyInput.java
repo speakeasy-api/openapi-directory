@@ -15,9 +15,11 @@ public class CreateGoalRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.GoalRequestInput data;
+
     public CreateGoalRequestBodyInput withData(org.openapis.openapi.models.shared.GoalRequestInput data) {
         this.data = data;
         return this;
     }
     
+    public CreateGoalRequestBodyInput(){}
 }

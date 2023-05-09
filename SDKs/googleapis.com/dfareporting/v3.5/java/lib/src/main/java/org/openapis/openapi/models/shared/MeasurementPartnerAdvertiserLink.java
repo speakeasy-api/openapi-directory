@@ -15,6 +15,7 @@ public class MeasurementPartnerAdvertiserLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkStatus")
     public MeasurementPartnerAdvertiserLinkLinkStatusEnum linkStatus;
+
     public MeasurementPartnerAdvertiserLink withLinkStatus(MeasurementPartnerAdvertiserLinkLinkStatusEnum linkStatus) {
         this.linkStatus = linkStatus;
         return this;
@@ -26,6 +27,7 @@ public class MeasurementPartnerAdvertiserLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurementPartner")
     public MeasurementPartnerAdvertiserLinkMeasurementPartnerEnum measurementPartner;
+
     public MeasurementPartnerAdvertiserLink withMeasurementPartner(MeasurementPartnerAdvertiserLinkMeasurementPartnerEnum measurementPartner) {
         this.measurementPartner = measurementPartner;
         return this;
@@ -37,9 +39,11 @@ public class MeasurementPartnerAdvertiserLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerAdvertiserId")
     public String partnerAdvertiserId;
+
     public MeasurementPartnerAdvertiserLink withPartnerAdvertiserId(String partnerAdvertiserId) {
         this.partnerAdvertiserId = partnerAdvertiserId;
         return this;
     }
     
+    public MeasurementPartnerAdvertiserLink(){}
 }

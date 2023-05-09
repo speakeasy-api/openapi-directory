@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRoadIdsResponse {
     
     public byte[] body;
+
     public GetRoadIdsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetRoadIdsResponse {
     
     
     public String contentType;
+
     public GetRoadIdsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetRoadIdsResponse {
     
     
     public Integer statusCode;
+
     public GetRoadIdsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetRoadIdsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRoadIdsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetRoadIdsResponse {
      */
     
     public org.openapis.openapi.models.shared.TflApiPresentationEntitiesRoadCorridor[] tflApiPresentationEntitiesRoadCorridors;
+
     public GetRoadIdsResponse withTflApiPresentationEntitiesRoadCorridors(org.openapis.openapi.models.shared.TflApiPresentationEntitiesRoadCorridor[] tflApiPresentationEntitiesRoadCorridors) {
         this.tflApiPresentationEntitiesRoadCorridors = tflApiPresentationEntitiesRoadCorridors;
         return this;
     }
     
+    public GetRoadIdsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

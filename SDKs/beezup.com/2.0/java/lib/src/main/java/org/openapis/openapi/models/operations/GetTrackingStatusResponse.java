@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTrackingStatusResponse {
@@ -12,6 +13,7 @@ public class GetTrackingStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetTrackingStatusResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetTrackingStatusResponse {
     
     
     public String contentType;
+
     public GetTrackingStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetTrackingStatusResponse {
     
     
     public Integer statusCode;
+
     public GetTrackingStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetTrackingStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTrackingStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetTrackingStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.TrackingStatus trackingStatus;
+
     public GetTrackingStatusResponse withTrackingStatus(org.openapis.openapi.models.shared.TrackingStatus trackingStatus) {
         this.trackingStatus = trackingStatus;
         return this;
     }
     
+    public GetTrackingStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

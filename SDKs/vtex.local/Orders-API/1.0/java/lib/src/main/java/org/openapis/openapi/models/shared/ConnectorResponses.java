@@ -12,6 +12,7 @@ public class ConnectorResponses {
      */
     @JsonProperty("Message")
     public String message;
+
     public ConnectorResponses withMessage(String message) {
         this.message = message;
         return this;
@@ -22,6 +23,7 @@ public class ConnectorResponses {
      */
     @JsonProperty("ReturnCode")
     public String returnCode;
+
     public ConnectorResponses withReturnCode(String returnCode) {
         this.returnCode = returnCode;
         return this;
@@ -32,6 +34,7 @@ public class ConnectorResponses {
      */
     @JsonProperty("Tid")
     public String tid;
+
     public ConnectorResponses withTid(String tid) {
         this.tid = tid;
         return this;
@@ -42,9 +45,16 @@ public class ConnectorResponses {
      */
     @JsonProperty("authId")
     public String authId;
+
     public ConnectorResponses withAuthId(String authId) {
         this.authId = authId;
         return this;
     }
     
+    public ConnectorResponses(@JsonProperty("Message") String message, @JsonProperty("ReturnCode") String returnCode, @JsonProperty("Tid") String tid, @JsonProperty("authId") String authId) {
+        this.message = message;
+        this.returnCode = returnCode;
+        this.tid = tid;
+        this.authId = authId;
+  }
 }

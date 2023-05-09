@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateAnomalyMonitorRequest {
     @JsonProperty("AnomalyMonitor")
     public AnomalyMonitor anomalyMonitor;
+
     public CreateAnomalyMonitorRequest withAnomalyMonitor(AnomalyMonitor anomalyMonitor) {
         this.anomalyMonitor = anomalyMonitor;
         return this;
@@ -19,9 +20,13 @@ public class CreateAnomalyMonitorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTags")
     public ResourceTag[] resourceTags;
+
     public CreateAnomalyMonitorRequest withResourceTags(ResourceTag[] resourceTags) {
         this.resourceTags = resourceTags;
         return this;
     }
     
+    public CreateAnomalyMonitorRequest(@JsonProperty("AnomalyMonitor") AnomalyMonitor anomalyMonitor) {
+        this.anomalyMonitor = anomalyMonitor;
+  }
 }

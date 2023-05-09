@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostPerfectpdfApiResponse {
     
     public byte[] body;
+
     public PostPerfectpdfApiResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostPerfectpdfApiResponse {
     
     
     public String contentType;
+
     public PostPerfectpdfApiResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PostPerfectpdfApiResponse {
     
     
     public Integer statusCode;
+
     public PostPerfectpdfApiResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class PostPerfectpdfApiResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostPerfectpdfApiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostPerfectpdfApiResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

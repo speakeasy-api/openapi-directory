@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AppsUpdateUserPermissionsDefaultApplicationJSON {
     @JsonProperty("error")
     public AppsUpdateUserPermissionsDefaultApplicationJSONError error;
+
     public AppsUpdateUserPermissionsDefaultApplicationJSON withError(AppsUpdateUserPermissionsDefaultApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public AppsUpdateUserPermissionsDefaultApplicationJSON(@JsonProperty("error") AppsUpdateUserPermissionsDefaultApplicationJSONError error) {
+        this.error = error;
+  }
 }

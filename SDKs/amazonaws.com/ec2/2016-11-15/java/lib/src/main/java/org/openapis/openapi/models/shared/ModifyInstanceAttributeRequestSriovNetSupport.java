@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyInstanceAttributeRequestSriovNetSupport {
     
     public String value;
+
     public ModifyInstanceAttributeRequestSriovNetSupport withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ModifyInstanceAttributeRequestSriovNetSupport(){}
 }

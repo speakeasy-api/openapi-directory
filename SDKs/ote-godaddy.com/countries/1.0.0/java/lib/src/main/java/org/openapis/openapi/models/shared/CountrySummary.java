@@ -15,6 +15,7 @@ public class CountrySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callingCode")
     public String callingCode;
+
     public CountrySummary withCallingCode(String callingCode) {
         this.callingCode = callingCode;
         return this;
@@ -26,6 +27,7 @@ public class CountrySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryKey")
     public String countryKey;
+
     public CountrySummary withCountryKey(String countryKey) {
         this.countryKey = countryKey;
         return this;
@@ -37,9 +39,11 @@ public class CountrySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public CountrySummary withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public CountrySummary(){}
 }

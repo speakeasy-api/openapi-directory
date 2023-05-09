@@ -18,9 +18,11 @@ public class GoogleCloudRecommenderV1RecommenderGenerationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public java.util.Map<String, Object> params;
+
     public GoogleCloudRecommenderV1RecommenderGenerationConfig withParams(java.util.Map<String, Object> params) {
         this.params = params;
         return this;
     }
     
+    public GoogleCloudRecommenderV1RecommenderGenerationConfig(){}
 }

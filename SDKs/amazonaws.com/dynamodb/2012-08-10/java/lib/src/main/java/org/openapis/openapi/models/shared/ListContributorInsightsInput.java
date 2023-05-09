@@ -12,6 +12,7 @@ public class ListContributorInsightsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListContributorInsightsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListContributorInsightsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListContributorInsightsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class ListContributorInsightsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public ListContributorInsightsInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public ListContributorInsightsInput(){}
 }

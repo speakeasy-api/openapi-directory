@@ -18,6 +18,7 @@ public class Replica {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerManagedEncryption")
     public CustomerManagedEncryption customerManagedEncryption;
+
     public Replica withCustomerManagedEncryption(CustomerManagedEncryption customerManagedEncryption) {
         this.customerManagedEncryption = customerManagedEncryption;
         return this;
@@ -29,9 +30,11 @@ public class Replica {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public Replica withLocation(String location) {
         this.location = location;
         return this;
     }
     
+    public Replica(){}
 }

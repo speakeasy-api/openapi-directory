@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CommLogsCreateResponse {
     
     public String contentType;
+
     public CommLogsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CommLogsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.PhoneCallLog phoneCallLog;
+
     public CommLogsCreateResponse withPhoneCallLog(org.openapis.openapi.models.shared.PhoneCallLog phoneCallLog) {
         this.phoneCallLog = phoneCallLog;
         return this;
@@ -26,6 +29,7 @@ public class CommLogsCreateResponse {
     
     
     public Integer statusCode;
+
     public CommLogsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CommLogsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CommLogsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CommLogsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

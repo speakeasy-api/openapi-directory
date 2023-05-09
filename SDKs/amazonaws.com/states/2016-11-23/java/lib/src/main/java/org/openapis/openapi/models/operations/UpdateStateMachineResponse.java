@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateStateMachineResponse {
     
     public String contentType;
+
     public UpdateStateMachineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateStateMachineResponse {
      */
     
     public Object invalidArn;
+
     public UpdateStateMachineResponse withInvalidArn(Object invalidArn) {
         this.invalidArn = invalidArn;
         return this;
@@ -29,6 +32,7 @@ public class UpdateStateMachineResponse {
      */
     
     public Object invalidDefinition;
+
     public UpdateStateMachineResponse withInvalidDefinition(Object invalidDefinition) {
         this.invalidDefinition = invalidDefinition;
         return this;
@@ -39,6 +43,7 @@ public class UpdateStateMachineResponse {
      */
     
     public Object invalidLoggingConfiguration;
+
     public UpdateStateMachineResponse withInvalidLoggingConfiguration(Object invalidLoggingConfiguration) {
         this.invalidLoggingConfiguration = invalidLoggingConfiguration;
         return this;
@@ -49,6 +54,7 @@ public class UpdateStateMachineResponse {
      */
     
     public Object invalidTracingConfiguration;
+
     public UpdateStateMachineResponse withInvalidTracingConfiguration(Object invalidTracingConfiguration) {
         this.invalidTracingConfiguration = invalidTracingConfiguration;
         return this;
@@ -59,6 +65,7 @@ public class UpdateStateMachineResponse {
      */
     
     public Object missingRequiredParameter;
+
     public UpdateStateMachineResponse withMissingRequiredParameter(Object missingRequiredParameter) {
         this.missingRequiredParameter = missingRequiredParameter;
         return this;
@@ -66,6 +73,7 @@ public class UpdateStateMachineResponse {
     
     
     public Integer statusCode;
+
     public UpdateStateMachineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateStateMachineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateStateMachineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateStateMachineResponse {
      */
     
     public Object stateMachineDeleting;
+
     public UpdateStateMachineResponse withStateMachineDeleting(Object stateMachineDeleting) {
         this.stateMachineDeleting = stateMachineDeleting;
         return this;
@@ -93,6 +103,7 @@ public class UpdateStateMachineResponse {
      */
     
     public Object stateMachineDoesNotExist;
+
     public UpdateStateMachineResponse withStateMachineDoesNotExist(Object stateMachineDoesNotExist) {
         this.stateMachineDoesNotExist = stateMachineDoesNotExist;
         return this;
@@ -103,6 +114,7 @@ public class UpdateStateMachineResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateStateMachineOutput updateStateMachineOutput;
+
     public UpdateStateMachineResponse withUpdateStateMachineOutput(org.openapis.openapi.models.shared.UpdateStateMachineOutput updateStateMachineOutput) {
         this.updateStateMachineOutput = updateStateMachineOutput;
         return this;
@@ -113,9 +125,14 @@ public class UpdateStateMachineResponse {
      */
     
     public Object validationException;
+
     public UpdateStateMachineResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateStateMachineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

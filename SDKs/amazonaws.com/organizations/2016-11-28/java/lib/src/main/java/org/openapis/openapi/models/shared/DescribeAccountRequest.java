@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAccountRequest {
     @JsonProperty("AccountId")
     public String accountId;
+
     public DescribeAccountRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
     
+    public DescribeAccountRequest(@JsonProperty("AccountId") String accountId) {
+        this.accountId = accountId;
+  }
 }

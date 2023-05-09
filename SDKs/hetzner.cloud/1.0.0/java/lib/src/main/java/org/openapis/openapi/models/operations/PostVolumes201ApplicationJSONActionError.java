@@ -15,6 +15,7 @@ public class PostVolumes201ApplicationJSONActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public PostVolumes201ApplicationJSONActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class PostVolumes201ApplicationJSONActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public PostVolumes201ApplicationJSONActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostVolumes201ApplicationJSONActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

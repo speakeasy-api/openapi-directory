@@ -12,6 +12,7 @@ public class UpdateGlobalTableSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTableBillingMode")
     public BillingModeEnum globalTableBillingMode;
+
     public UpdateGlobalTableSettingsInput withGlobalTableBillingMode(BillingModeEnum globalTableBillingMode) {
         this.globalTableBillingMode = globalTableBillingMode;
         return this;
@@ -20,6 +21,7 @@ public class UpdateGlobalTableSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTableGlobalSecondaryIndexSettingsUpdate")
     public GlobalTableGlobalSecondaryIndexSettingsUpdate[] globalTableGlobalSecondaryIndexSettingsUpdate;
+
     public UpdateGlobalTableSettingsInput withGlobalTableGlobalSecondaryIndexSettingsUpdate(GlobalTableGlobalSecondaryIndexSettingsUpdate[] globalTableGlobalSecondaryIndexSettingsUpdate) {
         this.globalTableGlobalSecondaryIndexSettingsUpdate = globalTableGlobalSecondaryIndexSettingsUpdate;
         return this;
@@ -27,6 +29,7 @@ public class UpdateGlobalTableSettingsInput {
     
     @JsonProperty("GlobalTableName")
     public String globalTableName;
+
     public UpdateGlobalTableSettingsInput withGlobalTableName(String globalTableName) {
         this.globalTableName = globalTableName;
         return this;
@@ -35,6 +38,7 @@ public class UpdateGlobalTableSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate")
     public AutoScalingSettingsUpdate globalTableProvisionedWriteCapacityAutoScalingSettingsUpdate;
+
     public UpdateGlobalTableSettingsInput withGlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate(AutoScalingSettingsUpdate globalTableProvisionedWriteCapacityAutoScalingSettingsUpdate) {
         this.globalTableProvisionedWriteCapacityAutoScalingSettingsUpdate = globalTableProvisionedWriteCapacityAutoScalingSettingsUpdate;
         return this;
@@ -43,6 +47,7 @@ public class UpdateGlobalTableSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTableProvisionedWriteCapacityUnits")
     public Long globalTableProvisionedWriteCapacityUnits;
+
     public UpdateGlobalTableSettingsInput withGlobalTableProvisionedWriteCapacityUnits(Long globalTableProvisionedWriteCapacityUnits) {
         this.globalTableProvisionedWriteCapacityUnits = globalTableProvisionedWriteCapacityUnits;
         return this;
@@ -51,9 +56,13 @@ public class UpdateGlobalTableSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaSettingsUpdate")
     public ReplicaSettingsUpdate[] replicaSettingsUpdate;
+
     public UpdateGlobalTableSettingsInput withReplicaSettingsUpdate(ReplicaSettingsUpdate[] replicaSettingsUpdate) {
         this.replicaSettingsUpdate = replicaSettingsUpdate;
         return this;
     }
     
+    public UpdateGlobalTableSettingsInput(@JsonProperty("GlobalTableName") String globalTableName) {
+        this.globalTableName = globalTableName;
+  }
 }

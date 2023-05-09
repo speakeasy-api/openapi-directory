@@ -22,9 +22,11 @@ public class ProfileTime {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("start")
     public OffsetDateTime start;
+
     public ProfileTime withStart(OffsetDateTime start) {
         this.start = start;
         return this;
     }
     
+    public ProfileTime(){}
 }

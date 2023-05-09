@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteDomainRequest {
     @JsonProperty("DomainId")
     public String domainId;
+
     public DeleteDomainRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
     }
     
+    public DeleteDomainRequest(@JsonProperty("DomainId") String domainId) {
+        this.domainId = domainId;
+  }
 }

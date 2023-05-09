@@ -15,6 +15,7 @@ public class AwsEcrRepositoryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public AwsEcrRepositoryDetails withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcrRepositoryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageScanningConfiguration")
     public AwsEcrRepositoryImageScanningConfigurationDetails imageScanningConfiguration;
+
     public AwsEcrRepositoryDetails withImageScanningConfiguration(AwsEcrRepositoryImageScanningConfigurationDetails imageScanningConfiguration) {
         this.imageScanningConfiguration = imageScanningConfiguration;
         return this;
@@ -31,6 +33,7 @@ public class AwsEcrRepositoryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageTagMutability")
     public String imageTagMutability;
+
     public AwsEcrRepositoryDetails withImageTagMutability(String imageTagMutability) {
         this.imageTagMutability = imageTagMutability;
         return this;
@@ -39,6 +42,7 @@ public class AwsEcrRepositoryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LifecyclePolicy")
     public AwsEcrRepositoryLifecyclePolicyDetails lifecyclePolicy;
+
     public AwsEcrRepositoryDetails withLifecyclePolicy(AwsEcrRepositoryLifecyclePolicyDetails lifecyclePolicy) {
         this.lifecyclePolicy = lifecyclePolicy;
         return this;
@@ -47,6 +51,7 @@ public class AwsEcrRepositoryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RepositoryName")
     public String repositoryName;
+
     public AwsEcrRepositoryDetails withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -55,9 +60,11 @@ public class AwsEcrRepositoryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RepositoryPolicyText")
     public String repositoryPolicyText;
+
     public AwsEcrRepositoryDetails withRepositoryPolicyText(String repositoryPolicyText) {
         this.repositoryPolicyText = repositoryPolicyText;
         return this;
     }
     
+    public AwsEcrRepositoryDetails(){}
 }

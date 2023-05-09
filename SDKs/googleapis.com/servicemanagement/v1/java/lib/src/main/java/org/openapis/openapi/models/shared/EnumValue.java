@@ -18,6 +18,7 @@ public class EnumValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EnumValue withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class EnumValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public Integer number;
+
     public EnumValue withNumber(Integer number) {
         this.number = number;
         return this;
@@ -40,9 +42,11 @@ public class EnumValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public Option[] options;
+
     public EnumValue withOptions(Option[] options) {
         this.options = options;
         return this;
     }
     
+    public EnumValue(){}
 }

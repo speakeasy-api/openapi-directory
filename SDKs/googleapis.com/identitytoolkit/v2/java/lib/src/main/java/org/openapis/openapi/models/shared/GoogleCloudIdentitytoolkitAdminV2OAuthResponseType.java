@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitAdminV2OAuthResponseType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Boolean code;
+
     public GoogleCloudIdentitytoolkitAdminV2OAuthResponseType withCode(Boolean code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIdentitytoolkitAdminV2OAuthResponseType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idToken")
     public Boolean idToken;
+
     public GoogleCloudIdentitytoolkitAdminV2OAuthResponseType withIdToken(Boolean idToken) {
         this.idToken = idToken;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudIdentitytoolkitAdminV2OAuthResponseType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public Boolean token;
+
     public GoogleCloudIdentitytoolkitAdminV2OAuthResponseType withToken(Boolean token) {
         this.token = token;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2OAuthResponseType(){}
 }

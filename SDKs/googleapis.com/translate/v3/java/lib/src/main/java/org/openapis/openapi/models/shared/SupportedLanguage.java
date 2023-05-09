@@ -18,6 +18,7 @@ public class SupportedLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public SupportedLanguage withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class SupportedLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public SupportedLanguage withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -40,6 +42,7 @@ public class SupportedLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportSource")
     public Boolean supportSource;
+
     public SupportedLanguage withSupportSource(Boolean supportSource) {
         this.supportSource = supportSource;
         return this;
@@ -51,9 +54,11 @@ public class SupportedLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportTarget")
     public Boolean supportTarget;
+
     public SupportedLanguage withSupportTarget(Boolean supportTarget) {
         this.supportTarget = supportTarget;
         return this;
     }
     
+    public SupportedLanguage(){}
 }

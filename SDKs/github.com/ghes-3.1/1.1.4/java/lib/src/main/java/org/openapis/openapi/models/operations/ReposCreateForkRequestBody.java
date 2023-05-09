@@ -15,9 +15,11 @@ public class ReposCreateForkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public String organization;
+
     public ReposCreateForkRequestBody withOrganization(String organization) {
         this.organization = organization;
         return this;
     }
     
+    public ReposCreateForkRequestBody(){}
 }

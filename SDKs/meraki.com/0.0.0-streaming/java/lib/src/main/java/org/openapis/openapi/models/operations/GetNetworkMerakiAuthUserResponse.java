@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNetworkMerakiAuthUserResponse {
     
     public String contentType;
+
     public GetNetworkMerakiAuthUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetNetworkMerakiAuthUserResponse {
     
     
     public Integer statusCode;
+
     public GetNetworkMerakiAuthUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetNetworkMerakiAuthUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNetworkMerakiAuthUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetNetworkMerakiAuthUserResponse {
      */
     
     public java.util.Map<String, Object> getNetworkMerakiAuthUser200ApplicationJSONObject;
+
     public GetNetworkMerakiAuthUserResponse withGetNetworkMerakiAuthUser200ApplicationJSONObject(java.util.Map<String, Object> getNetworkMerakiAuthUser200ApplicationJSONObject) {
         this.getNetworkMerakiAuthUser200ApplicationJSONObject = getNetworkMerakiAuthUser200ApplicationJSONObject;
         return this;
     }
     
+    public GetNetworkMerakiAuthUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

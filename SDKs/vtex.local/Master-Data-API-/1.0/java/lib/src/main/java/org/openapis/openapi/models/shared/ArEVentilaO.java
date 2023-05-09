@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ArEVentilaO {
     @JsonProperty("Date")
     public String date;
+
     public ArEVentilaO withDate(String date) {
         this.date = date;
         return this;
@@ -16,6 +17,7 @@ public class ArEVentilaO {
     
     @JsonProperty("Point")
     public Integer point;
+
     public ArEVentilaO withPoint(Integer point) {
         this.point = point;
         return this;
@@ -23,9 +25,15 @@ public class ArEVentilaO {
     
     @JsonProperty("Until")
     public String until;
+
     public ArEVentilaO withUntil(String until) {
         this.until = until;
         return this;
     }
     
+    public ArEVentilaO(@JsonProperty("Date") String date, @JsonProperty("Point") Integer point, @JsonProperty("Until") String until) {
+        this.date = date;
+        this.point = point;
+        this.until = until;
+  }
 }

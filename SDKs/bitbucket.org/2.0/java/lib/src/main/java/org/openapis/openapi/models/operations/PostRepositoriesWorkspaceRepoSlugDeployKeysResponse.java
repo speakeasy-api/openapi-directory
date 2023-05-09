@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostRepositoriesWorkspaceRepoSlugDeployKeysResponse {
     
     public String contentType;
+
     public PostRepositoriesWorkspaceRepoSlugDeployKeysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostRepositoriesWorkspaceRepoSlugDeployKeysResponse {
     
     
     public Integer statusCode;
+
     public PostRepositoriesWorkspaceRepoSlugDeployKeysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostRepositoriesWorkspaceRepoSlugDeployKeysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostRepositoriesWorkspaceRepoSlugDeployKeysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostRepositoriesWorkspaceRepoSlugDeployKeysResponse {
      */
     
     public java.util.Map<String, Object> deployKey;
+
     public PostRepositoriesWorkspaceRepoSlugDeployKeysResponse withDeployKey(java.util.Map<String, Object> deployKey) {
         this.deployKey = deployKey;
         return this;
@@ -43,9 +48,14 @@ public class PostRepositoriesWorkspaceRepoSlugDeployKeysResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public PostRepositoriesWorkspaceRepoSlugDeployKeysResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
     }
     
+    public PostRepositoriesWorkspaceRepoSlugDeployKeysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

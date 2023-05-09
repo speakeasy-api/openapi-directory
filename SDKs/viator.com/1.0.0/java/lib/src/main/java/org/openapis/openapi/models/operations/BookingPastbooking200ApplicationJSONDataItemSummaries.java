@@ -15,6 +15,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("barcodeOption")
     public String barcodeOption;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withBarcodeOption(String barcodeOption) {
         this.barcodeOption = barcodeOption;
         return this;
@@ -26,6 +27,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("barcodeType")
     public String barcodeType;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withBarcodeType(String barcodeType) {
         this.barcodeType = barcodeType;
         return this;
@@ -43,6 +45,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingEngineId")
     public org.openapis.openapi.models.shared.BookingEngineIdResponseEnum bookingEngineId;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withBookingEngineId(org.openapis.openapi.models.shared.BookingEngineIdResponseEnum bookingEngineId) {
         this.bookingEngineId = bookingEngineId;
         return this;
@@ -54,6 +57,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingStatus")
     public org.openapis.openapi.models.shared.BookingStatusItem bookingStatus;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withBookingStatus(org.openapis.openapi.models.shared.BookingStatusItem bookingStatus) {
         this.bookingStatus = bookingStatus;
         return this;
@@ -65,6 +69,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -76,6 +81,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("departsFrom")
     public String departsFrom;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withDepartsFrom(String departsFrom) {
         this.departsFrom = departsFrom;
         return this;
@@ -87,6 +93,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("departurePoint")
     public String departurePoint;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withDeparturePoint(String departurePoint) {
         this.departurePoint = departurePoint;
         return this;
@@ -98,6 +105,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("departurePointAddress")
     public String departurePointAddress;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withDeparturePointAddress(String departurePointAddress) {
         this.departurePointAddress = departurePointAddress;
         return this;
@@ -109,6 +117,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("departurePointDirections")
     public String departurePointDirections;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withDeparturePointDirections(String departurePointDirections) {
         this.departurePointDirections = departurePointDirections;
         return this;
@@ -120,6 +129,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destId")
     public Long destId;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withDestId(Long destId) {
         this.destId = destId;
         return this;
@@ -131,6 +141,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributorItemRef")
     public String distributorItemRef;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withDistributorItemRef(String distributorItemRef) {
         this.distributorItemRef = distributorItemRef;
         return this;
@@ -143,6 +154,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hoursConfirmed")
     public Long hoursConfirmed;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withHoursConfirmed(Long hoursConfirmed) {
         this.hoursConfirmed = hoursConfirmed;
         return this;
@@ -156,6 +168,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public String itemId;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -167,6 +180,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itineraryId")
     public Long itineraryId;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withItineraryId(Long itineraryId) {
         this.itineraryId = itineraryId;
         return this;
@@ -178,6 +192,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageServicesLanguageCode")
     public String languageServicesLanguageCode;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withLanguageServicesLanguageCode(String languageServicesLanguageCode) {
         this.languageServicesLanguageCode = languageServicesLanguageCode;
         return this;
@@ -189,6 +204,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastRetailPrice")
     public Double lastRetailPrice;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withLastRetailPrice(Double lastRetailPrice) {
         this.lastRetailPrice = lastRetailPrice;
         return this;
@@ -200,6 +216,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastRetailPriceFormatted")
     public String lastRetailPriceFormatted;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withLastRetailPriceFormatted(String lastRetailPriceFormatted) {
         this.lastRetailPriceFormatted = lastRetailPriceFormatted;
         return this;
@@ -211,6 +228,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leadTravellerFirstname")
     public String leadTravellerFirstname;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withLeadTravellerFirstname(String leadTravellerFirstname) {
         this.leadTravellerFirstname = leadTravellerFirstname;
         return this;
@@ -222,6 +240,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leadTravellerSurname")
     public String leadTravellerSurname;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withLeadTravellerSurname(String leadTravellerSurname) {
         this.leadTravellerSurname = leadTravellerSurname;
         return this;
@@ -233,6 +252,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leadTravellerTitle")
     public String leadTravellerTitle;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withLeadTravellerTitle(String leadTravellerTitle) {
         this.leadTravellerTitle = leadTravellerTitle;
         return this;
@@ -247,6 +267,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantCancellable")
     public Boolean merchantCancellable;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withMerchantCancellable(Boolean merchantCancellable) {
         this.merchantCancellable = merchantCancellable;
         return this;
@@ -260,6 +281,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantNetPrice")
     public Double merchantNetPrice;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withMerchantNetPrice(Double merchantNetPrice) {
         this.merchantNetPrice = merchantNetPrice;
         return this;
@@ -273,6 +295,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantNetPriceFormatted")
     public String merchantNetPriceFormatted;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withMerchantNetPriceFormatted(String merchantNetPriceFormatted) {
         this.merchantNetPriceFormatted = merchantNetPriceFormatted;
         return this;
@@ -281,6 +304,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantTermsAndConditions")
     public BookingPastbooking200ApplicationJSONDataItemSummariesMerchantTermsAndConditions merchantTermsAndConditions;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withMerchantTermsAndConditions(BookingPastbooking200ApplicationJSONDataItemSummariesMerchantTermsAndConditions merchantTermsAndConditions) {
         this.merchantTermsAndConditions = merchantTermsAndConditions;
         return this;
@@ -292,6 +316,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("obfsId")
     public String obfsId;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withObfsId(String obfsId) {
         this.obfsId = obfsId;
         return this;
@@ -303,6 +328,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passbooks")
     public String passbooks;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withPassbooks(String passbooks) {
         this.passbooks = passbooks;
         return this;
@@ -316,6 +342,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Double price;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withPrice(Double price) {
         this.price = price;
         return this;
@@ -329,6 +356,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceFormatted")
     public String priceFormatted;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withPriceFormatted(String priceFormatted) {
         this.priceFormatted = priceFormatted;
         return this;
@@ -340,6 +368,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceUSD")
     public Double priceUSD;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withPriceUSD(Double priceUSD) {
         this.priceUSD = priceUSD;
         return this;
@@ -351,6 +380,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCode")
     public String productCode;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withProductCode(String productCode) {
         this.productCode = productCode;
         return this;
@@ -362,6 +392,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productPulledDown")
     public Boolean productPulledDown;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withProductPulledDown(Boolean productPulledDown) {
         this.productPulledDown = productPulledDown;
         return this;
@@ -373,6 +404,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productTitle")
     public String productTitle;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withProductTitle(String productTitle) {
         this.productTitle = productTitle;
         return this;
@@ -384,6 +416,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productWidgetList")
     public String productWidgetList;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withProductWidgetList(String productWidgetList) {
         this.productWidgetList = productWidgetList;
         return this;
@@ -395,6 +428,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rulesApplied")
     public String rulesApplied;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withRulesApplied(String rulesApplied) {
         this.rulesApplied = rulesApplied;
         return this;
@@ -407,6 +441,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingAmount")
     public String savingAmount;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withSavingAmount(String savingAmount) {
         this.savingAmount = savingAmount;
         return this;
@@ -419,6 +454,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingAmountFormated")
     public String savingAmountFormated;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withSavingAmountFormated(String savingAmountFormated) {
         this.savingAmountFormated = savingAmountFormated;
         return this;
@@ -427,6 +463,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public Long sortOrder;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withSortOrder(Long sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -438,6 +475,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("termsAndConditions")
     public String termsAndConditions;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withTermsAndConditions(String termsAndConditions) {
         this.termsAndConditions = termsAndConditions;
         return this;
@@ -449,6 +487,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tourGradeCode")
     public String tourGradeCode;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withTourGradeCode(String tourGradeCode) {
         this.tourGradeCode = tourGradeCode;
         return this;
@@ -460,6 +499,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tourGradeDescription")
     public String tourGradeDescription;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withTourGradeDescription(String tourGradeDescription) {
         this.tourGradeDescription = tourGradeDescription;
         return this;
@@ -471,6 +511,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("travelDate")
     public String travelDate;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withTravelDate(String travelDate) {
         this.travelDate = travelDate;
         return this;
@@ -482,6 +523,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("travellerAgeBands")
     public BookingPastbooking200ApplicationJSONDataItemSummariesTravellerAgeBands[] travellerAgeBands;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withTravellerAgeBands(BookingPastbooking200ApplicationJSONDataItemSummariesTravellerAgeBands[] travellerAgeBands) {
         this.travellerAgeBands = travellerAgeBands;
         return this;
@@ -493,6 +535,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voucherKey")
     public String voucherKey;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withVoucherKey(String voucherKey) {
         this.voucherKey = voucherKey;
         return this;
@@ -504,6 +547,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voucherOption")
     public String voucherOption;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withVoucherOption(String voucherOption) {
         this.voucherOption = voucherOption;
         return this;
@@ -515,6 +559,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voucherRequirements")
     public String voucherRequirements;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withVoucherRequirements(String voucherRequirements) {
         this.voucherRequirements = voucherRequirements;
         return this;
@@ -526,6 +571,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voucherURL")
     public String voucherURL;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withVoucherURL(String voucherURL) {
         this.voucherURL = voucherURL;
         return this;
@@ -537,9 +583,11 @@ public class BookingPastbooking200ApplicationJSONDataItemSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vouchers")
     public String vouchers;
+
     public BookingPastbooking200ApplicationJSONDataItemSummaries withVouchers(String vouchers) {
         this.vouchers = vouchers;
         return this;
     }
     
+    public BookingPastbooking200ApplicationJSONDataItemSummaries(){}
 }

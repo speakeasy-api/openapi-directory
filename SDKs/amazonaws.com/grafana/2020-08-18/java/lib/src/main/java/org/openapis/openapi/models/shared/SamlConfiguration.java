@@ -15,6 +15,7 @@ public class SamlConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedOrganizations")
     public String[] allowedOrganizations;
+
     public SamlConfiguration withAllowedOrganizations(String[] allowedOrganizations) {
         this.allowedOrganizations = allowedOrganizations;
         return this;
@@ -23,6 +24,7 @@ public class SamlConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assertionAttributes")
     public AssertionAttributes assertionAttributes;
+
     public SamlConfiguration withAssertionAttributes(AssertionAttributes assertionAttributes) {
         this.assertionAttributes = assertionAttributes;
         return this;
@@ -30,6 +32,7 @@ public class SamlConfiguration {
     
     @JsonProperty("idpMetadata")
     public IdpMetadata idpMetadata;
+
     public SamlConfiguration withIdpMetadata(IdpMetadata idpMetadata) {
         this.idpMetadata = idpMetadata;
         return this;
@@ -38,6 +41,7 @@ public class SamlConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loginValidityDuration")
     public Long loginValidityDuration;
+
     public SamlConfiguration withLoginValidityDuration(Long loginValidityDuration) {
         this.loginValidityDuration = loginValidityDuration;
         return this;
@@ -46,9 +50,13 @@ public class SamlConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleValues")
     public RoleValues roleValues;
+
     public SamlConfiguration withRoleValues(RoleValues roleValues) {
         this.roleValues = roleValues;
         return this;
     }
     
+    public SamlConfiguration(@JsonProperty("idpMetadata") IdpMetadata idpMetadata) {
+        this.idpMetadata = idpMetadata;
+  }
 }

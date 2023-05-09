@@ -12,9 +12,13 @@ public class BatchImportEvidenceToAssessmentControlRequestBody {
      */
     @JsonProperty("manualEvidence")
     public org.openapis.openapi.models.shared.ManualEvidence[] manualEvidence;
+
     public BatchImportEvidenceToAssessmentControlRequestBody withManualEvidence(org.openapis.openapi.models.shared.ManualEvidence[] manualEvidence) {
         this.manualEvidence = manualEvidence;
         return this;
     }
     
+    public BatchImportEvidenceToAssessmentControlRequestBody(@JsonProperty("manualEvidence") org.openapis.openapi.models.shared.ManualEvidence[] manualEvidence) {
+        this.manualEvidence = manualEvidence;
+  }
 }

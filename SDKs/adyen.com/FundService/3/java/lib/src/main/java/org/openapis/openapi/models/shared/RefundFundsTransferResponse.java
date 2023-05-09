@@ -18,6 +18,7 @@ public class RefundFundsTransferResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantReference")
     public String merchantReference;
+
     public RefundFundsTransferResponse withMerchantReference(String merchantReference) {
         this.merchantReference = merchantReference;
         return this;
@@ -29,6 +30,7 @@ public class RefundFundsTransferResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public RefundFundsTransferResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -40,6 +42,7 @@ public class RefundFundsTransferResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalReference")
     public String originalReference;
+
     public RefundFundsTransferResponse withOriginalReference(String originalReference) {
         this.originalReference = originalReference;
         return this;
@@ -51,6 +54,7 @@ public class RefundFundsTransferResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public RefundFundsTransferResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -62,6 +66,7 @@ public class RefundFundsTransferResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public RefundFundsTransferResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -75,9 +80,11 @@ public class RefundFundsTransferResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submittedAsync")
     public Boolean submittedAsync;
+
     public RefundFundsTransferResponse withSubmittedAsync(Boolean submittedAsync) {
         this.submittedAsync = submittedAsync;
         return this;
     }
     
+    public RefundFundsTransferResponse(){}
 }

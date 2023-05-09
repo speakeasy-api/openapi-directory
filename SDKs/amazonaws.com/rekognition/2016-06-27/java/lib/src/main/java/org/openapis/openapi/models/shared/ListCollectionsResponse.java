@@ -15,6 +15,7 @@ public class ListCollectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CollectionIds")
     public String[] collectionIds;
+
     public ListCollectionsResponse withCollectionIds(String[] collectionIds) {
         this.collectionIds = collectionIds;
         return this;
@@ -23,6 +24,7 @@ public class ListCollectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaceModelVersions")
     public String[] faceModelVersions;
+
     public ListCollectionsResponse withFaceModelVersions(String[] faceModelVersions) {
         this.faceModelVersions = faceModelVersions;
         return this;
@@ -31,9 +33,11 @@ public class ListCollectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCollectionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCollectionsResponse(){}
 }

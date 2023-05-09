@@ -18,6 +18,7 @@ public class FeatureDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headline")
     public String headline;
+
     public FeatureDescription withHeadline(String headline) {
         this.headline = headline;
         return this;
@@ -29,6 +30,7 @@ public class FeatureDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public Image image;
+
     public FeatureDescription withImage(Image image) {
         this.image = image;
         return this;
@@ -40,9 +42,11 @@ public class FeatureDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public FeatureDescription withText(String text) {
         this.text = text;
         return this;
     }
     
+    public FeatureDescription(){}
 }

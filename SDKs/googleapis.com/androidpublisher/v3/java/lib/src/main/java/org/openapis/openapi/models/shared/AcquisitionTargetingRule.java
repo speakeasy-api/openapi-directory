@@ -18,9 +18,11 @@ public class AcquisitionTargetingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public TargetingRuleScope scope;
+
     public AcquisitionTargetingRule withScope(TargetingRuleScope scope) {
         this.scope = scope;
         return this;
     }
     
+    public AcquisitionTargetingRule(){}
 }

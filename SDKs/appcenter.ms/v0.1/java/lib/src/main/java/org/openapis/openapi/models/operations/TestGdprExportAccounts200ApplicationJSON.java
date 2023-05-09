@@ -15,9 +15,11 @@ public class TestGdprExportAccounts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public TestGdprExportAccounts200ApplicationJSONResources[] resources;
+
     public TestGdprExportAccounts200ApplicationJSON withResources(TestGdprExportAccounts200ApplicationJSONResources[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public TestGdprExportAccounts200ApplicationJSON(){}
 }

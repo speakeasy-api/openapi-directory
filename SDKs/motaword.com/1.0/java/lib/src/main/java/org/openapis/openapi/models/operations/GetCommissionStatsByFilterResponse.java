@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCommissionStatsByFilterResponse {
@@ -12,6 +13,7 @@ public class GetCommissionStatsByFilterResponse {
      */
     
     public org.openapis.openapi.models.shared.CommissionStats commissionStats;
+
     public GetCommissionStatsByFilterResponse withCommissionStats(org.openapis.openapi.models.shared.CommissionStats commissionStats) {
         this.commissionStats = commissionStats;
         return this;
@@ -19,6 +21,7 @@ public class GetCommissionStatsByFilterResponse {
     
     
     public String contentType;
+
     public GetCommissionStatsByFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCommissionStatsByFilterResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetCommissionStatsByFilterResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetCommissionStatsByFilterResponse {
     
     
     public Integer statusCode;
+
     public GetCommissionStatsByFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetCommissionStatsByFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCommissionStatsByFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCommissionStatsByFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

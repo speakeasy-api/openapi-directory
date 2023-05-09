@@ -15,6 +15,7 @@ public class AntipatternSeveritySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public AntipatternSeveritySummary withCount(Long count) {
         this.count = count;
         return this;
@@ -23,9 +24,11 @@ public class AntipatternSeveritySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public SeverityEnum severity;
+
     public AntipatternSeveritySummary withSeverity(SeverityEnum severity) {
         this.severity = severity;
         return this;
     }
     
+    public AntipatternSeveritySummary(){}
 }

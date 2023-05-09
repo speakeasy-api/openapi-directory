@@ -58,11 +58,9 @@ public class Settlementtransactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentSettlementtransactionsListResponse res = new org.openapis.openapi.models.operations.ContentSettlementtransactionsListResponse() {{
+        org.openapis.openapi.models.operations.ContentSettlementtransactionsListResponse res = new org.openapis.openapi.models.operations.ContentSettlementtransactionsListResponse(contentType, httpRes.statusCode()) {{
             settlementtransactionsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

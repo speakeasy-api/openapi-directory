@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImportImageResult {
     
     public String architecture;
+
     public ImportImageResult withArchitecture(String architecture) {
         this.architecture = architecture;
         return this;
@@ -19,6 +20,7 @@ public class ImportImageResult {
     
     
     public String description;
+
     public ImportImageResult withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class ImportImageResult {
     
     
     public Boolean encrypted;
+
     public ImportImageResult withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -33,6 +36,7 @@ public class ImportImageResult {
     
     
     public String hypervisor;
+
     public ImportImageResult withHypervisor(String hypervisor) {
         this.hypervisor = hypervisor;
         return this;
@@ -40,6 +44,7 @@ public class ImportImageResult {
     
     
     public String imageId;
+
     public ImportImageResult withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -47,6 +52,7 @@ public class ImportImageResult {
     
     
     public String importTaskId;
+
     public ImportImageResult withImportTaskId(String importTaskId) {
         this.importTaskId = importTaskId;
         return this;
@@ -54,6 +60,7 @@ public class ImportImageResult {
     
     
     public String kmsKeyId;
+
     public ImportImageResult withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -61,6 +68,7 @@ public class ImportImageResult {
     
     
     public ImportImageResultLicenseSpecifications[] licenseSpecifications;
+
     public ImportImageResult withLicenseSpecifications(ImportImageResultLicenseSpecifications[] licenseSpecifications) {
         this.licenseSpecifications = licenseSpecifications;
         return this;
@@ -68,6 +76,7 @@ public class ImportImageResult {
     
     
     public String licenseType;
+
     public ImportImageResult withLicenseType(String licenseType) {
         this.licenseType = licenseType;
         return this;
@@ -75,6 +84,7 @@ public class ImportImageResult {
     
     
     public String platform;
+
     public ImportImageResult withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -82,6 +92,7 @@ public class ImportImageResult {
     
     
     public String progress;
+
     public ImportImageResult withProgress(String progress) {
         this.progress = progress;
         return this;
@@ -89,6 +100,7 @@ public class ImportImageResult {
     
     
     public ImportImageResultSnapshotDetails[] snapshotDetails;
+
     public ImportImageResult withSnapshotDetails(ImportImageResultSnapshotDetails[] snapshotDetails) {
         this.snapshotDetails = snapshotDetails;
         return this;
@@ -96,6 +108,7 @@ public class ImportImageResult {
     
     
     public String status;
+
     public ImportImageResult withStatus(String status) {
         this.status = status;
         return this;
@@ -103,6 +116,7 @@ public class ImportImageResult {
     
     
     public String statusMessage;
+
     public ImportImageResult withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -110,6 +124,7 @@ public class ImportImageResult {
     
     
     public ImportImageResultTags[] tags;
+
     public ImportImageResult withTags(ImportImageResultTags[] tags) {
         this.tags = tags;
         return this;
@@ -117,9 +132,11 @@ public class ImportImageResult {
     
     
     public String usageOperation;
+
     public ImportImageResult withUsageOperation(String usageOperation) {
         this.usageOperation = usageOperation;
         return this;
     }
     
+    public ImportImageResult(){}
 }

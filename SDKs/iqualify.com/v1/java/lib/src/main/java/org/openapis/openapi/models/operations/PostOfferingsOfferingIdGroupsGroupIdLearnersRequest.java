@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOfferingsOfferingIdGroupsGroupIdLearnersRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PostOfferingsOfferingIdGroupsGroupIdLearnersRequestBody requestBody;
+
     public PostOfferingsOfferingIdGroupsGroupIdLearnersRequest withRequestBody(PostOfferingsOfferingIdGroupsGroupIdLearnersRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class PostOfferingsOfferingIdGroupsGroupIdLearnersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public PostOfferingsOfferingIdGroupsGroupIdLearnersRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -29,9 +32,15 @@ public class PostOfferingsOfferingIdGroupsGroupIdLearnersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
     public String offeringId;
+
     public PostOfferingsOfferingIdGroupsGroupIdLearnersRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
     }
     
+    public PostOfferingsOfferingIdGroupsGroupIdLearnersRequest(@JsonProperty("RequestBody") PostOfferingsOfferingIdGroupsGroupIdLearnersRequestBody requestBody, @JsonProperty("groupId") String groupId, @JsonProperty("offeringId") String offeringId) {
+        this.requestBody = requestBody;
+        this.groupId = groupId;
+        this.offeringId = offeringId;
+  }
 }

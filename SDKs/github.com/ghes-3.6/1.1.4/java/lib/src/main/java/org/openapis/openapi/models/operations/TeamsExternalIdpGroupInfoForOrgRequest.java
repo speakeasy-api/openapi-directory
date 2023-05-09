@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsExternalIdpGroupInfoForOrgRequest {
@@ -12,6 +13,7 @@ public class TeamsExternalIdpGroupInfoForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
     public Long groupId;
+
     public TeamsExternalIdpGroupInfoForOrgRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -22,9 +24,14 @@ public class TeamsExternalIdpGroupInfoForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public TeamsExternalIdpGroupInfoForOrgRequest withOrg(String org) {
         this.org = org;
         return this;
     }
     
+    public TeamsExternalIdpGroupInfoForOrgRequest(@JsonProperty("group_id") Long groupId, @JsonProperty("org") String org) {
+        this.groupId = groupId;
+        this.org = org;
+  }
 }

@@ -15,9 +15,11 @@ public class StatefulPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preservedState")
     public StatefulPolicyPreservedState preservedState;
+
     public StatefulPolicy withPreservedState(StatefulPolicyPreservedState preservedState) {
         this.preservedState = preservedState;
         return this;
     }
     
+    public StatefulPolicy(){}
 }

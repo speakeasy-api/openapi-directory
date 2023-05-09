@@ -15,9 +15,13 @@ public class DeleteDomainAssociationResult {
      */
     @JsonProperty("domainAssociation")
     public DomainAssociation domainAssociation;
+
     public DeleteDomainAssociationResult withDomainAssociation(DomainAssociation domainAssociation) {
         this.domainAssociation = domainAssociation;
         return this;
     }
     
+    public DeleteDomainAssociationResult(@JsonProperty("domainAssociation") DomainAssociation domainAssociation) {
+        this.domainAssociation = domainAssociation;
+  }
 }

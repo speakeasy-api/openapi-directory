@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSchemaResponse {
     
     public String contentType;
+
     public CreateSchemaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSchemaResponse createSchemaResponse;
+
     public CreateSchemaResponse withCreateSchemaResponse(org.openapis.openapi.models.shared.CreateSchemaResponse createSchemaResponse) {
         this.createSchemaResponse = createSchemaResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateSchemaResponse {
      */
     
     public Object invalidInputException;
+
     public CreateSchemaResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class CreateSchemaResponse {
      */
     
     public Object limitExceededException;
+
     public CreateSchemaResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class CreateSchemaResponse {
     
     
     public Integer statusCode;
+
     public CreateSchemaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateSchemaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSchemaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateSchemaResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateSchemaResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
     }
     
+    public CreateSchemaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

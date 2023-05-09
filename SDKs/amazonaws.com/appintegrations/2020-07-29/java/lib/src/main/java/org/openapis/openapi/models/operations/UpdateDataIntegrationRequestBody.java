@@ -15,6 +15,7 @@ public class UpdateDataIntegrationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateDataIntegrationRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class UpdateDataIntegrationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateDataIntegrationRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateDataIntegrationRequestBody(){}
 }

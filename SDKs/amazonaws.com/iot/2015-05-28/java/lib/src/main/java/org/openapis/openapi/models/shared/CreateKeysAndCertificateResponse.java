@@ -15,6 +15,7 @@ public class CreateKeysAndCertificateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateArn")
     public String certificateArn;
+
     public CreateKeysAndCertificateResponse withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -23,6 +24,7 @@ public class CreateKeysAndCertificateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateId")
     public String certificateId;
+
     public CreateKeysAndCertificateResponse withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -31,6 +33,7 @@ public class CreateKeysAndCertificateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificatePem")
     public String certificatePem;
+
     public CreateKeysAndCertificateResponse withCertificatePem(String certificatePem) {
         this.certificatePem = certificatePem;
         return this;
@@ -39,9 +42,11 @@ public class CreateKeysAndCertificateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyPair")
     public KeyPair keyPair;
+
     public CreateKeysAndCertificateResponse withKeyPair(KeyPair keyPair) {
         this.keyPair = keyPair;
         return this;
     }
     
+    public CreateKeysAndCertificateResponse(){}
 }

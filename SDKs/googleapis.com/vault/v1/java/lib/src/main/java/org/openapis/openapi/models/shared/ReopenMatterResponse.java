@@ -18,9 +18,11 @@ public class ReopenMatterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matter")
     public Matter matter;
+
     public ReopenMatterResponse withMatter(Matter matter) {
         this.matter = matter;
         return this;
     }
     
+    public ReopenMatterResponse(){}
 }

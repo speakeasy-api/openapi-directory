@@ -15,9 +15,13 @@ public class GetSegmentsResponse {
      */
     @JsonProperty("SegmentsResponse")
     public SegmentsResponse segmentsResponse;
+
     public GetSegmentsResponse withSegmentsResponse(SegmentsResponse segmentsResponse) {
         this.segmentsResponse = segmentsResponse;
         return this;
     }
     
+    public GetSegmentsResponse(@JsonProperty("SegmentsResponse") SegmentsResponse segmentsResponse) {
+        this.segmentsResponse = segmentsResponse;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetContactListResponse {
     
     public byte[] body;
+
     public GetContactListResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -19,6 +21,7 @@ public class GetContactListResponse {
      */
     
     public org.openapis.openapi.models.shared.ContactsListVO contactsListVO;
+
     public GetContactListResponse withContactsListVO(org.openapis.openapi.models.shared.ContactsListVO contactsListVO) {
         this.contactsListVO = contactsListVO;
         return this;
@@ -26,6 +29,7 @@ public class GetContactListResponse {
     
     
     public String contentType;
+
     public GetContactListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class GetContactListResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetContactListResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -43,6 +48,7 @@ public class GetContactListResponse {
     
     
     public Integer statusCode;
+
     public GetContactListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetContactListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetContactListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetContactListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

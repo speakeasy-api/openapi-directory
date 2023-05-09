@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETProvisionPublicIpv4PoolCidrRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETProvisionPublicIpv4PoolCidrActionEnum action;
+
     public GETProvisionPublicIpv4PoolCidrRequest withAction(GETProvisionPublicIpv4PoolCidrActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETProvisionPublicIpv4PoolCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETProvisionPublicIpv4PoolCidrRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETProvisionPublicIpv4PoolCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IpamPoolId")
     public String ipamPoolId;
+
     public GETProvisionPublicIpv4PoolCidrRequest withIpamPoolId(String ipamPoolId) {
         this.ipamPoolId = ipamPoolId;
         return this;
@@ -39,6 +43,7 @@ public class GETProvisionPublicIpv4PoolCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetmaskLength")
     public Long netmaskLength;
+
     public GETProvisionPublicIpv4PoolCidrRequest withNetmaskLength(Long netmaskLength) {
         this.netmaskLength = netmaskLength;
         return this;
@@ -49,6 +54,7 @@ public class GETProvisionPublicIpv4PoolCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PoolId")
     public String poolId;
+
     public GETProvisionPublicIpv4PoolCidrRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -56,6 +62,7 @@ public class GETProvisionPublicIpv4PoolCidrRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETProvisionPublicIpv4PoolCidrVersionEnum version;
+
     public GETProvisionPublicIpv4PoolCidrRequest withVersion(GETProvisionPublicIpv4PoolCidrVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETProvisionPublicIpv4PoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETProvisionPublicIpv4PoolCidrRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETProvisionPublicIpv4PoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETProvisionPublicIpv4PoolCidrRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETProvisionPublicIpv4PoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETProvisionPublicIpv4PoolCidrRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETProvisionPublicIpv4PoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETProvisionPublicIpv4PoolCidrRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETProvisionPublicIpv4PoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETProvisionPublicIpv4PoolCidrRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETProvisionPublicIpv4PoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETProvisionPublicIpv4PoolCidrRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,17 @@ public class GETProvisionPublicIpv4PoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETProvisionPublicIpv4PoolCidrRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETProvisionPublicIpv4PoolCidrRequest(@JsonProperty("Action") GETProvisionPublicIpv4PoolCidrActionEnum action, @JsonProperty("IpamPoolId") String ipamPoolId, @JsonProperty("NetmaskLength") Long netmaskLength, @JsonProperty("PoolId") String poolId, @JsonProperty("Version") GETProvisionPublicIpv4PoolCidrVersionEnum version) {
+        this.action = action;
+        this.ipamPoolId = ipamPoolId;
+        this.netmaskLength = netmaskLength;
+        this.poolId = poolId;
+        this.version = version;
+  }
 }

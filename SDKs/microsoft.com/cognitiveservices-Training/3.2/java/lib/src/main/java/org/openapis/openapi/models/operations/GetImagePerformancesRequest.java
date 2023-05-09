@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImagePerformancesRequest {
@@ -12,6 +13,7 @@ public class GetImagePerformancesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=iterationId")
     public String iterationId;
+
     public GetImagePerformancesRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -22,6 +24,7 @@ public class GetImagePerformancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public GetImagePerformancesOrderByEnum orderBy;
+
     public GetImagePerformancesRequest withOrderBy(GetImagePerformancesOrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -32,6 +35,7 @@ public class GetImagePerformancesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public GetImagePerformancesRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -42,6 +46,7 @@ public class GetImagePerformancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Integer skip;
+
     public GetImagePerformancesRequest withSkip(Integer skip) {
         this.skip = skip;
         return this;
@@ -52,6 +57,7 @@ public class GetImagePerformancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=tagIds")
     public String[] tagIds;
+
     public GetImagePerformancesRequest withTagIds(String[] tagIds) {
         this.tagIds = tagIds;
         return this;
@@ -62,9 +68,14 @@ public class GetImagePerformancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=take")
     public Integer take;
+
     public GetImagePerformancesRequest withTake(Integer take) {
         this.take = take;
         return this;
     }
     
+    public GetImagePerformancesRequest(@JsonProperty("iterationId") String iterationId, @JsonProperty("projectId") String projectId) {
+        this.iterationId = iterationId;
+        this.projectId = projectId;
+  }
 }

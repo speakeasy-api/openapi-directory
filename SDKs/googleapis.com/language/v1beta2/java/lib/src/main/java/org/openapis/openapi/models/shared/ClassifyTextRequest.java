@@ -18,6 +18,7 @@ public class ClassifyTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classificationModelOptions")
     public ClassificationModelOptions classificationModelOptions;
+
     public ClassifyTextRequest withClassificationModelOptions(ClassificationModelOptions classificationModelOptions) {
         this.classificationModelOptions = classificationModelOptions;
         return this;
@@ -29,9 +30,11 @@ public class ClassifyTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public Document document;
+
     public ClassifyTextRequest withDocument(Document document) {
         this.document = document;
         return this;
     }
     
+    public ClassifyTextRequest(){}
 }

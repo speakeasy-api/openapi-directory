@@ -15,6 +15,7 @@ public class PropertyPredicate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Comparator")
     public ComparatorEnum comparator;
+
     public PropertyPredicate withComparator(ComparatorEnum comparator) {
         this.comparator = comparator;
         return this;
@@ -23,6 +24,7 @@ public class PropertyPredicate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public PropertyPredicate withKey(String key) {
         this.key = key;
         return this;
@@ -31,9 +33,11 @@ public class PropertyPredicate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public PropertyPredicate withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PropertyPredicate(){}
 }

@@ -12,6 +12,7 @@ public class CreateCollectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateCollectionRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class CreateCollectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateCollectionRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class CreateCollectionRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateCollectionRequest withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +38,7 @@ public class CreateCollectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateCollectionRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -43,9 +47,13 @@ public class CreateCollectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CollectionTypeEnum type;
+
     public CreateCollectionRequest withType(CollectionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateCollectionRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

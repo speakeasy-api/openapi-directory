@@ -58,11 +58,9 @@ public class AccountReports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LocalservicesAccountReportsSearchResponse res = new org.openapis.openapi.models.operations.LocalservicesAccountReportsSearchResponse() {{
+        org.openapis.openapi.models.operations.LocalservicesAccountReportsSearchResponse res = new org.openapis.openapi.models.operations.LocalservicesAccountReportsSearchResponse(contentType, httpRes.statusCode()) {{
             googleAdsHomeservicesLocalservicesV1SearchAccountReportsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

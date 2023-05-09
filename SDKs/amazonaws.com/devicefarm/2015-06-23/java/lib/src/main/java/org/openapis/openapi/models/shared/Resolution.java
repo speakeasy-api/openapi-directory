@@ -15,6 +15,7 @@ public class Resolution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Long height;
+
     public Resolution withHeight(Long height) {
         this.height = height;
         return this;
@@ -23,9 +24,11 @@ public class Resolution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Long width;
+
     public Resolution withWidth(Long width) {
         this.width = width;
         return this;
     }
     
+    public Resolution(){}
 }

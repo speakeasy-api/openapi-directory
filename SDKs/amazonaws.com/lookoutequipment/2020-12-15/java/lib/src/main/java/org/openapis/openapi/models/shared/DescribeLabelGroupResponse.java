@@ -22,6 +22,7 @@ public class DescribeLabelGroupResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public DescribeLabelGroupResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class DescribeLabelGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaultCodes")
     public String[] faultCodes;
+
     public DescribeLabelGroupResponse withFaultCodes(String[] faultCodes) {
         this.faultCodes = faultCodes;
         return this;
@@ -38,6 +40,7 @@ public class DescribeLabelGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelGroupArn")
     public String labelGroupArn;
+
     public DescribeLabelGroupResponse withLabelGroupArn(String labelGroupArn) {
         this.labelGroupArn = labelGroupArn;
         return this;
@@ -46,6 +49,7 @@ public class DescribeLabelGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelGroupName")
     public String labelGroupName;
+
     public DescribeLabelGroupResponse withLabelGroupName(String labelGroupName) {
         this.labelGroupName = labelGroupName;
         return this;
@@ -56,9 +60,11 @@ public class DescribeLabelGroupResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public DescribeLabelGroupResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public DescribeLabelGroupResponse(){}
 }

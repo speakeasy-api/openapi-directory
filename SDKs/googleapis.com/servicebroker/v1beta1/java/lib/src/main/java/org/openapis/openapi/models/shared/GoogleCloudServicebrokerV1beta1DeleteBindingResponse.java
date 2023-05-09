@@ -17,6 +17,7 @@ public class GoogleCloudServicebrokerV1beta1DeleteBindingResponse {
      */
     
     public String description;
+
     public GoogleCloudServicebrokerV1beta1DeleteBindingResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -28,9 +29,11 @@ public class GoogleCloudServicebrokerV1beta1DeleteBindingResponse {
      */
     
     public String operation;
+
     public GoogleCloudServicebrokerV1beta1DeleteBindingResponse withOperation(String operation) {
         this.operation = operation;
         return this;
     }
     
+    public GoogleCloudServicebrokerV1beta1DeleteBindingResponse(){}
 }

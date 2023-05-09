@@ -12,6 +12,7 @@ public class PatchAutomationsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=automation")
     public PatchAutomationsIdRequestBodyAutomationEnum automation;
+
     public PatchAutomationsIdRequestBody withAutomation(PatchAutomationsIdRequestBodyAutomationEnum automation) {
         this.automation = automation;
         return this;
@@ -22,6 +23,7 @@ public class PatchAutomationsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=description")
     public String description;
+
     public PatchAutomationsIdRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -32,6 +34,7 @@ public class PatchAutomationsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=destination")
     public String destination;
+
     public PatchAutomationsIdRequestBody withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -42,6 +45,7 @@ public class PatchAutomationsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=destination_replace_from")
     public String destinationReplaceFrom;
+
     public PatchAutomationsIdRequestBody withDestinationReplaceFrom(String destinationReplaceFrom) {
         this.destinationReplaceFrom = destinationReplaceFrom;
         return this;
@@ -52,6 +56,7 @@ public class PatchAutomationsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=destination_replace_to")
     public String destinationReplaceTo;
+
     public PatchAutomationsIdRequestBody withDestinationReplaceTo(String destinationReplaceTo) {
         this.destinationReplaceTo = destinationReplaceTo;
         return this;
@@ -62,6 +67,7 @@ public class PatchAutomationsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=destinations")
     public String[] destinations;
+
     public PatchAutomationsIdRequestBody withDestinations(String[] destinations) {
         this.destinations = destinations;
         return this;
@@ -72,6 +78,7 @@ public class PatchAutomationsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=disabled")
     public Boolean disabled;
+
     public PatchAutomationsIdRequestBody withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -82,6 +89,7 @@ public class PatchAutomationsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=group_ids")
     public String groupIds;
+
     public PatchAutomationsIdRequestBody withGroupIds(String groupIds) {
         this.groupIds = groupIds;
         return this;
@@ -92,6 +100,7 @@ public class PatchAutomationsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=interval")
     public String interval;
+
     public PatchAutomationsIdRequestBody withInterval(String interval) {
         this.interval = interval;
         return this;
@@ -102,6 +111,7 @@ public class PatchAutomationsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PatchAutomationsIdRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -112,8 +122,20 @@ public class PatchAutomationsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=path")
     public String path;
+
     public PatchAutomationsIdRequestBody withPath(String path) {
         this.path = path;
+        return this;
+    }
+    
+    /**
+     * If trigger type is `daily`, this specifies a day number to run in one of the supported intervals: `week`, `month`, `quarter`, `year`.
+     */
+    @SpeakeasyMetadata("multipartForm:name=recurring_day")
+    public Integer recurringDay;
+
+    public PatchAutomationsIdRequestBody withRecurringDay(Integer recurringDay) {
+        this.recurringDay = recurringDay;
         return this;
     }
     
@@ -122,6 +144,7 @@ public class PatchAutomationsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=schedule,json")
     public java.util.Map<String, Object> schedule;
+
     public PatchAutomationsIdRequestBody withSchedule(java.util.Map<String, Object> schedule) {
         this.schedule = schedule;
         return this;
@@ -132,6 +155,7 @@ public class PatchAutomationsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=source")
     public String source;
+
     public PatchAutomationsIdRequestBody withSource(String source) {
         this.source = source;
         return this;
@@ -142,6 +166,7 @@ public class PatchAutomationsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=sync_ids")
     public String syncIds;
+
     public PatchAutomationsIdRequestBody withSyncIds(String syncIds) {
         this.syncIds = syncIds;
         return this;
@@ -152,6 +177,7 @@ public class PatchAutomationsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=trigger")
     public PatchAutomationsIdRequestBodyTriggerEnum trigger;
+
     public PatchAutomationsIdRequestBody withTrigger(PatchAutomationsIdRequestBodyTriggerEnum trigger) {
         this.trigger = trigger;
         return this;
@@ -162,6 +188,7 @@ public class PatchAutomationsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=trigger_actions")
     public String[] triggerActions;
+
     public PatchAutomationsIdRequestBody withTriggerActions(String[] triggerActions) {
         this.triggerActions = triggerActions;
         return this;
@@ -172,6 +199,7 @@ public class PatchAutomationsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=user_ids")
     public String userIds;
+
     public PatchAutomationsIdRequestBody withUserIds(String userIds) {
         this.userIds = userIds;
         return this;
@@ -182,9 +210,11 @@ public class PatchAutomationsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=value,json")
     public java.util.Map<String, Object> value;
+
     public PatchAutomationsIdRequestBody withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;
     }
     
+    public PatchAutomationsIdRequestBody(){}
 }

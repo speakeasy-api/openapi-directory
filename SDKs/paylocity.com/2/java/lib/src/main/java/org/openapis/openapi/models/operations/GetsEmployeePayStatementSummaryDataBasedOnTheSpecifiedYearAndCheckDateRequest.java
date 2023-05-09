@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateRequest {
@@ -12,6 +13,7 @@ public class GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckD
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=checkDate")
     public String checkDate;
+
     public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateRequest withCheckDate(String checkDate) {
         this.checkDate = checkDate;
         return this;
@@ -22,6 +24,7 @@ public class GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckD
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=codegroup")
     public String codegroup;
+
     public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateRequest withCodegroup(String codegroup) {
         this.codegroup = codegroup;
         return this;
@@ -32,6 +35,7 @@ public class GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckD
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -42,6 +46,7 @@ public class GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckD
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
     public String employeeId;
+
     public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateRequest withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
@@ -52,6 +57,7 @@ public class GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckD
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includetotalcount")
     public Boolean includetotalcount;
+
     public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateRequest withIncludetotalcount(Boolean includetotalcount) {
         this.includetotalcount = includetotalcount;
         return this;
@@ -62,6 +68,7 @@ public class GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckD
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagenumber")
     public Long pagenumber;
+
     public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateRequest withPagenumber(Long pagenumber) {
         this.pagenumber = pagenumber;
         return this;
@@ -72,6 +79,7 @@ public class GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckD
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
@@ -82,9 +90,16 @@ public class GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckD
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=year")
     public String year;
+
     public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateRequest withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateRequest(@JsonProperty("checkDate") String checkDate, @JsonProperty("companyId") String companyId, @JsonProperty("employeeId") String employeeId, @JsonProperty("year") String year) {
+        this.checkDate = checkDate;
+        this.companyId = companyId;
+        this.employeeId = employeeId;
+        this.year = year;
+  }
 }

@@ -15,9 +15,11 @@ public class EditorialCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EditorialCategory withName(String name) {
         this.name = name;
         return this;
     }
     
+    public EditorialCategory(){}
 }

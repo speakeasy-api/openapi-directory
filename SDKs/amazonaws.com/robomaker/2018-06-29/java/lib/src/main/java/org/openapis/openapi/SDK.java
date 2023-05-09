@@ -203,6 +203,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -240,14 +245,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchDeleteWorldsResponse res = new org.openapis.openapi.models.operations.BatchDeleteWorldsResponse() {{
+        org.openapis.openapi.models.operations.BatchDeleteWorldsResponse res = new org.openapis.openapi.models.operations.BatchDeleteWorldsResponse(contentType, httpRes.statusCode()) {{
             batchDeleteWorldsResponse = null;
             invalidParameterException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -316,15 +319,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchDescribeSimulationJobResponse res = new org.openapis.openapi.models.operations.BatchDescribeSimulationJobResponse() {{
+        org.openapis.openapi.models.operations.BatchDescribeSimulationJobResponse res = new org.openapis.openapi.models.operations.BatchDescribeSimulationJobResponse(contentType, httpRes.statusCode()) {{
             batchDescribeSimulationJobResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -371,7 +372,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CancelDeploymentJobResponse cancelDeploymentJob(org.openapis.openapi.models.operations.CancelDeploymentJobRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/cancelDeploymentJob");
@@ -400,15 +403,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelDeploymentJobResponse res = new org.openapis.openapi.models.operations.CancelDeploymentJobResponse() {{
+        org.openapis.openapi.models.operations.CancelDeploymentJobResponse res = new org.openapis.openapi.models.operations.CancelDeploymentJobResponse(contentType, httpRes.statusCode()) {{
             cancelDeploymentJobResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,15 +485,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelSimulationJobResponse res = new org.openapis.openapi.models.operations.CancelSimulationJobResponse() {{
+        org.openapis.openapi.models.operations.CancelSimulationJobResponse res = new org.openapis.openapi.models.operations.CancelSimulationJobResponse(contentType, httpRes.statusCode()) {{
             cancelSimulationJobResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -568,15 +567,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelSimulationJobBatchResponse res = new org.openapis.openapi.models.operations.CancelSimulationJobBatchResponse() {{
+        org.openapis.openapi.models.operations.CancelSimulationJobBatchResponse res = new org.openapis.openapi.models.operations.CancelSimulationJobBatchResponse(contentType, httpRes.statusCode()) {{
             cancelSimulationJobBatchResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -652,15 +649,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelWorldExportJobResponse res = new org.openapis.openapi.models.operations.CancelWorldExportJobResponse() {{
+        org.openapis.openapi.models.operations.CancelWorldExportJobResponse res = new org.openapis.openapi.models.operations.CancelWorldExportJobResponse(contentType, httpRes.statusCode()) {{
             cancelWorldExportJobResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -736,15 +731,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelWorldGenerationJobResponse res = new org.openapis.openapi.models.operations.CancelWorldGenerationJobResponse() {{
+        org.openapis.openapi.models.operations.CancelWorldGenerationJobResponse res = new org.openapis.openapi.models.operations.CancelWorldGenerationJobResponse(contentType, httpRes.statusCode()) {{
             cancelWorldGenerationJobResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -791,7 +784,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CreateDeploymentJobResponse createDeploymentJob(org.openapis.openapi.models.operations.CreateDeploymentJobRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/createDeploymentJob");
@@ -820,7 +815,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDeploymentJobResponse res = new org.openapis.openapi.models.operations.CreateDeploymentJobResponse() {{
+        org.openapis.openapi.models.operations.CreateDeploymentJobResponse res = new org.openapis.openapi.models.operations.CreateDeploymentJobResponse(contentType, httpRes.statusCode()) {{
             createDeploymentJobResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
@@ -830,8 +825,6 @@ public class SDK {
             concurrentDeploymentException = null;
             idempotentParameterMismatchException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -899,7 +892,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CreateFleetResponse createFleet(org.openapis.openapi.models.operations.CreateFleetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/createFleet");
@@ -928,15 +923,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFleetResponse res = new org.openapis.openapi.models.operations.CreateFleetResponse() {{
+        org.openapis.openapi.models.operations.CreateFleetResponse res = new org.openapis.openapi.models.operations.CreateFleetResponse(contentType, httpRes.statusCode()) {{
             createFleetResponse = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -983,7 +976,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CreateRobotResponse createRobot(org.openapis.openapi.models.operations.CreateRobotRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/createRobot");
@@ -1012,7 +1007,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRobotResponse res = new org.openapis.openapi.models.operations.CreateRobotResponse() {{
+        org.openapis.openapi.models.operations.CreateRobotResponse res = new org.openapis.openapi.models.operations.CreateRobotResponse(contentType, httpRes.statusCode()) {{
             createRobotResponse = null;
             invalidParameterException = null;
             internalServerException = null;
@@ -1020,8 +1015,6 @@ public class SDK {
             limitExceededException = null;
             resourceAlreadyExistsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1104,7 +1097,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRobotApplicationResponse res = new org.openapis.openapi.models.operations.CreateRobotApplicationResponse() {{
+        org.openapis.openapi.models.operations.CreateRobotApplicationResponse res = new org.openapis.openapi.models.operations.CreateRobotApplicationResponse(contentType, httpRes.statusCode()) {{
             createRobotApplicationResponse = null;
             invalidParameterException = null;
             resourceAlreadyExistsException = null;
@@ -1113,8 +1106,6 @@ public class SDK {
             internalServerException = null;
             idempotentParameterMismatchException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1204,7 +1195,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRobotApplicationVersionResponse res = new org.openapis.openapi.models.operations.CreateRobotApplicationVersionResponse() {{
+        org.openapis.openapi.models.operations.CreateRobotApplicationVersionResponse res = new org.openapis.openapi.models.operations.CreateRobotApplicationVersionResponse(contentType, httpRes.statusCode()) {{
             createRobotApplicationVersionResponse = null;
             invalidParameterException = null;
             idempotentParameterMismatchException = null;
@@ -1212,8 +1203,6 @@ public class SDK {
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1296,7 +1285,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSimulationApplicationResponse res = new org.openapis.openapi.models.operations.CreateSimulationApplicationResponse() {{
+        org.openapis.openapi.models.operations.CreateSimulationApplicationResponse res = new org.openapis.openapi.models.operations.CreateSimulationApplicationResponse(contentType, httpRes.statusCode()) {{
             createSimulationApplicationResponse = null;
             invalidParameterException = null;
             resourceAlreadyExistsException = null;
@@ -1305,8 +1294,6 @@ public class SDK {
             internalServerException = null;
             idempotentParameterMismatchException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1396,7 +1383,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSimulationApplicationVersionResponse res = new org.openapis.openapi.models.operations.CreateSimulationApplicationVersionResponse() {{
+        org.openapis.openapi.models.operations.CreateSimulationApplicationVersionResponse res = new org.openapis.openapi.models.operations.CreateSimulationApplicationVersionResponse(contentType, httpRes.statusCode()) {{
             createSimulationApplicationVersionResponse = null;
             invalidParameterException = null;
             idempotentParameterMismatchException = null;
@@ -1404,8 +1391,6 @@ public class SDK {
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1488,7 +1473,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSimulationJobResponse res = new org.openapis.openapi.models.operations.CreateSimulationJobResponse() {{
+        org.openapis.openapi.models.operations.CreateSimulationJobResponse res = new org.openapis.openapi.models.operations.CreateSimulationJobResponse(contentType, httpRes.statusCode()) {{
             createSimulationJobResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
@@ -1498,8 +1483,6 @@ public class SDK {
             idempotentParameterMismatchException = null;
             serviceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1596,7 +1579,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateWorldExportJobResponse res = new org.openapis.openapi.models.operations.CreateWorldExportJobResponse() {{
+        org.openapis.openapi.models.operations.CreateWorldExportJobResponse res = new org.openapis.openapi.models.operations.CreateWorldExportJobResponse(contentType, httpRes.statusCode()) {{
             createWorldExportJobResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
@@ -1605,8 +1588,6 @@ public class SDK {
             idempotentParameterMismatchException = null;
             serviceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1696,7 +1677,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateWorldGenerationJobResponse res = new org.openapis.openapi.models.operations.CreateWorldGenerationJobResponse() {{
+        org.openapis.openapi.models.operations.CreateWorldGenerationJobResponse res = new org.openapis.openapi.models.operations.CreateWorldGenerationJobResponse(contentType, httpRes.statusCode()) {{
             createWorldGenerationJobResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
@@ -1706,8 +1687,6 @@ public class SDK {
             idempotentParameterMismatchException = null;
             serviceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1804,7 +1783,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateWorldTemplateResponse res = new org.openapis.openapi.models.operations.CreateWorldTemplateResponse() {{
+        org.openapis.openapi.models.operations.CreateWorldTemplateResponse res = new org.openapis.openapi.models.operations.CreateWorldTemplateResponse(contentType, httpRes.statusCode()) {{
             createWorldTemplateResponse = null;
             invalidParameterException = null;
             resourceAlreadyExistsException = null;
@@ -1813,8 +1792,6 @@ public class SDK {
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1875,7 +1852,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DeleteFleetResponse deleteFleet(org.openapis.openapi.models.operations.DeleteFleetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/deleteFleet");
@@ -1904,14 +1883,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFleetResponse res = new org.openapis.openapi.models.operations.DeleteFleetResponse() {{
+        org.openapis.openapi.models.operations.DeleteFleetResponse res = new org.openapis.openapi.models.operations.DeleteFleetResponse(contentType, httpRes.statusCode()) {{
             deleteFleetResponse = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1951,7 +1928,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DeleteRobotResponse deleteRobot(org.openapis.openapi.models.operations.DeleteRobotRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/deleteRobot");
@@ -1980,14 +1959,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRobotResponse res = new org.openapis.openapi.models.operations.DeleteRobotResponse() {{
+        org.openapis.openapi.models.operations.DeleteRobotResponse res = new org.openapis.openapi.models.operations.DeleteRobotResponse(contentType, httpRes.statusCode()) {{
             deleteRobotResponse = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2056,14 +2033,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRobotApplicationResponse res = new org.openapis.openapi.models.operations.DeleteRobotApplicationResponse() {{
+        org.openapis.openapi.models.operations.DeleteRobotApplicationResponse res = new org.openapis.openapi.models.operations.DeleteRobotApplicationResponse(contentType, httpRes.statusCode()) {{
             deleteRobotApplicationResponse = null;
             invalidParameterException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2132,14 +2107,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSimulationApplicationResponse res = new org.openapis.openapi.models.operations.DeleteSimulationApplicationResponse() {{
+        org.openapis.openapi.models.operations.DeleteSimulationApplicationResponse res = new org.openapis.openapi.models.operations.DeleteSimulationApplicationResponse(contentType, httpRes.statusCode()) {{
             deleteSimulationApplicationResponse = null;
             invalidParameterException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2208,15 +2181,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteWorldTemplateResponse res = new org.openapis.openapi.models.operations.DeleteWorldTemplateResponse() {{
+        org.openapis.openapi.models.operations.DeleteWorldTemplateResponse res = new org.openapis.openapi.models.operations.DeleteWorldTemplateResponse(contentType, httpRes.statusCode()) {{
             deleteWorldTemplateResponse = null;
             invalidParameterException = null;
             resourceNotFoundException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2263,7 +2234,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DeregisterRobotResponse deregisterRobot(org.openapis.openapi.models.operations.DeregisterRobotRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/deregisterRobot");
@@ -2292,15 +2265,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeregisterRobotResponse res = new org.openapis.openapi.models.operations.DeregisterRobotResponse() {{
+        org.openapis.openapi.models.operations.DeregisterRobotResponse res = new org.openapis.openapi.models.operations.DeregisterRobotResponse(contentType, httpRes.statusCode()) {{
             deregisterRobotResponse = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2347,7 +2318,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DescribeDeploymentJobResponse describeDeploymentJob(org.openapis.openapi.models.operations.DescribeDeploymentJobRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/describeDeploymentJob");
@@ -2376,15 +2349,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeDeploymentJobResponse res = new org.openapis.openapi.models.operations.DescribeDeploymentJobResponse() {{
+        org.openapis.openapi.models.operations.DescribeDeploymentJobResponse res = new org.openapis.openapi.models.operations.DescribeDeploymentJobResponse(contentType, httpRes.statusCode()) {{
             describeDeploymentJobResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2431,7 +2402,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DescribeFleetResponse describeFleet(org.openapis.openapi.models.operations.DescribeFleetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/describeFleet");
@@ -2460,15 +2433,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeFleetResponse res = new org.openapis.openapi.models.operations.DescribeFleetResponse() {{
+        org.openapis.openapi.models.operations.DescribeFleetResponse res = new org.openapis.openapi.models.operations.DescribeFleetResponse(contentType, httpRes.statusCode()) {{
             describeFleetResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2515,7 +2486,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DescribeRobotResponse describeRobot(org.openapis.openapi.models.operations.DescribeRobotRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/describeRobot");
@@ -2544,15 +2517,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeRobotResponse res = new org.openapis.openapi.models.operations.DescribeRobotResponse() {{
+        org.openapis.openapi.models.operations.DescribeRobotResponse res = new org.openapis.openapi.models.operations.DescribeRobotResponse(contentType, httpRes.statusCode()) {{
             describeRobotResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2628,15 +2599,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeRobotApplicationResponse res = new org.openapis.openapi.models.operations.DescribeRobotApplicationResponse() {{
+        org.openapis.openapi.models.operations.DescribeRobotApplicationResponse res = new org.openapis.openapi.models.operations.DescribeRobotApplicationResponse(contentType, httpRes.statusCode()) {{
             describeRobotApplicationResponse = null;
             invalidParameterException = null;
             resourceNotFoundException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2712,15 +2681,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeSimulationApplicationResponse res = new org.openapis.openapi.models.operations.DescribeSimulationApplicationResponse() {{
+        org.openapis.openapi.models.operations.DescribeSimulationApplicationResponse res = new org.openapis.openapi.models.operations.DescribeSimulationApplicationResponse(contentType, httpRes.statusCode()) {{
             describeSimulationApplicationResponse = null;
             invalidParameterException = null;
             resourceNotFoundException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2796,15 +2763,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeSimulationJobResponse res = new org.openapis.openapi.models.operations.DescribeSimulationJobResponse() {{
+        org.openapis.openapi.models.operations.DescribeSimulationJobResponse res = new org.openapis.openapi.models.operations.DescribeSimulationJobResponse(contentType, httpRes.statusCode()) {{
             describeSimulationJobResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2880,14 +2845,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeSimulationJobBatchResponse res = new org.openapis.openapi.models.operations.DescribeSimulationJobBatchResponse() {{
+        org.openapis.openapi.models.operations.DescribeSimulationJobBatchResponse res = new org.openapis.openapi.models.operations.DescribeSimulationJobBatchResponse(contentType, httpRes.statusCode()) {{
             describeSimulationJobBatchResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2956,15 +2919,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeWorldResponse res = new org.openapis.openapi.models.operations.DescribeWorldResponse() {{
+        org.openapis.openapi.models.operations.DescribeWorldResponse res = new org.openapis.openapi.models.operations.DescribeWorldResponse(contentType, httpRes.statusCode()) {{
             describeWorldResponse = null;
             invalidParameterException = null;
             resourceNotFoundException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3040,15 +3001,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeWorldExportJobResponse res = new org.openapis.openapi.models.operations.DescribeWorldExportJobResponse() {{
+        org.openapis.openapi.models.operations.DescribeWorldExportJobResponse res = new org.openapis.openapi.models.operations.DescribeWorldExportJobResponse(contentType, httpRes.statusCode()) {{
             describeWorldExportJobResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3124,15 +3083,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeWorldGenerationJobResponse res = new org.openapis.openapi.models.operations.DescribeWorldGenerationJobResponse() {{
+        org.openapis.openapi.models.operations.DescribeWorldGenerationJobResponse res = new org.openapis.openapi.models.operations.DescribeWorldGenerationJobResponse(contentType, httpRes.statusCode()) {{
             describeWorldGenerationJobResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3208,15 +3165,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeWorldTemplateResponse res = new org.openapis.openapi.models.operations.DescribeWorldTemplateResponse() {{
+        org.openapis.openapi.models.operations.DescribeWorldTemplateResponse res = new org.openapis.openapi.models.operations.DescribeWorldTemplateResponse(contentType, httpRes.statusCode()) {{
             describeWorldTemplateResponse = null;
             invalidParameterException = null;
             resourceNotFoundException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3292,15 +3247,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorldTemplateBodyResponse res = new org.openapis.openapi.models.operations.GetWorldTemplateBodyResponse() {{
+        org.openapis.openapi.models.operations.GetWorldTemplateBodyResponse res = new org.openapis.openapi.models.operations.GetWorldTemplateBodyResponse(contentType, httpRes.statusCode()) {{
             getWorldTemplateBodyResponse = null;
             invalidParameterException = null;
             resourceNotFoundException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3347,7 +3300,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ListDeploymentJobsResponse listDeploymentJobs(org.openapis.openapi.models.operations.ListDeploymentJobsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/listDeploymentJobs");
@@ -3382,15 +3337,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDeploymentJobsResponse res = new org.openapis.openapi.models.operations.ListDeploymentJobsResponse() {{
+        org.openapis.openapi.models.operations.ListDeploymentJobsResponse res = new org.openapis.openapi.models.operations.ListDeploymentJobsResponse(contentType, httpRes.statusCode()) {{
             listDeploymentJobsResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3437,7 +3390,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ListFleetsResponse listFleets(org.openapis.openapi.models.operations.ListFleetsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/listFleets");
@@ -3472,15 +3427,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFleetsResponse res = new org.openapis.openapi.models.operations.ListFleetsResponse() {{
+        org.openapis.openapi.models.operations.ListFleetsResponse res = new org.openapis.openapi.models.operations.ListFleetsResponse(contentType, httpRes.statusCode()) {{
             listFleetsResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3562,14 +3515,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListRobotApplicationsResponse res = new org.openapis.openapi.models.operations.ListRobotApplicationsResponse() {{
+        org.openapis.openapi.models.operations.ListRobotApplicationsResponse res = new org.openapis.openapi.models.operations.ListRobotApplicationsResponse(contentType, httpRes.statusCode()) {{
             listRobotApplicationsResponse = null;
             invalidParameterException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3609,7 +3560,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ListRobotsResponse listRobots(org.openapis.openapi.models.operations.ListRobotsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/listRobots");
@@ -3644,15 +3597,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListRobotsResponse res = new org.openapis.openapi.models.operations.ListRobotsResponse() {{
+        org.openapis.openapi.models.operations.ListRobotsResponse res = new org.openapis.openapi.models.operations.ListRobotsResponse(contentType, httpRes.statusCode()) {{
             listRobotsResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3734,14 +3685,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSimulationApplicationsResponse res = new org.openapis.openapi.models.operations.ListSimulationApplicationsResponse() {{
+        org.openapis.openapi.models.operations.ListSimulationApplicationsResponse res = new org.openapis.openapi.models.operations.ListSimulationApplicationsResponse(contentType, httpRes.statusCode()) {{
             listSimulationApplicationsResponse = null;
             invalidParameterException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3816,13 +3765,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSimulationJobBatchesResponse res = new org.openapis.openapi.models.operations.ListSimulationJobBatchesResponse() {{
+        org.openapis.openapi.models.operations.ListSimulationJobBatchesResponse res = new org.openapis.openapi.models.operations.ListSimulationJobBatchesResponse(contentType, httpRes.statusCode()) {{
             listSimulationJobBatchesResponse = null;
             invalidParameterException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3890,14 +3837,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSimulationJobsResponse res = new org.openapis.openapi.models.operations.ListSimulationJobsResponse() {{
+        org.openapis.openapi.models.operations.ListSimulationJobsResponse res = new org.openapis.openapi.models.operations.ListSimulationJobsResponse(contentType, httpRes.statusCode()) {{
             listSimulationJobsResponse = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3961,15 +3906,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceResponse = null;
             internalServerException = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4051,14 +3994,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListWorldExportJobsResponse res = new org.openapis.openapi.models.operations.ListWorldExportJobsResponse() {{
+        org.openapis.openapi.models.operations.ListWorldExportJobsResponse res = new org.openapis.openapi.models.operations.ListWorldExportJobsResponse(contentType, httpRes.statusCode()) {{
             listWorldExportJobsResponse = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4133,14 +4074,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListWorldGenerationJobsResponse res = new org.openapis.openapi.models.operations.ListWorldGenerationJobsResponse() {{
+        org.openapis.openapi.models.operations.ListWorldGenerationJobsResponse res = new org.openapis.openapi.models.operations.ListWorldGenerationJobsResponse(contentType, httpRes.statusCode()) {{
             listWorldGenerationJobsResponse = null;
             invalidParameterException = null;
             internalServerException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4215,14 +4154,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListWorldTemplatesResponse res = new org.openapis.openapi.models.operations.ListWorldTemplatesResponse() {{
+        org.openapis.openapi.models.operations.ListWorldTemplatesResponse res = new org.openapis.openapi.models.operations.ListWorldTemplatesResponse(contentType, httpRes.statusCode()) {{
             listWorldTemplatesResponse = null;
             invalidParameterException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4297,14 +4234,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListWorldsResponse res = new org.openapis.openapi.models.operations.ListWorldsResponse() {{
+        org.openapis.openapi.models.operations.ListWorldsResponse res = new org.openapis.openapi.models.operations.ListWorldsResponse(contentType, httpRes.statusCode()) {{
             listWorldsResponse = null;
             invalidParameterException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4344,7 +4279,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.RegisterRobotResponse registerRobot(org.openapis.openapi.models.operations.RegisterRobotRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/registerRobot");
@@ -4373,7 +4310,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterRobotResponse res = new org.openapis.openapi.models.operations.RegisterRobotResponse() {{
+        org.openapis.openapi.models.operations.RegisterRobotResponse res = new org.openapis.openapi.models.operations.RegisterRobotResponse(contentType, httpRes.statusCode()) {{
             registerRobotResponse = null;
             invalidParameterException = null;
             internalServerException = null;
@@ -4381,8 +4318,6 @@ public class SDK {
             limitExceededException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4465,7 +4400,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RestartSimulationJobResponse res = new org.openapis.openapi.models.operations.RestartSimulationJobResponse() {{
+        org.openapis.openapi.models.operations.RestartSimulationJobResponse res = new org.openapis.openapi.models.operations.RestartSimulationJobResponse(contentType, httpRes.statusCode()) {{
             restartSimulationJobResponse = null;
             resourceNotFoundException = null;
             throttlingException = null;
@@ -4473,8 +4408,6 @@ public class SDK {
             invalidParameterException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4557,7 +4490,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartSimulationJobBatchResponse res = new org.openapis.openapi.models.operations.StartSimulationJobBatchResponse() {{
+        org.openapis.openapi.models.operations.StartSimulationJobBatchResponse res = new org.openapis.openapi.models.operations.StartSimulationJobBatchResponse(contentType, httpRes.statusCode()) {{
             startSimulationJobBatchResponse = null;
             invalidParameterException = null;
             limitExceededException = null;
@@ -4565,8 +4498,6 @@ public class SDK {
             idempotentParameterMismatchException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4620,7 +4551,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.SyncDeploymentJobResponse syncDeploymentJob(org.openapis.openapi.models.operations.SyncDeploymentJobRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/syncDeploymentJob");
@@ -4649,7 +4582,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SyncDeploymentJobResponse res = new org.openapis.openapi.models.operations.SyncDeploymentJobResponse() {{
+        org.openapis.openapi.models.operations.SyncDeploymentJobResponse res = new org.openapis.openapi.models.operations.SyncDeploymentJobResponse(contentType, httpRes.statusCode()) {{
             syncDeploymentJobResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
@@ -4659,8 +4592,6 @@ public class SDK {
             concurrentDeploymentException = null;
             idempotentParameterMismatchException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4757,15 +4688,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             internalServerException = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4842,15 +4771,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
             internalServerException = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4926,7 +4853,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRobotApplicationResponse res = new org.openapis.openapi.models.operations.UpdateRobotApplicationResponse() {{
+        org.openapis.openapi.models.operations.UpdateRobotApplicationResponse res = new org.openapis.openapi.models.operations.UpdateRobotApplicationResponse(contentType, httpRes.statusCode()) {{
             updateRobotApplicationResponse = null;
             invalidParameterException = null;
             resourceNotFoundException = null;
@@ -4934,8 +4861,6 @@ public class SDK {
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5018,7 +4943,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSimulationApplicationResponse res = new org.openapis.openapi.models.operations.UpdateSimulationApplicationResponse() {{
+        org.openapis.openapi.models.operations.UpdateSimulationApplicationResponse res = new org.openapis.openapi.models.operations.UpdateSimulationApplicationResponse(contentType, httpRes.statusCode()) {{
             updateSimulationApplicationResponse = null;
             invalidParameterException = null;
             resourceNotFoundException = null;
@@ -5026,8 +4951,6 @@ public class SDK {
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5110,15 +5033,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateWorldTemplateResponse res = new org.openapis.openapi.models.operations.UpdateWorldTemplateResponse() {{
+        org.openapis.openapi.models.operations.UpdateWorldTemplateResponse res = new org.openapis.openapi.models.operations.UpdateWorldTemplateResponse(contentType, httpRes.statusCode()) {{
             updateWorldTemplateResponse = null;
             invalidParameterException = null;
             resourceNotFoundException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

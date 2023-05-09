@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CorrelationRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public CorrelationRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -16,9 +17,11 @@ public class CorrelationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tokens")
     public String tokens;
+
     public CorrelationRequest withTokens(String tokens) {
         this.tokens = tokens;
         return this;
     }
     
+    public CorrelationRequest(){}
 }

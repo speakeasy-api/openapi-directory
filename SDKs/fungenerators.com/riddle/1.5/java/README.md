@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DeleteRiddleSecurity;
 import org.openapis.openapi.models.operations.DeleteRiddleRequest;
 import org.openapis.openapi.models.operations.DeleteRiddleResponse;
+import org.openapis.openapi.models.operations.DeleteRiddleSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,11 +26,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteRiddleRequest req = new DeleteRiddleRequest() {{
-                id = "corrupti";
-            }}            
+            DeleteRiddleRequest req = new DeleteRiddleRequest("corrupti");            
 
-            DeleteRiddleResponse res = sdk.privateRiddles.deleteRiddle(req, new DeleteRiddleSecurity() {{
+            DeleteRiddleResponse res = sdk.privateRiddles.deleteRiddle(req, new DeleteRiddleSecurity("provident") {{
                 xFungeneratorsApiSecret = "YOUR_API_KEY_HERE";
             }});
 
@@ -41,6 +38,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -48,17 +47,17 @@ public class Application {
 ## Available Resources and Operations
 
 
-### privateRiddles
+### [privateRiddles](docs/privateriddles/README.md)
 
-* `deleteRiddle` - Create a random Riddle entry.
-* `getRiddle` - Get a Riddle entry for a given id. Retrieves a riddle question and answer based on the id.
-* `postRiddle` - Create a random Riddle entry. Same as 'PUT' but can be used when some of the client libraries don't support 'PUT'.
-* `putRiddle` - Create a random Riddle entry.
+* [deleteRiddle](docs/privateriddles/README.md#deleteriddle) - Create a random Riddle entry.
+* [getRiddle](docs/privateriddles/README.md#getriddle) - Get a Riddle entry for a given id. Retrieves a riddle question and answer based on the id.
+* [postRiddle](docs/privateriddles/README.md#postriddle) - Create a random Riddle entry. Same as 'PUT' but can be used when some of the client libraries don't support 'PUT'.
+* [putRiddle](docs/privateriddles/README.md#putriddle) - Create a random Riddle entry.
 
-### randomRiddle
+### [randomRiddle](docs/randomriddle/README.md)
 
-* `getRiddleRandom` - Get a random riddle for a given category(optional)
-* `getRiddleSearch` - Search for random riddle which has the text in the query, for a given category(optional).
+* [getRiddleRandom](docs/randomriddle/README.md#getriddlerandom) - Get a random riddle for a given category(optional)
+* [getRiddleSearch](docs/randomriddle/README.md#getriddlesearch) - Search for random riddle which has the text in the query, for a given category(optional).
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -15,9 +15,11 @@ public class DatasetSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InlineDataSchema")
     public String inlineDataSchema;
+
     public DatasetSchema withInlineDataSchema(String inlineDataSchema) {
         this.inlineDataSchema = inlineDataSchema;
         return this;
     }
     
+    public DatasetSchema(){}
 }

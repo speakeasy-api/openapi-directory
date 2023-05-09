@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LinkApplicationResponse {
@@ -12,6 +13,7 @@ public class LinkApplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndOneResponse fourHundredAndOneResponse;
+
     public LinkApplicationResponse withFourHundredAndOneResponse(org.openapis.openapi.models.shared.FourHundredAndOneResponse fourHundredAndOneResponse) {
         this.fourHundredAndOneResponse = fourHundredAndOneResponse;
         return this;
@@ -22,6 +24,7 @@ public class LinkApplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.AccountResponse accountResponse;
+
     public LinkApplicationResponse withAccountResponse(org.openapis.openapi.models.shared.AccountResponse accountResponse) {
         this.accountResponse = accountResponse;
         return this;
@@ -29,6 +32,7 @@ public class LinkApplicationResponse {
     
     
     public String contentType;
+
     public LinkApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class LinkApplicationResponse {
      */
     
     public LinkApplication403ApplicationJSON linkApplication403ApplicationJSONObject;
+
     public LinkApplicationResponse withLinkApplication403ApplicationJSONObject(LinkApplication403ApplicationJSON linkApplication403ApplicationJSONObject) {
         this.linkApplication403ApplicationJSONObject = linkApplication403ApplicationJSONObject;
         return this;
@@ -49,6 +54,7 @@ public class LinkApplicationResponse {
      */
     
     public LinkApplication409ApplicationJSON linkApplication409ApplicationJSONObject;
+
     public LinkApplicationResponse withLinkApplication409ApplicationJSONObject(LinkApplication409ApplicationJSON linkApplication409ApplicationJSONObject) {
         this.linkApplication409ApplicationJSONObject = linkApplication409ApplicationJSONObject;
         return this;
@@ -56,6 +62,7 @@ public class LinkApplicationResponse {
     
     
     public Integer statusCode;
+
     public LinkApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class LinkApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LinkApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public LinkApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

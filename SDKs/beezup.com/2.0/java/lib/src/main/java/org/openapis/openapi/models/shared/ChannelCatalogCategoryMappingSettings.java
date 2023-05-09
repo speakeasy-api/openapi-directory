@@ -15,9 +15,11 @@ public class ChannelCatalogCategoryMappingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryMappingDisabledByMerchant")
     public Boolean categoryMappingDisabledByMerchant;
+
     public ChannelCatalogCategoryMappingSettings withCategoryMappingDisabledByMerchant(Boolean categoryMappingDisabledByMerchant) {
         this.categoryMappingDisabledByMerchant = categoryMappingDisabledByMerchant;
         return this;
     }
     
+    public ChannelCatalogCategoryMappingSettings(){}
 }

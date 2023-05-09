@@ -26,6 +26,7 @@ public class ProfileTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cookieType")
     public ProfileTokenRequestCookieTypeEnum cookieType;
+
     public ProfileTokenRequest withCookieType(ProfileTokenRequestCookieTypeEnum cookieType) {
         this.cookieType = cookieType;
         return this;
@@ -37,6 +38,7 @@ public class ProfileTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pin")
     public String pin;
+
     public ProfileTokenRequest withPin(String pin) {
         this.pin = pin;
         return this;
@@ -47,6 +49,7 @@ public class ProfileTokenRequest {
      */
     @JsonProperty("profileId")
     public String profileId;
+
     public ProfileTokenRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -57,9 +60,14 @@ public class ProfileTokenRequest {
      */
     @JsonProperty("scopes")
     public ProfileTokenRequestScopesEnum[] scopes;
+
     public ProfileTokenRequest withScopes(ProfileTokenRequestScopesEnum[] scopes) {
         this.scopes = scopes;
         return this;
     }
     
+    public ProfileTokenRequest(@JsonProperty("profileId") String profileId, @JsonProperty("scopes") ProfileTokenRequestScopesEnum[] scopes) {
+        this.profileId = profileId;
+        this.scopes = scopes;
+  }
 }

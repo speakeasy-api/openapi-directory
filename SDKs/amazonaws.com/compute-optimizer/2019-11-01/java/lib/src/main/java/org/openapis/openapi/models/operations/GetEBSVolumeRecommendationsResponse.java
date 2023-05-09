@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEBSVolumeRecommendationsResponse {
@@ -12,6 +13,7 @@ public class GetEBSVolumeRecommendationsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetEBSVolumeRecommendationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetEBSVolumeRecommendationsResponse {
     
     
     public String contentType;
+
     public GetEBSVolumeRecommendationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetEBSVolumeRecommendationsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEBSVolumeRecommendationsResponse getEBSVolumeRecommendationsResponse;
+
     public GetEBSVolumeRecommendationsResponse withGetEBSVolumeRecommendationsResponse(org.openapis.openapi.models.shared.GetEBSVolumeRecommendationsResponse getEBSVolumeRecommendationsResponse) {
         this.getEBSVolumeRecommendationsResponse = getEBSVolumeRecommendationsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetEBSVolumeRecommendationsResponse {
      */
     
     public Object internalServerException;
+
     public GetEBSVolumeRecommendationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetEBSVolumeRecommendationsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetEBSVolumeRecommendationsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class GetEBSVolumeRecommendationsResponse {
      */
     
     public Object missingAuthenticationToken;
+
     public GetEBSVolumeRecommendationsResponse withMissingAuthenticationToken(Object missingAuthenticationToken) {
         this.missingAuthenticationToken = missingAuthenticationToken;
         return this;
@@ -69,6 +76,7 @@ public class GetEBSVolumeRecommendationsResponse {
      */
     
     public Object optInRequiredException;
+
     public GetEBSVolumeRecommendationsResponse withOptInRequiredException(Object optInRequiredException) {
         this.optInRequiredException = optInRequiredException;
         return this;
@@ -76,6 +84,7 @@ public class GetEBSVolumeRecommendationsResponse {
     
     
     public Integer statusCode;
+
     public GetEBSVolumeRecommendationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetEBSVolumeRecommendationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEBSVolumeRecommendationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetEBSVolumeRecommendationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetEBSVolumeRecommendationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class GetEBSVolumeRecommendationsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetEBSVolumeRecommendationsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class GetEBSVolumeRecommendationsResponse {
      */
     
     public Object throttlingException;
+
     public GetEBSVolumeRecommendationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetEBSVolumeRecommendationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

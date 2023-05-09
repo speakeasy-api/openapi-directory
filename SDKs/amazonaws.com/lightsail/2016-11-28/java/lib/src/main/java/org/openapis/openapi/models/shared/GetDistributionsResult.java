@@ -15,6 +15,7 @@ public class GetDistributionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributions")
     public LightsailDistribution[] distributions;
+
     public GetDistributionsResult withDistributions(LightsailDistribution[] distributions) {
         this.distributions = distributions;
         return this;
@@ -23,9 +24,11 @@ public class GetDistributionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GetDistributionsResult withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GetDistributionsResult(){}
 }

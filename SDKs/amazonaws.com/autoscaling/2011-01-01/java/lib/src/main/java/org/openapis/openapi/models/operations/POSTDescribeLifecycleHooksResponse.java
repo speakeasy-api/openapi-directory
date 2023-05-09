@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTDescribeLifecycleHooksResponse {
     
     public byte[] body;
+
     public POSTDescribeLifecycleHooksResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTDescribeLifecycleHooksResponse {
     
     
     public String contentType;
+
     public POSTDescribeLifecycleHooksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTDescribeLifecycleHooksResponse {
     
     
     public Integer statusCode;
+
     public POSTDescribeLifecycleHooksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTDescribeLifecycleHooksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTDescribeLifecycleHooksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTDescribeLifecycleHooksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

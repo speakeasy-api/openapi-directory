@@ -51,4 +51,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/FormShow.java
 lib/src/main/java/org/openapis/openapi/models/shared/FormsIndexAttributesBenefitCategories.java
 lib/src/main/java/org/openapis/openapi/models/shared/FormsIndexAttributes.java
 lib/src/main/java/org/openapis/openapi/models/shared/FormsIndex.java
+docs/sdk/README.md
+docs/forms/README.md
 USAGE.md

@@ -12,6 +12,7 @@ public class BillbeeInterfacesBillbeeAPIModelsLayoutTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public BillbeeInterfacesBillbeeAPIModelsLayoutTemplate withId(Long id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class BillbeeInterfacesBillbeeAPIModelsLayoutTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public BillbeeInterfacesBillbeeAPIModelsLayoutTemplate withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class BillbeeInterfacesBillbeeAPIModelsLayoutTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum type;
+
     public BillbeeInterfacesBillbeeAPIModelsLayoutTemplate withType(BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelsLayoutTemplate(){}
 }

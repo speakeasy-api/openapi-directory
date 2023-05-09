@@ -18,9 +18,11 @@ public class AddMerchantContextData200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesAssociateId")
     public String salesAssociateId;
+
     public AddMerchantContextData200ApplicationJSON withSalesAssociateId(String salesAssociateId) {
         this.salesAssociateId = salesAssociateId;
         return this;
     }
     
+    public AddMerchantContextData200ApplicationJSON(){}
 }

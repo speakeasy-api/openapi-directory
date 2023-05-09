@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItvProfileTokenRequest {
@@ -12,6 +13,7 @@ public class GetItvProfileTokenRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ItvProfileTokenRequest itvProfileTokenRequest;
+
     public GetItvProfileTokenRequest withItvProfileTokenRequest(org.openapis.openapi.models.shared.ItvProfileTokenRequest itvProfileTokenRequest) {
         this.itvProfileTokenRequest = itvProfileTokenRequest;
         return this;
@@ -32,9 +34,13 @@ public class GetItvProfileTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetItvProfileTokenRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public GetItvProfileTokenRequest(@JsonProperty("ItvProfileTokenRequest") org.openapis.openapi.models.shared.ItvProfileTokenRequest itvProfileTokenRequest) {
+        this.itvProfileTokenRequest = itvProfileTokenRequest;
+  }
 }

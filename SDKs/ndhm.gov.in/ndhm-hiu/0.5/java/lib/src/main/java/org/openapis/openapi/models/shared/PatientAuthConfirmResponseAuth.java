@@ -22,6 +22,7 @@ public class PatientAuthConfirmResponseAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public String accessToken;
+
     public PatientAuthConfirmResponseAuth withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -30,6 +31,7 @@ public class PatientAuthConfirmResponseAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patient")
     public PatientDemographicResponse patient;
+
     public PatientAuthConfirmResponseAuth withPatient(PatientDemographicResponse patient) {
         this.patient = patient;
         return this;
@@ -38,9 +40,11 @@ public class PatientAuthConfirmResponseAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validity")
     public AccessTokenValidity validity;
+
     public PatientAuthConfirmResponseAuth withValidity(AccessTokenValidity validity) {
         this.validity = validity;
         return this;
     }
     
+    public PatientAuthConfirmResponseAuth(){}
 }

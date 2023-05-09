@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ChangeMessageVisibilityBatchResult - For each message in the batch, the response contains a &lt;code&gt; &lt;a&gt;ChangeMessageVisibilityBatchResultEntry&lt;/a&gt; &lt;/code&gt; tag if the message succeeds or a &lt;code&gt; &lt;a&gt;BatchResultErrorEntry&lt;/a&gt; &lt;/code&gt; tag if the message fails.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ChangeMessageVisibilityBatchResult {
     
     public BatchResultErrorEntryList[] failed;
+
     public ChangeMessageVisibilityBatchResult withFailed(BatchResultErrorEntryList[] failed) {
         this.failed = failed;
         return this;
@@ -19,9 +20,14 @@ public class ChangeMessageVisibilityBatchResult {
     
     
     public ChangeMessageVisibilityBatchResultEntryList[] successful;
+
     public ChangeMessageVisibilityBatchResult withSuccessful(ChangeMessageVisibilityBatchResultEntryList[] successful) {
         this.successful = successful;
         return this;
     }
     
+    public ChangeMessageVisibilityBatchResult(@JsonProperty("Failed") BatchResultErrorEntryList[] failed, @JsonProperty("Successful") ChangeMessageVisibilityBatchResultEntryList[] successful) {
+        this.failed = failed;
+        this.successful = successful;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductRequest {
@@ -13,6 +14,7 @@ public class ProductRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public ProductRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -23,6 +25,7 @@ public class ProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code")
     public String code;
+
     public ProductRequest withCode(String code) {
         this.code = code;
         return this;
@@ -35,6 +38,7 @@ public class ProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currencyCode")
     public String currencyCode;
+
     public ProductRequest withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -48,6 +52,7 @@ public class ProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeTourGradeAvailability")
     public Boolean excludeTourGradeAvailability;
+
     public ProductRequest withExcludeTourGradeAvailability(Boolean excludeTourGradeAvailability) {
         this.excludeTourGradeAvailability = excludeTourGradeAvailability;
         return this;
@@ -62,6 +67,7 @@ public class ProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showUnavailable")
     public Boolean showUnavailable;
+
     public ProductRequest withShowUnavailable(Boolean showUnavailable) {
         this.showUnavailable = showUnavailable;
         return this;
@@ -79,6 +85,7 @@ public class ProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
     public org.openapis.openapi.models.shared.SortOrderREVIEWEnum sortOrder;
+
     public ProductRequest withSortOrder(org.openapis.openapi.models.shared.SortOrderREVIEWEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -91,9 +98,13 @@ public class ProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=voucherOption")
     public ProductVoucherOptionEnum voucherOption;
+
     public ProductRequest withVoucherOption(ProductVoucherOptionEnum voucherOption) {
         this.voucherOption = voucherOption;
         return this;
     }
     
+    public ProductRequest(@JsonProperty("Accept-Language") String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+  }
 }

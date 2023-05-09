@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AwsJobAbortCriteria {
     @JsonProperty("action")
     public AwsJobAbortCriteriaAbortActionEnum action;
+
     public AwsJobAbortCriteria withAction(AwsJobAbortCriteriaAbortActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +20,7 @@ public class AwsJobAbortCriteria {
     
     @JsonProperty("failureType")
     public AwsJobAbortCriteriaFailureTypeEnum failureType;
+
     public AwsJobAbortCriteria withFailureType(AwsJobAbortCriteriaFailureTypeEnum failureType) {
         this.failureType = failureType;
         return this;
@@ -26,6 +28,7 @@ public class AwsJobAbortCriteria {
     
     @JsonProperty("minNumberOfExecutedThings")
     public Long minNumberOfExecutedThings;
+
     public AwsJobAbortCriteria withMinNumberOfExecutedThings(Long minNumberOfExecutedThings) {
         this.minNumberOfExecutedThings = minNumberOfExecutedThings;
         return this;
@@ -33,9 +36,16 @@ public class AwsJobAbortCriteria {
     
     @JsonProperty("thresholdPercentage")
     public Double thresholdPercentage;
+
     public AwsJobAbortCriteria withThresholdPercentage(Double thresholdPercentage) {
         this.thresholdPercentage = thresholdPercentage;
         return this;
     }
     
+    public AwsJobAbortCriteria(@JsonProperty("action") AwsJobAbortCriteriaAbortActionEnum action, @JsonProperty("failureType") AwsJobAbortCriteriaFailureTypeEnum failureType, @JsonProperty("minNumberOfExecutedThings") Long minNumberOfExecutedThings, @JsonProperty("thresholdPercentage") Double thresholdPercentage) {
+        this.action = action;
+        this.failureType = failureType;
+        this.minNumberOfExecutedThings = minNumberOfExecutedThings;
+        this.thresholdPercentage = thresholdPercentage;
+  }
 }

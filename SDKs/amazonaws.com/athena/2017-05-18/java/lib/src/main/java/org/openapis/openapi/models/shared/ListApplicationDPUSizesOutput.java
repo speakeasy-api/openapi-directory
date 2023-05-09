@@ -15,6 +15,7 @@ public class ListApplicationDPUSizesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationDPUSizes")
     public ApplicationDPUSizes[] applicationDPUSizes;
+
     public ListApplicationDPUSizesOutput withApplicationDPUSizes(ApplicationDPUSizes[] applicationDPUSizes) {
         this.applicationDPUSizes = applicationDPUSizes;
         return this;
@@ -23,9 +24,11 @@ public class ListApplicationDPUSizesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListApplicationDPUSizesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListApplicationDPUSizesOutput(){}
 }

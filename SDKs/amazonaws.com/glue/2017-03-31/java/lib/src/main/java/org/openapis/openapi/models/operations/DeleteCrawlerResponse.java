@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCrawlerResponse {
     
     public String contentType;
+
     public DeleteCrawlerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCrawlerResponse {
      */
     
     public Object crawlerRunningException;
+
     public DeleteCrawlerResponse withCrawlerRunningException(Object crawlerRunningException) {
         this.crawlerRunningException = crawlerRunningException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCrawlerResponse {
      */
     
     public java.util.Map<String, Object> deleteCrawlerResponse;
+
     public DeleteCrawlerResponse withDeleteCrawlerResponse(java.util.Map<String, Object> deleteCrawlerResponse) {
         this.deleteCrawlerResponse = deleteCrawlerResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCrawlerResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeleteCrawlerResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteCrawlerResponse {
      */
     
     public Object operationTimeoutException;
+
     public DeleteCrawlerResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteCrawlerResponse {
     
     
     public Integer statusCode;
+
     public DeleteCrawlerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteCrawlerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCrawlerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteCrawlerResponse {
      */
     
     public Object schedulerTransitioningException;
+
     public DeleteCrawlerResponse withSchedulerTransitioningException(Object schedulerTransitioningException) {
         this.schedulerTransitioningException = schedulerTransitioningException;
         return this;
     }
     
+    public DeleteCrawlerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

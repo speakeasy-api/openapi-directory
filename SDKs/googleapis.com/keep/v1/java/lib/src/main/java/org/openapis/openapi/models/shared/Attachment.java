@@ -18,6 +18,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String[] mimeType;
+
     public Attachment withMimeType(String[] mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -29,9 +30,11 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Attachment withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Attachment(){}
 }

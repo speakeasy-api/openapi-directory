@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ConfigUserTheme {
     
     public String userThemeDescription;
+
     public ConfigUserTheme withUserThemeDescription(String userThemeDescription) {
         this.userThemeDescription = userThemeDescription;
         return this;
@@ -16,6 +17,7 @@ public class ConfigUserTheme {
     
     
     public Integer userThemeId;
+
     public ConfigUserTheme withUserThemeId(Integer userThemeId) {
         this.userThemeId = userThemeId;
         return this;
@@ -23,9 +25,11 @@ public class ConfigUserTheme {
     
     
     public String userThemeName;
+
     public ConfigUserTheme withUserThemeName(String userThemeName) {
         this.userThemeName = userThemeName;
         return this;
     }
     
+    public ConfigUserTheme(){}
 }

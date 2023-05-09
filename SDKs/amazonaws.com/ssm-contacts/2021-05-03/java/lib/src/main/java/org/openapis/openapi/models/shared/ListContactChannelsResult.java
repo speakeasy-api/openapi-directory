@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListContactChannelsResult {
     @JsonProperty("ContactChannels")
     public ContactChannel[] contactChannels;
+
     public ListContactChannelsResult withContactChannels(ContactChannel[] contactChannels) {
         this.contactChannels = contactChannels;
         return this;
@@ -22,9 +23,13 @@ public class ListContactChannelsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListContactChannelsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListContactChannelsResult(@JsonProperty("ContactChannels") ContactChannel[] contactChannels) {
+        this.contactChannels = contactChannels;
+  }
 }

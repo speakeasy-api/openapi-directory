@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateAccessKeyRequest {
@@ -12,6 +13,7 @@ public class GETUpdateAccessKeyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AccessKeyId")
     public String accessKeyId;
+
     public GETUpdateAccessKeyRequest withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -19,6 +21,7 @@ public class GETUpdateAccessKeyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETUpdateAccessKeyActionEnum action;
+
     public GETUpdateAccessKeyRequest withAction(GETUpdateAccessKeyActionEnum action) {
         this.action = action;
         return this;
@@ -29,6 +32,7 @@ public class GETUpdateAccessKeyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
     public GETUpdateAccessKeyStatusEnum status;
+
     public GETUpdateAccessKeyRequest withStatus(GETUpdateAccessKeyStatusEnum status) {
         this.status = status;
         return this;
@@ -39,6 +43,7 @@ public class GETUpdateAccessKeyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserName")
     public String userName;
+
     public GETUpdateAccessKeyRequest withUserName(String userName) {
         this.userName = userName;
         return this;
@@ -46,6 +51,7 @@ public class GETUpdateAccessKeyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETUpdateAccessKeyVersionEnum version;
+
     public GETUpdateAccessKeyRequest withVersion(GETUpdateAccessKeyVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETUpdateAccessKeyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETUpdateAccessKeyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETUpdateAccessKeyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETUpdateAccessKeyRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETUpdateAccessKeyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETUpdateAccessKeyRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETUpdateAccessKeyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETUpdateAccessKeyRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETUpdateAccessKeyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETUpdateAccessKeyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETUpdateAccessKeyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETUpdateAccessKeyRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETUpdateAccessKeyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETUpdateAccessKeyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETUpdateAccessKeyRequest(@JsonProperty("AccessKeyId") String accessKeyId, @JsonProperty("Action") GETUpdateAccessKeyActionEnum action, @JsonProperty("Status") GETUpdateAccessKeyStatusEnum status, @JsonProperty("Version") GETUpdateAccessKeyVersionEnum version) {
+        this.accessKeyId = accessKeyId;
+        this.action = action;
+        this.status = status;
+        this.version = version;
+  }
 }

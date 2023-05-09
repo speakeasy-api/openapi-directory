@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAvailabilityZonesResultAvailabilityZones {
     
     public String groupName;
+
     public DescribeAvailabilityZonesResultAvailabilityZones withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeAvailabilityZonesResultAvailabilityZones {
     
     
     public DescribeAvailabilityZonesResultAvailabilityZonesMessages[] messages;
+
     public DescribeAvailabilityZonesResultAvailabilityZones withMessages(DescribeAvailabilityZonesResultAvailabilityZonesMessages[] messages) {
         this.messages = messages;
         return this;
@@ -26,6 +28,7 @@ public class DescribeAvailabilityZonesResultAvailabilityZones {
     
     
     public String networkBorderGroup;
+
     public DescribeAvailabilityZonesResultAvailabilityZones withNetworkBorderGroup(String networkBorderGroup) {
         this.networkBorderGroup = networkBorderGroup;
         return this;
@@ -33,6 +36,7 @@ public class DescribeAvailabilityZonesResultAvailabilityZones {
     
     
     public DescribeAvailabilityZonesResultAvailabilityZonesOptInStatusEnum optInStatus;
+
     public DescribeAvailabilityZonesResultAvailabilityZones withOptInStatus(DescribeAvailabilityZonesResultAvailabilityZonesOptInStatusEnum optInStatus) {
         this.optInStatus = optInStatus;
         return this;
@@ -40,6 +44,7 @@ public class DescribeAvailabilityZonesResultAvailabilityZones {
     
     
     public String parentZoneId;
+
     public DescribeAvailabilityZonesResultAvailabilityZones withParentZoneId(String parentZoneId) {
         this.parentZoneId = parentZoneId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeAvailabilityZonesResultAvailabilityZones {
     
     
     public String parentZoneName;
+
     public DescribeAvailabilityZonesResultAvailabilityZones withParentZoneName(String parentZoneName) {
         this.parentZoneName = parentZoneName;
         return this;
@@ -54,6 +60,7 @@ public class DescribeAvailabilityZonesResultAvailabilityZones {
     
     
     public String regionName;
+
     public DescribeAvailabilityZonesResultAvailabilityZones withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
@@ -61,6 +68,7 @@ public class DescribeAvailabilityZonesResultAvailabilityZones {
     
     
     public DescribeAvailabilityZonesResultAvailabilityZonesStateEnum state;
+
     public DescribeAvailabilityZonesResultAvailabilityZones withState(DescribeAvailabilityZonesResultAvailabilityZonesStateEnum state) {
         this.state = state;
         return this;
@@ -68,6 +76,7 @@ public class DescribeAvailabilityZonesResultAvailabilityZones {
     
     
     public String zoneId;
+
     public DescribeAvailabilityZonesResultAvailabilityZones withZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
@@ -75,6 +84,7 @@ public class DescribeAvailabilityZonesResultAvailabilityZones {
     
     
     public String zoneName;
+
     public DescribeAvailabilityZonesResultAvailabilityZones withZoneName(String zoneName) {
         this.zoneName = zoneName;
         return this;
@@ -82,9 +92,11 @@ public class DescribeAvailabilityZonesResultAvailabilityZones {
     
     
     public String zoneType;
+
     public DescribeAvailabilityZonesResultAvailabilityZones withZoneType(String zoneType) {
         this.zoneType = zoneType;
         return this;
     }
     
+    public DescribeAvailabilityZonesResultAvailabilityZones(){}
 }

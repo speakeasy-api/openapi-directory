@@ -12,6 +12,7 @@ public class OperatorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dbt")
     public OperatorDbt dbt;
+
     public OperatorConfiguration withDbt(OperatorDbt dbt) {
         this.dbt = dbt;
         return this;
@@ -20,6 +21,7 @@ public class OperatorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("normalization")
     public OperatorNormalization normalization;
+
     public OperatorConfiguration withNormalization(OperatorNormalization normalization) {
         this.normalization = normalization;
         return this;
@@ -27,6 +29,7 @@ public class OperatorConfiguration {
     
     @JsonProperty("operatorType")
     public OperatorTypeEnum operatorType;
+
     public OperatorConfiguration withOperatorType(OperatorTypeEnum operatorType) {
         this.operatorType = operatorType;
         return this;
@@ -35,9 +38,13 @@ public class OperatorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhook")
     public OperatorWebhook webhook;
+
     public OperatorConfiguration withWebhook(OperatorWebhook webhook) {
         this.webhook = webhook;
         return this;
     }
     
+    public OperatorConfiguration(@JsonProperty("operatorType") OperatorTypeEnum operatorType) {
+        this.operatorType = operatorType;
+  }
 }

@@ -15,6 +15,7 @@ public class OntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyTagsToBackups")
     public Boolean copyTagsToBackups;
+
     public OntapVolumeConfiguration withCopyTagsToBackups(Boolean copyTagsToBackups) {
         this.copyTagsToBackups = copyTagsToBackups;
         return this;
@@ -23,6 +24,7 @@ public class OntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlexCacheEndpointType")
     public FlexCacheEndpointTypeEnum flexCacheEndpointType;
+
     public OntapVolumeConfiguration withFlexCacheEndpointType(FlexCacheEndpointTypeEnum flexCacheEndpointType) {
         this.flexCacheEndpointType = flexCacheEndpointType;
         return this;
@@ -31,6 +33,7 @@ public class OntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JunctionPath")
     public String junctionPath;
+
     public OntapVolumeConfiguration withJunctionPath(String junctionPath) {
         this.junctionPath = junctionPath;
         return this;
@@ -39,6 +42,7 @@ public class OntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OntapVolumeType")
     public OntapVolumeTypeEnum ontapVolumeType;
+
     public OntapVolumeConfiguration withOntapVolumeType(OntapVolumeTypeEnum ontapVolumeType) {
         this.ontapVolumeType = ontapVolumeType;
         return this;
@@ -47,6 +51,7 @@ public class OntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityStyle")
     public SecurityStyleEnum securityStyle;
+
     public OntapVolumeConfiguration withSecurityStyle(SecurityStyleEnum securityStyle) {
         this.securityStyle = securityStyle;
         return this;
@@ -55,6 +60,7 @@ public class OntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeInMegabytes")
     public Long sizeInMegabytes;
+
     public OntapVolumeConfiguration withSizeInMegabytes(Long sizeInMegabytes) {
         this.sizeInMegabytes = sizeInMegabytes;
         return this;
@@ -63,6 +69,7 @@ public class OntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotPolicy")
     public String snapshotPolicy;
+
     public OntapVolumeConfiguration withSnapshotPolicy(String snapshotPolicy) {
         this.snapshotPolicy = snapshotPolicy;
         return this;
@@ -71,6 +78,7 @@ public class OntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageEfficiencyEnabled")
     public Boolean storageEfficiencyEnabled;
+
     public OntapVolumeConfiguration withStorageEfficiencyEnabled(Boolean storageEfficiencyEnabled) {
         this.storageEfficiencyEnabled = storageEfficiencyEnabled;
         return this;
@@ -79,6 +87,7 @@ public class OntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageVirtualMachineId")
     public String storageVirtualMachineId;
+
     public OntapVolumeConfiguration withStorageVirtualMachineId(String storageVirtualMachineId) {
         this.storageVirtualMachineId = storageVirtualMachineId;
         return this;
@@ -87,6 +96,7 @@ public class OntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageVirtualMachineRoot")
     public Boolean storageVirtualMachineRoot;
+
     public OntapVolumeConfiguration withStorageVirtualMachineRoot(Boolean storageVirtualMachineRoot) {
         this.storageVirtualMachineRoot = storageVirtualMachineRoot;
         return this;
@@ -95,6 +105,7 @@ public class OntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TieringPolicy")
     public TieringPolicy tieringPolicy;
+
     public OntapVolumeConfiguration withTieringPolicy(TieringPolicy tieringPolicy) {
         this.tieringPolicy = tieringPolicy;
         return this;
@@ -103,9 +114,11 @@ public class OntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UUID")
     public String uuid;
+
     public OntapVolumeConfiguration withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public OntapVolumeConfiguration(){}
 }

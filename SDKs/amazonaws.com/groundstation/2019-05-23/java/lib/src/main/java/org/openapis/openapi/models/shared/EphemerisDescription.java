@@ -15,6 +15,7 @@ public class EphemerisDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ephemerisData")
     public String ephemerisData;
+
     public EphemerisDescription withEphemerisData(String ephemerisData) {
         this.ephemerisData = ephemerisData;
         return this;
@@ -23,9 +24,11 @@ public class EphemerisDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceS3Object")
     public S3Object sourceS3Object;
+
     public EphemerisDescription withSourceS3Object(S3Object sourceS3Object) {
         this.sourceS3Object = sourceS3Object;
         return this;
     }
     
+    public EphemerisDescription(){}
 }

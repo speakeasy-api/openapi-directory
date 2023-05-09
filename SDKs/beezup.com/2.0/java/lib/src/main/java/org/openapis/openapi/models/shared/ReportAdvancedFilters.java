@@ -15,6 +15,7 @@ public class ReportAdvancedFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("globalMarginPercent")
     public Long globalMarginPercent;
+
     public ReportAdvancedFilters withGlobalMarginPercent(Long globalMarginPercent) {
         this.globalMarginPercent = globalMarginPercent;
         return this;
@@ -26,6 +27,7 @@ public class ReportAdvancedFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkClickToOrderMaxDay")
     public Long linkClickToOrderMaxDay;
+
     public ReportAdvancedFilters withLinkClickToOrderMaxDay(Long linkClickToOrderMaxDay) {
         this.linkClickToOrderMaxDay = linkClickToOrderMaxDay;
         return this;
@@ -33,6 +35,7 @@ public class ReportAdvancedFilters {
     
     @JsonProperty("linkClickToOrderType")
     public LinkClickToOrderTypeEnum linkClickToOrderType;
+
     public ReportAdvancedFilters withLinkClickToOrderType(LinkClickToOrderTypeEnum linkClickToOrderType) {
         this.linkClickToOrderType = linkClickToOrderType;
         return this;
@@ -40,6 +43,7 @@ public class ReportAdvancedFilters {
     
     @JsonProperty("marginType")
     public MarginTypeEnum marginType;
+
     public ReportAdvancedFilters withMarginType(MarginTypeEnum marginType) {
         this.marginType = marginType;
         return this;
@@ -50,6 +54,7 @@ public class ReportAdvancedFilters {
      */
     @JsonProperty("onlyDirectSales")
     public Boolean onlyDirectSales;
+
     public ReportAdvancedFilters withOnlyDirectSales(Boolean onlyDirectSales) {
         this.onlyDirectSales = onlyDirectSales;
         return this;
@@ -60,6 +65,7 @@ public class ReportAdvancedFilters {
      */
     @JsonProperty("onlyPaymentValidatedOrders")
     public Boolean onlyPaymentValidatedOrders;
+
     public ReportAdvancedFilters withOnlyPaymentValidatedOrders(Boolean onlyPaymentValidatedOrders) {
         this.onlyPaymentValidatedOrders = onlyPaymentValidatedOrders;
         return this;
@@ -70,9 +76,17 @@ public class ReportAdvancedFilters {
      */
     @JsonProperty("performanceIndicatorFormula")
     public PerformanceIndicatorFormula performanceIndicatorFormula;
+
     public ReportAdvancedFilters withPerformanceIndicatorFormula(PerformanceIndicatorFormula performanceIndicatorFormula) {
         this.performanceIndicatorFormula = performanceIndicatorFormula;
         return this;
     }
     
+    public ReportAdvancedFilters(@JsonProperty("linkClickToOrderType") LinkClickToOrderTypeEnum linkClickToOrderType, @JsonProperty("marginType") MarginTypeEnum marginType, @JsonProperty("onlyDirectSales") Boolean onlyDirectSales, @JsonProperty("onlyPaymentValidatedOrders") Boolean onlyPaymentValidatedOrders, @JsonProperty("performanceIndicatorFormula") PerformanceIndicatorFormula performanceIndicatorFormula) {
+        this.linkClickToOrderType = linkClickToOrderType;
+        this.marginType = marginType;
+        this.onlyDirectSales = onlyDirectSales;
+        this.onlyPaymentValidatedOrders = onlyPaymentValidatedOrders;
+        this.performanceIndicatorFormula = performanceIndicatorFormula;
+  }
 }

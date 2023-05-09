@@ -12,9 +12,11 @@ public class ChannelCatalogExportationHistoryLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public LinksGetChannelCatalogExportationHistoryLink self;
+
     public ChannelCatalogExportationHistoryLinks withSelf(LinksGetChannelCatalogExportationHistoryLink self) {
         this.self = self;
         return this;
     }
     
+    public ChannelCatalogExportationHistoryLinks(){}
 }

@@ -12,6 +12,7 @@ public class CreateFleetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnywhereConfiguration")
     public AnywhereConfiguration anywhereConfiguration;
+
     public CreateFleetInput withAnywhereConfiguration(AnywhereConfiguration anywhereConfiguration) {
         this.anywhereConfiguration = anywhereConfiguration;
         return this;
@@ -20,6 +21,7 @@ public class CreateFleetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BuildId")
     public String buildId;
+
     public CreateFleetInput withBuildId(String buildId) {
         this.buildId = buildId;
         return this;
@@ -28,6 +30,7 @@ public class CreateFleetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateConfiguration")
     public CertificateConfiguration certificateConfiguration;
+
     public CreateFleetInput withCertificateConfiguration(CertificateConfiguration certificateConfiguration) {
         this.certificateConfiguration = certificateConfiguration;
         return this;
@@ -36,6 +39,7 @@ public class CreateFleetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeType")
     public ComputeTypeEnum computeType;
+
     public CreateFleetInput withComputeType(ComputeTypeEnum computeType) {
         this.computeType = computeType;
         return this;
@@ -44,6 +48,7 @@ public class CreateFleetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateFleetInput withDescription(String description) {
         this.description = description;
         return this;
@@ -52,6 +57,7 @@ public class CreateFleetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EC2InboundPermissions")
     public IpPermission[] ec2InboundPermissions;
+
     public CreateFleetInput withEc2InboundPermissions(IpPermission[] ec2InboundPermissions) {
         this.ec2InboundPermissions = ec2InboundPermissions;
         return this;
@@ -60,6 +66,7 @@ public class CreateFleetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EC2InstanceType")
     public Ec2InstanceTypeEnum ec2InstanceType;
+
     public CreateFleetInput withEc2InstanceType(Ec2InstanceTypeEnum ec2InstanceType) {
         this.ec2InstanceType = ec2InstanceType;
         return this;
@@ -68,6 +75,7 @@ public class CreateFleetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetType")
     public FleetTypeEnum fleetType;
+
     public CreateFleetInput withFleetType(FleetTypeEnum fleetType) {
         this.fleetType = fleetType;
         return this;
@@ -76,6 +84,7 @@ public class CreateFleetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceRoleArn")
     public String instanceRoleArn;
+
     public CreateFleetInput withInstanceRoleArn(String instanceRoleArn) {
         this.instanceRoleArn = instanceRoleArn;
         return this;
@@ -84,6 +93,7 @@ public class CreateFleetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Locations")
     public LocationConfiguration[] locations;
+
     public CreateFleetInput withLocations(LocationConfiguration[] locations) {
         this.locations = locations;
         return this;
@@ -92,6 +102,7 @@ public class CreateFleetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogPaths")
     public String[] logPaths;
+
     public CreateFleetInput withLogPaths(String[] logPaths) {
         this.logPaths = logPaths;
         return this;
@@ -100,6 +111,7 @@ public class CreateFleetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricGroups")
     public String[] metricGroups;
+
     public CreateFleetInput withMetricGroups(String[] metricGroups) {
         this.metricGroups = metricGroups;
         return this;
@@ -107,6 +119,7 @@ public class CreateFleetInput {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateFleetInput withName(String name) {
         this.name = name;
         return this;
@@ -115,6 +128,7 @@ public class CreateFleetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NewGameSessionProtectionPolicy")
     public ProtectionPolicyEnum newGameSessionProtectionPolicy;
+
     public CreateFleetInput withNewGameSessionProtectionPolicy(ProtectionPolicyEnum newGameSessionProtectionPolicy) {
         this.newGameSessionProtectionPolicy = newGameSessionProtectionPolicy;
         return this;
@@ -123,6 +137,7 @@ public class CreateFleetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PeerVpcAwsAccountId")
     public String peerVpcAwsAccountId;
+
     public CreateFleetInput withPeerVpcAwsAccountId(String peerVpcAwsAccountId) {
         this.peerVpcAwsAccountId = peerVpcAwsAccountId;
         return this;
@@ -131,6 +146,7 @@ public class CreateFleetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PeerVpcId")
     public String peerVpcId;
+
     public CreateFleetInput withPeerVpcId(String peerVpcId) {
         this.peerVpcId = peerVpcId;
         return this;
@@ -139,6 +155,7 @@ public class CreateFleetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceCreationLimitPolicy")
     public ResourceCreationLimitPolicy resourceCreationLimitPolicy;
+
     public CreateFleetInput withResourceCreationLimitPolicy(ResourceCreationLimitPolicy resourceCreationLimitPolicy) {
         this.resourceCreationLimitPolicy = resourceCreationLimitPolicy;
         return this;
@@ -147,6 +164,7 @@ public class CreateFleetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuntimeConfiguration")
     public RuntimeConfiguration runtimeConfiguration;
+
     public CreateFleetInput withRuntimeConfiguration(RuntimeConfiguration runtimeConfiguration) {
         this.runtimeConfiguration = runtimeConfiguration;
         return this;
@@ -155,6 +173,7 @@ public class CreateFleetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScriptId")
     public String scriptId;
+
     public CreateFleetInput withScriptId(String scriptId) {
         this.scriptId = scriptId;
         return this;
@@ -163,6 +182,7 @@ public class CreateFleetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerLaunchParameters")
     public String serverLaunchParameters;
+
     public CreateFleetInput withServerLaunchParameters(String serverLaunchParameters) {
         this.serverLaunchParameters = serverLaunchParameters;
         return this;
@@ -171,6 +191,7 @@ public class CreateFleetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerLaunchPath")
     public String serverLaunchPath;
+
     public CreateFleetInput withServerLaunchPath(String serverLaunchPath) {
         this.serverLaunchPath = serverLaunchPath;
         return this;
@@ -179,9 +200,13 @@ public class CreateFleetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateFleetInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateFleetInput(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

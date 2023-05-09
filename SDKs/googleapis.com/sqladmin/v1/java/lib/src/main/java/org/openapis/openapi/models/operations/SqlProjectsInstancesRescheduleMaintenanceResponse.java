@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SqlProjectsInstancesRescheduleMaintenanceResponse {
     
     public String contentType;
+
     public SqlProjectsInstancesRescheduleMaintenanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SqlProjectsInstancesRescheduleMaintenanceResponse {
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public SqlProjectsInstancesRescheduleMaintenanceResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class SqlProjectsInstancesRescheduleMaintenanceResponse {
     
     
     public Integer statusCode;
+
     public SqlProjectsInstancesRescheduleMaintenanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SqlProjectsInstancesRescheduleMaintenanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SqlProjectsInstancesRescheduleMaintenanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SqlProjectsInstancesRescheduleMaintenanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

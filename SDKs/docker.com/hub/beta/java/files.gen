@@ -200,4 +200,12 @@ lib/src/main/java/org/openapis/openapi/models/shared/ScimUser.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScimUserName.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScimGroup.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScimEmail.java
+docs/sdk/README.md
+docs/accesstokens/README.md
+docs/auditlogs/README.md
+docs/authentication/README.md
+docs/images/README.md
+docs/orgsettings/README.md
+docs/repositories/README.md
+docs/scim/README.md
 USAGE.md

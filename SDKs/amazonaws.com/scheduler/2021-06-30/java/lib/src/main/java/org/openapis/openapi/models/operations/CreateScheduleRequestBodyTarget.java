@@ -15,6 +15,7 @@ public class CreateScheduleRequestBodyTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public CreateScheduleRequestBodyTarget withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class CreateScheduleRequestBodyTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeadLetterConfig")
     public org.openapis.openapi.models.shared.DeadLetterConfig deadLetterConfig;
+
     public CreateScheduleRequestBodyTarget withDeadLetterConfig(org.openapis.openapi.models.shared.DeadLetterConfig deadLetterConfig) {
         this.deadLetterConfig = deadLetterConfig;
         return this;
@@ -31,6 +33,7 @@ public class CreateScheduleRequestBodyTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EcsParameters")
     public org.openapis.openapi.models.shared.EcsParameters ecsParameters;
+
     public CreateScheduleRequestBodyTarget withEcsParameters(org.openapis.openapi.models.shared.EcsParameters ecsParameters) {
         this.ecsParameters = ecsParameters;
         return this;
@@ -39,6 +42,7 @@ public class CreateScheduleRequestBodyTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBridgeParameters")
     public org.openapis.openapi.models.shared.EventBridgeParameters eventBridgeParameters;
+
     public CreateScheduleRequestBodyTarget withEventBridgeParameters(org.openapis.openapi.models.shared.EventBridgeParameters eventBridgeParameters) {
         this.eventBridgeParameters = eventBridgeParameters;
         return this;
@@ -47,6 +51,7 @@ public class CreateScheduleRequestBodyTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Input")
     public String input;
+
     public CreateScheduleRequestBodyTarget withInput(String input) {
         this.input = input;
         return this;
@@ -55,6 +60,7 @@ public class CreateScheduleRequestBodyTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisParameters")
     public org.openapis.openapi.models.shared.KinesisParameters kinesisParameters;
+
     public CreateScheduleRequestBodyTarget withKinesisParameters(org.openapis.openapi.models.shared.KinesisParameters kinesisParameters) {
         this.kinesisParameters = kinesisParameters;
         return this;
@@ -63,6 +69,7 @@ public class CreateScheduleRequestBodyTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryPolicy")
     public org.openapis.openapi.models.shared.RetryPolicy retryPolicy;
+
     public CreateScheduleRequestBodyTarget withRetryPolicy(org.openapis.openapi.models.shared.RetryPolicy retryPolicy) {
         this.retryPolicy = retryPolicy;
         return this;
@@ -71,6 +78,7 @@ public class CreateScheduleRequestBodyTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateScheduleRequestBodyTarget withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -79,6 +87,7 @@ public class CreateScheduleRequestBodyTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SageMakerPipelineParameters")
     public org.openapis.openapi.models.shared.SageMakerPipelineParameters sageMakerPipelineParameters;
+
     public CreateScheduleRequestBodyTarget withSageMakerPipelineParameters(org.openapis.openapi.models.shared.SageMakerPipelineParameters sageMakerPipelineParameters) {
         this.sageMakerPipelineParameters = sageMakerPipelineParameters;
         return this;
@@ -87,9 +96,11 @@ public class CreateScheduleRequestBodyTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SqsParameters")
     public org.openapis.openapi.models.shared.SqsParameters sqsParameters;
+
     public CreateScheduleRequestBodyTarget withSqsParameters(org.openapis.openapi.models.shared.SqsParameters sqsParameters) {
         this.sqsParameters = sqsParameters;
         return this;
     }
     
+    public CreateScheduleRequestBodyTarget(){}
 }

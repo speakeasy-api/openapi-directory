@@ -15,6 +15,7 @@ public class FulfillmentFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_id")
     public String externalId;
+
     public FulfillmentFields withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -26,6 +27,7 @@ public class FulfillmentFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public FulfillmentFields withId(Integer id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class FulfillmentFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     public String orderId;
+
     public FulfillmentFields withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -48,6 +51,7 @@ public class FulfillmentFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_type")
     public String serviceType;
+
     public FulfillmentFields withServiceType(String serviceType) {
         this.serviceType = serviceType;
         return this;
@@ -59,6 +63,7 @@ public class FulfillmentFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipment_status")
     public String shipmentStatus;
+
     public FulfillmentFields withShipmentStatus(String shipmentStatus) {
         this.shipmentStatus = shipmentStatus;
         return this;
@@ -70,6 +75,7 @@ public class FulfillmentFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracking_company")
     public String trackingCompany;
+
     public FulfillmentFields withTrackingCompany(String trackingCompany) {
         this.trackingCompany = trackingCompany;
         return this;
@@ -81,6 +87,7 @@ public class FulfillmentFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracking_number")
     public String trackingNumber;
+
     public FulfillmentFields withTrackingNumber(String trackingNumber) {
         this.trackingNumber = trackingNumber;
         return this;
@@ -92,9 +99,11 @@ public class FulfillmentFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public FulfillmentFields withType(String type) {
         this.type = type;
         return this;
     }
     
+    public FulfillmentFields(){}
 }

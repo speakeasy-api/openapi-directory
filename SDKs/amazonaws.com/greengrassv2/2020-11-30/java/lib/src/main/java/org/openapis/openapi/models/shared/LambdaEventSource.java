@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LambdaEventSource {
     @JsonProperty("topic")
     public String topic;
+
     public LambdaEventSource withTopic(String topic) {
         this.topic = topic;
         return this;
@@ -19,9 +20,14 @@ public class LambdaEventSource {
     
     @JsonProperty("type")
     public LambdaEventSourceTypeEnum type;
+
     public LambdaEventSource withType(LambdaEventSourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public LambdaEventSource(@JsonProperty("topic") String topic, @JsonProperty("type") LambdaEventSourceTypeEnum type) {
+        this.topic = topic;
+        this.type = type;
+  }
 }

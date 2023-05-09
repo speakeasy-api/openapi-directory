@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteInferenceExperimentResponse {
     @JsonProperty("InferenceExperimentArn")
     public String inferenceExperimentArn;
+
     public DeleteInferenceExperimentResponse withInferenceExperimentArn(String inferenceExperimentArn) {
         this.inferenceExperimentArn = inferenceExperimentArn;
         return this;
     }
     
+    public DeleteInferenceExperimentResponse(@JsonProperty("InferenceExperimentArn") String inferenceExperimentArn) {
+        this.inferenceExperimentArn = inferenceExperimentArn;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StatelessRule {
     @JsonProperty("Priority")
     public Long priority;
+
     public StatelessRule withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -19,9 +20,14 @@ public class StatelessRule {
     
     @JsonProperty("RuleDefinition")
     public RuleDefinition ruleDefinition;
+
     public StatelessRule withRuleDefinition(RuleDefinition ruleDefinition) {
         this.ruleDefinition = ruleDefinition;
         return this;
     }
     
+    public StatelessRule(@JsonProperty("Priority") Long priority, @JsonProperty("RuleDefinition") RuleDefinition ruleDefinition) {
+        this.priority = priority;
+        this.ruleDefinition = ruleDefinition;
+  }
 }

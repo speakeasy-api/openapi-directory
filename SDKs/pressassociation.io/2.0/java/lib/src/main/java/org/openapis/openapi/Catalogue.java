@@ -54,11 +54,9 @@ public class Catalogue {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCatalogueResponse res = new org.openapis.openapi.models.operations.GetCatalogueResponse() {{
+        org.openapis.openapi.models.operations.GetCatalogueResponse res = new org.openapis.openapi.models.operations.GetCatalogueResponse(contentType, httpRes.statusCode()) {{
             getCatalogue200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Catalogue {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCatalogueAssetResponse res = new org.openapis.openapi.models.operations.GetCatalogueAssetResponse() {{
+        org.openapis.openapi.models.operations.GetCatalogueAssetResponse res = new org.openapis.openapi.models.operations.GetCatalogueAssetResponse(contentType, httpRes.statusCode()) {{
             getCatalogueAsset200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -142,11 +138,9 @@ public class Catalogue {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCatalogueAssetDetailResponse res = new org.openapis.openapi.models.operations.GetCatalogueAssetDetailResponse() {{
+        org.openapis.openapi.models.operations.GetCatalogueAssetDetailResponse res = new org.openapis.openapi.models.operations.GetCatalogueAssetDetailResponse(contentType, httpRes.statusCode()) {{
             getCatalogueAssetDetail200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -163,10 +157,11 @@ public class Catalogue {
     /**
      * Catalogue Collection
      * Return a collection of Catalogues.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListCataloguesResponse listCatalogues() throws Exception {
+    public org.openapis.openapi.models.operations.ListCataloguesResponse listCatalogues(org.openapis.openapi.models.operations.ListCataloguesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/catalogue");
         
@@ -175,16 +170,15 @@ public class Catalogue {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCataloguesResponse res = new org.openapis.openapi.models.operations.ListCataloguesResponse() {{
+        org.openapis.openapi.models.operations.ListCataloguesResponse res = new org.openapis.openapi.models.operations.ListCataloguesResponse(contentType, httpRes.statusCode()) {{
             listCatalogues200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

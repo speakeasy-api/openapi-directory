@@ -12,6 +12,7 @@ public class ValidationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public ValidationError withField(String field) {
         this.field = field;
         return this;
@@ -20,9 +21,11 @@ public class ValidationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ValidationError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ValidationError(){}
 }

@@ -22,6 +22,7 @@ public class CustomAttributeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bool_filter")
     public Boolean boolFilter;
+
     public CustomAttributeFilter withBoolFilter(Boolean boolFilter) {
         this.boolFilter = boolFilter;
         return this;
@@ -35,6 +36,7 @@ public class CustomAttributeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_attribute_definition_id")
     public String customAttributeDefinitionId;
+
     public CustomAttributeFilter withCustomAttributeDefinitionId(String customAttributeDefinitionId) {
         this.customAttributeDefinitionId = customAttributeDefinitionId;
         return this;
@@ -48,6 +50,7 @@ public class CustomAttributeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public CustomAttributeFilter withKey(String key) {
         this.key = key;
         return this;
@@ -59,6 +62,7 @@ public class CustomAttributeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number_filter")
     public Range numberFilter;
+
     public CustomAttributeFilter withNumberFilter(Range numberFilter) {
         this.numberFilter = numberFilter;
         return this;
@@ -72,6 +76,7 @@ public class CustomAttributeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selection_uids_filter")
     public String[] selectionUidsFilter;
+
     public CustomAttributeFilter withSelectionUidsFilter(String[] selectionUidsFilter) {
         this.selectionUidsFilter = selectionUidsFilter;
         return this;
@@ -85,9 +90,11 @@ public class CustomAttributeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("string_filter")
     public String stringFilter;
+
     public CustomAttributeFilter withStringFilter(String stringFilter) {
         this.stringFilter = stringFilter;
         return this;
     }
     
+    public CustomAttributeFilter(){}
 }

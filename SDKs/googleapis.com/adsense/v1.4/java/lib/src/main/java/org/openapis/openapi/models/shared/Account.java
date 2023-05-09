@@ -15,6 +15,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creation_time")
     public String creationTime;
+
     public Account withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -26,6 +27,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Account withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Account withKind(String kind) {
         this.kind = kind;
         return this;
@@ -48,6 +51,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Account withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +63,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("premium")
     public Boolean premium;
+
     public Account withPremium(Boolean premium) {
         this.premium = premium;
         return this;
@@ -70,6 +75,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subAccounts")
     public Account[] subAccounts;
+
     public Account withSubAccounts(Account[] subAccounts) {
         this.subAccounts = subAccounts;
         return this;
@@ -81,9 +87,11 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public Account withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public Account(){}
 }

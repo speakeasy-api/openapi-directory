@@ -19,6 +19,7 @@ public class PostCompile200ApplicationJSONExplanationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Double index;
+
     public PostCompile200ApplicationJSONExplanationNode withIndex(Double index) {
         this.index = index;
         return this;
@@ -27,9 +28,11 @@ public class PostCompile200ApplicationJSONExplanationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terms")
     public PostCompile200ApplicationJSONExplanationNodeTerms[] terms;
+
     public PostCompile200ApplicationJSONExplanationNode withTerms(PostCompile200ApplicationJSONExplanationNodeTerms[] terms) {
         this.terms = terms;
         return this;
     }
     
+    public PostCompile200ApplicationJSONExplanationNode(){}
 }

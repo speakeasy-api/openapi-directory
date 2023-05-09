@@ -12,9 +12,11 @@ public class WeekModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("week")
     public Long week;
+
     public WeekModel withWeek(Long week) {
         this.week = week;
         return this;
     }
     
+    public WeekModel(){}
 }

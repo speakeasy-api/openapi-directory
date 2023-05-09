@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppsCreateForOrgResponse {
     
     public String contentType;
+
     public AppsCreateForOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppsCreateForOrgResponse {
     
     
     public Integer statusCode;
+
     public AppsCreateForOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AppsCreateForOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppsCreateForOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AppsCreateForOrgResponse {
      */
     
     public AppsCreateForOrg200ApplicationJSON appsCreateForOrg200ApplicationJSONObject;
+
     public AppsCreateForOrgResponse withAppsCreateForOrg200ApplicationJSONObject(AppsCreateForOrg200ApplicationJSON appsCreateForOrg200ApplicationJSONObject) {
         this.appsCreateForOrg200ApplicationJSONObject = appsCreateForOrg200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class AppsCreateForOrgResponse {
      */
     
     public AppsCreateForOrg201ApplicationJSON appsCreateForOrg201ApplicationJSONObject;
+
     public AppsCreateForOrgResponse withAppsCreateForOrg201ApplicationJSONObject(AppsCreateForOrg201ApplicationJSON appsCreateForOrg201ApplicationJSONObject) {
         this.appsCreateForOrg201ApplicationJSONObject = appsCreateForOrg201ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class AppsCreateForOrgResponse {
      */
     
     public AppsCreateForOrgDefaultApplicationJSON appsCreateForOrgDefaultApplicationJSONObject;
+
     public AppsCreateForOrgResponse withAppsCreateForOrgDefaultApplicationJSONObject(AppsCreateForOrgDefaultApplicationJSON appsCreateForOrgDefaultApplicationJSONObject) {
         this.appsCreateForOrgDefaultApplicationJSONObject = appsCreateForOrgDefaultApplicationJSONObject;
         return this;
     }
     
+    public AppsCreateForOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

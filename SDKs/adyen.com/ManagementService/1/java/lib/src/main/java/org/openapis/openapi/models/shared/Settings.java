@@ -15,6 +15,7 @@ public class Settings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("band")
     public String band;
+
     public Settings withBand(String band) {
         this.band = band;
         return this;
@@ -26,6 +27,7 @@ public class Settings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roaming")
     public Boolean roaming;
+
     public Settings withRoaming(Boolean roaming) {
         this.roaming = roaming;
         return this;
@@ -37,9 +39,11 @@ public class Settings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public Integer timeout;
+
     public Settings withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public Settings(){}
 }

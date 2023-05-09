@@ -15,9 +15,11 @@ public class CreateCustomField201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.CustomFieldResponse data;
+
     public CreateCustomField201ApplicationJSON withData(org.openapis.openapi.models.shared.CustomFieldResponse data) {
         this.data = data;
         return this;
     }
     
+    public CreateCustomField201ApplicationJSON(){}
 }

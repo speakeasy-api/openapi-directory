@@ -15,6 +15,7 @@ public class ExportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportArn")
     public String exportArn;
+
     public ExportSummary withExportArn(String exportArn) {
         this.exportArn = exportArn;
         return this;
@@ -23,9 +24,11 @@ public class ExportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportStatus")
     public ExportStatusEnum exportStatus;
+
     public ExportSummary withExportStatus(ExportStatusEnum exportStatus) {
         this.exportStatus = exportStatus;
         return this;
     }
     
+    public ExportSummary(){}
 }

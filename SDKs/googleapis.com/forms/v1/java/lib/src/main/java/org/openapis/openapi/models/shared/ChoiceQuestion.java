@@ -18,6 +18,7 @@ public class ChoiceQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public Option[] options;
+
     public ChoiceQuestion withOptions(Option[] options) {
         this.options = options;
         return this;
@@ -29,6 +30,7 @@ public class ChoiceQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shuffle")
     public Boolean shuffle;
+
     public ChoiceQuestion withShuffle(Boolean shuffle) {
         this.shuffle = shuffle;
         return this;
@@ -40,9 +42,11 @@ public class ChoiceQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ChoiceQuestionTypeEnum type;
+
     public ChoiceQuestion withType(ChoiceQuestionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ChoiceQuestion(){}
 }

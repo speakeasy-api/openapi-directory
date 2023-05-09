@@ -19,9 +19,11 @@ public class VoidTransactionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public VoidTransactionResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public VoidTransactionResponse(){}
 }

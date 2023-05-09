@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class EnableVolumeIORequest {
     
     public Boolean dryRun;
+
     public EnableVolumeIORequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class EnableVolumeIORequest {
     
     
     public String volumeId;
+
     public EnableVolumeIORequest withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public EnableVolumeIORequest(@JsonProperty("VolumeId") String volumeId) {
+        this.volumeId = volumeId;
+  }
 }

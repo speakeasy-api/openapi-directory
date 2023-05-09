@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MigrationsListReposForAuthenticatedUserRequest {
@@ -12,6 +13,7 @@ public class MigrationsListReposForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=migration_id")
     public Long migrationId;
+
     public MigrationsListReposForAuthenticatedUserRequest withMigrationId(Long migrationId) {
         this.migrationId = migrationId;
         return this;
@@ -22,6 +24,7 @@ public class MigrationsListReposForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public MigrationsListReposForAuthenticatedUserRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,9 +35,13 @@ public class MigrationsListReposForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public MigrationsListReposForAuthenticatedUserRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public MigrationsListReposForAuthenticatedUserRequest(@JsonProperty("migration_id") Long migrationId) {
+        this.migrationId = migrationId;
+  }
 }

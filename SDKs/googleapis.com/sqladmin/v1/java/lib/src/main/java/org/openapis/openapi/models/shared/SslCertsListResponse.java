@@ -18,6 +18,7 @@ public class SslCertsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public SslCert[] items;
+
     public SslCertsListResponse withItems(SslCert[] items) {
         this.items = items;
         return this;
@@ -29,9 +30,11 @@ public class SslCertsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SslCertsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public SslCertsListResponse(){}
 }

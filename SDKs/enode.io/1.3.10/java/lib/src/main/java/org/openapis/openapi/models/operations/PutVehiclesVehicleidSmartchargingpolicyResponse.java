@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutVehiclesVehicleidSmartchargingpolicyResponse {
     
     public String contentType;
+
     public PutVehiclesVehicleidSmartchargingpolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PutVehiclesVehicleidSmartchargingpolicyResponse {
     
     
     public Integer statusCode;
+
     public PutVehiclesVehicleidSmartchargingpolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PutVehiclesVehicleidSmartchargingpolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutVehiclesVehicleidSmartchargingpolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PutVehiclesVehicleidSmartchargingpolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.Onevehicles1Percent7BvehicleIdPercent7D1smartChargingPolicyPutRequestBodyContentApplication1jsonSchema onevehicles1Percent7BvehicleIdPercent7D1smartChargingPolicyPutRequestBodyContentApplication1jsonSchema;
+
     public PutVehiclesVehicleidSmartchargingpolicyResponse withOnevehicles1Percent7BvehicleIdPercent7D1smartChargingPolicyPutRequestBodyContentApplication1jsonSchema(org.openapis.openapi.models.shared.Onevehicles1Percent7BvehicleIdPercent7D1smartChargingPolicyPutRequestBodyContentApplication1jsonSchema onevehicles1Percent7BvehicleIdPercent7D1smartChargingPolicyPutRequestBodyContentApplication1jsonSchema) {
         this.onevehicles1Percent7BvehicleIdPercent7D1smartChargingPolicyPutRequestBodyContentApplication1jsonSchema = onevehicles1Percent7BvehicleIdPercent7D1smartChargingPolicyPutRequestBodyContentApplication1jsonSchema;
         return this;
     }
     
+    public PutVehiclesVehicleidSmartchargingpolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

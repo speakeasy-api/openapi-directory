@@ -56,7 +56,7 @@ public class Departures {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeparturesGetForStopResponse res = new org.openapis.openapi.models.operations.DeparturesGetForStopResponse() {{
+        org.openapis.openapi.models.operations.DeparturesGetForStopResponse res = new org.openapis.openapi.models.operations.DeparturesGetForStopResponse(contentType, httpRes.statusCode()) {{
             v3DeparturesResponse = null;
             v3DeparturesResponse = null;
             body = null;
@@ -64,8 +64,6 @@ public class Departures {
             v3ErrorResponse = null;
             v3ErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -130,7 +128,7 @@ public class Departures {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeparturesGetForStopAndRouteResponse res = new org.openapis.openapi.models.operations.DeparturesGetForStopAndRouteResponse() {{
+        org.openapis.openapi.models.operations.DeparturesGetForStopAndRouteResponse res = new org.openapis.openapi.models.operations.DeparturesGetForStopAndRouteResponse(contentType, httpRes.statusCode()) {{
             v3DeparturesResponse = null;
             v3DeparturesResponse = null;
             body = null;
@@ -138,8 +136,6 @@ public class Departures {
             v3ErrorResponse = null;
             v3ErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

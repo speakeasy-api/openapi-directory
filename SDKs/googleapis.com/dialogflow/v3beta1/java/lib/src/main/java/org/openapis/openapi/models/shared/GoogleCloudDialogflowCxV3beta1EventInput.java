@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowCxV3beta1EventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public String event;
+
     public GoogleCloudDialogflowCxV3beta1EventInput withEvent(String event) {
         this.event = event;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1EventInput(){}
 }

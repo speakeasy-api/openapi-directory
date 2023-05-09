@@ -17,6 +17,7 @@ public class PostServersCreateServerResponseServerPublicNetIpv6 {
      */
     @JsonProperty("blocked")
     public Boolean blocked;
+
     public PostServersCreateServerResponseServerPublicNetIpv6 withBlocked(Boolean blocked) {
         this.blocked = blocked;
         return this;
@@ -27,6 +28,7 @@ public class PostServersCreateServerResponseServerPublicNetIpv6 {
      */
     @JsonProperty("dns_ptr")
     public PostServersCreateServerResponseServerPublicNetIpv6DnsPtr[] dnsPtr;
+
     public PostServersCreateServerResponseServerPublicNetIpv6 withDnsPtr(PostServersCreateServerResponseServerPublicNetIpv6DnsPtr[] dnsPtr) {
         this.dnsPtr = dnsPtr;
         return this;
@@ -38,6 +40,7 @@ public class PostServersCreateServerResponseServerPublicNetIpv6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PostServersCreateServerResponseServerPublicNetIpv6 withId(Long id) {
         this.id = id;
         return this;
@@ -48,9 +51,15 @@ public class PostServersCreateServerResponseServerPublicNetIpv6 {
      */
     @JsonProperty("ip")
     public String ip;
+
     public PostServersCreateServerResponseServerPublicNetIpv6 withIp(String ip) {
         this.ip = ip;
         return this;
     }
     
+    public PostServersCreateServerResponseServerPublicNetIpv6(@JsonProperty("blocked") Boolean blocked, @JsonProperty("dns_ptr") PostServersCreateServerResponseServerPublicNetIpv6DnsPtr[] dnsPtr, @JsonProperty("ip") String ip) {
+        this.blocked = blocked;
+        this.dnsPtr = dnsPtr;
+        this.ip = ip;
+  }
 }

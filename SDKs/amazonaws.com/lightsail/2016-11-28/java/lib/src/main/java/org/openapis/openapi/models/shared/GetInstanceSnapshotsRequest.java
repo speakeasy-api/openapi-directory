@@ -12,9 +12,11 @@ public class GetInstanceSnapshotsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GetInstanceSnapshotsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public GetInstanceSnapshotsRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetGroupIdResponse {
@@ -12,6 +13,7 @@ public class GetGroupIdResponse {
      */
     
     public Object accessDeniedException;
+
     public GetGroupIdResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetGroupIdResponse {
     
     
     public String contentType;
+
     public GetGroupIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetGroupIdResponse {
      */
     
     public org.openapis.openapi.models.shared.GetGroupIdResponse getGroupIdResponse;
+
     public GetGroupIdResponse withGetGroupIdResponse(org.openapis.openapi.models.shared.GetGroupIdResponse getGroupIdResponse) {
         this.getGroupIdResponse = getGroupIdResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetGroupIdResponse {
      */
     
     public Object internalServerException;
+
     public GetGroupIdResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetGroupIdResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetGroupIdResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetGroupIdResponse {
     
     
     public Integer statusCode;
+
     public GetGroupIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetGroupIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetGroupIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetGroupIdResponse {
      */
     
     public Object throttlingException;
+
     public GetGroupIdResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetGroupIdResponse {
      */
     
     public Object validationException;
+
     public GetGroupIdResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetGroupIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

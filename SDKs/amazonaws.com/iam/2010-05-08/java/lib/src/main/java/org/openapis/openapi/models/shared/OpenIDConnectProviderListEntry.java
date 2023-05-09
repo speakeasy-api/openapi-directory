@@ -15,9 +15,11 @@ public class OpenIDConnectProviderListEntry {
      */
     
     public String arn;
+
     public OpenIDConnectProviderListEntry withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public OpenIDConnectProviderListEntry(){}
 }

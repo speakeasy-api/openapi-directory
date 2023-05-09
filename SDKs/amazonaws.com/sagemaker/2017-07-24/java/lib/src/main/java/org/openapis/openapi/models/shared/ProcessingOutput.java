@@ -15,6 +15,7 @@ public class ProcessingOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppManaged")
     public Boolean appManaged;
+
     public ProcessingOutput withAppManaged(Boolean appManaged) {
         this.appManaged = appManaged;
         return this;
@@ -23,6 +24,7 @@ public class ProcessingOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureStoreOutput")
     public ProcessingFeatureStoreOutput featureStoreOutput;
+
     public ProcessingOutput withFeatureStoreOutput(ProcessingFeatureStoreOutput featureStoreOutput) {
         this.featureStoreOutput = featureStoreOutput;
         return this;
@@ -30,6 +32,7 @@ public class ProcessingOutput {
     
     @JsonProperty("OutputName")
     public String outputName;
+
     public ProcessingOutput withOutputName(String outputName) {
         this.outputName = outputName;
         return this;
@@ -38,9 +41,13 @@ public class ProcessingOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Output")
     public ProcessingS3Output s3Output;
+
     public ProcessingOutput withS3Output(ProcessingS3Output s3Output) {
         this.s3Output = s3Output;
         return this;
     }
     
+    public ProcessingOutput(@JsonProperty("OutputName") String outputName) {
+        this.outputName = outputName;
+  }
 }

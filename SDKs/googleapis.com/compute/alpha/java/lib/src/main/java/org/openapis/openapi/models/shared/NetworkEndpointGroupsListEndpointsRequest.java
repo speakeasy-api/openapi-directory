@@ -15,6 +15,7 @@ public class NetworkEndpointGroupsListEndpointsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpointFilters")
     public NetworkEndpointGroupsListEndpointsRequestNetworkEndpointFilter[] endpointFilters;
+
     public NetworkEndpointGroupsListEndpointsRequest withEndpointFilters(NetworkEndpointGroupsListEndpointsRequestNetworkEndpointFilter[] endpointFilters) {
         this.endpointFilters = endpointFilters;
         return this;
@@ -26,9 +27,11 @@ public class NetworkEndpointGroupsListEndpointsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthStatus")
     public NetworkEndpointGroupsListEndpointsRequestHealthStatusEnum healthStatus;
+
     public NetworkEndpointGroupsListEndpointsRequest withHealthStatus(NetworkEndpointGroupsListEndpointsRequestHealthStatusEnum healthStatus) {
         this.healthStatus = healthStatus;
         return this;
     }
     
+    public NetworkEndpointGroupsListEndpointsRequest(){}
 }

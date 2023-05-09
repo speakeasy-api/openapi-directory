@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class StorageProjectsHmacKeysGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public StorageProjectsHmacKeysGetSecurityOption1 option1;
+
     public StorageProjectsHmacKeysGetSecurity withOption1(StorageProjectsHmacKeysGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class StorageProjectsHmacKeysGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public StorageProjectsHmacKeysGetSecurityOption2 option2;
+
     public StorageProjectsHmacKeysGetSecurity withOption2(StorageProjectsHmacKeysGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class StorageProjectsHmacKeysGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public StorageProjectsHmacKeysGetSecurityOption3 option3;
+
     public StorageProjectsHmacKeysGetSecurity withOption3(StorageProjectsHmacKeysGetSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,9 +33,11 @@ public class StorageProjectsHmacKeysGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public StorageProjectsHmacKeysGetSecurityOption4 option4;
+
     public StorageProjectsHmacKeysGetSecurity withOption4(StorageProjectsHmacKeysGetSecurityOption4 option4) {
         this.option4 = option4;
         return this;
     }
     
+    public StorageProjectsHmacKeysGetSecurity(){}
 }

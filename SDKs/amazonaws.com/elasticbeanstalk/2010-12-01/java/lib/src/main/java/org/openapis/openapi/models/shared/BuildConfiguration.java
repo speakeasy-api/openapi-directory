@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * BuildConfiguration - Settings for an AWS CodeBuild build.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class BuildConfiguration {
     
     public String artifactName;
+
     public BuildConfiguration withArtifactName(String artifactName) {
         this.artifactName = artifactName;
         return this;
@@ -19,6 +20,7 @@ public class BuildConfiguration {
     
     
     public String codeBuildServiceRole;
+
     public BuildConfiguration withCodeBuildServiceRole(String codeBuildServiceRole) {
         this.codeBuildServiceRole = codeBuildServiceRole;
         return this;
@@ -26,6 +28,7 @@ public class BuildConfiguration {
     
     
     public ComputeTypeEnum computeType;
+
     public BuildConfiguration withComputeType(ComputeTypeEnum computeType) {
         this.computeType = computeType;
         return this;
@@ -33,6 +36,7 @@ public class BuildConfiguration {
     
     
     public String image;
+
     public BuildConfiguration withImage(String image) {
         this.image = image;
         return this;
@@ -40,9 +44,14 @@ public class BuildConfiguration {
     
     
     public Long timeoutInMinutes;
+
     public BuildConfiguration withTimeoutInMinutes(Long timeoutInMinutes) {
         this.timeoutInMinutes = timeoutInMinutes;
         return this;
     }
     
+    public BuildConfiguration(@JsonProperty("CodeBuildServiceRole") String codeBuildServiceRole, @JsonProperty("Image") String image) {
+        this.codeBuildServiceRole = codeBuildServiceRole;
+        this.image = image;
+  }
 }

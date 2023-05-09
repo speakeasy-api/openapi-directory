@@ -12,9 +12,13 @@ public class UploadDocumentsRequestBody {
      */
     @JsonProperty("documents")
     public String documents;
+
     public UploadDocumentsRequestBody withDocuments(String documents) {
         this.documents = documents;
         return this;
     }
     
+    public UploadDocumentsRequestBody(@JsonProperty("documents") String documents) {
+        this.documents = documents;
+  }
 }

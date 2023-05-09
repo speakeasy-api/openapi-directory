@@ -49,4 +49,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Operation.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleRpcStatus.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListOperationsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

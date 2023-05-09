@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposGetDeploymentResponse {
     
     public String contentType;
+
     public ReposGetDeploymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposGetDeploymentResponse {
     
     
     public Integer statusCode;
+
     public ReposGetDeploymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposGetDeploymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposGetDeploymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposGetDeploymentResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposGetDeploymentResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class ReposGetDeploymentResponse {
      */
     
     public org.openapis.openapi.models.shared.Deployment deployment;
+
     public ReposGetDeploymentResponse withDeployment(org.openapis.openapi.models.shared.Deployment deployment) {
         this.deployment = deployment;
         return this;
     }
     
+    public ReposGetDeploymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

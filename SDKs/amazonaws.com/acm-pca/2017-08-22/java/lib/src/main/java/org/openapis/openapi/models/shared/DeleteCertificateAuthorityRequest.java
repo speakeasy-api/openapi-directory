@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteCertificateAuthorityRequest {
     @JsonProperty("CertificateAuthorityArn")
     public String certificateAuthorityArn;
+
     public DeleteCertificateAuthorityRequest withCertificateAuthorityArn(String certificateAuthorityArn) {
         this.certificateAuthorityArn = certificateAuthorityArn;
         return this;
@@ -19,9 +20,13 @@ public class DeleteCertificateAuthorityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PermanentDeletionTimeInDays")
     public Long permanentDeletionTimeInDays;
+
     public DeleteCertificateAuthorityRequest withPermanentDeletionTimeInDays(Long permanentDeletionTimeInDays) {
         this.permanentDeletionTimeInDays = permanentDeletionTimeInDays;
         return this;
     }
     
+    public DeleteCertificateAuthorityRequest(@JsonProperty("CertificateAuthorityArn") String certificateAuthorityArn) {
+        this.certificateAuthorityArn = certificateAuthorityArn;
+  }
 }

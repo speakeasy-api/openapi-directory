@@ -15,6 +15,7 @@ public class ClientWorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_ac_workgroup_id")
     public Long clientAcWorkgroupId;
+
     public ClientWorkgroupDetailVO withClientAcWorkgroupId(Long clientAcWorkgroupId) {
         this.clientAcWorkgroupId = clientAcWorkgroupId;
         return this;
@@ -23,6 +24,7 @@ public class ClientWorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_workgroup_id")
     public Long clientWorkgroupId;
+
     public ClientWorkgroupDetailVO withClientWorkgroupId(Long clientWorkgroupId) {
         this.clientWorkgroupId = clientWorkgroupId;
         return this;
@@ -31,6 +33,7 @@ public class ClientWorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_workgroup_name")
     public String clientWorkgroupName;
+
     public ClientWorkgroupDetailVO withClientWorkgroupName(String clientWorkgroupName) {
         this.clientWorkgroupName = clientWorkgroupName;
         return this;
@@ -39,6 +42,7 @@ public class ClientWorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public PropertyPaAndAttVO[] customFields;
+
     public ClientWorkgroupDetailVO withCustomFields(PropertyPaAndAttVO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -50,6 +54,7 @@ public class ClientWorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("margin_percent")
     public Object marginPercent;
+
     public ClientWorkgroupDetailVO withMarginPercent(Object marginPercent) {
         this.marginPercent = marginPercent;
         return this;
@@ -61,6 +66,7 @@ public class ClientWorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("markup")
     public Object markup;
+
     public ClientWorkgroupDetailVO withMarkup(Object markup) {
         this.markup = markup;
         return this;
@@ -72,9 +78,11 @@ public class ClientWorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("markup_percent")
     public Object markupPercent;
+
     public ClientWorkgroupDetailVO withMarkupPercent(Object markupPercent) {
         this.markupPercent = markupPercent;
         return this;
     }
     
+    public ClientWorkgroupDetailVO(){}
 }

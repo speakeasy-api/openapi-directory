@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDevEndpointResponse {
@@ -12,6 +13,7 @@ public class CreateDevEndpointResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateDevEndpointResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateDevEndpointResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateDevEndpointResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -29,6 +32,7 @@ public class CreateDevEndpointResponse {
     
     
     public String contentType;
+
     public CreateDevEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateDevEndpointResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDevEndpointResponse createDevEndpointResponse;
+
     public CreateDevEndpointResponse withCreateDevEndpointResponse(org.openapis.openapi.models.shared.CreateDevEndpointResponse createDevEndpointResponse) {
         this.createDevEndpointResponse = createDevEndpointResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateDevEndpointResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateDevEndpointResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDevEndpointResponse {
      */
     
     public Object internalServiceException;
+
     public CreateDevEndpointResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class CreateDevEndpointResponse {
      */
     
     public Object invalidInputException;
+
     public CreateDevEndpointResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class CreateDevEndpointResponse {
      */
     
     public Object operationTimeoutException;
+
     public CreateDevEndpointResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -89,6 +98,7 @@ public class CreateDevEndpointResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public CreateDevEndpointResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -96,6 +106,7 @@ public class CreateDevEndpointResponse {
     
     
     public Integer statusCode;
+
     public CreateDevEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CreateDevEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDevEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class CreateDevEndpointResponse {
      */
     
     public Object validationException;
+
     public CreateDevEndpointResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateDevEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

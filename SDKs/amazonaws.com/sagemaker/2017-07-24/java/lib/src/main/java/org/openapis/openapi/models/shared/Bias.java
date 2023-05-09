@@ -15,6 +15,7 @@ public class Bias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostTrainingReport")
     public MetricsSource postTrainingReport;
+
     public Bias withPostTrainingReport(MetricsSource postTrainingReport) {
         this.postTrainingReport = postTrainingReport;
         return this;
@@ -23,6 +24,7 @@ public class Bias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreTrainingReport")
     public MetricsSource preTrainingReport;
+
     public Bias withPreTrainingReport(MetricsSource preTrainingReport) {
         this.preTrainingReport = preTrainingReport;
         return this;
@@ -31,9 +33,11 @@ public class Bias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Report")
     public MetricsSource report;
+
     public Bias withReport(MetricsSource report) {
         this.report = report;
         return this;
     }
     
+    public Bias(){}
 }

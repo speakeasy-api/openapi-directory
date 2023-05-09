@@ -18,6 +18,7 @@ public class DialogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionStatus")
     public ActionStatus actionStatus;
+
     public DialogAction withActionStatus(ActionStatus actionStatus) {
         this.actionStatus = actionStatus;
         return this;
@@ -29,9 +30,11 @@ public class DialogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialog")
     public Dialog dialog;
+
     public DialogAction withDialog(Dialog dialog) {
         this.dialog = dialog;
         return this;
     }
     
+    public DialogAction(){}
 }

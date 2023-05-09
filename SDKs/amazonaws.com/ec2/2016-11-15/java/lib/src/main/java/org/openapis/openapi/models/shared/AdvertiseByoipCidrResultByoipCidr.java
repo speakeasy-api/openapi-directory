@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AdvertiseByoipCidrResultByoipCidr {
     
     public String cidr;
+
     public AdvertiseByoipCidrResultByoipCidr withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -19,6 +20,7 @@ public class AdvertiseByoipCidrResultByoipCidr {
     
     
     public String description;
+
     public AdvertiseByoipCidrResultByoipCidr withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class AdvertiseByoipCidrResultByoipCidr {
     
     
     public AdvertiseByoipCidrResultByoipCidrStateEnum state;
+
     public AdvertiseByoipCidrResultByoipCidr withState(AdvertiseByoipCidrResultByoipCidrStateEnum state) {
         this.state = state;
         return this;
@@ -33,9 +36,11 @@ public class AdvertiseByoipCidrResultByoipCidr {
     
     
     public String statusMessage;
+
     public AdvertiseByoipCidrResultByoipCidr withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public AdvertiseByoipCidrResultByoipCidr(){}
 }

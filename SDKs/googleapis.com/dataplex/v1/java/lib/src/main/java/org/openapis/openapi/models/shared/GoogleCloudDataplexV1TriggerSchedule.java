@@ -18,9 +18,11 @@ public class GoogleCloudDataplexV1TriggerSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cron")
     public String cron;
+
     public GoogleCloudDataplexV1TriggerSchedule withCron(String cron) {
         this.cron = cron;
         return this;
     }
     
+    public GoogleCloudDataplexV1TriggerSchedule(){}
 }

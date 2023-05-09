@@ -18,6 +18,7 @@ public class NameAndKind {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public NameAndKindKindEnum kind;
+
     public NameAndKind withKind(NameAndKindKindEnum kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class NameAndKind {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NameAndKind withName(String name) {
         this.name = name;
         return this;
     }
     
+    public NameAndKind(){}
 }

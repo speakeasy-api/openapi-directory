@@ -15,9 +15,11 @@ public class RemoveDependenciesForTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.ModifyDependenciesRequest data;
+
     public RemoveDependenciesForTaskRequestBody withData(org.openapis.openapi.models.shared.ModifyDependenciesRequest data) {
         this.data = data;
         return this;
     }
     
+    public RemoveDependenciesForTaskRequestBody(){}
 }

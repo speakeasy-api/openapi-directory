@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateConfigResponse {
     
     public org.openapis.openapi.models.shared.ConfigModel configModel;
+
     public UpdateConfigResponse withConfigModel(org.openapis.openapi.models.shared.ConfigModel configModel) {
         this.configModel = configModel;
         return this;
@@ -16,6 +18,7 @@ public class UpdateConfigResponse {
     
     
     public org.openapis.openapi.models.shared.ConfigModelHaljson configModelHaljson;
+
     public UpdateConfigResponse withConfigModelHaljson(org.openapis.openapi.models.shared.ConfigModelHaljson configModelHaljson) {
         this.configModelHaljson = configModelHaljson;
         return this;
@@ -23,6 +26,7 @@ public class UpdateConfigResponse {
     
     
     public String contentType;
+
     public UpdateConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -30,6 +34,7 @@ public class UpdateConfigResponse {
     
     
     public Integer statusCode;
+
     public UpdateConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,9 +42,14 @@ public class UpdateConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

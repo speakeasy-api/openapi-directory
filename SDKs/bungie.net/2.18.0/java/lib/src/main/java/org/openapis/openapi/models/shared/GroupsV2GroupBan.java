@@ -12,6 +12,7 @@ public class GroupsV2GroupBan {
      */
     
     public UserUserInfoCard bungieNetUserInfo;
+
     public GroupsV2GroupBan withBungieNetUserInfo(UserUserInfoCard bungieNetUserInfo) {
         this.bungieNetUserInfo = bungieNetUserInfo;
         return this;
@@ -19,6 +20,7 @@ public class GroupsV2GroupBan {
     
     
     public String comment;
+
     public GroupsV2GroupBan withComment(String comment) {
         this.comment = comment;
         return this;
@@ -29,6 +31,7 @@ public class GroupsV2GroupBan {
      */
     
     public UserUserInfoCard createdBy;
+
     public GroupsV2GroupBan withCreatedBy(UserUserInfoCard createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -36,6 +39,7 @@ public class GroupsV2GroupBan {
     
     
     public OffsetDateTime dateBanned;
+
     public GroupsV2GroupBan withDateBanned(OffsetDateTime dateBanned) {
         this.dateBanned = dateBanned;
         return this;
@@ -43,6 +47,7 @@ public class GroupsV2GroupBan {
     
     
     public OffsetDateTime dateExpires;
+
     public GroupsV2GroupBan withDateExpires(OffsetDateTime dateExpires) {
         this.dateExpires = dateExpires;
         return this;
@@ -50,6 +55,7 @@ public class GroupsV2GroupBan {
     
     
     public GroupsV2GroupUserInfoCard destinyUserInfo;
+
     public GroupsV2GroupBan withDestinyUserInfo(GroupsV2GroupUserInfoCard destinyUserInfo) {
         this.destinyUserInfo = destinyUserInfo;
         return this;
@@ -57,6 +63,7 @@ public class GroupsV2GroupBan {
     
     
     public Long groupId;
+
     public GroupsV2GroupBan withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -67,9 +74,11 @@ public class GroupsV2GroupBan {
      */
     
     public UserUserInfoCard lastModifiedBy;
+
     public GroupsV2GroupBan withLastModifiedBy(UserUserInfoCard lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
     
+    public GroupsV2GroupBan(){}
 }

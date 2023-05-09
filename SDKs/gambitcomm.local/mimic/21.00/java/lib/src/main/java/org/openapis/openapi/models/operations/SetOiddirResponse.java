@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetOiddirResponse {
     
     public String contentType;
+
     public SetOiddirResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SetOiddirResponse {
     
     
     public Integer statusCode;
+
     public SetOiddirResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SetOiddirResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetOiddirResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class SetOiddirResponse {
      */
     
     public String setOiddir200ApplicationJSONString;
+
     public SetOiddirResponse withSetOiddir200ApplicationJSONString(String setOiddir200ApplicationJSONString) {
         this.setOiddir200ApplicationJSONString = setOiddir200ApplicationJSONString;
         return this;
     }
     
+    public SetOiddirResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

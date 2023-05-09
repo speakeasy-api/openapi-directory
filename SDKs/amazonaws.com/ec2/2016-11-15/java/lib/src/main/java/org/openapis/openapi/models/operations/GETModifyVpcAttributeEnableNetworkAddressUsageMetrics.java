@@ -12,9 +12,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifyVpcAttributeEnableNetworkAddressUsageMetrics {
     @SpeakeasyMetadata("queryParam:name=Value")
     public Boolean value;
+
     public GETModifyVpcAttributeEnableNetworkAddressUsageMetrics withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public GETModifyVpcAttributeEnableNetworkAddressUsageMetrics(){}
 }

@@ -15,9 +15,11 @@ public class GetUserDefinedFunctionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserDefinedFunction")
     public UserDefinedFunction userDefinedFunction;
+
     public GetUserDefinedFunctionResponse withUserDefinedFunction(UserDefinedFunction userDefinedFunction) {
         this.userDefinedFunction = userDefinedFunction;
         return this;
     }
     
+    public GetUserDefinedFunctionResponse(){}
 }

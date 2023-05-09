@@ -15,6 +15,7 @@ public class ScreenshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callback_url")
     public String callbackUrl;
+
     public ScreenshotDetails withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
@@ -23,6 +24,7 @@ public class ScreenshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defer_time")
     public Double deferTime;
+
     public ScreenshotDetails withDeferTime(Double deferTime) {
         this.deferTime = deferTime;
         return this;
@@ -31,6 +33,7 @@ public class ScreenshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenshots")
     public ScreenshotType[] screenshots;
+
     public ScreenshotDetails withScreenshots(ScreenshotType[] screenshots) {
         this.screenshots = screenshots;
         return this;
@@ -39,6 +42,7 @@ public class ScreenshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("test_id")
     public String testId;
+
     public ScreenshotDetails withTestId(String testId) {
         this.testId = testId;
         return this;
@@ -47,6 +51,7 @@ public class ScreenshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("test_status")
     public String testStatus;
+
     public ScreenshotDetails withTestStatus(String testStatus) {
         this.testStatus = testStatus;
         return this;
@@ -55,9 +60,11 @@ public class ScreenshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ScreenshotDetails withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ScreenshotDetails(){}
 }

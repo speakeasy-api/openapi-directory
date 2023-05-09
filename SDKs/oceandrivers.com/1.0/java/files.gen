@@ -49,4 +49,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetSocibWeatherStationR
 lib/src/main/java/org/openapis/openapi/models/operations/GetWeatherDisplayRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWeatherDisplayResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWebCamsResponse.java
+docs/sdk/README.md
+docs/odweather/README.md
 USAGE.md

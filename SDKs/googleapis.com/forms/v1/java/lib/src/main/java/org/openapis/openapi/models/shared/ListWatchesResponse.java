@@ -18,9 +18,11 @@ public class ListWatchesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("watches")
     public Watch[] watches;
+
     public ListWatchesResponse withWatches(Watch[] watches) {
         this.watches = watches;
         return this;
     }
     
+    public ListWatchesResponse(){}
 }

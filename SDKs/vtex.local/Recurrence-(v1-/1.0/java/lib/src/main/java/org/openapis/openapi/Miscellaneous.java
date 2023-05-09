@@ -63,10 +63,8 @@ public class Miscellaneous {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddrecurrenceitemResponse res = new org.openapis.openapi.models.operations.AddrecurrenceitemResponse() {{
+        org.openapis.openapi.models.operations.AddrecurrenceitemResponse res = new org.openapis.openapi.models.operations.AddrecurrenceitemResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,10 +109,8 @@ public class Miscellaneous {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRecurrencebyemailResponse res = new org.openapis.openapi.models.operations.GetRecurrencebyemailResponse() {{
+        org.openapis.openapi.models.operations.GetRecurrencebyemailResponse res = new org.openapis.openapi.models.operations.GetRecurrencebyemailResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,10 +149,8 @@ public class Miscellaneous {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRecurrencebyrecurrenceIdResponse res = new org.openapis.openapi.models.operations.GetRecurrencebyrecurrenceIdResponse() {{
+        org.openapis.openapi.models.operations.GetRecurrencebyrecurrenceIdResponse res = new org.openapis.openapi.models.operations.GetRecurrencebyrecurrenceIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,10 +189,8 @@ public class Miscellaneous {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetpaymentaccountsResponse res = new org.openapis.openapi.models.operations.GetpaymentaccountsResponse() {{
+        org.openapis.openapi.models.operations.GetpaymentaccountsResponse res = new org.openapis.openapi.models.operations.GetpaymentaccountsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -237,10 +229,8 @@ public class Miscellaneous {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetrecurrenceaddressesResponse res = new org.openapis.openapi.models.operations.GetrecurrenceaddressesResponse() {{
+        org.openapis.openapi.models.operations.GetrecurrenceaddressesResponse res = new org.openapis.openapi.models.operations.GetrecurrenceaddressesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -279,10 +269,8 @@ public class Miscellaneous {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetrecurrencesettingsResponse res = new org.openapis.openapi.models.operations.GetrecurrencesettingsResponse() {{
+        org.openapis.openapi.models.operations.GetrecurrencesettingsResponse res = new org.openapis.openapi.models.operations.GetrecurrencesettingsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -321,10 +309,8 @@ public class Miscellaneous {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetselfrecurrenceResponse res = new org.openapis.openapi.models.operations.GetselfrecurrenceResponse() {{
+        org.openapis.openapi.models.operations.GetselfrecurrenceResponse res = new org.openapis.openapi.models.operations.GetselfrecurrenceResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -368,10 +354,8 @@ public class Miscellaneous {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReindexrecurrenceResponse res = new org.openapis.openapi.models.operations.ReindexrecurrenceResponse() {{
+        org.openapis.openapi.models.operations.ReindexrecurrenceResponse res = new org.openapis.openapi.models.operations.ReindexrecurrenceResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -415,10 +399,8 @@ public class Miscellaneous {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatepartialrecurrenceResponse res = new org.openapis.openapi.models.operations.UpdatepartialrecurrenceResponse() {{
+        org.openapis.openapi.models.operations.UpdatepartialrecurrenceResponse res = new org.openapis.openapi.models.operations.UpdatepartialrecurrenceResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -462,10 +444,8 @@ public class Miscellaneous {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdaterecurrenceResponse res = new org.openapis.openapi.models.operations.UpdaterecurrenceResponse() {{
+        org.openapis.openapi.models.operations.UpdaterecurrenceResponse res = new org.openapis.openapi.models.operations.UpdaterecurrenceResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -509,10 +489,8 @@ public class Miscellaneous {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdaterecurrencesettingsResponse res = new org.openapis.openapi.models.operations.UpdaterecurrencesettingsResponse() {{
+        org.openapis.openapi.models.operations.UpdaterecurrencesettingsResponse res = new org.openapis.openapi.models.operations.UpdaterecurrencesettingsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -20,6 +20,7 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostName")
     public String hostName;
+
     public VirtualMachineDetails withHostName(String hostName) {
         this.hostName = hostName;
         return this;
@@ -28,6 +29,7 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HypervisorId")
     public String hypervisorId;
+
     public VirtualMachineDetails withHypervisorId(String hypervisorId) {
         this.hypervisorId = hypervisorId;
         return this;
@@ -38,6 +40,7 @@ public class VirtualMachineDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastBackupDate")
     public OffsetDateTime lastBackupDate;
+
     public VirtualMachineDetails withLastBackupDate(OffsetDateTime lastBackupDate) {
         this.lastBackupDate = lastBackupDate;
         return this;
@@ -46,6 +49,7 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public VirtualMachineDetails withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +58,7 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public VirtualMachineDetails withPath(String path) {
         this.path = path;
         return this;
@@ -62,6 +67,7 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public VirtualMachineDetails withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -70,9 +76,11 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VmwareTags")
     public VmwareTag[] vmwareTags;
+
     public VirtualMachineDetails withVmwareTags(VmwareTag[] vmwareTags) {
         this.vmwareTags = vmwareTags;
         return this;
     }
     
+    public VirtualMachineDetails(){}
 }

@@ -18,9 +18,11 @@ public class AgeRangeTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ageRange")
     public AgeRangeTargetingOptionDetailsAgeRangeEnum ageRange;
+
     public AgeRangeTargetingOptionDetails withAgeRange(AgeRangeTargetingOptionDetailsAgeRangeEnum ageRange) {
         this.ageRange = ageRange;
         return this;
     }
     
+    public AgeRangeTargetingOptionDetails(){}
 }

@@ -23,6 +23,7 @@ public class IndividualName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public IndividualNameDirectionEnum direction;
+
     public IndividualName withDirection(IndividualNameDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -34,6 +35,7 @@ public class IndividualName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("familyName")
     public String familyName;
+
     public IndividualName withFamilyName(String familyName) {
         this.familyName = familyName;
         return this;
@@ -45,6 +47,7 @@ public class IndividualName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formalSalutation")
     public String formalSalutation;
+
     public IndividualName withFormalSalutation(String formalSalutation) {
         this.formalSalutation = formalSalutation;
         return this;
@@ -58,6 +61,7 @@ public class IndividualName {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("fromDate")
     public OffsetDateTime fromDate;
+
     public IndividualName withFromDate(OffsetDateTime fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -69,6 +73,7 @@ public class IndividualName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("givenName")
     public String givenName;
+
     public IndividualName withGivenName(String givenName) {
         this.givenName = givenName;
         return this;
@@ -80,6 +85,7 @@ public class IndividualName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public IndividualName withId(String id) {
         this.id = id;
         return this;
@@ -91,6 +97,7 @@ public class IndividualName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("informalSalutation")
     public String informalSalutation;
+
     public IndividualName withInformalSalutation(String informalSalutation) {
         this.informalSalutation = informalSalutation;
         return this;
@@ -102,6 +109,7 @@ public class IndividualName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("middleName")
     public String middleName;
+
     public IndividualName withMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
@@ -113,6 +121,7 @@ public class IndividualName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namePrefix")
     public IndividualNameNamePrefixEnum namePrefix;
+
     public IndividualName withNamePrefix(IndividualNameNamePrefixEnum namePrefix) {
         this.namePrefix = namePrefix;
         return this;
@@ -124,6 +133,7 @@ public class IndividualName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nameSuffix")
     public String nameSuffix;
+
     public IndividualName withNameSuffix(String nameSuffix) {
         this.nameSuffix = nameSuffix;
         return this;
@@ -135,6 +145,7 @@ public class IndividualName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nameType")
     public IndividualNameNameTypeEnum nameType;
+
     public IndividualName withNameType(IndividualNameNameTypeEnum nameType) {
         this.nameType = nameType;
         return this;
@@ -148,9 +159,11 @@ public class IndividualName {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("toDate")
     public OffsetDateTime toDate;
+
     public IndividualName withToDate(OffsetDateTime toDate) {
         this.toDate = toDate;
         return this;
     }
     
+    public IndividualName(){}
 }

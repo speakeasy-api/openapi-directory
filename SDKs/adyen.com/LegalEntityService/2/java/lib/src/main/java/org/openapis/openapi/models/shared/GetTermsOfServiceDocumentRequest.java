@@ -15,6 +15,7 @@ public class GetTermsOfServiceDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public GetTermsOfServiceDocumentRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -26,9 +27,11 @@ public class GetTermsOfServiceDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GetTermsOfServiceDocumentRequestTypeEnum type;
+
     public GetTermsOfServiceDocumentRequest withType(GetTermsOfServiceDocumentRequestTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetTermsOfServiceDocumentRequest(){}
 }

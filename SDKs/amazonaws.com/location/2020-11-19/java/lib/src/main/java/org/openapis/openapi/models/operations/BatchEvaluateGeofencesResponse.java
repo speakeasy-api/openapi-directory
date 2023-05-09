@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchEvaluateGeofencesResponse {
@@ -12,6 +13,7 @@ public class BatchEvaluateGeofencesResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchEvaluateGeofencesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchEvaluateGeofencesResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchEvaluateGeofencesResponse batchEvaluateGeofencesResponse;
+
     public BatchEvaluateGeofencesResponse withBatchEvaluateGeofencesResponse(org.openapis.openapi.models.shared.BatchEvaluateGeofencesResponse batchEvaluateGeofencesResponse) {
         this.batchEvaluateGeofencesResponse = batchEvaluateGeofencesResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchEvaluateGeofencesResponse {
     
     
     public String contentType;
+
     public BatchEvaluateGeofencesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchEvaluateGeofencesResponse {
      */
     
     public Object internalServerException;
+
     public BatchEvaluateGeofencesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class BatchEvaluateGeofencesResponse {
     
     
     public Integer statusCode;
+
     public BatchEvaluateGeofencesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchEvaluateGeofencesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchEvaluateGeofencesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class BatchEvaluateGeofencesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchEvaluateGeofencesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class BatchEvaluateGeofencesResponse {
      */
     
     public Object throttlingException;
+
     public BatchEvaluateGeofencesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class BatchEvaluateGeofencesResponse {
      */
     
     public Object validationException;
+
     public BatchEvaluateGeofencesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchEvaluateGeofencesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

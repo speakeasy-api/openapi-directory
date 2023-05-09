@@ -18,6 +18,7 @@ public class ConfigManagementGatekeeperDeploymentState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gatekeeperAudit")
     public ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum gatekeeperAudit;
+
     public ConfigManagementGatekeeperDeploymentState withGatekeeperAudit(ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum gatekeeperAudit) {
         this.gatekeeperAudit = gatekeeperAudit;
         return this;
@@ -29,6 +30,7 @@ public class ConfigManagementGatekeeperDeploymentState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gatekeeperControllerManagerState")
     public ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum gatekeeperControllerManagerState;
+
     public ConfigManagementGatekeeperDeploymentState withGatekeeperControllerManagerState(ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum gatekeeperControllerManagerState) {
         this.gatekeeperControllerManagerState = gatekeeperControllerManagerState;
         return this;
@@ -40,9 +42,11 @@ public class ConfigManagementGatekeeperDeploymentState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gatekeeperMutation")
     public ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum gatekeeperMutation;
+
     public ConfigManagementGatekeeperDeploymentState withGatekeeperMutation(ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum gatekeeperMutation) {
         this.gatekeeperMutation = gatekeeperMutation;
         return this;
     }
     
+    public ConfigManagementGatekeeperDeploymentState(){}
 }

@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DeleteFaxSecurity;
 import org.openapis.openapi.models.operations.DeleteFaxRequest;
 import org.openapis.openapi.models.operations.DeleteFaxResponse;
+import org.openapis.openapi.models.operations.DeleteFaxSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,11 +26,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteFaxRequest req = new DeleteFaxRequest() {{
-                sid = "corrupti";
-            }}            
+            DeleteFaxRequest req = new DeleteFaxRequest("corrupti");            
 
-            DeleteFaxResponse res = sdk.deleteFax(req, new DeleteFaxSecurity() {{
+            DeleteFaxResponse res = sdk.deleteFax(req, new DeleteFaxSecurity("provident", "distinctio") {{
                 password = "YOUR_PASSWORD_HERE";
                 username = "YOUR_USERNAME_HERE";
             }});
@@ -42,20 +39,22 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `deleteFax` - Delete a specific fax and its associated media.
-* `deleteFaxMedia` - Delete a specific fax media instance.
-* `fetchFax` - Fetch a specific fax.
-* `fetchFaxMedia` - Fetch a specific fax media instance.
-* `listFax` - Retrieve a list of all faxes.
-* `listFaxMedia` - Retrieve a list of all fax media instances for the specified fax.
+* [deleteFax](docs/sdk/README.md#deletefax) - Delete a specific fax and its associated media.
+* [deleteFaxMedia](docs/sdk/README.md#deletefaxmedia) - Delete a specific fax media instance.
+* [fetchFax](docs/sdk/README.md#fetchfax) - Fetch a specific fax.
+* [fetchFaxMedia](docs/sdk/README.md#fetchfaxmedia) - Fetch a specific fax media instance.
+* [listFax](docs/sdk/README.md#listfax) - Retrieve a list of all faxes.
+* [listFaxMedia](docs/sdk/README.md#listfaxmedia) - Retrieve a list of all fax media instances for the specified fax.
 <!-- End SDK Available Operations -->
 
 ### Maturity

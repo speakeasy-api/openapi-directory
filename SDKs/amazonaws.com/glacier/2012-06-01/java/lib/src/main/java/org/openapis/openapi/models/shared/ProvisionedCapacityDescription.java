@@ -15,6 +15,7 @@ public class ProvisionedCapacityDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityId")
     public String capacityId;
+
     public ProvisionedCapacityDescription withCapacityId(String capacityId) {
         this.capacityId = capacityId;
         return this;
@@ -23,6 +24,7 @@ public class ProvisionedCapacityDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpirationDate")
     public String expirationDate;
+
     public ProvisionedCapacityDescription withExpirationDate(String expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -31,9 +33,11 @@ public class ProvisionedCapacityDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartDate")
     public String startDate;
+
     public ProvisionedCapacityDescription withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public ProvisionedCapacityDescription(){}
 }

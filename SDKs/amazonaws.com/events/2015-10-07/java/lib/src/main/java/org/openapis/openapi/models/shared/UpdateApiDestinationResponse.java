@@ -20,6 +20,7 @@ public class UpdateApiDestinationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiDestinationArn")
     public String apiDestinationArn;
+
     public UpdateApiDestinationResponse withApiDestinationArn(String apiDestinationArn) {
         this.apiDestinationArn = apiDestinationArn;
         return this;
@@ -28,6 +29,7 @@ public class UpdateApiDestinationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiDestinationState")
     public ApiDestinationStateEnum apiDestinationState;
+
     public UpdateApiDestinationResponse withApiDestinationState(ApiDestinationStateEnum apiDestinationState) {
         this.apiDestinationState = apiDestinationState;
         return this;
@@ -38,6 +40,7 @@ public class UpdateApiDestinationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public UpdateApiDestinationResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -48,9 +51,11 @@ public class UpdateApiDestinationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public UpdateApiDestinationResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
     }
     
+    public UpdateApiDestinationResponse(){}
 }

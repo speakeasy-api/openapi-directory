@@ -15,9 +15,11 @@ public class QueryParameterMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exact")
     public String exact;
+
     public QueryParameterMatch withExact(String exact) {
         this.exact = exact;
         return this;
     }
     
+    public QueryParameterMatch(){}
 }

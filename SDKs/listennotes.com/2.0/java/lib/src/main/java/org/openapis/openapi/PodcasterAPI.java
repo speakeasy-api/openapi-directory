@@ -72,11 +72,9 @@ public class PodcasterAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePodcastByIdResponse res = new org.openapis.openapi.models.operations.DeletePodcastByIdResponse() {{
+        org.openapis.openapi.models.operations.DeletePodcastByIdResponse res = new org.openapis.openapi.models.operations.DeletePodcastByIdResponse(contentType, httpRes.statusCode()) {{
             deletePodcastResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,11 +127,9 @@ public class PodcasterAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubmitPodcastResponse res = new org.openapis.openapi.models.operations.SubmitPodcastResponse() {{
+        org.openapis.openapi.models.operations.SubmitPodcastResponse res = new org.openapis.openapi.models.operations.SubmitPodcastResponse(contentType, httpRes.statusCode()) {{
             submitPodcastResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

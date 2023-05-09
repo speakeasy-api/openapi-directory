@@ -15,6 +15,7 @@ public class RunFleetAdvisorLsaAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LsaAnalysisId")
     public String lsaAnalysisId;
+
     public RunFleetAdvisorLsaAnalysisResponse withLsaAnalysisId(String lsaAnalysisId) {
         this.lsaAnalysisId = lsaAnalysisId;
         return this;
@@ -23,9 +24,11 @@ public class RunFleetAdvisorLsaAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public RunFleetAdvisorLsaAnalysisResponse withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public RunFleetAdvisorLsaAnalysisResponse(){}
 }

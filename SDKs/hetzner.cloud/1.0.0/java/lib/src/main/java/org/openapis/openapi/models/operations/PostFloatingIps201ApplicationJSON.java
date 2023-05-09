@@ -15,6 +15,7 @@ public class PostFloatingIps201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public PostFloatingIps201ApplicationJSONAction action;
+
     public PostFloatingIps201ApplicationJSON withAction(PostFloatingIps201ApplicationJSONAction action) {
         this.action = action;
         return this;
@@ -22,9 +23,13 @@ public class PostFloatingIps201ApplicationJSON {
     
     @JsonProperty("floating_ip")
     public PostFloatingIps201ApplicationJSONFloatingIp floatingIp;
+
     public PostFloatingIps201ApplicationJSON withFloatingIp(PostFloatingIps201ApplicationJSONFloatingIp floatingIp) {
         this.floatingIp = floatingIp;
         return this;
     }
     
+    public PostFloatingIps201ApplicationJSON(@JsonProperty("floating_ip") PostFloatingIps201ApplicationJSONFloatingIp floatingIp) {
+        this.floatingIp = floatingIp;
+  }
 }

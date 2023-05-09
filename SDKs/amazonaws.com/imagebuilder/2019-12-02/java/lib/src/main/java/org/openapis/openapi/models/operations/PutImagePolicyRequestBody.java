@@ -12,6 +12,7 @@ public class PutImagePolicyRequestBody {
      */
     @JsonProperty("imageArn")
     public String imageArn;
+
     public PutImagePolicyRequestBody withImageArn(String imageArn) {
         this.imageArn = imageArn;
         return this;
@@ -22,9 +23,14 @@ public class PutImagePolicyRequestBody {
      */
     @JsonProperty("policy")
     public String policy;
+
     public PutImagePolicyRequestBody withPolicy(String policy) {
         this.policy = policy;
         return this;
     }
     
+    public PutImagePolicyRequestBody(@JsonProperty("imageArn") String imageArn, @JsonProperty("policy") String policy) {
+        this.imageArn = imageArn;
+        this.policy = policy;
+  }
 }

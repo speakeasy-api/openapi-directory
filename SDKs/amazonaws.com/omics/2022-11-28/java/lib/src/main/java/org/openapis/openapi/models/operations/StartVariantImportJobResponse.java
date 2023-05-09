@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartVariantImportJobResponse {
@@ -12,6 +13,7 @@ public class StartVariantImportJobResponse {
      */
     
     public Object accessDeniedException;
+
     public StartVariantImportJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StartVariantImportJobResponse {
     
     
     public String contentType;
+
     public StartVariantImportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartVariantImportJobResponse {
      */
     
     public Object internalServerException;
+
     public StartVariantImportJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class StartVariantImportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartVariantImportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartVariantImportJobResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartVariantImportJobResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -59,6 +65,7 @@ public class StartVariantImportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartVariantImportResponse startVariantImportResponse;
+
     public StartVariantImportJobResponse withStartVariantImportResponse(org.openapis.openapi.models.shared.StartVariantImportResponse startVariantImportResponse) {
         this.startVariantImportResponse = startVariantImportResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartVariantImportJobResponse {
     
     
     public Integer statusCode;
+
     public StartVariantImportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartVariantImportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartVariantImportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class StartVariantImportJobResponse {
      */
     
     public Object throttlingException;
+
     public StartVariantImportJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class StartVariantImportJobResponse {
      */
     
     public Object validationException;
+
     public StartVariantImportJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartVariantImportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

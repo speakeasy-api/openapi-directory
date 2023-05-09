@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsResponse {
     
     public String contentType;
+
     public DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsRespons
      */
     
     public org.openapis.openapi.models.shared.EditGuaranteedOrderReadAccessorsResponse editGuaranteedOrderReadAccessorsResponse;
+
     public DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsResponse withEditGuaranteedOrderReadAccessorsResponse(org.openapis.openapi.models.shared.EditGuaranteedOrderReadAccessorsResponse editGuaranteedOrderReadAccessorsResponse) {
         this.editGuaranteedOrderReadAccessorsResponse = editGuaranteedOrderReadAccessorsResponse;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsRespons
     
     
     public Integer statusCode;
+
     public DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsRespons
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

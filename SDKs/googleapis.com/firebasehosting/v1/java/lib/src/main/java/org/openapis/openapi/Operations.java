@@ -60,11 +60,9 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasehostingOperationsCancelResponse res = new org.openapis.openapi.models.operations.FirebasehostingOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.FirebasehostingOperationsCancelResponse res = new org.openapis.openapi.models.operations.FirebasehostingOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasehostingOperationsDeleteResponse res = new org.openapis.openapi.models.operations.FirebasehostingOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.FirebasehostingOperationsDeleteResponse res = new org.openapis.openapi.models.operations.FirebasehostingOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasehostingOperationsListResponse res = new org.openapis.openapi.models.operations.FirebasehostingOperationsListResponse() {{
+        org.openapis.openapi.models.operations.FirebasehostingOperationsListResponse res = new org.openapis.openapi.models.operations.FirebasehostingOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

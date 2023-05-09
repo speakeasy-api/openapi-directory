@@ -121,13 +121,11 @@ public class RouteOptimizationAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AsyncVRPResponse res = new org.openapis.openapi.models.operations.AsyncVRPResponse() {{
+        org.openapis.openapi.models.operations.AsyncVRPResponse res = new org.openapis.openapi.models.operations.AsyncVRPResponse(contentType, httpRes.statusCode()) {{
             jobId = null;
             badRequest = null;
             internalErrorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -187,13 +185,11 @@ public class RouteOptimizationAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSolutionResponse res = new org.openapis.openapi.models.operations.GetSolutionResponse() {{
+        org.openapis.openapi.models.operations.GetSolutionResponse res = new org.openapis.openapi.models.operations.GetSolutionResponse(contentType, httpRes.statusCode()) {{
             response = null;
             badRequest = null;
             getSolution404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -266,13 +262,11 @@ public class RouteOptimizationAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SolveVRPResponse res = new org.openapis.openapi.models.operations.SolveVRPResponse() {{
+        org.openapis.openapi.models.operations.SolveVRPResponse res = new org.openapis.openapi.models.operations.SolveVRPResponse(contentType, httpRes.statusCode()) {{
             response = null;
             badRequest = null;
             internalErrorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

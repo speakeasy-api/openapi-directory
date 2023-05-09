@@ -18,6 +18,7 @@ public class InventorySourceAccessors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertisers")
     public InventorySourceAccessorsAdvertiserAccessors advertisers;
+
     public InventorySourceAccessors withAdvertisers(InventorySourceAccessorsAdvertiserAccessors advertisers) {
         this.advertisers = advertisers;
         return this;
@@ -29,9 +30,11 @@ public class InventorySourceAccessors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partner")
     public InventorySourceAccessorsPartnerAccessor partner;
+
     public InventorySourceAccessors withPartner(InventorySourceAccessorsPartnerAccessor partner) {
         this.partner = partner;
         return this;
     }
     
+    public InventorySourceAccessors(){}
 }

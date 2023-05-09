@@ -73,4 +73,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/UsageReports.java
 lib/src/main/java/org/openapis/openapi/models/shared/UsageReportEntity.java
 lib/src/main/java/org/openapis/openapi/models/shared/UsageReportParameters.java
 lib/src/main/java/org/openapis/openapi/models/shared/UsageReport.java
+docs/sdk/README.md
+docs/activities/README.md
+docs/channels/README.md
+docs/customerusagereports/README.md
+docs/entityusagereports/README.md
+docs/userusagereport/README.md
 USAGE.md

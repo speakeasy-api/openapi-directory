@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LicensingLicenseAssignmentsListForProductRequest {
@@ -12,6 +13,7 @@ public class LicensingLicenseAssignmentsListForProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public LicensingLicenseAssignmentsListForProductRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class LicensingLicenseAssignmentsListForProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public LicensingLicenseAssignmentsListForProductRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class LicensingLicenseAssignmentsListForProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public LicensingLicenseAssignmentsListForProductRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class LicensingLicenseAssignmentsListForProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public LicensingLicenseAssignmentsListForProductRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class LicensingLicenseAssignmentsListForProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customerId")
     public String customerId;
+
     public LicensingLicenseAssignmentsListForProductRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -62,6 +68,7 @@ public class LicensingLicenseAssignmentsListForProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public LicensingLicenseAssignmentsListForProductRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class LicensingLicenseAssignmentsListForProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public LicensingLicenseAssignmentsListForProductRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class LicensingLicenseAssignmentsListForProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public LicensingLicenseAssignmentsListForProductRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -92,6 +101,7 @@ public class LicensingLicenseAssignmentsListForProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public LicensingLicenseAssignmentsListForProductRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class LicensingLicenseAssignmentsListForProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public LicensingLicenseAssignmentsListForProductRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -112,6 +123,7 @@ public class LicensingLicenseAssignmentsListForProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public LicensingLicenseAssignmentsListForProductRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class LicensingLicenseAssignmentsListForProductRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
     public String productId;
+
     public LicensingLicenseAssignmentsListForProductRequest withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -132,6 +145,7 @@ public class LicensingLicenseAssignmentsListForProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public LicensingLicenseAssignmentsListForProductRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -142,6 +156,7 @@ public class LicensingLicenseAssignmentsListForProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public LicensingLicenseAssignmentsListForProductRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,9 +167,14 @@ public class LicensingLicenseAssignmentsListForProductRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public LicensingLicenseAssignmentsListForProductRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public LicensingLicenseAssignmentsListForProductRequest(@JsonProperty("customerId") String customerId, @JsonProperty("productId") String productId) {
+        this.customerId = customerId;
+        this.productId = productId;
+  }
 }

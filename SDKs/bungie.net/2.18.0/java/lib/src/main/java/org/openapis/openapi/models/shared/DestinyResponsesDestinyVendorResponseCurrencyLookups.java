@@ -18,6 +18,7 @@ public class DestinyResponsesDestinyVendorResponseCurrencyLookups {
      */
     
     public DestinyComponentsInventoryDestinyCurrenciesComponent data;
+
     public DestinyResponsesDestinyVendorResponseCurrencyLookups withData(DestinyComponentsInventoryDestinyCurrenciesComponent data) {
         this.data = data;
         return this;
@@ -28,6 +29,7 @@ public class DestinyResponsesDestinyVendorResponseCurrencyLookups {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyVendorResponseCurrencyLookups withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -35,9 +37,11 @@ public class DestinyResponsesDestinyVendorResponseCurrencyLookups {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyVendorResponseCurrencyLookups withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyVendorResponseCurrencyLookups(){}
 }

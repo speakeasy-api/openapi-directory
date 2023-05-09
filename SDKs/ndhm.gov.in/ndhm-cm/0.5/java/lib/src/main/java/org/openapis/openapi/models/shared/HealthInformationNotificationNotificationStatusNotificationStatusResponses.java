@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HealthInformationNotificationNotificationStatusNotificationStatusResponses {
     @JsonProperty("careContextReference")
     public String careContextReference;
+
     public HealthInformationNotificationNotificationStatusNotificationStatusResponses withCareContextReference(String careContextReference) {
         this.careContextReference = careContextReference;
         return this;
@@ -19,6 +20,7 @@ public class HealthInformationNotificationNotificationStatusNotificationStatusRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public HealthInformationNotificationNotificationStatusNotificationStatusResponses withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +28,14 @@ public class HealthInformationNotificationNotificationStatusNotificationStatusRe
     
     @JsonProperty("hiStatus")
     public HealthInformationNotificationNotificationStatusNotificationStatusResponsesHiStatusEnum hiStatus;
+
     public HealthInformationNotificationNotificationStatusNotificationStatusResponses withHiStatus(HealthInformationNotificationNotificationStatusNotificationStatusResponsesHiStatusEnum hiStatus) {
         this.hiStatus = hiStatus;
         return this;
     }
     
+    public HealthInformationNotificationNotificationStatusNotificationStatusResponses(@JsonProperty("careContextReference") String careContextReference, @JsonProperty("hiStatus") HealthInformationNotificationNotificationStatusNotificationStatusResponsesHiStatusEnum hiStatus) {
+        this.careContextReference = careContextReference;
+        this.hiStatus = hiStatus;
+  }
 }

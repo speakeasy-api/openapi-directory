@@ -12,9 +12,13 @@ public class ConsentRequestInitResponseConsentRequest {
      */
     @JsonProperty("id")
     public String id;
+
     public ConsentRequestInitResponseConsentRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ConsentRequestInitResponseConsentRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

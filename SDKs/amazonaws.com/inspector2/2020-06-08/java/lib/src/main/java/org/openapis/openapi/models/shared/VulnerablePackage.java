@@ -15,6 +15,7 @@ public class VulnerablePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arch")
     public String arch;
+
     public VulnerablePackage withArch(String arch) {
         this.arch = arch;
         return this;
@@ -23,6 +24,7 @@ public class VulnerablePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("epoch")
     public Long epoch;
+
     public VulnerablePackage withEpoch(Long epoch) {
         this.epoch = epoch;
         return this;
@@ -31,6 +33,7 @@ public class VulnerablePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filePath")
     public String filePath;
+
     public VulnerablePackage withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
@@ -39,6 +42,7 @@ public class VulnerablePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedInVersion")
     public String fixedInVersion;
+
     public VulnerablePackage withFixedInVersion(String fixedInVersion) {
         this.fixedInVersion = fixedInVersion;
         return this;
@@ -46,6 +50,7 @@ public class VulnerablePackage {
     
     @JsonProperty("name")
     public String name;
+
     public VulnerablePackage withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +59,7 @@ public class VulnerablePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageManager")
     public PackageManagerEnum packageManager;
+
     public VulnerablePackage withPackageManager(PackageManagerEnum packageManager) {
         this.packageManager = packageManager;
         return this;
@@ -62,6 +68,7 @@ public class VulnerablePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release")
     public String release;
+
     public VulnerablePackage withRelease(String release) {
         this.release = release;
         return this;
@@ -70,6 +77,7 @@ public class VulnerablePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remediation")
     public String remediation;
+
     public VulnerablePackage withRemediation(String remediation) {
         this.remediation = remediation;
         return this;
@@ -78,6 +86,7 @@ public class VulnerablePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceLambdaLayerArn")
     public String sourceLambdaLayerArn;
+
     public VulnerablePackage withSourceLambdaLayerArn(String sourceLambdaLayerArn) {
         this.sourceLambdaLayerArn = sourceLambdaLayerArn;
         return this;
@@ -86,6 +95,7 @@ public class VulnerablePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceLayerHash")
     public String sourceLayerHash;
+
     public VulnerablePackage withSourceLayerHash(String sourceLayerHash) {
         this.sourceLayerHash = sourceLayerHash;
         return this;
@@ -93,9 +103,14 @@ public class VulnerablePackage {
     
     @JsonProperty("version")
     public String version;
+
     public VulnerablePackage withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public VulnerablePackage(@JsonProperty("name") String name, @JsonProperty("version") String version) {
+        this.name = name;
+        this.version = version;
+  }
 }

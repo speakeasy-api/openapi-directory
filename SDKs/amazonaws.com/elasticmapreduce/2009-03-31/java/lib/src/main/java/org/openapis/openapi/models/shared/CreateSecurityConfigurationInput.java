@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateSecurityConfigurationInput {
     @JsonProperty("Name")
     public String name;
+
     public CreateSecurityConfigurationInput withName(String name) {
         this.name = name;
         return this;
@@ -16,9 +17,14 @@ public class CreateSecurityConfigurationInput {
     
     @JsonProperty("SecurityConfiguration")
     public String securityConfiguration;
+
     public CreateSecurityConfigurationInput withSecurityConfiguration(String securityConfiguration) {
         this.securityConfiguration = securityConfiguration;
         return this;
     }
     
+    public CreateSecurityConfigurationInput(@JsonProperty("Name") String name, @JsonProperty("SecurityConfiguration") String securityConfiguration) {
+        this.name = name;
+        this.securityConfiguration = securityConfiguration;
+  }
 }

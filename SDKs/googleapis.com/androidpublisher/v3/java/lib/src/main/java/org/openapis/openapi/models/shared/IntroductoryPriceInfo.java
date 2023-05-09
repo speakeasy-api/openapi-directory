@@ -18,6 +18,7 @@ public class IntroductoryPriceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("introductoryPriceAmountMicros")
     public String introductoryPriceAmountMicros;
+
     public IntroductoryPriceInfo withIntroductoryPriceAmountMicros(String introductoryPriceAmountMicros) {
         this.introductoryPriceAmountMicros = introductoryPriceAmountMicros;
         return this;
@@ -29,6 +30,7 @@ public class IntroductoryPriceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("introductoryPriceCurrencyCode")
     public String introductoryPriceCurrencyCode;
+
     public IntroductoryPriceInfo withIntroductoryPriceCurrencyCode(String introductoryPriceCurrencyCode) {
         this.introductoryPriceCurrencyCode = introductoryPriceCurrencyCode;
         return this;
@@ -40,6 +42,7 @@ public class IntroductoryPriceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("introductoryPriceCycles")
     public Integer introductoryPriceCycles;
+
     public IntroductoryPriceInfo withIntroductoryPriceCycles(Integer introductoryPriceCycles) {
         this.introductoryPriceCycles = introductoryPriceCycles;
         return this;
@@ -51,9 +54,11 @@ public class IntroductoryPriceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("introductoryPricePeriod")
     public String introductoryPricePeriod;
+
     public IntroductoryPriceInfo withIntroductoryPricePeriod(String introductoryPricePeriod) {
         this.introductoryPricePeriod = introductoryPricePeriod;
         return this;
     }
     
+    public IntroductoryPriceInfo(){}
 }

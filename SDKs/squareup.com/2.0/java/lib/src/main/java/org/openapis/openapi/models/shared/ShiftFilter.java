@@ -19,6 +19,7 @@ public class ShiftFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee_ids")
     public String[] employeeIds;
+
     public ShiftFilter withEmployeeIds(String[] employeeIds) {
         this.employeeIds = employeeIds;
         return this;
@@ -34,6 +35,7 @@ public class ShiftFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public TimeRange end;
+
     public ShiftFilter withEnd(TimeRange end) {
         this.end = end;
         return this;
@@ -44,6 +46,7 @@ public class ShiftFilter {
      */
     @JsonProperty("location_ids")
     public String[] locationIds;
+
     public ShiftFilter withLocationIds(String[] locationIds) {
         this.locationIds = locationIds;
         return this;
@@ -59,6 +62,7 @@ public class ShiftFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public TimeRange start;
+
     public ShiftFilter withStart(TimeRange start) {
         this.start = start;
         return this;
@@ -70,6 +74,7 @@ public class ShiftFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ShiftFilter withStatus(String status) {
         this.status = status;
         return this;
@@ -80,6 +85,7 @@ public class ShiftFilter {
      */
     @JsonProperty("team_member_ids")
     public String[] teamMemberIds;
+
     public ShiftFilter withTeamMemberIds(String[] teamMemberIds) {
         this.teamMemberIds = teamMemberIds;
         return this;
@@ -92,9 +98,14 @@ public class ShiftFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workday")
     public ShiftWorkday workday;
+
     public ShiftFilter withWorkday(ShiftWorkday workday) {
         this.workday = workday;
         return this;
     }
     
+    public ShiftFilter(@JsonProperty("location_ids") String[] locationIds, @JsonProperty("team_member_ids") String[] teamMemberIds) {
+        this.locationIds = locationIds;
+        this.teamMemberIds = teamMemberIds;
+  }
 }

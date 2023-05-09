@@ -15,6 +15,7 @@ public class CreateMerchantApiCredentialRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedOrigins")
     public String[] allowedOrigins;
+
     public CreateMerchantApiCredentialRequest withAllowedOrigins(String[] allowedOrigins) {
         this.allowedOrigins = allowedOrigins;
         return this;
@@ -26,6 +27,7 @@ public class CreateMerchantApiCredentialRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateMerchantApiCredentialRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -37,9 +39,11 @@ public class CreateMerchantApiCredentialRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public String[] roles;
+
     public CreateMerchantApiCredentialRequest withRoles(String[] roles) {
         this.roles = roles;
         return this;
     }
     
+    public CreateMerchantApiCredentialRequest(){}
 }

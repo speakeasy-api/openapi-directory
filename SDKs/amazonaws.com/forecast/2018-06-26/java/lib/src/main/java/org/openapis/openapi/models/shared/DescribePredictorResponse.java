@@ -20,6 +20,7 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlgorithmArn")
     public String algorithmArn;
+
     public DescribePredictorResponse withAlgorithmArn(String algorithmArn) {
         this.algorithmArn = algorithmArn;
         return this;
@@ -28,6 +29,7 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoMLAlgorithmArns")
     public String[] autoMLAlgorithmArns;
+
     public DescribePredictorResponse withAutoMLAlgorithmArns(String[] autoMLAlgorithmArns) {
         this.autoMLAlgorithmArns = autoMLAlgorithmArns;
         return this;
@@ -36,6 +38,7 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoMLOverrideStrategy")
     public AutoMLOverrideStrategyEnum autoMLOverrideStrategy;
+
     public DescribePredictorResponse withAutoMLOverrideStrategy(AutoMLOverrideStrategyEnum autoMLOverrideStrategy) {
         this.autoMLOverrideStrategy = autoMLOverrideStrategy;
         return this;
@@ -46,6 +49,7 @@ public class DescribePredictorResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribePredictorResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -54,6 +58,7 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetImportJobArns")
     public String[] datasetImportJobArns;
+
     public DescribePredictorResponse withDatasetImportJobArns(String[] datasetImportJobArns) {
         this.datasetImportJobArns = datasetImportJobArns;
         return this;
@@ -62,6 +67,7 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfig")
     public EncryptionConfig encryptionConfig;
+
     public DescribePredictorResponse withEncryptionConfig(EncryptionConfig encryptionConfig) {
         this.encryptionConfig = encryptionConfig;
         return this;
@@ -70,6 +76,7 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedTimeRemainingInMinutes")
     public Long estimatedTimeRemainingInMinutes;
+
     public DescribePredictorResponse withEstimatedTimeRemainingInMinutes(Long estimatedTimeRemainingInMinutes) {
         this.estimatedTimeRemainingInMinutes = estimatedTimeRemainingInMinutes;
         return this;
@@ -78,6 +85,7 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationParameters")
     public EvaluationParameters evaluationParameters;
+
     public DescribePredictorResponse withEvaluationParameters(EvaluationParameters evaluationParameters) {
         this.evaluationParameters = evaluationParameters;
         return this;
@@ -86,6 +94,7 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeaturizationConfig")
     public FeaturizationConfig featurizationConfig;
+
     public DescribePredictorResponse withFeaturizationConfig(FeaturizationConfig featurizationConfig) {
         this.featurizationConfig = featurizationConfig;
         return this;
@@ -94,6 +103,7 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastHorizon")
     public Long forecastHorizon;
+
     public DescribePredictorResponse withForecastHorizon(Long forecastHorizon) {
         this.forecastHorizon = forecastHorizon;
         return this;
@@ -102,6 +112,7 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastTypes")
     public String[] forecastTypes;
+
     public DescribePredictorResponse withForecastTypes(String[] forecastTypes) {
         this.forecastTypes = forecastTypes;
         return this;
@@ -110,6 +121,7 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HPOConfig")
     public HyperParameterTuningJobConfig hpoConfig;
+
     public DescribePredictorResponse withHPOConfig(HyperParameterTuningJobConfig hpoConfig) {
         this.hpoConfig = hpoConfig;
         return this;
@@ -118,6 +130,7 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public DescribePredictorResponse withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -126,6 +139,7 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsAutoPredictor")
     public Boolean isAutoPredictor;
+
     public DescribePredictorResponse withIsAutoPredictor(Boolean isAutoPredictor) {
         this.isAutoPredictor = isAutoPredictor;
         return this;
@@ -136,6 +150,7 @@ public class DescribePredictorResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public DescribePredictorResponse withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -144,6 +159,7 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public DescribePredictorResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -152,6 +168,7 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptimizationMetric")
     public OptimizationMetricEnum optimizationMetric;
+
     public DescribePredictorResponse withOptimizationMetric(OptimizationMetricEnum optimizationMetric) {
         this.optimizationMetric = optimizationMetric;
         return this;
@@ -160,6 +177,7 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PerformAutoML")
     public Boolean performAutoML;
+
     public DescribePredictorResponse withPerformAutoML(Boolean performAutoML) {
         this.performAutoML = performAutoML;
         return this;
@@ -168,6 +186,7 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PerformHPO")
     public Boolean performHPO;
+
     public DescribePredictorResponse withPerformHPO(Boolean performHPO) {
         this.performHPO = performHPO;
         return this;
@@ -176,6 +195,7 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictorArn")
     public String predictorArn;
+
     public DescribePredictorResponse withPredictorArn(String predictorArn) {
         this.predictorArn = predictorArn;
         return this;
@@ -184,6 +204,7 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictorExecutionDetails")
     public PredictorExecutionDetails predictorExecutionDetails;
+
     public DescribePredictorResponse withPredictorExecutionDetails(PredictorExecutionDetails predictorExecutionDetails) {
         this.predictorExecutionDetails = predictorExecutionDetails;
         return this;
@@ -192,6 +213,7 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictorName")
     public String predictorName;
+
     public DescribePredictorResponse withPredictorName(String predictorName) {
         this.predictorName = predictorName;
         return this;
@@ -200,6 +222,7 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public DescribePredictorResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -208,9 +231,11 @@ public class DescribePredictorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingParameters")
     public java.util.Map<String, String> trainingParameters;
+
     public DescribePredictorResponse withTrainingParameters(java.util.Map<String, String> trainingParameters) {
         this.trainingParameters = trainingParameters;
         return this;
     }
     
+    public DescribePredictorResponse(){}
 }

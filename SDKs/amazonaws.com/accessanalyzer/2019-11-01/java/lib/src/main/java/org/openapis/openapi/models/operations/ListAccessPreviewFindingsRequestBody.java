@@ -14,6 +14,7 @@ public class ListAccessPreviewFindingsRequestBody {
      */
     @JsonProperty("analyzerArn")
     public String analyzerArn;
+
     public ListAccessPreviewFindingsRequestBody withAnalyzerArn(String analyzerArn) {
         this.analyzerArn = analyzerArn;
         return this;
@@ -25,6 +26,7 @@ public class ListAccessPreviewFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public java.util.Map<String, org.openapis.openapi.models.shared.Criterion> filter;
+
     public ListAccessPreviewFindingsRequestBody withFilter(java.util.Map<String, org.openapis.openapi.models.shared.Criterion> filter) {
         this.filter = filter;
         return this;
@@ -36,6 +38,7 @@ public class ListAccessPreviewFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListAccessPreviewFindingsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -47,9 +50,13 @@ public class ListAccessPreviewFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAccessPreviewFindingsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAccessPreviewFindingsRequestBody(@JsonProperty("analyzerArn") String analyzerArn) {
+        this.analyzerArn = analyzerArn;
+  }
 }

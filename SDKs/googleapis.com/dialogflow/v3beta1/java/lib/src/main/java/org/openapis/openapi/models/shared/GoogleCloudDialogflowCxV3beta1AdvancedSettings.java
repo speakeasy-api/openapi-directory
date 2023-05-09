@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1AdvancedSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioExportGcsDestination")
     public GoogleCloudDialogflowCxV3beta1GcsDestination audioExportGcsDestination;
+
     public GoogleCloudDialogflowCxV3beta1AdvancedSettings withAudioExportGcsDestination(GoogleCloudDialogflowCxV3beta1GcsDestination audioExportGcsDestination) {
         this.audioExportGcsDestination = audioExportGcsDestination;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3beta1AdvancedSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingSettings")
     public GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings loggingSettings;
+
     public GoogleCloudDialogflowCxV3beta1AdvancedSettings withLoggingSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings loggingSettings) {
         this.loggingSettings = loggingSettings;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1AdvancedSettings(){}
 }

@@ -15,6 +15,7 @@ public class GooglePrivacyDlpV2DeidentifyContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item")
     public GooglePrivacyDlpV2ContentItem item;
+
     public GooglePrivacyDlpV2DeidentifyContentResponse withItem(GooglePrivacyDlpV2ContentItem item) {
         this.item = item;
         return this;
@@ -26,9 +27,11 @@ public class GooglePrivacyDlpV2DeidentifyContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overview")
     public GooglePrivacyDlpV2TransformationOverview overview;
+
     public GooglePrivacyDlpV2DeidentifyContentResponse withOverview(GooglePrivacyDlpV2TransformationOverview overview) {
         this.overview = overview;
         return this;
     }
     
+    public GooglePrivacyDlpV2DeidentifyContentResponse(){}
 }

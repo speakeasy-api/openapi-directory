@@ -15,6 +15,7 @@ public class CalculationUnitDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public CalculationUnitDTO withActive(Boolean active) {
         this.active = active;
         return this;
@@ -23,6 +24,7 @@ public class CalculationUnitDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canBeUsedInCatAnalysis")
     public Boolean canBeUsedInCatAnalysis;
+
     public CalculationUnitDTO withCanBeUsedInCatAnalysis(Boolean canBeUsedInCatAnalysis) {
         this.canBeUsedInCatAnalysis = canBeUsedInCatAnalysis;
         return this;
@@ -31,6 +33,7 @@ public class CalculationUnitDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catQuantityConversionExpression")
     public String catQuantityConversionExpression;
+
     public CalculationUnitDTO withCatQuantityConversionExpression(String catQuantityConversionExpression) {
         this.catQuantityConversionExpression = catQuantityConversionExpression;
         return this;
@@ -42,6 +45,7 @@ public class CalculationUnitDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")
     public Boolean default_;
+
     public CalculationUnitDTO withDefault(Boolean default_) {
         this.default_ = default_;
         return this;
@@ -50,6 +54,7 @@ public class CalculationUnitDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchangeRatio")
     public Double exchangeRatio;
+
     public CalculationUnitDTO withExchangeRatio(Double exchangeRatio) {
         this.exchangeRatio = exchangeRatio;
         return this;
@@ -58,6 +63,7 @@ public class CalculationUnitDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileStatsConversionExpression")
     public String fileStatsConversionExpression;
+
     public CalculationUnitDTO withFileStatsConversionExpression(String fileStatsConversionExpression) {
         this.fileStatsConversionExpression = fileStatsConversionExpression;
         return this;
@@ -69,6 +75,7 @@ public class CalculationUnitDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CalculationUnitDTO withId(Long id) {
         this.id = id;
         return this;
@@ -77,6 +84,7 @@ public class CalculationUnitDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTypeIds")
     public Long[] jobTypeIds;
+
     public CalculationUnitDTO withJobTypeIds(Long[] jobTypeIds) {
         this.jobTypeIds = jobTypeIds;
         return this;
@@ -88,6 +96,7 @@ public class CalculationUnitDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CalculationUnitDTO withName(String name) {
         this.name = name;
         return this;
@@ -99,6 +108,7 @@ public class CalculationUnitDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferred")
     public Boolean preferred;
+
     public CalculationUnitDTO withPreferred(Boolean preferred) {
         this.preferred = preferred;
         return this;
@@ -107,6 +117,7 @@ public class CalculationUnitDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("symbol")
     public String symbol;
+
     public CalculationUnitDTO withSymbol(String symbol) {
         this.symbol = symbol;
         return this;
@@ -115,6 +126,7 @@ public class CalculationUnitDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeToQuantityConversionExpression")
     public String timeToQuantityConversionExpression;
+
     public CalculationUnitDTO withTimeToQuantityConversionExpression(String timeToQuantityConversionExpression) {
         this.timeToQuantityConversionExpression = timeToQuantityConversionExpression;
         return this;
@@ -123,9 +135,11 @@ public class CalculationUnitDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CalculationUnitDTOTypeEnum type;
+
     public CalculationUnitDTO withType(CalculationUnitDTOTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CalculationUnitDTO(){}
 }

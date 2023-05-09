@@ -18,9 +18,11 @@ public class DescribeApplicationVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationVersionDetail")
     public ApplicationDetail applicationVersionDetail;
+
     public DescribeApplicationVersionResponse withApplicationVersionDetail(ApplicationDetail applicationVersionDetail) {
         this.applicationVersionDetail = applicationVersionDetail;
         return this;
     }
     
+    public DescribeApplicationVersionResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddClientPreferencesResponse {
@@ -12,6 +13,7 @@ public class AddClientPreferencesResponse {
      */
     
     public Object addClientPreferences200ApplicationJSONAny;
+
     public AddClientPreferencesResponse withAddClientPreferences200ApplicationJSONAny(Object addClientPreferences200ApplicationJSONAny) {
         this.addClientPreferences200ApplicationJSONAny = addClientPreferences200ApplicationJSONAny;
         return this;
@@ -19,6 +21,7 @@ public class AddClientPreferencesResponse {
     
     
     public String contentType;
+
     public AddClientPreferencesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AddClientPreferencesResponse {
     
     
     public Integer statusCode;
+
     public AddClientPreferencesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AddClientPreferencesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddClientPreferencesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AddClientPreferencesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

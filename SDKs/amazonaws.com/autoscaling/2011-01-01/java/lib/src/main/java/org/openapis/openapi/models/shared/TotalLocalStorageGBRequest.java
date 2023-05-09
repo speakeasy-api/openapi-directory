@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TotalLocalStorageGBRequest {
     
     public Double max;
+
     public TotalLocalStorageGBRequest withMax(Double max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class TotalLocalStorageGBRequest {
     
     
     public Double min;
+
     public TotalLocalStorageGBRequest withMin(Double min) {
         this.min = min;
         return this;
     }
     
+    public TotalLocalStorageGBRequest(){}
 }

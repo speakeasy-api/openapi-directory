@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateArtifactJsonResponse {
@@ -12,6 +13,7 @@ public class CreateArtifactJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.ArtifactMetaData artifactMetaData;
+
     public CreateArtifactJsonResponse withArtifactMetaData(org.openapis.openapi.models.shared.ArtifactMetaData artifactMetaData) {
         this.artifactMetaData = artifactMetaData;
         return this;
@@ -19,6 +21,7 @@ public class CreateArtifactJsonResponse {
     
     
     public String contentType;
+
     public CreateArtifactJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateArtifactJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public CreateArtifactJsonResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class CreateArtifactJsonResponse {
     
     
     public Integer statusCode;
+
     public CreateArtifactJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CreateArtifactJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateArtifactJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class CreateArtifactJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.RuleViolationError ruleViolationError;
+
     public CreateArtifactJsonResponse withRuleViolationError(org.openapis.openapi.models.shared.RuleViolationError ruleViolationError) {
         this.ruleViolationError = ruleViolationError;
         return this;
     }
     
+    public CreateArtifactJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

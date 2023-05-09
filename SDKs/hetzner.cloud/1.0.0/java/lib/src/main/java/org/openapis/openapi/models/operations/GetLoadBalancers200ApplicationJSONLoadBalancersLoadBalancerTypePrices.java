@@ -12,6 +12,7 @@ public class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTypePric
      */
     @JsonProperty("location")
     public String location;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTypePrices withLocation(String location) {
         this.location = location;
         return this;
@@ -22,6 +23,7 @@ public class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTypePric
      */
     @JsonProperty("price_hourly")
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTypePricesPriceHourly priceHourly;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTypePrices withPriceHourly(GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTypePricesPriceHourly priceHourly) {
         this.priceHourly = priceHourly;
         return this;
@@ -32,9 +34,15 @@ public class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTypePric
      */
     @JsonProperty("price_monthly")
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTypePricesPriceMonthly priceMonthly;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTypePrices withPriceMonthly(GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTypePricesPriceMonthly priceMonthly) {
         this.priceMonthly = priceMonthly;
         return this;
     }
     
+    public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTypePrices(@JsonProperty("location") String location, @JsonProperty("price_hourly") GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTypePricesPriceHourly priceHourly, @JsonProperty("price_monthly") GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTypePricesPriceMonthly priceMonthly) {
+        this.location = location;
+        this.priceHourly = priceHourly;
+        this.priceMonthly = priceMonthly;
+  }
 }

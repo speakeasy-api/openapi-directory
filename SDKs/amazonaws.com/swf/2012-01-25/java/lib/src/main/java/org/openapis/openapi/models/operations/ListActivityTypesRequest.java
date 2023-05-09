@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListActivityTypesRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ListActivityTypesInput listActivityTypesInput;
+
     public ListActivityTypesRequest withListActivityTypesInput(org.openapis.openapi.models.shared.ListActivityTypesInput listActivityTypesInput) {
         this.listActivityTypesInput = listActivityTypesInput;
         return this;
@@ -16,6 +18,7 @@ public class ListActivityTypesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListActivityTypesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class ListActivityTypesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListActivityTypesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class ListActivityTypesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListActivityTypesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class ListActivityTypesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListActivityTypesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class ListActivityTypesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListActivityTypesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class ListActivityTypesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListActivityTypesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class ListActivityTypesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListActivityTypesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,6 +74,7 @@ public class ListActivityTypesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ListActivityTypesXAmzTargetEnum xAmzTarget;
+
     public ListActivityTypesRequest withXAmzTarget(ListActivityTypesXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
@@ -75,6 +85,7 @@ public class ListActivityTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maximumPageSize")
     public String maximumPageSize;
+
     public ListActivityTypesRequest withMaximumPageSize(String maximumPageSize) {
         this.maximumPageSize = maximumPageSize;
         return this;
@@ -85,9 +96,14 @@ public class ListActivityTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextPageToken")
     public String nextPageToken;
+
     public ListActivityTypesRequest withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListActivityTypesRequest(@JsonProperty("ListActivityTypesInput") org.openapis.openapi.models.shared.ListActivityTypesInput listActivityTypesInput, @JsonProperty("X-Amz-Target") ListActivityTypesXAmzTargetEnum xAmzTarget) {
+        this.listActivityTypesInput = listActivityTypesInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

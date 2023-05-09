@@ -15,6 +15,7 @@ public class GetPostAndRelatedData200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public org.openapis.openapi.models.shared.User author;
+
     public GetPostAndRelatedData200ApplicationJSON withAuthor(org.openapis.openapi.models.shared.User author) {
         this.author = author;
         return this;
@@ -26,6 +27,7 @@ public class GetPostAndRelatedData200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_offer_count")
     public Long authorOfferCount;
+
     public GetPostAndRelatedData200ApplicationJSON withAuthorOfferCount(Long authorOfferCount) {
         this.authorOfferCount = authorOfferCount;
         return this;
@@ -38,6 +40,7 @@ public class GetPostAndRelatedData200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_posts")
     public org.openapis.openapi.models.shared.Post[] authorPosts;
+
     public GetPostAndRelatedData200ApplicationJSON withAuthorPosts(org.openapis.openapi.models.shared.Post[] authorPosts) {
         this.authorPosts = authorPosts;
         return this;
@@ -49,6 +52,7 @@ public class GetPostAndRelatedData200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_wanted_count")
     public Long authorWantedCount;
+
     public GetPostAndRelatedData200ApplicationJSON withAuthorWantedCount(Long authorWantedCount) {
         this.authorWantedCount = authorWantedCount;
         return this;
@@ -60,6 +64,7 @@ public class GetPostAndRelatedData200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookmarked")
     public Boolean bookmarked;
+
     public GetPostAndRelatedData200ApplicationJSON withBookmarked(Boolean bookmarked) {
         this.bookmarked = bookmarked;
         return this;
@@ -71,6 +76,7 @@ public class GetPostAndRelatedData200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedback")
     public org.openapis.openapi.models.shared.Feedback[] feedback;
+
     public GetPostAndRelatedData200ApplicationJSON withFeedback(org.openapis.openapi.models.shared.Feedback[] feedback) {
         this.feedback = feedback;
         return this;
@@ -82,6 +88,7 @@ public class GetPostAndRelatedData200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public org.openapis.openapi.models.shared.Group[] groups;
+
     public GetPostAndRelatedData200ApplicationJSON withGroups(org.openapis.openapi.models.shared.Group[] groups) {
         this.groups = groups;
         return this;
@@ -93,6 +100,7 @@ public class GetPostAndRelatedData200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("post")
     public org.openapis.openapi.models.shared.Post post;
+
     public GetPostAndRelatedData200ApplicationJSON withPost(org.openapis.openapi.models.shared.Post post) {
         this.post = post;
         return this;
@@ -104,6 +112,7 @@ public class GetPostAndRelatedData200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replied")
     public Boolean replied;
+
     public GetPostAndRelatedData200ApplicationJSON withReplied(Boolean replied) {
         this.replied = replied;
         return this;
@@ -116,6 +125,7 @@ public class GetPostAndRelatedData200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_can_reply")
     public Boolean userCanReply;
+
     public GetPostAndRelatedData200ApplicationJSON withUserCanReply(Boolean userCanReply) {
         this.userCanReply = userCanReply;
         return this;
@@ -127,9 +137,11 @@ public class GetPostAndRelatedData200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewed")
     public Boolean viewed;
+
     public GetPostAndRelatedData200ApplicationJSON withViewed(Boolean viewed) {
         this.viewed = viewed;
         return this;
     }
     
+    public GetPostAndRelatedData200ApplicationJSON(){}
 }

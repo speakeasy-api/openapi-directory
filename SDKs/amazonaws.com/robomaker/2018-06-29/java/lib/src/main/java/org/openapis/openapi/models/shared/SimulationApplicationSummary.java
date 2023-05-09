@@ -20,6 +20,7 @@ public class SimulationApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public SimulationApplicationSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class SimulationApplicationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public SimulationApplicationSummary withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -38,6 +40,7 @@ public class SimulationApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SimulationApplicationSummary withName(String name) {
         this.name = name;
         return this;
@@ -46,6 +49,7 @@ public class SimulationApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("robotSoftwareSuite")
     public RobotSoftwareSuite robotSoftwareSuite;
+
     public SimulationApplicationSummary withRobotSoftwareSuite(RobotSoftwareSuite robotSoftwareSuite) {
         this.robotSoftwareSuite = robotSoftwareSuite;
         return this;
@@ -54,6 +58,7 @@ public class SimulationApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simulationSoftwareSuite")
     public SimulationSoftwareSuite simulationSoftwareSuite;
+
     public SimulationApplicationSummary withSimulationSoftwareSuite(SimulationSoftwareSuite simulationSoftwareSuite) {
         this.simulationSoftwareSuite = simulationSoftwareSuite;
         return this;
@@ -62,9 +67,11 @@ public class SimulationApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public SimulationApplicationSummary withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public SimulationApplicationSummary(){}
 }

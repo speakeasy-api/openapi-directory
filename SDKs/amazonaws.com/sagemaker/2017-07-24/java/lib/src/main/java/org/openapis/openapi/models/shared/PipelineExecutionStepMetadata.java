@@ -15,6 +15,7 @@ public class PipelineExecutionStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoMLJob")
     public AutoMLJobStepMetadata autoMLJob;
+
     public PipelineExecutionStepMetadata withAutoMLJob(AutoMLJobStepMetadata autoMLJob) {
         this.autoMLJob = autoMLJob;
         return this;
@@ -23,6 +24,7 @@ public class PipelineExecutionStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Callback")
     public CallbackStepMetadata callback;
+
     public PipelineExecutionStepMetadata withCallback(CallbackStepMetadata callback) {
         this.callback = callback;
         return this;
@@ -31,6 +33,7 @@ public class PipelineExecutionStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClarifyCheck")
     public ClarifyCheckStepMetadata clarifyCheck;
+
     public PipelineExecutionStepMetadata withClarifyCheck(ClarifyCheckStepMetadata clarifyCheck) {
         this.clarifyCheck = clarifyCheck;
         return this;
@@ -39,6 +42,7 @@ public class PipelineExecutionStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Condition")
     public ConditionStepMetadata condition;
+
     public PipelineExecutionStepMetadata withCondition(ConditionStepMetadata condition) {
         this.condition = condition;
         return this;
@@ -47,6 +51,7 @@ public class PipelineExecutionStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EMR")
     public EMRStepMetadata emr;
+
     public PipelineExecutionStepMetadata withEmr(EMRStepMetadata emr) {
         this.emr = emr;
         return this;
@@ -55,6 +60,7 @@ public class PipelineExecutionStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Fail")
     public FailStepMetadata fail;
+
     public PipelineExecutionStepMetadata withFail(FailStepMetadata fail) {
         this.fail = fail;
         return this;
@@ -63,6 +69,7 @@ public class PipelineExecutionStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lambda")
     public LambdaStepMetadata lambda;
+
     public PipelineExecutionStepMetadata withLambda(LambdaStepMetadata lambda) {
         this.lambda = lambda;
         return this;
@@ -71,6 +78,7 @@ public class PipelineExecutionStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Model")
     public ModelStepMetadata model;
+
     public PipelineExecutionStepMetadata withModel(ModelStepMetadata model) {
         this.model = model;
         return this;
@@ -79,6 +87,7 @@ public class PipelineExecutionStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingJob")
     public ProcessingJobStepMetadata processingJob;
+
     public PipelineExecutionStepMetadata withProcessingJob(ProcessingJobStepMetadata processingJob) {
         this.processingJob = processingJob;
         return this;
@@ -87,6 +96,7 @@ public class PipelineExecutionStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QualityCheck")
     public QualityCheckStepMetadata qualityCheck;
+
     public PipelineExecutionStepMetadata withQualityCheck(QualityCheckStepMetadata qualityCheck) {
         this.qualityCheck = qualityCheck;
         return this;
@@ -95,6 +105,7 @@ public class PipelineExecutionStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegisterModel")
     public RegisterModelStepMetadata registerModel;
+
     public PipelineExecutionStepMetadata withRegisterModel(RegisterModelStepMetadata registerModel) {
         this.registerModel = registerModel;
         return this;
@@ -103,6 +114,7 @@ public class PipelineExecutionStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingJob")
     public TrainingJobStepMetadata trainingJob;
+
     public PipelineExecutionStepMetadata withTrainingJob(TrainingJobStepMetadata trainingJob) {
         this.trainingJob = trainingJob;
         return this;
@@ -111,6 +123,7 @@ public class PipelineExecutionStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransformJob")
     public TransformJobStepMetadata transformJob;
+
     public PipelineExecutionStepMetadata withTransformJob(TransformJobStepMetadata transformJob) {
         this.transformJob = transformJob;
         return this;
@@ -119,9 +132,11 @@ public class PipelineExecutionStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TuningJob")
     public TuningJobStepMetaData tuningJob;
+
     public PipelineExecutionStepMetadata withTuningJob(TuningJobStepMetaData tuningJob) {
         this.tuningJob = tuningJob;
         return this;
     }
     
+    public PipelineExecutionStepMetadata(){}
 }

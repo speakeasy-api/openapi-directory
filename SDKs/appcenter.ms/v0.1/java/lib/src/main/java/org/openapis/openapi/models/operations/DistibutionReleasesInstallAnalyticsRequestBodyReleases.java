@@ -12,6 +12,7 @@ public class DistibutionReleasesInstallAnalyticsRequestBodyReleases {
      */
     @JsonProperty("distribution_group_id")
     public String distributionGroupId;
+
     public DistibutionReleasesInstallAnalyticsRequestBodyReleases withDistributionGroupId(String distributionGroupId) {
         this.distributionGroupId = distributionGroupId;
         return this;
@@ -22,6 +23,7 @@ public class DistibutionReleasesInstallAnalyticsRequestBodyReleases {
      */
     @JsonProperty("release_id")
     public Long releaseId;
+
     public DistibutionReleasesInstallAnalyticsRequestBodyReleases withReleaseId(Long releaseId) {
         this.releaseId = releaseId;
         return this;
@@ -32,9 +34,15 @@ public class DistibutionReleasesInstallAnalyticsRequestBodyReleases {
      */
     @JsonProperty("user_id")
     public String userId;
+
     public DistibutionReleasesInstallAnalyticsRequestBodyReleases withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public DistibutionReleasesInstallAnalyticsRequestBodyReleases(@JsonProperty("distribution_group_id") String distributionGroupId, @JsonProperty("release_id") Long releaseId, @JsonProperty("user_id") String userId) {
+        this.distributionGroupId = distributionGroupId;
+        this.releaseId = releaseId;
+        this.userId = userId;
+  }
 }

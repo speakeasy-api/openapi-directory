@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListComplianceStatusResponse {
     
     public String contentType;
+
     public ListComplianceStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListComplianceStatusResponse {
      */
     
     public Object internalErrorException;
+
     public ListComplianceStatusResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListComplianceStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.ListComplianceStatusResponse listComplianceStatusResponse;
+
     public ListComplianceStatusResponse withListComplianceStatusResponse(org.openapis.openapi.models.shared.ListComplianceStatusResponse listComplianceStatusResponse) {
         this.listComplianceStatusResponse = listComplianceStatusResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListComplianceStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListComplianceStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListComplianceStatusResponse {
     
     
     public Integer statusCode;
+
     public ListComplianceStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListComplianceStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListComplianceStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListComplianceStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

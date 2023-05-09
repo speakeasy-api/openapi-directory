@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTagsForDomainResponse {
     
     public String contentType;
+
     public DeleteTagsForDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteTagsForDomainResponse {
      */
     
     public java.util.Map<String, Object> deleteTagsForDomainResponse;
+
     public DeleteTagsForDomainResponse withDeleteTagsForDomainResponse(java.util.Map<String, Object> deleteTagsForDomainResponse) {
         this.deleteTagsForDomainResponse = deleteTagsForDomainResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTagsForDomainResponse {
      */
     
     public Object invalidInput;
+
     public DeleteTagsForDomainResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTagsForDomainResponse {
      */
     
     public Object operationLimitExceeded;
+
     public DeleteTagsForDomainResponse withOperationLimitExceeded(Object operationLimitExceeded) {
         this.operationLimitExceeded = operationLimitExceeded;
         return this;
@@ -46,6 +51,7 @@ public class DeleteTagsForDomainResponse {
     
     
     public Integer statusCode;
+
     public DeleteTagsForDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteTagsForDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTagsForDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteTagsForDomainResponse {
      */
     
     public Object unsupportedTLD;
+
     public DeleteTagsForDomainResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
     }
     
+    public DeleteTagsForDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

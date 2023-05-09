@@ -15,6 +15,7 @@ public class AwsXrayEncryptionConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public AwsXrayEncryptionConfigDetails withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -23,6 +24,7 @@ public class AwsXrayEncryptionConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsXrayEncryptionConfigDetails withStatus(String status) {
         this.status = status;
         return this;
@@ -31,9 +33,11 @@ public class AwsXrayEncryptionConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsXrayEncryptionConfigDetails withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AwsXrayEncryptionConfigDetails(){}
 }

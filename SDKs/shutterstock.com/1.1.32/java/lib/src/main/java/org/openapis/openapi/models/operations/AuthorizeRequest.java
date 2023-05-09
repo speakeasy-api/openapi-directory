@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthorizeRequest {
@@ -12,6 +13,7 @@ public class AuthorizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client_id")
     public String clientId;
+
     public AuthorizeRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -22,6 +24,7 @@ public class AuthorizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=realm")
     public AuthorizeRealmEnum realm;
+
     public AuthorizeRequest withRealm(AuthorizeRealmEnum realm) {
         this.realm = realm;
         return this;
@@ -32,6 +35,7 @@ public class AuthorizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redirect_uri")
     public String redirectUri;
+
     public AuthorizeRequest withRedirectUri(String redirectUri) {
         this.redirectUri = redirectUri;
         return this;
@@ -42,6 +46,7 @@ public class AuthorizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=response_type")
     public AuthorizeResponseTypeEnum responseType;
+
     public AuthorizeRequest withResponseType(AuthorizeResponseTypeEnum responseType) {
         this.responseType = responseType;
         return this;
@@ -52,6 +57,7 @@ public class AuthorizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
     public String scope;
+
     public AuthorizeRequest withScope(String scope) {
         this.scope = scope;
         return this;
@@ -62,9 +68,16 @@ public class AuthorizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public String state;
+
     public AuthorizeRequest withState(String state) {
         this.state = state;
         return this;
     }
     
+    public AuthorizeRequest(@JsonProperty("client_id") String clientId, @JsonProperty("redirect_uri") String redirectUri, @JsonProperty("response_type") AuthorizeResponseTypeEnum responseType, @JsonProperty("state") String state) {
+        this.clientId = clientId;
+        this.redirectUri = redirectUri;
+        this.responseType = responseType;
+        this.state = state;
+  }
 }

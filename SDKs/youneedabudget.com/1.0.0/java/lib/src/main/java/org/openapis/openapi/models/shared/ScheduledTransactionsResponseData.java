@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScheduledTransactionsResponseData {
     @JsonProperty("scheduled_transactions")
     public ScheduledTransactionDetail[] scheduledTransactions;
+
     public ScheduledTransactionsResponseData withScheduledTransactions(ScheduledTransactionDetail[] scheduledTransactions) {
         this.scheduledTransactions = scheduledTransactions;
         return this;
@@ -19,9 +20,14 @@ public class ScheduledTransactionsResponseData {
      */
     @JsonProperty("server_knowledge")
     public Long serverKnowledge;
+
     public ScheduledTransactionsResponseData withServerKnowledge(Long serverKnowledge) {
         this.serverKnowledge = serverKnowledge;
         return this;
     }
     
+    public ScheduledTransactionsResponseData(@JsonProperty("scheduled_transactions") ScheduledTransactionDetail[] scheduledTransactions, @JsonProperty("server_knowledge") Long serverKnowledge) {
+        this.scheduledTransactions = scheduledTransactions;
+        this.serverKnowledge = serverKnowledge;
+  }
 }

@@ -12,6 +12,7 @@ public class CreateEnvironment200ApplicationJSONEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateEnvironment200ApplicationJSONEnvironment withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class CreateEnvironment200ApplicationJSONEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateEnvironment200ApplicationJSONEnvironment withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class CreateEnvironment200ApplicationJSONEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public CreateEnvironment200ApplicationJSONEnvironment withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public CreateEnvironment200ApplicationJSONEnvironment(){}
 }

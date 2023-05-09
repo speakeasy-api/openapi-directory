@@ -12,6 +12,7 @@ public class ReloadTablesMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReloadOption")
     public ReloadOptionValueEnum reloadOption;
+
     public ReloadTablesMessage withReloadOption(ReloadOptionValueEnum reloadOption) {
         this.reloadOption = reloadOption;
         return this;
@@ -19,6 +20,7 @@ public class ReloadTablesMessage {
     
     @JsonProperty("ReplicationTaskArn")
     public String replicationTaskArn;
+
     public ReloadTablesMessage withReplicationTaskArn(String replicationTaskArn) {
         this.replicationTaskArn = replicationTaskArn;
         return this;
@@ -26,9 +28,14 @@ public class ReloadTablesMessage {
     
     @JsonProperty("TablesToReload")
     public TableToReload[] tablesToReload;
+
     public ReloadTablesMessage withTablesToReload(TableToReload[] tablesToReload) {
         this.tablesToReload = tablesToReload;
         return this;
     }
     
+    public ReloadTablesMessage(@JsonProperty("ReplicationTaskArn") String replicationTaskArn, @JsonProperty("TablesToReload") TableToReload[] tablesToReload) {
+        this.replicationTaskArn = replicationTaskArn;
+        this.tablesToReload = tablesToReload;
+  }
 }

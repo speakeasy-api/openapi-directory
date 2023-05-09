@@ -15,6 +15,7 @@ public class ListProfileObjectsRequestBodyObjectFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyName")
     public String keyName;
+
     public ListProfileObjectsRequestBodyObjectFilter withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -23,9 +24,11 @@ public class ListProfileObjectsRequestBodyObjectFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public ListProfileObjectsRequestBodyObjectFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public ListProfileObjectsRequestBodyObjectFilter(){}
 }

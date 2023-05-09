@@ -15,6 +15,7 @@ public class CapacityDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoScaling")
     public AutoScalingDescription autoScaling;
+
     public CapacityDescription withAutoScaling(AutoScalingDescription autoScaling) {
         this.autoScaling = autoScaling;
         return this;
@@ -23,9 +24,11 @@ public class CapacityDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisionedCapacity")
     public ProvisionedCapacityDescription provisionedCapacity;
+
     public CapacityDescription withProvisionedCapacity(ProvisionedCapacityDescription provisionedCapacity) {
         this.provisionedCapacity = provisionedCapacity;
         return this;
     }
     
+    public CapacityDescription(){}
 }

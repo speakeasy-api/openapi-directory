@@ -15,6 +15,7 @@ public class IPAddressBasedRemoteInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authType")
     public AuthTypeEnum authType;
+
     public IPAddressBasedRemoteInfo withAuthType(AuthTypeEnum authType) {
         this.authType = authType;
         return this;
@@ -23,6 +24,7 @@ public class IPAddressBasedRemoteInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddressConfigurationTimeStamp")
     public String ipAddressConfigurationTimeStamp;
+
     public IPAddressBasedRemoteInfo withIpAddressConfigurationTimeStamp(String ipAddressConfigurationTimeStamp) {
         this.ipAddressConfigurationTimeStamp = ipAddressConfigurationTimeStamp;
         return this;
@@ -31,9 +33,11 @@ public class IPAddressBasedRemoteInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osType")
     public OSTypeEnum osType;
+
     public IPAddressBasedRemoteInfo withOsType(OSTypeEnum osType) {
         this.osType = osType;
         return this;
     }
     
+    public IPAddressBasedRemoteInfo(){}
 }

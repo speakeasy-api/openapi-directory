@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsResponse {
     
     public String contentType;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsR
     
     
     public java.util.Map<String, String[]> headers;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsR
     
     
     public Integer statusCode;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsR
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsR
      */
     
     public java.util.Map<String, Object> error;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -50,9 +56,14 @@ public class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsR
      */
     
     public java.util.Map<String, Object> pullrequestComment;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsResponse withPullrequestComment(java.util.Map<String, Object> pullrequestComment) {
         this.pullrequestComment = pullrequestComment;
         return this;
     }
     
+    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

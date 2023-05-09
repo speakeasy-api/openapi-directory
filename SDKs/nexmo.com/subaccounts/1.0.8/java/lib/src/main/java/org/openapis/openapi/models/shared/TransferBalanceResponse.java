@@ -18,6 +18,7 @@ public class TransferBalanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public TransferBalanceResponse withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -29,6 +30,7 @@ public class TransferBalanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance_transfer_id")
     public String balanceTransferId;
+
     public TransferBalanceResponse withBalanceTransferId(String balanceTransferId) {
         this.balanceTransferId = balanceTransferId;
         return this;
@@ -40,6 +42,7 @@ public class TransferBalanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public TransferBalanceResponse withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -51,6 +54,7 @@ public class TransferBalanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public String from;
+
     public TransferBalanceResponse withFrom(String from) {
         this.from = from;
         return this;
@@ -62,6 +66,7 @@ public class TransferBalanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public TransferBalanceResponse withReference(String reference) {
         this.reference = reference;
         return this;
@@ -73,9 +78,11 @@ public class TransferBalanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public String to;
+
     public TransferBalanceResponse withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public TransferBalanceResponse(){}
 }

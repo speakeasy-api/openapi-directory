@@ -18,6 +18,7 @@ public class MavenRepositoryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowSnapshotOverwrites")
     public Boolean allowSnapshotOverwrites;
+
     public MavenRepositoryConfig withAllowSnapshotOverwrites(Boolean allowSnapshotOverwrites) {
         this.allowSnapshotOverwrites = allowSnapshotOverwrites;
         return this;
@@ -29,9 +30,11 @@ public class MavenRepositoryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionPolicy")
     public MavenRepositoryConfigVersionPolicyEnum versionPolicy;
+
     public MavenRepositoryConfig withVersionPolicy(MavenRepositoryConfigVersionPolicyEnum versionPolicy) {
         this.versionPolicy = versionPolicy;
         return this;
     }
     
+    public MavenRepositoryConfig(){}
 }

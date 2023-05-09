@@ -18,6 +18,7 @@ public class BackgroundJobLogEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applyJobDetails")
     public ApplyJobDetails applyJobDetails;
+
     public BackgroundJobLogEntry withApplyJobDetails(ApplyJobDetails applyJobDetails) {
         this.applyJobDetails = applyJobDetails;
         return this;
@@ -29,6 +30,7 @@ public class BackgroundJobLogEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completionComment")
     public String completionComment;
+
     public BackgroundJobLogEntry withCompletionComment(String completionComment) {
         this.completionComment = completionComment;
         return this;
@@ -40,6 +42,7 @@ public class BackgroundJobLogEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completionState")
     public BackgroundJobLogEntryCompletionStateEnum completionState;
+
     public BackgroundJobLogEntry withCompletionState(BackgroundJobLogEntryCompletionStateEnum completionState) {
         this.completionState = completionState;
         return this;
@@ -51,6 +54,7 @@ public class BackgroundJobLogEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("convertJobDetails")
     public ConvertJobDetails convertJobDetails;
+
     public BackgroundJobLogEntry withConvertJobDetails(ConvertJobDetails convertJobDetails) {
         this.convertJobDetails = convertJobDetails;
         return this;
@@ -62,6 +66,7 @@ public class BackgroundJobLogEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finishTime")
     public String finishTime;
+
     public BackgroundJobLogEntry withFinishTime(String finishTime) {
         this.finishTime = finishTime;
         return this;
@@ -73,6 +78,7 @@ public class BackgroundJobLogEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BackgroundJobLogEntry withId(String id) {
         this.id = id;
         return this;
@@ -84,6 +90,7 @@ public class BackgroundJobLogEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importRulesJobDetails")
     public ImportRulesJobDetails importRulesJobDetails;
+
     public BackgroundJobLogEntry withImportRulesJobDetails(ImportRulesJobDetails importRulesJobDetails) {
         this.importRulesJobDetails = importRulesJobDetails;
         return this;
@@ -95,6 +102,7 @@ public class BackgroundJobLogEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobType")
     public BackgroundJobLogEntryJobTypeEnum jobType;
+
     public BackgroundJobLogEntry withJobType(BackgroundJobLogEntryJobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -106,6 +114,7 @@ public class BackgroundJobLogEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestAutocommit")
     public Boolean requestAutocommit;
+
     public BackgroundJobLogEntry withRequestAutocommit(Boolean requestAutocommit) {
         this.requestAutocommit = requestAutocommit;
         return this;
@@ -117,6 +126,7 @@ public class BackgroundJobLogEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seedJobDetails")
     public SeedJobDetails seedJobDetails;
+
     public BackgroundJobLogEntry withSeedJobDetails(SeedJobDetails seedJobDetails) {
         this.seedJobDetails = seedJobDetails;
         return this;
@@ -128,9 +138,11 @@ public class BackgroundJobLogEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public BackgroundJobLogEntry withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public BackgroundJobLogEntry(){}
 }

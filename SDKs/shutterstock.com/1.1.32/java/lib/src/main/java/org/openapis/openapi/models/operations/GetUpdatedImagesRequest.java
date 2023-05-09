@@ -13,6 +13,7 @@ public class GetUpdatedImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public LocalDate endDate;
+
     public GetUpdatedImagesRequest withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -23,6 +24,7 @@ public class GetUpdatedImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval")
     public String interval;
+
     public GetUpdatedImagesRequest withInterval(String interval) {
         this.interval = interval;
         return this;
@@ -33,6 +35,7 @@ public class GetUpdatedImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetUpdatedImagesRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -43,6 +46,7 @@ public class GetUpdatedImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetUpdatedImagesRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -53,6 +57,7 @@ public class GetUpdatedImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetUpdatedImagesSortEnum sort;
+
     public GetUpdatedImagesRequest withSort(GetUpdatedImagesSortEnum sort) {
         this.sort = sort;
         return this;
@@ -63,6 +68,7 @@ public class GetUpdatedImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public LocalDate startDate;
+
     public GetUpdatedImagesRequest withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
@@ -73,9 +79,11 @@ public class GetUpdatedImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public GetUpdatedImagesTypeEnum[] type;
+
     public GetUpdatedImagesRequest withType(GetUpdatedImagesTypeEnum[] type) {
         this.type = type;
         return this;
     }
     
+    public GetUpdatedImagesRequest(){}
 }

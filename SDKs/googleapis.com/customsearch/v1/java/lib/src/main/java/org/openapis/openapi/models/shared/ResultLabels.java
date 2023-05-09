@@ -18,6 +18,7 @@ public class ResultLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ResultLabels withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class ResultLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_with_op")
     public String labelWithOp;
+
     public ResultLabels withLabelWithOp(String labelWithOp) {
         this.labelWithOp = labelWithOp;
         return this;
@@ -40,9 +42,11 @@ public class ResultLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ResultLabels withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ResultLabels(){}
 }

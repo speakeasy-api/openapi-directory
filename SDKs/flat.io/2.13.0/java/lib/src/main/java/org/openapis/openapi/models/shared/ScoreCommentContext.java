@@ -18,6 +18,7 @@ public class ScoreCommentContext {
      */
     @JsonProperty("measureUuids")
     public String[] measureUuids;
+
     public ScoreCommentContext withMeasureUuids(String[] measureUuids) {
         this.measureUuids = measureUuids;
         return this;
@@ -28,6 +29,7 @@ public class ScoreCommentContext {
      */
     @JsonProperty("partUuid")
     public String partUuid;
+
     public ScoreCommentContext withPartUuid(String partUuid) {
         this.partUuid = partUuid;
         return this;
@@ -39,6 +41,7 @@ public class ScoreCommentContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("staffIdx")
     public Double staffIdx;
+
     public ScoreCommentContext withStaffIdx(Double staffIdx) {
         this.staffIdx = staffIdx;
         return this;
@@ -50,6 +53,7 @@ public class ScoreCommentContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("staffUuid")
     public String staffUuid;
+
     public ScoreCommentContext withStaffUuid(String staffUuid) {
         this.staffUuid = staffUuid;
         return this;
@@ -57,6 +61,7 @@ public class ScoreCommentContext {
     
     @JsonProperty("startDpq")
     public Double startDpq;
+
     public ScoreCommentContext withStartDpq(Double startDpq) {
         this.startDpq = startDpq;
         return this;
@@ -64,6 +69,7 @@ public class ScoreCommentContext {
     
     @JsonProperty("startTimePos")
     public Double startTimePos;
+
     public ScoreCommentContext withStartTimePos(Double startTimePos) {
         this.startTimePos = startTimePos;
         return this;
@@ -71,6 +77,7 @@ public class ScoreCommentContext {
     
     @JsonProperty("stopDpq")
     public Double stopDpq;
+
     public ScoreCommentContext withStopDpq(Double stopDpq) {
         this.stopDpq = stopDpq;
         return this;
@@ -78,9 +85,18 @@ public class ScoreCommentContext {
     
     @JsonProperty("stopTimePos")
     public Double stopTimePos;
+
     public ScoreCommentContext withStopTimePos(Double stopTimePos) {
         this.stopTimePos = stopTimePos;
         return this;
     }
     
+    public ScoreCommentContext(@JsonProperty("measureUuids") String[] measureUuids, @JsonProperty("partUuid") String partUuid, @JsonProperty("startDpq") Double startDpq, @JsonProperty("startTimePos") Double startTimePos, @JsonProperty("stopDpq") Double stopDpq, @JsonProperty("stopTimePos") Double stopTimePos) {
+        this.measureUuids = measureUuids;
+        this.partUuid = partUuid;
+        this.startDpq = startDpq;
+        this.startTimePos = startTimePos;
+        this.stopDpq = stopDpq;
+        this.stopTimePos = stopTimePos;
+  }
 }

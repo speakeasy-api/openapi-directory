@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PreprocessingBinarizeRequestBody {
@@ -12,9 +13,13 @@ public class PreprocessingBinarizeRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public PreprocessingBinarizeRequestBodyImageFile imageFile;
+
     public PreprocessingBinarizeRequestBody withImageFile(PreprocessingBinarizeRequestBodyImageFile imageFile) {
         this.imageFile = imageFile;
         return this;
     }
     
+    public PreprocessingBinarizeRequestBody(@JsonProperty("imageFile") PreprocessingBinarizeRequestBodyImageFile imageFile) {
+        this.imageFile = imageFile;
+  }
 }

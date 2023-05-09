@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCertificateOptionsResponse {
     
     public String contentType;
+
     public UpdateCertificateOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateCertificateOptionsResponse {
      */
     
     public Object invalidArnException;
+
     public UpdateCertificateOptionsResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCertificateOptionsResponse {
      */
     
     public Object invalidStateException;
+
     public UpdateCertificateOptionsResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateCertificateOptionsResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateCertificateOptionsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateCertificateOptionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateCertificateOptionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateCertificateOptionsResponse {
     
     
     public Integer statusCode;
+
     public UpdateCertificateOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class UpdateCertificateOptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCertificateOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateCertificateOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

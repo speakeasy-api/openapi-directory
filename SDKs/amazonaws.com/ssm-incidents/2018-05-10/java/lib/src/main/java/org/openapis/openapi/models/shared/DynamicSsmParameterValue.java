@@ -15,9 +15,11 @@ public class DynamicSsmParameterValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variable")
     public VariableTypeEnum variable;
+
     public DynamicSsmParameterValue withVariable(VariableTypeEnum variable) {
         this.variable = variable;
         return this;
     }
     
+    public DynamicSsmParameterValue(){}
 }

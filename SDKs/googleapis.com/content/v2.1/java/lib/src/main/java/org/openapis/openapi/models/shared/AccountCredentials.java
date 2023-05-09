@@ -18,6 +18,7 @@ public class AccountCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public String accessToken;
+
     public AccountCredentials withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -29,6 +30,7 @@ public class AccountCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiresIn")
     public String expiresIn;
+
     public AccountCredentials withExpiresIn(String expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -40,9 +42,11 @@ public class AccountCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purpose")
     public AccountCredentialsPurposeEnum purpose;
+
     public AccountCredentials withPurpose(AccountCredentialsPurposeEnum purpose) {
         this.purpose = purpose;
         return this;
     }
     
+    public AccountCredentials(){}
 }

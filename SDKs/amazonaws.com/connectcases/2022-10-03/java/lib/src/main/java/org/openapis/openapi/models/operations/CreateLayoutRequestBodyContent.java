@@ -15,9 +15,11 @@ public class CreateLayoutRequestBodyContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basic")
     public org.openapis.openapi.models.shared.BasicLayout basic;
+
     public CreateLayoutRequestBodyContent withBasic(org.openapis.openapi.models.shared.BasicLayout basic) {
         this.basic = basic;
         return this;
     }
     
+    public CreateLayoutRequestBodyContent(){}
 }

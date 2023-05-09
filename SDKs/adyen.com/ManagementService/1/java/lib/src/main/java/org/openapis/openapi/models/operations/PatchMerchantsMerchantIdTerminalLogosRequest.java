@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchMerchantsMerchantIdTerminalLogosRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Logo logo;
+
     public PatchMerchantsMerchantIdTerminalLogosRequest withLogo(org.openapis.openapi.models.shared.Logo logo) {
         this.logo = logo;
         return this;
@@ -19,6 +21,7 @@ public class PatchMerchantsMerchantIdTerminalLogosRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public PatchMerchantsMerchantIdTerminalLogosRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -29,9 +32,14 @@ public class PatchMerchantsMerchantIdTerminalLogosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
     public String model;
+
     public PatchMerchantsMerchantIdTerminalLogosRequest withModel(String model) {
         this.model = model;
         return this;
     }
     
+    public PatchMerchantsMerchantIdTerminalLogosRequest(@JsonProperty("merchantId") String merchantId, @JsonProperty("model") String model) {
+        this.merchantId = merchantId;
+        this.model = model;
+  }
 }

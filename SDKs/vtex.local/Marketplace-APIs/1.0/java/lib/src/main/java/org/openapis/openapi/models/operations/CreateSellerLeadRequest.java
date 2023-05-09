@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSellerLeadRequest {
@@ -12,6 +13,7 @@ public class CreateSellerLeadRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CreateSellerLeadRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CreateSellerLeadRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CreateSellerLeadRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateSellerLeadRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateSellerLeadRequest createSellerLeadRequest;
+
     public CreateSellerLeadRequest withCreateSellerLeadRequest(org.openapis.openapi.models.shared.CreateSellerLeadRequest createSellerLeadRequest) {
         this.createSellerLeadRequest = createSellerLeadRequest;
         return this;
@@ -39,6 +43,7 @@ public class CreateSellerLeadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public CreateSellerLeadRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -49,9 +54,17 @@ public class CreateSellerLeadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
     public String environment;
+
     public CreateSellerLeadRequest withEnvironment(String environment) {
         this.environment = environment;
         return this;
     }
     
+    public CreateSellerLeadRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("CreateSellerLeadRequest") org.openapis.openapi.models.shared.CreateSellerLeadRequest createSellerLeadRequest, @JsonProperty("accountName") String accountName, @JsonProperty("environment") String environment) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.createSellerLeadRequest = createSellerLeadRequest;
+        this.accountName = accountName;
+        this.environment = environment;
+  }
 }

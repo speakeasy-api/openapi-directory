@@ -12,6 +12,7 @@ public class TdcerRequestBodyCertificateParameters {
      */
     @JsonProperty("CustID")
     public String custID;
+
     public TdcerRequestBodyCertificateParameters withCustID(String custID) {
         this.custID = custID;
         return this;
@@ -22,6 +23,7 @@ public class TdcerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public TdcerRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -32,9 +34,15 @@ public class TdcerRequestBodyCertificateParameters {
      */
     @JsonProperty("finYr")
     public String finYr;
+
     public TdcerRequestBodyCertificateParameters withFinYr(String finYr) {
         this.finYr = finYr;
         return this;
     }
     
+    public TdcerRequestBodyCertificateParameters(@JsonProperty("CustID") String custID, @JsonProperty("DOB") String dob, @JsonProperty("finYr") String finYr) {
+        this.custID = custID;
+        this.dob = dob;
+        this.finYr = finYr;
+  }
 }

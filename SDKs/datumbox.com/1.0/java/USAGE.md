@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.AdultContentDetectionRequestBody;
 import org.openapis.openapi.models.operations.AdultContentDetectionResponse;
 
@@ -13,10 +12,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AdultContentDetectionRequestBody req = new AdultContentDetectionRequestBody() {{
-                apiKey = "corrupti";
+            AdultContentDetectionRequestBody req = new AdultContentDetectionRequestBody("corrupti") {{
                 text = "provident";
-            }}            
+            }};            
 
             AdultContentDetectionResponse res = sdk.documentClassification.adultContentDetection(req);
 
@@ -26,5 +24,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

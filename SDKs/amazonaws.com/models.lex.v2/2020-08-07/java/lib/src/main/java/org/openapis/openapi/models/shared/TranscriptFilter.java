@@ -15,9 +15,11 @@ public class TranscriptFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lexTranscriptFilter")
     public LexTranscriptFilter lexTranscriptFilter;
+
     public TranscriptFilter withLexTranscriptFilter(LexTranscriptFilter lexTranscriptFilter) {
         this.lexTranscriptFilter = lexTranscriptFilter;
         return this;
     }
     
+    public TranscriptFilter(){}
 }

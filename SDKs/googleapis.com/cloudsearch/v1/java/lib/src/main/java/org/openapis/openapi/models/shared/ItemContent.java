@@ -18,6 +18,7 @@ public class ItemContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentDataRef")
     public UploadItemRef contentDataRef;
+
     public ItemContent withContentDataRef(UploadItemRef contentDataRef) {
         this.contentDataRef = contentDataRef;
         return this;
@@ -26,6 +27,7 @@ public class ItemContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentFormat")
     public ItemContentContentFormatEnum contentFormat;
+
     public ItemContent withContentFormat(ItemContentContentFormatEnum contentFormat) {
         this.contentFormat = contentFormat;
         return this;
@@ -37,6 +39,7 @@ public class ItemContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hash")
     public String hash;
+
     public ItemContent withHash(String hash) {
         this.hash = hash;
         return this;
@@ -48,9 +51,11 @@ public class ItemContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlineContent")
     public String inlineContent;
+
     public ItemContent withInlineContent(String inlineContent) {
         this.inlineContent = inlineContent;
         return this;
     }
     
+    public ItemContent(){}
 }

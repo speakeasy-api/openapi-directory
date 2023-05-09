@@ -15,6 +15,7 @@ public class LegacyTrackingChannelCatalogLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("migrate")
     public LinksMigrateLegacyTrackingChannelCatalogLink migrate;
+
     public LegacyTrackingChannelCatalogLinks withMigrate(LinksMigrateLegacyTrackingChannelCatalogLink migrate) {
         this.migrate = migrate;
         return this;
@@ -22,9 +23,13 @@ public class LegacyTrackingChannelCatalogLinks {
     
     @JsonProperty("self")
     public LinksGetLegacyTrackingChannelCatalogLink self;
+
     public LegacyTrackingChannelCatalogLinks withSelf(LinksGetLegacyTrackingChannelCatalogLink self) {
         this.self = self;
         return this;
     }
     
+    public LegacyTrackingChannelCatalogLinks(@JsonProperty("self") LinksGetLegacyTrackingChannelCatalogLink self) {
+        this.self = self;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCustomVerificationEmailTemplateResponse {
@@ -12,6 +13,7 @@ public class CreateCustomVerificationEmailTemplateResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateCustomVerificationEmailTemplateResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -22,6 +24,7 @@ public class CreateCustomVerificationEmailTemplateResponse {
      */
     
     public Object badRequestException;
+
     public CreateCustomVerificationEmailTemplateResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class CreateCustomVerificationEmailTemplateResponse {
     
     
     public String contentType;
+
     public CreateCustomVerificationEmailTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateCustomVerificationEmailTemplateResponse {
      */
     
     public java.util.Map<String, Object> createCustomVerificationEmailTemplateResponse;
+
     public CreateCustomVerificationEmailTemplateResponse withCreateCustomVerificationEmailTemplateResponse(java.util.Map<String, Object> createCustomVerificationEmailTemplateResponse) {
         this.createCustomVerificationEmailTemplateResponse = createCustomVerificationEmailTemplateResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateCustomVerificationEmailTemplateResponse {
      */
     
     public Object limitExceededException;
+
     public CreateCustomVerificationEmailTemplateResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateCustomVerificationEmailTemplateResponse {
      */
     
     public Object notFoundException;
+
     public CreateCustomVerificationEmailTemplateResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateCustomVerificationEmailTemplateResponse {
     
     
     public Integer statusCode;
+
     public CreateCustomVerificationEmailTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateCustomVerificationEmailTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCustomVerificationEmailTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateCustomVerificationEmailTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateCustomVerificationEmailTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateCustomVerificationEmailTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

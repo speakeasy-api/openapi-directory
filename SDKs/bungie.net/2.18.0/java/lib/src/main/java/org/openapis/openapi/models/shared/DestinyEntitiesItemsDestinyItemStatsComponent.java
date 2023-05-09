@@ -17,9 +17,11 @@ public class DestinyEntitiesItemsDestinyItemStatsComponent {
      */
     
     public java.util.Map<String, DestinyDestinyStat> stats;
+
     public DestinyEntitiesItemsDestinyItemStatsComponent withStats(java.util.Map<String, DestinyDestinyStat> stats) {
         this.stats = stats;
         return this;
     }
     
+    public DestinyEntitiesItemsDestinyItemStatsComponent(){}
 }

@@ -18,6 +18,7 @@ public class UpdateNetworkUplinkSettingsRequestBodyBandwidthLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cellular")
     public UpdateNetworkUplinkSettingsRequestBodyBandwidthLimitsCellular cellular;
+
     public UpdateNetworkUplinkSettingsRequestBodyBandwidthLimits withCellular(UpdateNetworkUplinkSettingsRequestBodyBandwidthLimitsCellular cellular) {
         this.cellular = cellular;
         return this;
@@ -29,6 +30,7 @@ public class UpdateNetworkUplinkSettingsRequestBodyBandwidthLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wan1")
     public UpdateNetworkUplinkSettingsRequestBodyBandwidthLimitsWan1 wan1;
+
     public UpdateNetworkUplinkSettingsRequestBodyBandwidthLimits withWan1(UpdateNetworkUplinkSettingsRequestBodyBandwidthLimitsWan1 wan1) {
         this.wan1 = wan1;
         return this;
@@ -40,9 +42,11 @@ public class UpdateNetworkUplinkSettingsRequestBodyBandwidthLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wan2")
     public UpdateNetworkUplinkSettingsRequestBodyBandwidthLimitsWan2 wan2;
+
     public UpdateNetworkUplinkSettingsRequestBodyBandwidthLimits withWan2(UpdateNetworkUplinkSettingsRequestBodyBandwidthLimitsWan2 wan2) {
         this.wan2 = wan2;
         return this;
     }
     
+    public UpdateNetworkUplinkSettingsRequestBodyBandwidthLimits(){}
 }

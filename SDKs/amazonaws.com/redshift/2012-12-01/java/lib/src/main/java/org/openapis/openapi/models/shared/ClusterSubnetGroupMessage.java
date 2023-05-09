@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ClusterSubnetGroupMessage {
     
     public ClusterSubnetGroups[] clusterSubnetGroups;
+
     public ClusterSubnetGroupMessage withClusterSubnetGroups(ClusterSubnetGroups[] clusterSubnetGroups) {
         this.clusterSubnetGroups = clusterSubnetGroups;
         return this;
@@ -19,9 +20,11 @@ public class ClusterSubnetGroupMessage {
     
     
     public String marker;
+
     public ClusterSubnetGroupMessage withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ClusterSubnetGroupMessage(){}
 }

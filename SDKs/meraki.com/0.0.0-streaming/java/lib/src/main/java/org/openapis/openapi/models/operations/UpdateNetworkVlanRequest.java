@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkVlanRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateNetworkVlanRequestBody requestBody;
+
     public UpdateNetworkVlanRequest withRequestBody(UpdateNetworkVlanRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class UpdateNetworkVlanRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public UpdateNetworkVlanRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -23,9 +26,14 @@ public class UpdateNetworkVlanRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vlanId")
     public String vlanId;
+
     public UpdateNetworkVlanRequest withVlanId(String vlanId) {
         this.vlanId = vlanId;
         return this;
     }
     
+    public UpdateNetworkVlanRequest(@JsonProperty("networkId") String networkId, @JsonProperty("vlanId") String vlanId) {
+        this.networkId = networkId;
+        this.vlanId = vlanId;
+  }
 }

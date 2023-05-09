@@ -20,6 +20,7 @@ public class Site {
      */
     @JsonProperty("arn")
     public String arn;
+
     public Site withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class Site {
      */
     @JsonProperty("countryCode")
     public String countryCode;
+
     public Site withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -42,6 +44,7 @@ public class Site {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Site withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -49,9 +52,16 @@ public class Site {
     
     @JsonProperty("name")
     public String name;
+
     public Site withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Site(@JsonProperty("arn") String arn, @JsonProperty("countryCode") String countryCode, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("name") String name) {
+        this.arn = arn;
+        this.countryCode = countryCode;
+        this.createdAt = createdAt;
+        this.name = name;
+  }
 }

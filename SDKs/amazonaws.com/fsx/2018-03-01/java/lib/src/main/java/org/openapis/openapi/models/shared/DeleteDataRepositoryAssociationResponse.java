@@ -15,6 +15,7 @@ public class DeleteDataRepositoryAssociationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationId")
     public String associationId;
+
     public DeleteDataRepositoryAssociationResponse withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -23,6 +24,7 @@ public class DeleteDataRepositoryAssociationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteDataInFileSystem")
     public Boolean deleteDataInFileSystem;
+
     public DeleteDataRepositoryAssociationResponse withDeleteDataInFileSystem(Boolean deleteDataInFileSystem) {
         this.deleteDataInFileSystem = deleteDataInFileSystem;
         return this;
@@ -31,9 +33,11 @@ public class DeleteDataRepositoryAssociationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lifecycle")
     public DataRepositoryLifecycleEnum lifecycle;
+
     public DeleteDataRepositoryAssociationResponse withLifecycle(DataRepositoryLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
     }
     
+    public DeleteDataRepositoryAssociationResponse(){}
 }

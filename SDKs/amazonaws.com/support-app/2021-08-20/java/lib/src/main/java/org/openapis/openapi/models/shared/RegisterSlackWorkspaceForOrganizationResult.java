@@ -15,6 +15,7 @@ public class RegisterSlackWorkspaceForOrganizationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountType")
     public AccountTypeEnum accountType;
+
     public RegisterSlackWorkspaceForOrganizationResult withAccountType(AccountTypeEnum accountType) {
         this.accountType = accountType;
         return this;
@@ -23,6 +24,7 @@ public class RegisterSlackWorkspaceForOrganizationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teamId")
     public String teamId;
+
     public RegisterSlackWorkspaceForOrganizationResult withTeamId(String teamId) {
         this.teamId = teamId;
         return this;
@@ -31,9 +33,11 @@ public class RegisterSlackWorkspaceForOrganizationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teamName")
     public String teamName;
+
     public RegisterSlackWorkspaceForOrganizationResult withTeamName(String teamName) {
         this.teamName = teamName;
         return this;
     }
     
+    public RegisterSlackWorkspaceForOrganizationResult(){}
 }

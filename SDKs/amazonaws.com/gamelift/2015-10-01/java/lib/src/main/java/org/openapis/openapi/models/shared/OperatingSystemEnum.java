@@ -9,7 +9,8 @@ import com.fasterxml.jackson.annotation.JsonValue;
 public enum OperatingSystemEnum {
     WINDOWS2012("WINDOWS_2012"),
     AMAZON_LINUX("AMAZON_LINUX"),
-    AMAZON_LINUX2("AMAZON_LINUX_2");
+    AMAZON_LINUX2("AMAZON_LINUX_2"),
+    WINDOWS2016("WINDOWS_2016");
 
     @JsonValue
     public final String value;

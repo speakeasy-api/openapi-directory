@@ -18,6 +18,7 @@ public class SearchResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public ItemList items;
+
     public SearchResults withItems(ItemList items) {
         this.items = items;
         return this;
@@ -29,6 +30,7 @@ public class SearchResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("movies")
     public ItemList movies;
+
     public SearchResults withMovies(ItemList movies) {
         this.movies = movies;
         return this;
@@ -40,6 +42,7 @@ public class SearchResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("other")
     public ItemList other;
+
     public SearchResults withOther(ItemList other) {
         this.other = other;
         return this;
@@ -51,6 +54,7 @@ public class SearchResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("people")
     public Person[] people;
+
     public SearchResults withPeople(Person[] people) {
         this.people = people;
         return this;
@@ -61,6 +65,7 @@ public class SearchResults {
      */
     @JsonProperty("term")
     public String term;
+
     public SearchResults withTerm(String term) {
         this.term = term;
         return this;
@@ -71,6 +76,7 @@ public class SearchResults {
      */
     @JsonProperty("total")
     public Integer total;
+
     public SearchResults withTotal(Integer total) {
         this.total = total;
         return this;
@@ -82,9 +88,14 @@ public class SearchResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tv")
     public ItemList tv;
+
     public SearchResults withTv(ItemList tv) {
         this.tv = tv;
         return this;
     }
     
+    public SearchResults(@JsonProperty("term") String term, @JsonProperty("total") Integer total) {
+        this.term = term;
+        this.total = total;
+  }
 }

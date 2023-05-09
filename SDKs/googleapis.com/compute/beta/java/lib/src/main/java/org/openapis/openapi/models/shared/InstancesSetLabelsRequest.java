@@ -15,6 +15,7 @@ public class InstancesSetLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelFingerprint")
     public String labelFingerprint;
+
     public InstancesSetLabelsRequest withLabelFingerprint(String labelFingerprint) {
         this.labelFingerprint = labelFingerprint;
         return this;
@@ -23,9 +24,11 @@ public class InstancesSetLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public InstancesSetLabelsRequest withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
     }
     
+    public InstancesSetLabelsRequest(){}
 }

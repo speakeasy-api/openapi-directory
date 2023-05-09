@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGroupDetailsRequest {
@@ -13,9 +14,13 @@ public class GetGroupDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group")
     public String group;
+
     public GetGroupDetailsRequest withGroup(String group) {
         this.group = group;
         return this;
     }
     
+    public GetGroupDetailsRequest(@JsonProperty("group") String group) {
+        this.group = group;
+  }
 }

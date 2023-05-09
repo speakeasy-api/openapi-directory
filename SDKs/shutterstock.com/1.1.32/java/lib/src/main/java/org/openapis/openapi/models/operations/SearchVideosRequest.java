@@ -13,6 +13,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=added_date")
     public LocalDate addedDate;
+
     public SearchVideosRequest withAddedDate(LocalDate addedDate) {
         this.addedDate = addedDate;
         return this;
@@ -23,6 +24,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=added_date_end")
     public LocalDate addedDateEnd;
+
     public SearchVideosRequest withAddedDateEnd(LocalDate addedDateEnd) {
         this.addedDateEnd = addedDateEnd;
         return this;
@@ -33,6 +35,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=added_date_start")
     public LocalDate addedDateStart;
+
     public SearchVideosRequest withAddedDateStart(LocalDate addedDateStart) {
         this.addedDateStart = addedDateStart;
         return this;
@@ -43,6 +46,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aspect_ratio")
     public SearchVideosAspectRatioEnum aspectRatio;
+
     public SearchVideosRequest withAspectRatio(SearchVideosAspectRatioEnum aspectRatio) {
         this.aspectRatio = aspectRatio;
         return this;
@@ -53,6 +57,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
     public String category;
+
     public SearchVideosRequest withCategory(String category) {
         this.category = category;
         return this;
@@ -63,6 +68,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor")
     public String[] contributor;
+
     public SearchVideosRequest withContributor(String[] contributor) {
         this.contributor = contributor;
         return this;
@@ -73,6 +79,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor_country")
     public String[] contributorCountry;
+
     public SearchVideosRequest withContributorCountry(String[] contributorCountry) {
         this.contributorCountry = contributorCountry;
         return this;
@@ -80,9 +87,13 @@ public class SearchVideosRequest {
     
     /**
      * (Deprecated; use duration_from and duration_to instead) Show videos with the specified duration in seconds
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=duration")
+    @Deprecated
     public Long duration;
+
+    @Deprecated
     public SearchVideosRequest withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -93,6 +104,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=duration_from")
     public Long durationFrom;
+
     public SearchVideosRequest withDurationFrom(Long durationFrom) {
         this.durationFrom = durationFrom;
         return this;
@@ -103,6 +115,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=duration_to")
     public Long durationTo;
+
     public SearchVideosRequest withDurationTo(Long durationTo) {
         this.durationTo = durationTo;
         return this;
@@ -110,9 +123,13 @@ public class SearchVideosRequest {
     
     /**
      * (Deprecated; use fps_from and fps_to instead) Show videos with the specified frames per second
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fps")
+    @Deprecated
     public Double fps;
+
+    @Deprecated
     public SearchVideosRequest withFps(Double fps) {
         this.fps = fps;
         return this;
@@ -123,6 +140,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fps_from")
     public Double fpsFrom;
+
     public SearchVideosRequest withFpsFrom(Double fpsFrom) {
         this.fpsFrom = fpsFrom;
         return this;
@@ -133,6 +151,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fps_to")
     public Double fpsTo;
+
     public SearchVideosRequest withFpsTo(Double fpsTo) {
         this.fpsTo = fpsTo;
         return this;
@@ -143,6 +162,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyword_safe_search")
     public Boolean keywordSafeSearch;
+
     public SearchVideosRequest withKeywordSafeSearch(Boolean keywordSafeSearch) {
         this.keywordSafeSearch = keywordSafeSearch;
         return this;
@@ -153,6 +173,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public org.openapis.openapi.models.shared.LanguageEnum language;
+
     public SearchVideosRequest withLanguage(org.openapis.openapi.models.shared.LanguageEnum language) {
         this.language = language;
         return this;
@@ -163,6 +184,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
     public SearchVideosLicenseEnum[] license;
+
     public SearchVideosRequest withLicense(SearchVideosLicenseEnum[] license) {
         this.license = license;
         return this;
@@ -173,6 +195,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
     public String[] model;
+
     public SearchVideosRequest withModel(String[] model) {
         this.model = model;
         return this;
@@ -183,6 +206,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public SearchVideosRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -193,6 +217,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=people_age")
     public SearchVideosPeopleAgeEnum peopleAge;
+
     public SearchVideosRequest withPeopleAge(SearchVideosPeopleAgeEnum peopleAge) {
         this.peopleAge = peopleAge;
         return this;
@@ -203,6 +228,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=people_ethnicity")
     public SearchVideosPeopleEthnicityEnum[] peopleEthnicity;
+
     public SearchVideosRequest withPeopleEthnicity(SearchVideosPeopleEthnicityEnum[] peopleEthnicity) {
         this.peopleEthnicity = peopleEthnicity;
         return this;
@@ -213,6 +239,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=people_gender")
     public SearchVideosPeopleGenderEnum peopleGender;
+
     public SearchVideosRequest withPeopleGender(SearchVideosPeopleGenderEnum peopleGender) {
         this.peopleGender = peopleGender;
         return this;
@@ -223,6 +250,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=people_model_released")
     public Boolean peopleModelReleased;
+
     public SearchVideosRequest withPeopleModelReleased(Boolean peopleModelReleased) {
         this.peopleModelReleased = peopleModelReleased;
         return this;
@@ -233,6 +261,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=people_number")
     public Long peopleNumber;
+
     public SearchVideosRequest withPeopleNumber(Long peopleNumber) {
         this.peopleNumber = peopleNumber;
         return this;
@@ -243,6 +272,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public SearchVideosRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -253,6 +283,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public SearchVideosRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -263,6 +294,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolution")
     public SearchVideosResolutionEnum resolution;
+
     public SearchVideosRequest withResolution(SearchVideosResolutionEnum resolution) {
         this.resolution = resolution;
         return this;
@@ -273,6 +305,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=safe")
     public Boolean safe;
+
     public SearchVideosRequest withSafe(Boolean safe) {
         this.safe = safe;
         return this;
@@ -283,6 +316,7 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public SearchVideosSortEnum sort;
+
     public SearchVideosRequest withSort(SearchVideosSortEnum sort) {
         this.sort = sort;
         return this;
@@ -293,9 +327,11 @@ public class SearchVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public SearchVideosViewEnum view;
+
     public SearchVideosRequest withView(SearchVideosViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public SearchVideosRequest(){}
 }

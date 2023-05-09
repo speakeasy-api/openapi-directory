@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutPromotionsIdJsonRequest {
@@ -12,6 +13,7 @@ public class PutPromotionsIdJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PromotionEdit promotionEdit;
+
     public PutPromotionsIdJsonRequest withPromotionEdit(org.openapis.openapi.models.shared.PromotionEdit promotionEdit) {
         this.promotionEdit = promotionEdit;
         return this;
@@ -22,6 +24,7 @@ public class PutPromotionsIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PutPromotionsIdJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class PutPromotionsIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PutPromotionsIdJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -42,9 +46,16 @@ public class PutPromotionsIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PutPromotionsIdJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PutPromotionsIdJsonRequest(@JsonProperty("PromotionEdit") org.openapis.openapi.models.shared.PromotionEdit promotionEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("login") String login) {
+        this.promotionEdit = promotionEdit;
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkSsidSplashSettingsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateNetworkSsidSplashSettingsRequestBody requestBody;
+
     public UpdateNetworkSsidSplashSettingsRequest withRequestBody(UpdateNetworkSsidSplashSettingsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class UpdateNetworkSsidSplashSettingsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public UpdateNetworkSsidSplashSettingsRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -23,9 +26,14 @@ public class UpdateNetworkSsidSplashSettingsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
     public String number;
+
     public UpdateNetworkSsidSplashSettingsRequest withNumber(String number) {
         this.number = number;
         return this;
     }
     
+    public UpdateNetworkSsidSplashSettingsRequest(@JsonProperty("networkId") String networkId, @JsonProperty("number") String number) {
+        this.networkId = networkId;
+        this.number = number;
+  }
 }

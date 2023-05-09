@@ -15,6 +15,7 @@ public class TagOptionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public TagOptionSummary withKey(String key) {
         this.key = key;
         return this;
@@ -23,9 +24,11 @@ public class TagOptionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public TagOptionSummary withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public TagOptionSummary(){}
 }

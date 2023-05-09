@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterOrganizationAdminAccountResponse {
@@ -12,6 +13,7 @@ public class DeregisterOrganizationAdminAccountResponse {
      */
     
     public Object accessDeniedException;
+
     public DeregisterOrganizationAdminAccountResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeregisterOrganizationAdminAccountResponse {
     
     
     public String contentType;
+
     public DeregisterOrganizationAdminAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeregisterOrganizationAdminAccountResponse {
      */
     
     public java.util.Map<String, Object> deregisterOrganizationAdminAccountResponse;
+
     public DeregisterOrganizationAdminAccountResponse withDeregisterOrganizationAdminAccountResponse(java.util.Map<String, Object> deregisterOrganizationAdminAccountResponse) {
         this.deregisterOrganizationAdminAccountResponse = deregisterOrganizationAdminAccountResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeregisterOrganizationAdminAccountResponse {
      */
     
     public Object internalServerException;
+
     public DeregisterOrganizationAdminAccountResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeregisterOrganizationAdminAccountResponse {
     
     
     public Integer statusCode;
+
     public DeregisterOrganizationAdminAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeregisterOrganizationAdminAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterOrganizationAdminAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeregisterOrganizationAdminAccountResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeregisterOrganizationAdminAccountResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeregisterOrganizationAdminAccountResponse {
      */
     
     public Object validationException;
+
     public DeregisterOrganizationAdminAccountResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeregisterOrganizationAdminAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

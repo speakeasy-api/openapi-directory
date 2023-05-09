@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2ClientCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public GoogleCloudIntegrationsV1alphaAccessToken accessToken;
+
     public GoogleCloudIntegrationsV1alphaOAuth2ClientCredentials withAccessToken(GoogleCloudIntegrationsV1alphaAccessToken accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2ClientCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public GoogleCloudIntegrationsV1alphaOAuth2ClientCredentials withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2ClientCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientSecret")
     public String clientSecret;
+
     public GoogleCloudIntegrationsV1alphaOAuth2ClientCredentials withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2ClientCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestType")
     public GoogleCloudIntegrationsV1alphaOAuth2ClientCredentialsRequestTypeEnum requestType;
+
     public GoogleCloudIntegrationsV1alphaOAuth2ClientCredentials withRequestType(GoogleCloudIntegrationsV1alphaOAuth2ClientCredentialsRequestTypeEnum requestType) {
         this.requestType = requestType;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2ClientCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public GoogleCloudIntegrationsV1alphaOAuth2ClientCredentials withScope(String scope) {
         this.scope = scope;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2ClientCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenEndpoint")
     public String tokenEndpoint;
+
     public GoogleCloudIntegrationsV1alphaOAuth2ClientCredentials withTokenEndpoint(String tokenEndpoint) {
         this.tokenEndpoint = tokenEndpoint;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudIntegrationsV1alphaOAuth2ClientCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenParams")
     public GoogleCloudIntegrationsV1alphaParameterMap tokenParams;
+
     public GoogleCloudIntegrationsV1alphaOAuth2ClientCredentials withTokenParams(GoogleCloudIntegrationsV1alphaParameterMap tokenParams) {
         this.tokenParams = tokenParams;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaOAuth2ClientCredentials(){}
 }

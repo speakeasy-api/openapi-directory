@@ -18,6 +18,7 @@ public class Example {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Example withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class Example {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceText")
     public String sourceText;
+
     public Example withSourceText(String sourceText) {
         this.sourceText = sourceText;
         return this;
@@ -40,6 +42,7 @@ public class Example {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetText")
     public String targetText;
+
     public Example withTargetText(String targetText) {
         this.targetText = targetText;
         return this;
@@ -51,9 +54,11 @@ public class Example {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public String usage;
+
     public Example withUsage(String usage) {
         this.usage = usage;
         return this;
     }
     
+    public Example(){}
 }

@@ -15,6 +15,7 @@ public class CreateImportJobRequestBodyImportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefineSegment")
     public Boolean defineSegment;
+
     public CreateImportJobRequestBodyImportJobRequest withDefineSegment(Boolean defineSegment) {
         this.defineSegment = defineSegment;
         return this;
@@ -23,6 +24,7 @@ public class CreateImportJobRequestBodyImportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalId")
     public String externalId;
+
     public CreateImportJobRequestBodyImportJobRequest withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -31,6 +33,7 @@ public class CreateImportJobRequestBodyImportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public org.openapis.openapi.models.shared.FormatEnum format;
+
     public CreateImportJobRequestBodyImportJobRequest withFormat(org.openapis.openapi.models.shared.FormatEnum format) {
         this.format = format;
         return this;
@@ -39,6 +42,7 @@ public class CreateImportJobRequestBodyImportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegisterEndpoints")
     public Boolean registerEndpoints;
+
     public CreateImportJobRequestBodyImportJobRequest withRegisterEndpoints(Boolean registerEndpoints) {
         this.registerEndpoints = registerEndpoints;
         return this;
@@ -47,6 +51,7 @@ public class CreateImportJobRequestBodyImportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateImportJobRequestBodyImportJobRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -55,6 +60,7 @@ public class CreateImportJobRequestBodyImportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Url")
     public String s3Url;
+
     public CreateImportJobRequestBodyImportJobRequest withS3Url(String s3Url) {
         this.s3Url = s3Url;
         return this;
@@ -63,6 +69,7 @@ public class CreateImportJobRequestBodyImportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SegmentId")
     public String segmentId;
+
     public CreateImportJobRequestBodyImportJobRequest withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
@@ -71,9 +78,11 @@ public class CreateImportJobRequestBodyImportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SegmentName")
     public String segmentName;
+
     public CreateImportJobRequestBodyImportJobRequest withSegmentName(String segmentName) {
         this.segmentName = segmentName;
         return this;
     }
     
+    public CreateImportJobRequestBodyImportJobRequest(){}
 }

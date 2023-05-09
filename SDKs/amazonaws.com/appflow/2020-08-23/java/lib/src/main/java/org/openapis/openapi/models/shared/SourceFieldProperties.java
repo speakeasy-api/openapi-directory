@@ -15,6 +15,7 @@ public class SourceFieldProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isQueryable")
     public Boolean isQueryable;
+
     public SourceFieldProperties withIsQueryable(Boolean isQueryable) {
         this.isQueryable = isQueryable;
         return this;
@@ -23,6 +24,7 @@ public class SourceFieldProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isRetrievable")
     public Boolean isRetrievable;
+
     public SourceFieldProperties withIsRetrievable(Boolean isRetrievable) {
         this.isRetrievable = isRetrievable;
         return this;
@@ -31,9 +33,11 @@ public class SourceFieldProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isTimestampFieldForIncrementalQueries")
     public Boolean isTimestampFieldForIncrementalQueries;
+
     public SourceFieldProperties withIsTimestampFieldForIncrementalQueries(Boolean isTimestampFieldForIncrementalQueries) {
         this.isTimestampFieldForIncrementalQueries = isTimestampFieldForIncrementalQueries;
         return this;
     }
     
+    public SourceFieldProperties(){}
 }

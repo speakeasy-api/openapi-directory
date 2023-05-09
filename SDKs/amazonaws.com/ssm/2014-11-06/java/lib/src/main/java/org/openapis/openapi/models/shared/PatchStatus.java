@@ -22,6 +22,7 @@ public class PatchStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ApprovalDate")
     public OffsetDateTime approvalDate;
+
     public PatchStatus withApprovalDate(OffsetDateTime approvalDate) {
         this.approvalDate = approvalDate;
         return this;
@@ -30,6 +31,7 @@ public class PatchStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceLevel")
     public PatchComplianceLevelEnum complianceLevel;
+
     public PatchStatus withComplianceLevel(PatchComplianceLevelEnum complianceLevel) {
         this.complianceLevel = complianceLevel;
         return this;
@@ -38,9 +40,11 @@ public class PatchStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentStatus")
     public PatchDeploymentStatusEnum deploymentStatus;
+
     public PatchStatus withDeploymentStatus(PatchDeploymentStatusEnum deploymentStatus) {
         this.deploymentStatus = deploymentStatus;
         return this;
     }
     
+    public PatchStatus(){}
 }

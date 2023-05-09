@@ -18,6 +18,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidApp")
     public AndroidAppAsset androidApp;
+
     public Asset withAndroidApp(AndroidAppAsset androidApp) {
         this.androidApp = androidApp;
         return this;
@@ -29,9 +30,11 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web")
     public WebAsset web;
+
     public Asset withWeb(WebAsset web) {
         this.web = web;
         return this;
     }
     
+    public Asset(){}
 }

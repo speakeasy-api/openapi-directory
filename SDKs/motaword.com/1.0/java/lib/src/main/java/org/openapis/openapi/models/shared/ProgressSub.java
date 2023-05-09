@@ -12,6 +12,7 @@ public class ProgressSub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proofreading")
     public Float proofreading;
+
     public ProgressSub withProofreading(Float proofreading) {
         this.proofreading = proofreading;
         return this;
@@ -20,6 +21,7 @@ public class ProgressSub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Float total;
+
     public ProgressSub withTotal(Float total) {
         this.total = total;
         return this;
@@ -28,6 +30,7 @@ public class ProgressSub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translation")
     public Float translation;
+
     public ProgressSub withTranslation(Float translation) {
         this.translation = translation;
         return this;
@@ -36,9 +39,11 @@ public class ProgressSub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("word_count")
     public Long wordCount;
+
     public ProgressSub withWordCount(Long wordCount) {
         this.wordCount = wordCount;
         return this;
     }
     
+    public ProgressSub(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AndroidenterpriseUsersGetAvailableProductSetResponse {
     
     public String contentType;
+
     public AndroidenterpriseUsersGetAvailableProductSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AndroidenterpriseUsersGetAvailableProductSetResponse {
      */
     
     public org.openapis.openapi.models.shared.ProductSet productSet;
+
     public AndroidenterpriseUsersGetAvailableProductSetResponse withProductSet(org.openapis.openapi.models.shared.ProductSet productSet) {
         this.productSet = productSet;
         return this;
@@ -26,6 +29,7 @@ public class AndroidenterpriseUsersGetAvailableProductSetResponse {
     
     
     public Integer statusCode;
+
     public AndroidenterpriseUsersGetAvailableProductSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AndroidenterpriseUsersGetAvailableProductSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AndroidenterpriseUsersGetAvailableProductSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AndroidenterpriseUsersGetAvailableProductSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

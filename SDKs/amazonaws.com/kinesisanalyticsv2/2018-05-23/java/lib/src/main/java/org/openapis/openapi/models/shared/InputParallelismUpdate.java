@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InputParallelismUpdate {
     @JsonProperty("CountUpdate")
     public Long countUpdate;
+
     public InputParallelismUpdate withCountUpdate(Long countUpdate) {
         this.countUpdate = countUpdate;
         return this;
     }
     
+    public InputParallelismUpdate(@JsonProperty("CountUpdate") Long countUpdate) {
+        this.countUpdate = countUpdate;
+  }
 }

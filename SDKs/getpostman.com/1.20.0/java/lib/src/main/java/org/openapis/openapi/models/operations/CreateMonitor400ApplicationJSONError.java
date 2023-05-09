@@ -12,6 +12,7 @@ public class CreateMonitor400ApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public CreateMonitor400ApplicationJSONErrorDetails details;
+
     public CreateMonitor400ApplicationJSONError withDetails(CreateMonitor400ApplicationJSONErrorDetails details) {
         this.details = details;
         return this;
@@ -20,6 +21,7 @@ public class CreateMonitor400ApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CreateMonitor400ApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
@@ -28,9 +30,11 @@ public class CreateMonitor400ApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateMonitor400ApplicationJSONError withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateMonitor400ApplicationJSONError(){}
 }

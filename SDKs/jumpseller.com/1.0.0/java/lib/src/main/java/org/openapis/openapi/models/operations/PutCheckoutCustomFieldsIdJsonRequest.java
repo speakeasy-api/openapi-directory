@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutCheckoutCustomFieldsIdJsonRequest {
@@ -12,6 +13,7 @@ public class PutCheckoutCustomFieldsIdJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CheckoutCustomFieldEdit checkoutCustomFieldEdit;
+
     public PutCheckoutCustomFieldsIdJsonRequest withCheckoutCustomFieldEdit(org.openapis.openapi.models.shared.CheckoutCustomFieldEdit checkoutCustomFieldEdit) {
         this.checkoutCustomFieldEdit = checkoutCustomFieldEdit;
         return this;
@@ -22,6 +24,7 @@ public class PutCheckoutCustomFieldsIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PutCheckoutCustomFieldsIdJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class PutCheckoutCustomFieldsIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PutCheckoutCustomFieldsIdJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -42,9 +46,16 @@ public class PutCheckoutCustomFieldsIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PutCheckoutCustomFieldsIdJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PutCheckoutCustomFieldsIdJsonRequest(@JsonProperty("CheckoutCustomFieldEdit") org.openapis.openapi.models.shared.CheckoutCustomFieldEdit checkoutCustomFieldEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("login") String login) {
+        this.checkoutCustomFieldEdit = checkoutCustomFieldEdit;
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+  }
 }

@@ -15,6 +15,7 @@ public class ComplianceByConfigRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Compliance")
     public Compliance compliance;
+
     public ComplianceByConfigRule withCompliance(Compliance compliance) {
         this.compliance = compliance;
         return this;
@@ -23,9 +24,11 @@ public class ComplianceByConfigRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigRuleName")
     public String configRuleName;
+
     public ComplianceByConfigRule withConfigRuleName(String configRuleName) {
         this.configRuleName = configRuleName;
         return this;
     }
     
+    public ComplianceByConfigRule(){}
 }

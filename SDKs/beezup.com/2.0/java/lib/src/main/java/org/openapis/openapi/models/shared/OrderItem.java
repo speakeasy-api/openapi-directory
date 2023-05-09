@@ -17,6 +17,7 @@ public class OrderItem {
      */
     @JsonProperty("beezUPOrderItemId")
     public String beezUPOrderItemId;
+
     public OrderItem withBeezUPOrderItemId(String beezUPOrderItemId) {
         this.beezUPOrderItemId = beezUPOrderItemId;
         return this;
@@ -28,6 +29,7 @@ public class OrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderItem_BeezUPStoreId")
     public String orderItemBeezUPStoreId;
+
     public OrderItem withOrderItemBeezUPStoreId(String orderItemBeezUPStoreId) {
         this.orderItemBeezUPStoreId = orderItemBeezUPStoreId;
         return this;
@@ -39,6 +41,7 @@ public class OrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderItem_Condition")
     public String orderItemCondition;
+
     public OrderItem withOrderItemCondition(String orderItemCondition) {
         this.orderItemCondition = orderItemCondition;
         return this;
@@ -50,6 +53,7 @@ public class OrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderItem_ImageUrl")
     public String orderItemImageUrl;
+
     public OrderItem withOrderItemImageUrl(String orderItemImageUrl) {
         this.orderItemImageUrl = orderItemImageUrl;
         return this;
@@ -61,6 +65,7 @@ public class OrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderItem_ItemPrice")
     public Double orderItemItemPrice;
+
     public OrderItem withOrderItemItemPrice(Double orderItemItemPrice) {
         this.orderItemItemPrice = orderItemItemPrice;
         return this;
@@ -72,6 +77,7 @@ public class OrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderItem_ItemTax")
     public Double orderItemItemTax;
+
     public OrderItem withOrderItemItemTax(Double orderItemItemTax) {
         this.orderItemItemTax = orderItemItemTax;
         return this;
@@ -83,6 +89,7 @@ public class OrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderItem_MarketPlaceProductId")
     public String orderItemMarketPlaceProductId;
+
     public OrderItem withOrderItemMarketPlaceProductId(String orderItemMarketPlaceProductId) {
         this.orderItemMarketPlaceProductId = orderItemMarketPlaceProductId;
         return this;
@@ -94,6 +101,7 @@ public class OrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderItem_MarketplaceImageUri")
     public String orderItemMarketplaceImageUri;
+
     public OrderItem withOrderItemMarketplaceImageUri(String orderItemMarketplaceImageUri) {
         this.orderItemMarketplaceImageUri = orderItemMarketplaceImageUri;
         return this;
@@ -105,6 +113,7 @@ public class OrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderItem_MarketplaceProductUri")
     public String orderItemMarketplaceProductUri;
+
     public OrderItem withOrderItemMarketplaceProductUri(String orderItemMarketplaceProductUri) {
         this.orderItemMarketplaceProductUri = orderItemMarketplaceProductUri;
         return this;
@@ -116,6 +125,7 @@ public class OrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderItem_MerchantImportedProductId")
     public String orderItemMerchantImportedProductId;
+
     public OrderItem withOrderItemMerchantImportedProductId(String orderItemMerchantImportedProductId) {
         this.orderItemMerchantImportedProductId = orderItemMerchantImportedProductId;
         return this;
@@ -127,6 +137,7 @@ public class OrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderItem_MerchantImportedProductIdColumnName")
     public String orderItemMerchantImportedProductIdColumnName;
+
     public OrderItem withOrderItemMerchantImportedProductIdColumnName(String orderItemMerchantImportedProductIdColumnName) {
         this.orderItemMerchantImportedProductIdColumnName = orderItemMerchantImportedProductIdColumnName;
         return this;
@@ -138,6 +149,7 @@ public class OrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderItem_MerchantImportedProductUrl")
     public String orderItemMerchantImportedProductUrl;
+
     public OrderItem withOrderItemMerchantImportedProductUrl(String orderItemMerchantImportedProductUrl) {
         this.orderItemMerchantImportedProductUrl = orderItemMerchantImportedProductUrl;
         return this;
@@ -149,6 +161,7 @@ public class OrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderItem_MerchantProductId")
     public String orderItemMerchantProductId;
+
     public OrderItem withOrderItemMerchantProductId(String orderItemMerchantProductId) {
         this.orderItemMerchantProductId = orderItemMerchantProductId;
         return this;
@@ -160,6 +173,7 @@ public class OrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderItem_MerchantProductIdColumnName")
     public String orderItemMerchantProductIdColumnName;
+
     public OrderItem withOrderItemMerchantProductIdColumnName(String orderItemMerchantProductIdColumnName) {
         this.orderItemMerchantProductIdColumnName = orderItemMerchantProductIdColumnName;
         return this;
@@ -170,6 +184,7 @@ public class OrderItem {
      */
     @JsonProperty("orderItem_OrderItemType")
     public String orderItemOrderItemType;
+
     public OrderItem withOrderItemOrderItemType(String orderItemOrderItemType) {
         this.orderItemOrderItemType = orderItemOrderItemType;
         return this;
@@ -181,6 +196,7 @@ public class OrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderItem_Quantity")
     public Double orderItemQuantity;
+
     public OrderItem withOrderItemQuantity(Double orderItemQuantity) {
         this.orderItemQuantity = orderItemQuantity;
         return this;
@@ -192,6 +208,7 @@ public class OrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderItem_Shipping_Price")
     public Double orderItemShippingPrice;
+
     public OrderItem withOrderItemShippingPrice(Double orderItemShippingPrice) {
         this.orderItemShippingPrice = orderItemShippingPrice;
         return this;
@@ -203,6 +220,7 @@ public class OrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderItem_Title")
     public String orderItemTitle;
+
     public OrderItem withOrderItemTitle(String orderItemTitle) {
         this.orderItemTitle = orderItemTitle;
         return this;
@@ -214,6 +232,7 @@ public class OrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderItem_TotalPrice")
     public Double orderItemTotalPrice;
+
     public OrderItem withOrderItemTotalPrice(Double orderItemTotalPrice) {
         this.orderItemTotalPrice = orderItemTotalPrice;
         return this;
@@ -225,9 +244,14 @@ public class OrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderItem_gtin")
     public String orderItemGtin;
+
     public OrderItem withOrderItemGtin(String orderItemGtin) {
         this.orderItemGtin = orderItemGtin;
         return this;
     }
     
+    public OrderItem(@JsonProperty("beezUPOrderItemId") String beezUPOrderItemId, @JsonProperty("orderItem_OrderItemType") String orderItemOrderItemType) {
+        this.beezUPOrderItemId = beezUPOrderItemId;
+        this.orderItemOrderItemType = orderItemOrderItemType;
+  }
 }

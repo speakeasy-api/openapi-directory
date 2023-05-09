@@ -15,9 +15,11 @@ public class SeasonRelationshipsLastReleasedEpisode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ResourceIdentifier data;
+
     public SeasonRelationshipsLastReleasedEpisode withData(ResourceIdentifier data) {
         this.data = data;
         return this;
     }
     
+    public SeasonRelationshipsLastReleasedEpisode(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateStorageVirtualMachineResponse {
@@ -12,6 +13,7 @@ public class UpdateStorageVirtualMachineResponse {
      */
     
     public Object badRequest;
+
     public UpdateStorageVirtualMachineResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class UpdateStorageVirtualMachineResponse {
     
     
     public String contentType;
+
     public UpdateStorageVirtualMachineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateStorageVirtualMachineResponse {
      */
     
     public Object incompatibleParameterError;
+
     public UpdateStorageVirtualMachineResponse withIncompatibleParameterError(Object incompatibleParameterError) {
         this.incompatibleParameterError = incompatibleParameterError;
         return this;
@@ -39,6 +43,7 @@ public class UpdateStorageVirtualMachineResponse {
      */
     
     public Object internalServerError;
+
     public UpdateStorageVirtualMachineResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class UpdateStorageVirtualMachineResponse {
     
     
     public Integer statusCode;
+
     public UpdateStorageVirtualMachineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateStorageVirtualMachineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateStorageVirtualMachineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateStorageVirtualMachineResponse {
      */
     
     public Object storageVirtualMachineNotFound;
+
     public UpdateStorageVirtualMachineResponse withStorageVirtualMachineNotFound(Object storageVirtualMachineNotFound) {
         this.storageVirtualMachineNotFound = storageVirtualMachineNotFound;
         return this;
@@ -73,6 +81,7 @@ public class UpdateStorageVirtualMachineResponse {
      */
     
     public Object unsupportedOperation;
+
     public UpdateStorageVirtualMachineResponse withUnsupportedOperation(Object unsupportedOperation) {
         this.unsupportedOperation = unsupportedOperation;
         return this;
@@ -83,9 +92,14 @@ public class UpdateStorageVirtualMachineResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateStorageVirtualMachineResponse updateStorageVirtualMachineResponse;
+
     public UpdateStorageVirtualMachineResponse withUpdateStorageVirtualMachineResponse(org.openapis.openapi.models.shared.UpdateStorageVirtualMachineResponse updateStorageVirtualMachineResponse) {
         this.updateStorageVirtualMachineResponse = updateStorageVirtualMachineResponse;
         return this;
     }
     
+    public UpdateStorageVirtualMachineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

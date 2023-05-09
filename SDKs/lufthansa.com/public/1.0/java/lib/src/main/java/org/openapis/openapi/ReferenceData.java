@@ -68,11 +68,9 @@ public class ReferenceData {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReferencesAircraftByAircraftCodeGetResponse res = new org.openapis.openapi.models.operations.ReferencesAircraftByAircraftCodeGetResponse() {{
+        org.openapis.openapi.models.operations.ReferencesAircraftByAircraftCodeGetResponse res = new org.openapis.openapi.models.operations.ReferencesAircraftByAircraftCodeGetResponse(contentType, httpRes.statusCode()) {{
             referencesAircraftByAircraftCodeGet200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -123,11 +121,9 @@ public class ReferenceData {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReferencesAirlinesByAirlineCodeGetResponse res = new org.openapis.openapi.models.operations.ReferencesAirlinesByAirlineCodeGetResponse() {{
+        org.openapis.openapi.models.operations.ReferencesAirlinesByAirlineCodeGetResponse res = new org.openapis.openapi.models.operations.ReferencesAirlinesByAirlineCodeGetResponse(contentType, httpRes.statusCode()) {{
             referencesAirlinesByAirlineCodeGet200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,11 +174,9 @@ public class ReferenceData {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReferencesAirportsByAirportCodeGetResponse res = new org.openapis.openapi.models.operations.ReferencesAirportsByAirportCodeGetResponse() {{
+        org.openapis.openapi.models.operations.ReferencesAirportsByAirportCodeGetResponse res = new org.openapis.openapi.models.operations.ReferencesAirportsByAirportCodeGetResponse(contentType, httpRes.statusCode()) {{
             airportResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -233,11 +227,9 @@ public class ReferenceData {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReferencesAirportsNearestByLatitudeAndLongitudeGetResponse res = new org.openapis.openapi.models.operations.ReferencesAirportsNearestByLatitudeAndLongitudeGetResponse() {{
+        org.openapis.openapi.models.operations.ReferencesAirportsNearestByLatitudeAndLongitudeGetResponse res = new org.openapis.openapi.models.operations.ReferencesAirportsNearestByLatitudeAndLongitudeGetResponse(contentType, httpRes.statusCode()) {{
             referencesAirportsNearestByLatitudeAndLongitudeGet200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -288,11 +280,9 @@ public class ReferenceData {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReferencesCitiesByCityCodeGetResponse res = new org.openapis.openapi.models.operations.ReferencesCitiesByCityCodeGetResponse() {{
+        org.openapis.openapi.models.operations.ReferencesCitiesByCityCodeGetResponse res = new org.openapis.openapi.models.operations.ReferencesCitiesByCityCodeGetResponse(contentType, httpRes.statusCode()) {{
             referencesCitiesByCityCodeGet200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,11 +333,9 @@ public class ReferenceData {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReferencesCountriesByCountryCodeGetResponse res = new org.openapis.openapi.models.operations.ReferencesCountriesByCountryCodeGetResponse() {{
+        org.openapis.openapi.models.operations.ReferencesCountriesByCountryCodeGetResponse res = new org.openapis.openapi.models.operations.ReferencesCountriesByCountryCodeGetResponse(contentType, httpRes.statusCode()) {{
             referencesCountriesByCountryCodeGet200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -10,11 +10,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateVolumeRequest {
     /**
-     * (Optional) An idempotency token for resource creation, in a string of up to 64 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
+     * (Optional) An idempotency token for resource creation, in a string of up to 63 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CreateVolumeRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -22,6 +23,7 @@ public class CreateVolumeRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateVolumeRequest withName(String name) {
         this.name = name;
         return this;
@@ -30,6 +32,7 @@ public class CreateVolumeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OntapConfiguration")
     public CreateOntapVolumeConfiguration ontapConfiguration;
+
     public CreateVolumeRequest withOntapConfiguration(CreateOntapVolumeConfiguration ontapConfiguration) {
         this.ontapConfiguration = ontapConfiguration;
         return this;
@@ -38,6 +41,7 @@ public class CreateVolumeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenZFSConfiguration")
     public CreateOpenZFSVolumeConfiguration openZFSConfiguration;
+
     public CreateVolumeRequest withOpenZFSConfiguration(CreateOpenZFSVolumeConfiguration openZFSConfiguration) {
         this.openZFSConfiguration = openZFSConfiguration;
         return this;
@@ -49,6 +53,7 @@ public class CreateVolumeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateVolumeRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -56,9 +61,14 @@ public class CreateVolumeRequest {
     
     @JsonProperty("VolumeType")
     public VolumeTypeEnum volumeType;
+
     public CreateVolumeRequest withVolumeType(VolumeTypeEnum volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public CreateVolumeRequest(@JsonProperty("Name") String name, @JsonProperty("VolumeType") VolumeTypeEnum volumeType) {
+        this.name = name;
+        this.volumeType = volumeType;
+  }
 }

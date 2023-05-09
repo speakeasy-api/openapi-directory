@@ -18,6 +18,7 @@ public class Selinux {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public Selinux withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,9 +30,11 @@ public class Selinux {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public String mode;
+
     public Selinux withMode(String mode) {
         this.mode = mode;
         return this;
     }
     
+    public Selinux(){}
 }

@@ -18,6 +18,7 @@ public class AuthorizationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public AuthorizationPolicyActionEnum action;
+
     public AuthorizationPolicy withAction(AuthorizationPolicyActionEnum action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class AuthorizationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public AuthorizationPolicy withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class AuthorizationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AuthorizationPolicy withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class AuthorizationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public AuthorizationPolicy withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,6 +66,7 @@ public class AuthorizationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AuthorizationPolicy withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class AuthorizationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public Rule[] rules;
+
     public AuthorizationPolicy withRules(Rule[] rules) {
         this.rules = rules;
         return this;
@@ -84,9 +90,11 @@ public class AuthorizationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public AuthorizationPolicy withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public AuthorizationPolicy(){}
 }

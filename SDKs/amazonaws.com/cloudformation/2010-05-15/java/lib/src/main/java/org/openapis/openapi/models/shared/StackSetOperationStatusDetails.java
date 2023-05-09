@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class StackSetOperationStatusDetails {
     
     public Long failedStackInstancesCount;
+
     public StackSetOperationStatusDetails withFailedStackInstancesCount(Long failedStackInstancesCount) {
         this.failedStackInstancesCount = failedStackInstancesCount;
         return this;
     }
     
+    public StackSetOperationStatusDetails(){}
 }

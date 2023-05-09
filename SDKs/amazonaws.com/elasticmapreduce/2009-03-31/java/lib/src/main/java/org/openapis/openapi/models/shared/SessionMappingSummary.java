@@ -22,6 +22,7 @@ public class SessionMappingSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public SessionMappingSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class SessionMappingSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityId")
     public String identityId;
+
     public SessionMappingSummary withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
@@ -38,6 +40,7 @@ public class SessionMappingSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityName")
     public String identityName;
+
     public SessionMappingSummary withIdentityName(String identityName) {
         this.identityName = identityName;
         return this;
@@ -46,6 +49,7 @@ public class SessionMappingSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityType")
     public IdentityTypeEnum identityType;
+
     public SessionMappingSummary withIdentityType(IdentityTypeEnum identityType) {
         this.identityType = identityType;
         return this;
@@ -54,6 +58,7 @@ public class SessionMappingSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionPolicyArn")
     public String sessionPolicyArn;
+
     public SessionMappingSummary withSessionPolicyArn(String sessionPolicyArn) {
         this.sessionPolicyArn = sessionPolicyArn;
         return this;
@@ -62,9 +67,11 @@ public class SessionMappingSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StudioId")
     public String studioId;
+
     public SessionMappingSummary withStudioId(String studioId) {
         this.studioId = studioId;
         return this;
     }
     
+    public SessionMappingSummary(){}
 }

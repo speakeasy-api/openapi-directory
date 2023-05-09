@@ -15,6 +15,7 @@ public class OpenTunnelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationAccessToken")
     public String destinationAccessToken;
+
     public OpenTunnelResponse withDestinationAccessToken(String destinationAccessToken) {
         this.destinationAccessToken = destinationAccessToken;
         return this;
@@ -23,6 +24,7 @@ public class OpenTunnelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceAccessToken")
     public String sourceAccessToken;
+
     public OpenTunnelResponse withSourceAccessToken(String sourceAccessToken) {
         this.sourceAccessToken = sourceAccessToken;
         return this;
@@ -31,6 +33,7 @@ public class OpenTunnelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tunnelArn")
     public String tunnelArn;
+
     public OpenTunnelResponse withTunnelArn(String tunnelArn) {
         this.tunnelArn = tunnelArn;
         return this;
@@ -39,9 +42,11 @@ public class OpenTunnelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tunnelId")
     public String tunnelId;
+
     public OpenTunnelResponse withTunnelId(String tunnelId) {
         this.tunnelId = tunnelId;
         return this;
     }
     
+    public OpenTunnelResponse(){}
 }

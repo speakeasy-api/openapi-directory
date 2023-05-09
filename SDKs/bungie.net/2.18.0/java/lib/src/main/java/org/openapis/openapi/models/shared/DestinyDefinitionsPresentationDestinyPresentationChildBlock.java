@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsPresentationDestinyPresentationChildBlock {
     
     public Integer displayStyle;
+
     public DestinyDefinitionsPresentationDestinyPresentationChildBlock withDisplayStyle(Integer displayStyle) {
         this.displayStyle = displayStyle;
         return this;
@@ -16,6 +17,7 @@ public class DestinyDefinitionsPresentationDestinyPresentationChildBlock {
     
     
     public Long[] parentPresentationNodeHashes;
+
     public DestinyDefinitionsPresentationDestinyPresentationChildBlock withParentPresentationNodeHashes(Long[] parentPresentationNodeHashes) {
         this.parentPresentationNodeHashes = parentPresentationNodeHashes;
         return this;
@@ -23,9 +25,11 @@ public class DestinyDefinitionsPresentationDestinyPresentationChildBlock {
     
     
     public Integer presentationNodeType;
+
     public DestinyDefinitionsPresentationDestinyPresentationChildBlock withPresentationNodeType(Integer presentationNodeType) {
         this.presentationNodeType = presentationNodeType;
         return this;
     }
     
+    public DestinyDefinitionsPresentationDestinyPresentationChildBlock(){}
 }

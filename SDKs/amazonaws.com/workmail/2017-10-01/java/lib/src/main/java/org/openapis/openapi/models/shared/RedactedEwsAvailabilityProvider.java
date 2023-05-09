@@ -15,6 +15,7 @@ public class RedactedEwsAvailabilityProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EwsEndpoint")
     public String ewsEndpoint;
+
     public RedactedEwsAvailabilityProvider withEwsEndpoint(String ewsEndpoint) {
         this.ewsEndpoint = ewsEndpoint;
         return this;
@@ -23,9 +24,11 @@ public class RedactedEwsAvailabilityProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EwsUsername")
     public String ewsUsername;
+
     public RedactedEwsAvailabilityProvider withEwsUsername(String ewsUsername) {
         this.ewsUsername = ewsUsername;
         return this;
     }
     
+    public RedactedEwsAvailabilityProvider(){}
 }

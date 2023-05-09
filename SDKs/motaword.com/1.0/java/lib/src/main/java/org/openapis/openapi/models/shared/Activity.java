@@ -18,6 +18,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activity_at")
     public Long activityAt;
+
     public Activity withActivityAt(Long activityAt) {
         this.activityAt = activityAt;
         return this;
@@ -26,6 +27,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Activity withId(Long id) {
         this.id = id;
         return this;
@@ -34,6 +36,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public ActivityLinks links;
+
     public Activity withLinks(ActivityLinks links) {
         this.links = links;
         return this;
@@ -45,6 +48,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_text")
     public String sourceText;
+
     public Activity withSourceText(String sourceText) {
         this.sourceText = sourceText;
         return this;
@@ -56,6 +60,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_text")
     public String targetText;
+
     public Activity withTargetText(String targetText) {
         this.targetText = targetText;
         return this;
@@ -67,6 +72,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translator")
     public Long translator;
+
     public Activity withTranslator(Long translator) {
         this.translator = translator;
         return this;
@@ -78,9 +84,11 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ActivityTypeEnum type;
+
     public Activity withType(ActivityTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Activity(){}
 }

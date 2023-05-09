@@ -12,6 +12,7 @@ public class PullRequestSimpleLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public PullRequestSimpleLabels withColor(String color) {
         this.color = color;
         return this;
@@ -20,6 +21,7 @@ public class PullRequestSimpleLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")
     public Boolean default_;
+
     public PullRequestSimpleLabels withDefault(Boolean default_) {
         this.default_ = default_;
         return this;
@@ -28,6 +30,7 @@ public class PullRequestSimpleLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PullRequestSimpleLabels withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class PullRequestSimpleLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PullRequestSimpleLabels withId(Long id) {
         this.id = id;
         return this;
@@ -44,6 +48,7 @@ public class PullRequestSimpleLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PullRequestSimpleLabels withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class PullRequestSimpleLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node_id")
     public String nodeId;
+
     public PullRequestSimpleLabels withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -60,9 +66,11 @@ public class PullRequestSimpleLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public PullRequestSimpleLabels withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PullRequestSimpleLabels(){}
 }

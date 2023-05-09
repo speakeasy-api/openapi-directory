@@ -15,6 +15,7 @@ public class UtilizationMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public MetricNameEnum name;
+
     public UtilizationMetric withName(MetricNameEnum name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class UtilizationMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistic")
     public MetricStatisticEnum statistic;
+
     public UtilizationMetric withStatistic(MetricStatisticEnum statistic) {
         this.statistic = statistic;
         return this;
@@ -31,9 +33,11 @@ public class UtilizationMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public UtilizationMetric withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public UtilizationMetric(){}
 }

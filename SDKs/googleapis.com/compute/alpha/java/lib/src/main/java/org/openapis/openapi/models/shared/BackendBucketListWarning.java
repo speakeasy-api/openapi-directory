@@ -18,6 +18,7 @@ public class BackendBucketListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public BackendBucketListWarningCodeEnum code;
+
     public BackendBucketListWarning withCode(BackendBucketListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class BackendBucketListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public BackendBucketListWarningData[] data;
+
     public BackendBucketListWarning withData(BackendBucketListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class BackendBucketListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public BackendBucketListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public BackendBucketListWarning(){}
 }

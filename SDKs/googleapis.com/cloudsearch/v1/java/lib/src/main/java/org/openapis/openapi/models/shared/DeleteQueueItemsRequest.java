@@ -15,6 +15,7 @@ public class DeleteQueueItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorName")
     public String connectorName;
+
     public DeleteQueueItemsRequest withConnectorName(String connectorName) {
         this.connectorName = connectorName;
         return this;
@@ -26,6 +27,7 @@ public class DeleteQueueItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debugOptions")
     public DebugOptions debugOptions;
+
     public DeleteQueueItemsRequest withDebugOptions(DebugOptions debugOptions) {
         this.debugOptions = debugOptions;
         return this;
@@ -37,9 +39,11 @@ public class DeleteQueueItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queue")
     public String queue;
+
     public DeleteQueueItemsRequest withQueue(String queue) {
         this.queue = queue;
         return this;
     }
     
+    public DeleteQueueItemsRequest(){}
 }

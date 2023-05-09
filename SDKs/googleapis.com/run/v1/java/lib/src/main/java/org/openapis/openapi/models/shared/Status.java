@@ -18,6 +18,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Integer code;
+
     public Status withCode(Integer code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public StatusDetails details;
+
     public Status withDetails(StatusDetails details) {
         this.details = details;
         return this;
@@ -40,6 +42,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Status withMessage(String message) {
         this.message = message;
         return this;
@@ -51,6 +54,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ListMeta metadata;
+
     public Status withMetadata(ListMeta metadata) {
         this.metadata = metadata;
         return this;
@@ -62,20 +66,23 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public Status withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
     /**
-     * Status of the operation. One of: "Success" or "Failure". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     * Status of the operation. One of: "Success" or "Failure".
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Status withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Status(){}
 }

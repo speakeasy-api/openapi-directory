@@ -15,6 +15,7 @@ public class DescribeReplicationTaskIndividualAssessmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeReplicationTaskIndividualAssessmentsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +24,11 @@ public class DescribeReplicationTaskIndividualAssessmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationTaskIndividualAssessments")
     public ReplicationTaskIndividualAssessment[] replicationTaskIndividualAssessments;
+
     public DescribeReplicationTaskIndividualAssessmentsResponse withReplicationTaskIndividualAssessments(ReplicationTaskIndividualAssessment[] replicationTaskIndividualAssessments) {
         this.replicationTaskIndividualAssessments = replicationTaskIndividualAssessments;
         return this;
     }
     
+    public DescribeReplicationTaskIndividualAssessmentsResponse(){}
 }

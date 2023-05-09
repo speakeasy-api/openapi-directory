@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIterationPerformanceRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
     public String trainingKey;
+
     public GetIterationPerformanceRequest withTrainingKey(String trainingKey) {
         this.trainingKey = trainingKey;
         return this;
@@ -19,6 +21,7 @@ public class GetIterationPerformanceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=iterationId")
     public String iterationId;
+
     public GetIterationPerformanceRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -29,6 +32,7 @@ public class GetIterationPerformanceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public GetIterationPerformanceRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -39,9 +43,16 @@ public class GetIterationPerformanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=threshold")
     public Float threshold;
+
     public GetIterationPerformanceRequest withThreshold(Float threshold) {
         this.threshold = threshold;
         return this;
     }
     
+    public GetIterationPerformanceRequest(@JsonProperty("Training-Key") String trainingKey, @JsonProperty("iterationId") String iterationId, @JsonProperty("projectId") String projectId, @JsonProperty("threshold") Float threshold) {
+        this.trainingKey = trainingKey;
+        this.iterationId = iterationId;
+        this.projectId = projectId;
+        this.threshold = threshold;
+  }
 }

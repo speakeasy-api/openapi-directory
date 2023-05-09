@@ -15,6 +15,7 @@ public class BatchDisassociateResourcesFromCustomLineItemRequestBodyBillingPerio
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusiveEndBillingPeriod")
     public String exclusiveEndBillingPeriod;
+
     public BatchDisassociateResourcesFromCustomLineItemRequestBodyBillingPeriodRange withExclusiveEndBillingPeriod(String exclusiveEndBillingPeriod) {
         this.exclusiveEndBillingPeriod = exclusiveEndBillingPeriod;
         return this;
@@ -23,9 +24,11 @@ public class BatchDisassociateResourcesFromCustomLineItemRequestBodyBillingPerio
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InclusiveStartBillingPeriod")
     public String inclusiveStartBillingPeriod;
+
     public BatchDisassociateResourcesFromCustomLineItemRequestBodyBillingPeriodRange withInclusiveStartBillingPeriod(String inclusiveStartBillingPeriod) {
         this.inclusiveStartBillingPeriod = inclusiveStartBillingPeriod;
         return this;
     }
     
+    public BatchDisassociateResourcesFromCustomLineItemRequestBodyBillingPeriodRange(){}
 }

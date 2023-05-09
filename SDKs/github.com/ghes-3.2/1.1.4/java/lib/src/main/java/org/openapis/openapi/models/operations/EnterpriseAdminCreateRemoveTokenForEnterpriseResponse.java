@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminCreateRemoveTokenForEnterpriseResponse {
     
     public String contentType;
+
     public EnterpriseAdminCreateRemoveTokenForEnterpriseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminCreateRemoveTokenForEnterpriseResponse {
     
     
     public Integer statusCode;
+
     public EnterpriseAdminCreateRemoveTokenForEnterpriseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminCreateRemoveTokenForEnterpriseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminCreateRemoveTokenForEnterpriseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class EnterpriseAdminCreateRemoveTokenForEnterpriseResponse {
      */
     
     public org.openapis.openapi.models.shared.AuthenticationToken authenticationToken;
+
     public EnterpriseAdminCreateRemoveTokenForEnterpriseResponse withAuthenticationToken(org.openapis.openapi.models.shared.AuthenticationToken authenticationToken) {
         this.authenticationToken = authenticationToken;
         return this;
     }
     
+    public EnterpriseAdminCreateRemoveTokenForEnterpriseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

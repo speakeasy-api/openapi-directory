@@ -18,6 +18,7 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additions")
     public ResourceRecordSet[] additions;
+
     public Change withAdditions(ResourceRecordSet[] additions) {
         this.additions = additions;
         return this;
@@ -29,6 +30,7 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletions")
     public ResourceRecordSet[] deletions;
+
     public Change withDeletions(ResourceRecordSet[] deletions) {
         this.deletions = deletions;
         return this;
@@ -40,6 +42,7 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Change withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isServing")
     public Boolean isServing;
+
     public Change withIsServing(Boolean isServing) {
         this.isServing = isServing;
         return this;
@@ -59,6 +63,7 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Change withKind(String kind) {
         this.kind = kind;
         return this;
@@ -70,6 +75,7 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public Change withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -81,9 +87,11 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ChangeStatusEnum status;
+
     public Change withStatus(ChangeStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Change(){}
 }

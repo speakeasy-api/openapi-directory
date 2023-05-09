@@ -15,6 +15,7 @@ public class CostEstimateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardBin")
     public CardBin cardBin;
+
     public CostEstimateResponse withCardBin(CardBin cardBin) {
         this.cardBin = cardBin;
         return this;
@@ -23,6 +24,7 @@ public class CostEstimateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costEstimateAmount")
     public Amount costEstimateAmount;
+
     public CostEstimateResponse withCostEstimateAmount(Amount costEstimateAmount) {
         this.costEstimateAmount = costEstimateAmount;
         return this;
@@ -34,6 +36,7 @@ public class CostEstimateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costEstimateReference")
     public String costEstimateReference;
+
     public CostEstimateResponse withCostEstimateReference(String costEstimateReference) {
         this.costEstimateReference = costEstimateReference;
         return this;
@@ -45,6 +48,7 @@ public class CostEstimateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public CostEstimateResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -59,9 +63,11 @@ public class CostEstimateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("surchargeType")
     public String surchargeType;
+
     public CostEstimateResponse withSurchargeType(String surchargeType) {
         this.surchargeType = surchargeType;
         return this;
     }
     
+    public CostEstimateResponse(){}
 }

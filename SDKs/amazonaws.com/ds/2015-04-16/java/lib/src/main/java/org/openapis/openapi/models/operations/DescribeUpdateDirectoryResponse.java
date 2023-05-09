@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeUpdateDirectoryResponse {
@@ -12,6 +13,7 @@ public class DescribeUpdateDirectoryResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeUpdateDirectoryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeUpdateDirectoryResponse {
      */
     
     public Object clientException;
+
     public DescribeUpdateDirectoryResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeUpdateDirectoryResponse {
     
     
     public String contentType;
+
     public DescribeUpdateDirectoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeUpdateDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeUpdateDirectoryResult describeUpdateDirectoryResult;
+
     public DescribeUpdateDirectoryResponse withDescribeUpdateDirectoryResult(org.openapis.openapi.models.shared.DescribeUpdateDirectoryResult describeUpdateDirectoryResult) {
         this.describeUpdateDirectoryResult = describeUpdateDirectoryResult;
         return this;
@@ -49,6 +54,7 @@ public class DescribeUpdateDirectoryResponse {
      */
     
     public Object directoryDoesNotExistException;
+
     public DescribeUpdateDirectoryResponse withDirectoryDoesNotExistException(Object directoryDoesNotExistException) {
         this.directoryDoesNotExistException = directoryDoesNotExistException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeUpdateDirectoryResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeUpdateDirectoryResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeUpdateDirectoryResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeUpdateDirectoryResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class DescribeUpdateDirectoryResponse {
      */
     
     public Object serviceException;
+
     public DescribeUpdateDirectoryResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class DescribeUpdateDirectoryResponse {
     
     
     public Integer statusCode;
+
     public DescribeUpdateDirectoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class DescribeUpdateDirectoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeUpdateDirectoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeUpdateDirectoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

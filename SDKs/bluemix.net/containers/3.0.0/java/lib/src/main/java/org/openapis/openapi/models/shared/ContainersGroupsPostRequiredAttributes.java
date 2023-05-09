@@ -18,6 +18,7 @@ public class ContainersGroupsPostRequiredAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Autorecovery")
     public String autorecovery;
+
     public ContainersGroupsPostRequiredAttributes withAutorecovery(String autorecovery) {
         this.autorecovery = autorecovery;
         return this;
@@ -29,6 +30,7 @@ public class ContainersGroupsPostRequiredAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BluemixApp")
     public String bluemixApp;
+
     public ContainersGroupsPostRequiredAttributes withBluemixApp(String bluemixApp) {
         this.bluemixApp = bluemixApp;
         return this;
@@ -40,6 +42,7 @@ public class ContainersGroupsPostRequiredAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cmd")
     public String[] cmd;
+
     public ContainersGroupsPostRequiredAttributes withCmd(String[] cmd) {
         this.cmd = cmd;
         return this;
@@ -51,6 +54,7 @@ public class ContainersGroupsPostRequiredAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Env")
     public String[] env;
+
     public ContainersGroupsPostRequiredAttributes withEnv(String[] env) {
         this.env = env;
         return this;
@@ -61,6 +65,7 @@ public class ContainersGroupsPostRequiredAttributes {
      */
     @JsonProperty("Image")
     public String image;
+
     public ContainersGroupsPostRequiredAttributes withImage(String image) {
         this.image = image;
         return this;
@@ -72,6 +77,7 @@ public class ContainersGroupsPostRequiredAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Memory")
     public Integer memory;
+
     public ContainersGroupsPostRequiredAttributes withMemory(Integer memory) {
         this.memory = memory;
         return this;
@@ -82,6 +88,7 @@ public class ContainersGroupsPostRequiredAttributes {
      */
     @JsonProperty("Name")
     public String name;
+
     public ContainersGroupsPostRequiredAttributes withName(String name) {
         this.name = name;
         return this;
@@ -90,6 +97,7 @@ public class ContainersGroupsPostRequiredAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberInstances")
     public ContainersGroupsPostRequiredAttributesNumberInstances numberInstances;
+
     public ContainersGroupsPostRequiredAttributes withNumberInstances(ContainersGroupsPostRequiredAttributesNumberInstances numberInstances) {
         this.numberInstances = numberInstances;
         return this;
@@ -101,6 +109,7 @@ public class ContainersGroupsPostRequiredAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Integer port;
+
     public ContainersGroupsPostRequiredAttributes withPort(Integer port) {
         this.port = port;
         return this;
@@ -109,6 +118,7 @@ public class ContainersGroupsPostRequiredAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Route")
     public ContainersGroupsPostRequiredAttributesRoute route;
+
     public ContainersGroupsPostRequiredAttributes withRoute(ContainersGroupsPostRequiredAttributesRoute route) {
         this.route = route;
         return this;
@@ -120,9 +130,14 @@ public class ContainersGroupsPostRequiredAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Volumes")
     public String[] volumes;
+
     public ContainersGroupsPostRequiredAttributes withVolumes(String[] volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public ContainersGroupsPostRequiredAttributes(@JsonProperty("Image") String image, @JsonProperty("Name") String name) {
+        this.image = image;
+        this.name = name;
+  }
 }

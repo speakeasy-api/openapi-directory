@@ -15,6 +15,7 @@ public class RecommendationRelatedEventResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public RecommendationRelatedEventResource withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class RecommendationRelatedEventResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public RecommendationRelatedEventResource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RecommendationRelatedEventResource(){}
 }

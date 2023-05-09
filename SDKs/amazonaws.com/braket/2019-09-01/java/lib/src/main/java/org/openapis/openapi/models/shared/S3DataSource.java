@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3DataSource {
     @JsonProperty("s3Uri")
     public String s3Uri;
+
     public S3DataSource withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public S3DataSource(@JsonProperty("s3Uri") String s3Uri) {
+        this.s3Uri = s3Uri;
+  }
 }

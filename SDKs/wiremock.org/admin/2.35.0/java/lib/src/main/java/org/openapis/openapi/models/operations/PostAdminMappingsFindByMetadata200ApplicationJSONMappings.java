@@ -15,6 +15,7 @@ public class PostAdminMappingsFindByMetadata200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PostAdminMappingsFindByMetadata200ApplicationJSONMappings withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class PostAdminMappingsFindByMetadata200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, Object> metadata;
+
     public PostAdminMappingsFindByMetadata200ApplicationJSONMappings withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -37,6 +39,7 @@ public class PostAdminMappingsFindByMetadata200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PostAdminMappingsFindByMetadata200ApplicationJSONMappings withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class PostAdminMappingsFindByMetadata200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newScenarioState")
     public String newScenarioState;
+
     public PostAdminMappingsFindByMetadata200ApplicationJSONMappings withNewScenarioState(String newScenarioState) {
         this.newScenarioState = newScenarioState;
         return this;
@@ -59,6 +63,7 @@ public class PostAdminMappingsFindByMetadata200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persistent")
     public Boolean persistent;
+
     public PostAdminMappingsFindByMetadata200ApplicationJSONMappings withPersistent(Boolean persistent) {
         this.persistent = persistent;
         return this;
@@ -70,6 +75,7 @@ public class PostAdminMappingsFindByMetadata200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postServeActions")
     public java.util.Map<String, Object> postServeActions;
+
     public PostAdminMappingsFindByMetadata200ApplicationJSONMappings withPostServeActions(java.util.Map<String, Object> postServeActions) {
         this.postServeActions = postServeActions;
         return this;
@@ -81,6 +87,7 @@ public class PostAdminMappingsFindByMetadata200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public PostAdminMappingsFindByMetadata200ApplicationJSONMappings withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -89,6 +96,7 @@ public class PostAdminMappingsFindByMetadata200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request")
     public PostAdminMappingsFindByMetadata200ApplicationJSONMappingsRequest request;
+
     public PostAdminMappingsFindByMetadata200ApplicationJSONMappings withRequest(PostAdminMappingsFindByMetadata200ApplicationJSONMappingsRequest request) {
         this.request = request;
         return this;
@@ -100,6 +108,7 @@ public class PostAdminMappingsFindByMetadata200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiredScenarioState")
     public String requiredScenarioState;
+
     public PostAdminMappingsFindByMetadata200ApplicationJSONMappings withRequiredScenarioState(String requiredScenarioState) {
         this.requiredScenarioState = requiredScenarioState;
         return this;
@@ -108,6 +117,7 @@ public class PostAdminMappingsFindByMetadata200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponse response;
+
     public PostAdminMappingsFindByMetadata200ApplicationJSONMappings withResponse(PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponse response) {
         this.response = response;
         return this;
@@ -119,6 +129,7 @@ public class PostAdminMappingsFindByMetadata200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scenarioName")
     public String scenarioName;
+
     public PostAdminMappingsFindByMetadata200ApplicationJSONMappings withScenarioName(String scenarioName) {
         this.scenarioName = scenarioName;
         return this;
@@ -130,9 +141,11 @@ public class PostAdminMappingsFindByMetadata200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uuid")
     public String uuid;
+
     public PostAdminMappingsFindByMetadata200ApplicationJSONMappings withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public PostAdminMappingsFindByMetadata200ApplicationJSONMappings(){}
 }

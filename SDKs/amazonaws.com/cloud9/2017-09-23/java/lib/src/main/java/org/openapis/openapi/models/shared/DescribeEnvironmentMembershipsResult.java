@@ -15,6 +15,7 @@ public class DescribeEnvironmentMembershipsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memberships")
     public EnvironmentMember[] memberships;
+
     public DescribeEnvironmentMembershipsResult withMemberships(EnvironmentMember[] memberships) {
         this.memberships = memberships;
         return this;
@@ -23,9 +24,11 @@ public class DescribeEnvironmentMembershipsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeEnvironmentMembershipsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeEnvironmentMembershipsResult(){}
 }

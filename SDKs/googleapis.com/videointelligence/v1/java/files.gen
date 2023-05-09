@@ -75,4 +75,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudVideointelligenc
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudVideointelligenceV1LabelDetectionConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudVideointelligenceV1FaceDetectionConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudVideointelligenceV1ExplicitContentDetectionConfig.java
+docs/sdk/README.md
+docs/operations/README.md
+docs/projects/README.md
+docs/videos/README.md
 USAGE.md

@@ -18,9 +18,11 @@ public class DigitalContentLabelAssignedTargetingOptionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedTargetingOptionId")
     public String excludedTargetingOptionId;
+
     public DigitalContentLabelAssignedTargetingOptionDetailsInput withExcludedTargetingOptionId(String excludedTargetingOptionId) {
         this.excludedTargetingOptionId = excludedTargetingOptionId;
         return this;
     }
     
+    public DigitalContentLabelAssignedTargetingOptionDetailsInput(){}
 }

@@ -26,6 +26,7 @@ public class CatalogModifierList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifiers")
     public CatalogObject[] modifiers;
+
     public CatalogModifierList withModifiers(CatalogObject[] modifiers) {
         this.modifiers = modifiers;
         return this;
@@ -37,6 +38,7 @@ public class CatalogModifierList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CatalogModifierList withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +50,7 @@ public class CatalogModifierList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ordinal")
     public Long ordinal;
+
     public CatalogModifierList withOrdinal(Long ordinal) {
         this.ordinal = ordinal;
         return this;
@@ -60,9 +63,11 @@ public class CatalogModifierList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selection_type")
     public String selectionType;
+
     public CatalogModifierList withSelectionType(String selectionType) {
         this.selectionType = selectionType;
         return this;
     }
     
+    public CatalogModifierList(){}
 }

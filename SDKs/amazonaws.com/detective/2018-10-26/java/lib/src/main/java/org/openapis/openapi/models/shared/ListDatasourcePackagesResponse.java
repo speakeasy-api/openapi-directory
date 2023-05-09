@@ -15,6 +15,7 @@ public class ListDatasourcePackagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasourcePackages")
     public java.util.Map<String, DatasourcePackageIngestDetail> datasourcePackages;
+
     public ListDatasourcePackagesResponse withDatasourcePackages(java.util.Map<String, DatasourcePackageIngestDetail> datasourcePackages) {
         this.datasourcePackages = datasourcePackages;
         return this;
@@ -23,9 +24,11 @@ public class ListDatasourcePackagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDatasourcePackagesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDatasourcePackagesResponse(){}
 }

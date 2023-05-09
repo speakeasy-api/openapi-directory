@@ -18,9 +18,11 @@ public class GoogleCloudVideointelligenceV1p2beta1ObjectTrackingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public GoogleCloudVideointelligenceV1p2beta1ObjectTrackingConfig withModel(String model) {
         this.model = model;
         return this;
     }
     
+    public GoogleCloudVideointelligenceV1p2beta1ObjectTrackingConfig(){}
 }

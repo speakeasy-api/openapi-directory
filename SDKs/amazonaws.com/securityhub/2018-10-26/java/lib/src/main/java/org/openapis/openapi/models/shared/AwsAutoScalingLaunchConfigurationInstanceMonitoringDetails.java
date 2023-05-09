@@ -15,9 +15,11 @@ public class AwsAutoScalingLaunchConfigurationInstanceMonitoringDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public AwsAutoScalingLaunchConfigurationInstanceMonitoringDetails withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public AwsAutoScalingLaunchConfigurationInstanceMonitoringDetails(){}
 }

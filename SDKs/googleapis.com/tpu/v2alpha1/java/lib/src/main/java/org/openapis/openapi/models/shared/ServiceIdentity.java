@@ -18,9 +18,11 @@ public class ServiceIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ServiceIdentity withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public ServiceIdentity(){}
 }

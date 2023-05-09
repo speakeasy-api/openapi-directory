@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateVirtualNodeResponse {
@@ -12,6 +13,7 @@ public class UpdateVirtualNodeResponse {
      */
     
     public Object badRequestException;
+
     public UpdateVirtualNodeResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateVirtualNodeResponse {
      */
     
     public Object conflictException;
+
     public UpdateVirtualNodeResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateVirtualNodeResponse {
     
     
     public String contentType;
+
     public UpdateVirtualNodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateVirtualNodeResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateVirtualNodeResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateVirtualNodeResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateVirtualNodeResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateVirtualNodeResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateVirtualNodeResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateVirtualNodeResponse {
      */
     
     public Object notFoundException;
+
     public UpdateVirtualNodeResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateVirtualNodeResponse {
     
     
     public Integer statusCode;
+
     public UpdateVirtualNodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateVirtualNodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateVirtualNodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateVirtualNodeResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateVirtualNodeResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateVirtualNodeResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateVirtualNodeResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -113,9 +125,14 @@ public class UpdateVirtualNodeResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateVirtualNodeOutput updateVirtualNodeOutput;
+
     public UpdateVirtualNodeResponse withUpdateVirtualNodeOutput(org.openapis.openapi.models.shared.UpdateVirtualNodeOutput updateVirtualNodeOutput) {
         this.updateVirtualNodeOutput = updateVirtualNodeOutput;
         return this;
     }
     
+    public UpdateVirtualNodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ReposUpdateStatusCheckProtectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checks")
     public ReposUpdateStatusCheckProtectionRequestBodyChecks[] checks;
+
     public ReposUpdateStatusCheckProtectionRequestBody withChecks(ReposUpdateStatusCheckProtectionRequestBodyChecks[] checks) {
         this.checks = checks;
         return this;
@@ -27,6 +28,7 @@ public class ReposUpdateStatusCheckProtectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contexts")
     public String[] contexts;
+
     public ReposUpdateStatusCheckProtectionRequestBody withContexts(String[] contexts) {
         this.contexts = contexts;
         return this;
@@ -38,9 +40,11 @@ public class ReposUpdateStatusCheckProtectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strict")
     public Boolean strict;
+
     public ReposUpdateStatusCheckProtectionRequestBody withStrict(Boolean strict) {
         this.strict = strict;
         return this;
     }
     
+    public ReposUpdateStatusCheckProtectionRequestBody(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteBackupResponse {
     
     public String contentType;
+
     public DeleteBackupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteBackupResponse {
      */
     
     public java.util.Map<String, Object> deleteBackupResponse;
+
     public DeleteBackupResponse withDeleteBackupResponse(java.util.Map<String, Object> deleteBackupResponse) {
         this.deleteBackupResponse = deleteBackupResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteBackupResponse {
      */
     
     public Object invalidStateException;
+
     public DeleteBackupResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -36,6 +40,7 @@ public class DeleteBackupResponse {
     
     
     public Integer statusCode;
+
     public DeleteBackupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DeleteBackupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteBackupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class DeleteBackupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteBackupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,9 +70,14 @@ public class DeleteBackupResponse {
      */
     
     public Object validationException;
+
     public DeleteBackupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteBackupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

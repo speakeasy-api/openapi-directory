@@ -17,6 +17,7 @@ public class GetinvestorAccount409ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public GetinvestorAccount409ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -28,6 +29,7 @@ public class GetinvestorAccount409ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public java.util.Map<String, Object> response;
+
     public GetinvestorAccount409ApplicationJSON withResponse(java.util.Map<String, Object> response) {
         this.response = response;
         return this;
@@ -38,9 +40,14 @@ public class GetinvestorAccount409ApplicationJSON {
      */
     @JsonProperty("status")
     public GetinvestorAccount409ApplicationJSONStatusEnum status;
+
     public GetinvestorAccount409ApplicationJSON withStatus(GetinvestorAccount409ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetinvestorAccount409ApplicationJSON(@JsonProperty("message") String message, @JsonProperty("status") GetinvestorAccount409ApplicationJSONStatusEnum status) {
+        this.message = message;
+        this.status = status;
+  }
 }

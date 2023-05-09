@@ -15,6 +15,7 @@ public class RespondDecisionTaskCompletedInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("decisions")
     public Decision[] decisions;
+
     public RespondDecisionTaskCompletedInput withDecisions(Decision[] decisions) {
         this.decisions = decisions;
         return this;
@@ -23,6 +24,7 @@ public class RespondDecisionTaskCompletedInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionContext")
     public String executionContext;
+
     public RespondDecisionTaskCompletedInput withExecutionContext(String executionContext) {
         this.executionContext = executionContext;
         return this;
@@ -30,9 +32,13 @@ public class RespondDecisionTaskCompletedInput {
     
     @JsonProperty("taskToken")
     public String taskToken;
+
     public RespondDecisionTaskCompletedInput withTaskToken(String taskToken) {
         this.taskToken = taskToken;
         return this;
     }
     
+    public RespondDecisionTaskCompletedInput(@JsonProperty("taskToken") String taskToken) {
+        this.taskToken = taskToken;
+  }
 }

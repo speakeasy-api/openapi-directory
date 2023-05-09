@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EventCategoryDetail {
     @JsonProperty("careContext")
     public CareContextDefinition careContext;
+
     public EventCategoryDetail withCareContext(CareContextDefinition careContext) {
         this.careContext = careContext;
         return this;
@@ -16,9 +17,14 @@ public class EventCategoryDetail {
     
     @JsonProperty("hiTypes")
     public HITypeEnumEnum[] hiTypes;
+
     public EventCategoryDetail withHiTypes(HITypeEnumEnum[] hiTypes) {
         this.hiTypes = hiTypes;
         return this;
     }
     
+    public EventCategoryDetail(@JsonProperty("careContext") CareContextDefinition careContext, @JsonProperty("hiTypes") HITypeEnumEnum[] hiTypes) {
+        this.careContext = careContext;
+        this.hiTypes = hiTypes;
+  }
 }

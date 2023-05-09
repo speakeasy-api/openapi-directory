@@ -18,6 +18,7 @@ public class WmxSitemapContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexed")
     public String indexed;
+
     public WmxSitemapContent withIndexed(String indexed) {
         this.indexed = indexed;
         return this;
@@ -29,6 +30,7 @@ public class WmxSitemapContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submitted")
     public String submitted;
+
     public WmxSitemapContent withSubmitted(String submitted) {
         this.submitted = submitted;
         return this;
@@ -40,9 +42,11 @@ public class WmxSitemapContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public WmxSitemapContent withType(String type) {
         this.type = type;
         return this;
     }
     
+    public WmxSitemapContent(){}
 }

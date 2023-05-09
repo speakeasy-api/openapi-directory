@@ -83,4 +83,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/CheckInRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/WorkerStatus.java
 lib/src/main/java/org/openapis/openapi/models/shared/DiskStatus.java
 lib/src/main/java/org/openapis/openapi/models/shared/TimestampedEvent.java
+docs/sdk/README.md
+docs/pipelines/README.md
+docs/projects/README.md
+docs/workers/README.md
 USAGE.md

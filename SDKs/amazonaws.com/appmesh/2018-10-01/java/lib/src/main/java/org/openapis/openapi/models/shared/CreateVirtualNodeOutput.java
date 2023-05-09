@@ -15,9 +15,11 @@ public class CreateVirtualNodeOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualNode")
     public VirtualNodeData virtualNode;
+
     public CreateVirtualNodeOutput withVirtualNode(VirtualNodeData virtualNode) {
         this.virtualNode = virtualNode;
         return this;
     }
     
+    public CreateVirtualNodeOutput(){}
 }

@@ -18,6 +18,7 @@ public class Bookshelves {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Bookshelf[] items;
+
     public Bookshelves withItems(Bookshelf[] items) {
         this.items = items;
         return this;
@@ -29,9 +30,11 @@ public class Bookshelves {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Bookshelves withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public Bookshelves(){}
 }

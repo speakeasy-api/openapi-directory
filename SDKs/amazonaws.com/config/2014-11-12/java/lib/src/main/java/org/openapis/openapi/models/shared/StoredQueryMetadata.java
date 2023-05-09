@@ -15,6 +15,7 @@ public class StoredQueryMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public StoredQueryMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class StoredQueryMetadata {
     
     @JsonProperty("QueryArn")
     public String queryArn;
+
     public StoredQueryMetadata withQueryArn(String queryArn) {
         this.queryArn = queryArn;
         return this;
@@ -29,6 +31,7 @@ public class StoredQueryMetadata {
     
     @JsonProperty("QueryId")
     public String queryId;
+
     public StoredQueryMetadata withQueryId(String queryId) {
         this.queryId = queryId;
         return this;
@@ -36,9 +39,15 @@ public class StoredQueryMetadata {
     
     @JsonProperty("QueryName")
     public String queryName;
+
     public StoredQueryMetadata withQueryName(String queryName) {
         this.queryName = queryName;
         return this;
     }
     
+    public StoredQueryMetadata(@JsonProperty("QueryArn") String queryArn, @JsonProperty("QueryId") String queryId, @JsonProperty("QueryName") String queryName) {
+        this.queryArn = queryArn;
+        this.queryId = queryId;
+        this.queryName = queryName;
+  }
 }

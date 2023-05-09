@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1ConversationParticipant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialogflowParticipant")
     public String dialogflowParticipant;
+
     public GoogleCloudContactcenterinsightsV1ConversationParticipant withDialogflowParticipant(String dialogflowParticipant) {
         this.dialogflowParticipant = dialogflowParticipant;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudContactcenterinsightsV1ConversationParticipant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialogflowParticipantName")
     public String dialogflowParticipantName;
+
     public GoogleCloudContactcenterinsightsV1ConversationParticipant withDialogflowParticipantName(String dialogflowParticipantName) {
         this.dialogflowParticipantName = dialogflowParticipantName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudContactcenterinsightsV1ConversationParticipant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("obfuscatedExternalUserId")
     public String obfuscatedExternalUserId;
+
     public GoogleCloudContactcenterinsightsV1ConversationParticipant withObfuscatedExternalUserId(String obfuscatedExternalUserId) {
         this.obfuscatedExternalUserId = obfuscatedExternalUserId;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudContactcenterinsightsV1ConversationParticipant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public GoogleCloudContactcenterinsightsV1ConversationParticipantRoleEnum role;
+
     public GoogleCloudContactcenterinsightsV1ConversationParticipant withRole(GoogleCloudContactcenterinsightsV1ConversationParticipantRoleEnum role) {
         this.role = role;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudContactcenterinsightsV1ConversationParticipant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public GoogleCloudContactcenterinsightsV1ConversationParticipant withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1ConversationParticipant(){}
 }

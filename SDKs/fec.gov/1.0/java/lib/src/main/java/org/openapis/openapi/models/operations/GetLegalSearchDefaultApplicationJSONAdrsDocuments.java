@@ -14,6 +14,7 @@ public class GetLegalSearchDefaultApplicationJSONAdrsDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public GetLegalSearchDefaultApplicationJSONAdrsDocuments withCategory(String category) {
         this.category = category;
         return this;
@@ -22,6 +23,7 @@ public class GetLegalSearchDefaultApplicationJSONAdrsDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetLegalSearchDefaultApplicationJSONAdrsDocuments withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class GetLegalSearchDefaultApplicationJSONAdrsDocuments {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("document_date")
     public LocalDate documentDate;
+
     public GetLegalSearchDefaultApplicationJSONAdrsDocuments withDocumentDate(LocalDate documentDate) {
         this.documentDate = documentDate;
         return this;
@@ -39,6 +42,7 @@ public class GetLegalSearchDefaultApplicationJSONAdrsDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_id")
     public Long documentId;
+
     public GetLegalSearchDefaultApplicationJSONAdrsDocuments withDocumentId(Long documentId) {
         this.documentId = documentId;
         return this;
@@ -47,6 +51,7 @@ public class GetLegalSearchDefaultApplicationJSONAdrsDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("length")
     public Long length;
+
     public GetLegalSearchDefaultApplicationJSONAdrsDocuments withLength(Long length) {
         this.length = length;
         return this;
@@ -55,9 +60,11 @@ public class GetLegalSearchDefaultApplicationJSONAdrsDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GetLegalSearchDefaultApplicationJSONAdrsDocuments withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GetLegalSearchDefaultApplicationJSONAdrsDocuments(){}
 }

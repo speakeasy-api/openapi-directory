@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GlobalReplicationGroupInfo {
     
     public String globalReplicationGroupId;
+
     public GlobalReplicationGroupInfo withGlobalReplicationGroupId(String globalReplicationGroupId) {
         this.globalReplicationGroupId = globalReplicationGroupId;
         return this;
@@ -19,9 +20,11 @@ public class GlobalReplicationGroupInfo {
     
     
     public String globalReplicationGroupMemberRole;
+
     public GlobalReplicationGroupInfo withGlobalReplicationGroupMemberRole(String globalReplicationGroupMemberRole) {
         this.globalReplicationGroupMemberRole = globalReplicationGroupMemberRole;
         return this;
     }
     
+    public GlobalReplicationGroupInfo(){}
 }

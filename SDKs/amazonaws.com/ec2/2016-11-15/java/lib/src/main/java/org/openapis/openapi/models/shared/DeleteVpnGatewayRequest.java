@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteVpnGatewayRequest - Contains the parameters for DeleteVpnGateway.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteVpnGatewayRequest {
     
     public Boolean dryRun;
+
     public DeleteVpnGatewayRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,9 +20,13 @@ public class DeleteVpnGatewayRequest {
     
     
     public String vpnGatewayId;
+
     public DeleteVpnGatewayRequest withVpnGatewayId(String vpnGatewayId) {
         this.vpnGatewayId = vpnGatewayId;
         return this;
     }
     
+    public DeleteVpnGatewayRequest(@JsonProperty("VpnGatewayId") String vpnGatewayId) {
+        this.vpnGatewayId = vpnGatewayId;
+  }
 }

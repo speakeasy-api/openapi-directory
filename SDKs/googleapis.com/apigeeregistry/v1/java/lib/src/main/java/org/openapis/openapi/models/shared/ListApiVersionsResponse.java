@@ -18,6 +18,7 @@ public class ListApiVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiVersions")
     public ApiVersion[] apiVersions;
+
     public ListApiVersionsResponse withApiVersions(ApiVersion[] apiVersions) {
         this.apiVersions = apiVersions;
         return this;
@@ -29,9 +30,11 @@ public class ListApiVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListApiVersionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListApiVersionsResponse(){}
 }

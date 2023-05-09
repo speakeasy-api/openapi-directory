@@ -15,9 +15,11 @@ public class TsvOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readOptions")
     public ReadOptions readOptions;
+
     public TsvOptions withReadOptions(ReadOptions readOptions) {
         this.readOptions = readOptions;
         return this;
     }
     
+    public TsvOptions(){}
 }

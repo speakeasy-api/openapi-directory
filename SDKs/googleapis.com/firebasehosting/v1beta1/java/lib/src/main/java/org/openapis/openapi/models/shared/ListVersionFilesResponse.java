@@ -18,6 +18,7 @@ public class ListVersionFilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public VersionFile[] files;
+
     public ListVersionFilesResponse withFiles(VersionFile[] files) {
         this.files = files;
         return this;
@@ -29,9 +30,11 @@ public class ListVersionFilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListVersionFilesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListVersionFilesResponse(){}
 }

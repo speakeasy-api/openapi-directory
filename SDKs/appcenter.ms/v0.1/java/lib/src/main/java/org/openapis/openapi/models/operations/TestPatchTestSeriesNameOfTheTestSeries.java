@@ -12,9 +12,13 @@ public class TestPatchTestSeriesNameOfTheTestSeries {
      */
     @JsonProperty("name")
     public String name;
+
     public TestPatchTestSeriesNameOfTheTestSeries withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TestPatchTestSeriesNameOfTheTestSeries(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

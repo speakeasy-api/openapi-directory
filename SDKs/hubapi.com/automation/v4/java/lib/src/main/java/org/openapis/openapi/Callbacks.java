@@ -58,11 +58,9 @@ public class Callbacks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchResponse res = new org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchResponse() {{
+        org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchResponse res = new org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -105,11 +103,9 @@ public class Callbacks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteResponse res = new org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteResponse() {{
+        org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteResponse res = new org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

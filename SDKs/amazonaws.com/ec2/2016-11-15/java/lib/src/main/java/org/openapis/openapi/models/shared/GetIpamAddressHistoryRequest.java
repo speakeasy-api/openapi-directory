@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 public class GetIpamAddressHistoryRequest {
     
     public String cidr;
+
     public GetIpamAddressHistoryRequest withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -16,6 +18,7 @@ public class GetIpamAddressHistoryRequest {
     
     
     public Boolean dryRun;
+
     public GetIpamAddressHistoryRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +26,7 @@ public class GetIpamAddressHistoryRequest {
     
     
     public OffsetDateTime endTime;
+
     public GetIpamAddressHistoryRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -30,6 +34,7 @@ public class GetIpamAddressHistoryRequest {
     
     
     public String ipamScopeId;
+
     public GetIpamAddressHistoryRequest withIpamScopeId(String ipamScopeId) {
         this.ipamScopeId = ipamScopeId;
         return this;
@@ -37,6 +42,7 @@ public class GetIpamAddressHistoryRequest {
     
     
     public Long maxResults;
+
     public GetIpamAddressHistoryRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -44,6 +50,7 @@ public class GetIpamAddressHistoryRequest {
     
     
     public String nextToken;
+
     public GetIpamAddressHistoryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -51,6 +58,7 @@ public class GetIpamAddressHistoryRequest {
     
     
     public OffsetDateTime startTime;
+
     public GetIpamAddressHistoryRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -58,9 +66,14 @@ public class GetIpamAddressHistoryRequest {
     
     
     public String vpcId;
+
     public GetIpamAddressHistoryRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public GetIpamAddressHistoryRequest(@JsonProperty("Cidr") String cidr, @JsonProperty("IpamScopeId") String ipamScopeId) {
+        this.cidr = cidr;
+        this.ipamScopeId = ipamScopeId;
+  }
 }

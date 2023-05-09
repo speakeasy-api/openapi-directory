@@ -12,9 +12,11 @@ public class BackendServiceReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backendService")
     public String backendService;
+
     public BackendServiceReference withBackendService(String backendService) {
         this.backendService = backendService;
         return this;
     }
     
+    public BackendServiceReference(){}
 }

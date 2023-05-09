@@ -14,6 +14,7 @@ public class StoreAlertPropertyInfo {
      */
     @JsonProperty("propertyId")
     public Integer propertyId;
+
     public StoreAlertPropertyInfo withPropertyId(Integer propertyId) {
         this.propertyId = propertyId;
         return this;
@@ -24,6 +25,7 @@ public class StoreAlertPropertyInfo {
      */
     @JsonProperty("propertyName")
     public String propertyName;
+
     public StoreAlertPropertyInfo withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
@@ -35,6 +37,7 @@ public class StoreAlertPropertyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyValidationExpression")
     public String propertyValidationExpression;
+
     public StoreAlertPropertyInfo withPropertyValidationExpression(String propertyValidationExpression) {
         this.propertyValidationExpression = propertyValidationExpression;
         return this;
@@ -45,9 +48,15 @@ public class StoreAlertPropertyInfo {
      */
     @JsonProperty("propertyValue")
     public String propertyValue;
+
     public StoreAlertPropertyInfo withPropertyValue(String propertyValue) {
         this.propertyValue = propertyValue;
         return this;
     }
     
+    public StoreAlertPropertyInfo(@JsonProperty("propertyId") Integer propertyId, @JsonProperty("propertyName") String propertyName, @JsonProperty("propertyValue") String propertyValue) {
+        this.propertyId = propertyId;
+        this.propertyName = propertyName;
+        this.propertyValue = propertyValue;
+  }
 }

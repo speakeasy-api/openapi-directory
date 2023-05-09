@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorkspaceResponse {
     
     public String contentType;
+
     public GetWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.GetWorkspaceResponse getWorkspaceResponse;
+
     public GetWorkspaceResponse withGetWorkspaceResponse(org.openapis.openapi.models.shared.GetWorkspaceResponse getWorkspaceResponse) {
         this.getWorkspaceResponse = getWorkspaceResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetWorkspaceResponse {
      */
     
     public Object internalServerException;
+
     public GetWorkspaceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class GetWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public GetWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class GetWorkspaceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetWorkspaceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class GetWorkspaceResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetWorkspaceResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,6 +81,7 @@ public class GetWorkspaceResponse {
      */
     
     public Object throttlingException;
+
     public GetWorkspaceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetWorkspaceResponse {
      */
     
     public Object validationException;
+
     public GetWorkspaceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

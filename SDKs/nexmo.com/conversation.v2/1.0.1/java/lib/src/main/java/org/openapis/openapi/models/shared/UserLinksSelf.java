@@ -12,9 +12,11 @@ public class UserLinksSelf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public UserLinksSelf withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public UserLinksSelf(){}
 }

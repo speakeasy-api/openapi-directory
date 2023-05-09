@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateBackendStorageResponse {
@@ -12,6 +13,7 @@ public class CreateBackendStorageResponse {
      */
     
     public Object badRequestException;
+
     public CreateBackendStorageResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class CreateBackendStorageResponse {
     
     
     public String contentType;
+
     public CreateBackendStorageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateBackendStorageResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateBackendStorageResponse createBackendStorageResponse;
+
     public CreateBackendStorageResponse withCreateBackendStorageResponse(org.openapis.openapi.models.shared.CreateBackendStorageResponse createBackendStorageResponse) {
         this.createBackendStorageResponse = createBackendStorageResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateBackendStorageResponse {
      */
     
     public Object gatewayTimeoutException;
+
     public CreateBackendStorageResponse withGatewayTimeoutException(Object gatewayTimeoutException) {
         this.gatewayTimeoutException = gatewayTimeoutException;
         return this;
@@ -49,6 +54,7 @@ public class CreateBackendStorageResponse {
      */
     
     public Object notFoundException;
+
     public CreateBackendStorageResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CreateBackendStorageResponse {
     
     
     public Integer statusCode;
+
     public CreateBackendStorageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateBackendStorageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateBackendStorageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateBackendStorageResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateBackendStorageResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateBackendStorageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourcesSummaryResponse {
@@ -12,6 +13,7 @@ public class GetResourcesSummaryResponse {
      */
     
     public Object accessDeniedException;
+
     public GetResourcesSummaryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetResourcesSummaryResponse {
     
     
     public String contentType;
+
     public GetResourcesSummaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetResourcesSummaryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetResourcesSummaryOutput getResourcesSummaryOutput;
+
     public GetResourcesSummaryResponse withGetResourcesSummaryOutput(org.openapis.openapi.models.shared.GetResourcesSummaryOutput getResourcesSummaryOutput) {
         this.getResourcesSummaryOutput = getResourcesSummaryOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetResourcesSummaryResponse {
      */
     
     public Object internalServerException;
+
     public GetResourcesSummaryResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetResourcesSummaryResponse {
     
     
     public Integer statusCode;
+
     public GetResourcesSummaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetResourcesSummaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourcesSummaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetResourcesSummaryResponse {
      */
     
     public Object throttlingException;
+
     public GetResourcesSummaryResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class GetResourcesSummaryResponse {
      */
     
     public Object validationException;
+
     public GetResourcesSummaryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetResourcesSummaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class JobStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public JobStatus withDetails(String details) {
         this.details = details;
         return this;
@@ -29,6 +30,7 @@ public class JobStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public JobStatusStateEnum state;
+
     public JobStatus withState(JobStatusStateEnum state) {
         this.state = state;
         return this;
@@ -40,6 +42,7 @@ public class JobStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateStartTime")
     public String stateStartTime;
+
     public JobStatus withStateStartTime(String stateStartTime) {
         this.stateStartTime = stateStartTime;
         return this;
@@ -51,9 +54,11 @@ public class JobStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("substate")
     public JobStatusSubstateEnum substate;
+
     public JobStatus withSubstate(JobStatusSubstateEnum substate) {
         this.substate = substate;
         return this;
     }
     
+    public JobStatus(){}
 }

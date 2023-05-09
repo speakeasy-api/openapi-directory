@@ -15,9 +15,11 @@ public class PutConfigurationSetVdmOptionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VdmOptions")
     public PutConfigurationSetVdmOptionsRequestBodyVdmOptions vdmOptions;
+
     public PutConfigurationSetVdmOptionsRequestBody withVdmOptions(PutConfigurationSetVdmOptionsRequestBodyVdmOptions vdmOptions) {
         this.vdmOptions = vdmOptions;
         return this;
     }
     
+    public PutConfigurationSetVdmOptionsRequestBody(){}
 }

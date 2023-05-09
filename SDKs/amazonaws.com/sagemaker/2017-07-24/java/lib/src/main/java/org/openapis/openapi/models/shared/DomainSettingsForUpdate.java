@@ -15,6 +15,7 @@ public class DomainSettingsForUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionRoleIdentityConfig")
     public ExecutionRoleIdentityConfigEnum executionRoleIdentityConfig;
+
     public DomainSettingsForUpdate withExecutionRoleIdentityConfig(ExecutionRoleIdentityConfigEnum executionRoleIdentityConfig) {
         this.executionRoleIdentityConfig = executionRoleIdentityConfig;
         return this;
@@ -23,6 +24,7 @@ public class DomainSettingsForUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RStudioServerProDomainSettingsForUpdate")
     public RStudioServerProDomainSettingsForUpdate rStudioServerProDomainSettingsForUpdate;
+
     public DomainSettingsForUpdate withRStudioServerProDomainSettingsForUpdate(RStudioServerProDomainSettingsForUpdate rStudioServerProDomainSettingsForUpdate) {
         this.rStudioServerProDomainSettingsForUpdate = rStudioServerProDomainSettingsForUpdate;
         return this;
@@ -31,9 +33,11 @@ public class DomainSettingsForUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public DomainSettingsForUpdate withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
     }
     
+    public DomainSettingsForUpdate(){}
 }

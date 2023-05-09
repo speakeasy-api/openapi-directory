@@ -20,6 +20,7 @@ public class AvailableProducts200ApplicationJSONDataPas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("incompleteQuote")
     public Boolean incompleteQuote;
+
     public AvailableProducts200ApplicationJSONDataPas withIncompleteQuote(Boolean incompleteQuote) {
         this.incompleteQuote = incompleteQuote;
         return this;
@@ -31,6 +32,7 @@ public class AvailableProducts200ApplicationJSONDataPas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCode")
     public String productCode;
+
     public AvailableProducts200ApplicationJSONDataPas withProductCode(String productCode) {
         this.productCode = productCode;
         return this;
@@ -42,6 +44,7 @@ public class AvailableProducts200ApplicationJSONDataPas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removedChildAges")
     public String[] removedChildAges;
+
     public AvailableProducts200ApplicationJSONDataPas withRemovedChildAges(String[] removedChildAges) {
         this.removedChildAges = removedChildAges;
         return this;
@@ -53,6 +56,7 @@ public class AvailableProducts200ApplicationJSONDataPas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tourGrades")
     public java.util.Map<String, AvailableProducts200ApplicationJSONDataPasTourGrades> tourGrades;
+
     public AvailableProducts200ApplicationJSONDataPas withTourGrades(java.util.Map<String, AvailableProducts200ApplicationJSONDataPasTourGrades> tourGrades) {
         this.tourGrades = tourGrades;
         return this;
@@ -64,9 +68,11 @@ public class AvailableProducts200ApplicationJSONDataPas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("travellerMix")
     public String travellerMix;
+
     public AvailableProducts200ApplicationJSONDataPas withTravellerMix(String travellerMix) {
         this.travellerMix = travellerMix;
         return this;
     }
     
+    public AvailableProducts200ApplicationJSONDataPas(){}
 }

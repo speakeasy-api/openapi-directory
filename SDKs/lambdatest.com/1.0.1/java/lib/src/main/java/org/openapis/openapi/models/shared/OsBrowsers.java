@@ -15,6 +15,7 @@ public class OsBrowsers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("macos mojave")
     public Browsers macosMojave;
+
     public OsBrowsers withMacosMojave(Browsers macosMojave) {
         this.macosMojave = macosMojave;
         return this;
@@ -23,9 +24,11 @@ public class OsBrowsers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windows 10")
     public Browsers windows10;
+
     public OsBrowsers withWindows10(Browsers windows10) {
         this.windows10 = windows10;
         return this;
     }
     
+    public OsBrowsers(){}
 }

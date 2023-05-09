@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateUserPoolDomainResponse {
     
     public String contentType;
+
     public UpdateUserPoolDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateUserPoolDomainResponse {
      */
     
     public Object internalErrorException;
+
     public UpdateUserPoolDomainResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateUserPoolDomainResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateUserPoolDomainResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateUserPoolDomainResponse {
      */
     
     public Object notAuthorizedException;
+
     public UpdateUserPoolDomainResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateUserPoolDomainResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateUserPoolDomainResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateUserPoolDomainResponse {
     
     
     public Integer statusCode;
+
     public UpdateUserPoolDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateUserPoolDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateUserPoolDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateUserPoolDomainResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateUserPoolDomainResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateUserPoolDomainResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateUserPoolDomainResponse updateUserPoolDomainResponse;
+
     public UpdateUserPoolDomainResponse withUpdateUserPoolDomainResponse(org.openapis.openapi.models.shared.UpdateUserPoolDomainResponse updateUserPoolDomainResponse) {
         this.updateUserPoolDomainResponse = updateUserPoolDomainResponse;
         return this;
     }
     
+    public UpdateUserPoolDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

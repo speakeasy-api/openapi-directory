@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEntitledApplicationsResponse {
     
     public String contentType;
+
     public ListEntitledApplicationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListEntitledApplicationsResponse {
      */
     
     public Object entitlementNotFoundException;
+
     public ListEntitledApplicationsResponse withEntitlementNotFoundException(Object entitlementNotFoundException) {
         this.entitlementNotFoundException = entitlementNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class ListEntitledApplicationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEntitledApplicationsResult listEntitledApplicationsResult;
+
     public ListEntitledApplicationsResponse withListEntitledApplicationsResult(org.openapis.openapi.models.shared.ListEntitledApplicationsResult listEntitledApplicationsResult) {
         this.listEntitledApplicationsResult = listEntitledApplicationsResult;
         return this;
@@ -39,6 +43,7 @@ public class ListEntitledApplicationsResponse {
      */
     
     public Object operationNotPermittedException;
+
     public ListEntitledApplicationsResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -46,6 +51,7 @@ public class ListEntitledApplicationsResponse {
     
     
     public Integer statusCode;
+
     public ListEntitledApplicationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListEntitledApplicationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEntitledApplicationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListEntitledApplicationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListEntitledApplicationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListEntitledApplicationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

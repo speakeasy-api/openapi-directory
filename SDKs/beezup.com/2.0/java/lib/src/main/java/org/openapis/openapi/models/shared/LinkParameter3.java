@@ -15,6 +15,7 @@ public class LinkParameter3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public LinkParameter3 withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +31,7 @@ public class LinkParameter3 {
      */
     @JsonProperty("in")
     public ParameterInEnum in;
+
     public LinkParameter3 withIn(ParameterInEnum in) {
         this.in = in;
         return this;
@@ -41,6 +43,7 @@ public class LinkParameter3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public LinkParameter3 withLabel(String label) {
         this.label = label;
         return this;
@@ -52,6 +55,7 @@ public class LinkParameter3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lovLink")
     public LOVLink3 lovLink;
+
     public LinkParameter3 withLovLink(LOVLink3 lovLink) {
         this.lovLink = lovLink;
         return this;
@@ -63,6 +67,7 @@ public class LinkParameter3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lovRequired")
     public Boolean lovRequired;
+
     public LinkParameter3 withLovRequired(Boolean lovRequired) {
         this.lovRequired = lovRequired;
         return this;
@@ -74,6 +79,7 @@ public class LinkParameter3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pattern")
     public String pattern;
+
     public LinkParameter3 withPattern(String pattern) {
         this.pattern = pattern;
         return this;
@@ -85,6 +91,7 @@ public class LinkParameter3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, LinkParameterProperty3> properties;
+
     public LinkParameter3 withProperties(java.util.Map<String, LinkParameterProperty3> properties) {
         this.properties = properties;
         return this;
@@ -93,6 +100,7 @@ public class LinkParameter3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public LinkParameter3 withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -104,6 +112,7 @@ public class LinkParameter3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public LinkParameter3 withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -115,9 +124,13 @@ public class LinkParameter3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public java.util.Map<String, Object> value;
+
     public LinkParameter3 withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;
     }
     
+    public LinkParameter3(@JsonProperty("in") ParameterInEnum in) {
+        this.in = in;
+  }
 }

@@ -15,6 +15,7 @@ public class WorkforceVpcConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public WorkforceVpcConfigRequest withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -23,6 +24,7 @@ public class WorkforceVpcConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subnets")
     public String[] subnets;
+
     public WorkforceVpcConfigRequest withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
@@ -31,9 +33,11 @@ public class WorkforceVpcConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public WorkforceVpcConfigRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public WorkforceVpcConfigRequest(){}
 }

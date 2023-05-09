@@ -15,6 +15,7 @@ public class HealthQuestionDefinitionResourceAttributesFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public HealthQuestionDefinitionResourceAttributesFormatData[] data;
+
     public HealthQuestionDefinitionResourceAttributesFormat withData(HealthQuestionDefinitionResourceAttributesFormatData[] data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class HealthQuestionDefinitionResourceAttributesFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public HealthQuestionDefinitionResourceAttributesFormat withType(String type) {
         this.type = type;
         return this;
     }
     
+    public HealthQuestionDefinitionResourceAttributesFormat(){}
 }

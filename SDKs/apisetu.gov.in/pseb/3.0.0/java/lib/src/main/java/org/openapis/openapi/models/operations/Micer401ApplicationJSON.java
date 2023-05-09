@@ -15,6 +15,7 @@ public class Micer401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Micer401ApplicationJSONErrorEnum error;
+
     public Micer401ApplicationJSON withError(Micer401ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Micer401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Micer401ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Micer401ApplicationJSON withErrorDescription(Micer401ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Micer401ApplicationJSON(){}
 }

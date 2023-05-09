@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListInstanceFleetsResponse {
     
     public String contentType;
+
     public ListInstanceFleetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListInstanceFleetsResponse {
      */
     
     public Object internalServerException;
+
     public ListInstanceFleetsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListInstanceFleetsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListInstanceFleetsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListInstanceFleetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListInstanceFleetsOutput listInstanceFleetsOutput;
+
     public ListInstanceFleetsResponse withListInstanceFleetsOutput(org.openapis.openapi.models.shared.ListInstanceFleetsOutput listInstanceFleetsOutput) {
         this.listInstanceFleetsOutput = listInstanceFleetsOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListInstanceFleetsResponse {
     
     
     public Integer statusCode;
+
     public ListInstanceFleetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListInstanceFleetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListInstanceFleetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListInstanceFleetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

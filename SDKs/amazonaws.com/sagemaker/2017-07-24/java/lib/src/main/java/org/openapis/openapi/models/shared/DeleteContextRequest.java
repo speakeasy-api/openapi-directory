@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteContextRequest {
     @JsonProperty("ContextName")
     public String contextName;
+
     public DeleteContextRequest withContextName(String contextName) {
         this.contextName = contextName;
         return this;
     }
     
+    public DeleteContextRequest(@JsonProperty("ContextName") String contextName) {
+        this.contextName = contextName;
+  }
 }

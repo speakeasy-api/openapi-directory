@@ -12,9 +12,11 @@ public class TerminateAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public TerminateAppRequest withAppId(String appId) {
         this.appId = appId;
         return this;
     }
     
+    public TerminateAppRequest(){}
 }

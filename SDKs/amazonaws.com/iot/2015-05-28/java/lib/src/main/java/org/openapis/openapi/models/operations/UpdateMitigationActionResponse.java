@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateMitigationActionResponse {
     
     public String contentType;
+
     public UpdateMitigationActionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateMitigationActionResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateMitigationActionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateMitigationActionResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateMitigationActionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateMitigationActionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateMitigationActionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateMitigationActionResponse {
     
     
     public Integer statusCode;
+
     public UpdateMitigationActionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateMitigationActionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateMitigationActionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateMitigationActionResponse {
      */
     
     public Object throttlingException;
+
     public UpdateMitigationActionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateMitigationActionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateMitigationActionResponse updateMitigationActionResponse;
+
     public UpdateMitigationActionResponse withUpdateMitigationActionResponse(org.openapis.openapi.models.shared.UpdateMitigationActionResponse updateMitigationActionResponse) {
         this.updateMitigationActionResponse = updateMitigationActionResponse;
         return this;
     }
     
+    public UpdateMitigationActionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

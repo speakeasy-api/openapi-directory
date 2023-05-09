@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ShuffleConfig {
     @JsonProperty("Seed")
     public Long seed;
+
     public ShuffleConfig withSeed(Long seed) {
         this.seed = seed;
         return this;
     }
     
+    public ShuffleConfig(@JsonProperty("Seed") Long seed) {
+        this.seed = seed;
+  }
 }

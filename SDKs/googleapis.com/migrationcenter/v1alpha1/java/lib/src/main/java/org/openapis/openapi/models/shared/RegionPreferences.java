@@ -18,9 +18,11 @@ public class RegionPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredRegions")
     public String[] preferredRegions;
+
     public RegionPreferences withPreferredRegions(String[] preferredRegions) {
         this.preferredRegions = preferredRegions;
         return this;
     }
     
+    public RegionPreferences(){}
 }

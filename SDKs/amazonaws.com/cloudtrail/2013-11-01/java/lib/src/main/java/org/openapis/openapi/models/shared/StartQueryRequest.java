@@ -12,6 +12,7 @@ public class StartQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryS3Uri")
     public String deliveryS3Uri;
+
     public StartQueryRequest withDeliveryS3Uri(String deliveryS3Uri) {
         this.deliveryS3Uri = deliveryS3Uri;
         return this;
@@ -19,9 +20,13 @@ public class StartQueryRequest {
     
     @JsonProperty("QueryStatement")
     public String queryStatement;
+
     public StartQueryRequest withQueryStatement(String queryStatement) {
         this.queryStatement = queryStatement;
         return this;
     }
     
+    public StartQueryRequest(@JsonProperty("QueryStatement") String queryStatement) {
+        this.queryStatement = queryStatement;
+  }
 }

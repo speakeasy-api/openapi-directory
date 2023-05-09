@@ -15,6 +15,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountID")
     public String accountID;
+
     public Account withAccountID(String accountID) {
         this.accountID = accountID;
         return this;
@@ -26,6 +27,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public Account withCode(String code) {
         this.code = code;
         return this;
@@ -37,6 +39,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Account withName(String name) {
         this.name = name;
         return this;
@@ -48,9 +51,11 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public AccountTypeEnum type;
+
     public Account withType(AccountTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Account(){}
 }

@@ -15,6 +15,7 @@ public class Betslipbet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("betMultiplier")
     public Double betMultiplier;
+
     public Betslipbet withBetMultiplier(Double betMultiplier) {
         this.betMultiplier = betMultiplier;
         return this;
@@ -26,6 +27,7 @@ public class Betslipbet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freeBets")
     public FreeBetDetail[] freeBets;
+
     public Betslipbet withFreeBets(FreeBetDetail[] freeBets) {
         this.freeBets = freeBets;
         return this;
@@ -33,6 +35,7 @@ public class Betslipbet {
     
     @JsonProperty("legs")
     public Betslipleg[] legs;
+
     public Betslipbet withLegs(Betslipleg[] legs) {
         this.legs = legs;
         return this;
@@ -44,6 +47,7 @@ public class Betslipbet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxStake")
     public Double maxStake;
+
     public Betslipbet withMaxStake(Double maxStake) {
         this.maxStake = maxStake;
         return this;
@@ -55,6 +59,7 @@ public class Betslipbet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minStake")
     public Double minStake;
+
     public Betslipbet withMinStake(Double minStake) {
         this.minStake = minStake;
         return this;
@@ -66,6 +71,7 @@ public class Betslipbet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numLines")
     public Double numLines;
+
     public Betslipbet withNumLines(Double numLines) {
         this.numLines = numLines;
         return this;
@@ -76,6 +82,7 @@ public class Betslipbet {
      */
     @JsonProperty("number")
     public Long number;
+
     public Betslipbet withNumber(Long number) {
         this.number = number;
         return this;
@@ -86,6 +93,7 @@ public class Betslipbet {
      */
     @JsonProperty("typeCode")
     public String typeCode;
+
     public Betslipbet withTypeCode(String typeCode) {
         this.typeCode = typeCode;
         return this;
@@ -97,9 +105,15 @@ public class Betslipbet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("typeName")
     public String typeName;
+
     public Betslipbet withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public Betslipbet(@JsonProperty("legs") Betslipleg[] legs, @JsonProperty("number") Long number, @JsonProperty("typeCode") String typeCode) {
+        this.legs = legs;
+        this.number = number;
+        this.typeCode = typeCode;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleCloudIntegrationsV1alphaGetClientResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client")
     public GoogleCloudIntegrationsV1alphaClientConfig client;
+
     public GoogleCloudIntegrationsV1alphaGetClientResponse withClient(GoogleCloudIntegrationsV1alphaClientConfig client) {
         this.client = client;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaGetClientResponse(){}
 }

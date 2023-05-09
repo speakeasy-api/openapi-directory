@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3RolloutConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCondition")
     public String failureCondition;
+
     public GoogleCloudDialogflowCxV3RolloutConfig withFailureCondition(String failureCondition) {
         this.failureCondition = failureCondition;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3RolloutConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rolloutCondition")
     public String rolloutCondition;
+
     public GoogleCloudDialogflowCxV3RolloutConfig withRolloutCondition(String rolloutCondition) {
         this.rolloutCondition = rolloutCondition;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowCxV3RolloutConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rolloutSteps")
     public GoogleCloudDialogflowCxV3RolloutConfigRolloutStep[] rolloutSteps;
+
     public GoogleCloudDialogflowCxV3RolloutConfig withRolloutSteps(GoogleCloudDialogflowCxV3RolloutConfigRolloutStep[] rolloutSteps) {
         this.rolloutSteps = rolloutSteps;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3RolloutConfig(){}
 }

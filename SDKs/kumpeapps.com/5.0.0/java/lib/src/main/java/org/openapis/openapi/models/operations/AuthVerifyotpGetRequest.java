@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthVerifyotpGetRequest {
@@ -12,9 +13,13 @@ public class AuthVerifyotpGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=otp")
     public String otp;
+
     public AuthVerifyotpGetRequest withOtp(String otp) {
         this.otp = otp;
         return this;
     }
     
+    public AuthVerifyotpGetRequest(@JsonProperty("otp") String otp) {
+        this.otp = otp;
+  }
 }

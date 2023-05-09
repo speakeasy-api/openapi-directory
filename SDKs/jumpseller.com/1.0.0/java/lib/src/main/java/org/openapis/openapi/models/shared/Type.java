@@ -15,6 +15,7 @@ public class Type {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public Type withCode(String code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class Type {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public StoreStats stats;
+
     public Type withStats(StoreStats stats) {
         this.stats = stats;
         return this;
     }
     
+    public Type(){}
 }

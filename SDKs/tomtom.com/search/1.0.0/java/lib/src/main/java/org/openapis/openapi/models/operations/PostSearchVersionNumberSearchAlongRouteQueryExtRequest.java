@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSearchVersionNumberSearchAlongRouteQueryExtRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PostSearchVersionNumberSearchAlongRouteQueryExtRequestBody requestBody;
+
     public PostSearchVersionNumberSearchAlongRouteQueryExtRequest withRequestBody(PostSearchVersionNumberSearchAlongRouteQueryExtRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class PostSearchVersionNumberSearchAlongRouteQueryExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
     public org.openapis.openapi.models.shared.ExtEnum ext;
+
     public PostSearchVersionNumberSearchAlongRouteQueryExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
         this.ext = ext;
         return this;
@@ -29,6 +32,7 @@ public class PostSearchVersionNumberSearchAlongRouteQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public PostSearchVersionNumberSearchAlongRouteQueryExtRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -39,6 +43,7 @@ public class PostSearchVersionNumberSearchAlongRouteQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDetourTime")
     public Long maxDetourTime;
+
     public PostSearchVersionNumberSearchAlongRouteQueryExtRequest withMaxDetourTime(Long maxDetourTime) {
         this.maxDetourTime = maxDetourTime;
         return this;
@@ -49,6 +54,7 @@ public class PostSearchVersionNumberSearchAlongRouteQueryExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=query")
     public String query;
+
     public PostSearchVersionNumberSearchAlongRouteQueryExtRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -59,9 +65,16 @@ public class PostSearchVersionNumberSearchAlongRouteQueryExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+
     public PostSearchVersionNumberSearchAlongRouteQueryExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public PostSearchVersionNumberSearchAlongRouteQueryExtRequest(@JsonProperty("ext") org.openapis.openapi.models.shared.ExtEnum ext, @JsonProperty("maxDetourTime") Long maxDetourTime, @JsonProperty("query") String query, @JsonProperty("versionNumber") org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.ext = ext;
+        this.maxDetourTime = maxDetourTime;
+        this.query = query;
+        this.versionNumber = versionNumber;
+  }
 }

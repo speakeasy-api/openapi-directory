@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateParticipantTokenResponse {
@@ -12,6 +13,7 @@ public class CreateParticipantTokenResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateParticipantTokenResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateParticipantTokenResponse {
     
     
     public String contentType;
+
     public CreateParticipantTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateParticipantTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateParticipantTokenResponse createParticipantTokenResponse;
+
     public CreateParticipantTokenResponse withCreateParticipantTokenResponse(org.openapis.openapi.models.shared.CreateParticipantTokenResponse createParticipantTokenResponse) {
         this.createParticipantTokenResponse = createParticipantTokenResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateParticipantTokenResponse {
      */
     
     public Object pendingVerification;
+
     public CreateParticipantTokenResponse withPendingVerification(Object pendingVerification) {
         this.pendingVerification = pendingVerification;
         return this;
@@ -49,6 +54,7 @@ public class CreateParticipantTokenResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateParticipantTokenResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CreateParticipantTokenResponse {
     
     
     public Integer statusCode;
+
     public CreateParticipantTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateParticipantTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateParticipantTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateParticipantTokenResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateParticipantTokenResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,9 +92,14 @@ public class CreateParticipantTokenResponse {
      */
     
     public Object validationException;
+
     public CreateParticipantTokenResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateParticipantTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

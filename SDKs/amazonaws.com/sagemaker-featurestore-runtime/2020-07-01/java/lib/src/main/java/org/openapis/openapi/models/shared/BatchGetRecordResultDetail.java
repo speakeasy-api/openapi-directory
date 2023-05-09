@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetRecordResultDetail {
     @JsonProperty("FeatureGroupName")
     public String featureGroupName;
+
     public BatchGetRecordResultDetail withFeatureGroupName(String featureGroupName) {
         this.featureGroupName = featureGroupName;
         return this;
@@ -19,6 +20,7 @@ public class BatchGetRecordResultDetail {
     
     @JsonProperty("Record")
     public FeatureValue[] record;
+
     public BatchGetRecordResultDetail withRecord(FeatureValue[] record) {
         this.record = record;
         return this;
@@ -26,9 +28,15 @@ public class BatchGetRecordResultDetail {
     
     @JsonProperty("RecordIdentifierValueAsString")
     public String recordIdentifierValueAsString;
+
     public BatchGetRecordResultDetail withRecordIdentifierValueAsString(String recordIdentifierValueAsString) {
         this.recordIdentifierValueAsString = recordIdentifierValueAsString;
         return this;
     }
     
+    public BatchGetRecordResultDetail(@JsonProperty("FeatureGroupName") String featureGroupName, @JsonProperty("Record") FeatureValue[] record, @JsonProperty("RecordIdentifierValueAsString") String recordIdentifierValueAsString) {
+        this.featureGroupName = featureGroupName;
+        this.record = record;
+        this.recordIdentifierValueAsString = recordIdentifierValueAsString;
+  }
 }

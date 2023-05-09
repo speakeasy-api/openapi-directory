@@ -12,9 +12,11 @@ public class LanguageTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public LanguageTag withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public LanguageTag(){}
 }

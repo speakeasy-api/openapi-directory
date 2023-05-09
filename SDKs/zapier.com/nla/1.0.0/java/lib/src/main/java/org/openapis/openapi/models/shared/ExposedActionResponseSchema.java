@@ -15,6 +15,7 @@ public class ExposedActionResponseSchema {
      */
     @JsonProperty("configuration_link")
     public String configurationLink;
+
     public ExposedActionResponseSchema withConfigurationLink(String configurationLink) {
         this.configurationLink = configurationLink;
         return this;
@@ -22,9 +23,14 @@ public class ExposedActionResponseSchema {
     
     @JsonProperty("results")
     public ExposedActionSchema[] results;
+
     public ExposedActionResponseSchema withResults(ExposedActionSchema[] results) {
         this.results = results;
         return this;
     }
     
+    public ExposedActionResponseSchema(@JsonProperty("configuration_link") String configurationLink, @JsonProperty("results") ExposedActionSchema[] results) {
+        this.configurationLink = configurationLink;
+        this.results = results;
+  }
 }

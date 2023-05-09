@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetCommitInput {
     @JsonProperty("commitId")
     public String commitId;
+
     public GetCommitInput withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -19,9 +20,14 @@ public class GetCommitInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public GetCommitInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public GetCommitInput(@JsonProperty("commitId") String commitId, @JsonProperty("repositoryName") String repositoryName) {
+        this.commitId = commitId;
+        this.repositoryName = repositoryName;
+  }
 }

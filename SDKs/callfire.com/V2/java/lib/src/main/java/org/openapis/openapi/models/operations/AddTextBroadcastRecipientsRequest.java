@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddTextBroadcastRecipientsRequest {
@@ -12,6 +13,7 @@ public class AddTextBroadcastRecipientsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TextRecipient[] requestBody;
+
     public AddTextBroadcastRecipientsRequest withRequestBody(org.openapis.openapi.models.shared.TextRecipient[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class AddTextBroadcastRecipientsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AddTextBroadcastRecipientsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class AddTextBroadcastRecipientsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public AddTextBroadcastRecipientsRequest withId(Long id) {
         this.id = id;
         return this;
@@ -42,9 +46,13 @@ public class AddTextBroadcastRecipientsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=strictValidation")
     public Boolean strictValidation;
+
     public AddTextBroadcastRecipientsRequest withStrictValidation(Boolean strictValidation) {
         this.strictValidation = strictValidation;
         return this;
     }
     
+    public AddTextBroadcastRecipientsRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

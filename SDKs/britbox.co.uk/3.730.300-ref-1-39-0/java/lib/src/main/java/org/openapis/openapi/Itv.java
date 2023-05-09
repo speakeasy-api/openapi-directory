@@ -65,10 +65,8 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActivateSaveOfferResponse res = new org.openapis.openapi.models.operations.ActivateSaveOfferResponse() {{
+        org.openapis.openapi.models.operations.ActivateSaveOfferResponse res = new org.openapis.openapi.models.operations.ActivateSaveOfferResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 406) {
@@ -110,11 +108,9 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeCardDetailsResponse res = new org.openapis.openapi.models.operations.ChangeCardDetailsResponse() {{
+        org.openapis.openapi.models.operations.ChangeCardDetailsResponse res = new org.openapis.openapi.models.operations.ChangeCardDetailsResponse(contentType, httpRes.statusCode()) {{
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -163,11 +159,9 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeEmailResponse res = new org.openapis.openapi.models.operations.ChangeEmailResponse() {{
+        org.openapis.openapi.models.operations.ChangeEmailResponse res = new org.openapis.openapi.models.operations.ChangeEmailResponse(contentType, httpRes.statusCode()) {{
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -216,11 +210,9 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeMarketingResponse res = new org.openapis.openapi.models.operations.ChangeMarketingResponse() {{
+        org.openapis.openapi.models.operations.ChangeMarketingResponse res = new org.openapis.openapi.models.operations.ChangeMarketingResponse(contentType, httpRes.statusCode()) {{
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -264,12 +256,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CheckPreviousEntitlementsResponse res = new org.openapis.openapi.models.operations.CheckPreviousEntitlementsResponse() {{
+        org.openapis.openapi.models.operations.CheckPreviousEntitlementsResponse res = new org.openapis.openapi.models.operations.CheckPreviousEntitlementsResponse(contentType, httpRes.statusCode()) {{
             itvHadEntitlement = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -323,12 +313,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CheckVoucherResponse res = new org.openapis.openapi.models.operations.CheckVoucherResponse() {{
+        org.openapis.openapi.models.operations.CheckVoucherResponse res = new org.openapis.openapi.models.operations.CheckVoucherResponse(contentType, httpRes.statusCode()) {{
             itvVoucher = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -382,12 +370,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmPurchaseResponse res = new org.openapis.openapi.models.operations.ConfirmPurchaseResponse() {{
+        org.openapis.openapi.models.operations.ConfirmPurchaseResponse res = new org.openapis.openapi.models.operations.ConfirmPurchaseResponse(contentType, httpRes.statusCode()) {{
             itvPurchase = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -441,12 +427,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmPurchaseStrongResponse res = new org.openapis.openapi.models.operations.ConfirmPurchaseStrongResponse() {{
+        org.openapis.openapi.models.operations.ConfirmPurchaseStrongResponse res = new org.openapis.openapi.models.operations.ConfirmPurchaseStrongResponse(contentType, httpRes.statusCode()) {{
             itvPurchaseStrongResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -500,12 +484,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmPurchaseWithOfferResponse res = new org.openapis.openapi.models.operations.ConfirmPurchaseWithOfferResponse() {{
+        org.openapis.openapi.models.operations.ConfirmPurchaseWithOfferResponse res = new org.openapis.openapi.models.operations.ConfirmPurchaseWithOfferResponse(contentType, httpRes.statusCode()) {{
             itvPurchaseWithOfferResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -559,11 +541,9 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAccountResponse res = new org.openapis.openapi.models.operations.DeleteAccountResponse() {{
+        org.openapis.openapi.models.operations.DeleteAccountResponse res = new org.openapis.openapi.models.operations.DeleteAccountResponse(contentType, httpRes.statusCode()) {{
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -612,11 +592,9 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteItvPurchasePlatformResponse res = new org.openapis.openapi.models.operations.DeleteItvPurchasePlatformResponse() {{
+        org.openapis.openapi.models.operations.DeleteItvPurchasePlatformResponse res = new org.openapis.openapi.models.operations.DeleteItvPurchasePlatformResponse(contentType, httpRes.statusCode()) {{
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -663,11 +641,9 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExecuteTransactionResponse res = new org.openapis.openapi.models.operations.ExecuteTransactionResponse() {{
+        org.openapis.openapi.models.operations.ExecuteTransactionResponse res = new org.openapis.openapi.models.operations.ExecuteTransactionResponse(contentType, httpRes.statusCode()) {{
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -716,12 +692,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountTokenWithPinResponse res = new org.openapis.openapi.models.operations.GetAccountTokenWithPinResponse() {{
+        org.openapis.openapi.models.operations.GetAccountTokenWithPinResponse res = new org.openapis.openapi.models.operations.GetAccountTokenWithPinResponse(contentType, httpRes.statusCode()) {{
             accessTokens = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -775,12 +749,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBillingHistoryResponse res = new org.openapis.openapi.models.operations.GetBillingHistoryResponse() {{
+        org.openapis.openapi.models.operations.GetBillingHistoryResponse res = new org.openapis.openapi.models.operations.GetBillingHistoryResponse(contentType, httpRes.statusCode()) {{
             itvBillingHistory = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -834,12 +806,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCardDetailsResponse res = new org.openapis.openapi.models.operations.GetCardDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetCardDetailsResponse res = new org.openapis.openapi.models.operations.GetCardDetailsResponse(contentType, httpRes.statusCode()) {{
             itvCardDetails = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -888,12 +858,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCurrentEntitlementResponse res = new org.openapis.openapi.models.operations.GetCurrentEntitlementResponse() {{
+        org.openapis.openapi.models.operations.GetCurrentEntitlementResponse res = new org.openapis.openapi.models.operations.GetCurrentEntitlementResponse(contentType, httpRes.statusCode()) {{
             itvEntitlementCurrent = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -942,12 +910,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCurrentSubscriptionResponse res = new org.openapis.openapi.models.operations.GetCurrentSubscriptionResponse() {{
+        org.openapis.openapi.models.operations.GetCurrentSubscriptionResponse res = new org.openapis.openapi.models.operations.GetCurrentSubscriptionResponse(contentType, httpRes.statusCode()) {{
             itvCurrentSubscription = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -996,12 +962,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEntitlementsHistoryResponse res = new org.openapis.openapi.models.operations.GetEntitlementsHistoryResponse() {{
+        org.openapis.openapi.models.operations.GetEntitlementsHistoryResponse res = new org.openapis.openapi.models.operations.GetEntitlementsHistoryResponse(contentType, httpRes.statusCode()) {{
             itvEntitlementsHistory = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1048,12 +1012,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFeatureFlagResponse res = new org.openapis.openapi.models.operations.GetFeatureFlagResponse() {{
+        org.openapis.openapi.models.operations.GetFeatureFlagResponse res = new org.openapis.openapi.models.operations.GetFeatureFlagResponse(contentType, httpRes.statusCode()) {{
             itvFeatureFlag = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1102,11 +1064,9 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFullPriceRenewalResponse res = new org.openapis.openapi.models.operations.GetFullPriceRenewalResponse() {{
+        org.openapis.openapi.models.operations.GetFullPriceRenewalResponse res = new org.openapis.openapi.models.operations.GetFullPriceRenewalResponse(contentType, httpRes.statusCode()) {{
             itvSubscriptionFullPriceRenewal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1153,12 +1113,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetItvProfileTokenResponse res = new org.openapis.openapi.models.operations.GetItvProfileTokenResponse() {{
+        org.openapis.openapi.models.operations.GetItvProfileTokenResponse res = new org.openapis.openapi.models.operations.GetItvProfileTokenResponse(contentType, httpRes.statusCode()) {{
             itvProfileToken = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1198,12 +1156,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPublicPreviewResponse res = new org.openapis.openapi.models.operations.GetPublicPreviewResponse() {{
+        org.openapis.openapi.models.operations.GetPublicPreviewResponse res = new org.openapis.openapi.models.operations.GetPublicPreviewResponse(contentType, httpRes.statusCode()) {{
             samsungPreview = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1252,12 +1208,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRecommendedListResponse res = new org.openapis.openapi.models.operations.GetRecommendedListResponse() {{
+        org.openapis.openapi.models.operations.GetRecommendedListResponse res = new org.openapis.openapi.models.operations.GetRecommendedListResponse(contentType, httpRes.statusCode()) {{
             itemList = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1306,12 +1260,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSaveOfferResponse res = new org.openapis.openapi.models.operations.GetSaveOfferResponse() {{
+        org.openapis.openapi.models.operations.GetSaveOfferResponse res = new org.openapis.openapi.models.operations.GetSaveOfferResponse(contentType, httpRes.statusCode()) {{
             itvGetDiscountResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1360,12 +1312,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSubscriptionStateResponse res = new org.openapis.openapi.models.operations.GetSubscriptionStateResponse() {{
+        org.openapis.openapi.models.operations.GetSubscriptionStateResponse res = new org.openapis.openapi.models.operations.GetSubscriptionStateResponse(contentType, httpRes.statusCode()) {{
             itvSubscriptionState = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1414,11 +1364,9 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSubscriptionStatusResponse res = new org.openapis.openapi.models.operations.GetSubscriptionStatusResponse() {{
+        org.openapis.openapi.models.operations.GetSubscriptionStatusResponse res = new org.openapis.openapi.models.operations.GetSubscriptionStatusResponse(contentType, httpRes.statusCode()) {{
             itvSubscriptionStatusResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1460,12 +1408,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUpcomingInvoiceResponse res = new org.openapis.openapi.models.operations.GetUpcomingInvoiceResponse() {{
+        org.openapis.openapi.models.operations.GetUpcomingInvoiceResponse res = new org.openapis.openapi.models.operations.GetUpcomingInvoiceResponse(contentType, httpRes.statusCode()) {{
             itvGetDiscountResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1514,12 +1460,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVoucherByIdResponse res = new org.openapis.openapi.models.operations.GetVoucherByIdResponse() {{
+        org.openapis.openapi.models.operations.GetVoucherByIdResponse res = new org.openapis.openapi.models.operations.GetVoucherByIdResponse(contentType, httpRes.statusCode()) {{
             itvVoucher = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1560,12 +1504,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetItvItemsummaryExternalIdResponse res = new org.openapis.openapi.models.operations.GetItvItemsummaryExternalIdResponse() {{
+        org.openapis.openapi.models.operations.GetItvItemsummaryExternalIdResponse res = new org.openapis.openapi.models.operations.GetItvItemsummaryExternalIdResponse(contentType, httpRes.statusCode()) {{
             getItvItemsummaryExternalId302ApplicationJSONObject = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 302) {
@@ -1614,12 +1556,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetItvPlansPlatformResponse res = new org.openapis.openapi.models.operations.GetItvPlansPlatformResponse() {{
+        org.openapis.openapi.models.operations.GetItvPlansPlatformResponse res = new org.openapis.openapi.models.operations.GetItvPlansPlatformResponse(contentType, httpRes.statusCode()) {{
             itvPlans = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1668,12 +1608,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetItvProfileResponse res = new org.openapis.openapi.models.operations.GetItvProfileResponse() {{
+        org.openapis.openapi.models.operations.GetItvProfileResponse res = new org.openapis.openapi.models.operations.GetItvProfileResponse(contentType, httpRes.statusCode()) {{
             getItvProfile200ApplicationJSONObject = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1720,12 +1658,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetItvRokuPlansResponse res = new org.openapis.openapi.models.operations.GetItvRokuPlansResponse() {{
+        org.openapis.openapi.models.operations.GetItvRokuPlansResponse res = new org.openapis.openapi.models.operations.GetItvRokuPlansResponse(contentType, httpRes.statusCode()) {{
             rokuPlans = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1779,10 +1715,8 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GooglePaySubscriptionResponse res = new org.openapis.openapi.models.operations.GooglePaySubscriptionResponse() {{
+        org.openapis.openapi.models.operations.GooglePaySubscriptionResponse res = new org.openapis.openapi.models.operations.GooglePaySubscriptionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 409 || httpRes.statusCode() == 415 || httpRes.statusCode() == 500) {
@@ -1819,11 +1753,9 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResubscribeResponse res = new org.openapis.openapi.models.operations.ResubscribeResponse() {{
+        org.openapis.openapi.models.operations.ResubscribeResponse res = new org.openapis.openapi.models.operations.ResubscribeResponse(contentType, httpRes.statusCode()) {{
             resubscribe200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1872,12 +1804,10 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePaymentIntentStrongResponse res = new org.openapis.openapi.models.operations.UpdatePaymentIntentStrongResponse() {{
+        org.openapis.openapi.models.operations.UpdatePaymentIntentStrongResponse res = new org.openapis.openapi.models.operations.UpdatePaymentIntentStrongResponse(contentType, httpRes.statusCode()) {{
             itvUpdateIntentStrongResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1931,11 +1861,9 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePaymentMethodStrongResponse res = new org.openapis.openapi.models.operations.UpdatePaymentMethodStrongResponse() {{
+        org.openapis.openapi.models.operations.UpdatePaymentMethodStrongResponse res = new org.openapis.openapi.models.operations.UpdatePaymentMethodStrongResponse(contentType, httpRes.statusCode()) {{
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1984,11 +1912,9 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateProfileResponse res = new org.openapis.openapi.models.operations.UpdateProfileResponse() {{
+        org.openapis.openapi.models.operations.UpdateProfileResponse res = new org.openapis.openapi.models.operations.UpdateProfileResponse(contentType, httpRes.statusCode()) {{
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -2037,11 +1963,9 @@ public class Itv {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpgradePlanResponse res = new org.openapis.openapi.models.operations.UpgradePlanResponse() {{
+        org.openapis.openapi.models.operations.UpgradePlanResponse res = new org.openapis.openapi.models.operations.UpgradePlanResponse(contentType, httpRes.statusCode()) {{
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

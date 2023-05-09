@@ -15,6 +15,7 @@ public class AuthorComplete {
      */
     @JsonProperty("first_name")
     public String firstName;
+
     public AuthorComplete withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -25,6 +26,7 @@ public class AuthorComplete {
      */
     @JsonProperty("full_name")
     public String fullName;
+
     public AuthorComplete withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -35,6 +37,7 @@ public class AuthorComplete {
      */
     @JsonProperty("group_id")
     public Long groupId;
+
     public AuthorComplete withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -45,6 +48,7 @@ public class AuthorComplete {
      */
     @JsonProperty("id")
     public Long id;
+
     public AuthorComplete withId(Long id) {
         this.id = id;
         return this;
@@ -55,6 +59,7 @@ public class AuthorComplete {
      */
     @JsonProperty("institution_id")
     public Long institutionId;
+
     public AuthorComplete withInstitutionId(Long institutionId) {
         this.institutionId = institutionId;
         return this;
@@ -65,6 +70,7 @@ public class AuthorComplete {
      */
     @JsonProperty("is_active")
     public Boolean isActive;
+
     public AuthorComplete withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -75,6 +81,7 @@ public class AuthorComplete {
      */
     @JsonProperty("is_public")
     public Long isPublic;
+
     public AuthorComplete withIsPublic(Long isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -85,6 +92,7 @@ public class AuthorComplete {
      */
     @JsonProperty("job_title")
     public String jobTitle;
+
     public AuthorComplete withJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
         return this;
@@ -95,6 +103,7 @@ public class AuthorComplete {
      */
     @JsonProperty("last_name")
     public String lastName;
+
     public AuthorComplete withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -105,6 +114,7 @@ public class AuthorComplete {
      */
     @JsonProperty("orcid_id")
     public String orcidId;
+
     public AuthorComplete withOrcidId(String orcidId) {
         this.orcidId = orcidId;
         return this;
@@ -115,9 +125,23 @@ public class AuthorComplete {
      */
     @JsonProperty("url_name")
     public String urlName;
+
     public AuthorComplete withUrlName(String urlName) {
         this.urlName = urlName;
         return this;
     }
     
+    public AuthorComplete(@JsonProperty("first_name") String firstName, @JsonProperty("full_name") String fullName, @JsonProperty("group_id") Long groupId, @JsonProperty("id") Long id, @JsonProperty("institution_id") Long institutionId, @JsonProperty("is_active") Boolean isActive, @JsonProperty("is_public") Long isPublic, @JsonProperty("job_title") String jobTitle, @JsonProperty("last_name") String lastName, @JsonProperty("orcid_id") String orcidId, @JsonProperty("url_name") String urlName) {
+        this.firstName = firstName;
+        this.fullName = fullName;
+        this.groupId = groupId;
+        this.id = id;
+        this.institutionId = institutionId;
+        this.isActive = isActive;
+        this.isPublic = isPublic;
+        this.jobTitle = jobTitle;
+        this.lastName = lastName;
+        this.orcidId = orcidId;
+        this.urlName = urlName;
+  }
 }

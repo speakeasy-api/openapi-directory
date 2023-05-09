@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReferencesAirlinesByAirlineCodeGetRequest {
@@ -12,6 +13,7 @@ public class ReferencesAirlinesByAirlineCodeGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ReferencesAirlinesByAirlineCodeGetRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ReferencesAirlinesByAirlineCodeGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=airlineCode")
     public String airlineCode;
+
     public ReferencesAirlinesByAirlineCodeGetRequest withAirlineCode(String airlineCode) {
         this.airlineCode = airlineCode;
         return this;
@@ -32,6 +35,7 @@ public class ReferencesAirlinesByAirlineCodeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public ReferencesAirlinesByAirlineCodeGetRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -42,9 +46,14 @@ public class ReferencesAirlinesByAirlineCodeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public ReferencesAirlinesByAirlineCodeGetRequest withOffset(String offset) {
         this.offset = offset;
         return this;
     }
     
+    public ReferencesAirlinesByAirlineCodeGetRequest(@JsonProperty("Accept") String accept, @JsonProperty("airlineCode") String airlineCode) {
+        this.accept = accept;
+        this.airlineCode = airlineCode;
+  }
 }

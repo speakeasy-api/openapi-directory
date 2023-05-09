@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WorkTypeApiNewJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.WorkTypeCreateApiModel workTypeCreateApiModel;
+
     public WorkTypeApiNewJsonRequest withWorkTypeCreateApiModel(org.openapis.openapi.models.shared.WorkTypeCreateApiModel workTypeCreateApiModel) {
         this.workTypeCreateApiModel = workTypeCreateApiModel;
         return this;
@@ -16,6 +18,7 @@ public class WorkTypeApiNewJsonRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
     public String xAuthKey;
+
     public WorkTypeApiNewJsonRequest withXAuthKey(String xAuthKey) {
         this.xAuthKey = xAuthKey;
         return this;
@@ -23,9 +26,15 @@ public class WorkTypeApiNewJsonRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
     public String xAuthSecret;
+
     public WorkTypeApiNewJsonRequest withXAuthSecret(String xAuthSecret) {
         this.xAuthSecret = xAuthSecret;
         return this;
     }
     
+    public WorkTypeApiNewJsonRequest(@JsonProperty("WorkTypeCreateApiModel") org.openapis.openapi.models.shared.WorkTypeCreateApiModel workTypeCreateApiModel, @JsonProperty("x-auth-key") String xAuthKey, @JsonProperty("x-auth-secret") String xAuthSecret) {
+        this.workTypeCreateApiModel = workTypeCreateApiModel;
+        this.xAuthKey = xAuthKey;
+        this.xAuthSecret = xAuthSecret;
+  }
 }

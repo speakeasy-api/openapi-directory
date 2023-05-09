@@ -12,9 +12,13 @@ public class AssociateLensesRequestBody {
      */
     @JsonProperty("LensAliases")
     public String[] lensAliases;
+
     public AssociateLensesRequestBody withLensAliases(String[] lensAliases) {
         this.lensAliases = lensAliases;
         return this;
     }
     
+    public AssociateLensesRequestBody(@JsonProperty("LensAliases") String[] lensAliases) {
+        this.lensAliases = lensAliases;
+  }
 }

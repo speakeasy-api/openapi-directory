@@ -12,6 +12,7 @@ public class SymbolUploadsGet200ApplicationJSONSymbolsUploaded {
      */
     @JsonProperty("platform")
     public String platform;
+
     public SymbolUploadsGet200ApplicationJSONSymbolsUploaded withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -22,9 +23,14 @@ public class SymbolUploadsGet200ApplicationJSONSymbolsUploaded {
      */
     @JsonProperty("symbol_id")
     public String symbolId;
+
     public SymbolUploadsGet200ApplicationJSONSymbolsUploaded withSymbolId(String symbolId) {
         this.symbolId = symbolId;
         return this;
     }
     
+    public SymbolUploadsGet200ApplicationJSONSymbolsUploaded(@JsonProperty("platform") String platform, @JsonProperty("symbol_id") String symbolId) {
+        this.platform = platform;
+        this.symbolId = symbolId;
+  }
 }

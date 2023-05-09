@@ -12,6 +12,7 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
      */
     @JsonProperty("currency")
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestShippingCostCurrency currency;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestShippingCost withCurrency(GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestShippingCostCurrency currency) {
         this.currency = currency;
         return this;
@@ -22,9 +23,14 @@ public class GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResource
      */
     @JsonProperty("sum")
     public Double sum;
+
     public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestShippingCost withSum(Double sum) {
         this.sum = sum;
         return this;
     }
     
+    public GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestShippingCost(@JsonProperty("currency") GetAlmawsV1TaskListsRsLendingRequests200ApplicationJSONUserResourceSharingRequestShippingCostCurrency currency, @JsonProperty("sum") Double sum) {
+        this.currency = currency;
+        this.sum = sum;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePlacementResponse {
     
     public String contentType;
+
     public DeletePlacementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeletePlacementResponse {
      */
     
     public java.util.Map<String, Object> deletePlacementResponse;
+
     public DeletePlacementResponse withDeletePlacementResponse(java.util.Map<String, Object> deletePlacementResponse) {
         this.deletePlacementResponse = deletePlacementResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeletePlacementResponse {
      */
     
     public Object internalFailureException;
+
     public DeletePlacementResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeletePlacementResponse {
      */
     
     public Object invalidRequestException;
+
     public DeletePlacementResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeletePlacementResponse {
     
     
     public Integer statusCode;
+
     public DeletePlacementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeletePlacementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePlacementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeletePlacementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeletePlacementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeletePlacementResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeletePlacementResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeletePlacementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

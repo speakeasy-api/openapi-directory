@@ -15,9 +15,11 @@ public class AccountEmbeddedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Account data;
+
     public AccountEmbeddedObject withData(Account data) {
         this.data = data;
         return this;
     }
     
+    public AccountEmbeddedObject(){}
 }

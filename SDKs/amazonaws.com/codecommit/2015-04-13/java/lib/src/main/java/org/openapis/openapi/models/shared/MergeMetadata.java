@@ -15,6 +15,7 @@ public class MergeMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isMerged")
     public Boolean isMerged;
+
     public MergeMetadata withIsMerged(Boolean isMerged) {
         this.isMerged = isMerged;
         return this;
@@ -23,6 +24,7 @@ public class MergeMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mergeCommitId")
     public String mergeCommitId;
+
     public MergeMetadata withMergeCommitId(String mergeCommitId) {
         this.mergeCommitId = mergeCommitId;
         return this;
@@ -31,6 +33,7 @@ public class MergeMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mergeOption")
     public MergeOptionTypeEnumEnum mergeOption;
+
     public MergeMetadata withMergeOption(MergeOptionTypeEnumEnum mergeOption) {
         this.mergeOption = mergeOption;
         return this;
@@ -39,9 +42,11 @@ public class MergeMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mergedBy")
     public String mergedBy;
+
     public MergeMetadata withMergedBy(String mergedBy) {
         this.mergedBy = mergedBy;
         return this;
     }
     
+    public MergeMetadata(){}
 }

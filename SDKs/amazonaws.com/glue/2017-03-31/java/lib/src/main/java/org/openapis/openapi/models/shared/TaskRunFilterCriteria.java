@@ -22,6 +22,7 @@ public class TaskRunFilterCriteria {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartedAfter")
     public OffsetDateTime startedAfter;
+
     public TaskRunFilterCriteria withStartedAfter(OffsetDateTime startedAfter) {
         this.startedAfter = startedAfter;
         return this;
@@ -32,6 +33,7 @@ public class TaskRunFilterCriteria {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartedBefore")
     public OffsetDateTime startedBefore;
+
     public TaskRunFilterCriteria withStartedBefore(OffsetDateTime startedBefore) {
         this.startedBefore = startedBefore;
         return this;
@@ -40,6 +42,7 @@ public class TaskRunFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public TaskStatusTypeEnum status;
+
     public TaskRunFilterCriteria withStatus(TaskStatusTypeEnum status) {
         this.status = status;
         return this;
@@ -48,9 +51,11 @@ public class TaskRunFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskRunType")
     public TaskTypeEnum taskRunType;
+
     public TaskRunFilterCriteria withTaskRunType(TaskTypeEnum taskRunType) {
         this.taskRunType = taskRunType;
         return this;
     }
     
+    public TaskRunFilterCriteria(){}
 }

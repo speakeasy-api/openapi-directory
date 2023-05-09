@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutConsumerV1AppointmentsIdReserveRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AppointmentReserveModel appointmentReserveModel;
+
     public PutConsumerV1AppointmentsIdReserveRequest withAppointmentReserveModel(org.openapis.openapi.models.shared.AppointmentReserveModel appointmentReserveModel) {
         this.appointmentReserveModel = appointmentReserveModel;
         return this;
@@ -19,6 +21,7 @@ public class PutConsumerV1AppointmentsIdReserveRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutConsumerV1AppointmentsIdReserveRequest withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +29,13 @@ public class PutConsumerV1AppointmentsIdReserveRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sendNotifications")
     public Boolean sendNotifications;
+
     public PutConsumerV1AppointmentsIdReserveRequest withSendNotifications(Boolean sendNotifications) {
         this.sendNotifications = sendNotifications;
         return this;
     }
     
+    public PutConsumerV1AppointmentsIdReserveRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

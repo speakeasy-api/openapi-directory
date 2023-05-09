@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PreloadDataConfig {
     @JsonProperty("PreloadDataType")
     public PreloadDataTypeEnum preloadDataType;
+
     public PreloadDataConfig withPreloadDataType(PreloadDataTypeEnum preloadDataType) {
         this.preloadDataType = preloadDataType;
         return this;
     }
     
+    public PreloadDataConfig(@JsonProperty("PreloadDataType") PreloadDataTypeEnum preloadDataType) {
+        this.preloadDataType = preloadDataType;
+  }
 }

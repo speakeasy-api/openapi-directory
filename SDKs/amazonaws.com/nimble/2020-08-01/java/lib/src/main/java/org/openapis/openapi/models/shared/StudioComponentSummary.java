@@ -22,6 +22,7 @@ public class StudioComponentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public StudioComponentSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class StudioComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdBy")
     public String createdBy;
+
     public StudioComponentSummary withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -38,6 +40,7 @@ public class StudioComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public StudioComponentSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class StudioComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StudioComponentSummary withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +58,7 @@ public class StudioComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("studioComponentId")
     public String studioComponentId;
+
     public StudioComponentSummary withStudioComponentId(String studioComponentId) {
         this.studioComponentId = studioComponentId;
         return this;
@@ -62,6 +67,7 @@ public class StudioComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtype")
     public StudioComponentSubtypeEnum subtype;
+
     public StudioComponentSummary withSubtype(StudioComponentSubtypeEnum subtype) {
         this.subtype = subtype;
         return this;
@@ -70,6 +76,7 @@ public class StudioComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public StudioComponentTypeEnum type;
+
     public StudioComponentSummary withType(StudioComponentTypeEnum type) {
         this.type = type;
         return this;
@@ -80,6 +87,7 @@ public class StudioComponentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public StudioComponentSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -88,9 +96,11 @@ public class StudioComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedBy")
     public String updatedBy;
+
     public StudioComponentSummary withUpdatedBy(String updatedBy) {
         this.updatedBy = updatedBy;
         return this;
     }
     
+    public StudioComponentSummary(){}
 }

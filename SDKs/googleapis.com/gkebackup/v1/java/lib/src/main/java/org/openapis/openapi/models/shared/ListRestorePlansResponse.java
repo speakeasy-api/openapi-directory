@@ -18,6 +18,7 @@ public class ListRestorePlansResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListRestorePlansResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListRestorePlansResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restorePlans")
     public RestorePlan[] restorePlans;
+
     public ListRestorePlansResponse withRestorePlans(RestorePlan[] restorePlans) {
         this.restorePlans = restorePlans;
         return this;
@@ -40,9 +42,11 @@ public class ListRestorePlansResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListRestorePlansResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListRestorePlansResponse(){}
 }

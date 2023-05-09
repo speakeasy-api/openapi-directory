@@ -15,6 +15,7 @@ public class AccountQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountQuotaName")
     public String accountQuotaName;
+
     public AccountQuota withAccountQuotaName(String accountQuotaName) {
         this.accountQuotaName = accountQuotaName;
         return this;
@@ -23,6 +24,7 @@ public class AccountQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Max")
     public Long max;
+
     public AccountQuota withMax(Long max) {
         this.max = max;
         return this;
@@ -31,9 +33,11 @@ public class AccountQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Used")
     public Long used;
+
     public AccountQuota withUsed(Long used) {
         this.used = used;
         return this;
     }
     
+    public AccountQuota(){}
 }

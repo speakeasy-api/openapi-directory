@@ -22,6 +22,7 @@ public class PolicyGeneration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completedOn")
     public OffsetDateTime completedOn;
+
     public PolicyGeneration withCompletedOn(OffsetDateTime completedOn) {
         this.completedOn = completedOn;
         return this;
@@ -29,6 +30,7 @@ public class PolicyGeneration {
     
     @JsonProperty("jobId")
     public String jobId;
+
     public PolicyGeneration withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -36,6 +38,7 @@ public class PolicyGeneration {
     
     @JsonProperty("principalArn")
     public String principalArn;
+
     public PolicyGeneration withPrincipalArn(String principalArn) {
         this.principalArn = principalArn;
         return this;
@@ -45,6 +48,7 @@ public class PolicyGeneration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startedOn")
     public OffsetDateTime startedOn;
+
     public PolicyGeneration withStartedOn(OffsetDateTime startedOn) {
         this.startedOn = startedOn;
         return this;
@@ -52,9 +56,16 @@ public class PolicyGeneration {
     
     @JsonProperty("status")
     public JobStatusEnum status;
+
     public PolicyGeneration withStatus(JobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PolicyGeneration(@JsonProperty("jobId") String jobId, @JsonProperty("principalArn") String principalArn, @JsonProperty("startedOn") OffsetDateTime startedOn, @JsonProperty("status") JobStatusEnum status) {
+        this.jobId = jobId;
+        this.principalArn = principalArn;
+        this.startedOn = startedOn;
+        this.status = status;
+  }
 }

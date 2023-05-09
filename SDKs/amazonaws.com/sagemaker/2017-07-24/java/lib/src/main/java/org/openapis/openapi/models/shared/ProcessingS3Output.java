@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProcessingS3Output {
     @JsonProperty("LocalPath")
     public String localPath;
+
     public ProcessingS3Output withLocalPath(String localPath) {
         this.localPath = localPath;
         return this;
@@ -19,6 +20,7 @@ public class ProcessingS3Output {
     
     @JsonProperty("S3UploadMode")
     public ProcessingS3UploadModeEnum s3UploadMode;
+
     public ProcessingS3Output withS3UploadMode(ProcessingS3UploadModeEnum s3UploadMode) {
         this.s3UploadMode = s3UploadMode;
         return this;
@@ -26,9 +28,15 @@ public class ProcessingS3Output {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public ProcessingS3Output withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public ProcessingS3Output(@JsonProperty("LocalPath") String localPath, @JsonProperty("S3UploadMode") ProcessingS3UploadModeEnum s3UploadMode, @JsonProperty("S3Uri") String s3Uri) {
+        this.localPath = localPath;
+        this.s3UploadMode = s3UploadMode;
+        this.s3Uri = s3Uri;
+  }
 }

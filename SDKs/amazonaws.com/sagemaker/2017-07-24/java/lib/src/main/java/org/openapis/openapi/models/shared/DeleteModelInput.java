@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteModelInput {
     @JsonProperty("ModelName")
     public String modelName;
+
     public DeleteModelInput withModelName(String modelName) {
         this.modelName = modelName;
         return this;
     }
     
+    public DeleteModelInput(@JsonProperty("ModelName") String modelName) {
+        this.modelName = modelName;
+  }
 }

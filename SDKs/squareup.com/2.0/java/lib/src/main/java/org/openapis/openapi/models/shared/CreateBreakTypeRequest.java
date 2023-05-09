@@ -18,6 +18,7 @@ public class CreateBreakTypeRequest {
      */
     @JsonProperty("break_type")
     public BreakType breakType;
+
     public CreateBreakTypeRequest withBreakType(BreakType breakType) {
         this.breakType = breakType;
         return this;
@@ -29,9 +30,13 @@ public class CreateBreakTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CreateBreakTypeRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
     }
     
+    public CreateBreakTypeRequest(@JsonProperty("break_type") BreakType breakType) {
+        this.breakType = breakType;
+  }
 }

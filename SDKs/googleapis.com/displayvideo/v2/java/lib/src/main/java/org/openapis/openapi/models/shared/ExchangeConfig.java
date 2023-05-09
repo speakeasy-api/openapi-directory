@@ -18,9 +18,11 @@ public class ExchangeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabledExchanges")
     public ExchangeConfigEnabledExchange[] enabledExchanges;
+
     public ExchangeConfig withEnabledExchanges(ExchangeConfigEnabledExchange[] enabledExchanges) {
         this.enabledExchanges = enabledExchanges;
         return this;
     }
     
+    public ExchangeConfig(){}
 }

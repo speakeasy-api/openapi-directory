@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchHpoEntitiesRequest {
@@ -12,6 +13,7 @@ public class GetSearchHpoEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=anatomical_system")
     public String anatomicalSystem;
+
     public GetSearchHpoEntitiesRequest withAnatomicalSystem(String anatomicalSystem) {
         this.anatomicalSystem = anatomicalSystem;
         return this;
@@ -22,6 +24,7 @@ public class GetSearchHpoEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=anatomical_system_label")
     public String anatomicalSystemLabel;
+
     public GetSearchHpoEntitiesRequest withAnatomicalSystemLabel(String anatomicalSystemLabel) {
         this.anatomicalSystemLabel = anatomicalSystemLabel;
         return this;
@@ -32,6 +35,7 @@ public class GetSearchHpoEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=highlight_class")
     public String highlightClass;
+
     public GetSearchHpoEntitiesRequest withHighlightClass(String highlightClass) {
         this.highlightClass = highlightClass;
         return this;
@@ -42,6 +46,7 @@ public class GetSearchHpoEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=phenotype_group")
     public String phenotypeGroup;
+
     public GetSearchHpoEntitiesRequest withPhenotypeGroup(String phenotypeGroup) {
         this.phenotypeGroup = phenotypeGroup;
         return this;
@@ -52,6 +57,7 @@ public class GetSearchHpoEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=phenotype_group_label")
     public String phenotypeGroupLabel;
+
     public GetSearchHpoEntitiesRequest withPhenotypeGroupLabel(String phenotypeGroupLabel) {
         this.phenotypeGroupLabel = phenotypeGroupLabel;
         return this;
@@ -62,6 +68,7 @@ public class GetSearchHpoEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
     public Long rows;
+
     public GetSearchHpoEntitiesRequest withRows(Long rows) {
         this.rows = rows;
         return this;
@@ -72,6 +79,7 @@ public class GetSearchHpoEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public String start;
+
     public GetSearchHpoEntitiesRequest withStart(String start) {
         this.start = start;
         return this;
@@ -82,9 +90,13 @@ public class GetSearchHpoEntitiesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=term")
     public String term;
+
     public GetSearchHpoEntitiesRequest withTerm(String term) {
         this.term = term;
         return this;
     }
     
+    public GetSearchHpoEntitiesRequest(@JsonProperty("term") String term) {
+        this.term = term;
+  }
 }

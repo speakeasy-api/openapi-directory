@@ -15,6 +15,7 @@ public class CompositeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logicOperator")
     public CompositeFilterLogicOperatorEnum logicOperator;
+
     public CompositeFilter withLogicOperator(CompositeFilterLogicOperatorEnum logicOperator) {
         this.logicOperator = logicOperator;
         return this;
@@ -26,9 +27,11 @@ public class CompositeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subFilters")
     public Filter[] subFilters;
+
     public CompositeFilter withSubFilters(Filter[] subFilters) {
         this.subFilters = subFilters;
         return this;
     }
     
+    public CompositeFilter(){}
 }

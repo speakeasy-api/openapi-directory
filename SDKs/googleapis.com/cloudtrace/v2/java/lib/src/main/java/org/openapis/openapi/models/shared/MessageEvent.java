@@ -18,6 +18,7 @@ public class MessageEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compressedSizeBytes")
     public String compressedSizeBytes;
+
     public MessageEvent withCompressedSizeBytes(String compressedSizeBytes) {
         this.compressedSizeBytes = compressedSizeBytes;
         return this;
@@ -29,6 +30,7 @@ public class MessageEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public MessageEvent withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class MessageEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public MessageEventTypeEnum type;
+
     public MessageEvent withType(MessageEventTypeEnum type) {
         this.type = type;
         return this;
@@ -51,9 +54,11 @@ public class MessageEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uncompressedSizeBytes")
     public String uncompressedSizeBytes;
+
     public MessageEvent withUncompressedSizeBytes(String uncompressedSizeBytes) {
         this.uncompressedSizeBytes = uncompressedSizeBytes;
         return this;
     }
     
+    public MessageEvent(){}
 }

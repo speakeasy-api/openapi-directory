@@ -15,6 +15,7 @@ public class BankAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountIdentification")
     public Object accountIdentification;
+
     public BankAccountInfo withAccountIdentification(Object accountIdentification) {
         this.accountIdentification = accountIdentification;
         return this;
@@ -26,6 +27,7 @@ public class BankAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountType")
     public String accountType;
+
     public BankAccountInfo withAccountType(String accountType) {
         this.accountType = accountType;
         return this;
@@ -37,9 +39,11 @@ public class BankAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public BankAccountInfo withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
     }
     
+    public BankAccountInfo(){}
 }

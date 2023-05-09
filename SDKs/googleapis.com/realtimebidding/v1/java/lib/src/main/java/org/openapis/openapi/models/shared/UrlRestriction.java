@@ -18,6 +18,7 @@ public class UrlRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public Date endDate;
+
     public UrlRestriction withEndDate(Date endDate) {
         this.endDate = endDate;
         return this;
@@ -29,6 +30,7 @@ public class UrlRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictionType")
     public UrlRestrictionRestrictionTypeEnum restrictionType;
+
     public UrlRestriction withRestrictionType(UrlRestrictionRestrictionTypeEnum restrictionType) {
         this.restrictionType = restrictionType;
         return this;
@@ -40,6 +42,7 @@ public class UrlRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public Date startDate;
+
     public UrlRestriction withStartDate(Date startDate) {
         this.startDate = startDate;
         return this;
@@ -51,9 +54,11 @@ public class UrlRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public UrlRestriction withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public UrlRestriction(){}
 }

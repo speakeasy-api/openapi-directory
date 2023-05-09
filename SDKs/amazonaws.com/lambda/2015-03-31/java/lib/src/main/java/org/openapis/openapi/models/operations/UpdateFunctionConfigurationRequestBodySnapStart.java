@@ -15,9 +15,11 @@ public class UpdateFunctionConfigurationRequestBodySnapStart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplyOn")
     public org.openapis.openapi.models.shared.SnapStartApplyOnEnum applyOn;
+
     public UpdateFunctionConfigurationRequestBodySnapStart withApplyOn(org.openapis.openapi.models.shared.SnapStartApplyOnEnum applyOn) {
         this.applyOn = applyOn;
         return this;
     }
     
+    public UpdateFunctionConfigurationRequestBodySnapStart(){}
 }

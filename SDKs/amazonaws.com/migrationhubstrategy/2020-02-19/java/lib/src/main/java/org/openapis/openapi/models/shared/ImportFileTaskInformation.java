@@ -22,6 +22,7 @@ public class ImportFileTaskInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completionTime")
     public OffsetDateTime completionTime;
+
     public ImportFileTaskInformation withCompletionTime(OffsetDateTime completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -30,6 +31,7 @@ public class ImportFileTaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ImportFileTaskInformation withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +40,7 @@ public class ImportFileTaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importName")
     public String importName;
+
     public ImportFileTaskInformation withImportName(String importName) {
         this.importName = importName;
         return this;
@@ -46,6 +49,7 @@ public class ImportFileTaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputS3Bucket")
     public String inputS3Bucket;
+
     public ImportFileTaskInformation withInputS3Bucket(String inputS3Bucket) {
         this.inputS3Bucket = inputS3Bucket;
         return this;
@@ -54,6 +58,7 @@ public class ImportFileTaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputS3Key")
     public String inputS3Key;
+
     public ImportFileTaskInformation withInputS3Key(String inputS3Key) {
         this.inputS3Key = inputS3Key;
         return this;
@@ -62,6 +67,7 @@ public class ImportFileTaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfRecordsFailed")
     public Long numberOfRecordsFailed;
+
     public ImportFileTaskInformation withNumberOfRecordsFailed(Long numberOfRecordsFailed) {
         this.numberOfRecordsFailed = numberOfRecordsFailed;
         return this;
@@ -70,6 +76,7 @@ public class ImportFileTaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfRecordsSuccess")
     public Long numberOfRecordsSuccess;
+
     public ImportFileTaskInformation withNumberOfRecordsSuccess(Long numberOfRecordsSuccess) {
         this.numberOfRecordsSuccess = numberOfRecordsSuccess;
         return this;
@@ -80,6 +87,7 @@ public class ImportFileTaskInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public ImportFileTaskInformation withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -88,6 +96,7 @@ public class ImportFileTaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ImportFileTaskStatusEnum status;
+
     public ImportFileTaskInformation withStatus(ImportFileTaskStatusEnum status) {
         this.status = status;
         return this;
@@ -96,6 +105,7 @@ public class ImportFileTaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReportS3Bucket")
     public String statusReportS3Bucket;
+
     public ImportFileTaskInformation withStatusReportS3Bucket(String statusReportS3Bucket) {
         this.statusReportS3Bucket = statusReportS3Bucket;
         return this;
@@ -104,9 +114,11 @@ public class ImportFileTaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReportS3Key")
     public String statusReportS3Key;
+
     public ImportFileTaskInformation withStatusReportS3Key(String statusReportS3Key) {
         this.statusReportS3Key = statusReportS3Key;
         return this;
     }
     
+    public ImportFileTaskInformation(){}
 }

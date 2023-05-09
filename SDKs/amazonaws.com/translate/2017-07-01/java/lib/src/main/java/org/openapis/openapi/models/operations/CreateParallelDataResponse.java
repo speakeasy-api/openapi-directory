@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateParallelDataResponse {
@@ -12,6 +13,7 @@ public class CreateParallelDataResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateParallelDataResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -22,6 +24,7 @@ public class CreateParallelDataResponse {
      */
     
     public Object conflictException;
+
     public CreateParallelDataResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateParallelDataResponse {
     
     
     public String contentType;
+
     public CreateParallelDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateParallelDataResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateParallelDataResponse createParallelDataResponse;
+
     public CreateParallelDataResponse withCreateParallelDataResponse(org.openapis.openapi.models.shared.CreateParallelDataResponse createParallelDataResponse) {
         this.createParallelDataResponse = createParallelDataResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateParallelDataResponse {
      */
     
     public Object internalServerException;
+
     public CreateParallelDataResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateParallelDataResponse {
      */
     
     public Object invalidParameterValueException;
+
     public CreateParallelDataResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -69,6 +76,7 @@ public class CreateParallelDataResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateParallelDataResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -79,6 +87,7 @@ public class CreateParallelDataResponse {
      */
     
     public Object limitExceededException;
+
     public CreateParallelDataResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -86,6 +95,7 @@ public class CreateParallelDataResponse {
     
     
     public Integer statusCode;
+
     public CreateParallelDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateParallelDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateParallelDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class CreateParallelDataResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateParallelDataResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -113,9 +125,14 @@ public class CreateParallelDataResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateParallelDataResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public CreateParallelDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

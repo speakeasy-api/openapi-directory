@@ -18,8 +18,21 @@ public class As2PartnerEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("as2_station_id")
     public Integer as2StationId;
+
     public As2PartnerEntity withAs2StationId(Integer as2StationId) {
         this.as2StationId = as2StationId;
+        return this;
+    }
+    
+    /**
+     * `true` if remote server only accepts connections from dedicated IPs
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("enable_dedicated_ips")
+    public Boolean enableDedicatedIps;
+
+    public As2PartnerEntity withEnableDedicatedIps(Boolean enableDedicatedIps) {
+        this.enableDedicatedIps = enableDedicatedIps;
         return this;
     }
     
@@ -29,6 +42,7 @@ public class As2PartnerEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hex_public_certificate_serial")
     public String hexPublicCertificateSerial;
+
     public As2PartnerEntity withHexPublicCertificateSerial(String hexPublicCertificateSerial) {
         this.hexPublicCertificateSerial = hexPublicCertificateSerial;
         return this;
@@ -40,6 +54,7 @@ public class As2PartnerEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public As2PartnerEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -51,6 +66,7 @@ public class As2PartnerEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public As2PartnerEntity withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +78,7 @@ public class As2PartnerEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_certificate_issuer")
     public String publicCertificateIssuer;
+
     public As2PartnerEntity withPublicCertificateIssuer(String publicCertificateIssuer) {
         this.publicCertificateIssuer = publicCertificateIssuer;
         return this;
@@ -73,6 +90,7 @@ public class As2PartnerEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_certificate_md5")
     public String publicCertificateMd5;
+
     public As2PartnerEntity withPublicCertificateMd5(String publicCertificateMd5) {
         this.publicCertificateMd5 = publicCertificateMd5;
         return this;
@@ -84,6 +102,7 @@ public class As2PartnerEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_certificate_not_after")
     public String publicCertificateNotAfter;
+
     public As2PartnerEntity withPublicCertificateNotAfter(String publicCertificateNotAfter) {
         this.publicCertificateNotAfter = publicCertificateNotAfter;
         return this;
@@ -95,6 +114,7 @@ public class As2PartnerEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_certificate_not_before")
     public String publicCertificateNotBefore;
+
     public As2PartnerEntity withPublicCertificateNotBefore(String publicCertificateNotBefore) {
         this.publicCertificateNotBefore = publicCertificateNotBefore;
         return this;
@@ -106,6 +126,7 @@ public class As2PartnerEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_certificate_serial")
     public String publicCertificateSerial;
+
     public As2PartnerEntity withPublicCertificateSerial(String publicCertificateSerial) {
         this.publicCertificateSerial = publicCertificateSerial;
         return this;
@@ -117,6 +138,7 @@ public class As2PartnerEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_certificate_subject")
     public String publicCertificateSubject;
+
     public As2PartnerEntity withPublicCertificateSubject(String publicCertificateSubject) {
         this.publicCertificateSubject = publicCertificateSubject;
         return this;
@@ -128,6 +150,7 @@ public class As2PartnerEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server_certificate")
     public As2PartnerEntityServerCertificateEnum serverCertificate;
+
     public As2PartnerEntity withServerCertificate(As2PartnerEntityServerCertificateEnum serverCertificate) {
         this.serverCertificate = serverCertificate;
         return this;
@@ -139,9 +162,11 @@ public class As2PartnerEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public As2PartnerEntity withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public As2PartnerEntity(){}
 }

@@ -15,9 +15,11 @@ public class DeadLetterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public DeadLetterConfig withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DeadLetterConfig(){}
 }

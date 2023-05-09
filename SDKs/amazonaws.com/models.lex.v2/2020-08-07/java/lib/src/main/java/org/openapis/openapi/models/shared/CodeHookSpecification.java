@@ -15,9 +15,13 @@ public class CodeHookSpecification {
      */
     @JsonProperty("lambdaCodeHook")
     public LambdaCodeHook lambdaCodeHook;
+
     public CodeHookSpecification withLambdaCodeHook(LambdaCodeHook lambdaCodeHook) {
         this.lambdaCodeHook = lambdaCodeHook;
         return this;
     }
     
+    public CodeHookSpecification(@JsonProperty("lambdaCodeHook") LambdaCodeHook lambdaCodeHook) {
+        this.lambdaCodeHook = lambdaCodeHook;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateApplicationSnapshotResponse {
     
     public String contentType;
+
     public CreateApplicationSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateApplicationSnapshotResponse {
      */
     
     public java.util.Map<String, Object> createApplicationSnapshotResponse;
+
     public CreateApplicationSnapshotResponse withCreateApplicationSnapshotResponse(java.util.Map<String, Object> createApplicationSnapshotResponse) {
         this.createApplicationSnapshotResponse = createApplicationSnapshotResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateApplicationSnapshotResponse {
      */
     
     public Object invalidApplicationConfigurationException;
+
     public CreateApplicationSnapshotResponse withInvalidApplicationConfigurationException(Object invalidApplicationConfigurationException) {
         this.invalidApplicationConfigurationException = invalidApplicationConfigurationException;
         return this;
@@ -39,6 +43,7 @@ public class CreateApplicationSnapshotResponse {
      */
     
     public Object invalidArgumentException;
+
     public CreateApplicationSnapshotResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class CreateApplicationSnapshotResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateApplicationSnapshotResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class CreateApplicationSnapshotResponse {
      */
     
     public Object limitExceededException;
+
     public CreateApplicationSnapshotResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateApplicationSnapshotResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateApplicationSnapshotResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -76,6 +84,7 @@ public class CreateApplicationSnapshotResponse {
     
     
     public Integer statusCode;
+
     public CreateApplicationSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateApplicationSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateApplicationSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateApplicationSnapshotResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateApplicationSnapshotResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class CreateApplicationSnapshotResponse {
      */
     
     public Object unsupportedOperationException;
+
     public CreateApplicationSnapshotResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public CreateApplicationSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

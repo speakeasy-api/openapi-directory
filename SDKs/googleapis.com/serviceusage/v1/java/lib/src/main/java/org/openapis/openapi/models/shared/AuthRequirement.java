@@ -18,6 +18,7 @@ public class AuthRequirement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audiences")
     public String audiences;
+
     public AuthRequirement withAudiences(String audiences) {
         this.audiences = audiences;
         return this;
@@ -29,9 +30,11 @@ public class AuthRequirement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("providerId")
     public String providerId;
+
     public AuthRequirement withProviderId(String providerId) {
         this.providerId = providerId;
         return this;
     }
     
+    public AuthRequirement(){}
 }

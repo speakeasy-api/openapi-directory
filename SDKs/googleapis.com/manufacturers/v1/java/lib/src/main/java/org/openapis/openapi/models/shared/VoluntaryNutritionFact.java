@@ -18,6 +18,7 @@ public class VoluntaryNutritionFact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dailyPercentage")
     public Double dailyPercentage;
+
     public VoluntaryNutritionFact withDailyPercentage(Double dailyPercentage) {
         this.dailyPercentage = dailyPercentage;
         return this;
@@ -29,6 +30,7 @@ public class VoluntaryNutritionFact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public VoluntaryNutritionFact withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class VoluntaryNutritionFact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public FloatUnit value;
+
     public VoluntaryNutritionFact withValue(FloatUnit value) {
         this.value = value;
         return this;
     }
     
+    public VoluntaryNutritionFact(){}
 }

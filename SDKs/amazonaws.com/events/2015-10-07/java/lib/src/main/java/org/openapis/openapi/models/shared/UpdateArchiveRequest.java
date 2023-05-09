@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateArchiveRequest {
     @JsonProperty("ArchiveName")
     public String archiveName;
+
     public UpdateArchiveRequest withArchiveName(String archiveName) {
         this.archiveName = archiveName;
         return this;
@@ -19,6 +20,7 @@ public class UpdateArchiveRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateArchiveRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class UpdateArchiveRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventPattern")
     public String eventPattern;
+
     public UpdateArchiveRequest withEventPattern(String eventPattern) {
         this.eventPattern = eventPattern;
         return this;
@@ -35,9 +38,13 @@ public class UpdateArchiveRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetentionDays")
     public Long retentionDays;
+
     public UpdateArchiveRequest withRetentionDays(Long retentionDays) {
         this.retentionDays = retentionDays;
         return this;
     }
     
+    public UpdateArchiveRequest(@JsonProperty("ArchiveName") String archiveName) {
+        this.archiveName = archiveName;
+  }
 }

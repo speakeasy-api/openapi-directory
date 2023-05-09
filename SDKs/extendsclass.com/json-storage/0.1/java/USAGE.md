@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.DeleteBinIdRequest;
 import org.openapis.openapi.models.operations.DeleteBinIdResponse;
 
@@ -13,17 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteBinIdRequest req = new DeleteBinIdRequest() {{
-                id = "corrupti";
-            }}            
+            DeleteBinIdRequest req = new DeleteBinIdRequest("corrupti");            
 
             DeleteBinIdResponse res = sdk.deleteBinId(req);
 
-            if (res.deleteStatus.isPresent()) {
+            if (res.deleteStatus != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

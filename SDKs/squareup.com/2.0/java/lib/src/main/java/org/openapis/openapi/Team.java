@@ -63,11 +63,9 @@ public class Team {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BulkCreateTeamMembersResponse res = new org.openapis.openapi.models.operations.BulkCreateTeamMembersResponse() {{
+        org.openapis.openapi.models.operations.BulkCreateTeamMembersResponse res = new org.openapis.openapi.models.operations.BulkCreateTeamMembersResponse(contentType, httpRes.statusCode()) {{
             bulkCreateTeamMembersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -113,11 +111,9 @@ public class Team {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BulkUpdateTeamMembersResponse res = new org.openapis.openapi.models.operations.BulkUpdateTeamMembersResponse() {{
+        org.openapis.openapi.models.operations.BulkUpdateTeamMembersResponse res = new org.openapis.openapi.models.operations.BulkUpdateTeamMembersResponse(contentType, httpRes.statusCode()) {{
             bulkUpdateTeamMembersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -164,11 +160,9 @@ public class Team {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTeamMemberResponse res = new org.openapis.openapi.models.operations.CreateTeamMemberResponse() {{
+        org.openapis.openapi.models.operations.CreateTeamMemberResponse res = new org.openapis.openapi.models.operations.CreateTeamMemberResponse(contentType, httpRes.statusCode()) {{
             createTeamMemberResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -206,11 +200,9 @@ public class Team {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveTeamMemberResponse res = new org.openapis.openapi.models.operations.RetrieveTeamMemberResponse() {{
+        org.openapis.openapi.models.operations.RetrieveTeamMemberResponse res = new org.openapis.openapi.models.operations.RetrieveTeamMemberResponse(contentType, httpRes.statusCode()) {{
             retrieveTeamMemberResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +241,9 @@ public class Team {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveWageSettingResponse res = new org.openapis.openapi.models.operations.RetrieveWageSettingResponse() {{
+        org.openapis.openapi.models.operations.RetrieveWageSettingResponse res = new org.openapis.openapi.models.operations.RetrieveWageSettingResponse(contentType, httpRes.statusCode()) {{
             retrieveWageSettingResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,11 +288,9 @@ public class Team {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTeamMembersResponse res = new org.openapis.openapi.models.operations.SearchTeamMembersResponse() {{
+        org.openapis.openapi.models.operations.SearchTeamMembersResponse res = new org.openapis.openapi.models.operations.SearchTeamMembersResponse(contentType, httpRes.statusCode()) {{
             searchTeamMembersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -345,11 +333,9 @@ public class Team {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTeamMemberResponse res = new org.openapis.openapi.models.operations.UpdateTeamMemberResponse() {{
+        org.openapis.openapi.models.operations.UpdateTeamMemberResponse res = new org.openapis.openapi.models.operations.UpdateTeamMemberResponse(contentType, httpRes.statusCode()) {{
             updateTeamMemberResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -395,11 +381,9 @@ public class Team {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateWageSettingResponse res = new org.openapis.openapi.models.operations.UpdateWageSettingResponse() {{
+        org.openapis.openapi.models.operations.UpdateWageSettingResponse res = new org.openapis.openapi.models.operations.UpdateWageSettingResponse(contentType, httpRes.statusCode()) {{
             updateWageSettingResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

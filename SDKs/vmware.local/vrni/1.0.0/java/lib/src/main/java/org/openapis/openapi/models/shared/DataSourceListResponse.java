@@ -15,6 +15,7 @@ public class DataSourceListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public DataSourceEntityId[] results;
+
     public DataSourceListResponse withResults(DataSourceEntityId[] results) {
         this.results = results;
         return this;
@@ -23,9 +24,11 @@ public class DataSourceListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_count")
     public Long totalCount;
+
     public DataSourceListResponse withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public DataSourceListResponse(){}
 }

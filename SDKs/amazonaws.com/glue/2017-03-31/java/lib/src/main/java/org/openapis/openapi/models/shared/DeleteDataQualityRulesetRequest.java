@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteDataQualityRulesetRequest {
     @JsonProperty("Name")
     public String name;
+
     public DeleteDataQualityRulesetRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeleteDataQualityRulesetRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

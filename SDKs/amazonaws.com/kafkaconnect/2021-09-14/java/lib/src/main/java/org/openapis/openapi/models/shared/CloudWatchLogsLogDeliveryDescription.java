@@ -15,6 +15,7 @@ public class CloudWatchLogsLogDeliveryDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public CloudWatchLogsLogDeliveryDescription withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,9 +24,11 @@ public class CloudWatchLogsLogDeliveryDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroup")
     public String logGroup;
+
     public CloudWatchLogsLogDeliveryDescription withLogGroup(String logGroup) {
         this.logGroup = logGroup;
         return this;
     }
     
+    public CloudWatchLogsLogDeliveryDescription(){}
 }

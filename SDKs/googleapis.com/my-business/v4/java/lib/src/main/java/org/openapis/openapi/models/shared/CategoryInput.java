@@ -18,6 +18,7 @@ public class CategoryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryId")
     public String categoryId;
+
     public CategoryInput withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -29,9 +30,11 @@ public class CategoryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public CategoryInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public CategoryInput(){}
 }

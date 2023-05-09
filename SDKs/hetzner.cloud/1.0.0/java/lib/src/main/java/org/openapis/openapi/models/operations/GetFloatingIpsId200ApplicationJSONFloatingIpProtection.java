@@ -15,9 +15,13 @@ public class GetFloatingIpsId200ApplicationJSONFloatingIpProtection {
      */
     @JsonProperty("delete")
     public Boolean delete;
+
     public GetFloatingIpsId200ApplicationJSONFloatingIpProtection withDelete(Boolean delete) {
         this.delete = delete;
         return this;
     }
     
+    public GetFloatingIpsId200ApplicationJSONFloatingIpProtection(@JsonProperty("delete") Boolean delete) {
+        this.delete = delete;
+  }
 }

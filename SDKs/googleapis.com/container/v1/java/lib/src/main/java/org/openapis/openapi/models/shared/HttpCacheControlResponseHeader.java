@@ -18,6 +18,7 @@ public class HttpCacheControlResponseHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("age")
     public String age;
+
     public HttpCacheControlResponseHeader withAge(String age) {
         this.age = age;
         return this;
@@ -29,6 +30,7 @@ public class HttpCacheControlResponseHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directive")
     public String directive;
+
     public HttpCacheControlResponseHeader withDirective(String directive) {
         this.directive = directive;
         return this;
@@ -40,9 +42,11 @@ public class HttpCacheControlResponseHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires")
     public String expires;
+
     public HttpCacheControlResponseHeader withExpires(String expires) {
         this.expires = expires;
         return this;
     }
     
+    public HttpCacheControlResponseHeader(){}
 }

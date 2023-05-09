@@ -18,6 +18,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Namespace withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteTime")
     public String deleteTime;
+
     public Namespace withDeleteTime(String deleteTime) {
         this.deleteTime = deleteTime;
         return this;
@@ -40,6 +42,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Namespace withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public Namespace withScope(String scope) {
         this.scope = scope;
         return this;
@@ -62,6 +66,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public NamespaceLifecycleState state;
+
     public Namespace withState(NamespaceLifecycleState state) {
         this.state = state;
         return this;
@@ -73,6 +78,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public Namespace withUid(String uid) {
         this.uid = uid;
         return this;
@@ -84,9 +90,11 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Namespace withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Namespace(){}
 }

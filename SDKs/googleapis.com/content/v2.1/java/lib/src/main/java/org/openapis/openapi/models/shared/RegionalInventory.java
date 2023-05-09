@@ -18,6 +18,7 @@ public class RegionalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availability")
     public String availability;
+
     public RegionalInventory withAvailability(String availability) {
         this.availability = availability;
         return this;
@@ -29,6 +30,7 @@ public class RegionalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customAttributes")
     public CustomAttribute[] customAttributes;
+
     public RegionalInventory withCustomAttributes(CustomAttribute[] customAttributes) {
         this.customAttributes = customAttributes;
         return this;
@@ -40,6 +42,7 @@ public class RegionalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RegionalInventory withKind(String kind) {
         this.kind = kind;
         return this;
@@ -48,6 +51,7 @@ public class RegionalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Price price;
+
     public RegionalInventory withPrice(Price price) {
         this.price = price;
         return this;
@@ -59,6 +63,7 @@ public class RegionalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionId")
     public String regionId;
+
     public RegionalInventory withRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -67,6 +72,7 @@ public class RegionalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salePrice")
     public Price salePrice;
+
     public RegionalInventory withSalePrice(Price salePrice) {
         this.salePrice = salePrice;
         return this;
@@ -78,9 +84,11 @@ public class RegionalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salePriceEffectiveDate")
     public String salePriceEffectiveDate;
+
     public RegionalInventory withSalePriceEffectiveDate(String salePriceEffectiveDate) {
         this.salePriceEffectiveDate = salePriceEffectiveDate;
         return this;
     }
     
+    public RegionalInventory(){}
 }

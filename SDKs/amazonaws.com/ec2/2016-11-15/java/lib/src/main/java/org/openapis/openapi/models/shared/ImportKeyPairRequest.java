@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ImportKeyPairRequest {
     
     public Boolean dryRun;
+
     public ImportKeyPairRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class ImportKeyPairRequest {
     
     
     public String keyName;
+
     public ImportKeyPairRequest withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -23,6 +25,7 @@ public class ImportKeyPairRequest {
     
     
     public String publicKeyMaterial;
+
     public ImportKeyPairRequest withPublicKeyMaterial(String publicKeyMaterial) {
         this.publicKeyMaterial = publicKeyMaterial;
         return this;
@@ -30,9 +33,14 @@ public class ImportKeyPairRequest {
     
     
     public ImportKeyPairRequestTagSpecifications[] tagSpecifications;
+
     public ImportKeyPairRequest withTagSpecifications(ImportKeyPairRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public ImportKeyPairRequest(@JsonProperty("KeyName") String keyName, @JsonProperty("PublicKeyMaterial") String publicKeyMaterial) {
+        this.keyName = keyName;
+        this.publicKeyMaterial = publicKeyMaterial;
+  }
 }

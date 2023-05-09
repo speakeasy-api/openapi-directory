@@ -80,13 +80,11 @@ public class ClusterAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AsyncClusteringProblemResponse res = new org.openapis.openapi.models.operations.AsyncClusteringProblemResponse() {{
+        org.openapis.openapi.models.operations.AsyncClusteringProblemResponse res = new org.openapis.openapi.models.operations.AsyncClusteringProblemResponse(contentType, httpRes.statusCode()) {{
             jobId = null;
             badRequest = null;
             internalErrorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -140,13 +138,11 @@ public class ClusterAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetClusterSolutionResponse res = new org.openapis.openapi.models.operations.GetClusterSolutionResponse() {{
+        org.openapis.openapi.models.operations.GetClusterSolutionResponse res = new org.openapis.openapi.models.operations.GetClusterSolutionResponse(contentType, httpRes.statusCode()) {{
             clusterResponse = null;
             badRequest = null;
             getClusterSolution404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -210,13 +206,11 @@ public class ClusterAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SolveClusteringProblemResponse res = new org.openapis.openapi.models.operations.SolveClusteringProblemResponse() {{
+        org.openapis.openapi.models.operations.SolveClusteringProblemResponse res = new org.openapis.openapi.models.operations.SolveClusteringProblemResponse(contentType, httpRes.statusCode()) {{
             clusterResponse = null;
             badRequest = null;
             internalErrorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

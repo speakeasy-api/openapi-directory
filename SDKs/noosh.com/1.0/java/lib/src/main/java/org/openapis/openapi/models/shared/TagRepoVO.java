@@ -15,6 +15,7 @@ public class TagRepoVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSpec")
     public Boolean isSpec;
+
     public TagRepoVO withIsSpec(Boolean isSpec) {
         this.isSpec = isSpec;
         return this;
@@ -23,6 +24,7 @@ public class TagRepoVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagId")
     public Long tagId;
+
     public TagRepoVO withTagId(Long tagId) {
         this.tagId = tagId;
         return this;
@@ -31,9 +33,11 @@ public class TagRepoVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagName")
     public String tagName;
+
     public TagRepoVO withTagName(String tagName) {
         this.tagName = tagName;
         return this;
     }
     
+    public TagRepoVO(){}
 }

@@ -15,6 +15,7 @@ public class OBWriteDomesticStandingOrderResponse6DataInitiationFinalPaymentAmou
      */
     @JsonProperty("Amount")
     public String amount;
+
     public OBWriteDomesticStandingOrderResponse6DataInitiationFinalPaymentAmount withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -25,9 +26,14 @@ public class OBWriteDomesticStandingOrderResponse6DataInitiationFinalPaymentAmou
      */
     @JsonProperty("Currency")
     public String currency;
+
     public OBWriteDomesticStandingOrderResponse6DataInitiationFinalPaymentAmount withCurrency(String currency) {
         this.currency = currency;
         return this;
     }
     
+    public OBWriteDomesticStandingOrderResponse6DataInitiationFinalPaymentAmount(@JsonProperty("Amount") String amount, @JsonProperty("Currency") String currency) {
+        this.amount = amount;
+        this.currency = currency;
+  }
 }

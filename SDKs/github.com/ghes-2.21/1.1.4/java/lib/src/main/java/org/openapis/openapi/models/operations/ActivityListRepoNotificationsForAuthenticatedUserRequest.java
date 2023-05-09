@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class ActivityListRepoNotificationsForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
     public Boolean all;
+
     public ActivityListRepoNotificationsForAuthenticatedUserRequest withAll(Boolean all) {
         this.all = all;
         return this;
@@ -23,6 +25,7 @@ public class ActivityListRepoNotificationsForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
     public OffsetDateTime before;
+
     public ActivityListRepoNotificationsForAuthenticatedUserRequest withBefore(OffsetDateTime before) {
         this.before = before;
         return this;
@@ -30,6 +33,7 @@ public class ActivityListRepoNotificationsForAuthenticatedUserRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActivityListRepoNotificationsForAuthenticatedUserRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -40,6 +44,7 @@ public class ActivityListRepoNotificationsForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ActivityListRepoNotificationsForAuthenticatedUserRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -50,6 +55,7 @@ public class ActivityListRepoNotificationsForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=participating")
     public Boolean participating;
+
     public ActivityListRepoNotificationsForAuthenticatedUserRequest withParticipating(Boolean participating) {
         this.participating = participating;
         return this;
@@ -60,6 +66,7 @@ public class ActivityListRepoNotificationsForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ActivityListRepoNotificationsForAuthenticatedUserRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -67,6 +74,7 @@ public class ActivityListRepoNotificationsForAuthenticatedUserRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActivityListRepoNotificationsForAuthenticatedUserRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -77,9 +85,14 @@ public class ActivityListRepoNotificationsForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public OffsetDateTime since;
+
     public ActivityListRepoNotificationsForAuthenticatedUserRequest withSince(OffsetDateTime since) {
         this.since = since;
         return this;
     }
     
+    public ActivityListRepoNotificationsForAuthenticatedUserRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

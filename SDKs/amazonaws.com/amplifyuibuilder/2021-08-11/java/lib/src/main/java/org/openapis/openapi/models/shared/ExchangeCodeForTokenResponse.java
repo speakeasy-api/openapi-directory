@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExchangeCodeForTokenResponse {
     @JsonProperty("accessToken")
     public String accessToken;
+
     public ExchangeCodeForTokenResponse withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -19,6 +20,7 @@ public class ExchangeCodeForTokenResponse {
     
     @JsonProperty("expiresIn")
     public Long expiresIn;
+
     public ExchangeCodeForTokenResponse withExpiresIn(Long expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -26,9 +28,15 @@ public class ExchangeCodeForTokenResponse {
     
     @JsonProperty("refreshToken")
     public String refreshToken;
+
     public ExchangeCodeForTokenResponse withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
     }
     
+    public ExchangeCodeForTokenResponse(@JsonProperty("accessToken") String accessToken, @JsonProperty("expiresIn") Long expiresIn, @JsonProperty("refreshToken") String refreshToken) {
+        this.accessToken = accessToken;
+        this.expiresIn = expiresIn;
+        this.refreshToken = refreshToken;
+  }
 }

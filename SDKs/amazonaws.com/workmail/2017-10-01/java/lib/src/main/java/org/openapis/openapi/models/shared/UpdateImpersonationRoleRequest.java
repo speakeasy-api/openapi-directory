@@ -12,6 +12,7 @@ public class UpdateImpersonationRoleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateImpersonationRoleRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class UpdateImpersonationRoleRequest {
     
     @JsonProperty("ImpersonationRoleId")
     public String impersonationRoleId;
+
     public UpdateImpersonationRoleRequest withImpersonationRoleId(String impersonationRoleId) {
         this.impersonationRoleId = impersonationRoleId;
         return this;
@@ -26,6 +28,7 @@ public class UpdateImpersonationRoleRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateImpersonationRoleRequest withName(String name) {
         this.name = name;
         return this;
@@ -33,6 +36,7 @@ public class UpdateImpersonationRoleRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public UpdateImpersonationRoleRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -40,6 +44,7 @@ public class UpdateImpersonationRoleRequest {
     
     @JsonProperty("Rules")
     public ImpersonationRule[] rules;
+
     public UpdateImpersonationRoleRequest withRules(ImpersonationRule[] rules) {
         this.rules = rules;
         return this;
@@ -47,9 +52,17 @@ public class UpdateImpersonationRoleRequest {
     
     @JsonProperty("Type")
     public ImpersonationRoleTypeEnum type;
+
     public UpdateImpersonationRoleRequest withType(ImpersonationRoleTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UpdateImpersonationRoleRequest(@JsonProperty("ImpersonationRoleId") String impersonationRoleId, @JsonProperty("Name") String name, @JsonProperty("OrganizationId") String organizationId, @JsonProperty("Rules") ImpersonationRule[] rules, @JsonProperty("Type") ImpersonationRoleTypeEnum type) {
+        this.impersonationRoleId = impersonationRoleId;
+        this.name = name;
+        this.organizationId = organizationId;
+        this.rules = rules;
+        this.type = type;
+  }
 }

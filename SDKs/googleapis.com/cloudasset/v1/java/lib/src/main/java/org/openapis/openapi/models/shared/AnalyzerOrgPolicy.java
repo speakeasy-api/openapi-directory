@@ -18,6 +18,7 @@ public class AnalyzerOrgPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appliedResource")
     public String appliedResource;
+
     public AnalyzerOrgPolicy withAppliedResource(String appliedResource) {
         this.appliedResource = appliedResource;
         return this;
@@ -29,6 +30,7 @@ public class AnalyzerOrgPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachedResource")
     public String attachedResource;
+
     public AnalyzerOrgPolicy withAttachedResource(String attachedResource) {
         this.attachedResource = attachedResource;
         return this;
@@ -40,6 +42,7 @@ public class AnalyzerOrgPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inheritFromParent")
     public Boolean inheritFromParent;
+
     public AnalyzerOrgPolicy withInheritFromParent(Boolean inheritFromParent) {
         this.inheritFromParent = inheritFromParent;
         return this;
@@ -51,6 +54,7 @@ public class AnalyzerOrgPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reset")
     public Boolean reset;
+
     public AnalyzerOrgPolicy withReset(Boolean reset) {
         this.reset = reset;
         return this;
@@ -62,9 +66,11 @@ public class AnalyzerOrgPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public GoogleCloudAssetV1Rule[] rules;
+
     public AnalyzerOrgPolicy withRules(GoogleCloudAssetV1Rule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public AnalyzerOrgPolicy(){}
 }

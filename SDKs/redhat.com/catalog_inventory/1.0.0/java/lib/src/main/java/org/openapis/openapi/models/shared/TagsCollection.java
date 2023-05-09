@@ -15,6 +15,7 @@ public class TagsCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Tag[] data;
+
     public TagsCollection withData(Tag[] data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class TagsCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public CollectionLinks links;
+
     public TagsCollection withLinks(CollectionLinks links) {
         this.links = links;
         return this;
@@ -31,9 +33,11 @@ public class TagsCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public CollectionMetadata meta;
+
     public TagsCollection withMeta(CollectionMetadata meta) {
         this.meta = meta;
         return this;
     }
     
+    public TagsCollection(){}
 }

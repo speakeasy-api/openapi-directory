@@ -18,6 +18,7 @@ public class ContainerAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerId")
     public String containerId;
+
     public ContainerAccess withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -29,9 +30,11 @@ public class ContainerAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public ContainerAccessPermissionEnum permission;
+
     public ContainerAccess withPermission(ContainerAccessPermissionEnum permission) {
         this.permission = permission;
         return this;
     }
     
+    public ContainerAccess(){}
 }

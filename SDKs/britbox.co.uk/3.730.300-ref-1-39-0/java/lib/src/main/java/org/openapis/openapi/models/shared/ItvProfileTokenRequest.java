@@ -15,9 +15,13 @@ public class ItvProfileTokenRequest {
      */
     @JsonProperty("password")
     public String password;
+
     public ItvProfileTokenRequest withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public ItvProfileTokenRequest(@JsonProperty("password") String password) {
+        this.password = password;
+  }
 }

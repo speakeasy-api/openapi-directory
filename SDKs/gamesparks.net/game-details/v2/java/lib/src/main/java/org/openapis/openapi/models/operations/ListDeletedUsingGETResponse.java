@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDeletedUsingGETResponse {
     
     public String contentType;
+
     public ListDeletedUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDeletedUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.DeletedGameModel[] deletedGameModels;
+
     public ListDeletedUsingGETResponse withDeletedGameModels(org.openapis.openapi.models.shared.DeletedGameModel[] deletedGameModels) {
         this.deletedGameModels = deletedGameModels;
         return this;
@@ -29,6 +32,7 @@ public class ListDeletedUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.MessageModel messageModel;
+
     public ListDeletedUsingGETResponse withMessageModel(org.openapis.openapi.models.shared.MessageModel messageModel) {
         this.messageModel = messageModel;
         return this;
@@ -36,6 +40,7 @@ public class ListDeletedUsingGETResponse {
     
     
     public Integer statusCode;
+
     public ListDeletedUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListDeletedUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDeletedUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDeletedUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

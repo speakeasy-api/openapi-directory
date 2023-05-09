@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UpdateApplicationMessage - Request to update an application.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UpdateApplicationMessage {
     
     public String applicationName;
+
     public UpdateApplicationMessage withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,9 +20,13 @@ public class UpdateApplicationMessage {
     
     
     public String description;
+
     public UpdateApplicationMessage withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public UpdateApplicationMessage(@JsonProperty("ApplicationName") String applicationName) {
+        this.applicationName = applicationName;
+  }
 }

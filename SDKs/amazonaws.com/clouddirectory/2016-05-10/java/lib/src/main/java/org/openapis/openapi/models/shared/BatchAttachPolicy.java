@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchAttachPolicy {
     @JsonProperty("ObjectReference")
     public ObjectReference objectReference;
+
     public BatchAttachPolicy withObjectReference(ObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
@@ -19,9 +20,14 @@ public class BatchAttachPolicy {
     
     @JsonProperty("PolicyReference")
     public ObjectReference policyReference;
+
     public BatchAttachPolicy withPolicyReference(ObjectReference policyReference) {
         this.policyReference = policyReference;
         return this;
     }
     
+    public BatchAttachPolicy(@JsonProperty("ObjectReference") ObjectReference objectReference, @JsonProperty("PolicyReference") ObjectReference policyReference) {
+        this.objectReference = objectReference;
+        this.policyReference = policyReference;
+  }
 }

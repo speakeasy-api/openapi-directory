@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automatedAgentConfig")
     public GoogleCloudDialogflowV2beta1AutomatedAgentConfig automatedAgentConfig;
+
     public GoogleCloudDialogflowV2beta1ConversationProfile withAutomatedAgentConfig(GoogleCloudDialogflowV2beta1AutomatedAgentConfig automatedAgentConfig) {
         this.automatedAgentConfig = automatedAgentConfig;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDialogflowV2beta1ConversationProfile withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowV2beta1ConversationProfile withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("humanAgentAssistantConfig")
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfig humanAgentAssistantConfig;
+
     public GoogleCloudDialogflowV2beta1ConversationProfile withHumanAgentAssistantConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfig humanAgentAssistantConfig) {
         this.humanAgentAssistantConfig = humanAgentAssistantConfig;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2beta1ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("humanAgentHandoffConfig")
     public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfig humanAgentHandoffConfig;
+
     public GoogleCloudDialogflowV2beta1ConversationProfile withHumanAgentHandoffConfig(GoogleCloudDialogflowV2beta1HumanAgentHandoffConfig humanAgentHandoffConfig) {
         this.humanAgentHandoffConfig = humanAgentHandoffConfig;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowV2beta1ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDialogflowV2beta1ConversationProfile withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDialogflowV2beta1ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingConfig")
     public GoogleCloudDialogflowV2beta1LoggingConfig loggingConfig;
+
     public GoogleCloudDialogflowV2beta1ConversationProfile withLoggingConfig(GoogleCloudDialogflowV2beta1LoggingConfig loggingConfig) {
         this.loggingConfig = loggingConfig;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDialogflowV2beta1ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2beta1ConversationProfile withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDialogflowV2beta1ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newMessageEventNotificationConfig")
     public GoogleCloudDialogflowV2beta1NotificationConfig newMessageEventNotificationConfig;
+
     public GoogleCloudDialogflowV2beta1ConversationProfile withNewMessageEventNotificationConfig(GoogleCloudDialogflowV2beta1NotificationConfig newMessageEventNotificationConfig) {
         this.newMessageEventNotificationConfig = newMessageEventNotificationConfig;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDialogflowV2beta1ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationConfig")
     public GoogleCloudDialogflowV2beta1NotificationConfig notificationConfig;
+
     public GoogleCloudDialogflowV2beta1ConversationProfile withNotificationConfig(GoogleCloudDialogflowV2beta1NotificationConfig notificationConfig) {
         this.notificationConfig = notificationConfig;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDialogflowV2beta1ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securitySettings")
     public String securitySettings;
+
     public GoogleCloudDialogflowV2beta1ConversationProfile withSecuritySettings(String securitySettings) {
         this.securitySettings = securitySettings;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudDialogflowV2beta1ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sttConfig")
     public GoogleCloudDialogflowV2beta1SpeechToTextConfig sttConfig;
+
     public GoogleCloudDialogflowV2beta1ConversationProfile withSttConfig(GoogleCloudDialogflowV2beta1SpeechToTextConfig sttConfig) {
         this.sttConfig = sttConfig;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudDialogflowV2beta1ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public GoogleCloudDialogflowV2beta1ConversationProfile withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudDialogflowV2beta1ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttsConfig")
     public GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig ttsConfig;
+
     public GoogleCloudDialogflowV2beta1ConversationProfile withTtsConfig(GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig ttsConfig) {
         this.ttsConfig = ttsConfig;
         return this;
@@ -172,9 +186,11 @@ public class GoogleCloudDialogflowV2beta1ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDialogflowV2beta1ConversationProfile withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1ConversationProfile(){}
 }

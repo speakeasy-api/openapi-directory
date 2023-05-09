@@ -12,6 +12,7 @@ public class SetRecoveryCredentialRequestBodyCredentialsRecoveryQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answer")
     public String answer;
+
     public SetRecoveryCredentialRequestBodyCredentialsRecoveryQuestion withAnswer(String answer) {
         this.answer = answer;
         return this;
@@ -20,9 +21,11 @@ public class SetRecoveryCredentialRequestBodyCredentialsRecoveryQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("question")
     public String question;
+
     public SetRecoveryCredentialRequestBodyCredentialsRecoveryQuestion withQuestion(String question) {
         this.question = question;
         return this;
     }
     
+    public SetRecoveryCredentialRequestBodyCredentialsRecoveryQuestion(){}
 }

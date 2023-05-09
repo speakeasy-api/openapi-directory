@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateHITReviewStatusRequest {
     @JsonProperty("HITId")
     public String hitId;
+
     public UpdateHITReviewStatusRequest withHITId(String hitId) {
         this.hitId = hitId;
         return this;
@@ -19,9 +20,13 @@ public class UpdateHITReviewStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Revert")
     public Boolean revert;
+
     public UpdateHITReviewStatusRequest withRevert(Boolean revert) {
         this.revert = revert;
         return this;
     }
     
+    public UpdateHITReviewStatusRequest(@JsonProperty("HITId") String hitId) {
+        this.hitId = hitId;
+  }
 }

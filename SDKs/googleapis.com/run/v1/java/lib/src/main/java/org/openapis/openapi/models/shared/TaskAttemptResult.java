@@ -18,6 +18,7 @@ public class TaskAttemptResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exitCode")
     public Integer exitCode;
+
     public TaskAttemptResult withExitCode(Integer exitCode) {
         this.exitCode = exitCode;
         return this;
@@ -29,9 +30,11 @@ public class TaskAttemptResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GoogleRpcStatus status;
+
     public TaskAttemptResult withStatus(GoogleRpcStatus status) {
         this.status = status;
         return this;
     }
     
+    public TaskAttemptResult(){}
 }

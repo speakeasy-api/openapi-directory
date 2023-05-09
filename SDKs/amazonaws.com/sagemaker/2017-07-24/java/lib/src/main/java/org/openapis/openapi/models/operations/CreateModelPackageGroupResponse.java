@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateModelPackageGroupResponse {
     
     public String contentType;
+
     public CreateModelPackageGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateModelPackageGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateModelPackageGroupOutput createModelPackageGroupOutput;
+
     public CreateModelPackageGroupResponse withCreateModelPackageGroupOutput(org.openapis.openapi.models.shared.CreateModelPackageGroupOutput createModelPackageGroupOutput) {
         this.createModelPackageGroupOutput = createModelPackageGroupOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateModelPackageGroupResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateModelPackageGroupResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -36,6 +40,7 @@ public class CreateModelPackageGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateModelPackageGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateModelPackageGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateModelPackageGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateModelPackageGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

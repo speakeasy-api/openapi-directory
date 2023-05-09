@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetUsersIdUserCategoriesFull200ApplicationJSON {
     @JsonProperty("categorys")
     public org.openapis.openapi.models.shared.Category[] categorys;
+
     public GetUsersIdUserCategoriesFull200ApplicationJSON withCategorys(org.openapis.openapi.models.shared.Category[] categorys) {
         this.categorys = categorys;
         return this;
@@ -25,9 +26,13 @@ public class GetUsersIdUserCategoriesFull200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public GetUsersIdUserCategoriesFull200ApplicationJSON withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public GetUsersIdUserCategoriesFull200ApplicationJSON(@JsonProperty("categorys") org.openapis.openapi.models.shared.Category[] categorys) {
+        this.categorys = categorys;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Template - The content of the email, composed of a subject line, an HTML part, and a text-only part.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Template {
     
     public String htmlPart;
+
     public Template withHtmlPart(String htmlPart) {
         this.htmlPart = htmlPart;
         return this;
@@ -19,6 +20,7 @@ public class Template {
     
     
     public String subjectPart;
+
     public Template withSubjectPart(String subjectPart) {
         this.subjectPart = subjectPart;
         return this;
@@ -26,6 +28,7 @@ public class Template {
     
     
     public String templateName;
+
     public Template withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -33,9 +36,13 @@ public class Template {
     
     
     public String textPart;
+
     public Template withTextPart(String textPart) {
         this.textPart = textPart;
         return this;
     }
     
+    public Template(@JsonProperty("TemplateName") String templateName) {
+        this.templateName = templateName;
+  }
 }

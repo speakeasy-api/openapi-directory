@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlaylistsIdRequest {
@@ -12,6 +13,7 @@ public class GetPlaylistsIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String[] expand;
+
     public GetPlaylistsIdRequest withExpand(String[] expand) {
         this.expand = expand;
         return this;
@@ -22,6 +24,7 @@ public class GetPlaylistsIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String[] fields;
+
     public GetPlaylistsIdRequest withFields(String[] fields) {
         this.fields = fields;
         return this;
@@ -29,9 +32,13 @@ public class GetPlaylistsIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetPlaylistsIdRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public GetPlaylistsIdRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

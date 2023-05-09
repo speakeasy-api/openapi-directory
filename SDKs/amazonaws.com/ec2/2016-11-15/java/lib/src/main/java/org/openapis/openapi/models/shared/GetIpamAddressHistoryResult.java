@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetIpamAddressHistoryResult {
     
     public GetIpamAddressHistoryResultHistoryRecords[] historyRecords;
+
     public GetIpamAddressHistoryResult withHistoryRecords(GetIpamAddressHistoryResultHistoryRecords[] historyRecords) {
         this.historyRecords = historyRecords;
         return this;
@@ -19,9 +20,11 @@ public class GetIpamAddressHistoryResult {
     
     
     public String nextToken;
+
     public GetIpamAddressHistoryResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetIpamAddressHistoryResult(){}
 }

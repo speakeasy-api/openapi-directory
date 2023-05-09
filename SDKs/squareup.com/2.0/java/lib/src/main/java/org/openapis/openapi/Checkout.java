@@ -60,11 +60,9 @@ public class Checkout {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCheckoutResponse res = new org.openapis.openapi.models.operations.CreateCheckoutResponse() {{
+        org.openapis.openapi.models.operations.CreateCheckoutResponse res = new org.openapis.openapi.models.operations.CreateCheckoutResponse(contentType, httpRes.statusCode()) {{
             createCheckoutResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

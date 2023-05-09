@@ -18,6 +18,7 @@ public class GoogleIamV1SetIamPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public GoogleIamV1Policy policy;
+
     public GoogleIamV1SetIamPolicyRequest withPolicy(GoogleIamV1Policy policy) {
         this.policy = policy;
         return this;
@@ -29,9 +30,11 @@ public class GoogleIamV1SetIamPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public GoogleIamV1SetIamPolicyRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public GoogleIamV1SetIamPolicyRequest(){}
 }

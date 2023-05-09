@@ -18,6 +18,7 @@ public class EnvVarSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configMapKeyRef")
     public ConfigMapKeySelector configMapKeyRef;
+
     public EnvVarSource withConfigMapKeyRef(ConfigMapKeySelector configMapKeyRef) {
         this.configMapKeyRef = configMapKeyRef;
         return this;
@@ -29,9 +30,11 @@ public class EnvVarSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretKeyRef")
     public SecretKeySelector secretKeyRef;
+
     public EnvVarSource withSecretKeyRef(SecretKeySelector secretKeyRef) {
         this.secretKeyRef = secretKeyRef;
         return this;
     }
     
+    public EnvVarSource(){}
 }

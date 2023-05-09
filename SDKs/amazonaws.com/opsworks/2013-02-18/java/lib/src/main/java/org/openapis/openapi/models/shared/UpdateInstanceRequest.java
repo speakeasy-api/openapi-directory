@@ -12,6 +12,7 @@ public class UpdateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentVersion")
     public String agentVersion;
+
     public UpdateInstanceRequest withAgentVersion(String agentVersion) {
         this.agentVersion = agentVersion;
         return this;
@@ -20,6 +21,7 @@ public class UpdateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmiId")
     public String amiId;
+
     public UpdateInstanceRequest withAmiId(String amiId) {
         this.amiId = amiId;
         return this;
@@ -28,6 +30,7 @@ public class UpdateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Architecture")
     public ArchitectureEnum architecture;
+
     public UpdateInstanceRequest withArchitecture(ArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -36,6 +39,7 @@ public class UpdateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingType")
     public AutoScalingTypeEnum autoScalingType;
+
     public UpdateInstanceRequest withAutoScalingType(AutoScalingTypeEnum autoScalingType) {
         this.autoScalingType = autoScalingType;
         return this;
@@ -44,6 +48,7 @@ public class UpdateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsOptimized")
     public Boolean ebsOptimized;
+
     public UpdateInstanceRequest withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -52,6 +57,7 @@ public class UpdateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hostname")
     public String hostname;
+
     public UpdateInstanceRequest withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -60,6 +66,7 @@ public class UpdateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstallUpdatesOnBoot")
     public Boolean installUpdatesOnBoot;
+
     public UpdateInstanceRequest withInstallUpdatesOnBoot(Boolean installUpdatesOnBoot) {
         this.installUpdatesOnBoot = installUpdatesOnBoot;
         return this;
@@ -67,6 +74,7 @@ public class UpdateInstanceRequest {
     
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public UpdateInstanceRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -75,6 +83,7 @@ public class UpdateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public UpdateInstanceRequest withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -83,6 +92,7 @@ public class UpdateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LayerIds")
     public String[] layerIds;
+
     public UpdateInstanceRequest withLayerIds(String[] layerIds) {
         this.layerIds = layerIds;
         return this;
@@ -91,6 +101,7 @@ public class UpdateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Os")
     public String os;
+
     public UpdateInstanceRequest withOs(String os) {
         this.os = os;
         return this;
@@ -99,9 +110,13 @@ public class UpdateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SshKeyName")
     public String sshKeyName;
+
     public UpdateInstanceRequest withSshKeyName(String sshKeyName) {
         this.sshKeyName = sshKeyName;
         return this;
     }
     
+    public UpdateInstanceRequest(@JsonProperty("InstanceId") String instanceId) {
+        this.instanceId = instanceId;
+  }
 }

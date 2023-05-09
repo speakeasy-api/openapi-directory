@@ -18,9 +18,11 @@ public class FailedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FailedLocation withName(String name) {
         this.name = name;
         return this;
     }
     
+    public FailedLocation(){}
 }

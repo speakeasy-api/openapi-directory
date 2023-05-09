@@ -18,9 +18,11 @@ public class ReviewAuthor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ReviewAuthor withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public ReviewAuthor(){}
 }

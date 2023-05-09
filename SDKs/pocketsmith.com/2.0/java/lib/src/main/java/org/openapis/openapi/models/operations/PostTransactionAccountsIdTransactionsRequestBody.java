@@ -14,6 +14,7 @@ public class PostTransactionAccountsIdTransactionsRequestBody {
      */
     @JsonProperty("amount")
     public Double amount;
+
     public PostTransactionAccountsIdTransactionsRequestBody withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -25,6 +26,7 @@ public class PostTransactionAccountsIdTransactionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_id")
     public Long categoryId;
+
     public PostTransactionAccountsIdTransactionsRequestBody withCategoryId(Long categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -36,6 +38,7 @@ public class PostTransactionAccountsIdTransactionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cheque_number")
     public String chequeNumber;
+
     public PostTransactionAccountsIdTransactionsRequestBody withChequeNumber(String chequeNumber) {
         this.chequeNumber = chequeNumber;
         return this;
@@ -46,6 +49,7 @@ public class PostTransactionAccountsIdTransactionsRequestBody {
      */
     @JsonProperty("date")
     public String date;
+
     public PostTransactionAccountsIdTransactionsRequestBody withDate(String date) {
         this.date = date;
         return this;
@@ -57,6 +61,7 @@ public class PostTransactionAccountsIdTransactionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_transfer")
     public Boolean isTransfer;
+
     public PostTransactionAccountsIdTransactionsRequestBody withIsTransfer(Boolean isTransfer) {
         this.isTransfer = isTransfer;
         return this;
@@ -68,6 +73,7 @@ public class PostTransactionAccountsIdTransactionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String labels;
+
     public PostTransactionAccountsIdTransactionsRequestBody withLabels(String labels) {
         this.labels = labels;
         return this;
@@ -79,6 +85,7 @@ public class PostTransactionAccountsIdTransactionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo")
     public String memo;
+
     public PostTransactionAccountsIdTransactionsRequestBody withMemo(String memo) {
         this.memo = memo;
         return this;
@@ -90,6 +97,7 @@ public class PostTransactionAccountsIdTransactionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("needs_review")
     public Boolean needsReview;
+
     public PostTransactionAccountsIdTransactionsRequestBody withNeedsReview(Boolean needsReview) {
         this.needsReview = needsReview;
         return this;
@@ -101,6 +109,7 @@ public class PostTransactionAccountsIdTransactionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public PostTransactionAccountsIdTransactionsRequestBody withNote(String note) {
         this.note = note;
         return this;
@@ -111,9 +120,15 @@ public class PostTransactionAccountsIdTransactionsRequestBody {
      */
     @JsonProperty("payee")
     public String payee;
+
     public PostTransactionAccountsIdTransactionsRequestBody withPayee(String payee) {
         this.payee = payee;
         return this;
     }
     
+    public PostTransactionAccountsIdTransactionsRequestBody(@JsonProperty("amount") Double amount, @JsonProperty("date") String date, @JsonProperty("payee") String payee) {
+        this.amount = amount;
+        this.date = date;
+        this.payee = payee;
+  }
 }

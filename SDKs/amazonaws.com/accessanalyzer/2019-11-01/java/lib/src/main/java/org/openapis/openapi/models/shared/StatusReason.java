@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StatusReason {
     @JsonProperty("code")
     public ReasonCodeEnum code;
+
     public StatusReason withCode(ReasonCodeEnum code) {
         this.code = code;
         return this;
     }
     
+    public StatusReason(@JsonProperty("code") ReasonCodeEnum code) {
+        this.code = code;
+  }
 }

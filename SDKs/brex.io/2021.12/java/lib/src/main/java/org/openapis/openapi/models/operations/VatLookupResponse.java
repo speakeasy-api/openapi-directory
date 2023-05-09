@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VatLookupResponse {
     
     public String contentType;
+
     public VatLookupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class VatLookupResponse {
     
     
     public Integer statusCode;
+
     public VatLookupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class VatLookupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VatLookupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class VatLookupResponse {
      */
     
     public VatLookup200ApplicationJSON vatLookup200ApplicationJSONObject;
+
     public VatLookupResponse withVatLookup200ApplicationJSONObject(VatLookup200ApplicationJSON vatLookup200ApplicationJSONObject) {
         this.vatLookup200ApplicationJSONObject = vatLookup200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class VatLookupResponse {
      */
     
     public VatLookupDefaultApplicationJSON vatLookupDefaultApplicationJSONObject;
+
     public VatLookupResponse withVatLookupDefaultApplicationJSONObject(VatLookupDefaultApplicationJSON vatLookupDefaultApplicationJSONObject) {
         this.vatLookupDefaultApplicationJSONObject = vatLookupDefaultApplicationJSONObject;
         return this;
     }
     
+    public VatLookupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

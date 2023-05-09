@@ -15,6 +15,7 @@ public class S3CatalogSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalOptions")
     public S3SourceAdditionalOptions additionalOptions;
+
     public S3CatalogSource withAdditionalOptions(S3SourceAdditionalOptions additionalOptions) {
         this.additionalOptions = additionalOptions;
         return this;
@@ -22,6 +23,7 @@ public class S3CatalogSource {
     
     @JsonProperty("Database")
     public String database;
+
     public S3CatalogSource withDatabase(String database) {
         this.database = database;
         return this;
@@ -29,6 +31,7 @@ public class S3CatalogSource {
     
     @JsonProperty("Name")
     public String name;
+
     public S3CatalogSource withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +40,7 @@ public class S3CatalogSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionPredicate")
     public String partitionPredicate;
+
     public S3CatalogSource withPartitionPredicate(String partitionPredicate) {
         this.partitionPredicate = partitionPredicate;
         return this;
@@ -44,9 +48,15 @@ public class S3CatalogSource {
     
     @JsonProperty("Table")
     public String table;
+
     public S3CatalogSource withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public S3CatalogSource(@JsonProperty("Database") String database, @JsonProperty("Name") String name, @JsonProperty("Table") String table) {
+        this.database = database;
+        this.name = name;
+        this.table = table;
+  }
 }

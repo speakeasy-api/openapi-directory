@@ -12,6 +12,7 @@ public class DeleteArtifactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactArn")
     public String artifactArn;
+
     public DeleteArtifactRequest withArtifactArn(String artifactArn) {
         this.artifactArn = artifactArn;
         return this;
@@ -20,9 +21,11 @@ public class DeleteArtifactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public ArtifactSource source;
+
     public DeleteArtifactRequest withSource(ArtifactSource source) {
         this.source = source;
         return this;
     }
     
+    public DeleteArtifactRequest(){}
 }

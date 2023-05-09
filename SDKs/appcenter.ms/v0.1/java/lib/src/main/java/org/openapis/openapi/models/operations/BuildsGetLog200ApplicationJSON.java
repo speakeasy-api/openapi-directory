@@ -15,9 +15,11 @@ public class BuildsGetLog200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String[] value;
+
     public BuildsGetLog200ApplicationJSON withValue(String[] value) {
         this.value = value;
         return this;
     }
     
+    public BuildsGetLog200ApplicationJSON(){}
 }

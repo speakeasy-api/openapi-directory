@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class YoutubeActivitiesListRequest {
@@ -12,6 +13,7 @@ public class YoutubeActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public YoutubeActivitiesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class YoutubeActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public YoutubeActivitiesListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class YoutubeActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public YoutubeActivitiesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class YoutubeActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public YoutubeActivitiesListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -49,6 +54,7 @@ public class YoutubeActivitiesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=channelId")
     public String channelId;
+
     public YoutubeActivitiesListRequest withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -59,6 +65,7 @@ public class YoutubeActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public YoutubeActivitiesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -66,6 +73,7 @@ public class YoutubeActivitiesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=home")
     public Boolean home;
+
     public YoutubeActivitiesListRequest withHome(Boolean home) {
         this.home = home;
         return this;
@@ -76,6 +84,7 @@ public class YoutubeActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public YoutubeActivitiesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -86,6 +95,7 @@ public class YoutubeActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public YoutubeActivitiesListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -93,6 +103,7 @@ public class YoutubeActivitiesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mine")
     public Boolean mine;
+
     public YoutubeActivitiesListRequest withMine(Boolean mine) {
         this.mine = mine;
         return this;
@@ -103,6 +114,7 @@ public class YoutubeActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public YoutubeActivitiesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -113,6 +125,7 @@ public class YoutubeActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public YoutubeActivitiesListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -123,6 +136,7 @@ public class YoutubeActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part")
     public String[] part;
+
     public YoutubeActivitiesListRequest withPart(String[] part) {
         this.part = part;
         return this;
@@ -133,6 +147,7 @@ public class YoutubeActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public YoutubeActivitiesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -140,6 +155,7 @@ public class YoutubeActivitiesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=publishedAfter")
     public String publishedAfter;
+
     public YoutubeActivitiesListRequest withPublishedAfter(String publishedAfter) {
         this.publishedAfter = publishedAfter;
         return this;
@@ -147,6 +163,7 @@ public class YoutubeActivitiesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=publishedBefore")
     public String publishedBefore;
+
     public YoutubeActivitiesListRequest withPublishedBefore(String publishedBefore) {
         this.publishedBefore = publishedBefore;
         return this;
@@ -157,6 +174,7 @@ public class YoutubeActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public YoutubeActivitiesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -164,6 +182,7 @@ public class YoutubeActivitiesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=regionCode")
     public String regionCode;
+
     public YoutubeActivitiesListRequest withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
@@ -174,6 +193,7 @@ public class YoutubeActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public YoutubeActivitiesListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -184,9 +204,13 @@ public class YoutubeActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public YoutubeActivitiesListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public YoutubeActivitiesListRequest(@JsonProperty("part") String[] part) {
+        this.part = part;
+  }
 }

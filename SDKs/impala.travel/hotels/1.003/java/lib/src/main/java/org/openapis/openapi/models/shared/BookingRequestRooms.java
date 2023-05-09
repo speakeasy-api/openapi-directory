@@ -14,6 +14,7 @@ public class BookingRequestRooms {
      */
     @JsonProperty("adults")
     public Double adults;
+
     public BookingRequestRooms withAdults(Double adults) {
         this.adults = adults;
         return this;
@@ -26,6 +27,7 @@ public class BookingRequestRooms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public NotesBookedRoom notes;
+
     public BookingRequestRooms withNotes(NotesBookedRoom notes) {
         this.notes = notes;
         return this;
@@ -36,9 +38,14 @@ public class BookingRequestRooms {
      */
     @JsonProperty("rateId")
     public String rateId;
+
     public BookingRequestRooms withRateId(String rateId) {
         this.rateId = rateId;
         return this;
     }
     
+    public BookingRequestRooms(@JsonProperty("adults") Double adults, @JsonProperty("rateId") String rateId) {
+        this.adults = adults;
+        this.rateId = rateId;
+  }
 }

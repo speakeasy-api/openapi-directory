@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutVariantSetItemRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutVariantSetItemRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +18,14 @@ public class PutVariantSetItemRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.VariantSet variantSet;
+
     public PutVariantSetItemRequest withVariantSet(org.openapis.openapi.models.shared.VariantSet variantSet) {
         this.variantSet = variantSet;
         return this;
     }
     
+    public PutVariantSetItemRequest(@JsonProperty("id") String id, @JsonProperty("variant_set") org.openapis.openapi.models.shared.VariantSet variantSet) {
+        this.id = id;
+        this.variantSet = variantSet;
+  }
 }

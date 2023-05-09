@@ -15,6 +15,7 @@ public class SetTaskStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorId")
     public String errorId;
+
     public SetTaskStatusInput withErrorId(String errorId) {
         this.errorId = errorId;
         return this;
@@ -23,6 +24,7 @@ public class SetTaskStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public SetTaskStatusInput withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,6 +33,7 @@ public class SetTaskStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorStackTrace")
     public String errorStackTrace;
+
     public SetTaskStatusInput withErrorStackTrace(String errorStackTrace) {
         this.errorStackTrace = errorStackTrace;
         return this;
@@ -38,6 +41,7 @@ public class SetTaskStatusInput {
     
     @JsonProperty("taskId")
     public String taskId;
+
     public SetTaskStatusInput withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -45,9 +49,14 @@ public class SetTaskStatusInput {
     
     @JsonProperty("taskStatus")
     public TaskStatusEnum taskStatus;
+
     public SetTaskStatusInput withTaskStatus(TaskStatusEnum taskStatus) {
         this.taskStatus = taskStatus;
         return this;
     }
     
+    public SetTaskStatusInput(@JsonProperty("taskId") String taskId, @JsonProperty("taskStatus") TaskStatusEnum taskStatus) {
+        this.taskId = taskId;
+        this.taskStatus = taskStatus;
+  }
 }

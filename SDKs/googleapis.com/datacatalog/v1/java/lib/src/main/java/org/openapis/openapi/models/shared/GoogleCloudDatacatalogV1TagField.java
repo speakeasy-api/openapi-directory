@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1TagField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boolValue")
     public Boolean boolValue;
+
     public GoogleCloudDatacatalogV1TagField withBoolValue(Boolean boolValue) {
         this.boolValue = boolValue;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1TagField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDatacatalogV1TagField withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1TagField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValue")
     public Double doubleValue;
+
     public GoogleCloudDatacatalogV1TagField withDoubleValue(Double doubleValue) {
         this.doubleValue = doubleValue;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatacatalogV1TagField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enumValue")
     public GoogleCloudDatacatalogV1TagFieldEnumValue enumValue;
+
     public GoogleCloudDatacatalogV1TagField withEnumValue(GoogleCloudDatacatalogV1TagFieldEnumValue enumValue) {
         this.enumValue = enumValue;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDatacatalogV1TagField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Integer order;
+
     public GoogleCloudDatacatalogV1TagField withOrder(Integer order) {
         this.order = order;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDatacatalogV1TagField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("richtextValue")
     public String richtextValue;
+
     public GoogleCloudDatacatalogV1TagField withRichtextValue(String richtextValue) {
         this.richtextValue = richtextValue;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDatacatalogV1TagField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public GoogleCloudDatacatalogV1TagField withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
@@ -95,9 +102,11 @@ public class GoogleCloudDatacatalogV1TagField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestampValue")
     public String timestampValue;
+
     public GoogleCloudDatacatalogV1TagField withTimestampValue(String timestampValue) {
         this.timestampValue = timestampValue;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1TagField(){}
 }

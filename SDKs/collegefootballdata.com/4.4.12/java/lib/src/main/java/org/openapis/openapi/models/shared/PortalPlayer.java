@@ -12,6 +12,7 @@ public class PortalPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public PortalPlayer withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -20,6 +21,7 @@ public class PortalPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eligibility")
     public String eligibility;
+
     public PortalPlayer withEligibility(String eligibility) {
         this.eligibility = eligibility;
         return this;
@@ -28,6 +30,7 @@ public class PortalPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public PortalPlayer withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -36,6 +39,7 @@ public class PortalPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public PortalPlayer withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -44,6 +48,7 @@ public class PortalPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public String origin;
+
     public PortalPlayer withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -52,6 +57,7 @@ public class PortalPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public String position;
+
     public PortalPlayer withPosition(String position) {
         this.position = position;
         return this;
@@ -60,6 +66,7 @@ public class PortalPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rating")
     public Double rating;
+
     public PortalPlayer withRating(Double rating) {
         this.rating = rating;
         return this;
@@ -68,6 +75,7 @@ public class PortalPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("season")
     public Long season;
+
     public PortalPlayer withSeason(Long season) {
         this.season = season;
         return this;
@@ -76,6 +84,7 @@ public class PortalPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stars")
     public Long stars;
+
     public PortalPlayer withStars(Long stars) {
         this.stars = stars;
         return this;
@@ -84,9 +93,11 @@ public class PortalPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferDate")
     public String transferDate;
+
     public PortalPlayer withTransferDate(String transferDate) {
         this.transferDate = transferDate;
         return this;
     }
     
+    public PortalPlayer(){}
 }

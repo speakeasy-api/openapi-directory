@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifySnapshotCopyRetentionPeriodMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifySnapshotCopyRetentionPeriodMessage {
     
     public String clusterIdentifier;
+
     public ModifySnapshotCopyRetentionPeriodMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class ModifySnapshotCopyRetentionPeriodMessage {
     
     
     public Boolean manual;
+
     public ModifySnapshotCopyRetentionPeriodMessage withManual(Boolean manual) {
         this.manual = manual;
         return this;
@@ -26,9 +28,14 @@ public class ModifySnapshotCopyRetentionPeriodMessage {
     
     
     public Long retentionPeriod;
+
     public ModifySnapshotCopyRetentionPeriodMessage withRetentionPeriod(Long retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
     }
     
+    public ModifySnapshotCopyRetentionPeriodMessage(@JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("RetentionPeriod") Long retentionPeriod) {
+        this.clusterIdentifier = clusterIdentifier;
+        this.retentionPeriod = retentionPeriod;
+  }
 }

@@ -15,6 +15,7 @@ public class AwsEc2VpcDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CidrBlockAssociationSet")
     public CidrBlockAssociation[] cidrBlockAssociationSet;
+
     public AwsEc2VpcDetails withCidrBlockAssociationSet(CidrBlockAssociation[] cidrBlockAssociationSet) {
         this.cidrBlockAssociationSet = cidrBlockAssociationSet;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2VpcDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DhcpOptionsId")
     public String dhcpOptionsId;
+
     public AwsEc2VpcDetails withDhcpOptionsId(String dhcpOptionsId) {
         this.dhcpOptionsId = dhcpOptionsId;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2VpcDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ipv6CidrBlockAssociationSet")
     public Ipv6CidrBlockAssociation[] ipv6CidrBlockAssociationSet;
+
     public AwsEc2VpcDetails withIpv6CidrBlockAssociationSet(Ipv6CidrBlockAssociation[] ipv6CidrBlockAssociationSet) {
         this.ipv6CidrBlockAssociationSet = ipv6CidrBlockAssociationSet;
         return this;
@@ -39,9 +42,11 @@ public class AwsEc2VpcDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public AwsEc2VpcDetails withState(String state) {
         this.state = state;
         return this;
     }
     
+    public AwsEc2VpcDetails(){}
 }

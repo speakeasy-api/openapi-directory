@@ -15,6 +15,7 @@ public class CreateLaunchProfileRequestBodyStreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automaticTerminationMode")
     public org.openapis.openapi.models.shared.AutomaticTerminationModeEnum automaticTerminationMode;
+
     public CreateLaunchProfileRequestBodyStreamConfiguration withAutomaticTerminationMode(org.openapis.openapi.models.shared.AutomaticTerminationModeEnum automaticTerminationMode) {
         this.automaticTerminationMode = automaticTerminationMode;
         return this;
@@ -23,6 +24,7 @@ public class CreateLaunchProfileRequestBodyStreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clipboardMode")
     public org.openapis.openapi.models.shared.StreamingClipboardModeEnum clipboardMode;
+
     public CreateLaunchProfileRequestBodyStreamConfiguration withClipboardMode(org.openapis.openapi.models.shared.StreamingClipboardModeEnum clipboardMode) {
         this.clipboardMode = clipboardMode;
         return this;
@@ -31,6 +33,7 @@ public class CreateLaunchProfileRequestBodyStreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2InstanceTypes")
     public org.openapis.openapi.models.shared.StreamingInstanceTypeEnum[] ec2InstanceTypes;
+
     public CreateLaunchProfileRequestBodyStreamConfiguration withEc2InstanceTypes(org.openapis.openapi.models.shared.StreamingInstanceTypeEnum[] ec2InstanceTypes) {
         this.ec2InstanceTypes = ec2InstanceTypes;
         return this;
@@ -39,6 +42,7 @@ public class CreateLaunchProfileRequestBodyStreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxSessionLengthInMinutes")
     public Long maxSessionLengthInMinutes;
+
     public CreateLaunchProfileRequestBodyStreamConfiguration withMaxSessionLengthInMinutes(Long maxSessionLengthInMinutes) {
         this.maxSessionLengthInMinutes = maxSessionLengthInMinutes;
         return this;
@@ -47,6 +51,7 @@ public class CreateLaunchProfileRequestBodyStreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxStoppedSessionLengthInMinutes")
     public Long maxStoppedSessionLengthInMinutes;
+
     public CreateLaunchProfileRequestBodyStreamConfiguration withMaxStoppedSessionLengthInMinutes(Long maxStoppedSessionLengthInMinutes) {
         this.maxStoppedSessionLengthInMinutes = maxStoppedSessionLengthInMinutes;
         return this;
@@ -55,6 +60,7 @@ public class CreateLaunchProfileRequestBodyStreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionBackup")
     public org.openapis.openapi.models.shared.StreamConfigurationSessionBackup sessionBackup;
+
     public CreateLaunchProfileRequestBodyStreamConfiguration withSessionBackup(org.openapis.openapi.models.shared.StreamConfigurationSessionBackup sessionBackup) {
         this.sessionBackup = sessionBackup;
         return this;
@@ -63,6 +69,7 @@ public class CreateLaunchProfileRequestBodyStreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionPersistenceMode")
     public org.openapis.openapi.models.shared.SessionPersistenceModeEnum sessionPersistenceMode;
+
     public CreateLaunchProfileRequestBodyStreamConfiguration withSessionPersistenceMode(org.openapis.openapi.models.shared.SessionPersistenceModeEnum sessionPersistenceMode) {
         this.sessionPersistenceMode = sessionPersistenceMode;
         return this;
@@ -71,6 +78,7 @@ public class CreateLaunchProfileRequestBodyStreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionStorage")
     public org.openapis.openapi.models.shared.StreamConfigurationSessionStorage sessionStorage;
+
     public CreateLaunchProfileRequestBodyStreamConfiguration withSessionStorage(org.openapis.openapi.models.shared.StreamConfigurationSessionStorage sessionStorage) {
         this.sessionStorage = sessionStorage;
         return this;
@@ -79,6 +87,7 @@ public class CreateLaunchProfileRequestBodyStreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamingImageIds")
     public String[] streamingImageIds;
+
     public CreateLaunchProfileRequestBodyStreamConfiguration withStreamingImageIds(String[] streamingImageIds) {
         this.streamingImageIds = streamingImageIds;
         return this;
@@ -87,9 +96,11 @@ public class CreateLaunchProfileRequestBodyStreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeConfiguration")
     public org.openapis.openapi.models.shared.VolumeConfiguration volumeConfiguration;
+
     public CreateLaunchProfileRequestBodyStreamConfiguration withVolumeConfiguration(org.openapis.openapi.models.shared.VolumeConfiguration volumeConfiguration) {
         this.volumeConfiguration = volumeConfiguration;
         return this;
     }
     
+    public CreateLaunchProfileRequestBodyStreamConfiguration(){}
 }

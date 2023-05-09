@@ -15,6 +15,7 @@ public class EnterpriseCrmEventbusProtoValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanValue")
     public Boolean booleanValue;
+
     public EnterpriseCrmEventbusProtoValueType withBooleanValue(Boolean booleanValue) {
         this.booleanValue = booleanValue;
         return this;
@@ -23,6 +24,7 @@ public class EnterpriseCrmEventbusProtoValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleArray")
     public EnterpriseCrmEventbusProtoDoubleArray doubleArray;
+
     public EnterpriseCrmEventbusProtoValueType withDoubleArray(EnterpriseCrmEventbusProtoDoubleArray doubleArray) {
         this.doubleArray = doubleArray;
         return this;
@@ -31,6 +33,7 @@ public class EnterpriseCrmEventbusProtoValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValue")
     public Double doubleValue;
+
     public EnterpriseCrmEventbusProtoValueType withDoubleValue(Double doubleValue) {
         this.doubleValue = doubleValue;
         return this;
@@ -39,6 +42,7 @@ public class EnterpriseCrmEventbusProtoValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intArray")
     public EnterpriseCrmEventbusProtoIntArray intArray;
+
     public EnterpriseCrmEventbusProtoValueType withIntArray(EnterpriseCrmEventbusProtoIntArray intArray) {
         this.intArray = intArray;
         return this;
@@ -47,6 +51,7 @@ public class EnterpriseCrmEventbusProtoValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intValue")
     public String intValue;
+
     public EnterpriseCrmEventbusProtoValueType withIntValue(String intValue) {
         this.intValue = intValue;
         return this;
@@ -55,6 +60,7 @@ public class EnterpriseCrmEventbusProtoValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protoValue")
     public java.util.Map<String, Object> protoValue;
+
     public EnterpriseCrmEventbusProtoValueType withProtoValue(java.util.Map<String, Object> protoValue) {
         this.protoValue = protoValue;
         return this;
@@ -63,6 +69,7 @@ public class EnterpriseCrmEventbusProtoValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringArray")
     public EnterpriseCrmEventbusProtoStringArray stringArray;
+
     public EnterpriseCrmEventbusProtoValueType withStringArray(EnterpriseCrmEventbusProtoStringArray stringArray) {
         this.stringArray = stringArray;
         return this;
@@ -71,9 +78,11 @@ public class EnterpriseCrmEventbusProtoValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public EnterpriseCrmEventbusProtoValueType withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoValueType(){}
 }

@@ -15,6 +15,7 @@ public class ListAssessmentFrameworkShareRequestsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentFrameworkShareRequests")
     public AssessmentFrameworkShareRequest[] assessmentFrameworkShareRequests;
+
     public ListAssessmentFrameworkShareRequestsResponse withAssessmentFrameworkShareRequests(AssessmentFrameworkShareRequest[] assessmentFrameworkShareRequests) {
         this.assessmentFrameworkShareRequests = assessmentFrameworkShareRequests;
         return this;
@@ -23,9 +24,11 @@ public class ListAssessmentFrameworkShareRequestsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAssessmentFrameworkShareRequestsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAssessmentFrameworkShareRequestsResponse(){}
 }

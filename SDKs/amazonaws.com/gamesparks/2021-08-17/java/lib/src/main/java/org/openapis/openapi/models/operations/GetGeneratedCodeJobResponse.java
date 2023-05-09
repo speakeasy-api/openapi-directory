@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetGeneratedCodeJobResponse {
@@ -12,6 +13,7 @@ public class GetGeneratedCodeJobResponse {
      */
     
     public Object accessDeniedException;
+
     public GetGeneratedCodeJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetGeneratedCodeJobResponse {
     
     
     public String contentType;
+
     public GetGeneratedCodeJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetGeneratedCodeJobResponse {
      */
     
     public org.openapis.openapi.models.shared.GetGeneratedCodeJobResult getGeneratedCodeJobResult;
+
     public GetGeneratedCodeJobResponse withGetGeneratedCodeJobResult(org.openapis.openapi.models.shared.GetGeneratedCodeJobResult getGeneratedCodeJobResult) {
         this.getGeneratedCodeJobResult = getGeneratedCodeJobResult;
         return this;
@@ -39,6 +43,7 @@ public class GetGeneratedCodeJobResponse {
      */
     
     public Object internalServerException;
+
     public GetGeneratedCodeJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetGeneratedCodeJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetGeneratedCodeJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetGeneratedCodeJobResponse {
     
     
     public Integer statusCode;
+
     public GetGeneratedCodeJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetGeneratedCodeJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetGeneratedCodeJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetGeneratedCodeJobResponse {
      */
     
     public Object throttlingException;
+
     public GetGeneratedCodeJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetGeneratedCodeJobResponse {
      */
     
     public Object validationException;
+
     public GetGeneratedCodeJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetGeneratedCodeJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

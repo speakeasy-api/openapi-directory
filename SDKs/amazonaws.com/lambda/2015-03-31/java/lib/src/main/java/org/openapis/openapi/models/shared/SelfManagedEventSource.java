@@ -15,9 +15,11 @@ public class SelfManagedEventSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Endpoints")
     public java.util.Map<String, String[]> endpoints;
+
     public SelfManagedEventSource withEndpoints(java.util.Map<String, String[]> endpoints) {
         this.endpoints = endpoints;
         return this;
     }
     
+    public SelfManagedEventSource(){}
 }

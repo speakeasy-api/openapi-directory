@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProtectionGroupLimits {
     @JsonProperty("MaxProtectionGroups")
     public Long maxProtectionGroups;
+
     public ProtectionGroupLimits withMaxProtectionGroups(Long maxProtectionGroups) {
         this.maxProtectionGroups = maxProtectionGroups;
         return this;
@@ -19,9 +20,14 @@ public class ProtectionGroupLimits {
     
     @JsonProperty("PatternTypeLimits")
     public ProtectionGroupPatternTypeLimits patternTypeLimits;
+
     public ProtectionGroupLimits withPatternTypeLimits(ProtectionGroupPatternTypeLimits patternTypeLimits) {
         this.patternTypeLimits = patternTypeLimits;
         return this;
     }
     
+    public ProtectionGroupLimits(@JsonProperty("MaxProtectionGroups") Long maxProtectionGroups, @JsonProperty("PatternTypeLimits") ProtectionGroupPatternTypeLimits patternTypeLimits) {
+        this.maxProtectionGroups = maxProtectionGroups;
+        this.patternTypeLimits = patternTypeLimits;
+  }
 }

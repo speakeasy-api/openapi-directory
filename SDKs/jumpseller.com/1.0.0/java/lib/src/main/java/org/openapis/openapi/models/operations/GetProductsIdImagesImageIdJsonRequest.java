@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductsIdImagesImageIdJsonRequest {
@@ -12,6 +13,7 @@ public class GetProductsIdImagesImageIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public GetProductsIdImagesImageIdJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -22,6 +24,7 @@ public class GetProductsIdImagesImageIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public GetProductsIdImagesImageIdJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -32,6 +35,7 @@ public class GetProductsIdImagesImageIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=image_id")
     public Integer imageId;
+
     public GetProductsIdImagesImageIdJsonRequest withImageId(Integer imageId) {
         this.imageId = imageId;
         return this;
@@ -42,9 +46,16 @@ public class GetProductsIdImagesImageIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public GetProductsIdImagesImageIdJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public GetProductsIdImagesImageIdJsonRequest(@JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("image_id") Integer imageId, @JsonProperty("login") String login) {
+        this.authtoken = authtoken;
+        this.id = id;
+        this.imageId = imageId;
+        this.login = login;
+  }
 }

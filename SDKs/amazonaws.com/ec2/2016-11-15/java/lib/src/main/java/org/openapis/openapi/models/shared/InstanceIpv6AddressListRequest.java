@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class InstanceIpv6AddressListRequest {
     
     public String ipv6Address;
+
     public InstanceIpv6AddressListRequest withIpv6Address(String ipv6Address) {
         this.ipv6Address = ipv6Address;
         return this;
     }
     
+    public InstanceIpv6AddressListRequest(){}
 }

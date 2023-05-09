@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * VerifiedAccessLogKinesisDataFirehoseDestinationOptions - Describes Amazon Kinesis Data Firehose logging options.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class VerifiedAccessLogKinesisDataFirehoseDestinationOptions {
     
     public String deliveryStream;
+
     public VerifiedAccessLogKinesisDataFirehoseDestinationOptions withDeliveryStream(String deliveryStream) {
         this.deliveryStream = deliveryStream;
         return this;
@@ -19,9 +20,13 @@ public class VerifiedAccessLogKinesisDataFirehoseDestinationOptions {
     
     
     public Boolean enabled;
+
     public VerifiedAccessLogKinesisDataFirehoseDestinationOptions withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public VerifiedAccessLogKinesisDataFirehoseDestinationOptions(@JsonProperty("Enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

@@ -22,6 +22,7 @@ public class AccountEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public AccountEventEventEnum event;
+
     public AccountEvent withEvent(AccountEventEventEnum event) {
         this.event = event;
         return this;
@@ -35,6 +36,7 @@ public class AccountEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("executionDate")
     public OffsetDateTime executionDate;
+
     public AccountEvent withExecutionDate(OffsetDateTime executionDate) {
         this.executionDate = executionDate;
         return this;
@@ -46,9 +48,11 @@ public class AccountEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public AccountEvent withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public AccountEvent(){}
 }

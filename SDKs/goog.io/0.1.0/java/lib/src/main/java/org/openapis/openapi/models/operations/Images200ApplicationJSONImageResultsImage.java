@@ -12,6 +12,7 @@ public class Images200ApplicationJSONImageResultsImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alt")
     public String alt;
+
     public Images200ApplicationJSONImageResultsImage withAlt(String alt) {
         this.alt = alt;
         return this;
@@ -20,9 +21,11 @@ public class Images200ApplicationJSONImageResultsImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("src")
     public String src;
+
     public Images200ApplicationJSONImageResultsImage withSrc(String src) {
         this.src = src;
         return this;
     }
     
+    public Images200ApplicationJSONImageResultsImage(){}
 }

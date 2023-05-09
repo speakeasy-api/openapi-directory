@@ -12,6 +12,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoldBase")
     public Long goldBase;
+
     public Item withGoldBase(Long goldBase) {
         this.goldBase = goldBase;
         return this;
@@ -20,6 +21,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoldSell")
     public Long goldSell;
+
     public Item withGoldSell(Long goldSell) {
         this.goldSell = goldSell;
         return this;
@@ -28,6 +30,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoldTotal")
     public Long goldTotal;
+
     public Item withGoldTotal(Long goldTotal) {
         this.goldTotal = goldTotal;
         return this;
@@ -36,6 +39,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ItemId")
     public Long itemId;
+
     public Item withItemId(Long itemId) {
         this.itemId = itemId;
         return this;
@@ -44,9 +48,11 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Item withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Item(){}
 }

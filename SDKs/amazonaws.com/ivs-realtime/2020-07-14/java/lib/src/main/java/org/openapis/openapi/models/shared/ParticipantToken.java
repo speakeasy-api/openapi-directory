@@ -20,6 +20,7 @@ public class ParticipantToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public ParticipantToken withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -28,6 +29,7 @@ public class ParticipantToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public ParticipantTokenCapabilityEnum[] capabilities;
+
     public ParticipantToken withCapabilities(ParticipantTokenCapabilityEnum[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -36,6 +38,7 @@ public class ParticipantToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Long duration;
+
     public ParticipantToken withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -46,6 +49,7 @@ public class ParticipantToken {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expirationTime")
     public OffsetDateTime expirationTime;
+
     public ParticipantToken withExpirationTime(OffsetDateTime expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -54,6 +58,7 @@ public class ParticipantToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("participantId")
     public String participantId;
+
     public ParticipantToken withParticipantId(String participantId) {
         this.participantId = participantId;
         return this;
@@ -62,6 +67,7 @@ public class ParticipantToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public ParticipantToken withToken(String token) {
         this.token = token;
         return this;
@@ -70,9 +76,11 @@ public class ParticipantToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public ParticipantToken withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public ParticipantToken(){}
 }

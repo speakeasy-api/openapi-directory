@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DecryptRequest {
     @JsonProperty("CiphertextBlob")
     public String ciphertextBlob;
+
     public DecryptRequest withCiphertextBlob(String ciphertextBlob) {
         this.ciphertextBlob = ciphertextBlob;
         return this;
@@ -19,6 +20,7 @@ public class DecryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionAlgorithm")
     public EncryptionAlgorithmSpecEnum encryptionAlgorithm;
+
     public DecryptRequest withEncryptionAlgorithm(EncryptionAlgorithmSpecEnum encryptionAlgorithm) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         return this;
@@ -27,6 +29,7 @@ public class DecryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionContext")
     public java.util.Map<String, String> encryptionContext;
+
     public DecryptRequest withEncryptionContext(java.util.Map<String, String> encryptionContext) {
         this.encryptionContext = encryptionContext;
         return this;
@@ -35,6 +38,7 @@ public class DecryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrantTokens")
     public String[] grantTokens;
+
     public DecryptRequest withGrantTokens(String[] grantTokens) {
         this.grantTokens = grantTokens;
         return this;
@@ -43,9 +47,13 @@ public class DecryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public DecryptRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
     
+    public DecryptRequest(@JsonProperty("CiphertextBlob") String ciphertextBlob) {
+        this.ciphertextBlob = ciphertextBlob;
+  }
 }

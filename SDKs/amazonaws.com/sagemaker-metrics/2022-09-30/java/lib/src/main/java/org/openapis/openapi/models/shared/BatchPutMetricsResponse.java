@@ -15,9 +15,11 @@ public class BatchPutMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public BatchPutMetricsError[] errors;
+
     public BatchPutMetricsResponse withErrors(BatchPutMetricsError[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public BatchPutMetricsResponse(){}
 }

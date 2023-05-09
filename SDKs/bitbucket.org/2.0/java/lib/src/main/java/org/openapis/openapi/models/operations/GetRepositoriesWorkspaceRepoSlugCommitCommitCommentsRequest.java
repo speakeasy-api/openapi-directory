@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest {
@@ -12,6 +13,7 @@ public class GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
     public String commit;
+
     public GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest withCommit(String commit) {
         this.commit = commit;
         return this;
@@ -24,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest withQ(String q) {
         this.q = q;
         return this;
@@ -36,6 +39,7 @@ public class GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -48,6 +52,7 @@ public class GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -60,9 +65,15 @@ public class GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest(@JsonProperty("commit") String commit, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.commit = commit;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

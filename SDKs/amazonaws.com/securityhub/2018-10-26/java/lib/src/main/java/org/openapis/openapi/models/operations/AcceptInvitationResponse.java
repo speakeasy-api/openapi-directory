@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AcceptInvitationResponse {
@@ -12,6 +13,7 @@ public class AcceptInvitationResponse {
      */
     
     public java.util.Map<String, Object> acceptInvitationResponse;
+
     public AcceptInvitationResponse withAcceptInvitationResponse(java.util.Map<String, Object> acceptInvitationResponse) {
         this.acceptInvitationResponse = acceptInvitationResponse;
         return this;
@@ -19,6 +21,7 @@ public class AcceptInvitationResponse {
     
     
     public String contentType;
+
     public AcceptInvitationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AcceptInvitationResponse {
      */
     
     public Object internalException;
+
     public AcceptInvitationResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class AcceptInvitationResponse {
      */
     
     public Object invalidAccessException;
+
     public AcceptInvitationResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class AcceptInvitationResponse {
      */
     
     public Object invalidInputException;
+
     public AcceptInvitationResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class AcceptInvitationResponse {
      */
     
     public Object limitExceededException;
+
     public AcceptInvitationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class AcceptInvitationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AcceptInvitationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class AcceptInvitationResponse {
     
     
     public Integer statusCode;
+
     public AcceptInvitationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class AcceptInvitationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AcceptInvitationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AcceptInvitationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

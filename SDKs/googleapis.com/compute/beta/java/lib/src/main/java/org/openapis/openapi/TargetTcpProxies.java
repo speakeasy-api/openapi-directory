@@ -59,11 +59,9 @@ public class TargetTcpProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetTcpProxiesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeTargetTcpProxiesAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetTcpProxiesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeTargetTcpProxiesAggregatedListResponse(contentType, httpRes.statusCode()) {{
             targetTcpProxyAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class TargetTcpProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetTcpProxiesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeTargetTcpProxiesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetTcpProxiesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeTargetTcpProxiesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class TargetTcpProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetTcpProxiesGetResponse res = new org.openapis.openapi.models.operations.ComputeTargetTcpProxiesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetTcpProxiesGetResponse res = new org.openapis.openapi.models.operations.ComputeTargetTcpProxiesGetResponse(contentType, httpRes.statusCode()) {{
             targetTcpProxy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class TargetTcpProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetTcpProxiesInsertResponse res = new org.openapis.openapi.models.operations.ComputeTargetTcpProxiesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetTcpProxiesInsertResponse res = new org.openapis.openapi.models.operations.ComputeTargetTcpProxiesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class TargetTcpProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetTcpProxiesListResponse res = new org.openapis.openapi.models.operations.ComputeTargetTcpProxiesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetTcpProxiesListResponse res = new org.openapis.openapi.models.operations.ComputeTargetTcpProxiesListResponse(contentType, httpRes.statusCode()) {{
             targetTcpProxyList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class TargetTcpProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetTcpProxiesSetBackendServiceResponse res = new org.openapis.openapi.models.operations.ComputeTargetTcpProxiesSetBackendServiceResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetTcpProxiesSetBackendServiceResponse res = new org.openapis.openapi.models.operations.ComputeTargetTcpProxiesSetBackendServiceResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class TargetTcpProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetTcpProxiesSetProxyHeaderResponse res = new org.openapis.openapi.models.operations.ComputeTargetTcpProxiesSetProxyHeaderResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetTcpProxiesSetProxyHeaderResponse res = new org.openapis.openapi.models.operations.ComputeTargetTcpProxiesSetProxyHeaderResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -389,11 +375,9 @@ public class TargetTcpProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetTcpProxiesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeTargetTcpProxiesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetTcpProxiesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeTargetTcpProxiesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

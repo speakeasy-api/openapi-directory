@@ -59,11 +59,9 @@ public class Pubsubnotificationsettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsGetResponse res = new org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsGetResponse() {{
+        org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsGetResponse res = new org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsGetResponse(contentType, httpRes.statusCode()) {{
             pubsubNotificationSettings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Pubsubnotificationsettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsUpdateResponse res = new org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsUpdateResponse() {{
+        org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsUpdateResponse res = new org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsUpdateResponse(contentType, httpRes.statusCode()) {{
             pubsubNotificationSettings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

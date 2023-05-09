@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteRemediationExceptionsRequest {
     @JsonProperty("ConfigRuleName")
     public String configRuleName;
+
     public DeleteRemediationExceptionsRequest withConfigRuleName(String configRuleName) {
         this.configRuleName = configRuleName;
         return this;
@@ -16,9 +17,14 @@ public class DeleteRemediationExceptionsRequest {
     
     @JsonProperty("ResourceKeys")
     public RemediationExceptionResourceKey[] resourceKeys;
+
     public DeleteRemediationExceptionsRequest withResourceKeys(RemediationExceptionResourceKey[] resourceKeys) {
         this.resourceKeys = resourceKeys;
         return this;
     }
     
+    public DeleteRemediationExceptionsRequest(@JsonProperty("ConfigRuleName") String configRuleName, @JsonProperty("ResourceKeys") RemediationExceptionResourceKey[] resourceKeys) {
+        this.configRuleName = configRuleName;
+        this.resourceKeys = resourceKeys;
+  }
 }

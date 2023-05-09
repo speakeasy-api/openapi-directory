@@ -18,6 +18,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apis")
     public Api[] apis;
+
     public Service withApis(Api[] apis) {
         this.apis = apis;
         return this;
@@ -29,6 +30,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authentication")
     public Authentication authentication;
+
     public Service withAuthentication(Authentication authentication) {
         this.authentication = authentication;
         return this;
@@ -40,6 +42,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backend")
     public Backend backend;
+
     public Service withBackend(Backend backend) {
         this.backend = backend;
         return this;
@@ -51,6 +54,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing")
     public Billing billing;
+
     public Service withBilling(Billing billing) {
         this.billing = billing;
         return this;
@@ -62,6 +66,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configVersion")
     public Long configVersion;
+
     public Service withConfigVersion(Long configVersion) {
         this.configVersion = configVersion;
         return this;
@@ -73,6 +78,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context")
     public Context context;
+
     public Service withContext(Context context) {
         this.context = context;
         return this;
@@ -84,6 +90,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("control")
     public Control control;
+
     public Service withControl(Control control) {
         this.control = control;
         return this;
@@ -95,6 +102,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customError")
     public CustomError customError;
+
     public Service withCustomError(CustomError customError) {
         this.customError = customError;
         return this;
@@ -106,6 +114,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentation")
     public Documentation documentation;
+
     public Service withDocumentation(Documentation documentation) {
         this.documentation = documentation;
         return this;
@@ -117,6 +126,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoints")
     public Endpoint[] endpoints;
+
     public Service withEndpoints(Endpoint[] endpoints) {
         this.endpoints = endpoints;
         return this;
@@ -128,6 +138,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enums")
     public Enum[] enums;
+
     public Service withEnums(Enum[] enums) {
         this.enums = enums;
         return this;
@@ -139,6 +150,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http")
     public Http http;
+
     public Service withHttp(Http http) {
         this.http = http;
         return this;
@@ -150,6 +162,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Service withId(String id) {
         this.id = id;
         return this;
@@ -161,6 +174,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logging")
     public Logging logging;
+
     public Service withLogging(Logging logging) {
         this.logging = logging;
         return this;
@@ -172,6 +186,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logs")
     public LogDescriptor[] logs;
+
     public Service withLogs(LogDescriptor[] logs) {
         this.logs = logs;
         return this;
@@ -183,6 +198,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public MetricDescriptor[] metrics;
+
     public Service withMetrics(MetricDescriptor[] metrics) {
         this.metrics = metrics;
         return this;
@@ -194,6 +210,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitoredResources")
     public MonitoredResourceDescriptor[] monitoredResources;
+
     public Service withMonitoredResources(MonitoredResourceDescriptor[] monitoredResources) {
         this.monitoredResources = monitoredResources;
         return this;
@@ -205,6 +222,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitoring")
     public Monitoring monitoring;
+
     public Service withMonitoring(Monitoring monitoring) {
         this.monitoring = monitoring;
         return this;
@@ -216,6 +234,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Service withName(String name) {
         this.name = name;
         return this;
@@ -227,6 +246,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producerProjectId")
     public String producerProjectId;
+
     public Service withProducerProjectId(String producerProjectId) {
         this.producerProjectId = producerProjectId;
         return this;
@@ -238,6 +258,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishing")
     public Publishing publishing;
+
     public Service withPublishing(Publishing publishing) {
         this.publishing = publishing;
         return this;
@@ -249,6 +270,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quota")
     public Quota quota;
+
     public Service withQuota(Quota quota) {
         this.quota = quota;
         return this;
@@ -260,6 +282,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceInfo")
     public SourceInfo sourceInfo;
+
     public Service withSourceInfo(SourceInfo sourceInfo) {
         this.sourceInfo = sourceInfo;
         return this;
@@ -271,6 +294,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemParameters")
     public SystemParameters systemParameters;
+
     public Service withSystemParameters(SystemParameters systemParameters) {
         this.systemParameters = systemParameters;
         return this;
@@ -282,6 +306,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemTypes")
     public Type[] systemTypes;
+
     public Service withSystemTypes(Type[] systemTypes) {
         this.systemTypes = systemTypes;
         return this;
@@ -293,6 +318,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Service withTitle(String title) {
         this.title = title;
         return this;
@@ -304,6 +330,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("types")
     public Type[] types;
+
     public Service withTypes(Type[] types) {
         this.types = types;
         return this;
@@ -315,9 +342,11 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public Usage usage;
+
     public Service withUsage(Usage usage) {
         this.usage = usage;
         return this;
     }
     
+    public Service(){}
 }

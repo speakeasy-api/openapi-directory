@@ -15,6 +15,7 @@ public class ListRuleGroupsNamespacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRuleGroupsNamespacesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListRuleGroupsNamespacesResponse {
     
     @JsonProperty("ruleGroupsNamespaces")
     public RuleGroupsNamespaceSummary[] ruleGroupsNamespaces;
+
     public ListRuleGroupsNamespacesResponse withRuleGroupsNamespaces(RuleGroupsNamespaceSummary[] ruleGroupsNamespaces) {
         this.ruleGroupsNamespaces = ruleGroupsNamespaces;
         return this;
     }
     
+    public ListRuleGroupsNamespacesResponse(@JsonProperty("ruleGroupsNamespaces") RuleGroupsNamespaceSummary[] ruleGroupsNamespaces) {
+        this.ruleGroupsNamespaces = ruleGroupsNamespaces;
+  }
 }

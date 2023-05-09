@@ -12,6 +12,7 @@ public class BeezUPCommonInfoSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public BeezUPCommonErrorSummary[] errors;
+
     public BeezUPCommonInfoSummaries withErrors(BeezUPCommonErrorSummary[] errors) {
         this.errors = errors;
         return this;
@@ -20,6 +21,7 @@ public class BeezUPCommonInfoSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("informations")
     public BeezUPCommonInfoSummary[] informations;
+
     public BeezUPCommonInfoSummaries withInformations(BeezUPCommonInfoSummary[] informations) {
         this.informations = informations;
         return this;
@@ -28,6 +30,7 @@ public class BeezUPCommonInfoSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successes")
     public BeezUPCommonSuccessSummary[] successes;
+
     public BeezUPCommonInfoSummaries withSuccesses(BeezUPCommonSuccessSummary[] successes) {
         this.successes = successes;
         return this;
@@ -36,9 +39,11 @@ public class BeezUPCommonInfoSummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public BeezUPCommonWarningSummary[] warnings;
+
     public BeezUPCommonInfoSummaries withWarnings(BeezUPCommonWarningSummary[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public BeezUPCommonInfoSummaries(){}
 }

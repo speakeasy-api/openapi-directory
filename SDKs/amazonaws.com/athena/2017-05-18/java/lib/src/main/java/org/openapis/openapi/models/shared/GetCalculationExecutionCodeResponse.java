@@ -15,9 +15,11 @@ public class GetCalculationExecutionCodeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeBlock")
     public String codeBlock;
+
     public GetCalculationExecutionCodeResponse withCodeBlock(String codeBlock) {
         this.codeBlock = codeBlock;
         return this;
     }
     
+    public GetCalculationExecutionCodeResponse(){}
 }

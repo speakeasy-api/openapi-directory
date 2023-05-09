@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SparkSubmitJobDriver {
     @JsonProperty("entryPoint")
     public String entryPoint;
+
     public SparkSubmitJobDriver withEntryPoint(String entryPoint) {
         this.entryPoint = entryPoint;
         return this;
@@ -22,6 +23,7 @@ public class SparkSubmitJobDriver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryPointArguments")
     public String[] entryPointArguments;
+
     public SparkSubmitJobDriver withEntryPointArguments(String[] entryPointArguments) {
         this.entryPointArguments = entryPointArguments;
         return this;
@@ -30,9 +32,13 @@ public class SparkSubmitJobDriver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkSubmitParameters")
     public String sparkSubmitParameters;
+
     public SparkSubmitJobDriver withSparkSubmitParameters(String sparkSubmitParameters) {
         this.sparkSubmitParameters = sparkSubmitParameters;
         return this;
     }
     
+    public SparkSubmitJobDriver(@JsonProperty("entryPoint") String entryPoint) {
+        this.entryPoint = entryPoint;
+  }
 }

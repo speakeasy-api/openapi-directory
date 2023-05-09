@@ -12,6 +12,7 @@ public class ImageRegionCreateEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Float height;
+
     public ImageRegionCreateEntry withHeight(Float height) {
         this.height = height;
         return this;
@@ -20,6 +21,7 @@ public class ImageRegionCreateEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageId")
     public String imageId;
+
     public ImageRegionCreateEntry withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -28,6 +30,7 @@ public class ImageRegionCreateEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("left")
     public Float left;
+
     public ImageRegionCreateEntry withLeft(Float left) {
         this.left = left;
         return this;
@@ -36,6 +39,7 @@ public class ImageRegionCreateEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagId")
     public String tagId;
+
     public ImageRegionCreateEntry withTagId(String tagId) {
         this.tagId = tagId;
         return this;
@@ -44,6 +48,7 @@ public class ImageRegionCreateEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("top")
     public Float top;
+
     public ImageRegionCreateEntry withTop(Float top) {
         this.top = top;
         return this;
@@ -52,9 +57,11 @@ public class ImageRegionCreateEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Float width;
+
     public ImageRegionCreateEntry withWidth(Float width) {
         this.width = width;
         return this;
     }
     
+    public ImageRegionCreateEntry(){}
 }

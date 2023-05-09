@@ -12,6 +12,7 @@ public class DeletedGameModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiKey")
     public String apiKey;
+
     public DeletedGameModel withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -20,9 +21,11 @@ public class DeletedGameModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DeletedGameModel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeletedGameModel(){}
 }

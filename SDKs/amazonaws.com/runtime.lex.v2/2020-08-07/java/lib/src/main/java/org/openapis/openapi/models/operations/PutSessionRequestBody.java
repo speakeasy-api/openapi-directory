@@ -15,6 +15,7 @@ public class PutSessionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
     public org.openapis.openapi.models.shared.Message[] messages;
+
     public PutSessionRequestBody withMessages(org.openapis.openapi.models.shared.Message[] messages) {
         this.messages = messages;
         return this;
@@ -26,6 +27,7 @@ public class PutSessionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestAttributes")
     public java.util.Map<String, String> requestAttributes;
+
     public PutSessionRequestBody withRequestAttributes(java.util.Map<String, String> requestAttributes) {
         this.requestAttributes = requestAttributes;
         return this;
@@ -36,9 +38,13 @@ public class PutSessionRequestBody {
      */
     @JsonProperty("sessionState")
     public PutSessionRequestBodySessionState sessionState;
+
     public PutSessionRequestBody withSessionState(PutSessionRequestBodySessionState sessionState) {
         this.sessionState = sessionState;
         return this;
     }
     
+    public PutSessionRequestBody(@JsonProperty("sessionState") PutSessionRequestBodySessionState sessionState) {
+        this.sessionState = sessionState;
+  }
 }

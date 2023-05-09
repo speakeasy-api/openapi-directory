@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PagerDutyConfiguration {
     @JsonProperty("name")
     public String name;
+
     public PagerDutyConfiguration withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class PagerDutyConfiguration {
     
     @JsonProperty("pagerDutyIncidentConfiguration")
     public PagerDutyIncidentConfiguration pagerDutyIncidentConfiguration;
+
     public PagerDutyConfiguration withPagerDutyIncidentConfiguration(PagerDutyIncidentConfiguration pagerDutyIncidentConfiguration) {
         this.pagerDutyIncidentConfiguration = pagerDutyIncidentConfiguration;
         return this;
@@ -26,9 +28,15 @@ public class PagerDutyConfiguration {
     
     @JsonProperty("secretId")
     public String secretId;
+
     public PagerDutyConfiguration withSecretId(String secretId) {
         this.secretId = secretId;
         return this;
     }
     
+    public PagerDutyConfiguration(@JsonProperty("name") String name, @JsonProperty("pagerDutyIncidentConfiguration") PagerDutyIncidentConfiguration pagerDutyIncidentConfiguration, @JsonProperty("secretId") String secretId) {
+        this.name = name;
+        this.pagerDutyIncidentConfiguration = pagerDutyIncidentConfiguration;
+        this.secretId = secretId;
+  }
 }

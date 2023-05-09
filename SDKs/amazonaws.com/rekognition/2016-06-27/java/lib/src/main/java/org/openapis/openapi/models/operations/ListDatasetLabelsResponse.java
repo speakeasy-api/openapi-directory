@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDatasetLabelsResponse {
@@ -12,6 +13,7 @@ public class ListDatasetLabelsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListDatasetLabelsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListDatasetLabelsResponse {
     
     
     public String contentType;
+
     public ListDatasetLabelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListDatasetLabelsResponse {
      */
     
     public Object internalServerError;
+
     public ListDatasetLabelsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class ListDatasetLabelsResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public ListDatasetLabelsResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -49,6 +54,7 @@ public class ListDatasetLabelsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListDatasetLabelsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class ListDatasetLabelsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDatasetLabelsResponse listDatasetLabelsResponse;
+
     public ListDatasetLabelsResponse withListDatasetLabelsResponse(org.openapis.openapi.models.shared.ListDatasetLabelsResponse listDatasetLabelsResponse) {
         this.listDatasetLabelsResponse = listDatasetLabelsResponse;
         return this;
@@ -69,6 +76,7 @@ public class ListDatasetLabelsResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public ListDatasetLabelsResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ListDatasetLabelsResponse {
     
     
     public Integer statusCode;
+
     public ListDatasetLabelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListDatasetLabelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDatasetLabelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListDatasetLabelsResponse {
      */
     
     public Object resourceInUseException;
+
     public ListDatasetLabelsResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -103,6 +114,7 @@ public class ListDatasetLabelsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListDatasetLabelsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class ListDatasetLabelsResponse {
      */
     
     public Object resourceNotReadyException;
+
     public ListDatasetLabelsResponse withResourceNotReadyException(Object resourceNotReadyException) {
         this.resourceNotReadyException = resourceNotReadyException;
         return this;
@@ -123,9 +136,14 @@ public class ListDatasetLabelsResponse {
      */
     
     public Object throttlingException;
+
     public ListDatasetLabelsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListDatasetLabelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

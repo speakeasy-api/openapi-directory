@@ -15,6 +15,7 @@ public class DescribedConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessRole")
     public String accessRole;
+
     public DescribedConnector withAccessRole(String accessRole) {
         this.accessRole = accessRole;
         return this;
@@ -22,6 +23,7 @@ public class DescribedConnector {
     
     @JsonProperty("Arn")
     public String arn;
+
     public DescribedConnector withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +32,7 @@ public class DescribedConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("As2Config")
     public As2ConnectorConfig as2Config;
+
     public DescribedConnector withAs2Config(As2ConnectorConfig as2Config) {
         this.as2Config = as2Config;
         return this;
@@ -38,6 +41,7 @@ public class DescribedConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectorId")
     public String connectorId;
+
     public DescribedConnector withConnectorId(String connectorId) {
         this.connectorId = connectorId;
         return this;
@@ -46,6 +50,7 @@ public class DescribedConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoggingRole")
     public String loggingRole;
+
     public DescribedConnector withLoggingRole(String loggingRole) {
         this.loggingRole = loggingRole;
         return this;
@@ -54,6 +59,7 @@ public class DescribedConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public DescribedConnector withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -62,9 +68,13 @@ public class DescribedConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public DescribedConnector withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public DescribedConnector(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

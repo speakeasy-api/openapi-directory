@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCallAnalyticsCategoryResponse {
@@ -12,6 +13,7 @@ public class UpdateCallAnalyticsCategoryResponse {
      */
     
     public Object badRequestException;
+
     public UpdateCallAnalyticsCategoryResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateCallAnalyticsCategoryResponse {
      */
     
     public Object conflictException;
+
     public UpdateCallAnalyticsCategoryResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCallAnalyticsCategoryResponse {
     
     
     public String contentType;
+
     public UpdateCallAnalyticsCategoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateCallAnalyticsCategoryResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateCallAnalyticsCategoryResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateCallAnalyticsCategoryResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateCallAnalyticsCategoryResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateCallAnalyticsCategoryResponse {
      */
     
     public Object notFoundException;
+
     public UpdateCallAnalyticsCategoryResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateCallAnalyticsCategoryResponse {
     
     
     public Integer statusCode;
+
     public UpdateCallAnalyticsCategoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateCallAnalyticsCategoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCallAnalyticsCategoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateCallAnalyticsCategoryResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateCallAnalyticsCategoryResponse updateCallAnalyticsCategoryResponse;
+
     public UpdateCallAnalyticsCategoryResponse withUpdateCallAnalyticsCategoryResponse(org.openapis.openapi.models.shared.UpdateCallAnalyticsCategoryResponse updateCallAnalyticsCategoryResponse) {
         this.updateCallAnalyticsCategoryResponse = updateCallAnalyticsCategoryResponse;
         return this;
     }
     
+    public UpdateCallAnalyticsCategoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

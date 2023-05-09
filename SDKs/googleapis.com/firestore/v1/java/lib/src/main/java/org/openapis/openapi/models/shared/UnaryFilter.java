@@ -18,6 +18,7 @@ public class UnaryFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public FieldReference field;
+
     public UnaryFilter withField(FieldReference field) {
         this.field = field;
         return this;
@@ -29,9 +30,11 @@ public class UnaryFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("op")
     public UnaryFilterOpEnum op;
+
     public UnaryFilter withOp(UnaryFilterOpEnum op) {
         this.op = op;
         return this;
     }
     
+    public UnaryFilter(){}
 }

@@ -18,6 +18,7 @@ public class BinaryClassificationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregateClassificationMetrics")
     public AggregateClassificationMetrics aggregateClassificationMetrics;
+
     public BinaryClassificationMetrics withAggregateClassificationMetrics(AggregateClassificationMetrics aggregateClassificationMetrics) {
         this.aggregateClassificationMetrics = aggregateClassificationMetrics;
         return this;
@@ -29,6 +30,7 @@ public class BinaryClassificationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binaryConfusionMatrixList")
     public BinaryConfusionMatrix[] binaryConfusionMatrixList;
+
     public BinaryClassificationMetrics withBinaryConfusionMatrixList(BinaryConfusionMatrix[] binaryConfusionMatrixList) {
         this.binaryConfusionMatrixList = binaryConfusionMatrixList;
         return this;
@@ -40,6 +42,7 @@ public class BinaryClassificationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negativeLabel")
     public String negativeLabel;
+
     public BinaryClassificationMetrics withNegativeLabel(String negativeLabel) {
         this.negativeLabel = negativeLabel;
         return this;
@@ -51,9 +54,11 @@ public class BinaryClassificationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("positiveLabel")
     public String positiveLabel;
+
     public BinaryClassificationMetrics withPositiveLabel(String positiveLabel) {
         this.positiveLabel = positiveLabel;
         return this;
     }
     
+    public BinaryClassificationMetrics(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEndpointResponse {
@@ -12,6 +13,7 @@ public class DeleteEndpointResponse {
      */
     
     public Object badRequestException;
+
     public DeleteEndpointResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteEndpointResponse {
     
     
     public String contentType;
+
     public DeleteEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEndpointResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteEndpointResponse deleteEndpointResponse;
+
     public DeleteEndpointResponse withDeleteEndpointResponse(org.openapis.openapi.models.shared.DeleteEndpointResponse deleteEndpointResponse) {
         this.deleteEndpointResponse = deleteEndpointResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteEndpointResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteEndpointResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteEndpointResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteEndpointResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteEndpointResponse {
      */
     
     public Object methodNotAllowedException;
+
     public DeleteEndpointResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteEndpointResponse {
      */
     
     public Object notFoundException;
+
     public DeleteEndpointResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteEndpointResponse {
      */
     
     public Object payloadTooLargeException;
+
     public DeleteEndpointResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteEndpointResponse {
     
     
     public Integer statusCode;
+
     public DeleteEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteEndpointResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteEndpointResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

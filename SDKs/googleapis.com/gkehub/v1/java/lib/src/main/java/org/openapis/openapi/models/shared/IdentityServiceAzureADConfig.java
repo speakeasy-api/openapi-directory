@@ -18,6 +18,7 @@ public class IdentityServiceAzureADConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public IdentityServiceAzureADConfig withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -29,6 +30,7 @@ public class IdentityServiceAzureADConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientSecret")
     public String clientSecret;
+
     public IdentityServiceAzureADConfig withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -40,6 +42,7 @@ public class IdentityServiceAzureADConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptedClientSecret")
     public String encryptedClientSecret;
+
     public IdentityServiceAzureADConfig withEncryptedClientSecret(String encryptedClientSecret) {
         this.encryptedClientSecret = encryptedClientSecret;
         return this;
@@ -51,6 +54,7 @@ public class IdentityServiceAzureADConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kubectlRedirectUri")
     public String kubectlRedirectUri;
+
     public IdentityServiceAzureADConfig withKubectlRedirectUri(String kubectlRedirectUri) {
         this.kubectlRedirectUri = kubectlRedirectUri;
         return this;
@@ -62,9 +66,11 @@ public class IdentityServiceAzureADConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tenant")
     public String tenant;
+
     public IdentityServiceAzureADConfig withTenant(String tenant) {
         this.tenant = tenant;
         return this;
     }
     
+    public IdentityServiceAzureADConfig(){}
 }

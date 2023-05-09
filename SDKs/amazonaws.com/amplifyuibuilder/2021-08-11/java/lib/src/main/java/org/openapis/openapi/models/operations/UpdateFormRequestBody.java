@@ -12,9 +12,13 @@ public class UpdateFormRequestBody {
      */
     @JsonProperty("updatedForm")
     public UpdateFormRequestBodyUpdatedForm updatedForm;
+
     public UpdateFormRequestBody withUpdatedForm(UpdateFormRequestBodyUpdatedForm updatedForm) {
         this.updatedForm = updatedForm;
         return this;
     }
     
+    public UpdateFormRequestBody(@JsonProperty("updatedForm") UpdateFormRequestBodyUpdatedForm updatedForm) {
+        this.updatedForm = updatedForm;
+  }
 }

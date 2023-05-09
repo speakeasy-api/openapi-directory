@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutDeliveryChannelResponse {
     
     public String contentType;
+
     public PutDeliveryChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutDeliveryChannelResponse {
      */
     
     public Object insufficientDeliveryPolicyException;
+
     public PutDeliveryChannelResponse withInsufficientDeliveryPolicyException(Object insufficientDeliveryPolicyException) {
         this.insufficientDeliveryPolicyException = insufficientDeliveryPolicyException;
         return this;
@@ -29,6 +32,7 @@ public class PutDeliveryChannelResponse {
      */
     
     public Object invalidDeliveryChannelNameException;
+
     public PutDeliveryChannelResponse withInvalidDeliveryChannelNameException(Object invalidDeliveryChannelNameException) {
         this.invalidDeliveryChannelNameException = invalidDeliveryChannelNameException;
         return this;
@@ -39,6 +43,7 @@ public class PutDeliveryChannelResponse {
      */
     
     public Object invalidS3KeyPrefixException;
+
     public PutDeliveryChannelResponse withInvalidS3KeyPrefixException(Object invalidS3KeyPrefixException) {
         this.invalidS3KeyPrefixException = invalidS3KeyPrefixException;
         return this;
@@ -49,6 +54,7 @@ public class PutDeliveryChannelResponse {
      */
     
     public Object invalidS3KmsKeyArnException;
+
     public PutDeliveryChannelResponse withInvalidS3KmsKeyArnException(Object invalidS3KmsKeyArnException) {
         this.invalidS3KmsKeyArnException = invalidS3KmsKeyArnException;
         return this;
@@ -59,6 +65,7 @@ public class PutDeliveryChannelResponse {
      */
     
     public Object invalidSNSTopicARNException;
+
     public PutDeliveryChannelResponse withInvalidSNSTopicARNException(Object invalidSNSTopicARNException) {
         this.invalidSNSTopicARNException = invalidSNSTopicARNException;
         return this;
@@ -69,6 +76,7 @@ public class PutDeliveryChannelResponse {
      */
     
     public Object maxNumberOfDeliveryChannelsExceededException;
+
     public PutDeliveryChannelResponse withMaxNumberOfDeliveryChannelsExceededException(Object maxNumberOfDeliveryChannelsExceededException) {
         this.maxNumberOfDeliveryChannelsExceededException = maxNumberOfDeliveryChannelsExceededException;
         return this;
@@ -79,6 +87,7 @@ public class PutDeliveryChannelResponse {
      */
     
     public Object noAvailableConfigurationRecorderException;
+
     public PutDeliveryChannelResponse withNoAvailableConfigurationRecorderException(Object noAvailableConfigurationRecorderException) {
         this.noAvailableConfigurationRecorderException = noAvailableConfigurationRecorderException;
         return this;
@@ -89,6 +98,7 @@ public class PutDeliveryChannelResponse {
      */
     
     public Object noSuchBucketException;
+
     public PutDeliveryChannelResponse withNoSuchBucketException(Object noSuchBucketException) {
         this.noSuchBucketException = noSuchBucketException;
         return this;
@@ -96,6 +106,7 @@ public class PutDeliveryChannelResponse {
     
     
     public Integer statusCode;
+
     public PutDeliveryChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class PutDeliveryChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutDeliveryChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutDeliveryChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class CollectionVersions {
      */
     @JsonProperty("id")
     public Long id;
+
     public CollectionVersions withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +23,14 @@ public class CollectionVersions {
      */
     @JsonProperty("url")
     public String url;
+
     public CollectionVersions withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CollectionVersions(@JsonProperty("id") Long id, @JsonProperty("url") String url) {
+        this.id = id;
+        this.url = url;
+  }
 }

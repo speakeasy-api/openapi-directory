@@ -18,6 +18,7 @@ public class GoogleSecuritySafebrowsingV4ThreatEntryMetadataMetadataEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GoogleSecuritySafebrowsingV4ThreatEntryMetadataMetadataEntry withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class GoogleSecuritySafebrowsingV4ThreatEntryMetadataMetadataEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleSecuritySafebrowsingV4ThreatEntryMetadataMetadataEntry withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleSecuritySafebrowsingV4ThreatEntryMetadataMetadataEntry(){}
 }

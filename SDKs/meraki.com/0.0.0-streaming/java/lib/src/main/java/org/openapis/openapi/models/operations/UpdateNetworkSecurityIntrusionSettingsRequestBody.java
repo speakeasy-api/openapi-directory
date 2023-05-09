@@ -15,6 +15,7 @@ public class UpdateNetworkSecurityIntrusionSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idsRulesets")
     public UpdateNetworkSecurityIntrusionSettingsRequestBodyIdsRulesetsEnum idsRulesets;
+
     public UpdateNetworkSecurityIntrusionSettingsRequestBody withIdsRulesets(UpdateNetworkSecurityIntrusionSettingsRequestBodyIdsRulesetsEnum idsRulesets) {
         this.idsRulesets = idsRulesets;
         return this;
@@ -26,6 +27,7 @@ public class UpdateNetworkSecurityIntrusionSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public UpdateNetworkSecurityIntrusionSettingsRequestBodyModeEnum mode;
+
     public UpdateNetworkSecurityIntrusionSettingsRequestBody withMode(UpdateNetworkSecurityIntrusionSettingsRequestBodyModeEnum mode) {
         this.mode = mode;
         return this;
@@ -37,9 +39,11 @@ public class UpdateNetworkSecurityIntrusionSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protectedNetworks")
     public UpdateNetworkSecurityIntrusionSettingsRequestBodyProtectedNetworks protectedNetworks;
+
     public UpdateNetworkSecurityIntrusionSettingsRequestBody withProtectedNetworks(UpdateNetworkSecurityIntrusionSettingsRequestBodyProtectedNetworks protectedNetworks) {
         this.protectedNetworks = protectedNetworks;
         return this;
     }
     
+    public UpdateNetworkSecurityIntrusionSettingsRequestBody(){}
 }

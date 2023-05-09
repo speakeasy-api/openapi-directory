@@ -12,9 +12,11 @@ public class UpdatePaginationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxTotalHits")
     public Double maxTotalHits;
+
     public UpdatePaginationRequestBody withMaxTotalHits(Double maxTotalHits) {
         this.maxTotalHits = maxTotalHits;
         return this;
     }
     
+    public UpdatePaginationRequestBody(){}
 }

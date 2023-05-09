@@ -12,6 +12,7 @@ public class ControllersPackageItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ControllersPackageItem withName(String name) {
         this.name = name;
         return this;
@@ -20,6 +21,7 @@ public class ControllersPackageItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public ControllersPackageItem withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -28,6 +30,7 @@ public class ControllersPackageItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systems_installed")
     public Long systemsInstalled;
+
     public ControllersPackageItem withSystemsInstalled(Long systemsInstalled) {
         this.systemsInstalled = systemsInstalled;
         return this;
@@ -36,9 +39,11 @@ public class ControllersPackageItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systems_updatable")
     public Long systemsUpdatable;
+
     public ControllersPackageItem withSystemsUpdatable(Long systemsUpdatable) {
         this.systemsUpdatable = systemsUpdatable;
         return this;
     }
     
+    public ControllersPackageItem(){}
 }

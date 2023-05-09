@@ -15,6 +15,7 @@ public class ConfigModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configId")
     public String configId;
+
     public ConfigModel withConfigId(String configId) {
         this.configId = configId;
         return this;
@@ -23,6 +24,7 @@ public class ConfigModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ConfigModel withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class ConfigModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConfigModel withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class ConfigModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Integer order;
+
     public ConfigModel withOrder(Integer order) {
         this.order = order;
         return this;
@@ -47,9 +51,11 @@ public class ConfigModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public ProductModel product;
+
     public ConfigModel withProduct(ProductModel product) {
         this.product = product;
         return this;
     }
     
+    public ConfigModel(){}
 }

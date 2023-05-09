@@ -15,6 +15,7 @@ public class DescribeFileSystemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystems")
     public FileSystemDescription[] fileSystems;
+
     public DescribeFileSystemsResponse withFileSystems(FileSystemDescription[] fileSystems) {
         this.fileSystems = fileSystems;
         return this;
@@ -23,6 +24,7 @@ public class DescribeFileSystemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeFileSystemsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -31,9 +33,11 @@ public class DescribeFileSystemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public DescribeFileSystemsResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public DescribeFileSystemsResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV2ExternalEmailsJsonRequestBody {
@@ -12,6 +13,7 @@ public class PostV2ExternalEmailsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=mailbox")
     public String mailbox;
+
     public PostV2ExternalEmailsJsonRequestBody withMailbox(String mailbox) {
         this.mailbox = mailbox;
         return this;
@@ -22,9 +24,14 @@ public class PostV2ExternalEmailsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=raw")
     public String raw;
+
     public PostV2ExternalEmailsJsonRequestBody withRaw(String raw) {
         this.raw = raw;
         return this;
     }
     
+    public PostV2ExternalEmailsJsonRequestBody(@JsonProperty("mailbox") String mailbox, @JsonProperty("raw") String raw) {
+        this.mailbox = mailbox;
+        this.raw = raw;
+  }
 }

@@ -15,9 +15,11 @@ public class PropertyNameSuggestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PropertyName")
     public String propertyName;
+
     public PropertyNameSuggestion withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
     }
     
+    public PropertyNameSuggestion(){}
 }

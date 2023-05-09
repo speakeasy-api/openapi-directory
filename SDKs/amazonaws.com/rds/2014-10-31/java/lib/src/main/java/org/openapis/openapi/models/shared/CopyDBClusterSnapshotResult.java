@@ -15,9 +15,11 @@ public class CopyDBClusterSnapshotResult {
      */
     
     public DBClusterSnapshot dbClusterSnapshot;
+
     public CopyDBClusterSnapshotResult withDBClusterSnapshot(DBClusterSnapshot dbClusterSnapshot) {
         this.dbClusterSnapshot = dbClusterSnapshot;
         return this;
     }
     
+    public CopyDBClusterSnapshotResult(){}
 }

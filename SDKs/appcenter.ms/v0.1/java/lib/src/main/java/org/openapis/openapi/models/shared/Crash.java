@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Crash {
     @JsonProperty("build")
     public String build;
+
     public Crash withBuild(String build) {
         this.build = build;
         return this;
@@ -26,6 +27,7 @@ public class Crash {
     
     @JsonProperty("crash_id")
     public String crashId;
+
     public Crash withCrashId(String crashId) {
         this.crashId = crashId;
         return this;
@@ -34,6 +36,7 @@ public class Crash {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public CrashDetails details;
+
     public Crash withDetails(CrashDetails details) {
         this.details = details;
         return this;
@@ -41,6 +44,7 @@ public class Crash {
     
     @JsonProperty("device")
     public String device;
+
     public Crash withDevice(String device) {
         this.device = device;
         return this;
@@ -49,6 +53,7 @@ public class Crash {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device_name")
     public String deviceName;
+
     public Crash withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -57,6 +62,7 @@ public class Crash {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_id")
     public String displayId;
+
     public Crash withDisplayId(String displayId) {
         this.displayId = displayId;
         return this;
@@ -64,6 +70,7 @@ public class Crash {
     
     @JsonProperty("new_crash_group_id")
     public String newCrashGroupId;
+
     public Crash withNewCrashGroupId(String newCrashGroupId) {
         this.newCrashGroupId = newCrashGroupId;
         return this;
@@ -71,6 +78,7 @@ public class Crash {
     
     @JsonProperty("new_crash_id")
     public String newCrashId;
+
     public Crash withNewCrashId(String newCrashId) {
         this.newCrashId = newCrashId;
         return this;
@@ -79,6 +87,7 @@ public class Crash {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os_type")
     public String osType;
+
     public Crash withOsType(String osType) {
         this.osType = osType;
         return this;
@@ -86,6 +95,7 @@ public class Crash {
     
     @JsonProperty("os_version")
     public String osVersion;
+
     public Crash withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -97,6 +107,7 @@ public class Crash {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stacktrace")
     public Stacktrace stacktrace;
+
     public Crash withStacktrace(Stacktrace stacktrace) {
         this.stacktrace = stacktrace;
         return this;
@@ -106,6 +117,7 @@ public class Crash {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public Crash withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -114,6 +126,7 @@ public class Crash {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_email")
     public String userEmail;
+
     public Crash withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
@@ -121,6 +134,7 @@ public class Crash {
     
     @JsonProperty("user_name")
     public String userName;
+
     public Crash withUserName(String userName) {
         this.userName = userName;
         return this;
@@ -128,9 +142,21 @@ public class Crash {
     
     @JsonProperty("version")
     public String version;
+
     public Crash withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Crash(@JsonProperty("build") String build, @JsonProperty("crash_id") String crashId, @JsonProperty("device") String device, @JsonProperty("new_crash_group_id") String newCrashGroupId, @JsonProperty("new_crash_id") String newCrashId, @JsonProperty("os_version") String osVersion, @JsonProperty("timestamp") OffsetDateTime timestamp, @JsonProperty("user_name") String userName, @JsonProperty("version") String version) {
+        this.build = build;
+        this.crashId = crashId;
+        this.device = device;
+        this.newCrashGroupId = newCrashGroupId;
+        this.newCrashId = newCrashId;
+        this.osVersion = osVersion;
+        this.timestamp = timestamp;
+        this.userName = userName;
+        this.version = version;
+  }
 }

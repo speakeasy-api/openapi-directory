@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * VerifyDomainIdentityRequest - Represents a request to begin Amazon SES domain verification and to generate the TXT records that you must publish to the DNS server of your domain to complete the verification. For information about domain verification, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class VerifyDomainIdentityRequest {
     
     public String domain;
+
     public VerifyDomainIdentityRequest withDomain(String domain) {
         this.domain = domain;
         return this;
     }
     
+    public VerifyDomainIdentityRequest(@JsonProperty("Domain") String domain) {
+        this.domain = domain;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PolicyARNType {
     
     public Alarm[] alarms;
+
     public PolicyARNType withAlarms(Alarm[] alarms) {
         this.alarms = alarms;
         return this;
@@ -19,9 +20,11 @@ public class PolicyARNType {
     
     
     public String policyARN;
+
     public PolicyARNType withPolicyARN(String policyARN) {
         this.policyARN = policyARN;
         return this;
     }
     
+    public PolicyARNType(){}
 }

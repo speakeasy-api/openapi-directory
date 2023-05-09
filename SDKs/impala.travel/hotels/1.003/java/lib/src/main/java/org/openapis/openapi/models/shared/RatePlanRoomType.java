@@ -12,6 +12,7 @@ public class RatePlanRoomType {
      */
     @JsonProperty("dates")
     public RatesPerDate[] dates;
+
     public RatePlanRoomType withDates(RatesPerDate[] dates) {
         this.dates = dates;
         return this;
@@ -22,6 +23,7 @@ public class RatePlanRoomType {
      */
     @JsonProperty("maxOccupancy")
     public Double maxOccupancy;
+
     public RatePlanRoomType withMaxOccupancy(Double maxOccupancy) {
         this.maxOccupancy = maxOccupancy;
         return this;
@@ -32,6 +34,7 @@ public class RatePlanRoomType {
      */
     @JsonProperty("name")
     public String name;
+
     public RatePlanRoomType withName(String name) {
         this.name = name;
         return this;
@@ -42,9 +45,16 @@ public class RatePlanRoomType {
      */
     @JsonProperty("roomTypeId")
     public String roomTypeId;
+
     public RatePlanRoomType withRoomTypeId(String roomTypeId) {
         this.roomTypeId = roomTypeId;
         return this;
     }
     
+    public RatePlanRoomType(@JsonProperty("dates") RatesPerDate[] dates, @JsonProperty("maxOccupancy") Double maxOccupancy, @JsonProperty("name") String name, @JsonProperty("roomTypeId") String roomTypeId) {
+        this.dates = dates;
+        this.maxOccupancy = maxOccupancy;
+        this.name = name;
+        this.roomTypeId = roomTypeId;
+  }
 }

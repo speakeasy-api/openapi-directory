@@ -12,9 +12,11 @@ public class GetNumbersOrdinalRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
     public Long number;
+
     public GetNumbersOrdinalRequest withNumber(Long number) {
         this.number = number;
         return this;
     }
     
+    public GetNumbersOrdinalRequest(){}
 }

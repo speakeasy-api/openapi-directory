@@ -15,6 +15,7 @@ public class Predicate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Conditions")
     public Condition[] conditions;
+
     public Predicate withConditions(Condition[] conditions) {
         this.conditions = conditions;
         return this;
@@ -23,9 +24,11 @@ public class Predicate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Logical")
     public LogicalEnum logical;
+
     public Predicate withLogical(LogicalEnum logical) {
         this.logical = logical;
         return this;
     }
     
+    public Predicate(){}
 }

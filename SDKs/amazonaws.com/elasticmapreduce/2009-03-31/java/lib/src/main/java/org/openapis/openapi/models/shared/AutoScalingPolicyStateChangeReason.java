@@ -15,6 +15,7 @@ public class AutoScalingPolicyStateChangeReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public AutoScalingPolicyStateChangeReasonCodeEnum code;
+
     public AutoScalingPolicyStateChangeReason withCode(AutoScalingPolicyStateChangeReasonCodeEnum code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class AutoScalingPolicyStateChangeReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public AutoScalingPolicyStateChangeReason withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AutoScalingPolicyStateChangeReason(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFleetsResponse {
     
     public String contentType;
+
     public ListFleetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListFleetsResponse {
      */
     
     public Object internalServerException;
+
     public ListFleetsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListFleetsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListFleetsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListFleetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFleetsResponse listFleetsResponse;
+
     public ListFleetsResponse withListFleetsResponse(org.openapis.openapi.models.shared.ListFleetsResponse listFleetsResponse) {
         this.listFleetsResponse = listFleetsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListFleetsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListFleetsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListFleetsResponse {
     
     
     public Integer statusCode;
+
     public ListFleetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListFleetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFleetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListFleetsResponse {
      */
     
     public Object throttlingException;
+
     public ListFleetsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListFleetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

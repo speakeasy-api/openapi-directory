@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetReferenceMetadataResponse {
@@ -12,6 +13,7 @@ public class GetReferenceMetadataResponse {
      */
     
     public Object accessDeniedException;
+
     public GetReferenceMetadataResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetReferenceMetadataResponse {
     
     
     public String contentType;
+
     public GetReferenceMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetReferenceMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.GetReferenceMetadataResponse getReferenceMetadataResponse;
+
     public GetReferenceMetadataResponse withGetReferenceMetadataResponse(org.openapis.openapi.models.shared.GetReferenceMetadataResponse getReferenceMetadataResponse) {
         this.getReferenceMetadataResponse = getReferenceMetadataResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetReferenceMetadataResponse {
      */
     
     public Object internalServerException;
+
     public GetReferenceMetadataResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetReferenceMetadataResponse {
      */
     
     public Object requestTimeoutException;
+
     public GetReferenceMetadataResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -59,6 +65,7 @@ public class GetReferenceMetadataResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetReferenceMetadataResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetReferenceMetadataResponse {
     
     
     public Integer statusCode;
+
     public GetReferenceMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetReferenceMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetReferenceMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetReferenceMetadataResponse {
      */
     
     public Object throttlingException;
+
     public GetReferenceMetadataResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class GetReferenceMetadataResponse {
      */
     
     public Object validationException;
+
     public GetReferenceMetadataResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetReferenceMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

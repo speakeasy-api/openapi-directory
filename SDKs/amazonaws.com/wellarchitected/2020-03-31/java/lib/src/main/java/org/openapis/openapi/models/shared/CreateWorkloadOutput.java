@@ -18,6 +18,7 @@ public class CreateWorkloadOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkloadArn")
     public String workloadArn;
+
     public CreateWorkloadOutput withWorkloadArn(String workloadArn) {
         this.workloadArn = workloadArn;
         return this;
@@ -29,9 +30,11 @@ public class CreateWorkloadOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkloadId")
     public String workloadId;
+
     public CreateWorkloadOutput withWorkloadId(String workloadId) {
         this.workloadId = workloadId;
         return this;
     }
     
+    public CreateWorkloadOutput(){}
 }

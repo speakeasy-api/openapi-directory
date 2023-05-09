@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StartNetworkInsightsAnalysisRequest {
     
     public String[] additionalAccounts;
+
     public StartNetworkInsightsAnalysisRequest withAdditionalAccounts(String[] additionalAccounts) {
         this.additionalAccounts = additionalAccounts;
         return this;
@@ -16,6 +17,7 @@ public class StartNetworkInsightsAnalysisRequest {
     
     
     public String clientToken;
+
     public StartNetworkInsightsAnalysisRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +25,7 @@ public class StartNetworkInsightsAnalysisRequest {
     
     
     public Boolean dryRun;
+
     public StartNetworkInsightsAnalysisRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class StartNetworkInsightsAnalysisRequest {
     
     
     public String[] filterInArns;
+
     public StartNetworkInsightsAnalysisRequest withFilterInArns(String[] filterInArns) {
         this.filterInArns = filterInArns;
         return this;
@@ -37,6 +41,7 @@ public class StartNetworkInsightsAnalysisRequest {
     
     
     public String networkInsightsPathId;
+
     public StartNetworkInsightsAnalysisRequest withNetworkInsightsPathId(String networkInsightsPathId) {
         this.networkInsightsPathId = networkInsightsPathId;
         return this;
@@ -44,9 +49,14 @@ public class StartNetworkInsightsAnalysisRequest {
     
     
     public StartNetworkInsightsAnalysisRequestTagSpecifications[] tagSpecifications;
+
     public StartNetworkInsightsAnalysisRequest withTagSpecifications(StartNetworkInsightsAnalysisRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public StartNetworkInsightsAnalysisRequest(@JsonProperty("ClientToken") String clientToken, @JsonProperty("NetworkInsightsPathId") String networkInsightsPathId) {
+        this.clientToken = clientToken;
+        this.networkInsightsPathId = networkInsightsPathId;
+  }
 }

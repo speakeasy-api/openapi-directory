@@ -15,9 +15,11 @@ public class NAWelcomeGlobalInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_tags")
     public Boolean showTags;
+
     public NAWelcomeGlobalInfo withShowTags(Boolean showTags) {
         this.showTags = showTags;
         return this;
     }
     
+    public NAWelcomeGlobalInfo(){}
 }

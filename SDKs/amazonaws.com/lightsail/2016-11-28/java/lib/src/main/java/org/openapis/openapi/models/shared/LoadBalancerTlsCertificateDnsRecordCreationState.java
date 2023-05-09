@@ -15,6 +15,7 @@ public class LoadBalancerTlsCertificateDnsRecordCreationState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public LoadBalancerTlsCertificateDnsRecordCreationStateCodeEnum code;
+
     public LoadBalancerTlsCertificateDnsRecordCreationState withCode(LoadBalancerTlsCertificateDnsRecordCreationStateCodeEnum code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class LoadBalancerTlsCertificateDnsRecordCreationState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public LoadBalancerTlsCertificateDnsRecordCreationState withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public LoadBalancerTlsCertificateDnsRecordCreationState(){}
 }

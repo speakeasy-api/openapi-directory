@@ -15,6 +15,7 @@ public class Hash {
      */
     
     public String md5;
+
     public Hash withMd5(String md5) {
         this.md5 = md5;
         return this;
@@ -25,6 +26,7 @@ public class Hash {
      */
     
     public String sha1;
+
     public Hash withSha1(String sha1) {
         this.sha1 = sha1;
         return this;
@@ -35,9 +37,11 @@ public class Hash {
      */
     
     public String sha256;
+
     public Hash withSha256(String sha256) {
         this.sha256 = sha256;
         return this;
     }
     
+    public Hash(){}
 }

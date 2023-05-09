@@ -12,9 +12,13 @@ public class CommitTransactionRequestBody {
      */
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public CommitTransactionRequestBody withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public CommitTransactionRequestBody(@JsonProperty("TransactionId") String transactionId) {
+        this.transactionId = transactionId;
+  }
 }

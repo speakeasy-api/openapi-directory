@@ -18,6 +18,7 @@ public class UrlMapsAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public UrlMapsAggregatedListWarningCodeEnum code;
+
     public UrlMapsAggregatedListWarning withCode(UrlMapsAggregatedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class UrlMapsAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public UrlMapsAggregatedListWarningData[] data;
+
     public UrlMapsAggregatedListWarning withData(UrlMapsAggregatedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class UrlMapsAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public UrlMapsAggregatedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public UrlMapsAggregatedListWarning(){}
 }

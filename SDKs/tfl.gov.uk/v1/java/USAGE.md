@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.AccidentStatsGetRequest;
 import org.openapis.openapi.models.operations.AccidentStatsGetResponse;
 
@@ -13,17 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AccidentStatsGetRequest req = new AccidentStatsGetRequest() {{
-                year = 548814;
-            }}            
+            AccidentStatsGetRequest req = new AccidentStatsGetRequest(548814);            
 
             AccidentStatsGetResponse res = sdk.accidentStats.accidentStatsGet(req);
 
-            if (res.tflApiPresentationEntitiesAccidentStatsAccidentDetails.isPresent()) {
+            if (res.tflApiPresentationEntitiesAccidentStatsAccidentDetails != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

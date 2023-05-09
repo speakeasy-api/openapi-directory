@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetOrganizationCustomRulePolicyRequest {
     @JsonProperty("OrganizationConfigRuleName")
     public String organizationConfigRuleName;
+
     public GetOrganizationCustomRulePolicyRequest withOrganizationConfigRuleName(String organizationConfigRuleName) {
         this.organizationConfigRuleName = organizationConfigRuleName;
         return this;
     }
     
+    public GetOrganizationCustomRulePolicyRequest(@JsonProperty("OrganizationConfigRuleName") String organizationConfigRuleName) {
+        this.organizationConfigRuleName = organizationConfigRuleName;
+  }
 }

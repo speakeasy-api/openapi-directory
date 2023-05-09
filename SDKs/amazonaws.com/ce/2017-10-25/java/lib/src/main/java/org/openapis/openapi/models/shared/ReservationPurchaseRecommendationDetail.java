@@ -15,6 +15,7 @@ public class ReservationPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public ReservationPurchaseRecommendationDetail withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class ReservationPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageNormalizedUnitsUsedPerHour")
     public String averageNormalizedUnitsUsedPerHour;
+
     public ReservationPurchaseRecommendationDetail withAverageNormalizedUnitsUsedPerHour(String averageNormalizedUnitsUsedPerHour) {
         this.averageNormalizedUnitsUsedPerHour = averageNormalizedUnitsUsedPerHour;
         return this;
@@ -31,6 +33,7 @@ public class ReservationPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageNumberOfInstancesUsedPerHour")
     public String averageNumberOfInstancesUsedPerHour;
+
     public ReservationPurchaseRecommendationDetail withAverageNumberOfInstancesUsedPerHour(String averageNumberOfInstancesUsedPerHour) {
         this.averageNumberOfInstancesUsedPerHour = averageNumberOfInstancesUsedPerHour;
         return this;
@@ -39,6 +42,7 @@ public class ReservationPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageUtilization")
     public String averageUtilization;
+
     public ReservationPurchaseRecommendationDetail withAverageUtilization(String averageUtilization) {
         this.averageUtilization = averageUtilization;
         return this;
@@ -47,6 +51,7 @@ public class ReservationPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrencyCode")
     public String currencyCode;
+
     public ReservationPurchaseRecommendationDetail withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -55,6 +60,7 @@ public class ReservationPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedBreakEvenInMonths")
     public String estimatedBreakEvenInMonths;
+
     public ReservationPurchaseRecommendationDetail withEstimatedBreakEvenInMonths(String estimatedBreakEvenInMonths) {
         this.estimatedBreakEvenInMonths = estimatedBreakEvenInMonths;
         return this;
@@ -63,6 +69,7 @@ public class ReservationPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedMonthlyOnDemandCost")
     public String estimatedMonthlyOnDemandCost;
+
     public ReservationPurchaseRecommendationDetail withEstimatedMonthlyOnDemandCost(String estimatedMonthlyOnDemandCost) {
         this.estimatedMonthlyOnDemandCost = estimatedMonthlyOnDemandCost;
         return this;
@@ -71,6 +78,7 @@ public class ReservationPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedMonthlySavingsAmount")
     public String estimatedMonthlySavingsAmount;
+
     public ReservationPurchaseRecommendationDetail withEstimatedMonthlySavingsAmount(String estimatedMonthlySavingsAmount) {
         this.estimatedMonthlySavingsAmount = estimatedMonthlySavingsAmount;
         return this;
@@ -79,6 +87,7 @@ public class ReservationPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedMonthlySavingsPercentage")
     public String estimatedMonthlySavingsPercentage;
+
     public ReservationPurchaseRecommendationDetail withEstimatedMonthlySavingsPercentage(String estimatedMonthlySavingsPercentage) {
         this.estimatedMonthlySavingsPercentage = estimatedMonthlySavingsPercentage;
         return this;
@@ -87,6 +96,7 @@ public class ReservationPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedReservationCostForLookbackPeriod")
     public String estimatedReservationCostForLookbackPeriod;
+
     public ReservationPurchaseRecommendationDetail withEstimatedReservationCostForLookbackPeriod(String estimatedReservationCostForLookbackPeriod) {
         this.estimatedReservationCostForLookbackPeriod = estimatedReservationCostForLookbackPeriod;
         return this;
@@ -95,6 +105,7 @@ public class ReservationPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceDetails")
     public InstanceDetails instanceDetails;
+
     public ReservationPurchaseRecommendationDetail withInstanceDetails(InstanceDetails instanceDetails) {
         this.instanceDetails = instanceDetails;
         return this;
@@ -103,6 +114,7 @@ public class ReservationPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumNormalizedUnitsUsedPerHour")
     public String maximumNormalizedUnitsUsedPerHour;
+
     public ReservationPurchaseRecommendationDetail withMaximumNormalizedUnitsUsedPerHour(String maximumNormalizedUnitsUsedPerHour) {
         this.maximumNormalizedUnitsUsedPerHour = maximumNormalizedUnitsUsedPerHour;
         return this;
@@ -111,6 +123,7 @@ public class ReservationPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumNumberOfInstancesUsedPerHour")
     public String maximumNumberOfInstancesUsedPerHour;
+
     public ReservationPurchaseRecommendationDetail withMaximumNumberOfInstancesUsedPerHour(String maximumNumberOfInstancesUsedPerHour) {
         this.maximumNumberOfInstancesUsedPerHour = maximumNumberOfInstancesUsedPerHour;
         return this;
@@ -119,6 +132,7 @@ public class ReservationPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinimumNormalizedUnitsUsedPerHour")
     public String minimumNormalizedUnitsUsedPerHour;
+
     public ReservationPurchaseRecommendationDetail withMinimumNormalizedUnitsUsedPerHour(String minimumNormalizedUnitsUsedPerHour) {
         this.minimumNormalizedUnitsUsedPerHour = minimumNormalizedUnitsUsedPerHour;
         return this;
@@ -127,6 +141,7 @@ public class ReservationPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinimumNumberOfInstancesUsedPerHour")
     public String minimumNumberOfInstancesUsedPerHour;
+
     public ReservationPurchaseRecommendationDetail withMinimumNumberOfInstancesUsedPerHour(String minimumNumberOfInstancesUsedPerHour) {
         this.minimumNumberOfInstancesUsedPerHour = minimumNumberOfInstancesUsedPerHour;
         return this;
@@ -135,6 +150,7 @@ public class ReservationPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendedNormalizedUnitsToPurchase")
     public String recommendedNormalizedUnitsToPurchase;
+
     public ReservationPurchaseRecommendationDetail withRecommendedNormalizedUnitsToPurchase(String recommendedNormalizedUnitsToPurchase) {
         this.recommendedNormalizedUnitsToPurchase = recommendedNormalizedUnitsToPurchase;
         return this;
@@ -143,6 +159,7 @@ public class ReservationPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendedNumberOfInstancesToPurchase")
     public String recommendedNumberOfInstancesToPurchase;
+
     public ReservationPurchaseRecommendationDetail withRecommendedNumberOfInstancesToPurchase(String recommendedNumberOfInstancesToPurchase) {
         this.recommendedNumberOfInstancesToPurchase = recommendedNumberOfInstancesToPurchase;
         return this;
@@ -151,6 +168,7 @@ public class ReservationPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecurringStandardMonthlyCost")
     public String recurringStandardMonthlyCost;
+
     public ReservationPurchaseRecommendationDetail withRecurringStandardMonthlyCost(String recurringStandardMonthlyCost) {
         this.recurringStandardMonthlyCost = recurringStandardMonthlyCost;
         return this;
@@ -159,9 +177,11 @@ public class ReservationPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpfrontCost")
     public String upfrontCost;
+
     public ReservationPurchaseRecommendationDetail withUpfrontCost(String upfrontCost) {
         this.upfrontCost = upfrontCost;
         return this;
     }
     
+    public ReservationPurchaseRecommendationDetail(){}
 }

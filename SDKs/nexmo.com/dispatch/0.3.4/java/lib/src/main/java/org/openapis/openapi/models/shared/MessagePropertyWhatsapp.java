@@ -15,6 +15,7 @@ public class MessagePropertyWhatsapp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public MessagePropertyWhatsapp withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -26,9 +27,11 @@ public class MessagePropertyWhatsapp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public MessagePropertyWhatsappPolicyEnum policy;
+
     public MessagePropertyWhatsapp withPolicy(MessagePropertyWhatsappPolicyEnum policy) {
         this.policy = policy;
         return this;
     }
     
+    public MessagePropertyWhatsapp(){}
 }

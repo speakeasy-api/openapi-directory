@@ -58,11 +58,9 @@ public class Catalogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsCreateResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsCreateResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsCreateResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class Catalogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsListResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsListResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsListResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class Catalogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsCreateResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsCreateResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsCreateResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,11 +189,9 @@ public class Catalogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -240,11 +232,9 @@ public class Catalogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsListResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsListResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsListResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -287,11 +277,9 @@ public class Catalogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCopyResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCopyResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCopyResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCopyResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -334,11 +322,9 @@ public class Catalogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCreateResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCreateResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCreateResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -381,11 +367,9 @@ public class Catalogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsIconsUploadResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsIconsUploadResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsIconsUploadResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsIconsUploadResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -426,11 +410,9 @@ public class Catalogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsListResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsListResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsListResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -473,11 +455,9 @@ public class Catalogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsCreateResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsCreateResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsCreateResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -518,11 +498,9 @@ public class Catalogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsDeleteResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsDeleteResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsDeleteResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -563,11 +541,9 @@ public class Catalogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsGetResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsGetResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsGetResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsGetResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -608,11 +584,9 @@ public class Catalogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsListResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsListResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsListResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -655,11 +629,9 @@ public class Catalogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsPatchResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsPatchResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsPatchResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsPatchResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -702,11 +674,9 @@ public class Catalogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -749,11 +719,9 @@ public class Catalogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -796,11 +764,9 @@ public class Catalogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsUndeleteResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsUndeleteResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsUndeleteResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsUndeleteResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

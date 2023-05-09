@@ -58,10 +58,8 @@ public class RegionOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionOperationsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionOperationsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class RegionOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionOperationsGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionOperationsGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,11 +140,9 @@ public class RegionOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionOperationsListResponse res = new org.openapis.openapi.models.operations.ComputeRegionOperationsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionOperationsListResponse res = new org.openapis.openapi.models.operations.ComputeRegionOperationsListResponse(contentType, httpRes.statusCode()) {{
             operationList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -190,11 +184,9 @@ public class RegionOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionOperationsWaitResponse res = new org.openapis.openapi.models.operations.ComputeRegionOperationsWaitResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionOperationsWaitResponse res = new org.openapis.openapi.models.operations.ComputeRegionOperationsWaitResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

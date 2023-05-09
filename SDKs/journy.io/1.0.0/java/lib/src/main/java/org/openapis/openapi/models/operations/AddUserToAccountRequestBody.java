@@ -15,6 +15,7 @@ public class AddUserToAccountRequestBody {
      */
     @JsonProperty("account")
     public AddUserToAccountRequestBodyAccount account;
+
     public AddUserToAccountRequestBody withAccount(AddUserToAccountRequestBodyAccount account) {
         this.account = account;
         return this;
@@ -22,9 +23,14 @@ public class AddUserToAccountRequestBody {
     
     @JsonProperty("users")
     public AddUserToAccountRequestBodyUsers[] users;
+
     public AddUserToAccountRequestBody withUsers(AddUserToAccountRequestBodyUsers[] users) {
         this.users = users;
         return this;
     }
     
+    public AddUserToAccountRequestBody(@JsonProperty("account") AddUserToAccountRequestBodyAccount account, @JsonProperty("users") AddUserToAccountRequestBodyUsers[] users) {
+        this.account = account;
+        this.users = users;
+  }
 }

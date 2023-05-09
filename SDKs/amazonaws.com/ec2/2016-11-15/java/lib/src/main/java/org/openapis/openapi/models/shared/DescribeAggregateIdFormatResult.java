@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAggregateIdFormatResult {
     
     public DescribeAggregateIdFormatResultStatuses[] statuses;
+
     public DescribeAggregateIdFormatResult withStatuses(DescribeAggregateIdFormatResultStatuses[] statuses) {
         this.statuses = statuses;
         return this;
@@ -19,9 +20,11 @@ public class DescribeAggregateIdFormatResult {
     
     
     public Boolean useLongIdsAggregated;
+
     public DescribeAggregateIdFormatResult withUseLongIdsAggregated(Boolean useLongIdsAggregated) {
         this.useLongIdsAggregated = useLongIdsAggregated;
         return this;
     }
     
+    public DescribeAggregateIdFormatResult(){}
 }

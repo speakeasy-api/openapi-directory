@@ -18,9 +18,11 @@ public class NetworkRoutingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routingMode")
     public NetworkRoutingConfigRoutingModeEnum routingMode;
+
     public NetworkRoutingConfig withRoutingMode(NetworkRoutingConfigRoutingModeEnum routingMode) {
         this.routingMode = routingMode;
         return this;
     }
     
+    public NetworkRoutingConfig(){}
 }

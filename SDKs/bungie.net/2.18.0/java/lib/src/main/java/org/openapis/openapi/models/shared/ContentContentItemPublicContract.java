@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class ContentContentItemPublicContract {
     
     public Boolean allowComments;
+
     public ContentContentItemPublicContract withAllowComments(Boolean allowComments) {
         this.allowComments = allowComments;
         return this;
@@ -16,6 +17,7 @@ public class ContentContentItemPublicContract {
     
     
     public UserGeneralUser author;
+
     public ContentContentItemPublicContract withAuthor(UserGeneralUser author) {
         this.author = author;
         return this;
@@ -23,6 +25,7 @@ public class ContentContentItemPublicContract {
     
     
     public Boolean autoEnglishPropertyFallback;
+
     public ContentContentItemPublicContract withAutoEnglishPropertyFallback(Boolean autoEnglishPropertyFallback) {
         this.autoEnglishPropertyFallback = autoEnglishPropertyFallback;
         return this;
@@ -30,6 +33,7 @@ public class ContentContentItemPublicContract {
     
     
     public String cType;
+
     public ContentContentItemPublicContract withCType(String cType) {
         this.cType = cType;
         return this;
@@ -37,6 +41,7 @@ public class ContentContentItemPublicContract {
     
     
     public String cmsPath;
+
     public ContentContentItemPublicContract withCmsPath(String cmsPath) {
         this.cmsPath = cmsPath;
         return this;
@@ -44,6 +49,7 @@ public class ContentContentItemPublicContract {
     
     
     public ContentCommentSummary commentSummary;
+
     public ContentContentItemPublicContract withCommentSummary(ContentCommentSummary commentSummary) {
         this.commentSummary = commentSummary;
         return this;
@@ -51,6 +57,7 @@ public class ContentContentItemPublicContract {
     
     
     public Long contentId;
+
     public ContentContentItemPublicContract withContentId(Long contentId) {
         this.contentId = contentId;
         return this;
@@ -58,6 +65,7 @@ public class ContentContentItemPublicContract {
     
     
     public OffsetDateTime creationDate;
+
     public ContentContentItemPublicContract withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -65,6 +73,7 @@ public class ContentContentItemPublicContract {
     
     
     public Boolean hasAgeGate;
+
     public ContentContentItemPublicContract withHasAgeGate(Boolean hasAgeGate) {
         this.hasAgeGate = hasAgeGate;
         return this;
@@ -72,6 +81,7 @@ public class ContentContentItemPublicContract {
     
     
     public Integer minimumAge;
+
     public ContentContentItemPublicContract withMinimumAge(Integer minimumAge) {
         this.minimumAge = minimumAge;
         return this;
@@ -79,6 +89,7 @@ public class ContentContentItemPublicContract {
     
     
     public OffsetDateTime modifyDate;
+
     public ContentContentItemPublicContract withModifyDate(OffsetDateTime modifyDate) {
         this.modifyDate = modifyDate;
         return this;
@@ -90,6 +101,7 @@ public class ContentContentItemPublicContract {
      */
     
     public java.util.Map<String, java.util.Map<String, Object>> properties;
+
     public ContentContentItemPublicContract withProperties(java.util.Map<String, java.util.Map<String, Object>> properties) {
         this.properties = properties;
         return this;
@@ -97,6 +109,7 @@ public class ContentContentItemPublicContract {
     
     
     public String ratingImagePath;
+
     public ContentContentItemPublicContract withRatingImagePath(String ratingImagePath) {
         this.ratingImagePath = ratingImagePath;
         return this;
@@ -104,6 +117,7 @@ public class ContentContentItemPublicContract {
     
     
     public ContentContentRepresentation[] representations;
+
     public ContentContentItemPublicContract withRepresentations(ContentContentRepresentation[] representations) {
         this.representations = representations;
         return this;
@@ -114,9 +128,11 @@ public class ContentContentItemPublicContract {
      */
     
     public String[] tags;
+
     public ContentContentItemPublicContract withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ContentContentItemPublicContract(){}
 }

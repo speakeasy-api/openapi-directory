@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.RetrievePrefixPricingRequest;
 import org.openapis.openapi.models.operations.RetrievePrefixPricingResponse;
 
@@ -26,21 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            RetrievePrefixPricingRequest req = new RetrievePrefixPricingRequest() {{
-                apiKey = "corrupti";
-                apiSecret = "provident";
-                prefix = "distinctio";
-                type = "quibusdam";
-            }}            
+            RetrievePrefixPricingRequest req = new RetrievePrefixPricingRequest("corrupti", "provident", "distinctio", "quibusdam");            
 
             RetrievePrefixPricingResponse res = sdk.pricing.retrievePrefixPricing(req);
 
-            if (res.pricingCountriesResponse.isPresent()) {
+            if (res.pricingCountriesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -48,11 +44,11 @@ public class Application {
 ## Available Resources and Operations
 
 
-### pricing
+### [pricing](docs/pricing/README.md)
 
-* `retrievePrefixPricing` - Retrieve outbound pricing for a specific dialing prefix.
-* `retrievePricingAllCountries` - Retrieve outbound pricing for all countries.
-* `retrievePricingCountry` - Retrieve outbound pricing for a specific country.
+* [retrievePrefixPricing](docs/pricing/README.md#retrieveprefixpricing) - Retrieve outbound pricing for a specific dialing prefix.
+* [retrievePricingAllCountries](docs/pricing/README.md#retrievepricingallcountries) - Retrieve outbound pricing for all countries.
+* [retrievePricingCountry](docs/pricing/README.md#retrievepricingcountry) - Retrieve outbound pricing for a specific country.
 <!-- End SDK Available Operations -->
 
 ### Maturity

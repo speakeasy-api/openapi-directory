@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Blob {
     @JsonProperty("content")
     public String content;
+
     public Blob withContent(String content) {
         this.content = content;
         return this;
@@ -21,6 +22,7 @@ public class Blob {
     
     @JsonProperty("encoding")
     public String encoding;
+
     public Blob withEncoding(String encoding) {
         this.encoding = encoding;
         return this;
@@ -29,6 +31,7 @@ public class Blob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highlighted_content")
     public String highlightedContent;
+
     public Blob withHighlightedContent(String highlightedContent) {
         this.highlightedContent = highlightedContent;
         return this;
@@ -36,6 +39,7 @@ public class Blob {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public Blob withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -43,6 +47,7 @@ public class Blob {
     
     @JsonProperty("sha")
     public String sha;
+
     public Blob withSha(String sha) {
         this.sha = sha;
         return this;
@@ -50,6 +55,7 @@ public class Blob {
     
     @JsonProperty("size")
     public Long size;
+
     public Blob withSize(Long size) {
         this.size = size;
         return this;
@@ -57,9 +63,18 @@ public class Blob {
     
     @JsonProperty("url")
     public String url;
+
     public Blob withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Blob(@JsonProperty("content") String content, @JsonProperty("encoding") String encoding, @JsonProperty("node_id") String nodeId, @JsonProperty("sha") String sha, @JsonProperty("size") Long size, @JsonProperty("url") String url) {
+        this.content = content;
+        this.encoding = encoding;
+        this.nodeId = nodeId;
+        this.sha = sha;
+        this.size = size;
+        this.url = url;
+  }
 }

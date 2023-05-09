@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAccountsForProvisionedPermissionSetRequest {
     @JsonProperty("InstanceArn")
     public String instanceArn;
+
     public ListAccountsForProvisionedPermissionSetRequest withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
@@ -19,6 +20,7 @@ public class ListAccountsForProvisionedPermissionSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAccountsForProvisionedPermissionSetRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,6 +29,7 @@ public class ListAccountsForProvisionedPermissionSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAccountsForProvisionedPermissionSetRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -34,6 +37,7 @@ public class ListAccountsForProvisionedPermissionSetRequest {
     
     @JsonProperty("PermissionSetArn")
     public String permissionSetArn;
+
     public ListAccountsForProvisionedPermissionSetRequest withPermissionSetArn(String permissionSetArn) {
         this.permissionSetArn = permissionSetArn;
         return this;
@@ -42,9 +46,14 @@ public class ListAccountsForProvisionedPermissionSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningStatus")
     public ProvisioningStatusEnum provisioningStatus;
+
     public ListAccountsForProvisionedPermissionSetRequest withProvisioningStatus(ProvisioningStatusEnum provisioningStatus) {
         this.provisioningStatus = provisioningStatus;
         return this;
     }
     
+    public ListAccountsForProvisionedPermissionSetRequest(@JsonProperty("InstanceArn") String instanceArn, @JsonProperty("PermissionSetArn") String permissionSetArn) {
+        this.instanceArn = instanceArn;
+        this.permissionSetArn = permissionSetArn;
+  }
 }

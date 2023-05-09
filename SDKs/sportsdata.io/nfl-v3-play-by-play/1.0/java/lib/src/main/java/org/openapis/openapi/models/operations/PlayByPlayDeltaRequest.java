@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlayByPlayDeltaRequest {
@@ -12,6 +13,7 @@ public class PlayByPlayDeltaRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public PlayByPlayDeltaFormatEnum format;
+
     public PlayByPlayDeltaRequest withFormat(PlayByPlayDeltaFormatEnum format) {
         this.format = format;
         return this;
@@ -24,6 +26,7 @@ public class PlayByPlayDeltaRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=minutes")
     public String minutes;
+
     public PlayByPlayDeltaRequest withMinutes(String minutes) {
         this.minutes = minutes;
         return this;
@@ -36,6 +39,7 @@ public class PlayByPlayDeltaRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
     public String season;
+
     public PlayByPlayDeltaRequest withSeason(String season) {
         this.season = season;
         return this;
@@ -48,9 +52,16 @@ public class PlayByPlayDeltaRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=week")
     public String week;
+
     public PlayByPlayDeltaRequest withWeek(String week) {
         this.week = week;
         return this;
     }
     
+    public PlayByPlayDeltaRequest(@JsonProperty("format") PlayByPlayDeltaFormatEnum format, @JsonProperty("minutes") String minutes, @JsonProperty("season") String season, @JsonProperty("week") String week) {
+        this.format = format;
+        this.minutes = minutes;
+        this.season = season;
+        this.week = week;
+  }
 }

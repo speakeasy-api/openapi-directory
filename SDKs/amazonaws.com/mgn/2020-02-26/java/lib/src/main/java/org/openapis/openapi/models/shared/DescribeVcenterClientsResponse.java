@@ -15,6 +15,7 @@ public class DescribeVcenterClientsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public VcenterClient[] items;
+
     public DescribeVcenterClientsResponse withItems(VcenterClient[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class DescribeVcenterClientsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeVcenterClientsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeVcenterClientsResponse(){}
 }

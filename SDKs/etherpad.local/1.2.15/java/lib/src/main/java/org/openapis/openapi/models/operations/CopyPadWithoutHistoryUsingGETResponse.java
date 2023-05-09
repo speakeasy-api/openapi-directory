@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CopyPadWithoutHistoryUsingGETResponse {
     
     public String contentType;
+
     public CopyPadWithoutHistoryUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CopyPadWithoutHistoryUsingGETResponse {
     
     
     public Integer statusCode;
+
     public CopyPadWithoutHistoryUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CopyPadWithoutHistoryUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CopyPadWithoutHistoryUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CopyPadWithoutHistoryUsingGETResponse {
      */
     
     public CopyPadWithoutHistoryUsingGET200ApplicationJSON copyPadWithoutHistoryUsingGET200ApplicationJSONObject;
+
     public CopyPadWithoutHistoryUsingGETResponse withCopyPadWithoutHistoryUsingGET200ApplicationJSONObject(CopyPadWithoutHistoryUsingGET200ApplicationJSON copyPadWithoutHistoryUsingGET200ApplicationJSONObject) {
         this.copyPadWithoutHistoryUsingGET200ApplicationJSONObject = copyPadWithoutHistoryUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CopyPadWithoutHistoryUsingGETResponse {
      */
     
     public CopyPadWithoutHistoryUsingGET400ApplicationJSON copyPadWithoutHistoryUsingGET400ApplicationJSONObject;
+
     public CopyPadWithoutHistoryUsingGETResponse withCopyPadWithoutHistoryUsingGET400ApplicationJSONObject(CopyPadWithoutHistoryUsingGET400ApplicationJSON copyPadWithoutHistoryUsingGET400ApplicationJSONObject) {
         this.copyPadWithoutHistoryUsingGET400ApplicationJSONObject = copyPadWithoutHistoryUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CopyPadWithoutHistoryUsingGETResponse {
      */
     
     public CopyPadWithoutHistoryUsingGET401ApplicationJSON copyPadWithoutHistoryUsingGET401ApplicationJSONObject;
+
     public CopyPadWithoutHistoryUsingGETResponse withCopyPadWithoutHistoryUsingGET401ApplicationJSONObject(CopyPadWithoutHistoryUsingGET401ApplicationJSON copyPadWithoutHistoryUsingGET401ApplicationJSONObject) {
         this.copyPadWithoutHistoryUsingGET401ApplicationJSONObject = copyPadWithoutHistoryUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CopyPadWithoutHistoryUsingGETResponse {
      */
     
     public CopyPadWithoutHistoryUsingGET500ApplicationJSON copyPadWithoutHistoryUsingGET500ApplicationJSONObject;
+
     public CopyPadWithoutHistoryUsingGETResponse withCopyPadWithoutHistoryUsingGET500ApplicationJSONObject(CopyPadWithoutHistoryUsingGET500ApplicationJSON copyPadWithoutHistoryUsingGET500ApplicationJSONObject) {
         this.copyPadWithoutHistoryUsingGET500ApplicationJSONObject = copyPadWithoutHistoryUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public CopyPadWithoutHistoryUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

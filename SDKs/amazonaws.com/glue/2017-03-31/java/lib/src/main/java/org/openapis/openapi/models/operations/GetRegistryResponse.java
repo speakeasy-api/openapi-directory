@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRegistryResponse {
@@ -12,6 +13,7 @@ public class GetRegistryResponse {
      */
     
     public Object accessDeniedException;
+
     public GetRegistryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetRegistryResponse {
     
     
     public String contentType;
+
     public GetRegistryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetRegistryResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetRegistryResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GetRegistryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRegistryResponse getRegistryResponse;
+
     public GetRegistryResponse withGetRegistryResponse(org.openapis.openapi.models.shared.GetRegistryResponse getRegistryResponse) {
         this.getRegistryResponse = getRegistryResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetRegistryResponse {
      */
     
     public Object internalServiceException;
+
     public GetRegistryResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class GetRegistryResponse {
      */
     
     public Object invalidInputException;
+
     public GetRegistryResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -66,6 +73,7 @@ public class GetRegistryResponse {
     
     
     public Integer statusCode;
+
     public GetRegistryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetRegistryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRegistryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetRegistryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

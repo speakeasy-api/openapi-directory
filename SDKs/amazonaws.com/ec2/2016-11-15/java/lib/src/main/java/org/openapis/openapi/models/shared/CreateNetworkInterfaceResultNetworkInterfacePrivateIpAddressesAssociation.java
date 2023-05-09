@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddressesAssociation {
     
     public String allocationId;
+
     public CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddressesAssociation withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -19,6 +20,7 @@ public class CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddressesAssoc
     
     
     public String associationId;
+
     public CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddressesAssociation withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -26,6 +28,7 @@ public class CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddressesAssoc
     
     
     public String carrierIp;
+
     public CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddressesAssociation withCarrierIp(String carrierIp) {
         this.carrierIp = carrierIp;
         return this;
@@ -33,6 +36,7 @@ public class CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddressesAssoc
     
     
     public String customerOwnedIp;
+
     public CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddressesAssociation withCustomerOwnedIp(String customerOwnedIp) {
         this.customerOwnedIp = customerOwnedIp;
         return this;
@@ -40,6 +44,7 @@ public class CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddressesAssoc
     
     
     public String ipOwnerId;
+
     public CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddressesAssociation withIpOwnerId(String ipOwnerId) {
         this.ipOwnerId = ipOwnerId;
         return this;
@@ -47,6 +52,7 @@ public class CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddressesAssoc
     
     
     public String publicDnsName;
+
     public CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddressesAssociation withPublicDnsName(String publicDnsName) {
         this.publicDnsName = publicDnsName;
         return this;
@@ -54,9 +60,11 @@ public class CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddressesAssoc
     
     
     public String publicIp;
+
     public CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddressesAssociation withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
     }
     
+    public CreateNetworkInterfaceResultNetworkInterfacePrivateIpAddressesAssociation(){}
 }

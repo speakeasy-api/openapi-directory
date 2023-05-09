@@ -19,6 +19,7 @@ public class SearchFlowExecutionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public SearchFlowExecutionsRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -27,6 +28,7 @@ public class SearchFlowExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowExecutionId")
     public String flowExecutionId;
+
     public SearchFlowExecutionsRequest withFlowExecutionId(String flowExecutionId) {
         this.flowExecutionId = flowExecutionId;
         return this;
@@ -35,6 +37,7 @@ public class SearchFlowExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public SearchFlowExecutionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -43,6 +46,7 @@ public class SearchFlowExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public SearchFlowExecutionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -53,6 +57,7 @@ public class SearchFlowExecutionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public SearchFlowExecutionsRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -60,9 +65,13 @@ public class SearchFlowExecutionsRequest {
     
     @JsonProperty("systemInstanceId")
     public String systemInstanceId;
+
     public SearchFlowExecutionsRequest withSystemInstanceId(String systemInstanceId) {
         this.systemInstanceId = systemInstanceId;
         return this;
     }
     
+    public SearchFlowExecutionsRequest(@JsonProperty("systemInstanceId") String systemInstanceId) {
+        this.systemInstanceId = systemInstanceId;
+  }
 }

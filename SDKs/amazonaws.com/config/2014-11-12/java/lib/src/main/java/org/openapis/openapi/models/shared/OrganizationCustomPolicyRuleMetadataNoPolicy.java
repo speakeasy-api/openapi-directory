@@ -15,6 +15,7 @@ public class OrganizationCustomPolicyRuleMetadataNoPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebugLogDeliveryAccounts")
     public String[] debugLogDeliveryAccounts;
+
     public OrganizationCustomPolicyRuleMetadataNoPolicy withDebugLogDeliveryAccounts(String[] debugLogDeliveryAccounts) {
         this.debugLogDeliveryAccounts = debugLogDeliveryAccounts;
         return this;
@@ -23,6 +24,7 @@ public class OrganizationCustomPolicyRuleMetadataNoPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public OrganizationCustomPolicyRuleMetadataNoPolicy withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class OrganizationCustomPolicyRuleMetadataNoPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputParameters")
     public String inputParameters;
+
     public OrganizationCustomPolicyRuleMetadataNoPolicy withInputParameters(String inputParameters) {
         this.inputParameters = inputParameters;
         return this;
@@ -39,6 +42,7 @@ public class OrganizationCustomPolicyRuleMetadataNoPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumExecutionFrequency")
     public MaximumExecutionFrequencyEnum maximumExecutionFrequency;
+
     public OrganizationCustomPolicyRuleMetadataNoPolicy withMaximumExecutionFrequency(MaximumExecutionFrequencyEnum maximumExecutionFrequency) {
         this.maximumExecutionFrequency = maximumExecutionFrequency;
         return this;
@@ -47,6 +51,7 @@ public class OrganizationCustomPolicyRuleMetadataNoPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationConfigRuleTriggerTypes")
     public OrganizationConfigRuleTriggerTypeNoSNEnum[] organizationConfigRuleTriggerTypes;
+
     public OrganizationCustomPolicyRuleMetadataNoPolicy withOrganizationConfigRuleTriggerTypes(OrganizationConfigRuleTriggerTypeNoSNEnum[] organizationConfigRuleTriggerTypes) {
         this.organizationConfigRuleTriggerTypes = organizationConfigRuleTriggerTypes;
         return this;
@@ -55,6 +60,7 @@ public class OrganizationCustomPolicyRuleMetadataNoPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyRuntime")
     public String policyRuntime;
+
     public OrganizationCustomPolicyRuleMetadataNoPolicy withPolicyRuntime(String policyRuntime) {
         this.policyRuntime = policyRuntime;
         return this;
@@ -63,6 +69,7 @@ public class OrganizationCustomPolicyRuleMetadataNoPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceIdScope")
     public String resourceIdScope;
+
     public OrganizationCustomPolicyRuleMetadataNoPolicy withResourceIdScope(String resourceIdScope) {
         this.resourceIdScope = resourceIdScope;
         return this;
@@ -71,6 +78,7 @@ public class OrganizationCustomPolicyRuleMetadataNoPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTypesScope")
     public String[] resourceTypesScope;
+
     public OrganizationCustomPolicyRuleMetadataNoPolicy withResourceTypesScope(String[] resourceTypesScope) {
         this.resourceTypesScope = resourceTypesScope;
         return this;
@@ -79,6 +87,7 @@ public class OrganizationCustomPolicyRuleMetadataNoPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagKeyScope")
     public String tagKeyScope;
+
     public OrganizationCustomPolicyRuleMetadataNoPolicy withTagKeyScope(String tagKeyScope) {
         this.tagKeyScope = tagKeyScope;
         return this;
@@ -87,9 +96,11 @@ public class OrganizationCustomPolicyRuleMetadataNoPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagValueScope")
     public String tagValueScope;
+
     public OrganizationCustomPolicyRuleMetadataNoPolicy withTagValueScope(String tagValueScope) {
         this.tagValueScope = tagValueScope;
         return this;
     }
     
+    public OrganizationCustomPolicyRuleMetadataNoPolicy(){}
 }

@@ -12,6 +12,7 @@ public class CreateBatchSegmentJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterArn")
     public String filterArn;
+
     public CreateBatchSegmentJobRequest withFilterArn(String filterArn) {
         this.filterArn = filterArn;
         return this;
@@ -19,6 +20,7 @@ public class CreateBatchSegmentJobRequest {
     
     @JsonProperty("jobInput")
     public BatchSegmentJobInput jobInput;
+
     public CreateBatchSegmentJobRequest withJobInput(BatchSegmentJobInput jobInput) {
         this.jobInput = jobInput;
         return this;
@@ -26,6 +28,7 @@ public class CreateBatchSegmentJobRequest {
     
     @JsonProperty("jobName")
     public String jobName;
+
     public CreateBatchSegmentJobRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -33,6 +36,7 @@ public class CreateBatchSegmentJobRequest {
     
     @JsonProperty("jobOutput")
     public BatchSegmentJobOutput jobOutput;
+
     public CreateBatchSegmentJobRequest withJobOutput(BatchSegmentJobOutput jobOutput) {
         this.jobOutput = jobOutput;
         return this;
@@ -41,6 +45,7 @@ public class CreateBatchSegmentJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numResults")
     public Long numResults;
+
     public CreateBatchSegmentJobRequest withNumResults(Long numResults) {
         this.numResults = numResults;
         return this;
@@ -48,6 +53,7 @@ public class CreateBatchSegmentJobRequest {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateBatchSegmentJobRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -55,6 +61,7 @@ public class CreateBatchSegmentJobRequest {
     
     @JsonProperty("solutionVersionArn")
     public String solutionVersionArn;
+
     public CreateBatchSegmentJobRequest withSolutionVersionArn(String solutionVersionArn) {
         this.solutionVersionArn = solutionVersionArn;
         return this;
@@ -63,9 +70,17 @@ public class CreateBatchSegmentJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateBatchSegmentJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateBatchSegmentJobRequest(@JsonProperty("jobInput") BatchSegmentJobInput jobInput, @JsonProperty("jobName") String jobName, @JsonProperty("jobOutput") BatchSegmentJobOutput jobOutput, @JsonProperty("roleArn") String roleArn, @JsonProperty("solutionVersionArn") String solutionVersionArn) {
+        this.jobInput = jobInput;
+        this.jobName = jobName;
+        this.jobOutput = jobOutput;
+        this.roleArn = roleArn;
+        this.solutionVersionArn = solutionVersionArn;
+  }
 }

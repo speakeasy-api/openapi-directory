@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Predictions400ApplicationJSONError {
     @JsonProperty("message")
     public String message;
+
     public Predictions400ApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
@@ -16,6 +17,7 @@ public class Predictions400ApplicationJSONError {
     
     @JsonProperty("status")
     public Long status;
+
     public Predictions400ApplicationJSONError withStatus(Long status) {
         this.status = status;
         return this;
@@ -23,9 +25,15 @@ public class Predictions400ApplicationJSONError {
     
     @JsonProperty("timestamp")
     public String timestamp;
+
     public Predictions400ApplicationJSONError withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public Predictions400ApplicationJSONError(@JsonProperty("message") String message, @JsonProperty("status") Long status, @JsonProperty("timestamp") String timestamp) {
+        this.message = message;
+        this.status = status;
+        this.timestamp = timestamp;
+  }
 }

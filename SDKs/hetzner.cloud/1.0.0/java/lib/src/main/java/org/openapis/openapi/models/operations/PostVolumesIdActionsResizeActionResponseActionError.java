@@ -15,6 +15,7 @@ public class PostVolumesIdActionsResizeActionResponseActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public PostVolumesIdActionsResizeActionResponseActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class PostVolumesIdActionsResizeActionResponseActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public PostVolumesIdActionsResizeActionResponseActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostVolumesIdActionsResizeActionResponseActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

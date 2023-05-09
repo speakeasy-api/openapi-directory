@@ -15,9 +15,11 @@ public class NetworkRelationshipsParent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ResourceIdentifier data;
+
     public NetworkRelationshipsParent withData(ResourceIdentifier data) {
         this.data = data;
         return this;
     }
     
+    public NetworkRelationshipsParent(){}
 }

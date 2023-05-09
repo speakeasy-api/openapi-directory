@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EventBatchingCondition {
     @JsonProperty("BatchSize")
     public Long batchSize;
+
     public EventBatchingCondition withBatchSize(Long batchSize) {
         this.batchSize = batchSize;
         return this;
@@ -22,9 +23,13 @@ public class EventBatchingCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchWindow")
     public Long batchWindow;
+
     public EventBatchingCondition withBatchWindow(Long batchWindow) {
         this.batchWindow = batchWindow;
         return this;
     }
     
+    public EventBatchingCondition(@JsonProperty("BatchSize") Long batchSize) {
+        this.batchSize = batchSize;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest {
@@ -12,6 +13,7 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkInput googleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkInput;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest withGoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkInput(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkInput googleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkInput) {
         this.googleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkInput = googleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkInput;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -99,6 +109,7 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

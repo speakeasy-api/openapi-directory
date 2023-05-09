@@ -15,6 +15,7 @@ public class Grant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Grantee")
     public Grantee grantee;
+
     public Grant withGrantee(Grantee grantee) {
         this.grantee = grantee;
         return this;
@@ -23,9 +24,11 @@ public class Grant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Permission")
     public PermissionEnum permission;
+
     public Grant withPermission(PermissionEnum permission) {
         this.permission = permission;
         return this;
     }
     
+    public Grant(){}
 }

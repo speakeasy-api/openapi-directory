@@ -18,6 +18,7 @@ public class PlatformTypesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PlatformTypesListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class PlatformTypesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformTypes")
     public PlatformType[] platformTypes;
+
     public PlatformTypesListResponse withPlatformTypes(PlatformType[] platformTypes) {
         this.platformTypes = platformTypes;
         return this;
     }
     
+    public PlatformTypesListResponse(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AssociateVpcCidrBlockRequest {
     
     public Boolean amazonProvidedIpv6CidrBlock;
+
     public AssociateVpcCidrBlockRequest withAmazonProvidedIpv6CidrBlock(Boolean amazonProvidedIpv6CidrBlock) {
         this.amazonProvidedIpv6CidrBlock = amazonProvidedIpv6CidrBlock;
         return this;
@@ -16,6 +17,7 @@ public class AssociateVpcCidrBlockRequest {
     
     
     public String cidrBlock;
+
     public AssociateVpcCidrBlockRequest withCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
         return this;
@@ -23,6 +25,7 @@ public class AssociateVpcCidrBlockRequest {
     
     
     public String ipv4IpamPoolId;
+
     public AssociateVpcCidrBlockRequest withIpv4IpamPoolId(String ipv4IpamPoolId) {
         this.ipv4IpamPoolId = ipv4IpamPoolId;
         return this;
@@ -30,6 +33,7 @@ public class AssociateVpcCidrBlockRequest {
     
     
     public Long ipv4NetmaskLength;
+
     public AssociateVpcCidrBlockRequest withIpv4NetmaskLength(Long ipv4NetmaskLength) {
         this.ipv4NetmaskLength = ipv4NetmaskLength;
         return this;
@@ -37,6 +41,7 @@ public class AssociateVpcCidrBlockRequest {
     
     
     public String ipv6CidrBlock;
+
     public AssociateVpcCidrBlockRequest withIpv6CidrBlock(String ipv6CidrBlock) {
         this.ipv6CidrBlock = ipv6CidrBlock;
         return this;
@@ -44,6 +49,7 @@ public class AssociateVpcCidrBlockRequest {
     
     
     public String ipv6CidrBlockNetworkBorderGroup;
+
     public AssociateVpcCidrBlockRequest withIpv6CidrBlockNetworkBorderGroup(String ipv6CidrBlockNetworkBorderGroup) {
         this.ipv6CidrBlockNetworkBorderGroup = ipv6CidrBlockNetworkBorderGroup;
         return this;
@@ -51,6 +57,7 @@ public class AssociateVpcCidrBlockRequest {
     
     
     public String ipv6IpamPoolId;
+
     public AssociateVpcCidrBlockRequest withIpv6IpamPoolId(String ipv6IpamPoolId) {
         this.ipv6IpamPoolId = ipv6IpamPoolId;
         return this;
@@ -58,6 +65,7 @@ public class AssociateVpcCidrBlockRequest {
     
     
     public Long ipv6NetmaskLength;
+
     public AssociateVpcCidrBlockRequest withIpv6NetmaskLength(Long ipv6NetmaskLength) {
         this.ipv6NetmaskLength = ipv6NetmaskLength;
         return this;
@@ -65,6 +73,7 @@ public class AssociateVpcCidrBlockRequest {
     
     
     public String ipv6Pool;
+
     public AssociateVpcCidrBlockRequest withIpv6Pool(String ipv6Pool) {
         this.ipv6Pool = ipv6Pool;
         return this;
@@ -72,9 +81,13 @@ public class AssociateVpcCidrBlockRequest {
     
     
     public String vpcId;
+
     public AssociateVpcCidrBlockRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public AssociateVpcCidrBlockRequest(@JsonProperty("VpcId") String vpcId) {
+        this.vpcId = vpcId;
+  }
 }

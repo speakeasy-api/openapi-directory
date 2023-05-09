@@ -12,6 +12,7 @@ public class GetSearchV1OrganicRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetSearchV1OrganicRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -22,6 +23,7 @@ public class GetSearchV1OrganicRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=field")
     public String field;
+
     public GetSearchV1OrganicRequest withField(String field) {
         this.field = field;
         return this;
@@ -32,6 +34,7 @@ public class GetSearchV1OrganicRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetSearchV1OrganicRequest withQ(String q) {
         this.q = q;
         return this;
@@ -42,6 +45,7 @@ public class GetSearchV1OrganicRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Long size;
+
     public GetSearchV1OrganicRequest withSize(Long size) {
         this.size = size;
         return this;
@@ -52,9 +56,11 @@ public class GetSearchV1OrganicRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=total_only")
     public Boolean totalOnly;
+
     public GetSearchV1OrganicRequest withTotalOnly(Boolean totalOnly) {
         this.totalOnly = totalOnly;
         return this;
     }
     
+    public GetSearchV1OrganicRequest(){}
 }

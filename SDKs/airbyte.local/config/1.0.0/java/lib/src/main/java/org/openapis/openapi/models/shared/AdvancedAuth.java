@@ -12,6 +12,7 @@ public class AdvancedAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authFlowType")
     public AdvancedAuthAuthFlowTypeEnum authFlowType;
+
     public AdvancedAuth withAuthFlowType(AdvancedAuthAuthFlowTypeEnum authFlowType) {
         this.authFlowType = authFlowType;
         return this;
@@ -20,6 +21,7 @@ public class AdvancedAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauthConfigSpecification")
     public OAuthConfigSpecification oauthConfigSpecification;
+
     public AdvancedAuth withOauthConfigSpecification(OAuthConfigSpecification oauthConfigSpecification) {
         this.oauthConfigSpecification = oauthConfigSpecification;
         return this;
@@ -31,6 +33,7 @@ public class AdvancedAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predicateKey")
     public String[] predicateKey;
+
     public AdvancedAuth withPredicateKey(String[] predicateKey) {
         this.predicateKey = predicateKey;
         return this;
@@ -42,9 +45,11 @@ public class AdvancedAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predicateValue")
     public String predicateValue;
+
     public AdvancedAuth withPredicateValue(String predicateValue) {
         this.predicateValue = predicateValue;
         return this;
     }
     
+    public AdvancedAuth(){}
 }

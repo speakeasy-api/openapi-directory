@@ -15,6 +15,7 @@ public class SourceSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionConfiguration")
     public Object connectionConfiguration;
+
     public SourceSearch withConnectionConfiguration(Object connectionConfiguration) {
         this.connectionConfiguration = connectionConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class SourceSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SourceSearch withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class SourceSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceDefinitionId")
     public String sourceDefinitionId;
+
     public SourceSearch withSourceDefinitionId(String sourceDefinitionId) {
         this.sourceDefinitionId = sourceDefinitionId;
         return this;
@@ -39,6 +42,7 @@ public class SourceSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceId")
     public String sourceId;
+
     public SourceSearch withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -47,6 +51,7 @@ public class SourceSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceName")
     public String sourceName;
+
     public SourceSearch withSourceName(String sourceName) {
         this.sourceName = sourceName;
         return this;
@@ -55,9 +60,11 @@ public class SourceSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public SourceSearch withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public SourceSearch(){}
 }

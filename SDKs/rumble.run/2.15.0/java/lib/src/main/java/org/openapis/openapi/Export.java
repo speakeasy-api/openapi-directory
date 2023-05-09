@@ -35,10 +35,11 @@ public class Export {
 
     /**
      * Top asset hardware products as CSV
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportAssetTopHWCSVResponse exportAssetTopHWCSV() throws Exception {
+    public org.openapis.openapi.models.operations.ExportAssetTopHWCSVResponse exportAssetTopHWCSV(org.openapis.openapi.models.operations.ExportAssetTopHWCSVSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/org/assets/top.hw.csv");
         
@@ -47,16 +48,15 @@ public class Export {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportAssetTopHWCSVResponse res = new org.openapis.openapi.models.operations.ExportAssetTopHWCSVResponse() {{
+        org.openapis.openapi.models.operations.ExportAssetTopHWCSVResponse res = new org.openapis.openapi.models.operations.ExportAssetTopHWCSVResponse(contentType, httpRes.statusCode()) {{
             exportAssetTopHWCSV200TextCsvBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -73,10 +73,11 @@ public class Export {
 
     /**
      * Top asset operating systems as CSV
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportAssetTopOSCSVResponse exportAssetTopOSCSV() throws Exception {
+    public org.openapis.openapi.models.operations.ExportAssetTopOSCSVResponse exportAssetTopOSCSV(org.openapis.openapi.models.operations.ExportAssetTopOSCSVSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/org/assets/top.os.csv");
         
@@ -85,16 +86,15 @@ public class Export {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportAssetTopOSCSVResponse res = new org.openapis.openapi.models.operations.ExportAssetTopOSCSVResponse() {{
+        org.openapis.openapi.models.operations.ExportAssetTopOSCSVResponse res = new org.openapis.openapi.models.operations.ExportAssetTopOSCSVResponse(contentType, httpRes.statusCode()) {{
             exportAssetTopOSCSV200TextCsvBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,10 +111,11 @@ public class Export {
 
     /**
      * Top asset tags as CSV
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportAssetTopTagsCSVResponse exportAssetTopTagsCSV() throws Exception {
+    public org.openapis.openapi.models.operations.ExportAssetTopTagsCSVResponse exportAssetTopTagsCSV(org.openapis.openapi.models.operations.ExportAssetTopTagsCSVSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/org/assets/top.tags.csv");
         
@@ -123,16 +124,15 @@ public class Export {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportAssetTopTagsCSVResponse res = new org.openapis.openapi.models.operations.ExportAssetTopTagsCSVResponse() {{
+        org.openapis.openapi.models.operations.ExportAssetTopTagsCSVResponse res = new org.openapis.openapi.models.operations.ExportAssetTopTagsCSVResponse(contentType, httpRes.statusCode()) {{
             exportAssetTopTagsCSV200TextCSVBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -149,10 +149,11 @@ public class Export {
 
     /**
      * Top asset types as CSV
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportAssetTopTypesCSVResponse exportAssetTopTypesCSV() throws Exception {
+    public org.openapis.openapi.models.operations.ExportAssetTopTypesCSVResponse exportAssetTopTypesCSV(org.openapis.openapi.models.operations.ExportAssetTopTypesCSVSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/org/assets/top.types.csv");
         
@@ -161,16 +162,15 @@ public class Export {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportAssetTopTypesCSVResponse res = new org.openapis.openapi.models.operations.ExportAssetTopTypesCSVResponse() {{
+        org.openapis.openapi.models.operations.ExportAssetTopTypesCSVResponse res = new org.openapis.openapi.models.operations.ExportAssetTopTypesCSVResponse(contentType, httpRes.statusCode()) {{
             exportAssetTopTypesCSV200TextCSVBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -213,11 +213,9 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportAssetsCSVResponse res = new org.openapis.openapi.models.operations.ExportAssetsCSVResponse() {{
+        org.openapis.openapi.models.operations.ExportAssetsCSVResponse res = new org.openapis.openapi.models.operations.ExportAssetsCSVResponse(contentType, httpRes.statusCode()) {{
             exportAssetsCSV200TextCSVBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -260,11 +258,9 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportAssetsJSONResponse res = new org.openapis.openapi.models.operations.ExportAssetsJSONResponse() {{
+        org.openapis.openapi.models.operations.ExportAssetsJSONResponse res = new org.openapis.openapi.models.operations.ExportAssetsJSONResponse(contentType, httpRes.statusCode()) {{
             assets = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -308,17 +304,14 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportAssetsJSONLResponse res = new org.openapis.openapi.models.operations.ExportAssetsJSONLResponse() {{
+        org.openapis.openapi.models.operations.ExportAssetsJSONLResponse res = new org.openapis.openapi.models.operations.ExportAssetsJSONLResponse(contentType, httpRes.statusCode()) {{
             exportAssetsJSONL200ApplicationJSONBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                byte[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), byte[].class);
+                byte[] out = httpRes.body();
                 res.exportAssetsJSONL200ApplicationJSONBinaryString = out;
             }
         }
@@ -356,11 +349,9 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportAssetsNmapXMLResponse res = new org.openapis.openapi.models.operations.ExportAssetsNmapXMLResponse() {{
+        org.openapis.openapi.models.operations.ExportAssetsNmapXMLResponse res = new org.openapis.openapi.models.operations.ExportAssetsNmapXMLResponse(contentType, httpRes.statusCode()) {{
             exportAssetsNmapXML200TextXMLBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -403,11 +394,9 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportServicesCSVResponse res = new org.openapis.openapi.models.operations.ExportServicesCSVResponse() {{
+        org.openapis.openapi.models.operations.ExportServicesCSVResponse res = new org.openapis.openapi.models.operations.ExportServicesCSVResponse(contentType, httpRes.statusCode()) {{
             exportServicesCSV200TextCSVBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -450,11 +439,9 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportServicesJSONResponse res = new org.openapis.openapi.models.operations.ExportServicesJSONResponse() {{
+        org.openapis.openapi.models.operations.ExportServicesJSONResponse res = new org.openapis.openapi.models.operations.ExportServicesJSONResponse(contentType, httpRes.statusCode()) {{
             services = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -498,17 +485,14 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportServicesJSONLResponse res = new org.openapis.openapi.models.operations.ExportServicesJSONLResponse() {{
+        org.openapis.openapi.models.operations.ExportServicesJSONLResponse res = new org.openapis.openapi.models.operations.ExportServicesJSONLResponse(contentType, httpRes.statusCode()) {{
             exportServicesJSONL200ApplicationJSONBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                byte[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), byte[].class);
+                byte[] out = httpRes.body();
                 res.exportServicesJSONL200ApplicationJSONBinaryString = out;
             }
         }
@@ -520,10 +504,11 @@ public class Export {
 
     /**
      * Top service products as CSV
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportServicesTopProductsCSVResponse exportServicesTopProductsCSV() throws Exception {
+    public org.openapis.openapi.models.operations.ExportServicesTopProductsCSVResponse exportServicesTopProductsCSV(org.openapis.openapi.models.operations.ExportServicesTopProductsCSVSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/org/services/top.products.csv");
         
@@ -532,16 +517,15 @@ public class Export {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportServicesTopProductsCSVResponse res = new org.openapis.openapi.models.operations.ExportServicesTopProductsCSVResponse() {{
+        org.openapis.openapi.models.operations.ExportServicesTopProductsCSVResponse res = new org.openapis.openapi.models.operations.ExportServicesTopProductsCSVResponse(contentType, httpRes.statusCode()) {{
             exportServicesTopProductsCSV200TextCSVBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -558,10 +542,11 @@ public class Export {
 
     /**
      * Top service protocols as CSV
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportServicesTopProtocolsCSVResponse exportServicesTopProtocolsCSV() throws Exception {
+    public org.openapis.openapi.models.operations.ExportServicesTopProtocolsCSVResponse exportServicesTopProtocolsCSV(org.openapis.openapi.models.operations.ExportServicesTopProtocolsCSVSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/org/services/top.protocols.csv");
         
@@ -570,16 +555,15 @@ public class Export {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportServicesTopProtocolsCSVResponse res = new org.openapis.openapi.models.operations.ExportServicesTopProtocolsCSVResponse() {{
+        org.openapis.openapi.models.operations.ExportServicesTopProtocolsCSVResponse res = new org.openapis.openapi.models.operations.ExportServicesTopProtocolsCSVResponse(contentType, httpRes.statusCode()) {{
             exportServicesTopProtocolsCSV200TextCSVBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -596,10 +580,11 @@ public class Export {
 
     /**
      * Top TCP services as CSV
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportServicesTopTCPCSVResponse exportServicesTopTCPCSV() throws Exception {
+    public org.openapis.openapi.models.operations.ExportServicesTopTCPCSVResponse exportServicesTopTCPCSV(org.openapis.openapi.models.operations.ExportServicesTopTCPCSVSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/org/services/top.tcp.csv");
         
@@ -608,16 +593,15 @@ public class Export {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportServicesTopTCPCSVResponse res = new org.openapis.openapi.models.operations.ExportServicesTopTCPCSVResponse() {{
+        org.openapis.openapi.models.operations.ExportServicesTopTCPCSVResponse res = new org.openapis.openapi.models.operations.ExportServicesTopTCPCSVResponse(contentType, httpRes.statusCode()) {{
             exportServicesTopTCPCSV200TextCsvBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -634,10 +618,11 @@ public class Export {
 
     /**
      * Top UDP services as CSV
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportServicesTopUDPCSVResponse exportServicesTopUDPCSV() throws Exception {
+    public org.openapis.openapi.models.operations.ExportServicesTopUDPCSVResponse exportServicesTopUDPCSV(org.openapis.openapi.models.operations.ExportServicesTopUDPCSVSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/org/services/top.udp.csv");
         
@@ -646,16 +631,15 @@ public class Export {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportServicesTopUDPCSVResponse res = new org.openapis.openapi.models.operations.ExportServicesTopUDPCSVResponse() {{
+        org.openapis.openapi.models.operations.ExportServicesTopUDPCSVResponse res = new org.openapis.openapi.models.operations.ExportServicesTopUDPCSVResponse(contentType, httpRes.statusCode()) {{
             exportServicesTopUDPCSV200TextCsvBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -672,10 +656,11 @@ public class Export {
 
     /**
      * Site list as CSV
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportSitesCSVResponse exportSitesCSV() throws Exception {
+    public org.openapis.openapi.models.operations.ExportSitesCSVResponse exportSitesCSV(org.openapis.openapi.models.operations.ExportSitesCSVSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/export/org/sites.csv");
         
@@ -684,16 +669,15 @@ public class Export {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportSitesCSVResponse res = new org.openapis.openapi.models.operations.ExportSitesCSVResponse() {{
+        org.openapis.openapi.models.operations.ExportSitesCSVResponse res = new org.openapis.openapi.models.operations.ExportSitesCSVResponse(contentType, httpRes.statusCode()) {{
             exportSitesCSV200TextCSVBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -736,11 +720,9 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportSitesJSONResponse res = new org.openapis.openapi.models.operations.ExportSitesJSONResponse() {{
+        org.openapis.openapi.models.operations.ExportSitesJSONResponse res = new org.openapis.openapi.models.operations.ExportSitesJSONResponse(contentType, httpRes.statusCode()) {{
             sites = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -784,17 +766,14 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportSitesJSONLResponse res = new org.openapis.openapi.models.operations.ExportSitesJSONLResponse() {{
+        org.openapis.openapi.models.operations.ExportSitesJSONLResponse res = new org.openapis.openapi.models.operations.ExportSitesJSONLResponse(contentType, httpRes.statusCode()) {{
             exportSitesJSONL200ApplicationJSONBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                byte[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), byte[].class);
+                byte[] out = httpRes.body();
                 res.exportSitesJSONL200ApplicationJSONBinaryString = out;
             }
         }
@@ -832,11 +811,9 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportSubnetUtilizationStatsCSVResponse res = new org.openapis.openapi.models.operations.ExportSubnetUtilizationStatsCSVResponse() {{
+        org.openapis.openapi.models.operations.ExportSubnetUtilizationStatsCSVResponse res = new org.openapis.openapi.models.operations.ExportSubnetUtilizationStatsCSVResponse(contentType, httpRes.statusCode()) {{
             exportSubnetUtilizationStatsCSV200TextCSVBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -879,11 +856,9 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportWirelessCSVResponse res = new org.openapis.openapi.models.operations.ExportWirelessCSVResponse() {{
+        org.openapis.openapi.models.operations.ExportWirelessCSVResponse res = new org.openapis.openapi.models.operations.ExportWirelessCSVResponse(contentType, httpRes.statusCode()) {{
             exportWirelessCSV200TextCSVBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -926,11 +901,9 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportWirelessJSONResponse res = new org.openapis.openapi.models.operations.ExportWirelessJSONResponse() {{
+        org.openapis.openapi.models.operations.ExportWirelessJSONResponse res = new org.openapis.openapi.models.operations.ExportWirelessJSONResponse(contentType, httpRes.statusCode()) {{
             wirelesses = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -974,17 +947,14 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportWirelessJSONLResponse res = new org.openapis.openapi.models.operations.ExportWirelessJSONLResponse() {{
+        org.openapis.openapi.models.operations.ExportWirelessJSONLResponse res = new org.openapis.openapi.models.operations.ExportWirelessJSONLResponse(contentType, httpRes.statusCode()) {{
             exportWirelessJSONL200ApplicationJSONBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                byte[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), byte[].class);
+                byte[] out = httpRes.body();
                 res.exportWirelessJSONL200ApplicationJSONBinaryString = out;
             }
         }

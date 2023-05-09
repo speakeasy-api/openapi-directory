@@ -16,28 +16,24 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.SmsConversionRequest;
 import org.openapis.openapi.models.operations.SmsConversionResponse;
 import org.openapis.openapi.models.shared.DeliveredEnum;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    option1 = new SecurityOption1() {{
+                    option1 = new SecurityOption1("corrupti", "provident") {{
                         apiKey = "YOUR_API_KEY_HERE";
                         apiSecret = "YOUR_API_KEY_HERE";
                     }};
                 }})
                 .build();
 
-            SmsConversionRequest req = new SmsConversionRequest() {{
-                delivered = "0";
-                messageId = "provident";
-                timestamp = "distinctio";
-            }}            
+            SmsConversionRequest req = new SmsConversionRequest(DeliveredEnum.ZERO, "quibusdam", "unde");            
 
             SmsConversionResponse res = sdk.smsConversion.smsConversion(req);
 
@@ -47,6 +43,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -54,13 +52,13 @@ public class Application {
 ## Available Resources and Operations
 
 
-### smsConversion
+### [smsConversion](docs/smsconversion/README.md)
 
-* `smsConversion` - Tell Nexmo if your SMS message was successful
+* [smsConversion](docs/smsconversion/README.md#smsconversion) - Tell Nexmo if your SMS message was successful
 
-### voiceConversion
+### [voiceConversion](docs/voiceconversion/README.md)
 
-* `voiceConversion` - Tell Nexmo if your voice call was successful
+* [voiceConversion](docs/voiceconversion/README.md#voiceconversion) - Tell Nexmo if your voice call was successful
 <!-- End SDK Available Operations -->
 
 ### Maturity

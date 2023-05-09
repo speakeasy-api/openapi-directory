@@ -21,6 +21,7 @@ public class IndexConfigurationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public IndexConfigurationSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,6 +30,7 @@ public class IndexConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Edition")
     public IndexEditionEnum edition;
+
     public IndexConfigurationSummary withEdition(IndexEditionEnum edition) {
         this.edition = edition;
         return this;
@@ -37,6 +39,7 @@ public class IndexConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public IndexConfigurationSummary withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class IndexConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public IndexConfigurationSummary withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +56,7 @@ public class IndexConfigurationSummary {
     
     @JsonProperty("Status")
     public IndexStatusEnum status;
+
     public IndexConfigurationSummary withStatus(IndexStatusEnum status) {
         this.status = status;
         return this;
@@ -61,9 +66,15 @@ public class IndexConfigurationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public IndexConfigurationSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public IndexConfigurationSummary(@JsonProperty("CreatedAt") OffsetDateTime createdAt, @JsonProperty("Status") IndexStatusEnum status, @JsonProperty("UpdatedAt") OffsetDateTime updatedAt) {
+        this.createdAt = createdAt;
+        this.status = status;
+        this.updatedAt = updatedAt;
+  }
 }

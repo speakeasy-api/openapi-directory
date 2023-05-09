@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RestoreDomainAccessResponse {
     
     public String contentType;
+
     public RestoreDomainAccessResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RestoreDomainAccessResponse {
      */
     
     public Object internalServerErrorException;
+
     public RestoreDomainAccessResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -29,6 +32,7 @@ public class RestoreDomainAccessResponse {
      */
     
     public Object invalidRequestException;
+
     public RestoreDomainAccessResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class RestoreDomainAccessResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RestoreDomainAccessResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class RestoreDomainAccessResponse {
      */
     
     public java.util.Map<String, Object> restoreDomainAccessResponse;
+
     public RestoreDomainAccessResponse withRestoreDomainAccessResponse(java.util.Map<String, Object> restoreDomainAccessResponse) {
         this.restoreDomainAccessResponse = restoreDomainAccessResponse;
         return this;
@@ -56,6 +62,7 @@ public class RestoreDomainAccessResponse {
     
     
     public Integer statusCode;
+
     public RestoreDomainAccessResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class RestoreDomainAccessResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RestoreDomainAccessResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class RestoreDomainAccessResponse {
      */
     
     public Object tooManyRequestsException;
+
     public RestoreDomainAccessResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class RestoreDomainAccessResponse {
      */
     
     public Object unauthorizedException;
+
     public RestoreDomainAccessResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public RestoreDomainAccessResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

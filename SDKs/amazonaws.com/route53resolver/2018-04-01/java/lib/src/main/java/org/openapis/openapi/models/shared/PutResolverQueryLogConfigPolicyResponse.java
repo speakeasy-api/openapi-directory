@@ -15,9 +15,11 @@ public class PutResolverQueryLogConfigPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnValue")
     public Boolean returnValue;
+
     public PutResolverQueryLogConfigPolicyResponse withReturnValue(Boolean returnValue) {
         this.returnValue = returnValue;
         return this;
     }
     
+    public PutResolverQueryLogConfigPolicyResponse(){}
 }

@@ -15,6 +15,7 @@ public class AppConfigPlayback {
      */
     @JsonProperty("chainPlayCountdown")
     public Integer chainPlayCountdown;
+
     public AppConfigPlayback withChainPlayCountdown(Integer chainPlayCountdown) {
         this.chainPlayCountdown = chainPlayCountdown;
         return this;
@@ -29,6 +30,7 @@ public class AppConfigPlayback {
      */
     @JsonProperty("chainPlaySqueezeback")
     public Integer chainPlaySqueezeback;
+
     public AppConfigPlayback withChainPlaySqueezeback(Integer chainPlaySqueezeback) {
         this.chainPlaySqueezeback = chainPlaySqueezeback;
         return this;
@@ -42,6 +44,7 @@ public class AppConfigPlayback {
      */
     @JsonProperty("chainPlayTimeout")
     public Integer chainPlayTimeout;
+
     public AppConfigPlayback withChainPlayTimeout(Integer chainPlayTimeout) {
         this.chainPlayTimeout = chainPlayTimeout;
         return this;
@@ -52,6 +55,7 @@ public class AppConfigPlayback {
      */
     @JsonProperty("heartbeatFrequency")
     public Integer heartbeatFrequency;
+
     public AppConfigPlayback withHeartbeatFrequency(Integer heartbeatFrequency) {
         this.heartbeatFrequency = heartbeatFrequency;
         return this;
@@ -66,9 +70,17 @@ public class AppConfigPlayback {
      */
     @JsonProperty("viewEventPoints")
     public Double[] viewEventPoints;
+
     public AppConfigPlayback withViewEventPoints(Double[] viewEventPoints) {
         this.viewEventPoints = viewEventPoints;
         return this;
     }
     
+    public AppConfigPlayback(@JsonProperty("chainPlayCountdown") Integer chainPlayCountdown, @JsonProperty("chainPlaySqueezeback") Integer chainPlaySqueezeback, @JsonProperty("chainPlayTimeout") Integer chainPlayTimeout, @JsonProperty("heartbeatFrequency") Integer heartbeatFrequency, @JsonProperty("viewEventPoints") Double[] viewEventPoints) {
+        this.chainPlayCountdown = chainPlayCountdown;
+        this.chainPlaySqueezeback = chainPlaySqueezeback;
+        this.chainPlayTimeout = chainPlayTimeout;
+        this.heartbeatFrequency = heartbeatFrequency;
+        this.viewEventPoints = viewEventPoints;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConvertAPIRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public ConvertAPIRequestBody requestBody;
+
     public ConvertAPIRequest withRequestBody(ConvertAPIRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,13 @@ public class ConvertAPIRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public ConvertAPIFormatEnum format;
+
     public ConvertAPIRequest withFormat(ConvertAPIFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public ConvertAPIRequest(@JsonProperty("format") ConvertAPIFormatEnum format) {
+        this.format = format;
+  }
 }

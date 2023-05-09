@@ -15,6 +15,7 @@ public class GetAccuracyMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoMLOverrideStrategy")
     public AutoMLOverrideStrategyEnum autoMLOverrideStrategy;
+
     public GetAccuracyMetricsResponse withAutoMLOverrideStrategy(AutoMLOverrideStrategyEnum autoMLOverrideStrategy) {
         this.autoMLOverrideStrategy = autoMLOverrideStrategy;
         return this;
@@ -23,6 +24,7 @@ public class GetAccuracyMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsAutoPredictor")
     public Boolean isAutoPredictor;
+
     public GetAccuracyMetricsResponse withIsAutoPredictor(Boolean isAutoPredictor) {
         this.isAutoPredictor = isAutoPredictor;
         return this;
@@ -31,6 +33,7 @@ public class GetAccuracyMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptimizationMetric")
     public OptimizationMetricEnum optimizationMetric;
+
     public GetAccuracyMetricsResponse withOptimizationMetric(OptimizationMetricEnum optimizationMetric) {
         this.optimizationMetric = optimizationMetric;
         return this;
@@ -39,9 +42,11 @@ public class GetAccuracyMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictorEvaluationResults")
     public EvaluationResult[] predictorEvaluationResults;
+
     public GetAccuracyMetricsResponse withPredictorEvaluationResults(EvaluationResult[] predictorEvaluationResults) {
         this.predictorEvaluationResults = predictorEvaluationResults;
         return this;
     }
     
+    public GetAccuracyMetricsResponse(){}
 }

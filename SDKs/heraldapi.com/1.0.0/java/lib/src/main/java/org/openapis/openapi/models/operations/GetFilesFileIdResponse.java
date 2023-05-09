@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFilesFileIdResponse {
     
     public String contentType;
+
     public GetFilesFileIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetFilesFileIdResponse {
     
     
     public Integer statusCode;
+
     public GetFilesFileIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetFilesFileIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFilesFileIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetFilesFileIdResponse {
      */
     
     public GetFilesFileId200ApplicationJSON getFilesFileId200ApplicationJSONObject;
+
     public GetFilesFileIdResponse withGetFilesFileId200ApplicationJSONObject(GetFilesFileId200ApplicationJSON getFilesFileId200ApplicationJSONObject) {
         this.getFilesFileId200ApplicationJSONObject = getFilesFileId200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetFilesFileIdResponse {
      */
     
     public GetFilesFileId400ApplicationJSON getFilesFileId400ApplicationJSONObject;
+
     public GetFilesFileIdResponse withGetFilesFileId400ApplicationJSONObject(GetFilesFileId400ApplicationJSON getFilesFileId400ApplicationJSONObject) {
         this.getFilesFileId400ApplicationJSONObject = getFilesFileId400ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class GetFilesFileIdResponse {
      */
     
     public GetFilesFileId404ApplicationJSON getFilesFileId404ApplicationJSONObject;
+
     public GetFilesFileIdResponse withGetFilesFileId404ApplicationJSONObject(GetFilesFileId404ApplicationJSON getFilesFileId404ApplicationJSONObject) {
         this.getFilesFileId404ApplicationJSONObject = getFilesFileId404ApplicationJSONObject;
         return this;
     }
     
+    public GetFilesFileIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

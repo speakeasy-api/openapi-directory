@@ -12,6 +12,7 @@ public class GetLegalSearchDefaultApplicationJSONAdrsDispositionsCitations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GetLegalSearchDefaultApplicationJSONAdrsDispositionsCitations withText(String text) {
         this.text = text;
         return this;
@@ -20,6 +21,7 @@ public class GetLegalSearchDefaultApplicationJSONAdrsDispositionsCitations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GetLegalSearchDefaultApplicationJSONAdrsDispositionsCitations withTitle(String title) {
         this.title = title;
         return this;
@@ -28,6 +30,7 @@ public class GetLegalSearchDefaultApplicationJSONAdrsDispositionsCitations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GetLegalSearchDefaultApplicationJSONAdrsDispositionsCitations withType(String type) {
         this.type = type;
         return this;
@@ -36,9 +39,11 @@ public class GetLegalSearchDefaultApplicationJSONAdrsDispositionsCitations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GetLegalSearchDefaultApplicationJSONAdrsDispositionsCitations withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GetLegalSearchDefaultApplicationJSONAdrsDispositionsCitations(){}
 }

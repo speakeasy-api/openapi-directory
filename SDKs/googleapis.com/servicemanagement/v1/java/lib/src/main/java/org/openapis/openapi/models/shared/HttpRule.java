@@ -18,6 +18,7 @@ public class HttpRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalBindings")
     public HttpRule[] additionalBindings;
+
     public HttpRule withAdditionalBindings(HttpRule[] additionalBindings) {
         this.additionalBindings = additionalBindings;
         return this;
@@ -29,6 +30,7 @@ public class HttpRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public HttpRule withBody(String body) {
         this.body = body;
         return this;
@@ -40,6 +42,7 @@ public class HttpRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom")
     public CustomHttpPattern custom;
+
     public HttpRule withCustom(CustomHttpPattern custom) {
         this.custom = custom;
         return this;
@@ -51,6 +54,7 @@ public class HttpRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delete")
     public String delete;
+
     public HttpRule withDelete(String delete) {
         this.delete = delete;
         return this;
@@ -62,6 +66,7 @@ public class HttpRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("get")
     public String get;
+
     public HttpRule withGet(String get) {
         this.get = get;
         return this;
@@ -73,6 +78,7 @@ public class HttpRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patch")
     public String patch;
+
     public HttpRule withPatch(String patch) {
         this.patch = patch;
         return this;
@@ -84,6 +90,7 @@ public class HttpRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("post")
     public String post;
+
     public HttpRule withPost(String post) {
         this.post = post;
         return this;
@@ -95,6 +102,7 @@ public class HttpRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("put")
     public String put;
+
     public HttpRule withPut(String put) {
         this.put = put;
         return this;
@@ -106,6 +114,7 @@ public class HttpRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseBody")
     public String responseBody;
+
     public HttpRule withResponseBody(String responseBody) {
         this.responseBody = responseBody;
         return this;
@@ -117,9 +126,11 @@ public class HttpRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selector")
     public String selector;
+
     public HttpRule withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public HttpRule(){}
 }

@@ -12,6 +12,7 @@ public class UpdateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressId")
     public String addressId;
+
     public UpdateJobRequest withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
@@ -20,6 +21,7 @@ public class UpdateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateJobRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class UpdateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForwardingAddressId")
     public String forwardingAddressId;
+
     public UpdateJobRequest withForwardingAddressId(String forwardingAddressId) {
         this.forwardingAddressId = forwardingAddressId;
         return this;
@@ -35,6 +38,7 @@ public class UpdateJobRequest {
     
     @JsonProperty("JobId")
     public String jobId;
+
     public UpdateJobRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -43,6 +47,7 @@ public class UpdateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notification")
     public Notification notification;
+
     public UpdateJobRequest withNotification(Notification notification) {
         this.notification = notification;
         return this;
@@ -51,6 +56,7 @@ public class UpdateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnDeviceServiceConfiguration")
     public OnDeviceServiceConfiguration onDeviceServiceConfiguration;
+
     public UpdateJobRequest withOnDeviceServiceConfiguration(OnDeviceServiceConfiguration onDeviceServiceConfiguration) {
         this.onDeviceServiceConfiguration = onDeviceServiceConfiguration;
         return this;
@@ -59,6 +65,7 @@ public class UpdateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resources")
     public JobResource resources;
+
     public UpdateJobRequest withResources(JobResource resources) {
         this.resources = resources;
         return this;
@@ -67,6 +74,7 @@ public class UpdateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public UpdateJobRequest withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -75,6 +83,7 @@ public class UpdateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingOption")
     public ShippingOptionEnum shippingOption;
+
     public UpdateJobRequest withShippingOption(ShippingOptionEnum shippingOption) {
         this.shippingOption = shippingOption;
         return this;
@@ -83,9 +92,13 @@ public class UpdateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnowballCapacityPreference")
     public SnowballCapacityEnum snowballCapacityPreference;
+
     public UpdateJobRequest withSnowballCapacityPreference(SnowballCapacityEnum snowballCapacityPreference) {
         this.snowballCapacityPreference = snowballCapacityPreference;
         return this;
     }
     
+    public UpdateJobRequest(@JsonProperty("JobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

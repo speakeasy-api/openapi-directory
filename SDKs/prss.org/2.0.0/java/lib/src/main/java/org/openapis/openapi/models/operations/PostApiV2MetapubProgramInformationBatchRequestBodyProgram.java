@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostApiV2MetapubProgramInformationBatchRequestBodyProgram {
     @JsonProperty("airDate")
     public String airDate;
+
     public PostApiV2MetapubProgramInformationBatchRequestBodyProgram withAirDate(String airDate) {
         this.airDate = airDate;
         return this;
@@ -19,9 +20,14 @@ public class PostApiV2MetapubProgramInformationBatchRequestBodyProgram {
     
     @JsonProperty("title")
     public String title;
+
     public PostApiV2MetapubProgramInformationBatchRequestBodyProgram withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PostApiV2MetapubProgramInformationBatchRequestBodyProgram(@JsonProperty("airDate") String airDate, @JsonProperty("title") String title) {
+        this.airDate = airDate;
+        this.title = title;
+  }
 }

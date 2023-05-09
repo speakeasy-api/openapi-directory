@@ -14,6 +14,7 @@ public class CreateFindingsFilterRequestBody {
      */
     @JsonProperty("action")
     public CreateFindingsFilterRequestBodyActionEnum action;
+
     public CreateFindingsFilterRequestBody withAction(CreateFindingsFilterRequestBodyActionEnum action) {
         this.action = action;
         return this;
@@ -25,6 +26,7 @@ public class CreateFindingsFilterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateFindingsFilterRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -36,6 +38,7 @@ public class CreateFindingsFilterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateFindingsFilterRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class CreateFindingsFilterRequestBody {
      */
     @JsonProperty("findingCriteria")
     public CreateFindingsFilterRequestBodyFindingCriteria findingCriteria;
+
     public CreateFindingsFilterRequestBody withFindingCriteria(CreateFindingsFilterRequestBodyFindingCriteria findingCriteria) {
         this.findingCriteria = findingCriteria;
         return this;
@@ -56,6 +60,7 @@ public class CreateFindingsFilterRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateFindingsFilterRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -67,6 +72,7 @@ public class CreateFindingsFilterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Long position;
+
     public CreateFindingsFilterRequestBody withPosition(Long position) {
         this.position = position;
         return this;
@@ -78,9 +84,15 @@ public class CreateFindingsFilterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateFindingsFilterRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateFindingsFilterRequestBody(@JsonProperty("action") CreateFindingsFilterRequestBodyActionEnum action, @JsonProperty("findingCriteria") CreateFindingsFilterRequestBodyFindingCriteria findingCriteria, @JsonProperty("name") String name) {
+        this.action = action;
+        this.findingCriteria = findingCriteria;
+        this.name = name;
+  }
 }

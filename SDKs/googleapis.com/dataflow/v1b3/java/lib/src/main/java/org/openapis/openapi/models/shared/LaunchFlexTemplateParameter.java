@@ -18,6 +18,7 @@ public class LaunchFlexTemplateParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerSpec")
     public ContainerSpec containerSpec;
+
     public LaunchFlexTemplateParameter withContainerSpec(ContainerSpec containerSpec) {
         this.containerSpec = containerSpec;
         return this;
@@ -29,6 +30,7 @@ public class LaunchFlexTemplateParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerSpecGcsPath")
     public String containerSpecGcsPath;
+
     public LaunchFlexTemplateParameter withContainerSpecGcsPath(String containerSpecGcsPath) {
         this.containerSpecGcsPath = containerSpecGcsPath;
         return this;
@@ -40,6 +42,7 @@ public class LaunchFlexTemplateParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public FlexTemplateRuntimeEnvironment environment;
+
     public LaunchFlexTemplateParameter withEnvironment(FlexTemplateRuntimeEnvironment environment) {
         this.environment = environment;
         return this;
@@ -51,6 +54,7 @@ public class LaunchFlexTemplateParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobName")
     public String jobName;
+
     public LaunchFlexTemplateParameter withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -62,6 +66,7 @@ public class LaunchFlexTemplateParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchOptions")
     public java.util.Map<String, String> launchOptions;
+
     public LaunchFlexTemplateParameter withLaunchOptions(java.util.Map<String, String> launchOptions) {
         this.launchOptions = launchOptions;
         return this;
@@ -73,6 +78,7 @@ public class LaunchFlexTemplateParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, String> parameters;
+
     public LaunchFlexTemplateParameter withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -84,6 +90,7 @@ public class LaunchFlexTemplateParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transformNameMappings")
     public java.util.Map<String, String> transformNameMappings;
+
     public LaunchFlexTemplateParameter withTransformNameMappings(java.util.Map<String, String> transformNameMappings) {
         this.transformNameMappings = transformNameMappings;
         return this;
@@ -95,9 +102,11 @@ public class LaunchFlexTemplateParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update")
     public Boolean update;
+
     public LaunchFlexTemplateParameter withUpdate(Boolean update) {
         this.update = update;
         return this;
     }
     
+    public LaunchFlexTemplateParameter(){}
 }

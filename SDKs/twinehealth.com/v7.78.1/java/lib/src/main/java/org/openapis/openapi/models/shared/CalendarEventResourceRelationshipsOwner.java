@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CalendarEventResourceRelationshipsOwner {
     @JsonProperty("data")
     public CalendarEventResourceRelationshipsOwnerData data;
+
     public CalendarEventResourceRelationshipsOwner withData(CalendarEventResourceRelationshipsOwnerData data) {
         this.data = data;
         return this;
@@ -22,9 +23,13 @@ public class CalendarEventResourceRelationshipsOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public CalendarEventResourceRelationshipsOwnerLinks links;
+
     public CalendarEventResourceRelationshipsOwner withLinks(CalendarEventResourceRelationshipsOwnerLinks links) {
         this.links = links;
         return this;
     }
     
+    public CalendarEventResourceRelationshipsOwner(@JsonProperty("data") CalendarEventResourceRelationshipsOwnerData data) {
+        this.data = data;
+  }
 }

@@ -12,6 +12,7 @@ public class GetCertificatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateName")
     public String certificateName;
+
     public GetCertificatesRequest withCertificateName(String certificateName) {
         this.certificateName = certificateName;
         return this;
@@ -20,6 +21,7 @@ public class GetCertificatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateStatuses")
     public CertificateStatusEnum[] certificateStatuses;
+
     public GetCertificatesRequest withCertificateStatuses(CertificateStatusEnum[] certificateStatuses) {
         this.certificateStatuses = certificateStatuses;
         return this;
@@ -28,9 +30,11 @@ public class GetCertificatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeCertificateDetails")
     public Boolean includeCertificateDetails;
+
     public GetCertificatesRequest withIncludeCertificateDetails(Boolean includeCertificateDetails) {
         this.includeCertificateDetails = includeCertificateDetails;
         return this;
     }
     
+    public GetCertificatesRequest(){}
 }

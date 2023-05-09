@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class StandardsControlAssociationDetail {
     @JsonProperty("AssociationStatus")
     public AssociationStatusEnum associationStatus;
+
     public StandardsControlAssociationDetail withAssociationStatus(AssociationStatusEnum associationStatus) {
         this.associationStatus = associationStatus;
         return this;
@@ -27,6 +28,7 @@ public class StandardsControlAssociationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelatedRequirements")
     public String[] relatedRequirements;
+
     public StandardsControlAssociationDetail withRelatedRequirements(String[] relatedRequirements) {
         this.relatedRequirements = relatedRequirements;
         return this;
@@ -34,6 +36,7 @@ public class StandardsControlAssociationDetail {
     
     @JsonProperty("SecurityControlArn")
     public String securityControlArn;
+
     public StandardsControlAssociationDetail withSecurityControlArn(String securityControlArn) {
         this.securityControlArn = securityControlArn;
         return this;
@@ -41,6 +44,7 @@ public class StandardsControlAssociationDetail {
     
     @JsonProperty("SecurityControlId")
     public String securityControlId;
+
     public StandardsControlAssociationDetail withSecurityControlId(String securityControlId) {
         this.securityControlId = securityControlId;
         return this;
@@ -48,6 +52,7 @@ public class StandardsControlAssociationDetail {
     
     @JsonProperty("StandardsArn")
     public String standardsArn;
+
     public StandardsControlAssociationDetail withStandardsArn(String standardsArn) {
         this.standardsArn = standardsArn;
         return this;
@@ -56,6 +61,7 @@ public class StandardsControlAssociationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardsControlArns")
     public String[] standardsControlArns;
+
     public StandardsControlAssociationDetail withStandardsControlArns(String[] standardsControlArns) {
         this.standardsControlArns = standardsControlArns;
         return this;
@@ -64,6 +70,7 @@ public class StandardsControlAssociationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardsControlDescription")
     public String standardsControlDescription;
+
     public StandardsControlAssociationDetail withStandardsControlDescription(String standardsControlDescription) {
         this.standardsControlDescription = standardsControlDescription;
         return this;
@@ -72,6 +79,7 @@ public class StandardsControlAssociationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardsControlTitle")
     public String standardsControlTitle;
+
     public StandardsControlAssociationDetail withStandardsControlTitle(String standardsControlTitle) {
         this.standardsControlTitle = standardsControlTitle;
         return this;
@@ -82,6 +90,7 @@ public class StandardsControlAssociationDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public StandardsControlAssociationDetail withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -90,9 +99,16 @@ public class StandardsControlAssociationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdatedReason")
     public String updatedReason;
+
     public StandardsControlAssociationDetail withUpdatedReason(String updatedReason) {
         this.updatedReason = updatedReason;
         return this;
     }
     
+    public StandardsControlAssociationDetail(@JsonProperty("AssociationStatus") AssociationStatusEnum associationStatus, @JsonProperty("SecurityControlArn") String securityControlArn, @JsonProperty("SecurityControlId") String securityControlId, @JsonProperty("StandardsArn") String standardsArn) {
+        this.associationStatus = associationStatus;
+        this.securityControlArn = securityControlArn;
+        this.securityControlId = securityControlId;
+        this.standardsArn = standardsArn;
+  }
 }

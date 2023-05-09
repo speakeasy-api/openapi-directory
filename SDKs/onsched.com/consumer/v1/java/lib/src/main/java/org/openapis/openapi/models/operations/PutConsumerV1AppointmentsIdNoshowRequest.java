@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutConsumerV1AppointmentsIdNoshowRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public PutConsumerV1AppointmentsIdNoshowRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class PutConsumerV1AppointmentsIdNoshowRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PutConsumerV1AppointmentsIdNoshowRequest withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public PutConsumerV1AppointmentsIdNoshowRequest(@JsonProperty("id") Integer id) {
+        this.id = id;
+  }
 }

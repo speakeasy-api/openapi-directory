@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodePushDeploymentReleasesCreateRequest {
@@ -12,6 +13,7 @@ public class CodePushDeploymentReleasesCreateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CodePushDeploymentReleasesCreateRequestBody requestBody;
+
     public CodePushDeploymentReleasesCreateRequest withRequestBody(CodePushDeploymentReleasesCreateRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class CodePushDeploymentReleasesCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public CodePushDeploymentReleasesCreateRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -32,6 +35,7 @@ public class CodePushDeploymentReleasesCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment_name")
     public String deploymentName;
+
     public CodePushDeploymentReleasesCreateRequest withDeploymentName(String deploymentName) {
         this.deploymentName = deploymentName;
         return this;
@@ -42,9 +46,16 @@ public class CodePushDeploymentReleasesCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public CodePushDeploymentReleasesCreateRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public CodePushDeploymentReleasesCreateRequest(@JsonProperty("RequestBody") CodePushDeploymentReleasesCreateRequestBody requestBody, @JsonProperty("app_name") String appName, @JsonProperty("deployment_name") String deploymentName, @JsonProperty("owner_name") String ownerName) {
+        this.requestBody = requestBody;
+        this.appName = appName;
+        this.deploymentName = deploymentName;
+        this.ownerName = ownerName;
+  }
 }

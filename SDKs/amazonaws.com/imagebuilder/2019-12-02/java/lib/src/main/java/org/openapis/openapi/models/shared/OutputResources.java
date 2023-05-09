@@ -15,6 +15,7 @@ public class OutputResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amis")
     public Ami[] amis;
+
     public OutputResources withAmis(Ami[] amis) {
         this.amis = amis;
         return this;
@@ -23,9 +24,11 @@ public class OutputResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containers")
     public Container[] containers;
+
     public OutputResources withContainers(Container[] containers) {
         this.containers = containers;
         return this;
     }
     
+    public OutputResources(){}
 }

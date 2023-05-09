@@ -18,9 +18,11 @@ public class WorkloadIdentityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workloadPool")
     public String workloadPool;
+
     public WorkloadIdentityConfig withWorkloadPool(String workloadPool) {
         this.workloadPool = workloadPool;
         return this;
     }
     
+    public WorkloadIdentityConfig(){}
 }

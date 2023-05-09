@@ -15,6 +15,7 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cfop")
     public String cfop;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackages withCfop(String cfop) {
         this.cfop = cfop;
         return this;
@@ -26,6 +27,7 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("courier")
     public String courier;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackages withCourier(String courier) {
         this.courier = courier;
         return this;
@@ -37,6 +39,7 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("courierStatus")
     public String courierStatus;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackages withCourierStatus(String courierStatus) {
         this.courierStatus = courierStatus;
         return this;
@@ -48,6 +51,7 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embeddedInvoice")
     public String embeddedInvoice;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackages withEmbeddedInvoice(String embeddedInvoice) {
         this.embeddedInvoice = embeddedInvoice;
         return this;
@@ -59,6 +63,7 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceKey")
     public String invoiceKey;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackages withInvoiceKey(String invoiceKey) {
         this.invoiceKey = invoiceKey;
         return this;
@@ -70,6 +75,7 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceNumber")
     public String invoiceNumber;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackages withInvoiceNumber(String invoiceNumber) {
         this.invoiceNumber = invoiceNumber;
         return this;
@@ -81,6 +87,7 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceUrl")
     public String invoiceUrl;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackages withInvoiceUrl(String invoiceUrl) {
         this.invoiceUrl = invoiceUrl;
         return this;
@@ -92,6 +99,7 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceValue")
     public Long invoiceValue;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackages withInvoiceValue(Long invoiceValue) {
         this.invoiceValue = invoiceValue;
         return this;
@@ -103,6 +111,7 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuanceDate")
     public String issuanceDate;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackages withIssuanceDate(String issuanceDate) {
         this.issuanceDate = issuanceDate;
         return this;
@@ -114,6 +123,7 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public GetOrder2200ApplicationJSONPackageAttachmentPackagesItems[] items;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackages withItems(GetOrder2200ApplicationJSONPackageAttachmentPackagesItems[] items) {
         this.items = items;
         return this;
@@ -125,6 +135,7 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restitutions")
     public GetOrder2200ApplicationJSONPackageAttachmentPackagesRestitutions restitutions;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackages withRestitutions(GetOrder2200ApplicationJSONPackageAttachmentPackagesRestitutions restitutions) {
         this.restitutions = restitutions;
         return this;
@@ -136,6 +147,7 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingNumber")
     public String trackingNumber;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackages withTrackingNumber(String trackingNumber) {
         this.trackingNumber = trackingNumber;
         return this;
@@ -147,6 +159,7 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingUrl")
     public String trackingUrl;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackages withTrackingUrl(String trackingUrl) {
         this.trackingUrl = trackingUrl;
         return this;
@@ -158,6 +171,7 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackages withType(String type) {
         this.type = type;
         return this;
@@ -169,9 +183,11 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumes")
     public Long volumes;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackages withVolumes(Long volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public GetOrder2200ApplicationJSONPackageAttachmentPackages(){}
 }

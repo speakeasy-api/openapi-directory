@@ -18,6 +18,7 @@ public class AppendCellsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public AppendCellsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -29,6 +30,7 @@ public class AppendCellsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public RowData[] rows;
+
     public AppendCellsRequest withRows(RowData[] rows) {
         this.rows = rows;
         return this;
@@ -40,9 +42,11 @@ public class AppendCellsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sheetId")
     public Integer sheetId;
+
     public AppendCellsRequest withSheetId(Integer sheetId) {
         this.sheetId = sheetId;
         return this;
     }
     
+    public AppendCellsRequest(){}
 }

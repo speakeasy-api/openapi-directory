@@ -270,4 +270,15 @@ lib/src/main/java/org/openapis/openapi/models/shared/PatientAuthModeQueryRespons
 lib/src/main/java/org/openapis/openapi/models/shared/PatientAuthInitResponseAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/PatientAuthInitResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AuthMeta.java
+docs/sdk/README.md
+docs/gateway/README.md
+docs/consentflow/README.md
+docs/dataflow/README.md
+docs/datatransfer/README.md
+docs/discovery/README.md
+docs/link/README.md
+docs/monitoring/README.md
+docs/patientnotification/README.md
+docs/profile/README.md
+docs/userauth/README.md
 USAGE.md

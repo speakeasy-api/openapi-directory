@@ -12,9 +12,13 @@ public class UpdatePermissionsRequestBody {
      */
     @JsonProperty("updateInstructionBatch")
     public org.openapis.openapi.models.shared.UpdateInstruction[] updateInstructionBatch;
+
     public UpdatePermissionsRequestBody withUpdateInstructionBatch(org.openapis.openapi.models.shared.UpdateInstruction[] updateInstructionBatch) {
         this.updateInstructionBatch = updateInstructionBatch;
         return this;
     }
     
+    public UpdatePermissionsRequestBody(@JsonProperty("updateInstructionBatch") org.openapis.openapi.models.shared.UpdateInstruction[] updateInstructionBatch) {
+        this.updateInstructionBatch = updateInstructionBatch;
+  }
 }

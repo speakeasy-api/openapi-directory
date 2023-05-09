@@ -36,4 +36,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetQueryJSON200Applicat
 lib/src/main/java/org/openapis/openapi/models/operations/GetQueryJsonResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Event.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/events/README.md
 USAGE.md

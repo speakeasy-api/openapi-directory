@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteNetworkAclRequest {
     
     public Boolean dryRun;
+
     public DeleteNetworkAclRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class DeleteNetworkAclRequest {
     
     
     public String networkAclId;
+
     public DeleteNetworkAclRequest withNetworkAclId(String networkAclId) {
         this.networkAclId = networkAclId;
         return this;
     }
     
+    public DeleteNetworkAclRequest(@JsonProperty("NetworkAclId") String networkAclId) {
+        this.networkAclId = networkAclId;
+  }
 }

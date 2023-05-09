@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAppResponse {
@@ -12,6 +13,7 @@ public class CreateAppResponse {
      */
     
     public Object badRequestException;
+
     public CreateAppResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class CreateAppResponse {
     
     
     public String contentType;
+
     public CreateAppResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateAppResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAppResult createAppResult;
+
     public CreateAppResponse withCreateAppResult(org.openapis.openapi.models.shared.CreateAppResult createAppResult) {
         this.createAppResult = createAppResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateAppResponse {
      */
     
     public Object dependentServiceFailureException;
+
     public CreateAppResponse withDependentServiceFailureException(Object dependentServiceFailureException) {
         this.dependentServiceFailureException = dependentServiceFailureException;
         return this;
@@ -49,6 +54,7 @@ public class CreateAppResponse {
      */
     
     public Object internalFailureException;
+
     public CreateAppResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAppResponse {
      */
     
     public Object limitExceededException;
+
     public CreateAppResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateAppResponse {
     
     
     public Integer statusCode;
+
     public CreateAppResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateAppResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAppResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateAppResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateAppResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateAppResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

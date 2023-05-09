@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeFHIRImportJobRequest {
     @JsonProperty("DatastoreId")
     public String datastoreId;
+
     public DescribeFHIRImportJobRequest withDatastoreId(String datastoreId) {
         this.datastoreId = datastoreId;
         return this;
@@ -16,9 +17,14 @@ public class DescribeFHIRImportJobRequest {
     
     @JsonProperty("JobId")
     public String jobId;
+
     public DescribeFHIRImportJobRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public DescribeFHIRImportJobRequest(@JsonProperty("DatastoreId") String datastoreId, @JsonProperty("JobId") String jobId) {
+        this.datastoreId = datastoreId;
+        this.jobId = jobId;
+  }
 }

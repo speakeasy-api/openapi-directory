@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListBatchJobExecutionsResponse {
     @JsonProperty("batchJobExecutions")
     public BatchJobExecutionSummary[] batchJobExecutions;
+
     public ListBatchJobExecutionsResponse withBatchJobExecutions(BatchJobExecutionSummary[] batchJobExecutions) {
         this.batchJobExecutions = batchJobExecutions;
         return this;
@@ -22,9 +23,13 @@ public class ListBatchJobExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListBatchJobExecutionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBatchJobExecutionsResponse(@JsonProperty("batchJobExecutions") BatchJobExecutionSummary[] batchJobExecutions) {
+        this.batchJobExecutions = batchJobExecutions;
+  }
 }

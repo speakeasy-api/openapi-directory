@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeSecretResponse {
     
     public String contentType;
+
     public DescribeSecretResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeSecretResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeSecretResponse describeSecretResponse;
+
     public DescribeSecretResponse withDescribeSecretResponse(org.openapis.openapi.models.shared.DescribeSecretResponse describeSecretResponse) {
         this.describeSecretResponse = describeSecretResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeSecretResponse {
      */
     
     public Object internalServiceError;
+
     public DescribeSecretResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeSecretResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeSecretResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeSecretResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeSecretResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeSecretResponse {
     
     
     public Integer statusCode;
+
     public DescribeSecretResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeSecretResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeSecretResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeSecretResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

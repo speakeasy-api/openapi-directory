@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup {
     
     public String hourlyPrice;
+
     public GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup withHourlyPrice(String hourlyPrice) {
         this.hourlyPrice = hourlyPrice;
         return this;
@@ -19,6 +20,7 @@ public class GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup 
     
     
     public String remainingTotalValue;
+
     public GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup withRemainingTotalValue(String remainingTotalValue) {
         this.remainingTotalValue = remainingTotalValue;
         return this;
@@ -26,9 +28,11 @@ public class GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup 
     
     
     public String remainingUpfrontValue;
+
     public GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup withRemainingUpfrontValue(String remainingUpfrontValue) {
         this.remainingUpfrontValue = remainingUpfrontValue;
         return this;
     }
     
+    public GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup(){}
 }

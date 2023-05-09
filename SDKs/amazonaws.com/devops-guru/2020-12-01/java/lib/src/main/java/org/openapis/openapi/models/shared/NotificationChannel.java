@@ -15,6 +15,7 @@ public class NotificationChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Config")
     public NotificationChannelConfig config;
+
     public NotificationChannel withConfig(NotificationChannelConfig config) {
         this.config = config;
         return this;
@@ -23,9 +24,11 @@ public class NotificationChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public NotificationChannel withId(String id) {
         this.id = id;
         return this;
     }
     
+    public NotificationChannel(){}
 }

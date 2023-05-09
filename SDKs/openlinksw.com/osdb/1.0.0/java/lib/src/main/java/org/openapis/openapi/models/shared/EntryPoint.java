@@ -12,6 +12,7 @@ public class EntryPoint {
      */
     @JsonProperty("content_types")
     public String[] contentTypes;
+
     public EntryPoint withContentTypes(String[] contentTypes) {
         this.contentTypes = contentTypes;
         return this;
@@ -22,6 +23,7 @@ public class EntryPoint {
      */
     @JsonProperty("description")
     public String description;
+
     public EntryPoint withDescription(String description) {
         this.description = description;
         return this;
@@ -32,6 +34,7 @@ public class EntryPoint {
      */
     @JsonProperty("encoding_types")
     public String[] encodingTypes;
+
     public EntryPoint withEncodingTypes(String[] encodingTypes) {
         this.encodingTypes = encodingTypes;
         return this;
@@ -42,6 +45,7 @@ public class EntryPoint {
      */
     @JsonProperty("http_method")
     public EntryPointHttpMethodEnum httpMethod;
+
     public EntryPoint withHttpMethod(EntryPointHttpMethodEnum httpMethod) {
         this.httpMethod = httpMethod;
         return this;
@@ -52,6 +56,7 @@ public class EntryPoint {
      */
     @JsonProperty("name")
     public String name;
+
     public EntryPoint withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class EntryPoint {
      */
     @JsonProperty("parameters")
     public EntryPointParameter[] parameters;
+
     public EntryPoint withParameters(EntryPointParameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -72,6 +78,7 @@ public class EntryPoint {
      */
     @JsonProperty("url")
     public String url;
+
     public EntryPoint withUrl(String url) {
         this.url = url;
         return this;
@@ -82,9 +89,20 @@ public class EntryPoint {
      */
     @JsonProperty("url_template")
     public String urlTemplate;
+
     public EntryPoint withUrlTemplate(String urlTemplate) {
         this.urlTemplate = urlTemplate;
         return this;
     }
     
+    public EntryPoint(@JsonProperty("content_types") String[] contentTypes, @JsonProperty("description") String description, @JsonProperty("encoding_types") String[] encodingTypes, @JsonProperty("http_method") EntryPointHttpMethodEnum httpMethod, @JsonProperty("name") String name, @JsonProperty("parameters") EntryPointParameter[] parameters, @JsonProperty("url") String url, @JsonProperty("url_template") String urlTemplate) {
+        this.contentTypes = contentTypes;
+        this.description = description;
+        this.encodingTypes = encodingTypes;
+        this.httpMethod = httpMethod;
+        this.name = name;
+        this.parameters = parameters;
+        this.url = url;
+        this.urlTemplate = urlTemplate;
+  }
 }

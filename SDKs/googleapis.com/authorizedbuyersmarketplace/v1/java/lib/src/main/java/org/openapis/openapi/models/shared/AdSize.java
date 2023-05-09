@@ -18,6 +18,7 @@ public class AdSize {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public String height;
+
     public AdSize withHeight(String height) {
         this.height = height;
         return this;
@@ -29,6 +30,7 @@ public class AdSize {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AdSizeTypeEnum type;
+
     public AdSize withType(AdSizeTypeEnum type) {
         this.type = type;
         return this;
@@ -40,9 +42,11 @@ public class AdSize {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public String width;
+
     public AdSize withWidth(String width) {
         this.width = width;
         return this;
     }
     
+    public AdSize(){}
 }

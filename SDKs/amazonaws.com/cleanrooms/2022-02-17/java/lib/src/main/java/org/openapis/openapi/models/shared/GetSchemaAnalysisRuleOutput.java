@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetSchemaAnalysisRuleOutput {
     @JsonProperty("analysisRule")
     public AnalysisRule analysisRule;
+
     public GetSchemaAnalysisRuleOutput withAnalysisRule(AnalysisRule analysisRule) {
         this.analysisRule = analysisRule;
         return this;
     }
     
+    public GetSchemaAnalysisRuleOutput(@JsonProperty("analysisRule") AnalysisRule analysisRule) {
+        this.analysisRule = analysisRule;
+  }
 }

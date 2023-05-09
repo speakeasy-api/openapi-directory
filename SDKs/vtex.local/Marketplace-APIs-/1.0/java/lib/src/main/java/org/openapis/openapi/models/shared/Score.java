@@ -15,6 +15,7 @@ public class Score {
      */
     @JsonProperty("Approve")
     public Integer approve;
+
     public Score withApprove(Integer approve) {
         this.approve = approve;
         return this;
@@ -25,9 +26,14 @@ public class Score {
      */
     @JsonProperty("Reject")
     public Integer reject;
+
     public Score withReject(Integer reject) {
         this.reject = reject;
         return this;
     }
     
+    public Score(@JsonProperty("Approve") Integer approve, @JsonProperty("Reject") Integer reject) {
+        this.approve = approve;
+        this.reject = reject;
+  }
 }

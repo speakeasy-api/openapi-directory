@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetResourceAccessForBucketResponse {
@@ -12,6 +13,7 @@ public class SetResourceAccessForBucketResponse {
      */
     
     public Object accessDeniedException;
+
     public SetResourceAccessForBucketResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class SetResourceAccessForBucketResponse {
     
     
     public String contentType;
+
     public SetResourceAccessForBucketResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SetResourceAccessForBucketResponse {
      */
     
     public Object invalidInputException;
+
     public SetResourceAccessForBucketResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class SetResourceAccessForBucketResponse {
      */
     
     public Object notFoundException;
+
     public SetResourceAccessForBucketResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -49,6 +54,7 @@ public class SetResourceAccessForBucketResponse {
      */
     
     public Object serviceException;
+
     public SetResourceAccessForBucketResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -59,6 +65,7 @@ public class SetResourceAccessForBucketResponse {
      */
     
     public org.openapis.openapi.models.shared.SetResourceAccessForBucketResult setResourceAccessForBucketResult;
+
     public SetResourceAccessForBucketResponse withSetResourceAccessForBucketResult(org.openapis.openapi.models.shared.SetResourceAccessForBucketResult setResourceAccessForBucketResult) {
         this.setResourceAccessForBucketResult = setResourceAccessForBucketResult;
         return this;
@@ -66,6 +73,7 @@ public class SetResourceAccessForBucketResponse {
     
     
     public Integer statusCode;
+
     public SetResourceAccessForBucketResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class SetResourceAccessForBucketResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetResourceAccessForBucketResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class SetResourceAccessForBucketResponse {
      */
     
     public Object unauthenticatedException;
+
     public SetResourceAccessForBucketResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public SetResourceAccessForBucketResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

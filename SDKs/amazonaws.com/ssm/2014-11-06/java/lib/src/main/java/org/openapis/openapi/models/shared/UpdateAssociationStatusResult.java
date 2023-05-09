@@ -15,9 +15,11 @@ public class UpdateAssociationStatusResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationDescription")
     public AssociationDescription associationDescription;
+
     public UpdateAssociationStatusResult withAssociationDescription(AssociationDescription associationDescription) {
         this.associationDescription = associationDescription;
         return this;
     }
     
+    public UpdateAssociationStatusResult(){}
 }

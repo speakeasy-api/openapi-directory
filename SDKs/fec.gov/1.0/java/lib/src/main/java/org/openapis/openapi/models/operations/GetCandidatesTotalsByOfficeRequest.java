@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCandidatesTotalsByOfficeRequest {
@@ -13,6 +14,7 @@ public class GetCandidatesTotalsByOfficeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetCandidatesTotalsByOfficeRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -24,6 +26,7 @@ public class GetCandidatesTotalsByOfficeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_full")
     public Boolean electionFull;
+
     public GetCandidatesTotalsByOfficeRequest withElectionFull(Boolean electionFull) {
         this.electionFull = electionFull;
         return this;
@@ -37,6 +40,7 @@ public class GetCandidatesTotalsByOfficeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_year")
     public Integer[] electionYear;
+
     public GetCandidatesTotalsByOfficeRequest withElectionYear(Integer[] electionYear) {
         this.electionYear = electionYear;
         return this;
@@ -50,6 +54,7 @@ public class GetCandidatesTotalsByOfficeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_active_candidate")
     public Boolean isActiveCandidate;
+
     public GetCandidatesTotalsByOfficeRequest withIsActiveCandidate(Boolean isActiveCandidate) {
         this.isActiveCandidate = isActiveCandidate;
         return this;
@@ -65,6 +70,7 @@ public class GetCandidatesTotalsByOfficeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_election_cycle")
     public Integer maxElectionCycle;
+
     public GetCandidatesTotalsByOfficeRequest withMaxElectionCycle(Integer maxElectionCycle) {
         this.maxElectionCycle = maxElectionCycle;
         return this;
@@ -80,6 +86,7 @@ public class GetCandidatesTotalsByOfficeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_election_cycle")
     public Integer minElectionCycle;
+
     public GetCandidatesTotalsByOfficeRequest withMinElectionCycle(Integer minElectionCycle) {
         this.minElectionCycle = minElectionCycle;
         return this;
@@ -90,6 +97,7 @@ public class GetCandidatesTotalsByOfficeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
     public GetCandidatesTotalsByOfficeOfficeEnum office;
+
     public GetCandidatesTotalsByOfficeRequest withOffice(GetCandidatesTotalsByOfficeOfficeEnum office) {
         this.office = office;
         return this;
@@ -100,6 +108,7 @@ public class GetCandidatesTotalsByOfficeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetCandidatesTotalsByOfficeRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -110,6 +119,7 @@ public class GetCandidatesTotalsByOfficeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetCandidatesTotalsByOfficeRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -121,6 +131,7 @@ public class GetCandidatesTotalsByOfficeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetCandidatesTotalsByOfficeRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -131,6 +142,7 @@ public class GetCandidatesTotalsByOfficeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetCandidatesTotalsByOfficeRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -141,6 +153,7 @@ public class GetCandidatesTotalsByOfficeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetCandidatesTotalsByOfficeRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -151,9 +164,13 @@ public class GetCandidatesTotalsByOfficeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetCandidatesTotalsByOfficeRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
     }
     
+    public GetCandidatesTotalsByOfficeRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

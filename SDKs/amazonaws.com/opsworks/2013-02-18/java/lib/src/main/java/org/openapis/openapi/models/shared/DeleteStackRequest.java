@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteStackRequest {
     @JsonProperty("StackId")
     public String stackId;
+
     public DeleteStackRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public DeleteStackRequest(@JsonProperty("StackId") String stackId) {
+        this.stackId = stackId;
+  }
 }

@@ -15,6 +15,7 @@ public class RouteSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grpcRoute")
     public GrpcRoute grpcRoute;
+
     public RouteSpec withGrpcRoute(GrpcRoute grpcRoute) {
         this.grpcRoute = grpcRoute;
         return this;
@@ -23,6 +24,7 @@ public class RouteSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http2Route")
     public HttpRoute http2Route;
+
     public RouteSpec withHttp2Route(HttpRoute http2Route) {
         this.http2Route = http2Route;
         return this;
@@ -31,6 +33,7 @@ public class RouteSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpRoute")
     public HttpRoute httpRoute;
+
     public RouteSpec withHttpRoute(HttpRoute httpRoute) {
         this.httpRoute = httpRoute;
         return this;
@@ -39,6 +42,7 @@ public class RouteSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public RouteSpec withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -47,9 +51,11 @@ public class RouteSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tcpRoute")
     public TcpRoute tcpRoute;
+
     public RouteSpec withTcpRoute(TcpRoute tcpRoute) {
         this.tcpRoute = tcpRoute;
         return this;
     }
     
+    public RouteSpec(){}
 }

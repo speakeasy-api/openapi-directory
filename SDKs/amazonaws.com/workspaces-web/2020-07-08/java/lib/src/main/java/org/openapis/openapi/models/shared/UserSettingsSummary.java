@@ -15,6 +15,7 @@ public class UserSettingsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyAllowed")
     public EnabledTypeEnum copyAllowed;
+
     public UserSettingsSummary withCopyAllowed(EnabledTypeEnum copyAllowed) {
         this.copyAllowed = copyAllowed;
         return this;
@@ -23,6 +24,7 @@ public class UserSettingsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disconnectTimeoutInMinutes")
     public Long disconnectTimeoutInMinutes;
+
     public UserSettingsSummary withDisconnectTimeoutInMinutes(Long disconnectTimeoutInMinutes) {
         this.disconnectTimeoutInMinutes = disconnectTimeoutInMinutes;
         return this;
@@ -31,6 +33,7 @@ public class UserSettingsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadAllowed")
     public EnabledTypeEnum downloadAllowed;
+
     public UserSettingsSummary withDownloadAllowed(EnabledTypeEnum downloadAllowed) {
         this.downloadAllowed = downloadAllowed;
         return this;
@@ -39,6 +42,7 @@ public class UserSettingsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idleDisconnectTimeoutInMinutes")
     public Long idleDisconnectTimeoutInMinutes;
+
     public UserSettingsSummary withIdleDisconnectTimeoutInMinutes(Long idleDisconnectTimeoutInMinutes) {
         this.idleDisconnectTimeoutInMinutes = idleDisconnectTimeoutInMinutes;
         return this;
@@ -47,6 +51,7 @@ public class UserSettingsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pasteAllowed")
     public EnabledTypeEnum pasteAllowed;
+
     public UserSettingsSummary withPasteAllowed(EnabledTypeEnum pasteAllowed) {
         this.pasteAllowed = pasteAllowed;
         return this;
@@ -55,6 +60,7 @@ public class UserSettingsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("printAllowed")
     public EnabledTypeEnum printAllowed;
+
     public UserSettingsSummary withPrintAllowed(EnabledTypeEnum printAllowed) {
         this.printAllowed = printAllowed;
         return this;
@@ -63,6 +69,7 @@ public class UserSettingsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadAllowed")
     public EnabledTypeEnum uploadAllowed;
+
     public UserSettingsSummary withUploadAllowed(EnabledTypeEnum uploadAllowed) {
         this.uploadAllowed = uploadAllowed;
         return this;
@@ -71,9 +78,11 @@ public class UserSettingsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userSettingsArn")
     public String userSettingsArn;
+
     public UserSettingsSummary withUserSettingsArn(String userSettingsArn) {
         this.userSettingsArn = userSettingsArn;
         return this;
     }
     
+    public UserSettingsSummary(){}
 }

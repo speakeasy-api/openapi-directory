@@ -15,9 +15,13 @@ public class ItvSubscriptionStatusResponse {
      */
     @JsonProperty("is_active")
     public Boolean isActive;
+
     public ItvSubscriptionStatusResponse withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
     
+    public ItvSubscriptionStatusResponse(@JsonProperty("is_active") Boolean isActive) {
+        this.isActive = isActive;
+  }
 }

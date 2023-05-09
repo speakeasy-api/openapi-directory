@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2PurgeUserEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public GoogleCloudRetailV2PurgeUserEventsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2PurgeUserEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("force")
     public Boolean force;
+
     public GoogleCloudRetailV2PurgeUserEventsRequest withForce(Boolean force) {
         this.force = force;
         return this;
     }
     
+    public GoogleCloudRetailV2PurgeUserEventsRequest(){}
 }

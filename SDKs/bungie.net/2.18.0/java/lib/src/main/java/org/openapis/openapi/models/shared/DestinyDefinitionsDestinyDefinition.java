@@ -16,6 +16,7 @@ public class DestinyDefinitionsDestinyDefinition {
      */
     
     public Long hash;
+
     public DestinyDefinitionsDestinyDefinition withHash(Long hash) {
         this.hash = hash;
         return this;
@@ -26,6 +27,7 @@ public class DestinyDefinitionsDestinyDefinition {
      */
     
     public Integer index;
+
     public DestinyDefinitionsDestinyDefinition withIndex(Integer index) {
         this.index = index;
         return this;
@@ -36,9 +38,11 @@ public class DestinyDefinitionsDestinyDefinition {
      */
     
     public Boolean redacted;
+
     public DestinyDefinitionsDestinyDefinition withRedacted(Boolean redacted) {
         this.redacted = redacted;
         return this;
     }
     
+    public DestinyDefinitionsDestinyDefinition(){}
 }

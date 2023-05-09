@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreatePlayerSessionsInput {
     @JsonProperty("GameSessionId")
     public String gameSessionId;
+
     public CreatePlayerSessionsInput withGameSessionId(String gameSessionId) {
         this.gameSessionId = gameSessionId;
         return this;
@@ -19,6 +20,7 @@ public class CreatePlayerSessionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerDataMap")
     public java.util.Map<String, String> playerDataMap;
+
     public CreatePlayerSessionsInput withPlayerDataMap(java.util.Map<String, String> playerDataMap) {
         this.playerDataMap = playerDataMap;
         return this;
@@ -26,9 +28,14 @@ public class CreatePlayerSessionsInput {
     
     @JsonProperty("PlayerIds")
     public String[] playerIds;
+
     public CreatePlayerSessionsInput withPlayerIds(String[] playerIds) {
         this.playerIds = playerIds;
         return this;
     }
     
+    public CreatePlayerSessionsInput(@JsonProperty("GameSessionId") String gameSessionId, @JsonProperty("PlayerIds") String[] playerIds) {
+        this.gameSessionId = gameSessionId;
+        this.playerIds = playerIds;
+  }
 }

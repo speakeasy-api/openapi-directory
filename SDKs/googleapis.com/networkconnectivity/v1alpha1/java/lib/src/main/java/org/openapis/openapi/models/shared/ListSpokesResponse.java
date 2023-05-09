@@ -18,6 +18,7 @@ public class ListSpokesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListSpokesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListSpokesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spokes")
     public Spoke[] spokes;
+
     public ListSpokesResponse withSpokes(Spoke[] spokes) {
         this.spokes = spokes;
         return this;
@@ -40,9 +42,11 @@ public class ListSpokesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListSpokesResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListSpokesResponse(){}
 }

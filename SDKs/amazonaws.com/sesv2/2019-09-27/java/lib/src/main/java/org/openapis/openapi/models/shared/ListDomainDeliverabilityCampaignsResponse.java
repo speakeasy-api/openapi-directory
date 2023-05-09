@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListDomainDeliverabilityCampaignsResponse {
     @JsonProperty("DomainDeliverabilityCampaigns")
     public DomainDeliverabilityCampaign[] domainDeliverabilityCampaigns;
+
     public ListDomainDeliverabilityCampaignsResponse withDomainDeliverabilityCampaigns(DomainDeliverabilityCampaign[] domainDeliverabilityCampaigns) {
         this.domainDeliverabilityCampaigns = domainDeliverabilityCampaigns;
         return this;
@@ -22,9 +23,13 @@ public class ListDomainDeliverabilityCampaignsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDomainDeliverabilityCampaignsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDomainDeliverabilityCampaignsResponse(@JsonProperty("DomainDeliverabilityCampaigns") DomainDeliverabilityCampaign[] domainDeliverabilityCampaigns) {
+        this.domainDeliverabilityCampaigns = domainDeliverabilityCampaigns;
+  }
 }

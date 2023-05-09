@@ -22,6 +22,7 @@ public class ImageAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket_id")
     public String bucketId;
+
     public ImageAttributes withBucketId(String bucketId) {
         this.bucketId = bucketId;
         return this;
@@ -35,6 +36,7 @@ public class ImageAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket_type")
     public ImageAttributesBucketTypeEnum bucketType;
+
     public ImageAttributes withBucketType(ImageAttributesBucketTypeEnum bucketType) {
         this.bucketType = bucketType;
         return this;
@@ -45,6 +47,7 @@ public class ImageAttributes {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public ImageAttributes withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -53,6 +56,7 @@ public class ImageAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crop_data")
     public ImageAttributesTheCropAreaWithinTheOriginalMediaAsset cropData;
+
     public ImageAttributes withCropData(ImageAttributesTheCropAreaWithinTheOriginalMediaAsset cropData) {
         this.cropData = cropData;
         return this;
@@ -68,6 +72,7 @@ public class ImageAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ImageAttributesStatusEnum status;
+
     public ImageAttributes withStatus(ImageAttributesStatusEnum status) {
         this.status = status;
         return this;
@@ -78,9 +83,11 @@ public class ImageAttributes {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public ImageAttributes withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public ImageAttributes(){}
 }

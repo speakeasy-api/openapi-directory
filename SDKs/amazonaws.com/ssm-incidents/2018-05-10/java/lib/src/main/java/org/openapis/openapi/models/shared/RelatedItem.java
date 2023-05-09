@@ -15,6 +15,7 @@ public class RelatedItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generatedId")
     public String generatedId;
+
     public RelatedItem withGeneratedId(String generatedId) {
         this.generatedId = generatedId;
         return this;
@@ -22,6 +23,7 @@ public class RelatedItem {
     
     @JsonProperty("identifier")
     public ItemIdentifier identifier;
+
     public RelatedItem withIdentifier(ItemIdentifier identifier) {
         this.identifier = identifier;
         return this;
@@ -30,9 +32,13 @@ public class RelatedItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public RelatedItem withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public RelatedItem(@JsonProperty("identifier") ItemIdentifier identifier) {
+        this.identifier = identifier;
+  }
 }

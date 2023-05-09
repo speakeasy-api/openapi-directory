@@ -20,6 +20,7 @@ public class OrderSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineItemCountsByStatus")
     public java.util.Map<String, Long> lineItemCountsByStatus;
+
     public OrderSummary withLineItemCountsByStatus(java.util.Map<String, Long> lineItemCountsByStatus) {
         this.lineItemCountsByStatus = lineItemCountsByStatus;
         return this;
@@ -30,6 +31,7 @@ public class OrderSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("OrderFulfilledDate")
     public OffsetDateTime orderFulfilledDate;
+
     public OrderSummary withOrderFulfilledDate(OffsetDateTime orderFulfilledDate) {
         this.orderFulfilledDate = orderFulfilledDate;
         return this;
@@ -38,6 +40,7 @@ public class OrderSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrderId")
     public String orderId;
+
     public OrderSummary withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -48,6 +51,7 @@ public class OrderSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("OrderSubmissionDate")
     public OffsetDateTime orderSubmissionDate;
+
     public OrderSummary withOrderSubmissionDate(OffsetDateTime orderSubmissionDate) {
         this.orderSubmissionDate = orderSubmissionDate;
         return this;
@@ -56,6 +60,7 @@ public class OrderSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrderType")
     public OrderTypeEnum orderType;
+
     public OrderSummary withOrderType(OrderTypeEnum orderType) {
         this.orderType = orderType;
         return this;
@@ -64,6 +69,7 @@ public class OrderSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutpostId")
     public String outpostId;
+
     public OrderSummary withOutpostId(String outpostId) {
         this.outpostId = outpostId;
         return this;
@@ -72,9 +78,11 @@ public class OrderSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public OrderStatusEnum status;
+
     public OrderSummary withStatus(OrderStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public OrderSummary(){}
 }

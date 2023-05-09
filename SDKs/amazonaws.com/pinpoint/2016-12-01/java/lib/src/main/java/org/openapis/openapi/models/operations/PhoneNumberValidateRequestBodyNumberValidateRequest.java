@@ -15,6 +15,7 @@ public class PhoneNumberValidateRequestBodyNumberValidateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsoCountryCode")
     public String isoCountryCode;
+
     public PhoneNumberValidateRequestBodyNumberValidateRequest withIsoCountryCode(String isoCountryCode) {
         this.isoCountryCode = isoCountryCode;
         return this;
@@ -23,9 +24,11 @@ public class PhoneNumberValidateRequestBodyNumberValidateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneNumber")
     public String phoneNumber;
+
     public PhoneNumberValidateRequestBodyNumberValidateRequest withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public PhoneNumberValidateRequestBodyNumberValidateRequest(){}
 }

@@ -15,9 +15,11 @@ public class BatchGetLinkAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public AttributeKeyAndValue[] attributes;
+
     public BatchGetLinkAttributesResponse withAttributes(AttributeKeyAndValue[] attributes) {
         this.attributes = attributes;
         return this;
     }
     
+    public BatchGetLinkAttributesResponse(){}
 }

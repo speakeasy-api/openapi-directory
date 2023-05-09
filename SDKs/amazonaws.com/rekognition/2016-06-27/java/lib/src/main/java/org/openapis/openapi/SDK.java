@@ -105,6 +105,8 @@ public class SDK {
 	
 	
 	
+	
+	
   		
 
 	private HTTPClient _defaultClient;
@@ -209,6 +211,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -246,7 +253,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompareFacesResponse res = new org.openapis.openapi.models.operations.CompareFacesResponse() {{
+        org.openapis.openapi.models.operations.CompareFacesResponse res = new org.openapis.openapi.models.operations.CompareFacesResponse(contentType, httpRes.statusCode()) {{
             compareFacesResponse = null;
             invalidParameterException = null;
             invalidS3ObjectException = null;
@@ -257,8 +264,6 @@ public class SDK {
             provisionedThroughputExceededException = null;
             invalidImageFormatException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -329,7 +334,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Copies a version of an Amazon Rekognition Custom Labels model from a source project to a destination project. The source and destination projects can be in different AWS accounts but must be in the same AWS Region. You can't copy a model to another AWS service. &lt;/p&gt; &lt;p&gt;To copy a model version to a different AWS account, you need to create a resource-based policy known as a &lt;i&gt;project policy&lt;/i&gt;. You attach the project policy to the source project by calling &lt;a&gt;PutProjectPolicy&lt;/a&gt;. The project policy gives permission to copy the model version from a trusting AWS account to a trusted account.&lt;/p&gt; &lt;p&gt;For more information creating and attaching a project policy, see Attaching a project policy (SDK) in the &lt;i&gt;Amazon Rekognition Custom Labels Developer Guide&lt;/i&gt;. &lt;/p&gt; &lt;p&gt;If you are copying a model version to a project in the same AWS account, you don't need to create a project policy.&lt;/p&gt; &lt;note&gt; &lt;p&gt;To copy a model, the destination project, source project, and source model version must already exist.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Copying a model version takes a while to complete. To get the current status, call &lt;a&gt;DescribeProjectVersions&lt;/a&gt; and check the value of &lt;code&gt;Status&lt;/code&gt; in the &lt;a&gt;ProjectVersionDescription&lt;/a&gt; object. The copy operation has finished when the value of &lt;code&gt;Status&lt;/code&gt; is &lt;code&gt;COPYING_COMPLETED&lt;/code&gt;.&lt;/p&gt;
+     * &lt;p&gt;Copies a version of an Amazon Rekognition Custom Labels model from a source project to a destination project. The source and destination projects can be in different AWS accounts but must be in the same AWS Region. You can't copy a model to another AWS service. &lt;/p&gt; &lt;p&gt;To copy a model version to a different AWS account, you need to create a resource-based policy known as a &lt;i&gt;project policy&lt;/i&gt;. You attach the project policy to the source project by calling &lt;a&gt;PutProjectPolicy&lt;/a&gt;. The project policy gives permission to copy the model version from a trusting AWS account to a trusted account.&lt;/p&gt; &lt;p&gt;For more information creating and attaching a project policy, see Attaching a project policy (SDK) in the &lt;i&gt;Amazon Rekognition Custom Labels Developer Guide&lt;/i&gt;. &lt;/p&gt; &lt;p&gt;If you are copying a model version to a project in the same AWS account, you don't need to create a project policy.&lt;/p&gt; &lt;note&gt; &lt;p&gt;To copy a model, the destination project, source project, and source model version must already exist.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Copying a model version takes a while to complete. To get the current status, call &lt;a&gt;DescribeProjectVersions&lt;/a&gt; and check the value of &lt;code&gt;Status&lt;/code&gt; in the &lt;a&gt;ProjectVersionDescription&lt;/a&gt; object. The copy operation has finished when the value of &lt;code&gt;Status&lt;/code&gt; is &lt;code&gt;COPYING_COMPLETED&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;This operation requires permissions to perform the &lt;code&gt;rekognition:CopyProjectVersion&lt;/code&gt; action.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -362,7 +367,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CopyProjectVersionResponse res = new org.openapis.openapi.models.operations.CopyProjectVersionResponse() {{
+        org.openapis.openapi.models.operations.CopyProjectVersionResponse res = new org.openapis.openapi.models.operations.CopyProjectVersionResponse(contentType, httpRes.statusCode()) {{
             copyProjectVersionResponse = null;
             accessDeniedException = null;
             internalServerError = null;
@@ -374,8 +379,6 @@ public class SDK {
             provisionedThroughputExceededException = null;
             resourceInUseException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,7 +489,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCollectionResponse res = new org.openapis.openapi.models.operations.CreateCollectionResponse() {{
+        org.openapis.openapi.models.operations.CreateCollectionResponse res = new org.openapis.openapi.models.operations.CreateCollectionResponse(contentType, httpRes.statusCode()) {{
             createCollectionResponse = null;
             invalidParameterException = null;
             accessDeniedException = null;
@@ -496,8 +499,6 @@ public class SDK {
             resourceAlreadyExistsException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -594,7 +595,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDatasetResponse res = new org.openapis.openapi.models.operations.CreateDatasetResponse() {{
+        org.openapis.openapi.models.operations.CreateDatasetResponse res = new org.openapis.openapi.models.operations.CreateDatasetResponse(contentType, httpRes.statusCode()) {{
             createDatasetResponse = null;
             internalServerError = null;
             throttlingException = null;
@@ -606,8 +607,6 @@ public class SDK {
             resourceAlreadyExistsException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -685,6 +684,96 @@ public class SDK {
     }
 
     /**
+     * This API operation initiates a Face Liveness session. It returns a &lt;code&gt;SessionId&lt;/code&gt;, which you can use to start streaming Face Liveness video and get the results for a Face Liveness session. You can use the &lt;code&gt;OutputConfig&lt;/code&gt; option in the Settings parameter to provide an Amazon S3 bucket location. The Amazon S3 bucket stores reference images and audit images. You can use &lt;code&gt;AuditImagesLimit&lt;/code&gt; to limit the number of audit images returned. This number is between 0 and 4. By default, it is set to 0. The limit is best effort and based on the duration of the selfie-video. 
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateFaceLivenessSessionResponse createFaceLivenessSession(org.openapis.openapi.models.operations.CreateFaceLivenessSessionRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=RekognitionService.CreateFaceLivenessSession");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createFaceLivenessSessionRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CreateFaceLivenessSessionResponse res = new org.openapis.openapi.models.operations.CreateFaceLivenessSessionResponse(contentType, httpRes.statusCode()) {{
+            createFaceLivenessSessionResponse = null;
+            accessDeniedException = null;
+            internalServerError = null;
+            invalidParameterException = null;
+            throttlingException = null;
+            provisionedThroughputExceededException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.CreateFaceLivenessSessionResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.CreateFaceLivenessSessionResponse.class);
+                res.createFaceLivenessSessionResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.accessDeniedException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalServerError = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidParameterException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.throttlingException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 484) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.provisionedThroughputExceededException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * &lt;p&gt;Creates a new Amazon Rekognition Custom Labels project. A project is a group of resources (datasets, model versions) that you use to create and manage Amazon Rekognition Custom Labels models. &lt;/p&gt; &lt;p&gt;This operation requires permissions to perform the &lt;code&gt;rekognition:CreateProject&lt;/code&gt; action.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -718,7 +807,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateProjectResponse res = new org.openapis.openapi.models.operations.CreateProjectResponse() {{
+        org.openapis.openapi.models.operations.CreateProjectResponse res = new org.openapis.openapi.models.operations.CreateProjectResponse(contentType, httpRes.statusCode()) {{
             createProjectResponse = null;
             resourceInUseException = null;
             limitExceededException = null;
@@ -728,8 +817,6 @@ public class SDK {
             throttlingException = null;
             provisionedThroughputExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -826,7 +913,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateProjectVersionResponse res = new org.openapis.openapi.models.operations.CreateProjectVersionResponse() {{
+        org.openapis.openapi.models.operations.CreateProjectVersionResponse res = new org.openapis.openapi.models.operations.CreateProjectVersionResponse(contentType, httpRes.statusCode()) {{
             createProjectVersionResponse = null;
             resourceInUseException = null;
             resourceNotFoundException = null;
@@ -838,8 +925,6 @@ public class SDK {
             provisionedThroughputExceededException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -917,7 +1002,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Creates an Amazon Rekognition stream processor that you can use to detect and recognize faces or to detect labels in a streaming video.&lt;/p&gt; &lt;p&gt;Amazon Rekognition Video is a consumer of live video from Amazon Kinesis Video Streams. There are two different settings for stream processors in Amazon Rekognition: detecting faces and detecting labels.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;If you are creating a stream processor for detecting faces, you provide as input a Kinesis video stream (&lt;code&gt;Input&lt;/code&gt;) and a Kinesis data stream (&lt;code&gt;Output&lt;/code&gt;) stream. You also specify the face recognition criteria in &lt;code&gt;Settings&lt;/code&gt;. For example, the collection containing faces that you want to recognize. After you have finished analyzing a streaming video, use &lt;a&gt;StopStreamProcessor&lt;/a&gt; to stop processing.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;If you are creating a stream processor to detect labels, you provide as input a Kinesis video stream (&lt;code&gt;Input&lt;/code&gt;), Amazon S3 bucket information (&lt;code&gt;Output&lt;/code&gt;), and an Amazon SNS topic ARN (&lt;code&gt;NotificationChannel&lt;/code&gt;). You can also provide a KMS key ID to encrypt the data sent to your Amazon S3 bucket. You specify what you want to detect in &lt;code&gt;ConnectedHomeSettings&lt;/code&gt;, such as people, packages and people, or pets, people, and packages. You can also specify where in the frame you want Amazon Rekognition to monitor with &lt;code&gt;RegionsOfInterest&lt;/code&gt;. When you run the &lt;a&gt;StartStreamProcessor&lt;/a&gt; operation on a label detection stream processor, you input start and stop information to determine the length of the processing time.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; Use &lt;code&gt;Name&lt;/code&gt; to assign an identifier for the stream processor. You use &lt;code&gt;Name&lt;/code&gt; to manage the stream processor. For example, you can start processing the source video by calling &lt;a&gt;StartStreamProcessor&lt;/a&gt; with the &lt;code&gt;Name&lt;/code&gt; field. &lt;/p&gt; &lt;p&gt;This operation requires permissions to perform the &lt;code&gt;rekognition:CreateStreamProcessor&lt;/code&gt; action. If you want to tag your stream processor, you also require permission to perform the &lt;code&gt;rekognition:TagResource&lt;/code&gt; operation.&lt;/p&gt;
+     * &lt;p&gt;Creates an Amazon Rekognition stream processor that you can use to detect and recognize faces or to detect labels in a streaming video.&lt;/p&gt; &lt;p&gt;Amazon Rekognition Video is a consumer of live video from Amazon Kinesis Video Streams. There are two different settings for stream processors in Amazon Rekognition: detecting faces and detecting labels.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;If you are creating a stream processor for detecting faces, you provide as input a Kinesis video stream (&lt;code&gt;Input&lt;/code&gt;) and a Kinesis data stream (&lt;code&gt;Output&lt;/code&gt;) stream for receiving the output. You must use the &lt;code&gt;FaceSearch&lt;/code&gt; option in &lt;code&gt;Settings&lt;/code&gt;, specifying the collection that contains the faces you want to recognize. After you have finished analyzing a streaming video, use &lt;a&gt;StopStreamProcessor&lt;/a&gt; to stop processing.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;If you are creating a stream processor to detect labels, you provide as input a Kinesis video stream (&lt;code&gt;Input&lt;/code&gt;), Amazon S3 bucket information (&lt;code&gt;Output&lt;/code&gt;), and an Amazon SNS topic ARN (&lt;code&gt;NotificationChannel&lt;/code&gt;). You can also provide a KMS key ID to encrypt the data sent to your Amazon S3 bucket. You specify what you want to detect by using the &lt;code&gt;ConnectedHome&lt;/code&gt; option in settings, and selecting one of the following: &lt;code&gt;PERSON&lt;/code&gt;, &lt;code&gt;PET&lt;/code&gt;, &lt;code&gt;PACKAGE&lt;/code&gt;, &lt;code&gt;ALL&lt;/code&gt; You can also specify where in the frame you want Amazon Rekognition to monitor with &lt;code&gt;RegionsOfInterest&lt;/code&gt;. When you run the &lt;a&gt;StartStreamProcessor&lt;/a&gt; operation on a label detection stream processor, you input start and stop information to determine the length of the processing time.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; Use &lt;code&gt;Name&lt;/code&gt; to assign an identifier for the stream processor. You use &lt;code&gt;Name&lt;/code&gt; to manage the stream processor. For example, you can start processing the source video by calling &lt;a&gt;StartStreamProcessor&lt;/a&gt; with the &lt;code&gt;Name&lt;/code&gt; field. &lt;/p&gt; &lt;p&gt;This operation requires permissions to perform the &lt;code&gt;rekognition:CreateStreamProcessor&lt;/code&gt; action. If you want to tag your stream processor, you also require permission to perform the &lt;code&gt;rekognition:TagResource&lt;/code&gt; operation.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -950,7 +1035,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateStreamProcessorResponse res = new org.openapis.openapi.models.operations.CreateStreamProcessorResponse() {{
+        org.openapis.openapi.models.operations.CreateStreamProcessorResponse res = new org.openapis.openapi.models.operations.CreateStreamProcessorResponse(contentType, httpRes.statusCode()) {{
             createStreamProcessorResponse = null;
             accessDeniedException = null;
             internalServerError = null;
@@ -961,8 +1046,6 @@ public class SDK {
             provisionedThroughputExceededException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1066,7 +1149,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCollectionResponse res = new org.openapis.openapi.models.operations.DeleteCollectionResponse() {{
+        org.openapis.openapi.models.operations.DeleteCollectionResponse res = new org.openapis.openapi.models.operations.DeleteCollectionResponse(contentType, httpRes.statusCode()) {{
             deleteCollectionResponse = null;
             invalidParameterException = null;
             accessDeniedException = null;
@@ -1075,8 +1158,6 @@ public class SDK {
             provisionedThroughputExceededException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1166,7 +1247,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDatasetResponse res = new org.openapis.openapi.models.operations.DeleteDatasetResponse() {{
+        org.openapis.openapi.models.operations.DeleteDatasetResponse res = new org.openapis.openapi.models.operations.DeleteDatasetResponse(contentType, httpRes.statusCode()) {{
             deleteDatasetResponse = null;
             internalServerError = null;
             throttlingException = null;
@@ -1177,8 +1258,6 @@ public class SDK {
             resourceInUseException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1282,7 +1361,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFacesResponse res = new org.openapis.openapi.models.operations.DeleteFacesResponse() {{
+        org.openapis.openapi.models.operations.DeleteFacesResponse res = new org.openapis.openapi.models.operations.DeleteFacesResponse(contentType, httpRes.statusCode()) {{
             deleteFacesResponse = null;
             invalidParameterException = null;
             accessDeniedException = null;
@@ -1291,8 +1370,6 @@ public class SDK {
             provisionedThroughputExceededException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1382,7 +1459,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteProjectResponse res = new org.openapis.openapi.models.operations.DeleteProjectResponse() {{
+        org.openapis.openapi.models.operations.DeleteProjectResponse res = new org.openapis.openapi.models.operations.DeleteProjectResponse(contentType, httpRes.statusCode()) {{
             deleteProjectResponse = null;
             resourceInUseException = null;
             resourceNotFoundException = null;
@@ -1392,8 +1469,6 @@ public class SDK {
             throttlingException = null;
             provisionedThroughputExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1457,7 +1532,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Deletes an existing project policy.&lt;/p&gt; &lt;p&gt;To get a list of project policies attached to a project, call &lt;a&gt;ListProjectPolicies&lt;/a&gt;. To attach a project policy to a project, call &lt;a&gt;PutProjectPolicy&lt;/a&gt;.&lt;/p&gt;
+     * &lt;p&gt;Deletes an existing project policy.&lt;/p&gt; &lt;p&gt;To get a list of project policies attached to a project, call &lt;a&gt;ListProjectPolicies&lt;/a&gt;. To attach a project policy to a project, call &lt;a&gt;PutProjectPolicy&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;This operation requires permissions to perform the &lt;code&gt;rekognition:DeleteProjectPolicy&lt;/code&gt; action.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1490,7 +1565,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteProjectPolicyResponse res = new org.openapis.openapi.models.operations.DeleteProjectPolicyResponse() {{
+        org.openapis.openapi.models.operations.DeleteProjectPolicyResponse res = new org.openapis.openapi.models.operations.DeleteProjectPolicyResponse(contentType, httpRes.statusCode()) {{
             deleteProjectPolicyResponse = null;
             accessDeniedException = null;
             internalServerError = null;
@@ -1500,8 +1575,6 @@ public class SDK {
             provisionedThroughputExceededException = null;
             invalidPolicyRevisionIdException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1598,7 +1671,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteProjectVersionResponse res = new org.openapis.openapi.models.operations.DeleteProjectVersionResponse() {{
+        org.openapis.openapi.models.operations.DeleteProjectVersionResponse res = new org.openapis.openapi.models.operations.DeleteProjectVersionResponse(contentType, httpRes.statusCode()) {{
             deleteProjectVersionResponse = null;
             resourceNotFoundException = null;
             resourceInUseException = null;
@@ -1608,8 +1681,6 @@ public class SDK {
             throttlingException = null;
             provisionedThroughputExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1706,7 +1777,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteStreamProcessorResponse res = new org.openapis.openapi.models.operations.DeleteStreamProcessorResponse() {{
+        org.openapis.openapi.models.operations.DeleteStreamProcessorResponse res = new org.openapis.openapi.models.operations.DeleteStreamProcessorResponse(contentType, httpRes.statusCode()) {{
             deleteStreamProcessorResponse = null;
             accessDeniedException = null;
             internalServerError = null;
@@ -1716,8 +1787,6 @@ public class SDK {
             resourceInUseException = null;
             provisionedThroughputExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1814,7 +1883,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeCollectionResponse res = new org.openapis.openapi.models.operations.DescribeCollectionResponse() {{
+        org.openapis.openapi.models.operations.DescribeCollectionResponse res = new org.openapis.openapi.models.operations.DescribeCollectionResponse(contentType, httpRes.statusCode()) {{
             describeCollectionResponse = null;
             invalidParameterException = null;
             accessDeniedException = null;
@@ -1823,8 +1892,6 @@ public class SDK {
             provisionedThroughputExceededException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1914,7 +1981,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeDatasetResponse res = new org.openapis.openapi.models.operations.DescribeDatasetResponse() {{
+        org.openapis.openapi.models.operations.DescribeDatasetResponse res = new org.openapis.openapi.models.operations.DescribeDatasetResponse(contentType, httpRes.statusCode()) {{
             describeDatasetResponse = null;
             internalServerError = null;
             throttlingException = null;
@@ -1923,8 +1990,6 @@ public class SDK {
             accessDeniedException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2020,7 +2085,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeProjectVersionsResponse res = new org.openapis.openapi.models.operations.DescribeProjectVersionsResponse() {{
+        org.openapis.openapi.models.operations.DescribeProjectVersionsResponse res = new org.openapis.openapi.models.operations.DescribeProjectVersionsResponse(contentType, httpRes.statusCode()) {{
             describeProjectVersionsResponse = null;
             resourceNotFoundException = null;
             invalidPaginationTokenException = null;
@@ -2030,8 +2095,6 @@ public class SDK {
             throttlingException = null;
             provisionedThroughputExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2134,7 +2197,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeProjectsResponse res = new org.openapis.openapi.models.operations.DescribeProjectsResponse() {{
+        org.openapis.openapi.models.operations.DescribeProjectsResponse res = new org.openapis.openapi.models.operations.DescribeProjectsResponse(contentType, httpRes.statusCode()) {{
             describeProjectsResponse = null;
             invalidPaginationTokenException = null;
             invalidParameterException = null;
@@ -2143,8 +2206,6 @@ public class SDK {
             throttlingException = null;
             provisionedThroughputExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2234,7 +2295,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeStreamProcessorResponse res = new org.openapis.openapi.models.operations.DescribeStreamProcessorResponse() {{
+        org.openapis.openapi.models.operations.DescribeStreamProcessorResponse res = new org.openapis.openapi.models.operations.DescribeStreamProcessorResponse(contentType, httpRes.statusCode()) {{
             describeStreamProcessorResponse = null;
             accessDeniedException = null;
             internalServerError = null;
@@ -2243,8 +2304,6 @@ public class SDK {
             resourceNotFoundException = null;
             provisionedThroughputExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2334,7 +2393,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DetectCustomLabelsResponse res = new org.openapis.openapi.models.operations.DetectCustomLabelsResponse() {{
+        org.openapis.openapi.models.operations.DetectCustomLabelsResponse res = new org.openapis.openapi.models.operations.DetectCustomLabelsResponse(contentType, httpRes.statusCode()) {{
             detectCustomLabelsResponse = null;
             resourceNotFoundException = null;
             resourceNotReadyException = null;
@@ -2348,8 +2407,6 @@ public class SDK {
             provisionedThroughputExceededException = null;
             invalidImageFormatException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2474,7 +2531,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DetectFacesResponse res = new org.openapis.openapi.models.operations.DetectFacesResponse() {{
+        org.openapis.openapi.models.operations.DetectFacesResponse res = new org.openapis.openapi.models.operations.DetectFacesResponse(contentType, httpRes.statusCode()) {{
             detectFacesResponse = null;
             invalidS3ObjectException = null;
             invalidParameterException = null;
@@ -2485,8 +2542,6 @@ public class SDK {
             provisionedThroughputExceededException = null;
             invalidImageFormatException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2557,7 +2612,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Detects instances of real-world entities within an image (JPEG or PNG) provided as input. This includes objects like flower, tree, and table; events like wedding, graduation, and birthday party; and concepts like landscape, evening, and nature. &lt;/p&gt; &lt;p&gt;For an example, see Analyzing images stored in an Amazon S3 bucket in the Amazon Rekognition Developer Guide.&lt;/p&gt; &lt;p&gt;You pass the input image as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If you use the AWS CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be either a PNG or JPEG formatted file. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Optional Parameters&lt;/b&gt; &lt;/p&gt; &lt;p&gt;You can specify one or both of the &lt;code&gt;GENERAL_LABELS&lt;/code&gt; and &lt;code&gt;IMAGE_PROPERTIES&lt;/code&gt; feature types when calling the DetectLabels API. Including &lt;code&gt;GENERAL_LABELS&lt;/code&gt; will ensure the response includes the labels detected in the input image, while including &lt;code&gt;IMAGE_PROPERTIES &lt;/code&gt;will ensure the response includes information about the image quality and color.&lt;/p&gt; &lt;p&gt;When using &lt;code&gt;GENERAL_LABELS&lt;/code&gt; and/or &lt;code&gt;IMAGE_PROPERTIES&lt;/code&gt; you can provide filtering criteria to the Settings parameter. You can filter with sets of individual labels or with label categories. You can specify inclusive filters, exclusive filters, or a combination of inclusive and exclusive filters. For more information on filtering see &lt;a href="https://docs.aws.amazon.com/rekognition/latest/dg/labels-detect-labels-image.html"&gt;Detecting Labels in an Image&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;You can specify &lt;code&gt;MinConfidence&lt;/code&gt; to control the confidence threshold for the labels returned. The default is 55%. You can also add the &lt;code&gt;MaxLabels&lt;/code&gt; parameter to limit the number of labels returned. The default and upper limit is 1000 labels.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Response Elements&lt;/b&gt; &lt;/p&gt; &lt;p&gt; For each object, scene, and concept the API returns one or more labels. The API returns the following types of information regarding labels:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; Name - The name of the detected label. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; Confidence - The level of confidence in the label assigned to a detected object. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; Parents - The ancestor labels for a detected label. DetectLabels returns a hierarchical taxonomy of detected labels. For example, a detected car might be assigned the label car. The label car has two parent labels: Vehicle (its parent) and Transportation (its grandparent). The response includes the all ancestors for a label, where every ancestor is a unique label. In the previous example, Car, Vehicle, and Transportation are returned as unique labels in the response. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; Aliases - Possible Aliases for the label. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; Categories - The label categories that the detected label belongs to. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; BoundingBox \u2014 Bounding boxes are described for all instances of detected common object labels, returned in an array of Instance objects. An Instance object contains a BoundingBox object, describing the location of the label on the input image. It also includes the confidence for the accuracy of the detected bounding box. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; The API returns the following information regarding the image, as part of the ImageProperties structure:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Quality - Information about the Sharpness, Brightness, and Contrast of the input image, scored between 0 to 100. Image quality is returned for the entire image, as well as the background and the foreground. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Dominant Color - An array of the dominant colors in the image. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Foreground - Information about the sharpness, brightness, and dominant colors of the input image\u2019s foreground. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Background - Information about the sharpness, brightness, and dominant colors of the input image\u2019s background.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;The list of returned labels will include at least one label for every detected object, along with information about that label. In the following example, suppose the input image has a lighthouse, the sea, and a rock. The response includes all three labels, one for each object, as well as the confidence in the label:&lt;/p&gt; &lt;p&gt; &lt;code&gt;{Name: lighthouse, Confidence: 98.4629}&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt;{Name: rock,Confidence: 79.2097}&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt; {Name: sea,Confidence: 75.061}&lt;/code&gt; &lt;/p&gt; &lt;p&gt;The list of labels can include multiple labels for the same object. For example, if the input image shows a flower (for example, a tulip), the operation might return the following three labels. &lt;/p&gt; &lt;p&gt; &lt;code&gt;{Name: flower,Confidence: 99.0562}&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt;{Name: plant,Confidence: 99.0562}&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt;{Name: tulip,Confidence: 99.0562}&lt;/code&gt; &lt;/p&gt; &lt;p&gt;In this example, the detection algorithm more precisely identifies the flower as a tulip.&lt;/p&gt; &lt;note&gt; &lt;p&gt;If the object detected is a person, the operation doesn't provide the same facial details that the &lt;a&gt;DetectFaces&lt;/a&gt; operation provides.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;This is a stateless API operation. That is, the operation does not persist any data.&lt;/p&gt; &lt;p&gt;This operation requires permissions to perform the &lt;code&gt;rekognition:DetectLabels&lt;/code&gt; action. &lt;/p&gt;
+     * &lt;p&gt;Detects instances of real-world entities within an image (JPEG or PNG) provided as input. This includes objects like flower, tree, and table; events like wedding, graduation, and birthday party; and concepts like landscape, evening, and nature. &lt;/p&gt; &lt;p&gt;For an example, see Analyzing images stored in an Amazon S3 bucket in the Amazon Rekognition Developer Guide.&lt;/p&gt; &lt;p&gt;You pass the input image as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If you use the AWS CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be either a PNG or JPEG formatted file. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Optional Parameters&lt;/b&gt; &lt;/p&gt; &lt;p&gt;You can specify one or both of the &lt;code&gt;GENERAL_LABELS&lt;/code&gt; and &lt;code&gt;IMAGE_PROPERTIES&lt;/code&gt; feature types when calling the DetectLabels API. Including &lt;code&gt;GENERAL_LABELS&lt;/code&gt; will ensure the response includes the labels detected in the input image, while including &lt;code&gt;IMAGE_PROPERTIES &lt;/code&gt;will ensure the response includes information about the image quality and color.&lt;/p&gt; &lt;p&gt;When using &lt;code&gt;GENERAL_LABELS&lt;/code&gt; and/or &lt;code&gt;IMAGE_PROPERTIES&lt;/code&gt; you can provide filtering criteria to the Settings parameter. You can filter with sets of individual labels or with label categories. You can specify inclusive filters, exclusive filters, or a combination of inclusive and exclusive filters. For more information on filtering see &lt;a href="https://docs.aws.amazon.com/rekognition/latest/dg/labels-detect-labels-image.html"&gt;Detecting Labels in an Image&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;You can specify &lt;code&gt;MinConfidence&lt;/code&gt; to control the confidence threshold for the labels returned. The default is 55%. You can also add the &lt;code&gt;MaxLabels&lt;/code&gt; parameter to limit the number of labels returned. The default and upper limit is 1000 labels.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Response Elements&lt;/b&gt; &lt;/p&gt; &lt;p&gt; For each object, scene, and concept the API returns one or more labels. The API returns the following types of information about labels:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; Name - The name of the detected label. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; Confidence - The level of confidence in the label assigned to a detected object. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; Parents - The ancestor labels for a detected label. DetectLabels returns a hierarchical taxonomy of detected labels. For example, a detected car might be assigned the label car. The label car has two parent labels: Vehicle (its parent) and Transportation (its grandparent). The response includes the all ancestors for a label, where every ancestor is a unique label. In the previous example, Car, Vehicle, and Transportation are returned as unique labels in the response. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; Aliases - Possible Aliases for the label. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; Categories - The label categories that the detected label belongs to. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; BoundingBox \u2014 Bounding boxes are described for all instances of detected common object labels, returned in an array of Instance objects. An Instance object contains a BoundingBox object, describing the location of the label on the input image. It also includes the confidence for the accuracy of the detected bounding box. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; The API returns the following information regarding the image, as part of the ImageProperties structure:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Quality - Information about the Sharpness, Brightness, and Contrast of the input image, scored between 0 to 100. Image quality is returned for the entire image, as well as the background and the foreground. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Dominant Color - An array of the dominant colors in the image. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Foreground - Information about the sharpness, brightness, and dominant colors of the input image\u2019s foreground. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Background - Information about the sharpness, brightness, and dominant colors of the input image\u2019s background.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;The list of returned labels will include at least one label for every detected object, along with information about that label. In the following example, suppose the input image has a lighthouse, the sea, and a rock. The response includes all three labels, one for each object, as well as the confidence in the label:&lt;/p&gt; &lt;p&gt; &lt;code&gt;{Name: lighthouse, Confidence: 98.4629}&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt;{Name: rock,Confidence: 79.2097}&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt; {Name: sea,Confidence: 75.061}&lt;/code&gt; &lt;/p&gt; &lt;p&gt;The list of labels can include multiple labels for the same object. For example, if the input image shows a flower (for example, a tulip), the operation might return the following three labels. &lt;/p&gt; &lt;p&gt; &lt;code&gt;{Name: flower,Confidence: 99.0562}&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt;{Name: plant,Confidence: 99.0562}&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt;{Name: tulip,Confidence: 99.0562}&lt;/code&gt; &lt;/p&gt; &lt;p&gt;In this example, the detection algorithm more precisely identifies the flower as a tulip.&lt;/p&gt; &lt;note&gt; &lt;p&gt;If the object detected is a person, the operation doesn't provide the same facial details that the &lt;a&gt;DetectFaces&lt;/a&gt; operation provides.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;This is a stateless API operation that doesn't return any data.&lt;/p&gt; &lt;p&gt;This operation requires permissions to perform the &lt;code&gt;rekognition:DetectLabels&lt;/code&gt; action. &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2590,7 +2645,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DetectLabelsResponse res = new org.openapis.openapi.models.operations.DetectLabelsResponse() {{
+        org.openapis.openapi.models.operations.DetectLabelsResponse res = new org.openapis.openapi.models.operations.DetectLabelsResponse(contentType, httpRes.statusCode()) {{
             detectLabelsResponse = null;
             invalidS3ObjectException = null;
             invalidParameterException = null;
@@ -2601,8 +2656,6 @@ public class SDK {
             provisionedThroughputExceededException = null;
             invalidImageFormatException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2706,7 +2759,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DetectModerationLabelsResponse res = new org.openapis.openapi.models.operations.DetectModerationLabelsResponse() {{
+        org.openapis.openapi.models.operations.DetectModerationLabelsResponse res = new org.openapis.openapi.models.operations.DetectModerationLabelsResponse(contentType, httpRes.statusCode()) {{
             detectModerationLabelsResponse = null;
             invalidS3ObjectException = null;
             invalidParameterException = null;
@@ -2718,8 +2771,6 @@ public class SDK {
             invalidImageFormatException = null;
             humanLoopQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2830,7 +2881,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DetectProtectiveEquipmentResponse res = new org.openapis.openapi.models.operations.DetectProtectiveEquipmentResponse() {{
+        org.openapis.openapi.models.operations.DetectProtectiveEquipmentResponse res = new org.openapis.openapi.models.operations.DetectProtectiveEquipmentResponse(contentType, httpRes.statusCode()) {{
             detectProtectiveEquipmentResponse = null;
             invalidS3ObjectException = null;
             invalidParameterException = null;
@@ -2841,8 +2892,6 @@ public class SDK {
             provisionedThroughputExceededException = null;
             invalidImageFormatException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2946,7 +2995,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DetectTextResponse res = new org.openapis.openapi.models.operations.DetectTextResponse() {{
+        org.openapis.openapi.models.operations.DetectTextResponse res = new org.openapis.openapi.models.operations.DetectTextResponse(contentType, httpRes.statusCode()) {{
             detectTextResponse = null;
             invalidS3ObjectException = null;
             invalidParameterException = null;
@@ -2957,8 +3006,6 @@ public class SDK {
             provisionedThroughputExceededException = null;
             invalidImageFormatException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3062,7 +3109,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DistributeDatasetEntriesResponse res = new org.openapis.openapi.models.operations.DistributeDatasetEntriesResponse() {{
+        org.openapis.openapi.models.operations.DistributeDatasetEntriesResponse res = new org.openapis.openapi.models.operations.DistributeDatasetEntriesResponse(contentType, httpRes.statusCode()) {{
             distributeDatasetEntriesResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
@@ -3072,8 +3119,6 @@ public class SDK {
             provisionedThroughputExceededException = null;
             resourceNotReadyException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3170,7 +3215,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCelebrityInfoResponse res = new org.openapis.openapi.models.operations.GetCelebrityInfoResponse() {{
+        org.openapis.openapi.models.operations.GetCelebrityInfoResponse res = new org.openapis.openapi.models.operations.GetCelebrityInfoResponse(contentType, httpRes.statusCode()) {{
             getCelebrityInfoResponse = null;
             invalidParameterException = null;
             accessDeniedException = null;
@@ -3179,8 +3224,6 @@ public class SDK {
             provisionedThroughputExceededException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3276,7 +3319,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCelebrityRecognitionResponse res = new org.openapis.openapi.models.operations.GetCelebrityRecognitionResponse() {{
+        org.openapis.openapi.models.operations.GetCelebrityRecognitionResponse res = new org.openapis.openapi.models.operations.GetCelebrityRecognitionResponse(contentType, httpRes.statusCode()) {{
             getCelebrityRecognitionResponse = null;
             accessDeniedException = null;
             internalServerError = null;
@@ -3286,8 +3329,6 @@ public class SDK {
             resourceNotFoundException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3390,7 +3431,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContentModerationResponse res = new org.openapis.openapi.models.operations.GetContentModerationResponse() {{
+        org.openapis.openapi.models.operations.GetContentModerationResponse res = new org.openapis.openapi.models.operations.GetContentModerationResponse(contentType, httpRes.statusCode()) {{
             getContentModerationResponse = null;
             accessDeniedException = null;
             internalServerError = null;
@@ -3400,8 +3441,6 @@ public class SDK {
             resourceNotFoundException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3504,7 +3543,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFaceDetectionResponse res = new org.openapis.openapi.models.operations.GetFaceDetectionResponse() {{
+        org.openapis.openapi.models.operations.GetFaceDetectionResponse res = new org.openapis.openapi.models.operations.GetFaceDetectionResponse(contentType, httpRes.statusCode()) {{
             getFaceDetectionResponse = null;
             accessDeniedException = null;
             internalServerError = null;
@@ -3514,8 +3553,6 @@ public class SDK {
             resourceNotFoundException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3579,6 +3616,104 @@ public class SDK {
     }
 
     /**
+     * Retrieves the results of a specific Face Liveness session. It requires the &lt;code&gt;sessionId&lt;/code&gt; as input, which was created using &lt;code&gt;CreateFaceLivenessSession&lt;/code&gt;. Returns the corresponding Face Liveness confidence score, a reference image that includes a face bounding box, and audit images that also contain face bounding boxes. The Face Liveness confidence score ranges from 0 to 100. The reference image can optionally be returned.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetFaceLivenessSessionResultsResponse getFaceLivenessSessionResults(org.openapis.openapi.models.operations.GetFaceLivenessSessionResultsRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=RekognitionService.GetFaceLivenessSessionResults");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "getFaceLivenessSessionResultsRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.GetFaceLivenessSessionResultsResponse res = new org.openapis.openapi.models.operations.GetFaceLivenessSessionResultsResponse(contentType, httpRes.statusCode()) {{
+            getFaceLivenessSessionResultsResponse = null;
+            accessDeniedException = null;
+            internalServerError = null;
+            invalidParameterException = null;
+            sessionNotFoundException = null;
+            throttlingException = null;
+            provisionedThroughputExceededException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.GetFaceLivenessSessionResultsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GetFaceLivenessSessionResultsResponse.class);
+                res.getFaceLivenessSessionResultsResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.accessDeniedException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalServerError = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidParameterException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.sessionNotFoundException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 484) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.throttlingException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 485) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.provisionedThroughputExceededException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * &lt;p&gt;Gets the face search results for Amazon Rekognition Video face search started by &lt;a&gt;StartFaceSearch&lt;/a&gt;. The search returns faces in a collection that match the faces of persons detected in a video. It also includes the time(s) that faces are matched in the video.&lt;/p&gt; &lt;p&gt;Face search in a video is an asynchronous operation. You start face search by calling to &lt;a&gt;StartFaceSearch&lt;/a&gt; which returns a job identifier (&lt;code&gt;JobId&lt;/code&gt;). When the search operation finishes, Amazon Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic registered in the initial call to &lt;code&gt;StartFaceSearch&lt;/code&gt;. To get the search results, first check that the status value published to the Amazon SNS topic is &lt;code&gt;SUCCEEDED&lt;/code&gt;. If so, call &lt;code&gt;GetFaceSearch&lt;/code&gt; and pass the job identifier (&lt;code&gt;JobId&lt;/code&gt;) from the initial call to &lt;code&gt;StartFaceSearch&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;For more information, see Searching Faces in a Collection in the Amazon Rekognition Developer Guide.&lt;/p&gt; &lt;p&gt;The search results are retured in an array, &lt;code&gt;Persons&lt;/code&gt;, of &lt;a&gt;PersonMatch&lt;/a&gt; objects. Each&lt;code&gt;PersonMatch&lt;/code&gt; element contains details about the matching faces in the input collection, person information (facial attributes, bounding boxes, and person identifer) for the matched person, and the time the person was matched in the video.&lt;/p&gt; &lt;note&gt; &lt;p&gt; &lt;code&gt;GetFaceSearch&lt;/code&gt; only returns the default facial attributes (&lt;code&gt;BoundingBox&lt;/code&gt;, &lt;code&gt;Confidence&lt;/code&gt;, &lt;code&gt;Landmarks&lt;/code&gt;, &lt;code&gt;Pose&lt;/code&gt;, and &lt;code&gt;Quality&lt;/code&gt;). The other facial attributes listed in the &lt;code&gt;Face&lt;/code&gt; object of the following response syntax are not returned. For more information, see FaceDetail in the Amazon Rekognition Developer Guide. &lt;/p&gt; &lt;/note&gt; &lt;p&gt;By default, the &lt;code&gt;Persons&lt;/code&gt; array is sorted by the time, in milliseconds from the start of the video, persons are matched. You can also sort by persons by specifying &lt;code&gt;INDEX&lt;/code&gt; for the &lt;code&gt;SORTBY&lt;/code&gt; input parameter.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -3618,7 +3753,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFaceSearchResponse res = new org.openapis.openapi.models.operations.GetFaceSearchResponse() {{
+        org.openapis.openapi.models.operations.GetFaceSearchResponse res = new org.openapis.openapi.models.operations.GetFaceSearchResponse(contentType, httpRes.statusCode()) {{
             getFaceSearchResponse = null;
             accessDeniedException = null;
             internalServerError = null;
@@ -3628,8 +3763,6 @@ public class SDK {
             resourceNotFoundException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3732,7 +3865,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLabelDetectionResponse res = new org.openapis.openapi.models.operations.GetLabelDetectionResponse() {{
+        org.openapis.openapi.models.operations.GetLabelDetectionResponse res = new org.openapis.openapi.models.operations.GetLabelDetectionResponse(contentType, httpRes.statusCode()) {{
             getLabelDetectionResponse = null;
             accessDeniedException = null;
             internalServerError = null;
@@ -3742,8 +3875,6 @@ public class SDK {
             resourceNotFoundException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3846,7 +3977,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPersonTrackingResponse res = new org.openapis.openapi.models.operations.GetPersonTrackingResponse() {{
+        org.openapis.openapi.models.operations.GetPersonTrackingResponse res = new org.openapis.openapi.models.operations.GetPersonTrackingResponse(contentType, httpRes.statusCode()) {{
             getPersonTrackingResponse = null;
             accessDeniedException = null;
             internalServerError = null;
@@ -3856,8 +3987,6 @@ public class SDK {
             resourceNotFoundException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3960,7 +4089,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSegmentDetectionResponse res = new org.openapis.openapi.models.operations.GetSegmentDetectionResponse() {{
+        org.openapis.openapi.models.operations.GetSegmentDetectionResponse res = new org.openapis.openapi.models.operations.GetSegmentDetectionResponse(contentType, httpRes.statusCode()) {{
             getSegmentDetectionResponse = null;
             accessDeniedException = null;
             internalServerError = null;
@@ -3970,8 +4099,6 @@ public class SDK {
             resourceNotFoundException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4074,7 +4201,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTextDetectionResponse res = new org.openapis.openapi.models.operations.GetTextDetectionResponse() {{
+        org.openapis.openapi.models.operations.GetTextDetectionResponse res = new org.openapis.openapi.models.operations.GetTextDetectionResponse(contentType, httpRes.statusCode()) {{
             getTextDetectionResponse = null;
             accessDeniedException = null;
             internalServerError = null;
@@ -4084,8 +4211,6 @@ public class SDK {
             resourceNotFoundException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4182,7 +4307,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IndexFacesResponse res = new org.openapis.openapi.models.operations.IndexFacesResponse() {{
+        org.openapis.openapi.models.operations.IndexFacesResponse res = new org.openapis.openapi.models.operations.IndexFacesResponse(contentType, httpRes.statusCode()) {{
             indexFacesResponse = null;
             invalidS3ObjectException = null;
             invalidParameterException = null;
@@ -4195,8 +4320,6 @@ public class SDK {
             invalidImageFormatException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4320,7 +4443,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCollectionsResponse res = new org.openapis.openapi.models.operations.ListCollectionsResponse() {{
+        org.openapis.openapi.models.operations.ListCollectionsResponse res = new org.openapis.openapi.models.operations.ListCollectionsResponse(contentType, httpRes.statusCode()) {{
             listCollectionsResponse = null;
             invalidParameterException = null;
             accessDeniedException = null;
@@ -4330,8 +4453,6 @@ public class SDK {
             invalidPaginationTokenException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4434,7 +4555,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDatasetEntriesResponse res = new org.openapis.openapi.models.operations.ListDatasetEntriesResponse() {{
+        org.openapis.openapi.models.operations.ListDatasetEntriesResponse res = new org.openapis.openapi.models.operations.ListDatasetEntriesResponse(contentType, httpRes.statusCode()) {{
             listDatasetEntriesResponse = null;
             internalServerError = null;
             throttlingException = null;
@@ -4446,8 +4567,6 @@ public class SDK {
             invalidPaginationTokenException = null;
             resourceNotReadyException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4564,7 +4683,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDatasetLabelsResponse res = new org.openapis.openapi.models.operations.ListDatasetLabelsResponse() {{
+        org.openapis.openapi.models.operations.ListDatasetLabelsResponse res = new org.openapis.openapi.models.operations.ListDatasetLabelsResponse(contentType, httpRes.statusCode()) {{
             listDatasetLabelsResponse = null;
             internalServerError = null;
             throttlingException = null;
@@ -4576,8 +4695,6 @@ public class SDK {
             resourceNotFoundException = null;
             resourceNotReadyException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4694,7 +4811,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFacesResponse res = new org.openapis.openapi.models.operations.ListFacesResponse() {{
+        org.openapis.openapi.models.operations.ListFacesResponse res = new org.openapis.openapi.models.operations.ListFacesResponse(contentType, httpRes.statusCode()) {{
             listFacesResponse = null;
             invalidParameterException = null;
             accessDeniedException = null;
@@ -4704,8 +4821,6 @@ public class SDK {
             invalidPaginationTokenException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4769,7 +4884,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Gets a list of the project policies attached to a project.&lt;/p&gt; &lt;p&gt;To attach a project policy to a project, call &lt;a&gt;PutProjectPolicy&lt;/a&gt;. To remove a project policy from a project, call &lt;a&gt;DeleteProjectPolicy&lt;/a&gt;.&lt;/p&gt;
+     * &lt;p&gt;Gets a list of the project policies attached to a project.&lt;/p&gt; &lt;p&gt;To attach a project policy to a project, call &lt;a&gt;PutProjectPolicy&lt;/a&gt;. To remove a project policy from a project, call &lt;a&gt;DeleteProjectPolicy&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;This operation requires permissions to perform the &lt;code&gt;rekognition:ListProjectPolicies&lt;/code&gt; action.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -4808,7 +4923,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListProjectPoliciesResponse res = new org.openapis.openapi.models.operations.ListProjectPoliciesResponse() {{
+        org.openapis.openapi.models.operations.ListProjectPoliciesResponse res = new org.openapis.openapi.models.operations.ListProjectPoliciesResponse(contentType, httpRes.statusCode()) {{
             listProjectPoliciesResponse = null;
             accessDeniedException = null;
             internalServerError = null;
@@ -4818,8 +4933,6 @@ public class SDK {
             provisionedThroughputExceededException = null;
             invalidPaginationTokenException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4922,7 +5035,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListStreamProcessorsResponse res = new org.openapis.openapi.models.operations.ListStreamProcessorsResponse() {{
+        org.openapis.openapi.models.operations.ListStreamProcessorsResponse res = new org.openapis.openapi.models.operations.ListStreamProcessorsResponse(contentType, httpRes.statusCode()) {{
             listStreamProcessorsResponse = null;
             accessDeniedException = null;
             internalServerError = null;
@@ -4931,8 +5044,6 @@ public class SDK {
             invalidPaginationTokenException = null;
             provisionedThroughputExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5022,7 +5133,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
@@ -5031,8 +5142,6 @@ public class SDK {
             throttlingException = null;
             provisionedThroughputExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5089,7 +5198,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Attaches a project policy to a Amazon Rekognition Custom Labels project in a trusting AWS account. A project policy specifies that a trusted AWS account can copy a model version from a trusting AWS account to a project in the trusted AWS account. To copy a model version you use the &lt;a&gt;CopyProjectVersion&lt;/a&gt; operation.&lt;/p&gt; &lt;p&gt;For more information about the format of a project policy document, see Attaching a project policy (SDK) in the &lt;i&gt;Amazon Rekognition Custom Labels Developer Guide&lt;/i&gt;. &lt;/p&gt; &lt;p&gt;The response from &lt;code&gt;PutProjectPolicy&lt;/code&gt; is a revision ID for the project policy. You can attach multiple project policies to a project. You can also update an existing project policy by specifying the policy revision ID of the existing policy.&lt;/p&gt; &lt;p&gt;To remove a project policy from a project, call &lt;a&gt;DeleteProjectPolicy&lt;/a&gt;. To get a list of project policies attached to a project, call &lt;a&gt;ListProjectPolicies&lt;/a&gt;. &lt;/p&gt; &lt;p&gt;You copy a model version by calling &lt;a&gt;CopyProjectVersion&lt;/a&gt;.&lt;/p&gt;
+     * &lt;p&gt;Attaches a project policy to a Amazon Rekognition Custom Labels project in a trusting AWS account. A project policy specifies that a trusted AWS account can copy a model version from a trusting AWS account to a project in the trusted AWS account. To copy a model version you use the &lt;a&gt;CopyProjectVersion&lt;/a&gt; operation.&lt;/p&gt; &lt;p&gt;For more information about the format of a project policy document, see Attaching a project policy (SDK) in the &lt;i&gt;Amazon Rekognition Custom Labels Developer Guide&lt;/i&gt;. &lt;/p&gt; &lt;p&gt;The response from &lt;code&gt;PutProjectPolicy&lt;/code&gt; is a revision ID for the project policy. You can attach multiple project policies to a project. You can also update an existing project policy by specifying the policy revision ID of the existing policy.&lt;/p&gt; &lt;p&gt;To remove a project policy from a project, call &lt;a&gt;DeleteProjectPolicy&lt;/a&gt;. To get a list of project policies attached to a project, call &lt;a&gt;ListProjectPolicies&lt;/a&gt;. &lt;/p&gt; &lt;p&gt;You copy a model version by calling &lt;a&gt;CopyProjectVersion&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;This operation requires permissions to perform the &lt;code&gt;rekognition:PutProjectPolicy&lt;/code&gt; action.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -5122,7 +5231,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutProjectPolicyResponse res = new org.openapis.openapi.models.operations.PutProjectPolicyResponse() {{
+        org.openapis.openapi.models.operations.PutProjectPolicyResponse res = new org.openapis.openapi.models.operations.PutProjectPolicyResponse(contentType, httpRes.statusCode()) {{
             putProjectPolicyResponse = null;
             accessDeniedException = null;
             internalServerError = null;
@@ -5136,8 +5245,6 @@ public class SDK {
             provisionedThroughputExceededException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5262,7 +5369,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecognizeCelebritiesResponse res = new org.openapis.openapi.models.operations.RecognizeCelebritiesResponse() {{
+        org.openapis.openapi.models.operations.RecognizeCelebritiesResponse res = new org.openapis.openapi.models.operations.RecognizeCelebritiesResponse(contentType, httpRes.statusCode()) {{
             recognizeCelebritiesResponse = null;
             invalidS3ObjectException = null;
             invalidParameterException = null;
@@ -5273,8 +5380,6 @@ public class SDK {
             throttlingException = null;
             provisionedThroughputExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5378,7 +5483,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchFacesResponse res = new org.openapis.openapi.models.operations.SearchFacesResponse() {{
+        org.openapis.openapi.models.operations.SearchFacesResponse res = new org.openapis.openapi.models.operations.SearchFacesResponse(contentType, httpRes.statusCode()) {{
             searchFacesResponse = null;
             invalidParameterException = null;
             accessDeniedException = null;
@@ -5387,8 +5492,6 @@ public class SDK {
             provisionedThroughputExceededException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5478,7 +5581,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchFacesByImageResponse res = new org.openapis.openapi.models.operations.SearchFacesByImageResponse() {{
+        org.openapis.openapi.models.operations.SearchFacesByImageResponse res = new org.openapis.openapi.models.operations.SearchFacesByImageResponse(contentType, httpRes.statusCode()) {{
             searchFacesByImageResponse = null;
             invalidS3ObjectException = null;
             invalidParameterException = null;
@@ -5490,8 +5593,6 @@ public class SDK {
             resourceNotFoundException = null;
             invalidImageFormatException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5602,7 +5703,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartCelebrityRecognitionResponse res = new org.openapis.openapi.models.operations.StartCelebrityRecognitionResponse() {{
+        org.openapis.openapi.models.operations.StartCelebrityRecognitionResponse res = new org.openapis.openapi.models.operations.StartCelebrityRecognitionResponse(contentType, httpRes.statusCode()) {{
             startCelebrityRecognitionResponse = null;
             accessDeniedException = null;
             idempotentParameterMismatchException = null;
@@ -5614,8 +5715,6 @@ public class SDK {
             limitExceededException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5726,7 +5825,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartContentModerationResponse res = new org.openapis.openapi.models.operations.StartContentModerationResponse() {{
+        org.openapis.openapi.models.operations.StartContentModerationResponse res = new org.openapis.openapi.models.operations.StartContentModerationResponse(contentType, httpRes.statusCode()) {{
             startContentModerationResponse = null;
             accessDeniedException = null;
             idempotentParameterMismatchException = null;
@@ -5738,8 +5837,6 @@ public class SDK {
             limitExceededException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5850,7 +5947,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartFaceDetectionResponse res = new org.openapis.openapi.models.operations.StartFaceDetectionResponse() {{
+        org.openapis.openapi.models.operations.StartFaceDetectionResponse res = new org.openapis.openapi.models.operations.StartFaceDetectionResponse(contentType, httpRes.statusCode()) {{
             startFaceDetectionResponse = null;
             accessDeniedException = null;
             idempotentParameterMismatchException = null;
@@ -5862,8 +5959,6 @@ public class SDK {
             limitExceededException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5974,7 +6069,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartFaceSearchResponse res = new org.openapis.openapi.models.operations.StartFaceSearchResponse() {{
+        org.openapis.openapi.models.operations.StartFaceSearchResponse res = new org.openapis.openapi.models.operations.StartFaceSearchResponse(contentType, httpRes.statusCode()) {{
             startFaceSearchResponse = null;
             accessDeniedException = null;
             idempotentParameterMismatchException = null;
@@ -5987,8 +6082,6 @@ public class SDK {
             resourceNotFoundException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6106,7 +6199,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartLabelDetectionResponse res = new org.openapis.openapi.models.operations.StartLabelDetectionResponse() {{
+        org.openapis.openapi.models.operations.StartLabelDetectionResponse res = new org.openapis.openapi.models.operations.StartLabelDetectionResponse(contentType, httpRes.statusCode()) {{
             startLabelDetectionResponse = null;
             accessDeniedException = null;
             idempotentParameterMismatchException = null;
@@ -6118,8 +6211,6 @@ public class SDK {
             limitExceededException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6230,7 +6321,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartPersonTrackingResponse res = new org.openapis.openapi.models.operations.StartPersonTrackingResponse() {{
+        org.openapis.openapi.models.operations.StartPersonTrackingResponse res = new org.openapis.openapi.models.operations.StartPersonTrackingResponse(contentType, httpRes.statusCode()) {{
             startPersonTrackingResponse = null;
             accessDeniedException = null;
             idempotentParameterMismatchException = null;
@@ -6242,8 +6333,6 @@ public class SDK {
             limitExceededException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6354,7 +6443,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartProjectVersionResponse res = new org.openapis.openapi.models.operations.StartProjectVersionResponse() {{
+        org.openapis.openapi.models.operations.StartProjectVersionResponse res = new org.openapis.openapi.models.operations.StartProjectVersionResponse(contentType, httpRes.statusCode()) {{
             startProjectVersionResponse = null;
             resourceNotFoundException = null;
             resourceInUseException = null;
@@ -6365,8 +6454,6 @@ public class SDK {
             throttlingException = null;
             provisionedThroughputExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6470,7 +6557,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartSegmentDetectionResponse res = new org.openapis.openapi.models.operations.StartSegmentDetectionResponse() {{
+        org.openapis.openapi.models.operations.StartSegmentDetectionResponse res = new org.openapis.openapi.models.operations.StartSegmentDetectionResponse(contentType, httpRes.statusCode()) {{
             startSegmentDetectionResponse = null;
             accessDeniedException = null;
             idempotentParameterMismatchException = null;
@@ -6482,8 +6569,6 @@ public class SDK {
             limitExceededException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6594,7 +6679,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartStreamProcessorResponse res = new org.openapis.openapi.models.operations.StartStreamProcessorResponse() {{
+        org.openapis.openapi.models.operations.StartStreamProcessorResponse res = new org.openapis.openapi.models.operations.StartStreamProcessorResponse(contentType, httpRes.statusCode()) {{
             startStreamProcessorResponse = null;
             accessDeniedException = null;
             internalServerError = null;
@@ -6604,8 +6689,6 @@ public class SDK {
             resourceInUseException = null;
             provisionedThroughputExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6702,7 +6785,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartTextDetectionResponse res = new org.openapis.openapi.models.operations.StartTextDetectionResponse() {{
+        org.openapis.openapi.models.operations.StartTextDetectionResponse res = new org.openapis.openapi.models.operations.StartTextDetectionResponse(contentType, httpRes.statusCode()) {{
             startTextDetectionResponse = null;
             accessDeniedException = null;
             idempotentParameterMismatchException = null;
@@ -6714,8 +6797,6 @@ public class SDK {
             limitExceededException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6793,7 +6874,7 @@ public class SDK {
     }
 
     /**
-     * Stops a running model. The operation might take a while to complete. To check the current status, call &lt;a&gt;DescribeProjectVersions&lt;/a&gt;. 
+     * &lt;p&gt;Stops a running model. The operation might take a while to complete. To check the current status, call &lt;a&gt;DescribeProjectVersions&lt;/a&gt;. &lt;/p&gt; &lt;p&gt;This operation requires permissions to perform the &lt;code&gt;rekognition:StopProjectVersion&lt;/code&gt; action.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -6826,7 +6907,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopProjectVersionResponse res = new org.openapis.openapi.models.operations.StopProjectVersionResponse() {{
+        org.openapis.openapi.models.operations.StopProjectVersionResponse res = new org.openapis.openapi.models.operations.StopProjectVersionResponse(contentType, httpRes.statusCode()) {{
             stopProjectVersionResponse = null;
             resourceNotFoundException = null;
             resourceInUseException = null;
@@ -6836,8 +6917,6 @@ public class SDK {
             throttlingException = null;
             provisionedThroughputExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6934,7 +7013,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopStreamProcessorResponse res = new org.openapis.openapi.models.operations.StopStreamProcessorResponse() {{
+        org.openapis.openapi.models.operations.StopStreamProcessorResponse res = new org.openapis.openapi.models.operations.StopStreamProcessorResponse(contentType, httpRes.statusCode()) {{
             stopStreamProcessorResponse = null;
             accessDeniedException = null;
             internalServerError = null;
@@ -6944,8 +7023,6 @@ public class SDK {
             resourceInUseException = null;
             provisionedThroughputExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7042,7 +7119,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
@@ -7052,8 +7129,6 @@ public class SDK {
             throttlingException = null;
             provisionedThroughputExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7150,7 +7225,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
@@ -7159,8 +7234,6 @@ public class SDK {
             throttlingException = null;
             provisionedThroughputExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7250,7 +7323,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDatasetEntriesResponse res = new org.openapis.openapi.models.operations.UpdateDatasetEntriesResponse() {{
+        org.openapis.openapi.models.operations.UpdateDatasetEntriesResponse res = new org.openapis.openapi.models.operations.UpdateDatasetEntriesResponse(contentType, httpRes.statusCode()) {{
             updateDatasetEntriesResponse = null;
             internalServerError = null;
             throttlingException = null;
@@ -7261,8 +7334,6 @@ public class SDK {
             resourceInUseException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7366,7 +7437,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateStreamProcessorResponse res = new org.openapis.openapi.models.operations.UpdateStreamProcessorResponse() {{
+        org.openapis.openapi.models.operations.UpdateStreamProcessorResponse res = new org.openapis.openapi.models.operations.UpdateStreamProcessorResponse(contentType, httpRes.statusCode()) {{
             updateStreamProcessorResponse = null;
             accessDeniedException = null;
             internalServerError = null;
@@ -7374,9 +7445,8 @@ public class SDK {
             invalidParameterException = null;
             resourceNotFoundException = null;
             provisionedThroughputExceededException = null;
+            resourceInUseException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7426,6 +7496,13 @@ public class SDK {
                 ObjectMapper mapper = JSON.getMapper();
                 Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
                 res.provisionedThroughputExceededException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 486) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.resourceInUseException = out;
             }
         }
 

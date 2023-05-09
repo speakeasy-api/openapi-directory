@@ -12,9 +12,11 @@ public class MicroSecGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity")
     public Reference entity;
+
     public MicroSecGroup withEntity(Reference entity) {
         this.entity = entity;
         return this;
     }
     
+    public MicroSecGroup(){}
 }

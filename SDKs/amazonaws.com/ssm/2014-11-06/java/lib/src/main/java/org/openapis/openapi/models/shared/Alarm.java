@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Alarm {
     @JsonProperty("Name")
     public String name;
+
     public Alarm withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Alarm(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

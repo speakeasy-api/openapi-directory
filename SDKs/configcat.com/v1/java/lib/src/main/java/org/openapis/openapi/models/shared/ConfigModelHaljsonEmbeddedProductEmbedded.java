@@ -12,9 +12,11 @@ public class ConfigModelHaljsonEmbeddedProductEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public ConfigModelHaljsonEmbeddedProductEmbeddedOrganization organization;
+
     public ConfigModelHaljsonEmbeddedProductEmbedded withOrganization(ConfigModelHaljsonEmbeddedProductEmbeddedOrganization organization) {
         this.organization = organization;
         return this;
     }
     
+    public ConfigModelHaljsonEmbeddedProductEmbedded(){}
 }

@@ -17,6 +17,7 @@ public class BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel {
     @JsonProperty("AutosubtractReservedAmount")
     @SpeakeasyMetadata("form:name=AutosubtractReservedAmount")
     public Boolean autosubtractReservedAmount;
+
     public BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel withAutosubtractReservedAmount(Boolean autosubtractReservedAmount) {
         this.autosubtractReservedAmount = autosubtractReservedAmount;
         return this;
@@ -29,6 +30,7 @@ public class BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel {
     @JsonProperty("BillbeeId")
     @SpeakeasyMetadata("form:name=BillbeeId")
     public Long billbeeId;
+
     public BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel withBillbeeId(Long billbeeId) {
         this.billbeeId = billbeeId;
         return this;
@@ -41,6 +43,7 @@ public class BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel {
     @JsonProperty("DeltaQuantity")
     @SpeakeasyMetadata("form:name=DeltaQuantity")
     public Double deltaQuantity;
+
     public BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel withDeltaQuantity(Double deltaQuantity) {
         this.deltaQuantity = deltaQuantity;
         return this;
@@ -53,6 +56,7 @@ public class BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel {
     @JsonProperty("ForceSendStockToShops")
     @SpeakeasyMetadata("form:name=ForceSendStockToShops")
     public Boolean forceSendStockToShops;
+
     public BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel withForceSendStockToShops(Boolean forceSendStockToShops) {
         this.forceSendStockToShops = forceSendStockToShops;
         return this;
@@ -65,6 +69,7 @@ public class BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel {
     @JsonProperty("NewQuantity")
     @SpeakeasyMetadata("form:name=NewQuantity")
     public Double newQuantity;
+
     public BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel withNewQuantity(Double newQuantity) {
         this.newQuantity = newQuantity;
         return this;
@@ -77,6 +82,7 @@ public class BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel {
     @JsonProperty("OldQuantity")
     @SpeakeasyMetadata("form:name=OldQuantity")
     public Double oldQuantity;
+
     public BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel withOldQuantity(Double oldQuantity) {
         this.oldQuantity = oldQuantity;
         return this;
@@ -89,6 +95,7 @@ public class BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel {
     @JsonProperty("Reason")
     @SpeakeasyMetadata("form:name=Reason")
     public String reason;
+
     public BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel withReason(String reason) {
         this.reason = reason;
         return this;
@@ -101,6 +108,7 @@ public class BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel {
     @JsonProperty("Sku")
     @SpeakeasyMetadata("form:name=Sku")
     public String sku;
+
     public BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel withSku(String sku) {
         this.sku = sku;
         return this;
@@ -113,9 +121,11 @@ public class BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel {
     @JsonProperty("StockId")
     @SpeakeasyMetadata("form:name=StockId")
     public Long stockId;
+
     public BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel withStockId(Long stockId) {
         this.stockId = stockId;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel(){}
 }

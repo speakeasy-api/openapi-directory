@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSet {
     
     public String description;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSet withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSet {
     
     
     public String groupId;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSet withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSet {
     
     
     public String groupName;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSet withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -33,6 +36,7 @@ public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSet {
     
     
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissions[] staleIpPermissions;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSet withStaleIpPermissions(DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissions[] staleIpPermissions) {
         this.staleIpPermissions = staleIpPermissions;
         return this;
@@ -40,6 +44,7 @@ public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSet {
     
     
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsEgress[] staleIpPermissionsEgress;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSet withStaleIpPermissionsEgress(DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsEgress[] staleIpPermissionsEgress) {
         this.staleIpPermissionsEgress = staleIpPermissionsEgress;
         return this;
@@ -47,9 +52,11 @@ public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSet {
     
     
     public String vpcId;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSet withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DescribeStaleSecurityGroupsResultStaleSecurityGroupSet(){}
 }

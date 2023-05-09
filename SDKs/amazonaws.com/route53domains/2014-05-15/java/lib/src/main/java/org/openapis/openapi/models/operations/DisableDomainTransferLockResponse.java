@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisableDomainTransferLockResponse {
     
     public String contentType;
+
     public DisableDomainTransferLockResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisableDomainTransferLockResponse {
      */
     
     public org.openapis.openapi.models.shared.DisableDomainTransferLockResponse disableDomainTransferLockResponse;
+
     public DisableDomainTransferLockResponse withDisableDomainTransferLockResponse(org.openapis.openapi.models.shared.DisableDomainTransferLockResponse disableDomainTransferLockResponse) {
         this.disableDomainTransferLockResponse = disableDomainTransferLockResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisableDomainTransferLockResponse {
      */
     
     public Object duplicateRequest;
+
     public DisableDomainTransferLockResponse withDuplicateRequest(Object duplicateRequest) {
         this.duplicateRequest = duplicateRequest;
         return this;
@@ -39,6 +43,7 @@ public class DisableDomainTransferLockResponse {
      */
     
     public Object invalidInput;
+
     public DisableDomainTransferLockResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -49,6 +54,7 @@ public class DisableDomainTransferLockResponse {
      */
     
     public Object operationLimitExceeded;
+
     public DisableDomainTransferLockResponse withOperationLimitExceeded(Object operationLimitExceeded) {
         this.operationLimitExceeded = operationLimitExceeded;
         return this;
@@ -56,6 +62,7 @@ public class DisableDomainTransferLockResponse {
     
     
     public Integer statusCode;
+
     public DisableDomainTransferLockResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DisableDomainTransferLockResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisableDomainTransferLockResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DisableDomainTransferLockResponse {
      */
     
     public Object tldRulesViolation;
+
     public DisableDomainTransferLockResponse withTLDRulesViolation(Object tldRulesViolation) {
         this.tldRulesViolation = tldRulesViolation;
         return this;
@@ -83,9 +92,14 @@ public class DisableDomainTransferLockResponse {
      */
     
     public Object unsupportedTLD;
+
     public DisableDomainTransferLockResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
     }
     
+    public DisableDomainTransferLockResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

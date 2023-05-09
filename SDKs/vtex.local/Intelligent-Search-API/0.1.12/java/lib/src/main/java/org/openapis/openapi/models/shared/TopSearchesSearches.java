@@ -15,6 +15,7 @@ public class TopSearchesSearches {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Double count;
+
     public TopSearchesSearches withCount(Double count) {
         this.count = count;
         return this;
@@ -26,9 +27,11 @@ public class TopSearchesSearches {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("term")
     public String term;
+
     public TopSearchesSearches withTerm(String term) {
         this.term = term;
         return this;
     }
     
+    public TopSearchesSearches(){}
 }

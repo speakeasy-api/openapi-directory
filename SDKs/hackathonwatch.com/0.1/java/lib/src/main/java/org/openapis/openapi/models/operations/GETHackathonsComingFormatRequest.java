@@ -12,9 +12,11 @@ public class GETHackathonsComingFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GETHackathonsComingFormatRequest withPage(Integer page) {
         this.page = page;
         return this;
     }
     
+    public GETHackathonsComingFormatRequest(){}
 }

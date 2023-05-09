@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCardDetailsRequest {
@@ -12,6 +13,7 @@ public class GetCardDetailsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ItvGetCardDetailsRequest itvGetCardDetailsRequest;
+
     public GetCardDetailsRequest withItvGetCardDetailsRequest(org.openapis.openapi.models.shared.ItvGetCardDetailsRequest itvGetCardDetailsRequest) {
         this.itvGetCardDetailsRequest = itvGetCardDetailsRequest;
         return this;
@@ -32,6 +34,7 @@ public class GetCardDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetCardDetailsRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -42,9 +45,14 @@ public class GetCardDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platform")
     public String platform;
+
     public GetCardDetailsRequest withPlatform(String platform) {
         this.platform = platform;
         return this;
     }
     
+    public GetCardDetailsRequest(@JsonProperty("ItvGetCardDetailsRequest") org.openapis.openapi.models.shared.ItvGetCardDetailsRequest itvGetCardDetailsRequest, @JsonProperty("platform") String platform) {
+        this.itvGetCardDetailsRequest = itvGetCardDetailsRequest;
+        this.platform = platform;
+  }
 }

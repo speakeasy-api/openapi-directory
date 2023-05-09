@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Attribute {
     @JsonProperty("label")
     public String label;
+
     public Attribute withLabel(String label) {
         this.label = label;
         return this;
@@ -16,9 +17,14 @@ public class Attribute {
     
     @JsonProperty("value")
     public java.util.Map<String, Object> value;
+
     public Attribute withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;
     }
     
+    public Attribute(@JsonProperty("label") String label, @JsonProperty("value") java.util.Map<String, Object> value) {
+        this.label = label;
+        this.value = value;
+  }
 }

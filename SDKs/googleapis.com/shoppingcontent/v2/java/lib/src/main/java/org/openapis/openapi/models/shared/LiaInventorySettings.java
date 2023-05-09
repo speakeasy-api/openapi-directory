@@ -15,6 +15,7 @@ public class LiaInventorySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventoryVerificationContactEmail")
     public String inventoryVerificationContactEmail;
+
     public LiaInventorySettings withInventoryVerificationContactEmail(String inventoryVerificationContactEmail) {
         this.inventoryVerificationContactEmail = inventoryVerificationContactEmail;
         return this;
@@ -26,6 +27,7 @@ public class LiaInventorySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventoryVerificationContactName")
     public String inventoryVerificationContactName;
+
     public LiaInventorySettings withInventoryVerificationContactName(String inventoryVerificationContactName) {
         this.inventoryVerificationContactName = inventoryVerificationContactName;
         return this;
@@ -37,6 +39,7 @@ public class LiaInventorySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventoryVerificationContactStatus")
     public String inventoryVerificationContactStatus;
+
     public LiaInventorySettings withInventoryVerificationContactStatus(String inventoryVerificationContactStatus) {
         this.inventoryVerificationContactStatus = inventoryVerificationContactStatus;
         return this;
@@ -48,9 +51,11 @@ public class LiaInventorySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public LiaInventorySettings withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public LiaInventorySettings(){}
 }

@@ -18,6 +18,7 @@ public class UpsertSnippetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public UpsertSnippetResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -29,9 +30,11 @@ public class UpsertSnippetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public Snippet snippet;
+
     public UpsertSnippetResponse withSnippet(Snippet snippet) {
         this.snippet = snippet;
         return this;
     }
     
+    public UpsertSnippetResponse(){}
 }

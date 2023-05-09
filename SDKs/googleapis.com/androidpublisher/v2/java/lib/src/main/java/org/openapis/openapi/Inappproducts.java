@@ -56,10 +56,8 @@ public class Inappproducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherInappproductsDeleteResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsDeleteResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherInappproductsDeleteResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -96,11 +94,9 @@ public class Inappproducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherInappproductsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherInappproductsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsGetResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -143,11 +139,9 @@ public class Inappproducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherInappproductsInsertResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsInsertResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherInappproductsInsertResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsInsertResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -188,11 +182,9 @@ public class Inappproducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherInappproductsListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsListResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherInappproductsListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -235,11 +227,9 @@ public class Inappproducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherInappproductsPatchResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsPatchResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherInappproductsPatchResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsPatchResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -282,11 +272,9 @@ public class Inappproducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherInappproductsUpdateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsUpdateResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherInappproductsUpdateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsUpdateResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

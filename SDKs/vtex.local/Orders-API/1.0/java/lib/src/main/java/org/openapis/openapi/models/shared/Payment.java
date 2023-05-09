@@ -15,6 +15,7 @@ public class Payment {
      */
     @JsonProperty("accountId")
     public String accountId;
+
     public Payment withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -25,6 +26,7 @@ public class Payment {
      */
     @JsonProperty("bankIssuedInvoiceBarCodeNumber")
     public String bankIssuedInvoiceBarCodeNumber;
+
     public Payment withBankIssuedInvoiceBarCodeNumber(String bankIssuedInvoiceBarCodeNumber) {
         this.bankIssuedInvoiceBarCodeNumber = bankIssuedInvoiceBarCodeNumber;
         return this;
@@ -35,6 +37,7 @@ public class Payment {
      */
     @JsonProperty("bankIssuedInvoiceBarCodeType")
     public String bankIssuedInvoiceBarCodeType;
+
     public Payment withBankIssuedInvoiceBarCodeType(String bankIssuedInvoiceBarCodeType) {
         this.bankIssuedInvoiceBarCodeType = bankIssuedInvoiceBarCodeType;
         return this;
@@ -45,6 +48,7 @@ public class Payment {
      */
     @JsonProperty("bankIssuedInvoiceIdentificationNumber")
     public String bankIssuedInvoiceIdentificationNumber;
+
     public Payment withBankIssuedInvoiceIdentificationNumber(String bankIssuedInvoiceIdentificationNumber) {
         this.bankIssuedInvoiceIdentificationNumber = bankIssuedInvoiceIdentificationNumber;
         return this;
@@ -55,6 +59,7 @@ public class Payment {
      */
     @JsonProperty("bankIssuedInvoiceIdentificationNumberFormatted")
     public String bankIssuedInvoiceIdentificationNumberFormatted;
+
     public Payment withBankIssuedInvoiceIdentificationNumberFormatted(String bankIssuedInvoiceIdentificationNumberFormatted) {
         this.bankIssuedInvoiceIdentificationNumberFormatted = bankIssuedInvoiceIdentificationNumberFormatted;
         return this;
@@ -65,6 +70,7 @@ public class Payment {
      */
     @JsonProperty("billingAddress")
     public java.util.Map<String, Object> billingAddress;
+
     public Payment withBillingAddress(java.util.Map<String, Object> billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -75,6 +81,7 @@ public class Payment {
      */
     @JsonProperty("cardHolder")
     public String cardHolder;
+
     public Payment withCardHolder(String cardHolder) {
         this.cardHolder = cardHolder;
         return this;
@@ -85,6 +92,7 @@ public class Payment {
      */
     @JsonProperty("cardNumber")
     public String cardNumber;
+
     public Payment withCardNumber(String cardNumber) {
         this.cardNumber = cardNumber;
         return this;
@@ -95,6 +103,7 @@ public class Payment {
      */
     @JsonProperty("connectorResponses")
     public PaymentConnectorResponses connectorResponses;
+
     public Payment withConnectorResponses(PaymentConnectorResponses connectorResponses) {
         this.connectorResponses = connectorResponses;
         return this;
@@ -105,6 +114,7 @@ public class Payment {
      */
     @JsonProperty("cvv2")
     public String cvv2;
+
     public Payment withCvv2(String cvv2) {
         this.cvv2 = cvv2;
         return this;
@@ -115,6 +125,7 @@ public class Payment {
      */
     @JsonProperty("dueDate")
     public String dueDate;
+
     public Payment withDueDate(String dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -125,6 +136,7 @@ public class Payment {
      */
     @JsonProperty("expireMonth")
     public String expireMonth;
+
     public Payment withExpireMonth(String expireMonth) {
         this.expireMonth = expireMonth;
         return this;
@@ -135,6 +147,7 @@ public class Payment {
      */
     @JsonProperty("expireYear")
     public String expireYear;
+
     public Payment withExpireYear(String expireYear) {
         this.expireYear = expireYear;
         return this;
@@ -145,6 +158,7 @@ public class Payment {
      */
     @JsonProperty("firstDigits")
     public String firstDigits;
+
     public Payment withFirstDigits(String firstDigits) {
         this.firstDigits = firstDigits;
         return this;
@@ -155,6 +169,7 @@ public class Payment {
      */
     @JsonProperty("giftCardAsDiscount")
     public Boolean giftCardAsDiscount;
+
     public Payment withGiftCardAsDiscount(Boolean giftCardAsDiscount) {
         this.giftCardAsDiscount = giftCardAsDiscount;
         return this;
@@ -165,6 +180,7 @@ public class Payment {
      */
     @JsonProperty("giftCardCaption")
     public String giftCardCaption;
+
     public Payment withGiftCardCaption(String giftCardCaption) {
         this.giftCardCaption = giftCardCaption;
         return this;
@@ -175,6 +191,7 @@ public class Payment {
      */
     @JsonProperty("giftCardId")
     public String giftCardId;
+
     public Payment withGiftCardId(String giftCardId) {
         this.giftCardId = giftCardId;
         return this;
@@ -185,6 +202,7 @@ public class Payment {
      */
     @JsonProperty("giftCardName")
     public String giftCardName;
+
     public Payment withGiftCardName(String giftCardName) {
         this.giftCardName = giftCardName;
         return this;
@@ -195,6 +213,7 @@ public class Payment {
      */
     @JsonProperty("giftCardProvider")
     public String giftCardProvider;
+
     public Payment withGiftCardProvider(String giftCardProvider) {
         this.giftCardProvider = giftCardProvider;
         return this;
@@ -205,6 +224,7 @@ public class Payment {
      */
     @JsonProperty("group")
     public String group;
+
     public Payment withGroup(String group) {
         this.group = group;
         return this;
@@ -215,6 +235,7 @@ public class Payment {
      */
     @JsonProperty("id")
     public String id;
+
     public Payment withId(String id) {
         this.id = id;
         return this;
@@ -225,6 +246,7 @@ public class Payment {
      */
     @JsonProperty("installments")
     public Integer installments;
+
     public Payment withInstallments(Integer installments) {
         this.installments = installments;
         return this;
@@ -235,6 +257,7 @@ public class Payment {
      */
     @JsonProperty("koinUrl")
     public String koinUrl;
+
     public Payment withKoinUrl(String koinUrl) {
         this.koinUrl = koinUrl;
         return this;
@@ -245,6 +268,7 @@ public class Payment {
      */
     @JsonProperty("lastDigits")
     public String lastDigits;
+
     public Payment withLastDigits(String lastDigits) {
         this.lastDigits = lastDigits;
         return this;
@@ -255,6 +279,7 @@ public class Payment {
      */
     @JsonProperty("parentAccountId")
     public String parentAccountId;
+
     public Payment withParentAccountId(String parentAccountId) {
         this.parentAccountId = parentAccountId;
         return this;
@@ -265,6 +290,7 @@ public class Payment {
      */
     @JsonProperty("paymentSystem")
     public String paymentSystem;
+
     public Payment withPaymentSystem(String paymentSystem) {
         this.paymentSystem = paymentSystem;
         return this;
@@ -275,6 +301,7 @@ public class Payment {
      */
     @JsonProperty("paymentSystemName")
     public String paymentSystemName;
+
     public Payment withPaymentSystemName(String paymentSystemName) {
         this.paymentSystemName = paymentSystemName;
         return this;
@@ -285,6 +312,7 @@ public class Payment {
      */
     @JsonProperty("redemptionCode")
     public String redemptionCode;
+
     public Payment withRedemptionCode(String redemptionCode) {
         this.redemptionCode = redemptionCode;
         return this;
@@ -295,6 +323,7 @@ public class Payment {
      */
     @JsonProperty("referenceValue")
     public Integer referenceValue;
+
     public Payment withReferenceValue(Integer referenceValue) {
         this.referenceValue = referenceValue;
         return this;
@@ -305,6 +334,7 @@ public class Payment {
      */
     @JsonProperty("tid")
     public String tid;
+
     public Payment withTid(String tid) {
         this.tid = tid;
         return this;
@@ -315,6 +345,7 @@ public class Payment {
      */
     @JsonProperty("url")
     public String url;
+
     public Payment withUrl(String url) {
         this.url = url;
         return this;
@@ -325,9 +356,44 @@ public class Payment {
      */
     @JsonProperty("value")
     public Integer value;
+
     public Payment withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public Payment(@JsonProperty("accountId") String accountId, @JsonProperty("bankIssuedInvoiceBarCodeNumber") String bankIssuedInvoiceBarCodeNumber, @JsonProperty("bankIssuedInvoiceBarCodeType") String bankIssuedInvoiceBarCodeType, @JsonProperty("bankIssuedInvoiceIdentificationNumber") String bankIssuedInvoiceIdentificationNumber, @JsonProperty("bankIssuedInvoiceIdentificationNumberFormatted") String bankIssuedInvoiceIdentificationNumberFormatted, @JsonProperty("billingAddress") java.util.Map<String, Object> billingAddress, @JsonProperty("cardHolder") String cardHolder, @JsonProperty("cardNumber") String cardNumber, @JsonProperty("connectorResponses") PaymentConnectorResponses connectorResponses, @JsonProperty("cvv2") String cvv2, @JsonProperty("dueDate") String dueDate, @JsonProperty("expireMonth") String expireMonth, @JsonProperty("expireYear") String expireYear, @JsonProperty("firstDigits") String firstDigits, @JsonProperty("giftCardAsDiscount") Boolean giftCardAsDiscount, @JsonProperty("giftCardCaption") String giftCardCaption, @JsonProperty("giftCardId") String giftCardId, @JsonProperty("giftCardName") String giftCardName, @JsonProperty("giftCardProvider") String giftCardProvider, @JsonProperty("group") String group, @JsonProperty("id") String id, @JsonProperty("installments") Integer installments, @JsonProperty("koinUrl") String koinUrl, @JsonProperty("lastDigits") String lastDigits, @JsonProperty("parentAccountId") String parentAccountId, @JsonProperty("paymentSystem") String paymentSystem, @JsonProperty("paymentSystemName") String paymentSystemName, @JsonProperty("redemptionCode") String redemptionCode, @JsonProperty("referenceValue") Integer referenceValue, @JsonProperty("tid") String tid, @JsonProperty("url") String url, @JsonProperty("value") Integer value) {
+        this.accountId = accountId;
+        this.bankIssuedInvoiceBarCodeNumber = bankIssuedInvoiceBarCodeNumber;
+        this.bankIssuedInvoiceBarCodeType = bankIssuedInvoiceBarCodeType;
+        this.bankIssuedInvoiceIdentificationNumber = bankIssuedInvoiceIdentificationNumber;
+        this.bankIssuedInvoiceIdentificationNumberFormatted = bankIssuedInvoiceIdentificationNumberFormatted;
+        this.billingAddress = billingAddress;
+        this.cardHolder = cardHolder;
+        this.cardNumber = cardNumber;
+        this.connectorResponses = connectorResponses;
+        this.cvv2 = cvv2;
+        this.dueDate = dueDate;
+        this.expireMonth = expireMonth;
+        this.expireYear = expireYear;
+        this.firstDigits = firstDigits;
+        this.giftCardAsDiscount = giftCardAsDiscount;
+        this.giftCardCaption = giftCardCaption;
+        this.giftCardId = giftCardId;
+        this.giftCardName = giftCardName;
+        this.giftCardProvider = giftCardProvider;
+        this.group = group;
+        this.id = id;
+        this.installments = installments;
+        this.koinUrl = koinUrl;
+        this.lastDigits = lastDigits;
+        this.parentAccountId = parentAccountId;
+        this.paymentSystem = paymentSystem;
+        this.paymentSystemName = paymentSystemName;
+        this.redemptionCode = redemptionCode;
+        this.referenceValue = referenceValue;
+        this.tid = tid;
+        this.url = url;
+        this.value = value;
+  }
 }

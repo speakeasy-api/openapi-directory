@@ -15,9 +15,11 @@ public class CreateDBInstanceResult {
      */
     
     public DBInstance dbInstance;
+
     public CreateDBInstanceResult withDBInstance(DBInstance dbInstance) {
         this.dbInstance = dbInstance;
         return this;
     }
     
+    public CreateDBInstanceResult(){}
 }

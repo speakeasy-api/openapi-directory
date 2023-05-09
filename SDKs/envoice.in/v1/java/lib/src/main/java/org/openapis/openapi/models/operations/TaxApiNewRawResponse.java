@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TaxApiNewRawResponse {
     
     public byte[] body;
+
     public TaxApiNewRawResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class TaxApiNewRawResponse {
     
     
     public String contentType;
+
     public TaxApiNewRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class TaxApiNewRawResponse {
     
     
     public Integer statusCode;
+
     public TaxApiNewRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class TaxApiNewRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TaxApiNewRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class TaxApiNewRawResponse {
      */
     
     public Integer taxApiNewRaw200ApplicationJSONInt32Integer;
+
     public TaxApiNewRawResponse withTaxApiNewRaw200ApplicationJSONInt32Integer(Integer taxApiNewRaw200ApplicationJSONInt32Integer) {
         this.taxApiNewRaw200ApplicationJSONInt32Integer = taxApiNewRaw200ApplicationJSONInt32Integer;
         return this;
@@ -50,9 +56,14 @@ public class TaxApiNewRawResponse {
      */
     
     public Integer taxApiNewRaw200TextJSONInt32Integer;
+
     public TaxApiNewRawResponse withTaxApiNewRaw200TextJSONInt32Integer(Integer taxApiNewRaw200TextJSONInt32Integer) {
         this.taxApiNewRaw200TextJSONInt32Integer = taxApiNewRaw200TextJSONInt32Integer;
         return this;
     }
     
+    public TaxApiNewRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

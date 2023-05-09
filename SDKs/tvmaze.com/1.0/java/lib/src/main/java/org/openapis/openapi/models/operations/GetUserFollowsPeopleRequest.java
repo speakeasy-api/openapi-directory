@@ -12,9 +12,11 @@ public class GetUserFollowsPeopleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
     public GetUserFollowsPeopleEmbedEnum embed;
+
     public GetUserFollowsPeopleRequest withEmbed(GetUserFollowsPeopleEmbedEnum embed) {
         this.embed = embed;
         return this;
     }
     
+    public GetUserFollowsPeopleRequest(){}
 }

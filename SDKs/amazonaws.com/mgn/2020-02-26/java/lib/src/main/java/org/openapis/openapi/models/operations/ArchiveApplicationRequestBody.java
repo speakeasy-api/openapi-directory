@@ -12,9 +12,13 @@ public class ArchiveApplicationRequestBody {
      */
     @JsonProperty("applicationID")
     public String applicationID;
+
     public ArchiveApplicationRequestBody withApplicationID(String applicationID) {
         this.applicationID = applicationID;
         return this;
     }
     
+    public ArchiveApplicationRequestBody(@JsonProperty("applicationID") String applicationID) {
+        this.applicationID = applicationID;
+  }
 }

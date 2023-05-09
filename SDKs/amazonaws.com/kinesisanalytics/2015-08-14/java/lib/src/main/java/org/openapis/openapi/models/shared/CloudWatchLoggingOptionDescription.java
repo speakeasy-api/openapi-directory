@@ -15,6 +15,7 @@ public class CloudWatchLoggingOptionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLoggingOptionId")
     public String cloudWatchLoggingOptionId;
+
     public CloudWatchLoggingOptionDescription withCloudWatchLoggingOptionId(String cloudWatchLoggingOptionId) {
         this.cloudWatchLoggingOptionId = cloudWatchLoggingOptionId;
         return this;
@@ -22,6 +23,7 @@ public class CloudWatchLoggingOptionDescription {
     
     @JsonProperty("LogStreamARN")
     public String logStreamARN;
+
     public CloudWatchLoggingOptionDescription withLogStreamARN(String logStreamARN) {
         this.logStreamARN = logStreamARN;
         return this;
@@ -29,9 +31,14 @@ public class CloudWatchLoggingOptionDescription {
     
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public CloudWatchLoggingOptionDescription withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
     }
     
+    public CloudWatchLoggingOptionDescription(@JsonProperty("LogStreamARN") String logStreamARN, @JsonProperty("RoleARN") String roleARN) {
+        this.logStreamARN = logStreamARN;
+        this.roleARN = roleARN;
+  }
 }

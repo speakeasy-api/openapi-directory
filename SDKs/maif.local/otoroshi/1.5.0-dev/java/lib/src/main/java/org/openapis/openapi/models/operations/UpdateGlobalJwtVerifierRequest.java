@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateGlobalJwtVerifierRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GlobalJwtVerifier globalJwtVerifier;
+
     public UpdateGlobalJwtVerifierRequest withGlobalJwtVerifier(org.openapis.openapi.models.shared.GlobalJwtVerifier globalJwtVerifier) {
         this.globalJwtVerifier = globalJwtVerifier;
         return this;
@@ -19,9 +21,13 @@ public class UpdateGlobalJwtVerifierRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=verifierId")
     public String verifierId;
+
     public UpdateGlobalJwtVerifierRequest withVerifierId(String verifierId) {
         this.verifierId = verifierId;
         return this;
     }
     
+    public UpdateGlobalJwtVerifierRequest(@JsonProperty("verifierId") String verifierId) {
+        this.verifierId = verifierId;
+  }
 }

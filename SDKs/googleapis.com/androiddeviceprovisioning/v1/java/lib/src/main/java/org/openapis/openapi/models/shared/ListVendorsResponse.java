@@ -18,6 +18,7 @@ public class ListVendorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListVendorsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListVendorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public ListVendorsResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
@@ -40,9 +42,11 @@ public class ListVendorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendors")
     public Company[] vendors;
+
     public ListVendorsResponse withVendors(Company[] vendors) {
         this.vendors = vendors;
         return this;
     }
     
+    public ListVendorsResponse(){}
 }

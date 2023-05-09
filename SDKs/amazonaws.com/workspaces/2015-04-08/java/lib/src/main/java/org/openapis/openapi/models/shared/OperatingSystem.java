@@ -15,9 +15,11 @@ public class OperatingSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public OperatingSystemTypeEnum type;
+
     public OperatingSystem withType(OperatingSystemTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public OperatingSystem(){}
 }

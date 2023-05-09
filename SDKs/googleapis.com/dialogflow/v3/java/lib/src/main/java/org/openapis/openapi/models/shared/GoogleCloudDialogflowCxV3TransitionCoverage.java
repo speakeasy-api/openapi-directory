@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3TransitionCoverage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverageScore")
     public Float coverageScore;
+
     public GoogleCloudDialogflowCxV3TransitionCoverage withCoverageScore(Float coverageScore) {
         this.coverageScore = coverageScore;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3TransitionCoverage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transitions")
     public GoogleCloudDialogflowCxV3TransitionCoverageTransition[] transitions;
+
     public GoogleCloudDialogflowCxV3TransitionCoverage withTransitions(GoogleCloudDialogflowCxV3TransitionCoverageTransition[] transitions) {
         this.transitions = transitions;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3TransitionCoverage(){}
 }

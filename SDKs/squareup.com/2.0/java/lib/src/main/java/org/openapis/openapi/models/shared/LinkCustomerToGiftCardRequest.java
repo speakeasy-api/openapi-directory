@@ -15,9 +15,13 @@ public class LinkCustomerToGiftCardRequest {
      */
     @JsonProperty("customer_id")
     public String customerId;
+
     public LinkCustomerToGiftCardRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
     }
     
+    public LinkCustomerToGiftCardRequest(@JsonProperty("customer_id") String customerId) {
+        this.customerId = customerId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRegistryCatalogDataResponse {
     
     public String contentType;
+
     public GetRegistryCatalogDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRegistryCatalogDataResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRegistryCatalogDataResponse getRegistryCatalogDataResponse;
+
     public GetRegistryCatalogDataResponse withGetRegistryCatalogDataResponse(org.openapis.openapi.models.shared.GetRegistryCatalogDataResponse getRegistryCatalogDataResponse) {
         this.getRegistryCatalogDataResponse = getRegistryCatalogDataResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetRegistryCatalogDataResponse {
      */
     
     public Object serverException;
+
     public GetRegistryCatalogDataResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -36,6 +40,7 @@ public class GetRegistryCatalogDataResponse {
     
     
     public Integer statusCode;
+
     public GetRegistryCatalogDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetRegistryCatalogDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRegistryCatalogDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetRegistryCatalogDataResponse {
      */
     
     public Object unsupportedCommandException;
+
     public GetRegistryCatalogDataResponse withUnsupportedCommandException(Object unsupportedCommandException) {
         this.unsupportedCommandException = unsupportedCommandException;
         return this;
     }
     
+    public GetRegistryCatalogDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

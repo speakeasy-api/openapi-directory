@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeElasticGpusRequest {
     
     public Boolean dryRun;
+
     public DescribeElasticGpusRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeElasticGpusRequest {
     
     
     public String[] elasticGpuIds;
+
     public DescribeElasticGpusRequest withElasticGpuIds(String[] elasticGpuIds) {
         this.elasticGpuIds = elasticGpuIds;
         return this;
@@ -23,6 +25,7 @@ public class DescribeElasticGpusRequest {
     
     
     public DescribeElasticGpusRequestFilters[] filters;
+
     public DescribeElasticGpusRequest withFilters(DescribeElasticGpusRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -30,6 +33,7 @@ public class DescribeElasticGpusRequest {
     
     
     public Long maxResults;
+
     public DescribeElasticGpusRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,11 @@ public class DescribeElasticGpusRequest {
     
     
     public String nextToken;
+
     public DescribeElasticGpusRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeElasticGpusRequest(){}
 }

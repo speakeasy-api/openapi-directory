@@ -18,9 +18,11 @@ public class SharedDriveInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedDriveIds")
     public String[] sharedDriveIds;
+
     public SharedDriveInfo withSharedDriveIds(String[] sharedDriveIds) {
         this.sharedDriveIds = sharedDriveIds;
         return this;
     }
     
+    public SharedDriveInfo(){}
 }

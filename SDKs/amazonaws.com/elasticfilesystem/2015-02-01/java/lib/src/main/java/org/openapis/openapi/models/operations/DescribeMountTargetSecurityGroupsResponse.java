@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeMountTargetSecurityGroupsResponse {
@@ -12,6 +13,7 @@ public class DescribeMountTargetSecurityGroupsResponse {
      */
     
     public Object badRequest;
+
     public DescribeMountTargetSecurityGroupsResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class DescribeMountTargetSecurityGroupsResponse {
     
     
     public String contentType;
+
     public DescribeMountTargetSecurityGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeMountTargetSecurityGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeMountTargetSecurityGroupsResponse describeMountTargetSecurityGroupsResponse;
+
     public DescribeMountTargetSecurityGroupsResponse withDescribeMountTargetSecurityGroupsResponse(org.openapis.openapi.models.shared.DescribeMountTargetSecurityGroupsResponse describeMountTargetSecurityGroupsResponse) {
         this.describeMountTargetSecurityGroupsResponse = describeMountTargetSecurityGroupsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeMountTargetSecurityGroupsResponse {
      */
     
     public Object incorrectMountTargetState;
+
     public DescribeMountTargetSecurityGroupsResponse withIncorrectMountTargetState(Object incorrectMountTargetState) {
         this.incorrectMountTargetState = incorrectMountTargetState;
         return this;
@@ -49,6 +54,7 @@ public class DescribeMountTargetSecurityGroupsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeMountTargetSecurityGroupsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class DescribeMountTargetSecurityGroupsResponse {
      */
     
     public Object mountTargetNotFound;
+
     public DescribeMountTargetSecurityGroupsResponse withMountTargetNotFound(Object mountTargetNotFound) {
         this.mountTargetNotFound = mountTargetNotFound;
         return this;
@@ -66,6 +73,7 @@ public class DescribeMountTargetSecurityGroupsResponse {
     
     
     public Integer statusCode;
+
     public DescribeMountTargetSecurityGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeMountTargetSecurityGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeMountTargetSecurityGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeMountTargetSecurityGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

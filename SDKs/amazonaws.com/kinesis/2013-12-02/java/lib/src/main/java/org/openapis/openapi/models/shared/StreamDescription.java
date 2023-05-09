@@ -20,6 +20,7 @@ public class StreamDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionType")
     public EncryptionTypeEnum encryptionType;
+
     public StreamDescription withEncryptionType(EncryptionTypeEnum encryptionType) {
         this.encryptionType = encryptionType;
         return this;
@@ -27,6 +28,7 @@ public class StreamDescription {
     
     @JsonProperty("EnhancedMonitoring")
     public EnhancedMetrics[] enhancedMonitoring;
+
     public StreamDescription withEnhancedMonitoring(EnhancedMetrics[] enhancedMonitoring) {
         this.enhancedMonitoring = enhancedMonitoring;
         return this;
@@ -34,6 +36,7 @@ public class StreamDescription {
     
     @JsonProperty("HasMoreShards")
     public Boolean hasMoreShards;
+
     public StreamDescription withHasMoreShards(Boolean hasMoreShards) {
         this.hasMoreShards = hasMoreShards;
         return this;
@@ -42,6 +45,7 @@ public class StreamDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public StreamDescription withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -49,6 +53,7 @@ public class StreamDescription {
     
     @JsonProperty("RetentionPeriodHours")
     public Long retentionPeriodHours;
+
     public StreamDescription withRetentionPeriodHours(Long retentionPeriodHours) {
         this.retentionPeriodHours = retentionPeriodHours;
         return this;
@@ -56,6 +61,7 @@ public class StreamDescription {
     
     @JsonProperty("Shards")
     public Shard[] shards;
+
     public StreamDescription withShards(Shard[] shards) {
         this.shards = shards;
         return this;
@@ -63,6 +69,7 @@ public class StreamDescription {
     
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public StreamDescription withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -72,6 +79,7 @@ public class StreamDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StreamCreationTimestamp")
     public OffsetDateTime streamCreationTimestamp;
+
     public StreamDescription withStreamCreationTimestamp(OffsetDateTime streamCreationTimestamp) {
         this.streamCreationTimestamp = streamCreationTimestamp;
         return this;
@@ -80,6 +88,7 @@ public class StreamDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamModeDetails")
     public StreamModeDetails streamModeDetails;
+
     public StreamDescription withStreamModeDetails(StreamModeDetails streamModeDetails) {
         this.streamModeDetails = streamModeDetails;
         return this;
@@ -87,6 +96,7 @@ public class StreamDescription {
     
     @JsonProperty("StreamName")
     public String streamName;
+
     public StreamDescription withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
@@ -94,9 +104,20 @@ public class StreamDescription {
     
     @JsonProperty("StreamStatus")
     public StreamStatusEnum streamStatus;
+
     public StreamDescription withStreamStatus(StreamStatusEnum streamStatus) {
         this.streamStatus = streamStatus;
         return this;
     }
     
+    public StreamDescription(@JsonProperty("EnhancedMonitoring") EnhancedMetrics[] enhancedMonitoring, @JsonProperty("HasMoreShards") Boolean hasMoreShards, @JsonProperty("RetentionPeriodHours") Long retentionPeriodHours, @JsonProperty("Shards") Shard[] shards, @JsonProperty("StreamARN") String streamARN, @JsonProperty("StreamCreationTimestamp") OffsetDateTime streamCreationTimestamp, @JsonProperty("StreamName") String streamName, @JsonProperty("StreamStatus") StreamStatusEnum streamStatus) {
+        this.enhancedMonitoring = enhancedMonitoring;
+        this.hasMoreShards = hasMoreShards;
+        this.retentionPeriodHours = retentionPeriodHours;
+        this.shards = shards;
+        this.streamARN = streamARN;
+        this.streamCreationTimestamp = streamCreationTimestamp;
+        this.streamName = streamName;
+        this.streamStatus = streamStatus;
+  }
 }

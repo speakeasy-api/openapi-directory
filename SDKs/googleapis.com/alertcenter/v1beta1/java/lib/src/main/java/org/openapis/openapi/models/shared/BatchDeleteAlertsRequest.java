@@ -18,6 +18,7 @@ public class BatchDeleteAlertsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alertId")
     public String[] alertId;
+
     public BatchDeleteAlertsRequest withAlertId(String[] alertId) {
         this.alertId = alertId;
         return this;
@@ -29,9 +30,11 @@ public class BatchDeleteAlertsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public String customerId;
+
     public BatchDeleteAlertsRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
     }
     
+    public BatchDeleteAlertsRequest(){}
 }

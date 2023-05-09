@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetRecordResponse {
     @JsonProperty("Errors")
     public BatchGetRecordError[] errors;
+
     public BatchGetRecordResponse withErrors(BatchGetRecordError[] errors) {
         this.errors = errors;
         return this;
@@ -19,6 +20,7 @@ public class BatchGetRecordResponse {
     
     @JsonProperty("Records")
     public BatchGetRecordResultDetail[] records;
+
     public BatchGetRecordResponse withRecords(BatchGetRecordResultDetail[] records) {
         this.records = records;
         return this;
@@ -26,9 +28,15 @@ public class BatchGetRecordResponse {
     
     @JsonProperty("UnprocessedIdentifiers")
     public BatchGetRecordIdentifier[] unprocessedIdentifiers;
+
     public BatchGetRecordResponse withUnprocessedIdentifiers(BatchGetRecordIdentifier[] unprocessedIdentifiers) {
         this.unprocessedIdentifiers = unprocessedIdentifiers;
         return this;
     }
     
+    public BatchGetRecordResponse(@JsonProperty("Errors") BatchGetRecordError[] errors, @JsonProperty("Records") BatchGetRecordResultDetail[] records, @JsonProperty("UnprocessedIdentifiers") BatchGetRecordIdentifier[] unprocessedIdentifiers) {
+        this.errors = errors;
+        this.records = records;
+        this.unprocessedIdentifiers = unprocessedIdentifiers;
+  }
 }

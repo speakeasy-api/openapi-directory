@@ -15,6 +15,7 @@ public class ViewWithIdDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columns")
     public ColumnDTO[] columns;
+
     public ViewWithIdDTO withColumns(ColumnDTO[] columns) {
         this.columns = columns;
         return this;
@@ -23,6 +24,7 @@ public class ViewWithIdDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public OrderDTO order;
+
     public ViewWithIdDTO withOrder(OrderDTO order) {
         this.order = order;
         return this;
@@ -31,6 +33,7 @@ public class ViewWithIdDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public PermissionsDTO permissions;
+
     public ViewWithIdDTO withPermissions(PermissionsDTO permissions) {
         this.permissions = permissions;
         return this;
@@ -39,6 +42,7 @@ public class ViewWithIdDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public SettingsDTO settings;
+
     public ViewWithIdDTO withSettings(SettingsDTO settings) {
         this.settings = settings;
         return this;
@@ -47,9 +51,11 @@ public class ViewWithIdDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewId")
     public Long viewId;
+
     public ViewWithIdDTO withViewId(Long viewId) {
         this.viewId = viewId;
         return this;
     }
     
+    public ViewWithIdDTO(){}
 }

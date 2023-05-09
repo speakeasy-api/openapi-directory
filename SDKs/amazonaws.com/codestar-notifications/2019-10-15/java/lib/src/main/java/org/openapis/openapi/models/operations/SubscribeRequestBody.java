@@ -14,6 +14,7 @@ public class SubscribeRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public SubscribeRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -25,6 +26,7 @@ public class SubscribeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public SubscribeRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -35,9 +37,14 @@ public class SubscribeRequestBody {
      */
     @JsonProperty("Target")
     public SubscribeRequestBodyTarget target;
+
     public SubscribeRequestBody withTarget(SubscribeRequestBodyTarget target) {
         this.target = target;
         return this;
     }
     
+    public SubscribeRequestBody(@JsonProperty("Arn") String arn, @JsonProperty("Target") SubscribeRequestBodyTarget target) {
+        this.arn = arn;
+        this.target = target;
+  }
 }

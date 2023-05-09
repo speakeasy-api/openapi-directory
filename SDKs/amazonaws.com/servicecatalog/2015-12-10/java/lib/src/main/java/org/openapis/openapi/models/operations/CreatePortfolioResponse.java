@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePortfolioResponse {
     
     public String contentType;
+
     public CreatePortfolioResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreatePortfolioResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePortfolioOutput createPortfolioOutput;
+
     public CreatePortfolioResponse withCreatePortfolioOutput(org.openapis.openapi.models.shared.CreatePortfolioOutput createPortfolioOutput) {
         this.createPortfolioOutput = createPortfolioOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreatePortfolioResponse {
      */
     
     public Object invalidParametersException;
+
     public CreatePortfolioResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -39,6 +43,7 @@ public class CreatePortfolioResponse {
      */
     
     public Object limitExceededException;
+
     public CreatePortfolioResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class CreatePortfolioResponse {
     
     
     public Integer statusCode;
+
     public CreatePortfolioResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreatePortfolioResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePortfolioResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreatePortfolioResponse {
      */
     
     public Object tagOptionNotMigratedException;
+
     public CreatePortfolioResponse withTagOptionNotMigratedException(Object tagOptionNotMigratedException) {
         this.tagOptionNotMigratedException = tagOptionNotMigratedException;
         return this;
     }
     
+    public CreatePortfolioResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

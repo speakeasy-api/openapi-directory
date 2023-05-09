@@ -22,6 +22,7 @@ public class SymbolUploadsList200ApplicationJSON {
      */
     @JsonProperty("app_id")
     public String appId;
+
     public SymbolUploadsList200ApplicationJSON withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -33,6 +34,7 @@ public class SymbolUploadsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_name")
     public String fileName;
+
     public SymbolUploadsList200ApplicationJSON withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -44,6 +46,7 @@ public class SymbolUploadsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_size")
     public Double fileSize;
+
     public SymbolUploadsList200ApplicationJSON withFileSize(Double fileSize) {
         this.fileSize = fileSize;
         return this;
@@ -55,6 +58,7 @@ public class SymbolUploadsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public SymbolUploadsList200ApplicationJSONOriginEnum origin;
+
     public SymbolUploadsList200ApplicationJSON withOrigin(SymbolUploadsList200ApplicationJSONOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -65,6 +69,7 @@ public class SymbolUploadsList200ApplicationJSON {
      */
     @JsonProperty("status")
     public SymbolUploadsList200ApplicationJSONStatusEnum status;
+
     public SymbolUploadsList200ApplicationJSON withStatus(SymbolUploadsList200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
@@ -75,6 +80,7 @@ public class SymbolUploadsList200ApplicationJSON {
      */
     @JsonProperty("symbol_type")
     public SymbolUploadsList200ApplicationJSONSymbolTypeEnum symbolType;
+
     public SymbolUploadsList200ApplicationJSON withSymbolType(SymbolUploadsList200ApplicationJSONSymbolTypeEnum symbolType) {
         this.symbolType = symbolType;
         return this;
@@ -85,6 +91,7 @@ public class SymbolUploadsList200ApplicationJSON {
      */
     @JsonProperty("symbol_upload_id")
     public String symbolUploadId;
+
     public SymbolUploadsList200ApplicationJSON withSymbolUploadId(String symbolUploadId) {
         this.symbolUploadId = symbolUploadId;
         return this;
@@ -96,6 +103,7 @@ public class SymbolUploadsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("symbols_uploaded")
     public SymbolUploadsList200ApplicationJSONSymbolsUploaded[] symbolsUploaded;
+
     public SymbolUploadsList200ApplicationJSON withSymbolsUploaded(SymbolUploadsList200ApplicationJSONSymbolsUploaded[] symbolsUploaded) {
         this.symbolsUploaded = symbolsUploaded;
         return this;
@@ -109,6 +117,7 @@ public class SymbolUploadsList200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public SymbolUploadsList200ApplicationJSON withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -120,9 +129,16 @@ public class SymbolUploadsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public SymbolUploadsList200ApplicationJSONUser user;
+
     public SymbolUploadsList200ApplicationJSON withUser(SymbolUploadsList200ApplicationJSONUser user) {
         this.user = user;
         return this;
     }
     
+    public SymbolUploadsList200ApplicationJSON(@JsonProperty("app_id") String appId, @JsonProperty("status") SymbolUploadsList200ApplicationJSONStatusEnum status, @JsonProperty("symbol_type") SymbolUploadsList200ApplicationJSONSymbolTypeEnum symbolType, @JsonProperty("symbol_upload_id") String symbolUploadId) {
+        this.appId = appId;
+        this.status = status;
+        this.symbolType = symbolType;
+        this.symbolUploadId = symbolUploadId;
+  }
 }

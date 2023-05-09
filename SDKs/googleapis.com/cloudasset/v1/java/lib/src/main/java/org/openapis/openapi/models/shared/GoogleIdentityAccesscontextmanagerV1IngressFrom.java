@@ -18,6 +18,7 @@ public class GoogleIdentityAccesscontextmanagerV1IngressFrom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identities")
     public String[] identities;
+
     public GoogleIdentityAccesscontextmanagerV1IngressFrom withIdentities(String[] identities) {
         this.identities = identities;
         return this;
@@ -29,6 +30,7 @@ public class GoogleIdentityAccesscontextmanagerV1IngressFrom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityType")
     public GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum identityType;
+
     public GoogleIdentityAccesscontextmanagerV1IngressFrom withIdentityType(GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum identityType) {
         this.identityType = identityType;
         return this;
@@ -40,9 +42,11 @@ public class GoogleIdentityAccesscontextmanagerV1IngressFrom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public GoogleIdentityAccesscontextmanagerV1IngressSource[] sources;
+
     public GoogleIdentityAccesscontextmanagerV1IngressFrom withSources(GoogleIdentityAccesscontextmanagerV1IngressSource[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public GoogleIdentityAccesscontextmanagerV1IngressFrom(){}
 }

@@ -15,6 +15,7 @@ public class EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJSON
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJSONErrors[] errors;
+
     public EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJSON withErrors(EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJSONErrors[] errors) {
         this.errors = errors;
         return this;
@@ -23,9 +24,11 @@ public class EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJSON
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJSON(){}
 }

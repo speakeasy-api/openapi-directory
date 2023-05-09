@@ -18,6 +18,7 @@ public class FirstPartyMobileApplicationTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedAppIds")
     public String[] excludedAppIds;
+
     public FirstPartyMobileApplicationTargeting withExcludedAppIds(String[] excludedAppIds) {
         this.excludedAppIds = excludedAppIds;
         return this;
@@ -29,9 +30,11 @@ public class FirstPartyMobileApplicationTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetedAppIds")
     public String[] targetedAppIds;
+
     public FirstPartyMobileApplicationTargeting withTargetedAppIds(String[] targetedAppIds) {
         this.targetedAppIds = targetedAppIds;
         return this;
     }
     
+    public FirstPartyMobileApplicationTargeting(){}
 }

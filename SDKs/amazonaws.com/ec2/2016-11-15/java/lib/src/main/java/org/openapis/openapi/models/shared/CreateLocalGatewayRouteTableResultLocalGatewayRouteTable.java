@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateLocalGatewayRouteTableResultLocalGatewayRouteTable {
     
     public String localGatewayId;
+
     public CreateLocalGatewayRouteTableResultLocalGatewayRouteTable withLocalGatewayId(String localGatewayId) {
         this.localGatewayId = localGatewayId;
         return this;
@@ -19,6 +20,7 @@ public class CreateLocalGatewayRouteTableResultLocalGatewayRouteTable {
     
     
     public String localGatewayRouteTableArn;
+
     public CreateLocalGatewayRouteTableResultLocalGatewayRouteTable withLocalGatewayRouteTableArn(String localGatewayRouteTableArn) {
         this.localGatewayRouteTableArn = localGatewayRouteTableArn;
         return this;
@@ -26,6 +28,7 @@ public class CreateLocalGatewayRouteTableResultLocalGatewayRouteTable {
     
     
     public String localGatewayRouteTableId;
+
     public CreateLocalGatewayRouteTableResultLocalGatewayRouteTable withLocalGatewayRouteTableId(String localGatewayRouteTableId) {
         this.localGatewayRouteTableId = localGatewayRouteTableId;
         return this;
@@ -33,6 +36,7 @@ public class CreateLocalGatewayRouteTableResultLocalGatewayRouteTable {
     
     
     public CreateLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnum mode;
+
     public CreateLocalGatewayRouteTableResultLocalGatewayRouteTable withMode(CreateLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnum mode) {
         this.mode = mode;
         return this;
@@ -40,6 +44,7 @@ public class CreateLocalGatewayRouteTableResultLocalGatewayRouteTable {
     
     
     public String outpostArn;
+
     public CreateLocalGatewayRouteTableResultLocalGatewayRouteTable withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -47,6 +52,7 @@ public class CreateLocalGatewayRouteTableResultLocalGatewayRouteTable {
     
     
     public String ownerId;
+
     public CreateLocalGatewayRouteTableResultLocalGatewayRouteTable withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -54,6 +60,7 @@ public class CreateLocalGatewayRouteTableResultLocalGatewayRouteTable {
     
     
     public String state;
+
     public CreateLocalGatewayRouteTableResultLocalGatewayRouteTable withState(String state) {
         this.state = state;
         return this;
@@ -61,6 +68,7 @@ public class CreateLocalGatewayRouteTableResultLocalGatewayRouteTable {
     
     
     public CreateLocalGatewayRouteTableResultLocalGatewayRouteTableStateReason stateReason;
+
     public CreateLocalGatewayRouteTableResultLocalGatewayRouteTable withStateReason(CreateLocalGatewayRouteTableResultLocalGatewayRouteTableStateReason stateReason) {
         this.stateReason = stateReason;
         return this;
@@ -68,9 +76,11 @@ public class CreateLocalGatewayRouteTableResultLocalGatewayRouteTable {
     
     
     public CreateLocalGatewayRouteTableResultLocalGatewayRouteTableTags[] tags;
+
     public CreateLocalGatewayRouteTableResultLocalGatewayRouteTable withTags(CreateLocalGatewayRouteTableResultLocalGatewayRouteTableTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLocalGatewayRouteTableResultLocalGatewayRouteTable(){}
 }

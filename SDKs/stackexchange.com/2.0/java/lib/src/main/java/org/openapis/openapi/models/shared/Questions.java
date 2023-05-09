@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class Questions {
     
     public Long acceptedAnswerId;
+
     public Questions withAcceptedAnswerId(Long acceptedAnswerId) {
         this.acceptedAnswerId = acceptedAnswerId;
         return this;
@@ -16,6 +17,7 @@ public class Questions {
     
     
     public Long answerCount;
+
     public Questions withAnswerCount(Long answerCount) {
         this.answerCount = answerCount;
         return this;
@@ -23,6 +25,7 @@ public class Questions {
     
     
     public Object[] answers;
+
     public Questions withAnswers(Object[] answers) {
         this.answers = answers;
         return this;
@@ -30,6 +33,7 @@ public class Questions {
     
     
     public String body;
+
     public Questions withBody(String body) {
         this.body = body;
         return this;
@@ -37,6 +41,7 @@ public class Questions {
     
     
     public String bodyMarkdown;
+
     public Questions withBodyMarkdown(String bodyMarkdown) {
         this.bodyMarkdown = bodyMarkdown;
         return this;
@@ -44,6 +49,7 @@ public class Questions {
     
     
     public Long bountyAmount;
+
     public Questions withBountyAmount(Long bountyAmount) {
         this.bountyAmount = bountyAmount;
         return this;
@@ -51,6 +57,7 @@ public class Questions {
     
     
     public Long bountyClosesDate;
+
     public Questions withBountyClosesDate(Long bountyClosesDate) {
         this.bountyClosesDate = bountyClosesDate;
         return this;
@@ -58,6 +65,7 @@ public class Questions {
     
     
     public QuestionsBountyUser bountyUser;
+
     public Questions withBountyUser(QuestionsBountyUser bountyUser) {
         this.bountyUser = bountyUser;
         return this;
@@ -65,6 +73,7 @@ public class Questions {
     
     
     public Boolean canClose;
+
     public Questions withCanClose(Boolean canClose) {
         this.canClose = canClose;
         return this;
@@ -72,6 +81,7 @@ public class Questions {
     
     
     public Boolean canFlag;
+
     public Questions withCanFlag(Boolean canFlag) {
         this.canFlag = canFlag;
         return this;
@@ -79,6 +89,7 @@ public class Questions {
     
     
     public Long closeVoteCount;
+
     public Questions withCloseVoteCount(Long closeVoteCount) {
         this.closeVoteCount = closeVoteCount;
         return this;
@@ -86,6 +97,7 @@ public class Questions {
     
     
     public Long closedDate;
+
     public Questions withClosedDate(Long closedDate) {
         this.closedDate = closedDate;
         return this;
@@ -93,6 +105,7 @@ public class Questions {
     
     
     public QuestionsClosedDetails closedDetails;
+
     public Questions withClosedDetails(QuestionsClosedDetails closedDetails) {
         this.closedDetails = closedDetails;
         return this;
@@ -100,6 +113,7 @@ public class Questions {
     
     
     public String closedReason;
+
     public Questions withClosedReason(String closedReason) {
         this.closedReason = closedReason;
         return this;
@@ -107,6 +121,7 @@ public class Questions {
     
     
     public Long commentCount;
+
     public Questions withCommentCount(Long commentCount) {
         this.commentCount = commentCount;
         return this;
@@ -114,6 +129,7 @@ public class Questions {
     
     
     public Object[] comments;
+
     public Questions withComments(Object[] comments) {
         this.comments = comments;
         return this;
@@ -121,6 +137,7 @@ public class Questions {
     
     
     public Long communityOwnedDate;
+
     public Questions withCommunityOwnedDate(Long communityOwnedDate) {
         this.communityOwnedDate = communityOwnedDate;
         return this;
@@ -128,6 +145,7 @@ public class Questions {
     
     
     public Long creationDate;
+
     public Questions withCreationDate(Long creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -135,6 +153,7 @@ public class Questions {
     
     
     public Long deleteVoteCount;
+
     public Questions withDeleteVoteCount(Long deleteVoteCount) {
         this.deleteVoteCount = deleteVoteCount;
         return this;
@@ -142,6 +161,7 @@ public class Questions {
     
     
     public Long downVoteCount;
+
     public Questions withDownVoteCount(Long downVoteCount) {
         this.downVoteCount = downVoteCount;
         return this;
@@ -149,6 +169,7 @@ public class Questions {
     
     
     public Boolean downvoted;
+
     public Questions withDownvoted(Boolean downvoted) {
         this.downvoted = downvoted;
         return this;
@@ -156,6 +177,7 @@ public class Questions {
     
     
     public Long favoriteCount;
+
     public Questions withFavoriteCount(Long favoriteCount) {
         this.favoriteCount = favoriteCount;
         return this;
@@ -163,6 +185,7 @@ public class Questions {
     
     
     public Boolean favorited;
+
     public Questions withFavorited(Boolean favorited) {
         this.favorited = favorited;
         return this;
@@ -170,6 +193,7 @@ public class Questions {
     
     
     public Boolean isAnswered;
+
     public Questions withIsAnswered(Boolean isAnswered) {
         this.isAnswered = isAnswered;
         return this;
@@ -177,6 +201,7 @@ public class Questions {
     
     
     public Long lastActivityDate;
+
     public Questions withLastActivityDate(Long lastActivityDate) {
         this.lastActivityDate = lastActivityDate;
         return this;
@@ -184,6 +209,7 @@ public class Questions {
     
     
     public Long lastEditDate;
+
     public Questions withLastEditDate(Long lastEditDate) {
         this.lastEditDate = lastEditDate;
         return this;
@@ -191,6 +217,7 @@ public class Questions {
     
     
     public QuestionsLastEditor lastEditor;
+
     public Questions withLastEditor(QuestionsLastEditor lastEditor) {
         this.lastEditor = lastEditor;
         return this;
@@ -198,6 +225,7 @@ public class Questions {
     
     
     public String link;
+
     public Questions withLink(String link) {
         this.link = link;
         return this;
@@ -205,6 +233,7 @@ public class Questions {
     
     
     public Long lockedDate;
+
     public Questions withLockedDate(Long lockedDate) {
         this.lockedDate = lockedDate;
         return this;
@@ -212,6 +241,7 @@ public class Questions {
     
     
     public QuestionsMigratedFrom migratedFrom;
+
     public Questions withMigratedFrom(QuestionsMigratedFrom migratedFrom) {
         this.migratedFrom = migratedFrom;
         return this;
@@ -219,6 +249,7 @@ public class Questions {
     
     
     public QuestionsMigratedTo migratedTo;
+
     public Questions withMigratedTo(QuestionsMigratedTo migratedTo) {
         this.migratedTo = migratedTo;
         return this;
@@ -226,6 +257,7 @@ public class Questions {
     
     
     public QuestionsNotice notice;
+
     public Questions withNotice(QuestionsNotice notice) {
         this.notice = notice;
         return this;
@@ -233,6 +265,7 @@ public class Questions {
     
     
     public QuestionsOwner owner;
+
     public Questions withOwner(QuestionsOwner owner) {
         this.owner = owner;
         return this;
@@ -240,6 +273,7 @@ public class Questions {
     
     
     public Long protectedDate;
+
     public Questions withProtectedDate(Long protectedDate) {
         this.protectedDate = protectedDate;
         return this;
@@ -247,6 +281,7 @@ public class Questions {
     
     
     public Long questionId;
+
     public Questions withQuestionId(Long questionId) {
         this.questionId = questionId;
         return this;
@@ -254,6 +289,7 @@ public class Questions {
     
     
     public Long reopenVoteCount;
+
     public Questions withReopenVoteCount(Long reopenVoteCount) {
         this.reopenVoteCount = reopenVoteCount;
         return this;
@@ -261,6 +297,7 @@ public class Questions {
     
     
     public Long score;
+
     public Questions withScore(Long score) {
         this.score = score;
         return this;
@@ -268,6 +305,7 @@ public class Questions {
     
     
     public String shareLink;
+
     public Questions withShareLink(String shareLink) {
         this.shareLink = shareLink;
         return this;
@@ -275,6 +313,7 @@ public class Questions {
     
     
     public Object[] tags;
+
     public Questions withTags(Object[] tags) {
         this.tags = tags;
         return this;
@@ -282,6 +321,7 @@ public class Questions {
     
     
     public String title;
+
     public Questions withTitle(String title) {
         this.title = title;
         return this;
@@ -289,6 +329,7 @@ public class Questions {
     
     
     public Long upVoteCount;
+
     public Questions withUpVoteCount(Long upVoteCount) {
         this.upVoteCount = upVoteCount;
         return this;
@@ -296,6 +337,7 @@ public class Questions {
     
     
     public Boolean upvoted;
+
     public Questions withUpvoted(Boolean upvoted) {
         this.upvoted = upvoted;
         return this;
@@ -303,9 +345,11 @@ public class Questions {
     
     
     public Long viewCount;
+
     public Questions withViewCount(Long viewCount) {
         this.viewCount = viewCount;
         return this;
     }
     
+    public Questions(){}
 }

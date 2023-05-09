@@ -18,6 +18,7 @@ public class AdvertiserGeneralConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public AdvertiserGeneralConfig withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -29,6 +30,7 @@ public class AdvertiserGeneralConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainUrl")
     public String domainUrl;
+
     public AdvertiserGeneralConfig withDomainUrl(String domainUrl) {
         this.domainUrl = domainUrl;
         return this;
@@ -40,9 +42,11 @@ public class AdvertiserGeneralConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public AdvertiserGeneralConfig withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public AdvertiserGeneralConfig(){}
 }

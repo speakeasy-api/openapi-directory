@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETPurchaseReservedInstancesOfferingLimitPrice {
     @SpeakeasyMetadata("queryParam:name=Amount")
     public Double amount;
+
     public GETPurchaseReservedInstancesOfferingLimitPrice withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -19,9 +20,11 @@ public class GETPurchaseReservedInstancesOfferingLimitPrice {
     
     @SpeakeasyMetadata("queryParam:name=CurrencyCode")
     public GETPurchaseReservedInstancesOfferingLimitPriceCurrencyCodeEnum currencyCode;
+
     public GETPurchaseReservedInstancesOfferingLimitPrice withCurrencyCode(GETPurchaseReservedInstancesOfferingLimitPriceCurrencyCodeEnum currencyCode) {
         this.currencyCode = currencyCode;
         return this;
     }
     
+    public GETPurchaseReservedInstancesOfferingLimitPrice(){}
 }

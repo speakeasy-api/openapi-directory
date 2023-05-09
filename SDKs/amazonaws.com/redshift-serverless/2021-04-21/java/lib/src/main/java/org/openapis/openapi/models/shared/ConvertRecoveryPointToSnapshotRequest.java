@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConvertRecoveryPointToSnapshotRequest {
     @JsonProperty("recoveryPointId")
     public String recoveryPointId;
+
     public ConvertRecoveryPointToSnapshotRequest withRecoveryPointId(String recoveryPointId) {
         this.recoveryPointId = recoveryPointId;
         return this;
@@ -19,6 +20,7 @@ public class ConvertRecoveryPointToSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionPeriod")
     public Long retentionPeriod;
+
     public ConvertRecoveryPointToSnapshotRequest withRetentionPeriod(Long retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
@@ -26,6 +28,7 @@ public class ConvertRecoveryPointToSnapshotRequest {
     
     @JsonProperty("snapshotName")
     public String snapshotName;
+
     public ConvertRecoveryPointToSnapshotRequest withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
@@ -34,9 +37,14 @@ public class ConvertRecoveryPointToSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public ConvertRecoveryPointToSnapshotRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ConvertRecoveryPointToSnapshotRequest(@JsonProperty("recoveryPointId") String recoveryPointId, @JsonProperty("snapshotName") String snapshotName) {
+        this.recoveryPointId = recoveryPointId;
+        this.snapshotName = snapshotName;
+  }
 }

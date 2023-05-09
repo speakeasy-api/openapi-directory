@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAllDirectDepositResponse {
     
     public String contentType;
+
     public GetAllDirectDepositResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetAllDirectDepositResponse {
     
     
     public Integer statusCode;
+
     public GetAllDirectDepositResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetAllDirectDepositResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAllDirectDepositResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetAllDirectDepositResponse {
      */
     
     public org.openapis.openapi.models.shared.DirectDeposit[] directDeposits;
+
     public GetAllDirectDepositResponse withDirectDeposits(org.openapis.openapi.models.shared.DirectDeposit[] directDeposits) {
         this.directDeposits = directDeposits;
         return this;
@@ -43,9 +48,14 @@ public class GetAllDirectDepositResponse {
      */
     
     public org.openapis.openapi.models.shared.Error[] errors;
+
     public GetAllDirectDepositResponse withErrors(org.openapis.openapi.models.shared.Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public GetAllDirectDepositResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

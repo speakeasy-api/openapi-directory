@@ -15,9 +15,11 @@ public class DeleteNetworkSiteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkSite")
     public NetworkSite networkSite;
+
     public DeleteNetworkSiteResponse withNetworkSite(NetworkSite networkSite) {
         this.networkSite = networkSite;
         return this;
     }
     
+    public DeleteNetworkSiteResponse(){}
 }

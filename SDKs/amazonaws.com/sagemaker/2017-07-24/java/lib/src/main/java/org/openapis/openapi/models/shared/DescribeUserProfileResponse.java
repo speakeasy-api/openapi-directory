@@ -22,6 +22,7 @@ public class DescribeUserProfileResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeUserProfileResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DescribeUserProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainId")
     public String domainId;
+
     public DescribeUserProfileResponse withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -38,6 +40,7 @@ public class DescribeUserProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeUserProfileResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -46,6 +49,7 @@ public class DescribeUserProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeEfsFileSystemUid")
     public String homeEfsFileSystemUid;
+
     public DescribeUserProfileResponse withHomeEfsFileSystemUid(String homeEfsFileSystemUid) {
         this.homeEfsFileSystemUid = homeEfsFileSystemUid;
         return this;
@@ -56,6 +60,7 @@ public class DescribeUserProfileResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeUserProfileResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -64,6 +69,7 @@ public class DescribeUserProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SingleSignOnUserIdentifier")
     public String singleSignOnUserIdentifier;
+
     public DescribeUserProfileResponse withSingleSignOnUserIdentifier(String singleSignOnUserIdentifier) {
         this.singleSignOnUserIdentifier = singleSignOnUserIdentifier;
         return this;
@@ -72,6 +78,7 @@ public class DescribeUserProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SingleSignOnUserValue")
     public String singleSignOnUserValue;
+
     public DescribeUserProfileResponse withSingleSignOnUserValue(String singleSignOnUserValue) {
         this.singleSignOnUserValue = singleSignOnUserValue;
         return this;
@@ -80,6 +87,7 @@ public class DescribeUserProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public UserProfileStatusEnum status;
+
     public DescribeUserProfileResponse withStatus(UserProfileStatusEnum status) {
         this.status = status;
         return this;
@@ -88,6 +96,7 @@ public class DescribeUserProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserProfileArn")
     public String userProfileArn;
+
     public DescribeUserProfileResponse withUserProfileArn(String userProfileArn) {
         this.userProfileArn = userProfileArn;
         return this;
@@ -96,6 +105,7 @@ public class DescribeUserProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserProfileName")
     public String userProfileName;
+
     public DescribeUserProfileResponse withUserProfileName(String userProfileName) {
         this.userProfileName = userProfileName;
         return this;
@@ -104,9 +114,11 @@ public class DescribeUserProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserSettings")
     public UserSettings userSettings;
+
     public DescribeUserProfileResponse withUserSettings(UserSettings userSettings) {
         this.userSettings = userSettings;
         return this;
     }
     
+    public DescribeUserProfileResponse(){}
 }

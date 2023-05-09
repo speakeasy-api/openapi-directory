@@ -15,9 +15,11 @@ public class StartConfigurationSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InitialConfigurationToken")
     public String initialConfigurationToken;
+
     public StartConfigurationSessionResponse withInitialConfigurationToken(String initialConfigurationToken) {
         this.initialConfigurationToken = initialConfigurationToken;
         return this;
     }
     
+    public StartConfigurationSessionResponse(){}
 }

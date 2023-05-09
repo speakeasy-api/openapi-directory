@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdUserAccountTypesIdAccountTypeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public GetUsersIdUserAccountTypesIdAccountTypeRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -16,6 +18,7 @@ public class GetUsersIdUserAccountTypesIdAccountTypeRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_account_type")
     public Long idAccountType;
+
     public GetUsersIdUserAccountTypesIdAccountTypeRequest withIdAccountType(Long idAccountType) {
         this.idAccountType = idAccountType;
         return this;
@@ -26,9 +29,14 @@ public class GetUsersIdUserAccountTypesIdAccountTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
     public String idUser;
+
     public GetUsersIdUserAccountTypesIdAccountTypeRequest withIdUser(String idUser) {
         this.idUser = idUser;
         return this;
     }
     
+    public GetUsersIdUserAccountTypesIdAccountTypeRequest(@JsonProperty("id_account_type") Long idAccountType, @JsonProperty("id_user") String idUser) {
+        this.idAccountType = idAccountType;
+        this.idUser = idUser;
+  }
 }

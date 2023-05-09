@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UsagenotificationRequest {
     @JsonProperty("accountId")
     public String accountId;
+
     public UsagenotificationRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -16,6 +17,7 @@ public class UsagenotificationRequest {
     
     @JsonProperty("calculatorIds")
     public String[] calculatorIds;
+
     public UsagenotificationRequest withCalculatorIds(String[] calculatorIds) {
         this.calculatorIds = calculatorIds;
         return this;
@@ -23,6 +25,7 @@ public class UsagenotificationRequest {
     
     @JsonProperty("coupon")
     public String coupon;
+
     public UsagenotificationRequest withCoupon(String coupon) {
         this.coupon = coupon;
         return this;
@@ -30,6 +33,7 @@ public class UsagenotificationRequest {
     
     @JsonProperty("itemsCount")
     public Integer itemsCount;
+
     public UsagenotificationRequest withItemsCount(Integer itemsCount) {
         this.itemsCount = itemsCount;
         return this;
@@ -37,6 +41,7 @@ public class UsagenotificationRequest {
     
     @JsonProperty("orderId")
     public String orderId;
+
     public UsagenotificationRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -44,6 +49,7 @@ public class UsagenotificationRequest {
     
     @JsonProperty("profileId")
     public String profileId;
+
     public UsagenotificationRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -51,9 +57,19 @@ public class UsagenotificationRequest {
     
     @JsonProperty("used")
     public Boolean used;
+
     public UsagenotificationRequest withUsed(Boolean used) {
         this.used = used;
         return this;
     }
     
+    public UsagenotificationRequest(@JsonProperty("accountId") String accountId, @JsonProperty("calculatorIds") String[] calculatorIds, @JsonProperty("coupon") String coupon, @JsonProperty("itemsCount") Integer itemsCount, @JsonProperty("orderId") String orderId, @JsonProperty("profileId") String profileId, @JsonProperty("used") Boolean used) {
+        this.accountId = accountId;
+        this.calculatorIds = calculatorIds;
+        this.coupon = coupon;
+        this.itemsCount = itemsCount;
+        this.orderId = orderId;
+        this.profileId = profileId;
+        this.used = used;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RecognizeTextRequest {
@@ -12,6 +13,7 @@ public class RecognizeTextRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ImageUrl imageUrl;
+
     public RecognizeTextRequest withImageUrl(org.openapis.openapi.models.shared.ImageUrl imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -22,9 +24,14 @@ public class RecognizeTextRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mode")
     public org.openapis.openapi.models.shared.TextRecognitionModeEnum mode;
+
     public RecognizeTextRequest withMode(org.openapis.openapi.models.shared.TextRecognitionModeEnum mode) {
         this.mode = mode;
         return this;
     }
     
+    public RecognizeTextRequest(@JsonProperty("ImageUrl") org.openapis.openapi.models.shared.ImageUrl imageUrl, @JsonProperty("mode") org.openapis.openapi.models.shared.TextRecognitionModeEnum mode) {
+        this.imageUrl = imageUrl;
+        this.mode = mode;
+  }
 }

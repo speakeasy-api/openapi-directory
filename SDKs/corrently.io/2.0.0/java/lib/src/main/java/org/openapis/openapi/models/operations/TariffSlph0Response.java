@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TariffSlph0Response {
     
     public String contentType;
+
     public TariffSlph0Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TariffSlph0Response {
     
     
     public Integer statusCode;
+
     public TariffSlph0Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TariffSlph0Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TariffSlph0Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class TariffSlph0Response {
      */
     
     public org.openapis.openapi.models.shared.Tariffh0[] tariffh0s;
+
     public TariffSlph0Response withTariffh0s(org.openapis.openapi.models.shared.Tariffh0[] tariffh0s) {
         this.tariffh0s = tariffh0s;
         return this;
     }
     
+    public TariffSlph0Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class Hsm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZone")
     public String availabilityZone;
+
     public Hsm withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -23,6 +24,7 @@ public class Hsm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public Hsm withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -31,6 +33,7 @@ public class Hsm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EniId")
     public String eniId;
+
     public Hsm withEniId(String eniId) {
         this.eniId = eniId;
         return this;
@@ -39,6 +42,7 @@ public class Hsm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EniIp")
     public String eniIp;
+
     public Hsm withEniIp(String eniIp) {
         this.eniIp = eniIp;
         return this;
@@ -46,6 +50,7 @@ public class Hsm {
     
     @JsonProperty("HsmId")
     public String hsmId;
+
     public Hsm withHsmId(String hsmId) {
         this.hsmId = hsmId;
         return this;
@@ -54,6 +59,7 @@ public class Hsm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public HsmStateEnum state;
+
     public Hsm withState(HsmStateEnum state) {
         this.state = state;
         return this;
@@ -62,6 +68,7 @@ public class Hsm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateMessage")
     public String stateMessage;
+
     public Hsm withStateMessage(String stateMessage) {
         this.stateMessage = stateMessage;
         return this;
@@ -70,9 +77,13 @@ public class Hsm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public Hsm withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public Hsm(@JsonProperty("HsmId") String hsmId) {
+        this.hsmId = hsmId;
+  }
 }

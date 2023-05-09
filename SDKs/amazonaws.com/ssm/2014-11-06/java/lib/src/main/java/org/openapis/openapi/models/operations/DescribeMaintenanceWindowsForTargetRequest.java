@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeMaintenanceWindowsForTargetRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DescribeMaintenanceWindowsForTargetRequest describeMaintenanceWindowsForTargetRequest;
+
     public DescribeMaintenanceWindowsForTargetRequest withDescribeMaintenanceWindowsForTargetRequest(org.openapis.openapi.models.shared.DescribeMaintenanceWindowsForTargetRequest describeMaintenanceWindowsForTargetRequest) {
         this.describeMaintenanceWindowsForTargetRequest = describeMaintenanceWindowsForTargetRequest;
         return this;
@@ -19,6 +21,7 @@ public class DescribeMaintenanceWindowsForTargetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public String maxResults;
+
     public DescribeMaintenanceWindowsForTargetRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class DescribeMaintenanceWindowsForTargetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public DescribeMaintenanceWindowsForTargetRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class DescribeMaintenanceWindowsForTargetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeMaintenanceWindowsForTargetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class DescribeMaintenanceWindowsForTargetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeMaintenanceWindowsForTargetRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class DescribeMaintenanceWindowsForTargetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeMaintenanceWindowsForTargetRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class DescribeMaintenanceWindowsForTargetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeMaintenanceWindowsForTargetRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class DescribeMaintenanceWindowsForTargetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeMaintenanceWindowsForTargetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class DescribeMaintenanceWindowsForTargetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeMaintenanceWindowsForTargetRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class DescribeMaintenanceWindowsForTargetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeMaintenanceWindowsForTargetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class DescribeMaintenanceWindowsForTargetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DescribeMaintenanceWindowsForTargetXAmzTargetEnum xAmzTarget;
+
     public DescribeMaintenanceWindowsForTargetRequest withXAmzTarget(DescribeMaintenanceWindowsForTargetXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DescribeMaintenanceWindowsForTargetRequest(@JsonProperty("DescribeMaintenanceWindowsForTargetRequest") org.openapis.openapi.models.shared.DescribeMaintenanceWindowsForTargetRequest describeMaintenanceWindowsForTargetRequest, @JsonProperty("X-Amz-Target") DescribeMaintenanceWindowsForTargetXAmzTargetEnum xAmzTarget) {
+        this.describeMaintenanceWindowsForTargetRequest = describeMaintenanceWindowsForTargetRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

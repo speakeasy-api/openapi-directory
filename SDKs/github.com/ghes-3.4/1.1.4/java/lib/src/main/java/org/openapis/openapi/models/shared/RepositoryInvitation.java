@@ -21,6 +21,7 @@ public class RepositoryInvitation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public RepositoryInvitation withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -32,6 +33,7 @@ public class RepositoryInvitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expired")
     public Boolean expired;
+
     public RepositoryInvitation withExpired(Boolean expired) {
         this.expired = expired;
         return this;
@@ -39,6 +41,7 @@ public class RepositoryInvitation {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public RepositoryInvitation withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -49,6 +52,7 @@ public class RepositoryInvitation {
      */
     @JsonProperty("id")
     public Long id;
+
     public RepositoryInvitation withId(Long id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class RepositoryInvitation {
      */
     @JsonProperty("invitee")
     public NullableSimpleUser invitee;
+
     public RepositoryInvitation withInvitee(NullableSimpleUser invitee) {
         this.invitee = invitee;
         return this;
@@ -69,6 +74,7 @@ public class RepositoryInvitation {
      */
     @JsonProperty("inviter")
     public NullableSimpleUser inviter;
+
     public RepositoryInvitation withInviter(NullableSimpleUser inviter) {
         this.inviter = inviter;
         return this;
@@ -76,6 +82,7 @@ public class RepositoryInvitation {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public RepositoryInvitation withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -86,6 +93,7 @@ public class RepositoryInvitation {
      */
     @JsonProperty("permissions")
     public RepositoryInvitationPermissionsEnum permissions;
+
     public RepositoryInvitation withPermissions(RepositoryInvitationPermissionsEnum permissions) {
         this.permissions = permissions;
         return this;
@@ -96,6 +104,7 @@ public class RepositoryInvitation {
      */
     @JsonProperty("repository")
     public MinimalRepository repository;
+
     public RepositoryInvitation withRepository(MinimalRepository repository) {
         this.repository = repository;
         return this;
@@ -106,9 +115,21 @@ public class RepositoryInvitation {
      */
     @JsonProperty("url")
     public String url;
+
     public RepositoryInvitation withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public RepositoryInvitation(@JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("invitee") NullableSimpleUser invitee, @JsonProperty("inviter") NullableSimpleUser inviter, @JsonProperty("node_id") String nodeId, @JsonProperty("permissions") RepositoryInvitationPermissionsEnum permissions, @JsonProperty("repository") MinimalRepository repository, @JsonProperty("url") String url) {
+        this.createdAt = createdAt;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.invitee = invitee;
+        this.inviter = inviter;
+        this.nodeId = nodeId;
+        this.permissions = permissions;
+        this.repository = repository;
+        this.url = url;
+  }
 }

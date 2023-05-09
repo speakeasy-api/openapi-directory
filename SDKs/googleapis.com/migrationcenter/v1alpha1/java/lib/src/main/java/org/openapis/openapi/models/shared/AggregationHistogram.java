@@ -18,9 +18,11 @@ public class AggregationHistogram {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowerBounds")
     public Double[] lowerBounds;
+
     public AggregationHistogram withLowerBounds(Double[] lowerBounds) {
         this.lowerBounds = lowerBounds;
         return this;
     }
     
+    public AggregationHistogram(){}
 }

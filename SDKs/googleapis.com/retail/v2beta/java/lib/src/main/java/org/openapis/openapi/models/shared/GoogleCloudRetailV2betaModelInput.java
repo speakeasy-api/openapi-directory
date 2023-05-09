@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudRetailV2betaModelInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,8 +30,21 @@ public class GoogleCloudRetailV2betaModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filteringOption")
     public GoogleCloudRetailV2betaModelFilteringOptionEnum filteringOption;
+
     public GoogleCloudRetailV2betaModelInput withFilteringOption(GoogleCloudRetailV2betaModelFilteringOptionEnum filteringOption) {
         this.filteringOption = filteringOption;
+        return this;
+    }
+    
+    /**
+     * Additional model features config.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("modelFeaturesConfig")
+    public GoogleCloudRetailV2betaModelModelFeaturesConfig modelFeaturesConfig;
+
+    public GoogleCloudRetailV2betaModelInput withModelFeaturesConfig(GoogleCloudRetailV2betaModelModelFeaturesConfig modelFeaturesConfig) {
+        this.modelFeaturesConfig = modelFeaturesConfig;
         return this;
     }
     
@@ -40,6 +54,7 @@ public class GoogleCloudRetailV2betaModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRetailV2betaModelInput withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +66,7 @@ public class GoogleCloudRetailV2betaModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optimizationObjective")
     public String optimizationObjective;
+
     public GoogleCloudRetailV2betaModelInput withOptimizationObjective(String optimizationObjective) {
         this.optimizationObjective = optimizationObjective;
         return this;
@@ -62,6 +78,7 @@ public class GoogleCloudRetailV2betaModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periodicTuningState")
     public GoogleCloudRetailV2betaModelPeriodicTuningStateEnum periodicTuningState;
+
     public GoogleCloudRetailV2betaModelInput withPeriodicTuningState(GoogleCloudRetailV2betaModelPeriodicTuningStateEnum periodicTuningState) {
         this.periodicTuningState = periodicTuningState;
         return this;
@@ -73,6 +90,7 @@ public class GoogleCloudRetailV2betaModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingState")
     public GoogleCloudRetailV2betaModelTrainingStateEnum trainingState;
+
     public GoogleCloudRetailV2betaModelInput withTrainingState(GoogleCloudRetailV2betaModelTrainingStateEnum trainingState) {
         this.trainingState = trainingState;
         return this;
@@ -84,9 +102,11 @@ public class GoogleCloudRetailV2betaModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoogleCloudRetailV2betaModelInput withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudRetailV2betaModelInput(){}
 }

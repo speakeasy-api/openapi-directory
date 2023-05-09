@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLaunchResponse {
@@ -12,6 +13,7 @@ public class DeleteLaunchResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteLaunchResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteLaunchResponse {
      */
     
     public Object conflictException;
+
     public DeleteLaunchResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteLaunchResponse {
     
     
     public String contentType;
+
     public DeleteLaunchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteLaunchResponse {
      */
     
     public java.util.Map<String, Object> deleteLaunchResponse;
+
     public DeleteLaunchResponse withDeleteLaunchResponse(java.util.Map<String, Object> deleteLaunchResponse) {
         this.deleteLaunchResponse = deleteLaunchResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteLaunchResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteLaunchResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteLaunchResponse {
     
     
     public Integer statusCode;
+
     public DeleteLaunchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteLaunchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLaunchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteLaunchResponse {
      */
     
     public Object throttlingException;
+
     public DeleteLaunchResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteLaunchResponse {
      */
     
     public Object validationException;
+
     public DeleteLaunchResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteLaunchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

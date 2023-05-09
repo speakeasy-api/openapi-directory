@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTMoveByoipCidrToIpamResponse {
     
     public byte[] body;
+
     public POSTMoveByoipCidrToIpamResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTMoveByoipCidrToIpamResponse {
     
     
     public String contentType;
+
     public POSTMoveByoipCidrToIpamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTMoveByoipCidrToIpamResponse {
     
     
     public Integer statusCode;
+
     public POSTMoveByoipCidrToIpamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTMoveByoipCidrToIpamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTMoveByoipCidrToIpamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTMoveByoipCidrToIpamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

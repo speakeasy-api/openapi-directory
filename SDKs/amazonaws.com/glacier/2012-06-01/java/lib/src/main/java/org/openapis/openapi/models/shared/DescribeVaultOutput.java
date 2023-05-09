@@ -15,6 +15,7 @@ public class DescribeVaultOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public DescribeVaultOutput withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -23,6 +24,7 @@ public class DescribeVaultOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastInventoryDate")
     public String lastInventoryDate;
+
     public DescribeVaultOutput withLastInventoryDate(String lastInventoryDate) {
         this.lastInventoryDate = lastInventoryDate;
         return this;
@@ -31,6 +33,7 @@ public class DescribeVaultOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfArchives")
     public Long numberOfArchives;
+
     public DescribeVaultOutput withNumberOfArchives(Long numberOfArchives) {
         this.numberOfArchives = numberOfArchives;
         return this;
@@ -39,6 +42,7 @@ public class DescribeVaultOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeInBytes")
     public Long sizeInBytes;
+
     public DescribeVaultOutput withSizeInBytes(Long sizeInBytes) {
         this.sizeInBytes = sizeInBytes;
         return this;
@@ -47,6 +51,7 @@ public class DescribeVaultOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VaultARN")
     public String vaultARN;
+
     public DescribeVaultOutput withVaultARN(String vaultARN) {
         this.vaultARN = vaultARN;
         return this;
@@ -55,9 +60,11 @@ public class DescribeVaultOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VaultName")
     public String vaultName;
+
     public DescribeVaultOutput withVaultName(String vaultName) {
         this.vaultName = vaultName;
         return this;
     }
     
+    public DescribeVaultOutput(){}
 }

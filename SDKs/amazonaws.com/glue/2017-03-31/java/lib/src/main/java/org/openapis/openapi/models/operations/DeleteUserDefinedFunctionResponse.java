@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteUserDefinedFunctionResponse {
     
     public String contentType;
+
     public DeleteUserDefinedFunctionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteUserDefinedFunctionResponse {
      */
     
     public java.util.Map<String, Object> deleteUserDefinedFunctionResponse;
+
     public DeleteUserDefinedFunctionResponse withDeleteUserDefinedFunctionResponse(java.util.Map<String, Object> deleteUserDefinedFunctionResponse) {
         this.deleteUserDefinedFunctionResponse = deleteUserDefinedFunctionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteUserDefinedFunctionResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeleteUserDefinedFunctionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteUserDefinedFunctionResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteUserDefinedFunctionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteUserDefinedFunctionResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteUserDefinedFunctionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteUserDefinedFunctionResponse {
      */
     
     public Object operationTimeoutException;
+
     public DeleteUserDefinedFunctionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteUserDefinedFunctionResponse {
     
     
     public Integer statusCode;
+
     public DeleteUserDefinedFunctionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteUserDefinedFunctionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteUserDefinedFunctionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteUserDefinedFunctionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

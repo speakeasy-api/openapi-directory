@@ -15,6 +15,7 @@ public class SegmentQueryFilterConfigModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFilters")
     public SegmentQueryFilterModel[] customFilters;
+
     public SegmentQueryFilterConfigModel withCustomFilters(SegmentQueryFilterModel[] customFilters) {
         this.customFilters = customFilters;
         return this;
@@ -23,9 +24,11 @@ public class SegmentQueryFilterConfigModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hiddenFilters")
     public String[] hiddenFilters;
+
     public SegmentQueryFilterConfigModel withHiddenFilters(String[] hiddenFilters) {
         this.hiddenFilters = hiddenFilters;
         return this;
     }
     
+    public SegmentQueryFilterConfigModel(){}
 }

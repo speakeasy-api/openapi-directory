@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeBudgetPerformanceHistoryResponse {
@@ -12,6 +13,7 @@ public class DescribeBudgetPerformanceHistoryResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeBudgetPerformanceHistoryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeBudgetPerformanceHistoryResponse {
     
     
     public String contentType;
+
     public DescribeBudgetPerformanceHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeBudgetPerformanceHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeBudgetPerformanceHistoryResponse describeBudgetPerformanceHistoryResponse;
+
     public DescribeBudgetPerformanceHistoryResponse withDescribeBudgetPerformanceHistoryResponse(org.openapis.openapi.models.shared.DescribeBudgetPerformanceHistoryResponse describeBudgetPerformanceHistoryResponse) {
         this.describeBudgetPerformanceHistoryResponse = describeBudgetPerformanceHistoryResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeBudgetPerformanceHistoryResponse {
      */
     
     public Object expiredNextTokenException;
+
     public DescribeBudgetPerformanceHistoryResponse withExpiredNextTokenException(Object expiredNextTokenException) {
         this.expiredNextTokenException = expiredNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeBudgetPerformanceHistoryResponse {
      */
     
     public Object internalErrorException;
+
     public DescribeBudgetPerformanceHistoryResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeBudgetPerformanceHistoryResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeBudgetPerformanceHistoryResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeBudgetPerformanceHistoryResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeBudgetPerformanceHistoryResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class DescribeBudgetPerformanceHistoryResponse {
      */
     
     public Object notFoundException;
+
     public DescribeBudgetPerformanceHistoryResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class DescribeBudgetPerformanceHistoryResponse {
     
     
     public Integer statusCode;
+
     public DescribeBudgetPerformanceHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DescribeBudgetPerformanceHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeBudgetPerformanceHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DescribeBudgetPerformanceHistoryResponse {
      */
     
     public Object throttlingException;
+
     public DescribeBudgetPerformanceHistoryResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeBudgetPerformanceHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

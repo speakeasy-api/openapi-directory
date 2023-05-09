@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAccessPolicyResponse {
@@ -12,6 +13,7 @@ public class DeleteAccessPolicyResponse {
      */
     
     public Object conflictException;
+
     public DeleteAccessPolicyResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAccessPolicyResponse {
     
     
     public String contentType;
+
     public DeleteAccessPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAccessPolicyResponse {
      */
     
     public java.util.Map<String, Object> deleteAccessPolicyResponse;
+
     public DeleteAccessPolicyResponse withDeleteAccessPolicyResponse(java.util.Map<String, Object> deleteAccessPolicyResponse) {
         this.deleteAccessPolicyResponse = deleteAccessPolicyResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAccessPolicyResponse {
      */
     
     public Object internalServerException;
+
     public DeleteAccessPolicyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteAccessPolicyResponse {
     
     
     public Integer statusCode;
+
     public DeleteAccessPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteAccessPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAccessPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteAccessPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAccessPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteAccessPolicyResponse {
      */
     
     public Object validationException;
+
     public DeleteAccessPolicyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteAccessPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCampaignDateRangeKpiRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetCampaignDateRangeKpiRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -17,6 +19,7 @@ public class GetCampaignDateRangeKpiRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetCampaignDateRangeKpiRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -24,6 +27,7 @@ public class GetCampaignDateRangeKpiRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetCampaignDateRangeKpiRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -31,6 +35,7 @@ public class GetCampaignDateRangeKpiRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetCampaignDateRangeKpiRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -38,6 +43,7 @@ public class GetCampaignDateRangeKpiRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetCampaignDateRangeKpiRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -45,6 +51,7 @@ public class GetCampaignDateRangeKpiRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetCampaignDateRangeKpiRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -52,6 +59,7 @@ public class GetCampaignDateRangeKpiRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetCampaignDateRangeKpiRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -62,6 +70,7 @@ public class GetCampaignDateRangeKpiRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application-id")
     public String applicationId;
+
     public GetCampaignDateRangeKpiRequest withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -72,6 +81,7 @@ public class GetCampaignDateRangeKpiRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaign-id")
     public String campaignId;
+
     public GetCampaignDateRangeKpiRequest withCampaignId(String campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -82,6 +92,7 @@ public class GetCampaignDateRangeKpiRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end-time")
     public OffsetDateTime endTime;
+
     public GetCampaignDateRangeKpiRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -92,6 +103,7 @@ public class GetCampaignDateRangeKpiRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=kpi-name")
     public String kpiName;
+
     public GetCampaignDateRangeKpiRequest withKpiName(String kpiName) {
         this.kpiName = kpiName;
         return this;
@@ -102,6 +114,7 @@ public class GetCampaignDateRangeKpiRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next-token")
     public String nextToken;
+
     public GetCampaignDateRangeKpiRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -112,6 +125,7 @@ public class GetCampaignDateRangeKpiRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page-size")
     public String pageSize;
+
     public GetCampaignDateRangeKpiRequest withPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -122,9 +136,15 @@ public class GetCampaignDateRangeKpiRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start-time")
     public OffsetDateTime startTime;
+
     public GetCampaignDateRangeKpiRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GetCampaignDateRangeKpiRequest(@JsonProperty("application-id") String applicationId, @JsonProperty("campaign-id") String campaignId, @JsonProperty("kpi-name") String kpiName) {
+        this.applicationId = applicationId;
+        this.campaignId = campaignId;
+        this.kpiName = kpiName;
+  }
 }

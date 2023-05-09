@@ -67,4 +67,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/AccessApprovalSettingsInput
 lib/src/main/java/org/openapis/openapi/models/shared/AccessApprovalSettings.java
 lib/src/main/java/org/openapis/openapi/models/shared/EnrolledServiceEnrollmentLevelEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/EnrolledService.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

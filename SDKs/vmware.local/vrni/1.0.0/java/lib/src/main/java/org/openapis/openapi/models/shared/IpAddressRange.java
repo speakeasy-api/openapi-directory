@@ -12,6 +12,7 @@ public class IpAddressRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_ip")
     public String endIp;
+
     public IpAddressRange withEndIp(String endIp) {
         this.endIp = endIp;
         return this;
@@ -20,9 +21,11 @@ public class IpAddressRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_ip")
     public String startIp;
+
     public IpAddressRange withStartIp(String startIp) {
         this.startIp = startIp;
         return this;
     }
     
+    public IpAddressRange(){}
 }

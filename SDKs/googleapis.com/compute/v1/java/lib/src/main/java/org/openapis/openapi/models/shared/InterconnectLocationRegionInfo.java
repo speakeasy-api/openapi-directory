@@ -18,6 +18,7 @@ public class InterconnectLocationRegionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedRttMs")
     public String expectedRttMs;
+
     public InterconnectLocationRegionInfo withExpectedRttMs(String expectedRttMs) {
         this.expectedRttMs = expectedRttMs;
         return this;
@@ -29,6 +30,7 @@ public class InterconnectLocationRegionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationPresence")
     public InterconnectLocationRegionInfoLocationPresenceEnum locationPresence;
+
     public InterconnectLocationRegionInfo withLocationPresence(InterconnectLocationRegionInfoLocationPresenceEnum locationPresence) {
         this.locationPresence = locationPresence;
         return this;
@@ -40,9 +42,11 @@ public class InterconnectLocationRegionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public InterconnectLocationRegionInfo withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public InterconnectLocationRegionInfo(){}
 }

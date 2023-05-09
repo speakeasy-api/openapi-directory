@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSourceDefinitionForWorkspaceResponse {
     
     public String contentType;
+
     public GetSourceDefinitionForWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSourceDefinitionForWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public GetSourceDefinitionForWorkspaceResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -29,6 +32,7 @@ public class GetSourceDefinitionForWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo;
+
     public GetSourceDefinitionForWorkspaceResponse withNotFoundKnownExceptionInfo(org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo) {
         this.notFoundKnownExceptionInfo = notFoundKnownExceptionInfo;
         return this;
@@ -39,6 +43,7 @@ public class GetSourceDefinitionForWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.SourceDefinitionRead sourceDefinitionRead;
+
     public GetSourceDefinitionForWorkspaceResponse withSourceDefinitionRead(org.openapis.openapi.models.shared.SourceDefinitionRead sourceDefinitionRead) {
         this.sourceDefinitionRead = sourceDefinitionRead;
         return this;
@@ -46,6 +51,7 @@ public class GetSourceDefinitionForWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public GetSourceDefinitionForWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetSourceDefinitionForWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSourceDefinitionForWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSourceDefinitionForWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

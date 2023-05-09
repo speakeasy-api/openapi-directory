@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class MetricAlarm {
     
     public Boolean actionsEnabled;
+
     public MetricAlarm withActionsEnabled(Boolean actionsEnabled) {
         this.actionsEnabled = actionsEnabled;
         return this;
@@ -19,6 +20,7 @@ public class MetricAlarm {
     
     
     public String[] alarmActions;
+
     public MetricAlarm withAlarmActions(String[] alarmActions) {
         this.alarmActions = alarmActions;
         return this;
@@ -26,6 +28,7 @@ public class MetricAlarm {
     
     
     public String alarmArn;
+
     public MetricAlarm withAlarmArn(String alarmArn) {
         this.alarmArn = alarmArn;
         return this;
@@ -33,6 +36,7 @@ public class MetricAlarm {
     
     
     public OffsetDateTime alarmConfigurationUpdatedTimestamp;
+
     public MetricAlarm withAlarmConfigurationUpdatedTimestamp(OffsetDateTime alarmConfigurationUpdatedTimestamp) {
         this.alarmConfigurationUpdatedTimestamp = alarmConfigurationUpdatedTimestamp;
         return this;
@@ -40,6 +44,7 @@ public class MetricAlarm {
     
     
     public String alarmDescription;
+
     public MetricAlarm withAlarmDescription(String alarmDescription) {
         this.alarmDescription = alarmDescription;
         return this;
@@ -47,6 +52,7 @@ public class MetricAlarm {
     
     
     public String alarmName;
+
     public MetricAlarm withAlarmName(String alarmName) {
         this.alarmName = alarmName;
         return this;
@@ -54,6 +60,7 @@ public class MetricAlarm {
     
     
     public ComparisonOperatorEnum comparisonOperator;
+
     public MetricAlarm withComparisonOperator(ComparisonOperatorEnum comparisonOperator) {
         this.comparisonOperator = comparisonOperator;
         return this;
@@ -61,6 +68,7 @@ public class MetricAlarm {
     
     
     public Long datapointsToAlarm;
+
     public MetricAlarm withDatapointsToAlarm(Long datapointsToAlarm) {
         this.datapointsToAlarm = datapointsToAlarm;
         return this;
@@ -68,6 +76,7 @@ public class MetricAlarm {
     
     
     public Dimension[] dimensions;
+
     public MetricAlarm withDimensions(Dimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -75,6 +84,7 @@ public class MetricAlarm {
     
     
     public String evaluateLowSampleCountPercentile;
+
     public MetricAlarm withEvaluateLowSampleCountPercentile(String evaluateLowSampleCountPercentile) {
         this.evaluateLowSampleCountPercentile = evaluateLowSampleCountPercentile;
         return this;
@@ -82,6 +92,7 @@ public class MetricAlarm {
     
     
     public Long evaluationPeriods;
+
     public MetricAlarm withEvaluationPeriods(Long evaluationPeriods) {
         this.evaluationPeriods = evaluationPeriods;
         return this;
@@ -89,6 +100,7 @@ public class MetricAlarm {
     
     
     public EvaluationStateEnum evaluationState;
+
     public MetricAlarm withEvaluationState(EvaluationStateEnum evaluationState) {
         this.evaluationState = evaluationState;
         return this;
@@ -96,6 +108,7 @@ public class MetricAlarm {
     
     
     public String extendedStatistic;
+
     public MetricAlarm withExtendedStatistic(String extendedStatistic) {
         this.extendedStatistic = extendedStatistic;
         return this;
@@ -103,6 +116,7 @@ public class MetricAlarm {
     
     
     public String[] insufficientDataActions;
+
     public MetricAlarm withInsufficientDataActions(String[] insufficientDataActions) {
         this.insufficientDataActions = insufficientDataActions;
         return this;
@@ -110,6 +124,7 @@ public class MetricAlarm {
     
     
     public String metricName;
+
     public MetricAlarm withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -117,6 +132,7 @@ public class MetricAlarm {
     
     
     public MetricDataQuery[] metrics;
+
     public MetricAlarm withMetrics(MetricDataQuery[] metrics) {
         this.metrics = metrics;
         return this;
@@ -124,6 +140,7 @@ public class MetricAlarm {
     
     
     public String namespace;
+
     public MetricAlarm withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -131,6 +148,7 @@ public class MetricAlarm {
     
     
     public String[] okActions;
+
     public MetricAlarm withOKActions(String[] okActions) {
         this.okActions = okActions;
         return this;
@@ -138,6 +156,7 @@ public class MetricAlarm {
     
     
     public Long period;
+
     public MetricAlarm withPeriod(Long period) {
         this.period = period;
         return this;
@@ -145,6 +164,7 @@ public class MetricAlarm {
     
     
     public String stateReason;
+
     public MetricAlarm withStateReason(String stateReason) {
         this.stateReason = stateReason;
         return this;
@@ -152,6 +172,7 @@ public class MetricAlarm {
     
     
     public String stateReasonData;
+
     public MetricAlarm withStateReasonData(String stateReasonData) {
         this.stateReasonData = stateReasonData;
         return this;
@@ -159,6 +180,7 @@ public class MetricAlarm {
     
     
     public OffsetDateTime stateTransitionedTimestamp;
+
     public MetricAlarm withStateTransitionedTimestamp(OffsetDateTime stateTransitionedTimestamp) {
         this.stateTransitionedTimestamp = stateTransitionedTimestamp;
         return this;
@@ -166,6 +188,7 @@ public class MetricAlarm {
     
     
     public OffsetDateTime stateUpdatedTimestamp;
+
     public MetricAlarm withStateUpdatedTimestamp(OffsetDateTime stateUpdatedTimestamp) {
         this.stateUpdatedTimestamp = stateUpdatedTimestamp;
         return this;
@@ -173,6 +196,7 @@ public class MetricAlarm {
     
     
     public StateValueEnum stateValue;
+
     public MetricAlarm withStateValue(StateValueEnum stateValue) {
         this.stateValue = stateValue;
         return this;
@@ -180,6 +204,7 @@ public class MetricAlarm {
     
     
     public StatisticEnum statistic;
+
     public MetricAlarm withStatistic(StatisticEnum statistic) {
         this.statistic = statistic;
         return this;
@@ -187,6 +212,7 @@ public class MetricAlarm {
     
     
     public Double threshold;
+
     public MetricAlarm withThreshold(Double threshold) {
         this.threshold = threshold;
         return this;
@@ -194,6 +220,7 @@ public class MetricAlarm {
     
     
     public String thresholdMetricId;
+
     public MetricAlarm withThresholdMetricId(String thresholdMetricId) {
         this.thresholdMetricId = thresholdMetricId;
         return this;
@@ -201,6 +228,7 @@ public class MetricAlarm {
     
     
     public String treatMissingData;
+
     public MetricAlarm withTreatMissingData(String treatMissingData) {
         this.treatMissingData = treatMissingData;
         return this;
@@ -208,9 +236,11 @@ public class MetricAlarm {
     
     
     public StandardUnitEnum unit;
+
     public MetricAlarm withUnit(StandardUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public MetricAlarm(){}
 }

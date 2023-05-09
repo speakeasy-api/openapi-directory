@@ -17,6 +17,7 @@ public class ImageIdCreateBatch {
     @JsonProperty("Images")
     @SpeakeasyMetadata("form:name=Images,json")
     public ImageIdCreateEntry[] images;
+
     public ImageIdCreateBatch withImages(ImageIdCreateEntry[] images) {
         this.images = images;
         return this;
@@ -26,9 +27,11 @@ public class ImageIdCreateBatch {
     @JsonProperty("TagIds")
     @SpeakeasyMetadata("form:name=TagIds")
     public String[] tagIds;
+
     public ImageIdCreateBatch withTagIds(String[] tagIds) {
         this.tagIds = tagIds;
         return this;
     }
     
+    public ImageIdCreateBatch(){}
 }

@@ -18,9 +18,11 @@ public class TaskAddCollectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public TaskAddResult[] value;
+
     public TaskAddCollectionResult withValue(TaskAddResult[] value) {
         this.value = value;
         return this;
     }
     
+    public TaskAddCollectionResult(){}
 }

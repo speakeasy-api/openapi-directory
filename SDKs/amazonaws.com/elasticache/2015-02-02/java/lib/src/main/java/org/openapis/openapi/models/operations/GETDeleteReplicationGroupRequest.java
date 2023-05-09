@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteReplicationGroupRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteReplicationGroupActionEnum action;
+
     public GETDeleteReplicationGroupRequest withAction(GETDeleteReplicationGroupActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteReplicationGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FinalSnapshotIdentifier")
     public String finalSnapshotIdentifier;
+
     public GETDeleteReplicationGroupRequest withFinalSnapshotIdentifier(String finalSnapshotIdentifier) {
         this.finalSnapshotIdentifier = finalSnapshotIdentifier;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteReplicationGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReplicationGroupId")
     public String replicationGroupId;
+
     public GETDeleteReplicationGroupRequest withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
@@ -39,6 +43,7 @@ public class GETDeleteReplicationGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RetainPrimaryCluster")
     public Boolean retainPrimaryCluster;
+
     public GETDeleteReplicationGroupRequest withRetainPrimaryCluster(Boolean retainPrimaryCluster) {
         this.retainPrimaryCluster = retainPrimaryCluster;
         return this;
@@ -46,6 +51,7 @@ public class GETDeleteReplicationGroupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteReplicationGroupVersionEnum version;
+
     public GETDeleteReplicationGroupRequest withVersion(GETDeleteReplicationGroupVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETDeleteReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteReplicationGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETDeleteReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteReplicationGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETDeleteReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteReplicationGroupRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETDeleteReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteReplicationGroupRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETDeleteReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteReplicationGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETDeleteReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteReplicationGroupRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETDeleteReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteReplicationGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteReplicationGroupRequest(@JsonProperty("Action") GETDeleteReplicationGroupActionEnum action, @JsonProperty("ReplicationGroupId") String replicationGroupId, @JsonProperty("Version") GETDeleteReplicationGroupVersionEnum version) {
+        this.action = action;
+        this.replicationGroupId = replicationGroupId;
+        this.version = version;
+  }
 }

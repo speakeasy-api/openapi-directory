@@ -15,6 +15,7 @@ public class MLUserDataEncryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public MLUserDataEncryption withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -22,9 +23,13 @@ public class MLUserDataEncryption {
     
     @JsonProperty("MlUserDataEncryptionMode")
     public MLUserDataEncryptionModeStringEnum mlUserDataEncryptionMode;
+
     public MLUserDataEncryption withMlUserDataEncryptionMode(MLUserDataEncryptionModeStringEnum mlUserDataEncryptionMode) {
         this.mlUserDataEncryptionMode = mlUserDataEncryptionMode;
         return this;
     }
     
+    public MLUserDataEncryption(@JsonProperty("MlUserDataEncryptionMode") MLUserDataEncryptionModeStringEnum mlUserDataEncryptionMode) {
+        this.mlUserDataEncryptionMode = mlUserDataEncryptionMode;
+  }
 }

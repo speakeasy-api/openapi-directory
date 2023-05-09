@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsGetDatapointsRequest {
@@ -12,6 +13,7 @@ public class GroupsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
     public String createdAfter;
+
     public GroupsGetDatapointsRequest withCreatedAfter(String createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -22,6 +24,7 @@ public class GroupsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
     public String createdBefore;
+
     public GroupsGetDatapointsRequest withCreatedBefore(String createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -32,6 +35,7 @@ public class GroupsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GroupsGetDatapointsRequest withId(Long id) {
         this.id = id;
         return this;
@@ -42,6 +46,7 @@ public class GroupsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GroupsGetDatapointsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -52,6 +57,7 @@ public class GroupsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GroupsGetDatapointsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -62,6 +68,7 @@ public class GroupsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlyFavorites")
     public Boolean onlyFavorites;
+
     public GroupsGetDatapointsRequest withOnlyFavorites(Boolean onlyFavorites) {
         this.onlyFavorites = onlyFavorites;
         return this;
@@ -72,6 +79,7 @@ public class GroupsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
     public String sortBy;
+
     public GroupsGetDatapointsRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -82,6 +90,7 @@ public class GroupsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortDirection")
     public GroupsGetDatapointsSortDirectionEnum sortDirection;
+
     public GroupsGetDatapointsRequest withSortDirection(GroupsGetDatapointsSortDirectionEnum sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -92,6 +101,7 @@ public class GroupsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public GroupsGetDatapointsStatusEnum status;
+
     public GroupsGetDatapointsRequest withStatus(GroupsGetDatapointsStatusEnum status) {
         this.status = status;
         return this;
@@ -102,6 +112,7 @@ public class GroupsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String tags;
+
     public GroupsGetDatapointsRequest withTags(String tags) {
         this.tags = tags;
         return this;
@@ -112,6 +123,7 @@ public class GroupsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
     public String textSearch;
+
     public GroupsGetDatapointsRequest withTextSearch(String textSearch) {
         this.textSearch = textSearch;
         return this;
@@ -122,9 +134,13 @@ public class GroupsGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public GroupsGetDatapointsTypeEnum type;
+
     public GroupsGetDatapointsRequest withType(GroupsGetDatapointsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GroupsGetDatapointsRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InjuriesHistoricalRequest {
@@ -12,9 +13,13 @@ public class InjuriesHistoricalRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public InjuriesHistoricalFormatEnum format;
+
     public InjuriesHistoricalRequest withFormat(InjuriesHistoricalFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public InjuriesHistoricalRequest(@JsonProperty("format") InjuriesHistoricalFormatEnum format) {
+        this.format = format;
+  }
 }

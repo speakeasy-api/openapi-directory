@@ -13,6 +13,7 @@ public class CategoryResourceRelationshipsParentData {
      */
     @JsonProperty("id")
     public String id;
+
     public CategoryResourceRelationshipsParentData withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,14 @@ public class CategoryResourceRelationshipsParentData {
      */
     @JsonProperty("type")
     public String type;
+
     public CategoryResourceRelationshipsParentData withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CategoryResourceRelationshipsParentData(@JsonProperty("id") String id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

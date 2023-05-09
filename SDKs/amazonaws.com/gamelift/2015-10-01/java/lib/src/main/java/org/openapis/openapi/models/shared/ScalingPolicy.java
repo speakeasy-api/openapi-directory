@@ -15,6 +15,7 @@ public class ScalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComparisonOperator")
     public ComparisonOperatorTypeEnum comparisonOperator;
+
     public ScalingPolicy withComparisonOperator(ComparisonOperatorTypeEnum comparisonOperator) {
         this.comparisonOperator = comparisonOperator;
         return this;
@@ -23,6 +24,7 @@ public class ScalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationPeriods")
     public Long evaluationPeriods;
+
     public ScalingPolicy withEvaluationPeriods(Long evaluationPeriods) {
         this.evaluationPeriods = evaluationPeriods;
         return this;
@@ -31,6 +33,7 @@ public class ScalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public ScalingPolicy withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -39,6 +42,7 @@ public class ScalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetId")
     public String fleetId;
+
     public ScalingPolicy withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -47,6 +51,7 @@ public class ScalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public ScalingPolicy withLocation(String location) {
         this.location = location;
         return this;
@@ -55,6 +60,7 @@ public class ScalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public MetricNameEnum metricName;
+
     public ScalingPolicy withMetricName(MetricNameEnum metricName) {
         this.metricName = metricName;
         return this;
@@ -63,6 +69,7 @@ public class ScalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ScalingPolicy withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class ScalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyType")
     public PolicyTypeEnum policyType;
+
     public ScalingPolicy withPolicyType(PolicyTypeEnum policyType) {
         this.policyType = policyType;
         return this;
@@ -79,6 +87,7 @@ public class ScalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalingAdjustment")
     public Long scalingAdjustment;
+
     public ScalingPolicy withScalingAdjustment(Long scalingAdjustment) {
         this.scalingAdjustment = scalingAdjustment;
         return this;
@@ -87,6 +96,7 @@ public class ScalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalingAdjustmentType")
     public ScalingAdjustmentTypeEnum scalingAdjustmentType;
+
     public ScalingPolicy withScalingAdjustmentType(ScalingAdjustmentTypeEnum scalingAdjustmentType) {
         this.scalingAdjustmentType = scalingAdjustmentType;
         return this;
@@ -95,6 +105,7 @@ public class ScalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ScalingStatusTypeEnum status;
+
     public ScalingPolicy withStatus(ScalingStatusTypeEnum status) {
         this.status = status;
         return this;
@@ -103,6 +114,7 @@ public class ScalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetConfiguration")
     public TargetConfiguration targetConfiguration;
+
     public ScalingPolicy withTargetConfiguration(TargetConfiguration targetConfiguration) {
         this.targetConfiguration = targetConfiguration;
         return this;
@@ -111,6 +123,7 @@ public class ScalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Threshold")
     public Double threshold;
+
     public ScalingPolicy withThreshold(Double threshold) {
         this.threshold = threshold;
         return this;
@@ -119,9 +132,11 @@ public class ScalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateStatus")
     public LocationUpdateStatusEnum updateStatus;
+
     public ScalingPolicy withUpdateStatus(LocationUpdateStatusEnum updateStatus) {
         this.updateStatus = updateStatus;
         return this;
     }
     
+    public ScalingPolicy(){}
 }

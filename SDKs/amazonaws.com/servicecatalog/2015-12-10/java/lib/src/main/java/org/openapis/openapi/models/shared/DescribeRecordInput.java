@@ -12,6 +12,7 @@ public class DescribeRecordInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public DescribeRecordInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,6 +20,7 @@ public class DescribeRecordInput {
     
     @JsonProperty("Id")
     public String id;
+
     public DescribeRecordInput withId(String id) {
         this.id = id;
         return this;
@@ -27,6 +29,7 @@ public class DescribeRecordInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public DescribeRecordInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -35,9 +38,13 @@ public class DescribeRecordInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageToken")
     public String pageToken;
+
     public DescribeRecordInput withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public DescribeRecordInput(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

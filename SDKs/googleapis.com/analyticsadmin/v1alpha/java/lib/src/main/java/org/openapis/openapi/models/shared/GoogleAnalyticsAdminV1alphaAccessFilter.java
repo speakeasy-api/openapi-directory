@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAccessFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("betweenFilter")
     public GoogleAnalyticsAdminV1alphaAccessBetweenFilter betweenFilter;
+
     public GoogleAnalyticsAdminV1alphaAccessFilter withBetweenFilter(GoogleAnalyticsAdminV1alphaAccessBetweenFilter betweenFilter) {
         this.betweenFilter = betweenFilter;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaAccessFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldName")
     public String fieldName;
+
     public GoogleAnalyticsAdminV1alphaAccessFilter withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaAccessFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inListFilter")
     public GoogleAnalyticsAdminV1alphaAccessInListFilter inListFilter;
+
     public GoogleAnalyticsAdminV1alphaAccessFilter withInListFilter(GoogleAnalyticsAdminV1alphaAccessInListFilter inListFilter) {
         this.inListFilter = inListFilter;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1alphaAccessFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numericFilter")
     public GoogleAnalyticsAdminV1alphaAccessNumericFilter numericFilter;
+
     public GoogleAnalyticsAdminV1alphaAccessFilter withNumericFilter(GoogleAnalyticsAdminV1alphaAccessNumericFilter numericFilter) {
         this.numericFilter = numericFilter;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAnalyticsAdminV1alphaAccessFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringFilter")
     public GoogleAnalyticsAdminV1alphaAccessStringFilter stringFilter;
+
     public GoogleAnalyticsAdminV1alphaAccessFilter withStringFilter(GoogleAnalyticsAdminV1alphaAccessStringFilter stringFilter) {
         this.stringFilter = stringFilter;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAccessFilter(){}
 }

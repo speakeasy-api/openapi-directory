@@ -18,6 +18,7 @@ public class GoogleCloudDatapipelinesV1Pipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDatapipelinesV1Pipeline withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatapipelinesV1Pipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDatapipelinesV1Pipeline withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatapipelinesV1Pipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobCount")
     public Integer jobCount;
+
     public GoogleCloudDatapipelinesV1Pipeline withJobCount(Integer jobCount) {
         this.jobCount = jobCount;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatapipelinesV1Pipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdateTime")
     public String lastUpdateTime;
+
     public GoogleCloudDatapipelinesV1Pipeline withLastUpdateTime(String lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDatapipelinesV1Pipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDatapipelinesV1Pipeline withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDatapipelinesV1Pipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineSources")
     public java.util.Map<String, String> pipelineSources;
+
     public GoogleCloudDatapipelinesV1Pipeline withPipelineSources(java.util.Map<String, String> pipelineSources) {
         this.pipelineSources = pipelineSources;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDatapipelinesV1Pipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleInfo")
     public GoogleCloudDatapipelinesV1ScheduleSpec scheduleInfo;
+
     public GoogleCloudDatapipelinesV1Pipeline withScheduleInfo(GoogleCloudDatapipelinesV1ScheduleSpec scheduleInfo) {
         this.scheduleInfo = scheduleInfo;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDatapipelinesV1Pipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulerServiceAccountEmail")
     public String schedulerServiceAccountEmail;
+
     public GoogleCloudDatapipelinesV1Pipeline withSchedulerServiceAccountEmail(String schedulerServiceAccountEmail) {
         this.schedulerServiceAccountEmail = schedulerServiceAccountEmail;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDatapipelinesV1Pipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDatapipelinesV1PipelineStateEnum state;
+
     public GoogleCloudDatapipelinesV1Pipeline withState(GoogleCloudDatapipelinesV1PipelineStateEnum state) {
         this.state = state;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDatapipelinesV1Pipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDatapipelinesV1PipelineTypeEnum type;
+
     public GoogleCloudDatapipelinesV1Pipeline withType(GoogleCloudDatapipelinesV1PipelineTypeEnum type) {
         this.type = type;
         return this;
@@ -128,9 +138,11 @@ public class GoogleCloudDatapipelinesV1Pipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workload")
     public GoogleCloudDatapipelinesV1Workload workload;
+
     public GoogleCloudDatapipelinesV1Pipeline withWorkload(GoogleCloudDatapipelinesV1Workload workload) {
         this.workload = workload;
         return this;
     }
     
+    public GoogleCloudDatapipelinesV1Pipeline(){}
 }

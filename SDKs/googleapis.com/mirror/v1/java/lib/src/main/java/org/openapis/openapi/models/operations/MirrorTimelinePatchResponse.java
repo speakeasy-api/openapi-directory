@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MirrorTimelinePatchResponse {
     
     public byte[] body;
+
     public MirrorTimelinePatchResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class MirrorTimelinePatchResponse {
     
     
     public String contentType;
+
     public MirrorTimelinePatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class MirrorTimelinePatchResponse {
     
     
     public Integer statusCode;
+
     public MirrorTimelinePatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class MirrorTimelinePatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MirrorTimelinePatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MirrorTimelinePatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

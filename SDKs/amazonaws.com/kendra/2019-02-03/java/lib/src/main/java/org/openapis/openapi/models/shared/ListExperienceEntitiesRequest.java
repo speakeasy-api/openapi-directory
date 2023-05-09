@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListExperienceEntitiesRequest {
     @JsonProperty("Id")
     public String id;
+
     public ListExperienceEntitiesRequest withId(String id) {
         this.id = id;
         return this;
@@ -18,6 +19,7 @@ public class ListExperienceEntitiesRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public ListExperienceEntitiesRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -26,9 +28,14 @@ public class ListExperienceEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListExperienceEntitiesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListExperienceEntitiesRequest(@JsonProperty("Id") String id, @JsonProperty("IndexId") String indexId) {
+        this.id = id;
+        this.indexId = indexId;
+  }
 }

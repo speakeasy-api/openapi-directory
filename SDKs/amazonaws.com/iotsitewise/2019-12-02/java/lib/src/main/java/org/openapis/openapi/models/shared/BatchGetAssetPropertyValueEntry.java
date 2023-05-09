@@ -15,6 +15,7 @@ public class BatchGetAssetPropertyValueEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetId")
     public String assetId;
+
     public BatchGetAssetPropertyValueEntry withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
@@ -22,6 +23,7 @@ public class BatchGetAssetPropertyValueEntry {
     
     @JsonProperty("entryId")
     public String entryId;
+
     public BatchGetAssetPropertyValueEntry withEntryId(String entryId) {
         this.entryId = entryId;
         return this;
@@ -30,6 +32,7 @@ public class BatchGetAssetPropertyValueEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyAlias")
     public String propertyAlias;
+
     public BatchGetAssetPropertyValueEntry withPropertyAlias(String propertyAlias) {
         this.propertyAlias = propertyAlias;
         return this;
@@ -38,9 +41,13 @@ public class BatchGetAssetPropertyValueEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyId")
     public String propertyId;
+
     public BatchGetAssetPropertyValueEntry withPropertyId(String propertyId) {
         this.propertyId = propertyId;
         return this;
     }
     
+    public BatchGetAssetPropertyValueEntry(@JsonProperty("entryId") String entryId) {
+        this.entryId = entryId;
+  }
 }

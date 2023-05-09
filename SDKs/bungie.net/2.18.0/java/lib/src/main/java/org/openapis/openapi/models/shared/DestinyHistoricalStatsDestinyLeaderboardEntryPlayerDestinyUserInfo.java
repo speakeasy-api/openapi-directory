@@ -16,6 +16,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo 
      */
     
     public Integer[] applicableMembershipTypes;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo withApplicableMembershipTypes(Integer[] applicableMembershipTypes) {
         this.applicableMembershipTypes = applicableMembershipTypes;
         return this;
@@ -26,6 +27,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo 
      */
     
     public String bungieGlobalDisplayName;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo withBungieGlobalDisplayName(String bungieGlobalDisplayName) {
         this.bungieGlobalDisplayName = bungieGlobalDisplayName;
         return this;
@@ -36,6 +38,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo 
      */
     
     public Long bungieGlobalDisplayNameCode;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo withBungieGlobalDisplayNameCode(Long bungieGlobalDisplayNameCode) {
         this.bungieGlobalDisplayNameCode = bungieGlobalDisplayNameCode;
         return this;
@@ -46,6 +49,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo 
      */
     
     public Integer crossSaveOverride;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo withCrossSaveOverride(Integer crossSaveOverride) {
         this.crossSaveOverride = crossSaveOverride;
         return this;
@@ -56,6 +60,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo 
      */
     
     public String displayName;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -66,6 +71,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo 
      */
     
     public String iconPath;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo withIconPath(String iconPath) {
         this.iconPath = iconPath;
         return this;
@@ -76,6 +82,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo 
      */
     
     public Boolean isPublic;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -86,6 +93,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo 
      */
     
     public Long membershipId;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -96,6 +104,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo 
      */
     
     public Integer membershipType;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
@@ -106,9 +115,11 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo 
      */
     
     public String supplementalDisplayName;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo withSupplementalDisplayName(String supplementalDisplayName) {
         this.supplementalDisplayName = supplementalDisplayName;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo(){}
 }

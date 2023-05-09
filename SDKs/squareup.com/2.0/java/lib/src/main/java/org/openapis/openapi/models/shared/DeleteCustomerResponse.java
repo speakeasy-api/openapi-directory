@@ -19,9 +19,11 @@ public class DeleteCustomerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public DeleteCustomerResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public DeleteCustomerResponse(){}
 }

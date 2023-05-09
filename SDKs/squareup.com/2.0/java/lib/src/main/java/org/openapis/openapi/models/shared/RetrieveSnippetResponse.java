@@ -18,6 +18,7 @@ public class RetrieveSnippetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RetrieveSnippetResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -29,9 +30,11 @@ public class RetrieveSnippetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public Snippet snippet;
+
     public RetrieveSnippetResponse withSnippet(Snippet snippet) {
         this.snippet = snippet;
         return this;
     }
     
+    public RetrieveSnippetResponse(){}
 }

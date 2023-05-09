@@ -20,6 +20,7 @@ public class BuildBatchPhase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contexts")
     public PhaseContext[] contexts;
+
     public BuildBatchPhase withContexts(PhaseContext[] contexts) {
         this.contexts = contexts;
         return this;
@@ -28,6 +29,7 @@ public class BuildBatchPhase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationInSeconds")
     public Long durationInSeconds;
+
     public BuildBatchPhase withDurationInSeconds(Long durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
         return this;
@@ -38,6 +40,7 @@ public class BuildBatchPhase {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public BuildBatchPhase withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -46,6 +49,7 @@ public class BuildBatchPhase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phaseStatus")
     public StatusTypeEnum phaseStatus;
+
     public BuildBatchPhase withPhaseStatus(StatusTypeEnum phaseStatus) {
         this.phaseStatus = phaseStatus;
         return this;
@@ -54,6 +58,7 @@ public class BuildBatchPhase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phaseType")
     public BuildBatchPhaseTypeEnum phaseType;
+
     public BuildBatchPhase withPhaseType(BuildBatchPhaseTypeEnum phaseType) {
         this.phaseType = phaseType;
         return this;
@@ -64,9 +69,11 @@ public class BuildBatchPhase {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public BuildBatchPhase withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public BuildBatchPhase(){}
 }

@@ -12,6 +12,7 @@ public class UpdateClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CsvClassifier")
     public UpdateCsvClassifierRequest csvClassifier;
+
     public UpdateClassifierRequest withCsvClassifier(UpdateCsvClassifierRequest csvClassifier) {
         this.csvClassifier = csvClassifier;
         return this;
@@ -20,6 +21,7 @@ public class UpdateClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrokClassifier")
     public UpdateGrokClassifierRequest grokClassifier;
+
     public UpdateClassifierRequest withGrokClassifier(UpdateGrokClassifierRequest grokClassifier) {
         this.grokClassifier = grokClassifier;
         return this;
@@ -28,6 +30,7 @@ public class UpdateClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JsonClassifier")
     public UpdateJsonClassifierRequest jsonClassifier;
+
     public UpdateClassifierRequest withJsonClassifier(UpdateJsonClassifierRequest jsonClassifier) {
         this.jsonClassifier = jsonClassifier;
         return this;
@@ -36,9 +39,11 @@ public class UpdateClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XMLClassifier")
     public UpdateXMLClassifierRequest xmlClassifier;
+
     public UpdateClassifierRequest withXMLClassifier(UpdateXMLClassifierRequest xmlClassifier) {
         this.xmlClassifier = xmlClassifier;
         return this;
     }
     
+    public UpdateClassifierRequest(){}
 }

@@ -13,8 +13,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class SectionalElement {
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("excluded")
+    public Boolean excluded;
+
+    public SectionalElement withExcluded(Boolean excluded) {
+        this.excluded = excluded;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public Long level;
+
     public SectionalElement withLevel(Long level) {
         this.level = level;
         return this;
@@ -23,6 +33,7 @@ public class SectionalElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orientation")
     public String orientation;
+
     public SectionalElement withOrientation(String orientation) {
         this.orientation = orientation;
         return this;
@@ -31,6 +42,7 @@ public class SectionalElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public FieldPosition position;
+
     public SectionalElement withPosition(FieldPosition position) {
         this.position = position;
         return this;
@@ -39,6 +51,7 @@ public class SectionalElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public SectionalElement withText(String text) {
         this.text = text;
         return this;
@@ -46,9 +59,13 @@ public class SectionalElement {
     
     @JsonProperty("type")
     public String type;
+
     public SectionalElement withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SectionalElement(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

@@ -257,4 +257,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ScheduleStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Schedule.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScheduleInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListSchedulesResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

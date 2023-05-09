@@ -18,6 +18,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data_set")
     public StatusDataSetEnum dataSet;
+
     public Status withDataSet(StatusDataSetEnum dataSet) {
         this.dataSet = dataSet;
         return this;
@@ -29,6 +30,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("database_id")
     public String databaseId;
+
     public Status withDatabaseId(String databaseId) {
         this.databaseId = databaseId;
         return this;
@@ -40,6 +42,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("database_name")
     public String databaseName;
+
     public Status withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -51,6 +54,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalid_inputs")
     public String[] invalidInputs;
+
     public Status withInvalidInputs(String[] invalidInputs) {
         this.invalidInputs = invalidInputs;
         return this;
@@ -62,9 +66,11 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StatusStatusEnum status;
+
     public Status withStatus(StatusStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Status(){}
 }

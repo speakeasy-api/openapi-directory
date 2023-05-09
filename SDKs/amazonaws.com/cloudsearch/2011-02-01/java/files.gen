@@ -270,4 +270,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateStemmingOptionsReques
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateStopwordOptionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateSynonymOptionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

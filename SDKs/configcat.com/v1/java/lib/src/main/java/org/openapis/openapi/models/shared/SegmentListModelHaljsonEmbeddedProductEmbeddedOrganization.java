@@ -12,6 +12,7 @@ public class SegmentListModelHaljsonEmbeddedProductEmbeddedOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public SegmentListModelHaljsonEmbeddedProductEmbeddedOrganizationLinks links;
+
     public SegmentListModelHaljsonEmbeddedProductEmbeddedOrganization withLinks(SegmentListModelHaljsonEmbeddedProductEmbeddedOrganizationLinks links) {
         this.links = links;
         return this;
@@ -20,6 +21,7 @@ public class SegmentListModelHaljsonEmbeddedProductEmbeddedOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SegmentListModelHaljsonEmbeddedProductEmbeddedOrganization withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class SegmentListModelHaljsonEmbeddedProductEmbeddedOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationId")
     public String organizationId;
+
     public SegmentListModelHaljsonEmbeddedProductEmbeddedOrganization withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public SegmentListModelHaljsonEmbeddedProductEmbeddedOrganization(){}
 }

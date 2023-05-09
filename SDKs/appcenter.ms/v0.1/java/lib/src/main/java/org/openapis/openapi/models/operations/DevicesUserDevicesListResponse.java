@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DevicesUserDevicesListResponse {
     
     public String contentType;
+
     public DevicesUserDevicesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DevicesUserDevicesListResponse {
     
     
     public Integer statusCode;
+
     public DevicesUserDevicesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DevicesUserDevicesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DevicesUserDevicesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DevicesUserDevicesListResponse {
      */
     
     public DevicesUserDevicesList200ApplicationJSON[] devicesUserDevicesList200ApplicationJSONObjects;
+
     public DevicesUserDevicesListResponse withDevicesUserDevicesList200ApplicationJSONObjects(DevicesUserDevicesList200ApplicationJSON[] devicesUserDevicesList200ApplicationJSONObjects) {
         this.devicesUserDevicesList200ApplicationJSONObjects = devicesUserDevicesList200ApplicationJSONObjects;
         return this;
@@ -44,6 +49,7 @@ public class DevicesUserDevicesListResponse {
      */
     
     public DevicesUserDevicesList400ApplicationJSON devicesUserDevicesList400ApplicationJSONObject;
+
     public DevicesUserDevicesListResponse withDevicesUserDevicesList400ApplicationJSONObject(DevicesUserDevicesList400ApplicationJSON devicesUserDevicesList400ApplicationJSONObject) {
         this.devicesUserDevicesList400ApplicationJSONObject = devicesUserDevicesList400ApplicationJSONObject;
         return this;
@@ -55,9 +61,14 @@ public class DevicesUserDevicesListResponse {
      */
     
     public DevicesUserDevicesList403ApplicationJSON devicesUserDevicesList403ApplicationJSONObject;
+
     public DevicesUserDevicesListResponse withDevicesUserDevicesList403ApplicationJSONObject(DevicesUserDevicesList403ApplicationJSON devicesUserDevicesList403ApplicationJSONObject) {
         this.devicesUserDevicesList403ApplicationJSONObject = devicesUserDevicesList403ApplicationJSONObject;
         return this;
     }
     
+    public DevicesUserDevicesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

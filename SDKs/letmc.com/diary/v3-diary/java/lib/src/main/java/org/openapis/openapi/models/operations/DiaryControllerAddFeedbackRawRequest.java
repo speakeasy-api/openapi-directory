@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerAddFeedbackRawRequest {
@@ -12,6 +13,7 @@ public class DiaryControllerAddFeedbackRawRequest {
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public DiaryControllerAddFeedbackRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class DiaryControllerAddFeedbackRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public DiaryControllerAddFeedbackRawRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
     }
     
+    public DiaryControllerAddFeedbackRawRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("shortName") String shortName) {
+        this.requestBody = requestBody;
+        this.shortName = shortName;
+  }
 }

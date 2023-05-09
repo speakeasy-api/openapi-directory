@@ -15,6 +15,7 @@ public class CreateImageRecipeRequestBodyAdditionalInstanceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemsManagerAgent")
     public org.openapis.openapi.models.shared.SystemsManagerAgent systemsManagerAgent;
+
     public CreateImageRecipeRequestBodyAdditionalInstanceConfiguration withSystemsManagerAgent(org.openapis.openapi.models.shared.SystemsManagerAgent systemsManagerAgent) {
         this.systemsManagerAgent = systemsManagerAgent;
         return this;
@@ -23,9 +24,11 @@ public class CreateImageRecipeRequestBodyAdditionalInstanceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userDataOverride")
     public String userDataOverride;
+
     public CreateImageRecipeRequestBodyAdditionalInstanceConfiguration withUserDataOverride(String userDataOverride) {
         this.userDataOverride = userDataOverride;
         return this;
     }
     
+    public CreateImageRecipeRequestBodyAdditionalInstanceConfiguration(){}
 }

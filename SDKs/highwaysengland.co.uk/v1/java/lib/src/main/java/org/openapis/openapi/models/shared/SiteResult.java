@@ -12,6 +12,7 @@ public class SiteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public SiteResult withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class SiteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public SiteResult withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class SiteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Latitude")
     public Double latitude;
+
     public SiteResult withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -36,6 +39,7 @@ public class SiteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Longitude")
     public Double longitude;
+
     public SiteResult withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -44,6 +48,7 @@ public class SiteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public SiteResult withName(String name) {
         this.name = name;
         return this;
@@ -52,9 +57,11 @@ public class SiteResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public SiteResult withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public SiteResult(){}
 }

@@ -15,6 +15,7 @@ public class WindowsFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveDirectoryId")
     public String activeDirectoryId;
+
     public WindowsFileSystemConfiguration withActiveDirectoryId(String activeDirectoryId) {
         this.activeDirectoryId = activeDirectoryId;
         return this;
@@ -26,6 +27,7 @@ public class WindowsFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Aliases")
     public Alias[] aliases;
+
     public WindowsFileSystemConfiguration withAliases(Alias[] aliases) {
         this.aliases = aliases;
         return this;
@@ -34,6 +36,7 @@ public class WindowsFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuditLogConfiguration")
     public WindowsAuditLogConfiguration auditLogConfiguration;
+
     public WindowsFileSystemConfiguration withAuditLogConfiguration(WindowsAuditLogConfiguration auditLogConfiguration) {
         this.auditLogConfiguration = auditLogConfiguration;
         return this;
@@ -42,6 +45,7 @@ public class WindowsFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomaticBackupRetentionDays")
     public Long automaticBackupRetentionDays;
+
     public WindowsFileSystemConfiguration withAutomaticBackupRetentionDays(Long automaticBackupRetentionDays) {
         this.automaticBackupRetentionDays = automaticBackupRetentionDays;
         return this;
@@ -50,6 +54,7 @@ public class WindowsFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyTagsToBackups")
     public Boolean copyTagsToBackups;
+
     public WindowsFileSystemConfiguration withCopyTagsToBackups(Boolean copyTagsToBackups) {
         this.copyTagsToBackups = copyTagsToBackups;
         return this;
@@ -58,6 +63,7 @@ public class WindowsFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DailyAutomaticBackupStartTime")
     public String dailyAutomaticBackupStartTime;
+
     public WindowsFileSystemConfiguration withDailyAutomaticBackupStartTime(String dailyAutomaticBackupStartTime) {
         this.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
         return this;
@@ -66,6 +72,7 @@ public class WindowsFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentType")
     public WindowsDeploymentTypeEnum deploymentType;
+
     public WindowsFileSystemConfiguration withDeploymentType(WindowsDeploymentTypeEnum deploymentType) {
         this.deploymentType = deploymentType;
         return this;
@@ -74,6 +81,7 @@ public class WindowsFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaintenanceOperationsInProgress")
     public FileSystemMaintenanceOperationEnum[] maintenanceOperationsInProgress;
+
     public WindowsFileSystemConfiguration withMaintenanceOperationsInProgress(FileSystemMaintenanceOperationEnum[] maintenanceOperationsInProgress) {
         this.maintenanceOperationsInProgress = maintenanceOperationsInProgress;
         return this;
@@ -82,6 +90,7 @@ public class WindowsFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreferredFileServerIp")
     public String preferredFileServerIp;
+
     public WindowsFileSystemConfiguration withPreferredFileServerIp(String preferredFileServerIp) {
         this.preferredFileServerIp = preferredFileServerIp;
         return this;
@@ -90,6 +99,7 @@ public class WindowsFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreferredSubnetId")
     public String preferredSubnetId;
+
     public WindowsFileSystemConfiguration withPreferredSubnetId(String preferredSubnetId) {
         this.preferredSubnetId = preferredSubnetId;
         return this;
@@ -98,6 +108,7 @@ public class WindowsFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoteAdministrationEndpoint")
     public String remoteAdministrationEndpoint;
+
     public WindowsFileSystemConfiguration withRemoteAdministrationEndpoint(String remoteAdministrationEndpoint) {
         this.remoteAdministrationEndpoint = remoteAdministrationEndpoint;
         return this;
@@ -109,6 +120,7 @@ public class WindowsFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelfManagedActiveDirectoryConfiguration")
     public SelfManagedActiveDirectoryAttributes selfManagedActiveDirectoryConfiguration;
+
     public WindowsFileSystemConfiguration withSelfManagedActiveDirectoryConfiguration(SelfManagedActiveDirectoryAttributes selfManagedActiveDirectoryConfiguration) {
         this.selfManagedActiveDirectoryConfiguration = selfManagedActiveDirectoryConfiguration;
         return this;
@@ -117,6 +129,7 @@ public class WindowsFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThroughputCapacity")
     public Long throughputCapacity;
+
     public WindowsFileSystemConfiguration withThroughputCapacity(Long throughputCapacity) {
         this.throughputCapacity = throughputCapacity;
         return this;
@@ -125,9 +138,11 @@ public class WindowsFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeeklyMaintenanceStartTime")
     public String weeklyMaintenanceStartTime;
+
     public WindowsFileSystemConfiguration withWeeklyMaintenanceStartTime(String weeklyMaintenanceStartTime) {
         this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
         return this;
     }
     
+    public WindowsFileSystemConfiguration(){}
 }

@@ -18,6 +18,7 @@ public class BasicScaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idleTimeout")
     public String idleTimeout;
+
     public BasicScaling withIdleTimeout(String idleTimeout) {
         this.idleTimeout = idleTimeout;
         return this;
@@ -29,9 +30,11 @@ public class BasicScaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxInstances")
     public Integer maxInstances;
+
     public BasicScaling withMaxInstances(Integer maxInstances) {
         this.maxInstances = maxInstances;
         return this;
     }
     
+    public BasicScaling(){}
 }

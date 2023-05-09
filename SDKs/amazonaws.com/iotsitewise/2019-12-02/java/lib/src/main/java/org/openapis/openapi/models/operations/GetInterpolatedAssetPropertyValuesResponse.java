@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInterpolatedAssetPropertyValuesResponse {
     
     public String contentType;
+
     public GetInterpolatedAssetPropertyValuesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetInterpolatedAssetPropertyValuesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetInterpolatedAssetPropertyValuesResponse getInterpolatedAssetPropertyValuesResponse;
+
     public GetInterpolatedAssetPropertyValuesResponse withGetInterpolatedAssetPropertyValuesResponse(org.openapis.openapi.models.shared.GetInterpolatedAssetPropertyValuesResponse getInterpolatedAssetPropertyValuesResponse) {
         this.getInterpolatedAssetPropertyValuesResponse = getInterpolatedAssetPropertyValuesResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetInterpolatedAssetPropertyValuesResponse {
      */
     
     public Object internalFailureException;
+
     public GetInterpolatedAssetPropertyValuesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class GetInterpolatedAssetPropertyValuesResponse {
      */
     
     public Object invalidRequestException;
+
     public GetInterpolatedAssetPropertyValuesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class GetInterpolatedAssetPropertyValuesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetInterpolatedAssetPropertyValuesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class GetInterpolatedAssetPropertyValuesResponse {
     
     
     public Integer statusCode;
+
     public GetInterpolatedAssetPropertyValuesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetInterpolatedAssetPropertyValuesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInterpolatedAssetPropertyValuesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetInterpolatedAssetPropertyValuesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetInterpolatedAssetPropertyValuesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class GetInterpolatedAssetPropertyValuesResponse {
      */
     
     public Object throttlingException;
+
     public GetInterpolatedAssetPropertyValuesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetInterpolatedAssetPropertyValuesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

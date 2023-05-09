@@ -12,9 +12,11 @@ public class LinksMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public Href self;
+
     public LinksMeta withSelf(Href self) {
         this.self = self;
         return this;
     }
     
+    public LinksMeta(){}
 }

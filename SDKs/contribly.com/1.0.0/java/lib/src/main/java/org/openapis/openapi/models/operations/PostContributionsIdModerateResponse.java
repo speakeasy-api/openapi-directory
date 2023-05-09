@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostContributionsIdModerateResponse {
     
     public String contentType;
+
     public PostContributionsIdModerateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostContributionsIdModerateResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public PostContributionsIdModerateResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class PostContributionsIdModerateResponse {
     
     
     public Integer statusCode;
+
     public PostContributionsIdModerateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class PostContributionsIdModerateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostContributionsIdModerateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class PostContributionsIdModerateResponse {
      */
     
     public String postContributionsIdModerate200ApplicationJSONString;
+
     public PostContributionsIdModerateResponse withPostContributionsIdModerate200ApplicationJSONString(String postContributionsIdModerate200ApplicationJSONString) {
         this.postContributionsIdModerate200ApplicationJSONString = postContributionsIdModerate200ApplicationJSONString;
         return this;
     }
     
+    public PostContributionsIdModerateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCollectionFromSchemaRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateCollectionFromSchemaRequestBody requestBody;
+
     public CreateCollectionFromSchemaRequest withRequestBody(CreateCollectionFromSchemaRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class CreateCollectionFromSchemaRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
     public String apiId;
+
     public CreateCollectionFromSchemaRequest withApiId(String apiId) {
         this.apiId = apiId;
         return this;
@@ -23,6 +26,7 @@ public class CreateCollectionFromSchemaRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiVersionId")
     public String apiVersionId;
+
     public CreateCollectionFromSchemaRequest withApiVersionId(String apiVersionId) {
         this.apiVersionId = apiVersionId;
         return this;
@@ -30,6 +34,7 @@ public class CreateCollectionFromSchemaRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schemaId")
     public String schemaId;
+
     public CreateCollectionFromSchemaRequest withSchemaId(String schemaId) {
         this.schemaId = schemaId;
         return this;
@@ -37,9 +42,15 @@ public class CreateCollectionFromSchemaRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workspace")
     public String workspace;
+
     public CreateCollectionFromSchemaRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public CreateCollectionFromSchemaRequest(@JsonProperty("apiId") String apiId, @JsonProperty("apiVersionId") String apiVersionId, @JsonProperty("schemaId") String schemaId) {
+        this.apiId = apiId;
+        this.apiVersionId = apiVersionId;
+        this.schemaId = schemaId;
+  }
 }

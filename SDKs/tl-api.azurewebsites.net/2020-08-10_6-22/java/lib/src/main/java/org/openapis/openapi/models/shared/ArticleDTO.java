@@ -25,6 +25,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeStatus")
     public Boolean activeStatus;
+
     public ArticleDTO withActiveStatus(Boolean activeStatus) {
         this.activeStatus = activeStatus;
         return this;
@@ -33,6 +34,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applyForAllGyms")
     public Boolean applyForAllGyms;
+
     public ArticleDTO withApplyForAllGyms(Boolean applyForAllGyms) {
         this.applyForAllGyms = applyForAllGyms;
         return this;
@@ -41,6 +43,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("articleId")
     public Integer articleId;
+
     public ArticleDTO withArticleId(Integer articleId) {
         this.articleId = articleId;
         return this;
@@ -48,6 +51,7 @@ public class ArticleDTO {
     
     @JsonProperty("availableGyms")
     public GymDTO[] availableGyms;
+
     public ArticleDTO withAvailableGyms(GymDTO[] availableGyms) {
         this.availableGyms = availableGyms;
         return this;
@@ -59,6 +63,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableQty")
     public Double availableQty;
+
     public ArticleDTO withAvailableQty(Double availableQty) {
         this.availableQty = availableQty;
         return this;
@@ -67,6 +72,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("barcode")
     public String barcode;
+
     public ArticleDTO withBarcode(String barcode) {
         this.barcode = barcode;
         return this;
@@ -77,6 +83,7 @@ public class ArticleDTO {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDate")
     public OffsetDateTime createdDate;
+
     public ArticleDTO withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -85,6 +92,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdUser")
     public String createdUser;
+
     public ArticleDTO withCreatedUser(String createdUser) {
         this.createdUser = createdUser;
         return this;
@@ -96,6 +104,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cronExpression")
     public String cronExpression;
+
     public ArticleDTO withCronExpression(String cronExpression) {
         this.cronExpression = cronExpression;
         return this;
@@ -104,6 +113,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ArticleDTO withDescription(String description) {
         this.description = description;
         return this;
@@ -112,6 +122,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount")
     public Double discount;
+
     public ArticleDTO withDiscount(Double discount) {
         this.discount = discount;
         return this;
@@ -123,6 +134,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employeeDiscount")
     public Double employeeDiscount;
+
     public ArticleDTO withEmployeeDiscount(Double employeeDiscount) {
         this.employeeDiscount = employeeDiscount;
         return this;
@@ -134,6 +146,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employeePrice")
     public Double employeePrice;
+
     public ArticleDTO withEmployeePrice(Double employeePrice) {
         this.employeePrice = employeePrice;
         return this;
@@ -145,6 +158,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gymArticles")
     public GymArticleDetailsDTO[] gymArticles;
+
     public ArticleDTO withGymArticles(GymArticleDetailsDTO[] gymArticles) {
         this.gymArticles = gymArticles;
         return this;
@@ -153,6 +167,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAddOn")
     public Boolean isAddOn;
+
     public ArticleDTO withIsAddOn(Boolean isAddOn) {
         this.isAddOn = isAddOn;
         return this;
@@ -164,6 +179,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isInventoryItem")
     public Boolean isInventoryItem;
+
     public ArticleDTO withIsInventoryItem(Boolean isInventoryItem) {
         this.isInventoryItem = isInventoryItem;
         return this;
@@ -175,6 +191,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isObsolete")
     public Boolean isObsolete;
+
     public ArticleDTO withIsObsolete(Boolean isObsolete) {
         this.isObsolete = isObsolete;
         return this;
@@ -182,6 +199,7 @@ public class ArticleDTO {
     
     @JsonProperty("measureUnit")
     public String measureUnit;
+
     public ArticleDTO withMeasureUnit(String measureUnit) {
         this.measureUnit = measureUnit;
         return this;
@@ -192,6 +210,7 @@ public class ArticleDTO {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedDate")
     public OffsetDateTime modifiedDate;
+
     public ArticleDTO withModifiedDate(OffsetDateTime modifiedDate) {
         this.modifiedDate = modifiedDate;
         return this;
@@ -200,6 +219,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifiedUser")
     public String modifiedUser;
+
     public ArticleDTO withModifiedUser(String modifiedUser) {
         this.modifiedUser = modifiedUser;
         return this;
@@ -207,6 +227,7 @@ public class ArticleDTO {
     
     @JsonProperty("name")
     public String name;
+
     public ArticleDTO withName(String name) {
         this.name = name;
         return this;
@@ -215,6 +236,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public Integer number;
+
     public ArticleDTO withNumber(Integer number) {
         this.number = number;
         return this;
@@ -222,6 +244,7 @@ public class ArticleDTO {
     
     @JsonProperty("price")
     public Double price;
+
     public ArticleDTO withPrice(Double price) {
         this.price = price;
         return this;
@@ -233,6 +256,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reorderLevel")
     public Double reorderLevel;
+
     public ArticleDTO withReorderLevel(Double reorderLevel) {
         this.reorderLevel = reorderLevel;
         return this;
@@ -244,6 +268,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revenueAccountId")
     public Integer revenueAccountId;
+
     public ArticleDTO withRevenueAccountId(Integer revenueAccountId) {
         this.revenueAccountId = revenueAccountId;
         return this;
@@ -255,6 +280,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellingPrice")
     public Double sellingPrice;
+
     public ArticleDTO withSellingPrice(Double sellingPrice) {
         this.sellingPrice = sellingPrice;
         return this;
@@ -263,6 +289,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String tags;
+
     public ArticleDTO withTags(String tags) {
         this.tags = tags;
         return this;
@@ -270,6 +297,7 @@ public class ArticleDTO {
     
     @JsonProperty("type")
     public String type;
+
     public ArticleDTO withType(String type) {
         this.type = type;
         return this;
@@ -278,6 +306,7 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vat")
     public Double vat;
+
     public ArticleDTO withVat(Double vat) {
         this.vat = vat;
         return this;
@@ -289,9 +318,17 @@ public class ArticleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatApplicable")
     public Boolean vatApplicable;
+
     public ArticleDTO withVatApplicable(Boolean vatApplicable) {
         this.vatApplicable = vatApplicable;
         return this;
     }
     
+    public ArticleDTO(@JsonProperty("availableGyms") GymDTO[] availableGyms, @JsonProperty("measureUnit") String measureUnit, @JsonProperty("name") String name, @JsonProperty("price") Double price, @JsonProperty("type") String type) {
+        this.availableGyms = availableGyms;
+        this.measureUnit = measureUnit;
+        this.name = name;
+        this.price = price;
+        this.type = type;
+  }
 }

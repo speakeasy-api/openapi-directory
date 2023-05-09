@@ -15,6 +15,7 @@ public class WorkflowExecutionSignaledEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalInitiatedEventId")
     public Long externalInitiatedEventId;
+
     public WorkflowExecutionSignaledEventAttributes withExternalInitiatedEventId(Long externalInitiatedEventId) {
         this.externalInitiatedEventId = externalInitiatedEventId;
         return this;
@@ -23,6 +24,7 @@ public class WorkflowExecutionSignaledEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalWorkflowExecution")
     public WorkflowExecution externalWorkflowExecution;
+
     public WorkflowExecutionSignaledEventAttributes withExternalWorkflowExecution(WorkflowExecution externalWorkflowExecution) {
         this.externalWorkflowExecution = externalWorkflowExecution;
         return this;
@@ -31,6 +33,7 @@ public class WorkflowExecutionSignaledEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public String input;
+
     public WorkflowExecutionSignaledEventAttributes withInput(String input) {
         this.input = input;
         return this;
@@ -38,9 +41,13 @@ public class WorkflowExecutionSignaledEventAttributes {
     
     @JsonProperty("signalName")
     public String signalName;
+
     public WorkflowExecutionSignaledEventAttributes withSignalName(String signalName) {
         this.signalName = signalName;
         return this;
     }
     
+    public WorkflowExecutionSignaledEventAttributes(@JsonProperty("signalName") String signalName) {
+        this.signalName = signalName;
+  }
 }

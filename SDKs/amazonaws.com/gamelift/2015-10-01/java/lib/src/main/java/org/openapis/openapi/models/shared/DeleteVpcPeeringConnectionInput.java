@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteVpcPeeringConnectionInput {
     @JsonProperty("FleetId")
     public String fleetId;
+
     public DeleteVpcPeeringConnectionInput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -16,9 +17,14 @@ public class DeleteVpcPeeringConnectionInput {
     
     @JsonProperty("VpcPeeringConnectionId")
     public String vpcPeeringConnectionId;
+
     public DeleteVpcPeeringConnectionInput withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public DeleteVpcPeeringConnectionInput(@JsonProperty("FleetId") String fleetId, @JsonProperty("VpcPeeringConnectionId") String vpcPeeringConnectionId) {
+        this.fleetId = fleetId;
+        this.vpcPeeringConnectionId = vpcPeeringConnectionId;
+  }
 }

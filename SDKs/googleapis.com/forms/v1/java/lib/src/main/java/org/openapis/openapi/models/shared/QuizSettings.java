@@ -18,9 +18,11 @@ public class QuizSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isQuiz")
     public Boolean isQuiz;
+
     public QuizSettings withIsQuiz(Boolean isQuiz) {
         this.isQuiz = isQuiz;
         return this;
     }
     
+    public QuizSettings(){}
 }

@@ -18,6 +18,7 @@ public class ActivityObjectAttachmentsThumbnailsImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Long height;
+
     public ActivityObjectAttachmentsThumbnailsImage withHeight(Long height) {
         this.height = height;
         return this;
@@ -29,6 +30,7 @@ public class ActivityObjectAttachmentsThumbnailsImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ActivityObjectAttachmentsThumbnailsImage withType(String type) {
         this.type = type;
         return this;
@@ -40,6 +42,7 @@ public class ActivityObjectAttachmentsThumbnailsImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ActivityObjectAttachmentsThumbnailsImage withUrl(String url) {
         this.url = url;
         return this;
@@ -51,9 +54,11 @@ public class ActivityObjectAttachmentsThumbnailsImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Long width;
+
     public ActivityObjectAttachmentsThumbnailsImage withWidth(Long width) {
         this.width = width;
         return this;
     }
     
+    public ActivityObjectAttachmentsThumbnailsImage(){}
 }

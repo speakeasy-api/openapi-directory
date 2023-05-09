@@ -19,6 +19,7 @@ public class Certificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Certificate withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -26,6 +27,7 @@ public class Certificate {
     
     @JsonProperty("id")
     public Long id;
+
     public Certificate withId(Long id) {
         this.id = id;
         return this;
@@ -33,6 +35,7 @@ public class Certificate {
     
     @JsonProperty("id_private_key_file")
     public Long idPrivateKeyFile;
+
     public Certificate withIdPrivateKeyFile(Long idPrivateKeyFile) {
         this.idPrivateKeyFile = idPrivateKeyFile;
         return this;
@@ -40,6 +43,7 @@ public class Certificate {
     
     @JsonProperty("id_public_key_file")
     public Long idPublicKeyFile;
+
     public Certificate withIdPublicKeyFile(Long idPublicKeyFile) {
         this.idPublicKeyFile = idPublicKeyFile;
         return this;
@@ -47,9 +51,17 @@ public class Certificate {
     
     @JsonProperty("type")
     public String type;
+
     public Certificate withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Certificate(@JsonProperty("created") OffsetDateTime created, @JsonProperty("id") Long id, @JsonProperty("id_private_key_file") Long idPrivateKeyFile, @JsonProperty("id_public_key_file") Long idPublicKeyFile, @JsonProperty("type") String type) {
+        this.created = created;
+        this.id = id;
+        this.idPrivateKeyFile = idPrivateKeyFile;
+        this.idPublicKeyFile = idPublicKeyFile;
+        this.type = type;
+  }
 }

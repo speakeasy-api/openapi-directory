@@ -71,7 +71,7 @@ public class SigningBasketsServiceSBS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSigningBasketResponse res = new org.openapis.openapi.models.operations.CreateSigningBasketResponse() {{
+        org.openapis.openapi.models.operations.CreateSigningBasketResponse res = new org.openapis.openapi.models.operations.CreateSigningBasketResponse(contentType, httpRes.statusCode()) {{
             signingBasketResponse201 = null;
             error400NGSBS = null;
             error400SBS = null;
@@ -86,8 +86,6 @@ public class SigningBasketsServiceSBS {
             error409NGSBS = null;
             error409SBS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -227,7 +225,7 @@ public class SigningBasketsServiceSBS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSigningBasketResponse res = new org.openapis.openapi.models.operations.DeleteSigningBasketResponse() {{
+        org.openapis.openapi.models.operations.DeleteSigningBasketResponse res = new org.openapis.openapi.models.operations.DeleteSigningBasketResponse(contentType, httpRes.statusCode()) {{
             error400NGSBS = null;
             error400SBS = null;
             error401NGSBS = null;
@@ -241,8 +239,6 @@ public class SigningBasketsServiceSBS {
             error409NGSBS = null;
             error409SBS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 406 || httpRes.statusCode() == 408 || httpRes.statusCode() == 415 || httpRes.statusCode() == 429 || httpRes.statusCode() == 500 || httpRes.statusCode() == 503) {
@@ -368,7 +364,7 @@ public class SigningBasketsServiceSBS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSigningBasketResponse res = new org.openapis.openapi.models.operations.GetSigningBasketResponse() {{
+        org.openapis.openapi.models.operations.GetSigningBasketResponse res = new org.openapis.openapi.models.operations.GetSigningBasketResponse(contentType, httpRes.statusCode()) {{
             signingBasketResponse200 = null;
             error400NGSBS = null;
             error400SBS = null;
@@ -383,8 +379,6 @@ public class SigningBasketsServiceSBS {
             error409NGSBS = null;
             error409SBS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -522,7 +516,7 @@ public class SigningBasketsServiceSBS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSigningBasketAuthorisationResponse res = new org.openapis.openapi.models.operations.GetSigningBasketAuthorisationResponse() {{
+        org.openapis.openapi.models.operations.GetSigningBasketAuthorisationResponse res = new org.openapis.openapi.models.operations.GetSigningBasketAuthorisationResponse(contentType, httpRes.statusCode()) {{
             authorisations = null;
             error400NGSBS = null;
             error400SBS = null;
@@ -537,8 +531,6 @@ public class SigningBasketsServiceSBS {
             error409NGSBS = null;
             error409SBS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -674,7 +666,7 @@ public class SigningBasketsServiceSBS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSigningBasketScaStatusResponse res = new org.openapis.openapi.models.operations.GetSigningBasketScaStatusResponse() {{
+        org.openapis.openapi.models.operations.GetSigningBasketScaStatusResponse res = new org.openapis.openapi.models.operations.GetSigningBasketScaStatusResponse(contentType, httpRes.statusCode()) {{
             scaStatusResponse = null;
             error400NGSBS = null;
             error400SBS = null;
@@ -689,8 +681,6 @@ public class SigningBasketsServiceSBS {
             error409NGSBS = null;
             error409SBS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -826,7 +816,7 @@ public class SigningBasketsServiceSBS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSigningBasketStatusResponse res = new org.openapis.openapi.models.operations.GetSigningBasketStatusResponse() {{
+        org.openapis.openapi.models.operations.GetSigningBasketStatusResponse res = new org.openapis.openapi.models.operations.GetSigningBasketStatusResponse(contentType, httpRes.statusCode()) {{
             signingBasketStatusResponse200 = null;
             error400NGSBS = null;
             error400SBS = null;
@@ -841,8 +831,6 @@ public class SigningBasketsServiceSBS {
             error409NGSBS = null;
             error409SBS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1012,7 +1000,7 @@ public class SigningBasketsServiceSBS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartSigningBasketAuthorisationResponse res = new org.openapis.openapi.models.operations.StartSigningBasketAuthorisationResponse() {{
+        org.openapis.openapi.models.operations.StartSigningBasketAuthorisationResponse res = new org.openapis.openapi.models.operations.StartSigningBasketAuthorisationResponse(contentType, httpRes.statusCode()) {{
             startScaprocessResponse = null;
             error400NGSBS = null;
             error400SBS = null;
@@ -1027,8 +1015,6 @@ public class SigningBasketsServiceSBS {
             error409NGSBS = null;
             error409SBS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1203,7 +1189,7 @@ public class SigningBasketsServiceSBS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataResponse res = new org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataResponse() {{
+        org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataResponse res = new org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataResponse(contentType, httpRes.statusCode()) {{
             updateSigningBasketPsuData200ApplicationJSONOneOf = null;
             error400NGSBS = null;
             error400SBS = null;
@@ -1218,8 +1204,6 @@ public class SigningBasketsServiceSBS {
             error409NGSBS = null;
             error409SBS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

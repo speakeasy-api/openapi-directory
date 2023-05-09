@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetHypervisorResponse {
     
     public String contentType;
+
     public GetHypervisorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetHypervisorResponse {
      */
     
     public org.openapis.openapi.models.shared.GetHypervisorOutput getHypervisorOutput;
+
     public GetHypervisorResponse withGetHypervisorOutput(org.openapis.openapi.models.shared.GetHypervisorOutput getHypervisorOutput) {
         this.getHypervisorOutput = getHypervisorOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetHypervisorResponse {
      */
     
     public Object internalServerException;
+
     public GetHypervisorResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetHypervisorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetHypervisorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetHypervisorResponse {
     
     
     public Integer statusCode;
+
     public GetHypervisorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetHypervisorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetHypervisorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetHypervisorResponse {
      */
     
     public Object throttlingException;
+
     public GetHypervisorResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class GetHypervisorResponse {
      */
     
     public Object validationException;
+
     public GetHypervisorResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetHypervisorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

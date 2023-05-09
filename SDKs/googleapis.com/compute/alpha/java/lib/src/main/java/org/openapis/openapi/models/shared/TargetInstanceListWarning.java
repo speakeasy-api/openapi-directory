@@ -18,6 +18,7 @@ public class TargetInstanceListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public TargetInstanceListWarningCodeEnum code;
+
     public TargetInstanceListWarning withCode(TargetInstanceListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class TargetInstanceListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public TargetInstanceListWarningData[] data;
+
     public TargetInstanceListWarning withData(TargetInstanceListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class TargetInstanceListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public TargetInstanceListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public TargetInstanceListWarning(){}
 }

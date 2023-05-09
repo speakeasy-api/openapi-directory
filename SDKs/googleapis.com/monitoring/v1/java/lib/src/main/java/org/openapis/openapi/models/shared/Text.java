@@ -18,6 +18,7 @@ public class Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public Text withContent(String content) {
         this.content = content;
         return this;
@@ -29,9 +30,11 @@ public class Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public TextFormatEnum format;
+
     public Text withFormat(TextFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public Text(){}
 }

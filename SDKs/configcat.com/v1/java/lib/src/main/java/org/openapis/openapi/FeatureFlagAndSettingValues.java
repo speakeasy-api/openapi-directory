@@ -74,12 +74,10 @@ public class FeatureFlagAndSettingValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSettingValueResponse res = new org.openapis.openapi.models.operations.GetSettingValueResponse() {{
+        org.openapis.openapi.models.operations.GetSettingValueResponse res = new org.openapis.openapi.models.operations.GetSettingValueResponse(contentType, httpRes.statusCode()) {{
             settingValueModelHaljson = null;
             settingValueModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -132,12 +130,129 @@ public class FeatureFlagAndSettingValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSettingValuesResponse res = new org.openapis.openapi.models.operations.GetSettingValuesResponse() {{
+        org.openapis.openapi.models.operations.GetSettingValuesResponse res = new org.openapis.openapi.models.operations.GetSettingValuesResponse(contentType, httpRes.statusCode()) {{
             configSettingValuesModel = null;
             configSettingValuesModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/hal+json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ConfigSettingValuesModel out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ConfigSettingValuesModel.class);
+                res.configSettingValuesModel = out;
+            }
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ConfigSettingValuesModel out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ConfigSettingValuesModel.class);
+                res.configSettingValuesModel = out;
+            }
+        }
+        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
+        }
+
+        return res;
+    }
+
+    /**
+     * Post values
+     * This endpoint replaces the values of a specified Config's Feature Flags or Settings identified by the `configId` parameter
+     * in a specified Environment identified by the `environmentId` parameter.
+     * 
+     * Only the `value`, `rolloutRules` and `percentageRules` attributes are modifiable by this endpoint.
+     * 
+     * **Important:** As this endpoint is doing a complete replace, it's important to set every other attribute that you don't 
+     * want to change in its original state. Not listing one means that it will reset.
+     * 
+     * For example: We have the following resource.
+     * ```
+     * {
+     *     "settingValues": [
+     * 		{
+     * 			"rolloutPercentageItems": [
+     * 				{
+     * 					"percentage": 30,
+     * 					"value": true
+     * 				},
+     * 				{
+     * 					"percentage": 70,
+     * 					"value": false
+     * 				}
+     * 			],
+     * 			"rolloutRules": [],
+     * 			"value": false,
+     * 			"settingId": 1
+     * 		}
+     * 	]
+     * }
+     * ```
+     * If we send a replace request body as below:
+     * ```
+     * { 
+     * 	"settingValues": [
+     * 		{
+     * 			"value": true,
+     * 			"settingId": 1
+     * 		}
+     * 	]
+     * }
+     * ```
+     * Then besides that the default value is set to `true`, all the Percentage Rules are deleted. 
+     * So we get a response like this:
+     * ```
+     * {
+     * 	"settingValues": [
+     * 		{
+     * 			"rolloutPercentageItems": [],
+     * 			"rolloutRules": [],
+     * 			"value": true,
+     * 			"setting": 
+     * 			{
+     * 				"settingId": 1
+     * 			}
+     * 		}
+     * 	]
+     * }
+     * ```
+     * 
+     * The `rolloutRules` property describes two types of rules:
+     * 
+     * - **Targeting rules**: When you want to add or update a targenting rule, the `comparator`, `comparisonAttribute`, and `comparisonValue` members are required.
+     * - **Segment rules**: When you want to add add or update a segment rule, the `segmentId` which identifies the desired segment and the `segmentComparator` members are required.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostSettingValuesResponse postSettingValues(org.openapis.openapi.models.operations.PostSettingValuesRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSettingValuesRequest.class, baseUrl, "/v1/configs/{configId}/environments/{environmentId}/values", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateSettingValuesWithIdModel", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostSettingValuesRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.PostSettingValuesResponse res = new org.openapis.openapi.models.operations.PostSettingValuesResponse(contentType, httpRes.statusCode()) {{
+            configSettingValuesModel = null;
+            configSettingValuesModel = null;
+        }};
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -234,12 +349,10 @@ public class FeatureFlagAndSettingValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReplaceSettingValueResponse res = new org.openapis.openapi.models.operations.ReplaceSettingValueResponse() {{
+        org.openapis.openapi.models.operations.ReplaceSettingValueResponse res = new org.openapis.openapi.models.operations.ReplaceSettingValueResponse(contentType, httpRes.statusCode()) {{
             settingValueModelHaljson = null;
             settingValueModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -351,12 +464,10 @@ public class FeatureFlagAndSettingValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSettingValueResponse res = new org.openapis.openapi.models.operations.UpdateSettingValueResponse() {{
+        org.openapis.openapi.models.operations.UpdateSettingValueResponse res = new org.openapis.openapi.models.operations.UpdateSettingValueResponse(contentType, httpRes.statusCode()) {{
             settingValueModelHaljson = null;
             settingValueModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class ListIntegrationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public ListIntegrationItem[] items;
+
     public ListIntegrationsResponse withItems(ListIntegrationItem[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class ListIntegrationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListIntegrationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListIntegrationsResponse(){}
 }

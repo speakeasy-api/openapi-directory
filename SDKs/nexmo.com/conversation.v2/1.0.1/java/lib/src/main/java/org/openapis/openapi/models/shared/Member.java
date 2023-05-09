@@ -12,6 +12,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public MemberLinks links;
+
     public Member withLinks(MemberLinks links) {
         this.links = links;
         return this;
@@ -20,6 +21,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public MemberChannel channel;
+
     public Member withChannel(MemberChannel channel) {
         this.channel = channel;
         return this;
@@ -31,6 +33,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public Member withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -42,6 +45,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Member withId(String id) {
         this.id = id;
         return this;
@@ -50,6 +54,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initiator")
     public MemberInitiator initiator;
+
     public Member withInitiator(MemberInitiator initiator) {
         this.initiator = initiator;
         return this;
@@ -61,6 +66,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
     public MemberMedia media;
+
     public Member withMedia(MemberMedia media) {
         this.media = media;
         return this;
@@ -72,6 +78,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Member withName(String name) {
         this.name = name;
         return this;
@@ -83,6 +90,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public MemberStateEnum state;
+
     public Member withState(MemberStateEnum state) {
         this.state = state;
         return this;
@@ -91,6 +99,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public MemberTimestamp timestamp;
+
     public Member withTimestamp(MemberTimestamp timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -102,9 +111,11 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public String userId;
+
     public Member withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public Member(){}
 }

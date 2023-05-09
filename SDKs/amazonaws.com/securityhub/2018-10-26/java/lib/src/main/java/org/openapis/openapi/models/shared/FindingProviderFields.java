@@ -15,6 +15,7 @@ public class FindingProviderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Long confidence;
+
     public FindingProviderFields withConfidence(Long confidence) {
         this.confidence = confidence;
         return this;
@@ -23,6 +24,7 @@ public class FindingProviderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Criticality")
     public Long criticality;
+
     public FindingProviderFields withCriticality(Long criticality) {
         this.criticality = criticality;
         return this;
@@ -31,6 +33,7 @@ public class FindingProviderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelatedFindings")
     public RelatedFinding[] relatedFindings;
+
     public FindingProviderFields withRelatedFindings(RelatedFinding[] relatedFindings) {
         this.relatedFindings = relatedFindings;
         return this;
@@ -39,6 +42,7 @@ public class FindingProviderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Severity")
     public FindingProviderSeverity severity;
+
     public FindingProviderFields withSeverity(FindingProviderSeverity severity) {
         this.severity = severity;
         return this;
@@ -47,9 +51,11 @@ public class FindingProviderFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Types")
     public String[] types;
+
     public FindingProviderFields withTypes(String[] types) {
         this.types = types;
         return this;
     }
     
+    public FindingProviderFields(){}
 }

@@ -15,6 +15,7 @@ public class WebhookResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Webhook data;
+
     public WebhookResponse withData(Webhook data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class WebhookResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public WebhookResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public WebhookResponse(){}
 }

@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetShakespeareGenerateInsultSecurity;
 import org.openapis.openapi.models.operations.GetShakespeareGenerateInsultRequest;
 import org.openapis.openapi.models.operations.GetShakespeareGenerateInsultResponse;
+import org.openapis.openapi.models.operations.GetShakespeareGenerateInsultSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -15,10 +14,10 @@ public class Application {
                 .build();
 
             GetShakespeareGenerateInsultRequest req = new GetShakespeareGenerateInsultRequest() {{
-                limit = 548814;
-            }}            
+                limit = 548814L;
+            }};            
 
-            GetShakespeareGenerateInsultResponse res = sdk.generation.getShakespeareGenerateInsult(req, new GetShakespeareGenerateInsultSecurity() {{
+            GetShakespeareGenerateInsultResponse res = sdk.generation.getShakespeareGenerateInsult(req, new GetShakespeareGenerateInsultSecurity("provident") {{
                 xFungeneratorsApiSecret = "YOUR_API_KEY_HERE";
             }});
 
@@ -28,5 +27,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

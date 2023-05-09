@@ -19,6 +19,7 @@ public class Expiry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expires")
     public OffsetDateTime expires;
+
     public Expiry withExpires(OffsetDateTime expires) {
         this.expires = expires;
         return this;
@@ -27,9 +28,11 @@ public class Expiry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public String time;
+
     public Expiry withTime(String time) {
         this.time = time;
         return this;
     }
     
+    public Expiry(){}
 }

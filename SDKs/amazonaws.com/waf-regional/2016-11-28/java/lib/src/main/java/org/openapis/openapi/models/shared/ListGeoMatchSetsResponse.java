@@ -15,6 +15,7 @@ public class ListGeoMatchSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeoMatchSets")
     public GeoMatchSetSummary[] geoMatchSets;
+
     public ListGeoMatchSetsResponse withGeoMatchSets(GeoMatchSetSummary[] geoMatchSets) {
         this.geoMatchSets = geoMatchSets;
         return this;
@@ -23,9 +24,11 @@ public class ListGeoMatchSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListGeoMatchSetsResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public ListGeoMatchSetsResponse(){}
 }

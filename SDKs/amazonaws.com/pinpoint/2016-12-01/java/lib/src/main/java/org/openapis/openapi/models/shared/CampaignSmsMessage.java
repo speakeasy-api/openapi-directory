@@ -15,6 +15,7 @@ public class CampaignSmsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Body")
     public String body;
+
     public CampaignSmsMessage withBody(String body) {
         this.body = body;
         return this;
@@ -23,6 +24,7 @@ public class CampaignSmsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityId")
     public String entityId;
+
     public CampaignSmsMessage withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -31,6 +33,7 @@ public class CampaignSmsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageType")
     public MessageTypeEnum messageType;
+
     public CampaignSmsMessage withMessageType(MessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -39,6 +42,7 @@ public class CampaignSmsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginationNumber")
     public String originationNumber;
+
     public CampaignSmsMessage withOriginationNumber(String originationNumber) {
         this.originationNumber = originationNumber;
         return this;
@@ -47,6 +51,7 @@ public class CampaignSmsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SenderId")
     public String senderId;
+
     public CampaignSmsMessage withSenderId(String senderId) {
         this.senderId = senderId;
         return this;
@@ -55,9 +60,11 @@ public class CampaignSmsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateId")
     public String templateId;
+
     public CampaignSmsMessage withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public CampaignSmsMessage(){}
 }

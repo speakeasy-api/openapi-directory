@@ -61,11 +61,9 @@ public class Productdeliverytime {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentProductdeliverytimeCreateResponse res = new org.openapis.openapi.models.operations.ContentProductdeliverytimeCreateResponse() {{
+        org.openapis.openapi.models.operations.ContentProductdeliverytimeCreateResponse res = new org.openapis.openapi.models.operations.ContentProductdeliverytimeCreateResponse(contentType, httpRes.statusCode()) {{
             productDeliveryTime = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,10 +105,8 @@ public class Productdeliverytime {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentProductdeliverytimeDeleteResponse res = new org.openapis.openapi.models.operations.ContentProductdeliverytimeDeleteResponse() {{
+        org.openapis.openapi.models.operations.ContentProductdeliverytimeDeleteResponse res = new org.openapis.openapi.models.operations.ContentProductdeliverytimeDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Productdeliverytime {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentProductdeliverytimeGetResponse res = new org.openapis.openapi.models.operations.ContentProductdeliverytimeGetResponse() {{
+        org.openapis.openapi.models.operations.ContentProductdeliverytimeGetResponse res = new org.openapis.openapi.models.operations.ContentProductdeliverytimeGetResponse(contentType, httpRes.statusCode()) {{
             productDeliveryTime = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

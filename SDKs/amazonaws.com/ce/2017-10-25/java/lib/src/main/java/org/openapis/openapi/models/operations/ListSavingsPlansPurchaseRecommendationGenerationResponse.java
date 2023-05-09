@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSavingsPlansPurchaseRecommendationGenerationResponse {
     
     public String contentType;
+
     public ListSavingsPlansPurchaseRecommendationGenerationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSavingsPlansPurchaseRecommendationGenerationResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListSavingsPlansPurchaseRecommendationGenerationResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListSavingsPlansPurchaseRecommendationGenerationResponse {
      */
     
     public Object limitExceededException;
+
     public ListSavingsPlansPurchaseRecommendationGenerationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class ListSavingsPlansPurchaseRecommendationGenerationResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSavingsPlansPurchaseRecommendationGenerationResponse listSavingsPlansPurchaseRecommendationGenerationResponse;
+
     public ListSavingsPlansPurchaseRecommendationGenerationResponse withListSavingsPlansPurchaseRecommendationGenerationResponse(org.openapis.openapi.models.shared.ListSavingsPlansPurchaseRecommendationGenerationResponse listSavingsPlansPurchaseRecommendationGenerationResponse) {
         this.listSavingsPlansPurchaseRecommendationGenerationResponse = listSavingsPlansPurchaseRecommendationGenerationResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListSavingsPlansPurchaseRecommendationGenerationResponse {
     
     
     public Integer statusCode;
+
     public ListSavingsPlansPurchaseRecommendationGenerationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListSavingsPlansPurchaseRecommendationGenerationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSavingsPlansPurchaseRecommendationGenerationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListSavingsPlansPurchaseRecommendationGenerationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

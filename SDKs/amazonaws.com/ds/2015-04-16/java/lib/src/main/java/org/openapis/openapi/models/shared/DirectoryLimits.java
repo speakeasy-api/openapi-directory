@@ -15,6 +15,7 @@ public class DirectoryLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudOnlyDirectoriesCurrentCount")
     public Long cloudOnlyDirectoriesCurrentCount;
+
     public DirectoryLimits withCloudOnlyDirectoriesCurrentCount(Long cloudOnlyDirectoriesCurrentCount) {
         this.cloudOnlyDirectoriesCurrentCount = cloudOnlyDirectoriesCurrentCount;
         return this;
@@ -23,6 +24,7 @@ public class DirectoryLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudOnlyDirectoriesLimit")
     public Long cloudOnlyDirectoriesLimit;
+
     public DirectoryLimits withCloudOnlyDirectoriesLimit(Long cloudOnlyDirectoriesLimit) {
         this.cloudOnlyDirectoriesLimit = cloudOnlyDirectoriesLimit;
         return this;
@@ -31,6 +33,7 @@ public class DirectoryLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudOnlyDirectoriesLimitReached")
     public Boolean cloudOnlyDirectoriesLimitReached;
+
     public DirectoryLimits withCloudOnlyDirectoriesLimitReached(Boolean cloudOnlyDirectoriesLimitReached) {
         this.cloudOnlyDirectoriesLimitReached = cloudOnlyDirectoriesLimitReached;
         return this;
@@ -39,6 +42,7 @@ public class DirectoryLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudOnlyMicrosoftADCurrentCount")
     public Long cloudOnlyMicrosoftADCurrentCount;
+
     public DirectoryLimits withCloudOnlyMicrosoftADCurrentCount(Long cloudOnlyMicrosoftADCurrentCount) {
         this.cloudOnlyMicrosoftADCurrentCount = cloudOnlyMicrosoftADCurrentCount;
         return this;
@@ -47,6 +51,7 @@ public class DirectoryLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudOnlyMicrosoftADLimit")
     public Long cloudOnlyMicrosoftADLimit;
+
     public DirectoryLimits withCloudOnlyMicrosoftADLimit(Long cloudOnlyMicrosoftADLimit) {
         this.cloudOnlyMicrosoftADLimit = cloudOnlyMicrosoftADLimit;
         return this;
@@ -55,6 +60,7 @@ public class DirectoryLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudOnlyMicrosoftADLimitReached")
     public Boolean cloudOnlyMicrosoftADLimitReached;
+
     public DirectoryLimits withCloudOnlyMicrosoftADLimitReached(Boolean cloudOnlyMicrosoftADLimitReached) {
         this.cloudOnlyMicrosoftADLimitReached = cloudOnlyMicrosoftADLimitReached;
         return this;
@@ -63,6 +69,7 @@ public class DirectoryLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectedDirectoriesCurrentCount")
     public Long connectedDirectoriesCurrentCount;
+
     public DirectoryLimits withConnectedDirectoriesCurrentCount(Long connectedDirectoriesCurrentCount) {
         this.connectedDirectoriesCurrentCount = connectedDirectoriesCurrentCount;
         return this;
@@ -71,6 +78,7 @@ public class DirectoryLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectedDirectoriesLimit")
     public Long connectedDirectoriesLimit;
+
     public DirectoryLimits withConnectedDirectoriesLimit(Long connectedDirectoriesLimit) {
         this.connectedDirectoriesLimit = connectedDirectoriesLimit;
         return this;
@@ -79,9 +87,11 @@ public class DirectoryLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectedDirectoriesLimitReached")
     public Boolean connectedDirectoriesLimitReached;
+
     public DirectoryLimits withConnectedDirectoriesLimitReached(Boolean connectedDirectoriesLimitReached) {
         this.connectedDirectoriesLimitReached = connectedDirectoriesLimitReached;
         return this;
     }
     
+    public DirectoryLimits(){}
 }

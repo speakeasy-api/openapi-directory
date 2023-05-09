@@ -15,9 +15,11 @@ public class GooglePrivacyDlpV2StorageMetadataLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GooglePrivacyDlpV2StorageMetadataLabel withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public GooglePrivacyDlpV2StorageMetadataLabel(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Payload {
     @JsonProperty("contentExpression")
     public String contentExpression;
+
     public Payload withContentExpression(String contentExpression) {
         this.contentExpression = contentExpression;
         return this;
@@ -19,9 +20,14 @@ public class Payload {
     
     @JsonProperty("type")
     public PayloadTypeEnum type;
+
     public Payload withType(PayloadTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Payload(@JsonProperty("contentExpression") String contentExpression, @JsonProperty("type") PayloadTypeEnum type) {
+        this.contentExpression = contentExpression;
+        this.type = type;
+  }
 }

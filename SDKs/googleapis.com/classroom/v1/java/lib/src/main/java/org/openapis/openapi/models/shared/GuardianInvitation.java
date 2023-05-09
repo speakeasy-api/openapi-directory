@@ -18,6 +18,7 @@ public class GuardianInvitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public String creationTime;
+
     public GuardianInvitation withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class GuardianInvitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invitationId")
     public String invitationId;
+
     public GuardianInvitation withInvitationId(String invitationId) {
         this.invitationId = invitationId;
         return this;
@@ -40,6 +42,7 @@ public class GuardianInvitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invitedEmailAddress")
     public String invitedEmailAddress;
+
     public GuardianInvitation withInvitedEmailAddress(String invitedEmailAddress) {
         this.invitedEmailAddress = invitedEmailAddress;
         return this;
@@ -51,6 +54,7 @@ public class GuardianInvitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GuardianInvitationStateEnum state;
+
     public GuardianInvitation withState(GuardianInvitationStateEnum state) {
         this.state = state;
         return this;
@@ -62,9 +66,11 @@ public class GuardianInvitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("studentId")
     public String studentId;
+
     public GuardianInvitation withStudentId(String studentId) {
         this.studentId = studentId;
         return this;
     }
     
+    public GuardianInvitation(){}
 }

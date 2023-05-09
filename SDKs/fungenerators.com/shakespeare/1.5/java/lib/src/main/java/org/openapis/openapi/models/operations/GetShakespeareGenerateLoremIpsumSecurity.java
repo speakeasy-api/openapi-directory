@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetShakespeareGenerateLoremIpsumSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret")
     public String xFungeneratorsApiSecret;
+
     public GetShakespeareGenerateLoremIpsumSecurity withXFungeneratorsApiSecret(String xFungeneratorsApiSecret) {
         this.xFungeneratorsApiSecret = xFungeneratorsApiSecret;
         return this;
     }
     
+    public GetShakespeareGenerateLoremIpsumSecurity(@JsonProperty("X-Fungenerators-Api-Secret") String xFungeneratorsApiSecret) {
+        this.xFungeneratorsApiSecret = xFungeneratorsApiSecret;
+  }
 }

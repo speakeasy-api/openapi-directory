@@ -12,6 +12,7 @@ public class ListSchemaVersionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListSchemaVersionsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListSchemaVersionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSchemaVersionsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListSchemaVersionsInput {
     
     @JsonProperty("SchemaId")
     public SchemaId schemaId;
+
     public ListSchemaVersionsInput withSchemaId(SchemaId schemaId) {
         this.schemaId = schemaId;
         return this;
     }
     
+    public ListSchemaVersionsInput(@JsonProperty("SchemaId") SchemaId schemaId) {
+        this.schemaId = schemaId;
+  }
 }

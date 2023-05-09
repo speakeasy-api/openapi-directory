@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateS3ResourcesResponse {
@@ -12,6 +13,7 @@ public class DisassociateS3ResourcesResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateS3ResourcesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateS3ResourcesResponse {
     
     
     public String contentType;
+
     public DisassociateS3ResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateS3ResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociateS3ResourcesResult disassociateS3ResourcesResult;
+
     public DisassociateS3ResourcesResponse withDisassociateS3ResourcesResult(org.openapis.openapi.models.shared.DisassociateS3ResourcesResult disassociateS3ResourcesResult) {
         this.disassociateS3ResourcesResult = disassociateS3ResourcesResult;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateS3ResourcesResponse {
      */
     
     public Object internalException;
+
     public DisassociateS3ResourcesResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateS3ResourcesResponse {
      */
     
     public Object invalidInputException;
+
     public DisassociateS3ResourcesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -56,6 +62,7 @@ public class DisassociateS3ResourcesResponse {
     
     
     public Integer statusCode;
+
     public DisassociateS3ResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DisassociateS3ResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateS3ResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisassociateS3ResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

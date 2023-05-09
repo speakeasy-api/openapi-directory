@@ -15,6 +15,7 @@ public class UpdateApplicationSettingsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public UpdateApplicationSettingsOutput withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class UpdateApplicationSettingsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationIds")
     public String[] operationIds;
+
     public UpdateApplicationSettingsOutput withOperationIds(String[] operationIds) {
         this.operationIds = operationIds;
         return this;
     }
     
+    public UpdateApplicationSettingsOutput(){}
 }

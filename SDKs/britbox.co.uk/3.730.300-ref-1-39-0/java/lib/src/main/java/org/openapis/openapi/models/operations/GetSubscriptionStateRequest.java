@@ -22,9 +22,11 @@ public class GetSubscriptionStateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetSubscriptionStateRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public GetSubscriptionStateRequest(){}
 }

@@ -15,6 +15,7 @@ public class AllResponseTypesExample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connection")
     public ConnectionMessage connection;
+
     public AllResponseTypesExample withConnection(ConnectionMessage connection) {
         this.connection = connection;
         return this;
@@ -23,6 +24,7 @@ public class AllResponseTypesExample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketChangeMessage")
     public MarketChangeMessage marketChangeMessage;
+
     public AllResponseTypesExample withMarketChangeMessage(MarketChangeMessage marketChangeMessage) {
         this.marketChangeMessage = marketChangeMessage;
         return this;
@@ -31,6 +33,7 @@ public class AllResponseTypesExample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opTypes")
     public AllResponseTypesExampleOpTypesEnum opTypes;
+
     public AllResponseTypesExample withOpTypes(AllResponseTypesExampleOpTypesEnum opTypes) {
         this.opTypes = opTypes;
         return this;
@@ -39,6 +42,7 @@ public class AllResponseTypesExample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderChangeMessage")
     public OrderChangeMessage orderChangeMessage;
+
     public AllResponseTypesExample withOrderChangeMessage(OrderChangeMessage orderChangeMessage) {
         this.orderChangeMessage = orderChangeMessage;
         return this;
@@ -47,9 +51,11 @@ public class AllResponseTypesExample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StatusMessage status;
+
     public AllResponseTypesExample withStatus(StatusMessage status) {
         this.status = status;
         return this;
     }
     
+    public AllResponseTypesExample(){}
 }

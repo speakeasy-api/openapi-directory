@@ -20,6 +20,7 @@ public class TagInput {
     @JsonProperty("description")
     @SpeakeasyMetadata("form:name=description")
     public String description;
+
     public TagInput withDescription(String description) {
         this.description = description;
         return this;
@@ -32,9 +33,11 @@ public class TagInput {
     @JsonProperty("name")
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public TagInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TagInput(){}
 }

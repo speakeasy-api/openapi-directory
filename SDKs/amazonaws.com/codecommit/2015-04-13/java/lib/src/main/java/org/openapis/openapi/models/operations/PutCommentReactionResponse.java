@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutCommentReactionResponse {
@@ -12,6 +13,7 @@ public class PutCommentReactionResponse {
      */
     
     public Object commentDeletedException;
+
     public PutCommentReactionResponse withCommentDeletedException(Object commentDeletedException) {
         this.commentDeletedException = commentDeletedException;
         return this;
@@ -22,6 +24,7 @@ public class PutCommentReactionResponse {
      */
     
     public Object commentDoesNotExistException;
+
     public PutCommentReactionResponse withCommentDoesNotExistException(Object commentDoesNotExistException) {
         this.commentDoesNotExistException = commentDoesNotExistException;
         return this;
@@ -32,6 +35,7 @@ public class PutCommentReactionResponse {
      */
     
     public Object commentIdRequiredException;
+
     public PutCommentReactionResponse withCommentIdRequiredException(Object commentIdRequiredException) {
         this.commentIdRequiredException = commentIdRequiredException;
         return this;
@@ -39,6 +43,7 @@ public class PutCommentReactionResponse {
     
     
     public String contentType;
+
     public PutCommentReactionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class PutCommentReactionResponse {
      */
     
     public Object invalidCommentIdException;
+
     public PutCommentReactionResponse withInvalidCommentIdException(Object invalidCommentIdException) {
         this.invalidCommentIdException = invalidCommentIdException;
         return this;
@@ -59,6 +65,7 @@ public class PutCommentReactionResponse {
      */
     
     public Object invalidReactionValueException;
+
     public PutCommentReactionResponse withInvalidReactionValueException(Object invalidReactionValueException) {
         this.invalidReactionValueException = invalidReactionValueException;
         return this;
@@ -69,6 +76,7 @@ public class PutCommentReactionResponse {
      */
     
     public Object reactionLimitExceededException;
+
     public PutCommentReactionResponse withReactionLimitExceededException(Object reactionLimitExceededException) {
         this.reactionLimitExceededException = reactionLimitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class PutCommentReactionResponse {
      */
     
     public Object reactionValueRequiredException;
+
     public PutCommentReactionResponse withReactionValueRequiredException(Object reactionValueRequiredException) {
         this.reactionValueRequiredException = reactionValueRequiredException;
         return this;
@@ -86,6 +95,7 @@ public class PutCommentReactionResponse {
     
     
     public Integer statusCode;
+
     public PutCommentReactionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class PutCommentReactionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutCommentReactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutCommentReactionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

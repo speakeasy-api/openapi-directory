@@ -18,9 +18,11 @@ public class ResourceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludesDescendants")
     public Boolean excludesDescendants;
+
     public ResourceProperties withExcludesDescendants(Boolean excludesDescendants) {
         this.excludesDescendants = excludesDescendants;
         return this;
     }
     
+    public ResourceProperties(){}
 }

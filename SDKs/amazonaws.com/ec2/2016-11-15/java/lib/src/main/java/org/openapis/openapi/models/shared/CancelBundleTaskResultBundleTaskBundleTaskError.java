@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CancelBundleTaskResultBundleTaskBundleTaskError {
     
     public String code;
+
     public CancelBundleTaskResultBundleTaskBundleTaskError withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class CancelBundleTaskResultBundleTaskBundleTaskError {
     
     
     public String message;
+
     public CancelBundleTaskResultBundleTaskBundleTaskError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CancelBundleTaskResultBundleTaskBundleTaskError(){}
 }

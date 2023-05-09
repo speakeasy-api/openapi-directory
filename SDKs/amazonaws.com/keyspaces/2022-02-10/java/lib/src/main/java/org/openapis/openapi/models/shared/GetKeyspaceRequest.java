@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetKeyspaceRequest {
     @JsonProperty("keyspaceName")
     public String keyspaceName;
+
     public GetKeyspaceRequest withKeyspaceName(String keyspaceName) {
         this.keyspaceName = keyspaceName;
         return this;
     }
     
+    public GetKeyspaceRequest(@JsonProperty("keyspaceName") String keyspaceName) {
+        this.keyspaceName = keyspaceName;
+  }
 }

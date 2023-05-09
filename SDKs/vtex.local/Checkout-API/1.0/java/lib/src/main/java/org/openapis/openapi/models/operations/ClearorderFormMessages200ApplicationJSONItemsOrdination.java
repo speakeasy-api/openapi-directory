@@ -18,6 +18,7 @@ public class ClearorderFormMessages200ApplicationJSONItemsOrdination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ascending")
     public Boolean ascending;
+
     public ClearorderFormMessages200ApplicationJSONItemsOrdination withAscending(Boolean ascending) {
         this.ascending = ascending;
         return this;
@@ -29,9 +30,11 @@ public class ClearorderFormMessages200ApplicationJSONItemsOrdination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("criteria")
     public String criteria;
+
     public ClearorderFormMessages200ApplicationJSONItemsOrdination withCriteria(String criteria) {
         this.criteria = criteria;
         return this;
     }
     
+    public ClearorderFormMessages200ApplicationJSONItemsOrdination(){}
 }

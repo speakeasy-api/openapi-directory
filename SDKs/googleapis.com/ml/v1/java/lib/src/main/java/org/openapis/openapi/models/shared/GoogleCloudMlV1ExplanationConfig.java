@@ -18,6 +18,7 @@ public class GoogleCloudMlV1ExplanationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integratedGradientsAttribution")
     public GoogleCloudMlV1IntegratedGradientsAttribution integratedGradientsAttribution;
+
     public GoogleCloudMlV1ExplanationConfig withIntegratedGradientsAttribution(GoogleCloudMlV1IntegratedGradientsAttribution integratedGradientsAttribution) {
         this.integratedGradientsAttribution = integratedGradientsAttribution;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1ExplanationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampledShapleyAttribution")
     public GoogleCloudMlV1SampledShapleyAttribution sampledShapleyAttribution;
+
     public GoogleCloudMlV1ExplanationConfig withSampledShapleyAttribution(GoogleCloudMlV1SampledShapleyAttribution sampledShapleyAttribution) {
         this.sampledShapleyAttribution = sampledShapleyAttribution;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudMlV1ExplanationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xraiAttribution")
     public GoogleCloudMlV1XraiAttribution xraiAttribution;
+
     public GoogleCloudMlV1ExplanationConfig withXraiAttribution(GoogleCloudMlV1XraiAttribution xraiAttribution) {
         this.xraiAttribution = xraiAttribution;
         return this;
     }
     
+    public GoogleCloudMlV1ExplanationConfig(){}
 }

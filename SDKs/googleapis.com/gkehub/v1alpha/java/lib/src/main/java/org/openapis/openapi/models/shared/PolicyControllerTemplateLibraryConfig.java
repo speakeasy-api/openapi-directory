@@ -13,25 +13,28 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class PolicyControllerTemplateLibraryConfig {
     /**
-     * Whether the standard template library should be installed or not. TODO (b/271878194): Remove this
+     * Whether the standard template library should be installed or not.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("included")
     public Boolean included;
+
     public PolicyControllerTemplateLibraryConfig withIncluded(Boolean included) {
         this.included = included;
         return this;
     }
     
     /**
-     * Configures the manner in which the template library is installed on the cluster. TODO (b/271878194): Decrement this
+     * Configures the manner in which the template library is installed on the cluster.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installation")
     public PolicyControllerTemplateLibraryConfigInstallationEnum installation;
+
     public PolicyControllerTemplateLibraryConfig withInstallation(PolicyControllerTemplateLibraryConfigInstallationEnum installation) {
         this.installation = installation;
         return this;
     }
     
+    public PolicyControllerTemplateLibraryConfig(){}
 }

@@ -130,4 +130,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateTeamMemberRequest.jav
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateUserProfileResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateUserProfileRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

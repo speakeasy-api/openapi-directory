@@ -18,6 +18,7 @@ public class EnterpriseCrmEventbusProtoEventExecutionSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkpointTaskNumber")
     public String checkpointTaskNumber;
+
     public EnterpriseCrmEventbusProtoEventExecutionSnapshot withCheckpointTaskNumber(String checkpointTaskNumber) {
         this.checkpointTaskNumber = checkpointTaskNumber;
         return this;
@@ -29,6 +30,7 @@ public class EnterpriseCrmEventbusProtoEventExecutionSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditionResults")
     public EnterpriseCrmEventbusProtoConditionResult[] conditionResults;
+
     public EnterpriseCrmEventbusProtoEventExecutionSnapshot withConditionResults(EnterpriseCrmEventbusProtoConditionResult[] conditionResults) {
         this.conditionResults = conditionResults;
         return this;
@@ -40,6 +42,7 @@ public class EnterpriseCrmEventbusProtoEventExecutionSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diffParams")
     public EnterpriseCrmEventbusProtoEventParameters diffParams;
+
     public EnterpriseCrmEventbusProtoEventExecutionSnapshot withDiffParams(EnterpriseCrmEventbusProtoEventParameters diffParams) {
         this.diffParams = diffParams;
         return this;
@@ -51,6 +54,7 @@ public class EnterpriseCrmEventbusProtoEventExecutionSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventExecutionInfoId")
     public String eventExecutionInfoId;
+
     public EnterpriseCrmEventbusProtoEventExecutionSnapshot withEventExecutionInfoId(String eventExecutionInfoId) {
         this.eventExecutionInfoId = eventExecutionInfoId;
         return this;
@@ -62,6 +66,7 @@ public class EnterpriseCrmEventbusProtoEventExecutionSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventExecutionSnapshotId")
     public String eventExecutionSnapshotId;
+
     public EnterpriseCrmEventbusProtoEventExecutionSnapshot withEventExecutionSnapshotId(String eventExecutionSnapshotId) {
         this.eventExecutionSnapshotId = eventExecutionSnapshotId;
         return this;
@@ -70,6 +75,7 @@ public class EnterpriseCrmEventbusProtoEventExecutionSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventExecutionSnapshotMetadata")
     public EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata eventExecutionSnapshotMetadata;
+
     public EnterpriseCrmEventbusProtoEventExecutionSnapshot withEventExecutionSnapshotMetadata(EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata eventExecutionSnapshotMetadata) {
         this.eventExecutionSnapshotMetadata = eventExecutionSnapshotMetadata;
         return this;
@@ -81,6 +87,7 @@ public class EnterpriseCrmEventbusProtoEventExecutionSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventParams")
     public EnterpriseCrmEventbusProtoEventParameters eventParams;
+
     public EnterpriseCrmEventbusProtoEventExecutionSnapshot withEventParams(EnterpriseCrmEventbusProtoEventParameters eventParams) {
         this.eventParams = eventParams;
         return this;
@@ -92,6 +99,7 @@ public class EnterpriseCrmEventbusProtoEventExecutionSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceedMaxSize")
     public Boolean exceedMaxSize;
+
     public EnterpriseCrmEventbusProtoEventExecutionSnapshot withExceedMaxSize(Boolean exceedMaxSize) {
         this.exceedMaxSize = exceedMaxSize;
         return this;
@@ -103,6 +111,7 @@ public class EnterpriseCrmEventbusProtoEventExecutionSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotTime")
     public String snapshotTime;
+
     public EnterpriseCrmEventbusProtoEventExecutionSnapshot withSnapshotTime(String snapshotTime) {
         this.snapshotTime = snapshotTime;
         return this;
@@ -114,6 +123,7 @@ public class EnterpriseCrmEventbusProtoEventExecutionSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskExecutionDetails")
     public EnterpriseCrmEventbusProtoTaskExecutionDetails[] taskExecutionDetails;
+
     public EnterpriseCrmEventbusProtoEventExecutionSnapshot withTaskExecutionDetails(EnterpriseCrmEventbusProtoTaskExecutionDetails[] taskExecutionDetails) {
         this.taskExecutionDetails = taskExecutionDetails;
         return this;
@@ -125,9 +135,11 @@ public class EnterpriseCrmEventbusProtoEventExecutionSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskName")
     public String taskName;
+
     public EnterpriseCrmEventbusProtoEventExecutionSnapshot withTaskName(String taskName) {
         this.taskName = taskName;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoEventExecutionSnapshot(){}
 }

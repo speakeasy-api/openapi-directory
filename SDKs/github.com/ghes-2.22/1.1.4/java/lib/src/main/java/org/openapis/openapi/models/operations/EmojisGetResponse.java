@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EmojisGetResponse {
     
     public String contentType;
+
     public EmojisGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EmojisGetResponse {
     
     
     public Integer statusCode;
+
     public EmojisGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EmojisGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EmojisGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class EmojisGetResponse {
      */
     
     public java.util.Map<String, String> emojisGet200ApplicationJSONObject;
+
     public EmojisGetResponse withEmojisGet200ApplicationJSONObject(java.util.Map<String, String> emojisGet200ApplicationJSONObject) {
         this.emojisGet200ApplicationJSONObject = emojisGet200ApplicationJSONObject;
         return this;
     }
     
+    public EmojisGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

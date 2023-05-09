@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class OptionGroupsList {
     
     public Boolean allowsVpcAndNonVpcInstanceMemberships;
+
     public OptionGroupsList withAllowsVpcAndNonVpcInstanceMemberships(Boolean allowsVpcAndNonVpcInstanceMemberships) {
         this.allowsVpcAndNonVpcInstanceMemberships = allowsVpcAndNonVpcInstanceMemberships;
         return this;
@@ -19,6 +20,7 @@ public class OptionGroupsList {
     
     
     public OffsetDateTime copyTimestamp;
+
     public OptionGroupsList withCopyTimestamp(OffsetDateTime copyTimestamp) {
         this.copyTimestamp = copyTimestamp;
         return this;
@@ -26,6 +28,7 @@ public class OptionGroupsList {
     
     
     public String engineName;
+
     public OptionGroupsList withEngineName(String engineName) {
         this.engineName = engineName;
         return this;
@@ -33,6 +36,7 @@ public class OptionGroupsList {
     
     
     public String majorEngineVersion;
+
     public OptionGroupsList withMajorEngineVersion(String majorEngineVersion) {
         this.majorEngineVersion = majorEngineVersion;
         return this;
@@ -40,6 +44,7 @@ public class OptionGroupsList {
     
     
     public String optionGroupArn;
+
     public OptionGroupsList withOptionGroupArn(String optionGroupArn) {
         this.optionGroupArn = optionGroupArn;
         return this;
@@ -47,6 +52,7 @@ public class OptionGroupsList {
     
     
     public String optionGroupDescription;
+
     public OptionGroupsList withOptionGroupDescription(String optionGroupDescription) {
         this.optionGroupDescription = optionGroupDescription;
         return this;
@@ -54,6 +60,7 @@ public class OptionGroupsList {
     
     
     public String optionGroupName;
+
     public OptionGroupsList withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -61,6 +68,7 @@ public class OptionGroupsList {
     
     
     public OptionsList[] options;
+
     public OptionGroupsList withOptions(OptionsList[] options) {
         this.options = options;
         return this;
@@ -68,6 +76,7 @@ public class OptionGroupsList {
     
     
     public String sourceAccountId;
+
     public OptionGroupsList withSourceAccountId(String sourceAccountId) {
         this.sourceAccountId = sourceAccountId;
         return this;
@@ -75,6 +84,7 @@ public class OptionGroupsList {
     
     
     public String sourceOptionGroup;
+
     public OptionGroupsList withSourceOptionGroup(String sourceOptionGroup) {
         this.sourceOptionGroup = sourceOptionGroup;
         return this;
@@ -82,9 +92,11 @@ public class OptionGroupsList {
     
     
     public String vpcId;
+
     public OptionGroupsList withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public OptionGroupsList(){}
 }

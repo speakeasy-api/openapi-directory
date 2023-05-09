@@ -12,6 +12,7 @@ public class ReviewCommentLinks {
      */
     @JsonProperty("html")
     public Link html;
+
     public ReviewCommentLinks withHtml(Link html) {
         this.html = html;
         return this;
@@ -22,6 +23,7 @@ public class ReviewCommentLinks {
      */
     @JsonProperty("pull_request")
     public Link pullRequest;
+
     public ReviewCommentLinks withPullRequest(Link pullRequest) {
         this.pullRequest = pullRequest;
         return this;
@@ -32,9 +34,15 @@ public class ReviewCommentLinks {
      */
     @JsonProperty("self")
     public Link self;
+
     public ReviewCommentLinks withSelf(Link self) {
         this.self = self;
         return this;
     }
     
+    public ReviewCommentLinks(@JsonProperty("html") Link html, @JsonProperty("pull_request") Link pullRequest, @JsonProperty("self") Link self) {
+        this.html = html;
+        this.pullRequest = pullRequest;
+        this.self = self;
+  }
 }

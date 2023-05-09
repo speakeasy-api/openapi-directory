@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVaultByIdRequest {
@@ -12,9 +13,13 @@ public class GetVaultByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vaultUuid")
     public String vaultUuid;
+
     public GetVaultByIdRequest withVaultUuid(String vaultUuid) {
         this.vaultUuid = vaultUuid;
         return this;
     }
     
+    public GetVaultByIdRequest(@JsonProperty("vaultUuid") String vaultUuid) {
+        this.vaultUuid = vaultUuid;
+  }
 }

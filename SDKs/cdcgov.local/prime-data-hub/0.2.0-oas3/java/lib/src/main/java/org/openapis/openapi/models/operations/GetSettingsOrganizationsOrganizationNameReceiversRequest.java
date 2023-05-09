@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSettingsOrganizationsOrganizationNameReceiversRequest {
@@ -12,9 +13,13 @@ public class GetSettingsOrganizationsOrganizationNameReceiversRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationName")
     public String organizationName;
+
     public GetSettingsOrganizationsOrganizationNameReceiversRequest withOrganizationName(String organizationName) {
         this.organizationName = organizationName;
         return this;
     }
     
+    public GetSettingsOrganizationsOrganizationNameReceiversRequest(@JsonProperty("organizationName") String organizationName) {
+        this.organizationName = organizationName;
+  }
 }

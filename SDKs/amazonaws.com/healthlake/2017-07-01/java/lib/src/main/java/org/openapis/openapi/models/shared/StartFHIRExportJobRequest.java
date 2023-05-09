@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartFHIRExportJobRequest {
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public StartFHIRExportJobRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -18,6 +19,7 @@ public class StartFHIRExportJobRequest {
     
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public StartFHIRExportJobRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -25,6 +27,7 @@ public class StartFHIRExportJobRequest {
     
     @JsonProperty("DatastoreId")
     public String datastoreId;
+
     public StartFHIRExportJobRequest withDatastoreId(String datastoreId) {
         this.datastoreId = datastoreId;
         return this;
@@ -33,6 +36,7 @@ public class StartFHIRExportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public StartFHIRExportJobRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -40,9 +44,16 @@ public class StartFHIRExportJobRequest {
     
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public StartFHIRExportJobRequest withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
     }
     
+    public StartFHIRExportJobRequest(@JsonProperty("ClientToken") String clientToken, @JsonProperty("DataAccessRoleArn") String dataAccessRoleArn, @JsonProperty("DatastoreId") String datastoreId, @JsonProperty("OutputDataConfig") OutputDataConfig outputDataConfig) {
+        this.clientToken = clientToken;
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        this.datastoreId = datastoreId;
+        this.outputDataConfig = outputDataConfig;
+  }
 }

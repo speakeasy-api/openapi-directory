@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class SecurityPolicyRule {
     /**
-     * The Action to perform when the rule is matched. The following are the valid actions: - allow: allow access to target. - deny(STATUS): deny access to target, returns the HTTP response code specified. Valid values for `STATUS` are 403, 404, and 502. - rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions. - throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this. 
+     * The Action to perform when the rule is matched. The following are the valid actions: - allow: allow access to target. - deny(STATUS): deny access to target, returns the HTTP response code specified. Valid values for `STATUS` are 403, 404, and 502. - rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions. This action is only supported in Global Security Policies of type CLOUD_ARMOR. - throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this. 
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public SecurityPolicyRule withAction(String action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class SecurityPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SecurityPolicyRule withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class SecurityPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public SecurityPolicyRuleDirectionEnum direction;
+
     public SecurityPolicyRule withDirection(SecurityPolicyRuleDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -51,6 +54,7 @@ public class SecurityPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableLogging")
     public Boolean enableLogging;
+
     public SecurityPolicyRule withEnableLogging(Boolean enableLogging) {
         this.enableLogging = enableLogging;
         return this;
@@ -59,6 +63,7 @@ public class SecurityPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerAction")
     public SecurityPolicyRuleHttpHeaderAction headerAction;
+
     public SecurityPolicyRule withHeaderAction(SecurityPolicyRuleHttpHeaderAction headerAction) {
         this.headerAction = headerAction;
         return this;
@@ -70,6 +75,7 @@ public class SecurityPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SecurityPolicyRule withKind(String kind) {
         this.kind = kind;
         return this;
@@ -81,6 +87,7 @@ public class SecurityPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("match")
     public SecurityPolicyRuleMatcher match;
+
     public SecurityPolicyRule withMatch(SecurityPolicyRuleMatcher match) {
         this.match = match;
         return this;
@@ -92,6 +99,7 @@ public class SecurityPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkMatch")
     public SecurityPolicyRuleNetworkMatcher networkMatch;
+
     public SecurityPolicyRule withNetworkMatch(SecurityPolicyRuleNetworkMatcher networkMatch) {
         this.networkMatch = networkMatch;
         return this;
@@ -100,6 +108,7 @@ public class SecurityPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preconfiguredWafConfig")
     public SecurityPolicyRulePreconfiguredWafConfig preconfiguredWafConfig;
+
     public SecurityPolicyRule withPreconfiguredWafConfig(SecurityPolicyRulePreconfiguredWafConfig preconfiguredWafConfig) {
         this.preconfiguredWafConfig = preconfiguredWafConfig;
         return this;
@@ -111,6 +120,7 @@ public class SecurityPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preview")
     public Boolean preview;
+
     public SecurityPolicyRule withPreview(Boolean preview) {
         this.preview = preview;
         return this;
@@ -122,6 +132,7 @@ public class SecurityPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public SecurityPolicyRule withPriority(Integer priority) {
         this.priority = priority;
         return this;
@@ -130,6 +141,7 @@ public class SecurityPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rateLimitOptions")
     public SecurityPolicyRuleRateLimitOptions rateLimitOptions;
+
     public SecurityPolicyRule withRateLimitOptions(SecurityPolicyRuleRateLimitOptions rateLimitOptions) {
         this.rateLimitOptions = rateLimitOptions;
         return this;
@@ -138,6 +150,7 @@ public class SecurityPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectOptions")
     public SecurityPolicyRuleRedirectOptions redirectOptions;
+
     public SecurityPolicyRule withRedirectOptions(SecurityPolicyRuleRedirectOptions redirectOptions) {
         this.redirectOptions = redirectOptions;
         return this;
@@ -149,6 +162,7 @@ public class SecurityPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectTarget")
     public String redirectTarget;
+
     public SecurityPolicyRule withRedirectTarget(String redirectTarget) {
         this.redirectTarget = redirectTarget;
         return this;
@@ -160,6 +174,7 @@ public class SecurityPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleManagedProtectionTier")
     public SecurityPolicyRuleRuleManagedProtectionTierEnum ruleManagedProtectionTier;
+
     public SecurityPolicyRule withRuleManagedProtectionTier(SecurityPolicyRuleRuleManagedProtectionTierEnum ruleManagedProtectionTier) {
         this.ruleManagedProtectionTier = ruleManagedProtectionTier;
         return this;
@@ -171,6 +186,7 @@ public class SecurityPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleNumber")
     public String ruleNumber;
+
     public SecurityPolicyRule withRuleNumber(String ruleNumber) {
         this.ruleNumber = ruleNumber;
         return this;
@@ -182,6 +198,7 @@ public class SecurityPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleTupleCount")
     public Integer ruleTupleCount;
+
     public SecurityPolicyRule withRuleTupleCount(Integer ruleTupleCount) {
         this.ruleTupleCount = ruleTupleCount;
         return this;
@@ -193,6 +210,7 @@ public class SecurityPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetResources")
     public String[] targetResources;
+
     public SecurityPolicyRule withTargetResources(String[] targetResources) {
         this.targetResources = targetResources;
         return this;
@@ -204,9 +222,11 @@ public class SecurityPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetServiceAccounts")
     public String[] targetServiceAccounts;
+
     public SecurityPolicyRule withTargetServiceAccounts(String[] targetServiceAccounts) {
         this.targetServiceAccounts = targetServiceAccounts;
         return this;
     }
     
+    public SecurityPolicyRule(){}
 }

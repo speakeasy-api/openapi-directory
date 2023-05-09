@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ComputerVisionImageCreateResponse {
     @JsonProperty("upload_id")
     public String uploadId;
+
     public ComputerVisionImageCreateResponse withUploadId(String uploadId) {
         this.uploadId = uploadId;
         return this;
     }
     
+    public ComputerVisionImageCreateResponse(@JsonProperty("upload_id") String uploadId) {
+        this.uploadId = uploadId;
+  }
 }

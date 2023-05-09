@@ -58,12 +58,10 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateUserResponse res = new org.openapis.openapi.models.operations.CreateUserResponse() {{
+        org.openapis.openapi.models.operations.CreateUserResponse res = new org.openapis.openapi.models.operations.CreateUserResponse(contentType, httpRes.statusCode()) {{
             createUser200ApplicationJSONObject = null;
             createUser400ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -120,11 +118,9 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetListUsersResponse res = new org.openapis.openapi.models.operations.GetListUsersResponse() {{
+        org.openapis.openapi.models.operations.GetListUsersResponse res = new org.openapis.openapi.models.operations.GetListUsersResponse(contentType, httpRes.statusCode()) {{
             listUsersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -168,12 +164,10 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserResponse res = new org.openapis.openapi.models.operations.GetUserResponse() {{
+        org.openapis.openapi.models.operations.GetUserResponse res = new org.openapis.openapi.models.operations.GetUserResponse(contentType, httpRes.statusCode()) {{
             getUser200ApplicationJSONObject = null;
             getUser400ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class VirtualMachineArchitectureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bios")
     public BiosDetails bios;
+
     public VirtualMachineArchitectureDetails withBios(BiosDetails bios) {
         this.bios = bios;
         return this;
@@ -29,6 +30,7 @@ public class VirtualMachineArchitectureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuArchitecture")
     public String cpuArchitecture;
+
     public VirtualMachineArchitectureDetails withCpuArchitecture(String cpuArchitecture) {
         this.cpuArchitecture = cpuArchitecture;
         return this;
@@ -40,6 +42,7 @@ public class VirtualMachineArchitectureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuManufacturer")
     public String cpuManufacturer;
+
     public VirtualMachineArchitectureDetails withCpuManufacturer(String cpuManufacturer) {
         this.cpuManufacturer = cpuManufacturer;
         return this;
@@ -51,6 +54,7 @@ public class VirtualMachineArchitectureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuName")
     public String cpuName;
+
     public VirtualMachineArchitectureDetails withCpuName(String cpuName) {
         this.cpuName = cpuName;
         return this;
@@ -62,6 +66,7 @@ public class VirtualMachineArchitectureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuSocketCount")
     public Integer cpuSocketCount;
+
     public VirtualMachineArchitectureDetails withCpuSocketCount(Integer cpuSocketCount) {
         this.cpuSocketCount = cpuSocketCount;
         return this;
@@ -73,6 +78,7 @@ public class VirtualMachineArchitectureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuThreadCount")
     public Integer cpuThreadCount;
+
     public VirtualMachineArchitectureDetails withCpuThreadCount(Integer cpuThreadCount) {
         this.cpuThreadCount = cpuThreadCount;
         return this;
@@ -84,6 +90,7 @@ public class VirtualMachineArchitectureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firmware")
     public String firmware;
+
     public VirtualMachineArchitectureDetails withFirmware(String firmware) {
         this.firmware = firmware;
         return this;
@@ -95,6 +102,7 @@ public class VirtualMachineArchitectureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hyperthreading")
     public VirtualMachineArchitectureDetailsHyperthreadingEnum hyperthreading;
+
     public VirtualMachineArchitectureDetails withHyperthreading(VirtualMachineArchitectureDetailsHyperthreadingEnum hyperthreading) {
         this.hyperthreading = hyperthreading;
         return this;
@@ -106,9 +114,11 @@ public class VirtualMachineArchitectureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor")
     public String vendor;
+
     public VirtualMachineArchitectureDetails withVendor(String vendor) {
         this.vendor = vendor;
         return this;
     }
     
+    public VirtualMachineArchitectureDetails(){}
 }

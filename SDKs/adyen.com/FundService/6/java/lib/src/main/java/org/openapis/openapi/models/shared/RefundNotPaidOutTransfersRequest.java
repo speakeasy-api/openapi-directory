@@ -12,6 +12,7 @@ public class RefundNotPaidOutTransfersRequest {
      */
     @JsonProperty("accountCode")
     public String accountCode;
+
     public RefundNotPaidOutTransfersRequest withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -22,9 +23,14 @@ public class RefundNotPaidOutTransfersRequest {
      */
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public RefundNotPaidOutTransfersRequest withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
     }
     
+    public RefundNotPaidOutTransfersRequest(@JsonProperty("accountCode") String accountCode, @JsonProperty("accountHolderCode") String accountHolderCode) {
+        this.accountCode = accountCode;
+        this.accountHolderCode = accountHolderCode;
+  }
 }

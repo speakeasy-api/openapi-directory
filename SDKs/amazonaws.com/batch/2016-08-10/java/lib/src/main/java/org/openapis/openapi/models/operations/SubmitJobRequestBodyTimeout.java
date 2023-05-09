@@ -15,9 +15,11 @@ public class SubmitJobRequestBodyTimeout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attemptDurationSeconds")
     public Long attemptDurationSeconds;
+
     public SubmitJobRequestBodyTimeout withAttemptDurationSeconds(Long attemptDurationSeconds) {
         this.attemptDurationSeconds = attemptDurationSeconds;
         return this;
     }
     
+    public SubmitJobRequestBodyTimeout(){}
 }

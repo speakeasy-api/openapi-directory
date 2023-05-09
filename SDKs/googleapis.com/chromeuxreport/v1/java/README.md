@@ -16,12 +16,11 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.ChromeuxreportRecordsQueryHistoryRecordRequest;
 import org.openapis.openapi.models.operations.ChromeuxreportRecordsQueryHistoryRecordResponse;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.QueryHistoryRequestFormFactorEnum;
 import org.openapis.openapi.models.shared.QueryHistoryRequest;
+import org.openapis.openapi.models.shared.QueryHistoryRequestFormFactorEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -31,9 +30,9 @@ public class Application {
                 .build();
 
             ChromeuxreportRecordsQueryHistoryRecordRequest req = new ChromeuxreportRecordsQueryHistoryRecordRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 queryHistoryRequest = new QueryHistoryRequest() {{
-                    formFactor = "DESKTOP";
+                    formFactor = QueryHistoryRequestFormFactorEnum.DESKTOP;
                     metrics = new String[]{{
                         add("quibusdam"),
                         add("unde"),
@@ -41,9 +40,9 @@ public class Application {
                     }};
                     origin = "corrupti";
                     url = "illum";
-                }};
+                }};;
                 accessToken = "vel";
-                alt = "media";
+                alt = AltEnum.MEDIA;
                 callback = "deserunt";
                 fields = "suscipit";
                 key = "iure";
@@ -52,16 +51,18 @@ public class Application {
                 quotaUser = "debitis";
                 uploadType = "ipsa";
                 uploadProtocol = "delectus";
-            }}            
+            }};            
 
             ChromeuxreportRecordsQueryHistoryRecordResponse res = sdk.records.chromeuxreportRecordsQueryHistoryRecord(req);
 
-            if (res.queryHistoryResponse.isPresent()) {
+            if (res.queryHistoryResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -69,10 +70,10 @@ public class Application {
 ## Available Resources and Operations
 
 
-### records
+### [records](docs/records/README.md)
 
-* `chromeuxreportRecordsQueryHistoryRecord` - Queries the Chrome User Experience Report for a timeseries `history record` for a given site. Returns a `history record` that contains one or more `metric timeseries` corresponding to performance data about the requested site.
-* `chromeuxreportRecordsQueryRecord` - Queries the Chrome User Experience for a single `record` for a given site. Returns a `record` that contains one or more `metrics` corresponding to performance data about the requested site.
+* [chromeuxreportRecordsQueryHistoryRecord](docs/records/README.md#chromeuxreportrecordsqueryhistoryrecord) - Queries the Chrome User Experience Report for a timeseries `history record` for a given site. Returns a `history record` that contains one or more `metric timeseries` corresponding to performance data about the requested site.
+* [chromeuxreportRecordsQueryRecord](docs/records/README.md#chromeuxreportrecordsqueryrecord) - Queries the Chrome User Experience for a single `record` for a given site. Returns a `record` that contains one or more `metrics` corresponding to performance data about the requested site.
 <!-- End SDK Available Operations -->
 
 ### Maturity

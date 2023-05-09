@@ -15,9 +15,11 @@ public class StartTriggerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public StartTriggerResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StartTriggerResponse(){}
 }

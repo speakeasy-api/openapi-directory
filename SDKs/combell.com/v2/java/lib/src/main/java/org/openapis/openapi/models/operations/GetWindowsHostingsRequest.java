@@ -12,6 +12,7 @@ public class GetWindowsHostingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Integer skip;
+
     public GetWindowsHostingsRequest withSkip(Integer skip) {
         this.skip = skip;
         return this;
@@ -22,9 +23,11 @@ public class GetWindowsHostingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=take")
     public Integer take;
+
     public GetWindowsHostingsRequest withTake(Integer take) {
         this.take = take;
         return this;
     }
     
+    public GetWindowsHostingsRequest(){}
 }

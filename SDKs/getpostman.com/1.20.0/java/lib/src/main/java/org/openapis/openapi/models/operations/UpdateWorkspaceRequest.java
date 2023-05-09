@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateWorkspaceRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateWorkspaceRequestBody requestBody;
+
     public UpdateWorkspaceRequest withRequestBody(UpdateWorkspaceRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,13 @@ public class UpdateWorkspaceRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_id")
     public String workspaceId;
+
     public UpdateWorkspaceRequest withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public UpdateWorkspaceRequest(@JsonProperty("workspace_id") String workspaceId) {
+        this.workspaceId = workspaceId;
+  }
 }

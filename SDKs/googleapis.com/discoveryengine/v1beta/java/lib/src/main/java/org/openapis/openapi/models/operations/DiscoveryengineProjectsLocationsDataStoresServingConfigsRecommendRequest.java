@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRequest {
@@ -12,6 +13,7 @@ public class DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRe
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleCloudDiscoveryengineV1betaRecommendRequest googleCloudDiscoveryengineV1betaRecommendRequest;
+
     public DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRequest withGoogleCloudDiscoveryengineV1betaRecommendRequest(org.openapis.openapi.models.shared.GoogleCloudDiscoveryengineV1betaRecommendRequest googleCloudDiscoveryengineV1betaRecommendRequest) {
         this.googleCloudDiscoveryengineV1betaRecommendRequest = googleCloudDiscoveryengineV1betaRecommendRequest;
         return this;
@@ -29,6 +32,7 @@ public class DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,16 +109,18 @@ public class DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
     }
     
     /**
-     * Required. Full resource name of the format: projects/* /locations/global/collections/* /dataStores/* /servingConfigs/* Before you can request recommendations from your model, you must create at least one serving config for it.
+     * Required. Full resource name of the format: `projects/* /locations/global/collections/* /dataStores/* /servingConfigs/*` Before you can request recommendations from your model, you must create at least one serving config for it.
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=servingConfig")
     public String servingConfig;
+
     public DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRequest withServingConfig(String servingConfig) {
         this.servingConfig = servingConfig;
         return this;
@@ -119,6 +131,7 @@ public class DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRequest(@JsonProperty("servingConfig") String servingConfig) {
+        this.servingConfig = servingConfig;
+  }
 }

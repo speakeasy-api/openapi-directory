@@ -18,9 +18,11 @@ public class QueuedResourceStatusFailedData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public QueuedResourceStatusFailedDataError error;
+
     public QueuedResourceStatusFailedData withError(QueuedResourceStatusFailedDataError error) {
         this.error = error;
         return this;
     }
     
+    public QueuedResourceStatusFailedData(){}
 }

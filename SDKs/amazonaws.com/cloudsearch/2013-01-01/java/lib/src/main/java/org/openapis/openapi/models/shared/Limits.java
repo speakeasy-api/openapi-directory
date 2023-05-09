@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Limits {
     
     public Long maximumPartitionCount;
+
     public Limits withMaximumPartitionCount(Long maximumPartitionCount) {
         this.maximumPartitionCount = maximumPartitionCount;
         return this;
@@ -16,9 +17,14 @@ public class Limits {
     
     
     public Long maximumReplicationCount;
+
     public Limits withMaximumReplicationCount(Long maximumReplicationCount) {
         this.maximumReplicationCount = maximumReplicationCount;
         return this;
     }
     
+    public Limits(@JsonProperty("MaximumPartitionCount") Long maximumPartitionCount, @JsonProperty("MaximumReplicationCount") Long maximumReplicationCount) {
+        this.maximumPartitionCount = maximumPartitionCount;
+        this.maximumReplicationCount = maximumReplicationCount;
+  }
 }

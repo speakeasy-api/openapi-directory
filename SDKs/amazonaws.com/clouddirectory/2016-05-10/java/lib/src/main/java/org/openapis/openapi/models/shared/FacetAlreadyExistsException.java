@@ -15,9 +15,11 @@ public class FacetAlreadyExistsException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public FacetAlreadyExistsException withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public FacetAlreadyExistsException(){}
 }

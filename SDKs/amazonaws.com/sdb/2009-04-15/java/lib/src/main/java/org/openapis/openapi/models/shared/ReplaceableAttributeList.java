@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ReplaceableAttributeList {
     
     public String name;
+
     public ReplaceableAttributeList withName(String name) {
         this.name = name;
         return this;
@@ -16,6 +17,7 @@ public class ReplaceableAttributeList {
     
     
     public Boolean replace;
+
     public ReplaceableAttributeList withReplace(Boolean replace) {
         this.replace = replace;
         return this;
@@ -23,9 +25,14 @@ public class ReplaceableAttributeList {
     
     
     public String value;
+
     public ReplaceableAttributeList withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ReplaceableAttributeList(@JsonProperty("Name") String name, @JsonProperty("Value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

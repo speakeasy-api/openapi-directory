@@ -15,6 +15,7 @@ public class AccountResponseContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public AccountResponseContact withEmail(String email) {
         this.email = email;
         return this;
@@ -26,6 +27,7 @@ public class AccountResponseContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AccountResponseContact withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class AccountResponseContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public AccountResponseContact withPhone(String phone) {
         this.phone = phone;
         return this;
     }
     
+    public AccountResponseContact(){}
 }

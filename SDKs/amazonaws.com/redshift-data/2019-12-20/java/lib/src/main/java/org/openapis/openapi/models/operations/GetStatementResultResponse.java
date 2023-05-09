@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStatementResultResponse {
     
     public String contentType;
+
     public GetStatementResultResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetStatementResultResponse {
      */
     
     public org.openapis.openapi.models.shared.GetStatementResultResponse getStatementResultResponse;
+
     public GetStatementResultResponse withGetStatementResultResponse(org.openapis.openapi.models.shared.GetStatementResultResponse getStatementResultResponse) {
         this.getStatementResultResponse = getStatementResultResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetStatementResultResponse {
      */
     
     public Object internalServerException;
+
     public GetStatementResultResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetStatementResultResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetStatementResultResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetStatementResultResponse {
     
     
     public Integer statusCode;
+
     public GetStatementResultResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetStatementResultResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStatementResultResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetStatementResultResponse {
      */
     
     public Object validationException;
+
     public GetStatementResultResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetStatementResultResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

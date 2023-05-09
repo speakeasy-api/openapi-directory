@@ -15,9 +15,11 @@ public class SslPoliciesListAvailableFeaturesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public String[] features;
+
     public SslPoliciesListAvailableFeaturesResponse withFeatures(String[] features) {
         this.features = features;
         return this;
     }
     
+    public SslPoliciesListAvailableFeaturesResponse(){}
 }

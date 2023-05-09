@@ -15,9 +15,11 @@ public class AwsEcsClusterConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecuteCommandConfiguration")
     public AwsEcsClusterConfigurationExecuteCommandConfigurationDetails executeCommandConfiguration;
+
     public AwsEcsClusterConfigurationDetails withExecuteCommandConfiguration(AwsEcsClusterConfigurationExecuteCommandConfigurationDetails executeCommandConfiguration) {
         this.executeCommandConfiguration = executeCommandConfiguration;
         return this;
     }
     
+    public AwsEcsClusterConfigurationDetails(){}
 }

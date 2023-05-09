@@ -15,6 +15,7 @@ public class SignJwtRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegates")
     public String[] delegates;
+
     public SignJwtRequest withDelegates(String[] delegates) {
         this.delegates = delegates;
         return this;
@@ -26,9 +27,11 @@ public class SignJwtRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public String payload;
+
     public SignJwtRequest withPayload(String payload) {
         this.payload = payload;
         return this;
     }
     
+    public SignJwtRequest(){}
 }

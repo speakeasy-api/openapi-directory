@@ -15,9 +15,11 @@ public class EventSourcesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmazonCodeGuruProfiler")
     public AmazonCodeGuruProfilerIntegration amazonCodeGuruProfiler;
+
     public EventSourcesConfig withAmazonCodeGuruProfiler(AmazonCodeGuruProfilerIntegration amazonCodeGuruProfiler) {
         this.amazonCodeGuruProfiler = amazonCodeGuruProfiler;
         return this;
     }
     
+    public EventSourcesConfig(){}
 }

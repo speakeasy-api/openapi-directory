@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class GetTransitGatewayPolicyTableEntriesResult {
     
     public GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntries[] transitGatewayPolicyTableEntries;
+
     public GetTransitGatewayPolicyTableEntriesResult withTransitGatewayPolicyTableEntries(GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntries[] transitGatewayPolicyTableEntries) {
         this.transitGatewayPolicyTableEntries = transitGatewayPolicyTableEntries;
         return this;
     }
     
+    public GetTransitGatewayPolicyTableEntriesResult(){}
 }

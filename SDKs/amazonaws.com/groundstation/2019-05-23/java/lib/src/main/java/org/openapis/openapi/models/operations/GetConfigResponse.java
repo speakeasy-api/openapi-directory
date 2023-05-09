@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetConfigResponse {
     
     public String contentType;
+
     public GetConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetConfigResponse {
      */
     
     public Object dependencyException;
+
     public GetConfigResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -29,6 +32,7 @@ public class GetConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.GetConfigResponse getConfigResponse;
+
     public GetConfigResponse withGetConfigResponse(org.openapis.openapi.models.shared.GetConfigResponse getConfigResponse) {
         this.getConfigResponse = getConfigResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetConfigResponse {
      */
     
     public Object invalidParameterException;
+
     public GetConfigResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class GetConfigResponse {
     
     
     public Integer statusCode;
+
     public GetConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

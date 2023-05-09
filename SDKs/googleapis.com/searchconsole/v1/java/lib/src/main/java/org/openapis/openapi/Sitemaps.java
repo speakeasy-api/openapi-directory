@@ -58,10 +58,8 @@ public class Sitemaps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebmastersSitemapsDeleteResponse res = new org.openapis.openapi.models.operations.WebmastersSitemapsDeleteResponse() {{
+        org.openapis.openapi.models.operations.WebmastersSitemapsDeleteResponse res = new org.openapis.openapi.models.operations.WebmastersSitemapsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class Sitemaps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebmastersSitemapsGetResponse res = new org.openapis.openapi.models.operations.WebmastersSitemapsGetResponse() {{
+        org.openapis.openapi.models.operations.WebmastersSitemapsGetResponse res = new org.openapis.openapi.models.operations.WebmastersSitemapsGetResponse(contentType, httpRes.statusCode()) {{
             wmxSitemap = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,11 +140,9 @@ public class Sitemaps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebmastersSitemapsListResponse res = new org.openapis.openapi.models.operations.WebmastersSitemapsListResponse() {{
+        org.openapis.openapi.models.operations.WebmastersSitemapsListResponse res = new org.openapis.openapi.models.operations.WebmastersSitemapsListResponse(contentType, httpRes.statusCode()) {{
             sitemapsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -190,10 +184,8 @@ public class Sitemaps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebmastersSitemapsSubmitResponse res = new org.openapis.openapi.models.operations.WebmastersSitemapsSubmitResponse() {{
+        org.openapis.openapi.models.operations.WebmastersSitemapsSubmitResponse res = new org.openapis.openapi.models.operations.WebmastersSitemapsSubmitResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

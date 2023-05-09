@@ -15,6 +15,7 @@ public class StartProductSubscriptionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public String domain;
+
     public StartProductSubscriptionRequestBody withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -25,6 +26,7 @@ public class StartProductSubscriptionRequestBody {
      */
     @JsonProperty("IdentityProvider")
     public StartProductSubscriptionRequestBodyIdentityProvider identityProvider;
+
     public StartProductSubscriptionRequestBody withIdentityProvider(StartProductSubscriptionRequestBodyIdentityProvider identityProvider) {
         this.identityProvider = identityProvider;
         return this;
@@ -35,6 +37,7 @@ public class StartProductSubscriptionRequestBody {
      */
     @JsonProperty("Product")
     public String product;
+
     public StartProductSubscriptionRequestBody withProduct(String product) {
         this.product = product;
         return this;
@@ -45,9 +48,15 @@ public class StartProductSubscriptionRequestBody {
      */
     @JsonProperty("Username")
     public String username;
+
     public StartProductSubscriptionRequestBody withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public StartProductSubscriptionRequestBody(@JsonProperty("IdentityProvider") StartProductSubscriptionRequestBodyIdentityProvider identityProvider, @JsonProperty("Product") String product, @JsonProperty("Username") String username) {
+        this.identityProvider = identityProvider;
+        this.product = product;
+        this.username = username;
+  }
 }

@@ -17,6 +17,7 @@ public class PutStorageConfigurationResponse {
      */
     @JsonProperty("configurationStatus")
     public ConfigurationStatus configurationStatus;
+
     public PutStorageConfigurationResponse withConfigurationStatus(ConfigurationStatus configurationStatus) {
         this.configurationStatus = configurationStatus;
         return this;
@@ -25,6 +26,7 @@ public class PutStorageConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disassociatedDataStorage")
     public DisassociatedDataStorageStateEnum disassociatedDataStorage;
+
     public PutStorageConfigurationResponse withDisassociatedDataStorage(DisassociatedDataStorageStateEnum disassociatedDataStorage) {
         this.disassociatedDataStorage = disassociatedDataStorage;
         return this;
@@ -33,6 +35,7 @@ public class PutStorageConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiLayerStorage")
     public MultiLayerStorage multiLayerStorage;
+
     public PutStorageConfigurationResponse withMultiLayerStorage(MultiLayerStorage multiLayerStorage) {
         this.multiLayerStorage = multiLayerStorage;
         return this;
@@ -44,6 +47,7 @@ public class PutStorageConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionPeriod")
     public RetentionPeriod retentionPeriod;
+
     public PutStorageConfigurationResponse withRetentionPeriod(RetentionPeriod retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
@@ -51,9 +55,14 @@ public class PutStorageConfigurationResponse {
     
     @JsonProperty("storageType")
     public StorageTypeEnum storageType;
+
     public PutStorageConfigurationResponse withStorageType(StorageTypeEnum storageType) {
         this.storageType = storageType;
         return this;
     }
     
+    public PutStorageConfigurationResponse(@JsonProperty("configurationStatus") ConfigurationStatus configurationStatus, @JsonProperty("storageType") StorageTypeEnum storageType) {
+        this.configurationStatus = configurationStatus;
+        this.storageType = storageType;
+  }
 }

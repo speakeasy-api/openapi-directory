@@ -15,6 +15,7 @@ public class ListAllowedNodeTypeUpdatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScaleDownNodeTypes")
     public String[] scaleDownNodeTypes;
+
     public ListAllowedNodeTypeUpdatesResponse withScaleDownNodeTypes(String[] scaleDownNodeTypes) {
         this.scaleDownNodeTypes = scaleDownNodeTypes;
         return this;
@@ -23,9 +24,11 @@ public class ListAllowedNodeTypeUpdatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScaleUpNodeTypes")
     public String[] scaleUpNodeTypes;
+
     public ListAllowedNodeTypeUpdatesResponse withScaleUpNodeTypes(String[] scaleUpNodeTypes) {
         this.scaleUpNodeTypes = scaleUpNodeTypes;
         return this;
     }
     
+    public ListAllowedNodeTypeUpdatesResponse(){}
 }

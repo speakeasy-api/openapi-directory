@@ -15,6 +15,7 @@ public class UpdateGlobalTableSettingsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTableName")
     public String globalTableName;
+
     public UpdateGlobalTableSettingsOutput withGlobalTableName(String globalTableName) {
         this.globalTableName = globalTableName;
         return this;
@@ -23,9 +24,11 @@ public class UpdateGlobalTableSettingsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaSettings")
     public ReplicaSettingsDescription[] replicaSettings;
+
     public UpdateGlobalTableSettingsOutput withReplicaSettings(ReplicaSettingsDescription[] replicaSettings) {
         this.replicaSettings = replicaSettings;
         return this;
     }
     
+    public UpdateGlobalTableSettingsOutput(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TagSet {
     @JsonProperty("id")
     public String id;
+
     public TagSet withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class TagSet {
     
     @JsonProperty("name")
     public String name;
+
     public TagSet withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TagSet(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

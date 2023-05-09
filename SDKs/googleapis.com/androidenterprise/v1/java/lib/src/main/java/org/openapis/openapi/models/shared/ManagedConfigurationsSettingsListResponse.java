@@ -18,9 +18,11 @@ public class ManagedConfigurationsSettingsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedConfigurationsSettings")
     public ManagedConfigurationsSettings[] managedConfigurationsSettings;
+
     public ManagedConfigurationsSettingsListResponse withManagedConfigurationsSettings(ManagedConfigurationsSettings[] managedConfigurationsSettings) {
         this.managedConfigurationsSettings = managedConfigurationsSettings;
         return this;
     }
     
+    public ManagedConfigurationsSettingsListResponse(){}
 }

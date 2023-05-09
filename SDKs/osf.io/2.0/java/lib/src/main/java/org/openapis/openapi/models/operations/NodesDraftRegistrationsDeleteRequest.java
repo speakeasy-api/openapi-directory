@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NodesDraftRegistrationsDeleteRequest {
@@ -12,6 +13,7 @@ public class NodesDraftRegistrationsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=draft_id")
     public String draftId;
+
     public NodesDraftRegistrationsDeleteRequest withDraftId(String draftId) {
         this.draftId = draftId;
         return this;
@@ -22,9 +24,14 @@ public class NodesDraftRegistrationsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
     public String nodeId;
+
     public NodesDraftRegistrationsDeleteRequest withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
     }
     
+    public NodesDraftRegistrationsDeleteRequest(@JsonProperty("draft_id") String draftId, @JsonProperty("node_id") String nodeId) {
+        this.draftId = draftId;
+        this.nodeId = nodeId;
+  }
 }

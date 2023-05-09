@@ -15,6 +15,7 @@ public class DirectConnectGatewayAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedPrefixesToDirectConnectGateway")
     public RouteFilterPrefix[] allowedPrefixesToDirectConnectGateway;
+
     public DirectConnectGatewayAssociation withAllowedPrefixesToDirectConnectGateway(RouteFilterPrefix[] allowedPrefixesToDirectConnectGateway) {
         this.allowedPrefixesToDirectConnectGateway = allowedPrefixesToDirectConnectGateway;
         return this;
@@ -23,6 +24,7 @@ public class DirectConnectGatewayAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedGateway")
     public AssociatedGateway associatedGateway;
+
     public DirectConnectGatewayAssociation withAssociatedGateway(AssociatedGateway associatedGateway) {
         this.associatedGateway = associatedGateway;
         return this;
@@ -31,6 +33,7 @@ public class DirectConnectGatewayAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associationId")
     public String associationId;
+
     public DirectConnectGatewayAssociation withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -39,6 +42,7 @@ public class DirectConnectGatewayAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associationState")
     public DirectConnectGatewayAssociationStateEnum associationState;
+
     public DirectConnectGatewayAssociation withAssociationState(DirectConnectGatewayAssociationStateEnum associationState) {
         this.associationState = associationState;
         return this;
@@ -47,6 +51,7 @@ public class DirectConnectGatewayAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directConnectGatewayId")
     public String directConnectGatewayId;
+
     public DirectConnectGatewayAssociation withDirectConnectGatewayId(String directConnectGatewayId) {
         this.directConnectGatewayId = directConnectGatewayId;
         return this;
@@ -55,6 +60,7 @@ public class DirectConnectGatewayAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directConnectGatewayOwnerAccount")
     public String directConnectGatewayOwnerAccount;
+
     public DirectConnectGatewayAssociation withDirectConnectGatewayOwnerAccount(String directConnectGatewayOwnerAccount) {
         this.directConnectGatewayOwnerAccount = directConnectGatewayOwnerAccount;
         return this;
@@ -63,6 +69,7 @@ public class DirectConnectGatewayAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateChangeError")
     public String stateChangeError;
+
     public DirectConnectGatewayAssociation withStateChangeError(String stateChangeError) {
         this.stateChangeError = stateChangeError;
         return this;
@@ -71,6 +78,7 @@ public class DirectConnectGatewayAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualGatewayId")
     public String virtualGatewayId;
+
     public DirectConnectGatewayAssociation withVirtualGatewayId(String virtualGatewayId) {
         this.virtualGatewayId = virtualGatewayId;
         return this;
@@ -79,6 +87,7 @@ public class DirectConnectGatewayAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualGatewayOwnerAccount")
     public String virtualGatewayOwnerAccount;
+
     public DirectConnectGatewayAssociation withVirtualGatewayOwnerAccount(String virtualGatewayOwnerAccount) {
         this.virtualGatewayOwnerAccount = virtualGatewayOwnerAccount;
         return this;
@@ -87,9 +96,11 @@ public class DirectConnectGatewayAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualGatewayRegion")
     public String virtualGatewayRegion;
+
     public DirectConnectGatewayAssociation withVirtualGatewayRegion(String virtualGatewayRegion) {
         this.virtualGatewayRegion = virtualGatewayRegion;
         return this;
     }
     
+    public DirectConnectGatewayAssociation(){}
 }

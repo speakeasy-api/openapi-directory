@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AnalysisSchemeStatus - The status and configuration of an &lt;code&gt;AnalysisScheme&lt;/code&gt;.
@@ -15,6 +15,7 @@ public class AnalysisSchemeStatus {
      */
     
     public AnalysisScheme options;
+
     public AnalysisSchemeStatus withOptions(AnalysisScheme options) {
         this.options = options;
         return this;
@@ -25,9 +26,14 @@ public class AnalysisSchemeStatus {
      */
     
     public OptionStatus status;
+
     public AnalysisSchemeStatus withStatus(OptionStatus status) {
         this.status = status;
         return this;
     }
     
+    public AnalysisSchemeStatus(@JsonProperty("Options") AnalysisScheme options, @JsonProperty("Status") OptionStatus status) {
+        this.options = options;
+        this.status = status;
+  }
 }

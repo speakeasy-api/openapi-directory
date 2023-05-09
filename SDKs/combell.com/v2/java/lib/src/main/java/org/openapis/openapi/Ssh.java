@@ -58,11 +58,9 @@ public class Ssh {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllSshKeysResponse res = new org.openapis.openapi.models.operations.GetAllSshKeysResponse() {{
+        org.openapis.openapi.models.operations.GetAllSshKeysResponse res = new org.openapis.openapi.models.operations.GetAllSshKeysResponse(contentType, httpRes.statusCode()) {{
             sshKeyDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

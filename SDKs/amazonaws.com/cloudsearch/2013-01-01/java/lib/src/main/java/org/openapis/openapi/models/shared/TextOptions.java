@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TextOptions {
     
     public String analysisScheme;
+
     public TextOptions withAnalysisScheme(String analysisScheme) {
         this.analysisScheme = analysisScheme;
         return this;
@@ -19,6 +20,7 @@ public class TextOptions {
     
     
     public String defaultValue;
+
     public TextOptions withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -26,6 +28,7 @@ public class TextOptions {
     
     
     public Boolean highlightEnabled;
+
     public TextOptions withHighlightEnabled(Boolean highlightEnabled) {
         this.highlightEnabled = highlightEnabled;
         return this;
@@ -33,6 +36,7 @@ public class TextOptions {
     
     
     public Boolean returnEnabled;
+
     public TextOptions withReturnEnabled(Boolean returnEnabled) {
         this.returnEnabled = returnEnabled;
         return this;
@@ -40,6 +44,7 @@ public class TextOptions {
     
     
     public Boolean sortEnabled;
+
     public TextOptions withSortEnabled(Boolean sortEnabled) {
         this.sortEnabled = sortEnabled;
         return this;
@@ -50,9 +55,11 @@ public class TextOptions {
      */
     
     public String sourceField;
+
     public TextOptions withSourceField(String sourceField) {
         this.sourceField = sourceField;
         return this;
     }
     
+    public TextOptions(){}
 }

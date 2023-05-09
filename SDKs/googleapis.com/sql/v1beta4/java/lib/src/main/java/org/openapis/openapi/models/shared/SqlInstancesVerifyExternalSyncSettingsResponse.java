@@ -18,6 +18,7 @@ public class SqlInstancesVerifyExternalSyncSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public SqlExternalSyncSettingError[] errors;
+
     public SqlInstancesVerifyExternalSyncSettingsResponse withErrors(SqlExternalSyncSettingError[] errors) {
         this.errors = errors;
         return this;
@@ -29,6 +30,7 @@ public class SqlInstancesVerifyExternalSyncSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SqlInstancesVerifyExternalSyncSettingsResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class SqlInstancesVerifyExternalSyncSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public SqlExternalSyncSettingError[] warnings;
+
     public SqlInstancesVerifyExternalSyncSettingsResponse withWarnings(SqlExternalSyncSettingError[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public SqlInstancesVerifyExternalSyncSettingsResponse(){}
 }

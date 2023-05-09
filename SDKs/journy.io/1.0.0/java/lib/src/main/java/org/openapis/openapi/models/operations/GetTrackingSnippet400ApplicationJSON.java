@@ -15,6 +15,7 @@ public class GetTrackingSnippet400ApplicationJSON {
      */
     @JsonProperty("errors")
     public GetTrackingSnippet400ApplicationJSONErrors errors;
+
     public GetTrackingSnippet400ApplicationJSON withErrors(GetTrackingSnippet400ApplicationJSONErrors errors) {
         this.errors = errors;
         return this;
@@ -22,6 +23,7 @@ public class GetTrackingSnippet400ApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public GetTrackingSnippet400ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -29,9 +31,15 @@ public class GetTrackingSnippet400ApplicationJSON {
     
     @JsonProperty("meta")
     public GetTrackingSnippet400ApplicationJSONMeta meta;
+
     public GetTrackingSnippet400ApplicationJSON withMeta(GetTrackingSnippet400ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetTrackingSnippet400ApplicationJSON(@JsonProperty("errors") GetTrackingSnippet400ApplicationJSONErrors errors, @JsonProperty("message") String message, @JsonProperty("meta") GetTrackingSnippet400ApplicationJSONMeta meta) {
+        this.errors = errors;
+        this.message = message;
+        this.meta = meta;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStatementsRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Application-Id")
     public String xeroApplicationId;
+
     public GetStatementsRequest withXeroApplicationId(String xeroApplicationId) {
         this.xeroApplicationId = xeroApplicationId;
         return this;
@@ -19,6 +21,7 @@ public class GetStatementsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
     public String xeroTenantId;
+
     public GetStatementsRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
@@ -26,6 +29,7 @@ public class GetStatementsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-User-Id")
     public String xeroUserId;
+
     public GetStatementsRequest withXeroUserId(String xeroUserId) {
         this.xeroUserId = xeroUserId;
         return this;
@@ -36,6 +40,7 @@ public class GetStatementsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetStatementsRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -46,9 +51,13 @@ public class GetStatementsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public GetStatementsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetStatementsRequest(@JsonProperty("Xero-Tenant-Id") String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
+  }
 }

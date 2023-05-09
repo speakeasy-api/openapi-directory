@@ -20,6 +20,7 @@ public class WorkspaceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public WorkspaceDescription withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -27,6 +28,7 @@ public class WorkspaceDescription {
     
     @JsonProperty("arn")
     public String arn;
+
     public WorkspaceDescription withArn(String arn) {
         this.arn = arn;
         return this;
@@ -36,6 +38,7 @@ public class WorkspaceDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public WorkspaceDescription withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -44,6 +47,7 @@ public class WorkspaceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prometheusEndpoint")
     public String prometheusEndpoint;
+
     public WorkspaceDescription withPrometheusEndpoint(String prometheusEndpoint) {
         this.prometheusEndpoint = prometheusEndpoint;
         return this;
@@ -51,6 +55,7 @@ public class WorkspaceDescription {
     
     @JsonProperty("status")
     public WorkspaceStatus status;
+
     public WorkspaceDescription withStatus(WorkspaceStatus status) {
         this.status = status;
         return this;
@@ -59,6 +64,7 @@ public class WorkspaceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public WorkspaceDescription withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -66,9 +72,16 @@ public class WorkspaceDescription {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public WorkspaceDescription withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public WorkspaceDescription(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("status") WorkspaceStatus status, @JsonProperty("workspaceId") String workspaceId) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.status = status;
+        this.workspaceId = workspaceId;
+  }
 }

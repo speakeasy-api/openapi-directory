@@ -15,6 +15,7 @@ public class DescribeMLModelsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeMLModelsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeMLModelsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Results")
     public MLModel[] results;
+
     public DescribeMLModelsOutput withResults(MLModel[] results) {
         this.results = results;
         return this;
     }
     
+    public DescribeMLModelsOutput(){}
 }

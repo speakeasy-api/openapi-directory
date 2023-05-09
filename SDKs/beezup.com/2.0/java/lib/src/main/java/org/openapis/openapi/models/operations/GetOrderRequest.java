@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrderRequest {
@@ -16,6 +17,7 @@ public class GetOrderRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetOrderRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -23,6 +25,7 @@ public class GetOrderRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public Integer accountId;
+
     public GetOrderRequest withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -33,6 +36,7 @@ public class GetOrderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=beezUPOrderId")
     public String beezUPOrderId;
+
     public GetOrderRequest withBeezUPOrderId(String beezUPOrderId) {
         this.beezUPOrderId = beezUPOrderId;
         return this;
@@ -43,9 +47,15 @@ public class GetOrderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public GetOrderRequest withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
     }
     
+    public GetOrderRequest(@JsonProperty("accountId") Integer accountId, @JsonProperty("beezUPOrderId") String beezUPOrderId, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode) {
+        this.accountId = accountId;
+        this.beezUPOrderId = beezUPOrderId;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+  }
 }

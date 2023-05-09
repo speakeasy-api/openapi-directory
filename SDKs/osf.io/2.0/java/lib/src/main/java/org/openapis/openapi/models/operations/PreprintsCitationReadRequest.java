@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PreprintsCitationReadRequest {
@@ -12,6 +13,7 @@ public class PreprintsCitationReadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=preprint_id")
     public String preprintId;
+
     public PreprintsCitationReadRequest withPreprintId(String preprintId) {
         this.preprintId = preprintId;
         return this;
@@ -22,9 +24,14 @@ public class PreprintsCitationReadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=style_id")
     public String styleId;
+
     public PreprintsCitationReadRequest withStyleId(String styleId) {
         this.styleId = styleId;
         return this;
     }
     
+    public PreprintsCitationReadRequest(@JsonProperty("preprint_id") String preprintId, @JsonProperty("style_id") String styleId) {
+        this.preprintId = preprintId;
+        this.styleId = styleId;
+  }
 }

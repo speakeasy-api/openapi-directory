@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SuppliersGetAccountTransRequest {
@@ -12,9 +13,13 @@ public class SuppliersGetAccountTransRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
     public Long itemId;
+
     public SuppliersGetAccountTransRequest withItemId(Long itemId) {
         this.itemId = itemId;
         return this;
     }
     
+    public SuppliersGetAccountTransRequest(@JsonProperty("itemId") Long itemId) {
+        this.itemId = itemId;
+  }
 }

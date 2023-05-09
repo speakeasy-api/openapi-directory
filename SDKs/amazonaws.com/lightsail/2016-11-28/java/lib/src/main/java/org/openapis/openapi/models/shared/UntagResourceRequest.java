@@ -12,6 +12,7 @@ public class UntagResourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public UntagResourceRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -19,6 +20,7 @@ public class UntagResourceRequest {
     
     @JsonProperty("resourceName")
     public String resourceName;
+
     public UntagResourceRequest withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -26,9 +28,14 @@ public class UntagResourceRequest {
     
     @JsonProperty("tagKeys")
     public String[] tagKeys;
+
     public UntagResourceRequest withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
     }
     
+    public UntagResourceRequest(@JsonProperty("resourceName") String resourceName, @JsonProperty("tagKeys") String[] tagKeys) {
+        this.resourceName = resourceName;
+        this.tagKeys = tagKeys;
+  }
 }

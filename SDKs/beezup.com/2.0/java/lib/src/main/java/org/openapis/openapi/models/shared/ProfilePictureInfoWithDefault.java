@@ -14,6 +14,7 @@ public class ProfilePictureInfoWithDefault {
      */
     @JsonProperty("gravatarProfilePictureUrl")
     public String gravatarProfilePictureUrl;
+
     public ProfilePictureInfoWithDefault withGravatarProfilePictureUrl(String gravatarProfilePictureUrl) {
         this.gravatarProfilePictureUrl = gravatarProfilePictureUrl;
         return this;
@@ -24,6 +25,7 @@ public class ProfilePictureInfoWithDefault {
      */
     @JsonProperty("initialsProfilePictureUrl")
     public String initialsProfilePictureUrl;
+
     public ProfilePictureInfoWithDefault withInitialsProfilePictureUrl(String initialsProfilePictureUrl) {
         this.initialsProfilePictureUrl = initialsProfilePictureUrl;
         return this;
@@ -34,6 +36,7 @@ public class ProfilePictureInfoWithDefault {
      */
     @JsonProperty("profilePictureSelected")
     public ProfilePictureSelectedEnum profilePictureSelected;
+
     public ProfilePictureInfoWithDefault withProfilePictureSelected(ProfilePictureSelectedEnum profilePictureSelected) {
         this.profilePictureSelected = profilePictureSelected;
         return this;
@@ -45,9 +48,15 @@ public class ProfilePictureInfoWithDefault {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profilePictureUrl")
     public String profilePictureUrl;
+
     public ProfilePictureInfoWithDefault withProfilePictureUrl(String profilePictureUrl) {
         this.profilePictureUrl = profilePictureUrl;
         return this;
     }
     
+    public ProfilePictureInfoWithDefault(@JsonProperty("gravatarProfilePictureUrl") String gravatarProfilePictureUrl, @JsonProperty("initialsProfilePictureUrl") String initialsProfilePictureUrl, @JsonProperty("profilePictureSelected") ProfilePictureSelectedEnum profilePictureSelected) {
+        this.gravatarProfilePictureUrl = gravatarProfilePictureUrl;
+        this.initialsProfilePictureUrl = initialsProfilePictureUrl;
+        this.profilePictureSelected = profilePictureSelected;
+  }
 }

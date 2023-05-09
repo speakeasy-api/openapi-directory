@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InventoryFilter {
     @JsonProperty("Condition")
     public InventoryFilterConditionEnum condition;
+
     public InventoryFilter withCondition(InventoryFilterConditionEnum condition) {
         this.condition = condition;
         return this;
@@ -21,6 +22,7 @@ public class InventoryFilter {
     
     @JsonProperty("Name")
     public String name;
+
     public InventoryFilter withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +31,14 @@ public class InventoryFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public InventoryFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public InventoryFilter(@JsonProperty("Condition") InventoryFilterConditionEnum condition, @JsonProperty("Name") String name) {
+        this.condition = condition;
+        this.name = name;
+  }
 }

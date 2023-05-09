@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInvestorResponse {
     
     public String contentType;
+
     public GetInvestorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetInvestorResponse {
      */
     
     public GetInvestorRootTypeForInvestor rootTypeForInvestor;
+
     public GetInvestorResponse withRootTypeForInvestor(GetInvestorRootTypeForInvestor rootTypeForInvestor) {
         this.rootTypeForInvestor = rootTypeForInvestor;
         return this;
@@ -26,6 +29,7 @@ public class GetInvestorResponse {
     
     
     public Integer statusCode;
+
     public GetInvestorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetInvestorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInvestorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class GetInvestorResponse {
      */
     
     public GetInvestor400ApplicationJSON getInvestor400ApplicationJSONObject;
+
     public GetInvestorResponse withGetInvestor400ApplicationJSONObject(GetInvestor400ApplicationJSON getInvestor400ApplicationJSONObject) {
         this.getInvestor400ApplicationJSONObject = getInvestor400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetInvestorResponse {
      */
     
     public GetInvestor401ApplicationJSON getInvestor401ApplicationJSONObject;
+
     public GetInvestorResponse withGetInvestor401ApplicationJSONObject(GetInvestor401ApplicationJSON getInvestor401ApplicationJSONObject) {
         this.getInvestor401ApplicationJSONObject = getInvestor401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetInvestorResponse {
      */
     
     public GetInvestor403ApplicationJSON getInvestor403ApplicationJSONObject;
+
     public GetInvestorResponse withGetInvestor403ApplicationJSONObject(GetInvestor403ApplicationJSON getInvestor403ApplicationJSONObject) {
         this.getInvestor403ApplicationJSONObject = getInvestor403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetInvestorResponse {
      */
     
     public GetInvestor404ApplicationJSON getInvestor404ApplicationJSONObject;
+
     public GetInvestorResponse withGetInvestor404ApplicationJSONObject(GetInvestor404ApplicationJSON getInvestor404ApplicationJSONObject) {
         this.getInvestor404ApplicationJSONObject = getInvestor404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class GetInvestorResponse {
      */
     
     public GetInvestor429ApplicationJSON getInvestor429ApplicationJSONObject;
+
     public GetInvestorResponse withGetInvestor429ApplicationJSONObject(GetInvestor429ApplicationJSON getInvestor429ApplicationJSONObject) {
         this.getInvestor429ApplicationJSONObject = getInvestor429ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class GetInvestorResponse {
      */
     
     public GetInvestor500ApplicationJSON getInvestor500ApplicationJSONObject;
+
     public GetInvestorResponse withGetInvestor500ApplicationJSONObject(GetInvestor500ApplicationJSON getInvestor500ApplicationJSONObject) {
         this.getInvestor500ApplicationJSONObject = getInvestor500ApplicationJSONObject;
         return this;
     }
     
+    public GetInvestorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

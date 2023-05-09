@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2NumericalStatsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public GooglePrivacyDlpV2FieldId field;
+
     public GooglePrivacyDlpV2NumericalStatsConfig withField(GooglePrivacyDlpV2FieldId field) {
         this.field = field;
         return this;
     }
     
+    public GooglePrivacyDlpV2NumericalStatsConfig(){}
 }

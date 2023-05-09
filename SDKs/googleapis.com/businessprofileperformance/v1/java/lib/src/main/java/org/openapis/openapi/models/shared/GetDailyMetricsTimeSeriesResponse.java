@@ -18,9 +18,11 @@ public class GetDailyMetricsTimeSeriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSeries")
     public TimeSeries timeSeries;
+
     public GetDailyMetricsTimeSeriesResponse withTimeSeries(TimeSeries timeSeries) {
         this.timeSeries = timeSeries;
         return this;
     }
     
+    public GetDailyMetricsTimeSeriesResponse(){}
 }

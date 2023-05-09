@@ -15,9 +15,11 @@ public class LookupPolicyRequestBodyObjectReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Selector")
     public String selector;
+
     public LookupPolicyRequestBodyObjectReference withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public LookupPolicyRequestBodyObjectReference(){}
 }

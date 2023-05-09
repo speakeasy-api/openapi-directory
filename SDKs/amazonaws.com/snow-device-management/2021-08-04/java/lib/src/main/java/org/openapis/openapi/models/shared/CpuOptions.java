@@ -15,6 +15,7 @@ public class CpuOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coreCount")
     public Long coreCount;
+
     public CpuOptions withCoreCount(Long coreCount) {
         this.coreCount = coreCount;
         return this;
@@ -23,9 +24,11 @@ public class CpuOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threadsPerCore")
     public Long threadsPerCore;
+
     public CpuOptions withThreadsPerCore(Long threadsPerCore) {
         this.threadsPerCore = threadsPerCore;
         return this;
     }
     
+    public CpuOptions(){}
 }

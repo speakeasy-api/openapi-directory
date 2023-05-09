@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUsersUserIdCipherUsesResponse {
     
     public String contentType;
+
     public GetUsersUserIdCipherUsesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetUsersUserIdCipherUsesResponse {
     
     
     public Integer statusCode;
+
     public GetUsersUserIdCipherUsesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetUsersUserIdCipherUsesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUsersUserIdCipherUsesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetUsersUserIdCipherUsesResponse {
      */
     
     public org.openapis.openapi.models.shared.UserCipherUseEntity[] userCipherUseEntities;
+
     public GetUsersUserIdCipherUsesResponse withUserCipherUseEntities(org.openapis.openapi.models.shared.UserCipherUseEntity[] userCipherUseEntities) {
         this.userCipherUseEntities = userCipherUseEntities;
         return this;
     }
     
+    public GetUsersUserIdCipherUsesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class ManualFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driveFileId")
     public Long driveFileId;
+
     public ManualFile withDriveFileId(Long driveFileId) {
         this.driveFileId = driveFileId;
         return this;
@@ -20,6 +21,7 @@ public class ManualFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isProofread")
     public Boolean isProofread;
+
     public ManualFile withIsProofread(Boolean isProofread) {
         this.isProofread = isProofread;
         return this;
@@ -28,6 +30,7 @@ public class ManualFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isTranslated")
     public Boolean isTranslated;
+
     public ManualFile withIsTranslated(Boolean isTranslated) {
         this.isTranslated = isTranslated;
         return this;
@@ -36,6 +39,7 @@ public class ManualFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public ManualFile withLanguage(String language) {
         this.language = language;
         return this;
@@ -44,6 +48,7 @@ public class ManualFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proofreadingFileId")
     public Long proofreadingFileId;
+
     public ManualFile withProofreadingFileId(Long proofreadingFileId) {
         this.proofreadingFileId = proofreadingFileId;
         return this;
@@ -52,9 +57,11 @@ public class ManualFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translationFileId")
     public Long translationFileId;
+
     public ManualFile withTranslationFileId(Long translationFileId) {
         this.translationFileId = translationFileId;
         return this;
     }
     
+    public ManualFile(){}
 }

@@ -18,6 +18,7 @@ public class IntakeVlanAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public IntakeVlanAttachment withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class IntakeVlanAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pairingKey")
     public String pairingKey;
+
     public IntakeVlanAttachment withPairingKey(String pairingKey) {
         this.pairingKey = pairingKey;
         return this;
     }
     
+    public IntakeVlanAttachment(){}
 }

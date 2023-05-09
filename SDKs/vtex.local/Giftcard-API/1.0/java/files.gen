@@ -78,4 +78,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/Response5.java
 lib/src/main/java/org/openapis/openapi/models/shared/Response7.java
 lib/src/main/java/org/openapis/openapi/models/shared/SettleGiftCardTransactionRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/giftcard/README.md
+docs/transaction/README.md
 USAGE.md

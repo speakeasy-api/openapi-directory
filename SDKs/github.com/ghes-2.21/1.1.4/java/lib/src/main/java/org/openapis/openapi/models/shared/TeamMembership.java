@@ -15,6 +15,7 @@ public class TeamMembership {
      */
     @JsonProperty("role")
     public TeamMembershipRoleEnum role;
+
     public TeamMembership withRole(TeamMembershipRoleEnum role) {
         this.role = role;
         return this;
@@ -25,6 +26,7 @@ public class TeamMembership {
      */
     @JsonProperty("state")
     public TeamMembershipStateEnum state;
+
     public TeamMembership withState(TeamMembershipStateEnum state) {
         this.state = state;
         return this;
@@ -32,9 +34,15 @@ public class TeamMembership {
     
     @JsonProperty("url")
     public String url;
+
     public TeamMembership withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public TeamMembership(@JsonProperty("role") TeamMembershipRoleEnum role, @JsonProperty("state") TeamMembershipStateEnum state, @JsonProperty("url") String url) {
+        this.role = role;
+        this.state = state;
+        this.url = url;
+  }
 }

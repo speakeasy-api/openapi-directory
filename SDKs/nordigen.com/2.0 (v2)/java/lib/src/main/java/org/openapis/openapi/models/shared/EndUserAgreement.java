@@ -14,7 +14,7 @@ import org.openapis.openapi.utils.DateTimeDeserializer;
 import org.openapis.openapi.utils.DateTimeSerializer;
 
 /**
- * EndUserAgreement - EndUserAgreement.
+ * EndUserAgreement - Represents an end-user agreement.
  */
 public class EndUserAgreement {
     /**
@@ -25,6 +25,7 @@ public class EndUserAgreement {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("accepted")
     public OffsetDateTime accepted;
+
     public EndUserAgreement withAccepted(OffsetDateTime accepted) {
         this.accepted = accepted;
         return this;
@@ -36,6 +37,7 @@ public class EndUserAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access_scope")
     public Object[][] accessScope;
+
     public EndUserAgreement withAccessScope(Object[][] accessScope) {
         this.accessScope = accessScope;
         return this;
@@ -47,6 +49,7 @@ public class EndUserAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access_valid_for_days")
     public Long accessValidForDays;
+
     public EndUserAgreement withAccessValidForDays(Long accessValidForDays) {
         this.accessValidForDays = accessValidForDays;
         return this;
@@ -60,6 +63,7 @@ public class EndUserAgreement {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public EndUserAgreement withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -71,6 +75,7 @@ public class EndUserAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public EndUserAgreement withId(String id) {
         this.id = id;
         return this;
@@ -81,6 +86,7 @@ public class EndUserAgreement {
      */
     @JsonProperty("institution_id")
     public String institutionId;
+
     public EndUserAgreement withInstitutionId(String institutionId) {
         this.institutionId = institutionId;
         return this;
@@ -92,9 +98,13 @@ public class EndUserAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_historical_days")
     public Long maxHistoricalDays;
+
     public EndUserAgreement withMaxHistoricalDays(Long maxHistoricalDays) {
         this.maxHistoricalDays = maxHistoricalDays;
         return this;
     }
     
+    public EndUserAgreement(@JsonProperty("institution_id") String institutionId) {
+        this.institutionId = institutionId;
+  }
 }

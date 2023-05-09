@@ -15,6 +15,7 @@ public class ContainerOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("command")
     public String[] command;
+
     public ContainerOverride withCommand(String[] command) {
         this.command = command;
         return this;
@@ -23,6 +24,7 @@ public class ContainerOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpu")
     public Long cpu;
+
     public ContainerOverride withCpu(Long cpu) {
         this.cpu = cpu;
         return this;
@@ -31,6 +33,7 @@ public class ContainerOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public KeyValuePair[] environment;
+
     public ContainerOverride withEnvironment(KeyValuePair[] environment) {
         this.environment = environment;
         return this;
@@ -39,6 +42,7 @@ public class ContainerOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentFiles")
     public EnvironmentFile[] environmentFiles;
+
     public ContainerOverride withEnvironmentFiles(EnvironmentFile[] environmentFiles) {
         this.environmentFiles = environmentFiles;
         return this;
@@ -47,6 +51,7 @@ public class ContainerOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public Long memory;
+
     public ContainerOverride withMemory(Long memory) {
         this.memory = memory;
         return this;
@@ -55,6 +60,7 @@ public class ContainerOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryReservation")
     public Long memoryReservation;
+
     public ContainerOverride withMemoryReservation(Long memoryReservation) {
         this.memoryReservation = memoryReservation;
         return this;
@@ -63,6 +69,7 @@ public class ContainerOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ContainerOverride withName(String name) {
         this.name = name;
         return this;
@@ -71,9 +78,11 @@ public class ContainerOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRequirements")
     public ResourceRequirement[] resourceRequirements;
+
     public ContainerOverride withResourceRequirements(ResourceRequirement[] resourceRequirements) {
         this.resourceRequirements = resourceRequirements;
         return this;
     }
     
+    public ContainerOverride(){}
 }

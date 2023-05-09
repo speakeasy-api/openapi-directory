@@ -18,6 +18,7 @@ public class GoalRelationshipResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contribution_weight")
     public Double contributionWeight;
+
     public GoalRelationshipResponse withContributionWeight(Double contributionWeight) {
         this.contributionWeight = contributionWeight;
         return this;
@@ -29,6 +30,7 @@ public class GoalRelationshipResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public GoalRelationshipResponse withGid(String gid) {
         this.gid = gid;
         return this;
@@ -40,6 +42,7 @@ public class GoalRelationshipResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_subtype")
     public GoalRelationshipResponseResourceSubtypeEnum resourceSubtype;
+
     public GoalRelationshipResponse withResourceSubtype(GoalRelationshipResponseResourceSubtypeEnum resourceSubtype) {
         this.resourceSubtype = resourceSubtype;
         return this;
@@ -51,6 +54,7 @@ public class GoalRelationshipResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public GoalRelationshipResponse withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -59,6 +63,7 @@ public class GoalRelationshipResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supported_goal")
     public GoalRelationshipResponseSupportedGoal supportedGoal;
+
     public GoalRelationshipResponse withSupportedGoal(GoalRelationshipResponseSupportedGoal supportedGoal) {
         this.supportedGoal = supportedGoal;
         return this;
@@ -67,9 +72,11 @@ public class GoalRelationshipResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supporting_resource")
     public GoalRelationshipResponseSupportingResource supportingResource;
+
     public GoalRelationshipResponse withSupportingResource(GoalRelationshipResponseSupportingResource supportingResource) {
         this.supportingResource = supportingResource;
         return this;
     }
     
+    public GoalRelationshipResponse(){}
 }

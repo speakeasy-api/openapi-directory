@@ -20,6 +20,7 @@ public class CreatenewappkeyResponse {
      */
     @JsonProperty("appKey")
     public String appKey;
+
     public CreatenewappkeyResponse withAppKey(String appKey) {
         this.appKey = appKey;
         return this;
@@ -30,6 +31,7 @@ public class CreatenewappkeyResponse {
      */
     @JsonProperty("appToken")
     public String appToken;
+
     public CreatenewappkeyResponse withAppToken(String appToken) {
         this.appToken = appToken;
         return this;
@@ -42,6 +44,7 @@ public class CreatenewappkeyResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdIn")
     public OffsetDateTime createdIn;
+
     public CreatenewappkeyResponse withCreatedIn(OffsetDateTime createdIn) {
         this.createdIn = createdIn;
         return this;
@@ -52,6 +55,7 @@ public class CreatenewappkeyResponse {
      */
     @JsonProperty("id")
     public String id;
+
     public CreatenewappkeyResponse withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class CreatenewappkeyResponse {
      */
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public CreatenewappkeyResponse withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -72,9 +77,18 @@ public class CreatenewappkeyResponse {
      */
     @JsonProperty("label")
     public String label;
+
     public CreatenewappkeyResponse withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public CreatenewappkeyResponse(@JsonProperty("appKey") String appKey, @JsonProperty("appToken") String appToken, @JsonProperty("createdIn") OffsetDateTime createdIn, @JsonProperty("id") String id, @JsonProperty("isActive") Boolean isActive, @JsonProperty("label") String label) {
+        this.appKey = appKey;
+        this.appToken = appToken;
+        this.createdIn = createdIn;
+        this.id = id;
+        this.isActive = isActive;
+        this.label = label;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SignalWorkflowExecutionResponse {
     
     public String contentType;
+
     public SignalWorkflowExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SignalWorkflowExecutionResponse {
      */
     
     public Object operationNotPermittedFault;
+
     public SignalWorkflowExecutionResponse withOperationNotPermittedFault(Object operationNotPermittedFault) {
         this.operationNotPermittedFault = operationNotPermittedFault;
         return this;
@@ -26,6 +29,7 @@ public class SignalWorkflowExecutionResponse {
     
     
     public Integer statusCode;
+
     public SignalWorkflowExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class SignalWorkflowExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SignalWorkflowExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class SignalWorkflowExecutionResponse {
      */
     
     public Object unknownResourceFault;
+
     public SignalWorkflowExecutionResponse withUnknownResourceFault(Object unknownResourceFault) {
         this.unknownResourceFault = unknownResourceFault;
         return this;
     }
     
+    public SignalWorkflowExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

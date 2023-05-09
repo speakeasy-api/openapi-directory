@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CostCategorySplitChargeRuleParameter {
     @JsonProperty("Type")
     public CostCategorySplitChargeRuleParameterTypeEnum type;
+
     public CostCategorySplitChargeRuleParameter withType(CostCategorySplitChargeRuleParameterTypeEnum type) {
         this.type = type;
         return this;
@@ -19,9 +20,14 @@ public class CostCategorySplitChargeRuleParameter {
     
     @JsonProperty("Values")
     public String[] values;
+
     public CostCategorySplitChargeRuleParameter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public CostCategorySplitChargeRuleParameter(@JsonProperty("Type") CostCategorySplitChargeRuleParameterTypeEnum type, @JsonProperty("Values") String[] values) {
+        this.type = type;
+        this.values = values;
+  }
 }

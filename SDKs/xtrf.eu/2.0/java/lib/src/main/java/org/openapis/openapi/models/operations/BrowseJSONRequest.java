@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BrowseJSONRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=additionalOrder")
     public String additionalOrder;
+
     public BrowseJSONRequest withAdditionalOrder(String additionalOrder) {
         this.additionalOrder = additionalOrder;
         return this;
@@ -19,6 +20,7 @@ public class BrowseJSONRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxRows")
     public Integer maxRows;
+
     public BrowseJSONRequest withMaxRows(Integer maxRows) {
         this.maxRows = maxRows;
         return this;
@@ -26,6 +28,7 @@ public class BrowseJSONRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public BrowseJSONRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -33,6 +36,7 @@ public class BrowseJSONRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useDeferredColumns")
     public String useDeferredColumns;
+
     public BrowseJSONRequest withUseDeferredColumns(String useDeferredColumns) {
         this.useDeferredColumns = useDeferredColumns;
         return this;
@@ -43,9 +47,11 @@ public class BrowseJSONRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=viewId")
     public Long viewId;
+
     public BrowseJSONRequest withViewId(Long viewId) {
         this.viewId = viewId;
         return this;
     }
     
+    public BrowseJSONRequest(){}
 }

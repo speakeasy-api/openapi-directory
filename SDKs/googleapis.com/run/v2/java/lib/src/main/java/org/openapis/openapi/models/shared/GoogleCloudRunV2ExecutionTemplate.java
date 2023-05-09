@@ -13,22 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudRunV2ExecutionTemplate {
     /**
-     * KRM-style annotations for the resource. Cloud Run API v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 ExecutionTemplate.
+     * Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 ExecutionTemplate. This field follows Kubernetes annotations' namespacing, limits, and rules.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public GoogleCloudRunV2ExecutionTemplate withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
     }
     
     /**
-     * KRM-style labels for the resource. Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 ExecutionTemplate.
+     * Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 ExecutionTemplate.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudRunV2ExecutionTemplate withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRunV2ExecutionTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parallelism")
     public Integer parallelism;
+
     public GoogleCloudRunV2ExecutionTemplate withParallelism(Integer parallelism) {
         this.parallelism = parallelism;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRunV2ExecutionTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskCount")
     public Integer taskCount;
+
     public GoogleCloudRunV2ExecutionTemplate withTaskCount(Integer taskCount) {
         this.taskCount = taskCount;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudRunV2ExecutionTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public GoogleCloudRunV2TaskTemplate template;
+
     public GoogleCloudRunV2ExecutionTemplate withTemplate(GoogleCloudRunV2TaskTemplate template) {
         this.template = template;
         return this;
     }
     
+    public GoogleCloudRunV2ExecutionTemplate(){}
 }

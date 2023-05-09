@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostWebhooksWebhookIdPingRequest {
@@ -13,9 +14,13 @@ public class PostWebhooksWebhookIdPingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhookId")
     public String webhookId;
+
     public PostWebhooksWebhookIdPingRequest withWebhookId(String webhookId) {
         this.webhookId = webhookId;
         return this;
     }
     
+    public PostWebhooksWebhookIdPingRequest(@JsonProperty("webhookId") String webhookId) {
+        this.webhookId = webhookId;
+  }
 }

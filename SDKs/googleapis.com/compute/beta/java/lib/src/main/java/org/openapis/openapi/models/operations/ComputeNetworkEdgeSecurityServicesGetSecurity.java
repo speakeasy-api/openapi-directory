@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeNetworkEdgeSecurityServicesGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeNetworkEdgeSecurityServicesGetSecurityOption1 option1;
+
     public ComputeNetworkEdgeSecurityServicesGetSecurity withOption1(ComputeNetworkEdgeSecurityServicesGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeNetworkEdgeSecurityServicesGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeNetworkEdgeSecurityServicesGetSecurityOption2 option2;
+
     public ComputeNetworkEdgeSecurityServicesGetSecurity withOption2(ComputeNetworkEdgeSecurityServicesGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeNetworkEdgeSecurityServicesGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeNetworkEdgeSecurityServicesGetSecurityOption3 option3;
+
     public ComputeNetworkEdgeSecurityServicesGetSecurity withOption3(ComputeNetworkEdgeSecurityServicesGetSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeNetworkEdgeSecurityServicesGetSecurity(){}
 }

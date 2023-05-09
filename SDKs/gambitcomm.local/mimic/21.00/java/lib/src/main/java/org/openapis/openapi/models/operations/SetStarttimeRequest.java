@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetStarttimeRequest {
@@ -12,6 +13,7 @@ public class SetStarttimeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public SetStarttimeRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class SetStarttimeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=start")
     public Integer start;
+
     public SetStarttimeRequest withStart(Integer start) {
         this.start = start;
         return this;
     }
     
+    public SetStarttimeRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("start") Integer start) {
+        this.agentNum = agentNum;
+        this.start = start;
+  }
 }

@@ -51,11 +51,9 @@ public class Tokens {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TokensApplyMissingPartnerOffersWithoutClaimResponse res = new org.openapis.openapi.models.operations.TokensApplyMissingPartnerOffersWithoutClaimResponse() {{
+        org.openapis.openapi.models.operations.TokensApplyMissingPartnerOffersWithoutClaimResponse res = new org.openapis.openapi.models.operations.TokensApplyMissingPartnerOffersWithoutClaimResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -70,10 +68,11 @@ public class Tokens {
 
     /**
      * Claim a partner offer as the authenticated user.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TokensClaimPartnerOfferResponse tokensClaimPartnerOffer() throws Exception {
+    public org.openapis.openapi.models.operations.TokensClaimPartnerOfferResponse tokensClaimPartnerOffer(org.openapis.openapi.models.operations.TokensClaimPartnerOfferSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Tokens/Partner/ClaimOffer/");
         
@@ -82,16 +81,15 @@ public class Tokens {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TokensClaimPartnerOfferResponse res = new org.openapis.openapi.models.operations.TokensClaimPartnerOfferResponse() {{
+        org.openapis.openapi.models.operations.TokensClaimPartnerOfferResponse res = new org.openapis.openapi.models.operations.TokensClaimPartnerOfferResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,10 +104,11 @@ public class Tokens {
 
     /**
      * Twitch Drops self-repair function - scans twitch for drops not marked as fulfilled and resyncs them.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TokensForceDropsRepairResponse tokensForceDropsRepair() throws Exception {
+    public org.openapis.openapi.models.operations.TokensForceDropsRepairResponse tokensForceDropsRepair(org.openapis.openapi.models.operations.TokensForceDropsRepairSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Tokens/Partner/ForceDropsRepair/");
         
@@ -118,16 +117,15 @@ public class Tokens {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TokensForceDropsRepairResponse res = new org.openapis.openapi.models.operations.TokensForceDropsRepairResponse() {{
+        org.openapis.openapi.models.operations.TokensForceDropsRepairResponse res = new org.openapis.openapi.models.operations.TokensForceDropsRepairResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -162,11 +160,9 @@ public class Tokens {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TokensGetBungieRewardsForPlatformUserResponse res = new org.openapis.openapi.models.operations.TokensGetBungieRewardsForPlatformUserResponse() {{
+        org.openapis.openapi.models.operations.TokensGetBungieRewardsForPlatformUserResponse res = new org.openapis.openapi.models.operations.TokensGetBungieRewardsForPlatformUserResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +197,9 @@ public class Tokens {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TokensGetBungieRewardsForUserResponse res = new org.openapis.openapi.models.operations.TokensGetBungieRewardsForUserResponse() {{
+        org.openapis.openapi.models.operations.TokensGetBungieRewardsForUserResponse res = new org.openapis.openapi.models.operations.TokensGetBungieRewardsForUserResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -237,11 +231,9 @@ public class Tokens {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TokensGetBungieRewardsListResponse res = new org.openapis.openapi.models.operations.TokensGetBungieRewardsListResponse() {{
+        org.openapis.openapi.models.operations.TokensGetBungieRewardsListResponse res = new org.openapis.openapi.models.operations.TokensGetBungieRewardsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -276,11 +268,9 @@ public class Tokens {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TokensGetPartnerOfferSkuHistoryResponse res = new org.openapis.openapi.models.operations.TokensGetPartnerOfferSkuHistoryResponse() {{
+        org.openapis.openapi.models.operations.TokensGetPartnerOfferSkuHistoryResponse res = new org.openapis.openapi.models.operations.TokensGetPartnerOfferSkuHistoryResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -315,11 +305,9 @@ public class Tokens {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TokensGetPartnerRewardHistoryResponse res = new org.openapis.openapi.models.operations.TokensGetPartnerRewardHistoryResponse() {{
+        org.openapis.openapi.models.operations.TokensGetPartnerRewardHistoryResponse res = new org.openapis.openapi.models.operations.TokensGetPartnerRewardHistoryResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

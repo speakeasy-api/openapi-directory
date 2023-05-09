@@ -15,6 +15,7 @@ public class GrpcRetryPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grpcRetryEvents")
     public GrpcRetryPolicyEventEnum[] grpcRetryEvents;
+
     public GrpcRetryPolicy withGrpcRetryEvents(GrpcRetryPolicyEventEnum[] grpcRetryEvents) {
         this.grpcRetryEvents = grpcRetryEvents;
         return this;
@@ -23,6 +24,7 @@ public class GrpcRetryPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpRetryEvents")
     public String[] httpRetryEvents;
+
     public GrpcRetryPolicy withHttpRetryEvents(String[] httpRetryEvents) {
         this.httpRetryEvents = httpRetryEvents;
         return this;
@@ -30,6 +32,7 @@ public class GrpcRetryPolicy {
     
     @JsonProperty("maxRetries")
     public Long maxRetries;
+
     public GrpcRetryPolicy withMaxRetries(Long maxRetries) {
         this.maxRetries = maxRetries;
         return this;
@@ -37,6 +40,7 @@ public class GrpcRetryPolicy {
     
     @JsonProperty("perRetryTimeout")
     public Duration perRetryTimeout;
+
     public GrpcRetryPolicy withPerRetryTimeout(Duration perRetryTimeout) {
         this.perRetryTimeout = perRetryTimeout;
         return this;
@@ -45,9 +49,14 @@ public class GrpcRetryPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tcpRetryEvents")
     public TcpRetryPolicyEventEnum[] tcpRetryEvents;
+
     public GrpcRetryPolicy withTcpRetryEvents(TcpRetryPolicyEventEnum[] tcpRetryEvents) {
         this.tcpRetryEvents = tcpRetryEvents;
         return this;
     }
     
+    public GrpcRetryPolicy(@JsonProperty("maxRetries") Long maxRetries, @JsonProperty("perRetryTimeout") Duration perRetryTimeout) {
+        this.maxRetries = maxRetries;
+        this.perRetryTimeout = perRetryTimeout;
+  }
 }

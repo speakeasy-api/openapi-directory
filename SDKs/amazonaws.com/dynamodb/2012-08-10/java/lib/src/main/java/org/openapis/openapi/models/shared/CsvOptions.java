@@ -15,6 +15,7 @@ public class CsvOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Delimiter")
     public String delimiter;
+
     public CsvOptions withDelimiter(String delimiter) {
         this.delimiter = delimiter;
         return this;
@@ -23,9 +24,11 @@ public class CsvOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HeaderList")
     public String[] headerList;
+
     public CsvOptions withHeaderList(String[] headerList) {
         this.headerList = headerList;
         return this;
     }
     
+    public CsvOptions(){}
 }

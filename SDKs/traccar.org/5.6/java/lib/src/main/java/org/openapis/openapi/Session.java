@@ -55,10 +55,8 @@ public class Session {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSessionResponse res = new org.openapis.openapi.models.operations.DeleteSessionResponse() {{
+        org.openapis.openapi.models.operations.DeleteSessionResponse res = new org.openapis.openapi.models.operations.DeleteSessionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -94,11 +92,9 @@ public class Session {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSessionResponse res = new org.openapis.openapi.models.operations.GetSessionResponse() {{
+        org.openapis.openapi.models.operations.GetSessionResponse res = new org.openapis.openapi.models.operations.GetSessionResponse(contentType, httpRes.statusCode()) {{
             user = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -140,11 +136,9 @@ public class Session {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSessionResponse res = new org.openapis.openapi.models.operations.PostSessionResponse() {{
+        org.openapis.openapi.models.operations.PostSessionResponse res = new org.openapis.openapi.models.operations.PostSessionResponse(contentType, httpRes.statusCode()) {{
             user = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

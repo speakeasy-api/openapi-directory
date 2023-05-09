@@ -15,6 +15,7 @@ public class GetInfrastructureConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infrastructureConfiguration")
     public InfrastructureConfiguration infrastructureConfiguration;
+
     public GetInfrastructureConfigurationResponse withInfrastructureConfiguration(InfrastructureConfiguration infrastructureConfiguration) {
         this.infrastructureConfiguration = infrastructureConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class GetInfrastructureConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GetInfrastructureConfigurationResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public GetInfrastructureConfigurationResponse(){}
 }

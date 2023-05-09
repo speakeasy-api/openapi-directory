@@ -15,6 +15,7 @@ public class AudioMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Codec")
     public String codec;
+
     public AudioMetadata withCodec(String codec) {
         this.codec = codec;
         return this;
@@ -23,6 +24,7 @@ public class AudioMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DurationMillis")
     public Long durationMillis;
+
     public AudioMetadata withDurationMillis(Long durationMillis) {
         this.durationMillis = durationMillis;
         return this;
@@ -31,6 +33,7 @@ public class AudioMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfChannels")
     public Long numberOfChannels;
+
     public AudioMetadata withNumberOfChannels(Long numberOfChannels) {
         this.numberOfChannels = numberOfChannels;
         return this;
@@ -39,9 +42,11 @@ public class AudioMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SampleRate")
     public Long sampleRate;
+
     public AudioMetadata withSampleRate(Long sampleRate) {
         this.sampleRate = sampleRate;
         return this;
     }
     
+    public AudioMetadata(){}
 }

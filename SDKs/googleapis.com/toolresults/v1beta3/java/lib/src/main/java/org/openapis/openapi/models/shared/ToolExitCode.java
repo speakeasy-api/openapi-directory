@@ -18,9 +18,11 @@ public class ToolExitCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public Integer number;
+
     public ToolExitCode withNumber(Integer number) {
         this.number = number;
         return this;
     }
     
+    public ToolExitCode(){}
 }

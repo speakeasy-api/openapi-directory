@@ -16,6 +16,7 @@ public class TaskRequestExternal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public TaskRequestExternal withData(String data) {
         this.data = data;
         return this;
@@ -24,9 +25,11 @@ public class TaskRequestExternal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public TaskRequestExternal withGid(String gid) {
         this.gid = gid;
         return this;
     }
     
+    public TaskRequestExternal(){}
 }

@@ -15,9 +15,11 @@ public class DetectorStateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateName")
     public String stateName;
+
     public DetectorStateSummary withStateName(String stateName) {
         this.stateName = stateName;
         return this;
     }
     
+    public DetectorStateSummary(){}
 }

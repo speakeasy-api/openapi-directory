@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveRolefromUserResponse {
     
     public String contentType;
+
     public RemoveRolefromUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RemoveRolefromUserResponse {
      */
     
     public RemoveRolefromUser400ApplicationJSON removeRolefromUser400ApplicationJSONObject;
+
     public RemoveRolefromUserResponse withRemoveRolefromUser400ApplicationJSONObject(RemoveRolefromUser400ApplicationJSON removeRolefromUser400ApplicationJSONObject) {
         this.removeRolefromUser400ApplicationJSONObject = removeRolefromUser400ApplicationJSONObject;
         return this;
@@ -26,6 +29,7 @@ public class RemoveRolefromUserResponse {
     
     
     public Integer statusCode;
+
     public RemoveRolefromUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RemoveRolefromUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveRolefromUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RemoveRolefromUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

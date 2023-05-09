@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OauthAuthorizationsDeleteAuthorizationResponse {
     
     public String contentType;
+
     public OauthAuthorizationsDeleteAuthorizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OauthAuthorizationsDeleteAuthorizationResponse {
     
     
     public Integer statusCode;
+
     public OauthAuthorizationsDeleteAuthorizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class OauthAuthorizationsDeleteAuthorizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OauthAuthorizationsDeleteAuthorizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class OauthAuthorizationsDeleteAuthorizationResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public OauthAuthorizationsDeleteAuthorizationResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
     }
     
+    public OauthAuthorizationsDeleteAuthorizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

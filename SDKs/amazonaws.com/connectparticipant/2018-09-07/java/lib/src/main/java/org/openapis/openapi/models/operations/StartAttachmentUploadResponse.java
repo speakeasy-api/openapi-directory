@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartAttachmentUploadResponse {
@@ -12,6 +13,7 @@ public class StartAttachmentUploadResponse {
      */
     
     public Object accessDeniedException;
+
     public StartAttachmentUploadResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StartAttachmentUploadResponse {
     
     
     public String contentType;
+
     public StartAttachmentUploadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartAttachmentUploadResponse {
      */
     
     public Object internalServerException;
+
     public StartAttachmentUploadResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class StartAttachmentUploadResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartAttachmentUploadResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -49,6 +54,7 @@ public class StartAttachmentUploadResponse {
      */
     
     public org.openapis.openapi.models.shared.StartAttachmentUploadResponse startAttachmentUploadResponse;
+
     public StartAttachmentUploadResponse withStartAttachmentUploadResponse(org.openapis.openapi.models.shared.StartAttachmentUploadResponse startAttachmentUploadResponse) {
         this.startAttachmentUploadResponse = startAttachmentUploadResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartAttachmentUploadResponse {
     
     
     public Integer statusCode;
+
     public StartAttachmentUploadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartAttachmentUploadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartAttachmentUploadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class StartAttachmentUploadResponse {
      */
     
     public Object throttlingException;
+
     public StartAttachmentUploadResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class StartAttachmentUploadResponse {
      */
     
     public Object validationException;
+
     public StartAttachmentUploadResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartAttachmentUploadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

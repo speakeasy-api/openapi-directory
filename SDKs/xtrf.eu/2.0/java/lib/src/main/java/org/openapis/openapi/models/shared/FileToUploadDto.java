@@ -12,9 +12,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class FileToUploadDto {
     @SpeakeasyMetadata("multipartForm:file")
     public FileToUploadDtoFile file;
+
     public FileToUploadDto withFile(FileToUploadDtoFile file) {
         this.file = file;
         return this;
     }
     
+    public FileToUploadDto(){}
 }

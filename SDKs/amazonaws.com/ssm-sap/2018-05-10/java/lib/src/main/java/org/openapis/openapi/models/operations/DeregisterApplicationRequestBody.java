@@ -12,9 +12,13 @@ public class DeregisterApplicationRequestBody {
      */
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public DeregisterApplicationRequestBody withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
     }
     
+    public DeregisterApplicationRequestBody(@JsonProperty("ApplicationId") String applicationId) {
+        this.applicationId = applicationId;
+  }
 }

@@ -15,6 +15,7 @@ public class GetLendingAnalysisSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalyzeLendingModelVersion")
     public String analyzeLendingModelVersion;
+
     public GetLendingAnalysisSummaryResponse withAnalyzeLendingModelVersion(String analyzeLendingModelVersion) {
         this.analyzeLendingModelVersion = analyzeLendingModelVersion;
         return this;
@@ -26,6 +27,7 @@ public class GetLendingAnalysisSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentMetadata")
     public DocumentMetadata documentMetadata;
+
     public GetLendingAnalysisSummaryResponse withDocumentMetadata(DocumentMetadata documentMetadata) {
         this.documentMetadata = documentMetadata;
         return this;
@@ -34,6 +36,7 @@ public class GetLendingAnalysisSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public GetLendingAnalysisSummaryResponse withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -42,6 +45,7 @@ public class GetLendingAnalysisSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public GetLendingAnalysisSummaryResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -50,6 +54,7 @@ public class GetLendingAnalysisSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Summary")
     public LendingSummary summary;
+
     public GetLendingAnalysisSummaryResponse withSummary(LendingSummary summary) {
         this.summary = summary;
         return this;
@@ -58,9 +63,11 @@ public class GetLendingAnalysisSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Warnings")
     public Warning[] warnings;
+
     public GetLendingAnalysisSummaryResponse withWarnings(Warning[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public GetLendingAnalysisSummaryResponse(){}
 }

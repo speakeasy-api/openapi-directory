@@ -18,6 +18,7 @@ public class GoogleSecuritySafebrowsingV4ThreatListDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformType")
     public GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum platformType;
+
     public GoogleSecuritySafebrowsingV4ThreatListDescriptor withPlatformType(GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum platformType) {
         this.platformType = platformType;
         return this;
@@ -29,6 +30,7 @@ public class GoogleSecuritySafebrowsingV4ThreatListDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threatEntryType")
     public GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum threatEntryType;
+
     public GoogleSecuritySafebrowsingV4ThreatListDescriptor withThreatEntryType(GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum threatEntryType) {
         this.threatEntryType = threatEntryType;
         return this;
@@ -40,9 +42,11 @@ public class GoogleSecuritySafebrowsingV4ThreatListDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threatType")
     public GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum threatType;
+
     public GoogleSecuritySafebrowsingV4ThreatListDescriptor withThreatType(GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum threatType) {
         this.threatType = threatType;
         return this;
     }
     
+    public GoogleSecuritySafebrowsingV4ThreatListDescriptor(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAliasResponse {
     
     public String contentType;
+
     public DeleteAliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAliasResponse {
      */
     
     public java.util.Map<String, Object> deleteAliasResponse;
+
     public DeleteAliasResponse withDeleteAliasResponse(java.util.Map<String, Object> deleteAliasResponse) {
         this.deleteAliasResponse = deleteAliasResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAliasResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeleteAliasResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAliasResponse {
      */
     
     public Object entityStateException;
+
     public DeleteAliasResponse withEntityStateException(Object entityStateException) {
         this.entityStateException = entityStateException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAliasResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteAliasResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteAliasResponse {
      */
     
     public Object organizationNotFoundException;
+
     public DeleteAliasResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteAliasResponse {
      */
     
     public Object organizationStateException;
+
     public DeleteAliasResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteAliasResponse {
     
     
     public Integer statusCode;
+
     public DeleteAliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteAliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteAliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class EquipmentDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BoundingBox")
     public BoundingBox boundingBox;
+
     public EquipmentDetection withBoundingBox(BoundingBox boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -23,6 +24,7 @@ public class EquipmentDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public EquipmentDetection withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -31,6 +33,7 @@ public class EquipmentDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CoversBodyPart")
     public CoversBodyPart coversBodyPart;
+
     public EquipmentDetection withCoversBodyPart(CoversBodyPart coversBodyPart) {
         this.coversBodyPart = coversBodyPart;
         return this;
@@ -39,9 +42,11 @@ public class EquipmentDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ProtectiveEquipmentTypeEnum type;
+
     public EquipmentDetection withType(ProtectiveEquipmentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public EquipmentDetection(){}
 }

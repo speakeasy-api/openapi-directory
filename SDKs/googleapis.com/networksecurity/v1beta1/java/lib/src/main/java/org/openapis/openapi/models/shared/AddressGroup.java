@@ -18,6 +18,7 @@ public class AddressGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacity")
     public Integer capacity;
+
     public AddressGroup withCapacity(Integer capacity) {
         this.capacity = capacity;
         return this;
@@ -29,6 +30,7 @@ public class AddressGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public AddressGroup withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class AddressGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AddressGroup withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class AddressGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public String[] items;
+
     public AddressGroup withItems(String[] items) {
         this.items = items;
         return this;
@@ -62,6 +66,7 @@ public class AddressGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public AddressGroup withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class AddressGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AddressGroup withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class AddressGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public AddressGroup withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -95,6 +102,7 @@ public class AddressGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AddressGroupTypeEnum type;
+
     public AddressGroup withType(AddressGroupTypeEnum type) {
         this.type = type;
         return this;
@@ -106,9 +114,11 @@ public class AddressGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public AddressGroup withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public AddressGroup(){}
 }

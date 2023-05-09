@@ -18,6 +18,7 @@ public class Aggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alignmentPeriod")
     public String alignmentPeriod;
+
     public Aggregation withAlignmentPeriod(String alignmentPeriod) {
         this.alignmentPeriod = alignmentPeriod;
         return this;
@@ -29,6 +30,7 @@ public class Aggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crossSeriesReducer")
     public AggregationCrossSeriesReducerEnum crossSeriesReducer;
+
     public Aggregation withCrossSeriesReducer(AggregationCrossSeriesReducerEnum crossSeriesReducer) {
         this.crossSeriesReducer = crossSeriesReducer;
         return this;
@@ -40,6 +42,7 @@ public class Aggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupByFields")
     public String[] groupByFields;
+
     public Aggregation withGroupByFields(String[] groupByFields) {
         this.groupByFields = groupByFields;
         return this;
@@ -51,9 +54,11 @@ public class Aggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("perSeriesAligner")
     public AggregationPerSeriesAlignerEnum perSeriesAligner;
+
     public Aggregation withPerSeriesAligner(AggregationPerSeriesAlignerEnum perSeriesAligner) {
         this.perSeriesAligner = perSeriesAligner;
         return this;
     }
     
+    public Aggregation(){}
 }

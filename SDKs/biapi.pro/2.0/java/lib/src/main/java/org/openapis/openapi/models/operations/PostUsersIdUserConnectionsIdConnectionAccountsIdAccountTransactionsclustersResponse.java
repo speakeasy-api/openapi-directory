@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersResponse {
     
     public String contentType;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions
     
     
     public Integer statusCode;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions
      */
     
     public org.openapis.openapi.models.shared.TransactionsCluster transactionsCluster;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersResponse withTransactionsCluster(org.openapis.openapi.models.shared.TransactionsCluster transactionsCluster) {
         this.transactionsCluster = transactionsCluster;
         return this;
     }
     
+    public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

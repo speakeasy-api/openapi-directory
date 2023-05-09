@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PatientsListRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=chart_id")
     public String chartId;
+
     public PatientsListRequest withChartId(String chartId) {
         this.chartId = chartId;
         return this;
@@ -16,6 +17,7 @@ public class PatientsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public PatientsListRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -23,6 +25,7 @@ public class PatientsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_of_birth")
     public String dateOfBirth;
+
     public PatientsListRequest withDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -30,6 +33,7 @@ public class PatientsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public PatientsListRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -37,6 +41,7 @@ public class PatientsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public PatientsListRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -44,6 +49,7 @@ public class PatientsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ethnicity")
     public String ethnicity;
+
     public PatientsListRequest withEthnicity(String ethnicity) {
         this.ethnicity = ethnicity;
         return this;
@@ -51,6 +57,7 @@ public class PatientsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_name")
     public String firstName;
+
     public PatientsListRequest withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -58,6 +65,7 @@ public class PatientsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gender")
     public String gender;
+
     public PatientsListRequest withGender(String gender) {
         this.gender = gender;
         return this;
@@ -65,6 +73,7 @@ public class PatientsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_name")
     public String lastName;
+
     public PatientsListRequest withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -72,6 +81,7 @@ public class PatientsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public PatientsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -79,6 +89,7 @@ public class PatientsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=preferred_language")
     public String preferredLanguage;
+
     public PatientsListRequest withPreferredLanguage(String preferredLanguage) {
         this.preferredLanguage = preferredLanguage;
         return this;
@@ -86,6 +97,7 @@ public class PatientsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=race")
     public String race;
+
     public PatientsListRequest withRace(String race) {
         this.race = race;
         return this;
@@ -93,9 +105,11 @@ public class PatientsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public PatientsListRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public PatientsListRequest(){}
 }

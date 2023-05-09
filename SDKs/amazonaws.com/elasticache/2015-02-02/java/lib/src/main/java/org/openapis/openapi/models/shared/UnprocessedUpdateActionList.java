@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UnprocessedUpdateActionList {
     
     public String cacheClusterId;
+
     public UnprocessedUpdateActionList withCacheClusterId(String cacheClusterId) {
         this.cacheClusterId = cacheClusterId;
         return this;
@@ -19,6 +20,7 @@ public class UnprocessedUpdateActionList {
     
     
     public String errorMessage;
+
     public UnprocessedUpdateActionList withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -26,6 +28,7 @@ public class UnprocessedUpdateActionList {
     
     
     public String errorType;
+
     public UnprocessedUpdateActionList withErrorType(String errorType) {
         this.errorType = errorType;
         return this;
@@ -33,6 +36,7 @@ public class UnprocessedUpdateActionList {
     
     
     public String replicationGroupId;
+
     public UnprocessedUpdateActionList withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
@@ -40,9 +44,11 @@ public class UnprocessedUpdateActionList {
     
     
     public String serviceUpdateName;
+
     public UnprocessedUpdateActionList withServiceUpdateName(String serviceUpdateName) {
         this.serviceUpdateName = serviceUpdateName;
         return this;
     }
     
+    public UnprocessedUpdateActionList(){}
 }

@@ -12,9 +12,11 @@ public class PublishMock200ApplicationJSONMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PublishMock200ApplicationJSONMock withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PublishMock200ApplicationJSONMock(){}
 }

@@ -15,6 +15,7 @@ public class DescribeCustomKeyStoresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomKeyStores")
     public CustomKeyStoresListEntry[] customKeyStores;
+
     public DescribeCustomKeyStoresResponse withCustomKeyStores(CustomKeyStoresListEntry[] customKeyStores) {
         this.customKeyStores = customKeyStores;
         return this;
@@ -23,6 +24,7 @@ public class DescribeCustomKeyStoresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public DescribeCustomKeyStoresResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
@@ -31,9 +33,11 @@ public class DescribeCustomKeyStoresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Truncated")
     public Boolean truncated;
+
     public DescribeCustomKeyStoresResponse withTruncated(Boolean truncated) {
         this.truncated = truncated;
         return this;
     }
     
+    public DescribeCustomKeyStoresResponse(){}
 }

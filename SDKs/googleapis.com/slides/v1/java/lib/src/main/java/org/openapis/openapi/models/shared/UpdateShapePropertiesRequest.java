@@ -18,6 +18,7 @@ public class UpdateShapePropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateShapePropertiesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -29,6 +30,7 @@ public class UpdateShapePropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public UpdateShapePropertiesRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -40,9 +42,11 @@ public class UpdateShapePropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shapeProperties")
     public ShapeProperties shapeProperties;
+
     public UpdateShapePropertiesRequest withShapeProperties(ShapeProperties shapeProperties) {
         this.shapeProperties = shapeProperties;
         return this;
     }
     
+    public UpdateShapePropertiesRequest(){}
 }

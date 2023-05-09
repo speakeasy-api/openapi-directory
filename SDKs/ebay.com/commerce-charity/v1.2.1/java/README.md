@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetCharityOrgSecurity;
 import org.openapis.openapi.models.operations.GetCharityOrgRequest;
 import org.openapis.openapi.models.operations.GetCharityOrgResponse;
+import org.openapis.openapi.models.operations.GetCharityOrgSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,21 +26,20 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetCharityOrgRequest req = new GetCharityOrgRequest() {{
-                xEbayCMarketplaceId = "corrupti";
-                charityOrgId = "provident";
-            }}            
+            GetCharityOrgRequest req = new GetCharityOrgRequest("corrupti", "provident");            
 
-            GetCharityOrgResponse res = sdk.charityOrg.getCharityOrg(req, new GetCharityOrgSecurity() {{
+            GetCharityOrgResponse res = sdk.charityOrg.getCharityOrg(req, new GetCharityOrgSecurity("distinctio") {{
                 apiAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.charityOrg.isPresent()) {
+            if (res.charityOrg != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -49,10 +47,10 @@ public class Application {
 ## Available Resources and Operations
 
 
-### charityOrg
+### [charityOrg](docs/charityorg/README.md)
 
-* `getCharityOrg` - This call is used to retrieve detailed information about supported charitable organizations. It allows users to retrieve the details for a specific charitable organization using its charity organization ID.
-* `getCharityOrgs` - This call is used to search for supported charitable organizations. It allows users to search for a specific charitable organization, or for multiple charitable organizations, from a particular charitable domain and/or geographical region, or by using search criteria.<br /><br />The call returns paginated search results containing the charitable organizations that match the specified criteria.
+* [getCharityOrg](docs/charityorg/README.md#getcharityorg) - This call is used to retrieve detailed information about supported charitable organizations. It allows users to retrieve the details for a specific charitable organization using its charity organization ID.
+* [getCharityOrgs](docs/charityorg/README.md#getcharityorgs) - This call is used to search for supported charitable organizations. It allows users to search for a specific charitable organization, or for multiple charitable organizations, from a particular charitable domain and/or geographical region, or by using search criteria.<br /><br />The call returns paginated search results containing the charitable organizations that match the specified criteria.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -12,9 +12,11 @@ public class PatientPlanSummaryResourceRelationshipsActionsLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("related")
     public String related;
+
     public PatientPlanSummaryResourceRelationshipsActionsLinks withRelated(String related) {
         this.related = related;
         return this;
     }
     
+    public PatientPlanSummaryResourceRelationshipsActionsLinks(){}
 }

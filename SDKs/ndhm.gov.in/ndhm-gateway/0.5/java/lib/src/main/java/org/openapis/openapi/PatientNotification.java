@@ -65,12 +65,10 @@ public class PatientNotification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05PatientsSmsNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05PatientsSmsNotifyJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05PatientsSmsNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05PatientsSmsNotifyJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -125,12 +123,10 @@ public class PatientNotification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05PatientsSmsNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05PatientsSmsNotifyRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05PatientsSmsNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05PatientsSmsNotifyRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -186,13 +182,11 @@ public class PatientNotification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05PatientsSmsOnNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05PatientsSmsOnNotifyJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05PatientsSmsOnNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05PatientsSmsOnNotifyJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -255,13 +249,11 @@ public class PatientNotification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05PatientsSmsOnNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05PatientsSmsOnNotifyRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05PatientsSmsOnNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05PatientsSmsOnNotifyRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

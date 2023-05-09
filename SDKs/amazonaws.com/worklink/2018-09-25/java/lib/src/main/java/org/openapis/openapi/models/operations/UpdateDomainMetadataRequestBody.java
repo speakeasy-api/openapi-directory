@@ -15,6 +15,7 @@ public class UpdateDomainMetadataRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public UpdateDomainMetadataRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -25,6 +26,7 @@ public class UpdateDomainMetadataRequestBody {
      */
     @JsonProperty("DomainName")
     public String domainName;
+
     public UpdateDomainMetadataRequestBody withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -35,9 +37,14 @@ public class UpdateDomainMetadataRequestBody {
      */
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public UpdateDomainMetadataRequestBody withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
     }
     
+    public UpdateDomainMetadataRequestBody(@JsonProperty("DomainName") String domainName, @JsonProperty("FleetArn") String fleetArn) {
+        this.domainName = domainName;
+        this.fleetArn = fleetArn;
+  }
 }

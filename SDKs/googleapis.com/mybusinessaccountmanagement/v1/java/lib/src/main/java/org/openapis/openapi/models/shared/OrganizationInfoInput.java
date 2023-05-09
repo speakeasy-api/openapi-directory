@@ -18,9 +18,11 @@ public class OrganizationInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public PostalAddress address;
+
     public OrganizationInfoInput withAddress(PostalAddress address) {
         this.address = address;
         return this;
     }
     
+    public OrganizationInfoInput(){}
 }

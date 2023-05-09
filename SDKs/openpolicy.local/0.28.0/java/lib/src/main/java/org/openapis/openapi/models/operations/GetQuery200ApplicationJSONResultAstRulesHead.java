@@ -15,6 +15,7 @@ public class GetQuery200ApplicationJSONResultAstRulesHead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public GetQuery200ApplicationJSONResultAstRulesHeadKey key;
+
     public GetQuery200ApplicationJSONResultAstRulesHead withKey(GetQuery200ApplicationJSONResultAstRulesHeadKey key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class GetQuery200ApplicationJSONResultAstRulesHead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetQuery200ApplicationJSONResultAstRulesHead withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetQuery200ApplicationJSONResultAstRulesHead(){}
 }

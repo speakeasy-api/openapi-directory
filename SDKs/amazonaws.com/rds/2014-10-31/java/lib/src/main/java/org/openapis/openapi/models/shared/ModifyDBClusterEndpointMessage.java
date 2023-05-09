@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyDBClusterEndpointMessage {
     
     public String dbClusterEndpointIdentifier;
+
     public ModifyDBClusterEndpointMessage withDBClusterEndpointIdentifier(String dbClusterEndpointIdentifier) {
         this.dbClusterEndpointIdentifier = dbClusterEndpointIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class ModifyDBClusterEndpointMessage {
     
     
     public String endpointType;
+
     public ModifyDBClusterEndpointMessage withEndpointType(String endpointType) {
         this.endpointType = endpointType;
         return this;
@@ -23,6 +25,7 @@ public class ModifyDBClusterEndpointMessage {
     
     
     public String[] excludedMembers;
+
     public ModifyDBClusterEndpointMessage withExcludedMembers(String[] excludedMembers) {
         this.excludedMembers = excludedMembers;
         return this;
@@ -30,9 +33,13 @@ public class ModifyDBClusterEndpointMessage {
     
     
     public String[] staticMembers;
+
     public ModifyDBClusterEndpointMessage withStaticMembers(String[] staticMembers) {
         this.staticMembers = staticMembers;
         return this;
     }
     
+    public ModifyDBClusterEndpointMessage(@JsonProperty("DBClusterEndpointIdentifier") String dbClusterEndpointIdentifier) {
+        this.dbClusterEndpointIdentifier = dbClusterEndpointIdentifier;
+  }
 }

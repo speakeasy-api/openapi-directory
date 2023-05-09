@@ -15,6 +15,7 @@ public class StagingArea {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public StagingArea withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -23,6 +24,7 @@ public class StagingArea {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stagingAccountID")
     public String stagingAccountID;
+
     public StagingArea withStagingAccountID(String stagingAccountID) {
         this.stagingAccountID = stagingAccountID;
         return this;
@@ -31,6 +33,7 @@ public class StagingArea {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stagingSourceServerArn")
     public String stagingSourceServerArn;
+
     public StagingArea withStagingSourceServerArn(String stagingSourceServerArn) {
         this.stagingSourceServerArn = stagingSourceServerArn;
         return this;
@@ -39,9 +42,11 @@ public class StagingArea {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ExtensionStatusEnum status;
+
     public StagingArea withStatus(ExtensionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public StagingArea(){}
 }

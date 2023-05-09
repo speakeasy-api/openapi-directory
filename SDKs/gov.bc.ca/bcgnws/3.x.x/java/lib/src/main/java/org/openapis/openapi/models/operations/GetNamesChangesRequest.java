@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamesChangesRequest {
@@ -12,6 +13,7 @@ public class GetNamesChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
     public GetNamesChangesEmbedEnum embed;
+
     public GetNamesChangesRequest withEmbed(GetNamesChangesEmbedEnum embed) {
         this.embed = embed;
         return this;
@@ -22,6 +24,7 @@ public class GetNamesChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureCategory")
     public String featureCategory;
+
     public GetNamesChangesRequest withFeatureCategory(String featureCategory) {
         this.featureCategory = featureCategory;
         return this;
@@ -32,6 +35,7 @@ public class GetNamesChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureClass")
     public String featureClass;
+
     public GetNamesChangesRequest withFeatureClass(String featureClass) {
         this.featureClass = featureClass;
         return this;
@@ -42,6 +46,7 @@ public class GetNamesChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureType")
     public String featureType;
+
     public GetNamesChangesRequest withFeatureType(String featureType) {
         this.featureType = featureType;
         return this;
@@ -52,6 +57,7 @@ public class GetNamesChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDate")
     public Long fromDate;
+
     public GetNamesChangesRequest withFromDate(Long fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -62,6 +68,7 @@ public class GetNamesChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=itemsPerPage")
     public Long itemsPerPage;
+
     public GetNamesChangesRequest withItemsPerPage(Long itemsPerPage) {
         this.itemsPerPage = itemsPerPage;
         return this;
@@ -72,6 +79,7 @@ public class GetNamesChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputFormat")
     public GetNamesChangesOutputFormatEnum outputFormat;
+
     public GetNamesChangesRequest withOutputFormat(GetNamesChangesOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -82,6 +90,7 @@ public class GetNamesChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
     public GetNamesChangesOutputSrsEnum outputSRS;
+
     public GetNamesChangesRequest withOutputSRS(GetNamesChangesOutputSrsEnum outputSRS) {
         this.outputSRS = outputSRS;
         return this;
@@ -92,6 +101,7 @@ public class GetNamesChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputStyle")
     public GetNamesChangesOutputStyleEnum outputStyle;
+
     public GetNamesChangesRequest withOutputStyle(GetNamesChangesOutputStyleEnum outputStyle) {
         this.outputStyle = outputStyle;
         return this;
@@ -102,6 +112,7 @@ public class GetNamesChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
     public GetNamesChangesSortByEnum sortBy;
+
     public GetNamesChangesRequest withSortBy(GetNamesChangesSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -112,6 +123,7 @@ public class GetNamesChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
     public Long startIndex;
+
     public GetNamesChangesRequest withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -122,9 +134,15 @@ public class GetNamesChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDate")
     public Long toDate;
+
     public GetNamesChangesRequest withToDate(Long toDate) {
         this.toDate = toDate;
         return this;
     }
     
+    public GetNamesChangesRequest(@JsonProperty("fromDate") Long fromDate, @JsonProperty("outputFormat") GetNamesChangesOutputFormatEnum outputFormat, @JsonProperty("toDate") Long toDate) {
+        this.fromDate = fromDate;
+        this.outputFormat = outputFormat;
+        this.toDate = toDate;
+  }
 }

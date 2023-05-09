@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetComplianceSummaryResponse {
@@ -12,6 +13,7 @@ public class GetComplianceSummaryResponse {
      */
     
     public Object constraintViolationException;
+
     public GetComplianceSummaryResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -19,6 +21,7 @@ public class GetComplianceSummaryResponse {
     
     
     public String contentType;
+
     public GetComplianceSummaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetComplianceSummaryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetComplianceSummaryOutput getComplianceSummaryOutput;
+
     public GetComplianceSummaryResponse withGetComplianceSummaryOutput(org.openapis.openapi.models.shared.GetComplianceSummaryOutput getComplianceSummaryOutput) {
         this.getComplianceSummaryOutput = getComplianceSummaryOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetComplianceSummaryResponse {
      */
     
     public Object internalServiceException;
+
     public GetComplianceSummaryResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetComplianceSummaryResponse {
      */
     
     public Object invalidParameterException;
+
     public GetComplianceSummaryResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -56,6 +62,7 @@ public class GetComplianceSummaryResponse {
     
     
     public Integer statusCode;
+
     public GetComplianceSummaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetComplianceSummaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetComplianceSummaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetComplianceSummaryResponse {
      */
     
     public Object throttledException;
+
     public GetComplianceSummaryResponse withThrottledException(Object throttledException) {
         this.throttledException = throttledException;
         return this;
     }
     
+    public GetComplianceSummaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

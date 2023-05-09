@@ -63,12 +63,10 @@ public class AccountCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompaniesResponse res = new org.openapis.openapi.models.operations.GetCompaniesResponse() {{
+        org.openapis.openapi.models.operations.GetCompaniesResponse res = new org.openapis.openapi.models.operations.GetCompaniesResponse(contentType, httpRes.statusCode()) {{
             listCompanyResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,12 +113,10 @@ public class AccountCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompaniesCompanyIdResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdResponse() {{
+        org.openapis.openapi.models.operations.GetCompaniesCompanyIdResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdResponse(contentType, httpRes.statusCode()) {{
             company = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -173,12 +169,10 @@ public class AccountCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompaniesCompanyIdMerchantsResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdMerchantsResponse() {{
+        org.openapis.openapi.models.operations.GetCompaniesCompanyIdMerchantsResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdMerchantsResponse(contentType, httpRes.statusCode()) {{
             listMerchantResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

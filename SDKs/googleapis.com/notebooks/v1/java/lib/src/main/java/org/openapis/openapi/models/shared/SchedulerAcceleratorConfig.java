@@ -18,6 +18,7 @@ public class SchedulerAcceleratorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coreCount")
     public String coreCount;
+
     public SchedulerAcceleratorConfig withCoreCount(String coreCount) {
         this.coreCount = coreCount;
         return this;
@@ -29,9 +30,11 @@ public class SchedulerAcceleratorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SchedulerAcceleratorConfigTypeEnum type;
+
     public SchedulerAcceleratorConfig withType(SchedulerAcceleratorConfigTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SchedulerAcceleratorConfig(){}
 }

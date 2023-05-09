@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetShakespeareGenerateInsultResponse {
     
     public String contentType;
+
     public GetShakespeareGenerateInsultResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetShakespeareGenerateInsultResponse {
     
     
     public Integer statusCode;
+
     public GetShakespeareGenerateInsultResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class GetShakespeareGenerateInsultResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetShakespeareGenerateInsultResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetShakespeareGenerateInsultResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

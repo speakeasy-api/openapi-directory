@@ -15,9 +15,11 @@ public class VehicleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationNumber")
     public String registrationNumber;
+
     public VehicleRequest withRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
         return this;
     }
     
+    public VehicleRequest(){}
 }

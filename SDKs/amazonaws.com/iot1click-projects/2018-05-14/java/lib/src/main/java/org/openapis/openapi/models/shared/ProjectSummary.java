@@ -20,6 +20,7 @@ public class ProjectSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ProjectSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -29,6 +30,7 @@ public class ProjectSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDate")
     public OffsetDateTime createdDate;
+
     public ProjectSummary withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -36,6 +38,7 @@ public class ProjectSummary {
     
     @JsonProperty("projectName")
     public String projectName;
+
     public ProjectSummary withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -44,6 +47,7 @@ public class ProjectSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ProjectSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -53,9 +57,15 @@ public class ProjectSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedDate")
     public OffsetDateTime updatedDate;
+
     public ProjectSummary withUpdatedDate(OffsetDateTime updatedDate) {
         this.updatedDate = updatedDate;
         return this;
     }
     
+    public ProjectSummary(@JsonProperty("createdDate") OffsetDateTime createdDate, @JsonProperty("projectName") String projectName, @JsonProperty("updatedDate") OffsetDateTime updatedDate) {
+        this.createdDate = createdDate;
+        this.projectName = projectName;
+        this.updatedDate = updatedDate;
+  }
 }

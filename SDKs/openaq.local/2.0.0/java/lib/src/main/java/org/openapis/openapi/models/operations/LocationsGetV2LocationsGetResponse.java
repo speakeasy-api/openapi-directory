@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LocationsGetV2LocationsGetResponse {
     
     public String contentType;
+
     public LocationsGetV2LocationsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class LocationsGetV2LocationsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public LocationsGetV2LocationsGetResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -29,6 +32,7 @@ public class LocationsGetV2LocationsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.OpenAQResult openAQResult;
+
     public LocationsGetV2LocationsGetResponse withOpenAQResult(org.openapis.openapi.models.shared.OpenAQResult openAQResult) {
         this.openAQResult = openAQResult;
         return this;
@@ -36,6 +40,7 @@ public class LocationsGetV2LocationsGetResponse {
     
     
     public Integer statusCode;
+
     public LocationsGetV2LocationsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class LocationsGetV2LocationsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LocationsGetV2LocationsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public LocationsGetV2LocationsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

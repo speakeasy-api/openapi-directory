@@ -15,6 +15,7 @@ public class MailZoneAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     public Integer accountId;
+
     public MailZoneAccount withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -26,9 +27,11 @@ public class MailZoneAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Integer size;
+
     public MailZoneAccount withSize(Integer size) {
         this.size = size;
         return this;
     }
     
+    public MailZoneAccount(){}
 }

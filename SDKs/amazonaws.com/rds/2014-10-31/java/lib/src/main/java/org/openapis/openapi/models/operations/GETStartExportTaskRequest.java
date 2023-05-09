@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETStartExportTaskRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETStartExportTaskActionEnum action;
+
     public GETStartExportTaskRequest withAction(GETStartExportTaskActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETStartExportTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ExportOnly")
     public String[] exportOnly;
+
     public GETStartExportTaskRequest withExportOnly(String[] exportOnly) {
         this.exportOnly = exportOnly;
         return this;
@@ -29,6 +32,7 @@ public class GETStartExportTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ExportTaskIdentifier")
     public String exportTaskIdentifier;
+
     public GETStartExportTaskRequest withExportTaskIdentifier(String exportTaskIdentifier) {
         this.exportTaskIdentifier = exportTaskIdentifier;
         return this;
@@ -39,6 +43,7 @@ public class GETStartExportTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IamRoleArn")
     public String iamRoleArn;
+
     public GETStartExportTaskRequest withIamRoleArn(String iamRoleArn) {
         this.iamRoleArn = iamRoleArn;
         return this;
@@ -49,6 +54,7 @@ public class GETStartExportTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=KmsKeyId")
     public String kmsKeyId;
+
     public GETStartExportTaskRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -59,6 +65,7 @@ public class GETStartExportTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=S3BucketName")
     public String s3BucketName;
+
     public GETStartExportTaskRequest withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -69,6 +76,7 @@ public class GETStartExportTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=S3Prefix")
     public String s3Prefix;
+
     public GETStartExportTaskRequest withS3Prefix(String s3Prefix) {
         this.s3Prefix = s3Prefix;
         return this;
@@ -79,6 +87,7 @@ public class GETStartExportTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceArn")
     public String sourceArn;
+
     public GETStartExportTaskRequest withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
@@ -86,6 +95,7 @@ public class GETStartExportTaskRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETStartExportTaskVersionEnum version;
+
     public GETStartExportTaskRequest withVersion(GETStartExportTaskVersionEnum version) {
         this.version = version;
         return this;
@@ -93,6 +103,7 @@ public class GETStartExportTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETStartExportTaskRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -100,6 +111,7 @@ public class GETStartExportTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETStartExportTaskRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -107,6 +119,7 @@ public class GETStartExportTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETStartExportTaskRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -114,6 +127,7 @@ public class GETStartExportTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETStartExportTaskRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -121,6 +135,7 @@ public class GETStartExportTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETStartExportTaskRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -128,6 +143,7 @@ public class GETStartExportTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETStartExportTaskRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -135,9 +151,19 @@ public class GETStartExportTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETStartExportTaskRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETStartExportTaskRequest(@JsonProperty("Action") GETStartExportTaskActionEnum action, @JsonProperty("ExportTaskIdentifier") String exportTaskIdentifier, @JsonProperty("IamRoleArn") String iamRoleArn, @JsonProperty("KmsKeyId") String kmsKeyId, @JsonProperty("S3BucketName") String s3BucketName, @JsonProperty("SourceArn") String sourceArn, @JsonProperty("Version") GETStartExportTaskVersionEnum version) {
+        this.action = action;
+        this.exportTaskIdentifier = exportTaskIdentifier;
+        this.iamRoleArn = iamRoleArn;
+        this.kmsKeyId = kmsKeyId;
+        this.s3BucketName = s3BucketName;
+        this.sourceArn = sourceArn;
+        this.version = version;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AvailabilityZone {
     
     public String name;
+
     public AvailabilityZone withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class AvailabilityZone {
     
     
     public SupportedPlatformsList[] supportedPlatforms;
+
     public AvailabilityZone withSupportedPlatforms(SupportedPlatformsList[] supportedPlatforms) {
         this.supportedPlatforms = supportedPlatforms;
         return this;
     }
     
+    public AvailabilityZone(){}
 }

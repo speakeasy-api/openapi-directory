@@ -15,6 +15,7 @@ public class CadenceMembership {
      */
     
     public OffsetDateTime addedAt;
+
     public CadenceMembership withAddedAt(OffsetDateTime addedAt) {
         this.addedAt = addedAt;
         return this;
@@ -22,6 +23,7 @@ public class CadenceMembership {
     
     
     public EmbeddedResource cadence;
+
     public CadenceMembership withCadence(EmbeddedResource cadence) {
         this.cadence = cadence;
         return this;
@@ -29,6 +31,7 @@ public class CadenceMembership {
     
     
     public CadenceMembershipCounts counts;
+
     public CadenceMembership withCounts(CadenceMembershipCounts counts) {
         this.counts = counts;
         return this;
@@ -39,6 +42,7 @@ public class CadenceMembership {
      */
     
     public OffsetDateTime createdAt;
+
     public CadenceMembership withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -66,6 +70,7 @@ public class CadenceMembership {
      */
     
     public String currentState;
+
     public CadenceMembership withCurrentState(String currentState) {
         this.currentState = currentState;
         return this;
@@ -76,6 +81,7 @@ public class CadenceMembership {
      */
     
     public Boolean currentlyOnCadence;
+
     public CadenceMembership withCurrentlyOnCadence(Boolean currentlyOnCadence) {
         this.currentlyOnCadence = currentlyOnCadence;
         return this;
@@ -86,6 +92,7 @@ public class CadenceMembership {
      */
     
     public Long id;
+
     public CadenceMembership withId(Long id) {
         this.id = id;
         return this;
@@ -93,6 +100,7 @@ public class CadenceMembership {
     
     
     public EmbeddedResource latestAction;
+
     public CadenceMembership withLatestAction(EmbeddedResource latestAction) {
         this.latestAction = latestAction;
         return this;
@@ -100,6 +108,7 @@ public class CadenceMembership {
     
     
     public EmbeddedResource person;
+
     public CadenceMembership withPerson(EmbeddedResource person) {
         this.person = person;
         return this;
@@ -110,6 +119,7 @@ public class CadenceMembership {
      */
     
     public Boolean personDeleted;
+
     public CadenceMembership withPersonDeleted(Boolean personDeleted) {
         this.personDeleted = personDeleted;
         return this;
@@ -120,6 +130,7 @@ public class CadenceMembership {
      */
     
     public OffsetDateTime updatedAt;
+
     public CadenceMembership withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -127,9 +138,11 @@ public class CadenceMembership {
     
     
     public EmbeddedResource user;
+
     public CadenceMembership withUser(EmbeddedResource user) {
         this.user = user;
         return this;
     }
     
+    public CadenceMembership(){}
 }

@@ -130,4 +130,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/AggregationInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/GeoTaxonomyTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GeoTaxonomy.java
 lib/src/main/java/org/openapis/openapi/models/shared/Category.java
+docs/sdk/README.md
+docs/billingaccounts/README.md
+docs/projects/README.md
+docs/services/README.md
 USAGE.md

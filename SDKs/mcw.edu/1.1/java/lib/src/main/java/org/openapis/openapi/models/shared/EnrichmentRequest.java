@@ -15,6 +15,7 @@ public class EnrichmentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aspect")
     public String aspect;
+
     public EnrichmentRequest withAspect(String aspect) {
         this.aspect = aspect;
         return this;
@@ -23,6 +24,7 @@ public class EnrichmentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genes")
     public String[] genes;
+
     public EnrichmentRequest withGenes(String[] genes) {
         this.genes = genes;
         return this;
@@ -31,9 +33,11 @@ public class EnrichmentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("species")
     public String species;
+
     public EnrichmentRequest withSpecies(String species) {
         this.species = species;
         return this;
     }
     
+    public EnrichmentRequest(){}
 }

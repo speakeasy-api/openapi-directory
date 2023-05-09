@@ -15,6 +15,7 @@ public class ListCommandInvocationsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CommandInvocations")
     public CommandInvocation[] commandInvocations;
+
     public ListCommandInvocationsResult withCommandInvocations(CommandInvocation[] commandInvocations) {
         this.commandInvocations = commandInvocations;
         return this;
@@ -23,9 +24,11 @@ public class ListCommandInvocationsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCommandInvocationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCommandInvocationsResult(){}
 }

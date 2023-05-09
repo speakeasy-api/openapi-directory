@@ -22,6 +22,7 @@ public class PipelineSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public PipelineSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -32,6 +33,7 @@ public class PipelineSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastExecutionTime")
     public OffsetDateTime lastExecutionTime;
+
     public PipelineSummary withLastExecutionTime(OffsetDateTime lastExecutionTime) {
         this.lastExecutionTime = lastExecutionTime;
         return this;
@@ -42,6 +44,7 @@ public class PipelineSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public PipelineSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -50,6 +53,7 @@ public class PipelineSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineArn")
     public String pipelineArn;
+
     public PipelineSummary withPipelineArn(String pipelineArn) {
         this.pipelineArn = pipelineArn;
         return this;
@@ -58,6 +62,7 @@ public class PipelineSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineDescription")
     public String pipelineDescription;
+
     public PipelineSummary withPipelineDescription(String pipelineDescription) {
         this.pipelineDescription = pipelineDescription;
         return this;
@@ -66,6 +71,7 @@ public class PipelineSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineDisplayName")
     public String pipelineDisplayName;
+
     public PipelineSummary withPipelineDisplayName(String pipelineDisplayName) {
         this.pipelineDisplayName = pipelineDisplayName;
         return this;
@@ -74,6 +80,7 @@ public class PipelineSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineName")
     public String pipelineName;
+
     public PipelineSummary withPipelineName(String pipelineName) {
         this.pipelineName = pipelineName;
         return this;
@@ -82,9 +89,11 @@ public class PipelineSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public PipelineSummary withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public PipelineSummary(){}
 }

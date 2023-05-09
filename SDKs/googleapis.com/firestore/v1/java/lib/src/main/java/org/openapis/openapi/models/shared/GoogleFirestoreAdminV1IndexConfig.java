@@ -18,6 +18,7 @@ public class GoogleFirestoreAdminV1IndexConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ancestorField")
     public String ancestorField;
+
     public GoogleFirestoreAdminV1IndexConfig withAncestorField(String ancestorField) {
         this.ancestorField = ancestorField;
         return this;
@@ -29,6 +30,7 @@ public class GoogleFirestoreAdminV1IndexConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexes")
     public GoogleFirestoreAdminV1Index[] indexes;
+
     public GoogleFirestoreAdminV1IndexConfig withIndexes(GoogleFirestoreAdminV1Index[] indexes) {
         this.indexes = indexes;
         return this;
@@ -40,6 +42,7 @@ public class GoogleFirestoreAdminV1IndexConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reverting")
     public Boolean reverting;
+
     public GoogleFirestoreAdminV1IndexConfig withReverting(Boolean reverting) {
         this.reverting = reverting;
         return this;
@@ -51,9 +54,11 @@ public class GoogleFirestoreAdminV1IndexConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usesAncestorConfig")
     public Boolean usesAncestorConfig;
+
     public GoogleFirestoreAdminV1IndexConfig withUsesAncestorConfig(Boolean usesAncestorConfig) {
         this.usesAncestorConfig = usesAncestorConfig;
         return this;
     }
     
+    public GoogleFirestoreAdminV1IndexConfig(){}
 }

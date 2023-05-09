@@ -20,6 +20,7 @@ public class ExperimentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public java.util.Map<String, ExperimentTemplateAction> actions;
+
     public ExperimentTemplate withActions(java.util.Map<String, ExperimentTemplateAction> actions) {
         this.actions = actions;
         return this;
@@ -30,6 +31,7 @@ public class ExperimentTemplate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public ExperimentTemplate withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class ExperimentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ExperimentTemplate withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class ExperimentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ExperimentTemplate withId(String id) {
         this.id = id;
         return this;
@@ -56,6 +60,7 @@ public class ExperimentTemplate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public ExperimentTemplate withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -64,6 +69,7 @@ public class ExperimentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logConfiguration")
     public ExperimentTemplateLogConfiguration logConfiguration;
+
     public ExperimentTemplate withLogConfiguration(ExperimentTemplateLogConfiguration logConfiguration) {
         this.logConfiguration = logConfiguration;
         return this;
@@ -72,6 +78,7 @@ public class ExperimentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public ExperimentTemplate withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -80,6 +87,7 @@ public class ExperimentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopConditions")
     public ExperimentTemplateStopCondition[] stopConditions;
+
     public ExperimentTemplate withStopConditions(ExperimentTemplateStopCondition[] stopConditions) {
         this.stopConditions = stopConditions;
         return this;
@@ -88,6 +96,7 @@ public class ExperimentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ExperimentTemplate withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -96,9 +105,11 @@ public class ExperimentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targets")
     public java.util.Map<String, ExperimentTemplateTarget> targets;
+
     public ExperimentTemplate withTargets(java.util.Map<String, ExperimentTemplateTarget> targets) {
         this.targets = targets;
         return this;
     }
     
+    public ExperimentTemplate(){}
 }

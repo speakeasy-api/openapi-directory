@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAliasResponse {
     
     public String contentType;
+
     public UpdateAliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAliasResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateAliasResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAliasResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateAliasResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAliasResponse {
      */
     
     public Object notFoundException;
+
     public UpdateAliasResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateAliasResponse {
     
     
     public Integer statusCode;
+
     public UpdateAliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAliasResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateAliasResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateAliasResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAliasOutput updateAliasOutput;
+
     public UpdateAliasResponse withUpdateAliasOutput(org.openapis.openapi.models.shared.UpdateAliasOutput updateAliasOutput) {
         this.updateAliasOutput = updateAliasOutput;
         return this;
     }
     
+    public UpdateAliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

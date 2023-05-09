@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypesResultInstanceTypesInstanceStorageInfo {
     
     public DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoDisks[] disks;
+
     public DescribeInstanceTypesResultInstanceTypesInstanceStorageInfo withDisks(DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoDisks[] disks) {
         this.disks = disks;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstanceTypesResultInstanceTypesInstanceStorageInfo {
     
     
     public DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoEncryptionSupportEnum encryptionSupport;
+
     public DescribeInstanceTypesResultInstanceTypesInstanceStorageInfo withEncryptionSupport(DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoEncryptionSupportEnum encryptionSupport) {
         this.encryptionSupport = encryptionSupport;
         return this;
@@ -26,6 +28,7 @@ public class DescribeInstanceTypesResultInstanceTypesInstanceStorageInfo {
     
     
     public DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoNvmeSupportEnum nvmeSupport;
+
     public DescribeInstanceTypesResultInstanceTypesInstanceStorageInfo withNvmeSupport(DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoNvmeSupportEnum nvmeSupport) {
         this.nvmeSupport = nvmeSupport;
         return this;
@@ -33,9 +36,11 @@ public class DescribeInstanceTypesResultInstanceTypesInstanceStorageInfo {
     
     
     public Long totalSizeInGB;
+
     public DescribeInstanceTypesResultInstanceTypesInstanceStorageInfo withTotalSizeInGB(Long totalSizeInGB) {
         this.totalSizeInGB = totalSizeInGB;
         return this;
     }
     
+    public DescribeInstanceTypesResultInstanceTypesInstanceStorageInfo(){}
 }

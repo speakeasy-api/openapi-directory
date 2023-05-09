@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DiaryControllerGetAllocationsResponse {
     
     public byte[] body;
+
     public DiaryControllerGetAllocationsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class DiaryControllerGetAllocationsResponse {
     
     
     public String contentType;
+
     public DiaryControllerGetAllocationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DiaryControllerGetAllocationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DiaryBookingModel[] diaryBookingModels;
+
     public DiaryControllerGetAllocationsResponse withDiaryBookingModels(org.openapis.openapi.models.shared.DiaryBookingModel[] diaryBookingModels) {
         this.diaryBookingModels = diaryBookingModels;
         return this;
@@ -33,6 +37,7 @@ public class DiaryControllerGetAllocationsResponse {
     
     
     public Integer statusCode;
+
     public DiaryControllerGetAllocationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class DiaryControllerGetAllocationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DiaryControllerGetAllocationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DiaryControllerGetAllocationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

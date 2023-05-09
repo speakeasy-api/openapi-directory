@@ -15,6 +15,7 @@ public class LocationWarningsUpdate {
      */
     @JsonProperty("location")
     public String location;
+
     public LocationWarningsUpdate withLocation(String location) {
         this.location = location;
         return this;
@@ -25,9 +26,14 @@ public class LocationWarningsUpdate {
      */
     @JsonProperty("warnings")
     public String[] warnings;
+
     public LocationWarningsUpdate withWarnings(String[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public LocationWarningsUpdate(@JsonProperty("location") String location, @JsonProperty("warnings") String[] warnings) {
+        this.location = location;
+        this.warnings = warnings;
+  }
 }

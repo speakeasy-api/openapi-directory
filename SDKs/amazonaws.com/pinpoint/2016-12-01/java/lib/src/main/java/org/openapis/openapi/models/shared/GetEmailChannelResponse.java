@@ -15,9 +15,13 @@ public class GetEmailChannelResponse {
      */
     @JsonProperty("EmailChannelResponse")
     public EmailChannelResponse emailChannelResponse;
+
     public GetEmailChannelResponse withEmailChannelResponse(EmailChannelResponse emailChannelResponse) {
         this.emailChannelResponse = emailChannelResponse;
         return this;
     }
     
+    public GetEmailChannelResponse(@JsonProperty("EmailChannelResponse") EmailChannelResponse emailChannelResponse) {
+        this.emailChannelResponse = emailChannelResponse;
+  }
 }

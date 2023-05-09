@@ -10,7 +10,7 @@ import org.openapis.openapi.utils.SpeakeasyHTTPClient;
 /**
  * The Cisco Meraki Dashboard API is a modern REST API based on the OpenAPI specification.
  * 
- * &gt; Date: 05 March, 2023
+ * &gt; Date: 23 April, 2023
  * &gt;
  * &gt; [Recent Updates](https://meraki.io/whats-new/)
  * 
@@ -69,7 +69,6 @@ public class SDK {
     public MXWarmSpareSettings mxWarmSpareSettings;
     public MalwareSettings malwareSettings;
     public MerakiAuthUsers merakiAuthUsers;
-    public MonitoredMediaServers monitoredMediaServers;
     public NamedTagScope namedTagScope;
     public Networks networks;
     public OpenAPISpec openAPISpec;
@@ -197,6 +196,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.apiUsage = new APIUsage(
@@ -533,15 +537,6 @@ public class SDK {
 		);
 		
 		this.merakiAuthUsers = new MerakiAuthUsers(
-			this._defaultClient,
-			this._securityClient,
-			this._serverUrl,
-			this._language,
-			this._sdkVersion,
-			this._genVersion
-		);
-		
-		this.monitoredMediaServers = new MonitoredMediaServers(
 			this._defaultClient,
 			this._securityClient,
 			this._serverUrl,

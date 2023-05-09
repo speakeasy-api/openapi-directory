@@ -15,9 +15,11 @@ public class LifecyclePolicyRuleAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ImageActionTypeEnum type;
+
     public LifecyclePolicyRuleAction withType(ImageActionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public LifecyclePolicyRuleAction(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BloggerPagesInsertRequest {
@@ -12,6 +13,7 @@ public class BloggerPagesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public BloggerPagesInsertRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class BloggerPagesInsertRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Page page;
+
     public BloggerPagesInsertRequest withPage(org.openapis.openapi.models.shared.Page page) {
         this.page = page;
         return this;
@@ -29,6 +32,7 @@ public class BloggerPagesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public BloggerPagesInsertRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class BloggerPagesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BloggerPagesInsertRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -46,6 +51,7 @@ public class BloggerPagesInsertRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=blogId")
     public String blogId;
+
     public BloggerPagesInsertRequest withBlogId(String blogId) {
         this.blogId = blogId;
         return this;
@@ -56,6 +62,7 @@ public class BloggerPagesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public BloggerPagesInsertRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -66,6 +73,7 @@ public class BloggerPagesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BloggerPagesInsertRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -73,6 +81,7 @@ public class BloggerPagesInsertRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isDraft")
     public Boolean isDraft;
+
     public BloggerPagesInsertRequest withIsDraft(Boolean isDraft) {
         this.isDraft = isDraft;
         return this;
@@ -83,6 +92,7 @@ public class BloggerPagesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BloggerPagesInsertRequest withKey(String key) {
         this.key = key;
         return this;
@@ -93,6 +103,7 @@ public class BloggerPagesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BloggerPagesInsertRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -103,6 +114,7 @@ public class BloggerPagesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BloggerPagesInsertRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -113,6 +125,7 @@ public class BloggerPagesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BloggerPagesInsertRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -123,6 +136,7 @@ public class BloggerPagesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public BloggerPagesInsertRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -133,9 +147,13 @@ public class BloggerPagesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public BloggerPagesInsertRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public BloggerPagesInsertRequest(@JsonProperty("blogId") String blogId) {
+        this.blogId = blogId;
+  }
 }

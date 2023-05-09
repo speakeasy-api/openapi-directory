@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutEncryptionConfigResponse {
     
     public String contentType;
+
     public PutEncryptionConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutEncryptionConfigResponse {
      */
     
     public Object invalidRequestException;
+
     public PutEncryptionConfigResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -29,6 +32,7 @@ public class PutEncryptionConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.PutEncryptionConfigResult putEncryptionConfigResult;
+
     public PutEncryptionConfigResponse withPutEncryptionConfigResult(org.openapis.openapi.models.shared.PutEncryptionConfigResult putEncryptionConfigResult) {
         this.putEncryptionConfigResult = putEncryptionConfigResult;
         return this;
@@ -36,6 +40,7 @@ public class PutEncryptionConfigResponse {
     
     
     public Integer statusCode;
+
     public PutEncryptionConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class PutEncryptionConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutEncryptionConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class PutEncryptionConfigResponse {
      */
     
     public Object throttledException;
+
     public PutEncryptionConfigResponse withThrottledException(Object throttledException) {
         this.throttledException = throttledException;
         return this;
     }
     
+    public PutEncryptionConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

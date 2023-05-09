@@ -15,6 +15,7 @@ public class ListVariantStoresRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public ListVariantStoresRequestBodyFilter filter;
+
     public ListVariantStoresRequestBody withFilter(ListVariantStoresRequestBodyFilter filter) {
         this.filter = filter;
         return this;
@@ -26,9 +27,11 @@ public class ListVariantStoresRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ids")
     public String[] ids;
+
     public ListVariantStoresRequestBody withIds(String[] ids) {
         this.ids = ids;
         return this;
     }
     
+    public ListVariantStoresRequestBody(){}
 }

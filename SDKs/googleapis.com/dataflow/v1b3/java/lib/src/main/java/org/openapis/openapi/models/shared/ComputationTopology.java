@@ -18,6 +18,7 @@ public class ComputationTopology {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computationId")
     public String computationId;
+
     public ComputationTopology withComputationId(String computationId) {
         this.computationId = computationId;
         return this;
@@ -29,6 +30,7 @@ public class ComputationTopology {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputs")
     public StreamLocation[] inputs;
+
     public ComputationTopology withInputs(StreamLocation[] inputs) {
         this.inputs = inputs;
         return this;
@@ -40,6 +42,7 @@ public class ComputationTopology {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyRanges")
     public KeyRangeLocation[] keyRanges;
+
     public ComputationTopology withKeyRanges(KeyRangeLocation[] keyRanges) {
         this.keyRanges = keyRanges;
         return this;
@@ -51,6 +54,7 @@ public class ComputationTopology {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputs")
     public StreamLocation[] outputs;
+
     public ComputationTopology withOutputs(StreamLocation[] outputs) {
         this.outputs = outputs;
         return this;
@@ -62,6 +66,7 @@ public class ComputationTopology {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateFamilies")
     public StateFamilyConfig[] stateFamilies;
+
     public ComputationTopology withStateFamilies(StateFamilyConfig[] stateFamilies) {
         this.stateFamilies = stateFamilies;
         return this;
@@ -73,9 +78,11 @@ public class ComputationTopology {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemStageName")
     public String systemStageName;
+
     public ComputationTopology withSystemStageName(String systemStageName) {
         this.systemStageName = systemStageName;
         return this;
     }
     
+    public ComputationTopology(){}
 }

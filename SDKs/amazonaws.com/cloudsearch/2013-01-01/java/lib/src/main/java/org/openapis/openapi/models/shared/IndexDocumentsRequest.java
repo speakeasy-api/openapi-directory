@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * IndexDocumentsRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;IndexDocuments&lt;/a&gt;&lt;/code&gt; operation. Specifies the name of the domain you want to re-index.
@@ -15,9 +15,13 @@ public class IndexDocumentsRequest {
      */
     
     public String domainName;
+
     public IndexDocumentsRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public IndexDocumentsRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

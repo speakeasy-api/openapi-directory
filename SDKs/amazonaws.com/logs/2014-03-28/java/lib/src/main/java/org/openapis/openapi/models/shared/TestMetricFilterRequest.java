@@ -12,6 +12,7 @@ public class TestMetricFilterRequest {
      */
     @JsonProperty("filterPattern")
     public String filterPattern;
+
     public TestMetricFilterRequest withFilterPattern(String filterPattern) {
         this.filterPattern = filterPattern;
         return this;
@@ -19,9 +20,14 @@ public class TestMetricFilterRequest {
     
     @JsonProperty("logEventMessages")
     public String[] logEventMessages;
+
     public TestMetricFilterRequest withLogEventMessages(String[] logEventMessages) {
         this.logEventMessages = logEventMessages;
         return this;
     }
     
+    public TestMetricFilterRequest(@JsonProperty("filterPattern") String filterPattern, @JsonProperty("logEventMessages") String[] logEventMessages) {
+        this.filterPattern = filterPattern;
+        this.logEventMessages = logEventMessages;
+  }
 }

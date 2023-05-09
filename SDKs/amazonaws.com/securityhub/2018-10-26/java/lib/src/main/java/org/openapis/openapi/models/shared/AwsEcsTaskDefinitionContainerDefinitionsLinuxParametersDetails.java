@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Capabilities")
     public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersCapabilitiesDetails capabilities;
+
     public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDetails withCapabilities(AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersCapabilitiesDetails capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Devices")
     public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDevicesDetails[] devices;
+
     public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDetails withDevices(AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDevicesDetails[] devices) {
         this.devices = devices;
         return this;
@@ -31,6 +33,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InitProcessEnabled")
     public Boolean initProcessEnabled;
+
     public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDetails withInitProcessEnabled(Boolean initProcessEnabled) {
         this.initProcessEnabled = initProcessEnabled;
         return this;
@@ -39,6 +42,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxSwap")
     public Long maxSwap;
+
     public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDetails withMaxSwap(Long maxSwap) {
         this.maxSwap = maxSwap;
         return this;
@@ -47,6 +51,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedMemorySize")
     public Long sharedMemorySize;
+
     public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDetails withSharedMemorySize(Long sharedMemorySize) {
         this.sharedMemorySize = sharedMemorySize;
         return this;
@@ -55,6 +60,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Swappiness")
     public Long swappiness;
+
     public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDetails withSwappiness(Long swappiness) {
         this.swappiness = swappiness;
         return this;
@@ -63,9 +69,11 @@ public class AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tmpfs")
     public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersTmpfsDetails[] tmpfs;
+
     public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDetails withTmpfs(AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersTmpfsDetails[] tmpfs) {
         this.tmpfs = tmpfs;
         return this;
     }
     
+    public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDetails(){}
 }

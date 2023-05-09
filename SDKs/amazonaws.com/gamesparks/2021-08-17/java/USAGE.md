@@ -3,48 +3,47 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateGameRequestBody;
 import org.openapis.openapi.models.operations.CreateGameRequest;
+import org.openapis.openapi.models.operations.CreateGameRequestBody;
 import org.openapis.openapi.models.operations.CreateGameResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateGameRequest req = new CreateGameRequest() {{
-                requestBody = new CreateGameRequestBody() {{
-                    clientToken = "corrupti";
-                    description = "provident";
-                    gameName = "distinctio";
-                    tags = new java.util.HashMap<String, String>() {{
-                        put("unde", "nulla");
-                        put("corrupti", "illum");
-                        put("vel", "error");
-                        put("deserunt", "suscipit");
-                    }};
-                }};
-                xAmzAlgorithm = "iure";
-                xAmzContentSha256 = "magnam";
-                xAmzCredential = "debitis";
-                xAmzDate = "ipsa";
-                xAmzSecurityToken = "delectus";
-                xAmzSignature = "tempora";
-                xAmzSignedHeaders = "suscipit";
-            }}            
+            CreateGameRequest req = new CreateGameRequest(                new CreateGameRequestBody("provident") {{
+                                clientToken = "distinctio";
+                                description = "quibusdam";
+                                tags = new java.util.HashMap<String, String>() {{
+                                    put("nulla", "corrupti");
+                                    put("illum", "vel");
+                                    put("error", "deserunt");
+                                }};
+                            }};) {{
+                xAmzAlgorithm = "suscipit";
+                xAmzContentSha256 = "iure";
+                xAmzCredential = "magnam";
+                xAmzDate = "debitis";
+                xAmzSecurityToken = "ipsa";
+                xAmzSignature = "delectus";
+                xAmzSignedHeaders = "tempora";
+            }};            
 
             CreateGameResponse res = sdk.createGame(req);
 
-            if (res.createGameResult.isPresent()) {
+            if (res.createGameResult != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

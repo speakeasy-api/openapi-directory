@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetGraphMemberDatasourcesResponse {
@@ -12,6 +13,7 @@ public class BatchGetGraphMemberDatasourcesResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchGetGraphMemberDatasourcesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchGetGraphMemberDatasourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetGraphMemberDatasourcesResponse batchGetGraphMemberDatasourcesResponse;
+
     public BatchGetGraphMemberDatasourcesResponse withBatchGetGraphMemberDatasourcesResponse(org.openapis.openapi.models.shared.BatchGetGraphMemberDatasourcesResponse batchGetGraphMemberDatasourcesResponse) {
         this.batchGetGraphMemberDatasourcesResponse = batchGetGraphMemberDatasourcesResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetGraphMemberDatasourcesResponse {
     
     
     public String contentType;
+
     public BatchGetGraphMemberDatasourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetGraphMemberDatasourcesResponse {
      */
     
     public Object internalServerException;
+
     public BatchGetGraphMemberDatasourcesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class BatchGetGraphMemberDatasourcesResponse {
     
     
     public Integer statusCode;
+
     public BatchGetGraphMemberDatasourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchGetGraphMemberDatasourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetGraphMemberDatasourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class BatchGetGraphMemberDatasourcesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchGetGraphMemberDatasourcesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class BatchGetGraphMemberDatasourcesResponse {
      */
     
     public Object validationException;
+
     public BatchGetGraphMemberDatasourcesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchGetGraphMemberDatasourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MessagesFetchAllRequest {
@@ -12,6 +13,7 @@ public class MessagesFetchAllRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public MessagesFetchAllRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class MessagesFetchAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contactId")
     public String contactId;
+
     public MessagesFetchAllRequest withContactId(String contactId) {
         this.contactId = contactId;
         return this;
@@ -32,6 +35,7 @@ public class MessagesFetchAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conversationId")
     public String conversationId;
+
     public MessagesFetchAllRequest withConversationId(String conversationId) {
         this.conversationId = conversationId;
         return this;
@@ -42,6 +46,7 @@ public class MessagesFetchAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public MessagesFetchAllRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -52,9 +57,13 @@ public class MessagesFetchAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public MessagesFetchAllRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public MessagesFetchAllRequest(@JsonProperty("accountId") String accountId) {
+        this.accountId = accountId;
+  }
 }

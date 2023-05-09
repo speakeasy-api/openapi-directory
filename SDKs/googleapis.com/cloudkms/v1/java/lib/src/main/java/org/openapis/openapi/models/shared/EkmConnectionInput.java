@@ -18,6 +18,7 @@ public class EkmConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cryptoSpacePath")
     public String cryptoSpacePath;
+
     public EkmConnectionInput withCryptoSpacePath(String cryptoSpacePath) {
         this.cryptoSpacePath = cryptoSpacePath;
         return this;
@@ -29,6 +30,7 @@ public class EkmConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public EkmConnectionInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,6 +42,7 @@ public class EkmConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyManagementMode")
     public EkmConnectionKeyManagementModeEnum keyManagementMode;
+
     public EkmConnectionInput withKeyManagementMode(EkmConnectionKeyManagementModeEnum keyManagementMode) {
         this.keyManagementMode = keyManagementMode;
         return this;
@@ -51,9 +54,11 @@ public class EkmConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceResolvers")
     public ServiceResolverInput[] serviceResolvers;
+
     public EkmConnectionInput withServiceResolvers(ServiceResolverInput[] serviceResolvers) {
         this.serviceResolvers = serviceResolvers;
         return this;
     }
     
+    public EkmConnectionInput(){}
 }

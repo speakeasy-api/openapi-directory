@@ -15,6 +15,7 @@ public class AutoMerging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConflictResolution")
     public ConflictResolution conflictResolution;
+
     public AutoMerging withConflictResolution(ConflictResolution conflictResolution) {
         this.conflictResolution = conflictResolution;
         return this;
@@ -23,6 +24,7 @@ public class AutoMerging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Consolidation")
     public Consolidation consolidation;
+
     public AutoMerging withConsolidation(Consolidation consolidation) {
         this.consolidation = consolidation;
         return this;
@@ -30,6 +32,7 @@ public class AutoMerging {
     
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public AutoMerging withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -38,9 +41,13 @@ public class AutoMerging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinAllowedConfidenceScoreForMerging")
     public Double minAllowedConfidenceScoreForMerging;
+
     public AutoMerging withMinAllowedConfidenceScoreForMerging(Double minAllowedConfidenceScoreForMerging) {
         this.minAllowedConfidenceScoreForMerging = minAllowedConfidenceScoreForMerging;
         return this;
     }
     
+    public AutoMerging(@JsonProperty("Enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

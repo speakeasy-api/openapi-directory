@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetLoadBalancers200ApplicationJSON {
     @JsonProperty("load_balancers")
     public GetLoadBalancers200ApplicationJSONLoadBalancers[] loadBalancers;
+
     public GetLoadBalancers200ApplicationJSON withLoadBalancers(GetLoadBalancers200ApplicationJSONLoadBalancers[] loadBalancers) {
         this.loadBalancers = loadBalancers;
         return this;
@@ -22,9 +23,13 @@ public class GetLoadBalancers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public GetLoadBalancers200ApplicationJSONMeta meta;
+
     public GetLoadBalancers200ApplicationJSON withMeta(GetLoadBalancers200ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetLoadBalancers200ApplicationJSON(@JsonProperty("load_balancers") GetLoadBalancers200ApplicationJSONLoadBalancers[] loadBalancers) {
+        this.loadBalancers = loadBalancers;
+  }
 }

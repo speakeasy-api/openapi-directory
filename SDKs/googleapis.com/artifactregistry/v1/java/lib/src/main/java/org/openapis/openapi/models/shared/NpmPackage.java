@@ -18,6 +18,7 @@ public class NpmPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public NpmPackage withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class NpmPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NpmPackage withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class NpmPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public NpmPackage withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -51,6 +54,7 @@ public class NpmPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public NpmPackage withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -62,6 +66,7 @@ public class NpmPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public NpmPackage withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -73,9 +78,11 @@ public class NpmPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public NpmPackage withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public NpmPackage(){}
 }

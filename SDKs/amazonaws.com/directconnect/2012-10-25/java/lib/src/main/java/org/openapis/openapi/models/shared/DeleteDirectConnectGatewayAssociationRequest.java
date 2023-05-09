@@ -12,6 +12,7 @@ public class DeleteDirectConnectGatewayAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associationId")
     public String associationId;
+
     public DeleteDirectConnectGatewayAssociationRequest withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -20,6 +21,7 @@ public class DeleteDirectConnectGatewayAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directConnectGatewayId")
     public String directConnectGatewayId;
+
     public DeleteDirectConnectGatewayAssociationRequest withDirectConnectGatewayId(String directConnectGatewayId) {
         this.directConnectGatewayId = directConnectGatewayId;
         return this;
@@ -28,9 +30,11 @@ public class DeleteDirectConnectGatewayAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualGatewayId")
     public String virtualGatewayId;
+
     public DeleteDirectConnectGatewayAssociationRequest withVirtualGatewayId(String virtualGatewayId) {
         this.virtualGatewayId = virtualGatewayId;
         return this;
     }
     
+    public DeleteDirectConnectGatewayAssociationRequest(){}
 }

@@ -14,6 +14,7 @@ public class ReposCreateDeployKeyRequestBody {
      */
     @JsonProperty("key")
     public String key;
+
     public ReposCreateDeployKeyRequestBody withKey(String key) {
         this.key = key;
         return this;
@@ -27,6 +28,7 @@ public class ReposCreateDeployKeyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("read_only")
     public Boolean readOnly;
+
     public ReposCreateDeployKeyRequestBody withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -38,9 +40,13 @@ public class ReposCreateDeployKeyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ReposCreateDeployKeyRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ReposCreateDeployKeyRequestBody(@JsonProperty("key") String key) {
+        this.key = key;
+  }
 }

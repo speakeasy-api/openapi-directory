@@ -18,6 +18,7 @@ public class SearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public SearchRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -29,6 +30,7 @@ public class SearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public SearchRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -40,9 +42,11 @@ public class SearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public SearchRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public SearchRequest(){}
 }

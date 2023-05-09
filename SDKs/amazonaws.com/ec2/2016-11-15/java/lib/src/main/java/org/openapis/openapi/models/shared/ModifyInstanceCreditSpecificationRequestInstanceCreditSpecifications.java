@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifyInstanceCreditSpecificationRequestInstanceCreditSpecifications - Describes the credit option for CPU usage of a burstable performance instance.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyInstanceCreditSpecificationRequestInstanceCreditSpecifications {
     
     public String cpuCredits;
+
     public ModifyInstanceCreditSpecificationRequestInstanceCreditSpecifications withCpuCredits(String cpuCredits) {
         this.cpuCredits = cpuCredits;
         return this;
@@ -19,9 +20,13 @@ public class ModifyInstanceCreditSpecificationRequestInstanceCreditSpecification
     
     
     public String instanceId;
+
     public ModifyInstanceCreditSpecificationRequestInstanceCreditSpecifications withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public ModifyInstanceCreditSpecificationRequestInstanceCreditSpecifications(@JsonProperty("InstanceId") String instanceId) {
+        this.instanceId = instanceId;
+  }
 }

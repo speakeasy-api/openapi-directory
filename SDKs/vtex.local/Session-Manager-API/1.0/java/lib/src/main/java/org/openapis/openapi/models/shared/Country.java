@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Country {
     @JsonProperty("value")
     public String value;
+
     public Country withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Country(@JsonProperty("value") String value) {
+        this.value = value;
+  }
 }

@@ -18,6 +18,7 @@ public class ChannelSectionContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channels")
     public String[] channels;
+
     public ChannelSectionContentDetails withChannels(String[] channels) {
         this.channels = channels;
         return this;
@@ -29,9 +30,11 @@ public class ChannelSectionContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playlists")
     public String[] playlists;
+
     public ChannelSectionContentDetails withPlaylists(String[] playlists) {
         this.playlists = playlists;
         return this;
     }
     
+    public ChannelSectionContentDetails(){}
 }

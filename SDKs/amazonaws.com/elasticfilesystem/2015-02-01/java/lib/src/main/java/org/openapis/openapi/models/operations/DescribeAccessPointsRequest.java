@@ -12,6 +12,7 @@ public class DescribeAccessPointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AccessPointId")
     public String accessPointId;
+
     public DescribeAccessPointsRequest withAccessPointId(String accessPointId) {
         this.accessPointId = accessPointId;
         return this;
@@ -22,6 +23,7 @@ public class DescribeAccessPointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FileSystemId")
     public String fileSystemId;
+
     public DescribeAccessPointsRequest withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -32,6 +34,7 @@ public class DescribeAccessPointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public Long maxResults;
+
     public DescribeAccessPointsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -42,6 +45,7 @@ public class DescribeAccessPointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public DescribeAccessPointsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -49,6 +53,7 @@ public class DescribeAccessPointsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeAccessPointsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -56,6 +61,7 @@ public class DescribeAccessPointsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeAccessPointsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -63,6 +69,7 @@ public class DescribeAccessPointsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeAccessPointsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -70,6 +77,7 @@ public class DescribeAccessPointsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeAccessPointsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -77,6 +85,7 @@ public class DescribeAccessPointsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeAccessPointsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -84,6 +93,7 @@ public class DescribeAccessPointsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeAccessPointsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -91,9 +101,11 @@ public class DescribeAccessPointsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeAccessPointsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public DescribeAccessPointsRequest(){}
 }

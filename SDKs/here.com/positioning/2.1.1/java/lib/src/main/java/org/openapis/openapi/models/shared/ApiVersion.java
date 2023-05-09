@@ -18,6 +18,7 @@ public class ApiVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiVersion")
     public String apiVersion;
+
     public ApiVersion withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -29,9 +30,11 @@ public class ApiVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceVersion")
     public String serviceVersion;
+
     public ApiVersion withServiceVersion(String serviceVersion) {
         this.serviceVersion = serviceVersion;
         return this;
     }
     
+    public ApiVersion(){}
 }

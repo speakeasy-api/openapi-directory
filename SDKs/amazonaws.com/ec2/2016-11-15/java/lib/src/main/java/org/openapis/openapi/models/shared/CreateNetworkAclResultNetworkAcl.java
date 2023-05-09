@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkAclResultNetworkAcl {
     
     public CreateNetworkAclResultNetworkAclAssociations[] associations;
+
     public CreateNetworkAclResultNetworkAcl withAssociations(CreateNetworkAclResultNetworkAclAssociations[] associations) {
         this.associations = associations;
         return this;
@@ -19,6 +20,7 @@ public class CreateNetworkAclResultNetworkAcl {
     
     
     public CreateNetworkAclResultNetworkAclEntries[] entries;
+
     public CreateNetworkAclResultNetworkAcl withEntries(CreateNetworkAclResultNetworkAclEntries[] entries) {
         this.entries = entries;
         return this;
@@ -26,6 +28,7 @@ public class CreateNetworkAclResultNetworkAcl {
     
     
     public Boolean isDefault;
+
     public CreateNetworkAclResultNetworkAcl withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -33,6 +36,7 @@ public class CreateNetworkAclResultNetworkAcl {
     
     
     public String networkAclId;
+
     public CreateNetworkAclResultNetworkAcl withNetworkAclId(String networkAclId) {
         this.networkAclId = networkAclId;
         return this;
@@ -40,6 +44,7 @@ public class CreateNetworkAclResultNetworkAcl {
     
     
     public String ownerId;
+
     public CreateNetworkAclResultNetworkAcl withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -47,6 +52,7 @@ public class CreateNetworkAclResultNetworkAcl {
     
     
     public CreateNetworkAclResultNetworkAclTags[] tags;
+
     public CreateNetworkAclResultNetworkAcl withTags(CreateNetworkAclResultNetworkAclTags[] tags) {
         this.tags = tags;
         return this;
@@ -54,9 +60,11 @@ public class CreateNetworkAclResultNetworkAcl {
     
     
     public String vpcId;
+
     public CreateNetworkAclResultNetworkAcl withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateNetworkAclResultNetworkAcl(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirestoreProjectsDatabasesDocumentsPartitionQueryResponse {
     
     public String contentType;
+
     public FirestoreProjectsDatabasesDocumentsPartitionQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FirestoreProjectsDatabasesDocumentsPartitionQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.PartitionQueryResponse partitionQueryResponse;
+
     public FirestoreProjectsDatabasesDocumentsPartitionQueryResponse withPartitionQueryResponse(org.openapis.openapi.models.shared.PartitionQueryResponse partitionQueryResponse) {
         this.partitionQueryResponse = partitionQueryResponse;
         return this;
@@ -26,6 +29,7 @@ public class FirestoreProjectsDatabasesDocumentsPartitionQueryResponse {
     
     
     public Integer statusCode;
+
     public FirestoreProjectsDatabasesDocumentsPartitionQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirestoreProjectsDatabasesDocumentsPartitionQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirestoreProjectsDatabasesDocumentsPartitionQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirestoreProjectsDatabasesDocumentsPartitionQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

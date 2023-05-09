@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostConfigApacheFelixJettyBasedHttpServiceResponse {
     
     public String contentType;
+
     public PostConfigApacheFelixJettyBasedHttpServiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostConfigApacheFelixJettyBasedHttpServiceResponse {
     
     
     public Integer statusCode;
+
     public PostConfigApacheFelixJettyBasedHttpServiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class PostConfigApacheFelixJettyBasedHttpServiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostConfigApacheFelixJettyBasedHttpServiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostConfigApacheFelixJettyBasedHttpServiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

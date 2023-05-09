@@ -13,25 +13,28 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class TcpRouteRouteAction {
     /**
-     * Optional. The destination services to which traffic should be forwarded. At least one destination service is required.
+     * Optional. The destination services to which traffic should be forwarded. At least one destination service is required. Only one of route destination or original destination can be set.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinations")
     public TcpRouteRouteDestination[] destinations;
+
     public TcpRouteRouteAction withDestinations(TcpRouteRouteDestination[] destinations) {
         this.destinations = destinations;
         return this;
     }
     
     /**
-     * Optional. If true, Router will use the destination IP and port of the original connection as the destination of the request. Default is false.
+     * Optional. If true, Router will use the destination IP and port of the original connection as the destination of the request. Default is false. Only one of route destinations or original destination can be set.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalDestination")
     public Boolean originalDestination;
+
     public TcpRouteRouteAction withOriginalDestination(Boolean originalDestination) {
         this.originalDestination = originalDestination;
         return this;
     }
     
+    public TcpRouteRouteAction(){}
 }

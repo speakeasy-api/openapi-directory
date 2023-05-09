@@ -62,11 +62,9 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubereportingJobsCreateResponse res = new org.openapis.openapi.models.operations.YoutubereportingJobsCreateResponse() {{
+        org.openapis.openapi.models.operations.YoutubereportingJobsCreateResponse res = new org.openapis.openapi.models.operations.YoutubereportingJobsCreateResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubereportingJobsDeleteResponse res = new org.openapis.openapi.models.operations.YoutubereportingJobsDeleteResponse() {{
+        org.openapis.openapi.models.operations.YoutubereportingJobsDeleteResponse res = new org.openapis.openapi.models.operations.YoutubereportingJobsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubereportingJobsGetResponse res = new org.openapis.openapi.models.operations.YoutubereportingJobsGetResponse() {{
+        org.openapis.openapi.models.operations.YoutubereportingJobsGetResponse res = new org.openapis.openapi.models.operations.YoutubereportingJobsGetResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubereportingJobsListResponse res = new org.openapis.openapi.models.operations.YoutubereportingJobsListResponse() {{
+        org.openapis.openapi.models.operations.YoutubereportingJobsListResponse res = new org.openapis.openapi.models.operations.YoutubereportingJobsListResponse(contentType, httpRes.statusCode()) {{
             listJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -246,11 +238,9 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubereportingJobsReportsGetResponse res = new org.openapis.openapi.models.operations.YoutubereportingJobsReportsGetResponse() {{
+        org.openapis.openapi.models.operations.YoutubereportingJobsReportsGetResponse res = new org.openapis.openapi.models.operations.YoutubereportingJobsReportsGetResponse(contentType, httpRes.statusCode()) {{
             report = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -292,11 +282,9 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubereportingJobsReportsListResponse res = new org.openapis.openapi.models.operations.YoutubereportingJobsReportsListResponse() {{
+        org.openapis.openapi.models.operations.YoutubereportingJobsReportsListResponse res = new org.openapis.openapi.models.operations.YoutubereportingJobsReportsListResponse(contentType, httpRes.statusCode()) {{
             listReportsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,9 +18,11 @@ public class GoogleCloudDiscoveryengineV1betaImportErrorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsPrefix")
     public String gcsPrefix;
+
     public GoogleCloudDiscoveryengineV1betaImportErrorConfig withGcsPrefix(String gcsPrefix) {
         this.gcsPrefix = gcsPrefix;
         return this;
     }
     
+    public GoogleCloudDiscoveryengineV1betaImportErrorConfig(){}
 }

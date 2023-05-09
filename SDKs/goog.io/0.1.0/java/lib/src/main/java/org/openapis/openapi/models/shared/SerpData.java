@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SerpData {
     @JsonProperty("query")
     public String query;
+
     public SerpData withQuery(String query) {
         this.query = query;
         return this;
@@ -16,9 +17,14 @@ public class SerpData {
     
     @JsonProperty("website")
     public String website;
+
     public SerpData withWebsite(String website) {
         this.website = website;
         return this;
     }
     
+    public SerpData(@JsonProperty("query") String query, @JsonProperty("website") String website) {
+        this.query = query;
+        this.website = website;
+  }
 }

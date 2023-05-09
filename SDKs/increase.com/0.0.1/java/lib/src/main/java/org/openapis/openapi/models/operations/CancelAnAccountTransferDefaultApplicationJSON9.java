@@ -4,13 +4,12 @@
 
 package org.openapis.openapi.models.operations;
 
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CancelAnAccountTransferDefaultApplicationJSON9 {
     @JsonProperty("detail")
     public String detail;
+
     public CancelAnAccountTransferDefaultApplicationJSON9 withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -19,9 +18,9 @@ public class CancelAnAccountTransferDefaultApplicationJSON9 {
     /**
      * All errors related to parsing the request parameters.
      */
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public java.util.Map<String, Object>[] errors;
+
     public CancelAnAccountTransferDefaultApplicationJSON9 withErrors(java.util.Map<String, Object>[] errors) {
         this.errors = errors;
         return this;
@@ -29,6 +28,7 @@ public class CancelAnAccountTransferDefaultApplicationJSON9 {
     
     @JsonProperty("status")
     public CancelAnAccountTransferDefaultApplicationJSON9StatusEnum status;
+
     public CancelAnAccountTransferDefaultApplicationJSON9 withStatus(CancelAnAccountTransferDefaultApplicationJSON9StatusEnum status) {
         this.status = status;
         return this;
@@ -36,6 +36,7 @@ public class CancelAnAccountTransferDefaultApplicationJSON9 {
     
     @JsonProperty("title")
     public String title;
+
     public CancelAnAccountTransferDefaultApplicationJSON9 withTitle(String title) {
         this.title = title;
         return this;
@@ -43,9 +44,17 @@ public class CancelAnAccountTransferDefaultApplicationJSON9 {
     
     @JsonProperty("type")
     public CancelAnAccountTransferDefaultApplicationJSON9TypeEnum type;
+
     public CancelAnAccountTransferDefaultApplicationJSON9 withType(CancelAnAccountTransferDefaultApplicationJSON9TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CancelAnAccountTransferDefaultApplicationJSON9(@JsonProperty("detail") String detail, @JsonProperty("errors") java.util.Map<String, Object>[] errors, @JsonProperty("status") CancelAnAccountTransferDefaultApplicationJSON9StatusEnum status, @JsonProperty("title") String title, @JsonProperty("type") CancelAnAccountTransferDefaultApplicationJSON9TypeEnum type) {
+        this.detail = detail;
+        this.errors = errors;
+        this.status = status;
+        this.title = title;
+        this.type = type;
+  }
 }

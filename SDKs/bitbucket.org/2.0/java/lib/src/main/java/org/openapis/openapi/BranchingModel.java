@@ -132,12 +132,10 @@ public class BranchingModel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelResponse(contentType, httpRes.statusCode()) {{
             branchingModel = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -237,12 +235,10 @@ public class BranchingModel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse(contentType, httpRes.statusCode()) {{
             branchingModelSettings = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -285,12 +281,10 @@ public class BranchingModel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelResponse(contentType, httpRes.statusCode()) {{
             effectiveRepoBranchingModel = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,12 +382,10 @@ public class BranchingModel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelResponse res = new org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelResponse() {{
+        org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelResponse res = new org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelResponse(contentType, httpRes.statusCode()) {{
             projectBranchingModel = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -493,12 +485,10 @@ public class BranchingModel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse res = new org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse res = new org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse(contentType, httpRes.statusCode()) {{
             branchingModelSettings = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -628,12 +618,10 @@ public class BranchingModel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse res = new org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse() {{
+        org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse res = new org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse(contentType, httpRes.statusCode()) {{
             branchingModelSettings = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -743,12 +731,10 @@ public class BranchingModel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse res = new org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse() {{
+        org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse res = new org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse(contentType, httpRes.statusCode()) {{
             branchingModelSettings = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

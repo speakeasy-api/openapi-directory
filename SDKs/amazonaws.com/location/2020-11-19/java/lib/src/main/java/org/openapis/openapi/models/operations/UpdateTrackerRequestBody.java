@@ -15,6 +15,7 @@ public class UpdateTrackerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateTrackerRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class UpdateTrackerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PositionFiltering")
     public UpdateTrackerRequestBodyPositionFilteringEnum positionFiltering;
+
     public UpdateTrackerRequestBody withPositionFiltering(UpdateTrackerRequestBodyPositionFilteringEnum positionFiltering) {
         this.positionFiltering = positionFiltering;
         return this;
@@ -37,6 +39,7 @@ public class UpdateTrackerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlan")
     public UpdateTrackerRequestBodyPricingPlanEnum pricingPlan;
+
     public UpdateTrackerRequestBody withPricingPlan(UpdateTrackerRequestBodyPricingPlanEnum pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
@@ -48,9 +51,11 @@ public class UpdateTrackerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlanDataSource")
     public String pricingPlanDataSource;
+
     public UpdateTrackerRequestBody withPricingPlanDataSource(String pricingPlanDataSource) {
         this.pricingPlanDataSource = pricingPlanDataSource;
         return this;
     }
     
+    public UpdateTrackerRequestBody(){}
 }

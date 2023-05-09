@@ -20,6 +20,7 @@ public class DataQualityRulesetEvaluationRunDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSource")
     public DataSource dataSource;
+
     public DataQualityRulesetEvaluationRunDescription withDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -28,6 +29,7 @@ public class DataQualityRulesetEvaluationRunDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunId")
     public String runId;
+
     public DataQualityRulesetEvaluationRunDescription withRunId(String runId) {
         this.runId = runId;
         return this;
@@ -38,6 +40,7 @@ public class DataQualityRulesetEvaluationRunDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartedOn")
     public OffsetDateTime startedOn;
+
     public DataQualityRulesetEvaluationRunDescription withStartedOn(OffsetDateTime startedOn) {
         this.startedOn = startedOn;
         return this;
@@ -46,9 +49,11 @@ public class DataQualityRulesetEvaluationRunDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public TaskStatusTypeEnum status;
+
     public DataQualityRulesetEvaluationRunDescription withStatus(TaskStatusTypeEnum status) {
         this.status = status;
         return this;
     }
     
+    public DataQualityRulesetEvaluationRunDescription(){}
 }

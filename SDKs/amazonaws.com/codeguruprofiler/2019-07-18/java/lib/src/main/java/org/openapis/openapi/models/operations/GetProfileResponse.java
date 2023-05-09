@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProfileResponse {
     
     public String contentType;
+
     public GetProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.GetProfileResponse getProfileResponse;
+
     public GetProfileResponse withGetProfileResponse(org.openapis.openapi.models.shared.GetProfileResponse getProfileResponse) {
         this.getProfileResponse = getProfileResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetProfileResponse {
      */
     
     public Object internalServerException;
+
     public GetProfileResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetProfileResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetProfileResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetProfileResponse {
     
     
     public Integer statusCode;
+
     public GetProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetProfileResponse {
      */
     
     public Object throttlingException;
+
     public GetProfileResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class GetProfileResponse {
      */
     
     public Object validationException;
+
     public GetProfileResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

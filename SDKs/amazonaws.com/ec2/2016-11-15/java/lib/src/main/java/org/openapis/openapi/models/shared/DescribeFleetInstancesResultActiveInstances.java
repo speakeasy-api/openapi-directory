@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFleetInstancesResultActiveInstances {
     
     public DescribeFleetInstancesResultActiveInstancesInstanceHealthEnum instanceHealth;
+
     public DescribeFleetInstancesResultActiveInstances withInstanceHealth(DescribeFleetInstancesResultActiveInstancesInstanceHealthEnum instanceHealth) {
         this.instanceHealth = instanceHealth;
         return this;
@@ -19,6 +20,7 @@ public class DescribeFleetInstancesResultActiveInstances {
     
     
     public String instanceId;
+
     public DescribeFleetInstancesResultActiveInstances withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeFleetInstancesResultActiveInstances {
     
     
     public String instanceType;
+
     public DescribeFleetInstancesResultActiveInstances withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -33,9 +36,11 @@ public class DescribeFleetInstancesResultActiveInstances {
     
     
     public String spotInstanceRequestId;
+
     public DescribeFleetInstancesResultActiveInstances withSpotInstanceRequestId(String spotInstanceRequestId) {
         this.spotInstanceRequestId = spotInstanceRequestId;
         return this;
     }
     
+    public DescribeFleetInstancesResultActiveInstances(){}
 }

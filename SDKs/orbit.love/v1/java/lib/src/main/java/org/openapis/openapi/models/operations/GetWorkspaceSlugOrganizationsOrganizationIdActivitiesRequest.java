@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=activity_type")
     public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesActivityTypeEnum activityType;
+
     public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest withActivityType(GetWorkspaceSlugOrganizationsOrganizationIdActivitiesActivityTypeEnum activityType) {
         this.activityType = activityType;
         return this;
@@ -16,6 +18,7 @@ public class GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesDirectionEnum direction;
+
     public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest withDirection(GetWorkspaceSlugOrganizationsOrganizationIdActivitiesDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -23,6 +26,7 @@ public class GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=items")
     public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesItemsEnum items;
+
     public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest withItems(GetWorkspaceSlugOrganizationsOrganizationIdActivitiesItemsEnum items) {
         this.items = items;
         return this;
@@ -30,6 +34,7 @@ public class GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organization_id")
     public String organizationId;
+
     public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -37,6 +42,7 @@ public class GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest withPage(String page) {
         this.page = page;
         return this;
@@ -44,6 +50,7 @@ public class GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesSortEnum sort;
+
     public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest withSort(GetWorkspaceSlugOrganizationsOrganizationIdActivitiesSortEnum sort) {
         this.sort = sort;
         return this;
@@ -51,9 +58,14 @@ public class GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
     public String workspaceSlug;
+
     public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest withWorkspaceSlug(String workspaceSlug) {
         this.workspaceSlug = workspaceSlug;
         return this;
     }
     
+    public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest(@JsonProperty("organization_id") String organizationId, @JsonProperty("workspace_slug") String workspaceSlug) {
+        this.organizationId = organizationId;
+        this.workspaceSlug = workspaceSlug;
+  }
 }

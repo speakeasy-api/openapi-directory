@@ -62,10 +62,8 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSupplyLotsResponse res = new org.openapis.openapi.models.operations.GetSupplyLotsResponse() {{
+        org.openapis.openapi.models.operations.GetSupplyLotsResponse res = new org.openapis.openapi.models.operations.GetSupplyLotsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetinventorywithdispatchedreservationsResponse res = new org.openapis.openapi.models.operations.GetinventorywithdispatchedreservationsResponse() {{
+        org.openapis.openapi.models.operations.GetinventorywithdispatchedreservationsResponse res = new org.openapis.openapi.models.operations.GetinventorywithdispatchedreservationsResponse(contentType, httpRes.statusCode()) {{
             getinventorywithdispatchedreservations200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,11 +148,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InventoryBySkuResponse res = new org.openapis.openapi.models.operations.InventoryBySkuResponse() {{
+        org.openapis.openapi.models.operations.InventoryBySkuResponse res = new org.openapis.openapi.models.operations.InventoryBySkuResponse(contentType, httpRes.statusCode()) {{
             inventoryBySku200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InventoryperdockResponse res = new org.openapis.openapi.models.operations.InventoryperdockResponse() {{
+        org.openapis.openapi.models.operations.InventoryperdockResponse res = new org.openapis.openapi.models.operations.InventoryperdockResponse(contentType, httpRes.statusCode()) {{
             inventoryperdock200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InventoryperdockandwarehouseResponse res = new org.openapis.openapi.models.operations.InventoryperdockandwarehouseResponse() {{
+        org.openapis.openapi.models.operations.InventoryperdockandwarehouseResponse res = new org.openapis.openapi.models.operations.InventoryperdockandwarehouseResponse(contentType, httpRes.statusCode()) {{
             inventoryperdockandwarehouse200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,11 +288,9 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InventoryperwarehouseResponse res = new org.openapis.openapi.models.operations.InventoryperwarehouseResponse() {{
+        org.openapis.openapi.models.operations.InventoryperwarehouseResponse res = new org.openapis.openapi.models.operations.InventoryperwarehouseResponse(contentType, httpRes.statusCode()) {{
             inventoryperwarehouse200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -353,10 +341,8 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SaveSupplyLotResponse res = new org.openapis.openapi.models.operations.SaveSupplyLotResponse() {{
+        org.openapis.openapi.models.operations.SaveSupplyLotResponse res = new org.openapis.openapi.models.operations.SaveSupplyLotResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -397,10 +383,8 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TransferSupplyLotResponse res = new org.openapis.openapi.models.operations.TransferSupplyLotResponse() {{
+        org.openapis.openapi.models.operations.TransferSupplyLotResponse res = new org.openapis.openapi.models.operations.TransferSupplyLotResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -444,10 +428,8 @@ public class Inventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateInventoryBySkuandWarehouseResponse res = new org.openapis.openapi.models.operations.UpdateInventoryBySkuandWarehouseResponse() {{
+        org.openapis.openapi.models.operations.UpdateInventoryBySkuandWarehouseResponse res = new org.openapis.openapi.models.operations.UpdateInventoryBySkuandWarehouseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

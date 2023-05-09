@@ -15,6 +15,7 @@ public class DescribeCertificatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Certificates")
     public Certificate[] certificates;
+
     public DescribeCertificatesResponse withCertificates(Certificate[] certificates) {
         this.certificates = certificates;
         return this;
@@ -23,9 +24,11 @@ public class DescribeCertificatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeCertificatesResponse withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public DescribeCertificatesResponse(){}
 }

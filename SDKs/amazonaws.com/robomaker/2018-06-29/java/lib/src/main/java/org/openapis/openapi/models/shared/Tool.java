@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Tool {
     @JsonProperty("command")
     public String command;
+
     public Tool withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class Tool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exitBehavior")
     public ExitBehaviorEnum exitBehavior;
+
     public Tool withExitBehavior(ExitBehaviorEnum exitBehavior) {
         this.exitBehavior = exitBehavior;
         return this;
@@ -29,6 +31,7 @@ public class Tool {
     
     @JsonProperty("name")
     public String name;
+
     public Tool withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +40,7 @@ public class Tool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamOutputToCloudWatch")
     public Boolean streamOutputToCloudWatch;
+
     public Tool withStreamOutputToCloudWatch(Boolean streamOutputToCloudWatch) {
         this.streamOutputToCloudWatch = streamOutputToCloudWatch;
         return this;
@@ -45,9 +49,14 @@ public class Tool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamUI")
     public Boolean streamUI;
+
     public Tool withStreamUI(Boolean streamUI) {
         this.streamUI = streamUI;
         return this;
     }
     
+    public Tool(@JsonProperty("command") String command, @JsonProperty("name") String name) {
+        this.command = command;
+        this.name = name;
+  }
 }

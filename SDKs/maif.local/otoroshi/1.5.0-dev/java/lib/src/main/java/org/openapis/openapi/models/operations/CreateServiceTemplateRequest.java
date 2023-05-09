@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateServiceTemplateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ErrorTemplate errorTemplate;
+
     public CreateServiceTemplateRequest withErrorTemplate(org.openapis.openapi.models.shared.ErrorTemplate errorTemplate) {
         this.errorTemplate = errorTemplate;
         return this;
@@ -19,9 +21,13 @@ public class CreateServiceTemplateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceId")
     public String serviceId;
+
     public CreateServiceTemplateRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     
+    public CreateServiceTemplateRequest(@JsonProperty("serviceId") String serviceId) {
+        this.serviceId = serviceId;
+  }
 }

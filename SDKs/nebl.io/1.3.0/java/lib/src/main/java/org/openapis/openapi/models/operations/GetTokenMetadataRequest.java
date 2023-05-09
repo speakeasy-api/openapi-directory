@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTokenMetadataRequest {
@@ -12,6 +13,7 @@ public class GetTokenMetadataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tokenid")
     public String tokenid;
+
     public GetTokenMetadataRequest withTokenid(String tokenid) {
         this.tokenid = tokenid;
         return this;
@@ -22,9 +24,13 @@ public class GetTokenMetadataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=verbosity")
     public Double verbosity;
+
     public GetTokenMetadataRequest withVerbosity(Double verbosity) {
         this.verbosity = verbosity;
         return this;
     }
     
+    public GetTokenMetadataRequest(@JsonProperty("tokenid") String tokenid) {
+        this.tokenid = tokenid;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostDeleteNotificationConfigurationsResponse {
     
     public String contentType;
+
     public PostDeleteNotificationConfigurationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostDeleteNotificationConfigurationsResponse {
      */
     
     public org.openapis.openapi.models.shared.GenericResponse genericResponse;
+
     public PostDeleteNotificationConfigurationsResponse withGenericResponse(org.openapis.openapi.models.shared.GenericResponse genericResponse) {
         this.genericResponse = genericResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostDeleteNotificationConfigurationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostDeleteNotificationConfigurationsResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class PostDeleteNotificationConfigurationsResponse {
     
     
     public Integer statusCode;
+
     public PostDeleteNotificationConfigurationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostDeleteNotificationConfigurationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostDeleteNotificationConfigurationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostDeleteNotificationConfigurationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -19,6 +19,7 @@ public class UpdateItemModifierListsRequest {
      */
     @JsonProperty("item_ids")
     public String[] itemIds;
+
     public UpdateItemModifierListsRequest withItemIds(String[] itemIds) {
         this.itemIds = itemIds;
         return this;
@@ -30,6 +31,7 @@ public class UpdateItemModifierListsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifier_lists_to_disable")
     public String[] modifierListsToDisable;
+
     public UpdateItemModifierListsRequest withModifierListsToDisable(String[] modifierListsToDisable) {
         this.modifierListsToDisable = modifierListsToDisable;
         return this;
@@ -41,9 +43,13 @@ public class UpdateItemModifierListsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifier_lists_to_enable")
     public String[] modifierListsToEnable;
+
     public UpdateItemModifierListsRequest withModifierListsToEnable(String[] modifierListsToEnable) {
         this.modifierListsToEnable = modifierListsToEnable;
         return this;
     }
     
+    public UpdateItemModifierListsRequest(@JsonProperty("item_ids") String[] itemIds) {
+        this.itemIds = itemIds;
+  }
 }

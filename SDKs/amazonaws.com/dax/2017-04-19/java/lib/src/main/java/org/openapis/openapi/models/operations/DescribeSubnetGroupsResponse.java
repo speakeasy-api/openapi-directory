@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeSubnetGroupsResponse {
     
     public String contentType;
+
     public DescribeSubnetGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeSubnetGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeSubnetGroupsResponse describeSubnetGroupsResponse;
+
     public DescribeSubnetGroupsResponse withDescribeSubnetGroupsResponse(org.openapis.openapi.models.shared.DescribeSubnetGroupsResponse describeSubnetGroupsResponse) {
         this.describeSubnetGroupsResponse = describeSubnetGroupsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeSubnetGroupsResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public DescribeSubnetGroupsResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
@@ -36,6 +40,7 @@ public class DescribeSubnetGroupsResponse {
     
     
     public Integer statusCode;
+
     public DescribeSubnetGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeSubnetGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeSubnetGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeSubnetGroupsResponse {
      */
     
     public Object subnetGroupNotFoundFault;
+
     public DescribeSubnetGroupsResponse withSubnetGroupNotFoundFault(Object subnetGroupNotFoundFault) {
         this.subnetGroupNotFoundFault = subnetGroupNotFoundFault;
         return this;
     }
     
+    public DescribeSubnetGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

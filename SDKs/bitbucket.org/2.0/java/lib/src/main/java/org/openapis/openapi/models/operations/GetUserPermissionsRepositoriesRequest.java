@@ -13,6 +13,7 @@ public class GetUserPermissionsRepositoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetUserPermissionsRepositoriesRequest withQ(String q) {
         this.q = q;
         return this;
@@ -24,9 +25,11 @@ public class GetUserPermissionsRepositoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetUserPermissionsRepositoriesRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetUserPermissionsRepositoriesRequest(){}
 }

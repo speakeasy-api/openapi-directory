@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TravelpartnerAccountsParticipationReportViewsQueryResponse {
     
     public String contentType;
+
     public TravelpartnerAccountsParticipationReportViewsQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TravelpartnerAccountsParticipationReportViewsQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.QueryParticipationReportResponse queryParticipationReportResponse;
+
     public TravelpartnerAccountsParticipationReportViewsQueryResponse withQueryParticipationReportResponse(org.openapis.openapi.models.shared.QueryParticipationReportResponse queryParticipationReportResponse) {
         this.queryParticipationReportResponse = queryParticipationReportResponse;
         return this;
@@ -26,6 +29,7 @@ public class TravelpartnerAccountsParticipationReportViewsQueryResponse {
     
     
     public Integer statusCode;
+
     public TravelpartnerAccountsParticipationReportViewsQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class TravelpartnerAccountsParticipationReportViewsQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TravelpartnerAccountsParticipationReportViewsQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TravelpartnerAccountsParticipationReportViewsQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

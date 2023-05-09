@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearResponse {
     
     public String contentType;
+
     public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearResponse 
     
     
     public Integer statusCode;
+
     public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearResponse 
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearResponse 
      */
     
     public org.openapis.openapi.models.shared.Error[] errors;
+
     public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearResponse withErrors(org.openapis.openapi.models.shared.Error[] errors) {
         this.errors = errors;
         return this;
@@ -43,9 +48,14 @@ public class GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearResponse 
      */
     
     public org.openapis.openapi.models.shared.PayStatementSummary[] payStatementSummaries;
+
     public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearResponse withPayStatementSummaries(org.openapis.openapi.models.shared.PayStatementSummary[] payStatementSummaries) {
         this.payStatementSummaries = payStatementSummaries;
         return this;
     }
     
+    public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

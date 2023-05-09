@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OnPremConfig {
     @JsonProperty("AgentArns")
     public String[] agentArns;
+
     public OnPremConfig withAgentArns(String[] agentArns) {
         this.agentArns = agentArns;
         return this;
     }
     
+    public OnPremConfig(@JsonProperty("AgentArns") String[] agentArns) {
+        this.agentArns = agentArns;
+  }
 }

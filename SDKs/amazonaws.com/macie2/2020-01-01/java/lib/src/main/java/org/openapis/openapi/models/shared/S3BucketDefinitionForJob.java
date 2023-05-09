@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3BucketDefinitionForJob {
     @JsonProperty("accountId")
     public String accountId;
+
     public S3BucketDefinitionForJob withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,9 +20,14 @@ public class S3BucketDefinitionForJob {
     
     @JsonProperty("buckets")
     public String[] buckets;
+
     public S3BucketDefinitionForJob withBuckets(String[] buckets) {
         this.buckets = buckets;
         return this;
     }
     
+    public S3BucketDefinitionForJob(@JsonProperty("accountId") String accountId, @JsonProperty("buckets") String[] buckets) {
+        this.accountId = accountId;
+        this.buckets = buckets;
+  }
 }

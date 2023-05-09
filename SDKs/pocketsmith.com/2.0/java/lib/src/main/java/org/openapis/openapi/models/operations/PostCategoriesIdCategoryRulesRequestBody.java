@@ -15,6 +15,7 @@ public class PostCategoriesIdCategoryRulesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apply_to_all")
     public Boolean applyToAll;
+
     public PostCategoriesIdCategoryRulesRequestBody withApplyToAll(Boolean applyToAll) {
         this.applyToAll = applyToAll;
         return this;
@@ -26,6 +27,7 @@ public class PostCategoriesIdCategoryRulesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apply_to_uncategorised")
     public Boolean applyToUncategorised;
+
     public PostCategoriesIdCategoryRulesRequestBody withApplyToUncategorised(Boolean applyToUncategorised) {
         this.applyToUncategorised = applyToUncategorised;
         return this;
@@ -36,9 +38,13 @@ public class PostCategoriesIdCategoryRulesRequestBody {
      */
     @JsonProperty("payee_matches")
     public String payeeMatches;
+
     public PostCategoriesIdCategoryRulesRequestBody withPayeeMatches(String payeeMatches) {
         this.payeeMatches = payeeMatches;
         return this;
     }
     
+    public PostCategoriesIdCategoryRulesRequestBody(@JsonProperty("payee_matches") String payeeMatches) {
+        this.payeeMatches = payeeMatches;
+  }
 }

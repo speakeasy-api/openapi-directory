@@ -18,6 +18,7 @@ public class ListExamplesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("examples")
     public Example[] examples;
+
     public ListExamplesResponse withExamples(Example[] examples) {
         this.examples = examples;
         return this;
@@ -29,9 +30,11 @@ public class ListExamplesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListExamplesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListExamplesResponse(){}
 }

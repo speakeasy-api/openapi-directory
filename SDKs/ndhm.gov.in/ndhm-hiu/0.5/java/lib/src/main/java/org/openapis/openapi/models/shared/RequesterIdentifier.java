@@ -12,6 +12,7 @@ public class RequesterIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("system")
     public String system;
+
     public RequesterIdentifier withSystem(String system) {
         this.system = system;
         return this;
@@ -19,6 +20,7 @@ public class RequesterIdentifier {
     
     @JsonProperty("type")
     public String type;
+
     public RequesterIdentifier withType(String type) {
         this.type = type;
         return this;
@@ -26,9 +28,14 @@ public class RequesterIdentifier {
     
     @JsonProperty("value")
     public String value;
+
     public RequesterIdentifier withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public RequesterIdentifier(@JsonProperty("type") String type, @JsonProperty("value") String value) {
+        this.type = type;
+        this.value = value;
+  }
 }

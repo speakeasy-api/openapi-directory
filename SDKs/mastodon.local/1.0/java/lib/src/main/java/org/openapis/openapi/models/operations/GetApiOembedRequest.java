@@ -12,6 +12,7 @@ public class GetApiOembedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxheight")
     public Long maxheight;
+
     public GetApiOembedRequest withMaxheight(Long maxheight) {
         this.maxheight = maxheight;
         return this;
@@ -22,6 +23,7 @@ public class GetApiOembedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxwidth")
     public Long maxwidth;
+
     public GetApiOembedRequest withMaxwidth(Long maxwidth) {
         this.maxwidth = maxwidth;
         return this;
@@ -32,9 +34,11 @@ public class GetApiOembedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
     public String url;
+
     public GetApiOembedRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GetApiOembedRequest(){}
 }

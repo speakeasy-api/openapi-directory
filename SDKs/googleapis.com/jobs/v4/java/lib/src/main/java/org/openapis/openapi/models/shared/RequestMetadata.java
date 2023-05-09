@@ -18,6 +18,7 @@ public class RequestMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowMissingIds")
     public Boolean allowMissingIds;
+
     public RequestMetadata withAllowMissingIds(Boolean allowMissingIds) {
         this.allowMissingIds = allowMissingIds;
         return this;
@@ -29,6 +30,7 @@ public class RequestMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceInfo")
     public DeviceInfo deviceInfo;
+
     public RequestMetadata withDeviceInfo(DeviceInfo deviceInfo) {
         this.deviceInfo = deviceInfo;
         return this;
@@ -40,6 +42,7 @@ public class RequestMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public RequestMetadata withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -51,6 +54,7 @@ public class RequestMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionId")
     public String sessionId;
+
     public RequestMetadata withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -62,9 +66,11 @@ public class RequestMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public RequestMetadata withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public RequestMetadata(){}
 }

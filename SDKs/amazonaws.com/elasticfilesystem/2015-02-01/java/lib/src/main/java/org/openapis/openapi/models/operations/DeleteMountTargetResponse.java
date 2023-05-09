@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMountTargetResponse {
@@ -12,6 +13,7 @@ public class DeleteMountTargetResponse {
      */
     
     public Object badRequest;
+
     public DeleteMountTargetResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class DeleteMountTargetResponse {
     
     
     public String contentType;
+
     public DeleteMountTargetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteMountTargetResponse {
      */
     
     public Object dependencyTimeout;
+
     public DeleteMountTargetResponse withDependencyTimeout(Object dependencyTimeout) {
         this.dependencyTimeout = dependencyTimeout;
         return this;
@@ -39,6 +43,7 @@ public class DeleteMountTargetResponse {
      */
     
     public Object internalServerError;
+
     public DeleteMountTargetResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class DeleteMountTargetResponse {
      */
     
     public Object mountTargetNotFound;
+
     public DeleteMountTargetResponse withMountTargetNotFound(Object mountTargetNotFound) {
         this.mountTargetNotFound = mountTargetNotFound;
         return this;
@@ -56,6 +62,7 @@ public class DeleteMountTargetResponse {
     
     
     public Integer statusCode;
+
     public DeleteMountTargetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteMountTargetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMountTargetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteMountTargetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * TokenPrice - OK
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TokenPrice {
     
     public Long available;
+
     public TokenPrice withAvailable(Long available) {
         this.available = available;
         return this;
@@ -19,6 +20,7 @@ public class TokenPrice {
     
     
     public String displayName;
+
     public TokenPrice withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -26,6 +28,7 @@ public class TokenPrice {
     
     
     public Long lastUpdated;
+
     public TokenPrice withLastUpdated(Long lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -33,6 +36,7 @@ public class TokenPrice {
     
     
     public Long price;
+
     public TokenPrice withPrice(Long price) {
         this.price = price;
         return this;
@@ -40,6 +44,7 @@ public class TokenPrice {
     
     
     public String tokenId;
+
     public TokenPrice withTokenId(String tokenId) {
         this.tokenId = tokenId;
         return this;
@@ -47,9 +52,18 @@ public class TokenPrice {
     
     
     public Long volumeLastDay;
+
     public TokenPrice withVolumeLastDay(Long volumeLastDay) {
         this.volumeLastDay = volumeLastDay;
         return this;
     }
     
+    public TokenPrice(@JsonProperty("available") Long available, @JsonProperty("displayName") String displayName, @JsonProperty("lastUpdated") Long lastUpdated, @JsonProperty("price") Long price, @JsonProperty("tokenId") String tokenId, @JsonProperty("volumeLastDay") Long volumeLastDay) {
+        this.available = available;
+        this.displayName = displayName;
+        this.lastUpdated = lastUpdated;
+        this.price = price;
+        this.tokenId = tokenId;
+        this.volumeLastDay = volumeLastDay;
+  }
 }

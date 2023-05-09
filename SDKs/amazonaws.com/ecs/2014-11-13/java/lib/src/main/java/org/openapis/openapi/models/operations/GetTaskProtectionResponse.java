@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTaskProtectionResponse {
@@ -12,6 +13,7 @@ public class GetTaskProtectionResponse {
      */
     
     public Object accessDeniedException;
+
     public GetTaskProtectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetTaskProtectionResponse {
      */
     
     public Object clientException;
+
     public GetTaskProtectionResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -32,6 +35,7 @@ public class GetTaskProtectionResponse {
      */
     
     public Object clusterNotFoundException;
+
     public GetTaskProtectionResponse withClusterNotFoundException(Object clusterNotFoundException) {
         this.clusterNotFoundException = clusterNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GetTaskProtectionResponse {
     
     
     public String contentType;
+
     public GetTaskProtectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class GetTaskProtectionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTaskProtectionResponse getTaskProtectionResponse;
+
     public GetTaskProtectionResponse withGetTaskProtectionResponse(org.openapis.openapi.models.shared.GetTaskProtectionResponse getTaskProtectionResponse) {
         this.getTaskProtectionResponse = getTaskProtectionResponse;
         return this;
@@ -59,6 +65,7 @@ public class GetTaskProtectionResponse {
      */
     
     public Object invalidParameterException;
+
     public GetTaskProtectionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class GetTaskProtectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetTaskProtectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetTaskProtectionResponse {
      */
     
     public Object serverException;
+
     public GetTaskProtectionResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -86,6 +95,7 @@ public class GetTaskProtectionResponse {
     
     
     public Integer statusCode;
+
     public GetTaskProtectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetTaskProtectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTaskProtectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetTaskProtectionResponse {
      */
     
     public Object unsupportedFeatureException;
+
     public GetTaskProtectionResponse withUnsupportedFeatureException(Object unsupportedFeatureException) {
         this.unsupportedFeatureException = unsupportedFeatureException;
         return this;
     }
     
+    public GetTaskProtectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

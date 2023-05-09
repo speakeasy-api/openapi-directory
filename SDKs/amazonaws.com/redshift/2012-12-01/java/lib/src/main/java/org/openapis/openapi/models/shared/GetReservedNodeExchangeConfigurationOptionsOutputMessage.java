@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetReservedNodeExchangeConfigurationOptionsOutputMessage {
     
     public String marker;
+
     public GetReservedNodeExchangeConfigurationOptionsOutputMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,9 +20,11 @@ public class GetReservedNodeExchangeConfigurationOptionsOutputMessage {
     
     
     public ReservedNodeConfigurationOptionList[] reservedNodeConfigurationOptionList;
+
     public GetReservedNodeExchangeConfigurationOptionsOutputMessage withReservedNodeConfigurationOptionList(ReservedNodeConfigurationOptionList[] reservedNodeConfigurationOptionList) {
         this.reservedNodeConfigurationOptionList = reservedNodeConfigurationOptionList;
         return this;
     }
     
+    public GetReservedNodeExchangeConfigurationOptionsOutputMessage(){}
 }

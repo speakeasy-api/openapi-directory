@@ -18,9 +18,11 @@ public class OnboardBuyOnGoogleProgramRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerServiceEmail")
     public String customerServiceEmail;
+
     public OnboardBuyOnGoogleProgramRequest withCustomerServiceEmail(String customerServiceEmail) {
         this.customerServiceEmail = customerServiceEmail;
         return this;
     }
     
+    public OnboardBuyOnGoogleProgramRequest(){}
 }

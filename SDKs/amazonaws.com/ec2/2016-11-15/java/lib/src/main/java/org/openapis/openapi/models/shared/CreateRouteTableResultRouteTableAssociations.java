@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateRouteTableResultRouteTableAssociations {
     
     public CreateRouteTableResultRouteTableAssociationsAssociationState associationState;
+
     public CreateRouteTableResultRouteTableAssociations withAssociationState(CreateRouteTableResultRouteTableAssociationsAssociationState associationState) {
         this.associationState = associationState;
         return this;
@@ -19,6 +20,7 @@ public class CreateRouteTableResultRouteTableAssociations {
     
     
     public String gatewayId;
+
     public CreateRouteTableResultRouteTableAssociations withGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -26,6 +28,7 @@ public class CreateRouteTableResultRouteTableAssociations {
     
     
     public Boolean main;
+
     public CreateRouteTableResultRouteTableAssociations withMain(Boolean main) {
         this.main = main;
         return this;
@@ -33,6 +36,7 @@ public class CreateRouteTableResultRouteTableAssociations {
     
     
     public String routeTableAssociationId;
+
     public CreateRouteTableResultRouteTableAssociations withRouteTableAssociationId(String routeTableAssociationId) {
         this.routeTableAssociationId = routeTableAssociationId;
         return this;
@@ -40,6 +44,7 @@ public class CreateRouteTableResultRouteTableAssociations {
     
     
     public String routeTableId;
+
     public CreateRouteTableResultRouteTableAssociations withRouteTableId(String routeTableId) {
         this.routeTableId = routeTableId;
         return this;
@@ -47,9 +52,11 @@ public class CreateRouteTableResultRouteTableAssociations {
     
     
     public String subnetId;
+
     public CreateRouteTableResultRouteTableAssociations withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public CreateRouteTableResultRouteTableAssociations(){}
 }

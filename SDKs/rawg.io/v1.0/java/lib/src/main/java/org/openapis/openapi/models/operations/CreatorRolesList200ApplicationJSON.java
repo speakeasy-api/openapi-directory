@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreatorRolesList200ApplicationJSON {
     @JsonProperty("count")
     public Long count;
+
     public CreatorRolesList200ApplicationJSON withCount(Long count) {
         this.count = count;
         return this;
@@ -19,6 +20,7 @@ public class CreatorRolesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public CreatorRolesList200ApplicationJSON withNext(String next) {
         this.next = next;
         return this;
@@ -27,6 +29,7 @@ public class CreatorRolesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public CreatorRolesList200ApplicationJSON withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -34,9 +37,14 @@ public class CreatorRolesList200ApplicationJSON {
     
     @JsonProperty("results")
     public org.openapis.openapi.models.shared.Position[] results;
+
     public CreatorRolesList200ApplicationJSON withResults(org.openapis.openapi.models.shared.Position[] results) {
         this.results = results;
         return this;
     }
     
+    public CreatorRolesList200ApplicationJSON(@JsonProperty("count") Long count, @JsonProperty("results") org.openapis.openapi.models.shared.Position[] results) {
+        this.count = count;
+        this.results = results;
+  }
 }

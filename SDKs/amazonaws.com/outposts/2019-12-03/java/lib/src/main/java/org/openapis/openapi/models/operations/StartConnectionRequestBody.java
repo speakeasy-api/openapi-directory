@@ -12,6 +12,7 @@ public class StartConnectionRequestBody {
      */
     @JsonProperty("AssetId")
     public String assetId;
+
     public StartConnectionRequestBody withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
@@ -22,6 +23,7 @@ public class StartConnectionRequestBody {
      */
     @JsonProperty("ClientPublicKey")
     public String clientPublicKey;
+
     public StartConnectionRequestBody withClientPublicKey(String clientPublicKey) {
         this.clientPublicKey = clientPublicKey;
         return this;
@@ -32,6 +34,7 @@ public class StartConnectionRequestBody {
      */
     @JsonProperty("DeviceSerialNumber")
     public String deviceSerialNumber;
+
     public StartConnectionRequestBody withDeviceSerialNumber(String deviceSerialNumber) {
         this.deviceSerialNumber = deviceSerialNumber;
         return this;
@@ -42,9 +45,16 @@ public class StartConnectionRequestBody {
      */
     @JsonProperty("NetworkInterfaceDeviceIndex")
     public Long networkInterfaceDeviceIndex;
+
     public StartConnectionRequestBody withNetworkInterfaceDeviceIndex(Long networkInterfaceDeviceIndex) {
         this.networkInterfaceDeviceIndex = networkInterfaceDeviceIndex;
         return this;
     }
     
+    public StartConnectionRequestBody(@JsonProperty("AssetId") String assetId, @JsonProperty("ClientPublicKey") String clientPublicKey, @JsonProperty("DeviceSerialNumber") String deviceSerialNumber, @JsonProperty("NetworkInterfaceDeviceIndex") Long networkInterfaceDeviceIndex) {
+        this.assetId = assetId;
+        this.clientPublicKey = clientPublicKey;
+        this.deviceSerialNumber = deviceSerialNumber;
+        this.networkInterfaceDeviceIndex = networkInterfaceDeviceIndex;
+  }
 }

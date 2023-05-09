@@ -15,9 +15,11 @@ public class AwsIamGroupPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyName")
     public String policyName;
+
     public AwsIamGroupPolicy withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public AwsIamGroupPolicy(){}
 }

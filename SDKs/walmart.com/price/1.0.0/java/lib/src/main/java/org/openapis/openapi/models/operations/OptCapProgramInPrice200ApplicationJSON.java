@@ -18,6 +18,7 @@ public class OptCapProgramInPrice200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("martId")
     public String martId;
+
     public OptCapProgramInPrice200ApplicationJSON withMartId(String martId) {
         this.martId = martId;
         return this;
@@ -26,9 +27,11 @@ public class OptCapProgramInPrice200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusInfo")
     public OptCapProgramInPrice200ApplicationJSONStatusInfo statusInfo;
+
     public OptCapProgramInPrice200ApplicationJSON withStatusInfo(OptCapProgramInPrice200ApplicationJSONStatusInfo statusInfo) {
         this.statusInfo = statusInfo;
         return this;
     }
     
+    public OptCapProgramInPrice200ApplicationJSON(){}
 }

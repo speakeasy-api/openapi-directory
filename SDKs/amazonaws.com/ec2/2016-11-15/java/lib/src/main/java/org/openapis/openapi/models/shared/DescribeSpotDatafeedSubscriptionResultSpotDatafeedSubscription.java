@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotDatafeedSubscriptionResultSpotDatafeedSubscription {
     
     public String bucket;
+
     public DescribeSpotDatafeedSubscriptionResultSpotDatafeedSubscription withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSpotDatafeedSubscriptionResultSpotDatafeedSubscription {
     
     
     public DescribeSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault fault;
+
     public DescribeSpotDatafeedSubscriptionResultSpotDatafeedSubscription withFault(DescribeSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionFault fault) {
         this.fault = fault;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSpotDatafeedSubscriptionResultSpotDatafeedSubscription {
     
     
     public String ownerId;
+
     public DescribeSpotDatafeedSubscriptionResultSpotDatafeedSubscription withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeSpotDatafeedSubscriptionResultSpotDatafeedSubscription {
     
     
     public String prefix;
+
     public DescribeSpotDatafeedSubscriptionResultSpotDatafeedSubscription withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -40,9 +44,11 @@ public class DescribeSpotDatafeedSubscriptionResultSpotDatafeedSubscription {
     
     
     public DescribeSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionStateEnum state;
+
     public DescribeSpotDatafeedSubscriptionResultSpotDatafeedSubscription withState(DescribeSpotDatafeedSubscriptionResultSpotDatafeedSubscriptionStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public DescribeSpotDatafeedSubscriptionResultSpotDatafeedSubscription(){}
 }

@@ -12,6 +12,7 @@ public class GetTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public GetTasksRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -22,9 +23,11 @@ public class GetTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public GetTasksRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GetTasksRequest(){}
 }

@@ -15,6 +15,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attribute")
     public String attribute;
+
     public Filter withAttribute(String attribute) {
         this.attribute = attribute;
         return this;
@@ -23,6 +24,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Operation")
     public String operation;
+
     public Filter withOperation(String operation) {
         this.operation = operation;
         return this;
@@ -31,9 +33,11 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public Filter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Filter(){}
 }

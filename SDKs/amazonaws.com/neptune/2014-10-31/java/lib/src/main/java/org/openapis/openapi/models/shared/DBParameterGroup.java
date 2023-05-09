@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBParameterGroup {
     
     public String dbParameterGroupArn;
+
     public DBParameterGroup withDBParameterGroupArn(String dbParameterGroupArn) {
         this.dbParameterGroupArn = dbParameterGroupArn;
         return this;
@@ -19,6 +20,7 @@ public class DBParameterGroup {
     
     
     public String dbParameterGroupFamily;
+
     public DBParameterGroup withDBParameterGroupFamily(String dbParameterGroupFamily) {
         this.dbParameterGroupFamily = dbParameterGroupFamily;
         return this;
@@ -26,6 +28,7 @@ public class DBParameterGroup {
     
     
     public String dbParameterGroupName;
+
     public DBParameterGroup withDBParameterGroupName(String dbParameterGroupName) {
         this.dbParameterGroupName = dbParameterGroupName;
         return this;
@@ -33,9 +36,11 @@ public class DBParameterGroup {
     
     
     public String description;
+
     public DBParameterGroup withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public DBParameterGroup(){}
 }

@@ -20,6 +20,7 @@ public class OBWriteFileConsentResponse4Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Authorisation")
     public OBWriteFileConsentResponse4DataAuthorisation authorisation;
+
     public OBWriteFileConsentResponse4Data withAuthorisation(OBWriteFileConsentResponse4DataAuthorisation authorisation) {
         this.authorisation = authorisation;
         return this;
@@ -28,6 +29,7 @@ public class OBWriteFileConsentResponse4Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Charges")
     public OBWriteFileConsentResponse4DataCharges[] charges;
+
     public OBWriteFileConsentResponse4Data withCharges(OBWriteFileConsentResponse4DataCharges[] charges) {
         this.charges = charges;
         return this;
@@ -38,6 +40,7 @@ public class OBWriteFileConsentResponse4Data {
      */
     @JsonProperty("ConsentId")
     public String consentId;
+
     public OBWriteFileConsentResponse4Data withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -52,6 +55,7 @@ public class OBWriteFileConsentResponse4Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public OBWriteFileConsentResponse4Data withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -67,6 +71,7 @@ public class OBWriteFileConsentResponse4Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CutOffDateTime")
     public OffsetDateTime cutOffDateTime;
+
     public OBWriteFileConsentResponse4Data withCutOffDateTime(OffsetDateTime cutOffDateTime) {
         this.cutOffDateTime = cutOffDateTime;
         return this;
@@ -78,6 +83,7 @@ public class OBWriteFileConsentResponse4Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Debtor")
     public OBCashAccountDebtor4 debtor;
+
     public OBWriteFileConsentResponse4Data withDebtor(OBCashAccountDebtor4 debtor) {
         this.debtor = debtor;
         return this;
@@ -88,6 +94,7 @@ public class OBWriteFileConsentResponse4Data {
      */
     @JsonProperty("Initiation")
     public OBWriteFileConsentResponse4DataInitiation initiation;
+
     public OBWriteFileConsentResponse4Data withInitiation(OBWriteFileConsentResponse4DataInitiation initiation) {
         this.initiation = initiation;
         return this;
@@ -99,6 +106,7 @@ public class OBWriteFileConsentResponse4Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SCASupportData")
     public OBSCASupportData1 scaSupportData;
+
     public OBWriteFileConsentResponse4Data withSCASupportData(OBSCASupportData1 scaSupportData) {
         this.scaSupportData = scaSupportData;
         return this;
@@ -109,6 +117,7 @@ public class OBWriteFileConsentResponse4Data {
      */
     @JsonProperty("Status")
     public OBWriteFileConsentResponse4DataStatusEnum status;
+
     public OBWriteFileConsentResponse4Data withStatus(OBWriteFileConsentResponse4DataStatusEnum status) {
         this.status = status;
         return this;
@@ -123,9 +132,17 @@ public class OBWriteFileConsentResponse4Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StatusUpdateDateTime")
     public OffsetDateTime statusUpdateDateTime;
+
     public OBWriteFileConsentResponse4Data withStatusUpdateDateTime(OffsetDateTime statusUpdateDateTime) {
         this.statusUpdateDateTime = statusUpdateDateTime;
         return this;
     }
     
+    public OBWriteFileConsentResponse4Data(@JsonProperty("ConsentId") String consentId, @JsonProperty("CreationDateTime") OffsetDateTime creationDateTime, @JsonProperty("Initiation") OBWriteFileConsentResponse4DataInitiation initiation, @JsonProperty("Status") OBWriteFileConsentResponse4DataStatusEnum status, @JsonProperty("StatusUpdateDateTime") OffsetDateTime statusUpdateDateTime) {
+        this.consentId = consentId;
+        this.creationDateTime = creationDateTime;
+        this.initiation = initiation;
+        this.status = status;
+        this.statusUpdateDateTime = statusUpdateDateTime;
+  }
 }

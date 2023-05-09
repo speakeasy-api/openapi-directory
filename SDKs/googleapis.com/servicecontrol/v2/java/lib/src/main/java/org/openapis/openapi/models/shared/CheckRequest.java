@@ -18,6 +18,7 @@ public class CheckRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public AttributeContext attributes;
+
     public CheckRequest withAttributes(AttributeContext attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class CheckRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flags")
     public String flags;
+
     public CheckRequest withFlags(String flags) {
         this.flags = flags;
         return this;
@@ -40,6 +42,7 @@ public class CheckRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public ResourceInfo[] resources;
+
     public CheckRequest withResources(ResourceInfo[] resources) {
         this.resources = resources;
         return this;
@@ -51,9 +54,11 @@ public class CheckRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceConfigId")
     public String serviceConfigId;
+
     public CheckRequest withServiceConfigId(String serviceConfigId) {
         this.serviceConfigId = serviceConfigId;
         return this;
     }
     
+    public CheckRequest(){}
 }

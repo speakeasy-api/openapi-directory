@@ -18,6 +18,7 @@ public class JavaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("common")
     public CommonLanguageSettings common;
+
     public JavaSettings withCommon(CommonLanguageSettings common) {
         this.common = common;
         return this;
@@ -29,6 +30,7 @@ public class JavaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("libraryPackage")
     public String libraryPackage;
+
     public JavaSettings withLibraryPackage(String libraryPackage) {
         this.libraryPackage = libraryPackage;
         return this;
@@ -40,9 +42,11 @@ public class JavaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceClassNames")
     public java.util.Map<String, String> serviceClassNames;
+
     public JavaSettings withServiceClassNames(java.util.Map<String, String> serviceClassNames) {
         this.serviceClassNames = serviceClassNames;
         return this;
     }
     
+    public JavaSettings(){}
 }

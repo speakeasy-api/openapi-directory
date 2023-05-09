@@ -18,6 +18,7 @@ public class InterconnectMacsecPreSharedKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InterconnectMacsecPreSharedKey withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class InterconnectMacsecPreSharedKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public InterconnectMacsecPreSharedKey withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public InterconnectMacsecPreSharedKey(){}
 }

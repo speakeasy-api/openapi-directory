@@ -18,6 +18,7 @@ public class ArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public ArtifactInput withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class ArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contents")
     public String contents;
+
     public ArtifactInput withContents(String contents) {
         this.contents = contents;
         return this;
@@ -40,6 +42,7 @@ public class ArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ArtifactInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,6 +54,7 @@ public class ArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public ArtifactInput withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -62,9 +66,11 @@ public class ArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ArtifactInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ArtifactInput(){}
 }

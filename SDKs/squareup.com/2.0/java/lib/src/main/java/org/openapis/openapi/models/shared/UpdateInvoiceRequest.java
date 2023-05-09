@@ -19,6 +19,7 @@ public class UpdateInvoiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields_to_clear")
     public String[] fieldsToClear;
+
     public UpdateInvoiceRequest withFieldsToClear(String[] fieldsToClear) {
         this.fieldsToClear = fieldsToClear;
         return this;
@@ -34,6 +35,7 @@ public class UpdateInvoiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public UpdateInvoiceRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -45,9 +47,13 @@ public class UpdateInvoiceRequest {
      */
     @JsonProperty("invoice")
     public Invoice invoice;
+
     public UpdateInvoiceRequest withInvoice(Invoice invoice) {
         this.invoice = invoice;
         return this;
     }
     
+    public UpdateInvoiceRequest(@JsonProperty("invoice") Invoice invoice) {
+        this.invoice = invoice;
+  }
 }

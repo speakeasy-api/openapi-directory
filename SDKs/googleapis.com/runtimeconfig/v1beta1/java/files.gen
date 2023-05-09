@@ -115,4 +115,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Cardinality.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListWaitersResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsRequest.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

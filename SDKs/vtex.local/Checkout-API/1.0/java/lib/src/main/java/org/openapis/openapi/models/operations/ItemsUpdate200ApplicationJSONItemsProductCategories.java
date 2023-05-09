@@ -18,9 +18,11 @@ public class ItemsUpdate200ApplicationJSONItemsProductCategories {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("{ID}")
     public String id;
+
     public ItemsUpdate200ApplicationJSONItemsProductCategories withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ItemsUpdate200ApplicationJSONItemsProductCategories(){}
 }

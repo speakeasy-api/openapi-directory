@@ -12,6 +12,7 @@ public class NALinkStation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Temperature")
     public Float temperature;
+
     public NALinkStation withTemperature(Float temperature) {
         this.temperature = temperature;
         return this;
@@ -20,6 +21,7 @@ public class NALinkStation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ext")
     public String ext;
+
     public NALinkStation withExt(String ext) {
         this.ext = ext;
         return this;
@@ -28,9 +30,11 @@ public class NALinkStation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mac")
     public String mac;
+
     public NALinkStation withMac(String mac) {
         this.mac = mac;
         return this;
     }
     
+    public NALinkStation(){}
 }

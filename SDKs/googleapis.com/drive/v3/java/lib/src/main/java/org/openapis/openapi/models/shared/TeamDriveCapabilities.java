@@ -18,6 +18,7 @@ public class TeamDriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canAddChildren")
     public Boolean canAddChildren;
+
     public TeamDriveCapabilities withCanAddChildren(Boolean canAddChildren) {
         this.canAddChildren = canAddChildren;
         return this;
@@ -29,6 +30,7 @@ public class TeamDriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canChangeCopyRequiresWriterPermissionRestriction")
     public Boolean canChangeCopyRequiresWriterPermissionRestriction;
+
     public TeamDriveCapabilities withCanChangeCopyRequiresWriterPermissionRestriction(Boolean canChangeCopyRequiresWriterPermissionRestriction) {
         this.canChangeCopyRequiresWriterPermissionRestriction = canChangeCopyRequiresWriterPermissionRestriction;
         return this;
@@ -40,6 +42,7 @@ public class TeamDriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canChangeDomainUsersOnlyRestriction")
     public Boolean canChangeDomainUsersOnlyRestriction;
+
     public TeamDriveCapabilities withCanChangeDomainUsersOnlyRestriction(Boolean canChangeDomainUsersOnlyRestriction) {
         this.canChangeDomainUsersOnlyRestriction = canChangeDomainUsersOnlyRestriction;
         return this;
@@ -51,6 +54,7 @@ public class TeamDriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canChangeSharingFoldersRequiresOrganizerPermissionRestriction")
     public Boolean canChangeSharingFoldersRequiresOrganizerPermissionRestriction;
+
     public TeamDriveCapabilities withCanChangeSharingFoldersRequiresOrganizerPermissionRestriction(Boolean canChangeSharingFoldersRequiresOrganizerPermissionRestriction) {
         this.canChangeSharingFoldersRequiresOrganizerPermissionRestriction = canChangeSharingFoldersRequiresOrganizerPermissionRestriction;
         return this;
@@ -62,6 +66,7 @@ public class TeamDriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canChangeTeamDriveBackground")
     public Boolean canChangeTeamDriveBackground;
+
     public TeamDriveCapabilities withCanChangeTeamDriveBackground(Boolean canChangeTeamDriveBackground) {
         this.canChangeTeamDriveBackground = canChangeTeamDriveBackground;
         return this;
@@ -73,6 +78,7 @@ public class TeamDriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canChangeTeamMembersOnlyRestriction")
     public Boolean canChangeTeamMembersOnlyRestriction;
+
     public TeamDriveCapabilities withCanChangeTeamMembersOnlyRestriction(Boolean canChangeTeamMembersOnlyRestriction) {
         this.canChangeTeamMembersOnlyRestriction = canChangeTeamMembersOnlyRestriction;
         return this;
@@ -84,6 +90,7 @@ public class TeamDriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canComment")
     public Boolean canComment;
+
     public TeamDriveCapabilities withCanComment(Boolean canComment) {
         this.canComment = canComment;
         return this;
@@ -95,6 +102,7 @@ public class TeamDriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canCopy")
     public Boolean canCopy;
+
     public TeamDriveCapabilities withCanCopy(Boolean canCopy) {
         this.canCopy = canCopy;
         return this;
@@ -106,6 +114,7 @@ public class TeamDriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canDeleteChildren")
     public Boolean canDeleteChildren;
+
     public TeamDriveCapabilities withCanDeleteChildren(Boolean canDeleteChildren) {
         this.canDeleteChildren = canDeleteChildren;
         return this;
@@ -117,6 +126,7 @@ public class TeamDriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canDeleteTeamDrive")
     public Boolean canDeleteTeamDrive;
+
     public TeamDriveCapabilities withCanDeleteTeamDrive(Boolean canDeleteTeamDrive) {
         this.canDeleteTeamDrive = canDeleteTeamDrive;
         return this;
@@ -128,6 +138,7 @@ public class TeamDriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canDownload")
     public Boolean canDownload;
+
     public TeamDriveCapabilities withCanDownload(Boolean canDownload) {
         this.canDownload = canDownload;
         return this;
@@ -139,6 +150,7 @@ public class TeamDriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canEdit")
     public Boolean canEdit;
+
     public TeamDriveCapabilities withCanEdit(Boolean canEdit) {
         this.canEdit = canEdit;
         return this;
@@ -150,6 +162,7 @@ public class TeamDriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canListChildren")
     public Boolean canListChildren;
+
     public TeamDriveCapabilities withCanListChildren(Boolean canListChildren) {
         this.canListChildren = canListChildren;
         return this;
@@ -161,6 +174,7 @@ public class TeamDriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canManageMembers")
     public Boolean canManageMembers;
+
     public TeamDriveCapabilities withCanManageMembers(Boolean canManageMembers) {
         this.canManageMembers = canManageMembers;
         return this;
@@ -172,6 +186,7 @@ public class TeamDriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canReadRevisions")
     public Boolean canReadRevisions;
+
     public TeamDriveCapabilities withCanReadRevisions(Boolean canReadRevisions) {
         this.canReadRevisions = canReadRevisions;
         return this;
@@ -183,6 +198,7 @@ public class TeamDriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canRemoveChildren")
     public Boolean canRemoveChildren;
+
     public TeamDriveCapabilities withCanRemoveChildren(Boolean canRemoveChildren) {
         this.canRemoveChildren = canRemoveChildren;
         return this;
@@ -194,6 +210,7 @@ public class TeamDriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canRename")
     public Boolean canRename;
+
     public TeamDriveCapabilities withCanRename(Boolean canRename) {
         this.canRename = canRename;
         return this;
@@ -205,6 +222,7 @@ public class TeamDriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canRenameTeamDrive")
     public Boolean canRenameTeamDrive;
+
     public TeamDriveCapabilities withCanRenameTeamDrive(Boolean canRenameTeamDrive) {
         this.canRenameTeamDrive = canRenameTeamDrive;
         return this;
@@ -216,6 +234,7 @@ public class TeamDriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canResetTeamDriveRestrictions")
     public Boolean canResetTeamDriveRestrictions;
+
     public TeamDriveCapabilities withCanResetTeamDriveRestrictions(Boolean canResetTeamDriveRestrictions) {
         this.canResetTeamDriveRestrictions = canResetTeamDriveRestrictions;
         return this;
@@ -227,6 +246,7 @@ public class TeamDriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canShare")
     public Boolean canShare;
+
     public TeamDriveCapabilities withCanShare(Boolean canShare) {
         this.canShare = canShare;
         return this;
@@ -238,9 +258,11 @@ public class TeamDriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canTrashChildren")
     public Boolean canTrashChildren;
+
     public TeamDriveCapabilities withCanTrashChildren(Boolean canTrashChildren) {
         this.canTrashChildren = canTrashChildren;
         return this;
     }
     
+    public TeamDriveCapabilities(){}
 }

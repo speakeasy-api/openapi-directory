@@ -12,6 +12,7 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimum_one_off_investment")
     public String minimumOneOffInvestment;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsInvestmentPreferences withMinimumOneOffInvestment(String minimumOneOffInvestment) {
         this.minimumOneOffInvestment = minimumOneOffInvestment;
         return this;
@@ -20,6 +21,7 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimum_regular_monthly_investment")
     public String minimumRegularMonthlyInvestment;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsInvestmentPreferences withMinimumRegularMonthlyInvestment(String minimumRegularMonthlyInvestment) {
         this.minimumRegularMonthlyInvestment = minimumRegularMonthlyInvestment;
         return this;
@@ -28,6 +30,7 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regular_investment_dates")
     public String[] regularInvestmentDates;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsInvestmentPreferences withRegularInvestmentDates(String[] regularInvestmentDates) {
         this.regularInvestmentDates = regularInvestmentDates;
         return this;
@@ -36,9 +39,11 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regular_investment_frequencies")
     public String[] regularInvestmentFrequencies;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsInvestmentPreferences withRegularInvestmentFrequencies(String[] regularInvestmentFrequencies) {
         this.regularInvestmentFrequencies = regularInvestmentFrequencies;
         return this;
     }
     
+    public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsInvestmentPreferences(){}
 }

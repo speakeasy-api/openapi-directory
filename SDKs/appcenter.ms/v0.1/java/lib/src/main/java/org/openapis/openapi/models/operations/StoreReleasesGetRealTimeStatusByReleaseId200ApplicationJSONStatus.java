@@ -18,6 +18,7 @@ public class StoreReleasesGetRealTimeStatusByReleaseId200ApplicationJSONStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public StoreReleasesGetRealTimeStatusByReleaseId200ApplicationJSONStatus withStatus(String status) {
         this.status = status;
         return this;
@@ -29,6 +30,7 @@ public class StoreReleasesGetRealTimeStatusByReleaseId200ApplicationJSONStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storetype")
     public String storetype;
+
     public StoreReleasesGetRealTimeStatusByReleaseId200ApplicationJSONStatus withStoretype(String storetype) {
         this.storetype = storetype;
         return this;
@@ -40,6 +42,7 @@ public class StoreReleasesGetRealTimeStatusByReleaseId200ApplicationJSONStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("track")
     public String track;
+
     public StoreReleasesGetRealTimeStatusByReleaseId200ApplicationJSONStatus withTrack(String track) {
         this.track = track;
         return this;
@@ -51,9 +54,11 @@ public class StoreReleasesGetRealTimeStatusByReleaseId200ApplicationJSONStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public StoreReleasesGetRealTimeStatusByReleaseId200ApplicationJSONStatus withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public StoreReleasesGetRealTimeStatusByReleaseId200ApplicationJSONStatus(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1Match {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Float confidence;
+
     public GoogleCloudDialogflowCxV3beta1Match withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1Match {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public String event;
+
     public GoogleCloudDialogflowCxV3beta1Match withEvent(String event) {
         this.event = event;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3beta1Match {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intent")
     public GoogleCloudDialogflowCxV3beta1Intent intent;
+
     public GoogleCloudDialogflowCxV3beta1Match withIntent(GoogleCloudDialogflowCxV3beta1Intent intent) {
         this.intent = intent;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3beta1Match {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchType")
     public GoogleCloudDialogflowCxV3beta1MatchMatchTypeEnum matchType;
+
     public GoogleCloudDialogflowCxV3beta1Match withMatchType(GoogleCloudDialogflowCxV3beta1MatchMatchTypeEnum matchType) {
         this.matchType = matchType;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3beta1Match {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, Object> parameters;
+
     public GoogleCloudDialogflowCxV3beta1Match withParameters(java.util.Map<String, Object> parameters) {
         this.parameters = parameters;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowCxV3beta1Match {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolvedInput")
     public String resolvedInput;
+
     public GoogleCloudDialogflowCxV3beta1Match withResolvedInput(String resolvedInput) {
         this.resolvedInput = resolvedInput;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1Match(){}
 }

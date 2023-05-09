@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05SubscriptionRequestsCmOnInitRequest {
@@ -12,6 +13,7 @@ public class PostV05SubscriptionRequestsCmOnInitRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05SubscriptionRequestsCmOnInitRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05SubscriptionRequestsCmOnInitRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.HIUSubscriptionRequestReceipt hiuSubscriptionRequestReceipt;
+
     public PostV05SubscriptionRequestsCmOnInitRequest withHIUSubscriptionRequestReceipt(org.openapis.openapi.models.shared.HIUSubscriptionRequestReceipt hiuSubscriptionRequestReceipt) {
         this.hiuSubscriptionRequestReceipt = hiuSubscriptionRequestReceipt;
         return this;
@@ -29,9 +32,15 @@ public class PostV05SubscriptionRequestsCmOnInitRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIU-ID")
     public String xHiuId;
+
     public PostV05SubscriptionRequestsCmOnInitRequest withXHiuId(String xHiuId) {
         this.xHiuId = xHiuId;
         return this;
     }
     
+    public PostV05SubscriptionRequestsCmOnInitRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("HIUSubscriptionRequestReceipt") org.openapis.openapi.models.shared.HIUSubscriptionRequestReceipt hiuSubscriptionRequestReceipt, @JsonProperty("X-HIU-ID") String xHiuId) {
+        this.authorization = authorization;
+        this.hiuSubscriptionRequestReceipt = hiuSubscriptionRequestReceipt;
+        this.xHiuId = xHiuId;
+  }
 }

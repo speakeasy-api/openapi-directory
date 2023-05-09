@@ -15,6 +15,7 @@ public class CreateSizeConstraintSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public CreateSizeConstraintSetResponse withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -23,9 +24,11 @@ public class CreateSizeConstraintSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeConstraintSet")
     public SizeConstraintSet sizeConstraintSet;
+
     public CreateSizeConstraintSetResponse withSizeConstraintSet(SizeConstraintSet sizeConstraintSet) {
         this.sizeConstraintSet = sizeConstraintSet;
         return this;
     }
     
+    public CreateSizeConstraintSetResponse(){}
 }

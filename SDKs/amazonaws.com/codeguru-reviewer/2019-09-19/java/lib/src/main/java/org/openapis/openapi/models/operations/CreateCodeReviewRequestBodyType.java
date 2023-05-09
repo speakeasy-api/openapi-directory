@@ -15,6 +15,7 @@ public class CreateCodeReviewRequestBodyType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalysisTypes")
     public org.openapis.openapi.models.shared.AnalysisTypeEnum[] analysisTypes;
+
     public CreateCodeReviewRequestBodyType withAnalysisTypes(org.openapis.openapi.models.shared.AnalysisTypeEnum[] analysisTypes) {
         this.analysisTypes = analysisTypes;
         return this;
@@ -23,9 +24,11 @@ public class CreateCodeReviewRequestBodyType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RepositoryAnalysis")
     public org.openapis.openapi.models.shared.RepositoryAnalysis repositoryAnalysis;
+
     public CreateCodeReviewRequestBodyType withRepositoryAnalysis(org.openapis.openapi.models.shared.RepositoryAnalysis repositoryAnalysis) {
         this.repositoryAnalysis = repositoryAnalysis;
         return this;
     }
     
+    public CreateCodeReviewRequestBodyType(){}
 }

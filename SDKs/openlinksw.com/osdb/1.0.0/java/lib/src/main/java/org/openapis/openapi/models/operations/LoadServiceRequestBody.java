@@ -17,6 +17,7 @@ public class LoadServiceRequestBody {
      */
     @JsonProperty("service_description_url")
     public String serviceDescriptionUrl;
+
     public LoadServiceRequestBody withServiceDescriptionUrl(String serviceDescriptionUrl) {
         this.serviceDescriptionUrl = serviceDescriptionUrl;
         return this;
@@ -28,9 +29,13 @@ public class LoadServiceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_moniker")
     public String serviceMoniker;
+
     public LoadServiceRequestBody withServiceMoniker(String serviceMoniker) {
         this.serviceMoniker = serviceMoniker;
         return this;
     }
     
+    public LoadServiceRequestBody(@JsonProperty("service_description_url") String serviceDescriptionUrl) {
+        this.serviceDescriptionUrl = serviceDescriptionUrl;
+  }
 }

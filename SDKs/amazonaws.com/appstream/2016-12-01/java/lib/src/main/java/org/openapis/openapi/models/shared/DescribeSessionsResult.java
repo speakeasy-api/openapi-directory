@@ -15,6 +15,7 @@ public class DescribeSessionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeSessionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeSessionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sessions")
     public Session[] sessions;
+
     public DescribeSessionsResult withSessions(Session[] sessions) {
         this.sessions = sessions;
         return this;
     }
     
+    public DescribeSessionsResult(){}
 }

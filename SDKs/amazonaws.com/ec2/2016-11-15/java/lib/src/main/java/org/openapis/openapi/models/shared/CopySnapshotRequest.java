@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CopySnapshotRequest {
     
     public String description;
+
     public CopySnapshotRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -16,6 +17,7 @@ public class CopySnapshotRequest {
     
     
     public String destinationOutpostArn;
+
     public CopySnapshotRequest withDestinationOutpostArn(String destinationOutpostArn) {
         this.destinationOutpostArn = destinationOutpostArn;
         return this;
@@ -23,6 +25,7 @@ public class CopySnapshotRequest {
     
     
     public String destinationRegion;
+
     public CopySnapshotRequest withDestinationRegion(String destinationRegion) {
         this.destinationRegion = destinationRegion;
         return this;
@@ -30,6 +33,7 @@ public class CopySnapshotRequest {
     
     
     public Boolean dryRun;
+
     public CopySnapshotRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -37,6 +41,7 @@ public class CopySnapshotRequest {
     
     
     public Boolean encrypted;
+
     public CopySnapshotRequest withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -44,6 +49,7 @@ public class CopySnapshotRequest {
     
     
     public String kmsKeyId;
+
     public CopySnapshotRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -51,6 +57,7 @@ public class CopySnapshotRequest {
     
     
     public String presignedUrl;
+
     public CopySnapshotRequest withPresignedUrl(String presignedUrl) {
         this.presignedUrl = presignedUrl;
         return this;
@@ -58,6 +65,7 @@ public class CopySnapshotRequest {
     
     
     public String sourceRegion;
+
     public CopySnapshotRequest withSourceRegion(String sourceRegion) {
         this.sourceRegion = sourceRegion;
         return this;
@@ -65,6 +73,7 @@ public class CopySnapshotRequest {
     
     
     public String sourceSnapshotId;
+
     public CopySnapshotRequest withSourceSnapshotId(String sourceSnapshotId) {
         this.sourceSnapshotId = sourceSnapshotId;
         return this;
@@ -72,9 +81,14 @@ public class CopySnapshotRequest {
     
     
     public CopySnapshotRequestTagSpecifications[] tagSpecifications;
+
     public CopySnapshotRequest withTagSpecifications(CopySnapshotRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CopySnapshotRequest(@JsonProperty("SourceRegion") String sourceRegion, @JsonProperty("SourceSnapshotId") String sourceSnapshotId) {
+        this.sourceRegion = sourceRegion;
+        this.sourceSnapshotId = sourceSnapshotId;
+  }
 }

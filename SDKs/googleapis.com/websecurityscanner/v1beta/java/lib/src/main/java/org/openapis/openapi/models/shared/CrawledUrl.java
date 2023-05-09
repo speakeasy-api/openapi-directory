@@ -18,6 +18,7 @@ public class CrawledUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public CrawledUrl withBody(String body) {
         this.body = body;
         return this;
@@ -29,6 +30,7 @@ public class CrawledUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpMethod")
     public String httpMethod;
+
     public CrawledUrl withHttpMethod(String httpMethod) {
         this.httpMethod = httpMethod;
         return this;
@@ -40,9 +42,11 @@ public class CrawledUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public CrawledUrl withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CrawledUrl(){}
 }

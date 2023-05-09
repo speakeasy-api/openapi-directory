@@ -16,47 +16,47 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.BuyANumberResponse;
 import org.openapis.openapi.models.shared.NumberDetails;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti", "provident") {{
                     apiKey = "YOUR_API_KEY_HERE";
                     apiSecret = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            org.openapis.openapi.models.shared.NumberDetails req = new NumberDetails() {{
-                country = "GB";
-                msisdn = "447700900000";
+            org.openapis.openapi.models.shared.NumberDetails req = new NumberDetails("GB", "447700900000") {{
                 targetApiKey = "1a2345b7";
-            }}            
+            }};            
 
             BuyANumberResponse res = sdk.buyANumber(req);
 
-            if (res.response.isPresent()) {
+            if (res.response != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `buyANumber` - Buy a number
-* `cancelANumber` - Cancel a number
-* `getAvailableNumbers` - Search available numbers
-* `getOwnedNumbers` - List the numbers you own
-* `updateANumber` - Update a number
+* [buyANumber](docs/sdk/README.md#buyanumber) - Buy a number
+* [cancelANumber](docs/sdk/README.md#cancelanumber) - Cancel a number
+* [getAvailableNumbers](docs/sdk/README.md#getavailablenumbers) - Search available numbers
+* [getOwnedNumbers](docs/sdk/README.md#getownednumbers) - List the numbers you own
+* [updateANumber](docs/sdk/README.md#updateanumber) - Update a number
 <!-- End SDK Available Operations -->
 
 ### Maturity

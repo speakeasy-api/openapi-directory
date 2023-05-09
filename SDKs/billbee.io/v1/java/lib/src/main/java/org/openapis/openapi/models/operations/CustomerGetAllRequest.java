@@ -12,6 +12,7 @@ public class CustomerGetAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public CustomerGetAllRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -22,9 +23,11 @@ public class CustomerGetAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public CustomerGetAllRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public CustomerGetAllRequest(){}
 }

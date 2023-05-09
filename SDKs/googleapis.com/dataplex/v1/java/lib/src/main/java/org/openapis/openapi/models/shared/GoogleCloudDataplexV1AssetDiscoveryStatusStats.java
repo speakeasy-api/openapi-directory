@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1AssetDiscoveryStatusStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataItems")
     public String dataItems;
+
     public GoogleCloudDataplexV1AssetDiscoveryStatusStats withDataItems(String dataItems) {
         this.dataItems = dataItems;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1AssetDiscoveryStatusStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSize")
     public String dataSize;
+
     public GoogleCloudDataplexV1AssetDiscoveryStatusStats withDataSize(String dataSize) {
         this.dataSize = dataSize;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1AssetDiscoveryStatusStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filesets")
     public String filesets;
+
     public GoogleCloudDataplexV1AssetDiscoveryStatusStats withFilesets(String filesets) {
         this.filesets = filesets;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDataplexV1AssetDiscoveryStatusStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tables")
     public String tables;
+
     public GoogleCloudDataplexV1AssetDiscoveryStatusStats withTables(String tables) {
         this.tables = tables;
         return this;
     }
     
+    public GoogleCloudDataplexV1AssetDiscoveryStatusStats(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SparkSQL {
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public SparkSQL withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -21,6 +22,7 @@ public class SparkSQL {
     
     @JsonProperty("Name")
     public String name;
+
     public SparkSQL withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +31,7 @@ public class SparkSQL {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputSchemas")
     public GlueSchema[] outputSchemas;
+
     public SparkSQL withOutputSchemas(GlueSchema[] outputSchemas) {
         this.outputSchemas = outputSchemas;
         return this;
@@ -36,6 +39,7 @@ public class SparkSQL {
     
     @JsonProperty("SqlAliases")
     public SqlAlias[] sqlAliases;
+
     public SparkSQL withSqlAliases(SqlAlias[] sqlAliases) {
         this.sqlAliases = sqlAliases;
         return this;
@@ -43,9 +47,16 @@ public class SparkSQL {
     
     @JsonProperty("SqlQuery")
     public String sqlQuery;
+
     public SparkSQL withSqlQuery(String sqlQuery) {
         this.sqlQuery = sqlQuery;
         return this;
     }
     
+    public SparkSQL(@JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name, @JsonProperty("SqlAliases") SqlAlias[] sqlAliases, @JsonProperty("SqlQuery") String sqlQuery) {
+        this.inputs = inputs;
+        this.name = name;
+        this.sqlAliases = sqlAliases;
+        this.sqlQuery = sqlQuery;
+  }
 }

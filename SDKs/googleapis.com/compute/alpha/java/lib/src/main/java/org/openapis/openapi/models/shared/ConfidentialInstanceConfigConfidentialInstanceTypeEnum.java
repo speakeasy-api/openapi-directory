@@ -12,7 +12,8 @@ import com.fasterxml.jackson.annotation.JsonValue;
 public enum ConfidentialInstanceConfigConfidentialInstanceTypeEnum {
     CONFIDENTIAL_INSTANCE_TYPE_UNSPECIFIED("CONFIDENTIAL_INSTANCE_TYPE_UNSPECIFIED"),
     SEV("SEV"),
-    SEV_SNP("SEV_SNP");
+    SEV_SNP("SEV_SNP"),
+    TDX("TDX");
 
     @JsonValue
     public final String value;

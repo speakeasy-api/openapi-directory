@@ -18,6 +18,7 @@ public class Slicer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public EmbeddedObjectPosition position;
+
     public Slicer withPosition(EmbeddedObjectPosition position) {
         this.position = position;
         return this;
@@ -29,6 +30,7 @@ public class Slicer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slicerId")
     public Integer slicerId;
+
     public Slicer withSlicerId(Integer slicerId) {
         this.slicerId = slicerId;
         return this;
@@ -40,9 +42,11 @@ public class Slicer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public SlicerSpec spec;
+
     public Slicer withSpec(SlicerSpec spec) {
         this.spec = spec;
         return this;
     }
     
+    public Slicer(){}
 }

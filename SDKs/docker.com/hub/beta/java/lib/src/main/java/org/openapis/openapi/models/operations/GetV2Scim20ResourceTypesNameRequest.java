@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2Scim20ResourceTypesNameRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public GetV2Scim20ResourceTypesNameRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetV2Scim20ResourceTypesNameRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

@@ -192,6 +192,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -229,7 +234,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddTagsToOnPremisesInstancesResponse res = new org.openapis.openapi.models.operations.AddTagsToOnPremisesInstancesResponse() {{
+        org.openapis.openapi.models.operations.AddTagsToOnPremisesInstancesResponse res = new org.openapis.openapi.models.operations.AddTagsToOnPremisesInstancesResponse(contentType, httpRes.statusCode()) {{
             instanceNameRequiredException = null;
             invalidInstanceNameException = null;
             tagRequiredException = null;
@@ -238,8 +243,6 @@ public class SDK {
             instanceLimitExceededException = null;
             instanceNotRegisteredException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -331,7 +334,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchGetApplicationRevisionsResponse res = new org.openapis.openapi.models.operations.BatchGetApplicationRevisionsResponse() {{
+        org.openapis.openapi.models.operations.BatchGetApplicationRevisionsResponse res = new org.openapis.openapi.models.operations.BatchGetApplicationRevisionsResponse(contentType, httpRes.statusCode()) {{
             batchGetApplicationRevisionsOutput = null;
             applicationDoesNotExistException = null;
             applicationNameRequiredException = null;
@@ -340,8 +343,6 @@ public class SDK {
             invalidRevisionException = null;
             batchLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -431,15 +432,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchGetApplicationsResponse res = new org.openapis.openapi.models.operations.BatchGetApplicationsResponse() {{
+        org.openapis.openapi.models.operations.BatchGetApplicationsResponse res = new org.openapis.openapi.models.operations.BatchGetApplicationsResponse(contentType, httpRes.statusCode()) {{
             batchGetApplicationsOutput = null;
             applicationNameRequiredException = null;
             invalidApplicationNameException = null;
             applicationDoesNotExistException = null;
             batchLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -515,7 +514,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchGetDeploymentGroupsResponse res = new org.openapis.openapi.models.operations.BatchGetDeploymentGroupsResponse() {{
+        org.openapis.openapi.models.operations.BatchGetDeploymentGroupsResponse res = new org.openapis.openapi.models.operations.BatchGetDeploymentGroupsResponse(contentType, httpRes.statusCode()) {{
             batchGetDeploymentGroupsOutput = null;
             applicationNameRequiredException = null;
             invalidApplicationNameException = null;
@@ -525,8 +524,6 @@ public class SDK {
             batchLimitExceededException = null;
             deploymentConfigDoesNotExistException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -594,7 +591,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.BatchGetDeploymentInstancesResponse batchGetDeploymentInstances(org.openapis.openapi.models.operations.BatchGetDeploymentInstancesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=CodeDeploy_20141006.BatchGetDeploymentInstances");
@@ -623,7 +622,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchGetDeploymentInstancesResponse res = new org.openapis.openapi.models.operations.BatchGetDeploymentInstancesResponse() {{
+        org.openapis.openapi.models.operations.BatchGetDeploymentInstancesResponse res = new org.openapis.openapi.models.operations.BatchGetDeploymentInstancesResponse(contentType, httpRes.statusCode()) {{
             batchGetDeploymentInstancesOutput = null;
             deploymentIdRequiredException = null;
             deploymentDoesNotExistException = null;
@@ -633,8 +632,6 @@ public class SDK {
             batchLimitExceededException = null;
             invalidComputePlatformException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -731,7 +728,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchGetDeploymentTargetsResponse res = new org.openapis.openapi.models.operations.BatchGetDeploymentTargetsResponse() {{
+        org.openapis.openapi.models.operations.BatchGetDeploymentTargetsResponse res = new org.openapis.openapi.models.operations.BatchGetDeploymentTargetsResponse(contentType, httpRes.statusCode()) {{
             batchGetDeploymentTargetsOutput = null;
             invalidDeploymentIdException = null;
             deploymentIdRequiredException = null;
@@ -743,8 +740,6 @@ public class SDK {
             deploymentTargetListSizeExceededException = null;
             instanceDoesNotExistException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -855,14 +850,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchGetDeploymentsResponse res = new org.openapis.openapi.models.operations.BatchGetDeploymentsResponse() {{
+        org.openapis.openapi.models.operations.BatchGetDeploymentsResponse res = new org.openapis.openapi.models.operations.BatchGetDeploymentsResponse(contentType, httpRes.statusCode()) {{
             batchGetDeploymentsOutput = null;
             deploymentIdRequiredException = null;
             invalidDeploymentIdException = null;
             batchLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -931,14 +924,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchGetOnPremisesInstancesResponse res = new org.openapis.openapi.models.operations.BatchGetOnPremisesInstancesResponse() {{
+        org.openapis.openapi.models.operations.BatchGetOnPremisesInstancesResponse res = new org.openapis.openapi.models.operations.BatchGetOnPremisesInstancesResponse(contentType, httpRes.statusCode()) {{
             batchGetOnPremisesInstancesOutput = null;
             instanceNameRequiredException = null;
             invalidInstanceNameException = null;
             batchLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1007,7 +998,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContinueDeploymentResponse res = new org.openapis.openapi.models.operations.ContinueDeploymentResponse() {{
+        org.openapis.openapi.models.operations.ContinueDeploymentResponse res = new org.openapis.openapi.models.operations.ContinueDeploymentResponse(contentType, httpRes.statusCode()) {{
             deploymentIdRequiredException = null;
             deploymentDoesNotExistException = null;
             deploymentAlreadyCompletedException = null;
@@ -1017,8 +1008,6 @@ public class SDK {
             invalidDeploymentWaitTypeException = null;
             invalidDeploymentStatusException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1117,7 +1106,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateApplicationResponse res = new org.openapis.openapi.models.operations.CreateApplicationResponse() {{
+        org.openapis.openapi.models.operations.CreateApplicationResponse res = new org.openapis.openapi.models.operations.CreateApplicationResponse(contentType, httpRes.statusCode()) {{
             createApplicationOutput = null;
             applicationNameRequiredException = null;
             invalidApplicationNameException = null;
@@ -1126,8 +1115,6 @@ public class SDK {
             invalidComputePlatformException = null;
             invalidTagsToAddException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1217,7 +1204,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDeploymentResponse res = new org.openapis.openapi.models.operations.CreateDeploymentResponse() {{
+        org.openapis.openapi.models.operations.CreateDeploymentResponse res = new org.openapis.openapi.models.operations.CreateDeploymentResponse(contentType, httpRes.statusCode()) {{
             createDeploymentOutput = null;
             applicationNameRequiredException = null;
             invalidApplicationNameException = null;
@@ -1246,8 +1233,6 @@ public class SDK {
             invalidGitHubAccountTokenException = null;
             invalidTrafficRoutingConfigurationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1477,7 +1462,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDeploymentConfigResponse res = new org.openapis.openapi.models.operations.CreateDeploymentConfigResponse() {{
+        org.openapis.openapi.models.operations.CreateDeploymentConfigResponse res = new org.openapis.openapi.models.operations.CreateDeploymentConfigResponse(contentType, httpRes.statusCode()) {{
             createDeploymentConfigOutput = null;
             invalidDeploymentConfigNameException = null;
             deploymentConfigNameRequiredException = null;
@@ -1487,8 +1472,6 @@ public class SDK {
             invalidComputePlatformException = null;
             invalidTrafficRoutingConfigurationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1585,7 +1568,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDeploymentGroupResponse res = new org.openapis.openapi.models.operations.CreateDeploymentGroupResponse() {{
+        org.openapis.openapi.models.operations.CreateDeploymentGroupResponse res = new org.openapis.openapi.models.operations.CreateDeploymentGroupResponse(contentType, httpRes.statusCode()) {{
             createDeploymentGroupOutput = null;
             applicationNameRequiredException = null;
             invalidApplicationNameException = null;
@@ -1621,8 +1604,6 @@ public class SDK {
             invalidTagsToAddException = null;
             invalidTrafficRoutingConfigurationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1901,13 +1882,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteApplicationResponse res = new org.openapis.openapi.models.operations.DeleteApplicationResponse() {{
+        org.openapis.openapi.models.operations.DeleteApplicationResponse res = new org.openapis.openapi.models.operations.DeleteApplicationResponse(contentType, httpRes.statusCode()) {{
             applicationNameRequiredException = null;
             invalidApplicationNameException = null;
             invalidRoleException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1971,14 +1950,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDeploymentConfigResponse res = new org.openapis.openapi.models.operations.DeleteDeploymentConfigResponse() {{
+        org.openapis.openapi.models.operations.DeleteDeploymentConfigResponse res = new org.openapis.openapi.models.operations.DeleteDeploymentConfigResponse(contentType, httpRes.statusCode()) {{
             invalidDeploymentConfigNameException = null;
             deploymentConfigNameRequiredException = null;
             deploymentConfigInUseException = null;
             invalidOperationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2049,7 +2026,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDeploymentGroupResponse res = new org.openapis.openapi.models.operations.DeleteDeploymentGroupResponse() {{
+        org.openapis.openapi.models.operations.DeleteDeploymentGroupResponse res = new org.openapis.openapi.models.operations.DeleteDeploymentGroupResponse(contentType, httpRes.statusCode()) {{
             deleteDeploymentGroupOutput = null;
             applicationNameRequiredException = null;
             invalidApplicationNameException = null;
@@ -2057,8 +2034,6 @@ public class SDK {
             invalidDeploymentGroupNameException = null;
             invalidRoleException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2141,7 +2116,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteGitHubAccountTokenResponse res = new org.openapis.openapi.models.operations.DeleteGitHubAccountTokenResponse() {{
+        org.openapis.openapi.models.operations.DeleteGitHubAccountTokenResponse res = new org.openapis.openapi.models.operations.DeleteGitHubAccountTokenResponse(contentType, httpRes.statusCode()) {{
             deleteGitHubAccountTokenOutput = null;
             gitHubAccountTokenNameRequiredException = null;
             gitHubAccountTokenDoesNotExistException = null;
@@ -2149,8 +2124,6 @@ public class SDK {
             resourceValidationException = null;
             operationNotSupportedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2233,11 +2206,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteResourcesByExternalIdResponse res = new org.openapis.openapi.models.operations.DeleteResourcesByExternalIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteResourcesByExternalIdResponse res = new org.openapis.openapi.models.operations.DeleteResourcesByExternalIdResponse(contentType, httpRes.statusCode()) {{
             deleteResourcesByExternalIdOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2285,12 +2256,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeregisterOnPremisesInstanceResponse res = new org.openapis.openapi.models.operations.DeregisterOnPremisesInstanceResponse() {{
+        org.openapis.openapi.models.operations.DeregisterOnPremisesInstanceResponse res = new org.openapis.openapi.models.operations.DeregisterOnPremisesInstanceResponse(contentType, httpRes.statusCode()) {{
             instanceNameRequiredException = null;
             invalidInstanceNameException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2347,14 +2316,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApplicationResponse res = new org.openapis.openapi.models.operations.GetApplicationResponse() {{
+        org.openapis.openapi.models.operations.GetApplicationResponse res = new org.openapis.openapi.models.operations.GetApplicationResponse(contentType, httpRes.statusCode()) {{
             getApplicationOutput = null;
             applicationNameRequiredException = null;
             invalidApplicationNameException = null;
             applicationDoesNotExistException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2423,7 +2390,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApplicationRevisionResponse res = new org.openapis.openapi.models.operations.GetApplicationRevisionResponse() {{
+        org.openapis.openapi.models.operations.GetApplicationRevisionResponse res = new org.openapis.openapi.models.operations.GetApplicationRevisionResponse(contentType, httpRes.statusCode()) {{
             getApplicationRevisionOutput = null;
             applicationDoesNotExistException = null;
             applicationNameRequiredException = null;
@@ -2432,8 +2399,6 @@ public class SDK {
             revisionRequiredException = null;
             invalidRevisionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2523,14 +2488,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeploymentResponse res = new org.openapis.openapi.models.operations.GetDeploymentResponse() {{
+        org.openapis.openapi.models.operations.GetDeploymentResponse res = new org.openapis.openapi.models.operations.GetDeploymentResponse(contentType, httpRes.statusCode()) {{
             getDeploymentOutput = null;
             deploymentIdRequiredException = null;
             invalidDeploymentIdException = null;
             deploymentDoesNotExistException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2599,15 +2562,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeploymentConfigResponse res = new org.openapis.openapi.models.operations.GetDeploymentConfigResponse() {{
+        org.openapis.openapi.models.operations.GetDeploymentConfigResponse res = new org.openapis.openapi.models.operations.GetDeploymentConfigResponse(contentType, httpRes.statusCode()) {{
             getDeploymentConfigOutput = null;
             invalidDeploymentConfigNameException = null;
             deploymentConfigNameRequiredException = null;
             deploymentConfigDoesNotExistException = null;
             invalidComputePlatformException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2683,7 +2644,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeploymentGroupResponse res = new org.openapis.openapi.models.operations.GetDeploymentGroupResponse() {{
+        org.openapis.openapi.models.operations.GetDeploymentGroupResponse res = new org.openapis.openapi.models.operations.GetDeploymentGroupResponse(contentType, httpRes.statusCode()) {{
             getDeploymentGroupOutput = null;
             applicationNameRequiredException = null;
             invalidApplicationNameException = null;
@@ -2693,8 +2654,6 @@ public class SDK {
             deploymentGroupDoesNotExistException = null;
             deploymentConfigDoesNotExistException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2762,7 +2721,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetDeploymentInstanceResponse getDeploymentInstance(org.openapis.openapi.models.operations.GetDeploymentInstanceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=CodeDeploy_20141006.GetDeploymentInstance");
@@ -2791,7 +2752,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeploymentInstanceResponse res = new org.openapis.openapi.models.operations.GetDeploymentInstanceResponse() {{
+        org.openapis.openapi.models.operations.GetDeploymentInstanceResponse res = new org.openapis.openapi.models.operations.GetDeploymentInstanceResponse(contentType, httpRes.statusCode()) {{
             getDeploymentInstanceOutput = null;
             deploymentIdRequiredException = null;
             deploymentDoesNotExistException = null;
@@ -2801,8 +2762,6 @@ public class SDK {
             invalidInstanceNameException = null;
             invalidComputePlatformException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2899,7 +2858,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeploymentTargetResponse res = new org.openapis.openapi.models.operations.GetDeploymentTargetResponse() {{
+        org.openapis.openapi.models.operations.GetDeploymentTargetResponse res = new org.openapis.openapi.models.operations.GetDeploymentTargetResponse(contentType, httpRes.statusCode()) {{
             getDeploymentTargetOutput = null;
             invalidDeploymentIdException = null;
             deploymentIdRequiredException = null;
@@ -2910,8 +2869,6 @@ public class SDK {
             deploymentTargetDoesNotExistException = null;
             invalidInstanceNameException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3015,14 +2972,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOnPremisesInstanceResponse res = new org.openapis.openapi.models.operations.GetOnPremisesInstanceResponse() {{
+        org.openapis.openapi.models.operations.GetOnPremisesInstanceResponse res = new org.openapis.openapi.models.operations.GetOnPremisesInstanceResponse(contentType, httpRes.statusCode()) {{
             getOnPremisesInstanceOutput = null;
             instanceNameRequiredException = null;
             instanceNotRegisteredException = null;
             invalidInstanceNameException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3097,7 +3052,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListApplicationRevisionsResponse res = new org.openapis.openapi.models.operations.ListApplicationRevisionsResponse() {{
+        org.openapis.openapi.models.operations.ListApplicationRevisionsResponse res = new org.openapis.openapi.models.operations.ListApplicationRevisionsResponse(contentType, httpRes.statusCode()) {{
             listApplicationRevisionsOutput = null;
             applicationDoesNotExistException = null;
             applicationNameRequiredException = null;
@@ -3110,8 +3065,6 @@ public class SDK {
             invalidDeployedStateFilterException = null;
             invalidNextTokenException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3235,12 +3188,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListApplicationsResponse res = new org.openapis.openapi.models.operations.ListApplicationsResponse() {{
+        org.openapis.openapi.models.operations.ListApplicationsResponse res = new org.openapis.openapi.models.operations.ListApplicationsResponse(contentType, httpRes.statusCode()) {{
             listApplicationsOutput = null;
             invalidNextTokenException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3301,12 +3252,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDeploymentConfigsResponse res = new org.openapis.openapi.models.operations.ListDeploymentConfigsResponse() {{
+        org.openapis.openapi.models.operations.ListDeploymentConfigsResponse res = new org.openapis.openapi.models.operations.ListDeploymentConfigsResponse(contentType, httpRes.statusCode()) {{
             listDeploymentConfigsOutput = null;
             invalidNextTokenException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3367,15 +3316,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDeploymentGroupsResponse res = new org.openapis.openapi.models.operations.ListDeploymentGroupsResponse() {{
+        org.openapis.openapi.models.operations.ListDeploymentGroupsResponse res = new org.openapis.openapi.models.operations.ListDeploymentGroupsResponse(contentType, httpRes.statusCode()) {{
             listDeploymentGroupsOutput = null;
             applicationNameRequiredException = null;
             invalidApplicationNameException = null;
             applicationDoesNotExistException = null;
             invalidNextTokenException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3422,7 +3369,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ListDeploymentInstancesResponse listDeploymentInstances(org.openapis.openapi.models.operations.ListDeploymentInstancesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=CodeDeploy_20141006.ListDeploymentInstances");
@@ -3457,7 +3406,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDeploymentInstancesResponse res = new org.openapis.openapi.models.operations.ListDeploymentInstancesResponse() {{
+        org.openapis.openapi.models.operations.ListDeploymentInstancesResponse res = new org.openapis.openapi.models.operations.ListDeploymentInstancesResponse(contentType, httpRes.statusCode()) {{
             listDeploymentInstancesOutput = null;
             deploymentIdRequiredException = null;
             deploymentDoesNotExistException = null;
@@ -3470,8 +3419,6 @@ public class SDK {
             invalidTargetFilterNameException = null;
             invalidComputePlatformException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3589,7 +3536,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDeploymentTargetsResponse res = new org.openapis.openapi.models.operations.ListDeploymentTargetsResponse() {{
+        org.openapis.openapi.models.operations.ListDeploymentTargetsResponse res = new org.openapis.openapi.models.operations.ListDeploymentTargetsResponse(contentType, httpRes.statusCode()) {{
             listDeploymentTargetsOutput = null;
             deploymentIdRequiredException = null;
             deploymentDoesNotExistException = null;
@@ -3600,8 +3547,6 @@ public class SDK {
             invalidInstanceTypeException = null;
             invalidDeploymentInstanceTypeException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3711,7 +3656,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDeploymentsResponse res = new org.openapis.openapi.models.operations.ListDeploymentsResponse() {{
+        org.openapis.openapi.models.operations.ListDeploymentsResponse res = new org.openapis.openapi.models.operations.ListDeploymentsResponse(contentType, httpRes.statusCode()) {{
             listDeploymentsOutput = null;
             applicationNameRequiredException = null;
             invalidApplicationNameException = null;
@@ -3725,8 +3670,6 @@ public class SDK {
             invalidExternalIdException = null;
             invalidInputException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3851,14 +3794,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListGitHubAccountTokenNamesResponse res = new org.openapis.openapi.models.operations.ListGitHubAccountTokenNamesResponse() {{
+        org.openapis.openapi.models.operations.ListGitHubAccountTokenNamesResponse res = new org.openapis.openapi.models.operations.ListGitHubAccountTokenNamesResponse(contentType, httpRes.statusCode()) {{
             listGitHubAccountTokenNamesOutput = null;
             invalidNextTokenException = null;
             resourceValidationException = null;
             operationNotSupportedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3927,14 +3868,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListOnPremisesInstancesResponse res = new org.openapis.openapi.models.operations.ListOnPremisesInstancesResponse() {{
+        org.openapis.openapi.models.operations.ListOnPremisesInstancesResponse res = new org.openapis.openapi.models.operations.ListOnPremisesInstancesResponse(contentType, httpRes.statusCode()) {{
             listOnPremisesInstancesOutput = null;
             invalidRegistrationStatusException = null;
             invalidTagFilterException = null;
             invalidNextTokenException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4003,14 +3942,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceOutput = null;
             arnNotSupportedException = null;
             invalidArnException = null;
             resourceArnRequiredException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4079,7 +4016,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutLifecycleEventHookExecutionStatusResponse res = new org.openapis.openapi.models.operations.PutLifecycleEventHookExecutionStatusResponse() {{
+        org.openapis.openapi.models.operations.PutLifecycleEventHookExecutionStatusResponse res = new org.openapis.openapi.models.operations.PutLifecycleEventHookExecutionStatusResponse(contentType, httpRes.statusCode()) {{
             putLifecycleEventHookExecutionStatusOutput = null;
             invalidLifecycleEventHookExecutionStatusException = null;
             invalidLifecycleEventHookExecutionIdException = null;
@@ -4089,8 +4026,6 @@ public class SDK {
             invalidDeploymentIdException = null;
             unsupportedActionForDeploymentTypeException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4187,7 +4122,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterApplicationRevisionResponse res = new org.openapis.openapi.models.operations.RegisterApplicationRevisionResponse() {{
+        org.openapis.openapi.models.operations.RegisterApplicationRevisionResponse res = new org.openapis.openapi.models.operations.RegisterApplicationRevisionResponse(contentType, httpRes.statusCode()) {{
             applicationDoesNotExistException = null;
             applicationNameRequiredException = null;
             invalidApplicationNameException = null;
@@ -4195,8 +4130,6 @@ public class SDK {
             revisionRequiredException = null;
             invalidRevisionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4281,7 +4214,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterOnPremisesInstanceResponse res = new org.openapis.openapi.models.operations.RegisterOnPremisesInstanceResponse() {{
+        org.openapis.openapi.models.operations.RegisterOnPremisesInstanceResponse res = new org.openapis.openapi.models.operations.RegisterOnPremisesInstanceResponse(contentType, httpRes.statusCode()) {{
             instanceNameAlreadyRegisteredException = null;
             iamArnRequiredException = null;
             iamSessionArnAlreadyRegisteredException = null;
@@ -4293,8 +4226,6 @@ public class SDK {
             invalidIamUserArnException = null;
             multipleIamArnsProvidedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4407,7 +4338,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveTagsFromOnPremisesInstancesResponse res = new org.openapis.openapi.models.operations.RemoveTagsFromOnPremisesInstancesResponse() {{
+        org.openapis.openapi.models.operations.RemoveTagsFromOnPremisesInstancesResponse res = new org.openapis.openapi.models.operations.RemoveTagsFromOnPremisesInstancesResponse(contentType, httpRes.statusCode()) {{
             instanceNameRequiredException = null;
             invalidInstanceNameException = null;
             tagRequiredException = null;
@@ -4416,8 +4347,6 @@ public class SDK {
             instanceLimitExceededException = null;
             instanceNotRegisteredException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4480,7 +4409,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.SkipWaitTimeForInstanceTerminationResponse skipWaitTimeForInstanceTermination(org.openapis.openapi.models.operations.SkipWaitTimeForInstanceTerminationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=CodeDeploy_20141006.SkipWaitTimeForInstanceTermination");
@@ -4509,7 +4440,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SkipWaitTimeForInstanceTerminationResponse res = new org.openapis.openapi.models.operations.SkipWaitTimeForInstanceTerminationResponse() {{
+        org.openapis.openapi.models.operations.SkipWaitTimeForInstanceTerminationResponse res = new org.openapis.openapi.models.operations.SkipWaitTimeForInstanceTerminationResponse(contentType, httpRes.statusCode()) {{
             deploymentIdRequiredException = null;
             deploymentDoesNotExistException = null;
             deploymentAlreadyCompletedException = null;
@@ -4517,8 +4448,6 @@ public class SDK {
             deploymentNotStartedException = null;
             unsupportedActionForDeploymentTypeException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4603,7 +4532,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopDeploymentResponse res = new org.openapis.openapi.models.operations.StopDeploymentResponse() {{
+        org.openapis.openapi.models.operations.StopDeploymentResponse res = new org.openapis.openapi.models.operations.StopDeploymentResponse(contentType, httpRes.statusCode()) {{
             stopDeploymentOutput = null;
             deploymentIdRequiredException = null;
             deploymentDoesNotExistException = null;
@@ -4612,8 +4541,6 @@ public class SDK {
             invalidDeploymentIdException = null;
             unsupportedActionForDeploymentTypeException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4703,7 +4630,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceOutput = null;
             resourceArnRequiredException = null;
             applicationDoesNotExistException = null;
@@ -4714,8 +4641,6 @@ public class SDK {
             arnNotSupportedException = null;
             invalidArnException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4819,7 +4744,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceOutput = null;
             resourceArnRequiredException = null;
             applicationDoesNotExistException = null;
@@ -4830,8 +4755,6 @@ public class SDK {
             arnNotSupportedException = null;
             invalidArnException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4935,14 +4858,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateApplicationResponse res = new org.openapis.openapi.models.operations.UpdateApplicationResponse() {{
+        org.openapis.openapi.models.operations.UpdateApplicationResponse res = new org.openapis.openapi.models.operations.UpdateApplicationResponse(contentType, httpRes.statusCode()) {{
             applicationNameRequiredException = null;
             invalidApplicationNameException = null;
             applicationAlreadyExistsException = null;
             applicationDoesNotExistException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5013,7 +4934,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDeploymentGroupResponse res = new org.openapis.openapi.models.operations.UpdateDeploymentGroupResponse() {{
+        org.openapis.openapi.models.operations.UpdateDeploymentGroupResponse res = new org.openapis.openapi.models.operations.UpdateDeploymentGroupResponse(contentType, httpRes.statusCode()) {{
             updateDeploymentGroupOutput = null;
             applicationNameRequiredException = null;
             invalidApplicationNameException = null;
@@ -5047,8 +4968,6 @@ public class SDK {
             ecsServiceMappingLimitExceededException = null;
             invalidTrafficRoutingConfigurationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class AuxiliaryVersionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configOverrides")
     public java.util.Map<String, String> configOverrides;
+
     public AuxiliaryVersionConfig withConfigOverrides(java.util.Map<String, String> configOverrides) {
         this.configOverrides = configOverrides;
         return this;
@@ -29,6 +30,7 @@ public class AuxiliaryVersionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkConfig")
     public NetworkConfig networkConfig;
+
     public AuxiliaryVersionConfig withNetworkConfig(NetworkConfig networkConfig) {
         this.networkConfig = networkConfig;
         return this;
@@ -40,9 +42,11 @@ public class AuxiliaryVersionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public AuxiliaryVersionConfig withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public AuxiliaryVersionConfig(){}
 }

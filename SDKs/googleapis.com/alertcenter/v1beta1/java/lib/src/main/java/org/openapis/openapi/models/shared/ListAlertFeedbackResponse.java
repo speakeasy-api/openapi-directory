@@ -18,9 +18,11 @@ public class ListAlertFeedbackResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedback")
     public AlertFeedback[] feedback;
+
     public ListAlertFeedbackResponse withFeedback(AlertFeedback[] feedback) {
         this.feedback = feedback;
         return this;
     }
     
+    public ListAlertFeedbackResponse(){}
 }

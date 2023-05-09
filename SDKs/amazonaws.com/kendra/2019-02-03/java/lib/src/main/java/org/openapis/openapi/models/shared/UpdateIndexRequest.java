@@ -12,6 +12,7 @@ public class UpdateIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityUnits")
     public CapacityUnitsConfiguration capacityUnits;
+
     public UpdateIndexRequest withCapacityUnits(CapacityUnitsConfiguration capacityUnits) {
         this.capacityUnits = capacityUnits;
         return this;
@@ -20,6 +21,7 @@ public class UpdateIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateIndexRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class UpdateIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentMetadataConfigurationUpdates")
     public DocumentMetadataConfiguration[] documentMetadataConfigurationUpdates;
+
     public UpdateIndexRequest withDocumentMetadataConfigurationUpdates(DocumentMetadataConfiguration[] documentMetadataConfigurationUpdates) {
         this.documentMetadataConfigurationUpdates = documentMetadataConfigurationUpdates;
         return this;
@@ -35,6 +38,7 @@ public class UpdateIndexRequest {
     
     @JsonProperty("Id")
     public String id;
+
     public UpdateIndexRequest withId(String id) {
         this.id = id;
         return this;
@@ -43,6 +47,7 @@ public class UpdateIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateIndexRequest withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +56,7 @@ public class UpdateIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public UpdateIndexRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -59,6 +65,7 @@ public class UpdateIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserContextPolicy")
     public UserContextPolicyEnum userContextPolicy;
+
     public UpdateIndexRequest withUserContextPolicy(UserContextPolicyEnum userContextPolicy) {
         this.userContextPolicy = userContextPolicy;
         return this;
@@ -67,6 +74,7 @@ public class UpdateIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserGroupResolutionConfiguration")
     public UserGroupResolutionConfiguration userGroupResolutionConfiguration;
+
     public UpdateIndexRequest withUserGroupResolutionConfiguration(UserGroupResolutionConfiguration userGroupResolutionConfiguration) {
         this.userGroupResolutionConfiguration = userGroupResolutionConfiguration;
         return this;
@@ -75,9 +83,13 @@ public class UpdateIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserTokenConfigurations")
     public UserTokenConfiguration[] userTokenConfigurations;
+
     public UpdateIndexRequest withUserTokenConfigurations(UserTokenConfiguration[] userTokenConfigurations) {
         this.userTokenConfigurations = userTokenConfigurations;
         return this;
     }
     
+    public UpdateIndexRequest(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

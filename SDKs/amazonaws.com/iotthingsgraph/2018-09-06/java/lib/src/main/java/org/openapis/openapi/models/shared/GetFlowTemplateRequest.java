@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetFlowTemplateRequest {
     @JsonProperty("id")
     public String id;
+
     public GetFlowTemplateRequest withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,13 @@ public class GetFlowTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionNumber")
     public Long revisionNumber;
+
     public GetFlowTemplateRequest withRevisionNumber(Long revisionNumber) {
         this.revisionNumber = revisionNumber;
         return this;
     }
     
+    public GetFlowTemplateRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

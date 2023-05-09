@@ -12,6 +12,7 @@ public class ListGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListGroupsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,6 +23,7 @@ public class ListGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public ListGroupsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -32,6 +34,7 @@ public class ListGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public org.openapis.openapi.models.shared.SortOrderEnum order;
+
     public ListGroupsRequest withOrder(org.openapis.openapi.models.shared.SortOrderEnum order) {
         this.order = order;
         return this;
@@ -46,9 +49,11 @@ public class ListGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderby")
     public org.openapis.openapi.models.shared.SortByEnum orderby;
+
     public ListGroupsRequest withOrderby(org.openapis.openapi.models.shared.SortByEnum orderby) {
         this.orderby = orderby;
         return this;
     }
     
+    public ListGroupsRequest(){}
 }

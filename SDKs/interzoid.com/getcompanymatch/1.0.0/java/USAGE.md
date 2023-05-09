@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetcompanymatchRequest;
 import org.openapis.openapi.models.operations.GetcompanymatchResponse;
 
@@ -13,18 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetcompanymatchRequest req = new GetcompanymatchRequest() {{
-                company = "Medhurst - Rau";
-                license = "quibusdam";
-            }}            
+            GetcompanymatchRequest req = new GetcompanymatchRequest("corrupti", "provident");            
 
             GetcompanymatchResponse res = sdk.companyNameSimilarityKey.getcompanymatch(req);
 
-            if (res.getcompanymatch200ApplicationJSONObject.isPresent()) {
+            if (res.getcompanymatch200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

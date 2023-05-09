@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Integer height;
+
     public GoogleCloudRetailV2alphaImage withHeight(Integer height) {
         this.height = height;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2alphaImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudRetailV2alphaImage withUri(String uri) {
         this.uri = uri;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRetailV2alphaImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Integer width;
+
     public GoogleCloudRetailV2alphaImage withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaImage(){}
 }

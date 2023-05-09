@@ -18,9 +18,11 @@ public class TableBorderFill {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solidFill")
     public SolidFill solidFill;
+
     public TableBorderFill withSolidFill(SolidFill solidFill) {
         this.solidFill = solidFill;
         return this;
     }
     
+    public TableBorderFill(){}
 }

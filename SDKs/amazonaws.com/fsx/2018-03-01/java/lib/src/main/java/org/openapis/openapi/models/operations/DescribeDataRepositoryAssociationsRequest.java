@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeDataRepositoryAssociationsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DescribeDataRepositoryAssociationsRequest describeDataRepositoryAssociationsRequest;
+
     public DescribeDataRepositoryAssociationsRequest withDescribeDataRepositoryAssociationsRequest(org.openapis.openapi.models.shared.DescribeDataRepositoryAssociationsRequest describeDataRepositoryAssociationsRequest) {
         this.describeDataRepositoryAssociationsRequest = describeDataRepositoryAssociationsRequest;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDataRepositoryAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public String maxResults;
+
     public DescribeDataRepositoryAssociationsRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDataRepositoryAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public DescribeDataRepositoryAssociationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class DescribeDataRepositoryAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeDataRepositoryAssociationsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class DescribeDataRepositoryAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeDataRepositoryAssociationsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class DescribeDataRepositoryAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeDataRepositoryAssociationsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class DescribeDataRepositoryAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeDataRepositoryAssociationsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class DescribeDataRepositoryAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeDataRepositoryAssociationsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class DescribeDataRepositoryAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeDataRepositoryAssociationsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class DescribeDataRepositoryAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeDataRepositoryAssociationsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class DescribeDataRepositoryAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DescribeDataRepositoryAssociationsXAmzTargetEnum xAmzTarget;
+
     public DescribeDataRepositoryAssociationsRequest withXAmzTarget(DescribeDataRepositoryAssociationsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DescribeDataRepositoryAssociationsRequest(@JsonProperty("DescribeDataRepositoryAssociationsRequest") org.openapis.openapi.models.shared.DescribeDataRepositoryAssociationsRequest describeDataRepositoryAssociationsRequest, @JsonProperty("X-Amz-Target") DescribeDataRepositoryAssociationsXAmzTargetEnum xAmzTarget) {
+        this.describeDataRepositoryAssociationsRequest = describeDataRepositoryAssociationsRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

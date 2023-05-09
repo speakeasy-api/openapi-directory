@@ -15,6 +15,7 @@ public class ParquetOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableListInference")
     public Boolean enableListInference;
+
     public ParquetOptions withEnableListInference(Boolean enableListInference) {
         this.enableListInference = enableListInference;
         return this;
@@ -26,9 +27,11 @@ public class ParquetOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enumAsString")
     public Boolean enumAsString;
+
     public ParquetOptions withEnumAsString(Boolean enumAsString) {
         this.enumAsString = enumAsString;
         return this;
     }
     
+    public ParquetOptions(){}
 }

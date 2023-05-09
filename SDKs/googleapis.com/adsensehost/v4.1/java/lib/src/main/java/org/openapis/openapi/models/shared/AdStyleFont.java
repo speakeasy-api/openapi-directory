@@ -18,6 +18,7 @@ public class AdStyleFont {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("family")
     public String family;
+
     public AdStyleFont withFamily(String family) {
         this.family = family;
         return this;
@@ -29,9 +30,11 @@ public class AdStyleFont {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public String size;
+
     public AdStyleFont withSize(String size) {
         this.size = size;
         return this;
     }
     
+    public AdStyleFont(){}
 }

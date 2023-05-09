@@ -18,6 +18,7 @@ public class Template {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Template withId(Long id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class Template {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modified")
     public String modified;
+
     public Template withModified(String modified) {
         this.modified = modified;
         return this;
@@ -40,6 +42,7 @@ public class Template {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Template withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class Template {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public Boolean owner;
+
     public Template withOwner(Boolean owner) {
         this.owner = owner;
         return this;
@@ -62,9 +66,11 @@ public class Template {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public Template withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public Template(){}
 }

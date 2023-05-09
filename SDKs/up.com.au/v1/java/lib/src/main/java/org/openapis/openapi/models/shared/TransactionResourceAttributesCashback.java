@@ -18,6 +18,7 @@ public class TransactionResourceAttributesCashback {
      */
     @JsonProperty("amount")
     public MoneyObject amount;
+
     public TransactionResourceAttributesCashback withAmount(MoneyObject amount) {
         this.amount = amount;
         return this;
@@ -29,9 +30,14 @@ public class TransactionResourceAttributesCashback {
      */
     @JsonProperty("description")
     public String description;
+
     public TransactionResourceAttributesCashback withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public TransactionResourceAttributesCashback(@JsonProperty("amount") MoneyObject amount, @JsonProperty("description") String description) {
+        this.amount = amount;
+        this.description = description;
+  }
 }

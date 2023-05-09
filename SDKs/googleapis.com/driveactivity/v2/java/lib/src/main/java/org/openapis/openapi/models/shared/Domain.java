@@ -18,6 +18,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legacyId")
     public String legacyId;
+
     public Domain withLegacyId(String legacyId) {
         this.legacyId = legacyId;
         return this;
@@ -29,9 +30,11 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Domain withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Domain(){}
 }

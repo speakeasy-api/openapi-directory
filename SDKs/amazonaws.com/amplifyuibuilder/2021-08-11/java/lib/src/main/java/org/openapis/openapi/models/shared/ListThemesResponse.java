@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListThemesResponse {
     @JsonProperty("entities")
     public ThemeSummary[] entities;
+
     public ListThemesResponse withEntities(ThemeSummary[] entities) {
         this.entities = entities;
         return this;
@@ -22,9 +23,13 @@ public class ListThemesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListThemesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListThemesResponse(@JsonProperty("entities") ThemeSummary[] entities) {
+        this.entities = entities;
+  }
 }

@@ -12,6 +12,7 @@ public class CreateConnectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public CreateConnectionRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class CreateConnectionRequest {
     
     @JsonProperty("ConnectionInput")
     public ConnectionInput connectionInput;
+
     public CreateConnectionRequest withConnectionInput(ConnectionInput connectionInput) {
         this.connectionInput = connectionInput;
         return this;
@@ -27,9 +29,13 @@ public class CreateConnectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateConnectionRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateConnectionRequest(@JsonProperty("ConnectionInput") ConnectionInput connectionInput) {
+        this.connectionInput = connectionInput;
+  }
 }

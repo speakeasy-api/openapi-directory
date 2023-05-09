@@ -53,10 +53,8 @@ public class History {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetCurationTagHistoryResponse res = new org.openapis.openapi.models.operations.GetGetCurationTagHistoryResponse() {{
+        org.openapis.openapi.models.operations.GetGetCurationTagHistoryResponse res = new org.openapis.openapi.models.operations.GetGetCurationTagHistoryResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -91,10 +89,8 @@ public class History {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetPathwayHistoryResponse res = new org.openapis.openapi.models.operations.GetGetPathwayHistoryResponse() {{
+        org.openapis.openapi.models.operations.GetGetPathwayHistoryResponse res = new org.openapis.openapi.models.operations.GetGetPathwayHistoryResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,10 +125,8 @@ public class History {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetRecentChangesResponse res = new org.openapis.openapi.models.operations.GetGetRecentChangesResponse() {{
+        org.openapis.openapi.models.operations.GetGetRecentChangesResponse res = new org.openapis.openapi.models.operations.GetGetRecentChangesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

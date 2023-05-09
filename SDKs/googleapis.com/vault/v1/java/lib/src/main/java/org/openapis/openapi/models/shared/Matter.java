@@ -18,6 +18,7 @@ public class Matter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Matter withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class Matter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matterId")
     public String matterId;
+
     public Matter withMatterId(String matterId) {
         this.matterId = matterId;
         return this;
@@ -40,6 +42,7 @@ public class Matter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matterPermissions")
     public MatterPermission[] matterPermissions;
+
     public Matter withMatterPermissions(MatterPermission[] matterPermissions) {
         this.matterPermissions = matterPermissions;
         return this;
@@ -51,6 +54,7 @@ public class Matter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Matter withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class Matter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public MatterStateEnum state;
+
     public Matter withState(MatterStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public Matter(){}
 }

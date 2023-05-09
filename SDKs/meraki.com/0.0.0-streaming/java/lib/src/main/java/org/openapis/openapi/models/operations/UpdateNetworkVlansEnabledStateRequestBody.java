@@ -12,9 +12,13 @@ public class UpdateNetworkVlansEnabledStateRequestBody {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public UpdateNetworkVlansEnabledStateRequestBody withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public UpdateNetworkVlansEnabledStateRequestBody(@JsonProperty("enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

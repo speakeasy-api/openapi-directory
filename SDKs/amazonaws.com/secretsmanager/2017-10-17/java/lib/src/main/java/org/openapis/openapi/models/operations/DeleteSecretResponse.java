@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSecretResponse {
     
     public String contentType;
+
     public DeleteSecretResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSecretResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteSecretResponse deleteSecretResponse;
+
     public DeleteSecretResponse withDeleteSecretResponse(org.openapis.openapi.models.shared.DeleteSecretResponse deleteSecretResponse) {
         this.deleteSecretResponse = deleteSecretResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSecretResponse {
      */
     
     public Object internalServiceError;
+
     public DeleteSecretResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSecretResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteSecretResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteSecretResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteSecretResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteSecretResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteSecretResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteSecretResponse {
     
     
     public Integer statusCode;
+
     public DeleteSecretResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteSecretResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSecretResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteSecretResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

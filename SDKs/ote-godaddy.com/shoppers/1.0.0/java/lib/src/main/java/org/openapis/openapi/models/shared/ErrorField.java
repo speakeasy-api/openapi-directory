@@ -14,6 +14,7 @@ public class ErrorField {
      */
     @JsonProperty("code")
     public String code;
+
     public ErrorField withCode(String code) {
         this.code = code;
         return this;
@@ -25,6 +26,7 @@ public class ErrorField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ErrorField withMessage(String message) {
         this.message = message;
         return this;
@@ -39,6 +41,7 @@ public class ErrorField {
      */
     @JsonProperty("path")
     public String path;
+
     public ErrorField withPath(String path) {
         this.path = path;
         return this;
@@ -50,9 +53,14 @@ public class ErrorField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathRelated")
     public String pathRelated;
+
     public ErrorField withPathRelated(String pathRelated) {
         this.pathRelated = pathRelated;
         return this;
     }
     
+    public ErrorField(@JsonProperty("code") String code, @JsonProperty("path") String path) {
+        this.code = code;
+        this.path = path;
+  }
 }

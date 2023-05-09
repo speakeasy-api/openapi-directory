@@ -147,6 +147,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -178,12 +183,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddImageWatermarkV1Response res = new org.openapis.openapi.models.operations.AddImageWatermarkV1Response() {{
+        org.openapis.openapi.models.operations.AddImageWatermarkV1Response res = new org.openapis.openapi.models.operations.AddImageWatermarkV1Response(contentType, httpRes.statusCode()) {{
             addImageWatermarkV1200ApplicationPdfBinaryString = null;
             addImageWatermarkV14XXApplicationProblemPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -231,12 +234,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddPasswordV1Response res = new org.openapis.openapi.models.operations.AddPasswordV1Response() {{
+        org.openapis.openapi.models.operations.AddPasswordV1Response res = new org.openapis.openapi.models.operations.AddPasswordV1Response(contentType, httpRes.statusCode()) {{
             addPasswordV1200ApplicationPdfBinaryString = null;
             addPasswordV14XXApplicationProblemPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -284,12 +285,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddRestrictionsV1Response res = new org.openapis.openapi.models.operations.AddRestrictionsV1Response() {{
+        org.openapis.openapi.models.operations.AddRestrictionsV1Response res = new org.openapis.openapi.models.operations.AddRestrictionsV1Response(contentType, httpRes.statusCode()) {{
             addRestrictionsV1200ApplicationPdfBinaryString = null;
             addRestrictionsV14XXApplicationProblemPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -337,12 +336,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddTextWatermarkV1Response res = new org.openapis.openapi.models.operations.AddTextWatermarkV1Response() {{
+        org.openapis.openapi.models.operations.AddTextWatermarkV1Response res = new org.openapis.openapi.models.operations.AddTextWatermarkV1Response(contentType, httpRes.statusCode()) {{
             addTextWatermarkV1200ApplicationPdfBinaryString = null;
             addTextWatermarkV14XXApplicationProblemPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,12 +387,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExtractPagesV1Response res = new org.openapis.openapi.models.operations.ExtractPagesV1Response() {{
+        org.openapis.openapi.models.operations.ExtractPagesV1Response res = new org.openapis.openapi.models.operations.ExtractPagesV1Response(contentType, httpRes.statusCode()) {{
             extractPagesV1200ApplicationPdfBinaryString = null;
             extractPagesV14XXApplicationProblemPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -443,12 +438,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MergeDocumentsV1Response res = new org.openapis.openapi.models.operations.MergeDocumentsV1Response() {{
+        org.openapis.openapi.models.operations.MergeDocumentsV1Response res = new org.openapis.openapi.models.operations.MergeDocumentsV1Response(contentType, httpRes.statusCode()) {{
             mergeDocumentsV1200ApplicationPdfBinaryString = null;
             mergeDocumentsV14XXApplicationProblemPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -496,12 +489,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemovePagesV1Response res = new org.openapis.openapi.models.operations.RemovePagesV1Response() {{
+        org.openapis.openapi.models.operations.RemovePagesV1Response res = new org.openapis.openapi.models.operations.RemovePagesV1Response(contentType, httpRes.statusCode()) {{
             removePagesV1200ApplicationPdfBinaryString = null;
             removePagesV14XXApplicationProblemPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -549,12 +540,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemovePasswordV1Response res = new org.openapis.openapi.models.operations.RemovePasswordV1Response() {{
+        org.openapis.openapi.models.operations.RemovePasswordV1Response res = new org.openapis.openapi.models.operations.RemovePasswordV1Response(contentType, httpRes.statusCode()) {{
             removePasswordV1200ApplicationPdfBinaryString = null;
             removePasswordV14XXApplicationProblemPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -602,12 +591,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveRestrictionsV1Response res = new org.openapis.openapi.models.operations.RemoveRestrictionsV1Response() {{
+        org.openapis.openapi.models.operations.RemoveRestrictionsV1Response res = new org.openapis.openapi.models.operations.RemoveRestrictionsV1Response(contentType, httpRes.statusCode()) {{
             removeRestrictionsV1200ApplicationPdfBinaryString = null;
             removeRestrictionsV14XXApplicationProblemPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -655,12 +642,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveSignaturesV1Response res = new org.openapis.openapi.models.operations.RemoveSignaturesV1Response() {{
+        org.openapis.openapi.models.operations.RemoveSignaturesV1Response res = new org.openapis.openapi.models.operations.RemoveSignaturesV1Response(contentType, httpRes.statusCode()) {{
             removeSignaturesV1200ApplicationPdfBinaryString = null;
             removeSignaturesV14XXApplicationProblemPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -708,12 +693,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReversePagesV1Response res = new org.openapis.openapi.models.operations.ReversePagesV1Response() {{
+        org.openapis.openapi.models.operations.ReversePagesV1Response res = new org.openapis.openapi.models.operations.ReversePagesV1Response(contentType, httpRes.statusCode()) {{
             reversePagesV1200ApplicationPdfBinaryString = null;
             reversePagesV14XXApplicationProblemPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -761,12 +744,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RotatePagesV1Response res = new org.openapis.openapi.models.operations.RotatePagesV1Response() {{
+        org.openapis.openapi.models.operations.RotatePagesV1Response res = new org.openapis.openapi.models.operations.RotatePagesV1Response(contentType, httpRes.statusCode()) {{
             rotatePagesV1200ApplicationPdfBinaryString = null;
             rotatePagesV14XXApplicationProblemPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

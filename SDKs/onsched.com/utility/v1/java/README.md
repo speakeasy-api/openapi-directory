@@ -16,26 +16,28 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetUtilityV1HealthHeartbeatResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }})
                 .build();
 
             GetUtilityV1HealthHeartbeatResponse res = sdk.health.getUtilityV1HealthHeartbeat();
 
-            if (res.getUtilityV1HealthHeartbeat200ApplicationJSONString.isPresent()) {
+            if (res.getUtilityV1HealthHeartbeat200ApplicationJSONString != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -43,10 +45,10 @@ public class Application {
 ## Available Resources and Operations
 
 
-### health
+### [health](docs/health/README.md)
 
-* `getUtilityV1HealthHeartbeat`
-* `getUtilityV1HealthThreadinfo`
+* [getUtilityV1HealthHeartbeat](docs/health/README.md#getutilityv1healthheartbeat)
+* [getUtilityV1HealthThreadinfo](docs/health/README.md#getutilityv1healththreadinfo)
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetItineraryPriceMetricsRequest;
 import org.openapis.openapi.models.operations.GetItineraryPriceMetricsResponse;
 
@@ -26,22 +25,21 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetItineraryPriceMetricsRequest req = new GetItineraryPriceMetricsRequest() {{
-                currencyCode = "corrupti";
-                departureDate = "provident";
-                destinationIataCode = "distinctio";
+            GetItineraryPriceMetricsRequest req = new GetItineraryPriceMetricsRequest("corrupti", "provident", "distinctio") {{
+                currencyCode = "quibusdam";
                 oneWay = false;
-                originIataCode = "quibusdam";
-            }}            
+            }};            
 
             GetItineraryPriceMetricsResponse res = sdk.priceMetrics.getItineraryPriceMetrics(req);
 
-            if (res.getItineraryPriceMetrics200ApplicationVndAmadeusPlusJsonObject.isPresent()) {
+            if (res.getItineraryPriceMetrics200ApplicationVndAmadeusPlusJsonObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -49,9 +47,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### priceMetrics
+### [priceMetrics](docs/pricemetrics/README.md)
 
-* `getItineraryPriceMetrics` - GET itinerary price metric
+* [getItineraryPriceMetrics](docs/pricemetrics/README.md#getitinerarypricemetrics) - GET itinerary price metric
 <!-- End SDK Available Operations -->
 
 ### Maturity

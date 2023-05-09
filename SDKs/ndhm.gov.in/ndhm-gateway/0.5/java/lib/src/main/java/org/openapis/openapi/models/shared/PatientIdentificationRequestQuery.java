@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatientIdentificationRequestQuery {
     @JsonProperty("patient")
     public PatientIdentificationRequestQueryPatient patient;
+
     public PatientIdentificationRequestQuery withPatient(PatientIdentificationRequestQueryPatient patient) {
         this.patient = patient;
         return this;
@@ -16,9 +17,14 @@ public class PatientIdentificationRequestQuery {
     
     @JsonProperty("requester")
     public PatientIdentificationRequestQueryRequester requester;
+
     public PatientIdentificationRequestQuery withRequester(PatientIdentificationRequestQueryRequester requester) {
         this.requester = requester;
         return this;
     }
     
+    public PatientIdentificationRequestQuery(@JsonProperty("patient") PatientIdentificationRequestQueryPatient patient, @JsonProperty("requester") PatientIdentificationRequestQueryRequester requester) {
+        this.patient = patient;
+        this.requester = requester;
+  }
 }

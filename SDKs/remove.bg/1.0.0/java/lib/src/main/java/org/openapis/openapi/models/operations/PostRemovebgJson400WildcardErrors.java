@@ -12,6 +12,7 @@ public class PostRemovebgJson400WildcardErrors {
      */
     
     public String code;
+
     public PostRemovebgJson400WildcardErrors withCode(String code) {
         this.code = code;
         return this;
@@ -22,6 +23,7 @@ public class PostRemovebgJson400WildcardErrors {
      */
     
     public String detail;
+
     public PostRemovebgJson400WildcardErrors withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -32,9 +34,11 @@ public class PostRemovebgJson400WildcardErrors {
      */
     
     public String title;
+
     public PostRemovebgJson400WildcardErrors withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PostRemovebgJson400WildcardErrors(){}
 }

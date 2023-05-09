@@ -18,6 +18,7 @@ public class GoogleCloudRecommendationengineV1beta1GcsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputUris")
     public String[] inputUris;
+
     public GoogleCloudRecommendationengineV1beta1GcsSource withInputUris(String[] inputUris) {
         this.inputUris = inputUris;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecommendationengineV1beta1GcsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonSchema")
     public String jsonSchema;
+
     public GoogleCloudRecommendationengineV1beta1GcsSource withJsonSchema(String jsonSchema) {
         this.jsonSchema = jsonSchema;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1GcsSource(){}
 }

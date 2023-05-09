@@ -15,9 +15,13 @@ public class SearchAvailabilityQuery {
      */
     @JsonProperty("filter")
     public SearchAvailabilityFilter filter;
+
     public SearchAvailabilityQuery withFilter(SearchAvailabilityFilter filter) {
         this.filter = filter;
         return this;
     }
     
+    public SearchAvailabilityQuery(@JsonProperty("filter") SearchAvailabilityFilter filter) {
+        this.filter = filter;
+  }
 }

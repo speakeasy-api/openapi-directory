@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSizeConstraintSetResponse {
     
     public String contentType;
+
     public GetSizeConstraintSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSizeConstraintSetResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSizeConstraintSetResponse getSizeConstraintSetResponse;
+
     public GetSizeConstraintSetResponse withGetSizeConstraintSetResponse(org.openapis.openapi.models.shared.GetSizeConstraintSetResponse getSizeConstraintSetResponse) {
         this.getSizeConstraintSetResponse = getSizeConstraintSetResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetSizeConstraintSetResponse {
     
     
     public Integer statusCode;
+
     public GetSizeConstraintSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetSizeConstraintSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSizeConstraintSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class GetSizeConstraintSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public GetSizeConstraintSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class GetSizeConstraintSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public GetSizeConstraintSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,9 +70,14 @@ public class GetSizeConstraintSetResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public GetSizeConstraintSetResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
     }
     
+    public GetSizeConstraintSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

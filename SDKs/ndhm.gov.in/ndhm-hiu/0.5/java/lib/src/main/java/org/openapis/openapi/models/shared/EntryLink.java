@@ -12,6 +12,7 @@ public class EntryLink {
      */
     @JsonProperty("careContextReference")
     public String careContextReference;
+
     public EntryLink withCareContextReference(String careContextReference) {
         this.careContextReference = careContextReference;
         return this;
@@ -22,6 +23,7 @@ public class EntryLink {
      */
     @JsonProperty("checksum")
     public String checksum;
+
     public EntryLink withChecksum(String checksum) {
         this.checksum = checksum;
         return this;
@@ -32,6 +34,7 @@ public class EntryLink {
      */
     @JsonProperty("link")
     public String link;
+
     public EntryLink withLink(String link) {
         this.link = link;
         return this;
@@ -42,9 +45,16 @@ public class EntryLink {
      */
     @JsonProperty("media")
     public EntryLinkMediaEnum media;
+
     public EntryLink withMedia(EntryLinkMediaEnum media) {
         this.media = media;
         return this;
     }
     
+    public EntryLink(@JsonProperty("careContextReference") String careContextReference, @JsonProperty("checksum") String checksum, @JsonProperty("link") String link, @JsonProperty("media") EntryLinkMediaEnum media) {
+        this.careContextReference = careContextReference;
+        this.checksum = checksum;
+        this.link = link;
+        this.media = media;
+  }
 }

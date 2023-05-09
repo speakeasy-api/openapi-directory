@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartImportLabelsTaskRunRequest {
     @JsonProperty("InputS3Path")
     public String inputS3Path;
+
     public StartImportLabelsTaskRunRequest withInputS3Path(String inputS3Path) {
         this.inputS3Path = inputS3Path;
         return this;
@@ -19,6 +20,7 @@ public class StartImportLabelsTaskRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplaceAllLabels")
     public Boolean replaceAllLabels;
+
     public StartImportLabelsTaskRunRequest withReplaceAllLabels(Boolean replaceAllLabels) {
         this.replaceAllLabels = replaceAllLabels;
         return this;
@@ -26,9 +28,14 @@ public class StartImportLabelsTaskRunRequest {
     
     @JsonProperty("TransformId")
     public String transformId;
+
     public StartImportLabelsTaskRunRequest withTransformId(String transformId) {
         this.transformId = transformId;
         return this;
     }
     
+    public StartImportLabelsTaskRunRequest(@JsonProperty("InputS3Path") String inputS3Path, @JsonProperty("TransformId") String transformId) {
+        this.inputS3Path = inputS3Path;
+        this.transformId = transformId;
+  }
 }

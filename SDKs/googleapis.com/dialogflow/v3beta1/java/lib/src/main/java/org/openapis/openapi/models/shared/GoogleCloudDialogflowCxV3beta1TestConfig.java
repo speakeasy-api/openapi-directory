@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1TestConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flow")
     public String flow;
+
     public GoogleCloudDialogflowCxV3beta1TestConfig withFlow(String flow) {
         this.flow = flow;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1TestConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public String page;
+
     public GoogleCloudDialogflowCxV3beta1TestConfig withPage(String page) {
         this.page = page;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowCxV3beta1TestConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingParameters")
     public String[] trackingParameters;
+
     public GoogleCloudDialogflowCxV3beta1TestConfig withTrackingParameters(String[] trackingParameters) {
         this.trackingParameters = trackingParameters;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1TestConfig(){}
 }

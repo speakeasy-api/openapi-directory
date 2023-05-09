@@ -128,4 +128,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdatePipelineResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdatePipelineNotificationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdatePipelineStatusResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

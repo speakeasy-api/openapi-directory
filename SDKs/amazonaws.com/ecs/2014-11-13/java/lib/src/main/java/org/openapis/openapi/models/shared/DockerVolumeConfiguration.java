@@ -15,6 +15,7 @@ public class DockerVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoprovision")
     public Boolean autoprovision;
+
     public DockerVolumeConfiguration withAutoprovision(Boolean autoprovision) {
         this.autoprovision = autoprovision;
         return this;
@@ -23,6 +24,7 @@ public class DockerVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driver")
     public String driver;
+
     public DockerVolumeConfiguration withDriver(String driver) {
         this.driver = driver;
         return this;
@@ -31,6 +33,7 @@ public class DockerVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driverOpts")
     public java.util.Map<String, String> driverOpts;
+
     public DockerVolumeConfiguration withDriverOpts(java.util.Map<String, String> driverOpts) {
         this.driverOpts = driverOpts;
         return this;
@@ -39,6 +42,7 @@ public class DockerVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public DockerVolumeConfiguration withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -47,9 +51,11 @@ public class DockerVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public ScopeEnum scope;
+
     public DockerVolumeConfiguration withScope(ScopeEnum scope) {
         this.scope = scope;
         return this;
     }
     
+    public DockerVolumeConfiguration(){}
 }

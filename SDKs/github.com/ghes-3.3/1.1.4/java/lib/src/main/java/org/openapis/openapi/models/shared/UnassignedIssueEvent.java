@@ -15,6 +15,7 @@ public class UnassignedIssueEvent {
      */
     @JsonProperty("actor")
     public SimpleUser actor;
+
     public UnassignedIssueEvent withActor(SimpleUser actor) {
         this.actor = actor;
         return this;
@@ -25,6 +26,7 @@ public class UnassignedIssueEvent {
      */
     @JsonProperty("assignee")
     public SimpleUser assignee;
+
     public UnassignedIssueEvent withAssignee(SimpleUser assignee) {
         this.assignee = assignee;
         return this;
@@ -35,6 +37,7 @@ public class UnassignedIssueEvent {
      */
     @JsonProperty("assigner")
     public SimpleUser assigner;
+
     public UnassignedIssueEvent withAssigner(SimpleUser assigner) {
         this.assigner = assigner;
         return this;
@@ -42,6 +45,7 @@ public class UnassignedIssueEvent {
     
     @JsonProperty("commit_id")
     public String commitId;
+
     public UnassignedIssueEvent withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -49,6 +53,7 @@ public class UnassignedIssueEvent {
     
     @JsonProperty("commit_url")
     public String commitUrl;
+
     public UnassignedIssueEvent withCommitUrl(String commitUrl) {
         this.commitUrl = commitUrl;
         return this;
@@ -56,6 +61,7 @@ public class UnassignedIssueEvent {
     
     @JsonProperty("created_at")
     public String createdAt;
+
     public UnassignedIssueEvent withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -63,6 +69,7 @@ public class UnassignedIssueEvent {
     
     @JsonProperty("event")
     public String event;
+
     public UnassignedIssueEvent withEvent(String event) {
         this.event = event;
         return this;
@@ -70,6 +77,7 @@ public class UnassignedIssueEvent {
     
     @JsonProperty("id")
     public Long id;
+
     public UnassignedIssueEvent withId(Long id) {
         this.id = id;
         return this;
@@ -77,6 +85,7 @@ public class UnassignedIssueEvent {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public UnassignedIssueEvent withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -87,6 +96,7 @@ public class UnassignedIssueEvent {
      */
     @JsonProperty("performed_via_github_app")
     public NullableIntegration performedViaGithubApp;
+
     public UnassignedIssueEvent withPerformedViaGithubApp(NullableIntegration performedViaGithubApp) {
         this.performedViaGithubApp = performedViaGithubApp;
         return this;
@@ -94,9 +104,23 @@ public class UnassignedIssueEvent {
     
     @JsonProperty("url")
     public String url;
+
     public UnassignedIssueEvent withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public UnassignedIssueEvent(@JsonProperty("actor") SimpleUser actor, @JsonProperty("assignee") SimpleUser assignee, @JsonProperty("assigner") SimpleUser assigner, @JsonProperty("commit_id") String commitId, @JsonProperty("commit_url") String commitUrl, @JsonProperty("created_at") String createdAt, @JsonProperty("event") String event, @JsonProperty("id") Long id, @JsonProperty("node_id") String nodeId, @JsonProperty("performed_via_github_app") NullableIntegration performedViaGithubApp, @JsonProperty("url") String url) {
+        this.actor = actor;
+        this.assignee = assignee;
+        this.assigner = assigner;
+        this.commitId = commitId;
+        this.commitUrl = commitUrl;
+        this.createdAt = createdAt;
+        this.event = event;
+        this.id = id;
+        this.nodeId = nodeId;
+        this.performedViaGithubApp = performedViaGithubApp;
+        this.url = url;
+  }
 }

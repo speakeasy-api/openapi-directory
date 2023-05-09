@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcEndpointsResultVpcEndpointsDnsEntries {
     
     public String dnsName;
+
     public DescribeVpcEndpointsResultVpcEndpointsDnsEntries withDnsName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVpcEndpointsResultVpcEndpointsDnsEntries {
     
     
     public String hostedZoneId;
+
     public DescribeVpcEndpointsResultVpcEndpointsDnsEntries withHostedZoneId(String hostedZoneId) {
         this.hostedZoneId = hostedZoneId;
         return this;
     }
     
+    public DescribeVpcEndpointsResultVpcEndpointsDnsEntries(){}
 }

@@ -12,6 +12,7 @@ public class SimilarCompanySearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyName")
     public String companyName;
+
     public SimilarCompanySearch withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -20,6 +21,7 @@ public class SimilarCompanySearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SimilarCompanySearch withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class SimilarCompanySearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee")
     public String employee;
+
     public SimilarCompanySearch withEmployee(String employee) {
         this.employee = employee;
         return this;
@@ -36,6 +39,7 @@ public class SimilarCompanySearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("industry")
     public String industry;
+
     public SimilarCompanySearch withIndustry(String industry) {
         this.industry = industry;
         return this;
@@ -44,6 +48,7 @@ public class SimilarCompanySearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedin")
     public String linkedin;
+
     public SimilarCompanySearch withLinkedin(String linkedin) {
         this.linkedin = linkedin;
         return this;
@@ -52,6 +57,7 @@ public class SimilarCompanySearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippets")
     public Snippet[] snippets;
+
     public SimilarCompanySearch withSnippets(Snippet[] snippets) {
         this.snippets = snippets;
         return this;
@@ -60,6 +66,7 @@ public class SimilarCompanySearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public SimilarCompanySearch withTitle(String title) {
         this.title = title;
         return this;
@@ -68,6 +75,7 @@ public class SimilarCompanySearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter")
     public String twitter;
+
     public SimilarCompanySearch withTwitter(String twitter) {
         this.twitter = twitter;
         return this;
@@ -76,9 +84,11 @@ public class SimilarCompanySearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website")
     public String website;
+
     public SimilarCompanySearch withWebsite(String website) {
         this.website = website;
         return this;
     }
     
+    public SimilarCompanySearch(){}
 }

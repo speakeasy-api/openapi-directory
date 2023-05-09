@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MapMapGetResponse {
     
     public byte[] body;
+
     public MapMapGetResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class MapMapGetResponse {
     
     
     public String contentType;
+
     public MapMapGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class MapMapGetResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public MapMapGetResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -33,6 +37,7 @@ public class MapMapGetResponse {
     
     
     public Integer statusCode;
+
     public MapMapGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class MapMapGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MapMapGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class MapMapGetResponse {
      */
     
     public String mapMapGet200ImagePngString;
+
     public MapMapGetResponse withMapMapGet200ImagePngString(String mapMapGet200ImagePngString) {
         this.mapMapGet200ImagePngString = mapMapGet200ImagePngString;
         return this;
     }
     
+    public MapMapGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

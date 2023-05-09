@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteGameSessionQueueResponse {
     
     public String contentType;
+
     public DeleteGameSessionQueueResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteGameSessionQueueResponse {
      */
     
     public java.util.Map<String, Object> deleteGameSessionQueueOutput;
+
     public DeleteGameSessionQueueResponse withDeleteGameSessionQueueOutput(java.util.Map<String, Object> deleteGameSessionQueueOutput) {
         this.deleteGameSessionQueueOutput = deleteGameSessionQueueOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteGameSessionQueueResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteGameSessionQueueResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteGameSessionQueueResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteGameSessionQueueResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteGameSessionQueueResponse {
      */
     
     public Object notFoundException;
+
     public DeleteGameSessionQueueResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteGameSessionQueueResponse {
     
     
     public Integer statusCode;
+
     public DeleteGameSessionQueueResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteGameSessionQueueResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteGameSessionQueueResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteGameSessionQueueResponse {
      */
     
     public Object taggingFailedException;
+
     public DeleteGameSessionQueueResponse withTaggingFailedException(Object taggingFailedException) {
         this.taggingFailedException = taggingFailedException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteGameSessionQueueResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteGameSessionQueueResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteGameSessionQueueResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

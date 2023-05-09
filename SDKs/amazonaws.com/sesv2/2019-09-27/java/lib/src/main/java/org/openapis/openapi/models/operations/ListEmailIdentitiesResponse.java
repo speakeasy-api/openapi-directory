@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEmailIdentitiesResponse {
@@ -12,6 +13,7 @@ public class ListEmailIdentitiesResponse {
      */
     
     public Object badRequestException;
+
     public ListEmailIdentitiesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListEmailIdentitiesResponse {
     
     
     public String contentType;
+
     public ListEmailIdentitiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListEmailIdentitiesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEmailIdentitiesResponse listEmailIdentitiesResponse;
+
     public ListEmailIdentitiesResponse withListEmailIdentitiesResponse(org.openapis.openapi.models.shared.ListEmailIdentitiesResponse listEmailIdentitiesResponse) {
         this.listEmailIdentitiesResponse = listEmailIdentitiesResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListEmailIdentitiesResponse {
     
     
     public Integer statusCode;
+
     public ListEmailIdentitiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListEmailIdentitiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEmailIdentitiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class ListEmailIdentitiesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListEmailIdentitiesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListEmailIdentitiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

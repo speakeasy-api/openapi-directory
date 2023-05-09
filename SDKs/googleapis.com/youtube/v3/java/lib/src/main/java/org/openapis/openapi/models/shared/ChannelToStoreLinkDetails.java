@@ -18,6 +18,7 @@ public class ChannelToStoreLinkDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantId")
     public String merchantId;
+
     public ChannelToStoreLinkDetails withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -29,6 +30,7 @@ public class ChannelToStoreLinkDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeName")
     public String storeName;
+
     public ChannelToStoreLinkDetails withStoreName(String storeName) {
         this.storeName = storeName;
         return this;
@@ -40,9 +42,11 @@ public class ChannelToStoreLinkDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeUrl")
     public String storeUrl;
+
     public ChannelToStoreLinkDetails withStoreUrl(String storeUrl) {
         this.storeUrl = storeUrl;
         return this;
     }
     
+    public ChannelToStoreLinkDetails(){}
 }

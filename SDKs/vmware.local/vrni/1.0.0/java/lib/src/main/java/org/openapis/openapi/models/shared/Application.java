@@ -15,6 +15,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("create_time")
     public Long createTime;
+
     public Application withCreateTime(Long createTime) {
         this.createTime = createTime;
         return this;
@@ -23,6 +24,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public String createdBy;
+
     public Application withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -31,6 +33,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_id")
     public String entityId;
+
     public Application withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -39,6 +42,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public EntityTypeEnum entityType;
+
     public Application withEntityType(EntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -47,6 +51,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_modified_by")
     public String lastModifiedBy;
+
     public Application withLastModifiedBy(String lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -55,6 +60,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_modified_time")
     public Long lastModifiedTime;
+
     public Application withLastModifiedTime(Long lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -63,9 +69,11 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Application withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Application(){}
 }

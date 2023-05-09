@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConfigurationErrorDetails {
     @JsonProperty("code")
     public ErrorCodeEnum code;
+
     public ConfigurationErrorDetails withCode(ErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,14 @@ public class ConfigurationErrorDetails {
     
     @JsonProperty("message")
     public String message;
+
     public ConfigurationErrorDetails withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ConfigurationErrorDetails(@JsonProperty("code") ErrorCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

@@ -12,6 +12,7 @@ public class UpdatePlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public UpdatePlanRequestBody withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -20,6 +21,7 @@ public class UpdatePlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public UpdatePlanRequestBody withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -28,6 +30,7 @@ public class UpdatePlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval_day")
     public Double intervalDay;
+
     public UpdatePlanRequestBody withIntervalDay(Double intervalDay) {
         this.intervalDay = intervalDay;
         return this;
@@ -36,9 +39,11 @@ public class UpdatePlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public UpdatePlanRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public UpdatePlanRequestBody(){}
 }

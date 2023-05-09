@@ -15,9 +15,11 @@ public class DeleteHypervisorOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HypervisorArn")
     public String hypervisorArn;
+
     public DeleteHypervisorOutput withHypervisorArn(String hypervisorArn) {
         this.hypervisorArn = hypervisorArn;
         return this;
     }
     
+    public DeleteHypervisorOutput(){}
 }

@@ -15,6 +15,7 @@ public class CustomDataIdentifiersDetections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public CustomDataIdentifiersDetections withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class CustomDataIdentifiersDetections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public CustomDataIdentifiersDetections withCount(Long count) {
         this.count = count;
         return this;
@@ -31,6 +33,7 @@ public class CustomDataIdentifiersDetections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CustomDataIdentifiersDetections withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class CustomDataIdentifiersDetections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Occurrences")
     public Occurrences occurrences;
+
     public CustomDataIdentifiersDetections withOccurrences(Occurrences occurrences) {
         this.occurrences = occurrences;
         return this;
     }
     
+    public CustomDataIdentifiersDetections(){}
 }

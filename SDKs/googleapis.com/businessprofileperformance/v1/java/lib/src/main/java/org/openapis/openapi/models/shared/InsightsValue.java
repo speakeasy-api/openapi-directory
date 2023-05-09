@@ -18,6 +18,7 @@ public class InsightsValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threshold")
     public String threshold;
+
     public InsightsValue withThreshold(String threshold) {
         this.threshold = threshold;
         return this;
@@ -29,9 +30,11 @@ public class InsightsValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public InsightsValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public InsightsValue(){}
 }

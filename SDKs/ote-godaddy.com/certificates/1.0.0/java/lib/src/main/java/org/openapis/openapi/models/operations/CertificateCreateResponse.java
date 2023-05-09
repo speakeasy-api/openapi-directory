@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CertificateCreateResponse {
@@ -12,6 +13,7 @@ public class CertificateCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.CertificateIdentifier certificateIdentifier;
+
     public CertificateCreateResponse withCertificateIdentifier(org.openapis.openapi.models.shared.CertificateIdentifier certificateIdentifier) {
         this.certificateIdentifier = certificateIdentifier;
         return this;
@@ -19,6 +21,7 @@ public class CertificateCreateResponse {
     
     
     public String contentType;
+
     public CertificateCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CertificateCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public CertificateCreateResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class CertificateCreateResponse {
     
     
     public Integer statusCode;
+
     public CertificateCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CertificateCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CertificateCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CertificateCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

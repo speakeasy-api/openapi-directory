@@ -12,6 +12,7 @@ public class ActionHelp {
      */
     @JsonProperty("action_id")
     public String actionId;
+
     public ActionHelp withActionId(String actionId) {
         this.actionId = actionId;
         return this;
@@ -22,6 +23,7 @@ public class ActionHelp {
      */
     @JsonProperty("help_text")
     public String helpText;
+
     public ActionHelp withHelpText(String helpText) {
         this.helpText = helpText;
         return this;
@@ -32,9 +34,15 @@ public class ActionHelp {
      */
     @JsonProperty("service_id")
     public String serviceId;
+
     public ActionHelp withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     
+    public ActionHelp(@JsonProperty("action_id") String actionId, @JsonProperty("help_text") String helpText, @JsonProperty("service_id") String serviceId) {
+        this.actionId = actionId;
+        this.helpText = helpText;
+        this.serviceId = serviceId;
+  }
 }

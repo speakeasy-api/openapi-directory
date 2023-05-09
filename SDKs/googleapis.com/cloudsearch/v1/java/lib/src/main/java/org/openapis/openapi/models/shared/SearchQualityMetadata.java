@@ -18,9 +18,11 @@ public class SearchQualityMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quality")
     public Double quality;
+
     public SearchQualityMetadata withQuality(Double quality) {
         this.quality = quality;
         return this;
     }
     
+    public SearchQualityMetadata(){}
 }

@@ -8,6 +8,7 @@ import java.net.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.openapis.openapi.utils.HTTPClient;
 import org.openapis.openapi.utils.HTTPRequest;
+import org.openapis.openapi.utils.SerializedBody;
 
 /**
  * User Management
@@ -59,11 +60,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2UsersJsonResponse res = new org.openapis.openapi.models.operations.GetV2UsersJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2UsersJsonResponse res = new org.openapis.openapi.models.operations.GetV2UsersJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +97,48 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2UsersIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2UsersIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2UsersIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2UsersIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "*/*")) {
+                byte[] out = httpRes.body();
+                res.body = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Update a user
+     * Updates a user.
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PutV2UsersIdJsonResponse putV2UsersIdJson(org.openapis.openapi.models.operations.PutV2UsersIdJsonRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV2UsersIdJsonRequest.class, baseUrl, "/v2/users/{id}.json", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PUT");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.PutV2UsersIdJsonResponse res = new org.openapis.openapi.models.operations.PutV2UsersIdJsonResponse(contentType, httpRes.statusCode()) {{
+            body = null;
+        }};
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

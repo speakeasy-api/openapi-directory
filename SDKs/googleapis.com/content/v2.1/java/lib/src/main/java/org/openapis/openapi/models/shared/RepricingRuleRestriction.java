@@ -18,6 +18,7 @@ public class RepricingRuleRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floor")
     public RepricingRuleRestrictionBoundary floor;
+
     public RepricingRuleRestriction withFloor(RepricingRuleRestrictionBoundary floor) {
         this.floor = floor;
         return this;
@@ -29,9 +30,11 @@ public class RepricingRuleRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useAutoPricingMinPrice")
     public Boolean useAutoPricingMinPrice;
+
     public RepricingRuleRestriction withUseAutoPricingMinPrice(Boolean useAutoPricingMinPrice) {
         this.useAutoPricingMinPrice = useAutoPricingMinPrice;
         return this;
     }
     
+    public RepricingRuleRestriction(){}
 }

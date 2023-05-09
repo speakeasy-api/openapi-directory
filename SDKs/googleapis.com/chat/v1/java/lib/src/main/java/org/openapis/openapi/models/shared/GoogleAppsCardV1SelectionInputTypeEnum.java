@@ -7,7 +7,7 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * GoogleAppsCardV1SelectionInputTypeEnum - The way that an option appears to users. Different options support different types of interactions. For example, users can enable multiple check boxes, but can only select one value from a dropdown menu. Each selection input supports one type of selection. Mixing check boxes and switches, for example, is not supported.
+ * GoogleAppsCardV1SelectionInputTypeEnum - The type of items that are displayed to users in a `SelectionInput` widget. Selection types support different types of interactions. For example, users can select one or more checkboxes, but they can only select one value from a dropdown menu.
  */
 public enum GoogleAppsCardV1SelectionInputTypeEnum {
     CHECK_BOX("CHECK_BOX"),

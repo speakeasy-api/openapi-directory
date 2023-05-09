@@ -18,6 +18,7 @@ public class ApplicationsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applications")
     public Application[] applications;
+
     public ApplicationsListResponse withApplications(Application[] applications) {
         this.applications = applications;
         return this;
@@ -29,6 +30,7 @@ public class ApplicationsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public ApplicationsListResponse withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,6 +42,7 @@ public class ApplicationsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ApplicationsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class ApplicationsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ApplicationsListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ApplicationsListResponse(){}
 }

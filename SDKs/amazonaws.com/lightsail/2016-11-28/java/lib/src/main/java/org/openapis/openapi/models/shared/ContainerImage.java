@@ -22,6 +22,7 @@ public class ContainerImage {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ContainerImage withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class ContainerImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digest")
     public String digest;
+
     public ContainerImage withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -38,9 +40,11 @@ public class ContainerImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public ContainerImage withImage(String image) {
         this.image = image;
         return this;
     }
     
+    public ContainerImage(){}
 }

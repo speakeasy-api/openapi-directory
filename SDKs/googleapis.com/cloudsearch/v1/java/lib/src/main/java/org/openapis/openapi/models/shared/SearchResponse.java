@@ -18,6 +18,7 @@ public class SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debugInfo")
     public ResponseDebugInfo debugInfo;
+
     public SearchResponse withDebugInfo(ResponseDebugInfo debugInfo) {
         this.debugInfo = debugInfo;
         return this;
@@ -29,6 +30,7 @@ public class SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorInfo")
     public ErrorInfo errorInfo;
+
     public SearchResponse withErrorInfo(ErrorInfo errorInfo) {
         this.errorInfo = errorInfo;
         return this;
@@ -40,6 +42,7 @@ public class SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facetResults")
     public FacetResult[] facetResults;
+
     public SearchResponse withFacetResults(FacetResult[] facetResults) {
         this.facetResults = facetResults;
         return this;
@@ -51,6 +54,7 @@ public class SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasMoreResults")
     public Boolean hasMoreResults;
+
     public SearchResponse withHasMoreResults(Boolean hasMoreResults) {
         this.hasMoreResults = hasMoreResults;
         return this;
@@ -59,6 +63,7 @@ public class SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryInterpretation")
     public QueryInterpretation queryInterpretation;
+
     public SearchResponse withQueryInterpretation(QueryInterpretation queryInterpretation) {
         this.queryInterpretation = queryInterpretation;
         return this;
@@ -70,6 +75,7 @@ public class SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCountEstimate")
     public String resultCountEstimate;
+
     public SearchResponse withResultCountEstimate(String resultCountEstimate) {
         this.resultCountEstimate = resultCountEstimate;
         return this;
@@ -81,6 +87,7 @@ public class SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCountExact")
     public String resultCountExact;
+
     public SearchResponse withResultCountExact(String resultCountExact) {
         this.resultCountExact = resultCountExact;
         return this;
@@ -92,6 +99,7 @@ public class SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCounts")
     public ResultCounts resultCounts;
+
     public SearchResponse withResultCounts(ResultCounts resultCounts) {
         this.resultCounts = resultCounts;
         return this;
@@ -103,6 +111,7 @@ public class SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public SearchResult[] results;
+
     public SearchResponse withResults(SearchResult[] results) {
         this.results = results;
         return this;
@@ -114,6 +123,7 @@ public class SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spellResults")
     public SpellResult[] spellResults;
+
     public SearchResponse withSpellResults(SpellResult[] spellResults) {
         this.spellResults = spellResults;
         return this;
@@ -125,9 +135,11 @@ public class SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("structuredResults")
     public StructuredResult[] structuredResults;
+
     public SearchResponse withStructuredResults(StructuredResult[] structuredResults) {
         this.structuredResults = structuredResults;
         return this;
     }
     
+    public SearchResponse(){}
 }

@@ -21,6 +21,7 @@ public class ListEphemeridesRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public ListEphemeridesRequestBody withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -31,6 +32,7 @@ public class ListEphemeridesRequestBody {
      */
     @JsonProperty("satelliteId")
     public String satelliteId;
+
     public ListEphemeridesRequestBody withSatelliteId(String satelliteId) {
         this.satelliteId = satelliteId;
         return this;
@@ -43,6 +45,7 @@ public class ListEphemeridesRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public ListEphemeridesRequestBody withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -54,9 +57,15 @@ public class ListEphemeridesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusList")
     public org.openapis.openapi.models.shared.EphemerisStatusEnum[] statusList;
+
     public ListEphemeridesRequestBody withStatusList(org.openapis.openapi.models.shared.EphemerisStatusEnum[] statusList) {
         this.statusList = statusList;
         return this;
     }
     
+    public ListEphemeridesRequestBody(@JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("satelliteId") String satelliteId, @JsonProperty("startTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.satelliteId = satelliteId;
+        this.startTime = startTime;
+  }
 }

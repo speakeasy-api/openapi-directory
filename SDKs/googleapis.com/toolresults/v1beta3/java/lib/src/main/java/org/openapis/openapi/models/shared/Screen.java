@@ -15,6 +15,7 @@ public class Screen {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileReference")
     public String fileReference;
+
     public Screen withFileReference(String fileReference) {
         this.fileReference = fileReference;
         return this;
@@ -26,6 +27,7 @@ public class Screen {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public Screen withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -37,6 +39,7 @@ public class Screen {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public Screen withModel(String model) {
         this.model = model;
         return this;
@@ -48,9 +51,11 @@ public class Screen {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public Screen withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Screen(){}
 }

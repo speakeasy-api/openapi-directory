@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SheetsSpreadsheetsDeveloperMetadataSearchSecurity {
     @SpeakeasyMetadata("security:option=true")
     public SheetsSpreadsheetsDeveloperMetadataSearchSecurityOption1 option1;
+
     public SheetsSpreadsheetsDeveloperMetadataSearchSecurity withOption1(SheetsSpreadsheetsDeveloperMetadataSearchSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class SheetsSpreadsheetsDeveloperMetadataSearchSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SheetsSpreadsheetsDeveloperMetadataSearchSecurityOption2 option2;
+
     public SheetsSpreadsheetsDeveloperMetadataSearchSecurity withOption2(SheetsSpreadsheetsDeveloperMetadataSearchSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class SheetsSpreadsheetsDeveloperMetadataSearchSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SheetsSpreadsheetsDeveloperMetadataSearchSecurityOption3 option3;
+
     public SheetsSpreadsheetsDeveloperMetadataSearchSecurity withOption3(SheetsSpreadsheetsDeveloperMetadataSearchSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public SheetsSpreadsheetsDeveloperMetadataSearchSecurity(){}
 }

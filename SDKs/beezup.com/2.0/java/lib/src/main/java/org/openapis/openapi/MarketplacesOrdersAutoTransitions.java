@@ -58,11 +58,9 @@ public class MarketplacesOrdersAutoTransitions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfigureAutomaticTransitionsResponse res = new org.openapis.openapi.models.operations.ConfigureAutomaticTransitionsResponse() {{
+        org.openapis.openapi.models.operations.ConfigureAutomaticTransitionsResponse res = new org.openapis.openapi.models.operations.ConfigureAutomaticTransitionsResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -112,12 +110,10 @@ public class MarketplacesOrdersAutoTransitions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAutomaticTransitionsResponse res = new org.openapis.openapi.models.operations.GetAutomaticTransitionsResponse() {{
+        org.openapis.openapi.models.operations.GetAutomaticTransitionsResponse res = new org.openapis.openapi.models.operations.GetAutomaticTransitionsResponse(contentType, httpRes.statusCode()) {{
             automaticTransitionInfoList = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

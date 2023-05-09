@@ -15,6 +15,7 @@ public class GetApiMappingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiId")
     public String apiId;
+
     public GetApiMappingResponse withApiId(String apiId) {
         this.apiId = apiId;
         return this;
@@ -23,6 +24,7 @@ public class GetApiMappingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiMappingId")
     public String apiMappingId;
+
     public GetApiMappingResponse withApiMappingId(String apiMappingId) {
         this.apiMappingId = apiMappingId;
         return this;
@@ -31,6 +33,7 @@ public class GetApiMappingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiMappingKey")
     public String apiMappingKey;
+
     public GetApiMappingResponse withApiMappingKey(String apiMappingKey) {
         this.apiMappingKey = apiMappingKey;
         return this;
@@ -39,9 +42,11 @@ public class GetApiMappingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Stage")
     public String stage;
+
     public GetApiMappingResponse withStage(String stage) {
         this.stage = stage;
         return this;
     }
     
+    public GetApiMappingResponse(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteServerRequest {
     @JsonProperty("ServerId")
     public String serverId;
+
     public DeleteServerRequest withServerId(String serverId) {
         this.serverId = serverId;
         return this;
     }
     
+    public DeleteServerRequest(@JsonProperty("ServerId") String serverId) {
+        this.serverId = serverId;
+  }
 }

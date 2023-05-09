@@ -15,9 +15,11 @@ public class ManualEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3ResourcePath")
     public String s3ResourcePath;
+
     public ManualEvidence withS3ResourcePath(String s3ResourcePath) {
         this.s3ResourcePath = s3ResourcePath;
         return this;
     }
     
+    public ManualEvidence(){}
 }

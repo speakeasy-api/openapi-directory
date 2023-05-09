@@ -18,9 +18,11 @@ public class GoogleCloudNetworksecurityV1beta1GrpcEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetUri")
     public String targetUri;
+
     public GoogleCloudNetworksecurityV1beta1GrpcEndpoint withTargetUri(String targetUri) {
         this.targetUri = targetUri;
         return this;
     }
     
+    public GoogleCloudNetworksecurityV1beta1GrpcEndpoint(){}
 }

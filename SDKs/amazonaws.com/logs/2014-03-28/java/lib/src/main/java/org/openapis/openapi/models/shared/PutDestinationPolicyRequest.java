@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutDestinationPolicyRequest {
     @JsonProperty("accessPolicy")
     public String accessPolicy;
+
     public PutDestinationPolicyRequest withAccessPolicy(String accessPolicy) {
         this.accessPolicy = accessPolicy;
         return this;
@@ -18,6 +19,7 @@ public class PutDestinationPolicyRequest {
     
     @JsonProperty("destinationName")
     public String destinationName;
+
     public PutDestinationPolicyRequest withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -26,9 +28,14 @@ public class PutDestinationPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceUpdate")
     public Boolean forceUpdate;
+
     public PutDestinationPolicyRequest withForceUpdate(Boolean forceUpdate) {
         this.forceUpdate = forceUpdate;
         return this;
     }
     
+    public PutDestinationPolicyRequest(@JsonProperty("accessPolicy") String accessPolicy, @JsonProperty("destinationName") String destinationName) {
+        this.accessPolicy = accessPolicy;
+        this.destinationName = destinationName;
+  }
 }

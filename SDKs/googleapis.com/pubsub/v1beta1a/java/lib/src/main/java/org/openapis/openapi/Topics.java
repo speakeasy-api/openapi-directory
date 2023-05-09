@@ -62,11 +62,9 @@ public class Topics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PubsubTopicsCreateResponse res = new org.openapis.openapi.models.operations.PubsubTopicsCreateResponse() {{
+        org.openapis.openapi.models.operations.PubsubTopicsCreateResponse res = new org.openapis.openapi.models.operations.PubsubTopicsCreateResponse(contentType, httpRes.statusCode()) {{
             topic = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Topics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PubsubTopicsDeleteResponse res = new org.openapis.openapi.models.operations.PubsubTopicsDeleteResponse() {{
+        org.openapis.openapi.models.operations.PubsubTopicsDeleteResponse res = new org.openapis.openapi.models.operations.PubsubTopicsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Topics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PubsubTopicsGetResponse res = new org.openapis.openapi.models.operations.PubsubTopicsGetResponse() {{
+        org.openapis.openapi.models.operations.PubsubTopicsGetResponse res = new org.openapis.openapi.models.operations.PubsubTopicsGetResponse(contentType, httpRes.statusCode()) {{
             topic = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Topics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PubsubTopicsListResponse res = new org.openapis.openapi.models.operations.PubsubTopicsListResponse() {{
+        org.openapis.openapi.models.operations.PubsubTopicsListResponse res = new org.openapis.openapi.models.operations.PubsubTopicsListResponse(contentType, httpRes.statusCode()) {{
             listTopicsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Topics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PubsubTopicsPublishResponse res = new org.openapis.openapi.models.operations.PubsubTopicsPublishResponse() {{
+        org.openapis.openapi.models.operations.PubsubTopicsPublishResponse res = new org.openapis.openapi.models.operations.PubsubTopicsPublishResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Topics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PubsubTopicsPublishBatchResponse res = new org.openapis.openapi.models.operations.PubsubTopicsPublishBatchResponse() {{
+        org.openapis.openapi.models.operations.PubsubTopicsPublishBatchResponse res = new org.openapis.openapi.models.operations.PubsubTopicsPublishBatchResponse(contentType, httpRes.statusCode()) {{
             publishBatchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

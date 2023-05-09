@@ -18,6 +18,7 @@ public class ClearorderFormMessages200ApplicationJSONMarketingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coupon")
     public String coupon;
+
     public ClearorderFormMessages200ApplicationJSONMarketingData withCoupon(String coupon) {
         this.coupon = coupon;
         return this;
@@ -29,6 +30,7 @@ public class ClearorderFormMessages200ApplicationJSONMarketingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmCampaign")
     public String utmCampaign;
+
     public ClearorderFormMessages200ApplicationJSONMarketingData withUtmCampaign(String utmCampaign) {
         this.utmCampaign = utmCampaign;
         return this;
@@ -40,6 +42,7 @@ public class ClearorderFormMessages200ApplicationJSONMarketingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmMedium")
     public String utmMedium;
+
     public ClearorderFormMessages200ApplicationJSONMarketingData withUtmMedium(String utmMedium) {
         this.utmMedium = utmMedium;
         return this;
@@ -51,6 +54,7 @@ public class ClearorderFormMessages200ApplicationJSONMarketingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmSource")
     public String utmSource;
+
     public ClearorderFormMessages200ApplicationJSONMarketingData withUtmSource(String utmSource) {
         this.utmSource = utmSource;
         return this;
@@ -62,6 +66,7 @@ public class ClearorderFormMessages200ApplicationJSONMarketingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmiCampaign")
     public String utmiCampaign;
+
     public ClearorderFormMessages200ApplicationJSONMarketingData withUtmiCampaign(String utmiCampaign) {
         this.utmiCampaign = utmiCampaign;
         return this;
@@ -73,6 +78,7 @@ public class ClearorderFormMessages200ApplicationJSONMarketingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmiPage")
     public String utmiPage;
+
     public ClearorderFormMessages200ApplicationJSONMarketingData withUtmiPage(String utmiPage) {
         this.utmiPage = utmiPage;
         return this;
@@ -84,9 +90,11 @@ public class ClearorderFormMessages200ApplicationJSONMarketingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmiPart")
     public String utmiPart;
+
     public ClearorderFormMessages200ApplicationJSONMarketingData withUtmiPart(String utmiPart) {
         this.utmiPart = utmiPart;
         return this;
     }
     
+    public ClearorderFormMessages200ApplicationJSONMarketingData(){}
 }

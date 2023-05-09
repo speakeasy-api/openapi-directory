@@ -15,6 +15,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressId")
     public String addressId;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfo withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
@@ -26,6 +27,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryChannels")
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoDeliveryChannels[] deliveryChannels;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfo withDeliveryChannels(ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoDeliveryChannels[] deliveryChannels) {
         this.deliveryChannels = deliveryChannels;
         return this;
@@ -37,6 +39,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public String itemId;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfo withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -48,6 +51,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemIndex")
     public Long itemIndex;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfo withItemIndex(Long itemIndex) {
         this.itemIndex = itemIndex;
         return this;
@@ -59,6 +63,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedDeliveryChannel")
     public String selectedDeliveryChannel;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfo withSelectedDeliveryChannel(String selectedDeliveryChannel) {
         this.selectedDeliveryChannel = selectedDeliveryChannel;
         return this;
@@ -70,6 +75,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedSla")
     public String selectedSla;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfo withSelectedSla(String selectedSla) {
         this.selectedSla = selectedSla;
         return this;
@@ -81,6 +87,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipsTo")
     public String[] shipsTo;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfo withShipsTo(String[] shipsTo) {
         this.shipsTo = shipsTo;
         return this;
@@ -92,9 +99,11 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slas")
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSlas[] slas;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfo withSlas(ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSlas[] slas) {
         this.slas = slas;
         return this;
     }
     
+    public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfo(){}
 }

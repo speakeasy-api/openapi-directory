@@ -16,26 +16,28 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetAccountResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     accessToken = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             GetAccountResponse res = sdk.account.getAccount();
 
-            if (res.account.isPresent()) {
+            if (res.account != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -43,25 +45,25 @@ public class Application {
 ## Available Resources and Operations
 
 
-### account
+### [account](docs/account/README.md)
 
-* `getAccount` - Get Account
+* [getAccount](docs/account/README.md#getaccount) - Get Account
 
-### captions
+### [captions](docs/captions/README.md)
 
-* `getCaptions` - Get Captions
+* [getCaptions](docs/captions/README.md#getcaptions) - Get Captions
 
-### jobs
+### [jobs](docs/jobs/README.md)
 
-* `deleteJobById` - Delete Job by Id
-* `getJobById` - Get Job By Id
-* `getListOfJobs` - Get List of Jobs
-* `submitTranscriptionJobJson` - Submit Transcription Job
-* `submitTranscriptionJobMultipart` - Submit Transcription Job
+* [deleteJobById](docs/jobs/README.md#deletejobbyid) - Delete Job by Id
+* [getJobById](docs/jobs/README.md#getjobbyid) - Get Job By Id
+* [getListOfJobs](docs/jobs/README.md#getlistofjobs) - Get List of Jobs
+* [submitTranscriptionJobJson](docs/jobs/README.md#submittranscriptionjobjson) - Submit Transcription Job
+* [submitTranscriptionJobMultipart](docs/jobs/README.md#submittranscriptionjobmultipart) - Submit Transcription Job
 
-### transcript
+### [transcript](docs/transcript/README.md)
 
-* `getTranscriptById` - Get Transcript By Id
+* [getTranscriptById](docs/transcript/README.md#gettranscriptbyid) - Get Transcript By Id
 <!-- End SDK Available Operations -->
 
 ### Maturity

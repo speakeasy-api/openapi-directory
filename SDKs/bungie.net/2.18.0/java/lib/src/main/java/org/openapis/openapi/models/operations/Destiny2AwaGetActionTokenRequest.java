@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2AwaGetActionTokenRequest {
@@ -12,9 +13,13 @@ public class Destiny2AwaGetActionTokenRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=correlationId")
     public String correlationId;
+
     public Destiny2AwaGetActionTokenRequest withCorrelationId(String correlationId) {
         this.correlationId = correlationId;
         return this;
     }
     
+    public Destiny2AwaGetActionTokenRequest(@JsonProperty("correlationId") String correlationId) {
+        this.correlationId = correlationId;
+  }
 }

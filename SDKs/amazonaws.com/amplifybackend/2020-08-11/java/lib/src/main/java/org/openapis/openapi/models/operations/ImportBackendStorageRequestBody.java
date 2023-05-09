@@ -15,6 +15,7 @@ public class ImportBackendStorageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketName")
     public String bucketName;
+
     public ImportBackendStorageRequestBody withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -25,9 +26,13 @@ public class ImportBackendStorageRequestBody {
      */
     @JsonProperty("serviceName")
     public ImportBackendStorageRequestBodyServiceNameEnum serviceName;
+
     public ImportBackendStorageRequestBody withServiceName(ImportBackendStorageRequestBodyServiceNameEnum serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public ImportBackendStorageRequestBody(@JsonProperty("serviceName") ImportBackendStorageRequestBodyServiceNameEnum serviceName) {
+        this.serviceName = serviceName;
+  }
 }

@@ -19,6 +19,7 @@ public class UpdateVariantStoreResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public UpdateVariantStoreResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -26,6 +27,7 @@ public class UpdateVariantStoreResponse {
     
     @JsonProperty("description")
     public String description;
+
     public UpdateVariantStoreResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +35,7 @@ public class UpdateVariantStoreResponse {
     
     @JsonProperty("id")
     public String id;
+
     public UpdateVariantStoreResponse withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +43,7 @@ public class UpdateVariantStoreResponse {
     
     @JsonProperty("name")
     public String name;
+
     public UpdateVariantStoreResponse withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class UpdateVariantStoreResponse {
     
     @JsonProperty("reference")
     public ReferenceItem reference;
+
     public UpdateVariantStoreResponse withReference(ReferenceItem reference) {
         this.reference = reference;
         return this;
@@ -54,6 +59,7 @@ public class UpdateVariantStoreResponse {
     
     @JsonProperty("status")
     public StoreStatusEnum status;
+
     public UpdateVariantStoreResponse withStatus(StoreStatusEnum status) {
         this.status = status;
         return this;
@@ -63,9 +69,19 @@ public class UpdateVariantStoreResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public UpdateVariantStoreResponse withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public UpdateVariantStoreResponse(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("description") String description, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("reference") ReferenceItem reference, @JsonProperty("status") StoreStatusEnum status, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.creationTime = creationTime;
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.reference = reference;
+        this.status = status;
+        this.updateTime = updateTime;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeNetworkEndpointGroupsAggregatedListResponse {
     
     public String contentType;
+
     public ComputeNetworkEndpointGroupsAggregatedListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeNetworkEndpointGroupsAggregatedListResponse {
      */
     
     public org.openapis.openapi.models.shared.NetworkEndpointGroupAggregatedList networkEndpointGroupAggregatedList;
+
     public ComputeNetworkEndpointGroupsAggregatedListResponse withNetworkEndpointGroupAggregatedList(org.openapis.openapi.models.shared.NetworkEndpointGroupAggregatedList networkEndpointGroupAggregatedList) {
         this.networkEndpointGroupAggregatedList = networkEndpointGroupAggregatedList;
         return this;
@@ -26,6 +29,7 @@ public class ComputeNetworkEndpointGroupsAggregatedListResponse {
     
     
     public Integer statusCode;
+
     public ComputeNetworkEndpointGroupsAggregatedListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeNetworkEndpointGroupsAggregatedListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeNetworkEndpointGroupsAggregatedListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeNetworkEndpointGroupsAggregatedListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

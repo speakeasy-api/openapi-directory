@@ -15,9 +15,11 @@ public class EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforcement")
     public EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBodyEnforcementEnum enforcement;
+
     public EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBody withEnforcement(EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBodyEnforcementEnum enforcement) {
         this.enforcement = enforcement;
         return this;
     }
     
+    public EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBody(){}
 }

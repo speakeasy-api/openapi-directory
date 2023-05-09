@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * TransactionPages - Pages of transaction results
@@ -15,6 +15,7 @@ public class TransactionPages {
      */
     
     public Long count;
+
     public TransactionPages withCount(Long count) {
         this.count = count;
         return this;
@@ -25,6 +26,7 @@ public class TransactionPages {
      */
     
     public Transaction[] list;
+
     public TransactionPages withList(Transaction[] list) {
         this.list = list;
         return this;
@@ -35,6 +37,7 @@ public class TransactionPages {
      */
     
     public Long pageNumber;
+
     public TransactionPages withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -45,9 +48,14 @@ public class TransactionPages {
      */
     
     public Long pages;
+
     public TransactionPages withPages(Long pages) {
         this.pages = pages;
         return this;
     }
     
+    public TransactionPages(@JsonProperty("count") Long count, @JsonProperty("list") Transaction[] list) {
+        this.count = count;
+        this.list = list;
+  }
 }

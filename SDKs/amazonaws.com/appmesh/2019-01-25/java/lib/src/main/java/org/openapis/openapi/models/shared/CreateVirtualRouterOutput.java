@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateVirtualRouterOutput {
     @JsonProperty("virtualRouter")
     public VirtualRouterData virtualRouter;
+
     public CreateVirtualRouterOutput withVirtualRouter(VirtualRouterData virtualRouter) {
         this.virtualRouter = virtualRouter;
         return this;
     }
     
+    public CreateVirtualRouterOutput(@JsonProperty("virtualRouter") VirtualRouterData virtualRouter) {
+        this.virtualRouter = virtualRouter;
+  }
 }

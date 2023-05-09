@@ -20,6 +20,7 @@ public class TimestampMetricValuePair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricValue")
     public Double metricValue;
+
     public TimestampMetricValuePair withMetricValue(Double metricValue) {
         this.metricValue = metricValue;
         return this;
@@ -30,9 +31,11 @@ public class TimestampMetricValuePair {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Timestamp")
     public OffsetDateTime timestamp;
+
     public TimestampMetricValuePair withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public TimestampMetricValuePair(){}
 }

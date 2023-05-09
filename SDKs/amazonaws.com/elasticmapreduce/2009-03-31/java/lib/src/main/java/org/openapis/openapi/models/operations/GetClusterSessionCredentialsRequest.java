@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetClusterSessionCredentialsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetClusterSessionCredentialsInput getClusterSessionCredentialsInput;
+
     public GetClusterSessionCredentialsRequest withGetClusterSessionCredentialsInput(org.openapis.openapi.models.shared.GetClusterSessionCredentialsInput getClusterSessionCredentialsInput) {
         this.getClusterSessionCredentialsInput = getClusterSessionCredentialsInput;
         return this;
@@ -16,6 +18,7 @@ public class GetClusterSessionCredentialsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetClusterSessionCredentialsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class GetClusterSessionCredentialsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetClusterSessionCredentialsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class GetClusterSessionCredentialsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetClusterSessionCredentialsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class GetClusterSessionCredentialsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetClusterSessionCredentialsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class GetClusterSessionCredentialsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetClusterSessionCredentialsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class GetClusterSessionCredentialsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetClusterSessionCredentialsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class GetClusterSessionCredentialsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetClusterSessionCredentialsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class GetClusterSessionCredentialsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public GetClusterSessionCredentialsXAmzTargetEnum xAmzTarget;
+
     public GetClusterSessionCredentialsRequest withXAmzTarget(GetClusterSessionCredentialsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public GetClusterSessionCredentialsRequest(@JsonProperty("GetClusterSessionCredentialsInput") org.openapis.openapi.models.shared.GetClusterSessionCredentialsInput getClusterSessionCredentialsInput, @JsonProperty("X-Amz-Target") GetClusterSessionCredentialsXAmzTargetEnum xAmzTarget) {
+        this.getClusterSessionCredentialsInput = getClusterSessionCredentialsInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

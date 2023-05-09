@@ -15,6 +15,7 @@ public class FormCTA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancel")
     public FormButton cancel;
+
     public FormCTA withCancel(FormButton cancel) {
         this.cancel = cancel;
         return this;
@@ -23,6 +24,7 @@ public class FormCTA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clear")
     public FormButton clear;
+
     public FormCTA withClear(FormButton clear) {
         this.clear = clear;
         return this;
@@ -31,6 +33,7 @@ public class FormCTA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public FormButtonsPositionEnum position;
+
     public FormCTA withPosition(FormButtonsPositionEnum position) {
         this.position = position;
         return this;
@@ -39,9 +42,11 @@ public class FormCTA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submit")
     public FormButton submit;
+
     public FormCTA withSubmit(FormButton submit) {
         this.submit = submit;
         return this;
     }
     
+    public FormCTA(){}
 }

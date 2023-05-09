@@ -15,6 +15,7 @@ public class CreateFleetMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricArn")
     public String metricArn;
+
     public CreateFleetMetricResponse withMetricArn(String metricArn) {
         this.metricArn = metricArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateFleetMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricName")
     public String metricName;
+
     public CreateFleetMetricResponse withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
     }
     
+    public CreateFleetMetricResponse(){}
 }

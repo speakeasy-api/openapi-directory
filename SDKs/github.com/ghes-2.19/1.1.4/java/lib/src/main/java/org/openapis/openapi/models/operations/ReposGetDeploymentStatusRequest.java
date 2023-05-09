@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposGetDeploymentStatusRequest {
@@ -12,6 +13,7 @@ public class ReposGetDeploymentStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment_id")
     public Long deploymentId;
+
     public ReposGetDeploymentStatusRequest withDeploymentId(Long deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -19,6 +21,7 @@ public class ReposGetDeploymentStatusRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposGetDeploymentStatusRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -26,6 +29,7 @@ public class ReposGetDeploymentStatusRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposGetDeploymentStatusRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -33,9 +37,16 @@ public class ReposGetDeploymentStatusRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=status_id")
     public Long statusId;
+
     public ReposGetDeploymentStatusRequest withStatusId(Long statusId) {
         this.statusId = statusId;
         return this;
     }
     
+    public ReposGetDeploymentStatusRequest(@JsonProperty("deployment_id") Long deploymentId, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("status_id") Long statusId) {
+        this.deploymentId = deploymentId;
+        this.owner = owner;
+        this.repo = repo;
+        this.statusId = statusId;
+  }
 }

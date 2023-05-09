@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeArchiveResponse {
     
     public String contentType;
+
     public DescribeArchiveResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeArchiveResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeArchiveResponse describeArchiveResponse;
+
     public DescribeArchiveResponse withDescribeArchiveResponse(org.openapis.openapi.models.shared.DescribeArchiveResponse describeArchiveResponse) {
         this.describeArchiveResponse = describeArchiveResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeArchiveResponse {
      */
     
     public Object internalException;
+
     public DescribeArchiveResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeArchiveResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public DescribeArchiveResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeArchiveResponse {
     
     
     public Integer statusCode;
+
     public DescribeArchiveResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeArchiveResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeArchiveResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeArchiveResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeArchiveResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeArchiveResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

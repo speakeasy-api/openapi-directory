@@ -57,12 +57,10 @@ public class ProductDigitalProducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteProductsIdDigitalProductsDigitalProductIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteProductsIdDigitalProductsDigitalProductIdJsonResponse() {{
+        org.openapis.openapi.models.operations.DeleteProductsIdDigitalProductsDigitalProductIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteProductsIdDigitalProductsDigitalProductIdJsonResponse(contentType, httpRes.statusCode()) {{
             deleteProductsIdDigitalProductsDigitalProductIdJSON200ApplicationJSONString = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,12 +106,10 @@ public class ProductDigitalProducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProductsIdDigitalProductsJsonResponse res = new org.openapis.openapi.models.operations.GetProductsIdDigitalProductsJsonResponse() {{
+        org.openapis.openapi.models.operations.GetProductsIdDigitalProductsJsonResponse res = new org.openapis.openapi.models.operations.GetProductsIdDigitalProductsJsonResponse(contentType, httpRes.statusCode()) {{
             digitalProducts = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -160,12 +156,10 @@ public class ProductDigitalProducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProductsIdDigitalProductsCountJsonResponse res = new org.openapis.openapi.models.operations.GetProductsIdDigitalProductsCountJsonResponse() {{
+        org.openapis.openapi.models.operations.GetProductsIdDigitalProductsCountJsonResponse res = new org.openapis.openapi.models.operations.GetProductsIdDigitalProductsCountJsonResponse(contentType, httpRes.statusCode()) {{
             count = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -212,12 +206,10 @@ public class ProductDigitalProducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProductsIdDigitalProductsDigitalProductIdJsonResponse res = new org.openapis.openapi.models.operations.GetProductsIdDigitalProductsDigitalProductIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetProductsIdDigitalProductsDigitalProductIdJsonResponse res = new org.openapis.openapi.models.operations.GetProductsIdDigitalProductsDigitalProductIdJsonResponse(contentType, httpRes.statusCode()) {{
             digitalProduct = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -269,11 +261,9 @@ public class ProductDigitalProducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostProductsIdDigitalProductsJsonResponse res = new org.openapis.openapi.models.operations.PostProductsIdDigitalProductsJsonResponse() {{
+        org.openapis.openapi.models.operations.PostProductsIdDigitalProductsJsonResponse res = new org.openapis.openapi.models.operations.PostProductsIdDigitalProductsJsonResponse(contentType, httpRes.statusCode()) {{
             digitalProduct = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

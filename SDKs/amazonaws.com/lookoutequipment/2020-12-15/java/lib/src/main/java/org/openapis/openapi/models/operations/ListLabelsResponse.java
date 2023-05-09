@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListLabelsResponse {
@@ -12,6 +13,7 @@ public class ListLabelsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListLabelsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListLabelsResponse {
     
     
     public String contentType;
+
     public ListLabelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListLabelsResponse {
      */
     
     public Object internalServerException;
+
     public ListLabelsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListLabelsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListLabelsResponse listLabelsResponse;
+
     public ListLabelsResponse withListLabelsResponse(org.openapis.openapi.models.shared.ListLabelsResponse listLabelsResponse) {
         this.listLabelsResponse = listLabelsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListLabelsResponse {
     
     
     public Integer statusCode;
+
     public ListLabelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListLabelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListLabelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListLabelsResponse {
      */
     
     public Object throttlingException;
+
     public ListLabelsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListLabelsResponse {
      */
     
     public Object validationException;
+
     public ListLabelsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListLabelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

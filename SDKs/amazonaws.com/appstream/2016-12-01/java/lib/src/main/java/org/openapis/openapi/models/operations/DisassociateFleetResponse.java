@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateFleetResponse {
@@ -12,6 +13,7 @@ public class DisassociateFleetResponse {
      */
     
     public Object concurrentModificationException;
+
     public DisassociateFleetResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateFleetResponse {
     
     
     public String contentType;
+
     public DisassociateFleetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateFleetResponse {
      */
     
     public java.util.Map<String, Object> disassociateFleetResult;
+
     public DisassociateFleetResponse withDisassociateFleetResult(java.util.Map<String, Object> disassociateFleetResult) {
         this.disassociateFleetResult = disassociateFleetResult;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateFleetResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DisassociateFleetResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateFleetResponse {
      */
     
     public Object resourceInUseException;
+
     public DisassociateFleetResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -56,6 +62,7 @@ public class DisassociateFleetResponse {
     
     
     public Integer statusCode;
+
     public DisassociateFleetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateFleetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateFleetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DisassociateFleetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateFleetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DisassociateFleetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

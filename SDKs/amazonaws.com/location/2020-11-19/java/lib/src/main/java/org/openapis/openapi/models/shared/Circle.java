@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Circle {
     @JsonProperty("Center")
     public Double[] center;
+
     public Circle withCenter(Double[] center) {
         this.center = center;
         return this;
@@ -19,9 +20,14 @@ public class Circle {
     
     @JsonProperty("Radius")
     public Double radius;
+
     public Circle withRadius(Double radius) {
         this.radius = radius;
         return this;
     }
     
+    public Circle(@JsonProperty("Center") Double[] center, @JsonProperty("Radius") Double radius) {
+        this.center = center;
+        this.radius = radius;
+  }
 }

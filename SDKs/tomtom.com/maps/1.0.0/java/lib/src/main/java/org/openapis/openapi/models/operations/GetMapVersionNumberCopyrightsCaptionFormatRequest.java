@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMapVersionNumberCopyrightsCaptionFormatRequest {
@@ -12,6 +13,7 @@ public class GetMapVersionNumberCopyrightsCaptionFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetMapVersionNumberCopyrightsCaptionFormatRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -22,6 +24,7 @@ public class GetMapVersionNumberCopyrightsCaptionFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public GetMapVersionNumberCopyrightsCaptionFormatFormatEnum format;
+
     public GetMapVersionNumberCopyrightsCaptionFormatRequest withFormat(GetMapVersionNumberCopyrightsCaptionFormatFormatEnum format) {
         this.format = format;
         return this;
@@ -32,9 +35,14 @@ public class GetMapVersionNumberCopyrightsCaptionFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public GetMapVersionNumberCopyrightsCaptionFormatVersionNumberEnum versionNumber;
+
     public GetMapVersionNumberCopyrightsCaptionFormatRequest withVersionNumber(GetMapVersionNumberCopyrightsCaptionFormatVersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public GetMapVersionNumberCopyrightsCaptionFormatRequest(@JsonProperty("format") GetMapVersionNumberCopyrightsCaptionFormatFormatEnum format, @JsonProperty("versionNumber") GetMapVersionNumberCopyrightsCaptionFormatVersionNumberEnum versionNumber) {
+        this.format = format;
+        this.versionNumber = versionNumber;
+  }
 }

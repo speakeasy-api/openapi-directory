@@ -18,9 +18,11 @@ public class LanguageTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languages")
     public Language[] languages;
+
     public LanguageTargeting withLanguages(Language[] languages) {
         this.languages = languages;
         return this;
     }
     
+    public LanguageTargeting(){}
 }

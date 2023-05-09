@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeDBLogFilesMessage {
     
     public String dbInstanceIdentifier;
+
     public DescribeDBLogFilesMessage withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class DescribeDBLogFilesMessage {
     
     
     public Long fileLastWritten;
+
     public DescribeDBLogFilesMessage withFileLastWritten(Long fileLastWritten) {
         this.fileLastWritten = fileLastWritten;
         return this;
@@ -23,6 +25,7 @@ public class DescribeDBLogFilesMessage {
     
     
     public Long fileSize;
+
     public DescribeDBLogFilesMessage withFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
@@ -30,6 +33,7 @@ public class DescribeDBLogFilesMessage {
     
     
     public String filenameContains;
+
     public DescribeDBLogFilesMessage withFilenameContains(String filenameContains) {
         this.filenameContains = filenameContains;
         return this;
@@ -37,6 +41,7 @@ public class DescribeDBLogFilesMessage {
     
     
     public FilterList[] filters;
+
     public DescribeDBLogFilesMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -44,6 +49,7 @@ public class DescribeDBLogFilesMessage {
     
     
     public String marker;
+
     public DescribeDBLogFilesMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -51,9 +57,13 @@ public class DescribeDBLogFilesMessage {
     
     
     public Long maxRecords;
+
     public DescribeDBLogFilesMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeDBLogFilesMessage(@JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier) {
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+  }
 }

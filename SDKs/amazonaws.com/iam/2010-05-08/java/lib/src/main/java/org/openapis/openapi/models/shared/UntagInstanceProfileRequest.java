@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UntagInstanceProfileRequest {
     
     public String instanceProfileName;
+
     public UntagInstanceProfileRequest withInstanceProfileName(String instanceProfileName) {
         this.instanceProfileName = instanceProfileName;
         return this;
@@ -16,9 +17,14 @@ public class UntagInstanceProfileRequest {
     
     
     public String[] tagKeys;
+
     public UntagInstanceProfileRequest withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
     }
     
+    public UntagInstanceProfileRequest(@JsonProperty("InstanceProfileName") String instanceProfileName, @JsonProperty("TagKeys") String[] tagKeys) {
+        this.instanceProfileName = instanceProfileName;
+        this.tagKeys = tagKeys;
+  }
 }

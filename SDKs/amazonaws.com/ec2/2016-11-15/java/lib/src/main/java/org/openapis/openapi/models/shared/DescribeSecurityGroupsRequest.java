@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSecurityGroupsRequest {
     
     public Boolean dryRun;
+
     public DescribeSecurityGroupsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeSecurityGroupsRequest {
     
     
     public DescribeSecurityGroupsRequestFilters[] filters;
+
     public DescribeSecurityGroupsRequest withFilters(DescribeSecurityGroupsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeSecurityGroupsRequest {
     
     
     public String[] groupIds;
+
     public DescribeSecurityGroupsRequest withGroupIds(String[] groupIds) {
         this.groupIds = groupIds;
         return this;
@@ -30,6 +33,7 @@ public class DescribeSecurityGroupsRequest {
     
     
     public String[] groupNames;
+
     public DescribeSecurityGroupsRequest withGroupNames(String[] groupNames) {
         this.groupNames = groupNames;
         return this;
@@ -37,6 +41,7 @@ public class DescribeSecurityGroupsRequest {
     
     
     public Long maxResults;
+
     public DescribeSecurityGroupsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -44,9 +49,11 @@ public class DescribeSecurityGroupsRequest {
     
     
     public String nextToken;
+
     public DescribeSecurityGroupsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeSecurityGroupsRequest(){}
 }

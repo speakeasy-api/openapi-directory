@@ -18,9 +18,11 @@ public class WindowsVersions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windowsVersions")
     public WindowsVersion[] windowsVersions;
+
     public WindowsVersions withWindowsVersions(WindowsVersion[] windowsVersions) {
         this.windowsVersions = windowsVersions;
         return this;
     }
     
+    public WindowsVersions(){}
 }

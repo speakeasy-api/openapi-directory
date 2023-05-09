@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAppBlockResponse {
@@ -12,6 +13,7 @@ public class DeleteAppBlockResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteAppBlockResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAppBlockResponse {
     
     
     public String contentType;
+
     public DeleteAppBlockResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAppBlockResponse {
      */
     
     public java.util.Map<String, Object> deleteAppBlockResult;
+
     public DeleteAppBlockResponse withDeleteAppBlockResult(java.util.Map<String, Object> deleteAppBlockResult) {
         this.deleteAppBlockResult = deleteAppBlockResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAppBlockResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAppBlockResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteAppBlockResponse {
     
     
     public Integer statusCode;
+
     public DeleteAppBlockResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteAppBlockResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAppBlockResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteAppBlockResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteAppBlockResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
     }
     
+    public DeleteAppBlockResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

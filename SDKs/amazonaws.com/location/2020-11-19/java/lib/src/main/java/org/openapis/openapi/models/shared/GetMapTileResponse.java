@@ -15,9 +15,11 @@ public class GetMapTileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Blob")
     public String blob;
+
     public GetMapTileResponse withBlob(String blob) {
         this.blob = blob;
         return this;
     }
     
+    public GetMapTileResponse(){}
 }

@@ -15,6 +15,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineExecutionStartCondition")
     public PipelineExecutionStartConditionEnum pipelineExecutionStartCondition;
+
     public Schedule withPipelineExecutionStartCondition(PipelineExecutionStartConditionEnum pipelineExecutionStartCondition) {
         this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
         return this;
@@ -23,6 +24,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleExpression")
     public String scheduleExpression;
+
     public Schedule withScheduleExpression(String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
         return this;
@@ -31,9 +33,11 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public Schedule withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public Schedule(){}
 }

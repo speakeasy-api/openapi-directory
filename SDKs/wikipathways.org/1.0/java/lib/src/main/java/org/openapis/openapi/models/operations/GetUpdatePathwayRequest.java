@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUpdatePathwayRequest {
@@ -12,6 +13,7 @@ public class GetUpdatePathwayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auth")
     public String auth;
+
     public GetUpdatePathwayRequest withAuth(String auth) {
         this.auth = auth;
         return this;
@@ -22,6 +24,7 @@ public class GetUpdatePathwayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public GetUpdatePathwayRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +32,7 @@ public class GetUpdatePathwayRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetUpdatePathwayFormatEnum format;
+
     public GetUpdatePathwayRequest withFormat(GetUpdatePathwayFormatEnum format) {
         this.format = format;
         return this;
@@ -39,6 +43,7 @@ public class GetUpdatePathwayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gpml")
     public String gpml;
+
     public GetUpdatePathwayRequest withGpml(String gpml) {
         this.gpml = gpml;
         return this;
@@ -49,6 +54,7 @@ public class GetUpdatePathwayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pwId")
     public String pwId;
+
     public GetUpdatePathwayRequest withPwId(String pwId) {
         this.pwId = pwId;
         return this;
@@ -59,6 +65,7 @@ public class GetUpdatePathwayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=revision")
     public Long revision;
+
     public GetUpdatePathwayRequest withRevision(Long revision) {
         this.revision = revision;
         return this;
@@ -69,9 +76,18 @@ public class GetUpdatePathwayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public GetUpdatePathwayRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetUpdatePathwayRequest(@JsonProperty("auth") String auth, @JsonProperty("description") String description, @JsonProperty("gpml") String gpml, @JsonProperty("pwId") String pwId, @JsonProperty("revision") Long revision, @JsonProperty("username") String username) {
+        this.auth = auth;
+        this.description = description;
+        this.gpml = gpml;
+        this.pwId = pwId;
+        this.revision = revision;
+        this.username = username;
+  }
 }

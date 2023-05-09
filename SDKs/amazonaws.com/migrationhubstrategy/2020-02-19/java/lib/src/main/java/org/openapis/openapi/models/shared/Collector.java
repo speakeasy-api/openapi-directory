@@ -15,6 +15,7 @@ public class Collector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectorHealth")
     public CollectorHealthEnum collectorHealth;
+
     public Collector withCollectorHealth(CollectorHealthEnum collectorHealth) {
         this.collectorHealth = collectorHealth;
         return this;
@@ -23,6 +24,7 @@ public class Collector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectorId")
     public String collectorId;
+
     public Collector withCollectorId(String collectorId) {
         this.collectorId = collectorId;
         return this;
@@ -31,6 +33,7 @@ public class Collector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectorVersion")
     public String collectorVersion;
+
     public Collector withCollectorVersion(String collectorVersion) {
         this.collectorVersion = collectorVersion;
         return this;
@@ -39,6 +42,7 @@ public class Collector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationSummary")
     public ConfigurationSummary configurationSummary;
+
     public Collector withConfigurationSummary(ConfigurationSummary configurationSummary) {
         this.configurationSummary = configurationSummary;
         return this;
@@ -47,6 +51,7 @@ public class Collector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostName")
     public String hostName;
+
     public Collector withHostName(String hostName) {
         this.hostName = hostName;
         return this;
@@ -55,6 +60,7 @@ public class Collector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public Collector withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -63,6 +69,7 @@ public class Collector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastActivityTimeStamp")
     public String lastActivityTimeStamp;
+
     public Collector withLastActivityTimeStamp(String lastActivityTimeStamp) {
         this.lastActivityTimeStamp = lastActivityTimeStamp;
         return this;
@@ -71,9 +78,11 @@ public class Collector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registeredTimeStamp")
     public String registeredTimeStamp;
+
     public Collector withRegisteredTimeStamp(String registeredTimeStamp) {
         this.registeredTimeStamp = registeredTimeStamp;
         return this;
     }
     
+    public Collector(){}
 }

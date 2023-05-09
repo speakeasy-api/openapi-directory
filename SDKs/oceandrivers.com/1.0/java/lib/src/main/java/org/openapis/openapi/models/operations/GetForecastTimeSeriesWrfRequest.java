@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetForecastTimeSeriesWrfRequest {
@@ -12,6 +13,7 @@ public class GetForecastTimeSeriesWrfRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=days")
     public Integer days;
+
     public GetForecastTimeSeriesWrfRequest withDays(Integer days) {
         this.days = days;
         return this;
@@ -22,6 +24,7 @@ public class GetForecastTimeSeriesWrfRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endtime")
     public String endtime;
+
     public GetForecastTimeSeriesWrfRequest withEndtime(String endtime) {
         this.endtime = endtime;
         return this;
@@ -32,6 +35,7 @@ public class GetForecastTimeSeriesWrfRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entryid")
     public String entryid;
+
     public GetForecastTimeSeriesWrfRequest withEntryid(String entryid) {
         this.entryid = entryid;
         return this;
@@ -42,6 +46,7 @@ public class GetForecastTimeSeriesWrfRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hours")
     public Integer hours;
+
     public GetForecastTimeSeriesWrfRequest withHours(Integer hours) {
         this.hours = hours;
         return this;
@@ -52,6 +57,7 @@ public class GetForecastTimeSeriesWrfRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inittime")
     public String inittime;
+
     public GetForecastTimeSeriesWrfRequest withInittime(String inittime) {
         this.inittime = inittime;
         return this;
@@ -62,6 +68,7 @@ public class GetForecastTimeSeriesWrfRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=latitude")
     public Float latitude;
+
     public GetForecastTimeSeriesWrfRequest withLatitude(Float latitude) {
         this.latitude = latitude;
         return this;
@@ -72,6 +79,7 @@ public class GetForecastTimeSeriesWrfRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=longitude")
     public Float longitude;
+
     public GetForecastTimeSeriesWrfRequest withLongitude(Float longitude) {
         this.longitude = longitude;
         return this;
@@ -82,6 +90,7 @@ public class GetForecastTimeSeriesWrfRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=wave")
     public String wave;
+
     public GetForecastTimeSeriesWrfRequest withWave(String wave) {
         this.wave = wave;
         return this;
@@ -92,9 +101,15 @@ public class GetForecastTimeSeriesWrfRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=weather")
     public String weather;
+
     public GetForecastTimeSeriesWrfRequest withWeather(String weather) {
         this.weather = weather;
         return this;
     }
     
+    public GetForecastTimeSeriesWrfRequest(@JsonProperty("latitude") Float latitude, @JsonProperty("longitude") Float longitude, @JsonProperty("weather") String weather) {
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.weather = weather;
+  }
 }

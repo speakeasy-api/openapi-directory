@@ -15,9 +15,11 @@ public class BatchRetryStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attempts")
     public Long attempts;
+
     public BatchRetryStrategy withAttempts(Long attempts) {
         this.attempts = attempts;
         return this;
     }
     
+    public BatchRetryStrategy(){}
 }

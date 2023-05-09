@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateListenerOutput {
     
     public Listener[] listeners;
+
     public CreateListenerOutput withListeners(Listener[] listeners) {
         this.listeners = listeners;
         return this;
     }
     
+    public CreateListenerOutput(){}
 }

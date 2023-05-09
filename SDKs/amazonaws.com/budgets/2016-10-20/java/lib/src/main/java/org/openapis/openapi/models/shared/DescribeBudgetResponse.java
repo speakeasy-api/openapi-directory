@@ -15,9 +15,11 @@ public class DescribeBudgetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Budget")
     public Budget budget;
+
     public DescribeBudgetResponse withBudget(Budget budget) {
         this.budget = budget;
         return this;
     }
     
+    public DescribeBudgetResponse(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class TransitGatewayConnectRequestBgpOptions {
     
     public Long peerAsn;
+
     public TransitGatewayConnectRequestBgpOptions withPeerAsn(Long peerAsn) {
         this.peerAsn = peerAsn;
         return this;
     }
     
+    public TransitGatewayConnectRequestBgpOptions(){}
 }

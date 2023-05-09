@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWorldExportJobResponse {
     
     public String contentType;
+
     public CreateWorldExportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateWorldExportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateWorldExportJobResponse createWorldExportJobResponse;
+
     public CreateWorldExportJobResponse withCreateWorldExportJobResponse(org.openapis.openapi.models.shared.CreateWorldExportJobResponse createWorldExportJobResponse) {
         this.createWorldExportJobResponse = createWorldExportJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateWorldExportJobResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateWorldExportJobResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class CreateWorldExportJobResponse {
      */
     
     public Object internalServerException;
+
     public CreateWorldExportJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateWorldExportJobResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateWorldExportJobResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateWorldExportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateWorldExportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateWorldExportJobResponse {
     
     
     public Integer statusCode;
+
     public CreateWorldExportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateWorldExportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWorldExportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateWorldExportJobResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateWorldExportJobResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class CreateWorldExportJobResponse {
      */
     
     public Object throttlingException;
+
     public CreateWorldExportJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateWorldExportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

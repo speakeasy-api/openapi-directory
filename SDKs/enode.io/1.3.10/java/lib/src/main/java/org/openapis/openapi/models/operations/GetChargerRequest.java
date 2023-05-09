@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChargerRequest {
@@ -12,6 +13,7 @@ public class GetChargerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=chargerId")
     public String chargerId;
+
     public GetChargerRequest withChargerId(String chargerId) {
         this.chargerId = chargerId;
         return this;
@@ -24,9 +26,13 @@ public class GetChargerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=field[]")
     public org.openapis.openapi.models.shared.OnechargersGetParameters0Enum[] field;
+
     public GetChargerRequest withField(org.openapis.openapi.models.shared.OnechargersGetParameters0Enum[] field) {
         this.field = field;
         return this;
     }
     
+    public GetChargerRequest(@JsonProperty("chargerId") String chargerId) {
+        this.chargerId = chargerId;
+  }
 }

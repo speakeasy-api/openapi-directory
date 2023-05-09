@@ -15,9 +15,11 @@ public class GetDataCatalogOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataCatalog")
     public DataCatalog dataCatalog;
+
     public GetDataCatalogOutput withDataCatalog(DataCatalog dataCatalog) {
         this.dataCatalog = dataCatalog;
         return this;
     }
     
+    public GetDataCatalogOutput(){}
 }

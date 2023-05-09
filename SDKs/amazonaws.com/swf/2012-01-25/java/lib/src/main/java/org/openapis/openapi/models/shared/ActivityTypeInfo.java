@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ActivityTypeInfo {
     @JsonProperty("activityType")
     public ActivityType activityType;
+
     public ActivityTypeInfo withActivityType(ActivityType activityType) {
         this.activityType = activityType;
         return this;
@@ -28,6 +29,7 @@ public class ActivityTypeInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public ActivityTypeInfo withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -38,6 +40,7 @@ public class ActivityTypeInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("deprecationDate")
     public OffsetDateTime deprecationDate;
+
     public ActivityTypeInfo withDeprecationDate(OffsetDateTime deprecationDate) {
         this.deprecationDate = deprecationDate;
         return this;
@@ -46,6 +49,7 @@ public class ActivityTypeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ActivityTypeInfo withDescription(String description) {
         this.description = description;
         return this;
@@ -53,9 +57,15 @@ public class ActivityTypeInfo {
     
     @JsonProperty("status")
     public RegistrationStatusEnum status;
+
     public ActivityTypeInfo withStatus(RegistrationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ActivityTypeInfo(@JsonProperty("activityType") ActivityType activityType, @JsonProperty("creationDate") OffsetDateTime creationDate, @JsonProperty("status") RegistrationStatusEnum status) {
+        this.activityType = activityType;
+        this.creationDate = creationDate;
+        this.status = status;
+  }
 }

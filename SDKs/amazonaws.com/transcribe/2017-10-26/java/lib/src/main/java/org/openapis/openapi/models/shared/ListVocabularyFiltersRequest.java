@@ -12,6 +12,7 @@ public class ListVocabularyFiltersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListVocabularyFiltersRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListVocabularyFiltersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameContains")
     public String nameContains;
+
     public ListVocabularyFiltersRequest withNameContains(String nameContains) {
         this.nameContains = nameContains;
         return this;
@@ -28,9 +30,11 @@ public class ListVocabularyFiltersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListVocabularyFiltersRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListVocabularyFiltersRequest(){}
 }

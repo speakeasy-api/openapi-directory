@@ -21,6 +21,7 @@ public class RefundDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public RefundDetails withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -32,6 +33,7 @@ public class RefundDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemPrice")
     public Double itemPrice;
+
     public RefundDetails withItemPrice(Double itemPrice) {
         this.itemPrice = itemPrice;
         return this;
@@ -43,6 +45,7 @@ public class RefundDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refundAmount")
     public Double refundAmount;
+
     public RefundDetails withRefundAmount(Double refundAmount) {
         this.refundAmount = refundAmount;
         return this;
@@ -54,9 +57,11 @@ public class RefundDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refundPercentage")
     public Double refundPercentage;
+
     public RefundDetails withRefundPercentage(Double refundPercentage) {
         this.refundPercentage = refundPercentage;
         return this;
     }
     
+    public RefundDetails(){}
 }

@@ -18,6 +18,7 @@ public class LandlordRentArrearsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChaseNotes")
     public LandlordChaseNoteModel[] chaseNotes;
+
     public LandlordRentArrearsModel withChaseNotes(LandlordChaseNoteModel[] chaseNotes) {
         this.chaseNotes = chaseNotes;
         return this;
@@ -29,6 +30,7 @@ public class LandlordRentArrearsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RentCollected")
     public Double rentCollected;
+
     public LandlordRentArrearsModel withRentCollected(Double rentCollected) {
         this.rentCollected = rentCollected;
         return this;
@@ -40,6 +42,7 @@ public class LandlordRentArrearsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RentOutstanding")
     public LandlordRentOustandingItem[] rentOutstanding;
+
     public LandlordRentArrearsModel withRentOutstanding(LandlordRentOustandingItem[] rentOutstanding) {
         this.rentOutstanding = rentOutstanding;
         return this;
@@ -51,9 +54,11 @@ public class LandlordRentArrearsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalRentArrears")
     public Double totalRentArrears;
+
     public LandlordRentArrearsModel withTotalRentArrears(Double totalRentArrears) {
         this.totalRentArrears = totalRentArrears;
         return this;
     }
     
+    public LandlordRentArrearsModel(){}
 }

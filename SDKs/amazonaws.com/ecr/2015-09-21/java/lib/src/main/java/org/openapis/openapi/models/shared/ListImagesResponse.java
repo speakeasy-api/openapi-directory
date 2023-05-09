@@ -15,6 +15,7 @@ public class ListImagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageIds")
     public ImageIdentifier[] imageIds;
+
     public ListImagesResponse withImageIds(ImageIdentifier[] imageIds) {
         this.imageIds = imageIds;
         return this;
@@ -23,9 +24,11 @@ public class ListImagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListImagesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListImagesResponse(){}
 }

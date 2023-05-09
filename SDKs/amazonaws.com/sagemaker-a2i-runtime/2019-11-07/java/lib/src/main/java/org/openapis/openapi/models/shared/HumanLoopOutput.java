@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HumanLoopOutput {
     @JsonProperty("OutputS3Uri")
     public String outputS3Uri;
+
     public HumanLoopOutput withOutputS3Uri(String outputS3Uri) {
         this.outputS3Uri = outputS3Uri;
         return this;
     }
     
+    public HumanLoopOutput(@JsonProperty("OutputS3Uri") String outputS3Uri) {
+        this.outputS3Uri = outputS3Uri;
+  }
 }

@@ -15,6 +15,7 @@ public class GetTrustStoreCertificateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificate")
     public Certificate certificate;
+
     public GetTrustStoreCertificateResponse withCertificate(Certificate certificate) {
         this.certificate = certificate;
         return this;
@@ -23,9 +24,11 @@ public class GetTrustStoreCertificateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustStoreArn")
     public String trustStoreArn;
+
     public GetTrustStoreCertificateResponse withTrustStoreArn(String trustStoreArn) {
         this.trustStoreArn = trustStoreArn;
         return this;
     }
     
+    public GetTrustStoreCertificateResponse(){}
 }

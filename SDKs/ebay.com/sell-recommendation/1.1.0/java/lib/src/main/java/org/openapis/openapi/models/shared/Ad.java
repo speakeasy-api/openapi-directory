@@ -18,6 +18,7 @@ public class Ad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bidPercentages")
     public BidPercentages[] bidPercentages;
+
     public Ad withBidPercentages(BidPercentages[] bidPercentages) {
         this.bidPercentages = bidPercentages;
         return this;
@@ -29,9 +30,11 @@ public class Ad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promoteWithAd")
     public String promoteWithAd;
+
     public Ad withPromoteWithAd(String promoteWithAd) {
         this.promoteWithAd = promoteWithAd;
         return this;
     }
     
+    public Ad(){}
 }

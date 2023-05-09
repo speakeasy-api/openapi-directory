@@ -15,6 +15,7 @@ public class CreateRouteResponseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelSelectionExpression")
     public String modelSelectionExpression;
+
     public CreateRouteResponseRequestBody withModelSelectionExpression(String modelSelectionExpression) {
         this.modelSelectionExpression = modelSelectionExpression;
         return this;
@@ -26,6 +27,7 @@ public class CreateRouteResponseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseModels")
     public java.util.Map<String, String> responseModels;
+
     public CreateRouteResponseRequestBody withResponseModels(java.util.Map<String, String> responseModels) {
         this.responseModels = responseModels;
         return this;
@@ -37,6 +39,7 @@ public class CreateRouteResponseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseParameters")
     public java.util.Map<String, org.openapis.openapi.models.shared.ParameterConstraints> responseParameters;
+
     public CreateRouteResponseRequestBody withResponseParameters(java.util.Map<String, org.openapis.openapi.models.shared.ParameterConstraints> responseParameters) {
         this.responseParameters = responseParameters;
         return this;
@@ -47,9 +50,13 @@ public class CreateRouteResponseRequestBody {
      */
     @JsonProperty("routeResponseKey")
     public String routeResponseKey;
+
     public CreateRouteResponseRequestBody withRouteResponseKey(String routeResponseKey) {
         this.routeResponseKey = routeResponseKey;
         return this;
     }
     
+    public CreateRouteResponseRequestBody(@JsonProperty("routeResponseKey") String routeResponseKey) {
+        this.routeResponseKey = routeResponseKey;
+  }
 }

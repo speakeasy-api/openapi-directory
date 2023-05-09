@@ -15,6 +15,7 @@ public class UpdateInvestorRootTypeForInvestorExpressionOfWish {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sipp_beneficiaries")
     public UpdateInvestorRootTypeForInvestorExpressionOfWishSippBeneficiaries[] sippBeneficiaries;
+
     public UpdateInvestorRootTypeForInvestorExpressionOfWish withSippBeneficiaries(UpdateInvestorRootTypeForInvestorExpressionOfWishSippBeneficiaries[] sippBeneficiaries) {
         this.sippBeneficiaries = sippBeneficiaries;
         return this;
@@ -23,9 +24,11 @@ public class UpdateInvestorRootTypeForInvestorExpressionOfWish {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sipp_nominees")
     public UpdateInvestorRootTypeForInvestorExpressionOfWishSippNominees[] sippNominees;
+
     public UpdateInvestorRootTypeForInvestorExpressionOfWish withSippNominees(UpdateInvestorRootTypeForInvestorExpressionOfWishSippNominees[] sippNominees) {
         this.sippNominees = sippNominees;
         return this;
     }
     
+    public UpdateInvestorRootTypeForInvestorExpressionOfWish(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateGlobalTableInput {
     @JsonProperty("GlobalTableName")
     public String globalTableName;
+
     public CreateGlobalTableInput withGlobalTableName(String globalTableName) {
         this.globalTableName = globalTableName;
         return this;
@@ -16,9 +17,14 @@ public class CreateGlobalTableInput {
     
     @JsonProperty("ReplicationGroup")
     public Replica[] replicationGroup;
+
     public CreateGlobalTableInput withReplicationGroup(Replica[] replicationGroup) {
         this.replicationGroup = replicationGroup;
         return this;
     }
     
+    public CreateGlobalTableInput(@JsonProperty("GlobalTableName") String globalTableName, @JsonProperty("ReplicationGroup") Replica[] replicationGroup) {
+        this.globalTableName = globalTableName;
+        this.replicationGroup = replicationGroup;
+  }
 }

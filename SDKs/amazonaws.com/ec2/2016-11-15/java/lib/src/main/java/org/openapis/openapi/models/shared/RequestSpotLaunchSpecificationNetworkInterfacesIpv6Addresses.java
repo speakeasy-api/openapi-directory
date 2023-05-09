@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotLaunchSpecificationNetworkInterfacesIpv6Addresses {
     
     public String ipv6Address;
+
     public RequestSpotLaunchSpecificationNetworkInterfacesIpv6Addresses withIpv6Address(String ipv6Address) {
         this.ipv6Address = ipv6Address;
         return this;
     }
     
+    public RequestSpotLaunchSpecificationNetworkInterfacesIpv6Addresses(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersUserIdCommentsRequest {
@@ -12,6 +13,7 @@ public class GetUsersUserIdCommentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetUsersUserIdCommentsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -19,9 +21,13 @@ public class GetUsersUserIdCommentsRequest {
     
     /**
      * Offset of first result. Deprecated, use `linked_partitioning` instead.
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    @Deprecated
     public Long offset;
+
+    @Deprecated
     public GetUsersUserIdCommentsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -32,9 +38,13 @@ public class GetUsersUserIdCommentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
     public Long userId;
+
     public GetUsersUserIdCommentsRequest withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetUsersUserIdCommentsRequest(@JsonProperty("user_id") Long userId) {
+        this.userId = userId;
+  }
 }

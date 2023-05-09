@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class MeshRef {
     @JsonProperty("arn")
     public String arn;
+
     public MeshRef withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class MeshRef {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public MeshRef withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class MeshRef {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public MeshRef withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -42,6 +45,7 @@ public class MeshRef {
     
     @JsonProperty("meshName")
     public String meshName;
+
     public MeshRef withMeshName(String meshName) {
         this.meshName = meshName;
         return this;
@@ -49,6 +53,7 @@ public class MeshRef {
     
     @JsonProperty("meshOwner")
     public String meshOwner;
+
     public MeshRef withMeshOwner(String meshOwner) {
         this.meshOwner = meshOwner;
         return this;
@@ -56,6 +61,7 @@ public class MeshRef {
     
     @JsonProperty("resourceOwner")
     public String resourceOwner;
+
     public MeshRef withResourceOwner(String resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
@@ -63,9 +69,19 @@ public class MeshRef {
     
     @JsonProperty("version")
     public Long version;
+
     public MeshRef withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public MeshRef(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("lastUpdatedAt") OffsetDateTime lastUpdatedAt, @JsonProperty("meshName") String meshName, @JsonProperty("meshOwner") String meshOwner, @JsonProperty("resourceOwner") String resourceOwner, @JsonProperty("version") Long version) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.lastUpdatedAt = lastUpdatedAt;
+        this.meshName = meshName;
+        this.meshOwner = meshOwner;
+        this.resourceOwner = resourceOwner;
+        this.version = version;
+  }
 }

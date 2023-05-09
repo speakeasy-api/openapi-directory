@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class SetSecurityGroupsOutput {
     
     public String[] securityGroupIds;
+
     public SetSecurityGroupsOutput withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
     }
     
+    public SetSecurityGroupsOutput(){}
 }

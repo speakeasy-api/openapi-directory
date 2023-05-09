@@ -21,6 +21,7 @@ public class CatalogImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caption")
     public String caption;
+
     public CatalogImage withCaption(String caption) {
         this.caption = caption;
         return this;
@@ -35,6 +36,7 @@ public class CatalogImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CatalogImage withName(String name) {
         this.name = name;
         return this;
@@ -47,9 +49,11 @@ public class CatalogImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public CatalogImage withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CatalogImage(){}
 }

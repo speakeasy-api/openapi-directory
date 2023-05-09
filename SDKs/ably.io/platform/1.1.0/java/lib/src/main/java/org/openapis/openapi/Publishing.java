@@ -69,7 +69,7 @@ public class Publishing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PublishMessagesToChannelFormResponse res = new org.openapis.openapi.models.operations.PublishMessagesToChannelFormResponse() {{
+        org.openapis.openapi.models.operations.PublishMessagesToChannelFormResponse res = new org.openapis.openapi.models.operations.PublishMessagesToChannelFormResponse(contentType, httpRes.statusCode()) {{
             publishMessagesToChannelForm2XXApplicationJSONObject = null;
             body = null;
             body = null;
@@ -77,8 +77,6 @@ public class Publishing {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -153,7 +151,7 @@ public class Publishing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PublishMessagesToChannelJsonResponse res = new org.openapis.openapi.models.operations.PublishMessagesToChannelJsonResponse() {{
+        org.openapis.openapi.models.operations.PublishMessagesToChannelJsonResponse res = new org.openapis.openapi.models.operations.PublishMessagesToChannelJsonResponse(contentType, httpRes.statusCode()) {{
             publishMessagesToChannelJSON2XXApplicationJSONObject = null;
             body = null;
             body = null;
@@ -161,8 +159,6 @@ public class Publishing {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -237,7 +233,7 @@ public class Publishing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PublishMessagesToChannelRawResponse res = new org.openapis.openapi.models.operations.PublishMessagesToChannelRawResponse() {{
+        org.openapis.openapi.models.operations.PublishMessagesToChannelRawResponse res = new org.openapis.openapi.models.operations.PublishMessagesToChannelRawResponse(contentType, httpRes.statusCode()) {{
             publishMessagesToChannelRaw2XXApplicationJSONObject = null;
             body = null;
             body = null;
@@ -245,8 +241,6 @@ public class Publishing {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {

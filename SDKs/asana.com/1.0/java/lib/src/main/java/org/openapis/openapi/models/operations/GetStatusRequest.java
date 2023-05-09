@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStatusRequest {
@@ -14,6 +15,7 @@ public class GetStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetStatusRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -25,6 +27,7 @@ public class GetStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetStatusRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -35,9 +38,13 @@ public class GetStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=status_gid")
     public String statusGid;
+
     public GetStatusRequest withStatusGid(String statusGid) {
         this.statusGid = statusGid;
         return this;
     }
     
+    public GetStatusRequest(@JsonProperty("status_gid") String statusGid) {
+        this.statusGid = statusGid;
+  }
 }

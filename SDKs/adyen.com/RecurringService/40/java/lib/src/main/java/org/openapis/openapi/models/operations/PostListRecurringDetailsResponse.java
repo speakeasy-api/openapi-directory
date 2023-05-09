@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostListRecurringDetailsResponse {
     
     public String contentType;
+
     public PostListRecurringDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostListRecurringDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.RecurringDetailsResult recurringDetailsResult;
+
     public PostListRecurringDetailsResponse withRecurringDetailsResult(org.openapis.openapi.models.shared.RecurringDetailsResult recurringDetailsResult) {
         this.recurringDetailsResult = recurringDetailsResult;
         return this;
@@ -29,6 +32,7 @@ public class PostListRecurringDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostListRecurringDetailsResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class PostListRecurringDetailsResponse {
     
     
     public Integer statusCode;
+
     public PostListRecurringDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostListRecurringDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostListRecurringDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostListRecurringDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

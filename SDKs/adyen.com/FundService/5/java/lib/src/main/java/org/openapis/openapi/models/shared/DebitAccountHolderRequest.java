@@ -14,6 +14,7 @@ public class DebitAccountHolderRequest {
      */
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public DebitAccountHolderRequest withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -21,6 +22,7 @@ public class DebitAccountHolderRequest {
     
     @JsonProperty("amount")
     public Amount amount;
+
     public DebitAccountHolderRequest withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -31,6 +33,7 @@ public class DebitAccountHolderRequest {
      */
     @JsonProperty("bankAccountUUID")
     public String bankAccountUUID;
+
     public DebitAccountHolderRequest withBankAccountUUID(String bankAccountUUID) {
         this.bankAccountUUID = bankAccountUUID;
         return this;
@@ -44,6 +47,7 @@ public class DebitAccountHolderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DebitAccountHolderRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class DebitAccountHolderRequest {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public DebitAccountHolderRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -64,9 +69,17 @@ public class DebitAccountHolderRequest {
      */
     @JsonProperty("splits")
     public Split[] splits;
+
     public DebitAccountHolderRequest withSplits(Split[] splits) {
         this.splits = splits;
         return this;
     }
     
+    public DebitAccountHolderRequest(@JsonProperty("accountHolderCode") String accountHolderCode, @JsonProperty("amount") Amount amount, @JsonProperty("bankAccountUUID") String bankAccountUUID, @JsonProperty("merchantAccount") String merchantAccount, @JsonProperty("splits") Split[] splits) {
+        this.accountHolderCode = accountHolderCode;
+        this.amount = amount;
+        this.bankAccountUUID = bankAccountUUID;
+        this.merchantAccount = merchantAccount;
+        this.splits = splits;
+  }
 }

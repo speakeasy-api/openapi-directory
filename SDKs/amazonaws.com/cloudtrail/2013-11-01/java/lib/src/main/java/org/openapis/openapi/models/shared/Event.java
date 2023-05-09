@@ -20,6 +20,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessKeyId")
     public String accessKeyId;
+
     public Event withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -28,6 +29,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudTrailEvent")
     public String cloudTrailEvent;
+
     public Event withCloudTrailEvent(String cloudTrailEvent) {
         this.cloudTrailEvent = cloudTrailEvent;
         return this;
@@ -36,6 +38,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventId")
     public String eventId;
+
     public Event withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -44,6 +47,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventName")
     public String eventName;
+
     public Event withEventName(String eventName) {
         this.eventName = eventName;
         return this;
@@ -52,6 +56,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSource")
     public String eventSource;
+
     public Event withEventSource(String eventSource) {
         this.eventSource = eventSource;
         return this;
@@ -62,6 +67,7 @@ public class Event {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EventTime")
     public OffsetDateTime eventTime;
+
     public Event withEventTime(OffsetDateTime eventTime) {
         this.eventTime = eventTime;
         return this;
@@ -70,6 +76,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadOnly")
     public String readOnly;
+
     public Event withReadOnly(String readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -78,6 +85,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resources")
     public Resource[] resources;
+
     public Event withResources(Resource[] resources) {
         this.resources = resources;
         return this;
@@ -86,9 +94,11 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public Event withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public Event(){}
 }

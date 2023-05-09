@@ -15,9 +15,11 @@ public class HubS3StorageConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3OutputPath")
     public String s3OutputPath;
+
     public HubS3StorageConfig withS3OutputPath(String s3OutputPath) {
         this.s3OutputPath = s3OutputPath;
         return this;
     }
     
+    public HubS3StorageConfig(){}
 }

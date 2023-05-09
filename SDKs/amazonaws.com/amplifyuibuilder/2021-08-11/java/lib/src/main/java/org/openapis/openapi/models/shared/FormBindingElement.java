@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FormBindingElement {
     @JsonProperty("element")
     public String element;
+
     public FormBindingElement withElement(String element) {
         this.element = element;
         return this;
@@ -19,9 +20,14 @@ public class FormBindingElement {
     
     @JsonProperty("property")
     public String property;
+
     public FormBindingElement withProperty(String property) {
         this.property = property;
         return this;
     }
     
+    public FormBindingElement(@JsonProperty("element") String element, @JsonProperty("property") String property) {
+        this.element = element;
+        this.property = property;
+  }
 }

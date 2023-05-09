@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TranslateStickerRequest {
@@ -12,9 +13,13 @@ public class TranslateStickerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=s")
     public String s;
+
     public TranslateStickerRequest withS(String s) {
         this.s = s;
         return this;
     }
     
+    public TranslateStickerRequest(@JsonProperty("s") String s) {
+        this.s = s;
+  }
 }

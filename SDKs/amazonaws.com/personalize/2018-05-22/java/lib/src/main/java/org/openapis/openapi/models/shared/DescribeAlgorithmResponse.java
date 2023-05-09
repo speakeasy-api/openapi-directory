@@ -15,9 +15,11 @@ public class DescribeAlgorithmResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithm")
     public Algorithm algorithm;
+
     public DescribeAlgorithmResponse withAlgorithm(Algorithm algorithm) {
         this.algorithm = algorithm;
         return this;
     }
     
+    public DescribeAlgorithmResponse(){}
 }

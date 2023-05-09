@@ -22,6 +22,7 @@ public class ManageSnapshot {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public ManageSnapshot withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -30,6 +31,7 @@ public class ManageSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ManageSnapshot withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class ManageSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ManageSnapshot withId(String id) {
         this.id = id;
         return this;
@@ -46,9 +49,11 @@ public class ManageSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published")
     public Boolean published;
+
     public ManageSnapshot withPublished(Boolean published) {
         this.published = published;
         return this;
     }
     
+    public ManageSnapshot(){}
 }

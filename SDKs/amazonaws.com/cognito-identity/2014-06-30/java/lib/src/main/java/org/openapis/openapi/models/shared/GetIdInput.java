@@ -15,6 +15,7 @@ public class GetIdInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public GetIdInput withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +23,7 @@ public class GetIdInput {
     
     @JsonProperty("IdentityPoolId")
     public String identityPoolId;
+
     public GetIdInput withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
@@ -30,9 +32,13 @@ public class GetIdInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Logins")
     public java.util.Map<String, String> logins;
+
     public GetIdInput withLogins(java.util.Map<String, String> logins) {
         this.logins = logins;
         return this;
     }
     
+    public GetIdInput(@JsonProperty("IdentityPoolId") String identityPoolId) {
+        this.identityPoolId = identityPoolId;
+  }
 }

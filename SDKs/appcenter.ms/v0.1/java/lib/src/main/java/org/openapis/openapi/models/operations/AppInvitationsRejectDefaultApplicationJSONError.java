@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AppInvitationsRejectDefaultApplicationJSONError {
     @JsonProperty("code")
     public AppInvitationsRejectDefaultApplicationJSONErrorCodeEnum code;
+
     public AppInvitationsRejectDefaultApplicationJSONError withCode(AppInvitationsRejectDefaultApplicationJSONErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -16,9 +17,14 @@ public class AppInvitationsRejectDefaultApplicationJSONError {
     
     @JsonProperty("message")
     public String message;
+
     public AppInvitationsRejectDefaultApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AppInvitationsRejectDefaultApplicationJSONError(@JsonProperty("code") AppInvitationsRejectDefaultApplicationJSONErrorCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

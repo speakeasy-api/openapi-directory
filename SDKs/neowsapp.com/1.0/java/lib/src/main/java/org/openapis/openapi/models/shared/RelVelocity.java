@@ -12,6 +12,7 @@ public class RelVelocity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kilometers_per_hour")
     public String kilometersPerHour;
+
     public RelVelocity withKilometersPerHour(String kilometersPerHour) {
         this.kilometersPerHour = kilometersPerHour;
         return this;
@@ -20,9 +21,11 @@ public class RelVelocity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("miles_per_hour")
     public String milesPerHour;
+
     public RelVelocity withMilesPerHour(String milesPerHour) {
         this.milesPerHour = milesPerHour;
         return this;
     }
     
+    public RelVelocity(){}
 }

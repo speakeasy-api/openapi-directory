@@ -12,9 +12,13 @@ public class PostPortfolioSimulationRebalancingDriftWeight200ApplicationJSONPort
      */
     @JsonProperty("portfolioValues")
     public Double[] portfolioValues;
+
     public PostPortfolioSimulationRebalancingDriftWeight200ApplicationJSONPortfolios withPortfolioValues(Double[] portfolioValues) {
         this.portfolioValues = portfolioValues;
         return this;
     }
     
+    public PostPortfolioSimulationRebalancingDriftWeight200ApplicationJSONPortfolios(@JsonProperty("portfolioValues") Double[] portfolioValues) {
+        this.portfolioValues = portfolioValues;
+  }
 }

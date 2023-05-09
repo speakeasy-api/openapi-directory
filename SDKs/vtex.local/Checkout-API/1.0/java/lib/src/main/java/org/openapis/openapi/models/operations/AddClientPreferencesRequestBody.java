@@ -15,6 +15,7 @@ public class AddClientPreferencesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public AddClientPreferencesRequestBody withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -26,9 +27,11 @@ public class AddClientPreferencesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optinNewsLetter")
     public Boolean optinNewsLetter;
+
     public AddClientPreferencesRequestBody withOptinNewsLetter(Boolean optinNewsLetter) {
         this.optinNewsLetter = optinNewsLetter;
         return this;
     }
     
+    public AddClientPreferencesRequestBody(){}
 }

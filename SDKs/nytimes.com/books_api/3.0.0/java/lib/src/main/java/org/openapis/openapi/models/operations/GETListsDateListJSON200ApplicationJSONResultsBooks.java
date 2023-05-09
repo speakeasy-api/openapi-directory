@@ -12,6 +12,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("age_group")
     public String ageGroup;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withAgeGroup(String ageGroup) {
         this.ageGroup = ageGroup;
         return this;
@@ -20,6 +21,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amazon_product_url")
     public String amazonProductUrl;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withAmazonProductUrl(String amazonProductUrl) {
         this.amazonProductUrl = amazonProductUrl;
         return this;
@@ -28,6 +30,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("article_chapter_link")
     public String articleChapterLink;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withArticleChapterLink(String articleChapterLink) {
         this.articleChapterLink = articleChapterLink;
         return this;
@@ -36,6 +39,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asterisk")
     public Long asterisk;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withAsterisk(Long asterisk) {
         this.asterisk = asterisk;
         return this;
@@ -44,6 +48,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public String author;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withAuthor(String author) {
         this.author = author;
         return this;
@@ -52,6 +57,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("book_image")
     public String bookImage;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withBookImage(String bookImage) {
         this.bookImage = bookImage;
         return this;
@@ -60,6 +66,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("book_review_link")
     public String bookReviewLink;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withBookReviewLink(String bookReviewLink) {
         this.bookReviewLink = bookReviewLink;
         return this;
@@ -68,6 +75,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contributor")
     public String contributor;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withContributor(String contributor) {
         this.contributor = contributor;
         return this;
@@ -76,6 +84,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contributor_note")
     public String contributorNote;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withContributorNote(String contributorNote) {
         this.contributorNote = contributorNote;
         return this;
@@ -84,6 +93,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dagger")
     public Long dagger;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withDagger(Long dagger) {
         this.dagger = dagger;
         return this;
@@ -92,6 +102,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withDescription(String description) {
         this.description = description;
         return this;
@@ -100,6 +111,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_chapter_link")
     public String firstChapterLink;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withFirstChapterLink(String firstChapterLink) {
         this.firstChapterLink = firstChapterLink;
         return this;
@@ -108,6 +120,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isbns")
     public GETListsDateListJSON200ApplicationJSONResultsBooksIsbns[] isbns;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withIsbns(GETListsDateListJSON200ApplicationJSONResultsBooksIsbns[] isbns) {
         this.isbns = isbns;
         return this;
@@ -116,6 +129,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Long price;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withPrice(Long price) {
         this.price = price;
         return this;
@@ -124,6 +138,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_isbn10")
     public String primaryIsbn10;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withPrimaryIsbn10(String primaryIsbn10) {
         this.primaryIsbn10 = primaryIsbn10;
         return this;
@@ -132,6 +147,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_isbn13")
     public String primaryIsbn13;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withPrimaryIsbn13(String primaryIsbn13) {
         this.primaryIsbn13 = primaryIsbn13;
         return this;
@@ -140,6 +156,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisher")
     public String publisher;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withPublisher(String publisher) {
         this.publisher = publisher;
         return this;
@@ -148,6 +165,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rank")
     public Long rank;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withRank(Long rank) {
         this.rank = rank;
         return this;
@@ -156,6 +174,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rank_last_week")
     public Long rankLastWeek;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withRankLastWeek(Long rankLastWeek) {
         this.rankLastWeek = rankLastWeek;
         return this;
@@ -164,6 +183,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sunday_review_link")
     public String sundayReviewLink;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withSundayReviewLink(String sundayReviewLink) {
         this.sundayReviewLink = sundayReviewLink;
         return this;
@@ -172,6 +192,7 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withTitle(String title) {
         this.title = title;
         return this;
@@ -180,9 +201,11 @@ public class GETListsDateListJSON200ApplicationJSONResultsBooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weeks_on_list")
     public Long weeksOnList;
+
     public GETListsDateListJSON200ApplicationJSONResultsBooks withWeeksOnList(Long weeksOnList) {
         this.weeksOnList = weeksOnList;
         return this;
     }
     
+    public GETListsDateListJSON200ApplicationJSONResultsBooks(){}
 }

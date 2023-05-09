@@ -12,6 +12,7 @@ public class DescribePoolsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public PoolFilter[] filters;
+
     public DescribePoolsRequest withFilters(PoolFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class DescribePoolsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribePoolsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class DescribePoolsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribePoolsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class DescribePoolsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PoolIds")
     public String[] poolIds;
+
     public DescribePoolsRequest withPoolIds(String[] poolIds) {
         this.poolIds = poolIds;
         return this;
     }
     
+    public DescribePoolsRequest(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CategoryDTO {
     @JsonProperty("name")
     public String name;
+
     public CategoryDTO withName(String name) {
         this.name = name;
         return this;
@@ -16,9 +17,14 @@ public class CategoryDTO {
     
     @JsonProperty("uuid")
     public String uuid;
+
     public CategoryDTO withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public CategoryDTO(@JsonProperty("name") String name, @JsonProperty("uuid") String uuid) {
+        this.name = name;
+        this.uuid = uuid;
+  }
 }

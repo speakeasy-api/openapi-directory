@@ -20,6 +20,7 @@ public class Nodegroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amiType")
     public AMITypesEnum amiType;
+
     public Nodegroup withAmiType(AMITypesEnum amiType) {
         this.amiType = amiType;
         return this;
@@ -28,6 +29,7 @@ public class Nodegroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityType")
     public CapacityTypesEnum capacityType;
+
     public Nodegroup withCapacityType(CapacityTypesEnum capacityType) {
         this.capacityType = capacityType;
         return this;
@@ -36,6 +38,7 @@ public class Nodegroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterName")
     public String clusterName;
+
     public Nodegroup withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -46,6 +49,7 @@ public class Nodegroup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Nodegroup withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -54,6 +58,7 @@ public class Nodegroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSize")
     public Long diskSize;
+
     public Nodegroup withDiskSize(Long diskSize) {
         this.diskSize = diskSize;
         return this;
@@ -62,6 +67,7 @@ public class Nodegroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("health")
     public NodegroupHealth health;
+
     public Nodegroup withHealth(NodegroupHealth health) {
         this.health = health;
         return this;
@@ -70,6 +76,7 @@ public class Nodegroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceTypes")
     public String[] instanceTypes;
+
     public Nodegroup withInstanceTypes(String[] instanceTypes) {
         this.instanceTypes = instanceTypes;
         return this;
@@ -78,6 +85,7 @@ public class Nodegroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Nodegroup withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -86,6 +94,7 @@ public class Nodegroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchTemplate")
     public LaunchTemplateSpecification launchTemplate;
+
     public Nodegroup withLaunchTemplate(LaunchTemplateSpecification launchTemplate) {
         this.launchTemplate = launchTemplate;
         return this;
@@ -96,6 +105,7 @@ public class Nodegroup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedAt")
     public OffsetDateTime modifiedAt;
+
     public Nodegroup withModifiedAt(OffsetDateTime modifiedAt) {
         this.modifiedAt = modifiedAt;
         return this;
@@ -104,6 +114,7 @@ public class Nodegroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeRole")
     public String nodeRole;
+
     public Nodegroup withNodeRole(String nodeRole) {
         this.nodeRole = nodeRole;
         return this;
@@ -112,6 +123,7 @@ public class Nodegroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodegroupArn")
     public String nodegroupArn;
+
     public Nodegroup withNodegroupArn(String nodegroupArn) {
         this.nodegroupArn = nodegroupArn;
         return this;
@@ -120,6 +132,7 @@ public class Nodegroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodegroupName")
     public String nodegroupName;
+
     public Nodegroup withNodegroupName(String nodegroupName) {
         this.nodegroupName = nodegroupName;
         return this;
@@ -128,6 +141,7 @@ public class Nodegroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseVersion")
     public String releaseVersion;
+
     public Nodegroup withReleaseVersion(String releaseVersion) {
         this.releaseVersion = releaseVersion;
         return this;
@@ -136,6 +150,7 @@ public class Nodegroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteAccess")
     public RemoteAccessConfig remoteAccess;
+
     public Nodegroup withRemoteAccess(RemoteAccessConfig remoteAccess) {
         this.remoteAccess = remoteAccess;
         return this;
@@ -144,6 +159,7 @@ public class Nodegroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public NodegroupResources resources;
+
     public Nodegroup withResources(NodegroupResources resources) {
         this.resources = resources;
         return this;
@@ -152,6 +168,7 @@ public class Nodegroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scalingConfig")
     public NodegroupScalingConfig scalingConfig;
+
     public Nodegroup withScalingConfig(NodegroupScalingConfig scalingConfig) {
         this.scalingConfig = scalingConfig;
         return this;
@@ -160,6 +177,7 @@ public class Nodegroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public NodegroupStatusEnum status;
+
     public Nodegroup withStatus(NodegroupStatusEnum status) {
         this.status = status;
         return this;
@@ -168,6 +186,7 @@ public class Nodegroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnets")
     public String[] subnets;
+
     public Nodegroup withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
@@ -176,6 +195,7 @@ public class Nodegroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Nodegroup withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -184,6 +204,7 @@ public class Nodegroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taints")
     public Taint[] taints;
+
     public Nodegroup withTaints(Taint[] taints) {
         this.taints = taints;
         return this;
@@ -192,6 +213,7 @@ public class Nodegroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateConfig")
     public NodegroupUpdateConfig updateConfig;
+
     public Nodegroup withUpdateConfig(NodegroupUpdateConfig updateConfig) {
         this.updateConfig = updateConfig;
         return this;
@@ -200,9 +222,11 @@ public class Nodegroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public Nodegroup withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Nodegroup(){}
 }

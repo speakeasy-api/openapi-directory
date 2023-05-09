@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfirmPayment5RequestBody {
@@ -12,6 +13,7 @@ public class ConfirmPayment5RequestBody {
      */
     @SpeakeasyMetadata("form:name=apiKey_l1")
     public String apiKeyL1;
+
     public ConfirmPayment5RequestBody withApiKeyL1(String apiKeyL1) {
         this.apiKeyL1 = apiKeyL1;
         return this;
@@ -22,6 +24,7 @@ public class ConfirmPayment5RequestBody {
      */
     @SpeakeasyMetadata("form:name=apiKey_l2")
     public String apiKeyL2;
+
     public ConfirmPayment5RequestBody withApiKeyL2(String apiKeyL2) {
         this.apiKeyL2 = apiKeyL2;
         return this;
@@ -32,6 +35,7 @@ public class ConfirmPayment5RequestBody {
      */
     @SpeakeasyMetadata("form:name=confirmPayment")
     public String confirmPayment;
+
     public ConfirmPayment5RequestBody withConfirmPayment(String confirmPayment) {
         this.confirmPayment = confirmPayment;
         return this;
@@ -42,6 +46,7 @@ public class ConfirmPayment5RequestBody {
      */
     @SpeakeasyMetadata("form:name=paymentID")
     public Integer paymentID;
+
     public ConfirmPayment5RequestBody withPaymentID(Integer paymentID) {
         this.paymentID = paymentID;
         return this;
@@ -52,9 +57,17 @@ public class ConfirmPayment5RequestBody {
      */
     @SpeakeasyMetadata("form:name=transaction_id")
     public String transactionId;
+
     public ConfirmPayment5RequestBody withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public ConfirmPayment5RequestBody(@JsonProperty("apiKey_l1") String apiKeyL1, @JsonProperty("apiKey_l2") String apiKeyL2, @JsonProperty("confirmPayment") String confirmPayment, @JsonProperty("paymentID") Integer paymentID, @JsonProperty("transaction_id") String transactionId) {
+        this.apiKeyL1 = apiKeyL1;
+        this.apiKeyL2 = apiKeyL2;
+        this.confirmPayment = confirmPayment;
+        this.paymentID = paymentID;
+        this.transactionId = transactionId;
+  }
 }

@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2KAnonymityEquivalenceClass {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("equivalenceClassSize")
     public String equivalenceClassSize;
+
     public GooglePrivacyDlpV2KAnonymityEquivalenceClass withEquivalenceClassSize(String equivalenceClassSize) {
         this.equivalenceClassSize = equivalenceClassSize;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2KAnonymityEquivalenceClass {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quasiIdsValues")
     public GooglePrivacyDlpV2Value[] quasiIdsValues;
+
     public GooglePrivacyDlpV2KAnonymityEquivalenceClass withQuasiIdsValues(GooglePrivacyDlpV2Value[] quasiIdsValues) {
         this.quasiIdsValues = quasiIdsValues;
         return this;
     }
     
+    public GooglePrivacyDlpV2KAnonymityEquivalenceClass(){}
 }

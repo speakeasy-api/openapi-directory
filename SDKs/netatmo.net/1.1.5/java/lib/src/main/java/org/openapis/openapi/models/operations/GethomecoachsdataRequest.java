@@ -12,9 +12,11 @@ public class GethomecoachsdataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
     public String deviceId;
+
     public GethomecoachsdataRequest withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
     }
     
+    public GethomecoachsdataRequest(){}
 }

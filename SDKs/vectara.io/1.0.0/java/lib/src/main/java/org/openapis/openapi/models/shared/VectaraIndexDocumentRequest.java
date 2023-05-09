@@ -12,6 +12,7 @@ public class VectaraIndexDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corpusId")
     public String corpusId;
+
     public VectaraIndexDocumentRequest withCorpusId(String corpusId) {
         this.corpusId = corpusId;
         return this;
@@ -20,6 +21,7 @@ public class VectaraIndexDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public String customerId;
+
     public VectaraIndexDocumentRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -31,9 +33,11 @@ public class VectaraIndexDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public VectaraindexingDocument document;
+
     public VectaraIndexDocumentRequest withDocument(VectaraindexingDocument document) {
         this.document = document;
         return this;
     }
     
+    public VectaraIndexDocumentRequest(){}
 }

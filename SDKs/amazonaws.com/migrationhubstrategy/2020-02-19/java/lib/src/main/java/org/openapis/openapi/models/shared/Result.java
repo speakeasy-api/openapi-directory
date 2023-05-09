@@ -15,6 +15,7 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisStatus")
     public AnalysisStatusUnion analysisStatus;
+
     public Result withAnalysisStatus(AnalysisStatusUnion analysisStatus) {
         this.analysisStatus = analysisStatus;
         return this;
@@ -23,6 +24,7 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisType")
     public AnalysisTypeEnum analysisType;
+
     public Result withAnalysisType(AnalysisTypeEnum analysisType) {
         this.analysisType = analysisType;
         return this;
@@ -31,6 +33,7 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antipatternReportResultList")
     public AntipatternReportResult[] antipatternReportResultList;
+
     public Result withAntipatternReportResultList(AntipatternReportResult[] antipatternReportResultList) {
         this.antipatternReportResultList = antipatternReportResultList;
         return this;
@@ -39,9 +42,11 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public Result withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public Result(){}
 }

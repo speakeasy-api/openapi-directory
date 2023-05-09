@@ -15,9 +15,11 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hideMinorUnitsInCurrencies")
     public String[] hideMinorUnitsInCurrencies;
+
     public Payment withHideMinorUnitsInCurrencies(String[] hideMinorUnitsInCurrencies) {
         this.hideMinorUnitsInCurrencies = hideMinorUnitsInCurrencies;
         return this;
     }
     
+    public Payment(){}
 }

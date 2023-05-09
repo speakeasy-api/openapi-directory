@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeLimitsResponse {
     
     public String contentType;
+
     public DescribeLimitsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeLimitsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeLimitsOutput describeLimitsOutput;
+
     public DescribeLimitsResponse withDescribeLimitsOutput(org.openapis.openapi.models.shared.DescribeLimitsOutput describeLimitsOutput) {
         this.describeLimitsOutput = describeLimitsOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeLimitsResponse {
      */
     
     public Object limitExceededException;
+
     public DescribeLimitsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeLimitsResponse {
     
     
     public Integer statusCode;
+
     public DescribeLimitsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeLimitsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeLimitsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeLimitsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

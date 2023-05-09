@@ -3,11 +3,10 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DevicelistSecurity;
 import org.openapis.openapi.models.operations.DevicelistAppTypeEnum;
 import org.openapis.openapi.models.operations.DevicelistRequest;
 import org.openapis.openapi.models.operations.DevicelistResponse;
+import org.openapis.openapi.models.operations.DevicelistSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -16,20 +15,22 @@ public class Application {
                 .build();
 
             DevicelistRequest req = new DevicelistRequest() {{
-                appType = "app_station";
+                appType = DevicelistAppTypeEnum.APP_STATION;
                 deviceId = "provident";
                 getFavorites = false;
-            }}            
+            }};            
 
             DevicelistResponse res = sdk.deprecated.devicelist(req, new DevicelistSecurity() {{
                 codeOauth = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.naDeviceListResponse.isPresent()) {
+            if (res.naDeviceListResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

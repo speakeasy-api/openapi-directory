@@ -15,6 +15,7 @@ public class Span {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public Long end;
+
     public Span withEnd(Long end) {
         this.end = end;
         return this;
@@ -26,6 +27,7 @@ public class Span {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public Long start;
+
     public Span withStart(Long start) {
         this.start = start;
         return this;
@@ -37,6 +39,7 @@ public class Span {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public Span withText(String text) {
         this.text = text;
         return this;
@@ -48,9 +51,11 @@ public class Span {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public Token[] token;
+
     public Span withToken(Token[] token) {
         this.token = token;
         return this;
     }
     
+    public Span(){}
 }

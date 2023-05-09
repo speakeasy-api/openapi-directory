@@ -15,6 +15,7 @@ public class StartImportRequestBodyS3BucketSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Bucket")
     public String s3Bucket;
+
     public StartImportRequestBodyS3BucketSource withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -23,6 +24,7 @@ public class StartImportRequestBodyS3BucketSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3BucketOwner")
     public String s3BucketOwner;
+
     public StartImportRequestBodyS3BucketSource withS3BucketOwner(String s3BucketOwner) {
         this.s3BucketOwner = s3BucketOwner;
         return this;
@@ -31,9 +33,11 @@ public class StartImportRequestBodyS3BucketSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Key")
     public String s3Key;
+
     public StartImportRequestBodyS3BucketSource withS3Key(String s3Key) {
         this.s3Key = s3Key;
         return this;
     }
     
+    public StartImportRequestBodyS3BucketSource(){}
 }

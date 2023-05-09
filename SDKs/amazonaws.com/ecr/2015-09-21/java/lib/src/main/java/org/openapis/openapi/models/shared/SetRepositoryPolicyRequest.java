@@ -12,6 +12,7 @@ public class SetRepositoryPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("force")
     public Boolean force;
+
     public SetRepositoryPolicyRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -19,6 +20,7 @@ public class SetRepositoryPolicyRequest {
     
     @JsonProperty("policyText")
     public String policyText;
+
     public SetRepositoryPolicyRequest withPolicyText(String policyText) {
         this.policyText = policyText;
         return this;
@@ -27,6 +29,7 @@ public class SetRepositoryPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public SetRepositoryPolicyRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -34,9 +37,14 @@ public class SetRepositoryPolicyRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public SetRepositoryPolicyRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public SetRepositoryPolicyRequest(@JsonProperty("policyText") String policyText, @JsonProperty("repositoryName") String repositoryName) {
+        this.policyText = policyText;
+        this.repositoryName = repositoryName;
+  }
 }

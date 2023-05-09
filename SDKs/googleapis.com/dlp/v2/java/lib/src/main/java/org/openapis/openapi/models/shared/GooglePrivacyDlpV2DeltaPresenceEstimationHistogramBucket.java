@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketSize")
     public String bucketSize;
+
     public GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket withBucketSize(String bucketSize) {
         this.bucketSize = bucketSize;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketValueCount")
     public String bucketValueCount;
+
     public GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket withBucketValueCount(String bucketValueCount) {
         this.bucketValueCount = bucketValueCount;
         return this;
@@ -40,6 +42,7 @@ public class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketValues")
     public GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues[] bucketValues;
+
     public GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket withBucketValues(GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues[] bucketValues) {
         this.bucketValues = bucketValues;
         return this;
@@ -51,6 +54,7 @@ public class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxProbability")
     public Double maxProbability;
+
     public GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket withMaxProbability(Double maxProbability) {
         this.maxProbability = maxProbability;
         return this;
@@ -62,9 +66,11 @@ public class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minProbability")
     public Double minProbability;
+
     public GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket withMinProbability(Double minProbability) {
         this.minProbability = minProbability;
         return this;
     }
     
+    public GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket(){}
 }

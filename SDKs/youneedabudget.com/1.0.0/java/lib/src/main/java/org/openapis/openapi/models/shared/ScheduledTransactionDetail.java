@@ -13,6 +13,7 @@ import java.time.LocalDate;
 public class ScheduledTransactionDetail {
     @JsonProperty("account_id")
     public String accountId;
+
     public ScheduledTransactionDetail withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -20,6 +21,7 @@ public class ScheduledTransactionDetail {
     
     @JsonProperty("account_name")
     public String accountName;
+
     public ScheduledTransactionDetail withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -30,6 +32,7 @@ public class ScheduledTransactionDetail {
      */
     @JsonProperty("amount")
     public Long amount;
+
     public ScheduledTransactionDetail withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -38,14 +41,19 @@ public class ScheduledTransactionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_id")
     public String categoryId;
+
     public ScheduledTransactionDetail withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
     }
     
+    /**
+     * The name of the category.  If a split scheduled transaction, this will be 'Split'.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_name")
     public String categoryName;
+
     public ScheduledTransactionDetail withCategoryName(String categoryName) {
         this.categoryName = categoryName;
         return this;
@@ -57,6 +65,7 @@ public class ScheduledTransactionDetail {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date_first")
     public LocalDate dateFirst;
+
     public ScheduledTransactionDetail withDateFirst(LocalDate dateFirst) {
         this.dateFirst = dateFirst;
         return this;
@@ -68,6 +77,7 @@ public class ScheduledTransactionDetail {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date_next")
     public LocalDate dateNext;
+
     public ScheduledTransactionDetail withDateNext(LocalDate dateNext) {
         this.dateNext = dateNext;
         return this;
@@ -78,6 +88,7 @@ public class ScheduledTransactionDetail {
      */
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public ScheduledTransactionDetail withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -89,6 +100,7 @@ public class ScheduledTransactionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flag_color")
     public ScheduledTransactionDetailFlagColorEnum flagColor;
+
     public ScheduledTransactionDetail withFlagColor(ScheduledTransactionDetailFlagColorEnum flagColor) {
         this.flagColor = flagColor;
         return this;
@@ -96,6 +108,7 @@ public class ScheduledTransactionDetail {
     
     @JsonProperty("frequency")
     public ScheduledTransactionDetailFrequencyEnum frequency;
+
     public ScheduledTransactionDetail withFrequency(ScheduledTransactionDetailFrequencyEnum frequency) {
         this.frequency = frequency;
         return this;
@@ -103,6 +116,7 @@ public class ScheduledTransactionDetail {
     
     @JsonProperty("id")
     public String id;
+
     public ScheduledTransactionDetail withId(String id) {
         this.id = id;
         return this;
@@ -111,6 +125,7 @@ public class ScheduledTransactionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo")
     public String memo;
+
     public ScheduledTransactionDetail withMemo(String memo) {
         this.memo = memo;
         return this;
@@ -119,6 +134,7 @@ public class ScheduledTransactionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_id")
     public String payeeId;
+
     public ScheduledTransactionDetail withPayeeId(String payeeId) {
         this.payeeId = payeeId;
         return this;
@@ -127,6 +143,7 @@ public class ScheduledTransactionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_name")
     public String payeeName;
+
     public ScheduledTransactionDetail withPayeeName(String payeeName) {
         this.payeeName = payeeName;
         return this;
@@ -137,6 +154,7 @@ public class ScheduledTransactionDetail {
      */
     @JsonProperty("subtransactions")
     public ScheduledSubTransaction[] subtransactions;
+
     public ScheduledTransactionDetail withSubtransactions(ScheduledSubTransaction[] subtransactions) {
         this.subtransactions = subtransactions;
         return this;
@@ -148,9 +166,21 @@ public class ScheduledTransactionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfer_account_id")
     public String transferAccountId;
+
     public ScheduledTransactionDetail withTransferAccountId(String transferAccountId) {
         this.transferAccountId = transferAccountId;
         return this;
     }
     
+    public ScheduledTransactionDetail(@JsonProperty("account_id") String accountId, @JsonProperty("account_name") String accountName, @JsonProperty("amount") Long amount, @JsonProperty("date_first") LocalDate dateFirst, @JsonProperty("date_next") LocalDate dateNext, @JsonProperty("deleted") Boolean deleted, @JsonProperty("frequency") ScheduledTransactionDetailFrequencyEnum frequency, @JsonProperty("id") String id, @JsonProperty("subtransactions") ScheduledSubTransaction[] subtransactions) {
+        this.accountId = accountId;
+        this.accountName = accountName;
+        this.amount = amount;
+        this.dateFirst = dateFirst;
+        this.dateNext = dateNext;
+        this.deleted = deleted;
+        this.frequency = frequency;
+        this.id = id;
+        this.subtransactions = subtransactions;
+  }
 }

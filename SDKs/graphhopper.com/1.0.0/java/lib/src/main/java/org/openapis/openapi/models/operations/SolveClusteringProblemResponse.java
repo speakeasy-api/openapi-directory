@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SolveClusteringProblemResponse {
@@ -12,6 +13,7 @@ public class SolveClusteringProblemResponse {
      */
     
     public org.openapis.openapi.models.shared.BadRequest badRequest;
+
     public SolveClusteringProblemResponse withBadRequest(org.openapis.openapi.models.shared.BadRequest badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -22,6 +24,7 @@ public class SolveClusteringProblemResponse {
      */
     
     public org.openapis.openapi.models.shared.ClusterResponse clusterResponse;
+
     public SolveClusteringProblemResponse withClusterResponse(org.openapis.openapi.models.shared.ClusterResponse clusterResponse) {
         this.clusterResponse = clusterResponse;
         return this;
@@ -29,6 +32,7 @@ public class SolveClusteringProblemResponse {
     
     
     public String contentType;
+
     public SolveClusteringProblemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class SolveClusteringProblemResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public SolveClusteringProblemResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -46,6 +51,7 @@ public class SolveClusteringProblemResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalErrorMessage internalErrorMessage;
+
     public SolveClusteringProblemResponse withInternalErrorMessage(org.openapis.openapi.models.shared.InternalErrorMessage internalErrorMessage) {
         this.internalErrorMessage = internalErrorMessage;
         return this;
@@ -53,6 +59,7 @@ public class SolveClusteringProblemResponse {
     
     
     public Integer statusCode;
+
     public SolveClusteringProblemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -60,9 +67,14 @@ public class SolveClusteringProblemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SolveClusteringProblemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SolveClusteringProblemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

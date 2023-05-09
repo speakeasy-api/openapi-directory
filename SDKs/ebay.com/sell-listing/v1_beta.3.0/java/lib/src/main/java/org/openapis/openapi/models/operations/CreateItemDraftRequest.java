@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateItemDraftRequest {
@@ -12,6 +13,7 @@ public class CreateItemDraftRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Language")
     public String contentLanguage;
+
     public CreateItemDraftRequest withContentLanguage(String contentLanguage) {
         this.contentLanguage = contentLanguage;
         return this;
@@ -19,6 +21,7 @@ public class CreateItemDraftRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ItemDraft itemDraft;
+
     public CreateItemDraftRequest withItemDraft(org.openapis.openapi.models.shared.ItemDraft itemDraft) {
         this.itemDraft = itemDraft;
         return this;
@@ -29,9 +32,13 @@ public class CreateItemDraftRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public CreateItemDraftRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     
+    public CreateItemDraftRequest(@JsonProperty("X-EBAY-C-MARKETPLACE-ID") String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
+  }
 }

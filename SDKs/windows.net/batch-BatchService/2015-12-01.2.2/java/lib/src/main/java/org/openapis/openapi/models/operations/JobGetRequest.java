@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JobGetRequest {
@@ -12,6 +13,7 @@ public class JobGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$expand")
     public String dollarExpand;
+
     public JobGetRequest withDollarExpand(String dollarExpand) {
         this.dollarExpand = dollarExpand;
         return this;
@@ -22,6 +24,7 @@ public class JobGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$select")
     public String dollarSelect;
+
     public JobGetRequest withDollarSelect(String dollarSelect) {
         this.dollarSelect = dollarSelect;
         return this;
@@ -32,6 +35,7 @@ public class JobGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public JobGetRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -42,6 +46,7 @@ public class JobGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public JobGetRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -52,6 +57,7 @@ public class JobGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public JobGetRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -62,6 +68,7 @@ public class JobGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public JobGetRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -72,6 +79,7 @@ public class JobGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public JobGetRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -82,9 +90,14 @@ public class JobGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public JobGetRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public JobGetRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("jobId") String jobId) {
+        this.apiVersion = apiVersion;
+        this.jobId = jobId;
+  }
 }

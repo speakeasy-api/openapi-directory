@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 
 
 /**
- * DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider - The ID of the Amazon Web Services Verified Access trust provider.
+ * DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider - The ID of the Verified Access trust provider.
  */
 public class DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider {
     
     public String creationTime;
+
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +20,7 @@ public class DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider 
     
     
     public String description;
+
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider 
     
     
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceOptions deviceOptions;
+
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withDeviceOptions(DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceOptions deviceOptions) {
         this.deviceOptions = deviceOptions;
         return this;
@@ -33,6 +36,7 @@ public class DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider 
     
     
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum deviceTrustProviderType;
+
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withDeviceTrustProviderType(DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum deviceTrustProviderType) {
         this.deviceTrustProviderType = deviceTrustProviderType;
         return this;
@@ -40,6 +44,7 @@ public class DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider 
     
     
     public String lastUpdatedTime;
+
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withLastUpdatedTime(String lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -47,6 +52,7 @@ public class DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider 
     
     
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions oidcOptions;
+
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withOidcOptions(DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions oidcOptions) {
         this.oidcOptions = oidcOptions;
         return this;
@@ -54,6 +60,7 @@ public class DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider 
     
     
     public String policyReferenceName;
+
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withPolicyReferenceName(String policyReferenceName) {
         this.policyReferenceName = policyReferenceName;
         return this;
@@ -61,6 +68,7 @@ public class DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider 
     
     
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTags[] tags;
+
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withTags(DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTags[] tags) {
         this.tags = tags;
         return this;
@@ -68,6 +76,7 @@ public class DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider 
     
     
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum trustProviderType;
+
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withTrustProviderType(DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum trustProviderType) {
         this.trustProviderType = trustProviderType;
         return this;
@@ -75,6 +84,7 @@ public class DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider 
     
     
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum userTrustProviderType;
+
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withUserTrustProviderType(DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum userTrustProviderType) {
         this.userTrustProviderType = userTrustProviderType;
         return this;
@@ -82,9 +92,11 @@ public class DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider 
     
     
     public String verifiedAccessTrustProviderId;
+
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider withVerifiedAccessTrustProviderId(String verifiedAccessTrustProviderId) {
         this.verifiedAccessTrustProviderId = verifiedAccessTrustProviderId;
         return this;
     }
     
+    public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider(){}
 }

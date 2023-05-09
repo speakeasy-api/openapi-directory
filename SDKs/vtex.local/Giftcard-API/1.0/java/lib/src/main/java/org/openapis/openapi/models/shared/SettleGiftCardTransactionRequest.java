@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SettleGiftCardTransactionRequest {
     @JsonProperty("requestId")
     public String requestId;
+
     public SettleGiftCardTransactionRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -16,9 +17,14 @@ public class SettleGiftCardTransactionRequest {
     
     @JsonProperty("value")
     public Double value;
+
     public SettleGiftCardTransactionRequest withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public SettleGiftCardTransactionRequest(@JsonProperty("requestId") String requestId, @JsonProperty("value") Double value) {
+        this.requestId = requestId;
+        this.value = value;
+  }
 }

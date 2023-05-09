@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetBlueprintsResponse {
@@ -12,6 +13,7 @@ public class BatchGetBlueprintsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetBlueprintsResponse batchGetBlueprintsResponse;
+
     public BatchGetBlueprintsResponse withBatchGetBlueprintsResponse(org.openapis.openapi.models.shared.BatchGetBlueprintsResponse batchGetBlueprintsResponse) {
         this.batchGetBlueprintsResponse = batchGetBlueprintsResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetBlueprintsResponse {
     
     
     public String contentType;
+
     public BatchGetBlueprintsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetBlueprintsResponse {
      */
     
     public Object internalServiceException;
+
     public BatchGetBlueprintsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetBlueprintsResponse {
      */
     
     public Object invalidInputException;
+
     public BatchGetBlueprintsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetBlueprintsResponse {
      */
     
     public Object operationTimeoutException;
+
     public BatchGetBlueprintsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class BatchGetBlueprintsResponse {
     
     
     public Integer statusCode;
+
     public BatchGetBlueprintsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class BatchGetBlueprintsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetBlueprintsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchGetBlueprintsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

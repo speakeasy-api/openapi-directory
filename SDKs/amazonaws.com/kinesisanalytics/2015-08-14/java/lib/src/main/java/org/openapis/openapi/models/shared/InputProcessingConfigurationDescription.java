@@ -15,9 +15,11 @@ public class InputProcessingConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputLambdaProcessorDescription")
     public InputLambdaProcessorDescription inputLambdaProcessorDescription;
+
     public InputProcessingConfigurationDescription withInputLambdaProcessorDescription(InputLambdaProcessorDescription inputLambdaProcessorDescription) {
         this.inputLambdaProcessorDescription = inputLambdaProcessorDescription;
         return this;
     }
     
+    public InputProcessingConfigurationDescription(){}
 }

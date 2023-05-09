@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateDelegateToResourceResponse {
@@ -12,6 +13,7 @@ public class AssociateDelegateToResourceResponse {
      */
     
     public java.util.Map<String, Object> associateDelegateToResourceResponse;
+
     public AssociateDelegateToResourceResponse withAssociateDelegateToResourceResponse(java.util.Map<String, Object> associateDelegateToResourceResponse) {
         this.associateDelegateToResourceResponse = associateDelegateToResourceResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateDelegateToResourceResponse {
     
     
     public String contentType;
+
     public AssociateDelegateToResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateDelegateToResourceResponse {
      */
     
     public Object entityNotFoundException;
+
     public AssociateDelegateToResourceResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateDelegateToResourceResponse {
      */
     
     public Object entityStateException;
+
     public AssociateDelegateToResourceResponse withEntityStateException(Object entityStateException) {
         this.entityStateException = entityStateException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateDelegateToResourceResponse {
      */
     
     public Object invalidParameterException;
+
     public AssociateDelegateToResourceResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateDelegateToResourceResponse {
      */
     
     public Object organizationNotFoundException;
+
     public AssociateDelegateToResourceResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateDelegateToResourceResponse {
      */
     
     public Object organizationStateException;
+
     public AssociateDelegateToResourceResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -76,6 +84,7 @@ public class AssociateDelegateToResourceResponse {
     
     
     public Integer statusCode;
+
     public AssociateDelegateToResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class AssociateDelegateToResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateDelegateToResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AssociateDelegateToResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

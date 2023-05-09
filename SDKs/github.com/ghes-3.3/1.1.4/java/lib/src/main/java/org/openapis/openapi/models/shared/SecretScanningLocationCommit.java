@@ -15,6 +15,7 @@ public class SecretScanningLocationCommit {
      */
     @JsonProperty("blob_sha")
     public String blobSha;
+
     public SecretScanningLocationCommit withBlobSha(String blobSha) {
         this.blobSha = blobSha;
         return this;
@@ -25,6 +26,7 @@ public class SecretScanningLocationCommit {
      */
     @JsonProperty("blob_url")
     public String blobUrl;
+
     public SecretScanningLocationCommit withBlobUrl(String blobUrl) {
         this.blobUrl = blobUrl;
         return this;
@@ -35,6 +37,7 @@ public class SecretScanningLocationCommit {
      */
     @JsonProperty("commit_sha")
     public String commitSha;
+
     public SecretScanningLocationCommit withCommitSha(String commitSha) {
         this.commitSha = commitSha;
         return this;
@@ -45,6 +48,7 @@ public class SecretScanningLocationCommit {
      */
     @JsonProperty("commit_url")
     public String commitUrl;
+
     public SecretScanningLocationCommit withCommitUrl(String commitUrl) {
         this.commitUrl = commitUrl;
         return this;
@@ -55,6 +59,7 @@ public class SecretScanningLocationCommit {
      */
     @JsonProperty("end_column")
     public Double endColumn;
+
     public SecretScanningLocationCommit withEndColumn(Double endColumn) {
         this.endColumn = endColumn;
         return this;
@@ -65,6 +70,7 @@ public class SecretScanningLocationCommit {
      */
     @JsonProperty("end_line")
     public Double endLine;
+
     public SecretScanningLocationCommit withEndLine(Double endLine) {
         this.endLine = endLine;
         return this;
@@ -75,6 +81,7 @@ public class SecretScanningLocationCommit {
      */
     @JsonProperty("path")
     public String path;
+
     public SecretScanningLocationCommit withPath(String path) {
         this.path = path;
         return this;
@@ -85,6 +92,7 @@ public class SecretScanningLocationCommit {
      */
     @JsonProperty("start_column")
     public Double startColumn;
+
     public SecretScanningLocationCommit withStartColumn(Double startColumn) {
         this.startColumn = startColumn;
         return this;
@@ -95,9 +103,21 @@ public class SecretScanningLocationCommit {
      */
     @JsonProperty("start_line")
     public Double startLine;
+
     public SecretScanningLocationCommit withStartLine(Double startLine) {
         this.startLine = startLine;
         return this;
     }
     
+    public SecretScanningLocationCommit(@JsonProperty("blob_sha") String blobSha, @JsonProperty("blob_url") String blobUrl, @JsonProperty("commit_sha") String commitSha, @JsonProperty("commit_url") String commitUrl, @JsonProperty("end_column") Double endColumn, @JsonProperty("end_line") Double endLine, @JsonProperty("path") String path, @JsonProperty("start_column") Double startColumn, @JsonProperty("start_line") Double startLine) {
+        this.blobSha = blobSha;
+        this.blobUrl = blobUrl;
+        this.commitSha = commitSha;
+        this.commitUrl = commitUrl;
+        this.endColumn = endColumn;
+        this.endLine = endLine;
+        this.path = path;
+        this.startColumn = startColumn;
+        this.startLine = startLine;
+  }
 }

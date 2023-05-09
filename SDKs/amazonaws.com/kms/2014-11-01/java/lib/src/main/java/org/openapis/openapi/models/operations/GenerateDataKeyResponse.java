@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenerateDataKeyResponse {
     
     public String contentType;
+
     public GenerateDataKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GenerateDataKeyResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public GenerateDataKeyResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class GenerateDataKeyResponse {
      */
     
     public Object disabledException;
+
     public GenerateDataKeyResponse withDisabledException(Object disabledException) {
         this.disabledException = disabledException;
         return this;
@@ -39,6 +43,7 @@ public class GenerateDataKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.GenerateDataKeyResponse generateDataKeyResponse;
+
     public GenerateDataKeyResponse withGenerateDataKeyResponse(org.openapis.openapi.models.shared.GenerateDataKeyResponse generateDataKeyResponse) {
         this.generateDataKeyResponse = generateDataKeyResponse;
         return this;
@@ -49,6 +54,7 @@ public class GenerateDataKeyResponse {
      */
     
     public Object invalidGrantTokenException;
+
     public GenerateDataKeyResponse withInvalidGrantTokenException(Object invalidGrantTokenException) {
         this.invalidGrantTokenException = invalidGrantTokenException;
         return this;
@@ -59,6 +65,7 @@ public class GenerateDataKeyResponse {
      */
     
     public Object invalidKeyUsageException;
+
     public GenerateDataKeyResponse withInvalidKeyUsageException(Object invalidKeyUsageException) {
         this.invalidKeyUsageException = invalidKeyUsageException;
         return this;
@@ -69,6 +76,7 @@ public class GenerateDataKeyResponse {
      */
     
     public Object kmsInternalException;
+
     public GenerateDataKeyResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -79,6 +87,7 @@ public class GenerateDataKeyResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public GenerateDataKeyResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -89,6 +98,7 @@ public class GenerateDataKeyResponse {
      */
     
     public Object keyUnavailableException;
+
     public GenerateDataKeyResponse withKeyUnavailableException(Object keyUnavailableException) {
         this.keyUnavailableException = keyUnavailableException;
         return this;
@@ -99,6 +109,7 @@ public class GenerateDataKeyResponse {
      */
     
     public Object notFoundException;
+
     public GenerateDataKeyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -106,6 +117,7 @@ public class GenerateDataKeyResponse {
     
     
     public Integer statusCode;
+
     public GenerateDataKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class GenerateDataKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenerateDataKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GenerateDataKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

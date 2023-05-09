@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class KeyRevokeResponse {
     
     public byte[] body;
+
     public KeyRevokeResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class KeyRevokeResponse {
     
     
     public String contentType;
+
     public KeyRevokeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class KeyRevokeResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public KeyRevokeResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -33,6 +37,7 @@ public class KeyRevokeResponse {
     
     
     public Integer statusCode;
+
     public KeyRevokeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class KeyRevokeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public KeyRevokeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class KeyRevokeResponse {
      */
     
     public KeyRevoke200ApplicationJSON keyRevoke200ApplicationJSONObject;
+
     public KeyRevokeResponse withKeyRevoke200ApplicationJSONObject(KeyRevoke200ApplicationJSON keyRevoke200ApplicationJSONObject) {
         this.keyRevoke200ApplicationJSONObject = keyRevoke200ApplicationJSONObject;
         return this;
     }
     
+    public KeyRevokeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

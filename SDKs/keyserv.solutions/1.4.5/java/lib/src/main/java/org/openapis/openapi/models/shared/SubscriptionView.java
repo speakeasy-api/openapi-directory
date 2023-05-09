@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class SubscriptionView {
     @JsonProperty("action")
     public String action;
+
     public SubscriptionView withAction(String action) {
         this.action = action;
         return this;
@@ -23,6 +24,7 @@ public class SubscriptionView {
     
     @JsonProperty("callbackOnModify")
     public Boolean callbackOnModify;
+
     public SubscriptionView withCallbackOnModify(Boolean callbackOnModify) {
         this.callbackOnModify = callbackOnModify;
         return this;
@@ -31,6 +33,7 @@ public class SubscriptionView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callbackUrl")
     public String callbackUrl;
+
     public SubscriptionView withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
@@ -40,6 +43,7 @@ public class SubscriptionView {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("commenced")
     public OffsetDateTime commenced;
+
     public SubscriptionView withCommenced(OffsetDateTime commenced) {
         this.commenced = commenced;
         return this;
@@ -50,6 +54,7 @@ public class SubscriptionView {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public SubscriptionView withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -58,6 +63,7 @@ public class SubscriptionView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom")
     public Object custom;
+
     public SubscriptionView withCustom(Object custom) {
         this.custom = custom;
         return this;
@@ -65,6 +71,7 @@ public class SubscriptionView {
     
     @JsonProperty("frequency")
     public String frequency;
+
     public SubscriptionView withFrequency(String frequency) {
         this.frequency = frequency;
         return this;
@@ -73,6 +80,7 @@ public class SubscriptionView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keys")
     public KeyView[] keys;
+
     public SubscriptionView withKeys(KeyView[] keys) {
         this.keys = keys;
         return this;
@@ -81,6 +89,7 @@ public class SubscriptionView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SubscriptionView withName(String name) {
         this.name = name;
         return this;
@@ -91,9 +100,16 @@ public class SubscriptionView {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated")
     public OffsetDateTime updated;
+
     public SubscriptionView withUpdated(OffsetDateTime updated) {
         this.updated = updated;
         return this;
     }
     
+    public SubscriptionView(@JsonProperty("action") String action, @JsonProperty("callbackOnModify") Boolean callbackOnModify, @JsonProperty("commenced") OffsetDateTime commenced, @JsonProperty("frequency") String frequency) {
+        this.action = action;
+        this.callbackOnModify = callbackOnModify;
+        this.commenced = commenced;
+        this.frequency = frequency;
+  }
 }

@@ -18,6 +18,7 @@ public class CreateFileSystemOntapConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomaticBackupRetentionDays")
     public Long automaticBackupRetentionDays;
+
     public CreateFileSystemOntapConfiguration withAutomaticBackupRetentionDays(Long automaticBackupRetentionDays) {
         this.automaticBackupRetentionDays = automaticBackupRetentionDays;
         return this;
@@ -29,6 +30,7 @@ public class CreateFileSystemOntapConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DailyAutomaticBackupStartTime")
     public String dailyAutomaticBackupStartTime;
+
     public CreateFileSystemOntapConfiguration withDailyAutomaticBackupStartTime(String dailyAutomaticBackupStartTime) {
         this.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
         return this;
@@ -36,6 +38,7 @@ public class CreateFileSystemOntapConfiguration {
     
     @JsonProperty("DeploymentType")
     public OntapDeploymentTypeEnum deploymentType;
+
     public CreateFileSystemOntapConfiguration withDeploymentType(OntapDeploymentTypeEnum deploymentType) {
         this.deploymentType = deploymentType;
         return this;
@@ -44,6 +47,7 @@ public class CreateFileSystemOntapConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiskIopsConfiguration")
     public DiskIopsConfiguration diskIopsConfiguration;
+
     public CreateFileSystemOntapConfiguration withDiskIopsConfiguration(DiskIopsConfiguration diskIopsConfiguration) {
         this.diskIopsConfiguration = diskIopsConfiguration;
         return this;
@@ -52,6 +56,7 @@ public class CreateFileSystemOntapConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointIpAddressRange")
     public String endpointIpAddressRange;
+
     public CreateFileSystemOntapConfiguration withEndpointIpAddressRange(String endpointIpAddressRange) {
         this.endpointIpAddressRange = endpointIpAddressRange;
         return this;
@@ -60,6 +65,7 @@ public class CreateFileSystemOntapConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FsxAdminPassword")
     public String fsxAdminPassword;
+
     public CreateFileSystemOntapConfiguration withFsxAdminPassword(String fsxAdminPassword) {
         this.fsxAdminPassword = fsxAdminPassword;
         return this;
@@ -68,6 +74,7 @@ public class CreateFileSystemOntapConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreferredSubnetId")
     public String preferredSubnetId;
+
     public CreateFileSystemOntapConfiguration withPreferredSubnetId(String preferredSubnetId) {
         this.preferredSubnetId = preferredSubnetId;
         return this;
@@ -76,6 +83,7 @@ public class CreateFileSystemOntapConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RouteTableIds")
     public String[] routeTableIds;
+
     public CreateFileSystemOntapConfiguration withRouteTableIds(String[] routeTableIds) {
         this.routeTableIds = routeTableIds;
         return this;
@@ -83,6 +91,7 @@ public class CreateFileSystemOntapConfiguration {
     
     @JsonProperty("ThroughputCapacity")
     public Long throughputCapacity;
+
     public CreateFileSystemOntapConfiguration withThroughputCapacity(Long throughputCapacity) {
         this.throughputCapacity = throughputCapacity;
         return this;
@@ -94,9 +103,14 @@ public class CreateFileSystemOntapConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeeklyMaintenanceStartTime")
     public String weeklyMaintenanceStartTime;
+
     public CreateFileSystemOntapConfiguration withWeeklyMaintenanceStartTime(String weeklyMaintenanceStartTime) {
         this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
         return this;
     }
     
+    public CreateFileSystemOntapConfiguration(@JsonProperty("DeploymentType") OntapDeploymentTypeEnum deploymentType, @JsonProperty("ThroughputCapacity") Long throughputCapacity) {
+        this.deploymentType = deploymentType;
+        this.throughputCapacity = throughputCapacity;
+  }
 }

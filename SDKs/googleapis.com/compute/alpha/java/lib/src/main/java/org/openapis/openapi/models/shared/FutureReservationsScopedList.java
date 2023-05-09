@@ -15,6 +15,7 @@ public class FutureReservationsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("futureReservations")
     public FutureReservation[] futureReservations;
+
     public FutureReservationsScopedList withFutureReservations(FutureReservation[] futureReservations) {
         this.futureReservations = futureReservations;
         return this;
@@ -26,9 +27,11 @@ public class FutureReservationsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public FutureReservationsScopedListWarning warning;
+
     public FutureReservationsScopedList withWarning(FutureReservationsScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public FutureReservationsScopedList(){}
 }

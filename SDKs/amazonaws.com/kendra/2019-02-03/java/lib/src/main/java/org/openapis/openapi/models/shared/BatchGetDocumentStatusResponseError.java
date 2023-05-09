@@ -15,6 +15,7 @@ public class BatchGetDocumentStatusResponseError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentId")
     public String documentId;
+
     public BatchGetDocumentStatusResponseError withDocumentId(String documentId) {
         this.documentId = documentId;
         return this;
@@ -23,6 +24,7 @@ public class BatchGetDocumentStatusResponseError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public ErrorCodeEnum errorCode;
+
     public BatchGetDocumentStatusResponseError withErrorCode(ErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -31,9 +33,11 @@ public class BatchGetDocumentStatusResponseError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public BatchGetDocumentStatusResponseError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public BatchGetDocumentStatusResponseError(){}
 }

@@ -12,6 +12,7 @@ public class AuditCasePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public AuditCasePage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class AuditCasePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public AuditCase[] results;
+
     public AuditCasePage withResults(AuditCase[] results) {
         this.results = results;
         return this;
     }
     
+    public AuditCasePage(){}
 }

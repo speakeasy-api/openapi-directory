@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisableSecurityHubResponse {
     
     public String contentType;
+
     public DisableSecurityHubResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisableSecurityHubResponse {
      */
     
     public java.util.Map<String, Object> disableSecurityHubResponse;
+
     public DisableSecurityHubResponse withDisableSecurityHubResponse(java.util.Map<String, Object> disableSecurityHubResponse) {
         this.disableSecurityHubResponse = disableSecurityHubResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisableSecurityHubResponse {
      */
     
     public Object internalException;
+
     public DisableSecurityHubResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DisableSecurityHubResponse {
      */
     
     public Object invalidAccessException;
+
     public DisableSecurityHubResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class DisableSecurityHubResponse {
      */
     
     public Object limitExceededException;
+
     public DisableSecurityHubResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class DisableSecurityHubResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisableSecurityHubResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DisableSecurityHubResponse {
     
     
     public Integer statusCode;
+
     public DisableSecurityHubResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DisableSecurityHubResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisableSecurityHubResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisableSecurityHubResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDeploymentResponse {
@@ -12,6 +13,7 @@ public class CreateDeploymentResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateDeploymentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateDeploymentResponse {
      */
     
     public Object conflictException;
+
     public CreateDeploymentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateDeploymentResponse {
     
     
     public String contentType;
+
     public CreateDeploymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateDeploymentResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDeploymentResponse createDeploymentResponse;
+
     public CreateDeploymentResponse withCreateDeploymentResponse(org.openapis.openapi.models.shared.CreateDeploymentResponse createDeploymentResponse) {
         this.createDeploymentResponse = createDeploymentResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateDeploymentResponse {
      */
     
     public Object internalServerException;
+
     public CreateDeploymentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDeploymentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateDeploymentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateDeploymentResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateDeploymentResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateDeploymentResponse {
     
     
     public Integer statusCode;
+
     public CreateDeploymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateDeploymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDeploymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateDeploymentResponse {
      */
     
     public Object throttlingException;
+
     public CreateDeploymentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateDeploymentResponse {
      */
     
     public Object validationException;
+
     public CreateDeploymentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateDeploymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

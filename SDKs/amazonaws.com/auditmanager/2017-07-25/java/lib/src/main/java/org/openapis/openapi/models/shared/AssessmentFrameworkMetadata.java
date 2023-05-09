@@ -20,6 +20,7 @@ public class AssessmentFrameworkMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public AssessmentFrameworkMetadata withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class AssessmentFrameworkMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceType")
     public String complianceType;
+
     public AssessmentFrameworkMetadata withComplianceType(String complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -36,6 +38,7 @@ public class AssessmentFrameworkMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlSetsCount")
     public Long controlSetsCount;
+
     public AssessmentFrameworkMetadata withControlSetsCount(Long controlSetsCount) {
         this.controlSetsCount = controlSetsCount;
         return this;
@@ -44,6 +47,7 @@ public class AssessmentFrameworkMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlsCount")
     public Long controlsCount;
+
     public AssessmentFrameworkMetadata withControlsCount(Long controlsCount) {
         this.controlsCount = controlsCount;
         return this;
@@ -54,6 +58,7 @@ public class AssessmentFrameworkMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public AssessmentFrameworkMetadata withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -62,6 +67,7 @@ public class AssessmentFrameworkMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AssessmentFrameworkMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -70,6 +76,7 @@ public class AssessmentFrameworkMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AssessmentFrameworkMetadata withId(String id) {
         this.id = id;
         return this;
@@ -80,6 +87,7 @@ public class AssessmentFrameworkMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public AssessmentFrameworkMetadata withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -88,6 +96,7 @@ public class AssessmentFrameworkMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public AssessmentFrameworkMetadata withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -96,6 +105,7 @@ public class AssessmentFrameworkMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AssessmentFrameworkMetadata withName(String name) {
         this.name = name;
         return this;
@@ -104,9 +114,11 @@ public class AssessmentFrameworkMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public FrameworkTypeEnum type;
+
     public AssessmentFrameworkMetadata withType(FrameworkTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AssessmentFrameworkMetadata(){}
 }

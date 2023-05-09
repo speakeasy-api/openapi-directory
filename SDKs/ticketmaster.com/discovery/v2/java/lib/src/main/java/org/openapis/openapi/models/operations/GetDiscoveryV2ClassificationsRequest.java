@@ -12,6 +12,7 @@ public class GetDiscoveryV2ClassificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public GetDiscoveryV2ClassificationsRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class GetDiscoveryV2ClassificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLicensedContent")
     public GetDiscoveryV2ClassificationsIncludeLicensedContentEnum includeLicensedContent;
+
     public GetDiscoveryV2ClassificationsRequest withIncludeLicensedContent(GetDiscoveryV2ClassificationsIncludeLicensedContentEnum includeLicensedContent) {
         this.includeLicensedContent = includeLicensedContent;
         return this;
@@ -32,6 +34,7 @@ public class GetDiscoveryV2ClassificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeSpellcheck")
     public GetDiscoveryV2ClassificationsIncludeSpellcheckEnum includeSpellcheck;
+
     public GetDiscoveryV2ClassificationsRequest withIncludeSpellcheck(GetDiscoveryV2ClassificationsIncludeSpellcheckEnum includeSpellcheck) {
         this.includeSpellcheck = includeSpellcheck;
         return this;
@@ -42,6 +45,7 @@ public class GetDiscoveryV2ClassificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeTest")
     public GetDiscoveryV2ClassificationsIncludeTestEnum includeTest;
+
     public GetDiscoveryV2ClassificationsRequest withIncludeTest(GetDiscoveryV2ClassificationsIncludeTestEnum includeTest) {
         this.includeTest = includeTest;
         return this;
@@ -52,6 +56,7 @@ public class GetDiscoveryV2ClassificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyword")
     public String keyword;
+
     public GetDiscoveryV2ClassificationsRequest withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -62,6 +67,7 @@ public class GetDiscoveryV2ClassificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public GetDiscoveryV2ClassificationsRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -72,6 +78,7 @@ public class GetDiscoveryV2ClassificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetDiscoveryV2ClassificationsRequest withPage(String page) {
         this.page = page;
         return this;
@@ -82,6 +89,7 @@ public class GetDiscoveryV2ClassificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public String size;
+
     public GetDiscoveryV2ClassificationsRequest withSize(String size) {
         this.size = size;
         return this;
@@ -92,6 +100,7 @@ public class GetDiscoveryV2ClassificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetDiscoveryV2ClassificationsRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -102,9 +111,11 @@ public class GetDiscoveryV2ClassificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public GetDiscoveryV2ClassificationsSourceEnum source;
+
     public GetDiscoveryV2ClassificationsRequest withSource(GetDiscoveryV2ClassificationsSourceEnum source) {
         this.source = source;
         return this;
     }
     
+    public GetDiscoveryV2ClassificationsRequest(){}
 }

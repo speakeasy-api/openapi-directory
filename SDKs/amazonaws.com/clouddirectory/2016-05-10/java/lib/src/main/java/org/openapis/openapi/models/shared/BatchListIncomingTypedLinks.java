@@ -15,6 +15,7 @@ public class BatchListIncomingTypedLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterAttributeRanges")
     public TypedLinkAttributeRange[] filterAttributeRanges;
+
     public BatchListIncomingTypedLinks withFilterAttributeRanges(TypedLinkAttributeRange[] filterAttributeRanges) {
         this.filterAttributeRanges = filterAttributeRanges;
         return this;
@@ -23,6 +24,7 @@ public class BatchListIncomingTypedLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterTypedLink")
     public TypedLinkSchemaAndFacetName filterTypedLink;
+
     public BatchListIncomingTypedLinks withFilterTypedLink(TypedLinkSchemaAndFacetName filterTypedLink) {
         this.filterTypedLink = filterTypedLink;
         return this;
@@ -31,6 +33,7 @@ public class BatchListIncomingTypedLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public BatchListIncomingTypedLinks withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -39,6 +42,7 @@ public class BatchListIncomingTypedLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public BatchListIncomingTypedLinks withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -46,9 +50,13 @@ public class BatchListIncomingTypedLinks {
     
     @JsonProperty("ObjectReference")
     public ObjectReference objectReference;
+
     public BatchListIncomingTypedLinks withObjectReference(ObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
     }
     
+    public BatchListIncomingTypedLinks(@JsonProperty("ObjectReference") ObjectReference objectReference) {
+        this.objectReference = objectReference;
+  }
 }

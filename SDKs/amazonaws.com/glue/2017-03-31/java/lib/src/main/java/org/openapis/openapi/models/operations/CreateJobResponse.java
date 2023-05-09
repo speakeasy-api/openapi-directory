@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateJobResponse {
@@ -12,6 +13,7 @@ public class CreateJobResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateJobResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -22,6 +24,7 @@ public class CreateJobResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateJobResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class CreateJobResponse {
     
     
     public String contentType;
+
     public CreateJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateJobResponse createJobResponse;
+
     public CreateJobResponse withCreateJobResponse(org.openapis.openapi.models.shared.CreateJobResponse createJobResponse) {
         this.createJobResponse = createJobResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateJobResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateJobResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -59,6 +65,7 @@ public class CreateJobResponse {
      */
     
     public Object internalServiceException;
+
     public CreateJobResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class CreateJobResponse {
      */
     
     public Object invalidInputException;
+
     public CreateJobResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class CreateJobResponse {
      */
     
     public Object operationTimeoutException;
+
     public CreateJobResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -89,6 +98,7 @@ public class CreateJobResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public CreateJobResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -96,6 +106,7 @@ public class CreateJobResponse {
     
     
     public Integer statusCode;
+
     public CreateJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class CreateJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

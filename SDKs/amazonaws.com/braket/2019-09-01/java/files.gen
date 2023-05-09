@@ -108,4 +108,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/QuantumTaskSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/SearchQuantumTasksFilter.java
 lib/src/main/java/org/openapis/openapi/models/shared/SearchQuantumTasksFilterOperatorEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

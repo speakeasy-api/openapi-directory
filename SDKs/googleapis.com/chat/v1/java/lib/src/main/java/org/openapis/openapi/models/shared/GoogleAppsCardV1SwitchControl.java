@@ -18,6 +18,7 @@ public class GoogleAppsCardV1SwitchControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlType")
     public GoogleAppsCardV1SwitchControlControlTypeEnum controlType;
+
     public GoogleAppsCardV1SwitchControl withControlType(GoogleAppsCardV1SwitchControlControlTypeEnum controlType) {
         this.controlType = controlType;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsCardV1SwitchControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAppsCardV1SwitchControl withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsCardV1SwitchControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onChangeAction")
     public GoogleAppsCardV1Action onChangeAction;
+
     public GoogleAppsCardV1SwitchControl withOnChangeAction(GoogleAppsCardV1Action onChangeAction) {
         this.onChangeAction = onChangeAction;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsCardV1SwitchControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selected")
     public Boolean selected;
+
     public GoogleAppsCardV1SwitchControl withSelected(Boolean selected) {
         this.selected = selected;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAppsCardV1SwitchControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleAppsCardV1SwitchControl withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleAppsCardV1SwitchControl(){}
 }

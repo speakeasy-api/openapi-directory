@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ClusterExtendedCredentials {
     
     public String dbPassword;
+
     public ClusterExtendedCredentials withDbPassword(String dbPassword) {
         this.dbPassword = dbPassword;
         return this;
@@ -19,6 +20,7 @@ public class ClusterExtendedCredentials {
     
     
     public String dbUser;
+
     public ClusterExtendedCredentials withDbUser(String dbUser) {
         this.dbUser = dbUser;
         return this;
@@ -26,6 +28,7 @@ public class ClusterExtendedCredentials {
     
     
     public OffsetDateTime expiration;
+
     public ClusterExtendedCredentials withExpiration(OffsetDateTime expiration) {
         this.expiration = expiration;
         return this;
@@ -33,9 +36,11 @@ public class ClusterExtendedCredentials {
     
     
     public OffsetDateTime nextRefreshTime;
+
     public ClusterExtendedCredentials withNextRefreshTime(OffsetDateTime nextRefreshTime) {
         this.nextRefreshTime = nextRefreshTime;
         return this;
     }
     
+    public ClusterExtendedCredentials(){}
 }

@@ -12,6 +12,7 @@ public class EventPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public EventPayload withAction(String action) {
         this.action = action;
         return this;
@@ -23,6 +24,7 @@ public class EventPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public IssueComment comment;
+
     public EventPayload withComment(IssueComment comment) {
         this.comment = comment;
         return this;
@@ -34,6 +36,7 @@ public class EventPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issue")
     public Issue issue;
+
     public EventPayload withIssue(Issue issue) {
         this.issue = issue;
         return this;
@@ -42,9 +45,11 @@ public class EventPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pages")
     public EventPayloadPages[] pages;
+
     public EventPayload withPages(EventPayloadPages[] pages) {
         this.pages = pages;
         return this;
     }
     
+    public EventPayload(){}
 }

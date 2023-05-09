@@ -18,6 +18,7 @@ public class StartPageToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public StartPageToken withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class StartPageToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startPageToken")
     public String startPageToken;
+
     public StartPageToken withStartPageToken(String startPageToken) {
         this.startPageToken = startPageToken;
         return this;
     }
     
+    public StartPageToken(){}
 }

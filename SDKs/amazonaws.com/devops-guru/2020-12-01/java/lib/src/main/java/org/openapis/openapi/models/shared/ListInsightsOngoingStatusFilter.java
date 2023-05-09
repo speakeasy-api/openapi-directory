@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListInsightsOngoingStatusFilter {
     @JsonProperty("Type")
     public InsightTypeEnum type;
+
     public ListInsightsOngoingStatusFilter withType(InsightTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ListInsightsOngoingStatusFilter(@JsonProperty("Type") InsightTypeEnum type) {
+        this.type = type;
+  }
 }

@@ -18,6 +18,7 @@ public class UniversalDoNotContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromNumber")
     public String fromNumber;
+
     public UniversalDoNotContact withFromNumber(String fromNumber) {
         this.fromNumber = fromNumber;
         return this;
@@ -29,6 +30,7 @@ public class UniversalDoNotContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inboundCall")
     public Boolean inboundCall;
+
     public UniversalDoNotContact withInboundCall(Boolean inboundCall) {
         this.inboundCall = inboundCall;
         return this;
@@ -40,6 +42,7 @@ public class UniversalDoNotContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inboundText")
     public Boolean inboundText;
+
     public UniversalDoNotContact withInboundText(Boolean inboundText) {
         this.inboundText = inboundText;
         return this;
@@ -51,6 +54,7 @@ public class UniversalDoNotContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outboundCall")
     public Boolean outboundCall;
+
     public UniversalDoNotContact withOutboundCall(Boolean outboundCall) {
         this.outboundCall = outboundCall;
         return this;
@@ -62,6 +66,7 @@ public class UniversalDoNotContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outboundText")
     public Boolean outboundText;
+
     public UniversalDoNotContact withOutboundText(Boolean outboundText) {
         this.outboundText = outboundText;
         return this;
@@ -73,9 +78,11 @@ public class UniversalDoNotContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toNumber")
     public String toNumber;
+
     public UniversalDoNotContact withToNumber(String toNumber) {
         this.toNumber = toNumber;
         return this;
     }
     
+    public UniversalDoNotContact(){}
 }

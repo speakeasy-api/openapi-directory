@@ -15,6 +15,7 @@ public class UpdateProductOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductViewDetail")
     public ProductViewDetail productViewDetail;
+
     public UpdateProductOutput withProductViewDetail(ProductViewDetail productViewDetail) {
         this.productViewDetail = productViewDetail;
         return this;
@@ -23,9 +24,11 @@ public class UpdateProductOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public UpdateProductOutput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public UpdateProductOutput(){}
 }

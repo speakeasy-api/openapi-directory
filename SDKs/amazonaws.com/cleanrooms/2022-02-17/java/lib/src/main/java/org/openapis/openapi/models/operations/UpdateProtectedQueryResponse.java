@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateProtectedQueryResponse {
@@ -12,6 +13,7 @@ public class UpdateProtectedQueryResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateProtectedQueryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateProtectedQueryResponse {
      */
     
     public Object conflictException;
+
     public UpdateProtectedQueryResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateProtectedQueryResponse {
     
     
     public String contentType;
+
     public UpdateProtectedQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateProtectedQueryResponse {
      */
     
     public Object internalServerException;
+
     public UpdateProtectedQueryResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateProtectedQueryResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateProtectedQueryResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateProtectedQueryResponse {
     
     
     public Integer statusCode;
+
     public UpdateProtectedQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateProtectedQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateProtectedQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateProtectedQueryResponse {
      */
     
     public Object throttlingException;
+
     public UpdateProtectedQueryResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateProtectedQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateProtectedQueryOutput updateProtectedQueryOutput;
+
     public UpdateProtectedQueryResponse withUpdateProtectedQueryOutput(org.openapis.openapi.models.shared.UpdateProtectedQueryOutput updateProtectedQueryOutput) {
         this.updateProtectedQueryOutput = updateProtectedQueryOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateProtectedQueryResponse {
      */
     
     public Object validationException;
+
     public UpdateProtectedQueryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateProtectedQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

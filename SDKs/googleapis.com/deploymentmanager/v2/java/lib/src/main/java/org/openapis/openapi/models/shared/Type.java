@@ -15,6 +15,7 @@ public class Type {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Type withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class Type {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertTime")
     public String insertTime;
+
     public Type withInsertTime(String insertTime) {
         this.insertTime = insertTime;
         return this;
@@ -37,6 +39,7 @@ public class Type {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Type withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class Type {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public Operation operation;
+
     public Type withOperation(Operation operation) {
         this.operation = operation;
         return this;
@@ -59,9 +63,11 @@ public class Type {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Type withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
     }
     
+    public Type(){}
 }

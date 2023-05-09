@@ -56,11 +56,9 @@ public class AllowedOriginsCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse res = new org.openapis.openapi.models.operations.DeleteCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse res = new org.openapis.openapi.models.operations.DeleteCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse(contentType, httpRes.statusCode()) {{
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -102,12 +100,10 @@ public class AllowedOriginsCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsResponse() {{
+        org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsResponse(contentType, httpRes.statusCode()) {{
             allowedOriginsResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,12 +150,10 @@ public class AllowedOriginsCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse() {{
+        org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse(contentType, httpRes.statusCode()) {{
             allowedOrigin = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -208,12 +202,10 @@ public class AllowedOriginsCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsResponse res = new org.openapis.openapi.models.operations.PostCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsResponse() {{
+        org.openapis.openapi.models.operations.PostCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsResponse res = new org.openapis.openapi.models.operations.PostCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsResponse(contentType, httpRes.statusCode()) {{
             allowedOriginsResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

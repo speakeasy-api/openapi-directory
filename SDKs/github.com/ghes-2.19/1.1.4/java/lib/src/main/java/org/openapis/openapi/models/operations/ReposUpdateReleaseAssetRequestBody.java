@@ -15,6 +15,7 @@ public class ReposUpdateReleaseAssetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public ReposUpdateReleaseAssetRequestBody withLabel(String label) {
         this.label = label;
         return this;
@@ -26,6 +27,7 @@ public class ReposUpdateReleaseAssetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReposUpdateReleaseAssetRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -34,9 +36,11 @@ public class ReposUpdateReleaseAssetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public ReposUpdateReleaseAssetRequestBody withState(String state) {
         this.state = state;
         return this;
     }
     
+    public ReposUpdateReleaseAssetRequestBody(){}
 }

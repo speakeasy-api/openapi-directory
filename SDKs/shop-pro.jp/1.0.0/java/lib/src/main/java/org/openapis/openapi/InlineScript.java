@@ -57,11 +57,9 @@ public class InlineScript {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateInlineScriptTagResponse res = new org.openapis.openapi.models.operations.CreateInlineScriptTagResponse() {{
+        org.openapis.openapi.models.operations.CreateInlineScriptTagResponse res = new org.openapis.openapi.models.operations.CreateInlineScriptTagResponse(contentType, httpRes.statusCode()) {{
             createInlineScriptTag201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -97,10 +95,8 @@ public class InlineScript {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteInlineScriptTagResponse res = new org.openapis.openapi.models.operations.DeleteInlineScriptTagResponse() {{
+        org.openapis.openapi.models.operations.DeleteInlineScriptTagResponse res = new org.openapis.openapi.models.operations.DeleteInlineScriptTagResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -131,11 +127,9 @@ public class InlineScript {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInlineScriptTagResponse res = new org.openapis.openapi.models.operations.GetInlineScriptTagResponse() {{
+        org.openapis.openapi.models.operations.GetInlineScriptTagResponse res = new org.openapis.openapi.models.operations.GetInlineScriptTagResponse(contentType, httpRes.statusCode()) {{
             getInlineScriptTag200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,10 +145,11 @@ public class InlineScript {
 
     /**
      * \u30a4\u30f3\u30e9\u30a4\u30f3\u30b9\u30af\u30ea\u30d7\u30c8\u30bf\u30b0\u306e\u53d6\u5f97
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetInlineScriptTagsResponse getInlineScriptTags() throws Exception {
+    public org.openapis.openapi.models.operations.GetInlineScriptTagsResponse getInlineScriptTags(org.openapis.openapi.models.operations.GetInlineScriptTagsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/inline_script_tags.json");
         
@@ -163,16 +158,15 @@ public class InlineScript {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInlineScriptTagsResponse res = new org.openapis.openapi.models.operations.GetInlineScriptTagsResponse() {{
+        org.openapis.openapi.models.operations.GetInlineScriptTagsResponse res = new org.openapis.openapi.models.operations.GetInlineScriptTagsResponse(contentType, httpRes.statusCode()) {{
             getInlineScriptTags200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -210,11 +204,9 @@ public class InlineScript {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateInlineScriptTagResponse res = new org.openapis.openapi.models.operations.UpdateInlineScriptTagResponse() {{
+        org.openapis.openapi.models.operations.UpdateInlineScriptTagResponse res = new org.openapis.openapi.models.operations.UpdateInlineScriptTagResponse(contentType, httpRes.statusCode()) {{
             updateInlineScriptTag200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class ReportLocalPostInsightsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localPostMetrics")
     public LocalPostMetrics[] localPostMetrics;
+
     public ReportLocalPostInsightsResponse withLocalPostMetrics(LocalPostMetrics[] localPostMetrics) {
         this.localPostMetrics = localPostMetrics;
         return this;
@@ -26,6 +27,7 @@ public class ReportLocalPostInsightsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReportLocalPostInsightsResponse withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class ReportLocalPostInsightsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public ReportLocalPostInsightsResponse withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public ReportLocalPostInsightsResponse(){}
 }

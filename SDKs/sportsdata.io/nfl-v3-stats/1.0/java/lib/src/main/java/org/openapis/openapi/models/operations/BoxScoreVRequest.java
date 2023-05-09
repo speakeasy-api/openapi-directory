@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BoxScoreVRequest {
@@ -12,6 +13,7 @@ public class BoxScoreVRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public BoxScoreVFormatEnum format;
+
     public BoxScoreVRequest withFormat(BoxScoreVFormatEnum format) {
         this.format = format;
         return this;
@@ -22,6 +24,7 @@ public class BoxScoreVRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hometeam")
     public String hometeam;
+
     public BoxScoreVRequest withHometeam(String hometeam) {
         this.hometeam = hometeam;
         return this;
@@ -34,6 +37,7 @@ public class BoxScoreVRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
     public String season;
+
     public BoxScoreVRequest withSeason(String season) {
         this.season = season;
         return this;
@@ -46,9 +50,16 @@ public class BoxScoreVRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=week")
     public String week;
+
     public BoxScoreVRequest withWeek(String week) {
         this.week = week;
         return this;
     }
     
+    public BoxScoreVRequest(@JsonProperty("format") BoxScoreVFormatEnum format, @JsonProperty("hometeam") String hometeam, @JsonProperty("season") String season, @JsonProperty("week") String week) {
+        this.format = format;
+        this.hometeam = hometeam;
+        this.season = season;
+        this.week = week;
+  }
 }

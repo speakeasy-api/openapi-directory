@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ConfirmConnectionResponse {
@@ -12,6 +13,7 @@ public class ConfirmConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.ConfirmConnectionResponse confirmConnectionResponse;
+
     public ConfirmConnectionResponse withConfirmConnectionResponse(org.openapis.openapi.models.shared.ConfirmConnectionResponse confirmConnectionResponse) {
         this.confirmConnectionResponse = confirmConnectionResponse;
         return this;
@@ -19,6 +21,7 @@ public class ConfirmConnectionResponse {
     
     
     public String contentType;
+
     public ConfirmConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ConfirmConnectionResponse {
      */
     
     public Object directConnectClientException;
+
     public ConfirmConnectionResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -39,6 +43,7 @@ public class ConfirmConnectionResponse {
      */
     
     public Object directConnectServerException;
+
     public ConfirmConnectionResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -46,6 +51,7 @@ public class ConfirmConnectionResponse {
     
     
     public Integer statusCode;
+
     public ConfirmConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ConfirmConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ConfirmConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ConfirmConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class GetRelationalDatabaseLogEventsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextBackwardToken")
     public String nextBackwardToken;
+
     public GetRelationalDatabaseLogEventsResult withNextBackwardToken(String nextBackwardToken) {
         this.nextBackwardToken = nextBackwardToken;
         return this;
@@ -23,6 +24,7 @@ public class GetRelationalDatabaseLogEventsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextForwardToken")
     public String nextForwardToken;
+
     public GetRelationalDatabaseLogEventsResult withNextForwardToken(String nextForwardToken) {
         this.nextForwardToken = nextForwardToken;
         return this;
@@ -31,9 +33,11 @@ public class GetRelationalDatabaseLogEventsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceLogEvents")
     public LogEvent[] resourceLogEvents;
+
     public GetRelationalDatabaseLogEventsResult withResourceLogEvents(LogEvent[] resourceLogEvents) {
         this.resourceLogEvents = resourceLogEvents;
         return this;
     }
     
+    public GetRelationalDatabaseLogEventsResult(){}
 }

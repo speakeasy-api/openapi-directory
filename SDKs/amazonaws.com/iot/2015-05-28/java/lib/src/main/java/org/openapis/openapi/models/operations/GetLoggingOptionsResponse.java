@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLoggingOptionsResponse {
     
     public String contentType;
+
     public GetLoggingOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetLoggingOptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLoggingOptionsResponse getLoggingOptionsResponse;
+
     public GetLoggingOptionsResponse withGetLoggingOptionsResponse(org.openapis.openapi.models.shared.GetLoggingOptionsResponse getLoggingOptionsResponse) {
         this.getLoggingOptionsResponse = getLoggingOptionsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetLoggingOptionsResponse {
      */
     
     public Object internalException;
+
     public GetLoggingOptionsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class GetLoggingOptionsResponse {
      */
     
     public Object invalidRequestException;
+
     public GetLoggingOptionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetLoggingOptionsResponse {
     
     
     public Integer statusCode;
+
     public GetLoggingOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetLoggingOptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLoggingOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetLoggingOptionsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetLoggingOptionsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public GetLoggingOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

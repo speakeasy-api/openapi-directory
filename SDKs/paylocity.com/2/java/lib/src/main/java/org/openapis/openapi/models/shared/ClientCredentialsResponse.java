@@ -18,6 +18,7 @@ public class ClientCredentialsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientSecret")
     public String clientSecret;
+
     public ClientCredentialsResponse withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -29,9 +30,11 @@ public class ClientCredentialsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientSecretExpirationDate")
     public String clientSecretExpirationDate;
+
     public ClientCredentialsResponse withClientSecretExpirationDate(String clientSecretExpirationDate) {
         this.clientSecretExpirationDate = clientSecretExpirationDate;
         return this;
     }
     
+    public ClientCredentialsResponse(){}
 }

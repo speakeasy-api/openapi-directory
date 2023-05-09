@@ -15,9 +15,11 @@ public class GetSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Session")
     public Session session;
+
     public GetSessionResponse withSession(Session session) {
         this.session = session;
         return this;
     }
     
+    public GetSessionResponse(){}
 }

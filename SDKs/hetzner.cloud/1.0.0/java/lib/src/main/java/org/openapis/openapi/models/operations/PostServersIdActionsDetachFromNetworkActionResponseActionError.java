@@ -15,6 +15,7 @@ public class PostServersIdActionsDetachFromNetworkActionResponseActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public PostServersIdActionsDetachFromNetworkActionResponseActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class PostServersIdActionsDetachFromNetworkActionResponseActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public PostServersIdActionsDetachFromNetworkActionResponseActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostServersIdActionsDetachFromNetworkActionResponseActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

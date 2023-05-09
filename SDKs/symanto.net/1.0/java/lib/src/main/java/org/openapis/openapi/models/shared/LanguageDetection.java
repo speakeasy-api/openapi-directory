@@ -15,6 +15,7 @@ public class LanguageDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public LanguageDetection withId(String id) {
         this.id = id;
         return this;
@@ -25,9 +26,13 @@ public class LanguageDetection {
      */
     @JsonProperty("text")
     public String text;
+
     public LanguageDetection withText(String text) {
         this.text = text;
         return this;
     }
     
+    public LanguageDetection(@JsonProperty("text") String text) {
+        this.text = text;
+  }
 }

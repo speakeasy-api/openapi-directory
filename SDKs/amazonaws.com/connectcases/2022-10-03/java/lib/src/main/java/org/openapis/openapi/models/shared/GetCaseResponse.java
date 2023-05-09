@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetCaseResponse {
     @JsonProperty("fields")
     public FieldValue[] fields;
+
     public GetCaseResponse withFields(FieldValue[] fields) {
         this.fields = fields;
         return this;
@@ -22,6 +23,7 @@ public class GetCaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetCaseResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,6 +32,7 @@ public class GetCaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetCaseResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -37,9 +40,14 @@ public class GetCaseResponse {
     
     @JsonProperty("templateId")
     public String templateId;
+
     public GetCaseResponse withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public GetCaseResponse(@JsonProperty("fields") FieldValue[] fields, @JsonProperty("templateId") String templateId) {
+        this.fields = fields;
+        this.templateId = templateId;
+  }
 }

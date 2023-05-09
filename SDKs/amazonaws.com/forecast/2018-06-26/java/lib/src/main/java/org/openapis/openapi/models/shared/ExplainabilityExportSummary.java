@@ -22,6 +22,7 @@ public class ExplainabilityExportSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ExplainabilityExportSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -33,6 +34,7 @@ public class ExplainabilityExportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destination")
     public DataDestination destination;
+
     public ExplainabilityExportSummary withDestination(DataDestination destination) {
         this.destination = destination;
         return this;
@@ -41,6 +43,7 @@ public class ExplainabilityExportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplainabilityExportArn")
     public String explainabilityExportArn;
+
     public ExplainabilityExportSummary withExplainabilityExportArn(String explainabilityExportArn) {
         this.explainabilityExportArn = explainabilityExportArn;
         return this;
@@ -49,6 +52,7 @@ public class ExplainabilityExportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplainabilityExportName")
     public String explainabilityExportName;
+
     public ExplainabilityExportSummary withExplainabilityExportName(String explainabilityExportName) {
         this.explainabilityExportName = explainabilityExportName;
         return this;
@@ -59,6 +63,7 @@ public class ExplainabilityExportSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public ExplainabilityExportSummary withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -67,6 +72,7 @@ public class ExplainabilityExportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public ExplainabilityExportSummary withMessage(String message) {
         this.message = message;
         return this;
@@ -75,9 +81,11 @@ public class ExplainabilityExportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public ExplainabilityExportSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ExplainabilityExportSummary(){}
 }

@@ -49,10 +49,8 @@ public class Charges {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChargesResponse res = new org.openapis.openapi.models.operations.GetChargesResponse() {{
+        org.openapis.openapi.models.operations.GetChargesResponse res = new org.openapis.openapi.models.operations.GetChargesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -81,10 +79,8 @@ public class Charges {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostChargesResponse res = new org.openapis.openapi.models.operations.PostChargesResponse() {{
+        org.openapis.openapi.models.operations.PostChargesResponse res = new org.openapis.openapi.models.operations.PostChargesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

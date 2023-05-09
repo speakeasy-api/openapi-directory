@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -14,6 +15,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=af_committee_id")
     public String afCommitteeId;
+
     public GetLegalSearchRequest withAfCommitteeId(String afCommitteeId) {
         this.afCommitteeId = afCommitteeId;
         return this;
@@ -25,6 +27,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=af_fd_fine_amount")
     public Integer afFdFineAmount;
+
     public GetLegalSearchRequest withAfFdFineAmount(Integer afFdFineAmount) {
         this.afFdFineAmount = afFdFineAmount;
         return this;
@@ -36,6 +39,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=af_max_fd_date")
     public LocalDate afMaxFdDate;
+
     public GetLegalSearchRequest withAfMaxFdDate(LocalDate afMaxFdDate) {
         this.afMaxFdDate = afMaxFdDate;
         return this;
@@ -47,6 +51,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=af_max_rtb_date")
     public LocalDate afMaxRtbDate;
+
     public GetLegalSearchRequest withAfMaxRtbDate(LocalDate afMaxRtbDate) {
         this.afMaxRtbDate = afMaxRtbDate;
         return this;
@@ -58,6 +63,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=af_min_fd_date")
     public LocalDate afMinFdDate;
+
     public GetLegalSearchRequest withAfMinFdDate(LocalDate afMinFdDate) {
         this.afMinFdDate = afMinFdDate;
         return this;
@@ -69,6 +75,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=af_min_rtb_date")
     public LocalDate afMinRtbDate;
+
     public GetLegalSearchRequest withAfMinRtbDate(LocalDate afMinRtbDate) {
         this.afMinRtbDate = afMinRtbDate;
         return this;
@@ -80,6 +87,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=af_name")
     public String[] afName;
+
     public GetLegalSearchRequest withAfName(String[] afName) {
         this.afName = afName;
         return this;
@@ -91,6 +99,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=af_report_year")
     public String afReportYear;
+
     public GetLegalSearchRequest withAfReportYear(String afReportYear) {
         this.afReportYear = afReportYear;
         return this;
@@ -102,6 +111,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=af_rtb_fine_amount")
     public Integer afRtbFineAmount;
+
     public GetLegalSearchRequest withAfRtbFineAmount(Integer afRtbFineAmount) {
         this.afRtbFineAmount = afRtbFineAmount;
         return this;
@@ -113,6 +123,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ao_category")
     public GetLegalSearchAoCategoryEnum[] aoCategory;
+
     public GetLegalSearchRequest withAoCategory(GetLegalSearchAoCategoryEnum[] aoCategory) {
         this.aoCategory = aoCategory;
         return this;
@@ -124,6 +135,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ao_citation_require_all")
     public Boolean aoCitationRequireAll;
+
     public GetLegalSearchRequest withAoCitationRequireAll(Boolean aoCitationRequireAll) {
         this.aoCitationRequireAll = aoCitationRequireAll;
         return this;
@@ -135,6 +147,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ao_entity_name")
     public String[] aoEntityName;
+
     public GetLegalSearchRequest withAoEntityName(String[] aoEntityName) {
         this.aoEntityName = aoEntityName;
         return this;
@@ -146,6 +159,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ao_is_pending")
     public Boolean aoIsPending;
+
     public GetLegalSearchRequest withAoIsPending(Boolean aoIsPending) {
         this.aoIsPending = aoIsPending;
         return this;
@@ -157,6 +171,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ao_max_issue_date")
     public LocalDate aoMaxIssueDate;
+
     public GetLegalSearchRequest withAoMaxIssueDate(LocalDate aoMaxIssueDate) {
         this.aoMaxIssueDate = aoMaxIssueDate;
         return this;
@@ -168,6 +183,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ao_max_request_date")
     public LocalDate aoMaxRequestDate;
+
     public GetLegalSearchRequest withAoMaxRequestDate(LocalDate aoMaxRequestDate) {
         this.aoMaxRequestDate = aoMaxRequestDate;
         return this;
@@ -179,6 +195,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ao_min_issue_date")
     public LocalDate aoMinIssueDate;
+
     public GetLegalSearchRequest withAoMinIssueDate(LocalDate aoMinIssueDate) {
         this.aoMinIssueDate = aoMinIssueDate;
         return this;
@@ -190,6 +207,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ao_min_request_date")
     public LocalDate aoMinRequestDate;
+
     public GetLegalSearchRequest withAoMinRequestDate(LocalDate aoMinRequestDate) {
         this.aoMinRequestDate = aoMinRequestDate;
         return this;
@@ -201,6 +219,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ao_name")
     public String[] aoName;
+
     public GetLegalSearchRequest withAoName(String[] aoName) {
         this.aoName = aoName;
         return this;
@@ -212,6 +231,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ao_no")
     public String[] aoNo;
+
     public GetLegalSearchRequest withAoNo(String[] aoNo) {
         this.aoNo = aoNo;
         return this;
@@ -223,6 +243,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ao_regulatory_citation")
     public String[] aoRegulatoryCitation;
+
     public GetLegalSearchRequest withAoRegulatoryCitation(String[] aoRegulatoryCitation) {
         this.aoRegulatoryCitation = aoRegulatoryCitation;
         return this;
@@ -234,6 +255,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ao_requestor")
     public String aoRequestor;
+
     public GetLegalSearchRequest withAoRequestor(String aoRequestor) {
         this.aoRequestor = aoRequestor;
         return this;
@@ -245,6 +267,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ao_requestor_type")
     public GetLegalSearchAoRequestorTypeEnum[] aoRequestorType;
+
     public GetLegalSearchRequest withAoRequestorType(GetLegalSearchAoRequestorTypeEnum[] aoRequestorType) {
         this.aoRequestorType = aoRequestorType;
         return this;
@@ -256,6 +279,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ao_status")
     public String aoStatus;
+
     public GetLegalSearchRequest withAoStatus(String aoStatus) {
         this.aoStatus = aoStatus;
         return this;
@@ -267,6 +291,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ao_statutory_citation")
     public String[] aoStatutoryCitation;
+
     public GetLegalSearchRequest withAoStatutoryCitation(String[] aoStatutoryCitation) {
         this.aoStatutoryCitation = aoStatutoryCitation;
         return this;
@@ -278,6 +303,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetLegalSearchRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -289,6 +315,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=case_citation_require_all")
     public Boolean caseCitationRequireAll;
+
     public GetLegalSearchRequest withCaseCitationRequireAll(Boolean caseCitationRequireAll) {
         this.caseCitationRequireAll = caseCitationRequireAll;
         return this;
@@ -300,6 +327,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=case_dispositions")
     public String[] caseDispositions;
+
     public GetLegalSearchRequest withCaseDispositions(String[] caseDispositions) {
         this.caseDispositions = caseDispositions;
         return this;
@@ -307,16 +335,24 @@ public class GetLegalSearchRequest {
     
     /**
      * Select one or more case_doc_category_id to filter by corresponding CASE_DOCUMENT_CATEGORY:
-     *         - 1 - Conciliation Agreements
-     *         - 2 - Complaint, Responses, Designation of Counsel and Extensions of Timee
+     *         - 1 - Conciliation and Settlement Agreements
+     *         - 2 - Complaint, Responses, Designation of Counsel and Extensions of Time
      *         - 3 - General Counsel Reports, Briefs, Notifications and Responses
      *         - 4 - Certifications
-     *         - 5 - Civil Penalties, Disgorgements and Other Payments
-     *         - 6 - Statements of Reasons 
+     *         - 5 - Civil Penalties, Disgorgements, Other Payments and Letters of Compliance
+     *         - 6 - Statement of Reasons 
+     *         - 1001 - ADR Settlement Agreements
+     *         - 1002 - Complaint, Responses, Designation of Counsel and Extensions of Time
+     *         - 1003 - ADR Memoranda, Notifications and Responses
+     *         - 1004 - Certifications
+     *         - 1005 - Civil Penalties, Disgorgements, Other Payments and Letters of Compliance
+     *         - 1006 - Statement of Reasons 
+     *         - 2001 - Administrative Fine Case
      * 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=case_doc_category_id")
     public GetLegalSearchCaseDocCategoryIDEnum[] caseDocCategoryId;
+
     public GetLegalSearchRequest withCaseDocCategoryId(GetLegalSearchCaseDocCategoryIDEnum[] caseDocCategoryId) {
         this.caseDocCategoryId = caseDocCategoryId;
         return this;
@@ -328,6 +364,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=case_election_cycles")
     public Integer caseElectionCycles;
+
     public GetLegalSearchRequest withCaseElectionCycles(Integer caseElectionCycles) {
         this.caseElectionCycles = caseElectionCycles;
         return this;
@@ -339,6 +376,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=case_max_close_date")
     public LocalDate caseMaxCloseDate;
+
     public GetLegalSearchRequest withCaseMaxCloseDate(LocalDate caseMaxCloseDate) {
         this.caseMaxCloseDate = caseMaxCloseDate;
         return this;
@@ -350,6 +388,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=case_max_open_date")
     public LocalDate caseMaxOpenDate;
+
     public GetLegalSearchRequest withCaseMaxOpenDate(LocalDate caseMaxOpenDate) {
         this.caseMaxOpenDate = caseMaxOpenDate;
         return this;
@@ -361,6 +400,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=case_min_close_date")
     public LocalDate caseMinCloseDate;
+
     public GetLegalSearchRequest withCaseMinCloseDate(LocalDate caseMinCloseDate) {
         this.caseMinCloseDate = caseMinCloseDate;
         return this;
@@ -372,6 +412,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=case_min_open_date")
     public LocalDate caseMinOpenDate;
+
     public GetLegalSearchRequest withCaseMinOpenDate(LocalDate caseMinOpenDate) {
         this.caseMinOpenDate = caseMinOpenDate;
         return this;
@@ -383,6 +424,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=case_no")
     public String[] caseNo;
+
     public GetLegalSearchRequest withCaseNo(String[] caseNo) {
         this.caseNo = caseNo;
         return this;
@@ -394,6 +436,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=case_regulatory_citation")
     public String[] caseRegulatoryCitation;
+
     public GetLegalSearchRequest withCaseRegulatoryCitation(String[] caseRegulatoryCitation) {
         this.caseRegulatoryCitation = caseRegulatoryCitation;
         return this;
@@ -405,6 +448,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=case_respondents")
     public String caseRespondents;
+
     public GetLegalSearchRequest withCaseRespondents(String caseRespondents) {
         this.caseRespondents = caseRespondents;
         return this;
@@ -416,6 +460,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=case_statutory_citation")
     public String[] caseStatutoryCitation;
+
     public GetLegalSearchRequest withCaseStatutoryCitation(String[] caseStatutoryCitation) {
         this.caseStatutoryCitation = caseStatutoryCitation;
         return this;
@@ -427,6 +472,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from_hit")
     public Integer fromHit;
+
     public GetLegalSearchRequest withFromHit(Integer fromHit) {
         this.fromHit = fromHit;
         return this;
@@ -438,6 +484,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hits_returned")
     public Integer hitsReturned;
+
     public GetLegalSearchRequest withHitsReturned(Integer hitsReturned) {
         this.hitsReturned = hitsReturned;
         return this;
@@ -448,8 +495,9 @@ public class GetLegalSearchRequest {
      * 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mur_type")
-    public String murType;
-    public GetLegalSearchRequest withMurType(String murType) {
+    public GetLegalSearchMurTypeEnum murType;
+
+    public GetLegalSearchRequest withMurType(GetLegalSearchMurTypeEnum murType) {
         this.murType = murType;
         return this;
     }
@@ -460,6 +508,7 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetLegalSearchRequest withQ(String q) {
         this.q = q;
         return this;
@@ -471,25 +520,25 @@ public class GetLegalSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetLegalSearchRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
     
     /**
-     * Legal Document type to refine search by
-     *     - statutes
-     *     - regulations
-     *     - advisory_opinions
-     *     - murs
-     *     - admin_fines
+     * Choose a legal document type
      * 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
-    public String type;
-    public GetLegalSearchRequest withType(String type) {
+    public GetLegalSearchTypeEnum type;
+
+    public GetLegalSearchRequest withType(GetLegalSearchTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetLegalSearchRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

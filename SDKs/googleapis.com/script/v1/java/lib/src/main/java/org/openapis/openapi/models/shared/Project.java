@@ -18,6 +18,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Project withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator")
     public GoogleAppsScriptTypeUser creator;
+
     public Project withCreator(GoogleAppsScriptTypeUser creator) {
         this.creator = creator;
         return this;
@@ -40,6 +42,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifyUser")
     public GoogleAppsScriptTypeUser lastModifyUser;
+
     public Project withLastModifyUser(GoogleAppsScriptTypeUser lastModifyUser) {
         this.lastModifyUser = lastModifyUser;
         return this;
@@ -51,6 +54,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentId")
     public String parentId;
+
     public Project withParentId(String parentId) {
         this.parentId = parentId;
         return this;
@@ -62,6 +66,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptId")
     public String scriptId;
+
     public Project withScriptId(String scriptId) {
         this.scriptId = scriptId;
         return this;
@@ -73,6 +78,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Project withTitle(String title) {
         this.title = title;
         return this;
@@ -84,9 +90,11 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Project withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Project(){}
 }

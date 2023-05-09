@@ -18,6 +18,7 @@ public class DatabasesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Database[] items;
+
     public DatabasesListResponse withItems(Database[] items) {
         this.items = items;
         return this;
@@ -29,9 +30,11 @@ public class DatabasesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DatabasesListResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public DatabasesListResponse(){}
 }

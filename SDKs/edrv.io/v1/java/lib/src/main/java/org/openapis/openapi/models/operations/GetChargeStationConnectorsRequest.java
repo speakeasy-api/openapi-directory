@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChargeStationConnectorsRequest {
@@ -12,6 +13,7 @@ public class GetChargeStationConnectorsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetChargeStationConnectorsRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class GetChargeStationConnectorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_evse")
     public Boolean includeEvse;
+
     public GetChargeStationConnectorsRequest withIncludeEvse(Boolean includeEvse) {
         this.includeEvse = includeEvse;
         return this;
@@ -32,9 +35,13 @@ public class GetChargeStationConnectorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_organization")
     public Boolean includeOrganization;
+
     public GetChargeStationConnectorsRequest withIncludeOrganization(Boolean includeOrganization) {
         this.includeOrganization = includeOrganization;
         return this;
     }
     
+    public GetChargeStationConnectorsRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

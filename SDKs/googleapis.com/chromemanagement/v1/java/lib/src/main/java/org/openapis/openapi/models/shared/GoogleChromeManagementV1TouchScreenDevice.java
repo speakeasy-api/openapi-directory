@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1TouchScreenDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleChromeManagementV1TouchScreenDevice withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromeManagementV1TouchScreenDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stylusCapable")
     public Boolean stylusCapable;
+
     public GoogleChromeManagementV1TouchScreenDevice withStylusCapable(Boolean stylusCapable) {
         this.stylusCapable = stylusCapable;
         return this;
@@ -40,9 +42,11 @@ public class GoogleChromeManagementV1TouchScreenDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("touchPointCount")
     public Integer touchPointCount;
+
     public GoogleChromeManagementV1TouchScreenDevice withTouchPointCount(Integer touchPointCount) {
         this.touchPointCount = touchPointCount;
         return this;
     }
     
+    public GoogleChromeManagementV1TouchScreenDevice(){}
 }

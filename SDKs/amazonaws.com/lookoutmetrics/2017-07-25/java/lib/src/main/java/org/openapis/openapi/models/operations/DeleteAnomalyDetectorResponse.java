@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAnomalyDetectorResponse {
@@ -12,6 +13,7 @@ public class DeleteAnomalyDetectorResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteAnomalyDetectorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteAnomalyDetectorResponse {
      */
     
     public Object conflictException;
+
     public DeleteAnomalyDetectorResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAnomalyDetectorResponse {
     
     
     public String contentType;
+
     public DeleteAnomalyDetectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAnomalyDetectorResponse {
      */
     
     public java.util.Map<String, Object> deleteAnomalyDetectorResponse;
+
     public DeleteAnomalyDetectorResponse withDeleteAnomalyDetectorResponse(java.util.Map<String, Object> deleteAnomalyDetectorResponse) {
         this.deleteAnomalyDetectorResponse = deleteAnomalyDetectorResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAnomalyDetectorResponse {
      */
     
     public Object internalServerException;
+
     public DeleteAnomalyDetectorResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteAnomalyDetectorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAnomalyDetectorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteAnomalyDetectorResponse {
     
     
     public Integer statusCode;
+
     public DeleteAnomalyDetectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteAnomalyDetectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAnomalyDetectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteAnomalyDetectorResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteAnomalyDetectorResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteAnomalyDetectorResponse {
      */
     
     public Object validationException;
+
     public DeleteAnomalyDetectorResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteAnomalyDetectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

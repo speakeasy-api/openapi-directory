@@ -15,6 +15,7 @@ public class SourceConnectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionParameters")
     public SourceConnectionParameters connectionParameters;
+
     public SourceConnectionDetail withConnectionParameters(SourceConnectionParameters connectionParameters) {
         this.connectionParameters = connectionParameters;
         return this;
@@ -23,6 +24,7 @@ public class SourceConnectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastSync")
     public LastSync lastSync;
+
     public SourceConnectionDetail withLastSync(LastSync lastSync) {
         this.lastSync = lastSync;
         return this;
@@ -31,9 +33,11 @@ public class SourceConnectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public SourceTypeEnum type;
+
     public SourceConnectionDetail withType(SourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SourceConnectionDetail(){}
 }

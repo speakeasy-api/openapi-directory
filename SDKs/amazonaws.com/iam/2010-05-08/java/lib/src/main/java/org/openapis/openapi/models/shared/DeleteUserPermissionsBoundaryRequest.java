@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteUserPermissionsBoundaryRequest {
     
     public String userName;
+
     public DeleteUserPermissionsBoundaryRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public DeleteUserPermissionsBoundaryRequest(@JsonProperty("UserName") String userName) {
+        this.userName = userName;
+  }
 }

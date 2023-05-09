@@ -12,6 +12,7 @@ public class RenderUiTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HumanTaskUiArn")
     public String humanTaskUiArn;
+
     public RenderUiTemplateRequest withHumanTaskUiArn(String humanTaskUiArn) {
         this.humanTaskUiArn = humanTaskUiArn;
         return this;
@@ -19,6 +20,7 @@ public class RenderUiTemplateRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public RenderUiTemplateRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -26,6 +28,7 @@ public class RenderUiTemplateRequest {
     
     @JsonProperty("Task")
     public RenderableTask task;
+
     public RenderUiTemplateRequest withTask(RenderableTask task) {
         this.task = task;
         return this;
@@ -34,9 +37,14 @@ public class RenderUiTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UiTemplate")
     public UiTemplate uiTemplate;
+
     public RenderUiTemplateRequest withUiTemplate(UiTemplate uiTemplate) {
         this.uiTemplate = uiTemplate;
         return this;
     }
     
+    public RenderUiTemplateRequest(@JsonProperty("RoleArn") String roleArn, @JsonProperty("Task") RenderableTask task) {
+        this.roleArn = roleArn;
+        this.task = task;
+  }
 }

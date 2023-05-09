@@ -15,6 +15,7 @@ public class BehaviorCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparisonOperator")
     public ComparisonOperatorEnum comparisonOperator;
+
     public BehaviorCriteria withComparisonOperator(ComparisonOperatorEnum comparisonOperator) {
         this.comparisonOperator = comparisonOperator;
         return this;
@@ -23,6 +24,7 @@ public class BehaviorCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consecutiveDatapointsToAlarm")
     public Long consecutiveDatapointsToAlarm;
+
     public BehaviorCriteria withConsecutiveDatapointsToAlarm(Long consecutiveDatapointsToAlarm) {
         this.consecutiveDatapointsToAlarm = consecutiveDatapointsToAlarm;
         return this;
@@ -31,6 +33,7 @@ public class BehaviorCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consecutiveDatapointsToClear")
     public Long consecutiveDatapointsToClear;
+
     public BehaviorCriteria withConsecutiveDatapointsToClear(Long consecutiveDatapointsToClear) {
         this.consecutiveDatapointsToClear = consecutiveDatapointsToClear;
         return this;
@@ -39,6 +42,7 @@ public class BehaviorCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationSeconds")
     public Long durationSeconds;
+
     public BehaviorCriteria withDurationSeconds(Long durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -47,6 +51,7 @@ public class BehaviorCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mlDetectionConfig")
     public MachineLearningDetectionConfig mlDetectionConfig;
+
     public BehaviorCriteria withMlDetectionConfig(MachineLearningDetectionConfig mlDetectionConfig) {
         this.mlDetectionConfig = mlDetectionConfig;
         return this;
@@ -55,6 +60,7 @@ public class BehaviorCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statisticalThreshold")
     public StatisticalThreshold statisticalThreshold;
+
     public BehaviorCriteria withStatisticalThreshold(StatisticalThreshold statisticalThreshold) {
         this.statisticalThreshold = statisticalThreshold;
         return this;
@@ -63,9 +69,11 @@ public class BehaviorCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public MetricValue value;
+
     public BehaviorCriteria withValue(MetricValue value) {
         this.value = value;
         return this;
     }
     
+    public BehaviorCriteria(){}
 }

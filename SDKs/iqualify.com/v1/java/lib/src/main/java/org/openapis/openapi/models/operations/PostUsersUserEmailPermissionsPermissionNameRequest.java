@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersUserEmailPermissionsPermissionNameRequest {
@@ -12,6 +13,7 @@ public class PostUsersUserEmailPermissionsPermissionNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=permissionName")
     public org.openapis.openapi.models.shared.PermissionNameEnum permissionName;
+
     public PostUsersUserEmailPermissionsPermissionNameRequest withPermissionName(org.openapis.openapi.models.shared.PermissionNameEnum permissionName) {
         this.permissionName = permissionName;
         return this;
@@ -22,9 +24,14 @@ public class PostUsersUserEmailPermissionsPermissionNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
     public String userEmail;
+
     public PostUsersUserEmailPermissionsPermissionNameRequest withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public PostUsersUserEmailPermissionsPermissionNameRequest(@JsonProperty("permissionName") org.openapis.openapi.models.shared.PermissionNameEnum permissionName, @JsonProperty("userEmail") String userEmail) {
+        this.permissionName = permissionName;
+        this.userEmail = userEmail;
+  }
 }

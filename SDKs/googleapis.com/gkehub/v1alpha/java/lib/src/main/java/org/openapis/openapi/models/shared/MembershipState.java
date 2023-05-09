@@ -18,9 +18,11 @@ public class MembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public MembershipStateCodeEnum code;
+
     public MembershipState withCode(MembershipStateCodeEnum code) {
         this.code = code;
         return this;
     }
     
+    public MembershipState(){}
 }

@@ -15,6 +15,7 @@ public class AlternateKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowDuplicates")
     public Boolean allowDuplicates;
+
     public AlternateKey withAllowDuplicates(Boolean allowDuplicates) {
         this.allowDuplicates = allowDuplicates;
         return this;
@@ -22,6 +23,7 @@ public class AlternateKey {
     
     @JsonProperty("length")
     public Long length;
+
     public AlternateKey withLength(Long length) {
         this.length = length;
         return this;
@@ -30,6 +32,7 @@ public class AlternateKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AlternateKey withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +40,14 @@ public class AlternateKey {
     
     @JsonProperty("offset")
     public Long offset;
+
     public AlternateKey withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public AlternateKey(@JsonProperty("length") Long length, @JsonProperty("offset") Long offset) {
+        this.length = length;
+        this.offset = offset;
+  }
 }

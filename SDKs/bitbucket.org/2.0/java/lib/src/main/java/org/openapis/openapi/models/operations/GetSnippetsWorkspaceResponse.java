@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSnippetsWorkspaceResponse {
     
     public String contentType;
+
     public GetSnippetsWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetSnippetsWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public GetSnippetsWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetSnippetsWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSnippetsWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetSnippetsWorkspaceResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetSnippetsWorkspaceResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetSnippetsWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedSnippets paginatedSnippets;
+
     public GetSnippetsWorkspaceResponse withPaginatedSnippets(org.openapis.openapi.models.shared.PaginatedSnippets paginatedSnippets) {
         this.paginatedSnippets = paginatedSnippets;
         return this;
     }
     
+    public GetSnippetsWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

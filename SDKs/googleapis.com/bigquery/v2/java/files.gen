@@ -368,6 +368,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/ArimaSingleModelForecasting
 lib/src/main/java/org/openapis/openapi/models/shared/ArimaSingleModelForecastingMetrics.java
 lib/src/main/java/org/openapis/openapi/models/shared/ArimaFittingMetrics.java
 lib/src/main/java/org/openapis/openapi/models/shared/DataSplitResult.java
+lib/src/main/java/org/openapis/openapi/models/shared/RemoteModelInfoRemoteServiceTypeEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/RemoteModelInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/StandardSqlField.java
 lib/src/main/java/org/openapis/openapi/models/shared/StandardSqlDataTypeTypeKindEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/StandardSqlDataType.java
@@ -433,4 +435,13 @@ lib/src/main/java/org/openapis/openapi/models/shared/TableList.java
 lib/src/main/java/org/openapis/openapi/models/shared/SetIamPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsRequest.java
+docs/sdk/README.md
+docs/datasets/README.md
+docs/jobs/README.md
+docs/models/README.md
+docs/projects/README.md
+docs/routines/README.md
+docs/rowaccesspolicies/README.md
+docs/tabledata/README.md
+docs/tables/README.md
 USAGE.md

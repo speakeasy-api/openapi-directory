@@ -15,6 +15,7 @@ public class NumberConfigPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public NumberConfig[] items;
+
     public NumberConfigPage withItems(NumberConfig[] items) {
         this.items = items;
         return this;
@@ -26,6 +27,7 @@ public class NumberConfigPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public NumberConfigPage withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -37,6 +39,7 @@ public class NumberConfigPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public NumberConfigPage withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -48,9 +51,11 @@ public class NumberConfigPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Integer totalCount;
+
     public NumberConfigPage withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public NumberConfigPage(){}
 }

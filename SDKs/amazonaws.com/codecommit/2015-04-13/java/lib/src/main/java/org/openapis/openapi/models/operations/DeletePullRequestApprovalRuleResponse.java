@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePullRequestApprovalRuleResponse {
@@ -12,6 +13,7 @@ public class DeletePullRequestApprovalRuleResponse {
      */
     
     public Object approvalRuleNameRequiredException;
+
     public DeletePullRequestApprovalRuleResponse withApprovalRuleNameRequiredException(Object approvalRuleNameRequiredException) {
         this.approvalRuleNameRequiredException = approvalRuleNameRequiredException;
         return this;
@@ -22,6 +24,7 @@ public class DeletePullRequestApprovalRuleResponse {
      */
     
     public Object cannotDeleteApprovalRuleFromTemplateException;
+
     public DeletePullRequestApprovalRuleResponse withCannotDeleteApprovalRuleFromTemplateException(Object cannotDeleteApprovalRuleFromTemplateException) {
         this.cannotDeleteApprovalRuleFromTemplateException = cannotDeleteApprovalRuleFromTemplateException;
         return this;
@@ -29,6 +32,7 @@ public class DeletePullRequestApprovalRuleResponse {
     
     
     public String contentType;
+
     public DeletePullRequestApprovalRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeletePullRequestApprovalRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.DeletePullRequestApprovalRuleOutput deletePullRequestApprovalRuleOutput;
+
     public DeletePullRequestApprovalRuleResponse withDeletePullRequestApprovalRuleOutput(org.openapis.openapi.models.shared.DeletePullRequestApprovalRuleOutput deletePullRequestApprovalRuleOutput) {
         this.deletePullRequestApprovalRuleOutput = deletePullRequestApprovalRuleOutput;
         return this;
@@ -49,6 +54,7 @@ public class DeletePullRequestApprovalRuleResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public DeletePullRequestApprovalRuleResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -59,6 +65,7 @@ public class DeletePullRequestApprovalRuleResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public DeletePullRequestApprovalRuleResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -69,6 +76,7 @@ public class DeletePullRequestApprovalRuleResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public DeletePullRequestApprovalRuleResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -79,6 +87,7 @@ public class DeletePullRequestApprovalRuleResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public DeletePullRequestApprovalRuleResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class DeletePullRequestApprovalRuleResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public DeletePullRequestApprovalRuleResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -99,6 +109,7 @@ public class DeletePullRequestApprovalRuleResponse {
      */
     
     public Object invalidApprovalRuleNameException;
+
     public DeletePullRequestApprovalRuleResponse withInvalidApprovalRuleNameException(Object invalidApprovalRuleNameException) {
         this.invalidApprovalRuleNameException = invalidApprovalRuleNameException;
         return this;
@@ -109,6 +120,7 @@ public class DeletePullRequestApprovalRuleResponse {
      */
     
     public Object invalidPullRequestIdException;
+
     public DeletePullRequestApprovalRuleResponse withInvalidPullRequestIdException(Object invalidPullRequestIdException) {
         this.invalidPullRequestIdException = invalidPullRequestIdException;
         return this;
@@ -119,6 +131,7 @@ public class DeletePullRequestApprovalRuleResponse {
      */
     
     public Object pullRequestAlreadyClosedException;
+
     public DeletePullRequestApprovalRuleResponse withPullRequestAlreadyClosedException(Object pullRequestAlreadyClosedException) {
         this.pullRequestAlreadyClosedException = pullRequestAlreadyClosedException;
         return this;
@@ -129,6 +142,7 @@ public class DeletePullRequestApprovalRuleResponse {
      */
     
     public Object pullRequestDoesNotExistException;
+
     public DeletePullRequestApprovalRuleResponse withPullRequestDoesNotExistException(Object pullRequestDoesNotExistException) {
         this.pullRequestDoesNotExistException = pullRequestDoesNotExistException;
         return this;
@@ -139,6 +153,7 @@ public class DeletePullRequestApprovalRuleResponse {
      */
     
     public Object pullRequestIdRequiredException;
+
     public DeletePullRequestApprovalRuleResponse withPullRequestIdRequiredException(Object pullRequestIdRequiredException) {
         this.pullRequestIdRequiredException = pullRequestIdRequiredException;
         return this;
@@ -146,6 +161,7 @@ public class DeletePullRequestApprovalRuleResponse {
     
     
     public Integer statusCode;
+
     public DeletePullRequestApprovalRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -153,9 +169,14 @@ public class DeletePullRequestApprovalRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePullRequestApprovalRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeletePullRequestApprovalRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

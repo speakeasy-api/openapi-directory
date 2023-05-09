@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PepOrderResponse {
     
     public String contentType;
+
     public PepOrderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PepOrderResponse {
      */
     
     public PepOrder200ApplicationJSON pepOrder200ApplicationJSONObject;
+
     public PepOrderResponse withPepOrder200ApplicationJSONObject(PepOrder200ApplicationJSON pepOrder200ApplicationJSONObject) {
         this.pepOrder200ApplicationJSONObject = pepOrder200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class PepOrderResponse {
      */
     
     public PepOrderDefaultApplicationJSON pepOrderDefaultApplicationJSONObject;
+
     public PepOrderResponse withPepOrderDefaultApplicationJSONObject(PepOrderDefaultApplicationJSON pepOrderDefaultApplicationJSONObject) {
         this.pepOrderDefaultApplicationJSONObject = pepOrderDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class PepOrderResponse {
     
     
     public Integer statusCode;
+
     public PepOrderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PepOrderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PepOrderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PepOrderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

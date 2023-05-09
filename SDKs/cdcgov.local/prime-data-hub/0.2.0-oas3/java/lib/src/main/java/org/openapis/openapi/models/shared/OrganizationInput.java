@@ -18,6 +18,7 @@ public class OrganizationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countyName")
     public String countyName;
+
     public OrganizationInput withCountyName(String countyName) {
         this.countyName = countyName;
         return this;
@@ -28,6 +29,7 @@ public class OrganizationInput {
      */
     @JsonProperty("description")
     public String description;
+
     public OrganizationInput withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class OrganizationInput {
     
     @JsonProperty("jurisdiction")
     public OrganizationJurisdictionEnum jurisdiction;
+
     public OrganizationInput withJurisdiction(OrganizationJurisdictionEnum jurisdiction) {
         this.jurisdiction = jurisdiction;
         return this;
@@ -45,6 +48,7 @@ public class OrganizationInput {
      */
     @JsonProperty("name")
     public String name;
+
     public OrganizationInput withName(String name) {
         this.name = name;
         return this;
@@ -56,9 +60,15 @@ public class OrganizationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateCode")
     public String stateCode;
+
     public OrganizationInput withStateCode(String stateCode) {
         this.stateCode = stateCode;
         return this;
     }
     
+    public OrganizationInput(@JsonProperty("description") String description, @JsonProperty("jurisdiction") OrganizationJurisdictionEnum jurisdiction, @JsonProperty("name") String name) {
+        this.description = description;
+        this.jurisdiction = jurisdiction;
+        this.name = name;
+  }
 }

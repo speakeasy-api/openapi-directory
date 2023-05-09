@@ -56,10 +56,8 @@ public class Timeline {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MirrorTimelineAttachmentsDeleteResponse res = new org.openapis.openapi.models.operations.MirrorTimelineAttachmentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.MirrorTimelineAttachmentsDeleteResponse res = new org.openapis.openapi.models.operations.MirrorTimelineAttachmentsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -96,11 +94,9 @@ public class Timeline {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MirrorTimelineAttachmentsGetResponse res = new org.openapis.openapi.models.operations.MirrorTimelineAttachmentsGetResponse() {{
+        org.openapis.openapi.models.operations.MirrorTimelineAttachmentsGetResponse res = new org.openapis.openapi.models.operations.MirrorTimelineAttachmentsGetResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -141,11 +137,9 @@ public class Timeline {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MirrorTimelineAttachmentsInsertResponse res = new org.openapis.openapi.models.operations.MirrorTimelineAttachmentsInsertResponse() {{
+        org.openapis.openapi.models.operations.MirrorTimelineAttachmentsInsertResponse res = new org.openapis.openapi.models.operations.MirrorTimelineAttachmentsInsertResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -186,11 +180,9 @@ public class Timeline {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MirrorTimelineAttachmentsListResponse res = new org.openapis.openapi.models.operations.MirrorTimelineAttachmentsListResponse() {{
+        org.openapis.openapi.models.operations.MirrorTimelineAttachmentsListResponse res = new org.openapis.openapi.models.operations.MirrorTimelineAttachmentsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -231,10 +223,8 @@ public class Timeline {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MirrorTimelineDeleteResponse res = new org.openapis.openapi.models.operations.MirrorTimelineDeleteResponse() {{
+        org.openapis.openapi.models.operations.MirrorTimelineDeleteResponse res = new org.openapis.openapi.models.operations.MirrorTimelineDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -271,11 +261,9 @@ public class Timeline {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MirrorTimelineGetResponse res = new org.openapis.openapi.models.operations.MirrorTimelineGetResponse() {{
+        org.openapis.openapi.models.operations.MirrorTimelineGetResponse res = new org.openapis.openapi.models.operations.MirrorTimelineGetResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -318,11 +306,9 @@ public class Timeline {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MirrorTimelineInsertResponse res = new org.openapis.openapi.models.operations.MirrorTimelineInsertResponse() {{
+        org.openapis.openapi.models.operations.MirrorTimelineInsertResponse res = new org.openapis.openapi.models.operations.MirrorTimelineInsertResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -363,11 +349,9 @@ public class Timeline {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MirrorTimelineListResponse res = new org.openapis.openapi.models.operations.MirrorTimelineListResponse() {{
+        org.openapis.openapi.models.operations.MirrorTimelineListResponse res = new org.openapis.openapi.models.operations.MirrorTimelineListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -410,11 +394,9 @@ public class Timeline {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MirrorTimelinePatchResponse res = new org.openapis.openapi.models.operations.MirrorTimelinePatchResponse() {{
+        org.openapis.openapi.models.operations.MirrorTimelinePatchResponse res = new org.openapis.openapi.models.operations.MirrorTimelinePatchResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -457,11 +439,9 @@ public class Timeline {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MirrorTimelineUpdateResponse res = new org.openapis.openapi.models.operations.MirrorTimelineUpdateResponse() {{
+        org.openapis.openapi.models.operations.MirrorTimelineUpdateResponse res = new org.openapis.openapi.models.operations.MirrorTimelineUpdateResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

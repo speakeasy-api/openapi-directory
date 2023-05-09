@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1DocumentTextAnchor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public GoogleCloudDocumentaiV1DocumentTextAnchor withContent(String content) {
         this.content = content;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1DocumentTextAnchor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textSegments")
     public GoogleCloudDocumentaiV1DocumentTextAnchorTextSegment[] textSegments;
+
     public GoogleCloudDocumentaiV1DocumentTextAnchor withTextSegments(GoogleCloudDocumentaiV1DocumentTextAnchorTextSegment[] textSegments) {
         this.textSegments = textSegments;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1DocumentTextAnchor(){}
 }

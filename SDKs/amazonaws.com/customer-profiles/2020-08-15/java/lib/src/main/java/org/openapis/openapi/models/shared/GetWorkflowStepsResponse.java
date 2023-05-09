@@ -15,6 +15,7 @@ public class GetWorkflowStepsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public WorkflowStepItem[] items;
+
     public GetWorkflowStepsResponse withItems(WorkflowStepItem[] items) {
         this.items = items;
         return this;
@@ -23,6 +24,7 @@ public class GetWorkflowStepsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetWorkflowStepsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,6 +33,7 @@ public class GetWorkflowStepsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkflowId")
     public String workflowId;
+
     public GetWorkflowStepsResponse withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
@@ -39,9 +42,11 @@ public class GetWorkflowStepsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkflowType")
     public WorkflowTypeEnum workflowType;
+
     public GetWorkflowStepsResponse withWorkflowType(WorkflowTypeEnum workflowType) {
         this.workflowType = workflowType;
         return this;
     }
     
+    public GetWorkflowStepsResponse(){}
 }

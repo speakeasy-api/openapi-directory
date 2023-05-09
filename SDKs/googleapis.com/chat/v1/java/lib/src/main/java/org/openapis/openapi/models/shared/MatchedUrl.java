@@ -18,9 +18,11 @@ public class MatchedUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public MatchedUrl withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public MatchedUrl(){}
 }

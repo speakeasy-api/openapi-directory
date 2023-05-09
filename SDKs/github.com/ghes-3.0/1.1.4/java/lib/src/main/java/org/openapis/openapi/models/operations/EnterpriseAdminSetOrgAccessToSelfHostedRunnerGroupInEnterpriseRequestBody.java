@@ -12,9 +12,13 @@ public class EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseReque
      */
     @JsonProperty("selected_organization_ids")
     public Long[] selectedOrganizationIds;
+
     public EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody withSelectedOrganizationIds(Long[] selectedOrganizationIds) {
         this.selectedOrganizationIds = selectedOrganizationIds;
         return this;
     }
     
+    public EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody(@JsonProperty("selected_organization_ids") Long[] selectedOrganizationIds) {
+        this.selectedOrganizationIds = selectedOrganizationIds;
+  }
 }

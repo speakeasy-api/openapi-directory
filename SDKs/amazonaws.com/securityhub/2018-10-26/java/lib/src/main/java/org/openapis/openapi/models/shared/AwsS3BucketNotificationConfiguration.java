@@ -15,9 +15,11 @@ public class AwsS3BucketNotificationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configurations")
     public AwsS3BucketNotificationConfigurationDetail[] configurations;
+
     public AwsS3BucketNotificationConfiguration withConfigurations(AwsS3BucketNotificationConfigurationDetail[] configurations) {
         this.configurations = configurations;
         return this;
     }
     
+    public AwsS3BucketNotificationConfiguration(){}
 }

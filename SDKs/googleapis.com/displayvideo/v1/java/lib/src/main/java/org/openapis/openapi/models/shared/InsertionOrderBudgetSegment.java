@@ -18,6 +18,7 @@ public class InsertionOrderBudgetSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budgetAmountMicros")
     public String budgetAmountMicros;
+
     public InsertionOrderBudgetSegment withBudgetAmountMicros(String budgetAmountMicros) {
         this.budgetAmountMicros = budgetAmountMicros;
         return this;
@@ -29,6 +30,7 @@ public class InsertionOrderBudgetSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignBudgetId")
     public String campaignBudgetId;
+
     public InsertionOrderBudgetSegment withCampaignBudgetId(String campaignBudgetId) {
         this.campaignBudgetId = campaignBudgetId;
         return this;
@@ -40,6 +42,7 @@ public class InsertionOrderBudgetSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateRange")
     public DateRange dateRange;
+
     public InsertionOrderBudgetSegment withDateRange(DateRange dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -51,9 +54,11 @@ public class InsertionOrderBudgetSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public InsertionOrderBudgetSegment withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public InsertionOrderBudgetSegment(){}
 }

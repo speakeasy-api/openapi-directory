@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListWorkflowsResponse {
@@ -12,6 +13,7 @@ public class ListWorkflowsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListWorkflowsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListWorkflowsResponse {
      */
     
     public Object badRequestException;
+
     public ListWorkflowsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class ListWorkflowsResponse {
     
     
     public String contentType;
+
     public ListWorkflowsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListWorkflowsResponse {
      */
     
     public Object internalServerException;
+
     public ListWorkflowsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListWorkflowsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListWorkflowsResponse listWorkflowsResponse;
+
     public ListWorkflowsResponse withListWorkflowsResponse(org.openapis.openapi.models.shared.ListWorkflowsResponse listWorkflowsResponse) {
         this.listWorkflowsResponse = listWorkflowsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListWorkflowsResponse {
     
     
     public Integer statusCode;
+
     public ListWorkflowsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListWorkflowsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListWorkflowsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListWorkflowsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListWorkflowsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class ListWorkflowsResponse {
      */
     
     public Object throttlingException;
+
     public ListWorkflowsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListWorkflowsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ public class PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLeng
      */
     @JsonProperty("benchmarkSharpeRatio")
     public Double benchmarkSharpeRatio;
+
     public PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequestBody1 withBenchmarkSharpeRatio(Double benchmarkSharpeRatio) {
         this.benchmarkSharpeRatio = benchmarkSharpeRatio;
         return this;
@@ -25,6 +26,7 @@ public class PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLeng
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidenceLevel")
     public Double confidenceLevel;
+
     public PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequestBody1 withConfidenceLevel(Double confidenceLevel) {
         this.confidenceLevel = confidenceLevel;
         return this;
@@ -32,6 +34,7 @@ public class PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLeng
     
     @JsonProperty("portfolios")
     public PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequestBody1Portfolios[] portfolios;
+
     public PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequestBody1 withPortfolios(PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequestBody1Portfolios[] portfolios) {
         this.portfolios = portfolios;
         return this;
@@ -42,9 +45,15 @@ public class PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLeng
      */
     @JsonProperty("riskFreeRate")
     public Double riskFreeRate;
+
     public PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequestBody1 withRiskFreeRate(Double riskFreeRate) {
         this.riskFreeRate = riskFreeRate;
         return this;
     }
     
+    public PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequestBody1(@JsonProperty("benchmarkSharpeRatio") Double benchmarkSharpeRatio, @JsonProperty("portfolios") PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequestBody1Portfolios[] portfolios, @JsonProperty("riskFreeRate") Double riskFreeRate) {
+        this.benchmarkSharpeRatio = benchmarkSharpeRatio;
+        this.portfolios = portfolios;
+        this.riskFreeRate = riskFreeRate;
+  }
 }

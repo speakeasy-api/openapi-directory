@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNetworkSmDeviceCommandLogsResponse {
     
     public String contentType;
+
     public GetNetworkSmDeviceCommandLogsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetNetworkSmDeviceCommandLogsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetNetworkSmDeviceCommandLogsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetNetworkSmDeviceCommandLogsResponse {
     
     
     public Integer statusCode;
+
     public GetNetworkSmDeviceCommandLogsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetNetworkSmDeviceCommandLogsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNetworkSmDeviceCommandLogsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetNetworkSmDeviceCommandLogsResponse {
      */
     
     public java.util.Map<String, Object>[] getNetworkSmDeviceCommandLogs200ApplicationJSONObjects;
+
     public GetNetworkSmDeviceCommandLogsResponse withGetNetworkSmDeviceCommandLogs200ApplicationJSONObjects(java.util.Map<String, Object>[] getNetworkSmDeviceCommandLogs200ApplicationJSONObjects) {
         this.getNetworkSmDeviceCommandLogs200ApplicationJSONObjects = getNetworkSmDeviceCommandLogs200ApplicationJSONObjects;
         return this;
     }
     
+    public GetNetworkSmDeviceCommandLogsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

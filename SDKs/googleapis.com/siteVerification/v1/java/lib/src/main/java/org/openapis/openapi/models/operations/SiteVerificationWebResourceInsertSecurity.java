@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SiteVerificationWebResourceInsertSecurity {
     @SpeakeasyMetadata("security:option=true")
     public SiteVerificationWebResourceInsertSecurityOption1 option1;
+
     public SiteVerificationWebResourceInsertSecurity withOption1(SiteVerificationWebResourceInsertSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class SiteVerificationWebResourceInsertSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SiteVerificationWebResourceInsertSecurityOption2 option2;
+
     public SiteVerificationWebResourceInsertSecurity withOption2(SiteVerificationWebResourceInsertSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public SiteVerificationWebResourceInsertSecurity(){}
 }

@@ -15,9 +15,13 @@ public class GetEventStreamResponse {
      */
     @JsonProperty("EventStream")
     public EventStream eventStream;
+
     public GetEventStreamResponse withEventStream(EventStream eventStream) {
         this.eventStream = eventStream;
         return this;
     }
     
+    public GetEventStreamResponse(@JsonProperty("EventStream") EventStream eventStream) {
+        this.eventStream = eventStream;
+  }
 }

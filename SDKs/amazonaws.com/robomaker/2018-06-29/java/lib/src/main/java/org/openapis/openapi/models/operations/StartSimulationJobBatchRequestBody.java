@@ -15,6 +15,7 @@ public class StartSimulationJobBatchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchPolicy")
     public StartSimulationJobBatchRequestBodyBatchPolicy batchPolicy;
+
     public StartSimulationJobBatchRequestBody withBatchPolicy(StartSimulationJobBatchRequestBodyBatchPolicy batchPolicy) {
         this.batchPolicy = batchPolicy;
         return this;
@@ -26,6 +27,7 @@ public class StartSimulationJobBatchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public StartSimulationJobBatchRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -36,6 +38,7 @@ public class StartSimulationJobBatchRequestBody {
      */
     @JsonProperty("createSimulationJobRequests")
     public org.openapis.openapi.models.shared.SimulationJobRequest[] createSimulationJobRequests;
+
     public StartSimulationJobBatchRequestBody withCreateSimulationJobRequests(org.openapis.openapi.models.shared.SimulationJobRequest[] createSimulationJobRequests) {
         this.createSimulationJobRequests = createSimulationJobRequests;
         return this;
@@ -47,9 +50,13 @@ public class StartSimulationJobBatchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public StartSimulationJobBatchRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public StartSimulationJobBatchRequestBody(@JsonProperty("createSimulationJobRequests") org.openapis.openapi.models.shared.SimulationJobRequest[] createSimulationJobRequests) {
+        this.createSimulationJobRequests = createSimulationJobRequests;
+  }
 }

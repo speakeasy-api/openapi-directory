@@ -18,6 +18,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessConfigs")
     public AccessConfig[] accessConfigs;
+
     public NetworkInterface withAccessConfigs(AccessConfig[] accessConfigs) {
         this.accessConfigs = accessConfigs;
         return this;
@@ -29,6 +30,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public NetworkInterface withNetwork(String network) {
         this.network = network;
         return this;
@@ -40,9 +42,11 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkIp")
     public String networkIp;
+
     public NetworkInterface withNetworkIp(String networkIp) {
         this.networkIp = networkIp;
         return this;
     }
     
+    public NetworkInterface(){}
 }

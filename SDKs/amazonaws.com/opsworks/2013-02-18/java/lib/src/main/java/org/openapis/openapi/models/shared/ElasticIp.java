@@ -15,6 +15,7 @@ public class ElasticIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public String domain;
+
     public ElasticIp withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -23,6 +24,7 @@ public class ElasticIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public ElasticIp withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -31,6 +33,7 @@ public class ElasticIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ip")
     public String ip;
+
     public ElasticIp withIp(String ip) {
         this.ip = ip;
         return this;
@@ -39,6 +42,7 @@ public class ElasticIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ElasticIp withName(String name) {
         this.name = name;
         return this;
@@ -47,9 +51,11 @@ public class ElasticIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public ElasticIp withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public ElasticIp(){}
 }

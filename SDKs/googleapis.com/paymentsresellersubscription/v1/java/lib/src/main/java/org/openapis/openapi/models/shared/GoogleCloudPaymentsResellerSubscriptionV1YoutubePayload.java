@@ -18,9 +18,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1YoutubePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerEligibilityIds")
     public String[] partnerEligibilityIds;
+
     public GoogleCloudPaymentsResellerSubscriptionV1YoutubePayload withPartnerEligibilityIds(String[] partnerEligibilityIds) {
         this.partnerEligibilityIds = partnerEligibilityIds;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1YoutubePayload(){}
 }

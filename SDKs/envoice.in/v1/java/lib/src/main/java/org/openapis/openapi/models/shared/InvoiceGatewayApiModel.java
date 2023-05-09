@@ -15,9 +15,11 @@ public class InvoiceGatewayApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public InvoiceGatewayApiModel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public InvoiceGatewayApiModel(){}
 }

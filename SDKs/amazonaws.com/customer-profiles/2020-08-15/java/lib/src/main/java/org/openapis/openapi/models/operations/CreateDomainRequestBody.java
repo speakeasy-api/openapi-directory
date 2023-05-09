@@ -15,6 +15,7 @@ public class CreateDomainRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeadLetterQueueUrl")
     public String deadLetterQueueUrl;
+
     public CreateDomainRequestBody withDeadLetterQueueUrl(String deadLetterQueueUrl) {
         this.deadLetterQueueUrl = deadLetterQueueUrl;
         return this;
@@ -26,6 +27,7 @@ public class CreateDomainRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultEncryptionKey")
     public String defaultEncryptionKey;
+
     public CreateDomainRequestBody withDefaultEncryptionKey(String defaultEncryptionKey) {
         this.defaultEncryptionKey = defaultEncryptionKey;
         return this;
@@ -36,6 +38,7 @@ public class CreateDomainRequestBody {
      */
     @JsonProperty("DefaultExpirationDays")
     public Long defaultExpirationDays;
+
     public CreateDomainRequestBody withDefaultExpirationDays(Long defaultExpirationDays) {
         this.defaultExpirationDays = defaultExpirationDays;
         return this;
@@ -47,6 +50,7 @@ public class CreateDomainRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Matching")
     public CreateDomainRequestBodyMatching matching;
+
     public CreateDomainRequestBody withMatching(CreateDomainRequestBodyMatching matching) {
         this.matching = matching;
         return this;
@@ -58,9 +62,13 @@ public class CreateDomainRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateDomainRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDomainRequestBody(@JsonProperty("DefaultExpirationDays") Long defaultExpirationDays) {
+        this.defaultExpirationDays = defaultExpirationDays;
+  }
 }

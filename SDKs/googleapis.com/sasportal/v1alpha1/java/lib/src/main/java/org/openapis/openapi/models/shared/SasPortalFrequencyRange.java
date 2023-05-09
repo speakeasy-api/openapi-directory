@@ -18,6 +18,7 @@ public class SasPortalFrequencyRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highFrequencyMhz")
     public Double highFrequencyMhz;
+
     public SasPortalFrequencyRange withHighFrequencyMhz(Double highFrequencyMhz) {
         this.highFrequencyMhz = highFrequencyMhz;
         return this;
@@ -29,9 +30,11 @@ public class SasPortalFrequencyRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowFrequencyMhz")
     public Double lowFrequencyMhz;
+
     public SasPortalFrequencyRange withLowFrequencyMhz(Double lowFrequencyMhz) {
         this.lowFrequencyMhz = lowFrequencyMhz;
         return this;
     }
     
+    public SasPortalFrequencyRange(){}
 }

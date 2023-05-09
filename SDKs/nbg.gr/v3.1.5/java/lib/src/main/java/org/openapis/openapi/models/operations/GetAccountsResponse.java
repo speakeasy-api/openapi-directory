@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAccountsResponse {
     
     public String contentType;
+
     public GetAccountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAccountsResponse {
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public GetAccountsResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -29,6 +32,7 @@ public class GetAccountsResponse {
      */
     
     public org.openapis.openapi.models.shared.OBReadAccount5 obReadAccount5;
+
     public GetAccountsResponse withOBReadAccount5(org.openapis.openapi.models.shared.OBReadAccount5 obReadAccount5) {
         this.obReadAccount5 = obReadAccount5;
         return this;
@@ -36,6 +40,7 @@ public class GetAccountsResponse {
     
     
     public Integer statusCode;
+
     public GetAccountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetAccountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAccountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAccountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

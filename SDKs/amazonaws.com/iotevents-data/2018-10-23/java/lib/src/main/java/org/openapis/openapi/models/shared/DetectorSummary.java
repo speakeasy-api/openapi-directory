@@ -22,6 +22,7 @@ public class DetectorSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public DetectorSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DetectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectorModelName")
     public String detectorModelName;
+
     public DetectorSummary withDetectorModelName(String detectorModelName) {
         this.detectorModelName = detectorModelName;
         return this;
@@ -38,6 +40,7 @@ public class DetectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectorModelVersion")
     public String detectorModelVersion;
+
     public DetectorSummary withDetectorModelVersion(String detectorModelVersion) {
         this.detectorModelVersion = detectorModelVersion;
         return this;
@@ -46,6 +49,7 @@ public class DetectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyValue")
     public String keyValue;
+
     public DetectorSummary withKeyValue(String keyValue) {
         this.keyValue = keyValue;
         return this;
@@ -56,6 +60,7 @@ public class DetectorSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public DetectorSummary withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -64,9 +69,11 @@ public class DetectorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public DetectorStateSummary state;
+
     public DetectorSummary withState(DetectorStateSummary state) {
         this.state = state;
         return this;
     }
     
+    public DetectorSummary(){}
 }

@@ -20,6 +20,7 @@ public class AssessmentEvidenceFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentId")
     public String assessmentId;
+
     public AssessmentEvidenceFolder withAssessmentId(String assessmentId) {
         this.assessmentId = assessmentId;
         return this;
@@ -28,6 +29,7 @@ public class AssessmentEvidenceFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentReportSelectionCount")
     public Long assessmentReportSelectionCount;
+
     public AssessmentEvidenceFolder withAssessmentReportSelectionCount(Long assessmentReportSelectionCount) {
         this.assessmentReportSelectionCount = assessmentReportSelectionCount;
         return this;
@@ -36,6 +38,7 @@ public class AssessmentEvidenceFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public String author;
+
     public AssessmentEvidenceFolder withAuthor(String author) {
         this.author = author;
         return this;
@@ -44,6 +47,7 @@ public class AssessmentEvidenceFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlId")
     public String controlId;
+
     public AssessmentEvidenceFolder withControlId(String controlId) {
         this.controlId = controlId;
         return this;
@@ -52,6 +56,7 @@ public class AssessmentEvidenceFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlName")
     public String controlName;
+
     public AssessmentEvidenceFolder withControlName(String controlName) {
         this.controlName = controlName;
         return this;
@@ -60,6 +65,7 @@ public class AssessmentEvidenceFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlSetId")
     public String controlSetId;
+
     public AssessmentEvidenceFolder withControlSetId(String controlSetId) {
         this.controlSetId = controlSetId;
         return this;
@@ -68,6 +74,7 @@ public class AssessmentEvidenceFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSource")
     public String dataSource;
+
     public AssessmentEvidenceFolder withDataSource(String dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -78,6 +85,7 @@ public class AssessmentEvidenceFolder {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public AssessmentEvidenceFolder withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -86,6 +94,7 @@ public class AssessmentEvidenceFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidenceAwsServiceSourceCount")
     public Long evidenceAwsServiceSourceCount;
+
     public AssessmentEvidenceFolder withEvidenceAwsServiceSourceCount(Long evidenceAwsServiceSourceCount) {
         this.evidenceAwsServiceSourceCount = evidenceAwsServiceSourceCount;
         return this;
@@ -94,6 +103,7 @@ public class AssessmentEvidenceFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidenceByTypeComplianceCheckCount")
     public Long evidenceByTypeComplianceCheckCount;
+
     public AssessmentEvidenceFolder withEvidenceByTypeComplianceCheckCount(Long evidenceByTypeComplianceCheckCount) {
         this.evidenceByTypeComplianceCheckCount = evidenceByTypeComplianceCheckCount;
         return this;
@@ -102,6 +112,7 @@ public class AssessmentEvidenceFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidenceByTypeComplianceCheckIssuesCount")
     public Long evidenceByTypeComplianceCheckIssuesCount;
+
     public AssessmentEvidenceFolder withEvidenceByTypeComplianceCheckIssuesCount(Long evidenceByTypeComplianceCheckIssuesCount) {
         this.evidenceByTypeComplianceCheckIssuesCount = evidenceByTypeComplianceCheckIssuesCount;
         return this;
@@ -110,6 +121,7 @@ public class AssessmentEvidenceFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidenceByTypeConfigurationDataCount")
     public Long evidenceByTypeConfigurationDataCount;
+
     public AssessmentEvidenceFolder withEvidenceByTypeConfigurationDataCount(Long evidenceByTypeConfigurationDataCount) {
         this.evidenceByTypeConfigurationDataCount = evidenceByTypeConfigurationDataCount;
         return this;
@@ -118,6 +130,7 @@ public class AssessmentEvidenceFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidenceByTypeManualCount")
     public Long evidenceByTypeManualCount;
+
     public AssessmentEvidenceFolder withEvidenceByTypeManualCount(Long evidenceByTypeManualCount) {
         this.evidenceByTypeManualCount = evidenceByTypeManualCount;
         return this;
@@ -126,6 +139,7 @@ public class AssessmentEvidenceFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidenceByTypeUserActivityCount")
     public Long evidenceByTypeUserActivityCount;
+
     public AssessmentEvidenceFolder withEvidenceByTypeUserActivityCount(Long evidenceByTypeUserActivityCount) {
         this.evidenceByTypeUserActivityCount = evidenceByTypeUserActivityCount;
         return this;
@@ -134,6 +148,7 @@ public class AssessmentEvidenceFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidenceResourcesIncludedCount")
     public Long evidenceResourcesIncludedCount;
+
     public AssessmentEvidenceFolder withEvidenceResourcesIncludedCount(Long evidenceResourcesIncludedCount) {
         this.evidenceResourcesIncludedCount = evidenceResourcesIncludedCount;
         return this;
@@ -142,6 +157,7 @@ public class AssessmentEvidenceFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AssessmentEvidenceFolder withId(String id) {
         this.id = id;
         return this;
@@ -150,6 +166,7 @@ public class AssessmentEvidenceFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AssessmentEvidenceFolder withName(String name) {
         this.name = name;
         return this;
@@ -158,9 +175,11 @@ public class AssessmentEvidenceFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalEvidence")
     public Long totalEvidence;
+
     public AssessmentEvidenceFolder withTotalEvidence(Long totalEvidence) {
         this.totalEvidence = totalEvidence;
         return this;
     }
     
+    public AssessmentEvidenceFolder(){}
 }

@@ -15,6 +15,7 @@ public class WgTaskStatusListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public WgTaskStatusVO[] result;
+
     public WgTaskStatusListVO withResult(WgTaskStatusVO[] result) {
         this.result = result;
         return this;
@@ -23,6 +24,7 @@ public class WgTaskStatusListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public WgTaskStatusListVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class WgTaskStatusListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public WgTaskStatusListVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public WgTaskStatusListVO(){}
 }

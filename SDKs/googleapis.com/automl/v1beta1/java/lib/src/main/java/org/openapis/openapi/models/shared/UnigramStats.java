@@ -18,6 +18,7 @@ public class UnigramStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public UnigramStats withCount(String count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class UnigramStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public UnigramStats withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public UnigramStats(){}
 }

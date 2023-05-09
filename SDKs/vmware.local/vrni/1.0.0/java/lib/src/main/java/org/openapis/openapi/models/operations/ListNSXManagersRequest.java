@@ -12,6 +12,7 @@ public class ListNSXManagersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ListNSXManagersRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +23,7 @@ public class ListNSXManagersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
     public Double endTime;
+
     public ListNSXManagersRequest withEndTime(Double endTime) {
         this.endTime = endTime;
         return this;
@@ -32,6 +34,7 @@ public class ListNSXManagersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Double size;
+
     public ListNSXManagersRequest withSize(Double size) {
         this.size = size;
         return this;
@@ -42,9 +45,11 @@ public class ListNSXManagersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_time")
     public Double startTime;
+
     public ListNSXManagersRequest withStartTime(Double startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ListNSXManagersRequest(){}
 }

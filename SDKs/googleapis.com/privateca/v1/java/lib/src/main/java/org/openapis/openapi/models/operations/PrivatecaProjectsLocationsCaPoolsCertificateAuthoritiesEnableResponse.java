@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesEnableResponse {
     
     public String contentType;
+
     public PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesEnableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesEnableRespon
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesEnableResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesEnableRespon
     
     
     public Integer statusCode;
+
     public PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesEnableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesEnableRespon
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesEnableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesEnableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

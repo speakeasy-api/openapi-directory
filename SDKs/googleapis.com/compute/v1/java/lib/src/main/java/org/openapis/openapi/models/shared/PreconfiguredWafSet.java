@@ -15,9 +15,11 @@ public class PreconfiguredWafSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expressionSets")
     public WafExpressionSet[] expressionSets;
+
     public PreconfiguredWafSet withExpressionSets(WafExpressionSet[] expressionSets) {
         this.expressionSets = expressionSets;
         return this;
     }
     
+    public PreconfiguredWafSet(){}
 }

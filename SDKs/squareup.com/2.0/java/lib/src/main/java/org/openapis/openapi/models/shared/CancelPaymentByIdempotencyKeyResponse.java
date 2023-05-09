@@ -20,9 +20,11 @@ public class CancelPaymentByIdempotencyKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CancelPaymentByIdempotencyKeyResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public CancelPaymentByIdempotencyKeyResponse(){}
 }

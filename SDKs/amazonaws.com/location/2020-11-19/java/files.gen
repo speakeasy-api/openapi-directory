@@ -318,4 +318,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdatePlaceIndexResponse.ja
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateRouteCalculatorResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateTrackerResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

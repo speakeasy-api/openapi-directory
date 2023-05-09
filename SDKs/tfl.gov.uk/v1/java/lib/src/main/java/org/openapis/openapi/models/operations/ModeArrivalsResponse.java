@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModeArrivalsResponse {
     
     public byte[] body;
+
     public ModeArrivalsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ModeArrivalsResponse {
     
     
     public String contentType;
+
     public ModeArrivalsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ModeArrivalsResponse {
     
     
     public Integer statusCode;
+
     public ModeArrivalsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ModeArrivalsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModeArrivalsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class ModeArrivalsResponse {
      */
     
     public org.openapis.openapi.models.shared.TflApiPresentationEntitiesPrediction[] tflApiPresentationEntitiesPredictions;
+
     public ModeArrivalsResponse withTflApiPresentationEntitiesPredictions(org.openapis.openapi.models.shared.TflApiPresentationEntitiesPrediction[] tflApiPresentationEntitiesPredictions) {
         this.tflApiPresentationEntitiesPredictions = tflApiPresentationEntitiesPredictions;
         return this;
     }
     
+    public ModeArrivalsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

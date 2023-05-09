@@ -15,6 +15,7 @@ public class Fee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public String amount;
+
     public Fee withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -26,9 +27,11 @@ public class Fee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public FeeTypeEnum type;
+
     public Fee withType(FeeTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Fee(){}
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class Role {
     
     public String description;
+
     public Role withDescription(String description) {
         this.description = description;
         return this;
@@ -16,6 +17,7 @@ public class Role {
     
     
     public Long id;
+
     public Role withId(Long id) {
         this.id = id;
         return this;
@@ -23,6 +25,7 @@ public class Role {
     
     
     public RoleNameEnum name;
+
     public Role withName(RoleNameEnum name) {
         this.name = name;
         return this;
@@ -30,9 +33,11 @@ public class Role {
     
     
     public Boolean visible;
+
     public Role withVisible(Boolean visible) {
         this.visible = visible;
         return this;
     }
     
+    public Role(){}
 }

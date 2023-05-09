@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInternationalStandingOrdersInternationalStandingOrderPaymentIdResponse {
     
     public byte[] body;
+
     public GetInternationalStandingOrdersInternationalStandingOrderPaymentIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetInternationalStandingOrdersInternationalStandingOrderPaymentIdRe
     
     
     public String contentType;
+
     public GetInternationalStandingOrdersInternationalStandingOrderPaymentIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetInternationalStandingOrdersInternationalStandingOrderPaymentIdRe
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetInternationalStandingOrdersInternationalStandingOrderPaymentIdResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetInternationalStandingOrdersInternationalStandingOrderPaymentIdRe
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public GetInternationalStandingOrdersInternationalStandingOrderPaymentIdResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -43,6 +48,7 @@ public class GetInternationalStandingOrdersInternationalStandingOrderPaymentIdRe
      */
     
     public org.openapis.openapi.models.shared.OBWriteInternationalStandingOrderResponse7 obWriteInternationalStandingOrderResponse7;
+
     public GetInternationalStandingOrdersInternationalStandingOrderPaymentIdResponse withOBWriteInternationalStandingOrderResponse7(org.openapis.openapi.models.shared.OBWriteInternationalStandingOrderResponse7 obWriteInternationalStandingOrderResponse7) {
         this.obWriteInternationalStandingOrderResponse7 = obWriteInternationalStandingOrderResponse7;
         return this;
@@ -50,6 +56,7 @@ public class GetInternationalStandingOrdersInternationalStandingOrderPaymentIdRe
     
     
     public Integer statusCode;
+
     public GetInternationalStandingOrdersInternationalStandingOrderPaymentIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -57,9 +64,14 @@ public class GetInternationalStandingOrdersInternationalStandingOrderPaymentIdRe
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInternationalStandingOrdersInternationalStandingOrderPaymentIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetInternationalStandingOrdersInternationalStandingOrderPaymentIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

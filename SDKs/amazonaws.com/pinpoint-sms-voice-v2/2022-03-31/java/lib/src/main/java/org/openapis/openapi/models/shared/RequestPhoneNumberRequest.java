@@ -12,6 +12,7 @@ public class RequestPhoneNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public RequestPhoneNumberRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class RequestPhoneNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletionProtectionEnabled")
     public Boolean deletionProtectionEnabled;
+
     public RequestPhoneNumberRequest withDeletionProtectionEnabled(Boolean deletionProtectionEnabled) {
         this.deletionProtectionEnabled = deletionProtectionEnabled;
         return this;
@@ -27,6 +29,7 @@ public class RequestPhoneNumberRequest {
     
     @JsonProperty("IsoCountryCode")
     public String isoCountryCode;
+
     public RequestPhoneNumberRequest withIsoCountryCode(String isoCountryCode) {
         this.isoCountryCode = isoCountryCode;
         return this;
@@ -34,6 +37,7 @@ public class RequestPhoneNumberRequest {
     
     @JsonProperty("MessageType")
     public MessageTypeEnum messageType;
+
     public RequestPhoneNumberRequest withMessageType(MessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -41,6 +45,7 @@ public class RequestPhoneNumberRequest {
     
     @JsonProperty("NumberCapabilities")
     public NumberCapabilityEnum[] numberCapabilities;
+
     public RequestPhoneNumberRequest withNumberCapabilities(NumberCapabilityEnum[] numberCapabilities) {
         this.numberCapabilities = numberCapabilities;
         return this;
@@ -48,6 +53,7 @@ public class RequestPhoneNumberRequest {
     
     @JsonProperty("NumberType")
     public RequestableNumberTypeEnum numberType;
+
     public RequestPhoneNumberRequest withNumberType(RequestableNumberTypeEnum numberType) {
         this.numberType = numberType;
         return this;
@@ -56,6 +62,7 @@ public class RequestPhoneNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptOutListName")
     public String optOutListName;
+
     public RequestPhoneNumberRequest withOptOutListName(String optOutListName) {
         this.optOutListName = optOutListName;
         return this;
@@ -64,6 +71,7 @@ public class RequestPhoneNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PoolId")
     public String poolId;
+
     public RequestPhoneNumberRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -72,6 +80,7 @@ public class RequestPhoneNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistrationId")
     public String registrationId;
+
     public RequestPhoneNumberRequest withRegistrationId(String registrationId) {
         this.registrationId = registrationId;
         return this;
@@ -80,9 +89,16 @@ public class RequestPhoneNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public RequestPhoneNumberRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public RequestPhoneNumberRequest(@JsonProperty("IsoCountryCode") String isoCountryCode, @JsonProperty("MessageType") MessageTypeEnum messageType, @JsonProperty("NumberCapabilities") NumberCapabilityEnum[] numberCapabilities, @JsonProperty("NumberType") RequestableNumberTypeEnum numberType) {
+        this.isoCountryCode = isoCountryCode;
+        this.messageType = messageType;
+        this.numberCapabilities = numberCapabilities;
+        this.numberType = numberType;
+  }
 }

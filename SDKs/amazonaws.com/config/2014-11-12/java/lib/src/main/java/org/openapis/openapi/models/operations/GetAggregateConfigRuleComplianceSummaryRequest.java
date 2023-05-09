@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAggregateConfigRuleComplianceSummaryRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetAggregateConfigRuleComplianceSummaryRequest getAggregateConfigRuleComplianceSummaryRequest;
+
     public GetAggregateConfigRuleComplianceSummaryRequest withGetAggregateConfigRuleComplianceSummaryRequest(org.openapis.openapi.models.shared.GetAggregateConfigRuleComplianceSummaryRequest getAggregateConfigRuleComplianceSummaryRequest) {
         this.getAggregateConfigRuleComplianceSummaryRequest = getAggregateConfigRuleComplianceSummaryRequest;
         return this;
@@ -19,6 +21,7 @@ public class GetAggregateConfigRuleComplianceSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Limit")
     public String limit;
+
     public GetAggregateConfigRuleComplianceSummaryRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -29,6 +32,7 @@ public class GetAggregateConfigRuleComplianceSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public GetAggregateConfigRuleComplianceSummaryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class GetAggregateConfigRuleComplianceSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetAggregateConfigRuleComplianceSummaryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class GetAggregateConfigRuleComplianceSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetAggregateConfigRuleComplianceSummaryRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class GetAggregateConfigRuleComplianceSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetAggregateConfigRuleComplianceSummaryRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class GetAggregateConfigRuleComplianceSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetAggregateConfigRuleComplianceSummaryRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class GetAggregateConfigRuleComplianceSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetAggregateConfigRuleComplianceSummaryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class GetAggregateConfigRuleComplianceSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetAggregateConfigRuleComplianceSummaryRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class GetAggregateConfigRuleComplianceSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetAggregateConfigRuleComplianceSummaryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class GetAggregateConfigRuleComplianceSummaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public GetAggregateConfigRuleComplianceSummaryXAmzTargetEnum xAmzTarget;
+
     public GetAggregateConfigRuleComplianceSummaryRequest withXAmzTarget(GetAggregateConfigRuleComplianceSummaryXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public GetAggregateConfigRuleComplianceSummaryRequest(@JsonProperty("GetAggregateConfigRuleComplianceSummaryRequest") org.openapis.openapi.models.shared.GetAggregateConfigRuleComplianceSummaryRequest getAggregateConfigRuleComplianceSummaryRequest, @JsonProperty("X-Amz-Target") GetAggregateConfigRuleComplianceSummaryXAmzTargetEnum xAmzTarget) {
+        this.getAggregateConfigRuleComplianceSummaryRequest = getAggregateConfigRuleComplianceSummaryRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

@@ -18,6 +18,7 @@ public class WaterfallChartCustomSubtotal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataIsSubtotal")
     public Boolean dataIsSubtotal;
+
     public WaterfallChartCustomSubtotal withDataIsSubtotal(Boolean dataIsSubtotal) {
         this.dataIsSubtotal = dataIsSubtotal;
         return this;
@@ -29,6 +30,7 @@ public class WaterfallChartCustomSubtotal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public WaterfallChartCustomSubtotal withLabel(String label) {
         this.label = label;
         return this;
@@ -40,9 +42,11 @@ public class WaterfallChartCustomSubtotal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtotalIndex")
     public Integer subtotalIndex;
+
     public WaterfallChartCustomSubtotal withSubtotalIndex(Integer subtotalIndex) {
         this.subtotalIndex = subtotalIndex;
         return this;
     }
     
+    public WaterfallChartCustomSubtotal(){}
 }

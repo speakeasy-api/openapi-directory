@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DetachManagedPolicyFromPermissionSetRequest {
     @JsonProperty("InstanceArn")
     public String instanceArn;
+
     public DetachManagedPolicyFromPermissionSetRequest withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
@@ -16,6 +17,7 @@ public class DetachManagedPolicyFromPermissionSetRequest {
     
     @JsonProperty("ManagedPolicyArn")
     public String managedPolicyArn;
+
     public DetachManagedPolicyFromPermissionSetRequest withManagedPolicyArn(String managedPolicyArn) {
         this.managedPolicyArn = managedPolicyArn;
         return this;
@@ -23,9 +25,15 @@ public class DetachManagedPolicyFromPermissionSetRequest {
     
     @JsonProperty("PermissionSetArn")
     public String permissionSetArn;
+
     public DetachManagedPolicyFromPermissionSetRequest withPermissionSetArn(String permissionSetArn) {
         this.permissionSetArn = permissionSetArn;
         return this;
     }
     
+    public DetachManagedPolicyFromPermissionSetRequest(@JsonProperty("InstanceArn") String instanceArn, @JsonProperty("ManagedPolicyArn") String managedPolicyArn, @JsonProperty("PermissionSetArn") String permissionSetArn) {
+        this.instanceArn = instanceArn;
+        this.managedPolicyArn = managedPolicyArn;
+        this.permissionSetArn = permissionSetArn;
+  }
 }

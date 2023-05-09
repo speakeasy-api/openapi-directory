@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetNamespaceRequest {
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public GetNamespaceRequest withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
     }
     
+    public GetNamespaceRequest(@JsonProperty("namespaceName") String namespaceName) {
+        this.namespaceName = namespaceName;
+  }
 }

@@ -15,6 +15,7 @@ public class CustomizedScalingMetricSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public MetricDimension[] dimensions;
+
     public CustomizedScalingMetricSpecification withDimensions(MetricDimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -22,6 +23,7 @@ public class CustomizedScalingMetricSpecification {
     
     @JsonProperty("MetricName")
     public String metricName;
+
     public CustomizedScalingMetricSpecification withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -29,6 +31,7 @@ public class CustomizedScalingMetricSpecification {
     
     @JsonProperty("Namespace")
     public String namespace;
+
     public CustomizedScalingMetricSpecification withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -36,6 +39,7 @@ public class CustomizedScalingMetricSpecification {
     
     @JsonProperty("Statistic")
     public MetricStatisticEnum statistic;
+
     public CustomizedScalingMetricSpecification withStatistic(MetricStatisticEnum statistic) {
         this.statistic = statistic;
         return this;
@@ -44,9 +48,15 @@ public class CustomizedScalingMetricSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unit")
     public String unit;
+
     public CustomizedScalingMetricSpecification withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public CustomizedScalingMetricSpecification(@JsonProperty("MetricName") String metricName, @JsonProperty("Namespace") String namespace, @JsonProperty("Statistic") MetricStatisticEnum statistic) {
+        this.metricName = metricName;
+        this.namespace = namespace;
+        this.statistic = statistic;
+  }
 }

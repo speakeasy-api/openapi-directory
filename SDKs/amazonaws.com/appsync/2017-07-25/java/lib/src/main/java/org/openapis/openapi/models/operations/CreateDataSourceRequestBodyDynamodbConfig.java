@@ -15,6 +15,7 @@ public class CreateDataSourceRequestBodyDynamodbConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsRegion")
     public String awsRegion;
+
     public CreateDataSourceRequestBodyDynamodbConfig withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -23,6 +24,7 @@ public class CreateDataSourceRequestBodyDynamodbConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deltaSyncConfig")
     public org.openapis.openapi.models.shared.DeltaSyncConfig deltaSyncConfig;
+
     public CreateDataSourceRequestBodyDynamodbConfig withDeltaSyncConfig(org.openapis.openapi.models.shared.DeltaSyncConfig deltaSyncConfig) {
         this.deltaSyncConfig = deltaSyncConfig;
         return this;
@@ -31,6 +33,7 @@ public class CreateDataSourceRequestBodyDynamodbConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableName")
     public String tableName;
+
     public CreateDataSourceRequestBodyDynamodbConfig withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -39,6 +42,7 @@ public class CreateDataSourceRequestBodyDynamodbConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useCallerCredentials")
     public Boolean useCallerCredentials;
+
     public CreateDataSourceRequestBodyDynamodbConfig withUseCallerCredentials(Boolean useCallerCredentials) {
         this.useCallerCredentials = useCallerCredentials;
         return this;
@@ -47,9 +51,11 @@ public class CreateDataSourceRequestBodyDynamodbConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versioned")
     public Boolean versioned;
+
     public CreateDataSourceRequestBodyDynamodbConfig withVersioned(Boolean versioned) {
         this.versioned = versioned;
         return this;
     }
     
+    public CreateDataSourceRequestBodyDynamodbConfig(){}
 }

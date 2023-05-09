@@ -95,4 +95,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateRecordsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/RecordPatch.java
 lib/src/main/java/org/openapis/openapi/models/shared/OperationEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

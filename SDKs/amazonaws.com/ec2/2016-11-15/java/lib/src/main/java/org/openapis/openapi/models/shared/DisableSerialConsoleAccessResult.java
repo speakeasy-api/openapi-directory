@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DisableSerialConsoleAccessResult {
     
     public Boolean serialConsoleAccessEnabled;
+
     public DisableSerialConsoleAccessResult withSerialConsoleAccessEnabled(Boolean serialConsoleAccessEnabled) {
         this.serialConsoleAccessEnabled = serialConsoleAccessEnabled;
         return this;
     }
     
+    public DisableSerialConsoleAccessResult(){}
 }

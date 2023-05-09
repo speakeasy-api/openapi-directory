@@ -18,9 +18,11 @@ public class LaunchAppAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public LaunchAppAction withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
     }
     
+    public LaunchAppAction(){}
 }

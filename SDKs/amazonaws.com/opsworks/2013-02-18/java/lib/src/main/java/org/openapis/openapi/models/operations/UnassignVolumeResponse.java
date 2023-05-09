@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UnassignVolumeResponse {
     
     public String contentType;
+
     public UnassignVolumeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UnassignVolumeResponse {
     
     
     public Integer statusCode;
+
     public UnassignVolumeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UnassignVolumeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UnassignVolumeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UnassignVolumeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UnassignVolumeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -43,9 +48,14 @@ public class UnassignVolumeResponse {
      */
     
     public Object validationException;
+
     public UnassignVolumeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UnassignVolumeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

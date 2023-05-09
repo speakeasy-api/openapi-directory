@@ -15,9 +15,11 @@ public class CreateCustomEntityTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateCustomEntityTypeResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateCustomEntityTypeResponse(){}
 }

@@ -18,6 +18,7 @@ public class SavedQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public QueryContent content;
+
     public SavedQuery withContent(QueryContent content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class SavedQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public SavedQuery withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class SavedQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator")
     public String creator;
+
     public SavedQuery withCreator(String creator) {
         this.creator = creator;
         return this;
@@ -51,6 +54,7 @@ public class SavedQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SavedQuery withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class SavedQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public SavedQuery withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class SavedQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdateTime")
     public String lastUpdateTime;
+
     public SavedQuery withLastUpdateTime(String lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -84,6 +90,7 @@ public class SavedQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdater")
     public String lastUpdater;
+
     public SavedQuery withLastUpdater(String lastUpdater) {
         this.lastUpdater = lastUpdater;
         return this;
@@ -95,9 +102,11 @@ public class SavedQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SavedQuery withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SavedQuery(){}
 }

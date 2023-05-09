@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetConsumerV1CustomersBookingfieldsResponse {
@@ -12,6 +13,7 @@ public class GetConsumerV1CustomersBookingfieldsResponse {
      */
     
     public org.openapis.openapi.models.shared.BookingFieldListViewModel bookingFieldListViewModel;
+
     public GetConsumerV1CustomersBookingfieldsResponse withBookingFieldListViewModel(org.openapis.openapi.models.shared.BookingFieldListViewModel bookingFieldListViewModel) {
         this.bookingFieldListViewModel = bookingFieldListViewModel;
         return this;
@@ -19,6 +21,7 @@ public class GetConsumerV1CustomersBookingfieldsResponse {
     
     
     public String contentType;
+
     public GetConsumerV1CustomersBookingfieldsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetConsumerV1CustomersBookingfieldsResponse {
     
     
     public Integer statusCode;
+
     public GetConsumerV1CustomersBookingfieldsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetConsumerV1CustomersBookingfieldsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetConsumerV1CustomersBookingfieldsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetConsumerV1CustomersBookingfieldsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

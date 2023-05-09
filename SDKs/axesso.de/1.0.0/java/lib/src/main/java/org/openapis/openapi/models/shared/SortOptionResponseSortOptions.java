@@ -12,6 +12,7 @@ public class SortOptionResponseSortOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Long order;
+
     public SortOptionResponseSortOptions withOrder(Long order) {
         this.order = order;
         return this;
@@ -20,6 +21,7 @@ public class SortOptionResponseSortOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortName")
     public String sortName;
+
     public SortOptionResponseSortOptions withSortName(String sortName) {
         this.sortName = sortName;
         return this;
@@ -28,9 +30,11 @@ public class SortOptionResponseSortOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strategy")
     public String strategy;
+
     public SortOptionResponseSortOptions withStrategy(String strategy) {
         this.strategy = strategy;
         return this;
     }
     
+    public SortOptionResponseSortOptions(){}
 }

@@ -18,9 +18,11 @@ public class MultipleChoiceSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answer")
     public String answer;
+
     public MultipleChoiceSubmission withAnswer(String answer) {
         this.answer = answer;
         return this;
     }
     
+    public MultipleChoiceSubmission(){}
 }

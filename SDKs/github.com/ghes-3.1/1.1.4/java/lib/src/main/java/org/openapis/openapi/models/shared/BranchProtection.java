@@ -15,6 +15,7 @@ public class BranchProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_deletions")
     public BranchProtectionAllowDeletions allowDeletions;
+
     public BranchProtection withAllowDeletions(BranchProtectionAllowDeletions allowDeletions) {
         this.allowDeletions = allowDeletions;
         return this;
@@ -23,6 +24,7 @@ public class BranchProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_force_pushes")
     public BranchProtectionAllowForcePushes allowForcePushes;
+
     public BranchProtection withAllowForcePushes(BranchProtectionAllowForcePushes allowForcePushes) {
         this.allowForcePushes = allowForcePushes;
         return this;
@@ -31,6 +33,7 @@ public class BranchProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("block_creations")
     public BranchProtectionBlockCreations blockCreations;
+
     public BranchProtection withBlockCreations(BranchProtectionBlockCreations blockCreations) {
         this.blockCreations = blockCreations;
         return this;
@@ -39,6 +42,7 @@ public class BranchProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public BranchProtection withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -50,6 +54,7 @@ public class BranchProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforce_admins")
     public ProtectedBranchAdminEnforced enforceAdmins;
+
     public BranchProtection withEnforceAdmins(ProtectedBranchAdminEnforced enforceAdmins) {
         this.enforceAdmins = enforceAdmins;
         return this;
@@ -58,6 +63,7 @@ public class BranchProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BranchProtection withName(String name) {
         this.name = name;
         return this;
@@ -66,6 +72,7 @@ public class BranchProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protection_url")
     public String protectionUrl;
+
     public BranchProtection withProtectionUrl(String protectionUrl) {
         this.protectionUrl = protectionUrl;
         return this;
@@ -74,6 +81,7 @@ public class BranchProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required_conversation_resolution")
     public BranchProtectionRequiredConversationResolution requiredConversationResolution;
+
     public BranchProtection withRequiredConversationResolution(BranchProtectionRequiredConversationResolution requiredConversationResolution) {
         this.requiredConversationResolution = requiredConversationResolution;
         return this;
@@ -82,6 +90,7 @@ public class BranchProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required_linear_history")
     public BranchProtectionRequiredLinearHistory requiredLinearHistory;
+
     public BranchProtection withRequiredLinearHistory(BranchProtectionRequiredLinearHistory requiredLinearHistory) {
         this.requiredLinearHistory = requiredLinearHistory;
         return this;
@@ -93,6 +102,7 @@ public class BranchProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required_pull_request_reviews")
     public ProtectedBranchPullRequestReview requiredPullRequestReviews;
+
     public BranchProtection withRequiredPullRequestReviews(ProtectedBranchPullRequestReview requiredPullRequestReviews) {
         this.requiredPullRequestReviews = requiredPullRequestReviews;
         return this;
@@ -101,6 +111,7 @@ public class BranchProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required_signatures")
     public BranchProtectionRequiredSignatures requiredSignatures;
+
     public BranchProtection withRequiredSignatures(BranchProtectionRequiredSignatures requiredSignatures) {
         this.requiredSignatures = requiredSignatures;
         return this;
@@ -112,6 +123,7 @@ public class BranchProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required_status_checks")
     public ProtectedBranchRequiredStatusCheck requiredStatusChecks;
+
     public BranchProtection withRequiredStatusChecks(ProtectedBranchRequiredStatusCheck requiredStatusChecks) {
         this.requiredStatusChecks = requiredStatusChecks;
         return this;
@@ -123,6 +135,7 @@ public class BranchProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictions")
     public BranchRestrictionPolicy restrictions;
+
     public BranchProtection withRestrictions(BranchRestrictionPolicy restrictions) {
         this.restrictions = restrictions;
         return this;
@@ -131,9 +144,11 @@ public class BranchProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public BranchProtection withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public BranchProtection(){}
 }

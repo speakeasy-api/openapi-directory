@@ -15,9 +15,11 @@ public class GetLogGroupFieldsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroupFields")
     public LogGroupField[] logGroupFields;
+
     public GetLogGroupFieldsResponse withLogGroupFields(LogGroupField[] logGroupFields) {
         this.logGroupFields = logGroupFields;
         return this;
     }
     
+    public GetLogGroupFieldsResponse(){}
 }

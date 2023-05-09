@@ -15,6 +15,7 @@ public class UpdateRobotApplicationRequestBodyRobotSoftwareSuite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public org.openapis.openapi.models.shared.RobotSoftwareSuiteTypeEnum name;
+
     public UpdateRobotApplicationRequestBodyRobotSoftwareSuite withName(org.openapis.openapi.models.shared.RobotSoftwareSuiteTypeEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class UpdateRobotApplicationRequestBodyRobotSoftwareSuite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public org.openapis.openapi.models.shared.RobotSoftwareSuiteVersionTypeEnum version;
+
     public UpdateRobotApplicationRequestBodyRobotSoftwareSuite withVersion(org.openapis.openapi.models.shared.RobotSoftwareSuiteVersionTypeEnum version) {
         this.version = version;
         return this;
     }
     
+    public UpdateRobotApplicationRequestBodyRobotSoftwareSuite(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyDBClusterRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyDBClusterActionEnum action;
+
     public GETModifyDBClusterRequest withAction(GETModifyDBClusterActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllowMajorVersionUpgrade")
     public Boolean allowMajorVersionUpgrade;
+
     public GETModifyDBClusterRequest withAllowMajorVersionUpgrade(Boolean allowMajorVersionUpgrade) {
         this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplyImmediately")
     public Boolean applyImmediately;
+
     public GETModifyDBClusterRequest withApplyImmediately(Boolean applyImmediately) {
         this.applyImmediately = applyImmediately;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BackupRetentionPeriod")
     public Long backupRetentionPeriod;
+
     public GETModifyDBClusterRequest withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CloudwatchLogsExportConfiguration")
     public GETModifyDBClusterCloudwatchLogsExportConfiguration cloudwatchLogsExportConfiguration;
+
     public GETModifyDBClusterRequest withCloudwatchLogsExportConfiguration(GETModifyDBClusterCloudwatchLogsExportConfiguration cloudwatchLogsExportConfiguration) {
         this.cloudwatchLogsExportConfiguration = cloudwatchLogsExportConfiguration;
         return this;
@@ -59,6 +65,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CopyTagsToSnapshot")
     public Boolean copyTagsToSnapshot;
+
     public GETModifyDBClusterRequest withCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
         this.copyTagsToSnapshot = copyTagsToSnapshot;
         return this;
@@ -69,6 +76,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterIdentifier")
     public String dbClusterIdentifier;
+
     public GETModifyDBClusterRequest withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -79,6 +87,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterParameterGroupName")
     public String dbClusterParameterGroupName;
+
     public GETModifyDBClusterRequest withDBClusterParameterGroupName(String dbClusterParameterGroupName) {
         this.dbClusterParameterGroupName = dbClusterParameterGroupName;
         return this;
@@ -89,6 +98,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceParameterGroupName")
     public String dbInstanceParameterGroupName;
+
     public GETModifyDBClusterRequest withDBInstanceParameterGroupName(String dbInstanceParameterGroupName) {
         this.dbInstanceParameterGroupName = dbInstanceParameterGroupName;
         return this;
@@ -99,6 +109,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeletionProtection")
     public Boolean deletionProtection;
+
     public GETModifyDBClusterRequest withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -109,6 +120,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableIAMDatabaseAuthentication")
     public Boolean enableIAMDatabaseAuthentication;
+
     public GETModifyDBClusterRequest withEnableIAMDatabaseAuthentication(Boolean enableIAMDatabaseAuthentication) {
         this.enableIAMDatabaseAuthentication = enableIAMDatabaseAuthentication;
         return this;
@@ -119,6 +131,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EngineVersion")
     public String engineVersion;
+
     public GETModifyDBClusterRequest withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -129,6 +142,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MasterUserPassword")
     public String masterUserPassword;
+
     public GETModifyDBClusterRequest withMasterUserPassword(String masterUserPassword) {
         this.masterUserPassword = masterUserPassword;
         return this;
@@ -139,6 +153,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NewDBClusterIdentifier")
     public String newDBClusterIdentifier;
+
     public GETModifyDBClusterRequest withNewDBClusterIdentifier(String newDBClusterIdentifier) {
         this.newDBClusterIdentifier = newDBClusterIdentifier;
         return this;
@@ -149,6 +164,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OptionGroupName")
     public String optionGroupName;
+
     public GETModifyDBClusterRequest withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -159,6 +175,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Port")
     public Long port;
+
     public GETModifyDBClusterRequest withPort(Long port) {
         this.port = port;
         return this;
@@ -169,6 +186,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PreferredBackupWindow")
     public String preferredBackupWindow;
+
     public GETModifyDBClusterRequest withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
@@ -179,6 +197,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PreferredMaintenanceWindow")
     public String preferredMaintenanceWindow;
+
     public GETModifyDBClusterRequest withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -189,6 +208,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServerlessV2ScalingConfiguration")
     public GETModifyDBClusterServerlessV2ScalingConfiguration serverlessV2ScalingConfiguration;
+
     public GETModifyDBClusterRequest withServerlessV2ScalingConfiguration(GETModifyDBClusterServerlessV2ScalingConfiguration serverlessV2ScalingConfiguration) {
         this.serverlessV2ScalingConfiguration = serverlessV2ScalingConfiguration;
         return this;
@@ -196,6 +216,7 @@ public class GETModifyDBClusterRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyDBClusterVersionEnum version;
+
     public GETModifyDBClusterRequest withVersion(GETModifyDBClusterVersionEnum version) {
         this.version = version;
         return this;
@@ -206,6 +227,7 @@ public class GETModifyDBClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcSecurityGroupIds")
     public String[] vpcSecurityGroupIds;
+
     public GETModifyDBClusterRequest withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
@@ -213,6 +235,7 @@ public class GETModifyDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyDBClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -220,6 +243,7 @@ public class GETModifyDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyDBClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -227,6 +251,7 @@ public class GETModifyDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyDBClusterRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -234,6 +259,7 @@ public class GETModifyDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyDBClusterRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -241,6 +267,7 @@ public class GETModifyDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyDBClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -248,6 +275,7 @@ public class GETModifyDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyDBClusterRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -255,9 +283,15 @@ public class GETModifyDBClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyDBClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyDBClusterRequest(@JsonProperty("Action") GETModifyDBClusterActionEnum action, @JsonProperty("DBClusterIdentifier") String dbClusterIdentifier, @JsonProperty("Version") GETModifyDBClusterVersionEnum version) {
+        this.action = action;
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        this.version = version;
+  }
 }

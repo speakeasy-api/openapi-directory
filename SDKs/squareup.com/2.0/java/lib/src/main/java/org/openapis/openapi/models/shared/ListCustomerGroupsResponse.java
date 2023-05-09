@@ -25,6 +25,7 @@ public class ListCustomerGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public ListCustomerGroupsResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -36,6 +37,7 @@ public class ListCustomerGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public ListCustomerGroupsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -47,9 +49,11 @@ public class ListCustomerGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public CustomerGroup[] groups;
+
     public ListCustomerGroupsResponse withGroups(CustomerGroup[] groups) {
         this.groups = groups;
         return this;
     }
     
+    public ListCustomerGroupsResponse(){}
 }

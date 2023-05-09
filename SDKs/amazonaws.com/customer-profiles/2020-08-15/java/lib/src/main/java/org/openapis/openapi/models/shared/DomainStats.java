@@ -15,6 +15,7 @@ public class DomainStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MeteringProfileCount")
     public Long meteringProfileCount;
+
     public DomainStats withMeteringProfileCount(Long meteringProfileCount) {
         this.meteringProfileCount = meteringProfileCount;
         return this;
@@ -23,6 +24,7 @@ public class DomainStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectCount")
     public Long objectCount;
+
     public DomainStats withObjectCount(Long objectCount) {
         this.objectCount = objectCount;
         return this;
@@ -31,6 +33,7 @@ public class DomainStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProfileCount")
     public Long profileCount;
+
     public DomainStats withProfileCount(Long profileCount) {
         this.profileCount = profileCount;
         return this;
@@ -39,9 +42,11 @@ public class DomainStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalSize")
     public Long totalSize;
+
     public DomainStats withTotalSize(Long totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public DomainStats(){}
 }

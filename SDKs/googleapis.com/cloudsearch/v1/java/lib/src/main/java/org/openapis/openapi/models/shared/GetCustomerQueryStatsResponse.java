@@ -15,6 +15,7 @@ public class GetCustomerQueryStatsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public CustomerQueryStats[] stats;
+
     public GetCustomerQueryStatsResponse withStats(CustomerQueryStats[] stats) {
         this.stats = stats;
         return this;
@@ -26,9 +27,11 @@ public class GetCustomerQueryStatsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalQueryCount")
     public String totalQueryCount;
+
     public GetCustomerQueryStatsResponse withTotalQueryCount(String totalQueryCount) {
         this.totalQueryCount = totalQueryCount;
         return this;
     }
     
+    public GetCustomerQueryStatsResponse(){}
 }

@@ -20,6 +20,7 @@ public class RepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationArn")
     public String associationArn;
+
     public RepositoryAssociation withAssociationArn(String associationArn) {
         this.associationArn = associationArn;
         return this;
@@ -28,6 +29,7 @@ public class RepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationId")
     public String associationId;
+
     public RepositoryAssociation withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -36,6 +38,7 @@ public class RepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionArn")
     public String connectionArn;
+
     public RepositoryAssociation withConnectionArn(String connectionArn) {
         this.connectionArn = connectionArn;
         return this;
@@ -46,6 +49,7 @@ public class RepositoryAssociation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimeStamp")
     public OffsetDateTime createdTimeStamp;
+
     public RepositoryAssociation withCreatedTimeStamp(OffsetDateTime createdTimeStamp) {
         this.createdTimeStamp = createdTimeStamp;
         return this;
@@ -54,6 +58,7 @@ public class RepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSKeyDetails")
     public KMSKeyDetails kmsKeyDetails;
+
     public RepositoryAssociation withKMSKeyDetails(KMSKeyDetails kmsKeyDetails) {
         this.kmsKeyDetails = kmsKeyDetails;
         return this;
@@ -64,6 +69,7 @@ public class RepositoryAssociation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTimeStamp")
     public OffsetDateTime lastUpdatedTimeStamp;
+
     public RepositoryAssociation withLastUpdatedTimeStamp(OffsetDateTime lastUpdatedTimeStamp) {
         this.lastUpdatedTimeStamp = lastUpdatedTimeStamp;
         return this;
@@ -72,6 +78,7 @@ public class RepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public RepositoryAssociation withName(String name) {
         this.name = name;
         return this;
@@ -80,6 +87,7 @@ public class RepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Owner")
     public String owner;
+
     public RepositoryAssociation withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -88,6 +96,7 @@ public class RepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderType")
     public ProviderTypeEnum providerType;
+
     public RepositoryAssociation withProviderType(ProviderTypeEnum providerType) {
         this.providerType = providerType;
         return this;
@@ -99,6 +108,7 @@ public class RepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3RepositoryDetails")
     public S3RepositoryDetails s3RepositoryDetails;
+
     public RepositoryAssociation withS3RepositoryDetails(S3RepositoryDetails s3RepositoryDetails) {
         this.s3RepositoryDetails = s3RepositoryDetails;
         return this;
@@ -107,6 +117,7 @@ public class RepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public RepositoryAssociationStateEnum state;
+
     public RepositoryAssociation withState(RepositoryAssociationStateEnum state) {
         this.state = state;
         return this;
@@ -115,9 +126,11 @@ public class RepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateReason")
     public String stateReason;
+
     public RepositoryAssociation withStateReason(String stateReason) {
         this.stateReason = stateReason;
         return this;
     }
     
+    public RepositoryAssociation(){}
 }

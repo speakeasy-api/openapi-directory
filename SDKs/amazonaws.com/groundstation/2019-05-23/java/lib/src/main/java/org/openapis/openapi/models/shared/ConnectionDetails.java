@@ -15,6 +15,7 @@ public class ConnectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mtu")
     public Long mtu;
+
     public ConnectionDetails withMtu(Long mtu) {
         this.mtu = mtu;
         return this;
@@ -22,9 +23,13 @@ public class ConnectionDetails {
     
     @JsonProperty("socketAddress")
     public SocketAddress socketAddress;
+
     public ConnectionDetails withSocketAddress(SocketAddress socketAddress) {
         this.socketAddress = socketAddress;
         return this;
     }
     
+    public ConnectionDetails(@JsonProperty("socketAddress") SocketAddress socketAddress) {
+        this.socketAddress = socketAddress;
+  }
 }

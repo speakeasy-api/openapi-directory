@@ -22,6 +22,7 @@ public class AnomalyInstance {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public AnomalyInstance withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -29,6 +30,7 @@ public class AnomalyInstance {
     
     @JsonProperty("id")
     public String id;
+
     public AnomalyInstance withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +40,7 @@ public class AnomalyInstance {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public AnomalyInstance withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -46,9 +49,14 @@ public class AnomalyInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userFeedback")
     public UserFeedback userFeedback;
+
     public AnomalyInstance withUserFeedback(UserFeedback userFeedback) {
         this.userFeedback = userFeedback;
         return this;
     }
     
+    public AnomalyInstance(@JsonProperty("id") String id, @JsonProperty("startTime") OffsetDateTime startTime) {
+        this.id = id;
+        this.startTime = startTime;
+  }
 }

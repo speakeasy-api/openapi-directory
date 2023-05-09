@@ -18,6 +18,7 @@ public class GHError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hints")
     public GHErrorHints[] hints;
+
     public GHError withHints(GHErrorHints[] hints) {
         this.hints = hints;
         return this;
@@ -26,9 +27,11 @@ public class GHError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GHError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GHError(){}
 }

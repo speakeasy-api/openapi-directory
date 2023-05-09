@@ -15,6 +15,7 @@ public class RouteAsPath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asLists")
     public Long[] asLists;
+
     public RouteAsPath withAsLists(Long[] asLists) {
         this.asLists = asLists;
         return this;
@@ -26,9 +27,11 @@ public class RouteAsPath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathSegmentType")
     public RouteAsPathPathSegmentTypeEnum pathSegmentType;
+
     public RouteAsPath withPathSegmentType(RouteAsPathPathSegmentTypeEnum pathSegmentType) {
         this.pathSegmentType = pathSegmentType;
         return this;
     }
     
+    public RouteAsPath(){}
 }

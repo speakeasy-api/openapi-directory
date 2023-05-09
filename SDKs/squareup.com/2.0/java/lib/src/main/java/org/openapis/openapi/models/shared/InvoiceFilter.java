@@ -20,6 +20,7 @@ public class InvoiceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_ids")
     public String[] customerIds;
+
     public InvoiceFilter withCustomerIds(String[] customerIds) {
         this.customerIds = customerIds;
         return this;
@@ -31,9 +32,13 @@ public class InvoiceFilter {
      */
     @JsonProperty("location_ids")
     public String[] locationIds;
+
     public InvoiceFilter withLocationIds(String[] locationIds) {
         this.locationIds = locationIds;
         return this;
     }
     
+    public InvoiceFilter(@JsonProperty("location_ids") String[] locationIds) {
+        this.locationIds = locationIds;
+  }
 }

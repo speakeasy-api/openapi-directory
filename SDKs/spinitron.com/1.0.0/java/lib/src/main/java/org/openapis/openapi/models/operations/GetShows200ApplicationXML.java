@@ -12,6 +12,7 @@ package org.openapis.openapi.models.operations;
 public class GetShows200ApplicationXML {
     
     public GetShows200ApplicationXMLLinks links;
+
     public GetShows200ApplicationXML withLinks(GetShows200ApplicationXMLLinks links) {
         this.links = links;
         return this;
@@ -19,6 +20,7 @@ public class GetShows200ApplicationXML {
     
     
     public org.openapis.openapi.models.shared.Pagination meta;
+
     public GetShows200ApplicationXML withMeta(org.openapis.openapi.models.shared.Pagination meta) {
         this.meta = meta;
         return this;
@@ -26,9 +28,11 @@ public class GetShows200ApplicationXML {
     
     
     public org.openapis.openapi.models.shared.Show[] items;
+
     public GetShows200ApplicationXML withItems(org.openapis.openapi.models.shared.Show[] items) {
         this.items = items;
         return this;
     }
     
+    public GetShows200ApplicationXML(){}
 }

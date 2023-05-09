@@ -17,6 +17,7 @@ public class BusinessLine {
      */
     @JsonProperty("capability")
     public String capability;
+
     public BusinessLine withCapability(String capability) {
         this.capability = capability;
         return this;
@@ -27,6 +28,7 @@ public class BusinessLine {
      */
     @JsonProperty("id")
     public String id;
+
     public BusinessLine withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class BusinessLine {
      */
     @JsonProperty("industryCode")
     public String industryCode;
+
     public BusinessLine withIndustryCode(String industryCode) {
         this.industryCode = industryCode;
         return this;
@@ -47,6 +50,7 @@ public class BusinessLine {
      */
     @JsonProperty("legalEntityId")
     public String legalEntityId;
+
     public BusinessLine withLegalEntityId(String legalEntityId) {
         this.legalEntityId = legalEntityId;
         return this;
@@ -62,6 +66,7 @@ public class BusinessLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesChannels")
     public String[] salesChannels;
+
     public BusinessLine withSalesChannels(String[] salesChannels) {
         this.salesChannels = salesChannels;
         return this;
@@ -70,6 +75,7 @@ public class BusinessLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceOfFunds")
     public SourceOfFunds sourceOfFunds;
+
     public BusinessLine withSourceOfFunds(SourceOfFunds sourceOfFunds) {
         this.sourceOfFunds = sourceOfFunds;
         return this;
@@ -81,6 +87,7 @@ public class BusinessLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webData")
     public WebData[] webData;
+
     public BusinessLine withWebData(WebData[] webData) {
         this.webData = webData;
         return this;
@@ -89,9 +96,16 @@ public class BusinessLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webDataExemption")
     public WebDataExemption webDataExemption;
+
     public BusinessLine withWebDataExemption(WebDataExemption webDataExemption) {
         this.webDataExemption = webDataExemption;
         return this;
     }
     
+    public BusinessLine(@JsonProperty("capability") String capability, @JsonProperty("id") String id, @JsonProperty("industryCode") String industryCode, @JsonProperty("legalEntityId") String legalEntityId) {
+        this.capability = capability;
+        this.id = id;
+        this.industryCode = industryCode;
+        this.legalEntityId = legalEntityId;
+  }
 }

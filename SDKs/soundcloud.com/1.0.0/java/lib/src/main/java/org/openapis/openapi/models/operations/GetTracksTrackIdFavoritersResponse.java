@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTracksTrackIdFavoritersResponse {
     
     public String contentType;
+
     public GetTracksTrackIdFavoritersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetTracksTrackIdFavoritersResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetTracksTrackIdFavoritersResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class GetTracksTrackIdFavoritersResponse {
     
     
     public Integer statusCode;
+
     public GetTracksTrackIdFavoritersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetTracksTrackIdFavoritersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTracksTrackIdFavoritersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetTracksTrackIdFavoritersResponse {
      */
     
     public org.openapis.openapi.models.shared.UsersList[] usersList;
+
     public GetTracksTrackIdFavoritersResponse withUsersList(org.openapis.openapi.models.shared.UsersList[] usersList) {
         this.usersList = usersList;
         return this;
     }
     
+    public GetTracksTrackIdFavoritersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

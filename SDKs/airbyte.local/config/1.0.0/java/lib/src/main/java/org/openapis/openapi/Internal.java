@@ -55,13 +55,11 @@ public class Internal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateOrUpdateStateResponse res = new org.openapis.openapi.models.operations.CreateOrUpdateStateResponse() {{
+        org.openapis.openapi.models.operations.CreateOrUpdateStateResponse res = new org.openapis.openapi.models.operations.CreateOrUpdateStateResponse(contentType, httpRes.statusCode()) {{
             connectionState = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,11 +109,9 @@ public class Internal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAttemptNormalizationStatusesForJobResponse res = new org.openapis.openapi.models.operations.GetAttemptNormalizationStatusesForJobResponse() {{
+        org.openapis.openapi.models.operations.GetAttemptNormalizationStatusesForJobResponse res = new org.openapis.openapi.models.operations.GetAttemptNormalizationStatusesForJobResponse(contentType, httpRes.statusCode()) {{
             attemptNormalizationStatusReadList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Internal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SaveStatsResponse res = new org.openapis.openapi.models.operations.SaveStatsResponse() {{
+        org.openapis.openapi.models.operations.SaveStatsResponse res = new org.openapis.openapi.models.operations.SaveStatsResponse(contentType, httpRes.statusCode()) {{
             internalOperationResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,11 +191,9 @@ public class Internal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SaveSyncConfigResponse res = new org.openapis.openapi.models.operations.SaveSyncConfigResponse() {{
+        org.openapis.openapi.models.operations.SaveSyncConfigResponse res = new org.openapis.openapi.models.operations.SaveSyncConfigResponse(contentType, httpRes.statusCode()) {{
             internalOperationResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -240,11 +232,9 @@ public class Internal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetWorkflowInAttemptResponse res = new org.openapis.openapi.models.operations.SetWorkflowInAttemptResponse() {{
+        org.openapis.openapi.models.operations.SetWorkflowInAttemptResponse res = new org.openapis.openapi.models.operations.SetWorkflowInAttemptResponse(contentType, httpRes.statusCode()) {{
             internalOperationResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -283,11 +273,9 @@ public class Internal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WriteDiscoverCatalogResultResponse res = new org.openapis.openapi.models.operations.WriteDiscoverCatalogResultResponse() {{
+        org.openapis.openapi.models.operations.WriteDiscoverCatalogResultResponse res = new org.openapis.openapi.models.operations.WriteDiscoverCatalogResultResponse(contentType, httpRes.statusCode()) {{
             discoverCatalogResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

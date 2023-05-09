@@ -18,6 +18,7 @@ public class GetReleaseExecutableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executable")
     public String executable;
+
     public GetReleaseExecutableResponse withExecutable(String executable) {
         this.executable = executable;
         return this;
@@ -29,6 +30,7 @@ public class GetReleaseExecutableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executableVersion")
     public GetReleaseExecutableResponseExecutableVersionEnum executableVersion;
+
     public GetReleaseExecutableResponse withExecutableVersion(GetReleaseExecutableResponseExecutableVersionEnum executableVersion) {
         this.executableVersion = executableVersion;
         return this;
@@ -40,6 +42,7 @@ public class GetReleaseExecutableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public GetReleaseExecutableResponseLanguageEnum language;
+
     public GetReleaseExecutableResponse withLanguage(GetReleaseExecutableResponseLanguageEnum language) {
         this.language = language;
         return this;
@@ -51,6 +54,7 @@ public class GetReleaseExecutableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rulesetName")
     public String rulesetName;
+
     public GetReleaseExecutableResponse withRulesetName(String rulesetName) {
         this.rulesetName = rulesetName;
         return this;
@@ -62,6 +66,7 @@ public class GetReleaseExecutableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncTime")
     public String syncTime;
+
     public GetReleaseExecutableResponse withSyncTime(String syncTime) {
         this.syncTime = syncTime;
         return this;
@@ -73,9 +78,11 @@ public class GetReleaseExecutableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GetReleaseExecutableResponse withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GetReleaseExecutableResponse(){}
 }

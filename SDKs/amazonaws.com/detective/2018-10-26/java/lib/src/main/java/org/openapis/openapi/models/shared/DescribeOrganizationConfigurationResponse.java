@@ -15,9 +15,11 @@ public class DescribeOrganizationConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoEnable")
     public Boolean autoEnable;
+
     public DescribeOrganizationConfigurationResponse withAutoEnable(Boolean autoEnable) {
         this.autoEnable = autoEnable;
         return this;
     }
     
+    public DescribeOrganizationConfigurationResponse(){}
 }

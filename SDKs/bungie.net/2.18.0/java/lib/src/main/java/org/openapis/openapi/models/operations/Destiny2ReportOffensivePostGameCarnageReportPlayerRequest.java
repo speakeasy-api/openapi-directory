@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2ReportOffensivePostGameCarnageReportPlayerRequest {
@@ -12,9 +13,13 @@ public class Destiny2ReportOffensivePostGameCarnageReportPlayerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=activityId")
     public Long activityId;
+
     public Destiny2ReportOffensivePostGameCarnageReportPlayerRequest withActivityId(Long activityId) {
         this.activityId = activityId;
         return this;
     }
     
+    public Destiny2ReportOffensivePostGameCarnageReportPlayerRequest(@JsonProperty("activityId") Long activityId) {
+        this.activityId = activityId;
+  }
 }

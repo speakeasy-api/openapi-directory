@@ -18,6 +18,7 @@ public class DnsKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithm")
     public DnsKeyAlgorithmEnum algorithm;
+
     public DnsKey withAlgorithm(DnsKeyAlgorithmEnum algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -29,6 +30,7 @@ public class DnsKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public String creationTime;
+
     public DnsKey withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -40,6 +42,7 @@ public class DnsKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DnsKey withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class DnsKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digests")
     public DnsKeyDigest[] digests;
+
     public DnsKey withDigests(DnsKeyDigest[] digests) {
         this.digests = digests;
         return this;
@@ -62,6 +66,7 @@ public class DnsKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DnsKey withId(String id) {
         this.id = id;
         return this;
@@ -73,6 +78,7 @@ public class DnsKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public DnsKey withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -84,6 +90,7 @@ public class DnsKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyLength")
     public Long keyLength;
+
     public DnsKey withKeyLength(Long keyLength) {
         this.keyLength = keyLength;
         return this;
@@ -95,6 +102,7 @@ public class DnsKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyTag")
     public Integer keyTag;
+
     public DnsKey withKeyTag(Integer keyTag) {
         this.keyTag = keyTag;
         return this;
@@ -103,6 +111,7 @@ public class DnsKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DnsKey withKind(String kind) {
         this.kind = kind;
         return this;
@@ -114,6 +123,7 @@ public class DnsKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicKey")
     public String publicKey;
+
     public DnsKey withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
@@ -125,9 +135,11 @@ public class DnsKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DnsKeyTypeEnum type;
+
     public DnsKey withType(DnsKeyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DnsKey(){}
 }

@@ -15,9 +15,11 @@ public class CreateAliasRequestBodyRoutingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalVersionWeights")
     public java.util.Map<String, Double> additionalVersionWeights;
+
     public CreateAliasRequestBodyRoutingConfig withAdditionalVersionWeights(java.util.Map<String, Double> additionalVersionWeights) {
         this.additionalVersionWeights = additionalVersionWeights;
         return this;
     }
     
+    public CreateAliasRequestBodyRoutingConfig(){}
 }

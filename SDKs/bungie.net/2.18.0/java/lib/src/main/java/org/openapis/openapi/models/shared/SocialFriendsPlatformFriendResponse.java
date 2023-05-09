@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class SocialFriendsPlatformFriendResponse {
     
     public Integer currentPage;
+
     public SocialFriendsPlatformFriendResponse withCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
@@ -16,6 +17,7 @@ public class SocialFriendsPlatformFriendResponse {
     
     
     public Boolean hasMore;
+
     public SocialFriendsPlatformFriendResponse withHasMore(Boolean hasMore) {
         this.hasMore = hasMore;
         return this;
@@ -23,6 +25,7 @@ public class SocialFriendsPlatformFriendResponse {
     
     
     public Integer itemsPerPage;
+
     public SocialFriendsPlatformFriendResponse withItemsPerPage(Integer itemsPerPage) {
         this.itemsPerPage = itemsPerPage;
         return this;
@@ -30,9 +33,11 @@ public class SocialFriendsPlatformFriendResponse {
     
     
     public SocialFriendsPlatformFriend[] platformFriends;
+
     public SocialFriendsPlatformFriendResponse withPlatformFriends(SocialFriendsPlatformFriend[] platformFriends) {
         this.platformFriends = platformFriends;
         return this;
     }
     
+    public SocialFriendsPlatformFriendResponse(){}
 }

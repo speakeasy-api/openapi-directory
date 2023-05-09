@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTimeZonesResponse {
     
     public String contentType;
+
     public GetTimeZonesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetTimeZonesResponse {
     
     
     public Integer statusCode;
+
     public GetTimeZonesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetTimeZonesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTimeZonesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetTimeZonesResponse {
      */
     
     public org.openapis.openapi.models.shared.TimeZone[] timeZones;
+
     public GetTimeZonesResponse withTimeZones(org.openapis.openapi.models.shared.TimeZone[] timeZones) {
         this.timeZones = timeZones;
         return this;
     }
     
+    public GetTimeZonesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

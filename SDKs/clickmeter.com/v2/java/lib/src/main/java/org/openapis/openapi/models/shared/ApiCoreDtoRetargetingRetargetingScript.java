@@ -17,6 +17,7 @@ public class ApiCoreDtoRetargetingRetargetingScript {
     @JsonProperty("id")
     @SpeakeasyMetadata("form:name=id")
     public Long id;
+
     public ApiCoreDtoRetargetingRetargetingScript withId(Long id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class ApiCoreDtoRetargetingRetargetingScript {
     @JsonProperty("name")
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public ApiCoreDtoRetargetingRetargetingScript withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +37,11 @@ public class ApiCoreDtoRetargetingRetargetingScript {
     @JsonProperty("script")
     @SpeakeasyMetadata("form:name=script")
     public String script;
+
     public ApiCoreDtoRetargetingRetargetingScript withScript(String script) {
         this.script = script;
         return this;
     }
     
+    public ApiCoreDtoRetargetingRetargetingScript(){}
 }

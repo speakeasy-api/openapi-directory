@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CreateNatGatewayResultNatGateway {
     
     public CreateNatGatewayResultNatGatewayConnectivityTypeEnum connectivityType;
+
     public CreateNatGatewayResultNatGateway withConnectivityType(CreateNatGatewayResultNatGatewayConnectivityTypeEnum connectivityType) {
         this.connectivityType = connectivityType;
         return this;
@@ -19,6 +20,7 @@ public class CreateNatGatewayResultNatGateway {
     
     
     public OffsetDateTime createTime;
+
     public CreateNatGatewayResultNatGateway withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -26,6 +28,7 @@ public class CreateNatGatewayResultNatGateway {
     
     
     public OffsetDateTime deleteTime;
+
     public CreateNatGatewayResultNatGateway withDeleteTime(OffsetDateTime deleteTime) {
         this.deleteTime = deleteTime;
         return this;
@@ -33,6 +36,7 @@ public class CreateNatGatewayResultNatGateway {
     
     
     public String failureCode;
+
     public CreateNatGatewayResultNatGateway withFailureCode(String failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -40,6 +44,7 @@ public class CreateNatGatewayResultNatGateway {
     
     
     public String failureMessage;
+
     public CreateNatGatewayResultNatGateway withFailureMessage(String failureMessage) {
         this.failureMessage = failureMessage;
         return this;
@@ -47,6 +52,7 @@ public class CreateNatGatewayResultNatGateway {
     
     
     public CreateNatGatewayResultNatGatewayNatGatewayAddresses[] natGatewayAddresses;
+
     public CreateNatGatewayResultNatGateway withNatGatewayAddresses(CreateNatGatewayResultNatGatewayNatGatewayAddresses[] natGatewayAddresses) {
         this.natGatewayAddresses = natGatewayAddresses;
         return this;
@@ -54,6 +60,7 @@ public class CreateNatGatewayResultNatGateway {
     
     
     public String natGatewayId;
+
     public CreateNatGatewayResultNatGateway withNatGatewayId(String natGatewayId) {
         this.natGatewayId = natGatewayId;
         return this;
@@ -61,6 +68,7 @@ public class CreateNatGatewayResultNatGateway {
     
     
     public CreateNatGatewayResultNatGatewayProvisionedBandwidth provisionedBandwidth;
+
     public CreateNatGatewayResultNatGateway withProvisionedBandwidth(CreateNatGatewayResultNatGatewayProvisionedBandwidth provisionedBandwidth) {
         this.provisionedBandwidth = provisionedBandwidth;
         return this;
@@ -68,6 +76,7 @@ public class CreateNatGatewayResultNatGateway {
     
     
     public CreateNatGatewayResultNatGatewayStateEnum state;
+
     public CreateNatGatewayResultNatGateway withState(CreateNatGatewayResultNatGatewayStateEnum state) {
         this.state = state;
         return this;
@@ -75,6 +84,7 @@ public class CreateNatGatewayResultNatGateway {
     
     
     public String subnetId;
+
     public CreateNatGatewayResultNatGateway withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -82,6 +92,7 @@ public class CreateNatGatewayResultNatGateway {
     
     
     public CreateNatGatewayResultNatGatewayTags[] tags;
+
     public CreateNatGatewayResultNatGateway withTags(CreateNatGatewayResultNatGatewayTags[] tags) {
         this.tags = tags;
         return this;
@@ -89,9 +100,11 @@ public class CreateNatGatewayResultNatGateway {
     
     
     public String vpcId;
+
     public CreateNatGatewayResultNatGateway withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateNatGatewayResultNatGateway(){}
 }

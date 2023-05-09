@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest {
@@ -12,6 +13,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=basePlanId")
     public String basePlanId;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest withBasePlanId(String basePlanId) {
         this.basePlanId = basePlanId;
         return this;
@@ -52,6 +57,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
     public String packageName;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -102,6 +112,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
     public String productId;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -122,6 +134,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,15 @@ public class AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest(@JsonProperty("basePlanId") String basePlanId, @JsonProperty("packageName") String packageName, @JsonProperty("productId") String productId) {
+        this.basePlanId = basePlanId;
+        this.packageName = packageName;
+        this.productId = productId;
+  }
 }

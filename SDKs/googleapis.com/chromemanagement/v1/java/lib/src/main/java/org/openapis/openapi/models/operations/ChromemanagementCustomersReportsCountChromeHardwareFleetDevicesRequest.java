@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest {
@@ -12,6 +13,7 @@ public class ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequ
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer")
     public String customer;
+
     public ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest withCustomer(String customer) {
         this.customer = customer;
         return this;
@@ -62,6 +68,7 @@ public class ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orgUnitId")
     public String orgUnitId;
+
     public ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest withOrgUnitId(String orgUnitId) {
         this.orgUnitId = orgUnitId;
         return this;
@@ -102,6 +112,7 @@ public class ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=readMask")
     public String readMask;
+
     public ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest withReadMask(String readMask) {
         this.readMask = readMask;
         return this;
@@ -132,6 +145,7 @@ public class ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,13 @@ public class ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest(@JsonProperty("customer") String customer) {
+        this.customer = customer;
+  }
 }

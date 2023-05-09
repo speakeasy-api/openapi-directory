@@ -15,6 +15,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncodingType")
     public EncodingTypeEnum encodingType;
+
     public FunctionConfiguration withEncodingType(EncodingTypeEnum encodingType) {
         this.encodingType = encodingType;
         return this;
@@ -23,6 +24,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public FunctionConfigurationEnvironment environment;
+
     public FunctionConfiguration withEnvironment(FunctionConfigurationEnvironment environment) {
         this.environment = environment;
         return this;
@@ -31,6 +33,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecArgs")
     public String execArgs;
+
     public FunctionConfiguration withExecArgs(String execArgs) {
         this.execArgs = execArgs;
         return this;
@@ -39,6 +42,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Executable")
     public String executable;
+
     public FunctionConfiguration withExecutable(String executable) {
         this.executable = executable;
         return this;
@@ -47,6 +51,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FunctionRuntimeOverride")
     public String functionRuntimeOverride;
+
     public FunctionConfiguration withFunctionRuntimeOverride(String functionRuntimeOverride) {
         this.functionRuntimeOverride = functionRuntimeOverride;
         return this;
@@ -55,6 +60,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemorySize")
     public Long memorySize;
+
     public FunctionConfiguration withMemorySize(Long memorySize) {
         this.memorySize = memorySize;
         return this;
@@ -63,6 +69,7 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pinned")
     public Boolean pinned;
+
     public FunctionConfiguration withPinned(Boolean pinned) {
         this.pinned = pinned;
         return this;
@@ -71,9 +78,11 @@ public class FunctionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeout")
     public Long timeout;
+
     public FunctionConfiguration withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public FunctionConfiguration(){}
 }

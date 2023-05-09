@@ -15,6 +15,7 @@ public class TipSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_tipping")
     public Boolean allowTipping;
+
     public TipSettings withAllowTipping(Boolean allowTipping) {
         this.allowTipping = allowTipping;
         return this;
@@ -26,6 +27,7 @@ public class TipSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_tip_field")
     public Boolean customTipField;
+
     public TipSettings withCustomTipField(Boolean customTipField) {
         this.customTipField = customTipField;
         return this;
@@ -38,6 +40,7 @@ public class TipSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("separate_tip_screen")
     public Boolean separateTipScreen;
+
     public TipSettings withSeparateTipScreen(Boolean separateTipScreen) {
         this.separateTipScreen = separateTipScreen;
         return this;
@@ -59,6 +62,7 @@ public class TipSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smart_tipping")
     public Boolean smartTipping;
+
     public TipSettings withSmartTipping(Boolean smartTipping) {
         this.smartTipping = smartTipping;
         return this;
@@ -71,9 +75,11 @@ public class TipSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tip_percentages")
     public Long[] tipPercentages;
+
     public TipSettings withTipPercentages(Long[] tipPercentages) {
         this.tipPercentages = tipPercentages;
         return this;
     }
     
+    public TipSettings(){}
 }

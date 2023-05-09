@@ -80,10 +80,8 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETVersionLocationsFormatResponse res = new org.openapis.openapi.models.operations.GETVersionLocationsFormatResponse() {{
+        org.openapis.openapi.models.operations.GETVersionLocationsFormatResponse res = new org.openapis.openapi.models.operations.GETVersionLocationsFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -122,10 +120,8 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETVersionLocationsMarkersFormatResponse res = new org.openapis.openapi.models.operations.GETVersionLocationsMarkersFormatResponse() {{
+        org.openapis.openapi.models.operations.GETVersionLocationsMarkersFormatResponse res = new org.openapis.openapi.models.operations.GETVersionLocationsMarkersFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

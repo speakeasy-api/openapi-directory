@@ -105,4 +105,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/QueryDriveActivityRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsolidationStrategy.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
+docs/sdk/README.md
+docs/activity/README.md
 USAGE.md

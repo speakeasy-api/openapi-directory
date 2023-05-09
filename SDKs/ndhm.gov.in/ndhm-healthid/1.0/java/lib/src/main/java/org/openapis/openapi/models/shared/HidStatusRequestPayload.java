@@ -15,9 +15,11 @@ public class HidStatusRequestPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthIdNumber")
     public String healthIdNumber;
+
     public HidStatusRequestPayload withHealthIdNumber(String healthIdNumber) {
         this.healthIdNumber = healthIdNumber;
         return this;
     }
     
+    public HidStatusRequestPayload(){}
 }

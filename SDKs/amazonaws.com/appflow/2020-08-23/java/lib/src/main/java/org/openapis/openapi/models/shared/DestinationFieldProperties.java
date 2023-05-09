@@ -15,6 +15,7 @@ public class DestinationFieldProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCreatable")
     public Boolean isCreatable;
+
     public DestinationFieldProperties withIsCreatable(Boolean isCreatable) {
         this.isCreatable = isCreatable;
         return this;
@@ -23,6 +24,7 @@ public class DestinationFieldProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDefaultedOnCreate")
     public Boolean isDefaultedOnCreate;
+
     public DestinationFieldProperties withIsDefaultedOnCreate(Boolean isDefaultedOnCreate) {
         this.isDefaultedOnCreate = isDefaultedOnCreate;
         return this;
@@ -31,6 +33,7 @@ public class DestinationFieldProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isNullable")
     public Boolean isNullable;
+
     public DestinationFieldProperties withIsNullable(Boolean isNullable) {
         this.isNullable = isNullable;
         return this;
@@ -39,6 +42,7 @@ public class DestinationFieldProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isUpdatable")
     public Boolean isUpdatable;
+
     public DestinationFieldProperties withIsUpdatable(Boolean isUpdatable) {
         this.isUpdatable = isUpdatable;
         return this;
@@ -47,6 +51,7 @@ public class DestinationFieldProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isUpsertable")
     public Boolean isUpsertable;
+
     public DestinationFieldProperties withIsUpsertable(Boolean isUpsertable) {
         this.isUpsertable = isUpsertable;
         return this;
@@ -55,9 +60,11 @@ public class DestinationFieldProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedWriteOperations")
     public WriteOperationTypeEnum[] supportedWriteOperations;
+
     public DestinationFieldProperties withSupportedWriteOperations(WriteOperationTypeEnum[] supportedWriteOperations) {
         this.supportedWriteOperations = supportedWriteOperations;
         return this;
     }
     
+    public DestinationFieldProperties(){}
 }

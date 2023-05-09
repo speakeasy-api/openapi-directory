@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LandlordControllerGetSettingsResponse {
     
     public String contentType;
+
     public LandlordControllerGetSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class LandlordControllerGetSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.LandlordSettingsModel landlordSettingsModel;
+
     public LandlordControllerGetSettingsResponse withLandlordSettingsModel(org.openapis.openapi.models.shared.LandlordSettingsModel landlordSettingsModel) {
         this.landlordSettingsModel = landlordSettingsModel;
         return this;
@@ -26,6 +29,7 @@ public class LandlordControllerGetSettingsResponse {
     
     
     public Integer statusCode;
+
     public LandlordControllerGetSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class LandlordControllerGetSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LandlordControllerGetSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public LandlordControllerGetSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateThingTypeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateThingTypeRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
@@ -26,9 +27,11 @@ public class CreateThingTypeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingTypeProperties")
     public CreateThingTypeRequestBodyThingTypeProperties thingTypeProperties;
+
     public CreateThingTypeRequestBody withThingTypeProperties(CreateThingTypeRequestBodyThingTypeProperties thingTypeProperties) {
         this.thingTypeProperties = thingTypeProperties;
         return this;
     }
     
+    public CreateThingTypeRequestBody(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegisterDevicesRequest {
     @JsonProperty("DeviceFleetName")
     public String deviceFleetName;
+
     public RegisterDevicesRequest withDeviceFleetName(String deviceFleetName) {
         this.deviceFleetName = deviceFleetName;
         return this;
@@ -18,6 +19,7 @@ public class RegisterDevicesRequest {
     
     @JsonProperty("Devices")
     public Device[] devices;
+
     public RegisterDevicesRequest withDevices(Device[] devices) {
         this.devices = devices;
         return this;
@@ -26,9 +28,14 @@ public class RegisterDevicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public RegisterDevicesRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public RegisterDevicesRequest(@JsonProperty("DeviceFleetName") String deviceFleetName, @JsonProperty("Devices") Device[] devices) {
+        this.deviceFleetName = deviceFleetName;
+        this.devices = devices;
+  }
 }

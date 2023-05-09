@@ -57,12 +57,10 @@ public class ProductCustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteProductsProductIdFieldsFieldIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteProductsProductIdFieldsFieldIdJsonResponse() {{
+        org.openapis.openapi.models.operations.DeleteProductsProductIdFieldsFieldIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteProductsProductIdFieldsFieldIdJsonResponse(contentType, httpRes.statusCode()) {{
             messageObject = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,12 +107,10 @@ public class ProductCustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProductsIdFieldsJsonResponse res = new org.openapis.openapi.models.operations.GetProductsIdFieldsJsonResponse() {{
+        org.openapis.openapi.models.operations.GetProductsIdFieldsJsonResponse res = new org.openapis.openapi.models.operations.GetProductsIdFieldsJsonResponse(contentType, httpRes.statusCode()) {{
             productCustomFields = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -161,12 +157,10 @@ public class ProductCustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProductsIdFieldsCountJsonResponse res = new org.openapis.openapi.models.operations.GetProductsIdFieldsCountJsonResponse() {{
+        org.openapis.openapi.models.operations.GetProductsIdFieldsCountJsonResponse res = new org.openapis.openapi.models.operations.GetProductsIdFieldsCountJsonResponse(contentType, httpRes.statusCode()) {{
             count = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -218,12 +212,10 @@ public class ProductCustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostProductsIdFieldsJsonResponse res = new org.openapis.openapi.models.operations.PostProductsIdFieldsJsonResponse() {{
+        org.openapis.openapi.models.operations.PostProductsIdFieldsJsonResponse res = new org.openapis.openapi.models.operations.PostProductsIdFieldsJsonResponse(contentType, httpRes.statusCode()) {{
             product = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -270,12 +262,10 @@ public class ProductCustomFields {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutProductsProductIdFieldsFieldIdJsonResponse res = new org.openapis.openapi.models.operations.PutProductsProductIdFieldsFieldIdJsonResponse() {{
+        org.openapis.openapi.models.operations.PutProductsProductIdFieldsFieldIdJsonResponse res = new org.openapis.openapi.models.operations.PutProductsProductIdFieldsFieldIdJsonResponse(contentType, httpRes.statusCode()) {{
             productCustomField = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClientVpnAuthorizationRulesResult {
     
     public DescribeClientVpnAuthorizationRulesResultAuthorizationRules[] authorizationRules;
+
     public DescribeClientVpnAuthorizationRulesResult withAuthorizationRules(DescribeClientVpnAuthorizationRulesResultAuthorizationRules[] authorizationRules) {
         this.authorizationRules = authorizationRules;
         return this;
@@ -19,9 +20,11 @@ public class DescribeClientVpnAuthorizationRulesResult {
     
     
     public String nextToken;
+
     public DescribeClientVpnAuthorizationRulesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeClientVpnAuthorizationRulesResult(){}
 }

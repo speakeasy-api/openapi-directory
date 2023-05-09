@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ClusterSnapshotInList {
     @JsonProperty("clusterArn")
     public String clusterArn;
+
     public ClusterSnapshotInList withClusterArn(String clusterArn) {
         this.clusterArn = clusterArn;
         return this;
@@ -19,6 +20,7 @@ public class ClusterSnapshotInList {
     
     @JsonProperty("snapshotArn")
     public String snapshotArn;
+
     public ClusterSnapshotInList withSnapshotArn(String snapshotArn) {
         this.snapshotArn = snapshotArn;
         return this;
@@ -26,6 +28,7 @@ public class ClusterSnapshotInList {
     
     @JsonProperty("snapshotCreationTime")
     public String snapshotCreationTime;
+
     public ClusterSnapshotInList withSnapshotCreationTime(String snapshotCreationTime) {
         this.snapshotCreationTime = snapshotCreationTime;
         return this;
@@ -33,6 +36,7 @@ public class ClusterSnapshotInList {
     
     @JsonProperty("snapshotName")
     public String snapshotName;
+
     public ClusterSnapshotInList withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
@@ -40,9 +44,17 @@ public class ClusterSnapshotInList {
     
     @JsonProperty("status")
     public StatusEnum status;
+
     public ClusterSnapshotInList withStatus(StatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ClusterSnapshotInList(@JsonProperty("clusterArn") String clusterArn, @JsonProperty("snapshotArn") String snapshotArn, @JsonProperty("snapshotCreationTime") String snapshotCreationTime, @JsonProperty("snapshotName") String snapshotName, @JsonProperty("status") StatusEnum status) {
+        this.clusterArn = clusterArn;
+        this.snapshotArn = snapshotArn;
+        this.snapshotCreationTime = snapshotCreationTime;
+        this.snapshotName = snapshotName;
+        this.status = status;
+  }
 }

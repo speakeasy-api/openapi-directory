@@ -20,6 +20,7 @@ public class TextTranslationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public TextTranslationJobProperties withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -30,6 +31,7 @@ public class TextTranslationJobProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public TextTranslationJobProperties withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -38,6 +40,7 @@ public class TextTranslationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public TextTranslationJobProperties withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -46,6 +49,7 @@ public class TextTranslationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobDetails")
     public JobDetails jobDetails;
+
     public TextTranslationJobProperties withJobDetails(JobDetails jobDetails) {
         this.jobDetails = jobDetails;
         return this;
@@ -54,6 +58,7 @@ public class TextTranslationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public TextTranslationJobProperties withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -62,6 +67,7 @@ public class TextTranslationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public TextTranslationJobProperties withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -70,6 +76,7 @@ public class TextTranslationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public TextTranslationJobProperties withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -78,6 +85,7 @@ public class TextTranslationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public TextTranslationJobProperties withMessage(String message) {
         this.message = message;
         return this;
@@ -86,6 +94,7 @@ public class TextTranslationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public TextTranslationJobProperties withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -94,6 +103,7 @@ public class TextTranslationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParallelDataNames")
     public String[] parallelDataNames;
+
     public TextTranslationJobProperties withParallelDataNames(String[] parallelDataNames) {
         this.parallelDataNames = parallelDataNames;
         return this;
@@ -102,6 +112,7 @@ public class TextTranslationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Settings")
     public TranslationSettings settings;
+
     public TextTranslationJobProperties withSettings(TranslationSettings settings) {
         this.settings = settings;
         return this;
@@ -110,6 +121,7 @@ public class TextTranslationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceLanguageCode")
     public String sourceLanguageCode;
+
     public TextTranslationJobProperties withSourceLanguageCode(String sourceLanguageCode) {
         this.sourceLanguageCode = sourceLanguageCode;
         return this;
@@ -120,6 +132,7 @@ public class TextTranslationJobProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmittedTime")
     public OffsetDateTime submittedTime;
+
     public TextTranslationJobProperties withSubmittedTime(OffsetDateTime submittedTime) {
         this.submittedTime = submittedTime;
         return this;
@@ -128,6 +141,7 @@ public class TextTranslationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetLanguageCodes")
     public String[] targetLanguageCodes;
+
     public TextTranslationJobProperties withTargetLanguageCodes(String[] targetLanguageCodes) {
         this.targetLanguageCodes = targetLanguageCodes;
         return this;
@@ -136,9 +150,11 @@ public class TextTranslationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TerminologyNames")
     public String[] terminologyNames;
+
     public TextTranslationJobProperties withTerminologyNames(String[] terminologyNames) {
         this.terminologyNames = terminologyNames;
         return this;
     }
     
+    public TextTranslationJobProperties(){}
 }

@@ -3,54 +3,52 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateChatTokenRequestBody;
 import org.openapis.openapi.models.operations.CreateChatTokenRequest;
+import org.openapis.openapi.models.operations.CreateChatTokenRequestBody;
 import org.openapis.openapi.models.operations.CreateChatTokenResponse;
 import org.openapis.openapi.models.shared.ChatTokenCapabilityEnum;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateChatTokenRequest req = new CreateChatTokenRequest() {{
-                requestBody = new CreateChatTokenRequestBody() {{
-                    attributes = new java.util.HashMap<String, String>() {{
-                        put("provident", "distinctio");
-                        put("quibusdam", "unde");
-                        put("nulla", "corrupti");
-                    }};
-                    capabilities = new org.openapis.openapi.models.shared.ChatTokenCapabilityEnum[]{{
-                        add("DISCONNECT_USER"),
-                        add("DISCONNECT_USER"),
-                        add("DISCONNECT_USER"),
-                        add("DISCONNECT_USER"),
-                    }};
-                    roomIdentifier = "iure";
-                    sessionDurationInMinutes = 297534;
-                    userId = "debitis";
-                }};
-                xAmzAlgorithm = "ipsa";
-                xAmzContentSha256 = "delectus";
-                xAmzCredential = "tempora";
-                xAmzDate = "suscipit";
-                xAmzSecurityToken = "molestiae";
-                xAmzSignature = "minus";
-                xAmzSignedHeaders = "placeat";
-            }}            
+            CreateChatTokenRequest req = new CreateChatTokenRequest(                new CreateChatTokenRequestBody("provident", "distinctio") {{
+                                attributes = new java.util.HashMap<String, String>() {{
+                                    put("unde", "nulla");
+                                    put("corrupti", "illum");
+                                    put("vel", "error");
+                                    put("deserunt", "suscipit");
+                                }};
+                                capabilities = new org.openapis.openapi.models.shared.ChatTokenCapabilityEnum[]{{
+                                    add(ChatTokenCapabilityEnum.SEND_MESSAGE),
+                                    add(ChatTokenCapabilityEnum.DELETE_MESSAGE),
+                                }};
+                                sessionDurationInMinutes = 56713L;
+                            }};) {{
+                xAmzAlgorithm = "delectus";
+                xAmzContentSha256 = "tempora";
+                xAmzCredential = "suscipit";
+                xAmzDate = "molestiae";
+                xAmzSecurityToken = "minus";
+                xAmzSignature = "placeat";
+                xAmzSignedHeaders = "voluptatum";
+            }};            
 
             CreateChatTokenResponse res = sdk.createChatToken(req);
 
-            if (res.createChatTokenResponse.isPresent()) {
+            if (res.createChatTokenResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

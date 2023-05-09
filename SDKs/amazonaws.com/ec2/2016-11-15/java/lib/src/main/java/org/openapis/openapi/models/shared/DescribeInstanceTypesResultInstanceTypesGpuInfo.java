@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypesResultInstanceTypesGpuInfo {
     
     public DescribeInstanceTypesResultInstanceTypesGpuInfoGpus[] gpus;
+
     public DescribeInstanceTypesResultInstanceTypesGpuInfo withGpus(DescribeInstanceTypesResultInstanceTypesGpuInfoGpus[] gpus) {
         this.gpus = gpus;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInstanceTypesResultInstanceTypesGpuInfo {
     
     
     public Long totalGpuMemoryInMiB;
+
     public DescribeInstanceTypesResultInstanceTypesGpuInfo withTotalGpuMemoryInMiB(Long totalGpuMemoryInMiB) {
         this.totalGpuMemoryInMiB = totalGpuMemoryInMiB;
         return this;
     }
     
+    public DescribeInstanceTypesResultInstanceTypesGpuInfo(){}
 }

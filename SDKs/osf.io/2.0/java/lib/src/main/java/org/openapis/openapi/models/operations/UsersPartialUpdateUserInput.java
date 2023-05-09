@@ -12,9 +12,13 @@ public class UsersPartialUpdateUserInput {
      */
     @JsonProperty("attributes")
     public UsersPartialUpdateUserAttributesInput attributes;
+
     public UsersPartialUpdateUserInput withAttributes(UsersPartialUpdateUserAttributesInput attributes) {
         this.attributes = attributes;
         return this;
     }
     
+    public UsersPartialUpdateUserInput(@JsonProperty("attributes") UsersPartialUpdateUserAttributesInput attributes) {
+        this.attributes = attributes;
+  }
 }

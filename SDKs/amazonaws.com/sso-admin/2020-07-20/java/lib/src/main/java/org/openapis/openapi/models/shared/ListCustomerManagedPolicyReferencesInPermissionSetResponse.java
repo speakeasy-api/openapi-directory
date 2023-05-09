@@ -15,6 +15,7 @@ public class ListCustomerManagedPolicyReferencesInPermissionSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomerManagedPolicyReferences")
     public CustomerManagedPolicyReference[] customerManagedPolicyReferences;
+
     public ListCustomerManagedPolicyReferencesInPermissionSetResponse withCustomerManagedPolicyReferences(CustomerManagedPolicyReference[] customerManagedPolicyReferences) {
         this.customerManagedPolicyReferences = customerManagedPolicyReferences;
         return this;
@@ -23,9 +24,11 @@ public class ListCustomerManagedPolicyReferencesInPermissionSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCustomerManagedPolicyReferencesInPermissionSetResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCustomerManagedPolicyReferencesInPermissionSetResponse(){}
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DBParameterGroupList {
     
     public String dbParameterGroupFamily;
+
     public DBParameterGroupList withDBParameterGroupFamily(String dbParameterGroupFamily) {
         this.dbParameterGroupFamily = dbParameterGroupFamily;
         return this;
@@ -16,6 +17,7 @@ public class DBParameterGroupList {
     
     
     public String dbParameterGroupName;
+
     public DBParameterGroupList withDBParameterGroupName(String dbParameterGroupName) {
         this.dbParameterGroupName = dbParameterGroupName;
         return this;
@@ -23,9 +25,11 @@ public class DBParameterGroupList {
     
     
     public String description;
+
     public DBParameterGroupList withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public DBParameterGroupList(){}
 }

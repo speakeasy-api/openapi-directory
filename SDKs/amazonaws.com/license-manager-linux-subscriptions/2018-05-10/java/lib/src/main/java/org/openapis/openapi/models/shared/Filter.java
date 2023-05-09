@@ -15,6 +15,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Filter withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Operator")
     public OperatorEnum operator;
+
     public Filter withOperator(OperatorEnum operator) {
         this.operator = operator;
         return this;
@@ -31,9 +33,11 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public Filter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public Filter(){}
 }

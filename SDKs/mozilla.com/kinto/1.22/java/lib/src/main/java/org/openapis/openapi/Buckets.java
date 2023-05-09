@@ -60,12 +60,10 @@ public class Buckets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBucketResponse res = new org.openapis.openapi.models.operations.GetBucketResponse() {{
+        org.openapis.openapi.models.operations.GetBucketResponse res = new org.openapis.openapi.models.operations.GetBucketResponse(contentType, httpRes.statusCode()) {{
             objectSchema = null;
             errorSchema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -120,12 +118,10 @@ public class Buckets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBucketsResponse res = new org.openapis.openapi.models.operations.GetBucketsResponse() {{
+        org.openapis.openapi.models.operations.GetBucketsResponse res = new org.openapis.openapi.models.operations.GetBucketsResponse(contentType, httpRes.statusCode()) {{
             schema = null;
             errorSchema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

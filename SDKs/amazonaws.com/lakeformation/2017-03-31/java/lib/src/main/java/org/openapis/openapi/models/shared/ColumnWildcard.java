@@ -15,9 +15,11 @@ public class ColumnWildcard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludedColumnNames")
     public String[] excludedColumnNames;
+
     public ColumnWildcard withExcludedColumnNames(String[] excludedColumnNames) {
         this.excludedColumnNames = excludedColumnNames;
         return this;
     }
     
+    public ColumnWildcard(){}
 }

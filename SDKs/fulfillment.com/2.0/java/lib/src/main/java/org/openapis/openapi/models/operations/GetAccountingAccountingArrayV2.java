@@ -15,6 +15,7 @@ public class GetAccountingAccountingArrayV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetAccountingAccountingArrayV2AccountingV2[] data;
+
     public GetAccountingAccountingArrayV2 withData(GetAccountingAccountingArrayV2AccountingV2[] data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class GetAccountingAccountingArrayV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public GetAccountingAccountingArrayV2Meta meta;
+
     public GetAccountingAccountingArrayV2 withMeta(GetAccountingAccountingArrayV2Meta meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetAccountingAccountingArrayV2(){}
 }

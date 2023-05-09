@@ -18,6 +18,7 @@ public class KeyedAppState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public KeyedAppState withData(String data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class KeyedAppState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public KeyedAppState withKey(String key) {
         this.key = key;
         return this;
@@ -40,6 +42,7 @@ public class KeyedAppState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public KeyedAppState withMessage(String message) {
         this.message = message;
         return this;
@@ -51,6 +54,7 @@ public class KeyedAppState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public KeyedAppStateSeverityEnum severity;
+
     public KeyedAppState withSeverity(KeyedAppStateSeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -62,9 +66,11 @@ public class KeyedAppState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateTimestampMillis")
     public String stateTimestampMillis;
+
     public KeyedAppState withStateTimestampMillis(String stateTimestampMillis) {
         this.stateTimestampMillis = stateTimestampMillis;
         return this;
     }
     
+    public KeyedAppState(){}
 }

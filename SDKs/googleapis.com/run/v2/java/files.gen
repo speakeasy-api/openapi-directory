@@ -98,6 +98,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRunV2VpcAccess.j
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRunV2Volume.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRunV2SecretVolumeSource.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRunV2VersionToPath.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRunV2EmptyDirVolumeSourceMediumEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRunV2EmptyDirVolumeSource.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRunV2CloudSqlInstance.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRunV2Container.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRunV2VolumeMount.java
@@ -151,4 +153,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRunV2ListRevisio
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleIamV1SetIamPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleIamV1TestIamPermissionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleIamV1TestIamPermissionsRequest.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

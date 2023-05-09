@@ -18,9 +18,11 @@ public class VerticalPodAutoscaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public VerticalPodAutoscaling withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public VerticalPodAutoscaling(){}
 }

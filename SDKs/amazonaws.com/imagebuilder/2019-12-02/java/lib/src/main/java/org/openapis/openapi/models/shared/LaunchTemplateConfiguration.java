@@ -15,6 +15,7 @@ public class LaunchTemplateConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public LaunchTemplateConfiguration withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +23,7 @@ public class LaunchTemplateConfiguration {
     
     @JsonProperty("launchTemplateId")
     public String launchTemplateId;
+
     public LaunchTemplateConfiguration withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -30,9 +32,13 @@ public class LaunchTemplateConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setDefaultVersion")
     public Boolean setDefaultVersion;
+
     public LaunchTemplateConfiguration withSetDefaultVersion(Boolean setDefaultVersion) {
         this.setDefaultVersion = setDefaultVersion;
         return this;
     }
     
+    public LaunchTemplateConfiguration(@JsonProperty("launchTemplateId") String launchTemplateId) {
+        this.launchTemplateId = launchTemplateId;
+  }
 }

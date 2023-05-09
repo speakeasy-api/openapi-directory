@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateResourceRequest {
     @JsonProperty("Name")
     public String name;
+
     public CreateResourceRequest withName(String name) {
         this.name = name;
         return this;
@@ -16,6 +17,7 @@ public class CreateResourceRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public CreateResourceRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -23,9 +25,15 @@ public class CreateResourceRequest {
     
     @JsonProperty("Type")
     public ResourceTypeEnum type;
+
     public CreateResourceRequest withType(ResourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateResourceRequest(@JsonProperty("Name") String name, @JsonProperty("OrganizationId") String organizationId, @JsonProperty("Type") ResourceTypeEnum type) {
+        this.name = name;
+        this.organizationId = organizationId;
+        this.type = type;
+  }
 }

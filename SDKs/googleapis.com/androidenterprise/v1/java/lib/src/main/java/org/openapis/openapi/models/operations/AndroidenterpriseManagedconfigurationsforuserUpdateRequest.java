@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidenterpriseManagedconfigurationsforuserUpdateRequest {
@@ -12,6 +13,7 @@ public class AndroidenterpriseManagedconfigurationsforuserUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AndroidenterpriseManagedconfigurationsforuserUpdateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class AndroidenterpriseManagedconfigurationsforuserUpdateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ManagedConfiguration managedConfiguration;
+
     public AndroidenterpriseManagedconfigurationsforuserUpdateRequest withManagedConfiguration(org.openapis.openapi.models.shared.ManagedConfiguration managedConfiguration) {
         this.managedConfiguration = managedConfiguration;
         return this;
@@ -29,6 +32,7 @@ public class AndroidenterpriseManagedconfigurationsforuserUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AndroidenterpriseManagedconfigurationsforuserUpdateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class AndroidenterpriseManagedconfigurationsforuserUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidenterpriseManagedconfigurationsforuserUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class AndroidenterpriseManagedconfigurationsforuserUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AndroidenterpriseManagedconfigurationsforuserUpdateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class AndroidenterpriseManagedconfigurationsforuserUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterpriseId")
     public String enterpriseId;
+
     public AndroidenterpriseManagedconfigurationsforuserUpdateRequest withEnterpriseId(String enterpriseId) {
         this.enterpriseId = enterpriseId;
         return this;
@@ -69,6 +76,7 @@ public class AndroidenterpriseManagedconfigurationsforuserUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidenterpriseManagedconfigurationsforuserUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class AndroidenterpriseManagedconfigurationsforuserUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidenterpriseManagedconfigurationsforuserUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class AndroidenterpriseManagedconfigurationsforuserUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=managedConfigurationForUserId")
     public String managedConfigurationForUserId;
+
     public AndroidenterpriseManagedconfigurationsforuserUpdateRequest withManagedConfigurationForUserId(String managedConfigurationForUserId) {
         this.managedConfigurationForUserId = managedConfigurationForUserId;
         return this;
@@ -99,6 +109,7 @@ public class AndroidenterpriseManagedconfigurationsforuserUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidenterpriseManagedconfigurationsforuserUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -109,6 +120,7 @@ public class AndroidenterpriseManagedconfigurationsforuserUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidenterpriseManagedconfigurationsforuserUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class AndroidenterpriseManagedconfigurationsforuserUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidenterpriseManagedconfigurationsforuserUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class AndroidenterpriseManagedconfigurationsforuserUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AndroidenterpriseManagedconfigurationsforuserUpdateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,6 +153,7 @@ public class AndroidenterpriseManagedconfigurationsforuserUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AndroidenterpriseManagedconfigurationsforuserUpdateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -149,9 +164,15 @@ public class AndroidenterpriseManagedconfigurationsforuserUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public AndroidenterpriseManagedconfigurationsforuserUpdateRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public AndroidenterpriseManagedconfigurationsforuserUpdateRequest(@JsonProperty("enterpriseId") String enterpriseId, @JsonProperty("managedConfigurationForUserId") String managedConfigurationForUserId, @JsonProperty("userId") String userId) {
+        this.enterpriseId = enterpriseId;
+        this.managedConfigurationForUserId = managedConfigurationForUserId;
+        this.userId = userId;
+  }
 }

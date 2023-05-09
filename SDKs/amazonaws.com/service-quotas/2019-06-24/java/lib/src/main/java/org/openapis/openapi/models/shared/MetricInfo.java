@@ -15,6 +15,7 @@ public class MetricInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricDimensions")
     public java.util.Map<String, String> metricDimensions;
+
     public MetricInfo withMetricDimensions(java.util.Map<String, String> metricDimensions) {
         this.metricDimensions = metricDimensions;
         return this;
@@ -23,6 +24,7 @@ public class MetricInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public MetricInfo withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -31,6 +33,7 @@ public class MetricInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricNamespace")
     public String metricNamespace;
+
     public MetricInfo withMetricNamespace(String metricNamespace) {
         this.metricNamespace = metricNamespace;
         return this;
@@ -39,9 +42,11 @@ public class MetricInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricStatisticRecommendation")
     public String metricStatisticRecommendation;
+
     public MetricInfo withMetricStatisticRecommendation(String metricStatisticRecommendation) {
         this.metricStatisticRecommendation = metricStatisticRecommendation;
         return this;
     }
     
+    public MetricInfo(){}
 }

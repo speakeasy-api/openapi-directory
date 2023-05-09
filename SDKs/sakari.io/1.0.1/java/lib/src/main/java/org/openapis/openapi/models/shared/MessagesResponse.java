@@ -15,6 +15,7 @@ public class MessagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Message[] data;
+
     public MessagesResponse withData(Message[] data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class MessagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public MessagesResponseError error;
+
     public MessagesResponse withError(MessagesResponseError error) {
         this.error = error;
         return this;
@@ -31,6 +33,7 @@ public class MessagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public MessagesResponsePagination pagination;
+
     public MessagesResponse withPagination(MessagesResponsePagination pagination) {
         this.pagination = pagination;
         return this;
@@ -39,9 +42,11 @@ public class MessagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public MessagesResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public MessagesResponse(){}
 }

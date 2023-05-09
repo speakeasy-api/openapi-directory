@@ -16,6 +16,7 @@ public class PersonalDocumentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expirationDate")
     public String expirationDate;
+
     public PersonalDocumentData withExpirationDate(String expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -28,6 +29,7 @@ public class PersonalDocumentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuerCountry")
     public String issuerCountry;
+
     public PersonalDocumentData withIssuerCountry(String issuerCountry) {
         this.issuerCountry = issuerCountry;
         return this;
@@ -39,6 +41,7 @@ public class PersonalDocumentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuerState")
     public String issuerState;
+
     public PersonalDocumentData withIssuerState(String issuerState) {
         this.issuerState = issuerState;
         return this;
@@ -50,6 +53,7 @@ public class PersonalDocumentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public PersonalDocumentData withNumber(String number) {
         this.number = number;
         return this;
@@ -62,9 +66,13 @@ public class PersonalDocumentData {
      */
     @JsonProperty("type")
     public PersonalDocumentDataTypeEnum type;
+
     public PersonalDocumentData withType(PersonalDocumentDataTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PersonalDocumentData(@JsonProperty("type") PersonalDocumentDataTypeEnum type) {
+        this.type = type;
+  }
 }

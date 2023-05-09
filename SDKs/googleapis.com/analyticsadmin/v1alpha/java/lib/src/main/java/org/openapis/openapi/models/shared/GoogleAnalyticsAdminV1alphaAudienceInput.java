@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleAnalyticsAdminV1alphaAudienceInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleAnalyticsAdminV1alphaAudienceInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventTrigger")
     public GoogleAnalyticsAdminV1alphaAudienceEventTrigger eventTrigger;
+
     public GoogleAnalyticsAdminV1alphaAudienceInput withEventTrigger(GoogleAnalyticsAdminV1alphaAudienceEventTrigger eventTrigger) {
         this.eventTrigger = eventTrigger;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclusionDurationMode")
     public GoogleAnalyticsAdminV1alphaAudienceExclusionDurationModeEnum exclusionDurationMode;
+
     public GoogleAnalyticsAdminV1alphaAudienceInput withExclusionDurationMode(GoogleAnalyticsAdminV1alphaAudienceExclusionDurationModeEnum exclusionDurationMode) {
         this.exclusionDurationMode = exclusionDurationMode;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterClauses")
     public GoogleAnalyticsAdminV1alphaAudienceFilterClause[] filterClauses;
+
     public GoogleAnalyticsAdminV1alphaAudienceInput withFilterClauses(GoogleAnalyticsAdminV1alphaAudienceFilterClause[] filterClauses) {
         this.filterClauses = filterClauses;
         return this;
@@ -73,9 +78,11 @@ public class GoogleAnalyticsAdminV1alphaAudienceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membershipDurationDays")
     public Integer membershipDurationDays;
+
     public GoogleAnalyticsAdminV1alphaAudienceInput withMembershipDurationDays(Integer membershipDurationDays) {
         this.membershipDurationDays = membershipDurationDays;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAudienceInput(){}
 }

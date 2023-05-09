@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2ImportDocumentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("knowledgeTypes")
     public GoogleCloudDialogflowV2ImportDocumentTemplateKnowledgeTypesEnum[] knowledgeTypes;
+
     public GoogleCloudDialogflowV2ImportDocumentTemplate withKnowledgeTypes(GoogleCloudDialogflowV2ImportDocumentTemplateKnowledgeTypesEnum[] knowledgeTypes) {
         this.knowledgeTypes = knowledgeTypes;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2ImportDocumentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public GoogleCloudDialogflowV2ImportDocumentTemplate withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2ImportDocumentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public GoogleCloudDialogflowV2ImportDocumentTemplate withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ImportDocumentTemplate(){}
 }

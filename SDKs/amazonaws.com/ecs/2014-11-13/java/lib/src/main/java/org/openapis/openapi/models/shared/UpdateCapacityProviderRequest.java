@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateCapacityProviderRequest {
     @JsonProperty("autoScalingGroupProvider")
     public AutoScalingGroupProviderUpdate autoScalingGroupProvider;
+
     public UpdateCapacityProviderRequest withAutoScalingGroupProvider(AutoScalingGroupProviderUpdate autoScalingGroupProvider) {
         this.autoScalingGroupProvider = autoScalingGroupProvider;
         return this;
@@ -16,9 +17,14 @@ public class UpdateCapacityProviderRequest {
     
     @JsonProperty("name")
     public String name;
+
     public UpdateCapacityProviderRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateCapacityProviderRequest(@JsonProperty("autoScalingGroupProvider") AutoScalingGroupProviderUpdate autoScalingGroupProvider, @JsonProperty("name") String name) {
+        this.autoScalingGroupProvider = autoScalingGroupProvider;
+        this.name = name;
+  }
 }

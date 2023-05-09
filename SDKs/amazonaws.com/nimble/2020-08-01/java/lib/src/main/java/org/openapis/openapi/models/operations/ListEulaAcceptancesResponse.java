@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEulaAcceptancesResponse {
@@ -12,6 +13,7 @@ public class ListEulaAcceptancesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListEulaAcceptancesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListEulaAcceptancesResponse {
      */
     
     public Object conflictException;
+
     public ListEulaAcceptancesResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListEulaAcceptancesResponse {
     
     
     public String contentType;
+
     public ListEulaAcceptancesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListEulaAcceptancesResponse {
      */
     
     public Object internalServerErrorException;
+
     public ListEulaAcceptancesResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class ListEulaAcceptancesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEulaAcceptancesResponse listEulaAcceptancesResponse;
+
     public ListEulaAcceptancesResponse withListEulaAcceptancesResponse(org.openapis.openapi.models.shared.ListEulaAcceptancesResponse listEulaAcceptancesResponse) {
         this.listEulaAcceptancesResponse = listEulaAcceptancesResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListEulaAcceptancesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListEulaAcceptancesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListEulaAcceptancesResponse {
     
     
     public Integer statusCode;
+
     public ListEulaAcceptancesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListEulaAcceptancesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEulaAcceptancesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListEulaAcceptancesResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListEulaAcceptancesResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class ListEulaAcceptancesResponse {
      */
     
     public Object throttlingException;
+
     public ListEulaAcceptancesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class ListEulaAcceptancesResponse {
      */
     
     public Object validationException;
+
     public ListEulaAcceptancesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListEulaAcceptancesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

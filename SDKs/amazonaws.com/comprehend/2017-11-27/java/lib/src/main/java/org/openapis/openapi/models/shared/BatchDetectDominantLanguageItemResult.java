@@ -15,6 +15,7 @@ public class BatchDetectDominantLanguageItemResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Index")
     public Long index;
+
     public BatchDetectDominantLanguageItemResult withIndex(Long index) {
         this.index = index;
         return this;
@@ -23,9 +24,11 @@ public class BatchDetectDominantLanguageItemResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Languages")
     public DominantLanguage[] languages;
+
     public BatchDetectDominantLanguageItemResult withLanguages(DominantLanguage[] languages) {
         this.languages = languages;
         return this;
     }
     
+    public BatchDetectDominantLanguageItemResult(){}
 }

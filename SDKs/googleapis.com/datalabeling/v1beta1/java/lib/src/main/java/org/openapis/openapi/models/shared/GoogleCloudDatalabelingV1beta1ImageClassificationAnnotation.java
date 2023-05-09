@@ -18,9 +18,11 @@ public class GoogleCloudDatalabelingV1beta1ImageClassificationAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSpec")
     public GoogleCloudDatalabelingV1beta1AnnotationSpec annotationSpec;
+
     public GoogleCloudDatalabelingV1beta1ImageClassificationAnnotation withAnnotationSpec(GoogleCloudDatalabelingV1beta1AnnotationSpec annotationSpec) {
         this.annotationSpec = annotationSpec;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1ImageClassificationAnnotation(){}
 }

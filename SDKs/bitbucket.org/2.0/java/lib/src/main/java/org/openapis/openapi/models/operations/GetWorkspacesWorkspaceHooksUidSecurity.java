@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetWorkspacesWorkspaceHooksUidSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
     public String apiKey;
+
     public GetWorkspacesWorkspaceHooksUidSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -16,6 +17,7 @@ public class GetWorkspacesWorkspaceHooksUidSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic")
     public org.openapis.openapi.models.shared.SchemeBasic basic;
+
     public GetWorkspacesWorkspaceHooksUidSecurity withBasic(org.openapis.openapi.models.shared.SchemeBasic basic) {
         this.basic = basic;
         return this;
@@ -23,9 +25,11 @@ public class GetWorkspacesWorkspaceHooksUidSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth2;
+
     public GetWorkspacesWorkspaceHooksUidSecurity withOauth2(String oauth2) {
         this.oauth2 = oauth2;
         return this;
     }
     
+    public GetWorkspacesWorkspaceHooksUidSecurity(){}
 }

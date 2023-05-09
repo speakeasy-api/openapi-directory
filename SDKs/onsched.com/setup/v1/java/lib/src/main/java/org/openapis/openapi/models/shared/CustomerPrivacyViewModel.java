@@ -15,6 +15,7 @@ public class CustomerPrivacyViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appointments")
     public AppointmentViewModel[] appointments;
+
     public CustomerPrivacyViewModel withAppointments(AppointmentViewModel[] appointments) {
         this.appointments = appointments;
         return this;
@@ -23,9 +24,11 @@ public class CustomerPrivacyViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer")
     public CustomerViewModel customer;
+
     public CustomerPrivacyViewModel withCustomer(CustomerViewModel customer) {
         this.customer = customer;
         return this;
     }
     
+    public CustomerPrivacyViewModel(){}
 }

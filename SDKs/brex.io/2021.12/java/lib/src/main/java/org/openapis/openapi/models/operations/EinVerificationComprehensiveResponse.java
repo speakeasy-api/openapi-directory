@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EinVerificationComprehensiveResponse {
     
     public String contentType;
+
     public EinVerificationComprehensiveResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EinVerificationComprehensiveResponse {
      */
     
     public EinVerificationComprehensive200ApplicationJSON einVerificationComprehensive200ApplicationJSONObject;
+
     public EinVerificationComprehensiveResponse withEinVerificationComprehensive200ApplicationJSONObject(EinVerificationComprehensive200ApplicationJSON einVerificationComprehensive200ApplicationJSONObject) {
         this.einVerificationComprehensive200ApplicationJSONObject = einVerificationComprehensive200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class EinVerificationComprehensiveResponse {
      */
     
     public EinVerificationComprehensiveDefaultApplicationJSON einVerificationComprehensiveDefaultApplicationJSONObject;
+
     public EinVerificationComprehensiveResponse withEinVerificationComprehensiveDefaultApplicationJSONObject(EinVerificationComprehensiveDefaultApplicationJSON einVerificationComprehensiveDefaultApplicationJSONObject) {
         this.einVerificationComprehensiveDefaultApplicationJSONObject = einVerificationComprehensiveDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class EinVerificationComprehensiveResponse {
     
     
     public Integer statusCode;
+
     public EinVerificationComprehensiveResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class EinVerificationComprehensiveResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EinVerificationComprehensiveResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EinVerificationComprehensiveResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

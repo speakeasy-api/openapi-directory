@@ -15,9 +15,11 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public ProductFields product;
+
     public Product withProduct(ProductFields product) {
         this.product = product;
         return this;
     }
     
+    public Product(){}
 }

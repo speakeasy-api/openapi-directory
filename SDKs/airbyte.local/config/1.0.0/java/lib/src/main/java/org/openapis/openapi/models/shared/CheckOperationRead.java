@@ -15,6 +15,7 @@ public class CheckOperationRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CheckOperationRead withMessage(String message) {
         this.message = message;
         return this;
@@ -22,9 +23,13 @@ public class CheckOperationRead {
     
     @JsonProperty("status")
     public CheckOperationReadStatusEnum status;
+
     public CheckOperationRead withStatus(CheckOperationReadStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CheckOperationRead(@JsonProperty("status") CheckOperationReadStatusEnum status) {
+        this.status = status;
+  }
 }

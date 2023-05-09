@@ -15,6 +15,7 @@ public class UpdateSlotRequestBodyValueElicitationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValueSpecification")
     public org.openapis.openapi.models.shared.SlotDefaultValueSpecification defaultValueSpecification;
+
     public UpdateSlotRequestBodyValueElicitationSetting withDefaultValueSpecification(org.openapis.openapi.models.shared.SlotDefaultValueSpecification defaultValueSpecification) {
         this.defaultValueSpecification = defaultValueSpecification;
         return this;
@@ -23,6 +24,7 @@ public class UpdateSlotRequestBodyValueElicitationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promptSpecification")
     public org.openapis.openapi.models.shared.PromptSpecification promptSpecification;
+
     public UpdateSlotRequestBodyValueElicitationSetting withPromptSpecification(org.openapis.openapi.models.shared.PromptSpecification promptSpecification) {
         this.promptSpecification = promptSpecification;
         return this;
@@ -31,6 +33,7 @@ public class UpdateSlotRequestBodyValueElicitationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleUtterances")
     public org.openapis.openapi.models.shared.SampleUtterance[] sampleUtterances;
+
     public UpdateSlotRequestBodyValueElicitationSetting withSampleUtterances(org.openapis.openapi.models.shared.SampleUtterance[] sampleUtterances) {
         this.sampleUtterances = sampleUtterances;
         return this;
@@ -39,6 +42,7 @@ public class UpdateSlotRequestBodyValueElicitationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotCaptureSetting")
     public org.openapis.openapi.models.shared.SlotCaptureSetting slotCaptureSetting;
+
     public UpdateSlotRequestBodyValueElicitationSetting withSlotCaptureSetting(org.openapis.openapi.models.shared.SlotCaptureSetting slotCaptureSetting) {
         this.slotCaptureSetting = slotCaptureSetting;
         return this;
@@ -47,6 +51,7 @@ public class UpdateSlotRequestBodyValueElicitationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotConstraint")
     public org.openapis.openapi.models.shared.SlotConstraintEnum slotConstraint;
+
     public UpdateSlotRequestBodyValueElicitationSetting withSlotConstraint(org.openapis.openapi.models.shared.SlotConstraintEnum slotConstraint) {
         this.slotConstraint = slotConstraint;
         return this;
@@ -58,9 +63,11 @@ public class UpdateSlotRequestBodyValueElicitationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waitAndContinueSpecification")
     public org.openapis.openapi.models.shared.WaitAndContinueSpecification waitAndContinueSpecification;
+
     public UpdateSlotRequestBodyValueElicitationSetting withWaitAndContinueSpecification(org.openapis.openapi.models.shared.WaitAndContinueSpecification waitAndContinueSpecification) {
         this.waitAndContinueSpecification = waitAndContinueSpecification;
         return this;
     }
     
+    public UpdateSlotRequestBodyValueElicitationSetting(){}
 }

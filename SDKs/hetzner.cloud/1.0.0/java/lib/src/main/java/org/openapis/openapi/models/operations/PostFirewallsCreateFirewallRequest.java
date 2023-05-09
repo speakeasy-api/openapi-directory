@@ -15,6 +15,7 @@ public class PostFirewallsCreateFirewallRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apply_to")
     public PostFirewallsCreateFirewallRequestApplyTo[] applyTo;
+
     public PostFirewallsCreateFirewallRequest withApplyTo(PostFirewallsCreateFirewallRequestApplyTo[] applyTo) {
         this.applyTo = applyTo;
         return this;
@@ -26,6 +27,7 @@ public class PostFirewallsCreateFirewallRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, Object> labels;
+
     public PostFirewallsCreateFirewallRequest withLabels(java.util.Map<String, Object> labels) {
         this.labels = labels;
         return this;
@@ -36,6 +38,7 @@ public class PostFirewallsCreateFirewallRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public PostFirewallsCreateFirewallRequest withName(String name) {
         this.name = name;
         return this;
@@ -47,9 +50,13 @@ public class PostFirewallsCreateFirewallRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public PostFirewallsCreateFirewallRequestRule[] rules;
+
     public PostFirewallsCreateFirewallRequest withRules(PostFirewallsCreateFirewallRequestRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public PostFirewallsCreateFirewallRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

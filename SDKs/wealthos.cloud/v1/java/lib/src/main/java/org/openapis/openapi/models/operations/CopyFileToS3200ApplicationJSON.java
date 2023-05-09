@@ -15,6 +15,7 @@ public class CopyFileToS3200ApplicationJSON {
      */
     @JsonProperty("bucket")
     public String bucket;
+
     public CopyFileToS3200ApplicationJSON withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -25,9 +26,14 @@ public class CopyFileToS3200ApplicationJSON {
      */
     @JsonProperty("keys")
     public String[] keys;
+
     public CopyFileToS3200ApplicationJSON withKeys(String[] keys) {
         this.keys = keys;
         return this;
     }
     
+    public CopyFileToS3200ApplicationJSON(@JsonProperty("bucket") String bucket, @JsonProperty("keys") String[] keys) {
+        this.bucket = bucket;
+        this.keys = keys;
+  }
 }

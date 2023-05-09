@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyVpcPeeringConnectionOptionsRequest {
     
     public PeeringConnectionOptionsRequest accepterPeeringConnectionOptions;
+
     public ModifyVpcPeeringConnectionOptionsRequest withAccepterPeeringConnectionOptions(PeeringConnectionOptionsRequest accepterPeeringConnectionOptions) {
         this.accepterPeeringConnectionOptions = accepterPeeringConnectionOptions;
         return this;
@@ -16,6 +17,7 @@ public class ModifyVpcPeeringConnectionOptionsRequest {
     
     
     public Boolean dryRun;
+
     public ModifyVpcPeeringConnectionOptionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class ModifyVpcPeeringConnectionOptionsRequest {
     
     
     public PeeringConnectionOptionsRequest requesterPeeringConnectionOptions;
+
     public ModifyVpcPeeringConnectionOptionsRequest withRequesterPeeringConnectionOptions(PeeringConnectionOptionsRequest requesterPeeringConnectionOptions) {
         this.requesterPeeringConnectionOptions = requesterPeeringConnectionOptions;
         return this;
@@ -30,9 +33,13 @@ public class ModifyVpcPeeringConnectionOptionsRequest {
     
     
     public String vpcPeeringConnectionId;
+
     public ModifyVpcPeeringConnectionOptionsRequest withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public ModifyVpcPeeringConnectionOptionsRequest(@JsonProperty("VpcPeeringConnectionId") String vpcPeeringConnectionId) {
+        this.vpcPeeringConnectionId = vpcPeeringConnectionId;
+  }
 }

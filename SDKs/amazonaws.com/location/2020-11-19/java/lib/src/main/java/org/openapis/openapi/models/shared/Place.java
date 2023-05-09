@@ -15,6 +15,7 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressNumber")
     public String addressNumber;
+
     public Place withAddressNumber(String addressNumber) {
         this.addressNumber = addressNumber;
         return this;
@@ -23,6 +24,7 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Country")
     public String country;
+
     public Place withCountry(String country) {
         this.country = country;
         return this;
@@ -33,6 +35,7 @@ public class Place {
      */
     @JsonProperty("Geometry")
     public PlaceGeometry geometry;
+
     public Place withGeometry(PlaceGeometry geometry) {
         this.geometry = geometry;
         return this;
@@ -41,6 +44,7 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Interpolated")
     public Boolean interpolated;
+
     public Place withInterpolated(Boolean interpolated) {
         this.interpolated = interpolated;
         return this;
@@ -49,6 +53,7 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Label")
     public String label;
+
     public Place withLabel(String label) {
         this.label = label;
         return this;
@@ -57,6 +62,7 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Municipality")
     public String municipality;
+
     public Place withMunicipality(String municipality) {
         this.municipality = municipality;
         return this;
@@ -65,6 +71,7 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Neighborhood")
     public String neighborhood;
+
     public Place withNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
         return this;
@@ -73,6 +80,7 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostalCode")
     public String postalCode;
+
     public Place withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -81,6 +89,7 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public Place withRegion(String region) {
         this.region = region;
         return this;
@@ -89,6 +98,7 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Street")
     public String street;
+
     public Place withStreet(String street) {
         this.street = street;
         return this;
@@ -97,6 +107,7 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubRegion")
     public String subRegion;
+
     public Place withSubRegion(String subRegion) {
         this.subRegion = subRegion;
         return this;
@@ -105,6 +116,7 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeZone")
     public TimeZone timeZone;
+
     public Place withTimeZone(TimeZone timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -113,6 +125,7 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnitNumber")
     public String unitNumber;
+
     public Place withUnitNumber(String unitNumber) {
         this.unitNumber = unitNumber;
         return this;
@@ -121,9 +134,13 @@ public class Place {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnitType")
     public String unitType;
+
     public Place withUnitType(String unitType) {
         this.unitType = unitType;
         return this;
     }
     
+    public Place(@JsonProperty("Geometry") PlaceGeometry geometry) {
+        this.geometry = geometry;
+  }
 }

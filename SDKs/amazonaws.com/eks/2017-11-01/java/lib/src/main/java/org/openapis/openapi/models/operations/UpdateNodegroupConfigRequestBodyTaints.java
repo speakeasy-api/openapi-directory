@@ -15,6 +15,7 @@ public class UpdateNodegroupConfigRequestBodyTaints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addOrUpdateTaints")
     public org.openapis.openapi.models.shared.Taint[] addOrUpdateTaints;
+
     public UpdateNodegroupConfigRequestBodyTaints withAddOrUpdateTaints(org.openapis.openapi.models.shared.Taint[] addOrUpdateTaints) {
         this.addOrUpdateTaints = addOrUpdateTaints;
         return this;
@@ -23,9 +24,11 @@ public class UpdateNodegroupConfigRequestBodyTaints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeTaints")
     public org.openapis.openapi.models.shared.Taint[] removeTaints;
+
     public UpdateNodegroupConfigRequestBodyTaints withRemoveTaints(org.openapis.openapi.models.shared.Taint[] removeTaints) {
         this.removeTaints = removeTaints;
         return this;
     }
     
+    public UpdateNodegroupConfigRequestBodyTaints(){}
 }

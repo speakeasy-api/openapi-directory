@@ -18,6 +18,7 @@ public class GoogleAppsCardV1Widget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buttonList")
     public GoogleAppsCardV1ButtonList buttonList;
+
     public GoogleAppsCardV1Widget withButtonList(GoogleAppsCardV1ButtonList buttonList) {
         this.buttonList = buttonList;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsCardV1Widget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateTimePicker")
     public GoogleAppsCardV1DateTimePicker dateTimePicker;
+
     public GoogleAppsCardV1Widget withDateTimePicker(GoogleAppsCardV1DateTimePicker dateTimePicker) {
         this.dateTimePicker = dateTimePicker;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsCardV1Widget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("decoratedText")
     public GoogleAppsCardV1DecoratedText decoratedText;
+
     public GoogleAppsCardV1Widget withDecoratedText(GoogleAppsCardV1DecoratedText decoratedText) {
         this.decoratedText = decoratedText;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsCardV1Widget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("divider")
     public java.util.Map<String, Object> divider;
+
     public GoogleAppsCardV1Widget withDivider(java.util.Map<String, Object> divider) {
         this.divider = divider;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAppsCardV1Widget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grid")
     public GoogleAppsCardV1Grid grid;
+
     public GoogleAppsCardV1Widget withGrid(GoogleAppsCardV1Grid grid) {
         this.grid = grid;
         return this;
@@ -73,42 +78,47 @@ public class GoogleAppsCardV1Widget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public GoogleAppsCardV1Image image;
+
     public GoogleAppsCardV1Widget withImage(GoogleAppsCardV1Image image) {
         this.image = image;
         return this;
     }
     
     /**
-     * A widget that creates a UI item with options for users to select. For example, a dropdown menu or check list. Chat apps receive and can process the value of entered text during form input events. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs). When you need to collect data from users that matches options you set, use a selection input. To collect abstract data from users, use the text input widget instead.
+     * A widget that creates one or more UI items that users can select. For example, a dropdown menu or checkboxes. You can use this widget to collect data that can be predicted or enumerated. Chat apps can process the value of items that users select or input. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs). To collect undefined or abstract data from users, use the TextInput widget.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectionInput")
     public GoogleAppsCardV1SelectionInput selectionInput;
+
     public GoogleAppsCardV1Widget withSelectionInput(GoogleAppsCardV1SelectionInput selectionInput) {
         this.selectionInput = selectionInput;
         return this;
     }
     
     /**
-     * A field in which users can enter text. Supports suggestions and on-change actions. Chat apps receive and can process the value of entered text during form input events. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs). When you need to collect abstract data from users, use a text input. To collect defined data from users, use the selection input widget instead.
+     * A field in which users can enter text. Supports suggestions and on-change actions. Chat apps receive and can process the value of entered text during form input events. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs). When you need to collect undefined or abstract data from users, use a text input. To collect defined or enumerated data from users, use the SelectionInput widget.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textInput")
     public GoogleAppsCardV1TextInput textInput;
+
     public GoogleAppsCardV1Widget withTextInput(GoogleAppsCardV1TextInput textInput) {
         this.textInput = textInput;
         return this;
     }
     
     /**
-     * A paragraph of text that supports formatting. See [Text formatting](https://developers.google.com/workspace/add-ons/concepts/widgets#text_formatting) for details.
+     * A paragraph of text that supports formatting. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textParagraph")
     public GoogleAppsCardV1TextParagraph textParagraph;
+
     public GoogleAppsCardV1Widget withTextParagraph(GoogleAppsCardV1TextParagraph textParagraph) {
         this.textParagraph = textParagraph;
         return this;
     }
     
+    public GoogleAppsCardV1Widget(){}
 }

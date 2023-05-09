@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetArtifactMetaDataByGlobalIdRequest {
@@ -12,9 +13,13 @@ public class GetArtifactMetaDataByGlobalIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=globalId")
     public Long globalId;
+
     public GetArtifactMetaDataByGlobalIdRequest withGlobalId(Long globalId) {
         this.globalId = globalId;
         return this;
     }
     
+    public GetArtifactMetaDataByGlobalIdRequest(@JsonProperty("globalId") Long globalId) {
+        this.globalId = globalId;
+  }
 }

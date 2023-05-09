@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePaymentRequest {
@@ -12,6 +13,7 @@ public class CreatePaymentRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PaymentDTO paymentDTO;
+
     public CreatePaymentRequest withPaymentDTO(org.openapis.openapi.models.shared.PaymentDTO paymentDTO) {
         this.paymentDTO = paymentDTO;
         return this;
@@ -22,9 +24,14 @@ public class CreatePaymentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invoiceId")
     public Long invoiceId;
+
     public CreatePaymentRequest withInvoiceId(Long invoiceId) {
         this.invoiceId = invoiceId;
         return this;
     }
     
+    public CreatePaymentRequest(@JsonProperty("PaymentDTO") org.openapis.openapi.models.shared.PaymentDTO paymentDTO, @JsonProperty("invoiceId") Long invoiceId) {
+        this.paymentDTO = paymentDTO;
+        this.invoiceId = invoiceId;
+  }
 }

@@ -15,6 +15,7 @@ public class DescribeMatchmakingRuleSetsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeMatchmakingRuleSetsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class DescribeMatchmakingRuleSetsOutput {
     
     @JsonProperty("RuleSets")
     public MatchmakingRuleSet[] ruleSets;
+
     public DescribeMatchmakingRuleSetsOutput withRuleSets(MatchmakingRuleSet[] ruleSets) {
         this.ruleSets = ruleSets;
         return this;
     }
     
+    public DescribeMatchmakingRuleSetsOutput(@JsonProperty("RuleSets") MatchmakingRuleSet[] ruleSets) {
+        this.ruleSets = ruleSets;
+  }
 }

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserFollowsNetworksNetworkIdRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=network_id")
     public Long networkId;
+
     public GetUserFollowsNetworksNetworkIdRequest withNetworkId(Long networkId) {
         this.networkId = networkId;
         return this;
     }
     
+    public GetUserFollowsNetworksNetworkIdRequest(@JsonProperty("network_id") Long networkId) {
+        this.networkId = networkId;
+  }
 }

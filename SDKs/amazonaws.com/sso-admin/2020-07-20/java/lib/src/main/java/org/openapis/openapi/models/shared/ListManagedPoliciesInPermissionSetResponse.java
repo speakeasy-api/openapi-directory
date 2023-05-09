@@ -15,6 +15,7 @@ public class ListManagedPoliciesInPermissionSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachedManagedPolicies")
     public AttachedManagedPolicy[] attachedManagedPolicies;
+
     public ListManagedPoliciesInPermissionSetResponse withAttachedManagedPolicies(AttachedManagedPolicy[] attachedManagedPolicies) {
         this.attachedManagedPolicies = attachedManagedPolicies;
         return this;
@@ -23,9 +24,11 @@ public class ListManagedPoliciesInPermissionSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListManagedPoliciesInPermissionSetResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListManagedPoliciesInPermissionSetResponse(){}
 }

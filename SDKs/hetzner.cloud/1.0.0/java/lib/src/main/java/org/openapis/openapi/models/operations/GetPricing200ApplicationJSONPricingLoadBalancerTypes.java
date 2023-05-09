@@ -12,6 +12,7 @@ public class GetPricing200ApplicationJSONPricingLoadBalancerTypes {
      */
     @JsonProperty("id")
     public Double id;
+
     public GetPricing200ApplicationJSONPricingLoadBalancerTypes withId(Double id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class GetPricing200ApplicationJSONPricingLoadBalancerTypes {
      */
     @JsonProperty("name")
     public String name;
+
     public GetPricing200ApplicationJSONPricingLoadBalancerTypes withName(String name) {
         this.name = name;
         return this;
@@ -32,9 +34,15 @@ public class GetPricing200ApplicationJSONPricingLoadBalancerTypes {
      */
     @JsonProperty("prices")
     public GetPricing200ApplicationJSONPricingLoadBalancerTypesPrices[] prices;
+
     public GetPricing200ApplicationJSONPricingLoadBalancerTypes withPrices(GetPricing200ApplicationJSONPricingLoadBalancerTypesPrices[] prices) {
         this.prices = prices;
         return this;
     }
     
+    public GetPricing200ApplicationJSONPricingLoadBalancerTypes(@JsonProperty("id") Double id, @JsonProperty("name") String name, @JsonProperty("prices") GetPricing200ApplicationJSONPricingLoadBalancerTypesPrices[] prices) {
+        this.id = id;
+        this.name = name;
+        this.prices = prices;
+  }
 }

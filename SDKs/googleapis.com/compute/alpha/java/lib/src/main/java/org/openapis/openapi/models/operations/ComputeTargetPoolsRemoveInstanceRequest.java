@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeTargetPoolsRemoveInstanceRequest {
@@ -12,6 +13,7 @@ public class ComputeTargetPoolsRemoveInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeTargetPoolsRemoveInstanceRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ComputeTargetPoolsRemoveInstanceRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TargetPoolsRemoveInstanceRequest targetPoolsRemoveInstanceRequest;
+
     public ComputeTargetPoolsRemoveInstanceRequest withTargetPoolsRemoveInstanceRequest(org.openapis.openapi.models.shared.TargetPoolsRemoveInstanceRequest targetPoolsRemoveInstanceRequest) {
         this.targetPoolsRemoveInstanceRequest = targetPoolsRemoveInstanceRequest;
         return this;
@@ -29,6 +32,7 @@ public class ComputeTargetPoolsRemoveInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeTargetPoolsRemoveInstanceRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ComputeTargetPoolsRemoveInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeTargetPoolsRemoveInstanceRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ComputeTargetPoolsRemoveInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeTargetPoolsRemoveInstanceRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ComputeTargetPoolsRemoveInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeTargetPoolsRemoveInstanceRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ComputeTargetPoolsRemoveInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeTargetPoolsRemoveInstanceRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class ComputeTargetPoolsRemoveInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeTargetPoolsRemoveInstanceRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class ComputeTargetPoolsRemoveInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeTargetPoolsRemoveInstanceRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class ComputeTargetPoolsRemoveInstanceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeTargetPoolsRemoveInstanceRequest withProject(String project) {
         this.project = project;
         return this;
@@ -109,6 +120,7 @@ public class ComputeTargetPoolsRemoveInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeTargetPoolsRemoveInstanceRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class ComputeTargetPoolsRemoveInstanceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=region")
     public String region;
+
     public ComputeTargetPoolsRemoveInstanceRequest withRegion(String region) {
         this.region = region;
         return this;
@@ -129,6 +142,7 @@ public class ComputeTargetPoolsRemoveInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeTargetPoolsRemoveInstanceRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -139,6 +153,7 @@ public class ComputeTargetPoolsRemoveInstanceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=targetPool")
     public String targetPool;
+
     public ComputeTargetPoolsRemoveInstanceRequest withTargetPool(String targetPool) {
         this.targetPool = targetPool;
         return this;
@@ -149,6 +164,7 @@ public class ComputeTargetPoolsRemoveInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeTargetPoolsRemoveInstanceRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -159,6 +175,7 @@ public class ComputeTargetPoolsRemoveInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeTargetPoolsRemoveInstanceRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -169,9 +186,15 @@ public class ComputeTargetPoolsRemoveInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeTargetPoolsRemoveInstanceRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeTargetPoolsRemoveInstanceRequest(@JsonProperty("project") String project, @JsonProperty("region") String region, @JsonProperty("targetPool") String targetPool) {
+        this.project = project;
+        this.region = region;
+        this.targetPool = targetPool;
+  }
 }

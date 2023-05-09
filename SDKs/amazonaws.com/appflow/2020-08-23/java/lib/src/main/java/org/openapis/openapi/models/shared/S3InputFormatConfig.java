@@ -15,9 +15,11 @@ public class S3InputFormatConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3InputFileType")
     public S3InputFileTypeEnum s3InputFileType;
+
     public S3InputFormatConfig withS3InputFileType(S3InputFileTypeEnum s3InputFileType) {
         this.s3InputFileType = s3InputFileType;
         return this;
     }
     
+    public S3InputFormatConfig(){}
 }

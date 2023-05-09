@@ -18,6 +18,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceName")
     public String deviceName;
+
     public AttachedDisk withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -29,6 +30,7 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("existingDisk")
     public String existingDisk;
+
     public AttachedDisk withExistingDisk(String existingDisk) {
         this.existingDisk = existingDisk;
         return this;
@@ -40,9 +42,11 @@ public class AttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newDisk")
     public Disk newDisk;
+
     public AttachedDisk withNewDisk(Disk newDisk) {
         this.newDisk = newDisk;
         return this;
     }
     
+    public AttachedDisk(){}
 }

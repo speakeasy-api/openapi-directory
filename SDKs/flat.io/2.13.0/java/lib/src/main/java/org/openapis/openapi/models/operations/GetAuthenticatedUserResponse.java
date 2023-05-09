@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAuthenticatedUserResponse {
     
     public String contentType;
+
     public GetAuthenticatedUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse;
+
     public GetAuthenticatedUserResponse withFlatErrorResponse(org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse) {
         this.flatErrorResponse = flatErrorResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetAuthenticatedUserResponse {
     
     
     public Integer statusCode;
+
     public GetAuthenticatedUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetAuthenticatedUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAuthenticatedUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.UserDetails userDetails;
+
     public GetAuthenticatedUserResponse withUserDetails(org.openapis.openapi.models.shared.UserDetails userDetails) {
         this.userDetails = userDetails;
         return this;
     }
     
+    public GetAuthenticatedUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

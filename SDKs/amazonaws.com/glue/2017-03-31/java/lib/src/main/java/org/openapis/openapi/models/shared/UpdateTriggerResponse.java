@@ -15,9 +15,11 @@ public class UpdateTriggerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Trigger")
     public Trigger trigger;
+
     public UpdateTriggerResponse withTrigger(Trigger trigger) {
         this.trigger = trigger;
         return this;
     }
     
+    public UpdateTriggerResponse(){}
 }

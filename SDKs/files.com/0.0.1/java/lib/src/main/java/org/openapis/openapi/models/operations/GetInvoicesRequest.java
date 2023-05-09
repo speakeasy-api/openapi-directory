@@ -12,6 +12,7 @@ public class GetInvoicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetInvoicesRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,9 +23,11 @@ public class GetInvoicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetInvoicesRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public GetInvoicesRequest(){}
 }

@@ -18,6 +18,7 @@ public class ModifyAnnouncementAssigneesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assigneeMode")
     public ModifyAnnouncementAssigneesRequestAssigneeModeEnum assigneeMode;
+
     public ModifyAnnouncementAssigneesRequest withAssigneeMode(ModifyAnnouncementAssigneesRequestAssigneeModeEnum assigneeMode) {
         this.assigneeMode = assigneeMode;
         return this;
@@ -29,9 +30,11 @@ public class ModifyAnnouncementAssigneesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifyIndividualStudentsOptions")
     public ModifyIndividualStudentsOptions modifyIndividualStudentsOptions;
+
     public ModifyAnnouncementAssigneesRequest withModifyIndividualStudentsOptions(ModifyIndividualStudentsOptions modifyIndividualStudentsOptions) {
         this.modifyIndividualStudentsOptions = modifyIndividualStudentsOptions;
         return this;
     }
     
+    public ModifyAnnouncementAssigneesRequest(){}
 }

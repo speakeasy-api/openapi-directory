@@ -18,6 +18,7 @@ public class PersonProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public PersonProperties withEmail(String email) {
         this.email = email;
         return this;
@@ -29,9 +30,11 @@ public class PersonProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PersonProperties withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PersonProperties(){}
 }

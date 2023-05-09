@@ -17,6 +17,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("about")
     public String about;
+
     public Ecosystem withAbout(String about) {
         this.about = about;
         return this;
@@ -25,6 +26,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alternatives_background_color")
     public String alternativesBackgroundColor;
+
     public Ecosystem withAlternativesBackgroundColor(String alternativesBackgroundColor) {
         this.alternativesBackgroundColor = alternativesBackgroundColor;
         return this;
@@ -33,6 +35,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alternatives_color")
     public String alternativesColor;
+
     public Ecosystem withAlternativesColor(String alternativesColor) {
         this.alternativesColor = alternativesColor;
         return this;
@@ -41,6 +44,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribution")
     public Boolean attribution;
+
     public Ecosystem withAttribution(Boolean attribution) {
         this.attribution = attribution;
         return this;
@@ -49,6 +53,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_background_color")
     public String bodyBackgroundColor;
+
     public Ecosystem withBodyBackgroundColor(String bodyBackgroundColor) {
         this.bodyBackgroundColor = bodyBackgroundColor;
         return this;
@@ -57,6 +62,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_button_background_color")
     public String bodyButtonBackgroundColor;
+
     public Ecosystem withBodyButtonBackgroundColor(String bodyButtonBackgroundColor) {
         this.bodyButtonBackgroundColor = bodyButtonBackgroundColor;
         return this;
@@ -65,6 +71,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_button_color")
     public String bodyButtonColor;
+
     public Ecosystem withBodyButtonColor(String bodyButtonColor) {
         this.bodyButtonColor = bodyButtonColor;
         return this;
@@ -73,6 +80,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_color")
     public String bodyColor;
+
     public Ecosystem withBodyColor(String bodyColor) {
         this.bodyColor = bodyColor;
         return this;
@@ -81,6 +89,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_link_color")
     public String bodyLinkColor;
+
     public Ecosystem withBodyLinkColor(String bodyLinkColor) {
         this.bodyLinkColor = bodyLinkColor;
         return this;
@@ -89,6 +98,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card_settings")
     public CardSettings cardSettings;
+
     public Ecosystem withCardSettings(CardSettings cardSettings) {
         this.cardSettings = cardSettings;
         return this;
@@ -97,6 +107,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories_count_badge")
     public Boolean categoriesCountBadge;
+
     public Ecosystem withCategoriesCountBadge(Boolean categoriesCountBadge) {
         this.categoriesCountBadge = categoriesCountBadge;
         return this;
@@ -105,6 +116,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories_show_max_items")
     public Long categoriesShowMaxItems;
+
     public Ecosystem withCategoriesShowMaxItems(Long categoriesShowMaxItems) {
         this.categoriesShowMaxItems = categoriesShowMaxItems;
         return this;
@@ -113,6 +125,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collections_count_badge")
     public Boolean collectionsCountBadge;
+
     public Ecosystem withCollectionsCountBadge(Boolean collectionsCountBadge) {
         this.collectionsCountBadge = collectionsCountBadge;
         return this;
@@ -121,6 +134,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collections_title")
     public String collectionsTitle;
+
     public Ecosystem withCollectionsTitle(String collectionsTitle) {
         this.collectionsTitle = collectionsTitle;
         return this;
@@ -129,6 +143,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("create_link")
     public String createLink;
+
     public Ecosystem withCreateLink(String createLink) {
         this.createLink = createLink;
         return this;
@@ -139,6 +154,7 @@ public class Ecosystem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Ecosystem withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -147,6 +163,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cta_settings")
     public CTASettings ctaSettings;
+
     public Ecosystem withCtaSettings(CTASettings ctaSettings) {
         this.ctaSettings = ctaSettings;
         return this;
@@ -155,6 +172,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_domain")
     public String customDomain;
+
     public Ecosystem withCustomDomain(String customDomain) {
         this.customDomain = customDomain;
         return this;
@@ -163,6 +181,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_settings")
     public CustomSettings customSettings;
+
     public Ecosystem withCustomSettings(CustomSettings customSettings) {
         this.customSettings = customSettings;
         return this;
@@ -171,6 +190,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail_pages_enabled")
     public Boolean detailPagesEnabled;
+
     public Ecosystem withDetailPagesEnabled(Boolean detailPagesEnabled) {
         this.detailPagesEnabled = detailPagesEnabled;
         return this;
@@ -179,6 +199,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footer_background_color")
     public String footerBackgroundColor;
+
     public Ecosystem withFooterBackgroundColor(String footerBackgroundColor) {
         this.footerBackgroundColor = footerBackgroundColor;
         return this;
@@ -187,6 +208,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footer_color")
     public String footerColor;
+
     public Ecosystem withFooterColor(String footerColor) {
         this.footerColor = footerColor;
         return this;
@@ -195,6 +217,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("google_site_verification_id")
     public String googleSiteVerificationId;
+
     public Ecosystem withGoogleSiteVerificationId(String googleSiteVerificationId) {
         this.googleSiteVerificationId = googleSiteVerificationId;
         return this;
@@ -203,6 +226,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hide_install_buttons")
     public Boolean hideInstallButtons;
+
     public Ecosystem withHideInstallButtons(Boolean hideInstallButtons) {
         this.hideInstallButtons = hideInstallButtons;
         return this;
@@ -211,6 +235,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("home_page_collection_category_cards")
     public Boolean homePageCollectionCategoryCards;
+
     public Ecosystem withHomePageCollectionCategoryCards(Boolean homePageCollectionCategoryCards) {
         this.homePageCollectionCategoryCards = homePageCollectionCategoryCards;
         return this;
@@ -219,6 +244,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("home_page_show_all_listings")
     public Boolean homePageShowAllListings;
+
     public Ecosystem withHomePageShowAllListings(Boolean homePageShowAllListings) {
         this.homePageShowAllListings = homePageShowAllListings;
         return this;
@@ -227,6 +253,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Ecosystem withId(String id) {
         this.id = id;
         return this;
@@ -235,6 +262,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installation_request_flow_enabled")
     public Boolean installationRequestFlowEnabled;
+
     public Ecosystem withInstallationRequestFlowEnabled(Boolean installationRequestFlowEnabled) {
         this.installationRequestFlowEnabled = installationRequestFlowEnabled;
         return this;
@@ -243,6 +271,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integration_settings")
     public IntegrationSettings integrationSettings;
+
     public Ecosystem withIntegrationSettings(IntegrationSettings integrationSettings) {
         this.integrationSettings = integrationSettings;
         return this;
@@ -250,6 +279,7 @@ public class Ecosystem {
     
     @JsonProperty("is_published")
     public Boolean isPublished;
+
     public Ecosystem withIsPublished(Boolean isPublished) {
         this.isPublished = isPublished;
         return this;
@@ -258,6 +288,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lead_form_settings")
     public LeadFormSettings leadFormSettings;
+
     public Ecosystem withLeadFormSettings(LeadFormSettings leadFormSettings) {
         this.leadFormSettings = leadFormSettings;
         return this;
@@ -266,6 +297,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listing_settings")
     public ListingSettings listingSettings;
+
     public Ecosystem withListingSettings(ListingSettings listingSettings) {
         this.listingSettings = listingSettings;
         return this;
@@ -274,6 +306,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masthead_settings")
     public MastheadSettings mastheadSettings;
+
     public Ecosystem withMastheadSettings(MastheadSettings mastheadSettings) {
         this.mastheadSettings = mastheadSettings;
         return this;
@@ -282,6 +315,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("menu_position")
     public EcosystemMenuPositionEnum menuPosition;
+
     public Ecosystem withMenuPosition(EcosystemMenuPositionEnum menuPosition) {
         this.menuPosition = menuPosition;
         return this;
@@ -290,6 +324,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("menu_style")
     public EcosystemMenuStyleEnum menuStyle;
+
     public Ecosystem withMenuStyle(EcosystemMenuStyleEnum menuStyle) {
         this.menuStyle = menuStyle;
         return this;
@@ -298,6 +333,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta_tag_settings")
     public MetaTagSettings metaTagSettings;
+
     public Ecosystem withMetaTagSettings(MetaTagSettings metaTagSettings) {
         this.metaTagSettings = metaTagSettings;
         return this;
@@ -305,6 +341,7 @@ public class Ecosystem {
     
     @JsonProperty("name")
     public String name;
+
     public Ecosystem withName(String name) {
         this.name = name;
         return this;
@@ -313,6 +350,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("navigation_background_color")
     public String navigationBackgroundColor;
+
     public Ecosystem withNavigationBackgroundColor(String navigationBackgroundColor) {
         this.navigationBackgroundColor = navigationBackgroundColor;
         return this;
@@ -321,6 +359,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("navigation_color")
     public String navigationColor;
+
     public Ecosystem withNavigationColor(String navigationColor) {
         this.navigationColor = navigationColor;
         return this;
@@ -329,6 +368,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("navigation_logo_post_fix")
     public String navigationLogoPostFix;
+
     public Ecosystem withNavigationLogoPostFix(String navigationLogoPostFix) {
         this.navigationLogoPostFix = navigationLogoPostFix;
         return this;
@@ -337,6 +377,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("navigation_mobile_menu_type")
     public EcosystemNavigationMobileMenuTypeEnum navigationMobileMenuType;
+
     public Ecosystem withNavigationMobileMenuType(EcosystemNavigationMobileMenuTypeEnum navigationMobileMenuType) {
         this.navigationMobileMenuType = navigationMobileMenuType;
         return this;
@@ -345,6 +386,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("navigation_sticky")
     public Boolean navigationSticky;
+
     public Ecosystem withNavigationSticky(Boolean navigationSticky) {
         this.navigationSticky = navigationSticky;
         return this;
@@ -353,6 +395,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_color")
     public String primaryColor;
+
     public Ecosystem withPrimaryColor(String primaryColor) {
         this.primaryColor = primaryColor;
         return this;
@@ -361,6 +404,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacy_link")
     public String privacyLink;
+
     public Ecosystem withPrivacyLink(String privacyLink) {
         this.privacyLink = privacyLink;
         return this;
@@ -369,6 +413,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request_link")
     public String requestLink;
+
     public Ecosystem withRequestLink(String requestLink) {
         this.requestLink = requestLink;
         return this;
@@ -377,6 +422,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shadow_page_description")
     public String shadowPageDescription;
+
     public Ecosystem withShadowPageDescription(String shadowPageDescription) {
         this.shadowPageDescription = shadowPageDescription;
         return this;
@@ -385,6 +431,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shadow_pages_enabled")
     public Boolean shadowPagesEnabled;
+
     public Ecosystem withShadowPagesEnabled(Boolean shadowPagesEnabled) {
         this.shadowPagesEnabled = shadowPagesEnabled;
         return this;
@@ -393,6 +440,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_attribution_badge")
     public Boolean showAttributionBadge;
+
     public Ecosystem withShowAttributionBadge(Boolean showAttributionBadge) {
         this.showAttributionBadge = showAttributionBadge;
         return this;
@@ -401,6 +449,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_requested_listings")
     public Boolean showRequestedListings;
+
     public Ecosystem withShowRequestedListings(Boolean showRequestedListings) {
         this.showRequestedListings = showRequestedListings;
         return this;
@@ -408,6 +457,7 @@ public class Ecosystem {
     
     @JsonProperty("slug")
     public String slug;
+
     public Ecosystem withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -416,6 +466,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terms_link")
     public String termsLink;
+
     public Ecosystem withTermsLink(String termsLink) {
         this.termsLink = termsLink;
         return this;
@@ -424,6 +475,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_published_listings")
     public Long totalPublishedListings;
+
     public Ecosystem withTotalPublishedListings(Long totalPublishedListings) {
         this.totalPublishedListings = totalPublishedListings;
         return this;
@@ -432,6 +484,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unify_application_id")
     public String unifyApplicationId;
+
     public Ecosystem withUnifyApplicationId(String unifyApplicationId) {
         this.unifyApplicationId = unifyApplicationId;
         return this;
@@ -442,6 +495,7 @@ public class Ecosystem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public Ecosystem withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -450,6 +504,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utm_campaign")
     public String utmCampaign;
+
     public Ecosystem withUtmCampaign(String utmCampaign) {
         this.utmCampaign = utmCampaign;
         return this;
@@ -458,6 +513,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website")
     public String website;
+
     public Ecosystem withWebsite(String website) {
         this.website = website;
         return this;
@@ -466,6 +522,7 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zaps_menu_title")
     public String zapsMenuTitle;
+
     public Ecosystem withZapsMenuTitle(String zapsMenuTitle) {
         this.zapsMenuTitle = zapsMenuTitle;
         return this;
@@ -474,9 +531,15 @@ public class Ecosystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zaps_page_enabled")
     public Boolean zapsPageEnabled;
+
     public Ecosystem withZapsPageEnabled(Boolean zapsPageEnabled) {
         this.zapsPageEnabled = zapsPageEnabled;
         return this;
     }
     
+    public Ecosystem(@JsonProperty("is_published") Boolean isPublished, @JsonProperty("name") String name, @JsonProperty("slug") String slug) {
+        this.isPublished = isPublished;
+        this.name = name;
+        this.slug = slug;
+  }
 }

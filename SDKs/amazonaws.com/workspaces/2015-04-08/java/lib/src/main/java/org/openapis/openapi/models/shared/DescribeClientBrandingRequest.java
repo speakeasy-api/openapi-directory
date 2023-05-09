@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeClientBrandingRequest {
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public DescribeClientBrandingRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public DescribeClientBrandingRequest(@JsonProperty("ResourceId") String resourceId) {
+        this.resourceId = resourceId;
+  }
 }

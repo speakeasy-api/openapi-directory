@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetTableRequest {
     @JsonProperty("keyspaceName")
     public String keyspaceName;
+
     public GetTableRequest withKeyspaceName(String keyspaceName) {
         this.keyspaceName = keyspaceName;
         return this;
@@ -16,9 +17,14 @@ public class GetTableRequest {
     
     @JsonProperty("tableName")
     public String tableName;
+
     public GetTableRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public GetTableRequest(@JsonProperty("keyspaceName") String keyspaceName, @JsonProperty("tableName") String tableName) {
+        this.keyspaceName = keyspaceName;
+        this.tableName = tableName;
+  }
 }

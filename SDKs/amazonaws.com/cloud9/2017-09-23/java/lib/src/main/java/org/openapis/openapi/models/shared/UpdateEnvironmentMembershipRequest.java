@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateEnvironmentMembershipRequest {
     @JsonProperty("environmentId")
     public String environmentId;
+
     public UpdateEnvironmentMembershipRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -16,6 +17,7 @@ public class UpdateEnvironmentMembershipRequest {
     
     @JsonProperty("permissions")
     public MemberPermissionsEnum permissions;
+
     public UpdateEnvironmentMembershipRequest withPermissions(MemberPermissionsEnum permissions) {
         this.permissions = permissions;
         return this;
@@ -23,9 +25,15 @@ public class UpdateEnvironmentMembershipRequest {
     
     @JsonProperty("userArn")
     public String userArn;
+
     public UpdateEnvironmentMembershipRequest withUserArn(String userArn) {
         this.userArn = userArn;
         return this;
     }
     
+    public UpdateEnvironmentMembershipRequest(@JsonProperty("environmentId") String environmentId, @JsonProperty("permissions") MemberPermissionsEnum permissions, @JsonProperty("userArn") String userArn) {
+        this.environmentId = environmentId;
+        this.permissions = permissions;
+        this.userArn = userArn;
+  }
 }

@@ -15,6 +15,7 @@ public class ListFailuresForLicenseConfigurationOperationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseOperationFailureList")
     public LicenseOperationFailure[] licenseOperationFailureList;
+
     public ListFailuresForLicenseConfigurationOperationsResponse withLicenseOperationFailureList(LicenseOperationFailure[] licenseOperationFailureList) {
         this.licenseOperationFailureList = licenseOperationFailureList;
         return this;
@@ -23,9 +24,11 @@ public class ListFailuresForLicenseConfigurationOperationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFailuresForLicenseConfigurationOperationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFailuresForLicenseConfigurationOperationsResponse(){}
 }

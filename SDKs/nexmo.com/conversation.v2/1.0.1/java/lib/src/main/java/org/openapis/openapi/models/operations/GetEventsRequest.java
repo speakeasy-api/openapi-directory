@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventsRequest {
@@ -12,6 +13,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversation_id")
     public String conversationId;
+
     public GetEventsRequest withConversationId(String conversationId) {
         this.conversationId = conversationId;
         return this;
@@ -25,6 +27,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetEventsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -35,6 +38,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_id")
     public String endId;
+
     public GetEventsRequest withEndId(String endId) {
         this.endId = endId;
         return this;
@@ -45,6 +49,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event_type")
     public String eventType;
+
     public GetEventsRequest withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -55,6 +60,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public org.openapis.openapi.models.shared.OrderEnum order;
+
     public GetEventsRequest withOrder(org.openapis.openapi.models.shared.OrderEnum order) {
         this.order = order;
         return this;
@@ -65,6 +71,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public GetEventsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -75,9 +82,13 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_id")
     public String startId;
+
     public GetEventsRequest withStartId(String startId) {
         this.startId = startId;
         return this;
     }
     
+    public GetEventsRequest(@JsonProperty("conversation_id") String conversationId) {
+        this.conversationId = conversationId;
+  }
 }

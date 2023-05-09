@@ -21,6 +21,7 @@ public class SearchInvoicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public SearchInvoicesResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -32,6 +33,7 @@ public class SearchInvoicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public SearchInvoicesResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -43,9 +45,11 @@ public class SearchInvoicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoices")
     public Invoice[] invoices;
+
     public SearchInvoicesResponse withInvoices(Invoice[] invoices) {
         this.invoices = invoices;
         return this;
     }
     
+    public SearchInvoicesResponse(){}
 }

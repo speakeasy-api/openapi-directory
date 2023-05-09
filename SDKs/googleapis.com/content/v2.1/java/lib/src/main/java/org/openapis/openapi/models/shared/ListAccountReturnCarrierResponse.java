@@ -18,9 +18,11 @@ public class ListAccountReturnCarrierResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountReturnCarriers")
     public AccountReturnCarrier[] accountReturnCarriers;
+
     public ListAccountReturnCarrierResponse withAccountReturnCarriers(AccountReturnCarrier[] accountReturnCarriers) {
         this.accountReturnCarriers = accountReturnCarriers;
         return this;
     }
     
+    public ListAccountReturnCarrierResponse(){}
 }

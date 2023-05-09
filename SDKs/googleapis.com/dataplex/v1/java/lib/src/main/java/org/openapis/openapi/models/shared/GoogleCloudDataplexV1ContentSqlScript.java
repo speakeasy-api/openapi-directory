@@ -18,9 +18,11 @@ public class GoogleCloudDataplexV1ContentSqlScript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("engine")
     public GoogleCloudDataplexV1ContentSqlScriptEngineEnum engine;
+
     public GoogleCloudDataplexV1ContentSqlScript withEngine(GoogleCloudDataplexV1ContentSqlScriptEngineEnum engine) {
         this.engine = engine;
         return this;
     }
     
+    public GoogleCloudDataplexV1ContentSqlScript(){}
 }

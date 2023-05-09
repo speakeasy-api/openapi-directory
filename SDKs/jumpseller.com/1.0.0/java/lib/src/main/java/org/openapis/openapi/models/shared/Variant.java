@@ -15,9 +15,11 @@ public class Variant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variant")
     public VariantFields variant;
+
     public Variant withVariant(VariantFields variant) {
         this.variant = variant;
         return this;
     }
     
+    public Variant(){}
 }

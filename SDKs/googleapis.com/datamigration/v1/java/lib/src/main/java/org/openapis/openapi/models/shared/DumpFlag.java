@@ -18,6 +18,7 @@ public class DumpFlag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DumpFlag withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class DumpFlag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public DumpFlag withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DumpFlag(){}
 }

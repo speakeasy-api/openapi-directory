@@ -20,6 +20,7 @@ public class OrderFulfillmentPickupDetailsCurbsidePickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyer_arrived_at")
     public String buyerArrivedAt;
+
     public OrderFulfillmentPickupDetailsCurbsidePickupDetails withBuyerArrivedAt(String buyerArrivedAt) {
         this.buyerArrivedAt = buyerArrivedAt;
         return this;
@@ -31,9 +32,11 @@ public class OrderFulfillmentPickupDetailsCurbsidePickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("curbside_details")
     public String curbsideDetails;
+
     public OrderFulfillmentPickupDetailsCurbsidePickupDetails withCurbsideDetails(String curbsideDetails) {
         this.curbsideDetails = curbsideDetails;
         return this;
     }
     
+    public OrderFulfillmentPickupDetailsCurbsidePickupDetails(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutMaintenanceStartTimeResponse {
@@ -12,6 +13,7 @@ public class PutMaintenanceStartTimeResponse {
      */
     
     public Object conflictException;
+
     public PutMaintenanceStartTimeResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class PutMaintenanceStartTimeResponse {
     
     
     public String contentType;
+
     public PutMaintenanceStartTimeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutMaintenanceStartTimeResponse {
      */
     
     public Object internalServerException;
+
     public PutMaintenanceStartTimeResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class PutMaintenanceStartTimeResponse {
      */
     
     public org.openapis.openapi.models.shared.PutMaintenanceStartTimeOutput putMaintenanceStartTimeOutput;
+
     public PutMaintenanceStartTimeResponse withPutMaintenanceStartTimeOutput(org.openapis.openapi.models.shared.PutMaintenanceStartTimeOutput putMaintenanceStartTimeOutput) {
         this.putMaintenanceStartTimeOutput = putMaintenanceStartTimeOutput;
         return this;
@@ -46,6 +51,7 @@ public class PutMaintenanceStartTimeResponse {
     
     
     public Integer statusCode;
+
     public PutMaintenanceStartTimeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutMaintenanceStartTimeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutMaintenanceStartTimeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class PutMaintenanceStartTimeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutMaintenanceStartTimeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class PutMaintenanceStartTimeResponse {
      */
     
     public Object throttlingException;
+
     public PutMaintenanceStartTimeResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class PutMaintenanceStartTimeResponse {
      */
     
     public Object validationException;
+
     public PutMaintenanceStartTimeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutMaintenanceStartTimeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

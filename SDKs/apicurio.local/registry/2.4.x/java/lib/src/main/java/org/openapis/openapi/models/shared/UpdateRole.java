@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateRole {
     @JsonProperty("role")
     public RoleTypeEnum role;
+
     public UpdateRole withRole(RoleTypeEnum role) {
         this.role = role;
         return this;
     }
     
+    public UpdateRole(@JsonProperty("role") RoleTypeEnum role) {
+        this.role = role;
+  }
 }

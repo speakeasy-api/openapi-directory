@@ -18,6 +18,7 @@ public class Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerPrint")
     public String fingerPrint;
+
     public Metadata withFingerPrint(String fingerPrint) {
         this.fingerPrint = fingerPrint;
         return this;
@@ -29,9 +30,11 @@ public class Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public MetadataItem[] items;
+
     public Metadata withItems(MetadataItem[] items) {
         this.items = items;
         return this;
     }
     
+    public Metadata(){}
 }

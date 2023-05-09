@@ -18,9 +18,11 @@ public class TaskTaskReminder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public String time;
+
     public TaskTaskReminder withTime(String time) {
         this.time = time;
         return this;
     }
     
+    public TaskTaskReminder(){}
 }

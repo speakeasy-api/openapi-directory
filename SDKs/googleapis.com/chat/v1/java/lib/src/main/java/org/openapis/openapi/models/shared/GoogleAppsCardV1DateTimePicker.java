@@ -18,6 +18,7 @@ public class GoogleAppsCardV1DateTimePicker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public GoogleAppsCardV1DateTimePicker withLabel(String label) {
         this.label = label;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsCardV1DateTimePicker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAppsCardV1DateTimePicker withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsCardV1DateTimePicker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onChangeAction")
     public GoogleAppsCardV1Action onChangeAction;
+
     public GoogleAppsCardV1DateTimePicker withOnChangeAction(GoogleAppsCardV1Action onChangeAction) {
         this.onChangeAction = onChangeAction;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsCardV1DateTimePicker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezoneOffsetDate")
     public Integer timezoneOffsetDate;
+
     public GoogleAppsCardV1DateTimePicker withTimezoneOffsetDate(Integer timezoneOffsetDate) {
         this.timezoneOffsetDate = timezoneOffsetDate;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAppsCardV1DateTimePicker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleAppsCardV1DateTimePickerTypeEnum type;
+
     public GoogleAppsCardV1DateTimePicker withType(GoogleAppsCardV1DateTimePickerTypeEnum type) {
         this.type = type;
         return this;
@@ -73,9 +78,11 @@ public class GoogleAppsCardV1DateTimePicker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueMsEpoch")
     public String valueMsEpoch;
+
     public GoogleAppsCardV1DateTimePicker withValueMsEpoch(String valueMsEpoch) {
         this.valueMsEpoch = valueMsEpoch;
         return this;
     }
     
+    public GoogleAppsCardV1DateTimePicker(){}
 }

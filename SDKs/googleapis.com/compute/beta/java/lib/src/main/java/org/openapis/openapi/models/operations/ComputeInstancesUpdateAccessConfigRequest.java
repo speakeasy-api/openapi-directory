@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeInstancesUpdateAccessConfigRequest {
@@ -12,6 +13,7 @@ public class ComputeInstancesUpdateAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeInstancesUpdateAccessConfigRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ComputeInstancesUpdateAccessConfigRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AccessConfig accessConfig;
+
     public ComputeInstancesUpdateAccessConfigRequest withAccessConfig(org.openapis.openapi.models.shared.AccessConfig accessConfig) {
         this.accessConfig = accessConfig;
         return this;
@@ -29,6 +32,7 @@ public class ComputeInstancesUpdateAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeInstancesUpdateAccessConfigRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ComputeInstancesUpdateAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeInstancesUpdateAccessConfigRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ComputeInstancesUpdateAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeInstancesUpdateAccessConfigRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ComputeInstancesUpdateAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeInstancesUpdateAccessConfigRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ComputeInstancesUpdateAccessConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instance")
     public String instance;
+
     public ComputeInstancesUpdateAccessConfigRequest withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -79,6 +87,7 @@ public class ComputeInstancesUpdateAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeInstancesUpdateAccessConfigRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class ComputeInstancesUpdateAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=networkInterface")
     public String networkInterface;
+
     public ComputeInstancesUpdateAccessConfigRequest withNetworkInterface(String networkInterface) {
         this.networkInterface = networkInterface;
         return this;
@@ -99,6 +109,7 @@ public class ComputeInstancesUpdateAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeInstancesUpdateAccessConfigRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -109,6 +120,7 @@ public class ComputeInstancesUpdateAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeInstancesUpdateAccessConfigRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class ComputeInstancesUpdateAccessConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeInstancesUpdateAccessConfigRequest withProject(String project) {
         this.project = project;
         return this;
@@ -129,6 +142,7 @@ public class ComputeInstancesUpdateAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeInstancesUpdateAccessConfigRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -139,6 +153,7 @@ public class ComputeInstancesUpdateAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeInstancesUpdateAccessConfigRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -149,6 +164,7 @@ public class ComputeInstancesUpdateAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeInstancesUpdateAccessConfigRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -159,6 +175,7 @@ public class ComputeInstancesUpdateAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeInstancesUpdateAccessConfigRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -169,6 +186,7 @@ public class ComputeInstancesUpdateAccessConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeInstancesUpdateAccessConfigRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -179,9 +197,16 @@ public class ComputeInstancesUpdateAccessConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone")
     public String zone;
+
     public ComputeInstancesUpdateAccessConfigRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public ComputeInstancesUpdateAccessConfigRequest(@JsonProperty("instance") String instance, @JsonProperty("networkInterface") String networkInterface, @JsonProperty("project") String project, @JsonProperty("zone") String zone) {
+        this.instance = instance;
+        this.networkInterface = networkInterface;
+        this.project = project;
+        this.zone = zone;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CvssScore {
     @JsonProperty("baseScore")
     public Double baseScore;
+
     public CvssScore withBaseScore(Double baseScore) {
         this.baseScore = baseScore;
         return this;
@@ -19,6 +20,7 @@ public class CvssScore {
     
     @JsonProperty("scoringVector")
     public String scoringVector;
+
     public CvssScore withScoringVector(String scoringVector) {
         this.scoringVector = scoringVector;
         return this;
@@ -26,6 +28,7 @@ public class CvssScore {
     
     @JsonProperty("source")
     public String source;
+
     public CvssScore withSource(String source) {
         this.source = source;
         return this;
@@ -33,9 +36,16 @@ public class CvssScore {
     
     @JsonProperty("version")
     public String version;
+
     public CvssScore withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public CvssScore(@JsonProperty("baseScore") Double baseScore, @JsonProperty("scoringVector") String scoringVector, @JsonProperty("source") String source, @JsonProperty("version") String version) {
+        this.baseScore = baseScore;
+        this.scoringVector = scoringVector;
+        this.source = source;
+        this.version = version;
+  }
 }

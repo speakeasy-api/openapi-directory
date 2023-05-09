@@ -53,11 +53,9 @@ public class Conferences {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConferencesResponse res = new org.openapis.openapi.models.operations.GetConferencesResponse() {{
+        org.openapis.openapi.models.operations.GetConferencesResponse res = new org.openapis.openapi.models.operations.GetConferencesResponse(contentType, httpRes.statusCode()) {{
             conferences = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

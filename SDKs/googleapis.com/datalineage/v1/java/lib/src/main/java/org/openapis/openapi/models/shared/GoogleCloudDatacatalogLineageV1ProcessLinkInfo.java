@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogLineageV1ProcessLinkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GoogleCloudDatacatalogLineageV1ProcessLinkInfo withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogLineageV1ProcessLinkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public GoogleCloudDatacatalogLineageV1ProcessLinkInfo withLink(String link) {
         this.link = link;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatacatalogLineageV1ProcessLinkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudDatacatalogLineageV1ProcessLinkInfo withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GoogleCloudDatacatalogLineageV1ProcessLinkInfo(){}
 }

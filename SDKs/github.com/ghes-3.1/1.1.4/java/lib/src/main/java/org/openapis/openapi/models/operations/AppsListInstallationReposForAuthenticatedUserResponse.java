@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppsListInstallationReposForAuthenticatedUserResponse {
     
     public String contentType;
+
     public AppsListInstallationReposForAuthenticatedUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppsListInstallationReposForAuthenticatedUserResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public AppsListInstallationReposForAuthenticatedUserResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class AppsListInstallationReposForAuthenticatedUserResponse {
     
     
     public Integer statusCode;
+
     public AppsListInstallationReposForAuthenticatedUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class AppsListInstallationReposForAuthenticatedUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppsListInstallationReposForAuthenticatedUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class AppsListInstallationReposForAuthenticatedUserResponse {
      */
     
     public AppsListInstallationReposForAuthenticatedUser200ApplicationJSON appsListInstallationReposForAuthenticatedUser200ApplicationJSONObject;
+
     public AppsListInstallationReposForAuthenticatedUserResponse withAppsListInstallationReposForAuthenticatedUser200ApplicationJSONObject(AppsListInstallationReposForAuthenticatedUser200ApplicationJSON appsListInstallationReposForAuthenticatedUser200ApplicationJSONObject) {
         this.appsListInstallationReposForAuthenticatedUser200ApplicationJSONObject = appsListInstallationReposForAuthenticatedUser200ApplicationJSONObject;
         return this;
@@ -50,9 +56,14 @@ public class AppsListInstallationReposForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public AppsListInstallationReposForAuthenticatedUserResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
     }
     
+    public AppsListInstallationReposForAuthenticatedUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

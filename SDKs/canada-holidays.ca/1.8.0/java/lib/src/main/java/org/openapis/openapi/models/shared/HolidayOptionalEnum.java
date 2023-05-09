@@ -10,12 +10,12 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * HolidayOptionalEnum - Whether this is a province-wide statutory holiday, or one that is optional for employers.
  */
 public enum HolidayOptionalEnum {
-    ONE("1");
+    ONE(1L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private HolidayOptionalEnum(String value) {
+    private HolidayOptionalEnum(Long value) {
         this.value = value;
     }
 }

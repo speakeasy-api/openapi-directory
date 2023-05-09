@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransferInfoOld {
     @JsonProperty("amount")
     public Amount amount;
+
     public TransferInfoOld withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -22,6 +23,7 @@ public class TransferInfoOld {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TransferInfoOld withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +31,7 @@ public class TransferInfoOld {
     
     @JsonProperty("destination")
     public PartyIdentification destination;
+
     public TransferInfoOld withDestination(PartyIdentification destination) {
         this.destination = destination;
         return this;
@@ -40,6 +43,7 @@ public class TransferInfoOld {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public TransferInfoOld withReference(String reference) {
         this.reference = reference;
         return this;
@@ -47,9 +51,15 @@ public class TransferInfoOld {
     
     @JsonProperty("source")
     public InternalPartyIdentification source;
+
     public TransferInfoOld withSource(InternalPartyIdentification source) {
         this.source = source;
         return this;
     }
     
+    public TransferInfoOld(@JsonProperty("amount") Amount amount, @JsonProperty("destination") PartyIdentification destination, @JsonProperty("source") InternalPartyIdentification source) {
+        this.amount = amount;
+        this.destination = destination;
+        this.source = source;
+  }
 }

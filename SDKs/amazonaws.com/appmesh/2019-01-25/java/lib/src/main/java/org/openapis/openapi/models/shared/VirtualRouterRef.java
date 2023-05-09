@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class VirtualRouterRef {
     @JsonProperty("arn")
     public String arn;
+
     public VirtualRouterRef withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class VirtualRouterRef {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public VirtualRouterRef withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class VirtualRouterRef {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public VirtualRouterRef withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -42,6 +45,7 @@ public class VirtualRouterRef {
     
     @JsonProperty("meshName")
     public String meshName;
+
     public VirtualRouterRef withMeshName(String meshName) {
         this.meshName = meshName;
         return this;
@@ -49,6 +53,7 @@ public class VirtualRouterRef {
     
     @JsonProperty("meshOwner")
     public String meshOwner;
+
     public VirtualRouterRef withMeshOwner(String meshOwner) {
         this.meshOwner = meshOwner;
         return this;
@@ -56,6 +61,7 @@ public class VirtualRouterRef {
     
     @JsonProperty("resourceOwner")
     public String resourceOwner;
+
     public VirtualRouterRef withResourceOwner(String resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
@@ -63,6 +69,7 @@ public class VirtualRouterRef {
     
     @JsonProperty("version")
     public Long version;
+
     public VirtualRouterRef withVersion(Long version) {
         this.version = version;
         return this;
@@ -70,9 +77,20 @@ public class VirtualRouterRef {
     
     @JsonProperty("virtualRouterName")
     public String virtualRouterName;
+
     public VirtualRouterRef withVirtualRouterName(String virtualRouterName) {
         this.virtualRouterName = virtualRouterName;
         return this;
     }
     
+    public VirtualRouterRef(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("lastUpdatedAt") OffsetDateTime lastUpdatedAt, @JsonProperty("meshName") String meshName, @JsonProperty("meshOwner") String meshOwner, @JsonProperty("resourceOwner") String resourceOwner, @JsonProperty("version") Long version, @JsonProperty("virtualRouterName") String virtualRouterName) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.lastUpdatedAt = lastUpdatedAt;
+        this.meshName = meshName;
+        this.meshOwner = meshOwner;
+        this.resourceOwner = resourceOwner;
+        this.version = version;
+        this.virtualRouterName = virtualRouterName;
+  }
 }

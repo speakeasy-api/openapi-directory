@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Yara {
     /**
@@ -12,6 +12,7 @@ public class Yara {
      */
     
     public YaraMeta meta;
+
     public Yara withMeta(YaraMeta meta) {
         this.meta = meta;
         return this;
@@ -22,6 +23,7 @@ public class Yara {
      */
     
     public String name;
+
     public Yara withName(String name) {
         this.name = name;
         return this;
@@ -32,9 +34,15 @@ public class Yara {
      */
     
     public String[][] strings;
+
     public Yara withStrings(String[][] strings) {
         this.strings = strings;
         return this;
     }
     
+    public Yara(@JsonProperty("meta") YaraMeta meta, @JsonProperty("name") String name, @JsonProperty("strings") String[][] strings) {
+        this.meta = meta;
+        this.name = name;
+        this.strings = strings;
+  }
 }

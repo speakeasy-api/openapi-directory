@@ -15,9 +15,11 @@ public class EnterpriseCrmEventbusProtoTeardown {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teardownTaskConfigs")
     public EnterpriseCrmEventbusProtoTeardownTaskConfig[] teardownTaskConfigs;
+
     public EnterpriseCrmEventbusProtoTeardown withTeardownTaskConfigs(EnterpriseCrmEventbusProtoTeardownTaskConfig[] teardownTaskConfigs) {
         this.teardownTaskConfigs = teardownTaskConfigs;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoTeardown(){}
 }

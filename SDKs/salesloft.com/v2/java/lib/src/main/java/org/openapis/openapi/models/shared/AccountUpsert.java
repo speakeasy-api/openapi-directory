@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AccountUpsert {
     
     public Account account;
+
     public AccountUpsert withAccount(Account account) {
         this.account = account;
         return this;
@@ -22,9 +23,11 @@ public class AccountUpsert {
      */
     
     public String upsertType;
+
     public AccountUpsert withUpsertType(String upsertType) {
         this.upsertType = upsertType;
         return this;
     }
     
+    public AccountUpsert(){}
 }

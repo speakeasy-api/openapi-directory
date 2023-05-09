@@ -18,6 +18,7 @@ public class WatchSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backgroundColor")
     public String backgroundColor;
+
     public WatchSettings withBackgroundColor(String backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
@@ -29,6 +30,7 @@ public class WatchSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featuredPlaylistId")
     public String featuredPlaylistId;
+
     public WatchSettings withFeaturedPlaylistId(String featuredPlaylistId) {
         this.featuredPlaylistId = featuredPlaylistId;
         return this;
@@ -40,9 +42,11 @@ public class WatchSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textColor")
     public String textColor;
+
     public WatchSettings withTextColor(String textColor) {
         this.textColor = textColor;
         return this;
     }
     
+    public WatchSettings(){}
 }

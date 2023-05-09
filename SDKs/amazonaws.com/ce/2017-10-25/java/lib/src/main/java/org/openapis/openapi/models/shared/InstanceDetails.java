@@ -15,6 +15,7 @@ public class InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EC2InstanceDetails")
     public Ec2InstanceDetails ec2InstanceDetails;
+
     public InstanceDetails withEc2InstanceDetails(Ec2InstanceDetails ec2InstanceDetails) {
         this.ec2InstanceDetails = ec2InstanceDetails;
         return this;
@@ -23,6 +24,7 @@ public class InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ESInstanceDetails")
     public ESInstanceDetails esInstanceDetails;
+
     public InstanceDetails withESInstanceDetails(ESInstanceDetails esInstanceDetails) {
         this.esInstanceDetails = esInstanceDetails;
         return this;
@@ -31,6 +33,7 @@ public class InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ElastiCacheInstanceDetails")
     public ElastiCacheInstanceDetails elastiCacheInstanceDetails;
+
     public InstanceDetails withElastiCacheInstanceDetails(ElastiCacheInstanceDetails elastiCacheInstanceDetails) {
         this.elastiCacheInstanceDetails = elastiCacheInstanceDetails;
         return this;
@@ -39,6 +42,7 @@ public class InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RDSInstanceDetails")
     public RDSInstanceDetails rdsInstanceDetails;
+
     public InstanceDetails withRDSInstanceDetails(RDSInstanceDetails rdsInstanceDetails) {
         this.rdsInstanceDetails = rdsInstanceDetails;
         return this;
@@ -47,9 +51,11 @@ public class InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedshiftInstanceDetails")
     public RedshiftInstanceDetails redshiftInstanceDetails;
+
     public InstanceDetails withRedshiftInstanceDetails(RedshiftInstanceDetails redshiftInstanceDetails) {
         this.redshiftInstanceDetails = redshiftInstanceDetails;
         return this;
     }
     
+    public InstanceDetails(){}
 }

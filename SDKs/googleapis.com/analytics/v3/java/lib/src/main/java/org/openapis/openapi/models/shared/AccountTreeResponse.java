@@ -18,6 +18,7 @@ public class AccountTreeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public Account account;
+
     public AccountTreeResponse withAccount(Account account) {
         this.account = account;
         return this;
@@ -29,6 +30,7 @@ public class AccountTreeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccountTreeResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class AccountTreeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile")
     public Profile profile;
+
     public AccountTreeResponse withProfile(Profile profile) {
         this.profile = profile;
         return this;
@@ -51,9 +54,11 @@ public class AccountTreeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webproperty")
     public Webproperty webproperty;
+
     public AccountTreeResponse withWebproperty(Webproperty webproperty) {
         this.webproperty = webproperty;
         return this;
     }
     
+    public AccountTreeResponse(){}
 }

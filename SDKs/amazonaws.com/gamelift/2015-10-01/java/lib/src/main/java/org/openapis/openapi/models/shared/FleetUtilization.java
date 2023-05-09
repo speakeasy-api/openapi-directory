@@ -15,6 +15,7 @@ public class FleetUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveGameSessionCount")
     public Long activeGameSessionCount;
+
     public FleetUtilization withActiveGameSessionCount(Long activeGameSessionCount) {
         this.activeGameSessionCount = activeGameSessionCount;
         return this;
@@ -23,6 +24,7 @@ public class FleetUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveServerProcessCount")
     public Long activeServerProcessCount;
+
     public FleetUtilization withActiveServerProcessCount(Long activeServerProcessCount) {
         this.activeServerProcessCount = activeServerProcessCount;
         return this;
@@ -31,6 +33,7 @@ public class FleetUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentPlayerSessionCount")
     public Long currentPlayerSessionCount;
+
     public FleetUtilization withCurrentPlayerSessionCount(Long currentPlayerSessionCount) {
         this.currentPlayerSessionCount = currentPlayerSessionCount;
         return this;
@@ -39,6 +42,7 @@ public class FleetUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public FleetUtilization withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -47,6 +51,7 @@ public class FleetUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetId")
     public String fleetId;
+
     public FleetUtilization withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -55,6 +60,7 @@ public class FleetUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public FleetUtilization withLocation(String location) {
         this.location = location;
         return this;
@@ -63,9 +69,11 @@ public class FleetUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumPlayerSessionCount")
     public Long maximumPlayerSessionCount;
+
     public FleetUtilization withMaximumPlayerSessionCount(Long maximumPlayerSessionCount) {
         this.maximumPlayerSessionCount = maximumPlayerSessionCount;
         return this;
     }
     
+    public FleetUtilization(){}
 }

@@ -22,6 +22,7 @@ public class PointInTimeRecoverySummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("earliestRestorableTimestamp")
     public OffsetDateTime earliestRestorableTimestamp;
+
     public PointInTimeRecoverySummary withEarliestRestorableTimestamp(OffsetDateTime earliestRestorableTimestamp) {
         this.earliestRestorableTimestamp = earliestRestorableTimestamp;
         return this;
@@ -29,9 +30,13 @@ public class PointInTimeRecoverySummary {
     
     @JsonProperty("status")
     public PointInTimeRecoveryStatusEnum status;
+
     public PointInTimeRecoverySummary withStatus(PointInTimeRecoveryStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PointInTimeRecoverySummary(@JsonProperty("status") PointInTimeRecoveryStatusEnum status) {
+        this.status = status;
+  }
 }

@@ -18,9 +18,11 @@ public class DatasetInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputFiles")
     public InputFile[] inputFiles;
+
     public DatasetInputConfig withInputFiles(InputFile[] inputFiles) {
         this.inputFiles = inputFiles;
         return this;
     }
     
+    public DatasetInputConfig(){}
 }

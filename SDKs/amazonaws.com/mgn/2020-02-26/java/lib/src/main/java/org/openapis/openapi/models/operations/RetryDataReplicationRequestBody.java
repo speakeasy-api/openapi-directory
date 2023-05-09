@@ -12,9 +12,13 @@ public class RetryDataReplicationRequestBody {
      */
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public RetryDataReplicationRequestBody withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
     }
     
+    public RetryDataReplicationRequestBody(@JsonProperty("sourceServerID") String sourceServerID) {
+        this.sourceServerID = sourceServerID;
+  }
 }

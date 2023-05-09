@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ServicecontrolServicesCheckResponse {
@@ -12,6 +13,7 @@ public class ServicecontrolServicesCheckResponse {
      */
     
     public org.openapis.openapi.models.shared.CheckResponse checkResponse;
+
     public ServicecontrolServicesCheckResponse withCheckResponse(org.openapis.openapi.models.shared.CheckResponse checkResponse) {
         this.checkResponse = checkResponse;
         return this;
@@ -19,6 +21,7 @@ public class ServicecontrolServicesCheckResponse {
     
     
     public String contentType;
+
     public ServicecontrolServicesCheckResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ServicecontrolServicesCheckResponse {
     
     
     public Integer statusCode;
+
     public ServicecontrolServicesCheckResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ServicecontrolServicesCheckResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ServicecontrolServicesCheckResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ServicecontrolServicesCheckResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

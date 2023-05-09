@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CharacterSet {
     
     public String characterSetDescription;
+
     public CharacterSet withCharacterSetDescription(String characterSetDescription) {
         this.characterSetDescription = characterSetDescription;
         return this;
@@ -19,9 +20,11 @@ public class CharacterSet {
     
     
     public String characterSetName;
+
     public CharacterSet withCharacterSetName(String characterSetName) {
         this.characterSetName = characterSetName;
         return this;
     }
     
+    public CharacterSet(){}
 }

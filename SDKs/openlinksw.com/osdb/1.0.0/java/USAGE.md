@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.ActionHelpRequest;
 import org.openapis.openapi.models.operations.ActionHelpResponse;
 
@@ -13,18 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ActionHelpRequest req = new ActionHelpRequest() {{
-                actionId = "corrupti";
-                serviceId = "provident";
-            }}            
+            ActionHelpRequest req = new ActionHelpRequest("corrupti", "provident");            
 
             ActionHelpResponse res = sdk.osdb.actionHelp(req);
 
-            if (res.actionHelpResponse.isPresent()) {
+            if (res.actionHelpResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

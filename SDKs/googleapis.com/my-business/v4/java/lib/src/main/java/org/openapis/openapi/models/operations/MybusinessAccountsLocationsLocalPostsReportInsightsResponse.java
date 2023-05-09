@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MybusinessAccountsLocationsLocalPostsReportInsightsResponse {
     
     public String contentType;
+
     public MybusinessAccountsLocationsLocalPostsReportInsightsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MybusinessAccountsLocationsLocalPostsReportInsightsResponse {
      */
     
     public org.openapis.openapi.models.shared.ReportLocalPostInsightsResponse reportLocalPostInsightsResponse;
+
     public MybusinessAccountsLocationsLocalPostsReportInsightsResponse withReportLocalPostInsightsResponse(org.openapis.openapi.models.shared.ReportLocalPostInsightsResponse reportLocalPostInsightsResponse) {
         this.reportLocalPostInsightsResponse = reportLocalPostInsightsResponse;
         return this;
@@ -26,6 +29,7 @@ public class MybusinessAccountsLocationsLocalPostsReportInsightsResponse {
     
     
     public Integer statusCode;
+
     public MybusinessAccountsLocationsLocalPostsReportInsightsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MybusinessAccountsLocationsLocalPostsReportInsightsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MybusinessAccountsLocationsLocalPostsReportInsightsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MybusinessAccountsLocationsLocalPostsReportInsightsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ListAccountAssociationsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public ListAccountAssociationsRequestBodyFilters withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class ListAccountAssociationsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountIds")
     public String[] accountIds;
+
     public ListAccountAssociationsRequestBodyFilters withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -31,9 +33,11 @@ public class ListAccountAssociationsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Association")
     public String association;
+
     public ListAccountAssociationsRequestBodyFilters withAssociation(String association) {
         this.association = association;
         return this;
     }
     
+    public ListAccountAssociationsRequestBodyFilters(){}
 }

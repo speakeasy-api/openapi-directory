@@ -16,6 +16,7 @@ public class TransactionResourceRelationshipsCategoryLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("related")
     public String related;
+
     public TransactionResourceRelationshipsCategoryLinks withRelated(String related) {
         this.related = related;
         return this;
@@ -28,9 +29,13 @@ public class TransactionResourceRelationshipsCategoryLinks {
      */
     @JsonProperty("self")
     public String self;
+
     public TransactionResourceRelationshipsCategoryLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public TransactionResourceRelationshipsCategoryLinks(@JsonProperty("self") String self) {
+        this.self = self;
+  }
 }

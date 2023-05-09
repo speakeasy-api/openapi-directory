@@ -12,6 +12,7 @@ public class PermissionFrequency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeats")
     public Long repeats;
+
     public PermissionFrequency withRepeats(Long repeats) {
         this.repeats = repeats;
         return this;
@@ -20,6 +21,7 @@ public class PermissionFrequency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public PermissionFrequencyUnitEnum unit;
+
     public PermissionFrequency withUnit(PermissionFrequencyUnitEnum unit) {
         this.unit = unit;
         return this;
@@ -28,9 +30,11 @@ public class PermissionFrequency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public PermissionFrequency withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public PermissionFrequency(){}
 }

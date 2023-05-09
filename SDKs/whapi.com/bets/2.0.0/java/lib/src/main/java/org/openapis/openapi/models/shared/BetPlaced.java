@@ -15,6 +15,7 @@ public class BetPlaced {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BetPlaced withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class BetPlaced {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numLines")
     public Long numLines;
+
     public BetPlaced withNumLines(Long numLines) {
         this.numLines = numLines;
         return this;
@@ -37,6 +39,7 @@ public class BetPlaced {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public Double number;
+
     public BetPlaced withNumber(Double number) {
         this.number = number;
         return this;
@@ -48,6 +51,7 @@ public class BetPlaced {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placedDateTime")
     public String placedDateTime;
+
     public BetPlaced withPlacedDateTime(String placedDateTime) {
         this.placedDateTime = placedDateTime;
         return this;
@@ -58,6 +62,7 @@ public class BetPlaced {
      */
     @JsonProperty("receipt")
     public String receipt;
+
     public BetPlaced withReceipt(String receipt) {
         this.receipt = receipt;
         return this;
@@ -69,9 +74,13 @@ public class BetPlaced {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalStake")
     public Double totalStake;
+
     public BetPlaced withTotalStake(Double totalStake) {
         this.totalStake = totalStake;
         return this;
     }
     
+    public BetPlaced(@JsonProperty("receipt") String receipt) {
+        this.receipt = receipt;
+  }
 }

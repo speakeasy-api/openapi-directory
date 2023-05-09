@@ -53,12 +53,10 @@ public class PaymentInstrumentGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdResponse res = new org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdResponse() {{
+        org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdResponse res = new org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdResponse(contentType, httpRes.statusCode()) {{
             paymentInstrumentGroup = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,12 +100,10 @@ public class PaymentInstrumentGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdTransactionRulesResponse res = new org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdTransactionRulesResponse() {{
+        org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdTransactionRulesResponse res = new org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdTransactionRulesResponse(contentType, httpRes.statusCode()) {{
             transactionRulesResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,12 +149,10 @@ public class PaymentInstrumentGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPaymentInstrumentGroupsResponse res = new org.openapis.openapi.models.operations.PostPaymentInstrumentGroupsResponse() {{
+        org.openapis.openapi.models.operations.PostPaymentInstrumentGroupsResponse res = new org.openapis.openapi.models.operations.PostPaymentInstrumentGroupsResponse(contentType, httpRes.statusCode()) {{
             paymentInstrumentGroup = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

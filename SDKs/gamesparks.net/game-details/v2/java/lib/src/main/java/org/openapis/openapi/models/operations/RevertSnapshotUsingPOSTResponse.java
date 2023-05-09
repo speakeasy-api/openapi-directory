@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RevertSnapshotUsingPOSTResponse {
     
     public String contentType;
+
     public RevertSnapshotUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RevertSnapshotUsingPOSTResponse {
      */
     
     public org.openapis.openapi.models.shared.ManageResult manageResult;
+
     public RevertSnapshotUsingPOSTResponse withManageResult(org.openapis.openapi.models.shared.ManageResult manageResult) {
         this.manageResult = manageResult;
         return this;
@@ -29,6 +32,7 @@ public class RevertSnapshotUsingPOSTResponse {
      */
     
     public org.openapis.openapi.models.shared.MessageModel messageModel;
+
     public RevertSnapshotUsingPOSTResponse withMessageModel(org.openapis.openapi.models.shared.MessageModel messageModel) {
         this.messageModel = messageModel;
         return this;
@@ -36,6 +40,7 @@ public class RevertSnapshotUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public RevertSnapshotUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class RevertSnapshotUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RevertSnapshotUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RevertSnapshotUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

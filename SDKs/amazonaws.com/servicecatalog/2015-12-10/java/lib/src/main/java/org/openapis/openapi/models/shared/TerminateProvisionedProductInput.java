@@ -12,6 +12,7 @@ public class TerminateProvisionedProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public TerminateProvisionedProductInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class TerminateProvisionedProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IgnoreErrors")
     public Boolean ignoreErrors;
+
     public TerminateProvisionedProductInput withIgnoreErrors(Boolean ignoreErrors) {
         this.ignoreErrors = ignoreErrors;
         return this;
@@ -28,6 +30,7 @@ public class TerminateProvisionedProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedProductId")
     public String provisionedProductId;
+
     public TerminateProvisionedProductInput withProvisionedProductId(String provisionedProductId) {
         this.provisionedProductId = provisionedProductId;
         return this;
@@ -36,6 +39,7 @@ public class TerminateProvisionedProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedProductName")
     public String provisionedProductName;
+
     public TerminateProvisionedProductInput withProvisionedProductName(String provisionedProductName) {
         this.provisionedProductName = provisionedProductName;
         return this;
@@ -44,6 +48,7 @@ public class TerminateProvisionedProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetainPhysicalResources")
     public Boolean retainPhysicalResources;
+
     public TerminateProvisionedProductInput withRetainPhysicalResources(Boolean retainPhysicalResources) {
         this.retainPhysicalResources = retainPhysicalResources;
         return this;
@@ -51,9 +56,13 @@ public class TerminateProvisionedProductInput {
     
     @JsonProperty("TerminateToken")
     public String terminateToken;
+
     public TerminateProvisionedProductInput withTerminateToken(String terminateToken) {
         this.terminateToken = terminateToken;
         return this;
     }
     
+    public TerminateProvisionedProductInput(@JsonProperty("TerminateToken") String terminateToken) {
+        this.terminateToken = terminateToken;
+  }
 }

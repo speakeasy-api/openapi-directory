@@ -12,6 +12,7 @@ public class GroupsV2GroupPotentialMember {
      */
     
     public UserUserInfoCard bungieNetUserInfo;
+
     public GroupsV2GroupPotentialMember withBungieNetUserInfo(UserUserInfoCard bungieNetUserInfo) {
         this.bungieNetUserInfo = bungieNetUserInfo;
         return this;
@@ -19,6 +20,7 @@ public class GroupsV2GroupPotentialMember {
     
     
     public GroupsV2GroupUserInfoCard destinyUserInfo;
+
     public GroupsV2GroupPotentialMember withDestinyUserInfo(GroupsV2GroupUserInfoCard destinyUserInfo) {
         this.destinyUserInfo = destinyUserInfo;
         return this;
@@ -26,6 +28,7 @@ public class GroupsV2GroupPotentialMember {
     
     
     public Long groupId;
+
     public GroupsV2GroupPotentialMember withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -33,6 +36,7 @@ public class GroupsV2GroupPotentialMember {
     
     
     public OffsetDateTime joinDate;
+
     public GroupsV2GroupPotentialMember withJoinDate(OffsetDateTime joinDate) {
         this.joinDate = joinDate;
         return this;
@@ -40,9 +44,11 @@ public class GroupsV2GroupPotentialMember {
     
     
     public Integer potentialStatus;
+
     public GroupsV2GroupPotentialMember withPotentialStatus(Integer potentialStatus) {
         this.potentialStatus = potentialStatus;
         return this;
     }
     
+    public GroupsV2GroupPotentialMember(){}
 }

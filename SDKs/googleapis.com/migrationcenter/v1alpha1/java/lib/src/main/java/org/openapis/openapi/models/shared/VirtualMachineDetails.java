@@ -18,6 +18,7 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coreCount")
     public Integer coreCount;
+
     public VirtualMachineDetails withCoreCount(Integer coreCount) {
         this.coreCount = coreCount;
         return this;
@@ -29,6 +30,7 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public VirtualMachineDetails withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestOs")
     public GuestOsDetails guestOs;
+
     public VirtualMachineDetails withGuestOs(GuestOsDetails guestOs) {
         this.guestOs = guestOs;
         return this;
@@ -51,6 +54,7 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryMb")
     public Integer memoryMb;
+
     public VirtualMachineDetails withMemoryMb(Integer memoryMb) {
         this.memoryMb = memoryMb;
         return this;
@@ -62,6 +66,7 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osFamily")
     public VirtualMachineDetailsOsFamilyEnum osFamily;
+
     public VirtualMachineDetails withOsFamily(VirtualMachineDetailsOsFamilyEnum osFamily) {
         this.osFamily = osFamily;
         return this;
@@ -73,6 +78,7 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osName")
     public String osName;
+
     public VirtualMachineDetails withOsName(String osName) {
         this.osName = osName;
         return this;
@@ -84,6 +90,7 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osVersion")
     public String osVersion;
+
     public VirtualMachineDetails withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -95,6 +102,7 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public PlatformDetails platform;
+
     public VirtualMachineDetails withPlatform(PlatformDetails platform) {
         this.platform = platform;
         return this;
@@ -106,6 +114,7 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("powerState")
     public String powerState;
+
     public VirtualMachineDetails withPowerState(String powerState) {
         this.powerState = powerState;
         return this;
@@ -117,6 +126,7 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcenterFolder")
     public String vcenterFolder;
+
     public VirtualMachineDetails withVcenterFolder(String vcenterFolder) {
         this.vcenterFolder = vcenterFolder;
         return this;
@@ -128,6 +138,7 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcenterUrl")
     public String vcenterUrl;
+
     public VirtualMachineDetails withVcenterUrl(String vcenterUrl) {
         this.vcenterUrl = vcenterUrl;
         return this;
@@ -139,6 +150,7 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcenterVmId")
     public String vcenterVmId;
+
     public VirtualMachineDetails withVcenterVmId(String vcenterVmId) {
         this.vcenterVmId = vcenterVmId;
         return this;
@@ -150,6 +162,7 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmArchitecture")
     public VirtualMachineArchitectureDetails vmArchitecture;
+
     public VirtualMachineDetails withVmArchitecture(VirtualMachineArchitectureDetails vmArchitecture) {
         this.vmArchitecture = vmArchitecture;
         return this;
@@ -161,6 +174,7 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmDisks")
     public VirtualMachineDiskDetails vmDisks;
+
     public VirtualMachineDetails withVmDisks(VirtualMachineDiskDetails vmDisks) {
         this.vmDisks = vmDisks;
         return this;
@@ -172,6 +186,7 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmName")
     public String vmName;
+
     public VirtualMachineDetails withVmName(String vmName) {
         this.vmName = vmName;
         return this;
@@ -183,6 +198,7 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmNetwork")
     public VirtualMachineNetworkDetails vmNetwork;
+
     public VirtualMachineDetails withVmNetwork(VirtualMachineNetworkDetails vmNetwork) {
         this.vmNetwork = vmNetwork;
         return this;
@@ -194,9 +210,11 @@ public class VirtualMachineDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmUuid")
     public String vmUuid;
+
     public VirtualMachineDetails withVmUuid(String vmUuid) {
         this.vmUuid = vmUuid;
         return this;
     }
     
+    public VirtualMachineDetails(){}
 }

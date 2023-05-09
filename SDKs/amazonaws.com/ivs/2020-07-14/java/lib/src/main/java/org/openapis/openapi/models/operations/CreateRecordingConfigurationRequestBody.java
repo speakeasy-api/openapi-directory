@@ -14,6 +14,7 @@ public class CreateRecordingConfigurationRequestBody {
      */
     @JsonProperty("destinationConfiguration")
     public CreateRecordingConfigurationRequestBodyDestinationConfiguration destinationConfiguration;
+
     public CreateRecordingConfigurationRequestBody withDestinationConfiguration(CreateRecordingConfigurationRequestBodyDestinationConfiguration destinationConfiguration) {
         this.destinationConfiguration = destinationConfiguration;
         return this;
@@ -25,6 +26,7 @@ public class CreateRecordingConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateRecordingConfigurationRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +38,7 @@ public class CreateRecordingConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordingReconnectWindowSeconds")
     public Long recordingReconnectWindowSeconds;
+
     public CreateRecordingConfigurationRequestBody withRecordingReconnectWindowSeconds(Long recordingReconnectWindowSeconds) {
         this.recordingReconnectWindowSeconds = recordingReconnectWindowSeconds;
         return this;
@@ -47,6 +50,7 @@ public class CreateRecordingConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateRecordingConfigurationRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -58,9 +62,13 @@ public class CreateRecordingConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailConfiguration")
     public CreateRecordingConfigurationRequestBodyThumbnailConfiguration thumbnailConfiguration;
+
     public CreateRecordingConfigurationRequestBody withThumbnailConfiguration(CreateRecordingConfigurationRequestBodyThumbnailConfiguration thumbnailConfiguration) {
         this.thumbnailConfiguration = thumbnailConfiguration;
         return this;
     }
     
+    public CreateRecordingConfigurationRequestBody(@JsonProperty("destinationConfiguration") CreateRecordingConfigurationRequestBodyDestinationConfiguration destinationConfiguration) {
+        this.destinationConfiguration = destinationConfiguration;
+  }
 }

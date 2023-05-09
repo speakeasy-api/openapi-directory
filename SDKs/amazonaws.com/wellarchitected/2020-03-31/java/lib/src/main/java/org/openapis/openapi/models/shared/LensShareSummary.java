@@ -18,6 +18,7 @@ public class LensShareSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShareId")
     public String shareId;
+
     public LensShareSummary withShareId(String shareId) {
         this.shareId = shareId;
         return this;
@@ -29,6 +30,7 @@ public class LensShareSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedWith")
     public String sharedWith;
+
     public LensShareSummary withSharedWith(String sharedWith) {
         this.sharedWith = sharedWith;
         return this;
@@ -40,6 +42,7 @@ public class LensShareSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ShareStatusEnum status;
+
     public LensShareSummary withStatus(ShareStatusEnum status) {
         this.status = status;
         return this;
@@ -48,9 +51,11 @@ public class LensShareSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public LensShareSummary withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public LensShareSummary(){}
 }

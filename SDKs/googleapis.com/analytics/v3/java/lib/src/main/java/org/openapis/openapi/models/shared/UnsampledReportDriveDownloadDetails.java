@@ -18,9 +18,11 @@ public class UnsampledReportDriveDownloadDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentId")
     public String documentId;
+
     public UnsampledReportDriveDownloadDetails withDocumentId(String documentId) {
         this.documentId = documentId;
         return this;
     }
     
+    public UnsampledReportDriveDownloadDetails(){}
 }

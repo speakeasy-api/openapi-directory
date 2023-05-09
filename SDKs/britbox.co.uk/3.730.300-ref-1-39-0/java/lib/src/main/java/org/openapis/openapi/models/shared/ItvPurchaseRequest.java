@@ -17,6 +17,7 @@ public class ItvPurchaseRequest {
      */
     @JsonProperty("cardToken")
     public String cardToken;
+
     public ItvPurchaseRequest withCardToken(String cardToken) {
         this.cardToken = cardToken;
         return this;
@@ -27,6 +28,7 @@ public class ItvPurchaseRequest {
      */
     @JsonProperty("planId")
     public String planId;
+
     public ItvPurchaseRequest withPlanId(String planId) {
         this.planId = planId;
         return this;
@@ -37,6 +39,7 @@ public class ItvPurchaseRequest {
      */
     @JsonProperty("profileToken")
     public String profileToken;
+
     public ItvPurchaseRequest withProfileToken(String profileToken) {
         this.profileToken = profileToken;
         return this;
@@ -48,9 +51,15 @@ public class ItvPurchaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voucher")
     public String voucher;
+
     public ItvPurchaseRequest withVoucher(String voucher) {
         this.voucher = voucher;
         return this;
     }
     
+    public ItvPurchaseRequest(@JsonProperty("cardToken") String cardToken, @JsonProperty("planId") String planId, @JsonProperty("profileToken") String profileToken) {
+        this.cardToken = cardToken;
+        this.planId = planId;
+        this.profileToken = profileToken;
+  }
 }

@@ -18,6 +18,7 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurationsProdu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurationsProducts withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class Setcampaignconfiguration200ApplicationJSONTargetConfigurationsProdu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Setcampaignconfiguration200ApplicationJSONTargetConfigurationsProducts withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Setcampaignconfiguration200ApplicationJSONTargetConfigurationsProducts(){}
 }

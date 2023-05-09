@@ -15,9 +15,11 @@ public class DataflowEndpointGroupIdResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataflowEndpointGroupId")
     public String dataflowEndpointGroupId;
+
     public DataflowEndpointGroupIdResponse withDataflowEndpointGroupId(String dataflowEndpointGroupId) {
         this.dataflowEndpointGroupId = dataflowEndpointGroupId;
         return this;
     }
     
+    public DataflowEndpointGroupIdResponse(){}
 }

@@ -18,9 +18,11 @@ public class GoogleCloudDocumentaiV1DocumentPageTokenDetectedBreak {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDocumentaiV1DocumentPageTokenDetectedBreakTypeEnum type;
+
     public GoogleCloudDocumentaiV1DocumentPageTokenDetectedBreak withType(GoogleCloudDocumentaiV1DocumentPageTokenDetectedBreakTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1DocumentPageTokenDetectedBreak(){}
 }

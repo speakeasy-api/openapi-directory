@@ -25,6 +25,7 @@ public class CreateRefundRequest {
      */
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public CreateRefundRequest withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -42,6 +43,7 @@ public class CreateRefundRequest {
      */
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CreateRefundRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -55,6 +57,7 @@ public class CreateRefundRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public CreateRefundRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -69,9 +72,15 @@ public class CreateRefundRequest {
      */
     @JsonProperty("tender_id")
     public String tenderId;
+
     public CreateRefundRequest withTenderId(String tenderId) {
         this.tenderId = tenderId;
         return this;
     }
     
+    public CreateRefundRequest(@JsonProperty("amount_money") Money amountMoney, @JsonProperty("idempotency_key") String idempotencyKey, @JsonProperty("tender_id") String tenderId) {
+        this.amountMoney = amountMoney;
+        this.idempotencyKey = idempotencyKey;
+        this.tenderId = tenderId;
+  }
 }

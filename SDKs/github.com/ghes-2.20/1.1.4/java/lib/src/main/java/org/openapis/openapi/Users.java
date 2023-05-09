@@ -62,13 +62,11 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersAddEmailForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersAddEmailForAuthenticatedResponse() {{
+        org.openapis.openapi.models.operations.UsersAddEmailForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersAddEmailForAuthenticatedResponse(contentType, httpRes.statusCode()) {{
             emails = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -119,10 +117,8 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersCheckFollowingForUserResponse res = new org.openapis.openapi.models.operations.UsersCheckFollowingForUserResponse() {{
+        org.openapis.openapi.models.operations.UsersCheckFollowingForUserResponse res = new org.openapis.openapi.models.operations.UsersCheckFollowingForUserResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -152,11 +148,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersCheckPersonIsFollowedByAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersCheckPersonIsFollowedByAuthenticatedResponse() {{
+        org.openapis.openapi.models.operations.UsersCheckPersonIsFollowedByAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersCheckPersonIsFollowedByAuthenticatedResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 304) {
@@ -199,13 +193,11 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersCreateGpgKeyForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersCreateGpgKeyForAuthenticatedResponse() {{
+        org.openapis.openapi.models.operations.UsersCreateGpgKeyForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersCreateGpgKeyForAuthenticatedResponse(contentType, httpRes.statusCode()) {{
             gpgKey = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -262,13 +254,11 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersCreatePublicSshKeyForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersCreatePublicSshKeyForAuthenticatedResponse() {{
+        org.openapis.openapi.models.operations.UsersCreatePublicSshKeyForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersCreatePublicSshKeyForAuthenticatedResponse(contentType, httpRes.statusCode()) {{
             key = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -322,12 +312,10 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersDeleteEmailForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersDeleteEmailForAuthenticatedResponse() {{
+        org.openapis.openapi.models.operations.UsersDeleteEmailForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersDeleteEmailForAuthenticatedResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 304) {
@@ -372,12 +360,10 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersDeleteGpgKeyForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersDeleteGpgKeyForAuthenticatedResponse() {{
+        org.openapis.openapi.models.operations.UsersDeleteGpgKeyForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersDeleteGpgKeyForAuthenticatedResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 304) {
@@ -422,11 +408,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersDeletePublicSshKeyForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersDeletePublicSshKeyForAuthenticatedResponse() {{
+        org.openapis.openapi.models.operations.UsersDeletePublicSshKeyForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersDeletePublicSshKeyForAuthenticatedResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 304) {
@@ -466,11 +450,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersFollowResponse res = new org.openapis.openapi.models.operations.UsersFollowResponse() {{
+        org.openapis.openapi.models.operations.UsersFollowResponse res = new org.openapis.openapi.models.operations.UsersFollowResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 304) {
@@ -509,12 +491,10 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersGetAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersGetAuthenticatedResponse() {{
+        org.openapis.openapi.models.operations.UsersGetAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersGetAuthenticatedResponse(contentType, httpRes.statusCode()) {{
             usersGetAuthenticated200ApplicationJSONOneOf = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -565,13 +545,11 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersGetByUsernameResponse res = new org.openapis.openapi.models.operations.UsersGetByUsernameResponse() {{
+        org.openapis.openapi.models.operations.UsersGetByUsernameResponse res = new org.openapis.openapi.models.operations.UsersGetByUsernameResponse(contentType, httpRes.statusCode()) {{
             usersGetByUsername200ApplicationJSONOneOf = null;
             usersGetByUsername202ApplicationJSONObject = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -634,13 +612,11 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersGetContextForUserResponse res = new org.openapis.openapi.models.operations.UsersGetContextForUserResponse() {{
+        org.openapis.openapi.models.operations.UsersGetContextForUserResponse res = new org.openapis.openapi.models.operations.UsersGetContextForUserResponse(contentType, httpRes.statusCode()) {{
             hovercard = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -690,12 +666,10 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersGetGpgKeyForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersGetGpgKeyForAuthenticatedResponse() {{
+        org.openapis.openapi.models.operations.UsersGetGpgKeyForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersGetGpgKeyForAuthenticatedResponse(contentType, httpRes.statusCode()) {{
             gpgKey = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -740,12 +714,10 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersGetPublicSshKeyForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersGetPublicSshKeyForAuthenticatedResponse() {{
+        org.openapis.openapi.models.operations.UsersGetPublicSshKeyForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersGetPublicSshKeyForAuthenticatedResponse(contentType, httpRes.statusCode()) {{
             key = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -798,11 +770,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersListResponse res = new org.openapis.openapi.models.operations.UsersListResponse() {{
+        org.openapis.openapi.models.operations.UsersListResponse res = new org.openapis.openapi.models.operations.UsersListResponse(contentType, httpRes.statusCode()) {{
             simpleUsers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -848,12 +818,10 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersListEmailsForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersListEmailsForAuthenticatedResponse() {{
+        org.openapis.openapi.models.operations.UsersListEmailsForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersListEmailsForAuthenticatedResponse(contentType, httpRes.statusCode()) {{
             emails = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -906,12 +874,10 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersListFollowedByAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersListFollowedByAuthenticatedResponse() {{
+        org.openapis.openapi.models.operations.UsersListFollowedByAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersListFollowedByAuthenticatedResponse(contentType, httpRes.statusCode()) {{
             simpleUsers = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -964,12 +930,10 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersListFollowersForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.UsersListFollowersForAuthenticatedUserResponse() {{
+        org.openapis.openapi.models.operations.UsersListFollowersForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.UsersListFollowersForAuthenticatedUserResponse(contentType, httpRes.statusCode()) {{
             simpleUsers = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1022,11 +986,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersListFollowersForUserResponse res = new org.openapis.openapi.models.operations.UsersListFollowersForUserResponse() {{
+        org.openapis.openapi.models.operations.UsersListFollowersForUserResponse res = new org.openapis.openapi.models.operations.UsersListFollowersForUserResponse(contentType, httpRes.statusCode()) {{
             simpleUsers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1070,11 +1032,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersListFollowingForUserResponse res = new org.openapis.openapi.models.operations.UsersListFollowingForUserResponse() {{
+        org.openapis.openapi.models.operations.UsersListFollowingForUserResponse res = new org.openapis.openapi.models.operations.UsersListFollowingForUserResponse(contentType, httpRes.statusCode()) {{
             simpleUsers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1118,12 +1078,10 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersListGpgKeysForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersListGpgKeysForAuthenticatedResponse() {{
+        org.openapis.openapi.models.operations.UsersListGpgKeysForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersListGpgKeysForAuthenticatedResponse(contentType, httpRes.statusCode()) {{
             gpgKeys = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1176,11 +1134,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersListGpgKeysForUserResponse res = new org.openapis.openapi.models.operations.UsersListGpgKeysForUserResponse() {{
+        org.openapis.openapi.models.operations.UsersListGpgKeysForUserResponse res = new org.openapis.openapi.models.operations.UsersListGpgKeysForUserResponse(contentType, httpRes.statusCode()) {{
             gpgKeys = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1224,12 +1180,10 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersListPublicEmailsForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersListPublicEmailsForAuthenticatedResponse() {{
+        org.openapis.openapi.models.operations.UsersListPublicEmailsForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersListPublicEmailsForAuthenticatedResponse(contentType, httpRes.statusCode()) {{
             emails = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1282,11 +1236,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersListPublicKeysForUserResponse res = new org.openapis.openapi.models.operations.UsersListPublicKeysForUserResponse() {{
+        org.openapis.openapi.models.operations.UsersListPublicKeysForUserResponse res = new org.openapis.openapi.models.operations.UsersListPublicKeysForUserResponse(contentType, httpRes.statusCode()) {{
             keySimples = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1330,12 +1282,10 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersListPublicSshKeysForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersListPublicSshKeysForAuthenticatedResponse() {{
+        org.openapis.openapi.models.operations.UsersListPublicSshKeysForAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersListPublicSshKeysForAuthenticatedResponse(contentType, httpRes.statusCode()) {{
             keys = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1382,11 +1332,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersUnfollowResponse res = new org.openapis.openapi.models.operations.UsersUnfollowResponse() {{
+        org.openapis.openapi.models.operations.UsersUnfollowResponse res = new org.openapis.openapi.models.operations.UsersUnfollowResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 304) {
@@ -1426,13 +1374,11 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersUpdateAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersUpdateAuthenticatedResponse() {{
+        org.openapis.openapi.models.operations.UsersUpdateAuthenticatedResponse res = new org.openapis.openapi.models.operations.UsersUpdateAuthenticatedResponse(contentType, httpRes.statusCode()) {{
             privateUser = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

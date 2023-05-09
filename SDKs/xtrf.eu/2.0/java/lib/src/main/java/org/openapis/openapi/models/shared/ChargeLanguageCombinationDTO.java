@@ -12,6 +12,7 @@ public class ChargeLanguageCombinationDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceLanguageId")
     public Long sourceLanguageId;
+
     public ChargeLanguageCombinationDTO withSourceLanguageId(Long sourceLanguageId) {
         this.sourceLanguageId = sourceLanguageId;
         return this;
@@ -20,9 +21,11 @@ public class ChargeLanguageCombinationDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetLanguageId")
     public Long targetLanguageId;
+
     public ChargeLanguageCombinationDTO withTargetLanguageId(Long targetLanguageId) {
         this.targetLanguageId = targetLanguageId;
         return this;
     }
     
+    public ChargeLanguageCombinationDTO(){}
 }

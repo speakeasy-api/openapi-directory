@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DiaryControllerAddFeedbackJsonResponse {
     
     public String contentType;
+
     public DiaryControllerAddFeedbackJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DiaryControllerAddFeedbackJsonResponse {
      */
     
     public String diaryControllerAddFeedbackJSON200ApplicationJSONString;
+
     public DiaryControllerAddFeedbackJsonResponse withDiaryControllerAddFeedbackJSON200ApplicationJSONString(String diaryControllerAddFeedbackJSON200ApplicationJSONString) {
         this.diaryControllerAddFeedbackJSON200ApplicationJSONString = diaryControllerAddFeedbackJSON200ApplicationJSONString;
         return this;
@@ -29,6 +32,7 @@ public class DiaryControllerAddFeedbackJsonResponse {
      */
     
     public String diaryControllerAddFeedbackJson200ApplicationXMLString;
+
     public DiaryControllerAddFeedbackJsonResponse withDiaryControllerAddFeedbackJson200ApplicationXMLString(String diaryControllerAddFeedbackJson200ApplicationXMLString) {
         this.diaryControllerAddFeedbackJson200ApplicationXMLString = diaryControllerAddFeedbackJson200ApplicationXMLString;
         return this;
@@ -39,6 +43,7 @@ public class DiaryControllerAddFeedbackJsonResponse {
      */
     
     public String diaryControllerAddFeedbackJSON200TextJSONString;
+
     public DiaryControllerAddFeedbackJsonResponse withDiaryControllerAddFeedbackJSON200TextJSONString(String diaryControllerAddFeedbackJSON200TextJSONString) {
         this.diaryControllerAddFeedbackJSON200TextJSONString = diaryControllerAddFeedbackJSON200TextJSONString;
         return this;
@@ -49,6 +54,7 @@ public class DiaryControllerAddFeedbackJsonResponse {
      */
     
     public String diaryControllerAddFeedbackJson200TextXMLString;
+
     public DiaryControllerAddFeedbackJsonResponse withDiaryControllerAddFeedbackJson200TextXMLString(String diaryControllerAddFeedbackJson200TextXMLString) {
         this.diaryControllerAddFeedbackJson200TextXMLString = diaryControllerAddFeedbackJson200TextXMLString;
         return this;
@@ -56,6 +62,7 @@ public class DiaryControllerAddFeedbackJsonResponse {
     
     
     public Integer statusCode;
+
     public DiaryControllerAddFeedbackJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DiaryControllerAddFeedbackJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DiaryControllerAddFeedbackJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DiaryControllerAddFeedbackJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

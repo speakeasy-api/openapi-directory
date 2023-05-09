@@ -15,6 +15,7 @@ public class UpdateRelatedItemsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateRelatedItemsRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class UpdateRelatedItemsRequestBody {
      */
     @JsonProperty("incidentRecordArn")
     public String incidentRecordArn;
+
     public UpdateRelatedItemsRequestBody withIncidentRecordArn(String incidentRecordArn) {
         this.incidentRecordArn = incidentRecordArn;
         return this;
@@ -35,9 +37,14 @@ public class UpdateRelatedItemsRequestBody {
      */
     @JsonProperty("relatedItemsUpdate")
     public UpdateRelatedItemsRequestBodyRelatedItemsUpdate relatedItemsUpdate;
+
     public UpdateRelatedItemsRequestBody withRelatedItemsUpdate(UpdateRelatedItemsRequestBodyRelatedItemsUpdate relatedItemsUpdate) {
         this.relatedItemsUpdate = relatedItemsUpdate;
         return this;
     }
     
+    public UpdateRelatedItemsRequestBody(@JsonProperty("incidentRecordArn") String incidentRecordArn, @JsonProperty("relatedItemsUpdate") UpdateRelatedItemsRequestBodyRelatedItemsUpdate relatedItemsUpdate) {
+        this.incidentRecordArn = incidentRecordArn;
+        this.relatedItemsUpdate = relatedItemsUpdate;
+  }
 }

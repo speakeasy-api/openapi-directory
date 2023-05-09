@@ -15,9 +15,11 @@ public class StopQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public StopQueryResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public StopQueryResponse(){}
 }

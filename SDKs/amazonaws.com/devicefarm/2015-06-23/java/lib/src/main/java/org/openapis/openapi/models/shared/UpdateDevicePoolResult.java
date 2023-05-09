@@ -15,9 +15,11 @@ public class UpdateDevicePoolResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devicePool")
     public DevicePool devicePool;
+
     public UpdateDevicePoolResult withDevicePool(DevicePool devicePool) {
         this.devicePool = devicePool;
         return this;
     }
     
+    public UpdateDevicePoolResult(){}
 }

@@ -18,9 +18,11 @@ public class GoogleAdsSearchads360V0CommonLocationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoTargetConstant")
     public String geoTargetConstant;
+
     public GoogleAdsSearchads360V0CommonLocationInfo withGeoTargetConstant(String geoTargetConstant) {
         this.geoTargetConstant = geoTargetConstant;
         return this;
     }
     
+    public GoogleAdsSearchads360V0CommonLocationInfo(){}
 }

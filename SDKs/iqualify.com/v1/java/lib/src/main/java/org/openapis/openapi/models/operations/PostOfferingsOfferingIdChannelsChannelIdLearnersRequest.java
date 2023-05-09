@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOfferingsOfferingIdChannelsChannelIdLearnersRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PostOfferingsOfferingIdChannelsChannelIdLearnersRequestBody requestBody;
+
     public PostOfferingsOfferingIdChannelsChannelIdLearnersRequest withRequestBody(PostOfferingsOfferingIdChannelsChannelIdLearnersRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class PostOfferingsOfferingIdChannelsChannelIdLearnersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
     public String channelId;
+
     public PostOfferingsOfferingIdChannelsChannelIdLearnersRequest withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -29,9 +32,15 @@ public class PostOfferingsOfferingIdChannelsChannelIdLearnersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
     public String offeringId;
+
     public PostOfferingsOfferingIdChannelsChannelIdLearnersRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
     }
     
+    public PostOfferingsOfferingIdChannelsChannelIdLearnersRequest(@JsonProperty("RequestBody") PostOfferingsOfferingIdChannelsChannelIdLearnersRequestBody requestBody, @JsonProperty("channelId") String channelId, @JsonProperty("offeringId") String offeringId) {
+        this.requestBody = requestBody;
+        this.channelId = channelId;
+        this.offeringId = offeringId;
+  }
 }

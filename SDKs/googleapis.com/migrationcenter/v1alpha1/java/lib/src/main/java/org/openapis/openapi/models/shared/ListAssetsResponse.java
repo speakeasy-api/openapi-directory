@@ -18,6 +18,7 @@ public class ListAssetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assets")
     public Asset[] assets;
+
     public ListAssetsResponse withAssets(Asset[] assets) {
         this.assets = assets;
         return this;
@@ -29,6 +30,7 @@ public class ListAssetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAssetsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListAssetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListAssetsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListAssetsResponse(){}
 }

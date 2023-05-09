@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AccountListNodeAgentSkusResponse {
     
     public org.openapis.openapi.models.shared.AccountListNodeAgentSkusResult accountListNodeAgentSkusResult;
+
     public AccountListNodeAgentSkusResponse withAccountListNodeAgentSkusResult(org.openapis.openapi.models.shared.AccountListNodeAgentSkusResult accountListNodeAgentSkusResult) {
         this.accountListNodeAgentSkusResult = accountListNodeAgentSkusResult;
         return this;
@@ -19,6 +21,7 @@ public class AccountListNodeAgentSkusResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public AccountListNodeAgentSkusResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -26,6 +29,7 @@ public class AccountListNodeAgentSkusResponse {
     
     
     public String contentType;
+
     public AccountListNodeAgentSkusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class AccountListNodeAgentSkusResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public AccountListNodeAgentSkusResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -40,6 +45,7 @@ public class AccountListNodeAgentSkusResponse {
     
     
     public Integer statusCode;
+
     public AccountListNodeAgentSkusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +53,14 @@ public class AccountListNodeAgentSkusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AccountListNodeAgentSkusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AccountListNodeAgentSkusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

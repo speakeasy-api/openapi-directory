@@ -15,6 +15,7 @@ public class ErrorsDeleteError200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public ErrorsDeleteError200ApplicationJSON withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -23,6 +24,7 @@ public class ErrorsDeleteError200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachmentsDeleted")
     public Long attachmentsDeleted;
+
     public ErrorsDeleteError200ApplicationJSON withAttachmentsDeleted(Long attachmentsDeleted) {
         this.attachmentsDeleted = attachmentsDeleted;
         return this;
@@ -31,6 +33,7 @@ public class ErrorsDeleteError200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blobsFailed")
     public Long blobsFailed;
+
     public ErrorsDeleteError200ApplicationJSON withBlobsFailed(Long blobsFailed) {
         this.blobsFailed = blobsFailed;
         return this;
@@ -39,6 +42,7 @@ public class ErrorsDeleteError200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blobsSucceeded")
     public Long blobsSucceeded;
+
     public ErrorsDeleteError200ApplicationJSON withBlobsSucceeded(Long blobsSucceeded) {
         this.blobsSucceeded = blobsSucceeded;
         return this;
@@ -47,6 +51,7 @@ public class ErrorsDeleteError200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorGroupId")
     public String errorGroupId;
+
     public ErrorsDeleteError200ApplicationJSON withErrorGroupId(String errorGroupId) {
         this.errorGroupId = errorGroupId;
         return this;
@@ -55,6 +60,7 @@ public class ErrorsDeleteError200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorId")
     public String errorId;
+
     public ErrorsDeleteError200ApplicationJSON withErrorId(String errorId) {
         this.errorId = errorId;
         return this;
@@ -63,9 +69,11 @@ public class ErrorsDeleteError200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorsDeleted")
     public Long errorsDeleted;
+
     public ErrorsDeleteError200ApplicationJSON withErrorsDeleted(Long errorsDeleted) {
         this.errorsDeleted = errorsDeleted;
         return this;
     }
     
+    public ErrorsDeleteError200ApplicationJSON(){}
 }

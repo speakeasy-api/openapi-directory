@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CloudWatchLogsLogDelivery {
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public CloudWatchLogsLogDelivery withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -22,9 +23,13 @@ public class CloudWatchLogsLogDelivery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroup")
     public String logGroup;
+
     public CloudWatchLogsLogDelivery withLogGroup(String logGroup) {
         this.logGroup = logGroup;
         return this;
     }
     
+    public CloudWatchLogsLogDelivery(@JsonProperty("enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAppComponentRecommendationsResponse {
@@ -12,6 +13,7 @@ public class ListAppComponentRecommendationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAppComponentRecommendationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAppComponentRecommendationsResponse {
     
     
     public String contentType;
+
     public ListAppComponentRecommendationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAppComponentRecommendationsResponse {
      */
     
     public Object internalServerException;
+
     public ListAppComponentRecommendationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListAppComponentRecommendationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAppComponentRecommendationsResponse listAppComponentRecommendationsResponse;
+
     public ListAppComponentRecommendationsResponse withListAppComponentRecommendationsResponse(org.openapis.openapi.models.shared.ListAppComponentRecommendationsResponse listAppComponentRecommendationsResponse) {
         this.listAppComponentRecommendationsResponse = listAppComponentRecommendationsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListAppComponentRecommendationsResponse {
     
     
     public Integer statusCode;
+
     public ListAppComponentRecommendationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListAppComponentRecommendationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAppComponentRecommendationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListAppComponentRecommendationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAppComponentRecommendationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class ListAppComponentRecommendationsResponse {
      */
     
     public Object throttlingException;
+
     public ListAppComponentRecommendationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListAppComponentRecommendationsResponse {
      */
     
     public Object validationException;
+
     public ListAppComponentRecommendationsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAppComponentRecommendationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

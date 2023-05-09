@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQueryRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=1_property")
     public String oneProperty;
+
     public GetQueryRequest withOneProperty(String oneProperty) {
         this.oneProperty = oneProperty;
         return this;
@@ -16,6 +18,7 @@ public class GetQueryRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=1_property.value")
     public String onePropertyValue;
+
     public GetQueryRequest withOnePropertyValue(String onePropertyValue) {
         this.onePropertyValue = onePropertyValue;
         return this;
@@ -23,6 +26,7 @@ public class GetQueryRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=p.limit")
     public Double pLimit;
+
     public GetQueryRequest withPLimit(Double pLimit) {
         this.pLimit = pLimit;
         return this;
@@ -30,9 +34,16 @@ public class GetQueryRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
     public String path;
+
     public GetQueryRequest withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public GetQueryRequest(@JsonProperty("1_property") String oneProperty, @JsonProperty("1_property.value") String onePropertyValue, @JsonProperty("p.limit") Double pLimit, @JsonProperty("path") String path) {
+        this.oneProperty = oneProperty;
+        this.onePropertyValue = onePropertyValue;
+        this.pLimit = pLimit;
+        this.path = path;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteVaultAccessPolicyResponse {
     
     public String contentType;
+
     public DeleteVaultAccessPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteVaultAccessPolicyResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DeleteVaultAccessPolicyResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteVaultAccessPolicyResponse {
      */
     
     public Object missingParameterValueException;
+
     public DeleteVaultAccessPolicyResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteVaultAccessPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteVaultAccessPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteVaultAccessPolicyResponse {
     
     
     public Integer statusCode;
+
     public DeleteVaultAccessPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteVaultAccessPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteVaultAccessPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteVaultAccessPolicyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteVaultAccessPolicyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public DeleteVaultAccessPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

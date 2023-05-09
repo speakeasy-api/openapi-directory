@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsRemoveUserRequest {
@@ -12,6 +13,7 @@ public class TeamsRemoveUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
     public String orgName;
+
     public TeamsRemoveUserRequest withOrgName(String orgName) {
         this.orgName = orgName;
         return this;
@@ -22,6 +24,7 @@ public class TeamsRemoveUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_name")
     public String teamName;
+
     public TeamsRemoveUserRequest withTeamName(String teamName) {
         this.teamName = teamName;
         return this;
@@ -32,9 +35,15 @@ public class TeamsRemoveUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_name")
     public String userName;
+
     public TeamsRemoveUserRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public TeamsRemoveUserRequest(@JsonProperty("org_name") String orgName, @JsonProperty("team_name") String teamName, @JsonProperty("user_name") String userName) {
+        this.orgName = orgName;
+        this.teamName = teamName;
+        this.userName = userName;
+  }
 }

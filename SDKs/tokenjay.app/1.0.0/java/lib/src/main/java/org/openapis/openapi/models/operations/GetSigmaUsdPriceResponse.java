@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSigmaUsdPriceResponse {
     
     public byte[] body;
+
     public GetSigmaUsdPriceResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetSigmaUsdPriceResponse {
     
     
     public String contentType;
+
     public GetSigmaUsdPriceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetSigmaUsdPriceResponse {
     
     
     public Integer statusCode;
+
     public GetSigmaUsdPriceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetSigmaUsdPriceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSigmaUsdPriceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetSigmaUsdPriceResponse {
      */
     
     public String getSigmaUsdPrice400WildcardString;
+
     public GetSigmaUsdPriceResponse withGetSigmaUsdPrice400WildcardString(String getSigmaUsdPrice400WildcardString) {
         this.getSigmaUsdPrice400WildcardString = getSigmaUsdPrice400WildcardString;
         return this;
@@ -50,6 +56,7 @@ public class GetSigmaUsdPriceResponse {
      */
     
     public String getSigmaUsdPrice401WildcardString;
+
     public GetSigmaUsdPriceResponse withGetSigmaUsdPrice401WildcardString(String getSigmaUsdPrice401WildcardString) {
         this.getSigmaUsdPrice401WildcardString = getSigmaUsdPrice401WildcardString;
         return this;
@@ -60,6 +67,7 @@ public class GetSigmaUsdPriceResponse {
      */
     
     public String getSigmaUsdPrice404WildcardString;
+
     public GetSigmaUsdPriceResponse withGetSigmaUsdPrice404WildcardString(String getSigmaUsdPrice404WildcardString) {
         this.getSigmaUsdPrice404WildcardString = getSigmaUsdPrice404WildcardString;
         return this;
@@ -70,9 +78,14 @@ public class GetSigmaUsdPriceResponse {
      */
     
     public String getSigmaUsdPrice409WildcardString;
+
     public GetSigmaUsdPriceResponse withGetSigmaUsdPrice409WildcardString(String getSigmaUsdPrice409WildcardString) {
         this.getSigmaUsdPrice409WildcardString = getSigmaUsdPrice409WildcardString;
         return this;
     }
     
+    public GetSigmaUsdPriceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

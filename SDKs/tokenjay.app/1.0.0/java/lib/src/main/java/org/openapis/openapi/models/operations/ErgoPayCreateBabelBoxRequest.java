@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErgoPayCreateBabelBoxRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=address")
     public String address;
+
     public ErgoPayCreateBabelBoxRequest withAddress(String address) {
         this.address = address;
         return this;
@@ -16,6 +18,7 @@ public class ErgoPayCreateBabelBoxRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ergAmount")
     public Long ergAmount;
+
     public ErgoPayCreateBabelBoxRequest withErgAmount(Long ergAmount) {
         this.ergAmount = ergAmount;
         return this;
@@ -23,6 +26,7 @@ public class ErgoPayCreateBabelBoxRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tokenAmount")
     public Long tokenAmount;
+
     public ErgoPayCreateBabelBoxRequest withTokenAmount(Long tokenAmount) {
         this.tokenAmount = tokenAmount;
         return this;
@@ -30,9 +34,16 @@ public class ErgoPayCreateBabelBoxRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tokenId")
     public String tokenId;
+
     public ErgoPayCreateBabelBoxRequest withTokenId(String tokenId) {
         this.tokenId = tokenId;
         return this;
     }
     
+    public ErgoPayCreateBabelBoxRequest(@JsonProperty("address") String address, @JsonProperty("ergAmount") Long ergAmount, @JsonProperty("tokenAmount") Long tokenAmount, @JsonProperty("tokenId") String tokenId) {
+        this.address = address;
+        this.ergAmount = ergAmount;
+        this.tokenAmount = tokenAmount;
+        this.tokenId = tokenId;
+  }
 }

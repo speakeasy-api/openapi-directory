@@ -15,6 +15,7 @@ public class ActivityEventsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boolValue")
     public Boolean boolValue;
+
     public ActivityEventsParameters withBoolValue(Boolean boolValue) {
         this.boolValue = boolValue;
         return this;
@@ -26,6 +27,7 @@ public class ActivityEventsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intValue")
     public String intValue;
+
     public ActivityEventsParameters withIntValue(String intValue) {
         this.intValue = intValue;
         return this;
@@ -37,6 +39,7 @@ public class ActivityEventsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageValue")
     public ActivityEventsParametersMessageValue messageValue;
+
     public ActivityEventsParameters withMessageValue(ActivityEventsParametersMessageValue messageValue) {
         this.messageValue = messageValue;
         return this;
@@ -48,6 +51,7 @@ public class ActivityEventsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiIntValue")
     public String[] multiIntValue;
+
     public ActivityEventsParameters withMultiIntValue(String[] multiIntValue) {
         this.multiIntValue = multiIntValue;
         return this;
@@ -59,6 +63,7 @@ public class ActivityEventsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiMessageValue")
     public ActivityEventsParametersMultiMessageValue[] multiMessageValue;
+
     public ActivityEventsParameters withMultiMessageValue(ActivityEventsParametersMultiMessageValue[] multiMessageValue) {
         this.multiMessageValue = multiMessageValue;
         return this;
@@ -70,6 +75,7 @@ public class ActivityEventsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiValue")
     public String[] multiValue;
+
     public ActivityEventsParameters withMultiValue(String[] multiValue) {
         this.multiValue = multiValue;
         return this;
@@ -81,6 +87,7 @@ public class ActivityEventsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ActivityEventsParameters withName(String name) {
         this.name = name;
         return this;
@@ -92,9 +99,11 @@ public class ActivityEventsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ActivityEventsParameters withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ActivityEventsParameters(){}
 }

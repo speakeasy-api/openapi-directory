@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeAggregateIdFormatRequest {
     
     public Boolean dryRun;
+
     public DescribeAggregateIdFormatRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public DescribeAggregateIdFormatRequest(){}
 }

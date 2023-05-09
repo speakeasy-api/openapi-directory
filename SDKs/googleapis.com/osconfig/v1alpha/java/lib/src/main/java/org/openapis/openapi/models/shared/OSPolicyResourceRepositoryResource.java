@@ -18,6 +18,7 @@ public class OSPolicyResourceRepositoryResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apt")
     public OSPolicyResourceRepositoryResourceAptRepository apt;
+
     public OSPolicyResourceRepositoryResource withApt(OSPolicyResourceRepositoryResourceAptRepository apt) {
         this.apt = apt;
         return this;
@@ -29,6 +30,7 @@ public class OSPolicyResourceRepositoryResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goo")
     public OSPolicyResourceRepositoryResourceGooRepository goo;
+
     public OSPolicyResourceRepositoryResource withGoo(OSPolicyResourceRepositoryResourceGooRepository goo) {
         this.goo = goo;
         return this;
@@ -40,6 +42,7 @@ public class OSPolicyResourceRepositoryResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yum")
     public OSPolicyResourceRepositoryResourceYumRepository yum;
+
     public OSPolicyResourceRepositoryResource withYum(OSPolicyResourceRepositoryResourceYumRepository yum) {
         this.yum = yum;
         return this;
@@ -51,9 +54,11 @@ public class OSPolicyResourceRepositoryResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zypper")
     public OSPolicyResourceRepositoryResourceZypperRepository zypper;
+
     public OSPolicyResourceRepositoryResource withZypper(OSPolicyResourceRepositoryResourceZypperRepository zypper) {
         this.zypper = zypper;
         return this;
     }
     
+    public OSPolicyResourceRepositoryResource(){}
 }

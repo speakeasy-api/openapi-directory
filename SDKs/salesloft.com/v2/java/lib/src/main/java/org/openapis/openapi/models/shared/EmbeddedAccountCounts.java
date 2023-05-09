@@ -12,9 +12,11 @@ public class EmbeddedAccountCounts {
      */
     
     public Long people;
+
     public EmbeddedAccountCounts withPeople(Long people) {
         this.people = people;
         return this;
     }
     
+    public EmbeddedAccountCounts(){}
 }

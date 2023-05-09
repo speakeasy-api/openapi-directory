@@ -15,9 +15,11 @@ public class UpdateConnectorRegistrationRequestBodyConnectorProvisioningConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambda")
     public org.openapis.openapi.models.shared.LambdaConnectorProvisioningConfig lambda;
+
     public UpdateConnectorRegistrationRequestBodyConnectorProvisioningConfig withLambda(org.openapis.openapi.models.shared.LambdaConnectorProvisioningConfig lambda) {
         this.lambda = lambda;
         return this;
     }
     
+    public UpdateConnectorRegistrationRequestBodyConnectorProvisioningConfig(){}
 }

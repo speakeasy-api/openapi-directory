@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentDatafeedstatusesGetRequest {
@@ -12,6 +13,7 @@ public class ContentDatafeedstatusesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ContentDatafeedstatusesGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ContentDatafeedstatusesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ContentDatafeedstatusesGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ContentDatafeedstatusesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ContentDatafeedstatusesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ContentDatafeedstatusesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ContentDatafeedstatusesGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ContentDatafeedstatusesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public ContentDatafeedstatusesGetRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -62,6 +68,7 @@ public class ContentDatafeedstatusesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=datafeedId")
     public String datafeedId;
+
     public ContentDatafeedstatusesGetRequest withDatafeedId(String datafeedId) {
         this.datafeedId = datafeedId;
         return this;
@@ -72,6 +79,7 @@ public class ContentDatafeedstatusesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=feedLabel")
     public String feedLabel;
+
     public ContentDatafeedstatusesGetRequest withFeedLabel(String feedLabel) {
         this.feedLabel = feedLabel;
         return this;
@@ -82,6 +90,7 @@ public class ContentDatafeedstatusesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ContentDatafeedstatusesGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -92,6 +101,7 @@ public class ContentDatafeedstatusesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ContentDatafeedstatusesGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -102,6 +112,7 @@ public class ContentDatafeedstatusesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
+
     public ContentDatafeedstatusesGetRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -112,6 +123,7 @@ public class ContentDatafeedstatusesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public ContentDatafeedstatusesGetRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -122,6 +134,7 @@ public class ContentDatafeedstatusesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ContentDatafeedstatusesGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -132,6 +145,7 @@ public class ContentDatafeedstatusesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ContentDatafeedstatusesGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -142,6 +156,7 @@ public class ContentDatafeedstatusesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ContentDatafeedstatusesGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +167,7 @@ public class ContentDatafeedstatusesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ContentDatafeedstatusesGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -162,9 +178,14 @@ public class ContentDatafeedstatusesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ContentDatafeedstatusesGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ContentDatafeedstatusesGetRequest(@JsonProperty("datafeedId") String datafeedId, @JsonProperty("merchantId") String merchantId) {
+        this.datafeedId = datafeedId;
+        this.merchantId = merchantId;
+  }
 }

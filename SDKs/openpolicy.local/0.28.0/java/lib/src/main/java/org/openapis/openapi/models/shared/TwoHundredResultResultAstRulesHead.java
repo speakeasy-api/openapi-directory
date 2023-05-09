@@ -15,6 +15,7 @@ public class TwoHundredResultResultAstRulesHead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public TwoHundredResultResultAstRulesHeadKey key;
+
     public TwoHundredResultResultAstRulesHead withKey(TwoHundredResultResultAstRulesHeadKey key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class TwoHundredResultResultAstRulesHead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TwoHundredResultResultAstRulesHead withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TwoHundredResultResultAstRulesHead(){}
 }

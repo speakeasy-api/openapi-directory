@@ -18,6 +18,7 @@ public class AcceleratorTypesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public AcceleratorTypesScopedListWarningCodeEnum code;
+
     public AcceleratorTypesScopedListWarning withCode(AcceleratorTypesScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class AcceleratorTypesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public AcceleratorTypesScopedListWarningData[] data;
+
     public AcceleratorTypesScopedListWarning withData(AcceleratorTypesScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class AcceleratorTypesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AcceleratorTypesScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AcceleratorTypesScopedListWarning(){}
 }

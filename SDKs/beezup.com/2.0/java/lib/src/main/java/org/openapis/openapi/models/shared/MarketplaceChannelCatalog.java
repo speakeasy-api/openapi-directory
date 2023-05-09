@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MarketplaceChannelCatalog {
     @JsonProperty("apiSettingsStatus")
     public BeezUPCommonApiSettingsStatusEnum apiSettingsStatus;
+
     public MarketplaceChannelCatalog withApiSettingsStatus(BeezUPCommonApiSettingsStatusEnum apiSettingsStatus) {
         this.apiSettingsStatus = apiSettingsStatus;
         return this;
@@ -24,6 +25,7 @@ public class MarketplaceChannelCatalog {
      */
     @JsonProperty("beezUPChannelCatalogId")
     public String beezUPChannelCatalogId;
+
     public MarketplaceChannelCatalog withBeezUPChannelCatalogId(String beezUPChannelCatalogId) {
         this.beezUPChannelCatalogId = beezUPChannelCatalogId;
         return this;
@@ -34,6 +36,7 @@ public class MarketplaceChannelCatalog {
      */
     @JsonProperty("beezUPChannelId")
     public String beezUPChannelId;
+
     public MarketplaceChannelCatalog withBeezUPChannelId(String beezUPChannelId) {
         this.beezUPChannelId = beezUPChannelId;
         return this;
@@ -44,6 +47,7 @@ public class MarketplaceChannelCatalog {
      */
     @JsonProperty("beezUPMarketplaceName")
     public Object beezUPMarketplaceName;
+
     public MarketplaceChannelCatalog withBeezUPMarketplaceName(Object beezUPMarketplaceName) {
         this.beezUPMarketplaceName = beezUPMarketplaceName;
         return this;
@@ -54,6 +58,7 @@ public class MarketplaceChannelCatalog {
      */
     @JsonProperty("beezUPStoreId")
     public String beezUPStoreId;
+
     public MarketplaceChannelCatalog withBeezUPStoreId(String beezUPStoreId) {
         this.beezUPStoreId = beezUPStoreId;
         return this;
@@ -64,6 +69,7 @@ public class MarketplaceChannelCatalog {
      */
     @JsonProperty("beezUPStoreName")
     public String beezUPStoreName;
+
     public MarketplaceChannelCatalog withBeezUPStoreName(String beezUPStoreName) {
         this.beezUPStoreName = beezUPStoreName;
         return this;
@@ -74,6 +80,7 @@ public class MarketplaceChannelCatalog {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public MarketplaceChannelCatalog withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -84,6 +91,7 @@ public class MarketplaceChannelCatalog {
      */
     @JsonProperty("links")
     public MarketplaceChannelCatalogLinks links;
+
     public MarketplaceChannelCatalog withLinks(MarketplaceChannelCatalogLinks links) {
         this.links = links;
         return this;
@@ -94,6 +102,7 @@ public class MarketplaceChannelCatalog {
      */
     @JsonProperty("lovLinks")
     public MarketplaceChannelCatalogLovLinks lovLinks;
+
     public MarketplaceChannelCatalog withLovLinks(MarketplaceChannelCatalogLovLinks lovLinks) {
         this.lovLinks = lovLinks;
         return this;
@@ -105,6 +114,7 @@ public class MarketplaceChannelCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceAccountId")
     public Integer marketplaceAccountId;
+
     public MarketplaceChannelCatalog withMarketplaceAccountId(Integer marketplaceAccountId) {
         this.marketplaceAccountId = marketplaceAccountId;
         return this;
@@ -115,6 +125,7 @@ public class MarketplaceChannelCatalog {
      */
     @JsonProperty("marketplaceBusinessCode")
     public String marketplaceBusinessCode;
+
     public MarketplaceChannelCatalog withMarketplaceBusinessCode(String marketplaceBusinessCode) {
         this.marketplaceBusinessCode = marketplaceBusinessCode;
         return this;
@@ -125,6 +136,7 @@ public class MarketplaceChannelCatalog {
      */
     @JsonProperty("marketplaceIsoCountryCodeAlpha2")
     public String marketplaceIsoCountryCodeAlpha2;
+
     public MarketplaceChannelCatalog withMarketplaceIsoCountryCodeAlpha2(String marketplaceIsoCountryCodeAlpha2) {
         this.marketplaceIsoCountryCodeAlpha2 = marketplaceIsoCountryCodeAlpha2;
         return this;
@@ -135,6 +147,7 @@ public class MarketplaceChannelCatalog {
      */
     @JsonProperty("marketplaceMarketPlaceId")
     public String marketplaceMarketPlaceId;
+
     public MarketplaceChannelCatalog withMarketplaceMarketPlaceId(String marketplaceMarketPlaceId) {
         this.marketplaceMarketPlaceId = marketplaceMarketPlaceId;
         return this;
@@ -146,6 +159,7 @@ public class MarketplaceChannelCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceMerchantIdentifiers")
     public java.util.Map<String, String> marketplaceMerchantIdentifiers;
+
     public MarketplaceChannelCatalog withMarketplaceMerchantIdentifiers(java.util.Map<String, String> marketplaceMerchantIdentifiers) {
         this.marketplaceMerchantIdentifiers = marketplaceMerchantIdentifiers;
         return this;
@@ -156,9 +170,25 @@ public class MarketplaceChannelCatalog {
      */
     @JsonProperty("marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public MarketplaceChannelCatalog withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
     }
     
+    public MarketplaceChannelCatalog(@JsonProperty("apiSettingsStatus") BeezUPCommonApiSettingsStatusEnum apiSettingsStatus, @JsonProperty("beezUPChannelCatalogId") String beezUPChannelCatalogId, @JsonProperty("beezUPChannelId") String beezUPChannelId, @JsonProperty("beezUPMarketplaceName") Object beezUPMarketplaceName, @JsonProperty("beezUPStoreId") String beezUPStoreId, @JsonProperty("beezUPStoreName") String beezUPStoreName, @JsonProperty("enabled") Boolean enabled, @JsonProperty("links") MarketplaceChannelCatalogLinks links, @JsonProperty("lovLinks") MarketplaceChannelCatalogLovLinks lovLinks, @JsonProperty("marketplaceBusinessCode") String marketplaceBusinessCode, @JsonProperty("marketplaceIsoCountryCodeAlpha2") String marketplaceIsoCountryCodeAlpha2, @JsonProperty("marketplaceMarketPlaceId") String marketplaceMarketPlaceId, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode) {
+        this.apiSettingsStatus = apiSettingsStatus;
+        this.beezUPChannelCatalogId = beezUPChannelCatalogId;
+        this.beezUPChannelId = beezUPChannelId;
+        this.beezUPMarketplaceName = beezUPMarketplaceName;
+        this.beezUPStoreId = beezUPStoreId;
+        this.beezUPStoreName = beezUPStoreName;
+        this.enabled = enabled;
+        this.links = links;
+        this.lovLinks = lovLinks;
+        this.marketplaceBusinessCode = marketplaceBusinessCode;
+        this.marketplaceIsoCountryCodeAlpha2 = marketplaceIsoCountryCodeAlpha2;
+        this.marketplaceMarketPlaceId = marketplaceMarketPlaceId;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+  }
 }

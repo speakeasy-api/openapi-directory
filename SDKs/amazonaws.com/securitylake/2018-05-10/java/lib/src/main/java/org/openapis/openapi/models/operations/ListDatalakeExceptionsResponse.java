@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDatalakeExceptionsResponse {
@@ -12,6 +13,7 @@ public class ListDatalakeExceptionsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListDatalakeExceptionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListDatalakeExceptionsResponse {
      */
     
     public Object accountNotFoundException;
+
     public ListDatalakeExceptionsResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class ListDatalakeExceptionsResponse {
     
     
     public String contentType;
+
     public ListDatalakeExceptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListDatalakeExceptionsResponse {
      */
     
     public Object internalServerException;
+
     public ListDatalakeExceptionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListDatalakeExceptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDatalakeExceptionsResponse listDatalakeExceptionsResponse;
+
     public ListDatalakeExceptionsResponse withListDatalakeExceptionsResponse(org.openapis.openapi.models.shared.ListDatalakeExceptionsResponse listDatalakeExceptionsResponse) {
         this.listDatalakeExceptionsResponse = listDatalakeExceptionsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListDatalakeExceptionsResponse {
     
     
     public Integer statusCode;
+
     public ListDatalakeExceptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListDatalakeExceptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDatalakeExceptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListDatalakeExceptionsResponse {
      */
     
     public Object validationException;
+
     public ListDatalakeExceptionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListDatalakeExceptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

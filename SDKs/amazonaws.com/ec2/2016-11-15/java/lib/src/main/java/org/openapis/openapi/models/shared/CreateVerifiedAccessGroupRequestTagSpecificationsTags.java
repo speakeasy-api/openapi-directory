@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVerifiedAccessGroupRequestTagSpecificationsTags {
     
     public String key;
+
     public CreateVerifiedAccessGroupRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateVerifiedAccessGroupRequestTagSpecificationsTags {
     
     
     public String value;
+
     public CreateVerifiedAccessGroupRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateVerifiedAccessGroupRequestTagSpecificationsTags(){}
 }

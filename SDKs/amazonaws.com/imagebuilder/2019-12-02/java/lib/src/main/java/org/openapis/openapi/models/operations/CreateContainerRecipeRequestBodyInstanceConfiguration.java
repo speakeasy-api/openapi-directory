@@ -15,6 +15,7 @@ public class CreateContainerRecipeRequestBodyInstanceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockDeviceMappings")
     public org.openapis.openapi.models.shared.InstanceBlockDeviceMapping[] blockDeviceMappings;
+
     public CreateContainerRecipeRequestBodyInstanceConfiguration withBlockDeviceMappings(org.openapis.openapi.models.shared.InstanceBlockDeviceMapping[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -23,9 +24,11 @@ public class CreateContainerRecipeRequestBodyInstanceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public CreateContainerRecipeRequestBodyInstanceConfiguration withImage(String image) {
         this.image = image;
         return this;
     }
     
+    public CreateContainerRecipeRequestBodyInstanceConfiguration(){}
 }

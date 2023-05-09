@@ -18,6 +18,7 @@ public class GetAccountBalanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailableBalance")
     public String availableBalance;
+
     public GetAccountBalanceResponse withAvailableBalance(String availableBalance) {
         this.availableBalance = availableBalance;
         return this;
@@ -29,9 +30,11 @@ public class GetAccountBalanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnHoldBalance")
     public String onHoldBalance;
+
     public GetAccountBalanceResponse withOnHoldBalance(String onHoldBalance) {
         this.onHoldBalance = onHoldBalance;
         return this;
     }
     
+    public GetAccountBalanceResponse(){}
 }

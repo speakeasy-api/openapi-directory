@@ -62,11 +62,9 @@ public class Monetization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherMonetizationConvertRegionPricesResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationConvertRegionPricesResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherMonetizationConvertRegionPricesResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationConvertRegionPricesResponse(contentType, httpRes.statusCode()) {{
             convertRegionPricesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Monetization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsArchiveResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsArchiveResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsArchiveResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsArchiveResponse(contentType, httpRes.statusCode()) {{
             subscription = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,11 +154,9 @@ public class Monetization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansActivateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansActivateResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansActivateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansActivateResponse(contentType, httpRes.statusCode()) {{
             subscription = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -206,11 +200,9 @@ public class Monetization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeactivateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeactivateResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeactivateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeactivateResponse(contentType, httpRes.statusCode()) {{
             subscription = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,10 +244,8 @@ public class Monetization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeleteResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeleteResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeleteResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,11 +284,9 @@ public class Monetization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesResponse(contentType, httpRes.statusCode()) {{
             migrateBasePlanPricesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Monetization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersActivateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersActivateResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersActivateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersActivateResponse(contentType, httpRes.statusCode()) {{
             subscriptionOffer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +376,9 @@ public class Monetization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateResponse(contentType, httpRes.statusCode()) {{
             subscriptionOffer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,11 +422,9 @@ public class Monetization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateResponse(contentType, httpRes.statusCode()) {{
             subscriptionOffer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,10 +466,8 @@ public class Monetization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeleteResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeleteResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeleteResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -524,11 +504,9 @@ public class Monetization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetResponse(contentType, httpRes.statusCode()) {{
             subscriptionOffer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -570,11 +548,9 @@ public class Monetization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersListResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersListResponse(contentType, httpRes.statusCode()) {{
             listSubscriptionOffersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -618,11 +594,9 @@ public class Monetization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchResponse(contentType, httpRes.statusCode()) {{
             subscriptionOffer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -666,11 +640,9 @@ public class Monetization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsCreateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsCreateResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsCreateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsCreateResponse(contentType, httpRes.statusCode()) {{
             subscription = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -712,10 +684,8 @@ public class Monetization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsDeleteResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsDeleteResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -752,11 +722,9 @@ public class Monetization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsGetResponse(contentType, httpRes.statusCode()) {{
             subscription = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -798,11 +766,9 @@ public class Monetization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsListResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsListResponse(contentType, httpRes.statusCode()) {{
             listSubscriptionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -846,11 +812,9 @@ public class Monetization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsPatchResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsPatchResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsPatchResponse res = new org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsPatchResponse(contentType, httpRes.statusCode()) {{
             subscription = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

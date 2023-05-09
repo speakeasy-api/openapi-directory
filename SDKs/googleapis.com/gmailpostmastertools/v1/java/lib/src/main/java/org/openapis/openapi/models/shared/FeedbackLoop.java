@@ -18,6 +18,7 @@ public class FeedbackLoop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FeedbackLoop withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class FeedbackLoop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spamRatio")
     public Double spamRatio;
+
     public FeedbackLoop withSpamRatio(Double spamRatio) {
         this.spamRatio = spamRatio;
         return this;
     }
     
+    public FeedbackLoop(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateLicenseResponse {
@@ -12,6 +13,7 @@ public class DisassociateLicenseResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateLicenseResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateLicenseResponse {
     
     
     public String contentType;
+
     public DisassociateLicenseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateLicenseResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociateLicenseResponse disassociateLicenseResponse;
+
     public DisassociateLicenseResponse withDisassociateLicenseResponse(org.openapis.openapi.models.shared.DisassociateLicenseResponse disassociateLicenseResponse) {
         this.disassociateLicenseResponse = disassociateLicenseResponse;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateLicenseResponse {
      */
     
     public Object internalServerException;
+
     public DisassociateLicenseResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateLicenseResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateLicenseResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DisassociateLicenseResponse {
     
     
     public Integer statusCode;
+
     public DisassociateLicenseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateLicenseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateLicenseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DisassociateLicenseResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateLicenseResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DisassociateLicenseResponse {
      */
     
     public Object validationException;
+
     public DisassociateLicenseResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateLicenseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PrimaryKey {
     @JsonProperty("length")
     public Long length;
+
     public PrimaryKey withLength(Long length) {
         this.length = length;
         return this;
@@ -22,6 +23,7 @@ public class PrimaryKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PrimaryKey withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +31,14 @@ public class PrimaryKey {
     
     @JsonProperty("offset")
     public Long offset;
+
     public PrimaryKey withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public PrimaryKey(@JsonProperty("length") Long length, @JsonProperty("offset") Long offset) {
+        this.length = length;
+        this.offset = offset;
+  }
 }

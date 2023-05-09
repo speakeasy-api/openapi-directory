@@ -18,9 +18,11 @@ public class UpdateDeveloperMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("developerMetadata")
     public DeveloperMetadata[] developerMetadata;
+
     public UpdateDeveloperMetadataResponse withDeveloperMetadata(DeveloperMetadata[] developerMetadata) {
         this.developerMetadata = developerMetadata;
         return this;
     }
     
+    public UpdateDeveloperMetadataResponse(){}
 }

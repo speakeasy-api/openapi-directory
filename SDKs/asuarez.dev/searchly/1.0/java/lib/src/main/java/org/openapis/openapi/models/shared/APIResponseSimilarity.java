@@ -18,6 +18,7 @@ public class APIResponseSimilarity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Boolean error;
+
     public APIResponseSimilarity withError(Boolean error) {
         this.error = error;
         return this;
@@ -29,6 +30,7 @@ public class APIResponseSimilarity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public APIResponseSimilarity withMessage(String message) {
         this.message = message;
         return this;
@@ -40,9 +42,11 @@ public class APIResponseSimilarity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public APIResponseSimilarityResponse response;
+
     public APIResponseSimilarity withResponse(APIResponseSimilarityResponse response) {
         this.response = response;
         return this;
     }
     
+    public APIResponseSimilarity(){}
 }

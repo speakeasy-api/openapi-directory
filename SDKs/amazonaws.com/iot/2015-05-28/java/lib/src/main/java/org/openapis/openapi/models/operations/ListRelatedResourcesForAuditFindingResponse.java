@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRelatedResourcesForAuditFindingResponse {
     
     public String contentType;
+
     public ListRelatedResourcesForAuditFindingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListRelatedResourcesForAuditFindingResponse {
      */
     
     public Object internalFailureException;
+
     public ListRelatedResourcesForAuditFindingResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListRelatedResourcesForAuditFindingResponse {
      */
     
     public Object invalidRequestException;
+
     public ListRelatedResourcesForAuditFindingResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListRelatedResourcesForAuditFindingResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRelatedResourcesForAuditFindingResponse listRelatedResourcesForAuditFindingResponse;
+
     public ListRelatedResourcesForAuditFindingResponse withListRelatedResourcesForAuditFindingResponse(org.openapis.openapi.models.shared.ListRelatedResourcesForAuditFindingResponse listRelatedResourcesForAuditFindingResponse) {
         this.listRelatedResourcesForAuditFindingResponse = listRelatedResourcesForAuditFindingResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListRelatedResourcesForAuditFindingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListRelatedResourcesForAuditFindingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListRelatedResourcesForAuditFindingResponse {
     
     
     public Integer statusCode;
+
     public ListRelatedResourcesForAuditFindingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListRelatedResourcesForAuditFindingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRelatedResourcesForAuditFindingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListRelatedResourcesForAuditFindingResponse {
      */
     
     public Object throttlingException;
+
     public ListRelatedResourcesForAuditFindingResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListRelatedResourcesForAuditFindingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

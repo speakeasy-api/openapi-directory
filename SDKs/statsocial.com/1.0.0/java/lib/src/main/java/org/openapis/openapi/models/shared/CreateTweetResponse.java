@@ -12,6 +12,7 @@ public class CreateTweetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregate_report_hash")
     public String aggregateReportHash;
+
     public CreateTweetResponse withAggregateReportHash(String aggregateReportHash) {
         this.aggregateReportHash = aggregateReportHash;
         return this;
@@ -20,6 +21,7 @@ public class CreateTweetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("daily_report_hash")
     public String dailyReportHash;
+
     public CreateTweetResponse withDailyReportHash(String dailyReportHash) {
         this.dailyReportHash = dailyReportHash;
         return this;
@@ -28,6 +30,7 @@ public class CreateTweetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monthly_report_hash")
     public String monthlyReportHash;
+
     public CreateTweetResponse withMonthlyReportHash(String monthlyReportHash) {
         this.monthlyReportHash = monthlyReportHash;
         return this;
@@ -36,9 +39,11 @@ public class CreateTweetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weekly_report_hash")
     public String weeklyReportHash;
+
     public CreateTweetResponse withWeeklyReportHash(String weeklyReportHash) {
         this.weeklyReportHash = weeklyReportHash;
         return this;
     }
     
+    public CreateTweetResponse(){}
 }

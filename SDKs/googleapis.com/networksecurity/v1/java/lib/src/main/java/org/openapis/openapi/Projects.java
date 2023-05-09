@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateResponse() {{
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsAuthorizationPoliciesListResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsAuthorizationPoliciesListResponse() {{
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsAuthorizationPoliciesListResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsAuthorizationPoliciesListResponse(contentType, httpRes.statusCode()) {{
             listAuthorizationPoliciesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsClientTlsPoliciesCreateResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsClientTlsPoliciesCreateResponse() {{
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsClientTlsPoliciesCreateResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsClientTlsPoliciesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsClientTlsPoliciesListResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsClientTlsPoliciesListResponse() {{
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsClientTlsPoliciesListResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsClientTlsPoliciesListResponse(contentType, httpRes.statusCode()) {{
             listClientTlsPoliciesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -214,6 +206,186 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.ListClientTlsPoliciesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListClientTlsPoliciesResponse.class);
                 res.listClientTlsPoliciesResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Creates a new GatewaySecurityPolicy in a given project and location.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateResponse networksecurityProjectsLocationsGatewaySecurityPoliciesCreate(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateRequest request, org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateRequest.class, baseUrl, "/v1/{parent}/gatewaySecurityPolicies", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "gatewaySecurityPolicyInput", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Lists GatewaySecurityPolicies in a given project and location.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesListResponse networksecurityProjectsLocationsGatewaySecurityPoliciesList(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesListRequest request, org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesListSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesListRequest.class, baseUrl, "/v1/{parent}/gatewaySecurityPolicies", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesListRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesListResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesListResponse(contentType, httpRes.statusCode()) {{
+            listGatewaySecurityPoliciesResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListGatewaySecurityPoliciesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListGatewaySecurityPoliciesResponse.class);
+                res.listGatewaySecurityPoliciesResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Creates a new GatewaySecurityPolicy in a given project and location.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateResponse networksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreate(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest request, org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest.class, baseUrl, "/v1/{parent}/rules", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "gatewaySecurityPolicyRuleInput", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Lists GatewaySecurityPolicyRules in a given project and location.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListResponse networksecurityProjectsLocationsGatewaySecurityPoliciesRulesList(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListRequest request, org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListRequest.class, baseUrl, "/v1/{parent}/rules", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListResponse(contentType, httpRes.statusCode()) {{
+            listGatewaySecurityPolicyRulesResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListGatewaySecurityPolicyRulesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListGatewaySecurityPolicyRulesResponse.class);
+                res.listGatewaySecurityPolicyRulesResponse = out;
             }
         }
 
@@ -248,11 +420,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +466,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +510,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +556,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesCreateResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesCreateResponse() {{
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesCreateResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -402,98 +566,6 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
                 res.operation = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Deletes a single ServerTlsPolicy.
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesDeleteResponse networksecurityProjectsLocationsServerTlsPoliciesDelete(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesDeleteRequest request, org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesDeleteSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
-        req.setURL(url);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesDeleteRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesDeleteResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesDeleteResponse() {{
-            operation = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
-                res.operation = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Gets details of a single ServerTlsPolicy.
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesGetResponse networksecurityProjectsLocationsServerTlsPoliciesGet(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesGetRequest request, org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesGetSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesGetRequest.class, baseUrl, "/v1/{name}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesGetRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesGetResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesGetResponse() {{
-            serverTlsPolicy = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.ServerTlsPolicy out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ServerTlsPolicy.class);
-                res.serverTlsPolicy = out;
             }
         }
 
@@ -528,11 +600,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             googleIamV1Policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -574,11 +644,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesListResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesListResponse() {{
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesListResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesListResponse(contentType, httpRes.statusCode()) {{
             listServerTlsPoliciesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -586,54 +654,6 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.ListServerTlsPoliciesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListServerTlsPoliciesResponse.class);
                 res.listServerTlsPoliciesResponse = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Updates the parameters of a single ServerTlsPolicy.
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesPatchResponse networksecurityProjectsLocationsServerTlsPoliciesPatch(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesPatchRequest request, org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesPatchSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesPatchRequest.class, baseUrl, "/v1/{name}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PATCH");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "serverTlsPolicyInput", "json");
-        req.setBody(serializedRequestBody);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesPatchRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesPatchResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesPatchResponse() {{
-            operation = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
-                res.operation = out;
             }
         }
 
@@ -670,11 +690,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             googleIamV1Policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -718,11 +736,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsServerTlsPoliciesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             googleIamV1TestIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -730,6 +746,320 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.GoogleIamV1TestIamPermissionsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleIamV1TestIamPermissionsResponse.class);
                 res.googleIamV1TestIamPermissionsResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Creates a new TlsInspectionPolicy in a given project and location.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsTlsInspectionPoliciesCreateResponse networksecurityProjectsLocationsTlsInspectionPoliciesCreate(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsTlsInspectionPoliciesCreateRequest request, org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsTlsInspectionPoliciesCreateSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsTlsInspectionPoliciesCreateRequest.class, baseUrl, "/v1/{parent}/tlsInspectionPolicies", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "tlsInspectionPolicyInput", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsTlsInspectionPoliciesCreateRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsTlsInspectionPoliciesCreateResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsTlsInspectionPoliciesCreateResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Lists TlsInspectionPolicies in a given project and location.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsTlsInspectionPoliciesListResponse networksecurityProjectsLocationsTlsInspectionPoliciesList(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsTlsInspectionPoliciesListRequest request, org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsTlsInspectionPoliciesListSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsTlsInspectionPoliciesListRequest.class, baseUrl, "/v1/{parent}/tlsInspectionPolicies", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsTlsInspectionPoliciesListRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsTlsInspectionPoliciesListResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsTlsInspectionPoliciesListResponse(contentType, httpRes.statusCode()) {{
+            listTlsInspectionPoliciesResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListTlsInspectionPoliciesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListTlsInspectionPoliciesResponse.class);
+                res.listTlsInspectionPoliciesResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Creates a new UrlList in a given project and location.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsCreateResponse networksecurityProjectsLocationsUrlListsCreate(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsCreateRequest request, org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsCreateSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsCreateRequest.class, baseUrl, "/v1/{parent}/urlLists", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "urlListInput", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsCreateRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsCreateResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsCreateResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Deletes a single UrlList.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsDeleteResponse networksecurityProjectsLocationsUrlListsDelete(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsDeleteRequest request, org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsDeleteSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsDeleteRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsDeleteResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsDeleteResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Gets details of a single UrlList.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsGetResponse networksecurityProjectsLocationsUrlListsGet(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsGetRequest request, org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsGetSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsGetRequest.class, baseUrl, "/v1/{name}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsGetRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsGetResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsGetResponse(contentType, httpRes.statusCode()) {{
+            urlList = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.UrlList out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.UrlList.class);
+                res.urlList = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Lists UrlLists in a given project and location.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsListResponse networksecurityProjectsLocationsUrlListsList(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsListRequest request, org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsListSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsListRequest.class, baseUrl, "/v1/{parent}/urlLists", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsListRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsListResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsListResponse(contentType, httpRes.statusCode()) {{
+            listUrlListsResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListUrlListsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListUrlListsResponse.class);
+                res.listUrlListsResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Updates the parameters of a single UrlList.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsPatchResponse networksecurityProjectsLocationsUrlListsPatch(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsPatchRequest request, org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsPatchSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PATCH");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "urlListInput", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsPatchRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsPatchResponse res = new org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsUrlListsPatchResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
             }
         }
 

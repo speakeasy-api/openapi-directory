@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociationExecutionFilter {
     @JsonProperty("Key")
     public AssociationExecutionFilterKeyEnum key;
+
     public AssociationExecutionFilter withKey(AssociationExecutionFilterKeyEnum key) {
         this.key = key;
         return this;
@@ -19,6 +20,7 @@ public class AssociationExecutionFilter {
     
     @JsonProperty("Type")
     public AssociationFilterOperatorTypeEnum type;
+
     public AssociationExecutionFilter withType(AssociationFilterOperatorTypeEnum type) {
         this.type = type;
         return this;
@@ -26,9 +28,15 @@ public class AssociationExecutionFilter {
     
     @JsonProperty("Value")
     public String value;
+
     public AssociationExecutionFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AssociationExecutionFilter(@JsonProperty("Key") AssociationExecutionFilterKeyEnum key, @JsonProperty("Type") AssociationFilterOperatorTypeEnum type, @JsonProperty("Value") String value) {
+        this.key = key;
+        this.type = type;
+        this.value = value;
+  }
 }

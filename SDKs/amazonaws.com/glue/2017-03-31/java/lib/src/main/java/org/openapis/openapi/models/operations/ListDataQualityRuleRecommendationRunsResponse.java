@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDataQualityRuleRecommendationRunsResponse {
     
     public String contentType;
+
     public ListDataQualityRuleRecommendationRunsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDataQualityRuleRecommendationRunsResponse {
      */
     
     public Object internalServiceException;
+
     public ListDataQualityRuleRecommendationRunsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class ListDataQualityRuleRecommendationRunsResponse {
      */
     
     public Object invalidInputException;
+
     public ListDataQualityRuleRecommendationRunsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class ListDataQualityRuleRecommendationRunsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDataQualityRuleRecommendationRunsResponse listDataQualityRuleRecommendationRunsResponse;
+
     public ListDataQualityRuleRecommendationRunsResponse withListDataQualityRuleRecommendationRunsResponse(org.openapis.openapi.models.shared.ListDataQualityRuleRecommendationRunsResponse listDataQualityRuleRecommendationRunsResponse) {
         this.listDataQualityRuleRecommendationRunsResponse = listDataQualityRuleRecommendationRunsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListDataQualityRuleRecommendationRunsResponse {
      */
     
     public Object operationTimeoutException;
+
     public ListDataQualityRuleRecommendationRunsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class ListDataQualityRuleRecommendationRunsResponse {
     
     
     public Integer statusCode;
+
     public ListDataQualityRuleRecommendationRunsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListDataQualityRuleRecommendationRunsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDataQualityRuleRecommendationRunsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDataQualityRuleRecommendationRunsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

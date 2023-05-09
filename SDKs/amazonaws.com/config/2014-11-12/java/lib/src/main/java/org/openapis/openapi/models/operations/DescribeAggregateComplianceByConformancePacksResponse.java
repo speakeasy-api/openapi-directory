@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAggregateComplianceByConformancePacksResponse {
     
     public String contentType;
+
     public DescribeAggregateComplianceByConformancePacksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAggregateComplianceByConformancePacksResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAggregateComplianceByConformancePacksResponse describeAggregateComplianceByConformancePacksResponse;
+
     public DescribeAggregateComplianceByConformancePacksResponse withDescribeAggregateComplianceByConformancePacksResponse(org.openapis.openapi.models.shared.DescribeAggregateComplianceByConformancePacksResponse describeAggregateComplianceByConformancePacksResponse) {
         this.describeAggregateComplianceByConformancePacksResponse = describeAggregateComplianceByConformancePacksResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAggregateComplianceByConformancePacksResponse {
      */
     
     public Object invalidLimitException;
+
     public DescribeAggregateComplianceByConformancePacksResponse withInvalidLimitException(Object invalidLimitException) {
         this.invalidLimitException = invalidLimitException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAggregateComplianceByConformancePacksResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeAggregateComplianceByConformancePacksResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAggregateComplianceByConformancePacksResponse {
      */
     
     public Object noSuchConfigurationAggregatorException;
+
     public DescribeAggregateComplianceByConformancePacksResponse withNoSuchConfigurationAggregatorException(Object noSuchConfigurationAggregatorException) {
         this.noSuchConfigurationAggregatorException = noSuchConfigurationAggregatorException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeAggregateComplianceByConformancePacksResponse {
     
     
     public Integer statusCode;
+
     public DescribeAggregateComplianceByConformancePacksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeAggregateComplianceByConformancePacksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAggregateComplianceByConformancePacksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeAggregateComplianceByConformancePacksResponse {
      */
     
     public Object validationException;
+
     public DescribeAggregateComplianceByConformancePacksResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeAggregateComplianceByConformancePacksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

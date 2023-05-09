@@ -15,6 +15,7 @@ public class ListVariantImportJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public ListVariantImportJobsRequestBodyFilter filter;
+
     public ListVariantImportJobsRequestBody withFilter(ListVariantImportJobsRequestBodyFilter filter) {
         this.filter = filter;
         return this;
@@ -26,9 +27,11 @@ public class ListVariantImportJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ids")
     public String[] ids;
+
     public ListVariantImportJobsRequestBody withIds(String[] ids) {
         this.ids = ids;
         return this;
     }
     
+    public ListVariantImportJobsRequestBody(){}
 }

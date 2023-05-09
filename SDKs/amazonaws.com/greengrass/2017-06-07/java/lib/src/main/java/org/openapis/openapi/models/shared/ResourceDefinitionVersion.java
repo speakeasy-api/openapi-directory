@@ -15,9 +15,11 @@ public class ResourceDefinitionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resources")
     public Resource[] resources;
+
     public ResourceDefinitionVersion withResources(Resource[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public ResourceDefinitionVersion(){}
 }

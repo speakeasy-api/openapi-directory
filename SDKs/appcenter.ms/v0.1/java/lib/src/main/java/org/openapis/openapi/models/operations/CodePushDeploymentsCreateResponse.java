@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CodePushDeploymentsCreateResponse {
     
     public String contentType;
+
     public CodePushDeploymentsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CodePushDeploymentsCreateResponse {
     
     
     public Integer statusCode;
+
     public CodePushDeploymentsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CodePushDeploymentsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CodePushDeploymentsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CodePushDeploymentsCreateResponse {
      */
     
     public CodePushDeploymentsCreate201ApplicationJSON codePushDeploymentsCreate201ApplicationJSONObject;
+
     public CodePushDeploymentsCreateResponse withCodePushDeploymentsCreate201ApplicationJSONObject(CodePushDeploymentsCreate201ApplicationJSON codePushDeploymentsCreate201ApplicationJSONObject) {
         this.codePushDeploymentsCreate201ApplicationJSONObject = codePushDeploymentsCreate201ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class CodePushDeploymentsCreateResponse {
      */
     
     public CodePushDeploymentsCreateDefaultApplicationJSON codePushDeploymentsCreateDefaultApplicationJSONObject;
+
     public CodePushDeploymentsCreateResponse withCodePushDeploymentsCreateDefaultApplicationJSONObject(CodePushDeploymentsCreateDefaultApplicationJSON codePushDeploymentsCreateDefaultApplicationJSONObject) {
         this.codePushDeploymentsCreateDefaultApplicationJSONObject = codePushDeploymentsCreateDefaultApplicationJSONObject;
         return this;
     }
     
+    public CodePushDeploymentsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

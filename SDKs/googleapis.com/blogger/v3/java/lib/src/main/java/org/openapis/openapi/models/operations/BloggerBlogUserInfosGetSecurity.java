@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BloggerBlogUserInfosGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BloggerBlogUserInfosGetSecurityOption1 option1;
+
     public BloggerBlogUserInfosGetSecurity withOption1(BloggerBlogUserInfosGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class BloggerBlogUserInfosGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BloggerBlogUserInfosGetSecurityOption2 option2;
+
     public BloggerBlogUserInfosGetSecurity withOption2(BloggerBlogUserInfosGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public BloggerBlogUserInfosGetSecurity(){}
 }

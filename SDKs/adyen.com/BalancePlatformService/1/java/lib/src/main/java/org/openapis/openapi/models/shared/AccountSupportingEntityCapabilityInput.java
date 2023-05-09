@@ -15,6 +15,7 @@ public class AccountSupportingEntityCapabilityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AccountSupportingEntityCapabilityInput withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -26,6 +27,7 @@ public class AccountSupportingEntityCapabilityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested")
     public Boolean requested;
+
     public AccountSupportingEntityCapabilityInput withRequested(Boolean requested) {
         this.requested = requested;
         return this;
@@ -39,9 +41,11 @@ public class AccountSupportingEntityCapabilityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedLevel")
     public AccountSupportingEntityCapabilityRequestedLevelEnum requestedLevel;
+
     public AccountSupportingEntityCapabilityInput withRequestedLevel(AccountSupportingEntityCapabilityRequestedLevelEnum requestedLevel) {
         this.requestedLevel = requestedLevel;
         return this;
     }
     
+    public AccountSupportingEntityCapabilityInput(){}
 }

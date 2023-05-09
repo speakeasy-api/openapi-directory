@@ -18,9 +18,11 @@ public class GoogleCloudContactcenterinsightsV1ListIssueModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issueModels")
     public GoogleCloudContactcenterinsightsV1IssueModel[] issueModels;
+
     public GoogleCloudContactcenterinsightsV1ListIssueModelsResponse withIssueModels(GoogleCloudContactcenterinsightsV1IssueModel[] issueModels) {
         this.issueModels = issueModels;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1ListIssueModelsResponse(){}
 }

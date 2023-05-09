@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeReplicationTaskIndividualAssessmentsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DescribeReplicationTaskIndividualAssessmentsMessage describeReplicationTaskIndividualAssessmentsMessage;
+
     public DescribeReplicationTaskIndividualAssessmentsRequest withDescribeReplicationTaskIndividualAssessmentsMessage(org.openapis.openapi.models.shared.DescribeReplicationTaskIndividualAssessmentsMessage describeReplicationTaskIndividualAssessmentsMessage) {
         this.describeReplicationTaskIndividualAssessmentsMessage = describeReplicationTaskIndividualAssessmentsMessage;
         return this;
@@ -19,6 +21,7 @@ public class DescribeReplicationTaskIndividualAssessmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public DescribeReplicationTaskIndividualAssessmentsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -29,6 +32,7 @@ public class DescribeReplicationTaskIndividualAssessmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public String maxRecords;
+
     public DescribeReplicationTaskIndividualAssessmentsRequest withMaxRecords(String maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -36,6 +40,7 @@ public class DescribeReplicationTaskIndividualAssessmentsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeReplicationTaskIndividualAssessmentsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class DescribeReplicationTaskIndividualAssessmentsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeReplicationTaskIndividualAssessmentsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class DescribeReplicationTaskIndividualAssessmentsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeReplicationTaskIndividualAssessmentsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class DescribeReplicationTaskIndividualAssessmentsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeReplicationTaskIndividualAssessmentsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class DescribeReplicationTaskIndividualAssessmentsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeReplicationTaskIndividualAssessmentsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class DescribeReplicationTaskIndividualAssessmentsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeReplicationTaskIndividualAssessmentsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class DescribeReplicationTaskIndividualAssessmentsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeReplicationTaskIndividualAssessmentsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class DescribeReplicationTaskIndividualAssessmentsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DescribeReplicationTaskIndividualAssessmentsXAmzTargetEnum xAmzTarget;
+
     public DescribeReplicationTaskIndividualAssessmentsRequest withXAmzTarget(DescribeReplicationTaskIndividualAssessmentsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DescribeReplicationTaskIndividualAssessmentsRequest(@JsonProperty("DescribeReplicationTaskIndividualAssessmentsMessage") org.openapis.openapi.models.shared.DescribeReplicationTaskIndividualAssessmentsMessage describeReplicationTaskIndividualAssessmentsMessage, @JsonProperty("X-Amz-Target") DescribeReplicationTaskIndividualAssessmentsXAmzTargetEnum xAmzTarget) {
+        this.describeReplicationTaskIndividualAssessmentsMessage = describeReplicationTaskIndividualAssessmentsMessage;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

@@ -15,9 +15,11 @@ public class UpdateNetworkCellularFirewallRulesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public UpdateNetworkCellularFirewallRulesRequestBodyRules[] rules;
+
     public UpdateNetworkCellularFirewallRulesRequestBody withRules(UpdateNetworkCellularFirewallRulesRequestBodyRules[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public UpdateNetworkCellularFirewallRulesRequestBody(){}
 }

@@ -15,6 +15,7 @@ public class ServiceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Condition")
     public FilterConditionEnum condition;
+
     public ServiceFilter withCondition(FilterConditionEnum condition) {
         this.condition = condition;
         return this;
@@ -22,6 +23,7 @@ public class ServiceFilter {
     
     @JsonProperty("Name")
     public ServiceFilterNameEnum name;
+
     public ServiceFilter withName(ServiceFilterNameEnum name) {
         this.name = name;
         return this;
@@ -29,9 +31,14 @@ public class ServiceFilter {
     
     @JsonProperty("Values")
     public String[] values;
+
     public ServiceFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public ServiceFilter(@JsonProperty("Name") ServiceFilterNameEnum name, @JsonProperty("Values") String[] values) {
+        this.name = name;
+        this.values = values;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFixedPricesonapricetableResponse {
     
     public String contentType;
+
     public GetFixedPricesonapricetableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetFixedPricesonapricetableResponse {
      */
     
     public org.openapis.openapi.models.shared.FixedPrice[] fixedPrices;
+
     public GetFixedPricesonapricetableResponse withFixedPrices(org.openapis.openapi.models.shared.FixedPrice[] fixedPrices) {
         this.fixedPrices = fixedPrices;
         return this;
@@ -26,6 +29,7 @@ public class GetFixedPricesonapricetableResponse {
     
     
     public Integer statusCode;
+
     public GetFixedPricesonapricetableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetFixedPricesonapricetableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFixedPricesonapricetableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetFixedPricesonapricetableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

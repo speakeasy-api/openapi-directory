@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CopyFpgaImageRequest {
     
     public String clientToken;
+
     public CopyFpgaImageRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CopyFpgaImageRequest {
     
     
     public String description;
+
     public CopyFpgaImageRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class CopyFpgaImageRequest {
     
     
     public Boolean dryRun;
+
     public CopyFpgaImageRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class CopyFpgaImageRequest {
     
     
     public String name;
+
     public CopyFpgaImageRequest withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +41,7 @@ public class CopyFpgaImageRequest {
     
     
     public String sourceFpgaImageId;
+
     public CopyFpgaImageRequest withSourceFpgaImageId(String sourceFpgaImageId) {
         this.sourceFpgaImageId = sourceFpgaImageId;
         return this;
@@ -44,9 +49,14 @@ public class CopyFpgaImageRequest {
     
     
     public String sourceRegion;
+
     public CopyFpgaImageRequest withSourceRegion(String sourceRegion) {
         this.sourceRegion = sourceRegion;
         return this;
     }
     
+    public CopyFpgaImageRequest(@JsonProperty("SourceFpgaImageId") String sourceFpgaImageId, @JsonProperty("SourceRegion") String sourceRegion) {
+        this.sourceFpgaImageId = sourceFpgaImageId;
+        this.sourceRegion = sourceRegion;
+  }
 }

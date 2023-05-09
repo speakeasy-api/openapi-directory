@@ -22,6 +22,7 @@ public class Network {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Network withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Network withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class Network {
     
     @JsonProperty("networkArn")
     public String networkArn;
+
     public Network withNetworkArn(String networkArn) {
         this.networkArn = networkArn;
         return this;
@@ -44,6 +47,7 @@ public class Network {
     
     @JsonProperty("networkName")
     public String networkName;
+
     public Network withNetworkName(String networkName) {
         this.networkName = networkName;
         return this;
@@ -51,6 +55,7 @@ public class Network {
     
     @JsonProperty("status")
     public NetworkStatusEnum status;
+
     public Network withStatus(NetworkStatusEnum status) {
         this.status = status;
         return this;
@@ -59,9 +64,15 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public Network withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public Network(@JsonProperty("networkArn") String networkArn, @JsonProperty("networkName") String networkName, @JsonProperty("status") NetworkStatusEnum status) {
+        this.networkArn = networkArn;
+        this.networkName = networkName;
+        this.status = status;
+  }
 }

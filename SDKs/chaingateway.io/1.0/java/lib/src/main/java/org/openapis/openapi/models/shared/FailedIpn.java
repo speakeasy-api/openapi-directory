@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FailedIpn {
     @JsonProperty("action")
     public String action;
+
     public FailedIpn withAction(String action) {
         this.action = action;
         return this;
@@ -16,6 +17,7 @@ public class FailedIpn {
     
     @JsonProperty("amount")
     public String amount;
+
     public FailedIpn withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -23,6 +25,7 @@ public class FailedIpn {
     
     @JsonProperty("contractaddress")
     public String contractaddress;
+
     public FailedIpn withContractaddress(String contractaddress) {
         this.contractaddress = contractaddress;
         return this;
@@ -30,6 +33,7 @@ public class FailedIpn {
     
     @JsonProperty("ethereumaddress")
     public String ethereumaddress;
+
     public FailedIpn withEthereumaddress(String ethereumaddress) {
         this.ethereumaddress = ethereumaddress;
         return this;
@@ -37,6 +41,7 @@ public class FailedIpn {
     
     @JsonProperty("id")
     public String id;
+
     public FailedIpn withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +49,7 @@ public class FailedIpn {
     
     @JsonProperty("timestamp")
     public String timestamp;
+
     public FailedIpn withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -51,9 +57,19 @@ public class FailedIpn {
     
     @JsonProperty("url")
     public String url;
+
     public FailedIpn withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public FailedIpn(@JsonProperty("action") String action, @JsonProperty("amount") String amount, @JsonProperty("contractaddress") String contractaddress, @JsonProperty("ethereumaddress") String ethereumaddress, @JsonProperty("id") String id, @JsonProperty("timestamp") String timestamp, @JsonProperty("url") String url) {
+        this.action = action;
+        this.amount = amount;
+        this.contractaddress = contractaddress;
+        this.ethereumaddress = ethereumaddress;
+        this.id = id;
+        this.timestamp = timestamp;
+        this.url = url;
+  }
 }

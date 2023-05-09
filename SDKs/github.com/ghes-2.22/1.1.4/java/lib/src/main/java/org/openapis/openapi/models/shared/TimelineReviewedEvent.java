@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class TimelineReviewedEvent {
     @JsonProperty("_links")
     public TimelineReviewedEventLinks links;
+
     public TimelineReviewedEvent withLinks(TimelineReviewedEventLinks links) {
         this.links = links;
         return this;
@@ -29,6 +30,7 @@ public class TimelineReviewedEvent {
      */
     @JsonProperty("author_association")
     public AuthorAssociationEnum authorAssociation;
+
     public TimelineReviewedEvent withAuthorAssociation(AuthorAssociationEnum authorAssociation) {
         this.authorAssociation = authorAssociation;
         return this;
@@ -39,6 +41,7 @@ public class TimelineReviewedEvent {
      */
     @JsonProperty("body")
     public String body;
+
     public TimelineReviewedEvent withBody(String body) {
         this.body = body;
         return this;
@@ -47,6 +50,7 @@ public class TimelineReviewedEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_html")
     public String bodyHtml;
+
     public TimelineReviewedEvent withBodyHtml(String bodyHtml) {
         this.bodyHtml = bodyHtml;
         return this;
@@ -55,6 +59,7 @@ public class TimelineReviewedEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_text")
     public String bodyText;
+
     public TimelineReviewedEvent withBodyText(String bodyText) {
         this.bodyText = bodyText;
         return this;
@@ -65,6 +70,7 @@ public class TimelineReviewedEvent {
      */
     @JsonProperty("commit_id")
     public String commitId;
+
     public TimelineReviewedEvent withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -72,6 +78,7 @@ public class TimelineReviewedEvent {
     
     @JsonProperty("event")
     public String event;
+
     public TimelineReviewedEvent withEvent(String event) {
         this.event = event;
         return this;
@@ -79,6 +86,7 @@ public class TimelineReviewedEvent {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public TimelineReviewedEvent withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -89,6 +97,7 @@ public class TimelineReviewedEvent {
      */
     @JsonProperty("id")
     public Long id;
+
     public TimelineReviewedEvent withId(Long id) {
         this.id = id;
         return this;
@@ -96,6 +105,7 @@ public class TimelineReviewedEvent {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public TimelineReviewedEvent withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -103,6 +113,7 @@ public class TimelineReviewedEvent {
     
     @JsonProperty("pull_request_url")
     public String pullRequestUrl;
+
     public TimelineReviewedEvent withPullRequestUrl(String pullRequestUrl) {
         this.pullRequestUrl = pullRequestUrl;
         return this;
@@ -110,6 +121,7 @@ public class TimelineReviewedEvent {
     
     @JsonProperty("state")
     public String state;
+
     public TimelineReviewedEvent withState(String state) {
         this.state = state;
         return this;
@@ -120,6 +132,7 @@ public class TimelineReviewedEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("submitted_at")
     public OffsetDateTime submittedAt;
+
     public TimelineReviewedEvent withSubmittedAt(OffsetDateTime submittedAt) {
         this.submittedAt = submittedAt;
         return this;
@@ -130,9 +143,23 @@ public class TimelineReviewedEvent {
      */
     @JsonProperty("user")
     public SimpleUser user;
+
     public TimelineReviewedEvent withUser(SimpleUser user) {
         this.user = user;
         return this;
     }
     
+    public TimelineReviewedEvent(@JsonProperty("_links") TimelineReviewedEventLinks links, @JsonProperty("author_association") AuthorAssociationEnum authorAssociation, @JsonProperty("body") String body, @JsonProperty("commit_id") String commitId, @JsonProperty("event") String event, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("node_id") String nodeId, @JsonProperty("pull_request_url") String pullRequestUrl, @JsonProperty("state") String state, @JsonProperty("user") SimpleUser user) {
+        this.links = links;
+        this.authorAssociation = authorAssociation;
+        this.body = body;
+        this.commitId = commitId;
+        this.event = event;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.nodeId = nodeId;
+        this.pullRequestUrl = pullRequestUrl;
+        this.state = state;
+        this.user = user;
+  }
 }

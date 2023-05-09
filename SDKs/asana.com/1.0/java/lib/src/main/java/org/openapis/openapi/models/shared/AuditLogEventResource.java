@@ -18,6 +18,7 @@ public class AuditLogEventResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public AuditLogEventResource withEmail(String email) {
         this.email = email;
         return this;
@@ -29,6 +30,7 @@ public class AuditLogEventResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public AuditLogEventResource withGid(String gid) {
         this.gid = gid;
         return this;
@@ -40,6 +42,7 @@ public class AuditLogEventResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AuditLogEventResource withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class AuditLogEventResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_subtype")
     public String resourceSubtype;
+
     public AuditLogEventResource withResourceSubtype(String resourceSubtype) {
         this.resourceSubtype = resourceSubtype;
         return this;
@@ -62,9 +66,11 @@ public class AuditLogEventResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public AuditLogEventResource withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public AuditLogEventResource(){}
 }

@@ -20,6 +20,7 @@ public class DescribeSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public DescribeSecretResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class DescribeSecretResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public DescribeSecretResponse withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -40,6 +42,7 @@ public class DescribeSecretResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeletedDate")
     public OffsetDateTime deletedDate;
+
     public DescribeSecretResponse withDeletedDate(OffsetDateTime deletedDate) {
         this.deletedDate = deletedDate;
         return this;
@@ -48,6 +51,7 @@ public class DescribeSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeSecretResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -56,6 +60,7 @@ public class DescribeSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public DescribeSecretResponse withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -66,6 +71,7 @@ public class DescribeSecretResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastAccessedDate")
     public OffsetDateTime lastAccessedDate;
+
     public DescribeSecretResponse withLastAccessedDate(OffsetDateTime lastAccessedDate) {
         this.lastAccessedDate = lastAccessedDate;
         return this;
@@ -76,6 +82,7 @@ public class DescribeSecretResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastChangedDate")
     public OffsetDateTime lastChangedDate;
+
     public DescribeSecretResponse withLastChangedDate(OffsetDateTime lastChangedDate) {
         this.lastChangedDate = lastChangedDate;
         return this;
@@ -86,6 +93,7 @@ public class DescribeSecretResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastRotatedDate")
     public OffsetDateTime lastRotatedDate;
+
     public DescribeSecretResponse withLastRotatedDate(OffsetDateTime lastRotatedDate) {
         this.lastRotatedDate = lastRotatedDate;
         return this;
@@ -94,6 +102,7 @@ public class DescribeSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribeSecretResponse withName(String name) {
         this.name = name;
         return this;
@@ -104,6 +113,7 @@ public class DescribeSecretResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("NextRotationDate")
     public OffsetDateTime nextRotationDate;
+
     public DescribeSecretResponse withNextRotationDate(OffsetDateTime nextRotationDate) {
         this.nextRotationDate = nextRotationDate;
         return this;
@@ -112,6 +122,7 @@ public class DescribeSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwningService")
     public String owningService;
+
     public DescribeSecretResponse withOwningService(String owningService) {
         this.owningService = owningService;
         return this;
@@ -120,6 +131,7 @@ public class DescribeSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrimaryRegion")
     public String primaryRegion;
+
     public DescribeSecretResponse withPrimaryRegion(String primaryRegion) {
         this.primaryRegion = primaryRegion;
         return this;
@@ -128,6 +140,7 @@ public class DescribeSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationStatus")
     public ReplicationStatusType[] replicationStatus;
+
     public DescribeSecretResponse withReplicationStatus(ReplicationStatusType[] replicationStatus) {
         this.replicationStatus = replicationStatus;
         return this;
@@ -136,6 +149,7 @@ public class DescribeSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RotationEnabled")
     public Boolean rotationEnabled;
+
     public DescribeSecretResponse withRotationEnabled(Boolean rotationEnabled) {
         this.rotationEnabled = rotationEnabled;
         return this;
@@ -144,6 +158,7 @@ public class DescribeSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RotationLambdaARN")
     public String rotationLambdaARN;
+
     public DescribeSecretResponse withRotationLambdaARN(String rotationLambdaARN) {
         this.rotationLambdaARN = rotationLambdaARN;
         return this;
@@ -152,6 +167,7 @@ public class DescribeSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RotationRules")
     public RotationRulesType rotationRules;
+
     public DescribeSecretResponse withRotationRules(RotationRulesType rotationRules) {
         this.rotationRules = rotationRules;
         return this;
@@ -160,6 +176,7 @@ public class DescribeSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public DescribeSecretResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -168,9 +185,11 @@ public class DescribeSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionIdsToStages")
     public java.util.Map<String, String[]> versionIdsToStages;
+
     public DescribeSecretResponse withVersionIdsToStages(java.util.Map<String, String[]> versionIdsToStages) {
         this.versionIdsToStages = versionIdsToStages;
         return this;
     }
     
+    public DescribeSecretResponse(){}
 }

@@ -15,6 +15,7 @@ public class StartEarthObservationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public StartEarthObservationJobRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class StartEarthObservationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public StartEarthObservationJobRequestBody withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -36,6 +38,7 @@ public class StartEarthObservationJobRequestBody {
      */
     @JsonProperty("InputConfig")
     public StartEarthObservationJobRequestBodyInputConfig inputConfig;
+
     public StartEarthObservationJobRequestBody withInputConfig(StartEarthObservationJobRequestBodyInputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -46,17 +49,19 @@ public class StartEarthObservationJobRequestBody {
      */
     @JsonProperty("JobConfig")
     public StartEarthObservationJobRequestBodyJobConfig jobConfig;
+
     public StartEarthObservationJobRequestBody withJobConfig(StartEarthObservationJobRequestBodyJobConfig jobConfig) {
         this.jobConfig = jobConfig;
         return this;
     }
     
     /**
-     * The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * The Key Management Service key ID for server-side encryption.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public StartEarthObservationJobRequestBody withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -67,6 +72,7 @@ public class StartEarthObservationJobRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public StartEarthObservationJobRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -78,9 +84,15 @@ public class StartEarthObservationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public StartEarthObservationJobRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public StartEarthObservationJobRequestBody(@JsonProperty("InputConfig") StartEarthObservationJobRequestBodyInputConfig inputConfig, @JsonProperty("JobConfig") StartEarthObservationJobRequestBodyJobConfig jobConfig, @JsonProperty("Name") String name) {
+        this.inputConfig = inputConfig;
+        this.jobConfig = jobConfig;
+        this.name = name;
+  }
 }

@@ -12,6 +12,7 @@ public class ScheduleAByZipPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public ScheduleAByZipPage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class ScheduleAByZipPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ScheduleAByZip[] results;
+
     public ScheduleAByZipPage withResults(ScheduleAByZip[] results) {
         this.results = results;
         return this;
     }
     
+    public ScheduleAByZipPage(){}
 }

@@ -14,6 +14,7 @@ public class CreateFindingAggregatorRequestBody {
      */
     @JsonProperty("RegionLinkingMode")
     public String regionLinkingMode;
+
     public CreateFindingAggregatorRequestBody withRegionLinkingMode(String regionLinkingMode) {
         this.regionLinkingMode = regionLinkingMode;
         return this;
@@ -25,9 +26,13 @@ public class CreateFindingAggregatorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Regions")
     public String[] regions;
+
     public CreateFindingAggregatorRequestBody withRegions(String[] regions) {
         this.regions = regions;
         return this;
     }
     
+    public CreateFindingAggregatorRequestBody(@JsonProperty("RegionLinkingMode") String regionLinkingMode) {
+        this.regionLinkingMode = regionLinkingMode;
+  }
 }

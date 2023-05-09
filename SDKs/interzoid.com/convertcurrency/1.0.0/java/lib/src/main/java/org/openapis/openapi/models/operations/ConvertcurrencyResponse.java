@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ConvertcurrencyResponse {
     
     public String contentType;
+
     public ConvertcurrencyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ConvertcurrencyResponse {
     
     
     public Integer statusCode;
+
     public ConvertcurrencyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ConvertcurrencyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ConvertcurrencyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ConvertcurrencyResponse {
      */
     
     public Convertcurrency200ApplicationJSON convertcurrency200ApplicationJSONObject;
+
     public ConvertcurrencyResponse withConvertcurrency200ApplicationJSONObject(Convertcurrency200ApplicationJSON convertcurrency200ApplicationJSONObject) {
         this.convertcurrency200ApplicationJSONObject = convertcurrency200ApplicationJSONObject;
         return this;
     }
     
+    public ConvertcurrencyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

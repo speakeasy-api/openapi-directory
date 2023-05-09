@@ -15,9 +15,11 @@ public class CreateLicenseConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseConfigurationArn")
     public String licenseConfigurationArn;
+
     public CreateLicenseConfigurationResponse withLicenseConfigurationArn(String licenseConfigurationArn) {
         this.licenseConfigurationArn = licenseConfigurationArn;
         return this;
     }
     
+    public CreateLicenseConfigurationResponse(){}
 }

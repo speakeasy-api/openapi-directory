@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteUsageLimitMessage {
     
     public String usageLimitId;
+
     public DeleteUsageLimitMessage withUsageLimitId(String usageLimitId) {
         this.usageLimitId = usageLimitId;
         return this;
     }
     
+    public DeleteUsageLimitMessage(@JsonProperty("UsageLimitId") String usageLimitId) {
+        this.usageLimitId = usageLimitId;
+  }
 }

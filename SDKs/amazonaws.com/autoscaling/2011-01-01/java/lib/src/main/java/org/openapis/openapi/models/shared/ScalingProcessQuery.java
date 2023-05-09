@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ScalingProcessQuery {
     
     public String autoScalingGroupName;
+
     public ScalingProcessQuery withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,9 +17,13 @@ public class ScalingProcessQuery {
     
     
     public String[] scalingProcesses;
+
     public ScalingProcessQuery withScalingProcesses(String[] scalingProcesses) {
         this.scalingProcesses = scalingProcesses;
         return this;
     }
     
+    public ScalingProcessQuery(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+  }
 }

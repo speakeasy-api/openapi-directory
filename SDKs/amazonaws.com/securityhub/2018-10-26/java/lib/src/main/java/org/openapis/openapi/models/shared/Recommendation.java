@@ -15,6 +15,7 @@ public class Recommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public Recommendation withText(String text) {
         this.text = text;
         return this;
@@ -23,9 +24,11 @@ public class Recommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public Recommendation withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Recommendation(){}
 }

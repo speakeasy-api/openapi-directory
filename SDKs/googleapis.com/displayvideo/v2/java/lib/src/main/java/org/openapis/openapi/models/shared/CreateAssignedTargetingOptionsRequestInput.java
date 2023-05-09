@@ -18,6 +18,7 @@ public class CreateAssignedTargetingOptionsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignedTargetingOptions")
     public AssignedTargetingOptionInput[] assignedTargetingOptions;
+
     public CreateAssignedTargetingOptionsRequestInput withAssignedTargetingOptions(AssignedTargetingOptionInput[] assignedTargetingOptions) {
         this.assignedTargetingOptions = assignedTargetingOptions;
         return this;
@@ -29,9 +30,11 @@ public class CreateAssignedTargetingOptionsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingType")
     public CreateAssignedTargetingOptionsRequestTargetingTypeEnum targetingType;
+
     public CreateAssignedTargetingOptionsRequestInput withTargetingType(CreateAssignedTargetingOptionsRequestTargetingTypeEnum targetingType) {
         this.targetingType = targetingType;
         return this;
     }
     
+    public CreateAssignedTargetingOptionsRequestInput(){}
 }

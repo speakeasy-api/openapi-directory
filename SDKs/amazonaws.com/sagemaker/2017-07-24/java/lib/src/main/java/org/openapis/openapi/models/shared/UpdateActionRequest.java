@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateActionRequest {
     @JsonProperty("ActionName")
     public String actionName;
+
     public UpdateActionRequest withActionName(String actionName) {
         this.actionName = actionName;
         return this;
@@ -19,6 +20,7 @@ public class UpdateActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateActionRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class UpdateActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public java.util.Map<String, String> properties;
+
     public UpdateActionRequest withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -35,6 +38,7 @@ public class UpdateActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PropertiesToRemove")
     public String[] propertiesToRemove;
+
     public UpdateActionRequest withPropertiesToRemove(String[] propertiesToRemove) {
         this.propertiesToRemove = propertiesToRemove;
         return this;
@@ -43,9 +47,13 @@ public class UpdateActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ActionStatusEnum status;
+
     public UpdateActionRequest withStatus(ActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateActionRequest(@JsonProperty("ActionName") String actionName) {
+        this.actionName = actionName;
+  }
 }

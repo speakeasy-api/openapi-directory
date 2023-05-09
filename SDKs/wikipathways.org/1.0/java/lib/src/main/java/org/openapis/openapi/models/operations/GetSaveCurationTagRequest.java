@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSaveCurationTagRequest {
@@ -12,6 +13,7 @@ public class GetSaveCurationTagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auth")
     public String auth;
+
     public GetSaveCurationTagRequest withAuth(String auth) {
         this.auth = auth;
         return this;
@@ -19,6 +21,7 @@ public class GetSaveCurationTagRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetSaveCurationTagFormatEnum format;
+
     public GetSaveCurationTagRequest withFormat(GetSaveCurationTagFormatEnum format) {
         this.format = format;
         return this;
@@ -29,6 +32,7 @@ public class GetSaveCurationTagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pwId")
     public String pwId;
+
     public GetSaveCurationTagRequest withPwId(String pwId) {
         this.pwId = pwId;
         return this;
@@ -39,6 +43,7 @@ public class GetSaveCurationTagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=revision")
     public Long revision;
+
     public GetSaveCurationTagRequest withRevision(Long revision) {
         this.revision = revision;
         return this;
@@ -49,6 +54,7 @@ public class GetSaveCurationTagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagName")
     public String tagName;
+
     public GetSaveCurationTagRequest withTagName(String tagName) {
         this.tagName = tagName;
         return this;
@@ -59,6 +65,7 @@ public class GetSaveCurationTagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public GetSaveCurationTagRequest withText(String text) {
         this.text = text;
         return this;
@@ -69,9 +76,18 @@ public class GetSaveCurationTagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public GetSaveCurationTagRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetSaveCurationTagRequest(@JsonProperty("auth") String auth, @JsonProperty("pwId") String pwId, @JsonProperty("revision") Long revision, @JsonProperty("tagName") String tagName, @JsonProperty("text") String text, @JsonProperty("username") String username) {
+        this.auth = auth;
+        this.pwId = pwId;
+        this.revision = revision;
+        this.tagName = tagName;
+        this.text = text;
+        this.username = username;
+  }
 }

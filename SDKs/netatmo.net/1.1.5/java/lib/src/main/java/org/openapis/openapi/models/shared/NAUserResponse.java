@@ -15,6 +15,7 @@ public class NAUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public NAUser body;
+
     public NAUserResponse withBody(NAUser body) {
         this.body = body;
         return this;
@@ -23,6 +24,7 @@ public class NAUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public NAUserResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -31,6 +33,7 @@ public class NAUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_exec")
     public Double timeExec;
+
     public NAUserResponse withTimeExec(Double timeExec) {
         this.timeExec = timeExec;
         return this;
@@ -39,9 +42,11 @@ public class NAUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_server")
     public Integer timeServer;
+
     public NAUserResponse withTimeServer(Integer timeServer) {
         this.timeServer = timeServer;
         return this;
     }
     
+    public NAUserResponse(){}
 }

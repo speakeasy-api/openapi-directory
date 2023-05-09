@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LicenseContentLinks {
     @JsonProperty("git")
     public String git;
+
     public LicenseContentLinks withGit(String git) {
         this.git = git;
         return this;
@@ -16,6 +17,7 @@ public class LicenseContentLinks {
     
     @JsonProperty("html")
     public String html;
+
     public LicenseContentLinks withHtml(String html) {
         this.html = html;
         return this;
@@ -23,9 +25,15 @@ public class LicenseContentLinks {
     
     @JsonProperty("self")
     public String self;
+
     public LicenseContentLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public LicenseContentLinks(@JsonProperty("git") String git, @JsonProperty("html") String html, @JsonProperty("self") String self) {
+        this.git = git;
+        this.html = html;
+        this.self = self;
+  }
 }

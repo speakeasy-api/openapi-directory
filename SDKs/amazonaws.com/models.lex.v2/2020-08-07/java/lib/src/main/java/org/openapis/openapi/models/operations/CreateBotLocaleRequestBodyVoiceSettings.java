@@ -15,6 +15,7 @@ public class CreateBotLocaleRequestBodyVoiceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("engine")
     public org.openapis.openapi.models.shared.VoiceEngineEnum engine;
+
     public CreateBotLocaleRequestBodyVoiceSettings withEngine(org.openapis.openapi.models.shared.VoiceEngineEnum engine) {
         this.engine = engine;
         return this;
@@ -23,9 +24,11 @@ public class CreateBotLocaleRequestBodyVoiceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voiceId")
     public String voiceId;
+
     public CreateBotLocaleRequestBodyVoiceSettings withVoiceId(String voiceId) {
         this.voiceId = voiceId;
         return this;
     }
     
+    public CreateBotLocaleRequestBodyVoiceSettings(){}
 }

@@ -15,6 +15,7 @@ public class MessageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ADMMessage")
     public Message admMessage;
+
     public MessageConfiguration withADMMessage(Message admMessage) {
         this.admMessage = admMessage;
         return this;
@@ -23,6 +24,7 @@ public class MessageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("APNSMessage")
     public Message apnsMessage;
+
     public MessageConfiguration withAPNSMessage(Message apnsMessage) {
         this.apnsMessage = apnsMessage;
         return this;
@@ -31,6 +33,7 @@ public class MessageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaiduMessage")
     public Message baiduMessage;
+
     public MessageConfiguration withBaiduMessage(Message baiduMessage) {
         this.baiduMessage = baiduMessage;
         return this;
@@ -39,6 +42,7 @@ public class MessageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomMessage")
     public CampaignCustomMessage customMessage;
+
     public MessageConfiguration withCustomMessage(CampaignCustomMessage customMessage) {
         this.customMessage = customMessage;
         return this;
@@ -47,6 +51,7 @@ public class MessageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultMessage")
     public Message defaultMessage;
+
     public MessageConfiguration withDefaultMessage(Message defaultMessage) {
         this.defaultMessage = defaultMessage;
         return this;
@@ -55,6 +60,7 @@ public class MessageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailMessage")
     public CampaignEmailMessage emailMessage;
+
     public MessageConfiguration withEmailMessage(CampaignEmailMessage emailMessage) {
         this.emailMessage = emailMessage;
         return this;
@@ -63,6 +69,7 @@ public class MessageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GCMMessage")
     public Message gcmMessage;
+
     public MessageConfiguration withGCMMessage(Message gcmMessage) {
         this.gcmMessage = gcmMessage;
         return this;
@@ -71,6 +78,7 @@ public class MessageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InAppMessage")
     public CampaignInAppMessage inAppMessage;
+
     public MessageConfiguration withInAppMessage(CampaignInAppMessage inAppMessage) {
         this.inAppMessage = inAppMessage;
         return this;
@@ -79,9 +87,11 @@ public class MessageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SMSMessage")
     public CampaignSmsMessage smsMessage;
+
     public MessageConfiguration withSMSMessage(CampaignSmsMessage smsMessage) {
         this.smsMessage = smsMessage;
         return this;
     }
     
+    public MessageConfiguration(){}
 }

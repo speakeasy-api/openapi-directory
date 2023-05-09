@@ -18,9 +18,11 @@ public class StreamingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public StreamingConfig withFilter(String filter) {
         this.filter = filter;
         return this;
     }
     
+    public StreamingConfig(){}
 }

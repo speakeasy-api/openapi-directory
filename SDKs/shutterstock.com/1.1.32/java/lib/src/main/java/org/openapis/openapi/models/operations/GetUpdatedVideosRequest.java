@@ -13,6 +13,7 @@ public class GetUpdatedVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public LocalDate endDate;
+
     public GetUpdatedVideosRequest withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -23,6 +24,7 @@ public class GetUpdatedVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval")
     public String interval;
+
     public GetUpdatedVideosRequest withInterval(String interval) {
         this.interval = interval;
         return this;
@@ -33,6 +35,7 @@ public class GetUpdatedVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetUpdatedVideosRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -43,6 +46,7 @@ public class GetUpdatedVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetUpdatedVideosRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -53,6 +57,7 @@ public class GetUpdatedVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetUpdatedVideosSortEnum sort;
+
     public GetUpdatedVideosRequest withSort(GetUpdatedVideosSortEnum sort) {
         this.sort = sort;
         return this;
@@ -63,9 +68,11 @@ public class GetUpdatedVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public LocalDate startDate;
+
     public GetUpdatedVideosRequest withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public GetUpdatedVideosRequest(){}
 }

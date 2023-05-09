@@ -15,6 +15,7 @@ public class PostSshKeysRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, Object> labels;
+
     public PostSshKeysRequestBody withLabels(java.util.Map<String, Object> labels) {
         this.labels = labels;
         return this;
@@ -25,6 +26,7 @@ public class PostSshKeysRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public PostSshKeysRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +37,14 @@ public class PostSshKeysRequestBody {
      */
     @JsonProperty("public_key")
     public String publicKey;
+
     public PostSshKeysRequestBody withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
     }
     
+    public PostSshKeysRequestBody(@JsonProperty("name") String name, @JsonProperty("public_key") String publicKey) {
+        this.name = name;
+        this.publicKey = publicKey;
+  }
 }

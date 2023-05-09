@@ -18,6 +18,7 @@ public class EndpointsApiService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configId")
     public String configId;
+
     public EndpointsApiService withConfigId(String configId) {
         this.configId = configId;
         return this;
@@ -29,6 +30,7 @@ public class EndpointsApiService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableTraceSampling")
     public Boolean disableTraceSampling;
+
     public EndpointsApiService withDisableTraceSampling(Boolean disableTraceSampling) {
         this.disableTraceSampling = disableTraceSampling;
         return this;
@@ -40,6 +42,7 @@ public class EndpointsApiService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EndpointsApiService withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class EndpointsApiService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rolloutStrategy")
     public EndpointsApiServiceRolloutStrategyEnum rolloutStrategy;
+
     public EndpointsApiService withRolloutStrategy(EndpointsApiServiceRolloutStrategyEnum rolloutStrategy) {
         this.rolloutStrategy = rolloutStrategy;
         return this;
     }
     
+    public EndpointsApiService(){}
 }

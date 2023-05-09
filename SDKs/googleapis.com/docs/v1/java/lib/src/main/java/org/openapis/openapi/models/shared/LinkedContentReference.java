@@ -18,9 +18,11 @@ public class LinkedContentReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sheetsChartReference")
     public SheetsChartReference sheetsChartReference;
+
     public LinkedContentReference withSheetsChartReference(SheetsChartReference sheetsChartReference) {
         this.sheetsChartReference = sheetsChartReference;
         return this;
     }
     
+    public LinkedContentReference(){}
 }

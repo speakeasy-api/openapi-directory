@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatientAuthModeQueryResponseAuth {
     @JsonProperty("modes")
     public AuthenticationModeEnum[] modes;
+
     public PatientAuthModeQueryResponseAuth withModes(AuthenticationModeEnum[] modes) {
         this.modes = modes;
         return this;
@@ -19,9 +20,14 @@ public class PatientAuthModeQueryResponseAuth {
      */
     @JsonProperty("purpose")
     public PatientAuthPurposeEnum purpose;
+
     public PatientAuthModeQueryResponseAuth withPurpose(PatientAuthPurposeEnum purpose) {
         this.purpose = purpose;
         return this;
     }
     
+    public PatientAuthModeQueryResponseAuth(@JsonProperty("modes") AuthenticationModeEnum[] modes, @JsonProperty("purpose") PatientAuthPurposeEnum purpose) {
+        this.modes = modes;
+        this.purpose = purpose;
+  }
 }

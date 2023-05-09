@@ -12,6 +12,7 @@ public class RunAMonitor200ApplicationJSONRunFailures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assertion")
     public RunAMonitor200ApplicationJSONRunFailuresAssertion assertion;
+
     public RunAMonitor200ApplicationJSONRunFailures withAssertion(RunAMonitor200ApplicationJSONRunFailuresAssertion assertion) {
         this.assertion = assertion;
         return this;
@@ -20,6 +21,7 @@ public class RunAMonitor200ApplicationJSONRunFailures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionId")
     public Double executionId;
+
     public RunAMonitor200ApplicationJSONRunFailures withExecutionId(Double executionId) {
         this.executionId = executionId;
         return this;
@@ -28,6 +30,7 @@ public class RunAMonitor200ApplicationJSONRunFailures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public RunAMonitor200ApplicationJSONRunFailures withMessage(String message) {
         this.message = message;
         return this;
@@ -36,9 +39,11 @@ public class RunAMonitor200ApplicationJSONRunFailures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RunAMonitor200ApplicationJSONRunFailures withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RunAMonitor200ApplicationJSONRunFailures(){}
 }

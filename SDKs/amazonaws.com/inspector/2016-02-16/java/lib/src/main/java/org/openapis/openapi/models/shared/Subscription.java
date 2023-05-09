@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Subscription {
     @JsonProperty("eventSubscriptions")
     public EventSubscription[] eventSubscriptions;
+
     public Subscription withEventSubscriptions(EventSubscription[] eventSubscriptions) {
         this.eventSubscriptions = eventSubscriptions;
         return this;
@@ -19,6 +20,7 @@ public class Subscription {
     
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public Subscription withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -26,9 +28,15 @@ public class Subscription {
     
     @JsonProperty("topicArn")
     public String topicArn;
+
     public Subscription withTopicArn(String topicArn) {
         this.topicArn = topicArn;
         return this;
     }
     
+    public Subscription(@JsonProperty("eventSubscriptions") EventSubscription[] eventSubscriptions, @JsonProperty("resourceArn") String resourceArn, @JsonProperty("topicArn") String topicArn) {
+        this.eventSubscriptions = eventSubscriptions;
+        this.resourceArn = resourceArn;
+        this.topicArn = topicArn;
+  }
 }

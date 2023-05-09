@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeStackProvisioningParametersResponse {
     
     public String contentType;
+
     public DescribeStackProvisioningParametersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeStackProvisioningParametersResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeStackProvisioningParametersResult describeStackProvisioningParametersResult;
+
     public DescribeStackProvisioningParametersResponse withDescribeStackProvisioningParametersResult(org.openapis.openapi.models.shared.DescribeStackProvisioningParametersResult describeStackProvisioningParametersResult) {
         this.describeStackProvisioningParametersResult = describeStackProvisioningParametersResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeStackProvisioningParametersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeStackProvisioningParametersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeStackProvisioningParametersResponse {
     
     
     public Integer statusCode;
+
     public DescribeStackProvisioningParametersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeStackProvisioningParametersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeStackProvisioningParametersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeStackProvisioningParametersResponse {
      */
     
     public Object validationException;
+
     public DescribeStackProvisioningParametersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeStackProvisioningParametersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1AnalyzeContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assistQueryParams")
     public GoogleCloudDialogflowV2beta1AssistQueryParameters assistQueryParams;
+
     public GoogleCloudDialogflowV2beta1AnalyzeContentRequest withAssistQueryParams(GoogleCloudDialogflowV2beta1AssistQueryParameters assistQueryParams) {
         this.assistQueryParams = assistQueryParams;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1AnalyzeContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioInput")
     public GoogleCloudDialogflowV2beta1AudioInput audioInput;
+
     public GoogleCloudDialogflowV2beta1AnalyzeContentRequest withAudioInput(GoogleCloudDialogflowV2beta1AudioInput audioInput) {
         this.audioInput = audioInput;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1AnalyzeContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cxCurrentPage")
     public String cxCurrentPage;
+
     public GoogleCloudDialogflowV2beta1AnalyzeContentRequest withCxCurrentPage(String cxCurrentPage) {
         this.cxCurrentPage = cxCurrentPage;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1AnalyzeContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cxParameters")
     public java.util.Map<String, Object> cxParameters;
+
     public GoogleCloudDialogflowV2beta1AnalyzeContentRequest withCxParameters(java.util.Map<String, Object> cxParameters) {
         this.cxParameters = cxParameters;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2beta1AnalyzeContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventInput")
     public GoogleCloudDialogflowV2beta1EventInput eventInput;
+
     public GoogleCloudDialogflowV2beta1AnalyzeContentRequest withEventInput(GoogleCloudDialogflowV2beta1EventInput eventInput) {
         this.eventInput = eventInput;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowV2beta1AnalyzeContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageSendTime")
     public String messageSendTime;
+
     public GoogleCloudDialogflowV2beta1AnalyzeContentRequest withMessageSendTime(String messageSendTime) {
         this.messageSendTime = messageSendTime;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDialogflowV2beta1AnalyzeContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryParams")
     public GoogleCloudDialogflowV2beta1QueryParameters queryParams;
+
     public GoogleCloudDialogflowV2beta1AnalyzeContentRequest withQueryParams(GoogleCloudDialogflowV2beta1QueryParameters queryParams) {
         this.queryParams = queryParams;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDialogflowV2beta1AnalyzeContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replyAudioConfig")
     public GoogleCloudDialogflowV2beta1OutputAudioConfig replyAudioConfig;
+
     public GoogleCloudDialogflowV2beta1AnalyzeContentRequest withReplyAudioConfig(GoogleCloudDialogflowV2beta1OutputAudioConfig replyAudioConfig) {
         this.replyAudioConfig = replyAudioConfig;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDialogflowV2beta1AnalyzeContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GoogleCloudDialogflowV2beta1AnalyzeContentRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -117,9 +126,11 @@ public class GoogleCloudDialogflowV2beta1AnalyzeContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textInput")
     public GoogleCloudDialogflowV2beta1TextInput textInput;
+
     public GoogleCloudDialogflowV2beta1AnalyzeContentRequest withTextInput(GoogleCloudDialogflowV2beta1TextInput textInput) {
         this.textInput = textInput;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1AnalyzeContentRequest(){}
 }

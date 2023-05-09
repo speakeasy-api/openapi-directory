@@ -15,9 +15,11 @@ public class ExportLensOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensJSON")
     public String lensJSON;
+
     public ExportLensOutput withLensJSON(String lensJSON) {
         this.lensJSON = lensJSON;
         return this;
     }
     
+    public ExportLensOutput(){}
 }

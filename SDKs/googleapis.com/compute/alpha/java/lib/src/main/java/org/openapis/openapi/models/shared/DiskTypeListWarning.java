@@ -18,6 +18,7 @@ public class DiskTypeListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public DiskTypeListWarningCodeEnum code;
+
     public DiskTypeListWarning withCode(DiskTypeListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class DiskTypeListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public DiskTypeListWarningData[] data;
+
     public DiskTypeListWarning withData(DiskTypeListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class DiskTypeListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public DiskTypeListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DiskTypeListWarning(){}
 }

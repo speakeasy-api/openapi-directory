@@ -18,6 +18,7 @@ public class UsableSubnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalIpv6Prefix")
     public String externalIpv6Prefix;
+
     public UsableSubnetwork withExternalIpv6Prefix(String externalIpv6Prefix) {
         this.externalIpv6Prefix = externalIpv6Prefix;
         return this;
@@ -29,6 +30,7 @@ public class UsableSubnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalIpv6Prefix")
     public String internalIpv6Prefix;
+
     public UsableSubnetwork withInternalIpv6Prefix(String internalIpv6Prefix) {
         this.internalIpv6Prefix = internalIpv6Prefix;
         return this;
@@ -40,6 +42,7 @@ public class UsableSubnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipCidrRange")
     public String ipCidrRange;
+
     public UsableSubnetwork withIpCidrRange(String ipCidrRange) {
         this.ipCidrRange = ipCidrRange;
         return this;
@@ -51,6 +54,7 @@ public class UsableSubnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv6AccessType")
     public UsableSubnetworkIpv6AccessTypeEnum ipv6AccessType;
+
     public UsableSubnetwork withIpv6AccessType(UsableSubnetworkIpv6AccessTypeEnum ipv6AccessType) {
         this.ipv6AccessType = ipv6AccessType;
         return this;
@@ -62,6 +66,7 @@ public class UsableSubnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public UsableSubnetwork withNetwork(String network) {
         this.network = network;
         return this;
@@ -73,6 +78,7 @@ public class UsableSubnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purpose")
     public UsableSubnetworkPurposeEnum purpose;
+
     public UsableSubnetwork withPurpose(UsableSubnetworkPurposeEnum purpose) {
         this.purpose = purpose;
         return this;
@@ -84,6 +90,7 @@ public class UsableSubnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public UsableSubnetworkRoleEnum role;
+
     public UsableSubnetwork withRole(UsableSubnetworkRoleEnum role) {
         this.role = role;
         return this;
@@ -95,6 +102,7 @@ public class UsableSubnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondaryIpRanges")
     public UsableSubnetworkSecondaryRange[] secondaryIpRanges;
+
     public UsableSubnetwork withSecondaryIpRanges(UsableSubnetworkSecondaryRange[] secondaryIpRanges) {
         this.secondaryIpRanges = secondaryIpRanges;
         return this;
@@ -106,6 +114,7 @@ public class UsableSubnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackType")
     public UsableSubnetworkStackTypeEnum stackType;
+
     public UsableSubnetwork withStackType(UsableSubnetworkStackTypeEnum stackType) {
         this.stackType = stackType;
         return this;
@@ -117,9 +126,11 @@ public class UsableSubnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public UsableSubnetwork withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
     }
     
+    public UsableSubnetwork(){}
 }

@@ -18,9 +18,11 @@ public class Social {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter")
     public Twitter twitter;
+
     public Social withTwitter(Twitter twitter) {
         this.twitter = twitter;
         return this;
     }
     
+    public Social(){}
 }

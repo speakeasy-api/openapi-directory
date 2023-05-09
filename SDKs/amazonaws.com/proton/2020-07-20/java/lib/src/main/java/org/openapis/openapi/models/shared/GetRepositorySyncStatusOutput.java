@@ -15,9 +15,11 @@ public class GetRepositorySyncStatusOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestSync")
     public RepositorySyncAttempt latestSync;
+
     public GetRepositorySyncStatusOutput withLatestSync(RepositorySyncAttempt latestSync) {
         this.latestSync = latestSync;
         return this;
     }
     
+    public GetRepositorySyncStatusOutput(){}
 }

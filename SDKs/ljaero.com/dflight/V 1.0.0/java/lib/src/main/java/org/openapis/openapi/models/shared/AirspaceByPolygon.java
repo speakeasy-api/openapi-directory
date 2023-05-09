@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AirspaceByPolygon {
     @JsonProperty("asptypes")
     public String[] asptypes;
+
     public AirspaceByPolygon withAsptypes(String[] asptypes) {
         this.asptypes = asptypes;
         return this;
@@ -19,9 +20,14 @@ public class AirspaceByPolygon {
     
     @JsonProperty("poly")
     public java.util.Map<String, Object> poly;
+
     public AirspaceByPolygon withPoly(java.util.Map<String, Object> poly) {
         this.poly = poly;
         return this;
     }
     
+    public AirspaceByPolygon(@JsonProperty("asptypes") String[] asptypes, @JsonProperty("poly") java.util.Map<String, Object> poly) {
+        this.asptypes = asptypes;
+        this.poly = poly;
+  }
 }

@@ -12,6 +12,7 @@ public class ListResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListResourcesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListResourcesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListResourcesRequest {
     
     @JsonProperty("projectId")
     public String projectId;
+
     public ListResourcesRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public ListResourcesRequest(@JsonProperty("projectId") String projectId) {
+        this.projectId = projectId;
+  }
 }

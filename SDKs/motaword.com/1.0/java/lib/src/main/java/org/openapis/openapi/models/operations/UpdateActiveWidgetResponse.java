@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateActiveWidgetResponse {
@@ -12,6 +13,7 @@ public class UpdateActiveWidgetResponse {
      */
     
     public org.openapis.openapi.models.shared.ActiveWidget activeWidget;
+
     public UpdateActiveWidgetResponse withActiveWidget(org.openapis.openapi.models.shared.ActiveWidget activeWidget) {
         this.activeWidget = activeWidget;
         return this;
@@ -19,6 +21,7 @@ public class UpdateActiveWidgetResponse {
     
     
     public String contentType;
+
     public UpdateActiveWidgetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateActiveWidgetResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public UpdateActiveWidgetResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class UpdateActiveWidgetResponse {
     
     
     public Integer statusCode;
+
     public UpdateActiveWidgetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class UpdateActiveWidgetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateActiveWidgetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateActiveWidgetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

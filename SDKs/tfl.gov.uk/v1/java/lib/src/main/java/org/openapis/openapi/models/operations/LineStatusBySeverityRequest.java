@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineStatusBySeverityRequest {
@@ -12,9 +13,13 @@ public class LineStatusBySeverityRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=severity")
     public Integer severity;
+
     public LineStatusBySeverityRequest withSeverity(Integer severity) {
         this.severity = severity;
         return this;
     }
     
+    public LineStatusBySeverityRequest(@JsonProperty("severity") Integer severity) {
+        this.severity = severity;
+  }
 }

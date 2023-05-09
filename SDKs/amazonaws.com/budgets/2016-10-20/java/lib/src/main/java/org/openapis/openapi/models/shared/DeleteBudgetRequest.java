@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteBudgetRequest {
     @JsonProperty("AccountId")
     public String accountId;
+
     public DeleteBudgetRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,9 +20,14 @@ public class DeleteBudgetRequest {
     
     @JsonProperty("BudgetName")
     public String budgetName;
+
     public DeleteBudgetRequest withBudgetName(String budgetName) {
         this.budgetName = budgetName;
         return this;
     }
     
+    public DeleteBudgetRequest(@JsonProperty("AccountId") String accountId, @JsonProperty("BudgetName") String budgetName) {
+        this.accountId = accountId;
+        this.budgetName = budgetName;
+  }
 }

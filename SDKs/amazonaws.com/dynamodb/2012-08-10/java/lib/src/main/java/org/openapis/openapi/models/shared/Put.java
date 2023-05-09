@@ -15,6 +15,7 @@ public class Put {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConditionExpression")
     public String conditionExpression;
+
     public Put withConditionExpression(String conditionExpression) {
         this.conditionExpression = conditionExpression;
         return this;
@@ -23,6 +24,7 @@ public class Put {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpressionAttributeNames")
     public java.util.Map<String, String> expressionAttributeNames;
+
     public Put withExpressionAttributeNames(java.util.Map<String, String> expressionAttributeNames) {
         this.expressionAttributeNames = expressionAttributeNames;
         return this;
@@ -31,6 +33,7 @@ public class Put {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpressionAttributeValues")
     public java.util.Map<String, AttributeValue> expressionAttributeValues;
+
     public Put withExpressionAttributeValues(java.util.Map<String, AttributeValue> expressionAttributeValues) {
         this.expressionAttributeValues = expressionAttributeValues;
         return this;
@@ -38,6 +41,7 @@ public class Put {
     
     @JsonProperty("Item")
     public java.util.Map<String, AttributeValue> item;
+
     public Put withItem(java.util.Map<String, AttributeValue> item) {
         this.item = item;
         return this;
@@ -46,6 +50,7 @@ public class Put {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnValuesOnConditionCheckFailure")
     public ReturnValuesOnConditionCheckFailureEnum returnValuesOnConditionCheckFailure;
+
     public Put withReturnValuesOnConditionCheckFailure(ReturnValuesOnConditionCheckFailureEnum returnValuesOnConditionCheckFailure) {
         this.returnValuesOnConditionCheckFailure = returnValuesOnConditionCheckFailure;
         return this;
@@ -53,9 +58,14 @@ public class Put {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public Put withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public Put(@JsonProperty("Item") java.util.Map<String, AttributeValue> item, @JsonProperty("TableName") String tableName) {
+        this.item = item;
+        this.tableName = tableName;
+  }
 }

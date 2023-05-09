@@ -18,6 +18,7 @@ public class InterconnectDiagnosticsARPEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public InterconnectDiagnosticsARPEntry withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -29,9 +30,11 @@ public class InterconnectDiagnosticsARPEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("macAddress")
     public String macAddress;
+
     public InterconnectDiagnosticsARPEntry withMacAddress(String macAddress) {
         this.macAddress = macAddress;
         return this;
     }
     
+    public InterconnectDiagnosticsARPEntry(){}
 }

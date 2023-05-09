@@ -15,6 +15,7 @@ public class UpdateEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public UpdateEndpointResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class UpdateEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointId")
     public String endpointId;
+
     public UpdateEndpointResponse withEndpointId(String endpointId) {
         this.endpointId = endpointId;
         return this;
@@ -31,6 +33,7 @@ public class UpdateEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointUrl")
     public String endpointUrl;
+
     public UpdateEndpointResponse withEndpointUrl(String endpointUrl) {
         this.endpointUrl = endpointUrl;
         return this;
@@ -39,6 +42,7 @@ public class UpdateEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBuses")
     public EndpointEventBus[] eventBuses;
+
     public UpdateEndpointResponse withEventBuses(EndpointEventBus[] eventBuses) {
         this.eventBuses = eventBuses;
         return this;
@@ -47,6 +51,7 @@ public class UpdateEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateEndpointResponse withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +60,7 @@ public class UpdateEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationConfig")
     public ReplicationConfig replicationConfig;
+
     public UpdateEndpointResponse withReplicationConfig(ReplicationConfig replicationConfig) {
         this.replicationConfig = replicationConfig;
         return this;
@@ -63,6 +69,7 @@ public class UpdateEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public UpdateEndpointResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -71,6 +78,7 @@ public class UpdateEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoutingConfig")
     public RoutingConfig routingConfig;
+
     public UpdateEndpointResponse withRoutingConfig(RoutingConfig routingConfig) {
         this.routingConfig = routingConfig;
         return this;
@@ -79,9 +87,11 @@ public class UpdateEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public EndpointStateEnum state;
+
     public UpdateEndpointResponse withState(EndpointStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public UpdateEndpointResponse(){}
 }

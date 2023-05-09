@@ -18,6 +18,7 @@ public class PresentationParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backgroundColor")
     public String backgroundColor;
+
     public PresentationParams withBackgroundColor(String backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
@@ -29,6 +30,7 @@ public class PresentationParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colorSpace")
     public PresentationParamsColorSpaceEnum colorSpace;
+
     public PresentationParams withColorSpace(PresentationParamsColorSpaceEnum colorSpace) {
         this.colorSpace = colorSpace;
         return this;
@@ -40,9 +42,11 @@ public class PresentationParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orientingRotation")
     public Quaternion orientingRotation;
+
     public PresentationParams withOrientingRotation(Quaternion orientingRotation) {
         this.orientingRotation = orientingRotation;
         return this;
     }
     
+    public PresentationParams(){}
 }

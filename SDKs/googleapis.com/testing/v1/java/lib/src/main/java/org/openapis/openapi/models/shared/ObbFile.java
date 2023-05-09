@@ -18,6 +18,7 @@ public class ObbFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("obb")
     public FileReference obb;
+
     public ObbFile withObb(FileReference obb) {
         this.obb = obb;
         return this;
@@ -29,9 +30,11 @@ public class ObbFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("obbFileName")
     public String obbFileName;
+
     public ObbFile withObbFileName(String obbFileName) {
         this.obbFileName = obbFileName;
         return this;
     }
     
+    public ObbFile(){}
 }

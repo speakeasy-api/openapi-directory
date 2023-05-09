@@ -20,6 +20,7 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Database withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class Database {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Database withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public Database withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -46,6 +49,7 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public Database withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -56,6 +60,7 @@ public class Database {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public Database withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -64,9 +69,11 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableCount")
     public Long tableCount;
+
     public Database withTableCount(Long tableCount) {
         this.tableCount = tableCount;
         return this;
     }
     
+    public Database(){}
 }

@@ -62,13 +62,11 @@ public class Git {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GitCreateBlobResponse res = new org.openapis.openapi.models.operations.GitCreateBlobResponse() {{
+        org.openapis.openapi.models.operations.GitCreateBlobResponse res = new org.openapis.openapi.models.operations.GitCreateBlobResponse(contentType, httpRes.statusCode()) {{
             shortBlob = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -154,13 +152,11 @@ public class Git {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GitCreateCommitResponse res = new org.openapis.openapi.models.operations.GitCreateCommitResponse() {{
+        org.openapis.openapi.models.operations.GitCreateCommitResponse res = new org.openapis.openapi.models.operations.GitCreateCommitResponse(contentType, httpRes.statusCode()) {{
             gitCommit = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -217,12 +213,10 @@ public class Git {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GitCreateRefResponse res = new org.openapis.openapi.models.operations.GitCreateRefResponse() {{
+        org.openapis.openapi.models.operations.GitCreateRefResponse res = new org.openapis.openapi.models.operations.GitCreateRefResponse(contentType, httpRes.statusCode()) {{
             gitRef = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -301,12 +295,10 @@ public class Git {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GitCreateTagResponse res = new org.openapis.openapi.models.operations.GitCreateTagResponse() {{
+        org.openapis.openapi.models.operations.GitCreateTagResponse res = new org.openapis.openapi.models.operations.GitCreateTagResponse(contentType, httpRes.statusCode()) {{
             gitTag = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -360,13 +352,11 @@ public class Git {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GitCreateTreeResponse res = new org.openapis.openapi.models.operations.GitCreateTreeResponse() {{
+        org.openapis.openapi.models.operations.GitCreateTreeResponse res = new org.openapis.openapi.models.operations.GitCreateTreeResponse(contentType, httpRes.statusCode()) {{
             gitTree = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -417,11 +407,9 @@ public class Git {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GitDeleteRefResponse res = new org.openapis.openapi.models.operations.GitDeleteRefResponse() {{
+        org.openapis.openapi.models.operations.GitDeleteRefResponse res = new org.openapis.openapi.models.operations.GitDeleteRefResponse(contentType, httpRes.statusCode()) {{
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -461,13 +449,11 @@ public class Git {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GitGetBlobResponse res = new org.openapis.openapi.models.operations.GitGetBlobResponse() {{
+        org.openapis.openapi.models.operations.GitGetBlobResponse res = new org.openapis.openapi.models.operations.GitGetBlobResponse(contentType, httpRes.statusCode()) {{
             blob = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -546,12 +532,10 @@ public class Git {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GitGetCommitResponse res = new org.openapis.openapi.models.operations.GitGetCommitResponse() {{
+        org.openapis.openapi.models.operations.GitGetCommitResponse res = new org.openapis.openapi.models.operations.GitGetCommitResponse(contentType, httpRes.statusCode()) {{
             gitCommit = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -596,12 +580,10 @@ public class Git {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GitGetRefResponse res = new org.openapis.openapi.models.operations.GitGetRefResponse() {{
+        org.openapis.openapi.models.operations.GitGetRefResponse res = new org.openapis.openapi.models.operations.GitGetRefResponse(contentType, httpRes.statusCode()) {{
             gitRef = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -671,12 +653,10 @@ public class Git {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GitGetTagResponse res = new org.openapis.openapi.models.operations.GitGetTagResponse() {{
+        org.openapis.openapi.models.operations.GitGetTagResponse res = new org.openapis.openapi.models.operations.GitGetTagResponse(contentType, httpRes.statusCode()) {{
             gitTag = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -730,13 +710,11 @@ public class Git {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GitGetTreeResponse res = new org.openapis.openapi.models.operations.GitGetTreeResponse() {{
+        org.openapis.openapi.models.operations.GitGetTreeResponse res = new org.openapis.openapi.models.operations.GitGetTreeResponse(contentType, httpRes.statusCode()) {{
             gitTree = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -792,11 +770,9 @@ public class Git {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GitListMatchingRefsResponse res = new org.openapis.openapi.models.operations.GitListMatchingRefsResponse() {{
+        org.openapis.openapi.models.operations.GitListMatchingRefsResponse res = new org.openapis.openapi.models.operations.GitListMatchingRefsResponse(contentType, httpRes.statusCode()) {{
             gitRefs = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -838,12 +814,10 @@ public class Git {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GitUpdateRefResponse res = new org.openapis.openapi.models.operations.GitUpdateRefResponse() {{
+        org.openapis.openapi.models.operations.GitUpdateRefResponse res = new org.openapis.openapi.models.operations.GitUpdateRefResponse(contentType, httpRes.statusCode()) {{
             gitRef = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

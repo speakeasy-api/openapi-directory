@@ -18,6 +18,7 @@ public class BiddingFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("biddingFunction")
     public String biddingFunction;
+
     public BiddingFunction withBiddingFunction(String biddingFunction) {
         this.biddingFunction = biddingFunction;
         return this;
@@ -29,6 +30,7 @@ public class BiddingFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BiddingFunction withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class BiddingFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public BiddingFunctionStateEnum state;
+
     public BiddingFunction withState(BiddingFunctionStateEnum state) {
         this.state = state;
         return this;
@@ -51,9 +54,11 @@ public class BiddingFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public BiddingFunctionTypeEnum type;
+
     public BiddingFunction withType(BiddingFunctionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public BiddingFunction(){}
 }

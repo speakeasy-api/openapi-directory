@@ -18,6 +18,7 @@ public class MasterAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientCertificate")
     public String clientCertificate;
+
     public MasterAuth withClientCertificate(String clientCertificate) {
         this.clientCertificate = clientCertificate;
         return this;
@@ -29,6 +30,7 @@ public class MasterAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientCertificateConfig")
     public ClientCertificateConfig clientCertificateConfig;
+
     public MasterAuth withClientCertificateConfig(ClientCertificateConfig clientCertificateConfig) {
         this.clientCertificateConfig = clientCertificateConfig;
         return this;
@@ -40,6 +42,7 @@ public class MasterAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientKey")
     public String clientKey;
+
     public MasterAuth withClientKey(String clientKey) {
         this.clientKey = clientKey;
         return this;
@@ -48,6 +51,7 @@ public class MasterAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterCaCertificate")
     public String clusterCaCertificate;
+
     public MasterAuth withClusterCaCertificate(String clusterCaCertificate) {
         this.clusterCaCertificate = clusterCaCertificate;
         return this;
@@ -59,6 +63,7 @@ public class MasterAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public MasterAuth withPassword(String password) {
         this.password = password;
         return this;
@@ -70,9 +75,11 @@ public class MasterAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public MasterAuth withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public MasterAuth(){}
 }

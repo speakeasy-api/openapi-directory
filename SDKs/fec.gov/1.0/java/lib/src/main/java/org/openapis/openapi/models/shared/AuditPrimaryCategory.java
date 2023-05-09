@@ -12,6 +12,7 @@ public class AuditPrimaryCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_category_id")
     public String primaryCategoryId;
+
     public AuditPrimaryCategory withPrimaryCategoryId(String primaryCategoryId) {
         this.primaryCategoryId = primaryCategoryId;
         return this;
@@ -20,9 +21,11 @@ public class AuditPrimaryCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_category_name")
     public String primaryCategoryName;
+
     public AuditPrimaryCategory withPrimaryCategoryName(String primaryCategoryName) {
         this.primaryCategoryName = primaryCategoryName;
         return this;
     }
     
+    public AuditPrimaryCategory(){}
 }

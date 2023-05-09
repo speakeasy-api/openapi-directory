@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AggregatedGetDatapointsSummaryRequest {
@@ -12,6 +13,7 @@ public class AggregatedGetDatapointsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=favourite")
     public Boolean favourite;
+
     public AggregatedGetDatapointsSummaryRequest withFavourite(Boolean favourite) {
         this.favourite = favourite;
         return this;
@@ -22,6 +24,7 @@ public class AggregatedGetDatapointsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
     public String fromDay;
+
     public AggregatedGetDatapointsSummaryRequest withFromDay(String fromDay) {
         this.fromDay = fromDay;
         return this;
@@ -32,6 +35,7 @@ public class AggregatedGetDatapointsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupId")
     public Long groupId;
+
     public AggregatedGetDatapointsSummaryRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -42,6 +46,7 @@ public class AggregatedGetDatapointsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public AggregatedGetDatapointsSummaryRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -52,6 +57,7 @@ public class AggregatedGetDatapointsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public AggregatedGetDatapointsSummaryRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -62,6 +68,7 @@ public class AggregatedGetDatapointsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
     public String sortBy;
+
     public AggregatedGetDatapointsSummaryRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -72,6 +79,7 @@ public class AggregatedGetDatapointsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortDirection")
     public AggregatedGetDatapointsSummarySortDirectionEnum sortDirection;
+
     public AggregatedGetDatapointsSummaryRequest withSortDirection(AggregatedGetDatapointsSummarySortDirectionEnum sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -82,6 +90,7 @@ public class AggregatedGetDatapointsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public AggregatedGetDatapointsSummaryStatusEnum status;
+
     public AggregatedGetDatapointsSummaryRequest withStatus(AggregatedGetDatapointsSummaryStatusEnum status) {
         this.status = status;
         return this;
@@ -92,6 +101,7 @@ public class AggregatedGetDatapointsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
     public String tag;
+
     public AggregatedGetDatapointsSummaryRequest withTag(String tag) {
         this.tag = tag;
         return this;
@@ -102,6 +112,7 @@ public class AggregatedGetDatapointsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
     public String textSearch;
+
     public AggregatedGetDatapointsSummaryRequest withTextSearch(String textSearch) {
         this.textSearch = textSearch;
         return this;
@@ -112,6 +123,7 @@ public class AggregatedGetDatapointsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
     public AggregatedGetDatapointsSummaryTimeFrameEnum timeFrame;
+
     public AggregatedGetDatapointsSummaryRequest withTimeFrame(AggregatedGetDatapointsSummaryTimeFrameEnum timeFrame) {
         this.timeFrame = timeFrame;
         return this;
@@ -122,6 +134,7 @@ public class AggregatedGetDatapointsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
     public String toDay;
+
     public AggregatedGetDatapointsSummaryRequest withToDay(String toDay) {
         this.toDay = toDay;
         return this;
@@ -132,9 +145,14 @@ public class AggregatedGetDatapointsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public AggregatedGetDatapointsSummaryTypeEnum type;
+
     public AggregatedGetDatapointsSummaryRequest withType(AggregatedGetDatapointsSummaryTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AggregatedGetDatapointsSummaryRequest(@JsonProperty("timeFrame") AggregatedGetDatapointsSummaryTimeFrameEnum timeFrame, @JsonProperty("type") AggregatedGetDatapointsSummaryTypeEnum type) {
+        this.timeFrame = timeFrame;
+        this.type = type;
+  }
 }

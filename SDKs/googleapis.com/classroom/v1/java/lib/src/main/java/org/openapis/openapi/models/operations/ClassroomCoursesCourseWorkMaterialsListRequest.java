@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClassroomCoursesCourseWorkMaterialsListRequest {
@@ -12,6 +13,7 @@ public class ClassroomCoursesCourseWorkMaterialsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ClassroomCoursesCourseWorkMaterialsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ClassroomCoursesCourseWorkMaterialsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ClassroomCoursesCourseWorkMaterialsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ClassroomCoursesCourseWorkMaterialsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ClassroomCoursesCourseWorkMaterialsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ClassroomCoursesCourseWorkMaterialsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ClassroomCoursesCourseWorkMaterialsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ClassroomCoursesCourseWorkMaterialsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=courseId")
     public String courseId;
+
     public ClassroomCoursesCourseWorkMaterialsListRequest withCourseId(String courseId) {
         this.courseId = courseId;
         return this;
@@ -62,6 +68,7 @@ public class ClassroomCoursesCourseWorkMaterialsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=courseWorkMaterialStates")
     public ClassroomCoursesCourseWorkMaterialsListCourseWorkMaterialStatesEnum[] courseWorkMaterialStates;
+
     public ClassroomCoursesCourseWorkMaterialsListRequest withCourseWorkMaterialStates(ClassroomCoursesCourseWorkMaterialsListCourseWorkMaterialStatesEnum[] courseWorkMaterialStates) {
         this.courseWorkMaterialStates = courseWorkMaterialStates;
         return this;
@@ -72,6 +79,7 @@ public class ClassroomCoursesCourseWorkMaterialsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ClassroomCoursesCourseWorkMaterialsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class ClassroomCoursesCourseWorkMaterialsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ClassroomCoursesCourseWorkMaterialsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class ClassroomCoursesCourseWorkMaterialsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=materialDriveId")
     public String materialDriveId;
+
     public ClassroomCoursesCourseWorkMaterialsListRequest withMaterialDriveId(String materialDriveId) {
         this.materialDriveId = materialDriveId;
         return this;
@@ -102,6 +112,7 @@ public class ClassroomCoursesCourseWorkMaterialsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=materialLink")
     public String materialLink;
+
     public ClassroomCoursesCourseWorkMaterialsListRequest withMaterialLink(String materialLink) {
         this.materialLink = materialLink;
         return this;
@@ -112,6 +123,7 @@ public class ClassroomCoursesCourseWorkMaterialsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ClassroomCoursesCourseWorkMaterialsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -122,6 +134,7 @@ public class ClassroomCoursesCourseWorkMaterialsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public String orderBy;
+
     public ClassroomCoursesCourseWorkMaterialsListRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -132,6 +145,7 @@ public class ClassroomCoursesCourseWorkMaterialsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public ClassroomCoursesCourseWorkMaterialsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -142,6 +156,7 @@ public class ClassroomCoursesCourseWorkMaterialsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public ClassroomCoursesCourseWorkMaterialsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -152,6 +167,7 @@ public class ClassroomCoursesCourseWorkMaterialsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ClassroomCoursesCourseWorkMaterialsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -162,6 +178,7 @@ public class ClassroomCoursesCourseWorkMaterialsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ClassroomCoursesCourseWorkMaterialsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -172,6 +189,7 @@ public class ClassroomCoursesCourseWorkMaterialsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ClassroomCoursesCourseWorkMaterialsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -182,9 +200,13 @@ public class ClassroomCoursesCourseWorkMaterialsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ClassroomCoursesCourseWorkMaterialsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ClassroomCoursesCourseWorkMaterialsListRequest(@JsonProperty("courseId") String courseId) {
+        this.courseId = courseId;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListSinksOutput {
     @JsonProperty("Items")
     public ListSinksItem[] items;
+
     public ListSinksOutput withItems(ListSinksItem[] items) {
         this.items = items;
         return this;
@@ -22,9 +23,13 @@ public class ListSinksOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSinksOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListSinksOutput(@JsonProperty("Items") ListSinksItem[] items) {
+        this.items = items;
+  }
 }

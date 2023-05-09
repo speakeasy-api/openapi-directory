@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProBowlersResponse {
     
     public String contentType;
+
     public ProBowlersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProBowlersResponse {
     
     
     public org.openapis.openapi.models.shared.PlayerInfo[] playerInfos;
+
     public ProBowlersResponse withPlayerInfos(org.openapis.openapi.models.shared.PlayerInfo[] playerInfos) {
         this.playerInfos = playerInfos;
         return this;
@@ -23,6 +26,7 @@ public class ProBowlersResponse {
     
     
     public Integer statusCode;
+
     public ProBowlersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class ProBowlersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProBowlersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ProBowlersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

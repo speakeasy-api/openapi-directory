@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelStatementRequest {
     @JsonProperty("Id")
     public Long id;
+
     public CancelStatementRequest withId(Long id) {
         this.id = id;
         return this;
@@ -19,6 +20,7 @@ public class CancelStatementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestOrigin")
     public String requestOrigin;
+
     public CancelStatementRequest withRequestOrigin(String requestOrigin) {
         this.requestOrigin = requestOrigin;
         return this;
@@ -26,9 +28,14 @@ public class CancelStatementRequest {
     
     @JsonProperty("SessionId")
     public String sessionId;
+
     public CancelStatementRequest withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     
+    public CancelStatementRequest(@JsonProperty("Id") Long id, @JsonProperty("SessionId") String sessionId) {
+        this.id = id;
+        this.sessionId = sessionId;
+  }
 }

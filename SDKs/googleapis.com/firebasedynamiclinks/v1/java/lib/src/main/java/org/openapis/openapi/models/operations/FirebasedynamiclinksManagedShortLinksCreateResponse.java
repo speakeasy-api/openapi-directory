@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirebasedynamiclinksManagedShortLinksCreateResponse {
     
     public String contentType;
+
     public FirebasedynamiclinksManagedShortLinksCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FirebasedynamiclinksManagedShortLinksCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateManagedShortLinkResponse createManagedShortLinkResponse;
+
     public FirebasedynamiclinksManagedShortLinksCreateResponse withCreateManagedShortLinkResponse(org.openapis.openapi.models.shared.CreateManagedShortLinkResponse createManagedShortLinkResponse) {
         this.createManagedShortLinkResponse = createManagedShortLinkResponse;
         return this;
@@ -26,6 +29,7 @@ public class FirebasedynamiclinksManagedShortLinksCreateResponse {
     
     
     public Integer statusCode;
+
     public FirebasedynamiclinksManagedShortLinksCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirebasedynamiclinksManagedShortLinksCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirebasedynamiclinksManagedShortLinksCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirebasedynamiclinksManagedShortLinksCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

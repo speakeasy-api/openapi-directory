@@ -15,6 +15,7 @@ public class PostQuery200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explanation")
     public PostQuery200ApplicationJSONExplanation[] explanation;
+
     public PostQuery200ApplicationJSON withExplanation(PostQuery200ApplicationJSONExplanation[] explanation) {
         this.explanation = explanation;
         return this;
@@ -23,6 +24,7 @@ public class PostQuery200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public PostQuery200ApplicationJSONMetrics metrics;
+
     public PostQuery200ApplicationJSON withMetrics(PostQuery200ApplicationJSONMetrics metrics) {
         this.metrics = metrics;
         return this;
@@ -31,9 +33,11 @@ public class PostQuery200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public PostQuery200ApplicationJSONResult[] result;
+
     public PostQuery200ApplicationJSON withResult(PostQuery200ApplicationJSONResult[] result) {
         this.result = result;
         return this;
     }
     
+    public PostQuery200ApplicationJSON(){}
 }

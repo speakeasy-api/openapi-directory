@@ -15,6 +15,7 @@ public class ModifyInstanceGroupsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public ModifyInstanceGroupsInput withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -23,9 +24,11 @@ public class ModifyInstanceGroupsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceGroups")
     public InstanceGroupModifyConfig[] instanceGroups;
+
     public ModifyInstanceGroupsInput withInstanceGroups(InstanceGroupModifyConfig[] instanceGroups) {
         this.instanceGroups = instanceGroups;
         return this;
     }
     
+    public ModifyInstanceGroupsInput(){}
 }

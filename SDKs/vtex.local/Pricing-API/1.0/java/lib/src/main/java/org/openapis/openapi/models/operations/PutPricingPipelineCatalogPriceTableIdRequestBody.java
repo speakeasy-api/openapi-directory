@@ -12,9 +12,13 @@ public class PutPricingPipelineCatalogPriceTableIdRequestBody {
      */
     @JsonProperty("rules")
     public PutPricingPipelineCatalogPriceTableIdRequestBodyRules[] rules;
+
     public PutPricingPipelineCatalogPriceTableIdRequestBody withRules(PutPricingPipelineCatalogPriceTableIdRequestBodyRules[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public PutPricingPipelineCatalogPriceTableIdRequestBody(@JsonProperty("rules") PutPricingPipelineCatalogPriceTableIdRequestBodyRules[] rules) {
+        this.rules = rules;
+  }
 }

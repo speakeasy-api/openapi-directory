@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateHITTypeRequest {
     @JsonProperty("AssignmentDurationInSeconds")
     public Long assignmentDurationInSeconds;
+
     public CreateHITTypeRequest withAssignmentDurationInSeconds(Long assignmentDurationInSeconds) {
         this.assignmentDurationInSeconds = assignmentDurationInSeconds;
         return this;
@@ -19,6 +20,7 @@ public class CreateHITTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoApprovalDelayInSeconds")
     public Long autoApprovalDelayInSeconds;
+
     public CreateHITTypeRequest withAutoApprovalDelayInSeconds(Long autoApprovalDelayInSeconds) {
         this.autoApprovalDelayInSeconds = autoApprovalDelayInSeconds;
         return this;
@@ -26,6 +28,7 @@ public class CreateHITTypeRequest {
     
     @JsonProperty("Description")
     public String description;
+
     public CreateHITTypeRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -34,6 +37,7 @@ public class CreateHITTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Keywords")
     public String keywords;
+
     public CreateHITTypeRequest withKeywords(String keywords) {
         this.keywords = keywords;
         return this;
@@ -42,6 +46,7 @@ public class CreateHITTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QualificationRequirements")
     public QualificationRequirement[] qualificationRequirements;
+
     public CreateHITTypeRequest withQualificationRequirements(QualificationRequirement[] qualificationRequirements) {
         this.qualificationRequirements = qualificationRequirements;
         return this;
@@ -49,6 +54,7 @@ public class CreateHITTypeRequest {
     
     @JsonProperty("Reward")
     public String reward;
+
     public CreateHITTypeRequest withReward(String reward) {
         this.reward = reward;
         return this;
@@ -56,9 +62,16 @@ public class CreateHITTypeRequest {
     
     @JsonProperty("Title")
     public String title;
+
     public CreateHITTypeRequest withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CreateHITTypeRequest(@JsonProperty("AssignmentDurationInSeconds") Long assignmentDurationInSeconds, @JsonProperty("Description") String description, @JsonProperty("Reward") String reward, @JsonProperty("Title") String title) {
+        this.assignmentDurationInSeconds = assignmentDurationInSeconds;
+        this.description = description;
+        this.reward = reward;
+        this.title = title;
+  }
 }

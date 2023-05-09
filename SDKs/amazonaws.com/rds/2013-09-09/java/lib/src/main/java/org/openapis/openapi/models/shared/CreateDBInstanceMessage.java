@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateDBInstanceMessage {
     
     public Long allocatedStorage;
+
     public CreateDBInstanceMessage withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
         return this;
@@ -16,6 +17,7 @@ public class CreateDBInstanceMessage {
     
     
     public Boolean autoMinorVersionUpgrade;
+
     public CreateDBInstanceMessage withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -23,6 +25,7 @@ public class CreateDBInstanceMessage {
     
     
     public String availabilityZone;
+
     public CreateDBInstanceMessage withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -30,6 +33,7 @@ public class CreateDBInstanceMessage {
     
     
     public Long backupRetentionPeriod;
+
     public CreateDBInstanceMessage withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -37,6 +41,7 @@ public class CreateDBInstanceMessage {
     
     
     public String characterSetName;
+
     public CreateDBInstanceMessage withCharacterSetName(String characterSetName) {
         this.characterSetName = characterSetName;
         return this;
@@ -44,6 +49,7 @@ public class CreateDBInstanceMessage {
     
     
     public String dbInstanceClass;
+
     public CreateDBInstanceMessage withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -51,6 +57,7 @@ public class CreateDBInstanceMessage {
     
     
     public String dbInstanceIdentifier;
+
     public CreateDBInstanceMessage withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -58,6 +65,7 @@ public class CreateDBInstanceMessage {
     
     
     public String dbName;
+
     public CreateDBInstanceMessage withDBName(String dbName) {
         this.dbName = dbName;
         return this;
@@ -65,6 +73,7 @@ public class CreateDBInstanceMessage {
     
     
     public String dbParameterGroupName;
+
     public CreateDBInstanceMessage withDBParameterGroupName(String dbParameterGroupName) {
         this.dbParameterGroupName = dbParameterGroupName;
         return this;
@@ -72,6 +81,7 @@ public class CreateDBInstanceMessage {
     
     
     public String[] dbSecurityGroups;
+
     public CreateDBInstanceMessage withDBSecurityGroups(String[] dbSecurityGroups) {
         this.dbSecurityGroups = dbSecurityGroups;
         return this;
@@ -79,6 +89,7 @@ public class CreateDBInstanceMessage {
     
     
     public String dbSubnetGroupName;
+
     public CreateDBInstanceMessage withDBSubnetGroupName(String dbSubnetGroupName) {
         this.dbSubnetGroupName = dbSubnetGroupName;
         return this;
@@ -86,6 +97,7 @@ public class CreateDBInstanceMessage {
     
     
     public String engine;
+
     public CreateDBInstanceMessage withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -93,6 +105,7 @@ public class CreateDBInstanceMessage {
     
     
     public String engineVersion;
+
     public CreateDBInstanceMessage withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -100,6 +113,7 @@ public class CreateDBInstanceMessage {
     
     
     public Long iops;
+
     public CreateDBInstanceMessage withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -107,6 +121,7 @@ public class CreateDBInstanceMessage {
     
     
     public String licenseModel;
+
     public CreateDBInstanceMessage withLicenseModel(String licenseModel) {
         this.licenseModel = licenseModel;
         return this;
@@ -114,6 +129,7 @@ public class CreateDBInstanceMessage {
     
     
     public String masterUserPassword;
+
     public CreateDBInstanceMessage withMasterUserPassword(String masterUserPassword) {
         this.masterUserPassword = masterUserPassword;
         return this;
@@ -121,6 +137,7 @@ public class CreateDBInstanceMessage {
     
     
     public String masterUsername;
+
     public CreateDBInstanceMessage withMasterUsername(String masterUsername) {
         this.masterUsername = masterUsername;
         return this;
@@ -128,6 +145,7 @@ public class CreateDBInstanceMessage {
     
     
     public Boolean multiAZ;
+
     public CreateDBInstanceMessage withMultiAZ(Boolean multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -135,6 +153,7 @@ public class CreateDBInstanceMessage {
     
     
     public String optionGroupName;
+
     public CreateDBInstanceMessage withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -142,6 +161,7 @@ public class CreateDBInstanceMessage {
     
     
     public Long port;
+
     public CreateDBInstanceMessage withPort(Long port) {
         this.port = port;
         return this;
@@ -149,6 +169,7 @@ public class CreateDBInstanceMessage {
     
     
     public String preferredBackupWindow;
+
     public CreateDBInstanceMessage withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
@@ -156,6 +177,7 @@ public class CreateDBInstanceMessage {
     
     
     public String preferredMaintenanceWindow;
+
     public CreateDBInstanceMessage withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -163,6 +185,7 @@ public class CreateDBInstanceMessage {
     
     
     public Boolean publiclyAccessible;
+
     public CreateDBInstanceMessage withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -170,6 +193,7 @@ public class CreateDBInstanceMessage {
     
     
     public TagList[] tags;
+
     public CreateDBInstanceMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -177,9 +201,18 @@ public class CreateDBInstanceMessage {
     
     
     public String[] vpcSecurityGroupIds;
+
     public CreateDBInstanceMessage withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public CreateDBInstanceMessage(@JsonProperty("AllocatedStorage") Long allocatedStorage, @JsonProperty("DBInstanceClass") String dbInstanceClass, @JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier, @JsonProperty("Engine") String engine, @JsonProperty("MasterUserPassword") String masterUserPassword, @JsonProperty("MasterUsername") String masterUsername) {
+        this.allocatedStorage = allocatedStorage;
+        this.dbInstanceClass = dbInstanceClass;
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+        this.engine = engine;
+        this.masterUserPassword = masterUserPassword;
+        this.masterUsername = masterUsername;
+  }
 }

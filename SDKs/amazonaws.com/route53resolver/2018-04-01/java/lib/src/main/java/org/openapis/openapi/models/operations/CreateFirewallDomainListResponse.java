@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFirewallDomainListResponse {
@@ -12,6 +13,7 @@ public class CreateFirewallDomainListResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateFirewallDomainListResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateFirewallDomainListResponse {
     
     
     public String contentType;
+
     public CreateFirewallDomainListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateFirewallDomainListResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFirewallDomainListResponse createFirewallDomainListResponse;
+
     public CreateFirewallDomainListResponse withCreateFirewallDomainListResponse(org.openapis.openapi.models.shared.CreateFirewallDomainListResponse createFirewallDomainListResponse) {
         this.createFirewallDomainListResponse = createFirewallDomainListResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateFirewallDomainListResponse {
      */
     
     public Object internalServiceErrorException;
+
     public CreateFirewallDomainListResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class CreateFirewallDomainListResponse {
      */
     
     public Object limitExceededException;
+
     public CreateFirewallDomainListResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateFirewallDomainListResponse {
     
     
     public Integer statusCode;
+
     public CreateFirewallDomainListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateFirewallDomainListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFirewallDomainListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateFirewallDomainListResponse {
      */
     
     public Object throttlingException;
+
     public CreateFirewallDomainListResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class CreateFirewallDomainListResponse {
      */
     
     public Object validationException;
+
     public CreateFirewallDomainListResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateFirewallDomainListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

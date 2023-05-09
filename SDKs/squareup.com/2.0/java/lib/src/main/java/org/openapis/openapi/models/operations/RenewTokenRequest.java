@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RenewTokenRequest {
@@ -14,6 +15,7 @@ public class RenewTokenRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RenewTokenRequest renewTokenRequest;
+
     public RenewTokenRequest withRenewTokenRequest(org.openapis.openapi.models.shared.RenewTokenRequest renewTokenRequest) {
         this.renewTokenRequest = renewTokenRequest;
         return this;
@@ -24,9 +26,14 @@ public class RenewTokenRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_id")
     public String clientId;
+
     public RenewTokenRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }
     
+    public RenewTokenRequest(@JsonProperty("RenewTokenRequest") org.openapis.openapi.models.shared.RenewTokenRequest renewTokenRequest, @JsonProperty("client_id") String clientId) {
+        this.renewTokenRequest = renewTokenRequest;
+        this.clientId = clientId;
+  }
 }

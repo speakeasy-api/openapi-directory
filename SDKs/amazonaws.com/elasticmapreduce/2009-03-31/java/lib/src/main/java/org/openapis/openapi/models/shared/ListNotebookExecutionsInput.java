@@ -17,6 +17,7 @@ public class ListNotebookExecutionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EditorId")
     public String editorId;
+
     public ListNotebookExecutionsInput withEditorId(String editorId) {
         this.editorId = editorId;
         return this;
@@ -27,6 +28,7 @@ public class ListNotebookExecutionsInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("From")
     public OffsetDateTime from;
+
     public ListNotebookExecutionsInput withFrom(OffsetDateTime from) {
         this.from = from;
         return this;
@@ -35,6 +37,7 @@ public class ListNotebookExecutionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListNotebookExecutionsInput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -43,6 +46,7 @@ public class ListNotebookExecutionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public NotebookExecutionStatusEnum status;
+
     public ListNotebookExecutionsInput withStatus(NotebookExecutionStatusEnum status) {
         this.status = status;
         return this;
@@ -53,9 +57,11 @@ public class ListNotebookExecutionsInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("To")
     public OffsetDateTime to;
+
     public ListNotebookExecutionsInput withTo(OffsetDateTime to) {
         this.to = to;
         return this;
     }
     
+    public ListNotebookExecutionsInput(){}
 }

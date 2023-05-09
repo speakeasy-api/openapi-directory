@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersIdUserConnectionsIdConnectionAccountsRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PostUsersIdUserConnectionsIdConnectionAccountsRequestBody requestBody;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsRequest withRequestBody(PostUsersIdUserConnectionsIdConnectionAccountsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -23,6 +26,7 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
     public Long idConnection;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsRequest withIdConnection(Long idConnection) {
         this.idConnection = idConnection;
         return this;
@@ -33,9 +37,15 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
     public String idUser;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsRequest withIdUser(String idUser) {
         this.idUser = idUser;
         return this;
     }
     
+    public PostUsersIdUserConnectionsIdConnectionAccountsRequest(@JsonProperty("RequestBody") PostUsersIdUserConnectionsIdConnectionAccountsRequestBody requestBody, @JsonProperty("id_connection") Long idConnection, @JsonProperty("id_user") String idUser) {
+        this.requestBody = requestBody;
+        this.idConnection = idConnection;
+        this.idUser = idUser;
+  }
 }

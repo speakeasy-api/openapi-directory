@@ -18,6 +18,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clearAppsDataParams")
     public ClearAppsDataParams clearAppsDataParams;
+
     public Command withClearAppsDataParams(ClearAppsDataParams clearAppsDataParams) {
         this.clearAppsDataParams = clearAppsDataParams;
         return this;
@@ -29,6 +30,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clearAppsDataStatus")
     public ClearAppsDataStatus clearAppsDataStatus;
+
     public Command withClearAppsDataStatus(ClearAppsDataStatus clearAppsDataStatus) {
         this.clearAppsDataStatus = clearAppsDataStatus;
         return this;
@@ -40,6 +42,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Command withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +54,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public Command withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -62,6 +66,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public CommandErrorCodeEnum errorCode;
+
     public Command withErrorCode(CommandErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -73,6 +78,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newPassword")
     public String newPassword;
+
     public Command withNewPassword(String newPassword) {
         this.newPassword = newPassword;
         return this;
@@ -84,6 +90,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resetPasswordFlags")
     public CommandResetPasswordFlagsEnum[] resetPasswordFlags;
+
     public Command withResetPasswordFlags(CommandResetPasswordFlagsEnum[] resetPasswordFlags) {
         this.resetPasswordFlags = resetPasswordFlags;
         return this;
@@ -95,6 +102,7 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CommandTypeEnum type;
+
     public Command withType(CommandTypeEnum type) {
         this.type = type;
         return this;
@@ -106,9 +114,11 @@ public class Command {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userName")
     public String userName;
+
     public Command withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public Command(){}
 }

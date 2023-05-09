@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApprovalRuleTemplateResponse {
@@ -12,6 +13,7 @@ public class GetApprovalRuleTemplateResponse {
      */
     
     public Object approvalRuleTemplateDoesNotExistException;
+
     public GetApprovalRuleTemplateResponse withApprovalRuleTemplateDoesNotExistException(Object approvalRuleTemplateDoesNotExistException) {
         this.approvalRuleTemplateDoesNotExistException = approvalRuleTemplateDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class GetApprovalRuleTemplateResponse {
      */
     
     public Object approvalRuleTemplateNameRequiredException;
+
     public GetApprovalRuleTemplateResponse withApprovalRuleTemplateNameRequiredException(Object approvalRuleTemplateNameRequiredException) {
         this.approvalRuleTemplateNameRequiredException = approvalRuleTemplateNameRequiredException;
         return this;
@@ -29,6 +32,7 @@ public class GetApprovalRuleTemplateResponse {
     
     
     public String contentType;
+
     public GetApprovalRuleTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetApprovalRuleTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.GetApprovalRuleTemplateOutput getApprovalRuleTemplateOutput;
+
     public GetApprovalRuleTemplateResponse withGetApprovalRuleTemplateOutput(org.openapis.openapi.models.shared.GetApprovalRuleTemplateOutput getApprovalRuleTemplateOutput) {
         this.getApprovalRuleTemplateOutput = getApprovalRuleTemplateOutput;
         return this;
@@ -49,6 +54,7 @@ public class GetApprovalRuleTemplateResponse {
      */
     
     public Object invalidApprovalRuleTemplateNameException;
+
     public GetApprovalRuleTemplateResponse withInvalidApprovalRuleTemplateNameException(Object invalidApprovalRuleTemplateNameException) {
         this.invalidApprovalRuleTemplateNameException = invalidApprovalRuleTemplateNameException;
         return this;
@@ -56,6 +62,7 @@ public class GetApprovalRuleTemplateResponse {
     
     
     public Integer statusCode;
+
     public GetApprovalRuleTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetApprovalRuleTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApprovalRuleTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetApprovalRuleTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

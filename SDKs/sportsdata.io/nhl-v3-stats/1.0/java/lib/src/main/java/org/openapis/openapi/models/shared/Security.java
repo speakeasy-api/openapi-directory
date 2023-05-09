@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class Security {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Ocp-Apim-Subscription-Key")
     public String apiKeyHeader;
+
     public Security withApiKeyHeader(String apiKeyHeader) {
         this.apiKeyHeader = apiKeyHeader;
         return this;
@@ -16,9 +17,11 @@ public class Security {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=key")
     public String apiKeyQuery;
+
     public Security withApiKeyQuery(String apiKeyQuery) {
         this.apiKeyQuery = apiKeyQuery;
         return this;
     }
     
+    public Security(){}
 }

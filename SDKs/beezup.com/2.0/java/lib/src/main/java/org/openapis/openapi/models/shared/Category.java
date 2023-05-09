@@ -18,6 +18,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryId")
     public String categoryId;
+
     public Category withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -28,6 +29,7 @@ public class Category {
      */
     @JsonProperty("categoryPath")
     public String[] categoryPath;
+
     public Category withCategoryPath(String[] categoryPath) {
         this.categoryPath = categoryPath;
         return this;
@@ -38,6 +40,7 @@ public class Category {
      */
     @JsonProperty("selfProductCount")
     public Integer selfProductCount;
+
     public Category withSelfProductCount(Integer selfProductCount) {
         this.selfProductCount = selfProductCount;
         return this;
@@ -48,9 +51,15 @@ public class Category {
      */
     @JsonProperty("totalProductCount")
     public Integer totalProductCount;
+
     public Category withTotalProductCount(Integer totalProductCount) {
         this.totalProductCount = totalProductCount;
         return this;
     }
     
+    public Category(@JsonProperty("categoryPath") String[] categoryPath, @JsonProperty("selfProductCount") Integer selfProductCount, @JsonProperty("totalProductCount") Integer totalProductCount) {
+        this.categoryPath = categoryPath;
+        this.selfProductCount = selfProductCount;
+        this.totalProductCount = totalProductCount;
+  }
 }

@@ -12,6 +12,7 @@ public class UpdateEntitlementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppVisibility")
     public AppVisibilityEnum appVisibility;
+
     public UpdateEntitlementRequest withAppVisibility(AppVisibilityEnum appVisibility) {
         this.appVisibility = appVisibility;
         return this;
@@ -20,6 +21,7 @@ public class UpdateEntitlementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public EntitlementAttribute[] attributes;
+
     public UpdateEntitlementRequest withAttributes(EntitlementAttribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -28,6 +30,7 @@ public class UpdateEntitlementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateEntitlementRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +38,7 @@ public class UpdateEntitlementRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateEntitlementRequest withName(String name) {
         this.name = name;
         return this;
@@ -42,9 +46,14 @@ public class UpdateEntitlementRequest {
     
     @JsonProperty("StackName")
     public String stackName;
+
     public UpdateEntitlementRequest withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public UpdateEntitlementRequest(@JsonProperty("Name") String name, @JsonProperty("StackName") String stackName) {
+        this.name = name;
+        this.stackName = stackName;
+  }
 }

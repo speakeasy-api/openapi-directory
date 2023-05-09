@@ -18,9 +18,11 @@ public class UpdateInstanceMetadataItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public java.util.Map<String, String> items;
+
     public UpdateInstanceMetadataItemsRequest withItems(java.util.Map<String, String> items) {
         this.items = items;
         return this;
     }
     
+    public UpdateInstanceMetadataItemsRequest(){}
 }

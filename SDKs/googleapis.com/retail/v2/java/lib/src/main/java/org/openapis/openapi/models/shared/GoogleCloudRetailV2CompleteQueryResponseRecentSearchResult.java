@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2CompleteQueryResponseRecentSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recentSearch")
     public String recentSearch;
+
     public GoogleCloudRetailV2CompleteQueryResponseRecentSearchResult withRecentSearch(String recentSearch) {
         this.recentSearch = recentSearch;
         return this;
     }
     
+    public GoogleCloudRetailV2CompleteQueryResponseRecentSearchResult(){}
 }

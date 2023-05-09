@@ -15,6 +15,7 @@ public class SubSlotSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public SubSlotSetting withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -23,9 +24,11 @@ public class SubSlotSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotSpecifications")
     public java.util.Map<String, Specifications> slotSpecifications;
+
     public SubSlotSetting withSlotSpecifications(java.util.Map<String, Specifications> slotSpecifications) {
         this.slotSpecifications = slotSpecifications;
         return this;
     }
     
+    public SubSlotSetting(){}
 }

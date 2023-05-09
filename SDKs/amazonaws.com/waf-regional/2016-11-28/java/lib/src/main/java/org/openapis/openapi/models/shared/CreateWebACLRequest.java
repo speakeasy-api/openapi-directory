@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateWebACLRequest {
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public CreateWebACLRequest withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -18,6 +19,7 @@ public class CreateWebACLRequest {
     
     @JsonProperty("DefaultAction")
     public WafAction defaultAction;
+
     public CreateWebACLRequest withDefaultAction(WafAction defaultAction) {
         this.defaultAction = defaultAction;
         return this;
@@ -25,6 +27,7 @@ public class CreateWebACLRequest {
     
     @JsonProperty("MetricName")
     public String metricName;
+
     public CreateWebACLRequest withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -32,6 +35,7 @@ public class CreateWebACLRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateWebACLRequest withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +44,16 @@ public class CreateWebACLRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateWebACLRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateWebACLRequest(@JsonProperty("ChangeToken") String changeToken, @JsonProperty("DefaultAction") WafAction defaultAction, @JsonProperty("MetricName") String metricName, @JsonProperty("Name") String name) {
+        this.changeToken = changeToken;
+        this.defaultAction = defaultAction;
+        this.metricName = metricName;
+        this.name = name;
+  }
 }

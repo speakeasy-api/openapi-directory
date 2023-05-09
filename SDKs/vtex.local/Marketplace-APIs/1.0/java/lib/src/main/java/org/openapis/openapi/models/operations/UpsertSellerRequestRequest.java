@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpsertSellerRequestRequest {
@@ -12,6 +13,7 @@ public class UpsertSellerRequestRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public UpsertSellerRequestRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class UpsertSellerRequestRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public UpsertSellerRequestRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpsertSellerRequestRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpsertSellerRequest upsertSellerRequest;
+
     public UpsertSellerRequestRequest withUpsertSellerRequest(org.openapis.openapi.models.shared.UpsertSellerRequest upsertSellerRequest) {
         this.upsertSellerRequest = upsertSellerRequest;
         return this;
@@ -39,6 +43,7 @@ public class UpsertSellerRequestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public UpsertSellerRequestRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -49,9 +54,17 @@ public class UpsertSellerRequestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
     public String environment;
+
     public UpsertSellerRequestRequest withEnvironment(String environment) {
         this.environment = environment;
         return this;
     }
     
+    public UpsertSellerRequestRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("UpsertSellerRequest") org.openapis.openapi.models.shared.UpsertSellerRequest upsertSellerRequest, @JsonProperty("accountName") String accountName, @JsonProperty("environment") String environment) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.upsertSellerRequest = upsertSellerRequest;
+        this.accountName = accountName;
+        this.environment = environment;
+  }
 }

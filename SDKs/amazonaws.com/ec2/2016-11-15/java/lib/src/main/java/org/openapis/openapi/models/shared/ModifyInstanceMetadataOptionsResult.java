@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyInstanceMetadataOptionsResult {
     
     public String instanceId;
+
     public ModifyInstanceMetadataOptionsResult withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -19,9 +20,11 @@ public class ModifyInstanceMetadataOptionsResult {
     
     
     public ModifyInstanceMetadataOptionsResultInstanceMetadataOptions instanceMetadataOptions;
+
     public ModifyInstanceMetadataOptionsResult withInstanceMetadataOptions(ModifyInstanceMetadataOptionsResultInstanceMetadataOptions instanceMetadataOptions) {
         this.instanceMetadataOptions = instanceMetadataOptions;
         return this;
     }
     
+    public ModifyInstanceMetadataOptionsResult(){}
 }

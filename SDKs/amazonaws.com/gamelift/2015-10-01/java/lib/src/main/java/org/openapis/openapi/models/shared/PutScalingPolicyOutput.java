@@ -15,9 +15,11 @@ public class PutScalingPolicyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PutScalingPolicyOutput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PutScalingPolicyOutput(){}
 }

@@ -15,9 +15,11 @@ public class DeletePricingPlanOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public DeletePricingPlanOutput withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DeletePricingPlanOutput(){}
 }

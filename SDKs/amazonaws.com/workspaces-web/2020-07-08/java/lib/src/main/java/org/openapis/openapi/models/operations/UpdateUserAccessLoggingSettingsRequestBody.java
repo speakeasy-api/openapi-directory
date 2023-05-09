@@ -15,6 +15,7 @@ public class UpdateUserAccessLoggingSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateUserAccessLoggingSettingsRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,9 +27,11 @@ public class UpdateUserAccessLoggingSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kinesisStreamArn")
     public String kinesisStreamArn;
+
     public UpdateUserAccessLoggingSettingsRequestBody withKinesisStreamArn(String kinesisStreamArn) {
         this.kinesisStreamArn = kinesisStreamArn;
         return this;
     }
     
+    public UpdateUserAccessLoggingSettingsRequestBody(){}
 }

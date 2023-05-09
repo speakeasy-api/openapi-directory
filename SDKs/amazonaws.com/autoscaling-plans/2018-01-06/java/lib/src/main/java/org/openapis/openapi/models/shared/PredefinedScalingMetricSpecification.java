@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PredefinedScalingMetricSpecification {
     @JsonProperty("PredefinedScalingMetricType")
     public ScalingMetricTypeEnum predefinedScalingMetricType;
+
     public PredefinedScalingMetricSpecification withPredefinedScalingMetricType(ScalingMetricTypeEnum predefinedScalingMetricType) {
         this.predefinedScalingMetricType = predefinedScalingMetricType;
         return this;
@@ -22,9 +23,13 @@ public class PredefinedScalingMetricSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceLabel")
     public String resourceLabel;
+
     public PredefinedScalingMetricSpecification withResourceLabel(String resourceLabel) {
         this.resourceLabel = resourceLabel;
         return this;
     }
     
+    public PredefinedScalingMetricSpecification(@JsonProperty("PredefinedScalingMetricType") ScalingMetricTypeEnum predefinedScalingMetricType) {
+        this.predefinedScalingMetricType = predefinedScalingMetricType;
+  }
 }

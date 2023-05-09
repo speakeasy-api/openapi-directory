@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopTrainingEntityRecognizerResponse {
     
     public String contentType;
+
     public StopTrainingEntityRecognizerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopTrainingEntityRecognizerResponse {
      */
     
     public Object internalServerException;
+
     public StopTrainingEntityRecognizerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StopTrainingEntityRecognizerResponse {
      */
     
     public Object invalidRequestException;
+
     public StopTrainingEntityRecognizerResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class StopTrainingEntityRecognizerResponse {
     
     
     public Integer statusCode;
+
     public StopTrainingEntityRecognizerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class StopTrainingEntityRecognizerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopTrainingEntityRecognizerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class StopTrainingEntityRecognizerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopTrainingEntityRecognizerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class StopTrainingEntityRecognizerResponse {
      */
     
     public java.util.Map<String, Object> stopTrainingEntityRecognizerResponse;
+
     public StopTrainingEntityRecognizerResponse withStopTrainingEntityRecognizerResponse(java.util.Map<String, Object> stopTrainingEntityRecognizerResponse) {
         this.stopTrainingEntityRecognizerResponse = stopTrainingEntityRecognizerResponse;
         return this;
@@ -73,9 +81,14 @@ public class StopTrainingEntityRecognizerResponse {
      */
     
     public Object tooManyRequestsException;
+
     public StopTrainingEntityRecognizerResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public StopTrainingEntityRecognizerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

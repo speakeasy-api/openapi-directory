@@ -15,6 +15,7 @@ public class RegionListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public RegionListViewModel withCount(Integer count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class RegionListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public RegionViewModel[] data;
+
     public RegionListViewModel withData(RegionViewModel[] data) {
         this.data = data;
         return this;
@@ -31,6 +33,7 @@ public class RegionListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasMore")
     public Boolean hasMore;
+
     public RegionListViewModel withHasMore(Boolean hasMore) {
         this.hasMore = hasMore;
         return this;
@@ -39,6 +42,7 @@ public class RegionListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public RegionListViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -47,6 +51,7 @@ public class RegionListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Integer total;
+
     public RegionListViewModel withTotal(Integer total) {
         this.total = total;
         return this;
@@ -55,9 +60,11 @@ public class RegionListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public RegionListViewModel withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public RegionListViewModel(){}
 }

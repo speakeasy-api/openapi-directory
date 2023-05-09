@@ -15,6 +15,7 @@ public class ListVariantImportJobsRequestBodyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public org.openapis.openapi.models.shared.JobStatusEnum status;
+
     public ListVariantImportJobsRequestBodyFilter withStatus(org.openapis.openapi.models.shared.JobStatusEnum status) {
         this.status = status;
         return this;
@@ -23,9 +24,11 @@ public class ListVariantImportJobsRequestBodyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeName")
     public String storeName;
+
     public ListVariantImportJobsRequestBodyFilter withStoreName(String storeName) {
         this.storeName = storeName;
         return this;
     }
     
+    public ListVariantImportJobsRequestBodyFilter(){}
 }

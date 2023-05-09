@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClouddebuggerDebuggerDebuggeesBreakpointsGetResponse {
     
     public String contentType;
+
     public ClouddebuggerDebuggerDebuggeesBreakpointsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ClouddebuggerDebuggerDebuggeesBreakpointsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBreakpointResponse getBreakpointResponse;
+
     public ClouddebuggerDebuggerDebuggeesBreakpointsGetResponse withGetBreakpointResponse(org.openapis.openapi.models.shared.GetBreakpointResponse getBreakpointResponse) {
         this.getBreakpointResponse = getBreakpointResponse;
         return this;
@@ -26,6 +29,7 @@ public class ClouddebuggerDebuggerDebuggeesBreakpointsGetResponse {
     
     
     public Integer statusCode;
+
     public ClouddebuggerDebuggerDebuggeesBreakpointsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ClouddebuggerDebuggerDebuggeesBreakpointsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClouddebuggerDebuggerDebuggeesBreakpointsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ClouddebuggerDebuggerDebuggeesBreakpointsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

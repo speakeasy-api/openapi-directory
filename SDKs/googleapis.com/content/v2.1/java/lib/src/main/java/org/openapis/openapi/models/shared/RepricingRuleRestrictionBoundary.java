@@ -18,6 +18,7 @@ public class RepricingRuleRestrictionBoundary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentageDelta")
     public Integer percentageDelta;
+
     public RepricingRuleRestrictionBoundary withPercentageDelta(Integer percentageDelta) {
         this.percentageDelta = percentageDelta;
         return this;
@@ -29,9 +30,11 @@ public class RepricingRuleRestrictionBoundary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceDelta")
     public String priceDelta;
+
     public RepricingRuleRestrictionBoundary withPriceDelta(String priceDelta) {
         this.priceDelta = priceDelta;
         return this;
     }
     
+    public RepricingRuleRestrictionBoundary(){}
 }

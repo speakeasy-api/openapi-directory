@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAccessTokenResponse {
@@ -12,6 +13,7 @@ public class DeleteAccessTokenResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteAccessTokenResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteAccessTokenResponse {
      */
     
     public Object conflictException;
+
     public DeleteAccessTokenResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAccessTokenResponse {
     
     
     public String contentType;
+
     public DeleteAccessTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAccessTokenResponse {
      */
     
     public java.util.Map<String, Object> deleteAccessTokenResponse;
+
     public DeleteAccessTokenResponse withDeleteAccessTokenResponse(java.util.Map<String, Object> deleteAccessTokenResponse) {
         this.deleteAccessTokenResponse = deleteAccessTokenResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAccessTokenResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAccessTokenResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteAccessTokenResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DeleteAccessTokenResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteAccessTokenResponse {
     
     
     public Integer statusCode;
+
     public DeleteAccessTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteAccessTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAccessTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteAccessTokenResponse {
      */
     
     public Object throttlingException;
+
     public DeleteAccessTokenResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteAccessTokenResponse {
      */
     
     public Object validationException;
+
     public DeleteAccessTokenResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteAccessTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePotRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdatePotUpdateRequestBodyForPot requestBody;
+
     public UpdatePotRequest withRequestBody(UpdatePotUpdateRequestBodyForPot requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class UpdatePotRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pot_id")
     public String potId;
+
     public UpdatePotRequest withPotId(String potId) {
         this.potId = potId;
         return this;
@@ -29,9 +32,15 @@ public class UpdatePotRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public UpdatePotRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public UpdatePotRequest(@JsonProperty("RequestBody") UpdatePotUpdateRequestBodyForPot requestBody, @JsonProperty("pot_id") String potId, @JsonProperty("x-api-key") String xApiKey) {
+        this.requestBody = requestBody;
+        this.potId = potId;
+        this.xApiKey = xApiKey;
+  }
 }

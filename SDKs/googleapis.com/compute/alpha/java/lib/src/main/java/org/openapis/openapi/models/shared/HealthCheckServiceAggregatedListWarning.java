@@ -18,6 +18,7 @@ public class HealthCheckServiceAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public HealthCheckServiceAggregatedListWarningCodeEnum code;
+
     public HealthCheckServiceAggregatedListWarning withCode(HealthCheckServiceAggregatedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class HealthCheckServiceAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public HealthCheckServiceAggregatedListWarningData[] data;
+
     public HealthCheckServiceAggregatedListWarning withData(HealthCheckServiceAggregatedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class HealthCheckServiceAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public HealthCheckServiceAggregatedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public HealthCheckServiceAggregatedListWarning(){}
 }

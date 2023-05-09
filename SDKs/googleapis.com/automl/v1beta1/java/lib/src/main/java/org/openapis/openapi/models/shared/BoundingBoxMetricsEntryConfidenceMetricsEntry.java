@@ -18,6 +18,7 @@ public class BoundingBoxMetricsEntryConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidenceThreshold")
     public Float confidenceThreshold;
+
     public BoundingBoxMetricsEntryConfidenceMetricsEntry withConfidenceThreshold(Float confidenceThreshold) {
         this.confidenceThreshold = confidenceThreshold;
         return this;
@@ -29,6 +30,7 @@ public class BoundingBoxMetricsEntryConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("f1Score")
     public Float f1Score;
+
     public BoundingBoxMetricsEntryConfidenceMetricsEntry withF1Score(Float f1Score) {
         this.f1Score = f1Score;
         return this;
@@ -40,6 +42,7 @@ public class BoundingBoxMetricsEntryConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precision")
     public Float precision;
+
     public BoundingBoxMetricsEntryConfidenceMetricsEntry withPrecision(Float precision) {
         this.precision = precision;
         return this;
@@ -51,9 +54,11 @@ public class BoundingBoxMetricsEntryConfidenceMetricsEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recall")
     public Float recall;
+
     public BoundingBoxMetricsEntryConfidenceMetricsEntry withRecall(Float recall) {
         this.recall = recall;
         return this;
     }
     
+    public BoundingBoxMetricsEntryConfidenceMetricsEntry(){}
 }

@@ -12,6 +12,7 @@ public class RegisterMailDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public RegisterMailDomainRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class RegisterMailDomainRequest {
     
     @JsonProperty("DomainName")
     public String domainName;
+
     public RegisterMailDomainRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -26,9 +28,14 @@ public class RegisterMailDomainRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public RegisterMailDomainRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public RegisterMailDomainRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("OrganizationId") String organizationId) {
+        this.domainName = domainName;
+        this.organizationId = organizationId;
+  }
 }

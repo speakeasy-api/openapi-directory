@@ -18,6 +18,7 @@ public class MetadataExport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseDumpType")
     public MetadataExportDatabaseDumpTypeEnum databaseDumpType;
+
     public MetadataExport withDatabaseDumpType(MetadataExportDatabaseDumpTypeEnum databaseDumpType) {
         this.databaseDumpType = databaseDumpType;
         return this;
@@ -29,6 +30,7 @@ public class MetadataExport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationGcsUri")
     public String destinationGcsUri;
+
     public MetadataExport withDestinationGcsUri(String destinationGcsUri) {
         this.destinationGcsUri = destinationGcsUri;
         return this;
@@ -40,6 +42,7 @@ public class MetadataExport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public MetadataExport withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -51,6 +54,7 @@ public class MetadataExport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public MetadataExport withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -62,9 +66,11 @@ public class MetadataExport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public MetadataExportStateEnum state;
+
     public MetadataExport withState(MetadataExportStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public MetadataExport(){}
 }

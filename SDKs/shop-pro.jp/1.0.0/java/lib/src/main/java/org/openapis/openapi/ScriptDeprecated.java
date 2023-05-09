@@ -57,11 +57,9 @@ public class ScriptDeprecated {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateScriptTagResponse res = new org.openapis.openapi.models.operations.CreateScriptTagResponse() {{
+        org.openapis.openapi.models.operations.CreateScriptTagResponse res = new org.openapis.openapi.models.operations.CreateScriptTagResponse(contentType, httpRes.statusCode()) {{
             createScriptTag200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,10 +95,8 @@ public class ScriptDeprecated {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteV1ScriptTagsScriptTagIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteV1ScriptTagsScriptTagIdJsonResponse() {{
+        org.openapis.openapi.models.operations.DeleteV1ScriptTagsScriptTagIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteV1ScriptTagsScriptTagIdJsonResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -131,11 +127,9 @@ public class ScriptDeprecated {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetScriptTagResponse res = new org.openapis.openapi.models.operations.GetScriptTagResponse() {{
+        org.openapis.openapi.models.operations.GetScriptTagResponse res = new org.openapis.openapi.models.operations.GetScriptTagResponse(contentType, httpRes.statusCode()) {{
             getScriptTag200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,10 +145,11 @@ public class ScriptDeprecated {
 
     /**
      * \u30b9\u30af\u30ea\u30d7\u30c8\u30bf\u30b0\u306e\u53d6\u5f97
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetScriptTagsResponse getScriptTags() throws Exception {
+    public org.openapis.openapi.models.operations.GetScriptTagsResponse getScriptTags(org.openapis.openapi.models.operations.GetScriptTagsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/script_tags.json");
         
@@ -163,16 +158,15 @@ public class ScriptDeprecated {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetScriptTagsResponse res = new org.openapis.openapi.models.operations.GetScriptTagsResponse() {{
+        org.openapis.openapi.models.operations.GetScriptTagsResponse res = new org.openapis.openapi.models.operations.GetScriptTagsResponse(contentType, httpRes.statusCode()) {{
             getScriptTags200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -210,11 +204,9 @@ public class ScriptDeprecated {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateScriptTagResponse res = new org.openapis.openapi.models.operations.UpdateScriptTagResponse() {{
+        org.openapis.openapi.models.operations.UpdateScriptTagResponse res = new org.openapis.openapi.models.operations.UpdateScriptTagResponse(contentType, httpRes.statusCode()) {{
             updateScriptTag200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

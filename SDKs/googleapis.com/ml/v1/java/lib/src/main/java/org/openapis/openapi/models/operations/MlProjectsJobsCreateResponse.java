@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MlProjectsJobsCreateResponse {
     
     public String contentType;
+
     public MlProjectsJobsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MlProjectsJobsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudMlV1Job googleCloudMlV1Job;
+
     public MlProjectsJobsCreateResponse withGoogleCloudMlV1Job(org.openapis.openapi.models.shared.GoogleCloudMlV1Job googleCloudMlV1Job) {
         this.googleCloudMlV1Job = googleCloudMlV1Job;
         return this;
@@ -26,6 +29,7 @@ public class MlProjectsJobsCreateResponse {
     
     
     public Integer statusCode;
+
     public MlProjectsJobsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MlProjectsJobsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MlProjectsJobsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MlProjectsJobsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

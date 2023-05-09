@@ -12,6 +12,7 @@ public class CreateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalInferenceSpecifications")
     public AdditionalInferenceSpecificationDefinition[] additionalInferenceSpecifications;
+
     public CreateModelPackageInput withAdditionalInferenceSpecifications(AdditionalInferenceSpecificationDefinition[] additionalInferenceSpecifications) {
         this.additionalInferenceSpecifications = additionalInferenceSpecifications;
         return this;
@@ -20,6 +21,7 @@ public class CreateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertifyForMarketplace")
     public Boolean certifyForMarketplace;
+
     public CreateModelPackageInput withCertifyForMarketplace(Boolean certifyForMarketplace) {
         this.certifyForMarketplace = certifyForMarketplace;
         return this;
@@ -28,6 +30,7 @@ public class CreateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateModelPackageInput withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -36,6 +39,7 @@ public class CreateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomerMetadataProperties")
     public java.util.Map<String, String> customerMetadataProperties;
+
     public CreateModelPackageInput withCustomerMetadataProperties(java.util.Map<String, String> customerMetadataProperties) {
         this.customerMetadataProperties = customerMetadataProperties;
         return this;
@@ -44,6 +48,7 @@ public class CreateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public String domain;
+
     public CreateModelPackageInput withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -52,6 +57,7 @@ public class CreateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DriftCheckBaselines")
     public DriftCheckBaselines driftCheckBaselines;
+
     public CreateModelPackageInput withDriftCheckBaselines(DriftCheckBaselines driftCheckBaselines) {
         this.driftCheckBaselines = driftCheckBaselines;
         return this;
@@ -60,6 +66,7 @@ public class CreateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceSpecification")
     public InferenceSpecification inferenceSpecification;
+
     public CreateModelPackageInput withInferenceSpecification(InferenceSpecification inferenceSpecification) {
         this.inferenceSpecification = inferenceSpecification;
         return this;
@@ -71,6 +78,7 @@ public class CreateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataProperties")
     public MetadataProperties metadataProperties;
+
     public CreateModelPackageInput withMetadataProperties(MetadataProperties metadataProperties) {
         this.metadataProperties = metadataProperties;
         return this;
@@ -79,6 +87,7 @@ public class CreateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelApprovalStatus")
     public ModelApprovalStatusEnum modelApprovalStatus;
+
     public CreateModelPackageInput withModelApprovalStatus(ModelApprovalStatusEnum modelApprovalStatus) {
         this.modelApprovalStatus = modelApprovalStatus;
         return this;
@@ -87,6 +96,7 @@ public class CreateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelMetrics")
     public ModelMetrics modelMetrics;
+
     public CreateModelPackageInput withModelMetrics(ModelMetrics modelMetrics) {
         this.modelMetrics = modelMetrics;
         return this;
@@ -95,6 +105,7 @@ public class CreateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageDescription")
     public String modelPackageDescription;
+
     public CreateModelPackageInput withModelPackageDescription(String modelPackageDescription) {
         this.modelPackageDescription = modelPackageDescription;
         return this;
@@ -103,6 +114,7 @@ public class CreateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageGroupName")
     public String modelPackageGroupName;
+
     public CreateModelPackageInput withModelPackageGroupName(String modelPackageGroupName) {
         this.modelPackageGroupName = modelPackageGroupName;
         return this;
@@ -111,6 +123,7 @@ public class CreateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageName")
     public String modelPackageName;
+
     public CreateModelPackageInput withModelPackageName(String modelPackageName) {
         this.modelPackageName = modelPackageName;
         return this;
@@ -119,6 +132,7 @@ public class CreateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SamplePayloadUrl")
     public String samplePayloadUrl;
+
     public CreateModelPackageInput withSamplePayloadUrl(String samplePayloadUrl) {
         this.samplePayloadUrl = samplePayloadUrl;
         return this;
@@ -127,6 +141,7 @@ public class CreateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceAlgorithmSpecification")
     public SourceAlgorithmSpecification sourceAlgorithmSpecification;
+
     public CreateModelPackageInput withSourceAlgorithmSpecification(SourceAlgorithmSpecification sourceAlgorithmSpecification) {
         this.sourceAlgorithmSpecification = sourceAlgorithmSpecification;
         return this;
@@ -135,6 +150,7 @@ public class CreateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateModelPackageInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -143,6 +159,7 @@ public class CreateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Task")
     public String task;
+
     public CreateModelPackageInput withTask(String task) {
         this.task = task;
         return this;
@@ -151,9 +168,11 @@ public class CreateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationSpecification")
     public ModelPackageValidationSpecification validationSpecification;
+
     public CreateModelPackageInput withValidationSpecification(ModelPackageValidationSpecification validationSpecification) {
         this.validationSpecification = validationSpecification;
         return this;
     }
     
+    public CreateModelPackageInput(){}
 }

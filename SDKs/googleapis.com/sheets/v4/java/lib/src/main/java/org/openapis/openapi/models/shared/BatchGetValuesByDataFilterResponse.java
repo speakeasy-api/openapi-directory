@@ -18,6 +18,7 @@ public class BatchGetValuesByDataFilterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spreadsheetId")
     public String spreadsheetId;
+
     public BatchGetValuesByDataFilterResponse withSpreadsheetId(String spreadsheetId) {
         this.spreadsheetId = spreadsheetId;
         return this;
@@ -29,9 +30,11 @@ public class BatchGetValuesByDataFilterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueRanges")
     public MatchedValueRange[] valueRanges;
+
     public BatchGetValuesByDataFilterResponse withValueRanges(MatchedValueRange[] valueRanges) {
         this.valueRanges = valueRanges;
         return this;
     }
     
+    public BatchGetValuesByDataFilterResponse(){}
 }

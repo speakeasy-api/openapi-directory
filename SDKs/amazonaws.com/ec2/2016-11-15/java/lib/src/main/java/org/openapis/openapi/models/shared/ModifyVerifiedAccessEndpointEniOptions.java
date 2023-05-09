@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 
 
 /**
- * ModifyVerifiedAccessEndpointEniOptions - Options for a network-interface type Verified Access endpoint.
+ * ModifyVerifiedAccessEndpointEniOptions - Describes the options when modifying a Verified Access endpoint with the &lt;code&gt;network-interface&lt;/code&gt; type.
  */
 public class ModifyVerifiedAccessEndpointEniOptions {
     
     public Long port;
+
     public ModifyVerifiedAccessEndpointEniOptions withPort(Long port) {
         this.port = port;
         return this;
@@ -19,9 +20,11 @@ public class ModifyVerifiedAccessEndpointEniOptions {
     
     
     public VerifiedAccessEndpointProtocolEnum protocol;
+
     public ModifyVerifiedAccessEndpointEniOptions withProtocol(VerifiedAccessEndpointProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public ModifyVerifiedAccessEndpointEniOptions(){}
 }

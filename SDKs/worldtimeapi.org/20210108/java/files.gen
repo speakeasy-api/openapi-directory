@@ -51,4 +51,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetTimezoneAreaLocation
 lib/src/main/java/org/openapis/openapi/models/operations/GetTimezoneAreaLocationRegionTxtResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorJsonResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/DateTimeJsonResponse.java
+docs/sdk/README.md
 USAGE.md

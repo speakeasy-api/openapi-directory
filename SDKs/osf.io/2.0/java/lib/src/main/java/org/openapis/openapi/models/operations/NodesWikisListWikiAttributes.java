@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -15,6 +16,7 @@ public class NodesWikisListWikiAttributes {
      */
     
     public String contentType;
+
     public NodesWikisListWikiAttributes withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -25,6 +27,7 @@ public class NodesWikisListWikiAttributes {
      */
     
     public String currentUserCanComment;
+
     public NodesWikisListWikiAttributes withCurrentUserCanComment(String currentUserCanComment) {
         this.currentUserCanComment = currentUserCanComment;
         return this;
@@ -35,6 +38,7 @@ public class NodesWikisListWikiAttributes {
      */
     
     public OffsetDateTime dateModified;
+
     public NodesWikisListWikiAttributes withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -45,6 +49,7 @@ public class NodesWikisListWikiAttributes {
      */
     
     public String extra;
+
     public NodesWikisListWikiAttributes withExtra(String extra) {
         this.extra = extra;
         return this;
@@ -55,6 +60,7 @@ public class NodesWikisListWikiAttributes {
      */
     
     public String kind;
+
     public NodesWikisListWikiAttributes withKind(String kind) {
         this.kind = kind;
         return this;
@@ -65,6 +71,7 @@ public class NodesWikisListWikiAttributes {
      */
     
     public String materializedPath;
+
     public NodesWikisListWikiAttributes withMaterializedPath(String materializedPath) {
         this.materializedPath = materializedPath;
         return this;
@@ -75,6 +82,7 @@ public class NodesWikisListWikiAttributes {
      */
     
     public String name;
+
     public NodesWikisListWikiAttributes withName(String name) {
         this.name = name;
         return this;
@@ -85,6 +93,7 @@ public class NodesWikisListWikiAttributes {
      */
     
     public String path;
+
     public NodesWikisListWikiAttributes withPath(String path) {
         this.path = path;
         return this;
@@ -95,9 +104,21 @@ public class NodesWikisListWikiAttributes {
      */
     
     public String size;
+
     public NodesWikisListWikiAttributes withSize(String size) {
         this.size = size;
         return this;
     }
     
+    public NodesWikisListWikiAttributes(@JsonProperty("content_type") String contentType, @JsonProperty("current_user_can_comment") String currentUserCanComment, @JsonProperty("date_modified") OffsetDateTime dateModified, @JsonProperty("extra") String extra, @JsonProperty("kind") String kind, @JsonProperty("materialized_path") String materializedPath, @JsonProperty("name") String name, @JsonProperty("path") String path, @JsonProperty("size") String size) {
+        this.contentType = contentType;
+        this.currentUserCanComment = currentUserCanComment;
+        this.dateModified = dateModified;
+        this.extra = extra;
+        this.kind = kind;
+        this.materializedPath = materializedPath;
+        this.name = name;
+        this.path = path;
+        this.size = size;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTablesStateReason {
     
     public String code;
+
     public DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTablesStateReason withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTablesStateRe
     
     
     public String message;
+
     public DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTablesStateReason withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DescribeLocalGatewayRouteTablesResultLocalGatewayRouteTablesStateReason(){}
 }

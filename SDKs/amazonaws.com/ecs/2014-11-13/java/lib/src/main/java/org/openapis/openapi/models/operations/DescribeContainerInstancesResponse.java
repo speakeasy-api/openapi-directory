@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeContainerInstancesResponse {
@@ -12,6 +13,7 @@ public class DescribeContainerInstancesResponse {
      */
     
     public Object clientException;
+
     public DescribeContainerInstancesResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeContainerInstancesResponse {
      */
     
     public Object clusterNotFoundException;
+
     public DescribeContainerInstancesResponse withClusterNotFoundException(Object clusterNotFoundException) {
         this.clusterNotFoundException = clusterNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeContainerInstancesResponse {
     
     
     public String contentType;
+
     public DescribeContainerInstancesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeContainerInstancesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeContainerInstancesResponse describeContainerInstancesResponse;
+
     public DescribeContainerInstancesResponse withDescribeContainerInstancesResponse(org.openapis.openapi.models.shared.DescribeContainerInstancesResponse describeContainerInstancesResponse) {
         this.describeContainerInstancesResponse = describeContainerInstancesResponse;
         return this;
@@ -49,6 +54,7 @@ public class DescribeContainerInstancesResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeContainerInstancesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeContainerInstancesResponse {
      */
     
     public Object serverException;
+
     public DescribeContainerInstancesResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeContainerInstancesResponse {
     
     
     public Integer statusCode;
+
     public DescribeContainerInstancesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeContainerInstancesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeContainerInstancesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeContainerInstancesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

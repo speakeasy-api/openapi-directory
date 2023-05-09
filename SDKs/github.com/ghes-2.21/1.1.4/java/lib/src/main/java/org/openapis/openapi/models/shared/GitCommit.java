@@ -15,6 +15,7 @@ public class GitCommit {
      */
     @JsonProperty("author")
     public GitCommitAuthor author;
+
     public GitCommit withAuthor(GitCommitAuthor author) {
         this.author = author;
         return this;
@@ -25,6 +26,7 @@ public class GitCommit {
      */
     @JsonProperty("committer")
     public GitCommitCommitter committer;
+
     public GitCommit withCommitter(GitCommitCommitter committer) {
         this.committer = committer;
         return this;
@@ -32,6 +34,7 @@ public class GitCommit {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public GitCommit withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -42,6 +45,7 @@ public class GitCommit {
      */
     @JsonProperty("message")
     public String message;
+
     public GitCommit withMessage(String message) {
         this.message = message;
         return this;
@@ -49,6 +53,7 @@ public class GitCommit {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public GitCommit withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -56,6 +61,7 @@ public class GitCommit {
     
     @JsonProperty("parents")
     public GitCommitParents[] parents;
+
     public GitCommit withParents(GitCommitParents[] parents) {
         this.parents = parents;
         return this;
@@ -66,6 +72,7 @@ public class GitCommit {
      */
     @JsonProperty("sha")
     public String sha;
+
     public GitCommit withSha(String sha) {
         this.sha = sha;
         return this;
@@ -73,6 +80,7 @@ public class GitCommit {
     
     @JsonProperty("tree")
     public GitCommitTree tree;
+
     public GitCommit withTree(GitCommitTree tree) {
         this.tree = tree;
         return this;
@@ -80,6 +88,7 @@ public class GitCommit {
     
     @JsonProperty("url")
     public String url;
+
     public GitCommit withUrl(String url) {
         this.url = url;
         return this;
@@ -87,9 +96,22 @@ public class GitCommit {
     
     @JsonProperty("verification")
     public GitCommitVerification verification;
+
     public GitCommit withVerification(GitCommitVerification verification) {
         this.verification = verification;
         return this;
     }
     
+    public GitCommit(@JsonProperty("author") GitCommitAuthor author, @JsonProperty("committer") GitCommitCommitter committer, @JsonProperty("html_url") String htmlUrl, @JsonProperty("message") String message, @JsonProperty("node_id") String nodeId, @JsonProperty("parents") GitCommitParents[] parents, @JsonProperty("sha") String sha, @JsonProperty("tree") GitCommitTree tree, @JsonProperty("url") String url, @JsonProperty("verification") GitCommitVerification verification) {
+        this.author = author;
+        this.committer = committer;
+        this.htmlUrl = htmlUrl;
+        this.message = message;
+        this.nodeId = nodeId;
+        this.parents = parents;
+        this.sha = sha;
+        this.tree = tree;
+        this.url = url;
+        this.verification = verification;
+  }
 }

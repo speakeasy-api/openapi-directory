@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkInterfacePermissionResultInterfacePermissionPermissionState {
     
     public CreateNetworkInterfacePermissionResultInterfacePermissionPermissionStateStateEnum state;
+
     public CreateNetworkInterfacePermissionResultInterfacePermissionPermissionState withState(CreateNetworkInterfacePermissionResultInterfacePermissionPermissionStateStateEnum state) {
         this.state = state;
         return this;
@@ -19,9 +20,11 @@ public class CreateNetworkInterfacePermissionResultInterfacePermissionPermission
     
     
     public String statusMessage;
+
     public CreateNetworkInterfacePermissionResultInterfacePermissionPermissionState withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public CreateNetworkInterfacePermissionResultInterfacePermissionPermissionState(){}
 }

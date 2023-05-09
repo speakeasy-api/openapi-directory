@@ -15,6 +15,7 @@ public class CreateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataBundles")
     public String[] dataBundles;
+
     public CreateEnvironmentRequestBody withDataBundles(String[] dataBundles) {
         this.dataBundles = dataBundles;
         return this;
@@ -26,6 +27,7 @@ public class CreateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateEnvironmentRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class CreateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("federationMode")
     public CreateEnvironmentRequestBodyFederationModeEnum federationMode;
+
     public CreateEnvironmentRequestBody withFederationMode(CreateEnvironmentRequestBodyFederationModeEnum federationMode) {
         this.federationMode = federationMode;
         return this;
@@ -48,6 +51,7 @@ public class CreateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("federationParameters")
     public CreateEnvironmentRequestBodyFederationParameters federationParameters;
+
     public CreateEnvironmentRequestBody withFederationParameters(CreateEnvironmentRequestBodyFederationParameters federationParameters) {
         this.federationParameters = federationParameters;
         return this;
@@ -59,6 +63,7 @@ public class CreateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public CreateEnvironmentRequestBody withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -69,6 +74,7 @@ public class CreateEnvironmentRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateEnvironmentRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -80,6 +86,7 @@ public class CreateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("superuserParameters")
     public CreateEnvironmentRequestBodySuperuserParameters superuserParameters;
+
     public CreateEnvironmentRequestBody withSuperuserParameters(CreateEnvironmentRequestBodySuperuserParameters superuserParameters) {
         this.superuserParameters = superuserParameters;
         return this;
@@ -91,9 +98,13 @@ public class CreateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateEnvironmentRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateEnvironmentRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

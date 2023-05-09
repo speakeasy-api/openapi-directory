@@ -18,6 +18,7 @@ public class PlaceOrder200ApplicationJSONOrdersPaymentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giftCards")
     public PlaceOrder200ApplicationJSONOrdersPaymentDataGiftCards[] giftCards;
+
     public PlaceOrder200ApplicationJSONOrdersPaymentData withGiftCards(PlaceOrder200ApplicationJSONOrdersPaymentDataGiftCards[] giftCards) {
         this.giftCards = giftCards;
         return this;
@@ -29,9 +30,11 @@ public class PlaceOrder200ApplicationJSONOrdersPaymentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactions")
     public PlaceOrder200ApplicationJSONOrdersPaymentDataTransactions[] transactions;
+
     public PlaceOrder200ApplicationJSONOrdersPaymentData withTransactions(PlaceOrder200ApplicationJSONOrdersPaymentDataTransactions[] transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONOrdersPaymentData(){}
 }

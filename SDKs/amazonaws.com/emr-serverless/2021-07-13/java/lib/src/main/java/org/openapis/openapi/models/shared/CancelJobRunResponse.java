@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelJobRunResponse {
     @JsonProperty("applicationId")
     public String applicationId;
+
     public CancelJobRunResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -19,9 +20,14 @@ public class CancelJobRunResponse {
     
     @JsonProperty("jobRunId")
     public String jobRunId;
+
     public CancelJobRunResponse withJobRunId(String jobRunId) {
         this.jobRunId = jobRunId;
         return this;
     }
     
+    public CancelJobRunResponse(@JsonProperty("applicationId") String applicationId, @JsonProperty("jobRunId") String jobRunId) {
+        this.applicationId = applicationId;
+        this.jobRunId = jobRunId;
+  }
 }

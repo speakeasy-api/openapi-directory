@@ -15,9 +15,11 @@ public class UpdateRevealConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public RevealConfiguration configuration;
+
     public UpdateRevealConfigurationResponse withConfiguration(RevealConfiguration configuration) {
         this.configuration = configuration;
         return this;
     }
     
+    public UpdateRevealConfigurationResponse(){}
 }

@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetTrackRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trackingNumber")
     public String trackingNumber;
+
     public GetTrackRequest withTrackingNumber(String trackingNumber) {
         this.trackingNumber = trackingNumber;
         return this;
     }
     
+    public GetTrackRequest(){}
 }

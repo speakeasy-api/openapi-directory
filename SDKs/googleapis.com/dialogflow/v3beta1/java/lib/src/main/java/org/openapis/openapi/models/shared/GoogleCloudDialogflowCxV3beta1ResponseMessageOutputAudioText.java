@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowPlaybackInterruption")
     public Boolean allowPlaybackInterruption;
+
     public GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioText withAllowPlaybackInterruption(Boolean allowPlaybackInterruption) {
         this.allowPlaybackInterruption = allowPlaybackInterruption;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssml")
     public String ssml;
+
     public GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioText withSsml(String ssml) {
         this.ssml = ssml;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioText withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioText(){}
 }

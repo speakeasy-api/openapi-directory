@@ -15,9 +15,11 @@ public class StartImportFileTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public StartImportFileTaskResponse withId(String id) {
         this.id = id;
         return this;
     }
     
+    public StartImportFileTaskResponse(){}
 }

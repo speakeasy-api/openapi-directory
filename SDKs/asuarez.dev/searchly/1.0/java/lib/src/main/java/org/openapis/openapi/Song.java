@@ -64,12 +64,10 @@ public class Song {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SrcSearchlyApiV1ControllersSongSearchResponse res = new org.openapis.openapi.models.operations.SrcSearchlyApiV1ControllersSongSearchResponse() {{
+        org.openapis.openapi.models.operations.SrcSearchlyApiV1ControllersSongSearchResponse res = new org.openapis.openapi.models.operations.SrcSearchlyApiV1ControllersSongSearchResponse(contentType, httpRes.statusCode()) {{
             apiResponseSong = null;
             srcSearchlyApiV1ControllersSongSearchDefaultApplicationTextString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

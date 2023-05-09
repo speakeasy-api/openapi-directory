@@ -12,9 +12,13 @@ public class GetLoggingConfigurationRequestBody {
      */
     @JsonProperty("identifier")
     public String identifier;
+
     public GetLoggingConfigurationRequestBody withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
     }
     
+    public GetLoggingConfigurationRequestBody(@JsonProperty("identifier") String identifier) {
+        this.identifier = identifier;
+  }
 }

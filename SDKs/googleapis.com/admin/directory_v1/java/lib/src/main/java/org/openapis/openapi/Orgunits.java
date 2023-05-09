@@ -59,10 +59,8 @@ public class Orgunits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryOrgunitsDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryOrgunitsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DirectoryOrgunitsDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryOrgunitsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Orgunits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryOrgunitsGetResponse res = new org.openapis.openapi.models.operations.DirectoryOrgunitsGetResponse() {{
+        org.openapis.openapi.models.operations.DirectoryOrgunitsGetResponse res = new org.openapis.openapi.models.operations.DirectoryOrgunitsGetResponse(contentType, httpRes.statusCode()) {{
             orgUnit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Orgunits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryOrgunitsInsertResponse res = new org.openapis.openapi.models.operations.DirectoryOrgunitsInsertResponse() {{
+        org.openapis.openapi.models.operations.DirectoryOrgunitsInsertResponse res = new org.openapis.openapi.models.operations.DirectoryOrgunitsInsertResponse(contentType, httpRes.statusCode()) {{
             orgUnit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Orgunits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryOrgunitsListResponse res = new org.openapis.openapi.models.operations.DirectoryOrgunitsListResponse() {{
+        org.openapis.openapi.models.operations.DirectoryOrgunitsListResponse res = new org.openapis.openapi.models.operations.DirectoryOrgunitsListResponse(contentType, httpRes.statusCode()) {{
             orgUnits = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class Orgunits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryOrgunitsPatchResponse res = new org.openapis.openapi.models.operations.DirectoryOrgunitsPatchResponse() {{
+        org.openapis.openapi.models.operations.DirectoryOrgunitsPatchResponse res = new org.openapis.openapi.models.operations.DirectoryOrgunitsPatchResponse(contentType, httpRes.statusCode()) {{
             orgUnit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class Orgunits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryOrgunitsUpdateResponse res = new org.openapis.openapi.models.operations.DirectoryOrgunitsUpdateResponse() {{
+        org.openapis.openapi.models.operations.DirectoryOrgunitsUpdateResponse res = new org.openapis.openapi.models.operations.DirectoryOrgunitsUpdateResponse(contentType, httpRes.statusCode()) {{
             orgUnit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

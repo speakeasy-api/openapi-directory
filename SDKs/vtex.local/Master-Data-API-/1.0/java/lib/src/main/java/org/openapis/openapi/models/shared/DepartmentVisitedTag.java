@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DepartmentVisitedTag {
     @JsonProperty("DisplayValue")
     public String displayValue;
+
     public DepartmentVisitedTag withDisplayValue(String displayValue) {
         this.displayValue = displayValue;
         return this;
@@ -16,9 +17,14 @@ public class DepartmentVisitedTag {
     
     @JsonProperty("Scores")
     public Scores scores;
+
     public DepartmentVisitedTag withScores(Scores scores) {
         this.scores = scores;
         return this;
     }
     
+    public DepartmentVisitedTag(@JsonProperty("DisplayValue") String displayValue, @JsonProperty("Scores") Scores scores) {
+        this.displayValue = displayValue;
+        this.scores = scores;
+  }
 }

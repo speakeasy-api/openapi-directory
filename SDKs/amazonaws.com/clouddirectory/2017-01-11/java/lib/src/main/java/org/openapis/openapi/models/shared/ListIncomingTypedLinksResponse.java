@@ -15,6 +15,7 @@ public class ListIncomingTypedLinksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LinkSpecifiers")
     public TypedLinkSpecifier[] linkSpecifiers;
+
     public ListIncomingTypedLinksResponse withLinkSpecifiers(TypedLinkSpecifier[] linkSpecifiers) {
         this.linkSpecifiers = linkSpecifiers;
         return this;
@@ -23,9 +24,11 @@ public class ListIncomingTypedLinksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListIncomingTypedLinksResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListIncomingTypedLinksResponse(){}
 }

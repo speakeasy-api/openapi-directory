@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAttributeValuesResponse {
     
     public String contentType;
+
     public GetAttributeValuesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAttributeValuesResponse {
      */
     
     public Object expiredNextTokenException;
+
     public GetAttributeValuesResponse withExpiredNextTokenException(Object expiredNextTokenException) {
         this.expiredNextTokenException = expiredNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class GetAttributeValuesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAttributeValuesResponse getAttributeValuesResponse;
+
     public GetAttributeValuesResponse withGetAttributeValuesResponse(org.openapis.openapi.models.shared.GetAttributeValuesResponse getAttributeValuesResponse) {
         this.getAttributeValuesResponse = getAttributeValuesResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetAttributeValuesResponse {
      */
     
     public Object internalErrorException;
+
     public GetAttributeValuesResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class GetAttributeValuesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetAttributeValuesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class GetAttributeValuesResponse {
      */
     
     public Object invalidParameterException;
+
     public GetAttributeValuesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class GetAttributeValuesResponse {
      */
     
     public Object notFoundException;
+
     public GetAttributeValuesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class GetAttributeValuesResponse {
     
     
     public Integer statusCode;
+
     public GetAttributeValuesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetAttributeValuesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAttributeValuesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAttributeValuesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

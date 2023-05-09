@@ -12,6 +12,7 @@ public class OwnerTypeDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public OwnerTypeDto withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class OwnerTypeDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public OwnerTypeDto withId(Long id) {
         this.id = id;
         return this;
@@ -28,9 +30,11 @@ public class OwnerTypeDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordTypeGroupId")
     public Long recordTypeGroupId;
+
     public OwnerTypeDto withRecordTypeGroupId(Long recordTypeGroupId) {
         this.recordTypeGroupId = recordTypeGroupId;
         return this;
     }
     
+    public OwnerTypeDto(){}
 }

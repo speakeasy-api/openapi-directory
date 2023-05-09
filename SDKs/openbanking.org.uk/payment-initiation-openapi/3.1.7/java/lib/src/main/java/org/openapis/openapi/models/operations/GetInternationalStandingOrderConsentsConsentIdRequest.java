@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInternationalStandingOrderConsentsConsentIdRequest {
@@ -12,6 +13,7 @@ public class GetInternationalStandingOrderConsentsConsentIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public GetInternationalStandingOrderConsentsConsentIdRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -22,6 +24,7 @@ public class GetInternationalStandingOrderConsentsConsentIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConsentId")
     public String consentId;
+
     public GetInternationalStandingOrderConsentsConsentIdRequest withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -32,6 +35,7 @@ public class GetInternationalStandingOrderConsentsConsentIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
     public String xCustomerUserAgent;
+
     public GetInternationalStandingOrderConsentsConsentIdRequest withXCustomerUserAgent(String xCustomerUserAgent) {
         this.xCustomerUserAgent = xCustomerUserAgent;
         return this;
@@ -44,6 +48,7 @@ public class GetInternationalStandingOrderConsentsConsentIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
     public String xFapiAuthDate;
+
     public GetInternationalStandingOrderConsentsConsentIdRequest withXFapiAuthDate(String xFapiAuthDate) {
         this.xFapiAuthDate = xFapiAuthDate;
         return this;
@@ -54,6 +59,7 @@ public class GetInternationalStandingOrderConsentsConsentIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
     public String xFapiCustomerIpAddress;
+
     public GetInternationalStandingOrderConsentsConsentIdRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
         this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
         return this;
@@ -64,9 +70,14 @@ public class GetInternationalStandingOrderConsentsConsentIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
     public String xFapiInteractionId;
+
     public GetInternationalStandingOrderConsentsConsentIdRequest withXFapiInteractionId(String xFapiInteractionId) {
         this.xFapiInteractionId = xFapiInteractionId;
         return this;
     }
     
+    public GetInternationalStandingOrderConsentsConsentIdRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("ConsentId") String consentId) {
+        this.authorization = authorization;
+        this.consentId = consentId;
+  }
 }

@@ -15,6 +15,7 @@ public class ReposCreateOrUpdateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deployment_branch_policy")
     public org.openapis.openapi.models.shared.DeploymentBranchPolicySettings deploymentBranchPolicy;
+
     public ReposCreateOrUpdateEnvironmentRequestBody withDeploymentBranchPolicy(org.openapis.openapi.models.shared.DeploymentBranchPolicySettings deploymentBranchPolicy) {
         this.deploymentBranchPolicy = deploymentBranchPolicy;
         return this;
@@ -26,6 +27,7 @@ public class ReposCreateOrUpdateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviewers")
     public ReposCreateOrUpdateEnvironmentRequestBodyReviewers[] reviewers;
+
     public ReposCreateOrUpdateEnvironmentRequestBody withReviewers(ReposCreateOrUpdateEnvironmentRequestBodyReviewers[] reviewers) {
         this.reviewers = reviewers;
         return this;
@@ -37,9 +39,11 @@ public class ReposCreateOrUpdateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wait_timer")
     public Long waitTimer;
+
     public ReposCreateOrUpdateEnvironmentRequestBody withWaitTimer(Long waitTimer) {
         this.waitTimer = waitTimer;
         return this;
     }
     
+    public ReposCreateOrUpdateEnvironmentRequestBody(){}
 }

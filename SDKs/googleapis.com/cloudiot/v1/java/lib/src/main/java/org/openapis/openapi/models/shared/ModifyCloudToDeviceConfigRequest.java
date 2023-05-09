@@ -18,6 +18,7 @@ public class ModifyCloudToDeviceConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binaryData")
     public String binaryData;
+
     public ModifyCloudToDeviceConfigRequest withBinaryData(String binaryData) {
         this.binaryData = binaryData;
         return this;
@@ -29,9 +30,11 @@ public class ModifyCloudToDeviceConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionToUpdate")
     public String versionToUpdate;
+
     public ModifyCloudToDeviceConfigRequest withVersionToUpdate(String versionToUpdate) {
         this.versionToUpdate = versionToUpdate;
         return this;
     }
     
+    public ModifyCloudToDeviceConfigRequest(){}
 }

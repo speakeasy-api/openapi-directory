@@ -14,6 +14,7 @@ public class PatientResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addresses")
     public Address[] addresses;
+
     public PatientResourceAttributes withAddresses(Address[] addresses) {
         this.addresses = addresses;
         return this;
@@ -22,6 +23,7 @@ public class PatientResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archive_history")
     public ArchiveHistory[] archiveHistory;
+
     public PatientResourceAttributes withArchiveHistory(ArchiveHistory[] archiveHistory) {
         this.archiveHistory = archiveHistory;
         return this;
@@ -30,6 +32,7 @@ public class PatientResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archived")
     public Boolean archived;
+
     public PatientResourceAttributes withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -39,6 +42,7 @@ public class PatientResourceAttributes {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("birth_date")
     public LocalDate birthDate;
+
     public PatientResourceAttributes withBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
         return this;
@@ -47,6 +51,7 @@ public class PatientResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_address")
     public String emailAddress;
+
     public PatientResourceAttributes withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -55,6 +60,7 @@ public class PatientResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enrolled_at")
     public String enrolledAt;
+
     public PatientResourceAttributes withEnrolledAt(String enrolledAt) {
         this.enrolledAt = enrolledAt;
         return this;
@@ -63,6 +69,7 @@ public class PatientResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_access_at")
     public String firstAccessAt;
+
     public PatientResourceAttributes withFirstAccessAt(String firstAccessAt) {
         this.firstAccessAt = firstAccessAt;
         return this;
@@ -71,6 +78,7 @@ public class PatientResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public PatientResourceAttributes withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -79,6 +87,7 @@ public class PatientResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public PatientResourceAttributesGenderEnum gender;
+
     public PatientResourceAttributes withGender(PatientResourceAttributesGenderEnum gender) {
         this.gender = gender;
         return this;
@@ -87,6 +96,7 @@ public class PatientResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifiers")
     public PatientIdentifier[] identifiers;
+
     public PatientResourceAttributes withIdentifiers(PatientIdentifier[] identifiers) {
         this.identifiers = identifiers;
         return this;
@@ -95,6 +105,7 @@ public class PatientResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invited_at")
     public String invitedAt;
+
     public PatientResourceAttributes withInvitedAt(String invitedAt) {
         this.invitedAt = invitedAt;
         return this;
@@ -103,6 +114,7 @@ public class PatientResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_access_at")
     public String lastAccessAt;
+
     public PatientResourceAttributes withLastAccessAt(String lastAccessAt) {
         this.lastAccessAt = lastAccessAt;
         return this;
@@ -111,6 +123,7 @@ public class PatientResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public PatientResourceAttributes withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -122,6 +135,7 @@ public class PatientResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public PatientResourceAttributes withNote(String note) {
         this.note = note;
         return this;
@@ -130,6 +144,7 @@ public class PatientResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_numbers")
     public PhoneNumber[] phoneNumbers;
+
     public PatientResourceAttributes withPhoneNumbers(PhoneNumber[] phoneNumbers) {
         this.phoneNumbers = phoneNumbers;
         return this;
@@ -141,6 +156,7 @@ public class PatientResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statement")
     public PatientResourceAttributesStatement statement;
+
     public PatientResourceAttributes withStatement(PatientResourceAttributesStatement statement) {
         this.statement = statement;
         return this;
@@ -149,9 +165,11 @@ public class PatientResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public PatientResourceAttributes withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public PatientResourceAttributes(){}
 }

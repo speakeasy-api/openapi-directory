@@ -12,6 +12,7 @@ public class AttemptRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bytesSynced")
     public Long bytesSynced;
+
     public AttemptRead withBytesSynced(Long bytesSynced) {
         this.bytesSynced = bytesSynced;
         return this;
@@ -19,6 +20,7 @@ public class AttemptRead {
     
     @JsonProperty("createdAt")
     public Long createdAt;
+
     public AttemptRead withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -27,6 +29,7 @@ public class AttemptRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endedAt")
     public Long endedAt;
+
     public AttemptRead withEndedAt(Long endedAt) {
         this.endedAt = endedAt;
         return this;
@@ -35,6 +38,7 @@ public class AttemptRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureSummary")
     public AttemptFailureSummary failureSummary;
+
     public AttemptRead withFailureSummary(AttemptFailureSummary failureSummary) {
         this.failureSummary = failureSummary;
         return this;
@@ -42,6 +46,7 @@ public class AttemptRead {
     
     @JsonProperty("id")
     public Long id;
+
     public AttemptRead withId(Long id) {
         this.id = id;
         return this;
@@ -50,6 +55,7 @@ public class AttemptRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordsSynced")
     public Long recordsSynced;
+
     public AttemptRead withRecordsSynced(Long recordsSynced) {
         this.recordsSynced = recordsSynced;
         return this;
@@ -57,6 +63,7 @@ public class AttemptRead {
     
     @JsonProperty("status")
     public AttemptStatusEnum status;
+
     public AttemptRead withStatus(AttemptStatusEnum status) {
         this.status = status;
         return this;
@@ -65,6 +72,7 @@ public class AttemptRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamStats")
     public AttemptStreamStats[] streamStats;
+
     public AttemptRead withStreamStats(AttemptStreamStats[] streamStats) {
         this.streamStats = streamStats;
         return this;
@@ -73,6 +81,7 @@ public class AttemptRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalStats")
     public AttemptStats totalStats;
+
     public AttemptRead withTotalStats(AttemptStats totalStats) {
         this.totalStats = totalStats;
         return this;
@@ -80,9 +89,16 @@ public class AttemptRead {
     
     @JsonProperty("updatedAt")
     public Long updatedAt;
+
     public AttemptRead withUpdatedAt(Long updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public AttemptRead(@JsonProperty("createdAt") Long createdAt, @JsonProperty("id") Long id, @JsonProperty("status") AttemptStatusEnum status, @JsonProperty("updatedAt") Long updatedAt) {
+        this.createdAt = createdAt;
+        this.id = id;
+        this.status = status;
+        this.updatedAt = updatedAt;
+  }
 }

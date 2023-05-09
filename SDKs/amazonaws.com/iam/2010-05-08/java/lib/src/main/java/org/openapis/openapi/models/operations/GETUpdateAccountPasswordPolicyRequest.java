@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateAccountPasswordPolicyRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETUpdateAccountPasswordPolicyActionEnum action;
+
     public GETUpdateAccountPasswordPolicyRequest withAction(GETUpdateAccountPasswordPolicyActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETUpdateAccountPasswordPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllowUsersToChangePassword")
     public Boolean allowUsersToChangePassword;
+
     public GETUpdateAccountPasswordPolicyRequest withAllowUsersToChangePassword(Boolean allowUsersToChangePassword) {
         this.allowUsersToChangePassword = allowUsersToChangePassword;
         return this;
@@ -29,6 +32,7 @@ public class GETUpdateAccountPasswordPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HardExpiry")
     public Boolean hardExpiry;
+
     public GETUpdateAccountPasswordPolicyRequest withHardExpiry(Boolean hardExpiry) {
         this.hardExpiry = hardExpiry;
         return this;
@@ -39,6 +43,7 @@ public class GETUpdateAccountPasswordPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxPasswordAge")
     public Long maxPasswordAge;
+
     public GETUpdateAccountPasswordPolicyRequest withMaxPasswordAge(Long maxPasswordAge) {
         this.maxPasswordAge = maxPasswordAge;
         return this;
@@ -49,6 +54,7 @@ public class GETUpdateAccountPasswordPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MinimumPasswordLength")
     public Long minimumPasswordLength;
+
     public GETUpdateAccountPasswordPolicyRequest withMinimumPasswordLength(Long minimumPasswordLength) {
         this.minimumPasswordLength = minimumPasswordLength;
         return this;
@@ -59,6 +65,7 @@ public class GETUpdateAccountPasswordPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PasswordReusePrevention")
     public Long passwordReusePrevention;
+
     public GETUpdateAccountPasswordPolicyRequest withPasswordReusePrevention(Long passwordReusePrevention) {
         this.passwordReusePrevention = passwordReusePrevention;
         return this;
@@ -69,6 +76,7 @@ public class GETUpdateAccountPasswordPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RequireLowercaseCharacters")
     public Boolean requireLowercaseCharacters;
+
     public GETUpdateAccountPasswordPolicyRequest withRequireLowercaseCharacters(Boolean requireLowercaseCharacters) {
         this.requireLowercaseCharacters = requireLowercaseCharacters;
         return this;
@@ -79,6 +87,7 @@ public class GETUpdateAccountPasswordPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RequireNumbers")
     public Boolean requireNumbers;
+
     public GETUpdateAccountPasswordPolicyRequest withRequireNumbers(Boolean requireNumbers) {
         this.requireNumbers = requireNumbers;
         return this;
@@ -89,6 +98,7 @@ public class GETUpdateAccountPasswordPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RequireSymbols")
     public Boolean requireSymbols;
+
     public GETUpdateAccountPasswordPolicyRequest withRequireSymbols(Boolean requireSymbols) {
         this.requireSymbols = requireSymbols;
         return this;
@@ -99,6 +109,7 @@ public class GETUpdateAccountPasswordPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RequireUppercaseCharacters")
     public Boolean requireUppercaseCharacters;
+
     public GETUpdateAccountPasswordPolicyRequest withRequireUppercaseCharacters(Boolean requireUppercaseCharacters) {
         this.requireUppercaseCharacters = requireUppercaseCharacters;
         return this;
@@ -106,6 +117,7 @@ public class GETUpdateAccountPasswordPolicyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETUpdateAccountPasswordPolicyVersionEnum version;
+
     public GETUpdateAccountPasswordPolicyRequest withVersion(GETUpdateAccountPasswordPolicyVersionEnum version) {
         this.version = version;
         return this;
@@ -113,6 +125,7 @@ public class GETUpdateAccountPasswordPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETUpdateAccountPasswordPolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -120,6 +133,7 @@ public class GETUpdateAccountPasswordPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETUpdateAccountPasswordPolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -127,6 +141,7 @@ public class GETUpdateAccountPasswordPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETUpdateAccountPasswordPolicyRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -134,6 +149,7 @@ public class GETUpdateAccountPasswordPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETUpdateAccountPasswordPolicyRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -141,6 +157,7 @@ public class GETUpdateAccountPasswordPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETUpdateAccountPasswordPolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -148,6 +165,7 @@ public class GETUpdateAccountPasswordPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETUpdateAccountPasswordPolicyRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -155,9 +173,14 @@ public class GETUpdateAccountPasswordPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETUpdateAccountPasswordPolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETUpdateAccountPasswordPolicyRequest(@JsonProperty("Action") GETUpdateAccountPasswordPolicyActionEnum action, @JsonProperty("Version") GETUpdateAccountPasswordPolicyVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UnsupportedResource {
     @JsonProperty("logicalResourceId")
     public LogicalResourceId logicalResourceId;
+
     public UnsupportedResource withLogicalResourceId(LogicalResourceId logicalResourceId) {
         this.logicalResourceId = logicalResourceId;
         return this;
@@ -21,6 +22,7 @@ public class UnsupportedResource {
     
     @JsonProperty("physicalResourceId")
     public PhysicalResourceId physicalResourceId;
+
     public UnsupportedResource withPhysicalResourceId(PhysicalResourceId physicalResourceId) {
         this.physicalResourceId = physicalResourceId;
         return this;
@@ -28,6 +30,7 @@ public class UnsupportedResource {
     
     @JsonProperty("resourceType")
     public String resourceType;
+
     public UnsupportedResource withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -36,9 +39,15 @@ public class UnsupportedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unsupportedResourceStatus")
     public String unsupportedResourceStatus;
+
     public UnsupportedResource withUnsupportedResourceStatus(String unsupportedResourceStatus) {
         this.unsupportedResourceStatus = unsupportedResourceStatus;
         return this;
     }
     
+    public UnsupportedResource(@JsonProperty("logicalResourceId") LogicalResourceId logicalResourceId, @JsonProperty("physicalResourceId") PhysicalResourceId physicalResourceId, @JsonProperty("resourceType") String resourceType) {
+        this.logicalResourceId = logicalResourceId;
+        this.physicalResourceId = physicalResourceId;
+        this.resourceType = resourceType;
+  }
 }

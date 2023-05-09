@@ -18,6 +18,7 @@ public class AppendValuesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spreadsheetId")
     public String spreadsheetId;
+
     public AppendValuesResponse withSpreadsheetId(String spreadsheetId) {
         this.spreadsheetId = spreadsheetId;
         return this;
@@ -29,6 +30,7 @@ public class AppendValuesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableRange")
     public String tableRange;
+
     public AppendValuesResponse withTableRange(String tableRange) {
         this.tableRange = tableRange;
         return this;
@@ -40,9 +42,11 @@ public class AppendValuesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updates")
     public UpdateValuesResponse updates;
+
     public AppendValuesResponse withUpdates(UpdateValuesResponse updates) {
         this.updates = updates;
         return this;
     }
     
+    public AppendValuesResponse(){}
 }

@@ -15,6 +15,7 @@ public class ErrorThrottled {
      */
     @JsonProperty("detail")
     public String detail;
+
     public ErrorThrottled withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -25,6 +26,7 @@ public class ErrorThrottled {
      */
     @JsonProperty("instance")
     public String instance;
+
     public ErrorThrottled withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -35,6 +37,7 @@ public class ErrorThrottled {
      */
     @JsonProperty("title")
     public String title;
+
     public ErrorThrottled withTitle(String title) {
         this.title = title;
         return this;
@@ -45,9 +48,16 @@ public class ErrorThrottled {
      */
     @JsonProperty("type")
     public String type;
+
     public ErrorThrottled withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ErrorThrottled(@JsonProperty("detail") String detail, @JsonProperty("instance") String instance, @JsonProperty("title") String title, @JsonProperty("type") String type) {
+        this.detail = detail;
+        this.instance = instance;
+        this.title = title;
+        this.type = type;
+  }
 }

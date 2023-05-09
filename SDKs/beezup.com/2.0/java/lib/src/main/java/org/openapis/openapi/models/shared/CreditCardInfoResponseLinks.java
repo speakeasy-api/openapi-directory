@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreditCardInfoResponseLinks {
     @JsonProperty("saveCreditCardInfo")
     public LinksSaveCreditCardInfoLink saveCreditCardInfo;
+
     public CreditCardInfoResponseLinks withSaveCreditCardInfo(LinksSaveCreditCardInfoLink saveCreditCardInfo) {
         this.saveCreditCardInfo = saveCreditCardInfo;
         return this;
@@ -19,9 +20,14 @@ public class CreditCardInfoResponseLinks {
     
     @JsonProperty("self")
     public LinksGetCreditCardInfoLink self;
+
     public CreditCardInfoResponseLinks withSelf(LinksGetCreditCardInfoLink self) {
         this.self = self;
         return this;
     }
     
+    public CreditCardInfoResponseLinks(@JsonProperty("saveCreditCardInfo") LinksSaveCreditCardInfoLink saveCreditCardInfo, @JsonProperty("self") LinksGetCreditCardInfoLink self) {
+        this.saveCreditCardInfo = saveCreditCardInfo;
+        this.self = self;
+  }
 }

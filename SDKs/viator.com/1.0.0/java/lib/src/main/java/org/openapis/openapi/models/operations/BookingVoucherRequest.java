@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BookingVoucherRequest {
@@ -13,6 +14,7 @@ public class BookingVoucherRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public BookingVoucherRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -23,6 +25,7 @@ public class BookingVoucherRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embeddedResources")
     public Boolean embeddedResources;
+
     public BookingVoucherRequest withEmbeddedResources(Boolean embeddedResources) {
         this.embeddedResources = embeddedResources;
         return this;
@@ -36,6 +39,7 @@ public class BookingVoucherRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fullHTML")
     public Boolean fullHTML;
+
     public BookingVoucherRequest withFullHTML(Boolean fullHTML) {
         this.fullHTML = fullHTML;
         return this;
@@ -49,6 +53,7 @@ public class BookingVoucherRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=itemId")
     public Long itemId;
+
     public BookingVoucherRequest withItemId(Long itemId) {
         this.itemId = itemId;
         return this;
@@ -59,6 +64,7 @@ public class BookingVoucherRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=leadLastName")
     public String leadLastName;
+
     public BookingVoucherRequest withLeadLastName(String leadLastName) {
         this.leadLastName = leadLastName;
         return this;
@@ -76,6 +82,7 @@ public class BookingVoucherRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mobileVoucher")
     public Boolean mobileVoucher;
+
     public BookingVoucherRequest withMobileVoucher(Boolean mobileVoucher) {
         this.mobileVoucher = mobileVoucher;
         return this;
@@ -90,9 +97,13 @@ public class BookingVoucherRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=voucherKey")
     public String voucherKey;
+
     public BookingVoucherRequest withVoucherKey(String voucherKey) {
         this.voucherKey = voucherKey;
         return this;
     }
     
+    public BookingVoucherRequest(@JsonProperty("Accept-Language") String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+  }
 }

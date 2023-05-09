@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionHashRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hash")
     public String hash;
+
     public GetTransactionHashRequest withHash(String hash) {
         this.hash = hash;
         return this;
     }
     
+    public GetTransactionHashRequest(@JsonProperty("hash") String hash) {
+        this.hash = hash;
+  }
 }

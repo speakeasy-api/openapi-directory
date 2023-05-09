@@ -18,6 +18,7 @@ public class EditInventorySourceReadWriteAccessorsRequestAdvertisersUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addedAdvertisers")
     public String[] addedAdvertisers;
+
     public EditInventorySourceReadWriteAccessorsRequestAdvertisersUpdate withAddedAdvertisers(String[] addedAdvertisers) {
         this.addedAdvertisers = addedAdvertisers;
         return this;
@@ -29,9 +30,11 @@ public class EditInventorySourceReadWriteAccessorsRequestAdvertisersUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removedAdvertisers")
     public String[] removedAdvertisers;
+
     public EditInventorySourceReadWriteAccessorsRequestAdvertisersUpdate withRemovedAdvertisers(String[] removedAdvertisers) {
         this.removedAdvertisers = removedAdvertisers;
         return this;
     }
     
+    public EditInventorySourceReadWriteAccessorsRequestAdvertisersUpdate(){}
 }

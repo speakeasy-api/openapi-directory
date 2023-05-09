@@ -12,6 +12,7 @@ public class ContinuousProjectUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analytics_enabled")
     public Boolean analyticsEnabled;
+
     public ContinuousProjectUpdateContent withAnalyticsEnabled(Boolean analyticsEnabled) {
         this.analyticsEnabled = analyticsEnabled;
         return this;
@@ -20,6 +21,7 @@ public class ContinuousProjectUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auto_start_postedit")
     public Boolean autoStartPostedit;
+
     public ContinuousProjectUpdateContent withAutoStartPostedit(Boolean autoStartPostedit) {
         this.autoStartPostedit = autoStartPostedit;
         return this;
@@ -28,6 +30,7 @@ public class ContinuousProjectUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_enabled")
     public Boolean isEnabled;
+
     public ContinuousProjectUpdateContent withIsEnabled(Boolean isEnabled) {
         this.isEnabled = isEnabled;
         return this;
@@ -36,6 +39,7 @@ public class ContinuousProjectUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languages")
     public ContinuousProjectLanguage[] languages;
+
     public ContinuousProjectUpdateContent withLanguages(ContinuousProjectLanguage[] languages) {
         this.languages = languages;
         return this;
@@ -44,6 +48,7 @@ public class ContinuousProjectUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mt_enabled")
     public Boolean mtEnabled;
+
     public ContinuousProjectUpdateContent withMtEnabled(Boolean mtEnabled) {
         this.mtEnabled = mtEnabled;
         return this;
@@ -52,6 +57,7 @@ public class ContinuousProjectUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ContinuousProjectUpdateContent withName(String name) {
         this.name = name;
         return this;
@@ -60,9 +66,11 @@ public class ContinuousProjectUpdateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postedit_enabled")
     public Boolean posteditEnabled;
+
     public ContinuousProjectUpdateContent withPosteditEnabled(Boolean posteditEnabled) {
         this.posteditEnabled = posteditEnabled;
         return this;
     }
     
+    public ContinuousProjectUpdateContent(){}
 }

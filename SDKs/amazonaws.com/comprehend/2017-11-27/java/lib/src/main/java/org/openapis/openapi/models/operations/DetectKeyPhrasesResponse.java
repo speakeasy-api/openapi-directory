@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetectKeyPhrasesResponse {
     
     public String contentType;
+
     public DetectKeyPhrasesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DetectKeyPhrasesResponse {
      */
     
     public org.openapis.openapi.models.shared.DetectKeyPhrasesResponse detectKeyPhrasesResponse;
+
     public DetectKeyPhrasesResponse withDetectKeyPhrasesResponse(org.openapis.openapi.models.shared.DetectKeyPhrasesResponse detectKeyPhrasesResponse) {
         this.detectKeyPhrasesResponse = detectKeyPhrasesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DetectKeyPhrasesResponse {
      */
     
     public Object internalServerException;
+
     public DetectKeyPhrasesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DetectKeyPhrasesResponse {
      */
     
     public Object invalidRequestException;
+
     public DetectKeyPhrasesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DetectKeyPhrasesResponse {
     
     
     public Integer statusCode;
+
     public DetectKeyPhrasesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DetectKeyPhrasesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetectKeyPhrasesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DetectKeyPhrasesResponse {
      */
     
     public Object textSizeLimitExceededException;
+
     public DetectKeyPhrasesResponse withTextSizeLimitExceededException(Object textSizeLimitExceededException) {
         this.textSizeLimitExceededException = textSizeLimitExceededException;
         return this;
@@ -73,9 +81,14 @@ public class DetectKeyPhrasesResponse {
      */
     
     public Object unsupportedLanguageException;
+
     public DetectKeyPhrasesResponse withUnsupportedLanguageException(Object unsupportedLanguageException) {
         this.unsupportedLanguageException = unsupportedLanguageException;
         return this;
     }
     
+    public DetectKeyPhrasesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

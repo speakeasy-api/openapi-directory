@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3ArtifactLocation {
     @JsonProperty("bucketName")
     public String bucketName;
+
     public S3ArtifactLocation withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -19,9 +20,14 @@ public class S3ArtifactLocation {
     
     @JsonProperty("objectKey")
     public String objectKey;
+
     public S3ArtifactLocation withObjectKey(String objectKey) {
         this.objectKey = objectKey;
         return this;
     }
     
+    public S3ArtifactLocation(@JsonProperty("bucketName") String bucketName, @JsonProperty("objectKey") String objectKey) {
+        this.bucketName = bucketName;
+        this.objectKey = objectKey;
+  }
 }

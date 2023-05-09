@@ -12,6 +12,7 @@ public class BillbeeInterfacesBillbeeAPIModelBomSubArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Amount")
     public Double amount;
+
     public BillbeeInterfacesBillbeeAPIModelBomSubArticleAPIModel withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -20,6 +21,7 @@ public class BillbeeInterfacesBillbeeAPIModelBomSubArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArticleId")
     public Long articleId;
+
     public BillbeeInterfacesBillbeeAPIModelBomSubArticleAPIModel withArticleId(Long articleId) {
         this.articleId = articleId;
         return this;
@@ -28,9 +30,11 @@ public class BillbeeInterfacesBillbeeAPIModelBomSubArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SKU")
     public String sku;
+
     public BillbeeInterfacesBillbeeAPIModelBomSubArticleAPIModel withSku(String sku) {
         this.sku = sku;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelBomSubArticleAPIModel(){}
 }

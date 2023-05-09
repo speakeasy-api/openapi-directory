@@ -15,6 +15,7 @@ public class DestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudWatchLogs")
     public CloudWatchLogsDestinationConfiguration cloudWatchLogs;
+
     public DestinationConfiguration withCloudWatchLogs(CloudWatchLogsDestinationConfiguration cloudWatchLogs) {
         this.cloudWatchLogs = cloudWatchLogs;
         return this;
@@ -23,6 +24,7 @@ public class DestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firehose")
     public FirehoseDestinationConfiguration firehose;
+
     public DestinationConfiguration withFirehose(FirehoseDestinationConfiguration firehose) {
         this.firehose = firehose;
         return this;
@@ -31,9 +33,11 @@ public class DestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3")
     public S3DestinationConfiguration s3;
+
     public DestinationConfiguration withS3(S3DestinationConfiguration s3) {
         this.s3 = s3;
         return this;
     }
     
+    public DestinationConfiguration(){}
 }

@@ -20,9 +20,13 @@ public class TransactionRuleInterval {
      */
     @JsonProperty("type")
     public TransactionRuleIntervalTypeEnum type;
+
     public TransactionRuleInterval withType(TransactionRuleIntervalTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TransactionRuleInterval(@JsonProperty("type") TransactionRuleIntervalTypeEnum type) {
+        this.type = type;
+  }
 }

@@ -15,6 +15,7 @@ public class ReposUpdateInformationAboutPagesSiteRequestBody3Source2 {
      */
     @JsonProperty("branch")
     public String branch;
+
     public ReposUpdateInformationAboutPagesSiteRequestBody3Source2 withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -25,9 +26,14 @@ public class ReposUpdateInformationAboutPagesSiteRequestBody3Source2 {
      */
     @JsonProperty("path")
     public ReposUpdateInformationAboutPagesSiteRequestBody3Source2PathEnum path;
+
     public ReposUpdateInformationAboutPagesSiteRequestBody3Source2 withPath(ReposUpdateInformationAboutPagesSiteRequestBody3Source2PathEnum path) {
         this.path = path;
         return this;
     }
     
+    public ReposUpdateInformationAboutPagesSiteRequestBody3Source2(@JsonProperty("branch") String branch, @JsonProperty("path") ReposUpdateInformationAboutPagesSiteRequestBody3Source2PathEnum path) {
+        this.branch = branch;
+        this.path = path;
+  }
 }

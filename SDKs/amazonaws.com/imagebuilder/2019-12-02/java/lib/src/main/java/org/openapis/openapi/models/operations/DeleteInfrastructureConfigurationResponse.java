@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteInfrastructureConfigurationResponse {
@@ -12,6 +13,7 @@ public class DeleteInfrastructureConfigurationResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public DeleteInfrastructureConfigurationResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteInfrastructureConfigurationResponse {
      */
     
     public Object clientException;
+
     public DeleteInfrastructureConfigurationResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteInfrastructureConfigurationResponse {
     
     
     public String contentType;
+
     public DeleteInfrastructureConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteInfrastructureConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteInfrastructureConfigurationResponse deleteInfrastructureConfigurationResponse;
+
     public DeleteInfrastructureConfigurationResponse withDeleteInfrastructureConfigurationResponse(org.openapis.openapi.models.shared.DeleteInfrastructureConfigurationResponse deleteInfrastructureConfigurationResponse) {
         this.deleteInfrastructureConfigurationResponse = deleteInfrastructureConfigurationResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteInfrastructureConfigurationResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteInfrastructureConfigurationResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteInfrastructureConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteInfrastructureConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteInfrastructureConfigurationResponse {
      */
     
     public Object serviceException;
+
     public DeleteInfrastructureConfigurationResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteInfrastructureConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DeleteInfrastructureConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteInfrastructureConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteInfrastructureConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteInfrastructureConfigurationResponse {
      */
     
     public Object resourceDependencyException;
+
     public DeleteInfrastructureConfigurationResponse withResourceDependencyException(Object resourceDependencyException) {
         this.resourceDependencyException = resourceDependencyException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteInfrastructureConfigurationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteInfrastructureConfigurationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public DeleteInfrastructureConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

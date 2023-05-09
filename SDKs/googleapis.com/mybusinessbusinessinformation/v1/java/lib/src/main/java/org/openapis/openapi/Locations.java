@@ -60,11 +60,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsAssociateResponse res = new org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsAssociateResponse() {{
+        org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsAssociateResponse res = new org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsAssociateResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsAttributesGetGoogleUpdatedResponse res = new org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsAttributesGetGoogleUpdatedResponse() {{
+        org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsAttributesGetGoogleUpdatedResponse res = new org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsAttributesGetGoogleUpdatedResponse(contentType, httpRes.statusCode()) {{
             attributes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsClearLocationAssociationResponse res = new org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsClearLocationAssociationResponse() {{
+        org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsClearLocationAssociationResponse res = new org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsClearLocationAssociationResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -194,11 +188,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsDeleteResponse res = new org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsDeleteResponse res = new org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -238,11 +230,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsGetAttributesResponse res = new org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsGetAttributesResponse() {{
+        org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsGetAttributesResponse res = new org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsGetAttributesResponse(contentType, httpRes.statusCode()) {{
             attributes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -284,11 +274,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsUpdateAttributesResponse res = new org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsUpdateAttributesResponse() {{
+        org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsUpdateAttributesResponse res = new org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsUpdateAttributesResponse(contentType, httpRes.statusCode()) {{
             attributes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

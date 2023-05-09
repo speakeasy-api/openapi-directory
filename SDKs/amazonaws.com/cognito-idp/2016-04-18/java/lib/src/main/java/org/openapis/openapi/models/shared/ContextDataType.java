@@ -15,6 +15,7 @@ public class ContextDataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncodedData")
     public String encodedData;
+
     public ContextDataType withEncodedData(String encodedData) {
         this.encodedData = encodedData;
         return this;
@@ -22,6 +23,7 @@ public class ContextDataType {
     
     @JsonProperty("HttpHeaders")
     public HttpHeader[] httpHeaders;
+
     public ContextDataType withHttpHeaders(HttpHeader[] httpHeaders) {
         this.httpHeaders = httpHeaders;
         return this;
@@ -29,6 +31,7 @@ public class ContextDataType {
     
     @JsonProperty("IpAddress")
     public String ipAddress;
+
     public ContextDataType withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -36,6 +39,7 @@ public class ContextDataType {
     
     @JsonProperty("ServerName")
     public String serverName;
+
     public ContextDataType withServerName(String serverName) {
         this.serverName = serverName;
         return this;
@@ -43,9 +47,16 @@ public class ContextDataType {
     
     @JsonProperty("ServerPath")
     public String serverPath;
+
     public ContextDataType withServerPath(String serverPath) {
         this.serverPath = serverPath;
         return this;
     }
     
+    public ContextDataType(@JsonProperty("HttpHeaders") HttpHeader[] httpHeaders, @JsonProperty("IpAddress") String ipAddress, @JsonProperty("ServerName") String serverName, @JsonProperty("ServerPath") String serverPath) {
+        this.httpHeaders = httpHeaders;
+        this.ipAddress = ipAddress;
+        this.serverName = serverName;
+        this.serverPath = serverPath;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OsloginUsersSshPublicKeysCreateResponse {
     
     public String contentType;
+
     public OsloginUsersSshPublicKeysCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class OsloginUsersSshPublicKeysCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.SshPublicKey sshPublicKey;
+
     public OsloginUsersSshPublicKeysCreateResponse withSshPublicKey(org.openapis.openapi.models.shared.SshPublicKey sshPublicKey) {
         this.sshPublicKey = sshPublicKey;
         return this;
@@ -26,6 +29,7 @@ public class OsloginUsersSshPublicKeysCreateResponse {
     
     
     public Integer statusCode;
+
     public OsloginUsersSshPublicKeysCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class OsloginUsersSshPublicKeysCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OsloginUsersSshPublicKeysCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OsloginUsersSshPublicKeysCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

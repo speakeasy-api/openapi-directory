@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAuthEventFeedbackResponse {
     
     public String contentType;
+
     public UpdateAuthEventFeedbackResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAuthEventFeedbackResponse {
      */
     
     public Object internalErrorException;
+
     public UpdateAuthEventFeedbackResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAuthEventFeedbackResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateAuthEventFeedbackResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAuthEventFeedbackResponse {
      */
     
     public Object notAuthorizedException;
+
     public UpdateAuthEventFeedbackResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateAuthEventFeedbackResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAuthEventFeedbackResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateAuthEventFeedbackResponse {
     
     
     public Integer statusCode;
+
     public UpdateAuthEventFeedbackResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAuthEventFeedbackResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAuthEventFeedbackResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateAuthEventFeedbackResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateAuthEventFeedbackResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateAuthEventFeedbackResponse {
      */
     
     public java.util.Map<String, Object> updateAuthEventFeedbackResponse;
+
     public UpdateAuthEventFeedbackResponse withUpdateAuthEventFeedbackResponse(java.util.Map<String, Object> updateAuthEventFeedbackResponse) {
         this.updateAuthEventFeedbackResponse = updateAuthEventFeedbackResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateAuthEventFeedbackResponse {
      */
     
     public Object userNotFoundException;
+
     public UpdateAuthEventFeedbackResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateAuthEventFeedbackResponse {
      */
     
     public Object userPoolAddOnNotEnabledException;
+
     public UpdateAuthEventFeedbackResponse withUserPoolAddOnNotEnabledException(Object userPoolAddOnNotEnabledException) {
         this.userPoolAddOnNotEnabledException = userPoolAddOnNotEnabledException;
         return this;
     }
     
+    public UpdateAuthEventFeedbackResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

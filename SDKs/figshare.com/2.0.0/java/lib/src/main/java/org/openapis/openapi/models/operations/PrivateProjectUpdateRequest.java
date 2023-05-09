@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateProjectUpdateRequest {
@@ -12,6 +13,7 @@ public class PrivateProjectUpdateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ProjectUpdate projectUpdate;
+
     public PrivateProjectUpdateRequest withProjectUpdate(org.openapis.openapi.models.shared.ProjectUpdate projectUpdate) {
         this.projectUpdate = projectUpdate;
         return this;
@@ -22,9 +24,14 @@ public class PrivateProjectUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public Long projectId;
+
     public PrivateProjectUpdateRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public PrivateProjectUpdateRequest(@JsonProperty("ProjectUpdate") org.openapis.openapi.models.shared.ProjectUpdate projectUpdate, @JsonProperty("project_id") Long projectId) {
+        this.projectUpdate = projectUpdate;
+        this.projectId = projectId;
+  }
 }

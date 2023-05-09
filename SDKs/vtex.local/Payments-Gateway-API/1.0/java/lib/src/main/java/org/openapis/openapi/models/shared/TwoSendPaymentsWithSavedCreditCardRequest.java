@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TwoSendPaymentsWithSavedCreditCardRequest {
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public TwoSendPaymentsWithSavedCreditCardRequest withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -16,6 +17,7 @@ public class TwoSendPaymentsWithSavedCreditCardRequest {
     
     @JsonProperty("fields")
     public Fields3 fields;
+
     public TwoSendPaymentsWithSavedCreditCardRequest withFields(Fields3 fields) {
         this.fields = fields;
         return this;
@@ -23,6 +25,7 @@ public class TwoSendPaymentsWithSavedCreditCardRequest {
     
     @JsonProperty("installments")
     public Integer installments;
+
     public TwoSendPaymentsWithSavedCreditCardRequest withInstallments(Integer installments) {
         this.installments = installments;
         return this;
@@ -30,6 +33,7 @@ public class TwoSendPaymentsWithSavedCreditCardRequest {
     
     @JsonProperty("installmentsInterestRate")
     public Integer installmentsInterestRate;
+
     public TwoSendPaymentsWithSavedCreditCardRequest withInstallmentsInterestRate(Integer installmentsInterestRate) {
         this.installmentsInterestRate = installmentsInterestRate;
         return this;
@@ -37,6 +41,7 @@ public class TwoSendPaymentsWithSavedCreditCardRequest {
     
     @JsonProperty("installmentsValue")
     public Integer installmentsValue;
+
     public TwoSendPaymentsWithSavedCreditCardRequest withInstallmentsValue(Integer installmentsValue) {
         this.installmentsValue = installmentsValue;
         return this;
@@ -44,6 +49,7 @@ public class TwoSendPaymentsWithSavedCreditCardRequest {
     
     @JsonProperty("paymentSystem")
     public Integer paymentSystem;
+
     public TwoSendPaymentsWithSavedCreditCardRequest withPaymentSystem(Integer paymentSystem) {
         this.paymentSystem = paymentSystem;
         return this;
@@ -51,6 +57,7 @@ public class TwoSendPaymentsWithSavedCreditCardRequest {
     
     @JsonProperty("referenceValue")
     public Integer referenceValue;
+
     public TwoSendPaymentsWithSavedCreditCardRequest withReferenceValue(Integer referenceValue) {
         this.referenceValue = referenceValue;
         return this;
@@ -58,6 +65,7 @@ public class TwoSendPaymentsWithSavedCreditCardRequest {
     
     @JsonProperty("transaction")
     public Transaction transaction;
+
     public TwoSendPaymentsWithSavedCreditCardRequest withTransaction(Transaction transaction) {
         this.transaction = transaction;
         return this;
@@ -65,9 +73,21 @@ public class TwoSendPaymentsWithSavedCreditCardRequest {
     
     @JsonProperty("value")
     public Integer value;
+
     public TwoSendPaymentsWithSavedCreditCardRequest withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public TwoSendPaymentsWithSavedCreditCardRequest(@JsonProperty("currencyCode") String currencyCode, @JsonProperty("fields") Fields3 fields, @JsonProperty("installments") Integer installments, @JsonProperty("installmentsInterestRate") Integer installmentsInterestRate, @JsonProperty("installmentsValue") Integer installmentsValue, @JsonProperty("paymentSystem") Integer paymentSystem, @JsonProperty("referenceValue") Integer referenceValue, @JsonProperty("transaction") Transaction transaction, @JsonProperty("value") Integer value) {
+        this.currencyCode = currencyCode;
+        this.fields = fields;
+        this.installments = installments;
+        this.installmentsInterestRate = installmentsInterestRate;
+        this.installmentsValue = installmentsValue;
+        this.paymentSystem = paymentSystem;
+        this.referenceValue = referenceValue;
+        this.transaction = transaction;
+        this.value = value;
+  }
 }

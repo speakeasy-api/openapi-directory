@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoDisks {
     
     public Long count;
+
     public DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoDisks withCount(Long count) {
         this.count = count;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoDisks {
     
     
     public Long sizeInGB;
+
     public DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoDisks withSizeInGB(Long sizeInGB) {
         this.sizeInGB = sizeInGB;
         return this;
@@ -26,9 +28,11 @@ public class DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoDisks {
     
     
     public DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoDisksTypeEnum type;
+
     public DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoDisks withType(DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoDisksTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoDisks(){}
 }

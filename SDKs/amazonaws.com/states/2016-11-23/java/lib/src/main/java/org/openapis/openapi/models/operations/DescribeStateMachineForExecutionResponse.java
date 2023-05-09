@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeStateMachineForExecutionResponse {
     
     public String contentType;
+
     public DescribeStateMachineForExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeStateMachineForExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeStateMachineForExecutionOutput describeStateMachineForExecutionOutput;
+
     public DescribeStateMachineForExecutionResponse withDescribeStateMachineForExecutionOutput(org.openapis.openapi.models.shared.DescribeStateMachineForExecutionOutput describeStateMachineForExecutionOutput) {
         this.describeStateMachineForExecutionOutput = describeStateMachineForExecutionOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeStateMachineForExecutionResponse {
      */
     
     public Object executionDoesNotExist;
+
     public DescribeStateMachineForExecutionResponse withExecutionDoesNotExist(Object executionDoesNotExist) {
         this.executionDoesNotExist = executionDoesNotExist;
         return this;
@@ -39,6 +43,7 @@ public class DescribeStateMachineForExecutionResponse {
      */
     
     public Object invalidArn;
+
     public DescribeStateMachineForExecutionResponse withInvalidArn(Object invalidArn) {
         this.invalidArn = invalidArn;
         return this;
@@ -46,6 +51,7 @@ public class DescribeStateMachineForExecutionResponse {
     
     
     public Integer statusCode;
+
     public DescribeStateMachineForExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeStateMachineForExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeStateMachineForExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeStateMachineForExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

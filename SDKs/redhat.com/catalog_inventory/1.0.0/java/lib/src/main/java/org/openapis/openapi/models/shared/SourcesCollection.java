@@ -15,6 +15,7 @@ public class SourcesCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Source[] data;
+
     public SourcesCollection withData(Source[] data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class SourcesCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public CollectionLinks links;
+
     public SourcesCollection withLinks(CollectionLinks links) {
         this.links = links;
         return this;
@@ -31,9 +33,11 @@ public class SourcesCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public CollectionMetadata meta;
+
     public SourcesCollection withMeta(CollectionMetadata meta) {
         this.meta = meta;
         return this;
     }
     
+    public SourcesCollection(){}
 }

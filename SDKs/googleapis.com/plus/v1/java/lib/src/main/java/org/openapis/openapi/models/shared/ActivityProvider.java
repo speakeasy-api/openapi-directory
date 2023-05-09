@@ -18,9 +18,11 @@ public class ActivityProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ActivityProvider withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ActivityProvider(){}
 }

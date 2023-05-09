@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdatePayoutSettingsRequest updatePayoutSettingsRequest;
+
     public PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest withUpdatePayoutSettingsRequest(org.openapis.openapi.models.shared.UpdatePayoutSettingsRequest updatePayoutSettingsRequest) {
         this.updatePayoutSettingsRequest = updatePayoutSettingsRequest;
         return this;
@@ -19,6 +21,7 @@ public class PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -29,9 +32,14 @@ public class PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payoutSettingsId")
     public String payoutSettingsId;
+
     public PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest withPayoutSettingsId(String payoutSettingsId) {
         this.payoutSettingsId = payoutSettingsId;
         return this;
     }
     
+    public PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest(@JsonProperty("merchantId") String merchantId, @JsonProperty("payoutSettingsId") String payoutSettingsId) {
+        this.merchantId = merchantId;
+        this.payoutSettingsId = payoutSettingsId;
+  }
 }

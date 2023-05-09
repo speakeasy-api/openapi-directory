@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -14,6 +15,7 @@ public class GetReportingDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetReportingDatesRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -25,6 +27,7 @@ public class GetReportingDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_create_date")
     public LocalDate maxCreateDate;
+
     public GetReportingDatesRequest withMaxCreateDate(LocalDate maxCreateDate) {
         this.maxCreateDate = maxCreateDate;
         return this;
@@ -36,6 +39,7 @@ public class GetReportingDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_due_date")
     public LocalDate maxDueDate;
+
     public GetReportingDatesRequest withMaxDueDate(LocalDate maxDueDate) {
         this.maxDueDate = maxDueDate;
         return this;
@@ -47,6 +51,7 @@ public class GetReportingDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_update_date")
     public LocalDate maxUpdateDate;
+
     public GetReportingDatesRequest withMaxUpdateDate(LocalDate maxUpdateDate) {
         this.maxUpdateDate = maxUpdateDate;
         return this;
@@ -58,6 +63,7 @@ public class GetReportingDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_create_date")
     public LocalDate minCreateDate;
+
     public GetReportingDatesRequest withMinCreateDate(LocalDate minCreateDate) {
         this.minCreateDate = minCreateDate;
         return this;
@@ -69,6 +75,7 @@ public class GetReportingDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_due_date")
     public LocalDate minDueDate;
+
     public GetReportingDatesRequest withMinDueDate(LocalDate minDueDate) {
         this.minDueDate = minDueDate;
         return this;
@@ -80,6 +87,7 @@ public class GetReportingDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_update_date")
     public LocalDate minUpdateDate;
+
     public GetReportingDatesRequest withMinUpdateDate(LocalDate minUpdateDate) {
         this.minUpdateDate = minUpdateDate;
         return this;
@@ -90,6 +98,7 @@ public class GetReportingDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetReportingDatesRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -100,6 +109,7 @@ public class GetReportingDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetReportingDatesRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -160,6 +170,7 @@ public class GetReportingDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_type")
     public String[] reportType;
+
     public GetReportingDatesRequest withReportType(String[] reportType) {
         this.reportType = reportType;
         return this;
@@ -174,6 +185,7 @@ public class GetReportingDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_year")
     public Integer[] reportYear;
+
     public GetReportingDatesRequest withReportYear(Integer[] reportYear) {
         this.reportYear = reportYear;
         return this;
@@ -185,6 +197,7 @@ public class GetReportingDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetReportingDatesRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -195,6 +208,7 @@ public class GetReportingDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetReportingDatesRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -205,6 +219,7 @@ public class GetReportingDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetReportingDatesRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -215,9 +230,13 @@ public class GetReportingDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetReportingDatesRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
     }
     
+    public GetReportingDatesRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

@@ -15,6 +15,7 @@ public class ItvCardDetails {
      */
     @JsonProperty("card_type")
     public String cardType;
+
     public ItvCardDetails withCardType(String cardType) {
         this.cardType = cardType;
         return this;
@@ -25,6 +26,7 @@ public class ItvCardDetails {
      */
     @JsonProperty("exp_month")
     public Integer expMonth;
+
     public ItvCardDetails withExpMonth(Integer expMonth) {
         this.expMonth = expMonth;
         return this;
@@ -35,6 +37,7 @@ public class ItvCardDetails {
      */
     @JsonProperty("exp_year")
     public Integer expYear;
+
     public ItvCardDetails withExpYear(Integer expYear) {
         this.expYear = expYear;
         return this;
@@ -45,9 +48,16 @@ public class ItvCardDetails {
      */
     @JsonProperty("last4")
     public String last4;
+
     public ItvCardDetails withLast4(String last4) {
         this.last4 = last4;
         return this;
     }
     
+    public ItvCardDetails(@JsonProperty("card_type") String cardType, @JsonProperty("exp_month") Integer expMonth, @JsonProperty("exp_year") Integer expYear, @JsonProperty("last4") String last4) {
+        this.cardType = cardType;
+        this.expMonth = expMonth;
+        this.expYear = expYear;
+        this.last4 = last4;
+  }
 }

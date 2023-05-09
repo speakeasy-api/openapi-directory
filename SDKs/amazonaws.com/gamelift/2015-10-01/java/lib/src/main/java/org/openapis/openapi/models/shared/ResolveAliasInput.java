@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResolveAliasInput {
     @JsonProperty("AliasId")
     public String aliasId;
+
     public ResolveAliasInput withAliasId(String aliasId) {
         this.aliasId = aliasId;
         return this;
     }
     
+    public ResolveAliasInput(@JsonProperty("AliasId") String aliasId) {
+        this.aliasId = aliasId;
+  }
 }

@@ -4,15 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionsByPayeeRequest {
     /**
-     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.ynab.com/#oauth-default-budget).
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=budget_id")
     public String budgetId;
+
     public GetTransactionsByPayeeRequest withBudgetId(String budgetId) {
         this.budgetId = budgetId;
         return this;
@@ -23,6 +25,7 @@ public class GetTransactionsByPayeeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_knowledge_of_server")
     public Long lastKnowledgeOfServer;
+
     public GetTransactionsByPayeeRequest withLastKnowledgeOfServer(Long lastKnowledgeOfServer) {
         this.lastKnowledgeOfServer = lastKnowledgeOfServer;
         return this;
@@ -33,6 +36,7 @@ public class GetTransactionsByPayeeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payee_id")
     public String payeeId;
+
     public GetTransactionsByPayeeRequest withPayeeId(String payeeId) {
         this.payeeId = payeeId;
         return this;
@@ -43,6 +47,7 @@ public class GetTransactionsByPayeeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since_date")
     public LocalDate sinceDate;
+
     public GetTransactionsByPayeeRequest withSinceDate(LocalDate sinceDate) {
         this.sinceDate = sinceDate;
         return this;
@@ -53,9 +58,14 @@ public class GetTransactionsByPayeeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public GetTransactionsByPayeeTypeEnum type;
+
     public GetTransactionsByPayeeRequest withType(GetTransactionsByPayeeTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetTransactionsByPayeeRequest(@JsonProperty("budget_id") String budgetId, @JsonProperty("payee_id") String payeeId) {
+        this.budgetId = budgetId;
+        this.payeeId = payeeId;
+  }
 }

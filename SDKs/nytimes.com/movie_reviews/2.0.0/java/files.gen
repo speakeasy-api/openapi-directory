@@ -49,4 +49,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/MovieMultimediaResource.jav
 lib/src/main/java/org/openapis/openapi/models/shared/MovieMultimedia.java
 lib/src/main/java/org/openapis/openapi/models/shared/Movie.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

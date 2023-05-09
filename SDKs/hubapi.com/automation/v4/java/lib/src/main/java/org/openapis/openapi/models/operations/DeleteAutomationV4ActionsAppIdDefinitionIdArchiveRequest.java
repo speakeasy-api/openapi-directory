@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAutomationV4ActionsAppIdDefinitionIdArchiveRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public Integer appId;
+
     public DeleteAutomationV4ActionsAppIdDefinitionIdArchiveRequest withAppId(Integer appId) {
         this.appId = appId;
         return this;
@@ -19,9 +21,14 @@ public class DeleteAutomationV4ActionsAppIdDefinitionIdArchiveRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=definitionId")
     public String definitionId;
+
     public DeleteAutomationV4ActionsAppIdDefinitionIdArchiveRequest withDefinitionId(String definitionId) {
         this.definitionId = definitionId;
         return this;
     }
     
+    public DeleteAutomationV4ActionsAppIdDefinitionIdArchiveRequest(@JsonProperty("appId") Integer appId, @JsonProperty("definitionId") String definitionId) {
+        this.appId = appId;
+        this.definitionId = definitionId;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateContainerRecipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateContainerRecipeResponse withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +24,7 @@ public class CreateContainerRecipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerRecipeArn")
     public String containerRecipeArn;
+
     public CreateContainerRecipeResponse withContainerRecipeArn(String containerRecipeArn) {
         this.containerRecipeArn = containerRecipeArn;
         return this;
@@ -31,9 +33,11 @@ public class CreateContainerRecipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public CreateContainerRecipeResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public CreateContainerRecipeResponse(){}
 }

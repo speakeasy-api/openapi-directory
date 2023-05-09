@@ -15,9 +15,11 @@ public class CreateExtendedSourceServerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceServer")
     public SourceServer sourceServer;
+
     public CreateExtendedSourceServerResponse withSourceServer(SourceServer sourceServer) {
         this.sourceServer = sourceServer;
         return this;
     }
     
+    public CreateExtendedSourceServerResponse(){}
 }

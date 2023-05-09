@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutAppsListResponse {
     
     public String contentType;
+
     public PutAppsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutAppsListResponse {
      */
     
     public Object internalErrorException;
+
     public PutAppsListResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class PutAppsListResponse {
      */
     
     public Object invalidInputException;
+
     public PutAppsListResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class PutAppsListResponse {
      */
     
     public Object invalidOperationException;
+
     public PutAppsListResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -49,6 +54,7 @@ public class PutAppsListResponse {
      */
     
     public Object limitExceededException;
+
     public PutAppsListResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class PutAppsListResponse {
      */
     
     public org.openapis.openapi.models.shared.PutAppsListResponse putAppsListResponse;
+
     public PutAppsListResponse withPutAppsListResponse(org.openapis.openapi.models.shared.PutAppsListResponse putAppsListResponse) {
         this.putAppsListResponse = putAppsListResponse;
         return this;
@@ -69,6 +76,7 @@ public class PutAppsListResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutAppsListResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class PutAppsListResponse {
     
     
     public Integer statusCode;
+
     public PutAppsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class PutAppsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutAppsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutAppsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class SignUpdate200ApplicationJwt {
      */
     
     public String jwt;
+
     public SignUpdate200ApplicationJwt withJwt(String jwt) {
         this.jwt = jwt;
         return this;
@@ -25,9 +26,11 @@ public class SignUpdate200ApplicationJwt {
      */
     
     public String status;
+
     public SignUpdate200ApplicationJwt withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public SignUpdate200ApplicationJwt(){}
 }

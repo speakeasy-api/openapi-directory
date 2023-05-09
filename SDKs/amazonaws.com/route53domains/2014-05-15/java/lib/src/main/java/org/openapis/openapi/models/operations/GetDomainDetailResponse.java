@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDomainDetailResponse {
     
     public String contentType;
+
     public GetDomainDetailResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDomainDetailResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDomainDetailResponse getDomainDetailResponse;
+
     public GetDomainDetailResponse withGetDomainDetailResponse(org.openapis.openapi.models.shared.GetDomainDetailResponse getDomainDetailResponse) {
         this.getDomainDetailResponse = getDomainDetailResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetDomainDetailResponse {
      */
     
     public Object invalidInput;
+
     public GetDomainDetailResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -36,6 +40,7 @@ public class GetDomainDetailResponse {
     
     
     public Integer statusCode;
+
     public GetDomainDetailResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetDomainDetailResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDomainDetailResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetDomainDetailResponse {
      */
     
     public Object unsupportedTLD;
+
     public GetDomainDetailResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
     }
     
+    public GetDomainDetailResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class FailWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public FailWorkflowExecutionDecisionAttributes withDetails(String details) {
         this.details = details;
         return this;
@@ -23,9 +24,11 @@ public class FailWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public FailWorkflowExecutionDecisionAttributes withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public FailWorkflowExecutionDecisionAttributes(){}
 }

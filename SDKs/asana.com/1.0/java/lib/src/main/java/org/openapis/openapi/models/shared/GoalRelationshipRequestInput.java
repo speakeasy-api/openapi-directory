@@ -18,6 +18,7 @@ public class GoalRelationshipRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contribution_weight")
     public Double contributionWeight;
+
     public GoalRelationshipRequestInput withContributionWeight(Double contributionWeight) {
         this.contributionWeight = contributionWeight;
         return this;
@@ -26,6 +27,7 @@ public class GoalRelationshipRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supported_goal")
     public GoalRelationshipRequestSupportedGoalInput supportedGoal;
+
     public GoalRelationshipRequestInput withSupportedGoal(GoalRelationshipRequestSupportedGoalInput supportedGoal) {
         this.supportedGoal = supportedGoal;
         return this;
@@ -34,9 +36,11 @@ public class GoalRelationshipRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supporting_resource")
     public GoalRelationshipRequestSupportingResourceInput supportingResource;
+
     public GoalRelationshipRequestInput withSupportingResource(GoalRelationshipRequestSupportingResourceInput supportingResource) {
         this.supportingResource = supportingResource;
         return this;
     }
     
+    public GoalRelationshipRequestInput(){}
 }

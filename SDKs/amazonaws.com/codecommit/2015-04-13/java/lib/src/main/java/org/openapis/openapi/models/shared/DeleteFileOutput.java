@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteFileOutput {
     @JsonProperty("blobId")
     public String blobId;
+
     public DeleteFileOutput withBlobId(String blobId) {
         this.blobId = blobId;
         return this;
@@ -19,6 +20,7 @@ public class DeleteFileOutput {
     
     @JsonProperty("commitId")
     public String commitId;
+
     public DeleteFileOutput withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -26,6 +28,7 @@ public class DeleteFileOutput {
     
     @JsonProperty("filePath")
     public String filePath;
+
     public DeleteFileOutput withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
@@ -33,9 +36,16 @@ public class DeleteFileOutput {
     
     @JsonProperty("treeId")
     public String treeId;
+
     public DeleteFileOutput withTreeId(String treeId) {
         this.treeId = treeId;
         return this;
     }
     
+    public DeleteFileOutput(@JsonProperty("blobId") String blobId, @JsonProperty("commitId") String commitId, @JsonProperty("filePath") String filePath, @JsonProperty("treeId") String treeId) {
+        this.blobId = blobId;
+        this.commitId = commitId;
+        this.filePath = filePath;
+        this.treeId = treeId;
+  }
 }

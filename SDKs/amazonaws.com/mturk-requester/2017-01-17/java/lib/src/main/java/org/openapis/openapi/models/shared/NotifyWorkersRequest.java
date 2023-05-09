@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NotifyWorkersRequest {
     @JsonProperty("MessageText")
     public String messageText;
+
     public NotifyWorkersRequest withMessageText(String messageText) {
         this.messageText = messageText;
         return this;
@@ -16,6 +17,7 @@ public class NotifyWorkersRequest {
     
     @JsonProperty("Subject")
     public String subject;
+
     public NotifyWorkersRequest withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -23,9 +25,15 @@ public class NotifyWorkersRequest {
     
     @JsonProperty("WorkerIds")
     public String[] workerIds;
+
     public NotifyWorkersRequest withWorkerIds(String[] workerIds) {
         this.workerIds = workerIds;
         return this;
     }
     
+    public NotifyWorkersRequest(@JsonProperty("MessageText") String messageText, @JsonProperty("Subject") String subject, @JsonProperty("WorkerIds") String[] workerIds) {
+        this.messageText = messageText;
+        this.subject = subject;
+        this.workerIds = workerIds;
+  }
 }

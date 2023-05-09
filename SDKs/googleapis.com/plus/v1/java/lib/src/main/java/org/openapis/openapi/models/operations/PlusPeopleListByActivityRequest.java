@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlusPeopleListByActivityRequest {
@@ -12,6 +13,7 @@ public class PlusPeopleListByActivityRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=activityId")
     public String activityId;
+
     public PlusPeopleListByActivityRequest withActivityId(String activityId) {
         this.activityId = activityId;
         return this;
@@ -22,6 +24,7 @@ public class PlusPeopleListByActivityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public PlusPeopleListByActivityRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -32,6 +35,7 @@ public class PlusPeopleListByActivityRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
     public PlusPeopleListByActivityCollectionEnum collection;
+
     public PlusPeopleListByActivityRequest withCollection(PlusPeopleListByActivityCollectionEnum collection) {
         this.collection = collection;
         return this;
@@ -42,6 +46,7 @@ public class PlusPeopleListByActivityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public PlusPeopleListByActivityRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -52,6 +57,7 @@ public class PlusPeopleListByActivityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public PlusPeopleListByActivityRequest withKey(String key) {
         this.key = key;
         return this;
@@ -62,6 +68,7 @@ public class PlusPeopleListByActivityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public PlusPeopleListByActivityRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -72,6 +79,7 @@ public class PlusPeopleListByActivityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public PlusPeopleListByActivityRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class PlusPeopleListByActivityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public PlusPeopleListByActivityRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -92,6 +101,7 @@ public class PlusPeopleListByActivityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public PlusPeopleListByActivityRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class PlusPeopleListByActivityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public PlusPeopleListByActivityRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,9 +123,14 @@ public class PlusPeopleListByActivityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public PlusPeopleListByActivityRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public PlusPeopleListByActivityRequest(@JsonProperty("activityId") String activityId, @JsonProperty("collection") PlusPeopleListByActivityCollectionEnum collection) {
+        this.activityId = activityId;
+        this.collection = collection;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateServiceInstanceResponse {
@@ -12,6 +13,7 @@ public class UpdateServiceInstanceResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateServiceInstanceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateServiceInstanceResponse {
      */
     
     public Object conflictException;
+
     public UpdateServiceInstanceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateServiceInstanceResponse {
     
     
     public String contentType;
+
     public UpdateServiceInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateServiceInstanceResponse {
      */
     
     public Object internalServerException;
+
     public UpdateServiceInstanceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateServiceInstanceResponse {
     
     
     public Integer statusCode;
+
     public UpdateServiceInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateServiceInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateServiceInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateServiceInstanceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateServiceInstanceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateServiceInstanceResponse {
      */
     
     public Object throttlingException;
+
     public UpdateServiceInstanceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateServiceInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateServiceInstanceOutput updateServiceInstanceOutput;
+
     public UpdateServiceInstanceResponse withUpdateServiceInstanceOutput(org.openapis.openapi.models.shared.UpdateServiceInstanceOutput updateServiceInstanceOutput) {
         this.updateServiceInstanceOutput = updateServiceInstanceOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateServiceInstanceResponse {
      */
     
     public Object validationException;
+
     public UpdateServiceInstanceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateServiceInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

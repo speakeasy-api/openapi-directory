@@ -15,9 +15,11 @@ public class StartCelebrityRecognitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public StartCelebrityRecognitionResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public StartCelebrityRecognitionResponse(){}
 }

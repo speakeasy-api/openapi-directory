@@ -18,9 +18,11 @@ public class BufferTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public HttpBody body;
+
     public BufferTaskRequest withBody(HttpBody body) {
         this.body = body;
         return this;
     }
     
+    public BufferTaskRequest(){}
 }

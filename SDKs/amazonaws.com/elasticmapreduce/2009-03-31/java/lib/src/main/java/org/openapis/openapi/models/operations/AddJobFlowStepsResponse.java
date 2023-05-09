@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddJobFlowStepsResponse {
@@ -12,6 +13,7 @@ public class AddJobFlowStepsResponse {
      */
     
     public org.openapis.openapi.models.shared.AddJobFlowStepsOutput addJobFlowStepsOutput;
+
     public AddJobFlowStepsResponse withAddJobFlowStepsOutput(org.openapis.openapi.models.shared.AddJobFlowStepsOutput addJobFlowStepsOutput) {
         this.addJobFlowStepsOutput = addJobFlowStepsOutput;
         return this;
@@ -19,6 +21,7 @@ public class AddJobFlowStepsResponse {
     
     
     public String contentType;
+
     public AddJobFlowStepsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AddJobFlowStepsResponse {
      */
     
     public Object internalServerError;
+
     public AddJobFlowStepsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -36,6 +40,7 @@ public class AddJobFlowStepsResponse {
     
     
     public Integer statusCode;
+
     public AddJobFlowStepsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AddJobFlowStepsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddJobFlowStepsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AddJobFlowStepsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

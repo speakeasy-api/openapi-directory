@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class NodesRegistrationsListRegistration {
     /**
@@ -12,6 +12,7 @@ public class NodesRegistrationsListRegistration {
      */
     
     public NodesRegistrationsListRegistrationAttributes attributes;
+
     public NodesRegistrationsListRegistration withAttributes(NodesRegistrationsListRegistrationAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class NodesRegistrationsListRegistration {
      */
     
     public String id;
+
     public NodesRegistrationsListRegistration withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class NodesRegistrationsListRegistration {
      */
     
     public NodesRegistrationsListRegistrationLinks links;
+
     public NodesRegistrationsListRegistration withLinks(NodesRegistrationsListRegistrationLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class NodesRegistrationsListRegistration {
      */
     
     public NodesRegistrationsListRegistrationRelationships relationships;
+
     public NodesRegistrationsListRegistration withRelationships(NodesRegistrationsListRegistrationRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,17 @@ public class NodesRegistrationsListRegistration {
      */
     
     public String type;
+
     public NodesRegistrationsListRegistration withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NodesRegistrationsListRegistration(@JsonProperty("attributes") NodesRegistrationsListRegistrationAttributes attributes, @JsonProperty("id") String id, @JsonProperty("links") NodesRegistrationsListRegistrationLinks links, @JsonProperty("relationships") NodesRegistrationsListRegistrationRelationships relationships, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.links = links;
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

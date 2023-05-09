@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposListBranchesForHeadCommitResponse {
     
     public String contentType;
+
     public ReposListBranchesForHeadCommitResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposListBranchesForHeadCommitResponse {
     
     
     public Integer statusCode;
+
     public ReposListBranchesForHeadCommitResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposListBranchesForHeadCommitResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposListBranchesForHeadCommitResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposListBranchesForHeadCommitResponse {
      */
     
     public org.openapis.openapi.models.shared.BranchShort[] branchShorts;
+
     public ReposListBranchesForHeadCommitResponse withBranchShorts(org.openapis.openapi.models.shared.BranchShort[] branchShorts) {
         this.branchShorts = branchShorts;
         return this;
@@ -43,6 +48,7 @@ public class ReposListBranchesForHeadCommitResponse {
      */
     
     public ReposListBranchesForHeadCommit415ApplicationJSON reposListBranchesForHeadCommit415ApplicationJSONObject;
+
     public ReposListBranchesForHeadCommitResponse withReposListBranchesForHeadCommit415ApplicationJSONObject(ReposListBranchesForHeadCommit415ApplicationJSON reposListBranchesForHeadCommit415ApplicationJSONObject) {
         this.reposListBranchesForHeadCommit415ApplicationJSONObject = reposListBranchesForHeadCommit415ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class ReposListBranchesForHeadCommitResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposListBranchesForHeadCommitResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposListBranchesForHeadCommitResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

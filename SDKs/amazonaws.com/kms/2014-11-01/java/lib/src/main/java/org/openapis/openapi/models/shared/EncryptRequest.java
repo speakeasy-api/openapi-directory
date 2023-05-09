@@ -12,6 +12,7 @@ public class EncryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionAlgorithm")
     public EncryptionAlgorithmSpecEnum encryptionAlgorithm;
+
     public EncryptRequest withEncryptionAlgorithm(EncryptionAlgorithmSpecEnum encryptionAlgorithm) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         return this;
@@ -20,6 +21,7 @@ public class EncryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionContext")
     public java.util.Map<String, String> encryptionContext;
+
     public EncryptRequest withEncryptionContext(java.util.Map<String, String> encryptionContext) {
         this.encryptionContext = encryptionContext;
         return this;
@@ -28,6 +30,7 @@ public class EncryptRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrantTokens")
     public String[] grantTokens;
+
     public EncryptRequest withGrantTokens(String[] grantTokens) {
         this.grantTokens = grantTokens;
         return this;
@@ -35,6 +38,7 @@ public class EncryptRequest {
     
     @JsonProperty("KeyId")
     public String keyId;
+
     public EncryptRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -42,9 +46,14 @@ public class EncryptRequest {
     
     @JsonProperty("Plaintext")
     public String plaintext;
+
     public EncryptRequest withPlaintext(String plaintext) {
         this.plaintext = plaintext;
         return this;
     }
     
+    public EncryptRequest(@JsonProperty("KeyId") String keyId, @JsonProperty("Plaintext") String plaintext) {
+        this.keyId = keyId;
+        this.plaintext = plaintext;
+  }
 }

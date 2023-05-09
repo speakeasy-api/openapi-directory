@@ -20,6 +20,7 @@ public class Blueprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlueprintLocation")
     public String blueprintLocation;
+
     public Blueprint withBlueprintLocation(String blueprintLocation) {
         this.blueprintLocation = blueprintLocation;
         return this;
@@ -28,6 +29,7 @@ public class Blueprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlueprintServiceLocation")
     public String blueprintServiceLocation;
+
     public Blueprint withBlueprintServiceLocation(String blueprintServiceLocation) {
         this.blueprintServiceLocation = blueprintServiceLocation;
         return this;
@@ -38,6 +40,7 @@ public class Blueprint {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedOn")
     public OffsetDateTime createdOn;
+
     public Blueprint withCreatedOn(OffsetDateTime createdOn) {
         this.createdOn = createdOn;
         return this;
@@ -46,6 +49,7 @@ public class Blueprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Blueprint withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class Blueprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public Blueprint withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -62,6 +67,7 @@ public class Blueprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastActiveDefinition")
     public LastActiveDefinition lastActiveDefinition;
+
     public Blueprint withLastActiveDefinition(LastActiveDefinition lastActiveDefinition) {
         this.lastActiveDefinition = lastActiveDefinition;
         return this;
@@ -72,6 +78,7 @@ public class Blueprint {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedOn")
     public OffsetDateTime lastModifiedOn;
+
     public Blueprint withLastModifiedOn(OffsetDateTime lastModifiedOn) {
         this.lastModifiedOn = lastModifiedOn;
         return this;
@@ -80,6 +87,7 @@ public class Blueprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Blueprint withName(String name) {
         this.name = name;
         return this;
@@ -88,6 +96,7 @@ public class Blueprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterSpec")
     public String parameterSpec;
+
     public Blueprint withParameterSpec(String parameterSpec) {
         this.parameterSpec = parameterSpec;
         return this;
@@ -96,9 +105,11 @@ public class Blueprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public BlueprintStatusEnum status;
+
     public Blueprint withStatus(BlueprintStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Blueprint(){}
 }

@@ -14,6 +14,7 @@ public class EvaluateFeatureRequestBody {
      */
     @JsonProperty("entityId")
     public String entityId;
+
     public EvaluateFeatureRequestBody withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -25,9 +26,13 @@ public class EvaluateFeatureRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationContext")
     public String evaluationContext;
+
     public EvaluateFeatureRequestBody withEvaluationContext(String evaluationContext) {
         this.evaluationContext = evaluationContext;
         return this;
     }
     
+    public EvaluateFeatureRequestBody(@JsonProperty("entityId") String entityId) {
+        this.entityId = entityId;
+  }
 }

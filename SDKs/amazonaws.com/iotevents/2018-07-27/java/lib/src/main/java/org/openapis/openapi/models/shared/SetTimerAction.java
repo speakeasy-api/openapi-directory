@@ -15,6 +15,7 @@ public class SetTimerAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationExpression")
     public String durationExpression;
+
     public SetTimerAction withDurationExpression(String durationExpression) {
         this.durationExpression = durationExpression;
         return this;
@@ -23,6 +24,7 @@ public class SetTimerAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seconds")
     public Long seconds;
+
     public SetTimerAction withSeconds(Long seconds) {
         this.seconds = seconds;
         return this;
@@ -30,9 +32,13 @@ public class SetTimerAction {
     
     @JsonProperty("timerName")
     public String timerName;
+
     public SetTimerAction withTimerName(String timerName) {
         this.timerName = timerName;
         return this;
     }
     
+    public SetTimerAction(@JsonProperty("timerName") String timerName) {
+        this.timerName = timerName;
+  }
 }

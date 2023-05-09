@@ -18,6 +18,7 @@ public class MutationRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mutateTime")
     public String mutateTime;
+
     public MutationRecord withMutateTime(String mutateTime) {
         this.mutateTime = mutateTime;
         return this;
@@ -29,9 +30,11 @@ public class MutationRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mutatedBy")
     public String mutatedBy;
+
     public MutationRecord withMutatedBy(String mutatedBy) {
         this.mutatedBy = mutatedBy;
         return this;
     }
     
+    public MutationRecord(){}
 }
